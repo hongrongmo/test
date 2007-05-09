@@ -1,0 +1,21 @@
+EMAILALERTSIZE=25
+SERVERLOCATION=@link-destination@
+CONFIGFILEPATH=./etc/
+WEBAPPRESOURCEPATH=./web/
+XSLFILE=CitationMailAlert.xsl
+POOLSFILENAME=./etc/emailalert_pool.xml
+# Defining this property will cause the program to send
+# all emails to this addressee or a list of addresses (comma separated)
+TESTRECEPIENTS=z.yang@elsevier.com
+#TESTCcRECEPIENTS=jmoschet@hotmail.com
+# Defining this property will cause the program to filter for
+# a specific user only
+TESTEMAILFILTER=elsevier
+#TESTEMAILFILTER=e6.com
+CDL_IDS=31061,21001969,21006209,21006217,21006227,21006246,21006253,21006265,21006279,21006286
+CDL_SIZE=500
+SKIPZERO_IDS=923358,999415,31061,1002861
+mail.smtp.host=@smtp-host@
+debug=false
+FastBaseUrl=http://rei.bos3.fastsearch.net:15100
+
