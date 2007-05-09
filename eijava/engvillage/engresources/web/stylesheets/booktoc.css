@@ -1,0 +1,28 @@
+
+#toc {
+  clear:both;
+  padding:0px;
+  margin:0px;
+}
+
+#toc ul
+{
+  list-style-position: inside;
+  margin:0px;
+  padding:0px;
+}
+#toc li
+{
+  margin-left:0px;
+}
+/* Indent Nested lists more than top level */
+#toc ul ul
+{
+  margin-left:25px;
+}
+
+#toc a
+{
+  font-size:11px;
+  font-family:arial,verdana,geneva;
+}
