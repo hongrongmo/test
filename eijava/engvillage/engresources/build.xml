@@ -1,0 +1,26 @@
+<project name="engresources" default="prepare" basedir=".">
+
+  <target name="clean">
+    <delete dir="${env.CATALINA_HOME}/webapps/engresources"/>
+    <delete dir="china"/>
+    <delete dir="live"/>
+    <delete dir="stage"/>
+  </target>
+
+  <target name="deploy">
+
+    <!-- <delete dir="${deploy.home}"/> -->
+
+    <mkdir  dir="${deploy.home}"/>
+    <mkdir  dir="${deploy.home}/WEB-INF"/>
+
+    <copy todir="${deploy.home}">
+      <fileset dir="web"/>
+    </copy>
+
+    <filter filtersfile="../${properties}.properties"/>
+  	<copy overwrite="yes" filtering="yes" file="etc/web.xml" tofile="${deploy.home}/WEB-INF/web.xml" />
+
+  </target>
+
+</project>
