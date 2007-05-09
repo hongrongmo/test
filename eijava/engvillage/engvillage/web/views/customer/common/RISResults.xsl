@@ -1,0 +1,104 @@
+<xsl:stylesheet
+   version="1.0"
+   xmlns:ibfab="java:org.ei.data.inspec.InspecArchiveAbstract"
+   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+   exclude-result-prefixes="xsl"
+>
+<!--
+   every line must end with CR/LF
+   &#xD; is a CARRIAGE RETURN (ASCII Hex 13)
+   &#xA; is a LINE FEED (ASCII Hex 10)
+-->
+
+   <xsl:output method="text" omit-xml-declaration="yes" indent="no"/>
+
+   <xsl:preserve-space elements="text"/>
+
+   <xsl:template match="EI-DOCUMENT">
+
+      <!-- This 'mode' enables us to start the
+         record with the TY and then
+         not repeat the same info again later -->
+      <xsl:apply-templates select="TY" mode="start-record"/>
+      <xsl:apply-templates />
+
+   </xsl:template>
+
+   <xsl:template match="TY" mode="start-record">
+      <xsl:text>TY  - </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>&#xD;&#xA;</xsl:text>
+   </xsl:template>
+   <xsl:template match="TY">
+      <!-- do nothing when not starting the record -->
+   </xsl:template>
+
+   <xsl:template match="BT">
+      <xsl:text>BT  - </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
+      <xsl:if test="string(../MD)">
+         <xsl:text>, </xsl:text><xsl:value-of select="../MD" disable-output-escaping="yes"/>
+      </xsl:if>
+      <xsl:text>&#xD;&#xA;</xsl:text>
+   </xsl:template>
+   <xsl:template match="CY">
+      <xsl:text>CY  - </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>&#xD;&#xA;</xsl:text>
+   </xsl:template>
+   <xsl:template match="AU|A1">
+      <xsl:text>A1  - </xsl:text><xsl:value-of select="normalize-space(text())"/><xsl:text>&#xD;&#xA;</xsl:text>
+      <xsl:apply-templates />
+   </xsl:template>
+   <xsl:template match="AN">
+      <xsl:text>U1  - </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>&#xD;&#xA;</xsl:text>
+   </xsl:template>
+   <xsl:template match="ED">
+      <xsl:text>ED  - </xsl:text><xsl:value-of select="normalize-space(text())"/><xsl:text>&#xD;&#xA;</xsl:text>
+      <xsl:apply-templates />
+   </xsl:template>
+   <!-- <xsl:template match="IV|PAS|A2"> -->
+   <xsl:template match="A2">
+      <xsl:text>A2  - </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>&#xD;&#xA;</xsl:text>
+      <xsl:apply-templates />
+   </xsl:template>
+
+   <xsl:template match="PY|Y1|Y2">
+      <xsl:value-of select="name()"/><xsl:text>  - </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>&#xD;&#xA;</xsl:text>
+   </xsl:template>
+   <xsl:template match="TI|T1|T2|T3|N1|M1|M2|M3">
+      <xsl:value-of select="name()"/><xsl:text>  - </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>&#xD;&#xA;</xsl:text>
+   </xsl:template>
+   <xsl:template match="JF|JO|JA|VL|IS|SP|EP|SN|BN|PB|UR">
+      <xsl:value-of select="name()"/><xsl:text>  - </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>&#xD;&#xA;</xsl:text>
+   </xsl:template>
+   <xsl:template match="U1|U2|U3|U4|U5">
+      <xsl:value-of select="name()"/><xsl:text>  - </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>&#xD;&#xA;</xsl:text>
+   </xsl:template>
+   <xsl:template match="L2">
+         <xsl:value-of select="name()"/><xsl:text>  - </xsl:text><xsl:text>http://dx.doi.org/</xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>&#xD;&#xA;</xsl:text>
+   </xsl:template>
+   <xsl:template match="S1">
+      <xsl:text>SN  - </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>&#xD;&#xA;</xsl:text>
+   </xsl:template>
+   <xsl:template match="CV|MH|KW">
+      <xsl:text>KW  - </xsl:text><xsl:value-of select="normalize-space(text())" disable-output-escaping="yes"/><xsl:text>&#xD;&#xA;</xsl:text>
+   </xsl:template>
+   <xsl:template match="FL">
+      <xsl:text>U2  - </xsl:text><xsl:value-of select="normalize-space(text())" disable-output-escaping="yes"/><xsl:text>&#xD;&#xA;</xsl:text>
+   </xsl:template>
+   <xsl:template match="AFF|AD">
+      <xsl:text>AD  - </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>&#xD;&#xA;</xsl:text>
+   </xsl:template>
+   <xsl:template match="N2">
+      <xsl:text>N2  - </xsl:text>
+      <xsl:value-of select="normalize-space(text())"/>
+      <xsl:text>&#xD;&#xA;</xsl:text>
+   </xsl:template>
+   
+   <xsl:template match="AB2">
+         <xsl:text>N2  - </xsl:text>
+         <xsl:value-of select="ibfab:getPLAIN(.)" disable-output-escaping="yes"/>
+         <xsl:text>&#32;</xsl:text>
+         <xsl:text>&#xD;&#xA;</xsl:text>
+   </xsl:template>
+   <xsl:template match="DO">
+         <xsl:text>L2  - http://dx.doi.org/</xsl:text><xsl:value-of select="normalize-space(text())" disable-output-escaping="yes"/><xsl:text>&#xD;&#xA;</xsl:text>
+   </xsl:template>
+   
+ </xsl:stylesheet>
