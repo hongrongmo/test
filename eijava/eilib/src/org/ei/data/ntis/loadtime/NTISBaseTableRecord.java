@@ -1,0 +1,52 @@
+package org.ei.data.ntis;
+
+
+public class NTISBaseTableRecord
+{
+	public static final String[] baseTableFields = {
+		  "M_ID",
+		  "AN",
+		  "CAT",
+		  "IC",
+		  "PR",
+		  "SO",
+		  "TI",
+		  "IDES",
+		  "VI",
+		  "TN",
+		  "PA1",
+		  "PA2",
+		  "PA3",
+		  "PA4",
+		  "PA5",
+		  "RD",
+		  "XP",
+		  "PDES",
+		  "RN",
+		  "CT",
+		  "PN",
+		  "TNUM",
+		  "MAA1",
+		  "MAN1",
+		  "MAA2",
+		  "MAN2",
+		  "CL",
+		  "SU",
+		  "AV",
+		  "DES",
+		  "NU1",
+		  "IDE",
+		  "HN",
+		  "AB",
+		  "NU2",
+		  "IB",
+		  "TA",
+		  "NU3",
+		  "NU4",
+		  "LC",
+		  "SE",
+		  "CAC",
+		  "DLC",
+  		  "LOAD_NUMBER"
+		};
+}
