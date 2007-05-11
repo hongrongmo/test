@@ -1,5 +1,4 @@
-package org.ei.data.ntis;
-
+package org.ei.data.ntis.loadtime;
 
 import java.io.FilterReader;
 import java.io.IOException;
