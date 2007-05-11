@@ -1,4 +1,4 @@
-package org.ei.data.upt;
+package org.ei.data.upt.loadtime;
 
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
