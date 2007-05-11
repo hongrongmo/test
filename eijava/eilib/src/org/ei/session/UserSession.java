@@ -42,10 +42,10 @@ public class UserSession
 		sessionProperties = new Properties();
 
 
-		Enumeration enum = props.keys();
-		while(enum.hasMoreElements())
+		Enumeration en = props.keys();
+		while(en.hasMoreElements())
 		{
-			String key = (String)enum.nextElement();
+			String key = (String)en.nextElement();
 
 			if(key.equals(SESSIONID_KEY))
 			{
@@ -94,10 +94,10 @@ public class UserSession
 		props.put(LASTTOUCHED_KEY, Long.toString(this.lastTouched));
 		props.put(EXPIREIN_KEY, Long.toString(this.expireIn));
 		props.put(STATUS_KEY, this.status);
-		Enumeration enum = sessionProperties.keys();
-		while(enum.hasMoreElements())
+		Enumeration en = sessionProperties.keys();
+		while(en.hasMoreElements())
 		{
-			String key = (String) enum.nextElement();
+			String key = (String) en.nextElement();
 			props.put("SESSION."+key, sessionProperties.get(key));
 		}
 
