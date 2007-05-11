@@ -4,7 +4,7 @@
  * To change the template for this generated file go to
  * Window&gt;Preferences&gt;Java&gt;Code Generation&gt;Code and Comments
  */
-package org.ei.data.upt;
+package org.ei.data.upt.loadtime;
 
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
@@ -13,7 +13,7 @@ import org.ei.data.CombinedXMLWriter;
 import org.ei.data.CombinerTimestamp;
 import org.ei.data.Combiner;
 import org.ei.data.EVCombinedRec;
-import org.ei.data.upt.IPC8Classification;
+//import org.ei.data.upt.IPC8Classification;
 import org.ei.util.DiskMap;
 import org.ei.util.GUID;
 import org.ei.xml.Entity;
