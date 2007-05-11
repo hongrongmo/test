@@ -214,12 +214,12 @@ public class HitHighlighter extends BaseNodeVisitor
     {
         try
         {
-            Iterator enum = data.keySet().iterator();
+            Iterator en = data.keySet().iterator();
             String stemmedTerm = stemmer.stem(term.toLowerCase());
             Hashtable alreadyDone = new Hashtable();
-            while(enum.hasNext())
+            while(en.hasNext())
             {
-                    Key key = (Key)enum.next();
+                    Key key = (Key)en.next();
                     String value[] = (String[])data.get(key);
                     //System.out.println("Key:"+key);
 
@@ -370,11 +370,11 @@ public class HitHighlighter extends BaseNodeVisitor
             phrase = phrase.trim();
             String reg = buildRegex(phrase);
             //System.out.println("Reg+++++++++++++++:"+ reg);
-            Iterator enum = data.keySet().iterator();
-            while(enum.hasNext())
+            Iterator en = data.keySet().iterator();
+            while(en.hasNext())
             {
 
-                Key key = (Key)enum.next();
+                Key key = (Key)en.next();
                 String value[] = (String[])data.get(key);
 
 				for(int i=0; i<value.length; i++)
