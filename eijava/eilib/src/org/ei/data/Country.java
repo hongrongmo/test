@@ -1292,9 +1292,9 @@ public class Country {
 
     public static String getCountry(String af) {
 
-        Enumeration enum = htCountry.keys();
-        while (enum.hasMoreElements()) {
-            String next = (String) enum.nextElement();
+        Enumeration en = htCountry.keys();
+        while (en.hasMoreElements()) {
+            String next = (String) en.nextElement();
             if (perl.match("/,\\s*" + next + "$/i", af.trim())) {
                 String s = (String) htCountry.get(next);
                 if (s.trim().length() > 0) {
