@@ -706,10 +706,10 @@ public class CountryFormatter
 
 	public static String getCountry(String af)
 	{
-		Enumeration enum = htCountry.keys();
-		while(enum.hasMoreElements())
+		Enumeration en = htCountry.keys();
+		while(en.hasMoreElements())
 		{
-			String next = (String)enum.nextElement();
+			String next = (String)en.nextElement();
 			if(perl.match("/,\\s*"+next+"$/i", af.trim()))
 			{
 				String s = (String)htCountry.get(next);
