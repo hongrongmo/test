@@ -1070,11 +1070,11 @@ public class LogClient {
                 //String appdatas = new String(appdata.toString());
                 StringBuffer appdatas = new StringBuffer();
 
-                Enumeration enum = appdata.keys();
+                Enumeration en = appdata.keys();
 
-                while(enum.hasMoreElements())
+                while(en.hasMoreElements())
                 {
-                    String lKey = (String)enum.nextElement();
+                    String lKey = (String)en.nextElement();
                     if (lKey.equalsIgnoreCase("format"))
                     {
                         if ( ((String) appdata.get(lKey)).equalsIgnoreCase("cit"))
