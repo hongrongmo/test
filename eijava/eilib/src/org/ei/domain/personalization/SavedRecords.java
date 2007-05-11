@@ -1028,11 +1028,11 @@ public class SavedRecords
           * 3.Call the builder corresponding and build page by passing this list
           * 4.Add this returned list to a general List*/
 
-        Enumeration enum = entryTable.keys();
+        Enumeration en = entryTable.keys();
         ArrayList basketDocumentList = new ArrayList(entryTable.size());
-        while(enum.hasMoreElements())
+        while(en.hasMoreElements())
         {
-            String databaseKey = (String)enum.nextElement();
+            String databaseKey = (String)en.nextElement();
             List l = (List)entryTable.get(databaseKey);
             Database d = databaseConfig.getDatabase(databaseKey);
             DocumentBuilder builder = d.newBuilderInstance();
