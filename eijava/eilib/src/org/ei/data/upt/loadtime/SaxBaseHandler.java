@@ -1,4 +1,4 @@
-package org.ei.data.upt;
+package org.ei.data.upt.loadtime;
 
 import java.io.File;
 import java.io.FileReader;
