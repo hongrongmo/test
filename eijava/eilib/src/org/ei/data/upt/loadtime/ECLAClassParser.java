@@ -4,7 +4,7 @@
  * To change the template for this generated file go to
  * Window&gt;Preferences&gt;Java&gt;Code Generation&gt;Code and Comments
  */
-package org.ei.data.upt;
+package org.ei.data.upt.loadtime;
 
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
