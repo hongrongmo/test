@@ -4,7 +4,7 @@
  * To change the template for this generated file go to
  * Window&gt;Preferences&gt;Java&gt;Code Generation&gt;Code and Comments
  */
-package org.ei.data.upt;
+package org.ei.data.upt.loadtime;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -24,7 +24,7 @@ import java.util.*;
  */
 public class UPTRefCounter {
 
-    
+
     int count = 0;
     private static final String setURL = "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI";
     private static final String setUserName = "ap_pro1";
