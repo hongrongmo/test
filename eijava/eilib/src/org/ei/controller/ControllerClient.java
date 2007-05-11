@@ -32,11 +32,11 @@ public class ControllerClient
     public UserSession getUserSession()
     {
         UserSession u = new UserSession();
-        Enumeration enum = request.getHeaderNames();
+        Enumeration en = request.getHeaderNames();
         Properties props = new Properties();
-        while(enum.hasMoreElements())
+        while(en.hasMoreElements())
         {
-            String hKey = (String)enum.nextElement();
+            String hKey = (String)en.nextElement();
             if(hKey.indexOf("session") > -1)
             {
 
@@ -133,11 +133,11 @@ public class ControllerClient
             }
         }
 
-        Enumeration enum = logProps.keys();
+        Enumeration en = logProps.keys();
 
-        while(enum.hasMoreElements())
+        while(en.hasMoreElements())
         {
-            String lKey = (String)enum.nextElement();
+            String lKey = (String)en.nextElement();
             response.setHeader("LOG."+lKey, logProps.getProperty(lKey));
         }
 
