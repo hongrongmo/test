@@ -1,9 +1,10 @@
-package org.ei.data.upt;
+package org.ei.data.upt.loadtime;
+
 import java.util.*;
 import java.sql.*;
 import java.io.*;
 import java.util.regex.*;
-import org.ei.data.upt.NonPatRef;
+//import org.ei.data.upt.NonPatRef;
 import org.ei.domain.*;
 import org.ei.xml.Entity;
 
