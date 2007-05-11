@@ -568,11 +568,11 @@ public class Controller extends HttpServlet
         *   We have the ContentDescriptor, now lets get the RequestParameters.
         */
 
-        Enumeration enum = request.getParameterNames();
+        Enumeration en = request.getParameterNames();
         Properties requestParams = new Properties();
-        while(enum.hasMoreElements())
+        while(en.hasMoreElements())
         {
-            String key = (String)enum.nextElement();
+            String key = (String)en.nextElement();
             if(key.indexOf("SYSTEM") != 0) {
                 requestParams.put(key, request.getParameterValues(key));
             }
