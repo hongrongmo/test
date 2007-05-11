@@ -1,4 +1,4 @@
-package org.ei.data.ntis;
+package org.ei.data.ntis.loadtime;
 
 import java.io.IOException;
 import java.util.ArrayList;
