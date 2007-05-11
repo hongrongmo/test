@@ -1,6 +1,4 @@
-
-
-package org.ei.data.ntis;
+package org.ei.data.ntis.loadtime;
 
 import java.io.FileWriter;
 import java.io.PrintWriter;
