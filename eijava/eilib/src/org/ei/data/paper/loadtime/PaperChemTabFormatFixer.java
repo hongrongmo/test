@@ -1,6 +1,5 @@
 
-package org.ei.data.paper;
-
+package org.ei.data.paper.loadtime;
 
 import java.io.BufferedReader;
 import java.io.File;
