@@ -125,10 +125,10 @@ public class DataRequest
 			if(theHash == null)
 			{
 				StringBuffer buf = new StringBuffer("B");
-				Enumeration enum = this.requestParameters.keys();
-				while(enum.hasMoreElements())
+				Enumeration en = this.requestParameters.keys();
+				while(en.hasMoreElements())
 				{
-					String key = (String)enum.nextElement();
+					String key = (String)en.nextElement();
 					String value = requestParameters.getProperty(key);
 					buf.append(key+value);
 				}
