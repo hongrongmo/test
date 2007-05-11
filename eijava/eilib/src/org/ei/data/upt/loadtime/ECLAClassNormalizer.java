@@ -1,4 +1,4 @@
-package org.ei.data.upt;
+package org.ei.data.upt.loadtime;
 
 import org.apache.oro.text.perl.Perl5Util;
 import org.ei.domain.ClassNodeManager;
@@ -10,7 +10,7 @@ public class ECLAClassNormalizer {
     static char DELIM = (char) 30;
     static Perl5Util perl = new Perl5Util();
 
-    public static String normalize(String code) 
+    public static String normalize(String code)
     {
         if (code == null)
         {
@@ -37,7 +37,7 @@ public class ECLAClassNormalizer {
                         // if substitue fails, normalcode == code, so we break the loop
                         // otherwise we loop back around to try the new normalized code
                         normalcode = perl.substitute("s/0+([1-9A-Z]+)$/$1/i", code);
-                    }                
+                    }
                     else
                     {
                         System.out.print(" success: " + code);
@@ -51,7 +51,7 @@ public class ECLAClassNormalizer {
         {
             System.out.println("ECLAClassNormalizer: " + e.getMessage());
         }
-     
+
         return code;
     }
 
