@@ -1,4 +1,4 @@
-package org.ei.ev.driver.inspec;
+package org.ei.data.inspec.runtime;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -13,7 +13,7 @@ import org.ei.domain.FastSearchControl;
 import org.ei.domain.SearchControl;
 import org.ei.domain.SearchField;
 import org.ei.domain.sort.SortField;
-import org.ei.ev.driver.cpx.CPXLinkingStrategy;
+import org.ei.data.compendex.runtime.CPXLinkingStrategy;
 import org.ei.fulldoc.LinkingStrategy;
 
 public class InspecDatabase extends Database
@@ -59,7 +59,7 @@ public class InspecDatabase extends Database
 
     private DataDictionary dataDictionary = new InspecDataDictionary();
 
-    private Database backfile = new org.ei.ev.driver.insback.InsBackDatabase();
+    private Database backfile = new org.ei.data.insback.runtime.InsBackDatabase();
 
 
     protected String getBaseTableHook()
