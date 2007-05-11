@@ -1,4 +1,4 @@
-package org.ei.data.paper;
+package org.ei.data.paper.loadtime;
 
 
 public class PaperChemBaseTableRecord
