@@ -53,12 +53,12 @@ public class MultiDatabaseDocBuilder
 
 				DatabaseConfig dConfig = DatabaseConfig.getInstance();
 
-				Enumeration enum = listTable.keys();
+				Enumeration en = listTable.keys();
 				Hashtable builtDocsTable = new Hashtable();
 
-				while(enum.hasMoreElements())
+				while(en.hasMoreElements())
 				{
-					String key = (String)enum.nextElement();
+					String key = (String)en.nextElement();
 					ArrayList l = (ArrayList)listTable.get(key);
 					Database database = dConfig.getDatabase(key);
 					DocumentBuilder builder = database.newBuilderInstance();
