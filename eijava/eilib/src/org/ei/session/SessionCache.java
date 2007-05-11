@@ -184,10 +184,10 @@ public final class SessionCache
             ucon.setDoOutput(true);
 
             Properties props = uSession.unloadToProperties();
-            Enumeration enum = props.keys();
-            while(enum.hasMoreElements())
+            Enumeration en = props.keys();
+            while(en.hasMoreElements())
             {
-                String key = (String)enum.nextElement();
+                String key = (String)en.nextElement();
                 ucon.setRequestProperty(key, props.getProperty(key));
             }
 
