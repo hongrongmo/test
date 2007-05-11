@@ -1,4 +1,4 @@
-package org.ei.ev.driver.inspec;
+package org.ei.data.inspec.runtime;
 
 import org.ei.domain.DataDictionary;
 import java.util.Hashtable;
@@ -2150,7 +2150,7 @@ public class InspecDataDictionary
        classCodes.put("A9630M","Saturn and satellites");
        classCodes.put("A9630P","Uranus and satellites");
        classCodes.put("A9630Q","Neptune and satellites");
-       classCodes.put("A9630R","Pluto and satellites"); 
+       classCodes.put("A9630R","Pluto and satellites");
        classCodes.put("A9630T","Other planets");
        classCodes.put("A9630W","Planetary rings");
        classCodes.put("A9635","Planetary and satellite characteristics and properties");
@@ -2670,8 +2670,8 @@ public class InspecDataDictionary
        classCodes.put("B6410","Legislation, frequency allocation and spectrum pollution");
        classCodes.put("B6420","Radio and television broadcasting");
        classCodes.put("B6420B","Radio and television transmitters");
-       classCodes.put("B6420D","Radio and television receivers"); 
-       classCodes.put("B6430","Television and video equipment, systems and applications"); 
+       classCodes.put("B6420D","Radio and television receivers");
+       classCodes.put("B6430","Television and video equipment, systems and applications");
        classCodes.put("B6430B","Electronic news gathering");
        classCodes.put("B6430C","High definition television");
        classCodes.put("B6430D","CATV and wired systems");
@@ -2887,7 +2887,7 @@ public class InspecDataDictionary
        classCodes.put("B8660","Power applications in printing industries");
        classCodes.put("B8670","Power applications in glass, ceramic, brick and cement industries");
        classCodes.put("B8680","Power applications in agriculture and horticulture");
-       classCodes.put("B8690","Power applications in food processing industries");       
+       classCodes.put("B8690","Power applications in food processing industries");
        classCodes.put("B8695","Power applications in water treatment and supply");
        classCodes.put("B8699","Power applications in other industries");
        classCodes.put("C0000","General and management topics");
