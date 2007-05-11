@@ -1,4 +1,4 @@
-package org.ei.data.geobase;
+package org.ei.data.geobase.loadtime;
 
 import java.sql.Clob;
 import java.sql.Connection;
