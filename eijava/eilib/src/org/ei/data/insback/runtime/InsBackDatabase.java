@@ -1,13 +1,13 @@
-package org.ei.ev.driver.insback;
+package org.ei.data.insback.runtime;
 
 import org.ei.domain.*;
 import java.util.Map;
 import java.util.Hashtable;
-import org.ei.ev.driver.cpx.CPXLinkingStrategy;
+import org.ei.data.compendex.runtime.CPXLinkingStrategy;
 import org.ei.fulldoc.LinkingStrategy;
 public class InsBackDatabase extends Database
 {
-    private DataDictionary dataDictionary = new org.ei.ev.driver.inspec.InspecDataDictionary();
+    private DataDictionary dataDictionary = new org.ei.data.inspec.runtime.InspecDataDictionary();
     public int getStartYear(boolean hasBackFile) { return 1896; }
 
     private LinkingStrategy linkingStrategy = new IBFLinkingStrategy();
