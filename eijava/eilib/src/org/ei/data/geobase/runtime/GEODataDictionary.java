@@ -1,4 +1,4 @@
-package org.ei.ev.driver.geo;
+package org.ei.data.geobase.runtime;
 
 import org.ei.domain.DataDictionary;
 import java.util.Hashtable;
