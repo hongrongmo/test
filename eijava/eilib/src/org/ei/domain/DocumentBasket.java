@@ -2,7 +2,7 @@
  *
  * @author  Engineering Information
  * @author  John A. Moschetto
- * @version $Revision:   1.0  $, $Date:   May 09 2007 15:35:38  $
+ * @version $Revision:   1.1  $, $Date:   May 11 2007 15:27:32  $
  * @since       EngVillage2
  */
 package org.ei.domain;
@@ -823,11 +823,11 @@ public class DocumentBasket
 
         }
 
-        Enumeration enum = entryTable.keys();
+        Enumeration en = entryTable.keys();
         ArrayList basketDocumentList = new ArrayList(entryTable.size());
-        while(enum.hasMoreElements())
+        while(en.hasMoreElements())
         {
-            String databaseKey = (String)enum.nextElement();
+            String databaseKey = (String)en.nextElement();
             List l = (List)entryTable.get(databaseKey);
             Database d = databaseConfig.getDatabase(databaseKey);
             DocumentBuilder builder = d.newBuilderInstance();
