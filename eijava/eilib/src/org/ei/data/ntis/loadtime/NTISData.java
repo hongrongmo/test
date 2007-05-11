@@ -1,4 +1,4 @@
-package org.ei.data.ntis;
+package org.ei.data.ntis.loadtime;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -324,7 +324,7 @@ public class NTISData
                     }
                     catch (ParseException pe)
                     {
-    
+
                     }
                 }
                 pubMonthYear = (perl.group(2)).concat(" ").concat(strYear);
