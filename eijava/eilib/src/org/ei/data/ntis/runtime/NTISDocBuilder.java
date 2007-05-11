@@ -1,4 +1,4 @@
-package org.ei.ev.driver.ntis;
+package org.ei.data.ntis.runtime;
 
 import java.util.*;
 import java.sql.*;
@@ -8,7 +8,7 @@ import org.ei.connectionpool.*;
 import org.ei.domain.*;
 import org.ei.config.*;
 import org.ei.util.StringUtil;
-import org.ei.data.ntis.*;
+import org.ei.data.ntis.loadtime.*;
 import org.apache.oro.text.regex.*;
 import org.ei.domain.Contributors;
 import org.ei.domain.ElementDataMap;
