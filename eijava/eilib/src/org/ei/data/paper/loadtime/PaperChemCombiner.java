@@ -1,4 +1,4 @@
-package org.ei.data.paper;
+package org.ei.data.paper.loadtime;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -585,9 +585,9 @@ public class PaperChemCombiner
         return temp;
     }
 
-    
+
     //writeCombinedByWeekNumber
-    
+
     public void writeCombinedByWeekHook(Connection con,
             							int weekNumber)
     	throws Exception
