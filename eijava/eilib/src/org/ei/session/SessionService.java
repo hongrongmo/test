@@ -110,10 +110,10 @@ public class SessionService extends HttpServlet
                 }
 
                 Properties props = userSession.unloadToProperties();
-                Enumeration enum = props.keys();
-                while(enum.hasMoreElements())
+                Enumeration en = props.keys();
+                while(en.hasMoreElements())
                 {
-                    String key = (String)enum.nextElement();
+                    String key = (String)en.nextElement();
                     response.setHeader(key, props.getProperty(key));
                 }
 
@@ -123,11 +123,11 @@ public class SessionService extends HttpServlet
             else if(requestType.equals("s"))
             {
                 UserSession uSession = new UserSession();
-                Enumeration enum = request.getHeaderNames();
+                Enumeration en = request.getHeaderNames();
                 Properties nProps = new Properties();
-                while(enum.hasMoreElements())
+                while(en.hasMoreElements())
                 {
-                    String hkey = ((String)enum.nextElement()).toUpperCase();
+                    String hkey = ((String)en.nextElement()).toUpperCase();
                     if(hkey.indexOf("SESSION") > -1)
                     {
                         nProps.setProperty(hkey,
