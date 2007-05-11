@@ -1,5 +1,5 @@
 
-package org.ei.data.upt;
+package org.ei.data.upt.loadtime;
 
 import java.io.FileWriter;
 import java.io.IOException;
