@@ -1,4 +1,4 @@
-package org.ei.ev.driver.ntis;
+package org.ei.data.ntis.runtime;
 
 import org.ei.domain.DataDictionary;
 import java.util.Hashtable;
