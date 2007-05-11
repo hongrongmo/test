@@ -1,5 +1,4 @@
-package org.ei.data.paper;
-
+package org.ei.data.paper.loadtime;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
