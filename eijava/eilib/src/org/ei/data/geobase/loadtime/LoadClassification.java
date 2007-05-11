@@ -1,19 +1,18 @@
-package org.ei.data.geobase;
+package org.ei.data.geobase.loadtime;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import org.ei.data.compendex.ExtractAuAffCpx;
-import org.ei.data.compendex.ExtractAuthorsCpx;
-import org.ei.data.compendex.ExtractCvsCpx;
-import org.ei.data.compendex.ExtractPubCpx;
-import org.ei.data.compendex.ExtractStCpx;
-import org.ei.data.inspec.ExtractAuAffIns;
-import org.ei.data.inspec.ExtractAuthorsIns;
-import org.ei.data.inspec.ExtractPubIns;
-import org.ei.data.inspec.ExtractStIns;
-import org.ei.data.ntis.ExtractAuAffNtis;
-import org.ei.data.ntis.ExtractAuthorsNtis;
-import org.ei.data.ntis.ExtractCvsNtis;
+import org.ei.data.compendex.loadtime.ExtractAuAffCpx;
+import org.ei.data.compendex.loadtime.ExtractAuthorsCpx;
+import org.ei.data.compendex.loadtime.ExtractCvsCpx;
+import org.ei.data.compendex.loadtime.ExtractPubCpx;
+import org.ei.data.compendex.loadtime.ExtractStCpx;
+import org.ei.data.inspec.loadtime.ExtractAuAffIns;
+import org.ei.data.inspec.loadtime.ExtractAuthorsIns;
+import org.ei.data.inspec.loadtime.ExtractPubIns;
+import org.ei.data.inspec.loadtime.ExtractStIns;
+import org.ei.data.ntis.loadtime.ExtractAuthorsNtis;
+import org.ei.data.ntis.loadtime.ExtractCvsNtis;
 
 public class LoadClassification
 {
