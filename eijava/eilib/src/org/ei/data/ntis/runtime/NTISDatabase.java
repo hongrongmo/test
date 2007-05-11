@@ -1,4 +1,4 @@
-package org.ei.ev.driver.ntis;
+package org.ei.data.ntis.runtime;
 
 import java.util.Arrays;
 import java.util.HashMap;
