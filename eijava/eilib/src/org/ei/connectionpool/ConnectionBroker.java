@@ -154,10 +154,10 @@ public class ConnectionBroker
 			{
 				// Let the connections that are out there in use get checked back in.
 				Thread.sleep(2000);
-				Enumeration enum = poolsTable.keys();
-				while(enum.hasMoreElements())
+				Enumeration en = poolsTable.keys();
+				while(en.hasMoreElements())
 				{
-					String poolID = (String)enum.nextElement();
+					String poolID = (String)en.nextElement();
 					ConnectionPool pool = (ConnectionPool)poolsTable.get(poolID);
 					pool.closeConnections();
 				}
