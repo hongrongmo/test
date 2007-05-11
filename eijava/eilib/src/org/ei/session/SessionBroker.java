@@ -67,10 +67,10 @@ public class SessionBroker
 
 
             Properties props = userSession.getProperties();
-            Enumeration enum = props.keys();
-            while(enum.hasMoreElements())
+            Enumeration en = props.keys();
+            while(en.hasMoreElements())
             {
-                String key = (String)enum.nextElement();
+                String key = (String)en.nextElement();
                 if(key.indexOf("ENV_") < 0)
                 {
                         String value = props.getProperty(key);
