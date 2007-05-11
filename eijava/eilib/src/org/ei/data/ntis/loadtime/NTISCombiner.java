@@ -1,4 +1,4 @@
-package org.ei.data.ntis;
+package org.ei.data.ntis.loadtime;
 
 import java.io.ByteArrayInputStream;
 import java.sql.Connection;
@@ -23,7 +23,7 @@ import org.ei.data.XMLWriterCommon;
 import org.ei.data.EVCombinedRec;
 import org.ei.util.GUID;
 
-public class NTISCombiner 
+public class NTISCombiner
 	extends Combiner
 {
 
@@ -32,7 +32,7 @@ public class NTISCombiner
     private Perl5Compiler compiler = new Perl5Compiler();
 
     private Perl5Matcher matcher = new Perl5Matcher();
-    
+
     private String[] countries =
     { "France", "Germany", "Netherlands", "Japan", "China", "Russia", "Italy", "Spain", "Canada", "Sweden", "Finland", "United Kingdom", "Australia", "Denmark", "International Organizations", "Antigua and Barbuda", "Afghanistan", "Algeria", "Azerbaijan", "Albania", "Armenia", "Andorra", "Angola", "American Samoa", "Argentina", "Austria", "Anguilla", "Antarctica", "Bahrain", "Barbados", "Botswana", "Bermuda", "Belgium", "Bahamas", "Bangladesh", "Belize", "Bosnia and Herzegovina", "Bolivia",
             "Burma", "Benin", "Belarus", "Solomon Islands", "Brazil", "Bhutan", "Bulgaria", "Brunei Darussalamy", "Burundi", "Cambodia", "Chad", "Sri Lanka", "Congo", "Zaire", "Chile", "Cocos (Keeling) Islands", "Cameroon", "Colombia", "Costa Rica", "Central African Republic", "Cuba", "Cape Verde", "Cyprus", "Czechoslovakia", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "Ireland", "Equatorial Guinea", "Estonia", "El Salvador", "Ethiopia", "Czech Republic",
@@ -46,7 +46,7 @@ public class NTISCombiner
 
     private static String tablename;
 
-    public static void main(String args[]) 
+    public static void main(String args[])
     	throws Exception
     {
         String url = args[0];
@@ -62,12 +62,12 @@ public class NTISCombiner
         Combiner.EXITNUMBER = exitAt;
         System.out.println(Combiner.TABLENAME);
 
-        CombinedWriter writer = new CombinedXMLWriter(recsPerfile, 
-                									  loadNumber, 
+        CombinedWriter writer = new CombinedXMLWriter(recsPerfile,
+                									  loadNumber,
                 									  "ntis");
 
         NTISCombiner c = new NTISCombiner(writer);
-        
+
 
             c.writeCombinedByWeekNumber(url,
                     					driver,
@@ -75,7 +75,7 @@ public class NTISCombiner
                     					password,
                     					loadNumber);
 
-       
+
         System.out.println("++end of loadnumber " + loadNumber);
     }
 
@@ -84,8 +84,8 @@ public class NTISCombiner
         super(writer);
     }
 
-    public void writeCombinedByYearHook(Connection con, 
-            							int year) 
+    public void writeCombinedByYearHook(Connection con,
+            							int year)
     	throws Exception
     {
 
@@ -134,7 +134,7 @@ public class NTISCombiner
         }
     }
 
-    private void writeRecs(ResultSet rs) 
+    private void writeRecs(ResultSet rs)
     	throws Exception
     {
         int i = 0;
@@ -149,18 +149,18 @@ public class NTISCombiner
             {
                 break;
             }
-            String aut = NTISAuthor.formatAuthors(rs.getString("PA1"), 
-                    								 rs.getString("PA2"), 
-                    								 rs.getString("PA3"), 
-                    								 rs.getString("PA4"), 
-                    								 rs.getString("PA5"), 
+            String aut = NTISAuthor.formatAuthors(rs.getString("PA1"),
+                    								 rs.getString("PA2"),
+                    								 rs.getString("PA3"),
+                    								 rs.getString("PA4"),
+                    								 rs.getString("PA5"),
                     								 rs.getString("HN"));
-            
+
             if (aut != null)
             {
                 rec.put(EVCombinedRec.AUTHOR, prepareAuthor(aut));
             }
-            
+
             String affil = formatAffil(rs.getString("SO"));
             if (affil != null )
             {
@@ -169,34 +169,34 @@ public class NTISCombiner
 
             rec.put(EVCombinedRec.TITLE, formatTitle(rs.getString("TI")));
             rec.put(EVCombinedRec.ABSTRACT, formatAbstract(rs.getString("AB")));
-            
+
             String cv = formatDelimiter(formatCV(rs.getString("DES")));
             if (cv != null)
             {
-                rec.put(EVCombinedRec.CONTROLLED_TERMS, 
+                rec.put(EVCombinedRec.CONTROLLED_TERMS,
                         prepareMulti(cv));
             }
-            
+
             String uncontrolled = formatDelimiter(formatFL(rs.getString("IDE")));
             if (uncontrolled != null)
             {
-                rec.put(EVCombinedRec.UNCONTROLLED_TERMS, 
+                rec.put(EVCombinedRec.UNCONTROLLED_TERMS,
                         prepareMulti(uncontrolled));
             }
-            
+
             String report = formatDelimiter(formatReportNumbers(rs.getString("RN")));
             if (report != null)
             {
                 rec.put(EVCombinedRec.REPORTNUMBER, prepareMulti(report));
             }
 
-            String order = formatDelimiter(formatOrderNumbers(rs.getString("CT"), 
+            String order = formatDelimiter(formatOrderNumbers(rs.getString("CT"),
                     											 rs.getString("PN")));
             if (order != null)
             {
                 rec.put(EVCombinedRec.ORDERNUMBER, prepareMulti(order));
             }
-            
+
             String country = getCountry(rs.getString("SO"), rs.getString("IC"));
             if (country != null)
             {
@@ -207,42 +207,42 @@ public class NTISCombiner
             String classcodes = formatDelimiter(formatClassCodes(rs.getString("CAT")));
             if (classcodes != null)
             {
-                rec.put(EVCombinedRec.CLASSIFICATION_CODE, 
+                rec.put(EVCombinedRec.CLASSIFICATION_CODE,
                         prepareMulti(XMLWriterCommon.formatClassCodes(classcodes)));
             }
-            
+
             rec.put(EVCombinedRec.VOLUME, getVolume(rs.getString("VI")));
             rec.put(EVCombinedRec.ISSUE, getIssue(rs.getString("VI")));
             rec.put(EVCombinedRec.STARTPAGE, getStartPage(rs.getString("XP")));
             rec.put(EVCombinedRec.DOCTYPE, rs.getString("TN"));
-            rec.put(EVCombinedRec.AVAILABILITY, getAvailability(rs.getString("AV"), 
+            rec.put(EVCombinedRec.AVAILABILITY, getAvailability(rs.getString("AV"),
                     											rs.getString("PR")));
-            
+
             rec.put(EVCombinedRec.NOTES, formatNotes(rs.getString("SU")));
             rec.put(EVCombinedRec.PATENTAPPDATE, getPatentAppDate(rs.getString("RD")));
             rec.put(EVCombinedRec.PATENTISSUEDATE, getPatentIssueDate(rs.getString("RD")));
             rec.put(EVCombinedRec.DEDUPKEY, new GUID().toString());
-            rec.put(EVCombinedRec.LANGUAGE, 
-                    prepareMulti(getLanguage(rs.getString("IC"), 
+            rec.put(EVCombinedRec.LANGUAGE,
+                    prepareMulti(getLanguage(rs.getString("IC"),
                             				 rs.getString("SU"))));
             rec.put(EVCombinedRec.DOCID, rs.getString("M_ID"));
             rec.put(EVCombinedRec.DATABASE, "ntis");
             rec.put(EVCombinedRec.LOAD_NUMBER, rs.getString("LOAD_NUMBER"));
-            rec.put(EVCombinedRec.PUB_YEAR, getPubYear(rs.getString("RD"), 
+            rec.put(EVCombinedRec.PUB_YEAR, getPubYear(rs.getString("RD"),
                     								   rs.getString("LOAD_NUMBER")));
-            String agency = getAgency(rs.getString("MAA1"), 
+            String agency = getAgency(rs.getString("MAA1"),
 									  rs.getString("MAA2"));
             if (agency != null)
             {
                 rec.put(EVCombinedRec.AGENCY, prepareMulti(agency));
             }
-            rec.put(EVCombinedRec.ACCESSION_NUMBER, 
+            rec.put(EVCombinedRec.ACCESSION_NUMBER,
                     formatAccessionNumber(rs.getString("AN")));
             this.writer.writeRec(rec);
         }
     }
 
-    private String formatOrderNumbers(String num1, 
+    private String formatOrderNumbers(String num1,
             						  String num2)
     {
 
@@ -300,13 +300,13 @@ public class NTISCombiner
                     }
 
                     buf.append(reportNumber).append(";");
-                    
+
                     reportNumber = perl.substitute("s# ##g", reportNumber);
                     reportNumber = perl.substitute("s#-##g", reportNumber);
                     reportNumber = perl.substitute("s#/##g", reportNumber);
-                    reportNumber = perl.substitute("s#\\.##g", reportNumber); 
-                    
-                    buf.append(reportNumber);                  
+                    reportNumber = perl.substitute("s#\\.##g", reportNumber);
+
+                    buf.append(reportNumber);
                 }
             }
         }
@@ -315,7 +315,7 @@ public class NTISCombiner
         {
             return null;
         }
-        
+
         return buf.toString();
     }
 
@@ -391,18 +391,18 @@ public class NTISCombiner
         return ab;
     }
 
-    private String getPubYear(String rd, 
+    private String getPubYear(String rd,
             				  String load_number)
     {
         String mResult = null;
         String years19 = "19";
         String years20 = "20";
-        
+
         if (load_number != null)
         {
             load_number = load_number.substring(0,3);
         }
-        
+
         if (rd == null)
         {
             return load_number;
@@ -450,7 +450,7 @@ public class NTISCombiner
         return fielddata;
     }
 
-    private String getAgency(String maa1, 
+    private String getAgency(String maa1,
             				 String maa2)
     {
 
@@ -587,12 +587,12 @@ public class NTISCombiner
         return pubYear;
     }
 
-    private String getLanguage(String fielddataIC, 
+    private String getLanguage(String fielddataIC,
             				   String fielddataSU)
     {
         String mResult;
         String language = "English";
-        if (fielddataIC != null && 
+        if (fielddataIC != null &&
             fielddataIC.length() > 0)
         {
             if (perl.match("/;(\\d+)/", fielddataIC))
@@ -923,7 +923,7 @@ public class NTISCombiner
         return issue.toString();
     }
 
-    private String getAvailability(String vn, 
+    private String getAvailability(String vn,
             					   String pr)
     {
 
@@ -940,7 +940,7 @@ public class NTISCombiner
         vn = vn.trim();
         pr = pr.trim();
         String av = vn;
-        if (pr != null && 
+        if (pr != null &&
                 pr.length() > 0)
         {
             if (av != null)
@@ -993,7 +993,7 @@ public class NTISCombiner
         return mResult.toString();
     }
 
-	
+
     private String getCountry(String fielddataAF, String ic)
     {
         StringBuffer buf = new StringBuffer();
@@ -1007,12 +1007,12 @@ public class NTISCombiner
                     if (buf.length() > 0)
                     {
                         buf.append(";");
-                    }                
+                    }
                     buf.append(Country.formatCountry(countries[i]));
                 }
             }
         }
-        
+
         if(buf.length() == 0)
         {
             if((ic != null) && (perl.match("#\\/fn([a-z]{2})#i",ic)))
@@ -1034,8 +1034,8 @@ public class NTISCombiner
         return buf.toString();
     }
 
-    public void writeCombinedByWeekHook(Connection con, 
-            							int weekNumber) 
+    public void writeCombinedByWeekHook(Connection con,
+            							int weekNumber)
     	throws Exception
     {
         Statement stmt = null;
@@ -1080,7 +1080,7 @@ public class NTISCombiner
 
     }
 
-    private String[] prepareAuthor(String aString) 
+    private String[] prepareAuthor(String aString)
     	throws Exception
     {
         StringBuffer buf = new StringBuffer();
@@ -1115,7 +1115,7 @@ public class NTISCombiner
         return sVal;
     }
 
-    private String[] prepareMulti(String multiString) 
+    private String[] prepareMulti(String multiString)
     	throws Exception
     {
 
