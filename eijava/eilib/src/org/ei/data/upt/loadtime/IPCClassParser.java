@@ -4,7 +4,7 @@
  * To change the template for this generated file go to
  * Window&gt;Preferences&gt;Java&gt;Code Generation&gt;Code and Comments
  */
-package org.ei.data.upt;
+package org.ei.data.upt.loadtime;
 
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
@@ -591,11 +591,11 @@ public class IPCClassParser {
         IPCClassParser parser = new IPCClassParser();
         parser.parse(new File(args[0]));
         //        DiskMap dm = new DiskMap();
-        //        
+        //
         //                try {
         //                    dm.openRead("ipc", false);
         //                    String val = dm.get("C07C6995");
-        //                    
+        //
         //                    System.out.println("Val="+val);
         //                }
         //                catch (Exception e) {
