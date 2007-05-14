@@ -6,7 +6,7 @@
  */
 package org.ei.domain.navigators;
 
-import org.ei.data.upt.USPTOClassNormalizer;
+import org.ei.data.upt.loadtime.USPTOClassNormalizer;
 import org.ei.domain.ClassNodeManager;
 import org.ei.domain.ClassTitleDisplay;
 import org.ei.util.StringUtil;
