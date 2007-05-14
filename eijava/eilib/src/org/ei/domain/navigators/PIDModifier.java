@@ -6,7 +6,7 @@
  */
 package org.ei.domain.navigators;
 
-import org.ei.data.upt.IPCClassNormalizer;
+import org.ei.data.upt.loadtime.IPCClassNormalizer;
 import org.ei.domain.ClassNodeManager;
 import org.ei.domain.ClassTitleDisplay;
 import org.ei.util.StringUtil;
@@ -16,9 +16,9 @@ import org.ei.util.StringUtil;
  * To change the template for this generated type comment go to
  * Window&gt;Preferences&gt;Java&gt;Code Generation&gt;Code and Comments
  */
-public class PIDModifier extends PatentCodeModifier 
+public class PIDModifier extends PatentCodeModifier
 {
-   
+
     public String seekCode(ClassNodeManager cm) throws Exception
     {
         return ClassTitleDisplay.getDisplayTitle(cm.seekIPC(IPCClassNormalizer.normalize(this.getValue())));
