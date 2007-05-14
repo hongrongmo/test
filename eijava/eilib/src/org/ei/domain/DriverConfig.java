@@ -11,20 +11,20 @@ public class DriverConfig
 
 	static
 	{
-		driverTable.put("cpx","org.ei.ev.driver.cpx.CPXDatabase");//1
-		driverTable.put("c84","org.ei.ev.driver.c84.C84Database");//32
-		driverTable.put("nti","org.ei.ev.driver.ntis.NTISDatabase");//4
-		driverTable.put("ins","org.ei.ev.driver.inspec.InspecDatabase");//2
-		driverTable.put("ibf","org.ei.ev.driver.insback.InsBackDatabase");//4096
-		driverTable.put("usp","org.ei.ev.driver.uspto.USPTODatabase");//8
-		driverTable.put("crc","org.ei.ev.driver.ENGnetBASE.ENGnetBASEDatabase");//16
-		driverTable.put("ref","org.ei.ev.driver.upt.UPTRefDatabase");//65536
-		driverTable.put("upt","org.ei.ev.driver.upt.UPTDatabase");//0
-		driverTable.put("upa","org.ei.ev.driver.upt.UPADatabase");//32768
-		driverTable.put("eup","org.ei.ev.driver.upt.EUPDatabase");//16384
-		driverTable.put("geo","org.ei.ev.driver.geo.GEODatabase");//8192
-		driverTable.put("pag","org.ei.ev.driver.pag.PAGDatabase");//131072
-		driverTable.put("zbf","org.ei.ev.driver.cbf.CBFDatabase");//262144
+		driverTable.put("cpx","org.ei.data.compendex.runtime.CPXDatabase");//1
+		driverTable.put("c84","org.ei.data.c84.runtime.C84Database");//32
+		driverTable.put("nti","org.ei.data.ntis.runtime.NTISDatabase");//4
+		driverTable.put("ins","org.ei.data.inspec.runtime.InspecDatabase");//2
+		driverTable.put("ibf","org.ei.data.insback.runtime.InsBackDatabase");//4096
+		driverTable.put("usp","org.ei.data.uspto.runtime.USPTODatabase");//8
+		driverTable.put("crc","org.ei.data.ENGnetBASE.runtime.ENGnetBASEDatabase");//16
+		driverTable.put("ref","org.ei.data.upt.runtime.UPTRefDatabase");//65536
+		driverTable.put("upt","org.ei.data.upt.runtime.UPTDatabase");//0
+		driverTable.put("upa","org.ei.data.upt.runtime.UPADatabase");//32768
+		driverTable.put("eup","org.ei.data.upt.runtime.EUPDatabase");//16384
+		driverTable.put("geo","org.ei.data.geobase.runtime.GEODatabase");//8192
+		driverTable.put("pag","org.ei.data.pag.runtime.PAGDatabase");//131072
+		driverTable.put("zbf","org.ei.data.cbf.runtime.CBFDatabase");//262144
 	}
 
 	public static Map getDriverTable()
