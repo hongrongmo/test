@@ -3,25 +3,16 @@ package org.ei.data;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-import org.ei.data.compendex.ExtractAuAffCpx;
-import org.ei.data.compendex.ExtractAuthorsCpx;
-import org.ei.data.compendex.ExtractCvsCpx;
-import org.ei.data.compendex.ExtractPubCpx;
-import org.ei.data.compendex.ExtractStCpx;
-import org.ei.data.inspec.ExtractAuAffIns;
-import org.ei.data.inspec.ExtractAuthorsIns;
-import org.ei.data.inspec.ExtractPubIns;
-import org.ei.data.inspec.ExtractStIns;
-import org.ei.data.ntis.ExtractAuAffNtis;
-import org.ei.data.ntis.ExtractAuthorsNtis;
-import org.ei.data.ntis.ExtractCvsNtis;
-import org.ei.data.upt.ExtractInventorsUpt;
-import org.ei.data.upt.ExtractAssigneeUpt;
-import org.ei.data.geobase.ExtractAuAffGeo;
-import org.ei.data.geobase.ExtractAuthorsGeo;
-import org.ei.data.geobase.ExtractCvsGeo;
-import org.ei.data.geobase.ExtractStGeo;
-import org.ei.data.geobase.ExtractPnGeo;
+import org.ei.data.compendex.loadtime.ExtractAuAffCpx;
+import org.ei.data.compendex.loadtime.ExtractAuthorsCpx;
+import org.ei.data.compendex.loadtime.ExtractCvsCpx;
+import org.ei.data.compendex.loadtime.ExtractPubCpx;
+import org.ei.data.compendex.loadtime.ExtractStCpx;
+import org.ei.data.inspec.loadtime.*;
+import org.ei.data.ntis.loadtime.*;
+import org.ei.data.upt.loadtime.ExtractInventorsUpt;
+import org.ei.data.upt.loadtime.ExtractAssigneeUpt;
+import org.ei.data.geobase.loadtime.*;
 
 public class LoadLookup
 {
