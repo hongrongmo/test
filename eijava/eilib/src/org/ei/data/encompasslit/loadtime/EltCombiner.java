@@ -1,0 +1,571 @@
+package org.ei.data.encompasslit;
+
+import java.io.ByteArrayInputStream;
+import java.sql.*;
+import java.util.ArrayList;
+
+import org.apache.oro.text.perl.*;
+import org.apache.oro.text.regex.*;
+import org.ei.data.*;
+import org.ei.util.GUID;
+import org.ei.util.StringUtil;
+
+/*
+ * Created on Apr 30, 2004
+ *
+ * To change the template for this generated file go to
+ * Window&gt;Preferences&gt;Java&gt;Code Generation&gt;Code and Comments
+ */
+
+public class EltCombiner extends Combiner {
+
+    Perl5Util perl = new Perl5Util();
+
+    public static void main(String args[]) throws Exception {
+        String url = args[0];
+        String driver = args[1];
+        String username = args[2];
+        String password = args[3];
+        int loadNumber = Integer.parseInt(args[4]);
+        int recsPerfile = Integer.parseInt(args[5]);
+        Combiner.EXITNUMBER = Integer.parseInt(args[6]);
+        Combiner.TABLENAME = args[7];
+        System.out.println("Table Name=" + args[7]);
+        System.out.println("LoadNumber=" + loadNumber);
+        System.out.println("RecsPerFile=" + recsPerfile);
+        System.out.println("Exit At=" + Combiner.EXITNUMBER);
+        System.out.println(Combiner.TABLENAME);
+
+        CombinedWriter writer = new CombinedXMLWriter(recsPerfile, loadNumber, "elt");
+
+        EltCombiner c = new EltCombiner(writer);
+
+        System.out.println("write year");
+        if (loadNumber > 3000 || loadNumber < 1000) {
+            c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
+        }
+        else {
+            c.writeCombinedByYear(url, driver, username, password, loadNumber);
+        }
+
+        System.out.println("end of loadnumber " + loadNumber);
+    }
+
+    public EltCombiner(CombinedWriter writer) {
+        super(writer);
+    }
+
+    public void writeCombinedByYearHook(Connection con, int year) throws Exception {
+
+        Statement stmt = null;
+        ResultSet rs = null;
+        try {
+
+            this.writer.begin();
+            stmt = con.createStatement();
+            System.out.println("Running the query...");
+
+            rs =
+                stmt.executeQuery(
+                    "select M_ID,VLN,ISN, PAG, substr(pyr,1,4) as pyr , STI,CIP , AUT , TIE , TIF,MOT, SPD, SPT, AAF, LNA, ABS, STY, APICT, APICT1, APILT ,APILT1 , RNR, ISSN, PUB, ISBN,CNFNAM, CNFSTD, CNFEND, CNFVEN, CNFCTY, CNFCNY, CNFEDN, CNFEDO, CNFEDA, CNFCAT, CNFCOD, CNFPAG, CNFPCT, CNFPRT, CNFSPO , APIUT ,APICC ,APILTM,APIALC, APIATM, APICRN, APIAMS, APIAPC, APIANC, APIAT, APICT, APILT , SUBSTR(pyr,1,4) yr, load_number,so,secsti,oab,apiatm,apiltm,apiams,cna,sta,seciss,cnfstd,cnfend,cnfven,cnfcty,cnfcny,cnfpag,cnfpct,cnfprt,cf,sec,dt,cprs from elt_master where substr(pyr,1,4) ='"
+                        + year
+                        + "'");
+            writeRecs(rs);
+            this.writer.end();
+        }
+        finally {
+            if (rs != null) {
+                try {
+                    rs.close();
+                }
+                catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+            if (stmt != null) {
+                try {
+                    stmt.close();
+                }
+                catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    private void writeRecs(ResultSet rs) throws Exception {
+        int i = 0;
+        StringBuffer tmp = null;
+
+        CVSTermBuilder termBuilder = new CVSTermBuilder();
+
+        while (rs.next()) {
+
+            EVCombinedRec rec = new EVCombinedRec();
+            ++i;
+
+            if (Combiner.EXITNUMBER != 0 && i > Combiner.EXITNUMBER) {
+                break;
+            }
+
+            String abString = getStringFromClob(rs.getClob("abs"));
+
+            if (validYear(rs.getString("pyr"))) {
+
+                if (rs.getString("m_id") != null) {
+                    rec.put(EVCombinedRec.DOCID, rs.getString("m_id"));
+                }
+
+                if (rs.getString("cip") != null) {
+                    rec.put(EVCombinedRec.ACCESSION_NUMBER, rs.getString("cip"));
+                }
+
+                String apict = StringUtil.replaceNonAscii(replaceNull(rs.getString("apict")));
+                String apict1 = StringUtil.replaceNonAscii(replaceNull(rs.getString("apict1")));
+
+                StringBuffer cvs = new StringBuffer();
+
+                if (!apict1.equals(""))
+                    cvs.append(apict).append(";").append(apict1);
+                else
+                    cvs.append(apict);
+
+                String cv = termBuilder.getNonMajorTerms(cvs.toString());
+                String mh = termBuilder.getMajorTerms(cvs.toString());
+                StringBuffer cvsBuffer = new StringBuffer();
+
+                String expandedMajorTerms = termBuilder.expandMajorTerms(mh);
+                String expandedMH = termBuilder.getMajorTerms(expandedMajorTerms);
+                String expandedCV1 = termBuilder.expandNonMajorTerms(cv);
+                String expandedCV2 = termBuilder.getNonMajorTerms(expandedMajorTerms);
+
+                if (!expandedCV2.equals(""))
+                    cvsBuffer.append(expandedCV1).append(";").append(expandedCV2);
+                else
+                    cvsBuffer.append(expandedCV1);
+
+                String parsedCV = termBuilder.formatCT(cvsBuffer.toString());
+
+                rec.put(rec.CONTROLLED_TERMS, prepareMulti(termBuilder.getStandardTerms(parsedCV)));
+
+                String parsedMH = termBuilder.formatCT(expandedMH);
+
+                rec.put(rec.MAIN_HEADING, prepareMulti(StringUtil.replaceNonAscii(termBuilder.removeRoleTerms(parsedMH))));
+
+                rec.put(rec.NOROLE_TERMS, prepareMulti(termBuilder.getNoRoleTerms(parsedCV)));
+                rec.put(rec.REAGENT_TERMS, prepareMulti(termBuilder.getReagentTerms(parsedCV)));
+                rec.put(rec.PRODUCT_TERMS, prepareMulti(termBuilder.getProductTerms(parsedCV)));
+                rec.put(rec.MAJORNOROLE_TERMS, prepareMulti(termBuilder.getMajorNoRoleTerms(parsedMH)));
+                rec.put(rec.MAJORREAGENT_TERMS, prepareMulti(termBuilder.getMajorReagentTerms(parsedMH)));
+                rec.put(rec.MAJORPRODUCT_TERMS, prepareMulti(termBuilder.getMajorProductTerms(parsedMH)));
+
+                if (rs.getString("tie") != null) {
+                    rec.put(EVCombinedRec.TITLE, StringUtil.replaceNonAscii(replaceNull(rs.getString("tie"))));
+                }
+
+                if (rs.getString("tif") != null) {
+                    rec.put(EVCombinedRec.TRANSLATED_TITLE, StringUtil.replaceNonAscii(replaceNull(rs.getString("tif"))));
+                }
+
+                if (rs.getString("mot") != null) {
+                    rec.put(EVCombinedRec.MONOGRAPH_TITLE, rs.getString("mot"));
+                }
+
+                if (rs.getString("aut") != null) {
+
+                    StringBuffer authors = new StringBuffer();
+
+                    EltAusFormatter ausFormatter = new EltAusFormatter();
+
+                    int loadNumber = rs.getInt("LOAD_NUMBER");
+
+                    if (loadNumber != 0 && loadNumber >= 200000) {
+                        authors.append(ausFormatter.formatAuthors(replaceNull(rs.getString("aut"))));
+
+                    }
+                    else {
+                        authors.append(replaceNull(rs.getString("aut")));
+                    }
+
+                    rec.put(EVCombinedRec.AUTHOR, prepareAuthor(StringUtil.replaceNonAscii(authors.toString())));
+                }
+
+                if (rs.getString("aaf") != null) {
+
+                    rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareMulti(StringUtil.replaceNonAscii(EltAusFormatter.formatAffiliation(replaceNull(rs.getString("aaf"))))));
+                }
+
+                if (rs.getString("apicc") != null) {
+                    rec.put(EVCombinedRec.CLASSIFICATION_CODE, prepareMulti(StringUtil.replaceNonAscii(replaceNull(XMLWriterCommon.formatClassCodes(rs.getString("apicc"))))));
+                }
+                StringBuffer issn = new StringBuffer();
+
+                if (rs.getString("issn") != null) {
+                    issn.append(rs.getString("issn")).append(";");
+                }
+
+                if (rs.getString("seciss") != null) {
+                    issn.append(rs.getString("seciss"));
+                }
+
+                if ((issn != null) && (issn.length() > 0)) {
+                    rec.put(EVCombinedRec.ISSN, prepareMulti(issn.toString()));
+
+                }
+
+                if (rs.getString("dt") != null) {
+                    rec.put(EVCombinedRec.DOCTYPE, rs.getString("dt"));
+                }
+                if (rs.getString("pub") != null) {
+                    rec.put(EVCombinedRec.PUBLISHER_NAME, StringUtil.replaceNonAscii(replaceNull(rs.getString("pub"))));
+                }
+                if (rs.getString("isbn") != null) {
+                    rec.put(EVCombinedRec.ISBN, rs.getString("isbn"));
+                }
+                if (rs.getString("pyr") != null) {
+                    rec.put(EVCombinedRec.PUB_YEAR, rs.getString("pyr"));
+                }
+
+                if (rs.getString("lna") != null) {
+                    rec.put(EVCombinedRec.LANGUAGE, prepareMulti(StringUtil.replaceNonAscii(replaceNull(rs.getString("lna")))));
+                }
+
+                if (abString != null) {
+                    rec.put(EVCombinedRec.ABSTRACT, StringUtil.replaceNonAscii(replaceNull(abString)));
+                }
+
+                if (rs.getString("cnfnam") != null) {
+                    rec.put(EVCombinedRec.CONFERENCE_NAME, StringUtil.replaceNonAscii(replaceNull(rs.getString("cnfnam"))));
+                }
+
+                if (rs.getString("cnfcty") != null) {
+                    rec.put(EVCombinedRec.CONFERENCE_LOCATION, StringUtil.replaceNonAscii(replaceNull(rs.getString("cnfcty"))));
+                }
+
+                if (rs.getString("cnfcod") != null) {
+                    rec.put(EVCombinedRec.CONFERENCE_CODE, StringUtil.replaceNonAscii(replaceNull(rs.getString("cnfcod"))));
+                }
+                if (rs.getString("cnfedo") != null) {
+
+                    rec.put(EVCombinedRec.CONFERENCEAFFILIATIONS, StringUtil.replaceNonAscii(replaceNull(rs.getString("cnfedo"))));
+                }
+                if (rs.getString("cnfedn") != null) {
+
+                    rec.put(EVCombinedRec.CONFERENCEEDITORS, StringUtil.replaceNonAscii(replaceNull(rs.getString("cnfedn"))));
+                }
+
+                if (rs.getString("cnfstd") != null) {
+
+                    rec.put(EVCombinedRec.CONFERENCESTARTDATE, StringUtil.replaceNonAscii(replaceNull(rs.getString("cnfstd"))));
+                }
+                if (rs.getString("cnfend") != null) {
+
+                    rec.put(EVCombinedRec.CONFERENCEENDDATE, StringUtil.replaceNonAscii(replaceNull(rs.getString("cnfend"))));
+                }
+
+                if (rs.getString("cnfven") != null) {
+
+                    rec.put(EVCombinedRec.CONFERENCEVENUESITE, StringUtil.replaceNonAscii(replaceNull(rs.getString("cnfven"))));
+                }
+                if (rs.getString("cnfcty") != null) {
+
+                    rec.put(EVCombinedRec.CONFERENCECITY, StringUtil.replaceNonAscii(replaceNull(rs.getString("cnfcty"))));
+                }
+
+                if (rs.getString("cnfcny") != null) {
+
+                    rec.put(EVCombinedRec.CONFERENCECOUNTRYCODE, StringUtil.replaceNonAscii(replaceNull(rs.getString("cnfcny"))));
+                }
+                if (rs.getString("cnfpag") != null) {
+
+                    rec.put(EVCombinedRec.CONFERENCEPAGERANGE, StringUtil.replaceNonAscii(replaceNull(rs.getString("cnfpag"))));
+                }
+
+                if (rs.getString("cnfpct") != null) {
+
+                    rec.put(EVCombinedRec.CONFERENCENUMBERPAGES, StringUtil.replaceNonAscii(replaceNull(rs.getString("cnfpct"))));
+                }
+
+                if (rs.getString("cnfprt") != null) {
+
+                    rec.put(EVCombinedRec.CONFERENCEPARTNUMBER, StringUtil.replaceNonAscii(replaceNull(rs.getString("cnfprt"))));
+                }
+
+                if (rs.getString("cf") != null) {
+
+                    rec.put(EVCombinedRec.STN_CONFERENCE, StringUtil.replaceNonAscii(replaceNull(rs.getString("cf"))));
+                }
+
+                if (rs.getString("sec") != null) {
+
+                    rec.put(EVCombinedRec.STN_SECONDARY_CONFERENCE, StringUtil.replaceNonAscii(replaceNull(rs.getString("sec"))));
+                }
+
+                if (rs.getString("sti") != null) {
+                    rec.put(EVCombinedRec.SERIAL_TITLE, StringUtil.replaceNonAscii(replaceNull(rs.getString("sti"))));
+                }
+
+                if (rs.getString("apiut") != null) {
+                    rec.put(EVCombinedRec.UNCONTROLLED_TERMS, prepareMulti(termBuilder.formatCT(StringUtil.replaceNonAscii(replaceNull(rs.getString("apiut"))))));
+                }
+
+                String apilt = StringUtil.replaceNonAscii(replaceNull(getStringFromClob(rs.getClob("apilt"))));
+
+                rec.put(EVCombinedRec.LINKED_TERMS, prepareMultiLinkedTerm(termBuilder.formatCT(apilt)));
+
+                if (rs.getString("apicrn") != null) {
+                    rec.put(EVCombinedRec.CASREGISTRYNUMBER, prepareMulti(rs.getString("apicrn")));
+                }
+
+                rec.put(EVCombinedRec.DEDUPKEY, getDedupKey(rec.get(EVCombinedRec.ISSN), null, rs.getString("vln"), rs.getString("isn"), rs.getString("pag")));
+
+                rec.put(EVCombinedRec.VOLUME, getFirstNumber(rs.getString("vln")));
+                rec.put(EVCombinedRec.ISSUE, getFirstNumber(rs.getString("isn")));
+                rec.put(EVCombinedRec.STARTPAGE, getFirstNumber(rs.getString("pag")));
+
+                rec.put(EVCombinedRec.DATABASE, "elt");
+                rec.put(EVCombinedRec.LOAD_NUMBER, rs.getString("load_number"));
+                rec.put(EVCombinedRec.SOURCE, StringUtil.replaceNonAscii(replaceNull(rs.getString("so"))));
+                rec.put(EVCombinedRec.SECONDARY_SRC_TITLE, StringUtil.replaceNonAscii(replaceNull(rs.getString("secsti"))));
+                rec.put(EVCombinedRec.OTHER_ABSTRACT, StringUtil.replaceNonAscii(replaceNull(rs.getString("oab"))));
+                rec.put(EVCombinedRec.MAIN_TERM, prepareMulti(StringUtil.replaceNonAscii(replaceNull(rs.getString("apiams")))));
+                // rec.put(EVCombinedRec.EDITOR_AFFILIATION, StringUtil.replaceNonAscii(replaceNull(rs.getString("cna"))));
+                rec.put(EVCombinedRec.ABBRV_SRC_TITLE, StringUtil.replaceNonAscii(replaceNull(rs.getString("sta"))));
+
+                this.writer.writeRec(rec);
+            }
+        }
+    }
+    public String replaceNull(String sVal) {
+
+        if (sVal == null)
+            sVal = "";
+
+        return sVal;
+    }
+
+    private String getFirstNumber(String v) {
+
+        MatchResult mResult = null;
+        if (v == null) {
+            return null;
+        }
+
+        if (perl.match("/[1-9][0-9]*/", v)) {
+            mResult = perl.getMatch();
+        }
+        else {
+            return null;
+        }
+
+        return mResult.toString();
+    }
+    private String getFirstPage(String v) {
+
+        MatchResult mResult = null;
+        if (v == null) {
+            return null;
+        }
+
+        if (perl.match("/[A-Z]?[0-9][0-9]*/", v)) {
+            mResult = perl.getMatch();
+        }
+        else {
+            return null;
+        }
+
+        return mResult.toString();
+    }
+    private String getDedupKey(String issn, String coden, String volume, String issue, String page) throws Exception {
+
+        String firstVolume = getFirstNumber(volume);
+        String firstIssue = getFirstNumber(issue);
+        String firstPage = getFirstPage(page);
+
+        if ((issn == null && coden == null) || firstVolume == null || firstIssue == null || firstPage == null) {
+            return (new GUID()).toString();
+        }
+
+        StringBuffer buf = new StringBuffer();
+
+        if (issn != null) {
+            buf.append(perl.substitute("s/-//g", issn));
+        }
+        else {
+            buf.append(coden);
+        }
+
+        buf.append("vol" + firstVolume);
+        buf.append("is" + firstIssue);
+        buf.append("pa" + firstPage);
+
+        return buf.toString().toLowerCase();
+
+    }
+
+    private boolean validYear(String year) {
+        if (year == null) {
+            return false;
+        }
+
+        if (year.length() != 4) {
+            return false;
+        }
+
+        return perl.match("/[1-9][0-9][0-9][0-9]/", year);
+    }
+
+    private String formatConferenceLoc(String ms, String mc, String mv, String my) {
+        StringBuffer b = new StringBuffer(" ");
+        if (ms != null) {
+            b.append(ms + ", ");
+        }
+
+        if (mc != null) {
+            b.append(mc + ", ");
+        }
+
+        if (mv != null) {
+            b.append(mv + ", ");
+        }
+
+        if (my != null) {
+            b.append(my);
+        }
+
+        return b.toString();
+
+    }
+
+    private String getStringFromClob(Clob clob) throws Exception {
+        String temp = null;
+        if (clob != null) {
+            temp = clob.getSubString(1, (int) clob.length());
+        }
+
+        return temp;
+    }
+
+    public void writeCombinedByWeekHook(Connection con, int weekNumber) throws Exception {
+        Statement stmt = null;
+        ResultSet rs = null;
+
+        try {
+
+            this.writer.begin();
+            stmt = con.createStatement();
+            System.out.println("Getting weeks records ...");
+            rs =
+                stmt.executeQuery(
+                    "select M_ID,VLN,ISN, PAG, substr(PYR,1,4) as PYR , STI,CIP , AUT , TIE , TIF,MOT, SPD, SPT, AAF, LNA, ABS, STY, APICT, APICT1, APILT ,APILT1 , RNR, ISSN, PUB, ISBN,CNFNAM, CNFSTD, CNFEND, CNFVEN, CNFCTY, CNFCNY, CNFEDN, CNFEDO, CNFEDA, CNFCAT, CNFCOD, CNFPAG, CNFPCT, CNFPRT, CNFSPO , APIUT ,APICC ,APILTM,APIALC, APIATM, APICRN, APIAMS, APIAPC, APIANC, APIAT, APICT, APILT , SUBSTR(pyr,1,4) yr, load_number,so,secsti,oab,apiatm,apiltm,apiams,cna,sta,seciss,cnfstd,cnfend,cnfven,cnfcty,cnfcny,cnfpag,cnfpct,cnfprt,cf,sec,dt,cprs from elt_master where load_number="
+                        + weekNumber);
+
+            writeRecs(rs);
+            this.writer.end();
+
+        }
+        finally {
+
+            if (rs != null) {
+                try {
+                    rs.close();
+                }
+                catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+            if (stmt != null) {
+                try {
+                    stmt.close();
+                }
+                catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+    }
+
+    private String[] prepareAuthor(String aString) throws Exception {
+        StringBuffer buf = new StringBuffer();
+        AuthorStream astream = new AuthorStream(new ByteArrayInputStream(aString.getBytes()));
+        String s = null;
+        ArrayList list = new ArrayList();
+
+        while ((s = astream.readAuthor()) != null) {
+            s = s.trim();
+            if (s.length() > 0) {
+                s = stripAnon(s);
+                s = s.trim();
+
+                list.add(s);
+            }
+        }
+
+        return (String[]) list.toArray(new String[1]);
+
+    }
+
+    private String stripAnon(String line) {
+        line = perl.substitute("s/\\banon\\b/ /gi", line);
+        line = perl.substitute("s/\\(ed\\.\\)/ /gi", line);
+        return line;
+    }
+
+    private String[] prepareMulti(String multiString) throws Exception {
+        if (multiString != null) {
+
+            AuthorStream astream = new AuthorStream(new ByteArrayInputStream(multiString.getBytes()));
+            String s = null;
+            ArrayList list = new ArrayList();
+            while ((s = astream.readAuthor()) != null) {
+                s = s.trim();
+                if (s.length() > 0) {
+                    list.add(s);
+                }
+            }
+            return (String[]) list.toArray(new String[1]);
+        }
+        else {
+            String[] str = new String[] { "" };
+            return str;
+
+        }
+    }
+    private String[] prepareMultiLinkedTerm(String multiString) throws Exception {
+        if (multiString != null) {
+
+            AuthorStream astream = new AuthorStream(new ByteArrayInputStream(multiString.getBytes()));
+            String s = null;
+            ArrayList list = new ArrayList();
+            while ((s = astream.readAuthor()) != null) {
+                s = s.trim();
+
+                if (perl.match("/\\|/", s)) {
+                    StringBuffer buf = new StringBuffer();
+                    ArrayList strings = new ArrayList();
+                    perl.split(strings, "/\\|/", s);
+
+                    for (int i = 0; i < strings.size(); ++i) {
+                        String s1 = (String) strings.get(i);
+                        s1 = s1.trim();
+                        if (s1.length() > 0)
+                            list.add(s1);
+                    }
+                }
+                else {
+                    if (s.length() > 0) {
+                        list.add(s);
+                    }
+                }
+            }
+            return (String[]) list.toArray(new String[1]);
+        }
+        else {
+            String[] str = new String[] { "" };
+            return str;
+        }
+    }
+
+}
