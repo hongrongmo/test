@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 import javax.naming.NamingException;
 
-import org.ei.data.ntis.ExtractAuAffNtis;
-import org.ei.data.ntis.ExtractAuthorsNtis;
-import org.ei.data.ntis.ExtractCvsNtis;
+import org.ei.data.ntis.loadtime.ExtractAuAffNtis;
+import org.ei.data.ntis.loadtime.ExtractAuthorsNtis;
+import org.ei.data.ntis.loadtime.ExtractCvsNtis;
 
 public class LoadLookupNtis
 {
