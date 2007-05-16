@@ -42,37 +42,81 @@ public class IPCClassNormalizer {
                 e1.printStackTrace();
             }
         }
-
     }
 
-    public static String trimLeadingZeroFromSubClass(String code,
-    									   			 String[] subs)
-    {
+    public static String[] trimLeadingZeroFromSubClass(String codes) {
 
-		code = code.replaceAll(" ", "");
-		if(subs == null)
-		{
-			return code;
-		}
+        List lstCodes = new ArrayList();
 
-		for(int i=0; i<subs.length; i++)
-		{
-			String sub = subs[i];
-			if(sub.indexOf("0") == 0)
-			{
-				System.out.println("Checking:"+ code);
-				if(code.indexOf(sub) > -1)
-				{
-					System.out.println("Removing zero for:"+code);
-					String subNoLeadingZero = sub.substring(1,sub.length());
-					code = code.replaceFirst(sub, subNoLeadingZero);
-					return code;
-				}
-			}
-		}
+        perl.split(lstCodes, "/\\|/", codes);
 
-		return code;
-	}
+        LinkedList ipcVals = new LinkedList();
+
+        for (int i = 0; i < lstCodes.size(); i++) {
+
+            String ipcCode = (String) lstCodes.get(i);
+
+            StringBuffer buff = new StringBuffer();
+
+            List ipcSubCodes = new ArrayList();
+
+            perl.split(ipcSubCodes, "/-/", ipcCode);
+
+            if (ipcSubCodes.size() > 1) {
+                String subCode = (String) ipcSubCodes.get(1);
+                subCode = removeLeadingZeros(subCode);
+                buff.append(ipcSubCodes.get(0)).append(subCode);
+                ipcVals.addLast(buff.toString());
+            }
+            else {
+                buff.append(ipcCode);
+                ipcVals.addLast(buff.toString());
+            }
+        }
+
+        String[] arrVals = (String[]) ipcVals.toArray(new String[ipcVals.size()]);
+
+        return arrVals;
+    }
+    public static String removeLeadingZeros(String sVal) {
+
+        if (sVal == null) {
+            return sVal;
+        }
+
+        char[] schars = sVal.toCharArray();
+        int index = 0;
+        for (; index < sVal.length(); index++) {
+
+            if (schars[index] != '0') {
+                break;
+            }
+        }
+
+        return (index == 0) ? sVal : sVal.substring(index);
+    }
+    public static String trimLeadingZeroFromSubClass(String code, String[] subs) {
+
+        code = code.replaceAll(" ", "");
+        if (subs == null) {
+            return code;
+        }
+
+        for (int i = 0; i < subs.length; i++) {
+            String sub = subs[i];
+            if (sub.indexOf("0") == 0) {
+                System.out.println("Checking:" + code);
+                if (code.indexOf(sub) > -1) {
+                    System.out.println("Removing zero for:" + code);
+                    String subNoLeadingZero = sub.substring(1, sub.length());
+                    code = code.replaceFirst(sub, subNoLeadingZero);
+                    return code;
+                }
+            }
+        }
+
+        return code;
+    }
 
     public static String normalize(String code) throws Exception {
 
@@ -95,5 +139,4 @@ public class IPCClassNormalizer {
 
         return lstVals;
     }
-
 }
