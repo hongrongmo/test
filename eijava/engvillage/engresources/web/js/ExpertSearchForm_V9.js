@@ -169,11 +169,12 @@ function calculateMask(control)
     var selectedDbMask = 0;
 
     // CALCULATE SELECTED DB MASK
-    if(document.quicksearch.alldb.checked == true)
+   if(document.quicksearch.alldb != null  && 
+    			document.quicksearch.alldb.checked == true)
     {
         selectedDbMask = eval(document.quicksearch.alldb.value);
     }
-    else
+    else if (control != null)
     {
         var chk = control.length;
         for (i = 0; i < chk; i++)
@@ -182,6 +183,10 @@ function calculateMask(control)
             {
                 selectedDbMask += eval(control[i].value);
             }
+        }
+        if(typeof(chk) == 'undefined')
+        {
+            selectedDbMask += eval(control.value);
         }
     }
     return selectedDbMask;
@@ -564,6 +569,22 @@ function checkLastUpdates()
     document.quicksearch.yearselect[0].checked = true;
     document.quicksearch.yearselect[0].focus();
     alert("Last updates selection does not apply to Referex collections.");
+    return false;
+  }
+  else if((document.quicksearch.yearselect[1].checked == true) && 
+  										(seldbmask == CBF))
+  {
+    document.quicksearch.yearselect[0].checked = true;
+    document.quicksearch.yearselect[0].focus();
+    alert("Last updates selection does not apply to EI Backfile.");
+    return false;
+  }
+  else if((document.quicksearch.yearselect[1].checked == true) && 
+  										(seldbmask == (CBF + REFEREX)))
+  {
+    document.quicksearch.yearselect[0].checked = true;
+    document.quicksearch.yearselect[0].focus();
+    alert("Last updates selection does not apply to EI Backfile and REFEREX collections.");
     return false;
   }
   else
