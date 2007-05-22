@@ -400,7 +400,7 @@ function generateDoctypes(selecteddbMask)
   {
      doctypes[index++] = new Field("PA", "Patents (before 1970)");
   }
-  if(selecteddbMask == CBF)
+  else if(selecteddbMask == CBF)
   {
      doctypes[index++] = new Field("PA", "Patents");
   }
@@ -408,6 +408,7 @@ function generateDoctypes(selecteddbMask)
   {
      doctypes[index++] = new Field("PA", "Patents (before 1977)");
   }
+
   if(selecteddbMask == US_PATENTS)
   {
      doctypes[index++] = new Field("UA", "US Applications");
@@ -834,11 +835,12 @@ function calculateMask(control)
 
 
     // CALCULATE SELECTED DB MASK
-    if(document.quicksearch.alldb.checked == true)
+    if(document.quicksearch.alldb != null  && 
+    			document.quicksearch.alldb.checked == true)
     {
         selectedDbMask = eval(document.quicksearch.alldb.value);
     }
-    else
+    else if (control != null)
     {
         var chk = control.length;
 
@@ -1414,13 +1416,28 @@ function selectYearRange(radioidx)
 }
 function checkLastUpdates()
 {
-  var seldbmask = calculateMask(document.quicksearch.database)
 
-  if((document.quicksearch.yearselect[1].checked == true) && (seldbmask == REFEREX))
-  {
+  	var seldbmask = calculateMask(document.quicksearch.database)
+
+  	if((document.quicksearch.yearselect[1].checked == true) && (seldbmask == REFEREX))
+  	{
     document.quicksearch.yearselect[0].checked = true;
     document.quicksearch.yearselect[0].focus();
     alert("Last updates selection does not apply to REFEREX collections.");
+    return false;
+  }
+  else if((document.quicksearch.yearselect[1].checked == true) && (seldbmask == CBF))
+  {
+    document.quicksearch.yearselect[0].checked = true;
+    document.quicksearch.yearselect[0].focus();
+    alert("Last updates selection does not apply to EI Backfile.");
+    return false;
+  }
+  else if((document.quicksearch.yearselect[1].checked == true) && (seldbmask == (CBF + REFEREX)))
+  {
+    document.quicksearch.yearselect[0].checked = true;
+    document.quicksearch.yearselect[0].focus();
+    alert("Last updates selection does not apply to EI Backfile and REFEREX collections.");
     return false;
   }
   else
