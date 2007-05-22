@@ -14,6 +14,7 @@ BOOK_PAGES table fields and descriptions
 DOCID         - 'pag_' + BN + '_' + PAGE_NUM
 BN            - ISBN10
 BN13          - ISBN13
+PII           - S300 Chapter ID
 PAGE_NUM      - Page number in PDF file
 SECTION_TITLE - Title of containing section
 PAGE_START    - Start page of contaning collection
@@ -45,6 +46,7 @@ CREATE TABLE BOOK_PAGES_NEW
   DOCID          VARCHAR2(64 BYTE)              NOT NULL,
   BN             VARCHAR2(16 BYTE),
   BN13           VARCHAR2(16 BYTE),
+  PII            VARCHAR2(64 BYTE),
   PAGE_NUM       INTEGER,
   SECTION_TITLE  VARCHAR2(256 BYTE),
   PAGE_START     INTEGER,
