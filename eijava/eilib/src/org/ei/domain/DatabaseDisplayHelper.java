@@ -208,6 +208,12 @@ public class DatabaseDisplayHelper {
 			case (8192 + 2 + 4 + 4096 + (16384 + 32768)) : // GEOBASE & INS & NTIS &(US & EP Patents)
 				strText = "The combined Inspec&#174;, Inspec Archive, NTIS&trade;, GEOBASE and Patents databases allow for extensive exploration of topics within electrical engineering, electronics, physics, earth sciences, ecology, oceanography, unclassified government reports and US and European patents. Coverage is from 1790 to present. The databases are updated weekly.";
 				break;
+			case (8192 + 2 + 4 + 4096) : // GEOBASE & INS & IBF& NTIS
+				strText = "The combined Inspec&#174;, Inspec Archive, NTIS&trade;, GEOBASE databases allow for searching on a broad range of topics within the scientific, applied science, technical and engineering disciplines and includes journal articles, proceedings, unclassified government reports, and more.  The databases are updated weekly.";
+				break;
+			case (8192 + 2 + 4 ) : // GEOBASE & INS & NTIS
+				strText = "The combined Inspec&#174;, NTIS&trade;, GEOBASE databases allow for searching on a broad range of topics within the scientific, applied science, technical and engineering disciplines and includes journal articles, proceedings, unclassified government reports, and more.  The databases are updated weekly.";
+				break;
 			case (8192 + 2 + 4 + (16384 + 32768)) : // GEOBASE & INS & NTIS &(US & EP Patents)
 				strText = "The combined Inspec&#174;, NTIS&trade;, GEOBASE and Patents databases allow for extensive exploration of topics within electrical engineering, electronics, physics, earth sciences, ecology, oceanography, unclassified government reports and US and European patents. Coverage is from 1790 to present. The databases are updated weekly.";
 				break;
