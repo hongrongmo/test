@@ -4,6 +4,9 @@ import org.ei.domain.*;
 import java.util.Map;
 import java.util.Hashtable;
 import org.ei.fulldoc.LinkingStrategy;
+import org.ei.domain.sort.SortField;
+import java.util.List;
+import java.util.Arrays;
 
 public class C84Database
 	extends Database
@@ -16,6 +19,9 @@ public class C84Database
         return "c84_master";
     }
 
+    public List getSortableFields() {
+      return Arrays.asList(new SortField[]{SortField.RELEVANCE, SortField.AUTHOR, SortField.YEAR, SortField.SOURCE, SortField.PUBLISHER});
+    }
 
     /*
     * Because this a backfile overide getLastFourUpdates so that
