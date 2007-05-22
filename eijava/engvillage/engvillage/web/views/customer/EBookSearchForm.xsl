@@ -84,6 +84,8 @@
     		<xsl:with-param name="SELECTED-DB" select="$DATABASE"/>
     	</xsl:apply-templates>
     </center>
+    
+    <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/RemoteDbLink_V5.js"/>
   </body>
 </html>
 
