@@ -101,7 +101,7 @@
         // Local Databases come first
 
         // - - - -BIBLIOGRAPHIC DATABASES- - - -
-      	int[] dbMasks = {1, 2, 4, 32768, 16384,8192,262144};
+      	int[] dbMasks = {1, 2, 4, 32768, 16384, 8192, 262144};
         for(int x=0; x < dbMasks.length ; x++)
         {
             if((userMask & dbMasks[x]) == dbMasks[x])
@@ -157,7 +157,7 @@
         String[] books = {"PAG"};
         for(int listsize=0; listsize < books.length; listsize++)
         {
-            if((!(lstCarts.contains(books[listsize]))) && dataBaseNames.get(books[listsize]) != null)
+            if(((lstCarts.contains(books[listsize]))) && dataBaseNames.get(books[listsize]) != null)
             {
                 String[] dbNameValues = ((String) dataBaseNames.get(books[listsize])).split("\\|");
                 out.print("<DATABASE VALUE=\"");
@@ -180,6 +180,8 @@
                 out.print(dbNameValues[1]);
                 out.print("\"/>");
             }
+            
+            
         }
 
     // - - - -STANDARDS- - - -
@@ -194,6 +196,7 @@
               out.print("\" NAME=\"");
               out.print(dbNameValues[1]);
               out.print("\"/>");
+
             }
         }
 
@@ -209,6 +212,7 @@
                 out.print("\" NAME=\"");
                 out.print(dbNameValues[1]);
                 out.print("\"/>");
+
             }
         }
 
