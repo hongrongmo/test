@@ -150,11 +150,7 @@ public class EiModifier implements Comparable
                 slabel = nav;
             }
         }
-        if (slabel.indexOf(DatabaseConfig.C84_PREF)> -1)
-        {
-        	slabel = slabel.replaceAll(DatabaseConfig.C84_PREF, DatabaseConfig.CBF_ABBR);
-        	
-        }
+
         return new EiModifier(modcount, slabel, svalue);
     }
 
