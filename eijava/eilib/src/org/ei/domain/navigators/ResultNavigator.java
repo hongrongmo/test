@@ -40,11 +40,10 @@ public class ResultNavigator
     private boolean m_mixed = false;
     private boolean m_books = false;
     
-    private boolean isCBF = false;
 
     public ResultNavigator(Hashtable navs, Database[] databases)
     {    
-        this.isCBF = isCBF(databases);    	
+    	
         this.fastnavigators = getFastNavigators(navs, databases);
        
         // sets m_mixed, m_patents, m_other
@@ -54,24 +53,7 @@ public class ResultNavigator
         this.adjustComposition();
     }
     
-    public boolean isCBF(Database[] databases)
-    {
-    	int len = 0;
-    	if (databases != null)
-    	{
-    		len = databases.length;   		
-    	}
-    	
-    	for (int i = 0; i < len ; i ++)
-    	{
-    		if( databases[i].getID().equalsIgnoreCase(DatabaseConfig.CBF_PREF))
-    		{
-    			return true;
-    		}  		
-    	}
-    	
-    	return false;    	
-    }
+
 
     public ResultNavigator(String navigatorsstring)
     {
@@ -146,10 +128,6 @@ public class ResultNavigator
                     }
                 }
             }
-        }
-        if(isCBF && ((m_compmask & DatabaseConfig.C84_MASK)== DatabaseConfig.C84_MASK) )
-        {       	
-        	m_compmask = m_compmask  - DatabaseConfig.C84_MASK + DatabaseConfig.CBF_MASK;
         }
         
     }
@@ -651,10 +629,6 @@ public class ResultNavigator
                             dbid = dbid.substring(0,3);
                         }
                         
-                        if(dbid.trim().equalsIgnoreCase(DatabaseConfig.C84_PREF) && isCBF)
-                        {
-                        	dbid = DatabaseConfig.CBF_PREF;
-                        }
                         Database adb = dbConfig.getDatabase(dbid);                        
   
                         if(adb == null)
