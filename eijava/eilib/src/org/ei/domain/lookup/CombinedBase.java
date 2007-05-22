@@ -23,10 +23,10 @@ public abstract class CombinedBase
     private LookupSkipper skipper;
     private boolean dynamic;
     private DatabaseConfig dconfig = DatabaseConfig.getInstance();
-    
+
     protected boolean isCBF = false;
 
-    
+
 
     public CombinedBase(String sessionID,
                         int indexesPerPage,
@@ -46,14 +46,8 @@ public abstract class CombinedBase
             {
                 instatement.append(", ");
             }
-            String dbid = databases[i].getID();
-            
-            if (dbid.equalsIgnoreCase(DatabaseConfig.CBF_PREF))
-            {
-            	this.isCBF = true;
-            	dbid = DatabaseConfig.C84_PREF;
-            }
 
+            String dbid = databases[i].getIndexName().substring(0,3);
             instatement.append("'").append(dbid).append("'");
         }
 
@@ -152,7 +146,7 @@ public abstract class CombinedBase
                 }
 
                 dbName = ((String)rset.getString("dbase")).trim();
-                
+
                 if(dups.contains(displayName))
                 {
 
@@ -180,18 +174,8 @@ public abstract class CombinedBase
                     for(int j=0; j<databases2.size(); ++j)
                     {
                     	Database db = (Database)databases2.get(j);
-                    	out.write("<DB>");    
-                    	
-                        if (isCBF && 
-                        		db.getName().trim().equalsIgnoreCase("Compendex"))
-                        {
-                        	out.write("EI Backfile");
-                        }
-                        else
-                        {
-                        	out.write(db.getName());
-                        }
-                                                                              
+                    	out.write("<DB>");
+                        out.write(db.getName());
                         out.write("</DB>");
                     }
 
