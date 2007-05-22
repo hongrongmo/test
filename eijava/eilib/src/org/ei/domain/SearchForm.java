@@ -778,10 +778,6 @@ public class SearchForm {
 	                dYear = (dYear > cpxStartYear) ? cpxStartYear : dYear;
 	            }
 
-                if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.C84_MASK) == DatabaseConfig.C84_MASK)) {
-                    int cpxStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("CSY") + 3, sYear.indexOf("CSY") + 7));
-                    dYear = (dYear > cpxStartYear) ? cpxStartYear : dYear;
-                }
 	            if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.INS_MASK) == DatabaseConfig.INS_MASK)) {
 	                int insStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("ISY") + 3, sYear.indexOf("ISY") + 7));
 	                dYear = (dYear > insStartYear) ? insStartYear : dYear;
