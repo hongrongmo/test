@@ -33,7 +33,6 @@ public final class DatabaseConfig
     
 	public static final String C84_PREF = "c84";
 	public static final String CBF_PREF = "zbf";
-	public static final String CBF_ABBR = "eib";  // abbreviated title for EI Backfile
 	public static final int CBF_ENDYEAR  = 1969;
 
     protected static Log log = LogFactory.getLog(DatabaseConfig.class);
