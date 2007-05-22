@@ -7,6 +7,7 @@ import java.util.Properties;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.ei.domain.navigators.EiNavigator;
 import org.ei.domain.navigators.NavigatorCache;
 import org.ei.domain.navigators.ResultNavigator;
 import org.ei.query.base.HitHighlighter;
@@ -29,14 +30,15 @@ public class FastSearchControl
     private boolean cachePage;
     private boolean lazy;
     private boolean usenavigators = true;
+    private boolean backfileStandAlone = false;
     public static String BASE_URL;
     private String errorCode;
 
     private String searchID;
 
 	private static int currentIndex = 0;
-	
-	
+
+
 
 
 	private static String[] baseURLS = {"http://66.151.181.135:15100",
@@ -195,6 +197,10 @@ public class FastSearchControl
         searchResult = new SearchResult(this);
         searchResult.setQuery(sQuery);
 
+		if((sQuery.getDataBase() & DatabaseConfig.CBF_MASK) == DatabaseConfig.CBF_MASK)
+		{
+			this.backfileStandAlone = true;
+		}
 
         this.query = sQuery;
         this.sessionID = sSessionID;
@@ -230,7 +236,7 @@ public class FastSearchControl
 
 
             DatabaseConfig dConfig = DatabaseConfig.getInstance();
-            
+
             String fastSearchString = query.getSearchQuery();
             Sort sortOption = query.getSortOption();
 
@@ -242,7 +248,7 @@ public class FastSearchControl
             client.setDoClustering(false);
             client.setResultView("ei");
             client.setDoNavigators(usenavigators);
- 
+
             if(usenavigators)
             {
                 client.setNavigatorMask(query.getGatheredMask());
@@ -265,8 +271,10 @@ public class FastSearchControl
             this.errorCode = client.getErrorCode();
 
             if(usenavigators)
-            {           	
-                navigator = new ResultNavigator(client.getNavigators(),query.getDatabases());
+            {
+				Hashtable hnavs = getNavigators(client.getNavigators());
+                navigator = new ResultNavigator(hnavs,
+                						        query.getDatabases());
             }
 
             int docCount = client.getHitCount();
@@ -274,24 +282,14 @@ public class FastSearchControl
             searchResult.setHitCount(docCount);
             searchResult.setResponseTime(client.getSearchTime());
             List ds = client.getDocIDs();
-            
-            boolean isCBF = switchToCBF();
 
             for(int i=0;i<ds.size();i++)
             {
                 String[] fields = (String[])ds.get(i);
-//                System.out.println("fields[0]"+fields[0]);
-//                System.out.println("fields[1]"+fields[1]);
-//                System.out.println("fields[2]"+fields[2]);
-//                System.out.println("fields[3]"+fields[3]);
-
-                if (isCBF)
-                {
-                	fields[0] = logicMidCBF(fields[0]);
-                }
+				String did = getDocID(fields[0]);
                 DocID docID = new DocID(++offset,
-                						fields[0],
-                                        dConfig.getDatabase(fields[0].substring(0,3)),
+                						did,
+                                        dConfig.getDatabase(did.substring(0,3)),
                                         fields[1],
                                         fields[2],
                                         Integer.parseInt(fields[3]));
@@ -306,49 +304,45 @@ public class FastSearchControl
 
         return dList;
     }
-    
-    private boolean switchToCBF()
-    {
-    	if((query.getDataBase() & DatabaseConfig.CBF_MASK) == DatabaseConfig.CBF_MASK)
-    	{    		
-    		return true;
-    	}
-    	else
-    	{
-    		return false;
-    	}
-    }
-    private String logicMidCBF(String mid)    
-    {
-    	
-    	if (mid.substring(0,3).equalsIgnoreCase(DatabaseConfig.C84_PREF))
-    	{
-    		return DatabaseConfig.CBF_PREF.concat(mid.substring(3));
-    	}
-    	return mid;
-    }
-    
-    
-    
-//    private int logicMask(int maskIn)
-//    {
-//    	System.out.println("maskIn" + maskIn);
-//
-//    	if (((maskIn & 1) != 1) && ((maskIn & 32)== 32)) // enable later add cbf remove c84 
-//    	{
-//    		System.out.println("replacin maks"+(maskIn + 262144) );
-//    		return ( maskIn + 262144);   		
-//    	}
-//    
-//    	return maskIn;
-//    }
 
+	private String getDocID(String mid)
+	{
+		if(backfileStandAlone &&
+		   mid.indexOf(DatabaseConfig.C84_PREF) == 0)
+    	{
+			return DatabaseConfig.CBF_PREF.concat(mid.substring(3));
+    	}
+
+		return mid;
+	}
+
+	private Hashtable getNavigators(Hashtable hnavs)
+	{
+		if(backfileStandAlone)
+		{
+			List navlist =(List) hnavs.get(EiNavigator.DB);
+			if(navlist != null)
+			{
+				for(int i=0; i<navlist.size(); i++)
+				{
+					String[] dataElement  = (String[]) navlist.get(i);
+					if(dataElement[0].equals(DatabaseConfig.C84_PREF))
+					{
+						dataElement[0] = DatabaseConfig.CBF_PREF;
+						break;
+					}
+				}
+			}
+		}
+
+		return hnavs;
+	}
 
     public Page pageAt(int docIndex,
                        String dataFormat)
             throws SearchException
     {
-       
+
         if(!searchInitialized)
         {
             throw new SearchException(new Exception("Search is not initialized"));
@@ -550,7 +544,7 @@ public class FastSearchControl
 				PageEntry entry = new PageEntry();
 				entry.setSelected(false);
 				entry.setDoc((EIDoc)docList.get(i));
-				currentPage.add(entry);				
+				currentPage.add(entry);
 			}
 		}
         return currentPage;
