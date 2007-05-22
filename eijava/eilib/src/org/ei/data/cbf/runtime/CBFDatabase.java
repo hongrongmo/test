@@ -5,6 +5,9 @@ import java.util.Map;
 import org.ei.domain.DocumentBuilder;
 import org.ei.domain.SearchField;
 import org.ei.data.c84.runtime.*;
+import org.ei.domain.sort.SortField;
+import java.util.List;
+import java.util.Arrays;
 
 public class CBFDatabase extends C84Database
 {
@@ -43,6 +46,9 @@ public class CBFDatabase extends C84Database
 		searchfield.put("CO", "Y");
 	}
 
+	public List getSortableFields() {
+		      return Arrays.asList(new SortField[]{SortField.RELEVANCE, SortField.AUTHOR, SortField.YEAR, SortField.SOURCE, SortField.PUBLISHER});
+	}
 
     public int getStartYear(boolean hasBackFile) {return 1884; }
 
