@@ -13,7 +13,21 @@
 <%@ page import="java.util.*"%>
 <%@ page import="java.io.FileWriter"%>
 <%@ page import="java.net.URLDecoder"%>
-<%@ page import="java.net.URLEncoder"%><%@ page import="org.ei.controller.ControllerClient"%><%@ page import="org.ei.session.*"%><%@ page import="org.ei.util.*"%><%@ page import="org.ei.domain.*" %><%@ page import="org.ei.config.*"%><%@ page import="org.ei.domain.navigators.*"%><%@ page import="org.ei.parser.base.*"%><%@ page import="org.ei.query.base.*"%><%@ page import="org.ei.domain.personalization.GlobalLinks"%><%@ page import="org.ei.domain.personalization.SavedSearches"%><%@ page import="org.ei.domain.Searches"%><%@ page import="org.ei.ev.driver.upt.*"%><%@ page import="org.ei.data.upt.*"%><%@ page errorPage="/error/errorPage.jsp"%><%@ page buffer="20kb"%><%
+<%@ page import="java.net.URLEncoder"%>
+<%@ page import="org.ei.controller.ControllerClient"%>
+<%@ page import="org.ei.session.*"%>
+<%@ page import="org.ei.util.*"%>
+<%@ page import="org.ei.domain.*" %>
+<%@ page import="org.ei.config.*"%>
+<%@ page import="org.ei.domain.navigators.*"%>
+<%@ page import="org.ei.parser.base.*"%>
+<%@ page import="org.ei.query.base.*"%>
+<%@ page import="org.ei.domain.personalization.GlobalLinks"%>
+<%@ page import="org.ei.domain.personalization.SavedSearches"%>
+<%@ page import="org.ei.domain.Searches"%>
+<%@ page import="org.ei.data.upt.runtime.*"%>
+<%@ page errorPage="/error/errorPage.jsp"%>
+<%@ page buffer="20kb"%><%
 
 	String currentRecord=request.getParameter("DOCINDEX");
 	String searchID=request.getParameter("SEARCHID");
