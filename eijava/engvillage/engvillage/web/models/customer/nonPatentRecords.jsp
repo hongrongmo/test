@@ -22,7 +22,7 @@
 <%@ page import="org.ei.domain.personalization.GlobalLinks"%>
 <%@ page import="org.ei.domain.personalization.SavedSearches"%>
 <%@ page import="org.ei.domain.Searches"%>
-<%@ page import="org.ei.ev.driver.upt.*"%>
+<%@ page import="org.ei.data.upt.runtime.*"%>
 <%@ page errorPage="/error/errorPage.jsp"%>
 <%@ page buffer="20kb"%>
 <%
