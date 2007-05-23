@@ -1349,11 +1349,6 @@ public class Query implements Comparable
     */
     public String getDisplayQuery()
     {
-    	if(sDisplayQuery.indexOf(DatabaseConfig.C84_PREF) > -1)
-    	{
-    		return sDisplayQuery.replaceAll(DatabaseConfig.C84_PREF, DatabaseConfig.CBF_ABBR);
-    		
-    	}
         return sDisplayQuery;
     }
 
