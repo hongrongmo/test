@@ -39,6 +39,19 @@
 
     // - - - -LEXISNEXIS NEWS- - - -
     dataBaseNames.put("LEX", "LexisNexis|LexisNexis News");
+    
+    // - - - -PAPER VILLAGE- - - -
+    dataBaseNames.put("PCH", "PaperChem");
+    
+    // - - - -Chemica VILLAGE- - - -
+    dataBaseNames.put("CHM", "Chimica");
+       
+    // - - - - CBNB - - - -//
+    dataBaseNames.put("CBN", "CBNB");
+    
+    // - - - - Encompass - - - - //
+    dataBaseNames.put("ELT", "EncompassLit");
+    dataBaseNames.put("EPT", "EncompassPat");
 
     if (request.getParameter("alldb") !=null )
     {
@@ -50,7 +63,6 @@
         String[] dbs = request.getParameterValues("database");
         for (int i=0; i<dbs.length; i++)
         {
-
           if("Compendex".equalsIgnoreCase(dbs[i]))
           {
             sumDb += 1;
@@ -89,6 +101,7 @@
 
 
     String[] cars = user.getCartridge();
+    //System.out.println("Cartridge= "+user.getCartridgeString());
 
     List lstCarts = Arrays.asList(cars);
 
