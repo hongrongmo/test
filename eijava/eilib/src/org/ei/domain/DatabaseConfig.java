@@ -16,21 +16,26 @@ import org.ei.domain.sort.SortField;
 
 public final class DatabaseConfig
 {
-    public static final int CPX_MASK = 1;
-    public static final int INS_MASK  = 2;
-    public static final int NTI_MASK  = 4;
+    public static final int CPX_MASK 	= 1;
+    public static final int INS_MASK  	= 2;
+    public static final int NTI_MASK  	= 4;
     public static final int USPTO_MASK  = 8;
-    public static final int CRC_MASK  = 16;
-    public static final int C84_MASK  = 32;
-    public static final int IBF_MASK  = 4096;
-    public static final int GEO_MASK  = 8192;
-    public static final int EUP_MASK  = 16384;
-    public static final int UPA_MASK  = 32768;
-    public static final int REF_MASK  = 65536;
-    public static final int PAG_MASK  = 131072;
-    public static final int CBF_MASK  = 262144;
-    
-    
+    public static final int CRC_MASK  	= 16;
+    public static final int C84_MASK  	= 32;
+    public static final int PCH_MASK  	= 64;
+    public static final int CHM_MASK  	= 128;
+    public static final int CBN_MASK  	= 256;
+    public static final int ELT_MASK  	= 1024;
+    public static final int EPT_MASK  	= 2048;
+    public static final int IBF_MASK  	= 4096;
+    public static final int GEO_MASK  	= 8192;
+    public static final int EUP_MASK  	= 16384;
+    public static final int UPA_MASK  	= 32768;
+    public static final int REF_MASK  	= 65536;
+    public static final int PAG_MASK  	= 131072;
+    public static final int CBF_MASK  	= 262144;
+
+
 	public static final String C84_PREF = "c84";
 	public static final String CBF_PREF = "zbf";
 	public static final int CBF_ENDYEAR  = 1969;
@@ -80,7 +85,8 @@ public final class DatabaseConfig
             {
                 String strKey = (String) itr.next();
                 String strDriverName = (String)driverTable.get(strKey);
-
+				//System.out.println("key= "+strKey);
+				//System.out.println("strDriverName= "+strDriverName);
                 Database d = (Database)Class.forName(strDriverName).newInstance();
                 databaseTable.put(strKey, d);
                 if(d.hasChildren())
@@ -317,8 +323,8 @@ public final class DatabaseConfig
 
         for(int i = 0; i < strDatabases.length; i++)
         {
-
             String strID = strDatabases[i];
+            //System.out.println("strID= "+strID);
             if(databaseTable.containsKey(strID.toLowerCase()))
             {
                 Database d = (Database) databaseTable.get( strID.toLowerCase() );
@@ -343,12 +349,12 @@ public final class DatabaseConfig
         int userMask = getMask(credentials);
 
         // loop through all dbs in the mask, opening up range to min start year and max end year
-        
+
         Database[] databases = getDatabases(dbmask);
         for(int x=0; x < databases.length ; x++)
         {
             // only include this database if it is in the user's mask
-             	
+
             if((userMask & databases[x].getMask()) != databases[x].getMask())
             {
                 continue;
@@ -363,7 +369,7 @@ public final class DatabaseConfig
             intStartYear = (databases[x].getStartYear(backFile) < intStartYear ) ? databases[x].getStartYear(backFile) : intStartYear;
             // take max of endYear and database end year
             intEndYear = (databases[x].getEndYear() > intEndYear ) ? databases[x].getEndYear() : intEndYear;
-          
+
         }
 
         yrmap.put(DatabaseConfig.STARTYEAR,String.valueOf(intStartYear));
