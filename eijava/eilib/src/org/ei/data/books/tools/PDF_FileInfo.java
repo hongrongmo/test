@@ -5,8 +5,12 @@ import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.Iterator;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 public class PDF_FileInfo implements Visitable {
-    
+    protected static Log log = LogFactory.getLog(PDF_FileInfo.class);
+  
     private static final String BN13_PREFIX = "987";
 
 
@@ -25,7 +29,7 @@ public class PDF_FileInfo implements Visitable {
     }
     
 	private long page_count = 0;
-
+	private int chapterBookmarkLevel = 1;
    
 	private String isbn = null;
 	private String isbn13 = null;
@@ -51,7 +55,8 @@ public class PDF_FileInfo implements Visitable {
 	public PDF_Page getPage(long curpage) {
 
 		Bookmark chapter = getContainingChapter(curpage);
-		return new PDF_Page(filepathname, curpage, chapter);
+        Bookmark section = getContainingSection(curpage);
+		return new PDF_Page(filepathname, curpage, chapter, section);
 	}
 
 	public Bookmarks getBookmarks() {
@@ -82,28 +87,52 @@ public class PDF_FileInfo implements Visitable {
     public void setIsbn(String anisbn) {
         isbn = anisbn;
     }
+    
 	public Bookmark getContainingChapter(long curpage) {
-		Iterator itrbkmks = getBookmarks().iterator();
-	
-		Bookmark bookmark = null, prevchapter = null;
-		while (itrbkmks.hasNext()) {
-			bookmark = (Bookmark) itrbkmks.next();
-			long chappage = bookmark.getPage(); 
-
-			if (chappage <= curpage) {
-				prevchapter = bookmark;
-				continue;
-			} else {
-				bookmark = prevchapter;
-				break;
-			}
-		}
-		if (bookmark == null) {
-			bookmark = prevchapter;
-		}
+        Bookmark bookmark = null, prevchapter = null;
+        Iterator itr = this.createIterator();
+        while (itr.hasNext()) {
+            bookmark = (Bookmark) itr.next();
+            if(bookmark.getLevel() == getChapterBookmarkLevel()) {
+ 
+              if (bookmark.getPage() <= curpage) {
+                  prevchapter = bookmark;
+              } 
+              else {
+                  bookmark = prevchapter;
+                  break;
+              }            
+            }
+        }
+        if(bookmark == null) {
+            bookmark = getContainingSection(curpage);
+        }
 		return bookmark;
 	}
+    
+    public Bookmark getContainingSection(long curpage) {
+        Bookmark bookmark = null, prevchapter = null;
+        Iterator itr = this.createIterator();
+        while (itr.hasNext()) {
+            bookmark = (Bookmark) itr.next();
 
+            if (bookmark.getPage() <= curpage) {
+                prevchapter = bookmark;
+            } else {
+                bookmark = prevchapter;
+                break;
+            }
+        }
+        if(bookmark == null) {
+            if(curpage == 1) {
+                bookmark = Bookmark.BKMK_COVER;
+            }
+            else {
+                bookmark = Bookmark.BKMK_FRONTMATTER;
+            }
+        }
+        return bookmark;
+    }
     public void accept(Visitor visitor) {
         visitor.visit(this);
     }
@@ -140,6 +169,14 @@ public class PDF_FileInfo implements Visitable {
 
     public void setIsbn13(String isbn13) {
         this.isbn13 = isbn13;
+    }
+
+    public int getChapterBookmarkLevel() {
+        return chapterBookmarkLevel;
+    }
+
+    public void setChapterBookmarkLevel(int chapterBookmarkLevel) {
+        this.chapterBookmarkLevel = chapterBookmarkLevel;
     }
 
 } // private class PDF_Fileinfo

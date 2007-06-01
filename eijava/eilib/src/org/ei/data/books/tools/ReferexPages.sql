@@ -17,7 +17,9 @@ BN13          - ISBN13
 PII           - S300 Chapter ID
 PAGE_NUM      - Page number in PDF file
 SECTION_TITLE - Title of containing section
-PAGE_START    - Start page of contaning collection
+SECTION_START - Start page of contaning section
+CHAPTER_TITLE - Title of containing CHAPTER
+CHAPTER_START - Start page of contaning CHAPTER
 PAGE_BYTES    - Byte count of raw text file
 PAGE_TXT      - raw page text
 PAGE_TOTAL    - PDF file page count
@@ -49,7 +51,9 @@ CREATE TABLE BOOK_PAGES_NEW
   PII            VARCHAR2(64 BYTE),
   PAGE_NUM       INTEGER,
   SECTION_TITLE  VARCHAR2(256 BYTE),
-  PAGE_START     INTEGER,
+  SECTION_START  INTEGER,
+  CHAPTER_TITLE  VARCHAR2(256 BYTE),
+  CHAPTER_START  INTEGER,
   PAGE_BYTES     INTEGER,
   PAGE_TXT       CLOB,
   PAGE_TOTAL     INTEGER,
@@ -85,13 +89,17 @@ FIELDS TERMINATED BY "\t"
 TRAILING NULLCOLS
 ( DOCID       CHAR,
   BN          CHAR,
+  BN13        CHAR,
+  PII         CHAR,
   PAGE_NUM    CHAR,
   SECTION_TITLE     CHAR,
-  PAGE_START CHAR,
+  SECTION_START     CHAR,
+  CHAPTER_TITLE     CHAR,
+  CHAPTER_START     CHAR,
   PAGE_BYTES  CHAR,
   PAGE_FILENAME FILLER CHAR(100),
   PAGE_TXT    LOBFILE(PAGE_FILENAME) TERMINATED BY EOF,
-  PAGE_TOTAL CHAR )
+  PAGE_TOTAL  CHAR )
 
 Testing queries
 --------------------------------------------------------------------------------------

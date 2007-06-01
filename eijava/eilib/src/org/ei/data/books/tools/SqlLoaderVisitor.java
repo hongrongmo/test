@@ -17,7 +17,9 @@ public class SqlLoaderVisitor extends BookVisitor {
 
             PDF_Page referexpage = pdffile.getPage(curpage);
         
-            long page_size = referexpage.getTextSizeBytes();
+// skip this for now for speeding up
+            long page_size = 0; //referexpage.getTextSizeBytes();
+            
             try {
                 wrtr.write("pag_" + pdffile.getIsbn().toLowerCase()+"_"+Long.toString(curpage));
 
@@ -26,7 +28,19 @@ public class SqlLoaderVisitor extends BookVisitor {
                 wrtr.write(FIELD_DELIMITER);
                 wrtr.write(pdffile.getIsbn13().toLowerCase());
                 wrtr.write(FIELD_DELIMITER);
+                wrtr.write("chp_" + pdffile.getIsbn().toLowerCase()+"_"+PDF_FileInfo.formatPageNumber(referexpage.getChapter().getPage()));
+                wrtr.write(FIELD_DELIMITER);
                 wrtr.write(Long.toString(curpage));
+// containing section data
+                wrtr.write(FIELD_DELIMITER);
+                if(referexpage.getSection() != null) {
+                    wrtr.write(referexpage.getSection().getTitle());
+                }
+                wrtr.write(FIELD_DELIMITER);
+                if(referexpage.getSection() != null) {
+                    wrtr.write(Long.toString(referexpage.getSection().getPage()));
+                }
+// containing chapter data                
                 wrtr.write(FIELD_DELIMITER);
                 if(referexpage.getChapter() != null) {
                     wrtr.write(referexpage.getChapter().getTitle());
@@ -35,10 +49,11 @@ public class SqlLoaderVisitor extends BookVisitor {
                 if(referexpage.getChapter() != null) {
                     wrtr.write(Long.toString(referexpage.getChapter().getPage()));
                 }
+
                 wrtr.write(FIELD_DELIMITER);
                 wrtr.write(Long.toString(page_size));
-                wrtr.write(FIELD_DELIMITER);
-                wrtr.write(referexpage.getTextFilePath());
+//                wrtr.write(FIELD_DELIMITER);
+//                wrtr.write(referexpage.getTextFilePath());
                 wrtr.write(FIELD_DELIMITER);
                 wrtr.write(String.valueOf(pdffile.getPageCount()));
                 wrtr.write(System.getProperty("line.separator"));

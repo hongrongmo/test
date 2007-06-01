@@ -13,11 +13,13 @@ public class PDF_Page implements Visitable {
 	private long page = 1;
 	private String documentpath = null;
 	private Bookmark chapter = null;
+    private Bookmark section = null;
 
-	public PDF_Page(String docname, long pagenum, Bookmark chapterbkmk) {
+	public PDF_Page(String docname, long pagenum, Bookmark chapterbkmk, Bookmark sectionmk) {
 		documentpath = docname;
 		page = pagenum;
 		chapter = chapterbkmk;
+        section = sectionmk;
 	}
 
 	public long getPageNum() {
@@ -28,6 +30,10 @@ public class PDF_Page implements Visitable {
 		return chapter; 
 	}
 
+    public Bookmark getSection() {
+        return section; 
+    }
+    
 	public String getTextFilePath() {
 		return (documentpath + System.getProperty("file.separator") + "pg_" 
 				+ df.format(page) + ".txt"); 
