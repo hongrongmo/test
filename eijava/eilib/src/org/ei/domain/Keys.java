@@ -10,6 +10,7 @@ public interface Keys
     */
     public static Key BOOK_TITLE = new Key("BTI", "Book title");
 	public static Key BOOK_PAGE = new Key("BPP", "Page number");
+	public static Key BOOK_PII = new Key("PII", "PII");
 	public static Key BOOK_PAGE_COUNT = new Key("BPC", "Page count");
 	public static Key BOOK_YEAR = new Key("BYR", "Year");
 	public static Key BOOK_PUBLISHER = new Key("BPN", "Publisher");
@@ -151,13 +152,13 @@ public interface Keys
     public static final Key PATAPPDATE = new Key("PAPD", "Application date");
     public static final Key PATAPPDATEX = new Key("PAPX", "Application date");
     public static final Key PATAPP_INFO = new Key("PAPIS", "Application information");
-    public static final Key PATAPPNUMS = new Key("PANS", "Application  number");   
+    public static final Key PATAPPNUMS = new Key("PANS", "Application  number");
     public static final Key PATAPPNUMUS = new Key("PANUS", "Unstandardized application number");
     public static final Key PATAPPCOUNTRY= new Key("PAPCO", "Application country");
     public static final Key PATASSIGN = new Key("PASM", "Assignee");
     public static final Key PATCOUNTRY = new Key("COPA","Country of application");
     public static final Key PATENT_ISSUE_DATE = new Key("PIDD","Patent issue date");
-    public static final Key PATFILDATE = new Key("PFD","Filing date");    
+    public static final Key PATFILDATE = new Key("PFD","Filing date");
     public static final Key PATNUM = new Key("PAP", "Patent number");
     public static final Key PATENT_NUMBER = new Key("PM", "Publication number");
     public static final Key PATENT_NUMBER1 = new Key("PM1", "Publication number"); // for pat refs pages
@@ -241,7 +242,7 @@ public interface Keys
     public static final Key SERIAL_TITLE = new Key("ST","Serial title");
     public static final Key SECONDARY_SOURCE = new Key("SEC", "Secondary source");
     public static final Key SESSION_NAME_NUMBER = new Key("CSESS","Session name number");
-    public static final Key SPECIFIC_NAMES = new Key("SPECN","Specific Names");   
+    public static final Key SPECIFIC_NAMES = new Key("SPECN","Specific Names");
     public static final Key SOURCE = new Key("SO","Source");
     public static final Key SPONSOR = new Key("SP","Sponsor");
     public static final Key START_PAGE= new Key("SPG");
