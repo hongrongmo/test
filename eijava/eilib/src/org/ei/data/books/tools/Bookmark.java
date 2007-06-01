@@ -7,7 +7,7 @@ public class Bookmark implements Comparable, Visitable {
 	public static String BKMK_FRONTMATTER_TITLE = "Frontmatter";
 
 	public static Bookmark BKMK_COVER = new Bookmark(1, Bookmark.BKMK_COVER_TITLE);
-	public static Bookmark BKMK_FRONTMATTER = new Bookmark(2, Bookmark.BKMK_FRONTMATTER_TITLE);
+	public static Bookmark BKMK_FRONTMATTER = new Bookmark(1, Bookmark.BKMK_FRONTMATTER_TITLE);
 	
 	private long page = 1;
     private long endpage = 0;
