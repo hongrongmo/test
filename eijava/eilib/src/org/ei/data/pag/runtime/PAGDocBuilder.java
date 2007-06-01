@@ -64,6 +64,7 @@ public class PAGDocBuilder implements DocumentBuilder
   private static final Key[] DETAILED_KEYS = {
  Keys.BOOK_TITLE,
  Keys.BOOK_PAGE,
+ Keys.BOOK_PII,
  Keys.SERIAL_TITLE,
  Keys.BOOK_DESCRIPTION,
  Keys.AUTHORS,
@@ -103,7 +104,7 @@ public class PAGDocBuilder implements DocumentBuilder
 
   private static String queryXMLCitation = "select  M_ID,DT,TI,TT,AUS,AF,AM,AC,ASS,AV,AY,ED,EF,EM,EC,ES,EV,EY,ST,SE,VO,ISS,SD,MT,VT,PN,YR,NV,PA,XP,AR,PP,LA,ME,SN,DO,BN,LOAD_NUMBER,EX,CVS from cpx_master where M_ID IN ";
 
-  private static String queryDocument = "SELECT BOOK_PAGES.PAGE_KEYWORDS, BOOK_PAGES.DOCID, BOOK_PAGES.BN, BOOK_PAGES.PAGE_NUM, BOOK_PAGES.SECTION_TITLE, BOOK_PAGES.PAGE_START, BOOK_PAGES.PAGE_BYTES, BOOK_PAGES.PAGE_TXT, BOOK_PAGES.PAGE_TOTAL, CVS, AB, ST, BN, PP, YR, AUS, TI, PN, VO, SUB FROM BOOK_PAGES WHERE BOOK_PAGES.DOCID IN "; //('pag_0080426794_131')
+  private static String queryDocument = "SELECT BOOK_PAGES.PAGE_KEYWORDS, BOOK_PAGES.PII, BOOK_PAGES.DOCID, BOOK_PAGES.BN, BOOK_PAGES.PAGE_NUM, BOOK_PAGES.SECTION_TITLE, BOOK_PAGES.SECTION_START, BOOK_PAGES.PAGE_BYTES, BOOK_PAGES.PAGE_TXT, BOOK_PAGES.PAGE_TOTAL, CVS, AB, ST, BN, PP, YR, AUS, TI, PN, VO, SUB FROM BOOK_PAGES WHERE BOOK_PAGES.DOCID IN "; //('pag_0080426794_131')
 
   public DocumentBuilder newInstance(Database database)
   {
@@ -258,8 +259,15 @@ SELECT DOCID, BN, PAGE_NUM, SECTION_TITLE, PAGE_START, PAGE_BYTES, PAGE_TXT, BOO
           ht.put(Keys.BOOK_PAGE_COUNT, new XMLWrapper(Keys.BOOK_PAGE_COUNT, "Total Pages",strPages));
         }
 
+		 //  PII
+		String strPii = rset.getString("PII");
+		if(strPii != null)
+		{
+			ht.put(Keys.BOOK_PII, new XMLWrapper(Keys.BOOK_PII, strPii));
+		}
 
-        String startPage = rset.getString("PAGE_START");
+        String startPage = rset.getString("SECTION_START");
+
         if(startPage != null)
         {
           ht.put(Keys.BOOK_CHAP_START,new XMLWrapper(Keys.BOOK_CHAP_START,startPage));
