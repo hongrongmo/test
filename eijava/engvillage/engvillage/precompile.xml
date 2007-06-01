@@ -1,5 +1,6 @@
 <project name="Webapp Precompilation" default="all" basedir=".">
 
+<!-- C:\miami\eijava\engvillage\engvillage>ant -f precompile.xml clean all -Dwebapp.path=c:\miami\appserver.4\webapps\engvillage -Dtomcat.home=c:\miami\appserver.4 -->
   <target name="deploy">
     <!-- delete and refresh jsps -->
     <delete dir="${webapp.path}/models"/>
