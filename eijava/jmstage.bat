@@ -1,10 +1,31 @@
 @echo off
-C:
-cd C:\miami\eijava\eilib
+
+pushd C:\miami\eijava\eilib
 cmd.exe /C ant dist
-cd C:\miami\eijava\engvillage
+popd
+
+pushd C:\miami\eijava\engvillage
+
+copy stage.properties.row1 stage.properties
 cmd.exe /C ant stage
-REM pscp.exe -C -i "U:\My Documents\identity.ppk" engvillage\stage\engvillage.war engresources\stage\engresources.war controller\stage\controller.war jmoschet@neptune.elsevier.com:stage
-pscp.exe -C -i "U:\My Documents\identity.ppk" engvillage\stage\engvillage.war engresources\stage\engresources.war controller\stage\controller.war umoscja@cpc1796:
+
+rmdir /S /Q "%USERPROFILE%"\Desktop\build
+
+mkdir "%USERPROFILE%"\Desktop\build\row1
+copy engvillage\stage\engvillage.war "%USERPROFILE%"\Desktop\build\row1
+copy engresources\stage\engresources.war "%USERPROFILE%"\Desktop\build\row1
+copy controller\stage\controller.war "%USERPROFILE%"\Desktop\build\row1
+
 cmd.exe /C ant clean
 
+copy stage.properties.row2 stage.properties
+cmd.exe /C ant stage
+
+mkdir "%USERPROFILE%"\Desktop\build\row2
+copy engvillage\stage\engvillage.war "%USERPROFILE%"\Desktop\build\row2
+copy engresources\stage\engresources.war "%USERPROFILE%"\Desktop\build\row2
+copy controller\stage\controller.war "%USERPROFILE%"\Desktop\build\row2
+
+cmd.exe /C ant clean
+
+popd
