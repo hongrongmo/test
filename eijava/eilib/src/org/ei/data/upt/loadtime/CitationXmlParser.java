@@ -341,7 +341,7 @@ public class CitationXmlParser {
 
         Hashtable htPcit = (Hashtable) htRecord.get(PCIT);
 
-        Enumeration enum = htPcit.keys();
+        Enumeration anenum = htPcit.keys();
         if(htRecord.get(AUTH_CODE) == null || ((StringBuffer)htRecord.get(AUTH_CODE)).length()!=2)
         {
             if(rootFileName != null && rootFileName.length() > 2)
@@ -385,9 +385,9 @@ public class CitationXmlParser {
 
         if (mid != null && !mid.equals("")) {
 
-            while (enum.hasMoreElements()) {
+            while (anenum.hasMoreElements()) {
 
-                StringBuffer refId = ((StringBuffer) enum.nextElement());
+                StringBuffer refId = ((StringBuffer) anenum.nextElement());
                 Enumeration htKeys = htPcit.keys();
 
                 Hashtable htFields = (Hashtable) htPcit.get(refId);
@@ -443,11 +443,11 @@ public class CitationXmlParser {
 
             Hashtable htNcit = (Hashtable) htRecord.get(NCIT);
 
-            enum = htNcit.keys();
+            anenum = htNcit.keys();
 
-            while (enum.hasMoreElements()) {
+            while (anenum.hasMoreElements()) {
 
-                String refId = (String) enum.nextElement();
+                String refId = (String) anenum.nextElement();
 
                 Hashtable htFields = (Hashtable) htNcit.get(refId);
                 String source = (String) htFields.get(NCIT_SRC);
