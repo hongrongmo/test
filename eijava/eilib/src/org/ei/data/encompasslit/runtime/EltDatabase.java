@@ -31,7 +31,7 @@ public class EltDatabase extends Database
 	  }
 
 	public int getStartYear(boolean hasBackFile) {
-	   return 1900;
+	   return 1990;
    }
 
    protected String getBaseTableHook() {
@@ -47,7 +47,7 @@ public class EltDatabase extends Database
    }
 
    public String getID() {
-	   return "elt";
+	   return "llt";
    }
 
    public String getName() {
