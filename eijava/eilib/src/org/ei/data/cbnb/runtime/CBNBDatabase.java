@@ -45,7 +45,7 @@ public class CBNBDatabase extends Database
     private DataDictionary dataDictionary = new CBNBDataDictionary();
 
 	public int getStartYear(boolean hasBackFile)
-	{ return (1985); }
+	{ return (1990); }
 
 	protected String getBaseTableHook()
 	{
@@ -68,14 +68,14 @@ public class CBNBDatabase extends Database
 
 	public String getID()
 	{
-		return "cbn";
+		return "bbn";
 	}
 
 	public String getName()
 	{
 		return "CBNB";
 	}
-	
+
     public String getDisplayAbrevName()
     {
         return "Cb";
