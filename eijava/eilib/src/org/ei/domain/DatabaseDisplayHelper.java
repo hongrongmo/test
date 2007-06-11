@@ -22,9 +22,6 @@ public class DatabaseDisplayHelper {
 			mask = mask - 16;
 		}
 
-
-
-
 		// Remove referex from the mask.
 		boolean referex = false;
 		if(mask == 131072)
@@ -324,7 +321,7 @@ public class DatabaseDisplayHelper {
 			e.printStackTrace();
 			//Yes, I meant to sit on this. - Joel
 		}
-
+		System.out.println("database= "+buf.toString());
 		return buf.toString();
 	}
 
@@ -374,7 +371,8 @@ public class DatabaseDisplayHelper {
 					if ((!legend) && (i != 0)) {
 						buf.append(", ");
 					}
-					buf.append((databases[i].getName()).substring(0, 1));
+					//buf.append((databases[i].getName()).substring(0, 1));
+					buf.append((databases[i].getID()).substring(0, 1));
 					if (legend) {
 						buf.append("</span>");
 						buf.append(" ");
@@ -396,6 +394,7 @@ public class DatabaseDisplayHelper {
 		if ((mask == 1) ||
 		        (mask == 2) ||
 		        (mask == 4) ||
+		        (mask == 128) ||
 		        (mask == 8192) || // geobase
 		        (mask == 16384) ||
 		        (mask == 32768))
