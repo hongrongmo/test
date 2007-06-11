@@ -40,9 +40,9 @@ public class PaperChemDatabase extends Database {
 		searchfield.put("TI", "Y");
 		searchfield.put("FL", "Y");
 	}
-    
+
     public int getStartYear(boolean hasBackFile) {
-        return (1900);
+        return (1990);
     }
 
     protected String getBaseTableHook() {
@@ -58,7 +58,7 @@ public class PaperChemDatabase extends Database {
     }
 
     public String getID() {
-        return "pch";
+        return "ach";
     }
 
     public String getName() {
@@ -72,7 +72,7 @@ public class PaperChemDatabase extends Database {
     public String getShortName() {
         return "PaperChem";
     }
-    
+
     public String getDisplayAbrevName()
     {
         return "PC";
@@ -88,7 +88,7 @@ public class PaperChemDatabase extends Database {
     }
 
 	public int getSortValue() {
-		return (16384+2);
+		return getMask();
 	}
 
     public Map getTreatments() {
@@ -105,12 +105,12 @@ public class PaperChemDatabase extends Database {
         mp.put("T", "Theoretical (THR)");
         return mp;
     }
-    
+
     public LinkingStrategy getLinkingStrategy()
 	{
         return PCHLinkingStrategy;
 	}
-    
+
 	public boolean hasField(SearchField searchField,
 			int mask)
 	{
@@ -123,8 +123,8 @@ public class PaperChemDatabase extends Database {
 	        return false;
 	    }
 	}
-	
-    public boolean hasField(SearchField searchField) 
+
+    public boolean hasField(SearchField searchField)
     {
 	    if(searchfield.containsKey(searchField.getID()))
 	    {
