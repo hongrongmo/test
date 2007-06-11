@@ -8,6 +8,11 @@ var UPA = 32768;
 var US_EU_PATENTS = 49152;
 var REFEREX = 131072;
 var CBF = 262144;
+var CHM = 128;
+var PCH = 64;
+var ELT	= 1024;
+var EPT = 2048;
+var CBN = 256;
 
 var startYear;
 var stringYear;
@@ -34,45 +39,60 @@ function flipImage(selectedDbMask)
     }
 
     //AU
-    if((selectedDbMask & UPA) != UPA &&
-       (selectedDbMask & EUP) != EUP)
+    if((selectedDbMask & CBN) != CBN)
     {
-         document.lookuplink1.src="/engresources/images/ath.gif";
-    }
-    else if(selectedDbMask == UPA ||
-        	selectedDbMask == EUP ||
-        	selectedDbMask == US_EU_PATENTS )
-    {
-        document.lookuplink1.src="/engresources/images/inv.gif";
-    }
-    else
-    {
-        document.lookuplink1.src="/engresources/images/auinv.gif";
-    }
+	 if((selectedDbMask & UPA) != UPA &&
+	    (selectedDbMask & EUP) != EUP &&
+	    (selectedDbMask & EPT) != EPT) 
+	 {
+		 document.lookuplink1.src="/engresources/images/ath.gif";
+	 }
+	 else if(selectedDbMask == UPA ||
+		 selectedDbMask == EUP ||
+		 selectedDbMask == US_EU_PATENTS ||
+		 selectedDbMask == EPT)
+	 {
+		document.lookuplink1.src="/engresources/images/inv.gif";
+	 }
+	 else
+	 {
+		document.lookuplink1.src="/engresources/images/auinv.gif";
+	 }
+     }
 
-    //AF ---  only cpx,ins,ntis
-    if((selectedDbMask & UPA) != UPA &&
-       (selectedDbMask & EUP) != EUP)
-    {
-         document.lookuplink2.src="/engresources/images/af.gif";
-    }
-    else if(selectedDbMask == UPA ||
-        	selectedDbMask == EUP ||
-        	selectedDbMask == US_EU_PATENTS )
-    {
-         document.lookuplink2.src="/engresources/images/asg.gif";
-    }
-    else
-    {
-         document.lookuplink2.src="/engresources/images/afas.gif";
-    }
+    if((selectedDbMask & CBN) != CBN)
+    { 
+	 //AF ---  only cpx,ins,ntis
+	 if((selectedDbMask & UPA) != UPA &&
+	    (selectedDbMask & EUP) != EUP &&
+	    (selectedDbMask & EPT) != EPT )
+	 {
+		 document.lookuplink2.src="/engresources/images/af.gif";
+	 }
+	 else if(selectedDbMask == UPA ||
+		 selectedDbMask == EUP ||
+		 selectedDbMask == US_EU_PATENTS ||
+		 selectedDbMask == EPT )
+	 {
+		 document.lookuplink2.src="/engresources/images/asg.gif";
+	 }
+	 else
+	 {
+		 document.lookuplink2.src="/engresources/images/afas.gif";
+	 }
+     }
 
     //CT
     if (((selectedDbMask & CPX) == CPX) ||
     	((selectedDbMask & INSPEC) == INSPEC) ||
         ((selectedDbMask & CBF) == CBF) ||
     	((selectedDbMask & GEO) == GEO) ||
-    	((selectedDbMask & NTIS) == NTIS))
+    	((selectedDbMask & NTIS) == NTIS) ||
+    	((selectedDbMask & CBN) == CBN) ||
+    	((selectedDbMask & CHM) == CHM) ||
+    	((selectedDbMask & ELT) == ELT) ||
+    	((selectedDbMask & EPT) == EPT) ||
+    	((selectedDbMask & PCH) == PCH))
     {
         document.lookuplink3.src="/engresources/images/ct.gif";
     }
@@ -82,7 +102,12 @@ function flipImage(selectedDbMask)
     	((selectedDbMask & CBF) == CBF) ||
     	((selectedDbMask & INSPEC) == INSPEC) ||
     	((selectedDbMask & GEO) == GEO) ||
-    	((selectedDbMask & NTIS) == NTIS))
+    	((selectedDbMask & NTI) == NTI) ||
+    	((selectedDbMask & PCH) == PCH) ||
+    	((selectedDbMask & CHM) == CHM) ||
+    	((selectedDbMask & CBN) == CBN) ||
+    	((selectedDbMask & EPT) == EPT) ||
+    	((selectedDbMask & ELT) == ELT))
     {
         document.lookuplink4.src="/engresources/images/lng.gif";
     }
@@ -91,16 +116,25 @@ function flipImage(selectedDbMask)
     if (((selectedDbMask & CPX) == CPX) ||
     	((selectedDbMask & CBF) == CBF) ||
     	((selectedDbMask & GEO) == GEO) ||
-    	((selectedDbMask & INSPEC) == INSPEC))
+    	((selectedDbMask & INSPEC) == INSPEC) ||
+    	((selectedDbMask & CHM) == CHM) ||
+    	((selectedDbMask & CBN) == CBN) ||
+    	((selectedDbMask & ELT) == ELT) ||
+    	((selectedDbMask & PCH) == PCH))
     {
        document.lookuplink5.src="/engresources/images/st.gif";
     }
+    
     //DT
     if (((selectedDbMask & CPX) == CPX) ||
         ((selectedDbMask & GEO) == GEO) ||
         ((selectedDbMask & CBF) == CBF) ||
-        ((selectedDbMask & INSPEC) == INSPEC))
-        {
+        ((selectedDbMask & INSPEC) == INSPEC) ||
+        ((selectedDbMask & CHM) == CHM) ||
+        ((selectedDbMask & CBN) == CBN) ||
+        ((selectedDbMask & PCH) == PCH) ||
+        ((selectedDbMask & ELT) == ELT))
+    {
            document.lookuplink6.src="/engresources/images/dt.gif";
     }
 
@@ -108,22 +142,25 @@ function flipImage(selectedDbMask)
     //PB
     if (((selectedDbMask & CPX) == CPX) ||
     	((selectedDbMask & CBF) == CBF) ||
-        ((selectedDbMask & INSPEC) == INSPEC))
+        ((selectedDbMask & INSPEC) == INSPEC) ||
+        ((selectedDbMask & PCH) == PCH) ||
+        ((selectedDbMask & ELT) == ELT) ||
+        ((selectedDbMask & EPT) == EPT))
        {
-       	document.lookuplink7.src="/engresources/images/pb.gif";
+       	    document.lookuplink7.src="/engresources/images/pb.gif";
        }
 
 
     //TR
         if (((selectedDbMask & CPX) == CPX) ||
-        ((selectedDbMask & INSPEC) == INSPEC))
+            ((selectedDbMask & INSPEC) == INSPEC))
         {
            document.lookuplink8.src="/engresources/images/tr.gif";
         }
 
 
     //DSC
-    if ((selectedDbMask & INSPEC) == INSPEC)
+    if((selectedDbMask & INSPEC) == INSPEC)
     {
        document.lookuplink9.src="/engresources/images/dsc.gif";
     }
@@ -292,6 +329,31 @@ function calStartYear(selectedDbMask, sYear)
         var paStartYear = sYear.substr(sYear.indexOf("PST")+3,4);
         dYear = (dYear > paStartYear) ? paStartYear : dYear;
     }
+    if((selectedDbMask != 0) && ((selectedDbMask & PCH) == PCH))
+    {
+       var pchStartYear = sYear.substr(sYear.indexOf("AST")+3,4);
+       dYear = (dYear > pchStartYear) ? pchStartYear : dYear;
+    }    
+    if (selectedDbMask != 0 && ((selectedDbMask & CHM) == CHM)) 
+    {
+       var chmStartYear = sYear.substr(sYear.indexOf("HST") + 3, 4);
+       dYear = (dYear > chmStartYear) ? chmStartYear : dYear;
+    }
+    if (selectedDbMask != 0 && ((selectedDbMask & CBN) == CBN)) 
+    {
+       var cbnStartYear = sYear.substr(sYear.indexOf("BST") + 3, 4);
+       dYear = (dYear > cbnStartYear) ? cbnStartYear : dYear;
+    }
+    if (selectedDbMask != 0 && ((selectedDbMask & ELT) == ELT)) 
+    {
+       var eltStartYear = sYear.substr(sYear.indexOf("LST") + 3, 4);
+       dYear = (dYear > eltStartYear) ? eltStartYear : dYear;
+    }
+    if (selectedDbMask != 0 && ((selectedDbMask & EPT) == EPT)) 
+    {
+       var eptStartYear = sYear.substr(sYear.indexOf("TST") + 3, 4);
+       dYear = (dYear > eptStartYear) ? eptStartYear : dYear;
+    }
 
     return dYear;
 }
@@ -354,6 +416,31 @@ function calDisplayYear(selectedDbMask, sYear)
         {
             var paStartYear = sYear.substr(sYear.indexOf("PSY")+3,4);
             dYear = (dYear > paStartYear) ? paStartYear : dYear;
+        }
+        if((selectedDbMask != 0) && ((selectedDbMask & PCH) == PCH))
+	{
+	    var pchStartYear = sYear.substr(sYear.indexOf("AST")+3,4);
+	    dYear = (dYear > pchStartYear) ? pchStartYear : dYear;
+	}    
+	if (selectedDbMask != 0 && ((selectedDbMask & CHM) == CHM)) 
+	{
+	    var chmStartYear = sYear.substr(sYear.indexOf("HST") + 3, 4);
+	    dYear = (dYear > chmStartYear) ? chmStartYear : dYear;
+	}
+	if (selectedDbMask != 0 && ((selectedDbMask & CBN) == CBN)) 
+	{
+	    var cbnStartYear = sYear.substr(sYear.indexOf("BST") + 3, 4);
+	    dYear = (dYear > cbnStartYear) ? cbnStartYear : dYear;
+	}
+	if (selectedDbMask != 0 && ((selectedDbMask & ELT) == ELT)) 
+	{
+	    var eltStartYear = sYear.substr(sYear.indexOf("LST") + 3, 4);
+	    dYear = (dYear > eltStartYear) ? eltStartYear : dYear;
+	}
+	if (selectedDbMask != 0 && ((selectedDbMask & EPT) == EPT)) 
+	{
+	    var eptStartYear = sYear.substr(sYear.indexOf("TST") + 3, 4);
+	    dYear = (dYear > eptStartYear) ? eptStartYear : dYear;
         }
     }
     else
