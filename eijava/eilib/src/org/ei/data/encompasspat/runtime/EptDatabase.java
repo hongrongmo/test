@@ -39,7 +39,7 @@ public class EptDatabase extends Database {
     }
 
     public int getStartYear(boolean hasBackFile) {
-        return 1963;
+        return 1990;
     }
 
     protected String getBaseTableHook() {
@@ -55,7 +55,7 @@ public class EptDatabase extends Database {
     }
 
     public String getID() {
-        return "ept";
+        return "tpt";
     }
 
     public String getName() {
@@ -72,12 +72,12 @@ public class EptDatabase extends Database {
 
     public String getDisplayAbrevName()
     {
-        return "P";
+        return "T";
     }
 
     public String getSingleCharName()
     {
-        return "P";
+        return "T";
     }
 
     public int getMask() {
