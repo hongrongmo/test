@@ -291,6 +291,10 @@ else
 <%
     int userMaskMAX = (DatabaseConfig.getInstance()).getMask(user.getCartridge());
     int userScrubbedMaskMAX = (DatabaseConfig.getInstance()).getScrubbedMask(user.getCartridge());
+    
+    //System.out.println("USER_Cartridge= "+user.getCartridge());
+    //System.out.println("userMaskMAX= "+userMaskMAX);
+    //System.out.println("userScrubbedMaskMAX= "+userScrubbedMaskMAX);
 
 //    log(" userMaskMAX " + userMaskMAX);
 //    log(" userScrubbedMaskMAX " + userScrubbedMaskMAX);
@@ -340,14 +344,15 @@ else
 	   Database[] customdatabases = customsearchfield[i].getDatabases();
 
 	   out.write("<FIELD ID=\"");
-	   out.write(searchfield.getID());
+	   out.write(searchfield.getID());	  
 	   out.write("\" LABEL=\"");
 	   out.write(customsearchfield[i].getTitle());
 	   out.write("\">");
 
 	   for (int j = 0; j < customdatabases.length; j++)
 	   {
-	   	  String dbindex = customdatabases[j].getName().substring(0,1);
+	   	  //String dbindex = customdatabases[j].getName().substring(0,1);
+	   	  String dbindex = customdatabases[j].getID().substring(0,1);
 	   	  out.write("<DB>");
 	   	  out.write(dbindex);
 	   	  out.write("</DB>");
