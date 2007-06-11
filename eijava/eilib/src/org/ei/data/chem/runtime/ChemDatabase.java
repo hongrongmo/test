@@ -46,7 +46,7 @@ public class ChemDatabase extends Database
     private DataDictionary dataDictionary = new ChemDataDictionary();
 
 	public int getStartYear(boolean hasBackFile)
-	{ return (1998); }
+	{ return (1990); }
 
 	protected String getBaseTableHook()
 	{
@@ -69,7 +69,7 @@ public class ChemDatabase extends Database
 
 	public String getID()
 	{
-		return "chm";
+		return "hhm";
 	}
 
 	public String getName()
@@ -91,7 +91,7 @@ public class ChemDatabase extends Database
 	{
 		return "Chemica";
 	}
-	
+
     public String getDisplayAbrevName()
     {
         return "Ch";
@@ -99,7 +99,7 @@ public class ChemDatabase extends Database
 
     public String getSingleCharName()
     {
-        return "D";
+        return "H";
     }
 
 	public int getMask()
