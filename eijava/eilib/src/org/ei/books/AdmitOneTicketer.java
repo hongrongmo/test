@@ -6,16 +6,12 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.Hashtable;
 import java.util.Properties;
-
-import org.apache.oro.text.perl.Perl5Util;
 
 public class AdmitOneTicketer
 {
 
-	private Perl5Util perl = new Perl5Util();
 	private String secretname = "Elsevier";
 	private String secret = "35738437";
 	private static final String SHRDKEY = "!MM01234-5-6789MM#";
@@ -75,7 +71,7 @@ public class AdmitOneTicketer
 	{
 		StringBuffer buf = new StringBuffer(baseUrl);
 		buf.append("/");
-		String parsedLink = perl.substitute("s/\\s+//g", link);
+		String parsedLink = link.replaceAll("\\s",""); //perl.substitute("s/\\s+//g", link);
 		buf.append(parsedLink);
 		return getTicketedURL(buf.toString(),
 							  custID,
@@ -237,12 +233,10 @@ public class AdmitOneTicketer
 
 	private String formatExpires(long expireIn)
 	{
-		long now = System.currentTimeMillis();
-		long expired = now + AdmitOneTicketer.expireIn;
-		Date d = new Date(expired);
+        Calendar cal = Calendar.getInstance();
+        cal.setTimeInMillis(System.currentTimeMillis() + AdmitOneTicketer.expireIn);
         DateFormat sd = new SimpleDateFormat("yyyyMMddHHmmss");
-        return sd.format(d);
-       
+        return sd.format(cal.getTime());
 	}
 
 
