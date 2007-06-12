@@ -2,6 +2,8 @@ package org.ei.books;
 
 import java.net.URLEncoder;
 import java.security.MessageDigest;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -19,8 +21,8 @@ public class AdmitOneTicketer
 	private static final String SHRDKEY = "!MM01234-5-6789MM#";
 	private String id = "Authorised";
 	private String baseUrl = "http://referexengineering.elsevier.com";
-	private long expireIn =   172800000L;
-	private long createEvery = 86400000L;
+	private static final long expireIn =   172800000L; // 48 Hours
+	private static final long createEvery = 86400000L; // 24 Hours
 	private long createTime = -1L;
 	private Hashtable tickets;
 	private static AdmitOneTicketer instance;
@@ -235,36 +237,12 @@ public class AdmitOneTicketer
 
 	private String formatExpires(long expireIn)
 	{
-		StringBuffer buf = new StringBuffer();
 		long now = System.currentTimeMillis();
-		long expired = now + expireIn;
+		long expired = now + AdmitOneTicketer.expireIn;
 		Date d = new Date(expired);
-		GregorianCalendar cal = new GregorianCalendar();
-		cal.setTime(d);
-		int YY = cal.get(Calendar.YEAR);
-		int MM = cal.get(Calendar.MONTH);
-		MM++;
-		int DD = cal.get(Calendar.DAY_OF_MONTH);
-		int HH = cal.get(Calendar.HOUR_OF_DAY);
-		int mm = cal.get(Calendar.MINUTE);
-		int ss = cal.get(Calendar.SECOND);
-		buf.append(Integer.toString(YY));
-		buf.append(pad(Integer.toString(MM)));
-		buf.append(pad(Integer.toString(DD)));
-		buf.append(pad(Integer.toString(HH)));
-		buf.append(pad(Integer.toString(mm)));
-		buf.append(pad(Integer.toString(ss)));
-		return buf.toString();
-	}
-
-	private String pad(String s)
-	{
-		while (s.length() < 2)
-		{
-			s = "0" + s;
-		}
-
-		return s;
+        DateFormat sd = new SimpleDateFormat("yyyyMMddHHmmss");
+        return sd.format(d);
+       
 	}
 
 
