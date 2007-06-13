@@ -20,6 +20,7 @@
 			<OPTION value="2">Inspec</OPTION>
 			<OPTION value="4">NTIS</OPTION>
 			<OPTION value="8192">GEOBASE</OPTION>
+			<OPTION value="131072">Referex</OPTION>
 			<OPTION value="3">Compendex &amp; Inspec</OPTION>
 			<OPTION value="5">Compendex &amp; NTIS</OPTION>
 			<OPTION value="6">Inspec &amp; NTIS</OPTION>
@@ -186,6 +187,8 @@
 			<OPTION value="2004">2004</OPTION>
 			<OPTION value="2005">2005</OPTION>
 			<OPTION value="2006">2006</OPTION>
+			<OPTION value="2007">2007</OPTION>
+			<OPTION value="2008">2008</OPTION>
 		</select>
 	</td>
 	<td colspan=2>End Year
@@ -312,7 +315,9 @@
 			<OPTION value="2003">2003</OPTION>
 			<OPTION value="2004">2004</OPTION>
 			<OPTION value="2005">2005</OPTION>
-			<OPTION value="2006" selected>2006</OPTION>
+			<OPTION value="2006">2006</OPTION>
+			<OPTION value="2007">2007</OPTION>
+			<OPTION value="2008" selected>2008</OPTION>
 		</select>
 	</td>
 </tr>
@@ -327,6 +332,10 @@
 <tr><td colspan=4><input type="submit"><input type="reset"></td>
 </tr>
 </table>
+<PRE>
+  Example:
+  &lt;query&gt;&lt;andQuery&gt;&lt;orQuery&gt;&lt;word path="ti"&gt;hello*&lt;/word&gt;&lt;word&gt;world acid&lt;/word&gt;&lt;/orQuery&gt;&lt;notQuery&gt;&lt;word&gt;goodbye&lt;/word&gt;&lt;word&gt;shift&lt;/word&gt;&lt;/notQuery&gt;&lt;/andQuery&gt;&lt;/query&gt;
+</PRE>
 </form>
 
 
