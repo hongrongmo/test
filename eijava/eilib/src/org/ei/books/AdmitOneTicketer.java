@@ -16,7 +16,7 @@ public class AdmitOneTicketer
 	private String secret = "35738437";
 	private static final String SHRDKEY = "!MM01234-5-6789MM#";
 	private String id = "Authorised";
-	private String baseUrl = "http://referexengineering.elsevier.com";
+	private String baseUrl = "http://usage.elsevier.com:11080/wobl";
 	private static final long expireIn =   172800000L; // 48 Hours
 	private static final long createEvery = 86400000L; // 24 Hours
 	private long createTime = -1L;
