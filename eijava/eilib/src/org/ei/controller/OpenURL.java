@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.oro.text.perl.Perl5Util;
 import org.ei.domain.Query;
+import org.ei.domain.SearchForm;
 
 /**
  *  an openURL resolver
@@ -340,7 +341,7 @@ public class OpenURL extends HttpServlet
 
           // date range is left open to defaults
           startYear = "1969";
-          endYear = "2007";
+          endYear = String.valueOf(SearchForm.ENDYEAR);
           //forward to expert search results page
           response.sendRedirect("http://"+serverName+"/controller/servlet/Controller?CID=expertSearchCitationFormat&searchtype="+Query.TYPE_EXPERT+"&database="+dbID+"&searchWord1="+URLEncoder.encode(searchWord.toString())+"&yearselect=yearrange&startYear="+startYear+"&endYear="+endYear);
 		}
