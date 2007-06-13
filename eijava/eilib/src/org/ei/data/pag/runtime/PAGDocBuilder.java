@@ -19,8 +19,6 @@ import org.ei.connectionpool.ConnectionBroker;
 import org.ei.data.AuthorStream;
 import org.ei.data.DataCleaner;
 import org.ei.domain.Abstract;
-import org.ei.domain.Affiliation;
-import org.ei.domain.Affiliations;
 import org.ei.domain.Citation;
 import org.ei.domain.Contributor;
 import org.ei.domain.Contributors;
@@ -34,13 +32,9 @@ import org.ei.domain.ElementData;
 import org.ei.domain.ElementDataMap;
 import org.ei.domain.FullDoc;
 import org.ei.domain.ISBN;
-import org.ei.domain.ISSN;
-import org.ei.domain.Issue;
 import org.ei.domain.Key;
 import org.ei.domain.Keys;
-import org.ei.domain.PageRange;
 import org.ei.domain.RIS;
-import org.ei.domain.Volume;
 import org.ei.domain.XMLMultiWrapper;
 import org.ei.domain.XMLWrapper;
 import org.ei.domain.Year;
@@ -64,7 +58,6 @@ public class PAGDocBuilder implements DocumentBuilder
   private static final Key[] DETAILED_KEYS = {
  Keys.BOOK_TITLE,
  Keys.BOOK_PAGE,
- Keys.BOOK_PII,
  Keys.SERIAL_TITLE,
  Keys.BOOK_DESCRIPTION,
  Keys.AUTHORS,
@@ -100,11 +93,46 @@ public class PAGDocBuilder implements DocumentBuilder
  Keys.PAGE_THUMBS};
 
   private static final Key[] RIS_KEYS = { Keys.RIS_TY, Keys.RIS_LA , Keys.RIS_N1 , Keys.RIS_TI , Keys.RIS_T1 , Keys.RIS_BT , Keys.RIS_JO ,Keys.RIS_T3 , Keys.RIS_AUS , Keys.RIS_AD , Keys.RIS_EDS , Keys.RIS_VL , Keys.RIS_IS , Keys.RIS_PY , Keys.RIS_AN , Keys.RIS_SP , Keys.RIS_EP, Keys.RIS_SN ,  Keys.RIS_S1 , Keys.RIS_MD ,Keys.RIS_CY , Keys.RIS_PB,  Keys.RIS_N2 , Keys.RIS_KW , Keys.RIS_CVS , Keys.RIS_FLS , Keys.RIS_DO, Keys.BIB_TY };
-  private static final Key[] XML_KEYS = { Keys.ISSN , Keys.MAIN_HEADING , Keys.NO_SO , Keys.MONOGRAPH_TITLE , Keys.PUBLICATION_YEAR , Keys.VOLUME_TITLE , Keys.CONTROLLED_TERM , Keys.ISBN , Keys.AUTHORS , Keys.DOCID , Keys.SOURCE , Keys.NUMVOL , Keys.EDITOR_AFFS , Keys.EDITORS , Keys.PUBLISHER , Keys.VOLUME , Keys.AUTHOR_AFFS , Keys.PROVIDER , Keys.ISSUE_DATE , Keys.COPYRIGHT_TEXT , Keys.DOI , Keys.PAGE_COUNT , Keys.PUBLICATION_DATE , Keys.TITLE , Keys.LANGUAGE , Keys.PAGE_RANGE , Keys.PAPER_NUMBER , Keys.COPYRIGHT , Keys.ISSUE , Keys.ACCESSION_NUMBER , Keys.CONTROLLED_TERMS};
+  private static final Key[] XML_KEYS = {
+ Keys.TITLE,
+ Keys.BOOK_PAGE,
+ Keys.SERIAL_TITLE,
+ Keys.BOOK_DESCRIPTION,
+ Keys.AUTHORS,
+ Keys.EDITORS,
+ Keys.AUTHOR_AFFS,
+ Keys.EDITOR_AFFS,
+ Keys.ISBN,
+ Keys.BOOK_PAGE_COUNT,
+ Keys.BOOK_YEAR,
+ Keys.COVER_IMAGE,
+ Keys.BOOK_PUBLISHER,
+ Keys.ACCESSION_NUMBER,
+ Keys.TITLE_TRANSLATION,
+ Keys.BOOK_CHAP_START,
+ Keys.VOLUME,
+ Keys.MONOGRAPH_TITLE,
+ Keys.LANGUAGE,
+ Keys.DOC_TYPE,
+ Keys.ABSTRACT,
+ Keys.ABSTRACT_TYPE,
+ Keys.BOOK_PAGE_KEYWORDS,
+ Keys.CONTROLLED_TERMS,
+ Keys.UNCONTROLLED_TERMS,
+ Keys.CLASS_CODES,
+ Keys.COLLECTION,
+ Keys.TREATMENTS,
+ Keys.DOI,
+ Keys.DOCID,
+ Keys.COPYRIGHT,
+ Keys.COPYRIGHT_TEXT,
+ Keys.PROVIDER,
+ Keys.NO_SO,
+ Keys.PAGE_THUMBS};
 
-  private static String queryXMLCitation = "select  M_ID,DT,TI,TT,AUS,AF,AM,AC,ASS,AV,AY,ED,EF,EM,EC,ES,EV,EY,ST,SE,VO,ISS,SD,MT,VT,PN,YR,NV,PA,XP,AR,PP,LA,ME,SN,DO,BN,LOAD_NUMBER,EX,CVS from cpx_master where M_ID IN ";
+  private static String queryXMLCitation = "SELECT BOOK_PAGES.PAGE_KEYWORDS, BOOK_PAGES.DOCID, BOOK_PAGES.BN, BOOK_PAGES.PAGE_NUM, BOOK_PAGES.SECTION_TITLE, BOOK_PAGES.PAGE_START, BOOK_PAGES.PAGE_BYTES, BOOK_PAGES.PAGE_TXT, BOOK_PAGES.PAGE_TOTAL, CVS, AB, ST, BN, PP, YR, AUS, TI, PN, VO, SUB FROM BOOK_PAGES WHERE BOOK_PAGES.DOCID IN ";
 
-  private static String queryDocument = "SELECT BOOK_PAGES.PAGE_KEYWORDS, BOOK_PAGES.PII, BOOK_PAGES.DOCID, BOOK_PAGES.BN, BOOK_PAGES.PAGE_NUM, BOOK_PAGES.SECTION_TITLE, BOOK_PAGES.SECTION_START, BOOK_PAGES.PAGE_BYTES, BOOK_PAGES.PAGE_TXT, BOOK_PAGES.PAGE_TOTAL, CVS, AB, ST, BN, PP, YR, AUS, TI, PN, VO, SUB FROM BOOK_PAGES WHERE BOOK_PAGES.DOCID IN "; //('pag_0080426794_131')
+  private static String queryDocument = "SELECT BOOK_PAGES.PAGE_KEYWORDS, BOOK_PAGES.DOCID, BOOK_PAGES.BN, BOOK_PAGES.PAGE_NUM, BOOK_PAGES.SECTION_TITLE, BOOK_PAGES.PAGE_START, BOOK_PAGES.PAGE_BYTES, BOOK_PAGES.PAGE_TXT, BOOK_PAGES.PAGE_TOTAL, CVS, AB, ST, BN, PP, YR, AUS, TI, PN, VO, SUB FROM BOOK_PAGES WHERE BOOK_PAGES.DOCID IN "; //('pag_0080426794_131')
 
   public DocumentBuilder newInstance(Database database)
   {
@@ -259,15 +287,8 @@ SELECT DOCID, BN, PAGE_NUM, SECTION_TITLE, PAGE_START, PAGE_BYTES, PAGE_TXT, BOO
           ht.put(Keys.BOOK_PAGE_COUNT, new XMLWrapper(Keys.BOOK_PAGE_COUNT, "Total Pages",strPages));
         }
 
-		 //  PII
-		String strPii = rset.getString("PII");
-		if(strPii != null)
-		{
-			ht.put(Keys.BOOK_PII, new XMLWrapper(Keys.BOOK_PII, strPii));
-		}
 
-        String startPage = rset.getString("SECTION_START");
-
+        String startPage = rset.getString("PAGE_START");
         if(startPage != null)
         {
           ht.put(Keys.BOOK_CHAP_START,new XMLWrapper(Keys.BOOK_CHAP_START,startPage));
@@ -623,272 +644,123 @@ SELECT DOCID, BN, PAGE_NUM, SECTION_TITLE, PAGE_START, PAGE_BYTES, PAGE_TXT, BOO
     {
       broker=ConnectionBroker.getInstance();
       con=broker.getConnection(DatabaseConfig.SEARCH_POOL);
-      stmt = con.createStatement();
+      stmt=con.createStatement();
       rset=stmt.executeQuery(queryXMLCitation+INString);
 
       while(rset.next())
       {
+
         ElementDataMap ht = new ElementDataMap();
-        // Common Fields
-        DocID did = (DocID) oidTable.get(rset.getString("M_ID"));
+        DocID did = (DocID) oidTable.get(rset.getString("DOCID"));
         ht.put(Keys.DOCID, did);
+
         ht.put(Keys.PROVIDER, new XMLWrapper(Keys.PROVIDER, PROVIDER_TEXT));
-        ht.put(Keys.COPYRIGHT,new XMLWrapper(Keys.COPYRIGHT, PAGDocBuilder.HTML_COPYRIGHT));
-        ht.put(Keys.COPYRIGHT_TEXT, new XMLWrapper(Keys.COPYRIGHT_TEXT, PAGDocBuilder.TEXT_COPYRIGHT));
 
-        // Always needed for IVIP
-        if (rset.getString("SN") != null)
+        ht.put(Keys.COPYRIGHT,new XMLWrapper(Keys.COPYRIGHT, HTML_COPYRIGHT));
+
+        ht.put(Keys.COPYRIGHT_TEXT, new XMLWrapper(Keys.COPYRIGHT_TEXT, TEXT_COPYRIGHT));
+
+        if(rset.getString("PAGE_KEYWORDS") != null)
         {
-          ht.put(Keys.ISSN, new ISSN(StringUtil.replaceNullWithEmptyString(rset.getString("SN"))));
+          ht.put(Keys.BOOK_PAGE_KEYWORDS,new XMLMultiWrapper(Keys.BOOK_PAGE_KEYWORDS, rset.getString("PAGE_KEYWORDS").split("\\|")));
         }
 
-        String strTitle = StringUtil.EMPTY_STRING;
-        if((rset.getString("TT")!= null) &&
-        (rset.getString("TI")!= null))
+        if(rset.getString("AUS") != null)
         {
-          strTitle = StringUtil.replaceNullWithEmptyString(rset.getString("TI"));
-          strTitle = strTitle.concat(" (").concat(StringUtil.replaceNullWithEmptyString(rset.getString("TT"))).concat(")");
-        }
-        else if (rset.getString("TI") != null)
-        {
-          strTitle = StringUtil.replaceNullWithEmptyString(rset.getString("TI")).concat(strTitle);
-        }
-        else if (rset.getString("TT") != null)
-        {
-          strTitle = StringUtil.replaceNullWithEmptyString(rset.getString("TI")).concat(strTitle);
-        }
+          Contributors authors = new Contributors(Keys.AUTHORS,getContributors(rset.getString("AUS"),Keys.AUTHORS));
 
-        if (!strTitle.equals(StringUtil.EMPTY_STRING))
-        {
-          ht.put(Keys.TITLE, new XMLWrapper(Keys.TITLE, strTitle));
-        }
-
-        //ACCESSION NUMBER
-        if(rset.getString("EX") != null)
-        {
-          ht.put(Keys.ACCESSION_NUMBER,new XMLWrapper(Keys.ACCESSION_NUMBER, StringUtil.replaceNullWithEmptyString(rset.getString("EX"))));
-        }
-
-        // AUS or EDS
-
-        if (rset.getString("AUS") != null)
-        {
-          Contributors authors = new Contributors(Keys.AUTHORS,getContributors(StringUtil.replaceNullWithEmptyString(rset.getString("AUS")),Keys.AUTHORS));
           ht.put(Keys.AUTHORS, authors);
 
-          if(rset.getString("AF") != null)
-          {
-            Affiliation affil = new Affiliation(Keys.AUTHOR_AFFS, StringUtil.replaceNullWithEmptyString(rset.getString("AF")));
-            ht.put(Keys.AUTHOR_AFFS, new Affiliations(Keys.AUTHOR_AFFS, affil));
-          }
-
         }
-        else
+
+        if(rset.getString("TI") != null)
         {
-          if(rset.getString("ED") != null)
-          {
-            String strED = StringUtil.replaceNullWithEmptyString(rset.getString("ED"));
-            if(perl.match("/(Ed[.]\\s*)/", strED))
-            {
-              strED = perl.substitute("s/\\(Ed[.]\\s*\\)//gi", strED);
-            }
-            Contributors editors = new Contributors(Keys.EDITORS,getContributors(strED, Keys.EDITORS));
-            ht.put(Keys.EDITORS,editors);
-
-            if(rset.getString("EF") != null)
-            {
-              Affiliation eaffil = new Affiliation(Keys.EDITOR_AFFS, StringUtil.replaceNullWithEmptyString(rset.getString("EF")));
-              ht.put(Keys.EDITOR_AFFS, new Affiliations(Keys.EDITOR_AFFS,eaffil));
-            }
-          }
+          ht.put(Keys.TITLE,new XMLWrapper(Keys.TITLE, rset.getString("TI")));
         }
-        // SO
-        if(rset.getString("ST") != null ||
-        rset.getString("SE") != null ||
-        rset.getString("MT") != null ||
-        rset.getString("ME") != null ||
-        rset.getString("PN") != null )
+
+
+        String sectTitle = rset.getString("SECTION_TITLE");
+        if((sectTitle != null) && (!sectTitle.equalsIgnoreCase("Book")))
         {
-
-          // VO - VOL and ISSUE Combined by ', '
-          // add 'v' or 'n'
-
-          if(rset.getString("VO") != null)
-          {
-            ht.put(Keys.VOLUME, new Volume(rset.getString("VO").replace('n',' ').replace('v',' ' ), perl));
-          }
-          if(rset.getString("ISS") != null)
-          {
-
-            ht.put(Keys.ISSUE, new Issue(rset.getString("ISS").replace('n',' ') , perl));
-
-          }
-          if (rset.getString("ST") != null ||
-          rset.getString("SE") != null)
-          {
-            if(rset.getString("ST") != null)
-            {
-              ht.put(Keys.SOURCE,new XMLWrapper( Keys.SOURCE , StringUtil.replaceNullWithEmptyString(rset.getString("ST"))));
-            }
-            else if(rset.getString("SE") != null)
-            {
-              ht.put(Keys.SOURCE,new XMLWrapper(Keys.SOURCE ,StringUtil.replaceNullWithEmptyString(rset.getString("SE"))));
-            }
-            // an MT or VT can accompany the ST (or SE)
-            if(rset.getString("MT") != null)
-            {
-              ht.put(Keys.MONOGRAPH_TITLE,new XMLWrapper(Keys.MONOGRAPH_TITLE ,StringUtil.replaceNullWithEmptyString(rset.getString("MT"))));
-            }
-            if(rset.getString("VT") != null)
-            {
-              ht.put(Keys.VOLUME_TITLE,new XMLWrapper(Keys.VOLUME_TITLE , StringUtil.replaceNullWithEmptyString(rset.getString("VT"))));
-            }
-          }
-          else if((rset.getString("ST") == null &&
-          rset.getString("SE") == null) &&
-          ( rset.getString("MT") != null ||
-          rset.getString("ME") != null))
-          {
-            if(rset.getString("MT") != null)
-            {
-              ht.put(Keys.SOURCE,new XMLWrapper(Keys.SOURCE , StringUtil.replaceNullWithEmptyString(rset.getString("MT") )));
-            }
-            else if(rset.getString("ME") != null)
-            {
-              ht.put(Keys.SOURCE,new XMLWrapper(Keys.SOURCE,StringUtil.replaceNullWithEmptyString(rset.getString("ME")) ));
-            }
-          } else if (
-          rset.getString("ST") == null &&
-          rset.getString("SE") == null &&
-          rset.getString("MT") == null &&
-          rset.getString("ME") == null)
-          {
-            if(rset.getString("PN") != null)
-            {
-              ht.put(Keys.PUBLISHER, new XMLWrapper(Keys.PUBLISHER ,StringUtil.replaceNullWithEmptyString(rset.getString("PN"))));
-            }
-          } else
-          {
-          }
+            ht.put(Keys.SERIAL_TITLE,new XMLWrapper(Keys.SERIAL_TITLE,"Chapter/Section title",sectTitle));
         }
-        if(rset.getString("ST") == null &&
-        rset.getString("SE") == null &&
-        rset.getString("MT") == null &&
-        rset.getString("ME") == null  &&
-        rset.getString("PN") == null    )
+
+        if(rset.getString("YR") != null)
         {
-          ht.put(Keys.NO_SO,new XMLWrapper(Keys.NO_SO , "NO_SO" ));
+          ht.put(Keys.BOOK_YEAR, new Year(Keys.BOOK_YEAR, rset.getString("YR"), perl));
         }
 
-
-        // RN - INSPEC ONLY
-
-        // SD
-        String strSD = StringUtil.replaceNullWithEmptyString(rset.getString("SD"));
-        if((rset.getString("ST") != null ||
-        rset.getString("SE") != null ||
-        rset.getString("MT") != null ||
-        rset.getString("ME") != null  ||
-        rset.getString("PN") != null) &&
-        (!strSD.equals(StringUtil.EMPTY_STRING)))
-        {
-
-          if(rset.getString("YR") != null)
-          {
-            String strYR = StringUtil.replaceNullWithEmptyString(rset.getString("YR"));
-            strSD = perl.substitute("s/".concat(strYR).concat("$//"), strSD);
-            strSD = strSD.trim().concat(", ").concat(strYR);
-          }
-          ht.put(Keys.ISSUE_DATE, new XMLWrapper(Keys.ISSUE_DATE, strSD ));
-
-        }
-        else if (rset.getString("YR") != null)
-        {
-          String strYR = StringUtil.replaceNullWithEmptyString(rset.getString("YR"));
-          if(
-          rset.getString("ST") == null &&
-          rset.getString("SE") == null &&
-          rset.getString("MT") == null &&
-          rset.getString("PN") == null &&
-          rset.getString("ME") == null)
-          {
-            // if ALL 4 are null, use the label 'Publication Date'
-            ht.put(Keys.PUBLICATION_DATE,new Year(strYR, perl));
-          }
-          else
-          {
-            // else just store the date
-
-            ht.put(Keys.PUBLICATION_YEAR,
-            new Year(strYR, perl));
-          }
-        }
-        // NV
-        if(rset.getString("NV") != null)
-        {
-          ht.put(Keys.NUMVOL,new XMLWrapper(Keys.NUMVOL ,StringUtil.replaceNullWithEmptyString(rset.getString("NV"))));
-        }
-        // PA
-        if(rset.getString("PA") != null)
-        {
-          ht.put(Keys.PAPER_NUMBER,new XMLWrapper(Keys.PAPER_NUMBER ,StringUtil.replaceNullWithEmptyString((rset.getString("PA") ))));
-        }
-
-        String strPages= rset.getString("PP");
-
+        //  PP
+        String strPages = rset.getString("PAGE_TOTAL");
         if(strPages != null)
         {
-          strPages=strPages.replaceAll("p"," ");
-          ht.put(Keys.PAGE_RANGE, new PageRange(strPages,perl));
+          ht.put(Keys.BOOK_PAGE_COUNT, new XMLWrapper(Keys.BOOK_PAGE_COUNT, "Total Pages",strPages));
         }
 
 
-        if(rset.getString("PP") != null)
+        String startPage = rset.getString("PAGE_START");
+        if(startPage != null)
         {
-          String pageCount=rset.getString("PP").replaceAll("p"," ");
-          ht.put(Keys.PAGE_COUNT,new XMLWrapper(Keys.PAGE_COUNT , pageCount ));
+          ht.put(Keys.BOOK_CHAP_START,new XMLWrapper(Keys.BOOK_CHAP_START,startPage));
         }
 
-        // VT
-        if(rset.getString("VT") != null)
+        String pageNum = rset.getString("PAGE_NUM");
+        if(pageNum != null)
         {
-          ht.put(Keys.VOLUME_TITLE,new XMLWrapper(Keys.VOLUME_TITLE, StringUtil.replaceNullWithEmptyString(rset.getString("VT"))));
+          ht.put(Keys.BOOK_PAGE,new XMLWrapper(Keys.BOOK_PAGE,pageNum));
         }
-        //CVS
-        if (rset.getString("CVS") != null)
+        //  BN
+        if (rset.getString("BN") != null)
         {
-          ht.put(Keys.CONTROLLED_TERMS,new XMLMultiWrapper(Keys.CONTROLLED_TERMS,
-          setElementData(StringUtil.replaceNullWithEmptyString(rset.getString("CVS")))));
-        }
-
-        // LA
-        if((rset.getString("LA") != null) &&
-        !rset.getString("LA").equalsIgnoreCase("ENGLISH"))
-        {
-          ht.put(Keys.LANGUAGE,new XMLWrapper(Keys.LANGUAGE, StringUtil.replaceNullWithEmptyString(rset.getString("LA"))));
+          ht.put(Keys.ISBN, new ISBN(rset.getString("BN")));
+          ht.put(Keys.COVER_IMAGE,new XMLWrapper(Keys.COVER_IMAGE,"/engresources/images/b/"+rset.getString("BN")+"small.jpg"));
         }
 
-        //DO
-        if(rset.getString("DO") != null)
+        //  PN
+        // suppress source label
+        //if(docformat.equals(Citation.CITATION_FORMAT)) {
+        ht.put(Keys.NO_SO,new XMLWrapper(Keys.NO_SO,"NO_SO"));
+        //}
+
+        List lstTokens = new ArrayList();
+        if (rset.getString("PN") != null)
         {
-          ht.put(Keys.DOI, new XMLWrapper(Keys.DOI, StringUtil.replaceNullWithEmptyString(rset.getString("DO"))));
+          lstTokens.add((String) rset.getString("PN"));
+        }
+        if (lstTokens.size()>0)
+        {
+          ht.put(Keys.BOOK_PUBLISHER, new XMLWrapper(Keys.BOOK_PUBLISHER, StringUtil.join(lstTokens, ", ")));
+        }
+        lstTokens = null;
+
+
+        // CVS
+        if ((rset.getString("CVS") != null))
+        {
+          ht.put(Keys.CONTROLLED_TERMS, new XMLMultiWrapper(new Key("CVS","Subject terms"), setElementData(rset.getString("CVS"))));
         }
 
-        //BN
-        if(rset.getString("BN") != null)
+        // COLLECTION
+        String strVol = rset.getString("VO");
+        if(strVol != null)
         {
-          ht.put(Keys.ISBN, new ISBN(StringUtil.replaceNullWithEmptyString(rset.getString("BN"))));
+          ElementData col = new XMLWrapper(Keys.COLLECTION,"Referex");
+          col = new XMLWrapper(Keys.COLLECTION, (new PAGDatabase()).getDataDictionary().getClassCodeTitle(strVol));
+          ht.put(Keys.COLLECTION, col);
+          String sub = rset.getString("SUB");
+          if(sub != null)
+          {
+			      did.setCollection(strVol+sub);
+    		  }
+    		  else
+    		  {
+    			  did.setCollection(strVol);
+    		  }
         }
-
-        if(rset.getString("PN") != null)
-        {
-          ht.put(Keys.PUBLISHER,new XMLWrapper(Keys.PUBLISHER, StringUtil.replaceNullWithEmptyString(rset.getString("PN"))));
-        }
-        // STT - INSPEC ONLY
 
         EIDoc eiDoc = new EIDoc(did, ht, Citation.XMLCITATION_FORMAT);
         eiDoc.exportLabels(false);
-        eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
+        eiDoc.setLoadNumber(0);
         eiDoc.setOutputKeys(XML_KEYS);
         list.add(eiDoc);
         count++;
