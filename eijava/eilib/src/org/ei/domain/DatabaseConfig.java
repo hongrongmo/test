@@ -355,7 +355,7 @@ public final class DatabaseConfig
     {
         Map yrmap = new Hashtable();
         yrmap.put(DatabaseConfig.STARTYEAR,"1790");
-        yrmap.put(DatabaseConfig.ENDYEAR,"2007");
+        yrmap.put(DatabaseConfig.ENDYEAR,String.valueOf(SearchForm.ENDYEAR));
 
         // start off start year at max and end year at min
         int intStartYear = 2099;
