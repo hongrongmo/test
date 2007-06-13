@@ -28,7 +28,7 @@ public class LemClient
         {
             //in = new BufferedReader(new FileReader("test.txt"));
             LemClient client = new LemClient();
-            client.setBaseURL("http://rei-testnode.bos3.fastsearch.net:29568");
+            client.setBaseURL("http://ei-lemm.bos3.fastseadrch.net");
             String[] inWords = new String[] {"better","polarity","round","run"};
             client.setInWords(inWords);
             client.search();
@@ -37,7 +37,7 @@ public class LemClient
             for(int i=0;i<inWords.length;i++)
             {
                 String[] outWords = (String[])owh.get(inWords[i]);
-                
+
                 //System.out.print(inWords[i] + ": ");
                 for(int j=0;j< outWords.length;j++)
                 {
@@ -70,7 +70,7 @@ public class LemClient
     {
     	return lems;
     }
-    
+
     public void search()
         throws SearchException
     {
@@ -89,7 +89,8 @@ public class LemClient
         }
         catch(Exception e)
         {
-            throw new SearchException(new Exception("<DISPLAY>A network error has occurred, your request cannot be completed.</DISPLAY>"));
+            in = null;
+            //throw new SearchException(new Exception("<DISPLAY>A network error has occurred, your request cannot be completed.</DISPLAY>"));
         }
         finally
         {
@@ -138,13 +139,13 @@ public class LemClient
 
         StringBuffer buf = new StringBuffer(this.baseURL);
         buf.append("/cgi-bin/summary?lemmamode=on&inwords=");
-        
+
         for(int i = 0;i < inWords.length;i++)
         {
         	buf.append(URLEncoder.encode(this.inWords[i],"UTF-8"));
         	buf.append(",");
         }
-        
+
         buf.deleteCharAt(buf.length()-1);
 
         //System.out.println(buf.toString());
@@ -163,7 +164,7 @@ public class LemClient
             	{
                 	String inWord = line.substring(4);
                 	if((line = in.readLine()) != null && line.indexOf("#out") == 0)
-                		parseOutWords(inWord,line);         		
+                		parseOutWords(inWord,line);
             	}
             }
             else if(line.indexOf("#T") == 0)
@@ -171,7 +172,7 @@ public class LemClient
                 parseSearchTime(line);
             }
         }
-        
+
         if(lems.size() < 1)
         {
         	for(int i = 0; i < inWords.length;i++)
@@ -188,7 +189,7 @@ public class LemClient
     		String[] outWords = outLine.split(" ")[1].split(",");
     		lems.put(inWord, outWords);
     	}
-    	
+
     }
 
     private void parseSearchTime(String timeLine)
