@@ -3,43 +3,32 @@ package org.ei.fulldoc;
 import java.io.FilterInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
-import java.net.URL;
 
-import HTTPClient.CookieModule;
-import HTTPClient.HTTPConnection;
+import org.apache.commons.httpclient.HttpClient;
+import org.apache.commons.httpclient.NameValuePair;
+import org.apache.commons.httpclient.methods.PostMethod;
+
 
 public class OHUBClient
 {
     private String baseURL;
-
-    static
-    {
-        HTTPConnection.setDefaultTimeout(7000);
-        CookieModule.setCookiePolicyHandler(null);
-    }
-
 
     public static void main(String[] argv)
         throws Exception
     {
         OHUBClient oc = new OHUBClient("http://linkinghub.elsevier.com/servlets/OHXmlRequestXml");
         IssueVolumeID iv1 = new IssueVolumeID();
-        iv1.setISSN("1063651X");
-        iv1.setFirstPage("471011");
-        iv1.setFirstVolume("64");
-        iv1.setFirstIssue("4 II");
+        iv1.setISSN("15273342");
+        iv1.setFirstPage("46");
+        iv1.setFirstVolume("7");
+        iv1.setFirstIssue("6");
 
 
         OHUBID[] docs = new OHUBID[1];
         docs[0] = iv1;
 
 
-        OHUBRequest request = new OHUBRequest("E78C4EAF-4064-41C5-9FC2-E1C73DE9FBF5",
-                                               "1",
-                               "14",
-                               docs);
+        OHUBRequest request = new OHUBRequest("E78C4EAF-4064-41C5-9FC2-E1C73DE9FBF5","1","14",docs);
 
         System.out.println("Sending Request ....");
         long begin = System.currentTimeMillis();
@@ -74,22 +63,27 @@ public class OHUBClient
         String out = null;
 
         OHUBResponses responses = null;
-        HTTPClient.HttpURLConnection con = null;
+        PostMethod method = null;
         InputStream inStream = null;
-        PrintWriter writer = null;
+
         try
         {
-            //System.out.println("New Connection");
-            URL u = new URL(baseURL);
-            con = new HTTPClient.HttpURLConnection(u);
-            con.setDoOutput(true);
-            con.setRequestMethod("POST");
-            writer = new PrintWriter(new OutputStreamWriter(con.getOutputStream()));
-            //System.out.println(request.getRequestString());
-            writer.print("ohubRequest="+request.getRequestString());
-            writer.flush();
-            inStream = con.getInputStream();
+            System.out.println("New Connection");
+
+            HttpClient client = new HttpClient();
+            method = new PostMethod(baseURL);
+            
+            
+            NameValuePair apair = new NameValuePair("ohubRequest",request.getRequestString());
+            method.setRequestBody(new NameValuePair[] {apair});
+            client.executeMethod(method);
+            
+            inStream = method.getResponseBodyAsStream();
             responses = new OHUBResponses(new OHUBResponseStream(inStream));
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
         }
         finally
         {
@@ -97,17 +91,18 @@ public class OHUBClient
             {
                 inStream.close();
             }
-
-            if(writer != null)
+            if(method != null)
             {
-                writer.close();
+                try
+                {
+                    method.releaseConnection();
+                }
+                catch(Exception e1)
+                {
+                    e1.printStackTrace();
+                }
             }
-
-            if(con != null)
-            {
-                con.disconnect();
-            }
-        }
+         }
 
         return responses;
     }
