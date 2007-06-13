@@ -180,7 +180,7 @@ public class CPXDataDictionary
         classCodes.put("480","ENGINEERING GEOLOGY");
         classCodes.put("481","Geology and Geophysics");
         classCodes.put("481.1","Geology");
-        classCodes.put("481.1.1","Geomorphlogy");
+        classCodes.put("481.1.1","Geomorphology");
         classCodes.put("481.2","Geochemistry");
         classCodes.put("481.3","Geophysics");
         classCodes.put("481.1.2","Petrology (Before , use code )");
@@ -275,7 +275,7 @@ public class CPXDataDictionary
         classCodes.put("535.1.1","Rolling Mills");
         classCodes.put("535.2","Metal Forming");
         classCodes.put("535.2.1","Metal Forming Machines");
-        classCodes.put("535.1.2","Rolling MiPractice");
+        classCodes.put("535.1.2","Rolling Mill Practice");
         classCodes.put("535.2.2","Metal Forming Practice");
         classCodes.put("536","Powder Metallurgy");
         classCodes.put("536.1","Powder Metallurgy Operations");
@@ -511,8 +511,8 @@ public class CPXDataDictionary
         classCodes.put("673.1","Shipbuilding");
         classCodes.put("673.2","Shipbuilding Materials");
         classCodes.put("673.3","Shipyards");
-        classCodes.put("674","SmaCraft and Other Marine Craft");
-        classCodes.put("674.1","SmaMarine Craft");
+        classCodes.put("674","Small Craft and Other Marine Craft");
+        classCodes.put("674.1","Small Marine Craft");
         classCodes.put("674.2","Marine Drilling Rigs and Platforms");
         classCodes.put("675","Marine Engineering");
         classCodes.put("675.1","Ship Propulsion (Before , use code )");
