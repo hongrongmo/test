@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class SearchForm {
 
-    public static final int ENDYEAR = 2007;
+    public static final int ENDYEAR = 2008;
 
 
     public static Map getDiscipline(int selecteddbMask) {
