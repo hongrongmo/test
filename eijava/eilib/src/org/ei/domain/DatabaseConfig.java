@@ -65,7 +65,24 @@ public final class DatabaseConfig
         // pag (books)
         dtName.put("PAGE","Page");
         dtName.put("BOOK","Book");
-
+        // paper
+        dtName.put("(CA or CP)","Conferences");
+		dtName.put("MC or MR or RC or RR or DS or UP", "Other documents");
+		//CBNB
+		dtName.put("Journal", "Journal article");
+		dtName.put("Advertizement", "Advertisement");
+		dtName.put("Book", "Book");
+		dtName.put("Directory", "Directory");
+		dtName.put("Company", "Company Report");
+		dtName.put("Stockbroker", "Stockbroker Report");
+		dtName.put("Market", "Market Research Report");
+		dtName.put("Press", "Press");
+		//EncompassLit
+		dtName.put("({J_AB} or {J_AR} or {J_BZ} or {J_CP} or {J_ED} or {J_ER} or {J_LE} or {J_NO} or {J_RE} or {J_SH} or {D_AR} or {D_BZ} or {D_CP} or {J_BK} or {J_BR} or {J_CH} or {J_CR} or {J_DI} or {J_PA} or {J_PR} or {J_RP} or {J_WP})", "Journal article");
+		dtName.put("(P or {P_AR} or {P_CP} or {P_AB} or {P_BK} or {P_BR} or {P_BZ} or {P_CH} or {P_CR} or {P_DI} or {P_ED} or {P_ER} or {P_LE} or {P_NO} or {P_PA} or {P_PR} or {P_RE} or {P_SH} or {P_RP} or {P_WP} or {D_CP} or {J_CP})","Conference");
+		dtName.put("({J_BZ} or {D_BZ} or {D_AR} or {D_CP} or {D_LE} or {D_NO} or {B_BZ} or {K_BZ} or {M_BZ} or {P_BZ} or {R_BZ})","Business article");
+		dtName.put("(AB or {J_AB} or {R_AB} or {P_AB} or {B_AB} or {D_AB} or {K_AB} or {M_AB})", "Abstract");
+		dtName.put("Other", "Other");
     }
 
     public static final String SESSION_POOL = "session";
@@ -85,8 +102,6 @@ public final class DatabaseConfig
             {
                 String strKey = (String) itr.next();
                 String strDriverName = (String)driverTable.get(strKey);
-				//System.out.println("key= "+strKey);
-				//System.out.println("strDriverName= "+strDriverName);
                 Database d = (Database)Class.forName(strDriverName).newInstance();
                 databaseTable.put(strKey, d);
                 if(d.hasChildren())
@@ -324,7 +339,6 @@ public final class DatabaseConfig
         for(int i = 0; i < strDatabases.length; i++)
         {
             String strID = strDatabases[i];
-            //System.out.println("strID= "+strID);
             if(databaseTable.containsKey(strID.toLowerCase()))
             {
                 Database d = (Database) databaseTable.get( strID.toLowerCase() );
@@ -367,9 +381,8 @@ public final class DatabaseConfig
             }
             // take min of startYear and database start year
             intStartYear = (databases[x].getStartYear(backFile) < intStartYear ) ? databases[x].getStartYear(backFile) : intStartYear;
-            // take max of endYear and database end year
+            // take max of endYear and database endear
             intEndYear = (databases[x].getEndYear() > intEndYear ) ? databases[x].getEndYear() : intEndYear;
-
         }
 
         yrmap.put(DatabaseConfig.STARTYEAR,String.valueOf(intStartYear));
