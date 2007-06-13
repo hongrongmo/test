@@ -175,7 +175,7 @@
     String yearselect="";
     String startYear="";
     // This will become the default selected end year since it is ouput in //SESSION-DATA/END-YEAR
-    String endYear="2007";
+    String endYear= String.valueOf(SearchForm.ENDYEAR);
 
     /**
     * This parameter is fetched from the request object to see if the selected set is to be cleared when a new search
@@ -198,13 +198,13 @@
     {
     	dbName = customizedDB;
     }
- 
+
     // endYear for CBF - 1969
     if (dbName.trim().equals(Integer.toString(DatabaseConfig.CBF_MASK)))
     {
     	endYear=Integer.toString(DatabaseConfig.CBF_ENDYEAR);
     }
-      
+
     if((request.getParameter("searchWord1")!=null) && (request.getParameter("searchWord1").trim().length()>0))
     {
         searchWord1 = request.getParameter("searchWord1").trim();
