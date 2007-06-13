@@ -211,7 +211,7 @@ public abstract class Database implements Comparable
     }
 
     public int getStartYear(boolean backFile) { return 1970; }
-    public int getEndYear() { return 2007; }
+    public int getEndYear() { return SearchForm.ENDYEAR; }
 
     public abstract String getID();
 
