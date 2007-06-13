@@ -41,7 +41,6 @@ public class Query implements Comparable
 {
     protected static Log log = LogFactory.getLog(Query.class);
 
-
     private static final String[] stemFields = { "ALL", "KY", "TI", "AB", "FL", "CV", "AV", "AF", "ST", "MH", "CF", "PN","BI" };
     private static final String[] allFields = { "RGI", "PU", "PM", "PE", "VO", "SU", "SP", "DB", "AN", "RN", "AG", "AV", "CT", "CO", "NT", "PA", "PI", "WK", "YR", "ALL", "KY", "AF", "PN", "ST", "MH", "CL", "CN", "TI", "AB", "AU", "CC", "CV", "FL", "SN", "DT", "BN", "TR", "LA", "CF", "DI", "MI", "NI", "CI", "AI","OC","BI" , "PEC" , "PUC" , "PAC", "PK" , "PID" , "PCI","PRN","SIC","PEX","PAM","DOI","PFD","BKS","BKT"};
     private static Map quickSearchDiplayOptions = new HashMap();
@@ -72,6 +71,23 @@ public class Query implements Comparable
 		quickSearchDiplayOptions.put("DT:UG", "US Grants");
 		quickSearchDiplayOptions.put("DT:EA", "EU Applications");
 		quickSearchDiplayOptions.put("DT:EG", "EU Grants");
+		quickSearchDiplayOptions.put("DT:EA", "EU Applications");
+		quickSearchDiplayOptions.put("DT:EG", "EU Grants");
+		quickSearchDiplayOptions.put("DT:(CA or CP)","Conferences");
+        quickSearchDiplayOptions.put("DT:MC or MR or RC or RR or DS or UP", "Other documents");
+		quickSearchDiplayOptions.put("DT:Journal", "Journal article");
+		quickSearchDiplayOptions.put("DT:Advertizement", "Advertisement");
+		quickSearchDiplayOptions.put("DT:Book", "Book");
+		quickSearchDiplayOptions.put("DT:Directory", "Directory");
+		quickSearchDiplayOptions.put("DT:Company", "Company Report");
+		quickSearchDiplayOptions.put("DT:Stockbroker", "Stockbroker Report");
+		quickSearchDiplayOptions.put("DT:Market", "Market Research Report");
+		quickSearchDiplayOptions.put("DT:Press", "Press");
+		quickSearchDiplayOptions.put("DT:({J_AB} or {J_AR} or {J_BZ} or {J_CP} or {J_ED} or {J_ER} or {J_LE} or {J_NO} or {J_RE} or {J_SH} or {D_AR} or {D_BZ} or {D_CP} or {J_BK} or {J_BR} or {J_CH} or {J_CR} or {J_DI} or {J_PA} or {J_PR} or {J_RP} or {J_WP})", "Journal article");
+		quickSearchDiplayOptions.put("DT:(P or {P_AR} or {P_CP} or {P_AB} or {P_BK} or {P_BR} or {P_BZ} or {P_CH} or {P_CR} or {P_DI} or {P_ED} or {P_ER} or {P_LE} or {P_NO} or {P_PA} or {P_PR} or {P_RE} or {P_SH} or {P_RP} or {P_WP} or {D_CP} or {J_CP})","Conference");
+		quickSearchDiplayOptions.put("DT:({J_BZ} or {D_BZ} or {D_AR} or {D_CP} or {D_LE} or {D_NO} or {B_BZ} or {K_BZ} or {M_BZ} or {P_BZ} or {R_BZ})","Business article");
+		quickSearchDiplayOptions.put("DT:(AB or {J_AB} or {R_AB} or {P_AB} or {B_AB} or {D_AB} or {K_AB} or {M_AB})", "Abstract");
+		quickSearchDiplayOptions.put("DT:Other", "Other");
 
         quickSearchDiplayOptions.put("TR:APP", "Applications");
         quickSearchDiplayOptions.put("TR:ECO", "Economic");
@@ -85,8 +101,8 @@ public class Query implements Comparable
         quickSearchDiplayOptions.put("TR:NUM", "Numerical");
         quickSearchDiplayOptions.put("TR:BIB", "Bibliography");
         quickSearchDiplayOptions.put("TR:NEW", "New development");
-        quickSearchDiplayOptions.put("TR:PRA", "Practical");
-        quickSearchDiplayOptions.put("TR:PRO", "Product review");
+		quickSearchDiplayOptions.put("TR:PRA", "Practical");
+		quickSearchDiplayOptions.put("TR:PRO", "Product review");
 
         quickSearchDiplayOptions.put("English", "English");
         quickSearchDiplayOptions.put("Chinese", "Chinese");
@@ -429,7 +445,6 @@ public class Query implements Comparable
             physicalQueryBuffer = new StringBuffer(queryrefinements.getRefinementQueryString());
         }
 
-//		System.out.println("Intermediate query:::::"+physicalQueryBuffer.toString());
         setIntermediateQuery(physicalQueryBuffer.toString());
 
         if(strEmailAlertWeek.length() > 0)
@@ -490,6 +505,7 @@ public class Query implements Comparable
         }
 
         this.sPhysicalQuery = physicalQueryWriter.getQuery(queryTree);
+
     }
 
     private void buildSearchQuery() throws ParseException, SearchException
@@ -546,6 +562,7 @@ public class Query implements Comparable
     {
         StringBuffer displayLimitBuff = new StringBuffer();
         StringBuffer physicalLimitBuff = new StringBuffer();
+
         if ((sDocType != null) && (sDocType.length() > 0))
         {
 
