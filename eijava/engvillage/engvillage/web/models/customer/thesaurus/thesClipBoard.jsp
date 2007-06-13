@@ -85,7 +85,7 @@
   {
 		out.write("<SESSION-DATA>");
 		//out.write("<START-YEAR>1990</START-YEAR>");
-		out.write("<END-YEAR>2007</END-YEAR>");
+		out.write("<END-YEAR>" + String.valueOf(SearchForm.ENDYEAR) + "</END-YEAR>");
 		out.write("</SESSION-DATA>");
 	}
 
