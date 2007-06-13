@@ -37,17 +37,22 @@ public class MultiDatabaseDocBuilder
 				{
 					DocID id = (DocID)listOfDocIDs.get(i);
 					Database database = id.getDatabase();
-
-					if(listTable.containsKey(database.getID()))
+					String databaseID = database.getIndexName();
+					if(databaseID.length()> 3)
 					{
-						ArrayList al = (ArrayList)listTable.get(database.getID());
+						databaseID = databaseID.substring(0,3);
+					}
+
+					if(listTable.containsKey(databaseID))
+					{
+						ArrayList al = (ArrayList)listTable.get(databaseID);
 						al.add(id);
 					}
 					else
 					{
 						ArrayList al = new ArrayList();
 						al.add(id);
-						listTable.put(database.getID(), al);
+						listTable.put(databaseID, al);
 					}
 				}
 
