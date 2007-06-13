@@ -14,7 +14,7 @@ public class LemQueryWriter extends BookQueryWriter {
 			String bookQueryBuffer = super.getQuery(bQuery);
 			String lemQueryBuffer = super.getLemBuffer(bQuery);
 			LemClient client = new LemClient();
-			client.setBaseURL("http://rei-testnode.bos3.fastsearch.net:29568");
+			client.setBaseURL("http://ei-lemm.bos3.fastsearch.net");
 			// System.out.println("BOOKQUERYBUFFER: " + bookQueryBuffer);\
 			String[] inWords = bookQueryBuffer.split(";");
 			String[] nonExactTerms = lemQueryBuffer.split(";");
