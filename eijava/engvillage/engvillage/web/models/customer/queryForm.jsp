@@ -6,7 +6,7 @@
 // "SELECTED" options are output by ClientCustomizer
 // USED FOR THESAURUS FORM
 int startYearOpt = 0;
-final int endYearOpt = 2007;
+final int endYearOpt = org.ei.domain.SearchForm.ENDYEAR;
 int intMask = Integer.parseInt(database);
 int intUpgradeMask = (DatabaseConfig.getInstance()).doUpgrade(intMask, user.getCartridge());
 boolean doUpgrade = (intUpgradeMask != intMask);
@@ -291,7 +291,7 @@ else
 <%
     int userMaskMAX = (DatabaseConfig.getInstance()).getMask(user.getCartridge());
     int userScrubbedMaskMAX = (DatabaseConfig.getInstance()).getScrubbedMask(user.getCartridge());
-    
+
     //System.out.println("USER_Cartridge= "+user.getCartridge());
     //System.out.println("userMaskMAX= "+userMaskMAX);
     //System.out.println("userScrubbedMaskMAX= "+userScrubbedMaskMAX);
@@ -344,7 +344,7 @@ else
 	   Database[] customdatabases = customsearchfield[i].getDatabases();
 
 	   out.write("<FIELD ID=\"");
-	   out.write(searchfield.getID());	  
+	   out.write(searchfield.getID());
 	   out.write("\" LABEL=\"");
 	   out.write(customsearchfield[i].getTitle());
 	   out.write("\">");
