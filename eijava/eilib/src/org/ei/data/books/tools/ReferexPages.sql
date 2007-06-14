@@ -77,6 +77,29 @@ CREATE TABLE BOOK_PAGES_NEW
   PDFPP          VARCHAR2(16 BYTE)
 )
 
+BOOKS SQL Creation script description
+--------------------------------------------------------------------------------------
+CREATE TABLE BOOKS
+(
+  BN     VARCHAR2(32 BYTE)                      NOT NULL,
+  BN13   VARCHAR2(32 BYTE),
+  PP     VARCHAR2(80 BYTE),
+  YR     VARCHAR2(10 BYTE),
+  TI     VARCHAR2(1280 BYTE),
+  AUS    VARCHAR2(1500 BYTE),
+  CVS    VARCHAR2(640 BYTE),
+  AF     VARCHAR2(768 BYTE),
+  PN     VARCHAR2(88 BYTE),
+  NT     VARCHAR2(1500 BYTE),
+  ST     VARCHAR2(192 BYTE),
+  SP     VARCHAR2(768 BYTE),
+  ISS    VARCHAR2(32 BYTE),
+  VO     VARCHAR2(32 BYTE),
+  AB     CLOB,
+  SUB    NUMBER,
+  PDFPP  VARCHAR2(16 BYTE)
+)
+
 
 SQLLDR Command
 --------------------------------------------------------------------------------------
