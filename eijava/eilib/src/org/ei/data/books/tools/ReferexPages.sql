@@ -15,7 +15,8 @@ DOCID         - 'pag_' + BN + '_' + PAGE_NUM
 BN            - ISBN10
 BN13          - ISBN13
 PII           - S300 Chapter ID
-PAGE_NUM      - Page number in PDF file
+PAGE_NUM      - Page number (INDEX) in PDF file
+PAGE_LABEL    - Label appearing on page in book
 SECTION_TITLE - Title of containing section
 SECTION_START - Start page of contaning section
 CHAPTER_TITLE - Title of containing CHAPTER
@@ -50,6 +51,7 @@ CREATE TABLE BOOK_PAGES_NEW
   BN13           VARCHAR2(16 BYTE),
   PII            VARCHAR2(64 BYTE),
   PAGE_NUM       INTEGER,
+  PAGE_LABEL     VARCHAR2(32 BYTE),
   SECTION_TITLE  VARCHAR2(256 BYTE),
   SECTION_START  INTEGER,
   CHAPTER_TITLE  VARCHAR2(256 BYTE),
@@ -92,6 +94,7 @@ TRAILING NULLCOLS
   BN13        CHAR,
   PII         CHAR,
   PAGE_NUM    CHAR,
+  PAGE_LABEL  CHAR,
   SECTION_TITLE     CHAR,
   SECTION_START     CHAR,
   CHAPTER_TITLE     CHAR,
