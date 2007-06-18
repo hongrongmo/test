@@ -105,6 +105,8 @@ SQLLDR Command
 --------------------------------------------------------------------------------------
 sqlldr.exe AP_PRO1/ei3it@NEPTUNE direct=false data=output.out control=ReferexPages.sqlldr.ctl log=ReferexPages.sqlldr.log bad=ReferexPages.sqlldr.bad silent=FEEDBACK
 
+sqlldr.exe AP_PRO1/ei3it@NEPTUNE direct=false control=bookPages.ctl log=sqlldr.log bad=sqlldr.bad silent=FEEDBACK bindsize=512000 rows=10000
+
 SQLLDR Control File
 --------------------------------------------------------------------------------------
 LOAD DATA
