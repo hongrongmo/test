@@ -13,7 +13,7 @@ public class BookIndexer
 	private static PorterStemmer stemmer = new PorterStemmer();
 	private static TextFileFilter filter = new TextFileFilter();
     private static Perl5Util perl = new Perl5Util();
-	private static HashMap stopWords = new HashMap();
+	private static Map stopWords = new HashMap();
 	private static int numfiles = 0;
 	private static int numbooks = 0;
 
@@ -25,120 +25,149 @@ public class BookIndexer
 	}
 
 	public static void main(String args[])
-		throws Exception
+		//throws Exception
 	{
+        String driver = "oracle.jdbc.driver.OracleDriver";
+        String url = "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI"; //args[1];
+        String username = "AP_PRO1"; //args[2];
+        String password = "ei3it"; //args[3];
 
-		BufferedReader vocabReader = null;
-		ArrayList terms = new ArrayList();
+		List terms = new ArrayList();
+
+        Connection con = null;
+        ResultSet rs = null;
+        Statement stmt = null;
+
+        try {
+            Class.forName(driver);
+        } catch (ClassNotFoundException e1) {
+            // TODO Auto-generated catch block
+            e1.printStackTrace();
+        }
+
+        try
+		{
+            url = "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI"; //args[1];
+            username = "AP_EV_SEARCH"; //args[2];
+            password = "ei3it"; //args[3];
+            con = DriverManager.getConnection(url,username,password);
+
+            stmt = con.createStatement();
+            rs = stmt.executeQuery("select MAIN_TERM_SEARCH from CPX_THESAURUS WHERE STATUS='C'");
+            while(rs.next())
+            {
+                String term = rs.getString("MAIN_TERM_SEARCH");
+                terms.add(term);
+                System.out.println(term);
+            }
+
+            if(rs != null) {
+                close(rs);
+            }
+            if(stmt != null) {
+                close(stmt);
+            }
+		}
+        catch(SQLException e) {
+            e.printStackTrace();
+        }
+        finally {
+            if(con != null) {
+                try {
+                    con.close();
+                } catch (SQLException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }                          
+        }
 
 		try
 		{
-			vocabReader = new BufferedReader(new FileReader("vocab.txt"));
-			String term = null;
-			while((term = vocabReader.readLine()) != null)
-			{
-				terms.add(term);
-			}
-		}
-		finally
-		{
-			if(vocabReader != null)
-			{
-				vocabReader.close();
-			}
-		}
-
-		Connection con = null;
-
-		try
-		{
-			String driver = args[0];
-			String url = args[1];
-			String username = args[2];
-			String password = args[3];
-			Class.forName(driver).newInstance();
+            // "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI", "AP_EV_SEARCH", "ei3it"
+            
+            url = "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI"; //args[1];
+            username = "AP_PRO1"; //args[2];
+            password = "ei3it"; //args[3];
 			con = DriverManager.getConnection(url,username,password);
-			ResultSet rs = null;
-			Statement stmt = null;
 			Map books = new HashMap();
-			try
-			{
-					stmt = con.createStatement();
-					rs = stmt.executeQuery("select bn, ti from books");
-					while(rs.next())
-					{
-						String bn = rs.getString("bn");
-						String ti = rs.getString("ti");
-						books.put(bn,ti);
-					}
-			}
-			finally
-			{
-				if(rs != null)
-				{
-					close(rs);
-				}
 
-				if(stmt != null)
-				{
-					close(stmt);
-				}
+            stmt = con.createStatement();
+			rs = stmt.executeQuery("select unique(bn), ti from BOOK_PAGES_TEMP where BN13='9780884154303'");
+			while(rs.next())
+			{
+				String bn = rs.getString("bn");
+				String ti = rs.getString("ti");
+				books.put(bn,ti);
 			}
 
+            if(rs != null) {
+                close(rs);
+            }
+            if(stmt != null) {
+                close(stmt);
+            }
+            
 			Iterator booksIt = (books.keySet()).iterator();
 
 			PreparedStatement pstmt1 = null;
 
-			pstmt1 = con.prepareStatement("select * from book_pages where bn = ?");
+			pstmt1 = con.prepareStatement("select * from BOOK_PAGES_TEMP where bn = ?");
 
-			try
+			while(booksIt.hasNext())
 			{
-				while(booksIt.hasNext())
+				String isbn = (String)booksIt.next();
+				String bookTitle = (String)books.get(isbn);
+
+				pstmt1.setString(1, isbn);
+				rs = pstmt1.executeQuery();
+
+				while(rs.next())
 				{
-					String isbn = (String)booksIt.next();
-					String bookTitle = (String)books.get(isbn);
-
-					try
+					String id = rs.getString("docid");
+					String keywords = null;
+					Clob clob = rs.getClob("page_txt");
+					if(clob != null)
 					{
-						pstmt1.setString(1, isbn);
-						rs = pstmt1.executeQuery();
-
-						while(rs.next())
-						{
-							String id = rs.getString("docid");
-							String keywords = null;
-							Clob clob = rs.getClob("page_txt");
-							if(clob != null)
-							{
-								String abs = StringUtil.getStringFromClob(clob);
-								abs = abs.replaceFirst(bookTitle, "");
-								keywords = getKeywords(terms, abs);
-								if(keywords != null)
-								{
-									System.out.println("update book_pages set page_keywords = '"+keywords.replaceAll("'", "''")+"' where docid = '"+id +"';");
-								}
-							}
-						}
+						String abs = null;
+                        try {
+                            abs = StringUtil.getStringFromClob(clob);
+                        } catch (Exception e) {
+                            // TODO Auto-generated catch block
+                            e.printStackTrace();
+                        }
+                        if(abs != null) {
+    						abs = abs.replaceFirst(bookTitle, "");
+    						keywords = getKeywords(terms, abs);
+    						if(keywords != null)
+    						{
+    							System.out.println("update book_pages set page_keywords = '"+keywords.replaceAll("'", "''")+"' where docid = '"+id +"';");
+    						}
+                        }
 					}
-					finally
-					{
-						close(rs);
-					}
-					System.out.println("commit;");
 				}
-			}
-			finally
-			{
-				close(pstmt1);
-			}
-		}
-		finally
-		{
-			if(con != null)
-			{
-				con.close();
-			}
-		}
+            }
+            if(rs != null) {
+                close(rs);
+            }
+            if(pstmt1 != null) {
+                close(pstmt1);
+            }		
+        }
+        catch(SQLException e) {
+            e.printStackTrace();
+        }
+        finally {
+            if(con != null) {
+                try {
+                    con.close();
+                } catch (SQLException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }     
+        }
+        System.out.println("commit;");
 	}
 
 	private static void close(ResultSet rs)
