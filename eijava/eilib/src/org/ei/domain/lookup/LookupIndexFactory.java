@@ -2,8 +2,8 @@ package org.ei.domain.lookup;
 
 
 /** This class <code> LookupIndexFactory </code> decides which lookup class to instatntinate
-* @author $Author:   johna  $
-* @version $Revision:   1.0  $ $Date:   May 09 2007 15:35:58  $
+* @author $Author:   hmo  $
+* @version $Revision:   1.1  $ $Date:   Jun 19 2007 14:24:12  $
 */
 
 public class LookupIndexFactory
@@ -67,6 +67,11 @@ public class LookupIndexFactory
 		else if(searchfield!=null && searchfield.equals("LA"))
 		{
 			lis = new LookupLA(sessionID,
+							   1000000);
+		}
+		else if(searchfield!=null && searchfield.equals("PC"))
+		{
+			lis = new LookupPC(sessionID,
 							   1000000);
 		}
 
