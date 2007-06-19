@@ -109,25 +109,7 @@ sqlldr.exe AP_PRO1/ei3it@NEPTUNE direct=false control=bookPages.ctl log=sqlldr.l
 
 SQLLDR Control File
 --------------------------------------------------------------------------------------
-LOAD DATA
-APPEND
-INTO TABLE BOOK_PAGES_NEW
-FIELDS TERMINATED BY "\t"
-TRAILING NULLCOLS
-( DOCID       CHAR,
-  BN          CHAR,
-  BN13        CHAR,
-  PII         CHAR,
-  PAGE_NUM    CHAR,
-  PAGE_LABEL  CHAR,
-  SECTION_TITLE     CHAR,
-  SECTION_START     CHAR,
-  CHAPTER_TITLE     CHAR,
-  CHAPTER_START     CHAR,
-  PAGE_BYTES  CHAR,
-  PAGE_FILENAME FILLER CHAR(100),
-  PAGE_TXT    LOBFILE(PAGE_FILENAME) TERMINATED BY EOF,
-  PAGE_TOTAL  CHAR )
+See PVCS file ReferexPages.sqlldr.ctl
 
 Testing queries
 --------------------------------------------------------------------------------------
@@ -137,6 +119,8 @@ SELECT * FROM book_pages_new where page_start is null or page_start <=0
 SELECT * FROM book_pages_new where page_total is null or page_total <=0
 
 Merge/Update queries
+
+DO NOT RUN UNLESS TABLES ARE INDEXED ON WHERE/JOIN CONDITION FIELD(S)
 --------------------------------------------------------------------------------------
 MERGE INTO BOOK_PAGES E1
 USING BOOK_PAGES2 E2
@@ -149,3 +133,10 @@ WHEN NOT MATCHED THEN
 update book_pages set (PP,YR,TI,AUS,CVS,AF,PN,NT,ST,SP,ISS,VO,AB,SUB,PDFPP) = (
 select PP,YR,TI,AUS,CVS,AF,PN,NT,ST,SP,ISS,VO,AB,SUB,PDFPP from books where book_pages.bn=books.bn
 )
+
+
+Count Books that have been loaded/not loaded so far
+--------------------------------------------------------------------------------------
+SELECT count(unique(BOOKS_992.BN13)) FROM BOOKS_992
+  LEFT JOIN BOOK_PAGES_TEMP ON BOOKS_992.BN13=BOOK_PAGES_TEMP.BN13
+  WHERE BOOK_PAGES_TEMP.BN13 IS NOT NULL;
