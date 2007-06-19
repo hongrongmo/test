@@ -31,6 +31,8 @@ function flipImage(selectedDbMask)
     document.lookuplink7.src="/engresources/images/checking.gif"; // PN
     document.lookuplink8.src="/engresources/images/checking.gif"; // TR
     document.lookuplink9.src="/engresources/images/checking.gif"; // DI
+    document.lookuplink10.src="/engresources/images/checking.gif"; //PC
+
 
     // if only REFEREX, then leave all blanked out
     if(selectedDbMask == REFEREX)
@@ -43,7 +45,7 @@ function flipImage(selectedDbMask)
     {
 	 if((selectedDbMask & UPA) != UPA &&
 	    (selectedDbMask & EUP) != EUP &&
-	    (selectedDbMask & EPT) != EPT)
+	    (selectedDbMask & EPT) != EPT) 
 	 {
 		 document.lookuplink1.src="/engresources/images/ath.gif";
 	 }
@@ -61,7 +63,7 @@ function flipImage(selectedDbMask)
      }
 
     if((selectedDbMask & CBN) != CBN)
-    {
+    { 
 	 //AF ---  only cpx,ins,ntis
 	 if((selectedDbMask & UPA) != UPA &&
 	    (selectedDbMask & EUP) != EUP &&
@@ -88,26 +90,33 @@ function flipImage(selectedDbMask)
         ((selectedDbMask & CBF) == CBF) ||
     	((selectedDbMask & GEO) == GEO) ||
     	((selectedDbMask & NTIS) == NTIS) ||
-    	((selectedDbMask & CBN) == CBN) ||
     	((selectedDbMask & CHM) == CHM) ||
+    	((selectedDbMask & CBN) == CBN) ||
+    	((selectedDbMask & PCH) == PCH) ||
     	((selectedDbMask & ELT) == ELT) ||
-    	((selectedDbMask & EPT) == EPT) ||
-    	((selectedDbMask & PCH) == PCH))
+    	((selectedDbMask & EPT) == EPT))
     {
         document.lookuplink3.src="/engresources/images/ct.gif";
     }
+    
+    //PC
+    if ((selectedDbMask & EPT) == EPT)
+    {
+    	document.lookuplink10.src="/engresources/images/pc.gif";
+    }
+
 
     //LA
     if (((selectedDbMask & CPX) == CPX) ||
     	((selectedDbMask & CBF) == CBF) ||
     	((selectedDbMask & INSPEC) == INSPEC) ||
     	((selectedDbMask & GEO) == GEO) ||
-    	((selectedDbMask & NTI) == NTI) ||
+    	((selectedDbMask & NTIS) == NTIS) ||
     	((selectedDbMask & PCH) == PCH) ||
     	((selectedDbMask & CHM) == CHM) ||
     	((selectedDbMask & CBN) == CBN) ||
-    	((selectedDbMask & EPT) == EPT) ||
-    	((selectedDbMask & ELT) == ELT))
+    	((selectedDbMask & ELT) == ELT) ||
+    	((selectedDbMask & EPT) == EPT))
     {
         document.lookuplink4.src="/engresources/images/lng.gif";
     }
@@ -124,7 +133,7 @@ function flipImage(selectedDbMask)
     {
        document.lookuplink5.src="/engresources/images/st.gif";
     }
-
+    
     //DT
     if (((selectedDbMask & CPX) == CPX) ||
         ((selectedDbMask & GEO) == GEO) ||
@@ -138,25 +147,23 @@ function flipImage(selectedDbMask)
            document.lookuplink6.src="/engresources/images/dt.gif";
     }
 
-
     //PB
     if (((selectedDbMask & CPX) == CPX) ||
     	((selectedDbMask & CBF) == CBF) ||
         ((selectedDbMask & INSPEC) == INSPEC) ||
-        ((selectedDbMask & PCH) == PCH) ||
         ((selectedDbMask & ELT) == ELT) ||
-        ((selectedDbMask & EPT) == EPT))
+        ((selectedDbMask & PCH) == PCH))
        {
        	    document.lookuplink7.src="/engresources/images/pb.gif";
        }
 
 
     //TR
-        if (((selectedDbMask & CPX) == CPX) ||
-            ((selectedDbMask & INSPEC) == INSPEC))
-        {
-           document.lookuplink8.src="/engresources/images/tr.gif";
-        }
+    if (((selectedDbMask & CPX) == CPX) ||
+        ((selectedDbMask & INSPEC) == INSPEC))
+    {
+       document.lookuplink8.src="/engresources/images/tr.gif";
+    }
 
 
     //DSC
@@ -206,7 +213,7 @@ function calculateMask(control)
     var selectedDbMask = 0;
 
     // CALCULATE SELECTED DB MASK
-   if(document.quicksearch.alldb != null  &&
+   if(document.quicksearch.alldb != null  && 
     			document.quicksearch.alldb.checked == true)
     {
         selectedDbMask = eval(document.quicksearch.alldb.value);
@@ -293,7 +300,7 @@ function calStartYear(selectedDbMask, sYear)
     {
         var cbfStartYear = sYear.substr(sYear.indexOf("ZST")+3,4);
         dYear = (dYear > cbfStartYear) ? cbfStartYear : dYear;
-    }
+    }    
     if((selectedDbMask != 0) && ((selectedDbMask & INSPEC) == INSPEC))
     {
         var insStartYear = sYear.substr(sYear.indexOf("IST")+3,4);
@@ -333,23 +340,23 @@ function calStartYear(selectedDbMask, sYear)
     {
        var pchStartYear = sYear.substr(sYear.indexOf("AST")+3,4);
        dYear = (dYear > pchStartYear) ? pchStartYear : dYear;
-    }
-    if (selectedDbMask != 0 && ((selectedDbMask & CHM) == CHM))
+    }    
+    if (selectedDbMask != 0 && ((selectedDbMask & CHM) == CHM)) 
     {
        var chmStartYear = sYear.substr(sYear.indexOf("HST") + 3, 4);
        dYear = (dYear > chmStartYear) ? chmStartYear : dYear;
     }
-    if (selectedDbMask != 0 && ((selectedDbMask & CBN) == CBN))
+    if (selectedDbMask != 0 && ((selectedDbMask & CBN) == CBN)) 
     {
        var cbnStartYear = sYear.substr(sYear.indexOf("BST") + 3, 4);
        dYear = (dYear > cbnStartYear) ? cbnStartYear : dYear;
     }
-    if (selectedDbMask != 0 && ((selectedDbMask & ELT) == ELT))
+    if (selectedDbMask != 0 && ((selectedDbMask & ELT) == ELT)) 
     {
        var eltStartYear = sYear.substr(sYear.indexOf("LST") + 3, 4);
        dYear = (dYear > eltStartYear) ? eltStartYear : dYear;
     }
-    if (selectedDbMask != 0 && ((selectedDbMask & EPT) == EPT))
+    if (selectedDbMask != 0 && ((selectedDbMask & EPT) == EPT)) 
     {
        var eptStartYear = sYear.substr(sYear.indexOf("TST") + 3, 4);
        dYear = (dYear > eptStartYear) ? eptStartYear : dYear;
@@ -381,7 +388,7 @@ function calDisplayYear(selectedDbMask, sYear)
         {
             var cbfStartYear = sYear.substr(sYear.indexOf("ZSY")+3,4);
             dYear = (dYear > cbfStartYear) ? cbfStartYear : dYear;
-        }
+        }        
         if((selectedDbMask != 0) && ((selectedDbMask & INSPEC) == INSPEC))
         {
             var insStartYear = sYear.substr(sYear.indexOf("ISY")+3,4);
@@ -421,23 +428,23 @@ function calDisplayYear(selectedDbMask, sYear)
 	{
 	    var pchStartYear = sYear.substr(sYear.indexOf("AST")+3,4);
 	    dYear = (dYear > pchStartYear) ? pchStartYear : dYear;
-	}
-	if (selectedDbMask != 0 && ((selectedDbMask & CHM) == CHM))
+	}    
+	if (selectedDbMask != 0 && ((selectedDbMask & CHM) == CHM)) 
 	{
 	    var chmStartYear = sYear.substr(sYear.indexOf("HST") + 3, 4);
 	    dYear = (dYear > chmStartYear) ? chmStartYear : dYear;
 	}
-	if (selectedDbMask != 0 && ((selectedDbMask & CBN) == CBN))
+	if (selectedDbMask != 0 && ((selectedDbMask & CBN) == CBN)) 
 	{
 	    var cbnStartYear = sYear.substr(sYear.indexOf("BST") + 3, 4);
 	    dYear = (dYear > cbnStartYear) ? cbnStartYear : dYear;
 	}
-	if (selectedDbMask != 0 && ((selectedDbMask & ELT) == ELT))
+	if (selectedDbMask != 0 && ((selectedDbMask & ELT) == ELT)) 
 	{
 	    var eltStartYear = sYear.substr(sYear.indexOf("LST") + 3, 4);
 	    dYear = (dYear > eltStartYear) ? eltStartYear : dYear;
 	}
-	if (selectedDbMask != 0 && ((selectedDbMask & EPT) == EPT))
+	if (selectedDbMask != 0 && ((selectedDbMask & EPT) == EPT)) 
 	{
 	    var eptStartYear = sYear.substr(sYear.indexOf("TST") + 3, 4);
 	    dYear = (dYear > eptStartYear) ? eptStartYear : dYear;
@@ -658,7 +665,7 @@ function checkLastUpdates()
     alert("Last updates selection does not apply to Referex collections.");
     return false;
   }
-  else if((document.quicksearch.yearselect[1].checked == true) &&
+  else if((document.quicksearch.yearselect[1].checked == true) && 
   										(seldbmask == CBF))
   {
     document.quicksearch.yearselect[0].checked = true;
@@ -666,7 +673,7 @@ function checkLastUpdates()
     alert("Last updates selection does not apply to EI Backfile.");
     return false;
   }
-  else if((document.quicksearch.yearselect[1].checked == true) &&
+  else if((document.quicksearch.yearselect[1].checked == true) && 
   										(seldbmask == (CBF + REFEREX)))
   {
     document.quicksearch.yearselect[0].checked = true;
