@@ -1103,18 +1103,26 @@ public class SearchForm {
         {
         	outputString.append(getOpenLookupRow(sessionID,selecteddbMask,"CVS","checking.gif",3));
         }
+
+
+
         //ST
         if ((selecteddbMask & DatabaseConfig.UPA_MASK) != DatabaseConfig.UPA_MASK &&
             (selecteddbMask & DatabaseConfig.EUP_MASK) != DatabaseConfig.EUP_MASK &&
             (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK &&
+            (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
             (selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK)
         {
         	outputString.append(getOpenLookupRow(sessionID,selecteddbMask,"ST","st.gif",4));
         }
+        else if(selecteddbMask == DatabaseConfig.EPT_MASK)
+        {
+        	outputString.append(getOpenLookupRow(sessionID,selecteddbMask,"PC","pc.gif",4));
+        }
         else
         {
-        	outputString.append(getOpenLookupRow(sessionID,selecteddbMask,"ST","checking.gif",4));
-        }
+			outputString.append(getOpenLookupRow(sessionID,selecteddbMask,"ST","checking.gif",4));
+		}
         //PB
         if((selecteddbMask & DatabaseConfig.GEO_MASK) != DatabaseConfig.GEO_MASK &&
            (selecteddbMask & DatabaseConfig.UPA_MASK) != DatabaseConfig.UPA_MASK &&
@@ -1130,6 +1138,16 @@ public class SearchForm {
         else
         {
         	outputString.append(getOpenLookupRow(sessionID,selecteddbMask,"PN","checking.gif",5));
+        }
+
+        //PC
+        if(selecteddbMask  == DatabaseConfig.EPT_MASK)
+		{
+			outputString.append(getOpenLookupRow(sessionID,selecteddbMask,"PC","pc.gif",6));
+		}
+		else
+		{
+		 	outputString.append(getOpenLookupRow(sessionID,selecteddbMask,"PC","checking.gif",6));
         }
 
         return outputString.toString();
@@ -1215,7 +1233,6 @@ public class SearchForm {
         	outputString.append(getOpenLookupRow(sessionID,selecteddbMask,"LA","checking.gif",4));
         }
 
-
         //ST
         if (((selecteddbMask & DatabaseConfig.CPX_MASK) == DatabaseConfig.CPX_MASK) ||
             ((selecteddbMask & DatabaseConfig.CBF_MASK) == DatabaseConfig.CBF_MASK) ||
@@ -1229,6 +1246,10 @@ public class SearchForm {
         	outputString.append(getOpenLookupRow(sessionID,selecteddbMask,"ST","checking.gif",5));
         }
 
+		if(selecteddbMask == DatabaseConfig.EPT_MASK)
+		{
+			outputString.append(getOpenLookupRow(sessionID,selecteddbMask,"PC","pc.gif",4));
+        }
 
         //DT
         if (((selecteddbMask & DatabaseConfig.CPX_MASK) == DatabaseConfig.CPX_MASK) ||
@@ -1274,6 +1295,18 @@ public class SearchForm {
         {
         	outputString.append(getOpenLookupRow(sessionID,selecteddbMask,"DI","checking.gif",9));
         }
+
+         //PC
+		if ((selecteddbMask & DatabaseConfig.EPT_MASK) == DatabaseConfig.EPT_MASK)
+		{
+			outputString.append(getOpenLookupRow(sessionID,selecteddbMask,"PC","pc.gif",10));
+		}
+		else
+		{
+			outputString.append(getOpenLookupRow(sessionID,selecteddbMask,"PC","checking.gif",10));
+        }
+
+
 
         return outputString.toString();
     }
