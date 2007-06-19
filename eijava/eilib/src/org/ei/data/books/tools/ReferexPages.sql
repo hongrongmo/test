@@ -134,6 +134,9 @@ update book_pages set (PP,YR,TI,AUS,CVS,AF,PN,NT,ST,SP,ISS,VO,AB,SUB,PDFPP) = (
 select PP,YR,TI,AUS,CVS,AF,PN,NT,ST,SP,ISS,VO,AB,SUB,PDFPP from books where book_pages.bn=books.bn
 )
 
+update book_pages_TEMP set (YR, PN,  ST, AB, ISS, VO, CVS, SUB ) = (
+  select books_992.YR, books_992.PN,  books_992.ST, books_992.AB, books_992.ISS, books_992.VO, books_992.CVS, books_992.SUB  from books_992,book_pages_temp where book_pages_temp.bn13=books_992.bn13
+)
 
 Count Books that have been loaded/not loaded so far
 --------------------------------------------------------------------------------------
