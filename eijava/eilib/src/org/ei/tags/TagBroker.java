@@ -952,6 +952,9 @@ public class TagBroker
             close(pstmt);
 			replace(con);
         }
+
+        //Clean out any dups that the user might have created when updating tag names.
+		removeDuplicates(userID);
     }
 
 	private void fillTag(Tag tag,
@@ -1291,6 +1294,159 @@ public class TagBroker
 		String sid = id.toString();
 		MD5Digester digester = new MD5Digester();
 		return digester.asHex(digester.digest(sid));
+	}
+
+	/**
+	*   A general method for placing housekeeping tasks.
+	**/
+
+	public void houseKeeping()
+		throws Exception
+	{
+		removeDuplicates();
+	}
+
+
+	private void removeDuplicates()
+		throws Exception
+	{
+		removeDuplicates(null);
+	}
+
+	private void removeDuplicates(String userID)
+		throws Exception
+	{
+		ConnectionBroker broker = null;
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		StringBuffer buf = new StringBuffer("select * from tags ");
+		if(userID != null)
+		{
+			buf.append("where user_id = '");
+			buf.append(userID);
+			buf.append("'");
+		}
+		else
+		{
+			buf.append("where customer_id != '1'");
+		}
+
+		try
+		{
+			broker = ConnectionBroker.getInstance();
+			con = broker.getConnection(DatabaseConfig.SESSION_POOL);
+			pstmt = con.prepareStatement(buf.toString());
+			rs = pstmt.executeQuery();
+			while (rs.next())
+			{
+				String tagid = rs.getString("t_id");
+				Tag tag = fillTag(rs);
+				String calctagid = getTagID(tag);
+				if(!tagid.equals(calctagid))
+				{
+					try
+					{
+						updateTagID(tagid, calctagid, con);
+					}
+					catch(Exception e)
+					{
+						/**
+						* In the case of an exception check to see if it was
+						* a unique constraint problem. If it is then we have found
+						* a dup, so remove it.
+						**/
+
+						 String message = e.getMessage();
+						 if(message != null &&
+							message.indexOf("unique constraint") != -1)
+						 {
+							System.out.println("Removing duplicate tag:"+tag.getTag()+" "+tagid);
+							deleteTagByID(tagid,
+										  tag.getTag(),
+										  tag.getScope(),
+										  tag.getUserID(),
+										  tag.getCustID(),
+										  tag.getGroupID());
+						}
+					}
+				}
+			}
+		}
+		finally
+		{   close(rs);
+			close(pstmt);
+			replace(con);
+		}
+	}
+
+	private void updateTagID(String oldID,
+							 String newID,
+							 Connection con)
+		throws Exception
+	{
+		PreparedStatement pstmt = null;
+		try
+		{
+			pstmt = con.prepareStatement("update tags set T_ID = ? where T_ID = ?");
+			pstmt.setString(1, newID);
+			pstmt.setString(2, oldID);
+			pstmt.executeUpdate();
+		}
+		finally
+		{
+			close(pstmt);
+		}
+	}
+
+	private void deleteTagByID(String tagID,
+							   String tag,
+							   int scope,
+							   String user,
+							   String customerID,
+							   String groupID)
+	{
+		ConnectionBroker broker = null;
+		Connection con = null;
+		PreparedStatement pstmt = null;
+
+		try
+		{
+			broker = ConnectionBroker.getInstance();
+			con = broker.getConnection(DatabaseConfig.SESSION_POOL);
+			con.setAutoCommit(false);
+			pstmt = con.prepareStatement("delete from tags where T_ID = ?");
+			pstmt.setString(1, tagID);
+			int count = pstmt.executeUpdate();
+			if(count > 0)
+			{
+				Operation operation = new Operation("-", 1);
+				updateConsolidatedTag(tag.trim().toUpperCase(),
+									  scope,
+									  user,
+									  groupID,
+									  customerID,
+									  operation,
+									  con);
+			}
+			con.commit();
+		}
+		catch(Exception e1)
+		{
+			try
+			{
+				con.rollback();
+			}
+			catch(Exception ce)
+			{
+				ce.printStackTrace();
+			}
+		}
+		finally
+		{
+			close(pstmt);
+			replace(con);
+		}
 	}
 
 	private void close(ResultSet rs)
