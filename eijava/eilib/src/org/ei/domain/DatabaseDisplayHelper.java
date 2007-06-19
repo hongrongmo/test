@@ -45,6 +45,26 @@ public class DatabaseDisplayHelper {
 				strText =
 					"Compendex&#174; is the most comprehensive interdisciplinary engineering database in the world.  Compendex contains over 9 million records and references over  5,000 international engineering sources including journal, conference, and trade publications. Coverage is from 1969 to present and the database is updated weekly.";
 				break;
+			case 64 : // PCH
+				strText =
+					"PaperChem&#174; is a comprehensive bibliographic database covering international literature related to pulp and paper technology. It includes abstracts of journal articles, conference papers and technical reports as of July 1967, with over 500,000 records.";
+				break;
+			case 128 : // CHM
+				strText =
+					"Chimica&#174; provides access to over 600 of the most influential international journals related to chemistry and chemical engineering.";
+				break;
+			case 256 : // CBN
+				strText =
+					"Chemical Business NewsBase® is the leading provider of worldwide chemical business news and informatiom.";
+				break;
+			case 1280 :// ELT
+				strText =
+					"EnCompassLIT&#153; is a technical literature database that dates back to 1964 and contains over 730, 000 records, especially selected, abstracted and indexed from 300 primary sources (scientific journals, trade magazines, meeting papers and technical reports), from 20 countries, in 10 languages. The primary sources are supplemented by 1200 titles from secondary sources. More than 25,000 records are added annually, in weekly updates.";
+				break;
+			case 2048 :// EPT
+				strText =
+					"EnCompassPAT&#153; is a patent database that dates back to 1964 and contains over 360, 000 records, and contains especially selected patents from 40 patenting authorities throughout the world, indexed on the basis of the EnCompass Thesaurus. More than 25,000 records are added annually, in weekly updates.";
+				break;
 			case ((16384 + 32768)) : // (US & EP Patents)
 				strText =
 					"Ei patents cover US and European patents applications and grants.";
