@@ -341,7 +341,7 @@ public class DatabaseDisplayHelper {
 			e.printStackTrace();
 			//Yes, I meant to sit on this. - Joel
 		}
-		System.out.println("database= "+buf.toString());
+
 		return buf.toString();
 	}
 
