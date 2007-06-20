@@ -710,6 +710,7 @@ public class SearchForm {
         if(selecteddbMask == DatabaseConfig.PCH_MASK)
         {
 			doctype.put("(CA or CP)","Conferences");
+			doctype.put("PA","Patents");
 			doctype.put("MC or MR or RC or RR or DS or UP", "Other documents");
 		}
 
