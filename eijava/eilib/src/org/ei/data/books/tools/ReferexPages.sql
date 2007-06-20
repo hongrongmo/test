@@ -143,3 +143,8 @@ Count Books that have been loaded/not loaded so far
 SELECT count(unique(BOOKS_992.BN13)) FROM BOOKS_992
   LEFT JOIN BOOK_PAGES_TEMP ON BOOKS_992.BN13=BOOK_PAGES_TEMP.BN13
   WHERE BOOK_PAGES_TEMP.BN13 IS NOT NULL;
+
+
+Data loading command for Keywords files(s)
+--------------------------------------------------------------------------------------
+sqlplus AP_PRO1/ei3it@neptune @c:\baja\eijava\eilib\keywords.sql
