@@ -11,45 +11,50 @@ public abstract class ReferexCollection {
 	public static ReferexCollection ELE = new Ele();
 	public static ReferexCollection CHE = new Che();
 	public static ReferexCollection MAT = new Mat();
+    public static ReferexCollection CIV = new Civ();
+    public static ReferexCollection COM = new Com();
+    public static ReferexCollection SEC = new Sec();
 	
 	public abstract String getShortname();
 	public abstract String getDisplayName();
 	public abstract String getAbbrev();
 	public abstract List populateSubjects(boolean che, boolean chestar);
 
+    private static ReferexCollection[] allcolls = new ReferexCollection[] {ELE, CHE, MAT, CIV, COM, SEC};
+    
 	public static String translateCollection(String longname) {
-		if(longname != null) {
-			if(longname.equals(ELE.getDisplayName())) {
-				return ELE.getShortname();
-			}
-			else if(longname.equals(CHE.getDisplayName())) {
-				return CHE.getShortname();
-			}
-			else if(longname.equals(MAT.getDisplayName())) {
-				return MAT.getShortname();
-			}
+	    String shortname = "";
+        if(longname != null) {
+            
+            for(int i = 0; i < allcolls.length; i++) {
+                ReferexCollection acol = allcolls[i];
+                if(longname.equals(acol.getDisplayName())) {
+                    shortname = acol.getShortname();
+                    break;
+                }
+            }
 		}
 
-		return longname;
+		return shortname;
 	}
 
 	public EiModifier getModifier() { 
 		return new EiModifier(0,getShortname(),getShortname());
 	}
 
-	public static ReferexCollection getCollection(String col) {
-		if(col != null)
+	public static ReferexCollection getCollection(String colname) {
+        ReferexCollection coll = null;
+        if(colname != null)
 		{
-			if(col.toLowerCase().startsWith(ELE.getAbbrev().toLowerCase())) {
-				return ELE;
-			}
-			else if(col.toLowerCase().startsWith(CHE.getAbbrev().toLowerCase())) {
-				return CHE;
-			}
-			else if(col.toLowerCase().startsWith(MAT.getAbbrev().toLowerCase())) {
-				return MAT;
-			}
+
+            for(int i = 0; i < allcolls.length; i++) {
+                ReferexCollection acol = allcolls[i];
+                if(colname.toLowerCase().startsWith(acol.getAbbrev().toLowerCase())) {
+                    coll = acol;
+                    break;
+                }
+            }
 		}
-		return null;
+		return coll;
 	}
 }
