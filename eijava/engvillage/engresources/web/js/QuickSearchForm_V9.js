@@ -489,7 +489,8 @@ function generateDoctypes(selecteddbMask)
   {
      	doctypes[index++] = new Field("PA", "Patents (before 1970)");
   }
-  else if(selecteddbMask == CBF)
+  else if(selecteddbMask == CBF ||
+  	  selecteddbMask == PCH)
   {
      	doctypes[index++] = new Field("PA", "Patents");
   }
