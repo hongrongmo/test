@@ -41,7 +41,7 @@ function flipImage(selectedDbMask)
     }
 
     //AU
-    if((selectedDbMask & CBN) != CBN)
+    if(selectedDbMask != CBN)
     {
 	 if((selectedDbMask & UPA) != UPA &&
 	    (selectedDbMask & EUP) != EUP &&
@@ -62,7 +62,7 @@ function flipImage(selectedDbMask)
 	 }
      }
 
-    if((selectedDbMask & CBN) != CBN)
+    if(selectedDbMask != CBN)
     { 
 	 //AF ---  only cpx,ins,ntis
 	 if((selectedDbMask & UPA) != UPA &&
