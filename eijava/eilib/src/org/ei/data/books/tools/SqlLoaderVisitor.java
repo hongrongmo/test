@@ -21,41 +21,82 @@ public class SqlLoaderVisitor extends BookVisitor {
             long page_size = 0; //referexpage.getTextSizeBytes();
             
             try {
+                // DOCID
                 wrtr.write("pag_" + pdffile.getIsbn().toLowerCase()+"_"+Long.toString(curpage));
-
                 wrtr.write(FIELD_DELIMITER);
+                // BN 
                 wrtr.write(pdffile.getIsbn().toLowerCase());
                 wrtr.write(FIELD_DELIMITER);
+                // BN13
                 wrtr.write(pdffile.getIsbn13().toLowerCase());
                 wrtr.write(FIELD_DELIMITER);
+                // PII
                 wrtr.write("chp_" + pdffile.getIsbn().toLowerCase()+"_"+PDF_FileInfo.formatPageNumber(referexpage.getChapter().getPage()));
                 wrtr.write(FIELD_DELIMITER);
+                // PAGE_NUM
                 wrtr.write(Long.toString(curpage));
-// containing section data
                 wrtr.write(FIELD_DELIMITER);
+                // PAGE_LABEL
+                wrtr.write(Long.toString(curpage));
+                wrtr.write(FIELD_DELIMITER);
+
+                // SECTION_TITLE
                 if(referexpage.getSection() != null) {
                     wrtr.write(referexpage.getSection().getTitle());
                 }
                 wrtr.write(FIELD_DELIMITER);
+                // SECTION_START
                 if(referexpage.getSection() != null) {
                     wrtr.write(Long.toString(referexpage.getSection().getPage()));
                 }
-// containing chapter data                
                 wrtr.write(FIELD_DELIMITER);
+
+                // CHAPTER_TITLE
                 if(referexpage.getChapter() != null) {
                     wrtr.write(referexpage.getChapter().getTitle());
                 }
                 wrtr.write(FIELD_DELIMITER);
+                
+                // CHAPTER_START
                 if(referexpage.getChapter() != null) {
                     wrtr.write(Long.toString(referexpage.getChapter().getPage()));
                 }
+                wrtr.write(FIELD_DELIMITER);
 
-                wrtr.write(FIELD_DELIMITER);
+                // PAGE_BYTES
                 wrtr.write(Long.toString(page_size));
-//                wrtr.write(FIELD_DELIMITER);
-//                wrtr.write(referexpage.getTextFilePath());
                 wrtr.write(FIELD_DELIMITER);
+
+                // PAGE_TEXT
+                wrtr.write(referexpage.getTextFilePath());
+                wrtr.write(FIELD_DELIMITER);
+                
+                // PAGE_TOTAL
                 wrtr.write(String.valueOf(pdffile.getPageCount()));
+                wrtr.write(FIELD_DELIMITER);
+                
+                // PAGE_KEYWORDS
+                wrtr.write(FIELD_DELIMITER);
+                
+                wrtr.write(FIELD_DELIMITER); // PP
+                wrtr.write(FIELD_DELIMITER); // YR
+                wrtr.write(FIELD_DELIMITER); // TI
+                wrtr.write(FIELD_DELIMITER); // AUS
+                wrtr.write(FIELD_DELIMITER); // CVS
+                wrtr.write(FIELD_DELIMITER); // AF
+                wrtr.write(FIELD_DELIMITER); // PN
+                wrtr.write(FIELD_DELIMITER); // NT
+                wrtr.write(FIELD_DELIMITER); // ST
+                wrtr.write(FIELD_DELIMITER); // SP
+                wrtr.write(FIELD_DELIMITER); // ISS
+                wrtr.write(FIELD_DELIMITER); // VO
+                wrtr.write(FIELD_DELIMITER); // AB
+                wrtr.write(FIELD_DELIMITER); // SUB
+
+                //PDFPP
+                wrtr.write(String.valueOf(pdffile.getPageCount()));
+               
+                
                 wrtr.write(System.getProperty("line.separator"));
             } catch (IOException e) {
                 // TODO: handle exception
