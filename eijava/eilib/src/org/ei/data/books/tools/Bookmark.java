@@ -20,7 +20,7 @@ public class Bookmark implements Comparable, Visitable {
 	
 	public Bookmark(long bkmkpage, String strtitle) {
 		if(strtitle != null) {
-			title = strtitle.replaceAll("\\&\\#[^;](\\w)*;", "");
+			title = strtitle.replaceAll("\\&\\#0;", "");
         }
 		page = bkmkpage;
 	}
