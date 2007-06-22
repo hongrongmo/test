@@ -19,8 +19,9 @@ public class Bookmark implements Comparable, Visitable {
 	}
 	
 	public Bookmark(long bkmkpage, String strtitle) {
-		if(strtitle != null)
-			title = strtitle;
+		if(strtitle != null) {
+			title = strtitle.replaceAll("\\&\\#[^;](\\w)*;", "");
+        }
 		page = bkmkpage;
 	}
 
