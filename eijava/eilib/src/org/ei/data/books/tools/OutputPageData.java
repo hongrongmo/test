@@ -8,8 +8,10 @@ import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.Writer;
+import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -35,7 +37,7 @@ public class OutputPageData {
 		log.debug("Starting...");
 
 		if (args.length == 0) {
-			(new OutputPageData()).crawlDirectory("V:\\BurstAndExtracted");
+			(new OutputPageData()).crawlDirectory("V:\\WOBL\\BurstAndExtracted");
 		}
 		else {
 			List dirs = java.util.Arrays.asList(args[0].split(System.getProperty("path.separator")));
@@ -81,60 +83,49 @@ public class OutputPageData {
             log.info("=====================================================");
         } 
 
-        Pattern p = Pattern.compile("^\\d(\\.)?[^\\d]");
-        Pattern p2 = Pattern.compile("^\\w(\\.)");
-
-        boolean hasChapters = false;
-        int chapterLevel = 1;
+        visitor = new ChapterMarkerVisitor();
+        referexbook.accept(visitor);
+        
+        Map fixedIsbns = new Hashtable();
+        fixedIsbns.put("9781931836562",new Integer(3));
+        fixedIsbns.put("9780120121601",new Integer(2));
+        fixedIsbns.put("9780750666565",new Integer(4));
+        fixedIsbns.put("9781931836630",new Integer(5));
+        fixedIsbns.put("9780444519993",new Integer(4));
+        fixedIsbns.put("9780080449241",new Integer(4));
+        fixedIsbns.put("9780750678865",new Integer(1));
+        fixedIsbns.put("9780750647090",new Integer(2));
+        fixedIsbns.put("9780444507464",new Integer(2));
+        fixedIsbns.put("9780124605299",new Integer(3));
+        fixedIsbns.put("9780124605305",new Integer(3));
+        
         itr = referexbook.createIterator();
-        while (itr.hasNext()) {
-            Bookmark mk = (Bookmark) itr.next();
-            String mktitle = mk.getTitle().toLowerCase();
-//            log.info(mktitle);
-            if((mktitle.indexOf("frontmatter") >= 0) || (mktitle.indexOf("front matter") >= 0)) {
-                // skip over frontmatter bookmarks to get to body
+        if(fixedIsbns.containsKey(referexbook.getIsbn13())) { 
+            log.info("Fixing " + referexbook.getIsbn13());
+            int chapterLevel = ((Integer) fixedIsbns.get(referexbook.getIsbn13())).intValue();
+            while (itr.hasNext()) {
+                Bookmark mk = (Bookmark) itr.next();
                 int level  = mk.getLevel();
-                while(itr.hasNext()) {
-                    Bookmark submk = (Bookmark) itr.next();
-                    if(submk.getLevel() > level) {
-                        continue;
-                    }
-                    break;
+                if(chapterLevel == level) {
+                    mk.setChapter(true);
                 }
             }
-            hasChapters |= ((mktitle.indexOf("chapter") >= 0));
-            if (hasChapters) {
-                chapterLevel = mk.getLevel();
-                break;
-            }
-            Matcher m = null;
-            m = p.matcher(mktitle);
-            hasChapters |= m.find();
-            if (hasChapters) {
-                chapterLevel = mk.getLevel();
-                break;
-            }
-            m = p2.matcher(mktitle);
-            hasChapters |= m.find();
-            if (hasChapters) {
-                chapterLevel = mk.getLevel();
-                break;
-            }
         }
-        referexbook.setChapterBookmarkLevel(chapterLevel);
-
+        
+       
+//
 //        visitor = new LogInfoVisitor();
 //        referexbook.accept(visitor);
+//        
+        visitor = new SqlLoaderVisitor(out);
+        referexbook.accept(visitor);
         
-//        visitor = new SqlLoaderVisitor(out);
-//        referexbook.accept(visitor);
-        
-//      visitor = new ChapterListVisitor(cout);
-//      referexbook.accept(visitor);
+          visitor = new ChapterListVisitor(cout);
+          referexbook.accept(visitor);
 
     
-        visitor = new HtmlTocVisitor();
-        referexbook.accept(visitor);
+//        visitor = new HtmlTocVisitor();
+//        referexbook.accept(visitor);
 
     }
 
@@ -146,8 +137,15 @@ public class OutputPageData {
 
     private FileFilter pdfDirFilter = new FileFilter() {
         public boolean accept(File dir) {
-//            return dir.isDirectory() && dir.getName().startsWith("012387582x");
-            return dir.isDirectory() && !dir.getName().startsWith("978");
+            return dir.isDirectory() && 
+            (
+                    dir.getName().startsWith("9780750668798")
+                    ||
+                    dir.getName().startsWith("9780750655569")
+                    
+                    );
+        
+//            return dir.isDirectory();
         }
     };
 
