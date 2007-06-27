@@ -17,7 +17,7 @@ public class HtmlTocVisitor extends BookVisitor {
     
     public void visit(PDF_FileInfo pdffile) {
         // TODO Auto-generated method stub
-        String filename = pdffile.getFilePathname() + System.getProperty("file.separator") + pdffile.getIsbn() + "_toc.html";
+        String filename = pdffile.getFilePathname() + System.getProperty("file.separator") + pdffile.getIsbn13() + "_toc.html";
         log.info(filename);
         try {
             wrtr = new PrintWriter(new FileOutputStream(filename));
