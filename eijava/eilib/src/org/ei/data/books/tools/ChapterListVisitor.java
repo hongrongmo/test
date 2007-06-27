@@ -20,7 +20,7 @@ public class ChapterListVisitor extends BookVisitor {
 
     public void visit(Bookmark mark) {
         try {
-            if(mark.getLevel() == pdffile.getChapterBookmarkLevel()) {
+            if(mark.isChapter()) {
                 String strPii = "chp_" + pdffile.getIsbn() + "_" + PDF_FileInfo.formatPageNumber(mark.getPage());
                 if(!chap_fileList.containsKey(strPii)) {
                     wrtr.write("pdftk " + pdffile.getIsbn() + ".pdf cat " + mark.getPage() + "-" + mark.getEndpage() + " output V:\\BurstAndExtracted\\" + pdffile.getIsbn() + "\\" + strPii + ".pdf dont_ask");
@@ -41,13 +41,13 @@ public class ChapterListVisitor extends BookVisitor {
     }
 
     public void visit(Bookmarks marks) {
-//        Iterator itrbkmks = marks.iterator();
-//        Bookmark bkmk = null;
-//
-//        while (itrbkmks.hasNext()) {
-//            bkmk = (Bookmark) itrbkmks.next();
-//            bkmk.accept(this);
-//        }
+        Iterator itrbkmks = marks.iterator();
+        Bookmark bkmk = null;
+
+        while (itrbkmks.hasNext()) {
+            bkmk = (Bookmark) itrbkmks.next();
+            bkmk.accept(this);
+        }
     }
     
 }
