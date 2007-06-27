@@ -42,9 +42,17 @@ public class PDF_FileInfo implements Visitable {
         
         String subdirpath = fileobj.getParent() + System.getProperty("file.separator") + subdirname;
 
-        setIsbn(subdirname.replaceAll("^e", ""));
-        String bn13root = PDF_FileInfo.BN13_PREFIX + getIsbn().substring(0, 9);
-        setIsbn13(bn13root + getISBN13CheckDigit(bn13root));
+        String isbn = subdirname.replaceAll("^e", "");
+        if(isbn.length() == 10) {
+            setIsbn(isbn);
+            String isbnroot = PDF_FileInfo.BN13_PREFIX + getIsbn().substring(0, 9);
+            setIsbn13(isbnroot + PDF_FileInfo.getISBN13CheckDigit(isbnroot));
+        }
+        else {
+            setIsbn13(isbn);
+            String isbnroot = getIsbn13().substring(3, 12);
+            setIsbn(isbnroot + PDF_FileInfo.getISBN10CheckDigit(isbnroot));
+        }
         setFilePathname(subdirpath);
 
         DocumentData dd = new DocumentData(subdirpath);
@@ -163,6 +171,35 @@ public class PDF_FileInfo implements Visitable {
         return (char) (calcValue + '0');
     }
 
+//    s = 0×10 + 3×9 + 0×8 + 6×7 + 4×6 + 0×5 + 6×4 + 1×3 + 5×2
+//    =    0 +  27 +   0 +  42 +  24 +   0 +  24 +   3 +  10
+//    = 130
+//  (130 / 11 = 11 remainder 9) or (130 mod 11)
+//  11 - 9 = 2
+//  (2 / 11 = 0 remainder 2) or (2 mod 11)
+    private static char getISBN10CheckDigit(final String isbn) {
+        
+        int digitSum = 0;
+        int calcValue = 0;
+
+        // length of passed in isbn must be 9 or 
+        // we will get a nullpointer here
+        for (int i = 0; i < 9; i++) {
+            int val = Integer.parseInt((isbn.substring(i, i + 1)));
+            int weight = 10 - (i % 10);
+            digitSum += val * weight;
+        }
+
+        calcValue = (11 - (digitSum % 11)) % 11;
+        if(calcValue == 10 ) {
+            return (char) ('X');
+        }
+        else 
+        {
+            return (char) (calcValue + '0');
+        }
+    }
+  
     public String getIsbn13() {
         return isbn13;
     }
