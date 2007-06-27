@@ -9,7 +9,8 @@ public class Bookmark implements Comparable, Visitable {
 	public static Bookmark BKMK_COVER = new Bookmark(1, Bookmark.BKMK_COVER_TITLE);
 	public static Bookmark BKMK_FRONTMATTER = new Bookmark(1, Bookmark.BKMK_FRONTMATTER_TITLE);
 	
-	private long page = 1;
+    private boolean isChapter = false;
+    private long page = 1;
     private long endpage = 0;
 	private int level = 1;
 	private String title = "";
@@ -88,5 +89,13 @@ public class Bookmark implements Comparable, Visitable {
 
     public void accept(Visitor visitor) {
         visitor.visit(this);
+    }
+
+    public boolean isChapter() {
+        return isChapter;
+    }
+
+    public void setChapter(boolean isChapter) {
+        this.isChapter = isChapter;
     }
 }
