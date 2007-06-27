@@ -2,6 +2,7 @@ package org.ei.data.books.tools;
 
 import java.io.IOException;
 import java.io.Writer;
+import java.util.Iterator;
 
 public class SqlLoaderVisitor extends BookVisitor {
 
@@ -30,8 +31,11 @@ public class SqlLoaderVisitor extends BookVisitor {
                 // BN13
                 wrtr.write(pdffile.getIsbn13().toLowerCase());
                 wrtr.write(FIELD_DELIMITER);
-                // PII
-                wrtr.write("chp_" + pdffile.getIsbn().toLowerCase()+"_"+PDF_FileInfo.formatPageNumber(referexpage.getChapter().getPage()));
+
+                // PII - Only if this page is part of a Chapter/Downloadable "CHUNK"
+                if(referexpage.getChapter() != null) {
+                    wrtr.write("chp_" + pdffile.getIsbn().toLowerCase()+"_"+PDF_FileInfo.formatPageNumber(referexpage.getChapter().getPage()));
+                }
                 wrtr.write(FIELD_DELIMITER);
                 // PAGE_NUM
                 wrtr.write(Long.toString(curpage));
@@ -51,13 +55,13 @@ public class SqlLoaderVisitor extends BookVisitor {
                 }
                 wrtr.write(FIELD_DELIMITER);
 
-                // CHAPTER_TITLE
+                // CHAPTER_TITLE - Only if this page is part of a Chapter/Downloadable "CHUNK"
                 if(referexpage.getChapter() != null) {
                     wrtr.write(referexpage.getChapter().getTitle());
                 }
                 wrtr.write(FIELD_DELIMITER);
                 
-                // CHAPTER_START
+                // CHAPTER_START - Only if this page is part of a Chapter/Downloadable "CHUNK"
                 if(referexpage.getChapter() != null) {
                     wrtr.write(Long.toString(referexpage.getChapter().getPage()));
                 }
@@ -111,5 +115,19 @@ public class SqlLoaderVisitor extends BookVisitor {
         // could be put here and replaced with a
         // referexpage.accept(this) call
     }
+    
+//    public void visit(Bookmark mark) {
+//        
+//    }
+//    
+//    public void visit(Bookmarks marks) {
+//        Iterator itrbkmks = marks.iterator();
+//        Bookmark bkmk = null;
+//
+//        while (itrbkmks.hasNext()) {
+//            bkmk = (Bookmark) itrbkmks.next();
+//            bkmk.accept(this);
+//        }
+//    }
     
 }
