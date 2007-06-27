@@ -5,9 +5,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Stack;
 
 import org.apache.commons.logging.Log;
@@ -56,6 +53,7 @@ public class DocumentData {
 		String BKMK_LEVEL_TOKEN = "BookmarkLevel";
 		String BKMK_PAGENUM_TOKEN = "BookmarkPageNumber";
 
+
         File doc_data = new File(filepathname + System.getProperty("file.separator") + "doc_data.txt");
 		BufferedReader rdr = null;
         try {
@@ -86,7 +84,8 @@ public class DocumentData {
     				}
     
     				Bookmark bkmk = new Bookmark(page_num, title, level);
-    				if (curr_level == level) {
+
+                    if (curr_level == level) {
     					// do nothing
     				} else if (curr_level < level) { 
                         // deeper level
