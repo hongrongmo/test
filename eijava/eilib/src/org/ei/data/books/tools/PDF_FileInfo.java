@@ -29,7 +29,7 @@ public class PDF_FileInfo implements Visitable {
     }
     
 	private long page_count = 0;
-	private int chapterBookmarkLevel = 1;
+	//private int chapterBookmarkLevel = 1;
    
 	private String isbn = null;
 	private String isbn13 = null;
@@ -101,8 +101,7 @@ public class PDF_FileInfo implements Visitable {
         Iterator itr = this.createIterator();
         while (itr.hasNext()) {
             bookmark = (Bookmark) itr.next();
-            if(bookmark.getLevel() == getChapterBookmarkLevel()) {
- 
+            if(bookmark.isChapter()) {
               if (bookmark.getPage() <= curpage) {
                   prevchapter = bookmark;
               } 
@@ -112,9 +111,10 @@ public class PDF_FileInfo implements Visitable {
               }            
             }
         }
-        if(bookmark == null) {
-            bookmark = getContainingSection(curpage);
+        if((bookmark != null) && (!bookmark.isChapter())) {
+            bookmark = null;
         }
+        // null is OK!! Some pages are NOT inside of chapters
 		return bookmark;
 	}
     
@@ -208,13 +208,13 @@ public class PDF_FileInfo implements Visitable {
         this.isbn13 = isbn13;
     }
 
-    public int getChapterBookmarkLevel() {
-        return chapterBookmarkLevel;
-    }
-
-    public void setChapterBookmarkLevel(int chapterBookmarkLevel) {
-        this.chapterBookmarkLevel = chapterBookmarkLevel;
-    }
+//    public int getChapterBookmarkLevel() {
+//        return chapterBookmarkLevel;
+//    }
+//
+//    public void setChapterBookmarkLevel(int chapterBookmarkLevel) {
+//        this.chapterBookmarkLevel = chapterBookmarkLevel;
+//    }
 
 } // private class PDF_Fileinfo
 
