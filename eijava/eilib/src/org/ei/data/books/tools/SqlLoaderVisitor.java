@@ -7,7 +7,7 @@ import java.util.Iterator;
 public class SqlLoaderVisitor extends BookVisitor {
 
     private Writer wrtr = null;
-    final static String FIELD_DELIMITER = "\t";    
+    final static String FIELD_DELIMITER = ",";    
     
     public SqlLoaderVisitor(Writer awriter) {
         wrtr = awriter;
@@ -46,7 +46,7 @@ public class SqlLoaderVisitor extends BookVisitor {
 
                 // SECTION_TITLE
                 if(referexpage.getSection() != null) {
-                    wrtr.write(referexpage.getSection().getTitle());
+                    wrtr.write("\"" + referexpage.getSection().getTitle() + "\"");
                 }
                 wrtr.write(FIELD_DELIMITER);
                 // SECTION_START
@@ -57,7 +57,7 @@ public class SqlLoaderVisitor extends BookVisitor {
 
                 // CHAPTER_TITLE - Only if this page is part of a Chapter/Downloadable "CHUNK"
                 if(referexpage.getChapter() != null) {
-                    wrtr.write(referexpage.getChapter().getTitle());
+                    wrtr.write("\"" + referexpage.getChapter().getTitle() + "\"");
                 }
                 wrtr.write(FIELD_DELIMITER);
                 
