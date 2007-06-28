@@ -9,7 +9,7 @@ public class ChapterMarkerVisitor extends BookVisitor {
 
     private static Pattern p = Pattern.compile("^\\d(\\.)?[^\\d]");
     private static Pattern p2 = Pattern.compile("^\\w(\\.)");
-
+    private boolean hasChapters = false;
     public void visit(Bookmark mark) {
 
         if(mark.getTitle().toLowerCase().replaceAll("\\s","").indexOf("chapter") >= 0) {
@@ -32,6 +32,8 @@ public class ChapterMarkerVisitor extends BookVisitor {
         }
         if(!mark.isChapter()) {
             mark.getChildren().accept(this);
+        } else {
+            hasChapters = true;
         }
     }
 
