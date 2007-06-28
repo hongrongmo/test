@@ -97,21 +97,15 @@ public class PDF_FileInfo implements Visitable {
     }
     
 	public Bookmark getContainingChapter(long curpage) {
-        Bookmark bookmark = null, prevchapter = null;
+        Bookmark bookmark = null;
         Iterator itr = this.createIterator();
         while (itr.hasNext()) {
             bookmark = (Bookmark) itr.next();
             if(bookmark.isChapter()) {
-              if (bookmark.getPage() <= curpage) {
-                  prevchapter = bookmark;
-              } 
-              else {
-                  bookmark = prevchapter;
+              if ((curpage >= bookmark.getPage()) && (curpage < bookmark.getEndpage())) {
                   break;
-              }            
+              } 
             }
-        }
-        if((bookmark != null) && (!bookmark.isChapter())) {
             bookmark = null;
         }
         // null is OK!! Some pages are NOT inside of chapters
