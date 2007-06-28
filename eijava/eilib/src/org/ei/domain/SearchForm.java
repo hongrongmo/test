@@ -76,13 +76,14 @@ public class SearchForm {
         }
 
         // AB
-        if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK)
+        if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
+           (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK)
         {
              sectiontype.put("AB", "Abstract");
         }
 
         //AU
-        if(selecteddbMask != DatabaseConfig.CBN_MASK)
+        if((selecteddbMask & DatabaseConfig.CBN_MASK)!= DatabaseConfig.CBN_MASK)
         {
 			if((selecteddbMask & DatabaseConfig.UPA_MASK) != DatabaseConfig.UPA_MASK &&
 			   (selecteddbMask & DatabaseConfig.EUP_MASK) != DatabaseConfig.EUP_MASK)
@@ -102,7 +103,7 @@ public class SearchForm {
 		}
 
         //AF ---  only cpx,ins,ntis
-        if(selecteddbMask != DatabaseConfig.CBN_MASK)
+        if((selecteddbMask & DatabaseConfig.CBN_MASK)!= DatabaseConfig.CBN_MASK)
         {
 			if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
 			   (selecteddbMask & DatabaseConfig.UPA_MASK) != DatabaseConfig.UPA_MASK &&
@@ -300,13 +301,20 @@ public class SearchForm {
             sectiontype.put("CT","Contract number");
         }
 
-        //CO
+        //CO or PC
         if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
            (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
+           (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK &&
+           (selecteddbMask & DatabaseConfig.ELT_MASK) != DatabaseConfig.ELT_MASK &&
+           (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
            (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK)
         {
             sectiontype.put("CO","Country of origin");
         }
+        else if(selecteddbMask == DatabaseConfig.EPT_MASK)
+        {
+			sectiontype.put("PC","Patent Country");
+		}
 
         //AG
         if(selecteddbMask == DatabaseConfig.NTI_MASK)
@@ -320,6 +328,11 @@ public class SearchForm {
            (selecteddbMask & DatabaseConfig.CPX_MASK) != DatabaseConfig.CPX_MASK &&
            (selecteddbMask & DatabaseConfig.CBF_MASK) != DatabaseConfig.CBF_MASK &&
            (selecteddbMask & DatabaseConfig.INS_MASK) != DatabaseConfig.INS_MASK &&
+           (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK &&
+           (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
+           (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
+           (selecteddbMask & DatabaseConfig.ELT_MASK) != DatabaseConfig.ELT_MASK &&
+           (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
            (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK)
         {
              sectiontype.put("PD","Publication date");
@@ -335,6 +348,11 @@ public class SearchForm {
                 (selecteddbMask & DatabaseConfig.CPX_MASK) != DatabaseConfig.CPX_MASK &&
 				(selecteddbMask & DatabaseConfig.CBF_MASK) != DatabaseConfig.CBF_MASK &&
                 (selecteddbMask & DatabaseConfig.INS_MASK) != DatabaseConfig.INS_MASK &&
+                (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK &&
+                (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
+                (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
+                (selecteddbMask & DatabaseConfig.ELT_MASK) != DatabaseConfig.ELT_MASK &&
+                (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
                 (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK)
         {
             sectiontype.put("PAM","Application number");
@@ -353,6 +371,11 @@ public class SearchForm {
            (selecteddbMask & DatabaseConfig.CPX_MASK) != DatabaseConfig.CPX_MASK &&
 		   (selecteddbMask & DatabaseConfig.CBF_MASK) != DatabaseConfig.CBF_MASK &&
            (selecteddbMask & DatabaseConfig.INS_MASK) != DatabaseConfig.INS_MASK &&
+           (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK &&
+           (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
+           (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
+           (selecteddbMask & DatabaseConfig.ELT_MASK) != DatabaseConfig.ELT_MASK &&
+           (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
            (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK)
         {
              sectiontype.put("PRN","Priority number");
@@ -368,6 +391,8 @@ public class SearchForm {
            (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
 		   (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK &&
 		   (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
+		   (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
+		   (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
            (selecteddbMask & DatabaseConfig.ELT_MASK) != DatabaseConfig.ELT_MASK)
         {
              sectiontype.put("PID","IPC code");
@@ -379,6 +404,11 @@ public class SearchForm {
            (selecteddbMask & DatabaseConfig.CPX_MASK) != DatabaseConfig.CPX_MASK &&
 		   (selecteddbMask & DatabaseConfig.CBF_MASK) != DatabaseConfig.CBF_MASK &&
            (selecteddbMask & DatabaseConfig.INS_MASK) != DatabaseConfig.INS_MASK &&
+           (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK &&
+           (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
+           (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
+           (selecteddbMask & DatabaseConfig.ELT_MASK) != DatabaseConfig.ELT_MASK &&
+           (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
            (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK)
         {
              sectiontype.put("PUC","US classification");
@@ -388,6 +418,24 @@ public class SearchForm {
         {
             sectiontype.put("CV","Subject");
         }
+
+        //PD
+		if(selecteddbMask == DatabaseConfig.PCH_MASK)
+		{
+			sectiontype.put("PD","Patent info");
+  		}
+
+  		if(selecteddbMask == DatabaseConfig.ELT_MASK ||
+		   selecteddbMask == DatabaseConfig.EPT_MASK )
+		{
+			sectiontype.put("CR","CAS registry number");
+  		}
+
+  		//IP
+		if(selecteddbMask == DatabaseConfig.EPT_MASK)
+		{
+			sectiontype.put("IP","Int. patent classification");
+  		}
 
         return sectiontype;
     }
