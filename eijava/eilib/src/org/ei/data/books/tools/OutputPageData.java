@@ -57,7 +57,9 @@ public class OutputPageData {
 	public OutputPageData() throws IOException {
 	}
 	
-	public void processPDF(File pdfFile, Writer out) throws IOException {
+    private Pattern skips = Pattern.compile("^(glossary|exercises|bibliography|acknowledgements|body|contributors|limited disclaimer and warranty|table of contents|half title page|cover|back cover|title page|copyright|cover|preface|notation|contents|index|front(\\s?)matter|back(\\s?)matter)");
+    
+    public void processPDF(File pdfFile, Writer out) throws IOException {
 
 		PDF_FileInfo referexbook = new PDF_FileInfo(pdfFile);
 
@@ -69,19 +71,19 @@ public class OutputPageData {
         visitor = new ChapterStartEndVisitor();
         referexbook.accept(visitor);
     
-        // check to see if there are still zeroes in any of the bookmarks
-        boolean hasZeroes = false;
         Iterator itr = referexbook.createIterator();
-        while(itr.hasNext()) {
-            Bookmark mk = (Bookmark) itr.next();
-            if((mk.getPage() == 0)) {
-                hasZeroes = true;
-                log.error(" ZERO BOOKMARK: " + referexbook.getIsbn() + " -- " + mk.toString());
-            }
-        }
-        if(hasZeroes) {
-            log.info("=====================================================");
-        } 
+//        // check to see if there are still zeroes in any of the bookmarks
+//        boolean hasZeroes = false;
+//        while(itr.hasNext()) {
+//            Bookmark mk = (Bookmark) itr.next();
+//            if((mk.getPage() == 0)) {
+//                hasZeroes = true;
+//                log.error(" ZERO BOOKMARK: " + referexbook.getIsbn() + " -- " + mk.toString());
+//            }
+//        }
+//        if(hasZeroes) {
+//            log.info("=====================================================");
+//        } 
 
         visitor = new ChapterMarkerVisitor();
         referexbook.accept(visitor);
@@ -98,10 +100,10 @@ public class OutputPageData {
         fixedIsbns.put("9780444507464",new Integer(2));
         fixedIsbns.put("9780124605299",new Integer(3));
         fixedIsbns.put("9780124605305",new Integer(3));
+        fixedIsbns.put("9780750666947",new Integer(2)); // Part I, etc.
         
-        itr = referexbook.createIterator();
         if(fixedIsbns.containsKey(referexbook.getIsbn13())) { 
-            log.info("Fixing " + referexbook.getIsbn13());
+            log.info(referexbook.getIsbn13() + " using pre-assigned bookmark levels");
             int chapterLevel = ((Integer) fixedIsbns.get(referexbook.getIsbn13())).intValue();
             while (itr.hasNext()) {
                 Bookmark mk = (Bookmark) itr.next();
@@ -110,19 +112,49 @@ public class OutputPageData {
                     mk.setChapter(true);
                 }
             }
+        } else {
+            boolean hasMarkedChapters = false;
+            itr = referexbook.createIterator();
+            while (itr.hasNext()) {
+                Bookmark mk = (Bookmark) itr.next();
+                if(mk.isChapter()) {
+                    log.info(referexbook.getIsbn13() + " found Chapters for ");
+                    hasMarkedChapters = true;
+                    break;   
+                }
+            }
+            if(!hasMarkedChapters) {
+                log.info(referexbook.getIsbn13() + " setting default Chapter Level to Level 1");
+                itr = referexbook.createIterator();
+                int defaultLevel = 1;
+                while (itr.hasNext()) {
+                    Bookmark mk = (Bookmark) itr.next();
+                    int level  = mk.getLevel();
+                    if(defaultLevel == level) {
+                        Matcher m = skips.matcher(mk.getTitle().toLowerCase());
+                        if(!m.find()) {
+                            mk.setChapter(true);
+                        }
+                        else {
+                            log.info(referexbook.getIsbn13() + " skipping " + mk.getTitle().toLowerCase());
+                        }
+                    }
+                }
+            }
+            
         }
-        
+
+
        
 //
 //        visitor = new LogInfoVisitor();
 //        referexbook.accept(visitor);
 //        
-        visitor = new SqlLoaderVisitor(out);
-        referexbook.accept(visitor);
-        
-          visitor = new ChapterListVisitor(cout);
+          visitor = new SqlLoaderVisitor(out);
           referexbook.accept(visitor);
-
+//        
+//          visitor = new ChapterListVisitor(cout);
+//          referexbook.accept(visitor);
     
 //        visitor = new HtmlTocVisitor();
 //        referexbook.accept(visitor);
@@ -137,15 +169,16 @@ public class OutputPageData {
 
     private FileFilter pdfDirFilter = new FileFilter() {
         public boolean accept(File dir) {
-            return dir.isDirectory() && 
-            (
-                    dir.getName().startsWith("9780750668798")
-                    ||
-                    dir.getName().startsWith("9780750655569")
-                    
-                    );
+//            return dir.isDirectory() && 
+//            (
+//                    dir.getName().startsWith("9780750668798")
+//                    ||
+//                    dir.getName().startsWith("9780750655569")
+//                    
+//                    );
         
-//            return dir.isDirectory();
+//            return dir.isDirectory() && dir.getName().startsWith("9780120121618");
+            return dir.isDirectory();
         }
     };
 
