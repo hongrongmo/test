@@ -42,7 +42,7 @@ public class Query implements Comparable
     protected static Log log = LogFactory.getLog(Query.class);
 
     private static final String[] stemFields = { "ALL", "KY", "TI", "AB", "FL", "CV", "AV", "AF", "ST", "MH", "CF", "PN","BI" };
-    private static final String[] allFields = { "RGI", "PU", "PM", "PE", "VO", "SU", "SP", "DB", "AN", "RN", "AG", "AV", "CT", "CO", "NT", "PA", "PI", "WK", "YR", "ALL", "KY", "AF", "PN", "ST", "MH", "CL", "CN", "TI", "AB", "AU", "CC", "CV", "FL", "SN", "DT", "BN", "TR", "LA", "CF", "DI", "MI", "NI", "CI", "AI","OC","BI" , "PEC" , "PUC" , "PAC", "PK" , "PID" , "PCI","PRN","SIC","PEX","PAM","DOI","PFD","BKS","BKT"};
+    private static final String[] allFields = { "RGI", "PU", "PM", "PE", "VO", "SU", "SP", "DB", "AN", "RN", "AG", "AV", "CT", "CO", "NT", "PA", "PI", "WK", "YR", "ALL", "KY", "AF", "PN", "ST", "MH", "CL", "CN", "TI", "AB", "AU", "CC", "CV", "FL", "SN", "DT", "BN", "TR", "LA", "CF", "DI", "MI", "NI", "CI", "AI","OC","BI" , "PEC" , "PUC" , "PAC", "PK" , "PID" , "PCI","PRN","SIC","PEX","PAM","DOI","PFD","BKS","BKT","PD","CR","PC","IP"};
     private static Map quickSearchDiplayOptions = new HashMap();
 
     private ResultsState resultsstate = new ResultsState();
