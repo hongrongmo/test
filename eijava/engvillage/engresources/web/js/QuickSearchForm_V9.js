@@ -804,7 +804,12 @@ function generateLanguages(selecteddbMask)
       languages[index++] = new Field("Chinese", "Chinese");
       languages[index++] = new Field("French", "French");
       languages[index++] = new Field("German", "German");
-      languages[index++] = new Field("Italian", "Italian");
+      if((selecteddbMask & ELT) != ELT &&
+         (selecteddbMask & EPT) != EPT &&
+         (selecteddbMask & PCH) != PCH)
+      {
+      	languages[index++] = new Field("Italian", "Italian");
+      }
       languages[index++] = new Field("Japanese", "Japanese");
       languages[index++] = new Field("Russian", "Russian");
       languages[index++] = new Field("Spanish", "Spanish");
