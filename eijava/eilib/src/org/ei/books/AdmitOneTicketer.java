@@ -675,7 +675,10 @@ public class AdmitOneTicketer
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
-            System.out.print("wget -O " + isbn13 + ".pdf \""); 
+            if(isbn10.length() > 10) {
+                isbn13 = isbn13 + isbn10.substring(10, isbn10.length()); 
+            }
+            System.out.print("wget -nv -b -O " + isbn13 + ".pdf \""); 
             System.out.println(tktUrl + "\"");
         }
         
