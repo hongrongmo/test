@@ -56,9 +56,12 @@ public class SearchFields
 	public static SearchField TR = new SearchField("TR", "Treatment type");
 	public static SearchField FL = new SearchField("FL", "Uncontrolled term");
 	public static SearchField RGI = new SearchField("RGI", "Regional terms");
+	public static SearchField PC = new SearchField("PC", "Patent Country");
+	public static SearchField IP = new SearchField("IP", "Int.patent classification");
+	public static SearchField CR = new SearchField("CR", "CAS registry number");
 
 
-	public static final SearchField[] ALL_FIELDS = {ALL,AB ,AN,AI ,AU ,AF ,AV ,CI ,CL ,OC ,CN ,CC ,CF ,CT ,CV ,PU ,CO ,DI ,DT ,PA ,BN ,SN ,LA ,MH ,MI ,AG ,NT ,NI ,PD, PE ,PI ,PID ,PM, PCI, PCO, PAC, PEC, PFD, PAM, PAN ,PN ,PRN ,PUC ,RN ,ST ,KY ,TI ,TR ,FL, RGI };
+	public static final SearchField[] ALL_FIELDS = {ALL,AB ,AN,AI ,AU ,AF ,AV ,CI ,CL ,OC ,CN ,CC ,CF ,CT ,CV ,PU ,CO ,DI ,DT ,PA ,BN ,SN ,LA ,MH ,MI ,AG ,NT ,NI ,PD, PE ,PI ,PID ,PM, PCI, PCO, PAC, PEC, PFD, PAM, PAN ,PN ,PRN ,PUC ,RN ,ST ,KY ,TI ,TR ,FL, RGI, PC, IP, CR };
 
 
 
