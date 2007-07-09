@@ -95,7 +95,7 @@ public class ClientCustomizer
 			if(d[y] != null)
 			{
 				log.debug(" LOG ID ==>" + d[y].getID());
-				String firstChar = d[y].getID().substring(0,1).toUpperCase();
+				String firstChar = d[y].getIndexName().substring(0,1).toUpperCase();
 
 				String skey = firstChar.concat("SY");
 				int dbStartYear = dbconfig.getStartYear(cartridges, d[y].getMask());
