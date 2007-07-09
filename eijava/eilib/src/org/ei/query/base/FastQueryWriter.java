@@ -333,7 +333,7 @@ public class FastQueryWriter
                     buffer.write(" (");
                     for(int i=0;i<databases.length;i++)
                     {
-                        String iname = databases[i].getIndexName();
+                        String iname = databases[i].getID();
                         if(i>0)
                         {
                             buffer.write(" OR ");
