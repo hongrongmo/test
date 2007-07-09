@@ -37,7 +37,7 @@ public class MultiDatabaseDocBuilder
 				{
 					DocID id = (DocID)listOfDocIDs.get(i);
 					Database database = id.getDatabase();
-					String databaseID = database.getIndexName();
+					String databaseID = database.getID();
 					if(databaseID.length()> 3)
 					{
 						databaseID = databaseID.substring(0,3);
