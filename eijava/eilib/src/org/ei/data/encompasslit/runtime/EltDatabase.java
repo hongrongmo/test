@@ -47,7 +47,7 @@ public class EltDatabase extends Database
    }
 
    public String getID() {
-	   return "llt";
+	   return "elt";
    }
 
    public String getName() {
@@ -55,7 +55,7 @@ public class EltDatabase extends Database
    }
 
    public String getIndexName() {
-	   return "elt";
+	   return "llt";
    }
 
    public String getShortName() {
