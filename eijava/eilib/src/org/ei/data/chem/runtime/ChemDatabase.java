@@ -69,7 +69,7 @@ public class ChemDatabase extends Database
 
 	public String getID()
 	{
-		return "hhm";
+		return "chm";
 	}
 
 	public String getName()
@@ -79,7 +79,7 @@ public class ChemDatabase extends Database
 
 	public String getIndexName()
 	{
-		return "chm";
+		return "hhm";
 	}
 
 /*	public Database getBackfile()
