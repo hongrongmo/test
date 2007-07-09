@@ -68,7 +68,7 @@ public class CBNBDatabase extends Database
 
 	public String getID()
 	{
-		return "bbn";
+		return "cbn";
 	}
 
 	public String getName()
@@ -88,7 +88,7 @@ public class CBNBDatabase extends Database
 
 	public String getIndexName()
 	{
-		return "cbn";
+		return "bbn";
 	}
 
 /*	public Database getBackfile()
