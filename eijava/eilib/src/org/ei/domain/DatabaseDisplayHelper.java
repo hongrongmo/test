@@ -392,7 +392,7 @@ public class DatabaseDisplayHelper {
 						buf.append(", ");
 					}
 					//buf.append((databases[i].getName()).substring(0, 1));
-					buf.append((databases[i].getID()).substring(0, 1));
+					buf.append((databases[i].getIndexName()).substring(0, 1));
 					if (legend) {
 						buf.append("</span>");
 						buf.append(" ");
