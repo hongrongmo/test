@@ -58,7 +58,7 @@ public class PaperChemDatabase extends Database {
     }
 
     public String getID() {
-        return "ach";
+        return "pch";
     }
 
     public String getName() {
@@ -66,7 +66,7 @@ public class PaperChemDatabase extends Database {
     }
 
     public String getIndexName() {
-        return "pch";
+        return "ach";
     }
 
     public String getShortName() {
