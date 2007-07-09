@@ -164,7 +164,7 @@ public class PageCache
                 pageBuffer.append("|");
                 pageBuffer.append(doc.getDocID());
                 pageBuffer.append("|");
-                pageBuffer.append(doc.getDatabase().getIndexName());
+                pageBuffer.append(doc.getDatabase().getID());
             }
 
             writePage(pageNumber,
