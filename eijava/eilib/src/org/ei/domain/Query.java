@@ -528,7 +528,7 @@ public class Query implements Comparable
                 }
 
                 searchQueryBuffer.append("(");
-                searchQueryBuffer.append(dbase.getIndexName());
+                searchQueryBuffer.append(dbase.getID());
                 searchQueryBuffer.append(" WN DB");
                 if (sLastFourUpdates.length() > 0 && emailAlertWeek.length() == 0)
                 {
