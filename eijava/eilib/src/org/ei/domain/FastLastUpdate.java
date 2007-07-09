@@ -13,7 +13,7 @@ public class FastLastUpdate
         {
             FastClient client = new FastClient();
             client.setBaseURL(FastSearchControl.BASE_URL);
-            client.setQueryString("DB:"+db.getIndexName());
+            client.setQueryString("DB:"+db.getID());
             client.setOffSet(0);
             client.setPageSize(1);
             client.setDoClustering(false);
