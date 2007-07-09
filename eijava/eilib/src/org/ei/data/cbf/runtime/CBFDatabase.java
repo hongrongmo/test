@@ -61,7 +61,7 @@ public class CBFDatabase extends C84Database
 
     public String getID()
     {
-        return "zbf";
+        return "c84";
     }
 
     public String getName()
@@ -71,7 +71,7 @@ public class CBFDatabase extends C84Database
 
     public String getIndexName()
     {
-        return "c84";
+        return "zbf";
     }
 
     public String getShortName()
