@@ -55,7 +55,7 @@ public class EptDatabase extends Database {
     }
 
     public String getID() {
-        return "tpt";
+        return "ept";
     }
 
     public String getName() {
@@ -63,7 +63,7 @@ public class EptDatabase extends Database {
     }
 
     public String getIndexName() {
-        return "ept";
+        return "tpt";
     }
 
     public String getShortName() {
