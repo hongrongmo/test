@@ -134,8 +134,8 @@ update book_pages set (PP,YR,TI,AUS,CVS,AF,PN,NT,ST,SP,ISS,VO,AB,SUB,PDFPP) = (
 select PP,YR,TI,AUS,CVS,AF,PN,NT,ST,SP,ISS,VO,AB,SUB,PDFPP from books where book_pages.bn=books.bn
 )
 
-update book_pages_TEMP set (YR, PN,  ST, AB, ISS, VO, CVS, SUB ) = (
-  select books_992.YR, books_992.PN,  books_992.ST, books_992.AB, books_992.ISS, books_992.VO, books_992.CVS, books_992.SUB  from books_992,book_pages_temp where book_pages_temp.bn13=books_992.bn13
+update book_pages_S300 set (YR, PN,  ST, AB, ISS, VO, CVS, SUB ) = (
+  select books_991.YR, books_991.PN,  books_991.ST, books_991.AB, books_991.ISS, books_991.VO, books_991.CVS, books_991.SUB  from books_991  where book_pages_s300.bn13=books_991.bn13
 )
 
 Count Books that have been loaded/not loaded so far
@@ -147,4 +147,14 @@ SELECT count(unique(BOOKS_992.BN13)) FROM BOOKS_992
 
 Data loading command for Keywords files(s)
 --------------------------------------------------------------------------------------
-sqlplus AP_PRO1/ei3it@neptune @c:\baja\eijava\eilib\keywords.sql
+sqlplus AP_PRO1/ei3it@neptune @c:\baja\eijava\eilib\keywo
+
+
+
+Isolate S300 files from the original 406/7
+--------------------------------------------------------------------------------------
+
+delete from book_pages_s300 where BN13 IN (select unique(BOOK_PAGES_s300.BN13) from BOOK_PAGES_s300 inner join BOOKS on BOOKS.BN13=BOOK_PAGES_s300.BN13)
+
+
+select count(unique(BN13)) from book_pages_s300rds.sql
