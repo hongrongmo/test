@@ -21,9 +21,9 @@ public class ChapterListVisitor extends BookVisitor {
     public void visit(Bookmark mark) {
         try {
             if(mark.isChapter()) {
-                String strPii = "chp_" + pdffile.getIsbn() + "_" + PDF_FileInfo.formatPageNumber(mark.getPage());
+                String strPii = "chp_" + pdffile.getIsbn13() + "_" + PDF_FileInfo.formatPageNumber(mark.getPage());
                 if(!chap_fileList.containsKey(strPii)) {
-                    wrtr.write("pdftk " + pdffile.getIsbn() + ".pdf cat " + mark.getPage() + "-" + mark.getEndpage() + " output V:\\BurstAndExtracted\\" + pdffile.getIsbn() + "\\" + strPii + ".pdf dont_ask");
+                    wrtr.write("pdftk " + pdffile.getIsbn13() + ".pdf cat " + mark.getPage() + "-" + mark.getEndpage() + " output " + OutputPageData.PATH_PREFIX + System.getProperty("file.separator") + "BurstAndExtracted" + System.getProperty("file.separator") + pdffile.getIsbn13() + "\\" + strPii + ".pdf dont_ask");
                     wrtr.write(System.getProperty("line.separator"));
                     chap_fileList.put(strPii,new Boolean(true));
                 }
