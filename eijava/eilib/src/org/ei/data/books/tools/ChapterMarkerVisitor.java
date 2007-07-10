@@ -7,25 +7,29 @@ import java.util.regex.Pattern;
 
 public class ChapterMarkerVisitor extends BookVisitor {
 
-    private static Pattern p = Pattern.compile("^\\d(\\.)?[^\\d]");
-    private static Pattern p2 = Pattern.compile("^\\w(\\.)");
+    private static Pattern p = Pattern.compile("^(\\d+)(\\.)?\\s");
+    private static Pattern p2 = Pattern.compile("^\\w(\\.)\\s");
     private boolean hasChapters = false;
     public void visit(Bookmark mark) {
 
-        if(mark.getTitle().toLowerCase().replaceAll("\\s","").indexOf("chapter") >= 0) {
-//            log.info("matched 'chapter' " + mark);
+        if(mark.getTitle().toLowerCase().replaceAll("\\s","").startsWith("appendix")) {
+            log.debug("matcher skipped appendix " + mark);
+            return;
+        }
+        else if(mark.getTitle().toLowerCase().replaceAll("\\s","").startsWith("chapter")) {
+            log.debug("matched 'chapter' " + mark);
             mark.setChapter(true);
         } else {
             Matcher m = null;
             m = p.matcher(mark.getTitle());
             if (m.find()) {
-//                log.info("matched 1 "  + mark);
+                log.debug("matched p1 "  + mark);
                 mark.setChapter(true);
             }
             else {
                 m = p2.matcher(mark.getTitle());
                 if (m.find()) {
-//                    log.info("matched 2 "  + mark);
+                    log.debug("matched p2 "  + mark);
                     mark.setChapter(true);
                 }
             }
