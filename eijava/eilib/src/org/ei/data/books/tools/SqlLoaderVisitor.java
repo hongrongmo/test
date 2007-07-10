@@ -23,7 +23,7 @@ public class SqlLoaderVisitor extends BookVisitor {
             
             try {
                 // DOCID
-                wrtr.write("pag_" + pdffile.getIsbn().toLowerCase()+"_"+Long.toString(curpage));
+                wrtr.write("pag_" + pdffile.getIsbn13().toLowerCase()+"_"+Long.toString(curpage));
                 wrtr.write(FIELD_DELIMITER);
                 // BN 
                 wrtr.write(pdffile.getIsbn().toLowerCase());
@@ -34,7 +34,7 @@ public class SqlLoaderVisitor extends BookVisitor {
 
                 // PII - Only if this page is part of a Chapter/Downloadable "CHUNK"
                 if(referexpage.getChapter() != null) {
-                    wrtr.write("chp_" + pdffile.getIsbn().toLowerCase()+"_"+PDF_FileInfo.formatPageNumber(referexpage.getChapter().getPage()));
+                    wrtr.write("chp_" + pdffile.getIsbn13().toLowerCase()+"_"+PDF_FileInfo.formatPageNumber(referexpage.getChapter().getPage()));
                 }
                 wrtr.write(FIELD_DELIMITER);
                 // PAGE_NUM
