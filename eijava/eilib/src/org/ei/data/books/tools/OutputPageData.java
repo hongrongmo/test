@@ -28,7 +28,7 @@ import org.apache.commons.logging.LogFactory;
 public class OutputPageData {
 
     protected static Log log = LogFactory.getLog(OutputPageData.class);
-
+    public final static String PATH_PREFIX = "E:";// + System.getProperty("file.separator") + "WOBL";
     private Writer cout = null;
     private Writer out = null;
     
@@ -37,7 +37,7 @@ public class OutputPageData {
 		log.debug("Starting...");
 
 		if (args.length == 0) {
-			(new OutputPageData()).crawlDirectory("V:\\WOBL\\BurstAndExtracted");
+			(new OutputPageData()).crawlDirectory(PATH_PREFIX + System.getProperty("file.separator") + "BurstAndExtracted");
 		}
 		else {
 			List dirs = java.util.Arrays.asList(args[0].split(System.getProperty("path.separator")));
@@ -57,8 +57,8 @@ public class OutputPageData {
 	public OutputPageData() throws IOException {
 	}
 	
-    private Pattern skips = Pattern.compile("^(glossary|exercises|bibliography|acknowledgements|body|contributors|limited disclaimer and warranty|table of contents|half title page|cover|back cover|title page|copyright|cover|preface|notation|contents|index|front(\\s?)matter|back(\\s?)matter)");
-    
+    private Pattern skips = Pattern.compile("^(glossary|exercises|bibliography|acknowledgements|body|contributors|limited disclaimer and warranty|table of contents|half title page|cover|back cover|title page|copyright|cover|preface|notation|contents|index|front(\\s?)matter|back(\\s?)matter|afterward|notation|colour plates|related titles|foreword|introduction to book|about the series|index of <>|appendecies|about the cd|exam objective map|nomenclature|list of symbols|names list|topics list|praise for  |content|appendix|preface to|dedication|contents of volumes in this series|assignments|about the authors|indicies)");
+         
     public void processPDF(File pdfFile, Writer out) throws IOException {
 
 		PDF_FileInfo referexbook = new PDF_FileInfo(pdfFile);
@@ -72,18 +72,18 @@ public class OutputPageData {
         referexbook.accept(visitor);
     
         Iterator itr = referexbook.createIterator();
-//        // check to see if there are still zeroes in any of the bookmarks
-//        boolean hasZeroes = false;
-//        while(itr.hasNext()) {
-//            Bookmark mk = (Bookmark) itr.next();
-//            if((mk.getPage() == 0)) {
-//                hasZeroes = true;
-//                log.error(" ZERO BOOKMARK: " + referexbook.getIsbn() + " -- " + mk.toString());
-//            }
-//        }
-//        if(hasZeroes) {
-//            log.info("=====================================================");
-//        } 
+        // check to see if there are still zeroes in any of the bookmarks
+        boolean hasZeroes = false;
+        while(itr.hasNext()) {
+            Bookmark mk = (Bookmark) itr.next();
+            if((mk.getPage() == 0)) {
+                hasZeroes = true;
+                log.error(" ZERO BOOKMARK: " + referexbook.getIsbn() + " -- " + mk.toString());
+            }
+        }
+        if(hasZeroes) {
+            log.info("=====================================================");
+        } 
 
         visitor = new ChapterMarkerVisitor();
         referexbook.accept(visitor);
@@ -101,7 +101,12 @@ public class OutputPageData {
         fixedIsbns.put("9780124605299",new Integer(3));
         fixedIsbns.put("9780124605305",new Integer(3));
         fixedIsbns.put("9780750666947",new Integer(2)); // Part I, etc.
-        
+        fixedIsbns.put("9780750666947",new Integer(2));
+        fixedIsbns.put("9780444519481",new Integer(2));
+        fixedIsbns.put("9780750668217",new Integer(2));
+        fixedIsbns.put("9780080447087",new Integer(2));
+        fixedIsbns.put("9781932266009",new Integer(3));
+
         if(fixedIsbns.containsKey(referexbook.getIsbn13())) { 
             log.info(referexbook.getIsbn13() + " using pre-assigned bookmark levels");
             int chapterLevel = ((Integer) fixedIsbns.get(referexbook.getIsbn13())).intValue();
@@ -136,7 +141,7 @@ public class OutputPageData {
                             mk.setChapter(true);
                         }
                         else {
-                            log.info(referexbook.getIsbn13() + " skipping " + mk.getTitle().toLowerCase());
+                            log.debug(referexbook.getIsbn13() + " skipping " + mk.getTitle().toLowerCase());
                         }
                     }
                 }
@@ -146,18 +151,15 @@ public class OutputPageData {
 
 
        
+        visitor = new SqlLoaderVisitor(out);
+        referexbook.accept(visitor);
 //
 //        visitor = new LogInfoVisitor();
 //        referexbook.accept(visitor);
-//        
-          visitor = new SqlLoaderVisitor(out);
-          referexbook.accept(visitor);
-//        
-//          visitor = new ChapterListVisitor(cout);
-//          referexbook.accept(visitor);
-    
-//        visitor = new HtmlTocVisitor();
+//        visitor = new ChapterListVisitor(cout);
 //        referexbook.accept(visitor);
+        visitor = new HtmlTocVisitor();
+        referexbook.accept(visitor);
 
     }
 
@@ -177,7 +179,7 @@ public class OutputPageData {
 //                    
 //                    );
         
-//            return dir.isDirectory() && dir.getName().startsWith("9780120121618");
+//            return dir.isDirectory() && dir.getName().startsWith("9780120887972");
             return dir.isDirectory();
         }
     };
@@ -195,8 +197,8 @@ public class OutputPageData {
     public void crawlDirectory(String dir) {
 		
 		try {
-			out = new PrintWriter(new FileOutputStream("c:\\output.out"));
-            cout = new PrintWriter(new FileOutputStream("c:\\chapters.out"));
+			out = new PrintWriter(new FileOutputStream(PATH_PREFIX + System.getProperty("file.separator") + "output.out"));
+            cout = new PrintWriter(new FileOutputStream(PATH_PREFIX + System.getProperty("file.separator") + "chapters.out"));
 
             log.debug("Top level PDF Directory: " + dir);
 
