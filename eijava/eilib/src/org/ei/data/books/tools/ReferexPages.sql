@@ -138,6 +138,15 @@ update book_pages_S300 set (YR, PN,  ST, AB, ISS, VO, CVS, SUB ) = (
   select books_991.YR, books_991.PN,  books_991.ST, books_991.AB, books_991.ISS, books_991.VO, books_991.CVS, books_991.SUB  from books_991  where book_pages_s300.bn13=books_991.bn13
 )
 
+update book_pages_WOBL set (PP,YR,TI,AUS,CVS,AF,PN,NT,ST,SP,ISS,VO,AB,SUB,PDFPP) = (
+  select PP,YR,TI,AUS,CVS,AF,PN,NT,ST,SP,ISS,VO,AB,SUB,PDFPP from books_991 where book_pages_WOBL.bn13=books_991.bn13
+)
+
+
+update book_pages_406 set (PP,YR,TI,AUS,CVS,AF,PN,NT,ST,SP,ISS,VO,AB,SUB,PDFPP) = (
+  select PP,YR,TI,AUS,CVS,AF,PN,NT,ST,SP,ISS,VO,AB,SUB,PDFPP from books where book_pages_406.bn=books.bn
+)
+
 Count Books that have been loaded/not loaded so far
 --------------------------------------------------------------------------------------
 SELECT count(unique(BOOKS_992.BN13)) FROM BOOKS_992
@@ -147,7 +156,7 @@ SELECT count(unique(BOOKS_992.BN13)) FROM BOOKS_992
 
 Data loading command for Keywords files(s)
 --------------------------------------------------------------------------------------
-sqlplus AP_PRO1/ei3it@neptune @c:\baja\eijava\eilib\keywo
+sqlplus AP_PRO1/ei3it@neptune @c:\baja\eijava\eilib\keywords.sql
 
 
 
