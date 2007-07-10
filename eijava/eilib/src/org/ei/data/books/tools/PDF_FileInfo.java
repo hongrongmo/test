@@ -11,7 +11,7 @@ import org.apache.commons.logging.LogFactory;
 public class PDF_FileInfo implements Visitable {
     protected static Log log = LogFactory.getLog(PDF_FileInfo.class);
   
-    private static final String BN13_PREFIX = "987";
+    private static final String BN13_PREFIX = "978";
 
 
     private static DecimalFormat df;
@@ -43,15 +43,20 @@ public class PDF_FileInfo implements Visitable {
         String subdirpath = fileobj.getParent() + System.getProperty("file.separator") + subdirname;
 
         String isbn = subdirname.replaceAll("^e", "");
-        if(isbn.length() == 10) {
+        String isbnSuffix = null;
+        if(isbn.endsWith("a") || isbn.endsWith("b") || isbn.endsWith("c")) {
+            isbnSuffix = isbn.substring(isbn.length()-1);
+        }
+        log.info(isbn);
+        if(!isbn.startsWith(BN13_PREFIX)) {
             setIsbn(isbn);
             String isbnroot = PDF_FileInfo.BN13_PREFIX + getIsbn().substring(0, 9);
-            setIsbn13(isbnroot + PDF_FileInfo.getISBN13CheckDigit(isbnroot));
+            setIsbn13(isbnroot + PDF_FileInfo.getISBN13CheckDigit(isbnroot) + ((isbnSuffix != null) ? isbnSuffix : ""));
         }
         else {
             setIsbn13(isbn);
             String isbnroot = getIsbn13().substring(3, 12);
-            setIsbn(isbnroot + PDF_FileInfo.getISBN10CheckDigit(isbnroot));
+            setIsbn(isbnroot + PDF_FileInfo.getISBN10CheckDigit(isbnroot) + ((isbnSuffix != null) ? isbnSuffix : ""));
         }
         setFilePathname(subdirpath);
 
