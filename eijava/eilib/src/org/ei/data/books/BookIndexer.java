@@ -1,21 +1,38 @@
 package org.ei.data.books;
 
-import java.io.*;
-import java.util.*;
-import org.ei.query.base.PorterStemmer;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.sql.Clob;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
 import org.apache.oro.text.perl.Perl5Util;
-import org.ei.util.*;
-import java.sql.*;
+//import org.ei.query.base.PorterStemmer;
+import org.ei.data.books.tools.OutputPageData;
+import org.ei.data.books.tools.PDF_FileInfo;
+import org.ei.util.StringUtil;
 
 public class BookIndexer
 {
 
-	private static PorterStemmer stemmer = new PorterStemmer();
-	private static TextFileFilter filter = new TextFileFilter();
+//	private static PorterStemmer stemmer = new PorterStemmer();
+//	private static TextFileFilter filter = new TextFileFilter();
     private static Perl5Util perl = new Perl5Util();
 	private static Map stopWords = new HashMap();
-	private static int numfiles = 0;
-	private static int numbooks = 0;
+//	private static int numfiles = 0;
+//	private static int numbooks = 0;
 
 	static
 	{
@@ -33,7 +50,17 @@ public class BookIndexer
         String password = "ei3it"; //args[3];
 
 		List terms = new ArrayList();
-
+        String strDefault = "WOBL";
+		if(args != null) {
+		    if(args.length >= 1 && args[0] != null) {
+                strDefault = args[0];
+                if(!strDefault.equals("406")) {
+                    System.exit(0);
+                }
+            }
+        }
+        strDefault = strDefault.toUpperCase();
+        System.out.println("Using table BOOK_PAGES_" + strDefault);
         Connection con = null;
         ResultSet rs = null;
         Statement stmt = null;
@@ -58,7 +85,7 @@ public class BookIndexer
             {
                 String term = rs.getString("MAIN_TERM_SEARCH");
                 terms.add(term);
-                System.out.println(term);
+                //System.out.println(term);
             }
 
             if(rs != null) {
@@ -93,10 +120,16 @@ public class BookIndexer
 			Map books = new HashMap();
 
             stmt = con.createStatement();
-			rs = stmt.executeQuery("select unique(bn), ti from BOOK_PAGES_TEMP where BN13='9780884154303'");
+            if(!strDefault.equals("WOBL")) {
+                rs = stmt.executeQuery("select bn13, ti from BOOKS");// where BN13='9780884154303'");
+            }
+            else {
+                rs = stmt.executeQuery("select bn13, ti from BOOKS_991");// where BN13='9780884154303'");
+            }
+            
 			while(rs.next())
 			{
-				String bn = rs.getString("bn");
+				String bn = rs.getString("bn13");
 				String ti = rs.getString("ti");
 				books.put(bn,ti);
 			}
@@ -112,14 +145,14 @@ public class BookIndexer
 
 			PreparedStatement pstmt1 = null;
 
-			pstmt1 = con.prepareStatement("select * from BOOK_PAGES_TEMP where bn = ?");
+			pstmt1 = con.prepareStatement("select docid,page_txt from BOOK_PAGES_" +  strDefault + " where bn13 = ?");
 
 			while(booksIt.hasNext())
 			{
-				String isbn = (String)booksIt.next();
-				String bookTitle = (String)books.get(isbn);
+				String isbn13 = (String)booksIt.next();
+				String bookTitle = (String)books.get(isbn13);
 
-				pstmt1.setString(1, isbn);
+				pstmt1.setString(1, isbn13);
 				rs = pstmt1.executeQuery();
 
 				while(rs.next())
@@ -129,24 +162,29 @@ public class BookIndexer
 					Clob clob = rs.getClob("page_txt");
 					if(clob != null)
 					{
-						String abs = null;
+                        String abs = null; //getPageTextFromFile(id,isbn13);
                         try {
-                            abs = StringUtil.getStringFromClob(clob);
+                            if(abs == null) {
+                                abs = StringUtil.getStringFromClob(clob);
+                            }
                         } catch (Exception e) {
                             // TODO Auto-generated catch block
                             e.printStackTrace();
                         }
                         if(abs != null) {
     						abs = abs.replaceFirst(bookTitle, "");
+                            //abs = abs.replaceFirst("This page intentionally left blank", "");
     						keywords = getKeywords(terms, abs);
     						if(keywords != null)
     						{
-    							System.out.println("update book_pages set page_keywords = '"+keywords.replaceAll("'", "''")+"' where docid = '"+id +"';");
+    							System.out.println("update BOOK_PAGES_"  + strDefault + " set page_keywords = '"+keywords.replaceAll("'", "''")+"' where docid = '"+id +"';");
     						}
                         }
 					}
 				}
             }
+            System.out.println("commit;");
+
             if(rs != null) {
                 close(rs);
             }
@@ -170,7 +208,31 @@ public class BookIndexer
         System.out.println("commit;");
 	}
 
-	private static void close(ResultSet rs)
+	private static String getPageTextFromFile(String id, String isbn13) {
+	    String[] idtokens = id.split("_");
+        StringBuffer allPageTxt = new StringBuffer();
+        File page_txt = new File(OutputPageData.PATH_PREFIX + System.getProperty("file.separator") + "BurstAndExtracted" + System.getProperty("file.separator") + isbn13 + System.getProperty("file.separator") + "pg_" + PDF_FileInfo.formatPageNumber(Long.parseLong(idtokens[2])) + ".txt");
+        BufferedReader rdr = null;
+        try {
+            rdr = new BufferedReader(new FileReader(page_txt));
+            while (rdr.ready()) {
+                allPageTxt.append(rdr.readLine());
+                // TODO Auto-generated method stub
+            }
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        finally {
+            
+        }
+        return allPageTxt.toString();
+    }
+
+    private static void close(ResultSet rs)
 	{
 		if(rs != null)
 		{
