@@ -62,6 +62,7 @@ public class FastClient
 			   mask == DatabaseConfig.CPX_MASK ||
 			   mask == DatabaseConfig.INS_MASK ||
 			   mask == DatabaseConfig.GEO_MASK ||
+			   mask == DatabaseConfig.ELT_MASK ||
 			   mask == DatabaseConfig.CBF_MASK
 			   )
 			{
@@ -78,13 +79,14 @@ public class FastClient
 				return true;
 			}
 		}
-		// include PN only if CPX, INS, or Referex 
-		//TS -  and CBF 
+		// include PN only if CPX, INS, or Referex
+		//TS -  and CBF
 		else if(EiNavigator.PN.equals(navid)) {
-			if(((mask & (DatabaseConfig.CPX_MASK + 
-							DatabaseConfig.INS_MASK + 
-							DatabaseConfig.PAG_MASK + 
-							DatabaseConfig.CBF_MASK)) > 0)){
+			if(((mask & (DatabaseConfig.CPX_MASK +
+						 DatabaseConfig.ELT_MASK +
+						 DatabaseConfig.INS_MASK +
+						 DatabaseConfig.PAG_MASK +
+						 DatabaseConfig.CBF_MASK)) > 0)){
 				return true;
 			}
 		}
@@ -114,9 +116,9 @@ public class FastClient
 		// include LA if CPX, INS, NTI or GEO
 		//		TS -  and CBF
 		else if(EiNavigator.LA.equals(navid)) {
-			if(((mask & (DatabaseConfig.CPX_MASK + 
-							DatabaseConfig.INS_MASK + 
-							DatabaseConfig.NTI_MASK + 
+			if(((mask & (DatabaseConfig.CPX_MASK +
+							DatabaseConfig.INS_MASK +
+							DatabaseConfig.NTI_MASK +
 							DatabaseConfig.GEO_MASK +
 							DatabaseConfig.CBF_MASK)) > 0)){
 				return true;
