@@ -16,38 +16,38 @@ import org.apache.oro.text.perl.*;
 
 
 public class CPXDocBuilder
-    implements DocumentBuilder
+	implements DocumentBuilder
 {
-    public static String CPX_TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright 2007 Elsevier Inc. All rights reserved";
-    public static String CPX_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2007 Elsevier Inc. All rights reserved";
-    public static String PROVIDER_TEXT = "Ei";
-    private static Map issnARFix = new HashMap();
-    private static final Key CPX_CONTROLLED_TERMS = new Key(Keys.CONTROLLED_TERMS, "Ei controlled terms");
-    private static final Key CPX_CLASS_CODES = new Key(Keys.CLASS_CODES, "Ei classification codes");
-    private static final Key CPX_MAIN_HEADING = new Key(Keys.MAIN_HEADING, "Ei main heading");
-    private static final Key[] CITATION_KEYS = {Keys.DOCID,Keys.TITLE,Keys.EDITORS,Keys.AUTHORS,Keys.AUTHOR_AFFS,Keys.SOURCE,Keys.MONOGRAPH_TITLE, Keys.PAGE_RANGE, Keys.VOLISSUE,Keys.PUBLICATION_YEAR, Keys.PUBLISHER, Keys.ISSUE_DATE, Keys.ISSN, Keys.LANGUAGE ,Keys.NO_SO, Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT};
-    private static final Key[] ABSTRACT_KEYS = {Keys.DOCID,Keys.TITLE,Keys.EDITORS,Keys.AUTHORS,Keys.EDITOR_AFFS, Keys.AUTHOR_AFFS,Keys.VOLISSUE, Keys.SOURCE, Keys.PUBLICATION_YEAR, Keys.ISSUE_DATE, Keys.MONOGRAPH_TITLE, Keys.PAGE_RANGE,Keys.CONFERENCE_NAME, Keys.ISSN,Keys.ISBN, Keys.CODEN, Keys.PUBLISHER,Keys.I_PUBLISHER,Keys.CONF_DATE,Keys.SPONSOR, Keys.PROVIDER ,Keys.LANGUAGE, Keys.MAIN_HEADING, CPX_CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS, Keys.GLOBAL_TAGS, Keys.PRIVATE_TAGS, Keys.ABSTRACT, Keys.NUMBER_OF_REFERENCES,Keys.NO_SO, Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT, Keys.CLASS_CODES };
-    private static final Key[] DETAILED_KEYS = {Keys.ACCESSION_NUMBER, Keys.TITLE, Keys.TITLE_TRANSLATION, Keys.AUTHORS, Keys.EDITORS, Keys.AUTHOR_AFFS, Keys.EDITOR_AFFS, Keys.SERIAL_TITLE, Keys.ABBRV_SERIAL_TITLE, Keys.VOLUME, Keys.ISSUE, Keys.MONOGRAPH_TITLE, Keys.ISSUE_DATE, Keys.PUBLICATION_YEAR, Keys.PAP_NUMBER, Keys.PAGE_RANGE, Keys.LANGUAGE, Keys.ISSN, Keys.CODEN, Keys.ISBN, Keys.DOC_TYPE, Keys.CONFERENCE_NAME, Keys.CONF_DATE, Keys.MEETING_LOCATION, Keys.CONF_CODE, Keys.SPONSOR, Keys.PUBLISHER, Keys.ABSTRACT, Keys.ABSTRACT_TYPE, Keys.NUMBER_OF_REFERENCES, Keys.MAIN_HEADING, Keys.CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS, Keys.CLASS_CODES, Keys.TREATMENTS,Keys.GLOBAL_TAGS, Keys.PRIVATE_TAGS, Keys.DOI, Keys.DOCID, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT,Keys.PROVIDER };
-    private static final Key[] RIS_KEYS = { Keys.RIS_TY, Keys.RIS_LA , Keys.RIS_N1 , Keys.RIS_TI , Keys.RIS_T1 , Keys.RIS_BT , Keys.RIS_JO ,Keys.RIS_T3 , Keys.RIS_AUS , Keys.RIS_AD , Keys.RIS_EDS , Keys.RIS_VL , Keys.RIS_IS , Keys.RIS_PY , Keys.RIS_AN , Keys.RIS_SP , Keys.RIS_EP, Keys.RIS_SN ,  Keys.RIS_S1 , Keys.RIS_MD ,Keys.RIS_CY , Keys.RIS_PB,  Keys.RIS_N2 , Keys.RIS_KW , Keys.RIS_CVS , Keys.RIS_FLS , Keys.RIS_DO, Keys.BIB_TY };
-    private static final Key[] XML_KEYS = { Keys.ISSN , Keys.MAIN_HEADING , Keys.NO_SO , Keys.MONOGRAPH_TITLE , Keys.PUBLICATION_YEAR , Keys.VOLUME_TITLE , Keys.CONTROLLED_TERM , Keys.ISBN , Keys.AUTHORS , Keys.DOCID , Keys.SOURCE , Keys.NUMVOL , Keys.EDITOR_AFFS , Keys.EDITORS , Keys.PUBLISHER , Keys.VOLUME , Keys.AUTHOR_AFFS , Keys.PROVIDER , Keys.ISSUE_DATE , Keys.COPYRIGHT_TEXT , Keys.DOI , Keys.PAGE_COUNT , Keys.PUBLICATION_DATE , Keys.TITLE , Keys.LANGUAGE , Keys.PAGE_RANGE , Keys.PAPER_NUMBER , Keys.COPYRIGHT , Keys.ISSUE , Keys.ACCESSION_NUMBER , Keys.CONTROLLED_TERMS};
+	public static String CPX_TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright 2007 Elsevier Inc. All rights reserved";
+	public static String CPX_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2007 Elsevier Inc. All rights reserved";
+	public static String PROVIDER_TEXT = "Ei";
+	private static Map issnARFix = new HashMap();
+	private static final Key CPX_CONTROLLED_TERMS = new Key(Keys.CONTROLLED_TERMS, "Ei controlled terms");
+	private static final Key CPX_CLASS_CODES = new Key(Keys.CLASS_CODES, "Ei classification codes");
+	private static final Key CPX_MAIN_HEADING = new Key(Keys.MAIN_HEADING, "Ei main heading");
+	private static final Key[] CITATION_KEYS = {Keys.DOCID,Keys.TITLE,Keys.EDITORS,Keys.AUTHORS,Keys.AUTHOR_AFFS,Keys.SOURCE,Keys.MONOGRAPH_TITLE, Keys.PAGE_RANGE, Keys.VOLISSUE,Keys.PUBLICATION_YEAR, Keys.PUBLISHER, Keys.ISSUE_DATE, Keys.ISSN, Keys.LANGUAGE ,Keys.NO_SO, Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT, Keys.DOI};
+	private static final Key[] ABSTRACT_KEYS = {Keys.DOCID,Keys.TITLE,Keys.EDITORS,Keys.AUTHORS,Keys.EDITOR_AFFS, Keys.AUTHOR_AFFS,Keys.VOLISSUE, Keys.SOURCE, Keys.PUBLICATION_YEAR, Keys.ISSUE_DATE, Keys.MONOGRAPH_TITLE, Keys.PAGE_RANGE,Keys.CONFERENCE_NAME, Keys.ISSN,Keys.ISBN, Keys.CODEN, Keys.PUBLISHER,Keys.I_PUBLISHER,Keys.CONF_DATE,Keys.SPONSOR, Keys.PROVIDER ,Keys.LANGUAGE, Keys.MAIN_HEADING, CPX_CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS, Keys.GLOBAL_TAGS, Keys.PRIVATE_TAGS, Keys.ABSTRACT, Keys.NUMBER_OF_REFERENCES,Keys.NO_SO, Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT, Keys.CLASS_CODES , Keys.DOI};
+	private static final Key[] DETAILED_KEYS = {Keys.ACCESSION_NUMBER, Keys.TITLE, Keys.TITLE_TRANSLATION, Keys.AUTHORS, Keys.EDITORS, Keys.AUTHOR_AFFS, Keys.EDITOR_AFFS, Keys.SERIAL_TITLE, Keys.ABBRV_SERIAL_TITLE, Keys.VOLUME, Keys.ISSUE, Keys.MONOGRAPH_TITLE, Keys.ISSUE_DATE, Keys.PUBLICATION_YEAR, Keys.PAP_NUMBER, Keys.PAGE_RANGE, Keys.LANGUAGE, Keys.ISSN, Keys.CODEN, Keys.ISBN, Keys.DOC_TYPE, Keys.CONFERENCE_NAME, Keys.CONF_DATE, Keys.MEETING_LOCATION, Keys.CONF_CODE, Keys.SPONSOR, Keys.PUBLISHER, Keys.ABSTRACT, Keys.ABSTRACT_TYPE, Keys.NUMBER_OF_REFERENCES, Keys.MAIN_HEADING, Keys.CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS, Keys.CLASS_CODES, Keys.TREATMENTS,Keys.GLOBAL_TAGS, Keys.PRIVATE_TAGS, Keys.DOI, Keys.DOCID, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT,Keys.PROVIDER }; 
+	private static final Key[] RIS_KEYS = { Keys.RIS_TY, Keys.RIS_LA , Keys.RIS_N1 , Keys.RIS_TI , Keys.RIS_T1 , Keys.RIS_BT , Keys.RIS_JO ,Keys.RIS_T3 , Keys.RIS_AUS , Keys.RIS_AD , Keys.RIS_EDS , Keys.RIS_VL , Keys.RIS_IS , Keys.RIS_PY , Keys.RIS_AN , Keys.RIS_SP , Keys.RIS_EP, Keys.RIS_SN ,  Keys.RIS_S1 , Keys.RIS_MD ,Keys.RIS_CY , Keys.RIS_PB,  Keys.RIS_N2 , Keys.RIS_KW , Keys.RIS_CVS , Keys.RIS_FLS , Keys.RIS_DO , Keys.DOI};
+	private static final Key[] XML_KEYS = { Keys.ISSN , Keys.MAIN_HEADING , Keys.NO_SO , Keys.MONOGRAPH_TITLE , Keys.PUBLICATION_YEAR , Keys.VOLUME_TITLE , Keys.CONTROLLED_TERM , Keys.ISBN , Keys.AUTHORS , Keys.DOCID , Keys.SOURCE , Keys.NUMVOL , Keys.EDITOR_AFFS , Keys.EDITORS , Keys.PUBLISHER , Keys.VOLUME , Keys.AUTHOR_AFFS , Keys.PROVIDER , Keys.ISSUE_DATE , Keys.COPYRIGHT_TEXT , Keys.DOI , Keys.PAGE_COUNT , Keys.PUBLICATION_DATE , Keys.TITLE , Keys.LANGUAGE , Keys.PAGE_RANGE , Keys.PAPER_NUMBER , Keys.COPYRIGHT , Keys.ISSUE , Keys.ACCESSION_NUMBER , Keys.CONTROLLED_TERMS};
 
-    static
-    {  //ISSNs with AR field problem
-        issnARFix.put("00913286", "");
-        issnARFix.put("10833668", "");
-        issnARFix.put("10179909", "");
-        issnARFix.put("15393755", "");
-        issnARFix.put("00319007", "");
-        issnARFix.put("10502947", "");
-        issnARFix.put("00036951", "");
-        issnARFix.put("00218979", "");
-        issnARFix.put("00219606", "");
-        issnARFix.put("00346748", "");
-        issnARFix.put("1070664X", "");
-        issnARFix.put("10706631", "");
-        issnARFix.put("00948276", "");
-        issnARFix.put("00431397", "");
-    }
+	static
+	{  //ISSNs with AR field problem
+		issnARFix.put("00913286", "");
+		issnARFix.put("10833668", "");
+		issnARFix.put("10179909", "");
+		issnARFix.put("15393755", "");
+		issnARFix.put("00319007", "");
+		issnARFix.put("10502947", "");
+		issnARFix.put("00036951", "");
+		issnARFix.put("00218979", "");
+		issnARFix.put("00219606", "");
+		issnARFix.put("00346748", "");
+		issnARFix.put("1070664X", "");
+		issnARFix.put("10706631", "");
+		issnARFix.put("00948276", "");
+		issnARFix.put("00431397", "");
+	}
 
     private Database database;
 
@@ -121,7 +121,7 @@ public class CPXDocBuilder
     private List loadAbstracts(List listOfDocIDs)
         throws Exception
     {
-        Perl5Util perl = new Perl5Util();
+		Perl5Util perl = new Perl5Util();
         Hashtable oidTable = getDocIDTable(listOfDocIDs);
 
         List list=new ArrayList();
@@ -156,11 +156,11 @@ public class CPXDocBuilder
                 ht.put(Keys.COPYRIGHT_TEXT,
                        new XMLWrapper(Keys.COPYRIGHT_TEXT, CPX_TEXT_COPYRIGHT));
 
-                if(rset.getString("EX") != null)
-                {
-                    ht.put(Keys.ACCESSION_NUMBER,
-                           new XMLWrapper (Keys.ACCESSION_NUMBER, rset.getString("EX")));
-                }
+				if(rset.getString("EX") != null)
+				{
+					ht.put(Keys.ACCESSION_NUMBER,
+					       new XMLWrapper (Keys.ACCESSION_NUMBER, rset.getString("EX")));
+              	}
 
                 if(rset.getString("ST") != null)
                 {
@@ -184,17 +184,17 @@ public class CPXDocBuilder
                                         rset.getString("DO"),
                                         rset.getString("YR"));
 
-                if(strPages != null)
-                {
-                    ht.put(Keys.PAGE_RANGE, new PageRange(strPages, perl));
-                }
+				if(strPages != null)
+				{
+				    ht.put(Keys.PAGE_RANGE, new PageRange(strPages, perl));
+				}
 
 
-                if(rset.getString("PP") != null)
-                {
-                    String pageCount=rset.getString("PP").replaceAll("p"," ");
-                    ht.put(Keys.PAGE_COUNT,new XMLWrapper(Keys.PAGE_COUNT , pageCount ));
-                }
+				if(rset.getString("PP") != null)
+				{
+					String pageCount=rset.getString("PP").replaceAll("p"," ");
+					ht.put(Keys.PAGE_COUNT,new XMLWrapper(Keys.PAGE_COUNT , pageCount ));
+				}
 
 
                 String strTitle = StringUtil.EMPTY_STRING;
@@ -218,17 +218,17 @@ public class CPXDocBuilder
 
                 if (rset.getString("AUS") != null)
                 {
-                    Contributors authors = new Contributors(Keys.AUTHORS, getContributors(rset.getString("AUS"), Keys.AUTHORS));
+					Contributors authors = new Contributors(Keys.AUTHORS, getContributors(rset.getString("AUS"), Keys.AUTHORS));
 
 
                     if(rset.getString("AF") != null)
                     {
-                        Affiliation affil = new Affiliation(Keys.AUTHOR_AFFS, rset.getString("AF"));
-                        authors.setFirstAffiliation(affil);
-                        ht.put(Keys.AUTHOR_AFFS, new Affiliations(Keys.AUTHOR_AFFS, affil));
-                    }
+						Affiliation affil = new Affiliation(Keys.AUTHOR_AFFS, rset.getString("AF"));
+						authors.setFirstAffiliation(affil);
+						ht.put(Keys.AUTHOR_AFFS, new Affiliations(Keys.AUTHOR_AFFS, affil));
+                 	}
 
-                    ht.put(Keys.AUTHORS, authors);
+                 	ht.put(Keys.AUTHORS, authors);
 
                 }
                 else
@@ -239,14 +239,14 @@ public class CPXDocBuilder
                         if(perl.match("/(Ed[.]\\s*)/", strED))
                         {
                             strED = perl.substitute("s/\\(Ed[.]\\s*\\)//gi", strED);
-                        }
+                    	}
 
-                        Contributors editors = new Contributors(Keys.EDITORS, getContributors(strED, Keys.EDITORS));
+						Contributors editors = new Contributors(Keys.EDITORS, getContributors(strED, Keys.EDITORS));
                         ht.put(Keys.EDITORS,editors);
 
                         if(rset.getString("EF") != null)
                         {
-                            Affiliation eaffil = new Affiliation(Keys.EDITOR_AFFS, rset.getString("EF"));
+							Affiliation eaffil = new Affiliation(Keys.EDITOR_AFFS, rset.getString("EF"));
                             editors.setFirstAffiliation(eaffil);
                             ht.put(Keys.EDITOR_AFFS, new Affiliations(Keys.EDITOR_AFFS, eaffil));
                         }
@@ -296,9 +296,9 @@ public class CPXDocBuilder
                             ht.put(Keys.SOURCE,new XMLWrapper(Keys.SOURCE , rset.getString("ST")));
                         }
                         else if(rset.getString("SE") != null)
-                        {
+                    	{
                             ht.put(Keys.SOURCE,new XMLWrapper(Keys.SOURCE, rset.getString("SE")));
-                        }
+                    	}
 
                         if(rset.getString("MT") != null)
                         {
@@ -526,10 +526,10 @@ public class CPXDocBuilder
 
 
 
-                if ((rset.getString("CVS") != null) || (rset.getString("MH") != null))
+				if ((rset.getString("CVS") != null) || (rset.getString("MH") != null))
                 {
-                    ht.put(Keys.CONTROLLED_TERMS,new XMLMultiWrapper2(CPX_CONTROLLED_TERMS,
-                                                                      setCVS(mainHeading,rset.getString("CVS"))));
+                	ht.put(Keys.CONTROLLED_TERMS,new XMLMultiWrapper2(CPX_CONTROLLED_TERMS,
+                            										  setCVS(mainHeading,rset.getString("CVS"))));
                 }
 
                 //NR
@@ -560,7 +560,7 @@ public class CPXDocBuilder
                     ht.put(Keys.ISSN,new ISSN(rset.getString("SN")));
                 }
 
-                String abs = null;
+				String abs = null;
                 if((abs = hasAbstract(rset)) != null)
                 {
                     ht.put(Keys.ABSTRACT,
@@ -568,10 +568,10 @@ public class CPXDocBuilder
                 }
 
                 // CLS
-                if (rset.getString("CLS") != null)
-                {
-                    ht.put(Keys.CLASS_CODES,
-                            new Classifications(CPX_CLASS_CODES, setElementData(rset.getString("CLS")), this.database));
+				if (rset.getString("CLS") != null)
+				{
+				    ht.put(Keys.CLASS_CODES,
+				    		new Classifications(CPX_CLASS_CODES, setElementData(rset.getString("CLS")), this.database));
                 }
 
                 // AT
@@ -652,7 +652,7 @@ public class CPXDocBuilder
         private List loadDetailed(List listOfDocIDs)
             throws Exception
         {
-            Perl5Util perl = new Perl5Util();
+			Perl5Util perl = new Perl5Util();
             Hashtable oidTable = getDocIDTable(listOfDocIDs);
 
             List list=new ArrayList();
@@ -676,7 +676,7 @@ public class CPXDocBuilder
                     ht.put(Keys.DOCID, did);
 
                     ht.put(Keys.PROVIDER, new XMLWrapper(Keys.PROVIDER,
-                                                         PROVIDER_TEXT));
+  						  								 PROVIDER_TEXT));
 
                     ht.put(Keys.COPYRIGHT,new XMLWrapper(Keys.COPYRIGHT, CPX_HTML_COPYRIGHT));
 
@@ -685,32 +685,32 @@ public class CPXDocBuilder
                     if(rset.getString("EX") != null)
                     {
                         ht.put(Keys.ACCESSION_NUMBER,
-                               new XMLWrapper (Keys.ACCESSION_NUMBER, rset.getString("EX")));
+                        	   new XMLWrapper (Keys.ACCESSION_NUMBER, rset.getString("EX")));
                     }
 
                     if(rset.getString("TI") != null)
                     {
                         ht.put(Keys.TITLE,
-                               new XMLWrapper(Keys.TITLE,rset.getString("TI")));
+                        	   new XMLWrapper(Keys.TITLE,rset.getString("TI")));
                     }
 
                     if(rset.getString("TT") != null)
                     {
                         ht.put(Keys.TITLE_TRANSLATION,
-                               new XMLWrapper(Keys.TITLE_TRANSLATION,rset.getString("TT")));
+                        	   new XMLWrapper(Keys.TITLE_TRANSLATION,rset.getString("TT")));
                     }
 
                     if (rset.getString("AUS") != null)
                     {
-                        Contributors authors = new Contributors(Keys.AUTHORS,getContributors(rset.getString("AUS"),Keys.AUTHORS));
+    					Contributors authors = new Contributors(Keys.AUTHORS,getContributors(rset.getString("AUS"),Keys.AUTHORS));
 
-                        ht.put(Keys.AUTHORS, authors);
+    					ht.put(Keys.AUTHORS, authors);
 
-                        if (rset.getString("AF") != null)
-                        {
-                            List lstAFF = new ArrayList();
+    					if (rset.getString("AF") != null)
+    					{
+    					    List lstAFF = new ArrayList();
 
-                            lstAFF.add(rset.getString("AF"));
+    					    lstAFF.add(rset.getString("AF"));
 
                             if (rset.getString("AM") != null)
                             {
@@ -752,8 +752,8 @@ public class CPXDocBuilder
 
                             if(rset.getString("EF") != null)
                             {
-                                Affiliation eaffil = new Affiliation(Keys.EDITOR_AFFS, rset.getString("EF"));
-                                ht.put(Keys.EDITOR_AFFS, new Affiliations(Keys.EDITOR_AFFS, eaffil));
+								Affiliation eaffil = new Affiliation(Keys.EDITOR_AFFS, rset.getString("EF"));
+								ht.put(Keys.EDITOR_AFFS, new Affiliations(Keys.EDITOR_AFFS, eaffil));
                             }
                         }
                     }
@@ -782,7 +782,7 @@ public class CPXDocBuilder
 
                         if(rset.getString("ISS") != null)
                         {
-                            String strIss = replaceIssueNullWithEmptyString(rset.getString("ISS"));
+							String strIss = replaceIssueNullWithEmptyString(rset.getString("ISS"));
                             ht.put(Keys.ISSUE, new Issue(strIss, perl));
                         }
 
@@ -790,26 +790,26 @@ public class CPXDocBuilder
                         if(rset.getString("SD") != null)
                         {
                             ht.put(Keys.ISSUE_DATE,
-                                   new XMLWrapper(Keys.ISSUE_DATE,rset.getString("SD")));
+                            	   new XMLWrapper(Keys.ISSUE_DATE,rset.getString("SD")));
                         }
 
                         //  MT
                         if (rset.getString("MT") != null)
                         {
-                            ht.put(Keys.MONOGRAPH_TITLE,
-                                   new XMLWrapper(Keys.MONOGRAPH_TITLE,rset.getString("MT")));
+                        	ht.put(Keys.MONOGRAPH_TITLE,
+                        		   new XMLWrapper(Keys.MONOGRAPH_TITLE,rset.getString("MT")));
                         }
                         //  ME
                         if (rset.getString("ME") != null)
                         {
                             ht.put(Keys.ABBRV_MON_MONOGRAPH_TITLE,
-                                   new XMLWrapper(Keys.ABBRV_MON_MONOGRAPH_TITLE ,rset.getString("ME")));
+                            	   new XMLWrapper(Keys.ABBRV_MON_MONOGRAPH_TITLE ,rset.getString("ME")));
                         }
                         //  VT
                         if (rset.getString("VT") != null)
                         {
                             ht.put(Keys.VOLUME_TITLE,
-                                   new XMLWrapper(Keys.VOLUME_TITLE ,rset.getString("VT")));
+                             	   new XMLWrapper(Keys.VOLUME_TITLE ,rset.getString("VT")));
                         }
                     }
                     else if((rset.getString("ST") == null &&
@@ -820,14 +820,14 @@ public class CPXDocBuilder
                         //  MT
                         if (rset.getString("MT") != null)
                         {
-                            ht.put(Keys.MONOGRAPH_TITLE,
-                                   new XMLWrapper(Keys.MONOGRAPH_TITLE ,rset.getString("MT")));
+                        	ht.put(Keys.MONOGRAPH_TITLE,
+                        	   	   new XMLWrapper(Keys.MONOGRAPH_TITLE ,rset.getString("MT")));
                         }
                         //  ME
                         if (rset.getString("ME") != null)
                         {
                             ht.put(Keys.ABBRV_MON_MONOGRAPH_TITLE,
-                                   new XMLWrapper(Keys.ABBRV_MON_MONOGRAPH_TITLE ,rset.getString("ME")));
+                            	   new XMLWrapper(Keys.ABBRV_MON_MONOGRAPH_TITLE ,rset.getString("ME")));
                         }
                         // VO
                         if(rset.getString("VO") != null)
@@ -846,21 +846,21 @@ public class CPXDocBuilder
                         if (rset.getString("VT") != null)
                         {
                             ht.put(Keys.VOLUME_TITLE,
-                                   new XMLWrapper(Keys.VOLUME_TITLE ,rset.getString("VT")));
+                            	   new XMLWrapper(Keys.VOLUME_TITLE ,rset.getString("VT")));
                         }
                     }
 
                     if(rset.getString("YR") != null)
                     {
                         ht.put(Keys.PUBLICATION_YEAR,
-                               new Year(rset.getString("YR"), perl));
+                        	   new Year(rset.getString("YR"), perl));
                     }
 
                     //  NV
                     if (rset.getString("NV") != null)
                     {
                         ht.put(Keys.NUMVOL,
-                               new XMLWrapper(Keys.NUMVOL ,rset.getString("NV")));
+                        	   new XMLWrapper(Keys.NUMVOL ,rset.getString("NV")));
                     }
 
                     //  PA
@@ -868,7 +868,7 @@ public class CPXDocBuilder
                     {
                         // PAP_NUMBER will cause Paper Number label in XSL
                         ht.put(Keys.PAP_NUMBER,
-                               new XMLWrapper(Keys.PAP_NUMBER ,rset.getString("PA")));
+                        	   new XMLWrapper(Keys.PAP_NUMBER ,rset.getString("PA")));
                     }
 
                     //  PP
@@ -881,7 +881,7 @@ public class CPXDocBuilder
                     if(strPages != null)
                     {
                         ht.put(Keys.PAGE_RANGE,
-                               new PageRange(strPages, perl));
+                        	   new PageRange(strPages, perl));
                     }
 
 
@@ -906,32 +906,32 @@ public class CPXDocBuilder
                     if(rset.getString("LA") !=  null)
                     {
                         ht.put(Keys.LANGUAGE,
-                               new XMLWrapper(Keys.LANGUAGE ,rset.getString("LA")));
+                        	   new XMLWrapper(Keys.LANGUAGE ,rset.getString("LA")));
                     }
                     //  SN
                     if (rset.getString("SN") != null)
                     {
                         ht.put(Keys.ISSN,
-                               new ISSN(rset.getString("SN")));
+                        	   new ISSN(rset.getString("SN")));
                     }
                     //  CN
                     if (rset.getString("CN") != null)
                     {
                         ht.put(Keys.CODEN,
-                               new XMLWrapper(Keys.CODEN ,rset.getString("CN")));
+                        	   new XMLWrapper(Keys.CODEN ,rset.getString("CN")));
                     }
                     //  BN
                     if (rset.getString("BN") != null)
                     {
                         ht.put(Keys.ISBN,
-                               new ISBN(rset.getString("BN")));
+                        	   new ISBN(rset.getString("BN")));
                     }
 
                     //  DT
                     if (rset.getString("DT") != null)
                     {
                         ht.put(Keys.DOC_TYPE,
-                               new XMLWrapper(Keys.DOC_TYPE, replaceDTNullWithEmptyString(rset.getString("DT"))));
+                        	   new XMLWrapper(Keys.DOC_TYPE, replaceDTNullWithEmptyString(rset.getString("DT"))));
                     }
 
 
@@ -1035,7 +1035,7 @@ public class CPXDocBuilder
                     {
                         ht.put(Keys.PUBLISHER,
                                 new XMLWrapper(Keys.PUBLISHER,StringUtil.join(lstTokens, ", ")));
-                    }
+				    }
                     lstTokens = null;
 
                     //  PO
@@ -1046,18 +1046,18 @@ public class CPXDocBuilder
                     }
                     //  AB
 
-                    String abs = null;
-                    if((abs = hasAbstract(rset)) != null)
-                    {
-                        ht.put(Keys.ABSTRACT,
-                               new XMLWrapper(Keys.ABSTRACT, abs));
-                    }
+					String abs = null;
+					if((abs = hasAbstract(rset)) != null)
+					{
+						ht.put(Keys.ABSTRACT,
+							   new XMLWrapper(Keys.ABSTRACT, abs));
+					}
 
                     // AT
                     if (rset.getString("AT") != null)
                     {
                         ht.put(Keys.ABSTRACT_TYPE,
-                               new XMLWrapper(Keys.ABSTRACT_TYPE,rset.getString("AT")));
+                        	   new XMLWrapper(Keys.ABSTRACT_TYPE,rset.getString("AT")));
                     }
 
                     //  NR
@@ -1093,7 +1093,7 @@ public class CPXDocBuilder
                     if (rset.getString("MH") != null)
                     {
                         ht.put(Keys.MAIN_HEADING,
-                               new XMLWrapper(CPX_MAIN_HEADING ,mainHeading));
+                        	   new XMLWrapper(CPX_MAIN_HEADING ,mainHeading));
 
                     }
 
@@ -1101,28 +1101,28 @@ public class CPXDocBuilder
                     if ((rset.getString("CVS") != null))
                     {
                         ht.put(Keys.CONTROLLED_TERMS ,
-                               new XMLMultiWrapper(CPX_CONTROLLED_TERMS, setElementData(rset.getString("CVS"))));
-                    }
+                        	   new XMLMultiWrapper(CPX_CONTROLLED_TERMS, setElementData(rset.getString("CVS"))));
+					}
 
                     // FLS
                     if (rset.getString("FLS") != null)
                     {
                         ht.put(Keys.UNCONTROLLED_TERMS,
-                               new XMLMultiWrapper(Keys.UNCONTROLLED_TERMS, setElementData(rset.getString("FLS"))));
+                        	   new XMLMultiWrapper(Keys.UNCONTROLLED_TERMS, setElementData(rset.getString("FLS"))));
                     }
 
-                    // CLS
+					// CLS
                     if (rset.getString("CLS") != null)
                     {
                         ht.put(Keys.CLASS_CODES,
                                new Classifications(CPX_CLASS_CODES, setElementData(rset.getString("CLS")), this.database));
                     }
 
-                    // TR
+					// TR
                     if (rset.getString("TR") != null)
                     {
                         ht.put(Keys.TREATMENTS,
-                               new Treatments(setTreatments(rset.getString("TR")),this.database));
+                        	   new Treatments(setTreatments(rset.getString("TR")),this.database));
                     }
 
                     //DO
@@ -1217,17 +1217,15 @@ public class CPXDocBuilder
 //                  ht.put(EIDoc.DATABASE,"Compendex");
 //                  ht.put(EIDoc.PROVIDER,this.PROVIDER);
                     String strDocType = StringUtil.replaceNullWithEmptyString(rset.getString("DT"));
-                    String risDocType = replaceTYwithRIScode(strDocType);
-                    String bibDocType = replaceTYwithBIBcode(strDocType);
+					String risDocType = replaceTYwithRIScode(strDocType);
 
                     ht.put(Keys.RIS_TY, new XMLWrapper(Keys.RIS_TY, risDocType));
-                    ht.put(Keys.BIB_TY, new XMLWrapper(Keys.BIB_TY, bibDocType));
 
-                    if (rset.getString("LA") != null)
-                    {
-                        ht.put(Keys.RIS_LA,
-                                new XMLWrapper(Keys.RIS_LA,rset.getString("LA")));
-                    }
+					if (rset.getString("LA") != null)
+					{
+						ht.put(Keys.RIS_LA,
+						        new XMLWrapper(Keys.RIS_LA,rset.getString("LA")));
+					}
 
                     ht.put(Keys.RIS_N1,new XMLWrapper(Keys.RIS_N1,CPXDocBuilder.CPX_TEXT_COPYRIGHT));
 
@@ -1265,39 +1263,39 @@ public class CPXDocBuilder
 
                     if (rset.getString("AUS") != null)
                     {
-                        Contributors authors = new Contributors(Keys.RIS_AUS, getContributors(rset.getString("AUS"), Keys.RIS_AUS));
+                    	Contributors authors = new Contributors(Keys.RIS_AUS, getContributors(rset.getString("AUS"), Keys.RIS_AUS));
 
-                        ht.put(Keys.RIS_AUS, authors);
-                        if (rset.getString("AF") != null)
-                        {
-                            List lstAFF = new ArrayList();
+                    	ht.put(Keys.RIS_AUS, authors);
+						if (rset.getString("AF") != null)
+						{
+							List lstAFF = new ArrayList();
 
-                            lstAFF.add(rset.getString("AF"));
-                            if (rset.getString("AM") != null)
-                            {
-                                lstAFF.add(rset.getString("AM"));
-                            }
-                            if (rset.getString("AC") != null)
-                            {
-                                lstAFF.add(rset.getString("AC"));
-                            }
-                            if (rset.getString("ASS") != null)
-                            {
-                                lstAFF.add(rset.getString("ASS"));
-                            }
-                            if (rset.getString("AV") != null)
-                            {
-                                lstAFF.add(rset.getString("AV"));
-                            }
-                            if (rset.getString("AY") != null)
-                            {
-                                lstAFF.add(rset.getString("AY"));
-                            }
+							lstAFF.add(rset.getString("AF"));
+							if (rset.getString("AM") != null)
+							{
+								lstAFF.add(rset.getString("AM"));
+							}
+							if (rset.getString("AC") != null)
+							{
+								lstAFF.add(rset.getString("AC"));
+							}
+							if (rset.getString("ASS") != null)
+							{
+								lstAFF.add(rset.getString("ASS"));
+							}
+							if (rset.getString("AV") != null)
+							{
+								lstAFF.add(rset.getString("AV"));
+							}
+							if (rset.getString("AY") != null)
+							{
+								lstAFF.add(rset.getString("AY"));
+							}
 
-                            Affiliation aff = new Affiliation(Keys.RIS_AD,StringUtil.join(lstAFF,", "));
-                            ht.put(Keys.RIS_AD, new Affiliations(Keys.RIS_AD, aff));
-                            lstAFF = null;
-                        }
+							Affiliation aff = new Affiliation(Keys.RIS_AD,StringUtil.join(lstAFF,", "));
+							ht.put(Keys.RIS_AD, new Affiliations(Keys.RIS_AD, aff));
+							lstAFF = null;
+						}
 
                     }
                     else
@@ -1317,7 +1315,7 @@ public class CPXDocBuilder
 
                             if(rset.getString("EF") != null)
                             {
-                                Affiliation eff = new Affiliation(Keys.RIS_AD, rset.getString("EF"));
+								Affiliation eff = new Affiliation(Keys.RIS_AD, rset.getString("EF"));
                                 ht.put(Keys.RIS_AD, new Affiliations(Keys.RIS_AD,eff));
                             }
                         }
@@ -1449,11 +1447,11 @@ public class CPXDocBuilder
                         lstTokens = null;
                     }
 
-                    String abs = null;
+					String abs = null;
                     if((abs = hasAbstract(rset)) != null)
-                    {
-                        ht.put(Keys.RIS_N2,new XMLWrapper(Keys.RIS_N2, abs));
-                    }
+                	{
+                    	ht.put(Keys.RIS_N2,new XMLWrapper(Keys.RIS_N2, abs));
+					}
 
                     //  MH
                     String mh = rset.getString("MH");
@@ -1560,7 +1558,7 @@ public class CPXDocBuilder
         throws Exception
     {
         Hashtable oidTable = getDocIDTable(listOfDocIDs);
-        Perl5Util perl = new Perl5Util();
+		Perl5Util perl = new Perl5Util();
         List list=new ArrayList();
         int count=0;
         Connection con=null;
@@ -1595,11 +1593,11 @@ public class CPXDocBuilder
 
                 if(rset.getString("SN") != null)
                 {
-                    ht.put(Keys.ISSN,new ISSN(rset.getString("SN")));
-                }
+                	ht.put(Keys.ISSN,new ISSN(rset.getString("SN")));
+				}
                 String strTitle = StringUtil.EMPTY_STRING;
                 if((rset.getString("TT") != null) &&
-                        (rset.getString("TI") != null))
+                		(rset.getString("TI") != null))
                 {
                     strTitle = StringUtil.replaceNullWithEmptyString(rset.getString("TI"));
                     strTitle = strTitle.concat(" (").concat(StringUtil.replaceNullWithEmptyString(rset.getString("TT"))).concat(")");
@@ -1618,15 +1616,15 @@ public class CPXDocBuilder
                 // AUS or EDS
                 if (rset.getString("AUS") != null)
                 {
-                    Contributors authors = new Contributors(Keys.AUTHORS,getContributors(rset.getString("AUS"),Keys.AUTHORS));
-                    ht.put(Keys.AUTHORS, authors);
+                	Contributors authors = new Contributors(Keys.AUTHORS,getContributors(rset.getString("AUS"),Keys.AUTHORS));
+                	ht.put(Keys.AUTHORS, authors);
 
                     if(rset.getString("AF") != null)
                     {
                         Affiliation affil = new Affiliation(Keys.AUTHOR_AFFS, rset.getString("AF"));
                         authors.setFirstAffiliation(affil);
                         ht.put(Keys.AUTHOR_AFFS, new Affiliations(Keys.AUTHOR_AFFS, affil));
-                    }
+                 	}
                 }
                 else
                 {
@@ -1636,16 +1634,16 @@ public class CPXDocBuilder
                         if(perl.match("/(Ed[.]\\s*)/", strED))
                         {
                             strED = perl.substitute("s/\\(Ed[.]\\s*\\)//gi", strED);
-                        }
+                    	}
 
                         Contributors editors = new Contributors(Keys.EDITORS,getContributors(strED, Keys.EDITORS));
-                        ht.put(Keys.EDITORS,editors);
+						ht.put(Keys.EDITORS,editors);
 
                         if(rset.getString("EF") != null)
                         {
-                            Affiliation eaffil = new Affiliation(Keys.EDITOR_AFFS, rset.getString("EF"));
-                            editors.setFirstAffiliation(eaffil);
-                            ht.put(Keys.AUTHOR_AFFS, new Affiliations(Keys.AUTHOR_AFFS,eaffil));
+							Affiliation eaffil = new Affiliation(Keys.EDITOR_AFFS, rset.getString("EF"));
+							editors.setFirstAffiliation(eaffil);
+							ht.put(Keys.AUTHOR_AFFS, new Affiliations(Keys.AUTHOR_AFFS,eaffil));
                         }
                     }
                 }
@@ -1657,10 +1655,10 @@ public class CPXDocBuilder
                    rset.getString("ME") != null ||
                    rset.getString("PN") != null )
                 {
-                    String strVolIss = StringUtil.EMPTY_STRING;
+                	String strVolIss = StringUtil.EMPTY_STRING;
 
-                    // VO - VOL and ISSUE Combined by ', '
-                    // add 'v' or 'n'
+                	// VO - VOL and ISSUE Combined by ', '
+                	// add 'v' or 'n'
                     if(rset.getString("VO") != null)
                     {
                         strVolIss = strVolIss.concat(replaceVolumeNullWithEmptyString(rset.getString("VO")));
@@ -1674,7 +1672,7 @@ public class CPXDocBuilder
                         ht.put(Keys.ISSUE, new Issue(rset.getString("ISS") , perl));
 
                         if(strVolIss != null &&
-                                !strVolIss.equals(StringUtil.EMPTY_STRING))
+                        		!strVolIss.equals(StringUtil.EMPTY_STRING))
                         {
                             strVolIss = strVolIss.concat(", ").concat(replaceIssueNullWithEmptyString(rset.getString("ISS")));
                         }
@@ -1688,61 +1686,61 @@ public class CPXDocBuilder
                            !strVolIss.equals(StringUtil.EMPTY_STRING))
                     {
                         ht.put(Keys.VOLISSUE,
-                           new XMLWrapper(Keys.VOLISSUE, strVolIss));
+                    	   new XMLWrapper(Keys.VOLISSUE, strVolIss));
                     }
 
                     if (rset.getString("ST") != null ||
                         rset.getString("SE") != null)
                     {
-                        if(rset.getString("ST") != null)
-                        {
-                            ht.put(Keys.SOURCE,
-                                    new XMLWrapper(Keys.SOURCE, rset.getString("ST")));
-                        }
-                        else if(rset.getString("SE") != null)
-                        {
-                            ht.put(Keys.SOURCE,
-                                       new XMLWrapper(Keys.SOURCE, rset.getString("SE")));
-                        }
+                    	if(rset.getString("ST") != null)
+                    	{
+                    		ht.put(Keys.SOURCE,
+                    				new XMLWrapper(Keys.SOURCE, rset.getString("ST")));
+                    	}
+                    	else if(rset.getString("SE") != null)
+                    	{
+                    		ht.put(Keys.SOURCE,
+                       			       new XMLWrapper(Keys.SOURCE, rset.getString("SE")));
+                    	}
 
-                             // an MT or VT can accompany the ST (or SE)
-                        if(rset.getString("MT") != null)
-                        {
-                            ht.put(Keys.MONOGRAPH_TITLE,
-                                    new XMLWrapper(Keys.MONOGRAPH_TITLE, rset.getString("MT")));
-                        }
+               				 // an MT or VT can accompany the ST (or SE)
+                    	if(rset.getString("MT") != null)
+                    	{
+                    		ht.put(Keys.MONOGRAPH_TITLE,
+                    				new XMLWrapper(Keys.MONOGRAPH_TITLE, rset.getString("MT")));
+                    	}
 
-                        if(rset.getString("VT") != null)
-                        {
-                            ht.put(Keys.VOLUME_TITLE,
-                                       new XMLWrapper(Keys.VOLUME_TITLE,rset.getString("VT")));
-                        }
+                    	if(rset.getString("VT") != null)
+                    	{
+                    		ht.put(Keys.VOLUME_TITLE,
+                        		       new XMLWrapper(Keys.VOLUME_TITLE,rset.getString("VT")));
+                    	}
                     }
                     else if((rset.getString("ST") == null &&
-                            rset.getString("SE") == null) &&
-                            (rset.getString("MT") != null ||
-                            rset.getString("ME") != null))
+                    		rset.getString("SE") == null) &&
+                    	    (rset.getString("MT") != null ||
+                    	    rset.getString("ME") != null))
                     {
 
-                        if(rset.getString("MT") != null)
+                    	if(rset.getString("MT") != null)
                         {
-                            ht.put(Keys.SOURCE,
-                                       new XMLWrapper(Keys.SOURCE, rset.getString("MT")));
+                    		ht.put(Keys.SOURCE,
+                         			   new XMLWrapper(Keys.SOURCE, rset.getString("MT")));
                         }
                         else if(rset.getString("ME") != null)
                         {
-                            ht.put(Keys.SOURCE,
-                                new XMLWrapper(Keys.SOURCE, rset.getString("ME")));
+                        	ht.put(Keys.SOURCE,
+                            	new XMLWrapper(Keys.SOURCE, rset.getString("ME")));
                         }
                     }
                     else if (rset.getString("ST") == null &&
-                                rset.getString("SE") == null &&
-                                rset.getString("MT") == null &&
-                                rset.getString("ME") == null)
+                    			rset.getString("SE") == null &&
+                    			rset.getString("MT") == null &&
+                    			rset.getString("ME") == null)
                     {
                         if(rset.getString("PN") != null )
                         {
-                            ht.put(Keys.PUBLISHER,new XMLWrapper(Keys.PUBLISHER,rset.getString("PN")));
+                        	ht.put(Keys.PUBLISHER,new XMLWrapper(Keys.PUBLISHER,rset.getString("PN")));
                         }
                     }
                     else
@@ -1757,24 +1755,24 @@ public class CPXDocBuilder
                    rset.getString("ME") == null &&
                    rset.getString("PN") == null )
                 {
-                    ht.put(Keys.NO_SO, new XMLWrapper(Keys.NO_SO, "NO_SO"));
+                	ht.put(Keys.NO_SO, new XMLWrapper(Keys.NO_SO, "NO_SO"));
                 }
 
                 // SD
                 String strSD = StringUtil.replaceNullWithEmptyString(rset.getString("SD"));
                 if((rset.getString("ST") != null ||
-                    rset.getString("SE") != null ||
-                    rset.getString("MT") != null ||
-                    rset.getString("ME") != null ||
-                    rset.getString("PN") != null)
-                    && (!strSD.equals(StringUtil.EMPTY_STRING)))
+                	rset.getString("SE") != null ||
+                	rset.getString("MT") != null ||
+                	rset.getString("ME") != null ||
+                	rset.getString("PN") != null)
+                	&& (!strSD.equals(StringUtil.EMPTY_STRING)))
                 {
 
-                    if(rset.getString("YR") != null)
+                	if(rset.getString("YR") != null)
                     {
-                        String strYR = StringUtil.replaceNullWithEmptyString(rset.getString("YR"));
-                        strSD = perl.substitute("s/".concat(strYR).concat("$//"), strSD);
-                        strSD = strSD.trim().concat(", ").concat(strYR);
+                		String strYR = StringUtil.replaceNullWithEmptyString(rset.getString("YR"));
+                		strSD = perl.substitute("s/".concat(strYR).concat("$//"), strSD);
+                		strSD = strSD.trim().concat(", ").concat(strYR);
                     }
 
                     ht.put(Keys.ISSUE_DATE, new XMLWrapper(Keys.ISSUE_DATE, strSD));
@@ -1782,35 +1780,35 @@ public class CPXDocBuilder
                 }
                 else if (rset.getString("YR") != null)
                 {
-                    String strYR = rset.getString("YR");
+                	String strYR = rset.getString("YR");
                     if(rset.getString("ST") == null &&
-                            rset.getString("SE") == null &&
-                            rset.getString("MT") == null &&
-                            rset.getString("PN") == null &&
-                            rset.getString("ME") == null)
+                    		rset.getString("SE") == null &&
+							rset.getString("MT") == null &&
+							rset.getString("PN") == null &&
+							rset.getString("ME") == null)
                     {
-                            // if ALL 4 are null, use the label 'Publication Date'
-                        ht.put(Keys.PUBLICATION_DATE,
-                                   new Year(rset.getString("YR"), perl));
+                        	// if ALL 4 are null, use the label 'Publication Date'
+                    	ht.put(Keys.PUBLICATION_DATE,
+                         	       new Year(rset.getString("YR"), perl));
                     }
                     else
                     {
                       // else just store the date
                         ht.put(Keys.PUBLICATION_YEAR,
-                               new Year(rset.getString("YR"), perl));
+                         	   new Year(rset.getString("YR"), perl));
                     }
                 }
                 // NV
                 if(rset.getString("NV") != null)
                 {
                     ht.put(Keys.NUMVOL,
-                           new XMLWrapper(Keys.NUMVOL, rset.getString("NV")));
+                    	   new XMLWrapper(Keys.NUMVOL, rset.getString("NV")));
                 }
                 // PA
                 if(rset.getString("PA") != null)
                 {
                     ht.put(Keys.PAPER_NUMBER,
-                           new XMLWrapper(Keys.PAPER_NUMBER, rset.getString("PA")));
+                    	   new XMLWrapper(Keys.PAPER_NUMBER, rset.getString("PA")));
                 }
 
                 // PP
@@ -1820,7 +1818,7 @@ public class CPXDocBuilder
                 if(rset.getString("VT") != null)
                 {
                     ht.put(Keys.VOLUME_TITLE,
-                           new XMLWrapper(Keys.VOLUME_TITLE, rset.getString("VT")));
+                    	   new XMLWrapper(Keys.VOLUME_TITLE, rset.getString("VT")));
                 }
 
                 //LA
@@ -1828,14 +1826,14 @@ public class CPXDocBuilder
                         !rset.getString("LA").equalsIgnoreCase("ENGLISH"))
                 {
                     ht.put(Keys.LANGUAGE,
-                           new XMLWrapper(Keys.LANGUAGE, rset.getString("LA")));
+                    	   new XMLWrapper(Keys.LANGUAGE, rset.getString("LA")));
                 }
 
                 //DO
                 if(rset.getString("DO") != null)
                 {
                     ht.put(Keys.DOI,
-                           new XMLWrapper(Keys.DOI, rset.getString("DO")));
+                    	   new XMLWrapper(Keys.DOI, rset.getString("DO")));
                 }
 
                 //YR
@@ -1843,51 +1841,51 @@ public class CPXDocBuilder
                 if(rset.getString("YR") != null)
                 {
                     ht.put(Keys.PUBLICATION_YEAR,
-                           new Year(rset.getString("YR"), perl));
+                    	   new Year(rset.getString("YR"), perl));
                 }
-                 //CN
-                if(rset.getString("CN") != null)
-                {
-                    ht.put(Keys.CODEN,
-                           new XMLWrapper(Keys.CODEN, rset.getString("CN")));
+				 //CN
+				if(rset.getString("CN") != null)
+				{
+					ht.put(Keys.CODEN,
+						   new XMLWrapper(Keys.CODEN, rset.getString("CN")));
                 }
-                // ST
+				// ST
 
                 if(rset.getString("ST") != null)
                 {
                     ht.put(Keys.SOURCE,new XMLWrapper(Keys.SOURCE , rset.getString("ST")));
                 }
-                //SE
+				//SE
 
-                if(rset.getString("SE") != null)
-                {
-                    ht.put(Keys.ABBRV_SERIAL_TITLE,
-                               new XMLWrapper(Keys.ABBRV_SERIAL_TITLE, rset.getString("SE")));
-                }
+            	if(rset.getString("SE") != null)
+            	{
+            		ht.put(Keys.ABBRV_SERIAL_TITLE,
+               			       new XMLWrapper(Keys.ABBRV_SERIAL_TITLE, rset.getString("SE")));
+            	}
 
-                // ST
-                if(rset.getString("ST") != null)
-                {
-                    ht.put(Keys.SERIAL_TITLE,
-                               new XMLWrapper(Keys.SERIAL_TITLE, rset.getString("ST")));
+				// ST
+				if(rset.getString("ST") != null)
+				{
+					ht.put(Keys.SERIAL_TITLE,
+               			       new XMLWrapper(Keys.SERIAL_TITLE, rset.getString("ST")));
                 }
-                 //BN
-                if (rset.getString("BN") != null)
-                {
-                    ht.put(Keys.ISBN, new ISBN(rset.getString("BN")));
-                }
+				 //BN
+				if (rset.getString("BN") != null)
+				{
+					ht.put(Keys.ISBN, new ISBN(rset.getString("BN")));
+				}
 
-                //CF
+				//CF
                 if(rset.getString("CF") !=null)
                 {
                     ht.put(Keys.CONFERENCE_NAME, new XMLWrapper(Keys.CONFERENCE_NAME, rset.getString("CF")));
                 }
 
-                //EX
-                if(rset.getString("EX") != null )
-                {
-                    ht.put(Keys.ACCESSION_NUMBER,
-                           new XMLWrapper(Keys.ACCESSION_NUMBER, rset.getString("EX")));
+				//EX
+				if(rset.getString("EX") != null )
+				{
+					ht.put(Keys.ACCESSION_NUMBER,
+						   new XMLWrapper(Keys.ACCESSION_NUMBER, rset.getString("EX")));
                 }
 
                 EIDoc eiDoc = new EIDoc(did, ht, Citation.CITATION_FORMAT);
@@ -1957,7 +1955,7 @@ public class CPXDocBuilder
             throws Exception
         {
             Hashtable oidTable = getDocIDTable(listOfDocIDs);
-            Perl5Util perl = new Perl5Util();
+			Perl5Util perl = new Perl5Util();
             List list=new ArrayList();
             int count=0;
             Connection con=null;
@@ -1980,9 +1978,9 @@ public class CPXDocBuilder
                     ht.put(Keys.DOCID, did);
                     ht.put(Keys.PROVIDER, new XMLWrapper(Keys.PROVIDER, PROVIDER_TEXT));
                     ht.put(Keys.COPYRIGHT,new XMLWrapper(Keys.COPYRIGHT,
-                              CPXDocBuilder.CPX_HTML_COPYRIGHT));
+							  CPXDocBuilder.CPX_HTML_COPYRIGHT));
                     ht.put(Keys.COPYRIGHT_TEXT, new XMLWrapper(Keys.COPYRIGHT_TEXT,
-                                    CPXDocBuilder.CPX_TEXT_COPYRIGHT));
+									CPXDocBuilder.CPX_TEXT_COPYRIGHT));
 
                     // Always needed for IVIP
                     if (rset.getString("SN") != null)
@@ -2021,14 +2019,14 @@ public class CPXDocBuilder
 
                     if (rset.getString("AUS") != null)
                     {
-                        Contributors authors = new Contributors(Keys.AUTHORS,getContributors(StringUtil.replaceNullWithEmptyString(rset.getString("AUS")),Keys.AUTHORS));
-                        ht.put(Keys.AUTHORS, authors);
+                    	Contributors authors = new Contributors(Keys.AUTHORS,getContributors(StringUtil.replaceNullWithEmptyString(rset.getString("AUS")),Keys.AUTHORS));
+                    	ht.put(Keys.AUTHORS, authors);
 
                         if(rset.getString("AF") != null)
                         {
                             Affiliation affil = new Affiliation(Keys.AUTHOR_AFFS, StringUtil.replaceNullWithEmptyString(rset.getString("AF")));
                             ht.put(Keys.AUTHOR_AFFS, new Affiliations(Keys.AUTHOR_AFFS, affil));
-                        }
+                     	}
 
                     }
                     else
@@ -2041,13 +2039,13 @@ public class CPXDocBuilder
                                 strED = perl.substitute("s/\\(Ed[.]\\s*\\)//gi", strED);
                             }
                             Contributors editors = new Contributors(Keys.EDITORS,getContributors(strED, Keys.EDITORS));
-                            ht.put(Keys.EDITORS,editors);
+    						ht.put(Keys.EDITORS,editors);
 
                             if(rset.getString("EF") != null)
                             {
-                                Affiliation eaffil = new Affiliation(Keys.EDITOR_AFFS, StringUtil.replaceNullWithEmptyString(rset.getString("EF")));
-                                ht.put(Keys.EDITOR_AFFS, new Affiliations(Keys.EDITOR_AFFS,eaffil));
-                            }
+    							Affiliation eaffil = new Affiliation(Keys.EDITOR_AFFS, StringUtil.replaceNullWithEmptyString(rset.getString("EF")));
+    							ht.put(Keys.EDITOR_AFFS, new Affiliations(Keys.EDITOR_AFFS,eaffil));
+                         	}
                         }
                     }
                     // SO
@@ -2168,7 +2166,7 @@ public class CPXDocBuilder
                             // else just store the date
 
                             ht.put(Keys.PUBLICATION_YEAR,
-                                   new Year(strYR, perl));
+                             	   new Year(strYR, perl));
                         }
                     }
                     // NV
@@ -2189,11 +2187,11 @@ public class CPXDocBuilder
                                         rset.getString("DO"),
                                         rset.getString("YR"));
 
-                    if(strPages != null)
-                    {
-                        strPages=strPages.replaceAll("p"," ");
-                        ht.put(Keys.PAGE_RANGE, new PageRange(strPages,perl));
-                    }
+					if(strPages != null)
+					{
+						strPages=strPages.replaceAll("p"," ");
+						ht.put(Keys.PAGE_RANGE, new PageRange(strPages,perl));
+					}
 
 
                     if(rset.getString("PP") != null)
@@ -2210,8 +2208,8 @@ public class CPXDocBuilder
 //CVS
                     if (rset.getString("CVS") != null)
                     {
-                        ht.put(Keys.CONTROLLED_TERMS,new XMLMultiWrapper(CPX_CONTROLLED_TERMS,
-                                                                          setElementData(StringUtil.replaceNullWithEmptyString(rset.getString("CVS")))));
+                       	ht.put(Keys.CONTROLLED_TERMS,new XMLMultiWrapper(CPX_CONTROLLED_TERMS,
+                       	        										  setElementData(StringUtil.replaceNullWithEmptyString(rset.getString("CVS")))));
                     }
 
                     // LA
@@ -2295,40 +2293,40 @@ public class CPXDocBuilder
 
 
     public List getContributors(String strAuthors,
-                                Key key)
+    					   		Key key)
     {
 
-        List list = new ArrayList();
-        AuthorStream aStream = null;
-        DataCleaner dataCleaner = new DataCleaner();
-        strAuthors = dataCleaner.cleanEntitiesForDisplay(strAuthors);
-        try
-        {
-             aStream = new AuthorStream(new ByteArrayInputStream(strAuthors.getBytes()));
-             //aStream.setDelimited30(';');
-             String strToken = null;
-             while((strToken = aStream.readAuthor()) != null)
-             {
-                list.add(new Contributor(key, strToken));
-             }
-         }
-         catch (IOException ioe)
-         {
-             System.out.println("IOE " + ioe.getMessage());
-         }
-         finally
-         {
-             if(aStream != null)
-                 try
-                 {
-                     aStream.close();
-                     aStream = null;
-                 }
-                 catch (IOException ioe)
-                 {
-                 }
-         }
-         return list;
+		List list = new ArrayList();
+		AuthorStream aStream = null;
+		DataCleaner dataCleaner = new DataCleaner();
+		strAuthors = dataCleaner.cleanEntitiesForDisplay(strAuthors);
+		try
+		{
+			 aStream = new AuthorStream(new ByteArrayInputStream(strAuthors.getBytes()));
+			 //aStream.setDelimited30(';');
+			 String strToken = null;
+			 while((strToken = aStream.readAuthor()) != null)
+			 {
+				list.add(new Contributor(key, strToken));
+			 }
+		 }
+		 catch (IOException ioe)
+		 {
+			 System.out.println("IOE " + ioe.getMessage());
+		 }
+		 finally
+		 {
+			 if(aStream != null)
+				 try
+				 {
+					 aStream.close();
+					 aStream = null;
+				 }
+				 catch (IOException ioe)
+				 {
+				 }
+		 }
+		 return list;
      }
 
    /* This method builds the IN String
@@ -2392,12 +2390,12 @@ public class CPXDocBuilder
 
     private String hasAbstract(ResultSet rs) throws Exception
     {
-        String abs = null;
-        Clob clob = rs.getClob("AB");
-        if(clob != null)
-        {
-            abs = StringUtil.getStringFromClob(clob);
-        }
+		String abs = null;
+		Clob clob = rs.getClob("AB");
+		if(clob != null)
+		{
+			abs = StringUtil.getStringFromClob(clob);
+		}
 
         if(abs == null ||
            abs.length() < 100)
@@ -2406,109 +2404,109 @@ public class CPXDocBuilder
         }
         else
         {
-            return abs;
-        }
+			return abs;
+		}
     }
 
 
-    private KeyValuePair[] setCVS(String mainHeading, String cvs)
-    {
-        ArrayList list = new ArrayList();
-        if(mainHeading != null)
-        {
-            list.add(new KeyValuePair(Keys.MAIN_HEADING, mainHeading));
-        }
+	private KeyValuePair[] setCVS(String mainHeading, String cvs)
+	{
+		ArrayList list = new ArrayList();
+		if(mainHeading != null)
+		{
+			list.add(new KeyValuePair(Keys.MAIN_HEADING, mainHeading));
+		}
 
-        AuthorStream aStream = null;
-        String strToken = null;
-        try
-        {
-            if (cvs != null)
-            {
-                aStream = new AuthorStream(new ByteArrayInputStream(cvs.getBytes()));
-                //aStream.setDelimited30(';');
-                strToken = null;
-                while((strToken = aStream.readAuthor()) != null)
-                {
-                    KeyValuePair k = new KeyValuePair(Keys.CONTROLLED_TERM, strToken);
-                    list.add(k);
-                }
-             }
-        }
-        catch (IOException ioe)
-        {
-            ioe.printStackTrace();
-        }
-        finally
-        {
-            if(aStream != null)
-            {
-                try
-                {
-                    aStream.close();
-                    aStream = null;
-                }
-                catch (IOException ioe)
-                {
-                    ioe.printStackTrace();
-                 }
-            }
-        }
+		AuthorStream aStream = null;
+		String strToken = null;
+		try
+		{
+			if (cvs != null)
+			{
+				aStream = new AuthorStream(new ByteArrayInputStream(cvs.getBytes()));
+				//aStream.setDelimited30(';');
+				strToken = null;
+				while((strToken = aStream.readAuthor()) != null)
+				{
+					KeyValuePair k = new KeyValuePair(Keys.CONTROLLED_TERM, strToken);
+					list.add(k);
+				}
+			 }
+		}
+		catch (IOException ioe)
+		{
+			ioe.printStackTrace();
+		}
+		finally
+		{
+			if(aStream != null)
+			{
+				try
+				{
+					aStream.close();
+					aStream = null;
+				}
+				catch (IOException ioe)
+				{
+					ioe.printStackTrace();
+				 }
+			}
+		}
 
 
-        return (KeyValuePair[])list.toArray(new KeyValuePair[list.size()]);
+		return (KeyValuePair[])list.toArray(new KeyValuePair[list.size()]);
 
-    }
+	}
 
 
     private String getPage(String strPageRange,String strArticleNum,
-                           String strISSN,String strDOI,String strYear)
-    {
-        return getPage(strPageRange,null,strArticleNum,strISSN,strDOI,strYear);
-    }
+    					   String strISSN,String strDOI,String strYear)
+	{
+		return getPage(strPageRange,null,strArticleNum,strISSN,strDOI,strYear);
+	}
 
     private String getPage(String strPageRange,String strPageCount,
-                           String strArticleNum,String strISSN,
-                           String strDOI,String strYear)
+    					   String strArticleNum,String strISSN,
+    					   String strDOI,String strYear)
     {
-        String strPage=StringUtil.EMPTY_STRING;
+		String strPage=StringUtil.EMPTY_STRING;
 
-        if(strPageRange != null)
-        {
-            strPage = strPageRange;
-        }
-        else if(strPageCount != null)
-        {
-            strPage = strPageCount;
-        }
+		if(strPageRange != null)
+		{
+			strPage = strPageRange;
+		}
+		else if(strPageCount != null)
+		{
+			strPage = strPageCount;
+		}
 
-        if(strArticleNum != null) // Records with AR field Fix
-        {
-            if(strISSN != null && hasARFix(strISSN)) // Check ISSN for AR problem
-            {
-                strPage="p "+strArticleNum;
-            }
-            else if(strPage.equals(StringUtil.EMPTY_STRING))
-            {
-                strPage="p "+strArticleNum;
-            }
-        }
+		if(strArticleNum != null) // Records with AR field Fix
+		{
+			if(strISSN != null && hasARFix(strISSN)) // Check ISSN for AR problem
+			{
+				strPage="p "+strArticleNum;
+			}
+			else if(strPage.equals(StringUtil.EMPTY_STRING))
+			{
+				strPage="p "+strArticleNum;
+			}
+		}
 
-        return strPage;
+		return strPage;
 
-    }
+	}
 
     private static boolean hasARFix(String strISSN) //Checks ISSNs with AR field problems
     {
-         if (issnARFix.containsKey(strISSN.replaceAll("-","")))
-         {
-             return true;
-         }
-         else
-         {
-            return false;
-         }
-    }
+		 if (issnARFix.containsKey(strISSN.replaceAll("-","")))
+		 {
+			 return true;
+		 }
+		 else
+		 {
+			return false;
+		 }
+	}
 
 
     // jam XML document mapping, conversion to TY values
@@ -2539,38 +2537,6 @@ public class CPXDocBuilder
         else
         {
             str="JOUR";
-        }
-        return str;
-    }
-
-    // jam XML document mapping, conversion to TY values
-    // for BIB format - only called from loadBIB
-    private String  replaceTYwithBIBcode(String str)
-    {
-        if(str==null || str.equals("QQ"))
-        {
-            str=StringUtil.EMPTY_STRING;
-        }
-
-        if(!str.equals(StringUtil.EMPTY_STRING))
-        {
-            if (str.equals("JA")){str = "article";}
-            else if (str.equals("CA")){str = "inproceedings";}
-            else if (str.equals("CP")){str = "proceedings";}
-            else if (str.equals("MC")){str = "inbook";}
-            else if (str.equals("MR")){str = "book";}
-            else if (str.equals("RC")){str = "article";}
-            else if (str.equals("RR")){str = "article";}
-            else if (str.equals("DS")){str = "article";}
-            else if (str.equals("UP")){str = "unpublished";}
-            else
-            {
-                str="article";
-            }
-        }
-        else
-        {
-            str="article";
         }
         return str;
     }
@@ -2614,18 +2580,18 @@ public class CPXDocBuilder
     }
 
 
-    public String[] setElementData(String elementVal)
-    {
-        ArrayList list = new ArrayList();
-        AuthorStream aStream = null;
-        String strToken = null;
+	public String[] setElementData(String elementVal)
+	{
+		ArrayList list = new ArrayList();
+		AuthorStream aStream = null;
+    	String strToken = null;
         try
-        {
-            if (elementVal != null)
-            {
+		{
+        	if (elementVal != null)
+        	{
                 aStream = new AuthorStream
-                    (new ByteArrayInputStream(elementVal.getBytes()));
-                //aStream.setDelimited30(';');
+					(new ByteArrayInputStream(elementVal.getBytes()));
+				//aStream.setDelimited30(';');
                 strToken = null;
                 while((strToken = aStream.readAuthor()) != null)
                 {
@@ -2633,63 +2599,63 @@ public class CPXDocBuilder
                     list.add(strToken.trim());
                 }
              }
-        }
+		}
         catch (IOException ioe)
-        {
-            ioe.printStackTrace();
-        }
+		{
+        	ioe.printStackTrace();
+		}
         finally
-        {
-            if(aStream != null)
-            {
-                try
-                {
-                    aStream.close();
-                    aStream = null;
-                }
-                catch (IOException ioe)
-                {
-                    ioe.printStackTrace();
+		{
+        	if(aStream != null)
+        	{
+        		try
+				{
+        			aStream.close();
+        			aStream = null;
+				}
+        		catch (IOException ioe)
+				{
+        			ioe.printStackTrace();
                  }
             }
         }
         return (String[])list.toArray(new String[list.size()]);
-    }
+	}
 
-    public String[] setTreatments(String treatments)
-    {
-        ArrayList result = new ArrayList();
-        int len = 0;
-        int trlen = treatments.length();
-        String ch = "";
-        if (trlen >= 0 &&
-                trlen < 10 &&
-                trlen > 0)
-        {
-            for (int i = 0; i< trlen ; i++)
-            {
-                if (len < trlen)
-                {
-                    ch = treatments.substring(len,len+1);
-                }
-                else
-                {
-                    ch = treatments.substring(len);
-                }
+	public String[] setTreatments(String treatments)
+	{
+	    ArrayList result = new ArrayList();
+	    int len = 0;
+	    int trlen = treatments.length();
+	    String ch = "";
+	    if (trlen >= 0 &&
+	            trlen < 10 &&
+	            trlen > 0)
+	    {
+	        for (int i = 0; i< trlen ; i++)
+	        {
+	            if (len < trlen)
+	            {
+	                ch = treatments.substring(len,len+1);
+	            }
+	            else
+	            {
+	                ch = treatments.substring(len);
+	            }
 
-                if (!ch.equals("") && ch != null &&
-                        !ch.equals("QQ")&&
-                        !ch.equals(";"))
-                {
+	            if (!ch.equals("") && ch != null &&
+	                    !ch.equals("QQ")&&
+	                    !ch.equals(";"))
+	            {
                   result.add(ch);
-                }
-                len ++;
-                ch = "";
-            }
-        }
+	            }
+	            len ++;
+	            ch = "";
+	        }
+	    }
 
         return (String[]) result.toArray(new String[1]);
-    }
+	}
 
 }
 
