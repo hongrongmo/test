@@ -7,7 +7,8 @@
     xmlns:DD="java:org.ei.domain.DatabaseDisplayHelper"
     xmlns:srt="java:org.ei.domain.Sort"
     xmlns:bit="java:org.ei.util.BitwiseOperators"
-    exclude-result-prefixes="java html xsl DD srt bit"
+    xmlns:custoptions="java:org.ei.fulldoc.FullTextOptions"
+    exclude-result-prefixes="java html xsl DD srt bit custoptions"
 >
 
   <xsl:output method="html" indent="no" doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
@@ -21,6 +22,8 @@
 <xsl:include href="common/CitationResults.xsl" />
 <xsl:include href="LocalHolding.xsl" />
 <xsl:include href="Footer.xsl" />
+
+<xsl:param name="CUST-ID">0</xsl:param>  
 
 <xsl:variable name="BOOKS_OPEN_WINDOW_PARAMS">height=800,width=700,status=yes,resizable,scrollbars=1,menubar=no</xsl:variable>
 
@@ -453,7 +456,11 @@
                 <A title="Show patents that reference this patent" class="LgBlueLink" HREF="/controller/servlet/Controller?CID={$CID-PREFIX}CitationFormat&amp;{$CITEDBY-QSTR}&amp;yearselect=yearrange&amp;searchtype={$SEARCH-TYPE}&amp;sort=yr">Cited by</A>&#160;<A CLASS="MedBlackText">(<xsl:value-of select="$CIT-CNT"/>)</A>
             </xsl:if>
 
-            <xsl:if test="(($FULLTEXT='true') and ($FULLTEXT-LINK = 'Y')) or ($FULLTEXT-LINK = 'A')">
+	    <xsl:variable name="CHECK-CUSTOM-OPT">
+		<xsl:value-of select="custoptions:checkFullText($FULLTEXT, $FULLTEXT-LINK, $CUST-ID, EI-DOCUMENT/DO ,EI-DOCUMENT/DOC/DB/DBMASK)" />
+	    </xsl:variable>
+  
+            <xsl:if test="($CHECK-CUSTOM-OPT ='true')">
                 <A CLASS="MedBlackText">&#160; - &#160;</A>
                 <a href="" onclick="window.open('/controller/servlet/Controller?CID=FullTextLink&amp;docID={$DOC-ID}','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable');return false"><img src="/engresources/images/av.gif" align="absbottom" border="0"/></a>
             </xsl:if>
