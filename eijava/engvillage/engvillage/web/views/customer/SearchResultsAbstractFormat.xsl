@@ -7,7 +7,8 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:html="http://www.w3.org/TR/REC-html40"
   xmlns:java="java:java.net.URLEncoder"
-  exclude-result-prefixes="java html xsl">
+  xmlns:custoptions="java:org.ei.fulldoc.FullTextOptions"
+  exclude-result-prefixes="java html xsl custoptions">
 
 <!--  <xsl:output method="html" indent="no" /> -->
   <xsl:output method="html" indent="no" doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
@@ -24,7 +25,9 @@
   <xsl:include href="LocalHolding.xsl" />
 
   <xsl:include href="common/AbstractResults.xsl" />
+  
 
+  
   <xsl:template match="PAGE">
 
     <xsl:variable name="SESSION-ID">
@@ -423,8 +426,19 @@
       	</xsl:if>
       </xsl:if>
     </tr>
-
-    <xsl:if test="(string(//LOCALHOLDINGS) or string(//FULLTEXT) or string(//LHL))">
+    
+    <xsl:variable name="FULLTEXT">
+  	<xsl:value-of select="//FULLTEXT" />
+    </xsl:variable>
+    <xsl:variable name="FULLTEXT-LINK">
+  	<xsl:value-of select="//PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/FT/@FTLINK" />
+    </xsl:variable>
+    
+    <xsl:variable name="CHECK-CUSTOM-OPT">
+	<xsl:value-of select="custoptions:checkFullText($FULLTEXT, $FULLTEXT-LINK, $CUST-ID, //PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/DO , //PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/DOC/DB/DBMASK)" />
+    </xsl:variable>
+    
+    <xsl:if test="(string(//LOCALHOLDINGS) or ($CHECK-CUSTOM-OPT ='true') or string(//LHL))">
       <tr>
         <td colspan="4"><img src="/engresources/images/s.gif" border="0" height="15"/></td>
         <td bgcolor="#C3C8D1" colspan="7">
@@ -452,15 +466,8 @@
       </tr>
     </xsl:if>
 
-    <xsl:variable name="FULLTEXT">
-      <xsl:value-of select="//FULLTEXT" />
-    </xsl:variable>
-    <xsl:variable name="FULLTEXT-LINK">
-      <xsl:value-of select="//PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/FT/@FTLINK" />
-    </xsl:variable>
-
     <xsl:choose>
-      <xsl:when test="(($FULLTEXT='true') and ($FULLTEXT-LINK = 'Y')) or ($FULLTEXT-LINK = 'A')">
+      <xsl:when test="($CHECK-CUSTOM-OPT ='true')">
         <tr>
           <td colspan="4">
             <img src="/engresources/images/s.gif" border="0" height="30" />
