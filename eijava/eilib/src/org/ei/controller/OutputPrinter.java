@@ -16,6 +16,7 @@ import javax.xml.transform.stream.StreamSource;
 
 import org.ei.session.SessionID;
 import org.ei.session.UserSession;
+import org.ei.session.User;
 import org.ei.util.*;
 import org.ei.xml.TransformerBroker;
 
@@ -109,13 +110,17 @@ public class OutputPrinter
 
     public void print(String styleSheetURL,
                       InputStream xmlStream,
-                      String sessionID)
+                      UserSession session)
         throws Exception
     {
 
+			String sessionID = (session.getSessionID()).toString();
+			User user = session.getUser();
+			String customerID = user.getCustomerID();
             setSessionCookie(sessionID);
             TransformerBroker tBroker = TransformerBroker.getInstance();
             Transformer transformer = tBroker.getTransformer(styleSheetURL);
+            transformer.setParameter("CUST-ID", customerID);
 
             if(this.mimeType.indexOf("text") == 0)
             {
