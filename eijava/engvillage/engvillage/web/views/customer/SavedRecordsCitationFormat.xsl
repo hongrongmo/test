@@ -8,7 +8,8 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:html="http://www.w3.org/TR/REC-html40"
     xmlns:java="java:java.net.URLEncoder"
-    exclude-result-prefixes="java html xsl"
+    xmlns:custoptions="java:org.ei.fulldoc.FullTextOptions"
+    exclude-result-prefixes="java html xsl custoptions"
 >
 
 <xsl:output method="html" indent="no"/>
@@ -24,6 +25,9 @@
 <!--- end of XSL include files -->
 
 <xsl:include href="common/CitationResults.xsl" />
+
+<xsl:param name="CUST-ID">0</xsl:param>
+
 
 <xsl:variable name="DATABASE-MASK">
         <xsl:value-of select="//DBMASK"/>
@@ -235,13 +239,16 @@
                 <xsl:apply-templates select="EI-DOCUMENT"/>
             </td>
         </tr>
-
-        <xsl:if test="((($FULLTEXT='true') and ($FULLTEXT-LINK = 'Y')) or ($FULLTEXT-LINK = 'A')) or ($LOCALHOLDINGS-CITATION='true')" >
+        
+	<xsl:variable name="CHECK-CUSTOM-OPT">
+		<xsl:value-of select="custoptions:checkFullText($FULLTEXT, $FULLTEXT-LINK, $CUST-ID, EI-DOCUMENT/DO, EI-DOCUMENT/DOC/DB/DBMASK)" />
+	</xsl:variable>
+        <xsl:if test="($CHECK-CUSTOM-OPT ='true') or ($LOCALHOLDINGS-CITATION='true')" >
              <tr>
                  <td valign="bottom" colspan="4" height="30"><img src="/engresources/images/s.gif" border="0" height="30"/></td>
                  <td valign="middle" align="left">
 
-                <xsl:if test="(($FULLTEXT='true') and ($FULLTEXT-LINK = 'Y')) or ($FULLTEXT-LINK = 'A')">
+                <xsl:if test="($CHECK-CUSTOM-OPT ='true')">
 	                  <a href="" onclick="window.open('/controller/servlet/Controller?CID=FullTextLink&amp;docID={$DOC-ID}','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable');return false"><img src="/engresources/images/av.gif" border="0" /></a>
 		                  <xsl:if test="(($LOCALHOLDINGS-CITATION='true') and (count(LOCAL-HOLDINGS) > 0))">
 			                    <A CLASS="MedBlackText">&#160; - &#160;</A>
