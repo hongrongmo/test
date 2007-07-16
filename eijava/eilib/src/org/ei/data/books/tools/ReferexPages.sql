@@ -167,3 +167,10 @@ delete from book_pages_s300 where BN13 IN (select unique(BOOK_PAGES_s300.BN13) f
 
 
 select count(unique(BN13)) from book_pages_s300rds.sql
+
+Isolate the non-overlapping S300 files from the original WOBLS
+--------------------------------------------------------------------------------------
+/* This example finds all rows in book_pages_s300 with an id value that is not present in WOBL or 406/7 */ 
+SELECT S300S.bn13 FROM S300S
+  LEFT JOIN WOBLS ON S300S.BN13=WOBLS.BN13
+  WHERE WOBLS.bn13 IS NULL;
