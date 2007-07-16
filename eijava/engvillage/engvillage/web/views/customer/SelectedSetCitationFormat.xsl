@@ -5,7 +5,9 @@
 	xmlns:java="java:java.net.URLEncoder"
 	xmlns:resolver="org.ei.gui.InternalResolver"
 	xmlns:DD="java:org.ei.domain.DatabaseDisplayHelper"
-	exclude-result-prefixes="java html xsl DD"
+	xmlns:custoptions="java:org.ei.fulldoc.FullTextOptions"
+	
+	exclude-result-prefixes="java html xsl DD custoptions"
 >
 
 <xsl:output method="html" indent="no"/>
@@ -22,6 +24,8 @@
 <!--- end of XSL include files -->
 
 <xsl:include href="common/CitationResults.xsl" />
+
+<xsl:param name="CUST-ID">0</xsl:param>
 
 <xsl:variable name="RESULTS-DATABASE">
   <xsl:value-of select="/PAGE/DBMASK"/>
@@ -307,26 +311,31 @@
 				<xsl:apply-templates select="EI-DOCUMENT"/>
 			</td>
 		</tr>
-		<xsl:if test="((($FULLTEXT='true') and ($FULLTEXT-LINK = 'Y')) or ($FULLTEXT-LINK = 'A')) or ($LOCALHOLDINGS-CITATION='true')" >
+		
+	<xsl:variable name="CHECK-CUSTOM-OPT">
+		<xsl:value-of select="custoptions:checkFullText($FULLTEXT, $FULLTEXT-LINK, $CUST-ID, EI-DOCUMENT/DO, EI-DOCUMENT/DOC/DB/DBMASK)" />
+	</xsl:variable>
+	<xsl:if test="(($CHECK-CUSTOM-OPT ='true') or ($LOCALHOLDINGS-CITATION='true'))" >
         <tr>
           <td valign="bottom" colspan="4" height="30"><img src="/engresources/images/spacer.gif" border="0" height="30"/></td>
           <td valign="middle" align="left">
-    				<xsl:if test="(($FULLTEXT='true') and ($FULLTEXT-LINK = 'Y')) or ($FULLTEXT-LINK = 'A')">
-                <a href="" onclick="window.open('/controller/servlet/Controller?CID=FullTextLink&amp;docID={$DOC-ID}','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable');return false"><img src="/engresources/images/av.gif" border="0" /></a>
-    				</xsl:if>
 
-    				<xsl:if test="($LOCALHOLDINGS-CITATION='true')">
-  				    <xsl:apply-templates select="LOCAL-HOLDINGS" mode="CIT">
-  					    <xsl:with-param name="vISSN"><xsl:value-of select="EI-DOCUMENT/SN"/></xsl:with-param>
-  					    <xsl:with-param name="FULLTEXT-LINK">
-          				<xsl:choose>
-                    <xsl:when test="($FULLTEXT-LINK = 'A')">Y</xsl:when>
-                    <xsl:when test="($FULLTEXT='true')"><xsl:value-of select="$FULLTEXT-LINK"/></xsl:when>
-    					      <xsl:otherwise>N</xsl:otherwise>
-          				</xsl:choose>
-                </xsl:with-param>
-  				    </xsl:apply-templates>
-  	  			</xsl:if>
+     		
+     		<xsl:if test="($CHECK-CUSTOM-OPT ='true')">
+                	<a href="" onclick="window.open('/controller/servlet/Controller?CID=FullTextLink&amp;docID={$DOC-ID}','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable');return false"><img src="/engresources/images/av.gif" border="0" /></a>
+    		</xsl:if>
+
+		<xsl:if test="($LOCALHOLDINGS-CITATION='true')">
+			<xsl:apply-templates select="LOCAL-HOLDINGS" mode="CIT">
+				<xsl:with-param name="vISSN"><xsl:value-of select="EI-DOCUMENT/SN"/></xsl:with-param>
+				<xsl:with-param name="FULLTEXT-LINK">
+					<xsl:choose>
+						<xsl:when test="($CHECK-CUSTOM-OPT ='true')">Y</xsl:when>
+						<xsl:otherwise>N</xsl:otherwise>
+					</xsl:choose>
+				</xsl:with-param>
+			</xsl:apply-templates>
+		</xsl:if>
           </td>
         </tr>
 		</xsl:if>
