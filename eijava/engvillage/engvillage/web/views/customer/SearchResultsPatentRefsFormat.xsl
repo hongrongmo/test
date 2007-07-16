@@ -14,7 +14,8 @@
   xmlns:srt="java:org.ei.domain.Sort"
   xmlns:bit="java:org.ei.util.BitwiseOperators"
   xmlns:xslcid="java:org.ei.domain.XSLCIDHelper"
-  exclude-result-prefixes="java html xsl DD srt bit xslcid">
+  xmlns:custoptions="java:org.ei.fulldoc.FullTextOptions"
+  exclude-result-prefixes="java html xsl DD srt bit xslcid custoptions">
 
   <xsl:output method="html" indent="no" />
   <xsl:strip-space elements="html:* xsl:*" />
@@ -26,6 +27,9 @@
   <xsl:include href="DeDupControl.xsl" />
   <xsl:include href="common/CitationResults.xsl" />
   <xsl:include href="LocalHolding.xsl" />
+  
+  <xsl:param name="CUST-ID">0</xsl:param>
+  
   <xsl:variable name="CID">
     <xsl:value-of select="//PAGE/CID" />
   </xsl:variable>
@@ -661,7 +665,12 @@
             <A CLASS="MedBlackText">&#160; - &#160;</A>
             <a title="Show patents that reference this patent" class="LgBlueLink" HREF="/controller/servlet/Controller?CID={$CID-PREFIX}CitationFormat&amp;{$CITEDBY-QSTR}&amp;yearselect=yearrange&amp;searchtype={$SEARCH-TYPE}&amp;sort=yr">Cited by</a>&nbsp;<a class="MedBlackText">(<xsl:value-of select="$CIT-CNT" />)</a>
           </xsl:if>
-          <xsl:if test="(($FULLTEXT='true') and ($FULLTEXT-LINK = 'Y')) or ($FULLTEXT-LINK = 'A')">
+          
+	  <xsl:variable name="CHECK-CUSTOM-OPT">
+		<xsl:value-of select="custoptions:checkFullText($FULLTEXT, $FULLTEXT-LINK, $CUST-ID, EI-DOCUMENT/DO, EI-DOCUMENT/DOC/DB/DBMASK)" />
+	  </xsl:variable> 
+	  
+           <xsl:if test="($CHECK-CUSTOM-OPT ='true')">
             <a class="MedBlackText">&#160; - &#160;</a>
             <a title="Full-text" onclick="window.open('/controller/servlet/Controller?CID=FullTextLink&amp;docID={$DOC-ID}','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable');return false">
               <img id="ftimg" src="/engresources/images/av.gif" alt="Full-text"/></a>
@@ -972,8 +981,10 @@
             </xsl:if>
           </xsl:when>
         </xsl:choose>
-
-        <xsl:if test="(($FULLTEXT='true') and ($FULLTEXT-LINK = 'Y')) or ($FULLTEXT-LINK = 'A')">
+        <xsl:variable name="CHECK-CUSTOM-OPT">
+ 		<xsl:value-of select="custoptions:checkFullText($FULLTEXT, $FULLTEXT-LINK, $CUST-ID, EI-DOCUMENT/DO, EI-DOCUMENT/DOC/DB/DBMASK)" />
+ 	</xsl:variable>
+        <xsl:if test="($CHECK-CUSTOM-OPT ='true')">
           <xsl:if test="not((substring($DOC-ID,0,4)) ='ref')">
             <A CLASS="MedBlackText">&#160; - &#160;</A>
           </xsl:if>
