@@ -5,9 +5,11 @@
   xmlns:java="java:java.net.URLEncoder"
   xmlns:ti="java:org.ei.query.base.HitHighlightFinisher"
   xmlns:book="java:org.ei.books.BookDocument"
-  exclude-result-prefixes="java html xsl ti book">
+  xmlns:custoptions="java:org.ei.fulldoc.FullTextOptions"
+  exclude-result-prefixes="java html xsl ti book custoptions">
 
   <xsl:strip-space elements="html:* xsl:*" />
+  <xsl:param name="CUST-ID">0</xsl:param>
 
   <xsl:variable name="SELECTED-DB"><xsl:value-of select="//DATABASE"/></xsl:variable>
   <xsl:variable name="BOOKS_OPEN_WINDOW_PARAMS">height=800,width=700,status=yes,resizable,scrollbars=1,menubar=no</xsl:variable>
@@ -134,7 +136,7 @@
       </xsl:choose>
     </xsl:variable>
 
-    <xsl:variable name="NEXTURL">CID=viewSavedFolders&amp;docid=<xsl:value-of select="$DOC-ID" />&amp;database=<xsl:value-of select="$SELECTED-DB" /></xsl:variable>
+    <xsl:variable name="NEXTURL">CID=viewSavedFolders&amp;docid=<xsl:value-of select="$DOC-ID" />&amp;database=<xsl:value-of select="$ENCODED-DATABASE" /></xsl:variable>
 
     <!-- Start of table for resultsmanager. -->
     <center>
@@ -218,8 +220,13 @@
                 <A class="MedBlackText">&#160; - &#160;</A>
                 <a title="Show patents that reference this patent" class="LgBlueLink" href="/controller/servlet/Controller?{$CITEDBY-QSTR}&amp;yearselect=yearrange&amp;searchtype={$SEARCH-TYPE}&amp;sort=yr">Cited by</a>&#160;<a class="MedBlackText">(<xsl:value-of select="$CIT-CNT" />)</a>
               </xsl:if>
+              
+	      <xsl:variable name="CHECK-CUSTOM-OPT">
+	        <xsl:value-of select="custoptions:checkFullText($FULLTEXT, $FULLTEXT-LINK, $CUST-ID, //PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/DO , //PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/DOC/DB/DBMASK)" />
+	      </xsl:variable>
+                
               <!-- there will always be Abs. & Det. text/links preceding this image -->
-              <xsl:if test="(($FULLTEXT='true') and ($FULLTEXT-LINK = 'Y')) or ($FULLTEXT-LINK = 'A')">
+              <xsl:if test="($CHECK-CUSTOM-OPT ='true')">
                 <a class="MedBlackText">&#160; - &#160;</a>
                 <a title="Full-text" onclick="window.open('/controller/servlet/Controller?CID=FullTextLink&amp;docID={$DOC-ID}','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable');return false">
                   <img id="ftimg" src="/engresources/images/av.gif" alt="Full-text"/></a>
@@ -239,8 +246,8 @@
             <a ttile="Save to Folder">
               <xsl:attribute name="href">
                 <xsl:choose>
-                  <xsl:when test="($PERSONALIZATION='true')">/controller/servlet/Controller?EISESSION=$SESSIONID&amp;CID=viewSavedFolders&amp;database=<xsl:value-of select="$SELECTED-DB" />&amp;backurl=<xsl:value-of select="$BACKURL" />&amp;docid=<xsl:value-of select="$DOC-ID" /></xsl:when>
-                  <xsl:otherwise>/controller/servlet/Controller?EISESSION=$SESSIONID&amp;CID=personalLoginForm&amp;searchid=<xsl:value-of select="$SEARCH-ID" />&amp;count=<xsl:value-of select="$CURRENT-PAGE" />&amp;searchtype=<xsl:value-of select="$SEARCH-TYPE" />&amp;displaylogin=true&amp;database=<xsl:value-of select="$SELECTED-DB" />&amp;nexturl=<xsl:value-of select="java:encode($NEXTURL)" />&amp;backurl=<xsl:value-of select="$BACKURL" /></xsl:otherwise>
+                  <xsl:when test="($PERSONALIZATION='true')">/controller/servlet/Controller?EISESSION=$SESSIONID&amp;CID=viewSavedFolders&amp;database=<xsl:value-of select="$ENCODED-DATABASE" />&amp;backurl=<xsl:value-of select="$BACKURL" />&amp;docid=<xsl:value-of select="$DOC-ID" /></xsl:when>
+                  <xsl:otherwise>/controller/servlet/Controller?EISESSION=$SESSIONID&amp;CID=personalLoginForm&amp;searchid=<xsl:value-of select="$SEARCH-ID" />&amp;count=<xsl:value-of select="$CURRENT-PAGE" />&amp;searchtype=<xsl:value-of select="$SEARCH-TYPE" />&amp;displaylogin=true&amp;database=<xsl:value-of select="$ENCODED-DATABASE" />&amp;nexturl=<xsl:value-of select="java:encode($NEXTURL)" />&amp;backurl=<xsl:value-of select="$BACKURL" /></xsl:otherwise>
                 </xsl:choose>
               </xsl:attribute><img style="vertical-align: middle;" src="/engresources/images/sv.gif" border="0" /></a>
           </td>
