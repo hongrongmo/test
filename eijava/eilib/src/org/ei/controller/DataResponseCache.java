@@ -232,7 +232,7 @@ public class DataResponseCache
                     printer.setComments(comments);
                     printer.print(getDisplayURL(cd.getDisplayURL(),viewURL),
                                   inStream,
-                                  (nsession.getSessionID()).toString());
+                                  nsession);
                 }
                 else
                 {
@@ -248,7 +248,7 @@ public class DataResponseCache
                     long begin = System.currentTimeMillis();
                     printer.print(cd.getDisplayURL(),
                                   bi,
-                                  (nsession.getSessionID()).toString());
+                                  nsession);
 
                     // Get the records and transform them one at a time
                     byte[] record = null;
@@ -260,7 +260,7 @@ public class DataResponseCache
 
                         printer.print(cd.getDisplayURL(),
                                       bi,
-                                      (nsession.getSessionID()).toString());
+                                      nsession);
 						i++;
 						if(i >=450)
 						{
@@ -276,7 +276,7 @@ public class DataResponseCache
                     bi = new ByteArrayInputStream(footer,0, bufferIndex);
                     printer.print(cd.getDisplayURL(),
                                   bi,
-                                  (nsession.getSessionID()).toString());
+                                  nsession);
                     //long end = System.currentTimeMillis();
                     //long dif = end - begin;
                     //System.out.println("Record Transform Time:"+ dif);
