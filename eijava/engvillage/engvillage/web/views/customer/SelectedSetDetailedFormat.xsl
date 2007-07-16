@@ -7,7 +7,8 @@
   xmlns:DD="java:org.ei.domain.DatabaseDisplayHelper"
   xmlns:resolver="org.ei.gui.InternalResolver"
   xmlns:book="java:org.ei.books.BookDocument"
-  exclude-result-prefixes="schar java html xsl DD"
+  xmlns:custoptions="java:org.ei.fulldoc.FullTextOptions"
+  exclude-result-prefixes="schar java html xsl DD custoptions"
 >
 
 <xsl:output method="html" indent="no" doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
@@ -21,6 +22,7 @@
 <xsl:include href="Footer.xsl"/>
 <xsl:include href="LocalHolding.xsl" />
 
+<xsl:param name="CUST-ID">0</xsl:param>
 
 <xsl:variable name="ENCODED-RESULTS-NAV">
 	<xsl:value-of select="/PAGE/PAGE-NAV/RESULTS-NAV"/>
@@ -292,8 +294,12 @@
     <xsl:variable name="FULLTEXT-LINK">
       <xsl:value-of select="EI-DOCUMENT/FT/@FTLINK"/>
     </xsl:variable>
+    
+    <xsl:variable name="CHECK-CUSTOM-OPT">
+      <xsl:value-of select="custoptions:checkFullText($FULLTEXT, $FULLTEXT-LINK, $CUST-ID, EI-DOCUMENT/DO, EI-DOCUMENT/DOC/DB/DBMASK)" />
+    </xsl:variable>
 
-    <xsl:if test="($FULLTEXT='true') or ($LHL='true') or ($LOCALHOLDINGS='true')">
+    <xsl:if test="($CHECK-CUSTOM-OPT='true') or ($LHL='true') or ($LOCALHOLDINGS='true')">
       <tr>
         <td valign="top" colspan="4"><img src="/engresources/images/s.gif" border="0"/></td>
         <td valign="top" align="left" bgcolor="#C3C8D1"><a class="MedBlackText"><b>&#160; Full-text and Local Holdings Links</b></a></td>
@@ -310,7 +316,7 @@
         </tr>
       </xsl:if>
 
-      <xsl:if test="(($FULLTEXT='true') and ($FULLTEXT-LINK = 'Y')) or ($FULLTEXT-LINK = 'A')" >
+      <xsl:if test="($CHECK-CUSTOM-OPT ='true')" >
         <tr>
           <td valign="top" colspan="4"><img src="/engresources/images/s.gif" height="30" border="0"/></td>
           <td align="left"><a href="" onclick="window.open('/controller/servlet/Controller?CID=FullTextLink&amp;docID={$DOC-ID}','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable');return false"><img name='fullDocImageCit'  src="/engresources/images/av.gif" border="0" /></a></td>
