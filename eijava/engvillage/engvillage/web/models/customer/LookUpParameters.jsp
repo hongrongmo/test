@@ -202,6 +202,7 @@
      if((selectedDbMask & PAG) != PAG &&
         (selectedDbMask & US_PATENTS) != US_PATENTS &&
         (selectedDbMask & EU_PATENTS) != EU_PATENTS &&
+        (selectedDbMask & EPT) != EPT &&
         (selectedDbMask & NTIS) != NTIS)
      {
 %>
