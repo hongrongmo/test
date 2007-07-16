@@ -12,7 +12,8 @@
     xmlns:srt="java:org.ei.domain.Sort"
     xmlns:bit="java:org.ei.util.BitwiseOperators"
     xmlns:xslcid="java:org.ei.domain.XSLCIDHelper"
-    exclude-result-prefixes="java html xsl DD srt bit xslcid"
+    xmlns:custoptions="java:org.ei.fulldoc.FullTextOptions"
+    exclude-result-prefixes="java html xsl DD srt bit xslcid custoptions"
 >
   <xsl:include href="Header.xsl" />
   <xsl:include href="GlobalLinks.xsl" />
@@ -25,6 +26,8 @@
 
   <xsl:output method="html" indent="no" doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
   <xsl:strip-space elements="html:* xsl:*" />
+
+<xsl:param name="CUST-ID">0</xsl:param>
 
 
 <xsl:variable name="FULLTEXT"><xsl:value-of select="//FULLTEXT" /></xsl:variable>
@@ -236,7 +239,7 @@
     <xsl:variable name="DATABASE-ID">
       <xsl:value-of select="EI-DOCUMENT/DOC/DB/ID"/>
     </xsl:variable>
-
+    
     <xsl:variable name="INDEX">
       <xsl:value-of select="EI-DOCUMENT/DOC/HITINDEX"/>
     </xsl:variable>
@@ -388,8 +391,12 @@
               <A title="Show patents that reference this patent" class="LgBlueLink" HREF="/controller/servlet/Controller?CID={$CID-PREFIX}CitationFormat&amp;{$CITEDBY-QSTR}&amp;yearselect=yearrange&amp;searchtype={$SEARCH-TYPE}&amp;sort=yr">Cited by</A>
               &nbsp;<A class="MedBlackText">(<xsl:value-of select="$CIT-CNT"/>)</A>
             </xsl:if>
-
-            <xsl:if test="(($FULLTEXT='true') and ($FULLTEXT-LINK = 'Y')) or ($FULLTEXT-LINK = 'A')">
+            
+	    <xsl:variable name="CHECK-CUSTOM-OPT">
+		<xsl:value-of select="custoptions:checkFullText($FULLTEXT, $FULLTEXT-LINK, $CUST-ID, EI-DOCUMENT/DO ,EI-DOCUMENT/DOC/DB/DBMASK)" />
+	    </xsl:variable>
+	    
+            <xsl:if test="($CHECK-CUSTOM-OPT ='true')">
               <a class="MedBlackText">&#160; - &#160;</a>
               <a class="LgBlueLink">
                 <xsl:attribute name="TITLE">Full-text</xsl:attribute>
