@@ -6,8 +6,10 @@
   xmlns:java="java:java.net.URLEncoder"
   xmlns:schar="java:org.ei.query.base.SpecialCharHandler"
   xmlns:book="java:org.ei.books.BookDocument"
-  exclude-result-prefixes="schar java html xsl"
+  xmlns:custoptions="java:org.ei.fulldoc.FullTextOptions"
+  exclude-result-prefixes="schar java html xsl custoptions"
 >
+
 
 <xsl:output method="html" indent="no" doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
 <xsl:strip-space elements="html:* xsl:*" />
@@ -21,6 +23,9 @@
 <xsl:include href="LocalHolding.xsl" />
 
 <xsl:include href="common/AbstractResults.xsl" />
+
+<xsl:param name="CUST-ID">0</xsl:param>
+
 
 <xsl:variable name="DATABASE-MASK">
     <xsl:value-of select="//DBMASK"/>
@@ -189,8 +194,12 @@
     <xsl:variable name="LOCALHOLDINGS">
       <xsl:value-of select="//LOCALHOLDINGS"/>
     </xsl:variable>
-
-    <xsl:if test="($FULLTEXT='true') or ($LHL='true') or ($LOCALHOLDINGS='true')">
+	
+    <xsl:variable name="CHECK-CUSTOM-OPT">
+	<xsl:value-of select="custoptions:checkFullText($FULLTEXT, $FULLTEXT-LINK, $CUST-ID, EI-DOCUMENT/DO, EI-DOCUMENT/DOC/DB/DBMASK)" />
+    </xsl:variable>
+	
+    <xsl:if test=" (($CHECK-CUSTOM-OPT ='true') or ($LHL='true') or ($LOCALHOLDINGS='true'))">
       <tr>
         <td valign="top" colspan="4" height="15"><img src="/engresources/images/s.gif" border="0"/></td>
         <td valign="top" height="15" bgcolor="#C3C8D1"><a CLASS="MedBlackText"><b>&#160; Full-text and Local Holdings Links</b></a></td>
@@ -209,9 +218,9 @@
           <td valign="top" colspan="5" height="4"><img src="/engresources/images/s.gif" border="0" height="4"/></td>
         </tr>
       </xsl:if>
-
+  
       <xsl:choose>
-        <xsl:when test="(($FULLTEXT='true') and ($FULLTEXT-LINK = 'Y')) or ($FULLTEXT-LINK = 'A')" >
+        <xsl:when test="($CHECK-CUSTOM-OPT='true')" >
           <tr>
             <td valign="bottom" colspan="4" height="30"><img src="/engresources/images/s.gif" border="0" height="30"/></td>
             <td valign="middle" align="left">
