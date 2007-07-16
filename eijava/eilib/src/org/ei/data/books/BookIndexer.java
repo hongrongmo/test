@@ -49,15 +49,12 @@ public class BookIndexer
         String username = "AP_PRO1"; //args[2];
         String password = "ei3it"; //args[3];
 
-		List terms = new ArrayList();
+        List terms = new ArrayList();
         String strDefault = "WOBL";
-		if(args != null) {
+		    if(args != null) {
 		    if(args.length >= 1 && args[0] != null) {
-                strDefault = args[0];
-                if(!strDefault.equals("406")) {
-                    System.exit(0);
-                }
-            }
+            strDefault = args[0];
+          }
         }
         strDefault = strDefault.toUpperCase();
         System.out.println("Using table BOOK_PAGES_" + strDefault);
@@ -106,18 +103,18 @@ public class BookIndexer
                     // TODO Auto-generated catch block
                     e.printStackTrace();
                 }
-            }                          
+            }
         }
 
 		try
 		{
             // "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI", "AP_EV_SEARCH", "ei3it"
-            
+
             url = "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI"; //args[1];
             username = "AP_PRO1"; //args[2];
             password = "ei3it"; //args[3];
-			con = DriverManager.getConnection(url,username,password);
-			Map books = new HashMap();
+            con = DriverManager.getConnection(url,username,password);
+            Map books = new HashMap();
 
             stmt = con.createStatement();
             if(!strDefault.equals("WOBL")) {
@@ -126,7 +123,7 @@ public class BookIndexer
             else {
                 rs = stmt.executeQuery("select bn13, ti from BOOKS_991");// where BN13='9780884154303'");
             }
-            
+
 			while(rs.next())
 			{
 				String bn = rs.getString("bn13");
@@ -140,7 +137,7 @@ public class BookIndexer
             if(stmt != null) {
                 close(stmt);
             }
-            
+
 			Iterator booksIt = (books.keySet()).iterator();
 
 			PreparedStatement pstmt1 = null;
@@ -190,7 +187,7 @@ public class BookIndexer
             }
             if(pstmt1 != null) {
                 close(pstmt1);
-            }		
+            }
         }
         catch(SQLException e) {
             e.printStackTrace();
@@ -203,7 +200,7 @@ public class BookIndexer
                     // TODO Auto-generated catch block
                     e.printStackTrace();
                 }
-            }     
+            }
         }
         System.out.println("commit;");
 	}
@@ -227,7 +224,7 @@ public class BookIndexer
             e.printStackTrace();
         }
         finally {
-            
+
         }
         return allPageTxt.toString();
     }
