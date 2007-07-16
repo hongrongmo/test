@@ -5,7 +5,8 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:html="http://www.w3.org/TR/REC-html40"
     xmlns:java="java:java.net.URLEncoder"
-    exclude-result-prefixes="java html xsl"
+    xmlns:custoptions="java:org.ei.fulldoc.FullTextOptions"
+    exclude-result-prefixes="java html xsl custoptions"
 >
   <xsl:output method="html" indent="no" doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
   <xsl:strip-space elements="html:* xsl:*" />
@@ -23,7 +24,9 @@
   <xsl:include href="LocalHolding.xsl" />
 
   <xsl:include href="common/DetailedResults.xsl" />
-
+  <!-- 
+<xsl:param name="CUST-ID">0</xsl:param>
+ -->
 <xsl:template match="PAGE">
 
     <xsl:variable name="SESSION-ID">
@@ -472,8 +475,12 @@
           <xsl:value-of select="//PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/FT/@FTLINK"/>
         </xsl:variable>
 
+	<xsl:variable name="CHECK-CUSTOM-OPT">
+		<xsl:value-of select="custoptions:checkFullText($FULLTEXT, $FULLTEXT-LINK, $CUST-ID, EI-DOCUMENT/DO , EI-DOCUMENT/DOC/DB/DBMASK)" />
+	</xsl:variable>
+
         <xsl:choose>
-          <xsl:when test="(($FULLTEXT='true') and ($FULLTEXT-LINK = 'Y')) or ($FULLTEXT-LINK = 'A')">
+          <xsl:when test="($CHECK-CUSTOM-OPT ='true')">
           <tr>
             <td colspan="4" ><img src="/engresources/images/s.gif" border="0" height="30"/></td>
             <td align="left" colspan="3">
