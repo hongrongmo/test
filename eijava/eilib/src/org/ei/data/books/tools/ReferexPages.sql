@@ -176,5 +176,7 @@ SELECT S300S.bn13 FROM S300S
   LEFT JOIN WOBLS ON SUBSTR(S300S.BN13,1,13)=SUBSTR(WOBLS.BN13,1,13)
   WHERE WOBLS.bn13 IS NULL;
 
-
+Check Collection and Sub Collection Counts
+--------------------------------------------------------------------------------------
+select COUNT(*), VO, SUB FROM BOOKS_ALL GROUP BY VO, SUB
 
