@@ -170,7 +170,11 @@ select count(unique(BN13)) from book_pages_s300rds.sql
 
 Isolate the non-overlapping S300 files from the original WOBLS
 --------------------------------------------------------------------------------------
-/* This example finds all rows in book_pages_s300 with an id value that is not present in WOBL or 406/7 */ 
+/* This example finds all rows in book_pages_s300 with an id value that is not present in WOBL or 406/7 */
+/* I added the SUBSTR to catch the books in the WOBLS that have bn13's with Suffixes) */
 SELECT S300S.bn13 FROM S300S
-  LEFT JOIN WOBLS ON S300S.BN13=WOBLS.BN13
+  LEFT JOIN WOBLS ON SUBSTR(S300S.BN13,1,13)=SUBSTR(WOBLS.BN13,1,13)
   WHERE WOBLS.bn13 IS NULL;
+
+
+
