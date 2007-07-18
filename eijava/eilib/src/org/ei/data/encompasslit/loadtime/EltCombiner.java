@@ -17,6 +17,14 @@ import org.ei.util.StringUtil;
  * Window&gt;Preferences&gt;Java&gt;Code Generation&gt;Code and Comments
  */
 
+/**
+ * @author Tsolovye
+ *
+ */
+/**
+ * @author Tsolovye
+ *
+ */
 public class EltCombiner extends Combiner {
 
     Perl5Util perl = new Perl5Util();
@@ -146,7 +154,7 @@ public class EltCombiner extends Combiner {
 
                 String parsedCV = termBuilder.formatCT(cvsBuffer.toString());
 
-                rec.put(rec.CONTROLLED_TERMS, prepareMulti(termBuilder.getStandardTerms(parsedCV)));
+                rec.put(rec.CONTROLLED_TERMS, prepareMulti(termBuilder.getStandardTerms(parsedCV), true, false));
 
                 String parsedMH = termBuilder.formatCT(expandedMH);
 
@@ -187,12 +195,12 @@ public class EltCombiner extends Combiner {
                         authors.append(replaceNull(rs.getString("aut")));
                     }
 
-                    rec.put(EVCombinedRec.AUTHOR, prepareAuthor(StringUtil.replaceNonAscii(authors.toString())));
+                    rec.put(EVCombinedRec.AUTHOR, prepareAuthor(stripDelim(StringUtil.replaceNonAscii(authors.toString()))));
                 }
 
                 if (rs.getString("aaf") != null) {
 
-                    rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareMulti(StringUtil.replaceNonAscii(EltAusFormatter.formatAffiliation(replaceNull(rs.getString("aaf"))))));
+                    rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareMulti(StringUtil.replaceNonAscii(EltAusFormatter.formatAffiliation(stripDelim(replaceNull(rs.getString("aaf")), ";")))));
                 }
 
                 if (rs.getString("apicc") != null) {
@@ -322,15 +330,16 @@ public class EltCombiner extends Combiner {
                 rec.put(EVCombinedRec.VOLUME, getFirstNumber(rs.getString("vln")));
                 rec.put(EVCombinedRec.ISSUE, getFirstNumber(rs.getString("isn")));
                 rec.put(EVCombinedRec.STARTPAGE, getFirstNumber(rs.getString("pag")));
-
+                               
                 rec.put(EVCombinedRec.DATABASE, "elt");
                 rec.put(EVCombinedRec.LOAD_NUMBER, rs.getString("load_number"));
                 rec.put(EVCombinedRec.SOURCE, StringUtil.replaceNonAscii(replaceNull(rs.getString("so"))));
                 rec.put(EVCombinedRec.SECONDARY_SRC_TITLE, StringUtil.replaceNonAscii(replaceNull(rs.getString("secsti"))));
                 rec.put(EVCombinedRec.OTHER_ABSTRACT, StringUtil.replaceNonAscii(replaceNull(rs.getString("oab"))));
-                rec.put(EVCombinedRec.MAIN_TERM, prepareMulti(StringUtil.replaceNonAscii(replaceNull(rs.getString("apiams")))));
+                rec.put(EVCombinedRec.MAIN_TERM, prepareMulti(StringUtil.replaceNonAscii(stripAsterics(replaceNull(rs.getString("apiams"))))));
                 // rec.put(EVCombinedRec.EDITOR_AFFILIATION, StringUtil.replaceNonAscii(replaceNull(rs.getString("cna"))));
                 rec.put(EVCombinedRec.ABBRV_SRC_TITLE, StringUtil.replaceNonAscii(replaceNull(rs.getString("sta"))));
+                rec.put(EVCombinedRec.COUNTRY, prepareMulti(CountryFormatter.formatCountry(stripDelim(replaceNull(rs.getString("cna")),";")), false, true ));
 
                 this.writer.writeRec(rec);
             }
@@ -488,7 +497,7 @@ public class EltCombiner extends Combiner {
     }
 
     private String[] prepareAuthor(String aString) throws Exception {
-        StringBuffer buf = new StringBuffer();
+   
         AuthorStream astream = new AuthorStream(new ByteArrayInputStream(aString.getBytes()));
         String s = null;
         ArrayList list = new ArrayList();
@@ -512,17 +521,76 @@ public class EltCombiner extends Combiner {
         line = perl.substitute("s/\\(ed\\.\\)/ /gi", line);
         return line;
     }
+    
+    
+    
+    /*  
+    *   stripDelim overloaded method is used to 
+    *   remove delimiters from fields au, aff, cna   
+    *   second param String newDelim equal to ";" is provided for aff, cv, cna 
+    *   fields for delim substitution
+	*/
 
-    private String[] prepareMulti(String multiString) throws Exception {
+
+	private String stripDelim(String line) 
+    {
+    	return stripDelim(line, "");
+
+    }
+    
+    private String stripDelim(String line, String newDelim) 
+    {
+        line = perl.substitute("s/[|1-9:]+/"+newDelim+"/gi", line);
+        if(line.indexOf(";")==0)
+        {
+        	line = line.substring(1);
+        }
+        return line;
+    }
+    
+    /*  
+     *   stripAsterics method is used to 
+     *   remove asterisk from fields cv  and mh 
+ 	*/
+    
+    private String stripAsterics(String line) {
+        line = perl.substitute("s/\\*+//gi", line);
+        return line;
+    }
+    
+    /*  
+     *   prepareMulti method is now overloaded 
+     *   to achieve additional functioality for cv and country fields
+     *   for country fields it eliminates redundant data
+     *   for cv field it calls stripAsterics method to strip prefix asterisk
+ 	*/
+    
+    private String[] prepareMulti(String multiString) throws Exception
+    {
+    	return prepareMulti(multiString, false, false);
+    }
+    private String[] prepareMulti(String multiString , 
+    							  boolean isCV,
+    							  boolean isCountry) 
+    throws Exception 
+    {
         if (multiString != null) {
-
+        	
             AuthorStream astream = new AuthorStream(new ByteArrayInputStream(multiString.getBytes()));
             String s = null;
             ArrayList list = new ArrayList();
-            while ((s = astream.readAuthor()) != null) {
+            while ((s = astream.readAuthor()) != null) 
+            {
                 s = s.trim();
                 if (s.length() > 0) {
-                    list.add(s);
+                	if (isCV)
+                	{
+                		list.add(stripAsterics(s));
+                	}
+                	else if (!isCountry ||(isCountry && !list.contains(s)))
+                	{
+                		list.add(s);
+                	}
                 }
             }
             return (String[]) list.toArray(new String[1]);
@@ -533,6 +601,7 @@ public class EltCombiner extends Combiner {
 
         }
     }
+
     private String[] prepareMultiLinkedTerm(String multiString) throws Exception {
         if (multiString != null) {
 
@@ -567,5 +636,7 @@ public class EltCombiner extends Combiner {
             return str;
         }
     }
+    
+
 
 }
