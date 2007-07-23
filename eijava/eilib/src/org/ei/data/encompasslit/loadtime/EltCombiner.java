@@ -17,14 +17,7 @@ import org.ei.util.StringUtil;
  * Window&gt;Preferences&gt;Java&gt;Code Generation&gt;Code and Comments
  */
 
-/**
- * @author Tsolovye
- *
- */
-/**
- * @author Tsolovye
- *
- */
+
 public class EltCombiner extends Combiner {
 
     Perl5Util perl = new Perl5Util();
@@ -154,11 +147,11 @@ public class EltCombiner extends Combiner {
 
                 String parsedCV = termBuilder.formatCT(cvsBuffer.toString());
 
-                rec.put(rec.CONTROLLED_TERMS, prepareMulti(termBuilder.getStandardTerms(parsedCV), true, false));
+                rec.put(rec.CONTROLLED_TERMS, prepareMulti(termBuilder.getStandardTerms(parsedCV), true));
 
                 String parsedMH = termBuilder.formatCT(expandedMH);
 
-                rec.put(rec.MAIN_HEADING, prepareMulti(StringUtil.replaceNonAscii(termBuilder.removeRoleTerms(parsedMH))));
+                rec.put(rec.MAIN_HEADING, prepareMulti(StringUtil.replaceNonAscii(termBuilder.removeRoleTerms(parsedMH)), true));
 
                 rec.put(rec.NOROLE_TERMS, prepareMulti(termBuilder.getNoRoleTerms(parsedCV)));
                 rec.put(rec.REAGENT_TERMS, prepareMulti(termBuilder.getReagentTerms(parsedCV)));
@@ -336,10 +329,10 @@ public class EltCombiner extends Combiner {
                 rec.put(EVCombinedRec.SOURCE, StringUtil.replaceNonAscii(replaceNull(rs.getString("so"))));
                 rec.put(EVCombinedRec.SECONDARY_SRC_TITLE, StringUtil.replaceNonAscii(replaceNull(rs.getString("secsti"))));
                 rec.put(EVCombinedRec.OTHER_ABSTRACT, StringUtil.replaceNonAscii(replaceNull(rs.getString("oab"))));
-                rec.put(EVCombinedRec.MAIN_TERM, prepareMulti(StringUtil.replaceNonAscii(stripAsterics(replaceNull(rs.getString("apiams"))))));
+                rec.put(EVCombinedRec.MAIN_TERM, prepareMulti(StringUtil.replaceNonAscii(replaceNull(rs.getString("apiams"))), true));
                 // rec.put(EVCombinedRec.EDITOR_AFFILIATION, StringUtil.replaceNonAscii(replaceNull(rs.getString("cna"))));
                 rec.put(EVCombinedRec.ABBRV_SRC_TITLE, StringUtil.replaceNonAscii(replaceNull(rs.getString("sta"))));
-                rec.put(EVCombinedRec.COUNTRY, prepareMulti(CountryFormatter.formatCountry(stripDelim(replaceNull(rs.getString("cna")),";")), false, true ));
+                //rec.put(EVCombinedRec.COUNTRY, prepareMulti(CountryFormatter.formatCountry(stripDelim(replaceNull(rs.getString("cna")),";")), false, true ));
 
                 this.writer.writeRec(rec);
             }
@@ -526,24 +519,24 @@ public class EltCombiner extends Combiner {
     
     /*  
     *   stripDelim overloaded method is used to 
-    *   remove delimiters from fields au, aff, cna   
-    *   second param String newDelim equal to ";" is provided for aff, cv, cna 
+    *   remove delimiters from fields au, aff  
+    *   second param String newDelim equal to ";" is provided for aff, cv
     *   fields for delim substitution
-	*/
+    */
 
 
-	private String stripDelim(String line) 
+    private String stripDelim(String line) 
     {
-    	return stripDelim(line, "");
+        return stripDelim(line, "");
 
     }
     
     private String stripDelim(String line, String newDelim) 
     {
-        line = perl.substitute("s/[|1-9:]+/"+newDelim+"/gi", line);
+        line = perl.substitute("s/\\|+\\d+\\:+/"+newDelim+"/gi", line);
         if(line.indexOf(";")==0)
         {
-        	line = line.substring(1);
+            line = line.substring(1);
         }
         return line;
     }
@@ -551,31 +544,31 @@ public class EltCombiner extends Combiner {
     /*  
      *   stripAsterics method is used to 
      *   remove asterisk from fields cv  and mh 
- 	*/
+    */
     
-    private String stripAsterics(String line) {
+    private String stripAsterics(String line) 
+    {
         line = perl.substitute("s/\\*+//gi", line);
         return line;
     }
     
     /*  
      *   prepareMulti method is now overloaded 
-     *   to achieve additional functioality for cv and country fields
-     *   for country fields it eliminates redundant data
-     *   for cv field it calls stripAsterics method to strip prefix asterisk
- 	*/
+     *   to achieve additional functioality for cv , maing headings , main terms
+     *   it calls stripAsterics method to strip prefix asterisk
+    */
     
     private String[] prepareMulti(String multiString) throws Exception
     {
-    	return prepareMulti(multiString, false, false);
+        return prepareMulti(multiString, false);
     }
+    
     private String[] prepareMulti(String multiString , 
-    							  boolean isCV,
-    							  boolean isCountry) 
+                                  boolean removeAsterics) 
     throws Exception 
     {
         if (multiString != null) {
-        	
+            
             AuthorStream astream = new AuthorStream(new ByteArrayInputStream(multiString.getBytes()));
             String s = null;
             ArrayList list = new ArrayList();
@@ -583,14 +576,14 @@ public class EltCombiner extends Combiner {
             {
                 s = s.trim();
                 if (s.length() > 0) {
-                	if (isCV)
-                	{
-                		list.add(stripAsterics(s));
-                	}
-                	else if (!isCountry ||(isCountry && !list.contains(s)))
-                	{
-                		list.add(s);
-                	}
+                    if (removeAsterics)
+                    {
+                        list.add(stripAsterics(s));
+                    }
+                    else 
+                    {
+                        list.add(s);
+                    }
                 }
             }
             return (String[]) list.toArray(new String[1]);
