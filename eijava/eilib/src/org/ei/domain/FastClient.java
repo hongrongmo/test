@@ -63,6 +63,7 @@ public class FastClient
 			   mask == DatabaseConfig.INS_MASK ||
 			   mask == DatabaseConfig.GEO_MASK ||
 			   mask == DatabaseConfig.ELT_MASK ||
+			   mask == DatabaseConfig.EPT_MASK ||
 			   mask == DatabaseConfig.CBF_MASK
 			   )
 			{
@@ -83,9 +84,10 @@ public class FastClient
 		//TS -  and CBF
 		else if(EiNavigator.PN.equals(navid)) {
 			if(((mask & (DatabaseConfig.CPX_MASK +
-						 DatabaseConfig.ELT_MASK +
 						 DatabaseConfig.INS_MASK +
 						 DatabaseConfig.PAG_MASK +
+						 DatabaseConfig.ELT_MASK +
+						 DatabaseConfig.EPT_MASK +
 						 DatabaseConfig.CBF_MASK)) > 0)){
 				return true;
 			}
@@ -151,6 +153,12 @@ public class FastClient
 		// include PUC only if Patents are included
 		else if(EiNavigator.PUC.equals(navid)) {
 			if((mask & (DatabaseConfig.EUP_MASK + DatabaseConfig.UPA_MASK)) > 0) {
+				return true;
+			}
+		}
+		// include PEC only if Encomapss Pat are included
+		else if(EiNavigator.PAC.equals(navid)) {
+			if((mask & (DatabaseConfig.EPT_MASK )) > 0) {
 				return true;
 			}
 		}
