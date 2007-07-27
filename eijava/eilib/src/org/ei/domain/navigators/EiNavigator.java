@@ -108,9 +108,9 @@ public class EiNavigator
         navigatorNames.add(EiNavigator.PID);
 //        navigatorNames.add(EiNavigator.PCI);
 //        navigatorNames.add(EiNavigator.PK);
-//        navigatorNames.add(EiNavigator.PAC);
+        navigatorNames.add(EiNavigator.PAC);
 		navigatorNames.add(EiNavigator.FL);
-    navigatorNames.add(EiNavigator.ST);
+        navigatorNames.add(EiNavigator.ST);
 		navigatorNames.add(EiNavigator.PN);
 		navigatorNames.add(EiNavigator.KY);
 		navigatorNames.add(EiNavigator.BKT);
@@ -121,22 +121,60 @@ public class EiNavigator
     // 57351 = CPX + INS + NTI + GEO + EUP + UPA
     // 8199 = CPX + INS + NTI + GEO
     // 49152 = EUP + UPA
+    
+    
+
+    
     private static Map navigatorMasks = new HashMap();
     static {
-        navigatorMasks.put(EiNavigator.DB, new Integer(57351 + DatabaseConfig.PAG_MASK + DatabaseConfig.CBF_MASK));
-        navigatorMasks.put(EiNavigator.YR, new Integer(57351 + DatabaseConfig.CBF_MASK));
-        navigatorMasks.put(EiNavigator.CV, new Integer(57351 + DatabaseConfig.CBF_MASK));
-        navigatorMasks.put(EiNavigator.CL, new Integer(57351 + DatabaseConfig.PAG_MASK + DatabaseConfig.CBF_MASK));
-        navigatorMasks.put(EiNavigator.ST, new Integer(DatabaseConfig.PAG_MASK ));
-        navigatorMasks.put(EiNavigator.FL, new Integer(DatabaseConfig.PAG_MASK));
-        navigatorMasks.put(EiNavigator.PN,new Integer(3 + DatabaseConfig.PAG_MASK + DatabaseConfig.CBF_MASK));
-        navigatorMasks.put(EiNavigator.AU,new Integer(57351 + DatabaseConfig.PAG_MASK + DatabaseConfig.CBF_MASK));
-        navigatorMasks.put(EiNavigator.AF,new Integer(57351 + DatabaseConfig.CBF_MASK));
-        navigatorMasks.put(EiNavigator.DT,new Integer(57351 + DatabaseConfig.CBF_MASK));
-        navigatorMasks.put(EiNavigator.LA,new Integer(8199 + DatabaseConfig.CBF_MASK));
-        navigatorMasks.put(EiNavigator.CO,new Integer(57351 + DatabaseConfig.PAG_MASK + DatabaseConfig.CBF_MASK));
+        navigatorMasks.put(EiNavigator.DB, new Integer(57351 + 
+        								   DatabaseConfig.PAG_MASK + 
+        								   DatabaseConfig.CBF_MASK+
+        								   DatabaseConfig.EPT_MASK+
+        								   DatabaseConfig.ELT_MASK));
+        navigatorMasks.put(EiNavigator.YR, new Integer(57351 + 
+        										DatabaseConfig.CBF_MASK+
+        										DatabaseConfig.EPT_MASK+
+        										DatabaseConfig.ELT_MASK));
+        navigatorMasks.put(EiNavigator.CV, new Integer(57351 + 
+        									DatabaseConfig.CBF_MASK+
+        									DatabaseConfig.EPT_MASK+
+        									DatabaseConfig.ELT_MASK));
+        navigatorMasks.put(EiNavigator.CL, new Integer(57351 + 
+        									DatabaseConfig.PAG_MASK + 
+        									DatabaseConfig.CBF_MASK+
+        									DatabaseConfig.EPT_MASK+
+        									DatabaseConfig.ELT_MASK));
+        navigatorMasks.put(EiNavigator.ST, new Integer(DatabaseConfig.PAG_MASK +
+        									 DatabaseConfig.ELT_MASK));
+        navigatorMasks.put(EiNavigator.FL, new Integer(DatabaseConfig.PAG_MASK ));
+        navigatorMasks.put(EiNavigator.PN,new Integer(3 + 
+        									DatabaseConfig.PAG_MASK + 
+        									DatabaseConfig.CBF_MASK +
+        									DatabaseConfig.EPT_MASK +
+        									DatabaseConfig.ELT_MASK));
+        navigatorMasks.put(EiNavigator.AU,new Integer(57351 + 
+        									DatabaseConfig.PAG_MASK + 
+        									DatabaseConfig.CBF_MASK +
+        									DatabaseConfig.EPT_MASK +
+        									DatabaseConfig.ELT_MASK));
+        navigatorMasks.put(EiNavigator.AF,new Integer(57351 + 
+        									DatabaseConfig.CBF_MASK + 
+        									DatabaseConfig.EPT_MASK +
+        									DatabaseConfig.ELT_MASK));
+        navigatorMasks.put(EiNavigator.DT,new Integer(57351 + 
+        									DatabaseConfig.CBF_MASK +
+        									DatabaseConfig.ELT_MASK +
+        									DatabaseConfig.EPT_MASK));
+        navigatorMasks.put(EiNavigator.LA,new Integer(8199 + 
+        									DatabaseConfig.CBF_MASK +
+        									DatabaseConfig.EPT_MASK +
+        									DatabaseConfig.ELT_MASK));
+        navigatorMasks.put(EiNavigator.CO,new Integer(57351 + 
+        									DatabaseConfig.PAG_MASK + 
+        									DatabaseConfig.CBF_MASK));
         navigatorMasks.put(EiNavigator.PK,new Integer(0));
-        navigatorMasks.put(EiNavigator.PAC,new Integer(0));
+        navigatorMasks.put(EiNavigator.PAC,new Integer(DatabaseConfig.EPT_MASK));
         navigatorMasks.put(EiNavigator.PCI,new Integer(0));
         navigatorMasks.put(EiNavigator.PEC,new Integer(49152));
         navigatorMasks.put(EiNavigator.PID,new Integer(49152));
@@ -146,7 +184,9 @@ public class EiNavigator
         navigatorMasks.put(EiNavigator.BKT,new Integer(0));
         navigatorMasks.put(EiNavigator.BKS,new Integer(0));
     }
-    public static Map getNavigatorMasks() { return navigatorMasks; }
+    public static Map getNavigatorMasks() { 
+
+    	return navigatorMasks; }
 
     protected static Map fieldNames = new HashMap();
     static {
@@ -258,6 +298,7 @@ public class EiNavigator
 
 	public void setModifiers(List mods)
 	{
+
 		this.modifiers = mods;
 	}
     /**
@@ -424,6 +465,7 @@ public class EiNavigator
 
 		String[] navfields = nav.split(EiNavigator.NAV_DELIM);
 
+		
 		// Previous method toString() added empty Modifier list
 		// for Navigators with no modifiers (i.e DB sometimes)
 		// to ensure proper number of strings from split call
