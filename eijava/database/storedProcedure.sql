@@ -959,3 +959,96 @@
   end;
 /
 
+create or replace procedure update_backup_table is
+begin
+	insert into cpx_correction_backup select * from cpx_master_orig where ex in (select ex from cpx_correction_temp);
+	commit;
+exception
+when others then
+	rollback;
+	raise_application_error(-20101,'Error '||sqlerrm);
+end;
+
+/
+
+create or replace procedure update_master_table as
+
+v_ex    cpx_correction_temp.ex%type;
+counter number :=0;
+cursor getAccessionNumber is select ex from cpx_correction_temp;
+
+
+begin
+	open getAccessionNumber;
+	loop
+	    fetch getAccessionNumber into v_ex;
+	    begin
+	    	  delete from cpx_master_orig where ex=v_ex;
+	    	  insert into cpx_master_orig select * from cpx_correction_temp where ex = v_ex;
+	    	  commit;
+	    	  counter := counter+1;
+	    	  dbms_output.put_line(counter || ' ' || v_ex);
+	    exception
+	    when others then
+	          rollback;	          
+	          dbms_output.put_line('Error in procedure update_temp_table, error='||sqlerrm);
+	    end;
+	    exit when getAccessionNumber%notfound;
+	end loop;
+
+ exception
+	when others then
+	    rollback;
+	    RAISE_APPLICATION_ERROR(-20101, 'Error in procedure update_temp_table, error='||sqlerrm);
+end;
+
+/
+
+create or replace procedure update_temp_table(v_update_number number) is
+
+v_ex          cpx_correction_temp.ex%type;
+v_m_id        cpx_correction_temp.m_id%type;
+v_load_number cpx_correction_temp.load_number%type :=0;
+v_doi         cpx_correction_temp.do%type;
+v_t_doi       varchar2(128);
+v_pn          cpx_correction_temp.pn%type;
+v_pc          cpx_correction_temp.pc%type;
+v_ps          cpx_correction_temp.ps%type;
+v_py          cpx_correction_temp.py%type;
+i	      number :=0;
+
+cursor getSingleRecord is
+	select ex,m_id,load_number,do,pn,pc,ps,py from cpx_master_orig where ex in(select ex from cpx_correction_temp);
+	
+begin
+	open getSingleRecord;
+	loop	   
+	   fetch getSingleRecord into v_ex,v_m_id,v_load_number,v_doi,v_pn,v_pc,v_ps,v_py;
+	  
+	   select do into v_t_doi from cpx_correction_temp where ex=v_ex;
+	   
+	   if(v_t_doi is null or v_t_doi='') then
+	    	update cpx_correction_temp set m_id=v_m_id,load_number=v_load_number,do=v_doi,pn=v_pn,pc=v_pc,ps=v_ps,py=v_py,update_number=v_update_number where ex=v_ex;
+	   else
+	    	update cpx_correction_temp set m_id=v_m_id,load_number=v_load_number,pn=v_pn,pc=v_pc,ps=v_ps,py=v_py,update_number=v_update_number where ex=v_ex;
+	   end if;
+	    	    
+	    i :=i+1;
+	    if(i=200) then
+	    	commit;
+	    	i :=0;
+	    end if;
+	  
+	    exit when getSingleRecord%notfound;
+	end loop;
+	commit;
+	
+exception         
+WHEN OTHERS THEN
+	ROLLBACK;
+	dbms_output.put_line('error= '||sqlerrm);
+	RAISE_APPLICATION_ERROR(-20101, 'Error in procedure update_temp_table, error='||sqlerrm);
+
+
+end;
+/
