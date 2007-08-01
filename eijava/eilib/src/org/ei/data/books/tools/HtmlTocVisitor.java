@@ -45,7 +45,10 @@ public class HtmlTocVisitor extends BookVisitor {
         try {
             Iterator itrbkmks = marks.iterator();
             Bookmark bkmk = (Bookmark) itrbkmks.next();
-            if(bkmk.getTitle().startsWith(isbn)) {
+            if(bkmk.getTitle().toLowerCase().startsWith(isbn.toLowerCase())) {
+                bkmk.getChildren().accept(this);
+            }
+            else if(bkmk.getTitle().indexOf(".pdf") > 0) {
                 bkmk.getChildren().accept(this);
             }
             wrtr.write("\r\n<ul>\r\n");
