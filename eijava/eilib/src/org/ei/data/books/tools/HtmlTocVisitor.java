@@ -10,6 +10,7 @@ public class HtmlTocVisitor extends BookVisitor {
 
     Writer wrtr = null;
     String isbn = null;
+    String isbn13 = null;
     
     public HtmlTocVisitor() {
         
@@ -22,6 +23,7 @@ public class HtmlTocVisitor extends BookVisitor {
         try {
             wrtr = new PrintWriter(new FileOutputStream(filename));
             isbn = pdffile.getIsbn();
+            isbn13 = pdffile.getIsbn13();
             pdffile.getBookmarks().accept(this);
         } catch (IOException e) {
             // TODO Auto-generated catch block
@@ -41,10 +43,14 @@ public class HtmlTocVisitor extends BookVisitor {
 
     public void visit(Bookmarks marks) {
         try {
-            wrtr.write("\r\n<ul>\r\n");
             Iterator itrbkmks = marks.iterator();
+            Bookmark bkmk = (Bookmark) itrbkmks.next();
+            if(bkmk.getTitle().startsWith(isbn)) {
+                bkmk.getChildren().accept(this);
+            }
+            wrtr.write("\r\n<ul>\r\n");
             while (itrbkmks.hasNext()) {
-                Bookmark bkmk = (Bookmark) itrbkmks.next();
+                bkmk = (Bookmark) itrbkmks.next();
                 wrtr.write("<li>");
                 bkmk.accept(this);
                 wrtr.write("</li>");
@@ -66,7 +72,7 @@ public class HtmlTocVisitor extends BookVisitor {
             wrtr.write(mark.getTitle());
             wrtr.write("\"");
             wrtr.write(" href=\"javascript:loadFromToc('");
-            wrtr.write(isbn);
+            wrtr.write(isbn13);
             wrtr.write("',");
             wrtr.write(String.valueOf(mark.getPage()));
             wrtr.write(");void('');\">");
@@ -79,6 +85,5 @@ public class HtmlTocVisitor extends BookVisitor {
         
         mark.getChildren().accept(this);
     }
-
    
 }
