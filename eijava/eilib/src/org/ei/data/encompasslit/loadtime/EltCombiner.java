@@ -3,12 +3,17 @@ package org.ei.data.encompasslit.loadtime;
 import java.io.ByteArrayInputStream;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Hashtable;
 
 import org.apache.oro.text.perl.*;
 import org.apache.oro.text.regex.*;
 import org.ei.data.*;
+import org.ei.domain.DataDictionary;
 import org.ei.util.GUID;
 import org.ei.util.StringUtil;
+
+
+
 
 /*
  * Created on Apr 30, 2004
@@ -19,8 +24,10 @@ import org.ei.util.StringUtil;
 
 
 public class EltCombiner extends Combiner {
-
+	
+	private EltDocTypes eltDocTypes = new EltDocTypes();
     Perl5Util perl = new Perl5Util();
+    
 
     public static void main(String args[]) throws Exception {
         String url = args[0];
@@ -68,7 +75,7 @@ public class EltCombiner extends Combiner {
 
             rs =
                 stmt.executeQuery(
-                    "select M_ID,VLN,ISN, PAG, substr(pyr,1,4) as pyr , STI,CIP , AUT , TIE , TIF,MOT, SPD, SPT, AAF, LNA, ABS, STY, APICT, APICT1, APILT ,APILT1 , RNR, ISSN, PUB, ISBN,CNFNAM, CNFSTD, CNFEND, CNFVEN, CNFCTY, CNFCNY, CNFEDN, CNFEDO, CNFEDA, CNFCAT, CNFCOD, CNFPAG, CNFPCT, CNFPRT, CNFSPO , APIUT ,APICC ,APILTM,APIALC, APIATM, APICRN, APIAMS, APIAPC, APIANC, APIAT, APICT, APILT , SUBSTR(pyr,1,4) yr, load_number,so,secsti,oab,apiatm,apiltm,apiams,cna,sta,seciss,cnfstd,cnfend,cnfven,cnfcty,cnfcny,cnfpag,cnfpct,cnfprt,cf,sec,dt,cprs from elt_master where substr(pyr,1,4) ='"
+                    "select M_ID,VLN,ISN, PAG, substr(pyr,1,4) as pyr , STI,CIP , AUT , TIE , TIF,MOT, SPD, SPT, AAF, LNA, ABS, STY, APICT, APICT1, APILT ,APILT1 , RNR, ISSN, PUB, ISBN,CNFNAM, CNFSTD, CNFEND, CNFVEN, CNFCTY, CNFCNY, CNFEDN, CNFEDO, CNFEDA, CNFCAT, CNFCOD, CNFPAG, CNFPCT, CNFPRT, CNFSPO , APIUT ,APICC ,APILTM,APIALC, APIATM, APICRN, APIAMS, APIAPC, APIANC, APIAT, APICT, APILT , SUBSTR(pyr,1,4) yr, load_number,so,secsti,oab,apiatm,apiltm,apiams,cna,sta,seciss,cnfstd,cnfend,cnfven,cnfcty,cnfcny,cnfpag,cnfpct,cnfprt,cf,sec,dt,cprs, DOI from elt_master where substr(pyr,1,4) ='"
                         + year
                         + "'");
             writeRecs(rs);
@@ -144,14 +151,18 @@ public class EltCombiner extends Combiner {
                     cvsBuffer.append(expandedCV1).append(";").append(expandedCV2);
                 else
                     cvsBuffer.append(expandedCV1);
+               
 
                 String parsedCV = termBuilder.formatCT(cvsBuffer.toString());
-
-                rec.put(rec.CONTROLLED_TERMS, prepareMulti(termBuilder.getStandardTerms(parsedCV), true));
+                
+                rec.put(rec.CONTROLLED_TERMS, prepareMulti(termBuilder.getStandardTerms(parsedCV), Constants.CVS));
 
                 String parsedMH = termBuilder.formatCT(expandedMH);
 
-                rec.put(rec.MAIN_HEADING, prepareMulti(StringUtil.replaceNonAscii(termBuilder.removeRoleTerms(parsedMH)), true));
+                rec.put(rec.MAIN_HEADING, prepareMulti(StringUtil.replaceNonAscii(termBuilder.removeRoleTerms(parsedMH)), Constants.CVS));
+                
+                //this field is added to generate navigators for Major terms
+                rec.put(rec.ECLA_CODES, prepareMulti(StringUtil.replaceNonAscii(termBuilder.removeRoleTerms(parsedMH))));
 
                 rec.put(rec.NOROLE_TERMS, prepareMulti(termBuilder.getNoRoleTerms(parsedCV)));
                 rec.put(rec.REAGENT_TERMS, prepareMulti(termBuilder.getReagentTerms(parsedCV)));
@@ -215,7 +226,7 @@ public class EltCombiner extends Combiner {
                 }
 
                 if (rs.getString("dt") != null) {
-                    rec.put(EVCombinedRec.DOCTYPE, rs.getString("dt"));
+                    rec.put(EVCombinedRec.DOCTYPE, prepareMulti(rs.getString("dt"), Constants.DT ));
                 }
                 if (rs.getString("pub") != null) {
                     rec.put(EVCombinedRec.PUBLISHER_NAME, StringUtil.replaceNonAscii(replaceNull(rs.getString("pub"))));
@@ -329,11 +340,14 @@ public class EltCombiner extends Combiner {
                 rec.put(EVCombinedRec.SOURCE, StringUtil.replaceNonAscii(replaceNull(rs.getString("so"))));
                 rec.put(EVCombinedRec.SECONDARY_SRC_TITLE, StringUtil.replaceNonAscii(replaceNull(rs.getString("secsti"))));
                 rec.put(EVCombinedRec.OTHER_ABSTRACT, StringUtil.replaceNonAscii(replaceNull(rs.getString("oab"))));
-                rec.put(EVCombinedRec.MAIN_TERM, prepareMulti(StringUtil.replaceNonAscii(replaceNull(rs.getString("apiams"))), true));
+                rec.put(EVCombinedRec.MAIN_TERM, prepareMulti(StringUtil.replaceNonAscii(replaceNull(rs.getString("apiams"))), Constants.CVS));
                 // rec.put(EVCombinedRec.EDITOR_AFFILIATION, StringUtil.replaceNonAscii(replaceNull(rs.getString("cna"))));
                 rec.put(EVCombinedRec.ABBRV_SRC_TITLE, StringUtil.replaceNonAscii(replaceNull(rs.getString("sta"))));
                 //rec.put(EVCombinedRec.COUNTRY, prepareMulti(CountryFormatter.formatCountry(stripDelim(replaceNull(rs.getString("cna")),";")), false, true ));
-
+                if (rs.getString("doi") != null)
+                {
+                    rec.put(EVCombinedRec.DOI, rs.getString("doi"));
+                }
                 this.writer.writeRec(rec);
             }
         }
@@ -459,7 +473,7 @@ public class EltCombiner extends Combiner {
             System.out.println("Getting weeks records ...");
             rs =
                 stmt.executeQuery(
-                    "select M_ID,VLN,ISN, PAG, substr(PYR,1,4) as PYR , STI,CIP , AUT , TIE , TIF,MOT, SPD, SPT, AAF, LNA, ABS, STY, APICT, APICT1, APILT ,APILT1 , RNR, ISSN, PUB, ISBN,CNFNAM, CNFSTD, CNFEND, CNFVEN, CNFCTY, CNFCNY, CNFEDN, CNFEDO, CNFEDA, CNFCAT, CNFCOD, CNFPAG, CNFPCT, CNFPRT, CNFSPO , APIUT ,APICC ,APILTM,APIALC, APIATM, APICRN, APIAMS, APIAPC, APIANC, APIAT, APICT, APILT , SUBSTR(pyr,1,4) yr, load_number,so,secsti,oab,apiatm,apiltm,apiams,cna,sta,seciss,cnfstd,cnfend,cnfven,cnfcty,cnfcny,cnfpag,cnfpct,cnfprt,cf,sec,dt,cprs from elt_master where load_number="
+                    "select M_ID,VLN,ISN, PAG, substr(PYR,1,4) as PYR , STI,CIP , AUT , TIE , TIF,MOT, SPD, SPT, AAF, LNA, ABS, STY, APICT, APICT1, APILT ,APILT1 , RNR, ISSN, PUB, ISBN,CNFNAM, CNFSTD, CNFEND, CNFVEN, CNFCTY, CNFCNY, CNFEDN, CNFEDO, CNFEDA, CNFCAT, CNFCOD, CNFPAG, CNFPCT, CNFPRT, CNFSPO , APIUT ,APICC ,APILTM,APIALC, APIATM, APICRN, APIAMS, APIAPC, APIANC, APIAT, APICT, APILT , SUBSTR(pyr,1,4) yr, load_number,so,secsti,oab,apiatm,apiltm,apiams,cna,sta,seciss,cnfstd,cnfend,cnfven,cnfcty,cnfcny,cnfpag,cnfpct,cnfprt,cf,sec,dt,cprs, DOI from elt_master where load_number="
                         + weekNumber);
 
             writeRecs(rs);
@@ -553,36 +567,59 @@ public class EltCombiner extends Combiner {
     }
     
     /*  
-     *   prepareMulti method is now overloaded 
-     *   to achieve additional functioality for cv , maing headings , main terms
-     *   it calls stripAsterics method to strip prefix asterisk
+     *   replaceChar method is used to 
+     *   replace char with provided replacement - in ReplaceChar instance  
+    */
+    
+    private String replaceStr(String line, ReplaceSubstr rch) 
+    {
+        line = line.replaceAll(rch.getSubstr(), rch.getReplaceStr());
+        return line;
+    }
+    
+    /*  
+     *   prepareMulti method is overloaded 
+     *   to achieve additional format functioality:
+     *   - for cv it calls stripAsterics method to strip prefix asterisk
+     *   - for docTypes it calles eltDocTypes.getMappedDocType(s) to retrieve
+     *   additional doc types values for cross-searches with ev2 data sources 
     */
     
     private String[] prepareMulti(String multiString) throws Exception
     {
-        return prepareMulti(multiString, false);
+        return prepareMulti(multiString, null);
     }
     
     private String[] prepareMulti(String multiString , 
-                                  boolean removeAsterics) 
+                                  Constants constant) 
     throws Exception 
     {
         if (multiString != null) {
             
             AuthorStream astream = new AuthorStream(new ByteArrayInputStream(multiString.getBytes()));
             String s = null;
+           
             ArrayList list = new ArrayList();
             while ((s = astream.readAuthor()) != null) 
             {
                 s = s.trim();
                 if (s.length() > 0) {
-                    if (removeAsterics)
+                	if(constant == null)
+                	{
+                		list.add(s);
+                	}
+                	else if (constant.equals(Constants.CVS))
                     {
                         list.add(stripAsterics(s));
                     }
-                    else 
+                    else if(constant.equals(Constants.DT))
                     {
-                        list.add(s);
+                    	//System.out.println(s);
+                    	ReplaceSubstr replacesubstr = new ReplaceSubstr(Constants.CONF_PAPER.getValue(), 
+                    										            Constants.CONF_PAPER_EXPAND.getValue());
+                    	list.add(replaceStr(s, replacesubstr));
+                    	list.add(eltDocTypes.getMappedDocType(s));
+                    	//System.out.println(eltDocTypes.getMappedDocType(s));
                     }
                 }
             }
@@ -628,8 +665,34 @@ public class EltCombiner extends Combiner {
             String[] str = new String[] { "" };
             return str;
         }
+
+    }
+    
+    class ReplaceSubstr
+    {
+    	
+    	private String substr;
+    	private String replacestr;
+    	
+    	public ReplaceSubstr(String substr, String replacestr)
+    	{
+    		this.substr = substr;
+    		this.replacestr = replacestr;    		
+    	}
+    	
+    	public String getSubstr()
+    	{
+    		return this.substr;    		
+    	}
+    	
+    	public String getReplaceStr()
+    	{
+    		return this.replacestr;
+    	}
+    	
     }
     
 
-
+    
+    
 }
