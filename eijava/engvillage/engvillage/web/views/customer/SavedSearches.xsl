@@ -72,7 +72,7 @@
             var EMAIL_ALERT_COUNT = 125;
             var SAVED_SEARCH_COUNT = 125;
 
-      function openWindow(display,sessionid,queryid,database)
+      function openWindowAddEdit(display,sessionid,queryid,database)
       {
         var now = new Date() ;
         var milli = now.getTime() ;
@@ -97,7 +97,7 @@
               {
                 if(document.images[queryid].src.indexOf("/cc") != -1)
                 {
-                  openWindow(display,sessionid,queryid,database)
+                  openWindowAddEdit(display,sessionid,queryid,database);
                 }
               }
             }
