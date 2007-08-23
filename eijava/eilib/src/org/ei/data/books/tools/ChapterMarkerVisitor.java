@@ -12,14 +12,15 @@ public class ChapterMarkerVisitor extends BookVisitor {
     private boolean hasChapters = false;
     public void visit(Bookmark mark) {
 
-        if(mark.getTitle().toLowerCase().replaceAll("\\s","").startsWith("appendix")) {
-            log.debug("matcher skipped appendix " + mark);
-            return;
-        }
-        else if(mark.getTitle().toLowerCase().replaceAll("\\s","").startsWith("chapter")) {
+        if(mark.getTitle().toLowerCase().replaceAll("\\s","").startsWith("chapter")) {
             log.debug("matched 'chapter' " + mark);
             mark.setChapter(true);
-        } else {
+        } 
+        else if(mark.getTitle().toLowerCase().replaceAll("\\s","").startsWith("appendix")) {
+            log.debug("matched 'appendix' " + mark);
+            mark.setChapter(true);
+        } 
+        else {
             Matcher m = null;
             m = p.matcher(mark.getTitle());
             if (m.find()) {
