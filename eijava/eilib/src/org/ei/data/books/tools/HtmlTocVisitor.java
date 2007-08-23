@@ -25,6 +25,7 @@ public class HtmlTocVisitor extends BookVisitor {
             isbn = pdffile.getIsbn();
             isbn13 = pdffile.getIsbn13();
             pdffile.getBookmarks().accept(this);
+
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -46,11 +47,18 @@ public class HtmlTocVisitor extends BookVisitor {
             Iterator itrbkmks = marks.iterator();
             Bookmark bkmk = (Bookmark) itrbkmks.next();
             if(bkmk.getTitle().toLowerCase().startsWith(isbn.toLowerCase())) {
+                log.info("mark matches isbn");
                 bkmk.getChildren().accept(this);
             }
             else if(bkmk.getTitle().indexOf(".pdf") > 0) {
+                log.info("mark matches .pdf");
                 bkmk.getChildren().accept(this);
             }
+            else if(!itrbkmks.hasNext() && bkmk.getLevel() == 1) {
+                log.info("mark matches single level 1 bookmark");
+                bkmk.getChildren().accept(this);
+            }
+            
             wrtr.write("\r\n<ul>\r\n");
             while (itrbkmks.hasNext()) {
                 bkmk = (Bookmark) itrbkmks.next();
