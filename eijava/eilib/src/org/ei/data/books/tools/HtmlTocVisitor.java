@@ -46,6 +46,7 @@ public class HtmlTocVisitor extends BookVisitor {
         try {
             Iterator itrbkmks = marks.iterator();
             Bookmark bkmk = (Bookmark) itrbkmks.next();
+            // check if we should skip this bookmark
             if(bkmk.getTitle().toLowerCase().startsWith(isbn.toLowerCase())) {
                 log.info("mark matches isbn");
                 bkmk.getChildren().accept(this);
@@ -57,6 +58,9 @@ public class HtmlTocVisitor extends BookVisitor {
             else if(!itrbkmks.hasNext() && bkmk.getLevel() == 1) {
                 log.info("mark matches single level 1 bookmark");
                 bkmk.getChildren().accept(this);
+            } else {
+                // reset iterator
+                itrbkmks = marks.iterator();
             }
             
             wrtr.write("\r\n<ul>\r\n");
