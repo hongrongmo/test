@@ -63,7 +63,7 @@ public class EptDatabase extends Database {
     }
 
     public String getIndexName() {
-        return "tpt";
+        return "ept";
     }
 
     public String getShortName() {
@@ -72,12 +72,12 @@ public class EptDatabase extends Database {
 
     public String getDisplayAbrevName()
     {
-        return "T";
+        return "P";
     }
 
     public String getSingleCharName()
     {
-        return "T";
+        return "P";
     }
 
     public int getMask() {
