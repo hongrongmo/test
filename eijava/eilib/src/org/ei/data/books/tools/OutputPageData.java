@@ -28,9 +28,10 @@ import org.apache.commons.logging.LogFactory;
 public class OutputPageData {
 
     protected static Log log = LogFactory.getLog(OutputPageData.class);
-    public final static String PATH_PREFIX = "E:";// + System.getProperty("file.separator") + "WOBL";
+    public final static String PATH_PREFIX = "E:" + System.getProperty("file.separator") + "WOBL";
     private Writer cout = null;
     private Writer out = null;
+    private Writer uout = null;
     
 	public static void main(String[] args) throws IOException {
 
@@ -57,8 +58,9 @@ public class OutputPageData {
 	public OutputPageData() throws IOException {
 	}
 	
-    private Pattern skips = Pattern.compile("^(glossary|exercises|bibliography|acknowledgements|body|contributors|limited disclaimer and warranty|table of contents|half title page|cover|back cover|title page|copyright|cover|preface|notation|contents|index|front(\\s?)matter|back(\\s?)matter|afterward|notation|colour plates|related titles|foreword|introduction to book|about the series|index of <>|appendecies|about the cd|exam objective map|nomenclature|list of symbols|names list|topics list|praise for  |content|appendix|preface to|dedication|contents of volumes in this series|assignments|about the authors|indicies)");
-         
+//    private static final String[] badArray = { "contents", "index", "copyright", "title page", "half title page", "back cover", "table of contents", "limited disclaimer and warranty", "front matter", "frontmatter", "cover", "backmatter", "back matter" };
+    private Pattern skips = Pattern.compile("^(bibliography|acknowledgements|body|contributors|limited disclaimer and warranty|table of contents|half title page|cover|back cover|title page|copyright|cover|preface|notation|contents|index|front(\\s?)matter|back(\\s?)matter|afterward|notation|colour plates|related titles|index of <>|about the cd|exam objective map|nomenclature|list of symbols|names list|topics list|praise for  |content|preface to|dedication|contents of volumes in this series|assignments|about the authors|indicies)");
+    
     public void processPDF(File pdfFile, Writer out) throws IOException {
 
 		PDF_FileInfo referexbook = new PDF_FileInfo(pdfFile);
@@ -92,13 +94,12 @@ public class OutputPageData {
         fixedIsbns.put("9781931836562",new Integer(3));
         fixedIsbns.put("9780120121601",new Integer(2));
         fixedIsbns.put("9780750666565",new Integer(4));
-        fixedIsbns.put("9781931836630",new Integer(5));
+        fixedIsbns.put("9781931836630",new Integer(3));
         fixedIsbns.put("9780444519993",new Integer(4));
         fixedIsbns.put("9780080449241",new Integer(4));
         fixedIsbns.put("9780750678865",new Integer(1));
         fixedIsbns.put("9780750647090",new Integer(2));
         fixedIsbns.put("9780444507464",new Integer(2));
-        fixedIsbns.put("9780124605299",new Integer(3));
         fixedIsbns.put("9780124605305",new Integer(3));
         fixedIsbns.put("9780750666947",new Integer(2)); // Part I, etc.
         fixedIsbns.put("9780750666947",new Integer(2));
@@ -106,24 +107,42 @@ public class OutputPageData {
         fixedIsbns.put("9780750668217",new Integer(2));
         fixedIsbns.put("9780080447087",new Integer(2));
         fixedIsbns.put("9781932266009",new Integer(3));
+        fixedIsbns.put("9780444513540",new Integer(3));
+        
+        
+        // suggested by Joel during proofing
+        fixedIsbns.put("9780444515575",new Integer(1));
+        fixedIsbns.put("9780124605299",new Integer(1));
+        fixedIsbns.put("9780750647915",new Integer(2));
 
+        fixedIsbns.put("9780750658010",new Integer(1));
+        fixedIsbns.put("9780750663953",new Integer(1));
+        fixedIsbns.put("9780750658072",new Integer(1));
+        fixedIsbns.put("9780750662710",new Integer(1));
+                
+        
+        
         if(fixedIsbns.containsKey(referexbook.getIsbn13())) { 
-            log.info(referexbook.getIsbn13() + " using pre-assigned bookmark levels");
+            itr = referexbook.createIterator();
             int chapterLevel = ((Integer) fixedIsbns.get(referexbook.getIsbn13())).intValue();
+            log.info(referexbook.getIsbn13() + " using pre-assigned bookmark levels " + chapterLevel);
             while (itr.hasNext()) {
                 Bookmark mk = (Bookmark) itr.next();
                 int level  = mk.getLevel();
                 if(chapterLevel == level) {
-                    mk.setChapter(true);
-                }
+                    Matcher m = skips.matcher(mk.getTitle().toLowerCase());
+                    if(!m.find()) {
+                        mk.setChapter(true);
+                    }
+                 }
             }
         } else {
             boolean hasMarkedChapters = false;
             itr = referexbook.createIterator();
             while (itr.hasNext()) {
                 Bookmark mk = (Bookmark) itr.next();
-                if(mk.isChapter()) {
-                    log.info(referexbook.getIsbn13() + " found Chapters for ");
+                if(mk.isChapter() && !mk.getTitle().toLowerCase().replaceAll("\\s","").startsWith("appendix")) {
+                    log.info(referexbook.getIsbn13() + " found Chapters for at level " + mk);
                     hasMarkedChapters = true;
                     break;   
                 }
@@ -150,16 +169,18 @@ public class OutputPageData {
         }
 
 
-       
-        visitor = new SqlLoaderVisitor(out);
-        referexbook.accept(visitor);
-//
 //        visitor = new LogInfoVisitor();
 //        referexbook.accept(visitor);
-//        visitor = new ChapterListVisitor(cout);
+//       
+//        visitor = new SqlLoaderVisitor(out);
 //        referexbook.accept(visitor);
-        visitor = new HtmlTocVisitor();
+        
+        visitor = new BookSQLUpdaterVisitor(uout);
         referexbook.accept(visitor);
+        visitor = new ChapterListVisitor(cout);
+        referexbook.accept(visitor);
+//        visitor = new HtmlTocVisitor();
+//        referexbook.accept(visitor);
 
     }
 
@@ -173,14 +194,12 @@ public class OutputPageData {
         public boolean accept(File dir) {
 //            return dir.isDirectory() && 
 //            (
-//                    dir.getName().startsWith("9780750668798")
-//                    ||
-//                    dir.getName().startsWith("9780750655569")
-//                    
-//                    );
-        
-//            return dir.isDirectory() && dir.getName().startsWith("9780120887972");
-            return dir.isDirectory();
+//                dir.getName().startsWith("9780750658010") ||
+//                dir.getName().startsWith("9780750663953")
+//            );
+//        
+            return dir.isDirectory() && dir.getName().startsWith("9780340740767");
+//            return dir.isDirectory();
         }
     };
 
@@ -197,9 +216,11 @@ public class OutputPageData {
     public void crawlDirectory(String dir) {
 		
 		try {
-			out = new PrintWriter(new FileOutputStream(PATH_PREFIX + System.getProperty("file.separator") + "output.out"));
+			out = new PrintWriter(new FileOutputStream(PATH_PREFIX + System.getProperty("file.separator") + "boutput.out"));
             cout = new PrintWriter(new FileOutputStream(PATH_PREFIX + System.getProperty("file.separator") + "chapters.out"));
-
+            uout = new PrintWriter(new FileOutputStream(PATH_PREFIX + System.getProperty("file.separator") + "updates.out"));
+            cout.write("set PATH=c:\\Fast\\FastPDF\\pdftk;%PATH%\\r\\n");
+            
             log.debug("Top level PDF Directory: " + dir);
 
             File[] files = getFileList(dir);
@@ -221,6 +242,14 @@ public class OutputPageData {
             if(cout != null) {
                 try {
                     cout.close();
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+            if(uout != null) {
+                try {
+                    uout.close();
                 } catch (IOException e) {
                     // TODO Auto-generated catch block
                     e.printStackTrace();
