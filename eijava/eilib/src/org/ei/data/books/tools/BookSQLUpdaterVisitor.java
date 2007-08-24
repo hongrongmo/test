@@ -82,14 +82,14 @@ public class BookSQLUpdaterVisitor extends BookVisitor {
                 // TODO: handle exception
                 log.error(e);
             }
-            try {
-                wrtr.write("COMMIT;");
-                wrtr.write(System.getProperty("line.separator"));
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
         } // for
+        try {
+            wrtr.write("COMMIT;");
+            wrtr.write(System.getProperty("line.separator"));
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }
 
 
