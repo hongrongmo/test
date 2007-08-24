@@ -7,17 +7,14 @@ import java.util.regex.Pattern;
 
 public class ChapterMarkerVisitor extends BookVisitor {
 
-    private static Pattern p = Pattern.compile("^(\\d+)(\\.)?\\s");
-    private static Pattern p2 = Pattern.compile("^\\w(\\.)\\s");
+    private static Pattern p = Pattern.compile("^(\\d+)(\\.|:)?\\s");
+    private static Pattern p2 = Pattern.compile("^\\w(\\.|:)\\s");
     private boolean hasChapters = false;
     public void visit(Bookmark mark) {
-
-        if(mark.getTitle().toLowerCase().replaceAll("\\s","").startsWith("chapter")) {
+        
+        String lowermarktitle = mark.getTitle().toLowerCase().replaceAll("\\s","");
+        if(lowermarktitle.startsWith("chapter") || lowermarktitle.startsWith("chapte") ) {
             log.debug("matched 'chapter' " + mark);
-            mark.setChapter(true);
-        } 
-        else if(mark.getTitle().toLowerCase().replaceAll("\\s","").startsWith("appendix")) {
-            log.debug("matched 'appendix' " + mark);
             mark.setChapter(true);
         } 
         else {
