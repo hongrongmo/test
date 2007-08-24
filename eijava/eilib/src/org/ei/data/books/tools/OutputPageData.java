@@ -119,8 +119,16 @@ public class OutputPageData {
         fixedIsbns.put("9780750663953",new Integer(1));
         fixedIsbns.put("9780750658072",new Integer(1));
         fixedIsbns.put("9780750662710",new Integer(1));
-                
-        
+        fixedIsbns.put("9780444519993",new Integer(3));
+        fixedIsbns.put("9781555583170",new Integer(1));
+        fixedIsbns.put("9780120121670",new Integer(1));
+        fixedIsbns.put("9781558606487",new Integer(1));
+        fixedIsbns.put("9781931836906",new Integer(3));
+        fixedIsbns.put("9781558606746",new Integer(1));
+         
+        fixedIsbns.put("9780750656795",new Integer(1));
+         
+         
         
         if(fixedIsbns.containsKey(referexbook.getIsbn13())) { 
             itr = referexbook.createIterator();
@@ -137,16 +145,25 @@ public class OutputPageData {
                  }
             }
         } else {
-            boolean hasMarkedChapters = false;
             itr = referexbook.createIterator();
+            boolean hasMarkedChapters = false;
+            boolean singlelevel = true;
+            int chapterlevel = 0;
             while (itr.hasNext()) {
                 Bookmark mk = (Bookmark) itr.next();
                 if(mk.isChapter() && !mk.getTitle().toLowerCase().replaceAll("\\s","").startsWith("appendix")) {
                     log.info(referexbook.getIsbn13() + " found Chapters for at level " + mk);
-                    hasMarkedChapters = true;
-                    break;   
+                    if(!hasMarkedChapters) {
+                        hasMarkedChapters = true;
+                        chapterlevel = mk.getLevel();
+                    }
+                    singlelevel = singlelevel && (chapterlevel == mk.getLevel());
                 }
             }
+            if(hasMarkedChapters) {
+                log.info("all bookmarks at same level is: " + singlelevel);
+            }
+
             if(!hasMarkedChapters) {
                 log.info(referexbook.getIsbn13() + " setting default Chapter Level to Level 1");
                 itr = referexbook.createIterator();
@@ -194,12 +211,14 @@ public class OutputPageData {
         public boolean accept(File dir) {
 //            return dir.isDirectory() && 
 //            (
-//                dir.getName().startsWith("9780750658010") ||
-//                dir.getName().startsWith("9780750663953")
+//                dir.getName().startsWith("9780444519993") ||
+//                dir.getName().startsWith("9781931836630") ||
+//                dir.getName().startsWith("9781555583118") ||
+//                dir.getName().startsWith("9780750658072")
 //            );
 //        
-            return dir.isDirectory() && dir.getName().startsWith("9780340740767");
-//            return dir.isDirectory();
+//            return dir.isDirectory() && dir.getName().startsWith("9780750656795");
+            return dir.isDirectory();
         }
     };
 
@@ -217,9 +236,10 @@ public class OutputPageData {
 		
 		try {
 			out = new PrintWriter(new FileOutputStream(PATH_PREFIX + System.getProperty("file.separator") + "boutput.out"));
-            cout = new PrintWriter(new FileOutputStream(PATH_PREFIX + System.getProperty("file.separator") + "chapters.out"));
             uout = new PrintWriter(new FileOutputStream(PATH_PREFIX + System.getProperty("file.separator") + "updates.out"));
-            cout.write("set PATH=c:\\Fast\\FastPDF\\pdftk;%PATH%\\r\\n");
+            cout = new PrintWriter(new FileOutputStream(PATH_PREFIX + System.getProperty("file.separator") + "whole_pdfs" + System.getProperty("file.separator") + "chapters.bat"));
+            cout.write("set PATH=C:\\Fast\\FastPDF\\pdftk;%PATH%;");
+            cout.write(System.getProperty("line.separator"));
             
             log.debug("Top level PDF Directory: " + dir);
 
