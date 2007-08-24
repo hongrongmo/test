@@ -55,7 +55,7 @@ public class EltDatabase extends Database
    }
 
    public String getIndexName() {
-	   return "llt";
+	   return "elt";
    }
 
    public String getShortName() {
