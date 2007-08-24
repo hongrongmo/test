@@ -147,8 +147,9 @@ public class OutputPageData {
         } else {
             itr = referexbook.createIterator();
             boolean hasMarkedChapters = false;
-            boolean singlelevel = true;
+            boolean singlelevel = false;
             int chapterlevel = 0;
+            long lastchapterendpage = 0;
             while (itr.hasNext()) {
                 Bookmark mk = (Bookmark) itr.next();
                 if(mk.isChapter() && !mk.getTitle().toLowerCase().replaceAll("\\s","").startsWith("appendix")) {
@@ -156,25 +157,27 @@ public class OutputPageData {
                     if(!hasMarkedChapters) {
                         hasMarkedChapters = true;
                         chapterlevel = mk.getLevel();
+                        singlelevel = true;
                     }
                     singlelevel = singlelevel && (chapterlevel == mk.getLevel());
+                    lastchapterendpage = mk.getEndpage();
                 }
             }
-            if(hasMarkedChapters) {
-                log.info("all bookmarks at same level is: " + singlelevel);
-            }
-
-            if(!hasMarkedChapters) {
-                log.info(referexbook.getIsbn13() + " setting default Chapter Level to Level 1");
+            if((!hasMarkedChapters) || singlelevel) {
+                int defaultLevel = (singlelevel) ? chapterlevel : 1;
+                log.info(referexbook.getIsbn13() + " setting " + ((!singlelevel) ? "default" : "backmatter") + " Chapter level to level " + defaultLevel);
                 itr = referexbook.createIterator();
-                int defaultLevel = 1;
                 while (itr.hasNext()) {
                     Bookmark mk = (Bookmark) itr.next();
                     int level  = mk.getLevel();
                     if(defaultLevel == level) {
                         Matcher m = skips.matcher(mk.getTitle().toLowerCase());
-                        if(!m.find()) {
+                        if(!m.find() && !mk.isChapter()) {
+                            if(singlelevel && (mk.getPage() < lastchapterendpage)) {
+                                continue;
+                            }
                             mk.setChapter(true);
+                            log.info(referexbook.getIsbn13() + " adding Chapter " + mk.getTitle().toLowerCase());
                         }
                         else {
                             log.debug(referexbook.getIsbn13() + " skipping " + mk.getTitle().toLowerCase());
@@ -192,10 +195,10 @@ public class OutputPageData {
 //        visitor = new SqlLoaderVisitor(out);
 //        referexbook.accept(visitor);
         
-        visitor = new BookSQLUpdaterVisitor(uout);
-        referexbook.accept(visitor);
-        visitor = new ChapterListVisitor(cout);
-        referexbook.accept(visitor);
+//        visitor = new BookSQLUpdaterVisitor(uout);
+//        referexbook.accept(visitor);
+//        visitor = new ChapterListVisitor(cout);
+//        referexbook.accept(visitor);
 //        visitor = new HtmlTocVisitor();
 //        referexbook.accept(visitor);
 
@@ -217,7 +220,7 @@ public class OutputPageData {
 //                dir.getName().startsWith("9780750658072")
 //            );
 //        
-//            return dir.isDirectory() && dir.getName().startsWith("9780750656795");
+//            return dir.isDirectory() && dir.getName().startsWith("9780080445274");
             return dir.isDirectory();
         }
     };
