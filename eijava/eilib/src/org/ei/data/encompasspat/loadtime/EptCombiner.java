@@ -12,6 +12,7 @@ import org.apache.oro.text.regex.MatchResult;
 import org.ei.data.*;
 import org.ei.util.StringUtil;
 
+
 public class EptCombiner extends Combiner {
 
     Perl5Util perl = new Perl5Util();
@@ -63,6 +64,7 @@ public class EptCombiner extends Combiner {
         }
 
     }
+    
     public void writeCombinedByWeekHook(Connection con, int week) throws Exception {
 
         Statement stmt = null;
@@ -105,6 +107,7 @@ public class EptCombiner extends Combiner {
             }
         }
     }
+    
     private String getStringFromClob(Clob clob) throws Exception {
         String temp = null;
         if (clob != null) {
@@ -113,6 +116,7 @@ public class EptCombiner extends Combiner {
 
         return temp;
     }
+    
     public void writeRecs(ResultSet rs) throws Exception {
 
         int i = 0;
@@ -148,11 +152,15 @@ public class EptCombiner extends Combiner {
                 rec.put(rec.APPLICATION_COUNTRY, prepareMulti(StringUtil.replaceNonAscii(getApplicationCountry(replaceNull(ll)))));
                 rec.put(rec.PATENTAPPDATE, prepareMulti(StringUtil.replaceNonAscii(getApplicationDate(replaceNull(ll)))));
 
-                rec.put(rec.PATENT_NUMBER, rs.getString("pn"));
+                rec.put(rec.PATENT_NUMBER, formatPn(rs.getString("pn"), rs.getString("pc")));
                 rec.put(rec.PUB_YEAR, rs.getString("py"));
                 rec.put(rec.AUTHORITY_CODE, rs.getString("pc"));
 
-                rec.put(rec.INT_PATENT_CLASSIFICATION, prepareMulti(termBuilder.removeBar(replaceNull(rs.getString("ic")))));
+                //this field is used to generate ipc navigator for EPT database when ept is only one db in application
+                //when it is combined with some other db - use navigator - rec.INT_PATENT_CLASSIFICATION
+                rec.put(rec.USPTOCODE, prepareMulti(termBuilder.removeBar(replaceNull(rs.getString("ic")))));
+                rec.put(rec.INT_PATENT_CLASSIFICATION, prepareMulti(termBuilder.removeBar(replaceNull(rs.getString("ic"))), Constants.IPC));
+               
                 rec.put(rec.AUTHOR_AFFILIATION, prepareMulti(StringUtil.replaceNonAscii(replaceNull(rs.getString("cs")))));
                 rec.put(rec.CLASSIFICATION_CODE, prepareMulti(XMLWriterCommon.formatClassCodes(rs.getString("cc"))));
                 rec.put(rec.LANGUAGE, prepareMulti(rs.getString("la")));
@@ -179,11 +187,15 @@ public class EptCombiner extends Combiner {
 
                 String parsedCV = termBuilder.formatCT(cvsBuffer.toString());
 
-                rec.put(rec.CONTROLLED_TERMS, prepareMulti(termBuilder.getStandardTerms(parsedCV)));
+                rec.put(rec.CONTROLLED_TERMS, prepareMulti(termBuilder.getStandardTerms(parsedCV), Constants.CVS));
 
                 String parsedMH = termBuilder.formatCT(expandedMH);
 
-                rec.put(rec.MAIN_HEADING, prepareMulti(StringUtil.replaceNonAscii(termBuilder.removeRoleTerms(parsedMH))));
+                rec.put(rec.MAIN_HEADING, prepareMulti(StringUtil.replaceNonAscii(termBuilder.removeRoleTerms(parsedMH)), Constants.CVS));
+   
+                //this field is added to generate navigators for Major terms
+                rec.put(rec.ECLA_CODES, prepareMulti(StringUtil.replaceNonAscii(termBuilder.removeRoleTerms(parsedMH))));
+                                 
                 rec.put(rec.NOROLE_TERMS, prepareMulti(StringUtil.replaceNonAscii(replaceNull(termBuilder.getNoRoleTerms(parsedCV)))));
                 rec.put(rec.REAGENT_TERMS, prepareMulti(StringUtil.replaceNonAscii(replaceNull(termBuilder.getReagentTerms(parsedCV)))));
                 rec.put(rec.PRODUCT_TERMS, prepareMulti(StringUtil.replaceNonAscii(replaceNull(termBuilder.getProductTerms(parsedCV)))));
@@ -199,14 +211,39 @@ public class EptCombiner extends Combiner {
                 rec.put(rec.PRIORITY_COUNTRY, prepareMulti(StringUtil.replaceNonAscii(rs.getString("ac"))));
                 rec.put(rec.PRIORITY_DATE, prepareMulti(StringUtil.replaceNonAscii(rs.getString("ad"))));
 
-                rec.put(EVCombinedRec.LOAD_NUMBER, rs.getString("load_number"));
-                rec.put(EVCombinedRec.DOCTYPE, rs.getString("dt"));
-                rec.put(EVCombinedRec.DESIGNATED_STATES, prepareMulti(rs.getString("ds")));
-
+                rec.put(rec.LOAD_NUMBER, rs.getString("load_number"));
+                // ad us_patents and us_apps to doctypes - only for us - make it multyfields
+                // and remove it if not usp combines display
+                
+                rec.put(rec.DOCTYPE, prepareMulti(formatDt(rs.getString("dt"),
+                										   rs.getString("pc"),
+                										   rs.getString("pn"))));
+                                        
+                rec.put(rec.DESIGNATED_STATES, prepareMulti(rs.getString("ds")));
+                
                 this.writer.writeRec(rec);
             }
 
         }
+    }
+    
+    //this method is fixing US application numbers
+    private String formatPn(String pn, String pc) 
+    {
+    	if (pc != null &&
+    		pn != null &&
+    		pc.equalsIgnoreCase(Constants.US.getValue()) &&    		
+    		pn.trim().length()  == 10)
+    	{    		
+    		StringBuffer uspn = new StringBuffer(pn.substring(0,4));
+    		uspn.append(Constants.PN_FIX.getValue()).append(pn.substring(4));
+    		return uspn.toString();
+    	}
+    	else
+    	{
+    		return pn;
+    	}
+    	
     }
 
     private boolean validYear(String year) {
@@ -261,8 +298,8 @@ public class EptCombiner extends Combiner {
             }
         }
         return bufAppNumbers.toString();
-
     }
+    
     public String getApplicationCountry(String ll) {
 
         StringBuffer buffCountries = new StringBuffer();
@@ -300,8 +337,8 @@ public class EptCombiner extends Combiner {
             }
         }
         return buffCountries.toString();
-
     }
+    
     public String getApplicationDate(String ll) {
 
         StringBuffer bufDates = new StringBuffer();
@@ -339,7 +376,6 @@ public class EptCombiner extends Combiner {
             }
         }
         return bufDates.toString();
-
     }
 
     public String replaceNull(String sVal) {
@@ -349,8 +385,27 @@ public class EptCombiner extends Combiner {
 
         return sVal;
     }
+    
+    /*  
+     *   stripAsterics method is used to 
+     *   remove asterisk from fields cv  and mh 
+    */
+    
+    private String stripAsterics(String line) 
+    {
+        line = perl.substitute("s/\\*+//gi", line);
+        return line;
+    }
 
-    private String[] prepareMulti(String multiString) throws Exception {
+    private String[] prepareMulti(String multiString) throws Exception
+    {
+        return prepareMulti(multiString, null);
+    }
+    
+    private String[] prepareMulti(String multiString , 
+            					  Constants constant) 
+    throws Exception 
+    {
         if (multiString != null) {
 
             AuthorStream astream = new AuthorStream(new ByteArrayInputStream(multiString.getBytes()));
@@ -358,8 +413,17 @@ public class EptCombiner extends Combiner {
             ArrayList list = new ArrayList();
             while ((s = astream.readAuthor()) != null) {
                 s = s.trim();
-                if (s.length() > 0) {
-                    list.add(s);
+            	if(constant == null)
+            	{
+            		list.add(s);
+            	}
+            	else if (constant.equals(Constants.CVS))
+                {
+                    list.add(stripAsterics(s));
+                }
+            	else if (constant.equals(Constants.IPC))
+                {
+                    list.add(formatIpc(s));
                 }
             }
             return (String[]) list.toArray(new String[1]);
@@ -370,6 +434,53 @@ public class EptCombiner extends Combiner {
 
         }
     }
+    
+    // this method is genereating doc types for us patents ("ug") and us applications ("ua")
+    
+    private String formatDt(String dt, 
+							String pc ,
+							String pn)
+    {
+    	StringBuffer dtbuf = new StringBuffer(dt);
+    	if(pc != null &&
+           pn != null &&
+           dt != null &&
+           pc.equals(Constants.US.getValue()))
+    	{
+    		if(pn.length() == 10)
+    		{
+    			dtbuf.append(Constants.MULTIFIELD_DELIM.getValue()).append(Constants.DT_UA.getValue());
+    		}
+    		else
+    		{
+    			dtbuf.append(Constants.MULTIFIELD_DELIM.getValue()).append(Constants.DT_UG.getValue());
+    		}
+    		return dtbuf.toString().toLowerCase();
+    	}
+    	else
+    	{
+    		return dt.toLowerCase();
+    	}
+	}
+    
+    private String formatIpc(String line)
+    {
+    	StringTokenizer toc = new StringTokenizer(line,"-");
+    	StringBuffer ipc = new StringBuffer(toc.nextToken());
+
+    		if(toc.hasMoreTokens())
+    		{
+    			String toc2 = toc.nextToken();   			
+    	    	if(toc2.indexOf("/")>-1)
+    	    	{
+    	    		toc2 = perl.substitute("s/^[\\-+0]*//gi", toc2);
+    	    	}
+    	    	ipc.append(toc2);   	    	
+    		}   	
+    
+        return ipc.toString(); 
+    }
+    
     private String[] prepareMultiLinkedTerm(String multiString) throws Exception {
         if (multiString != null) {
 
@@ -404,6 +515,7 @@ public class EptCombiner extends Combiner {
             return str;
         }
     }
+    
     public static void main(String args[]) throws Exception {
 
         String url = args[0];
