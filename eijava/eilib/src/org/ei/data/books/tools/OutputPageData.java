@@ -28,7 +28,7 @@ import org.apache.commons.logging.LogFactory;
 public class OutputPageData {
 
     protected static Log log = LogFactory.getLog(OutputPageData.class);
-    public final static String PATH_PREFIX = "E:" + System.getProperty("file.separator") + "WOBL";
+    public final static String PATH_PREFIX = "E:";// + System.getProperty("file.separator") + "WOBL";
     private Writer cout = null;
     private Writer out = null;
     private Writer uout = null;
@@ -65,6 +65,7 @@ public class OutputPageData {
 
 		PDF_FileInfo referexbook = new PDF_FileInfo(pdfFile);
 
+        
         Visitor visitor = null;
 
         visitor = new ZeroBookmarkFixerVisitor();
@@ -87,10 +88,7 @@ public class OutputPageData {
             log.info("=====================================================");
         } 
 
-        visitor = new ChapterMarkerVisitor();
-        referexbook.accept(visitor);
-        
-        Map fixedIsbns = new Hashtable();
+        Map<String, Integer> fixedIsbns = new Hashtable<String, Integer>();
         fixedIsbns.put("9781931836562",new Integer(3));
         fixedIsbns.put("9780120121601",new Integer(2));
         fixedIsbns.put("9780750666565",new Integer(4));
@@ -101,20 +99,16 @@ public class OutputPageData {
         fixedIsbns.put("9780750647090",new Integer(2));
         fixedIsbns.put("9780444507464",new Integer(2));
         fixedIsbns.put("9780124605305",new Integer(3));
-        fixedIsbns.put("9780750666947",new Integer(2)); // Part I, etc.
+        fixedIsbns.put("9780750666947",new Integer(2)); 
         fixedIsbns.put("9780750666947",new Integer(2));
         fixedIsbns.put("9780444519481",new Integer(2));
         fixedIsbns.put("9780750668217",new Integer(2));
         fixedIsbns.put("9780080447087",new Integer(2));
         fixedIsbns.put("9781932266009",new Integer(3));
         fixedIsbns.put("9780444513540",new Integer(3));
-        
-        
-        // suggested by Joel during proofing
         fixedIsbns.put("9780444515575",new Integer(1));
         fixedIsbns.put("9780124605299",new Integer(1));
         fixedIsbns.put("9780750647915",new Integer(2));
-
         fixedIsbns.put("9780750658010",new Integer(1));
         fixedIsbns.put("9780750663953",new Integer(1));
         fixedIsbns.put("9780750658072",new Integer(1));
@@ -125,10 +119,11 @@ public class OutputPageData {
         fixedIsbns.put("9781558606487",new Integer(1));
         fixedIsbns.put("9781931836906",new Integer(3));
         fixedIsbns.put("9781558606746",new Integer(1));
-         
         fixedIsbns.put("9780750656795",new Integer(1));
+        fixedIsbns.put("9780884157700",new Integer(1));
+        fixedIsbns.put("9780444516879",new Integer(2));
          
-         
+        
         
         if(fixedIsbns.containsKey(referexbook.getIsbn13())) { 
             itr = referexbook.createIterator();
@@ -140,11 +135,15 @@ public class OutputPageData {
                 if(chapterLevel == level) {
                     Matcher m = skips.matcher(mk.getTitle().toLowerCase());
                     if(!m.find()) {
+                        log.info("setting mark: " + mk);
                         mk.setChapter(true);
                     }
                  }
             }
         } else {
+            visitor = new ChapterMarkerVisitor();
+            referexbook.accept(visitor);
+
             itr = referexbook.createIterator();
             boolean hasMarkedChapters = false;
             boolean singlelevel = false;
@@ -194,13 +193,13 @@ public class OutputPageData {
 //       
 //        visitor = new SqlLoaderVisitor(out);
 //        referexbook.accept(visitor);
-        
-//        visitor = new BookSQLUpdaterVisitor(uout);
-//        referexbook.accept(visitor);
-//        visitor = new ChapterListVisitor(cout);
-//        referexbook.accept(visitor);
-//        visitor = new HtmlTocVisitor();
-//        referexbook.accept(visitor);
+//        
+        visitor = new BookSQLUpdaterVisitor(uout);
+        referexbook.accept(visitor);
+        visitor = new ChapterListVisitor(cout);
+        referexbook.accept(visitor);
+        visitor = new HtmlTocVisitor();
+        referexbook.accept(visitor);
 
     }
 
@@ -212,16 +211,45 @@ public class OutputPageData {
 
     private FileFilter pdfDirFilter = new FileFilter() {
         public boolean accept(File dir) {
-//            return dir.isDirectory() && 
-//            (
-//                dir.getName().startsWith("9780444519993") ||
-//                dir.getName().startsWith("9781931836630") ||
-//                dir.getName().startsWith("9781555583118") ||
-//                dir.getName().startsWith("9780750658072")
-//            );
+            return dir.isDirectory() && 
+            (
+                dir.getName().startsWith("9781931836562") ||
+                dir.getName().startsWith("9780120121601") ||
+                dir.getName().startsWith("9780750666565") ||
+                dir.getName().startsWith("9781931836630") ||
+                dir.getName().startsWith("9780444519993") ||
+                dir.getName().startsWith("9780080449241") ||
+                dir.getName().startsWith("9780750678865") ||
+                dir.getName().startsWith("9780750647090") ||
+                dir.getName().startsWith("9780444507464") ||
+                dir.getName().startsWith("9780124605305") ||
+                dir.getName().startsWith("9780750666947") ||
+                dir.getName().startsWith("9780750666947") ||
+                dir.getName().startsWith("9780444519481") ||
+                dir.getName().startsWith("9780750668217") ||
+                dir.getName().startsWith("9780080447087") ||
+                dir.getName().startsWith("9781932266009") ||
+                dir.getName().startsWith("9780444513540") ||
+                dir.getName().startsWith("9780444515575") ||
+                dir.getName().startsWith("9780124605299") ||
+                dir.getName().startsWith("9780750647915") ||
+                dir.getName().startsWith("9780750658010") ||
+                dir.getName().startsWith("9780750663953") ||
+                dir.getName().startsWith("9780750658072") ||
+                dir.getName().startsWith("9780750662710") ||
+                dir.getName().startsWith("9780444519993") ||
+                dir.getName().startsWith("9781555583170") ||
+                dir.getName().startsWith("9780120121670") ||
+                dir.getName().startsWith("9781558606487") ||
+                dir.getName().startsWith("9781931836906") ||
+                dir.getName().startsWith("9781558606746") ||
+                dir.getName().startsWith("9780750656795") ||
+                dir.getName().startsWith("9780884157700") ||
+                dir.getName().startsWith("9780444516879") 
+            );
 //        
-//            return dir.isDirectory() && dir.getName().startsWith("9780080445274");
-            return dir.isDirectory();
+//            return dir.isDirectory() && dir.getName().startsWith("9780444516879");
+//            return dir.isDirectory();
         }
     };
 
