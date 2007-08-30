@@ -58,18 +58,25 @@ public class ReferexCombiner {
         CombinedWriter writer = new ReferexCombinedXMLWriter(10000, 1, "book");
         try {
             createDataSource();
+            String strDefault = "WOBL";
+		        if(args != null) {
+  		        if(args.length >= 1 && args[0] != null) {
+                strDefault = args[0];
+              }
+            }
             List extracts = new ArrayList();
-            if (args.length == 0) {
-                extracts.add(new BookRecord());
-                extracts.add(new PageRecord());
-            } else if (args.length == 1) {
-                String arg = args[0];
-                if (arg.equals("books")) {
-                    extracts.add(new BookRecord());
-                }
-                if (arg.equals("pages")) {
-                    extracts.add(new PageRecord());
-                }
+            if(strDefault.equals("S300"))
+            {
+              extracts.add(new S300BookRecord());
+              extracts.add(new S300PageRecord());
+            }
+            else if(strDefault.equals("406")){
+              extracts.add(new Original406BookRecord());
+              extracts.add(new Original406PageRecord());
+            }
+            else {
+              extracts.add(new BookRecord());
+              extracts.add(new PageRecord());
             }
             Iterator itr = extracts.iterator();
             while (itr.hasNext()) {
@@ -220,91 +227,50 @@ public class ReferexCombiner {
 
     // pattern to replace all non visible ASCII characters
     // 0-31 and 128-255
-    private static final Pattern nonAscii = Pattern
-            .compile("[\\x00-\\x1F\\x80-\\xFF]");
-
-    private static final Pattern pubYear = Pattern
-            .compile("[1-9][0-9][0-9][0-9]");
-
+    private static final Pattern nonAscii = Pattern.compile("[\\x00-\\x1F\\x80-\\xFF]");
+    private static final Pattern pubYear = Pattern.compile("[1-9][0-9][0-9][0-9]");
     private static final Pattern pgNum = Pattern.compile("\\b?\\d+\\b?");
+    private static Pattern hundredWords = Pattern.compile("((?:[\\w\\p{Punct}][^\\s]*)\\s+){1,100}", Pattern.MULTILINE);
 
-//    private static final String BOOK_PAGES_TABLE = "BOOK_PAGES_WOBL";
-//    private static final String BOOK_PAGES_QUERY = "SELECT PAGE_KEYWORDS,DOCID,BN,BN13,PP,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB, PAGE_NUM, CHAPTER_TITLE, CHAPTER_START, PAGE_TXT FROM "
-//            + BOOK_PAGES_TABLE
-//            + " WHERE PAGE_NUM <> 0 and PAGE_KEYWORDS IS NOT NULL";
-     
-    private static final String BOOK_PAGES_QUERY = "SELECT PAGE_KEYWORDS,DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB, PAGE_NUM, CHAPTER_TITLE, CHAPTER_START, PAGE_TXT FROM BOOK_PAGES_406 WHERE PAGE_NUM <> 0 and PAGE_KEYWORDS IS NOT NULL " +
-    "UNION ALL " + 
-    "SELECT PAGE_KEYWORDS,DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB, PAGE_NUM, CHAPTER_TITLE, CHAPTER_START, PAGE_TXT FROM  BOOK_PAGES_WOBL WHERE PAGE_NUM <> 0 and PAGE_KEYWORDS IS NOT NULL";
-
-    private static final String BOOK_QUERY = "SELECT DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB FROM BOOK_PAGES_WOBL WHERE PAGE_NUM=0 " +
-    "UNION ALL " +
-    "SELECT DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB FROM BOOK_PAGES_406 WHERE PAGE_NUM=0 ORDER BY TI, ST ASC";
-    
-    // This Query will limit the extract to Non-overlapping S300 Books
-    // by selecting BN13s which are not IN the WOBL extract/tables
-    private static final String BOOK_QUERY_S300 = "SELECT DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB FROM BOOK_PAGES_S300 " + 
-        " WHERE PAGE_NUM=0 AND BN13 IN (SELECT S300S.bn13 FROM S300S LEFT JOIN WOBLS ON S300S.BN13=WOBLS.BN13 WHERE WOBLS.bn13 IS NULL)";
+    // These Queries will extract WOBL Extract
+    private static final String BOOK_PAGES_QUERY = "SELECT PAGE_KEYWORDS,DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB, PAGE_NUM, CHAPTER_TITLE, CHAPTER_START, SECTION_TITLE, SECTION_START, PAGE_TXT FROM BOOK_PAGES_WOBL WHERE PAGE_NUM <> 0 and PAGE_KEYWORDS IS NOT NULL";
+    private static final String BOOK_QUERY = "SELECT DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB FROM BOOK_PAGES_WOBL WHERE PAGE_NUM=0";
+    private static final String EXTRACT_TYPE = "WOBL";
 
     private static final String BOOK_DATABASE = "pag";
-
     private static final String DOCTYPE_BOOK = "BOOK";
-
     private static final String DOCTYPE_PAGE = "PAGE";
 
     public static Map colMappings = new HashMap();
     static {
-        colMappings.put(ReferexCollection.MAT.getAbbrev(),
-                ReferexCollection.MAT.getShortname()); // & Mechanical");
-        colMappings.put(ReferexCollection.ELE.getAbbrev(),
-                ReferexCollection.ELE.getShortname()); // & Electrical");
-        colMappings.put(ReferexCollection.CHE.getAbbrev(),
-                ReferexCollection.CHE.getShortname()); // , Petrochemical &
-                                                        // Process");
-        colMappings.put(ReferexCollection.CIV.getAbbrev(),
-                ReferexCollection.CIV.getShortname()); // , & Environmental");
-        colMappings.put(ReferexCollection.COM.getAbbrev(),
-                ReferexCollection.COM.getShortname()); // , ");
-        colMappings.put(ReferexCollection.SEC.getAbbrev(),
-                ReferexCollection.SEC.getShortname()); // , & Networking");
+        colMappings.put(ReferexCollection.MAT.getAbbrev(), ReferexCollection.MAT.getShortname()); // & Mechanical");
+        colMappings.put(ReferexCollection.ELE.getAbbrev(), ReferexCollection.ELE.getShortname()); // & Electrical");
+        colMappings.put(ReferexCollection.CHE.getAbbrev(), ReferexCollection.CHE.getShortname()); // , Petrochemical & Process");
+        colMappings.put(ReferexCollection.CIV.getAbbrev(), ReferexCollection.CIV.getShortname()); // , & Environmental");
+        colMappings.put(ReferexCollection.COM.getAbbrev(), ReferexCollection.COM.getShortname()); // , ");
+        colMappings.put(ReferexCollection.SEC.getAbbrev(), ReferexCollection.SEC.getShortname()); // , & Networking");
     }
 
+    // interface Extractable
     private interface Extractable {
         public EVCombinedRec populate(ResultSet rs) throws Exception;
 
         public String getQuery();
-    } // interface Extractable
+    }
 
     private abstract class ReferexRecord implements Extractable {
 
+        public abstract EVCombinedRec populate(ResultSet rs) throws Exception;
+        public abstract String getQuery();
+        public abstract String getDoctype();
+
         public String getCollection(String colkey) {
             if ((colkey != null) && (colMappings.containsKey(colkey.toUpperCase()))) {
-                log.info((String) colMappings.get(colkey.toUpperCase()));
                 return (String) colMappings.get(colkey.toUpperCase());
             } else {
-                log.info("nothing");
                 return "";
             }
         }
-
-        public abstract EVCombinedRec populate(ResultSet rs) throws Exception;
-
-        public abstract String getQuery();
-
-        public abstract String getDoctype();
-
-        // protected String getIsbn(String docId) {
-        //
-        // String sIsbn = "";
-        //
-        // if (docId.length() == 11) {
-        // sIsbn = docId.substring(0, 10);
-        // }
-        // else {
-        // sIsbn = docId;
-        // }
-        // return sIsbn;
-        // }
 
         protected String getPubYear(String yr) {
             String year = "1955";
@@ -340,6 +306,11 @@ public class ReferexCombiner {
     }// inner abstract base class ReferexRecord
 
     private class BookRecord extends ReferexRecord {
+
+        public String getExtractType() {
+            return EXTRACT_TYPE;
+        }
+
         public String getDoctype() {
             return DOCTYPE_BOOK;
         }
@@ -355,7 +326,7 @@ public class ReferexCombiner {
                 String sIsbn = replaceNull(rs.getString("BN"));
                 String sIsbn13 = replaceNull(rs.getString("BN13"));
                 String sIssn = replaceNull(rs.getString("ISS"));
-                
+
                 String pubYear = getPubYear(rs.getString("YR"));
                 String sDatabase = getDatabase();
                 // pagenum == "0" for main book records
@@ -365,8 +336,11 @@ public class ReferexCombiner {
                 String docid = rs.getString("DOCID");
 
                 String sTitle = rs.getString("TI");
-                log.info(sIsbn13 + "==>" + sTitle);
-                // String sSubTitle = rs.getString("ST");
+                String sFullTitle = sTitle;
+                String sSubTitle = rs.getString("ST");
+                if(sSubTitle != null) {
+                  sFullTitle = sTitle.concat(": ").concat(sSubTitle.trim());
+                }
 
                 String sPublisher = rs.getString("PN");
                 String sControlledTerms = rs.getString("CVS");
@@ -426,14 +400,16 @@ public class ReferexCombiner {
                 rec.put(EVCombinedRec.ABSTRACT, bkDescript);
 
                 rec.put(EVCombinedRec.AUTHOR, arrAus);
-                rec.put(EVCombinedRec.TITLE, sTitle);
+                rec.put(EVCombinedRec.TITLE, sFullTitle);
                 rec.put(EVCombinedRec.PUBLISHER_NAME, arrPubs);
 
-                // 'BT' - Serial Title Base 64 Encoded Book Title
+                // 'BT' - Base 64 Encoded Book Title
                 String b64Title = "B64" + Base64Coder.encode(sTitle.toLowerCase());
                 rec.put(EVCombinedRec.SERIAL_TITLE, b64Title);
                 rec.put(EVCombinedRec.CONTROLLED_TERMS, arrCvs);
                 rec.put(EVCombinedRec.CLASSIFICATION_CODE, arrReferexColls);
+
+                rec.put(EVCombinedRec.MAIN_HEADING, new String[]{getExtractType()});
 
             } // try
             catch (Exception e) {
@@ -445,11 +421,8 @@ public class ReferexCombiner {
         }
     }// inner class BookRecord
 
-    private static Pattern hundredWords = Pattern.compile(
-            "((?:[\\w\\p{Punct}][^\\s]*)\\s+){1,100}", Pattern.MULTILINE);
-
-    private static final String[] badArray = { "contents", "index",
-            "copyright", "title page", "half title page", "back cover",
+    private static final String[] badArray = { "contents", "index", "index to", "what’s on the cd-rom", "commands",
+            "copyright", "title page", "half title page", "back cover", "front cover",
             "table of contents", "limited disclaimer and warranty",
             "front matter", "frontmatter", "cover", "backmatter", "back matter" };
 
@@ -476,10 +449,17 @@ public class ReferexCombiner {
                 // get page specific fields
                 String pageText = getStringFromClob(rs.getClob("PAGE_TXT"));
                 String pageChapterTitle = replaceNull(rs.getString("CHAPTER_TITLE"));
+                String pageSectionTitle = replaceNull(rs.getString("SECTION_TITLE"));
                 String pageNum = rs.getString("PAGE_NUM");
 
                 for (int i = 0; i < badArray.length; i++) {
-                    if (badArray[i].equalsIgnoreCase(pageChapterTitle.trim())) {
+                    String badTitle = badArray[i];
+                    if (badTitle.equalsIgnoreCase(pageChapterTitle.trim())) {
+                        log.info(" Skipping Chapter ==> " + pageChapterTitle);
+                        return null;
+                    }
+                    if (badTitle.equalsIgnoreCase(pageSectionTitle.trim())) {
+                        log.info(" Skipping Section ==> " + pageSectionTitle);
                         return null;
                     }
                 }
@@ -507,21 +487,19 @@ public class ReferexCombiner {
                 pageStartText = pageStartText.replaceFirst(pageChapterTitleRegex, "");
                 pageStartText = pgNum.matcher(pageStartText).replaceFirst("");
 
+/*
                 Matcher mwords = hundredWords.matcher(pageStartText);
                 boolean mfound = mwords.find();
                 pageStartText = (mfound) ? mwords.group() : pageStartText;
                 log.debug(mfound + " (" + mwords.groupCount() + ") <== " + pageStartText);
-
-                // CHANGE - TItle Field for Pages is EMPTY
-                // String[] arrTitle = new String[]{pageStartText};
-                // rec.put(EVCombinedRec.TITLE, arrTitle);
+*/
 
                 // populate page specific fields
                 rec.put(EVCombinedRec.PAGE, pageNum);
                 rec.put(EVCombinedRec.LOAD_NUMBER, loadNumber);
 
                 // full text and enclosing chapter start page
-                rec.put(EVCombinedRec.ABSTRACT, pageText);
+                rec.put(EVCombinedRec.ABSTRACT, pageStartText);
                 rec.put(EVCombinedRec.STARTPAGE, pageChapterStartPage);
 
                 // CHANGE - Put beinging of Page in Title field
@@ -559,4 +537,56 @@ public class ReferexCombiner {
 
         }
     } // inner class PageRecord
+
+    // These Queries will limit the extract to Non-overlapping S300 Books
+    // by selecting Only BN13s which are not IN the WOBL extract/tables
+    private class S300BookRecord extends BookRecord {
+
+        public String getExtractType() {
+            return "S300";
+        }
+
+        public String getQuery() {
+            return  "SELECT DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB FROM BOOK_PAGES_S300 " +
+                    " WHERE PAGE_NUM=0 AND BN13 IN (SELECT S300S.bn13 FROM S300S LEFT JOIN WOBLS ON SUBSTR(S300S.BN13,1,13)=SUBSTR(WOBLS.BN13,1,13) WHERE WOBLS.bn13 IS NULL)";
+        }
+    }
+
+    private class S300PageRecord extends PageRecord {
+
+        public String getExtractType() {
+            return "S300";
+        }
+
+        public String getQuery() {
+            return "SELECT PAGE_KEYWORDS,DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB, PAGE_NUM, CHAPTER_TITLE, CHAPTER_START, SECTION_TITLE, SECTION_START, PAGE_TXT FROM BOOK_PAGES_S300 " +
+                  "WHERE PAGE_NUM <> 0 AND PAGE_KEYWORDS IS NOT NULL AND BN13 IN (SELECT S300S.bn13 FROM S300S LEFT JOIN WOBLS ON SUBSTR(S300S.BN13,1,13)=SUBSTR(WOBLS.BN13,1,13) WHERE WOBLS.bn13 IS NULL)";
+        }
+    }
+
+    // These Queries will limit the extract to Non-overlapping S300 Books
+    // by selecting Only BN13s which are not IN the WOBL extract/tables
+    private class Original406BookRecord extends BookRecord {
+
+        public String getExtractType() {
+            return "406";
+        }
+
+        public String getQuery() {
+              return "SELECT DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB FROM BOOK_PAGES_406 WHERE PAGE_NUM=0";
+        }
+    }
+
+    private class Original406PageRecord extends PageRecord {
+
+        public String getExtractType() {
+            return "406";
+        }
+
+        public String getQuery() {
+            return "SELECT PAGE_KEYWORDS,DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB, PAGE_NUM, CHAPTER_TITLE, CHAPTER_START, SECTION_TITLE, SECTION_START, PAGE_TXT FROM BOOK_PAGES_406 " +
+                  " WHERE PAGE_NUM <> 0 AND PAGE_KEYWORDS IS NOT NULL";
+        }
+    }
+
 }
