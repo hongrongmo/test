@@ -1364,20 +1364,20 @@ function flipImage(selectedDbMask)
         if((selectedDbMask & US_PATENTS) != US_PATENTS &&
        (selectedDbMask & EU_PATENTS) != EU_PATENTS &&
        (selectedDbMask & EPT) != EPT)
-    {
-        document.lookuplink2.src="/engresources/images/af.gif";
-    }
-    else if(selectedDbMask == US_PATENTS ||
-        selectedDbMask == EU_PATENTS ||
-        selectedDbMask == EPT ||
-        selectedDbMask == US_EU_PATENTS)
-    {
-        document.lookuplink2.src="/engresources/images/asg.gif";
-    }
-    else
-    {
-        document.lookuplink2.src="/engresources/images/afas.gif";
-    }
+    	{
+        	document.lookuplink2.src="/engresources/images/af.gif";
+    	}
+    	else if(selectedDbMask == US_PATENTS ||
+        	selectedDbMask == EU_PATENTS ||
+        	selectedDbMask == EPT ||
+        	selectedDbMask == US_EU_PATENTS)
+    	{
+        	document.lookuplink2.src="/engresources/images/asg.gif";
+    	}
+    	else
+    	{
+        	document.lookuplink2.src="/engresources/images/afas.gif";
+    	}
     }
        
     //CV
@@ -1409,10 +1409,10 @@ function flipImage(selectedDbMask)
     }
     
     //PC
-    if (selectedDbMask == EPT)
-    {
-        document.lookuplink6.src="/engresources/images/pc.gif";
-    }
+ //   if (selectedDbMask == EPT)
+ //   {
+ //       document.lookuplink6.src="/engresources/images/pc.gif";
+ //   }
      
 }
 
