@@ -100,10 +100,10 @@ function flipImage(selectedDbMask)
     }
     
     //PC
-    if ((selectedDbMask & EPT) == EPT)
-    {
-    	document.lookuplink10.src="/engresources/images/pc.gif";
-    }
+ //   if ((selectedDbMask & EPT) == EPT)
+//    {
+//    	document.lookuplink10.src="/engresources/images/pc.gif";
+ //   }
 
 
     //LA
@@ -443,11 +443,13 @@ function calDisplayYear(selectedDbMask, sYear)
 	{
 	    var eltStartYear = sYear.substr(sYear.indexOf("LST") + 3, 4);
 	    dYear = (dYear > eltStartYear) ? eltStartYear : dYear;
+	    dYear= 1990;
 	}
 	if (selectedDbMask != 0 && ((selectedDbMask & EPT) == EPT)) 
 	{
 	    var eptStartYear = sYear.substr(sYear.indexOf("TST") + 3, 4);
 	    dYear = (dYear > eptStartYear) ? eptStartYear : dYear;
+	    dYear= 1990;
         }
     }
     else
