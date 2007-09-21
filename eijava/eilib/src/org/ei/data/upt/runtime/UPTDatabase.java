@@ -37,9 +37,10 @@ public class UPTDatabase extends Database {
 
 	}
 
-  public List getSortableFields() {
-    return Arrays.asList(new SortField[]{SortField.RELEVANCE, SortField.AUTHOR, SortField.YEAR, SortField.CITEDBY});
-  }
+	public List getSortableFields() 
+	{
+		return Arrays.asList(new SortField[]{SortField.RELEVANCE, SortField.AUTHOR, SortField.YEAR, SortField.CITEDBY});
+	}
 
 	public int getStartYear(boolean hasBackFile) {
 		return 1790;
@@ -59,6 +60,10 @@ public class UPTDatabase extends Database {
 
 	public String getID() {
 		return "upt";
+	}
+	
+	public String getLegendID() {
+		return "u";
 	}
 
 	public String getName() {
