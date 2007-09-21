@@ -1,5 +1,7 @@
 package org.ei.domain;
 
+import org.ei.domain.Keys;
+
 
 
 public interface Keys
@@ -39,7 +41,7 @@ public interface Keys
     public static final Key AUTH_CODE = new Key("AUTHCD","Patent authority"); // pat num
     public static final Key AVAILABILITY = new Key("AV","Availability");
     public static final Key CAS_REGISTRY_CODE = new Key("CR");
-    public static final Key CAS_REGISTRY_CODES = new Key("CRS", "CAS registry number(s)");
+    public static final Key CAS_REGISTRY_CODES = new Key("CRM", "CAS registry number(s)");
     public static final Key CONF_EDITORS = new Key("CFE", "Conference editor(s)");
     public static final Key CONF_EDITORS_AF = new Key("CFA", "Conference editor affiliations");
     public static final Key CORRESPONDING_AUTHORS = new Key("CAUS", "Corr. author");
@@ -52,6 +54,7 @@ public interface Keys
     public static final Key CLASS_CODE = new Key("CL");
     public static final Key ELT_CLASS_CODE = new Key("ECL");
     public static final Key CLASS_CODES = new Key("CLS");
+    public static final Key CLASS_CODES_MULTI= new Key("CLGM");
     public static final Key CODEN = new Key("CN","CODEN");
     public static final Key CONFERENCE_NAME  = new Key("CF","Conference name");
     public static final Key CONF_CODE = new Key("CC", "Conference code");
@@ -90,6 +93,7 @@ public interface Keys
     public static final Key INDEXING_TEMPLATE = new Key("ATM", "Indexing template");
     public static final Key IMAGES = new Key("IMG", "Figures");
     public static final Key INTERNATCL_CODE = new Key("PIDM", "IPC Code");
+    public static final Key INTERNATCL_CODE_EPT = new Key("PIDEPM", "IPC Codes");
     public static final Key INTERNATCL_CODE8 = new Key("PIDM8", "IPC-8 Code");
     public static final Key INT_PATCLASSES = new Key("ICC", "Int. patent classes");
     public static final Key INVENTORS = new Key("IVS", "Inventors");
@@ -107,13 +111,13 @@ public interface Keys
     public static final Key KIND_DESCRIPTION = new Key("KD");
     public static final Key LANGUAGE = new Key("LA", "Language");
     public static final Key LINKED_SUB_TERM = new Key("LST");
-    public static final Key LINKED_TERMS_HOLDER = new Key("LH", "Linked Terms");
+    public static final Key LINKED_TERMS_HOLDER = new Key("LTH");
     public static final Key LINKED_TERM_GROUP = new Key("LG");
-    public static final Key LINKED_TERMS = new Key("LT", "Linked Terms");
+    public static final Key LINKED_TERMS = new Key("LSTM", "Linked Terms");
     public static final Key LINKING_YEAR = new Key("LYR");
     public static final Key MAIN_HEADING = new Key("MH", "Main heading");
-    public static final Key MAJOR_TERMS = new Key("MJS");
-    public static final Key MAJOR_TERM = new Key("CVM");
+    public static final Key MAJOR_TERMS = new Key("MJSM");
+    public static final Key MAJOR_TERM = new Key("MJS");
     public static final Key MAJOR_REAGENT_TERM = new Key("CVMA");
     public static final Key MAJOR_PRODUCT_TERM = new Key("CVMP");
     public static final Key MAJOR_NOROLE_TERM = new Key("CVMN");
@@ -122,8 +126,8 @@ public interface Keys
     public static final Key NUMBER_OF_CLAIMS = new Key("CLAIM", "Number of claims");
     public static final Key NUMBER_OF_TABLES = new Key("NOTAB","Number of tables");
     public static final Key NOROLE_TERM = new Key("CVN");
-    public static final Key MANUAL_LINKED_TERMS = new Key("MLT", "Manually linked terms");
     public static final Key MATERIAL_ID = new Key("MI","Material Identity Number");
+    public static final Key MANUAL_LINKED_TERMS = new Key("MLT", "Manually linked terms");
     public static final Key MEETING_INFO = new Key("MD", "Conference date");
     public static final Key MEETING_LOCATION = new Key("ML", "Conference location");
     public static final Key MONITORING_AGENCIES = new Key("AGS", "Monitoring agencies");
@@ -151,7 +155,7 @@ public interface Keys
     public static final Key PATAPPNUM = new Key("PAN", "Application number");
     public static final Key PATAPPDATE = new Key("PAPD", "Application date");
     public static final Key PATAPPDATEX = new Key("PAPX", "Application date");
-    public static final Key PATAPP_INFO = new Key("PAPIS", "Application information");
+    public static final Key PATAPP_INFO = new Key("PAPIM", "Application information");
     public static final Key PATAPPNUMS = new Key("PANS", "Application  number");
     public static final Key PATAPPNUMUS = new Key("PANUS", "Unstandardized application number");
     public static final Key PATAPPCOUNTRY= new Key("PAPCO", "Application country");
