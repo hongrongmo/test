@@ -65,6 +65,11 @@ public class UPADatabase extends Database {
 	public String getID() {
 		return "upa";
 	}
+	
+    public String getLegendID()
+    {
+        return "u";
+    }
 
 	public String getName() {
 		return "US Patents";
