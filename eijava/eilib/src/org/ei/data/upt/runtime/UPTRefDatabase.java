@@ -52,7 +52,9 @@ public class UPTRefDatabase extends Database {
 	public String getID() {
 		return "ref";
 	}
-
+	public String getLegendID() {
+		return "r";
+	}
 	public String getName() {
 		return "Patent References";
 	}
