@@ -18,6 +18,10 @@ public class ENGnetBASEDatabase extends Database
 	{
 		return "crc";
 	}
+    public String getLegendID()
+    {
+        return "cr";
+    }
 
 	public String getName()
 	{
