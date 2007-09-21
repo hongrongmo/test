@@ -121,6 +121,11 @@ public class InspecDatabase extends Database
     {
         return "ins";
     }
+    
+    public String getLegendID()
+    {
+        return "i";
+    }
 
     public String getName()
     {
