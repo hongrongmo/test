@@ -70,6 +70,11 @@ public class CBNBDatabase extends Database
 	{
 		return "cbn";
 	}
+	
+    public String getLegendID()
+    {
+        return "cb";
+    }
 
 	public String getName()
 	{
