@@ -67,6 +67,11 @@ public class EUPDatabase extends Database {
 	public String getID() {
 		return "eup";
 	}
+	
+    public String getLegendID()
+    {
+        return "e";
+    }
 
 	public String getName() {
 		return "EP Patents";
