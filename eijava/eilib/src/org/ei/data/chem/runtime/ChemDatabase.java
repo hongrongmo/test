@@ -71,6 +71,11 @@ public class ChemDatabase extends Database
 	{
 		return "chm";
 	}
+	
+    public String getLegendID()
+    {
+        return "cm";
+    }
 
 	public String getName()
 	{
