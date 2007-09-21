@@ -391,8 +391,7 @@ public class DatabaseDisplayHelper {
 					if ((!legend) && (i != 0)) {
 						buf.append(", ");
 					}
-					//buf.append((databases[i].getName()).substring(0, 1));
-					buf.append((databases[i].getIndexName()).substring(0, 1));
+					buf.append((databases[i].getLegendID()));
 					if (legend) {
 						buf.append("</span>");
 						buf.append(" ");
