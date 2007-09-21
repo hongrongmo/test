@@ -91,8 +91,8 @@ function generateSection(selecteddbMask)
          searchin[index++] = new Field("BN", "ISBN");
    }
    
-   if(((selecteddbMask & REFEREX)       != REFEREX) &&
-      (selecteddbMask & CBN)        != CBN)
+   if(((selecteddbMask & REFEREX) != REFEREX) &&
+      (selecteddbMask & CBN) != CBN)
    {
     if((selecteddbMask & US_PATENTS)!= US_PATENTS &&
        (selecteddbMask & EU_PATENTS) != EU_PATENTS &&
@@ -529,7 +529,6 @@ function generateDoctypes(selecteddbMask)
      (selecteddbMask & EU_PATENTS) != EU_PATENTS &&
      (selecteddbMask & NTIS) != NTIS &&
      (selecteddbMask & REFEREX) != REFEREX &&
-     (selecteddbMask & ELT) != ELT &&
      (selecteddbMask & EPT) != EPT &&
      (selecteddbMask & CBN) != CBN &&
      (selecteddbMask & CHM) != CHM &&
@@ -543,7 +542,6 @@ function generateDoctypes(selecteddbMask)
      (selecteddbMask & NTIS) != NTIS &&
      (selecteddbMask & CBF) != CBF &&
      (selecteddbMask & REFEREX) != REFEREX &&
-     (selecteddbMask & ELT) != ELT &&
      (selecteddbMask & EPT) != EPT &&
      (selecteddbMask & CBN) != CBN &&
      (selecteddbMask & CHM) != CHM &&
@@ -603,14 +601,6 @@ function generateDoctypes(selecteddbMask)
     doctypes[index++] = new Field("MC or MR or RC or RR or DS or UP", "Other documents");
   }
   
-//  if(selecteddbMask == ELT)
-//  {
-//    doctypes[index++] = new Field("({J_AB} or {J_AR} or {J_BZ} or {J_CP} or {J_ED} or {J_ER} or {J_LE} or {J_NO} or {J_RE} or {J_SH} or {D_AR} or {D_BZ} or {D_CP} or {J_BK} or {J_BR} or {J_CH} or {J_CR} or {J_DI} or {J_PA} or {J_PR} or {J_RP} or {J_WP})","Journal article");
-//    doctypes[index++] = new Field("(P or {P_AR} or {P_CP} or {P_AB} or {P_BK} or {P_BR} or {P_BZ} or {P_CH} or {P_CR} or {P_DI} or {P_ED} or {P_ER} or {P_LE} or {P_NO} or {P_PA} or {P_PR} or {P_RE} or {P_SH} or {P_RP} or {P_WP} or {D_CP} or {J_CP})","Conference");
-//    doctypes[index++] = new Field("({J_BZ} or {D_BZ} or {D_AR} or {D_CP} or {D_LE} or {D_NO} or {B_BZ} or {K_BZ} or {M_BZ} or {P_BZ} or {R_BZ})","Business article");
-//    doctypes[index++] = new Field("(AB or {J_AB} or {R_AB} or {P_AB} or {B_AB} or {D_AB} or {K_AB} or {M_AB})","Abstract");
-//    doctypes[index++] = new Field("Other","Other");
-//  }
   
   if(selecteddbMask == CBN)
   {
@@ -622,6 +612,11 @@ function generateDoctypes(selecteddbMask)
     doctypes[index++] = new Field("Stockbroker","Stockbroker Report");
     doctypes[index++] = new Field("Market","Market Research Report");
     doctypes[index++] = new Field("Press","Press Release");
+  }
+  
+    if(selecteddbMask == ELT )
+  {
+        doctypes[index++] = new Field("AB", "Abstract");
   }
 
   return doctypes;
