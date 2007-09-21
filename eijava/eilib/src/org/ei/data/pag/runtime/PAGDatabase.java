@@ -150,6 +150,11 @@ public class PAGDatabase extends Database
     {
         return "pag";
     }
+    
+    public String getLegendID()
+    {
+        return "pa";
+    }
 
     public String getName()
     {
