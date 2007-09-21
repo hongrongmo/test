@@ -82,6 +82,11 @@ public class CPXDatabase extends Database
     {
         return "cpx";
     }
+    
+    public String getLegendID()
+    {
+        return "c";
+    }
 
     public String getName()
     {
@@ -109,23 +114,24 @@ public class CPXDatabase extends Database
     }
     public int getSortValue(){ return getMask(); }
 
-  public Map getTreatments() {
+    public Map getTreatments() 
+    {
 
-    Map mp = new Hashtable();
+    	Map mp = new Hashtable();
 
-    mp.put("A","Applications (APP)");
-    mp.put("B","Biographical (BIO)");
-    mp.put("E","Economic (ECO)");
-    mp.put("X","Experimental (EXP)");
-    mp.put("G","General review (GEN)");
-    mp.put("H","Historical (HIS)");
-    mp.put("L","Literature review (LIT)");
-    mp.put("M","Management aspects (MAN)");
-    mp.put("N","Numerical (NUM)");
-    mp.put("T","Theoretical (THR)");
+    	mp.put("A","Applications (APP)");
+    	mp.put("B","Biographical (BIO)");
+    	mp.put("E","Economic (ECO)");
+    	mp.put("X","Experimental (EXP)");
+    	mp.put("G","General review (GEN)");
+    	mp.put("H","Historical (HIS)");
+    	mp.put("L","Literature review (LIT)");
+    	mp.put("M","Management aspects (MAN)");
+    	mp.put("N","Numerical (NUM)");
+    	mp.put("T","Theoretical (THR)");
 
-    return mp;
-  }
+    	return mp;
+    }
 
 
 	public boolean hasField(SearchField searchField,
