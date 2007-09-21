@@ -18,24 +18,52 @@ import org.ei.domain.*;
 import org.ei.fulldoc.LinkingStrategy;
 import org.ei.data.compendex.runtime.CPXLinkingStrategy;
 
+
 public class EptDatabase extends Database {
 
     private LinkingStrategy EptLinkingStrategy = new CPXLinkingStrategy();
+    private DataDictionary dataDictionary = new EptDataDictionary();
 
     private static Map searchfield = new HashMap();
 
     static {
-        searchfield.put("ALL", "Y");
-        searchfield.put("TI", "Y");
-        searchfield.put("AU", "Y");
-        searchfield.put("AF", "Y");
-        searchfield.put("AB", "Y");
-        searchfield.put("PC", "Y");
-        searchfield.put("PM", "Y");
-        searchfield.put("CV", "Y");
-        searchfield.put("CR", "Y");
-        searchfield.put("IP", "Y");
+    	searchfield.put("AB", "Y");
+    	searchfield.put("AC", "Y");
+    	searchfield.put("AD", "Y");
+    	searchfield.put("AF", "Y");
+    	searchfield.put("AJ", "Y");
+    	searchfield.put("All", "Y");
+    	searchfield.put("AN", "Y");
+    	searchfield.put("AP", "Y");
+    	searchfield.put("AU", "Y");
+    	searchfield.put("CL", "Y");
+    	searchfield.put("CR", "Y");
+    	searchfield.put("CV", "Y");
+    	searchfield.put("CVA", "Y");
+    	searchfield.put("CVM", "Y");
+    	searchfield.put("CVMA", "Y");
+    	searchfield.put("CVMN", "Y");
+    	searchfield.put("CVMP", "Y");
+    	searchfield.put("CVN", "Y");
+    	searchfield.put("CVP", "Y");
+    	searchfield.put("DG", "Y");
+    	searchfield.put("FL", "Y");
+    	searchfield.put("IP", "Y");
+    	searchfield.put("KY", "Y");
+    	searchfield.put("LA", "Y");
+    	searchfield.put("LT", "Y");
+    	searchfield.put("PC", "Y");
+    	searchfield.put("PM", "Y");
+    	searchfield.put("PRC", "Y");
+    	searchfield.put("PRD", "Y");
+    	searchfield.put("PRN", "Y");
+    	searchfield.put("TI", "Y");
+    	searchfield.put("YR", "Y");
 
+    }
+    public DataDictionary getDataDictionary()
+    {
+        return dataDictionary;
     }
 
     public int getStartYear(boolean hasBackFile) {
@@ -56,6 +84,11 @@ public class EptDatabase extends Database {
 
     public String getID() {
         return "ept";
+    }
+    
+    public String getLegendID() 
+    {
+ 	   return "ep";
     }
 
     public String getName() {
