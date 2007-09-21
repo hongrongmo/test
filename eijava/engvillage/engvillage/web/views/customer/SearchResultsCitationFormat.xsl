@@ -725,10 +725,16 @@
             </xsl:otherwise>
           </xsl:choose>
 
-          <xsl:if test="(TITLE != '')">
-           <xsl:attribute name="onmouseover">this.T_WIDTH=450;return escape('<xsl:value-of select="TITLE"/>')</xsl:attribute>
-          </xsl:if>
-
+		<xsl:if test="not($SELECTED-DB = '1024')">
+			<xsl:if test="not($SELECTED-DB = '2048')">
+				<xsl:if test="not($SELECTED-DB = '3072')">
+          			<xsl:if test="(TITLE != '')">
+           				<xsl:attribute name="onmouseover">this.T_WIDTH=450;return escape('<xsl:value-of select="TITLE"/>')</xsl:attribute>
+          			</xsl:if>
+          		</xsl:if>
+			</xsl:if>
+		</xsl:if>
+		
           <!-- suppress HREF when VALUE is missing -->
           <xsl:if test="((/PAGE/SESSION-DATA/SEARCH-TYPE='Easy') and not(normalize-space(VALUE)=''))">
             <xsl:if test="not(@COUNT=0)">
