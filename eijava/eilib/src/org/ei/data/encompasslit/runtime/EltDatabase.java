@@ -66,6 +66,10 @@ public class EltDatabase extends Database
    public String getID() {
 	   return "elt";
    }
+     
+   public String getLegendID() {
+	   return "el";
+   }
 
    public String getName() {
 	   return "EnCompassLIT";
