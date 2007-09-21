@@ -60,6 +60,11 @@ public class PaperChemDatabase extends Database {
     public String getID() {
         return "pch";
     }
+    
+    public String getLegendID()
+    {
+        return "pc";
+    }
 
     public String getName() {
         return "PaperChem";
