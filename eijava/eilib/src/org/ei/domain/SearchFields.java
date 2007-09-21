@@ -20,6 +20,13 @@ public class SearchFields
 	public static SearchField CF = new SearchField("CF", "Conference information");
 	public static SearchField CT = new SearchField("CT", "Contract number");
 	public static SearchField CV = new SearchField("CV", "Controlled term");
+	public static SearchField CVP = new SearchField("CVP","Controlled term as a product");
+	public static SearchField CVA = new SearchField("CVA","Controlled term as a reagent");
+	public static SearchField CVN = new SearchField("CVN","Controlled term with no role");
+	public static SearchField CVM = new SearchField("CVM", "Major term");
+	public static SearchField CVMA = new SearchField("CVMA","Major term as a reagent");  
+	public static SearchField CVMN = new SearchField("CVMN","Major term with no role");
+	public static SearchField CVMP = new SearchField("CVMP", "Major term as a product");
 	public static SearchField PU = new SearchField("PU", "Country of application");
 	public static SearchField CO = new SearchField("CO", "Country of origin ");
 	public static SearchField DI = new SearchField("DI", "Discipline");
@@ -28,8 +35,11 @@ public class SearchFields
 	public static SearchField BN = new SearchField("BN", "ISBN");
 	public static SearchField SN = new SearchField("SN", "ISSN");
 	public static SearchField LA = new SearchField("LA", "Language");
+	public static SearchField LT  = new SearchField("LT", "Linked term");
 	public static SearchField MH = new SearchField("MH", "Ei main heading");
 	public static SearchField MI = new SearchField("MI", "Material identity number");
+	public static SearchField YR = new SearchField("YR","Publication year");
+
 	public static SearchField AG = new SearchField("AG", "Monitoring agency");
 	public static SearchField NT = new SearchField("NT", "Notes");
 	public static SearchField NI = new SearchField("NI", "Numerical indexing");
@@ -46,6 +56,7 @@ public class SearchFields
 	public static SearchField PRN = new SearchField("PRN", "Patent priority information");
 	public static SearchField PM = new SearchField("PM", "Patent number");
 	public static SearchField PE = new SearchField("PE", "Patent examiner");
+	public static SearchField SO  = new SearchField("SO", "Source");
 
 	public static SearchField PN = new SearchField("PN", "Publisher");
 	public static SearchField PUC = new SearchField("PUC", "US classification");
@@ -59,11 +70,12 @@ public class SearchFields
 	public static SearchField PC = new SearchField("PC", "Patent Country");
 	public static SearchField IP = new SearchField("IP", "Int.patent classification");
 	public static SearchField CR = new SearchField("CR", "CAS registry number");
+	
+	//EnCompass fields
 
 
-	public static final SearchField[] ALL_FIELDS = {ALL,AB ,AN,AI ,AU ,AF ,AV ,CI ,CL ,OC ,CN ,CC ,CF ,CT ,CV ,PU ,CO ,DI ,DT ,PA ,BN ,SN ,LA ,MH ,MI ,AG ,NT ,NI ,PD, PE ,PI ,PID ,PM, PCI, PCO, PAC, PEC, PFD, PAM, PAN ,PN ,PRN ,PUC ,RN ,ST ,KY ,TI ,TR ,FL, RGI, PC, IP, CR };
-
-
+	public static final SearchField[] ALL_FIELDS = {
+		AB , AF , AG , AI , ALL , AN , AU , AV , BN , CC , CF , CI , CL , CN , CO , CR  , CT , CV , CVA , CVM , CVMA , CVMN , CVMP , CVN , CVP , DI , DT , FL , IP , KY , LA , LT , MH , MI , NI , NT , OC , PA , PAC , PAM , PAN , PC  , PCI , PCO , PD  , PE  , PEC , PFD , PI  , PID , PM  , PN  , PRN , PU , PUC , RGI , RN  , SN , SO  , ST  , TI  , TR  , YR};
 
 	/*
 	* This method is used to an array of CustomeSearchFields based on
