@@ -75,6 +75,11 @@ public class NTISDatabase extends Database
     {
         return "nti";
     }
+    
+    public String getLegendID()
+    {
+        return "n";
+    }
 
     public String getName()
     {
