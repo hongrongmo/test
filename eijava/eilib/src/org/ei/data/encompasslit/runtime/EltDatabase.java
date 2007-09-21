@@ -18,16 +18,33 @@ public class EltDatabase extends Database
 
 	  static {
 		  searchfield.put("ALL", "Y");
-		  searchfield.put("KY", "Y");
-		  searchfield.put("AB", "Y");
-		  searchfield.put("AU", "Y");
 		  searchfield.put("AF", "Y");
-		  searchfield.put("TI", "Y");
-		  searchfield.put("ST", "Y");
-		  searchfield.put("PN", "Y");
-		  searchfield.put("CV", "Y");
-		  searchfield.put("CR", "Y");
+		  searchfield.put("All", "Y");
+		  searchfield.put("AN", "Y");
+		  searchfield.put("AU", "Y");
 		  searchfield.put("CF", "Y");
+		  searchfield.put("CL", "Y");
+		  searchfield.put("CR", "Y");
+		  searchfield.put("CV", "Y");
+		  searchfield.put("CVA", "Y");
+		  searchfield.put("CVM", "Y");
+		  searchfield.put("CVMA", "Y");
+		  searchfield.put("CVMN", "Y");
+		  searchfield.put("CVMP", "Y");
+		  searchfield.put("CVN", "Y");
+		  searchfield.put("CVP", "Y");
+		  searchfield.put("DT", "Y");
+		  searchfield.put("FL", "Y");
+		  searchfield.put("KY", "Y");
+		  searchfield.put("LA", "Y");
+		  searchfield.put("LT", "Y");
+		  searchfield.put("PN", "Y");
+		  searchfield.put("SN", "Y");
+		  searchfield.put("SO", "Y");
+		  searchfield.put("ST", "Y");
+		  searchfield.put("TI", "Y");
+		  searchfield.put("YR", "Y");
+
 	  }
 
 	public int getStartYear(boolean hasBackFile) {
