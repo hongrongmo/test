@@ -24,7 +24,11 @@ public class USPTODatabase extends Database
 	{
 		return "usp";
 	}
-
+	
+	public String getLegendID()
+	{
+		return "up";
+	}
 	public String getName()
 	{
 		return "USPTO";
