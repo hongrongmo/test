@@ -15,6 +15,10 @@ public class EltDataDictionary implements DataDictionary
             String title = p5.substitute("s/(\\w+)/\\u$1/g",classCode.toLowerCase());
             return title;
     	}
+        public Hashtable getAuthorityCodes()
+        {
+        	return null;
+        }
 
         public Hashtable getClassCodes()
         {
