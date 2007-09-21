@@ -63,6 +63,10 @@ public class CBFDatabase extends C84Database
     {
         return "c84";
     }
+    public String getLegendID()
+    {
+        return "c";
+    }
 
     public String getName()
     {
