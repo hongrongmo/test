@@ -48,6 +48,11 @@ public class InsBackDatabase extends Database
     {
         return "ibf";
     }
+    
+    public String getLegendID()
+    {
+        return "ib";
+    }
 
     public String getName()
     {
