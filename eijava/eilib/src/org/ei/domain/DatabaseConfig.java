@@ -38,6 +38,7 @@ public final class DatabaseConfig
 
 	public static final String C84_PREF = "c84";
 	public static final String CBF_PREF = "zbf";
+	public static final String EPT_PREF = "ept";
 	public static final int CBF_ENDYEAR  = 1969;
 
     protected static Log log = LogFactory.getLog(DatabaseConfig.class);
@@ -161,10 +162,10 @@ public final class DatabaseConfig
     }
     
     public String getAuthorityCode(String auCode) 
-    {
+    {  	
         if ((auCode != null) && (auCode.length() > 0)) 
         {
-            Database d = (Database) databaseTable.get("ept");
+            Database d = (Database) databaseTable.get(EPT_PREF);
             if(d != null)
             {
                 if ((auCode.indexOf("DQD") > -1) || (auCode.indexOf("dqd") > -1)) 
