@@ -1,5 +1,5 @@
 
-package eilib.src.org.ei.data;
+package org.ei.data;
 
 import java.sql.*;
 import java.util.Iterator;
@@ -13,7 +13,7 @@ public class FieldAnalyzer
 {
 
 	private static TreeMap mfields = new TreeMap();
-		
+
 	public static void main(String args[])
 		throws Exception
 	{
@@ -21,7 +21,7 @@ public class FieldAnalyzer
 			String dbtable = args[0];
 			String fieldname = args[1];
 			String distinct = args[2];
-			String outfile = args[3];			
+			String outfile = args[3];
 			String driver = args[4];
 			String url = args[5];
 			String user = args[6];
@@ -29,7 +29,7 @@ public class FieldAnalyzer
 
 			FieldAnalyzer fa = new FieldAnalyzer();
 			StringTokenizer toks = new StringTokenizer(fieldname, ";");
-			
+
 			for (int a = 0; a<toks.countTokens(); a++)
 			{
 				Field f = fa.new Field(dbtable, toks.nextToken(),distinct);
@@ -38,28 +38,28 @@ public class FieldAnalyzer
 			writeFile(outfile);
 
 	}
-	
-	
+
+
 	public static void writeFile(String fileout)
 										throws Exception
 	{
 		FileWriter out = new FileWriter(fileout);
 		Iterator itr = mfields.keySet().iterator();
-		
+
 		while (itr.hasNext())
 		{
 			String tmp = (String)itr.next();
 			out.write("\n"+tmp+ "\t" + mfields.get(tmp));
 		}
-		
+
 		out.close();
 	}
-	
-	
-	public static void getFieldsCounts(Field f, 
-									   String driver, 
-									   String url, 
-									   String user, 
+
+
+	public static void getFieldsCounts(Field f,
+									   String driver,
+									   String url,
+									   String user,
 									   String pass)
 		throws Exception
 	{
@@ -74,7 +74,7 @@ public class FieldAnalyzer
 			rs = pstmt.executeQuery();
 			while(rs.next())
 			{
-				String fl = rs.getString(f.getName());				
+				String fl = rs.getString(f.getName());
 				if(fl != null)
 				{
 					StringTokenizer toks = new StringTokenizer(fl,"|");
@@ -85,7 +85,7 @@ public class FieldAnalyzer
 						{
 							Integer i =(Integer) mfields.get(toc);
 							int t = i.intValue();
-							mfields.put(toc, new Integer(++t));						
+							mfields.put(toc, new Integer(++t));
 						}
 						else
 						{
@@ -93,7 +93,7 @@ public class FieldAnalyzer
 						}
 					}
 				}
-			}						
+			}
 		}
 		catch(Exception e1)
 		{
@@ -136,35 +136,35 @@ public class FieldAnalyzer
 			}
 		}
 	}
-		
+
 	private class Field
 	{
 		private String dbtable;
 		private String name;
 		boolean isDistinct;
-		
+
 		Field(String dbtable ,
-			  String name, 
+			  String name,
 			  String distinct)
 		{
 			this.dbtable = dbtable;
 			this.name = name;
-			this.isDistinct = new Boolean(distinct).booleanValue();			
+			this.isDistinct = new Boolean(distinct).booleanValue();
 		}
-		
+
 		private String getDbtable()
 		{
 			return dbtable;
 		}
-		
+
 		private String getName()
 		{
 			return name;
 		}
-		
+
 		private boolean isDistinct()
 		{
 			return isDistinct;
-		}		
+		}
 	}
 }
