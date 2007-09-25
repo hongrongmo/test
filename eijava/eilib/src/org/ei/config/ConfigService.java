@@ -14,9 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.DriverConfig;
 import org.ei.domain.FastSearchControl;
-import org.ei.books.BookSearchControl;
-import org.ei.thesaurus.ThesaurusSearchControl;
 import org.ei.email.EMail;
+import org.ei.thesaurus.ThesaurusSearchControl;
 
 
 
@@ -48,8 +47,6 @@ public class ConfigService extends HttpServlet
             boolean emailDebug = (new Boolean(props.getProperty("debug"))).booleanValue();
             System.out.println("Setting main index base url to:"+mainIndexBaseURL);
             FastSearchControl.BASE_URL = mainIndexBaseURL;
-            System.out.println("Setting book index base url to:"+mainIndexBaseURL);
-            BookSearchControl.BASE_URL = mainIndexBaseURL;
             System.out.println("Setting thesaurus index base url to:"+thesaurusIndexBaseURL);
             ThesaurusSearchControl.BASE_URL = thesaurusIndexBaseURL;
             System.out.println("Setting mailhost:"+mailHost);
