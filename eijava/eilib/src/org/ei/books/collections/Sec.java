@@ -8,6 +8,10 @@ public class Sec extends ReferexCollection {
 	protected Sec() {
 	}
 
+  public int getColMask() {
+    return 64;
+  }
+  public int getSortOrder() { return 5;}
 	public String getAbbrev() {
 		// TODO Auto-generated method stub
 		return "SEC";
@@ -25,7 +29,7 @@ public class Sec extends ReferexCollection {
 
 	  public List populateSubjects(boolean che, boolean chestar) {
 	      List subjs = new LinkedList();
-          
+
           return subjs;
       }
 }
