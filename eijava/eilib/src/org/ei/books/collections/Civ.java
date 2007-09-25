@@ -8,6 +8,10 @@ public class Civ extends ReferexCollection {
 	protected Civ() {
 	}
 
+  public int getColMask() {
+    return 16;
+  }
+  public int getSortOrder() { return 6;}
 	public String getAbbrev() {
 		// TODO Auto-generated method stub
 		return "CIV";
@@ -26,7 +30,8 @@ public class Civ extends ReferexCollection {
 	  public List populateSubjects(boolean che, boolean chestar) {
 	      List subjs = new LinkedList();
 
+
 	    return subjs;
 	   }
-	
+
 }

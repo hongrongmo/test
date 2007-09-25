@@ -8,6 +8,11 @@ public class Com extends ReferexCollection {
 	protected Com() {
 	}
 
+  public int getColMask() {
+    return 32;
+  }
+
+  public int getSortOrder() { return 4;}
 	public String getAbbrev() {
 		// TODO Auto-generated method stub
 		return "COM";
@@ -25,7 +30,8 @@ public class Com extends ReferexCollection {
 
       public List populateSubjects(boolean che, boolean chestar) {
           List subjs = new LinkedList();
-    
+
+
         return subjs;
        }
 
