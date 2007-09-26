@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
@@ -12,6 +13,11 @@ import java.util.Vector;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.ei.domain.DatabaseConfig;
+import org.ei.domain.HistoryException;
+import org.ei.domain.SaxHistoryParser;
+
+import org.ei.domain.Sort;
 import org.ei.domain.navigators.Refinements;
 import org.ei.domain.navigators.ResultsState;
 import org.ei.parser.ParseException;
@@ -42,7 +48,11 @@ public class Query implements Comparable
     protected static Log log = LogFactory.getLog(Query.class);
 
     private static final String[] stemFields = { "ALL", "KY", "TI", "AB", "FL", "CV", "AV", "AF", "ST", "MH", "CF", "PN","BI" };
-    private static final String[] allFields = { "RGI", "PU", "PM", "PE", "VO", "SU", "SP", "DB", "AN", "RN", "AG", "AV", "CT", "CO", "NT", "PA", "PI", "WK", "YR", "ALL", "KY", "AF", "PN", "ST", "MH", "CL", "CN", "TI", "AB", "AU", "CC", "CV", "FL", "SN", "DT", "BN", "TR", "LA", "CF", "DI", "MI", "NI", "CI", "AI","OC","BI" , "PEC" , "PUC" , "PAC", "PK" , "PID" , "PCI","PRN","SIC","PEX","PAM","DOI","PFD","BKS","BKT","PD","CR","PC","IP"};
+    
+    private static final String[] allFields = { "RGI", "PU", "PM", "PE", "VO", "SU", "SP", "DB", "AN", "RN", "AG", "AV", "CT", "CO", "NT", "PA", "PI", "WK", "YR", "ALL", "KY", "AF", "PN", "ST", "MH", "CL", "CN", "TI", "AB", "AU", "CC", "CV", "FL", "SN", "DT", "BN", "TR", "LA", "CF", "DI", "MI", "NI", "CI", "AI",  "OC","BI" , "PEC" , "PUC" , "PAC", "PK" , "PID" , "PCI","PRN","SIC","PEX","PAM","DOI","PFD","BKS","BKT","PD","CR","PC","IP", "IS", "EB", "CM", "GC", "RC","SI", "VOM", "CP", "SC", "GD", "IC","CE", "DS", "SD", "SO", "PPA",
+    	//EnCompass fields
+    	"AJ", "PRD", "PRC", "AP", "AD", "AC", "EY", "PT",  "LT", "CVA", "CVP", "CVN", "CVM", "CVMN", "CVMA", "CVMP", "DG" };
+
     private static Map quickSearchDiplayOptions = new HashMap();
 
     private ResultsState resultsstate = new ResultsState();
@@ -250,11 +260,118 @@ public class Query implements Comparable
     {
 
     }
+    
+    public Query(String xmlString) throws HistoryException {
+        try {
+            System.out.println("*In Query xmlString");
+            System.out.println("***xmlString: " + xmlString);
+            this.loadFromXML(xmlString);
+
+        }
+        catch (Exception e) {
+            throw new HistoryException(e);
+        }
+    }
 
     public Query(DatabaseConfig config, String[] credents)
     {
         this.config = config;
         this.credentials = credents;
+    }
+    
+    public Query(QueryWriter sqw, DatabaseConfig config, String[] credentials, String xmlString) throws HistoryException {
+        try {
+            this.searchQueryWriter = sqw;
+            System.out.println("* searchQueryWriter: " + searchQueryWriter);
+            this.config = config;
+            this.credentials = credentials;
+            this.loadFromXML(xmlString);
+        }
+        catch (Exception e) {
+            throw new HistoryException(e);
+        }
+    }
+    
+
+    private void loadFromXML(String xmlString) throws HistoryException {
+        try {
+            // Instanciate sax parser for Query History
+            SaxHistoryParser hp = new SaxHistoryParser();
+            // parse query xml to a hashtable
+            Hashtable ht = hp.read(xmlString);
+
+            // Set Class variables from the Hashtable
+            setEmailAlertWeek((String) ht.get("EMAILALERTWEEK"));
+
+            setSeaPhr1((String) ht.get("SEARCH-PHRASE_SEARCH-PHRASE-1"));
+            setSeaOpt1((String) ht.get("SEARCH-PHRASE_SEARCH-OPTION-1"));
+            setBool1((String) ht.get("SEARCH-PHRASE_BOOLEAN-1"));
+            setSeaPhr2((String) ht.get("SEARCH-PHRASE_SEARCH-PHRASE-2"));
+            setSeaOpt2((String) ht.get("SEARCH-PHRASE_SEARCH-OPTION-2"));
+            setBool2((String) ht.get("SEARCH-PHRASE_BOOLEAN-2"));
+            setSeaPhr3((String) ht.get("SEARCH-PHRASE_SEARCH-PHRASE-3"));
+            setSeaOpt3((String) ht.get("SEARCH-PHRASE_SEARCH-OPTION-3"));
+            setRecordCount((String) ht.get("RESULTS-COUNT"));
+            setLanguage((String) ht.get("LANGUAGE"));
+            setStartYear((String) ht.get("START-YEAR"));
+            setEndYear((String) ht.get("END-YEAR"));
+
+            if (ht.get("SORT-OPTION") != null) {
+                setSortOption(new Sort((String) ht.get("SORT-OPTION"), "dw"));
+            }
+            else {
+                setSortOption(new Sort(Sort.RELEVANCE_FIELD, "dw"));
+            }
+
+            setSearchType((String) ht.get("SEARCH-TYPE"));
+            setID((String) ht.get("QUERY-ID"));
+            setDisplayQuery((String) ht.get("DISPLAY-QUERY"));
+
+            //setSearchQuery((String)ht.get("SEARCH-QUERY"));
+
+            if (ht.containsKey("PHYSICAL-QUERY")) {
+                setPhysicalQuery((String) ht.get("PHYSICAL-QUERY"));
+            }
+
+            setDocumentType((String) ht.get("DOCUMENT-TYPE"));
+            setTreatmentType((String) ht.get("TREATMENT-TYPE"));
+            setLastFourUpdates((String) ht.get("LASTFOURUPDATES"));
+            setDisciplineType((String) ht.get("DISCIPLINE-TYPE"));
+            setDeDupDB((String) ht.get("DEDUPDB"));
+            setAutoStemming((String) ht.get("AUTOSTEMMING"));
+            setDeDup((String) ht.get("DEDUP"));
+            setDupSet((String) ht.get("DUPSET"));
+
+            setSubcounts((String) ht.get("SC"));
+
+            if (ht.get("DATABASE_ID") != null) {
+                String did = (String) ht.get("DATABASE_ID");
+
+                if (did.equalsIgnoreCase("cpx")) {
+                    setDataBase(1);
+                }
+                else if (did.equalsIgnoreCase("inspec")) {
+                    setDataBase(2);
+                }
+                else if (did.equalsIgnoreCase("com")) {
+                    setDataBase(3);
+                }
+                else if (did.equalsIgnoreCase("uspto")) {
+                    setDataBase(8);
+                }
+                else if (did.equalsIgnoreCase("crc")) {
+                    setDataBase(16);
+                }
+
+            }
+            else {
+                setDataBase(Integer.parseInt((String) ht.get("DATABASE-MASK")));
+            }
+
+        }
+        catch (Exception e) {
+            throw new HistoryException(e);
+        }
     }
 
     public DatabaseConfig getDatabaseConfig()
