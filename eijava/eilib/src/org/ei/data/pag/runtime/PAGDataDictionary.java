@@ -37,4 +37,9 @@ public class PAGDataDictionary  implements DataDictionary
   	{
   		return null;
   	}
+  	
+    public Hashtable getAuthorityCodes()
+    {
+    	return null;
+    }
 }
