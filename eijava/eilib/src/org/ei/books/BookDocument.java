@@ -27,26 +27,39 @@ public class BookDocument extends EIDoc {
 
 	public static String PDF_ANCHOR = "&original_content_type=application%2Fpdf&toolbar=1&statusbar=0&messages=0&navpanes=0";
 
+	private String tocpath = null;
+	private String docview_url = null;
+	private String wobl_url = null;
 
-	public static String getDocviewUrl() {
-		String docview_url = null;
+	public boolean isBook()
+	{
+		return true;
+	}
 
-		RuntimeProperties eiProps = ConfigService.getRuntimeProperties();
-	    docview_url = eiProps.getProperty("FastDocviewBaseUrl");
-	    if(docview_url == null)
-	    {
-	    	docview_url = "http://localhost/docview";
-	    }
+	public String getDocviewUrl() {
 	    return docview_url;
 	}
 
-	public static String getTocPath() {
-		String tocpath = null;
+	public void setDocviewUrl() {
+	  RuntimeProperties eiProps = ConfigService.getRuntimeProperties();
+    docview_url = eiProps.getProperty("FastDocviewBaseUrl");
+	}
 
-		  RuntimeProperties eiProps = ConfigService.getRuntimeProperties();
-	    tocpath = eiProps.getProperty("ReferexTocBasePath");
-
+	public String getTocPath() {
 	    return tocpath;
+	}
+	public void setTocPath() {
+    RuntimeProperties eiProps = ConfigService.getRuntimeProperties();
+    tocpath = eiProps.getProperty("ReferexTocBasePath");
+	}
+
+	public String getWoblUrl() {
+	    return wobl_url;
+	}
+
+	public void setWoblUrl() {
+	  RuntimeProperties eiProps = ConfigService.getRuntimeProperties();
+    wobl_url = eiProps.getProperty("WholeBookDownloadBaseUrl");
 	}
 
 	public String getView() {
@@ -56,22 +69,42 @@ public class BookDocument extends EIDoc {
 			return "/engvillage/views/customer/SearchResultsDetailedFormat.xsl";
 	}
 
+  private void init() {
+    setTocPath();
+    setDocviewUrl();
+    setWoblUrl();
+  }
+
 	public BookDocument(DocID docID, ElementDataMap mapDocument, String format) {
-        super(docID, mapDocument, format);
+    super(docID, mapDocument, format);
+    init();
+  }
+
+  public BookDocument(DocID docId) {
+    super(docId);
+    init();
+  }
+
+    public String getISBN13() {
+      ISBN isbn = (ISBN) getElementDataMap().get(Keys.ISBN13);
+      String isbnstr = isbn.withoutDash();
+
+      return isbnstr;
     }
 
-    public BookDocument(DocID docId) {
-        super(docId);
-    }
-
-    public String getISBN() {
+    public String getISBN10() {
       ISBN isbn = (ISBN) getElementDataMap().get(Keys.ISBN);
-      if(isbn != null) {
-        return isbn.withoutDash();
+      String isbnstr = isbn.withoutDash();
+      return isbnstr;
+    }
+
+    public String getChapterPii() {
+      String pii = null;
+      if(getElementDataMap().containsKey(Keys.BOOK_CHAPTER_PII)) {
+        ElementData piidata = getElementDataMap().get(Keys.BOOK_CHAPTER_PII);
+      pii = (piidata.getElementData())[0];
       }
-      else {
-        return null;
-      }
+      return pii;
     }
 
     public int getPageNum() {
@@ -93,22 +126,6 @@ public class BookDocument extends EIDoc {
         return pagenum;
     }
 
-    public String getBookLink() {
-
-      String viewStr = "";
-
-      try {
-        AdmitOneTicketer ticketer = AdmitOneTicketer.getInstance();
-        viewStr = viewStr.concat("<URL><![CDATA[");
-        // custid is sent in empty - we will concat onto end of URL in XSL
-        // getBookTicketedURL() only does that itself.
-        viewStr = viewStr.concat(ticketer.getBookTicketedURL(this.getISBN(),"", System.currentTimeMillis()));
-        viewStr = viewStr.concat("]]></URL>");
-      } catch(BookException e) {}
-
-      return viewStr;
-    }
-
     public static String getReadPageTicket(String isbn, String custid) {
 
         String viewStr = "";
@@ -123,7 +140,7 @@ public class BookDocument extends EIDoc {
         return viewStr;
       }
 
-    public static String getReadBookLink(String isbn, String custid) {
+      public static String getReadChapterLink(String baseUrl, String isbn, String pii, String custid) {
 
         String viewStr = "";
 
@@ -131,21 +148,84 @@ public class BookDocument extends EIDoc {
           AdmitOneTicketer ticketer = AdmitOneTicketer.getInstance();
           // custid is sent in empty - we will concat onto end of URL in XSL
           // getBookTicketedURL() only does that itself.
-          viewStr = ticketer.getBookTicketedURL(isbn, custid, System.currentTimeMillis());
-        } catch(BookException e) {}
+          viewStr = ticketer.getChapterTicketedURL(baseUrl, isbn, pii, custid, System.currentTimeMillis());
+        }
+        catch(BookException e) {
+          //e.printStackTrace();
+          System.out.println(e.getMessage());
+        }
 
         return viewStr;
       }
 
+      public static String getReadBookLink(String baseUrl, String isbn, String custid) {
+
+        String viewStr = "";
+        if(isbn != null) {
+          if((isbn.length() >= 9) && (isbn.length() <= 11)) {
+            String isbnSuffix = null;
+            if(isbn.length() == 11) {
+              isbnSuffix = isbn.substring(10,11);
+            }
+            String isbnroot = "978"+ isbn.substring(0, 9);
+            isbn = (isbnroot + getISBN13CheckDigit(isbnroot) + ((isbnSuffix != null) ? isbnSuffix : ""));
+          }
+          try {
+            AdmitOneTicketer ticketer = AdmitOneTicketer.getInstance();
+            // custid is sent in empty - we will concat onto end of URL in XSL
+            // getBookTicketedURL() only does that itself.
+            viewStr = ticketer.getBookTicketedURL(baseUrl, isbn, custid, System.currentTimeMillis());
+          }
+          catch(BookException e) {
+            //e.printStackTrace();
+            System.out.println(e.getMessage());
+          }
+        }
+        return viewStr;
+      }
+
+      private static char getISBN13CheckDigit(final String isbn) {
+        int len = isbn.length();
+        int digitSum = 0;
+        int calcValue = 0;
+
+        // length of passed in isbn must be 12 or
+        // we will get a nullpointer here
+        for (int i = 0; i < 12; i++) {
+            int val = Integer.parseInt((isbn.substring(i, i + 1)));
+            if (i % 2 == 1) {
+                digitSum += val * 3;
+            } else {
+                digitSum += val;
+            }
+        }
+
+        calcValue = (10 - (digitSum % 10)) % 10;
+
+        return (char) (calcValue + '0');
+    }
+
+
     public void toXML(Writer out) throws IOException {
       super.toXML(out);
 
+      out.write("<BOOKIMGS>");
+    	out.write(getWoblUrl());
+      out.write("</BOOKIMGS>");
+
+      out.write("<WOBLSERVER>");
+    	out.write(getWoblUrl());
+      out.write("</WOBLSERVER>");
+
       if (getPageNum() == 0 && getDeep()) {
 
-    	out.write("<TOC>");
+      	out.write("<TOC>");
         out.write("<![CDATA[");
 
-        out.write(getTOC());
+        String strtoc = getTOC();
+        if(strtoc != null) {
+          out.write(strtoc);
+        }
 
         out.write("]]>");
         out.write("</TOC>");
@@ -190,12 +270,7 @@ public class BookDocument extends EIDoc {
     	"0884159485",
     	"0750650508",
     	"0750650559",
-    	"0750650761",
-    	"0750651318",
-    	"0750655208",
     	"0750672439",
-    	"0750649321",
-    	"0750639962",
     	"0750615478a",
     	"0750615478b",
     	"0750615478c",
@@ -216,12 +291,7 @@ public class BookDocument extends EIDoc {
         "9780884159483",
         "9780750650502",
         "9780750650557",
-        "9780750650762",
-        "9780750651318",
-        "9780750655200",
         "9780750672436",
-        "9780750649322",
-        "9780750639965",
         "9780750615471a",
         "9780750615471b",
         "9780750615471c",
@@ -231,7 +301,13 @@ public class BookDocument extends EIDoc {
         "9780126912951",
         "9780750670623",
         "9780750643986",
-        "9780750694834"};
+        "9780750694834",
+        "9780750648851", // Still Bad - both S300 and WOBL
+        "9780121746513", // Bad WOBL - no S300
+        "9780750646420", // Bad WOBL - no S300
+        "9780750674355" // Bad WOBL - no S300
+        };
+
     static {
       Arrays.sort(badbooks);
     }
@@ -242,8 +318,9 @@ public class BookDocument extends EIDoc {
     }
 
     public String getTOC() {
-      if(getTocPath() != null)
+      if(getTocPath() != null) {
         return getTOCFs();
+      }
       else
         return getTOCHttp();
     }
@@ -280,18 +357,16 @@ public class BookDocument extends EIDoc {
 
     private String getTOCFs() {
 
-      String strtoc = null;
+      String strtoc = "";
 
       try {
-
-        String tocPath =  getTocPath() + System.getProperty("file.separator") + getISBN() + System.getProperty("file.separator") + getISBN() + "_toc.html";
-
-        File doc_data = new File(tocPath); //filepathname + System.getProperty("file.separator") + "doc_data.txt");
+        String tocPath =  getTocPath() + System.getProperty("file.separator") + getISBN13() + System.getProperty("file.separator") + getISBN13() + "_toc.html";
+        File doc_data = new File(tocPath);
         strtoc = readTOC(new FileReader(doc_data));
+        doc_data = null;
       }
       catch(FileNotFoundException e)
       {
-          e.printStackTrace();
           System.out.println(e.getMessage());
       }
       finally
@@ -308,7 +383,7 @@ public class BookDocument extends EIDoc {
 
       try {
 
-        String tocUrl =  getDocviewUrl() + "/pdfs/" + getISBN() + "/" + getISBN() + "_toc.html";
+        String tocUrl =  getDocviewUrl() + "/" + getISBN13() + "/" + getISBN13() + "_toc.html";
         url = new URL(tocUrl);
         ucon = (HttpURLConnection) url.openConnection();
         ucon.setDoOutput(true);
@@ -320,12 +395,12 @@ public class BookDocument extends EIDoc {
       }
       catch(FileNotFoundException e)
       {
-          e.printStackTrace();
+//          e.printStackTrace();
           System.out.println(e.getMessage());
       }
       catch(Exception e)
       {
-          e.printStackTrace();
+//          e.printStackTrace();
           System.out.println(e.getMessage());
       }
       finally
