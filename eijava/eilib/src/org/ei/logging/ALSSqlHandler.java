@@ -73,11 +73,17 @@ public class ALSSqlHandler
 
             appID    = result.group(1);
             reqID    = result.group(2);
-            // clean up potential data sql insert issues
-            httpData = stringReplace(result.group(3),"'","\'",false);
+            httpData = result.group(3);
+            if(httpData != null) {
+              // clean up potential data sql insert issues
+              httpData = httpData.replaceAll("'","''");
+            }
             cookie   = result.group(4);
-            // clean up potential data sql insert issues
-            appData  = stringReplace(result.group(5),"'","\'",false);
+            appData  = result.group(5);
+            if(appData  != null) {
+              // clean up potential data sql insert issues
+              appData  = appData.replaceAll("'","''");
+            }
 
             // Construct the insert statment for ALS Analytic Logging Service DB format.
             // Consult Websphere for format.
@@ -128,46 +134,6 @@ public class ALSSqlHandler
                 }
             }
         }
-    }
-
-
-
-    /**
-     * Replace all occurences of string one with string two.
-     * It does not replace if a string has an escape character
-     * in front of it ('\').
-     * @param org The original string in which strings have to be replaced.
-     * @param searchString The string to-be-replaced.
-     * @param str2 The new string that replaced 'searchString'.
-     * @param caseSensitive Whether the search for the 'searchString' should be case sensitive.
-     * @return The newly constructed string.
-     */
-    public String stringReplace(String org, String searchString, String str2, boolean caseSensitive) {
-        if (org == null || searchString == null) {
-            return org;
-        }
-        if (str2 == null) {
-            str2 = "";
-        }
-        StringBuffer  sb = new StringBuffer();
-        int  oldi = 0;
-        int  i = (!caseSensitive) ? org.toUpperCase().indexOf(searchString.toUpperCase()) : org.indexOf(searchString);
-        while (i >= 0) {
-            sb.append(org.substring(oldi, i));
-
-            // check escape character
-            if (i > 0 && org.charAt(i-1) == '\\') {
-                // do not replace
-                sb.append(searchString);
-            } else {
-                // replace now!
-                sb.append(str2);
-            }
-            oldi = i + searchString.length();
-            i = (!caseSensitive) ? org.toUpperCase().indexOf(searchString.toUpperCase(), oldi) : org.indexOf(searchString, oldi);
-        }
-        sb.append(org.substring(oldi, org.length()));
-        return sb.toString();
     }
 }
 
