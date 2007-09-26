@@ -265,10 +265,6 @@ public class Highlights
 				{
 					buf.append("&lt;");
 				}
-				else if(cv == '&' && escape)
-				{
-					buf.append("&amp;");
-				}
 				else
 				{
 					buf.append(cv);
@@ -312,10 +308,6 @@ public class Highlights
 						{
 							buf.append("&lt;");
 						}
-						else if(databuf[index] == '&' && escape)
-						{
-							buf.append("&amp;");
-						}
 						else
 						{
 							buf.append(databuf[index]);
@@ -331,10 +323,6 @@ public class Highlights
 					else if(databuf[index] == '<' && escape)
 					{
 						buf.append("&lt;");
-					}
-					else if(databuf[index] == '&' && escape)
-					{
-						buf.append("&amp;");
 					}
 					else
 					{
