@@ -3545,4 +3545,9 @@ public class InspecDataDictionary
 
 
     }
+    
+    public Hashtable getAuthorityCodes()
+    {
+    	return null;
+    }
 }
