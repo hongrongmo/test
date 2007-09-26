@@ -18,7 +18,7 @@ import org.ei.domain.LimitGroups;
 
 import org.ei.domain.SearchField;
 import org.ei.domain.sort.SortField;
-import org.ei.ev.driver.cpx.CPXLinkingStrategy;
+import org.ei.data.compendex.runtime.CPXLinkingStrategy;
 import org.ei.fulldoc.LinkingStrategy;
 
 public class PAGDatabase extends Database
