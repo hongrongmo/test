@@ -939,4 +939,9 @@ public class CPXDataDictionary
 
 
     }
+    
+    public Hashtable getAuthorityCodes()
+    {
+    	return null;
+    }
 }
