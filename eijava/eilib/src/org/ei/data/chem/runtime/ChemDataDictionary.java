@@ -71,4 +71,8 @@ public class ChemDataDictionary
 	   classCodes.put("dMS-05","Agrochemicals");
 	   classCodes.put("fMS-20","Other Industries");
    }
+    public Hashtable getAuthorityCodes()
+    {
+    	return null;
+    }
 }
