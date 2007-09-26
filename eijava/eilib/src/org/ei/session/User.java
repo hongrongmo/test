@@ -82,7 +82,7 @@ public class User
         String dataContainerString = d.substring(n.indexOf("=")+1, d.length());
         if((dataContainerString != null) && (!dataContainerString.equals("-")))
         {
-        	if(Pattern.compile("(ELE|MAT|CHE)(\\d?)").matcher(dataContainerString).find())
+        	if(Pattern.compile("(ELE|MAT|CHE|COM|SEC|CIV)(\\d?)").matcher(dataContainerString).find())
             {
             	if(!Pattern.compile("PAG").matcher(dataContainerString).find()) {
             		dataContainerString = dataContainerString.concat(";PAG");
