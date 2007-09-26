@@ -1,5 +1,7 @@
-package org.ei.data.pag.runtime;
+package org.ei.ev.driver.pag;
 
+import java.io.Reader;
+import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.sql.Clob;
@@ -7,6 +9,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
@@ -19,6 +22,8 @@ import org.ei.connectionpool.ConnectionBroker;
 import org.ei.data.AuthorStream;
 import org.ei.data.DataCleaner;
 import org.ei.domain.Abstract;
+import org.ei.domain.Affiliation;
+import org.ei.domain.Affiliations;
 import org.ei.domain.Citation;
 import org.ei.domain.Contributor;
 import org.ei.domain.Contributors;
@@ -32,9 +37,13 @@ import org.ei.domain.ElementData;
 import org.ei.domain.ElementDataMap;
 import org.ei.domain.FullDoc;
 import org.ei.domain.ISBN;
+import org.ei.domain.ISSN;
+import org.ei.domain.Issue;
 import org.ei.domain.Key;
 import org.ei.domain.Keys;
+import org.ei.domain.PageRange;
 import org.ei.domain.RIS;
+import org.ei.domain.Volume;
 import org.ei.domain.XMLMultiWrapper;
 import org.ei.domain.XMLWrapper;
 import org.ei.domain.Year;
@@ -58,20 +67,25 @@ public class PAGDocBuilder implements DocumentBuilder
   private static final Key[] DETAILED_KEYS = {
  Keys.BOOK_TITLE,
  Keys.BOOK_PAGE,
- Keys.SERIAL_TITLE,
+ Keys.BOOK_SERIES_TITLE,
  Keys.BOOK_DESCRIPTION,
  Keys.AUTHORS,
  Keys.EDITORS,
  Keys.AUTHOR_AFFS,
  Keys.EDITOR_AFFS,
+ Keys.ISSN,
  Keys.ISBN,
+ Keys.ISBN13,
+ Keys.BOOK_CHAPTER_TITLE,
+ Keys.BOOK_SECTION_TITLE,
+ Keys.BOOK_CHAPTER_PII,
+ Keys.BOOK_CHAPTER_START,
  Keys.BOOK_PAGE_COUNT,
  Keys.BOOK_YEAR,
  Keys.COVER_IMAGE,
  Keys.BOOK_PUBLISHER,
  Keys.ACCESSION_NUMBER,
  Keys.TITLE_TRANSLATION,
- Keys.BOOK_CHAP_START,
  Keys.VOLUME,
  Keys.MONOGRAPH_TITLE,
  Keys.LANGUAGE,
@@ -92,24 +106,27 @@ public class PAGDocBuilder implements DocumentBuilder
  Keys.NO_SO,
  Keys.PAGE_THUMBS};
 
-  private static final Key[] RIS_KEYS = { Keys.RIS_TY, Keys.RIS_LA , Keys.RIS_N1 , Keys.RIS_TI , Keys.RIS_T1 , Keys.RIS_BT , Keys.RIS_JO ,Keys.RIS_T3 , Keys.RIS_AUS , Keys.RIS_AD , Keys.RIS_EDS , Keys.RIS_VL , Keys.RIS_IS , Keys.RIS_PY , Keys.RIS_AN , Keys.RIS_SP , Keys.RIS_EP, Keys.RIS_SN ,  Keys.RIS_S1 , Keys.RIS_MD ,Keys.RIS_CY , Keys.RIS_PB,  Keys.RIS_N2 , Keys.RIS_KW , Keys.RIS_CVS , Keys.RIS_FLS , Keys.RIS_DO, Keys.BIB_TY };
+  private static final Key[] RIS_KEYS = { Keys.RIS_TY, Keys.RIS_LA , Keys.RIS_N1 , Keys.RIS_TI , Keys.RIS_T1 , Keys.RIS_BT , Keys.RIS_JO ,Keys.RIS_T3 , Keys.RIS_AUS , Keys.RIS_AD , Keys.RIS_EDS , Keys.RIS_VL , Keys.RIS_IS , Keys.RIS_PY , Keys.RIS_AN , Keys.RIS_SP , Keys.RIS_EP, Keys.RIS_SN ,  Keys.RIS_S1 , Keys.RIS_MD ,Keys.RIS_CY , Keys.RIS_PB,  Keys.RIS_N2 , Keys.RIS_KW , Keys.RIS_CVS , Keys.RIS_FLS , Keys.RIS_DO};
   private static final Key[] XML_KEYS = {
  Keys.TITLE,
  Keys.BOOK_PAGE,
- Keys.SERIAL_TITLE,
+ Keys.BOOK_SERIES_TITLE,
  Keys.BOOK_DESCRIPTION,
  Keys.AUTHORS,
  Keys.EDITORS,
  Keys.AUTHOR_AFFS,
  Keys.EDITOR_AFFS,
+ Keys.ISSN,
  Keys.ISBN,
+ Keys.ISBN13,
+ Keys.BOOK_CHAPTER_TITLE,
+ Keys.BOOK_SECTION_TITLE,
  Keys.BOOK_PAGE_COUNT,
  Keys.BOOK_YEAR,
  Keys.COVER_IMAGE,
  Keys.BOOK_PUBLISHER,
  Keys.ACCESSION_NUMBER,
  Keys.TITLE_TRANSLATION,
- Keys.BOOK_CHAP_START,
  Keys.VOLUME,
  Keys.MONOGRAPH_TITLE,
  Keys.LANGUAGE,
@@ -132,7 +149,7 @@ public class PAGDocBuilder implements DocumentBuilder
 
   private static String queryXMLCitation = "SELECT BOOK_PAGES.PAGE_KEYWORDS, BOOK_PAGES.DOCID, BOOK_PAGES.BN, BOOK_PAGES.PAGE_NUM, BOOK_PAGES.SECTION_TITLE, BOOK_PAGES.PAGE_START, BOOK_PAGES.PAGE_BYTES, BOOK_PAGES.PAGE_TXT, BOOK_PAGES.PAGE_TOTAL, CVS, AB, ST, BN, PP, YR, AUS, TI, PN, VO, SUB FROM BOOK_PAGES WHERE BOOK_PAGES.DOCID IN ";
 
-  private static String queryDocument = "SELECT BOOK_PAGES.PAGE_KEYWORDS, BOOK_PAGES.DOCID, BOOK_PAGES.BN, BOOK_PAGES.PAGE_NUM, BOOK_PAGES.SECTION_TITLE, BOOK_PAGES.PAGE_START, BOOK_PAGES.PAGE_BYTES, BOOK_PAGES.PAGE_TXT, BOOK_PAGES.PAGE_TOTAL, CVS, AB, ST, BN, PP, YR, AUS, TI, PN, VO, SUB FROM BOOK_PAGES WHERE BOOK_PAGES.DOCID IN "; //('pag_0080426794_131')
+  private static String queryDocument = "SELECT PAGE_KEYWORDS, DOCID, BN, BN13, PII, PAGE_NUM, PAGE_LABEL, SECTION_TITLE, SECTION_START, CHAPTER_START, CHAPTER_TITLE, PAGE_TXT, PAGE_TOTAL, CVS, AB, ST, BN, PP, YR, AUS, TI, PN, VO, ISS, SUB FROM PAGES_ALL WHERE DOCID IN "; //('pag_0080426794_131')
 
   public DocumentBuilder newInstance(Database database)
   {
@@ -168,14 +185,6 @@ public class PAGDocBuilder implements DocumentBuilder
       {
         l = loadDocument(dataFormat, listOfDocIDs);
       }
-      /*      else if(dataFormat.equals(Abstract.ABSTRACT_FORMAT))
-      {
-      l = loadAbstracts(listOfDocIDs);
-      }
-      else if(dataFormat.equals(FullDoc.FULLDOC_FORMAT))
-      {
-      l = loadDetailed(listOfDocIDs);
-      } */
       else if(dataFormat.equalsIgnoreCase("RIS"))
       {
         l = loadRIS(listOfDocIDs);
@@ -224,24 +233,10 @@ public class PAGDocBuilder implements DocumentBuilder
       broker = ConnectionBroker.getInstance();
       con = broker.getConnection(DatabaseConfig.SEARCH_POOL);
       stmt = con.createStatement();
-      rset = stmt.executeQuery(queryDocument+INString );
 
+      rset = stmt.executeQuery(queryDocument+INString);
       while(rset.next())
       {
-        /*
-            BN, PP, YR, TI, AUS, CVS, AF, PN, NT, ST, SP, ISS, VO, AB, SUB, PDFPP
-
-SELECT DOCID, BN, PAGE_NUM, SECTION_TITLE, PAGE_START, PAGE_BYTES, PAGE_TXT, BOOKS.* FROM BOOK_PAGES, BOOKS  WHERE DOCID IN INNER JOIN BOOKS ON BOOK_PAGES.BN = BOOKS.BN
-
-            String bn = rs.getString("BN");
-            String bookTitle = rs.getString("TI");
-            String bookSubTitle = rs.getString("ST");
-            String publisher = rs.getString("PN");
-            String authors = rs.getString("AUS");
-            String pubYear = rs.getString("YR");
-            String collection = rs.getString("VO");
-            int subcollection = rs.getInt("SUB");
-        */
         ElementDataMap ht = new ElementDataMap();
         DocID did = (DocID) oidTable.get(rset.getString("DOCID"));
         ht.put(Keys.DOCID, did);
@@ -259,7 +254,9 @@ SELECT DOCID, BN, PAGE_NUM, SECTION_TITLE, PAGE_START, PAGE_BYTES, PAGE_TXT, BOO
 
         if(rset.getString("AUS") != null)
         {
-          Contributors authors = new Contributors(Keys.AUTHORS,getContributors(rset.getString("AUS"),Keys.AUTHORS));
+          String authorstr = rset.getString("AUS");
+          authorstr = nonAscii.matcher(authorstr).replaceAll(" ");
+          Contributors authors = new Contributors(Keys.AUTHORS,getContributors(authorstr,Keys.AUTHORS));
 
           ht.put(Keys.AUTHORS, authors);
 
@@ -267,12 +264,52 @@ SELECT DOCID, BN, PAGE_NUM, SECTION_TITLE, PAGE_START, PAGE_BYTES, PAGE_TXT, BOO
 
         if(rset.getString("TI") != null)
         {
-          ht.put(Keys.BOOK_TITLE,new XMLWrapper(Keys.BOOK_TITLE, rset.getString("TI")));
+          String title = rset.getString("TI");
+          title = nonAscii.matcher(title).replaceAll(" ");
+          ht.put(Keys.BOOK_TITLE,new XMLWrapper(Keys.BOOK_TITLE, title));
         }
+
+        if(rset.getString("ST") != null)
+        {
+          String stitle = rset.getString("ST");
+          stitle = nonAscii.matcher(stitle).replaceAll(" ");
+          ht.put(Keys.BOOK_SERIES_TITLE,new XMLWrapper(Keys.BOOK_SERIES_TITLE, stitle));
+        }
+
+        String chapterTitle = rset.getString("CHAPTER_TITLE");
+        String chapterStart = rset.getString("CHAPTER_START");
+
+        //  PII
+        String pii = rset.getString("PII");
+        if (pii != null)
+        {
+          // do not include chapter information unless there is a PII - chapter 'Chunk' PDF
+          ht.put(Keys.BOOK_CHAPTER_PII, new XMLWrapper(Keys.BOOK_CHAPTER_PII,pii));
+
+          if(chapterTitle != null)
+          {
+            ht.put(Keys.BOOK_CHAPTER_TITLE,new XMLWrapper(Keys.BOOK_CHAPTER_TITLE,chapterTitle));
+          }
+
+          if(chapterStart != null)
+          {
+            ht.put(Keys.BOOK_CHAPTER_START,new XMLWrapper(Keys.BOOK_CHAPTER_START,chapterStart));
+          }
+        }
+
+        String sectionStart = rset.getString("SECTION_START");
+        if((sectionStart != null) && (chapterStart == null))
+        {
+          ht.put(Keys.BOOK_CHAPTER_START,new XMLWrapper(Keys.BOOK_CHAPTER_START,sectionStart));
+        }
+
         String sectTitle = rset.getString("SECTION_TITLE");
         if((sectTitle != null) && (!sectTitle.equalsIgnoreCase("Book")))
         {
-            ht.put(Keys.SERIAL_TITLE,new XMLWrapper(Keys.SERIAL_TITLE,"Chapter/Section title",sectTitle));
+            // sectitle will not be null here - it doesn't matter if chapterTitle is
+            if(!sectTitle.equals(chapterTitle)) {
+              ht.put(Keys.BOOK_SECTION_TITLE,new XMLWrapper(Keys.BOOK_SECTION_TITLE,sectTitle));
+            }
         }
 
         if(rset.getString("YR") != null)
@@ -287,13 +324,6 @@ SELECT DOCID, BN, PAGE_NUM, SECTION_TITLE, PAGE_START, PAGE_BYTES, PAGE_TXT, BOO
           ht.put(Keys.BOOK_PAGE_COUNT, new XMLWrapper(Keys.BOOK_PAGE_COUNT, "Total Pages",strPages));
         }
 
-
-        String startPage = rset.getString("PAGE_START");
-        if(startPage != null)
-        {
-          ht.put(Keys.BOOK_CHAP_START,new XMLWrapper(Keys.BOOK_CHAP_START,startPage));
-        }
-
         String pageNum = rset.getString("PAGE_NUM");
         if(pageNum != null)
         {
@@ -305,7 +335,9 @@ SELECT DOCID, BN, PAGE_NUM, SECTION_TITLE, PAGE_START, PAGE_BYTES, PAGE_TXT, BOO
 	    	{
 	          if(Integer.parseInt(pageNum)== 0)
 	          {
-	            ht.put(Keys.BOOK_DESCRIPTION, new XMLWrapper(Keys.BOOK_DESCRIPTION, getStringFromClob(rset.getClob("AB"))));
+	            String bkdesc = getStringFromClob(rset.getClob("AB"));
+              bkdesc = nonAscii.matcher(bkdesc).replaceAll(" ");
+	            ht.put(Keys.BOOK_DESCRIPTION, new XMLWrapper(Keys.BOOK_DESCRIPTION, bkdesc));
 	          }
 	    	}
         }
@@ -316,9 +348,23 @@ SELECT DOCID, BN, PAGE_NUM, SECTION_TITLE, PAGE_START, PAGE_BYTES, PAGE_TXT, BOO
         //  BN
         if (rset.getString("BN") != null)
         {
-          ht.put(Keys.ISBN, new ISBN(rset.getString("BN")));
-          ht.put(Keys.COVER_IMAGE,new XMLWrapper(Keys.COVER_IMAGE,"/engresources/images/b/"+rset.getString("BN")+"small.jpg"));
+          ht.put(Keys.ISBN, new ISBN(Keys.ISBN,rset.getString("BN")));
         }
+
+        //  ISSN
+        if (rset.getString("ISS") != null)
+        {
+          ht.put(Keys.ISSN, new ISSN(rset.getString("ISS")));
+        }
+
+        //  BN13
+        if (rset.getString("BN13") != null)
+        {
+          ht.put(Keys.ISBN13, new ISBN(Keys.ISBN13,rset.getString("BN13")));
+//          ht.put(Keys.COVER_IMAGE,new XMLWrapper(Keys.COVER_IMAGE,"/engresources/images/bn13/"+rset.getString("BN13")+"small.jpg"));
+        }
+
+
 
         //  PN
         // suppress source label
@@ -471,9 +517,6 @@ SELECT DOCID, BN, PAGE_NUM, SECTION_TITLE, PAGE_START, PAGE_BYTES, PAGE_TXT, BOO
 
           // always BOOK
     	  ht.put(Keys.RIS_TY, new XMLWrapper(Keys.RIS_TY, risDocType));
-
-          // always article
-    	  ht.put(Keys.BIB_TY, new XMLWrapper(Keys.BIB_TY, bibDocType));
 
     	  // currently books have no language field - all are in same lang
           ht.put(Keys.RIS_LA, new XMLWrapper(Keys.RIS_LA,strBookLA));
@@ -679,10 +722,10 @@ SELECT DOCID, BN, PAGE_NUM, SECTION_TITLE, PAGE_START, PAGE_BYTES, PAGE_TXT, BOO
         }
 
 
-        String sectTitle = rset.getString("SECTION_TITLE");
+        String sectTitle = rset.getString("CHAPTER_TITLE");
         if((sectTitle != null) && (!sectTitle.equalsIgnoreCase("Book")))
         {
-            ht.put(Keys.SERIAL_TITLE,new XMLWrapper(Keys.SERIAL_TITLE,"Chapter/Section title",sectTitle));
+            ht.put(Keys.BOOK_CHAPTER_TITLE,new XMLWrapper(Keys.BOOK_CHAPTER_TITLE,"Chapter/Section title",sectTitle));
         }
 
         if(rset.getString("YR") != null)
@@ -698,12 +741,6 @@ SELECT DOCID, BN, PAGE_NUM, SECTION_TITLE, PAGE_START, PAGE_BYTES, PAGE_TXT, BOO
         }
 
 
-        String startPage = rset.getString("PAGE_START");
-        if(startPage != null)
-        {
-          ht.put(Keys.BOOK_CHAP_START,new XMLWrapper(Keys.BOOK_CHAP_START,startPage));
-        }
-
         String pageNum = rset.getString("PAGE_NUM");
         if(pageNum != null)
         {
@@ -713,7 +750,6 @@ SELECT DOCID, BN, PAGE_NUM, SECTION_TITLE, PAGE_START, PAGE_BYTES, PAGE_TXT, BOO
         if (rset.getString("BN") != null)
         {
           ht.put(Keys.ISBN, new ISBN(rset.getString("BN")));
-          ht.put(Keys.COVER_IMAGE,new XMLWrapper(Keys.COVER_IMAGE,"/engresources/images/b/"+rset.getString("BN")+"small.jpg"));
         }
 
         //  PN
@@ -862,18 +898,20 @@ SELECT DOCID, BN, PAGE_NUM, SECTION_TITLE, PAGE_START, PAGE_BYTES, PAGE_TXT, BOO
 		return sQuery.toString();
 	}
 
-
-	public String getStringFromClob(Clob clob) {
+	public String getStringFromClob(Clob clob)
+	{
 		String temp = "";
-
-		if (clob != null) {
-			try {
+		if (clob != null)
+		{
+			try
+			{
 				temp = clob.getSubString(1, (int) clob.length());
-			} catch (SQLException sqle) {
+			}
+			catch (SQLException sqle)
+			{
 				temp = "";
 			}
 		}
-
 		return temp;
 	}
 

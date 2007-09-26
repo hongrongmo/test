@@ -1,4 +1,4 @@
-package org.ei.data.pag.runtime;
+package org.ei.ev.driver.pag;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,13 +18,13 @@ import org.ei.domain.LimitGroups;
 
 import org.ei.domain.SearchField;
 import org.ei.domain.sort.SortField;
-import org.ei.data.compendex.runtime.CPXLinkingStrategy;
+import org.ei.ev.driver.cpx.CPXLinkingStrategy;
 import org.ei.fulldoc.LinkingStrategy;
 
 public class PAGDatabase extends Database
 {
   public List getSortableFields() {
-    return Arrays.asList(new SortField[]{SortField.RELEVANCE, SortField.AUTHOR, SortField.PUBLISHER, SortField.SOURCE});
+    return Arrays.asList(new SortField[]{SortField.RELEVANCE, SortField.AUTHOR, SortField.PUBLISHER, SortField.SOURCE, SortField.YEAR});
   }
 
 	private LinkingStrategy linkingStrategy = new CPXLinkingStrategy();
@@ -49,7 +49,7 @@ public class PAGDatabase extends Database
   public int getStartYear() { return 1987; }
 
 	public LimitGroups limitSearch(String credentials[],
-									 String fields[])
+								   String fields[])
 	{
 		ArrayList list = new ArrayList();
 		boolean perpetual = isPerpetual(credentials);
@@ -60,7 +60,10 @@ public class PAGDatabase extends Database
 		{
 			if(credentials[i].toLowerCase().indexOf("ele") == 0 ||
 			   credentials[i].toLowerCase().indexOf("che") == 0 ||
-			   credentials[i].toLowerCase().indexOf("mat") == 0)
+			   credentials[i].toLowerCase().indexOf("mat") == 0 ||
+			   credentials[i].toLowerCase().indexOf("com") == 0 ||
+			   credentials[i].toLowerCase().indexOf("civ") == 0 ||
+			   credentials[i].toLowerCase().indexOf("sec") == 0)
 			{
 				cred = credentials[i];
 				if(!perpetual)
@@ -150,15 +153,15 @@ public class PAGDatabase extends Database
     {
         return "pag";
     }
-    
-    public String getLegendID()
-    {
-        return "pa";
-    }
 
     public String getName()
     {
         return "Referex";
+    }
+
+    public String getLegendID()
+    {
+        return "pa";
     }
 
     public String getIndexName()

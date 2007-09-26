@@ -1,4 +1,4 @@
-package org.ei.data.pag.runtime;
+package org.ei.ev.driver.pag;
 
 import org.ei.domain.DataDictionary;
 
@@ -18,6 +18,9 @@ public class PAGDataDictionary  implements DataDictionary
         classCodes.put("ELE","Electronics & Electrical");
         classCodes.put("MAT","Materials & Mechanical");
         classCodes.put("CHE","Chemical, Petrochemical & Process");
+        classCodes.put("CIV","Civil & Environmental");
+        classCodes.put("COM","Computing");
+        classCodes.put("SEC","Security & Networking");
     }
 
 	  public String getClassCodeTitle(String arg0)
