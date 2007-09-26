@@ -10,16 +10,21 @@ public interface Keys
 
         Below are a list of the standard keys in the systems sorted alpha
     */
-    public static Key BOOK_TITLE = new Key("BTI", "Book title");
-	public static Key BOOK_PAGE = new Key("BPP", "Page number");
-	public static Key BOOK_PII = new Key("PII", "PII");
-	public static Key BOOK_PAGE_COUNT = new Key("BPC", "Page count");
-	public static Key BOOK_YEAR = new Key("BYR", "Year");
-	public static Key BOOK_PUBLISHER = new Key("BPN", "Publisher");
-	public static Key BOOK_PAGE_KEYWORDS = new Key("BKYS", "Keywords");
-	public static Key BOOK_PAGE_KEYWORD = new Key("BKY", "Keyword");
-	public static Key BOOK_DESCRIPTION = new Key("BAB", "Book description");
-	public static Key BOOK_CHAP_START = new Key("BSPG", "Chapter start");
+		public static Key BOOK_TITLE = new Key("BTI", "Book title");
+		public static Key BOOK_SERIES_TITLE = new Key("BTST", "Series title");
+		public static Key BOOK_PAGE = new Key("BPP", "Page number");
+		public static Key BOOK_PII = new Key("PII", "PII");
+		public static Key BOOK_PAGE_COUNT = new Key("BPC", "Page count");
+		public static Key BOOK_YEAR = new Key("BYR", "Year");
+		public static Key BOOK_PUBLISHER = new Key("BPN", "Publisher");
+		public static Key BOOK_PAGE_KEYWORDS = new Key("BKYS", "Keywords");
+		public static Key BOOK_PAGE_KEYWORD = new Key("BKY", "Keyword");
+		public static Key BOOK_DESCRIPTION = new Key("BAB", "Book description");
+		public static Key BOOK_CHAPTER_TITLE = new Key("BCT", "Chapter title");
+		public static Key BOOK_CHAPTER_PII = new Key("PII");
+		public static Key BOOK_SECTION_TITLE = new Key("BST", "Section title");
+		public static Key BOOK_CHAPTER_START = new Key("BSPG", "Chapter start");
+
 
     public static final Key ABBRV_MON_MONOGRAPH_TITLE  = new Key("ME", "");
     public static final Key ABBRV_SERIAL_TITLE = new Key("SE", "Abbreviated serial title");
@@ -49,7 +54,7 @@ public interface Keys
     public static final Key CORRESPONDING_EMAIL = new Key("CEML", "Corr. author email");
     public static final Key CHEMICAL_DATA_INDEX = new Key("CI");
     public static final Key CHEMICAL_DATA_INDEXING = new Key("CHI","Chemical indexing");
-	public static final Key COMPANIES = new Key("CPO","Companies");
+		public static final Key COMPANIES = new Key("CPO","Companies");
     public static final Key CITCNT = new Key("CCT");
     public static final Key CLASS_CODE = new Key("CL");
     public static final Key ELT_CLASS_CODE = new Key("ECL");
@@ -68,9 +73,9 @@ public interface Keys
     public static final Key CORPORATE_SOURCE_CODES = new Key("CAC","Corporate source codes");
     public static final Key COUNTRY = new Key("CO","Country");
     public static final Key COUNTRY_OF_PUB = new Key("CPUB", "Country of publication");
-	public static final Key COUNTRY_CODES = new Key("SCC", "Geographical indexing");
-	public static final Key CHEMICALS = new Key("CMS", "Chemicals");
-	public static final Key CHEMICAL_ACRONS = new Key("CES", "Chemical Acronyms");
+		public static final Key COUNTRY_CODES = new Key("SCC", "Geographical indexing");
+		public static final Key CHEMICALS = new Key("CMS", "Chemicals");
+		public static final Key CHEMICAL_ACRONS = new Key("CES", "Chemical Acronyms");
     public static final Key DERWENT_NO = new Key("DERW", "DERWENT accession no.");
     public static final Key DESIGNATED_STATES = new Key("DSM", "Designated states");
     public static final Key DISCIPLINE = new Key("DISP");
@@ -98,7 +103,8 @@ public interface Keys
     public static final Key INT_PATCLASSES = new Key("ICC", "Int. patent classes");
     public static final Key INVENTORS = new Key("IVS", "Inventors");
     public static final Key INVENTOR_COUNTRY = new Key("INV_CTRY", "Inventor country");
-    public static final Key ISBN  = new Key("BN","ISBN");
+    public static final Key ISBN  = new Key("BN","ISBN-10");
+    public static final Key ISBN13  = new Key("BN13","ISBN-13");
     public static final Key ISSN  = new Key("SN","ISSN");
     public static final Key E_ISSN  = new Key("E_ISSN","Electronic ISSN");
     public static final Key ISSUE = new Key("IS", "Issue");
