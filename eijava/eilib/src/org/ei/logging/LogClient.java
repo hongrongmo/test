@@ -368,8 +368,12 @@ public class LogClient {
     *@param  db_name  database searched.
     *@since
     */
-    public void setdb_name(String db_name) {
-        this.db_name = db_name;
+    public void setdb_name(String db_name)
+    {
+		if(db_name != null)
+		{
+        	this.db_name = db_name;
+		}
     }
 
 
@@ -1070,11 +1074,11 @@ public class LogClient {
                 //String appdatas = new String(appdata.toString());
                 StringBuffer appdatas = new StringBuffer();
 
-                Enumeration en = appdata.keys();
+                Enumeration enum = appdata.keys();
 
-                while(en.hasMoreElements())
+                while(enum.hasMoreElements())
                 {
-                    String lKey = (String)en.nextElement();
+                    String lKey = (String)enum.nextElement();
                     if (lKey.equalsIgnoreCase("format"))
                     {
                         if ( ((String) appdata.get(lKey)).equalsIgnoreCase("cit"))
