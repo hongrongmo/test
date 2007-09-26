@@ -5,25 +5,32 @@ import java.util.Vector;
 
 public class ListBox extends Component {
 
-	private String arrOptions[];
-	private String arrDisplayVals[];
+	private Object arrOptions[];
+	private Object arrDisplayVals[];
 	private int selectedIndex = -1;
 	private String size;
 	private String classType;
 	Vector vNbsps = new Vector();
+	String javaScript;
+	
 
 	public void setClassType(String classType) {
 		this.classType = classType;
 	}
-	public void setOptions(String arrOptions[]) {
+	public void setJavaScript(String javaScript){
+		
+		this.javaScript = javaScript;
+	}
+	public void setOptions(Object arrOptions[]) {
 		this.arrOptions = arrOptions;
 	}
-	public void setValues(String arrDisplayVals[]) {
+	public void setValues(Object arrDisplayVals[]) {
 		this.arrDisplayVals = arrDisplayVals;
 	}
 	public void setSize(String sSize) {
 		this.size = sSize;
 	}
+	
 	public void addNbsp(int count) {
 
 		for (int i = 0; i < count; i++) {
@@ -46,6 +53,7 @@ public class ListBox extends Component {
 		}
 
 	}
+	
 	public String render() {
 
 		StringBuffer toHtmlBuff = new StringBuffer();
@@ -59,10 +67,16 @@ public class ListBox extends Component {
 				toHtmlBuff.append(nbsp);
 			}
 		}
-		toHtmlBuff.append("<SELECT NAME=\"").append(name).append("\"");
+		toHtmlBuff.append("<SELECT NAME=\"").append(name).append("\" ");
+		
+		if(javaScript != null){
+			toHtmlBuff.append("onChange=\"").append(javaScript).append("\"");
+		}
 
 		if (size != null && !size.trim().equals(""))
 			toHtmlBuff.append(" SIZE=" + size);
+			
+			
 		toHtmlBuff.append(" >");
 		if (arrOptions != null) {
 			int szOptions = arrOptions.length;
