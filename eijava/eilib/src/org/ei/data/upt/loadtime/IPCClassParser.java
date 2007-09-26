@@ -16,7 +16,6 @@ import org.apache.oro.text.regex.PatternMatcherInput;
 import org.apache.oro.text.regex.Perl5Compiler;
 import org.apache.oro.text.regex.Perl5Matcher;
 import org.ei.data.DataValidator;
-import org.ei.data.books.EntityCleanerReader;
 import org.ei.domain.ClassNode;
 import org.ei.util.DiskMap;
 import org.ei.util.GUID;
