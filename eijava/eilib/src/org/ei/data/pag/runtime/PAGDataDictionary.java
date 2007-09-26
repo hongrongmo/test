@@ -1,4 +1,4 @@
-package org.ei.ev.driver.pag;
+package org.ei.data.pag.runtime;
 
 import org.ei.domain.DataDictionary;
 
@@ -37,7 +37,7 @@ public class PAGDataDictionary  implements DataDictionary
   	{
   		return null;
   	}
-  	
+
     public Hashtable getAuthorityCodes()
     {
     	return null;
