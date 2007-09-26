@@ -742,6 +742,7 @@ public class Entity {
 		etable.setProperty("&#xd7;", "");//multiplication sign(&times;)
 		etable.setProperty("&#x3008;", "");//left angle bracket(&lang;)
 		etable.setProperty("&#x3009;", "");//right angle bracket(&rang;)
+		etable.setProperty("&#x2019;", "'");
 		etable.setProperty("&#x2190;", "");//left arrow(&larr;)
 		etable.setProperty("&#x2191;", "");//up arrow(&uarr;)
 		etable.setProperty("&#x2192;", "");//right arrow(&rarr;)
@@ -842,8 +843,8 @@ public class Entity {
 		etable.setProperty("&#x2642;", "");//male sign(&male;)
 		etable.setProperty("&#x2640;", "");//female(&female;)
 		etable.setProperty("&#x5d0;", "");//aleph(&aleph;)
-		etable.setProperty("&#x141;", "");//L stroke(&Lstrok;)
-		etable.setProperty("&#x142;", "");//l stroke(&lstrok;)
+		etable.setProperty("&#x141;", "L");//L stroke(&Lstrok;)
+		etable.setProperty("&#x142;", "l");//l stroke(&lstrok;)
 		etable.setProperty("&#x152;", "");//OE ligature(&OElig;)
 		etable.setProperty("&#x153;", "");//oe ligature(&oelig;)
 		etable.setProperty("&#x20ac;", "");//euro sign(&euro;)
