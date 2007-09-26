@@ -409,4 +409,9 @@ public class NTISDataDictionary
         classCodes.put("71R","Wood and Paper Products");
         classCodes.put("57Z","Zoology");
     }
+    
+    public Hashtable getAuthorityCodes()
+    {
+    	return null;
+    }
 }
