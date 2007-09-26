@@ -1,5 +1,8 @@
 package org.ei.data.books;
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+
 import java.sql.Clob;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -21,12 +24,14 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.ei.books.collections.ReferexCollection;
 import org.ei.data.CombinedWriter;
-import org.ei.data.DataCleaner;
+
 import org.ei.data.EVCombinedRec;
+import org.ei.data.AuthorStream;
 import org.ei.data.ReferexCombinedXMLWriter;
 import org.ei.util.Base64Coder;
 import org.ei.util.GUID;
 import org.ei.util.StringUtil;
+import org.ei.xml.Entity;
 
 public class ReferexCombiner {
     private static Log log = LogFactory.getLog(ReferexCombiner.class);
@@ -55,7 +60,7 @@ public class ReferexCombiner {
 
     public void runExtracts(String[] args) {
 
-        CombinedWriter writer = new ReferexCombinedXMLWriter(10000, 1, "book");
+        CombinedWriter writer = null;
         try {
             createDataSource();
             String strDefault = "WOBL";
@@ -78,6 +83,7 @@ public class ReferexCombiner {
               extracts.add(new BookRecord());
               extracts.add(new PageRecord());
             }
+            writer = new ReferexCombinedXMLWriter(10000, 1, strDefault + "_pag");
             Iterator itr = extracts.iterator();
             while (itr.hasNext()) {
                 writeRecords((Extractable) itr.next(), writer);
@@ -233,7 +239,7 @@ public class ReferexCombiner {
     private static Pattern hundredWords = Pattern.compile("((?:[\\w\\p{Punct}][^\\s]*)\\s+){1,100}", Pattern.MULTILINE);
 
     // These Queries will extract WOBL Extract
-    private static final String BOOK_PAGES_QUERY = "SELECT PAGE_KEYWORDS,DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB, PAGE_NUM, CHAPTER_TITLE, CHAPTER_START, SECTION_TITLE, SECTION_START, PAGE_TXT FROM BOOK_PAGES_WOBL WHERE PAGE_NUM <> 0 and PAGE_KEYWORDS IS NOT NULL";
+    private static final String BOOK_PAGES_QUERY = "SELECT PAGE_KEYWORDS,DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB, PAGE_NUM, CHAPTER_TITLE, CHAPTER_START, SECTION_TITLE, SECTION_START, PAGE_TXT FROM BOOK_PAGES_WOBL WHERE PAGE_NUM <> 0 ";
     private static final String BOOK_QUERY = "SELECT DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB FROM BOOK_PAGES_WOBL WHERE PAGE_NUM=0";
     private static final String EXTRACT_TYPE = "WOBL";
 
@@ -359,7 +365,13 @@ public class ReferexCombiner {
                 String[] arrPubs = new String[] { replaceNull(sPublisher) };
 
                 // authors are ';' delimited
-                List aus = convertString2List(sAuthor);
+                List aus = new ArrayList();
+            		String author = "";
+            		AuthorStream aStream = new AuthorStream(new ByteArrayInputStream(sAuthor.getBytes()));
+            		while((author = aStream.readAuthor()) != null)
+            		{
+            			aus.add(author);
+            		}
                 String arrAus[] = (String[]) aus.toArray(new String[0]);
 
                 // controlled terms are ';' delimited
@@ -423,7 +435,7 @@ public class ReferexCombiner {
 
     private static final String[] badArray = { "contents", "index", "index to", "what’s on the cd-rom", "commands",
             "copyright", "title page", "half title page", "back cover", "front cover",
-            "table of contents", "limited disclaimer and warranty",
+            "table of contents", "limited disclaimer and warranty", "subject index",
             "front matter", "frontmatter", "cover", "backmatter", "back matter" };
 
     private class PageRecord extends BookRecord {
@@ -515,14 +527,13 @@ public class ReferexCombiner {
 
                 // ISBN Navigator
                 //rec.put(EVCombinedRec.UNCONTROLLED_TERMS, sIsbn);
-                DataCleaner cleaner = new DataCleaner();
 
-                String cleanedTitle = cleaner.cleanEntities(bookTitle.toLowerCase());
+                String cleanedTitle = Entity.prepareString(bookTitle.toLowerCase());
                 String b64Title = "B64" + Base64Coder.encode(cleanedTitle);
                 rec.put(EVCombinedRec.SERIAL_TITLE, b64Title);
 //                rec.put(EVCombinedRec.SERIAL_TITLE, cleanedTitle);
 
-                String cleanedChapterTitle = cleaner.cleanEntities(pageChapterTitle.toLowerCase());
+                String cleanedChapterTitle = Entity.prepareString(pageChapterTitle.toLowerCase());
                 // 'BS' - COUNTRY Base 64 Encoded Chapter Title with ISBN
                 String b64ChapterTitle = "B64" + Base64Coder.encode(cleanedChapterTitle + ", " + sIsbn13);
                 rec.put(EVCombinedRec.COUNTRY, b64ChapterTitle);
@@ -560,7 +571,7 @@ public class ReferexCombiner {
 
         public String getQuery() {
             return "SELECT PAGE_KEYWORDS,DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB, PAGE_NUM, CHAPTER_TITLE, CHAPTER_START, SECTION_TITLE, SECTION_START, PAGE_TXT FROM BOOK_PAGES_S300 " +
-                  "WHERE PAGE_NUM <> 0 AND PAGE_KEYWORDS IS NOT NULL AND BN13 IN (SELECT S300S.bn13 FROM S300S LEFT JOIN WOBLS ON SUBSTR(S300S.BN13,1,13)=SUBSTR(WOBLS.BN13,1,13) WHERE WOBLS.bn13 IS NULL)";
+                  "WHERE PAGE_NUM <> 0  AND BN13 IN (SELECT S300S.bn13 FROM S300S LEFT JOIN WOBLS ON SUBSTR(S300S.BN13,1,13)=SUBSTR(WOBLS.BN13,1,13) WHERE WOBLS.bn13 IS NULL)";
         }
     }
 
@@ -585,7 +596,7 @@ public class ReferexCombiner {
 
         public String getQuery() {
             return "SELECT PAGE_KEYWORDS,DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB, PAGE_NUM, CHAPTER_TITLE, CHAPTER_START, SECTION_TITLE, SECTION_START, PAGE_TXT FROM BOOK_PAGES_406 " +
-                  " WHERE PAGE_NUM <> 0 AND PAGE_KEYWORDS IS NOT NULL";
+                  " WHERE PAGE_NUM <> 0";
         }
     }
 

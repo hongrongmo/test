@@ -24,35 +24,41 @@ import org.apache.oro.text.perl.Perl5Util;
 //import org.ei.data.books.tools.PDF_FileInfo;
 import org.ei.util.StringUtil;
 
-public class BookIndexer {
+public class BookIndexer
+{
 
-    // private static PorterStemmer stemmer = new PorterStemmer();
-    // private static TextFileFilter filter = new TextFileFilter();
+//	private static PorterStemmer stemmer = new PorterStemmer();
+//	private static TextFileFilter filter = new TextFileFilter();
     private static Perl5Util perl = new Perl5Util();
+	private static Map stopWords = new HashMap();
+//	private static int numfiles = 0;
+//	private static int numbooks = 0;
 
-    private static Map stopWords = new HashMap();
-    // private static int numfiles = 0;
-    // private static int numbooks = 0;
+	static
+	{
+		stopWords.put("Engineering", "n");
+		stopWords.put("Engineers", "n");
+		stopWords.put("pH", "n");
+	}
 
-    static {
-        stopWords.put("Engineering", "n");
-        stopWords.put("Engineers", "n");
-        stopWords.put("pH", "n");
-    }
-
-    public static void main(String args[])
-    // throws Exception
-    {
+	public static void main(String args[])
+		//throws Exception
+	{
         String driver = "oracle.jdbc.driver.OracleDriver";
-        String url = "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI"; // args[1];
-        String username = "AP_PRO1"; // args[2];
-        String password = "ei3it"; // args[3];
+        String url = "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI"; //args[1];
+        String username = "AP_PRO1"; //args[2];
+        String password = "ei3it"; //args[3];
 
         List terms = new ArrayList();
         String strDefault = "WOBL";
-        if (args != null) {
-            if (args.length >= 1 && args[0] != null) {
-                strDefault = args[0];
+        String strBatch = null;
+
+		    if(args != null) {
+  		    if(args.length >= 1 && args[0] != null) {
+              strDefault = args[0];
+            }
+  		    if(args.length >= 2 && args[1] != null) {
+              strBatch = args[1];
             }
         }
         strDefault = strDefault.toUpperCase();
@@ -68,31 +74,34 @@ public class BookIndexer {
             e1.printStackTrace();
         }
 
-        try {
-            url = "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI"; // args[1];
-            username = "AP_EV_SEARCH"; // args[2];
-            password = "ei3it"; // args[3];
-            con = DriverManager.getConnection(url, username, password);
+        try
+		    {
+            url = "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI"; //args[1];
+            username = "AP_EV_SEARCH"; //args[2];
+            password = "ei3it"; //args[3];
+            con = DriverManager.getConnection(url,username,password);
 
             stmt = con.createStatement();
-            rs = stmt
-                    .executeQuery("select MAIN_TERM_SEARCH from CPX_THESAURUS WHERE STATUS='C'");
-            while (rs.next()) {
+            rs = stmt.executeQuery("select MAIN_TERM_SEARCH from CPX_THESAURUS WHERE STATUS='C'");
+            while(rs.next())
+            {
                 String term = rs.getString("MAIN_TERM_SEARCH");
                 terms.add(term);
-                // System.out.println(term);
+//                System.out.println(term);
             }
 
-            if (rs != null) {
+            if(rs != null) {
                 close(rs);
             }
-            if (stmt != null) {
+            if(stmt != null) {
                 close(stmt);
             }
-        } catch (SQLException e) {
+		    }
+        catch(SQLException e) {
             e.printStackTrace();
-        } finally {
-            if (con != null) {
+        }
+        finally {
+            if(con != null) {
                 try {
                     con.close();
                 } catch (SQLException e) {
@@ -102,105 +111,157 @@ public class BookIndexer {
             }
         }
 
-        try {
-            // "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI", "AP_EV_SEARCH",
-            // "ei3it"
+		try
+		{
+      // "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI", "AP_EV_SEARCH", "ei3it"
 
-            url = "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI"; // args[1];
-            username = "AP_PRO1"; // args[2];
-            password = "ei3it"; // args[3];
-            con = DriverManager.getConnection(url, username, password);
-            Map books = new HashMap();
+      Map books = new HashMap();
+      url = "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI"; //args[1];
+      username = "AP_PRO1"; //args[2];
+      password = "ei3it"; //args[3];
+      con = DriverManager.getConnection(url,username,password);
+      stmt = con.createStatement();
 
-            stmt = con.createStatement();
-            rs = stmt.executeQuery("select bn13, ti from BOOKS_ALL"); // where
-                                                                        // BN13='9781555582739'");
+      List isbnList = new ArrayList();
+      try {
+        BufferedReader rdr = new BufferedReader(new FileReader("isbnList.txt"));
+        while (rdr.ready()) {
+      	  String aline = rdr.readLine();
+      	  isbnList.add(aline);
+      	}
+      	rdr.close();
+      }
+      catch(IOException ioe) {
 
-            while (rs.next()) {
-                String bn = rs.getString("bn13");
-                String ti = rs.getString("ti");
-                books.put(bn, ti);
-                // System.out.println(bn + " ==> " + ti);
-            }
+      }
 
-            if (rs != null) {
-                close(rs);
-            }
-            if (stmt != null) {
-                close(stmt);
-            }
+      String isbnString = null;
+      if(!isbnList.isEmpty()) {
+        Iterator iItr = isbnList.iterator();
+        while(iItr.hasNext()) {
+          String nextIsbn = "'" + (String) iItr.next() + "'";
+          if(isbnString != null) {
+            isbnString = isbnString + nextIsbn;
+          }
+          else {
+            isbnString = nextIsbn;
+          }
+          if(iItr.hasNext()) {
+            isbnString = isbnString.concat(",");
+          }
+        }
+      }
 
-            Iterator booksIt = (books.keySet()).iterator();
+      // use view which contains all books from both the 407 and 991 tables
+      String bookQuery = "SELECT BN13, TI FROM BOOKS_ALL";
 
-            PreparedStatement pstmt1 = null;
+      if(isbnString != null || (strBatch != null))
+      {
+        if(strBatch != null) {
+           bookQuery = bookQuery + " WHERE NT='" + strBatch + "'";
+        }
+        if(isbnString != null) {
+          if(strBatch != null) {
+             bookQuery = bookQuery + " AND ";
+          }
+          else {
+             bookQuery = bookQuery + " WHERE ";
+          }
+          bookQuery = bookQuery + " BN13 IN ("+ isbnString + ")";
+        }
+      }
 
-            pstmt1 = con
-                    .prepareStatement("select docid,page_txt,vo from BOOK_PAGES_"
-                            + strDefault + " where bn13 = ?");
+      System.out.println(bookQuery);
+      rs = stmt.executeQuery(bookQuery);
 
-            while (booksIt.hasNext()) {
-                String isbn13 = (String) booksIt.next();
-                String bookTitle = (String) books.get(isbn13);
-                long commitCount = 0;
-                pstmt1.setString(1, isbn13);
-                rs = pstmt1.executeQuery();
+			while(rs.next())
+			{
+				String bn = rs.getString("BN13");
+				String ti = rs.getString("TI");
+				books.put(bn,ti);
+			}
+      //System.out.println(books.size());
 
-                while (rs.next()) {
-                    String id = rs.getString("docid");
-                    String col = rs.getString("vo");
+      if(rs != null) {
+          close(rs);
+      }
+      if(stmt != null) {
+          close(stmt);
+      }
 
-                    String keywords = null;
-                    Clob clob = rs.getClob("page_txt");
-                    if (clob != null) {
-                        String abs = null; // getPageTextFromFile(id,isbn13);
-                        try {
-                            if (abs == null) {
-                                abs = StringUtil.getStringFromClob(clob);
-                            }
-                        } catch (Exception e) {
-                            // TODO Auto-generated catch block
-                            e.printStackTrace();
-                        }
-                        if (abs != null) {
-                            abs = abs.replaceFirst(bookTitle, "");
-                            // abs = abs.replaceFirst("This page intentionally
-                            // left blank", "");
-                            keywords = getKeywords(terms, abs);
-                            if (keywords != null) {
-                                System.out.println("update BOOK_PAGES_"
-                                        + strDefault + " set page_keywords = '"
-                                        + keywords.replaceAll("'", "''")
-                                        + "' where docid = '" + id + "';");
-                                commitCount++;
-                            } else {
-                                System.out.println("/* No Keyword matches for "
-                                        + id + ", " + col + " */");
-                            }
-                        } else {
-                            System.out.println("/* NULL Abstract for " + id
-                                    + " */");
-                        }
+			Iterator booksIt = (books.keySet()).iterator();
+
+			PreparedStatement pstmt1 = null;
+
+			pstmt1 = con.prepareStatement("select docid,page_txt,vo from BOOK_PAGES_" +  strDefault + " where bn13 = ? ORDER BY PAGE_NUM ASC");
+
+      long commitCount = 0;
+			while(booksIt.hasNext())
+			{
+
+				String isbn13 = (String)booksIt.next();
+				String bookTitle = (String)books.get(isbn13);
+				pstmt1.setString(1, isbn13);
+				rs = pstmt1.executeQuery();
+
+        System.out.println("/* " + isbn13 + " */");
+
+				while(rs.next())
+				{
+					String id = rs.getString("docid");
+          String col = rs.getString("vo");
+
+					String keywords = null;
+					Clob clob = rs.getClob("page_txt");
+					if(clob != null)
+					{
+                String abs = null; //getPageTextFromFile(id,isbn13);
+                try {
+                    if(abs == null) {
+                        abs = StringUtil.getStringFromClob(clob);
                     }
-                    System.out.println(commitCount);
-                    if (commitCount >= 10000) {
-                        System.out.println("commit;");
-                        commitCount = 0;
-                    }
-
+                } catch (Exception e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
                 }
+                if(abs != null) {
+    						  abs = abs.replaceFirst(bookTitle, "");
+                  //abs = abs.replaceFirst("This page intentionally left blank", "");
+      						keywords = getKeywords(terms, abs);
+      						if(keywords != null)
+      						{
+      							System.out.println("update BOOK_PAGES_"  + strDefault + " set page_keywords = '"+keywords.replaceAll("'", "''")+"' where docid = '"+id +"';");
+        						commitCount++;
+      						}
+                  else {
+                    System.out.println("/* No Keyword matches for " + id + ", " + col + " */");
+                  }
+                }
+                else {
+                  System.out.println("/* NULL Abstract for " + id + " */");
+                }
+					}
+					if(commitCount >= 10000) {
+              System.out.println("commit;");
+              commitCount = 0;
+            }
+
+				}
             }
             System.out.println("commit;");
 
-            if (rs != null) {
+            if(rs != null) {
                 close(rs);
             }
-            if (pstmt1 != null) {
+            if(pstmt1 != null) {
                 close(pstmt1);
             }
-        } catch (SQLException e) {
+        }
+        catch(SQLException e) {
             e.printStackTrace();
-        } finally {
-            if (con != null) {
+        }
+        finally {
+            if(con != null) {
                 try {
                     con.close();
                 } catch (SQLException e) {
@@ -210,93 +271,127 @@ public class BookIndexer {
             }
         }
         System.out.println("quit;");
-    }
+	}
 
-    /*
-     * private static String getPageTextFromFile(String id, String isbn13) {
-     * String[] idtokens = id.split("_"); StringBuffer allPageTxt = new
-     * StringBuffer(); File page_txt = new File(OutputPageData.PATH_PREFIX +
-     * System.getProperty("file.separator") + "BurstAndExtracted" +
-     * System.getProperty("file.separator") + isbn13 +
-     * System.getProperty("file.separator") + "pg_" +
-     * PDF_FileInfo.formatPageNumber(Long.parseLong(idtokens[2])) + ".txt");
-     * BufferedReader rdr = null; try { rdr = new BufferedReader(new
-     * FileReader(page_txt)); while (rdr.ready()) {
-     * allPageTxt.append(rdr.readLine()); // TODO Auto-generated method stub } }
-     * catch (FileNotFoundException e) { // TODO Auto-generated catch block
-     * e.printStackTrace(); } catch (IOException e) { // TODO Auto-generated
-     * catch block e.printStackTrace(); } finally {
-     *  } return allPageTxt.toString(); }
-     */
-    private static void close(ResultSet rs) {
-        if (rs != null) {
-            try {
-                rs.close();
-            } catch (Exception e) {
-                e.printStackTrace();
+/*
+	private static String getPageTextFromFile(String id, String isbn13) {
+	    String[] idtokens = id.split("_");
+        StringBuffer allPageTxt = new StringBuffer();
+        File page_txt = new File(OutputPageData.PATH_PREFIX + System.getProperty("file.separator") + "BurstAndExtracted" + System.getProperty("file.separator") + isbn13 + System.getProperty("file.separator") + "pg_" + PDF_FileInfo.formatPageNumber(Long.parseLong(idtokens[2])) + ".txt");
+        BufferedReader rdr = null;
+        try {
+            rdr = new BufferedReader(new FileReader(page_txt));
+            while (rdr.ready()) {
+                allPageTxt.append(rdr.readLine());
+                // TODO Auto-generated method stub
             }
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
         }
+        finally {
+
+        }
+        return allPageTxt.toString();
     }
+*/
+    private static void close(ResultSet rs)
+	{
+		if(rs != null)
+		{
+			try
+			{
+				rs.close();
+			}
+			catch(Exception e)
+			{
+				e.printStackTrace();
+			}
+		}
+	}
 
-    private static void close(Statement stmt) {
-        if (stmt != null) {
-            try {
-                stmt.close();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-    }
+	private static void close(Statement stmt)
+	{
+		if(stmt != null)
+		{
+			try
+			{
+				stmt.close();
+			}
+			catch(Exception e)
+			{
+				e.printStackTrace();
+			}
+		}
+	}
 
-    private static void close(PreparedStatement pstmt) {
-        if (pstmt != null) {
-            try {
-                pstmt.close();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-    }
+	private static void close(PreparedStatement pstmt)
+	{
+		if(pstmt != null)
+		{
+			try
+			{
+				pstmt.close();
+			}
+			catch(Exception e)
+			{
+				e.printStackTrace();
+			}
+		}
+	}
 
-    private static String getKeywords(List terms, String text) {
-        StringBuffer termbuf = new StringBuffer();
-        String spage = stem(text);
-        for (int j = 0; j < terms.size(); j++) {
-            String term = (String) terms.get(j);
-            term = term.trim();
-            if (term.length() > 0 && !stopWords.containsKey(term)) {
-                String stemmedTerm = stem(term);
-                String regex = "m/\\b" + stemmedTerm + "\\b/";
-                if (perl.match(regex, spage)) {
-                    //System.out.println("Hit:"+term);
-                    if (termbuf.length() > 0) {
-                        termbuf.append("|");
-                    }
-                    termbuf.append(perl.substitute("s/'/''/g", term));
-                }
-            }
-        }
+	private static String getKeywords(List terms, String text)
+	{
+		StringBuffer termbuf = new StringBuffer();
+		String spage = stem(text);
+		for(int j=0; j<terms.size();j++)
+		{
+			String term = (String) terms.get(j);
+			term = term.trim();
+			if(term.length()>0 &&
+			   !stopWords.containsKey(term))
+			{
+				String stemmedTerm = stem(term);
+				String regex = "m/\\b"+stemmedTerm+"\\b/";
+				if(perl.match(regex,spage))
+				{
+					//System.out.println("Hit:"+term);
+					if(termbuf.length() > 0)
+					{
+						termbuf.append("|");
+					}
+					termbuf.append(perl.substitute("s/'/''/g",term));
+				}
+			}
+		}
 
-        if (termbuf.length() > 0) {
-            return termbuf.toString();
-        }
+		if(termbuf.length()>0)
+		{
+			return termbuf.toString();
+		}
 
-        return null;
-    }
+		return null;
+	}
 
-    private static String stem(String words) {
-        String lwords = words.toLowerCase();
-        String[] splitwords = lwords.split("\\W+");
-        StringBuffer stemmedBuffer = new StringBuffer();
+	private static String stem(String words)
+	{
+		String lwords = words.toLowerCase();
+		String[] splitwords = lwords.split("\\W+");
+		StringBuffer stemmedBuffer = new StringBuffer();
 
-        for (int i = 0; i < splitwords.length; i++) {
-            if (stemmedBuffer.length() > 0) {
-                stemmedBuffer.append(" ");
-            }
+		for(int i=0; i<splitwords.length;i++)
+		{
+			if(stemmedBuffer.length() > 0)
+			{
+				stemmedBuffer.append(" ");
+			}
 
-            stemmedBuffer.append(splitwords[i]);
-        }
+			stemmedBuffer.append(splitwords[i]);
+		}
 
-        return stemmedBuffer.toString();
-    }
+		return stemmedBuffer.toString();
+	}
 }
