@@ -687,4 +687,9 @@ public class GEODataDictionary
 		classCodes.put("74.1.5",	"Pest, disease and weed control");
 		classCodes.put("74.1.4",	"Agroforestry and intercropping");
     }
+    
+    public Hashtable getAuthorityCodes()
+    {
+    	return null;
+    }
 }
