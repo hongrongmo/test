@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Enumeration;
+import java.util.Hashtable;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -13,6 +14,12 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import org.ei.logging.LogClient;
+import org.ei.util.GUID;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -39,6 +46,10 @@ import org.apache.commons.logging.LogFactory;
  *   <filter>
  *   <filter-name>FastDocViewFilter</filter-name>
  *   <filter-class>org.ei.books.FastDocViewFilter</filter-class>
+ *      <init-param>
+ *       <param-name>logURL</param-name>
+ *       <param-value>http://@log_server@/logservice/servlet/LogServer</param-value>
+ *     </init-param>
  *   </filter>
  *
  *   <filter-mapping>
@@ -48,23 +59,32 @@ import org.apache.commons.logging.LogFactory;
  */
 public final class FastDocViewFilter implements Filter {
 
+  private static final Pattern pagenoregex = Pattern.compile("pg_(\\d{1,4})\\.pdf");
+  private LogClient logClient;
+
 	protected static Log log = LogFactory.getLog(FastDocViewFilter.class);
-    private FilterConfig filterConfig = null;
-    private static final String SHRDKEY = "!MM01234-5-6789MM#";
+  private FilterConfig filterConfig = null;
+  private static final String SHRDKEY = "!MM01234-5-6789MM#";
+
 	public void destroy() {
 		this.filterConfig = null;
 		// TODO Auto-generated method stub
 	}
 
 	public void init(FilterConfig aConfig) throws ServletException {
-		// TODO Auto-generated method stub
 		log.info("Starting up");
 
 		this.filterConfig = aConfig;
+
+    String logServiceURL = this.filterConfig.getInitParameter("logURL");
+    this.logClient = new LogClient(logServiceURL);
+		log.info("Set logservice URL to " + logServiceURL);
 	}
 
 	public void doFilter(ServletRequest srequest, ServletResponse sresponse,
 			FilterChain chain) throws IOException, ServletException {
+
+      long end, start = System.currentTimeMillis();
 
         // Skip logging for non-HTTP requests and responses.
         if (!(srequest instanceof HttpServletRequest) ||
@@ -86,17 +106,24 @@ public final class FastDocViewFilter implements Filter {
 //        	log.info(paramname + " <= " + hreq.getParameter(paramname));
 //		}
 //
+        String isbn = null;
+        String pageno = null;
+        String custid = null;
+
         if((currentURI != null) && (currentURI.endsWith("pdf")))
         {
         	boolean passed = false;
 
         	log.info(" currentURI: " + currentURI);
 
-        	String md5param = hreq.getParameter("TICKET");
+        	  String md5param = hreq.getParameter("TICKET");
             log.info(" ticket = " + md5param);
             String uriprefix = "docview/";
-            String isbn = currentURI.substring(currentURI.indexOf(uriprefix)+uriprefix.length(),currentURI.lastIndexOf("/"));
-//            log.info(" isbn = " + isbn);
+            isbn = currentURI.substring(currentURI.indexOf(uriprefix)+uriprefix.length(),currentURI.lastIndexOf("/"));
+            Matcher m = pagenoregex.matcher(currentURI);
+            if (m.find()) {
+              pageno = m.group(1);
+            }
 
         	if(md5param != null) {
 
@@ -106,7 +133,7 @@ public final class FastDocViewFilter implements Filter {
             {
             		StringBuffer ticketVal = new StringBuffer();
               	String reqticket = tokens[0];
-              	String custid = tokens[1];
+              	custid = tokens[1];
                 String currentTime = tokens[2];
                 String newticket = "";
 
@@ -158,7 +185,74 @@ public final class FastDocViewFilter implements Filter {
         }
 		// move on to the next
 		chain.doFilter(srequest, sresponse);
-	}
+
+    if((currentURI != null) && (currentURI.endsWith("pdf")))
+    {
+      try
+      {
+        Enumeration paraNames = hreq.getParameterNames();
+        Hashtable ht = new Hashtable();
+
+        while (paraNames.hasMoreElements() )
+        {
+          String key = (String) paraNames.nextElement();
+          ht.put(key, hreq.getParameter(key) );
+        }
+        ht.put("referex_download", "page");
+        if(pageno != null) {
+          ht.put("page", pageno);
+        }
+        if(custid != null) {
+          ht.put("custid", custid);
+        }
+        if(isbn != null) {
+          ht.put("ISBN", isbn);
+        }
+        logClient.setappdata(ht);
+        // populate mandatory fields for CLF construction
+        logClient.setdate(start);
+        logClient.setbegin_time(start);
+        end = System.currentTimeMillis();
+        logClient.setend_time(end);
+        logClient.setresponse_time(end-start);
+        if ( ht.containsKey("DOCVIEWSESSION") ) {
+            logClient.setsid( (String)ht.get("DOCVIEWSESSION") );
+        } else {
+            logClient.setsid("0");
+        }
+
+        String ipAddress = hreq.getHeader("x-forwarded-for");
+        if(ipAddress == null)
+        {
+        	ipAddress = hreq.getRemoteAddr();
+        }
+        logClient.setHost(ipAddress);
+        logClient.setrfc931("-");
+        logClient.setusername("-");
+        try {
+          logClient.setcust_id(Long.parseLong(custid));
+        } catch (NumberFormatException e) {
+        }
+        logClient.setuser_agent(hreq.getHeader("User-Agent"));
+        logClient.setHTTPmethod(hreq.getMethod());
+        logClient.setreferrer(hreq.getHeader("referer"));
+        logClient.seturi_stem(hreq.getRequestURI());
+        logClient.seturi_query(hreq.getQueryString());
+        logClient.setstatuscode(HttpServletResponse.SC_OK);
+        logClient.setrid(new GUID().toString());
+        logClient.setappid("EngVillage2");
+        logClient.setappdata(ht);
+
+          logClient.sendit();
+          log.info("Sent log ..");
+      }
+      catch(Exception le)
+      {
+          le.printStackTrace();
+          log.error(le);
+      }
+    }
+  }
 
 	private String asHex(byte[] hash) {
 		StringBuffer buf = new StringBuffer(hash.length * 2);
