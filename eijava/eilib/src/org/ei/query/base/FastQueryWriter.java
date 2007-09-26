@@ -129,10 +129,10 @@ public class FastQueryWriter
         mappings.setProperty("puc", "puc");
         mappings.setProperty("pac", "pac");
         mappings.setProperty("pec", "pec");
-		mappings.setProperty("prn", "prn");
-		mappings.setProperty("pex", "pe");
-		mappings.setProperty("pam", "pam");
-		mappings.setProperty("doi", "doi");
+        mappings.setProperty("prn", "prn");
+        mappings.setProperty("pex", "pe");
+        mappings.setProperty("pam", "pam");
+        mappings.setProperty("doi", "doi");
         mappings.setProperty("all", "all");
         mappings.setProperty("rgi", "ch");
         mappings.setProperty("pfd", "pfd");
@@ -299,17 +299,22 @@ public class FastQueryWriter
                 {
                     t = literal.getValue().trim()+"DCLS";
                 }
+                else if(currentField.equalsIgnoreCase("bn"))
+                {
+                  t = perl.substitute("s/-//g", literal.getValue().trim());
+                  t = t + "*";
+                }
                 else if(currentField.equalsIgnoreCase("cl"))
                 {
                     t = perl.substitute("s/\\./DQD/g", literal.getValue().trim());
                 }
                 else if(currentField.equalsIgnoreCase("puc") ||
-				        currentField.equalsIgnoreCase("pec") ||
-				        currentField.equalsIgnoreCase("pid"))
-				{
-					t = perl.substitute("s/\\./PERIOD/g", literal.getValue().trim());
-					t = perl.substitute("s/\\//SLASH/g", t);
-				}
+                        currentField.equalsIgnoreCase("pec") ||
+                        currentField.equalsIgnoreCase("pid"))
+                {
+                  t = perl.substitute("s/\\./PERIOD/g", literal.getValue().trim());
+                  t = perl.substitute("s/\\//SLASH/g", t);
+                }
                 else
                 {
                     t = literal.getValue().trim();
@@ -328,8 +333,8 @@ public class FastQueryWriter
                     Database[] databases = dconfig.getDatabases(upgradeMask);
                     if(lg != null)
                     {
-						buffer.write("(");
-					}
+                      buffer.write("(");
+                    }
                     buffer.write(" (");
                     for(int i=0;i<databases.length;i++)
                     {
