@@ -294,7 +294,7 @@
     <xsl:variable name="FULLTEXT-LINK">
       <xsl:value-of select="EI-DOCUMENT/FT/@FTLINK"/>
     </xsl:variable>
-    
+
     <xsl:variable name="CHECK-CUSTOM-OPT">
       <xsl:value-of select="custoptions:checkFullText($FULLTEXT, $FULLTEXT-LINK, $CUST-ID, EI-DOCUMENT/DO, EI-DOCUMENT/DOC/DB/DBMASK)" />
     </xsl:variable>
@@ -345,10 +345,21 @@
                 </a>
               &#160;
             </xsl:if>
+
+              <xsl:if test="string(EI-DOCUMENT/PII)">
+                <a>
+                  <xsl:attribute name="target">_referex</xsl:attribute>
+                  <xsl:attribute name="TITLE">Read Chapter</xsl:attribute>
+                  <xsl:attribute name="HREF"><xsl:value-of select="book:getReadChapterLink(WOBLSERVER, EI-DOCUMENT/BN13, EI-DOCUMENT/PII, /PAGE/CUSTOMER-ID)"/>&amp;EISESSION=$SESSIONID</xsl:attribute>
+                  <img alt="Read Chapter" src="/engresources/images/read_chp.gif" style="border:0px; vertical-align:middle"/>
+                  </a>
+                &#160;
+              </xsl:if>
+
               <a >
                 <xsl:attribute name="target">_referex</xsl:attribute>
                 <xsl:attribute name="TITLE">Read Book</xsl:attribute>
-                <xsl:attribute name="HREF"><xsl:value-of select="book:getReadBookLink(EI-DOCUMENT/BN, /PAGE/CUSTOMER-ID)"/></xsl:attribute>
+                <xsl:attribute name="HREF"><xsl:value-of select="book:getReadBookLink(WOBLSERVER, EI-DOCUMENT/BN13, /PAGE/CUSTOMER-ID)"/>&amp;EISESSION=$SESSIONID</xsl:attribute>
                 <img alt="Read Book" src="/engresources/images/read_book.gif" style="border:0px; vertical-align:middle"/>
                 </a>
 					</td>
