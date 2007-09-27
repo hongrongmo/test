@@ -44,6 +44,10 @@ public class EIDoc implements Highlightable, XMLSerializable, LocalHoldingLinker
 		this.deep = deep;
 	}
 
+	public boolean isBook()
+	{
+		return false;
+	}
 
     public ElementDataMap getElementDataMap() {
         return this.mapDocument;
