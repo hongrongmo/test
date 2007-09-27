@@ -44,7 +44,10 @@ public class GlobalLinks {
 
             if(customizedFeatures[i].equalsIgnoreCase("ELE") ||
                customizedFeatures[i].equalsIgnoreCase("MAT") ||
-               customizedFeatures[i].equalsIgnoreCase("CHE"))
+               customizedFeatures[i].equalsIgnoreCase("CHE") ||
+               customizedFeatures[i].equalsIgnoreCase("CIV") ||
+               customizedFeatures[i].equalsIgnoreCase("COM") ||
+               customizedFeatures[i].equalsIgnoreCase("SEC"))
             {
                  hasBooks = true;
             }
