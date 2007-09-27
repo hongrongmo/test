@@ -1,4 +1,4 @@
-package org.ei.data.compendex.loadtime;
+package org.ei.data.compendex;
 
 import java.util.*;
 import java.sql.*;
@@ -16,6 +16,7 @@ public class CpxCorrections {
     static int addCounter=0;
     static int notUpdatedCounter=0;
     static int delNotInDBCounter=0;
+	static boolean updatePnFlag = false;
 
     static PrintWriter out;
     static PrintWriter log;
@@ -35,7 +36,7 @@ public class CpxCorrections {
         String driver = args[1];
         String username = args[2];
         String password = args[3];
-        String masterTable=args[4];
+        String masterTable = args[4];
         String backupTable = args[5];
         String propFile = args[6];
         String inFile = args[7];
@@ -44,23 +45,36 @@ public class CpxCorrections {
         String qa=null;
         String outFile=null;
         if(args.length >= 11)
+        {
            qa =args[10];
-        if(args.length >= 12)
-           outFile = args[11];
+	    }
 
-        if(outFile != null) {
-            out = new PrintWriter(new BufferedWriter(new FileWriter(outFile)));
+        if(args.length >= 12)
+        {
+           outFile = args[11];
+	    }
+
+	    if(args.length >= 13 && args[12].equalsIgnoreCase("PN"))
+		{
+			updatePnFlag = true;
+		}
+
+        if(outFile != null)
+        {
+           out = new PrintWriter(new BufferedWriter(new FileWriter(outFile)));
         }
-            log = new PrintWriter(new FileWriter(new File(logFile)));
+           log = new PrintWriter(new FileWriter(new File(logFile)));
 
         String updateTable=null;
         boolean backupFlag=false;
         boolean qaFlag=false;
+
         if(qa != null)
         {
             qaFlag=qa.equalsIgnoreCase("QA");
             backupFlag = qa.equalsIgnoreCase("backup");
         }
+
         if(qaFlag)
         {
             updateTable=backupTable;
@@ -71,6 +85,7 @@ public class CpxCorrections {
         {
             updateTable=masterTable;
         }
+
         System.out.println("File:"+inFile);
         System.out.println("Add File:"+outFile);
         System.out.println("Log File:"+logFile);
@@ -81,6 +96,7 @@ public class CpxCorrections {
 		System.out.println("driver "+driver);
         System.out.println("Connecting to "+url);
         System.out.println("Updating Table:"+ updateTable);
+        System.out.println("updatePnFlag= "+ updatePnFlag);
 
         log.println("File:"+inFile);
         log.println("Add File:"+outFile);
@@ -121,8 +137,7 @@ public class CpxCorrections {
         this.cpxDB = new CpxDBBroker(url,driver,username,password,
                                      masterTable,updateTable,backupTable, getFieldMapping(mapFile+".properties"),KEY,updateNum);
         this.updateNum = updateNum;
-
-
+        this.cpxDB.setUpdatePnFlag(this.updatePnFlag);
 
     }
     public void readRecords(boolean backup) throws IOException

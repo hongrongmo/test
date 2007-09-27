@@ -6,7 +6,7 @@
  * To change the template for this generated file go to
  * Window&gt;Preferences&gt;Java&gt;Code Generation&gt;Code and Comments
  */
-package org.ei.data.compendex.loadtime;
+package org.ei.data.compendex;
 
 import java.util.*;
 import java.sql.*;
@@ -18,6 +18,7 @@ public class CpxDBBroker {
     private String key;
     public static final int OLD_VALUE=0;
     public static final int NEW_VALUE=1;
+    private boolean updatePnFlag = false;
 
     private String masterTable;
     private String updateTable;
@@ -64,6 +65,11 @@ public class CpxDBBroker {
     {
         this.key=key;
     }
+
+	public void setUpdatePnFlag(boolean updatePnFlag)
+	{
+		this.updatePnFlag = updatePnFlag;
+	}
 
     public void end()
     {
@@ -235,6 +241,11 @@ public class CpxDBBroker {
 					}
 
 					if(field.equals("XP") && (rec.getString("UP")!= null && rec.getString("UP").indexOf("APS Page Fix")>-1))
+					{
+						continue;
+					}
+
+					if(updatePnFlag == false && (field.equals("PN") || field.equals("PC") || field.equals("PS") || field.equals("PY")))
 					{
 						continue;
 					}

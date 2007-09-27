@@ -1,4 +1,4 @@
-package org.ei.data.compendex.loadtime;
+package org.ei.data.compendex;
 
 
 import java.io.ByteArrayInputStream;
@@ -17,9 +17,9 @@ public class CompendexRecordFixer
 
 	private Perl5Util perl = new Perl5Util();
 
-	private int AUS_MAXSIZE = 750;
+	private int AUS_MAXSIZE = 4000;
 	private int AF_MAXSIZE = 768;
-	private int CL_MAXSIZE = 99;
+	private int CL_MAXSIZE = 128;
 	private int VT_MAXSIZE = 155;
 	private int BN_MAXSIZE = 15;
 	private int SU_MAXSIZE = 20;
@@ -30,7 +30,7 @@ public class CompendexRecordFixer
 	private int TG_MAXSIZE = 2;
 	private int CN_MAXSIZE = 6;
 	private int DT_MAXSIZE = 2;
-	private int EX_MAXSIZE = 11;
+	private int EX_MAXSIZE = 12;
 	private int AT_MAXSIZE = 40;
 	private int IG_MAXSIZE = 9;
 	private int M1_MAXSIZE = 32;
@@ -42,7 +42,7 @@ public class CompendexRecordFixer
 	private int PN_MAXSIZE = 88;
 	private int PC_MAXSIZE = 48;
 	private int PA_MAXSIZE = 32;
-	private int ST_MAXSIZE = 192;
+	private int ST_MAXSIZE = 500;
 	private int ISS_MAXSIZE = 32;
 	private int EF_MAXSIZE = 80;
 	private int VC_MAXSIZE = 48;
@@ -64,7 +64,7 @@ public class CompendexRecordFixer
 		{
 			if(i>0)
 			{
-				buf.append("	");
+				buf.append("\t");
 			}
 
 			String fs = (String)al.get(i);

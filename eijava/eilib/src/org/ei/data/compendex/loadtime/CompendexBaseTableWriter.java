@@ -1,6 +1,6 @@
 
 
-package org.ei.data.compendex.loadtime;
+package org.ei.data.compendex;
 
 import java.io.FileInputStream;import java.io.FileWriter;import java.io.IOException;import java.io.PrintWriter;import java.util.Hashtable;import java.util.Properties;import org.apache.oro.text.perl.Perl5Util;
 
@@ -125,6 +125,20 @@ public class CompendexBaseTableWriter
 
 		props.setProperty("AR","AR");
 
+        props.setProperty("IT","IT");
+
+        props.setProperty("BX", "BX");
+
+        props.setProperty("BE", "BE");
+
+        props.setProperty("BV", "BV");
+
+        props.setProperty("CP", "CP");
+
+        props.setProperty("TY","TY");
+
+        props.setProperty("UPDATE_NUMBER","UN");
+
 	}
 	public CompendexBaseTableWriter(int recsPerFile,									String filename)
 	{
@@ -149,7 +163,7 @@ public class CompendexBaseTableWriter
 			StringBuffer value = (StringBuffer)record.get(props.getProperty(bf).trim());			//System.out.println(props.getProperty(bf)+":"+value);			String valueS = null;			if(value != null)			{				valueS = value.toString();				if(bf.equals("AN") || bf.equals("EX"))				{					valueS = perl.substitute("s/EIX//ig", valueS);				}
 				valueS = perl.substitute("s/\\t/     /g", valueS);
 			}
-			if(i > 0)			{				recordBuf.append("	");			}
+			if(i > 0)			{				recordBuf.append("\t");			}
 			if(valueS != null)			{				recordBuf.append(valueS);			}
 		}		if(fix){			out.println(fixer.fixRecord(recordBuf.toString()));		}
 		else {			out.println(recordBuf.toString());		}
