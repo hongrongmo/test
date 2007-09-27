@@ -81,6 +81,8 @@ public class LemClient
         {
             String URL = buildSearchURL();
             HttpClient client = new HttpClient();
+            client.setTimeout(3000); // 3 second
+
             method = new GetMethod(URL);
             //System.out.println(" LemClient URL " + java.net.URLDecoder.decode(URL,"UTF-8"));
             int statusCode = client.executeMethod(method);
