@@ -1,4 +1,4 @@
-<%@ page language="java" %><%@ page session="false" %><%@ page import="java.util.*"%><%@ page import="java.io.FileWriter"%><%@ page import="java.net.URLDecoder"%><%@ page import="java.net.URLEncoder"%><%@ page import="org.ei.controller.ControllerClient"%><%@ page import="org.ei.session.*"%><%@ page import="org.ei.domain.*" %><%@ page import="org.ei.config.*"%><%@ page import="org.ei.parser.base.*"%><%@ page import="org.ei.query.base.*"%><%@ page import="org.ei.domain.personalization.GlobalLinks"%><%@ page import="org.ei.domain.personalization.SavedSearches"%><%@ page import="org.ei.domain.Searches"%><%@ page import="org.ei.tags.*"%><%@ page import="org.ei.config.*"%><%@ page import="org.ei.email.*"%><%@ page import="org.ei.util.*"%><%@ page import="java.util.*"%><%@ page import="java.net.*"%><%@ page import="java.io.*"%><%@ page import="javax.mail.internet.*"%><%@ page errorPage="/error/errorPage.jsp"%><%@ page buffer="20kb"%><%
+<%@ page language="java" %><%@ page session="false" %><%@ page import="java.util.*"%><%@ page import="java.io.FileWriter"%><%@ page import="java.net.URLDecoder"%><%@ page import="java.net.URLEncoder"%><%@ page import="org.ei.controller.ControllerClient"%><%@ page import="org.ei.session.*"%><%@ page import="org.ei.domain.*" %><%@ page import="org.ei.config.*"%><%@ page import="org.ei.parser.base.*"%><%@ page import="org.ei.query.base.*"%><%@ page import="org.ei.domain.personalization.GlobalLinks"%><%@ page import="org.ei.domain.personalization.SavedSearches"%><%@ page import="org.ei.domain.Searches"%><%@ page import="org.ei.tags.*"%><%@ page import="org.ei.config.*"%><%@ page import="org.ei.books.BookDocument"%><%@ page import="org.ei.util.*"%><%@ page import="java.util.*"%><%@ page import="java.net.*"%><%@ page import="java.io.*"%><%@ page errorPage="/error/errorPage.jsp"%><%@ page buffer="20kb"%><%
     FastSearchControl sc = null;
     PageEntry entry =null;
     EIDoc curDoc =null;
@@ -335,9 +335,15 @@
 		}
 
 		StringBuffer bookdeturl = new StringBuffer();
+
 		if(request.getAttribute("BOOKDET_URL") == null)
 		{
-			bookdeturl = getbookdetURL(tQuery,recnum,searchID,database, did);
+			String pii = null;
+			if(curDoc.isBook())
+			{
+				pii = ((BookDocument) curDoc).getChapterPii();
+			}
+			bookdeturl = getbookdetURL(tQuery,recnum,searchID,database,did,pii);
 		}
 		else
 		{
@@ -363,7 +369,7 @@
         client.log("ACTION", "document");
         if(curDoc.getISSN()!=null)
         {
-        	client.log("ISSN", curDoc.getISSN());       
+        	client.log("ISSN", curDoc.getISSN());
         }
         client.setRemoteControl();
         out.write("<PAGE>");
@@ -391,14 +397,14 @@
         out.write(URLEncoder.encode(srurl.toString()));
         out.write("</RESULTS-NAV>");
         out.write("<NEWSEARCH-NAV>");
-		out.write(URLEncoder.encode(nsurl.toString()));
+        out.write(URLEncoder.encode(nsurl.toString()));
         out.write("</NEWSEARCH-NAV>");
 
         if(dedupurl.length() > 0)
         {
     	    out.write("<DEDUP-RESULTS-NAV>");
     	    out.write(dedupurl.toString());
-            out.write("</DEDUP-RESULTS-NAV>");
+          out.write("</DEDUP-RESULTS-NAV>");
         }
         out.write("<ABS-NAV>");
         out.write(absurl.toString());
@@ -406,11 +412,11 @@
         out.write("<DET-NAV>");
         out.write(deturl.toString());
         out.write("</DET-NAV>");
-		out.write("<BOOKDET-NAV>");
-		out.write(bookdeturl.toString());
-		out.write("</BOOKDET-NAV>");
+        out.write("<BOOKDET-NAV>");
+        out.write(bookdeturl.toString());
+        out.write("</BOOKDET-NAV>");
         out.write("<PATREF-NAV>");
-    	out.write(patrefurl.toString());
+        out.write(patrefurl.toString());
         out.write("</PATREF-NAV>");
         out.write("<NONPATREF-NAV>");
         out.write(nonpatrefurl.toString());
@@ -421,18 +427,17 @@
     	    out.write("<PREV>");
     	    out.write(prevurl.toString());
     	    out.write("</PREV>");
-    	}
-
-    	if(nexturl.length() > 0)
-    	{
-        	out.write("<NEXT>");
-    		out.write(nexturl.toString());
-        	out.write("</NEXT>");
-    	}
+      	}
+      	if(nexturl.length() > 0)
+      	{
+          out.write("<NEXT>");
+      		out.write(nexturl.toString());
+          out.write("</NEXT>");
+        }
         out.write("</PAGE-NAV>");
         TagBubble bubble = new TagBubble(addTagURL.toString(),
         								 editTagURL.toString(),
-										 "nextURL",
+										    "nextURL",
         								 pUserId,
         								 customerId,
         								 did,
@@ -476,7 +481,7 @@
         out.write("<SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
         out.write("<PERSONALIZATION>"+personalization+"</PERSONALIZATION>");
         out.write("<DATABASE-MASK>");
-    	out.write(database);
+        out.write(database);
         out.write("</DATABASE-MASK>");
         out.write("<SEARCH-ID><![CDATA["+searchID+"]]></SEARCH-ID>");
         out.write("<SERVER-NAME>"+serverName+"</SERVER-NAME>");
@@ -628,13 +633,17 @@
 		return addurlbuf;
 	}
 
-	private StringBuffer getbookdetURL(Query tQuery,int recnum,String searchID,String database, DocID docID)
+	private StringBuffer getbookdetURL(Query tQuery,int recnum,String searchID,String database, DocID docID, String pii)
 	{
 		StringBuffer bookdeturlbuf = new StringBuffer();
 		bookdeturlbuf.append("CID=bookSummary").append("&amp;");
 		bookdeturlbuf.append("SEARCHID=").append(searchID).append("&amp;");
 		bookdeturlbuf.append("DOCINDEX=").append(Integer.toString(recnum)).append("&amp;");
 		bookdeturlbuf.append("database=").append(database).append("&amp;");
+		if(pii != null)
+		{
+  			bookdeturlbuf.append("pii=").append(pii).append("&amp;");
+    	}
 		bookdeturlbuf.append("docid=").append(docID.getDocID());
 		return bookdeturlbuf;
 	}
