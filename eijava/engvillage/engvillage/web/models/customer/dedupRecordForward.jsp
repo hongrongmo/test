@@ -1,4 +1,4 @@
-<%@ page language="java" %><%@ page session="false" %><%@ page import="org.ei.domain.*" %><%@ page import="org.ei.domain.personalization.SavedSearches"%><%@ page import="org.ei.query.base.*"%><%@ page import="org.ei.config.*"%><%@ page import="java.util.*"%><%@ page import="org.ei.session.*"%><%@ page import="org.ei.controller.ControllerClient"%><%@ page import="org.ei.parser.base.*"%><%@ page import="org.ei.email.*"%><%@ page import="javax.mail.internet.*"%><%
+<%@ page language="java" %><%@ page session="false" %><%@ page import="org.ei.domain.*" %><%@ page import="org.ei.books.*" %><%@ page import="org.ei.domain.personalization.SavedSearches"%><%@ page import="org.ei.query.base.*"%><%@ page import="org.ei.config.*"%><%@ page import="java.util.*"%><%@ page import="org.ei.session.*"%><%@ page import="org.ei.controller.ControllerClient"%><%@ page import="org.ei.parser.base.*"%><%@ page import="org.ei.email.*"%><%@ page import="javax.mail.internet.*"%><%
 
   FastSearchControl sc = null;
 
@@ -154,6 +154,7 @@
 				       						 sessionId,
 				       						 highlighter);
 
+	EIDoc curDoc = entry.getDoc();
 	String docID = ((entry.getDoc()).getDocID()).getDocID();
 
 
@@ -194,7 +195,12 @@
 	StringBuffer absurl = getabsURL(tQuery,recnum,searchID,dedupFlag,dedupOption,dedupDB,origin,linkSet,dbLink,dedupSet,database);
 	request.setAttribute("ABS_URL", absurl);
 
-	StringBuffer bookdeturl = getbookdetURL(recnum,searchID,dedupFlag,dedupOption,dedupDB,origin,linkSet,dbLink,dedupSet,database, docID);
+	String pii = null;
+	if(curDoc.isBook())
+	{
+		pii = ((BookDocument) curDoc).getChapterPii();
+	}
+	StringBuffer bookdeturl = getbookdetURL(recnum,searchID,dedupFlag,dedupOption,dedupDB,origin,linkSet,dbLink,dedupSet,database,pii,docID);
 	request.setAttribute("BOOKDET_URL", bookdeturl);
 
 	StringBuffer deturl = getdetURL(tQuery,recnum,searchID,dedupFlag,dedupOption,dedupDB,origin,linkSet,dbLink,dedupSet,database);
@@ -380,6 +386,7 @@
 							 String dbLink,
 							 String dedupSet,
 							 String database,
+							 String pii,
 							 String docID)
 	{
 		StringBuffer bookdetbuf = new StringBuffer();
@@ -394,6 +401,10 @@
 		bookdetbuf.append("dedupSet=").append(dedupSet).append("&amp;");
 		bookdetbuf.append("DOCINDEX=").append(Integer.toString((recnum))).append("&amp;");
 		bookdetbuf.append("database=").append(database).append("&amp;");
+		if(pii != null)
+		{
+			bookdetbuf.append("pii=").append(pii).append("&amp;");
+		}
 		bookdetbuf.append("docid=").append(docID);
 		return bookdetbuf;
 	}
