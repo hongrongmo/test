@@ -1,4 +1,4 @@
-<%@ page language="java" %><%@ page session="false" %><%@ page import="java.util.*"%><%@ page import="java.net.URLEncoder"%><%@ page import="org.ei.tags.*"%><%@ page import="org.ei.session.*"%><%@ page import="org.ei.controller.ControllerClient"%><%@ page import="org.ei.email.*"%><%@ page import="org.ei.domain.*"%><%@ page errorPage="/error/errorPage.jsp"%><%@ page import="javax.mail.internet.*"%><%
+<%@ page language="java" %><%@ page session="false" %><%@ page import="java.util.*"%><%@ page import="org.ei.books.*"%><%@ page import="java.net.URLEncoder"%><%@ page import="org.ei.tags.*"%><%@ page import="org.ei.session.*"%><%@ page import="org.ei.controller.ControllerClient"%><%@ page import="org.ei.email.*"%><%@ page import="org.ei.domain.*"%><%@ page errorPage="/error/errorPage.jsp"%><%@ page import="javax.mail.internet.*"%><%
 
 	ControllerClient client = new ControllerClient(request, response);
 	UserSession ussession=(UserSession)client.getUserSession();
@@ -30,6 +30,7 @@
 	{
 		scopeParam = Integer.toString(iscope);
 	}
+
 
 	int index = Integer.parseInt(request.getParameter("DOCINDEX"));
 
@@ -120,8 +121,15 @@
 	StringBuffer deturl = getdetURL(index,tagSearch,scopeParam,database);
 	request.setAttribute("DET_URL", deturl);
 
-	StringBuffer bookdeturl = getbookdetURL(index,tagSearch,scopeParam,database, did);
+
+	String pii = null;
+	if(curDoc.isBook())
+	{
+		pii = ((BookDocument) curDoc).getChapterPii();
+	}
+	StringBuffer bookdeturl = getbookdetURL(index,tagSearch,scopeParam,database,pii, did);
 	request.setAttribute("BOOKDET_URL", bookdeturl);
+
 
 	StringBuffer patrefurl = getpatrefURL(index,tagSearch,scopeParam,database, did);
 	request.setAttribute("PATREF_URL", patrefurl);
@@ -317,6 +325,7 @@
 						   	   String tagSearch,
 						       String scopeParam,
 						       String database,
+						       String pii,
 						       DocID docID)
 	{
 		StringBuffer bookdeturlbuf = new StringBuffer();
@@ -325,6 +334,10 @@
 		bookdeturlbuf.append("DOCINDEX=").append(Integer.toString((index))).append("&amp;");
 		bookdeturlbuf.append("database=").append(database).append("&amp;");
 		bookdeturlbuf.append("tagscope=").append(scopeParam).append("&amp;");
+		if(pii != null)
+		{
+			bookdeturlbuf.append("pii=").append(pii).append("&amp;");
+		}
 		bookdeturlbuf.append("docid=").append(docID.getDocID());
 		return bookdeturlbuf;
 	}

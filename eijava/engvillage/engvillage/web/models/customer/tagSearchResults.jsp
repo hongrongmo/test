@@ -201,6 +201,7 @@
 	client.log("hits", Integer.toString(nTotalDocs));
 	client.setRemoteControl();
 	out.write("<PAGE>");
+  out.write("<CUSTOMER-ID>"+customerId+"</CUSTOMER-ID>");
 	out.write("<HEADER/>");
 	out.write("<DBMASK>");
 	out.write(database);
@@ -212,7 +213,7 @@
 	out.write("<PAGE-NAV>");
 	out.write("<NEWSEARCH-NAV>");
 	out.write(newSearchURL);
-    out.write("</NEWSEARCH-NAV>");
+  out.write("</NEWSEARCH-NAV>");
 	out.write("<RESULTS-NAV>");
 	out.write(backURL);
 	out.write("</RESULTS-NAV>");
