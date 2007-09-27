@@ -358,7 +358,7 @@ public class DataResponseCache
 			StringBuffer urlbase = new StringBuffer("http://");
 			urlbase.append(urlparts[2]);
 			urlbase.append(customURL);
-			System.out.println(customURL);
+
 			return urlbase.toString();
 		}
 
