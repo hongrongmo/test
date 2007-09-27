@@ -17,6 +17,18 @@
 <%@ page import="org.ei.books.BookDocument"%>
 <%@ page errorPage="/error/errorPage.jsp"%>
 <%@ page buffer="20kb"%>
+<%!
+    String docview_url = "";
+    public void jspInit()
+    {
+    	  try {
+      	  RuntimeProperties eiProps = ConfigService.getRuntimeProperties();
+          docview_url = eiProps.getProperty("FastDocviewBaseUrl");
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+    }
+%>
 <%
   // Get the request parameters
   String cid = request.getParameter("CID");
@@ -43,7 +55,7 @@
 
   String isbn = "";
   String pdfpage = "";
-  String strDocviewURL = BookDocument.getDocviewUrl();
+  String strDocviewURL = docview_url;
 
   if(docid != null)
   {
@@ -107,11 +119,12 @@
   UserSession ussession = (UserSession) client.getUserSession();
   User user = ussession.getUser();
   String customerId = user.getCustomerID();
-
+  String sessionId = ussession.getID();
   String strTicket = BookDocument.getReadPageTicket(isbn, customerId);
 
   StringBuffer pdfurl = new StringBuffer();
   pdfurl.append(strDocviewURL + "/" + isbn + "/pg_" + pdfpage + ".pdf").append("?TICKET=").append(strTicket);
+  pdfurl.append("&DOCVIEWSESSION=$SESSIONID");
   pdfurl.append("#xml=").append(strDocviewURL).append("/").append(isbn).append("/pg_").append(pdfpage).append(".pdf.offsetinfo");
   pdfurl.append("?hilite=");
   if((strQuery != null) && !strQuery.equals(""))

@@ -32,6 +32,7 @@
     String docid = null;
     String docindex = null;
     String database = null;
+    String pii = null;
 
     String isbn = null;
     String dataFormat = null;
@@ -44,6 +45,7 @@
     DatabaseConfig databaseConfig = null;
     DecimalFormat df = null;
     int pagesize = 0;
+    String docview_url = "";
 
     public void jspInit()
     {
@@ -57,6 +59,7 @@
             // Get the value of the number of documents to be displayed in a search results page form Runtime.properties file
             RuntimeProperties runtimeProps = ConfigService.getRuntimeProperties();
             pagesize = Integer.parseInt(runtimeProps.getProperty("PAGESIZE"));
+            docview_url = runtimeProps.getProperty("FastDocviewBaseUrl");
 
             // jam Y2K3
         } catch(Exception e) {
@@ -97,197 +100,198 @@
         searchID = request.getParameter("SEARCHID");
         database = request.getParameter("database");
         docid = request.getParameter("docid");
+        pii = request.getParameter("pii");
 
 /*System.out.println("CID " + cid);
 System.out.println("docindex " + docindex);
 System.out.println("SearchID " + searchID);
 System.out.println("database " + database);
 System.out.println("docid " + docid);
+System.out.println("pii " + pii);
 */
-        dataFormat = FullDoc.FULLDOC_FORMAT;
-        int recnum = Integer.parseInt(docindex);
 
-        String pdfpage = "";
+      dataFormat = FullDoc.FULLDOC_FORMAT;
+      int recnum = Integer.parseInt(docindex);
 
-        if(docid != null)
+      String pdfpage = "";
+
+      if(docid != null)
+      {
+        docid = docid.toLowerCase();
+        String[] bookid = docid.split("_",3);
+        if(bookid != null && bookid.length == 3)
         {
-          docid = docid.toLowerCase();
-          String[] bookid = docid.split("_",3);
-          if(bookid != null && bookid.length == 3)
+          isbn = bookid[1];
+          pdfpage = bookid[2];
+          try
           {
-            isbn = bookid[1];
-            pdfpage = bookid[2];
-            try
+            if(Long.parseLong(pdfpage) == 0)
             {
-              if(Long.parseLong(pdfpage) == 0)
-              {
-                pdfpage = "1";
-              }
-            }
-            catch(NumberFormatException e)
-            {
-                pdfpage = "1";
+              pdfpage = "1";
             }
           }
-        }
-        else {
-          pdfpage = "1";
-        }
-
-        if(docindex == null)
-        {
-          docindex = "1";
-        }
-        int index=1;
-        try
-        {
-          index = Integer.parseInt(docindex);
-        }
-        catch (NumberFormatException e)
-        {
-        }
-
-        // retreive query object and individually set properties
-        Query tQuery = Searches.getSearch(searchID);
-
-        // if this is naivgation frame, don't attempt this
-        // entry will be built from docid, we do not need the query
-        if("bookNav".equalsIgnoreCase(cid))
-        {
-          if(tQuery == null)
+          catch(NumberFormatException e)
           {
-            tQuery = SavedSearches.getSearch(searchID);
-          }
-          if(tQuery != null)
-          {
-            tQuery.setSearchQueryWriter(new FastQueryWriter());
-            tQuery.setDatabaseConfig(databaseConfig);
-            tQuery.setCredentials(user.getCartridge());
-
-            sc = new FastSearchControl();
-            result = sc.openSearch(tQuery,
-                        	   sessionId,
-                        	   pagesize,
-                        	   true);
-
-            if(result.getHitCount() == 0)
-            {
-              entry = null;
-            }
-            else
-            {
-              entry = result.entryAt(index, dataFormat);
-            }
+              pdfpage = "1";
           }
         }
+      }
+      else {
+        pdfpage = "1";
+      }
 
-        if((tQuery == null) || (entry == null))
+      if(docindex == null)
+      {
+        docindex = "1";
+      }
+      int index=1;
+      try
+      {
+        index = Integer.parseInt(docindex);
+      }
+      catch (NumberFormatException e)
+      {
+      }
+
+      // retreive query object and individually set properties
+      Query tQuery = Searches.getSearch(searchID);
+
+      // if this is naivgation frame, don't attempt this
+      // entry will be built from docid, we do not need the query
+      if("bookNav".equalsIgnoreCase(cid))
+      {
+        if(tQuery == null)
         {
-          Database pagdb = DatabaseConfig.getInstance().getDatabase("pag");
-          DocumentBuilder builder = pagdb.newBuilderInstance();
-
-          List docids = new ArrayList();
-          String strdocid = "pag" + "_" + isbn + "_" +  pdfpage;
-          if(cid.toLowerCase().endsWith("booksummary"))
-          {
-            strdocid = "pag" + "_" + isbn + "_" + "0";
-          }
-          docids.add(new DocID(strdocid,pagdb));
-
-          List docs = builder.buildPage(docids, dataFormat);
-          EIDoc bookdoc = (EIDoc) docs.iterator().next();
-          entry = new PageEntry(bookdoc, false);
-
+          tQuery = SavedSearches.getSearch(searchID);
         }
+        if(tQuery != null)
+        {
+          tQuery.setSearchQueryWriter(new FastQueryWriter());
+          tQuery.setDatabaseConfig(databaseConfig);
+          tQuery.setCredentials(user.getCartridge());
 
-        curDoc = (BookDocument) entry.getDoc();
-        isbn = curDoc.getISBN();
+          sc = new FastSearchControl();
+          result = sc.openSearch(tQuery,
+                           sessionId,
+                           pagesize,
+                           true);
 
-        DocID did = curDoc.getDocID();
+          if(result.getHitCount() == 0)
+          {
+            entry = null;
+          }
+          else
+          {
+            entry = result.entryAt(index, dataFormat);
+          }
+        }
+      }
 
-        StringBuffer tocurl = new StringBuffer();
-        tocurl.append("CID=").append("bookToc").append("&");
-        tocurl.append("SEARCHID=").append(searchID).append("&");
-        tocurl.append("DOCINDEX=").append(docindex).append("&");
-        tocurl.append("database=").append(database).append("&");
-        tocurl.append("docid=").append(docid);
+      if((tQuery == null) || (entry == null))
+      {
+        Database pagdb = DatabaseConfig.getInstance().getDatabase("pag");
+        DocumentBuilder builder = pagdb.newBuilderInstance();
 
-        /* This single docview page can only be for 1 record/book */
-        totalDocCount = "1";
+        List docids = new ArrayList();
+        String strdocid = "pag" + "_" + isbn + "_" +  pdfpage;
+        if(cid.toLowerCase().endsWith("booksummary"))
+        {
+          strdocid = "pag" + "_" + isbn + "_" + "0";
+        }
+        docids.add(new DocID(strdocid,pagdb));
 
-        /**
-        *   Log Functionality
-        */
-        log(client, cid, isbn);
+        List docs = builder.buildPage(docids, dataFormat);
+        EIDoc bookdoc = (EIDoc) docs.iterator().next();
+        entry = new PageEntry(bookdoc, false);
+
+      }
+
+      curDoc = (BookDocument) entry.getDoc();
+      isbn = curDoc.getISBN13();
+
+      DocID did = curDoc.getDocID();
+
+      StringBuffer tocurl = new StringBuffer();
+      tocurl.append("CID=").append("bookToc").append("&");
+      tocurl.append("SEARCHID=").append(searchID).append("&");
+      tocurl.append("DOCINDEX=").append(docindex).append("&");
+      tocurl.append("database=").append(database).append("&");
+      tocurl.append("docid=").append(docid);
+
+      /* This single docview page can only be for 1 record/book */
+      totalDocCount = "1";
+
+      /**
+      *   Log Functionality
+      */
+      log(client, cid, isbn);
 
       String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
       String strQuery = "";
 
       out.write("<PAGE>");
 
-  		String searchContext = "default";
-  		if(request.getAttribute("SEARCH_CONTEXT") != null)
-  		{
-  			searchContext = (String) request.getAttribute("SEARCH_CONTEXT");
+      String searchContext = "default";
+      if(request.getAttribute("SEARCH_CONTEXT") != null)
+      {
+        searchContext = (String) request.getAttribute("SEARCH_CONTEXT");
       }
       out.write("<SEARCH-CONTEXT>");
       out.write(searchContext);
       out.write("</SEARCH-CONTEXT>");
       out.write("<SESSION-DATA><SEARCH-TYPE>Book</SEARCH-TYPE></SESSION-DATA>");
 
-
       if(!"bookToc".equalsIgnoreCase(cid) && !"bookNav".equalsIgnoreCase(cid))
       {
         out.write("<PAGE-NAV>");
 
-    		StringBuffer srurl = new StringBuffer();
-    		StringBuffer nsurl = new StringBuffer();
-    		StringBuffer absurl = new StringBuffer();
-    		StringBuffer deturl = new StringBuffer();
-    		StringBuffer bookdeturl = new StringBuffer();
+        StringBuffer srurl = new StringBuffer();
+        StringBuffer nsurl = new StringBuffer();
+        StringBuffer absurl = new StringBuffer();
+        StringBuffer deturl = new StringBuffer();
+        StringBuffer bookdeturl = new StringBuffer();
 
-    		if(request.getAttribute("SEARCH_RESULTS_URL") == null)
-    		{
-    			srurl = getsrURL(recnum,searchID,database,tQuery);
-    		}
-    		else
-    		{
-    			srurl = (StringBuffer) request.getAttribute("SEARCH_RESULTS_URL");
-    		}
+        if(request.getAttribute("SEARCH_RESULTS_URL") == null)
+        {
+          srurl = getsrURL(recnum,searchID,database,tQuery);
+        }
+        else
+        {
+          srurl = (StringBuffer) request.getAttribute("SEARCH_RESULTS_URL");
+        }
 
-			StringBuffer dedupurl = new StringBuffer();
-			if(request.getAttribute("DEDUP_RESULTS_URL") != null)
-			{
-				dedupurl = (StringBuffer)request.getAttribute("DEDUP_RESULTS_URL");
-			}
+        StringBuffer dedupurl = new StringBuffer();
+        if(request.getAttribute("DEDUP_RESULTS_URL") != null)
+        {
+        dedupurl = (StringBuffer)request.getAttribute("DEDUP_RESULTS_URL");
+        }
 
-    		if(request.getAttribute("NEW_SEARCH_URL") == null)
-    		{
-    			nsurl = getnsURL(database,tQuery);
-    		}
-    		else
-    		{
-    			nsurl = (StringBuffer) request.getAttribute("NEW_SEARCH_URL");
-    		}
+        if(request.getAttribute("NEW_SEARCH_URL") == null)
+        {
+          nsurl = getnsURL(database,tQuery);
+        }
+        else
+        {
+          nsurl = (StringBuffer) request.getAttribute("NEW_SEARCH_URL");
+        }
 
-    		if(request.getAttribute("ABS_URL") == null)
-    		{
-    			absurl = getabsURL(tQuery,recnum,searchID,database);
-    		}
-    		else
-    		{
-    			absurl = (StringBuffer) request.getAttribute("ABS_URL");
-    		}
+        if(request.getAttribute("ABS_URL") == null)
+        {
+          absurl = getabsURL(tQuery,recnum,searchID,database);
+        }
+        else
+        {
+          absurl = (StringBuffer) request.getAttribute("ABS_URL");
+        }
 
-
-    		if(request.getAttribute("DET_URL") == null)
-    		{
-    			deturl = getdetURL(tQuery,recnum,searchID,database);
-    		}
-    		else
-    		{
-    			deturl = (StringBuffer) request.getAttribute("DET_URL");
-    		}
+        if(request.getAttribute("DET_URL") == null)
+        {
+          deturl = getdetURL(tQuery,recnum,searchID,database);
+        }
+        else
+        {
+          deturl = (StringBuffer) request.getAttribute("DET_URL");
+        }
 
         out.write("<RESULTS-NAV><![CDATA[");
         out.write(srurl.toString());
@@ -301,12 +305,12 @@ System.out.println("docid " + docid);
         out.write("<NEWSEARCH-NAV>");
         out.write(nsurl.toString());
         out.write("</NEWSEARCH-NAV>");
-		if(dedupurl.length() > 0)
-		{
-			out.write("<DEDUP-RESULTS-NAV>");
-			out.write(dedupurl.toString());
-			out.write("</DEDUP-RESULTS-NAV>");
-		}
+        if(dedupurl.length() > 0)
+        {
+          out.write("<DEDUP-RESULTS-NAV>");
+          out.write(dedupurl.toString());
+          out.write("</DEDUP-RESULTS-NAV>");
+        }
 
         StringBuffer rpurl = getreadPageURL(recnum,searchID,docid,database);
         out.write("<READPAGE-NAV>");
@@ -323,7 +327,7 @@ System.out.println("docid " + docid);
       out.write("]]></TICKET>");
 
       out.write("<DOCVIEW><![CDATA[");
-      out.write(BookDocument.getDocviewUrl());
+      out.write(docview_url);
       out.write("]]></DOCVIEW>");
 
       out.write("<PDFARGS><![CDATA[");
@@ -347,7 +351,9 @@ System.out.println("docid " + docid);
       }
 
       out.write("<HILITE><![CDATA[");
-      out.write(strQuery);
+      if(strQuery != null) {
+        out.write(java.net.URLEncoder.encode(strQuery,"UTF-8"));
+      }
       out.write("]]></HILITE>");
 
       out.write("<TOCURL>");
@@ -377,6 +383,9 @@ System.out.println("docid " + docid);
       out.write("<SEARCH-ID>"+searchID+"</SEARCH-ID>");
 
       out.write("<CURR-PAGE>" + df.format(Long.parseLong(pdfpage)) + "</CURR-PAGE>");
+      if(pii != null) {
+        out.write("<PII>" + pii + "</PII>");
+      }
 
       out.write("<PAGE-RESULTS>");
       databaseConfig.toXML(credentials, out);
@@ -390,9 +399,12 @@ System.out.println("docid " + docid);
 
       if(!"bookNav".equalsIgnoreCase(cid))
       {
-    	  out.write("<TOC>");
+        out.write("<TOC>");
         out.write("<![CDATA[");
-        out.write(curDoc.getTOC());
+        String strtoc = curDoc.getTOC();
+        if(strtoc != null) {
+          out.write(strtoc);
+        }
         out.write("]]>");
         out.write("</TOC>");
       }
@@ -402,9 +414,9 @@ System.out.println("docid " + docid);
       out.flush();
 
 
-//        Writer wrtr = new BufferedWriter(new OutputStreamWriter(System.out));
-//        entry.toXML(wrtr);
-//        wrtr.flush();
+//    Writer wrtr = new BufferedWriter(new OutputStreamWriter(System.out));
+//    entry.toXML(wrtr);
+//    wrtr.flush();
 
   }
   catch(Exception e) {
@@ -431,55 +443,55 @@ System.out.println("docid " + docid);
     client.setRemoteControl();
   }
 
-	StringBuffer getsrURL(int recnum,String searchID,String database,Query tQuery)
-	{
-		StringBuffer srurlbuf = new StringBuffer();
-		srurlbuf.append("CID=").append(XSLCIDHelper.searchResultsCid(tQuery.getSearchType())).append("&");
-		srurlbuf.append("SEARCHID=").append(searchID).append("&");
-		srurlbuf.append("COUNT=").append(Integer.toString((recnum))).append("&");
-		srurlbuf.append("database=").append(database);
-		return srurlbuf;
-	}
+  StringBuffer getsrURL(int recnum,String searchID,String database,Query tQuery)
+  {
+    StringBuffer srurlbuf = new StringBuffer();
+    srurlbuf.append("CID=").append(XSLCIDHelper.searchResultsCid(tQuery.getSearchType())).append("&");
+    srurlbuf.append("SEARCHID=").append(searchID).append("&");
+    srurlbuf.append("COUNT=").append(Integer.toString((recnum))).append("&");
+    srurlbuf.append("database=").append(database);
+    return srurlbuf;
+  }
 
-	StringBuffer getnsURL(String database,Query tQuery)
-	{
-		StringBuffer nsurlbuf = new StringBuffer();
-		nsurlbuf.append("CID=").append(XSLCIDHelper.newSearchCid(tQuery.getSearchType())).append("&amp;");
-		nsurlbuf.append("database=").append(database);
-		return nsurlbuf;
-	}
+  StringBuffer getnsURL(String database,Query tQuery)
+  {
+    StringBuffer nsurlbuf = new StringBuffer();
+    nsurlbuf.append("CID=").append(XSLCIDHelper.newSearchCid(tQuery.getSearchType())).append("&amp;");
+    nsurlbuf.append("database=").append(database);
+    return nsurlbuf;
+  }
 
-	StringBuffer getabsURL(Query tQuery,int recnum,String searchID,String database)
-	{
-		StringBuffer absurlbuf = new StringBuffer();
-		absurlbuf.append("CID=").append(XSLCIDHelper.formatBase(tQuery.getSearchType())+"AbstractFormat").append("&amp;");
-		absurlbuf.append("SEARCHID=").append(searchID).append("&amp;");
-		absurlbuf.append("DOCINDEX=").append(Integer.toString((recnum))).append("&amp;");
-		absurlbuf.append("database=").append(database).append("&amp;");
-		absurlbuf.append("format=").append(XSLCIDHelper.formatBase(tQuery.getSearchType())+"AbstractFormat");
-		return absurlbuf;
-	}
+  StringBuffer getabsURL(Query tQuery,int recnum,String searchID,String database)
+  {
+    StringBuffer absurlbuf = new StringBuffer();
+    absurlbuf.append("CID=").append(XSLCIDHelper.formatBase(tQuery.getSearchType())+"AbstractFormat").append("&amp;");
+    absurlbuf.append("SEARCHID=").append(searchID).append("&amp;");
+    absurlbuf.append("DOCINDEX=").append(Integer.toString((recnum))).append("&amp;");
+    absurlbuf.append("database=").append(database).append("&amp;");
+    absurlbuf.append("format=").append(XSLCIDHelper.formatBase(tQuery.getSearchType())+"AbstractFormat");
+    return absurlbuf;
+  }
 
-	StringBuffer getdetURL(Query tQuery,int recnum,String searchID,String database)
-	{
-		StringBuffer deturlbuf = new StringBuffer();
-		deturlbuf.append("CID=").append(XSLCIDHelper.formatBase(tQuery.getSearchType())+"DetailedFormat").append("&amp;");
-		deturlbuf.append("SEARCHID=").append(searchID).append("&amp;");
-		deturlbuf.append("DOCINDEX=").append(Integer.toString(recnum)).append("&amp;");
-		deturlbuf.append("database=").append(database).append("&amp;");
-		deturlbuf.append("format=").append(XSLCIDHelper.formatBase(tQuery.getSearchType())+"DetailedFormat");
-		return deturlbuf;
-	}
+  StringBuffer getdetURL(Query tQuery,int recnum,String searchID,String database)
+  {
+    StringBuffer deturlbuf = new StringBuffer();
+    deturlbuf.append("CID=").append(XSLCIDHelper.formatBase(tQuery.getSearchType())+"DetailedFormat").append("&amp;");
+    deturlbuf.append("SEARCHID=").append(searchID).append("&amp;");
+    deturlbuf.append("DOCINDEX=").append(Integer.toString(recnum)).append("&amp;");
+    deturlbuf.append("database=").append(database).append("&amp;");
+    deturlbuf.append("format=").append(XSLCIDHelper.formatBase(tQuery.getSearchType())+"DetailedFormat");
+    return deturlbuf;
+  }
 
-	StringBuffer getreadPageURL(int recnum,String searchID,String docid,String database)
-	{
-		StringBuffer rpurlbuf = new StringBuffer();
-		rpurlbuf.append("CID=").append("bookFrameset").append("&amp;");
-    	rpurlbuf.append("SEARCHID=").append(searchID).append("&amp;");
-    	rpurlbuf.append("DOCINDEX=").append(Integer.toString(recnum)).append("&amp;");
-    	rpurlbuf.append("docid=").append(docid).append("&amp;");
-    	rpurlbuf.append("database=").append(database);
-		return rpurlbuf;
-	}
+  StringBuffer getreadPageURL(int recnum,String searchID,String docid,String database)
+  {
+    StringBuffer rpurlbuf = new StringBuffer();
+    rpurlbuf.append("CID=").append("bookFrameset").append("&amp;");
+      rpurlbuf.append("SEARCHID=").append(searchID).append("&amp;");
+      rpurlbuf.append("DOCINDEX=").append(Integer.toString(recnum)).append("&amp;");
+      rpurlbuf.append("docid=").append(docid).append("&amp;");
+      rpurlbuf.append("database=").append(database);
+    return rpurlbuf;
+  }
 
 %>
