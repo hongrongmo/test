@@ -6,7 +6,7 @@
  * To change the template for this generated file go to
  * Window&gt;Preferences&gt;Java&gt;Code Generation&gt;Code and Comments
  */
-package org.ei.data.compendex;
+package org.ei.data.compendex.loadtime;
 
 import java.util.*;
 import java.sql.*;

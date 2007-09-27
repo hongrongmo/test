@@ -1,4 +1,4 @@
-package org.ei.data.compendex;
+package org.ei.data.compendex.loadtime;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;

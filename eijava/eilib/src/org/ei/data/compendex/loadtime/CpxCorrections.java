@@ -1,4 +1,4 @@
-package org.ei.data.compendex;
+package org.ei.data.compendex.loadtime;
 
 import java.util.*;
 import java.sql.*;
