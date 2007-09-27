@@ -21,6 +21,7 @@
     <ant dir="controller" target="clean"/>
     <ant dir="engvillage" target="clean"/>
     <ant dir="engresources" target="clean"/>
+    <ant dir="docview" target="clean"/>
   </target>
 <!--
   <target name="englibjar" description="builds and copies englib.jar to engvillage/lib and contoller/lib engvillage subprojects.">
@@ -110,7 +111,12 @@
 
     <ant dir="engresources" target="deploy"/>
 	  <jar jarfile="engresources/${properties}/engresources.war" basedir="engresources/${properties}"  excludes="**/engresources.war"/>
+
+    <ant dir="docview" target="deploy"/>
+	  <jar jarfile="docview/${properties}/docview.war" basedir="docview/${properties}"  excludes="**/docview.war"/>
+
   </target>
+
 
   <target name="live" depends="version_check, live_manifest" description="builds and deploys engvillage subprojects to jarfile in stage subdirectory using live.properties filter settings.">
     <property name="properties" value="live"/>
@@ -129,6 +135,9 @@
 
     <ant dir="engresources" target="deploy"/>
 	  <jar jarfile="engresources/${properties}/engresources.war" basedir="engresources/${properties}"  excludes="**/engresources.war"/>
+
+    <ant dir="docview" target="deploy"/>
+	  <jar jarfile="docview/${properties}/docview.war" basedir="docview/${properties}"  excludes="**/docview.war"/>
 
 	  <delete file="MANIFEST.MF"/>
   </target>
