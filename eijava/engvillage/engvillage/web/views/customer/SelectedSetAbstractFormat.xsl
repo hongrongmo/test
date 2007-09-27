@@ -313,7 +313,7 @@
 					</td>
 				</tr>
 			</xsl:if>
-		
+
 			<xsl:if test="($CHECK-CUSTOM-OPT ='true')" >
 				<tr>
 					<td valign="top" colspan="4"><img src="/engresources/images/s.gif" height="30" border="0"/></td>
@@ -343,10 +343,21 @@
                 </a>
               &#160;
             </xsl:if>
-              <a >
+
+              <xsl:if test="string(EI-DOCUMENT/PII)">
+                <a>
+                  <xsl:attribute name="target">_referex</xsl:attribute>
+                  <xsl:attribute name="TITLE">Read Chapter</xsl:attribute>
+                  <xsl:attribute name="HREF"><xsl:value-of select="book:getReadChapterLink(WOBLSERVER, EI-DOCUMENT/BN13, EI-DOCUMENT/PII, /PAGE/CUSTOMER-ID)"/>&amp;EISESSION=$SESSIONID</xsl:attribute>
+                  <img alt="Read Chapter" src="/engresources/images/read_chp.gif" style="border:0px; vertical-align:middle"/>
+                  </a>
+                &#160;
+              </xsl:if>
+
+                <a >
                 <xsl:attribute name="target">_referex</xsl:attribute>
                 <xsl:attribute name="TITLE">Read Book</xsl:attribute>
-                <xsl:attribute name="HREF"><xsl:value-of select="book:getReadBookLink(EI-DOCUMENT/BN, /PAGE/CUSTOMER-ID)"/></xsl:attribute>
+                <xsl:attribute name="HREF"><xsl:value-of select="book:getReadBookLink(WOBLSERVER, EI-DOCUMENT/BN13, /PAGE/CUSTOMER-ID)"/>&amp;EISESSION=$SESSIONID</xsl:attribute>
                 <img alt="Read Book" src="/engresources/images/read_book.gif" style="border:0px; vertical-align:middle"/>
                 </a>
 					</td>

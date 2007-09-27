@@ -8,8 +8,9 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:html="http://www.w3.org/TR/REC-html40"
     xmlns:java="java:java.net.URLEncoder"
+    xmlns:book="java:org.ei.books.BookDocument"
     xmlns:custoptions="java:org.ei.fulldoc.FullTextOptions"
-    exclude-result-prefixes="java html xsl custoptions"
+    exclude-result-prefixes="java html xsl book custoptions"
 >
 
 <xsl:output method="html" indent="no"/>
@@ -239,7 +240,7 @@
                 <xsl:apply-templates select="EI-DOCUMENT"/>
             </td>
         </tr>
-        
+
 	<xsl:variable name="CHECK-CUSTOM-OPT">
 		<xsl:value-of select="custoptions:checkFullText($FULLTEXT, $FULLTEXT-LINK, $CUST-ID, EI-DOCUMENT/DO, EI-DOCUMENT/DOC/DB/DBMASK)" />
 	</xsl:variable>
@@ -265,6 +266,40 @@
         </xsl:if>
 
         <!-- END OF unique code for Selected Set -->
+
+      <xsl:if test="(EI-DOCUMENT/DOC/DB/DBMASK = '131072')">
+        <xsl:variable name="BOOKS_OPEN_WINDOW_PARAMS">height=800,width=700,status=yes,resizable,scrollbars=1,menubar=no</xsl:variable>
+				<tr>
+					<td valign="top" colspan="4"><img src="/engresources/images/s.gif" height="30" border="0"/></td>
+					<td valign="top">
+            <xsl:if test="not(EI-DOCUMENT/BPP = '0')">
+              <a >
+                <xsl:attribute name="TITLE">Read Page</xsl:attribute>
+                <xsl:attribute name="HREF">javascript:_referex=window.open('/controller/servlet/Controller?CID=bookFrameset&amp;DOCINDEX=<xsl:value-of select="$INDEX"/>&amp;docid=<xsl:value-of select="$DOC-ID"/>&amp;database=<xsl:value-of select="$DATABASE-MASK"/>','_referex','<xsl:value-of select="$BOOKS_OPEN_WINDOW_PARAMS"/>');_referex.focus();void('');</xsl:attribute>
+                <img alt="Read Page" src="/engresources/images/read_page.gif" style="border:0px; vertical-align:middle"/>
+                </a>
+              &#160;
+            </xsl:if>
+
+              <xsl:if test="not(EI-DOCUMENT/PII = '')">
+                <a>
+                  <xsl:attribute name="target">_referex</xsl:attribute>
+                  <xsl:attribute name="TITLE">Read Chapter</xsl:attribute>
+                  <xsl:attribute name="HREF"><xsl:value-of select="book:getReadChapterLink(WOBLSERVER, EI-DOCUMENT/BN13, EI-DOCUMENT/PII, /PAGE/CUSTOMER-ID)"/>&amp;EISESSION=$SESSIONID</xsl:attribute>
+                  <img alt="Read Chapter" src="/engresources/images/read_chp.gif" style="border:0px; vertical-align:middle"/>
+                  </a>
+                &#160;
+              </xsl:if>
+
+              <a>
+                <xsl:attribute name="target">_referex</xsl:attribute>
+                <xsl:attribute name="TITLE">Read Book</xsl:attribute>
+                <xsl:attribute name="HREF"><xsl:value-of select="book:getReadBookLink(WOBLSERVER, EI-DOCUMENT/BN13, /PAGE/CUSTOMER-ID)"/>&amp;EISESSION=$SESSIONID</xsl:attribute>
+                <img alt="Read Book" src="/engresources/images/read_book.gif" style="border:0px; vertical-align:middle"/>
+                </a>
+					</td>
+				</tr>
+      </xsl:if>
 
     </xsl:template>
 
