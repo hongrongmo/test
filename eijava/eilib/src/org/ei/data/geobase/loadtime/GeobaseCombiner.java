@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.*;
+
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
 import org.ei.domain.*;
@@ -357,7 +358,7 @@ public class GeobaseCombiner
                     rec.put(EVCombinedRec.LANGUAGE,getLanguage(la).split(AUDELIMITER));
                 }
 
-                String docType = DocumentTypeConverter.getGeoDocumentType(rs.getString("SOURCE_TYPE"));
+                String docType = getGeoDocumentType(rs.getString("SOURCE_TYPE"));
 
 				/*
                 if (rec.containsKey(EVCombinedRec.CONTROLLED_TERMS))
@@ -766,5 +767,22 @@ public class GeobaseCombiner
         }
 
     }
+
+
+	public static String getGeoDocumentType(String sourceType)
+	{
+
+		if(sourceType != null)
+		{
+			if (sourceType.equalsIgnoreCase("B"))
+				return "MR";
+			else if (sourceType.equalsIgnoreCase("D") || sourceType.equalsIgnoreCase("J"))
+				return "JA";
+			else if (sourceType.equalsIgnoreCase("P"))
+				return "CA";
+		}
+
+		return sourceType;
+	}
 
 }
