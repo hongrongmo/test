@@ -12,7 +12,7 @@ public class AlgoLinker
     BlackwellGateway blk    = BlackwellGateway.getInstance();
     TaylorFrancisGateway tfr = TaylorFrancisGateway.getInstance();
     //SDGateway sdGateway     = SDGateway.getInstance();
-    SPIEGateway spie     = SPIEGateway.getInstance();
+    //SPIEGateway spie     = SPIEGateway.getInstance();
     JJAPGateway jjap     = JJAPGateway.getInstance();
 
     public boolean hasLink(String issn,
@@ -33,12 +33,6 @@ public class AlgoLinker
             if(iop.hasLink(issn,
                            volume,
                            page))
-            {
-                return true;
-            }
-            else if(spie.hasLink(issn,
-                                 volume,
-                                 page))
             {
                 return true;
             }
@@ -147,18 +141,6 @@ public class AlgoLinker
 			linkInfo.pubid = "JJAP";
 			return linkInfo;
 		}
-
-
-		linkInfo.url  = spie.getLink(issn,
-									 volume,
-									 page);
-
-		if(linkInfo.url != null)
-		{
-			linkInfo.pubid = "SPIE";
-			return linkInfo;
-		}
-
 
 
 		linkInfo.url = spr.getLink(issn,

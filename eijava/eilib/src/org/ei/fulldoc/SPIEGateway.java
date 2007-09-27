@@ -34,7 +34,8 @@ public class SPIEGateway
                            String page)
     {
         if((ISSN == null || ISSN.length() == 0)
-            || (volString == null || volString.length() == 0))
+            || (volString == null || volString.length() == 0)
+            || (page == null || page.length() == 0))
         {
             return false;
         }
