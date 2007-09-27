@@ -58,26 +58,26 @@
     sessionIdObj = ussession.getSessionID();
     User user = ussession.getUser();
     String[] credentials = user.getCartridge();
-    
+
     // should we add Searches.getMostRecentInSession() method?
     // to avoid returning entire list from folder?
     String recentXMLQuery = null;
 
-    // is this needed to link back to search results (?)  
+    // is this needed to link back to search results (?)
 /*
     List sessionsearches = Searches.getListSessionSearches(sessionid);
     if(sessionsearches != null)
     {
-       
-        if(sessionsearches.size() > 0) 
+
+        if(sessionsearches.size() > 0)
         {
             Query query = (Query) sessionsearches.get(0);
             recentXMLQuery = query.toXMLString();
         }
         // free up object(s)
         sessionsearches.clear();
-    }   
-*/     
+    }
+*/
     // jam - when no query object generates output XML,
     // add <SEARCH-TYPE> to output. When <SEARCH-TYPE> is absent
     // links are prevented from showing in HTML (PRINTING)
@@ -87,7 +87,7 @@
     }
 
     String customerId=user.getCustomerID().trim();
-    String contractId=user.getContractID().trim();    
+    String contractId=user.getContractID().trim();
 
     localHolding=new LocalHolding(ussession);
     clientCustomizer=new ClientCustomizer(ussession);
@@ -139,9 +139,9 @@
     }
 
   /*
-    DO NOT do this anymore - start and End years will be calculated when requests come 
+    DO NOT do this anymore - start and End years will be calculated when requests come
     into search pages
-    
+
     if(("Compendex").equalsIgnoreCase(database))
     {
         if(clientCustomizer.getStartYear()!=-1)
@@ -202,8 +202,10 @@
             // mimics the print function of PrintSelectedRecords.jsp
             // and uses the XSL, PrintXXXXXXFormat.xsl
             StringBuffer  basketContentStringBuffer  = new StringBuffer();
-            basketContentStringBuffer.append("<PAGE>")
-            .append("<!--BH--><HEADER>")
+            basketContentStringBuffer.append("<PAGE>");
+            basketContentStringBuffer.append("<CUSTOMER-ID>"+customerId+"</CUSTOMER-ID>");
+
+            basketContentStringBuffer.append("<!--BH--><HEADER>")
             .append("<CUSTOMIZED-LOGO>" + customizedLogo + "</CUSTOMIZED-LOGO>")
             .append("</HEADER><!--EH-->");
             //Writing out XML
@@ -227,7 +229,7 @@
             // uses the XSL CitationSavedRecords.xsl
             StringBuffer  folderContentStringBuffer  = new StringBuffer();
             folderContentStringBuffer.append("<PAGE>")
-
+            .append("<CUSTOMER-ID>"+customerId+"</CUSTOMER-ID>")
             .append("<ERROR/>")
             .append("<HEADER/>")
             .append("<DBMASK>")

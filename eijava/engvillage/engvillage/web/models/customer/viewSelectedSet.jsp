@@ -109,6 +109,7 @@
         personalization=true;
     }
     User user=ussession.getUser();
+    String customerId=user.getCustomerID().trim();
     String[] credentials = user.getCartridge();
     clientCustomizer=new ClientCustomizer(ussession);
     if(clientCustomizer.isCustomized())
@@ -238,6 +239,7 @@ String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
 	backurl.append("DATABASEID=").append(databaseType);
 
 	out.write("<PAGE>");
+  out.write("<CUSTOMER-ID>"+customerId+"</CUSTOMER-ID>");
 	out.write("<BACKURL>");
 	out.write(URLEncoder.encode(backurl.toString()));
 	out.write("</BACKURL>");
@@ -303,7 +305,6 @@ String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
 		out.write(Integer.toString(index - 1));
 		out.write("</PREV-PAGE-ID>");
 		out.write("<CURR-PAGE-ID>");
-		System.out.println("Current page:"+Integer.toString(index));
 		out.write(Integer.toString(index));
 		out.write("</CURR-PAGE-ID>");
 		out.write("<NEXT-PAGE-ID>");
