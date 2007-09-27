@@ -20,21 +20,33 @@ public class InspecXMLReader extends FilterReader
 	private HashSet entity = null;
 	public static final String AUDELIMITER = new String(new char[] {30});
 	public static final String IDDELIMITER = new String(new char[] {31});
+	/*
+	 * If there is field delimiter that is 2 or more values for one field eg, A;B;C,
+	 * use 'AUDELIMITER' between A, B and C
+	 * If there is subfields in one value of the field use 'IDDELIMITER' ,
+	 * for eg. A:1;B:2;C:3 USE AUDELIMITER between A, B and C
+	 * To separate fields use 'IDDELIMITER between A and 1, B and 2 and C and 3.
+	 */
     public static final String PRIMARY1 = "1";
     public static final String PRIMARY2 = "2";
+    public static final String CURRENT_DATA = "current";
+    public static final String BACKFILE_DATA = "backfill";
+    public static final String ARTICLETYPE = "articletype";
 
 
     public static void main(String[] args)
         throws Exception
     {
-            String filename = args[0];
-           Hashtable rec;
-     /*   BufferedReader in = new BufferedReader(new FileReader(new File(args[0])));
-           InspecXMLReader r = new InspecXMLReader(in);
-           while((rec=r.getRecord())!=null)
-           {
-				System.out.println(rec.toString());
-		 	} */
+    	String filename = args[0];
+    	Hashtable rec;
+    	/*
+        BufferedReader in = new BufferedReader(new FileReader(new File(args[0])));
+        InspecXMLReader r = new InspecXMLReader(in);
+        while((rec=r.getRecord())!=null)
+        {
+        	System.out.println(rec.toString());
+		}
+		*/
 	}
 
 	public InspecXMLReader(Reader r)throws Exception
@@ -46,6 +58,7 @@ public class InspecXMLReader extends FilterReader
 			Element inspecRoot = doc.getRootElement();
 			this.articles = inspecRoot.getChildren("article");
 			this.rec=articles.iterator();
+
 	}
 
 	public int getRecordCount()
@@ -64,6 +77,24 @@ public class InspecXMLReader extends FilterReader
 		{
 			Element article = (Element)rec.next();
 			record = new Hashtable();
+
+			//06/07 TS Inspec updated data file,
+			//for current data there is an article type="current"
+			//for backfile data there is an article type="backfile"
+
+			//if type="current" or type is not provided
+			record.put(ARTICLETYPE, CURRENT_DATA);
+
+			//if type="backfile" - record extract is not processed
+			if (article.getAttribute("type") != null &&
+					article.getAttribute("type").getValue().equals(BACKFILE_DATA))
+			{
+				System.out.println("article type is backfile, it is not processed for current Inspec data extract");
+				record.put(ARTICLETYPE, BACKFILE_DATA);
+				return record;
+			}
+
+			//06/07 - the end
 
 			/*
 				Control Group Elements
@@ -148,6 +179,11 @@ public class InspecXMLReader extends FilterReader
 			if(bibGroup.getChild("rptg")!=null)
 				getBookData(bibGroup.getChild("rptg"));
 
+			//Report Group
+			if(bibGroup.getChild("stdg")!=null)
+				getBookData(bibGroup.getChild("stdg"));
+
+
 			// Dissertation Group
 			if(bibGroup.getChild("dssg")!=null)
 				getBookData(bibGroup.getChild("dssg"));
@@ -197,6 +233,33 @@ public class InspecXMLReader extends FilterReader
 			if(idxGroup.getChild("aoig")!=null)
 				record.put("AOI",getFields(idxGroup.getChild("aoig")));
 			//System.out.println("Record:"+record.toString());
+
+			// sortdate
+			Element sortDate = controlGroup.getChild("sortdate");
+			if (sortDate != null)
+			{
+			    StringBuffer sDate = new StringBuffer();
+
+			    if(sortDate.getChild("day")!=null)
+			    {
+			        sDate.append(sortDate.getChild("day").getTextTrim());
+			    }
+			    sDate.append(AUDELIMITER);
+
+			    if(sortDate.getChild("mo")!=null)
+			    {
+			        sDate.append(sortDate.getChild("mo").getTextTrim());
+			    }
+			    sDate.append(AUDELIMITER);
+
+			    if(sortDate.getChild("yr")!=null)
+			    {
+			        sDate.append(sortDate.getChild("yr").getTextTrim());
+			    }
+
+			    record.put("SRTDATE",sDate);
+
+			}
 			return record;
 		}
 		return null;
@@ -252,6 +315,7 @@ public class InspecXMLReader extends FilterReader
 
         return b;
     }
+
     private  StringBuffer getMixCData(List l, StringBuffer b)
 	{
 		inabstract=true;
@@ -267,6 +331,7 @@ public class InspecXMLReader extends FilterReader
 
 		for(int i=0;i<pname.size();i++)
 		{
+
 		   Element n = (Element)pname.get(i);
 
 		   getMixData(n.getChild("snm").getContent(),name);
@@ -303,36 +368,75 @@ public class InspecXMLReader extends FilterReader
 
 	private StringBuffer getAffiliation(Element e, String keyprfx)
     {
-
-		StringBuffer affiliation = new StringBuffer();
+		// field AAFF or EAFF depend on keyprfx
+		StringBuffer aff = new StringBuffer();
+		// 06/07 new db field for multi affiliations and field overflow
+		// AAFFMULTI1, AAFFMULTI2 ,EAFFMULTI1, EAFFMULTI2
+		StringBuffer affmulti1 = new StringBuffer();
+		StringBuffer affmulti2 = null;
 		List auaff = e.getChildren("faff");
 
-	    for(int j=0;j<auaff.size();j++)
+
+	    for( int j=0 ; j < auaff.size() ; j++ )
 		{
-			 Element m = (Element)auaff.get(j);
+	        Element m = (Element)auaff.get(j);
+	        StringBuffer oneAffiliation = new StringBuffer();
+	        StringBuffer country = new StringBuffer();
+	        getMixData(m.getChild("aff").getContent(),oneAffiliation);
 
-		   getMixData(m.getChild("aff").getContent(),affiliation);
+        	if(aff.length() < 1)
+        	{
+        		getMixData(m.getChild("aff").getContent(),aff);
+    	        if(m.getAttribute("rid")!=null)
+    	        {
+    	        	aff.append(IDDELIMITER);
+    	        	aff.append(m.getAttribute("rid").getValue());
+    	        }
+        	}
 
-		   if(m.getChild("cntry")!=null)
-		   {
-			   record.put(keyprfx+"FC",getMixData(m.getChild("cntry").getContent(),new StringBuffer()));
-		   }
-		   if(m.getAttribute("rid")!=null)
-		   {
-			  affiliation.append(IDDELIMITER);
-			  affiliation.append(m.getAttribute("rid").getValue());
-		   }
+	        if(m.getAttribute("rid")!=null)
+	        {
+	        	oneAffiliation.append(IDDELIMITER);
+	        	oneAffiliation.append(m.getAttribute("rid").getValue());
+	        }
 
-		   affiliation.append(AUDELIMITER);
+	        if(m.getChild("cntry")!=null)
+	        {
+	        	getMixData(m.getChild("cntry").getContent(),country);
+
+	        	if(j == 0)
+	        	{
+	        		record.put(keyprfx+"FC",country);
+
+	        	}
+
+	        	//add country to AAFFMULTI, EAFFMULTI fields
+	        	oneAffiliation.append(IDDELIMITER);
+	        	oneAffiliation.append(country);
+		    }
+
+
+	        if(affmulti1.length() > 0 )
+	        {
+	        	affmulti1.append(AUDELIMITER);
+	        }
+	        affmulti1.append(oneAffiliation);
 
 		}
+	    // db field overflow logic
+	    if (affmulti1.length() > 0 && affmulti1.length() > 3900)
+	    {
+	    	affmulti2 = new StringBuffer(affmulti1.substring(3900));
+	    	affmulti1.delete(3900, affmulti1.length());
+	    	record.put(keyprfx+"AFFMULTI2",affmulti2);
+	    }
 
-		 if(affiliation.lastIndexOf(AUDELIMITER) != -1) {
-			 return affiliation.delete(affiliation.lastIndexOf(AUDELIMITER),affiliation.length());
-		 }
-		 else {
-			 return affiliation;
-		 }
+	    if (affmulti1.length() > 0)
+	    {
+	    	record.put(keyprfx+"AFFMULTI1",affmulti1);
+	    }
+
+		return aff;
 
    	}
 
@@ -434,8 +538,17 @@ public class InspecXMLReader extends FilterReader
 
 
 		//ISSN
-		if(e.getChild("issn")!=null)
+		//06/07 new  format
+		if(e.getChild("issng")!=null)
+		{
+			record.put(keyprfx+ "SN",getIssn(e.getChild("issng"),"print"));
+			record.put("N"+ keyprfx + "SN",getIssn(e.getChild("issng")));
+		}
+		// 06/07 this is for current format
+		else if(e.getChild("issn")!=null)
+		{
 			record.put(keyprfx+"SN",getMixData(e.getChild("issn").getContent(),new StringBuffer()));
+		}
 
 		//SICI
 		if(e.getChild("sici")!=null)
@@ -490,6 +603,7 @@ public class InspecXMLReader extends FilterReader
 				record.put("PIPN",getMixData(e.getChild("pgn").getContent(),new StringBuffer()));
 
 		}
+
 		if(e.getName().equals("rptg"))
 		{
 			//VB:fields for new correction file
@@ -500,7 +614,20 @@ public class InspecXMLReader extends FilterReader
 			if(e.getChild("repno")!=null)
 				record.put("RNUM",getMixData(e.getChild("repno").getContent(),new StringBuffer()));
 		}
-		if(e.getName().equals("rptg")||e.getName().equals("dssg"))
+	// new doc type - Standards stdg , added 05/2007
+
+		if(e.getName().equals("stdg"))
+		{
+			if(e.getChild("stdno")!=null)
+				record.put("RNUM",getMixData(e.getChild("stdno").getContent(),new StringBuffer()));
+				record.put("VRN",getMixData(e.getChild("version").getContent(),new StringBuffer()));
+		}
+
+
+
+		if(e.getName().equals("rptg") ||
+		        e.getName().equals("dssg") ||
+		        e.getName().equals("stdg"))
 		{
 			if(e.getChild("issorg")!=null)
 			{
@@ -754,8 +881,17 @@ public class InspecXMLReader extends FilterReader
 			record.put("PURL", getMixData(e.getChild("url").getContent(),new StringBuffer()));
 		if(e.getChild("dcurl")!=null)
 			record.put("PDCURL", getMixData(e.getChild("dcurl").getContent(),new StringBuffer()));
-		if(e.getChild("issn")!=null)
+		if(e.getChild("issng")!=null)
+		{
+			record.put("PSN",getIssn(e.getChild("issng"),"print"));
+			record.put("NPSN",getIssn(e.getChild("issng")));
+		}
+		//06/07 - this is for current format
+		else if (e.getChild("issn")!=null)
+		{
 			record.put("PSN",new StringBuffer(e.getChildTextTrim("issn")));
+
+		}
 	}
 
     private StringBuffer getPlace(Element e)
@@ -773,6 +909,74 @@ public class InspecXMLReader extends FilterReader
 		return place;
     }
 
+	//Issn
+
+	private StringBuffer getIssn(Element e, String type)
+	{
+		String issnType = type;
+		//new db fields NPSN, NSSN will contain combined print and online issn
+		boolean isCombinedIssn = false;
+		ArrayList types = new ArrayList();
+
+		//existing db issn fields PSN, SSN contain only print issns
+		if (type !=  null)
+		{
+			types.add(type);
+		}
+		else // new db table field contains combined print and online issns
+		{
+			isCombinedIssn = true;
+			types.add("print");
+			types.add("online");
+		}
+		StringBuffer issn = new StringBuffer();
+
+		issn.append(getChildByAttribute(e,
+										(String)types.get(0),
+										isCombinedIssn));
+
+		if (isCombinedIssn)
+		{
+			issn.append(AUDELIMITER);
+			issn.append(getChildByAttribute(e,
+											(String)types.get(1),
+											isCombinedIssn));
+		}
+
+		return issn;
+	}
+
+	private StringBuffer getChildByAttribute(Element e,
+											 String attributeValue,
+											 boolean isCombinedIssn)
+	{
+		StringBuffer c = new StringBuffer();
+		List lt = e.getChildren();
+
+		for( int j=0 ; j < lt.size() ; j++)
+		{
+			Element i = (Element)lt.get(j);
+
+			if(i.getAttributeValue("type")!= null &&
+			        (i.getAttributeValue("type")).equals(attributeValue))
+			{
+				// add prefix for new db fields NPSN, NSSN for combined issn
+				if (isCombinedIssn)
+				{
+					c.append(attributeValue).append("_");
+				}
+				c.append(i.getText());
+			}
+
+		}
+		return c;
+
+	}
+
+	private StringBuffer getIssn(Element e)
+	{
+		return getIssn(e, null);
+	}
 
 	//Indexing Methods
 

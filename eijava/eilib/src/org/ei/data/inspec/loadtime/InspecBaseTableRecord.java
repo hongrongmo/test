@@ -151,6 +151,7 @@ public class InspecBaseTableRecord
 									"PCPUB",
 									"PCDN",
 									"PSN",
+									"NPSN", // 07/2007 added, inspec provided issn and electronic issn
 									"PSICI",
 									"PPUB",
 									"PCCCC",
@@ -169,9 +170,11 @@ public class InspecBaseTableRecord
 									"SSPDATE",
 									"SEPDATE",
 									"SOPDATE",
+									"SRTDATE", // 03/2007 added , inspec provided new field "sortdate"
 									"SCPUB",
 									"SCDN",
 									"SSN",
+									"NSSN", // 07/2007 added, inspec provided issn and electronic issn
 									"SSICI",
 									"LA",
 									"TC",
@@ -184,6 +187,7 @@ public class InspecBaseTableRecord
 									"MATID",
 									"SBN",
 									"RNUM",
+									"VRN", // 03/2007  added for 'Standards' - new doc type, version
 									"UGCHN",
 									"CNUM",
 									"PNUM",
@@ -201,8 +205,12 @@ public class InspecBaseTableRecord
 									"NPL2",
 									"XREFNO",
 									"AAFF",
+									"AAFFMULTI1", // 03/2007 added , field for multi author affiliations
+									"AAFFMULTI2", // 03/2007 added , field for overflow
 									"AFC",
 									"EAFF",
+									"EAFFMULTI1", //  03/2007 added , field for multi editor affiliations
+									"EAFFMULTI2", //  03/2007 added , field for overflow
 									"EFC",
 									"PAS",
 									"IORG",
@@ -219,5 +227,6 @@ public class InspecBaseTableRecord
 									"OPPDATE",
 									"LOAD_NUMBER"
 									};
+
 
 }
