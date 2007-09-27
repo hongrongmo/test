@@ -99,7 +99,7 @@
       <br/><br/>
       Registered Users may access their identified contact information and other Registration Information and correct any discrepancies or update information by clicking on the "My Profile"  button and selecting the "Edit Account" The accuracy of such information is solely the responsibility of the user.  No access is given to other data that may have been collected about users.
       <br/><br/>
-      If you wish to receive alerts, newsletters, new product announcements, market surveys, special offers or promotions, please check the appropriate check box when you register for personalized services or access. If you wish to cease receiving any of this information, amend your preferences either by contacting our customer service center by e-mail at eicustomersupport{at}elsevier{dot}com and/or-telephone at +1-212-633-3795 and/or post at Ei Customer Support, 360 park Avenue South, New York, NY 10010  We reserve the right to notify you of changes or updates to the Site whenever necessary.
+      If you wish to receive alerts, newsletters, new product announcements, market surveys, special offers or promotions, please check the appropriate check box when you register for personalized services or access. If you wish to cease receiving any of this information, amend your preferences either by contacting our customer service center by e-mail at eicustomersupport{at}elsevier{dot}com and/or-telephone at +1-212-633-3795 and/or post at Ei Customer Support, 360 Park Avenue South, New York, NY 10010  We reserve the right to notify you of changes or updates to the Site whenever necessary.
       <br/><br/>
       <b>Retention of Personal Information</b>
       <br/><br/>
@@ -130,7 +130,7 @@
 
       If at any time you believe that we have not adhered to this privacy policy or you have a complaint regarding the way your personal information is being handled, please contact our Customer Service Center.  Disputes under this privacy policy will be resolved by our Customer Service Center, which will use commercially reasonable efforts to promptly investigate, and if necessary, to correct any problem.
       <br/><br/>
-      Last revised:  January 14th, 2006
+      Last revised:  June 21st, 2007
 
       </a>
       </td></tr>
