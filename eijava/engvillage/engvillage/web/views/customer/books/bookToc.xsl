@@ -22,6 +22,7 @@
         <xsl:comment>
         function loadFromToc(isbn,page)
         {
+          isbn = "<xsl:value-of select="descendant::EI-DOCUMENT/BN13"/>";
           if(parent)
           {
   		      parent.bookNav.refreshPbookPage(isbn.toLowerCase(),page);
@@ -33,7 +34,10 @@
         </script>
     </HEAD>
     <BODY>
-    <img src="/engresources/images/toc.gif" border="0" width="700" height="36" alt="Table of Contents" />
+    <div style="margin:0;padding:0;background-color: c2c81d;">
+    <img src="/engresources/images/toc.gif" border="0" width="655" height="36" alt="Table of Contents" />
+    </div>
+    <br/>
     <div style="margin-left:30px;" id="toc">
     <xsl:value-of disable-output-escaping="yes" select="TOC"/>
     </div>

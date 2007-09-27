@@ -11,9 +11,7 @@
   <xsl:strip-space elements="html:* xsl:*" />
 
   <xsl:template match="PAGE">
-    <xsl:message>
-    Highlight terms = <xsl:value-of select="HILITE"/>
-    </xsl:message>
+    <!-- <xsl:message>Highlight terms = <xsl:value-of select="HILITE"/></xsl:message> -->
 
     <HTML>
     <HEAD>
@@ -22,6 +20,7 @@
 
         <script language="Javascript">
         <xsl:comment>
+            var chapterStartPage = <xsl:value-of select="PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/BSPG"/>;
             var currPage = 1;
             var annotated = true;
             var acrotoolbar = true;
@@ -37,8 +36,14 @@
             {
               refreshPbookPage(isbn,currPage - 1);
             }
+            function refreshPbookPageFromTOC(isbn, pagenum) {
+              chapterStartPage = pagenum;
+              return refreshPbookPage(isbn, pagenum);
+            }
+
             function refreshPbookPage(isbn, pagenum)
             {
+              isbn = "<xsl:value-of select="PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/BN13"/>";
               if((pagenum == null) || (pagenum.length == 0))
               {
                 pagenum = 1;
@@ -56,14 +61,14 @@
                 currPage = pagenum;
               }
 
-              var strlocation= "<xsl:value-of select="DOCVIEW"/>/" + isbn + "/pg_" + padZeros(pagenum,4) + ".pdf?TICKET=<xsl:apply-templates select="TICKET"/>"
+              var strlocation= "<xsl:value-of select="DOCVIEW"/>/" + isbn + "/pg_" + padZeros(pagenum,4) + ".pdf?TICKET=<xsl:apply-templates select="TICKET"/>&amp;DOCVIEWSESSION=$SESSIONID"
               var now = new Date() ;
               var milli = now.getTime();
               strlocation += "&amp;" + milli; /* Create unqiue URL to prevent Acrobat Reader from caching */
               if(annotated)
               {
                 strlocation += "#xml=<xsl:value-of select="DOCVIEW"/>/" + isbn + "/pg_" + padZeros(pagenum,4) + ".pdf.offsetinfo?"
-                strlocation += "hilite=" + escape('<xsl:value-of select="HILITE"/>') + "&amp;original_content_type=application%2Fpdf";
+                strlocation += "hilite=<xsl:value-of select="HILITE"/>&amp;original_content_type=application%2Fpdf";
                 strlocation += "&amp;toolbar=" + ((acrotoolbar) ? "1" : "0") + "&amp;statusbar=0&amp;messages=0&amp;navpanes=0";
               }
               else
@@ -78,12 +83,12 @@
             function toggleToolbar()
             {
               acrotoolbar = !acrotoolbar;
-              refreshPbookPage('<xsl:value-of select="PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/BN"/>',currPage);
+              refreshPbookPage('<xsl:value-of select="PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/BN13"/>',currPage);
             }
             function toggleAnnotations()
             {
               annotated = !annotated;
-              refreshPbookPage('<xsl:value-of select="PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/BN"/>',currPage);
+              refreshPbookPage('<xsl:value-of select="PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/BN13"/>',currPage);
               if(annotated)
               {
                 document.images["highlights"].src = "/engresources/images/t_on.jpg";
@@ -202,8 +207,8 @@
                 <xsl:attribute name="Title">Table of Contents</xsl:attribute>
                 <xsl:attribute name="HREF">/controller/servlet/Controller?<xsl:value-of select="java:decode(TOCURL)"/></xsl:attribute>Table of Contents</a>&#160;&#160;
               <a class="SmBlueLink">
-                <xsl:attribute name="Title">Start Section</xsl:attribute>
-                <xsl:attribute name="HREF">javascript:refreshPbookPage('<xsl:value-of select="PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/BN"/>','<xsl:value-of select="PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/BSPG"/>');</xsl:attribute>Start Section</a>&#160;&#160;
+                <xsl:attribute name="Title">Start Chapter</xsl:attribute>
+                <xsl:attribute name="HREF">javascript:refreshPbookPage('<xsl:value-of select="PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/BN"/>','<xsl:value-of select="PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/BSPG"/>');</xsl:attribute>Start Chapter</a>&#160;&#160;
               <a class="SmBlueLink">
                 <xsl:attribute name="Title">Toggle Highlights</xsl:attribute>
                 <xsl:attribute name="HREF">javascript:toggleAnnotations();</xsl:attribute><img name="highlights" class="button" src="/engresources/images/t_on.jpg" alt="Toggle Highlights"/>
@@ -228,7 +233,7 @@
   <!-- override EI-DOCUMENT templates in standard Citation XSL -->
   <xsl:template match="EI-DOCUMENT" mode="BookNav">
     <img style="border:1px solid black; float:left; margin-right:10px" width="56" height="69">
-      <xsl:attribute name="src">/engresources/images/b/s/<xsl:value-of select="./BN"/>small.jpg</xsl:attribute>
+      <xsl:attribute name="src"><xsl:value-of select="//BOOKIMGS"/>/images/<xsl:value-of select="./BN13"/>/<xsl:value-of select="./BN13"/>small.jpg</xsl:attribute>
       <xsl:attribute name="alt">
         <xsl:value-of select="./BTI"/>
       </xsl:attribute>
@@ -239,7 +244,7 @@
       <xsl:apply-templates select="AUS" mode="BookNav"/>
       <xsl:apply-templates select="EDS" mode="BookNav"/>
       <br/>
-      <xsl:apply-templates select="BN" mode="BookNav"/>
+      <xsl:apply-templates select="BN13" mode="BookNav"/>
       <xsl:apply-templates select="BPC" mode="BookNav"/>
       <br/>
       <xsl:apply-templates select="BPN" mode="BookNav"/>
@@ -252,8 +257,8 @@
   </xsl:template>
 
   <!-- Book ISBN  -->
-  <xsl:template match="BN" mode="BookNav">
-    ISBN: <xsl:value-of select="." disable-output-escaping="yes"/>
+  <xsl:template match="BN|BN13" mode="BookNav">
+    <xsl:value-of select="@label"/>: <xsl:value-of select="." disable-output-escaping="yes"/>&#160;
   </xsl:template>
 
   <!-- Book Total PAge Count -->
@@ -277,7 +282,7 @@
 
   <!-- override Author/Editor templates in standard Citation XSL -->
   <xsl:template match="AU|ED" mode="BookNav">
-    <xsl:value-of select="normalize-space(text())"/>
+    <xsl:value-of select="normalize-space(text())" disable-output-escaping="yes"/>
     <xsl:if test="not(position()=last())">;&#160;</xsl:if>
     <xsl:if test="position()=last()">
       <xsl:if test="name(.)='ED' and not(position()=1)">
