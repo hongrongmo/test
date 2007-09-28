@@ -106,6 +106,7 @@ public class EltCombiner extends Combiner {
         StringBuffer tmp = null;
 
         CVSTermBuilder termBuilder = new CVSTermBuilder();
+        QualifierFacet qfacet = new QualifierFacet();
 
         while (rs.next()) {
 
@@ -164,13 +165,32 @@ public class EltCombiner extends Combiner {
                 //this field is added to generate navigators for Major terms
                 rec.put(rec.ECLA_CODES, prepareMulti(StringUtil.replaceNonAscii(termBuilder.removeRoleTerms(parsedMH))));
 
-                rec.put(rec.NOROLE_TERMS, prepareMulti(termBuilder.getNoRoleTerms(parsedCV)));
-                rec.put(rec.REAGENT_TERMS, prepareMulti(termBuilder.getReagentTerms(parsedCV)));
-                rec.put(rec.PRODUCT_TERMS, prepareMulti(termBuilder.getProductTerms(parsedCV)));
-                rec.put(rec.MAJORNOROLE_TERMS, prepareMulti(termBuilder.getMajorNoRoleTerms(parsedMH)));
-                rec.put(rec.MAJORREAGENT_TERMS, prepareMulti(termBuilder.getMajorReagentTerms(parsedMH)));
-                rec.put(rec.MAJORPRODUCT_TERMS, prepareMulti(termBuilder.getMajorProductTerms(parsedMH)));
+                String norole = termBuilder.getNoRoleTerms(parsedCV);
+                qfacet.setNorole(norole);                
+                rec.put(rec.NOROLE_TERMS, prepareMulti(norole));
+                
+                String reagent = termBuilder.getReagentTerms(parsedCV);
+                qfacet.setReagent(reagent);
+                rec.put(rec.REAGENT_TERMS, prepareMulti(reagent));
+                
+                String product = termBuilder.getProductTerms(parsedCV);
+                qfacet.setProduct(product);
+                rec.put(rec.PRODUCT_TERMS, prepareMulti(product));
+                
+                String mnorole = termBuilder.getMajorNoRoleTerms(parsedMH);
+                qfacet.setNorole(norole);
+                rec.put(rec.MAJORNOROLE_TERMS, prepareMulti(mnorole));
+                
+                String mreagent = termBuilder.getMajorReagentTerms(parsedMH);
+                qfacet.setReagent(mreagent);
+                rec.put(rec.MAJORREAGENT_TERMS, prepareMulti(mreagent));
+                
+                String mproduct = termBuilder.getMajorProductTerms(parsedMH);
+                qfacet.setProduct(mproduct);
+                rec.put(rec.MAJORPRODUCT_TERMS, prepareMulti(mproduct));
 
+                rec.put(rec.UNCONTROLLED_TERMS, prepareMulti(qfacet.getValue()));
+                
                 if (rs.getString("tie") != null) {
                     rec.put(EVCombinedRec.TITLE, StringUtil.replaceNonAscii(replaceNull(rs.getString("tie"))));
                 }
@@ -343,7 +363,7 @@ public class EltCombiner extends Combiner {
                 rec.put(EVCombinedRec.MAIN_TERM, prepareMulti(StringUtil.replaceNonAscii(replaceNull(rs.getString("apiams"))), Constants.CVS));
                 // rec.put(EVCombinedRec.EDITOR_AFFILIATION, StringUtil.replaceNonAscii(replaceNull(rs.getString("cna"))));
                 rec.put(EVCombinedRec.ABBRV_SRC_TITLE, StringUtil.replaceNonAscii(replaceNull(rs.getString("sta"))));
-                //rec.put(EVCombinedRec.COUNTRY, prepareMulti(CountryFormatter.formatCountry(stripDelim(replaceNull(rs.getString("cna")),";")), false, true ));
+                rec.put(EVCombinedRec.COUNTRY, prepareMulti(CountryFormatter.formatCountry(stripDelim(replaceNull(rs.getString("cna")),";"))));
                 if (rs.getString("doi") != null)
                 {
                     rec.put(EVCombinedRec.DOI, rs.getString("doi"));
@@ -566,16 +586,6 @@ public class EltCombiner extends Combiner {
         return line;
     }
     
-    /*  
-     *   replaceChar method is used to 
-     *   replace char with provided replacement - in ReplaceChar instance  
-    */
-    
-    private String replaceStr(String line, ReplaceSubstr rch) 
-    {
-        line = line.replaceAll(rch.getSubstr(), rch.getReplaceStr());
-        return line;
-    }
     
     /*  
      *   prepareMulti method is overloaded 
@@ -614,12 +624,7 @@ public class EltCombiner extends Combiner {
                     }
                     else if(constant.equals(Constants.DT))
                     {
-                    	//System.out.println(s);
-                    	ReplaceSubstr replacesubstr = new ReplaceSubstr(Constants.CONF_PAPER.getValue(), 
-                    										            Constants.CONF_PAPER_EXPAND.getValue());
-                    	list.add(replaceStr(s, replacesubstr));
                     	list.add(eltDocTypes.getMappedDocType(s));
-                    	//System.out.println(eltDocTypes.getMappedDocType(s));
                     }
                 }
             }
@@ -668,31 +673,53 @@ public class EltCombiner extends Combiner {
 
     }
     
-    class ReplaceSubstr
-    {
-    	
-    	private String substr;
-    	private String replacestr;
-    	
-    	public ReplaceSubstr(String substr, String replacestr)
-    	{
-    		this.substr = substr;
-    		this.replacestr = replacestr;    		
-    	}
-    	
-    	public String getSubstr()
-    	{
-    		return this.substr;    		
-    	}
-    	
-    	public String getReplaceStr()
-    	{
-    		return this.replacestr;
-    	}
-    	
-    }
-    
 
-    
-    
+    public class QualifierFacet
+    {
+    	private boolean norole;
+    	private boolean reagent;
+    	private boolean product;
+    	
+    	public void setNorole(String term)
+    	{
+    		if (!this.norole && term != null && !term.equals(""))
+    		{
+    			this.norole = true;
+    		}    		
+    	}
+    	public void setReagent(String term)
+    	{
+    		if (!this.reagent && term != null && !term.equals(""))
+    		{
+    			this.reagent = true;
+    		}
+    	}
+    	public void setProduct(String term)
+    	{
+    		if (!this.product && term != null && !term.equals(""))
+    		{
+    			this.product = true;
+    		}
+    	}
+    	
+    	public String getValue()
+    	{
+    		StringBuffer value = new StringBuffer();
+    		if(norole)
+    		{
+    			value.append("N").append(";");
+    		}
+    		if(reagent)
+    		{
+    			value.append("R").append(";");
+    		}
+    		if(product)
+    		{
+    			value.append("P").append(";");
+    		}
+    		
+    		return value.toString();    			
+    	}   	
+    }
+      
 }
