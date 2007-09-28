@@ -5,7 +5,6 @@
 <%@ page import="org.ei.session.*"%>
 <%@ page import="org.ei.domain.*" %>
 <%@ page import="org.ei.config.*"%>
-<%@ page import="org.ei.data.books.BookPart"%>
 <%@ page import="org.ei.books.*"%>
 <%@ page import="org.ei.parser.base.*"%>
 <%@ page import="org.ei.query.base.*"%>
