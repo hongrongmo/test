@@ -106,11 +106,11 @@ public class EltCombiner extends Combiner {
         StringBuffer tmp = null;
 
         CVSTermBuilder termBuilder = new CVSTermBuilder();
-        QualifierFacet qfacet = new QualifierFacet();
-
+        
         while (rs.next()) {
 
             EVCombinedRec rec = new EVCombinedRec();
+            QualifierFacet qfacet = new QualifierFacet();
             ++i;
 
             if (Combiner.EXITNUMBER != 0 && i > Combiner.EXITNUMBER) {
@@ -178,7 +178,7 @@ public class EltCombiner extends Combiner {
                 rec.put(rec.PRODUCT_TERMS, prepareMulti(product));
                 
                 String mnorole = termBuilder.getMajorNoRoleTerms(parsedMH);
-                qfacet.setNorole(norole);
+                qfacet.setNorole(mnorole);
                 rec.put(rec.MAJORNOROLE_TERMS, prepareMulti(mnorole));
                 
                 String mreagent = termBuilder.getMajorReagentTerms(parsedMH);
@@ -336,11 +336,7 @@ public class EltCombiner extends Combiner {
                 if (rs.getString("sti") != null) {
                     rec.put(EVCombinedRec.SERIAL_TITLE, StringUtil.replaceNonAscii(replaceNull(rs.getString("sti"))));
                 }
-
-                if (rs.getString("apiut") != null) {
-                    rec.put(EVCombinedRec.UNCONTROLLED_TERMS, prepareMulti(termBuilder.formatCT(StringUtil.replaceNonAscii(replaceNull(rs.getString("apiut"))))));
-                }
-
+                
                 String apilt = StringUtil.replaceNonAscii(replaceNull(getStringFromClob(rs.getClob("apilt"))));
 
                 rec.put(EVCombinedRec.LINKED_TERMS, prepareMultiLinkedTerm(termBuilder.formatCT(apilt)));
