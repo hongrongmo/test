@@ -147,9 +147,9 @@ public class PAGDocBuilder implements DocumentBuilder
  Keys.NO_SO,
  Keys.PAGE_THUMBS};
 
-  private static String queryXMLCitation = "SELECT BOOK_PAGES.PAGE_KEYWORDS, BOOK_PAGES.DOCID, BOOK_PAGES.BN, BOOK_PAGES.PAGE_NUM, BOOK_PAGES.SECTION_TITLE, BOOK_PAGES.PAGE_START, BOOK_PAGES.PAGE_BYTES, BOOK_PAGES.PAGE_TXT, BOOK_PAGES.PAGE_TOTAL, CVS, AB, ST, BN, PP, YR, AUS, TI, PN, VO, SUB FROM BOOK_PAGES WHERE BOOK_PAGES.DOCID IN ";
-
-  private static String queryDocument = "SELECT PAGE_KEYWORDS, DOCID, BN, BN13, PII, PAGE_NUM, PAGE_LABEL, SECTION_TITLE, SECTION_START, CHAPTER_START, CHAPTER_TITLE, PAGE_TXT, PAGE_TOTAL, CVS, AB, ST, BN, PP, YR, AUS, TI, PN, VO, ISS, SUB FROM PAGES_ALL WHERE DOCID IN "; //('pag_0080426794_131')
+  /*private static String queryXMLCitation = "SELECT PAGE_KEYWORDS, DOCID, BN, BN13, PII, PAGE_NUM, PAGE_LABEL, SECTION_TITLE, SECTION_START, CHAPTER_START, CHAPTER_TITLE, PAGE_TXT, PAGE_TOTAL, CVS, AB, ST, BN, PP, YR, AUS, TI, PN, VO, ISS, SUB FROM PAGES_ALL WHERE DOCID IN ";
+  */
+  private static String queryDocument    = "SELECT PAGE_KEYWORDS, DOCID, BN, BN13, PII, PAGE_NUM, PAGE_LABEL, SECTION_TITLE, SECTION_START, CHAPTER_START, CHAPTER_TITLE, PAGE_TXT, PAGE_TOTAL, CVS, AB, ST, BN, PP, YR, AUS, TI, PN, VO, ISS, SUB FROM PAGES_ALL WHERE DOCID IN "; //('pag_0080426794_131')
 
   public DocumentBuilder newInstance(Database database)
   {
@@ -688,7 +688,7 @@ public class PAGDocBuilder implements DocumentBuilder
       broker=ConnectionBroker.getInstance();
       con=broker.getConnection(DatabaseConfig.SEARCH_POOL);
       stmt=con.createStatement();
-      rset=stmt.executeQuery(queryXMLCitation+INString);
+      rset=stmt.executeQuery(queryDocument+INString);
 
       while(rset.next())
       {
@@ -750,6 +750,10 @@ public class PAGDocBuilder implements DocumentBuilder
         if (rset.getString("BN") != null)
         {
           ht.put(Keys.ISBN, new ISBN(rset.getString("BN")));
+        }
+        if (rset.getString("BN13") != null)
+        {
+          ht.put(Keys.ISBN13, new ISBN(rset.getString("BN13")));
         }
 
         //  PN
