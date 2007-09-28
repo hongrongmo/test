@@ -13,6 +13,8 @@ import org.ei.data.*;
 import org.ei.util.StringUtil;
 
 
+
+
 public class EptCombiner extends Combiner {
 
     Perl5Util perl = new Perl5Util();
@@ -121,8 +123,11 @@ public class EptCombiner extends Combiner {
 
         int i = 0;
         CVSTermBuilder termBuilder = new CVSTermBuilder();
+        
+        
         while (rs.next()) {
             ++i;
+            QualifierFacet qfacet = new QualifierFacet();
             EVCombinedRec rec = new EVCombinedRec();
 
             if (Combiner.EXITNUMBER != 0 && i > Combiner.EXITNUMBER) {
@@ -158,7 +163,8 @@ public class EptCombiner extends Combiner {
 
                 //this field is used to generate ipc navigator for EPT database when ept is only one db in application
                 //when it is combined with some other db - use navigator - rec.INT_PATENT_CLASSIFICATION
-                rec.put(rec.USPTOCODE, prepareMulti(termBuilder.removeBar(replaceNull(rs.getString("ic")))));
+                rec.put(rec.PATENT_KIND, prepareMulti(termBuilder.removeBar(replaceNull(rs.getString("ic")))));
+                          
                 rec.put(rec.INT_PATENT_CLASSIFICATION, prepareMulti(termBuilder.removeBar(replaceNull(rs.getString("ic"))), Constants.IPC));
                
                 rec.put(rec.AUTHOR_AFFILIATION, prepareMulti(StringUtil.replaceNonAscii(replaceNull(rs.getString("cs")))));
@@ -191,20 +197,40 @@ public class EptCombiner extends Combiner {
 
                 String parsedMH = termBuilder.formatCT(expandedMH);
 
-                rec.put(rec.MAIN_HEADING, prepareMulti(StringUtil.replaceNonAscii(termBuilder.removeRoleTerms(parsedMH)), Constants.CVS));
-   
+                rec.put(rec.MAIN_HEADING, prepareMulti(StringUtil.replaceNonAscii(termBuilder.removeRoleTerms(parsedMH)), Constants.CVS));  
                 //this field is added to generate navigators for Major terms
                 rec.put(rec.ECLA_CODES, prepareMulti(StringUtil.replaceNonAscii(termBuilder.removeRoleTerms(parsedMH))));
-                                 
-                rec.put(rec.NOROLE_TERMS, prepareMulti(StringUtil.replaceNonAscii(replaceNull(termBuilder.getNoRoleTerms(parsedCV)))));
-                rec.put(rec.REAGENT_TERMS, prepareMulti(StringUtil.replaceNonAscii(replaceNull(termBuilder.getReagentTerms(parsedCV)))));
-                rec.put(rec.PRODUCT_TERMS, prepareMulti(StringUtil.replaceNonAscii(replaceNull(termBuilder.getProductTerms(parsedCV)))));
-                rec.put(rec.MAJORNOROLE_TERMS, prepareMulti(StringUtil.replaceNonAscii(replaceNull(termBuilder.getMajorNoRoleTerms(parsedMH)))));
-                rec.put(rec.MAJORREAGENT_TERMS, prepareMulti(StringUtil.replaceNonAscii(replaceNull(termBuilder.getMajorReagentTerms(parsedMH)))));
-                rec.put(rec.MAJORPRODUCT_TERMS, prepareMulti(StringUtil.replaceNonAscii(replaceNull(termBuilder.getMajorProductTerms(parsedMH)))));
+                
+                String norole = StringUtil.replaceNonAscii(replaceNull(termBuilder.getNoRoleTerms(parsedCV)));
+                              
+                qfacet.setNorole(norole);                
+                rec.put(rec.NOROLE_TERMS, prepareMulti(norole));
+                
+                String reagent = StringUtil.replaceNonAscii(replaceNull(termBuilder.getReagentTerms(parsedCV)));
+                
+                qfacet.setReagent(reagent);
+                rec.put(rec.REAGENT_TERMS, prepareMulti(reagent));
+                
+                String product = StringUtil.replaceNonAscii(replaceNull(termBuilder.getProductTerms(parsedCV)));
+                qfacet.setProduct(product);
+                rec.put(rec.PRODUCT_TERMS, prepareMulti(product));
+                
+                String mnorole = termBuilder.getMajorNoRoleTerms(parsedMH);
+                qfacet.setNorole(mnorole);
+                rec.put(rec.MAJORNOROLE_TERMS, prepareMulti(mnorole));
+                
+                String mreagent = termBuilder.getMajorReagentTerms(parsedMH);
+                qfacet.setReagent(mreagent);
+                rec.put(rec.MAJORREAGENT_TERMS, prepareMulti(mreagent));
+                
+                String mproduct = termBuilder.getMajorProductTerms(parsedMH);
+                qfacet.setProduct(mproduct);
+                rec.put(rec.MAJORPRODUCT_TERMS, prepareMulti(mproduct));
 
+                rec.put(rec.UNCONTROLLED_TERMS, prepareMulti(qfacet.getValue()));
+                
                 rec.put(rec.CASREGISTRYNUMBER, prepareMulti(rs.getString("crn")));
-                rec.put(rec.UNCONTROLLED_TERMS, prepareMulti(termBuilder.formatCT(StringUtil.replaceNonAscii(replaceNull(rs.getString("ut"))))));
+         
                 rec.put(rec.ENTRY_YEAR, rs.getString("ey"));
 
                 rec.put(rec.PRIORITY_NUMBER, prepareMulti(StringUtil.replaceNonAscii(rs.getString("ap"))));
@@ -435,7 +461,7 @@ public class EptCombiner extends Combiner {
         }
     }
     
-    // this method is genereating doc types for us patents ("ug") and us applications ("ua")
+    // this method is generating doc types for us patents ("ug") and us applications ("ua")
     
     private String formatDt(String dt, 
 							String pc ,
