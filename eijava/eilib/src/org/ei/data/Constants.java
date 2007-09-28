@@ -8,8 +8,6 @@ public class Constants
     public static final Constants DT = new Constants("DT");
     public static final Constants DT_UA = new Constants("ua");
     public static final Constants DT_UG = new Constants("ug");
-    public static final Constants CONF_PAPER = new Constants("_CP");
-    public static final Constants CONF_PAPER_EXPAND = new Constants("_COP");
     public static final Constants IPC = new Constants("IP");
     public static final Constants MULTIFIELD_DELIM = new Constants(";");
     public static final Constants PN = new Constants("PN");
