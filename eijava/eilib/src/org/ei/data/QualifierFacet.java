@@ -1,4 +1,4 @@
-package eilib.src.org.ei.data;
+package org.ei.data;
 
 public class QualifierFacet
 {
@@ -45,5 +45,16 @@ public class QualifierFacet
 		}
 		
 		return value.toString();    			
-	}   	
+	}  
+	
+	public String toString()
+	{
+		StringBuffer strvalue = new StringBuffer();
+		
+		strvalue.append("norole: ").append(norole);
+		strvalue.append("reagent: ").append(reagent);
+		strvalue.append("product: ").append(product);
+		
+		return strvalue.toString();
+	}
 }
