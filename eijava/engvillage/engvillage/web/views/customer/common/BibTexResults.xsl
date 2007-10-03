@@ -19,14 +19,27 @@
 	<xsl:template match="EI-DOCUMENT">
 
 		<!-- This 'mode' enables us to start the
-			record with the BY and then
+			record with the TY and then
 			not repeat the same info again later -->
-		<xsl:apply-templates select="BY" mode="start-record"/>
+		<xsl:apply-templates select="TY" mode="start-record"/>
 		<xsl:apply-templates />
 
 	</xsl:template>
-	<xsl:template match="BY" mode="start-record">
-		<xsl:text>@</xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>{</xsl:text>
+	<xsl:template match="TY" mode="start-record">
+	
+	<xsl:variable name="DOC-TYPE">
+    <xsl:choose>
+           
+        <xsl:when test="(.)='CONF'">inproceedings</xsl:when>
+  		<xsl:when test="(.)='CHAP'">inbook</xsl:when>
+  		<xsl:when test="(.)='BOOK'">book</xsl:when>
+  		<xsl:when test="(.)='UNPB'">unpublished</xsl:when>
+        <xsl:otherwise>article</xsl:otherwise>
+        
+    </xsl:choose>
+    </xsl:variable>
+	
+		<xsl:text>@</xsl:text><xsl:value-of select="$DOC-TYPE" disable-output-escaping="yes"/><xsl:text>{</xsl:text>
 		<xsl:variable name="AN"><xsl:value-of select="../AN|../U1" /></xsl:variable>
 		<xsl:value-of select="$AN" disable-output-escaping="yes"/><xsl:text> ,&#xD;&#xA;</xsl:text>	
 	</xsl:template>
