@@ -68,12 +68,13 @@
 				<link href="/engresources/stylesheets/booktoc.css" rel="stylesheet" type="text/css" />
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Autocomplete.js"/>
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
-        <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/ReferexSearch_V7.js"/>
+        <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/ReferexSearch_V8.js"/>
 
          <script language="javascript">
           <xsl:comment>
             function loadFromToc(isbn,page)
             {
+              isbn = "<xsl:value-of select="descendant::EI-DOCUMENT/BN13"/>";
               var common = "&amp;docid=pag_"+isbn.toLowerCase()+"_"+page+"&amp;SEARCHID=<xsl:value-of select="/PAGE/SEARCH-ID"/>&amp;DOCINDEX=<xsl:value-of select="/PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/DOC/HITINDEX"/>&amp;database=<xsl:value-of select="/PAGE/SESSION-DATA/DATABASE-MASK"/>";
               var newwwin = window.open('/controller/servlet/Controller?CID=bookFrameset'+ common,'_referex','<xsl:value-of select="$BOOKS_OPEN_WINDOW_PARAMS"/>');void('');
               if(newwwin)
@@ -157,10 +158,9 @@
                         <a class="LgBlueLink">
                           <xsl:attribute name="target">_referex</xsl:attribute>
                           <xsl:attribute name="TITLE">Read Book</xsl:attribute>
-                          <xsl:attribute name="HREF"><xsl:value-of select="book:getReadBookLink(descendant::EI-DOCUMENT/BN, /PAGE/CUSTOMER-ID)"/></xsl:attribute>
+                          <xsl:attribute name="HREF"><xsl:value-of select="book:getReadBookLink(descendant::WOBLSERVER, descendant::EI-DOCUMENT/BN, /PAGE/CUSTOMER-ID)"/>&amp;EISESSION=$SESSIONID</xsl:attribute>
                           <img alt="Read Book" src="/engresources/images/read_book.gif" style="border:0px; vertical-align:middle"/>
                           </a>
-                        &#160; <a title="Viewing Requirements" class="SpLink" href="javascript:window.open('/engresources/downloads.html','newwind','width=550,height=500,scrollbars=yes,resizable,taskbar=1,status=yes');void('');">Viewing Requirements</a>
                       </td>
                       <td align="right">
 
@@ -173,12 +173,12 @@
                           <input type="hidden" name="section1" value="KY"/>
 
                           <input type="hidden" name="boolean1" value="AND"/>
-                          <input type="hidden" name="searchWord2"><xsl:attribute name="value"><xsl:value-of select="descendant::EI-DOCUMENT/BN"/></xsl:attribute></input>
+                          <input type="hidden" name="searchWord2"><xsl:attribute name="value"><xsl:value-of select="descendant::EI-DOCUMENT/BN13"/></xsl:attribute></input>
                           <input type="hidden" name="section2" value="BN"/>
 
-                          <a class="MedBlackText"><label for="txtsearchWord1">Search within this book</label></a>
-                          &#160;&#160;<input style="font-size:11px; vertical-align:middle;" type="text" size="32" maxlength="64" name="searchWord1" id="txtsearchWord1"/>
-                          &#160;<input style="vertical-align:middle;" type="image" src="/engresources/images/search_orange1.gif" name="search" value="Search" alt="Search within book" border="0"/>
+                          <a class="MedBlackText"><label for="txtsearchWord1">Search this book</label></a>
+                          &#160;&#160;<input style="font-size:11px; vertical-align:middle;" type="text" size="24" maxlength="64" name="searchWord1" id="txtsearchWord1"/>
+                          &#160;<input style="vertical-align:middle;" type="image" src="/engresources/images/search_orange1.gif" name="search" value="Search" alt="Search this book" border="0"/>
                         </form>&#160;&#160;
 
                       </td>
@@ -335,12 +335,12 @@
               <table border="0" width="99%" cellspacing="0" cellpadding="0">
                 <tr>
                   <td valign="top">
-                    <img border="0" width="100" height="145" style="float:left; margin-right:10px;">
-                      <xsl:attribute name="SRC">/engresources/images/b/<xsl:value-of select="EI-DOCUMENT/BN"/>small.jpg</xsl:attribute>
+                    <img border="0" width="100" height="150" style="float:left; margin-right:10px;">
+                      <xsl:attribute name="SRC"><xsl:value-of select="//BOOKIMGS"/>/images/<xsl:value-of select="EI-DOCUMENT/BN13"/>/<xsl:value-of select="EI-DOCUMENT/BN13"/>small.jpg</xsl:attribute>
                       <xsl:attribute name="ALT"><xsl:value-of select="EI-DOCUMENT/BTI"/></xsl:attribute>
                     </img>
                   </td>
-                  <td valign="top">
+                  <td valign="top" width="100%" align="left">
                     <xsl:apply-templates select="EI-DOCUMENT" />
                     <p/>
                     <a class="MedBlackText"><b>Table of Contents</b></a>
