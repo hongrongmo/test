@@ -97,7 +97,7 @@
     </xsl:template>
 
   <!-- top level LINKED node(s) with simple label/value children -->
-    <xsl:template match="SN|BN|CN|CC|MH|MI|PNUM|E_ISSN">
+    <xsl:template match="SN|BN|BN13|CN|CC|MH|MI|PNUM|E_ISSN">
       <tr>
         <td valign="top" ><img src="/engresources/images/s.gif" border="0"/></td>
         <td xsl:use-attribute-sets="r-align-label"><a CLASS="MedBlackText"><b><xsl:value-of select="@label"/>:</b></a></td>
@@ -619,6 +619,7 @@
 
         <xsl:variable name="INDEX-FIELD">
           <xsl:choose>
+            <xsl:when test="($FIELD='BN13')">BN</xsl:when>
             <xsl:when test="($FIELD='PNUM')">CT</xsl:when>
             <xsl:when test="($FIELD='E_ISSN')">SN</xsl:when>
             <xsl:when test="($FIELD='BKY')">KY</xsl:when>
@@ -722,7 +723,7 @@
   </xsl:template>
 
     <!-- do not display these elements> -->
-    <xsl:template match="TCO|PVD|FT|CPRT|KD|ID|NPRCT|RCT|CCT|VIEWS">
+    <xsl:template match="TCO|PVD|FT|CPRT|KD|ID|NPRCT|RCT|CCT|VIEWS|PII">
     </xsl:template>
 
     <!-- attribute-set -->
