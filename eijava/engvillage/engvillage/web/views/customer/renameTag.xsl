@@ -172,7 +172,7 @@
         <xsl:with-param name="LOCATION">RenameTags</xsl:with-param>
       </xsl:apply-templates>
 
-      <form style="margin:0px; padding:0px;" name="renametag" action="/controller/servlet/Controller?EISESSION={$SESSION-ID}&amp;CID=renameTag&amp;database={$DATABASE}"  method="POST">
+      <form style="margin:0px; padding:0px;" name="renametag"  onSubmit="javascript:renameTags();return false;" method="POST">
         <input type="hidden" name="DATABASE" value="{$DATABASE}"/>
         <table border="0" width="99%" cellpadding="0" cellspacing="0">
         	<tr>
