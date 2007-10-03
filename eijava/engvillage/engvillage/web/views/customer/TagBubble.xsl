@@ -116,13 +116,23 @@
           
 
           
-          function addNewTag()
-          {
-          	if (document.tagbubble.tagname.value != null && document.tagbubble.tagname.value.length > 30)
-          	{
-          		alert("Tag title should not exceed 30 characters");
-          		return false;
-          	}
+        function addNewTag()
+        {
+            if (document.tagbubble.tagname.value != null)
+            {
+                var avalue = document.tagbubble.tagname.value;
+		        var arr = avalue.split(",");
+                var k = 0;
+			    for (k = 0; k < arr.length ; k++)
+			    {
+			        if (arr[k].length > 30)
+				    {
+			            alert("Tag title should not exceed 30 characters : "+arr[k]);
+				        return false;
+				    }					
+			    }
+			}
+			  
             var url = document.tagbubble.addtagurl.value;
             var tag = encodeURIComponent(document.tagbubble.tagname.value);
             var scopelength = document.tagbubble.scope.length;
