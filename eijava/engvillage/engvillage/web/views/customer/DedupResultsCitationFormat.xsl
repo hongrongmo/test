@@ -7,8 +7,9 @@
     xmlns:DD="java:org.ei.domain.DatabaseDisplayHelper"
     xmlns:srt="java:org.ei.domain.Sort"
     xmlns:bit="java:org.ei.util.BitwiseOperators"
+    xmlns:book="java:org.ei.books.BookDocument"
     xmlns:custoptions="java:org.ei.fulldoc.FullTextOptions"
-    exclude-result-prefixes="java html xsl DD srt bit custoptions"
+    exclude-result-prefixes="java html xsl DD srt bit custoptions book"
 >
 
   <xsl:output method="html" indent="no" doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
@@ -23,7 +24,7 @@
 <xsl:include href="LocalHolding.xsl" />
 <xsl:include href="Footer.xsl" />
 
-<xsl:param name="CUST-ID">0</xsl:param>  
+<xsl:param name="CUST-ID">0</xsl:param>
 
 <xsl:variable name="BOOKS_OPEN_WINDOW_PARAMS">height=800,width=700,status=yes,resizable,scrollbars=1,menubar=no</xsl:variable>
 
@@ -402,7 +403,7 @@
             <td valign="top"><xsl:apply-templates select="EI-DOCUMENT"/><br/>
 
             <xsl:if test="($ISDUP='true')">
-                <a href="" title="View duplicate" onclick="window.open('/controller/servlet/Controller?CID=viewDups&amp;dups={$DUPS}', 'newwindow', 'width=800,height=500,toolbar=no,location=no, scrollbars,resizable');return false"><img src="/engresources/images/d.gif" align="absbottom" border="0"/></a><a CLASS="SmBlackText">&#160; - &#160;</a>
+              <a href="" title="View duplicate" onclick="window.open('/controller/servlet/Controller?CID=viewDups&amp;dups={$DUPS}', 'newwindow', 'width=800,height=500,toolbar=no,location=no, scrollbars,resizable');return false"><img src="/engresources/images/d.gif" align="absbottom" border="0"/></a><a CLASS="SmBlackText">&#160; - &#160;</a>
             </xsl:if>
 
 	<xsl:if test="not((EI-DOCUMENT/DOC/DB/DBMASK = '131072'))">
@@ -422,7 +423,7 @@
 
 
 		<xsl:if test="not(EI-DOCUMENT/BPP = '0')">
-			<a class="LgBlueLink" title="Book Details" href="/controller/servlet/Controller?CID=dedupSearchBookSummary&amp;SEARCHID={$SEARCH-ID}&amp;DOCINDEX={$INDEX}&amp;PAGEINDEX={$CURRENT-PAGE}&amp;database={$SELECTED-DB}&amp;format={$CID-PREFIX}DetailedFormat&amp;DupFlag={$DEDUP}&amp;dbpref={$DBPREF}&amp;fieldpref={$FIELDPREF}&amp;origin={$ORIGIN}&amp;dbLink={$DBLINK}&amp;linkSet={$LINKSET}&amp;dedupSet={$DEDUPSET}&amp;docid={$DOC-ID}">Book Details</a>
+			<a class="LgBlueLink" title="Book Details" href="/controller/servlet/Controller?CID=dedupSearchBookSummary&amp;SEARCHID={$SEARCH-ID}&amp;DOCINDEX={$INDEX}&amp;PAGEINDEX={$CURRENT-PAGE}&amp;database={$SELECTED-DB}&amp;format={$CID-PREFIX}DetailedFormat&amp;DupFlag={$DEDUP}&amp;dbpref={$DBPREF}&amp;fieldpref={$FIELDPREF}&amp;origin={$ORIGIN}&amp;dbLink={$DBLINK}&amp;linkSet={$LINKSET}&amp;dedupSet={$DEDUPSET}&amp;docid={$DOC-ID}&amp;pii={EI-DOCUMENT/PII}">Book Details</a>
 		</xsl:if>
 		<xsl:if test="(EI-DOCUMENT/BPP = '0')">
 			<a class="LgBlueLink" title="Book Details" href="/controller/servlet/Controller?CID=dedupSearchDetailedFormat&amp;SEARCHID={$SEARCH-ID}&amp;DOCINDEX={$INDEX}&amp;PAGEINDEX={$CURRENT-PAGE}&amp;database={$SELECTED-DB}&amp;format={$CID-PREFIX}DetailedFormat&amp;DupFlag={$DEDUP}&amp;dbpref={$DBPREF}&amp;fieldpref={$FIELDPREF}&amp;origin={$ORIGIN}&amp;dbLink={$DBLINK}&amp;linkSet={$LINKSET}&amp;dedupSet={$DEDUPSET}">Book Details</a>
@@ -433,9 +434,20 @@
 			<a class="LgBlueLink">
 		  	<xsl:attribute name="TITLE">Read Page</xsl:attribute>
 		  	<xsl:attribute name="HREF">javascript:_referex=window.open('/controller/servlet/Controller?CID=bookFrameset&amp;SEARCHID=<xsl:value-of select="$SEARCH-ID"/>&amp;DOCINDEX=<xsl:value-of select="$INDEX"/>&amp;docid=<xsl:value-of select="$DOC-ID"/>&amp;database=<xsl:value-of select="$SELECTED-DB"/>','_referex','<xsl:value-of select="$BOOKS_OPEN_WINDOW_PARAMS"/>');_referex.focus();void('');</xsl:attribute>
-		  	<img alt="Read the Page" src="/engresources/images/read_page.gif" style="border:0px; vertical-align:middle"/>
+		  	<img alt="Read Page" src="/engresources/images/read_page.gif" style="border:0px; vertical-align:middle"/>
 		  	</a>
 		</xsl:if>
+
+    <xsl:if test="string(EI-DOCUMENT/PII)">
+      <a class="MedBlackText">&#160; - &#160;</a>
+      <a class="LgBlueLink">
+        <xsl:attribute name="target">_referex</xsl:attribute>
+        <xsl:attribute name="TITLE">Read Chapter</xsl:attribute>
+        <xsl:attribute name="HREF"><xsl:value-of select="book:getReadChapterLink(/PAGE/PAGE-RESULTS/PAGE-ENTRY/WOBLSERVER,EI-DOCUMENT/BN13,EI-DOCUMENT/PII, /PAGE/CUSTOMER-ID)"/>&amp;EISESSION=$SESSIONID</xsl:attribute>
+        <img alt="Read Chapter" src="/engresources/images/read_chp.gif" style="border:0px; vertical-align:middle"/>
+        </a>
+    </xsl:if>
+
 	</xsl:if>
 
 
@@ -459,7 +471,7 @@
 	    <xsl:variable name="CHECK-CUSTOM-OPT">
 		<xsl:value-of select="custoptions:checkFullText($FULLTEXT, $FULLTEXT-LINK, $CUST-ID, EI-DOCUMENT/DO ,EI-DOCUMENT/DOC/DB/DBMASK)" />
 	    </xsl:variable>
-  
+
             <xsl:if test="($CHECK-CUSTOM-OPT ='true')">
                 <A CLASS="MedBlackText">&#160; - &#160;</A>
                 <a href="" onclick="window.open('/controller/servlet/Controller?CID=FullTextLink&amp;docID={$DOC-ID}','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable');return false"><img src="/engresources/images/av.gif" align="absbottom" border="0"/></a>
