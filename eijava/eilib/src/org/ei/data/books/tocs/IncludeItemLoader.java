@@ -76,7 +76,7 @@ public class IncludeItemLoader {
     
     public static void digest(File issue, String rules, List items) {
 
-        System.setProperty("javax.xml.parser.SAXParserFactory","org.apache.xerces.jaxp.SAXParserFactoryImpl");
+        System.setProperty("javax.xml.parsers.SAXParserFactory","org.apache.xerces.jaxp.SAXParserFactoryImpl");
 
         try {
             InputSource xmlRules = new InputSource(new StringReader(rules));
