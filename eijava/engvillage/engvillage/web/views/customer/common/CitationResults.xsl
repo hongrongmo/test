@@ -76,6 +76,7 @@
       <xsl:apply-templates select="PAN"/>
 
       <xsl:apply-templates select="PAP"/>
+      <xsl:apply-templates select="PIM"/>
       <xsl:apply-templates select="PM"/>
       <xsl:apply-templates select="PM1"/>
       <xsl:apply-templates select="UPD"/>
@@ -194,7 +195,12 @@
         <b> Assignee:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
     </xsl:template>
     <xsl:template match="PASM">
-        <b> Assignee:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
+    <xsl:message><xsl:value-of select="../DOC/DB/DBMASK"/></xsl:message>
+    	<xsl:choose>
+    		<xsl:when test="not(../DOC/DB/DBMASK='2048')"><b> Assignee:</b></xsl:when>
+    		<xsl:otherwise><b> Patent Assignee:</b></xsl:otherwise>
+    	</xsl:choose>   
+    	<xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
     </xsl:template>
     <xsl:template match="PAN">
         <b> Application number:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
@@ -202,13 +208,20 @@
     <xsl:template match="PAP">
         <b> Patent number:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
     </xsl:template>
+    
+    <xsl:template match="PIM">
+        <b> Patent information:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
+    </xsl:template>
+
 
     <xsl:template match="PM">
         <b> Publication Number:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
     </xsl:template>
     <xsl:template match="PM1">
         <b>Publication Number:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
-    </xsl:template>
+    </xsl:template>   
+
+    
     <xsl:template match="PFD">
         <br/>
         <b> Filing date: </b><xsl:value-of select="." disable-output-escaping="yes"/>
@@ -219,6 +232,7 @@
     <xsl:template match="PPD">
         <b> Publication date: </b><xsl:value-of select="." disable-output-escaping="yes"/>
     </xsl:template>
+    <!-- EPT -->
     <xsl:template match="UPD">
         <b> Publication date: </b><xsl:value-of select="." disable-output-escaping="yes"/>
     </xsl:template>
