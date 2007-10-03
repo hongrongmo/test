@@ -187,7 +187,7 @@
 	                                <li><a href="http://www.ei.org/databases/ntis_database.html">NTIS Database</a></li>
 	                                <li><a href="http://www.ei.org/databases/ei_patents.html">Ei Patents</a></li>
 	                                <li><a href="http://www.ei.org/databases/paperchem.html">PaperChem</a></li>
-	                                <li><a href="http://www.ei.org/databases/referex_engineering.html">Referex Engineering</a></li>
+	                                <li><a href="http://www.ei.org/databases/referex_engineering.html">Referex</a></li>
 	                                <li><a href="http://www.ei.org/databases/chimica.html">Chimica</a></li>
 	                                <li><a href="http://www.ei.org/databases/cbnb.html">Chemical Business News Base</a></li>
 	                                <li><a href="http://www.ei.org/databases/other.html">Other Publications</a></li>
@@ -550,7 +550,7 @@
 
 	                                <option value="backfile">Engineering Index Backfile</option>
                                   <option value="inspecback">Inspec Backfile</option>
-	                                <option value="referex">Referex Engineering</option>
+	                                <option value="referex">Referex</option>
 	                                <option value="patents">Ei Patents </option>
 	                                <option value="chem">ChemVillage</option>
 
