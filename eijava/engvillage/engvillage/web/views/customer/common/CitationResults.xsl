@@ -17,11 +17,12 @@
       <xsl:apply-templates select="BTI"/>
       <xsl:apply-templates select="BPP"/>
       <xsl:if test="DOC/DB/DBMASK='131072'">
-        <xsl:apply-templates select="ST"/>
+        <!-- Book chapter title -->
+        <xsl:apply-templates select="BCT"/>
       </xsl:if>
 
       <xsl:apply-templates select="TI"/>
-      
+
       <xsl:if test="$ascii='true'">
         <xsl:text>&#xD;&#xA;</xsl:text>
       </xsl:if>
@@ -42,7 +43,10 @@
           </xsl:otherwise>
       </xsl:choose>
 
-      <xsl:apply-templates select="BN"/>
+      <xsl:if test="not(DOC/DB/DBMASK='131072')">
+        <xsl:apply-templates select="BN"/>
+      </xsl:if>
+      <xsl:apply-templates select="BN13"/>
       <xsl:apply-templates select="BPN"/>
       <xsl:apply-templates select="BYR"/>
 
@@ -100,6 +104,7 @@
         <xsl:text>&#xD;&#xA;</xsl:text>
       </xsl:if>
       <xsl:apply-templates select="DOC/DB/DBNAME"/>
+      <xsl:apply-templates select="COL"/>
 
       <xsl:if test="$ascii='true'">
         <xsl:text>&#xD;&#xA;</xsl:text>
@@ -118,14 +123,17 @@
     <xsl:template match="BTI">
       <xsl:if test="(../BPP)='0'">
         <img border="0" width="56" height="72" style="float:left; margin-right:5px;">
-          <xsl:attribute name="SRC">/engresources/images/b/s/<xsl:value-of select="../BN"/>small.jpg</xsl:attribute>
+          <xsl:attribute name="SRC"><xsl:value-of select="//BOOKIMGS"/>/images/<xsl:value-of select="../BN13"/>/<xsl:value-of select="../BN13"/>small.jpg</xsl:attribute>
           <xsl:attribute name="ALT"><xsl:value-of select="."/></xsl:attribute>
         </img>
       </xsl:if><a class="MedBlackText"><b><xsl:value-of select="." disable-output-escaping="yes"/></b></a>
+      <xsl:if test="string(../BTST)"><a CLASS="MedBlackText"><b>: <xsl:value-of select="../BTST" disable-output-escaping="yes"/></b></a></xsl:if>
     </xsl:template>
 
     <!-- Book Section title -->
-    <xsl:template match="ST"><a class="MedBlackText"><b>Section:</b>&#160;<xsl:value-of select="." disable-output-escaping="yes"/></a><br/></xsl:template>
+<!--    <xsl:template match="ST"><a class="MedBlackText"><b>Section:</b>&#160;<xsl:value-of select="." disable-output-escaping="yes"/></a><br/></xsl:template> -->
+    <!-- Book Chapter title -->
+    <xsl:template match="BCT"><a class="MedBlackText"><b>Chapter:</b>&#160;<xsl:value-of select="." disable-output-escaping="yes"/></a><br/></xsl:template>
 
     <!-- Book Record Page Number -->
     <xsl:template match="BPP">
@@ -140,10 +148,10 @@
       <xsl:text>, </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
     </xsl:template>
 
-    <!-- Book ISBN  -->
+    <!-- Book ISBN / ISBN13 -->
     <!-- UGLY- since BN may be present in other doctypes and we only want it for Books, check the DBMASK -->
-    <xsl:template match="BN">
-      <xsl:if test="../DOC/DB/DBMASK='131072'"><xsl:text> </xsl:text>ISBN: <xsl:value-of select="." disable-output-escaping="yes"/></xsl:if>
+    <xsl:template match="BN|BN13">
+      <xsl:if test="../DOC/DB/DBMASK='131072'"><xsl:text> </xsl:text><xsl:value-of select="@label"/>: <xsl:value-of select="." disable-output-escaping="yes"/></xsl:if>
     </xsl:template>
 
     <xsl:template match="KC">
@@ -199,7 +207,7 @@
     	<xsl:choose>
     		<xsl:when test="not(../DOC/DB/DBMASK='2048')"><b> Assignee:</b></xsl:when>
     		<xsl:otherwise><b> Patent Assignee:</b></xsl:otherwise>
-    	</xsl:choose>   
+    	</xsl:choose>
     	<xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
     </xsl:template>
     <xsl:template match="PAN">
@@ -208,7 +216,7 @@
     <xsl:template match="PAP">
         <b> Patent number:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
     </xsl:template>
-    
+
     <xsl:template match="PIM">
         <b> Patent information:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
     </xsl:template>
@@ -219,9 +227,9 @@
     </xsl:template>
     <xsl:template match="PM1">
         <b>Publication Number:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
-    </xsl:template>   
+    </xsl:template>
 
-    
+
     <xsl:template match="PFD">
         <br/>
         <b> Filing date: </b><xsl:value-of select="." disable-output-escaping="yes"/>
@@ -283,6 +291,9 @@
 
     <xsl:template match="DBNAME">
         <a CLASS="SmBlackText"><br/><b>Database:</b><xsl:text> </xsl:text><xsl:value-of select="."/></a><xsl:text> </xsl:text>
+    </xsl:template>
+    <xsl:template match="COL">
+        <a CLASS="SmBlackText">&#160;<b>Collection:</b><xsl:text> </xsl:text><xsl:value-of select="text()"/></a><xsl:text> </xsl:text>
     </xsl:template>
 
     <xsl:template match="FTTJ|STT">
