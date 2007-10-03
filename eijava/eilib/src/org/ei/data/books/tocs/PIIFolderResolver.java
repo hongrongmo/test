@@ -27,7 +27,9 @@ public class PIIFolderResolver implements URIResolver  {
     protected static Log log = LogFactory.getLog(PIIFolderResolver.class);
 
     private String issuepath = "";
+    private File issuefile = null;
     public PIIFolderResolver(File xml) throws IOException {
+        issuefile = xml;
         issuepath = xml.getParent(); 
     }
     
@@ -51,6 +53,11 @@ public class PIIFolderResolver implements URIResolver  {
             if(piiMatch.find()) {
                 includeitemfile = piiMatch.group(2) + piiMatch.group(3) + piiMatch.group(4) + System.getProperty("file.separator") + "main.xml";
             }
+        }
+        else if(href.equals("lookup.xml")) {
+            log.info("Creating lookup xml data for " + issuefile.getName());
+            String lookupxml = IncludeItemLoader.toXML(IncludeItemLoader.getIncludeItems(issuefile));
+            return new StreamSource(new StringReader(lookupxml));
         }
         else {
             includeitemfile = href; 
