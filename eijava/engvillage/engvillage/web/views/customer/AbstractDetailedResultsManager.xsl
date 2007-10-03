@@ -186,16 +186,23 @@
                   </a>
               </xsl:if>
 
-              <xsl:if test="not(//PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/BPP = '0')">
+              <xsl:if test="string(/PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/PII)">
+                <a class="MedBlackText">&#160; - &#160;</a>
+                <a class="LgBlueLink">
+                  <xsl:attribute name="target">_referex</xsl:attribute>
+                  <xsl:attribute name="TITLE">Read Chapter</xsl:attribute>
+                  <xsl:attribute name="HREF"><xsl:value-of select="book:getReadChapterLink(/PAGE/PAGE-RESULTS/PAGE-ENTRY/WOBLSERVER,/PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/BN13,/PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/PII, /PAGE/CUSTOMER-ID)"/>&amp;EISESSION=$SESSIONID</xsl:attribute>
+                  <img alt="Read Chapter" src="/engresources/images/read_chp.gif" style="border:0px; vertical-align:middle"/>
+                  </a>
+              </xsl:if>
+
                 <a class="MedBlackText">&#160; - &#160;</a>
                 <a class="LgBlueLink">
                   <xsl:attribute name="target">_referex</xsl:attribute>
                   <xsl:attribute name="TITLE">Read Book</xsl:attribute>
-                  <xsl:attribute name="HREF"><xsl:value-of select="book:getReadBookLink(//PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/BN, /PAGE/CUSTOMER-ID)"/></xsl:attribute>
+                  <xsl:attribute name="HREF"><xsl:value-of select="book:getReadBookLink(/PAGE/PAGE-RESULTS/PAGE-ENTRY/WOBLSERVER,/PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/BN13, /PAGE/CUSTOMER-ID)"/>&amp;EISESSION=$SESSIONID</xsl:attribute>
                   <img alt="Read Book" src="/engresources/images/read_book.gif" style="border:0px; vertical-align:middle"/>
                   </a>
-              </xsl:if>
-              &#160; <a title="Viewing Requirements" class="SpLink" href="javascript:window.open('/engresources/downloads.html','newwind','width=550,height=500,scrollbars=yes,resizable,taskbar=1,status=yes');void('');">Viewing Requirements</a>
             </xsl:if>
 
             <!-- there will always be Abs. & Det. text/links preceding these links -->
@@ -220,11 +227,11 @@
                 <A class="MedBlackText">&#160; - &#160;</A>
                 <a title="Show patents that reference this patent" class="LgBlueLink" href="/controller/servlet/Controller?{$CITEDBY-QSTR}&amp;yearselect=yearrange&amp;searchtype={$SEARCH-TYPE}&amp;sort=yr">Cited by</a>&#160;<a class="MedBlackText">(<xsl:value-of select="$CIT-CNT" />)</a>
               </xsl:if>
-              
+
 	      <xsl:variable name="CHECK-CUSTOM-OPT">
 	        <xsl:value-of select="custoptions:checkFullText($FULLTEXT, $FULLTEXT-LINK, $CUST-ID, //PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/DO , //PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/DOC/DB/DBMASK)" />
 	      </xsl:variable>
-                
+
               <!-- there will always be Abs. & Det. text/links preceding this image -->
               <xsl:if test="($CHECK-CUSTOM-OPT ='true')">
                 <a class="MedBlackText">&#160; - &#160;</a>
