@@ -368,110 +368,25 @@ else
 }
 %>
 <%
-    String reqCID = request.getParameter("CID");
-    if(reqCID != null && (reqCID.equalsIgnoreCase("ebookSearch") || reqCID.equalsIgnoreCase("errorQuickSearchResult")))
-    {
-      //output browse collections
+  String reqCID = request.getParameter("CID");
+  if(reqCID != null && (reqCID.equalsIgnoreCase("ebookSearch") || reqCID.equalsIgnoreCase("errorQuickSearchResult")))
+  {
+  //output browse collections
       String[] creds = user.getCartridge();
       Arrays.sort(creds);
       boolean perpetual =  (Arrays.binarySearch(creds, "BPE") >= 0);
-      boolean mat = true, matstar = true;
-      boolean ele = true, elestar = true;
-      boolean che = true, chestar = true;
+      boolean col = true, colstar = true;
 
-  	if(perpetual)
-  	{
-      mat = (Arrays.binarySearch(creds, "MAT") >= 0);
-      ele = (Arrays.binarySearch(creds, "ELE") >= 0);
-      che = (Arrays.binarySearch(creds, "CHE") >= 0);
-      matstar = (Arrays.binarySearch(creds, "MAT1") >= 0);
-      elestar = (Arrays.binarySearch(creds, "ELE1") >= 0);
-      chestar = (Arrays.binarySearch(creds, "CHE1") >= 0);
-  	}
-  	else
-  	{
-  		mat = (Arrays.binarySearch(creds, "MAT") >= 0);
-  		ele = (Arrays.binarySearch(creds, "ELE") >= 0);
-  		che = (Arrays.binarySearch(creds, "CHE") >= 0);
-  		matstar = (Arrays.binarySearch(creds, "MAT") >= 0);
-  		elestar = (Arrays.binarySearch(creds, "ELE") >= 0);
-      chestar = (Arrays.binarySearch(creds, "CHE") >= 0);
-  	}
-
-    int bstate = 0;
-    String sbstate = request.getParameter("bstate");
-    if(sbstate != null) {
-      try {
-        bstate = Integer.parseInt(sbstate);
-        if((bstate > 7) || (bstate < 0)) {
-          bstate = 0;
-        }
-      }
-      catch(NumberFormatException e)
-      {
-        bstate = 0;
-      }
-
-    }
-
-    int matmask = 1;
-    int elemask = 2;
-    int chemask = 4;
 %>
     <EBOOK-SEARCH>
-    <MAT>
     <%
-      if(mat || matstar) {
-        out.write("<BSTATE><![CDATA[<a class=\"SpLink\" href=\"/controller/servlet/Controller?CID=ebookSearch&bstate=" + String.valueOf(((bstate & matmask) == matmask) ? (bstate - matmask) : (bstate + matmask)) + "\">");
-        out.write(((bstate & matmask) == matmask) ? "...less" : "more...");
-        out.write("</a>]]></BSTATE>");
-      }
-      List cats = org.ei.books.collections.ReferexCollection.MAT.populateSubjects(mat, matstar);
-      int catcount = ((bstate & matmask) == matmask) ? cats.size() : 11;
-      Iterator lstItr = cats.iterator();
-      out.write((String) lstItr.next());
-      out.write("<CVS>");
-      for(int i = 1; lstItr.hasNext() && i < catcount ; i++) {
-        out.write((String) lstItr.next());
-      }
-      out.write("</CVS>");
+    String sbstate = request.getParameter("bstate");
+    org.ei.books.library.Library library = org.ei.books.library.Library.getInstance();
+    org.ei.books.library.LibraryVisitor libraryVisitor = null;
+    libraryVisitor = new org.ei.books.library.LibraryVisitor(creds,perpetual);
+    library.accept(libraryVisitor);
+    libraryVisitor.toXML(out,sbstate);
     %>
-    </MAT>
-    <ELE>
-    <%
-      if(ele || elestar) {
-        out.write("<BSTATE><![CDATA[<a class=\"SpLink\" href=\"/controller/servlet/Controller?CID=ebookSearch&bstate=" + String.valueOf(((bstate & elemask) == elemask) ? (bstate - elemask) : (bstate + elemask)) + "\">");
-        out.write(((bstate & elemask) == elemask) ? "...less" : "more...");
-        out.write("</a>]]></BSTATE>");
-      }
-      cats = org.ei.books.collections.ReferexCollection.ELE.populateSubjects(ele, elestar);
-      catcount = ((bstate & elemask) == elemask) ? cats.size() : 11;
-      lstItr = cats.iterator();
-      out.write((String) lstItr.next());
-      out.write("<CVS>");
-      for(int i = 1; lstItr.hasNext() && i < catcount ; i++) {
-        out.write((String) lstItr.next());
-      }
-      out.write("</CVS>");
-    %>
-    </ELE>
-    <CHE>
-    <% if(che || chestar) {
-        out.write("<BSTATE><![CDATA[<a class=\"SpLink\" href=\"/controller/servlet/Controller?CID=ebookSearch&bstate=" + String.valueOf(((bstate & chemask) == chemask) ? (bstate - chemask) : (bstate + chemask)) + "\">");
-        out.write(((bstate & chemask) == chemask) ? "...less" : "more...");
-        out.write("</a>]]></BSTATE>");
-      }
-      cats = org.ei.books.collections.ReferexCollection.CHE.populateSubjects(che, chestar);
-      catcount = ((bstate & chemask) == chemask) ? cats.size() : 11;
-      lstItr = cats.iterator();
-      out.write((String) lstItr.next());
-      out.write("<CVS>");
-      for(int i = 1; lstItr.hasNext() && i < catcount ; i++) {
-        out.write((String) lstItr.next());
-      }
-      out.write("</CVS>");
-    %>
-    </CHE>
     </EBOOK-SEARCH>
 <%
   }
