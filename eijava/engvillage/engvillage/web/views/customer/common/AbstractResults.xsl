@@ -107,6 +107,7 @@
       <xsl:apply-templates select="E_ISSN"/>
       <xsl:apply-templates select="CN"/>
       <xsl:apply-templates select="BN"/>
+      <xsl:apply-templates select="BN13"/>
     <!-- Book/Page Details (Abstract View)  -->
     <!-- BN will output ISBN: ######## -->
     <!-- Book Page Count -->
@@ -164,6 +165,7 @@
 <!-- Book Templates -->
     <xsl:template match="BTI">
       <a CLASS="MedBlackText"><b><xsl:value-of select="." disable-output-escaping="yes"/></b></a>
+      <xsl:if test="string(../BTST)"><a CLASS="MedBlackText"><b>: <xsl:value-of select="../BTST" disable-output-escaping="yes"/></b></a></xsl:if>
     </xsl:template>
 
     <xsl:template match="BPP">
@@ -178,7 +180,8 @@
     </xsl:template>
 
     <xsl:template match="BPC">
-      , <xsl:value-of select="." disable-output-escaping="yes"/> p
+    <xsl:text>, </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
+        <xsl:text> p</xsl:text>
     </xsl:template>
 
     <xsl:template match="BPN">
@@ -446,7 +449,10 @@
       <b>CODEN:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text> </xsl:text>
     </xsl:template>
     <xsl:template match="BN">
-      <b>ISBN:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text> </xsl:text>
+      <b><xsl:value-of select="@label"/>:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text> </xsl:text>
+    </xsl:template>
+    <xsl:template match="BN13">
+      <b><xsl:value-of select="@label"/>:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
     </xsl:template>
 
     <xsl:template match="CF">
