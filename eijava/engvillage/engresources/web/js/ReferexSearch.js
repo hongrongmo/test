@@ -32,15 +32,20 @@ function searchValidation(){
 
   if(typeof(document.quicksearch.allcol) != 'undefined')
   {
-    if(!document.quicksearch.allcol.checked &&
-        !document.quicksearch.col[0].checked &&
-        !document.quicksearch.col[1].checked &&
-        !document.quicksearch.col[2].checked )
+    if(!document.quicksearch.allcol.checked)
     {
-      document.quicksearch.searchWord1.value = searchWord1;
-      document.quicksearch.allcol.focus();
-      window.alert("Please select a collection");
-      return false;
+      var onechecked = false;
+      for(i = 0; i < document.quicksearch.col.length; i++)
+      {
+        onechecked = onechecked || document.quicksearch.col[i];
+      }
+      if(!onechecked)
+      {
+        document.quicksearch.searchWord1.value = searchWord1;
+        document.quicksearch.allcol.focus();
+        window.alert("Please select a collection");
+        return false;
+      }
     }
   }
 
