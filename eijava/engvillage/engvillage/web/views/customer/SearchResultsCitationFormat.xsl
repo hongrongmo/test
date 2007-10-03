@@ -11,9 +11,10 @@
     xmlns:DD="java:org.ei.domain.DatabaseDisplayHelper"
     xmlns:srt="java:org.ei.domain.Sort"
     xmlns:bit="java:org.ei.util.BitwiseOperators"
+    xmlns:book="java:org.ei.books.BookDocument"
     xmlns:xslcid="java:org.ei.domain.XSLCIDHelper"
     xmlns:custoptions="java:org.ei.fulldoc.FullTextOptions"
-    exclude-result-prefixes="java html xsl DD srt bit xslcid custoptions"
+    exclude-result-prefixes="java html xsl DD srt bit xslcid custoptions book"
 >
   <xsl:include href="Header.xsl" />
   <xsl:include href="GlobalLinks.xsl" />
@@ -239,7 +240,7 @@
     <xsl:variable name="DATABASE-ID">
       <xsl:value-of select="EI-DOCUMENT/DOC/DB/ID"/>
     </xsl:variable>
-    
+
     <xsl:variable name="INDEX">
       <xsl:value-of select="EI-DOCUMENT/DOC/HITINDEX"/>
     </xsl:variable>
@@ -355,10 +356,14 @@
                 <a class="MedBlackText">&#160; - &#160;</a>
               </xsl:if>
 
+              <xsl:variable name="PII">
+                <xsl:if test="string(EI-DOCUMENT/PII)">&amp;pii=<xsl:value-of select="EI-DOCUMENT/PII"/></xsl:if>
+              </xsl:variable>
+
               <a class="LgBlueLink">
                 <xsl:attribute name="TITLE">Book Details</xsl:attribute>
                 <xsl:if test="not(EI-DOCUMENT/BPP = '0')">
-                  <xsl:attribute name="HREF">/controller/servlet/Controller?CID=bookSummary&amp;SEARCHID=<xsl:value-of select="$SEARCH-ID"/>&amp;DOCINDEX=<xsl:value-of select="$INDEX"/>&amp;database=<xsl:value-of select="$SELECTED-DB"/>&amp;docid=<xsl:value-of select="$DOC-ID"/>&amp;format=<xsl:value-of select="$CID-PREFIX"/>DetailedFormat</xsl:attribute>
+                  <xsl:attribute name="HREF">/controller/servlet/Controller?CID=bookSummary&amp;SEARCHID=<xsl:value-of select="$SEARCH-ID"/>&amp;DOCINDEX=<xsl:value-of select="$INDEX"/>&amp;database=<xsl:value-of select="$SELECTED-DB"/>&amp;docid=<xsl:value-of select="$DOC-ID"/>&amp;format=<xsl:value-of select="$CID-PREFIX"/>DetailedFormat<xsl:value-of select="$PII"/></xsl:attribute>
                 </xsl:if>
                 <xsl:if test="(EI-DOCUMENT/BPP = '0')">
                   <xsl:attribute name="HREF">/controller/servlet/Controller?<xsl:value-of select="$ABSTRACT-LINK-CID"/>&amp;SEARCHID=<xsl:value-of select="$SEARCH-ID"/>&amp;DOCINDEX=<xsl:value-of select="$INDEX"/>&amp;database=<xsl:value-of select="$SELECTED-DB"/>&amp;format=<xsl:value-of select="$CID-PREFIX"/>DetailedFormat</xsl:attribute>
@@ -369,9 +374,20 @@
                 <a class="LgBlueLink">
                   <xsl:attribute name="TITLE">Read Page</xsl:attribute>
                   <xsl:attribute name="HREF">javascript:_referex=window.open('/controller/servlet/Controller?CID=bookFrameset&amp;SEARCHID=<xsl:value-of select="$SEARCH-ID"/>&amp;DOCINDEX=<xsl:value-of select="$INDEX"/>&amp;docid=<xsl:value-of select="$DOC-ID"/>&amp;database=<xsl:value-of select="$SELECTED-DB"/>','_referex','<xsl:value-of select="$BOOKS_OPEN_WINDOW_PARAMS"/>');_referex.focus();void('');</xsl:attribute>
-                  <img alt="Read the Page" src="/engresources/images/read_page.gif" style="border:0px; vertical-align:middle"/>
+                  <img alt="Read Page" src="/engresources/images/read_page.gif" style="border:0px; vertical-align:middle"/>
                   </a>
               </xsl:if>
+
+              <xsl:if test="string(EI-DOCUMENT/PII)">
+                <a class="MedBlackText">&#160; - &#160;</a>
+                <a class="LgBlueLink">
+                  <xsl:attribute name="target">_referex</xsl:attribute>
+                  <xsl:attribute name="TITLE">Read Chapter</xsl:attribute>
+                  <xsl:attribute name="HREF"><xsl:value-of select="book:getReadChapterLink(WOBLSERVER, EI-DOCUMENT/BN13,EI-DOCUMENT/PII, /PAGE/CUSTOMER-ID)"/>&amp;EISESSION=$SESSIONID</xsl:attribute>
+                  <img alt="Read Chapter" src="/engresources/images/read_chp.gif" style="border:0px; vertical-align:middle"/>
+                  </a>
+              </xsl:if>
+
             </xsl:if>
 
             <xsl:if test="($REF-CNT) and not($REF-CNT ='0') and not($REF-CNT ='')">
@@ -391,11 +407,11 @@
               <A title="Show patents that reference this patent" class="LgBlueLink" HREF="/controller/servlet/Controller?CID={$CID-PREFIX}CitationFormat&amp;{$CITEDBY-QSTR}&amp;yearselect=yearrange&amp;searchtype={$SEARCH-TYPE}&amp;sort=yr">Cited by</A>
               &nbsp;<A class="MedBlackText">(<xsl:value-of select="$CIT-CNT"/>)</A>
             </xsl:if>
-            
+
 	    <xsl:variable name="CHECK-CUSTOM-OPT">
 		<xsl:value-of select="custoptions:checkFullText($FULLTEXT, $FULLTEXT-LINK, $CUST-ID, EI-DOCUMENT/DO ,EI-DOCUMENT/DOC/DB/DBMASK)" />
 	    </xsl:variable>
-	    
+
             <xsl:if test="($CHECK-CUSTOM-OPT ='true')">
               <a class="MedBlackText">&#160; - &#160;</a>
               <a class="LgBlueLink">
@@ -734,7 +750,7 @@
           		</xsl:if>
 			</xsl:if>
 		</xsl:if>
-		
+
           <!-- suppress HREF when VALUE is missing -->
           <xsl:if test="((/PAGE/SESSION-DATA/SEARCH-TYPE='Easy') and not(normalize-space(VALUE)=''))">
             <xsl:if test="not(@COUNT=0)">
