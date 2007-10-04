@@ -290,13 +290,14 @@ public class PAGDocBuilder implements DocumentBuilder
           {
             ht.put(Keys.BOOK_CHAPTER_TITLE,new XMLWrapper(Keys.BOOK_CHAPTER_TITLE,chapterTitle));
           }
-
-          if(chapterStart != null)
-          {
-            ht.put(Keys.BOOK_CHAPTER_START,new XMLWrapper(Keys.BOOK_CHAPTER_START,chapterStart));
-          }
+        }
+        // we always need chapter start for loading the Navigation frame
+        if(chapterStart != null)
+        {
+          ht.put(Keys.BOOK_CHAPTER_START,new XMLWrapper(Keys.BOOK_CHAPTER_START,chapterStart));
         }
 
+        // if chapter start is null use section start for loading the Navigation frame
         String sectionStart = rset.getString("SECTION_START");
         if((sectionStart != null) && (chapterStart == null))
         {
