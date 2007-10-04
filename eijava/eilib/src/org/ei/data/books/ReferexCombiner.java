@@ -79,6 +79,10 @@ public class ReferexCombiner {
               extracts.add(new Original406BookRecord());
               extracts.add(new Original406PageRecord());
             }
+            else if(strDefault.equals("2007")){
+                extracts.add(new FL2007BookRecord());
+                extracts.add(new FL2007PageRecord());
+              }            
             else {
               extracts.add(new BookRecord());
               extracts.add(new PageRecord());
@@ -600,4 +604,27 @@ public class ReferexCombiner {
         }
     }
 
+    private class FL2007BookRecord extends BookRecord {
+
+        public String getExtractType() {
+            return "2007";
+        }
+
+        public String getQuery() {
+            return  "SELECT DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB FROM BOOK_PAGES_2007 " +
+                    " WHERE PAGE_NUM=0";
+        }
+    }
+
+    private class FL2007PageRecord extends PageRecord {
+
+        public String getExtractType() {
+            return "2007";
+        }
+
+        public String getQuery() {
+            return "SELECT PAGE_KEYWORDS,DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB, PAGE_NUM, CHAPTER_TITLE, CHAPTER_START, SECTION_TITLE, SECTION_START, PAGE_TXT FROM BOOK_PAGES_2007 " +
+                  "WHERE PAGE_NUM <> 0";
+        }
+    }
 }
