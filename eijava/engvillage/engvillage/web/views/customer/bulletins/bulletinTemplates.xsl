@@ -10,7 +10,7 @@
        
         <tr>
             <td width="3">
-                <img src="{$RESOURCE-PATH}/i/s.gif" width="3"/>
+                <img src="/engresources/images/encompass/s.gif" width="3"/>
             </td>
             <td valign="top">
                 <a class="S">
@@ -18,7 +18,7 @@
                 </a>
             </td>
             <td width="5">
-                <img src="{$RESOURCE-PATH}/i/s.gif" width="5"/>
+                <img src="/engresources/images/encompass/s.gif" width="5"/>
             </td>
             <td valign="top">
                 <a class="S">
@@ -27,14 +27,14 @@
             </td>
             
             <td width="5">
-                <img src="{$RESOURCE-PATH}/i/s.gif" width="5"/>
+                <img src="/engresources/images/encompass/s.gif" width="5"/>
             </td>
             <td valign="top">
              <xsl:choose>
                 <xsl:when test="boolean($LIT-HTML='true')">
-                <a class="MBL" href="/village/models/customer/bulletins/viewBulletin.jsp?EISESSION={$SESSION-ID}&amp;cType=HTML&amp;id={$ID}" target="_blank">View</a>              
+                <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=HTML&amp;id={$ID}" target="_blank">View</a>              
                 &#160;&#160;
-                <a class="MBL" href="/village/models/customer/bulletins/viewBulletin.jsp?EISESSION={$SESSION-ID}&amp;cType=SAVEHTML&amp;id={$ID}">Save</a>
+                <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEHTML&amp;id={$ID}">Save</a>
                 </xsl:when>
                  
                 <xsl:otherwise>
@@ -45,14 +45,14 @@
            
            
             <td width="5">
-                <img src="{$RESOURCE-PATH}/i/s.gif" width="5"/>
+                <img src="/engresources/images/encompass/s.gif" width="5"/>
             </td>
             <td valign="top">
              <xsl:choose>
                 <xsl:when test="boolean($LIT-PDF='true')">
-                <a class="MBL" href="/village/models/customer/bulletins/viewBulletin.jsp?EISESSION={$SESSION-ID}&amp;cType=PDF&amp;id={$ID}" target="_blank">View  </a>          
+                <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=PDF&amp;id={$ID}" target="_blank">View  </a>          
                 &#160;&#160;
-                <a class="MBL" href="/village/models/customer/bulletins/viewBulletin.jsp?EISESSION={$SESSION-ID}&amp;cType=SAVEPDF&amp;id={$ID}">Save</a>
+                <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEPDF&amp;id={$ID}">Save</a>
                 </xsl:when>
                 <xsl:otherwise>
                     <a class="S">View&#160;&#160;Save</a>
@@ -61,12 +61,12 @@
             </td>
            
             <td width="5">
-                <img src="{$RESOURCE-PATH}/i/s.gif" width="5"/>
+                <img src="/engresources/images/encompass/s.gif" width="5"/>
             </td>
         </tr>
         <tr>
             <td height="6" colspan="9">
-                <img src="{$RESOURCE-PATH}/i/s.gif" height="6"/>
+                <img src="/engresources/images/encompass/s.gif" height="6"/>
             </td>
         </tr>
     </xsl:template>
@@ -78,7 +78,7 @@
        
         <tr>
             <td width="3">
-                <img src="{$RESOURCE-PATH}/i/s.gif" width="3"/>
+                <img src="/engresources/images/encompass/s.gif" width="3"/>
             </td>
             <td valign="top">
                 <a class="S">
@@ -86,7 +86,7 @@
                 </a>
             </td>
             <td width="5">
-                <img src="{$RESOURCE-PATH}/i/s.gif" width="5"/>
+                <img src="/engresources/images/encompass/s.gif" width="5"/>
             </td>
             <td valign="top">
                 <a class="S">
@@ -95,14 +95,14 @@
             </td>
           
             <td width="5">
-                <img src="{$RESOURCE-PATH}/i/s.gif" width="5"/>
+                <img src="/engresources/images/encompass/s.gif" width="5"/>
             </td>
             <td valign="top">
                 <xsl:choose>
                 <xsl:when test="boolean($PAT-HTML='true')">
-                <a class="MBL" href="/village/models/customer/bulletins/viewBulletin.jsp?EISESSION={$SESSION-ID}&amp;cType=HTML&amp;id={$ID}" target="_blank">View  </a>
+                <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=HTML&amp;id={$ID}" target="_blank">View  </a>
                 &#160;
-                <a class="MBL" href="/village/models/customer/bulletins/viewBulletin.jsp?EISESSION={$SESSION-ID}&amp;cType=SAVEHTML&amp;id={$ID}">Save</a>
+                <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEHTML&amp;id={$ID}">Save</a>
                 </xsl:when>
                 <xsl:otherwise>
                     <a class="S">View&#160;&#160;Save</a>
@@ -112,14 +112,14 @@
           
            
             <td width="5">
-                <img src="{$RESOURCE-PATH}/i/s.gif" width="5"/>
+                <img src="/engresources/images/encompass/s.gif" width="5"/>
             </td>
             <td valign="top">
                <xsl:choose>
                 <xsl:when test="boolean($PAT-PDF='true')">
-                <a class="MBL" href="/village/models/customer/bulletins/viewBulletin.jsp?EISESSION={$SESSION-ID}&amp;cType=PDF&amp;id={$ID}" target="_blank">View  </a>
+                <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=PDF&amp;id={$ID}" target="_blank">View  </a>
                 &#160;&#160;
-                <a class="MBL" href="/village/models/customer/bulletins/viewBulletin.jsp?EISESSION={$SESSION-ID}&amp;cType=SAVEPDF&amp;id={$ID}">Save</a>
+                <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEPDF&amp;id={$ID}">Save</a>
                 </xsl:when>
                 <xsl:otherwise>
                     <a class="S">View&#160;&#160;Save</a>
@@ -128,19 +128,19 @@
             </td>
            
             <td width="5">
-                <img src="{$RESOURCE-PATH}/i/s.gif" width="5"/>
+                <img src="/engresources/images/encompass/s.gif" width="5"/>
             </td>
             <xsl:choose>
                 <xsl:when test="not($ZP='') and not($ZP='null')">
                     <td valign="bottom">
-                        <a class="MBL" href="/village/models/customer/bulletins/viewBulletin.jsp?EISESSION={$SESSION-ID}&amp;cType=ZIP&amp;id={$ID}">Save</a>
+                        <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=ZIP&amp;id={$ID}">Save</a>
                     </td>
                 </xsl:when>
             </xsl:choose>
         </tr>
         <tr>
             <td height="6" colspan="9">
-                <img src="{$RESOURCE-PATH}/i/s.gif" height="6"/>
+                <img src="/engresources/images/encompass/s.gif" height="6"/>
             </td>
         </tr>
     </xsl:template>
@@ -158,7 +158,7 @@
         
         <tr>
             <td width="4">
-                <img src="{$RESOURCE-PATH}/i/s.gif" width="4"/>
+                <img src="/engresources/images/encompass/s.gif" width="4"/>
             </td>
             <td valign="top">
                 <a class="M">
@@ -166,7 +166,7 @@
                 </a>
             </td>
             <td valign="top" width="10">
-                <img src="{$RESOURCE-PATH}/i/s.gif" width="10"/>
+                <img src="/engresources/images/encompass/s.gif" width="10"/>
             </td>
             <td valign="top">
                 <a class="S">
@@ -175,14 +175,14 @@
             </td>
             
             <td valign="top" width="10">
-                <img src="{$RESOURCE-PATH}/i/s.gif" width="10"/>
+                <img src="/engresources/images/encompass/s.gif" width="10"/>
             </td>
             <td valign="top">
                  <xsl:choose>
                 <xsl:when test="boolean($SHOW-HTML='true')">
-                <a class="MBL" href="/village/models/customer/bulletins/viewBulletin.jsp?EISESSION={$SESSION-ID}&amp;cType=HTML&amp;id={$ID}" target="_blank">View  </a>
+                <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=HTML&amp;id={$ID}" target="_blank">View  </a>
                 &#160;&#160;
-                <a class="MBL" href="/village/models/customer/bulletins/viewBulletin.jsp?EISESSION={$SESSION-ID}&amp;cType=SAVEHTML&amp;id={$ID}"> Save</a>
+                <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEHTML&amp;id={$ID}"> Save</a>
                 </xsl:when>
                 <xsl:otherwise>
                     <a class="S">View&#160;&#160;Save</a>
@@ -192,14 +192,14 @@
            
             
             <td valign="top" width="10">
-                <img src="{$RESOURCE-PATH}/i/s.gif" width="10"/>
+                <img src="/engresources/images/encompass/s.gif" width="10"/>
             </td>
             <td valign="top">
                  <xsl:choose>
                 <xsl:when test="boolean($SHOW-PDF='true')">
-                <a class="MBL" href="/village/models/customer/bulletins/viewBulletin.jsp?EISESSION={$SESSION-ID}&amp;cType=PDF&amp;id={$ID}" target="_blank">View  </a>
+                <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=PDF&amp;id={$ID}" target="_blank">View  </a>
                 &#160;&#160;
-                <a class="MBL" href="/village/models/customer/bulletins/viewBulletin.jsp?EISESSION={$SESSION-ID}&amp;cType=SAVEPDF&amp;id={$ID}">Save</a>
+                <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEPDF&amp;id={$ID}">Save</a>
                 </xsl:when>
                 <xsl:otherwise>
                     <a class="S">View&#160;&#160;Save</a>
@@ -212,7 +212,7 @@
         </tr>
         <tr>
             <td height="6" colspan="9">
-                <img src="{$RESOURCE-PATH}/i/s.gif" height="6"/>
+                <img src="/engresources/images/encompass/s.gif" height="6"/>
             </td>
         </tr>
     </xsl:template>
@@ -231,7 +231,7 @@
         </xsl:variable>
         <tr>
             <td width="4">
-                <img src="{$RESOURCE-PATH}/i/s.gif" width="4"/>
+                <img src="/engresources/images/encompass/s.gif" width="4"/>
             </td>
             <td valign="top">
                 <a class="M">
@@ -239,7 +239,7 @@
                 </a>
             </td>
             <td valign="top" width="10">
-                <img src="{$RESOURCE-PATH}/i/s.gif" width="10"/>
+                <img src="/engresources/images/encompass/s.gif" width="10"/>
             </td>
             <td valign="top">
                 <a class="S">
@@ -248,14 +248,14 @@
             </td>
              
             <td valign="top" width="10">
-                <img src="{$RESOURCE-PATH}/i/s.gif" width="10"/>
+                <img src="/engresources/images/encompass/s.gif" width="10"/>
             </td>
             <td valign="top">
                  <xsl:choose>
                 <xsl:when test="boolean($SHOW-HTML='true')">
-                <a class="MBL" href="/village/models/customer/bulletins/viewBulletin.jsp?EISESSION={$SESSION-ID}&amp;cType=HTML&amp;id={$ID}" target="_blank">View  </a>
+                <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=HTML&amp;id={$ID}" target="_blank">View  </a>
                 &#160;&#160;
-                <a class="MBL" href="/village/models/customer/bulletins/viewBulletin.jsp?EISESSION={$SESSION-ID}&amp;cType=SAVEHTML&amp;id={$ID}">Save</a>
+                <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEHTML&amp;id={$ID}">Save</a>
                 </xsl:when>
                 <xsl:otherwise>
                     <a class="S">View&#160;&#160;Save</a>
@@ -265,14 +265,14 @@
            
            
             <td valign="top" width="10">
-                <img src="{$RESOURCE-PATH}/i/s.gif" width="10"/>
+                <img src="/engresources/images/encompass/s.gif" width="10"/>
             </td>
             <td valign="top">
                 <xsl:choose>
                 <xsl:when test="boolean($SHOW-PDF='true')">
-                <a class="MBL" href="/village/models/customer/bulletins/viewBulletin.jsp?EISESSION={$SESSION-ID}&amp;cType=PDF&amp;id={$ID}" target="_blank">View  </a>
+                <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=PDF&amp;id={$ID}" target="_blank">View  </a>
                 &#160;&#160;
-                <a class="MBL" href="/village/models/customer/bulletins/viewBulletin.jsp?EISESSION={$SESSION-ID}&amp;cType=SAVEPDF&amp;id={$ID}">Save</a>
+                <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEPDF&amp;id={$ID}">Save</a>
                 </xsl:when>
                 <xsl:otherwise>
                     <a class="S">View&#160;&#160;Save</a>
@@ -281,12 +281,12 @@
             </td>
             
             <td valign="top" width="10">
-                <img src="{$RESOURCE-PATH}/i/s.gif" width="10"/>
+                <img src="/engresources/images/encompass/s.gif" width="10"/>
             </td>
             <xsl:choose>
                 <xsl:when test="not($ZP='') and not($ZP='null')">
                     <td valign="bottom">
-                        <a class="MBL" href="/village/models/customer/bulletins/viewBulletin.jsp?EISESSION={$SESSION-ID}&amp;cType=ZIP&amp;id={$ID}">Save</a>
+                        <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=ZIP&amp;id={$ID}">Save</a>
                     </td>
                 </xsl:when>
                 <xsl:otherwise/>
@@ -294,7 +294,7 @@
         </tr>
         <tr>
             <td height="6" colspan="9">
-                <img src="{$RESOURCE-PATH}/i/s.gif" height="6"/>
+                <img src="/engresources/images/encompass/s.gif" height="6"/>
             </td>
         </tr>
     </xsl:template>
