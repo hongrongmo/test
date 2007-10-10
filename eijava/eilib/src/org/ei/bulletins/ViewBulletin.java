@@ -58,6 +58,9 @@ public class ViewBulletin extends HttpServlet
         String referrerURL = null;
         String entryToken = null;
         String sessionID = null;
+        BufferedInputStream bis = null;
+		BufferedOutputStream bout = null;
+		File bulletinFile = null;
 
 		sCache = SessionCache.getInstance(authURL,appName);
 
@@ -173,9 +176,7 @@ public class ViewBulletin extends HttpServlet
 				response.setHeader("Content-disposition", bufHeader.toString());
 			}
 
-			BufferedInputStream bis = null;
-			BufferedOutputStream bout = null;
-			File bulletinFile = null;
+
 
 			StringBuffer fullUrl = new StringBuffer();
 			String fullLink = fullUrl.append(bulletinFileLocation).append("/").append(link).toString();
@@ -239,7 +240,7 @@ public class ViewBulletin extends HttpServlet
 				}
 				catch(Exception e)
 				{
-					log("Error:",e)
+					log("Error:",e);
 				}
 			}
 			if(bout != null)
