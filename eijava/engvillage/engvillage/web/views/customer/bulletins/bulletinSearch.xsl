@@ -67,8 +67,8 @@
 <xsl:template match="PAGE">
 <html>
  <head>
-  <SCRIPT LANGUAGE="Javascript" SRC="{$RESOURCE-PATH}/js/Bulletin.js"/>
-  <SCRIPT LANGUAGE="Javascript" SRC="{$RESOURCE-PATH}/js/StylesheetLinks.js"/>
+  <SCRIPT LANGUAGE="Javascript" SRC="/engresources/images/js/Bulletin.js"/>
+  <SCRIPT LANGUAGE="Javascript" SRC="/engresources/images/js/StylesheetLinks.js"/>
   
   <title>EnCompass Bulletins</title>
 
@@ -80,24 +80,24 @@
   
       <div style="text-align: center">
       <table class="T" border="0" width="99%" cellspacing="0" cellpadding="0">
-                      <tr>
-                        <td valign="top" width="100%">
-                          <img src="{$RESOURCE-PATH}/i/logo.gif" border="0"/>
-                        </td>
-                        <td valign="middle" align="right" width="68">
-                          <a href="/c/s/C?CID=endSession&amp;SYSTEM_LOGOUT=true"><img src="{$RESOURCE-PATH}/i/end.gif"  border="0"/></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td valign="top" height="5" colspan="2">
-                          <img src="{$RESOURCE-PATH}/i/s.gif" border="0" height="5"/>
-                        </td>
-                      </tr>
+	      <tr>
+		<td valign="top" width="100%">
+		  <img src="/engresources/images/ev2logo5.gif" border="0"/>
+		</td>
+		<td valign="middle" align="right" width="68">
+		  <a href="/controller/servlet/Controller?CID=endSession&amp;SYSTEM_LOGOUT=true"><img src="/engresources/images/endsession.gif"  border="0"/></a>
+		</td>
+	      </tr>
+	      <tr>
+		<td valign="top" height="5" colspan="2">
+		  <img src="/engresources/images/encompass/s.gif" border="0" height="5"/>
+		</td>
+	      </tr>
        </table>
        </div>
 
   <div style="text-align: center">
-   <!-- INCLUDE THE GLOBAL LINKS BAR -->
+    <!-- INCLUDE THE GLOBAL LINKS BAR -->
     <xsl:apply-templates select="GLOBAL-LINKS">
 		  <xsl:with-param name="SESSION-ID" select="$SESSION-ID"/>
 		  <xsl:with-param name="SELECTED-DB" select ="$SELECTED-DB"/>
@@ -107,11 +107,20 @@
   </div>
 
   <div style="text-align: center">
-   <table border="0" width="99%" cellspacing="0" cellpadding="0">
+   <table border="0" width="99%" cellspacing="0" cellpadding="0" bgcolor="#C3C8D1">
     <tr>
-     <td valign="top" colspan="0" height="20" class="F"><img src="{$RESOURCE-PATH}/i/s.gif" height="20"></img></td>
+     <td valign="top" colspan="0" height="20" class="F">
+     <img src="/engresources/images/encompass/s.gif" height="20"></img>
+     </td>
     </tr>
    </table>
+   <table border="0" width="99%" cellspacing="0" cellpadding="0">
+	    <tr>
+		<td valign="top" colspan="0" height="20" class="F">
+		    <img src="/engresources/images/encompass/s.gif" height="20"/>
+		</td>
+	    </tr>
+    </table>
   </div>
 
   <div style="text-align: center">
@@ -119,7 +128,7 @@
     <tr>
      <td width="24%" valign="top">
       <!-- Right side table for search form -->
-      <form name="search" method="post" action="/c/s/C">
+      <form name="search" method="get" action="/controller/servlet/Controller">
       <input type="hidden" name="docIndex" value="1"/>
       <input type="hidden" name="litcr" value="{$LITCR}"/>
       <input type="hidden" name="patcr" value="{$PATCR}"/>
@@ -127,31 +136,31 @@
       <input type="hidden" name="CID" value="bulletinResults"/>
       <table border="0" cellspacing="0" cellpadding="0" width="100%">
        <tr>
-        <td width="6"><img src="{$RESOURCE-PATH}/i/s.gif" width="4"></img></td>
+        <td width="6"><img src="/engresources/images/encompass/s.gif" width="4"></img></td>
 
-        <td valign="top" align="middle"><img src="{$RESOURCE-PATH}/i/arc.gif" border="0"></img></td>
+        <td valign="top" align="middle"><img src="/engresources/images/encompass/arc.gif" border="0"></img></td>
        </tr>
 
        <tr>
-        <td width="6"><img src="{$RESOURCE-PATH}/i/s.gif" width="4"></img></td>
+        <td width="6"><img src="/engresources/images/i/s.gif" width="4"></img></td>
 
-        <td valign="top" height="20"><img src="{$RESOURCE-PATH}/i/s.gif" height="20"></img></td>
+        <td valign="top" height="20"><img src="/engresources/images/encompass/s.gif" height="20"></img></td>
        </tr>
 
        <tr>
-        <td width="6"><img src="{$RESOURCE-PATH}/i/s.gif" width="4"></img></td>
+        <td width="6"><img src="/engresources/images/encompass/s.gif" width="4"></img></td>
 
         <td valign="top"><a class="BT">In order to view the Bulletins Archives, please select Database, Year of Publication and Category and hit the "Display" button.</a></td>
        </tr>
 
        <tr>
-        <td width="6"><img src="{$RESOURCE-PATH}/i/s.gif" width="4"></img></td>
+        <td width="6"><img src="/engresources/images/encompass/s.gif" width="4"></img></td>
 
-        <td valign="top" height="15"><img src="{$RESOURCE-PATH}/i/s.gif" height="15"></img></td>
+        <td valign="top" height="15"><img src="/engresources/images/encompass/s.gif" height="15"></img></td>
        </tr>
 
        <tr>
-        <td width="6"><img src="{$RESOURCE-PATH}/i/s.gif" width="4"></img></td>
+        <td width="6"><img src="/engresources/images/encompass/s.gif" width="4"></img></td>
 
         <td valign="top"><a class="S"><b>Select Database</b></a></td>
        </tr>
@@ -181,19 +190,19 @@
        </tr>
 
        <tr>
-        <td width="6"><img src="{$RESOURCE-PATH}/i/s.gif" width="4"></img></td>
+        <td width="6"><img src="/engresources/images/s.gif" width="4"></img></td>
 
-        <td valign="top" height="10"><img src="{$RESOURCE-PATH}/i/s.gif" height="10"></img></td>
+        <td valign="top" height="10"><img src="/engresources/images/s.gif" height="10"></img></td>
        </tr>
 
        <tr>
-        <td width="6"><img src="{$RESOURCE-PATH}/i/s.gif" width="4"></img></td>
+        <td width="6"><img src="/engresources/images/s.gif" width="4"></img></td>
 
         <td valign="top"><a class="S"><b>Select Year of Publication</b></a></td>
        </tr>
 
        <tr>
-        <td width="6"><img src="{$RESOURCE-PATH}/i/s.gif" width="4"></img></td>
+        <td width="6"><img src="/engresources/images/s.gif" width="4"></img></td>
 
         <td valign="top">&nbsp; &nbsp; &nbsp; <a class="S">
         <!-- Start of table for search form -->
@@ -204,19 +213,19 @@
        </tr>
 
        <tr>
-        <td width="6"><img src="{$RESOURCE-PATH}/i/s.gif" width="4"></img></td>
+        <td width="6"><img src="/engresources/images/s.gif" width="4"></img></td>
 
-        <td valign="top" height="10"><img src="{$RESOURCE-PATH}/i/s.gif" height="10"></img></td>
+        <td valign="top" height="10"><img src="/engresources/images/s.gif" height="10"></img></td>
        </tr>
 
        <tr>
-        <td width="6"><img src="{$RESOURCE-PATH}/i/s.gif" width="4"></img></td>
+        <td width="6"><img src="/engresources/images/s.gif" width="4"></img></td>
 
         <td valign="top"><a class="S"><b>Select Category</b></a></td>
        </tr>
 
        <tr>
-        <td width="6"><img src="{$RESOURCE-PATH}/i/s.gif" width="4"></img></td>
+        <td width="6"><img src="/engresources/images/s.gif" width="4"></img></td>
 
         <td valign="top">&nbsp; &nbsp; &nbsp;
          <!-- Start of table for search form -->
@@ -226,173 +235,173 @@
        </tr>
 
        <tr>
-        <td valign="top" height="15" colspan="2"><img src="{$RESOURCE-PATH}/i/s.gif" height="15"></img></td>
+        <td valign="top" height="15" colspan="2"><img src="/engresources/images/s.gif" height="15"></img></td>
        </tr>
 
        <tr>
-        <td width="6"><img src="{$RESOURCE-PATH}/i/s.gif" width="4"></img></td>
+        <td width="6"><img src="/engresources/images/s.gif" width="4"></img></td>
 
-        <td valign="top">&nbsp; &nbsp; &nbsp; <input type="image" name="display" value="Display" src="{$RESOURCE-PATH}/i/display.gif" border="0"></input></td>
+        <td valign="top">&nbsp; &nbsp; &nbsp; <input type="image" name="display" value="Display" src="/engresources/images/encompass/display.gif" border="0"></input></td>
        </tr>
       </table>
       </form>
      </td>
 
-     <td width="25"><img src="{$RESOURCE-PATH}/i/s.gif" width="25"></img></td>
+     <td width="25"><img src="/engresources/images/s.gif" width="25"></img></td>
 
-     <td background="{$RESOURCE-PATH}/i/dots1.gif" width="4"><img src="{$RESOURCE-PATH}/i/s.gif" width="4"></img></td>
+     <td background="/engresources/images/encompass/dots1.gif" width="4"><img src="/engresources/images/s.gif" width="4"></img></td>
 
-     <td width="15"><img src="{$RESOURCE-PATH}/i/s.gif" width="15"></img></td>
+     <td width="15"><img src="/engresources/images/s.gif" width="15"></img></td>
 
      <td valign="top" width="76%">
       <!-- Left side table for bulletins display -->
 
       <table border="0" cellspacing="0" cellpadding="0" width="100%">
        <tr>
-        <td valign="top" align="middle" colspan="3"><img src="{$RESOURCE-PATH}/i/bul1.gif" border="0"></img></td>
+        <td valign="top" align="middle" colspan="3"><img src="/engresources/images/encompass/bul1.gif" border="0"></img></td>
        </tr>
 
        <tr>
-        <td height="15" colspan="3"><img src="{$RESOURCE-PATH}/i/s.gif" height="15"></img></td>
+        <td height="15" colspan="3"><img src="/engresources/images/s.gif" height="15"></img></td>
        </tr>
        <xsl:if test="boolean($HAS-LIT='true')">
        <tr>
-        <td width="5"><img src="{$RESOURCE-PATH}/i/s.gif" width="5"></img></td>
+        <td width="5"><img src="/engresources/images/s.gif" width="5"></img></td>
 
-        <td valign="top" colspan="2"><img src="{$RESOURCE-PATH}/i/lit.gif" border="0"></img></td>
+        <td valign="top" colspan="2"><img src="/engresources/images/encompass/lit.gif" border="0"></img></td>
        </tr>
 
        <tr>
-        <td width="5"><img src="{$RESOURCE-PATH}/i/s.gif" width="5"></img></td>
+        <td width="5"><img src="/engresources/images/encompass/s.gif" width="5"></img></td>
 
         <td valign="top">
          <table border="0" cellspacing="0" cellpadding="0" width="100%">
           <tr>
-           <td class="RMC" valign="top" colspan="11" height="1"><img src="{$RESOURCE-PATH}/i/s.gif" height="1"></img></td>
+           <td class="RMC" valign="top" colspan="11" height="1"><img src="/engresources/images/encompass/s.gif" height="1"></img></td>
           </tr>
 
           <tr>
-           <td class="RMC" width="1"><img src="{$RESOURCE-PATH}/i/s.gif" width="1"></img></td>
+           <td class="RMC" width="1"><img src="/engresources/images/encompass/s.gif" width="1"></img></td>
 
            <td valign="top">
             <table border="0" cellspacing="0" cellpadding="0" width="100%">
              <tr>
-              <td width="3"><img src="{$RESOURCE-PATH}/i/s.gif" width="3"></img></td>
+              <td width="3"><img src="/engresources/images/encompass/s.gif" width="3"></img></td>
 
               <td valign="top" width="30%"><a class="M"><b>Category</b></a></td>
 
-              <td width="5"><img src="{$RESOURCE-PATH}/i/s.gif" width="5"></img></td>
+              <td width="5"><img src="/engresources/images/encompass/s.gif" width="5"></img></td>
 
               <td valign="top" width="15%"><a class="M"><b>Published Date</b></a></td>
 
              
-              <td width="5"><img src="{$RESOURCE-PATH}/i/s.gif" width="5"></img></td> 
+              <td width="5"><img src="/engresources/images/encompass/s.gif" width="5"></img></td> 
               <td valign="top" width="15%"><a class="M"><b>HTML</b></a></td>
              
             
-              <td width="5"><img src="{$RESOURCE-PATH}/i/s.gif" width="5"></img></td>
+              <td width="5"><img src="/engresources/images/encompass/s.gif" width="5"></img></td>
               <td valign="top" width="15%"><a class="M"><b>PDF</b></a></td>
             
 
-              <td width="5"><img src="{$RESOURCE-PATH}/i/s.gif" width="5"></img></td>
+              <td width="5"><img src="/engresources/images/encompass/s.gif" width="5"></img></td>
               <td valign="top" width="15%"></td>
              </tr>
 
              <tr>
-              <td class="RMC" colspan="11" height="1"><img src="{$RESOURCE-PATH}/i/s.gif" height="1"></img></td>
+              <td class="RMC" colspan="11" height="1"><img src="/engresources/encompass/images/encompass/s.gif" height="1"></img></td>
              </tr>
                <!-- First match -->
                <xsl:apply-templates select="BULLETINS" mode="LT"/>
                    
              <tr>
-              <td height="6" colspan="9"><img src="{$RESOURCE-PATH}/i/s.gif" height="6"></img></td>
+              <td height="6" colspan="9"><img src="/engresources/images/encompass/s.gif" height="6"></img></td>
              </tr>
             </table>
            </td>
 
-           <td class="RMC" width="1"><img src="{$RESOURCE-PATH}/i/s.gif" width="1"></img></td>
+           <td class="RMC" width="1"><img src="/engresources/images/encompass/s.gif" width="1"></img></td>
           </tr>
 
           <tr>
-           <td class="RMC" valign="top" colspan="3" height="1"><img src="{$RESOURCE-PATH}/i/s.gif" height="1"></img></td>
+           <td class="RMC" valign="top" colspan="3" height="1"><img src="/engresources/images/encompass/s.gif" height="1"></img></td>
           </tr>
          </table>
         </td>
 
-        <td width="5"><img src="{$RESOURCE-PATH}/i/s.gif" width="5"></img></td>
+        <td width="5"><img src="/engresources/images/encompass/s.gif" width="5"></img></td>
        </tr>
 
        <tr>
-        <td colspan="3" height="20"><img src="{$RESOURCE-PATH}/i/s.gif" height="20"></img></td>
+        <td colspan="3" height="20"><img src="/engresources/images/encompass/s.gif" height="20"></img></td>
        </tr>
        </xsl:if>
  <xsl:if test="boolean($HAS-PAT='true')">
        <tr>
-        <td width="5"><img src="{$RESOURCE-PATH}/i/s.gif" width="5"></img></td>
+        <td width="5"><img src="/engresources/images/s.gif" width="5"></img></td>
 
-        <td valign="top" colspan="2"><img src="{$RESOURCE-PATH}/i/pat.gif" border="0"></img></td>
+        <td valign="top" colspan="2"><img src="/engresources/images/encompass/pat.gif" border="0"></img></td>
        </tr>
 
        <tr>
-        <td width="5"><img src="{$RESOURCE-PATH}/i/s.gif" width="5"></img></td>
+        <td width="5"><img src="/engresources/images/s.gif" width="5"></img></td>
 
         <td valign="top">
          <table border="0" cellspacing="0" cellpadding="0" width="100%">
           <tr>
-           <td class="RMC" valign="top" colspan="11" height="1"><img src="{$RESOURCE-PATH}/i/s.gif" height="1"></img></td>
+           <td class="RMC" valign="top" colspan="11" height="1"><img src="/engresources/images/encompass/s.gif" height="1"></img></td>
           </tr>
 
           <tr>
-           <td class="RMC" width="1"><img src="{$RESOURCE-PATH}/i/s.gif" width="1"></img></td>
+           <td class="RMC" width="1"><img src="/engresources/images/encompass/s.gif" width="1"></img></td>
 
            <td valign="top">
             <table border="0" cellspacing="0" cellpadding="0" width="100%">
              <tr>
-              <td width="3"><img src="{$RESOURCE-PATH}/i/s.gif" width="3"></img></td>
+              <td width="3"><img src="/engresources/images/encompass/s.gif" width="3"></img></td>
 
               <td valign="top" width="30%"><a class="M"><b>Category</b></a></td>
 
-              <td width="5"><img src="{$RESOURCE-PATH}/i/s.gif" width="5"></img></td>
+              <td width="5"><img src="/engresources/images/encompass/s.gif" width="5"></img></td>
 
               <td valign="top" width="15%"><a class="M"><b>Published Date</b></a></td>
 
              
-              <td width="5"><img src="{$RESOURCE-PATH}/i/s.gif" width="5"></img></td> 
+              <td width="5"><img src="/engresources/images/encompass/s.gif" width="5"></img></td> 
               <td valign="top" width="15%"><a class="M"><b>HTML</b></a></td>
              
 
              
-              <td width="5"><img src="{$RESOURCE-PATH}/i/s.gif" width="5"></img></td> 
+              <td width="5"><img src="/engresources/images/encompass/s.gif" width="5"></img></td> 
               <td valign="top" width="15%"><a class="M"><b>PDF</b></a></td>
              
 
-              <td width="5"><img src="{$RESOURCE-PATH}/i/s.gif" width="5"></img></td>
+              <td width="5"><img src="/engresources/images/encompass/s.gif" width="5"></img></td>
 
               <td valign="top" width="15%"><a class="M"><b>GIF</b></a></td>
              </tr>
 
              <tr>
-              <td class="RMC" colspan="11" height="1"><img src="{$RESOURCE-PATH}/i/s.gif" height="1"></img></td>
+              <td class="RMC" colspan="11" height="1"><img src="/engresources/images/encompass/s.gif" height="1"></img></td>
              </tr>
              <!-- second match-->
               <xsl:apply-templates select="BULLETINS" mode="PT"/>
              
              <tr>
-              <td height="6" colspan="9"><img src="{$RESOURCE-PATH}/i/s.gif" height="6"></img></td>
+              <td height="6" colspan="9"><img src="/engresources/images/encompass/s.gif" height="6"></img></td>
              </tr>
             </table>
            </td>
 
-           <td class="RMC" width="1"><img src="{$RESOURCE-PATH}/i/s.gif" width="1"></img></td>
+           <td class="RMC" width="1"><img src="/engresources/images/encompass/s.gif" width="1"></img></td>
           </tr>
 
           <tr>
-           <td class="RMC" valign="top" colspan="3" height="1"><img src="{$RESOURCE-PATH}/i/s.gif" height="1"></img></td>
+           <td class="RMC" valign="top" colspan="3" height="1"><img src="/engresources/images/encompass/s.gif" height="1"></img></td>
           </tr>
          </table>
         </td>
 
-        <td width="5"><img src="{$RESOURCE-PATH}/i/s.gif" width="5"></img></td>
+        <td width="5"><img src="/engresources/images/encompass/s.gif" width="5"></img></td>
        </tr>
         </xsl:if>
       
@@ -402,7 +411,7 @@
     </tr>
 
     <tr>
-     <td height="20"><img src="{$RESOURCE-PATH}/i/s.gif" height="20"></img></td>
+     <td height="20"><img src="/engresources/images/encompass/s.gif" height="20"></img></td>
     </tr>
    </table>
   </div>
