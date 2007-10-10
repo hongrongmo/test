@@ -156,6 +156,28 @@
 	</td>
 </xsl:template>
 
+<xsl:template match="BULLETINS">
+	<xsl:param name="LINK"/>
+	<xsl:param name="ENCODED-DATABASE"/>
+	<xsl:param name="TARGET">_self</xsl:param>
+	<xsl:param name="RESOURCE-PATH"/>
+
+	<!-- Bulletin Search -->
+	<td valign="bottom" width="2"><img src="/engresources/images/s.gif" width="2"/></td>
+	<td valign="bottom" align="right">
+		<a TARGET="{$TARGET}" href="/controller/servlet/Controller?CID=bulletinSearch&amp;database=1024">
+		<xsl:choose>
+			<xsl:when test="($LINK='Bulletins')">
+				<img src="/engresources/images/encompass/bu1.gif" border="0" />
+			</xsl:when>
+			<xsl:otherwise>
+				<img src="/engresources/images/encompass/bu2.gif" border="0"/>
+			</xsl:otherwise>
+		</xsl:choose>
+		</a>
+	</td>
+</xsl:template>
+
 <xsl:template match="THESAURUS">
 	<xsl:param name="LINK"/>
 	<xsl:param name="ENCODED-DATABASE"/>
