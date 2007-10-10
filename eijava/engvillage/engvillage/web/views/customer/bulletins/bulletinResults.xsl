@@ -72,52 +72,63 @@
         <html>
             <head>
                 <title>EnCompass Bulletins</title>
-                <SCRIPT LANGUAGE="Javascript" SRC="{$RESOURCE-PATH}/js/Bulletin.js"/>
-                <SCRIPT LANGUAGE="Javascript" SRC="{$RESOURCE-PATH}/js/StylesheetLinks.js"/>
+                <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Bulletin.js"/>
+                <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
             </head>
             <body>
                <div style="text-align: center">
-               <table class="T" border="0" width="99%" cellspacing="0" cellpadding="0">
-                      <tr>
-                        <td valign="top" width="100%">
-                          <img src="{$RESOURCE-PATH}/i/logo.gif" border="0"/>
-                        </td>
-                        <td valign="middle" align="right" width="68">
-                          <a href="/c/s/C?CID=endSession&amp;SYSTEM_LOGOUT=true"><img src="{$RESOURCE-PATH}/i/end.gif"  border="0"/></a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td valign="top" height="5" colspan="2">
-                          <img src="{$RESOURCE-PATH}/i/s.gif" border="0" height="5"/>
-                        </td>
-                      </tr>
-               </table>
-               </div>
-                <div style="text-align: center">
-                    <!-- INCLUDE THE GLOBAL LINKS BAR -->
-                    <xsl:apply-templates select="GLOBAL-LINKS">
-                        <xsl:with-param name="SESSION-ID" select="$SESSION-ID"/>
-                        <xsl:with-param name="SELECTED-DB" select="$SELECTED-DB"/>
-                        <xsl:with-param name="LINK">Bulletins</xsl:with-param>
-                        <xsl:with-param name="RESOURCE-PATH" select="$RESOURCE-PATH"/>
-                    </xsl:apply-templates>
-                </div>
-                <div style="text-align: center">
-                    <table border="0" width="99%" cellspacing="0" cellpadding="0">
-                        <tr>
-                            <td valign="top" colspan="0" height="20" class="F">
-                                <img src="{$RESOURCE-PATH}/i/s.gif" height="20"/>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
+	             <table class="T" border="0" width="99%" cellspacing="0" cellpadding="0">
+	       	      <tr>
+	       		<td valign="top" width="100%">
+	       		  <img src="/engresources/images/ev2logo5.gif" border="0"/>
+	       		</td>
+	       		<td valign="middle" align="right" width="68">
+	       		  <a href="/controller/servlet/Controller?CID=endSession&amp;SYSTEM_LOGOUT=true">
+	       		  <img src="/engresources/images/endsession.gif"  border="0"/></a>
+	       		</td>
+	       	      </tr>
+	       	      <tr>
+	       		<td valign="top" height="5" colspan="2">
+	       		  <img src="/engresources/images/encompass/s.gif" border="0" height="5"/>
+	       		</td>
+	       	      </tr>
+	              </table>
+	              </div>
+	       
+	         <div style="text-align: center">
+	           <!-- INCLUDE THE GLOBAL LINKS BAR -->
+	           <xsl:apply-templates select="GLOBAL-LINKS">
+	       		  <xsl:with-param name="SESSION-ID" select="$SESSION-ID"/>
+	       		  <xsl:with-param name="SELECTED-DB" select ="$SELECTED-DB"/>
+	       		  <xsl:with-param name="LINK">Bulletins</xsl:with-param>
+	       		  <xsl:with-param name="RESOURCE-PATH" select="$RESOURCE-PATH"/>
+	           </xsl:apply-templates>
+	         </div>
+	       
+	         <div style="text-align: center">
+	          <table border="0" width="99%" cellspacing="0" cellpadding="0" bgcolor="#C3C8D1">
+	           <tr>
+	            <td valign="top" colspan="0" height="20" class="F">
+	            <img src="/engresources/images/encompass/s.gif" height="20"></img>
+	            </td>
+	           </tr>
+	          </table>
+	          <table border="0" width="99%" cellspacing="0" cellpadding="0">
+	       	    <tr>
+	       		<td valign="top" colspan="0" height="20" class="F">
+	       		    <img src="/engresources/images/encompass/s.gif" height="20"/>
+	       		</td>
+	       	    </tr>
+	           </table>
+  		</div>
                 <div style="text-align: center">
                     <table class="F" border="0" cellspacing="0" cellpadding="0" width="99%">
                         <tr>
                             <td width="24%" valign="top">
                                 <!-- Right side table for search form -->
-                                <form name="search" method="post" action="/c/s/C?CID=bulletinResults">
-                                    <input type="hidden" name="docIndex" value="1"/>
+                                <form name="search" method="get" action="/controller/servlet/Controller">
+                                     <input type="hidden" name="CID" value="bulletinResults"/>
+                                     <input type="hidden" name="docIndex" value="1"/>
                                      <input type="hidden" name="litcr" value="{$LITCR}"/>
                                      <input type="hidden" name="patcr" value="{$PATCR}"/>
                                      <input type="hidden" name="database" value="{$SELECTED-DB}"/>
@@ -125,23 +136,23 @@
                                     <table border="0" cellspacing="0" cellpadding="0" width="100%">
                                         <tr>
                                             <td width="6">
-                                                <img src="{$RESOURCE-PATH}/i/s.gif" width="4"/>
+                                                <img src="/engresources/images/encompass/s.gif" width="4"/>
                                             </td>
                                             <td valign="top" align="middle">
-                                                <img src="{$RESOURCE-PATH}/i/arc.gif" border="0"/>
+                                                <img src="/engresources/images/encompass/arc.gif" border="0"/>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td width="6">
-                                                <img src="{$RESOURCE-PATH}/i/s.gif" width="4"/>
+                                                <img src="/engresources/images/encompass/s.gif" width="4"/>
                                             </td>
                                             <td valign="top" height="20">
-                                                <img src="{$RESOURCE-PATH}/i/s.gif" height="20"/>
+                                                <img src="/engresources/images/encompass/s.gif" height="20"/>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td width="6">
-                                                <img src="{$RESOURCE-PATH}/i/s.gif" width="4"/>
+                                                <img src="/engresources/images/encompass/s.gif" width="4"/>
                                             </td>
                                             <td valign="top">
                                                 <a class="BT">In order to view the Bulletins Archives, please select
@@ -150,15 +161,15 @@
                                         </tr>
                                         <tr>
                                             <td width="6">
-                                                <img src="{$RESOURCE-PATH}/i/s.gif" width="4"/>
+                                                <img src="/engresources/images/encompass/s.gif" width="4"/>
                                             </td>
                                             <td valign="top" height="15">
-                                                <img src="{$RESOURCE-PATH}/i/s.gif" height="15"/>
+                                                <img src="/engresources/images/encompass/s.gif" height="15"/>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td width="6">
-                                                <img src="{$RESOURCE-PATH}/i/s.gif" width="4"/>
+                                                <img src="/engresources/images/encompass/s.gif" width="4"/>
                                             </td>
                                             <td valign="top">
                                                 <a class="S">
@@ -188,15 +199,15 @@
                                         </tr>
                                         <tr>
                                             <td width="6">
-                                                <img src="{$RESOURCE-PATH}/i/s.gif" width="4"/>
+                                                <img src="/engresources/images/encompass/s.gif" width="4"/>
                                             </td>
                                             <td valign="top" height="10">
-                                                <img src="{$RESOURCE-PATH}/i/s.gif" height="10"/>
+                                                <img src="/engresources/images/encompass/s.gif" height="10"/>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td width="6">
-                                                <img src="{$RESOURCE-PATH}/i/s.gif" width="4"/>
+                                                <img src="/engresources/images/encompass/s.gif" width="4"/>
                                             </td>
                                             <td valign="top">
                                                 <a class="S">
@@ -206,7 +217,7 @@
                                         </tr>
                                         <tr>
                                             <td width="6">
-                                                <img src="{$RESOURCE-PATH}/i/s.gif" width="4"/>
+                                                <img src="/engresources/images/encompass/s.gif" width="4"/>
                                             </td>
                                             <td valign="top">&nbsp; &nbsp; &nbsp; <a class="S">
                                                     <!-- Start of table for search form -->
@@ -217,15 +228,15 @@
                                         </tr>
                                         <tr>
                                             <td width="6">
-                                                <img src="{$RESOURCE-PATH}/i/s.gif" width="4"/>
+                                                <img src="/engresources/images/encompass/s.gif" width="4"/>
                                             </td>
                                             <td valign="top" height="10">
-                                                <img src="{$RESOURCE-PATH}/i/s.gif" height="10"/>
+                                                <img src="/engresources/images/encompass/s.gif" height="10"/>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td width="6">
-                                                <img src="{$RESOURCE-PATH}/i/s.gif" width="4"/>
+                                                <img src="/engresources/images/encompass/s.gif" width="4"/>
                                             </td>
                                             <td valign="top">
                                                 <a class="S">
@@ -235,7 +246,7 @@
                                         </tr>
                                         <tr>
                                             <td width="6">
-                                                <img src="{$RESOURCE-PATH}/i/s.gif" width="4"/>
+                                                <img src="/engresources/images/encompass/s.gif" width="4"/>
                                             </td>
                                             <td valign="top">&nbsp; &nbsp; &nbsp;
                                                 <!-- Start of table for search form -->
@@ -245,50 +256,50 @@
                                         </tr>
                                         <tr>
                                             <td valign="top" height="15" colspan="2">
-                                                <img src="{$RESOURCE-PATH}/i/s.gif" height="15"/>
+                                                <img src="/engresources/images/encompass/s.gif" height="15"/>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td width="6">
-                                                <img src="{$RESOURCE-PATH}/i/s.gif" width="4"/>
+                                                <img src="/engresources/images/encompass/s.gif" width="4"/>
                                             </td>
                                             <td valign="top">&nbsp; &nbsp; &nbsp; <input type="image"
-                                                    name="display" value="Display" src="{$RESOURCE-PATH}/i/display.gif" border="0"/>
+                                                    name="display" value="Display" src="/engresources/images/encompass/display.gif" border="0"/>
                                             </td>
                                         </tr>
                                     </table>
                                 </form>
                             </td>
                             <td width="25">
-                                <img src="{$RESOURCE-PATH}/i/s.gif" width="25"/>
+                                <img src="/engresources/images/encompass/s.gif" width="25"/>
                             </td>
-                            <td background="{$RESOURCE-PATH}/i/dots1.gif" width="4">
-                                <img src="{$RESOURCE-PATH}/i/s.gif" width="4"/>
+                            <td background="/engresources/images/encompass/dots1.gif" width="4">
+                                <img src="/engresources/images/encompass/s.gif" width="4"/>
                             </td>
                             <td width="15">
-                                <img src="{$RESOURCE-PATH}/i/s.gif" width="15"/>
+                                <img src="/engresources/images/encompass/s.gif" width="15"/>
                             </td>
                             <td valign="top" width="76%">
                                 <!-- Left side table for bulletins display -->
                                 <table border="0" cellspacing="0" cellpadding="0" width="100%">
                                     <tr>
                                         <td valign="top" align="middle" colspan="3">
-                                            <img src="{$RESOURCE-PATH}/i/abl.gif" border="0"/>
+                                            <img src="/engresources/images/encompass/abl.gif" border="0"/>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td height="15" colspan="2" align="right">
-                                            <a  class="L" href="/c/s/C?CID=bulletinSearch&amp;queryStr={$ENCODED-QSTR}&amp;EISESSION={$SESSION-ID}&amp;database={$SELECTED-DB}">
-                                                <img src="{$RESOURCE-PATH}/i/rec.gif" border="0"/>
+                                            <a  class="L" href="/controller/servlet/Controller?CID=bulletinSearch&amp;queryStr={$ENCODED-QSTR}&amp;EISESSION={$SESSION-ID}&amp;database={$SELECTED-DB}">
+                                                <img src="/engresources/images/encompass/rec.gif" border="0"/>
                                             </a>
                                         </td>
                                         <td width="5" height="1">
-                                            <img src="{$RESOURCE-PATH}/i/s.gif" width="5"/>
+                                            <img src="/engresources/images/encompass/s.gif" width="5"/>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td width="10">
-                                            <img src="{$RESOURCE-PATH}/i/s.gif" width="10"/>
+                                            <img src="/engresources/images/encompass/s.gif" width="10"/>
                                         </td>
                                         <td valign="top" colspan="2">
                                             <a class="S">
@@ -309,30 +320,30 @@
                                     </tr>
                                     <tr>
                                         <td height="8" colspan="3">
-                                            <img src="{$RESOURCE-PATH}/i/s.gif" height="8"/>
+                                            <img src="/engresources/images/encompass/s.gif" height="8"/>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td width="10">
-                                            <img src="{$RESOURCE-PATH}/i/s.gif" width="10"/>
+                                            <img src="/engresources/images/encompass/s.gif" width="10"/>
                                         </td>
                                         <td valign="top">
                                             <!-- table for archive table -->
                                             <table border="0" cellspacing="0" cellpadding="0" width="100%">
                                                 <tr>
                                                     <td class="RMC" colspan="3" height="1">
-                                                        <img src="{$RESOURCE-PATH}/i/s.gif" height="1"/>
+                                                        <img src="/engresources/images/encompass/s.gif" height="1"/>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="RMC" width="1">
-                                                        <img src="{$RESOURCE-PATH}/i/s.gif" width="1"/>
+                                                        <img src="/engresources/images/encompass/s.gif" width="1"/>
                                                     </td>
                                                     <td valign="top">
                                                         <table border="0" cellspacing="0" cellpadding="0" width="100%">
                                                             <tr>
                                                             <td width="4">
-                                                            <img src="{$RESOURCE-PATH}/i/s.gif" width="4"/>
+                                                            <img src="/engresources/images/encompass/s.gif" width="4"/>
                                                             </td>
                                                             <td valign="top">
                                                             <a class="M">
@@ -340,7 +351,7 @@
                                                             </a>
                                                             </td>
                                                             <td valign="top" width="10">
-                                                            <img src="{$RESOURCE-PATH}/i/s.gif" width="10"/>
+                                                            <img src="/engresources/images/encompass/s.gif" width="10"/>
                                                             </td>
                                                             <td valign="top">
                                                             <a class="M">
@@ -350,7 +361,7 @@
                                                             
                                                             
                                                             <td valign="top" width="4">
-                                                            <img src="{$RESOURCE-PATH}/i/s.gif" width="10"/>
+                                                            <img src="/engresources/images/encompass/s.gif" width="10"/>
                                                             </td>
                                                             <td valign="top">
                                                             <a class="M">
@@ -361,7 +372,7 @@
                                                             
                                                             
                                                             <td valign="top" width="4">
-                                                            <img src="{$RESOURCE-PATH}/i/s.gif" width="4"/>
+                                                            <img src="/engresources/images/encompass/s.gif" width="4"/>
                                                             </td>
                                                             <td valign="top">
                                                             <a class="M">
@@ -371,13 +382,13 @@
                                                             
                                                             
                                                             <td valign="top" width="4">
-                                                            <img src="{$RESOURCE-PATH}/i/s.gif" width="4"/>
+                                                            <img src="/engresources/images/encompass/s.gif" width="4"/>
                                                             </td>
                                                             <xsl:choose>
                                                             <xsl:when test="($DB = '1')">
                                                             <tr>
                                                             <td class="RMC" colspan="8" height="1">
-                                                            <img src="{$RESOURCE-PATH}/i/s.gif" height="1"/>
+                                                            <img src="/engresources/images/encompass/s.gif" height="1"/>
                                                             </td>
                                                             </tr>
                                                             </xsl:when>
@@ -389,7 +400,7 @@
                                                             </td>
                                                             <tr>
                                                             <td class="RMC" colspan="16" height="1">
-                                                            <img src="{$RESOURCE-PATH}/i/s.gif" height="1"/>
+                                                            <img src="/engresources/images/encompass/s.gif" height="1"/>
                                                             </td>
                                                             </tr>
                                                             </xsl:otherwise>
@@ -398,35 +409,35 @@
                                                             <xsl:apply-templates select="BULLETINS" mode="RESULTS"/>
                                                             <tr>
                                                             <td colspan="6" height="6">
-                                                            <img src="{$RESOURCE-PATH}/i/s.gif" height="6"/>
+                                                            <img src="/engresources/images/encompass/s.gif" height="6"/>
                                                             </td>
                                                             </tr>
                                                         </table>
                                                     </td>
                                                     <td class="RMC" width="1">
-                                                        <img src="{$RESOURCE-PATH}/i/s.gif" width="1"/>
+                                                        <img src="/engresources/images/encompass/s.gif" width="1"/>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="RMC" colspan="3" height="1">
-                                                        <img src="{$RESOURCE-PATH}/i/s.gif" height="1"/>
+                                                        <img src="/engresources/images/encompass/s.gif" height="1"/>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td colspan="3" height="15">
-                                                        <img src="{$RESOURCE-PATH}/i/s.gif" height="15"/>
+                                                        <img src="/engresources/images/encompass/s.gif" height="15"/>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td colspan="3" align="middle">
                                                         <xsl:if test="($QCO &gt; 0)">
                                                             <xsl:if test="($PRV &gt; 0)">
-                                                            <a href="/c/s/C?CID=bulletinResults&amp;docIndex={$PRV}&amp;queryStr={$ENCODED-QSTR}&amp;EISESSION={$SESSION-ID}&amp;database={$SELECTED-DB}">
-                                                            <img src="{$RESOURCE-PATH}/i/pp.gif" border="0"/>
+                                                            <a href="/controller/servlet/Controller?CID=bulletinResults&amp;docIndex={$PRV}&amp;queryStr={$ENCODED-QSTR}&amp;EISESSION={$SESSION-ID}&amp;database={$SELECTED-DB}">
+                                                            <img src="/engresources/images/encompass/pp.gif" border="0"/>
                                                             </a>
                                                             </xsl:if> &nbsp; &nbsp; &nbsp; <xsl:if test="($NXT &gt; 0)">
-                                                            <a href="/c/s/C?CID=bulletinResults&amp;docIndex={$NXT}&amp;queryStr={$ENCODED-QSTR}&amp;EISESSION={$SESSION-ID}&amp;database={$SELECTED-DB}">
-                                                            <img src="{$RESOURCE-PATH}/i/np.gif" border="0"/>
+                                                            <a href="/controller/servlet/Controller?CID=bulletinResults&amp;docIndex={$NXT}&amp;queryStr={$ENCODED-QSTR}&amp;EISESSION={$SESSION-ID}&amp;database={$SELECTED-DB}">
+                                                            <img src="/engresources/images/encompass/np.gif" border="0"/>
                                                             </a>
                                                             </xsl:if>
                                                         </xsl:if>
@@ -435,7 +446,7 @@
                                             </table>
                                         </td>
                                         <td width="5">
-                                            <img src="{$RESOURCE-PATH}/i/s.gif" width="5"/>
+                                            <img src="/engresources/images/encompass/s.gif" width="5"/>
                                         </td>
                                     </tr>
                                 </table>
@@ -443,7 +454,7 @@
                         </tr>
                         <tr>
                             <td height="20">
-                                <img src="{$RESOURCE-PATH}/i/s.gif" height="20"/>
+                                <img src="/engresources/images/encompass/s.gif" height="20"/>
                             </td>
                         </tr>
                     </table>
