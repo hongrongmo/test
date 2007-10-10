@@ -14,9 +14,42 @@
       <param-name>controllerServer</param-name>
       <param-value>@controller_server@</param-value>
     </context-param>
-
-     
-   
+    <context-param>
+       <param-name>bulletinServer</param-name>
+       <param-value>@bulletin_server@</param-value>
+    </context-param>
+    <context-param>
+       	<param-name>authURL</param-name>
+   	<param-value>http://@session_server@/sessionservice/servlet/SessionService</param-value>
+    </context-param>
+    <context-param>
+    	<param-name>logURL</param-name>
+        <param-value>http://@log_server@/logservice/servlet/LogServer</param-value>
+    </context-param>
+    
+     <servlet>
+          <servlet-name>ViewBulletin</servlet-name>
+          <description>
+          This servlet is used for display bulletin
+          </description>
+          <servlet-class>org.ei.bulletins.ViewBulletin</servlet-class>
+          <init-param>
+          	<param-name>logURL</param-name>
+        	<param-value>http://@log_server@/logservice/servlet/LogServer</param-value>
+          </init-param>
+          <init-param>
+          	<param-name>authURL</param-name>
+   		<param-value>http://@session_server@/sessionservice/servlet/SessionService</param-value>
+          </init-param>
+          <init-param>
+	        <param-name>appName</param-name>
+	        <param-value>EngVillage2</param-value>
+          </init-param>
+          <init-param>
+	         <param-name>bulletinFileLocation</param-name>
+	         <param-value>c:/tmp/data</param-value>
+    	</init-param>
+    </servlet>
     <servlet>
       <servlet-name>ConnectionPoolService</servlet-name>
       <description>
@@ -45,6 +78,11 @@
     <servlet-mapping>
         <servlet-name>HeartbeatService</servlet-name>
         <url-pattern>/servlet/HeartbeatService</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+            <servlet-name>ViewBulletin</servlet-name>
+            <url-pattern>/servlet/ViewBulletin</url-pattern>
     </servlet-mapping>
 
     <servlet-mapping>
