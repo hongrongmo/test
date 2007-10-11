@@ -32,9 +32,9 @@
             <td valign="top">
              <xsl:choose>
                 <xsl:when test="boolean($LIT-HTML='true')">
-                <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=HTML&amp;id={$ID}" target="_blank">View</a>              
+                <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=HTML&amp;id={$ID}" target="_blank">View</a>              
                 &#160;&#160;
-                <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEHTML&amp;id={$ID}">Save</a>
+                <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEHTML&amp;id={$ID}">Save</a>
                 </xsl:when>
                  
                 <xsl:otherwise>
@@ -50,9 +50,9 @@
             <td valign="top">
              <xsl:choose>
                 <xsl:when test="boolean($LIT-PDF='true')">
-                <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=PDF&amp;id={$ID}" target="_blank">View  </a>          
+                <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=PDF&amp;id={$ID}" target="_blank">View  </a>          
                 &#160;&#160;
-                <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEPDF&amp;id={$ID}">Save</a>
+                <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEPDF&amp;id={$ID}">Save</a>
                 </xsl:when>
                 <xsl:otherwise>
                     <a class="S">View&#160;&#160;Save</a>
@@ -100,9 +100,9 @@
             <td valign="top">
                 <xsl:choose>
                 <xsl:when test="boolean($PAT-HTML='true')">
-                <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=HTML&amp;id={$ID}" target="_blank">View  </a>
+                <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=HTML&amp;id={$ID}" target="_blank">View  </a>
                 &#160;
-                <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEHTML&amp;id={$ID}">Save</a>
+                <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEHTML&amp;id={$ID}">Save</a>
                 </xsl:when>
                 <xsl:otherwise>
                     <a class="S">View&#160;&#160;Save</a>
@@ -117,9 +117,9 @@
             <td valign="top">
                <xsl:choose>
                 <xsl:when test="boolean($PAT-PDF='true')">
-                <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=PDF&amp;id={$ID}" target="_blank">View  </a>
+                <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=PDF&amp;id={$ID}" target="_blank">View  </a>
                 &#160;&#160;
-                <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEPDF&amp;id={$ID}">Save</a>
+                <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEPDF&amp;id={$ID}">Save</a>
                 </xsl:when>
                 <xsl:otherwise>
                     <a class="S">View&#160;&#160;Save</a>
@@ -133,7 +133,7 @@
             <xsl:choose>
                 <xsl:when test="not($ZP='') and not($ZP='null')">
                     <td valign="bottom">
-                        <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=ZIP&amp;id={$ID}">Save</a>
+                        <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=ZIP&amp;id={$ID}">Save</a>
                     </td>
                 </xsl:when>
             </xsl:choose>
@@ -180,9 +180,9 @@
             <td valign="top">
                  <xsl:choose>
                 <xsl:when test="boolean($SHOW-HTML='true')">
-                <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=HTML&amp;id={$ID}" target="_blank">View  </a>
+                <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=HTML&amp;id={$ID}" target="_blank">View  </a>
                 &#160;&#160;
-                <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEHTML&amp;id={$ID}"> Save</a>
+                <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEHTML&amp;id={$ID}"> Save</a>
                 </xsl:when>
                 <xsl:otherwise>
                     <a class="S">View&#160;&#160;Save</a>
@@ -197,9 +197,9 @@
             <td valign="top">
                  <xsl:choose>
                 <xsl:when test="boolean($SHOW-PDF='true')">
-                <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=PDF&amp;id={$ID}" target="_blank">View  </a>
+                <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=PDF&amp;id={$ID}" target="_blank">View  </a>
                 &#160;&#160;
-                <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEPDF&amp;id={$ID}">Save</a>
+                <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEPDF&amp;id={$ID}">Save</a>
                 </xsl:when>
                 <xsl:otherwise>
                     <a class="S">View&#160;&#160;Save</a>
@@ -253,9 +253,9 @@
             <td valign="top">
                  <xsl:choose>
                 <xsl:when test="boolean($SHOW-HTML='true')">
-                <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=HTML&amp;id={$ID}" target="_blank">View  </a>
+                <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=HTML&amp;id={$ID}" target="_blank">View  </a>
                 &#160;&#160;
-                <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEHTML&amp;id={$ID}">Save</a>
+                <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEHTML&amp;id={$ID}">Save</a>
                 </xsl:when>
                 <xsl:otherwise>
                     <a class="S">View&#160;&#160;Save</a>
@@ -270,9 +270,9 @@
             <td valign="top">
                 <xsl:choose>
                 <xsl:when test="boolean($SHOW-PDF='true')">
-                <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=PDF&amp;id={$ID}" target="_blank">View  </a>
+                <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=PDF&amp;id={$ID}" target="_blank">View  </a>
                 &#160;&#160;
-                <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEPDF&amp;id={$ID}">Save</a>
+                <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEPDF&amp;id={$ID}">Save</a>
                 </xsl:when>
                 <xsl:otherwise>
                     <a class="S">View&#160;&#160;Save</a>
@@ -286,7 +286,7 @@
             <xsl:choose>
                 <xsl:when test="not($ZP='') and not($ZP='null')">
                     <td valign="bottom">
-                        <a class="MBL" href="/engvillage/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=ZIP&amp;id={$ID}">Save</a>
+                        <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=ZIP&amp;id={$ID}">Save</a>
                     </td>
                 </xsl:when>
                 <xsl:otherwise/>
