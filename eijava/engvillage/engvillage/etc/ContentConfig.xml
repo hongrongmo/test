@@ -153,6 +153,13 @@
             <DISPLAYURL>http://@data_server@/engvillage/views/world/GeneralError.xsl</DISPLAYURL>
             <MIMETYPE>text/html</MIMETYPE>
         </CONTENTDESCRIPTOR>
+        
+        <CONTENTDESCRIPTOR BULKMODE="NO">
+	            <ID>bulletinException</ID>
+	            <DATASOURCEURL>http://{{DATA_SERVER}}/village/models/world/exception.jsp</DATASOURCEURL>
+	            <DISPLAYURL>http://{{DATA_SERVER}}/village/views/world/BulletinError.xsl</DISPLAYURL>
+	            <MIMETYPE>text/html</MIMETYPE>
+        </CONTENTDESCRIPTOR>
 
         <!-- *************************** Displays the  About EI page ******************************** -->
 
@@ -286,8 +293,6 @@
 
 
     <AUTHGROUP NAME="customer">
-    
-        <!-- ******************   LinkedTermDetail CID END **********************  -->
 
         <CONTENTDESCRIPTOR BULKMODE="NO">
             <ID>whoami</ID>
@@ -350,14 +355,15 @@
     <!-- ******************     End of Fulltext Link CID ********************* -->
     
     <!-- ******************     Encompass Long Link Terms CID   ****************   -->
+
+    <CONTENTDESCRIPTOR BULKMODE="NO">
+    	<ID>encLongterms</ID>
+    	<DATASOURCEURL>http://@data_server@/engvillage/models/customer/encLongterms.jsp</DATASOURCEURL>
+    	<DISPLAYURL>http://@data_server@/engvillage/views/customer/encLongterms.xsl</DISPLAYURL>
+    	<MIMETYPE>text/xml</MIMETYPE>
+    </CONTENTDESCRIPTOR>
     
-	<CONTENTDESCRIPTOR BULKMODE="NO">
-	    <ID>encLongterms</ID>
-	    <DATASOURCEURL>http://@data_server@/engvillage/models/customer/encLongterms.jsp</DATASOURCEURL>
-	    <DISPLAYURL>http://@data_server@/engvillage/views/customer/encLongterms.xsl</DISPLAYURL>
-	    <MIMETYPE>text/xml</MIMETYPE>
-	</CONTENTDESCRIPTOR>
-	
+    
     <!-- ******************     Tag CID   ****************   -->
 
 
@@ -614,6 +620,31 @@
         </CONTENTDESCRIPTOR>
 
         <!-- ******************   Thesaurus CID End **********************  -->
+
+
+ <!-- ******************   Bulletins CID Begin **********************  -->
+
+        <CONTENTDESCRIPTOR BULKMODE="NO">
+            <ID>bulletinSearch</ID>
+            <DATASOURCEURL>http://@data_server@/engvillage/models/customer/bulletins/bulletinSearch.jsp</DATASOURCEURL>
+            <DISPLAYURL>http://@data_server@/engvillage/views/customer/bulletins/bulletinSearch.xsl</DISPLAYURL>
+            <MIMETYPE>text/html</MIMETYPE>
+        </CONTENTDESCRIPTOR>
+
+        <CONTENTDESCRIPTOR BULKMODE="NO">
+            <ID>bulletinResults</ID>
+            <DATASOURCEURL>http://@data_server@/engvillage/models/customer/bulletins/bulletinResults.jsp</DATASOURCEURL>
+            <DISPLAYURL>http://@data_server@/engvillage/views/customer/bulletins/bulletinResults.xsl</DISPLAYURL>
+            <MIMETYPE>text/html</MIMETYPE>
+        </CONTENTDESCRIPTOR>
+
+        <CONTENTDESCRIPTOR BULKMODE="NO">
+            <ID>viewBulletin</ID>
+            <DATASOURCEURL>http://@data_server@/engvillage/models/customer/bulletins/viewBulletin.jsp</DATASOURCEURL>
+            <DISPLAYURL>http://@data_server@/engvillage/views/world/copy-text.xsl</DISPLAYURL>
+            <MIMETYPE>text/html</MIMETYPE>
+        </CONTENTDESCRIPTOR>
+        <!-- ******************   Bulletins CID END **********************  -->
 
 
         <!-- ******************   Login CID **********************  -->
