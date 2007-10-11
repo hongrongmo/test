@@ -286,6 +286,8 @@
 
 
     <AUTHGROUP NAME="customer">
+    
+        <!-- ******************   LinkedTermDetail CID END **********************  -->
 
         <CONTENTDESCRIPTOR BULKMODE="NO">
             <ID>whoami</ID>
@@ -346,6 +348,16 @@
             </CONTENTDESCRIPTOR>
 
     <!-- ******************     End of Fulltext Link CID ********************* -->
+    
+    <!-- ******************     Encompass Long Link Terms CID   ****************   -->
+    
+	<CONTENTDESCRIPTOR BULKMODE="NO">
+	    <ID>encLongterms</ID>
+	    <DATASOURCEURL>http://@data_server@/engvillage/models/customer/encLongterms.jsp</DATASOURCEURL>
+	    <DISPLAYURL>http://@data_server@/engvillage/views/customer/encLongterms.xsl</DISPLAYURL>
+	    <MIMETYPE>text/xml</MIMETYPE>
+	</CONTENTDESCRIPTOR>
+	
     <!-- ******************     Tag CID   ****************   -->
 
 
