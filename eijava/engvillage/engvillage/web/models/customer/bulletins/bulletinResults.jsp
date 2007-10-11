@@ -38,7 +38,7 @@
     User user = ussession.getUser();
     String cartridges[] = user.getCartridge();
     String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
-    String appID = ussession.getProperty(UserSession.APPLICATION_KEY);
+    //String appID = ussession.getProperty(UserSession.APPLICATION_KEY);
     SessionID sessionIdObj = ussession.getSessionID();
     	
     boolean showLitPdf = false;
@@ -56,13 +56,15 @@
 	if(cartridges[i].toUpperCase().indexOf("PAT_PDF") > -1)
 		showPatPdf = true;
     }
-
+/*
     if(appID == null)
     {
  	appID = "Def";
     }
-    String resourcePath   = eiProps.getProperty("resourcePath"+appID);
 
+    String resourcePath   = eiProps.getProperty("resourcePath"+appID);
+*/
+    String resourcePath   = eiProps.getProperty("resourcePath");
     String queryString = request.getParameter("queryStr");	
     String selectedDB = request.getParameter("database");	
 
