@@ -51,7 +51,7 @@
     User user = ussession.getUser();
     String cartridges[] = user.getCartridge();
     String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
-    String appID = ussession.getProperty(UserSession.APPLICATION_KEY);
+    //String appID = ussession.getProperty(UserSession.APPLICATION_KEY);
      
     SessionID sessionIdObj = ussession.getSessionID();
     BulletinBuilder builder = new BulletinBuilder();
@@ -80,10 +80,10 @@
 		hasPAT = true;	
     }
 	
-    if(appID == null)
-    {
-    	appID = "Def";
-    }
+    //if(appID == null)
+    //{
+    //	appID = "Def";
+    //}
 
     String queryString = request.getParameter("queryStr");	
     String selectedDB = request.getParameter("database");
@@ -150,7 +150,8 @@
   	
   	
 	
-    String resourcePath = eiProps.getProperty("resourcePath"+appID);
+    //String resourcePath = eiProps.getProperty("resourcePath"+appID);
+    String resourcePath = eiProps.getProperty("resourcePath");
   	
     //client.log("EISESSION", sessionIdObj.toString());
     client.log("request", "recentBulletins");
