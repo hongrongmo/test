@@ -145,13 +145,14 @@ public class ViewBulletin extends HttpServlet
 
 				Bulletin bulletin = builder.buildBulletinDetail(id);
 
-				logProperties.put("EISESSION", sesID.toString());
-				logProperties.put("request", "viewBulletin");
-				logProperties.put("dbname", bulletin.getDatabase());
-				logProperties.put("category",bulletin.getCategory());
-				logProperties.put("filename", bulletin.getFileName());
-				logProperties.put("custid", user.getCustomerID());
-				logProperties.put("ctype",cType);
+				client.log("EISESSION", sesID.toString());
+				client.log("request", "viewBulletin");
+				client.log("dbname", bulletin.getDatabase());
+				client.log("category",bulletin.getCategory());
+				client.log("filename", bulletin.getFileName());
+				client.log("custid", user.getCustomerID());
+				client.log("ctype",cType);
+				client.setRemoteControl();
 
 				bulletin.setContentType(cType);
 				StringBuffer link = new StringBuffer(linkBuilder.buildLink(bulletin));
@@ -207,37 +208,36 @@ public class ViewBulletin extends HttpServlet
 				//Log it
 
 				long start = System.currentTimeMillis();
-				logClient.reset();
-				logClient.setHost(request.getRemoteAddr());
-				logClient.setrfc931("-");
-				logClient.setusername("-");
-				logClient.setcust_id((Long.valueOf((String)logProperties.get("custid"))).longValue());
-				logClient.setuser_agent(request.getHeader("User-Agent"));
-				logClient.setHTTPmethod(request.getMethod());
-				logClient.setreferrer(request.getHeader("referer"));
-				logClient.seturi_stem(request.getRequestURI());
-				logClient.seturi_query(request.getQueryString());
-				logClient.setstatuscode(HttpServletResponse.SC_OK);
-				logClient.setrid(new GUID().toString());
-				logClient.setappid(appName);
-				logClient.setappdata(logProperties);
+
+				client.log("REMOTEADDRESS",request.getRemoteAddr());
+				client.log("User-Agent",request.getHeader("User-Agent"));
+				client.log("METHOD",request.getMethod());
+				client.log("REFERER",request.getHeader("referer"));
+				client.log("URL",request.getRequestURI());
+				client.log("QUERYSTRING",request.getQueryString());
+				client.log("STATUSCODE",String.valueOf(HttpServletResponse.SC_OK));
+				client.log("RID",new GUID().toString());
+				client.log("APPID",appName);
+				client.setRemoteControl();
+
 				if(logProperties.containsKey("EISESSION"))
 				{
-					logClient.setsid((String) logProperties.get("EISESSION"));
+					client.log("SID",(String) logProperties.get("EISESSION"));
 				}
 				else
 				{
-					logClient.setsid("0");
+					client.log("SID","0");
 				}
 				long end = System.currentTimeMillis();
-				logClient.setend_time(end);
-				logClient.setresponse_time(end - start);
-				logClient.sendit();
+				client.log("END_TIME",String.valueOf(end));
+				client.log("RESPONSE_TIME",String.valueOf(end - start));
+				client.setRemoteControl();
 			}
 		}
 		catch(Exception e)
 		{
-			log("Error:",e);
+			client.log("Error:",e.getMessage());
+			client.setRemoteControl();
 		}
 		finally
 		{
@@ -249,7 +249,8 @@ public class ViewBulletin extends HttpServlet
 				}
 				catch(Exception e)
 				{
-					log("Error:",e);
+					client.log("Error:",e.getMessage());
+					client.setRemoteControl();
 				}
 			}
 			if(bout != null)
@@ -260,7 +261,8 @@ public class ViewBulletin extends HttpServlet
 				}
 				catch(Exception e)
 				{
-					log("Error:",e);
+					client.log("Error:",e.getMessage());
+					client.setRemoteControl();
 				}
 			}
 		}
