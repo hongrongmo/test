@@ -74,12 +74,12 @@
 		<xsl:if test="string(normalize-space(text()))"><xsl:value-of select="text()"/><xsl:text>&#160;-&#160;</xsl:text></xsl:if>
 	</xsl:template>
 	<xsl:template match="ce:title|ce:section-title" mode="bktitle">
-		<xsl:value-of select="normalize-space(text())"/>
+		<!--  <xsl:value-of select="normalize-space(text())"/> -->
+		<xsl:apply-templates />
 	</xsl:template>
 	<xsl:template match="ce:subtitle" mode="bktitle">
 		<xsl:text>:&#160;</xsl:text><xsl:value-of select="normalize-space(text())"/>
 	</xsl:template>
-
 
 	<xsl:template match="ce:further-reading" mode="bktitle">
 		<xsl:apply-templates select="ce:section-title" mode="bktitle"/>
@@ -90,8 +90,12 @@
 	</xsl:template>
 
 	<!-- template that generates linktitle from XML document() call -->
-	<xsl:template match="bk:introduction|bk:chapter|bk:fb-non-chapter|bk:simple-chapter" mode="linktitle">
+	<xsl:template match="bk:chapter|bk:fb-non-chapter|bk:simple-chapter" mode="linktitle">
 		<xsl:apply-templates select="ce:label" mode="bktitle"/><xsl:apply-templates select="ce:title" mode="bktitle"/><xsl:apply-templates select="ce:subtitle" mode="bktitle"/>
+	</xsl:template>
+
+	<xsl:template match="bk:introduction" mode="linktitle">
+		<xsl:text>Introduction</xsl:text>
 	</xsl:template>
 	
 	<xsl:template match="ce:label"/>
