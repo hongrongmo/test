@@ -23,7 +23,7 @@ public class IncludeItemLoader {
     protected static Log log = LogFactory.getLog(IncludeItemLoader.class);
 
     public static void main(String[] args) {
-        List<IncludeItem> iss = IncludeItemLoader.getIncludeItems(new File("w:/developers/referex/ew/EVF0012/9780120885817/main.xml"));
+        List<IncludeItem> iss = IncludeItemLoader.getIncludeItems(new File("W:/Developers/Referex/EW/EVF0010/9780750682701/main.xml"));
         Iterator<IncludeItem> piis = iss.iterator();
         int pageIndex = 0;
         try {
