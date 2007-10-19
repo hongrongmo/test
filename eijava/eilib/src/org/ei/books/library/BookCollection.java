@@ -3,23 +3,27 @@ package org.ei.books.library;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
+import java.util.*;
 import org.ei.domain.DatabaseConfig;
 import org.ei.connectionpool.ConnectionBroker;
+import org.ei.xml.Entity;
 
 public class BookCollection extends LibraryComponent
 {
 
-	ArrayList libraryComponents = new ArrayList();
+	private ArrayList libraryComponents = new ArrayList();
+	private String name;
 
-	String name;
-
-	public BookCollection(String name)
+	BookCollection(String name,
+	               Map bookMap)
+		throws Exception
 	{
 		this.name = name;
+		populateBooks(bookMap);
 	}
 
-	public void populateBooks() throws Exception
+	private void populateBooks(Map bookMap)
+		throws Exception
 	{
 		Connection con = null;
 		ConnectionBroker broker = null;
@@ -56,12 +60,13 @@ public class BookCollection extends LibraryComponent
 					curBook.setPubyear(year);
 					curBook.setCollection(vo);
 					libraryComponents.add(curBook);
-					Library.isbnTitleMap.put(bn13, curBook);
-					Library.isbnTitleMap.put(ti.toLowerCase(), curBook);
+					bookMap.put(bn13, curBook);
+					bookMap.put( Entity.prepareString(ti.toLowerCase()), curBook);
 				}
 			}
 
-		} finally
+		}
+		finally
 		{
 			if (rs != null)
 			{
@@ -72,6 +77,7 @@ public class BookCollection extends LibraryComponent
 			{
 				close(pstmt1);
 			}
+
 			if (con != null)
 			{
 				try
