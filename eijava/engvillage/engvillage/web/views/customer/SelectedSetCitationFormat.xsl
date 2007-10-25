@@ -104,7 +104,7 @@
 	<html>
 		<head>
 
-			<title>Selected Set - Citation Format Hello<xsl:value-of select="RESULTS-PER-PAGE"/>Hello</title>
+			<title>Selected Set - Citation Format <xsl:value-of select="RESULTS-PER-PAGE"/></title>
 			<SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
 			<SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/URLEncode.js"/>
 			<SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/SelectedSet_V7.js"/>
