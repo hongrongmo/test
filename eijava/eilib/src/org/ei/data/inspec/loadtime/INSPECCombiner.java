@@ -1,4 +1,4 @@
-package org.ei.data.inspec;
+package org.ei.data.inspec.loadtime;
 
 import java.sql.Clob;
 import java.sql.Connection;
@@ -274,7 +274,7 @@ public class INSPECCombiner
 
 						if (rs.getString("aaffmulti2") != null)
 						{
-							aaff.append(rs.getString("aaffmulti2"));
+							aaff.append(rs.getString("aaffm2"));
 						}
                     }
 
