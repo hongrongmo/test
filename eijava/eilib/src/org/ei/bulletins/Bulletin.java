@@ -10,11 +10,12 @@ public class Bulletin {
     String fileName;
     String zipFileName;
     String contentType;
+    String week;
 
     int format = -1;
 
-    public static final int FORMAT_LIT_RECENT = 1;
-    public static final int FORMAT_PAT_RECENT = 2;
+    public static final int FORMAT_LIT_RECENT  = 1;
+    public static final int FORMAT_PAT_RECENT  = 2;
     public static final int FORMAT_LIT_RESULTS = 3;
     public static final int FORMAT_PAT_RESULTS = 4;
 
@@ -109,10 +110,25 @@ public class Bulletin {
     }
 
     /**
+	 * @param string
+     */
+
+    public void setWeek(String week) {
+	    this.week = week;
+    }
+
+    /**
      * @return
      */
-    public int getFormat() {
-        return format;
+    public String getWeek() {
+        return week;
+    }
+
+    /**
+	 * @return
+	 */
+	public int getFormat() {
+	    return format;
     }
 
     /**
