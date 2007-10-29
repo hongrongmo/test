@@ -26,15 +26,13 @@ public class BulletinXMLVisitor implements BulletinVisitor {
         for (int i = 0; i < cartridges.length; i++) {
 
             String currCartridge = getCartridge(category, db);
-
             if (currCartridge.equalsIgnoreCase(cartridges[i]))
                 bDisplay = true;
         }
-
         return bDisplay;
 
     }
-    /** 
+    /**
      * @return
      */
     public void visitWith(BulletinPage page) throws Exception {
@@ -47,11 +45,11 @@ public class BulletinXMLVisitor implements BulletinVisitor {
         }
 
     }
-    /** 
+    /**
      * @return
      */
-    public void visitWith(Bulletin bulletin) throws Exception {
-
+    public void visitWith(Bulletin bulletin) throws Exception
+    {
         if (displayBulletin(bulletin.getCategory(), bulletin.getDatabase(), bulletin.getId())) {
 
             out.write("<BL");
@@ -84,11 +82,16 @@ public class BulletinXMLVisitor implements BulletinVisitor {
             out.write(bulletin.getFileName());
             out.write("]]></NM>");
 
+            out.write("<WK><![CDATA[");
+			out.write(StringUtil.notNull(bulletin.getWeek()));
+            out.write("]]></WK>");
+
             out.write("<ZP><![CDATA[");
             out.write(StringUtil.notNull(bulletin.getZipFileName()));
             out.write("]]></ZP>");
 
             out.write("</BL>");
+
         }
     }
     public String getCartridge(String category, String db) {
