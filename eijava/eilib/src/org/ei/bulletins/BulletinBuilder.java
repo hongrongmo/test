@@ -29,7 +29,7 @@ public class BulletinBuilder {
 
         try {
 
-            String sql = "select db,cy,yr,fl,zp from bulletins where id = ?";
+            String sql = "select db,cy,yr,fl,zp,wk from bulletins where id = ?";
             broker = ConnectionBroker.getInstance();
             con = broker.getConnection(DatabaseConfig.SEARCH_POOL);
             pstmt = con.prepareStatement(sql);
@@ -44,6 +44,7 @@ public class BulletinBuilder {
                 String yr = rs.getString("yr");
                 String fl = rs.getString("fl");
                 String zpName = rs.getString("zp");
+                String wk = rs.getString("wk");
 
                 bulletin = new Bulletin();
                 bulletin.setCategory(ctgy);
@@ -51,7 +52,7 @@ public class BulletinBuilder {
                 bulletin.setYear(yr);
                 bulletin.setFileName(fl);
                 bulletin.setZipFileName(zpName);
-
+				bulletin.setWeek(wk);
             }
 
         }
@@ -74,7 +75,7 @@ public class BulletinBuilder {
     /**
      * @param db
      * @param year
-     * @param category 
+     * @param category
      * @return
      */
     public BulletinPage buildBulletinResults(String db, String year, String category) throws Exception {
@@ -86,7 +87,7 @@ public class BulletinBuilder {
         BulletinPage page = new BulletinPage();
 
         try {
-            String sql = "select id,cy,pd,fl,zp,db from bulletins where db = ? and cy = ? and yr = ? order by wk desc";
+            String sql = "select id,cy,pd,fl,zp,db,wk from bulletins where db = ? and cy = ? and yr = ? order by wk desc";
             broker = ConnectionBroker.getInstance();
             con = broker.getConnection(DatabaseConfig.SEARCH_POOL);
             pstmt = con.prepareStatement(sql);
@@ -104,6 +105,7 @@ public class BulletinBuilder {
                 String fileName = rs.getString("fl");
                 String zipFileName = rs.getString("zp");
                 String cy = rs.getString("cy");
+				String wk = rs.getString("wk");
 
                 Bulletin bulletin = new Bulletin();
 
@@ -113,8 +115,9 @@ public class BulletinBuilder {
                 bulletin.setPublishedDt(pubdt);
                 bulletin.setZipFileName(zipFileName);
                 bulletin.setCategory(cy);
+                bulletin.setWeek(wk);
 
-                if (db.equals("1")) //Lit	
+                if (db.equals("1")) //Lit
                     bulletin.setFormat(Bulletin.FORMAT_LIT_RESULTS);
                 else //PAT
                     bulletin.setFormat(Bulletin.FORMAT_PAT_RESULTS);
@@ -140,7 +143,7 @@ public class BulletinBuilder {
         return page;
 
     }
-    /** 
+    /**
      * @return
      */
     public BulletinPage buildLITRecent(BulletinPage page, Connection con) throws Exception {
@@ -152,6 +155,7 @@ public class BulletinBuilder {
             String sql = "select id,db,pd,cy,fl from bulletins where db = '1' and yr = ? order by wk desc";
 
             pstmt = con.prepareStatement(sql);
+
 
             int maxYear = getMaxYear(con);
 
@@ -339,7 +343,7 @@ public class BulletinBuilder {
         return page;
 
     }
-    /** 
+    /**
      * @return
      */
     private void close(ResultSet rs) {
@@ -353,7 +357,7 @@ public class BulletinBuilder {
         }
 
     }
-    /** 
+    /**
      * @return
      */
     private void close(Statement stmt) {
@@ -367,7 +371,7 @@ public class BulletinBuilder {
             e.printStackTrace();
         }
     }
-    /** 
+    /**
      * @return
      */
     private void close(Connection conn, ConnectionBroker broker) {
@@ -386,7 +390,7 @@ public class BulletinBuilder {
         Statement stmt = null;
         ResultSet rs = null;
 
-       
+
         int maxYear = -1;
 
         try {
