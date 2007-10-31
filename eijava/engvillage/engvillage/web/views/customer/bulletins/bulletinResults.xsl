@@ -23,8 +23,17 @@
     <xsl:variable name="QDIS">
         <xsl:value-of select="/PAGE/QTOP/QDIS"/>
     </xsl:variable>
+     <xsl:variable name="QTIT">
+        <xsl:value-of select="/PAGE/QTOP/QTIT"/>
+    </xsl:variable>
+    <xsl:variable name="QCAT">
+        <xsl:value-of select="/PAGE/QTOP/QCAT"/>
+    </xsl:variable>    
     <xsl:variable name="DB">
         <xsl:value-of select="/PAGE/DB"/>
+    </xsl:variable>
+    <xsl:variable name="YR">
+        <xsl:value-of select="/PAGE/YR"/>
     </xsl:variable>
     <xsl:variable name="NXT">
         <xsl:value-of select="/PAGE/NAV/@NEXT"/>
@@ -64,408 +73,430 @@
   </xsl:variable>
    
     
-    <xsl:include href="../Header.xsl"/>
-    <xsl:include href="../GlobalLinks.xsl"/>
-    <xsl:include href="../Footer.xsl" />
-    <xsl:include href="bulletinTemplates.xsl"/>
-    <xsl:template match="PAGE">
-        <html>
-            <head>
-                <title>EnCompass Bulletins</title>
-                <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Bulletin.js"/>
-                <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
-            </head>
-            <body>
-               <div style="text-align: center">
-	             <table class="T" border="0" width="99%" cellspacing="0" cellpadding="0">
-	       	      <tr>
-	       		<td valign="top" width="100%">
-	       		  <img src="/engresources/images/ev2logo5.gif" border="0"/>
-	       		</td>
-	       		<td valign="middle" align="right" width="68">
-	       		  <a href="/controller/servlet/Controller?CID=endSession&amp;SYSTEM_LOGOUT=true">
-	       		  <img src="/engresources/images/endsession.gif"  border="0"/></a>
-	       		</td>
-	       	      </tr>
-	       	      <tr>
-	       		<td valign="top" height="5" colspan="2">
-	       		  <img src="/engresources/images/encompass/s.gif" border="0" height="5"/>
-	       		</td>
-	       	      </tr>
-	              </table>
-	              </div>
-	       
-	         <div style="text-align: center">
-	           <!-- INCLUDE THE GLOBAL LINKS BAR -->
-	           <xsl:apply-templates select="GLOBAL-LINKS">
-	       		  <xsl:with-param name="SESSION-ID" select="$SESSION-ID"/>
-	       		  <xsl:with-param name="SELECTED-DB" select ="$SELECTED-DB"/>
-	       		  <xsl:with-param name="LINK">Bulletins</xsl:with-param>
-	       		  <xsl:with-param name="RESOURCE-PATH" select="$RESOURCE-PATH"/>
-	           </xsl:apply-templates>
-	         </div>
-	       
-	         <div style="text-align: center">
-	          <table border="0" width="99%" cellspacing="0" cellpadding="0" bgcolor="#C3C8D1">
-	           <tr>
-	            <td valign="top" colspan="0" height="20" class="F">
-	            <img src="/engresources/images/encompass/s.gif" height="20"></img>
+  <xsl:include href="../Header.xsl"/>
+  <xsl:include href="../GlobalLinks.xsl"/>
+  <xsl:include href="../Footer.xsl" />
+  <xsl:include href="bulletinTemplates.xsl"/>
+  <xsl:template match="PAGE">
+  <html>
+    <head>
+	<title>EnCompass Bulletins</title>
+	<SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Bulletin.js"/>
+	<SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
+    </head>
+    <body>
+    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+    <td>
+       	<div style="text-align: center">
+	<table  border="0" width="99%" cellspacing="0" cellpadding="0" align="center">
+	<tr>
+	<td valign="top" width="100%">
+	  <img src="/engresources/images/ev2logo5.gif" border="0"/>
+	</td>
+	<td valign="middle" align="right" width="68">
+	  <a href="/controller/servlet/Controller?CID=endSession&amp;SYSTEM_LOGOUT=true">
+	  <img src="/engresources/images/endsession.gif"  border="0"/></a>
+	</td>
+	</tr>
+	<tr>
+	<td valign="top" height="5" colspan="2">
+	  <img src="/engresources/images/s.gif" border="0" height="5"/>
+	</td>
+	</tr>
+	</table>
+	</div>
+     </td>
+     </tr>
+     <tr>
+     <td valign="bottom">
+	<div style="text-align: center">
+	<!-- INCLUDE THE GLOBAL LINKS BAR -->
+	<xsl:apply-templates select="GLOBAL-LINKS">
+	  <xsl:with-param name="SESSION-ID" select="$SESSION-ID"/>
+	  <xsl:with-param name="SELECTED-DB" select ="$SELECTED-DB"/>
+	  <xsl:with-param name="LINK">Bulletins</xsl:with-param>
+	  <xsl:with-param name="RESOURCE-PATH" select="$RESOURCE-PATH"/>
+	</xsl:apply-templates>
+	</div>
+     </td>
+     </tr>
+     <tr>
+     <td valign="top">
+     <table width="99%" bgcolor="#C3C8D1" cellspacing="0" cellpadding="0" valign="top" align="center" border="0">
+     <tr>
+     <td width="1" bgcolor="#C3C8D1">
+	<img src="/engresources/images/s.gif"></img>
+     </td>
+     <td width="100%">
+       <div style="text-align: center">
+       <table border="0" width="100%" cellspacing="0" cellpadding="0" bgcolor="#C3C8D1">
+       <tr>
+ 	  <td valign="top" height="20">
+	    	<img src="/engresources/images/s.gif" height="20"></img>
+	  </td>
+       </tr>
+       </table>
+       <table border="0" width="100%" cellspacing="0" cellpadding="0" bgcolor="#F5F5F5">
+       <tr>
+	  <td valign="top" height="20">
+		<img src="/engresources/images/s.gif" height="20"/>
+	  </td>
+       </tr>
+       </table>
+       </div>
+
+       <div style="text-align: center">
+       <table bgcolor="#F5F5F5" border="0" cellspacing="0" cellpadding="0" width="100%" valign="top">
+       <tr>
+            <td width="20" valign="top">
+	    	<img src="/engresources/images/s.gif" width="20" />
+      	    </td>
+            <td width="250" valign="top"  border="0" cellspacing="0" cellpadding="0">
+            <!-- Right side table for search form -->
+	    <form name="search" method="get" action="/controller/servlet/Controller">
+	    <input type="hidden" name="docIndex" value="1"/>
+	    <input type="hidden" name="litcr" value="{$LITCR}"/>
+	    <input type="hidden" name="patcr" value="{$PATCR}"/>
+	    <input type="hidden" name="database" value="{$SELECTED-DB}"/>
+	    <input type="hidden" name="CID" value="bulletinResults"/>	
+	    <table border="0" cellspacing="0" cellpadding="0" width="100%" bgcolor="#C3C8D1">
+	       <tr>
+	       <td width="10" bgcolor="#C3C8D1">
+		  <img src="/engresources/images/s.gif" width="10"></img>
+	       </td>
+		   <td bgcolor="#C3C8D1" cellspacing="0" cellpadding="0">
+		   <table border="0" cellspacing="0" cellpadding="0" width="220">
+	       <tr>
+		    <td>
+			<img src="/engresources/images/s.gif" width="4"></img>
+		    </td>
+		</tr>
+		<tr>
+		    <td valign="top" align="left">
+			<a class="DBlueText"><b>DISPLAY ARCHIVES</b></a>
+		    </td>
+		</tr>
+
+		<tr>
+		   <td valign="top" height="20">
+			<img src="/engresources/images/s.gif" height="20"></img>
+		   </td>
+		</tr>
+	    
+		<tr>
+		   <td valign="top">
+			<a class="SmBlackText">In order to view the Bulletins Archives, please select Database, Year of Publication and Category and hit the "Display" button.</a>
+		   </td>
+		</tr>
+
+		<tr>
+		   <td valign="top" height="15">
+			<img src="/engresources/images/s.gif" height="15"></img>
+		   </td>
+		</tr>
+
+		<tr>
+		   <td valign="top">
+			<a class="SmBlackText"><b>Select Database</b></a>
+		   </td>
+		</tr>
+
+		<tr>      
+		   <td valign="top">
+		   	<xsl:choose>
+			<xsl:when test="($DB = '1')">
+			<input type="radio" name="db" onclick="refreshCategories()" checked="true" value="1"></input>
+			</xsl:when>
+			<xsl:otherwise>
+			<input type="radio" name="db" onclick="refreshCategories()" value="1"></input>		
+			</xsl:otherwise>
+			</xsl:choose>			
+			<a class="SmBlackText">EnCompassLIT</a> &nbsp;
+		   </td>
+	       </tr>
+	       <tr>
+		   <td valign="top">
+		   	<xsl:choose>
+			<xsl:when test="($DB = '2')">
+			<input type="radio" name="db" onclick="refreshCategories()" value="2" checked="true"></input> 
+			</xsl:when>
+			<xsl:otherwise>
+			<input type="radio" name="db" onclick="refreshCategories()" value="2"></input> 
+			</xsl:otherwise>
+			</xsl:choose>
+			<a class="SmBlackText">EnCompassPAT</a> &nbsp; 
+		   </td>
+	       </tr>
+	    
+	       <tr>
+		   <td valign="top" height="10">
+			<img src="/engresources/images/s.gif" height="10"></img>
+		   </td>
+	       </tr>
+
+	       <tr>
+		   <td valign="top" >
+		       <a class="SmBlackText"><b>Select Year of Publication</b></a>
+		   </td>
+	       </tr>
+
+	       <tr>
+		   <td valign="top">
+			<a class="SmBlackText">
+			<!-- Start of table for search form -->
+			<xsl:value-of disable-output-escaping="yes" select="gui:createYearLb($QSTR)"/>
+			<!-- end of search form -->        
+			</a> 
+		   </td>
+	       </tr>
+
+	       <tr>
+		   <td valign="top" height="10">
+			<img src="/engresources/images/s.gif" height="10"></img>
+		   </td>
+	       </tr>
+
+	       <tr>
+		   <td valign="top">
+			<a class="SmBlackText"><b>Select Category</b></a>
+		   </td>
+	       </tr>
+
+	       <tr>
+		   <td valign="top">
+		   <!-- Start of table for search form -->
+		   <xsl:value-of disable-output-escaping="yes" select="gui:createCategoryLb($CARTRIDGES,$QSTR)"/>
+		   <!-- end of search form -->
+		   </td>
+	       </tr>
+	    
+	       <tr>
+		   <td valign="top" height="15">
+			<img src="/engresources/images/s.gif" height="15"></img>
+		   </td>
+	       </tr>
+
+	       <tr>
+		   <td valign="top" align="right">
+			<input type="image" name="display" value="Display" src="/engresources/images/display.gif" border="0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</input>
+		   </td>
+	       </tr>
+	       <tr>
+		   <td>
+			<img src="/engresources/images/s.gif" width="20"></img>
+		   </td>
+	       </tr>
+	       </table>
+	       </td>
+	       <td width="10" bgcolor="#C3C8D1">
+		    <img src="/engresources/images/s.gif" width="10"></img>
+	       </td>
+	     </tr>
+	   </table>
+	   </form>
+           </td>
+           <td valign="top">
+	   <!-- Left side table for bulletins display -->
+	   <table border="0" cellspacing="0" cellpadding="0" width="100%">
+	   <tr>
+	   	<td colspan="3" height="5" bgcolor="#3173B5">
+	   	     <img src="/engresources/images/s.gif" height="5"/>
+	   	</td>
+	   	<td width="20" align="right" >
+		     <img src="/engresources/images/s.gif" width="20" height="5"/>
+                </td>
+	   </tr>
+	   <tr>
+	       <td width="20" bgcolor="#3173B5" align="left">
+	    	   <img src="/engresources/images/s.gif" width="20" />
+               </td>
+	       <td align="left" bgcolor="#3173B5" height="20">       	
+		   <a CLASS="SmWhiteText"><b><xsl:value-of select="$QTIT" disable-output-escaping="yes"/></b></a>
+	       </td>
+	       <td align="right" bgcolor="#3173B5">
+	   	    <a href="/controller/servlet/Controller?CID=bulletinSearch&amp;queryStr={$ENCODED-QSTR}&amp;EISESSION={$SESSION-ID}&amp;database={$SELECTED-DB}">
+		    	<img src="/engresources/images/rec.gif" border="0">&nbsp;&nbsp;&nbsp;&nbsp;</img>
+		    </a>
+               </td>
+               <td width="20" align="right" >
+	       	   <img src="/engresources/images/s.gif" width="20" />
+               </td>
+	   </tr>
+	   <tr>
+		<td colspan="3" height="5" bgcolor="#3173B5">
+		     <img src="/engresources/images/s.gif" height="5" />
+		</td>
+		<td width="20" align="right" >
+		     <img src="/engresources/images/s.gif" width="20" height="5"/>
+                </td>
+	   </tr>
+	   <tr>
+	      <td width="20">
+	      	   <img src="/engresources/images/s.gif" width="20"></img>
+              </td>
+	      <td valign="top" align="left" colspan="2">
+	      <table border="0" cellspacing="0" cellpadding="0" width="100%">
+	      <tr>
+		 <td width="6" height="10" colspan="2">
+		    <img src="/engresources/images/s.gif" width="5"/>
+		 </td>
+	      </tr>
+	      <tr>
+		 <td valign="top" colspan="2">
+		    <a class="SmBlackText">
+		    <b>
+		    <xsl:value-of select="$QDIS" disable-output-escaping="yes"/>
+		    </b>
+		    &nbsp;&nbsp;
+		    <b>
+		       <xsl:choose>
+			  <xsl:when test="$QCO = 0"> 0 bulletins found. </xsl:when>
+			  <xsl:otherwise>
+			    <xsl:value-of select="$QCO"/> bulletins found. 
+			  </xsl:otherwise>
+		      </xsl:choose>
+		    </b>
+		    </a>
+		   </td>
+	      </tr>
+	      <tr>
+		  <td height="8" colspan="2">
+		     <img src="/engresources/images/s.gif" height="8"/>
+		  </td>
+	      </tr>
+	      <tr>
+		<td>
+		<!-- table for archive table -->
+		<table border="0" cellspacing="0" cellpadding="0" width="100%">
+		<tr>
+		    <td height="1"  bgcolor="#3173B5">
+		     	<img src="/engresources/images/s.gif" height="1"/>
+		    </td>
+		</tr>
+		<tr>
+		    <td height="5">
+		     	<img src="/engresources/images/s.gif" height="5"/>
+		    </td>
+		</tr>
+		<tr>
+		    <td valign="top">
+		    <table border="0" cellspacing="0" cellpadding="0">
+		    <tr>
+			<td  align="left" width="15%" nowrap="true">
+			    <a class="SmBlackText"><b>Bulletin</b></a>
+			</td>
+			<td  width="50">
+			    <img src="/engresources/images/s.gif" width="50" height="20"/>
+			</td>
+			<td nowrap="true" width="25%">
+			    <a class="SmBlackText"><b>Published Date</b></a>
+			</td>
+			<td width="50">
+				<img src="/engresources/images/s.gif" width="50" height="20"/>
+			</td>
+			<td width="15%" nowrap="true">
+				<a class="SmBlackText"><b>PDF</b></a>
+			</td>
+			<td width="50">
+				<img src="/engresources/images/s.gif" width="50" height="20"/>
+			</td>
+			<xsl:choose>
+			<xsl:when test="($DB = '1')">
+			<td colspan="2" width="15%">
+				<img src="/engresources/images/s.gif" height="20"/>
+			</td>
+		 	</xsl:when>
+			<xsl:otherwise>
+			<td width="15%" nowrap="true" colspan="2">
+			    <a class="SmBlackText"><b>GIF</b></a>
+			</td>			
+			</xsl:otherwise>
+			</xsl:choose>
+			<td width="20">
+				<img src="/engresources/images/s.gif" width="20"/>
+			</td>
+		    </tr>
+		    
+		    <xsl:apply-templates select="BULLETINS" mode="RESULTS"/>
+		    <tr>
+		        <td colspan="8" height="10">
+		    	     <img src="/engresources/images/s.gif" height="10"/>
+		        </td>
+		    </tr>
+		    </table>
+		    </td>
+	   	</tr>
+	   	<tr>
+	            <td  height="1">
+		  	<img src="/engresources/images/s.gif" height="1"/>
 	            </td>
-	           </tr>
-	          </table>
-	          <table border="0" width="99%" cellspacing="0" cellpadding="0">
-	       	    <tr>
-	       		<td valign="top" colspan="0" height="20" class="F">
-	       		    <img src="/engresources/images/encompass/s.gif" height="20"/>
-	       		</td>
-	       	    </tr>
-	           </table>
-  		</div>
-                <div style="text-align: center">
-                    <table class="F" border="0" cellspacing="0" cellpadding="0" width="99%">
-                        <tr>
-                            <td width="24%" valign="top">
-                                <!-- Right side table for search form -->
-                                <form name="search" method="get" action="/controller/servlet/Controller">
-                                     <input type="hidden" name="CID" value="bulletinResults"/>
-                                     <input type="hidden" name="docIndex" value="1"/>
-                                     <input type="hidden" name="litcr" value="{$LITCR}"/>
-                                     <input type="hidden" name="patcr" value="{$PATCR}"/>
-                                     <input type="hidden" name="database" value="{$SELECTED-DB}"/>
-                                     
-                                    <table border="0" cellspacing="0" cellpadding="0" width="100%">
-                                        <tr>
-                                            <td width="6">
-                                                <img src="/engresources/images/encompass/s.gif" width="4"/>
-                                            </td>
-                                            <td valign="top" align="middle">
-                                                <img src="/engresources/images/encompass/arc.gif" border="0"/>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="6">
-                                                <img src="/engresources/images/encompass/s.gif" width="4"/>
-                                            </td>
-                                            <td valign="top" height="20">
-                                                <img src="/engresources/images/encompass/s.gif" height="20"/>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="6">
-                                                <img src="/engresources/images/encompass/s.gif" width="4"/>
-                                            </td>
-                                            <td valign="top">
-                                                <a class="BT">In order to view the Bulletins Archives, please select
-                                                    Database, Year and Category and hit the "Display" button.</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="6">
-                                                <img src="/engresources/images/encompass/s.gif" width="4"/>
-                                            </td>
-                                            <td valign="top" height="15">
-                                                <img src="/engresources/images/encompass/s.gif" height="15"/>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="6">
-                                                <img src="/engresources/images/encompass/s.gif" width="4"/>
-                                            </td>
-                                            <td valign="top">
-                                                <a class="S">
-                                                    <b>Select Database</b>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            
-                                            
-                                                <!-- Start of table for search form -->
-                                                <xsl:value-of disable-output-escaping="yes" select="gui:createDbOpt1($CARTRIDGES,$QSTR)"/>
-                                                <!-- end of search form -->
-                                               
-                                                
-                                                
-                                           
-                                        </tr>
-                                        <tr>
-                                           
-                                                
-                                                <!-- Start of table for search form -->
-                                                <xsl:value-of disable-output-escaping="yes" select="gui:createDbOpt2($CARTRIDGES,$QSTR)"/>
-                                                <!-- end of search form -->
-                                                
-                                            
-                                        </tr>
-                                        <tr>
-                                            <td width="6">
-                                                <img src="/engresources/images/encompass/s.gif" width="4"/>
-                                            </td>
-                                            <td valign="top" height="10">
-                                                <img src="/engresources/images/encompass/s.gif" height="10"/>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="6">
-                                                <img src="/engresources/images/encompass/s.gif" width="4"/>
-                                            </td>
-                                            <td valign="top">
-                                                <a class="S">
-                                                    <b>Select Year of Publication</b>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="6">
-                                                <img src="/engresources/images/encompass/s.gif" width="4"/>
-                                            </td>
-                                            <td valign="top">&nbsp; &nbsp; &nbsp; <a class="S">
-                                                    <!-- Start of table for search form -->
-                                                    <xsl:value-of disable-output-escaping="yes" select="gui:createYearLb($QSTR)"/>
-                                                    <!-- end of search form -->
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="6">
-                                                <img src="/engresources/images/encompass/s.gif" width="4"/>
-                                            </td>
-                                            <td valign="top" height="10">
-                                                <img src="/engresources/images/encompass/s.gif" height="10"/>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="6">
-                                                <img src="/engresources/images/encompass/s.gif" width="4"/>
-                                            </td>
-                                            <td valign="top">
-                                                <a class="S">
-                                                    <b>Select Category</b>
-                                                </a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="6">
-                                                <img src="/engresources/images/encompass/s.gif" width="4"/>
-                                            </td>
-                                            <td valign="top">&nbsp; &nbsp; &nbsp;
-                                                <!-- Start of table for search form -->
-                                                <xsl:value-of disable-output-escaping="yes" select="gui:createCategoryLb($CARTRIDGES,$QSTR)"/>
-                                                <!-- end of search form -->
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td valign="top" height="15" colspan="2">
-                                                <img src="/engresources/images/encompass/s.gif" height="15"/>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="6">
-                                                <img src="/engresources/images/encompass/s.gif" width="4"/>
-                                            </td>
-                                            <td valign="top">&nbsp; &nbsp; &nbsp; <input type="image"
-                                                    name="display" value="Display" src="/engresources/images/encompass/display.gif" border="0"/>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </form>
-                            </td>
-                            <td width="25">
-                                <img src="/engresources/images/encompass/s.gif" width="25"/>
-                            </td>
-                            <td background="/engresources/images/encompass/dots1.gif" width="4">
-                                <img src="/engresources/images/encompass/s.gif" width="4"/>
-                            </td>
-                            <td width="15">
-                                <img src="/engresources/images/encompass/s.gif" width="15"/>
-                            </td>
-                            <td valign="top" width="76%">
-                                <!-- Left side table for bulletins display -->
-                                <table border="0" cellspacing="0" cellpadding="0" width="100%">
-                                    <tr>
-                                        <td valign="top" align="middle" colspan="3">
-                                            <img src="/engresources/images/encompass/abl.gif" border="0"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td height="15" colspan="2" align="right">
-                                            <a  class="L" href="/controller/servlet/Controller?CID=bulletinSearch&amp;queryStr={$ENCODED-QSTR}&amp;EISESSION={$SESSION-ID}&amp;database={$SELECTED-DB}">
-                                                <img src="/engresources/images/encompass/rec.gif" border="0"/>
-                                            </a>
-                                        </td>
-                                        <td width="5" height="1">
-                                            <img src="/engresources/images/encompass/s.gif" width="5"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td width="10">
-                                            <img src="/engresources/images/encompass/s.gif" width="10"/>
-                                        </td>
-                                        <td valign="top" colspan="2">
-                                            <a class="S">
-                                                <b>
-                                                    <xsl:value-of select="$QDIS" disable-output-escaping="yes"/>
-                                                </b>
-                                                <br/>
-                                                <b>
-                                                    <xsl:choose>
-                                                        <xsl:when test="$QCO = 0"> 0 bulletins found. </xsl:when>
-                                                        <xsl:otherwise>
-                                                            <xsl:value-of select="$QCO"/> bulletins found. 
-                                                        </xsl:otherwise>
-                                                    </xsl:choose>
-                                                </b>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td height="8" colspan="3">
-                                            <img src="/engresources/images/encompass/s.gif" height="8"/>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td width="10">
-                                            <img src="/engresources/images/encompass/s.gif" width="10"/>
-                                        </td>
-                                        <td valign="top">
-                                            <!-- table for archive table -->
-                                            <table border="0" cellspacing="0" cellpadding="0" width="100%">
-                                                <tr>
-                                                    <td class="RMC" colspan="3" height="1">
-                                                        <img src="/engresources/images/encompass/s.gif" height="1"/>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="RMC" width="1">
-                                                        <img src="/engresources/images/encompass/s.gif" width="1"/>
-                                                    </td>
-                                                    <td valign="top">
-                                                        <table border="0" cellspacing="0" cellpadding="0" width="100%">
-                                                            <tr>
-                                                            <td width="4">
-                                                            <img src="/engresources/images/encompass/s.gif" width="4"/>
-                                                            </td>
-                                                            <td valign="top">
-                                                            <a class="M">
-                                                            <b>Bulletin</b>
-                                                            </a>
-                                                            </td>
-                                                            <td valign="top" width="10">
-                                                            <img src="/engresources/images/encompass/s.gif" width="10"/>
-                                                            </td>
-                                                            <td valign="top">
-                                                            <a class="M">
-                                                            <b>Published Date</b>
-                                                            </a>
-                                                            </td>
-                                                            
-                                                            
-                                                            <td valign="top" width="4">
-                                                            <img src="/engresources/images/encompass/s.gif" width="10"/>
-                                                            </td>
-                                                            <td valign="top">
-                                                            <a class="M">
-                                                            <b>HTML Format</b>
-                                                            </a>
-                                                            </td>
-                                                            
-                                                            
-                                                            
-                                                            <td valign="top" width="4">
-                                                            <img src="/engresources/images/encompass/s.gif" width="4"/>
-                                                            </td>
-                                                            <td valign="top">
-                                                            <a class="M">
-                                                            <b>PDF Format</b>
-                                                            </a>
-                                                            </td>
-                                                            
-                                                            
-                                                            <td valign="top" width="4">
-                                                            <img src="/engresources/images/encompass/s.gif" width="4"/>
-                                                            </td>
-                                                            <xsl:choose>
-                                                            <xsl:when test="($DB = '1')">
-                                                            <tr>
-                                                            <td class="RMC" colspan="8" height="1">
-                                                            <img src="/engresources/images/encompass/s.gif" height="1"/>
-                                                            </td>
-                                                            </tr>
-                                                            </xsl:when>
-                                                            <xsl:otherwise>
-                                                            <td valign="top">
-                                                            <a class="M">
-                                                            <b>GIF Format</b>
-                                                            </a>
-                                                            </td>
-                                                            <tr>
-                                                            <td class="RMC" colspan="16" height="1">
-                                                            <img src="/engresources/images/encompass/s.gif" height="1"/>
-                                                            </td>
-                                                            </tr>
-                                                            </xsl:otherwise>
-                                                            </xsl:choose>
-                                                            </tr>
-                                                            <xsl:apply-templates select="BULLETINS" mode="RESULTS"/>
-                                                            <tr>
-                                                            <td colspan="6" height="6">
-                                                            <img src="/engresources/images/encompass/s.gif" height="6"/>
-                                                            </td>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
-                                                    <td class="RMC" width="1">
-                                                        <img src="/engresources/images/encompass/s.gif" width="1"/>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="RMC" colspan="3" height="1">
-                                                        <img src="/engresources/images/encompass/s.gif" height="1"/>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="3" height="15">
-                                                        <img src="/engresources/images/encompass/s.gif" height="15"/>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="3" align="middle">
-                                                        <xsl:if test="($QCO &gt; 0)">
-                                                            <xsl:if test="($PRV &gt; 0)">
-                                                            <a href="/controller/servlet/Controller?CID=bulletinResults&amp;docIndex={$PRV}&amp;queryStr={$ENCODED-QSTR}&amp;EISESSION={$SESSION-ID}&amp;database={$SELECTED-DB}">
-                                                            <img src="/engresources/images/encompass/pp.gif" border="0"/>
-                                                            </a>
-                                                            </xsl:if> &nbsp; &nbsp; &nbsp; <xsl:if test="($NXT &gt; 0)">
-                                                            <a href="/controller/servlet/Controller?CID=bulletinResults&amp;docIndex={$NXT}&amp;queryStr={$ENCODED-QSTR}&amp;EISESSION={$SESSION-ID}&amp;database={$SELECTED-DB}">
-                                                            <img src="/engresources/images/encompass/np.gif" border="0"/>
-                                                            </a>
-                                                            </xsl:if>
-                                                        </xsl:if>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                        <td width="5">
-                                            <img src="/engresources/images/encompass/s.gif" width="5"/>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td height="20">
-                                <img src="/engresources/images/encompass/s.gif" height="20"/>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-         <!-- Insert the Footer table -->
-		<xsl:apply-templates select="FOOTER">
-			<xsl:with-param name="SESSION-ID" select="$SESSION-ID"/>
-			<xsl:with-param name="SELECTED-DB" select="$SELECTED-DB"/>
-			<xsl:with-param name="RESOURCE-PATH" select="$RESOURCE-PATH"/>
-		</xsl:apply-templates>
-            </body>
-        </html>
-    </xsl:template>
+	        </tr>
+	        <tr>
+	       	    <td height="15">
+		  	<img src="/engresources/images/s.gif" height="15"/>
+	            </td>
+	   	</tr>
+	   	<tr>
+	            <td align="middle">
+		        <xsl:if test="($QCO &gt; 0)">
+			    <xsl:if test="($PRV &gt; 0)">
+			    <a href="/controller/servlet/Controller?CID=bulletinResults&amp;docIndex={$PRV}&amp;queryStr={$ENCODED-QSTR}&amp;EISESSION={$SESSION-ID}&amp;database={$SELECTED-DB}">
+			    <img src="/engresources/images/pp.gif" border="0"/>
+			    </a>
+			    </xsl:if> &nbsp; &nbsp; &nbsp; 
+			    <xsl:if test="($NXT &gt; 0)">
+		    		<a href="/controller/servlet/Controller?CID=bulletinResults&amp;docIndex={$NXT}&amp;queryStr={$ENCODED-QSTR}&amp;EISESSION={$SESSION-ID}&amp;database={$SELECTED-DB}">
+		    		<img src="/engresources/images/np.gif" border="0"/>
+		    		</a>
+		    		</xsl:if>
+		        </xsl:if>
+	      	    </td>
+	   	</tr>
+	   	</table>
+	   	</td>
+           </tr>     
+         </table>
+         </td> 
+         <td width="5">
+       	      <img src="/engresources/images/s.gif" width="5"></img>
+         </td>
+    </tr>
+    </table>
+    </td>
+    <td>
+    	<img src="/engresources/images/s.gif"></img>
+    </td>
+    </tr>
+    <tr>
+        <td height="20" colspan="2">
+            <img src="/engresources/images/s.gif" height="20"></img>
+        </td>
+    </tr>
+</table>
+</div>
+</td>
+<td width="1" bgcolor="#C3C8D1">
+     <img src="/engresources/images/s.gif" width="1"></img>
+</td>
+</tr>
+<tr>
+<td height="1" bgcolor="#C3C8D1">
+     <img src="/engresources/images/s.gif" height="1"></img>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+<!-- Insert the Footer table -->
+	<xsl:apply-templates select="FOOTER">
+		<xsl:with-param name="SESSION-ID" select="$SESSION-ID"/>
+		<xsl:with-param name="SELECTED-DB" select="$SELECTED-DB"/>
+		<xsl:with-param name="RESOURCE-PATH" select="$RESOURCE-PATH"/>
+	</xsl:apply-templates>
+</body>
+</html>
+</xsl:template>
 </xsl:stylesheet>
