@@ -9,64 +9,52 @@
         <xsl:param name="ID"/>
        
         <tr>
-            <td width="3">
-                <img src="/engresources/images/encompass/s.gif" width="3"/>
+            <td valign="top">      
+		<xsl:choose>
+			<xsl:when test="boolean($LIT-HTML='true')">
+			<a class="SmBlueText" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=HTML&amp;id={$ID}" target="_blank"><xsl:value-of select="$CY" disable-output-escaping="yes"/></a>              
+			</xsl:when>
+			<xsl:otherwise>
+			    <a class="SmBlueText"><xsl:value-of select="$CY" disable-output-escaping="yes"/></a>
+			</xsl:otherwise>
+            	</xsl:choose>
             </td>
-            <td valign="top">
-                <a class="S">
-                    <xsl:value-of select="$CY" disable-output-escaping="yes"/>
-                </a>
+            <td width="5" height="20">
+                <img src="/engresources/images/s.gif" width="5" height="20"/>
             </td>
-            <td width="5">
-                <img src="/engresources/images/encompass/s.gif" width="5"/>
-            </td>
-            <td valign="top">
-                <a class="S">
+            <td nowrap="true">
+                <a class="SmBlackText">
                     <xsl:value-of select="$PD" disable-output-escaping="yes"/>
                 </a>
             </td>
-            
-            <td width="5">
-                <img src="/engresources/images/encompass/s.gif" width="5"/>
-            </td>
-            <td valign="top">
-             <xsl:choose>
-                <xsl:when test="boolean($LIT-HTML='true')">
-                <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=HTML&amp;id={$ID}" target="_blank">View</a>              
-                &#160;&#160;
-                <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEHTML&amp;id={$ID}">Save</a>
-                </xsl:when>
-                 
-                <xsl:otherwise>
-                    <a class="S">View&#160;&#160;Save</a>
-                </xsl:otherwise>
-            </xsl:choose>
-            </td>
-           
            
             <td width="5">
-                <img src="/engresources/images/encompass/s.gif" width="5"/>
+                <img src="/engresources/images/s.gif" width="5"/>
             </td>
-            <td valign="top">
-             <xsl:choose>
+            <td valign="top" nowrap="true">
+            <xsl:choose>
                 <xsl:when test="boolean($LIT-PDF='true')">
-                <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=PDF&amp;id={$ID}" target="_blank">View  </a>          
+                <a class="SmBlueText" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=PDF&amp;id={$ID}" target="_blank">View  </a>          
                 &#160;&#160;
-                <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEPDF&amp;id={$ID}">Save</a>
+                <a class="SmBlueText" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEPDF&amp;id={$ID}">Save</a>
                 </xsl:when>
                 <xsl:otherwise>
-                    <a class="S">View&#160;&#160;Save</a>
+                    <a class="SmBlueText">View&#160;&#160;Save</a>
                 </xsl:otherwise>
             </xsl:choose>
             </td>
            
-            <td width="5">
-                <img src="/engresources/images/encompass/s.gif" width="5"/>
+            <td>
+                 <img src="/engresources/images/s.gif"/>
             </td>
+            <td>
+	         <img src="/engresources/images/s.gif"/>
+            </td>
+       
         </tr>
         <tr>
-            <td height="6" colspan="9">
-                <img src="/engresources/images/encompass/s.gif" height="6"/>
+            <td height="6" colspan="7">
+                 <img src="/engresources/images/s.gif" height="6"/>
             </td>
         </tr>
     </xsl:template>
@@ -77,76 +65,64 @@
         <xsl:param name="ZP"/>
        
         <tr>
-            <td width="3">
-                <img src="/engresources/images/encompass/s.gif" width="3"/>
+            <td>
+                <xsl:choose>
+		    <xsl:when test="boolean($PAT-HTML='true')">
+			<a class="SmBlueText" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=HTML&amp;id={$ID}" target="_blank"><xsl:value-of select="$CY" disable-output-escaping="yes"/></a>              
+		    </xsl:when>
+		    <xsl:otherwise>
+			    <a class="SmBlueText"><xsl:value-of select="$CY" disable-output-escaping="yes"/></a>
+		    </xsl:otherwise>
+            	</xsl:choose>
             </td>
-            <td valign="top">
-                <a class="S">
-                    <xsl:value-of select="$CY" disable-output-escaping="yes"/>
-                </a>
+            <td width="5" height="20">
+                <img src="/engresources/images/s.gif" width="5" height="20"/>
             </td>
-            <td width="5">
-                <img src="/engresources/images/encompass/s.gif" width="5"/>
-            </td>
-            <td valign="top">
-                <a class="S">
+            <td nowrap="true">
+                <a class="SmBlackText">
                     <xsl:value-of select="$PD" disable-output-escaping="yes"/>
                 </a>
             </td>
-          
-            <td width="5">
-                <img src="/engresources/images/encompass/s.gif" width="5"/>
+                     
+            <td width="5" height="20">
+                <img src="/engresources/images/s.gif" width="5" height="20"/>
             </td>
-            <td valign="top">
-                <xsl:choose>
-                <xsl:when test="boolean($PAT-HTML='true')">
-                <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=HTML&amp;id={$ID}" target="_blank">View  </a>
-                &#160;
-                <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEHTML&amp;id={$ID}">Save</a>
-                </xsl:when>
-                <xsl:otherwise>
-                    <a class="S">View&#160;&#160;Save</a>
-                </xsl:otherwise>
-            </xsl:choose>
-            </td>
-          
-           
-            <td width="5">
-                <img src="/engresources/images/encompass/s.gif" width="5"/>
-            </td>
-            <td valign="top">
+            <td nowrap="true">
                <xsl:choose>
                 <xsl:when test="boolean($PAT-PDF='true')">
-                <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=PDF&amp;id={$ID}" target="_blank">View  </a>
+                <a class="SmBlueText" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=PDF&amp;id={$ID}" target="_blank">View  </a>
                 &#160;&#160;
-                <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEPDF&amp;id={$ID}">Save</a>
+                <a class="SmBlueText" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEPDF&amp;id={$ID}">Save</a>
                 </xsl:when>
                 <xsl:otherwise>
-                    <a class="S">View&#160;&#160;Save</a>
+                    <a class="SmBlueText">View&#160;&#160;Save</a>
                 </xsl:otherwise>
             </xsl:choose>
             </td>
            
-            <td width="5">
-                <img src="/engresources/images/encompass/s.gif" width="5"/>
+            <td width="50" height="20">
+                <img src="/engresources/images/s.gif" width="50" height="20"/>
             </td>
+            <td width="90">
             <xsl:choose>
-                <xsl:when test="not($ZP='') and not($ZP='null')">
-                    <td valign="bottom">
-                        <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=ZIP&amp;id={$ID}">Save</a>
-                    </td>
+                <xsl:when test="not($ZP='') and not($ZP='null')">                   
+                    <a class="SmBlueText" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=ZIP&amp;id={$ID}">Save</a>                   
                 </xsl:when>
             </xsl:choose>
+            </td>
         </tr>
         <tr>
-            <td height="6" colspan="9">
-                <img src="/engresources/images/encompass/s.gif" height="6"/>
+            <td height="6" colspan="7">
+                <img src="/engresources/images/s.gif"/>
             </td>
         </tr>
     </xsl:template>
     <xsl:template match="BL[@FORMAT = '3']">
         <xsl:variable name="NM">
             <xsl:value-of select="NM"/>
+        </xsl:variable>
+        <xsl:variable name="WK">
+	    <xsl:value-of select="WK"/>
         </xsl:variable>
         <xsl:variable name="PD">
             <xsl:value-of select="PD"/>
@@ -157,68 +133,45 @@
        
         
         <tr>
-            <td width="4">
-                <img src="/engresources/images/encompass/s.gif" width="4"/>
-            </td>
-            <td valign="top">
-                <a class="M">
-                    <xsl:value-of select="$NM" disable-output-escaping="yes"/>
+            <td height="20">
+                <a class="SmBlueText" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=HTML&amp;id={$ID}" target="_blank">
+                   Issue <xsl:value-of select="$WK" disable-output-escaping="yes"/>
                 </a>
             </td>
-            <td valign="top" width="10">
-                <img src="/engresources/images/encompass/s.gif" width="10"/>
+            <td width="50">
+                <img src="/engresources/images/s.gif" width="50" height="20"/>
             </td>
-            <td valign="top">
-                <a class="S">
+            <td nowrap="true">
+                <a class="SmBlackText">
                     <xsl:value-of select="$PD" disable-output-escaping="yes"/>
                 </a>
+            </td>        
+            <td width="50">
+                <img src="/engresources/images/s.gif" width="50" height="20"/>
             </td>
-            
-            <td valign="top" width="10">
-                <img src="/engresources/images/encompass/s.gif" width="10"/>
-            </td>
-            <td valign="top">
-                 <xsl:choose>
-                <xsl:when test="boolean($SHOW-HTML='true')">
-                <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=HTML&amp;id={$ID}" target="_blank">View  </a>
-                &#160;&#160;
-                <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEHTML&amp;id={$ID}"> Save</a>
-                </xsl:when>
-                <xsl:otherwise>
-                    <a class="S">View&#160;&#160;Save</a>
-                </xsl:otherwise>
-            </xsl:choose>
-            </td>
-           
-            
-            <td valign="top" width="10">
-                <img src="/engresources/images/encompass/s.gif" width="10"/>
-            </td>
-            <td valign="top">
+            <td nowrap="true">
                  <xsl:choose>
                 <xsl:when test="boolean($SHOW-PDF='true')">
-                <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=PDF&amp;id={$ID}" target="_blank">View  </a>
+                <a class="SmBlueText" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=PDF&amp;id={$ID}" target="_blank">View  </a>
                 &#160;&#160;
-                <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEPDF&amp;id={$ID}">Save</a>
+                <a class="SmBlueText" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEPDF&amp;id={$ID}">Save</a>
                 </xsl:when>
                 <xsl:otherwise>
-                    <a class="S">View&#160;&#160;Save</a>
+                    <a class="SmBlueText">View&#160;&#160;Save</a>
                 </xsl:otherwise>
             </xsl:choose>
             </td>
-           
-            <td valign="top">
-              </td>
-        </tr>
-        <tr>
-            <td height="6" colspan="9">
-                <img src="/engresources/images/encompass/s.gif" height="6"/>
+            <td colspan="3">
+	    	<img src="/engresources/images/s.gif" height="6"/>
             </td>
         </tr>
     </xsl:template>
     <xsl:template match="BL[@FORMAT = '4']">
         <xsl:variable name="NM">
             <xsl:value-of select="NM"/>
+        </xsl:variable>
+        <xsl:variable name="WK">
+	     <xsl:value-of select="WK"/>
         </xsl:variable>
         <xsl:variable name="PD">
             <xsl:value-of select="PD"/>
@@ -230,49 +183,36 @@
             <xsl:value-of select="ZP"/>
         </xsl:variable>
         <tr>
-            <td width="4">
-                <img src="/engresources/images/encompass/s.gif" width="4"/>
+            <td height="15">
+            	<xsl:choose>
+		    <xsl:when test="boolean($SHOW-HTML='true')">
+			<a class="SmBlueText" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=HTML&amp;id={$ID}" target="_blank">
+			 Issue <xsl:value-of select="$WK" disable-output-escaping="yes"/>
+			</a>
+		    </xsl:when>
+		    <xsl:otherwise>
+			<a class="SmBlueText"><xsl:value-of select="$NM" disable-output-escaping="yes"/></a>
+		    </xsl:otherwise>
+            	</xsl:choose>            
             </td>
-            <td valign="top">
-                <a class="M">
-                    <xsl:value-of select="$NM" disable-output-escaping="yes"/>
-                </a>
+            <td width="50">
+                <img src="/engresources/images/s.gif" width="50" height="20"/>
             </td>
-            <td valign="top" width="10">
-                <img src="/engresources/images/encompass/s.gif" width="10"/>
-            </td>
-            <td valign="top">
-                <a class="S">
+            <td nowrap="true">
+                <a class="SmBlackText">
                     <xsl:value-of select="$PD" disable-output-escaping="yes"/>
                 </a>
             </td>
-             
-            <td valign="top" width="10">
-                <img src="/engresources/images/encompass/s.gif" width="10"/>
+                   
+            <td width="50">
+                <img src="/engresources/images/s.gif" width="50" height="20"/>
             </td>
-            <td valign="top">
-                 <xsl:choose>
-                <xsl:when test="boolean($SHOW-HTML='true')">
-                <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=HTML&amp;id={$ID}" target="_blank">View  </a>
-                &#160;&#160;
-                <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEHTML&amp;id={$ID}">Save</a>
-                </xsl:when>
-                <xsl:otherwise>
-                    <a class="S">View&#160;&#160;Save</a>
-                </xsl:otherwise>
-            </xsl:choose>
-            </td>
-           
-           
-            <td valign="top" width="10">
-                <img src="/engresources/images/encompass/s.gif" width="10"/>
-            </td>
-            <td valign="top">
+            <td nowrap="true">
                 <xsl:choose>
                 <xsl:when test="boolean($SHOW-PDF='true')">
-                <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=PDF&amp;id={$ID}" target="_blank">View  </a>
+                <a class="SmBlueText" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=PDF&amp;id={$ID}" target="_blank">View  </a>
                 &#160;&#160;
-                <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEPDF&amp;id={$ID}">Save</a>
+                <a class="SmBlueText" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=SAVEPDF&amp;id={$ID}">Save</a>
                 </xsl:when>
                 <xsl:otherwise>
                     <a class="S">View&#160;&#160;Save</a>
@@ -280,21 +220,16 @@
             </xsl:choose>
             </td>
             
-            <td valign="top" width="10">
-                <img src="/engresources/images/encompass/s.gif" width="10"/>
+            <td width="50">
+                <img src="/engresources/images/s.gif" width="50" height="20"/>
             </td>
+            <td colspan="2">
             <xsl:choose>
-                <xsl:when test="not($ZP='') and not($ZP='null')">
-                    <td valign="bottom">
-                        <a class="MBL" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=ZIP&amp;id={$ID}">Save</a>
-                    </td>
+                <xsl:when test="not($ZP='') and not($ZP='null')">                
+                        <a class="SmBlueText" href="/engresources/servlet/ViewBulletin?EISESSION={$SESSION-ID}&amp;cType=ZIP&amp;id={$ID}">Save</a>                    
                 </xsl:when>
                 <xsl:otherwise/>
             </xsl:choose>
-        </tr>
-        <tr>
-            <td height="6" colspan="9">
-                <img src="/engresources/images/encompass/s.gif" height="6"/>
             </td>
         </tr>
     </xsl:template>
