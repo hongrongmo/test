@@ -27,7 +27,7 @@ function refreshCategories(){
 	
 	arrCartridges = new Array();
 	
-	  begin=0;
+      begin=0;
       end=sval.indexOf(";");
       tokenCount = 0;
          
@@ -63,7 +63,7 @@ function refreshCategories(){
 			else if (cy == 'OCL')
 				frm.cy.options[i]= new Option("Oilfield Chemicals","oilfield_chemicals");
 			else if (cy == 'PRP')
-				frm.cy.options[i]= new Option("Petroleum Refining and Petrochemicals ","petroleum_refining_petrochemicals");
+				frm.cy.options[i]= new Option("Petroleum Refining and Petrochemicals","petroleum_refining_petrochemicals");
 			else if (cy == 'PS_L')
 				frm.cy.options[i]= new Option("Petroleum Substitutes","petroleum_substitutes");
 			else if (cy == 'TS')
@@ -91,7 +91,7 @@ function refreshCategories(){
 			else if (cy == 'PP')
 				frm.cy.options[i]= new Option("Petroleum Processes","petroleum_processes");
 			else if (cy == 'PSP')
-				frm.cy.options[i]= new Option("Petroleum and Specialty Products","petroleum_speciality_products");
+				frm.cy.options[i]= new Option("Petroleum and Specialty Products     ","petroleum_speciality_products");
 			else if (cy == 'PS_P')
 				frm.cy.options[i]= new Option("Petroleum Substitutes","petroleum_substitutes");
 			else if (cy == 'POL')
@@ -101,13 +101,14 @@ function refreshCategories(){
 	}
 		
 	}
-		frm.yr.options[0] = new Option("2001","2001");
-		frm.yr.options[1] = new Option("2002","2002");
-		frm.yr.options[2] = new Option("2003","2003");
+		frm.yr.options[6] = new Option("2001","2001");
+		frm.yr.options[5] = new Option("2002","2002");
+		frm.yr.options[4] = new Option("2003","2003");
 		frm.yr.options[3] = new Option("2004","2004");
-		frm.yr.options[4] = new Option("2005","2005");
-		frm.yr.options[5] = new Option("2006","2006");
-		frm.yr.options[6] = new Option("2007","2007");
+		frm.yr.options[2] = new Option("2005","2005");
+		frm.yr.options[1] = new Option("2006","2006");
+		frm.yr.options[0] = new Option("2007","2007");
+		frm.yr.selectedIndex = 0;
 }
 function refreshYears(){
 
@@ -120,17 +121,17 @@ function refreshYears(){
 	
 	
 	if(category =='polymers'){
-		frm.yr.options[0] = new Option("2001","2001");
-		frm.yr.options[1] = new Option("2002","2002");
+		frm.yr.options[1] = new Option("2001","2001");
+		frm.yr.options[0] = new Option("2002","2002");
 		frm.yr.selectedIndex = 0;
 	} else {
-		frm.yr.options[0] = new Option("2001","2001");
-		frm.yr.options[1] = new Option("2002","2002");
-		frm.yr.options[2] = new Option("2003","2003");
+		frm.yr.options[6] = new Option("2001","2001");
+		frm.yr.options[5] = new Option("2002","2002");
+		frm.yr.options[4] = new Option("2003","2003");
 		frm.yr.options[3] = new Option("2004","2004");
-		frm.yr.options[4] = new Option("2005","2005");
-		frm.yr.options[5] = new Option("2006","2006");
-		frm.yr.options[6] = new Option("2007","2007");
+		frm.yr.options[2] = new Option("2005","2005");
+		frm.yr.options[1] = new Option("2006","2006");
+		frm.yr.options[0] = new Option("2007","2007");
 		frm.yr.selectedIndex = selectedyr;
 	}
 	
