@@ -192,8 +192,8 @@ public class ViewBulletin extends HttpServlet
 
 				bulletinFile = new File(fullLink);
 
-				bis = new BufferedInputStream(new FileInputStream(bulletinFile));
 				bout = new BufferedOutputStream(response.getOutputStream());
+				bis = new BufferedInputStream(new FileInputStream(bulletinFile));
 
 				byte[] buff = new byte[1024];
 				int bytesRead;
@@ -202,8 +202,7 @@ public class ViewBulletin extends HttpServlet
 				{
 					bout.write(buff, 0, bytesRead);
 				}
-				bis.close();
-				bout.close();
+
 
 				//Log it
 
@@ -234,10 +233,25 @@ public class ViewBulletin extends HttpServlet
 				client.setRemoteControl();
 			}
 		}
+		catch(FileNotFoundException fe)
+		{
+			response.setContentType("text/html");
+			String errorMessage ="<display>The file you required is not yet available, please check back later.</display>";
+			byte[] errorByte = errorMessage.getBytes();
+
+			for(int i=0;i<errorByte.length;i++)
+			{
+				bout.write(errorByte[i]);
+			}
+			client.log("Error:",fe.getMessage());
+			client.setRemoteControl();
+
+		}
 		catch(Exception e)
 		{
 			client.log("Error:",e.getMessage());
 			client.setRemoteControl();
+			//System.out.println("Error:"+e.getMessage());
 		}
 		finally
 		{
