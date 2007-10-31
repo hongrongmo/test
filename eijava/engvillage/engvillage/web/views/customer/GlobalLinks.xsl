@@ -168,10 +168,10 @@
 		<a TARGET="{$TARGET}" href="/controller/servlet/Controller?CID=bulletinSearch&amp;database=1024">
 		<xsl:choose>
 			<xsl:when test="($LINK='Bulletins')">
-				<img src="/engresources/images/encompass/bu1.gif" border="0" />
+				<img src="/engresources/images/bu1.gif" border="0" />
 			</xsl:when>
 			<xsl:otherwise>
-				<img src="/engresources/images/encompass/bu2.gif" border="0"/>
+				<img src="/engresources/images/bu2.gif" border="0"/>
 			</xsl:otherwise>
 		</xsl:choose>
 		</a>
