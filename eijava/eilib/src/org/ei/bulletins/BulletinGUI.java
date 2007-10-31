@@ -192,14 +192,14 @@ public class BulletinGUI
         if (category != null && !category.equalsIgnoreCase("polymers"))
         {
 
-            lbYear.setOptions(new String[] { "2001", "2002", "2003", "2004", "2005","2006","2007" });
-            lbYear.setValues(new String[] { "2001", "2002", "2003", "2004", "2005","2006", "2007" });
+            lbYear.setOptions(new String[] { "2007", "2006", "2005", "2004", "2003","2002","2001" });
+            lbYear.setValues(new String[] { "2007", "2006", "2005", "2004", "2003","2002", "2001" });
 
         }
         else
         {
-            lbYear.setOptions(new String[] { "2001", "2002" });
-            lbYear.setValues(new String[] { "2001", "2002" });
+            lbYear.setOptions(new String[] { "2002", "2001" });
+            lbYear.setValues(new String[] { "2002", "2001" });
 
         }
 
@@ -414,9 +414,9 @@ public class BulletinGUI
 
         lbYear.setName("yr");
 
-        lbYear.setOptions(new String[] { "2001", "2002", "2003", "2004", "2005","2006", "2007" });
-        lbYear.setValues(new String[] { "2001", "2002", "2003", "2004", "2005","2006", "2007" });
-
+        lbYear.setOptions(new String[] { "2007", "2006", "2005", "2004", "2003","2002", "2001"});
+        lbYear.setValues(new String[] { "2007", "2006", "2005", "2004", "2003","2002", "2001"});
+		lbYear.setDefaultChoice("2007");
         return lbYear.render();
 
     }
