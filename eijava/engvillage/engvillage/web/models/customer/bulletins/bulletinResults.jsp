@@ -38,7 +38,6 @@
     User user = ussession.getUser();
     String cartridges[] = user.getCartridge();
     String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
-    //String appID = ussession.getProperty(UserSession.APPLICATION_KEY);
     SessionID sessionIdObj = ussession.getSessionID();
     	
     boolean showLitPdf = false;
@@ -56,15 +55,7 @@
 	if(cartridges[i].toUpperCase().indexOf("PAT_PDF") > -1)
 		showPatPdf = true;
     }
-/*
-    if(appID == null)
-    {
- 	appID = "Def";
-    }
 
-    String resourcePath   = eiProps.getProperty("resourcePath"+appID);
-*/
-    String resourcePath   = eiProps.getProperty("resourcePath");
     String queryString = request.getParameter("queryStr");	
     String selectedDB = request.getParameter("database");	
 
@@ -73,8 +64,7 @@
     BulletinQuery query = new BulletinQuery();
     
     int docIndex = Integer.parseInt(request.getParameter("docIndex"));
-    
-    
+       
     BulletinPage btPage = null;
     BulletinBuilder builder = new BulletinBuilder();
     BulletinResultNavigator navigator = null;
@@ -127,42 +117,37 @@
     	StringBuffer patCartridges = new StringBuffer();
     	BulletinGUI gui = new BulletinGUI();
   	
-  	for (int i = 0; i < cartridges.length; i++) {
-  	
-        if(gui.validCartridge(db,cartridges[i])){
-        	sbCartridges.append(cartridges[i].toUpperCase());
-        	 if(i != cartridges.length - 1)
-        	sbCartridges.append(";");
-        }
-        if(gui.isLITCartridge(cartridges[i])){
-        	litCartidges.append(cartridges[i].toUpperCase());
-        	if(i != cartridges.length - 1)
-        	litCartidges.append(";");
-        }
-        
-        if(gui.isPATCartridge(cartridges[i])){
-        	patCartridges.append(cartridges[i].toUpperCase());
-        	if(i != cartridges.length - 1)
-        	patCartridges.append(";");
-        }
-         
-       
-        	
-    }
+  	for (int i = 0; i < cartridges.length; i++) 
+  	{	
+		if(gui.validCartridge(db,cartridges[i])){
+			sbCartridges.append(cartridges[i].toUpperCase());
+			 if(i != cartridges.length - 1)
+			sbCartridges.append(";");
+		}
+		if(gui.isLITCartridge(cartridges[i])){
+			litCartidges.append(cartridges[i].toUpperCase());
+			if(i != cartridges.length - 1)
+			litCartidges.append(";");
+		}
+
+		if(gui.isPATCartridge(cartridges[i])){
+			patCartridges.append(cartridges[i].toUpperCase());
+			if(i != cartridges.length - 1)
+			patCartridges.append(";");
+		}       	
+    	}
     
-	client.log("request", "bulletinSearch");
+	client.log("request", "bulletinResults");
 	client.log("dbname", db);
 	client.log("category",category);
 	client.log("year",yr);
-	client.log("custid", user.getCustomerID());	
-	
+	client.log("custid", user.getCustomerID());		
 	client.setRemoteControl();
 
 	out.write("<PAGE>");
 	out.write("<HEADER/>");
 	out.write("<FOOTER/>");
-	out.write("<DB>"+db+"</DB>");
-	out.write("<RESOURCE-PATH>"+resourcePath+"</RESOURCE-PATH>");
+	out.write("<DB>"+db+"</DB>");	
 	out.write(strGlobalLinksXML);
 	out.write("<CARTRIDGES><![CDATA["+sbCartridges+"]]></CARTRIDGES>");
 	out.write("<PATCR><![CDATA["+patCartridges+"]]></PATCR>");
