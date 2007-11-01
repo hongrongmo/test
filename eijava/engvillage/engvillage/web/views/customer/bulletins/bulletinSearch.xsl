@@ -80,35 +80,27 @@
  <table width="100%" align="center" cellspacing="0" cellpadding="0">
  <tr>
  <td>
-    <div style="text-align: center">
-      <table border="0" width="99%" cellspacing="0" cellpadding="0">
-	  <tr>
-	      <td valign="top" width="100%">
-		  <img src="/engresources/images/ev2logo5.gif" border="0"/>
-	      </td>
-	      <td valign="middle" align="right" width="68">
-		  <a href="/controller/servlet/Controller?CID=endSession&amp;SYSTEM_LOGOUT=true">
-		  <img src="/engresources/images/endsession.gif"  border="0"/></a>
-	      </td>
-	   </tr>
-	   <tr>
-	      <td valign="top" height="5" colspan="2">
-		  <img src="/engresources/images/s.gif" border="0" height="5"/>
-	      </td>
-	   </tr>
-       </table>
-    </div>
-</td>
-</tr>
-<tr>
-<td>
   <div style="text-align: center">
+  
+  <!-- INCLUDE THE HEADER -->
+    <xsl:apply-templates select="HEADER">
+  	<xsl:with-param name="SESSION-ID" select="$SESSION-ID"/>
+  	<xsl:with-param name="SELECTED-DB" select="$SELECTED-DB"/>
+  	<xsl:with-param name="SEARCH-TYPE">Bulletins</xsl:with-param>
+    </xsl:apply-templates>
+    <table>
+    	<tr>
+    	    <td> 
+    	<img src="/engresources/images/s.gif" border="0" height="5"/>
+    	    </td>
+    	</tr>
+    </table>
     <!-- INCLUDE THE GLOBAL LINKS BAR -->
     <xsl:apply-templates select="GLOBAL-LINKS">
-		  <xsl:with-param name="SESSION-ID" select="$SESSION-ID"/>
-		  <xsl:with-param name="SELECTED-DB" select ="$SELECTED-DB"/>
-		  <xsl:with-param name="LINK">Bulletins</xsl:with-param>
-		  <xsl:with-param name="RESOURCE-PATH" select="$RESOURCE-PATH"/>
+	<xsl:with-param name="SESSION-ID" select="$SESSION-ID"/>
+	<xsl:with-param name="SELECTED-DB" select ="$SELECTED-DB"/>
+	<xsl:with-param name="LINK">Bulletins</xsl:with-param>
+	<xsl:with-param name="RESOURCE-PATH" select="$RESOURCE-PATH"/>
     </xsl:apply-templates>
   </div>
 </td>
