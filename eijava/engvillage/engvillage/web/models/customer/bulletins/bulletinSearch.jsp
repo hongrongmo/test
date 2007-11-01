@@ -13,6 +13,8 @@
 
 
   RuntimeProperties eiProps = null;
+  ClientCustomizer clientCustomizer=null;
+  boolean isPersonalizationPresent=true;
   	
   public void jspInit()
   {
@@ -45,6 +47,8 @@
     ControllerClient client = new ControllerClient(request, response);
     UserSession ussession=(UserSession)client.getUserSession();
     
+    clientCustomizer=new ClientCustomizer(ussession);
+    isPersonalizationPresent=clientCustomizer.checkPersonalization();
     sessionId = ussession.getSessionID();    
     sesID = sessionId.toString();
     
@@ -151,7 +155,7 @@
   	
 	
     //String resourcePath = eiProps.getProperty("resourcePath"+appID);
-    String resourcePath = eiProps.getProperty("resourcePath");
+    //String resourcePath = eiProps.getProperty("resourcePath");
   	
     //client.log("EISESSION", sessionIdObj.toString());
     client.log("request", "recentBulletins");
@@ -162,6 +166,7 @@
     out.write("<FOOTER/>");
     out.write(strGlobalLinksXML);
     out.write("<CARTRIDGES><![CDATA["+sbCartridges.toString()+"]]></CARTRIDGES>");
+    out.write("<PERSONALIZATION-PRESENT>"+isPersonalizationPresent+"</PERSONALIZATION-PRESENT>");
     out.write("<PATCR><![CDATA["+patCartridges.toString().toUpperCase()+"]]></PATCR>");
     out.write("<LITCR><![CDATA["+litCartridges.toString().toUpperCase()+"]]></LITCR>");
     out.write("<SELECTED-DB><![CDATA["+selectedDB+"]]></SELECTED-DB>");
@@ -172,7 +177,7 @@
     out.write("<PAT-HTML><![CDATA["+showPatHtml+"]]></PAT-HTML>");
     out.write("<PAT-PDF><![CDATA["+showPatPdf+"]]></PAT-PDF>");
     out.write("<SELECTED-DB><![CDATA["+selectedDB+"]]></SELECTED-DB>");
-    out.write("<RESOURCE-PATH>"+resourcePath+"</RESOURCE-PATH>");
+    //out.write("<RESOURCE-PATH>"+resourcePath+"</RESOURCE-PATH>");
     out.write("<SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
     out.write("<QTOP>");
     out.write("<QSTR><![CDATA[");
