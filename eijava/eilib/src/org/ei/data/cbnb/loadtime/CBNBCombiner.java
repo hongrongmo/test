@@ -48,22 +48,22 @@ public class CBNBCombiner extends Combiner
         CombinedWriter writer = new CombinedXMLWriter(recsPerfile, loadNumber, "cbn");
 
         CBNBCombiner c = new CBNBCombiner(writer);
-		if(loadNumber > 3000 || loadNumber < 1000)
-		{
+//		if(loadNumber > 3000 || loadNumber < 1000)
+//		{
 				c.writeCombinedByWeekNumber(url,
 											driver,
 											username,
 											password,
 											loadNumber);
-		}
-	    else
-		{
-				c.writeCombinedByYear(url,
-									  driver,
-									  username,
-									  password,
-									  loadNumber);
-		}
+//		}
+//	    else
+//		{
+//				c.writeCombinedByYear(url,
+//									  driver,
+//									  username,
+//									  password,
+//									  loadNumber);
+//		}
 
         System.out.println("write year" + loadNumber);
 
@@ -90,7 +90,7 @@ public class CBNBCombiner extends Combiner
             this.writer.begin();
             stmt = con.createStatement();
             System.out.println("Running the query...");
-            rs = stmt.executeQuery("select m_id, abn, doc, sco, fjl, isn, cdn, lan, ibn, src, scc,sct, ebt, cin, vol, iss, pag, reg, cym, sic, gic, gid, atl, otl, abs, edn, SUBSTR(pbn,1,4) pyr,pbn,avl, load_number from " + Combiner.TABLENAME +" where substr(pbn,1,4) ='"+ year +"'");
+            rs = stmt.executeQuery("select m_id, abn, doc, sco, fjl, isn, cdn, lan, ibn, src, scc,sct, ebt, cin, vol, iss, pag, reg, cym, sic, gic, gid, atl, otl, abs, edn, SUBSTR(pbn,1,4) pyr,pbn,avl, pbr, load_number from " + Combiner.TABLENAME +" where substr(pbn,1,4) ='"+ year +"'");
 
             System.out.println("Got records ...");
             writeRecs(rs);
@@ -195,15 +195,17 @@ public class CBNBCombiner extends Combiner
                 {
                     rec.put(EVCombinedRec.PUB_YEAR, rs.getString("pyr"));
                 }
-
+                
+                // add companies to INT_PATENT_CLASSIFICATION , facet
                 if (rs.getString("src") != null)
                 {
                     rec.put(EVCombinedRec.COMPANIES, prepareMulti(rs.getString("src")));
-                }
-
+                    rec.put(EVCombinedRec.INT_PATENT_CLASSIFICATION, prepareMulti(rs.getString("src")));                   
+                }                       
+                
 				if(rs.getString("sct") != null)
 				{
-					rec.put(EVCombinedRec.COUNTRY, prepareMulti(rs.getString("sct")));
+					rec.put(EVCombinedRec.COUNTRY, prepareMulti(CountryFormatter.formatCountry(rs.getString("sct"))));
 				}
 
 				if(rs.getString("scc") != null)
@@ -217,11 +219,13 @@ public class CBNBCombiner extends Combiner
                     rec.put(EVCombinedRec.CONTROLLED_TERMS, prepareMulti(rs.getString("ebt")));
                 }
 
+                // Standard Industrial Code added to class codes field and facet
                 if (rs.getString("cin") != null)
                 {
                     rec.put(EVCombinedRec.CHEMICALTERMS, prepareMulti(rs.getString("cin")));
+                    rec.put(EVCombinedRec.ECLA_CODES, prepareMulti(rs.getString("cin")));
                 }
-
+               
                 if (rs.getString("reg") != null)
                 {
                     rec.put(EVCombinedRec.CASREGISTRYNUMBER, prepareMulti(rs.getString("reg")));
@@ -231,24 +235,21 @@ public class CBNBCombiner extends Combiner
                 {
                     rec.put(EVCombinedRec.CHEMICALACRONYMS, prepareMulti(rs.getString("cym")));
                 }
-
+                
+                // Standard Industrial Code added to class codes field and facet
                 if (rs.getString("sic") != null)
                 {
                     rec.put(EVCombinedRec.INDUSTRIALCODES, prepareMulti(rs.getString("sic")));
-
+                    rec.put(EVCombinedRec.CLASSIFICATION_CODE,prepareMulti(rs.getString("sic")));
                 }
 
-                if (rs.getString("gic") != null)
-                {
-                    rec.put(EVCombinedRec.CLASSIFICATION_CODE,
-                            prepareMulti(rs.getString("gic")));
-
-                }
-
+                // add gid to facets
                 if (rs.getString("gid") != null)
                 {
                     rec.put(EVCombinedRec.INDUSTRIALSECTORS, prepareMulti(rs.getString("gid")));
+                    rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareMulti(rs.getString("gid")));
                 }
+               
 
                 if (rs.getString("atl") != null)
                 {
@@ -258,11 +259,6 @@ public class CBNBCombiner extends Combiner
                 if (rs.getString("otl") != null)
                 {
                     rec.put(EVCombinedRec.TRANSLATED_TITLE, rs.getString("otl"));
-                }
-
-                if (rs.getString("edn") != null)
-                {
-                    rec.put(EVCombinedRec.EDITOR, prepareAuthor(rs.getString("edn")));
                 }
 
                 if (rs.getString("avl") != null)
@@ -284,6 +280,11 @@ public class CBNBCombiner extends Combiner
                 rec.put(EVCombinedRec.ISSUE, getFirstNumber(rs.getString("iss")));
                 rec.put(EVCombinedRec.STARTPAGE, getFirstNumber(rs.getString("pag")));
                 rec.put(EVCombinedRec.ACCESSION_NUMBER, rs.getString("abn"));
+                
+				if(rs.getString("pbr") != null)
+				{
+					rec.put(EVCombinedRec.PUBLISHER_NAME, prepareMulti(rs.getString("pbr")));
+				}
                // rec.put(EVCombinedRec.PUB_SORT, rs.getString("pbn"));
                 this.writer.writeRec(rec);
             }
@@ -432,7 +433,7 @@ public class CBNBCombiner extends Combiner
 
             this.writer.begin();
             stmt = con.createStatement();
-            rs = stmt.executeQuery("select m_id, abn, doc, sco, fjl, isn, cdn, lan, ibn, src, scc,sct, ebt, cin, vol, iss, pag, reg, cym, sic, gic, gid, atl, otl, abs, edn, SUBSTR(pbn,1,4) pyr,pbn,avl, load_number from " + Combiner.TABLENAME + " where  load_number ='" + weekNumber + "'");
+            rs = stmt.executeQuery("select m_id, abn, doc, sco, fjl, isn, cdn, lan, ibn, src, scc,sct, ebt, cin, vol, iss, pag, reg, cym, sic, gic, gid, atl, otl, abs, edn, SUBSTR(pbn,1,4) pyr,pbn,avl,pbr, load_number from " + Combiner.TABLENAME + " where  load_number ='" + weekNumber + "'");
             writeRecs(rs);
             this.writer.end();
 
