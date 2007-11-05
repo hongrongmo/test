@@ -2,6 +2,9 @@ package org.ei.data.paper.loadtime;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Enumeration;
+import java.util.Hashtable;
 import java.io.*;
 
 import org.apache.oro.text.perl.*;
@@ -19,10 +22,12 @@ public class PaperChemCombiner
 
     private static String tablename;
     private static String where;
-
+    private static Hashtable cvnoise = new Hashtable();
+    
     public static void main(String args[])
     	throws Exception
     {
+        
         String url = args[0];
         String driver = args[1];
         String username = args[2];
@@ -39,14 +44,15 @@ public class PaperChemCombiner
         System.out.println("write year" + loadNumber);
 
         PaperChemCombiner c = new PaperChemCombiner(writer);
-        if (loadNumber > 3000 || loadNumber < 1000)
-        {
-            c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
-        }
-        else
-        {
-            c.writeCombinedByYear(url, driver, username, password, loadNumber);
-        }
+        c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
+//        if (loadNumber > 3000 || loadNumber < 1000)
+//        {
+//            c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
+//        }
+//        else
+//        {
+//            c.writeCombinedByYear(url, driver, username, password, loadNumber);
+//        }
         System.out.println("finished loadnumber " + loadNumber);
     }
 
@@ -117,6 +123,7 @@ public class PaperChemCombiner
         {
 
             EVCombinedRec rec = new EVCombinedRec();
+
             ++i;
 
             if (Combiner.EXITNUMBER != 0 && i > Combiner.EXITNUMBER)
@@ -137,14 +144,27 @@ public class PaperChemCombiner
                 {
                     rec.put(EVCombinedRec.EDITOR, prepareAuthor(rs.getString("ed")));
                 }
+                
+                String st = rs.getString("st");
+                if (st == null)
+                {
+                    st = rs.getString("se");
+                }
 
+                if (st != null)
+                {
+                    rec.put(EVCombinedRec.SERIAL_TITLE, st);
+                }
+                
                 if (rs.getString("af") != null)
                 {
-                    rec.put(EVCombinedRec.AUTHOR_AFFILIATION, rs.getString("af"));
+                    rec.put(EVCombinedRec.AUTHOR_AFFILIATION, 
+                            prepareMulti(formatAffiliation(rs.getString("af"),st)));
                 }
                 else if (rs.getString("ef") != null)
                 {
-                    rec.put(EVCombinedRec.EDITOR_AFFILIATION, rs.getString("ef"));
+                    rec.put(EVCombinedRec.EDITOR_AFFILIATION, 
+                            prepareMulti(formatAffiliation(rs.getString("ef"),st)));
                 }
 
                 if (rs.getString("ti") != null)
@@ -165,7 +185,7 @@ public class PaperChemCombiner
                 if (rs.getString("pt") != null)
                 {
                     rec.put(EVCombinedRec.CONTROLLED_TERMS,
-                            prepareMulti(rs.getString("pt")));
+                            prepareMulti(rs.getString("pt"), Constants.CO_LA));
                 }
 
                 if (rs.getString("fl") != null)
@@ -189,16 +209,7 @@ public class PaperChemCombiner
                     rec.put(EVCombinedRec.ISBN, rs.getString("bn"));
                 }
 
-                String st = rs.getString("st");
-                if (st == null)
-                {
-                    st = rs.getString("se");
-                }
 
-                if (st != null)
-                {
-                    rec.put(EVCombinedRec.SERIAL_TITLE, st);
-                }
 
                 if (rs.getString("pn") != null)
                 {
@@ -297,7 +308,9 @@ public class PaperChemCombiner
 
                 if (rs.getString("py") != null)
                 {
-                    rec.put(EVCombinedRec.COUNTRY, rs.getString("py"));
+                    rec.put(EVCombinedRec.COUNTRY, 
+                            prepareMulti(CountryFormatter.formatCountry(rs.getString("py"))));
+
                 }
 
                 rec.put(EVCombinedRec.DOCID, rs.getString("M_ID"));
@@ -329,25 +342,6 @@ public class PaperChemCombiner
         }
     }
 
-    private String[] prepareMulti(String multiString)
-    	throws Exception
-    {
-        AuthorStream astream = new AuthorStream(new ByteArrayInputStream(multiString.getBytes()));
-        String s = null;
-        ArrayList list = new ArrayList();
-
-        while ((s = astream.readAuthor()) != null)
-        {
-            s = s.trim();
-            if (s.length() > 0)
-            {
-                list.add(s);
-            }
-        }
-
-        return (String[]) list.toArray(new String[1]);
-
-    }
 
     private String stripAnon(String line)
     {
@@ -635,5 +629,168 @@ public class PaperChemCombiner
         }
 
     }
+    
+    /*  
+     *   prepareMulti method is overloaded 
+     *   to achieve additional format functioality:
+     *   - for cv it calls stripAsterics method to strip prefix asterisk
+     *   - for docTypes it calles eltDocTypes.getMappedDocType(s) to retrieve
+     *   additional doc types values for cross-searches with ev2 data sources 
+    */
+    
+    private String[] prepareMulti(String multiString) throws Exception
+    {
+        return prepareMulti(multiString, null);
+    }
+    
+    private String[] prepareMulti(String multiString , 
+                                  Constants constant) 
+    throws Exception 
+    {
+        if (multiString != null) {
+            
+            AuthorStream astream = new AuthorStream(new ByteArrayInputStream(multiString.getBytes()));
+            String s = null;
+           
+            ArrayList list = new ArrayList();
+            while ((s = astream.readAuthor()) != null) 
+            {
+                s = s.trim();
+                if (s.length() > 0) {
+                	if(constant == null)
+                	{
+                		list.add(s);
+                	}
+                    else if(constant.equals(Constants.CO_LA))
+                    {
+                        list.add(s);
+                    	//list.add(removeCountry(s));
+                    	//list.add(removeLanguage(s));
+                    }
+                }
+            }
+            return (String[]) list.toArray(new String[1]);
+        }
+        else {
+            String[] str = new String[] { "" };
+            return str;
+
+        }
+    }
+    // added method calls for Author Affiliation filed to remove 'Anon', 'et al'
+    // if author affilation is the same as serial title - remove aff filed from extract
+    // replace '&' with 'and'
+    // remove following serial title from aff
+    /*
+    Graphic Arts Monthly 
+    International Paperboard Industry 
+    Paper, London 
+    Allgemeine Papier-Rundschau 
+    PaperAge 
+    Papier, Carton & Cellulose 
+    European Papermaker 
+    PIMA's North American Papermaker 
+    */
+    
+    // remove languages from controll vocabulary
+    // remove country from controlled  vocabulary
+    /*
+             308345                  ENGLISH 
+        161123                  PATENTS 
+        49648                   JAPANESE 
+        45592                   EUROPE 
+        44829                   GERMAN 
+        42026                   UNITED STATES 
+        38841                   JAPAN 
+        35567                   RUSSIAN 
+        19488                   CANADA 
+        19029                   FRENCH 
+        17585                   GERMANY 
+        14692                   DOCUMENTS 
+
+     */
+    
+    private static Hashtable removeaff = new Hashtable();
+    
+    static
+    {
+        removeaff.put("s/\\banon\\b/ /gi","s/\\banon\\b/ /gi");
+        removeaff.put("s/\\bet al\\b/ /gi","s/\\bet al\\b/ /gi");
+        removeaff.put("s/\\s+&\\s+/ and /gi","s/\\s+&\\s+/ and /gi");
+        removeaff.put("s/\\bGraphic Arts Monthly\\b/ /gi","s/\\bGraphic Arts Monthly\\b/ /gi");
+        removeaff.put("s/\\bInternational Paperboard Industry\\b/ /gi","s/\\bInternational Paperboard Industry\\b/ /gi");
+        removeaff.put("s/\\bPaper, London\\b/ /gi","s/\\bPaper, London\\b/ /gi");
+        removeaff.put("s/\\bAllgemeine Papier-Rundschau\\b/ /gi","s/\\bAllgemeine Papier-Rundschau\\b/ /gi");
+        removeaff.put("s/\\bPaperAge\\b/ /gi","s/\\bPaperAge\\b/ /gi");
+        removeaff.put("s/\\bPapier, Carton & Cellulose\\b/ /gi","s/\\bPapier, Carton & Cellulose\\b/ /gi");
+        removeaff.put("s/\\bEuropean Papermaker\\b/ /gi","s/\\bEuropean Papermaker\\b/ /gi");
+        removeaff.put("s/\\bPIMA\'s North American Papermaker\\b/ /gi","s/\\bPIMA\'s North American Papermaker\\b/ /gi");
+    }
+    
+    
+    private String formatAffiliation(String result, String stitle)
+    {        
+        Enumeration en = removeaff.keys();
+        if(result != null && !result.trim().equals(""))
+        {
+            while (en.hasMoreElements()) 
+            {
+                result = perl.substitute((String)en.nextElement(), result);           
+            }
+            if (stitle != null && 
+                    !stitle.trim().equals("") && 
+                     stitle.equalsIgnoreCase(result))
+            {        
+                result = "";
+            }
+        }
+        return result;
+    }
+    
+    
+// Controlled vocabulary - parse out country and language 
+    static
+    {
+        cvnoise.put("JAPANESE","JAPANESE");
+        cvnoise.put("JAPAN","JAPAN");
+        cvnoise.put("EUROPE","EUROPE");
+        cvnoise.put("GERMAN","GERMAN");
+        cvnoise.put("GERMANY","GERMANY");
+        cvnoise.put("UNITED STATES","UNITED STATES");        
+        cvnoise.put("RUSSIAN","RUSSIAN");
+        cvnoise.put("CANADA","CANADA");        
+        cvnoise.put("FRENCH","FRENCH");        
+        cvnoise.put("PATENTS","PATENTS");
+        cvnoise.put("DOCUMENTS","DOCUMENTS");        
+    }
+    
+    private String removeCountry(String line)
+    {
+        if(line != null && !line.trim().equals(""))
+        {
+            Enumeration en = cvnoise.keys();
+            while (en.hasMoreElements()) 
+            {
+                String key = (String) en.nextElement();
+                line = perl.substitute("s/" + key+"/ /gi", line);
+            }
+        }
+        return line;
+    }
+//    
+//    private String removeLanguage(String line)
+//    {
+//        Enumeration en = Language.iso639_language.keys();
+//        // using class Language
+//        while (en.hasMoreElements()) 
+//        {
+//           // String key = (String) en.nextElement();
+//          //  String next = (String) Language.iso639_language.get(key);
+//
+//            line = perl.substitute("s/\\b" + (String) en.nextElement() + "\\b/ /gi", line);
+//
+//        }
+//        return line;
+//    }
 
 }
