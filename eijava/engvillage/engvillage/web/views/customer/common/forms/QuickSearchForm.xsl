@@ -122,7 +122,8 @@
                 <tr>
                   <td valign="top" height="15" bgcolor="#3173B5" colspan="3">
 
-                  <table border="0" cellspacing="0" cellpadding="4">
+                 <!-- <table border="0" cellspacing="0" cellpadding="4"> -->
+                 <table border="0" cellspacing="0" cellpadding="4">
                   <tr><td>
                       <a CLASS="LgWhiteText"><B><xsl:value-of select="//NEWS-TITLE"/></B></a>
                   </td></tr>
@@ -135,33 +136,46 @@
                   <td valign="top" bgcolor="#FFFFFF">
 
                   <!-- Tiny table for news features -->
-                   <table border="0" width="100%" cellspacing="0" cellpadding="0">
+                   <table border="0" id = "newsTable" width="100%" cellspacing="0" cellpadding="0">
+               <!--
                     <tr>
                       <td valign="top" height="5" colspan="3"><img src="/engresources/images/s.gif" height="5"/></td>
                     </tr>
+                -->
+                
+                <xsl:value-of select="//NEWS-TEXT" disable-output-escaping="yes"/>
+                    
+                    <!--
                     <tr>
                       <td valign="top" width="3"><img src="/engresources/images/s.gif" width="3"/></td>
-                      <td valign="top">
+                   	   <td valign="top"> 
                         <a CLASS="SmBlackText"><xsl:value-of select="//NEWS-TEXT" disable-output-escaping="yes"/>
                         </a>
                       </td>
                       <td valign="top" width="2"><img src="/engresources/images/s.gif" width="2"/></td>
                     </tr>
+                    
+                    -->
+                   <!--
                     <tr>
                       <td valign="top" colspan="3" height="6"><img src="/engresources/images/s.gif" height="6"/></td>
                     </tr>
+                     -->
                     <tr>
                       <td valign="top" width="3"><img src="/engresources/images/s.gif" width="3"/></td>
 
-                  <td valign="top" align="right">
-                    <a class="MedBlueLink" href="javascript:makeUrl('Content_Resources_Introduction.htm')"><b>More</b></a>
-                  </td>
+                  		<td valign="top" align="right">
+                    		<a class="MedBlueLink" href="javascript:makeUrl('Content_Resources_Introduction.htm')"><b>More</b></a>
+                  		</td>
 
-                      <td valign="top" width="2"><img src="/engresources/images/s.gif" width="2"/></td>
+                      	<td valign="top" width="2"><img src="/engresources/images/s.gif" width="2"/></td>
                     </tr>
+                    
+                     <!--
                     <tr>
                       <td valign="top" colspan="3" height="5"><img src="/engresources/images/s.gif"/></td>
                     </tr>
+                     -->
                     </table>
                         <!-- End of Tiny table for news features -->
                      </td><td valign="top" bgcolor="#3173B5" width="1"><img src="/engresources/images/s.gif" border="0" width="1"/></td></tr>
