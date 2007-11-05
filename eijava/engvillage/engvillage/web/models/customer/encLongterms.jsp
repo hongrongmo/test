@@ -1,7 +1,7 @@
 <%@ page language="java" %><%@ page session="false" %><%@ page import="org.ei.data.encompasslit.runtime.EltDocBuilder"%><%@ page import="java.util.*"%><%@ page import="java.net.URLEncoder"%><%@ page import="org.ei.domain.*"%><%@ page import="org.ei.controller.ControllerClient"%><%@ page import="org.ei.session.*"%><%@ page import="org.ei.config.*"%><%@ page import="org.ei.query.base.*"%><%@ page import="org.ei.domain.Searches"%><%@ page import="org.ei.tags.TagBroker"%><%@ page import="org.ei.tags.Tag"%><%@ page import="org.ei.domain.personalization.GlobalLinks"%><%@ page import="org.ei.domain.personalization.SavedSearches"%><%@ page  errorPage="/error/errorPage.jsp"%><%
 	ControllerClient client = null;
 	String docId = null;
-	String tagresult = null;
+	String terms = "SAMPLE;SAMPLE|SAMPLE;SAMPLE";
 
 	if(request.getParameter("docid") != null)
 	{
@@ -30,25 +30,24 @@
 	docIds.add(did);
 	List listOfDocIDs = builder.buildPage(docIds,LinkedTermDetail.LINKEDTERM_FORMAT);
 	EIDoc eiDoc = (EIDoc) listOfDocIDs.get(0);
-	String result =(String) eiDoc.getLongTerms();
+	terms =(String) eiDoc.getLongTerms();
 
-	System.out.println("result length"+result.length());
-
-	result = result.substring(0,500000);
+	System.out.println("result length"+terms.length());
 	
-	if (docId != null)
+	if (terms.length() > 500000)
 	{
-		tagresult = result;
+		terms = terms.substring(0,500000);
 	}
-	else
+	
+	if (terms == null || terms.trim().equals(""))
 	{
-		tagresult = "SAMPLE;SAMPLE|SAMPLE;SAMPLE";
+		terms = "SAMPLE;SAMPLE|SAMPLE;SAMPLE";
 	}
 		
 	out.write("<PAGE>");
 	out.write("<HEADER/>");
 	out.write("<FOOTER/>");
-	out.write("<LTERMS><![CDATA["+tagresult+"]]></LTERMS>");
+	out.write("<LTERMS><![CDATA["+terms+"]]></LTERMS>");
 	out.write("</PAGE>");
 	out.write("<!--END-->");
 	out.close();
