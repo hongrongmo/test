@@ -138,6 +138,51 @@ public class FastQueryWriter
         mappings.setProperty("pfd", "pfd");
         mappings.setProperty("bks", "co");
         mappings.setProperty("bkt", "st");
+        
+        ///EnCompass fields
+        mappings.setProperty("pd", "ad");
+        mappings.setProperty("cr", "cr");
+        mappings.setProperty("sc", "sc");
+        mappings.setProperty("cp", "cp");
+        mappings.setProperty("cm", "ch"); ///???
+        mappings.setProperty("rc", "rc");
+        mappings.setProperty("si", "si");///???
+        mappings.setProperty("gc", "gc");
+        mappings.setProperty("ip", "pid");
+        mappings.setProperty("ppa", "af");
+        mappings.setProperty("gd", "ds");
+        mappings.setProperty("ic", "ic");
+
+        mappings.setProperty("ce", "ca");
+
+        mappings.setProperty("cva", "ta");
+        mappings.setProperty("cvp", "tp");
+        mappings.setProperty("cvn", "tn");
+        mappings.setProperty("cvma", "ma");
+        mappings.setProperty("cvmp", "mp");
+        mappings.setProperty("cvm", "mh");
+        mappings.setProperty("cvmn", "mn");
+
+        //EnCompassPAT fields
+        mappings.setProperty("ap", "pam");
+        mappings.setProperty("ac", "pco");
+        mappings.setProperty("ad", "pa");
+        mappings.setProperty("aj", "dn");
+
+        mappings.setProperty("pt", "pt");
+        mappings.setProperty("pc", "pac");
+        mappings.setProperty("ds", "dg");
+
+        mappings.setProperty("pla", "pla");
+        mappings.setProperty("lt", "lt");
+        mappings.setProperty("ey", "ey");
+        mappings.setProperty("ppd", "pdt");
+        mappings.setProperty("prd", "prd");
+        mappings.setProperty("prc", "prc");
+        mappings.setProperty("prn", "prn");
+
+        mappings.setProperty("so", "st");
+        mappings.setProperty("dg", "dg");
     }
 
 
