@@ -84,7 +84,7 @@ public class ChimicaCombiner
             this.writer.begin();
             stmt = con.createStatement();
             System.out.println("Running the query...");
-            rs = stmt.executeQuery("select abs, m_id, chn, tie, aut, adr, sti, SUBSTR(pyr,1,4) pyr, cod, isn, lna, ctm, crd, trc, vol,iss,pag, std, tif, cfl,to_char(to_date(spd),'yyyymmdd') pub_sort, pub, load_number from " + Combiner.TABLENAME + " where SUBSTR(pyr, 1, 4) ='"+year+"'");
+            rs = stmt.executeQuery("select abs, m_id, cna, chn, tie, aut, adr, sti, SUBSTR(pyr,1,4) pyr, cod, isn, lna, ctm, crd, trc, vol,iss,pag, std, tif, cfl,to_char(to_date(spd),'yyyymmdd') pub_sort, pub, load_number from " + Combiner.TABLENAME + " where SUBSTR(pyr, 1, 4) ='"+year+"'");
             System.out.println("Got records ...");
             writeRecs(rs);
             System.out.println("Wrote records.");
@@ -242,7 +242,13 @@ public class ChimicaCombiner
 				{
 					rec.put(EVCombinedRec.PUBLISHER_NAME, rs.getString("pub"));
 				}
-
+				
+				
+				if(rs.getString("cna") != null)
+				{
+					rec.put(EVCombinedRec.COUNTRY, prepareMulti(CountryFormatter.formatCountry(rs.getString("cna"))));
+				}
+				
                 this.writer.writeRec(rec);
             }
 
@@ -413,7 +419,7 @@ public class ChimicaCombiner
             this.writer.begin();
             stmt = con.createStatement();
 
-            rs = stmt.executeQuery("select abs, m_id, chn, tie, aut, adr, sti, SUBSTR(pyr,1,4) pyr, cod, isn, lna, ctm, crd, trc, vol,iss,pag, std, tif, cfl,to_char(to_date(spd),'yyyymmdd') pub_sort, pub, load_number from " + Combiner.TABLENAME + " where load_number =" + weekNumber);
+            rs = stmt.executeQuery("select abs, m_id, cna, chn, tie, aut, adr, sti, SUBSTR(pyr,1,4) pyr, cod, isn, lna, ctm, crd, trc, vol,iss,pag, std, tif, cfl,to_char(to_date(spd),'yyyymmdd') pub_sort, pub, load_number from " + Combiner.TABLENAME + " where load_number =" + weekNumber);
 
             writeRecs(rs);
             this.writer.end();
