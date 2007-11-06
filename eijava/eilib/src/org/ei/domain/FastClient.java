@@ -64,7 +64,7 @@ public class FastClient
 			   mask == DatabaseConfig.GEO_MASK ||
 			   mask == DatabaseConfig.ELT_MASK ||
 			   mask == DatabaseConfig.EPT_MASK ||
-			   mask == DatabaseConfig.CBF_MASK
+			   mask == DatabaseConfig.CBF_MASK 
 			   )
 			{
 				return true;
@@ -122,7 +122,9 @@ public class FastClient
 							DatabaseConfig.INS_MASK +
 							DatabaseConfig.NTI_MASK +
 							DatabaseConfig.GEO_MASK +
-							DatabaseConfig.CBF_MASK)) > 0)){
+							DatabaseConfig.CBF_MASK +
+							DatabaseConfig.ELT_MASK+
+							DatabaseConfig.EPT_MASK)) > 0)){
 				return true;
 			}
 		}
@@ -140,25 +142,35 @@ public class FastClient
 		}
 		// include PEC only if Patents are included
 		else if(EiNavigator.PEC.equals(navid)) {
-			if((mask & (DatabaseConfig.EUP_MASK + DatabaseConfig.UPA_MASK)) > 0) {
+			if((mask & (DatabaseConfig.EUP_MASK + 
+					DatabaseConfig.UPA_MASK+ 
+					DatabaseConfig.ELT_MASK + 
+					DatabaseConfig.EPT_MASK)) > 0) {
 				return true;
 			}
 		}
 		// include PID only if Patents are included
 		else if(EiNavigator.PID.equals(navid)) {
-			if((mask & (DatabaseConfig.EUP_MASK + DatabaseConfig.UPA_MASK)) > 0) {
+			if((mask & (DatabaseConfig.EUP_MASK + 
+						DatabaseConfig.UPA_MASK+ 
+						DatabaseConfig.EPT_MASK)) > 0) {
 				return true;
 			}
 		}
 		// include PUC only if Patents are included
 		else if(EiNavigator.PUC.equals(navid)) {
-			if((mask & (DatabaseConfig.EUP_MASK + DatabaseConfig.UPA_MASK)) > 0) {
+			if((mask & (DatabaseConfig.EUP_MASK + 
+						DatabaseConfig.UPA_MASK + 
+						DatabaseConfig.ELT_MASK + 
+						DatabaseConfig.EPT_MASK)) > 0) 
+			{
 				return true;
 			}
 		}
 		// include PEC only if Encomapss Pat are included
 		else if(EiNavigator.PAC.equals(navid)) {
-			if((mask & (DatabaseConfig.EPT_MASK )) > 0) {
+			if((mask & (DatabaseConfig.EPT_MASK )) > 0) 
+			{
 				return true;
 			}
 		}
