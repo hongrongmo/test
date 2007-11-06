@@ -1,5 +1,8 @@
 <?xml version="1.0" ?>
 
+<!DOCTYPE xsl:stylesheet [
+  <!ENTITY nbsp '<xsl:text disable-output-escaping="yes">&amp;nbsp;</xsl:text>'>
+]>
 <xsl:stylesheet
     version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -55,186 +58,436 @@
     	<xsl:text disable-output-escaping="yes">
     	<![CDATA[
     	<xsl:comment>
-       <script language="javascript">
-                function printFormat(sessionid,searchtype,searchid,database,databaseid)
+    	
+  <script language="javascript">
+       
+  <!-- started here-->
+ 	
+	var mltTableBody;
+	var mltTable;
+	var mltDiv;
+	var mltTerms;
+	var mltFlag = "1";
+	var mltInputField;
+	var mltTerms;
+	
+	var lstTableBody;
+	var lstTable;
+	var lstDiv;
+	var lstTerms;
+	var lstFlag = "1";
+	var lstInputField;
+	var lstTerms;
+	
+	var atmTableBody;
+	var atmTable;
+	var atmDiv;
+	var atmTerms;		
+	var atmFlag = "1";
+	var atmInputField;
+	var atmTerms;
+
+    var longltTableBody;
+    var longltTable;
+    var longltDiv;
+    var longltTerms;
+    var longltFlag = "1";
+    var longltInputField;
+    var longltTerms;
+    var mid;    
+    var xmlHttp;
+	
+
+
+	function createXMLHttpRequest()
+	{
+    	try
+    	{
+        	xmlHttp = new XMLHttpRequest();
+    	}
+    	catch (trymicrosoft)
+    	{
+        	try
+        	{
+            	xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+        	}
+        	catch (othermicrosoft)
+        	{
+            	try
+            	{
+                	xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+            	}
+            	catch (failed)
+            	{
+                	xmlHttp = null;
+            	}
+        	}
+    	}
+    	if (xmlHttp == null)
+    	alert("Error creating request object!");
+	}
+
+	function findLongLinkTerms(mid)
+	{ 
+    	var date = new Date();
+    	createXMLHttpRequest();  
+    	var url = "/controller/servlet/Controller?CID=encLongterms&docid="+mid+"&timestamp="+date.getTime();
+    	xmlHttp.open("GET", url, true);
+    	xmlHttp.onreadystatechange = callback;
+    	xmlHttp.send(null);
+	}
+
+
+	function callback()
+	{
+    	if (xmlHttp.readyState == 4)
+    	{
+        	if (xmlHttp.status == 200)
+        	{
+            	var allterms = xmlHttp.responseXML;
+            	var terms = allterms.getElementsByTagName("body");
+            	if (terms != null && terms[0].firstChild != null)
+            	{
+                	if (terms[0].firstChild.nodeValue != null)
+                	{                              
+                    	longltTerms = terms[0].firstChild.nodeValue; 
+                    	drawTerms("longlt");
+                	}
+            	}
+        	}
+    	}
+	}
+
+
+	function flipImg(terms, termtype)
+	{
+		if(termtype == "mlt")
+		{
+			if(mltFlag == "1")
+			{
+				draw(terms, termtype);				
+				document.mlt.src="/engresources/images/encMinus.gif";				
+				document.mltOpenClose.src="/engresources/images/encMltClose.gif";				
+				mltFlag = "2";
+			}
+			else if(mltFlag == "2")
+			{
+				clearTerms(termtype);
+				document.mlt.src="/engresources/images/encPlus.gif";
+				document.mltOpenClose.src="/engresources/images/encMltOpen.gif";
+				mltFlag = "1";
+			}					
+		}		
+		else if(termtype == "lst")
+		{
+			if(lstFlag == "1")
+			{
+				draw(terms, termtype);				
+				document.lst.src="/engresources/images/encMinus.gif";				
+				document.lstOpenClose.src="/engresources/images/encLinkedClose.gif";				
+				lstFlag = "2";
+			}
+			else if(lstFlag == "2")
+			{
+				clearTerms(termtype);
+				document.lst.src="/engresources/images/encPlus.gif";
+				document.lstOpenClose.src="/engresources/images/encLinkedOpen.gif";
+				lstFlag = "1";
+			}					
+		}
+		else if (termtype == "atm")
+		{
+			if(atmFlag == "1")
+			{
+		 		draw(terms, termtype);				
+		 		document.atm.src="/engresources/images/encMinus.gif";				
+				document.atmOpenClose.src="/engresources/images/encTemplatesClose.gif";				
+				atmFlag = "2";
+			}
+			else if(atmFlag == "2")
+			{
+				clearTerms(termtype);
+				document.atm.src="/engresources/images/encPlus.gif";
+				document.atmOpenClose.src="/engresources/images/encTemplatesOpen.gif";
+				atmFlag = "1";
+			}		
+		}
+		else if (termtype == "longlt")
+        {
+            if(longltFlag == "1")
+            {
+                draw(terms, termtype);              
+                document.longlt.src="/engresources/images/encMinus.gif";                
+                document.longltOpenClose.src="/engresources/images/encLinkedClose.gif";               
+                longltFlag = "2";
+            }
+            else if(longltFlag == "2")
+            {
+                clearTerms(termtype);
+                document.longlt.src="/engresources/images/encPlus.gif";
+                document.longltOpenClose.src="/engresources/images/encLinkedOpen.gif";
+                longltFlag = "1";
+            }       
+        }
+	}
+				
+	function initVars(terms,termtype)
+	{		
+		if(termtype == "mlt")
+		{				
+			mltTerms = terms;
+			mltDiv = document.getElementById("mltdiv");
+			mltInputField = document.getElementById("mltfield");
+			mltTableBody = document.getElementById("mlt_table_body");
+			mltTable = document.getElementById("mlt_table");
+		}
+		else if (termtype == "lst")
+		{
+			lstTerms = terms;
+			lstDiv = document.getElementById("lstdiv");
+			lstInputField = document.getElementById("lstfield");
+			lstTableBody = document.getElementById("lst_table_body");
+			lstTable = document.getElementById("lst_table");
+		}
+		else if (termtype == "atm")
+		{
+			atmTerms = terms;
+			atmDiv = document.getElementById("atmdiv");
+			atmInputField = document.getElementById("atmfield");
+			atmTableBody = document.getElementById("atm_table_body");
+			atmTable = document.getElementById("atm_table");
+		}
+		else if (termtype == "longlt")
+        {
+ 
+ 			//findLongLinkTerms();
+            longltTerms = "Retrieving...";
+            longltDiv = document.getElementById("longltdiv");
+            longltInputField = document.getElementById("longltfield");
+            longltTableBody = document.getElementById("longlt_table_body");
+            longltTable = document.getElementById("longlt_table");
+            //mid = document.getElementById("longlt_mid");
+
+        }
+
+	}
+ 
+ 	function draw(terms, termtype)
+	{
+		initVars(terms,termtype);
+        if(termtype == "longlt")
+        {
+            findLongLinkTerms(terms);  
+        }
+		setOffsetTerms(termtype);
+		drawTerms(termtype);
+		return false;
+	}
+       
+	function setOffsetTerms(termtype)
+	{
+
+		if(termtype =="mlt")
+		{		
+			var gend = mltInputField.offsetWidth;
+			var gleft = calculateOffsetLeftGroup1(mltInputField)+gend;
+			var gtop = calculateOffsetTopGroup1(mltInputField);					
+			mltDiv.style.border = "black 0px solid";	
+			mltDiv.style.left = gleft + "px";
+			mltDiv.style.top = gtop + "px";		
+			mltTable.style.width = "560px"; 				
+		}	
+		else if (termtype == "atm")
+		{
+			var gend = atmInputField.offsetWidth;
+			var gleft = calculateOffsetLeftGroup1(atmInputField)+gend;
+			var gtop = calculateOffsetTopGroup1(atmInputField);	
+			atmDiv.style.border = "black 0px solid";	
+			atmDiv.style.left = gleft + "px";
+			atmDiv.style.top = gtop + "px";		
+			atmTable.style.width = "560px"; 			
+		}	
+		else if (termtype == "lst")
+		{
+			var gend = lstInputField.offsetWidth;
+			var gleft = calculateOffsetLeftGroup1(lstInputField)+gend;
+			var gtop = calculateOffsetTopGroup1(lstInputField);	
+			lstDiv.style.border = "black 0px solid";	
+			lstDiv.style.left = gleft + "px";
+			lstDiv.style.top = gtop + "px";		
+			lstTable.style.width = "560px"; 			
+		}	
+		else if (termtype == "longlt")
+        {
+            var gend = longltInputField.offsetWidth;
+            var gleft = calculateOffsetLeftGroup1(longltInputField)+gend;
+            var gtop = calculateOffsetTopGroup1(longltInputField);  
+            longltDiv.style.border = "black 0px solid"; 
+            longltDiv.style.left = gleft + "px";
+            longltDiv.style.top = gtop + "px";      
+            longltTable.style.width = "560px";          
+        }
+
+	}
+	
+	function clearTerms(termtype)
+	{
+
+		if (termtype == "mlt")
+		{
+			if (mltTableBody != null )
+			{
+				var gi = mltTableBody.childNodes.length;
+				for (var i = gi - 1; i >= 0 ; i--)
+				{
+					mltTableBody.removeChild(mltTableBody.childNodes[i]);
+				}
+				mltDiv.style.border = "none";
+			}
+		}
+		else if(termtype == "atm")
+		{
+			if (atmTableBody != null )
+			{
+				var gi = atmTableBody.childNodes.length;
+				for (var i = gi - 1; i >= 0 ; i--)
+				{
+					atmTableBody.removeChild(atmTableBody.childNodes[i]);
+				}
+				atmDiv.style.border = "none";
+			}		
+		}
+	 	else if(termtype == "lst")
+		{
+			if (lstTableBody != null )
+			{
+				var gi = lstTableBody.childNodes.length;
+				for (var i = gi - 1; i >= 0 ; i--)
+				{
+					lstTableBody.removeChild(lstTableBody.childNodes[i]);
+				}
+				lstDiv.style.border = "none";
+			}		
+		}
+		else if(termtype == "longlt")
+        {
+            if (longltTableBody != null )
+            {
+                var gi = longltTableBody.childNodes.length;
+                for (var i = gi - 1; i >= 0 ; i--)
                 {
-
-                    var i=0;
-                    var url = null;
-                    var docidstring  = "&docidlist=";
-                    var handlestring = "&handlelist=";
-                    var hiddensize = document.quicksearchresultsform.elements.length;
-
-                    for(var i=0 ; i < hiddensize ; i++)
-                    {
-                        var nameOfElement = document.quicksearchresultsform.elements[i].name;
-                        var valueOfElement = document.quicksearchresultsform.elements[i].value;
-
-                        if((nameOfElement.search(/HANDLE/)!=-1) && (valueOfElement != ""))
-                        {
-                        handlestring += valueOfElement ;
-                        }
-
-                        if((nameOfElement.search(/DOC-ID/)!=-1) && (valueOfElement != ""))
-                        {
-                        docidstring += valueOfElement ;
-                        }
-                    }
-
-                    url= "/controller/servlet/Controller?EISESSION="+sessionid+"&CID=printDetailedSelectedRecords&searchid="+searchid+"&database="+database+"&displayformat=detailed"+docidstring+handlestring;
-                    new_window = window.open(url,'NewWindow','status=yes,resizable,scrollbars,width=600,height=400');
-                    new_window.focus();
-
+                    longltTableBody.removeChild(longltTableBody.childNodes[i]);
                 }
+                longltDiv.style.border = "none";
+            }       
+        }
 
-                // THIS FUNCTION BASICALLY CONSTRUCT ALL THE REQUIRED PARAMETERS FOR EMAIL.THE VALUES SO CONSTRUCTED ARE SENT TO
-                //EMAIL FORM.(emailSelectedRecords,emailSelectedFormatResults.jsp)
-                function emailFormat(sessionid,searchtype,searchid,database,databaseid)
-                {
+	}
+	
+	// fhis function is drawing link terms
+	function drawTerms(termtype)
+	{
+	
+		clearTerms(termtype);
+		var allterms = new Array();
+		if(termtype == "atm")
+		{		
+			allterms= atmTerms.split("</br>");
+		}
+		else if(termtype == "mlt")
+		{
+			allterms = mltTerms.split("|");			
+		}
+		else if(termtype == "lst")
+		{
+			allterms = lstTerms.split("|");			
+		}
+		else if(termtype == "longlt")
+        {
+            allterms = longltTerms.split("|");                     
+        }
 
-                    var i=0;
-                    var url = null;
-                    var docidstring  = "&docidlist=";
-                    var handlestring = "&handlelist=";
-                    var hiddensize = document.quicksearchresultsform.elements.length;
+		var size = allterms.length;
+		var row, cell, txtNode;
+		for (var i = 0; i < size; i++)
+		{
+			var nextNode = allterms[i];
+	//		if (termtype == "lst")
+	//		{
+	//			nextNode="/engresources/images/separator.gif"+nextNode;
+	//		}
+			row = document.createElement("tr");
+			cell = document.createElement("td");
+			cell.tabIndex =1;
+			cell.style.paddingLeft="5px";				
+			cell.setAttribute("className", "SmBlackText");
+			if (nextNode != "")
+			{
+				var sepimg = document.createElement("img");
+				sepimg.setAttribute("src", "/engresources/images/separator.gif");
+	    		sepimg.setAttribute("height", "7");
+	    		sepimg.setAttribute("width", "7");
+	    		sepimg.setAttribute("alt", "separ");
+	    		cell.appendChild(sepimg);
 
-                    for(var i=0 ; i < hiddensize ; i++)
-                    {
-                        var nameOfElement = document.quicksearchresultsform.elements[i].name;
-                        var valueOfElement = document.quicksearchresultsform.elements[i].value;
+	    		var spaceimg = document.createElement("img");
+	    		spaceimg.setAttribute("src", "/engresources/images/s.gif");
+	    		spaceimg.setAttribute("height", "7");
+	    		spaceimg.setAttribute("width", "5");
+	    		cell.appendChild(spaceimg);
+	    	}
 
-                        if((nameOfElement.search(/HANDLE/)!=-1) && (valueOfElement != ""))
-                        {
-                        handlestring += valueOfElement ;
-                        }
+			txtNode = document.createTextNode(nextNode);
+			cell.appendChild(txtNode);
+			row.appendChild(cell);
+			if(termtype == "atm")
+			{
+				atmTableBody.appendChild(row);
+			}
+			else if (termtype == "mlt")
+			{
+				mltTableBody.appendChild(row);
+			}
+			else if (termtype == "lst")
+			{
+				lstTableBody.appendChild(row);
+			}
+			else if (termtype == "longlt")
+			{
+			
+				longltTableBody.appendChild(row);
+			}
+		}			
+		return false;		
+	}
+		
+	function calculateOffsetLeftGroup1(gfield)
+	{
+		return calculateOffsetGroup1(gfield, "offsetLeft");
+	}
+	function calculateOffsetTopGroup1(gfield)
+	{
+		return calculateOffsetGroup1(gfield, "offsetTop");
+	}
+	function calculateOffsetGroup1(gfield, gattr)
+	{
+		var goffset = 0;
+		while(gfield)
+		{
+			goffset += gfield[gattr];
+			gfield = gfield.offsetParent;
+		}
+		return goffset;
+	}
+	   
+    </script>
+    </xsl:comment>
 
-                        if((nameOfElement.search(/DOC-ID/)!=-1) && (valueOfElement != ""))
-                        {
-                        docidstring += valueOfElement ;
-                        }
-                    }
+    ]]>
 
-                    url= "/controller/servlet/Controller?EISESSION="+sessionid+"&CID=emailForm&searchid="+searchid+"&database="+database+"&displayformat=detailed&absfullselected=true"+docidstring+handlestring;
-                    new_window=window.open(url,'NewWindow','status=yes,resizable,scrollbars,width=600,height=400');
-                    new_window.focus();
+    </xsl:text>
 
-                }
-
-
-                function downloadFormat(sessionid,searchtype,searchid,database,databaseid)
-                {
-
-                    var i=0;
-                    var url = null;
-                    var docidstring  = "&docidlist=";
-                    var handlestring = "&handlelist=";
-                    var hiddensize = document.quicksearchresultsform.elements.length;
-
-                    for(var i=0 ; i < hiddensize ; i++)
-                    {
-                        var nameOfElement = document.quicksearchresultsform.elements[i].name;
-                        var valueOfElement = document.quicksearchresultsform.elements[i].value;
-
-                        if((nameOfElement.search(/HANDLE/)!=-1) && (valueOfElement != ""))
-                        {
-                        handlestring += valueOfElement ;
-                        }
-
-                        if((nameOfElement.search(/DOC-ID/)!=-1) && (valueOfElement != ""))
-                        {
-                        docidstring += valueOfElement ;
-                        }
-                    }
-
-                    // jam 9/27/2002
-                    // displayformat is not detailed - but fullDoc for downloading
-                    // DownloadForm.xsl will use this value for CID creation
-                    // changed from detailed
-                    url= "/controller/servlet/Controller?EISESSION="+sessionid+"&CID=downloadform&searchid="+searchid+"&database="+database+"&displayformat=fullDoc&absfullselected=true"+docidstring+handlestring;
-                    new_window = window.open(url,'NewWindow','status=yes,resizable,scrollbars,width=600,height=400');
-                    new_window.focus();
-
-                }
-
-                //Script for saved records format
-                function savedrecordsFormat(sessionid,searchtype,searchid,database,databaseid,displayformat,source)
-                {
-
-                        var i=0;
-                        var url = null;
-                        var docidstring  = "&docidlist=";
-                        var handlestring = "&handlelist=";
-                        var hiddensize = document.quicksearchresultsform.elements.length;
-                        var cbcheckvalue= false;
-                        if(document.quicksearchresultsform.cbresult.checked)
-                        {
-                            cbcheckvalue = true;
-                        }
-
-
-                        // jam 10/4/2002
-                        // bug - single view of document can be 'Saved to Folder'
-                        // regardless of whether or not the document is selected (in basket)
-                        //if(cbcheckvalue)
-                        //{
-                            for(var i=0 ; i < hiddensize ; i++)
-                            {
-                                var nameOfElement = document.quicksearchresultsform.elements[i].name;
-                                var valueOfElement = document.quicksearchresultsform.elements[i].value;
-
-
-                                if((nameOfElement.search(/HANDLE/)!=-1) && (valueOfElement != ""))
-                                {
-                                handlestring += valueOfElement ;
-                                }
-
-                                if((nameOfElement.search(/DOC-ID/)!=-1) && (valueOfElement != ""))
-                                {
-                                docidstring += valueOfElement ;
-                                }
-                            }
-                        //}
-
-                        if(displayformat == 'addrecord')
-                        {
-                            url= "/controller/servlet/Controller?EISESSION="+sessionid+"&CID=viewSavedFolders&databaseid="+databaseid+docidstring+"&database="+database;
-                        }
-                        else
-                        {
-                            url="/controller/servlet/Controller?EISESSION="+sessionid+"&CID=personalLoginForm&displaylogin=true&displayform=addrecords&database="+database+"&databaseid="+databaseid+"&source="+source+docidstring;
-                        }
-                        NewWindow = window.open(url,'NewWindow','status=yes,resizable,scrollbars,width=600,height=400');
-                        NewWindow.focus();
-                     }
-
-                // This function called when you want to add the document to the selected set and when
-                // you want to delete the document from the selected set.In this two
-                // functions will be performed based on checkbox checked value.If the checked value is true
-                // the document will add to the selected set otherwise the document will be removed from
-                // the selected set.
-                function selectUnselectRecord(cbno,handle,docid,searchquery,database,sessionid,searchid)
-                {
-                  var now = new Date() ;
-                  var milli = now.getTime() ;
-                  var img = new Image() ;
-                  var cbcheck = document.quicksearchresultsform.cbresult.checked;
-                  if(cbcheck)
-                  {
-                      document.images['image_basket'].src="/engresources/Basket.jsp?select=mark&handle="+handle+"&docid="+docid+"&database="+escape(database)+"&sessionid="+sessionid+"&searchquery="+escape(searchquery)+"&searchid="+searchid+"&timestamp="+ milli;
-                  } else {
-                      document.images['image_basket'].src="/engresources/Basket.jsp?select=unmark&handle="+handle+"&docid="+docid+"&database="+escape(database)+"&sessionid="+sessionid+"&searchquery="+escape(searchquery)+"&searchid="+searchid+"&timestamp="+ milli ;
-                  }
-                 }
-
-        </script>
-
-        </xsl:comment>
-
-        ]]>
-
-        </xsl:text>
-
-        <!-- End of javascript -->
+    <!-- End of javascript -->
 
     </head>
       <body bgcolor="#FFFFFF" topmargin="0" marginheight="0" marginwidth="0">
@@ -475,9 +728,9 @@
           <xsl:value-of select="//PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/FT/@FTLINK"/>
         </xsl:variable>
 
-	<xsl:variable name="CHECK-CUSTOM-OPT">
-		<xsl:value-of select="custoptions:checkFullText($FULLTEXT, $FULLTEXT-LINK, $CUST-ID, EI-DOCUMENT/DO , EI-DOCUMENT/DOC/DB/DBMASK)" />
-	</xsl:variable>
+	    <xsl:variable name="CHECK-CUSTOM-OPT">
+			<xsl:value-of select="custoptions:checkFullText($FULLTEXT, $FULLTEXT-LINK, $CUST-ID, EI-DOCUMENT/DO , EI-DOCUMENT/DOC/DB/DBMASK)" />
+	    </xsl:variable>
 
         <xsl:choose>
           <xsl:when test="($CHECK-CUSTOM-OPT ='true')">
