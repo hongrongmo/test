@@ -1,17 +1,5 @@
-/*
- * Created on Jun 1, 2004
- *
- * To change the template for this generated file go to
- * Window&gt;Preferences&gt;Java&gt;Code Generation&gt;Code and Comments
- */
-package org.ei.data.encompasspat.runtime;
 
-/**
- * @author Tsolovye
- *
- * To change the template for this generated type comment go to
- * Window&gt;Preferences&gt;Java&gt;Code Generation&gt;Code and Comments
- */
+package org.ei.data.encompasspat.runtime;
 
 /*
  * Created on Jun 1, 2004
@@ -39,27 +27,28 @@ import org.ei.data.upt.loadtime.IPCClassNormalizer;
 import org.ei.domain.*;
 import org.ei.util.StringUtil;
 import org.apache.oro.text.perl.*;
-import org.apache.oro.text.perl.Perl5Util;
 import java.io.*;
 
-/**	This class is the implementation of	DocumentBuilder
-  *	Basically this class is	responsible	for	building
-  *	a List of EIDocs from a	List of	DocIds.The input ie
-  *	list of	docids come	from CPXSearchControl and
+/** This class is the implementation of DocumentBuilder
+  * Basically this class is responsible for building
+  * a List of EIDocs from a List of DocIds.The input ie
+  * list of docids come from CPXSearchControl and
   *
   */
 public class EptDocBuilder implements DocumentBuilder, Keys {
-    public static String PAT_TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright 2005 Elsevier Engineering Information, Inc.";
-    public static String PAT_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2005 Elsevier Engineering Information, Inc.";
+    public static String PAT_TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright 2007 Elsevier Engineering Information, Inc.";
+    public static String PAT_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2007 Elsevier Engineering Information, Inc.";
     public static String PROVIDER = "EnCompassPAT";
     private static final Key EPT_CONTROLLED_TERMS = new Key(Keys.CONTROLLED_TERMS, "EnCompassPAT controlled terms");
-    private static final Key EPT_MAJOR_TERMS = new Key(Keys.MAJOR_TERMS, "EnCompassPAT major terms");
-    private static final Key EPT_CLASS_CODES = new Key(Keys.CLASS_CODES, "EnCompassPAT classification codes");
+    private static final Key LINKED_TERMS_HOLDER = new Key(Keys.LINKED_TERMS_HOLDER, "Linked terms");
+    private static final Key EPT_MAJOR_TERMS = new Key(Keys.MAJOR_TERMS, "EnCompassPat major terms");
+    private static final Key EPT_CLASS_CODES = new Key(Keys.CLASS_CODES_MULTI, "EnCompassPAT classification codes");
 
-    private static final Key[] CITATION_KEYS = { Keys.DOCID, Keys.PATENT_NUMBER, Keys.TITLE, Keys.AUTHORS, Keys.PATASSIGN, Keys.AUTH_CODE, Keys.UPAT_PUBDATE, Keys.PROVIDER, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT, Keys.LANGUAGE, Keys.NO_SO };
+    private static final Key[] CITATION_KEYS = { Keys.DOCID,Keys.PRIORITY_INFORMATION, Keys.TITLE, Keys.AUTHORS, Keys.PATASSIGN, Keys.AUTH_CODE, Keys.UPAT_PUBDATE, Keys.PROVIDER, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT, Keys.LANGUAGE, Keys.NO_SO };
     private static final Key[] ABSTRACT_KEYS =
         { Keys.DOCID, Keys.PATENT_NUMBER, Keys.DERWENT_NO, Keys.TITLE, Keys.AUTHORS, Keys.PATASSIGN, Keys.PUBLICATION_YEAR, Keys.UPAT_PUBDATE, Keys.LANGUAGE, Keys.ABSTRACT, Keys.PATAPP_INFO, Keys.PRIORITY_INFORMATION, Keys.CAS_REGISTRY_CODES, Keys.INTERNATCL_CODE, EPT_MAJOR_TERMS, EPT_CONTROLLED_TERMS, Keys.NO_SO, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT, Keys.PROVIDER };
     private static final Key[] LINKED_TERM_KEYS = { Keys.LINKED_TERMS };
+
 
     private static final Key[] DETAILED_KEYS =
         {
@@ -75,6 +64,7 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
             Keys.LANGUAGE,
             Keys.PATAPP_INFO,
             Keys.PRIORITY_INFORMATION,
+            Keys.INTERNATCL_CODE_EPT,
             Keys.DERWENT_NO,
             Keys.ABSTRACT,
             Keys.DESIGNATED_STATES,
@@ -83,27 +73,29 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
             Keys.CAS_REGISTRY_CODES,
             EPT_MAJOR_TERMS,
             EPT_CONTROLLED_TERMS,
-            Keys.UNCONTROLLED_TERMS,
+           // Keys.UNCONTROLLED_TERMS,
             Keys.INDEXING_TEMPLATE,
             Keys.MANUAL_LINKED_TERMS,
             Keys.LINKED_TERMS,
-            Keys.LINKED_TERMS_HOLDER,
-            Keys.INTERNATCL_CODE,
+            LINKED_TERMS_HOLDER,
+           // Keys.INTERNATCL_CODE,
+
+            Keys.DOCID,
             Keys.COPYRIGHT,
             Keys.COPYRIGHT_TEXT,
-            Keys.PROVIDER,
-            Keys.DOCID };
+            Keys.PROVIDER
+        };
     private static final Key[] RIS_KEYS = { Keys.RIS_TY, Keys.RIS_LA, Keys.RIS_TI,RIS_U2, Keys.RIS_AUS, Keys.RIS_EDS, Keys.RIS_PY, Keys.RIS_U1, Keys.RIS_N2, Keys.RIS_N1, Keys.RIS_AD, Keys.RIS_CVS };
 
     private static final Key[] XML_KEYS = { Keys.PATASSIGN, Keys.NO_SO, Keys.PATENT_ISSUE_DATE, Keys.AUTHORS, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT, Keys.PATCOUNTRY, Keys.PATNUM, Keys.PATFILDATE, Keys.TITLE, Keys.DOCID };
 
     private Perl5Util perl = new Perl5Util();
     private Database database;
-    private static String queryCitation = "select ID,M_ID,DN,PAT_IN,CS,TI,AJ,AC,AD,AP,PC,PD,PN,PAT,LA,PY,PC,LOAD_NUMBER from ept_master where M_ID IN ";
+    private static String queryCitation = "select ID,M_ID,DN,PAT_IN,PRI,CS,TI,AJ,AC,AD,AP,PC,PD,PN,PAT,LA,PY,PC,LOAD_NUMBER from ept_master where M_ID IN ";
 
-    private static String queryAbstracts = "select ID,M_ID,DN,PAT_IN,CS,TI,TI2,PRI,AJ,AC,AD,AP,PC,PD,PN,PAT,LA,PY,DS,IC,LL,EY,CC,DT,CR,LTM,ATM,ATM1,ALC,AMS,APC,ANC,AT_API,CT,CRN,LT,UT,AB,LOAD_NUMBER,cvs,cvm,cva,cvp,cvn,cvma,cvmp,cvmn from ept_master where M_ID	IN ";
+    private static String queryAbstracts = "select ID,M_ID,DN,PAT_IN,CS,TI,TI2,PRI,AJ,AC,AD,AP,PC,PD,PN,PAT,LA,PY,DS,IC,LL,EY,CC,DT,CR,LTM,ATM,ATM1,ALC,AMS,APC,ANC,AT_API,CT,CRN,LT,UT,AB,LOAD_NUMBER,cvs,cvm,cva,cvp,cvn,cvma,cvmp,cvmn from ept_master where M_ID    IN ";
 
-    private static String queryDetailed = "select	" + "ID,M_ID,DN,PAT_IN,CS,TI,TI2,PRI,AJ,AC,AD,AP,PC,PD,PN,PAT,LA,PY,DS,IC,LL,EY,CC,DT,CR,LTM,ATM,ATM1,ALC,AMS,APC,ANC,AT_API,CT,CRN,LT,UT,AB,LOAD_NUMBER,cvs,cvm,cva,cvp,cvn,cvma,cvmp,cvmn from ept_master where M_ID	IN ";
+    private static String queryDetailed = "select   " + "ID,M_ID,DN,PAT_IN,CS,TI,TI2,PRI,AJ,AC,AD,AP,PC,PD,PN,PAT,LA,PY,DS,IC,LL,EY,CC,DT,CR,LTM,ATM,ATM1,ALC,AMS,APC,ANC,AT_API,CT,CRN,LT,UT,AB,LOAD_NUMBER,cvs,cvm,cva,cvp,cvn,cvma,cvmp,cvmn from ept_master where M_ID  IN ";
 
     private static String queryLinkedTerms = "select M_ID,LT,LOAD_NUMBER from ept_master where M_ID in ";
 
@@ -125,14 +117,14 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
         this.database = database;
     }
 
-    /** This	method takes a list	of DocID objects and dataFormat
-    	*  and returns a List of EIDoc Objects based on	a particular
-    	*  dataformat
-    	*  @ param listOfDocIDs
-    	*  @ param dataFormat
-    	*  @ return	List --list	of EIDoc's
-    	*  @ exception DocumentBuilderException
-    	*/
+    /** This    method takes a list of DocID objects and dataFormat
+        *  and returns a List of EIDoc Objects based on a particular
+        *  dataformat
+        *  @ param listOfDocIDs
+        *  @ param dataFormat
+        *  @ return List --list of EIDoc's
+        *  @ exception DocumentBuilderException
+        */
     public List buildPage(List listOfDocIDs, String dataFormat) throws DocumentBuilderException {
         List l = null;
         try {
@@ -408,7 +400,8 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                 ht.put(Keys.NO_SO, new XMLWrapper(Keys.NO_SO, "NO_SO"));
 
                 if (rset.getString("PD") != null) {
-                    ht.put(Keys.UPAT_PUBDATE, new XMLWrapper(Keys.UPAT_PUBDATE, rset.getString("PD")));
+                	String strYR = formatDate(StringUtil.replaceNullWithEmptyString(rset.getString("PD")));
+                    ht.put(Keys.UPAT_PUBDATE, new XMLWrapper(Keys.UPAT_PUBDATE, strYR));
 
                 }
 
@@ -452,7 +445,7 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                 if ((abs = hasAbstract(rset.getClob("AB"))) != null) {
                     ht.put(Keys.ABSTRACT, new XMLWrapper(Keys.ABSTRACT, StringUtil.substituteChars(abs)));
                 }
-                //				IC
+                //              IC
                 if (rset.getString("IC") != null) {
                     String[] arrIpcs = IPCClassNormalizer.trimLeadingZeroFromSubClass(rset.getString("IC"));
                     ht.put(Keys.INTERNATCL_CODE, new Classifications(Keys.INTERNATCL_CODE, getIPCClssifications(arrIpcs)));
@@ -465,62 +458,51 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                     ht.put(Keys.CAS_REGISTRY_CODES, new XMLMultiWrapper2(Keys.CAS_REGISTRY_CODES, setCRC(StringUtil.substituteChars(removePoundSign(rset.getString("CRN"))))));
                 }
                 //CT
+                CVSTermBuilder termBuilder = new CVSTermBuilder();
+                if (rset.getString("CT") != null) {
+                    String ct = StringUtil.replaceNullWithEmptyString(rset.getString("CT"));
+                    String cv = termBuilder.getNonMajorTerms(ct);
+                    String mh = termBuilder.getMajorTerms(ct);
+                    StringBuffer cvBuffer = new StringBuffer();
 
-                if (rset.getString("ct") != null) {
+                    String expandedMajorTerms = termBuilder.expandMajorTerms(mh);
 
-                    StringBuffer cvs = new StringBuffer();
-                    StringBuffer cvm = new StringBuffer();
+                    String expandedMH = termBuilder.getMajorTerms(expandedMajorTerms);
 
-                    if (rset.getString("cvs") != null) {
-                        cvs.append(rset.getString("cvs"));
-                    }
-                    if (rset.getString("cvm") != null) {
-                        cvm.append(rset.getString("cvm"));
-                    }
-                    if (rset.getString("cva") != null) {
-                        if (cvs.length() > 0)
-                            cvs.append(";").append(rset.getString("cva"));
-                        else
-                            cvs.append(rset.getString("cva"));
-                    }
-                    if (rset.getString("cvp") != null) {
-                        if (cvs.length() > 0)
-                            cvs.append(";").append(rset.getString("cvp"));
-                        else
-                            cvs.append(rset.getString("cvp"));
-                    }
-                    if (rset.getString("cvn") != null) {
-                        if (cvs.length() > 0)
-                            cvs.append(";").append(rset.getString("cvn"));
-                        else
-                            cvs.append(rset.getString("cvn"));
-                    }
-                    if (rset.getString("cvma") != null) {
-                        if (cvm.length() > 0)
-                            cvm.append(";").append(rset.getString("cvma"));
-                        else
-                            cvm.append(rset.getString("cvma"));
-                    }
-                    if (rset.getString("cvmp") != null) {
-                        if (cvm.length() > 0)
-                            cvm.append(";").append(rset.getString("cvmp"));
-                        else
-                            cvm.append(rset.getString("cvmp"));
-                    }
-                    if (rset.getString("cvmn") != null) {
-                        if (cvm.length() > 0)
-                            cvm.append(";").append(rset.getString("cvmn"));
-                        else
-                            cvm.append(rset.getString("cvmn"));
-                    }
+                    String expandedCV1 = termBuilder.expandNonMajorTerms(cv);
+                    String expandedCV2 = termBuilder.getNonMajorTerms(expandedMajorTerms);
 
-                    if (cvs.length() > 0)
-                        ht.put(Keys.CONTROLLED_TERMS, new XMLMultiWrapper2(EPT_CONTROLLED_TERMS, setCVS(StringUtil.substituteChars(CVSTermBuilder.formatCT(cvs.toString())))));
+                    if (!expandedCV1.equals(""))
+                        cvBuffer.append(expandedCV1);
+                    if (!expandedCV2.equals(""))
+                        cvBuffer.append(";").append(expandedCV2);
 
-                    if (cvm.length() > 0)
-                        ht.put(Keys.MAJOR_TERMS, new XMLMultiWrapper2(EPT_MAJOR_TERMS, setCVS(StringUtil.substituteChars(CVSTermBuilder.formatCT(cvm.toString())))));
+                    String parsedCV = termBuilder.formatCT(cvBuffer.toString());
+                    parsedCV = StringUtil.replaceNonAscii(parsedCV);
+                    String parsedMH = termBuilder.formatCT(expandedMH);
+                    parsedMH = StringUtil.replaceNonAscii(parsedMH);
+
+                    StringBuffer nonMajorTerms = new StringBuffer();
+
+                    nonMajorTerms.append(termBuilder.getStandardTerms(parsedCV));
+                    nonMajorTerms.append(";").append(termBuilder.getNoRoleTerms(parsedCV));
+                    nonMajorTerms.append(";").append(termBuilder.getReagentTerms(parsedCV));
+                    nonMajorTerms.append(";").append(termBuilder.getProductTerms(parsedCV));
+
+                    ht.put(EPT_CONTROLLED_TERMS, new XMLMultiWrapper2(EPT_CONTROLLED_TERMS, setCVS(StringUtil.substituteChars(formatCV(nonMajorTerms.toString())))));
+
+
+                    StringBuffer majorTerms = new StringBuffer();
+
+                    majorTerms.append(termBuilder.removeRoleTerms(parsedMH));
+                    majorTerms.append(";").append(termBuilder.getMajorNoRoleTerms(parsedMH));
+                    majorTerms.append(";").append(termBuilder.getMajorReagentTerms(parsedMH));
+                    majorTerms.append(";").append(termBuilder.getMajorProductTerms(parsedMH));
+
+                    ht.put(EPT_MAJOR_TERMS, new XMLMultiWrapper2(EPT_MAJOR_TERMS, setCVS(StringUtil.substituteChars(formatCV(majorTerms.toString())))));
+
                 }
-
+                               
                 EIDoc eiDoc = new EIDoc(did, ht, Abstract.ABSTRACT_FORMAT);
                 eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
                 eiDoc.exportLabels(true);
@@ -561,6 +543,8 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
             if (!token.equals(""))
                 pi.append(token).append(";");
         }
+        
+        priorityInfo = perl.substitute("s/;$//g", priorityInfo);
 
         return priorityInfo;
     }
@@ -602,6 +586,26 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
         for (int i = 0; i < classcodes.length; i++) {
             ClassificationID cid = new ClassificationID(classcodes[i], this.database);
             Classification cl = new Classification(Keys.INTERNATCL_CODE, cid);
+            String code = IPCClassNormalizer.normalize(classcodes[i]);
+            String title = mn.seekIPC(code);
+            if (title == null) {
+                title = "";
+            }
+            cl.setClassTitle(title);
+            cls[i] = cl;
+        }
+
+        return cls;
+    }
+
+    public Classification[] getIPCClssificationsDT(String[] classcodes) throws Exception {
+        Classification[] cls = new Classification[classcodes.length];
+        ClassificationID[] ids = new ClassificationID[classcodes.length];
+        ClassNodeManager mn = ClassNodeManager.getInstance();
+
+        for (int i = 0; i < classcodes.length; i++) {
+            ClassificationID cid = new ClassificationID(classcodes[i], this.database);
+            Classification cl = new Classification(Keys.INTERNATCL_CODE_EPT, cid);
             String code = IPCClassNormalizer.normalize(classcodes[i]);
             String title = mn.seekIPC(code);
             if (title == null) {
@@ -683,15 +687,15 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
 
     }
     /**
-    	*	This method	basically takes	list Of	DocIDs as Parameter
-    	*	This list of Docids	use	buildINString()	method to build
-    	*	the	required IN	clause String.This is appended to sql String
-    	*	The	resultSet so obtained by executing the sql,is iterated,
-    	*	to build Detailed EIDoc	objects,which are then added to	EIdocumentList
-    	*	@param listOfDocIDs
-    	*	@return	EIDocumentList
-    	*	@exception Exception
-    	*/
+        *   This method basically takes list Of DocIDs as Parameter
+        *   This list of Docids use buildINString() method to build
+        *   the required IN clause String.This is appended to sql String
+        *   The resultSet so obtained by executing the sql,is iterated,
+        *   to build Detailed EIDoc objects,which are then added to EIdocumentList
+        *   @param listOfDocIDs
+        *   @return EIDocumentList
+        *   @exception Exception
+        */
     private List loadDetailed(List listOfDocIDs) throws Exception {
         Hashtable oidTable = getDocIDTable(listOfDocIDs);
 
@@ -759,7 +763,7 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                 }
                 //AF- CS
                 if (lstAsg != null && lstAsg.size() > 0) {
-                    ht.put(Keys.PATASSIGN, new XMLMultiWrapper(Keys.PATASSIGN, setAssignees(lstAsg)));
+                    ht.put(new Key(Keys.PATASSIGN,"Patent assignee"), new XMLMultiWrapper(new Key(Keys.PATASSIGN,"Patent assignee"), setAssignees(lstAsg)));
 
                 }
 
@@ -775,7 +779,7 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                     }
                 }
 
-                //	DS
+                //  DS
                 if (rset.getString("DS") != null) {
                     ht.put(Keys.DESIGNATED_STATES, new XMLMultiWrapper(Keys.DESIGNATED_STATES, setElementData(StringUtil.substituteChars(rset.getString("DS")))));
                 }
@@ -791,9 +795,9 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                         ht.put(Keys.LANGUAGE, new XMLWrapper(Keys.LANGUAGE, StringUtil.substituteChars(rset.getString("LA"))));
                 }
 
-                //	CAS
+                //  CAS
                 if (rset.getString("CRN") != null) {
-                    ht.put(Keys.CAS_REGISTRY_CODES, new XMLMultiWrapper2(Keys.CAS_REGISTRY_CODES, setCRC(StringUtil.substituteChars(removePoundSign(rset.getString("CRN"))))));
+                    ht.put(Keys.CAS_REGISTRY_CODES, new XMLMultiWrapper(Keys.CAS_REGISTRY_CODES, setElementData(StringUtil.substituteChars(removePoundSign(rset.getString("CRN"))))));
 
                 }
                 //AccessNum DN
@@ -813,12 +817,13 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                 }
                 //PC
                 if (rset.getString("PC") != null) {
-                    ht.put(Keys.AUTH_CODE, new XMLWrapper(Keys.AUTH_CODE, rset.getString("PC")));
+                    ht.put(new Key(Keys.AUTH_CODE,"Patent country"), new XMLWrapper(new Key(Keys.AUTH_CODE,"Patent country"), rset.getString("PC")));
 
                 }
                 //PD
                 if (rset.getString("PD") != null) {
-                    ht.put(Keys.UPAT_PUBDATE, new XMLWrapper(Keys.UPAT_PUBDATE, rset.getString("PD")));
+                	String strYR = formatDate(StringUtil.replaceNullWithEmptyString(rset.getString("PD")));
+                    ht.put(Keys.UPAT_PUBDATE, new XMLWrapper(Keys.UPAT_PUBDATE, strYR));
 
                 }
 
@@ -844,8 +849,9 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                 }
                 //IC
                 if (rset.getString("IC") != null) {
+
                     String[] arrIpcs = IPCClassNormalizer.trimLeadingZeroFromSubClass(rset.getString("IC"));
-                    ht.put(Keys.INTERNATCL_CODE, new Classifications(Keys.INTERNATCL_CODE, getIPCClssifications(arrIpcs)));
+                    ht.put(new Key(Keys.INTERNATCL_CODE_EPT,"Int. patent classification"),  new Classifications(new Key(Keys.INTERNATCL_CODE_EPT,"Int. patent classification"), getIPCClssificationsDT(arrIpcs)));
 
                 }
 
@@ -860,8 +866,14 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                 }
                 //CC
                 if (rset.getString("CC") != null) {
-                    ht.put(Keys.CLASS_CODES, new XMLMultiWrapper2(EPT_CLASS_CODES, setCLS(StringUtil.substituteChars(rset.getString("CC")))));
+                    ht.put(Keys.CLASS_CODES_MULTI,  new XMLMultiWrapper(EPT_CLASS_CODES, setElementData(StringUtil.substituteChars(rset.getString("CC")))));
                 }
+
+//                if (rset.getString("CC") != null)
+//                {
+//                    ht.put(Keys.CLASS_CODES,
+//                           new Classifications(EPT_CLASS_CODES, setElementData(rset.getString("CC")), this.database));
+//                }
 
                 // Language
                 if ((rset.getString("LA") != null)) {
@@ -871,60 +883,106 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                 }
 
                 //CT
-                if (rset.getString("ct") != null) {
+                CVSTermBuilder termBuilder = new CVSTermBuilder();
+                //CT
+                if (rset.getString("CT") != null) {
+                    String ct = StringUtil.replaceNullWithEmptyString(rset.getString("CT"));
+                    String cv = termBuilder.getNonMajorTerms(ct);
+                    String mh = termBuilder.getMajorTerms(ct);
+                    StringBuffer cvBuffer = new StringBuffer();
 
-                    StringBuffer cvs = new StringBuffer();
-                    StringBuffer cvm = new StringBuffer();
+                    String expandedMajorTerms = termBuilder.expandMajorTerms(mh);
 
-                    if (rset.getString("cvs") != null) {
-                        cvs.append(rset.getString("cvs"));
-                    }
-                    if (rset.getString("cvm") != null) {
-                        cvm.append(rset.getString("cvm"));
-                    }
-                    if (rset.getString("cva") != null) {
-                        if (cvs.length() > 0)
-                            cvs.append(";").append(rset.getString("cva"));
-                        else
-                            cvs.append(rset.getString("cva"));
-                    }
-                    if (rset.getString("cvp") != null) {
-                        if (cvs.length() > 0)
-                            cvs.append(";").append(rset.getString("cvp"));
-                        else
-                            cvs.append(rset.getString("cvp"));
-                    }
-                    if (rset.getString("cvn") != null) {
-                        if (cvs.length() > 0)
-                            cvs.append(";").append(rset.getString("cvn"));
-                        else
-                            cvs.append(rset.getString("cvn"));
-                    }
-                    if (rset.getString("cvma") != null) {
-                        if (cvm.length() > 0)
-                            cvm.append(";").append(rset.getString("cvma"));
-                        else
-                            cvm.append(rset.getString("cvma"));
-                    }
-                    if (rset.getString("cvmp") != null) {
-                        if (cvm.length() > 0)
-                            cvm.append(";").append(rset.getString("cvmp"));
-                        else
-                            cvm.append(rset.getString("cvmp"));
-                    }
-                    if (rset.getString("cvmn") != null) {
-                        if (cvm.length() > 0)
-                            cvm.append(";").append(rset.getString("cvmn"));
-                        else
-                            cvm.append(rset.getString("cvmn"));
-                    }
+                    String expandedMH = termBuilder.getMajorTerms(expandedMajorTerms);
 
-                    if (cvs.length() > 0)
-                        ht.put(Keys.CONTROLLED_TERMS, new XMLMultiWrapper2(EPT_CONTROLLED_TERMS, setCVS(StringUtil.substituteChars(CVSTermBuilder.formatCT(cvs.toString())))));
+                    String expandedCV1 = termBuilder.expandNonMajorTerms(cv);
+                    String expandedCV2 = termBuilder.getNonMajorTerms(expandedMajorTerms);
 
-                    if (cvm.length() > 0)
-                        ht.put(Keys.MAJOR_TERMS, new XMLMultiWrapper2(EPT_MAJOR_TERMS, setCVS(StringUtil.substituteChars(CVSTermBuilder.formatCT(cvm.toString())))));
+                    if (!expandedCV1.equals(""))
+                        cvBuffer.append(expandedCV1);
+                    if (!expandedCV2.equals(""))
+                        cvBuffer.append(";").append(expandedCV2);
+
+                    String parsedCV = termBuilder.formatCT(cvBuffer.toString());
+                    parsedCV = StringUtil.replaceNonAscii(parsedCV);
+                    String parsedMH = termBuilder.formatCT(expandedMH);
+                    parsedMH = StringUtil.replaceNonAscii(parsedMH);
+
+                    StringBuffer nonMajorTerms = new StringBuffer();
+
+                    nonMajorTerms.append(termBuilder.getStandardTerms(parsedCV));
+                    nonMajorTerms.append(";").append(termBuilder.getNoRoleTerms(parsedCV));
+                    nonMajorTerms.append(";").append(termBuilder.getReagentTerms(parsedCV));
+                    nonMajorTerms.append(";").append(termBuilder.getProductTerms(parsedCV));
+
+                    ht.put(EPT_CONTROLLED_TERMS, new XMLMultiWrapper2(EPT_CONTROLLED_TERMS, setCVS(StringUtil.substituteChars(formatCV(nonMajorTerms.toString())))));
+
+
+                    StringBuffer majorTerms = new StringBuffer();
+
+                    majorTerms.append(termBuilder.removeRoleTerms(parsedMH));
+                    majorTerms.append(";").append(termBuilder.getMajorNoRoleTerms(parsedMH));
+                    majorTerms.append(";").append(termBuilder.getMajorReagentTerms(parsedMH));
+                    majorTerms.append(";").append(termBuilder.getMajorProductTerms(parsedMH));
+
+                    ht.put(EPT_MAJOR_TERMS, new XMLMultiWrapper2(EPT_MAJOR_TERMS, setCVS(StringUtil.substituteChars(formatCV(majorTerms.toString())))));
+
+
                 }
+//                if (rset.getString("ct") != null) {
+//
+//                    StringBuffer cvs = new StringBuffer();
+//                    StringBuffer cvm = new StringBuffer();
+//
+//                    if (rset.getString("cvs") != null) {
+//                        cvs.append(rset.getString("cvs"));
+//                    }
+//                    if (rset.getString("cvm") != null) {
+//                        cvm.append(rset.getString("cvm"));
+//                    }
+//                    if (rset.getString("cva") != null) {
+//                        if (cvs.length() > 0)
+//                            cvs.append(";").append(rset.getString("cva"));
+//                        else
+//                            cvs.append(rset.getString("cva"));
+//                    }
+//                    if (rset.getString("cvp") != null) {
+//                        if (cvs.length() > 0)
+//                            cvs.append(";").append(rset.getString("cvp"));
+//                        else
+//                            cvs.append(rset.getString("cvp"));
+//                    }
+//                    if (rset.getString("cvn") != null) {
+//                        if (cvs.length() > 0)
+//                            cvs.append(";").append(rset.getString("cvn"));
+//                        else
+//                            cvs.append(rset.getString("cvn"));
+//                    }
+//                    if (rset.getString("cvma") != null) {
+//                        if (cvm.length() > 0)
+//                            cvm.append(";").append(rset.getString("cvma"));
+//                        else
+//                            cvm.append(rset.getString("cvma"));
+//                    }
+//                    if (rset.getString("cvmp") != null) {
+//                        if (cvm.length() > 0)
+//                            cvm.append(";").append(rset.getString("cvmp"));
+//                        else
+//                            cvm.append(rset.getString("cvmp"));
+//                    }
+//                    if (rset.getString("cvmn") != null) {
+//                        if (cvm.length() > 0)
+//                            cvm.append(";").append(rset.getString("cvmn"));
+//                        else
+//                            cvm.append(rset.getString("cvmn"));
+//                    }
+//
+//                    if (cvs.length() > 0)
+//                        ht.put(Keys.CONTROLLED_TERMS, new XMLMultiWrapper2(EPT_CONTROLLED_TERMS, setCVS(StringUtil.substituteChars(CVSTermBuilder.formatCT(cvs.toString())))));
+//
+//                     if (cvm.length() > 0)
+//                        ht.put(Keys.MAJOR_TERMS, new XMLMultiWrapper2(EPT_MAJOR_TERMS, setCVS(StringUtil.substituteChars(CVSTermBuilder.formatCT(cvm.toString())))));
+//                }
 
                 //UT
                 if (rset.getString("UT") != null) {
@@ -932,6 +990,7 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                 }
                 //ATM
                 if (rset.getString("ATM") != null) {
+                    System.out.println("ATM::"+rset.getString("ATM"));
                     StringBuffer tempterms = new StringBuffer(rset.getString("ATM"));
                     if (rset.getString("ATM1") != null) {
                         tempterms.append(rset.getString("ATM1"));
@@ -941,7 +1000,7 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
 
                     if (rset.getClob("LT") != null) {
                         String label = getLTLink();
-                        ht.put(Keys.LINKED_TERMS_HOLDER, new XMLWrapper(Keys.LINKED_TERMS_HOLDER, label));
+                        ht.put(LINKED_TERMS_HOLDER, new XMLWrapper(LINKED_TERMS_HOLDER, label));
 
                     }
                 }
@@ -1002,7 +1061,8 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
 
         while (st.hasMoreTokens()) {
             strToken = st.nextToken().trim();
-            if (strToken.length() > 0) {
+            strToken = strToken.replace('-', ' ');
+            if (strToken.length() > 0 && !strToken.equals("")) {
                 KeyValuePair k = new KeyValuePair(getTermField(strToken), strToken);
                 list.add(k);
             }
@@ -1105,7 +1165,10 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
 
         return lstVals;
     }
-    private List loadLinkedTerms(List listOfDocIDs) throws Exception {
+
+
+    private List loadLinkedTerms(List listOfDocIDs) throws Exception
+    {
 
         List list = new ArrayList();
         String INString = buildINString(listOfDocIDs);
@@ -1115,30 +1178,38 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
         ResultSet rset = null;
         ConnectionBroker broker = null;
 
-        try {
+        try
+        {
             broker = ConnectionBroker.getInstance();
             con = broker.getConnection(DatabaseConfig.SEARCH_POOL);
             stmt = con.createStatement();
             rset = stmt.executeQuery(queryLinkedTerms + INString);
-
+            String results = null;
+System.out.println(" -- doc builder 1");
             DatabaseConfig dconfig = DatabaseConfig.getInstance();
-
+            CVSTermBuilder termBuilder = new CVSTermBuilder();
             if (rset.next()) {
-
+            	System.out.println(" -- doc builder 2");
                 // Common Fields
                 ElementDataMap ht = new ElementDataMap();
                 // Common Fields
                 String mid = rset.getString("M_ID");
 
                 DocID did = new DocID(mid, dconfig.getDatabase("ept"));
-
-                if (rset.getClob("LT") != null) {
-                    String linkedTerms = StringUtil.substituteChars(StringUtil.getStringFromClob(rset.getClob("LT")));
-
-                    if (!linkedTerms.equals("") && !linkedTerms.equalsIgnoreCase("QQ"))
-                        ht.put(Keys.LINKED_TERMS, new LinkedTerms(Keys.LINKED_TERMS, getLinkedTerms(StringUtil.substituteChars(CVSTermBuilder.formatCT(linkedTerms)), Keys.LINKED_SUB_TERM)));
+System.out.println(" -- doc builder 3");
+                if (rset.getClob("LT") != null)
+                {
+System.out.println(" -- doc builder 3 - 1");
+                   String linkedTerms = StringUtil.getStringFromClob(rset.getClob("LT"));
+System.out.println(" -- doc builder  3- 2");
+                   results =  termBuilder.formatCT(StringUtil.replaceNonAscii(linkedTerms));
+System.out.println(" -- doc builder 4");
+                   if (results != null && !results.equalsIgnoreCase("QQ"))
+                   {
+                       ht.put(Keys.LINKED_TERMS, new XMLWrapper(Keys.LINKED_TERMS, results));
+                   }
                 }
-
+System.out.println(" -- doc builder 5");
                 EIDoc eiDoc = new EIDoc(did, ht, LinkedTermDetail.LINKEDTERM_FORMAT);
                 eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
                 eiDoc.exportLabels(false);
@@ -1146,26 +1217,27 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                 list.add(eiDoc);
                 count++;
             }
+System.out.println(" -- doc builder 6");
         }
         finally {
             close(rset);
             close(stmt);
             close(con, broker);
         }
-
+System.out.println(" -- doc builder 7");
         return list;
     }
 
     /**
-    	*	This method	basically takes	list Of	DocIDs as Parameter
-    	*	This list of Docids	use	buildINString()	method to build
-    	*	the	required IN	clause String.This is appended to sql String
-    	*	The	resultSet so obtained by executing the sql,is iterated,
-    	*	to build EIDoc objects,which are then added	to EIdocumentList
-    	*	@param listOfDocIDs
-    	*	@return	EIDocumentList
-    	*	@exception Exception
-    	*/
+        *   This method basically takes list Of DocIDs as Parameter
+        *   This list of Docids use buildINString() method to build
+        *   the required IN clause String.This is appended to sql String
+        *   The resultSet so obtained by executing the sql,is iterated,
+        *   to build EIDoc objects,which are then added to EIdocumentList
+        *   @param listOfDocIDs
+        *   @return EIDocumentList
+        *   @exception Exception
+        */
     private List loadCitations(List listOfDocIDs) throws Exception {
         Hashtable oidTable = getDocIDTable(listOfDocIDs);
 
@@ -1239,10 +1311,17 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                     ht.put(Keys.AUTH_CODE, new XMLWrapper(Keys.AUTH_CODE, rset.getString("PC")));
 
                 }
+                
+                //add app priority info
+                if (rset.getString("PAT") != null) {
+                    ht.put(Keys.PRIORITY_INFORMATION, new XMLWrapper(Keys.PRIORITY_INFORMATION, formatPriorityInfo(removeSemiColon(rset.getString("PAT")))));
+                }
+                
                 //PY
 
                 if (rset.getString("PD") != null) {
-                    ht.put(Keys.UPAT_PUBDATE, new XMLWrapper(Keys.UPAT_PUBDATE, rset.getString("PD")));
+                	String strYR = formatDate(StringUtil.replaceNullWithEmptyString(rset.getString("PD")));
+                    ht.put(Keys.UPAT_PUBDATE, new XMLWrapper(Keys.UPAT_PUBDATE, strYR));
 
                 }
                 StringBuffer pubNum = new StringBuffer();
@@ -1345,12 +1424,12 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
     /*
     * PRIVATE UTILITY METHODS
     * /
-    
-    /* This method builds the IN	String
-    * from list	of docId objects.
-    * The select query will	get	the	result set in a	reverse	way
-    * So in	order to get in	correct	order we are doing a reverse
-    * example of return	String--(23,22,1,12...so on);
+
+    /* This method builds the IN    String
+    * from list of docId objects.
+    * The select query will get the result set in a reverse way
+    * So in order to get in correct order we are doing a reverse
+    * example of return String--(23,22,1,12...so on);
     * @param listOfDocIDs
     * @return String
     */
@@ -1366,12 +1445,12 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
             else {
                 sQuery.append("'" + docID + "'").append(",");
             }
-        } //end	of for
+        } //end of for
         sQuery.append(")");
         return sQuery.toString();
     }
 
-    /*TS if	volume	is null	and	str	is not null	print n	 */
+    /*TS if volume  is null and str is not null print n  */
     private String replaceVolumeNullWithEmptyString(String str) {
         if (str == null || str.equals("QQ")) {
             str = "";
@@ -1415,6 +1494,28 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
 
         return result;
     }
+
+    public String formatCV(String cvs) {
+
+        List lstTokens = new ArrayList();
+
+        perl.split(lstTokens, "/;/", cvs);
+
+        StringBuffer termBuffer = new StringBuffer();
+
+        for (Iterator iter = lstTokens.iterator(); iter.hasNext();) {
+
+            String cv = (String) iter.next();
+
+            if (cv != null && !cv.equals(""))
+                termBuffer.append(cv);
+
+            if (iter.hasNext() && !cv.equals(""))
+                termBuffer.append(";");
+        }
+
+        return termBuffer.toString();
+    }
     public String formatATM(String str) {
 
         if (str == null)
@@ -1449,12 +1550,13 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                     if (i == 0)
                         sbTemplate.append(term);
                     else
-                        sbTemplate.append("<br/>").append(term);
+                        sbTemplate.append("</br>").append(term);
                 }
                 else {
 
                     if (!perl.match("/NUMBER OF TEMPLATE-GENERATED LINK TERMS:/", term) && !perl.match("/V[0-9]/i", term) && !term.startsWith(">") && !perl.match("/S[0-9]/i", term)) {
-                        sbTemplate.append("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;").append(term);
+                      //  sbTemplate.append("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;").append(term);
+                        sbTemplate.append("</br>").append(term);
 
                     }
                     else {
@@ -1472,9 +1574,9 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
             return template;
         }
     }
-    /** 
-    	  * @return
-    	  */
+    /**
+          * @return
+          */
     private void close(ResultSet rs) {
         try {
             if (rs != null) {
@@ -1486,9 +1588,9 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
         }
 
     }
-    /** 
-    	  * @return
-    	  */
+    /**
+          * @return
+          */
     private void close(Statement stmt) {
 
         try {
@@ -1500,9 +1602,9 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
             e.printStackTrace();
         }
     }
-    /** 
-    	  * @return
-    	  */
+    /**
+          * @return
+          */
     private void close(Connection conn, ConnectionBroker broker) {
 
         try {
