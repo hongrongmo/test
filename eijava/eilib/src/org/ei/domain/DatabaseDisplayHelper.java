@@ -418,7 +418,7 @@ public class DatabaseDisplayHelper {
 			e.printStackTrace();
 			//Yes, I meant to sit on this. - Joel
 		}
-		return "Databases";
+		return buf.toString();
 	}
 
 	public static String getIndexName(int mask) {
