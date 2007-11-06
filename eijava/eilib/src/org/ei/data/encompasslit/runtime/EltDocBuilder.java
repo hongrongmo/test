@@ -20,11 +20,11 @@ import org.apache.oro.text.perl.*;
   */
 public class EltDocBuilder implements DocumentBuilder, Keys {
     private static final String LT_MSG = "Please click here to view all linked terms";
-    public static String ELT_TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright 2005 Elsevier Engineering Information, Inc.";
-    public static String ELT_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2005 Elsevier Engineering Information, Inc.";
+    public static String ELT_TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright 2007 Elsevier Engineering Information, Inc.";
+    public static String ELT_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2007 Elsevier Engineering Information, Inc.";
     public static String PROVIDER = "EnCompassLIT";
     private static final Key ELT_CONTROLLED_TERMS = new Key(Keys.CONTROLLED_TERMS, "EnCompassLIT controlled terms");
-    private static final Key ELT_CLASS_CODES = new Key(Keys.CLASS_CODES, "EnCompassLIT class codes");
+    private static final Key ELT_CLASS_CODES = new Key(Keys.CLASS_CODES_MULTI, "EnCompassLIT class codes");
     private static final Key ELT_MAJOR_TERMS = new Key(Keys.MAJOR_TERMS, "EnCompassLIT major terms");
     private static final Key[] RIS_KEYS = { Keys.RIS_TY, Keys.RIS_LA, Keys.RIS_TI, Keys.RIS_T3, Keys.RIS_VL, Keys.RIS_IS, Keys.RIS_SP, Keys.RIS_AUS, RIS_AD, Keys.RIS_EDS, Keys.RIS_PY, Keys.RIS_U1, Keys.RIS_N2, Keys.RIS_N1, Keys.RIS_AD, Keys.RIS_CVS };
     private static final Key[] LINKED_TERM_KEYS = { Keys.LINKED_TERMS };
@@ -80,6 +80,46 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
             Keys.COPYRIGHT,
             Keys.COPYRIGHT_TEXT,
             Keys.PROVIDER };
+    private static Hashtable MAPDOCTYPES = new Hashtable();
+    static
+    {
+    	MAPDOCTYPES.put("K_CP","CA");
+    	MAPDOCTYPES.put("P_AB","CA");
+    	MAPDOCTYPES.put("P_AR","CA");
+    	MAPDOCTYPES.put("P_CP","CA");
+    	MAPDOCTYPES.put("P_ED","CA");
+    	MAPDOCTYPES.put("P_LE","CA");
+    	MAPDOCTYPES.put("P_NO","CA");
+    	MAPDOCTYPES.put("P_RE","CA");
+    	MAPDOCTYPES.put("J_CP","CA");
+    	MAPDOCTYPES.put("D_CP","CA");
+    	MAPDOCTYPES.put("J_AB","JA");
+    	MAPDOCTYPES.put("J_AR","JA");
+    	MAPDOCTYPES.put("J_BZ","JA");
+    	MAPDOCTYPES.put("J_ED","JA");
+    	MAPDOCTYPES.put("J_ER","JA");
+    	MAPDOCTYPES.put("J_LE","JA");
+    	MAPDOCTYPES.put("J_NO","JA");
+    	MAPDOCTYPES.put("J_RE","JA");
+    	MAPDOCTYPES.put("J_SH","JA");
+    	MAPDOCTYPES.put("D_AB","JA");
+    	MAPDOCTYPES.put("D_AR","JA");
+    	MAPDOCTYPES.put("D_BZ","JA");
+    	MAPDOCTYPES.put("D_ER","JA");
+    	MAPDOCTYPES.put("D_LE","JA");
+    	MAPDOCTYPES.put("D_NO","JA");
+    	MAPDOCTYPES.put("D_RE","JA");
+    	MAPDOCTYPES.put("K_AR","MC");
+    	MAPDOCTYPES.put("B_ER","MC");
+    	MAPDOCTYPES.put("R_AB","RC");
+    	MAPDOCTYPES.put("R_RE","RR");
+    	MAPDOCTYPES.put("AB","AB");
+    	MAPDOCTYPES.put("P","CA");
+    	MAPDOCTYPES.put("DI","DS");
+    	MAPDOCTYPES.put("Other","RC");
+    	MAPDOCTYPES.put("R","RC");
+    	MAPDOCTYPES.put("RE","RC");	   	
+    }
 
     private Perl5Util perl = new Perl5Util();
     private Database database;
@@ -126,7 +166,8 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
             else if (dataFormat.equals(FullDoc.FULLDOC_FORMAT)) {
                 l = loadDetailed(listOfDocIDs);
             }
-            else if (dataFormat.equals(LinkedTermDetail.LINKEDTERM_FORMAT)) {
+            else if (dataFormat.equals(LinkedTermDetail.LINKEDTERM_FORMAT)) 
+            {
                 l = loadLinkedTerms(listOfDocIDs);
             }
             else if (dataFormat.equalsIgnoreCase("RIS")) {
@@ -629,7 +670,7 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
         while (st.hasMoreTokens()) {
             strToken = st.nextToken().trim();
             if (strToken.length() > 0) {
-                KeyValuePair k = new KeyValuePair(Keys.ELT_CLASS_CODE, strToken);
+                KeyValuePair k = new KeyValuePair(Keys.CLASS_CODES_MULTI, strToken);
 
                 list.add(k);
             }
@@ -646,6 +687,7 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
 
         while (st.hasMoreTokens()) {
             strToken = st.nextToken().trim();
+            strToken = strToken.replace('-', ' ');
             if (strToken.length() > 0) {
                 KeyValuePair k = new KeyValuePair(getTermField(strToken), strToken);
                 list.add(k);
@@ -656,6 +698,8 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
         return (KeyValuePair[]) list.toArray(new KeyValuePair[list.size()]);
 
     }
+    
+
     public Key getTermField(String cv) {
 
         Key field = null;
@@ -1132,13 +1176,17 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
                         ht.put(Keys.MAJOR_TERMS, new XMLMultiWrapper2(ELT_MAJOR_TERMS, setCVS(StringUtil.substituteChars(CVSTermBuilder.formatCT(cvm.toString())))));
                 }
 
-                //ATM
-                if (rset.getString("APIUT") != null) {
-                    ht.put(Keys.UNCONTROLLED_TERMS, new XMLMultiWrapper(Keys.UNCONTROLLED_TERMS, setElementData(StringUtil.substituteChars(removePoundSign(rset.getString("APIUT"))))));
-                }
+//                //ATM
+//                if (rset.getString("APIUT") != null) {
+//                    ht.put(Keys.UNCONTROLLED_TERMS, new XMLMultiWrapper(Keys.UNCONTROLLED_TERMS, setElementData(StringUtil.substituteChars(removePoundSign(rset.getString("APIUT"))))));
+//                }
+                
+                // use free language fields for qualifiers fasets
+                
+                
 
                 if (rset.getString("APICC") != null) {
-                    ht.put(Keys.CLASS_CODES, new XMLMultiWrapper2(ELT_CLASS_CODES, setCLS(StringUtil.substituteChars(rset.getString("APICC")))));
+                    ht.put(Keys.CLASS_CODES_MULTI, new XMLMultiWrapper(ELT_CLASS_CODES, setElementData(StringUtil.substituteChars(rset.getString("APICC")))));
                 }
 
                 if (rset.getString("APIATM") != null) {
@@ -1274,11 +1322,13 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
                         sbTemplate.append(term);
                     else
                         sbTemplate.append("<br/>").append(term);
+
                 }
                 else {
 
                     if (!perl.match("/NUMBER OF TEMPLATE-GENERATED LINK TERMS:/", term) && !perl.match("/V[0-9]/i", term) && !term.startsWith(">") && !perl.match("/S[0-9]/i", term)) {
-                        sbTemplate.append("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;").append(term);
+                       // sbTemplate.append("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;").
+                        sbTemplate.append(term);
 
                     }
                     else {
@@ -1290,12 +1340,20 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
                     sbTemplate.append("|");
             }
 
-            return sbTemplate.toString();
+            String result = sbTemplate.toString();
+            result =result.replaceAll("</br>", "<br>");
+            result =result.replaceAll("<br/>", "<br>");
+            System.out.println(result);
+            return result;
         }
         else {
+        	template =template.replaceAll("</br>", "<br>");
+        	template =template.replaceAll("<br/>", "<br>");
+        	System.out.println(template);
             return template;
         }
     }
+       
     private List loadLinkedTerms(List listOfDocIDs) throws Exception {
 
         List list = new ArrayList();
@@ -1307,13 +1365,16 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
         ConnectionBroker broker = null;
 
         try {
+        	
+        	System.out.println("loadLinkedTerms");
             broker = ConnectionBroker.getInstance();
             con = broker.getConnection(DatabaseConfig.SEARCH_POOL);
             stmt = con.createStatement();
             rset = stmt.executeQuery(queryLinkedTerms + INString);
+            String results = null;
 
             DatabaseConfig dconfig = DatabaseConfig.getInstance();
-
+            CVSTermBuilder termBuilder = new CVSTermBuilder();
             if (rset.next()) {
 
                 // Common Fields
@@ -1326,11 +1387,26 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
                 if (rset.getClob("APILT") != null) {
                     String linkedTerms = StringUtil.getStringFromClob(rset.getClob("APILT"));
 
-                    if (!linkedTerms.equals("") && !linkedTerms.equalsIgnoreCase("QQ"))
-                        ht.put(Keys.LINKED_TERMS, new LinkedTerms(Keys.LINKED_TERMS, getLinkedTerms(StringUtil.substituteChars(removePoundSign(linkedTerms)), Keys.LINKED_SUB_TERM)));
+//                    if (!linkedTerms.equals("") && !linkedTerms.equalsIgnoreCase("QQ"))
+//                    {
+//                    	ht.put(EIDoc.LINKED_TERMS, new LinkedTerms(Keys.LINKED_TERMS,termBuilder.formatCT(StringUtil.replaceNonAscii(linkedTerms), Keys.LINKED_SUB_TERM)));
+//                    }
+                    
+                    results =  termBuilder.formatCT(StringUtil.replaceNonAscii(linkedTerms));
+                   if (results != null && !results.equalsIgnoreCase("QQ")) 
+                   {
+       //                 ht.put(Keys.LINKED_TERMS, new LinkedTerms(Keys.LINKED_TERMS, getLinkedTerms(StringUtil.substituteChars(removePoundSign(linkedTerms)), Keys.LINKED_SUB_TERM)));
+                       ht.put(Keys.LINKED_TERMS, new XMLWrapper(Keys.LINKED_TERMS, results));
+                	  // ht.put(Keys.LINKED_TERMS,results);
+                   }
+                        
 
                 }
 
+                
+                System.out.println("--loadLinkedTerms results::"+results);
+                
+                
                 EIDoc eiDoc = new EIDoc(did, ht, LinkedTermDetail.LINKEDTERM_FORMAT);
                 eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
                 eiDoc.exportLabels(false);
@@ -1664,29 +1740,15 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
         return sbTitle.toString();
     }
 
-    // TS XML document mapping, conversion to dt values 02/10/03
     private String formatDT(String docType) {
 
-        if (docType != null && !docType.equals("")) {
-            if (docType.startsWith("B_"))
-                docType = "Book";
-            else if (docType.startsWith("D_"))
-                docType = "Trade Journal";
-            else if (docType.startsWith("J_"))
-                docType = "Journal Article";
-            else if (docType.startsWith("P_"))
-                docType = "Conference Proceeding";
-            else if (docType.startsWith("R"))
-                docType = "Report";
-            else {
-                docType = "Other";
-            }
-        }
-        else {
-            docType = "Other";
+    	String mapdt = null;
+        if (docType != null && !docType.equals("")) 
+        {        	
+        	mapdt =(String) MAPDOCTYPES.get(docType.toUpperCase().trim());
         }
 
-        return docType;
+        return mapdt;
     }
     public String formatISSN(String issn) {
 
@@ -1748,5 +1810,8 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
             e.printStackTrace();
         }
     }
+    
+    
+
 
 } //End Of EltDocBuilder
