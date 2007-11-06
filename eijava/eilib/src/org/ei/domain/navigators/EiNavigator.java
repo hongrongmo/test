@@ -59,9 +59,11 @@ public class EiNavigator
 	public static final String KY = "kynav";
 	public static final String BKT = "bktnav";
 	public static final String BKS = "bksnav";
+	
 
 	// for search within search
 	public static final String ALL = "all";
+
 
 	protected static Map displayNames = new HashMap();
     static {
@@ -86,7 +88,8 @@ public class EiNavigator
         displayNames.put(EiNavigator.KY,"Keyword");
         displayNames.put(EiNavigator.BKT,"Book Title");
         displayNames.put(EiNavigator.BKS,"Book Section");
-    }
+        
+   }
 
     // The default order of appearance is driven off the order of this list.
     // Commenting a navigator here removes it from the default set
@@ -107,7 +110,7 @@ public class EiNavigator
         navigatorNames.add(EiNavigator.PEC);
         navigatorNames.add(EiNavigator.PID);
 //        navigatorNames.add(EiNavigator.PCI);
-//        navigatorNames.add(EiNavigator.PK);
+        navigatorNames.add(EiNavigator.PK);
         navigatorNames.add(EiNavigator.PAC);
 		navigatorNames.add(EiNavigator.FL);
         navigatorNames.add(EiNavigator.ST);
@@ -121,10 +124,8 @@ public class EiNavigator
     // 57351 = CPX + INS + NTI + GEO + EUP + UPA
     // 8199 = CPX + INS + NTI + GEO
     // 49152 = EUP + UPA
-    
-    
 
-    
+     
     private static Map navigatorMasks = new HashMap();
     static {
         navigatorMasks.put(EiNavigator.DB, new Integer(57351 + 
@@ -147,7 +148,10 @@ public class EiNavigator
         									DatabaseConfig.ELT_MASK));
         navigatorMasks.put(EiNavigator.ST, new Integer(DatabaseConfig.PAG_MASK +
         									 DatabaseConfig.ELT_MASK));
-        navigatorMasks.put(EiNavigator.FL, new Integer(DatabaseConfig.PAG_MASK ));
+        
+        navigatorMasks.put(EiNavigator.FL, new Integer(DatabaseConfig.PAG_MASK +
+                											DatabaseConfig.EPT_MASK +
+                											DatabaseConfig.ELT_MASK));
         navigatorMasks.put(EiNavigator.PN,new Integer(3 + 
         									DatabaseConfig.PAG_MASK + 
         									DatabaseConfig.CBF_MASK +
@@ -173,7 +177,7 @@ public class EiNavigator
         navigatorMasks.put(EiNavigator.CO,new Integer(57351 + 
         									DatabaseConfig.PAG_MASK + 
         									DatabaseConfig.CBF_MASK));
-        navigatorMasks.put(EiNavigator.PK,new Integer(0));
+        navigatorMasks.put(EiNavigator.PK,new Integer(DatabaseConfig.EPT_MASK));
         navigatorMasks.put(EiNavigator.PAC,new Integer(DatabaseConfig.EPT_MASK));
         navigatorMasks.put(EiNavigator.PCI,new Integer(0));
         navigatorMasks.put(EiNavigator.PEC,new Integer(49152));
@@ -238,12 +242,12 @@ public class EiNavigator
 
 	public static EiNavigator createNavigator(Field field)
 	{
-
         return EiNavigator.createNavigator(field.getValue().toLowerCase().trim() + "nav");
     }
 
 	public static EiNavigator createNavigator(String name)
 	{
+		
         EiNavigator ei = null;
 		if((YR.equalsIgnoreCase(name)) || (YR.substring(0,2).equalsIgnoreCase(name)))
 		{
@@ -269,6 +273,7 @@ public class EiNavigator
 		{
 			ei = new PIDNavigator(name);
         }
+
 		else if(BKT.equalsIgnoreCase(name) || BKS.equalsIgnoreCase(name))
 		{
 			ei = new BookNavigator(name);
@@ -290,6 +295,13 @@ public class EiNavigator
             setDisplayname((String) displayNames.get(navname));
 		}
 	}
+
+    
+    public void addModifiers(EiModifier mods)
+    {
+        
+        this.modifiers.add(mods);
+    }
 
 	public List getModifiers()
 	{
@@ -557,9 +569,5 @@ public class EiNavigator
 
 		return sb.toString();
 	}
-
-
-
-
 
 }
