@@ -67,7 +67,6 @@ public class FastSearchControl
 		}
 
 		currentIndex++;
-//		System.out.println(u);
 		return u;
 	}
 
@@ -255,6 +254,7 @@ public class FastSearchControl
             }
 
             Database[] databases = dConfig.getDatabases(query.getDataBase());
+            
 
             if(databases.length > 1)
             {
@@ -539,12 +539,16 @@ public class FastSearchControl
 		{
 			//System.out.println("Not checking basket");
 			int dsize = docList.size();
+			
 			for(int i=0;i<dsize; i++)
 			{
 				PageEntry entry = new PageEntry();
 				entry.setSelected(false);
-				entry.setDoc((EIDoc)docList.get(i));
-				currentPage.add(entry);
+				if((EIDoc)docList.get(i) != null)
+				{
+					entry.setDoc((EIDoc)docList.get(i));
+					currentPage.add(entry);
+				}
 			}
 		}
         return currentPage;
