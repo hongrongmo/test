@@ -437,7 +437,9 @@
 	    		cell.appendChild(spaceimg);
 	    	}
 
-			txtNode = document.createTextNode(nextNode);
+			txtNode = document.createTextNode(nextNode);			   	    
+			cell.style.paddingLeft="5px";				
+			cell.setAttribute("class", "SmBlackText");
 			cell.appendChild(txtNode);
 			row.appendChild(cell);
 			if(termtype == "atm")
