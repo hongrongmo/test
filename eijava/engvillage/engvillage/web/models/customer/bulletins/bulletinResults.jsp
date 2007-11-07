@@ -14,8 +14,7 @@
 
 
     RuntimeProperties eiProps = null;
-    ClientCustomizer clientCustomizer=null;
-    boolean isPersonalizationPresent=true;	
+  	
   	public void jspInit()
   	{
     	try
@@ -32,8 +31,6 @@
  <%
     ControllerClient client = new ControllerClient(request, response);
     UserSession ussession=(UserSession)client.getUserSession();
-    clientCustomizer=new ClientCustomizer(ussession);
-    isPersonalizationPresent=clientCustomizer.checkPersonalization();
     
     SessionID sessionId = ussession.getSessionID();  
     String sesID = sessionId.toString();
@@ -41,6 +38,7 @@
     User user = ussession.getUser();
     String cartridges[] = user.getCartridge();
     String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
+    //String appID = ussession.getProperty(UserSession.APPLICATION_KEY);
     SessionID sessionIdObj = ussession.getSessionID();
     	
     boolean showLitPdf = false;
@@ -59,6 +57,7 @@
 		showPatPdf = true;
     }
 
+    String resourcePath   = eiProps.getProperty("resourcePath");
     String queryString = request.getParameter("queryStr");	
     String selectedDB = request.getParameter("database");	
 
@@ -67,7 +66,8 @@
     BulletinQuery query = new BulletinQuery();
     
     int docIndex = Integer.parseInt(request.getParameter("docIndex"));
-       
+    
+    
     BulletinPage btPage = null;
     BulletinBuilder builder = new BulletinBuilder();
     BulletinResultNavigator navigator = null;
@@ -120,41 +120,46 @@
     	StringBuffer patCartridges = new StringBuffer();
     	BulletinGUI gui = new BulletinGUI();
   	
-  	for (int i = 0; i < cartridges.length; i++) 
-  	{	
-		if(gui.validCartridge(db,cartridges[i])){
-			sbCartridges.append(cartridges[i].toUpperCase());
-			 if(i != cartridges.length - 1)
-			sbCartridges.append(";");
-		}
-		if(gui.isLITCartridge(cartridges[i])){
-			litCartidges.append(cartridges[i].toUpperCase());
-			if(i != cartridges.length - 1)
-			litCartidges.append(";");
-		}
-
-		if(gui.isPATCartridge(cartridges[i])){
-			patCartridges.append(cartridges[i].toUpperCase());
-			if(i != cartridges.length - 1)
-			patCartridges.append(";");
-		}       	
-    	}
+  	for (int i = 0; i < cartridges.length; i++) {
+  	
+        if(gui.validCartridge(db,cartridges[i])){
+        	sbCartridges.append(cartridges[i].toUpperCase());
+        	 if(i != cartridges.length - 1)
+        	sbCartridges.append(";");
+        }
+        if(gui.isLITCartridge(cartridges[i])){
+        	litCartidges.append(cartridges[i].toUpperCase());
+        	if(i != cartridges.length - 1)
+        	litCartidges.append(";");
+        }
+        
+        if(gui.isPATCartridge(cartridges[i])){
+        	patCartridges.append(cartridges[i].toUpperCase());
+        	if(i != cartridges.length - 1)
+        	patCartridges.append(";");
+        }
+         
+       
+        	
+    }
     
-	client.log("request", "bulletinResults");
+	client.log("request", "bulletinSearch");
 	client.log("dbname", db);
 	client.log("category",category);
 	client.log("year",yr);
-	client.log("custid", user.getCustomerID());		
+	client.log("custid", user.getCustomerID());	
+	
 	client.setRemoteControl();
 
 	out.write("<PAGE>");
 	out.write("<HEADER/>");
 	out.write("<FOOTER/>");
-	out.write("<DB>"+db+"</DB>");	
+	out.write("<DB>"+db+"</DB>");
+	out.write("<YR>"+yr+"</YR>");
+	out.write("<RESOURCE-PATH>"+resourcePath+"</RESOURCE-PATH>");
 	out.write(strGlobalLinksXML);
 	out.write("<CARTRIDGES><![CDATA["+sbCartridges+"]]></CARTRIDGES>");
 	out.write("<PATCR><![CDATA["+patCartridges+"]]></PATCR>");
-	out.write("<PERSONALIZATION-PRESENT>"+isPersonalizationPresent+"</PERSONALIZATION-PRESENT>");
 	out.write("<SELECTED-DB><![CDATA["+selectedDB+"]]></SELECTED-DB>");
 	out.write("<LITCR><![CDATA["+litCartidges+"]]></LITCR>");
 	out.write("<SHOW-HTML><![CDATA["+showHtml+"]]></SHOW-HTML>");
@@ -168,11 +173,17 @@
 	out.write("<QCO>");
 	out.write(Integer.toString(navigator.getHitCount()));
 	out.write("</QCO>");
+	out.write("<QTIT><![CDATA[");
+	out.write(query.getTitleQuery());
+	out.write("]]></QTIT>");
 	out.write("<QDIS><![CDATA[");
 	out.write(query.getDisplayQuery());
 	out.write("]]></QDIS>");
+	out.write("<QCAT><![CDATA[");
+	out.write(category.toUpperCase());
+	out.write("]]></QCAT>");
 	out.write("</QTOP>");
-	   
+	System.out.println("Title Query= "+query.getTitleQuery()+" category= "+ category+" QSTR= "+query.toString()+" QDIS="+query.getDisplayQuery()+" QCAT= "+category.toUpperCase());
 	    
 	if(btPage != null){
 		out.write("<BULLETINS>");
