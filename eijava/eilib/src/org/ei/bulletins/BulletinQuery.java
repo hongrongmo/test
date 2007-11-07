@@ -47,49 +47,49 @@ public class BulletinQuery {
         mappings.put("tribology", "Tribology");
     }
 
-    /** 
+    /**
      * Returns the bulletin category
      * @return
      */
     public String getCategory() {
         return category;
     }
-    /** 
+    /**
      * Returns the bulletin database
      * @return
      */
     public String getDatabase() {
         return db;
     }
-    /** 
+    /**
      * Returns the bulletin year
      * @return
      */
     public String getYr() {
         return yr;
     }
-    /** 
+    /**
      * Sets the bulletin category
      * @return
      */
     public void setCategory(String category) {
         this.category = category;
     }
-    /** 
+    /**
      * Sets the bulletin database
      * @return
      */
     public void setDatabase(String db) {
         this.db = db;
     }
-    /** 
+    /**
      * Sets the bulletin year
      * @return
      */
     public void setYr(String yr) {
         this.yr = yr;
     }
-    /** 
+    /**
      * @return
      */
     public void setQuery(String qryString) {
@@ -103,7 +103,7 @@ public class BulletinQuery {
         category = notNull((String) qryParms.get(2));
 
     }
-    /** 
+    /**
      * @return
      */
     private String notNull(String sVal) {
@@ -121,6 +121,12 @@ public class BulletinQuery {
 
         return display.toString();
     }
+
+    public String getTitleQuery()
+    {
+	    return (String)mappings.get(category);
+    }
+
     public static String getDisplayCategory(String category) {
 
         String sVal = (String) mappings.get(category);
@@ -142,7 +148,7 @@ public class BulletinQuery {
 
         return sVal;
     }
-    /** 
+    /**
      * Returns the BulletinQuery as a string
      * @return
      */
