@@ -72,10 +72,15 @@ public class LibraryVisitor implements Visitor
 
 		for (int i = 0; i < creds.length; i++)
 		{
-			String curColName = collectionName.substring(0,2).toLowerCase();
-			String curCred = creds[i].substring(0,2).toLowerCase();
-			if (curColName.equals(curCred))
-				return true;
+      if((creds[i] != null) && (creds[i].length() >= 3))
+      {
+  			String curColName = collectionName.substring(0,2).toLowerCase();
+  			String curCred = creds[i].substring(0,2).toLowerCase();
+  			if (curColName.equals(curCred))
+  			{
+  				return true;
+  			}
+  		}
 		}
 
 		return inCreds;
