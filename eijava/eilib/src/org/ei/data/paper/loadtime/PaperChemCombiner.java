@@ -185,7 +185,7 @@ public class PaperChemCombiner
                 if (rs.getString("pt") != null)
                 {
                     rec.put(EVCombinedRec.CONTROLLED_TERMS,
-                            prepareMulti(rs.getString("pt"), Constants.CO_LA));
+                            prepareMulti(rs.getString("pt")));
                 }
 
                 if (rs.getString("fl") != null)
@@ -657,16 +657,16 @@ public class PaperChemCombiner
             {
                 s = s.trim();
                 if (s.length() > 0) {
-                	if(constant == null)
-                	{
+  //              	if(constant == null)
+ //               	{
                 		list.add(s);
-                	}
-                    else if(constant.equals(Constants.CO_LA))
-                    {
-                        list.add(s);
-                    	//list.add(removeCountry(s));
-                    	//list.add(removeLanguage(s));
-                    }
+ //               	}
+//                    else if(constant.equals(Constants.CO_LA))
+//                    {
+//                        list.add(s);
+//                    	//list.add(removeCountry(s));
+//                    	//list.add(removeLanguage(s));
+//                    }
                 }
             }
             return (String[]) list.toArray(new String[1]);
