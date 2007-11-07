@@ -142,19 +142,19 @@
                       <td valign="top" height="5" colspan="3"><img src="/engresources/images/s.gif" height="5"/></td>
                     </tr>
                 -->
-                
+
                 <xsl:value-of select="//NEWS-TEXT" disable-output-escaping="yes"/>
-                    
+
                     <!--
                     <tr>
                       <td valign="top" width="3"><img src="/engresources/images/s.gif" width="3"/></td>
-                   	   <td valign="top"> 
+                   	   <td valign="top">
                         <a CLASS="SmBlackText"><xsl:value-of select="//NEWS-TEXT" disable-output-escaping="yes"/>
                         </a>
                       </td>
                       <td valign="top" width="2"><img src="/engresources/images/s.gif" width="2"/></td>
                     </tr>
-                    
+
                     -->
                    <!--
                     <tr>
@@ -170,7 +170,7 @@
 
                       	<td valign="top" width="2"><img src="/engresources/images/s.gif" width="2"/></td>
                     </tr>
-                    
+
                      <!--
                     <tr>
                       <td valign="top" colspan="3" height="5"><img src="/engresources/images/s.gif"/></td>
@@ -386,10 +386,10 @@
                         <td valign="top" width="15" ><img src="/engresources/images/s.gif" width="15"/></td>
                         <td valign="top" width="233" >
                           <table border="0" cellspacing="0" cellpadding="0" >
-                            <xsl:if test="(boolean(bit:hasBitSet($USERMASK,1)) 
-                            	or boolean(bit:hasBitSet($USERMASK,2)) 
-                            	or boolean(bit:hasBitSet($USERMASK,16384)) 
-                            	or boolean(bit:hasBitSet($USERMASK,32768)) 
+                            <xsl:if test="(boolean(bit:hasBitSet($USERMASK,1))
+                            	or boolean(bit:hasBitSet($USERMASK,2))
+                            	or boolean(bit:hasBitSet($USERMASK,16384))
+                            	or boolean(bit:hasBitSet($USERMASK,32768))
                             	or boolean(bit:hasBitSet($USERMASK,262144))
                             	or boolean(bit:hasBitSet($USERMASK,8192)))">
                               <tr>
@@ -569,34 +569,32 @@
                 <td valign="top" align="right" width="5" bgcolor="#C3C8D1"><img src="/engresources/images/s.gif" width="5"/></td>
                 <!-- Start of table for lookup indexes -->
                 <td valign="top" align="right" width="120" bgcolor="#C3C8D1">
-                  <!-- Start of Right most table for lookup -->
-                  <table border="0" width="130" align="right" cellspacing="0" cellpadding="0">
-                    <tr>
-                      <td valign="top" height="20" colspan="5"><img src="/engresources/images/s.gif" height="20"/></td>
-                    </tr>
-                    <tr>
-                      <td valign="top" bgcolor="#3173B5" height="15" colspan="5"><a CLASS="LgWhiteText"><b>&#160; Browse Indexes</b></a> &#160;
-                      <a href="javascript:makeUrl('Browse_Indexes.htm')">
-		      	<img src="/engresources/images/help_white.gif" border="0"/>
-		       </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td width="1" valign="top" bgcolor="#3173B5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
-                      <td width="4" bgcolor="#FFFFFF"><img src="/engresources/images/s.gif" width="4"/></td>
-                      <td width="120" valign="top" bgcolor="#FFFFFF">
-                          <table border="0" cellspacing="0" cellpadding="0" width="100%">
-                          <form NAME="lookupform" method="post" action="#">
-                            <xsl:value-of disable-output-escaping="yes" select="SF:getLookupLink($SESSION-ID,$SELECTED-DB,'quick')"/>
-                          </form>
-                          </table>
-
-                      </td>
-                      <td width="4" bgcolor="#FFFFFF"><img src="/engresources/images/s.gif" width="4"/></td>
-                      <td width="1" valign="top" bgcolor="#3173B5"><img src="/engresources/images/s.gif" width="1"/></td>
-                    </tr>
-                    <tr><td valign="top" colspan="5" height="1" bgcolor="#3173B5"><img src="/engresources/images/s.gif" height="1"/></td></tr>
-                  </table>
+                  <div id="browseindexes">
+                    <!-- Start of Right most table for lookup -->
+                    <table border="0" width="130" align="right" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td valign="top" height="20" colspan="5"><img src="/engresources/images/s.gif" height="20"/></td>
+                      </tr>
+                      <tr>
+                        <td valign="top" bgcolor="#3173B5" height="15" colspan="5">
+                        <a CLASS="LgWhiteText"><b>&#160; Browse Indexes</b></a> &#160;
+                        <a href="javascript:makeUrl('Browse_Indexes.htm')">
+            		      	<img src="/engresources/images/help_white.gif" border="0"/>
+            		        </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td width="1" valign="top" bgcolor="#3173B5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
+                        <td width="4" bgcolor="#FFFFFF"><img src="/engresources/images/s.gif" width="4"/></td>
+                        <td width="120" valign="top" bgcolor="#FFFFFF">
+                            <div id="lookups"></div>
+                        </td>
+                        <td width="4" bgcolor="#FFFFFF"><img src="/engresources/images/s.gif" width="4"/></td>
+                        <td width="1" valign="top" bgcolor="#3173B5"><img src="/engresources/images/s.gif" width="1"/></td>
+                      </tr>
+                      <tr><td valign="top" colspan="5" height="1" bgcolor="#3173B5"><img src="/engresources/images/s.gif" height="1"/></td></tr>
+                    </table>
+                  </div>
                 <!-- End of Right most table for lookup -->
                 </td>
                 <td valign="top" width="5" bgcolor="#C3C8D1"><img src="/engresources/images/s.gif" width="5"/></td>
@@ -673,7 +671,31 @@
 <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Login.js"/>
 <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/RemoteDbLink_V5.js"/>
 <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Robohelp.js"/>
-
+  <script language="Javascript">
+  <xsl:comment>
+  function OpenLookup_AUS()
+  {
+    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","AUS");
+  }
+  function OpenLookup_AF()
+  {
+    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","AF");
+  }
+  function OpenLookup_CVS()
+  {
+    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","CVS");
+  }
+  function OpenLookup_ST()
+  {
+    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","ST");
+  }
+  function OpenLookup_PN()
+  {
+    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","PN");
+  }
+  flipImage(<xsl:value-of select="$SELECTED-DB"/>);
+  // </xsl:comment>
+  </script>
   </xsl:template>
 
 </xsl:stylesheet>
