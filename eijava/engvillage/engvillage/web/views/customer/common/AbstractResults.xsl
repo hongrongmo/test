@@ -667,7 +667,7 @@
     <xsl:template match="CM|CP">
       <xsl:call-template name="LINK">
         <xsl:with-param name="TERM"><xsl:value-of select="normalize-space(text())"/></xsl:with-param>
-        <xsl:with-param name="FIELD">name(.)</xsl:with-param>
+        <xsl:with-param name="FIELD"><xsl:value-of select="name(.)"/></xsl:with-param>
         <xsl:with-param name="NAME"><xsl:value-of select="name(.)"/></xsl:with-param>
       </xsl:call-template>
       <xsl:if test="not(position()=last())">
