@@ -30,7 +30,7 @@ public class EiModifier implements Comparable
     public static final EiModifier EU_GRANTS = new EiModifier(0, "European  Grants", "eg");
     public static final EiModifier EU_APPLICATIONS = new EiModifier(0, "European  Applications", "ea");
     public static final EiModifier PATENT = new EiModifier(0, "Patent", "pa");
-    
+
     public static final EiModifier DT_BOOK = new EiModifier(0, "BOOK", "book");
     public static final EiModifier DT_PAGE = new EiModifier(0, "PAGE", "page");
 
@@ -42,6 +42,12 @@ public class EiModifier implements Comparable
     public static final EiModifier MOD_GEO = new EiModifier(0, "Geobase", Integer.toString(DatabaseConfig.GEO_MASK));
     public static final EiModifier MOD_PAG = new EiModifier(0, "Referex", Integer.toString(DatabaseConfig.PAG_MASK));
     public static final EiModifier MOD_CBF = new EiModifier(0, "EI Backfile", Integer.toString(DatabaseConfig.CBF_MASK));
+
+    public static final EiModifier MOD_CBN = new EiModifier(0, "CBNB", Integer.toString(DatabaseConfig.CBN_MASK));
+    public static final EiModifier MOD_CHM = new EiModifier(0, "Chimica", Integer.toString(DatabaseConfig.CHM_MASK));
+    public static final EiModifier MOD_EPT = new EiModifier(0, "EnCompassPat", Integer.toString(DatabaseConfig.EPT_MASK));
+    public static final EiModifier MOD_ELT = new EiModifier(0, "EnCompassLit", Integer.toString(DatabaseConfig.ELT_MASK));
+
 
     public static final EiModifier[] DEDUPABLE_MODS = {MOD_CPX, MOD_INS, MOD_GEO};
     public EiModifier(int i, String slable, String svalue)
@@ -138,9 +144,9 @@ public class EiModifier implements Comparable
                     modcount = 0;
                 }
                 svalue = modfields[1];
-                
+
                 slabel = modfields[2];
-                
+
 
             }
             if(modfields.length == 1)
