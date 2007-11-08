@@ -968,9 +968,18 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
 
                 }
 
-                if (rset.getString("CPRS") != null) {
-                    ht.put(Keys.CORRESPONDING_AUTHORS, new XMLWrapper(Keys.CORRESPONDING_AUTHORS, StringUtil.substituteChars(rset.getString("CPRS"))));
-                }
+//                if (rset.getString("CPRS") != null) 
+//                {
+//                    Contributors authors = new Contributors(Keys.CORRESPONDING_AUTHORS, getContributors(StringUtil.substituteChars(rset.getString("CPRS")), Keys.CORRESPONDING_AUTHORS));
+//
+//                    ht.put(Keys.CORRESPONDING_AUTHORS,authors);
+//                }
+                
+              if (rset.getString("CPRS") != null) 
+              {
+      
+                  ht.put(Keys.CORRESPONDING_AUTHORS,new XMLWrapper(Keys.CORRESPONDING_AUTHORS, StringUtil.substituteChars(rset.getString("CPRS"))));
+              }
 
                 if (rset.getString("CORG") != null) {
                     ht.put(Keys.CORRESPONDING_AUTHORS_AFF, new XMLWrapper(Keys.CORRESPONDING_AUTHORS_AFF, StringUtil.substituteChars(rset.getString("CORG"))));
