@@ -18,10 +18,11 @@ public class URLPlucker {
                                       ")                \n";
 
     private static String Hostname   = "(?:" + SubDomain + "\\.)+" + TopDomains;
-    private static String NOTRIN     = ";\"’<>()\\[\\]\\{\\}\\s\\x7F-\\xFF";
-    private static String NOTREND    = "!.,?";
-    private static String ANYWHERE   = "[ˆ" + NOTRIN + NOTREND + "]";
-    private static String EMBEDDED   = "[" + NOTREND + "]";
+
+    private static String NOT_IN     = ";\"’<>()\\[\\]\\{\\}\\s\\x7F-\\xFF";
+    private static String NOT_END    = "!.,?";
+    private static String ANYWHERE   = "[^" + NOT_IN + NOT_END + "]";
+    private static String EMBEDDED   = "[" + NOT_END + "]";
     private static String UrlPath    = "/"+ANYWHERE + "*("+EMBEDDED+"+"+ANYWHERE+"+)*";
     private static String Url =
                 "(?x:                                             \n"+
@@ -33,7 +34,7 @@ public class URLPlucker {
                 " " + Hostname + "                                \n"+
                 " )                                               \n"+
                 " # allow optional port                           \n"+
-                " (?: \\d+ )?                                    \n"+
+                " (?: \\d+ )?                                     \n"+
                 "                                                 \n"+
                 " # rest of url is optional, and begins with /    \n"+
                 " (?: " + UrlPath + ")?                           \n"+
