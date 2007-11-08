@@ -1,10 +1,10 @@
 @echo off
 
-pushd C:\miami\eijava\eilib
+pushd eilib
 cmd.exe /C ant dist
 popd
 
-pushd C:\miami\eijava\engvillage
+pushd engvillage
 
 copy stage.properties.row1 stage.properties
 cmd.exe /C ant stage
