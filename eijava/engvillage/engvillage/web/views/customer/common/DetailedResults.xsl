@@ -135,13 +135,11 @@
       </xsl:if>
       <xsl:variable name="FIELDNAME">
       	<xsl:choose>
-      		<xsl:when test="not(name(.)='MJS')">
-      			<xsl:value-of select="name(.)"/>
-      		</xsl:when>
-      		<xsl:otherwise>CVM</xsl:otherwise>
+      		<xsl:when test="(name(.)='GC')">CL</xsl:when>
+      		<xsl:when test="(name(.)='MJS')">CVM</xsl:when>
+      		<xsl:otherwise><xsl:value-of select="name(.)"/></xsl:otherwise>
       	</xsl:choose>
       </xsl:variable>
-
 
 
       <xsl:call-template name="LINK">
