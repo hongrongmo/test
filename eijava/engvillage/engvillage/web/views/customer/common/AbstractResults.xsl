@@ -10,7 +10,8 @@
     xmlns:ibfab="java:org.ei.data.inspec.InspecArchiveAbstract"
     xmlns:ctd="java:org.ei.domain.ClassTitleDisplay"
     xmlns:rfx="java:org.ei.books.collections.ReferexCollection"
-    exclude-result-prefixes="hlight schar ibfab java html xsl ctd rfx"
+    xmlns:crlkup="java:org.ei.data.CRNLookup"
+    exclude-result-prefixes="hlight schar ibfab java html xsl crlkup ctd rfx"
 >
 
 <xsl:output method="html" indent="no"/>
@@ -144,6 +145,7 @@
       <xsl:apply-templates select="CVS">
         <xsl:with-param name="DBNAME" select="DOC/DB/DBNAME"/>
       </xsl:apply-templates>
+      <xsl:apply-templates select="CRM"/>
       <xsl:apply-templates select="FLS"/>
       <xsl:apply-templates select="CLS"/>
       <xsl:apply-templates select="RGIS"/>
@@ -548,7 +550,7 @@
       <a CLASS="MedBlackText"><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/></a>
     </xsl:template>
 
-    <xsl:template match="CVS|MJSM">
+    <xsl:template match="CVS|MJSM|CRM">
     	<xsl:param name="DBNAME"/>
       <br/><br/><a CLASS="MedBlackText"><b>
         <xsl:choose>
@@ -557,6 +559,32 @@
         </xsl:choose>:&#160;&#160;</b></a>
       <xsl:apply-templates/>
     </xsl:template>
+    
+    
+    <xsl:template match="CR">
+
+           <xsl:call-template name="LINK">
+           <xsl:with-param name="TERM"><xsl:value-of select="crlkup:addName(normalize-space(text()))"/></xsl:with-param>
+           <xsl:with-param name="FIELD">CR</xsl:with-param>
+
+       </xsl:call-template>
+       <!--  
+            <span CLASS="MedBlackText"><xsl:value-of select="normalize-space(text())"/></span>
+           <img src="/engresources/images/plus.gif" border="0"/> 
+        --> 
+           <xsl:text> </xsl:text>
+           <xsl:if test="position()!=last()">
+           <a class="SmBlkText">&#160; - &#160;</a>
+          	</xsl:if>      
+             
+        <!-- 
+        <td valign="top"> 
+          <span CLASS="MedBlackText"><xsl:value-of select="ctd:getDisplayTitle2(hlight:addMarkup(./CTI))" disable-output-escaping="yes"/></span>        
+        </td>
+        -->
+     
+  </xsl:template>
+<!--  end  -->
 
     <xsl:template match="FLS">
       <a CLASS="MedBlackText"><br/><br/><b>Species term:&#160;&#160;</b></a>
