@@ -19,7 +19,8 @@ import java.util.regex.*;
 import org.ei.domain.Contributors;
 import org.ei.domain.Keys;
 
-
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 /** This class is the implementation of DocumentBuilder
   * Basically this class is responsible for building
   * a List of EIDocs from a List of DocIds.The input ie
@@ -27,184 +28,17 @@ import org.ei.domain.Keys;
   *
   */
 public class CBNBDocBuilder implements DocumentBuilder {
-    public static String CBNB_TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright 2005 Elsevier Engineering Information, Inc.";
-    public static String CBNB_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2005 Elsevier Engineering Information, Inc.";
+    public static String CBNB_TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright 2008 Elsevier Inc. All rights reserved";
+    public static String CBNB_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2008 Elsevier  Inc. All rights reserved";
     public static String PROVIDER_TEXT = "";
 
+    private static final Key CBNB_CONTROLLED_TERMS = new Key(Keys.CONTROLLED_TERMS, "Controlled terms");
     private static final Key CBNB_COUNTRY = new Key(Keys.COUNTRY, "Country of origin");
-    private static final Key CBNB_CONTROLLED_TERMS = new Key(Keys.CONTROLLED_TERMS, "Index terms");
-	private static final Key[] CITATION_KEYS = {Keys.DOCID, Keys.PROVIDER, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT, Keys.SERIAL_TITLE, Keys.TITLE, Keys.VOLISSUE, Keys.ISSUE_DATE, Keys.SOURCE, Keys.p_PAGE_RANGE, Keys.NO_SO, Keys.PUBLICATION_DATE, Keys.ISBN, Keys.ISSN,Keys.AVAILABILITY, Keys.LANGUAGE, Keys.CODEN};
+    private static final Key[] CITATION_KEYS = {Keys.DOCID, Keys.PROVIDER, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT, Keys.SERIAL_TITLE, Keys.TITLE, Keys.VOLISSUE, Keys.ISSUE_DATE, Keys.SOURCE, Keys.p_PAGE_RANGE, Keys.NO_SO, Keys.PUBLICATION_DATE, Keys.ISBN, Keys.ISSN,Keys.AVAILABILITY, Keys.LANGUAGE, Keys.CODEN};
     private static final Key[] ABSTRACT_KEYS = {Keys.DOCID, Keys.PROVIDER, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT,Keys.DOC_TYPE, Keys.SERIAL_TITLE, Keys.TITLE, Keys.VOLISSUE, Keys.ISSUE_DATE,Keys.SOURCE, Keys.p_PAGE_RANGE, Keys.NO_SO, Keys.PUBLICATION_DATE, Keys.AVAILABILITY, Keys.ISBN, Keys.ISSN, Keys.LANGUAGE, Keys.CODEN, Keys.SCOPE, Keys.ABSTRACT, Keys.COMPANIES, Keys.CAS_REGISTRY_CODES, CBNB_CONTROLLED_TERMS, Keys.COUNTRY, Keys.CHEMICALS};
-	private static final Key[] DETAILED_KEYS = {Keys.ACCESSION_NUMBER,Keys.TITLE, Keys.TITLE_TRANSLATION, Keys.SERIAL_TITLE, Keys.VOLUME, Keys.ISSUE, Keys.PUBLICATION_DATE, Keys.PAGE_RANGE, Keys.AVAILABILITY, Keys.ISBN, Keys.ISSN, Keys.LANGUAGE, Keys.CODEN, Keys.DOC_TYPE, Keys.SCOPE, Keys.ABSTRACT, Keys.CONTROLLED_TERMS, Keys.COMPANIES, Keys.CAS_REGISTRY_CODES, Keys.CHEMICALS, Keys.SIC_CODES, Keys.COUNTRY, Keys.COUNTRY_CODES,  Keys.CHEMICAL_ACRONS,  Keys.INDUSTRIAL_SEC_CODES, Keys.INDUSTRIAL_SECTORS,Keys.DOCID, Keys.COPYRIGHT, Keys.PROVIDER,Keys.COPYRIGHT_TEXT};
+    private static final Key[] DETAILED_KEYS = {Keys.ACCESSION_NUMBER,Keys.TITLE, Keys.TITLE_TRANSLATION, Keys.SERIAL_TITLE, Keys.VOLUME, Keys.ISSUE, Keys.PUBLICATION_DATE, Keys.PAGE_RANGE, Keys.LANGUAGE, Keys.ISBN, Keys.ISSN,  Keys.CODEN, Keys.DOC_TYPE, Keys.AVAILABILITY, Keys.SCOPE, Keys.ABSTRACT, CBNB_CONTROLLED_TERMS, Keys.COMPANIES, Keys.CAS_REGISTRY_CODES, Keys.CHEMICALS, Keys.SIC_CODES, Keys.COUNTRY, Keys.COUNTRY_CODES,  Keys.CHEMICAL_ACRONS,  Keys.INDUSTRIAL_SEC_CODES, Keys.INDUSTRIAL_SECTORS,Keys.DOCID, Keys.COPYRIGHT, Keys.PROVIDER,Keys.COPYRIGHT_TEXT};
     private static final Key[] RIS_KEYS = { Keys.RIS_AN, Keys.RIS_TY, Keys.RIS_N1 , Keys.RIS_TI, Keys.RIS_JO,Keys.RIS_T3, Keys.RIS_VL, Keys.RIS_IS, Keys.RIS_PY, Keys.RIS_SP,Keys.RIS_EP, Keys.RIS_SN, Keys.RIS_N2, Keys.RIS_CVS };
-	private static final Key[] XML_KEYS = {Keys.ACCESSION_NUMBER, Keys.TITLE, Keys.SERIAL_TITLE, Keys.PUBLISHER, Keys.VOLUME, Keys.ISSUE, Keys.SOURCE, Keys.PUBLICATION_DATE, Keys.PAGE_RANGE, Keys.AVAILABILITY, Keys.ISBN, Keys.ISSN, Keys.LANGUAGE, Keys.CODEN, Keys.CONTROLLED_TERMS,Keys.DOCID, Keys.COPYRIGHT, Keys.PROVIDER,Keys.COPYRIGHT_TEXT};
-
-
-/*    static {
-        m_labels.put("AN", "Accession number");
-        m_labels.put("TI", "Title");
-        m_labels.put("TT", "Title of translation");
-        m_labels.put("AUS", "Authors");
-        m_labels.put("EDS", "Editors");
-        m_labels.put("IVS", "Inventors");
-        m_labels.put("PAD", "Patent application date");
-        m_labels.put("PID", "Patent issue date");
-        m_labels.put("PAS", "Assignee");
-        m_labels.put("PAP", "Application number");
-        m_labels.put("PAN", "Patent number");
-        m_labels.put("PFD", "Filing date");
-        m_labels.put("PPD", "Publication date");
-        m_labels.put("AF", "First author affiliation");
-        m_labels.put("EF", "First editor affiliation");
-        m_labels.put("SO", "Source");
-        m_labels.put("ST", "Serial title");
-        m_labels.put("SE", "Abbreviated serial title");
-        m_labels.put("VO", "Volume/Issue");
-        m_labels.put("VOM", "Volume");
-        m_labels.put("IS", "Issue");
-        m_labels.put("MT", "Monograph title");
-        m_labels.put("IORG", "Issuing organization");
-        m_labels.put("RN", "Report number");
-        m_labels.put("SD", "Issue date");
-        m_labels.put("PD_YR", "Publication date");
-        m_labels.put("YR", "Publication year");
-        m_labels.put("PR", "Paper number");
-        m_labels.put("PA", "Part number");
-        m_labels.put("PP", "Pages");
-        m_labels.put("LA", "Language");
-        m_labels.put("SN", "ISSN");
-        m_labels.put("CN", "CODEN");
-        m_labels.put("BN", "ISBN");
-        m_labels.put("DT", "Document type");
-        m_labels.put("COPA", "Country of application");
-        m_labels.put("CF", "Conference name");
-        m_labels.put("MD", "Conference date");
-        m_labels.put("ML", "Conference location");
-        m_labels.put("CC", "Conference code");
-        m_labels.put("SP", "Sponsor");
-        m_labels.put("PN", "Publisher");
-        m_labels.put("PLA", "Place of publication");
-        m_labels.put("PL", "Country of publication");
-        m_labels.put("AV", "Availability");
-        m_labels.put("FTTJ", "Translation serial title");
-        m_labels.put("TTJ", "Translation abbreviated serial title");
-        m_labels.put("VOLT", "Translation volume");
-        m_labels.put("ISST", "Translation issue");
-        m_labels.put("TDATE", "Translation publication date");
-        m_labels.put("IPNT", "Translation pages");
-        m_labels.put("SNT", "Translation ISSN");
-        m_labels.put("CNT", "Translation CODEN");
-        m_labels.put("CPUBT", "Translation country of publication");
-        m_labels.put("MI", "Material Identity Number");
-        m_labels.put("SC", "Scope");
-        m_labels.put("AB", "Abstract");
-        m_labels.put("AT", "Abstract type");
-        m_labels.put("NR", "Number of references");
-        m_labels.put("MH", PROVIDER + " main heading");
-        m_labels.put("CVS", PROVIDER + " Controlled terms");
-        m_labels.put("FLS", "Uncontrolled terms");
-        m_labels.put("CLS", PROVIDER + " classification codes");
-        m_labels.put("NDI", "Numerical data indexing");
-        m_labels.put("AOI", "Astronomical object indexing");
-        m_labels.put("CI", "Chemical indexing");
-        m_labels.put("TRS", "Treatment");
-        m_labels.put("DISPS", "Discipline");
-        m_labels.put("COP", "Companies");
-        m_labels.put("CRS", "CAS registry number(s)");
-        //    m_labels.put("EBS","Econ./Business Terms");
-        m_labels.put("COS", "Countries");
-        m_labels.put("CMS", "Chemicals");
-        m_labels.put("CES", "Chemical Acronyms");
-        m_labels.put("ICS", "SIC Codes");
-        m_labels.put("SCC", "Geographical indexing");
-        m_labels.put("GIC", "Industrial Sector Codes");
-        m_labels.put("GID", "Industrial Sectors");
-        m_labels.put("DB", "Database");
-
-    }
-
-    static {
-        m_order.add("AN");
-        m_order.add("TI");
-        m_order.add("TT");
-        m_order.add("AUS");
-        m_order.add("EDS");
-        m_order.add("IVS");
-        m_order.add("PAD");
-        m_order.add("PID");
-        m_order.add("PAS");
-        m_order.add("PAP");
-        m_order.add("PAN");
-        m_order.add("PFD");
-        m_order.add("PPD");
-        m_order.add("AF");
-        m_order.add("EF");
-        m_order.add("SO");
-        m_order.add("ST");
-        m_order.add("SE");
-        m_order.add("VO");
-        m_order.add("VOM");
-        m_order.add("IS");
-        m_order.add("MT");
-        m_order.add("IORG");
-        m_order.add("RN");
-        m_order.add("SD");
-        m_order.add("PD_YR");
-        m_order.add("YR");
-        m_order.add("PR");
-        m_order.add("PA");
-        m_order.add("PP");
-        m_order.add("LA");
-        m_order.add("SN");
-        m_order.add("CN");
-        m_order.add("BN");
-        m_order.add("DT");
-        m_order.add("COPA");
-        m_order.add("CF");
-        m_order.add("MD");
-        m_order.add("ML");
-        m_order.add("CC");
-        m_order.add("SP");
-        m_order.add("PN");
-        m_order.add("PLA");
-        m_order.add("PL");
-        m_order.add("AV");
-        m_order.add("FTTJ");
-        m_order.add("TTJ");
-        m_order.add("VOLT");
-        m_order.add("ISST");
-        m_order.add("TDATE");
-        m_order.add("IPNT");
-        m_order.add("SNT");
-        m_order.add("CNT");
-        m_order.add("CPUBT");
-        m_order.add("MI");
-        m_order.add("SC");
-        m_order.add("AB");
-        m_order.add("AT");
-        m_order.add("NR");
-        m_order.add("MH");
-        m_order.add("CVS");
-        m_order.add("FLS");
-        m_order.add("CLS");
-        m_order.add("NDI");
-        m_order.add("AOI");
-        m_order.add("CI");
-        m_order.add("TRS");
-        m_order.add("DISPS");
-        m_order.add("COP");
-        m_order.add("CRS");
-        //    m_order.add("EBS");
-        m_order.add("COS");
-        m_order.add("CMS");
-        m_order.add("CES");
-        m_order.add("ICS");
-        m_order.add("SCC");
-        m_order.add("GIC");
-        m_order.add("GID");
-        m_order.add("DB");
-
-    } */
+    private static final Key[] XML_KEYS = {Keys.ACCESSION_NUMBER, Keys.TITLE, Keys.SERIAL_TITLE, Keys.PUBLISHER, Keys.VOLUME, Keys.ISSUE, Keys.SOURCE, Keys.PUBLICATION_DATE, Keys.PAGE_RANGE, Keys.AVAILABILITY, Keys.ISBN, Keys.ISSN, Keys.LANGUAGE, Keys.CODEN, CBNB_CONTROLLED_TERMS,Keys.DOCID, Keys.COPYRIGHT, Keys.PROVIDER,Keys.COPYRIGHT_TEXT};
 
     // document builder interface methods which are called by EIDoc classes
     // for building detailed XML views of documents
@@ -243,8 +77,6 @@ public class CBNBDocBuilder implements DocumentBuilder {
     public List buildPage(List listOfDocIDs, String dataFormat) throws DocumentBuilderException {
         List l = null;
         try {
-
-
             if(dataFormat.equals(Citation.CITATION_FORMAT))
             {
                 l = loadCitations(listOfDocIDs);
@@ -265,8 +97,6 @@ public class CBNBDocBuilder implements DocumentBuilder {
             {
                 l = loadXMLCitations(listOfDocIDs);
             }
-
-
         }
         catch (Exception e) {
             throw new DocumentBuilderException(e);
@@ -303,7 +133,7 @@ public class CBNBDocBuilder implements DocumentBuilder {
                 ht.put(Keys.RIS_N1,new XMLWrapper(Keys.RIS_N1,CBNBDocBuilder.CBNB_TEXT_COPYRIGHT));
 
                 if (rset.getString("ABN") != null) {
-                	ht.put(Keys.RIS_AN, new XMLWrapper(Keys.RIS_AN, rset.getString("ABN")));
+                  ht.put(Keys.RIS_AN, new XMLWrapper(Keys.RIS_AN, rset.getString("ABN")));
                 }
                 String strTitle = StringUtil.EMPTY_STRING;
 
@@ -330,7 +160,7 @@ public class CBNBDocBuilder implements DocumentBuilder {
                 }
 
                 if (rset.getString("PBD") != null) {
-					ht.put(Keys.RIS_PY, new Year(Keys.RIS_PY,rset.getString("PBD"), perl));
+          ht.put(Keys.RIS_PY, new Year(Keys.RIS_PY,rset.getString("PBD"), perl));
                 }
 
                 String strPages = StringUtil.EMPTY_STRING;
@@ -338,34 +168,34 @@ public class CBNBDocBuilder implements DocumentBuilder {
                     strPages = StringUtil.replaceNullWithEmptyString(rset.getString("PAG"));
                 }
                 if((strPages !=  null) && !(strPages.equals(StringUtil.EMPTY_STRING))) {
-					// Strip out and store the start page and end page
-					if(perl.match("/(\\d+)[^\\d](\\d+)/", strPages)) {
-						if(perl.match("/(\\d+)/", strPages)) {
-							ht.put(Keys.RIS_SP,new XMLWrapper(Keys.RIS_SP ,perl.group(0).toString()));
-							if(perl.match("/(\\d+)/", perl.postMatch())) {
-								ht.put(Keys.RIS_EP,new XMLWrapper(Keys.RIS_EP ,perl.group(0).toString()));
-							}
-						}
-					} else {
-						ht.put(Keys.RIS_SP,new XMLWrapper(Keys.RIS_SP ,strPages));
-					}
-				}
+          // Strip out and store the start page and end page
+          if(perl.match("/(\\d+)[^\\d](\\d+)/", strPages)) {
+            if(perl.match("/(\\d+)/", strPages)) {
+              ht.put(Keys.RIS_SP,new XMLWrapper(Keys.RIS_SP ,perl.group(0).toString()));
+              if(perl.match("/(\\d+)/", perl.postMatch())) {
+                ht.put(Keys.RIS_EP,new XMLWrapper(Keys.RIS_EP ,perl.group(0).toString()));
+              }
+            }
+          } else {
+            ht.put(Keys.RIS_SP,new XMLWrapper(Keys.RIS_SP ,strPages));
+          }
+        }
 
                 if (rset.getString("ISN") != null) {
-					ht.put(Keys.RIS_SN,new ISSN(rset.getString("ISN")));
+          ht.put(Keys.RIS_SN,new ISSN(rset.getString("ISN")));
                 }
                 if (rset.getString("EBT") != null) {
-	                ht.put(Keys.RIS_CVS ,new XMLMultiWrapper(Keys.RIS_CVS,setElementData(rset.getString("EBT"))));
+                  ht.put(Keys.RIS_CVS ,new XMLMultiWrapper(Keys.RIS_CVS,setElementData(rset.getString("EBT"))));
                 }
 
                 if (rset.getClob("ABS") != null) {
-					String abs = null;
-					abs = checkAbstract(StringUtil.getStringFromClob(rset.getClob("ABS")));
-					if(!((abs).equals("")) && abs != null )
-					{
-						ht.put(Keys.RIS_N2,new XMLWrapper(Keys.RIS_N2,abs));
-					}
-				}
+          String abs = null;
+          abs = checkAbstract(StringUtil.getStringFromClob(rset.getClob("ABS")));
+          if(!((abs).equals("")) && abs != null )
+          {
+            ht.put(Keys.RIS_N2,new XMLWrapper(Keys.RIS_N2,abs));
+          }
+        }
                 String docType = "";
 
                 if (rset.getString("DOC") != null) {
@@ -373,30 +203,30 @@ public class CBNBDocBuilder implements DocumentBuilder {
 
                     if (docType.equalsIgnoreCase("Journal"))
                         docType = "JOUR";
-               			 ht.put(Keys.RIS_TY, new XMLWrapper(Keys.RIS_TY, StringUtil.replaceNullWithEmptyString(docType)));
+                     ht.put(Keys.RIS_TY, new XMLWrapper(Keys.RIS_TY, StringUtil.replaceNullWithEmptyString(docType)));
                 }
                 /* jam - 2/7/06 - OLD code replaced by new JO/ST logic above
                 if (docType != null && docType.equals("JOUR")) {
                     if (rset.getString("FJL") != null) {
-                    	ht.put(Keys.RIS_JO,new XMLWrapper(Keys.RIS_JO ,StringUtil.replaceNullWithEmptyString(rset.getString("FJL"))));
+                      ht.put(Keys.RIS_JO,new XMLWrapper(Keys.RIS_JO ,StringUtil.replaceNullWithEmptyString(rset.getString("FJL"))));
                     }
                 }
                 else {
                     if (rset.getString("FJL") != null) {
-						ht.put(Keys.RIS_T3,new XMLWrapper(Keys.RIS_T3,StringUtil.replaceNullWithEmptyString(rset.getString("FJL"))));
+            ht.put(Keys.RIS_T3,new XMLWrapper(Keys.RIS_T3,StringUtil.replaceNullWithEmptyString(rset.getString("FJL"))));
                     }
                 } */
-				// jam - 2/7/06 - miami bug fix - empty doctypes end up putting ST in T3 field
-				// and RIS readers cannot find it there.
-				// New Logic: ALWAYS put FJL in JO
-				if (rset.getString("FJL") != null) {
-					ht.put(Keys.RIS_JO,new XMLWrapper(Keys.RIS_JO ,StringUtil.replaceNullWithEmptyString(rset.getString("FJL"))));
-				}
+                // jam - 2/7/06 - miami bug fix - empty doctypes end up putting ST in T3 field
+                // and RIS readers cannot find it there.
+                // New Logic: ALWAYS put FJL in JO
+                if (rset.getString("FJL") != null) {
+                  ht.put(Keys.RIS_JO,new XMLWrapper(Keys.RIS_JO ,StringUtil.replaceNullWithEmptyString(rset.getString("FJL"))));
+                }
 
                 EIDoc eiDoc = new EIDoc(did, ht,RIS.RIS_FORMAT);
-			    eiDoc.exportLabels(false);
-			    eiDoc.setOutputKeys(RIS_KEYS);
-			    list.add(eiDoc);
+                eiDoc.exportLabels(false);
+                eiDoc.setOutputKeys(RIS_KEYS);
+                list.add(eiDoc);
                 count++;
             }
         }
@@ -459,25 +289,25 @@ public class CBNBDocBuilder implements DocumentBuilder {
                 ht.put(Keys.PROVIDER,
                        new XMLWrapper(Keys.PROVIDER, PROVIDER_TEXT));
 
-				ht.put(Keys.COPYRIGHT,new XMLWrapper(Keys.COPYRIGHT, CBNBDocBuilder.CBNB_HTML_COPYRIGHT));
-				ht.put(Keys.COPYRIGHT_TEXT, new XMLWrapper(Keys.COPYRIGHT_TEXT, CBNBDocBuilder.CBNB_TEXT_COPYRIGHT));
+                ht.put(Keys.COPYRIGHT,new XMLWrapper(Keys.COPYRIGHT, CBNBDocBuilder.CBNB_HTML_COPYRIGHT));
+                ht.put(Keys.COPYRIGHT_TEXT, new XMLWrapper(Keys.COPYRIGHT_TEXT, CBNBDocBuilder.CBNB_TEXT_COPYRIGHT));
 
                 if (rset.getString("FJL") != null) {
-					ht.put(Keys.SERIAL_TITLE, new XMLWrapper(Keys.SERIAL_TITLE, rset.getString("FJL")));
+                  ht.put(Keys.SERIAL_TITLE, new XMLWrapper(Keys.SERIAL_TITLE, rset.getString("FJL")));
                 }
 
                 if (rset.getString("PBR") != null) {
-                       ht.put(Keys.PUBLISHER, new XMLWrapper(Keys.PUBLISHER,StringUtil.replaceNullWithEmptyString(rset.getString("PBR"))));
+                  ht.put(Keys.PUBLISHER, new XMLWrapper(Keys.PUBLISHER,StringUtil.replaceNullWithEmptyString(rset.getString("PBR"))));
                 }
 
                 if (rset.getString("PBD") != null) {
-                    ht.put(Keys.PUBLICATION_YEAR, new Year(rset.getString("PBD"), perl));
+                  ht.put(Keys.PUBLICATION_YEAR, new Year(rset.getString("PBD"), perl));
                 }
 
                 String strTitle = StringUtil.EMPTY_STRING;
                 if ((rset.getString("ATL") != null) && (rset.getString("OTL") != null)) {
-                    strTitle = StringUtil.replaceNullWithEmptyString(rset.getString("ATL"));
-                    strTitle = strTitle.concat(" (").concat(StringUtil.replaceNullWithEmptyString(rset.getString("OTL"))).concat(" )");
+                  strTitle = StringUtil.replaceNullWithEmptyString(rset.getString("ATL"));
+                  strTitle = strTitle.concat(" (").concat(StringUtil.replaceNullWithEmptyString(rset.getString("OTL"))).concat(" )");
                 }
                 else if (rset.getString("ATL") != null) {
                     strTitle = StringUtil.replaceNullWithEmptyString(rset.getString("ATL")).concat(strTitle);
@@ -508,16 +338,16 @@ public class CBNBDocBuilder implements DocumentBuilder {
                     }
                     if(strVolIss != null && !strVolIss.equals(StringUtil.EMPTY_STRING))
                     {
-	                    ht.put(Keys.VOLISSUE, new XMLWrapper(Keys.VOLISSUE ,strVolIss));
-					}
+                      ht.put(Keys.VOLISSUE, new XMLWrapper(Keys.VOLISSUE ,strVolIss));
+                    }
 
-					ht.put(Keys.SOURCE, new XMLWrapper(Keys.SOURCE, StringUtil.replaceNullWithEmptyString(rset.getString("FJL"))));
+                    ht.put(Keys.SOURCE, new XMLWrapper(Keys.SOURCE, StringUtil.replaceNullWithEmptyString(rset.getString("FJL"))));
 
                     if (rset.getString("PBD") != null) {
-                    	ht.put(Keys.ISSUE_DATE,new XMLWrapper(Keys.ISSUE_DATE , StringUtil.replaceNullWithEmptyString(rset.getString("PBD"))));
+                      ht.put(Keys.ISSUE_DATE,new XMLWrapper(Keys.ISSUE_DATE , StringUtil.replaceNullWithEmptyString(rset.getString("PBD"))));
                     }
                     if (rset.getString("PAG") != null) {
-	                    ht.put(Keys.p_PAGE_RANGE,new XMLWrapper(Keys.p_PAGE_RANGE , StringUtil.replaceNullWithEmptyString(rset.getString("PAG"))));
+                      ht.put(Keys.p_PAGE_RANGE,new XMLWrapper(Keys.p_PAGE_RANGE , StringUtil.replaceNullWithEmptyString(rset.getString("PAG"))));
                     }
 
                 }
@@ -530,18 +360,19 @@ public class CBNBDocBuilder implements DocumentBuilder {
                 }
 
                 //AVL
-                if (rset.getString("AVL") != null) {
-                    ht.put(Keys.AVAILABILITY,new XMLWrapper(Keys.AVAILABILITY, rset.getString("AVL")));
+                String availability = getAvailability(rset.getString("PBR"), rset.getString("PAD"), rset.getString("AVL"));
+                if(availability != null) {
+                  ht.put(Keys.AVAILABILITY,new XMLWrapper(Keys.AVAILABILITY, availability));
                 }
 
                 //IBN
                 if (rset.getString("IBN") != null) {
-                	ht.put(Keys.ISBN, new ISBN(StringUtil.replaceNullWithEmptyString(rset.getString("IBN"))));
+                  ht.put(Keys.ISBN, new ISBN(StringUtil.replaceNullWithEmptyString(rset.getString("IBN"))));
                 }
 
                 //ISN
                 if (rset.getString("ISN") != null) {
-                	ht.put(Keys.ISSN,new ISSN(StringUtil.replaceNullWithEmptyString(rset.getString("ISN"))));
+                  ht.put(Keys.ISSN,new ISSN(StringUtil.replaceNullWithEmptyString(rset.getString("ISN"))));
                 }
 
                 if ((rset.getString("LAN") != null) && (!rset.getString("LAN").equalsIgnoreCase("ENGLISH"))) {
@@ -549,15 +380,15 @@ public class CBNBDocBuilder implements DocumentBuilder {
                 }
 
                 if (rset.getString("CDN") != null) {
-                	ht.put(Keys.CODEN,new XMLWrapper(Keys.CODEN,StringUtil.replaceNullWithEmptyString(rset.getString("CDN"))));
+                  ht.put(Keys.CODEN,new XMLWrapper(Keys.CODEN,StringUtil.replaceNullWithEmptyString(rset.getString("CDN"))));
                 }
 
                 if (rset.getString("DOC") != null) {
-	                ht.put(Keys.DOC_TYPE,new XMLWrapper(Keys.DOC_TYPE,StringUtil.replaceNullWithEmptyString(rset.getString("DOC"))));
+                  ht.put(Keys.DOC_TYPE,new XMLWrapper(Keys.DOC_TYPE,StringUtil.replaceNullWithEmptyString(rset.getString("DOC"))));
                 }
 
                 if (rset.getString("SCO") != null) {
-					ht.put(Keys.SCOPE,new XMLWrapper(Keys.SCOPE,StringUtil.replaceNullWithEmptyString(rset.getString("SCO"))));
+                  ht.put(Keys.SCOPE,new XMLWrapper(Keys.SCOPE,StringUtil.replaceNullWithEmptyString(rset.getString("SCO"))));
                 }
                 //AB
                 if (rset.getClob("ABS") != null) {
@@ -569,26 +400,26 @@ public class CBNBDocBuilder implements DocumentBuilder {
                 }
 
                 if (rset.getString("REG") != null) {
-					ht.put(Keys.CAS_REGISTRY_CODES , new XMLMultiWrapper(Keys.CAS_REGISTRY_CODES,setElementData(rset.getString("REG"))));
+                  ht.put(Keys.CAS_REGISTRY_CODES , new XMLMultiWrapper(Keys.CAS_REGISTRY_CODES,setElementData(rset.getString("REG"))));
                 }
 
                 if (rset.getString("EBT") != null) {
-               		ht.put(Keys.CONTROLLED_TERMS,new XMLMultiWrapper2(CBNB_CONTROLLED_TERMS,setCVS(rset.getString("EBT"))));
+                  ht.put(CBNB_CONTROLLED_TERMS,new XMLMultiWrapper2(CBNB_CONTROLLED_TERMS,setCVS(rset.getString("EBT"))));
                 }
 
                 if (rset.getString("SCT") != null) {
-	                ht.put(Keys.COUNTRY, new XMLWrapper(CBNB_COUNTRY, StringUtil.replaceNullWithEmptyString(rset.getString("SCT"))));
+                  ht.put(Keys.COUNTRY, new XMLWrapper(CBNB_COUNTRY, StringUtil.replaceNullWithEmptyString(rset.getString("SCT"))));
                 }
 
                 if (rset.getString("CIN") != null) {
-					ht.put(Keys.CHEMICALS,new XMLMultiWrapper(Keys.CHEMICALS,setElementData(rset.getString("CIN"))));
+                  ht.put(Keys.CHEMICALS,new XMLMultiWrapper(Keys.CHEMICALS,setElementData(rset.getString("CIN"))));
                 }
 
                 EIDoc eiDoc = new EIDoc(did,ht, Abstract.ABSTRACT_FORMAT);
-               // eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
-				eiDoc.exportLabels(false);
-				eiDoc.setOutputKeys(ABSTRACT_KEYS);
-				list.add(eiDoc);
+                // eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
+                eiDoc.exportLabels(true);
+                eiDoc.setOutputKeys(ABSTRACT_KEYS);
+                list.add(eiDoc);
                 count++;
             }
 
@@ -636,7 +467,7 @@ public class CBNBDocBuilder implements DocumentBuilder {
         *   @return EIDocumentList
         *   @exception Exception
         */
-   private List loadDetailed(List listOfDocIDs) throws Exception {
+      private List loadDetailed(List listOfDocIDs) throws Exception {
         Hashtable oidTable = getDocIDTable(listOfDocIDs);
 
         List list = new ArrayList();
@@ -662,91 +493,86 @@ public class CBNBDocBuilder implements DocumentBuilder {
          //       ht.put(EIDoc.DATABASE_ID, did.getDatabase().getID());
          //       ht.put("DM", Integer.toString(did.getDatabase().getMask()));
          //       ht.put(EIDoc.DATABASE, "Chemical Business NewsBase");
-                ht.put(Keys.PROVIDER,
-                       new XMLWrapper(Keys.PROVIDER, PROVIDER_TEXT));
+                ht.put(Keys.PROVIDER, new XMLWrapper(Keys.PROVIDER, PROVIDER_TEXT));
 
-				ht.put(Keys.COPYRIGHT,new XMLWrapper(Keys.COPYRIGHT, CBNBDocBuilder.CBNB_HTML_COPYRIGHT));
-				ht.put(Keys.COPYRIGHT_TEXT, new XMLWrapper(Keys.COPYRIGHT_TEXT, CBNBDocBuilder.CBNB_TEXT_COPYRIGHT));
+                ht.put(Keys.COPYRIGHT,new XMLWrapper(Keys.COPYRIGHT, CBNBDocBuilder.CBNB_HTML_COPYRIGHT));
+                ht.put(Keys.COPYRIGHT_TEXT, new XMLWrapper(Keys.COPYRIGHT_TEXT, CBNBDocBuilder.CBNB_TEXT_COPYRIGHT));
 
                 // TS 02/10/03  the following elements added to ht for xml document mapping
                 if (rset.getString("FJL") != null) {
-					ht.put(Keys.SERIAL_TITLE, new XMLWrapper(Keys.SERIAL_TITLE, rset.getString("FJL")));
+                  ht.put(Keys.SERIAL_TITLE, new XMLWrapper(Keys.SERIAL_TITLE, rset.getString("FJL")));
                 }
 
                 if (rset.getString("PBR") != null) {
-                       ht.put(Keys.PUBLISHER, new XMLWrapper(Keys.PUBLISHER,StringUtil.replaceNullWithEmptyString(rset.getString("PBR"))));
+                  ht.put(Keys.PUBLISHER, new XMLWrapper(Keys.PUBLISHER,StringUtil.replaceNullWithEmptyString(rset.getString("PBR"))));
                 }
 
                 if (rset.getString("PBD") != null) {
-                    ht.put(Keys.PUBLICATION_YEAR, new Year(rset.getString("PBD"), perl));
+                  ht.put(Keys.PUBLICATION_YEAR, new Year(rset.getString("PBD"), perl));
                 }
-
 
                 // AN
                 if (rset.getString("ABN") != null) {
-                	ht.put(Keys.ACCESSION_NUMBER, new XMLWrapper(Keys.ACCESSION_NUMBER, rset.getString("ABN")));
+                  ht.put(Keys.ACCESSION_NUMBER, new XMLWrapper(Keys.ACCESSION_NUMBER, rset.getString("ABN")));
                 }
 
                 String strTitle = StringUtil.EMPTY_STRING;
 
                 if (rset.getString("ATL") != null) {
-                	ht.put(Keys.TITLE, new XMLWrapper(Keys.TITLE, StringUtil.replaceNullWithEmptyString(rset.getString("ATL"))));
+                  ht.put(Keys.TITLE, new XMLWrapper(Keys.TITLE, StringUtil.replaceNullWithEmptyString(rset.getString("ATL"))));
                 }
                 if (rset.getString("OTL") != null) {
-                        ht.put(Keys.TITLE_TRANSLATION,
-                        	   new XMLWrapper(Keys.TITLE_TRANSLATION,StringUtil.replaceNullWithEmptyString(rset.getString("OTL"))));
+                  ht.put(Keys.TITLE_TRANSLATION, new XMLWrapper(Keys.TITLE_TRANSLATION,StringUtil.replaceNullWithEmptyString(rset.getString("OTL"))));
                 }
 
                 if (rset.getString("VOL") != null) {
-
-                    String strVol = replaceVolumeNullWithEmptyString(rset.getString("VOL"));
-					ht.put(Keys.VOLUME, new Volume(Keys.VOLUME, strVol, perl));
+                  String strVol = replaceVolumeNullWithEmptyString(rset.getString("VOL"));
+                  ht.put(Keys.VOLUME, new Volume(Keys.VOLUME, strVol, perl));
                 }
 
                 if (rset.getString("ISS") != null) {
-
-                    String strIss = replaceIssueNullWithEmptyString(rset.getString("ISS"));
-					ht.put(Keys.ISSUE,new Issue(strIss , perl));
+                  String strIss = replaceIssueNullWithEmptyString(rset.getString("ISS"));
+                  ht.put(Keys.ISSUE,new Issue(strIss , perl));
                 }
 
                 if (rset.getString("PBD") != null && !(rset.getString("PBD").equals(StringUtil.EMPTY_STRING))) {
-               		 ht.put(Keys.PUBLICATION_DATE, new XMLWrapper(Keys.PUBLICATION_DATE,rset.getString("PBD")));
+                  ht.put(Keys.PUBLICATION_DATE, new XMLWrapper(Keys.PUBLICATION_DATE,rset.getString("PBD")));
                 }
 
                 String strPg = StringUtil.EMPTY_STRING;
                 if (rset.getString("PAG") != null) {
-                    strPg = strPg.concat("p ").concat(StringUtil.replaceNullWithEmptyString(rset.getString("PAG")));
-                    ht.put(Keys.PAGE_RANGE, new PageRange(strPg, perl));
+                  strPg = strPg.concat("p ").concat(StringUtil.replaceNullWithEmptyString(rset.getString("PAG")));
+                  ht.put(Keys.PAGE_RANGE, new PageRange(strPg, perl));
                 }
 
                 //AVL
-                if (rset.getString("AVL") != null) {
-                    ht.put(Keys.AVAILABILITY,new XMLWrapper(Keys.AVAILABILITY, rset.getString("AVL")));
+                String availability = getAvailability(rset.getString("PBR"), rset.getString("PAD"), rset.getString("AVL"));
+                if(availability != null) {
+                  ht.put(Keys.AVAILABILITY,new XMLWrapper(Keys.AVAILABILITY, availability));
                 }
+
                 //IBN
                 if (rset.getString("IBN") != null) {
-                    ht.put(Keys.ISBN,new XMLWrapper(Keys.ISBN, rset.getString("IBN")));
+                  ht.put(Keys.ISBN,new XMLWrapper(Keys.ISBN, rset.getString("IBN")));
                 }
                 //ISN
                 if (rset.getString("ISN") != null) {
-                	ht.put(Keys.ISSN,new ISSN(StringUtil.replaceNullWithEmptyString(rset.getString("ISN"))));
+                  ht.put(Keys.ISSN,new ISSN(StringUtil.replaceNullWithEmptyString(rset.getString("ISN"))));
                 }
 
                 if (rset.getString("LAN") != null) {
-					ht.put(Keys.LANGUAGE,new XMLWrapper(Keys.LANGUAGE, rset.getString("LAN")));
+                  ht.put(Keys.LANGUAGE,new XMLWrapper(Keys.LANGUAGE, rset.getString("LAN")));
                 }
 
                 if (rset.getString("CDN") != null) {
-					ht.put(Keys.CODEN,new XMLWrapper(Keys.CODEN,StringUtil.replaceNullWithEmptyString(rset.getString("CDN"))));
+                  ht.put(Keys.CODEN,new XMLWrapper(Keys.CODEN,StringUtil.replaceNullWithEmptyString(rset.getString("CDN"))));
                 }
                 if (rset.getString("DOC") != null) {
-                    ht.put(Keys.DOC_TYPE,new XMLWrapper(Keys.DOC_TYPE,StringUtil.replaceNullWithEmptyString(rset.getString("DOC"))));
-
+                  ht.put(Keys.DOC_TYPE,new XMLWrapper(Keys.DOC_TYPE,StringUtil.replaceNullWithEmptyString(rset.getString("DOC"))));
                 }
 
                 if (rset.getString("SCO") != null) {
-
-					ht.put(Keys.SCOPE,new XMLWrapper(Keys.SCOPE,StringUtil.replaceNullWithEmptyString(rset.getString("SCO"))));
+                  ht.put(Keys.SCOPE,new XMLWrapper(Keys.SCOPE,StringUtil.replaceNullWithEmptyString(rset.getString("SCO"))));
                 }
 
                 //AB
@@ -759,31 +585,31 @@ public class CBNBDocBuilder implements DocumentBuilder {
                 }
 
                 if (rset.getString("REG") != null) {
-					ht.put(Keys.CAS_REGISTRY_CODES , new XMLMultiWrapper(Keys.CAS_REGISTRY_CODES,setElementData(rset.getString("REG"))));
+                  ht.put(Keys.CAS_REGISTRY_CODES , new XMLMultiWrapper(Keys.CAS_REGISTRY_CODES,setElementData(rset.getString("REG"))));
                 }
 
                 if (rset.getString("EBT") != null) {
-					ht.put(Keys.CONTROLLED_TERMS,new XMLMultiWrapper2(CBNB_CONTROLLED_TERMS,setCVS(rset.getString("EBT"))));
+                  ht.put(CBNB_CONTROLLED_TERMS,new XMLMultiWrapper2(CBNB_CONTROLLED_TERMS,setCVS(rset.getString("EBT"))));
                 }
 
              //   if (rset.getString("SCT") != null) {
-	         //       ht.put(Keys.COUNTRY, new XMLWrapper(CBNB_COUNTRY, StringUtil.replaceNullWithEmptyString(rset.getString("SCT"))));
+           //       ht.put(Keys.COUNTRY, new XMLWrapper(CBNB_COUNTRY, StringUtil.replaceNullWithEmptyString(rset.getString("SCT"))));
              //   }
 
                 if (rset.getString("SCC") != null) {
-					ht.put(Keys.COUNTRY_CODES , new XMLWrapper(Keys.COUNTRY_CODES,StringUtil.replaceNullWithEmptyString(rset.getString("SCC"))));
+                  ht.put(Keys.COUNTRY_CODES , new XMLWrapper(Keys.COUNTRY_CODES,StringUtil.replaceNullWithEmptyString(rset.getString("SCC"))));
                 }
 
                 if (rset.getString("CIN") != null) {
-					ht.put(Keys.CHEMICALS,new XMLMultiWrapper(Keys.CHEMICALS,setElementData(rset.getString("CIN"))));
+                  ht.put(Keys.CHEMICALS,new XMLMultiWrapper(Keys.CHEMICALS,setElementData(rset.getString("CIN"))));
                 }
 
                 if (rset.getString("CYM") != null) {
-					ht.put(Keys.CHEMICAL_ACRONS,new XMLMultiWrapper(Keys.CHEMICAL_ACRONS,setElementData(rset.getString("CYM"))));
+                  ht.put(Keys.CHEMICAL_ACRONS,new XMLMultiWrapper(Keys.CHEMICAL_ACRONS,setElementData(rset.getString("CYM"))));
                 }
 
                 if (rset.getString("SIC") != null) {
-                   ht.put(Keys.SIC_CODES,new XMLMultiWrapper(Keys.SIC_CODES,setElementData(rset.getString("SIC"))));
+                  ht.put(Keys.SIC_CODES,new XMLMultiWrapper(Keys.SIC_CODES,setElementData(rset.getString("SIC"))));
                 }
 
                 if (rset.getString("GIC") != null) {
@@ -795,10 +621,10 @@ public class CBNBDocBuilder implements DocumentBuilder {
 
                 }
                 EIDoc eiDoc = new EIDoc(did, ht, Detail.FULLDOC_FORMAT);
-				eiDoc.exportLabels(true);
-				//eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
-				eiDoc.setOutputKeys(DETAILED_KEYS);
-				list.add(eiDoc);
+                eiDoc.exportLabels(true);
+                //eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
+                eiDoc.setOutputKeys(DETAILED_KEYS);
+                list.add(eiDoc);
                 count++;
             }
 
@@ -867,38 +693,38 @@ public class CBNBDocBuilder implements DocumentBuilder {
                 ElementDataMap ht = new ElementDataMap();
 
                 // Common Fields
-     			DocID did = (DocID) oidTable.get(rset.getString("M_ID"));
+                DocID did = (DocID) oidTable.get(rset.getString("M_ID"));
                 ht.put(Keys.DOCID, did);
 
                 ht.put(Keys.PROVIDER,
                        new XMLWrapper(Keys.PROVIDER, PROVIDER_TEXT));
 
-				ht.put(Keys.COPYRIGHT,new XMLWrapper(Keys.COPYRIGHT, CBNBDocBuilder.CBNB_HTML_COPYRIGHT));
-				ht.put(Keys.COPYRIGHT_TEXT, new XMLWrapper(Keys.COPYRIGHT_TEXT, CBNBDocBuilder.CBNB_TEXT_COPYRIGHT));
+                ht.put(Keys.COPYRIGHT,new XMLWrapper(Keys.COPYRIGHT, CBNBDocBuilder.CBNB_HTML_COPYRIGHT));
+                ht.put(Keys.COPYRIGHT_TEXT, new XMLWrapper(Keys.COPYRIGHT_TEXT, CBNBDocBuilder.CBNB_TEXT_COPYRIGHT));
 
 
                 if (rset.getString("FJL") != null) {
-					ht.put(Keys.SERIAL_TITLE, new XMLWrapper(Keys.SERIAL_TITLE, rset.getString("FJL")));
+                  ht.put(Keys.SERIAL_TITLE, new XMLWrapper(Keys.SERIAL_TITLE, rset.getString("FJL")));
                 }
 
                 if (rset.getString("PBR") != null) {
-                       ht.put(Keys.PUBLISHER, new XMLWrapper(Keys.PUBLISHER,StringUtil.replaceNullWithEmptyString(rset.getString("PBR"))));
+                  ht.put(Keys.PUBLISHER, new XMLWrapper(Keys.PUBLISHER,StringUtil.replaceNullWithEmptyString(rset.getString("PBR"))));
                 }
 
                 if (rset.getString("PBD") != null) {
-                    ht.put(Keys.PUBLICATION_YEAR, new Year(rset.getString("PBD"), perl));
+                  ht.put(Keys.PUBLICATION_YEAR, new Year(rset.getString("PBD"), perl));
                 }
 
                 String strTitle = StringUtil.EMPTY_STRING;
                 if ((rset.getString("ATL") != null) && (rset.getString("OTL") != null)) {
-                    strTitle = StringUtil.replaceNullWithEmptyString(rset.getString("ATL"));
-                    strTitle = strTitle.concat(" (").concat(StringUtil.replaceNullWithEmptyString(rset.getString("OTL"))).concat(" )");
+                  strTitle = StringUtil.replaceNullWithEmptyString(rset.getString("ATL"));
+                  strTitle = strTitle.concat(" (").concat(StringUtil.replaceNullWithEmptyString(rset.getString("OTL"))).concat(" )");
                 }
                 else if (rset.getString("ATL") != null) {
-                    strTitle = StringUtil.replaceNullWithEmptyString(rset.getString("ATL")).concat(strTitle);
+                  strTitle = StringUtil.replaceNullWithEmptyString(rset.getString("ATL")).concat(strTitle);
                 }
                 else if (rset.getString("OTL") != null) {
-                    strTitle = StringUtil.replaceNullWithEmptyString(rset.getString("OTL")).concat(strTitle);
+                  strTitle = StringUtil.replaceNullWithEmptyString(rset.getString("OTL")).concat(strTitle);
                 }
 
                 ht.put(Keys.TITLE, new XMLWrapper(Keys.TITLE, strTitle));
@@ -921,57 +747,60 @@ public class CBNBDocBuilder implements DocumentBuilder {
                         }
                     }
                     if(strVolIss != null && !strVolIss.equals(StringUtil.EMPTY_STRING)) {
-                    	ht.put(Keys.VOLISSUE, new XMLWrapper(Keys.VOLISSUE ,strVolIss));
-					}
-					ht.put(Keys.SOURCE, new XMLWrapper(Keys.SOURCE, StringUtil.replaceNullWithEmptyString(rset.getString("FJL"))));
+                      ht.put(Keys.VOLISSUE, new XMLWrapper(Keys.VOLISSUE ,strVolIss));
+                    }
+                    ht.put(Keys.SOURCE, new XMLWrapper(Keys.SOURCE, StringUtil.replaceNullWithEmptyString(rset.getString("FJL"))));
 
                     if (rset.getString("PBD") != null) {
-                    	ht.put(Keys.ISSUE_DATE,new XMLWrapper(Keys.ISSUE_DATE , StringUtil.replaceNullWithEmptyString(rset.getString("PBD"))));
+                      ht.put(Keys.ISSUE_DATE,new XMLWrapper(Keys.ISSUE_DATE , StringUtil.replaceNullWithEmptyString(rset.getString("PBD"))));
                     }
                     if (rset.getString("PAG") != null) {
-	                    ht.put(Keys.p_PAGE_RANGE,new XMLWrapper(Keys.p_PAGE_RANGE , StringUtil.replaceNullWithEmptyString(rset.getString("PAG"))));
+                      ht.put(Keys.p_PAGE_RANGE,new XMLWrapper(Keys.p_PAGE_RANGE , StringUtil.replaceNullWithEmptyString(rset.getString("PAG"))));
                     }
-
                 }
                 else {
-                    ht.put(Keys.NO_SO, new XMLWrapper(Keys.NO_SO, "NO_SO"));
+                  ht.put(Keys.NO_SO, new XMLWrapper(Keys.NO_SO, "NO_SO"));
                 }
 
                 if (rset.getString("FJL") == null && rset.getString("PBD") != null) {
-                    ht.put(Keys.PUBLICATION_DATE, new XMLWrapper(Keys.PUBLICATION_DATE,rset.getString("PBD")));
+                  ht.put(Keys.PUBLICATION_DATE, new XMLWrapper(Keys.PUBLICATION_DATE,rset.getString("PBD")));
                 }
 
                 //AVL
-                if (rset.getString("AVL") != null) {
+                if (rset.getString("PBR") != null) {
+                  ht.put(Keys.AVAILABILITY,new XMLWrapper(Keys.AVAILABILITY, rset.getString("PBR")));
+                }
+                else {
+                  if (rset.getString("AVL") != null) {
                     ht.put(Keys.AVAILABILITY,new XMLWrapper(Keys.AVAILABILITY, rset.getString("AVL")));
+                  }
                 }
 
                 //IBN
                 if (rset.getString("IBN") != null) {
-                	ht.put(Keys.ISBN, new ISBN(StringUtil.replaceNullWithEmptyString(rset.getString("IBN"))));
+                  ht.put(Keys.ISBN, new ISBN(StringUtil.replaceNullWithEmptyString(rset.getString("IBN"))));
                 }
 
                 //ISN
                 if (rset.getString("ISN") != null) {
-                	ht.put(Keys.ISSN,new ISSN(StringUtil.replaceNullWithEmptyString(rset.getString("ISN"))));
+                  ht.put(Keys.ISSN,new ISSN(StringUtil.replaceNullWithEmptyString(rset.getString("ISN"))));
                 }
 
                 if ((rset.getString("LAN") != null) && (!rset.getString("LAN").equalsIgnoreCase("ENGLISH"))) {
-                    ht.put(Keys.LANGUAGE, new XMLWrapper(Keys.LANGUAGE , StringUtil.replaceNullWithEmptyString(rset.getString("LAN"))));
+                  ht.put(Keys.LANGUAGE, new XMLWrapper(Keys.LANGUAGE , StringUtil.replaceNullWithEmptyString(rset.getString("LAN"))));
                 }
 
                 if (rset.getString("CDN") != null) {
-					ht.put(Keys.CODEN,new XMLWrapper(Keys.CODEN,StringUtil.replaceNullWithEmptyString(rset.getString("CDN"))));
+                  ht.put(Keys.CODEN,new XMLWrapper(Keys.CODEN,StringUtil.replaceNullWithEmptyString(rset.getString("CDN"))));
                 }
 
                 EIDoc eiDoc = new EIDoc(did, ht, Citation.CITATION_FORMAT);
-				eiDoc.exportLabels(false);
-				eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
-				eiDoc.setOutputKeys(CITATION_KEYS);
-				list.add(eiDoc);
+                eiDoc.exportLabels(false);
+                eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
+                eiDoc.setOutputKeys(CITATION_KEYS);
+                list.add(eiDoc);
                 count++;
             }
-
         }
         finally {
             if (rset != null) {
@@ -1018,72 +847,70 @@ public class CBNBDocBuilder implements DocumentBuilder {
     *   @return EIDocumentList
     *   @exception Exception
     */
-	private List loadXMLCitations(List  listOfDocIDs)
-		throws Exception
-	{
-		Hashtable oidTable = getDocIDTable(listOfDocIDs);
-		Perl5Util perl = new Perl5Util();
-		List list=new ArrayList();
-		int count=0;
-		Connection con=null;
-		Statement stmt=null;
-		ResultSet rset=null;
-		ConnectionBroker broker=null;
-		String INString=buildINString(listOfDocIDs);
-		try
-		{
-			broker=ConnectionBroker.getInstance();
-			con=broker.getConnection(DatabaseConfig.SEARCH_POOL);
-			stmt = con.createStatement();
-			rset=stmt.executeQuery(queryXMLCitation+INString);
+  private List loadXMLCitations(List  listOfDocIDs)
+    throws Exception
+  {
+    Hashtable oidTable = getDocIDTable(listOfDocIDs);
+    Perl5Util perl = new Perl5Util();
+    List list=new ArrayList();
+    int count=0;
+    Connection con=null;
+    Statement stmt=null;
+    ResultSet rset=null;
+    ConnectionBroker broker=null;
+    String INString=buildINString(listOfDocIDs);
+    try
+    {
+      broker=ConnectionBroker.getInstance();
+      con=broker.getConnection(DatabaseConfig.SEARCH_POOL);
+      stmt = con.createStatement();
+      rset=stmt.executeQuery(queryXMLCitation+INString);
 
             while (rset.next()) {
                 ElementDataMap ht = new ElementDataMap();
 
                 // Common Fields
-     			DocID did = (DocID) oidTable.get(rset.getString("M_ID"));
+                DocID did = (DocID) oidTable.get(rset.getString("M_ID"));
                 ht.put(Keys.DOCID, did);
 
-                ht.put(Keys.PROVIDER,
-                       new XMLWrapper(Keys.PROVIDER, PROVIDER_TEXT));
+                ht.put(Keys.PROVIDER, new XMLWrapper(Keys.PROVIDER, PROVIDER_TEXT));
 
-				ht.put(Keys.COPYRIGHT,new XMLWrapper(Keys.COPYRIGHT, CBNBDocBuilder.CBNB_HTML_COPYRIGHT));
-				ht.put(Keys.COPYRIGHT_TEXT, new XMLWrapper(Keys.COPYRIGHT_TEXT, CBNBDocBuilder.CBNB_TEXT_COPYRIGHT));
+                ht.put(Keys.COPYRIGHT,new XMLWrapper(Keys.COPYRIGHT, CBNBDocBuilder.CBNB_HTML_COPYRIGHT));
+                ht.put(Keys.COPYRIGHT_TEXT, new XMLWrapper(Keys.COPYRIGHT_TEXT, CBNBDocBuilder.CBNB_TEXT_COPYRIGHT));
 
 
                 if (rset.getString("FJL") != null) {
-					ht.put(Keys.SERIAL_TITLE, new XMLWrapper(Keys.SERIAL_TITLE, rset.getString("FJL")));
+                  ht.put(Keys.SERIAL_TITLE, new XMLWrapper(Keys.SERIAL_TITLE, rset.getString("FJL")));
                 }
 
                 if (rset.getString("PBR") != null) {
-                       ht.put(Keys.PUBLISHER, new XMLWrapper(Keys.PUBLISHER,StringUtil.replaceNullWithEmptyString(rset.getString("PBR"))));
+                   ht.put(Keys.PUBLISHER, new XMLWrapper(Keys.PUBLISHER,StringUtil.replaceNullWithEmptyString(rset.getString("PBR"))));
                 }
 
                 if (rset.getString("PBD") != null) {
-                    ht.put(Keys.PUBLICATION_YEAR, new Year(rset.getString("PBD"), perl));
+                  ht.put(Keys.PUBLICATION_YEAR, new Year(rset.getString("PBD"), perl));
                 }
 
                 String strTitle = StringUtil.EMPTY_STRING;
                 if ((rset.getString("ATL") != null) && (rset.getString("OTL") != null)) {
-                    strTitle = StringUtil.replaceNullWithEmptyString(rset.getString("ATL"));
-                    strTitle = strTitle.concat(" (").concat(StringUtil.replaceNullWithEmptyString(rset.getString("OTL"))).concat(" )");
+                  strTitle = StringUtil.replaceNullWithEmptyString(rset.getString("ATL"));
+                  strTitle = strTitle.concat(" (").concat(StringUtil.replaceNullWithEmptyString(rset.getString("OTL"))).concat(" )");
                 }
                 else if (rset.getString("ATL") != null) {
-                    strTitle = StringUtil.replaceNullWithEmptyString(rset.getString("ATL")).concat(strTitle);
+                  strTitle = StringUtil.replaceNullWithEmptyString(rset.getString("ATL")).concat(strTitle);
                 }
                 else if (rset.getString("OTL") != null) {
-                    strTitle = StringUtil.replaceNullWithEmptyString(rset.getString("OTL")).concat(strTitle);
+                  strTitle = StringUtil.replaceNullWithEmptyString(rset.getString("OTL")).concat(strTitle);
                 }
 
                 ht.put(Keys.TITLE, new XMLWrapper(Keys.TITLE, strTitle));
 
                 // AN
                 if (rset.getString("ABN") != null) {
-                	ht.put(Keys.ACCESSION_NUMBER, new XMLWrapper(Keys.ACCESSION_NUMBER, rset.getString("ABN")));
+                  ht.put(Keys.ACCESSION_NUMBER, new XMLWrapper(Keys.ACCESSION_NUMBER, rset.getString("ABN")));
                 }
 
-
-				strTitle = null;
+                strTitle = null;
                 if (rset.getString("FJL") != null) {
                     String strVolIss = StringUtil.EMPTY_STRING;
                     // VO
@@ -1101,15 +928,15 @@ public class CBNBDocBuilder implements DocumentBuilder {
                         }
                     }
                     if(strVolIss != null && !strVolIss.equals(StringUtil.EMPTY_STRING)) {
-	                    ht.put(Keys.VOLISSUE, new XMLWrapper(Keys.VOLISSUE ,strVolIss));
-					}
-					ht.put(Keys.SOURCE, new XMLWrapper(Keys.SOURCE, StringUtil.replaceNullWithEmptyString(rset.getString("FJL"))));
+                      ht.put(Keys.VOLISSUE, new XMLWrapper(Keys.VOLISSUE ,strVolIss));
+                    }
+                    ht.put(Keys.SOURCE, new XMLWrapper(Keys.SOURCE, StringUtil.replaceNullWithEmptyString(rset.getString("FJL"))));
 
                     if (rset.getString("PBD") != null) {
-                    	ht.put(Keys.ISSUE_DATE,new XMLWrapper(Keys.ISSUE_DATE , StringUtil.replaceNullWithEmptyString(rset.getString("PBD"))));
+                      ht.put(Keys.ISSUE_DATE,new XMLWrapper(Keys.ISSUE_DATE , StringUtil.replaceNullWithEmptyString(rset.getString("PBD"))));
                     }
                     if (rset.getString("PAG") != null) {
-	                    ht.put(Keys.p_PAGE_RANGE,new XMLWrapper(Keys.p_PAGE_RANGE , StringUtil.replaceNullWithEmptyString(rset.getString("PAG"))));
+                      ht.put(Keys.p_PAGE_RANGE,new XMLWrapper(Keys.p_PAGE_RANGE , StringUtil.replaceNullWithEmptyString(rset.getString("PAG"))));
                     }
 
                 }
@@ -1128,7 +955,7 @@ public class CBNBDocBuilder implements DocumentBuilder {
                 }
 
                 if (rset.getString("EBT") != null) {
-					ht.put(Keys.CONTROLLED_TERMS,new XMLMultiWrapper2(CBNB_CONTROLLED_TERMS,setCVS(rset.getString("EBT"))));
+                  ht.put(CBNB_CONTROLLED_TERMS,new XMLMultiWrapper2(CBNB_CONTROLLED_TERMS,setCVS(rset.getString("EBT"))));
                 }
 
                 //AVL
@@ -1138,30 +965,29 @@ public class CBNBDocBuilder implements DocumentBuilder {
 
                 //IBN
                 if (rset.getString("IBN") != null) {
-                	ht.put(Keys.ISBN, new ISBN(StringUtil.replaceNullWithEmptyString(rset.getString("IBN"))));
+                  ht.put(Keys.ISBN, new ISBN(StringUtil.replaceNullWithEmptyString(rset.getString("IBN"))));
                 }
 
                 //ISN
                 if (rset.getString("ISN") != null) {
-                	ht.put(Keys.ISSN,new ISSN(StringUtil.replaceNullWithEmptyString(rset.getString("ISN"))));
+                  ht.put(Keys.ISSN,new ISSN(StringUtil.replaceNullWithEmptyString(rset.getString("ISN"))));
                 }
 
                 if ((rset.getString("LAN") != null) && (!rset.getString("LAN").equalsIgnoreCase("ENGLISH"))) {
-                    ht.put(Keys.LANGUAGE, new XMLWrapper(Keys.LANGUAGE , StringUtil.replaceNullWithEmptyString(rset.getString("LAN"))));
+                  ht.put(Keys.LANGUAGE, new XMLWrapper(Keys.LANGUAGE , StringUtil.replaceNullWithEmptyString(rset.getString("LAN"))));
                 }
 
                 if (rset.getString("CDN") != null) {
-					ht.put(Keys.CODEN,new XMLWrapper(Keys.CODEN,StringUtil.replaceNullWithEmptyString(rset.getString("CDN"))));
+                  ht.put(Keys.CODEN,new XMLWrapper(Keys.CODEN,StringUtil.replaceNullWithEmptyString(rset.getString("CDN"))));
                 }
 
-				EIDoc eiDoc = new EIDoc(did, ht, Citation.XMLCITATION_FORMAT);
-				eiDoc.exportLabels(false);
-				eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
-				eiDoc.setOutputKeys(XML_KEYS);
-				list.add(eiDoc);
-				count++;
+                EIDoc eiDoc = new EIDoc(did, ht, Citation.XMLCITATION_FORMAT);
+                eiDoc.exportLabels(false);
+                eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
+                eiDoc.setOutputKeys(XML_KEYS);
+                list.add(eiDoc);
+                count++;
             }
-
         }
         finally {
             if (rset != null) {
@@ -1262,28 +1088,6 @@ public class CBNBDocBuilder implements DocumentBuilder {
         return s;
     }
 
-    /*  private String  replaceDTNullWithEmptyString(String str)
-        {
-            if(str==null || str.equals("QQ"))
-            {
-                str=StringUtil.EMPTY_STRING;
-            }
-
-            if( !str.equals(StringUtil.EMPTY_STRING))
-            {
-                if (str.equals("JA")){str = "Journal article (JA)";}
-                else if (str.equals("CA")){str = "Conference article (CA)";}
-                else if (str.equals("CP")){str = "Conference proceeding (CP)";}
-                else if (str.equals("MC")){str = "Monograph chapter (MC)";}
-                else if (str.equals("MR")){str = "Monograph review (MR)";}
-                else if (str.equals("RC")){str = "Report chapter (RC)";}
-                else if (str.equals("RR")){str = "Report review (RR)";}
-                else if (str.equals("DS")){str = "Dissertation (DS)";}
-                else if (str.equals("UP")){str = "Unpublished paper (UP)";}
-            }
-            return str;
-        } */
-
     private Hashtable getDocIDTable(List listOfDocIDs) {
         Hashtable h = new Hashtable();
 
@@ -1295,62 +1099,62 @@ public class CBNBDocBuilder implements DocumentBuilder {
         return h;
     }
 
-	private KeyValuePair[] setCVS(String cvs)
-	{
-		ArrayList list = new ArrayList();
+  private KeyValuePair[] setCVS(String cvs)
+  {
+    ArrayList list = new ArrayList();
 
 
-		AuthorStream aStream = null;
-		String strToken = null;
-		try
-		{
-			if (cvs != null)
-			{
-				aStream = new AuthorStream(new ByteArrayInputStream(cvs.getBytes()));
-				strToken = null;
-				while((strToken = aStream.readAuthor()) != null)
-				{
-					KeyValuePair k = new KeyValuePair(Keys.CONTROLLED_TERM, strToken);
-					list.add(k);
-				}
-			 }
-		}
-		catch (IOException ioe)
-		{
-			ioe.printStackTrace();
-		}
-		finally
-		{
-			if(aStream != null)
-			{
-				try
-				{
-					aStream.close();
-					aStream = null;
-				}
-				catch (IOException ioe)
-				{
-					ioe.printStackTrace();
-				 }
-			}
-		}
-
-
-		return (KeyValuePair[])list.toArray(new KeyValuePair[list.size()]);
-
-	}
-
-	public String[] setElementData(String elementVal)
-	{
-		ArrayList list = new ArrayList();
-		AuthorStream aStream = null;
-    	String strToken = null;
+    AuthorStream aStream = null;
+    String strToken = null;
+    try
+    {
+      if (cvs != null)
+      {
+        aStream = new AuthorStream(new ByteArrayInputStream(cvs.getBytes()));
+        strToken = null;
+        while((strToken = aStream.readAuthor()) != null)
+        {
+          KeyValuePair k = new KeyValuePair(Keys.CONTROLLED_TERM, strToken);
+          list.add(k);
+        }
+       }
+    }
+    catch (IOException ioe)
+    {
+      ioe.printStackTrace();
+    }
+    finally
+    {
+      if(aStream != null)
+      {
         try
-		{
-        	if (elementVal != null)
-        	{
+        {
+          aStream.close();
+          aStream = null;
+        }
+        catch (IOException ioe)
+        {
+          ioe.printStackTrace();
+         }
+      }
+    }
+
+
+    return (KeyValuePair[])list.toArray(new KeyValuePair[list.size()]);
+
+  }
+
+  public String[] setElementData(String elementVal)
+  {
+    ArrayList list = new ArrayList();
+    AuthorStream aStream = null;
+      String strToken = null;
+        try
+    {
+          if (elementVal != null)
+          {
                 aStream = new AuthorStream
-					(new ByteArrayInputStream(elementVal.getBytes()));
+          (new ByteArrayInputStream(elementVal.getBytes()));
                 strToken = null;
                 while((strToken = aStream.readAuthor()) != null)
                 {
@@ -1358,31 +1162,76 @@ public class CBNBDocBuilder implements DocumentBuilder {
                     list.add(strToken.trim());
                 }
              }
-		}
+    }
         catch (IOException ioe)
-		{
-        	ioe.printStackTrace();
-		}
+    {
+          ioe.printStackTrace();
+    }
         finally
-		{
-        	if(aStream != null)
-        	{
-        		try
-				{
-        			aStream.close();
-        			aStream = null;
-				}
-        		catch (IOException ioe)
-				{
-        			ioe.printStackTrace();
+    {
+          if(aStream != null)
+          {
+            try
+        {
+              aStream.close();
+              aStream = null;
+        }
+            catch (IOException ioe)
+        {
+              ioe.printStackTrace();
                  }
             }
         }
         return (String[])list.toArray(new String[list.size()]);
-	}
+  }
 
 
+  private String getAvailability(String pbr, String pad, String avl) {
+    String availability = null;
+
+    if ((pbr == null) && (pad == null)  && (avl == null)) {
+      return null;
+    }
+
+    if (pbr != null) {
+      availability = StringUtil.replaceNullWithEmptyString(pbr);
+    }
+    if (pad != null) {
+      if(availability != null) {
+        availability = availability.concat(StringUtil.replaceNullWithEmptyString(pad));
+      }
+      else {
+        availability = StringUtil.replaceNullWithEmptyString(pad);
+      }
+    }
+    if (avl != null) {
+      if(availability != null) {
+        availability = availability.concat(StringUtil.replaceNullWithEmptyString(avl));
+      }
+      else {
+        availability = StringUtil.replaceNullWithEmptyString(avl);
+      }
+    }
+    StringBuffer sb = null;
+    if(availability != null) {
+      Matcher m = org.ei.util.URLPlucker.UrlRegex.matcher(availability);
+      sb = new StringBuffer();
+      while (m.find()) {
+        /* for(int g = 0; g <= m.groupCount(); g++)
+        {
+          System.out.println("Group " + g + ": " + m.group(g));
+        } */
+        if(m.group(0).indexOf("@") > 0) {
+          m.appendReplacement(sb, "<a class=\"SpLink\" title=\"External Link\" href=\"mailto:" + m.group() + "\">" + m.group() + "</a>");
+        }
+        else {
+          m.appendReplacement(sb, "<a target=\"_cbnb\" class=\"SpLink\" title=\"External Link\" href=\"" + m.group() + "\">" + m.group() + "</a>");
+        }
+      }
+      m.appendTail(sb);
+    }
+    return (sb == null) ? null : sb.toString();
+  }
 
 }
-
 //End Of CBNBDocBuilder
