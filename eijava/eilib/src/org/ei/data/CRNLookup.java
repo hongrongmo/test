@@ -1237,4 +1237,28 @@ public class CRNLookup
 
         return name.toString();
     }
+    
+    public static String getName(String crn)
+    {
+
+        Perl5Util perl = new Perl5Util();
+        StringBuffer name = new StringBuffer(); 
+        String sVal = "";
+
+        if (perl.match("/[0-9]*-[0-9]*-[0-9]*/", crn))
+        {
+            sVal = perl.getMatch().toString().trim();
+        }
+
+        String crnName = (String) htCrns.get(sVal);
+        
+        if (crnName != null)
+        {
+            name.append("(").append(crnName).append(")");           
+            return name.toString();
+        }
+
+        return "";
+    }
+    
 }
