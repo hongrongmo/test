@@ -632,19 +632,19 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
 
 					if (nonMajorTerms.length() > 0)
 					{
-						ht.put(Keys.CONTROLLED_TERMS, new XMLMultiWrapper2(ELT_CONTROLLED_TERMS,setCVS(StringUtil.substituteChars(nonMajorTerms.toString()))));
+						ht.put(ELT_CONTROLLED_TERMS, new XMLMultiWrapper2(ELT_CONTROLLED_TERMS,setCVS(StringUtil.substituteChars(nonMajorTerms.toString()))));
 					}
 
 					if (majorTerms.length() > 0)
 					{
-						ht.put(Keys.MAJOR_TERMS, new XMLMultiWrapper2(ELT_MAJOR_TERMS,setCVS(StringUtil.substituteChars(majorTerms.toString()))));
+						ht.put(ELT_MAJOR_TERMS, new XMLMultiWrapper2(ELT_MAJOR_TERMS,setCVS(StringUtil.substituteChars(majorTerms.toString()))));
 					}
 
                 }
 
                 EIDoc eiDoc = new EIDoc(did, ht, Abstract.ABSTRACT_FORMAT);
                 eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
-                eiDoc.exportLabels(false);
+                eiDoc.exportLabels(true);
                 eiDoc.setOutputKeys(ABSTRACT_KEYS);
                 list.add(eiDoc);
                 count++;
