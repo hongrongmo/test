@@ -98,7 +98,10 @@
 
       <xsl:apply-templates select="LA"/>
       <xsl:apply-templates select="NF"/>
+      <!-- CBNB availability -->
+      <xsl:apply-templates select="AV"/>
       </a>
+
 
       <xsl:if test="$ascii='true'">
         <xsl:text>&#xD;&#xA;</xsl:text>
@@ -229,6 +232,10 @@
         <b>Publication Number:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
     </xsl:template>
 
+    <!-- CBNB availability -->
+    <xsl:template match="AV">
+        <xsl:text> </xsl:text><b>Availability:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
+    </xsl:template>
 
     <xsl:template match="PFD">
         <br/>
