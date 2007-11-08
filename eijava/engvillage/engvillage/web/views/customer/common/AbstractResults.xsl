@@ -142,6 +142,7 @@
       <xsl:apply-templates select="AT"/>
       <xsl:apply-templates select="BKYS"/>
 
+      <xsl:apply-templates select="CPO"/>
       <xsl:apply-templates select="CMS"/>
 
       <xsl:apply-templates select="MJSM">
@@ -563,7 +564,7 @@
       <a CLASS="MedBlackText"><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/></a>
     </xsl:template>
 
-    <xsl:template match="CVS|MJSM|CRM|CMS">
+    <xsl:template match="CVS|MJSM|CRM|CMS|CPO">
     	<xsl:param name="DBNAME"/>
       <br/><br/><a CLASS="MedBlackText"><b>
         <xsl:choose>
@@ -663,16 +664,28 @@
       </xsl:if>
     </xsl:template>
 
-    <xsl:template match="CM">
+    <xsl:template match="CM|CP">
       <xsl:call-template name="LINK">
         <xsl:with-param name="TERM"><xsl:value-of select="normalize-space(text())"/></xsl:with-param>
-        <xsl:with-param name="FIELD">CM</xsl:with-param>
+        <xsl:with-param name="FIELD">name(.)</xsl:with-param>
         <xsl:with-param name="NAME"><xsl:value-of select="name(.)"/></xsl:with-param>
       </xsl:call-template>
       <xsl:if test="not(position()=last())">
         <A CLASS="SmBlackText">&#160; - &#160;</A>
       </xsl:if>
     </xsl:template>
+
+    <xsl:template match="GC">
+      <xsl:call-template name="LINK">
+        <xsl:with-param name="TERM"><xsl:value-of select="normalize-space(text())"/></xsl:with-param>
+        <xsl:with-param name="FIELD">CL</xsl:with-param>
+        <xsl:with-param name="NAME"><xsl:value-of select="name(.)"/></xsl:with-param>
+      </xsl:call-template>
+      <xsl:if test="not(position()=last())">
+        <A CLASS="SmBlackText">&#160; - &#160;</A>
+      </xsl:if>
+    </xsl:template>
+
 
     <xsl:template match="CV|MH">
       <xsl:call-template name="LINK">
