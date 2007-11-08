@@ -301,6 +301,7 @@ public interface Keys
     public static final Key[] PN_HIGHLIGHT_KEYS = {Keys.PUBLISHER,Keys.I_PUBLISHER};
     public static final Key[] CV_HIGHLIGHT_KEYS = {Keys.CONTROLLED_TERMS,Keys.ORIGINAL_CONTROLLED_TERMS,Keys.MAIN_HEADING};
     public static final Key[] MH_HIGHLIGHT_KEYS = {Keys.MAIN_HEADING};
+    public static final Key[] MJS_HIGHLIGHT_KEYS = {Keys.MAJOR_TERMS};
     public static final Key[] AV_HIGHLIGHT_KEYS = {Keys.AVAILABILITY};
     public static final Key[] CO_HIGHLIGHT_KEYS = {Keys.COUNTRY};
     public static final Key[] TI_HIGHLIGHT_KEYS = {Keys.TITLE, TITLE_TRANSLATION};
