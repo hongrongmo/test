@@ -130,6 +130,9 @@
 
       <xsl:apply-templates select="FTTJ"/>
       </a>
+      <xsl:apply-templates select="DT"/>
+      <xsl:apply-templates select="AV"/>
+      <xsl:apply-templates select="SC"/>
 
       <xsl:apply-templates select="AB"/>
       <xsl:apply-templates select="BAB"/>
@@ -138,7 +141,9 @@
       <xsl:apply-templates select="NR"/>
       <xsl:apply-templates select="AT"/>
       <xsl:apply-templates select="BKYS"/>
-      
+
+      <xsl:apply-templates select="CMS"/>
+
       <xsl:apply-templates select="MJSM">
         <xsl:with-param name="DBNAME" select="DOC/DB/DBNAME"/>
       </xsl:apply-templates>
@@ -189,7 +194,7 @@
     <xsl:text>, </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
         <xsl:text> p</xsl:text>
     </xsl:template>
-    
+
     <xsl:template match="BPN">
       <br/><b>Publisher:</b>&#160;<xsl:value-of select="." disable-output-escaping="yes"/><br/>
     </xsl:template>
@@ -258,7 +263,7 @@
             <xsl:otherwise>SpLink</xsl:otherwise>
          </xsl:choose>
       </xsl:variable>
-      
+
       <xsl:variable name="FIELDNAME">
       	<xsl:choose>
       		<xsl:when test="not(../../DOC/DB/DBMASK='2048')">
@@ -267,7 +272,7 @@
       		<xsl:otherwise>IP</xsl:otherwise>
       	</xsl:choose>
       </xsl:variable>
-          
+
       <xsl:call-template name="LINK">
          <xsl:with-param name="TERM"><xsl:value-of select="./CID"/></xsl:with-param>
          <xsl:with-param name="FIELD"><xsl:value-of select="$FIELDNAME"/></xsl:with-param>
@@ -461,6 +466,14 @@
       <b>Electronic ISSN:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text> </xsl:text>
     </xsl:template>
 
+    <!-- CBNB Document type, Availability and Scope -->
+    <xsl:template match="DT">
+      <br/><a class="SmBlackText"><b><xsl:value-of select="@label"/>:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/></a><xsl:text> </xsl:text>
+    </xsl:template>
+    <xsl:template match="AV|SC">
+      <a class="SmBlackText"><b><xsl:value-of select="@label"/>:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/></a><xsl:text> </xsl:text>
+    </xsl:template>
+
     <xsl:template match="CN">
       <b>CODEN:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text> </xsl:text>
     </xsl:template>
@@ -550,7 +563,7 @@
       <a CLASS="MedBlackText"><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/></a>
     </xsl:template>
 
-    <xsl:template match="CVS|MJSM|CRM">
+    <xsl:template match="CVS|MJSM|CRM|CMS">
     	<xsl:param name="DBNAME"/>
       <br/><br/><a CLASS="MedBlackText"><b>
         <xsl:choose>
@@ -559,8 +572,8 @@
         </xsl:choose>:&#160;&#160;</b></a>
       <xsl:apply-templates/>
     </xsl:template>
-    
-    
+
+
     <xsl:template match="CR">
 
            <xsl:call-template name="LINK">
@@ -568,21 +581,21 @@
            <xsl:with-param name="FIELD">CR</xsl:with-param>
 
        </xsl:call-template>
-       <!--  
+       <!--
             <span CLASS="MedBlackText"><xsl:value-of select="normalize-space(text())"/></span>
-           <img src="/engresources/images/plus.gif" border="0"/> 
-        --> 
+           <img src="/engresources/images/plus.gif" border="0"/>
+        -->
            <xsl:text> </xsl:text>
            <xsl:if test="position()!=last()">
            <a class="SmBlkText">&#160; - &#160;</a>
-          	</xsl:if>      
-             
-        <!-- 
-        <td valign="top"> 
-          <span CLASS="MedBlackText"><xsl:value-of select="ctd:getDisplayTitle2(hlight:addMarkup(./CTI))" disable-output-escaping="yes"/></span>        
+          	</xsl:if>
+
+        <!--
+        <td valign="top">
+          <span CLASS="MedBlackText"><xsl:value-of select="ctd:getDisplayTitle2(hlight:addMarkup(./CTI))" disable-output-escaping="yes"/></span>
         </td>
         -->
-     
+
   </xsl:template>
 <!--  end  -->
 
@@ -650,6 +663,16 @@
       </xsl:if>
     </xsl:template>
 
+    <xsl:template match="CM">
+      <xsl:call-template name="LINK">
+        <xsl:with-param name="TERM"><xsl:value-of select="normalize-space(text())"/></xsl:with-param>
+        <xsl:with-param name="FIELD">CM</xsl:with-param>
+        <xsl:with-param name="NAME"><xsl:value-of select="name(.)"/></xsl:with-param>
+      </xsl:call-template>
+      <xsl:if test="not(position()=last())">
+        <A CLASS="SmBlackText">&#160; - &#160;</A>
+      </xsl:if>
+    </xsl:template>
 
     <xsl:template match="CV|MH">
       <xsl:call-template name="LINK">
@@ -661,7 +684,7 @@
         <A CLASS="SmBlackText">&#160; - &#160;</A>
       </xsl:if>
     </xsl:template>
-    
+
     <xsl:template match="MJS">
       <xsl:call-template name="LINK">
         <xsl:with-param name="TERM"><xsl:value-of select="normalize-space(text())"/></xsl:with-param>
