@@ -6,6 +6,7 @@ import java.sql.*;
 import org.ei.connectionpool.*;
 import org.ei.domain.*;
 import org.ei.util.StringUtil;
+import org.ei.data.encompasslit.loadtime.*;
 import org.ei.data.*;
 import org.ei.xml.*;
 import java.io.*;
@@ -23,6 +24,7 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
     public static String ELT_TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright 2007 Elsevier Engineering Information, Inc.";
     public static String ELT_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2007 Elsevier Engineering Information, Inc.";
     public static String PROVIDER = "EnCompassLIT";
+    public EltDocTypes doctype = new EltDocTypes();
     private static final Key ELT_CONTROLLED_TERMS = new Key(Keys.CONTROLLED_TERMS, "Controlled terms");
     private static final Key ELT_CLASS_CODES = new Key(Keys.CLASS_CODES_MULTI, "Class codes");
     private static final Key ELT_MAJOR_TERMS = new Key(Keys.MAJOR_TERMS, "Major terms");
@@ -968,16 +970,16 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
 
                 }
 
-//                if (rset.getString("CPRS") != null) 
+//                if (rset.getString("CPRS") != null)
 //                {
 //                    Contributors authors = new Contributors(Keys.CORRESPONDING_AUTHORS, getContributors(StringUtil.substituteChars(rset.getString("CPRS")), Keys.CORRESPONDING_AUTHORS));
 //
 //                    ht.put(Keys.CORRESPONDING_AUTHORS,authors);
 //                }
-                
-              if (rset.getString("CPRS") != null) 
+
+              if (rset.getString("CPRS") != null)
               {
-      
+
                   ht.put(Keys.CORRESPONDING_AUTHORS,new XMLWrapper(Keys.CORRESPONDING_AUTHORS, StringUtil.substituteChars(rset.getString("CPRS"))));
               }
 
@@ -1130,7 +1132,7 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
                     ht.put(Keys.CAS_REGISTRY_CODES, new XMLMultiWrapper2(Keys.CAS_REGISTRY_CODES, setCRC(StringUtil.substituteChars(rset.getString("APICRN")))));
                 }
 
-                if (rset.getString("apict") != null) 
+                if (rset.getString("apict") != null)
                 {
 					String ct = StringUtil.replaceNullWithEmptyString(rset.getString("APICT"));
 					String cv = termBuilder.getNonMajorTerms(ct);
@@ -1745,15 +1747,30 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
         return sbTitle.toString();
     }
 
-    private String formatDT(String docType) {
-
-    	String mapdt = null;
-        if (docType != null && !docType.equals(""))
-        {
-        	mapdt =(String) MAPDOCTYPES.get(docType.toUpperCase().trim());
-        }
-
-        return mapdt;
+	//format DocumentType
+     private String formatDT(String docType)
+	 {
+		System.out.println("DT1= "+docType);
+		docType = doctype.getMappedDocType(docType);
+		System.out.println("DT2= "+docType);
+		if (docType != null && !docType.equals(""))
+		{
+			if (docType.equals("JA")){docType = "Journal article (JA)";}
+			else if (docType.equals("CA")){docType = "Conference article (CA)";}
+			else if (docType.equals("CP")){docType = "Conference proceeding (CP)";}
+			else if (docType.equals("MC")){docType = "Monograph chapter (MC)";}
+			else if (docType.equals("MR")){docType = "Monograph review (MR)";}
+			else if (docType.equals("RC")){docType = "Report chapter (RC)";}
+			else if (docType.equals("RR")){docType = "Report review (RR)";}
+			else if (docType.equals("DS")){docType = "Dissertation (DS)";}
+			else if (docType.equals("UP")){docType = "Unpublished paper (UP)";}
+		}
+		else
+		{
+			docType = "Other";
+		}
+		System.out.println("DT3= "+docType);
+		return docType;
     }
     public String formatISSN(String issn) {
 
