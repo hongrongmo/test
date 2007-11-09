@@ -91,4 +91,9 @@ public class UPTRefDatabase extends Database {
  	  return searchfield.containsKey(searchField.getID());
     }
 
+    public String getSingleCharName()
+	{
+		return "D";
+	}
+
 }
