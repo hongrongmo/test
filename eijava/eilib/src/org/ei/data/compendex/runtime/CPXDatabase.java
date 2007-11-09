@@ -82,7 +82,7 @@ public class CPXDatabase extends Database
     {
         return "cpx";
     }
-    
+
     public String getLegendID()
     {
         return "c";
@@ -114,7 +114,7 @@ public class CPXDatabase extends Database
     }
     public int getSortValue(){ return getMask(); }
 
-    public Map getTreatments() 
+    public Map getTreatments()
     {
 
     	Map mp = new Hashtable();
@@ -177,6 +177,11 @@ public class CPXDatabase extends Database
 		{
 			return true;
 		}
+	}
+
+	public String getSingleCharName()
+	{
+		return "C";
 	}
 
 }
