@@ -67,7 +67,7 @@ public class EUPDatabase extends Database {
 	public String getID() {
 		return "eup";
 	}
-	
+
     public String getLegendID()
     {
         return "e";
@@ -107,6 +107,11 @@ public class EUPDatabase extends Database {
 					  		int userMaskMax)
 	{
 		return searchfield.containsKey(searchField.getID());
+	}
+
+	public String getSingleCharName()
+	{
+		return "E";
 	}
 
 }
