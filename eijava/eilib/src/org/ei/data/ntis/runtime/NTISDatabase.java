@@ -75,7 +75,7 @@ public class NTISDatabase extends Database
     {
         return "nti";
     }
-    
+
     public String getLegendID()
     {
         return "n";
@@ -126,5 +126,10 @@ public class NTISDatabase extends Database
     {
         return this.NTISLinkingStrategy;
     }
+
+    public String getSingleCharName()
+	{
+		return "N";
+	}
 
 }
