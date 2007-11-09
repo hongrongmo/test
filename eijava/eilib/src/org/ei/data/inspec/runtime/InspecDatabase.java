@@ -121,7 +121,7 @@ public class InspecDatabase extends Database
     {
         return "ins";
     }
-    
+
     public String getLegendID()
     {
         return "i";
@@ -181,6 +181,11 @@ public class InspecDatabase extends Database
 		{
 			return true;
 		}
+	}
+
+	public String getSingleCharName()
+	{
+		return "I";
 	}
 
 }
