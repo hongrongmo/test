@@ -48,7 +48,7 @@ public class InsBackDatabase extends Database
     {
         return "ibf";
     }
-    
+
     public String getLegendID()
     {
         return "ib";
@@ -118,6 +118,10 @@ public class InsBackDatabase extends Database
 		}
 	}
 
+	public String getSingleCharName()
+	{
+		return "F";
+	}
 
 
 }
