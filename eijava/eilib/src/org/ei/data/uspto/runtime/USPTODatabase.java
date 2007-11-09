@@ -24,7 +24,7 @@ public class USPTODatabase extends Database
 	{
 		return "usp";
 	}
-	
+
 	public String getLegendID()
 	{
 		return "up";
@@ -58,5 +58,11 @@ public class USPTODatabase extends Database
         return null;
     }
 	public int getSortValue(){ return getMask(); }
+
+	public String getSingleCharName()
+	{
+		return "S";
+	}
+
 
 }
