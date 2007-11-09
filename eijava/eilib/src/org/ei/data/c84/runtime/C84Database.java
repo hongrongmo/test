@@ -48,7 +48,7 @@ public class C84Database
     {
         return "c84";
     }
-    
+
     public String getLegendID()
     {
         return "c";
@@ -95,6 +95,11 @@ public class C84Database
     	Map mp = new Hashtable();
 		return mp;
   	}
+
+  	public String getSingleCharName()
+  	{
+		return "Z";
+	}
 
 	public boolean linkLocalHoldings(String linklabel)
 	{
