@@ -52,5 +52,9 @@ public class ENGnetBASEDatabase extends Database
 	    return null;
 	}
 	public int getSortValue(){ return getMask(); }
+	public String getSingleCharName()
+	{
+		return "E";
+	}
 
 }
