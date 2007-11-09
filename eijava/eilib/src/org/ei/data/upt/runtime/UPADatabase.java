@@ -65,7 +65,7 @@ public class UPADatabase extends Database {
 	public String getID() {
 		return "upa";
 	}
-	
+
     public String getLegendID()
     {
         return "u";
@@ -113,4 +113,8 @@ public class UPADatabase extends Database {
  	  return searchfield.containsKey(searchField.getID());
     }
 
+	public String getSingleCharName()
+	{
+		return "U";
+	}
 }
