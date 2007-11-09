@@ -74,9 +74,12 @@ public class FastClient
 				return false;
 			}
 		}
-		// include FL only if Referex is alone
+		// include FL only if Referex is alone, ELT, EPT added
 		else if(EiNavigator.FL.equals(navid)) {
-			if((mask == DatabaseConfig.PAG_MASK)) {
+			if((mask == DatabaseConfig.PAG_MASK)||
+				mask == DatabaseConfig.ELT_MASK ||
+				mask == DatabaseConfig.EPT_MASK ) 
+			{
 				return true;
 			}
 		}
