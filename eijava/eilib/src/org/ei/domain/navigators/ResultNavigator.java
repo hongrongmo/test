@@ -576,9 +576,27 @@ public class ResultNavigator
         
         if(mods != null && 
                 mods.isMod(NavConstants.ELT))
-             {
+        {
+            neworder = new ArrayList();
+            neworder.add(EiNavigator.DB);
+            neworder.add(EiNavigator.DT);
+            
+            neworder.add(EiNavigator.AU);
+            neworder.add(EiNavigator.AF);
+            neworder.add(EiNavigator.PAC);
+            neworder.add(EiNavigator.PEC);
+            //neworder.add(EiNavigator.PID); // IPC codes - reformated with standard format
+          //  neworder.add(EiNavigator.PUC); // IPC codes - not reformated
+            neworder.add(EiNavigator.PK); // IPC codes - not reformated
+            neworder.add(EiNavigator.CO);
+            neworder.add(EiNavigator.CV);
+            neworder.add(EiNavigator.CL);
+            neworder.add(EiNavigator.YR);
+            neworder.add(EiNavigator.LA);
+            neworder.add(EiNavigator.FL);
+            return neworder;
 //default
-             }        
+        }        
        // if(mods != null && (!mods.isMixed()) && mods.patents&& !mods.isEpt())
         if(mods != null && (!mods.isMod(NavConstants.MIXED)) && 
            mods.isMod(NavConstants.PAT)&& 
@@ -595,8 +613,10 @@ public class ResultNavigator
             neworder.add(EiNavigator.CO);
             neworder.add(EiNavigator.CV);
             neworder.add(EiNavigator.CL);
+            neworder.add(EiNavigator.FL);
             neworder.add(EiNavigator.YR);
             neworder.add(EiNavigator.LA);
+            return neworder;
         }
       //  if(mods != null &&(!mods.isMixed()) && mods.isOther() && !mods.isEpt())
         if(mods != null &&
@@ -799,6 +819,7 @@ public class ResultNavigator
                        removeFacet(EiNavigator.PN);
                        removeFacet(EiNavigator.LA);
 
+                       adjustFacetName(EiNavigator.FL,"Qualifier");
                        adjustFacetName(EiNavigator.AU,"Author/Inventor");
                        adjustFacetName(EiNavigator.AF,"Author affiliation/Assignee");
 
@@ -813,6 +834,7 @@ public class ResultNavigator
                    {
                 	   removeFacet(EiNavigator.PN);
                        removeFacet(EiNavigator.LA);
+                       
                        
                        adjustFacetName(EiNavigator.AU,"Inventor");
                        adjustFacetName(EiNavigator.AF,"Assignee");
@@ -902,6 +924,7 @@ public class ResultNavigator
                        adjustFacetName(EiNavigator.AU,"Author/Inventor");
                        adjustFacetName(EiNavigator.AF,"Author affiliation/Assignee");
                        // change name for uscode ipc 
+                       adjustFacetName(EiNavigator.FL,"Qualifier");
                        removeFacet(EiNavigator.PID);
                        // remove ipc nav
                    }
@@ -920,6 +943,7 @@ public class ResultNavigator
                        adjustFacetName(EiNavigator.PUC,"IPC Codes");
                        adjustFacetName(EiNavigator.AU,"Inventor");
                        adjustFacetName(EiNavigator.AF,"Assignee");
+                       adjustFacetName(EiNavigator.FL,"Qualifier");
                         // remove  nav
                    }
                                      
@@ -962,6 +986,7 @@ public class ResultNavigator
                 		   (!mods.isMod(NavConstants.OTHER))&& 
                 		   mods.isMod(NavConstants.ELT))
                    {
+                       adjustFacetName(EiNavigator.FL,"Qualifier");
                 	   adjustFacetName(EiNavigator.PEC,"Major terms");                	   
                    }
                    //if((!mods.isMixed()) && (!mods.isOther())&& mods.isEpt())
