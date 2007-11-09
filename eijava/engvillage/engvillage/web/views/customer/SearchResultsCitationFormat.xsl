@@ -724,6 +724,11 @@
 
           <a>
           <xsl:choose>
+          	<!-- added for EnCompass LIT - can be customizes if needed -->
+          	<xsl:when test="($SELECTED-DB = '1024') or ($SELECTED-DB = '2048') or ($SELECTED-DB = '3072')">
+	          <xsl:attribute name="class">SmBlackText</xsl:attribute>
+          	</xsl:when>          
+          	<!-- end of updats for Encmpass-->
             <xsl:when test="(TITLE[@TYPE='BOOK'])">
                <xsl:attribute name="class">SmBlueText</xsl:attribute>
             </xsl:when>
@@ -731,7 +736,7 @@
                <xsl:attribute name="class">SmBlueText</xsl:attribute>
             </xsl:when>
             <xsl:when test="(TITLE != '')">
-               <xsl:attribute name="class">SmBoldBlueText2</xsl:attribute>
+               	<xsl:attribute name="class">SmBoldBlueText2</xsl:attribute>
             </xsl:when>
             <xsl:when test="(/PAGE/SESSION-DATA/SEARCH-TYPE='Easy')">
               <xsl:attribute name="class">MedBlueLink</xsl:attribute>
@@ -739,8 +744,8 @@
             <xsl:otherwise>
               <xsl:attribute name="class">SmBlackText</xsl:attribute>
             </xsl:otherwise>
-          </xsl:choose>
-
+         </xsl:choose>
+		<!--remove mouse over from EncomapssLit/Pat  -->
 		<xsl:if test="not($SELECTED-DB = '1024')">
 			<xsl:if test="not($SELECTED-DB = '2048')">
 				<xsl:if test="not($SELECTED-DB = '3072')">
