@@ -37,7 +37,7 @@ public class UPTDatabase extends Database {
 
 	}
 
-	public List getSortableFields() 
+	public List getSortableFields()
 	{
 		return Arrays.asList(new SortField[]{SortField.RELEVANCE, SortField.AUTHOR, SortField.YEAR, SortField.CITEDBY});
 	}
@@ -61,7 +61,7 @@ public class UPTDatabase extends Database {
 	public String getID() {
 		return "upt";
 	}
-	
+
 	public String getLegendID() {
 		return "u";
 	}
@@ -79,7 +79,7 @@ public class UPTDatabase extends Database {
 	}
 
 	public int getMask() {
-		return 0;
+		return 524288;
 	}
 
 	public boolean hasChildren()
@@ -111,4 +111,8 @@ public class UPTDatabase extends Database {
  	  return searchfield.containsKey(searchField.getID());
     }
 
+	public String getSingleCharName()
+	{
+		return "T";
+	}
 }
