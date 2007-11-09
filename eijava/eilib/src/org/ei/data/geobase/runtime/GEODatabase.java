@@ -77,7 +77,7 @@ public class GEODatabase extends Database
     {
         return "geo";
     }
-    
+
     public String getLegendID()
     {
         return "g";
@@ -143,4 +143,8 @@ public class GEODatabase extends Database
 		}
 	}
 
+	public String getSingleCharName()
+	{
+		return "G";
+	}
 }
