@@ -102,4 +102,9 @@ public class CBFDatabase extends C84Database
     public int getSortValue()
     { return 1; }
 
+    public String getSingleCharName()
+	{
+		return "Y";
+	}
+
 }
