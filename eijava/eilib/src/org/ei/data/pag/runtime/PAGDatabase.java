@@ -31,7 +31,7 @@ public class PAGDatabase extends Database
 	private static Map searchfield = new HashMap();
 	private String PERPETUAL = "BPE";
 
-	// Expert search codes legend is determined from this Map
+	//Expert search codes legend is determined from this Map
 	static
 	{
 //		searchfield.put("ALL", "Y");
@@ -206,5 +206,10 @@ public class PAGDatabase extends Database
 	public boolean linkLocalHoldings(String linklabel)
 	{
 		return false;
+	}
+
+	public String getSingleCharName()
+	{
+		return "P";
 	}
 }
