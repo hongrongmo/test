@@ -339,11 +339,17 @@ public class Displayer {
         } // for
 
 
-        // default is 5 on one row
+        // maximum/default is 5 on one row
         int splitevery = 5;
-        if (lstinnerCheckboxes.size() > 5) {
-          splitevery = (lstinnerCheckboxes.size() / 2) + (lstinnerCheckboxes.size() % 2);
+        if((lstinnerCheckboxes.size() % 4) == 0) {
+          splitevery = 4;
         }
+        else {
+          if((lstinnerCheckboxes.size() % 3) == 0) {
+            splitevery = 3;
+          }
+        }
+
         // Add 'All' which occupies the first cell on every row
         splitevery = splitevery + 1;
 
