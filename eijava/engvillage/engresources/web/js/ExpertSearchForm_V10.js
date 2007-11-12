@@ -53,9 +53,7 @@ function flipImage(selectedDbMask)
 	    (selectedDbMask & EUP) != EUP &&
 	    (selectedDbMask & EPT) != EPT) 
 	 {
-	   link.appendChild(document.createTextNode("Author"));
-	   adiv.appendChild(link);
-	   adiv.appendChild(document.createElement("br"));
+	   	link.appendChild(document.createTextNode("Author"));
 	 }
 	 else if(selectedDbMask == UPA ||
 		 selectedDbMask == EUP ||
@@ -63,15 +61,15 @@ function flipImage(selectedDbMask)
 		 selectedDbMask == EPT)
 	 {
 		link.appendChild(document.createTextNode("Inventor"));
-		adiv.appendChild(link);
-	        adiv.appendChild(document.createElement("br"));
+
 	 }
 	 else
 	 {
 		link.appendChild(document.createTextNode("Author/Inventor"));
-		adiv.appendChild(link);
-	        adiv.appendChild(document.createElement("br"));
 	 }
+	
+	adiv.appendChild(link);
+	adiv.appendChild(document.createElement("br"));	 
 	    
 	 	 
     }
@@ -88,8 +86,6 @@ function flipImage(selectedDbMask)
                 link = newLookupLink();
                 link.onclick=OpenLookup_AF;	 
 		link.appendChild(document.createTextNode("Author affiliation"));
-		adiv.appendChild(link);
-		adiv.appendChild(document.createElement("br"));
 	 }
 	 else if(selectedDbMask == UPA ||
 		 selectedDbMask == EUP ||
@@ -99,17 +95,16 @@ function flipImage(selectedDbMask)
                 link = newLookupLink();
                 link.onclick=OpenLookup_AF;	 
 		link.appendChild(document.createTextNode("Assignee"));
-		adiv.appendChild(link);
-		adiv.appendChild(document.createElement("br"));
 	 }
 	 else
 	 {
                 link = newLookupLink();
                 link.onclick=OpenLookup_AF;	 
 		link.appendChild(document.createTextNode("Affiliation/Assignee"));
-		adiv.appendChild(link);
-		adiv.appendChild(document.createElement("br"));
-	 }	 
+	 }
+	 
+	adiv.appendChild(link);
+	adiv.appendChild(document.createElement("br"));	 
     }
     
     //CT
