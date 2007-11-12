@@ -51,7 +51,7 @@
     <xsl:variable name="AUTOSTEMMING"><xsl:value-of select="//SESSION-DATA/AUTOSTEMMING"/></xsl:variable>
 
   <!-- START OF JAVA SCRIPT -->
-  <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/ExpertSearchForm_V9.js"/>
+  <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/ExpertSearchForm_V10.js"/>
   <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Login.js"/>
   <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Robohelp.js"/>
 
@@ -314,7 +314,7 @@
         <td valign="top" align="right" width="5" bgcolor="#C3C8D1"><img src="/engresources/images/s.gif" width="5"/></td>
         <!-- Start of table for lookup indexes -->
         <td valign="top" align="right" width="120" bgcolor="#C3C8D1">
-
+          <div id="browseindexes">
           <!-- Start of Right most table for lookup or login -->
           <table border="0" width="130" align="right" cellspacing="0" cellpadding="0">
              <tr><td valign="top" height="20" colspan="4"><img src="/engresources/images/spacer.gif" height="20" border="0"/></td></tr>
@@ -324,17 +324,15 @@
 	     </a></td></tr>
              <tr><td valign="top" width="1" bgcolor="#3173B5"><img src="/engresources/images/spacer.gif" border="0" width="1"/></td>
                  <td width="4" bgcolor="#FFFFFF"><img src="/engresources/images/spacer.gif" width="4"/></td>
-                 <td valign="top" bgcolor="#FFFFFF">
-                    <table border="0" cellspacing="0" cellpadding="0">
-                    <FORM NAME="lookupform" method="post" action="#">
-                         <xsl:value-of disable-output-escaping="yes" select="SF:getLookupLink($SESSION-ID,$SELECTED-DB,'expert')"/>
-                    </FORM>
-                    </table>
-                </td>
+                 <td width="120" valign="top" bgcolor="#FFFFFF">
+                   <div id="lookups"></div>
+                 </td>                 
                     <td valign="top" width="1" bgcolor="#3173B5"><img src="/engresources/images/spacer.gif" width="1"/></td>
                     <td valign="top" width="1" bgcolor="#C3C8D1"><img src="/engresources/images/spacer.gif" width="1"/></td></tr>
               <tr><td valign="top" colspan="3" height="1" bgcolor="#3173B5"><img src="/engresources/images/spacer.gif" height="1"/></td></tr>
-             </table></td>
+             </table>
+             </div>
+             </td>
              <!-- End of Right most table for lookup or login -->
            <td valign="top" width="5" bgcolor="#C3C8D1"><img src="/engresources/images/s.gif" width="5"/></td></tr>
        <tr><td valgn="top" colspan="4" height="15" bgcolor="#C3C8D1"><img src="/engresources/images/s.gif" height="15"/></td></tr>
@@ -526,6 +524,59 @@
 <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/RemoteDbLink_V5.js"/>
 
 <!-- End of table for content below the navigation bar -->
+<script language="Javascript">
+  <xsl:comment>
+  function OpenLookup_AUS()
+  {
+    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","AUS");
+  }
+  function OpenLookup_AF()
+  {
+    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","AF");
+  }
+  function OpenLookup_CVS()
+  {
+    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","CVS");
+  }
+  function OpenLookup_ST()
+  {
+    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","ST");
+  }
+  function OpenLookup_PN()
+  {
+    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","PN");
+  }
+  function OpenLookup_LA()
+  {
+    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","LA");
+  }
+  function OpenLookup_DT()
+  {
+    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","DT");
+  }
+  function OpenLookup_PB()
+  {
+    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","PB");
+  }
+  function OpenLookup_TR()
+  {
+    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","TR");
+  }
+  function OpenLookup_DSC()
+  {
+    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","DSC");
+  }
+  function OpenLookup_PC()
+  {
+    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","PC");
+  }
+  function OpenLookup_DI()
+  {
+    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","DI");
+  }  
+  flipImage(<xsl:value-of select="$SELECTED-DB"/>);
+  // </xsl:comment>
+  </script>
 </xsl:template>
 
 </xsl:stylesheet>
