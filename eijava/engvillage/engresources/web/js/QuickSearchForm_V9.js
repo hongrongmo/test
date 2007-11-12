@@ -1319,7 +1319,7 @@ function clearAlldb()
   function newLookupLink()
   {
     var alink = document.createElement("a");
-    alink.className="MedBlueLink";
+    alink.className="MedBluePermLink";
     alink.setAttribute("href","#");
 
     return alink;
@@ -1338,142 +1338,103 @@ function clearAlldb()
       bdiv.style.display = "none";
       return;
     }
-
+    if((selectedDbMask & CBN) == CBN && (selectedDbMask & US_PATENTS) == US_PATENTS)
+    {
+      bdiv.style.display = "none";
+      return;
+    }
+    if((selectedDbMask & CBN) == CBN && (selectedDbMask & EU_PATENTS) == EU_PATENTS)
+    {
+      bdiv.style.display = "none";
+      return;
+    }
+    
     bdiv.style.display = "block";
 
-    link = newLookupLink();
-    link.onclick=OpenLookup_AUS;
-    if((selectedDbMask & US_PATENTS) != US_PATENTS &&
-        (selectedDbMask & EU_PATENTS) != EU_PATENTS &&
-        (selectedDbMask & EPT) != EPT)
-    {
-      link.appendChild(document.createTextNode("Author"));
-    }
-    else if(selectedDbMask == US_PATENTS ||
-            selectedDbMask == EU_PATENTS ||
-            selectedDbMask == US_EU_PATENTS ||
-            selectedDbMask == EPT)
-    {
-      link.appendChild(document.createTextNode("Inventor"));
-    }
-    else
-    {
-      link.appendChild(document.createTextNode("Author/Inventor"));
-    }
-    adiv.appendChild(link);
-    adiv.appendChild(document.createElement("br"));
-
-    if((selectedDbMask & INS) == INS)
-    {
-      link = newLookupLink();
-      link.onclick=OpenLookup_AF;
-      link.appendChild(document.createTextNode("Author affiliation"));
-      adiv.appendChild(link);
-      adiv.appendChild(document.createElement("br"));
-    }
-
-    if((selectedDbMask & INS) == INS)
-    {
-      link = newLookupLink();
-      link.onclick=OpenLookup_CVS;
-      link.appendChild(document.createTextNode("Controlled term"));
-      adiv.appendChild(link);
-      adiv.appendChild(document.createElement("br"));
-    }
-
-    if((selectedDbMask & INS) == INS)
-    {
-      link = newLookupLink();
-      link.onclick=OpenLookup_ST;
-      link.appendChild(document.createTextNode("Serial title"));
-      adiv.appendChild(link);
-      adiv.appendChild(document.createElement("br"));
-    }
-    if((selectedDbMask & INS) == INS)
-    {
-      link = newLookupLink();
-      link.onclick=OpenLookup_PN;
-      link.appendChild(document.createTextNode("Publisher"));
-      adiv.appendChild(link);
-      adiv.appendChild(document.createElement("br"));
-    }
-
-  }
-
-/*
-function flipImage(selectedDbMask)
-{
-    document.lookuplink1.src="/engresources/images/checking.gif";
-    document.lookuplink2.src="/engresources/images/checking.gif";
-    document.lookuplink3.src="/engresources/images/checking.gif";
-    document.lookuplink4.src="/engresources/images/checking.gif";
-    document.lookuplink5.src="/engresources/images/checking.gif";
-    document.lookuplink6.src="/engresources/images/checking.gif";
-
-    if((selectedDbMask & REFEREX) == REFEREX)
-    {
-        return;
-    }
-
-
-    //AU
     if((selectedDbMask & CBN) != CBN)
     {
-       if((selectedDbMask & US_PATENTS) != US_PATENTS &&
-          (selectedDbMask & EU_PATENTS) != EU_PATENTS &&
-          (selectedDbMask & EPT) != EPT)
-       {
-          document.lookuplink1.src="/engresources/images/ath.gif";
-       }
-       else if(selectedDbMask == US_PATENTS ||
-           selectedDbMask == EU_PATENTS ||
-           selectedDbMask == US_EU_PATENTS ||
-           selectedDbMask == EPT)
-       {
-          document.lookuplink1.src="/engresources/images/inv.gif";
-       }
-       else
-       {
-          document.lookuplink1.src="/engresources/images/auinv.gif";
-       }
-    }
+            //AU	
+            link = newLookupLink();
+            link.onclick=OpenLookup_AUS;
 
-    //AF ---  only cpx,ins,ntis
+	    if((selectedDbMask & US_PATENTS) != US_PATENTS &&
+		(selectedDbMask & EU_PATENTS) != EU_PATENTS &&
+		(selectedDbMask & EPT) != EPT)
+	    {
+	      link.appendChild(document.createTextNode("Author"));
+	    }
+	    else if(selectedDbMask == US_PATENTS ||
+		    selectedDbMask == EU_PATENTS ||
+		    selectedDbMask == US_EU_PATENTS ||
+		    selectedDbMask == EPT)
+	    {
+	      link.appendChild(document.createTextNode("Inventor"));
+	    }
+	    else
+	    {
+	      link.appendChild(document.createTextNode("Author/Inventor"));
+	    }
+	    
+	    adiv.appendChild(link);
+	    adiv.appendChild(document.createElement("br"));
+    }
+    
+    
     if((selectedDbMask & CBN) != CBN)
     {
-        if((selectedDbMask & US_PATENTS) != US_PATENTS &&
-       (selectedDbMask & EU_PATENTS) != EU_PATENTS &&
-       (selectedDbMask & EPT) != EPT)
-    	{
-        	document.lookuplink2.src="/engresources/images/af.gif";
-    	}
-    	else if(selectedDbMask == US_PATENTS ||
-        	selectedDbMask == EU_PATENTS ||
-        	selectedDbMask == EPT ||
-        	selectedDbMask == US_EU_PATENTS)
-    	{
-        	document.lookuplink2.src="/engresources/images/asg.gif";
-    	}
-    	else
-    	{
-        	document.lookuplink2.src="/engresources/images/afas.gif";
-    	}
+            //AF
+            link = newLookupLink();
+            link.onclick=OpenLookup_AF;
+            
+	    if((selectedDbMask & US_PATENTS) != US_PATENTS &&
+	    (selectedDbMask & EU_PATENTS) != EU_PATENTS &&
+	    (selectedDbMask & EPT) != EPT)
+	    {
+		link.appendChild(document.createTextNode("Author affiliation"));
+		adiv.appendChild(link);
+		adiv.appendChild(document.createElement("br"));
+	    }
+	    else if(selectedDbMask == US_PATENTS ||
+	    selectedDbMask == EU_PATENTS ||
+	    selectedDbMask == EPT ||
+	    selectedDbMask == US_EU_PATENTS)
+	    {
+		link.appendChild(document.createTextNode("Assignee"));
+		adiv.appendChild(link);
+		adiv.appendChild(document.createElement("br"));
+	    }
+	    else
+	    {
+		link.appendChild(document.createTextNode("Affiliation/Assignee"));
+		adiv.appendChild(link);
+		adiv.appendChild(document.createElement("br"));
+	    }
     }
-
-    //CV
+    
+    //CT
     if((selectedDbMask & US_PATENTS) != US_PATENTS &&
        (selectedDbMask & EU_PATENTS) != EU_PATENTS)
     {
-       document.lookuplink3.src="/engresources/images/ct.gif";
+        link = newLookupLink();
+        link.onclick=OpenLookup_CVS;
+        
+        link.appendChild(document.createTextNode("Controlled term"));
+        adiv.appendChild(link);
+        adiv.appendChild(document.createElement("br"));
     }
 
-    //ST
+    //ST	
     if((selectedDbMask & US_PATENTS) != US_PATENTS &&
        (selectedDbMask & EU_PATENTS) != EU_PATENTS &&
        (selectedDbMask & EPT) != EPT &&
        (selectedDbMask & NTIS) != NTIS)
     {
-       document.lookuplink4.src="/engresources/images/st.gif";
+        link = newLookupLink();
+        link.onclick=OpenLookup_ST;
+        
+        link.appendChild(document.createTextNode("Serial title"));
+        adiv.appendChild(link);
+        adiv.appendChild(document.createElement("br"));
     }
 
     //PB
@@ -1485,17 +1446,34 @@ function flipImage(selectedDbMask)
        (selectedDbMask & CHM) != CHM &&
        (selectedDbMask & EPT) != EPT)
     {
-    document.lookuplink5.src="/engresources/images/pb.gif";
+        link = newLookupLink();
+        link.onclick=OpenLookup_PN;
+    
+        link.appendChild(document.createTextNode("Publisher"));
+        adiv.appendChild(link);
+        adiv.appendChild(document.createElement("br"));
     }
-
+    
     //PC
- //   if (selectedDbMask == EPT)
- //   {
- //       document.lookuplink6.src="/engresources/images/pc.gif";
- //   }
-
-}
-*/
+    if((selectedDbMask & INS) != INS && (selectedDbMask & CPX) != CPX &&
+       (selectedDbMask & GEO) != GEO &&
+       (selectedDbMask & PCH) != PCH &&
+       (selectedDbMask & US_PATENTS) != US_PATENTS &&
+       (selectedDbMask & EU_PATENTS) != EU_PATENTS &&
+       (selectedDbMask & NTIS) != NTIS &&
+       (selectedDbMask & CBN) != CBN &&
+       (selectedDbMask & ELT) != ELT &&
+       (selectedDbMask & CHM) != CHM)
+    {
+        link = newLookupLink();
+        link.onclick=OpenLookup_PC
+    
+        link.appendChild(document.createTextNode("Country"));
+        adiv.appendChild(link);
+        adiv.appendChild(document.createElement("br"));
+    }
+        
+  }
 
 function change(db)
 {
@@ -1554,7 +1532,9 @@ function updateUI(dbMask, sYear, strYear, eYear, sec1, sec2, sec3, dtype, trtype
     if(!(dbMask == 8) && !(dbMask == 16))
     {
         flipImage(dbMask);
-
+	var adiv = document.getElementById("lookups");
+        adiv.appendChild(document.createElement("br"));
+        
         searchin = generateSection(dbMask);
         doctypes = generateDoctypes(dbMask);
         treattypes = generateTreattypes(dbMask);
@@ -1613,7 +1593,7 @@ function OpenLookup(sessionId,lookupindex)
         return;
     }
 
-    if ((selectedDbMask !=  0) && ((selectedDbMask & NTIS) == NTIS) && ((seltab == 'ST') || (seltab == 'PN')))
+    if ((selectedDbMask !=  0) && ((selectedDbMask & NTIS) == NTIS) && ((lookupindex == 'ST') || (lookupindex == 'PN')))
     {
         return false;
     }
