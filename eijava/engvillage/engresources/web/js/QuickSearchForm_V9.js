@@ -1391,8 +1391,6 @@ function clearAlldb()
 	    (selectedDbMask & EPT) != EPT)
 	    {
 		link.appendChild(document.createTextNode("Author affiliation"));
-		adiv.appendChild(link);
-		adiv.appendChild(document.createElement("br"));
 	    }
 	    else if(selectedDbMask == US_PATENTS ||
 	    selectedDbMask == EU_PATENTS ||
@@ -1400,15 +1398,15 @@ function clearAlldb()
 	    selectedDbMask == US_EU_PATENTS)
 	    {
 		link.appendChild(document.createTextNode("Assignee"));
-		adiv.appendChild(link);
-		adiv.appendChild(document.createElement("br"));
 	    }
 	    else
 	    {
 		link.appendChild(document.createTextNode("Affiliation/Assignee"));
-		adiv.appendChild(link);
-		adiv.appendChild(document.createElement("br"));
+		
 	    }
+	    
+	   adiv.appendChild(link);
+	   adiv.appendChild(document.createElement("br"));
     }
     
     //CT
