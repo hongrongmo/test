@@ -693,6 +693,14 @@
   {
     OpenLookup("<xsl:value-of select="$SESSION-ID"/>","PN");
   }
+  function OpenLookup_LA()
+  {
+    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","LA");
+  }
+  function OpenLookup_PC()
+  {
+    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","PC");
+  }   
   flipImage(<xsl:value-of select="$SELECTED-DB"/>);
   // </xsl:comment>
   </script>
