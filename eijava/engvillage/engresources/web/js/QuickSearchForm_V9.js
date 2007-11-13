@@ -1,18 +1,24 @@
-var GEO = 8192;
-var US_PATENTS = 32768;
-var EU_PATENTS = 16384;
-var US_EU_PATENTS = 49152;
-var NTIS = 4;
-var INS = 2;
 var CPX = 1;
+var INS = 2;
 var CPX_INS = 3;
-var REFEREX = 131072;
-var CBF = 262144;
-var CHM = 128;
+var NTIS = 4;
+var USPTO = 8;
+var CRC = 16;
+var C84 = 32;
 var PCH = 64;
+var CHM = 128;
+var CBN = 256;
 var ELT = 1024;
 var EPT = 2048;
-var CBN = 256;
+var IBF = 4096;
+var GEO = 8192;
+var EU_PATENTS = 16384;
+var US_PATENTS = 32768;
+var US_EU_PATENTS = 49152;
+var REF = 65536
+var REFEREX = 131072;
+var CBF = 262144;
+var UPT = 524288;
 
 var startYear;
 var stringYear;
@@ -42,29 +48,44 @@ function generateSection(selecteddbMask)
    var index = 0;
 
   //All fields
-   if((selecteddbMask & REFEREX) != REFEREX)
+   if((selecteddbMask & REFEREX) != REFEREX &&
+      (selecteddbMask & CBF) != CBF)
    {
       searchin[index++] = new Field("NO-LIMIT", "All fields");
    }
-   //KY
-   if((selecteddbMask & REFEREX) != REFEREX)
+   
+   //KY 
+   if((selecteddbMask & REFEREX) != REFEREX &&
+      (selecteddbMask & EPT) != EPT &&
+      (selecteddbMask & CBN) != CBN &&
+      (selecteddbMask & CBF) != CBF)
    {
-      searchin[index++] = new Field("KY", "Subject/Title/Abstract");
+	searchin[index++] = new Field("KY", "Subject/Title/Abstract");
    }
-   else
+   else if((selecteddbMask & CBN) == CBN)
    {
-      searchin[index++] = new Field("KY", "Keyword");
+	searchin[index++] = new Field("KY", "Title/Abstract");
+   }
+   else if((selecteddbMask & EPT) == EPT)
+   {
+	searchin[index++] = new Field("KY","Subject/(Patent) title/Abstract");
+   }
+   else if((selecteddbMask & REFEREX) == REFEREX)
+   {
+	 searchin[index++] = new Field("KY", "Keyword");
    }
 
+   
    //AB
    if((selecteddbMask & REFEREX) != REFEREX &&
-      (selecteddbMask & PCH) != PCH)
+      (selecteddbMask & CBF) != CBF)
    {
       searchin[index++] = new Field("AB", "Abstract");
    }
-
+   
    //AU
-   if((selecteddbMask & CBN) != CBN)
+   if((selecteddbMask & CBN) != CBN &&
+      (selecteddbMask & CBF) != CBF)
    {
        if((selecteddbMask & US_PATENTS) != US_PATENTS &&
           (selecteddbMask & EPT) != EPT &&
@@ -72,10 +93,13 @@ function generateSection(selecteddbMask)
        {
          searchin[index++] = new Field("AU", "Author");
        }
-       else if(selecteddbMask == US_PATENTS ||
-           selecteddbMask == EU_PATENTS ||
-           selecteddbMask == EPT ||
-           selecteddbMask == US_EU_PATENTS )
+       else if(	selecteddbMask == US_PATENTS ||
+           	selecteddbMask == EU_PATENTS ||
+           	selecteddbMask == EPT ||
+           	selecteddbMask == US_EU_PATENTS ||
+           	selecteddbMask == US_PATENTS + EPT ||
+           	selecteddbMask == EPT + EU_PATENTS ||
+           	selecteddbMask == US_EU_PATENTS + EPT)
        {
          searchin[index++] = new Field("AU", "Inventor");
        }
@@ -84,189 +108,214 @@ function generateSection(selecteddbMask)
          searchin[index++] = new Field("AU", "Author/Inventor");
        }
     }
-
-   //AF
+    
+   //BN
    if(selecteddbMask == REFEREX)
    {
          searchin[index++] = new Field("BN", "ISBN");
    }
-
+   
+   
+   //AF
    if(((selecteddbMask & REFEREX) != REFEREX) &&
-      (selecteddbMask & CBN) != CBN)
+      ((selecteddbMask & CBF) != CBF) &&
+      ((selecteddbMask & CBN) != CBN))
    {
-    if((selecteddbMask & US_PATENTS)!= US_PATENTS &&
-       (selecteddbMask & EU_PATENTS) != EU_PATENTS &&
-       (selecteddbMask & EPT)   != EPT)
-    {
-      searchin[index++] = new Field("AF", "Author affiliation");
-    }
-    else if( selecteddbMask == US_PATENTS ||
-         selecteddbMask == EU_PATENTS ||
-         selecteddbMask == EPT ||
-         selecteddbMask == US_EU_PATENTS)
-    {
-      searchin[index++] = new Field("AF", "Assignee");
-    }
-    else
-    {
-      searchin[index++] = new Field("AF", "Author affiliation/Assignee");
-    }
+      if((selecteddbMask & US_PATENTS) != US_PATENTS &&
+         (selecteddbMask & EU_PATENTS) != EU_PATENTS &&
+         (selecteddbMask & EPT)   != EPT)
+      {
+      	 searchin[index++] = new Field("AF", "Author affiliation");
+      }
+      else if( 	(selecteddbMask == US_PATENTS) ||
+         	(selecteddbMask == EU_PATENTS) ||
+         	(selecteddbMask == US_EU_PATENTS))
+      {
+      	 searchin[index++] = new Field("AF", "Assignee");
+      }
+      else if(selecteddbMask == EPT)
+      {
+      	 searchin[index++] = new Field("AF", "Patent assignee");
+      }
    }
-
+   
    // TI
-   if(true)
+   if(selecteddbMask == EPT)
    {
-     searchin[index++] = new Field("TI", "Title");
+   	searchin[index++] = new Field("TI", "Patent title");
    }
-
+   else if((selecteddbMask & CBF) != CBF)
+   {
+     	searchin[index++] = new Field("TI", "Title");
+   }
+   
    // CL
-   if((selecteddbMask & CBN) != CBN)
+   if((selecteddbMask == CPX) ||
+      (selecteddbMask == CBF) ||
+      (selecteddbMask == CPX + C84))
    {
-       if(selecteddbMask == CPX ||
-          selecteddbMask == CBF)
-       {
+       
          searchin[index++] = new Field("CL", "Ei Classification code");
-       }
-       else if(selecteddbMask == INS ||
-           selecteddbMask == GEO)
-       {
-         searchin[index++] = new Field("CL", "Classification code");
-       }
    }
+   else if((selecteddbMask == INS) ||
+   	  (selecteddbMask == GEO) ||
+          (selecteddbMask == INS + IBF) ||
+          (selecteddbMask == INS + GEO) ||
+          (selecteddbMask == INS + IBF + GEO))
 
+   {
+         searchin[index++] = new Field("CL", "Classification code");
+   }
+   
+   
    //CN
-   if((selecteddbMask & GEO)        != GEO &&
-      (selecteddbMask & US_PATENTS)     != US_PATENTS &&
-      (selecteddbMask & EU_PATENTS)     != EU_PATENTS &&
-      (selecteddbMask & NTIS)       != NTIS &&
-      (selecteddbMask & REFEREX)    != REFEREX &&
-      (selecteddbMask & CBN)        != CBN &&
-      (selecteddbMask & PCH)        != PCH &&
-      (selecteddbMask & CHM)        != CHM &&
-      (selecteddbMask & ELT)        != ELT &&
-      (selecteddbMask & EPT)        != EPT)
+   if((selecteddbMask & CBN) != CBN &&
+      (selecteddbMask & CHM) != CHM &&
+      (selecteddbMask & CRC) != CRC &&
+      (selecteddbMask & ELT) != ELT &&
+      (selecteddbMask & EPT) != EPT &&
+      (selecteddbMask & EU_PATENTS) != EU_PATENTS &&
+      (selecteddbMask & GEO) != GEO &&
+      (selecteddbMask & NTIS) != NTIS &&
+      (selecteddbMask & REFEREX) != REFEREX &&
+      (selecteddbMask & PCH) != PCH &&
+      (selecteddbMask & REF) != REF &&
+      (selecteddbMask & US_PATENTS) != US_PATENTS &&
+      (selecteddbMask & UPT) != UPT &&
+      (selecteddbMask & USPTO) != USPTO)
    {
      searchin[index++] = new Field("CN", "CODEN");
    }
-
+   
    //CF
-   if((selecteddbMask & GEO)        != GEO &&
-      (selecteddbMask & US_PATENTS)     != US_PATENTS &&
-      (selecteddbMask & EU_PATENTS)     != EU_PATENTS &&
-      (selecteddbMask & NTIS)       != NTIS &&
-      (selecteddbMask & REFEREX)    != REFEREX &&
-      (selecteddbMask & CBN)        != CBN &&
-      (selecteddbMask & EPT)        != EPT &&
-      (selecteddbMask & PCH)        != PCH &&
-      (selecteddbMask & CHM)        != CHM)
+   if((selecteddbMask & CBN) != CBN &&
+      (selecteddbMask & CHM) != CHM &&
+      (selecteddbMask & CRC) != CRC &&
+      (selecteddbMask & EPT) != EPT &&
+      (selecteddbMask & EU_PATENTS) != EU_PATENTS &&
+      (selecteddbMask & GEO) != GEO &&
+      (selecteddbMask & NTIS) != NTIS &&
+      (selecteddbMask & REFEREX) != REFEREX &&
+      (selecteddbMask & PCH) != PCH &&
+      (selecteddbMask & REF) != REF &&
+      (selecteddbMask & US_PATENTS) != US_PATENTS &&
+      (selecteddbMask & UPT) != UPT &&
+      (selecteddbMask & USPTO) != USPTO)
    {
      searchin[index++] = new Field("CF","Conference information");
    }
-
+   
    //CC
-   if(selecteddbMask == CPX)
+   if(selecteddbMask == CPX ||
+      selecteddbMask == CPX + C84)
    {
      searchin[index++] = new Field("CC","Conference code");
    }
-
+   
    //SN
-   if((selecteddbMask & US_PATENTS)     != US_PATENTS &&
-      (selecteddbMask & EU_PATENTS)     != EU_PATENTS &&
-      (selecteddbMask & NTIS)       != NTIS &&
-      (selecteddbMask & CBF)        != CBF &&
-      (selecteddbMask & CBN)        != CBN &&
-      (selecteddbMask & ELT)        != ELT &&
-      (selecteddbMask & EPT)        != EPT &&
-      (selecteddbMask & CHM)        != CHM &&
-      (selecteddbMask & PCH)        != PCH &&
-      (selecteddbMask & REFEREX)    != REFEREX)
+   if((selecteddbMask & CBN) != CBN &&
+      (selecteddbMask & CHM) != CHM &&
+      (selecteddbMask & CRC) != CRC &&
+      (selecteddbMask & ELT) != ELT &&
+      (selecteddbMask & EPT) != EPT &&
+      (selecteddbMask & EU_PATENTS) != EU_PATENTS &&
+      (selecteddbMask & NTIS) != NTIS &&
+      (selecteddbMask & REFEREX) != REFEREX &&
+      (selecteddbMask & PCH) != PCH &&
+      (selecteddbMask & REF) != REF &&
+      (selecteddbMask & US_PATENTS) != US_PATENTS &&
+      (selecteddbMask & UPT) != UPT &&
+      (selecteddbMask & USPTO) != USPTO)
    {
      searchin[index++] = new Field("SN","ISSN");
    }
-
+   
    //MH
    if(selecteddbMask == CPX ||
-      selecteddbMask == CBF)
+      selecteddbMask == (CBF + C84))
    {
      searchin[index++] = new Field("MH","Ei main heading");
    }
-
+   
    //PN
-   if((selecteddbMask & GEO)        != GEO &&
+   if((selecteddbMask & GEO)     	!= GEO &&
+      (selecteddbMask & CBF)     	!= CBF &&
       (selecteddbMask & US_PATENTS)     != US_PATENTS &&
       (selecteddbMask & EU_PATENTS)     != EU_PATENTS &&
-      (selecteddbMask & NTIS)       != NTIS &&
-      (selecteddbMask & EPT)        != EPT &&
-      (selecteddbMask & CHM)        != CHM &&
-      (selecteddbMask & CBN)        != CBN)
+      (selecteddbMask & NTIS)       	!= NTIS &&
+      (selecteddbMask & EPT)        	!= EPT &&
+      (selecteddbMask & CHM)        	!= CHM &&
+      (selecteddbMask & CBN)        	!= CBN)
    {
      searchin[index++] = new Field("PN","Publisher");
    }
-
+   
    //ST
    if((selecteddbMask & US_PATENTS)     != US_PATENTS &&
       (selecteddbMask & EU_PATENTS)     != EU_PATENTS &&
-      (selecteddbMask & NTIS)       != NTIS &&
-      (selecteddbMask & EPT)        != EPT &&
-      (selecteddbMask & REFEREX)    != REFEREX)
+      (selecteddbMask & CBF)        	!= CBF &&
+      (selecteddbMask & NTIS)      	!= NTIS &&
+      (selecteddbMask & EPT)        	!= EPT &&
+      (selecteddbMask & REFEREX)    	!= REFEREX)
    {
      searchin[index++] = new Field("ST","Serial title");
    }
-
+   
    // Inspec unique fields
    //PM
    if((selecteddbMask & GEO)        != GEO &&
-      (selecteddbMask & US_PATENTS)     != US_PATENTS &&
-      (selecteddbMask & EU_PATENTS)     != EU_PATENTS &&
       (selecteddbMask & CPX)        != CPX &&
-      (selecteddbMask & CBF)        != CBF &&
-      (selecteddbMask & CBN)        != CBN &&
-      (selecteddbMask & ELT)        != ELT &&
+      (selecteddbMask & C84)        != C84 &&
+      (selecteddbMask & CRC)        != CRC &&
+      (selecteddbMask & CBF)        != CBF && 
+      (selecteddbMask & CBN)        != CBN && 
+      (selecteddbMask & ELT)        != ELT &&  
       (selecteddbMask & CHM)        != CHM &&
       (selecteddbMask & PCH)        != PCH &&
       (selecteddbMask & NTIS)       != NTIS &&
+      (selecteddbMask & USPTO)      != USPTO &&
       (selecteddbMask & REFEREX)    != REFEREX)
    {
       searchin[index++] = new Field("PM","Patent number");
    }
-   else if( selecteddbMask == US_PATENTS ||
-        selecteddbMask == EU_PATENTS ||
-        selecteddbMask == US_EU_PATENTS )
-   {
-      searchin[index++] = new Field("PM","Patent number");
-   }
-
+   
+   
    //PA
-   if(selecteddbMask == INS)
+   if(selecteddbMask == INS ||
+      selecteddbMask == (INS + IBF))
    {
       searchin[index++] = new Field("PA","Filing date");
    }
-
+   
    //PI
-   if(selecteddbMask == INS)
+   if(selecteddbMask == INS ||
+      selecteddbMask == (INS + IBF))
    {
      searchin[index++] = new Field("PI","Patent issue date");
    }
-
+   
    //PU
-   if(selecteddbMask == INS)
+   if(selecteddbMask == INS ||
+      selecteddbMask == (INS + IBF))
    {
      searchin[index++] = new Field("PU","Country of application");
    }
-
+   
    //MI
-   if(selecteddbMask == INS)
+   if(selecteddbMask == INS ||
+      selecteddbMask == (INS + IBF))
    {
      searchin[index++] = new Field("MI","Material Identity Number");
    }
-
+   
    //CV
    if(selecteddbMask == CPX ||
-      selecteddbMask == CBF)
+      selecteddbMask == (CPX + C84))
    {
      searchin[index++] = new Field("CV", "Ei controlled term");
    }
-   else if(selecteddbMask == INS)
+   else if(selecteddbMask == INS ||
+           selecteddbMask == (INS + IBF))
    {
      searchin[index++] = new Field("CV","Inspec controlled term");
    }
@@ -274,81 +323,70 @@ function generateSection(selecteddbMask)
    {
       searchin[index++] = new Field("CV","NTIS controlled term");
    }
-   else if((selecteddbMask & US_PATENTS)!= US_PATENTS &&
-       (selecteddbMask & EU_PATENTS)!= EU_PATENTS &&
-       (selecteddbMask & REFEREX)   != REFEREX &&
-       (selecteddbMask & CBN)   != CBN &&
-       (selecteddbMask & CHM)   != CHM)
-   {
-    searchin[index++] = new Field("CV","Controlled term");
-   }
    else if(selecteddbMask == REFEREX)
    {
-    searchin[index++] = new Field("CV","Subject");
+      searchin[index++] = new Field("CV","Subject");
    }
-
+   else if((selecteddbMask & US_PATENTS)!= US_PATENTS &&
+       	   (selecteddbMask & EU_PATENTS)!= EU_PATENTS &&
+           (selecteddbMask & REFEREX)   != REFEREX &&
+           (selecteddbMask & CBN)   	!= CBN &&
+           (selecteddbMask & CHM)   	!= CHM)
+   {
+    	searchin[index++] = new Field("CV","Controlled term");
+   }
+   
    //NTIS unique fields
    //CT
    if(selecteddbMask == NTIS)
    {
      searchin[index++] = new Field("CT","Contract number");
    }
-
+   
    //CO
    if((selecteddbMask & REFEREX)!= REFEREX &&
       (selecteddbMask & CBN)    != CBN &&
       (selecteddbMask & ELT)    != ELT &&
       (selecteddbMask & EPT)    != EPT &&
+      (selecteddbMask & CBF)    != CBF &&
       (selecteddbMask & PCH)    != PCH &&
       (selecteddbMask & CHM)    != CHM)
    {
         searchin[index++] = new Field("CO","Country of origin");
    }
-   else if(selecteddbMask == EPT)
-   {
-    searchin[index++] = new Field("PC","Patent Country");
-   }
-
+   
    //AG
    if(selecteddbMask == NTIS)
    {
      searchin[index++] = new Field("AG","Monitoring agency");
    }
-
+   
    //PD
-   if((selecteddbMask & GEO)    != GEO &&
-      (selecteddbMask & CPX)    != CPX &&
-      (selecteddbMask & CBF)    != CBF &&
-      (selecteddbMask & CBN)    != CBN &&
-      (selecteddbMask & ELT)    != ELT &&
-      (selecteddbMask & EPT)    != EPT &&
-      (selecteddbMask & CHM)    != CHM &&
-      (selecteddbMask & PCH)    != PCH &&
-      (selecteddbMask & INS)    != INS &&
-      (selecteddbMask & NTIS)   != NTIS &&
-      (selecteddbMask & REFEREX)!= REFEREX)
+   if(selecteddbMask == US_PATENTS ||
+       selecteddbMask == EU_PATENTS ||
+       selecteddbMask == US_EU_PATENTS)
    {
-     searchin[index++] = new Field("PD","Publication date");
+     	searchin[index++] = new Field("PD","Publication date");
    }
+   else if(selecteddbMask == PCH)
+   {
+   	searchin[index++] = new Field("PD","Patent info");
+   }
+   
    //AN
    if(selecteddbMask == NTIS)
    {
-     searchin[index++] = new Field("AN","NTIS accession number");
+     	searchin[index++] = new Field("AN","NTIS accession number");
    }
-   else if((selecteddbMask & GEO)   != GEO &&
-       (selecteddbMask & CPX)   != CPX &&
-       (selecteddbMask & CBF)   != CBF &&
-       (selecteddbMask & CBN)   != CBN &&
-       (selecteddbMask & ELT)   != ELT &&
-       (selecteddbMask & EPT)   != EPT &&
-       (selecteddbMask & CHM)   != CHM &&
-       (selecteddbMask & PCH)   != PCH &&
-       (selecteddbMask & INS)   != INS &&
-       (selecteddbMask & NTIS)  != NTIS &&
-       (selecteddbMask & REFEREX)   != REFEREX)
+   
+   //PAM
+   if(selecteddbMask == US_PATENTS ||
+      selecteddbMask == EU_PATENTS ||
+      selecteddbMask == US_EU_PATENTS)
    {
-     searchin[index++] = new Field("PAM","Application number");
+     	searchin[index++] = new Field("PAM","Application number");
    }
+   
    //RN
    if(selecteddbMask == NTIS)
    {
@@ -357,73 +395,52 @@ function generateSection(selecteddbMask)
 
    // Patent fields
    //PRN
-   if((selecteddbMask & GEO)    != GEO &&
-      (selecteddbMask & CPX)    != CPX &&
-      (selecteddbMask & CBF)    != CBF &&
-      (selecteddbMask & CBN)    != CBN &&
-      (selecteddbMask & ELT)    != ELT &&
-      (selecteddbMask & EPT)    != EPT &&
-      (selecteddbMask & CHM)    != CHM &&
-      (selecteddbMask & PCH)    != PCH &&
-      (selecteddbMask & INS)    != INS &&
-      (selecteddbMask & NTIS)   != NTIS &&
-      (selecteddbMask & REFEREX)!= REFEREX)
+   if(selecteddbMask == US_PATENTS ||
+      selecteddbMask == EU_PATENTS ||
+      selecteddbMask == US_EU_PATENTS)
    {
      searchin[index++] = new Field("PRN","Priority number");
    }
-
+   
   //PID
-  if((selecteddbMask & GEO)     != GEO &&
-     (selecteddbMask & CPX)     != CPX &&
-     (selecteddbMask & CBF)     != CBF &&
-     (selecteddbMask & INS)     != INS &&
-     (selecteddbMask & NTIS)    != NTIS &&
-     (selecteddbMask & REFEREX) != REFEREX &&
-     (selecteddbMask & CBN)     != CBN &&
-     (selecteddbMask & PCH)     != PCH &&
-     (selecteddbMask & CHM)     != CHM &&
-     (selecteddbMask & EPT)     != EPT &&
-     (selecteddbMask & ELT)     != ELT)
+  if( selecteddbMask == US_PATENTS ||
+      selecteddbMask == EU_PATENTS ||
+      selecteddbMask == US_EU_PATENTS)
   {
      searchin[index++] = new Field("PID","IPC code");
   }
-
+  
   //PUC
-  if((selecteddbMask & GEO)     != GEO &&
-     (selecteddbMask & CPX)     != CPX &&
-     (selecteddbMask & CBF)     != CBF &&
-     (selecteddbMask & CBN)     != CBN &&
-     (selecteddbMask & ELT)     != ELT &&
-     (selecteddbMask & EPT)     != EPT &&
-     (selecteddbMask & CHM)     != CHM &&
-     (selecteddbMask & PCH)     != PCH &&
-     (selecteddbMask & INS)     != INS &&
-     (selecteddbMask & NTIS)    != NTIS &&
-     (selecteddbMask & REFEREX) != REFEREX)
+  if(selecteddbMask == EU_PATENTS)
+  {
+      searchin[index++] = new Field("PUC","ECLA code");
+  }
+  else if(selecteddbMask == US_PATENTS)
   {
      searchin[index++] = new Field("PUC","US classification");
   }
-
+  
   //CR
   if(selecteddbMask == ELT ||
-     selecteddbMask == EPT )
+     selecteddbMask == EPT ||
+     selecteddbMask == EPT + ELT)
   {
-    searchin[index++] = new Field("CR","CAS registry number");
+      searchin[index++] = new Field("CR","CAS registry number");
   }
-
+  
+  //PC
+  if(selecteddbMask == EPT)
+  {
+      searchin[index++] = new Field("PC","Patent country");
+  }
+  
   //IP
   if(selecteddbMask == EPT)
   {
-        searchin[index++] = new Field("IP","Int. patent classification");
+      searchin[index++] = new Field("IP","Int. patent classification");
   }
-
-  //PD
-  if(selecteddbMask == PCH)
-  {
-        searchin[index++] = new Field("PD","Patent info");
-  }
-
-
+  
+   
   return searchin;
 
 }
@@ -433,12 +450,15 @@ function generateDoctypes(selecteddbMask)
    var doctypes = new Array();
    var index = 0;
 
+   //alert("windows = "+selecteddbMask);
+
   // NO-LIMIT
-  if((selecteddbMask & US_PATENTS) != US_PATENTS &&
-     (selecteddbMask & EU_PATENTS) != EU_PATENTS &&
-     (selecteddbMask & NTIS) != NTIS &&
-     (selecteddbMask & EPT) != EPT &&
-     (selecteddbMask & CHM) != CHM)
+  if((selecteddbMask & US_PATENTS) 	!= US_PATENTS &&
+     (selecteddbMask & REFEREX) 	!= REFEREX &&
+     (selecteddbMask & EU_PATENTS) 	!= EU_PATENTS &&
+     (selecteddbMask & NTIS) 		!= NTIS && 
+     (selecteddbMask & EPT) 		!= EPT && 
+     (selecteddbMask & CHM) 		!= CHM)
   {
      doctypes[index++] = new Field("NO-LIMIT", "All document types");
   }
@@ -458,6 +478,7 @@ function generateDoctypes(selecteddbMask)
      (selecteddbMask & NTIS) != NTIS &&
      (selecteddbMask & REFEREX) != REFEREX &&
      (selecteddbMask & EPT) != EPT &&
+     //(selecteddbMask & ELT) != ELT &&
      (selecteddbMask & CBN) != CBN &&
      (selecteddbMask & CHM) != CHM)
   {
@@ -469,17 +490,24 @@ function generateDoctypes(selecteddbMask)
      (selecteddbMask & NTIS) != NTIS &&
      (selecteddbMask & REFEREX) != REFEREX &&
      (selecteddbMask & EPT) != EPT &&
+     (selecteddbMask & ELT) != ELT &&
      (selecteddbMask & CBN) != CBN &&
      (selecteddbMask & CHM) != CHM &&
      (selecteddbMask & PCH) != PCH)
   {
      doctypes[index++] = new Field("CA", "Conference article");
   }
-  if((selecteddbMask & GEO) != GEO &&
+  else if (selecteddbMask == EPT ||
+           selecteddbMask == ELT )
+  {
+  	doctypes[index++] = new Field("CA", "Conference");
+  }
+ 
+  if((selecteddbMask & REFEREX) != REFEREX &&
+     (selecteddbMask & GEO) != GEO &&
      (selecteddbMask & US_PATENTS) != US_PATENTS &&
      (selecteddbMask & EU_PATENTS) != EU_PATENTS &&
      (selecteddbMask & NTIS) != NTIS &&
-     (selecteddbMask & REFEREX) != REFEREX &&
      (selecteddbMask & ELT) != ELT &&
      (selecteddbMask & EPT) != EPT &&
      (selecteddbMask & CBN) != CBN &&
@@ -488,12 +516,14 @@ function generateDoctypes(selecteddbMask)
   {
      doctypes[index++] = new Field("CP", "Conference proceeding");
   }
+  
   if((selecteddbMask & GEO) != GEO &&
      (selecteddbMask & US_PATENTS) != US_PATENTS &&
      (selecteddbMask & EU_PATENTS) != EU_PATENTS &&
      (selecteddbMask & NTIS) != NTIS &&
      (selecteddbMask & REFEREX) != REFEREX &&
      (selecteddbMask & EPT) != EPT &&
+     //(selecteddbMask & ELT) != ELT &&
      (selecteddbMask & CBN) != CBN &&
      (selecteddbMask & CHM) != CHM &&
      (selecteddbMask & PCH) != PCH)
@@ -512,30 +542,38 @@ function generateDoctypes(selecteddbMask)
   {
      doctypes[index++] = new Field("MR", "Monograph review");
   }
+  
+  //RC
   if((selecteddbMask & GEO) != GEO &&
      (selecteddbMask & US_PATENTS) != US_PATENTS &&
      (selecteddbMask & EU_PATENTS) != EU_PATENTS &&
      (selecteddbMask & NTIS) != NTIS &&
      (selecteddbMask & REFEREX) != REFEREX &&
      (selecteddbMask & EPT) != EPT &&
+     //(selecteddbMask & ELT) != ELT &&
      (selecteddbMask & CBN) != CBN &&
      (selecteddbMask & CHM) != CHM &&
      (selecteddbMask & PCH) != PCH)
   {
      doctypes[index++] = new Field("RC", "Report chapter");
   }
+  
+  //RR
   if((selecteddbMask & GEO) != GEO &&
      (selecteddbMask & US_PATENTS) != US_PATENTS &&
      (selecteddbMask & EU_PATENTS) != EU_PATENTS &&
      (selecteddbMask & NTIS) != NTIS &&
      (selecteddbMask & REFEREX) != REFEREX &&
      (selecteddbMask & EPT) != EPT &&
+     //(selecteddbMask & ELT) != ELT &&
      (selecteddbMask & CBN) != CBN &&
      (selecteddbMask & CHM) != CHM &&
      (selecteddbMask & PCH) != PCH)
   {
      doctypes[index++] = new Field("RR", "Report review");
   }
+  
+  //DS
   if((selecteddbMask & GEO) != GEO &&
      (selecteddbMask & US_PATENTS) != US_PATENTS &&
      (selecteddbMask & EU_PATENTS) != EU_PATENTS &&
@@ -543,12 +581,14 @@ function generateDoctypes(selecteddbMask)
      (selecteddbMask & CBF) != CBF &&
      (selecteddbMask & REFEREX) != REFEREX &&
      (selecteddbMask & EPT) != EPT &&
+     //(selecteddbMask & ELT) != ELT &&
      (selecteddbMask & CBN) != CBN &&
      (selecteddbMask & CHM) != CHM &&
      (selecteddbMask & PCH) != PCH)
   {
         doctypes[index++] = new Field("DS", "Dissertation");
   }
+  
   if(selecteddbMask == INS)
   {
         doctypes[index++] = new Field("UP", "Unpublished paper");
@@ -587,21 +627,21 @@ function generateDoctypes(selecteddbMask)
       (selecteddbMask & EPT) != EPT &&
       (selecteddbMask & CBN) != CBN &&
       (selecteddbMask & CHM) != CHM &&
-          (selecteddbMask & PCH) != PCH)
+      (selecteddbMask & PCH) != PCH)
   {
         doctypes[index++] = new Field("UA", "US Applications");
         doctypes[index++] = new Field("UG", "US Granted");
         doctypes[index++] = new Field("EA", "European Applications");
         doctypes[index++] = new Field("EG", "European Granted");
   }
-
+  
   if(selecteddbMask == PCH)
   {
     doctypes[index++] = new Field("(CA or CP)","Conferences");
     doctypes[index++] = new Field("MC or MR or RC or RR or DS or UP", "Other documents");
   }
-
-
+  
+  
   if(selecteddbMask == CBN)
   {
     doctypes[index++] = new Field("Journal","Journal article");
@@ -613,14 +653,19 @@ function generateDoctypes(selecteddbMask)
     doctypes[index++] = new Field("Market","Market Research Report");
     doctypes[index++] = new Field("Press","Press Release");
   }
-
-    if(selecteddbMask == ELT )
+  
+  if(selecteddbMask == ELT)
   {
-        doctypes[index++] = new Field("AB", "Abstract");
+  	doctypes[index++] = new Field("AB","Abstract");
+        //doctypes[index++] = new Field("({J_AB} or {J_AR} or {J_BZ} or {J_CP} or {J_ED} or {J_ER} or {J_LE} or {J_NO} or {J_RE} or {J_SH} or {D_AR} or {D_BZ} or {D_CP} or {J_BK} or {J_BR} or {J_CH} or {J_CR} or {J_DI} or {J_PA} or {J_PR} or {J_RP} or {J_WP})", "Journal article");
+	//doctypes[index++] = new Field("(P or {P_AR} or {P_CP} or {P_AB} or {P_BK} or {P_BR} or {P_BZ} or {P_CH} or {P_CR} or {P_DI} or {P_ED} or {P_ER} or {P_LE} or {P_NO} or {P_PA} or {P_PR} or {P_RE} or {P_SH} or {P_RP} or {P_WP} or {D_CP} or {J_CP})","Conference");
+	//doctypes[index++] = new Field("({J_BZ} or {D_BZ} or {D_AR} or {D_CP} or {D_LE} or {D_NO} or {B_BZ} or {K_BZ} or {M_BZ} or {P_BZ} or {R_BZ})","Business article");
+	//doctypes[index++] = new Field("(AB or {J_AB} or {R_AB} or {P_AB} or {B_AB} or {D_AB} or {K_AB} or {M_AB})", "Abstract");
+	//doctypes[index++] = new Field("Other", "Other");
   }
 
   return doctypes;
-
+  
 }
 
 
