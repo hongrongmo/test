@@ -1324,6 +1324,34 @@ function clearAlldb()
 
     return alink;
   }
+  function OpenLookup_AUS()
+  {
+    OpenLookup("AUS");
+  }
+  function OpenLookup_AF()
+  {
+    OpenLookup("AF");
+  }
+  function OpenLookup_CVS()
+  {
+    OpenLookup("CVS");
+  }
+  function OpenLookup_ST()
+  {
+    OpenLookup("ST");
+  }
+  function OpenLookup_PN()
+  {
+    OpenLookup("PN");
+  }
+  function OpenLookup_LA()
+  {
+    OpenLookup("LA");
+  }
+  function OpenLookup_PC()
+  {
+    OpenLookup("PC");
+  }
 
   function flipImage(selectedDbMask)
   {
@@ -1348,80 +1376,79 @@ function clearAlldb()
       bdiv.style.display = "none";
       return;
     }
-    
+
     bdiv.style.display = "block";
 
     if((selectedDbMask & CBN) != CBN)
     {
-            //AU	
-            link = newLookupLink();
-            link.onclick=OpenLookup_AUS;
+      //AU
+      link = newLookupLink();
+      link.onclick=OpenLookup_AUS;
 
-	    if((selectedDbMask & US_PATENTS) != US_PATENTS &&
-		(selectedDbMask & EU_PATENTS) != EU_PATENTS &&
-		(selectedDbMask & EPT) != EPT)
-	    {
-	      link.appendChild(document.createTextNode("Author"));
-	    }
-	    else if(selectedDbMask == US_PATENTS ||
-		    selectedDbMask == EU_PATENTS ||
-		    selectedDbMask == US_EU_PATENTS ||
-		    selectedDbMask == EPT)
-	    {
-	      link.appendChild(document.createTextNode("Inventor"));
-	    }
-	    else
-	    {
-	      link.appendChild(document.createTextNode("Author/Inventor"));
-	    }
-	    
-	    adiv.appendChild(link);
-	    adiv.appendChild(document.createElement("br"));
+      if((selectedDbMask & US_PATENTS) != US_PATENTS &&
+        (selectedDbMask & EU_PATENTS) != EU_PATENTS &&
+        (selectedDbMask & EPT) != EPT)
+      {
+        link.appendChild(document.createTextNode("Author"));
+      }
+      else if(selectedDbMask == US_PATENTS ||
+        selectedDbMask == EU_PATENTS ||
+        selectedDbMask == US_EU_PATENTS ||
+        selectedDbMask == EPT)
+      {
+        link.appendChild(document.createTextNode("Inventor"));
+      }
+      else
+      {
+        link.appendChild(document.createTextNode("Author/Inventor"));
+      }
+
+      adiv.appendChild(link);
+      adiv.appendChild(document.createElement("br"));
     }
-    
-    
+
+
     if((selectedDbMask & CBN) != CBN)
     {
-            //AF
-            link = newLookupLink();
-            link.onclick=OpenLookup_AF;
-            
-	    if((selectedDbMask & US_PATENTS) != US_PATENTS &&
-	    (selectedDbMask & EU_PATENTS) != EU_PATENTS &&
-	    (selectedDbMask & EPT) != EPT)
-	    {
-		link.appendChild(document.createTextNode("Author affiliation"));
-	    }
-	    else if(selectedDbMask == US_PATENTS ||
-	    selectedDbMask == EU_PATENTS ||
-	    selectedDbMask == EPT ||
-	    selectedDbMask == US_EU_PATENTS)
-	    {
-		link.appendChild(document.createTextNode("Assignee"));
-	    }
-	    else
-	    {
-		link.appendChild(document.createTextNode("Affiliation/Assignee"));
-		
-	    }
-	    
-	   adiv.appendChild(link);
-	   adiv.appendChild(document.createElement("br"));
+      //AF
+      link = newLookupLink();
+      link.onclick=OpenLookup_AF;
+
+      if((selectedDbMask & US_PATENTS) != US_PATENTS &&
+          (selectedDbMask & EU_PATENTS) != EU_PATENTS &&
+          (selectedDbMask & EPT) != EPT)
+      {
+        link.appendChild(document.createTextNode("Author affiliation"));
+      }
+      else if(selectedDbMask == US_PATENTS ||
+              selectedDbMask == EU_PATENTS ||
+              selectedDbMask == EPT ||
+              selectedDbMask == US_EU_PATENTS)
+      {
+        link.appendChild(document.createTextNode("Assignee"));
+      }
+      else
+      {
+        link.appendChild(document.createTextNode("Affiliation/Assignee"));
+      }
+
+      adiv.appendChild(link);
+      adiv.appendChild(document.createElement("br"));
     }
-    
+
     //CT
     if((selectedDbMask & US_PATENTS) != US_PATENTS &&
        (selectedDbMask & EU_PATENTS) != EU_PATENTS)
     {
         link = newLookupLink();
         link.onclick=OpenLookup_CVS;
-        
+
         link.appendChild(document.createTextNode("Controlled term"));
         adiv.appendChild(link);
         adiv.appendChild(document.createElement("br"));
     }
 
-    //ST	
+    //ST
     if((selectedDbMask & US_PATENTS) != US_PATENTS &&
        (selectedDbMask & EU_PATENTS) != EU_PATENTS &&
        (selectedDbMask & EPT) != EPT &&
@@ -1429,7 +1456,7 @@ function clearAlldb()
     {
         link = newLookupLink();
         link.onclick=OpenLookup_ST;
-        
+
         link.appendChild(document.createTextNode("Serial title"));
         adiv.appendChild(link);
         adiv.appendChild(document.createElement("br"));
@@ -1446,12 +1473,12 @@ function clearAlldb()
     {
         link = newLookupLink();
         link.onclick=OpenLookup_PN;
-    
+
         link.appendChild(document.createTextNode("Publisher"));
         adiv.appendChild(link);
         adiv.appendChild(document.createElement("br"));
     }
-    
+
     //PC
     if((selectedDbMask & INS) != INS && (selectedDbMask & CPX) != CPX &&
        (selectedDbMask & GEO) != GEO &&
@@ -1465,12 +1492,12 @@ function clearAlldb()
     {
         link = newLookupLink();
         link.onclick=OpenLookup_PC
-    
+
         link.appendChild(document.createTextNode("Country"));
         adiv.appendChild(link);
         adiv.appendChild(document.createElement("br"));
     }
-        
+
   }
 
 function change(db)
@@ -1530,9 +1557,9 @@ function updateUI(dbMask, sYear, strYear, eYear, sec1, sec2, sec3, dtype, trtype
     if(!(dbMask == 8) && !(dbMask == 16))
     {
         flipImage(dbMask);
-	var adiv = document.getElementById("lookups");
+        var adiv = document.getElementById("lookups");
         adiv.appendChild(document.createElement("br"));
-        
+
         searchin = generateSection(dbMask);
         doctypes = generateDoctypes(dbMask);
         treattypes = generateTreattypes(dbMask);
@@ -1582,7 +1609,7 @@ function updateUI(dbMask, sYear, strYear, eYear, sec1, sec2, sec3, dtype, trtype
 
 var lookupWind;
 
-function OpenLookup(sessionId,lookupindex)
+function OpenLookup(lookupindex)
 {
     selectedDbMask = calculateMask(document.quicksearch.database);
 
@@ -1598,7 +1625,7 @@ function OpenLookup(sessionId,lookupindex)
     else
     {
         var tabloc;
-        tabloc="/controller/servlet/Controller?EISESSION="+sessionId+"&CID=lookupIndexes&database="+(selectedDbMask)+"&lookup="+(lookupindex)+"&searchtype=Quick";
+        tabloc="/controller/servlet/Controller?CID=lookupIndexes&database="+(selectedDbMask)+"&lookup="+(lookupindex)+"&searchtype=Quick";
 
         if (tabloc)
         {
