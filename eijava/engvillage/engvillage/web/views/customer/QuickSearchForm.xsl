@@ -67,7 +67,7 @@
     <xsl:variable name="END-YEAR">
     	<xsl:value-of select="SESSION-DATA/END-YEAR"/>
     </xsl:variable>
-    
+
     <xsl:variable name="YEAR-STRING">
     	<xsl:value-of select="YEAR-STRING"/>
     </xsl:variable>
@@ -80,11 +80,11 @@
 		<title>Engineering Village - Quick Search</title>
 		<SCRIPT TYPE="text/javascript" LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
 	</head>
-  <body bgcolor="#FFFFFF" topmargin="0" marginheight="0" marginwidth="0" 
+  <body bgcolor="#FFFFFF" topmargin="0" marginheight="0" marginwidth="0"
   		>
-	 
+
   <center>
-  
+
 	 <!-- INCLUDE THE HEADER -->
     <xsl:apply-templates select="HEADER">
       <xsl:with-param name="SESSION-ID" select="$SESSION-ID"/>
@@ -126,7 +126,7 @@
   			  	<xsl:with-param name="SESSION-ID" select="$SESSION-ID"/>
   				<xsl:with-param name="SELECTED-DB" select="$DATABASE"/>
   				<xsl:with-param name="YEAR-STRING" select="$YEAR-STRING"/>
-  				
+
   		  </xsl:apply-templates>
       </xsl:otherwise>
   		<!-- End of Combined  Quick Search form -->
@@ -140,18 +140,16 @@
 		</xsl:apply-templates>
 
   </center>
-  
-		<!-- ADDED BY JM -->
-    <xsl:text disable-output-escaping="yes">
-	  <![CDATA[
-        <script type="text/javascript"  language="javascript">
-          if(typeof(document.quicksearch.searchWord1) != 'undefined') {
-            document.quicksearch.searchWord1.focus();
-	        }
-				</script>
-		]]>
-    </xsl:text>
 
+		<!-- ADDED BY JM -->
+    <script type="text/javascript"  language="javascript">
+      <xsl:comment>
+      if(typeof(document.quicksearch.searchWord1) != 'undefined') {
+        document.quicksearch.searchWord1.focus();
+      }
+      flipImage(<xsl:value-of select="$DATABASE"/>);
+      // </xsl:comment>
+    </script>
 	</body>
 </html>
 
