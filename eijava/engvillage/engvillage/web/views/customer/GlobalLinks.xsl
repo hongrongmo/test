@@ -29,11 +29,9 @@
 <xsl:template match="GLOBAL-LINKS">
  <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Robohelp.js"/>
 
- <xsl:text disable-output-escaping="yes">
-    <![CDATA[
-    <xsl:comment>
     <script language="javascript">
-
+    <xsl:comment>
+    <![CDATA[
     function help(database)
     {
        var url = null;
@@ -41,10 +39,9 @@
        document.location = url;
        javascript:makeUrl('Welcome_to_Engineering_Village_Help.htm');
     }
-   </script>
-   </xsl:comment>
     ]]>
-  </xsl:text>
+   // </xsl:comment>
+   </script>
 	<xsl:param name="SESSION-ID"/>
 	<xsl:param name="SELECTED-DB"/>
 	<xsl:param name="LINK"/>
