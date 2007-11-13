@@ -671,39 +671,6 @@
 <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Login.js"/>
 <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/RemoteDbLink_V5.js"/>
 <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Robohelp.js"/>
-  <script language="Javascript">
-  <xsl:comment>
-  function OpenLookup_AUS()
-  {
-    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","AUS");
-  }
-  function OpenLookup_AF()
-  {
-    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","AF");
-  }
-  function OpenLookup_CVS()
-  {
-    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","CVS");
-  }
-  function OpenLookup_ST()
-  {
-    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","ST");
-  }
-  function OpenLookup_PN()
-  {
-    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","PN");
-  }
-  function OpenLookup_LA()
-  {
-    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","LA");
-  }
-  function OpenLookup_PC()
-  {
-    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","PC");
-  }   
-  flipImage(<xsl:value-of select="$SELECTED-DB"/>);
-  // </xsl:comment>
-  </script>
   </xsl:template>
 
 </xsl:stylesheet>
