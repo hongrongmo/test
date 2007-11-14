@@ -16,6 +16,7 @@ import org.ei.domain.sort.SortField;
 
 public final class DatabaseConfig
 {
+
     public static final int CPX_MASK 	= 1;
     public static final int INS_MASK  	= 2;
     public static final int NTI_MASK  	= 4;
@@ -34,7 +35,7 @@ public final class DatabaseConfig
     public static final int REF_MASK  	= 65536;
     public static final int PAG_MASK  	= 131072;
     public static final int CBF_MASK  	= 262144;
-
+	public static final int UPT_MASK 	= 524288;
 
 	public static final String C84_PREF = "c84";
 	public static final String CBF_PREF = "zbf";
@@ -78,7 +79,7 @@ public final class DatabaseConfig
 		dtName.put("Company", "Company Report");
 		dtName.put("Stockbroker", "Stockbroker Report");
 		dtName.put("Market", "Market Research Report");
-		dtName.put("Press", "Press");	
+		dtName.put("Press", "Press");
     }
 
     public static final String SESSION_POOL = "session";
@@ -160,15 +161,15 @@ public final class DatabaseConfig
         }
         return title;
     }
-    
-    public String getAuthorityCode(String auCode) 
-    {  	
-        if ((auCode != null) && (auCode.length() > 0)) 
+
+    public String getAuthorityCode(String auCode)
+    {
+        if ((auCode != null) && (auCode.length() > 0))
         {
             Database d = (Database) databaseTable.get(EPT_PREF);
             if(d != null)
             {
-                if ((auCode.indexOf("DQD") > -1) || (auCode.indexOf("dqd") > -1)) 
+                if ((auCode.indexOf("DQD") > -1) || (auCode.indexOf("dqd") > -1))
                 {
                 	auCode = auCode.replaceAll("DQD|dqd", ".");
                 }
@@ -180,7 +181,7 @@ public final class DatabaseConfig
         }
         return auCode;
     }
-    
+
 
 
     public String getClassTitle(String clsCode)
