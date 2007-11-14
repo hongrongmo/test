@@ -214,7 +214,7 @@ public abstract class Database implements Comparable
     public int getEndYear() { return SearchForm.ENDYEAR; }
 
     public abstract String getID();
-    
+
     public abstract String getLegendID();
 
     public abstract String getName();
@@ -222,6 +222,8 @@ public abstract class Database implements Comparable
     public abstract String getShortName();
 
     public abstract String getIndexName();
+
+    public abstract String getSingleCharName();
 
     public abstract int getMask();
 
