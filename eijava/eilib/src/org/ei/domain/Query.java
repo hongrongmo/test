@@ -48,7 +48,7 @@ public class Query implements Comparable
     protected static Log log = LogFactory.getLog(Query.class);
 
     private static final String[] stemFields = { "ALL", "KY", "TI", "AB", "FL", "CV", "AV", "AF", "ST", "MH", "CF", "PN","BI" };
-    
+
     private static final String[] allFields = { "RGI", "PU", "PM", "PE", "VO", "SU", "SP", "DB", "AN", "RN", "AG", "AV", "CT", "CO", "NT", "PA", "PI", "WK", "YR", "ALL", "KY", "AF", "PN", "ST", "MH", "CL", "CN", "TI", "AB", "AU", "CC", "CV", "FL", "SN", "DT", "BN", "TR", "LA", "CF", "DI", "MI", "NI", "CI", "AI",  "OC","BI" , "PEC" , "PUC" , "PAC", "PK" , "PID" , "PCI","PRN","SIC","PEX","PAM","DOI","PFD","BKS","BKT","PD","CR","PC","IP", "IS", "EB", "CM", "GC", "RC","SI", "VOM", "CP", "SC", "GD", "IC","CE", "DS", "SD", "SO", "PPA",
     	//EnCompass fields
     	"AJ", "PRD", "PRC", "AP", "AD", "AC", "EY", "PT",  "LT", "CVA", "CVP", "CVN", "CVM", "CVMN", "CVMA", "CVMP", "DG" };
@@ -65,6 +65,7 @@ public class Query implements Comparable
     public void setRefinements(Refinements refinements) { queryrefinements = refinements; }
 
     static {
+		quickSearchDiplayOptions.put("DT:AB", "Abstract");
         quickSearchDiplayOptions.put("DT:JA", "Journal article");
         quickSearchDiplayOptions.put("DT:CA", "Conference article");
         quickSearchDiplayOptions.put("DT:CP", "Conference proceeding");
@@ -260,7 +261,7 @@ public class Query implements Comparable
     {
 
     }
-    
+
     public Query(String xmlString) throws HistoryException {
         try {
             System.out.println("*In Query xmlString");
@@ -278,7 +279,7 @@ public class Query implements Comparable
         this.config = config;
         this.credentials = credents;
     }
-    
+
     public Query(QueryWriter sqw, DatabaseConfig config, String[] credentials, String xmlString) throws HistoryException {
         try {
             this.searchQueryWriter = sqw;
@@ -291,7 +292,7 @@ public class Query implements Comparable
             throw new HistoryException(e);
         }
     }
-    
+
 
     private void loadFromXML(String xmlString) throws HistoryException {
         try {
