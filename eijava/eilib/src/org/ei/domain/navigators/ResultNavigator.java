@@ -118,8 +118,6 @@ public class ResultNavigator
                     // make sure db modifier has a value for looking up db
                     if(amod.getValue() != null)
                     {
-                        System.out.println(" amod.getValue() " + amod.getValue());
-
                         Database adb = dbConfig.getDatabase(amod.getValue());
                         if(adb == null)
                         {
@@ -159,7 +157,7 @@ public class ResultNavigator
 
     private void adjustComposition() {
 
-        System.out.println(" adjustComposition w/ mask = " + getCompositionMask());
+        //System.out.println(" adjustComposition w/ mask = " + getCompositionMask());
 
         boolean m_booksOnly = (getCompositionMask() == DatabaseConfig.PAG_MASK);
         boolean m_cbnbOnly = (getCompositionMask() == DatabaseConfig.CBN_MASK);
@@ -341,7 +339,6 @@ public class ResultNavigator
           }
           else
           {
-            System.out.println("removing clnav ");
             fastnavigators.remove(anav);
           }
         }
@@ -450,8 +447,6 @@ public class ResultNavigator
         anav = getNavigatorByName(EiNavigator.PID);
         if(anav != null)
         {
-          System.out.println(" PID ");
-
           // IPC Code and Companies
           if(m_cbnbOnly)
           {
@@ -467,13 +462,8 @@ public class ResultNavigator
           }
           else
           {
-            System.out.println(" removing PID ");
             fastnavigators.remove(anav);
           }
-        }
-        else
-        {
-          System.out.println(" PID is null");
         }
 
         // PEC
@@ -997,7 +987,7 @@ public class ResultNavigator
             while(itrNavs.hasNext())
             {
                 String navigatorname = (String) itrNavs.next();
-              System.out.println(" navigatorname " + navigatorname);
+
                 List mods = (List) navs.get(navigatorname);
                 if((mods != null) && EiNavigator.DB.equalsIgnoreCase(navigatorname))
                 {
@@ -1138,7 +1128,7 @@ public class ResultNavigator
                 }
                 else
                 {
-                    System.out.println(" skipped NULL Fast INavigator ==> " + navigatorname);
+                    //System.out.println(" skipped NULL Fast INavigator ==> " + navigatorname);
                 }
             } // while
 
