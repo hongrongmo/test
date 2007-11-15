@@ -435,7 +435,7 @@ public class ResultNavigator
             fastnavigators.add(anav);
           }
           //else if((mask :: cpx || mask :: cbf || mask :: ins || mask :: nti || mask :: geo || mask :: cbn || mask :: upa || mask :: eup || mask :: elt || mask :: pch) & (mask !: pag || mask !: ept))
-          else if((m_compendex || m_inspec || m_ntis || m_geobase || m_cbnb || m_uspatents || m_eupatents || m_encompasslit || m_paperchem) && !(m_books || m_encompasspat))
+          else if((m_compendex || m_inspec || m_ntis || m_geobase || m_cbnb || m_chimica || m_uspatents || m_eupatents || m_encompasslit || m_paperchem) && !(m_books || m_encompasspat))
           {
             anav.setDisplayname("Country");
           }
