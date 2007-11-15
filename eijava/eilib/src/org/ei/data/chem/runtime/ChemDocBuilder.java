@@ -1056,8 +1056,8 @@ public class ChemDocBuilder implements DocumentBuilder {
 			        ht.put(Keys.PAGE_RANGE, new PageRange(StringUtil.replaceNullWithEmptyString(rset.getString("PAG")), perl));
                 }
 
-                if (rset.getString("EBT") != null) {
-					ht.put(Keys.CONTROLLED_TERMS,new XMLMultiWrapper2(CHEM_CONTROLLED_TERMS,setCVS(rset.getString("EBT"))));
+                if (rset.getString("CTM") != null) {
+					ht.put(Keys.CONTROLLED_TERMS,new XMLMultiWrapper2(CHEM_CONTROLLED_TERMS,setCVS(rset.getString("CTM"))));
                 }
 
                 //ISN
