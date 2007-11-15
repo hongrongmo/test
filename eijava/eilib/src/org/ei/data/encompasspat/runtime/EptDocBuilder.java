@@ -39,14 +39,14 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
     public static String PAT_TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright 2007 Elsevier Engineering Information, Inc.";
     public static String PAT_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2007 Elsevier Engineering Information, Inc.";
     public static String PROVIDER = "EnCompassPAT";
-    private static final Key EPT_CONTROLLED_TERMS = new Key(Keys.CONTROLLED_TERMS, "EnCompassPAT controlled terms");
+    private static final Key EPT_CONTROLLED_TERMS = new Key(Keys.CONTROLLED_TERMS, "Controlled terms");
     private static final Key LINKED_TERMS_HOLDER = new Key(Keys.LINKED_TERMS_HOLDER, "Linked terms");
-    private static final Key EPT_MAJOR_TERMS = new Key(Keys.MAJOR_TERMS, "EnCompassPat major terms");
-    private static final Key EPT_CLASS_CODES = new Key(Keys.CLASS_CODES_MULTI, "EnCompassPAT classification codes");
+    private static final Key EPT_MAJOR_TERMS = new Key(Keys.MAJOR_TERMS, "Major terms");
+    private static final Key EPT_CLASS_CODES = new Key(Keys.CLASS_CODES_MULTI, "Classification codes");
 
-    private static final Key[] CITATION_KEYS = { Keys.DOCID,Keys.PRIORITY_INFORMATION, Keys.TITLE, Keys.AUTHORS, Keys.PATASSIGN, Keys.AUTH_CODE, Keys.UPAT_PUBDATE, Keys.PROVIDER, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT, Keys.LANGUAGE, Keys.NO_SO };
+    private static final Key[] CITATION_KEYS = { Keys.DOCID,Keys.PATENT_INFORMATION,Keys.PRIORITY_INFORMATION, Keys.TITLE, Keys.AUTHORS, Keys.PATASSIGN, Keys.AUTH_CODE, Keys.UPAT_PUBDATE, Keys.PROVIDER, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT, Keys.LANGUAGE, Keys.NO_SO };
     private static final Key[] ABSTRACT_KEYS =
-        { Keys.DOCID, Keys.PATENT_NUMBER, Keys.DERWENT_NO, Keys.TITLE, Keys.AUTHORS, Keys.PATASSIGN, Keys.PUBLICATION_YEAR, Keys.UPAT_PUBDATE, Keys.LANGUAGE, Keys.ABSTRACT, Keys.PATAPP_INFO, Keys.PRIORITY_INFORMATION, Keys.CAS_REGISTRY_CODES, Keys.INTERNATCL_CODE, EPT_MAJOR_TERMS, EPT_CONTROLLED_TERMS, Keys.NO_SO, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT, Keys.PROVIDER };
+        { Keys.DOCID, Keys.PATENT_NUMBER, Keys.DERWENT_NO, Keys.TITLE, Keys.AUTHORS, Keys.PATEPTASSIGN, Keys.PUBLICATION_YEAR, Keys.UPAT_PUBDATE, Keys.LANGUAGE, Keys.ABSTRACT, Keys.PATAPP_INFO,Keys.PATENT_INFORMATION, Keys.PRIORITY_INFORMATION, Keys.CAS_REGISTRY_CODES, Keys.INTERNATCL_CODE, EPT_MAJOR_TERMS, EPT_CONTROLLED_TERMS, Keys.NO_SO, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT, Keys.PROVIDER };
     private static final Key[] LINKED_TERM_KEYS = { Keys.LINKED_TERMS };
 
 
@@ -392,11 +392,12 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                     Contributors authors = new Contributors(Keys.AUTHORS, setContributors(lstInv, Keys.AUTHORS));
                     ht.put(Keys.AUTHORS, authors);
                 }
-                //AF- CS
-                if (lstAsg != null && lstAsg.size() > 0) {
-                    ht.put(Keys.PATASSIGN, new XMLMultiWrapper(Keys.PATASSIGN, setAssignees(lstAsg)));
-                }
 
+                if (lstAsg != null && lstAsg.size() > 0) {
+                    ht.put(Keys.PATEPTASSIGN, new XMLMultiWrapper(Keys.PATEPTASSIGN, setAssignees(lstAsg)));
+                }
+                
+               
                 ht.put(Keys.NO_SO, new XMLWrapper(Keys.NO_SO, "NO_SO"));
 
                 if (rset.getString("PD") != null) {
@@ -436,9 +437,15 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                     ht.put(Keys.PATAPP_INFO, new XMLWrapper(Keys.PATAPP_INFO, formatPriorityInfo(removeSemiColon(rset.getString("LL")))));
                 }
 
-                //add app priority info
+                //add patent info
+                if (rset.getString("PAT") != null) 
+                {
+                    ht.put(Keys.PATENT_INFORMATION, new XMLWrapper(Keys.PATENT_INFORMATION, formatPriorityInfo(removeSemiColon(rset.getString("PAT")))));
+                }
+                
+                //add pat priority info
                 if (rset.getString("PRI") != null) {
-                    ht.put(Keys.PRIORITY_INFORMATION, new XMLWrapper(Keys.PRIORITY_INFORMATION, formatPriorityInfo(removeSemiColon(rset.getString("PRI")))));
+                    ht.put(Keys.PRIORITY_INFORMATION, new XMLWrapper(Keys.PRIORITY_INFORMATION, removeSemiColon(formatPriorityInfo(rset.getString("PRI")), ";","|")));
                 }
                 //AB
                 String abs = null;
@@ -762,9 +769,10 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
 
                 }
                 //AF- CS
-                if (lstAsg != null && lstAsg.size() > 0) {
-                    ht.put(new Key(Keys.PATASSIGN,"Patent assignee"), new XMLMultiWrapper(new Key(Keys.PATASSIGN,"Patent assignee"), setAssignees(lstAsg)));
 
+                if (lstAsg != null && lstAsg.size() > 0) 
+                {
+                    ht.put(new Key(Keys.PATASSIGN,"Patent assignee"), new XMLMultiWrapper(new Key(Keys.PATASSIGN,"Patent assignee"), setAssignees(lstAsg)));
                 }
 
                 if (rset.getString("ATM") != null) {
@@ -1312,9 +1320,10 @@ System.out.println(" -- doc builder 7");
 
                 }
                 
-                //add app priority info
-                if (rset.getString("PAT") != null) {
-                    ht.put(Keys.PRIORITY_INFORMATION, new XMLWrapper(Keys.PRIORITY_INFORMATION, formatPriorityInfo(removeSemiColon(rset.getString("PAT")))));
+                //add patent info
+                if (rset.getString("PAT") != null) 
+                {
+                    ht.put(Keys.PATENT_INFORMATION, new XMLWrapper(Keys.PATENT_INFORMATION, formatPriorityInfo(removeSemiColon(rset.getString("PAT")))));
                 }
                 
                 //PY
@@ -1476,6 +1485,15 @@ System.out.println(" -- doc builder 7");
     public String removeSemiColon(String str) {
 
         String result = perl.substitute("s/,//g", str);
+
+        return result;
+    }
+    
+    public String removeSemiColon(String str, String ch, String rplCh) 
+    {
+        
+
+        String result = perl.substitute("s/"+ch+"/"+rplCh+"/g", str);
 
         return result;
     }
