@@ -55,13 +55,22 @@
 
       <xsl:apply-templates select="MT"/>
       <xsl:apply-templates select="VT"/>
+ 	  
+ 	  <xsl:apply-templates select="PAS"/>
+ 	  <xsl:apply-templates select="PASM"/>
 
-      <xsl:apply-templates select="PAS"/>
-      <xsl:apply-templates select="PASM"/>
+ 	   <!-- EPT fields -->
+      <xsl:apply-templates select="EASM"/>
+      <xsl:apply-templates select="PINFO"/>
+      <xsl:apply-templates select="PAPIM"/>
+      <!--end of  EPT fields -->
+      
   <!--    <xsl:apply-templates select="UPD"/> -->
       <xsl:apply-templates select="PAN"/>
       <xsl:apply-templates select="PM"/>
       <xsl:apply-templates select="PM1"/>
+      <xsl:apply-templates select="PIM"/>
+      
 
     <xsl:apply-templates select="UPD"/>
 
@@ -159,7 +168,6 @@
       <xsl:apply-templates select="PIDM8"/>
       <xsl:apply-templates select="PUCM"/>
       <xsl:apply-templates select="PECM"/>
-
       <xsl:apply-templates select="COL"/>
 
       <BR/>
@@ -173,7 +181,36 @@
       <script language="JavaScript" type="text/javascript" src="/engresources/js/wz_tooltip.js"></script>
 
     </xsl:template>
-
+ <!-- EPT Templates --> 
+ 
+     <xsl:template match="PINFO">
+        <a CLASS="MedBlackText"><b> Patent information:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/></a>
+    </xsl:template>  
+    
+    <xsl:template match="PAPIM">
+        <a CLASS="MedBlackText"><b> Application information:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/></a>
+    </xsl:template> 
+    
+    <xsl:template match="PIM">
+       <a CLASS="MedBlackText"><b> Priority information:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/> </a>
+    </xsl:template>
+        
+    <xsl:template match="EASM">
+    	<a CLASS="MedBlackText"><b> Patent assignee: </b></a><xsl:apply-templates />    
+    </xsl:template>
+    
+    <xsl:template match="EAS">
+      <xsl:call-template name="LINK">
+        <xsl:with-param name="TERM"><xsl:value-of select="normalize-space(text())"/></xsl:with-param>
+        <xsl:with-param name="FIELD">PPA</xsl:with-param>
+        <xsl:with-param name="NAME"><xsl:value-of select="name(.)"/></xsl:with-param>
+      </xsl:call-template>
+      <xsl:if test="not(position()=last())">
+        <A CLASS="SmBlackText">&#160; - &#160;</A>
+      </xsl:if>
+    </xsl:template>
+    
+<!-- End of  EPT Templates --> 
 <!-- Book Templates -->
     <xsl:template match="BTI">
       <a CLASS="MedBlackText"><b><xsl:value-of select="." disable-output-escaping="yes"/></b></a>
@@ -298,6 +335,10 @@
     </xsl:template>
 
     <xsl:template match="AUS|EDS|IVS">
+    <!-- if EPT display Inventor(s): -->   
+    	<xsl:if test="(ancestor::EI-DOCUMENT/DOC/DB/DBMASK='2048')">
+        	<a CLASS="MedBlackText"><b> Inventor(s): </b></a>
+      	</xsl:if>     	
       <xsl:apply-templates />
     </xsl:template>
 
@@ -343,16 +384,28 @@
     <xsl:template match="PN">
       <xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
     </xsl:template>
-
+    
+    
     <xsl:template match="PAS">
       <b> Assignee:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
     </xsl:template>
     <xsl:template match="PASM">
-      <b> Assignee:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
+    	<xsl:choose>
+      		<xsl:when test="not(ancestor::EI-DOCUMENT/DOC/DB/DBMASK='2048')">
+      		<b> Assignee:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
+      </xsl:when>
+  <!--    
+      <xsl:when test="(ancestor::EI-DOCUMENT/DOC/DB/DBMASK='2048')">
+        <b> Pat Assignee:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>     
+      </xsl:when>
+  -->
+    </xsl:choose>
     </xsl:template>
  <!-- upt fields  -->
     <xsl:template match="PAP">
+    <a CLASS="MedBlackText">
     <br/><b> Patent number:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
+    </a>
     </xsl:template>
 
     <xsl:variable name ="PPN" >
@@ -371,12 +424,15 @@
       <xsl:if test="not($PAP)">
         <br/>
       </xsl:if>
-      <b> Priority Number:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
+       <a CLASS="MedBlackText">
+      <b> Priority Number:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/></a>
     </xsl:template>
     <!-- upt field -->
 
     <xsl:template match="PI">
+     <a CLASS="MedBlackText">
       <b> Priority Number:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
+      </a>
     </xsl:template>
 
 
@@ -384,18 +440,24 @@
       <xsl:if test="(not($PAP) and not($PPN))" >
         <br/>
       </xsl:if>
+      <a CLASS="MedBlackText">
       <b> Application number:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
+     </a>
     </xsl:template>
 
     <xsl:template match="PM">
+    <a CLASS="MedBlackText">
       <xsl:if test="(not($PAP) and not($PPN) and not($PAN))" >
         <br/>
       </xsl:if>
       <b> Publication Number:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
+    </a>
     </xsl:template>
-    <xsl:template match="PM1">
+      <xsl:template match="PM1">
+      <a CLASS="MedBlackText">
         <b>Publication Number:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
-    </xsl:template>
+       </a>
+      </xsl:template>
 
     <xsl:variable name = "IPC">
       <xsl:value-of select = "IPC"/>
@@ -415,16 +477,21 @@
     <!-- upt fields -->
 
     <xsl:template match="PFD">
-      <xsl:text>&#xD;&#xA;</xsl:text><br/>
+    <a CLASS="MedBlackText"><xsl:text>&#xD;&#xA;</xsl:text><br/>
       <b> Filing date:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
+    </a>
     </xsl:template>
     <xsl:template match="PPD">
+     <a CLASS="MedBlackText">
       <b> Publication date:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
+     </a>
     </xsl:template>
 
     <!-- upt pub date -->
     <xsl:template match="UPD">
+     <a CLASS="MedBlackText">
       <b> Publication date:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
+     </a>
     </xsl:template>
 
     <xsl:template match="YR">
@@ -456,7 +523,9 @@
     </xsl:template>
 
     <xsl:template match="LA">
+    <a CLASS="MedBlackText">
       <xsl:text> </xsl:text><b>Language:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text> </xsl:text>
+    </a>
     </xsl:template>
 
     <xsl:template match="SN">
@@ -517,11 +586,15 @@
     </xsl:template>
 
     <xsl:template match="COPA">
+	<a CLASS="MedBlackText">
       <b> Country of application:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
+    </a>
     </xsl:template>
     <xsl:template match="CPUB">
+    <a  CLASS="MedBlackText">
       <xsl:text>&#xD;&#xA;</xsl:text><br/>
       <b>Country of publication: </b><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
+    </a>
     </xsl:template>
 
     <xsl:template match="FTTJ">
@@ -632,9 +705,9 @@
       <span CLASS="SmBlackText"><xsl:text> (</xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/><xsl:text>)</xsl:text></span>
     </xsl:template>
 
-    <xsl:template match="AU|ED|IV">
+      <xsl:template match="AU|ED|IV">
       <xsl:variable name="NAME"><xsl:value-of select="normalize-space(text())"/></xsl:variable>
-
+      
       <!-- If the name does not contain the text Anon -->
       <xsl:if test="boolean(not(contains($NAME,'Anon')))">
         <xsl:call-template name="LINK">
@@ -658,6 +731,8 @@
         <xsl:text> </xsl:text>
       </xsl:if>
     </xsl:template>
+    
+
 
     <xsl:template match="CM|CP">
       <xsl:call-template name="LINK">
