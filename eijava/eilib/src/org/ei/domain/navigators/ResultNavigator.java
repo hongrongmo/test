@@ -199,7 +199,7 @@ public class ResultNavigator
             anav.setDisplayname("Industrial sector descriptors");
           }
           //if(mask == upa || mask == eup || mask == ept || mask == upa + eup || mask == upa + ept || mask == eup + ept || mask == upa + eup + ept)
-          if((m_uspatents || m_eupatents|| m_encompasspat)&& !(m_books || m_cbnb || m_compendex || m_inspec || m_ntis || m_geobase || m_encompasslit || m_paperchem || m_chimica))
+          else if((m_uspatents || m_eupatents|| m_encompasspat)&& !(m_books || m_cbnb || m_compendex || m_inspec || m_ntis || m_geobase || m_encompasslit || m_paperchem || m_chimica))
           {
             anav.setDisplayname("Assignee");
           }
