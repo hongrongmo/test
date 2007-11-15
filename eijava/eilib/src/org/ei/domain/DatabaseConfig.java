@@ -35,12 +35,12 @@ public final class DatabaseConfig
     public static final int REF_MASK  	= 65536;
     public static final int PAG_MASK  	= 131072;
     public static final int CBF_MASK  	= 262144;
-	public static final int UPT_MASK 	= 524288;
+    public static final int UPT_MASK 	= 524288;
 
-	public static final String C84_PREF = "c84";
-	public static final String CBF_PREF = "zbf";
-	public static final String EPT_PREF = "ept";
-	public static final int CBF_ENDYEAR  = 1969;
+    public static final String C84_PREF = "c84";
+    public static final String CBF_PREF = "zbf";
+    public static final String EPT_PREF = "ept";
+    public static final int CBF_ENDYEAR  = 1969;
 
     protected static Log log = LogFactory.getLog(DatabaseConfig.class);
     private static Hashtable dtName = new Hashtable();
@@ -59,27 +59,47 @@ public final class DatabaseConfig
         dtName.put("PA", "Patent");
         dtName.put("UP", "Unpublished paper");
         dtName.put("CORE", "CORE");
-    //upt dt
+        //upt dt
         dtName.put("AP", "All patents");
         dtName.put("UA", "US Applications");
         dtName.put("UG", "US Granted");
         dtName.put("EA", "European Applications");
         dtName.put("EG", "European Granted");
+
         // pag (books)
         dtName.put("PAGE","Page");
         dtName.put("BOOK","Book");
-        // paper
+
+        // paperchem
         dtName.put("(CA or CP)","Conferences");
-		dtName.put("MC or MR or RC or RR or DS or UP", "Other documents");
-		//CBNB
-		dtName.put("Journal", "Journal article");
-		dtName.put("Advertizement", "Advertisement");
-		dtName.put("Book", "Book");
-		dtName.put("Directory", "Directory");
-		dtName.put("Company", "Company Report");
-		dtName.put("Stockbroker", "Stockbroker Report");
-		dtName.put("Market", "Market Research Report");
-		dtName.put("Press", "Press");
+        dtName.put("MC or MR or RC or RR or DS or UP", "Other documents");
+
+        //CBNB
+        dtName.put("JOURNAL", "Journal article");
+        dtName.put("ADVERTIZEMENT", "Advertisement");
+        dtName.put("BOOK", "Book");
+        dtName.put("DIRECTORY", "Directory");
+        dtName.put("COMPANY", "Company Report");
+        dtName.put("STOCKBROKER", "Stockbroker Report");
+        dtName.put("MARKET", "Market Research Report");
+        dtName.put("PRESS", "Press");
+        dtName.put("PRESS RELEASE", "Press Release");
+
+        // Chimica
+        dtName.put("ARTICLE","Article");
+        dtName.put("BOOK","Book");
+        dtName.put("BOOK SERIES","Book Series");
+        dtName.put("CONFERENCE PAPER","Conference Paper");
+        dtName.put("CONFERENCE REVIEW","Conference Review");
+        dtName.put("EDITORIAL","Editorial");
+        dtName.put("ERRATUM","Erratum");
+        dtName.put("JOURNAL","Journal");
+        dtName.put("LETTER","Letter");
+        dtName.put("NOTE","Note");
+        dtName.put("PROCEEDING","Proceeding");
+        dtName.put("REVIEW","Review");
+        dtName.put("SHORT SURVEY","Short Survey");
+        dtName.put("TRADE JOURNAL","Trade Journal");
     }
 
     public static final String SESSION_POOL = "session";
@@ -193,12 +213,12 @@ public final class DatabaseConfig
     // pass a DT code to get the string of the document type
     public String getDtTitle(String dtCode)
     {
-    	// all DT keys/codes are in upper case in the hashtable
-    	// defined above
+        // all DT keys/codes are in upper case in the hashtable
+        // defined above
         if((dtCode != null) && (dtCode.length() > 0))
         {
         	// maybe we should try toLowerCase on dtcode if this returns null
-            return (String)dtName.get(dtCode.toUpperCase());
+            return (String) dtName.get(dtCode.toUpperCase());
         }
         else
         {
