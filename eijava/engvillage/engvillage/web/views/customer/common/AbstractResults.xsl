@@ -184,7 +184,7 @@
  <!-- EPT Templates --> 
  
      <xsl:template match="PINFO">
-        <a CLASS="MedBlackText"><b> Patent information:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/></a>
+        <a CLASS="MedBlackText"><br/><b> Patent information:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/></a>
     </xsl:template>  
     
     <xsl:template match="PAPIM">
