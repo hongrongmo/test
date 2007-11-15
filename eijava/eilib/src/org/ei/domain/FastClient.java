@@ -81,9 +81,14 @@ public class FastClient
 		else if(EiNavigator.FL.equals(navid)) {
 			if((mask == DatabaseConfig.PAG_MASK)||
 				mask == DatabaseConfig.ELT_MASK ||
-				mask == DatabaseConfig.EPT_MASK )
+				mask == DatabaseConfig.EPT_MASK || (mask == DatabaseConfig.ELT_MASK + DatabaseConfig.EPT_MASK))
 			{
 				return true;
+			}
+			else if(((mask & (DatabaseConfig.CHM_MASK +
+			       DatabaseConfig.PCH_MASK)) > 0))
+      {
+        return true;
 			}
 		}
 		// include PN only if CPX, INS, or Referex
