@@ -9,8 +9,8 @@ package org.ei.domain.navigators;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.Enumeration;
 import java.util.Hashtable;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -36,8 +36,19 @@ public class ResultNavigator
 
     private int m_compmask = 0;
 
-    private Mods mods = null;
-      
+    private boolean m_books = false;
+    private boolean m_cbnb = false;
+    private boolean m_chimica = false;
+    private boolean m_paperchem = false;
+    private boolean m_encompasslit = false;
+    private boolean m_encompasspat = false;
+    private boolean m_ntis = false;
+    private boolean m_geobase = false;
+    private boolean m_inspec = false;
+    private boolean m_compendex = false;
+    private boolean m_uspatents = false;
+    private boolean m_eupatents = false;
+
     public ResultNavigator(Hashtable navs, Database[] databases)
     {
 
@@ -49,6 +60,8 @@ public class ResultNavigator
         // since we are coming from fast - edit members/change titles/etc,
         this.adjustComposition();
     }
+
+
 
     public ResultNavigator(String navigatorsstring)
     {
@@ -77,47 +90,698 @@ public class ResultNavigator
 
         if(dbnavigator != null)
         {
+            List mods = dbnavigator.getModifiers();
             // set the fast navigators collection to point to these navigators
             // so getNavigatorByName will work
             // we will set fastnavigators = navigators again to the return value of this method
-            mods = new Mods();
-            DatabaseConfig dbConfig = DatabaseConfig.getInstance();
-            Iterator itrmods = null;
-            if(mods.getListmods() != null)
-            {
-                itrmods = mods.getListmods().iterator();
-            }
 
-            while(itrmods!= null && itrmods.hasNext())
+            if(mods != null)
             {
-                EiModifier amod = (EiModifier) itrmods.next();
-                // make sure db modifier has a value for looking up db
-                if(amod.getValue() != null)
+                m_compendex = mods.contains(EiModifier.MOD_CPX) || mods.contains(EiModifier.MOD_CBF);
+                m_inspec = mods.contains(EiModifier.MOD_INS);
+                m_ntis = mods.contains(EiModifier.MOD_NTI);
+                m_geobase = mods.contains(EiModifier.MOD_GEO);
+                m_encompasspat = mods.contains(EiModifier.MOD_EPT);
+                m_encompasslit = mods.contains(EiModifier.MOD_ELT);
+                m_cbnb = mods.contains(EiModifier.MOD_CBN);
+                m_chimica = mods.contains(EiModifier.MOD_CHM);
+                m_paperchem = mods.contains(EiModifier.MOD_PCH);
+                m_books = mods.contains(EiModifier.MOD_PAG);
+                m_eupatents = mods.contains(EiModifier.MOD_EUP);
+                m_uspatents = mods.contains(EiModifier.MOD_UPA);
+
+                DatabaseConfig dbConfig = DatabaseConfig.getInstance();
+                Iterator itrmods = mods.iterator();
+                while(itrmods.hasNext())
                 {
-                    Database adb = dbConfig.getDatabase(amod.getValue());
-                    if(adb == null)
-                    {                  	
-                        // if we failed - try trimming and lowercasing the code
-                        if(amod.getValue().length() >= 3)
-                        {                       	
-                             adb = dbConfig.getDatabase(amod.getValue().substring(0,3).toLowerCase());
+                    EiModifier amod = (EiModifier) itrmods.next();
+                    // make sure db modifier has a value for looking up db
+                    if(amod.getValue() != null)
+                    {
+                        System.out.println(" amod.getValue() " + amod.getValue());
+
+                        Database adb = dbConfig.getDatabase(amod.getValue());
+                        if(adb == null)
+                        {
+                          // if we failed - try trimming and lowercasing the code
+                          if(amod.getValue().length() >= 3)
+                          {
+                            adb = dbConfig.getDatabase(amod.getValue().substring(0,3).toLowerCase());
+                          }
                         }
-                     }
-                     // if db lookup is not null
-                     if(adb != null)
-                     {
-                         m_compmask += adb.getMask();
-                     }
+                        if(adb == null)
+                        {
+                          String modval = amod.getValue();
+                          if(modval.equals("ach")) //PaperChem
+                          {
+                            adb = dbConfig.getDatabase("pch");
+                          }
+                          else if(modval.equals("hhm")) // Chimica
+                          {
+                            adb = dbConfig.getDatabase("chm");
+                          }
+                          else if(modval.equals("bbn")) // CBNB
+                          {
+                            adb = dbConfig.getDatabase("cbn");
+                          }
+                        }
+                        // if db lookup is not null
+                        if(adb != null)
+                        {
+                            m_compmask += adb.getMask();
+                        }
+                    }
                 }
-           }
+            }
         }
+
     }
 
+    private void adjustComposition() {
+
+        System.out.println(" adjustComposition w/ mask = " + getCompositionMask());
+
+        boolean m_booksOnly = (getCompositionMask() == DatabaseConfig.PAG_MASK);
+        boolean m_cbnbOnly = (getCompositionMask() == DatabaseConfig.CBN_MASK);
+        boolean m_encompasspatOnly = (getCompositionMask() == DatabaseConfig.EPT_MASK);
+        boolean m_euppatentsOnly = (getCompositionMask() == DatabaseConfig.EUP_MASK);
+        boolean m_uspatentsOnly = (getCompositionMask() == DatabaseConfig.UPA_MASK);
+
+        // AU
+        EiNavigator anav = getNavigatorByName(EiNavigator.AU);
+        if(anav != null)
+        {
+          //if(mask == upa || mask == eup || mask == ept || mask == upa + eup || mask == upa + ept || mask == eup + ept || mask == upa + eup + ept)
+          if((m_uspatents || m_eupatents || m_encompasspat) && !(m_compendex || m_inspec || m_ntis || m_geobase || m_encompasslit || m_cbnb || m_chimica || m_paperchem || m_books))
+          {
+            anav.setDisplayname("Inventor");
+          }
+          //else if((mask :: cpx || mask :: cbf || mask :: ins || mask :: nti || mask :: geo || mask :: chm || mask :: pag || mask :: pch || mask :: elt) && (mask !: cbn || mask !: upa || mask !: eup || mask !: ept))
+          else if((m_compendex || m_inspec || m_ntis || m_geobase || m_encompasslit || m_paperchem || m_chimica || m_books) && !m_cbnb && !(m_uspatents || m_eupatents || m_encompasspat))
+          {
+            anav.setDisplayname("Author");
+          }
+          // Author/Inventor if database combination doesn't contain CBNB AND does contain A&I database(s) AND also a patent database
+          //else if((mask :: cpx || mask :: cbf || mask :: ins || mask :: nti || mask :: geo || mask :: chm || mask :: pag || mask :: pch || mask :: elt) && (mask !: cbn) && (mask :: upa || mask :: eup || mask :: ept))
+          else if((m_compendex || m_inspec || m_ntis || m_geobase || m_encompasslit || m_paperchem || m_chimica || m_books) && !m_cbnb && (m_uspatents || m_eupatents || m_encompasspat))
+          {
+            anav.setDisplayname("Author/Inventor");
+          }
+          else
+          {
+            fastnavigators.remove(anav);
+          }
+        }
+        // AF
+        anav = getNavigatorByName(EiNavigator.AF);
+        if(anav != null)
+        {
+          if(m_cbnbOnly)
+          {
+            anav.setDisplayname("Industrial sector descriptors");
+          }
+          //if(mask == upa || mask == eup || mask == ept || mask == upa + eup || mask == upa + ept || mask == eup + ept || mask == upa + eup + ept)
+          if((m_uspatents || m_eupatents|| m_encompasspat)&& !(m_books || m_cbnb || m_compendex || m_inspec || m_ntis || m_geobase || m_encompasslit || m_paperchem || m_chimica))
+          {
+            anav.setDisplayname("Assignee");
+          }
+          //else if((mask :: cpx || mask :: cbf || mask :: ins || mask :: nti || mask :: geo || mask :: chm || mask :: pag || mask :: pch || mask :: elt) && (mask !: cbn || mask !: upa || mask !: eup || mask !: ept))
+          else if((m_compendex || m_inspec || m_ntis || m_geobase || m_encompasslit || m_paperchem || m_chimica || m_books) && !m_cbnb && !(m_uspatents || m_eupatents || m_encompasspat))
+          {
+            anav.setDisplayname("Author affiliation");
+          }
+          // Author/Inventor if database combination doesn't contain CBNB AND does contain A&I database(s) AND also a patent database
+          //else if((mask :: cpx || mask :: cbf || mask :: ins || mask :: nti || mask :: geo || mask :: chm || mask :: pag || mask :: pch || mask :: elt) && (mask !: cbn) && (mask :: upa || mask :: eup || mask :: ept))
+          else if((m_compendex || m_inspec || m_ntis || m_geobase || m_encompasslit || m_paperchem || m_chimica || m_books) && !m_cbnb && (m_uspatents || m_eupatents || m_encompasspat))
+          {
+            anav.setDisplayname("Author affiliation/Assignee");
+          }
+          else
+          {
+            fastnavigators.remove(anav);
+          }
+        }
+        // CV
+        anav = getNavigatorByName(EiNavigator.CV);
+        if(anav != null)
+        {
+          //if((mask :: cpx || mask :: cbf || mask :: ins || mask :: nti || mask :: geo || mask :: cbn || mask :: chm || mask :: pch || mask :: elt || mask :: ept) && (mask !: upa || mask !: eup || mask !: pag))
+          if((m_cbnb || m_compendex || m_inspec || m_ntis || m_geobase || m_paperchem || m_chimica || m_cbnb || m_encompasslit || m_encompasspat) && !(m_books || m_uspatents || m_eupatents ))
+          {
+            anav.setDisplayname("Controlled vocabulary");
+          }
+          else
+          {
+            fastnavigators.remove(anav);
+          }
+        }
+        // ST
+        anav = getNavigatorByName(EiNavigator.ST);
+        if(anav != null)
+        {
+          if(m_booksOnly)
+          {
+            // check for bookrecords and pagerecords doctypes in results
+            List dtmods = anav.getModifiers();
+            boolean bookrecords = dtmods.contains(EiModifier.DT_BOOK);
+            boolean pagerecords = dtmods.contains(EiModifier.DT_PAGE);
+            // if only book records remove ST (book title) nav
+            if((bookrecords) && (!pagerecords))
+            {
+              fastnavigators.remove(anav);
+            }
+            else
+            {
+              // Virtual navigator
+              //ST (Book Title, ST)
+              // change Serial title to Book title for when results are books only
+              fastnavigators.remove(anav);
+              anav = BookNavigator.createBookNavigator(anav);
+              fastnavigators.add(anav);
+            }
+          }
+          //if((mask :: cpx || mask :: cbf || mask :: ins || mask :: nti || mask :: geo || mask :: cbn || mask :: chm || mask :: pch || mask :: elt) && (mask !: upa || mask !: eup || mask !: pag || mask !: ept))
+          else if((m_compendex || m_inspec || m_ntis || m_geobase || m_cbnb || m_chimica || m_paperchem || m_encompasslit) && !(m_uspatents || m_eupatents || m_books || m_encompasspat))
+          {
+            anav.setDisplayname("Serial title");
+          }
+          else
+          {
+            fastnavigators.remove(anav);
+          }
+        }
+        // PN
+        anav = getNavigatorByName(EiNavigator.PN);
+        if(anav != null)
+        {
+          // Publisher
+          //if((mask :: cpx || mask :: cbf || mask :: ins || mask :: cbn || mask :: chm || mask :: pag || mask :: pch || mask :: elt) && (mask !: nti || mask !: geo || mask !: upa || mask !: eup || mask !: ept))
+          if((m_compendex || m_inspec || m_ntis || m_cbnb || m_chimica || m_books || m_paperchem || m_encompasslit) && !(m_ntis || m_geobase || m_uspatents || m_eupatents || m_encompasspat))
+          {
+            anav.setDisplayname("Publisher");
+          }
+          else
+          {
+            fastnavigators.remove(anav);
+          }
+        }
+        // LA
+        anav = getNavigatorByName(EiNavigator.LA);
+        if(anav != null)
+        {
+          // Language
+          //if((mask :: cpx || mask :: cbf || mask :: ins || mask :: nti || mask :: geo || mask :: cbn || mask :: chm || mask :: pch || mask :: elt || mask :: ept) && (mask !: upa || mask !: eup || mask !: pag))
+          if((m_compendex || m_inspec || m_ntis || m_geobase || m_cbnb || m_chimica || m_paperchem || m_encompasslit || m_encompasspat) && !(m_uspatents || m_eupatents || m_books))
+          {
+            anav.setDisplayname("Language");
+          }
+          else
+          {
+            fastnavigators.remove(anav);
+          }
+        }
+        // YR
+        anav = getNavigatorByName(EiNavigator.YR);
+        if(anav != null)
+        {
+          // Year
+          //if((mask :: cpx || mask :: cbf || mask :: ins || mask :: nti || mask :: geo || mask :: cbn || mask :: upa || mask :: eup || mask :: chm || mask :: pch || mask :: elt) && (mask !: pag || mask !: ept))
+          if((m_compendex || m_inspec || m_ntis || m_geobase || m_cbnb || m_uspatents || m_eupatents || m_chimica || m_paperchem || m_encompasslit) && !(m_books || m_encompasspat))
+          {
+            anav.setDisplayname("Year");
+          }
+          else
+          {
+            fastnavigators.remove(anav);
+          }
+        }
+        // CL
+        anav = getNavigatorByName(EiNavigator.CL);
+        if(anav != null)
+        {
+          // Classification Code - NOTE: chimica and paperchem do not have classification codes.
+          //if(mask == cbn)
+          if(m_cbnbOnly)
+          {
+            // if cbnb and nothing else
+            //CL (Industrial sector, GIC->CL)
+            anav.setDisplayname("Industrial sector");
+          }
+          //else if (mask = pag)
+          else if(m_booksOnly)
+          {
+            // if books and nothing else
+            // Uses CleanCLFacet
+            // CL (Book Collection, CL)
+          }
+          //else if((mask :: cpx  || mask :: cbf || mask :: ins  || mask :: nti  ||  mask :: geo || mask :: elt) && (mask !: cbn || mask !: upa || mask !: eup || mask !: pag || mask !: chm || mask !: pch || mask !: ept))
+          else if((m_compendex || m_inspec || m_ntis || m_geobase || m_encompasslit) && !(m_cbnb || m_uspatents || m_eupatents || m_books || m_chimica || m_paperchem || m_encompasspat))
+          {
+            anav.setDisplayname("Classification code");
+          }
+          else
+          {
+            System.out.println("removing clnav ");
+            fastnavigators.remove(anav);
+          }
+        }
+        // DT
+        anav = getNavigatorByName(EiNavigator.DT);
+        if(anav != null)
+        {
+          // Document type
+          if(m_booksOnly)
+          {
+              // get DT nav and always remove it if books only
+              fastnavigators.remove(anav);
+          }
+          // There is some document type data for EnCompassPAT, but it is only present for US patents.  Mary doesn't think DT navigatior should be displayed for EPT.
+          //if((mask :: cpx || mask :: cbf || mask :: ins || mask :: nti || mask :: geo || mask :: cbn || mask :: upa || mask :: eup  || mask :: chm || mask :: pch || mask :: elt) && (mask !: pag || mask !: ept))
+          if((m_compendex || m_inspec || m_ntis || m_geobase || m_cbnb || m_uspatents || m_eupatents  || m_chimica || m_paperchem || m_encompasslit) && !(m_books && m_encompasspat))
+          {
+            anav.setDisplayname("Document type");
+          }
+          // Document type -- editing values from navigator
+          if((m_uspatents || m_eupatents) && !(m_compendex || m_inspec || m_ntis || m_geobase || m_encompasslit || m_encompasspat || m_paperchem || m_chimica || m_cbnb || m_books))
+          {
+            // Remove the document type "Patent" from DT.
+            anav.setDisplayname("Patent type");
+            anav.getModifiers().remove(EiModifier.PATENT);
+          }
+          else if((m_uspatents || m_eupatents) && (m_compendex || m_inspec || m_ntis || m_geobase || m_encompasslit || m_encompasspat || m_paperchem || m_chimica || m_cbnb || m_books))
+          //else if(mask :: upa || mask :: eup)
+          {
+            // Remove the following document types from DT:
+            // US Grants
+            // US Applications
+            // European Grants
+            // European Applications
+            anav.getModifiers().remove(EiModifier.US_GRANTS);
+            anav.getModifiers().remove(EiModifier.US_APPLICATIONS);
+            anav.getModifiers().remove(EiModifier.EU_GRANTS);
+            anav.getModifiers().remove(EiModifier.EU_APPLICATIONS);
+          }
+          else
+          {
+            fastnavigators.remove(anav);
+          }
+        }
+        // FL
+        anav = getNavigatorByName(EiNavigator.FL);
+        if(anav != null)
+        {
+          // Uncontrolled Terms and Keyword
+          if(m_booksOnly)
+          {
+          	// Virtual navigator
+          	// FL (Keyword, FL)
+            if(anav != null)
+            {
+              anav.setDisplayname("Keyword");
+              anav.setFieldname("ky");
+              anav.setName("kynav");
+            }
+          }
+          //else if(mask == elt || mask == ept || mask == elt + ept)
+          else if((m_encompasslit || m_encompasspat) && !(m_compendex ||  m_inspec || m_ntis || m_geobase || m_cbnb || m_chimica || m_paperchem || m_uspatents || m_eupatents || m_books))
+          {
+            // Qualifier was created for EnCompassLIT and EnCompassPAT extracts.  Not quite sure how searching on this field works.
+            // FL (Qualifier, FL)
+            anav.setDisplayname("Qualifier");
+          }
+          //else if((mask :: chm || mask :: pch) && (mask !: cpx || mask !: cbf || mask !: ins || mask !: nti || mask !: geo || mask !: cbn || mask !: upa || mask !: eup || mask !: pag || mask !: elt || mask !: ept))
+          else if((m_chimica || m_paperchem) && !(m_compendex || m_inspec || m_ntis || m_geobase || m_cbnb || m_uspatents || m_eupatents || m_books || m_encompasslit || m_encompasspat))
+          {
+            //FL (Uncontrolled Terms, FL)
+            anav.setDisplayname("Uncontrolled terms");
+          }
+          else
+          {
+            fastnavigators.remove(anav);
+          }
+        }
+        // CO
+        anav = getNavigatorByName(EiNavigator.CO);
+        if(anav != null)
+        {
+          // Country and Book Chapter
+          //if(mask == pag)
+          if(m_booksOnly)
+          {
+            // Virtual navigator
+            //CO (Book Chapter, CO)
+            // change Country to Book chapter for when results are books only
+            fastnavigators.remove(anav);
+            anav = BookNavigator.createBookNavigator(anav);
+            fastnavigators.add(anav);
+          }
+          //else if((mask :: cpx || mask :: cbf || mask :: ins || mask :: nti || mask :: geo || mask :: cbn || mask :: upa || mask :: eup || mask :: elt || mask :: pch) & (mask !: pag || mask !: ept))
+          else if((m_compendex || m_inspec || m_ntis || m_geobase || m_cbnb || m_uspatents || m_eupatents || m_encompasslit || m_paperchem) && !(m_books || m_encompasspat))
+          {
+            anav.setDisplayname("Country");
+          }
+          else
+          {
+            fastnavigators.remove(anav);
+          }
+        }
+
+        // PID
+        anav = getNavigatorByName(EiNavigator.PID);
+        if(anav != null)
+        {
+          System.out.println(" PID ");
+
+          // IPC Code and Companies
+          if(m_cbnbOnly)
+          {
+            //PID (Companies, COM->PID)
+            anav.setDisplayname("Companies");
+          }
+          // IPC data from the PK navigator should display if only EnCompassPAT is searched.
+          //else if(mask == upa || mask == eup || mask == upa + eup || mask == upa + ept || mask == eup + ept || mask == upa + eup + ept)
+          else if((m_uspatents || m_eupatents || m_encompasspat) && !(m_compendex || m_inspec || m_ntis || m_geobase || m_cbnb ||  m_books || m_encompasslit))
+          {
+            //PID (IPC Code, PID)
+            anav.setDisplayname("IPC code");
+          }
+          else
+          {
+            System.out.println(" removing PID ");
+            fastnavigators.remove(anav);
+          }
+        }
+        else
+        {
+          System.out.println(" PID is null");
+        }
+
+        // PEC
+        anav = getNavigatorByName(EiNavigator.PEC);
+        if(anav != null)
+        {
+          // ECLA Code and Chemicals
+          //if(mask == cbn)
+          if(m_cbnbOnly)
+          {
+            //PEC (Chemicals, CIN->PEC)
+            anav.setDisplayname("Chemicals");
+          }
+          //else if((mask :: eup) &&  (mask !: cpx || mask !: cbf || mask !: ins || mask !: nti || mask !: geo || mask !: upa || mask !: chm || mask !: pag || mask !: pch || mask !: elt || mask !: ept))
+          else if(m_euppatentsOnly)
+          {
+            //PEC (ECLA, PEC)
+            anav.setDisplayname("ECLA");
+          }
+          else
+          {
+            fastnavigators.remove(anav);
+          }
+        }
+
+        // PUC
+        anav = getNavigatorByName(EiNavigator.PUC);
+        if(anav != null)
+        {
+          // US Classification
+          //if((mask :: upa) &&  (mask !: cpx || mask !: cbf || mask !: ins || mask !: nti || mask !: geo || mask !: cbn || mask !: eup || mask !: chm || mask !: pag || mask !: pch || mask !: elt || mask !: ept))
+          if(m_uspatentsOnly)
+          {
+          	//PUC (US Classification, PUC)
+            anav.setDisplayname("US Classification");
+          }
+          else
+          {
+            fastnavigators.remove(anav);
+          }
+        }
+
+
+        // PK
+        anav = getNavigatorByName(EiNavigator.PK);
+        if(anav != null)
+        {
+          // Patent Kind -- only used for EnCompassPAT IPC codes in Derwent provided format
+          //if(mask == ept)
+          if(m_encompasspatOnly)
+          {
+          	//PK (IPC code, IC->PK)
+            anav.setDisplayname("IPC code");
+          }
+          else
+          {
+            fastnavigators.remove(anav);
+          }
+        }
+
+        // PAC
+        anav = getNavigatorByName(EiNavigator.PAC);
+        if(anav != null)
+        {
+          // Authority Code
+          // This navigator is returned for UPA and EUP, but they aren't displayed on the current site.
+          //if(mask == ept)
+          if(m_encompasspatOnly)
+          {
+          	//PAC (Authority Code, PAC)
+            anav.setDisplayname("Authority code");
+          }
+          else
+          {
+            fastnavigators.remove(anav);
+          }
+        }
+
+    }
+/*
     private void adjustComposition()
     {
-        ResultNavigatorComposition composition = new ResultNavigatorComposition();
-        composition.adjustComposition();
+        EiNavigator dbnavigator = this.getNavigatorByName(EiNavigator.DB);
+
+        // if we have dbnavigator, use it to decide how to clean out
+        // and change Navigators and Modifiers depending on results DB composition
+        if(dbnavigator != null)
+        {
+            List dbmods = dbnavigator.getModifiers();
+
+            if(dbmods != null)
+            {
+                // 1. remove patents navs (PK, etc.) if results other than patents are in result set
+                // 2. change AU navigator displayname if patents are in set along with others
+                if((m_mixed) && m_patents)
+                {
+                    //log.info("removing Patent only navigators from mixed results");
+                    EiNavigator anav = getNavigatorByName(EiNavigator.PK);
+                    if(anav != null)
+                    {
+                    	fastnavigators.remove(anav);
+                    }
+                    anav = getNavigatorByName(EiNavigator.PAC);
+                    if(anav != null)
+                    {
+                    	fastnavigators.remove(anav);
+                    }
+                    anav = getNavigatorByName(EiNavigator.PCI);
+                    if(anav != null)
+                    {
+                    	fastnavigators.remove(anav);
+                    }
+                    anav = getNavigatorByName(EiNavigator.PEC);
+                    if(anav != null)
+                    {
+                    	fastnavigators.remove(anav);
+                    }
+                    anav = getNavigatorByName(EiNavigator.PID);
+                    if(anav != null)
+                    {
+                    	fastnavigators.remove(anav);
+                    }
+                    anav = getNavigatorByName(EiNavigator.PUC);
+                    if(anav != null)
+                    {
+                    	fastnavigators.remove(anav);
+                    }
+
+                    // change AU Nav title for mixed results
+                    anav = getNavigatorByName(EiNavigator.AU);
+                    if(anav != null)
+                    {
+                        anav.setDisplayname("Author/Inventor");
+                    }
+                    anav = getNavigatorByName(EiNavigator.AF);
+                    if(anav != null)
+                    {
+                        anav.setDisplayname("Author affiliation/Assignee");
+                    }
+
+                    // remove PN and LA from mixed results
+                    anav = getNavigatorByName(EiNavigator.PN);
+                    if(anav != null)
+                    {
+                    	fastnavigators.remove(anav);
+                    }
+                    anav = getNavigatorByName(EiNavigator.LA);
+                    if(anav != null)
+                    {
+                    	fastnavigators.remove(anav);
+                    }
+
+                    anav = getNavigatorByName(EiNavigator.DT);
+                    if(anav != null)
+                    {
+	                    anav.getModifiers().remove(EiModifier.US_GRANTS);
+	                    anav.getModifiers().remove(EiModifier.US_APPLICATIONS);
+	                    anav.getModifiers().remove(EiModifier.EU_GRANTS);
+	                    anav.getModifiers().remove(EiModifier.EU_APPLICATIONS);
+                    }
+                }
+                if((!m_mixed) && m_patents)
+                {
+                    // if ONLY patents in results set
+                    // handle DT if only patents in results set
+                    EiNavigator anav = getNavigatorByName(EiNavigator.AU);
+                    if(anav != null)
+                    {
+                    	anav.setDisplayname("Inventor");
+                    }
+                    anav = getNavigatorByName(EiNavigator.AF);
+                    if(anav != null)
+                    {
+                    	anav.setDisplayname("Assignee");
+                    }
+                    anav = getNavigatorByName(EiNavigator.DT);
+                    if(anav != null)
+                    {
+	                    anav.setDisplayname("Patent type");
+	                    anav.getModifiers().remove(EiModifier.PATENT);
+                    }
+
+                    // remove PN and LA from mixed results
+                    anav = getNavigatorByName(EiNavigator.PN);
+                    if(anav != null)
+                    {
+                    	fastnavigators.remove(anav);
+                    }
+                    anav = getNavigatorByName(EiNavigator.LA);
+                    if(anav != null)
+                    {
+                    	fastnavigators.remove(anav);
+                    }
+                }
+                if((!m_mixed) && m_other)
+                {
+                    // change AU Nav title for mixed results
+                    EiNavigator anav = getNavigatorByName(EiNavigator.AU);
+                    if(anav != null)
+                    {
+                    	anav.setDisplayname("Author");
+                    }
+                    anav = getNavigatorByName(EiNavigator.AF);
+                    if(anav != null)
+                    {
+                    	anav.setDisplayname("Author affiliation");
+                    }
+                    // if compostion includes NTIS, exlcude PN navigator
+                    if(dbmods.contains(EiModifier.MOD_NTI))
+                    {
+                      // remove PN and LA from mixed results
+                      anav = getNavigatorByName(EiNavigator.PN);
+                      if(anav != null)
+                      {
+                    	  fastnavigators.remove(anav);
+                      }
+                    }
+                }
+                if(m_books)
+                {
+                  EiNavigator anav = getNavigatorByName(EiNavigator.CL);
+                  if(anav != null)
+                  {
+                    anav = BookNavigator.cleanCLNavigator(anav);
+                    fastnavigators.add(anav);
+                  }
+                }
+                if((!m_mixed) && m_books)
+                {
+                	// get DT nav and always remove it if books only
+                	EiNavigator anav = getNavigatorByName(EiNavigator.DT);
+	                if(anav != null)
+	                {
+                      fastnavigators.remove(anav);
+                      // check for bookrecords and pagerecords doctypes in results
+                      List dtmods = anav.getModifiers();
+                      boolean bookrecords = dtmods.contains(EiModifier.DT_BOOK);
+                      boolean pagerecords = dtmods.contains(EiModifier.DT_PAGE);
+                      // if only book records remove ST (book title) nav
+                      if((bookrecords) && (!pagerecords))
+                      {
+                    	  EiNavigator tinav = getNavigatorByName(EiNavigator.ST);
+                    	  fastnavigators.remove(tinav);
+                      }
+	                }
+
+                	// change Class. Code to chapter for when results are books only
+                  anav = getNavigatorByName(EiNavigator.CL);
+                  if(anav != null)
+                  {
+	                  anav.setDisplayname("Book Collection");
+                  }
+                  anav = getNavigatorByName(EiNavigator.FL);
+                  if(anav != null)
+                  {
+	                  anav.setDisplayname("Keyword");
+	                  anav.setFieldname("ky");
+	                  anav.setName("kynav");
+                  }
+                  // change Serial title to Book Title for when results are books only
+                  anav = getNavigatorByName(EiNavigator.ST);
+                  if(anav != null)
+                  {
+                	  fastnavigators.remove(anav);
+                      anav = BookNavigator.createBookNavigator(anav);
+                      fastnavigators.add(anav);
+                  }
+
+                  // change Country to chapter for when results are books only
+                  anav = getNavigatorByName(EiNavigator.CO);
+                  if(anav != null)
+                  {
+                    fastnavigators.remove(anav);
+                    anav = BookNavigator.createBookNavigator(anav);
+                    fastnavigators.add(anav);
+                  }
+                }
+                if(m_mixed && m_books)
+                {
+                  // remove CO from mixed results that contain books
+                  EiNavigator anav = getNavigatorByName(EiNavigator.CO);
+                  if(anav != null)
+                  {
+                	  fastnavigators.remove(anav);
+                  }
+
+                  // remove ST from mixed results that contain books
+                  anav = getNavigatorByName(EiNavigator.ST);
+                  if(anav != null)
+                  {
+                	  fastnavigators.remove(anav);
+                  }
+                  // remove FL from mixed results that contain books
+                  anav = getNavigatorByName(EiNavigator.FL);
+                  if(anav != null)
+                  {
+                	  fastnavigators.remove(anav);
+                  }
+                }
+
+                // we used to remove the DB nav if its size was 1 here
+                // but we need it later on and want it in the cache too
+                // so the toXML has been modified to skip DBNAV with size() == 1
+
+            } // if(mods != null)
+        } //  if(dbnavigator != null)
     }
+*/
 
     public void removeRefinements(Refinements xrefs)
     {
@@ -129,7 +793,7 @@ public class ResultNavigator
 
             if(resultnav == null)
             {
-                resultnav = EiNavigator.createNavigator(refNav.getName());
+            	resultnav = EiNavigator.createNavigator(refNav.getName());
             }
             //log.info(" removing refinement from Nav. Field [" + refNav.getName() + "]");
 
@@ -170,23 +834,23 @@ public class ResultNavigator
         EiNavigator dbnav = getNavigatorByName(EiNavigator.DB);
         if(dbnav != null)
         {
-            List mods = dbnav.getModifiers();
+	        List mods = dbnav.getModifiers();
 
-            DatabaseConfig dbConfig = DatabaseConfig.getInstance();
-            if((mods != null) && (mods.size() >= 2))
-            {
-                for(int i = 0; i < EiModifier.DEDUPABLE_MODS.length; i++)
-                {
-                    if(mods.contains(EiModifier.DEDUPABLE_MODS[i]))
-                    {
-                        int modIdx = mods.indexOf(EiModifier.DEDUPABLE_MODS[i]);
-                        Database adb = dbConfig.getDatabase(((EiModifier)mods.get(modIdx)).getValue());
-                        dedupableDb.add(adb);
-                    }
-                }
-            }
+	        DatabaseConfig dbConfig = DatabaseConfig.getInstance();
+	        if((mods != null) && (mods.size() >= 2))
+	        {
+	            for(int i = 0; i < EiModifier.DEDUPABLE_MODS.length; i++)
+	            {
+	                if(mods.contains(EiModifier.DEDUPABLE_MODS[i]))
+	                {
+	                    int modIdx = mods.indexOf(EiModifier.DEDUPABLE_MODS[i]);
+	                    Database adb = dbConfig.getDatabase(((EiModifier)mods.get(modIdx)).getValue());
+	                    dedupableDb.add(adb);
+	                }
+	            }
+	        }
         }
-        return dedupableDb;
+	    return dedupableDb;
    }
 
     public boolean isDeDupable()
@@ -209,7 +873,6 @@ public class ResultNavigator
      */
     public EiNavigator getNavigatorByName(String navid)
     {
-
         // returning a 'null' object if navigastor does not exist
         EiNavigator navigator = null;
         if(fastnavigators != null)
@@ -234,6 +897,7 @@ public class ResultNavigator
 
     public String toString()
     {
+
         StringBuffer sb = new StringBuffer();
         Iterator itrnavs = fastnavigators.iterator();
         while(itrnavs.hasNext())
@@ -333,6 +997,7 @@ public class ResultNavigator
             while(itrNavs.hasNext())
             {
                 String navigatorname = (String) itrNavs.next();
+              System.out.println(" navigatorname " + navigatorname);
                 List mods = (List) navs.get(navigatorname);
                 if((mods != null) && EiNavigator.DB.equalsIgnoreCase(navigatorname))
                 {
@@ -411,7 +1076,7 @@ public class ResultNavigator
                             while(itrback.hasNext())
                             {
                                 String[] back = (String[]) itrback.next();
-                                if(back[0].equals(backfile.getIndexName()))
+                                if(back[0].equals(backfile.getID()))
                                 {
                                     dbcount += Integer.parseInt(back[1]);
                                     //log.debug(" adding backfile ==> " + back[0] + "==" + back[1]);
@@ -447,8 +1112,8 @@ public class ResultNavigator
                         String value = convertModTitle.getValue(mod[0],navigatorname);
                         String modvalue = value;
                         String modlabel = value;
-
                         String title = convertModTitle.getTitle(mod[0],navigatorname,dbConfig);
+
                         if(title != null)
                         {
                             if(REMOVE_MODIFIER.equals(title))
@@ -467,12 +1132,13 @@ public class ResultNavigator
                         modifiers.add(modifier);
 
                     }
+                    //System.out.println(navigatorname + " ==> " + modifiers);
                     navigator.setModifiers(modifiers);
                     navigators.add(navigator);
                 }
                 else
                 {
-                    //log.debug(" skipped NULL Fast INavigator ==> " + navigatorname);
+                    System.out.println(" skipped NULL Fast INavigator ==> " + navigatorname);
                 }
             } // while
 
@@ -495,7 +1161,6 @@ public class ResultNavigator
                 navigators.add(EiNavigator.parseNavigator(navs[i]));
             }
         }
-
         return navigators;
     }
 
@@ -519,7 +1184,6 @@ public class ResultNavigator
     private class DBModifierComparator implements Comparator
     {
         DatabaseConfig dbConfig = DatabaseConfig.getInstance();
-
 
         public int compare(Object o1, Object o2)
         {
@@ -549,58 +1213,10 @@ public class ResultNavigator
     {
         // get default order
         List neworder = EiNavigator.getNavigatorNames();
-        
-      //  if(mods != null && mods.isEpt())
-        if(mods != null && 
-           mods.isMod(NavConstants.EPT))
-        {
-            neworder = new ArrayList();
-            neworder.add(EiNavigator.DB);
-            neworder.add(EiNavigator.DT);
-            
-            neworder.add(EiNavigator.AU);
-            neworder.add(EiNavigator.AF);
-            neworder.add(EiNavigator.PAC);
-            neworder.add(EiNavigator.PEC);
-            //neworder.add(EiNavigator.PID); // IPC codes - reformated with standard format
-          //  neworder.add(EiNavigator.PUC); // IPC codes - not reformated
-            neworder.add(EiNavigator.PK); // IPC codes - not reformated
-            neworder.add(EiNavigator.CO);
-            neworder.add(EiNavigator.CV);
-            neworder.add(EiNavigator.CL);
-            neworder.add(EiNavigator.YR);
-            neworder.add(EiNavigator.LA);
-            neworder.add(EiNavigator.FL);
-            return neworder;
-        }
-        
-        if(mods != null && 
-                mods.isMod(NavConstants.ELT))
-        {
-            neworder = new ArrayList();
-            neworder.add(EiNavigator.DB);
-            neworder.add(EiNavigator.DT);
-            
-            neworder.add(EiNavigator.AU);
-            neworder.add(EiNavigator.AF);
-            neworder.add(EiNavigator.PAC);
-            neworder.add(EiNavigator.PEC);
-            //neworder.add(EiNavigator.PID); // IPC codes - reformated with standard format
-          //  neworder.add(EiNavigator.PUC); // IPC codes - not reformated
-            neworder.add(EiNavigator.PK); // IPC codes - not reformated
-            neworder.add(EiNavigator.CO);
-            neworder.add(EiNavigator.CV);
-            neworder.add(EiNavigator.CL);
-            neworder.add(EiNavigator.YR);
-            neworder.add(EiNavigator.LA);
-            neworder.add(EiNavigator.FL);
-            return neworder;
-//default
-        }        
-       // if(mods != null && (!mods.isMixed()) && mods.patents&& !mods.isEpt())
-        if(mods != null && (!mods.isMod(NavConstants.MIXED)) && 
-           mods.isMod(NavConstants.PAT)&& 
-           !mods.isMod(NavConstants.EPT))
+
+        if((getCompositionMask() == DatabaseConfig.EUP_MASK) ||
+          (getCompositionMask() == DatabaseConfig.UPA_MASK) ||
+          (getCompositionMask() == (DatabaseConfig.UPA_MASK + DatabaseConfig.EUP_MASK)))
         {
             neworder = new ArrayList();
             neworder.add(EiNavigator.DB);
@@ -613,47 +1229,10 @@ public class ResultNavigator
             neworder.add(EiNavigator.CO);
             neworder.add(EiNavigator.CV);
             neworder.add(EiNavigator.CL);
-            neworder.add(EiNavigator.FL);
             neworder.add(EiNavigator.YR);
             neworder.add(EiNavigator.LA);
-            return neworder;
         }
-      //  if(mods != null &&(!mods.isMixed()) && mods.isOther() && !mods.isEpt())
-        if(mods != null &&
-        	(!mods.isMod(NavConstants.MIXED)) && 
-        	mods.isMod(NavConstants.OTHER) && 
-        	!mods.isMod(NavConstants.EPT))
-        {
-        	neworder = new ArrayList();
-            // return default
-        	neworder.add(EiNavigator.DB);
-        	neworder.add(EiNavigator.AU);
-        	neworder.add(EiNavigator.AF);
-        	neworder.add(EiNavigator.CV);
-        	neworder.add(EiNavigator.CL);
-        	neworder.add(EiNavigator.CO);
-        	neworder.add(EiNavigator.DT);
-        	neworder.add(EiNavigator.LA);
-        	neworder.add(EiNavigator.YR);
-        	neworder.add(EiNavigator.PUC);
-        	neworder.add(EiNavigator.PEC);
-        	neworder.add(EiNavigator.PID);
-//            navigatorNames.add(EiNavigator.PCI);
-//            navigatorNames.add(EiNavigator.PK);
-        	neworder.add(EiNavigator.PAC);
-        	neworder.add(EiNavigator.FL);
-        	neworder.add(EiNavigator.ST);
-        	neworder.add(EiNavigator.PN);
-        	neworder.add(EiNavigator.KY);
-        	neworder.add(EiNavigator.BKT);
-        	neworder.add(EiNavigator.BKS);
-        }
-
-       // if(mods != null &&(!mods.isMixed()) && mods.isBooks() && !mods.isEpt())
-        if(mods != null &&
-        		(!mods.isMod(NavConstants.MIXED)) && 
-        		mods.isMod(NavConstants.PAG) && 
-        		!mods.isMod(NavConstants.EPT))
+        if(getCompositionMask() == DatabaseConfig.PAG_MASK)
         {
             neworder = new ArrayList();
             neworder.add(EiNavigator.CL);
@@ -663,412 +1242,61 @@ public class ResultNavigator
             neworder.add(EiNavigator.AU);
             neworder.add(EiNavigator.PN);
         }
-      //  if(mods != null && mods.isMixed() && !mods.isEpt())
-        if(mods != null && 
-           mods.isMod(NavConstants.MIXED) && 
-           !mods.isMod(NavConstants.EPT))
-        {
-        	
-            // return default
-        }
-        
-        int size = neworder.size();
-        System.out.println("size::"+ size);
-        for (int i = 0; i < size; i++)
-        {
-
-        	System.out.println("navs order::"+ neworder.get(i));
-        	
-        }
-
         return neworder;
     }
 
-    private class Mods
+
+    private void cleanCLFacet()
     {
-        private List listdbmods = new ArrayList();        
-        private Hashtable dbmodes = new Hashtable();
-        
-        private Mods()
+        EiNavigator anav = getNavigatorByName(EiNavigator.CL);
+        if(anav != null)
         {
-            EiNavigator dbnavigator = getNavigatorByName(EiNavigator.DB);
-            if (dbnavigator != null)
-            {
-                setMod(NavConstants.DBMODE.getValue());
-                this.listdbmods = dbnavigator.getModifiers();
-                setMods();
-            }            
-        }
-
-        private void setMods()
-        {
-        	// add all modifiers to reslut ht 
-        	int size = this.listdbmods.size();
-        	for (int i = 0; i < size; i++)
-        	{        		
-        		setMod((EiModifier) this.listdbmods.get(i));       		
-        	}
-        	setModPatents();       	
-        	setModOther();
-        	setModMixed();
-        }
-        
-//        private boolean isMod(String mod)
-//        {
-//        	if(this.dbmodes.containsKey(mod))
-//        	{
-//        		return true;
-//        	}
-//        	return false;
-//        }
-        
-        private boolean isMod(NavConstants navconst)
-        {
-        	if(this.dbmodes.containsKey(navconst.getValue()))
-        	{
-        		return true;
-        	}
-        	return false;
-        }
-        
-//        private boolean isMod(EiModifier em)
-//        {
-//        	String emvalue = em.getValue();
-//        	return isMod(emvalue);
-//        }
-        
-        private void setMod(EiModifier em)
-        {
-    		this.dbmodes.put(em.getValue().trim(),"true"); 
-        }
-        private void setMod(String emvalue)
-        {
-        	this.dbmodes.put(emvalue.trim(),"true"); 
-        }
-        
-        private void setModPatents()
-        {
-            if (this.dbmodes.containsKey(NavConstants.UPA.getValue()) ||
-            		this.dbmodes.containsKey(NavConstants.EUP.getValue()))
-            {
-                this.dbmodes.put(NavConstants.PAT.getValue(),"true");
-            }
-        }
-        private void setModOther()
-        {
-            if (this.dbmodes.containsKey(NavConstants.CPX.getValue()) ||
-            		this.dbmodes.containsKey(NavConstants.INS.getValue()) ||
-            		this.dbmodes.containsKey(NavConstants.NTI.getValue()) ||
-            		this.dbmodes.containsKey(NavConstants.GEO.getValue()) ||
-            		this.dbmodes.containsKey(NavConstants.CBF.getValue()) )
-            {
-            	this.dbmodes.put(NavConstants.OTHER.getValue(),"true");
-            }
-        }
-        private void setModMixed()
-        {
-//            if( (other && patents) ||
-//                    (books && patents) ||
-//                    (other && books))
-        	if((isMod(NavConstants.OTHER) && 
-        			isMod(NavConstants.PAT)) ||
-        			(isMod(NavConstants.PAG) && isMod(NavConstants.PAT))||
-        			(isMod(NavConstants.OTHER) && isMod(NavConstants.PAG)))
-            {
-                this.dbmodes.put(NavConstants.MIXED.getValue(),"true");
-            }
-        }
-        private List getListmods() 
-        {
-            return listdbmods;
-        }
-                
-        public String toString()
-        {
-        	Enumeration en = dbmodes.keys();
-        	while (en.hasMoreElements())
-        	{
-        		System.out.println(en.nextElement());
-        	}
-        	return null;
-
+           anav = BookNavigator.cleanCLNavigator(anav);
+           addNavigator(anav);
         }
     }
 
-    private class ResultNavigatorComposition
+    private void addNavigator(EiNavigator nav)
     {
-       private void adjustComposition()
-       {
-           // if(mods!= null && mods.isDbmode())
-    	   	if(mods!= null && mods.isMod(NavConstants.DBMODE))
-            {
-    	   	   mods.toString();
-    	   		
-               if(mods.getListmods() != null)
-               {
-                  // if((mods.isMixed()) && mods.isPatents() )
-            	   if((mods.isMod(NavConstants.MIXED)) && 
-            			   mods.isMod(NavConstants.PAT) )
-                   {
-                	   removeFacet(EiNavigator.PK);
-                       removeFacet(EiNavigator.PAC);
-                       removeFacet(EiNavigator.PCI);
-                       removeFacet(EiNavigator.PEC);
-                       removeFacet(EiNavigator.PID);
-                       removeFacet(EiNavigator.PUC);
-                       removeFacet(EiNavigator.PN);
-                       removeFacet(EiNavigator.LA);
+        fastnavigators.add(nav);
+    }
 
-                       adjustFacetName(EiNavigator.FL,"Qualifier");
-                       adjustFacetName(EiNavigator.AU,"Author/Inventor");
-                       adjustFacetName(EiNavigator.AF,"Author affiliation/Assignee");
-
-                       adjustModifier(EiNavigator.DT, EiModifier.US_GRANTS);
-                       adjustModifier(EiNavigator.DT, EiModifier.US_APPLICATIONS);
-                       adjustModifier(EiNavigator.DT, EiModifier.EU_GRANTS);
-                       adjustModifier(EiNavigator.DT, EiModifier.EU_APPLICATIONS);
-                   }
-
-                   if((!mods.isMod(NavConstants.MIXED)) && 
-                		   mods.isMod(NavConstants.PAT))
-                   {
-                	   removeFacet(EiNavigator.PN);
-                       removeFacet(EiNavigator.LA);
-                       
-                       
-                       adjustFacetName(EiNavigator.AU,"Inventor");
-                       adjustFacetName(EiNavigator.AF,"Assignee");
-                       adjustFacetName(EiNavigator.DT,"Patent type");
-                       adjustModifier(EiNavigator.DT, EiModifier.PATENT);
-                   }
-                   //if((!mods.isMixed()) && mods.isOther())
-                   if((!mods.isMod(NavConstants.MIXED)) && 
-                		   mods.isMod(NavConstants.OTHER))
-                   {
-                	   //removeFacet(EiNavigator.PN);
-                       //removeFacet(EiNavigator.LA);
-
-                       adjustFacetName(EiNavigator.AU,"Author");
-                       adjustFacetName(EiNavigator.AF,"Author affiliation");
-                       //if(mods.isNti())
-                       if(mods.isMod(NavConstants.NTI))
-                       {
-                           removeFacet(EiNavigator.PN);
-                       }
-                   }
-
-                  // if(mods.isMixed() && mods.isBooks())
-                  //  EiModifier.MOD_PAG -books
-                   if(mods.isMod(NavConstants.MIXED) && 
-                		   mods.isMod(NavConstants.PAG))                   
-                   {
-                      removeFacet(EiNavigator.ST);
-                      removeFacet(EiNavigator.CO);
-                      removeFacet(EiNavigator.FL);
-                   }
-                   //if(mods.isBooks())
-                   if(mods.isMod(NavConstants.PAG))
-                   {
-                      cleanCLFacet();
-                   }
-                   //if((!mods.isMixed()) && mods.isBooks())
-                   if(mods.isMod(NavConstants.MIXED) && 
-                		   mods.isMod(NavConstants.PAG))
-                   {
-                	   removeFacet(EiNavigator.DT);
-                	   
-                     //  if(mods.isBooksRecords() && (!mods.isBooksPages()))
-                	 //  EiModifier.DT_BOOK - BooksRecords
-                	 //  EiModifier.DT_PAGE - BooksPages
-                	   
-                	   if(mods.isMod(NavConstants.PAG) && 
-                			   mods.isMod(NavConstants.BOOK))
-                       {
-                           removeFacet(EiNavigator.DT, EiNavigator.ST);
-                       }
-
-                       adjustFacetName(EiNavigator.CL,"Book Collection");
-                       removeFacet(EiNavigator.ST);
-                       removeFacet(EiNavigator.CO);
-                       EiNavigator conav = getNavigatorByName(EiNavigator.CO);
-                       EiNavigator stnav = getNavigatorByName(EiNavigator.ST);
-
-                       if(conav!= null)
-                       {
-                    	   addFacet(EiNavigator.CO,BookNavigator.createBookNavigator(conav) );
-                       }
-                       if(stnav!= null)
-                       {
-                    	   addFacet(EiNavigator.ST,BookNavigator.createBookNavigator(stnav) );
-                       }
-
-                       EiNavigator kynav = new EiNavigator("kynav");
-                       kynav.setDisplayname("Keyword");
-                       kynav.setFieldname("ky");
-                       kynav.setName("kynav");
-
-                       adjustFacetName(EiNavigator.FL, kynav);
-
-                   }
-
-                //   if((!mods.isMixed()) && (!mods.isOther()) &&  
-                //		   mods.isEpt() && 
-                //		   mods.isElt() )
-                   if((!mods.isMod(NavConstants.MIXED)) &&
-                		   (!mods.isMod(NavConstants.OTHER)) &&
-                		   mods.isMod(NavConstants.EPT) && 
-                		   mods.isMod(NavConstants.ELT))                		   
-                   {
-                       adjustFacetName(EiNavigator.PEC,"Major terms");
-                       adjustFacetName(EiNavigator.PK,"IPC Codes");
-                       adjustFacetName(EiNavigator.AU,"Author/Inventor");
-                       adjustFacetName(EiNavigator.AF,"Author affiliation/Assignee");
-                       // change name for uscode ipc 
-                       adjustFacetName(EiNavigator.FL,"Qualifier");
-                       removeFacet(EiNavigator.PID);
-                       // remove ipc nav
-                   }
-//                 else if((!mods.isMixed()) && (!mods.isOther()) &&  
-//                		   	mods.isEpt() &&
-//                		   !mods.isEup() &&
-//                		   !mods.isElt())
-                   
-                   else if((!mods.isMod(NavConstants.MIXED)) && 
-                		   (!mods.isMod(NavConstants.OTHER)) &&  
-                		   mods.isMod(NavConstants.EPT) &&  
-                   		   !mods.isMod(NavConstants.EUP) && 
-                   		   !mods.isMod(NavConstants.ELT))
-                   {
-                       adjustFacetName(EiNavigator.PEC,"Major terms");
-                       adjustFacetName(EiNavigator.PUC,"IPC Codes");
-                       adjustFacetName(EiNavigator.AU,"Inventor");
-                       adjustFacetName(EiNavigator.AF,"Assignee");
-                       adjustFacetName(EiNavigator.FL,"Qualifier");
-                        // remove  nav
-                   }
-                                     
-//                   else if((!mods.isMixed()) && (!mods.isOther()) &&  
-//                		   mods.isEpt() && 
-//                		   mods.isEup() &&
-//                		   !mods.isElt())
-                   	else if((!mods.isMod(NavConstants.MIXED)) &&
-                   			(!mods.isMod(NavConstants.OTHER)) &&  
-                   			mods.isMod(NavConstants.EPT) && 
-                   			mods.isMod(NavConstants.EUP) &&
-                   			!mods.isMod(NavConstants.ELT))
-                   {
-                       adjustFacetName(EiNavigator.PEC,"Major terms");
-                       adjustFacetName(EiNavigator.PUC,"IPC Codes");
-                       adjustFacetName(EiNavigator.AU,"Inventor");
-                       adjustFacetName(EiNavigator.AF,"Assignee");
-                       adjustModifier(EiNavigator.DT, EiModifier.EU_APPLICATIONS);
-                       adjustModifier(EiNavigator.DT, EiModifier.EU_GRANTS);
-                   }
-//                   else if((!mods.isMixed()) && 
-//                		   (!mods.isOther()) &&  
-//                		   	mods.isEpt() && 
-//                		   	mods.isUpt()&&
-//                		   !mods.isElt())
-                  else if((!mods.isMod(NavConstants.MIXED)) && 
-                		  (!mods.isMod(NavConstants.OTHER)) &&  
-                		  mods.isMod(NavConstants.EPT) && 
-                		  mods.isMod(NavConstants.UPA)&&
-                		  !mods.isMod(NavConstants.ELT))
-                   {
-                       adjustFacetName(EiNavigator.PEC,"Major terms");
-                       adjustFacetName(EiNavigator.PUC,"IPC Codes");
-                       adjustFacetName(EiNavigator.AU,"Inventor");
-                       adjustFacetName(EiNavigator.AF,"Assignee");
-                       adjustModifier(EiNavigator.DT, EiModifier.PATENT);
-                   }
-                  // if((!mods.isMixed()) && (!mods.isOther())&& mods.isElt())
-                   if((!mods.isMod(NavConstants.MIXED)) && 
-                		   (!mods.isMod(NavConstants.OTHER))&& 
-                		   mods.isMod(NavConstants.ELT))
-                   {
-                       adjustFacetName(EiNavigator.FL,"Qualifier");
-                	   adjustFacetName(EiNavigator.PEC,"Major terms");                	   
-                   }
-                   //if((!mods.isMixed()) && (!mods.isOther())&& mods.isEpt())
-                   if((!mods.isMod(NavConstants.MIXED)) && 
-                		   (!mods.isMod(NavConstants.OTHER))&& 
-                		   mods.isMod(NavConstants.EPT))
-                   {
-                	   removeFacet(EiNavigator.PID);
-                   }
-               }
-            }
-        }
-       
-       	private void addFacet(EiNavigator nav)
-       	{
-           fastnavigators.add(nav);
-       	}
-       	
-        private void addFacet(String firstFacetName, EiNavigator nav)
+    private void adjustNavigatorName(String navigatorName, String displayName)
+    {
+        EiNavigator nav = getNavigatorByName(navigatorName);
+        if(nav != null)
         {
-            EiNavigator facet = getNavigatorByName(firstFacetName);
-            if(facet != null)
-            {
-                addFacet(nav);
-            }
-        }
-
-        private void cleanCLFacet()
-        {
-            EiNavigator anav = getNavigatorByName(EiNavigator.CL);
-            if(anav != null)
-            {
-               anav = BookNavigator.cleanCLNavigator(anav);
-               fastnavigators.add(anav);
-            }
-        }
-        
-        private void removeFacet(String removeFacetName)
-        {
-            EiNavigator facet = getNavigatorByName(removeFacetName);
-            if(facet != null)
-            {
-                fastnavigators.remove(facet);
-            }
-        }
-        
-        private void removeFacet(String firstFacetName, String removeFacetName)
-        {
-            EiNavigator facet = getNavigatorByName(firstFacetName);
-            if(facet != null)
-            {
-                removeFacet(removeFacetName);
-            }
-        }
-
-        private void adjustFacetName(String name, String displayName)
-        {
-            EiNavigator facet = getNavigatorByName(name);
-            if(facet != null)
-            {
-                facet.setDisplayname(displayName);
-            }
-        }
-        
-        private void adjustFacetName(String name, EiNavigator nav)
-        {
-            EiNavigator facet = getNavigatorByName(name);
-            if(facet != null)
-            {
-                facet.setDisplayname(nav.getDisplayname());
-                facet.setFieldname(nav.getFieldname());
-                facet.setName(nav.getName());
-            }
-        }
-        
-        private void adjustModifier(String removeFacetName, EiModifier modifierName)
-        {
-            EiNavigator facet = getNavigatorByName(removeFacetName);
-            if(facet != null)
-            {
-                facet.getModifiers().remove(modifierName);
-            }
+            nav.setDisplayname(displayName);
         }
     }
+
+    private void adjustNavigatorProperties(String name, EiNavigator nav)
+    {
+        EiNavigator facet = getNavigatorByName(name);
+        if(facet != null)
+        {
+            facet.setDisplayname(nav.getDisplayname());
+            facet.setFieldname(nav.getFieldname());
+            facet.setName(nav.getName());
+        }
+    }
+
+    private void removeNavigator(String navigatorName)
+    {
+        EiNavigator nav = getNavigatorByName(navigatorName);
+        if(nav != null)
+        {
+            fastnavigators.remove(nav);
+        }
+    }
+
+    private void removeModifier(String navigatorName, EiModifier modifier)
+    {
+        EiNavigator navigator = getNavigatorByName(navigatorName);
+        if(navigator!= null)
+        {
+            navigator.getModifiers().remove(modifier);
+        }
+    }
+
 }
