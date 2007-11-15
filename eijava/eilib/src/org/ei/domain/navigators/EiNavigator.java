@@ -30,42 +30,42 @@ public class EiNavigator
 	protected static Log log = LogFactory.getLog(EiNavigator.class);
 
 
-	private static final int MODIFIER_LIMIT = 64;
-	private static final int NAV_STRING_LIMIT = 6500;
+  private static final int MODIFIER_LIMIT = 64;
+  private static final int NAV_STRING_LIMIT = 6500;
 
     // since patents release - database is now a navigator
-	public static final String DB = "dbnav";
+  public static final String DB = "dbnav";
 
-	public static final String PN = "pnnav";
-	public static final String FL = "flnav";
+  public static final String PN = "pnnav";
+  public static final String FL = "flnav";
 
-	public static final String YR = "yrnav";
-	public static final String CV = "cvnav";
-	public static final String CL = "clnav";
-	public static final String ST = "stnav";
-	public static final String AU = "aunav";
-	public static final String AF = "afnav";
-	public static final String DT = "dtnav";
-	public static final String LA = "lanav";
-	public static final String CO = "conav";
-	//upt
-	public static final String PK = "pknav";
-	public static final String PAC = "pacnav";
-	public static final String PCI = "pcinav";
-	public static final String PEC = "pecnav";
-	public static final String PID = "pidnav";
-	public static final String PUC = "pucnav";
+  public static final String YR = "yrnav";
+  public static final String CV = "cvnav";
+  public static final String CL = "clnav";
+  public static final String ST = "stnav";
+  public static final String AU = "aunav";
+  public static final String AF = "afnav";
+  public static final String DT = "dtnav";
+  public static final String LA = "lanav";
+  public static final String CO = "conav";
+  //upt
+  public static final String PK = "pknav";
+  public static final String PAC = "pacnav";
+  public static final String PCI = "pcinav";
+  public static final String PEC = "pecnav";
+  public static final String PID = "pidnav";
+  public static final String PUC = "pucnav";
 
-	public static final String KY = "kynav";
-	public static final String BKT = "bktnav";
-	public static final String BKS = "bksnav";
-
-
-	// for search within search
-	public static final String ALL = "all";
+  public static final String KY = "kynav";
+  public static final String BKT = "bktnav";
+  public static final String BKS = "bksnav";
 
 
-	protected static Map displayNames = new HashMap();
+  // for search within search
+  public static final String ALL = "all";
+
+
+  protected static Map displayNames = new HashMap();
     static {
         displayNames.put(EiNavigator.DB,"Database");
         displayNames.put(EiNavigator.YR,"Year");
@@ -109,91 +109,18 @@ public class EiNavigator
         navigatorNames.add(EiNavigator.PUC);
         navigatorNames.add(EiNavigator.PEC);
         navigatorNames.add(EiNavigator.PID);
-//        navigatorNames.add(EiNavigator.PCI);
         navigatorNames.add(EiNavigator.PK);
         navigatorNames.add(EiNavigator.PAC);
-		navigatorNames.add(EiNavigator.FL);
+        navigatorNames.add(EiNavigator.FL);
         navigatorNames.add(EiNavigator.ST);
-		navigatorNames.add(EiNavigator.PN);
-		navigatorNames.add(EiNavigator.KY);
-		navigatorNames.add(EiNavigator.BKT);
-		navigatorNames.add(EiNavigator.BKS);
+        navigatorNames.add(EiNavigator.PN);
+        navigatorNames.add(EiNavigator.KY);
+        navigatorNames.add(EiNavigator.BKT);
+        navigatorNames.add(EiNavigator.BKS);
     }
     public static List getNavigatorNames() { return navigatorNames; }
 
-    // 57351 = CPX + INS + NTI + GEO + EUP + UPA
-    // 8199 = CPX + INS + NTI + GEO
-    // 49152 = EUP + UPA
-
-
-    private static Map navigatorMasks = new HashMap();
-    static {
-        navigatorMasks.put(EiNavigator.DB, new Integer(57351 +
-        								   DatabaseConfig.PAG_MASK +
-        								   DatabaseConfig.CBF_MASK+
-        								   DatabaseConfig.EPT_MASK+
-        								   DatabaseConfig.ELT_MASK));
-        navigatorMasks.put(EiNavigator.YR, new Integer(57351 +
-        										DatabaseConfig.CBF_MASK+
-        										DatabaseConfig.EPT_MASK+
-        										DatabaseConfig.ELT_MASK));
-        navigatorMasks.put(EiNavigator.CV, new Integer(57351 +
-        									DatabaseConfig.CBF_MASK+
-        									DatabaseConfig.EPT_MASK+
-        									DatabaseConfig.ELT_MASK));
-        navigatorMasks.put(EiNavigator.CL, new Integer(57351 +
-        									DatabaseConfig.PAG_MASK +
-        									DatabaseConfig.CBF_MASK+
-        									DatabaseConfig.EPT_MASK+
-        									DatabaseConfig.ELT_MASK));
-        navigatorMasks.put(EiNavigator.ST, new Integer(DatabaseConfig.PAG_MASK +
-        									 DatabaseConfig.ELT_MASK));
-
-        navigatorMasks.put(EiNavigator.FL, new Integer(DatabaseConfig.PAG_MASK +
-                											DatabaseConfig.EPT_MASK +
-                											DatabaseConfig.ELT_MASK));
-        navigatorMasks.put(EiNavigator.PN,new Integer(3 +
-        									DatabaseConfig.PAG_MASK +
-        									DatabaseConfig.CBF_MASK +
-        									DatabaseConfig.EPT_MASK +
-        									DatabaseConfig.ELT_MASK));
-        navigatorMasks.put(EiNavigator.AU,new Integer(57351 +
-        									DatabaseConfig.PAG_MASK +
-        									DatabaseConfig.CBF_MASK +
-        									DatabaseConfig.EPT_MASK +
-        									DatabaseConfig.ELT_MASK));
-        navigatorMasks.put(EiNavigator.AF,new Integer(57351 +
-        									DatabaseConfig.CBF_MASK +
-        									DatabaseConfig.EPT_MASK +
-        									DatabaseConfig.ELT_MASK));
-        navigatorMasks.put(EiNavigator.DT,new Integer(57351 +
-        									DatabaseConfig.CBF_MASK +
-        									DatabaseConfig.ELT_MASK +
-        									DatabaseConfig.EPT_MASK));
-        navigatorMasks.put(EiNavigator.LA,new Integer(8199 +
-        									DatabaseConfig.CBF_MASK +
-        									DatabaseConfig.EPT_MASK +
-        									DatabaseConfig.ELT_MASK));
-        navigatorMasks.put(EiNavigator.CO,new Integer(57351 +
-        									DatabaseConfig.PAG_MASK +
-        									DatabaseConfig.CBF_MASK));
-        navigatorMasks.put(EiNavigator.PK,new Integer(DatabaseConfig.EPT_MASK));
-        navigatorMasks.put(EiNavigator.PAC,new Integer(DatabaseConfig.EPT_MASK));
-        navigatorMasks.put(EiNavigator.PCI,new Integer(0));
-        navigatorMasks.put(EiNavigator.PEC,new Integer(DatabaseConfig.UPA_MASK +
-                                                        DatabaseConfig.EUP_MASK +
-                                                        DatabaseConfig.ELT_MASK +
-                                                        DatabaseConfig.EPT_MASK));
-        navigatorMasks.put(EiNavigator.PID,new Integer(49152));
-        navigatorMasks.put(EiNavigator.PUC,new Integer(49152));
-
-        navigatorMasks.put(EiNavigator.KY,new Integer(0));
-        navigatorMasks.put(EiNavigator.BKT,new Integer(0));
-        navigatorMasks.put(EiNavigator.BKS,new Integer(0));
-    }
-    public static Map getNavigatorMasks() {
-
-    	return navigatorMasks; }
+    // Navigator masks are no longer used and have been replaced by logic coded into preprocessing method in FastClient()
 
     protected static Map fieldNames = new HashMap();
     static {
@@ -222,106 +149,101 @@ public class EiNavigator
         fieldNames.put(EiNavigator.BKS,"bks");
     }
 
-	private String name = StringUtil.EMPTY_STRING;
-	private String displayname = StringUtil.EMPTY_STRING;
-	private String fieldname = StringUtil.EMPTY_STRING;
-	private List modifiers = new ArrayList();
+    private String name = StringUtil.EMPTY_STRING;
+    private String displayname = StringUtil.EMPTY_STRING;
+    private String fieldname = StringUtil.EMPTY_STRING;
+    private List modifiers = new ArrayList();
     private boolean includeall = true;
 
     public void setIncludeExcludeAll(String includeorexclude)
     {
-        setIncludeExcludeAll("true".equalsIgnoreCase(includeorexclude));
+      setIncludeExcludeAll("true".equalsIgnoreCase(includeorexclude));
     }
 
     public void setIncludeExcludeAll(boolean includeorexclude)
     {
-        includeall = includeorexclude;
+      includeall = includeorexclude;
     }
 
     public boolean getIncludeExcludeAll()
     {
-        return includeall;
+      return includeall;
     }
 
-	public static EiNavigator createNavigator(Field field)
-	{
-        return EiNavigator.createNavigator(field.getValue().toLowerCase().trim() + "nav");
+    public static EiNavigator createNavigator(Field field)
+    {
+      return EiNavigator.createNavigator(field.getValue().toLowerCase().trim() + "nav");
     }
 
-	public static EiNavigator createNavigator(String name)
-	{
+    public static EiNavigator createNavigator(String name)
+    {
+      EiNavigator ei = null;
+      if((YR.equalsIgnoreCase(name)) || (YR.substring(0,2).equalsIgnoreCase(name)))
+      {
+        ei = new YearNavigator();
+      }
+      else if(ALL.equalsIgnoreCase(name))
+      {
+        ei = new AllNavigator();
+      }
+      else if(DB.equalsIgnoreCase(name))
+      {
+        ei = new DBNavigator(name);
+      }
+      else if(PUC.equalsIgnoreCase(name))
+      {
+        ei = new PUCNavigator(name);
+      }
+      else if(PEC.equalsIgnoreCase(name))
+      {
+        ei = new PECNavigator(name);
+      }
+      else if(PID.equalsIgnoreCase(name))
+      {
+        ei = new PIDNavigator(name);
+      }
+      else if(BKT.equalsIgnoreCase(name) || BKS.equalsIgnoreCase(name))
+      {
+        ei = new BookNavigator(name);
+      }
+      else
+      {
+        ei = new EiNavigator(name);
+      }
+      return ei;
+    }
 
-        EiNavigator ei = null;
-		if((YR.equalsIgnoreCase(name)) || (YR.substring(0,2).equalsIgnoreCase(name)))
-		{
-			ei = new YearNavigator();
-		}
-		else if(ALL.equalsIgnoreCase(name))
-		{
-			ei = new AllNavigator();
-		}
-		else if(DB.equalsIgnoreCase(name))
-		{
-			ei = new DBNavigator(name);
-        }
-		else if(PUC.equalsIgnoreCase(name))
-		{
-			ei = new PUCNavigator(name);
-        }
-		else if(PEC.equalsIgnoreCase(name))
-		{
-			ei = new PECNavigator(name);
-        }
-		else if(PID.equalsIgnoreCase(name))
-		{
-			ei = new PIDNavigator(name);
-        }
-
-		else if(BKT.equalsIgnoreCase(name) || BKS.equalsIgnoreCase(name))
-		{
-			ei = new BookNavigator(name);
-        }
-		else
-		{
-			ei = new EiNavigator(name);
-		}
-
-        return ei;
-	}
-
-	public EiNavigator(String navname)
-	{
-		if(navname != null)
-		{
-			this.name = navname;
-			setFieldname((String) fieldNames.get(navname));
-            setDisplayname((String) displayNames.get(navname));
-		}
-	}
+    public EiNavigator(String navname)
+    {
+      if(navname != null)
+      {
+        this.name = navname;
+        setFieldname((String) fieldNames.get(navname));
+        setDisplayname((String) displayNames.get(navname));
+      }
+    }
 
 
     public void addModifiers(EiModifier mods)
     {
-
-        this.modifiers.add(mods);
+      this.modifiers.add(mods);
     }
 
-	public List getModifiers()
-	{
-		return modifiers;
-	}
+    public List getModifiers()
+    {
+      return modifiers;
+    }
 
-	public void setModifiers(List mods)
-	{
-
-		this.modifiers = mods;
-	}
+    public void setModifiers(List mods)
+    {
+      this.modifiers = mods;
+    }
     /**
      * @return
      */
     public String getDisplayname()
     {
-        return displayname;
+      return displayname;
     }
 
     /**
@@ -329,7 +251,7 @@ public class EiNavigator
      */
     public String getFieldname()
     {
-        return fieldname.replaceAll("clean", StringUtil.EMPTY_STRING);
+      return fieldname.replaceAll("clean", StringUtil.EMPTY_STRING);
     }
 
     /**
@@ -337,7 +259,7 @@ public class EiNavigator
      */
     public void setDisplayname(String string)
     {
-        displayname = string;
+      displayname = string;
     }
 
     /**
@@ -345,7 +267,7 @@ public class EiNavigator
      */
     public void setFieldname(String string)
     {
-        fieldname = string;
+      fieldname = string;
     }
 
     /**
@@ -353,7 +275,7 @@ public class EiNavigator
      */
     public String getName()
     {
-        return name;
+      return name;
     }
 
     /**
@@ -361,216 +283,211 @@ public class EiNavigator
      */
     public void setName(String string)
     {
-        name = string;
+      name = string;
     }
 
     public EiModifier createModifier(int i, String slable, String svalue)
     {
-        return new EiModifier(i, slable, svalue);
+      return new EiModifier(i, slable, svalue);
     }
 
-	public static final String NAVS_DELIM = "<>";
-	public static final String NAV_DELIM = "@";
+    public static final String NAVS_DELIM = "<>";
+    public static final String NAV_DELIM = "@";
 
-	public String toXML(int modifiercount)
-	{
-		StringBuffer sb = new StringBuffer();
-		sb.append("<NAVIGATOR ")
-		.append(" NAME=\"").append(this.getName()).append("\"")
-		.append(" LABEL=\"").append(this.getDisplayname()).append("\"");
-
-	    sb.append(" INCLUDEALL=\"").append(this.getIncludeExcludeAll() ? "plus" : "minus").append("\"");
-		sb.append(" FIELD=\"").append(this.getFieldname()).append("\">");
-
-		Iterator itrmods = (this.getModifiers()).iterator();
-		for(int mindex = 0;itrmods.hasNext();mindex++)
-		{
-			if(mindex == modifiercount) { break; }
-
-			EiModifier modifier = (EiModifier) itrmods.next();
-			if(modifier != null)
-			{
-				sb.append(modifier.toXML());
-			}
-		}
-		sb.append(ResultsState.getPagers(getModifiers().size(), modifiercount,this.getFieldname()));
-
-		sb.append("</NAVIGATOR>");
-
-		return sb.toString();
-	}
-
-	public String toXML()
-	{
-		return toXML(getModifiers().size());
-	}
-
-
-	public String toCSV()
-	{
-		StringBuffer sb = new StringBuffer();
-
-		Iterator itrmods = (this.getModifiers()).iterator();
-		while(itrmods.hasNext())
-		{
-			EiModifier modifier = (EiModifier) itrmods.next();
-			if(modifier != null)
-			{
-				sb.append(modifier.toCSV());
-			}
-		}
-
-		return sb.toString();
-	}
-
-	public String toString()
+    public String toXML(int modifiercount)
     {
-        return toString(EiNavigator.MODIFIER_LIMIT);
+      StringBuffer sb = new StringBuffer();
+      sb.append("<NAVIGATOR ")
+        .append(" NAME=\"").append(this.getName()).append("\"")
+        .append(" LABEL=\"").append(this.getDisplayname()).append("\"");
+
+      sb.append(" INCLUDEALL=\"").append(this.getIncludeExcludeAll() ? "plus" : "minus").append("\"");
+      sb.append(" FIELD=\"").append(this.getFieldname()).append("\">");
+
+      Iterator itrmods = (this.getModifiers()).iterator();
+      for(int mindex = 0;itrmods.hasNext();mindex++)
+      {
+        if(mindex == modifiercount) { break; }
+
+        EiModifier modifier = (EiModifier) itrmods.next();
+        if(modifier != null)
+        {
+          sb.append(modifier.toXML());
+        }
+      }
+      sb.append(ResultsState.getPagers(getModifiers().size(), modifiercount,this.getFieldname()));
+      sb.append("</NAVIGATOR>");
+      return sb.toString();
     }
 
-	public String toString(int showlimit)
+    public String toXML()
     {
-    	StringBuffer sb = new StringBuffer();
-		sb
-		.append((String) this.getName())
-		.append(NAV_DELIM)
-		.append((String) this.getDisplayname())
-		.append(NAV_DELIM)
-		.append((String) this.getFieldname())
-		.append(NAV_DELIM)
-		.append((String) String.valueOf(this.getIncludeExcludeAll()))
-		.append(NAV_DELIM);
+      return toXML(getModifiers().size());
+    }
+
+
+    public String toCSV()
+    {
+      StringBuffer sb = new StringBuffer();
+
+      Iterator itrmods = (this.getModifiers()).iterator();
+      while(itrmods.hasNext())
+      {
+        EiModifier modifier = (EiModifier) itrmods.next();
+        if(modifier != null)
+        {
+          sb.append(modifier.toCSV());
+        }
+      }
+
+      return sb.toString();
+    }
+
+    public String toString()
+    {
+      return toString(EiNavigator.MODIFIER_LIMIT);
+    }
+
+    public String toString(int showlimit)
+    {
+      StringBuffer sb = new StringBuffer();
+      sb.append((String) this.getName())
+        .append(NAV_DELIM)
+        .append((String) this.getDisplayname())
+        .append(NAV_DELIM)
+        .append((String) this.getFieldname())
+        .append(NAV_DELIM)
+        .append((String) String.valueOf(this.getIncludeExcludeAll()))
+        .append(NAV_DELIM);
 
         // jam 5/24/2005 - Bug Fix added if()/else
         // add a Mods Delimiter to Navigator with empty Modifiers list
         // gets parsed correctly when pulled from cache later on
         // (see parseNavigator())
-		if(this.getModifiers().size() >= 1)
-	    {
-    		Iterator itrmods = (this.getModifiers()).iterator();
-    		for(int limit = 0; itrmods.hasNext(); limit++)
-    		{
-    			if(limit >= showlimit)
-    			{
-    				break;
-    			}
-    			EiModifier modifier = (EiModifier) itrmods.next();
-    			if(modifier != null)
-    			{
-    				String modstring = modifier.toString().concat(EiModifier.MODS_DELIM);
-                    if((sb.length() + modstring.length()) > EiNavigator.NAV_STRING_LIMIT)
-                    {
-        			    break;
-                    }
-                    sb.append(modstring);
-    			}
-    		}
-        }
-        else
+      if(this.getModifiers().size() >= 1)
+      {
+        Iterator itrmods = (this.getModifiers()).iterator();
+        for(int limit = 0; itrmods.hasNext(); limit++)
         {
-			sb.append(EiModifier.MODS_DELIM);
+          if(limit >= showlimit)
+          {
+            break;
+          }
+          EiModifier modifier = (EiModifier) itrmods.next();
+          if(modifier != null)
+          {
+            String modstring = modifier.toString().concat(EiModifier.MODS_DELIM);
+            if((sb.length() + modstring.length()) > EiNavigator.NAV_STRING_LIMIT)
+            {
+              break;
+            }
+            sb.append(modstring);
+          }
         }
-
-		return sb.toString();
+      }
+      else
+      {
+        sb.append(EiModifier.MODS_DELIM);
+      }
+      return sb.toString();
     }
 
-	public static EiNavigator parseNavigator(String nav)
-	{
-		EiNavigator navigator = null;
+    public static EiNavigator parseNavigator(String nav)
+    {
+      EiNavigator navigator = null;
 
-		String[] navfields = nav.split(EiNavigator.NAV_DELIM);
+      String[] navfields = nav.split(EiNavigator.NAV_DELIM);
 
 
-		// Previous method toString() added empty Modifier list
-		// for Navigators with no modifiers (i.e DB sometimes)
-		// to ensure proper number of strings from split call
-		if(navfields.length == 5)
-		{
-			navigator = EiNavigator.createNavigator(navfields[0]);
-			navigator.setDisplayname(navfields[1]);
-			navigator.setFieldname(navfields[2]);
-			navigator.setIncludeExcludeAll(navfields[3]);
-			navigator.setModifiers(navigator.parseModifiers(navfields[4]));
-		}
-		else if(navfields.length == 4)
-		{
-			navigator = EiNavigator.createNavigator(navfields[0]);
-			navigator.setDisplayname(navfields[1]);
-			navigator.setFieldname(navfields[2]);
-			navigator.setModifiers(navigator.parseModifiers(navfields[3]));
-		}
+      // Previous method toString() added empty Modifier list
+      // for Navigators with no modifiers (i.e DB sometimes)
+      // to ensure proper number of strings from split call
+      if(navfields.length == 5)
+      {
+        navigator = EiNavigator.createNavigator(navfields[0]);
+        navigator.setDisplayname(navfields[1]);
+        navigator.setFieldname(navfields[2]);
+        navigator.setIncludeExcludeAll(navfields[3]);
+        navigator.setModifiers(navigator.parseModifiers(navfields[4]));
+      }
+      else if(navfields.length == 4)
+      {
+        navigator = EiNavigator.createNavigator(navfields[0]);
+        navigator.setDisplayname(navfields[1]);
+        navigator.setFieldname(navfields[2]);
+        navigator.setModifiers(navigator.parseModifiers(navfields[3]));
+      }
 
-		if((navigator != null) && ((navigator.getName().equals(EiNavigator.BKS)) || (navigator.getName().equals(EiNavigator.BKT))))
-		{
-			navigator = BookNavigator.createBookNavigator(navigator);
-		}
-		return navigator;
-	}
+      if((navigator != null) && ((navigator.getName().equals(EiNavigator.BKS)) || (navigator.getName().equals(EiNavigator.BKT))))
+      {
+        navigator = BookNavigator.createBookNavigator(navigator);
+      }
+      return navigator;
+    }
 
     public List parseModifiers(String modsstring)
     {
-        List modifiers = new ArrayList();
+      List modifiers = new ArrayList();
 
-        String[] mods = modsstring.split(EiModifier.MODS_DELIM);
-        for(int i=0; i < mods.length; i++)
-        {
-            modifiers.add(EiModifier.parseModifier(mods[i]));
-        }
+      String[] mods = modsstring.split(EiModifier.MODS_DELIM);
+      for(int i=0; i < mods.length; i++)
+      {
+          modifiers.add(EiModifier.parseModifier(mods[i]));
+      }
 
-        return modifiers;
-
+      return modifiers;
     }
 
     // These are used to create modifiers from breadcrumb navigation
-	public void setModifierValue(String mod)
-	{
-        setModifierValues(new String[] {mod});
-	}
+    public void setModifierValue(String mod)
+    {
+      setModifierValues(new String[] {mod});
+    }
 
-	public void setModifierValues(String[] mods)
-	{
-		for(int i = 0; i < mods.length; i++)
-		{
-			EiModifier mod = EiModifier.parseModifier(Entity.prepareString(mods[i]));
-			modifiers.add(mod);
-		}
-	}
+    public void setModifierValues(String[] mods)
+    {
+      for(int i = 0; i < mods.length; i++)
+      {
+        EiModifier mod = EiModifier.parseModifier(Entity.prepareString(mods[i]));
+        modifiers.add(mod);
+      }
+    }
 
-	public String getQueryString()
-	{
-		StringBuffer sb = new StringBuffer();
-        int modsize = this.getModifiers().size();
+    public String getQueryString()
+    {
+      StringBuffer sb = new StringBuffer();
+      int modsize = this.getModifiers().size();
 
-        if(modsize > 1)
+      if(modsize > 1)
+      {
+        sb.append("(");
+      }
+
+      Iterator itrmods = (this.getModifiers()).iterator();
+      while(itrmods.hasNext())
+      {
+        EiModifier modifier = (EiModifier) itrmods.next();
+        if(modifier != null)
         {
-		    sb.append("(");
+          String svalue = (String) modifier.getValue();
+          svalue = svalue.replaceAll("[\"\\^\\$]", StringUtil.EMPTY_STRING);
+          sb.append("{");
+          sb.append(svalue);
+          sb.append("}");
+          if(itrmods.hasNext())
+          {
+            sb.append(" OR ");
+          }
         }
+      }
+      if(modsize > 1)
+      {
+        sb.append(")");
+      }
+      sb.append(" WN ");
+      sb.append(fieldname.toUpperCase());
 
-		Iterator itrmods = (this.getModifiers()).iterator();
-		while(itrmods.hasNext())
-		{
-			EiModifier modifier = (EiModifier) itrmods.next();
-			if(modifier != null)
-			{
-				String svalue = (String) modifier.getValue();
-				svalue = svalue.replaceAll("[\"\\^\\$]", StringUtil.EMPTY_STRING);
-				sb.append("{");
-				sb.append(svalue);
-				sb.append("}");
-				if(itrmods.hasNext())
-				{
-					sb.append(" OR ");
-				}
-			}
-		}
-        if(modsize > 1)
-        {
-    		sb.append(")");
-        }
-		sb.append(" WN ");
-		sb.append(fieldname.toUpperCase());
-
-		return sb.toString();
-	}
+      return sb.toString();
+    }
 
 }
