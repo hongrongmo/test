@@ -81,6 +81,7 @@
 
       <xsl:apply-templates select="PAP"/>
       <xsl:apply-templates select="PIM"/>
+      <xsl:apply-templates select="PINFO"/>
       <xsl:apply-templates select="PM"/>
       <xsl:apply-templates select="PM1"/>
       <xsl:apply-templates select="UPD"/>
@@ -101,7 +102,6 @@
       <!-- CBNB availability -->
       <xsl:apply-templates select="AV"/>
       </a>
-
 
       <xsl:if test="$ascii='true'">
         <xsl:text>&#xD;&#xA;</xsl:text>
@@ -220,7 +220,8 @@
         <b> Patent number:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
     </xsl:template>
 
-    <xsl:template match="PIM">
+
+    <xsl:template match="PIM|PINFO">
         <b> Patent information:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
     </xsl:template>
 
@@ -236,7 +237,7 @@
     <xsl:template match="AV">
         <xsl:text> </xsl:text><b>Availability:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
     </xsl:template>
-
+    
     <xsl:template match="PFD">
         <br/>
         <b> Filing date: </b><xsl:value-of select="." disable-output-escaping="yes"/>
