@@ -3,7 +3,6 @@ package org.ei.domain;
 import org.ei.domain.Keys;
 
 
-
 public interface Keys
 {
     /*
@@ -162,13 +161,17 @@ public interface Keys
     public static final Key PATAPPDATE = new Key("PAPD", "Application date");
     public static final Key PATAPPDATEX = new Key("PAPX", "Application date");
     public static final Key PATAPP_INFO = new Key("PAPIM", "Application information");
+    //   public static final String PATAPP_INFO = "PATAP"; Application information:
     public static final Key PATAPPNUMS = new Key("PANS", "Application  number");
     public static final Key PATAPPNUMUS = new Key("PANUS", "Unstandardized application number");
     public static final Key PATAPPCOUNTRY= new Key("PAPCO", "Application country");
     public static final Key PATASSIGN = new Key("PASM", "Assignee");
+    public static final Key PATEPTASSIGN = new Key("EASM", "Assignee");
     public static final Key PATCOUNTRY = new Key("COPA","Country of application");
     public static final Key PATENT_ISSUE_DATE = new Key("PIDD","Patent issue date");
     public static final Key PATFILDATE = new Key("PFD","Filing date");
+
+    public static final Key PATENT_INFORMATION = new Key("PINFO", "Patent information"); //EPT field
     public static final Key PATNUM = new Key("PAP", "Patent number");
     public static final Key PATENT_NUMBER = new Key("PM", "Publication number");
     public static final Key PATENT_NUMBER1 = new Key("PM1", "Publication number"); // for pat refs pages
