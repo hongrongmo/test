@@ -62,9 +62,12 @@ public class FastClient
 			   mask == DatabaseConfig.CPX_MASK ||
 			   mask == DatabaseConfig.INS_MASK ||
 			   mask == DatabaseConfig.GEO_MASK ||
+			   mask == DatabaseConfig.CBN_MASK ||
+			   mask == DatabaseConfig.CHM_MASK ||
+			   mask == DatabaseConfig.PCH_MASK ||
 			   mask == DatabaseConfig.ELT_MASK ||
 			   mask == DatabaseConfig.EPT_MASK ||
-			   mask == DatabaseConfig.CBF_MASK 
+			   mask == DatabaseConfig.CBF_MASK
 			   )
 			{
 				return true;
@@ -78,7 +81,7 @@ public class FastClient
 		else if(EiNavigator.FL.equals(navid)) {
 			if((mask == DatabaseConfig.PAG_MASK)||
 				mask == DatabaseConfig.ELT_MASK ||
-				mask == DatabaseConfig.EPT_MASK ) 
+				mask == DatabaseConfig.EPT_MASK )
 			{
 				return true;
 			}
@@ -89,6 +92,9 @@ public class FastClient
 			if(((mask & (DatabaseConfig.CPX_MASK +
 						 DatabaseConfig.INS_MASK +
 						 DatabaseConfig.PAG_MASK +
+			       DatabaseConfig.CBN_MASK +
+			       DatabaseConfig.CHM_MASK +
+			       DatabaseConfig.PCH_MASK +
 						 DatabaseConfig.ELT_MASK +
 						 DatabaseConfig.EPT_MASK +
 						 DatabaseConfig.CBF_MASK)) > 0)){
@@ -96,8 +102,10 @@ public class FastClient
 			}
 		}
 		// Always include AU
-		else if(EiNavigator.AU.equals(navid)){
-			return true;
+		else if(EiNavigator.AU.equals(navid)) {
+      if(mask != DatabaseConfig.CBN_MASK) {
+        return true;
+      }
 		}
 		// include AF only if this isn't Referex by itself
 		else if(EiNavigator.AF.equals(navid)) {
@@ -126,6 +134,9 @@ public class FastClient
 							DatabaseConfig.NTI_MASK +
 							DatabaseConfig.GEO_MASK +
 							DatabaseConfig.CBF_MASK +
+			       DatabaseConfig.CBN_MASK +
+			       DatabaseConfig.CHM_MASK +
+			       DatabaseConfig.PCH_MASK +
 							DatabaseConfig.ELT_MASK+
 							DatabaseConfig.EPT_MASK)) > 0)){
 				return true;
@@ -145,34 +156,36 @@ public class FastClient
 		}
 		// include PEC only if Patents are included
 		else if(EiNavigator.PEC.equals(navid)) {
-			if((mask & (DatabaseConfig.EUP_MASK + 
-					DatabaseConfig.UPA_MASK+ 
-					DatabaseConfig.ELT_MASK + 
+			if((mask & (DatabaseConfig.EUP_MASK +
+					DatabaseConfig.UPA_MASK+
+          DatabaseConfig.CBN_MASK +
+					DatabaseConfig.ELT_MASK +
 					DatabaseConfig.EPT_MASK)) > 0) {
 				return true;
 			}
 		}
 		// include PID only if Patents are included
 		else if(EiNavigator.PID.equals(navid)) {
-			if((mask & (DatabaseConfig.EUP_MASK + 
-						DatabaseConfig.UPA_MASK+ 
+			if((mask & (DatabaseConfig.EUP_MASK +
+						DatabaseConfig.UPA_MASK+
+            DatabaseConfig.CBN_MASK +
 						DatabaseConfig.EPT_MASK)) > 0) {
 				return true;
 			}
 		}
 		// include PUC only if Patents are included
 		else if(EiNavigator.PUC.equals(navid)) {
-			if((mask & (DatabaseConfig.EUP_MASK + 
-						DatabaseConfig.UPA_MASK + 
-						DatabaseConfig.ELT_MASK + 
-						DatabaseConfig.EPT_MASK)) > 0) 
+			if((mask & (DatabaseConfig.EUP_MASK +
+						DatabaseConfig.UPA_MASK +
+						DatabaseConfig.ELT_MASK +
+						DatabaseConfig.EPT_MASK)) > 0)
 			{
 				return true;
 			}
 		}
 		// include PEC only if Encomapss Pat are included
 		else if(EiNavigator.PAC.equals(navid)) {
-			if((mask & (DatabaseConfig.EPT_MASK )) > 0) 
+			if((mask & (DatabaseConfig.EPT_MASK )) > 0)
 			{
 				return true;
 			}
@@ -184,7 +197,7 @@ public class FastClient
     // Create string of active navigators for use in doNavigators clause of buildSearchURL
     public String getNavigatorString()
     {
-//        System.out.println(" getNavigatorString() w/ mask = " + getNavigatorMask());
+        //System.out.println(" getNavigatorString() w/ mask = " + getNavigatorMask());
 
         String navstring = "";
         boolean navstrempty = true;
@@ -211,6 +224,7 @@ public class FastClient
             }
         }
 
+        //System.out.println(" getNavigatorString() result = " + navstring);
         return navstring;
     }
 
@@ -361,7 +375,7 @@ public class FastClient
             String URL = buildSearchURL();
             HttpClient client = new HttpClient();
             method = new GetMethod(URL);
-//            System.out.println(" FastClient URL " + java.net.URLDecoder.decode(URL));
+            //System.out.println(" FastClient URL " + java.net.URLDecoder.decode(URL));
             int statusCode = client.executeMethod(method);
             in = new BufferedReader(new InputStreamReader(method.getResponseBodyAsStream()));
             read(in);
