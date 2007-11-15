@@ -224,7 +224,7 @@ public class ResultNavigator
         if(anav != null)
         {
           //if((mask :: cpx || mask :: cbf || mask :: ins || mask :: nti || mask :: geo || mask :: cbn || mask :: chm || mask :: pch || mask :: elt || mask :: ept) && (mask !: upa || mask !: eup || mask !: pag))
-          if((m_cbnb || m_compendex || m_inspec || m_ntis || m_geobase || m_paperchem || m_chimica || m_cbnb || m_encompasslit || m_encompasspat) && !(m_books || m_uspatents || m_eupatents ))
+          if((m_compendex || m_inspec || m_ntis || m_geobase || m_cbnb || m_chimica || m_paperchem || m_encompasslit || m_encompasspat) && !(m_uspatents || m_eupatents || m_books ))
           {
             anav.setDisplayname("Controlled vocabulary");
           }
@@ -298,8 +298,8 @@ public class ResultNavigator
             fastnavigators.remove(anav);
           }
         }
-        // YR
-        anav = getNavigatorByName(EiNavigator.YR);
+        // YR - Do nothing - default as is
+        /* anav = getNavigatorByName(EiNavigator.YR);
         if(anav != null)
         {
           // Year
@@ -312,7 +312,8 @@ public class ResultNavigator
           {
             fastnavigators.remove(anav);
           }
-        }
+        } */
+
         // CL
         anav = getNavigatorByName(EiNavigator.CL);
         if(anav != null)
@@ -331,6 +332,7 @@ public class ResultNavigator
             // if books and nothing else
             // Uses CleanCLFacet
             // CL (Book Collection, CL)
+            cleanCLFacet();
           }
           //else if((mask :: cpx  || mask :: cbf || mask :: ins  || mask :: nti  ||  mask :: geo || mask :: elt) && (mask !: cbn || mask !: upa || mask !: eup || mask !: pag || mask !: chm || mask !: pch || mask !: ept))
           else if((m_compendex || m_inspec || m_ntis || m_geobase || m_encompasslit) && !(m_cbnb || m_uspatents || m_eupatents || m_books || m_chimica || m_paperchem || m_encompasspat))
@@ -354,12 +356,12 @@ public class ResultNavigator
           }
           // There is some document type data for EnCompassPAT, but it is only present for US patents.  Mary doesn't think DT navigatior should be displayed for EPT.
           //if((mask :: cpx || mask :: cbf || mask :: ins || mask :: nti || mask :: geo || mask :: cbn || mask :: upa || mask :: eup  || mask :: chm || mask :: pch || mask :: elt) && (mask !: pag || mask !: ept))
-          if((m_compendex || m_inspec || m_ntis || m_geobase || m_cbnb || m_uspatents || m_eupatents  || m_chimica || m_paperchem || m_encompasslit) && !(m_books && m_encompasspat))
+          else if((m_compendex || m_inspec || m_ntis || m_geobase || m_cbnb || m_uspatents || m_eupatents  || m_chimica || m_paperchem || m_encompasslit) && !(m_books || m_encompasspat))
           {
             anav.setDisplayname("Document type");
           }
           // Document type -- editing values from navigator
-          if((m_uspatents || m_eupatents) && !(m_compendex || m_inspec || m_ntis || m_geobase || m_encompasslit || m_encompasspat || m_paperchem || m_chimica || m_cbnb || m_books))
+          else if((m_uspatents || m_eupatents) && !(m_compendex || m_inspec || m_ntis || m_geobase || m_encompasslit || m_encompasspat || m_paperchem || m_chimica || m_cbnb || m_books))
           {
             // Remove the document type "Patent" from DT.
             anav.setDisplayname("Patent type");
