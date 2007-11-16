@@ -29,9 +29,12 @@
   	}
  %>
  <%
+
     ControllerClient client = new ControllerClient(request, response);
-    UserSession ussession=(UserSession)client.getUserSession();
     
+    UserSession ussession=(UserSession)client.getUserSession();
+    ClientCustomizer clientCustomizer=new ClientCustomizer(ussession);
+    boolean isPersonalizationPresent=clientCustomizer.checkPersonalization();
     SessionID sessionId = ussession.getSessionID();  
     String sesID = sessionId.toString();
     
@@ -159,6 +162,7 @@
 	out.write("<RESOURCE-PATH>"+resourcePath+"</RESOURCE-PATH>");
 	out.write(strGlobalLinksXML);
 	out.write("<CARTRIDGES><![CDATA["+sbCartridges+"]]></CARTRIDGES>");
+	out.write("<PERSONALIZATION-PRESENT>"+isPersonalizationPresent+"</PERSONALIZATION-PRESENT>");
 	out.write("<PATCR><![CDATA["+patCartridges+"]]></PATCR>");
 	out.write("<SELECTED-DB><![CDATA["+selectedDB+"]]></SELECTED-DB>");
 	out.write("<LITCR><![CDATA["+litCartidges+"]]></LITCR>");
