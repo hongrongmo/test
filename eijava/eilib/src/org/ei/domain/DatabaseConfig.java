@@ -254,7 +254,27 @@ public final class DatabaseConfig
 
     public Database getDatabase(String strID)
     {
-        return (Database) databaseTable.get(strID);
+        Database adb = null;
+        if(strID != null)
+        {
+          adb = (Database) databaseTable.get(strID);
+          if(adb == null)
+          {
+            if(strID.equals("ach")) //PaperChem
+            {
+              adb = (Database) databaseTable.get("pch");
+            }
+            else if(strID.equals("hhm")) // Chimica
+            {
+              adb = (Database) databaseTable.get("chm");
+            }
+            else if(strID.equals("bbn")) // CBNB
+            {
+              adb = (Database) databaseTable.get("cbn");
+            }
+          }
+        }
+        return adb;
     }
 
     public int getMinStartYear(String[] credentials)
