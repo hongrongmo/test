@@ -25,8 +25,8 @@ public class GEODocBuilder
     private static final Key GEO_CLASS_CODES = new Key(Keys.CLASS_CODES, "Classification codes");
     private static final Key GEO_CONTROLLED_TERMS = new Key(Keys.CONTROLLED_TERMS, "Index terms");
     private static final Key[] CITATION_KEYS = {Keys.DOCID,Keys.TITLE,Keys.EDITORS,Keys.AUTHORS,Keys.AUTHOR_AFFS,Keys.SOURCE,Keys.MONOGRAPH_TITLE, Keys.PAGE_RANGE, Keys.VOLISSUE,Keys.PUBLICATION_YEAR, Keys.PUBLISHER, Keys.ISSUE_DATE, Keys.ISSN, Keys.LANGUAGE ,Keys.NO_SO, Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT};
-    private static final Key[] ABSTRACT_KEYS = {Keys.DOCID,Keys.TITLE,Keys.EDITORS,Keys.AUTHORS,Keys.EDITOR_AFFS, Keys.AUTHOR_AFFS,Keys.VOLISSUE, Keys.SOURCE, Keys.PUBLICATION_YEAR, Keys.ISSUE_DATE, Keys.MONOGRAPH_TITLE, Keys.PAGE_RANGE,Keys.ARTICLE_NUMBER,Keys.CONFERENCE_NAME, Keys.ISSN, Keys.E_ISSN, Keys.ISBN, Keys.CODEN, Keys.PUBLISHER,Keys.I_PUBLISHER,Keys.CONF_DATE,Keys.SPONSOR, Keys.PROVIDER ,Keys.LANGUAGE, Keys.MAIN_HEADING, Keys.INDEX_TERM, Keys.UNCONTROLLED_TERMS, Keys.REGION_CONTROLLED_TERMS, Keys.GLOBAL_TAGS, Keys.PRIVATE_TAGS, Keys.ABSTRACT, Keys.CLASS_CODES, Keys.NUMBER_OF_REFERENCES,Keys.NO_SO, Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT };
-    private static final Key[] DETAILED_KEYS = {Keys.ACCESSION_NUMBER,Keys.TITLE, Keys.TITLE_TRANSLATION, Keys.AUTHORS, Keys.EDITORS, Keys.AUTHOR_AFFS, Keys.EDITOR_AFFS, Keys.CORRESPONDENCE_PERSON,Keys.SERIAL_TITLE, Keys.ABBRV_SERIAL_TITLE, Keys.VOLUME, Keys.ISSUE, Keys.MONOGRAPH_TITLE, Keys.ISSUE_DATE, Keys.PUBLICATION_YEAR, Keys.PAP_NUMBER, Keys.PAGE_RANGE, Keys.PAGE_COUNT, Keys.ARTICLE_NUMBER, Keys.LANGUAGE, Keys.ISSN, Keys.E_ISSN, Keys.CODEN, Keys.ISBN, Keys.DOC_TYPE, Keys.SOURCE_COUNTRY, Keys.CONFERENCE_NAME, Keys.CONF_DATE, Keys.MEETING_LOCATION, Keys.CONF_CODE, Keys.SPONSOR, Keys.PUBLISHER, Keys.ABSTRACT, Keys.ABSTRACT_TYPE, Keys.NUMBER_OF_REFERENCES, Keys.MAIN_HEADING, Keys.CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS, Keys.REGION_CONTROLLED_TERMS, Keys.CLASS_CODES, Keys.TREATMENTS, Keys.GLOBAL_TAGS, Keys.PRIVATE_TAGS, Keys.DOI, Keys.DOCID, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT,Keys.PROVIDER};
+    private static final Key[] ABSTRACT_KEYS = {Keys.DOCID,Keys.TITLE,Keys.EDITORS,Keys.AUTHORS,Keys.EDITOR_AFFS, Keys.AUTHOR_AFFS,Keys.VOLISSUE, Keys.SOURCE, Keys.PUBLICATION_YEAR, Keys.ISSUE_DATE, Keys.MONOGRAPH_TITLE, Keys.PAGE_RANGE,Keys.ARTICLE_NUMBER,Keys.CONFERENCE_NAME, Keys.ISSN, Keys.E_ISSN, Keys.ISBN, Keys.CODEN, Keys.PUBLISHER,Keys.I_PUBLISHER,Keys.CONF_DATE,Keys.SPONSOR, Keys.PROVIDER ,Keys.LANGUAGE, Keys.MAIN_HEADING, Keys.INDEX_TERM, Keys.SPECIES_TERMS, Keys.REGION_CONTROLLED_TERMS, Keys.GLOBAL_TAGS, Keys.PRIVATE_TAGS, Keys.ABSTRACT, Keys.CLASS_CODES, Keys.NUMBER_OF_REFERENCES,Keys.NO_SO, Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT };
+    private static final Key[] DETAILED_KEYS = {Keys.ACCESSION_NUMBER,Keys.TITLE, Keys.TITLE_TRANSLATION, Keys.AUTHORS, Keys.EDITORS, Keys.AUTHOR_AFFS, Keys.EDITOR_AFFS, Keys.CORRESPONDENCE_PERSON,Keys.SERIAL_TITLE, Keys.ABBRV_SERIAL_TITLE, Keys.VOLUME, Keys.ISSUE, Keys.MONOGRAPH_TITLE, Keys.ISSUE_DATE, Keys.PUBLICATION_YEAR, Keys.PAP_NUMBER, Keys.PAGE_RANGE, Keys.PAGE_COUNT, Keys.ARTICLE_NUMBER, Keys.LANGUAGE, Keys.ISSN, Keys.E_ISSN, Keys.CODEN, Keys.ISBN, Keys.DOC_TYPE, Keys.SOURCE_COUNTRY, Keys.CONFERENCE_NAME, Keys.CONF_DATE, Keys.MEETING_LOCATION, Keys.CONF_CODE, Keys.SPONSOR, Keys.PUBLISHER, Keys.ABSTRACT, Keys.ABSTRACT_TYPE, Keys.NUMBER_OF_REFERENCES, Keys.MAIN_HEADING, Keys.CONTROLLED_TERMS, Keys.SPECIES_TERMS, Keys.REGION_CONTROLLED_TERMS, Keys.CLASS_CODES, Keys.TREATMENTS, Keys.GLOBAL_TAGS, Keys.PRIVATE_TAGS, Keys.DOI, Keys.DOCID, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT,Keys.PROVIDER};
     private static final Key[] RIS_KEYS = { Keys.RIS_TY, Keys.RIS_LA , Keys.RIS_N1 , Keys.RIS_TI , Keys.RIS_T1 , Keys.RIS_BT , Keys.RIS_JO ,Keys.RIS_T3 , Keys.RIS_AUS , Keys.RIS_AD , Keys.RIS_EDS , Keys.RIS_VL , Keys.RIS_IS , Keys.RIS_PY , Keys.RIS_AN , Keys.RIS_SP , Keys.RIS_EP, Keys.RIS_SN ,  Keys.RIS_S1 , Keys.RIS_MD ,Keys.RIS_CY , Keys.RIS_PB,  Keys.RIS_N2 , Keys.RIS_KW , Keys.RIS_CVS , Keys.RIS_FLS , Keys.RIS_DO, Keys.BIB_TY };
     private static final Key[] XML_KEYS = { Keys.ISSN ,Keys.E_ISSN, Keys.MAIN_HEADING , Keys.NO_SO , Keys.MONOGRAPH_TITLE , Keys.PUBLICATION_YEAR , Keys.VOLUME_TITLE , Keys.CONTROLLED_TERM , Keys.ISBN , Keys.AUTHORS , Keys.DOCID , Keys.SOURCE , Keys.NUMVOL , Keys.EDITOR_AFFS , Keys.EDITORS , Keys.PUBLISHER , Keys.VOLUME , Keys.AUTHOR_AFFS , Keys.PROVIDER , Keys.ISSUE_DATE , Keys.COPYRIGHT_TEXT , Keys.DOI , Keys.PAGE_COUNT ,Keys.ARTICLE_NUMBER, Keys.PUBLICATION_DATE , Keys.TITLE , Keys.LANGUAGE , Keys.PAGE_RANGE , Keys.PAPER_NUMBER , Keys.COPYRIGHT , Keys.ISSUE , Keys.ACCESSION_NUMBER , Keys.CONTROLLED_TERMS};
     public static final String AUDELIMITER = new String(new char[] {30});
@@ -479,8 +479,8 @@ public class GEODocBuilder
                     {
                         descriptorMaintermSpec = descriptorMaintermSpec + rset.getString("DESCRIPTOR_MAINTERM_SPC2");
                     }
-                    ht.put(Keys.UNCONTROLLED_TERMS,
-                           new XMLMultiWrapper(Keys.UNCONTROLLED_TERMS, setElementData(descriptorMaintermSpec)));
+                    ht.put(Keys.SPECIES_TERMS,
+                           new XMLMultiWrapper(Keys.SPECIES_TERMS, setElementData(descriptorMaintermSpec)));
                 }
 
                 //NR
@@ -974,7 +974,7 @@ public class GEODocBuilder
                         {
                             descriptorMaintermSpec = descriptorMaintermSpec + rset.getString("DESCRIPTOR_MAINTERM_SPC2");
                         }
-                        ht.put(Keys.UNCONTROLLED_TERMS,
+                        ht.put(Keys.SPECIES_TERMS,
                                new XMLMultiWrapper(Keys.SPECIES_TERMS, setElementData(descriptorMaintermSpec)));
                     }
 
