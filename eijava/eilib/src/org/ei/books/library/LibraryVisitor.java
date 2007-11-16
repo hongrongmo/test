@@ -163,96 +163,98 @@ public class LibraryVisitor implements Visitor
 			{
 				for (int j = 0; j < creds.length; j++)
 				{
-					curCollectionName = creds[j].substring(0, 3);
-
-					if (curCollectionName.equals(allcolls[i].getAbbrev()))
+					if(creds[j].length() >= 3)
 					{
-						if (((j + 1) < creds.length && !curCollectionName
-								.equals(creds[j + 1].substring(0, 3)))
-								|| (!perpetual && creds[j].length() == 3))
-						{
-							Integer subCount = (Integer) collectionMap
-									.get(allcolls[i].getAbbrev());
-							out.write("<" + allcolls[i].getAbbrev() + ">");
+  					curCollectionName = creds[j].substring(0, 3);
 
-							int colmask = allcolls[i].getColMask();
-							out
-									.write("<BSTATE><![CDATA[<a class=\"SpLink\" href=\"/controller/servlet/Controller?CID=ebookSearch&bstate="
-											+ String
-													.valueOf(((bstate & colmask) == colmask) ? (bstate - colmask)
-															: (bstate + colmask))
-											+ "\">");
-							out
-									.write(((bstate & colmask) == colmask) ? "...less"
-											: "more...");
-							out.write("</a>]]></BSTATE>");
+  					if (curCollectionName.equals(allcolls[i].getAbbrev()))
+  					{
+  						if (((j + 1) < creds.length && !curCollectionName
+  								.equals(creds[j + 1].substring(0, 3)))
+  								|| (!perpetual && creds[j].length() == 3))
+  						{
+  							Integer subCount = (Integer) collectionMap
+  									.get(allcolls[i].getAbbrev());
+  							out.write("<" + allcolls[i].getAbbrev() + ">");
 
-							out
-									.write("<HEAD><![CDATA[<a class=\"SmWhiteText\" href=\"/controller/servlet/Controller?database=131072&sortdir=up&sort=stsort&yearselect=yearrange&CID=quickSearchCitationFormat&searchtype=Book&col="
-											+ allcolls[i].getShortname()
-											+ "\"><b>"
-											+ allcolls[i].getDisplayName()
-											+ " ("
-											+ subCount
-											+ ")</b></a> <a class=\"SmWhiteText\"></a>]]></HEAD>");
-							out.write("<CVS>");
+  							int colmask = allcolls[i].getColMask();
+  							out
+  									.write("<BSTATE><![CDATA[<a class=\"SpLink\" href=\"/controller/servlet/Controller?CID=ebookSearch&bstate="
+  											+ String
+  													.valueOf(((bstate & colmask) == colmask) ? (bstate - colmask)
+  															: (bstate + colmask))
+  											+ "\">");
+  							out
+  									.write(((bstate & colmask) == colmask) ? "...less"
+  											: "more...");
+  							out.write("</a>]]></BSTATE>");
 
-							TreeSet treeSet = getColTreeSet();
-							int cvscount = 0;
-							int cvscountshown = ((bstate & colmask) == colmask) ? treeSet
-									.size()
-									: 6;
+  							out
+  									.write("<HEAD><![CDATA[<a class=\"SmWhiteText\" href=\"/controller/servlet/Controller?database=131072&sortdir=up&sort=stsort&yearselect=yearrange&CID=quickSearchCitationFormat&searchtype=Book&col="
+  											+ allcolls[i].getShortname()
+  											+ "\"><b>"
+  											+ allcolls[i].getDisplayName()
+  											+ " ("
+  											+ subCount
+  											+ ")</b></a> <a class=\"SmWhiteText\"></a>]]></HEAD>");
+  							out.write("<CVS>");
 
-							for (Iterator iter = treeSet.iterator(); iter
-									.hasNext();)
-							{
-								Map.Entry entry = (Map.Entry) iter.next();
-								String key = (String) entry.getKey();
+  							TreeSet treeSet = getColTreeSet();
+  							int cvscount = 0;
+  							int cvscountshown = ((bstate & colmask) == colmask) ? treeSet
+  									.size()
+  									: 6;
 
-								String curEntry = key.substring(0, 3);
-								String curCVS = key.substring(4, key.length());
-								if (curEntry.equals(curCollectionName))
-								{
-									Integer val = (Integer) entry.getValue();
+  							for (Iterator iter = treeSet.iterator(); iter
+  									.hasNext();)
+  							{
+  								Map.Entry entry = (Map.Entry) iter.next();
+  								String key = (String) entry.getKey();
 
-									java.lang.reflect.Field[] fields = libraryFilters
-											.getClass().getDeclaredFields();
-									for (int k = 0; k < fields.length; k++)
-									{
-										if (fields[k].getName().equals(
-												curCollectionName))
-										{
-											String[] filter = (String[]) fields[k]
-													.get(libraryFilters);
-											Arrays.sort(filter);
+  								String curEntry = key.substring(0, 3);
+  								String curCVS = key.substring(4, key.length());
+  								if (curEntry.equals(curCollectionName))
+  								{
+  									Integer val = (Integer) entry.getValue();
 
-											if (Arrays.binarySearch(filter,
-													curCVS) >= 0)
-											{
-												out
-														.write("<CV><![CDATA[<a class=\"SpLink\" href=\"/controller/servlet/Controller?database=131072&sortdir=up&sort=stsort&yearselect=yearrange&CID=quickSearchCitationFormat&searchtype=Book&searchWord1={"
-																+ curCVS
-																+ "}&section1=CV&boolean1=AND&col="
-																+ curCollectionName
-																+ "\">"
-																+ curCVS
-																+ " ("
-																+ val
-																+ ")</a><br/>]]></CV>");
-												cvscount++;
-											}
-										}
-									}
+  									java.lang.reflect.Field[] fields = libraryFilters
+  											.getClass().getDeclaredFields();
+  									for (int k = 0; k < fields.length; k++)
+  									{
+  										if (fields[k].getName().equals(
+  												curCollectionName))
+  										{
+  											String[] filter = (String[]) fields[k]
+  													.get(libraryFilters);
+  											Arrays.sort(filter);
 
-								}
-								// break out of loop depending on count which
-								// was
-								// set according to state of more/less links
-								// bstate
-								if (cvscount >= cvscountshown)
-								{
-									break;
-								}
+  											if (Arrays.binarySearch(filter,
+  													curCVS) >= 0)
+  											{
+  												out
+  														.write("<CV><![CDATA[<a class=\"SpLink\" href=\"/controller/servlet/Controller?database=131072&sortdir=up&sort=stsort&yearselect=yearrange&CID=quickSearchCitationFormat&searchtype=Book&searchWord1={"
+  																+ curCVS
+  																+ "}&section1=CV&boolean1=AND&col="
+  																+ curCollectionName
+  																+ "\">"
+  																+ curCVS
+  																+ " ("
+  																+ val
+  																+ ")</a><br/>]]></CV>");
+  												cvscount++;
+  											}
+  										}
+  									}
+
+  								}
+  								// break out of loop depending on count which
+  								// was
+  								// set according to state of more/less links
+  								// bstate
+  								if (cvscount >= cvscountshown)
+  								{
+  									break;
+  								}
 
 							}
 
@@ -262,7 +264,7 @@ public class LibraryVisitor implements Visitor
 						}
 					}
 				}
-
+      }
 			}
 		}
 		catch (Exception ex)
