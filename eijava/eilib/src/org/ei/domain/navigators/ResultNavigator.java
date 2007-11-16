@@ -36,22 +36,8 @@ public class ResultNavigator
 
     private int m_compmask = 0;
 
-    private boolean m_books = false;
-    private boolean m_cbnb = false;
-    private boolean m_chimica = false;
-    private boolean m_paperchem = false;
-    private boolean m_encompasslit = false;
-    private boolean m_encompasspat = false;
-    private boolean m_ntis = false;
-    private boolean m_geobase = false;
-    private boolean m_inspec = false;
-    private boolean m_compendex = false;
-    private boolean m_uspatents = false;
-    private boolean m_eupatents = false;
-
     public ResultNavigator(Hashtable navs, Database[] databases)
     {
-
         this.fastnavigators = getFastNavigators(navs, databases);
 
         // sets m_mixed, m_patents, m_other
@@ -60,8 +46,6 @@ public class ResultNavigator
         // since we are coming from fast - edit members/change titles/etc,
         this.adjustComposition();
     }
-
-
 
     public ResultNavigator(String navigatorsstring)
     {
@@ -97,19 +81,6 @@ public class ResultNavigator
 
             if(mods != null)
             {
-                m_compendex = mods.contains(EiModifier.MOD_CPX) || mods.contains(EiModifier.MOD_CBF);
-                m_inspec = mods.contains(EiModifier.MOD_INS);
-                m_ntis = mods.contains(EiModifier.MOD_NTI);
-                m_geobase = mods.contains(EiModifier.MOD_GEO);
-                m_encompasspat = mods.contains(EiModifier.MOD_EPT);
-                m_encompasslit = mods.contains(EiModifier.MOD_ELT);
-                m_cbnb = mods.contains(EiModifier.MOD_CBN);
-                m_chimica = mods.contains(EiModifier.MOD_CHM);
-                m_paperchem = mods.contains(EiModifier.MOD_PCH);
-                m_books = mods.contains(EiModifier.MOD_PAG);
-                m_eupatents = mods.contains(EiModifier.MOD_EUP);
-                m_uspatents = mods.contains(EiModifier.MOD_UPA);
-
                 DatabaseConfig dbConfig = DatabaseConfig.getInstance();
                 Iterator itrmods = mods.iterator();
                 while(itrmods.hasNext())
@@ -152,12 +123,43 @@ public class ResultNavigator
                 }
             }
         }
-
     }
 
     private void adjustComposition() {
 
         //System.out.println(" adjustComposition w/ mask = " + getCompositionMask());
+        boolean m_books = false;
+        boolean m_cbnb = false;
+        boolean m_chimica = false;
+        boolean m_paperchem = false;
+        boolean m_encompasslit = false;
+        boolean m_encompasspat = false;
+        boolean m_ntis = false;
+        boolean m_geobase = false;
+        boolean m_inspec = false;
+        boolean m_compendex = false;
+        boolean m_uspatents = false;
+        boolean m_eupatents = false;
+
+        EiNavigator dbnavigator = this.getNavigatorByName(EiNavigator.DB);
+
+        if(dbnavigator != null)
+        {
+            List mods = dbnavigator.getModifiers();
+
+            m_compendex = mods.contains(EiModifier.MOD_CPX) || mods.contains(EiModifier.MOD_CBF);
+            m_inspec = mods.contains(EiModifier.MOD_INS);
+            m_ntis = mods.contains(EiModifier.MOD_NTI);
+            m_geobase = mods.contains(EiModifier.MOD_GEO);
+            m_encompasspat = mods.contains(EiModifier.MOD_EPT);
+            m_encompasslit = mods.contains(EiModifier.MOD_ELT);
+            m_cbnb = mods.contains(EiModifier.MOD_CBN);
+            m_chimica = mods.contains(EiModifier.MOD_CHM);
+            m_paperchem = mods.contains(EiModifier.MOD_PCH);
+            m_books = mods.contains(EiModifier.MOD_PAG);
+            m_eupatents = mods.contains(EiModifier.MOD_EUP);
+            m_uspatents = mods.contains(EiModifier.MOD_UPA);
+        }
 
         boolean m_booksOnly = (getCompositionMask() == DatabaseConfig.PAG_MASK);
         boolean m_cbnbOnly = (getCompositionMask() == DatabaseConfig.CBN_MASK);
@@ -453,11 +455,17 @@ public class ResultNavigator
           if(m_cbnbOnly)
           {
             //PID (Companies, COM->PID)
-            anav.setDisplayname("Companies");
+            //PEC (Chemicals, CIN->PEC)
+            fastnavigators.remove(anav);
+
+            EiNavigator pidnav = copyNavigator(anav);
+            pidnav.setDisplayname("Companies");
+
+            fastnavigators.add(pidnav);
           }
           // IPC data from the PK navigator should display if only EnCompassPAT is searched.
           //else if(mask == upa || mask == eup || mask == upa + eup || mask == upa + ept || mask == eup + ept || mask == upa + eup + ept)
-          else if((m_uspatents || m_eupatents || m_encompasspat) && !(m_compendex || m_inspec || m_ntis || m_geobase || m_cbnb ||  m_books || m_encompasslit))
+          else if(((m_uspatents || m_eupatents) || ((m_uspatents || m_eupatents) && m_encompasspat)) && !(m_compendex || m_inspec || m_ntis || m_geobase || m_cbnb ||  m_books || m_encompasslit))
           {
             //PID (IPC Code, PID)
             anav.setDisplayname("IPC code");
@@ -477,7 +485,12 @@ public class ResultNavigator
           if(m_cbnbOnly)
           {
             //PEC (Chemicals, CIN->PEC)
-            anav.setDisplayname("Chemicals");
+            fastnavigators.remove(anav);
+
+            EiNavigator pecnav = copyNavigator(anav);
+            pecnav.setDisplayname("Chemicals");
+
+            fastnavigators.add(pecnav);
           }
           //else if((mask :: eup) &&  (mask !: cpx || mask !: cbf || mask !: ins || mask !: nti || mask !: geo || mask !: upa || mask !: chm || mask !: pag || mask !: pch || mask !: elt || mask !: ept))
           else if(m_euppatentsOnly)
@@ -518,7 +531,12 @@ public class ResultNavigator
           if(m_encompasspatOnly)
           {
           	//PK (IPC code, IC->PK)
-            anav.setDisplayname("IPC code");
+            fastnavigators.remove(anav);
+
+            EiNavigator pknav = copyNavigator(anav);
+            pknav.setDisplayname("IPC code");
+
+            fastnavigators.add(pknav);
           }
           else
           {
@@ -536,7 +554,12 @@ public class ResultNavigator
           if(m_encompasspatOnly)
           {
           	//PAC (Authority Code, PAC)
-            anav.setDisplayname("Authority code");
+            fastnavigators.remove(anav);
+
+            EiNavigator pacnav = copyNavigator(anav);
+            pacnav.setDisplayname("Authority code");
+
+            fastnavigators.add(pacnav);
           }
           else
           {
@@ -1291,4 +1314,33 @@ public class ResultNavigator
         }
     }
 
+    /* This method takes a navighator and created a generic copy of it by not using
+      the EiNavigator.createNvavigator() static "factory" method of the base type
+      EiNavigator.  This is useful for removing Navigator specific behaviour
+      that exists for Patent navigators that are reused for other non patent codes
+      and do not need translation or lookup for mouse overs, etc. */
+    /* Currently it is used for refashioning the PID and PEC navigators for CBNB */
+    private EiNavigator copyNavigator(EiNavigator anav)
+    {
+        EiNavigator newnav = new EiNavigator(anav.getName());
+
+        List copiedmods = new ArrayList();
+        Iterator itrMods = anav.getModifiers().iterator();
+        while (itrMods.hasNext()) {
+          EiModifier amod = (EiModifier) itrMods.next();
+          // skip any empty modifiers
+          if((amod != null) && (amod.getLabel().length() != 0))
+          {
+            EiModifier newmod = newnav.createModifier(amod.getCount(), amod.getLabel(), amod.getValue());
+            if(newmod != null)
+            {
+              copiedmods.add(newmod);
+            }
+          }
+        }
+
+        newnav.setModifiers(copiedmods);
+
+        return newnav;
+    }
 }
