@@ -27,7 +27,7 @@ public class CPXDocBuilder
 	private static final Key CPX_MAIN_HEADING = new Key(Keys.MAIN_HEADING, "Ei main heading");
 	private static final Key[] CITATION_KEYS = {Keys.DOCID,Keys.TITLE,Keys.EDITORS,Keys.AUTHORS,Keys.AUTHOR_AFFS,Keys.SOURCE,Keys.MONOGRAPH_TITLE, Keys.PAGE_RANGE, Keys.VOLISSUE,Keys.PUBLICATION_YEAR, Keys.PUBLISHER, Keys.ISSUE_DATE, Keys.ISSN, Keys.LANGUAGE ,Keys.NO_SO, Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT, Keys.DOI};
 	private static final Key[] ABSTRACT_KEYS = {Keys.DOCID,Keys.TITLE,Keys.EDITORS,Keys.AUTHORS,Keys.EDITOR_AFFS, Keys.AUTHOR_AFFS,Keys.VOLISSUE, Keys.SOURCE, Keys.PUBLICATION_YEAR, Keys.ISSUE_DATE, Keys.MONOGRAPH_TITLE, Keys.PAGE_RANGE,Keys.CONFERENCE_NAME, Keys.ISSN,Keys.ISBN, Keys.CODEN, Keys.PUBLISHER,Keys.I_PUBLISHER,Keys.CONF_DATE,Keys.SPONSOR, Keys.PROVIDER ,Keys.LANGUAGE, Keys.MAIN_HEADING, CPX_CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS, Keys.GLOBAL_TAGS, Keys.PRIVATE_TAGS, Keys.ABSTRACT, Keys.NUMBER_OF_REFERENCES,Keys.NO_SO, Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT, Keys.CLASS_CODES , Keys.DOI};
-	private static final Key[] DETAILED_KEYS = {Keys.ACCESSION_NUMBER, Keys.TITLE, Keys.TITLE_TRANSLATION, Keys.AUTHORS, Keys.EDITORS, Keys.AUTHOR_AFFS, Keys.EDITOR_AFFS, Keys.SERIAL_TITLE, Keys.ABBRV_SERIAL_TITLE, Keys.VOLUME, Keys.ISSUE, Keys.MONOGRAPH_TITLE, Keys.ISSUE_DATE, Keys.PUBLICATION_YEAR, Keys.PAP_NUMBER, Keys.PAGE_RANGE, Keys.LANGUAGE, Keys.ISSN, Keys.CODEN, Keys.ISBN, Keys.DOC_TYPE, Keys.CONFERENCE_NAME, Keys.CONF_DATE, Keys.MEETING_LOCATION, Keys.CONF_CODE, Keys.SPONSOR, Keys.PUBLISHER, Keys.ABSTRACT, Keys.ABSTRACT_TYPE, Keys.NUMBER_OF_REFERENCES, Keys.MAIN_HEADING, Keys.CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS, Keys.CLASS_CODES, Keys.TREATMENTS,Keys.GLOBAL_TAGS, Keys.PRIVATE_TAGS, Keys.DOI, Keys.DOCID, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT,Keys.PROVIDER }; 
+	private static final Key[] DETAILED_KEYS = {Keys.ACCESSION_NUMBER, Keys.TITLE, Keys.TITLE_TRANSLATION, Keys.AUTHORS, Keys.EDITORS, Keys.AUTHOR_AFFS, Keys.EDITOR_AFFS, Keys.SERIAL_TITLE, Keys.ABBRV_SERIAL_TITLE, Keys.VOLUME, Keys.ISSUE, Keys.MONOGRAPH_TITLE, Keys.ISSUE_DATE, Keys.PUBLICATION_YEAR, Keys.PAP_NUMBER, Keys.PAGE_RANGE, Keys.LANGUAGE, Keys.ISSN, Keys.CODEN, Keys.ISBN, Keys.DOC_TYPE, Keys.CONFERENCE_NAME, Keys.CONF_DATE, Keys.MEETING_LOCATION, Keys.CONF_CODE, Keys.SPONSOR, Keys.PUBLISHER, Keys.ABSTRACT, Keys.ABSTRACT_TYPE, Keys.NUMBER_OF_REFERENCES, Keys.MAIN_HEADING, Keys.CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS, Keys.CLASS_CODES, Keys.TREATMENTS,Keys.GLOBAL_TAGS, Keys.PRIVATE_TAGS, Keys.DOI, Keys.DOCID, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT,Keys.PROVIDER };
 	private static final Key[] RIS_KEYS = { Keys.RIS_TY, Keys.RIS_LA , Keys.RIS_N1 , Keys.RIS_TI , Keys.RIS_T1 , Keys.RIS_BT , Keys.RIS_JO ,Keys.RIS_T3 , Keys.RIS_AUS , Keys.RIS_AD , Keys.RIS_EDS , Keys.RIS_VL , Keys.RIS_IS , Keys.RIS_PY , Keys.RIS_AN , Keys.RIS_SP , Keys.RIS_EP, Keys.RIS_SN ,  Keys.RIS_S1 , Keys.RIS_MD ,Keys.RIS_CY , Keys.RIS_PB,  Keys.RIS_N2 , Keys.RIS_KW , Keys.RIS_CVS , Keys.RIS_FLS , Keys.RIS_DO , Keys.DOI};
 	private static final Key[] XML_KEYS = { Keys.ISSN , Keys.MAIN_HEADING , Keys.NO_SO , Keys.MONOGRAPH_TITLE , Keys.PUBLICATION_YEAR , Keys.VOLUME_TITLE , Keys.CONTROLLED_TERM , Keys.ISBN , Keys.AUTHORS , Keys.DOCID , Keys.SOURCE , Keys.NUMVOL , Keys.EDITOR_AFFS , Keys.EDITORS , Keys.PUBLISHER , Keys.VOLUME , Keys.AUTHOR_AFFS , Keys.PROVIDER , Keys.ISSUE_DATE , Keys.COPYRIGHT_TEXT , Keys.DOI , Keys.PAGE_COUNT , Keys.PUBLICATION_DATE , Keys.TITLE , Keys.LANGUAGE , Keys.PAGE_RANGE , Keys.PAPER_NUMBER , Keys.COPYRIGHT , Keys.ISSUE , Keys.ACCESSION_NUMBER , Keys.CONTROLLED_TERMS};
 
@@ -54,7 +54,7 @@ public class CPXDocBuilder
     private static String queryCitation="select M_ID,DT,TI,TT,AUS,AF,AM,AC,ASS,AV,AY,CF,ED,EF,EM,EC,ES,EV,EY,ST,SE,VO,ISS,SD,MT,VT,PN,YR,NV,PA,XP,AR,PP,LA,ME,SN,DO,YR,CN,ST,SE,BN,EX,LOAD_NUMBER from cpx_master where M_ID IN ";
     private static String queryXMLCitation="select  M_ID,DT,TI,TT,AUS,AF,AM,AC,ASS,AV,AY,ED,EF,EM,EC,ES,EV,EY,ST,SE,VO,ISS,SD,MT,VT,PN,YR,NV,PA,XP,AR,PP,LA,ME,SN,DO,BN,LOAD_NUMBER,EX,CVS from cpx_master where M_ID IN ";
     //private   static String queryAbstracts="select M_ID,DT,TI,TT,AUS,AF,AM,AC,ASS,AV,AY,ED,EF,EM,EC,ES,EV,EY,ST,SE,VO,ISS,SD,MT,ME,VT,PN,YR,NV,PA,XP,AR,PP,LA,SN,CN,BN,CF,M2,MC,MS,MV,MY,SP,SC,SS,SV,SY,PN,PC,PY,PO,AB,NR,AT,MH,SH,CVS from cpx_master where M_ID IN ";
-    private static String queryAbstracts="select M_ID,EX,DT,TI,TT,AUS,AF,AM,AC,ASS,AV,AY,ED,EF,EM,EC,ES,EV,EY,ST,SE,VO,ISS,SD,MT,ME,VT,PN,YR,NV,PA,XP,AR,PP,LA,SN,CN,BN,CF,M2,MC,MS,MV,MY,SP,SC,SS,SV,SY,PN,PC,PY,PO,AB,NR,AT,MH,SH,CVS,PS,PV,CLS,LOAD_NUMBER, DO from cpx_master where   M_ID IN ";
+    private static String queryAbstracts="select M_ID,EX,DT,TI,TT,AUS,AF,AM,AC,ASS,AV,AY,ED,EF,EM,EC,ES,EV,EY,ST,SE,VO,ISS,SD,MT,ME,VT,PN,YR,NV,PA,XP,AR,PP,LA,SN,CN,BN,CF,M2,MC,MS,MV,MY,SP,SC,SS,SV,SY,PN,PC,PY,PO,AB,NR,AT,MH,SH,CVS,FLS,PS,PV,CLS,LOAD_NUMBER, DO from cpx_master where   M_ID IN ";
 
     // jam 12/30/2002
     // New Index - field change from AN to EX
@@ -156,10 +156,10 @@ public class CPXDocBuilder
                 ht.put(Keys.COPYRIGHT_TEXT,
                        new XMLWrapper(Keys.COPYRIGHT_TEXT, CPX_TEXT_COPYRIGHT));
 
-				if(rset.getString("EX") != null)
-				{
-					ht.put(Keys.ACCESSION_NUMBER,
-					       new XMLWrapper (Keys.ACCESSION_NUMBER, rset.getString("EX")));
+                if(rset.getString("EX") != null)
+                {
+                  ht.put(Keys.ACCESSION_NUMBER,
+                         new XMLWrapper (Keys.ACCESSION_NUMBER, rset.getString("EX")));
               	}
 
                 if(rset.getString("ST") != null)
@@ -184,17 +184,17 @@ public class CPXDocBuilder
                                         rset.getString("DO"),
                                         rset.getString("YR"));
 
-				if(strPages != null)
-				{
-				    ht.put(Keys.PAGE_RANGE, new PageRange(strPages, perl));
-				}
+                if(strPages != null)
+                {
+                    ht.put(Keys.PAGE_RANGE, new PageRange(strPages, perl));
+                }
 
 
-				if(rset.getString("PP") != null)
-				{
-					String pageCount=rset.getString("PP").replaceAll("p"," ");
-					ht.put(Keys.PAGE_COUNT,new XMLWrapper(Keys.PAGE_COUNT , pageCount ));
-				}
+                if(rset.getString("PP") != null)
+                {
+                  String pageCount=rset.getString("PP").replaceAll("p"," ");
+                  ht.put(Keys.PAGE_COUNT,new XMLWrapper(Keys.PAGE_COUNT , pageCount ));
+                }
 
 
                 String strTitle = StringUtil.EMPTY_STRING;
@@ -218,14 +218,14 @@ public class CPXDocBuilder
 
                 if (rset.getString("AUS") != null)
                 {
-					Contributors authors = new Contributors(Keys.AUTHORS, getContributors(rset.getString("AUS"), Keys.AUTHORS));
+                  Contributors authors = new Contributors(Keys.AUTHORS, getContributors(rset.getString("AUS"), Keys.AUTHORS));
 
 
-                    if(rset.getString("AF") != null)
-                    {
-						Affiliation affil = new Affiliation(Keys.AUTHOR_AFFS, rset.getString("AF"));
-						authors.setFirstAffiliation(affil);
-						ht.put(Keys.AUTHOR_AFFS, new Affiliations(Keys.AUTHOR_AFFS, affil));
+                  if(rset.getString("AF") != null)
+                  {
+                      Affiliation affil = new Affiliation(Keys.AUTHOR_AFFS, rset.getString("AF"));
+                      authors.setFirstAffiliation(affil);
+                      ht.put(Keys.AUTHOR_AFFS, new Affiliations(Keys.AUTHOR_AFFS, affil));
                  	}
 
                  	ht.put(Keys.AUTHORS, authors);
@@ -239,14 +239,14 @@ public class CPXDocBuilder
                         if(perl.match("/(Ed[.]\\s*)/", strED))
                         {
                             strED = perl.substitute("s/\\(Ed[.]\\s*\\)//gi", strED);
-                    	}
+                        }
 
-						Contributors editors = new Contributors(Keys.EDITORS, getContributors(strED, Keys.EDITORS));
+                        Contributors editors = new Contributors(Keys.EDITORS, getContributors(strED, Keys.EDITORS));
                         ht.put(Keys.EDITORS,editors);
 
                         if(rset.getString("EF") != null)
                         {
-							Affiliation eaffil = new Affiliation(Keys.EDITOR_AFFS, rset.getString("EF"));
+                            Affiliation eaffil = new Affiliation(Keys.EDITOR_AFFS, rset.getString("EF"));
                             editors.setFirstAffiliation(eaffil);
                             ht.put(Keys.EDITOR_AFFS, new Affiliations(Keys.EDITOR_AFFS, eaffil));
                         }
@@ -524,9 +524,15 @@ public class CPXDocBuilder
                     mainHeading = sh;
                 }
 
+                // FLS - added in Baja to ABS view
+                if (rset.getString("FLS") != null)
+                {
+                    ht.put(Keys.UNCONTROLLED_TERMS,
+                    	   new XMLMultiWrapper(Keys.UNCONTROLLED_TERMS, setElementData(rset.getString("FLS"))));
+                }
 
 
-				if ((rset.getString("CVS") != null) || (rset.getString("MH") != null))
+                if ((rset.getString("CVS") != null) || (rset.getString("MH") != null))
                 {
                 	ht.put(Keys.CONTROLLED_TERMS,new XMLMultiWrapper2(CPX_CONTROLLED_TERMS,
                             										  setCVS(mainHeading,rset.getString("CVS"))));
