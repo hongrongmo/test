@@ -188,9 +188,16 @@ public class FastClient
 				return true;
 			}
 		}
-		// include PEC only if Encomapss Pat are included
+		// include PAC only if EncomapssPat
 		else if(EiNavigator.PAC.equals(navid)) {
-			if((mask & (DatabaseConfig.EPT_MASK )) > 0)
+			if(mask == DatabaseConfig.EPT_MASK)
+			{
+				return true;
+			}
+		}
+		// include PK only if EncomapssPat
+		else if(EiNavigator.PK.equals(navid)) {
+			if(mask == DatabaseConfig.EPT_MASK)
 			{
 				return true;
 			}
