@@ -6,11 +6,11 @@
     <delete dir="live"/>
     <delete dir="stage"/>
   </target>
-  
+
   <fileset id="eilib-jars" dir="../../dist">
       <include name="**/eilib.jar"/>
   </fileset>
-  
+
   <fileset id="ext-jars" dir="../../ext">
       <include name="**/oro.jar"/>
       <include name="**/dsapi-dist.jar"/>
@@ -20,39 +20,43 @@
   </fileset>
 
 
-  <target name="deploy">
+  <target name="deploy" depends="engvillage.home_check">
 
-	<!-- <delete dir="${deploy.home}"/> -->
+    <!-- <delete dir="${deploy.home}"/> -->
+    <mkdir  dir="${deploy.home}"/>
+    <mkdir  dir="${deploy.home}/WEB-INF"/>
 
-	<mkdir  dir="${deploy.home}"/>
-	<mkdir  dir="${deploy.home}/WEB-INF"/>
+    <mkdir dir="lib"/>
+    <copy todir="lib">
+    <fileset refid="ext-jars"/>
+    <fileset refid="eilib-jars"/>
+    </copy>
 
-	<mkdir dir="lib"/>
-	<copy todir="lib">
-	  	<fileset refid="ext-jars"/>
-	  	<fileset refid="eilib-jars"/>
-	</copy>
-    
-	<mkdir dir="${deploy.home}"/>
-	<mkdir dir="${deploy.home}/WEB-INF"/>
-	<mkdir dir="${deploy.home}/WEB-INF/lib"/>
-    
-        <copy todir="${deploy.home}">
-            	<fileset dir="web"/>
-        </copy>
-    
-        <copy todir="${deploy.home}/WEB-INF/lib">
-            	<fileset dir="lib"/>
-    	</copy>
+    <mkdir dir="${deploy.home}"/>
+    <mkdir dir="${deploy.home}/WEB-INF"/>
+    <mkdir dir="${deploy.home}/WEB-INF/lib"/>
 
+    <copy todir="${deploy.home}">
+    <fileset dir="web"/>
+    </copy>
 
-	<copy todir="${deploy.home}">
-		<fileset dir="web"/>
-	</copy>
+    <copy todir="${deploy.home}/WEB-INF/lib">
+    <fileset dir="lib"/>
+    </copy>
 
-    	<filter filtersfile="../${properties}.properties"/>
-  	<copy overwrite="yes" filtering="yes" file="etc/web.xml" tofile="${deploy.home}/WEB-INF/web.xml" />
-	<copy overwrite="yes" filtering="yes" file="etc/pools.xml" tofile="${deploy.home}/WEB-INF/pools.xml" />
+    <copy todir="${deploy.home}">
+    <fileset dir="web"/>
+    </copy>
+
+    <filter token="appserver.logs" value="${appserver.logs}"/>
+
+    <filter filtersfile="../${properties}.properties"/>
+    <copy overwrite="yes" filtering="yes" file="etc/web.xml" tofile="${deploy.home}/WEB-INF/web.xml" />
+    <copy overwrite="yes" filtering="yes" file="etc/pools.xml" tofile="${deploy.home}/WEB-INF/pools.xml" />
+  </target>
+
+  <target name="engvillage.home_check" unless="engvillage.home">
+    <filter token="engvillage.home" value="${env.CATALINA_HOME}"/>
   </target>
 
 </project>
