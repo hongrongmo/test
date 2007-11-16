@@ -98,22 +98,6 @@ public class ResultNavigator
                             adb = dbConfig.getDatabase(amod.getValue().substring(0,3).toLowerCase());
                           }
                         }
-                        if(adb == null)
-                        {
-                          String modval = amod.getValue();
-                          if(modval.equals("ach")) //PaperChem
-                          {
-                            adb = dbConfig.getDatabase("pch");
-                          }
-                          else if(modval.equals("hhm")) // Chimica
-                          {
-                            adb = dbConfig.getDatabase("chm");
-                          }
-                          else if(modval.equals("bbn")) // CBNB
-                          {
-                            adb = dbConfig.getDatabase("cbn");
-                          }
-                        }
                         // if db lookup is not null
                         if(adb != null)
                         {
