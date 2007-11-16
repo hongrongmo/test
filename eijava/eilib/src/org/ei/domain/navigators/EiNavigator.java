@@ -87,7 +87,7 @@ public class EiNavigator
         displayNames.put(EiNavigator.PUC,"US Classification");
         displayNames.put(EiNavigator.KY,"Keyword");
         displayNames.put(EiNavigator.BKT,"Book Title");
-        displayNames.put(EiNavigator.BKS,"Book Section");
+        displayNames.put(EiNavigator.BKS,"Book Chapter");
 
    }
 
