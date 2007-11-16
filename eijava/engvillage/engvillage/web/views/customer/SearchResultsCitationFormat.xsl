@@ -723,54 +723,42 @@
           </xsl:if>-->
 
           <a>
-          <xsl:choose>
-          	<!-- added for EnCompass LIT - can be customizes if needed -->
-          	<xsl:when test="($SELECTED-DB = '1024') or ($SELECTED-DB = '2048') or ($SELECTED-DB = '3072')">
-	          <xsl:attribute name="class">SmBlackText</xsl:attribute>
-          	</xsl:when>          
-          	<!-- end of updats for Encmpass-->
-            <xsl:when test="(TITLE[@TYPE='BOOK'])">
-               <xsl:attribute name="class">SmBlueText</xsl:attribute>
-            </xsl:when>
-            <xsl:when test="(TITLE[@TYPE='SECT'])">
-               <xsl:attribute name="class">SmBlueText</xsl:attribute>
-            </xsl:when>
-            <xsl:when test="(TITLE != '')">
-               	<xsl:attribute name="class">SmBoldBlueText2</xsl:attribute>
-            </xsl:when>
-            <xsl:when test="(/PAGE/SESSION-DATA/SEARCH-TYPE='Easy')">
-              <xsl:attribute name="class">MedBlueLink</xsl:attribute>
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:attribute name="class">SmBlackText</xsl:attribute>
-            </xsl:otherwise>
-         </xsl:choose>
-		<!--remove mouse over from EncomapssLit/Pat  -->
-		<xsl:if test="not($SELECTED-DB = '1024')">
-			<xsl:if test="not($SELECTED-DB = '2048')">
-				<xsl:if test="not($SELECTED-DB = '3072')">
-          			<xsl:if test="(TITLE != '')">
-           				<xsl:attribute name="onmouseover">this.T_WIDTH=450;return escape('<xsl:value-of select="TITLE"/>')</xsl:attribute>
-          			</xsl:if>
-          		</xsl:if>
-			</xsl:if>
-		</xsl:if>
-
-          <!-- suppress HREF when VALUE is missing -->
-          <xsl:if test="((/PAGE/SESSION-DATA/SEARCH-TYPE='Easy') and not(normalize-space(VALUE)=''))">
-            <xsl:if test="not(@COUNT=0)">
-              <xsl:attribute name="HREF">/controller/servlet/Controller?CID=<xsl:value-of select="$RERUN-CID"/>&amp;database=<xsl:value-of select="/PAGE/DBMASK"/>&amp;RERUN=<xsl:value-of select="//SESSION-DATA/QUERY-ID"/>&amp;append=<xsl:value-of select="@COUNT"/>~<xsl:value-of select="java:encode(VALUE)"/>~<xsl:value-of select="java:encode(LABEL)"/>&amp;section=<xsl:value-of select="../@NAME"/></xsl:attribute>
+            <xsl:choose>
+              <xsl:when test="(TITLE[@TYPE='BOOK'])">
+                 <xsl:attribute name="class">SmBlueText</xsl:attribute>
+              </xsl:when>
+              <xsl:when test="(TITLE[@TYPE='SECT'])">
+                 <xsl:attribute name="class">SmBlueText</xsl:attribute>
+              </xsl:when>
+              <xsl:when test="(TITLE != '')">
+                 	<xsl:attribute name="class">SmBoldBlueText2</xsl:attribute>
+              </xsl:when>
+              <xsl:when test="(/PAGE/SESSION-DATA/SEARCH-TYPE='Easy')">
+                <xsl:attribute name="class">MedBlueLink</xsl:attribute>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:attribute name="class">SmBlackText</xsl:attribute>
+              </xsl:otherwise>
+            </xsl:choose>
+            <xsl:if test="(TITLE != '')">
+              <xsl:attribute name="onmouseover">this.T_WIDTH=450;return escape('<xsl:value-of select="TITLE"/>')</xsl:attribute>
             </xsl:if>
-          </xsl:if>
-          <xsl:if test="/PAGE/SESSION-DATA/SEARCH-TYPE='Easy'">
-            <xsl:value-of select="LABEL"  disable-output-escaping="yes"/>
-          </xsl:if>
-          <xsl:if test="/PAGE/SESSION-DATA/SEARCH-TYPE != 'Easy'">
-            <label>
-              <xsl:attribute name="for"><xsl:value-of select="../@NAME"/><xsl:value-of select="position()" /></xsl:attribute>
-                <xsl:value-of select="LABEL" disable-output-escaping="yes"/>
-            </label>
-          </xsl:if>
+
+            <!-- suppress HREF when VALUE is missing -->
+            <xsl:if test="((/PAGE/SESSION-DATA/SEARCH-TYPE='Easy') and not(normalize-space(VALUE)=''))">
+              <xsl:if test="not(@COUNT=0)">
+                <xsl:attribute name="HREF">/controller/servlet/Controller?CID=<xsl:value-of select="$RERUN-CID"/>&amp;database=<xsl:value-of select="/PAGE/DBMASK"/>&amp;RERUN=<xsl:value-of select="//SESSION-DATA/QUERY-ID"/>&amp;append=<xsl:value-of select="@COUNT"/>~<xsl:value-of select="java:encode(VALUE)"/>~<xsl:value-of select="java:encode(LABEL)"/>&amp;section=<xsl:value-of select="../@NAME"/></xsl:attribute>
+              </xsl:if>
+            </xsl:if>
+            <xsl:if test="/PAGE/SESSION-DATA/SEARCH-TYPE='Easy'">
+              <xsl:value-of select="LABEL"  disable-output-escaping="yes"/>
+            </xsl:if>
+            <xsl:if test="/PAGE/SESSION-DATA/SEARCH-TYPE != 'Easy'">
+              <label>
+                <xsl:attribute name="for"><xsl:value-of select="../@NAME"/><xsl:value-of select="position()" /></xsl:attribute>
+                  <xsl:value-of select="LABEL" disable-output-escaping="yes"/>
+              </label>
+            </xsl:if>
           </a>
           <img src="/engresources/images/s.gif" width="4" height="1"/>
           <a class="SmBlackText">(<xsl:value-of select="@COUNT"/>)</a>
