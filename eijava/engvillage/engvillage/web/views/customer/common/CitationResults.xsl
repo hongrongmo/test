@@ -213,7 +213,7 @@
     </xsl:template>
    
     <xsl:template match="EASM">
-    	<a CLASS="MedBlackText"><b> Patent assignee: </b></a><xsl:apply-templates />
+    	<a CLASS="SmBlackText"><b> Patent assignee: </b></a><xsl:apply-templates />
     </xsl:template> 
      
     <xsl:template match="PAN">
