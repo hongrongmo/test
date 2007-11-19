@@ -672,6 +672,8 @@
                 {
                     errorCode = request.getParameter("errorCode");
                 }
+                client.addComment("Fast Query:"+queryObject.getSearchQuery());
+                client.addComment("EI Query"+queryObject.getPhysicalQuery());
 
                 client.log("search_id", queryObject.getID());
                 client.log("query_string", queryObject.getPhysicalQuery());
@@ -685,9 +687,9 @@
                 client.log("page_size", pageSize);
                 client.log("format", "citation");
                 client.log("doc_id", " ");
-				client.log("num_recs", "0");
-				client.log("doc_index", "0");
-				client.log("hits", "0");
+                client.log("num_recs", "0");
+                client.log("doc_index", "0");
+                client.log("hits", "0");
 
                 client.setRemoteControl();
 %>
