@@ -71,7 +71,7 @@ public class ChemDatabase extends Database
 	{
 		return "chm";
 	}
-	
+
     public String getLegendID()
     {
         return "cm";
@@ -94,7 +94,7 @@ public class ChemDatabase extends Database
 
 	public String getShortName()
 	{
-		return "Chemica";
+		return "Chimica";
 	}
 
     public String getDisplayAbrevName()
