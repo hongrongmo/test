@@ -77,6 +77,7 @@
 
       <xsl:apply-templates select="PAS"/>
       <xsl:apply-templates select="PASM"/>
+      <xsl:apply-templates select="EASM"/>
       <xsl:apply-templates select="PAN"/>
 
       <xsl:apply-templates select="PAP"/>
@@ -158,11 +159,15 @@
     </xsl:template>
 
     <xsl:template match="KC">
+      <a CLASS="SmBlackText">
       <xsl:text> </xsl:text><b>Kind:</b><xsl:text> </xsl:text> <xsl:value-of select="." disable-output-escaping="yes"/>
+      </a>
     </xsl:template>
     <xsl:template match="KD">
+      <a CLASS="SmBlackText">
       <xsl:text> </xsl:text><b>Kind:</b><xsl:text> </xsl:text> <xsl:value-of select="." disable-output-escaping="yes"/>
       <xsl:text> </xsl:text>
+      </a>
     </xsl:template>
 
     <xsl:template match="AUS|IVS|EDS">
@@ -202,17 +207,15 @@
             <xsl:text>, </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
       </xsl:if>
     </xsl:template>
+    
     <xsl:template match="PAS">
-        <b> Assignee:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
+        <b> Assignee:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>        
     </xsl:template>
-    <xsl:template match="PASM">
-    <xsl:message><xsl:value-of select="../DOC/DB/DBMASK"/></xsl:message>
-    	<xsl:choose>
-    		<xsl:when test="not(../DOC/DB/DBMASK='2048')"><b> Assignee:</b></xsl:when>
-    		<xsl:otherwise><b> Patent Assignee:</b></xsl:otherwise>
-    	</xsl:choose>
-    	<xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
-    </xsl:template>
+   
+    <xsl:template match="EASM">
+    	<a CLASS="MedBlackText"><b> Patent assignee: </b></a><xsl:apply-templates />
+    </xsl:template> 
+     
     <xsl:template match="PAN">
         <b> Application number:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
     </xsl:template>
@@ -222,15 +225,21 @@
 
 
     <xsl:template match="PIM|PINFO">
+    <a CLASS="SmBlackText">
         <b> Patent information:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
+    </a>
     </xsl:template>
 
 
     <xsl:template match="PM">
+    <a CLASS="SmBlackText">
         <b> Publication Number:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
+    </a>
     </xsl:template>
     <xsl:template match="PM1">
+    <a CLASS="SmBlackText">
         <b>Publication Number:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
+    </a>
     </xsl:template>
 
     <!-- CBNB availability -->
@@ -239,27 +248,39 @@
     </xsl:template>
     
     <xsl:template match="PFD">
+    <a CLASS="SmBlackText">
         <br/>
         <b> Filing date: </b><xsl:value-of select="." disable-output-escaping="yes"/>
+    </a>
     </xsl:template>
     <xsl:template match="PIDD">
+    <a CLASS="SmBlackText">
         <b> Patent issue date: </b><xsl:value-of select="." disable-output-escaping="yes"/>
+    </a>
     </xsl:template>
     <xsl:template match="PPD">
+    <a CLASS="SmBlackText">
         <b> Publication date: </b><xsl:value-of select="." disable-output-escaping="yes"/>
+    </a>
     </xsl:template>
     <!-- EPT -->
     <xsl:template match="UPD">
+    <a CLASS="SmBlackText">
         <b> Publication date: </b><xsl:value-of select="." disable-output-escaping="yes"/>
+    </a>
     </xsl:template>
 
   <!-- jam added for 1884 -->
     <xsl:template match="PID">
+    <a CLASS="SmBlackText">
         <b> Patent issue date:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
+    </a>
     </xsl:template>
   <!-- jam added for 1884  AND INSPEC Patents-->
     <xsl:template match="COPA">
+    <a CLASS="SmBlackText">
         <b> Country of application:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
+    </a>
     </xsl:template>
 
     <xsl:template match="PD_YR">
@@ -291,10 +312,14 @@
     </xsl:template>
 
     <xsl:template match="LA">
+    <a CLASS="SmBlackText">
         <xsl:text> </xsl:text><b>Language:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
+    </a>
     </xsl:template>
     <xsl:template match="NF">
+    <a CLASS="SmBlackText">
             <xsl:text> </xsl:text><b>Figures:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
+    </a>
     </xsl:template>
 
     <xsl:template match="DBNAME">
@@ -323,8 +348,15 @@
     <xsl:template match="EF">
             <span CLASS="SmBlackText"><xsl:text> </xsl:text><xsl:text>(</xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>)</xsl:text></span>
     </xsl:template>
-    <xsl:template match="AU|ED|IV">
+    <xsl:template match="AU|ED|IV|EAS">
+        
         <xsl:variable name="NAME"><xsl:value-of select="normalize-space(text())"/></xsl:variable>
+        <xsl:variable name="FIELD">
+        	<xsl:choose>
+        		<xsl:when test="name(.)='EAS'">AF</xsl:when>
+        		<xsl:otherwise>AU</xsl:otherwise>
+        	</xsl:choose>       
+        </xsl:variable>
 
         <xsl:variable name="THIS-DOCUMENT-DB">
             <xsl:choose>
@@ -407,16 +439,16 @@
             	    <xsl:if test="not(/PAGE/LINK ='false') and not(/SECTION-DELIM/LINK ='false')">
                     <xsl:choose>
                          <xsl:when test="($SEARCH-TYPE='Expert') or ($SEARCH-TYPE='Combined') or ($SEARCH-TYPE='Easy')">
-                            <xsl:attribute name="href"><xsl:value-of select="$HREF-PREFIX"/>/controller/servlet/Controller?CID=expertSearchCitationFormat&amp;searchWord1={<xsl:value-of select="java:encode($NAME)"/>}<xsl:value-of select="java:encode(' WN AU')"/>&amp;database=<xsl:value-of select="$ENCODED-DATABASE"/>&amp;yearselect=yearrange&amp;searchtype=<xsl:value-of select="$SEARCH-TYPE"/>&amp;<xsl:value-of select="$DEFAULT-LINK-SORT"/></xsl:attribute>
+                            <xsl:attribute name="href"><xsl:value-of select="$HREF-PREFIX"/>/controller/servlet/Controller?CID=expertSearchCitationFormat&amp;searchWord1={<xsl:value-of select="java:encode($NAME)"/>}<xsl:value-of select="java:encode(' WN ')"/><xsl:value-of select="$FIELD"/>&amp;database=<xsl:value-of select="$ENCODED-DATABASE"/>&amp;yearselect=yearrange&amp;searchtype=<xsl:value-of select="$SEARCH-TYPE"/>&amp;<xsl:value-of select="$DEFAULT-LINK-SORT"/></xsl:attribute>
                         </xsl:when>
                         <xsl:when test="($SEARCH-TYPE='TagSearch')">
-                            <xsl:attribute name="href"><xsl:value-of select="$HREF-PREFIX"/>/controller/servlet/Controller?CID=quickSearchCitationFormat&amp;searchWord1={<xsl:value-of select="java:encode($NAME)"/>}&amp;section1=AU&amp;database=<xsl:value-of select="$THIS-DOCUMENT-DB"/>&amp;yearselect=yearrange&amp;<xsl:value-of select="$DEFAULT-LINK-SORT"/></xsl:attribute>
+                            <xsl:attribute name="href"><xsl:value-of select="$HREF-PREFIX"/>/controller/servlet/Controller?CID=quickSearchCitationFormat&amp;searchWord1={<xsl:value-of select="java:encode($NAME)"/>}&amp;section1=<xsl:value-of select="$FIELD"/>&amp;database=<xsl:value-of select="$THIS-DOCUMENT-DB"/>&amp;yearselect=yearrange&amp;<xsl:value-of select="$DEFAULT-LINK-SORT"/></xsl:attribute>
                         </xsl:when>
                         <xsl:when test="($SEARCH-TYPE='Book')">
-                            <xsl:attribute name="href"><xsl:value-of select="$HREF-PREFIX"/>/controller/servlet/Controller?CID=quickSearchCitationFormat&amp;searchWord1={<xsl:value-of select="java:encode($NAME)"/>}&amp;section1=AU&amp;database=131072&amp;searchtype=<xsl:value-of select="$SEARCH-TYPE"/>&amp;yearselect=yearrange&amp;<xsl:value-of select="$DEFAULT-LINK-SORT"/></xsl:attribute>
+                            <xsl:attribute name="href"><xsl:value-of select="$HREF-PREFIX"/>/controller/servlet/Controller?CID=quickSearchCitationFormat&amp;searchWord1={<xsl:value-of select="java:encode($NAME)"/>}&amp;section1=<xsl:value-of select="$FIELD"/>&amp;database=131072&amp;searchtype=<xsl:value-of select="$SEARCH-TYPE"/>&amp;yearselect=yearrange&amp;<xsl:value-of select="$DEFAULT-LINK-SORT"/></xsl:attribute>
                         </xsl:when>
                         <xsl:otherwise>
-                            <xsl:attribute name="href"><xsl:value-of select="$HREF-PREFIX"/>/controller/servlet/Controller?CID=quickSearchCitationFormat&amp;searchWord1={<xsl:value-of select="java:encode($NAME)"/>}&amp;section1=AU&amp;database=<xsl:value-of select="$ENCODED-DATABASE"/>&amp;yearselect=yearrange&amp;<xsl:value-of select="$DEFAULT-LINK-SORT"/></xsl:attribute>
+                            <xsl:attribute name="href"><xsl:value-of select="$HREF-PREFIX"/>/controller/servlet/Controller?CID=quickSearchCitationFormat&amp;searchWord1={<xsl:value-of select="java:encode($NAME)"/>}&amp;section1=<xsl:value-of select="$FIELD"/>&amp;database=<xsl:value-of select="$ENCODED-DATABASE"/>&amp;yearselect=yearrange&amp;<xsl:value-of select="$DEFAULT-LINK-SORT"/></xsl:attribute>
                         </xsl:otherwise>
                     </xsl:choose>
                 </xsl:if>
