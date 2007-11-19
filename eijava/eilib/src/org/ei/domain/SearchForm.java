@@ -374,10 +374,10 @@ public class SearchForm {
         {
              sectiontype.put("PD","Publication date");
         }
-        else if(selecteddbMask == DatabaseConfig.PCH_MASK)
-		{
-			sectiontype.put("PD","Patent info");
-  		}
+        //else if(selecteddbMask == DatabaseConfig.PCH_MASK)
+		//{
+		//	sectiontype.put("PD","Patent info");
+  		//}
 
         //AN
         if(selecteddbMask == DatabaseConfig.NTI_MASK)
