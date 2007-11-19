@@ -114,7 +114,7 @@
     </xsl:template>
 
 
-    <xsl:template match="PAN|PAPD|PAPX|PANS|PANUS|PAPCO|PM|PM1">
+    <xsl:template match="PAN|PAPD|PAPX|PANS|PANUS|PAPCO|PM|PM1|PA">
       <tr>
         <td valign="top" ><img src="/engresources/images/s.gif" border="0"/></td>
         <td xsl:use-attribute-sets="r-align-label"><span CLASS="MedBlackText"><b><xsl:value-of select="@label"/>:</b></span></td>
@@ -141,7 +141,7 @@
     </xsl:template>
 
   <!-- Controlled/Uncontrolled child node(s) within VALUE under FLS/CVS/AGS -->
-    <xsl:template match="MJS|BKY|FL|CV|AG|CT|OC|PS|PA|RGI|CM|IC|GC|GD|CP|CE">
+    <xsl:template match="MJS|BKY|FL|CV|AG|CT|OC|PS|RGI|CM|IC|GC|GD|CP|CE">
 
       <xsl:if test="name()='LST'">
       <xsl:if test="position()=1">
