@@ -155,7 +155,7 @@ public interface Keys
     public static final Key PAGE_RANGE= new Key("PP","Pages");
     public static final Key PAGE_RANGE_pp = new Key("PP_pp");
     public static final Key PAPER_NUMBER = new Key("PA","Paper number");
-    public static final Key PAP_NUMBER = new Key("PR","Part number");
+    public static final Key PART_NUMBER = new Key("PR","Part number");
     public static final Key PAT_ATTORNEY = new Key("ATT", "Attorney, Agent or Firm");
     public static final Key PATAPPNUM = new Key("PAN", "Application number");
     public static final Key PATAPPDATE = new Key("PAPD", "Application date");
