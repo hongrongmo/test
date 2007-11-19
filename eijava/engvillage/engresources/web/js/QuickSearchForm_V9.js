@@ -368,10 +368,10 @@ function generateSection(selecteddbMask)
    {
      	searchin[index++] = new Field("PD","Publication date");
    }
-   else if(selecteddbMask == PCH)
-   {
-   	searchin[index++] = new Field("PD","Patent info");
-   }
+   //else if(selecteddbMask == PCH)
+   //{
+   //	searchin[index++] = new Field("PD","Patent info");
+   //}
    
    //AN
    if(selecteddbMask == NTIS)
