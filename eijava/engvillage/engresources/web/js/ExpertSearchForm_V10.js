@@ -27,7 +27,7 @@ var selectedDbMask = 0;
 
     return alink;
   }
-  
+
 function flipImage(selectedDbMask)
   {
     var bdiv = document.getElementById("browseindexes");
@@ -48,10 +48,10 @@ function flipImage(selectedDbMask)
     {
          link = newLookupLink();
          link.onclick=OpenLookup_AUS
-                
+
 	 if((selectedDbMask & UPA) != UPA &&
 	    (selectedDbMask & EUP) != EUP &&
-	    (selectedDbMask & EPT) != EPT) 
+	    (selectedDbMask & EPT) != EPT)
 	 {
 	   	link.appendChild(document.createTextNode("Author"));
 	 }
@@ -67,24 +67,24 @@ function flipImage(selectedDbMask)
 	 {
 		link.appendChild(document.createTextNode("Author/Inventor"));
 	 }
-	
+
 	adiv.appendChild(link);
-	adiv.appendChild(document.createElement("br"));	 
-	    
-	 	 
+	adiv.appendChild(document.createElement("br"));
+
+
     }
-    
-    
+
+
     if((selectedDbMask & CBN) != CBN)
     {
          //AF
-            
+
 	 if((selectedDbMask & UPA) != UPA &&
 	    (selectedDbMask & EUP) != EUP &&
 	    (selectedDbMask & EPT) != EPT )
 	 {
                 link = newLookupLink();
-                link.onclick=OpenLookup_AF;	 
+                link.onclick=OpenLookup_AF;
 		link.appendChild(document.createTextNode("Author affiliation"));
 	 }
 	 else if(selectedDbMask == UPA ||
@@ -93,20 +93,20 @@ function flipImage(selectedDbMask)
 		 selectedDbMask == EPT )
 	 {
                 link = newLookupLink();
-                link.onclick=OpenLookup_AF;	 
+                link.onclick=OpenLookup_AF;
 		link.appendChild(document.createTextNode("Assignee"));
 	 }
 	 else
 	 {
                 link = newLookupLink();
-                link.onclick=OpenLookup_AF;	 
+                link.onclick=OpenLookup_AF;
 		link.appendChild(document.createTextNode("Affiliation/Assignee"));
 	 }
-	 
+
 	adiv.appendChild(link);
-	adiv.appendChild(document.createElement("br"));	 
+	adiv.appendChild(document.createElement("br"));
     }
-    
+
     //CT
     if (((selectedDbMask & CPX) == CPX) ||
     	((selectedDbMask & INSPEC) == INSPEC) ||
@@ -121,7 +121,7 @@ function flipImage(selectedDbMask)
     {
         link = newLookupLink();
         link.onclick=OpenLookup_CVS;
-        
+
         link.appendChild(document.createTextNode("Controlled term"));
         adiv.appendChild(link);
         adiv.appendChild(document.createElement("br"));
@@ -137,13 +137,13 @@ function flipImage(selectedDbMask)
     {
         link = newLookupLink();
         link.onclick=OpenLookup_LA;
-        
+
         link.appendChild(document.createTextNode("Language"));
         adiv.appendChild(link);
         adiv.appendChild(document.createElement("br"));
     }
-    
-    //ST	
+
+    //ST
     if (((selectedDbMask & CPX) == CPX) ||
     	((selectedDbMask & CBF) == CBF) ||
     	((selectedDbMask & GEO) == GEO) ||
@@ -155,7 +155,7 @@ function flipImage(selectedDbMask)
     {
         link = newLookupLink();
         link.onclick=OpenLookup_ST;
-        
+
         link.appendChild(document.createTextNode("Serial title"));
         adiv.appendChild(link);
         adiv.appendChild(document.createElement("br"));
@@ -170,12 +170,12 @@ function flipImage(selectedDbMask)
     {
         link = newLookupLink();
         link.onclick=OpenLookup_DT;
-        
+
         link.appendChild(document.createTextNode("Document type"));
         adiv.appendChild(link);
         adiv.appendChild(document.createElement("br"));
     }
-    
+
     //PB
     if (((selectedDbMask & CPX) == CPX) ||
     	((selectedDbMask & CBF) == CBF) ||
@@ -185,46 +185,46 @@ function flipImage(selectedDbMask)
     {
         link = newLookupLink();
         link.onclick=OpenLookup_PN;
-    
+
         link.appendChild(document.createTextNode("Publisher"));
         adiv.appendChild(link);
         adiv.appendChild(document.createElement("br"));
     }
-    
+
     //TR
     if (((selectedDbMask & CPX) == CPX) ||
         ((selectedDbMask & INSPEC) == INSPEC))
     {
         link = newLookupLink();
         link.onclick=OpenLookup_TR;
-    
+
         link.appendChild(document.createTextNode("Treatment type"));
         adiv.appendChild(link);
         adiv.appendChild(document.createElement("br"));
     }
-    
+
     //PC
     if (((selectedDbMask & EPT) == EPT))
     {
         link = newLookupLink();
         link.onclick=OpenLookup_PC;
-    
+
         link.appendChild(document.createTextNode("Country"));
         adiv.appendChild(link);
         adiv.appendChild(document.createElement("br"));
     }
-    
+
     //DI
     if (((selectedDbMask & INSPEC) == INSPEC))
     {
         link = newLookupLink();
         link.onclick=OpenLookup_DI;
-    
+
         link.appendChild(document.createTextNode("Discipline"));
         adiv.appendChild(link);
         adiv.appendChild(document.createElement("br"));
     }
-     
+
   }
 
 function calEndYear(selectedDbMask)
@@ -266,7 +266,7 @@ function calculateMask(control)
     var selectedDbMask = 0;
 
     // CALCULATE SELECTED DB MASK
-   if(document.quicksearch.alldb != null  && 
+   if(document.quicksearch.alldb != null  &&
     			document.quicksearch.alldb.checked == true)
     {
         selectedDbMask = eval(document.quicksearch.alldb.value);
@@ -339,7 +339,7 @@ function calStartYear(selectedDbMask, sYear)
     // 1969 is arbitrary, but in case all else fails?
     // but we will never be able to get above this default value
     // since we will only overwrite this value if we find one less than
-    var dYear = 1973;
+    var dYear = calEndYear(selectedDbMask);
 
     // jam 12/20/1004 - This is not an else if!
     // compare the start year for each db
@@ -353,7 +353,7 @@ function calStartYear(selectedDbMask, sYear)
     {
         var cbfStartYear = sYear.substr(sYear.indexOf("ZST")+3,4);
         dYear = (dYear > cbfStartYear) ? cbfStartYear : dYear;
-    }    
+    }
     if((selectedDbMask != 0) && ((selectedDbMask & INSPEC) == INSPEC))
     {
         var insStartYear = sYear.substr(sYear.indexOf("IST")+3,4);
@@ -393,23 +393,23 @@ function calStartYear(selectedDbMask, sYear)
     {
        var pchStartYear = sYear.substr(sYear.indexOf("AST")+3,4);
        dYear = (dYear > pchStartYear) ? pchStartYear : dYear;
-    }    
-    if (selectedDbMask != 0 && ((selectedDbMask & CHM) == CHM)) 
+    }
+    if (selectedDbMask != 0 && ((selectedDbMask & CHM) == CHM))
     {
        var chmStartYear = sYear.substr(sYear.indexOf("HST") + 3, 4);
        dYear = (dYear > chmStartYear) ? chmStartYear : dYear;
     }
-    if (selectedDbMask != 0 && ((selectedDbMask & CBN) == CBN)) 
+    if (selectedDbMask != 0 && ((selectedDbMask & CBN) == CBN))
     {
        var cbnStartYear = sYear.substr(sYear.indexOf("BST") + 3, 4);
        dYear = (dYear > cbnStartYear) ? cbnStartYear : dYear;
     }
-    if (selectedDbMask != 0 && ((selectedDbMask & ELT) == ELT)) 
+    if (selectedDbMask != 0 && ((selectedDbMask & ELT) == ELT))
     {
        var eltStartYear = sYear.substr(sYear.indexOf("LST") + 3, 4);
        dYear = (dYear > eltStartYear) ? eltStartYear : dYear;
     }
-    if (selectedDbMask != 0 && ((selectedDbMask & EPT) == EPT)) 
+    if (selectedDbMask != 0 && ((selectedDbMask & EPT) == EPT))
     {
        var eptStartYear = sYear.substr(sYear.indexOf("TST") + 3, 4);
        dYear = (dYear > eptStartYear) ? eptStartYear : dYear;
@@ -441,7 +441,7 @@ function calDisplayYear(selectedDbMask, sYear)
         {
             var cbfStartYear = sYear.substr(sYear.indexOf("ZSY")+3,4);
             dYear = (dYear > cbfStartYear) ? cbfStartYear : dYear;
-        }        
+        }
         if((selectedDbMask != 0) && ((selectedDbMask & INSPEC) == INSPEC))
         {
             var insStartYear = sYear.substr(sYear.indexOf("ISY")+3,4);
@@ -481,24 +481,24 @@ function calDisplayYear(selectedDbMask, sYear)
 	{
 	    var pchStartYear = sYear.substr(sYear.indexOf("AST")+3,4);
 	    dYear = (dYear > pchStartYear) ? pchStartYear : dYear;
-	}    
-	if (selectedDbMask != 0 && ((selectedDbMask & CHM) == CHM)) 
+	}
+	if (selectedDbMask != 0 && ((selectedDbMask & CHM) == CHM))
 	{
 	    var chmStartYear = sYear.substr(sYear.indexOf("HST") + 3, 4);
 	    dYear = (dYear > chmStartYear) ? chmStartYear : dYear;
 	}
-	if (selectedDbMask != 0 && ((selectedDbMask & CBN) == CBN)) 
+	if (selectedDbMask != 0 && ((selectedDbMask & CBN) == CBN))
 	{
 	    var cbnStartYear = sYear.substr(sYear.indexOf("BST") + 3, 4);
 	    dYear = (dYear > cbnStartYear) ? cbnStartYear : dYear;
 	}
-	if (selectedDbMask != 0 && ((selectedDbMask & ELT) == ELT)) 
+	if (selectedDbMask != 0 && ((selectedDbMask & ELT) == ELT))
 	{
 	    var eltStartYear = sYear.substr(sYear.indexOf("LST") + 3, 4);
 	    dYear = (dYear > eltStartYear) ? eltStartYear : dYear;
 	    dYear= 1990;
 	}
-	if (selectedDbMask != 0 && ((selectedDbMask & EPT) == EPT)) 
+	if (selectedDbMask != 0 && ((selectedDbMask & EPT) == EPT))
 	{
 	    var eptStartYear = sYear.substr(sYear.indexOf("TST") + 3, 4);
 	    dYear = (dYear > eptStartYear) ? eptStartYear : dYear;
@@ -645,7 +645,7 @@ function OpenLookup(sessionId,lookupindex)
             && ((selectedDbMask & INSPEC) != INSPEC))
     {
         return false;
-    }    
+    }
     else
     {
         var tabloc;
@@ -711,7 +711,7 @@ function checkLastUpdates()
     alert("Last updates selection does not apply to Referex collections.");
     return false;
   }
-  else if((document.quicksearch.yearselect[1].checked == true) && 
+  else if((document.quicksearch.yearselect[1].checked == true) &&
   										(seldbmask == CBF))
   {
     document.quicksearch.yearselect[0].checked = true;
@@ -719,7 +719,7 @@ function checkLastUpdates()
     alert("Last updates selection does not apply to EI Backfile.");
     return false;
   }
-  else if((document.quicksearch.yearselect[1].checked == true) && 
+  else if((document.quicksearch.yearselect[1].checked == true) &&
   										(seldbmask == (CBF + REFEREX)))
   {
     document.quicksearch.yearselect[0].checked = true;
