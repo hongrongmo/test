@@ -51,7 +51,7 @@ public class InsBackDocBuilder
 
     private static String queryCitation=   "select M_ID,RTYPE,CPR,ANUM,DOI,LA,IPN,NPL1,PARTNO,CPUB,PPUB,PUB,THLP,EDS,AUS,TI,TC,IORG,RNUM,PDATE,FJT,AJT,OJT,VOL,ISS,VOLISS,FTTJ,PAS,FDATE,PNUM,FIG,LOAD_NUMBER,DOI,CPAT,PYR from ibf_master where M_ID IN ";
     private static String queryXMLCitation="select M_ID,RTYPE,CPR,ANUM,LA,IPN,NPL1,PARTNO,CPUB,PPUB,PUB,THLP,EDS,AUS,TI,IORG,RNUM,PDATE,FJT,AJT,OJT,VOL,ISS,VOLISS,FTTJ,PAS,FDATE,PNUM, LOAD_NUMBER,DOI,CVS,CPAT,PYR from ibf_master where M_ID IN ";
-    private static String queryAbstracts=  "select M_ID,RTYPE,CPR,ANUM,TI,AUS,AJT,FJT,OJT,VOL,ISS,VOLISS,PDATE,PARTNO,IPN,NPL1,LA,TC,CDATE,CEDATE,CLOC,SORG,PUB,PPUB,CPUB,AB,FIG,FTTJ,CPUBT,CVS,EDS,THLP,IORG,RNUM,PAS,CPAT,PNUM,FDATE,DOI,LOAD_NUMBER,PYR from ibf_master where M_ID IN ";
+    private static String queryAbstracts=  "select M_ID,RTYPE,CPR,ANUM,TI,AUS,AJT,FJT,OJT,VOL,ISS,VOLISS,PDATE,PARTNO,IPN,NPL1,LA,TC,CDATE,CEDATE,CLOC,SORG,PUB,PPUB,CPUB,AB,FIG,FTTJ,CPUBT,CVS,FLS,EDS,THLP,IORG,RNUM,PAS,CPAT,PNUM,FDATE,DOI,LOAD_NUMBER,PYR from ibf_master where M_ID IN ";
     private static String queryDetailed=   "select M_ID,RTYPE,CPR,ANUM,TI,AUS,EDS,AJT,OJT,FJT,THLP,VOL,ISS,VOLISS,PDATE,IPN,NPL1,LA,TC,CDATE,CEDATE,CLOC,SORG,PUB,PPUB,CPUB,FTTJ,TTJ,VOLISST,TDATE,IPNT,CPUBT,PARTNO,RNUM,IORG,FDATE,PAS,CPAT,PNUM,AB,OINFO,FIG,CVS,OCVS,FLS,CLS,OCLS,UDC,THLP,DOI,SOURCE,TSOURCE,LOAD_NUMBER,PYR from ibf_master where M_ID IN ";
 
     public DocumentBuilder newInstance(Database database)
@@ -413,6 +413,14 @@ public class InsBackDocBuilder
                 if(rset.getString("CVS") != null) {
                      ht.put(Keys.CONTROLLED_TERMS,new XMLMultiWrapper2(INS_CONTROLLED_TERMS,setCVS(rset.getString("CVS"))));
                 }
+
+                // FLS - added to ABSTRACT view in Baja build
+                if (rset.getString("FLS") != null)
+                {
+                    ht.put(Keys.UNCONTROLLED_TERMS,
+                           new XMLMultiWrapper(Keys.UNCONTROLLED_TERMS, setElementData(rset.getString("FLS"))));
+                }
+
                 EIDoc eiDoc = new EIDoc(did,ht, Abstract.ABSTRACT_FORMAT);
                 eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
                 eiDoc.exportLabels(true);
