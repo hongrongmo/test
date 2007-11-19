@@ -395,12 +395,6 @@ public class CPXDocBuilder
                     }
                 }
 
-                if(rset.getString("PA") != null)
-                {
-                    ht.put(Keys.PAPER_NUMBER, new XMLWrapper(Keys.PAPER_NUMBER , rset.getString("PA")));
-                }
-
-
                 if(rset.getString("VT") != null)
                 {
                     ht.put(Keys.VOLUME_TITLE, new XMLWrapper(Keys.VOLUME_TITLE , rset.getString("VT")));
@@ -788,7 +782,7 @@ public class CPXDocBuilder
 
                         if(rset.getString("ISS") != null)
                         {
-							String strIss = replaceIssueNullWithEmptyString(rset.getString("ISS"));
+                            String strIss = replaceIssueNullWithEmptyString(rset.getString("ISS"));
                             ht.put(Keys.ISSUE, new Issue(strIss, perl));
                         }
 
@@ -873,8 +867,7 @@ public class CPXDocBuilder
                     if (rset.getString("PA") != null)
                     {
                         // PAPER_NUMBER will cause Paper Number label in XSL
-                        ht.put(Keys.PAPER_NUMBER,
-                        	   new XMLWrapper(Keys.PAPER_NUMBER ,rset.getString("PA")));
+                        ht.put(Keys.PAPER_NUMBER, new XMLWrapper(Keys.PAPER_NUMBER ,rset.getString("PA")));
                     }
 
                     //  PP
@@ -1810,15 +1803,6 @@ public class CPXDocBuilder
                     ht.put(Keys.NUMVOL,
                     	   new XMLWrapper(Keys.NUMVOL, rset.getString("NV")));
                 }
-                // PA
-                if(rset.getString("PA") != null)
-                {
-                    ht.put(Keys.PAPER_NUMBER,
-                    	   new XMLWrapper(Keys.PAPER_NUMBER, rset.getString("PA")));
-                }
-
-                // PP
-
 
                 //VT
                 if(rset.getString("VT") != null)
