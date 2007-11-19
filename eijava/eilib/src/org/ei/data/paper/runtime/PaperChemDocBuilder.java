@@ -131,49 +131,48 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
 	        Keys.PRIORITY_INFORMATION,
 	        Keys.PATNUM,
 	        Keys.PATASSIGN,
-	        Keys.PATENT_ISSUE_DATE, 
-	        Keys.TITLE, 
-	        Keys.TITLE_TRANSLATION, 
-	        Keys.AUTHORS, 
-	        Keys.EDITORS, 
-	        Keys.AUTHOR_AFFS, 
-	        Keys.EDITOR_AFFS, 
-	        Keys.SERIAL_TITLE, 
-	        Keys.ABBRV_SERIAL_TITLE, 
-	        Keys.VOLUME, 
-	        Keys.REPORT_NUMBER_PAPER, 
-	        Keys.ISSUE, 
-	        Keys.MONOGRAPH_TITLE, 
-	        Keys.ISSUE_DATE, 
-	        Keys.PUBLICATION_YEAR, 
-	        Keys.PAP_NUMBER, 
+	        Keys.PATENT_ISSUE_DATE,
+	        Keys.TITLE,
+	        Keys.TITLE_TRANSLATION,
+	        Keys.AUTHORS,
+	        Keys.EDITORS,
+	        Keys.AUTHOR_AFFS,
+	        Keys.EDITOR_AFFS,
+	        Keys.SERIAL_TITLE,
+	        Keys.ABBRV_SERIAL_TITLE,
+	        Keys.VOLUME,
+	        Keys.REPORT_NUMBER_PAPER,
+	        Keys.ISSUE,
+	        Keys.MONOGRAPH_TITLE,
+	        Keys.ISSUE_DATE,
+	        Keys.PUBLICATION_YEAR,
 	        Keys.PAGE_RANGE,
 	        Keys.SOURCE,
-	        Keys.LANGUAGE, 
-	        Keys.ISSN, 
-	        Keys.CODEN, 
-	        Keys.ISBN, 
-	        Keys.DOC_TYPE, 
-	        Keys.CONFERENCE_NAME, 
-	        Keys.CONF_DATE, 
-	        Keys.MEETING_LOCATION, 
-	        Keys.CONF_CODE, 
-	        Keys.SESSION_NAME_NUMBER, 
-	        Keys.SPONSOR, 
-	        Keys.PUBLISHER, 
-	        Keys.ABSTRACT, 
+	        Keys.LANGUAGE,
+	        Keys.ISSN,
+	        Keys.CODEN,
+	        Keys.ISBN,
+	        Keys.DOC_TYPE,
+	        Keys.CONFERENCE_NAME,
+	        Keys.CONF_DATE,
+	        Keys.MEETING_LOCATION,
+	        Keys.CONF_CODE,
+	        Keys.SESSION_NAME_NUMBER,
+	        Keys.SPONSOR,
+	        Keys.PUBLISHER,
+	        Keys.ABSTRACT,
 	        Keys.ABSTRACT_TYPE,
-	        Keys.NUMBER_OF_CLAIMS, 
-	        Keys.NUMBER_OF_REFERENCES, 
+	        Keys.NUMBER_OF_CLAIMS,
+	        Keys.NUMBER_OF_REFERENCES,
 	        Keys.NUMBER_OF_TABLES,
-	        Keys.SPECIFIC_NAMES, 
-	        Keys.MAIN_HEADING, 
-	        Keys.CONTROLLED_TERMS, 
-	        Keys.UNCONTROLLED_TERMS,  
-	        Keys.CLASS_CODES, 
-	        Keys.TREATMENTS, 
-	        Keys.DOI, 
-	        Keys.DOCID, 
+	        Keys.SPECIFIC_NAMES,
+	        Keys.MAIN_HEADING,
+	        Keys.CONTROLLED_TERMS,
+	        Keys.UNCONTROLLED_TERMS,
+	        Keys.CLASS_CODES,
+	        Keys.TREATMENTS,
+	        Keys.DOI,
+	        Keys.DOCID,
 	        Keys.COPYRIGHT,
 	        Keys.COPYRIGHT_TEXT,
 	        Keys.PROVIDER };
@@ -344,7 +343,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
 
     private static String queryCitation="select M_ID,DT,TI,TT,AU,AF,AC,ASP,AY,ED,EF,EM,EC,ES,EY,ST,SE,VO,ISS,SD,MT,PN,YR,PA,XP,PP,LA,SN,CP,SOURC,ASSIG,APPLN,PATNO,DO, LOAD_NUMBER from paper_master  where M_ID IN ";
     private static String queryXMLCitation="select  M_ID,DT,TI,TT,AU,AF,AC,ASP,AY,ED,EF,EM,EC,ES,EY,ST,SE,VO,ISS,SD,MT,PN,YR,PA,XP,PP,LA,SN,DO,BN,LOAD_NUMBER, AN, PT , M2 from paper_master where M_ID IN ";
-                                                    
+
     private static String queryAbstracts="select M_ID,DT,TI,TT,AU,AF,AC,ASP,AY,ED,EF,EM,EC,ES,EY,ST,SE,VO,ISS,SD,MT,VX,PN,YR,PA,XP,PP,SOURC,LA,SN,CN,BN,CF,M2,MD,MC,MS,MY,SP,PC,PY,AB,NR,AT,PT,FL,PS,CP,ASSIG,APPLN,PATNO, DO, LOAD_NUMBER from paper_master where   M_ID IN ";
 
     // jam 12/30/2002
@@ -446,7 +445,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                 ht.put(Keys.COPYRIGHT_TEXT,
                        new XMLWrapper(Keys.COPYRIGHT_TEXT, PAPER_TEXT_COPYRIGHT));
 
-                if(rset.getString("VX") != null && 
+                if(rset.getString("VX") != null &&
                         !rset.getString("VX").trim().equals(StringUtil.EMPTY_STRING))
 
                 {
@@ -578,7 +577,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                             if(rset.getString("VO") != null)
                             {
                                 strVolIss = strVolIss.concat(replaceVolumeNullWithEmptyString(rset.getString("VO")));
-                               
+
                                 if (!strVolIss.equals(StringUtil.EMPTY_STRING))
                                 {
                                     ht.put(Keys.VOLUME,
@@ -611,14 +610,14 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                         }
 
 
-                        if (rset.getString("ST") != null || 
+                        if (rset.getString("ST") != null ||
                                 rset.getString("SE") != null)
                         {
 
                             if(rset.getString("ST") != null)
                             {
                                 String st = StringUtil.replaceNullWithEmptyString(rset.getString("ST"));
-                                
+
                                 if (!st.equals(StringUtil.EMPTY_STRING))
                                 {
                                 	ht.put(Keys.SOURCE, new XMLWrapper(Keys.SOURCE ,st));
@@ -653,36 +652,36 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                             if(rset.getString("MT") != null)
                             {
                                 String mt = StringUtil.replaceNullWithEmptyString(rset.getString("MT"));
-                                
+
                                 if (!mt.equals(StringUtil.EMPTY_STRING))
                                 {
                                     ht.put(Keys.SOURCE,new XMLWrapper(Keys.SOURCE , mt));
                                 }
                             }
                         }
-                        else if((rset.getString("ST") == null && 
-                                rset.getString("SE") == null) && 
-                                ( rset.getString("MT") == null) && 
+                        else if((rset.getString("ST") == null &&
+                                rset.getString("SE") == null) &&
+                                ( rset.getString("MT") == null) &&
                                 (rset.getString("SOURC") != null))
                         {
                             if(rset.getString("SOURC") != null)
                             {
                                 String sourc = StringUtil.replaceNullWithEmptyString(rset.getString("SOURC"));
-                                
+
                                 if (!sourc.equals(StringUtil.EMPTY_STRING))
                                 {
                                     ht.put(Keys.SOURCE,new XMLWrapper(Keys.SOURCE ,sourc));
                                 }
                             }
                         }
-                        else if (rset.getString("ST") == null && 
-                                rset.getString("SE") == null && 
+                        else if (rset.getString("ST") == null &&
+                                rset.getString("SE") == null &&
                                 rset.getString("MT") == null)
                         {
                             if(rset.getString("PN") != null)
                             {
                                 String pn = StringUtil.replaceNullWithEmptyString(rset.getString("PN"));
-                                
+
                                 if (!pn.equals(StringUtil.EMPTY_STRING))
                                 {
                                     ht.put(Keys.PUBLISHER, new XMLWrapper(Keys.PUBLISHER,pn));
@@ -696,10 +695,10 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     }
                 }
 
-                if(rset.getString("ST") == null && 
-                        rset.getString("SE") == null && 
-                        rset.getString("MT") == null && 
-                        rset.getString("PN") == null && 
+                if(rset.getString("ST") == null &&
+                        rset.getString("SE") == null &&
+                        rset.getString("MT") == null &&
+                        rset.getString("PN") == null &&
                         rset.getString("SOURC") == null   )
                 {
                     ht.put(Keys.NO_SO,new XMLWrapper(Keys.NO_SO, "NO_SO"));
@@ -751,7 +750,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                         String strYR = StringUtil.replaceNullWithEmptyString(rset.getString("YR"));
                         if (!strYR.equals(StringUtil.EMPTY_STRING))
                         {
-                            ht.put(Keys.PUBLICATION_DATE_PAPER, 
+                            ht.put(Keys.PUBLICATION_DATE_PAPER,
                                     new Year(Keys.PUBLICATION_DATE_PAPER,strYR, perl));
                         }
                     }
@@ -822,7 +821,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                 if(rset.getString("PA") != null)
                 {
                     String pa = StringUtil.replaceNullWithEmptyString(rset.getString("PA"));
-                    
+
                     if (!pa.equals(StringUtil.EMPTY_STRING))
                     {
                         ht.put(Keys.PAPER_NUMBER,
@@ -839,7 +838,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     if(rset.getString("XP") != null)
                     {
                         String pagerange = StringUtil.replaceNullWithEmptyString(rset.getString("XP"));
-                        
+
                         if (!pagerange.equals(StringUtil.EMPTY_STRING))
                         {
                             ht.put(Keys.PAGE_RANGE, new PageRange(pagerange, perl));
@@ -848,7 +847,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     else if (rset.getString("PP") != null)
                     {
                         String pagerange = StringUtil.replaceNullWithEmptyString(rset.getString("PP"));
-                       
+
                         if (!pagerange.equals(StringUtil.EMPTY_STRING))
                         {
                             ht.put(Keys.PAGE_RANGE,
@@ -858,11 +857,11 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                 }
 
                 // LA
-                if((rset.getString("LA") != null) && 
+                if((rset.getString("LA") != null) &&
                         (!rset.getString("LA").equalsIgnoreCase("ENGLISH")))
                 {
                     String la = StringUtil.replaceNullWithEmptyString(rset.getString("LA"));
-                    
+
                     if (!la.equals(StringUtil.EMPTY_STRING))
                     {
                         ht.put(Keys.LANGUAGE,
@@ -889,19 +888,19 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                 {
 
                     List lstCF = new ArrayList();
-                    if (rset.getString("M2") !=null) 
+                    if (rset.getString("M2") !=null)
                     {
                         lstCF.add(rset.getString("M2"));
                     }
-                    if (rset.getString("MC") != null) 
+                    if (rset.getString("MC") != null)
                     {
                         lstCF.add(rset.getString("MC"));
                     }
-                    if (rset.getString("MS") != null) 
+                    if (rset.getString("MS") != null)
                     {
                         lstCF.add(rset.getString("MS"));
                     }
-                    if (rset.getString("MY") != null) 
+                    if (rset.getString("MY") != null)
                     {
                         lstCF.add(rset.getString("MY"));
                     }
@@ -920,9 +919,9 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
 
                     List lstSponsor = new ArrayList();
                     lstSponsor.add(rset.getString("SP"));
-                    
+
                     String sponsor = StringUtil.replaceNullWithEmptyString(StringUtil.join(lstSponsor,", "));
-                    
+
                     if (!sponsor.equals(StringUtil.EMPTY_STRING))
                     {
                         ht.put(Keys.SPONSOR,
@@ -933,7 +932,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                 }
 
                 // PL - PUBLISHER LOCATION
-                if (rset.getString("PN") != null) 
+                if (rset.getString("PN") != null)
                 {
                     List lstPL = new ArrayList();
                     if (rset.getString("PC") !=null)
@@ -949,7 +948,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                         lstPL.add(rset.getString("PY"));
                     }
                     String publocation = StringUtil.replaceNullWithEmptyString(StringUtil.join(lstPL,", "));
-                    
+
                     if (!publocation.equals(StringUtil.EMPTY_STRING))
                     {
                         ht.put(Keys.PUB_LOCATION,
@@ -959,9 +958,9 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                 }
 
                 // CVS
-                if (rset.getString("PT") != null) 
+                if (rset.getString("PT") != null)
                 {
-                   
+
                     String pt = StringUtil.replaceNullWithEmptyString(rset.getString("PT"));
                     if (!pt.equals(StringUtil.EMPTY_STRING))
                     {
@@ -971,11 +970,11 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                 }
 
                 // FLS
-                if (rset.getString("FL") != null) 
+                if (rset.getString("FL") != null)
                 {
-                     
+
                     String fl = StringUtil.replaceNullWithEmptyString(rset.getString("FL"));
-                    
+
                     if (!fl.equals(StringUtil.EMPTY_STRING))
                     {
                         ht.put(Keys.UNCONTROLLED_TERMS,
@@ -984,14 +983,14 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                 }
 
                 //NR
-                if(rset.getString("NR") != null) 
+                if(rset.getString("NR") != null)
                 {
                     String strREFs = rset.getString("NR");
-                    
+
                     if(perl.match("/(\\d+)/", strREFs))
                     {
                         String refs = StringUtil.replaceNullWithEmptyString(perl.group(0).toString());
-                        
+
                         if (!refs.equals(StringUtil.EMPTY_STRING))
                         {
                             ht.put(Keys.NUMBER_OF_REFERENCES,
@@ -1001,14 +1000,14 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                 }
 
                 //CN
-                if(rset.getString("CN") != null && 
-                        !rset.getString("CN").trim().equals(StringUtil.EMPTY_STRING)) 
+                if(rset.getString("CN") != null &&
+                        !rset.getString("CN").trim().equals(StringUtil.EMPTY_STRING))
                 {
                     ht.put(Keys.CODEN,new XMLWrapper(Keys.CODEN ,rset.getString("CN")));
                 }
 
                 //BN
-                if(rset.getString("BN") != null) 
+                if(rset.getString("BN") != null)
                 {
                     String isbn = StringUtil.replaceNullWithEmptyString(rset.getString("BN"));
                     if (!isbn.equals(StringUtil.EMPTY_STRING))
@@ -1017,7 +1016,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     }
                 }
                 //SN
-                if(rset.getString("SN") != null) 
+                if(rset.getString("SN") != null)
                 {
                     String issn = StringUtil.replaceNullWithEmptyString(rset.getString("SN"));
                     if (!issn.equals(StringUtil.EMPTY_STRING))
@@ -1027,9 +1026,9 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                 }
 
                 //AB
-                if(rset.getClob("AB")   != null) 
+                if(rset.getClob("AB")   != null)
                 {
-                    String abs = checkAbstract(StringUtil.getStringFromClob(rset.getClob("AB")));                   
+                    String abs = checkAbstract(StringUtil.getStringFromClob(rset.getClob("AB")));
                     if (!abs.trim().equals(StringUtil.EMPTY_STRING))
                     {
                         ht.put(Keys.ABSTRACT,new XMLWrapper(Keys.ABSTRACT, abs ));
@@ -1037,13 +1036,13 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                 }
 
                 // AT
-                if (rset.getString("AT") != null) 
+                if (rset.getString("AT") != null)
                 {
                     String atype = StringUtil.replaceNullWithEmptyString(rset.getString("AT"));
                     if (!atype.equals(StringUtil.EMPTY_STRING))
                     {
                         ht.put(Keys.ABSTRACT_TYPE,
-                                new XMLWrapper(Keys.ABSTRACT_TYPE,atype));                        
+                                new XMLWrapper(Keys.ABSTRACT_TYPE,atype));
                     }
                 }
 
@@ -1144,7 +1143,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     }
 
                     // TI
-                    if(rset.getString("TI") != null) 
+                    if(rset.getString("TI") != null)
                     {
                         String ti = StringUtil.replaceNullWithEmptyString(rset.getString("TI"));
                         if (!ti.equals(StringUtil.EMPTY_STRING))
@@ -1157,7 +1156,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     if(rset.getString("TT") != null)
                     {
                         String tt = StringUtil.replaceNullWithEmptyString(rset.getString("TT"));
- 
+
                         if (!tt.equals(StringUtil.EMPTY_STRING) )
                         {
                             ht.put(Keys.TITLE_TRANSLATION,
@@ -1168,36 +1167,36 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     if (rset.getString("AU") != null)
                     {
                         String au = StringUtil.replaceNullWithEmptyString(rset.getString("AU"));
-                        
+
                         if (!au.equals(StringUtil.EMPTY_STRING))
                         {
                             Contributors authors = new Contributors(Keys.AUTHORS,getContributors(au,Keys.AUTHORS));
                         	ht.put(Keys.AUTHORS, authors);
                         }
-                    } 
-                    else 
+                    }
+                    else
                     {
-                        if(rset.getString("ED") != null) 
+                        if(rset.getString("ED") != null)
                         {
                             String strED = StringUtil.replaceNullWithEmptyString(rset.getString("ED"));
-                            if(perl.match("/(Ed[.]\\s*)/", strED)) 
+                            if(perl.match("/(Ed[.]\\s*)/", strED))
                             {
                                 strED = perl.substitute("s/\\(Ed[.]\\s*\\)//gi", strED);
                             }
-                            
+
                             if (!strED.trim().equals(StringUtil.EMPTY_STRING))
                             {
                                 Contributors editors = new Contributors(Keys.EDITORS, getContributors(strED, Keys.EDITORS));
                                 ht.put(Keys.EDITORS, editors);
                             }
 
-                            if(rset.getString("EF") != null) 
+                            if(rset.getString("EF") != null)
                             {
                                 String ef = StringUtil.replaceNullWithEmptyString(rset.getString("EF"));
-                               
+
                                 if (!ef.equals(StringUtil.EMPTY_STRING))
-                                {                                       
-                                    Affiliation eaffil = new Affiliation(Keys.EDITOR_AFFS,ef);                                
+                                {
+                                    Affiliation eaffil = new Affiliation(Keys.EDITOR_AFFS,ef);
                                     ht.put(Keys.EDITOR_AFFS, new Affiliations(Keys.EDITOR_AFFS, eaffil));
                                 }
                             }
@@ -1221,9 +1220,9 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                         {
                             lstAFF.add(rset.getString("AY"));
                         }
-                        
+
                         String af = StringUtil.replaceNullWithEmptyString( StringUtil.join(lstAFF,", "));
-                        
+
                         if (!af.equals(StringUtil.EMPTY_STRING))
                         {
                             Affiliation affil = new Affiliation(Keys.AUTHOR_AFFS,af);
@@ -1233,42 +1232,42 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                         lstAFF = null;
                     }
 
-                    if ((rset.getString("ST") != null || 
-                            rset.getString("SE") != null)) 
+                    if ((rset.getString("ST") != null ||
+                            rset.getString("SE") != null))
                     {
 
                         //  ST
-                        if (rset.getString("ST") != null) 
+                        if (rset.getString("ST") != null)
                         {
                            String st = StringUtil.replaceNullWithEmptyString(rset.getString("ST"));
-                           
+
                            if (!st.equals(StringUtil.EMPTY_STRING))
                            {
                                ht.put(Keys.SERIAL_TITLE, new XMLWrapper(Keys.SERIAL_TITLE,st));
                            }
                          }
                         //  SE
-                        if (rset.getString("SE") != null) 
+                        if (rset.getString("SE") != null)
                         {
                             String se = StringUtil.replaceNullWithEmptyString(rset.getString("SE"));
-                           
+
                             if (!se.equals(StringUtil.EMPTY_STRING))
                             {
                                 ht.put(Keys.ABBRV_SERIAL_TITLE, new XMLWrapper(Keys.ABBRV_SERIAL_TITLE, se));
                             }
                          }
                          // VO
-                        if(rset.getString("VO") != null) 
+                        if(rset.getString("VO") != null)
                         {
-                            String strVol = replaceVolumeNullWithEmptyString(rset.getString("VO"));                            
- 
+                            String strVol = replaceVolumeNullWithEmptyString(rset.getString("VO"));
+
                             if(!strVol.equals(StringUtil.EMPTY_STRING))
                             {
                                 ht.put(Keys.VOLUME, new Volume(strVol, perl));
                             }
                         }
                         // ISS
-                        if(rset.getString("ISS") != null) 
+                        if(rset.getString("ISS") != null)
                         {
 							String strIss = replaceIssueNullWithEmptyString(rset.getString("ISS"));
 
@@ -1278,10 +1277,10 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
 							}
                         }
                         //  SD
-                        if(rset.getString("SD") != null) 
+                        if(rset.getString("SD") != null)
                         {
                             String strSD = StringUtil.replaceNullWithEmptyString(rset.getString("SD"));
-                            
+
                             if (!strSD.equals(StringUtil.EMPTY_STRING))
                             {
                                 ht.put(Keys.ISSUE_DATE,
@@ -1290,36 +1289,36 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                         }
 
                         //  MT
-                        if (rset.getString("MT") != null) 
+                        if (rset.getString("MT") != null)
                         {
                             String mt = StringUtil.replaceNullWithEmptyString(rset.getString("MT"));
-                            
+
                             if (!mt.equals(StringUtil.EMPTY_STRING))
                             {
                                 ht.put(Keys.MONOGRAPH_TITLE,
                                         new XMLWrapper(Keys.MONOGRAPH_TITLE,mt));
                             }
                         }
-                    } 
-                    else if((rset.getString("ST") == null && 
-                             rset.getString("SE") == null) && 
+                    }
+                    else if((rset.getString("ST") == null &&
+                             rset.getString("SE") == null) &&
                              (rset.getString("MT") != null))
                     {
                         //  MT
-                        if (rset.getString("MT") != null) 
+                        if (rset.getString("MT") != null)
                         {
                             String mt = StringUtil.replaceNullWithEmptyString(rset.getString("MT"));
-                            
+
                             if (!mt.equals(StringUtil.EMPTY_STRING))
                             {
                                 ht.put(Keys.MONOGRAPH_TITLE, new XMLWrapper (Keys.MONOGRAPH_TITLE,mt));
                             }
                         }
                          // VO
-                       if(rset.getString("VO") != null) 
+                       if(rset.getString("VO") != null)
                        {
                             String strVol = replaceVolumeWithEmptyString(rset.getString("VO"));
-                           
+
                             if(!strVol.equals(StringUtil.EMPTY_STRING))
                             {
                                 ht.put(Keys.VOLUME, new Volume(strVol, perl));
@@ -1327,10 +1326,10 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                         }
 
                         // ISS
-                        if(rset.getString("ISS") != null) 
+                        if(rset.getString("ISS") != null)
                         {
                             String strIss = replaceIssueWithEmptyString(rset.getString("ISS"));
-                            
+
                             if (!strIss.equals(StringUtil.EMPTY_STRING))
                             {
                                 ht.put(Keys.ISSUE, new Issue(strIss, perl));
@@ -1344,7 +1343,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
 
                         List lstAsg = convertString2List(StringUtil.substituteChars(StringUtil.replaceNullWithEmptyString(rset.getString("ASSIG"))));
 
-                        if (lstAsg != null && 
+                        if (lstAsg != null &&
                                 lstAsg.size() > 0)
                         {
                             ht.put(Keys.PATASSIGN, new XMLMultiWrapper(Keys.PATASSIGN, setAssignees(lstAsg)));
@@ -1357,7 +1356,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     if((rset.getString("APPLN") != null))
                     {
                         String appln = StringUtil.replaceNullWithEmptyString(rset.getString("APPLN"));
-                        
+
                         if (!appln.equals(StringUtil.EMPTY_STRING))
                         {
                             ht.put(Keys.PATAPPNUM, new XMLWrapper( Keys.PATAPPNUM,appln ));
@@ -1378,7 +1377,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
 
 
                     // SD for DT - PA
-                    if((rset.getString("SD") != null) && 
+                    if((rset.getString("SD") != null) &&
                             (rset.getString("DT").equalsIgnoreCase("PA")))
                     {
 
@@ -1406,7 +1405,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     }
 
                     // YR
-                    if(rset.getString("YR") != null) 
+                    if(rset.getString("YR") != null)
                     {
                         String strYR = StringUtil.replaceNullWithEmptyString(rset.getString("YR"));
 
@@ -1417,9 +1416,9 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     }
 
                     //  PA
-                    if (rset.getString("PA") != null) 
+                    if (rset.getString("PA") != null)
                     {
-                      
+
                         String pa = StringUtil.replaceNullWithEmptyString(rset.getString("PA"));
                         if (!pa.equals(StringUtil.EMPTY_STRING))
                         {
@@ -1430,15 +1429,15 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
 
                     //  PP
                     String strPages = StringUtil.EMPTY_STRING;
-                    if(rset.getString("XP") != null) 
+                    if(rset.getString("XP") != null)
                     {
                         strPages = rset.getString("XP");
                         MatchResult mResult = null;
                         if(strPages != null)
                         {
-                             if((perl.match("#\\-#", strPages)) || 
-                                     (perl.match("#\\+#", strPages)) || 
-                                     (perl.match("#\\,#", strPages))) 
+                             if((perl.match("#\\-#", strPages)) ||
+                                     (perl.match("#\\+#", strPages)) ||
+                                     (perl.match("#\\,#", strPages)))
                              {
                                 strPages = perl.substitute("s#p##ig", strPages);
                                 strPages = perl.substitute("s#\\.# #ig", strPages);
@@ -1446,12 +1445,12 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                              }
                         }
 
-                    } 
-                    else 
+                    }
+                    else
                     {
                         strPages = rset.getString("PP");
-                    }                    
-                    
+                    }
+
                     if (strPages != null &&
                             !strPages.equals(StringUtil.EMPTY_STRING))
                     {
@@ -1475,7 +1474,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                        if(perl.match("/(\\d+)/", strPages))
                        {
                            ht.put(Keys.START_PAGE,new XMLWrapper(Keys.START_PAGE,perl.group(0).toString()));
-                          
+
                            if(perl.match("/(\\d+)/", perl.postMatch()))
                            {
                                ht.put(Keys.END_PAGE, new XMLWrapper(Keys.END_PAGE ,perl.group(0).toString()));
@@ -1484,42 +1483,42 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     }
 
                     //  SO
-                    if(rset.getString("SOURC") !=  null)  
+                    if(rset.getString("SOURC") !=  null)
                     {
                         String sourc = StringUtil.replaceNullWithEmptyString(rset.getString("SOURC"));
-                        
+
                         if (!sourc.equals(StringUtil.EMPTY_STRING))
-                        {                       
+                        {
                             ht.put(Keys.SOURCE,new XMLWrapper(PAPER_SOURCE , sourc));
                         }
                     }
- 
+
                     //  LA
-                    if(rset.getString("LA") !=  null)  
+                    if(rset.getString("LA") !=  null)
                     {
-                        
+
                         String la = StringUtil.replaceNullWithEmptyString(rset.getString("LA"));
-                        
+
                         if (!la.equals(StringUtil.EMPTY_STRING))
                         {
                             ht.put(Keys.LANGUAGE, new XMLWrapper( Keys.LANGUAGE,la));
                         }
                     }
                     //  SN
-                    if(rset.getString("SN") != null) 
+                    if(rset.getString("SN") != null)
                     {
                         String sn = StringUtil.replaceNullWithEmptyString(rset.getString("SN"));
-                       
+
                         if (!sn.equals(StringUtil.EMPTY_STRING))
                         {
                             ht.put(Keys.ISSN,new ISSN(sn));
                         }
                     }
                     //  CN
-                    if(rset.getString("CN") != null) 
+                    if(rset.getString("CN") != null)
                     {
                         String cn = StringUtil.replaceNullWithEmptyString(rset.getString("CN"));
-                        
+
                         if (!cn.equals(StringUtil.EMPTY_STRING))
                         {
                             ht.put(Keys.CODEN,new XMLWrapper(Keys.CODEN ,cn));
@@ -1527,10 +1526,10 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     }
 
                     //  BN
-                    if(rset.getString("BN") != null) 
+                    if(rset.getString("BN") != null)
                     {
                         String bn = StringUtil.replaceNullWithEmptyString(rset.getString("BN"));
-                        
+
                         if (!bn.equals(StringUtil.EMPTY_STRING))
                         {
                             ht.put(Keys.ISBN,new ISBN(bn));
@@ -1538,10 +1537,10 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     }
 
                     //  DT
-                    if (rset.getString("DT") != null) 
+                    if (rset.getString("DT") != null)
                     {
                         String dt = replaceDTNullWithEmptyString(rset.getString("DT"));
-                        
+
                         if (!dt.equals(StringUtil.EMPTY_STRING))
                         {
                             ht.put(Keys.DOC_TYPE,
@@ -1551,12 +1550,12 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
 
 
                     //  CF
-                    if (rset.getString("CF") != null) 
+                    if (rset.getString("CF") != null)
                     {
                         String cf = StringUtil.replaceNullWithEmptyString(rset.getString("CF"));
-                        
+
                         if (!cf.equals(StringUtil.EMPTY_STRING))
-                        {                          
+                        {
                             ht.put(Keys.CONFERENCE_NAME,
                                 new XMLWrapper(Keys.CONFERENCE_NAME ,cf));
                         }
@@ -1572,11 +1571,11 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                             ht.put(Keys.CONF_DATE,new XMLWrapper(Keys.CONF_DATE ,m2));
                         }
                     }
-                    else if (rset.getString("MD") != null) 
+                    else if (rset.getString("MD") != null)
                     {
                         //ht.put(EIDoc.CONF_DATE,StringUtil.replaceNullWithEmptyString(rset.getString("MD")));
                         String md = StringUtil.replaceNullWithEmptyString(rset.getString("MD"));
-                        
+
                         if (!md.equals(StringUtil.EMPTY_STRING))
                         {
                             ht.put(Keys.CONF_DATE,new XMLWrapper(Keys.CONF_DATE ,md));
@@ -1597,10 +1596,10 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     {
                         lstMeetLoc.add(rset.getString("MY"));
                     }
-                    if(lstMeetLoc.size() > 0) 
+                    if(lstMeetLoc.size() > 0)
                     {
                         String ml =StringUtil.replaceNullWithEmptyString(StringUtil.join(lstMeetLoc,", "));
-                        
+
                         if (!ml.equals(StringUtil.EMPTY_STRING))
                         {
                             ht.put(Keys.MEETING_LOCATION,new XMLWrapper( Keys.MEETING_LOCATION,ml ));
@@ -1675,16 +1674,16 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     lstTokens = null;
 
                     //  AB
-                    if(rset.getClob("AB")   != null) 
+                    if(rset.getClob("AB")   != null)
                     {
                         String abs = checkAbstract(StringUtil.getStringFromClob(rset.getClob("AB")));
-                        
+
                         if (!abs.trim().equals(StringUtil.EMPTY_STRING))
-                        {                       
+                        {
                             ht.put(Keys.ABSTRACT,
                                     new XMLWrapper(Keys.ABSTRACT,abs ));
                         }
-                   
+
                     }
 
                     // AT
@@ -1703,7 +1702,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     if (rset.getString("CLAIM") != null)
                     {
                         String claim = StringUtil.replaceNullWithEmptyString(rset.getString("CLAIM"));
-                        
+
                         if (!claim.equals(StringUtil.EMPTY_STRING))
                         {
                             ht.put(Keys.NUMBER_OF_CLAIMS,new XMLWrapper (Keys.NUMBER_OF_CLAIMS, claim ));
@@ -1721,7 +1720,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     }
 
                     // NOTAB
-                    if (rset.getString("NOTAB") != null) 
+                    if (rset.getString("NOTAB") != null)
                     {
                         String notab = StringUtil.replaceNullWithEmptyString(rset.getString("NOTAB"));
                         if (!notab.equals(StringUtil.EMPTY_STRING))
@@ -1731,14 +1730,14 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     }
 
                     //  NR
-                    if (rset.getString("NR") != null) 
+                    if (rset.getString("NR") != null)
                     {
                         String strREFs = rset.getString("NR");
-                        
-                        if(perl.match("/(\\d+)/", strREFs)) 
+
+                        if(perl.match("/(\\d+)/", strREFs))
                         {
                             strREFs = StringUtil.replaceNullWithEmptyString(perl.group(0).toString());
-                            
+
                             if(!strREFs.equals(StringUtil.EMPTY_STRING))
                             {
                                 ht.put(Keys.NUMBER_OF_REFERENCES,new XMLWrapper ( Keys.NUMBER_OF_REFERENCES,strREFs));
@@ -1747,7 +1746,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     }
 
                     // CVS
-                    if (rset.getString("PT") != null) 
+                    if (rset.getString("PT") != null)
                     {
                         String pt =StringUtil.replaceNullWithEmptyString(rset.getString("PT"));
                         if (!pt.equals(StringUtil.EMPTY_STRING))
@@ -1757,7 +1756,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     }
 
                     // FLS
-                    if (rset.getString("FL") != null) 
+                    if (rset.getString("FL") != null)
                     {
                         String fl = StringUtil.replaceNullWithEmptyString(rset.getString("FL"));
                         if (!fl.equals(StringUtil.EMPTY_STRING))
@@ -1836,7 +1835,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                 stmt = con.createStatement();
                 rset=stmt.executeQuery(queryDetailed+INString );
 
-                while(rset.next()) 
+                while(rset.next())
                 {
                     ElementDataMap ht = new ElementDataMap();
                     DocID did = (DocID) oidTable.get(rset.getString("M_ID"));
@@ -1844,7 +1843,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     String strDocType = StringUtil.replaceNullWithEmptyString(rset.getString("DT"));
 
                     String  ty = replaceTYwithRIScode(rset.getString("DT"));
-                    
+
                     if (!ty.equals(StringUtil.EMPTY_STRING))
                     {
                         ht.put(Keys.RIS_TY,new XMLWrapper(Keys.RIS_TY,ty));
@@ -1853,16 +1852,16 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     ht.put(Keys.RIS_N1,new XMLWrapper (Keys.RIS_N1, PaperChemDocBuilder.PAPER_TEXT_COPYRIGHT));
 
 
-                    if(rset.getString("TI") != null) 
+                    if(rset.getString("TI") != null)
                     {
                         String ti = StringUtil.replaceNullWithEmptyString(rset.getString("TI"));
-                        
+
                         if (!ti.equals(StringUtil.EMPTY_STRING))
                         {
                             ht.put(Keys.RIS_TI, new XMLWrapper(Keys.RIS_TI, ti ));
                         }
                     }
-                    if(rset.getString("TT") != null) 
+                    if(rset.getString("TT") != null)
                     {
                         String tt = StringUtil.replaceNullWithEmptyString(rset.getString("TT"));
                         if (!tt.equals(StringUtil.EMPTY_STRING))
@@ -1870,7 +1869,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                             ht.put(Keys.RIS_T1, new XMLWrapper(Keys.RIS_T1, tt));
                         }
                     }
-                    if (rset.getString("MT") != null) 
+                    if (rset.getString("MT") != null)
                     {
                         String mt = StringUtil.replaceNullWithEmptyString(rset.getString("MT"));
                         if (!mt.equals(StringUtil.EMPTY_STRING))
@@ -1879,9 +1878,9 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                         }
                     }
 
-                    if (strDocType.equalsIgnoreCase("JA")) 
+                    if (strDocType.equalsIgnoreCase("JA"))
                     {
-                        if (rset.getString("ST") != null) 
+                        if (rset.getString("ST") != null)
                         {
                             String st = StringUtil.replaceNullWithEmptyString(rset.getString("ST"));
                             if (!st.equals(StringUtil.EMPTY_STRING))
@@ -1889,12 +1888,12 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                                 ht.put(Keys.RIS_JO,new XMLWrapper (Keys.RIS_JO,st));
                             }
                         }
-                    } else 
+                    } else
                     {
-                        if (rset.getString("ST") != null) 
+                        if (rset.getString("ST") != null)
                         {
                             String t3 = StringUtil.replaceNullWithEmptyString(rset.getString("ST"));
-                            
+
                             if (!t3.equals(StringUtil.EMPTY_STRING))
                             {
                                 ht.put(Keys.RIS_T3,new XMLWrapper (Keys.RIS_T3,t3));
@@ -1903,15 +1902,15 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     }
 
                     if (rset.getString("AU") != null)
-                    
+
                     {
                         String au = StringUtil.replaceNullWithEmptyString(rset.getString("AU"));
-                        
+
                         if (!au.equals(StringUtil.EMPTY_STRING))
                         {
-                            Contributors authors = new Contributors(Keys.RIS_AUS, getContributors(au, Keys.RIS_AUS));                       
+                            Contributors authors = new Contributors(Keys.RIS_AUS, getContributors(au, Keys.RIS_AUS));
                             ht.put(Keys.RIS_AUS, authors);
-     
+
                         }
 
 
@@ -1933,29 +1932,29 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                             {
                                 lstAFF.add(rset.getString("AY"));
                             }
-                            
-                           
+
+
                             String straf = StringUtil.replaceNullWithEmptyString(StringUtil.join(lstAFF,", "));
-                            
+
                             if (!straf.equals(StringUtil.EMPTY_STRING))
                             {
                                 Affiliation aff = new Affiliation(Keys.RIS_AD,straf);
-                                ht.put(Keys.RIS_AD, new Affiliations(Keys.RIS_AD, aff));							
+                                ht.put(Keys.RIS_AD, new Affiliations(Keys.RIS_AD, aff));
                             }
                             lstAFF = null;
                         }
-                    } 
-                    else 
-                    
+                    }
+                    else
+
                     {
-                        if(rset.getString("ED") != null) 
+                        if(rset.getString("ED") != null)
                         {
                             String strED = StringUtil.replaceNullWithEmptyString(rset.getString("ED"));
-                            if(perl.match("/(Ed[.]\\s*)/", strED)) 
+                            if(perl.match("/(Ed[.]\\s*)/", strED))
                             {
                                 strED = perl.substitute("s/\\(Ed[.]\\s*\\)//gi", strED);
                             }
-                            
+
                             if (!strED.equals(StringUtil.EMPTY_STRING))
                             {
                                 Contributors editors = new Contributors(Keys.RIS_EDS,getContributors(strED, Keys.RIS_EDS));
@@ -1963,7 +1962,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                                 ht.put(Keys.RIS_EDS,editors);
                             }
 
-                            if(rset.getString("EF") != null) 
+                            if(rset.getString("EF") != null)
                             {
 								String stref = StringUtil.replaceNullWithEmptyString(rset.getString("EF"));
 								if (!stref.equals(StringUtil.EMPTY_STRING))
@@ -1971,12 +1970,12 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
 								    Affiliation eff = new Affiliation(Keys.RIS_AD, stref);
 								    ht.put(Keys.RIS_AD, new Affiliations(Keys.RIS_AD,eff));
 								}
-                             
+
                             }
                         }
                     }
 
-                    if(rset.getString("VO") != null) 
+                    if(rset.getString("VO") != null)
                     {
                         String strVol = replaceVolumeNullWithEmptyString(rset.getString("VO"));
                         if (!strVol.equals(StringUtil.EMPTY_STRING))
@@ -1986,7 +1985,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                         }
                     }
 
-                    if(rset.getString("ISS") != null) 
+                    if(rset.getString("ISS") != null)
                     {
                         String strIss = replaceIssueNullWithEmptyString(rset.getString("ISS"));
                         strIss = perl.substitute("s/[no\\.]//gi",strIss);
@@ -2004,10 +2003,10 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                         }
                     }
 
-                    if(rset.getString("AN") != null) 
+                    if(rset.getString("AN") != null)
                     {
                         String strAN = StringUtil.replaceNullWithEmptyString(rset.getString("AN"));
-                        
+
                         if (!strAN.equals(StringUtil.EMPTY_STRING))
                         {
                             ht.put(Keys.RIS_AN, new XMLWrapper(Keys.RIS_AN, strAN));
@@ -2017,11 +2016,11 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
 
                     //  PP
                     String strPages = StringUtil.EMPTY_STRING;
-                    if(rset.getString("XP") != null) 
+                    if(rset.getString("XP") != null)
                     {
                         strPages = rset.getString("XP");
-                    } 
-                    else 
+                    }
+                    else
                     {
                         strPages = rset.getString("PP");
                     }
@@ -2031,20 +2030,20 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
 
                     if(strPages != null)
                     {
-                        if(perl.match("/(\\d+)[^\\d](\\d+)/", strPages)) 
+                        if(perl.match("/(\\d+)[^\\d](\\d+)/", strPages))
                         {
-                            if(perl.match("/(\\d+)/", strPages)) 
+                            if(perl.match("/(\\d+)/", strPages))
                             {
-                               
+
                                 ht.put(Keys.RIS_SP,new XMLWrapper(Keys.RIS_SP,perl.group(0).toString()));
-                                
-                                if(perl.match("/(\\d+)/", perl.postMatch())) 
+
+                                if(perl.match("/(\\d+)/", perl.postMatch()))
                                 {
                                     ht.put(Keys.RIS_EP,new XMLWrapper(Keys.RIS_EP,perl.group(0).toString()));
                                 }
                             }
-                        } 
-                        else 
+                        }
+                        else
                         {
                             strPages = perl.substitute("s/[^\\d-,]//g", strPages);
                             ht.put(Keys.RIS_SP,new XMLWrapper(Keys.RIS_SP,strPages));
@@ -2059,13 +2058,13 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     {
                         ht.put(Keys.RIS_S1, new ISBN(rset.getString("BN")));
                     }
-                    
-                    
+
+
                     //  CF
                     if (rset.getString("CF") != null)
                     {
                         String cf = StringUtil.replaceNullWithEmptyString(rset.getString("CF"));
-                        
+
                         if (!cf.equals(StringUtil.EMPTY_STRING))
                         {
                             ht.put(Keys.RIS_BT,new XMLWrapper(Keys.RIS_BT ,cf));
@@ -2074,15 +2073,15 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     //  MD
                     if (rset.getString("M2") != null)
                     {
-                        String m2 = StringUtil.replaceNullWithEmptyString(rset.getString("M2")); 
+                        String m2 = StringUtil.replaceNullWithEmptyString(rset.getString("M2"));
                         if (!m2.equals(StringUtil.EMPTY_STRING))
                         {
                             ht.put(Keys.RIS_MD,new XMLWrapper(Keys.RIS_MD ,m2));
                         }
                     }
-                    else if (rset.getString("MD") != null) 
+                    else if (rset.getString("MD") != null)
                     {
-                        String m2 = StringUtil.replaceNullWithEmptyString(rset.getString("MD")); 
+                        String m2 = StringUtil.replaceNullWithEmptyString(rset.getString("MD"));
                         if (!m2.equals(StringUtil.EMPTY_STRING))
                         {
                             ht.put(Keys.RIS_MD,new XMLWrapper(Keys.RIS_MD ,m2));
@@ -2102,20 +2101,20 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     {
                         lstMeetLoc.add(rset.getString("MY"));
                     }
-                    
-                                       
+
+
                     if (lstMeetLoc.size() > 0)
                     {
                         ht.put(Keys.RIS_CY,
-                                new XMLWrapper(Keys.RIS_CY, 
+                                new XMLWrapper(Keys.RIS_CY,
                                         StringUtil.replaceNullWithEmptyString(StringUtil.join(lstMeetLoc,", "))));
                     }
-                    
+
                     lstMeetLoc = null;
 
                     //  PN, PL
                     List lstTokens = new ArrayList();
-                    if (rset.getString("PN") != null) 
+                    if (rset.getString("PN") != null)
                     {
                         lstTokens.add((String) rset.getString("PN"));
                     }
@@ -2131,7 +2130,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     {
                         lstTokens.add((String) rset.getString("PY"));
                     }
-                    
+
                     if (lstTokens.size() > 0)
                     {
                         String pb = StringUtil.replaceNullWithEmptyString(StringUtil.join(lstTokens, ", "));
@@ -2144,7 +2143,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
 
                     lstTokens = null;
 
-                    
+
                     String abs = null;
                     if((abs = checkAbstract(StringUtil.getStringFromClob(rset.getClob("AB")))) != null)
                 	{
@@ -2249,17 +2248,17 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                 ht.put(Keys.ISSN,new ISSN (StringUtil.replaceNullWithEmptyString(rset.getString("SN"))));
 
                 String strTitle = StringUtil.EMPTY_STRING;
-                
+
                 if((rset.getString("TT")  != null) &&
-                        (rset.getString("TI") != null)) 
+                        (rset.getString("TI") != null))
                 {
                     strTitle = StringUtil.replaceNullWithEmptyString(rset.getString("TI"));
                     strTitle = strTitle.concat(" (").concat(StringUtil.replaceNullWithEmptyString(rset.getString("TT"))).concat(")");
-                } 
+                }
                 else if (rset.getString("TI") != null)
                 {
                     strTitle = StringUtil.replaceNullWithEmptyString(rset.getString("TI")).concat(strTitle);
-                } 
+                }
                 else if (rset.getString("TT") != null)
                 {
                     strTitle = StringUtil.replaceNullWithEmptyString(rset.getString("TI")).concat(strTitle);
@@ -2333,7 +2332,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     }
 
                 } // "PA".equalsIgnoreCase(strDocType)
-                else 
+                else
                 {
                     // SO
                     if(rset.getString("ST") != null ||
@@ -2381,7 +2380,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                                 }
 
                         }
-                        if (rset.getString("ST") != null || 
+                        if (rset.getString("ST") != null ||
                                 rset.getString("SE") != null)
                         {
 
@@ -2418,9 +2417,9 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                                 ht.put(Keys.SOURCE,new XMLWrapper (Keys.SOURCE,StringUtil.replaceNullWithEmptyString(rset.getString("SOURC"))));
                             }
                         }
-                        else if (rset.getString("ST") == null && 
-                                rset.getString("SE") == null && 
-                                rset.getString("MT") == null && 
+                        else if (rset.getString("ST") == null &&
+                                rset.getString("SE") == null &&
+                                rset.getString("MT") == null &&
                                 rset.getString("SOURC") == null)
                         {
                             if(rset.getString("PN") != null)
@@ -2470,7 +2469,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
 
     //                    ht.put(EIDoc.PATENT_ISSUE_DATE, strSD);
                    //     String strYR = formatDate(StringUtil.replaceNullWithEmptyString(rset.getString("SD")));
-                        
+
                         if (strSD != null &&
                                 !strSD.trim().equals(StringUtil.EMPTY_STRING))
                         {
@@ -2486,7 +2485,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     }
                 }
                 else
-                {   
+                {
                     if(rset.getString("ST") != null ||
                             rset.getString("SE") != null ||
                             rset.getString("MT") != null ||
@@ -2524,8 +2523,8 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                              	   new XMLWrapper(Keys.ISSUE_DATE,strSD));
                             }
 
-                        } 
-                        else if (rset.getString("YR") != null)  
+                        }
+                        else if (rset.getString("YR") != null)
                         {
                             String strYR = StringUtil.replaceNullWithEmptyString(rset.getString("YR"));
                             if( rset.getString("ST") == null&&
@@ -2556,7 +2555,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                 }
 
                 // PA
-                if(rset.getString("PA") != null) 
+                if(rset.getString("PA") != null)
                 {
 
                //     ht.put(EIDoc.PAPER_NUMBER,StringUtil.replaceNullWithEmptyString(rset.getString("PA")));
@@ -2564,21 +2563,21 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                       	   new XMLWrapper(Keys.PAPER_NUMBER, StringUtil.replaceNullWithEmptyString(rset.getString("PA"))));
 
                 }
-                if(rset.getString("ST") != null || 
-                        rset.getString("SE") != null || 
-                        rset.getString("MT") != null || 
-                        rset.getString("SOURC") == null) 
+                if(rset.getString("ST") != null ||
+                        rset.getString("SE") != null ||
+                        rset.getString("MT") != null ||
+                        rset.getString("SOURC") == null)
                 {
                     // PP
-                    if(rset.getString("XP") != null) 
+                    if(rset.getString("XP") != null)
                     {
                         ht.put(Keys.PAGE_RANGE,
                                 new PageRange(StringUtil.replaceNullWithEmptyString(rset.getString("XP")), perl));
 
 
             //            ht.put(EIDoc.PAGE_RANGE,StringUtil.replaceNullWithEmptyString(rset.getString("XP")));
-                    } 
-                    else 
+                    }
+                    else
                     {
                         ht.put(Keys.PAGE_RANGE,
                                 new PageRange(StringUtil.replaceNullWithEmptyString(rset.getString("PP")), perl));
@@ -2587,8 +2586,8 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     }
                 }
                 // LA
-                if((rset.getString("LA") != null) && 
-                        !rset.getString("LA").equalsIgnoreCase("ENGLISH")) 
+                if((rset.getString("LA") != null) &&
+                        !rset.getString("LA").equalsIgnoreCase("ENGLISH"))
                 {
                     ht.put(Keys.LANGUAGE,
                             new XMLWrapper (Keys.LANGUAGE,StringUtil.replaceNullWithEmptyString(rset.getString("LA"))));
@@ -2637,8 +2636,8 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
 
         return list;
     }
-    
-    
+
+
     /**
      *   This method basically takes list Of DocIDs as Parameter
      *   This list of Docids use buildINString() method to build
@@ -2708,7 +2707,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                      }
 
                      //ACCESSION NUMBER
-                     
+
                      if(rset.getString("AN") != null)
                      {
                          ht.put(Keys.ACCESSION_NUMBER,new XMLWrapper(Keys.ACCESSION_NUMBER, StringUtil.replaceNullWithEmptyString(rset.getString("AN"))));
@@ -2747,7 +2746,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                           	}
                          }
                      }
-                     
+
                      // SO
                      if(rset.getString("ST") != null ||
                              rset.getString("SE") != null ||
@@ -2796,7 +2795,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                          } else if (
                                  rset.getString("ST") == null &&
                                  rset.getString("SE") == null &&
-                                 rset.getString("MT") == null 
+                                 rset.getString("MT") == null
                                 )
                          {
                              if(rset.getString("PN") != null)
@@ -2862,9 +2861,9 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                      }
 
 
- 					
+
  					String strPages = StringUtil.EMPTY_STRING;
-                    if(rset.getString("XP") != null) 
+                    if(rset.getString("XP") != null)
                     {
                         strPages = rset.getString("XP");
                         MatchResult mResult = null;
@@ -2877,8 +2876,8 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                             }
                         }
 
-                    } 
-                    else 
+                    }
+                    else
                     {
                         strPages = rset.getString("PP");
                     }
@@ -3222,11 +3221,11 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
     			}
     		}
         }
-    
+
         return (String[])list.toArray(new String[list.size()]);
     }
 
-    public List convertString2List(String sList) 
+    public List convertString2List(String sList)
     {
 
         if (sList == null)
@@ -3239,16 +3238,16 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
     	return lstVals;
     }
 
-    private String[] setAssignees(List a) 
+    private String[] setAssignees(List a)
     {
         HashMap dupMap = new HashMap();
         ArrayList assignees = new ArrayList();
-        for (int i = 0; i < a.size(); i++) 
+        for (int i = 0; i < a.size(); i++)
         {
 
             String assignee = (String) a.get(i);
             String upAs = assignee.toUpperCase().trim();
-            if (!dupMap.containsKey(upAs)) 
+            if (!dupMap.containsKey(upAs))
             {
                 assignees.add(assignee);
                 dupMap.put(upAs, "");
@@ -3264,7 +3263,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
     StringBuffer pi = new StringBuffer();
     StringTokenizer st = new StringTokenizer(priorityInfo, ";");
 
-    while (st.hasMoreTokens()) 
+    while (st.hasMoreTokens())
     {
         String token = st.nextToken();
 
@@ -3296,8 +3295,8 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
         }
 
     }
-    
-    
+
+
     private String getPage(String strPageRange,String strPageCount,
 			   String strArticleNum,String strISSN,
 			   String strDOI,String strYear)
@@ -3324,7 +3323,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
         return strPage;
 
     }
-    
+
     private static boolean hasARFix(String strISSN) //Checks ISSNs with AR field problems
     {
 		 if (issnARFix.containsKey(strISSN.replaceAll("-","")))
