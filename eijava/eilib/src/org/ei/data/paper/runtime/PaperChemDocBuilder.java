@@ -50,8 +50,8 @@ import org.apache.oro.text.perl.*;
   */
 public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
 {
-    public static String PAPER_TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright 2006 Elsevier Engineering Information, Inc.";
-    public static String PAPER_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2006 Elsevier Engineering Information, Inc.";
+    public static String PAPER_TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright 2007 Elsevier Engineering Information, Inc.";
+    public static String PAPER_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2007 Elsevier Engineering Information, Inc.";
     public static String PROVIDER_TEXT = "Ei";
 
 
@@ -118,7 +118,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
 	        Keys.PROVIDER ,
 	        Keys.LANGUAGE,
 	        Keys.MAIN_HEADING,
-	        Keys.CONTROLLED_TERMS,
+	        PAPER_CONTROLLED_TERMS,
 	        Keys.UNCONTROLLED_TERMS,
 	        Keys.ABSTRACT,
 	        Keys.NUMBER_OF_REFERENCES,
@@ -167,7 +167,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
 	        Keys.NUMBER_OF_TABLES,
 	        Keys.SPECIFIC_NAMES,
 	        Keys.MAIN_HEADING,
-	        Keys.CONTROLLED_TERMS,
+	        PAPER_CONTROLLED_TERMS,
 	        Keys.UNCONTROLLED_TERMS,
 	        Keys.CLASS_CODES,
 	        Keys.TREATMENTS,
@@ -177,7 +177,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
 	        Keys.COPYRIGHT_TEXT,
 	        Keys.PROVIDER };
 	private static final Key[] RIS_KEYS = { Keys.RIS_TY, Keys.RIS_LA , Keys.RIS_N1 , Keys.RIS_TI , Keys.RIS_T1 , Keys.RIS_BT , Keys.RIS_JO ,Keys.RIS_T3 , Keys.RIS_AUS , Keys.RIS_AD , Keys.RIS_EDS , Keys.RIS_VL , Keys.RIS_IS , Keys.RIS_PY , Keys.RIS_AN , Keys.RIS_SP , Keys.RIS_EP, Keys.RIS_SN ,  Keys.RIS_S1 , Keys.RIS_MD ,Keys.RIS_CY , Keys.RIS_PB,  Keys.RIS_N2 , Keys.RIS_KW , Keys.RIS_CVS , Keys.RIS_FLS , Keys.RIS_DO };
-	private static final Key[] XML_KEYS = { Keys.ISSN , Keys.MAIN_HEADING , Keys.NO_SO , Keys.MONOGRAPH_TITLE , Keys.PUBLICATION_YEAR  , Keys.CONTROLLED_TERM , Keys.ISBN , Keys.AUTHORS , Keys.DOCID , Keys.SOURCE , Keys.NUMVOL , Keys.EDITOR_AFFS , Keys.EDITORS , Keys.PUBLISHER , Keys.VOLUME , Keys.AUTHOR_AFFS , Keys.PROVIDER , Keys.ISSUE_DATE_PAPER , Keys.COPYRIGHT_TEXT , Keys.DOI  , Keys.PUBLICATION_DATE , Keys.TITLE , Keys.LANGUAGE , Keys.PAGE_RANGE , Keys.PAPER_NUMBER , Keys.COPYRIGHT , Keys.ISSUE , Keys.ACCESSION_NUMBER , Keys.CONTROLLED_TERMS};
+	private static final Key[] XML_KEYS = { Keys.ISSN , Keys.MAIN_HEADING , Keys.NO_SO , Keys.MONOGRAPH_TITLE , Keys.PUBLICATION_YEAR  , Keys.CONTROLLED_TERM , Keys.ISBN , Keys.AUTHORS , Keys.DOCID , Keys.SOURCE , Keys.NUMVOL , Keys.EDITOR_AFFS , Keys.EDITORS , Keys.PUBLISHER , Keys.VOLUME , Keys.AUTHOR_AFFS , Keys.PROVIDER , Keys.ISSUE_DATE_PAPER , Keys.COPYRIGHT_TEXT , Keys.DOI  , Keys.PUBLICATION_DATE , Keys.TITLE , Keys.LANGUAGE , Keys.PAGE_RANGE , Keys.PAPER_NUMBER , Keys.COPYRIGHT , Keys.ISSUE , Keys.ACCESSION_NUMBER , PAPER_CONTROLLED_TERMS};
 	private static String DELIM;
 
 
@@ -964,8 +964,8 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     String pt = StringUtil.replaceNullWithEmptyString(rset.getString("PT"));
                     if (!pt.equals(StringUtil.EMPTY_STRING))
                     {
-                        ht.put(Keys.CONTROLLED_TERMS ,
-                                new XMLMultiWrapper(Keys.CONTROLLED_TERMS, setElementData(pt)));
+                        ht.put(PAPER_CONTROLLED_TERMS ,
+                                new XMLMultiWrapper(PAPER_CONTROLLED_TERMS, setElementData(pt)));
                     }
                 }
 
@@ -1049,7 +1049,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
 
                 EIDoc eiDoc = new EIDoc(did,ht, Abstract.ABSTRACT_FORMAT);
                 eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
-                eiDoc.exportLabels(false);
+                eiDoc.exportLabels(true);
                 eiDoc.setOutputKeys(ABSTRACT_KEYS);
                 list.add(eiDoc);
                 count++;
@@ -1751,7 +1751,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                         String pt =StringUtil.replaceNullWithEmptyString(rset.getString("PT"));
                         if (!pt.equals(StringUtil.EMPTY_STRING))
                         {
-                            ht.put(Keys.CONTROLLED_TERMS,new XMLMultiWrapper ( PAPER_CONTROLLED_TERMS,setElementData(pt)));
+                            ht.put(PAPER_CONTROLLED_TERMS,new XMLMultiWrapper ( PAPER_CONTROLLED_TERMS,setElementData(pt)));
                         }
                     }
 
@@ -2892,7 +2892,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
 // CVS
                      if (rset.getString("PT") != null)
                      {
-                        	ht.put(Keys.CONTROLLED_TERMS,new XMLMultiWrapper(PAPER_CONTROLLED_TERMS,
+                        	ht.put(PAPER_CONTROLLED_TERMS,new XMLMultiWrapper(PAPER_CONTROLLED_TERMS,
                         	        										  setElementData(StringUtil.replaceNullWithEmptyString(rset.getString("PT")))));
                      }
 
