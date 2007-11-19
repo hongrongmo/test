@@ -36,18 +36,19 @@
 <xsl:variable name="BOOKS_OPEN_WINDOW_PARAMS">height=800,width=700,status=yes,resizable,scrollbars=1,menubar=no</xsl:variable>
 
 
-<xsl:variable name="DEDUP"><xsl:value-of select="PAGE/DEDUP"/></xsl:variable>
-<xsl:variable name="SEARCH-ID"><xsl:value-of select="PAGE/SEARCH-ID"/></xsl:variable>
-<xsl:variable name="SESSION-ID"><xsl:value-of select="PAGE/SESSION-ID" /></xsl:variable>
-<xsl:variable name="CURRENT-PAGE"><xsl:value-of select="PAGE/CURR-PAGE-ID"/></xsl:variable>
-<xsl:variable name="SELECTED-DB"><xsl:value-of select="PAGE/DBMASK"/></xsl:variable>
+<xsl:variable name="DEDUP"><xsl:value-of select="/PAGE/DEDUP"/></xsl:variable>
+<xsl:variable name="SEARCH-ID"><xsl:value-of select="/PAGE/SEARCH-ID"/></xsl:variable>
+<xsl:variable name="SESSION-ID"><xsl:value-of select="/PAGE/SESSION-ID" /></xsl:variable>
+<xsl:variable name="CURRENT-PAGE"><xsl:value-of select="/PAGE/CURR-PAGE-ID"/></xsl:variable>
+<xsl:variable name="SELECTED-DB"><xsl:value-of select="/PAGE/DBMASK"/></xsl:variable>
+
 
   <xsl:template match="PAGE">
 
     <xsl:variable name="COUNT"><xsl:value-of select="//CURR-PAGE-ID"/></xsl:variable>
     <xsl:variable name="RESULTS-COUNT"><xsl:value-of select="//RESULTS-COUNT"/></xsl:variable>
     <xsl:variable name="RESULTS-PER-PAGE"><xsl:value-of select="//RESULTS-PER-PAGE"/></xsl:variable>
-    <xsl:variable name="DATABASE-DISPLAYNAME"><xsl:value-of select="DD:getDisplayName(SELECTED-DATABASE)"/></xsl:variable>
+    <xsl:variable name="DATABASE-DISPLAYNAME"><xsl:value-of select="DD:getDisplayName(DBMASK)"/></xsl:variable>
     <xsl:variable name="DATABASE"><xsl:value-of select="DBMASK"/></xsl:variable>
     <xsl:variable name="DATABASE-ID"><xsl:value-of select="//SESSION-DATA/DATABASE/ID"/></xsl:variable>
     <xsl:variable name="SEARCH-TYPE"><xsl:value-of select="SESSION-DATA/SEARCH-TYPE"/></xsl:variable>
@@ -57,7 +58,7 @@
         <META http-equiv="Expires" content="0"/>
         <META http-equiv="Pragma" content="no-cache"/>
         <META http-equiv="Cache-Control" content="no-cache"/>
-        <title>Engineering Village - <xsl:value-of select="$DATABASE-DISPLAYNAME"/><xsl:text> </xsl:text><xsl:value-of select="$SEARCH-TYPE"/> Search Results</title>
+        <title>Engineering Village  - <xsl:value-of select="$DATABASE-DISPLAYNAME"/><xsl:text> </xsl:text><xsl:value-of select="$SEARCH-TYPE"/> Search Results</title>
 
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/SearchResults_V7.js"/>
