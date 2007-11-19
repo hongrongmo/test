@@ -38,7 +38,7 @@ public class XSLCIDHelper {
 		newSearches.put("Easy","easySearch");
 		newSearches.put("Quick","quickSearch");
 		newSearches.put("Expert","expertSearch");
-		newSearches.put("Combined","combineSearchHistory");
+		newSearches.put("Combined","quickSearch");
 		newSearches.put("Thesaurus","thesHome");
 		newSearches.put("TagSearch","tagsLoginForm");
 
