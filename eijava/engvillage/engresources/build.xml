@@ -52,7 +52,7 @@
 
     <filter filtersfile="../${properties}.properties"/>
     <copy overwrite="yes" filtering="yes" file="etc/web.xml" tofile="${deploy.home}/WEB-INF/web.xml" />
-    <copy overwrite="yes" filtering="yes" file="etc/pools.xml" tofile="${deploy.home}/WEB-INF/pools.xml" />
+
   </target>
 
   <target name="engvillage.home_check" unless="engvillage.home">
