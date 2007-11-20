@@ -107,6 +107,17 @@ public class EIDoc implements Highlightable, XMLSerializable, LocalHoldingLinker
     public void setLoadNumber(int loadNumber) {
         this.loadNumber = loadNumber;
     }
+    
+    public String getLongTerms() {
+        String longTerms = null;
+        if (mapDocument.containsKey(Keys.LINKED_TERMS)) 
+        {
+            ElementData doi = (ElementData) mapDocument.get(Keys.LINKED_TERMS);
+            String[] edata = doi.getElementData();
+            longTerms = edata[0];
+        }
+        return longTerms;
+    }
 
     public void exportLabels(boolean labels) {
         this.labels = labels;
@@ -437,6 +448,18 @@ public class EIDoc implements Highlightable, XMLSerializable, LocalHoldingLinker
         else if (field.equalsIgnoreCase("cvm")) {
 
             return getHighlightMap(MJS_HIGHLIGHT_KEYS);
+        }
+        else if (field.equalsIgnoreCase("lt")) {
+
+            return getHighlightMap(LT_HIGHLIGHT_KEYS);
+        }
+        else if (field.equalsIgnoreCase("atm")) {
+
+            return getHighlightMap(TEMPLATE_HIGHLIGHT_KEYS);
+        }
+        else if (field.equalsIgnoreCase("mlt")) {
+
+            return getHighlightMap(MLT_HIGHLIGHT_KEYS);
         }
         else if (field.equalsIgnoreCase("rgi")) {
 
