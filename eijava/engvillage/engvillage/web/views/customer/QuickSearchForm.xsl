@@ -140,16 +140,6 @@
 		</xsl:apply-templates>
 
   </center>
-
-		<!-- ADDED BY JM -->
-    <script type="text/javascript"  language="javascript">
-      <xsl:comment>
-      if(typeof(document.quicksearch.searchWord1) != 'undefined') {
-        document.quicksearch.searchWord1.focus();
-      }
-      flipImage(<xsl:value-of select="$DATABASE"/>);
-      // </xsl:comment>
-    </script>
 	</body>
 </html>
 
