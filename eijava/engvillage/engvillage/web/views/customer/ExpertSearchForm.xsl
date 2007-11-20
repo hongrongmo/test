@@ -108,18 +108,6 @@
 	</xsl:apply-templates>
 
   </center>
-
-		<!-- ADDED BY JM -->
-    <xsl:text disable-output-escaping="yes">
-	  <![CDATA[
-        <script TYPE="text/javascript" language="javascript">
-          if(typeof(document.quicksearch.searchWord1) != 'undefined') {
-            document.quicksearch.searchWord1.focus();
-          }
-				</script>
-		]]>
-    </xsl:text>
-
 	</body>
   </html>
 
