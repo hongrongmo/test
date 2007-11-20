@@ -14,8 +14,8 @@
     xmlns:ctd="java:org.ei.domain.ClassTitleDisplay"
     xmlns:rfx="java:org.ei.books.collections.ReferexCollection"
     xmlns:crlkup="java:org.ei.data.CRNLookup"
-    xmlns:cvt="java:org.ei.data.CVSTermBuilder"
-    xmlns:detail="java:org.ei.domain.TermDetail"
+	xmlns:cvt="java:org.ei.data.CVSTermBuilder"
+	xmlns:detail="java:org.ei.domain.TermDetail"
     exclude-result-prefixes="schar hlight java html ibfab xsl rfx ctd crlkup cvt detail"
 >
 
@@ -23,6 +23,13 @@
     <xsl:strip-space elements="html:* xsl:*" />
 
     <xsl:template match="EI-DOCUMENT">
+    <xsl:variable name="ENCOMPASS-FIELDS-JS">
+    	<xsl:value-of select="//PAGE/ENCOMPASS-FIELDS-JS" />
+    </xsl:variable>
+ 	<xsl:if test="('LTH' or 'LSTM' or  'MLT' or  'ATM')" >
+    	<xsl:value-of select="$ENCOMPASS-FIELDS-JS" disable-output-escaping="yes"/>
+    </xsl:if>
+    
       <table border="0" width="99%" cellspacing="0" cellpadding="0">
         <xsl:apply-templates />
       </table>
@@ -36,6 +43,7 @@
     <!-- top level elements with labels and nested value children -->
     <xsl:template match="SC|AV|DT|MJSM|CRM|CLGM|PIDEPM|BKYS|AGS|AUS|EDS|IVS|CLS|FLS|CVS|RGIS|DISPS|CTS|OCVS|OCLS|NDI|CHI|AOI|AFS|EFS|PASM|PEXM|PIM|PAPIM">
         <tr>
+
             <td valign="top" ><img src="/engresources/images/s.gif" border="0"/></td>
             <td xsl:use-attribute-sets="r-align-label">
             <xsl:if test="string(@label)">
@@ -55,12 +63,12 @@
     <span CLASS="MedBlackText">
         <xsl:apply-templates />
         <xsl:if test="not(position()=last())"> - </xsl:if>
-    </span>
+   </span>
     </xsl:template>
 
     <!-- top level elements for correspondence -->
     <xsl:template match="CAUS">
-
+           
         <xsl:choose>
     	<xsl:when test="CAU/EMAIL">
 		<tr>
@@ -76,7 +84,7 @@
         <xsl:call-template name="SPACER"/>
         </xsl:when>
         <xsl:otherwise>
-
+        
         <tr>
 		    <td valign="top" ><img src="/engresources/images/s.gif" border="0"/></td>
 		    <td xsl:use-attribute-sets="r-align-label">
@@ -124,7 +132,7 @@
       <xsl:call-template name="SPACER"/>
     </xsl:template>
 
-    <!-- top level LINKED node(s) with simple label/value children -->
+  <!-- top level LINKED node(s) with simple label/value children -->
     <xsl:template match="SN|BN|BN13|CN|CC|MH|MI|PNUM|E_ISSN">
       <tr>
         <td valign="top" ><img src="/engresources/images/s.gif" border="0"/></td>
@@ -141,7 +149,7 @@
     </xsl:template>
 
   <!-- Controlled/Uncontrolled child node(s) within VALUE under FLS/CVS/AGS -->
-    <xsl:template match="MJS|BKY|FL|CV|AG|CT|OC|PS|RGI|CM|IC|GC|GD|CP|CE">
+      <xsl:template match="MJS|BKY|FL|CV|AG|CT|OC|PS|RGI|CM|IC|GC|GD|CP|CE">
 
       <xsl:if test="name()='LST'">
       <xsl:if test="position()=1">
@@ -529,33 +537,29 @@
         <xsl:call-template name="SPACER"/>
   </xsl:template>
 
-<!-- htere -->
+
+<!-- ENCompass fileds -->
 
      <xsl:variable name="DOCID">
-      <xsl:value-of select="//PAGE//PAGE-ENTRY//EI-DOCUMENT//DOC-ID"/>
+        <xsl:value-of select="//PAGE//PAGE-ENTRY//EI-DOCUMENT//DOC-ID"/>
     </xsl:variable>
-    <xsl:param name="RESOURCE-PATH"/>
-    <xsl:variable name="SEARCHTYPE">
-      <xsl:value-of select="//SEARCH-TYPE"/>
-    </xsl:variable>
-    <xsl:variable name="SESSION-ID">
-      <xsl:value-of select="//PAGE//SESSION-ID"/>
-    </xsl:variable>
-    <xsl:variable name="DATABASE1">
-      <xsl:value-of select="//PAGE//DBMASK"/>
-    </xsl:variable>
-
-  	<xsl:template match="LTH">
+    
+ 	<xsl:variable name="SEARCHID">
+		<xsl:value-of select="//SEARCH-ID"/>
+ 	</xsl:variable>
+ 	
+  	<xsl:template match="LTH"> 	   
         <tr>
             <td valign="top" ><img src="/engresources/images/s.gif" border="0"/></td>
             <td xsl:use-attribute-sets="r-align-label">
             <span CLASS="MedBlackText"><b>Linked terms: </b> </span>
             </td>
-
-            <td valign="top" width="10"><img src="/engresources/images/s.gif" border="0" width="10"/></td>
+            <td valign="top" width="10">           
+            <img src="/engresources/images/s.gif" border="0" width="10"/></td>
             <td valign="top" align="left">
             	<div class="longltdiv" id="longltdiv">
                 	<input type="hidden" name="longltfield" id="longltfield" disable-output-escaping = "yes"/>
+                	<input type="hidden" name="schid" id="schid"  value='{$SEARCHID}' disable-output-escaping = "yes"/>
                 	<a class="SmBlueText" onclick="javascript:flipImg('{$DOCID}','longlt'); return false;">
    					<img name="longltOpenClose" src="/engresources/images/encLinkedOpen.gif"  border="0"  />
    					<img src="/engresources/images/s.gif" border="0" width="5"/>
@@ -572,7 +576,7 @@
         <xsl:call-template name="SPACER"/>
     </xsl:template>
 
-      <xsl:template match="LSTM">
+    <xsl:template match="LSTM">
         <tr>
             <td valign="top" ><img src="/engresources/images/s.gif" border="0"/></td>
             <td xsl:use-attribute-sets="r-align-label">
@@ -587,7 +591,7 @@
             <td valign="top" width="10"><img src="/engresources/images/s.gif" border="0" width="10"/></td>
             <td valign="top" align="left">
             	<xsl:variable name="LST">
-            		<xsl:value-of select='.' disable-output-escaping="yes"/>
+            		<xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
             	</xsl:variable>
             	<div class="lstdiv" id="lstdiv">
                 	<input type="hidden" name="lstfield" id="lstfield" disable-output-escaping = "yes"/>
@@ -607,8 +611,6 @@
         <xsl:call-template name="SPACER"/>
     </xsl:template>
 
-
-    <!-- MLT   -->
     <xsl:template match="MLT">
         <tr>
             <td valign="top" ><img src="/engresources/images/s.gif" border="0"/></td>
@@ -618,13 +620,13 @@
                 <span CLASS="MedBlackText"><b><xsl:value-of select="@label"/> </b> </span>
             </xsl:if>
            -->
-            <span CLASS="MedBlackText"><b>Manually linked terms: </b> </span>
+            <span CLASS="MedBlackText"><b> Manually linked terms: </b> </span>
             </td>
 
             <td valign="top" width="10"><img src="/engresources/images/s.gif" border="0" width="10"/></td>
             <td valign="top" align="left">
             	<xsl:variable name="ML">
-            		<xsl:value-of select='.' disable-output-escaping="yes"/>
+            		<xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
             	</xsl:variable>
             	<div class="mltdiv" id="mltdiv">
                 	<input type="hidden" name="mltfield" id="mltfield" disable-output-escaping = "yes"/>
@@ -655,32 +657,11 @@
             <td valign="top" width="10"><img src="/engresources/images/s.gif" border="0" width="10"/></td>
 
             <xsl:variable name="AT">
-            <xsl:value-of select='.' disable-output-escaping="yes"/>
+            	<xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
             </xsl:variable>
 
-             <td valign="top" align="left">
-<!--  DHTML -->
-     <!--  		<a class="SmBlueText"  onclick="javascript:expandTerms('{$AT}'); return false;">view template<img name="viewdetail" src="/engresources/images/plus.gif" border="0"/></a> -->
-
-     		<!--  <a class="SmBlueText"  onclick="javascript:expandTerms('{$AT}'); return false;">view template<img name="viewdetail" src="/engresources/images/plus.gif" border="0"/></a> -->
-
-<!--
-	<input type="hidden" name="editfield1" id="editfield1" value='{$AT}' disable-output-escaping = "yes"/>
-	<input type="hidden" name="Edit1_h1" id="1" value="acid, oil"/>
-
-
-	<div class="imt">
-    <a class="SmBlueText"  onclick="javascript:flipImg('{$AT}', 'atm'); return false;">View link terms<img name="editlink1" src="/engresources/images/tagedit_plus.gif"  border="0" /></a>
-
-	<table style="margin:0px; padding:0px; border:0px black solid; width:100%" id="atm_table">
-		<tbody id="atm_table_body">
-	</tbody>
-	</table>
-	</div>
--->
-
-
-	      <div class="atmdiv" id="atmdiv">
+            <td valign="top" align="left">
+	      	<div class="atmdiv" id="atmdiv">
           	<input type="hidden" name="atmfield" id="atmfield" disable-output-escaping = "yes"/>
    			<a class="SmBlueText" onclick="javascript:flipImg('{$AT}','atm'); return false;">
    				<img name="atmOpenClose" src="/engresources/images/encTemplatesOpen.gif"  border="0" />
@@ -691,15 +672,14 @@
 				<tbody id="atm_table_body">
 				</tbody>
 			</table>
-		 </div>
-
-
+		 	</div>
      		</td>
            <!-- <span CLASS="MedBlackText"><xsl:value-of select="detail:getOneDetail('ATM',$AT)" disable-output-escaping="yes"/></span> -->
-
         </tr>
        <xsl:call-template name="SPACER"/>
     </xsl:template>
+
+<!-- ENCompass fileds -->
 
    <xsl:template match="PIDEP">
       <xsl:variable name= "CCID">
@@ -767,17 +747,17 @@
             <xsl:call-template name="LINK">
            <xsl:with-param name="TERM"><xsl:value-of select="normalize-space(text())"/></xsl:with-param>
            <xsl:with-param name="FIELD">CR</xsl:with-param>
-
+     
        </xsl:call-template>
-       <!--
+       <!--  
             <span CLASS="MedBlackText"><xsl:value-of select="normalize-space(text())"/></span>
-           <img src="/engresources/images/plus.gif" border="0"/>
-        -->
+           <img src="/engresources/images/plus.gif" border="0"/> 
+        --> 
            <xsl:text> </xsl:text><span CLASS="MedBlackText">
-           <xsl:value-of select="crlkup:getName(normalize-space(text()))" disable-output-escaping="yes"/></span>
+           <xsl:value-of select="crlkup:getName(normalize-space(text()))" disable-output-escaping="yes"/></span>       
            <xsl:if test="position()!=last()">
            <a class="SmBlkText">&#160; - &#160;</a>
-           </xsl:if>
+           </xsl:if>      
 
   </xsl:template>
 
