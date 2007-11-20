@@ -61,7 +61,7 @@ public class CBFDatabase extends C84Database
 
     public String getID()
     {
-        return "c84";
+        return "zbf";
     }
     public String getLegendID()
     {
@@ -75,7 +75,7 @@ public class CBFDatabase extends C84Database
 
     public String getIndexName()
     {
-        return "zbf";
+        return "c84";
     }
 
     public String getShortName()
