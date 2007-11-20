@@ -1,5 +1,7 @@
 @echo off
 
+cmd.exe /C ant clean
+
 pushd eilib
 cmd.exe /C ant dist
 popd
