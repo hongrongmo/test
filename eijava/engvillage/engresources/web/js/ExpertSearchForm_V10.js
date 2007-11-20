@@ -732,3 +732,51 @@ function checkLastUpdates()
     return true;
   }
 }
+  function OpenLookup_AUS()
+  {
+    OpenLookup("AUS");
+  }
+  function OpenLookup_AF()
+  {
+    OpenLookup("AF");
+  }
+  function OpenLookup_CVS()
+  {
+    OpenLookup("CVS");
+  }
+  function OpenLookup_ST()
+  {
+    OpenLookup("ST");
+  }
+  function OpenLookup_PN()
+  {
+    OpenLookup("PN");
+  }
+  function OpenLookup_LA()
+  {
+    OpenLookup("LA");
+  }
+  function OpenLookup_DT()
+  {
+    OpenLookup("DT");
+  }
+  function OpenLookup_PB()
+  {
+    OpenLookup("PB");
+  }
+  function OpenLookup_TR()
+  {
+    OpenLookup("TR");
+  }
+  function OpenLookup_DSC()
+  {
+    OpenLookup("DSC");
+  }
+  function OpenLookup_PC()
+  {
+    OpenLookup("PC");
+  }
+  function OpenLookup_DI()
+  {
+    OpenLookup("DI");
+  }
