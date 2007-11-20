@@ -47,7 +47,7 @@ public abstract class CombinedBase
                 instatement.append(", ");
             }
 
-            String dbid = databases[i].getID().substring(0,3);
+            String dbid = databases[i].getIndexName().substring(0,3);
             instatement.append("'").append(dbid).append("'");
         }
 
