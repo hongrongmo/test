@@ -68,12 +68,25 @@ public class ExpressionMask
         mask = mask|dbmask;
 	}
 
-	private int getMask(String db)
-	{
-		DatabaseConfig dbconfig = DatabaseConfig.getInstance();
-		int dbmask = (dbconfig.getDatabase(db.substring(0,3).toLowerCase())).getMask();
-		return dbmask;
-	}
+  private int getMask(String db)
+  {
+    DatabaseConfig dbconfig = DatabaseConfig.getInstance();
+    Database adb = null;
+    int dbmask = 0;
 
+    if((db != null) && (db.length() >= 3))
+    {
+        adb = dbconfig.getDatabase(db.substring(0,3).toLowerCase());
+        if(adb != null)
+        {
+          dbmask = adb.getMask();
+        }
+        else
+        {
+          System.out.println("No Database available for db string " + db);
+        }
+    }
+    return dbmask;
+  }
 
 }
