@@ -70,7 +70,7 @@ public class CBNBDatabase extends Database
 	{
 		return "cbn";
 	}
-	
+
     public String getLegendID()
     {
         return "cb";
@@ -93,7 +93,7 @@ public class CBNBDatabase extends Database
 
 	public String getIndexName()
 	{
-		return "bbn";
+		return "cbn";
 	}
 
 /*	public Database getBackfile()

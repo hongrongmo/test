@@ -84,7 +84,7 @@ public class ChemDatabase extends Database
 
 	public String getIndexName()
 	{
-		return "hhm";
+		return "chm";
 	}
 
 /*	public Database getBackfile()
