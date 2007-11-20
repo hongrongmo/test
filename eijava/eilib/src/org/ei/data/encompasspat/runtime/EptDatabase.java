@@ -85,8 +85,8 @@ public class EptDatabase extends Database {
     public String getID() {
         return "ept";
     }
-    
-    public String getLegendID() 
+
+    public String getLegendID()
     {
  	   return "ep";
     }
@@ -110,7 +110,8 @@ public class EptDatabase extends Database {
 
     public String getSingleCharName()
     {
-        return "P";
+        // JM CHanged 'P' to 'M' - Referex uses P and was part of EV2 first
+        return "M";
     }
 
     public int getMask() {
