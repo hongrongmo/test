@@ -524,59 +524,9 @@
 <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/RemoteDbLink_V5.js"/>
 
 <!-- End of table for content below the navigation bar -->
-<script language="Javascript">
-  <xsl:comment>
-  function OpenLookup_AUS()
-  {
-    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","AUS");
-  }
-  function OpenLookup_AF()
-  {
-    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","AF");
-  }
-  function OpenLookup_CVS()
-  {
-    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","CVS");
-  }
-  function OpenLookup_ST()
-  {
-    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","ST");
-  }
-  function OpenLookup_PN()
-  {
-    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","PN");
-  }
-  function OpenLookup_LA()
-  {
-    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","LA");
-  }
-  function OpenLookup_DT()
-  {
-    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","DT");
-  }
-  function OpenLookup_PB()
-  {
-    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","PB");
-  }
-  function OpenLookup_TR()
-  {
-    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","TR");
-  }
-  function OpenLookup_DSC()
-  {
-    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","DSC");
-  }
-  function OpenLookup_PC()
-  {
-    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","PC");
-  }
-  function OpenLookup_DI()
-  {
-    OpenLookup("<xsl:value-of select="$SESSION-ID"/>","DI");
-  }  
+<SCRIPT LANGUAGE="Javascript">
   flipImage(<xsl:value-of select="$SELECTED-DB"/>);
-  // </xsl:comment>
-  </script>
+</SCRIPT>
 </xsl:template>
 
 </xsl:stylesheet>
