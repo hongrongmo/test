@@ -180,7 +180,7 @@
         {
     		entry = (PageEntry)request.getAttribute("PAGE_ENTRY");
     		tQuery = (Query)request.getAttribute("QUERY");
-	}
+		}
         else
         {
 
@@ -494,8 +494,13 @@
         databaseConfig.toXML(credentials, out);
         entry.toXML(out);
 
-        out.write("</PAGE-RESULTS>");
-        out.write("</PAGE>");
+        out.write("</PAGE-RESULTS>");   
+        %>
+		
+        <%@ include file="encFieldsJS.jsp"%>
+        
+        <%
+         out.write("</PAGE>");
         out.write("<!--END-->");
         out.flush();
         if(maintainCache)
