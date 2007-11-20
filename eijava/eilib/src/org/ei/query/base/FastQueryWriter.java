@@ -138,7 +138,7 @@ public class FastQueryWriter
         mappings.setProperty("pfd", "pfd");
         mappings.setProperty("bks", "co");
         mappings.setProperty("bkt", "st");
-        
+
         ///EnCompass fields
         mappings.setProperty("pd", "ad");
         mappings.setProperty("cr", "cr");
@@ -383,7 +383,7 @@ public class FastQueryWriter
                     buffer.write(" (");
                     for(int i=0;i<databases.length;i++)
                     {
-                        String iname = databases[i].getID();
+                        String iname = databases[i].getIndexName();
                         if(i>0)
                         {
                             buffer.write(" OR ");
