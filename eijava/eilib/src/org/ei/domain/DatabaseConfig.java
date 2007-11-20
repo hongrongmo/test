@@ -258,21 +258,6 @@ public final class DatabaseConfig
         if(strID != null)
         {
           adb = (Database) databaseTable.get(strID);
-          if(adb == null)
-          {
-            if(strID.equals("ach")) //PaperChem
-            {
-              adb = (Database) databaseTable.get("pch");
-            }
-            else if(strID.equals("hhm")) // Chimica
-            {
-              adb = (Database) databaseTable.get("chm");
-            }
-            else if(strID.equals("bbn")) // CBNB
-            {
-              adb = (Database) databaseTable.get("cbn");
-            }
-          }
         }
         return adb;
     }
