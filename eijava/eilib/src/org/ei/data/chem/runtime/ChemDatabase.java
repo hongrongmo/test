@@ -12,9 +12,13 @@ import java.sql.*;
 import java.io.*;
 import org.ei.fulldoc.LinkingStrategy;
 import org.ei.data.compendex.runtime.CPXLinkingStrategy;
+import org.ei.domain.sort.SortField;
 
 public class ChemDatabase extends Database
 {
+  public List getSortableFields() {
+    return Arrays.asList(new SortField[]{SortField.RELEVANCE, SortField.AUTHOR, SortField.YEAR, SortField.SOURCE});
+  }
 
 	private static Map searchfield = new HashMap();
 	static
