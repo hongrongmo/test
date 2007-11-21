@@ -2,9 +2,9 @@
     	
 <ENCOMPASS-FIELDS-JS>
 
-    	<![CDATA[
-    	<xsl:comment>
-    	<script language="javascript">
+   <![CDATA[
+   <xsl:comment>
+   <script language="javascript">
     	
 	var mltTableBody;
 	var mltTable;
@@ -373,7 +373,7 @@
 			cell = document.createElement("td");
 			cell.tabIndex =1;
 			cell.style.paddingLeft="5px";				
-			cell.setAttribute("className", "SmBlackText");
+			
 			if (nextNode != "")
 			{
 				var sepimg = document.createElement("img");
@@ -389,16 +389,14 @@
 	    		spaceimg.setAttribute("width", "5");
 	    		cell.appendChild(spaceimg);
 	    	}
-
-			//txtNode = document.createTextNode(nextNode);	
 					   	    
 			cell.style.paddingLeft="5px";				
-			cell.setAttribute("class", "SmBlackText");
-			//cell.appendChild(txtNode);
 			if (nextNode != "")
 			{
 				nextNode = "<img src=\"/engresources/images/separator.gif\">"  + nextNode;
 			}
+			cell.setAttribute("className", "SmBlackText");
+			cell.setAttribute("class", "SmBlackText");
 			cell.innerHTML = nextNode;
 	
 			row.appendChild(cell);
