@@ -17,9 +17,14 @@ import java.util.*;
 import org.ei.domain.*;
 import org.ei.fulldoc.LinkingStrategy;
 import org.ei.data.compendex.runtime.CPXLinkingStrategy;
+import org.ei.domain.sort.SortField;
 
 
 public class EptDatabase extends Database {
+
+    public List getSortableFields() {
+      return Arrays.asList(new SortField[]{SortField.RELEVANCE, SortField.AUTHOR, SortField.YEAR});
+    }
 
     private LinkingStrategy EptLinkingStrategy = new CPXLinkingStrategy();
     private DataDictionary dataDictionary = new EptDataDictionary();
