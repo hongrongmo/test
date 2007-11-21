@@ -3,6 +3,9 @@ package org.ei.data.paper.runtime;
 import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Map;
+import java.util.List;
+import java.util.Arrays;
+
 
 import org.ei.data.compendex.runtime.CPXLinkingStrategy;
 import org.ei.domain.Database;
@@ -11,8 +14,13 @@ import org.ei.domain.FastSearchControl;
 import org.ei.domain.SearchControl;
 import org.ei.domain.SearchField;
 import org.ei.fulldoc.LinkingStrategy;
+import org.ei.domain.sort.SortField;
 
 public class PaperChemDatabase extends Database {
+
+    public List getSortableFields() {
+      return Arrays.asList(new SortField[]{SortField.RELEVANCE, SortField.AUTHOR, SortField.YEAR, SortField.SOURCE, SortField.PUBLISHER});
+    }
 
     private LinkingStrategy PCHLinkingStrategy = new CPXLinkingStrategy();
     private static Map searchfield = new HashMap();
