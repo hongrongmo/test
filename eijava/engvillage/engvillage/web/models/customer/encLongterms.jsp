@@ -1,49 +1,71 @@
-<%@ page language="java" %><%@ page session="false" %><%@ page import="org.ei.data.encompasslit.runtime.EltDocBuilder"%><%@ page import="java.util.*"%><%@ page import="java.net.URLEncoder"%><%@ page import="org.ei.domain.*"%><%@ page import="org.ei.controller.ControllerClient"%><%@ page import="org.ei.session.*"%><%@ page import="org.ei.config.*"%><%@ page import="org.ei.query.base.*"%><%@ page import="org.ei.domain.Searches"%><%@ page import="org.ei.tags.TagBroker"%><%@ page import="org.ei.tags.Tag"%><%@ page import="org.ei.domain.personalization.GlobalLinks"%><%@ page import="org.ei.domain.personalization.SavedSearches"%><%@ page  errorPage="/error/errorPage.jsp"%><%
+<%@ page language="java" %><%@ page session="false" %><%@ page import="org.ei.data.encompasslit.runtime.EltDocBuilder"%><%@ page import="java.util.*"%><%@ page import="java.net.URLEncoder"%><%@ page import="org.ei.domain.*"%><%@ page import="org.ei.controller.ControllerClient"%><%@ page import="org.ei.session.*"%><%@ page import="org.ei.config.*"%><%@ page import="org.ei.query.base.*"%><%@ page import="org.ei.domain.Searches"%><%@ page import="org.ei.tags.TagBroker"%><%@ page import="org.ei.tags.Tag"%><%@ page import="org.ei.domain.personalization.GlobalLinks"%><%@ page import="org.ei.domain.personalization.SavedSearches"%><%@ page  errorPage="/error/errorPage.jsp"%><%@ page import="org.ei.parser.base.*"%>
+<%!
 	ControllerClient client = null;
 	String docId = null;
-	String terms = "SAMPLE;SAMPLE|SAMPLE;SAMPLE";
+	String terms = null;
+	Query queryObject = null;
+	RuntimeProperties eiProps = null;
+    DatabaseConfig databaseConfig = null;
+    int customizedEndYear = (Calendar.getInstance()).get(Calendar.YEAR);
+  	
+  	public void jspInit()
+  	{
+    	try
+    	{
+      		eiProps = ConfigService.getRuntimeProperties();
+      		databaseConfig = DatabaseConfig.getInstance();     		
+      		customizedEndYear = Integer.parseInt(eiProps.getProperty("SYSTEM_ENDYEAR"));    
+    	}
+    	catch(Exception e)
+    	{
+       		e.printStackTrace();
+    	}
+  	}
+%>
+<% 	
+  	ControllerClient client = new ControllerClient(request, response);
 
-	if(request.getParameter("docid") != null)
-	{
-		docId = request.getParameter("docid");
-		//docId = "ept_7ced0110061a9bb5fM7f0119255120119";
-	}
-	else
-	{
-		//docId = "ept_7ced0110061a9bb5fM7f0119255120119";
-		docId ="elt_fabe9fe337d1a1eM445719817173223";
-	}
+	docId = request.getParameter("docid");
 
-	client = new ControllerClient(request, response);
-	UserSession ussession=(UserSession)client.getUserSession();
-	User user=ussession.getUser();
-
-	String customerId=user.getCustomerID().trim();
-	String pUserId = ussession.getProperty("P_USER_ID");
+	//long terms docId = "ept_7ced0110061a9bb5fM7f0119255120119";
+	//docId ="elt_fabe9fe337d1a1eM445719817173223";
 	
-	//EltDocBuilder docBuilder = new EltDocBuilder(database);
-	MultiDatabaseDocBuilder builder = new MultiDatabaseDocBuilder();
+	String searchId = request.getParameter("searchId");
+	String searchType = request.getParameter("searchType");
+	String database = request.getParameter("database");
+	
+	UserSession ussession=(UserSession)client.getUserSession();
+    User user = ussession.getUser();
+    String[] credentials = user.getCartridge();
+    String sessionId = ussession.getID();
+	queryObject = Searches.getSearch(searchId);
+    queryObject.setSearchQueryWriter(new FastQueryWriter());
+    queryObject.setDatabaseConfig(databaseConfig);
+    queryObject.setCredentials(credentials);
+           
+    BooleanQuery bQuery = queryObject.getParseTree();
+    HitHighlighter highlighter = new HitHighlighter(bQuery);
+	MultiDatabaseDocBuilder builder = new MultiDatabaseDocBuilder();  	
 	List docIds = new ArrayList();
 	DatabaseConfig dConfig = DatabaseConfig.getInstance();
     Database databse = dConfig.getDatabase(docId.substring(0, 3));
     DocID did = new DocID(docId, databse);
-	docIds.add(did);
+	docIds.add(did); 
 	List listOfDocIDs = builder.buildPage(docIds,LinkedTermDetail.LINKEDTERM_FORMAT);
-	EIDoc eiDoc = (EIDoc) listOfDocIDs.get(0);
-	terms =(String) eiDoc.getLongTerms();
-
-	System.out.println("result length"+terms.length());
 	
-	if (terms.length() > 500000)
+	if(listOfDocIDs != null && listOfDocIDs.size() > 0)
 	{
-		terms = terms.substring(0,500000);
+		EIDoc eiDoc = (EIDoc) listOfDocIDs.get(0);
+		eiDoc = (EIDoc)highlighter.highlight(eiDoc);
+		terms =(String) eiDoc.getLongTerms();
+		terms =HitHighlightFinisher.addMarkup(terms);
 	}
-	
+
 	if (terms == null || terms.trim().equals(""))
 	{
 		terms = "SAMPLE;SAMPLE|SAMPLE;SAMPLE";
 	}
-		
+								
 	out.write("<PAGE>");
 	out.write("<HEADER/>");
 	out.write("<FOOTER/>");
