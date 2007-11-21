@@ -7,9 +7,13 @@ import org.ei.data.compendex.runtime.CPXLinkingStrategy;
 import java.util.*;
 import java.util.Hashtable;
 import org.ei.fulldoc.LinkingStrategy;
+import org.ei.domain.sort.SortField;
 
 public class EltDatabase extends Database
 {
+  public List getSortableFields() {
+    return Arrays.asList(new SortField[]{SortField.RELEVANCE, SortField.AUTHOR, SortField.YEAR, SortField.SOURCE, SortField.PUBLISHER});
+  }
 
 	private LinkingStrategy EltLinkingStrategy = new CPXLinkingStrategy();
 	private DataDictionary dataDictionary = new EltDataDictionary();
@@ -66,7 +70,7 @@ public class EltDatabase extends Database
    public String getID() {
 	   return "elt";
    }
-     
+
    public String getLegendID() {
 	   return "el";
    }
