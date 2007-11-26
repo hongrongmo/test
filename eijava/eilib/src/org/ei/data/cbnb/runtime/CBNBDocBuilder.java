@@ -52,7 +52,7 @@ public class CBNBDocBuilder implements DocumentBuilder {
 
     // jam 12/30/2002
     // New Index - field change from AN to EX
-    private static String queryXMLCitation = "select M_ID,ABN,ATL,OTL,FJL,VOL,ISS,PBD,PAG,PBR,PAD,AVL,ISN,IBN,CDN,LAN,DOC,SCO,ABS,SRC,REG,EBT,SCT,SCC,CIN,CYM,SIC,GIC,GID from cbn_master where M_ID IN ";
+    private static String queryXMLCitation = "select M_ID,ABN,ATL,OTL,FJL,VOL,ISS,PBD,PAG,PBR,PAD,AVL,ISN,IBN,CDN,LAN,DOC,SCO,ABS,SRC,REG,EBT,SCT,SCC,CIN,CYM,SIC,GIC,GID,LOAD_NUMBER from cbn_master where M_ID IN ";
     private static String queryDetailed = "select M_ID,ABN,ATL,OTL,FJL,VOL,ISS,PBD,PAG,PBR,PAD,AVL,ISN,IBN,CDN,LAN,DOC,SCO,ABS,SRC,REG,EBT,SCT,SCC,CIN,CYM,SIC,GIC,GID from cbn_master where M_ID IN ";
 
     public DocumentBuilder newInstance(Database database) {
