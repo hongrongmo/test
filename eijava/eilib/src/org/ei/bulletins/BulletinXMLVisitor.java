@@ -8,6 +8,7 @@ import org.ei.util.*;
 public class BulletinXMLVisitor implements BulletinVisitor {
 
     private Writer out;
+    private BulletinSecurity bSecurity;
     private String[] cartridges;
     boolean showHtml = false;
     boolean showPdf = false;
@@ -15,9 +16,11 @@ public class BulletinXMLVisitor implements BulletinVisitor {
     public BulletinXMLVisitor(Writer out, String[] cartridges) {
         this.out = out;
         this.cartridges = cartridges;
+        bSecurity = new BulletinSecurity();
     }
     public BulletinXMLVisitor(Writer out) {
         this.out = out;
+        bSecurity = new BulletinSecurity();
     }
     public boolean displayBulletin(String category, String db, String id) {
 
@@ -50,6 +53,9 @@ public class BulletinXMLVisitor implements BulletinVisitor {
      */
     public void visitWith(Bulletin bulletin) throws Exception
     {
+
+		 String securityCode = bSecurity.getKey();
+    	 String time = bSecurity.getTime();
         if (displayBulletin(bulletin.getCategory(), bulletin.getDatabase(), bulletin.getId())) {
 
             out.write("<BL");
@@ -59,19 +65,26 @@ public class BulletinXMLVisitor implements BulletinVisitor {
                 out.write(" FORMAT=\"");
                 out.write(Integer.toString(bulletin.getFormat()));
                 out.write("\"");
-
             }
             out.write(">");
             out.write("<ID>");
-
             out.write(bulletin.getId());
             out.write("</ID>");
-
-            if (bulletin.getCategory() != null) {
-
+			out.write("<YR>");
+			out.write(bulletin.getYear());
+            out.write("</YR>");
+			out.write("<DB>");
+				out.write(bulletin.getDatabase());
+            out.write("</DB>");
+            if (bulletin.getCategory() != null)
+            {
                 out.write("<CY><![CDATA[");
                 out.write(BulletinQuery.getDisplayCategory(bulletin.getCategory()));
                 out.write("]]></CY>");
+            //CYD is used to build the directory on the file system
+			    out.write("<CYD><![CDATA[");
+			    out.write(bulletin.getCategory());
+			    out.write("]]></CYD>");
             }
 
             out.write("<PD><![CDATA[");
@@ -89,9 +102,9 @@ public class BulletinXMLVisitor implements BulletinVisitor {
             out.write("<ZP><![CDATA[");
             out.write(StringUtil.notNull(bulletin.getZipFileName()));
             out.write("]]></ZP>");
-
+            out.write("<SECURITYCODE>"+securityCode+"</SECURITYCODE>");
+			out.write("<TIME>"+time+"</TIME>");
             out.write("</BL>");
-
         }
     }
     public String getCartridge(String category, String db) {
@@ -149,7 +162,6 @@ public class BulletinXMLVisitor implements BulletinVisitor {
         }
 
         return cartridge;
-
     }
 
 }
