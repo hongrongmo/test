@@ -981,6 +981,7 @@ function calStartYear(selectedDbMask, sYear)
         var useupStartYear = sYear.substr(sYear.indexOf("UST")+3,4);
         dYear = (dYear > useupStartYear) ? useupStartYear : dYear;
     }
+    
     if((selectedDbMask != 0) && ((selectedDbMask & CBF) == CBF))
     {
         var cbfStartYear = sYear.substr(sYear.indexOf("ZST")+3,4);
@@ -996,46 +997,53 @@ function calStartYear(selectedDbMask, sYear)
         var insStartYear = sYear.substr(sYear.indexOf("IST")+3,4);
         dYear = (dYear > insStartYear) ? insStartYear : dYear;
     }
+    
     if((selectedDbMask != 0) && ((selectedDbMask & NTIS) == NTIS))
     {
         var ntiStartYear = sYear.substr(sYear.indexOf("NST")+3,4);
         dYear = (dYear > ntiStartYear) ? ntiStartYear : dYear;
     }
+    
     if((selectedDbMask != 0) && ((selectedDbMask & GEO) == GEO))
     {
         var geoStartYear = sYear.substr(sYear.indexOf("GST")+3,4);
         dYear = (dYear > geoStartYear) ? geoStartYear : dYear;
     }
+    
     if((selectedDbMask != 0) && ((selectedDbMask & REFEREX) == REFEREX))
     {
         var pagStartYear = sYear.substr(sYear.indexOf("PST")+3,4);
         dYear = (dYear > pagStartYear) ? pagStartYear : dYear;
     }
+    
     if((selectedDbMask != 0) && ((selectedDbMask & PCH) == PCH))
     {
         var pchStartYear = sYear.substr(sYear.indexOf("AST")+3,4);
         dYear = (dYear > pchStartYear) ? pchStartYear : dYear;
     }
+    
     if (selectedDbMask != 0 && ((selectedDbMask & CHM) == CHM))
     {
         var chmStartYear = sYear.substr(sYear.indexOf("HST") + 3, 4);
         dYear = (dYear > chmStartYear) ? chmStartYear : dYear;
     }
+    
     if (selectedDbMask != 0 && ((selectedDbMask & CBN) == CBN))
     {
         var cbnStartYear = sYear.substr(sYear.indexOf("BST") + 3, 4);
         dYear = (dYear > cbnStartYear) ? cbnStartYear : dYear;
     }
+    
     if (selectedDbMask != 0 && ((selectedDbMask & ELT) == ELT))
     {
-
         var eltStartYear = sYear.substr(sYear.indexOf("EST") + 3, 4);
         dYear = (dYear > eltStartYear) ? eltStartYear : dYear;
 
     }
+    
     if (selectedDbMask != 0 && ((selectedDbMask & EPT) == EPT))
     {
-        var eptStartYear = sYear.substr(sYear.indexOf("EST") + 3, 4);
+        var eptStartYear = sYear.substr(sYear.indexOf("MST") + 3, 4);
         dYear = (dYear > eptStartYear) ? eptStartYear : dYear;
 
     }
@@ -1062,73 +1070,77 @@ function calDisplayYear(selectedDbMask, sYear)
             var cpxStartYear = sYear.substr(sYear.indexOf("CSY")+3,4);
             dYear = (dYear > cpxStartYear) ? cpxStartYear : dYear;
         }
+        
         if((selectedDbMask != 0) && ((selectedDbMask & INS) == INS))
         {
             var insStartYear = sYear.substr(sYear.indexOf("ISY")+3,4);
             dYear = (dYear > insStartYear) ? insStartYear : dYear;
         }
+        
         if((selectedDbMask != 0) && ((selectedDbMask & CBF) == CBF))
         {
             var cbfStartYear = sYear.substr(sYear.indexOf("ZSY")+3,4);
             dYear = (dYear > cbfStartYear) ? cbfStartYear : dYear;
         }
+        
         if((selectedDbMask != 0) && ((selectedDbMask & NTIS) == NTIS))
         {
             var ntiStartYear = sYear.substr(sYear.indexOf("NSY")+3,4);
             dYear = (dYear > ntiStartYear) ? ntiStartYear : dYear;
         }
+        
         if((selectedDbMask != 0) && ((selectedDbMask & GEO) == GEO))
         {
             var geoStartYear = sYear.substr(sYear.indexOf("GSY")+3,4);
             dYear = (dYear > geoStartYear) ? geoStartYear : dYear;
         }
+        
         if((selectedDbMask != 0) && ((selectedDbMask & PCH) == PCH))
-    {
-       var pchStartYear = sYear.substr(sYear.indexOf("HSY")+3,4);
-       dYear = (dYear > pchStartYear) ? pchStartYear : dYear;
+    	{
+       		var pchStartYear = sYear.substr(sYear.indexOf("ASY")+3,4);
+       		dYear = (dYear > pchStartYear) ? pchStartYear : dYear;
         }
+        
         if((selectedDbMask != 0) && ((selectedDbMask & EU_PATENTS) == EU_PATENTS))
         {
             var eupStartYear = sYear.substr(sYear.indexOf("ESY")+3,4);
             dYear = (dYear > eupStartYear) ? eupStartYear : dYear;
         }
+        
         if((selectedDbMask != 0) && ((selectedDbMask & US_PATENTS) == US_PATENTS))
         {
             var uspStartYear = sYear.substr(sYear.indexOf("USY")+3,4);
             dYear = (dYear > uspStartYear) ? uspStartYear : dYear;
         }
+        
         if((selectedDbMask != 0) && ((selectedDbMask & REFEREX) == REFEREX))
         {
             var uspStartYear = sYear.substr(sYear.indexOf("PSY")+3,4);
             dYear = (dYear > uspStartYear) ? uspStartYear : dYear;
         }
-    if (selectedDbMask != 0 && ((selectedDbMask & PCH) == PCH))
-    {
-        var pchStartYear = sYear.substr(sYear.indexOf("AST") + 3, 4);
-        dYear = (dYear > pchStartYear) ? pchStartYear : dYear;
-    }
-    if (selectedDbMask != 0 && ((selectedDbMask & CHM) == CHM))
-    {
-        var chmStartYear = sYear.substr(sYear.indexOf("HST") + 3, 4);
-        dYear = (dYear > chmStartYear) ? chmStartYear : dYear;
-    }
-    if (selectedDbMask != 0 && ((selectedDbMask & CBN) == CBN))
-    {
-       var cbnStartYear = sYear.substr(sYear.indexOf("BST") + 3, 4);
-       dYear = (dYear > cbnStartYear) ? cbnStartYear : dYear;
-    }
-    if (selectedDbMask != 0 && ((selectedDbMask & ELT) == ELT))
-    {
-       var eltStartYear = sYear.substr(sYear.indexOf("LST") + 3, 4);
-       dYear = (dYear > eltStartYear) ? eltStartYear : dYear;
-       dYear= 1990;
-    }
-    if (selectedDbMask != 0 && ((selectedDbMask & EPT) == EPT))
-    {
-       var eptStartYear = sYear.substr(sYear.indexOf("TST") + 3, 4);
-       dYear = (dYear > eptStartYear) ? eptStartYear : dYear;
-       dYear= 1990;
-    }
+   
+    	if (selectedDbMask != 0 && ((selectedDbMask & CHM) == CHM))
+    	{
+        	var chmStartYear = sYear.substr(sYear.indexOf("HSY") + 3, 4);
+        	dYear = (dYear > chmStartYear) ? chmStartYear : dYear;
+    	}
+    	if (selectedDbMask != 0 && ((selectedDbMask & CBN) == CBN))
+    	{
+       		var cbnStartYear = sYear.substr(sYear.indexOf("BSY") + 3, 4);
+       		dYear = (dYear > cbnStartYear) ? cbnStartYear : dYear;
+    	}
+    	if (selectedDbMask != 0 && ((selectedDbMask & ELT) == ELT))
+    	{
+       		var eltStartYear = sYear.substr(sYear.indexOf("LSY") + 3, 4);
+       		dYear = (dYear > eltStartYear) ? eltStartYear : dYear;
+       		dYear= 1990;
+    	}
+    	if (selectedDbMask != 0 && ((selectedDbMask & EPT) == EPT))
+    	{
+       		var eptStartYear = sYear.substr(sYear.indexOf("MSY") + 3, 4);
+       		dYear = (dYear > eptStartYear) ? eptStartYear : dYear;
+       		dYear= 1990;
+    	}
     }
     else
     {
