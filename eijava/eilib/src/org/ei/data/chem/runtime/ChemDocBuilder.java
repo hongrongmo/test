@@ -43,158 +43,6 @@ public class ChemDocBuilder implements DocumentBuilder {
 
     private static final Key[] XML_KEYS = { Keys.ISSN , Keys.NO_SO, Keys.PUBLICATION_YEAR, Keys.AUTHORS, Keys.DOCID, Keys.SOURCE, Keys.VOLUME, Keys.AUTHOR_AFFS , Keys.PROVIDER , Keys.COPYRIGHT_TEXT , Keys.DOI , Keys.TITLE , Keys.LANGUAGE , Keys.PAGE_RANGE ,Keys.COPYRIGHT , Keys.ISSUE , Keys.ACCESSION_NUMBER , Keys.CONTROLLED_TERMS};
 
-
-/*static {
-        m_labels.put("AN", "Accession number");
-        m_labels.put("TI", "Title");
-        m_labels.put("TT", "Translated title");
-        m_labels.put("AUS", "Authors");
-        m_labels.put("EDS", "Editors");
-        m_labels.put("IVS", "Inventors");
-        m_labels.put("PAD", "Patent application date");
-        m_labels.put("PID", "Patent issue date");
-        m_labels.put("PAS", "Assignee");
-        m_labels.put("PAP", "Application number");
-        m_labels.put("PRIORN", "Priority number");
-        m_labels.put("PAN", "Patent number");
-        m_labels.put("PFD", "Filing date");
-        m_labels.put("PPD", "Publication date");
-        m_labels.put("CAUS", "Corresponding Authors");
-        m_labels.put("AF", "Author affiliation");
-        m_labels.put("EF", "Editor affiliation");
-        m_labels.put("ST", "Serial title");
-        m_labels.put("SE", "Abbreviated serial title");
-        m_labels.put("VO", "Volume/Issue");
-        m_labels.put("VOM", "Volume");
-        m_labels.put("IS", "Issue");
-        m_labels.put("MT", "Monograph title");
-        m_labels.put("IORG", "Issuing organization");
-        m_labels.put("RN", "Report number");
-        m_labels.put("SD", "Issue date");
-        m_labels.put("PD_YR", "Publication date");
-        m_labels.put("YR", "Publication year");
-        m_labels.put("PR", "Paper number");
-        m_labels.put("PA", "Part number");
-        m_labels.put("PP", "Pages");
-        m_labels.put("SO", "Original source field");
-        m_labels.put("LA", "Language");
-        m_labels.put("SN", "ISSN");
-        m_labels.put("CN", "CODEN");
-        m_labels.put("BN", "ISBN");
-        m_labels.put("DT", "Document type");
-        m_labels.put("COPA", "Country of application");
-        m_labels.put("CF", "Conference name");
-        m_labels.put("MD", "Conference date");
-        m_labels.put("ML", "Conference location");
-        m_labels.put("CC", "Conference code");
-        m_labels.put("SP", "Sponsor");
-        m_labels.put("PN", "Publisher");
-        m_labels.put("PLA", "Place of publication");
-        m_labels.put("PL", "Country of publication");
-        m_labels.put("FTTJ", "Translation serial title");
-        m_labels.put("TTJ", "Translation abbreviated serial title");
-        m_labels.put("VOLT", "Translation volume");
-        m_labels.put("ISST", "Translation issue");
-        m_labels.put("TDATE", "Translation publication date");
-        m_labels.put("IPNT", "Translation pages");
-        m_labels.put("SNT", "Translation ISSN");
-        m_labels.put("CNT", "Translation CODEN");
-        m_labels.put("CPUBT", "Translation country of publication");
-        m_labels.put("MI", "Material Identity Number");
-        m_labels.put("AB", "Abstract");
-        m_labels.put("AT", "Abstract type");
-        m_labels.put("CSESS", "Session name number");
-        m_labels.put("CLAIM", "Number of claims");
-        m_labels.put("NOFIG", "Number of figures");
-        m_labels.put("NOTAB", "Number of tables");
-        m_labels.put("NR", "Number of references");
-        m_labels.put("CVS", "Controlled terms");
-        m_labels.put("FLS", "Uncontrolled terms");
-        //    m_labels.put("NDI","Numeric Classification Codes");
-        m_labels.put("AOI", "Astronomical object indexing");
-        m_labels.put("CI", "Chemical indexing");
-        m_labels.put("DISPS", "Discipline");
-        m_labels.put("SPECN", "Specific Names");
-        m_labels.put("CRS", "CAS registry number(s)");
-        m_labels.put("CLS", "Numeric Class. Code");
-        m_labels.put("DB", "Database");
-
-    }
-    static {
-        m_order.add("AN");
-        m_order.add("TI");
-        m_order.add("TT");
-        m_order.add("AUS");
-        m_order.add("EDS");
-        m_order.add("AF");
-        m_order.add("EF");
-        m_order.add("IVS");
-        m_order.add("PAD");
-        m_order.add("PID");
-        m_order.add("PAS");
-        m_order.add("PAP");
-        m_order.add("PRIORN");
-        m_order.add("PAN");
-        m_order.add("PFD");
-        m_order.add("PPD");
-        m_order.add("CAUS");
-        m_order.add("ST");
-        m_order.add("SE");
-        m_order.add("VO");
-        m_order.add("VOM");
-        m_order.add("IS");
-        m_order.add("MT");
-        m_order.add("IORG");
-        m_order.add("RN");
-        m_order.add("SD");
-        m_order.add("PD_YR");
-        m_order.add("YR");
-        m_order.add("PR");
-        m_order.add("PA");
-        m_order.add("PP");
-        m_order.add("SO");
-        m_order.add("LA");
-        m_order.add("SN");
-        m_order.add("CN");
-        m_order.add("BN");
-        m_order.add("DT");
-        m_order.add("COPA");
-        m_order.add("CF");
-        m_order.add("MD");
-        m_order.add("ML");
-        m_order.add("CSESS");
-        m_order.add("CC");
-        m_order.add("SP");
-        m_order.add("PN");
-        m_order.add("PLA");
-        m_order.add("PL");
-        m_order.add("FTTJ");
-        m_order.add("TTJ");
-        m_order.add("VOLT");
-        m_order.add("ISST");
-        m_order.add("TDATE");
-        m_order.add("IPNT");
-        m_order.add("SNT");
-        m_order.add("CNT");
-        m_order.add("CPUBT");
-        m_order.add("MI");
-        m_order.add("AB");
-        m_order.add("AT");
-        m_order.add("CLAIM");
-        m_order.add("NOFIG");
-        m_order.add("NOTAB");
-        m_order.add("NR");
-        m_order.add("CVS");
-        m_order.add("FLS");
-        //    m_order.add("NDI");
-        m_order.add("AOI");
-        m_order.add("CI");
-        m_order.add("DISPS");
-        m_order.add("SPECN");
-        m_order.add("CRS");
-        m_order.add("CLS");
-        m_order.add("DB");
-*/
     // document builder interface methods which are called by EIDoc classes
     // for building detailed XML views of documents
 
@@ -206,7 +54,7 @@ public class ChemDocBuilder implements DocumentBuilder {
     private static String queryAbstracts = "select M_ID,TIE,TIF,AUT,ADR,STI,VIP,PYR,ISN,ISS,PAG,VOL,COD,REF,LNA,ABS,CRD,CTM,DOI from chm_master where M_ID IN ";
 
     private static String queryDetailed = "select M_ID,CHN,TIE,TIF,AUT,ADR,STI,VIP,PYR,ISN,ISS,PAG,VOL,ITD,COD,REF,LNA,STD,ABS,CRD,CTM,CFL,TRC,DOI from chm_master where M_ID IN ";
-    private static String queryXMLCitation = "select M_ID,CHN,TIE,TIF,AUT,ADR,STI,VIP,PYR,ISN,ISS,PAG,VOL,ITD,COD,REF,LNA,STD,ABS,CRD,CTM,CFL,TRC,DOI from chm_master where M_ID IN ";
+    private static String queryXMLCitation = "select M_ID,CHN,TIE,TIF,AUT,ADR,STI,VIP,PYR,ISN,ISS,PAG,VOL,ITD,COD,REF,LNA,STD,ABS,CRD,CTM,CFL,TRC,DOI,LOAD_NUMBER from chm_master where M_ID IN ";
 
     // jam 12/30/2002
     // New Index - field change from AN to EX
@@ -881,7 +729,7 @@ public class ChemDocBuilder implements DocumentBuilder {
 
                 if (rset.getString("STI") != null) {
 
-					ht.put(Keys.SOURCE, new XMLWrapper(Keys.SOURCE, StringUtil.replaceNullWithEmptyString(rset.getString("STI"))));
+					          ht.put(Keys.SOURCE, new XMLWrapper(Keys.SOURCE, StringUtil.replaceNullWithEmptyString(rset.getString("STI"))));
 
                     if ((rset.getString("ISS") != null) && (rset.getString("VOL") != null)) {
 
@@ -903,10 +751,10 @@ public class ChemDocBuilder implements DocumentBuilder {
                     	   new XMLWrapper(Keys.DOI, rset.getString("DOI")));
                 }
                 EIDoc eiDoc = new EIDoc(did, ht, Citation.CITATION_FORMAT);
-				eiDoc.exportLabels(false);
-				eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
-				eiDoc.setOutputKeys(CITATION_KEYS);
-				list.add(eiDoc);
+        				eiDoc.exportLabels(false);
+        				eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
+        				eiDoc.setOutputKeys(CITATION_KEYS);
+        				list.add(eiDoc);
                 count++;
             }
 
@@ -945,181 +793,189 @@ public class ChemDocBuilder implements DocumentBuilder {
         return list;
     }
 
+  private List loadXMLCitations(List listOfDocIDs)
+    throws Exception
+  {
+    Hashtable oidTable = getDocIDTable(listOfDocIDs);
+    Perl5Util perl = new Perl5Util();
+    List list=new ArrayList();
+    int count=0;
+    Connection con=null;
+    Statement stmt=null;
+    ResultSet rset=null;
+    ConnectionBroker broker=null;
+    String INString=buildINString(listOfDocIDs);
+    try
+    {
+      broker=ConnectionBroker.getInstance();
+      con=broker.getConnection(DatabaseConfig.SEARCH_POOL);
+      stmt = con.createStatement();
+      rset=stmt.executeQuery(queryXMLCitation+INString );
+      while(rset.next())
+      {
+          ElementDataMap ht = new ElementDataMap();
+          DocID did = (DocID) oidTable.get(rset.getString("M_ID"));
+          ht.put(Keys.DOCID, did);
+
+          ht.put(Keys.PROVIDER, new XMLWrapper(Keys.PROVIDER, PROVIDER_TEXT));
+
+          ht.put(Keys.COPYRIGHT,new XMLWrapper(Keys.COPYRIGHT, ChemDocBuilder.CHEM_HTML_COPYRIGHT));
+          ht.put(Keys.COPYRIGHT_TEXT, new XMLWrapper(Keys.COPYRIGHT_TEXT, ChemDocBuilder.CHEM_TEXT_COPYRIGHT));
 
 
- /**
-    *   This method basically takes list Of DocIDs as Parameter
-    *   This list of Docids use buildINString() method to build
-    *   the required IN clause String.This is appended to sql String
-    *   The resultSet so obtained by executing the sql,is iterated,
-    *   to build EIDoc objects,which are then added to EIdocumentList
-    *   @param listOfDocIDs
-    *   @return EIDocumentList
-    *   @exception Exception
-    */
-	private List loadXMLCitations(List listOfDocIDs)
-		throws Exception
-	{
-		Hashtable oidTable = getDocIDTable(listOfDocIDs);
-		Perl5Util perl = new Perl5Util();
-		List list=new ArrayList();
-		int count=0;
-		Connection con=null;
-		Statement stmt=null;
-		ResultSet rset=null;
-		ConnectionBroker broker=null;
-		String INString=buildINString(listOfDocIDs);
-		try
-		{
-			broker=ConnectionBroker.getInstance();
-			con=broker.getConnection(DatabaseConfig.SEARCH_POOL);
-			stmt = con.createStatement();
-			rset=stmt.executeQuery(queryXMLCitation+INString );
-			while(rset.next())
-			{
-                ElementDataMap ht = new ElementDataMap();
-				DocID did = (DocID) oidTable.get(rset.getString("M_ID"));
-			    ht.put(Keys.DOCID, did);
+          if (rset.getString("STI") != null)
+          {
+            ht.put(Keys.SERIAL_TITLE, new XMLWrapper(Keys.SERIAL_TITLE, rset.getString("STI")));
+          }
 
-                ht.put(Keys.PROVIDER,
-                       new XMLWrapper(Keys.PROVIDER, PROVIDER_TEXT));
+          if (rset.getString("PYR") != null)
+          {
+            ht.put(Keys.PUBLICATION_YEAR, new Year(rset.getString("PYR"), perl));
+          }
 
-				ht.put(Keys.COPYRIGHT,new XMLWrapper(Keys.COPYRIGHT, ChemDocBuilder.CHEM_HTML_COPYRIGHT));
-			    ht.put(Keys.COPYRIGHT_TEXT, new XMLWrapper(Keys.COPYRIGHT_TEXT, ChemDocBuilder.CHEM_TEXT_COPYRIGHT));
+          String strTitle = StringUtil.EMPTY_STRING;
+          if ((rset.getString("TIE") != null) && (rset.getString("TIF") != null))
+          {
+            strTitle = StringUtil.replaceNullWithEmptyString(rset.getString("TIF"));
+            strTitle = strTitle.concat(" (").concat(StringUtil.replaceNullWithEmptyString(rset.getString("TIE"))).concat(")");
+          }
+          if (rset.getString("TIE") != null)
+          {
+            strTitle = StringUtil.replaceNullWithEmptyString(rset.getString("TIE")).concat(strTitle);
+          }
+          else if (rset.getString("TIF") != null)
+          {
+            strTitle = StringUtil.replaceNullWithEmptyString(rset.getString("TIF")).concat(strTitle);
+          }
+
+          ht.put(Keys.TITLE, new XMLWrapper(Keys.TITLE, strTitle));
+          strTitle = null;
+          // AN
+          if (rset.getString("CHN") != null)
+          {
+            ht.put(Keys.ACCESSION_NUMBER, new XMLWrapper(Keys.ACCESSION_NUMBER, rset.getString("CHN")));
+          }
 
 
-                if (rset.getString("STI") != null) {
- 					ht.put(Keys.SERIAL_TITLE, new XMLWrapper(Keys.SERIAL_TITLE, rset.getString("STI")));
-                }
+          if (rset.getString("STI") != null)
+          {
 
-                if (rset.getString("PYR") != null) {
-                    ht.put(Keys.PUBLICATION_YEAR, new Year(rset.getString("PYR"), perl));
-                }
+            if ((rset.getString("ISS") != null) && (rset.getString("VOL") != null))
+            {
+              ht.put(Keys.VOLISSUE, new XMLWrapper(Keys.VOLISSUE ,rset.getString("VOL") + ", " + rset.getString("ISS")));
 
-                String strTitle = StringUtil.EMPTY_STRING;
-                if ((rset.getString("TIE") != null) && (rset.getString("TIF") != null)) {
-                    strTitle = StringUtil.replaceNullWithEmptyString(rset.getString("TIF"));
-                    strTitle = strTitle.concat(" (").concat(StringUtil.replaceNullWithEmptyString(rset.getString("TIE"))).concat(")");
-                }
-                if (rset.getString("TIE") != null) {
-                    strTitle = StringUtil.replaceNullWithEmptyString(rset.getString("TIE")).concat(strTitle);
-                }
-                else if (rset.getString("TIF") != null) {
-                    strTitle = StringUtil.replaceNullWithEmptyString(rset.getString("TIF")).concat(strTitle);
-                }
-
-                ht.put(Keys.TITLE, new XMLWrapper(Keys.TITLE, strTitle));
-                strTitle = null;
-                // AN
-                if (rset.getString("CHN") != null) {
-                	ht.put(Keys.ACCESSION_NUMBER, new XMLWrapper(Keys.ACCESSION_NUMBER, rset.getString("CHN")));
-                }
-
-
-                   if (rset.getString("STI") != null) {
-					  if ((rset.getString("ISS") != null) && (rset.getString("VOL") != null)) {
-						  ht.put(Keys.VOLISSUE, new XMLWrapper(Keys.VOLISSUE ,rset.getString("VOL") + ", " + rset.getString("ISS")));
-
-						  ht.put(Keys.VOLUME, new Volume(Keys.VOLUME, StringUtil.replaceNullWithEmptyString(rset.getString("VOL")), perl));
-						  ht.put(Keys.ISSUE, new Issue(StringUtil.replaceNullWithEmptyString(rset.getString("ISS")) , perl));
-					  }
-
-					ht.put(Keys.SOURCE, new XMLWrapper(Keys.SOURCE, StringUtil.replaceNullWithEmptyString(rset.getString("STI"))));
-
-   					if (rset.getString("PAG") != null) {
-	                    ht.put(Keys.p_PAGE_RANGE,new XMLWrapper(Keys.p_PAGE_RANGE , StringUtil.replaceNullWithEmptyString(rset.getString("PAG"))));
-                    }
-                }
-                else {
-                    ht.put(Keys.NO_SO, new XMLWrapper(Keys.NO_SO, "NO_SO"));
-                }
-
-                String strAf = StringUtil.EMPTY_STRING;
-                if (rset.getString("AUT") != null) {
-					Contributors authors = new Contributors(Keys.AUTHORS, getContributors(rset.getString("AUT"), Keys.AUTHORS));
-
-	                if (rset.getString("ADR") != null)
-	                {
-						Affiliation affil = new Affiliation(Keys.AUTHOR_AFFS, rset.getString("ADR"));
-						authors.setFirstAffiliation(affil);
-						ht.put(Keys.AUTHOR_AFFS, new Affiliations(Keys.AUTHOR_AFFS, affil));
-					}
-
-					ht.put(Keys.AUTHORS, authors);
-
-                }
-
-         		if (rset.getString("PYR") != null) {
-                    ht.put(Keys.PUBLICATION_YEAR, new Year(rset.getString("PYR"), perl));
-                }
-                if (rset.getString("PAG") != null) {
-			        ht.put(Keys.PAGE_RANGE, new PageRange(StringUtil.replaceNullWithEmptyString(rset.getString("PAG")), perl));
-                }
-
-                if (rset.getString("CTM") != null) {
-					ht.put(Keys.CONTROLLED_TERMS,new XMLMultiWrapper2(CHEM_CONTROLLED_TERMS,setCVS(rset.getString("CTM"))));
-                }
-
-                //ISN
-                if (rset.getString("ISN") != null) {
-                	ht.put(Keys.ISSN,new ISSN(StringUtil.replaceNullWithEmptyString(rset.getString("ISN"))));
-                }
-
-                if ((rset.getString("LAN") != null) && (!rset.getString("LAN").equalsIgnoreCase("ENGLISH"))) {
-                    ht.put(Keys.LANGUAGE, new XMLWrapper(Keys.LANGUAGE , StringUtil.replaceNullWithEmptyString(rset.getString("LAN"))));
-                }
-
-                if (rset.getString("CDN") != null) {
-					ht.put(Keys.CODEN,new XMLWrapper(Keys.CODEN,StringUtil.replaceNullWithEmptyString(rset.getString("CDN"))));
-                }
-                //DO
-                if(rset.getString("DOI") != null)
-                {
-                    ht.put(Keys.DOI,
-                    	   new XMLWrapper(Keys.DOI, rset.getString("DOI")));
-                }
-				EIDoc eiDoc = new EIDoc(did, ht, Citation.XMLCITATION_FORMAT);
-				eiDoc.exportLabels(false);
-				eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
-				eiDoc.setOutputKeys(XML_KEYS);
-				list.add(eiDoc);
-				count++;
+              ht.put(Keys.VOLUME, new Volume(Keys.VOLUME, StringUtil.replaceNullWithEmptyString(rset.getString("VOL")), perl));
+              ht.put(Keys.ISSUE, new Issue(StringUtil.replaceNullWithEmptyString(rset.getString("ISS")) , perl));
             }
 
-        }
-        finally {
-            if (rset != null) {
-                try {
-                    rset.close();
-                    rset = null;
-                }
-                catch (SQLException e1) {
-                    e1.printStackTrace();
-                }
+            ht.put(Keys.SOURCE, new XMLWrapper(Keys.SOURCE, StringUtil.replaceNullWithEmptyString(rset.getString("STI"))));
+
+            if (rset.getString("PAG") != null)
+            {
+              ht.put(Keys.p_PAGE_RANGE,new XMLWrapper(Keys.p_PAGE_RANGE , StringUtil.replaceNullWithEmptyString(rset.getString("PAG"))));
+            }
+          }
+          else
+          {
+            ht.put(Keys.NO_SO, new XMLWrapper(Keys.NO_SO, "NO_SO"));
+          }
+
+          String strAf = StringUtil.EMPTY_STRING;
+          if (rset.getString("AUT") != null)
+          {
+            Contributors authors = new Contributors(Keys.AUTHORS, getContributors(rset.getString("AUT"), Keys.AUTHORS));
+
+            if (rset.getString("ADR") != null)
+            {
+              Affiliation affil = new Affiliation(Keys.AUTHOR_AFFS, rset.getString("ADR"));
+              authors.setFirstAffiliation(affil);
+              ht.put(Keys.AUTHOR_AFFS, new Affiliations(Keys.AUTHOR_AFFS, affil));
             }
 
-            if (stmt != null) {
-                try {
-                    stmt.close();
-                    stmt = null;
-                }
-                catch (SQLException sqle) {
-                    sqle.printStackTrace();
-                }
-            }
+            ht.put(Keys.AUTHORS, authors);
 
-            if (con != null) {
-                try {
-                    broker.replaceConnection(con, DatabaseConfig.SEARCH_POOL);
-                }
-                catch (ConnectionPoolException cpe) {
-                    cpe.printStackTrace();
-                }
+          }
+
+          if(rset.getString("PYR") != null)
+          {
+            ht.put(Keys.PUBLICATION_YEAR, new Year(rset.getString("PYR"), perl));
+          }
+          if(rset.getString("PAG") != null)
+          {
+            ht.put(Keys.PAGE_RANGE, new PageRange(StringUtil.replaceNullWithEmptyString(rset.getString("PAG")), perl));
+          }
+
+          if(rset.getString("CTM") != null)
+          {
+            ht.put(Keys.CONTROLLED_TERMS,new XMLMultiWrapper2(CHEM_CONTROLLED_TERMS,setCVS(rset.getString("CTM"))));
+          }
+
+          //ISN
+          if(rset.getString("ISN") != null)
+          {
+            ht.put(Keys.ISSN,new ISSN(StringUtil.replaceNullWithEmptyString(rset.getString("ISN"))));
+          }
+
+          if((rset.getString("LNA") != null) && (!rset.getString("LNA").equalsIgnoreCase("ENGLISH")))
+          {
+            ht.put(Keys.LANGUAGE, new XMLWrapper(Keys.LANGUAGE , StringUtil.replaceNullWithEmptyString(rset.getString("LNA"))));
+          }
+
+          if(rset.getString("COD") != null)
+          {
+            ht.put(Keys.CODEN,new XMLWrapper(Keys.CODEN,StringUtil.replaceNullWithEmptyString(rset.getString("COD"))));
+          }
+          //DO
+          if(rset.getString("DOI") != null)
+          {
+            ht.put(Keys.DOI, new XMLWrapper(Keys.DOI, rset.getString("DOI")));
+          }
+          EIDoc eiDoc = new EIDoc(did, ht, Citation.XMLCITATION_FORMAT);
+          eiDoc.exportLabels(false);
+          eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
+          eiDoc.setOutputKeys(XML_KEYS);
+          list.add(eiDoc);
+          count++;
+      } // while
+
+    } // try
+    finally
+    {
+        if (rset != null)
+        {
+            try {
+                rset.close();
+                rset = null;
+            }
+            catch (SQLException e1) {
+                e1.printStackTrace();
             }
         }
 
-        return list;
+        if (stmt != null)
+        {
+            try {
+                stmt.close();
+                stmt = null;
+            }
+            catch (SQLException sqle) {
+                sqle.printStackTrace();
+            }
+        }
+
+        if (con != null)
+        {
+            try {
+                broker.replaceConnection(con, DatabaseConfig.SEARCH_POOL);
+            }
+            catch (ConnectionPoolException cpe) {
+                cpe.printStackTrace();
+            }
+        }
     }
+
+    return list;
+  }
 
     /*
     * PRIVATE UTILITY METHODS
