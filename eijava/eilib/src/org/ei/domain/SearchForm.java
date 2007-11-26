@@ -923,16 +923,17 @@ public class SearchForm {
 
         int dYear = 1973;
         try {
+			System.out.println("sYear= "+sYear);
 
 	        if (sYear != null && sYear.length() > 0) {
 	            if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.CPX_MASK) == DatabaseConfig.CPX_MASK)) {
 	                int cpxStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("CST") + 3, sYear.indexOf("CST") + 7));
 	                dYear = (dYear > cpxStartYear) ? cpxStartYear : dYear;
 	            }
-                if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.C84_MASK) == DatabaseConfig.C84_MASK)) {
-                    int cpxStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("ZST") + 3, sYear.indexOf("ZST") + 7));
-                    dYear = (dYear > cpxStartYear) ? cpxStartYear : dYear;
-                }
+                //if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.C84_MASK) == DatabaseConfig.C84_MASK)) {
+                //    int cpxStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("ZST") + 3, sYear.indexOf("ZST") + 7));
+                //    dYear = (dYear > cpxStartYear) ? cpxStartYear : dYear;
+                //}
                 if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.INS_MASK) == DatabaseConfig.INS_MASK)) {
 	                int insStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("IST") + 3, sYear.indexOf("IST") + 7));
 	                dYear = (dYear > insStartYear) ? insStartYear : dYear;
@@ -949,12 +950,12 @@ public class SearchForm {
 	                int upStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("UST") + 3, sYear.indexOf("UST") + 7));
 	                dYear = (dYear > upStartYear) ? upStartYear : dYear;
 	            }
-	            /*
+
 	            if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.USPTO_MASK) == DatabaseConfig.USPTO_MASK)) {
 					int upStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("SST") + 3, sYear.indexOf("SST") + 7));
 					dYear = (dYear > upStartYear) ? upStartYear : dYear;
 	            }
-	            */
+
 	            if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.REF_MASK) == DatabaseConfig.REF_MASK)) {
 					int upStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("DST") + 3, sYear.indexOf("DST") + 7));
 					dYear = (dYear > upStartYear) ? upStartYear : dYear;
@@ -992,7 +993,7 @@ public class SearchForm {
 					dYear = (dYear > paStartYear) ? paStartYear : dYear;
 	            }
 	            if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.EPT_MASK) == DatabaseConfig.EPT_MASK)) {
-					int paStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("XST") + 3, sYear.indexOf("XST") + 7));
+					int paStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("MST") + 3, sYear.indexOf("MST") + 7));
 					dYear = (dYear > paStartYear) ? paStartYear : dYear;
 	            }
 	            if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.CRC_MASK) == DatabaseConfig.CRC_MASK)) {
@@ -1000,7 +1001,7 @@ public class SearchForm {
 					dYear = (dYear > paStartYear) ? paStartYear : dYear;
 	            }
 	            if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.CBF_MASK) == DatabaseConfig.CBF_MASK)) {
-					int paStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("YST") + 3, sYear.indexOf("YST") + 7));
+					int paStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("ZST") + 3, sYear.indexOf("ZST") + 7));
 					dYear = (dYear > paStartYear) ? paStartYear : dYear;
 	            }
 	        }
@@ -1115,40 +1116,40 @@ public class SearchForm {
 	                dYear = (dYear > paStartYear) ? paStartYear : dYear;
 	            }
                 if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.CBF_MASK) == DatabaseConfig.CBF_MASK)) {
-                    int cbfStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("YSY") + 3, sYear.indexOf("YSY") + 7));
+                    int cbfStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("ZSY") + 3, sYear.indexOf("ZSY") + 7));
                     dYear = (dYear > cbfStartYear) ? cbfStartYear : dYear;
                 }
                 if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.PCH_MASK) == DatabaseConfig.PCH_MASK)) {
-					int cbfStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("AST") + 3, sYear.indexOf("AST") + 7));
+					int cbfStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("ASY") + 3, sYear.indexOf("ASY") + 7));
 					dYear = (dYear > cbfStartYear) ? cbfStartYear : dYear;
 				}
 				if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.CHM_MASK) == DatabaseConfig.CHM_MASK)) {
-					int cbfStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("HST") + 3, sYear.indexOf("HST") + 7));
+					int cbfStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("HSY") + 3, sYear.indexOf("HSY") + 7));
 					dYear = (dYear > cbfStartYear) ? cbfStartYear : dYear;
 				}
 				if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.CBN_MASK) == DatabaseConfig.CBN_MASK)) {
-					int cbfStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("BST") + 3, sYear.indexOf("BST") + 7));
+					int cbfStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("BSY") + 3, sYear.indexOf("BSY") + 7));
 					dYear = (dYear > cbfStartYear) ? cbfStartYear : dYear;
 				}
 				if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.ELT_MASK) == DatabaseConfig.ELT_MASK)) {
 
-					int cbfStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("LST") + 3, sYear.indexOf("LST") + 7));
+					int cbfStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("LSY") + 3, sYear.indexOf("LSY") + 7));
 					dYear = (dYear > cbfStartYear) ? cbfStartYear : dYear;
 				}
 				if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.EPT_MASK) == DatabaseConfig.EPT_MASK)) {
-					int cbfStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("XST") + 3, sYear.indexOf("XST") + 7));
+					int cbfStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("MSY") + 3, sYear.indexOf("MSY") + 7));
 					dYear = (dYear > cbfStartYear) ? cbfStartYear : dYear;
 	            }
 	            if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.UPT_MASK) == DatabaseConfig.UPT_MASK)) {
-					int cbfStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("TST") + 3, sYear.indexOf("TST") + 7));
+					int cbfStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("TSY") + 3, sYear.indexOf("TSY") + 7));
 					dYear = (dYear > cbfStartYear) ? cbfStartYear : dYear;
 	            }
 	            if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.CRC_MASK) == DatabaseConfig.CRC_MASK)) {
-					int cbfStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("RST") + 3, sYear.indexOf("RST") + 7));
+					int cbfStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("RSY") + 3, sYear.indexOf("RSY") + 7));
 					dYear = (dYear > cbfStartYear) ? cbfStartYear : dYear;
 	            }
 	            if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.REF_MASK) == DatabaseConfig.REF_MASK)) {
-					int cbfStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("DST") + 3, sYear.indexOf("DST") + 7));
+					int cbfStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("DSY") + 3, sYear.indexOf("DSY") + 7));
 					dYear = (dYear > cbfStartYear) ? cbfStartYear : dYear;
 	            }
 	        }
