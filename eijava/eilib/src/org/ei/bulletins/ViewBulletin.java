@@ -22,6 +22,7 @@ import java.net.*;
 import java.io.*;
 import org.ei.logging.*;
 import org.ei.controller.*;
+import org.ei.fulldoc.UniventioPDFGateway;
 
 
 public class ViewBulletin extends HttpServlet
@@ -31,8 +32,10 @@ public class ViewBulletin extends HttpServlet
 	String logURL;
 	String appName;
 	String authURL;
-    ControllerClient client;
+    //ControllerClient client;
     ServletConfig config;
+    private static final String PAT_PATH = "bulletins/api/patent/";
+	private static final String LIT_PATH = "bulletins/api/lit/";
 
     public void init()
         throws ServletException
@@ -63,175 +66,123 @@ public class ViewBulletin extends HttpServlet
         BufferedInputStream bis = null;
 		BufferedOutputStream bout = null;
 		File bulletinFile = null;
+		Writer out = null;
 
 		sCache = SessionCache.getInstance(authURL,appName);
 
         try
         {
-            client = new ControllerClient(request, response);
-			javax.servlet.http.Cookie [] cookies = request.getCookies();
-			SessionID sesID = null;
-			LogClient logClient = new LogClient(logURL);
-			Hashtable logProperties = new Hashtable();
+			String id = request.getParameter("id");
+			String cType = request.getParameter("cType");
+			String db = request.getParameter("db");
+			String fn = request.getParameter("fn");
+			String yr = request.getParameter("yr");
+			String cy = request.getParameter("cy");
+			String tm = request.getParameter("tm");
+			String sc = request.getParameter("sc");
+			String link = null;
 
-			if(cookies != null)
+			BulletinSecurity bSecurity = new BulletinSecurity();
+
+			if(tm != null && sc != null)
 			{
-				for(int i=0; i<cookies.length;++i)
+				if(!bSecurity.isExpired(tm) && bSecurity.isValidKey(sc,tm))
 				{
-					javax.servlet.http.Cookie cookie = cookies[i];
-					if(cookie.getName().equals("EISESSION"))
+
+					if(db.equals("1"))
 					{
-						sessionID = cookie.getValue();
-						break;
+						link = LIT_PATH;
 					}
-				}
-			}
-
-			if(sessionID == null)
-			{
-				sessionID = request.getParameter("EISESSION");
-			}
-			if(sessionID != null)
-			{
-				sesID = new SessionID(sessionID);
-			}
-
-			referrerURL = request.getHeader("Referer");
-			String ipaddress = request.getRemoteAddr();
-			entryToken = request.getParameter("SYSTEM_ENTRY_TOKEN");
-
-			UserSession ussession = sCache.getUserSession(sesID, ipaddress, referrerURL, username, password,entryToken);
-
-			String status = ussession.getStatus();
-
-			if(status.equals(SessionStatus.NEW_HAD_EXPIRED))
-			{
-				String serverName = request.getServerName();
-				int serverPort = request.getServerPort();
-				if(serverPort != 80)
-				{
-					serverName = serverName+":"+Integer.toString(serverPort);
-				}
-				response.sendRedirect("http://"+serverName+"/controller/servlet/Controller?SYSTEM_LOGOUT=true&CID="+Controller.REDIR_PAGE_SESSION_EXPIRED);
-			}
-			else
-			{
-
-				User user = ussession.getUser();
-
-				String cartridges[] = user.getCartridge();
-				StringBuffer buffCartridges = new StringBuffer();
-
-				for (int i = 0; i < cartridges.length; i++)
-				{
-					buffCartridges.append(cartridges[i]);
-
-					if(i > 0)
-						buffCartridges.append(";");
-				}
-				String lcCartridges = buffCartridges.toString().toLowerCase();
-				if (lcCartridges.indexOf("lit_htm") == -1 && lcCartridges.indexOf("lit_pdf") == -1
-				&& lcCartridges.indexOf("pat_htm") == -1 && lcCartridges.indexOf("pat_pdf") == -1 )
-				{
-						throw new SecurityException("<DISPLAY>You do not have access to the bulletins.</DISPLAY>");
-				}
-
-				String id = request.getParameter("id");
-				String cType = request.getParameter("cType");
-
-				BulletinBuilder builder = new BulletinBuilder();
-
-				BulletinLinkBuilder linkBuilder = new BulletinLinkBuilder();
-
-				Bulletin bulletin = builder.buildBulletinDetail(id);
-
-				client.log("EISESSION", sesID.toString());
-				client.log("request", "viewBulletin");
-				client.log("dbname", bulletin.getDatabase());
-				client.log("category",bulletin.getCategory());
-				client.log("filename", bulletin.getFileName());
-				client.log("custid", user.getCustomerID());
-				client.log("ctype",cType);
-				client.setRemoteControl();
-
-				bulletin.setContentType(cType);
-				StringBuffer link = new StringBuffer(linkBuilder.buildLink(bulletin));
-
-				if(cType.equals("HTML"))
-				{
-					response.setContentType("text/html");
-				}
-				else if (cType.equals("PDF"))
-				{
-					response.setContentType("application/pdf");
+					else if(db.equals("2"))
+					{
+						link = PAT_PATH;
 					}
-				else if (cType.equals("ZIP"))
-				{
-					response.setContentType("application/zip");
-					StringBuffer bufHeader = new StringBuffer("attachments; ");
-					bufHeader.append("filename=").append(bulletin.getFileName()).append(".zip");
-					response.setHeader("Content-disposition", bufHeader.toString());
-				}
-				else if(cType.equals("SAVEHTML"))
-				{
-					response.setContentType("text/html");
-					StringBuffer bufHeader = new StringBuffer("attachments; ");
-					bufHeader.append("filename=").append(bulletin.getFileName()).append(".htm");
-					response.setHeader("Content-disposition", bufHeader.toString());
-				}
-				else if (cType.equals("SAVEPDF"))
-				{
-					response.setContentType("application/pdf");
-					StringBuffer bufHeader = new StringBuffer("attachments; ");
-					bufHeader.append("filename=").append(bulletin.getFileName()).append(".pdf");
-					response.setHeader("Content-disposition", bufHeader.toString());
-				}
 
-				StringBuffer fullUrl = new StringBuffer();
-				String fullLink = fullUrl.append(bulletinFileLocation).append("/").append(link).toString();
+					String filename = null;
+					if(cType.equals("HTML"))
+					{
+						response.setContentType("text/html");
+						filename = fn+".htm";
+					}
+					else if (cType.equals("PDF"))
+					{
+						response.setContentType("application/pdf");
+						filename = fn+".pdf";
+					}
+					else if (cType.equals("ZIP"))
+					{
+						response.setContentType("application/zip");
+						StringBuffer bufHeader = new StringBuffer("attachments; ");
+						bufHeader.append("filename=").append(fn).append(".zip");
+						filename = fn+".zip";
+						response.setHeader("Content-disposition", bufHeader.toString());
+					}
+					else if(cType.equals("SAVEHTML"))
+					{
+						response.setContentType("text/html");
+						StringBuffer bufHeader = new StringBuffer("attachments; ");
+						bufHeader.append("filename=").append(fn).append(".htm");
+						response.setHeader("Content-disposition", bufHeader.toString());
+						filename = fn+".htm";
+					}
+					else if (cType.equals("SAVEPDF"))
+					{
+						response.setContentType("application/pdf");
+						StringBuffer bufHeader = new StringBuffer("attachments; ");
+						bufHeader.append("filename=").append(fn).append(".pdf");
+						response.setHeader("Content-disposition", bufHeader.toString());
+						filename = fn+".pdf";
+					}
+					String type = null;
 
-				bulletinFile = new File(fullLink);
+					if(cType.indexOf("HTML")>-1)
+					{
+						type="html";
+					}
+					else if(cType.indexOf("PDF")>-1)
+					{
+						type="pdf";
+					}
+					else
+					{
+						type="graphic";
+					}
 
-				bout = new BufferedOutputStream(response.getOutputStream());
-				bis = new BufferedInputStream(new FileInputStream(bulletinFile));
+					StringBuffer fullUrl = new StringBuffer();
+					String fullLink = fullUrl.append(bulletinFileLocation).append("/").append(link).append(yr).append("/").append(cy).append("/").append(type).append("/").append(filename).toString();
+					//System.out.println("fullLink"+fullLink);
+					bulletinFile = new File(fullLink);
 
-				byte[] buff = new byte[1024];
-				int bytesRead;
+					bout = new BufferedOutputStream(response.getOutputStream());
+					bis = new BufferedInputStream(new FileInputStream(bulletinFile));
 
-				while(-1 != (bytesRead = bis.read(buff, 0, buff.length)))
-				{
-					bout.write(buff, 0, bytesRead);
-				}
+					byte[] buff = new byte[1024];
+					int bytesRead;
 
-
-				//Log it
-
-				long start = System.currentTimeMillis();
-
-				client.log("REMOTEADDRESS",request.getRemoteAddr());
-				client.log("User-Agent",request.getHeader("User-Agent"));
-				client.log("METHOD",request.getMethod());
-				client.log("REFERER",request.getHeader("referer"));
-				client.log("URL",request.getRequestURI());
-				client.log("QUERYSTRING",request.getQueryString());
-				client.log("STATUSCODE",String.valueOf(HttpServletResponse.SC_OK));
-				client.log("RID",new GUID().toString());
-				client.log("APPID",appName);
-				client.setRemoteControl();
-
-				if(logProperties.containsKey("EISESSION"))
-				{
-					client.log("SID",(String) logProperties.get("EISESSION"));
+					while(-1 != (bytesRead = bis.read(buff, 0, buff.length)))
+					{
+						bout.write(buff, 0, bytesRead);
+					}
 				}
 				else
 				{
-					client.log("SID","0");
+					out = response.getWriter();
+					if(bSecurity.isExpired(tm))
+					{
+						out.write("<DISPLAY>Your link has expired, please refresh the search page and try again.</DISPLAY>");
+					}
+					else if(!bSecurity.isValidKey(sc,tm))
+					{
+						out.write("<DISPLAY>Invalid link</DISPLAY>");
+					}
 				}
-				long end = System.currentTimeMillis();
-				client.log("END_TIME",String.valueOf(end));
-				client.log("RESPONSE_TIME",String.valueOf(end - start));
-				client.setRemoteControl();
 			}
+			else
+			{
+				out = response.getWriter();
+				out.write("<DISPLAY>Invalid link</DISPLAY>");
+			}
+
 		}
 		catch(FileNotFoundException fe)
 		{
@@ -243,15 +194,10 @@ public class ViewBulletin extends HttpServlet
 			{
 				bout.write(errorByte[i]);
 			}
-			client.log("Error:",fe.getMessage());
-			client.setRemoteControl();
-
 		}
 		catch(Exception e)
 		{
-			client.log("Error:",e.getMessage());
-			client.setRemoteControl();
-			//System.out.println("Error:"+e.getMessage());
+			System.out.println("Error:"+e.getMessage());
 		}
 		finally
 		{
@@ -263,8 +209,7 @@ public class ViewBulletin extends HttpServlet
 				}
 				catch(Exception e)
 				{
-					client.log("Error:",e.getMessage());
-					client.setRemoteControl();
+					System.out.println("Error:"+e.getMessage());
 				}
 			}
 			if(bout != null)
@@ -275,8 +220,18 @@ public class ViewBulletin extends HttpServlet
 				}
 				catch(Exception e)
 				{
-					client.log("Error:",e.getMessage());
-					client.setRemoteControl();
+					System.out.println("Error:"+e.getMessage());
+				}
+			}
+			if(out != null)
+			{
+				try
+				{
+					out.close();
+				}
+				catch(Exception e)
+				{
+					System.out.println("Error:"+e.getMessage());
 				}
 			}
 		}
