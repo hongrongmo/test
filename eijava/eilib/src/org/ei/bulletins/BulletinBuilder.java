@@ -115,6 +115,7 @@ public class BulletinBuilder {
                 bulletin.setPublishedDt(pubdt);
                 bulletin.setZipFileName(zipFileName);
                 bulletin.setCategory(cy);
+                bulletin.setYear(year);
                 bulletin.setWeek(wk);
 
                 if (db.equals("1")) //Lit
@@ -181,6 +182,7 @@ public class BulletinBuilder {
                 bulletin.setPublishedDt(pubdt);
                 bulletin.setId(id);
                 bulletin.setFileName(name);
+                bulletin.setYear(Integer.toString(maxYear));
 
                 if (!htBulletins.containsKey(category))
                     htBulletins.put(category, bulletin);
@@ -258,6 +260,7 @@ public class BulletinBuilder {
                 bulletin.setId(id);
                 bulletin.setFileName(name);
                 bulletin.setZipFileName(zipFileName);
+                bulletin.setYear(Integer.toString(maxYear));
 
                 if (!htBulletins.containsKey(category))
                     htBulletins.put(category, bulletin);
