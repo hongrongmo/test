@@ -57,6 +57,9 @@
       <xsl:when test="($DB-PREF='cpx')">Compendex</xsl:when>
       <xsl:when test="($DB-PREF='ins')">Inspec</xsl:when>
       <xsl:when test="($DB-PREF='geo')">GEOBASE</xsl:when>
+      <xsl:when test="($DB-PREF='pch')">PaperChem</xsl:when>
+      <xsl:when test="($DB-PREF='elt')">EnCompassLit</xsl:when>
+      <xsl:when test="($DB-PREF='chm')">Chimica</xsl:when>      
       <xsl:otherwise>Compendex</xsl:otherwise>
     </xsl:choose>
   </xsl:variable>
