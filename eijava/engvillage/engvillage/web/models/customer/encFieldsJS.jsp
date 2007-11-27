@@ -6,40 +6,16 @@
    <xsl:comment>
    <script language="javascript">
     	
-	var mltTableBody;
-	var mltTable;
-	var mltDiv;
-	var mltTerms;
-	var mltFlag = "1";
-	var mltInputField;
-	var mltTerms;
-
-	var lstTableBody;
-	var lstTable;
-	var lstDiv;
-	var lstTerms;
-	var lstFlag = "1";
-	var lstInputField;
-	var lstTerms;
-
-	var atmTableBody;
-	var atmTable;
-	var atmDiv;
-	var atmTerms;		
-	var atmFlag = "1";
-	var atmInputField;
-	var atmTerms;
-
-	var longltTableBody;
-	var longltTable;
-	var longltDiv;
-	var longltTerms;
-	var longltFlag = "1";
-	var longltInputField;
-	var longltTerms;
-	var mid;    
+    var varTableBody;
+	var varTable;
+	var varDiv;
+	var varTerms;
+	var varInputField;
+	var varTerms;	    	
+	var varMid;    
 	var xmlHttp;    
 	var schid;
+	var istag;
 	
 	function createXMLHttpRequest()
 	{
@@ -71,9 +47,14 @@
 	   
 	function findLongLinkTerms(mid)
 	{ 
+	   	var nameschid = "schid"+mid;
+	   	varMid = mid;
+        schid = document.getElementById(nameschid).value;  
+       	var nameistag = "istag"+mid;	   	
+        var varistag = document.getElementById(nameistag).value;       	
     	var date = new Date();
     	createXMLHttpRequest();  
-    	var url = "/controller/servlet/Controller?CID=encLongterms&searchId="+schid+"&docid="+mid+"&timestamp="+date.getTime();
+    	var url = "/controller/servlet/Controller?CID=encLongterms&searchId="+schid+"&istag="+varistag+"&docid="+mid+"&timestamp="+date.getTime();
     	xmlHttp.open("GET", url, true);
     	
     	xmlHttp.onreadystatechange = callback;
@@ -90,19 +71,16 @@
 
         	if (xmlHttp.status == 200)
         	{
-
             	var allterms = xmlHttp.responseXML;
-
             	var terms = allterms.getElementsByTagName("body");
             	if (terms != null && terms[0].firstChild != null)
             	{
                 	if (terms[0].firstChild.nodeValue != null)
-                	{  
-                           
-                    	longltTerms = terms[0].firstChild.nodeValue; 
-
-                    	drawTerms("longlt");
-
+                	{                             
+                    	var longltTerms = terms[0].firstChild.nodeValue; 
+						initVars(longltTerms,"longlt", varMid)
+						varTerms = longltTerms;
+                    	drawTerms("longlt", varMid);
                 	}
             	}
         	}
@@ -110,257 +88,119 @@
 	}
 
 
-	function flipImg(terms, termtype)
+	function flipEncImg(terms, termtype, docid)
 	{
-		if(termtype == "mlt")
-		{
-			if(mltFlag == "1")
-			{
-				draw(terms, termtype);				
-				document.mlt.src="/engresources/images/encMinus.gif";				
-				document.mltOpenClose.src="/engresources/images/encMltClose.gif";				
-				mltFlag = "2";
-			}
-			else if(mltFlag == "2")
-			{
-				clearTerms(termtype);
-				document.mlt.src="/engresources/images/encPlus.gif";
-				document.mltOpenClose.src="/engresources/images/encMltOpen.gif";
-				mltFlag = "1";
-			}					
-		}		
-		else if(termtype == "lst")
-		{
-			if(lstFlag == "1")
-			{
-				draw(terms, termtype);				
-				document.lst.src="/engresources/images/encMinus.gif";				
-				document.lstOpenClose.src="/engresources/images/encLinkedClose.gif";				
-				lstFlag = "2";
-			}
-			else if(lstFlag == "2")
-			{
-				clearTerms(termtype);
-				document.lst.src="/engresources/images/encPlus.gif";
-				document.lstOpenClose.src="/engresources/images/encLinkedOpen.gif";
-				lstFlag = "1";
-			}					
-		}
-		else if (termtype == "atm")
-		{
-			if(atmFlag == "1")
-			{
-		 		draw(terms, termtype);				
-		 		document.atm.src="/engresources/images/encMinus.gif";				
-				document.atmOpenClose.src="/engresources/images/encTemplatesClose.gif";				
-				atmFlag = "2";
-			}
-			else if(atmFlag == "2")
-			{
-				clearTerms(termtype);
-				document.atm.src="/engresources/images/encPlus.gif";
-				document.atmOpenClose.src="/engresources/images/encTemplatesOpen.gif";
-				atmFlag = "1";
-			}		
-		}
-		else if (termtype == "longlt")
-        {
-            if(longltFlag == "1")
-            {
-                draw(terms, termtype);              
-                document.longlt.src="/engresources/images/encMinus.gif";                
-                document.longltOpenClose.src="/engresources/images/encLinkedClose.gif";               
-                longltFlag = "2";
-            }
-            else if(longltFlag == "2")
-            {
-                clearTerms(termtype);
-                document.longlt.src="/engresources/images/encPlus.gif";
-                document.longltOpenClose.src="/engresources/images/encLinkedOpen.gif";
-                longltFlag = "1";
-            }       
-        }
+
+		var varid = termtype +docid;
+
+			// if image set to plus open change to minuse close and drow terms
+			// else clearTerms and set img to plus open
+
+				//draw(terms, termtype);
+				var imgname = termtype+'OpenClose'+docid;
+				var elementimg = document.getElementById(imgname);											
+				var imgsrc = elementimg.src;
+								
+				var imgTermname = termtype+docid;
+				var elementimgTerm = document.getElementById(imgTermname);
+				var imgTermsrc = elementimg.src;
+				
+				if (imgsrc.indexOf('Close') > 0)
+				{
+					clearTerms(termtype, docid);
+					elementimgTerm.src="/engresources/images/encPlus.gif";
+					elementimg.src="/engresources/images/encLinkedOpen.gif";
+				}
+				else
+				{
+					draw(terms, termtype, docid );
+					elementimgTerm.src="/engresources/images/encMinus.gif";
+					elementimg.src="/engresources/images/encLinkedClose.gif";	
+				}							
+								
+	}
+	
+	function initVars(terms,termtype, docid)
+	{
+	
+			varTerms = terms;
+			var nameDiv = termtype+"div"+docid;
+			varDiv = document.getElementById(nameDiv);
+			var nameInputField = termtype+"field"+docid;
+			varInputField = document.getElementById(nameInputField);
+			var nameTableBody = termtype+"_table_body"+docid;
+			varTableBody = document.getElementById(nameTableBody);
+			var nameTable = termtype+"_table"+docid;
+			varTable = document.getElementById(nameTable);
+			
+			if (termtype == "longlt")
+        	{
+            	varTerms = "Retrieving...";
+        	}
 	}
 				
-	function initVars(terms,termtype)
-	{		
-		
-		if(termtype == "mlt")
-		{				
-			mltTerms = terms;
-			mltDiv = document.getElementById("mltdiv");
-			mltInputField = document.getElementById("mltfield");
-			mltTableBody = document.getElementById("mlt_table_body");
-			mltTable = document.getElementById("mlt_table");
-		}
-		else if (termtype == "lst")
-		{
-			lstTerms = terms;					
-			lstDiv = document.getElementById("lstdiv");
-			lstInputField = document.getElementById("lstfield");
-			lstTableBody = document.getElementById("lst_table_body");
-			lstTable = document.getElementById("lst_table");
-		}
-		else if (termtype == "atm")
-		{
-			atmTerms = terms;
-			atmDiv = document.getElementById("atmdiv");
-			atmInputField = document.getElementById("atmfield");
-			atmTableBody = document.getElementById("atm_table_body");
-			atmTable = document.getElementById("atm_table");
-		}
-		else if (termtype == "longlt")
-        {
- 
- 			//findLongLinkTerms();
-            longltTerms = "Retrieving...";
-            schid = document.getElementById("schid").value;	
-            longltDiv = document.getElementById("longltdiv");
-            longltInputField = document.getElementById("longltfield");
-            longltTableBody = document.getElementById("longlt_table_body");
-            longltTable = document.getElementById("longlt_table");
-            //mid = document.getElementById("longlt_mid");
 
-        }
-
-	}
  
- 	function draw(terms, termtype)
+  	function draw(terms, termtype, docid)
 	{
-		initVars(terms,termtype);
+		initVars(terms,termtype, docid);
         if(termtype == "longlt")
         {        
             findLongLinkTerms(terms);  
         }
-		setOffsetTerms(termtype);
-		drawTerms(termtype);
+		setOffsetTerms(termtype , docid);
+		drawTerms(termtype, docid);
 		return false;
 	}
+
+     
+    function setOffsetTerms(termtype, docid)
+	{
+			var gend = varInputField.offsetWidth;
+			var gleft = calculateOffsetLeftGroup1(varInputField)+gend;
+			var gtop = calculateOffsetTopGroup1(varInputField);					
+			varDiv.style.border = "black 0px solid";	
+			varDiv.style.left = gleft + "px";
+			varDiv.style.top = gtop + "px";		
+			varTable.style.width = "560px"; 
+	
+	}
        
-	function setOffsetTerms(termtype)
-	{
-
-		if(termtype =="mlt")
-		{		
-			var gend = mltInputField.offsetWidth;
-			var gleft = calculateOffsetLeftGroup1(mltInputField)+gend;
-			var gtop = calculateOffsetTopGroup1(mltInputField);					
-			mltDiv.style.border = "black 0px solid";	
-			mltDiv.style.left = gleft + "px";
-			mltDiv.style.top = gtop + "px";		
-			mltTable.style.width = "560px"; 				
-		}	
-		else if (termtype == "atm")
-		{
-			var gend = atmInputField.offsetWidth;
-			var gleft = calculateOffsetLeftGroup1(atmInputField)+gend;
-			var gtop = calculateOffsetTopGroup1(atmInputField);	
-			atmDiv.style.border = "black 0px solid";	
-			atmDiv.style.left = gleft + "px";
-			atmDiv.style.top = gtop + "px";		
-			atmTable.style.width = "560px"; 			
-		}	
-		else if (termtype == "lst")
-		{
-			var gend = lstInputField.offsetWidth;
-			var gleft = calculateOffsetLeftGroup1(lstInputField)+gend;
-			var gtop = calculateOffsetTopGroup1(lstInputField);	
-			lstDiv.style.border = "black 0px solid";	
-			lstDiv.style.left = gleft + "px";
-			lstDiv.style.top = gtop + "px";		
-			lstTable.style.width = "560px"; 			
-		}	
-		else if (termtype == "longlt")
-        {
-            var gend = longltInputField.offsetWidth;
-            var gleft = calculateOffsetLeftGroup1(longltInputField)+gend;
-            var gtop = calculateOffsetTopGroup1(longltInputField);  
-            longltDiv.style.border = "black 0px solid"; 
-            longltDiv.style.left = gleft + "px";
-            longltDiv.style.top = gtop + "px";      
-            longltTable.style.width = "560px";          
-        }
-
-	}
 	
-	function clearTerms(termtype)
+	function clearTerms(termtype, docid)
 	{
-
-		if (termtype == "mlt")
-		{
-			if (mltTableBody != null )
+			var nameTableBody = termtype+"_table_body"+docid;
+			varTableBody = document.getElementById(nameTableBody);
+			var nameDiv = termtype+"div"+docid;
+			varDiv = document.getElementById(nameDiv);
+			
+			if (varTableBody != null )
 			{
-				var gi = mltTableBody.childNodes.length;
+				var gi = varTableBody.childNodes.length;
 				for (var i = gi - 1; i >= 0 ; i--)
 				{
-					mltTableBody.removeChild(mltTableBody.childNodes[i]);
+					varTableBody.removeChild(varTableBody.childNodes[i]);
 				}
-				mltDiv.style.border = "none";
+				varDiv.style.border = "none";
 			}
-		}
-		else if(termtype == "atm")
-		{
-			if (atmTableBody != null )
-			{
-				var gi = atmTableBody.childNodes.length;
-				for (var i = gi - 1; i >= 0 ; i--)
-				{
-					atmTableBody.removeChild(atmTableBody.childNodes[i]);
-				}
-				atmDiv.style.border = "none";
-			}		
-		}
-	 	else if(termtype == "lst")
-		{
-			if (lstTableBody != null )
-			{
-				var gi = lstTableBody.childNodes.length;
-				for (var i = gi - 1; i >= 0 ; i--)
-				{
-					lstTableBody.removeChild(lstTableBody.childNodes[i]);
-				}
-				lstDiv.style.border = "none";
-			}		
-		}
-		else if(termtype == "longlt")
-        {
-            if (longltTableBody != null )
-            {
-                var gi = longltTableBody.childNodes.length;
-                for (var i = gi - 1; i >= 0 ; i--)
-                {
-                    longltTableBody.removeChild(longltTableBody.childNodes[i]);
-                }
-                longltDiv.style.border = "none";
-            }       
-        }
-
 	}
 	
-	// fhis function is drawing link terms
-	function drawTerms(termtype)
+	
+	
+	function drawTerms(termtype, docid)
 	{
 	
-		clearTerms(termtype);
+		clearTerms(termtype, docid);
 		var allterms = new Array();
 		if(termtype == "atm")
 		{		
-			allterms= atmTerms.split("</br>");
+			allterms= varTerms.split("</br>");
 		}
-		else if(termtype == "mlt")
+		else 
 		{
-			allterms = mltTerms.split("|");			
-		}
-		else if(termtype == "lst")
-		{
-			allterms = lstTerms.split("|");			
-		}
-		else if(termtype == "longlt")
-        {
-            allterms = longltTerms.split("|");                     
+            allterms = varTerms.split("|");                     
         }
-
-		var size = allterms.length;
+        var size = allterms.length;
 		var row, cell, txtNode;
 		for (var i = 0; i < size; i++)
 		{
@@ -397,29 +237,16 @@
 			}
 			cell.setAttribute("className", "SmBlackText");
 			cell.setAttribute("class", "SmBlackText");
-			cell.innerHTML = nextNode;
-	
+			cell.innerHTML = nextNode;	
 			row.appendChild(cell);
-			if(termtype == "atm")
-			{
-				atmTableBody.appendChild(row);
-			}
-			else if (termtype == "mlt")
-			{
-				mltTableBody.appendChild(row);
-			}
-			else if (termtype == "lst")
-			{
-				lstTableBody.appendChild(row);
-			}
-			else if (termtype == "longlt")
-			{
+	
+			varTableBody.appendChild(row);
 			
-				longltTableBody.appendChild(row);
-			}
 		}			
-		return false;		
+		return false;
+	
 	}
+	
 		
 	function calculateOffsetLeftGroup1(gfield)
 	{
@@ -439,14 +266,10 @@
 		}
 		return goffset;
 	}
-
-
-
-
 	
-    	</script>
-    	</xsl:comment>
-    	]]>
+    </script>
+    </xsl:comment>
+    ]]>
 
 </ENCOMPASS-FIELDS-JS>
 
