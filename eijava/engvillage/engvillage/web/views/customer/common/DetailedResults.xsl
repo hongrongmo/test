@@ -29,7 +29,6 @@
  	<xsl:if test="('LTH' or 'LSTM' or  'MLT' or  'ATM')" >
     	<xsl:value-of select="$ENCOMPASS-FIELDS-JS" disable-output-escaping="yes"/>
     </xsl:if>
-    
       <table border="0" width="99%" cellspacing="0" cellpadding="0">
         <xsl:apply-templates />
       </table>
@@ -540,15 +539,22 @@
 
 <!-- ENCompass fileds -->
 
-     <xsl:variable name="DOCID">
-        <xsl:value-of select="//PAGE//PAGE-ENTRY//EI-DOCUMENT//DOC-ID"/>
-    </xsl:variable>
-    
  	<xsl:variable name="SEARCHID">
 		<xsl:value-of select="//SEARCH-ID"/>
  	</xsl:variable>
+ 	<xsl:variable name="ISTAG">
+ 		<xsl:value-of select="/PAGE/TAG-BUBBLE/CUSTID"/>
+ 	</xsl:variable>
+ 	<xsl:variable name="SEARCH-CONTEXT">
+ 		<xsl:value-of select="/PAGE/SEARCH-CONTEXT"/>
+ 	</xsl:variable>
+ 	
  	
   	<xsl:template match="LTH"> 	   
+  	
+  	<xsl:variable name="DOCID">
+      <xsl:value-of select="ancestor::EI-DOCUMENT/DOC/DOC-ID"/>
+    </xsl:variable>
         <tr>
             <td valign="top" ><img src="/engresources/images/s.gif" border="0"/></td>
             <td xsl:use-attribute-sets="r-align-label">
@@ -557,17 +563,18 @@
             <td valign="top" width="10">           
             <img src="/engresources/images/s.gif" border="0" width="10"/></td>
             <td valign="top" align="left">
-            	<div class="longltdiv" id="longltdiv">
-                	<input type="hidden" name="longltfield" id="longltfield" disable-output-escaping = "yes"/>
-                	<input type="hidden" name="schid" id="schid"  value='{$SEARCHID}' disable-output-escaping = "yes"/>
-                	<a class="SmBlueText" onclick="javascript:flipImg('{$DOCID}','longlt'); return false;">
-   					<img name="longltOpenClose" src="/engresources/images/encLinkedOpen.gif"  border="0"  />
+            	<div class="longltdiv" id="longltdiv{$DOCID}">
+            	<input type="hidden" id="istag{$DOCID}" name="istag{$DOCID}"  value='{$SEARCH-CONTEXT}' disable-output-escaping = "yes"/>
+                	<input type="hidden" name="longltfield{$DOCID}" id="longltfield{$DOCID}" disable-output-escaping = "yes"/>
+                	<input type="hidden" name="schid{$DOCID}" id="schid{$DOCID}"  value='{$SEARCHID}' disable-output-escaping = "yes"/>
+                	<a class="SmBlueText" onclick="javascript:flipEncImg('{$DOCID}','longlt','{$DOCID}'); return false;">
+   					<img id="longltOpenClose{$DOCID}" src="/engresources/images/encLinkedOpen.gif"  border="0"  />
    					<img src="/engresources/images/s.gif" border="0" width="5"/>
-   					<img name="longlt" src="/engresources/images/encPlus.gif"  border="0" />
+   					<img id="longlt{$DOCID}" src="/engresources/images/encPlus.gif"  border="0" />
    					</a>
 
-   					<table style="margin:0px; padding:0px; border:0px black solid; width:100%" id="longlt_table">
-						<tbody id="longlt_table_body">
+   					<table style="margin:0px; padding:0px; border:0px black solid; width:100%" id="longlt_table{$DOCID}">
+						<tbody id="longlt_table_body{$DOCID}">
 						</tbody>
 					</table>
 				</div>
@@ -577,14 +584,13 @@
     </xsl:template>
 
     <xsl:template match="LSTM">
+    
+    <xsl:variable name="DOCID">
+      <xsl:value-of select="ancestor::EI-DOCUMENT/DOC/DOC-ID"/>
+    </xsl:variable>
         <tr>
             <td valign="top" ><img src="/engresources/images/s.gif" border="0"/></td>
-            <td xsl:use-attribute-sets="r-align-label">
-           <!--
-            <xsl:if test="string(@label)">
-                <span CLASS="MedBlackText"><b><xsl:value-of select="@label"/> </b> </span>
-            </xsl:if>
-           -->
+            <td xsl:use-attribute-sets="r-align-label"> 
 			<span CLASS="MedBlackText"><b> Linked Terms: </b> </span>
             </td>
 
@@ -593,16 +599,16 @@
             	<xsl:variable name="LST">
             		<xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
             	</xsl:variable>
-            	<div class="lstdiv" id="lstdiv">
-                	<input type="hidden" name="lstfield" id="lstfield" disable-output-escaping = "yes"/>
-   					<a class="SmBlueText" onclick="javascript:flipImg('{$LST}','lst'); return false;">
-   					<img name="lstOpenClose" src="/engresources/images/encLinkedOpen.gif"  border="0"  />
+            	<div class="lstdiv" id="lstdiv{$DOCID}">
+                	<input type="hidden" name="lstfield{$DOCID}" id="lstfield{$DOCID}" disable-output-escaping = "yes"/>
+   					<a class="SmBlueText" onclick="javascript:flipEncImg('{$LST}','lst','{$DOCID}'); return false;">
+   					<img id="lstOpenClose{$DOCID}" src="/engresources/images/encLinkedOpen.gif"  border="0"  />
    					<img src="/engresources/images/s.gif" border="0" width="5"/>
-   					<img name="lst" src="/engresources/images/encPlus.gif"  border="0" />
+   					<img id="lst{$DOCID}" src="/engresources/images/encPlus.gif"  border="0" />
    					</a>
 
-   					<table style="margin:0px; padding:0px; border:0px black solid; width:100%" id="lst_table">
-						<tbody id="lst_table_body">
+   					<table style="margin:0px; padding:0px; border:0px black solid; width:100%" id="lst_table{$DOCID}">
+						<tbody id="lst_table_body{$DOCID}">
 						</tbody>
 					</table>
 				</div>
@@ -612,14 +618,13 @@
     </xsl:template>
 
     <xsl:template match="MLT">
+    
+    <xsl:variable name="DOCID">
+      <xsl:value-of select="ancestor::EI-DOCUMENT/DOC/DOC-ID"/>   
+    </xsl:variable>
         <tr>
             <td valign="top" ><img src="/engresources/images/s.gif" border="0"/></td>
-            <td xsl:use-attribute-sets="r-align-label">
-           <!--
-            <xsl:if test="string(@label)">
-                <span CLASS="MedBlackText"><b><xsl:value-of select="@label"/> </b> </span>
-            </xsl:if>
-           -->
+            <td xsl:use-attribute-sets="r-align-label">   
             <span CLASS="MedBlackText"><b> Manually linked terms: </b> </span>
             </td>
 
@@ -628,16 +633,16 @@
             	<xsl:variable name="ML">
             		<xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
             	</xsl:variable>
-            	<div class="mltdiv" id="mltdiv">
-                	<input type="hidden" name="mltfield" id="mltfield" disable-output-escaping = "yes"/>
-   					<a class="SmBlueText" onclick="javascript:flipImg('{$ML}','mlt'); return false;">
-   					<img name="mltOpenClose" src="/engresources/images/encMltOpen.gif"  border="0"  />
+            	<div class="mltdiv" id="mltdiv{$DOCID}">
+                	<input type="hidden" name="mltfield{$DOCID}" id="mltfield{$DOCID}" disable-output-escaping = "yes"/>
+   					<a class="SmBlueText" onclick="javascript:flipEncImg('{$ML}','mlt','{$DOCID}'); return false;">
+   					<img name="mltOpenClose{$DOCID}" src="/engresources/images/encMltOpen.gif"  border="0"  />
    					<img src="/engresources/images/s.gif" border="0" width="5"/>
-   					<img name="mlt" src="/engresources/images/encPlus.gif"  border="0" />
+   					<img name="mlt{$DOCID}" src="/engresources/images/encPlus.gif"  border="0" />
    					</a>
 
-   					<table style="margin:0px; padding:0px; border:0px black solid; width:100%" id="mlt_table">
-						<tbody id="mlt_table_body">
+   					<table style="margin:0px; padding:0px; border:0px black solid; width:100%" id="mlt_table{$DOCID}">
+						<tbody id="mlt_table_body{$DOCID}">
 						</tbody>
 					</table>
 				</div>
@@ -647,6 +652,10 @@
     </xsl:template>
 
     <xsl:template match="ATM">
+    
+    <xsl:variable name="DOCID">
+      <xsl:value-of select="ancestor::EI-DOCUMENT/DOC/DOC-ID"/>
+    </xsl:variable>
         <tr>
             <td valign="top" ><img src="/engresources/images/s.gif" border="0"/></td>
             <td xsl:use-attribute-sets="r-align-label">
@@ -655,21 +664,21 @@
             </xsl:if>
             </td>
             <td valign="top" width="10"><img src="/engresources/images/s.gif" border="0" width="10"/></td>
-
+            <xsl:message><xsl:value-of select = '$SEARCH-CONTEXT'/></xsl:message>
             <xsl:variable name="AT">
             	<xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
             </xsl:variable>
 
             <td valign="top" align="left">
-	      	<div class="atmdiv" id="atmdiv">
-          	<input type="hidden" name="atmfield" id="atmfield" disable-output-escaping = "yes"/>
-   			<a class="SmBlueText" onclick="javascript:flipImg('{$AT}','atm'); return false;">
-   				<img name="atmOpenClose" src="/engresources/images/encTemplatesOpen.gif"  border="0" />
+	      	<div class="atmdiv" id="atmdiv{$DOCID}">
+          	<input type="hidden" name="atmfield{$DOCID}" id="atmfield{$DOCID}" disable-output-escaping = "yes"/>
+   			<a class="SmBlueText" onclick="javascript:flipEncImg('{$AT}','atm','{$DOCID}'); return false;">
+   				<img name="atmOpenClose{$DOCID}" src="/engresources/images/encTemplatesOpen.gif"  border="0" />
    				<img src="/engresources/images/s.gif" border="0" width="5"/>
-   				<img name="atm" src="/engresources/images/encPlus.gif"  border="0" />
+   				<img name="atm{$DOCID}" src="/engresources/images/encPlus.gif"  border="0" />
    			</a>
-			<table style="margin:0px; padding:0px; border:0px black solid; width:100%" id="atm_table">
-				<tbody id="atm_table_body">
+			<table style="margin:0px; padding:0px; border:0px black solid; width:100%" id="atm_table{$DOCID}">
+				<tbody id="atm_table_body{$DOCID}">
 				</tbody>
 			</table>
 		 	</div>
@@ -698,7 +707,7 @@
 
           <xsl:call-template name="LINK">
            <xsl:with-param name="TERM"><xsl:value-of select="$CCID"/></xsl:with-param>
-           <xsl:with-param name="FIELD">PID</xsl:with-param>
+           <xsl:with-param name="FIELD">IP</xsl:with-param>
            <xsl:with-param name="CLASS"><xsl:value-of select="$CLASS"/></xsl:with-param>
           <!--    <xsl:with-param name="ONMOUSEOVER">this.T_WIDTH=450;return escape('<xsl:value-of select="ctd:getDisplayTitle(hlight:addMarkup(./CTI))"/>')</xsl:with-param>            -->
           </xsl:call-template>
