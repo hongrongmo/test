@@ -11,7 +11,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 
 import org.ei.domain.FastClient;
-import org.ei.data.tests.FastSearchUnitTest;
+
 
 /**
  * @author solovyevat
