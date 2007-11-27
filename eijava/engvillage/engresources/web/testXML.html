@@ -69,76 +69,78 @@
 <body>
 <form name="quicksearch" action="/controller/servlet/Controller" method="post" onsubmit="change('database'); return true;">
 <table border="0">
-<tr><td colspan="4"><center><H2>OPENXML TEST PAGE</H2></center></td></tr>
-<tr><td colspan="4"><hr></td></tr>
-<tr>
-	<td colspan="4">Please select display format</td>
-</tr>
-
-<tr><td colspan="4"><hr></td></tr>
-<tr>
-	<td colspan="4">Please select a database</td>
-</tr>
-<input type=hidden name="CID" value="openXML">
-<tr>
-	<td colspan="4">
-	  <input type="hidden" name="DATABASE" value="0"/>
-    <input type="checkbox" name="alldb" style="vertical-align:middle;" id="allchkbx" value="191943" onClick="change('alldb');"/><label for="allchkbx">All</label>
-    <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="1" id="cpxchkbx" checked="checked" /><label for="cpxchkbx">Compendex</label>
-    <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="2" id="inschkbx" checked="checked" /><label for="inschkbx">Inspec</label>
-    <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="4" id="ntichkbx" checked="checked" /><label for="ntichkbx">NTIS</label>
-    <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="64" id="pchchkbx" /><label for="pchchkbx">PaperChem</label>
-    <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="128" id="chmchkbx" /><label for="chmchkbx">Chimica</label>
-    <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="256" id="cbnchkbx" checked="checked" /><label for="cbnchkbx">CBNB</label>
-    <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="1024" id="eltchkbx" /><label for="eltchkbx">EnCompassLIT</label>
-    <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="2048" id="eptchkbx" /><label for="eptchkbx">EnCompassPAT</label>
-    <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="8192" id="geochkbx" checked="checked" /><label for="geochkbx">GEOBASE</label>
-    <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="32768" id="upachkbx" checked="checked" /><label for="upachkbx">US Patents</label>
-    <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="16384" id="eupchkbx" checked="checked" /><label for="eupchkbx">EP Patents</label>
-    <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="131072" id="pagchkbx" /><label for="pagchkbx">Referex</label>
-	</td>
-</tr>
-<tr><td colspan="4"><hr></td></tr>
-<tr>
-	<td colspan="4">Please enter your query</td>
-</tr>
-<tr>
-	<td colspan="4">
-		<TEXTAREA ROWS="10" COLS="60" WRAP="PHYSICAL" NAME="XQUERYX"></TEXTAREA>
-	</td>
-</tr>
-<tr><td colspan="4"><hr></td></tr>
-<tr>
-	<td colspan="4">
-		<input type="radio" name="AUTOSTEM" value="on" checked="">&nbsp;AutoStemming On
-		<input type="radio" name="AUTOSTEM" value="off">&nbsp;AutoStemming off
-</tr>
-<tr>
-	<td colspan="4">
-	  <label for="STARTYEAR">Start Year</label><select NAME="STARTYEAR"></select>
-	&nbsp;
-	  <label for="ENDYEAR">End Year</label><select NAME="ENDYEAR"></select>
-	</td>
-</tr>
-<tr><td colspan="4"><hr></td></tr>
-<tr><td colspan="4">Sort By</td></tr>
-<tr>
-	<td colspan="4">
-		<input type="radio" name="SORT" value="re" checked>Relevance&nbsp;
-		<input type="radio" name="SORT" value="yr">Publication year
-	</td>
-</tr>
-<tr><td colspan="4"><input type="submit"><input type="reset"></td>
-</tr>
-</table>
-<PRE>
-  Examples:
-  <div id="ex1" onclick="cel=document.getElementById('ex1'); document.quicksearch.XQUERYX.value=cel.childNodes[0].nodeValue; return false;">&lt;query&gt;&lt;word path="ti"&gt;java&lt;/word&gt;&lt;/query&gt;</div>
-  <br/>
-  <div id="ex2" onclick="cel=document.getElementById('ex2'); document.quicksearch.XQUERYX.value=cel.childNodes[0].nodeValue; return false;">&lt;query&gt;&lt;word &gt;diode&lt;/word&gt;&lt;/query&gt;</div>
-  <br/>
-  <div id="ex3" onclick="cel=document.getElementById('ex3'); document.quicksearch.XQUERYX.value=cel.childNodes[0].nodeValue; return false;">&lt;query&gt;&lt;andQuery&gt;&lt;orQuery&gt;&lt;word path="ti"&gt;hello*&lt;/word&gt;&lt;word&gt;world acid&lt;/word&gt;&lt;/orQuery&gt;&lt;notQuery&gt;&lt;word&gt;goodbye&lt;/word&gt;&lt;word&gt;shift&lt;/word&gt;&lt;/notQuery&gt;&lt;/andQuery&gt;&lt;/query&gt;</div>
-</PRE>
+  <tr><td colspan="4"><center><H2>OPENXML TEST PAGE</H2></center></td></tr>
+  <tr><td colspan="4"><hr/></td></tr>
+  <tr>
+  	<td colspan="4">Please select display format</td>
+  </tr>
+  <tr>
+     <td colspan="4"><hr></td></tr>
+  <tr>
+  	<td colspan="4">Please select a database</td>
+  </tr>
+  <input type=hidden name="CID" value="openXML">
+  <tr>
+  	<td colspan="4">
+      <input type="checkbox" name="alldb" style="vertical-align:middle;" id="allchkbx" value="191943" onClick="change('alldb');"/><label for="allchkbx">All</label>
+      <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="1" id="cpxchkbx" checked="checked" /><label for="cpxchkbx">Compendex</label>
+      <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="2" id="inschkbx" checked="checked" /><label for="inschkbx">Inspec</label>
+      <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="4" id="ntichkbx" checked="checked" /><label for="ntichkbx">NTIS</label>
+      <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="64" id="pchchkbx" /><label for="pchchkbx">PaperChem</label>
+      <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="128" id="chmchkbx" /><label for="chmchkbx">Chimica</label>
+      <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="256" id="cbnchkbx" checked="checked" /><label for="cbnchkbx">CBNB</label>
+      <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="1024" id="eltchkbx" /><label for="eltchkbx">EnCompassLIT</label>
+      <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="2048" id="eptchkbx" /><label for="eptchkbx">EnCompassPAT</label>
+      <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="8192" id="geochkbx" checked="checked" /><label for="geochkbx">GEOBASE</label>
+      <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="32768" id="upachkbx" checked="checked" /><label for="upachkbx">US Patents</label>
+      <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="16384" id="eupchkbx" checked="checked" /><label for="eupchkbx">EP Patents</label>
+      <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="131072" id="pagchkbx" /><label for="pagchkbx">Referex</label>
+  	  <input type="text" name="DATABASE" disabled/>
+  	</td>
+  </tr>
+  <tr><td colspan="4"><hr></td></tr>
+  <tr>
+  	<td colspan="4">Please enter your query</td>
+  </tr>
+  <tr>
+  	<td colspan="4">
+  		<TEXTAREA ROWS="10" COLS="60" WRAP="PHYSICAL" NAME="XQUERYX"></TEXTAREA>
+  	</td>
+  </tr>
+  <tr><td colspan="4"><hr></td></tr>
+  <tr>
+  	<td colspan="4">
+  		<input type="radio" name="AUTOSTEM" value="on" checked="">&nbsp;AutoStemming On
+  		<input type="radio" name="AUTOSTEM" value="off">&nbsp;AutoStemming off
+  </tr>
+  <tr>
+  	<td colspan="4">
+  	  <label for="STARTYEAR">Start Year</label><select NAME="STARTYEAR"></select>
+  	&nbsp;
+  	  <label for="ENDYEAR">End Year</label><select NAME="ENDYEAR"></select>
+  	</td>
+  </tr>
+  <tr><td colspan="4"><hr></td></tr>
+  <tr><td colspan="4">Sort By</td></tr>
+  <tr>
+  	<td colspan="4">
+  		<input type="radio" name="SORT" value="re" checked>Relevance&nbsp;
+  		<input type="radio" name="SORT" value="yr">Publication year
+  	</td>
+  </tr>
+  <tr>
+      <td colspan="4">
+      <input type="submit" name="xmlsearch"><input type="reset"></td>
+  </tr>
+  </table>
+  <PRE>
+    Examples:
+    <div id="ex1" onclick="cel=document.getElementById('ex1'); document.quicksearch.XQUERYX.value=cel.childNodes[0].nodeValue; return false;">&lt;query&gt;&lt;word path="ti"&gt;java&lt;/word&gt;&lt;/query&gt;</div>
+    <br/>
+    <div id="ex2" onclick="cel=document.getElementById('ex2'); document.quicksearch.XQUERYX.value=cel.childNodes[0].nodeValue; return false;">&lt;query&gt;&lt;word &gt;diode&lt;/word&gt;&lt;/query&gt;</div>
+    <br/>
+    <div id="ex3" onclick="cel=document.getElementById('ex3'); document.quicksearch.XQUERYX.value=cel.childNodes[0].nodeValue; return false;">&lt;query&gt;&lt;andQuery&gt;&lt;orQuery&gt;&lt;word path="ti"&gt;hello*&lt;/word&gt;&lt;word&gt;world acid&lt;/word&gt;&lt;/orQuery&gt;&lt;notQuery&gt;&lt;word&gt;goodbye&lt;/word&gt;&lt;word&gt;shift&lt;/word&gt;&lt;/notQuery&gt;&lt;/andQuery&gt;&lt;/query&gt;</div>
+  </PRE>
 </form>
 
 
