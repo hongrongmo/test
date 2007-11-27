@@ -7,6 +7,7 @@
 	RuntimeProperties eiProps = null;
     DatabaseConfig databaseConfig = null;
     int customizedEndYear = (Calendar.getInstance()).get(Calendar.YEAR);
+    
   	
   	public void jspInit()
   	{
@@ -26,6 +27,10 @@
   	ControllerClient client = new ControllerClient(request, response);
 
 	docId = request.getParameter("docid");
+	boolean isTag  = false;
+	
+	BooleanQuery bQuery = null;
+   	HitHighlighter highlighter = null;
 
 	//long terms docId = "ept_7ced0110061a9bb5fM7f0119255120119";
 	//docId ="elt_fabe9fe337d1a1eM445719817173223";
@@ -33,18 +38,26 @@
 	String searchId = request.getParameter("searchId");
 	String searchType = request.getParameter("searchType");
 	String database = request.getParameter("database");
-	
+	String stag = request.getParameter("istag");
+	if(stag != null && stag.equals("tag"))
+	{
+		isTag = true;
+	}
+		
 	UserSession ussession=(UserSession)client.getUserSession();
     User user = ussession.getUser();
     String[] credentials = user.getCartridge();
     String sessionId = ussession.getID();
-	queryObject = Searches.getSearch(searchId);
-    queryObject.setSearchQueryWriter(new FastQueryWriter());
-    queryObject.setDatabaseConfig(databaseConfig);
-    queryObject.setCredentials(credentials);
-           
-    BooleanQuery bQuery = queryObject.getParseTree();
-    HitHighlighter highlighter = new HitHighlighter(bQuery);
+    
+    if (!isTag && searchId != null && !searchId.equals(""))
+    {
+		queryObject = Searches.getSearch(searchId);
+    	queryObject.setSearchQueryWriter(new FastQueryWriter());
+    	queryObject.setDatabaseConfig(databaseConfig);
+    	queryObject.setCredentials(credentials);
+    	bQuery = queryObject.getParseTree();     
+   		highlighter = new HitHighlighter(bQuery);
+   	}
 	MultiDatabaseDocBuilder builder = new MultiDatabaseDocBuilder();  	
 	List docIds = new ArrayList();
 	DatabaseConfig dConfig = DatabaseConfig.getInstance();
@@ -52,13 +65,21 @@
     DocID did = new DocID(docId, databse);
 	docIds.add(did); 
 	List listOfDocIDs = builder.buildPage(docIds,LinkedTermDetail.LINKEDTERM_FORMAT);
-	
+
 	if(listOfDocIDs != null && listOfDocIDs.size() > 0)
 	{
 		EIDoc eiDoc = (EIDoc) listOfDocIDs.get(0);
-		eiDoc = (EIDoc)highlighter.highlight(eiDoc);
-		terms =(String) eiDoc.getLongTerms();
-		terms =HitHighlightFinisher.addMarkup(terms);
+		if(!isTag && searchId != null && !searchId.equals(""))
+		{
+			eiDoc = (EIDoc)highlighter.highlight(eiDoc);
+		}
+		
+		terms = (String) eiDoc.getLongTerms();
+		
+		if(!isTag && searchId != null && !searchId.equals(""))
+		{
+			terms = HitHighlightFinisher.addMarkup(terms);
+		}
 	}
 
 	if (terms == null || terms.trim().equals(""))
