@@ -182,7 +182,11 @@ public class ResultNavigator
         {
           if(m_cbnbOnly)
           {
-            anav.setDisplayname("Industrial sector descriptors");
+            fastnavigators.remove(anav);
+
+            EiNavigator afnav = copyNavigator(anav, new EiNavigator(EiNavigator.GD));
+
+            fastnavigators.add(afnav);
           }
           //if(mask == upa || mask == eup || mask == ept || mask == upa + eup || mask == upa + ept || mask == eup + ept || mask == upa + eup + ept)
           else if((m_uspatents || m_eupatents|| m_encompasspat)&& !(m_books || m_cbnb || m_compendex || m_inspec || m_ntis || m_geobase || m_encompasslit || m_paperchem || m_chimica))
@@ -308,9 +312,13 @@ public class ResultNavigator
           //if(mask == cbn)
           if(m_cbnbOnly)
           {
+            fastnavigators.remove(anav);
+
             // if cbnb and nothing else
             //CL (Industrial sector, GIC->CL)
-            anav.setDisplayname("Industrial sector");
+            EiNavigator clnav = copyNavigator(anav, new EiNavigator(EiNavigator.IC));
+
+            fastnavigators.add(clnav);
           }
           //else if (mask = pag)
           else if(m_booksOnly)
@@ -449,8 +457,7 @@ public class ResultNavigator
             //PEC (Chemicals, CIN->PEC)
             fastnavigators.remove(anav);
 
-            EiNavigator pidnav = copyNavigator(anav);
-            pidnav.setDisplayname("Companies");
+            EiNavigator pidnav = copyNavigator(anav, new EiNavigator(EiNavigator.CP));
 
             fastnavigators.add(pidnav);
           }
@@ -478,8 +485,7 @@ public class ResultNavigator
             //PEC (Chemicals, CIN->PEC)
             fastnavigators.remove(anav);
 
-            EiNavigator pecnav = copyNavigator(anav);
-            pecnav.setDisplayname("Chemicals");
+            EiNavigator pecnav = copyNavigator(anav, new EiNavigator(EiNavigator.CM));
 
             fastnavigators.add(pecnav);
           }
@@ -1310,28 +1316,32 @@ public class ResultNavigator
       EiNavigator.  This is useful for removing Navigator specific behaviour
       that exists for Patent navigators that are reused for other non patent codes
       and do not need translation or lookup for mouse overs, etc. */
-    /* Currently it is used for refashioning the PID and PEC navigators for CBNB */
+    /* Currently it is used for refashioning navigators for CBNB */
     private EiNavigator copyNavigator(EiNavigator anav)
     {
-        EiNavigator newnav = new EiNavigator(anav.getName());
+      return  copyNavigator(anav, new EiNavigator(anav.getName()));
+    }
 
-        List copiedmods = new ArrayList();
-        Iterator itrMods = anav.getModifiers().iterator();
-        while (itrMods.hasNext()) {
-          EiModifier amod = (EiModifier) itrMods.next();
-          // skip any empty modifiers
-          if((amod != null) && (amod.getLabel().length() != 0))
+    private EiNavigator copyNavigator(EiNavigator anav, EiNavigator newnav)
+    {
+
+      List copiedmods = new ArrayList();
+      Iterator itrMods = anav.getModifiers().iterator();
+      while (itrMods.hasNext()) {
+        EiModifier amod = (EiModifier) itrMods.next();
+        // skip any empty modifiers
+        if((amod != null) && (amod.getLabel().length() != 0))
+        {
+          EiModifier newmod = newnav.createModifier(amod.getCount(), amod.getLabel(), amod.getValue());
+          if(newmod != null)
           {
-            EiModifier newmod = newnav.createModifier(amod.getCount(), amod.getLabel(), amod.getValue());
-            if(newmod != null)
-            {
-              copiedmods.add(newmod);
-            }
+            copiedmods.add(newmod);
           }
         }
+      }
 
-        newnav.setModifiers(copiedmods);
+      newnav.setModifiers(copiedmods);
 
-        return newnav;
+      return newnav;
     }
 }
