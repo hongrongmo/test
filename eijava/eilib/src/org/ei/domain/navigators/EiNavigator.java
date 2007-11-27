@@ -61,6 +61,11 @@ public class EiNavigator
   public static final String BKS = "bksnav";
 
 
+  public static final String GD = "gdnav";
+  public static final String IC = "icnav";
+  public static final String CM = "cmnav";
+  public static final String CP = "cpnav";
+
   // for search within search
   public static final String ALL = "all";
 
@@ -88,6 +93,12 @@ public class EiNavigator
         displayNames.put(EiNavigator.KY,"Keyword");
         displayNames.put(EiNavigator.BKT,"Book Title");
         displayNames.put(EiNavigator.BKS,"Book Chapter");
+
+
+        displayNames.put(EiNavigator.GD,"Industrial Sector");
+        displayNames.put(EiNavigator.IC,"SIC Code");
+        displayNames.put(EiNavigator.CM,"Chemicals");
+        displayNames.put(EiNavigator.CP,"Companies");
 
    }
 
@@ -117,6 +128,11 @@ public class EiNavigator
         navigatorNames.add(EiNavigator.KY);
         navigatorNames.add(EiNavigator.BKT);
         navigatorNames.add(EiNavigator.BKS);
+
+        navigatorNames.add(EiNavigator.GD);
+        navigatorNames.add(EiNavigator.IC);
+        navigatorNames.add(EiNavigator.CM);
+        navigatorNames.add(EiNavigator.CP);
     }
     public static List getNavigatorNames() { return navigatorNames; }
 
@@ -147,6 +163,11 @@ public class EiNavigator
         fieldNames.put(EiNavigator.KY,"ky");
         fieldNames.put(EiNavigator.BKT,"bkt");
         fieldNames.put(EiNavigator.BKS,"bks");
+
+        fieldNames.put(EiNavigator.GD,"gd");
+        fieldNames.put(EiNavigator.IC,"ic");
+        fieldNames.put(EiNavigator.CM,"cm");
+        fieldNames.put(EiNavigator.CP,"cp");
     }
 
     private String name = StringUtil.EMPTY_STRING;
