@@ -321,6 +321,66 @@ public class FastClient
             }
         }
     }
+    
+    public static boolean unitTest(String args[])
+    									throws Exception
+    {
+        BufferedReader in = null;
+        boolean testResult = false;
+
+        try
+        {
+            StringBuffer queryBuf = new StringBuffer();
+            int expectedResult = Integer.parseInt( args[0]);
+            if (args[1] != null)
+            {
+                queryBuf.append(args[1]);
+            }
+            FastClient client = new FastClient();
+            client.setBaseURL("http://rei11.bos3.fastsearch.net:15100");
+            client.setResultView("ei");
+            client.setOffSet(0);
+            client.setPageSize(25);
+            client.setQueryString(queryBuf.toString());
+            client.setDoCatCount(true);
+            client.setDoNavigators(true);
+            client.setPrimarySort("ausort");
+            client.setPrimarySortDirection("+");
+            client.search();
+
+            List l = client.getDocIDs();
+            int result = 0;
+            // keep this block to add additonal conditions on docID tests
+            for(int i=0;i<l.size();i++)
+            {
+                String[] docID = (String[])l.get(i);
+                result++;
+            }
+
+            Hashtable cl = client.getSubcats();
+            Enumeration clusterKeys = cl.keys();
+            while(clusterKeys.hasMoreElements())
+            {
+                String clusterKey = (String)clusterKeys.nextElement();
+                String clusterValue = (String)cl.get(clusterKey);
+            }
+            
+            if(expectedResult == result)
+            {
+                testResult = true;
+            }
+        }
+        finally
+        {
+            if(in != null)
+            {
+                in.close();
+            }
+        }
+        System.out.println("fastclient::"+testResult);
+        return testResult;
+    }
+    
 
     public void setResultView(String r)
     {
