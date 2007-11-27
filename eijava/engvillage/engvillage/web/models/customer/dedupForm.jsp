@@ -87,7 +87,6 @@
 		dedupableDb.add(databaseConfig.getDatabase((String)strDb.get(i)));
 	}
 	*/
-	Collections.sort(dedupableDb);
 
 	client.setRemoteControl();
 
