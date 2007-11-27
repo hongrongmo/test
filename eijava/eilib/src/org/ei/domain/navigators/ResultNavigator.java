@@ -319,6 +319,7 @@ public class ResultNavigator
             // Uses CleanCLFacet
             // CL (Book Collection, CL)
             cleanCLFacet();
+            anav.setDisplayname("Book Collection");
           }
           //else if((mask :: cpx  || mask :: cbf || mask :: ins  || mask :: nti  ||  mask :: geo || mask :: elt) && (mask !: cbn || mask !: upa || mask !: eup || mask !: pag || mask !: chm || mask !: pch || mask !: ept))
           else if((m_compendex || m_inspec || m_ntis || m_geobase || m_encompasslit) && !(m_cbnb || m_uspatents || m_eupatents || m_books || m_chimica || m_paperchem || m_encompasspat))
@@ -339,6 +340,7 @@ public class ResultNavigator
           {
               // get DT nav and always remove it if books only
               fastnavigators.remove(anav);
+              anav = null;
           }
           // There is some document type data for EnCompassPAT, but it is only present for US patents.  Mary doesn't think DT navigatior should be displayed for EPT.
           //if((mask :: cpx || mask :: cbf || mask :: ins || mask :: nti || mask :: geo || mask :: cbn || mask :: upa || mask :: eup  || mask :: chm || mask :: pch || mask :: elt) && (mask !: pag || mask !: ept))
@@ -346,29 +348,34 @@ public class ResultNavigator
           {
             anav.setDisplayname("Document type");
           }
-          // Document type -- editing values from navigator
-          else if((m_uspatents || m_eupatents) && !(m_compendex || m_inspec || m_ntis || m_geobase || m_encompasslit || m_encompasspat || m_paperchem || m_chimica || m_cbnb || m_books))
-          {
-            // Remove the document type "Patent" from DT.
-            anav.setDisplayname("Patent type");
-            anav.getModifiers().remove(EiModifier.PATENT);
-          }
-          else if((m_uspatents || m_eupatents) && (m_compendex || m_inspec || m_ntis || m_geobase || m_encompasslit || m_encompasspat || m_paperchem || m_chimica || m_cbnb || m_books))
-          //else if(mask :: upa || mask :: eup)
-          {
-            // Remove the following document types from DT:
-            // US Grants
-            // US Applications
-            // European Grants
-            // European Applications
-            anav.getModifiers().remove(EiModifier.US_GRANTS);
-            anav.getModifiers().remove(EiModifier.US_APPLICATIONS);
-            anav.getModifiers().remove(EiModifier.EU_GRANTS);
-            anav.getModifiers().remove(EiModifier.EU_APPLICATIONS);
-          }
           else
           {
             fastnavigators.remove(anav);
+            anav = null;
+          }
+
+          if(anav != null)
+          {
+            // Document type -- editing values from navigator
+            if((m_uspatents || m_eupatents) && !(m_compendex || m_inspec || m_ntis || m_geobase || m_encompasslit || m_encompasspat || m_paperchem || m_chimica || m_cbnb || m_books))
+            {
+              // Remove the document type "Patent" from DT.
+              anav.setDisplayname("Patent type");
+              anav.getModifiers().remove(EiModifier.PATENT);
+            }
+            else if((m_uspatents || m_eupatents) && (m_compendex || m_inspec || m_ntis || m_geobase || m_encompasslit || m_encompasspat || m_paperchem || m_chimica || m_cbnb || m_books))
+            //else if(mask :: upa || mask :: eup)
+            {
+              // Remove the following document types from DT:
+              // US Grants
+              // US Applications
+              // European Grants
+              // European Applications
+              anav.getModifiers().remove(EiModifier.US_GRANTS);
+              anav.getModifiers().remove(EiModifier.US_APPLICATIONS);
+              anav.getModifiers().remove(EiModifier.EU_GRANTS);
+              anav.getModifiers().remove(EiModifier.EU_APPLICATIONS);
+            }
           }
         }
         // FL
