@@ -321,7 +321,12 @@ String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
 		out.write("</RESULTS-COUNT>");
 		out.write("</BASKET-NAVIGATION>");
 	}
-	databaseConfig.toXML(credentials, out);
+	databaseConfig.toXML(credentials, out);	 
+	%>		
+		<%@ include file="encFieldsJS.jsp"%>
+	<%
+
+
 	out.write("</PAGE>");
 	out.flush();
 %>
