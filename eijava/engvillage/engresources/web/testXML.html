@@ -35,22 +35,22 @@
         if(db == 'database')
         {
           clearAlldb();
-          document.quicksearch.DATABASE.value = calculateMask(document.quicksearch.database);
+          document.quicksearch.DATABASE.value = calculateMask(document.quicksearch.dbchkbx);
         }
         else
         {
           clearDatabase();
-          document.quicksearch.DATABASE.value = calculateMask(document.quicksearch.database);
+          document.quicksearch.DATABASE.value = calculateMask(document.quicksearch.dbchkbx);
         }
       }
 
       function clearDatabase()
       {
-        for(var i=0; i<document.quicksearch.database.length; i++)
+        for(var i=0; i<document.quicksearch.dbchkbx.length; i++)
         {
-          if(document.quicksearch.database[i].checked)
+          if(document.quicksearch.dbchkbx[i].checked)
           {
-            document.quicksearch.database[i].checked=false;
+            document.quicksearch.dbchkbx[i].checked=false;
           }
         }
       }
@@ -67,7 +67,7 @@
     </script>
   </head>
 <body>
-<form name="quicksearch" action="/controller/servlet/Controller" method="post" onsubmit="change('database'); return true;">
+<form name="quicksearch" action="/controller/servlet/Controller" method="get" onsubmit="change('database'); return true;">
 <table border="0">
   <tr><td colspan="4"><center><H2>OPENXML TEST PAGE</H2></center></td></tr>
   <tr><td colspan="4"><hr/></td></tr>
@@ -83,19 +83,20 @@
   <tr>
   	<td colspan="4">
       <input type="checkbox" name="alldb" style="vertical-align:middle;" id="allchkbx" value="191943" onClick="change('alldb');"/><label for="allchkbx">All</label>
-      <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="1" id="cpxchkbx" checked="checked" /><label for="cpxchkbx">Compendex</label>
-      <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="2" id="inschkbx" checked="checked" /><label for="inschkbx">Inspec</label>
-      <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="4" id="ntichkbx" checked="checked" /><label for="ntichkbx">NTIS</label>
-      <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="64" id="pchchkbx" /><label for="pchchkbx">PaperChem</label>
-      <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="128" id="chmchkbx" /><label for="chmchkbx">Chimica</label>
-      <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="256" id="cbnchkbx" checked="checked" /><label for="cbnchkbx">CBNB</label>
-      <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="1024" id="eltchkbx" /><label for="eltchkbx">EnCompassLIT</label>
-      <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="2048" id="eptchkbx" /><label for="eptchkbx">EnCompassPAT</label>
-      <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="8192" id="geochkbx" checked="checked" /><label for="geochkbx">GEOBASE</label>
-      <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="32768" id="upachkbx" checked="checked" /><label for="upachkbx">US Patents</label>
-      <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="16384" id="eupchkbx" checked="checked" /><label for="eupchkbx">EP Patents</label>
-      <input style="vertical-align:middle" type="checkbox" name="database" onClick="change('database');" value="131072" id="pagchkbx" /><label for="pagchkbx">Referex</label>
-  	  <input type="text" name="DATABASE" disabled/>
+      <input style="vertical-align:middle" type="checkbox" name="dbchkbx" onClick="change('database');" value="1" id="cpxchkbx" checked="checked" /><label for="cpxchkbx">Compendex</label>
+      <input style="vertical-align:middle" type="checkbox" name="dbchkbx" onClick="change('database');" value="2" id="inschkbx" checked="checked" /><label for="inschkbx">Inspec</label>
+      <input style="vertical-align:middle" type="checkbox" name="dbchkbx" onClick="change('database');" value="4" id="ntichkbx" checked="checked" /><label for="ntichkbx">NTIS</label>
+      <input style="vertical-align:middle" type="checkbox" name="dbchkbx" onClick="change('database');" value="64" id="pchchkbx" /><label for="pchchkbx">PaperChem</label>
+      <input style="vertical-align:middle" type="checkbox" name="dbchkbx" onClick="change('database');" value="128" id="chmchkbx" /><label for="chmchkbx">Chimica</label>
+      <input style="vertical-align:middle" type="checkbox" name="dbchkbx" onClick="change('database');" value="256" id="cbnchkbx" checked="checked" /><label for="cbnchkbx">CBNB</label>
+      <input style="vertical-align:middle" type="checkbox" name="dbchkbx" onClick="change('database');" value="1024" id="eltchkbx" /><label for="eltchkbx">EnCompassLIT</label>
+      <input style="vertical-align:middle" type="checkbox" name="dbchkbx" onClick="change('database');" value="2048" id="eptchkbx" /><label for="eptchkbx">EnCompassPAT</label>
+      <input style="vertical-align:middle" type="checkbox" name="dbchkbx" onClick="change('database');" value="8192" id="geochkbx" checked="checked" /><label for="geochkbx">GEOBASE</label>
+      <input style="vertical-align:middle" type="checkbox" name="dbchkbx" onClick="change('database');" value="32768" id="upachkbx" checked="checked" /><label for="upachkbx">US Patents</label>
+      <input style="vertical-align:middle" type="checkbox" name="dbchkbx" onClick="change('database');" value="16384" id="eupchkbx" checked="checked" /><label for="eupchkbx">EP Patents</label>
+      <input style="vertical-align:middle" type="checkbox" name="dbchkbx" onClick="change('database');" value="131072" id="pagchkbx" /><label for="pagchkbx">Referex</label>
+      <!-- This variable wil be set by the JS according to the value of the Checkboxes -->
+      <input name="DATABASE" type="hidden" value="0"/>
   	</td>
   </tr>
   <tr><td colspan="4"><hr></td></tr>
@@ -156,6 +157,8 @@
       }
     }
     document.quicksearch.ENDYEAR.options[--j].selected = true;
+
+    document.quicksearch.DATABASE = calculateMask(document.quicksearch.dbchkbx);
     // -->
     </script>
 
