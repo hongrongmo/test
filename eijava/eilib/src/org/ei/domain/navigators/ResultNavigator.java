@@ -489,6 +489,17 @@ public class ResultNavigator
 
             fastnavigators.add(pecnav);
           }
+          // else if(mask == elt || mask == ept || mask == elt + ept)
+          else if((m_encompasslit || m_encompasspat) && !(m_compendex ||  m_inspec || m_ntis || m_geobase || m_cbnb || m_chimica || m_paperchem || m_uspatents || m_eupatents || m_books))
+          {
+            anav.setDisplayname("");
+            fastnavigators.remove(anav);
+
+            EiNavigator pecnav = copyNavigator(anav);
+            pecnav.setDisplayname("Major terms");
+
+            fastnavigators.add(pecnav);
+          }
           //else if((mask :: eup) &&  (mask !: cpx || mask !: cbf || mask !: ins || mask !: nti || mask !: geo || mask !: upa || mask !: chm || mask !: pag || mask !: pch || mask !: elt || mask !: ept))
           else if(m_euppatentsOnly)
           {
