@@ -109,13 +109,51 @@
 				{
 					clearTerms(termtype, docid);
 					elementimgTerm.src="/engresources/images/encPlus.gif";
-					elementimg.src="/engresources/images/encLinkedOpen.gif";
+				    if(termtype == "lst")
+				    {
+				        elementimg.src="/engresources/images/encLinkedOpen.gif";
+				    }
+				    else if (termtype == "mlt")
+				    {
+				    	elementimg.src="/engresources/images/encMltOpen.gif";
+				    }
+				    else if (termtype == "atm")
+				    {
+				    	elementimg.src="/engresources/images/encTemplatesOpen.gif";
+				    }
+				    else if (termtype == "longlt")
+				    {
+				    	elementimg.src="/engresources/images/encLinkedOpen.gif";
+				    }				    
+				    else
+				    {
+				    	elementimg.src="/engresources/images/encLinkedOpen.gif";
+				    }
 				}
 				else
 				{
-					draw(terms, termtype, docid );
-					elementimgTerm.src="/engresources/images/encMinus.gif";
-					elementimg.src="/engresources/images/encLinkedClose.gif";	
+				    draw(terms, termtype, docid );
+				    elementimgTerm.src="/engresources/images/encMinus.gif";					
+				    if(termtype == "lst")
+				    {
+				        elementimg.src="/engresources/images/encLinkedClose.gif";
+				    }
+				    else if (termtype == "mlt")
+				    {
+				    	elementimg.src="/engresources/images/encMltClose.gif";
+				    }
+				    else if (termtype == "atm")
+				    {
+				    	elementimg.src="/engresources/images/encTemplatesClose.gif";
+				    }
+				    else if (termtype == "longlt")
+				    {
+				    	elementimg.src="/engresources/images/encLinkedClose.gif";
+				    }
+				    else 
+				    {
+				    	elementimg.src="/engresources/images/encLinkedClose.gif";
+				    }	
 				}							
 								
 	}
