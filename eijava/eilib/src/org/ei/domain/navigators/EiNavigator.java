@@ -65,6 +65,7 @@ public class EiNavigator
   public static final String IC = "icnav";
   public static final String CM = "cmnav";
   public static final String CP = "cpnav";
+  public static final String RO = "ronav";
 
   // for search within search
   public static final String ALL = "all";
@@ -100,6 +101,7 @@ public class EiNavigator
         displayNames.put(EiNavigator.CM,"Chemicals");
         displayNames.put(EiNavigator.CP,"Companies");
 
+        displayNames.put(EiNavigator.RO,"Role");
    }
 
     // The default order of appearance is driven off the order of this list.
@@ -133,6 +135,8 @@ public class EiNavigator
         navigatorNames.add(EiNavigator.IC);
         navigatorNames.add(EiNavigator.CM);
         navigatorNames.add(EiNavigator.CP);
+
+        navigatorNames.add(EiNavigator.RO);
     }
     public static List getNavigatorNames() { return navigatorNames; }
 
@@ -168,6 +172,7 @@ public class EiNavigator
         fieldNames.put(EiNavigator.IC,"ic");
         fieldNames.put(EiNavigator.CM,"cm");
         fieldNames.put(EiNavigator.CP,"cp");
+        fieldNames.put(EiNavigator.RO,"ro");
     }
 
     private String name = StringUtil.EMPTY_STRING;
