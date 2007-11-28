@@ -522,7 +522,7 @@
             client.addComment("FAST Query:"+queryObject.getSearchQuery());
             client.addComment("EI Query"+queryObject.getPhysicalQuery());
 
-	    long beginQuery = System.currentTimeMillis();
+            long beginQuery = System.currentTimeMillis();
 
             result = sc.openSearch(queryObject,
                   sessionId,
@@ -862,6 +862,9 @@
                 {
                     errorCode = request.getParameter("errorCode");
                 }
+
+                client.addComment("Fast Query:"+queryObject.getSearchQuery());
+                client.addComment("EI Query"+queryObject.getPhysicalQuery());
 
                 // Logging
                 client.log("SEARCH_ID", searchID);
