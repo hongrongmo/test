@@ -402,13 +402,7 @@ public class ResultNavigator
               anav.setName("kynav");
             }
           }
-          //else if(mask == elt || mask == ept || mask == elt + ept)
-          else if((m_encompasslit || m_encompasspat) && !(m_compendex ||  m_inspec || m_ntis || m_geobase || m_cbnb || m_chimica || m_paperchem || m_uspatents || m_eupatents || m_books))
-          {
-            // Qualifier was created for EnCompassLIT and EnCompassPAT extracts.  Not quite sure how searching on this field works.
-            // FL (Qualifier, FL)
-            anav.setDisplayname("Qualifier");
-          }
+          // No longer used for Qualifier for EncLit and EncPat - now uses PUC as Role
           //else if((mask :: chm || mask :: pch) && (mask !: cpx || mask !: cbf || mask !: ins || mask !: nti || mask !: geo || mask !: cbn || mask !: upa || mask !: eup || mask !: pag || mask !: elt || mask !: ept))
           else if((m_chimica || m_paperchem) && !(m_compendex || m_inspec || m_ntis || m_geobase || m_cbnb || m_uspatents || m_eupatents || m_books || m_encompasslit || m_encompasspat))
           {
@@ -463,7 +457,7 @@ public class ResultNavigator
           }
           // IPC data from the PK navigator should display if only EnCompassPAT is searched.
           //else if(mask == upa || mask == eup || mask == upa + eup || mask == upa + ept || mask == eup + ept || mask == upa + eup + ept)
-          else if(((m_uspatents || m_eupatents) || ((m_uspatents || m_eupatents) && m_encompasspat)) && !(m_compendex || m_inspec || m_ntis || m_geobase || m_cbnb ||  m_books || m_encompasslit))
+          else if(((m_uspatents || m_eupatents) || (m_encompasspat) && !(m_compendex || m_inspec || m_ntis || m_geobase || m_cbnb ||  m_books || m_encompasslit))
           {
             //PID (IPC Code, PID)
             anav.setDisplayname("IPC code");
@@ -492,7 +486,6 @@ public class ResultNavigator
           // else if(mask == elt || mask == ept || mask == elt + ept)
           else if((m_encompasslit || m_encompasspat) && !(m_compendex ||  m_inspec || m_ntis || m_geobase || m_cbnb || m_chimica || m_paperchem || m_uspatents || m_eupatents || m_books))
           {
-            anav.setDisplayname("");
             fastnavigators.remove(anav);
 
             EiNavigator pecnav = copyNavigator(anav);
@@ -523,6 +516,15 @@ public class ResultNavigator
           	//PUC (US Classification, PUC)
             anav.setDisplayname("US Classification");
           }
+          // else if(mask == elt || mask == ept || mask == elt + ept)
+          else if((m_encompasslit || m_encompasspat) && !(m_compendex ||  m_inspec || m_ntis || m_geobase || m_cbnb || m_chimica || m_paperchem || m_uspatents || m_eupatents || m_books))
+          {
+            fastnavigators.remove(anav);
+
+            EiNavigator pecnav = copyNavigator(anav, new EiNavigator(EiNavigator.RO));
+
+            fastnavigators.add(pecnav);
+          }
           else
           {
             fastnavigators.remove(anav);
@@ -534,22 +536,8 @@ public class ResultNavigator
         anav = getNavigatorByName(EiNavigator.PK);
         if(anav != null)
         {
-          // Patent Kind -- only used for EnCompassPAT IPC codes in Derwent provided format
-          //if(mask == ept)
-          if(m_encompasspatOnly)
-          {
-          	//PK (IPC code, IC->PK)
-            fastnavigators.remove(anav);
-
-            EiNavigator pknav = copyNavigator(anav);
-            pknav.setDisplayname("IPC code");
-
-            fastnavigators.add(pknav);
-          }
-          else
-          {
-            fastnavigators.remove(anav);
-          }
+          /* Totally suppressed */
+          fastnavigators.remove(anav);
         }
 
         // PAC
