@@ -457,7 +457,7 @@ public class ResultNavigator
           }
           // IPC data from the PK navigator should display if only EnCompassPAT is searched.
           //else if(mask == upa || mask == eup || mask == upa + eup || mask == upa + ept || mask == eup + ept || mask == upa + eup + ept)
-          else if(((m_uspatents || m_eupatents) || (m_encompasspat) && !(m_compendex || m_inspec || m_ntis || m_geobase || m_cbnb ||  m_books || m_encompasslit))
+          else if((m_uspatents || m_eupatents) || (m_encompasspat) && !(m_compendex || m_inspec || m_ntis || m_geobase || m_cbnb ||  m_books || m_encompasslit))
           {
             //PID (IPC Code, PID)
             anav.setDisplayname("IPC code");
