@@ -77,11 +77,10 @@ public class FastClient
 				return false;
 			}
 		}
-		// include FL only if Referex is alone, ELT, EPT added
+		// include FL only if Referex is alone,
+		// ELT, EPT removed
 		else if(EiNavigator.FL.equals(navid)) {
-			if((mask == DatabaseConfig.PAG_MASK)||
-				mask == DatabaseConfig.ELT_MASK ||
-				mask == DatabaseConfig.EPT_MASK || (mask == DatabaseConfig.ELT_MASK + DatabaseConfig.EPT_MASK))
+			if(mask == DatabaseConfig.PAG_MASK)
 			{
 				return true;
 			}
@@ -139,9 +138,9 @@ public class FastClient
 							DatabaseConfig.NTI_MASK +
 							DatabaseConfig.GEO_MASK +
 							DatabaseConfig.CBF_MASK +
-			       DatabaseConfig.CBN_MASK +
-			       DatabaseConfig.CHM_MASK +
-			       DatabaseConfig.PCH_MASK +
+              DatabaseConfig.CBN_MASK +
+              DatabaseConfig.CHM_MASK +
+              DatabaseConfig.PCH_MASK +
 							DatabaseConfig.ELT_MASK+
 							DatabaseConfig.EPT_MASK)) > 0)){
 				return true;
@@ -195,12 +194,9 @@ public class FastClient
 				return true;
 			}
 		}
-		// include PK only if EncomapssPat
+		// NEVER include PK
 		else if(EiNavigator.PK.equals(navid)) {
-			if(mask == DatabaseConfig.EPT_MASK)
-			{
-				return true;
-			}
+				return false;
 		}
 
 		return false;
@@ -321,7 +317,7 @@ public class FastClient
             }
         }
     }
-    
+
     public static boolean unitTest(String args[])
     									throws Exception
     {
@@ -364,7 +360,7 @@ public class FastClient
                 String clusterKey = (String)clusterKeys.nextElement();
                 String clusterValue = (String)cl.get(clusterKey);
             }
-            
+
             if(expectedResult == result)
             {
                 testResult = true;
@@ -380,7 +376,7 @@ public class FastClient
         System.out.println("fastclient::"+testResult);
         return testResult;
     }
-    
+
 
     public void setResultView(String r)
     {
