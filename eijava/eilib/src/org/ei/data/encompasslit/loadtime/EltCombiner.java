@@ -4,6 +4,7 @@ import java.io.ByteArrayInputStream;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Hashtable;
+import java.util.Enumeration;
 
 import org.apache.oro.text.perl.*;
 import org.apache.oro.text.regex.*;
@@ -188,8 +189,17 @@ public class EltCombiner extends Combiner {
                 String mproduct = termBuilder.getMajorProductTerms(parsedMH);
                 qfacet.setProduct(mproduct);
                 rec.put(rec.MAJORPRODUCT_TERMS, prepareMulti(mproduct));
-
-                rec.put(rec.UNCONTROLLED_TERMS, prepareMulti(qfacet.getValue()));
+                
+                // rec.put(rec.UNCONTROLLED_TERMS, prepareMulti(qfacet.getValue()));
+                //11/29/07 TS by new specs q facet mapped to uspto code navigator field  
+                
+                rec.put(rec.USPTOCODE, prepareMulti(qfacet.getValue()));
+                
+                // added Free language field 
+                if (rs.getString("apiut") != null) 
+                {
+                    rec.put(EVCombinedRec.UNCONTROLLED_TERMS, prepareMulti(termBuilder.formatCT(StringUtil.replaceNonAscii(replaceNull(rs.getString("apiut"))))));
+                }
                 
                 if (rs.getString("tie") != null) {
                     rec.put(EVCombinedRec.TITLE, StringUtil.replaceNonAscii(replaceNull(rs.getString("tie"))));
@@ -222,9 +232,10 @@ public class EltCombiner extends Combiner {
                     rec.put(EVCombinedRec.AUTHOR, prepareAuthor(stripDelim(StringUtil.replaceNonAscii(authors.toString()))));
                 }
 
-                if (rs.getString("aaf") != null) {
+                if (rs.getString("aaf") != null) 
+                {
 
-                    rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareMulti(StringUtil.replaceNonAscii(EltAusFormatter.formatAffiliation(stripDelim(replaceNull(rs.getString("aaf")), ";")))));
+                    rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareMulti(StringUtil.replaceNonAscii(EltAusFormatter.formatAffiliation(stripDelim(replaceNull(rs.getString("aaf")), ";"))), Constants.AFF));
                 }
 
                 if (rs.getString("apicc") != null) {
@@ -262,8 +273,21 @@ public class EltCombiner extends Combiner {
                     rec.put(EVCombinedRec.LANGUAGE, prepareMulti(StringUtil.replaceNonAscii(replaceNull(rs.getString("lna")))));
                 }
 
-                if (abString != null) {
+                // 11/29/07 TS by new specs "oab"  is appended to "ab" to make searchable 
+                rec.put(EVCombinedRec.OTHER_ABSTRACT, StringUtil.replaceNonAscii(replaceNull(rs.getString("oab"))));                
+                if (abString != null) 
+                {
+                    String oabsract = StringUtil.replaceNonAscii(replaceNull(rs.getString("oab")));                    
+                    if (oabsract != null)
+                    {
+                        abString =  abString.concat(" ").concat(oabsract);
+                    }
+           
                     rec.put(EVCombinedRec.ABSTRACT, StringUtil.replaceNonAscii(replaceNull(abString)));
+                }
+                else if (rs.getString("oab") != null)
+                {
+                    rec.put(EVCombinedRec.ABSTRACT, StringUtil.replaceNonAscii(replaceNull(rs.getString("oab"))));
                 }
 
                 if (rs.getString("cnfnam") != null) {
@@ -337,6 +361,11 @@ public class EltCombiner extends Combiner {
                     rec.put(EVCombinedRec.SERIAL_TITLE, StringUtil.replaceNonAscii(replaceNull(rs.getString("sti"))));
                 }
                 
+                if (rs.getString("apiut") != null) 
+                {
+                    rec.put(EVCombinedRec.UNCONTROLLED_TERMS, prepareMulti(termBuilder.formatCT(StringUtil.replaceNonAscii(replaceNull(rs.getString("apiut"))))));
+                }
+                
                 String apilt = StringUtil.replaceNonAscii(replaceNull(getStringFromClob(rs.getClob("apilt"))));
 
                 rec.put(EVCombinedRec.LINKED_TERMS, prepareMultiLinkedTerm(termBuilder.formatCT(apilt)));
@@ -355,11 +384,12 @@ public class EltCombiner extends Combiner {
                 rec.put(EVCombinedRec.LOAD_NUMBER, rs.getString("load_number"));
                 rec.put(EVCombinedRec.SOURCE, StringUtil.replaceNonAscii(replaceNull(rs.getString("so"))));
                 rec.put(EVCombinedRec.SECONDARY_SRC_TITLE, StringUtil.replaceNonAscii(replaceNull(rs.getString("secsti"))));
-                rec.put(EVCombinedRec.OTHER_ABSTRACT, StringUtil.replaceNonAscii(replaceNull(rs.getString("oab"))));
+                //11/29/07 TS by new specs "oab"  is appended to "ab" to make searchable 
+                // rec.put(EVCombinedRec.OTHER_ABSTRACT, StringUtil.replaceNonAscii(replaceNull(rs.getString("oab"))));
                 rec.put(EVCombinedRec.MAIN_TERM, prepareMulti(StringUtil.replaceNonAscii(replaceNull(rs.getString("apiams"))), Constants.CVS));
                 // rec.put(EVCombinedRec.EDITOR_AFFILIATION, StringUtil.replaceNonAscii(replaceNull(rs.getString("cna"))));
                 rec.put(EVCombinedRec.ABBRV_SRC_TITLE, StringUtil.replaceNonAscii(replaceNull(rs.getString("sta"))));
-                rec.put(EVCombinedRec.COUNTRY, prepareMulti(CountryFormatter.formatCountry(stripDelim(replaceNull(rs.getString("cna")),";"))));
+                rec.put(EVCombinedRec.COUNTRY, prepareMulti(stripDelim(replaceNull(rs.getString("cna")),";"), Constants.CO));
                 if (rs.getString("doi") != null)
                 {
                     rec.put(EVCombinedRec.DOI, rs.getString("doi"));
@@ -622,7 +652,15 @@ public class EltCombiner extends Combiner {
                     {
                     	list.add(eltDocTypes.getMappedDocType(s));
                     }
-                }
+                    else if(constant.equals(Constants.AFF))
+                    {
+                        list.add(formatAffiliation(s));
+                    }
+                    else if(constant.equals(Constants.CO))
+                    {
+                        list.add(CountryFormatter.formatCountry(s));
+                    }     
+                 }
             }
             return (String[]) list.toArray(new String[1]);
         }
@@ -667,6 +705,32 @@ public class EltCombiner extends Combiner {
             return str;
         }
 
+    }
+    
+    private static Hashtable removeaff = new Hashtable();
+    
+    static
+    {
+        removeaff.put("s/\\University\\b/ /gi","s/\\University\\b/ /gi");
+
+    }
+    
+    
+    private String formatAffiliation(String result)
+    {        
+        Enumeration en = removeaff.keys();
+        if(result != null && !result.equals(""))
+        {
+            while (en.hasMoreElements()) 
+            {
+                result = perl.substitute((String)en.nextElement(), result);           
+            }
+            if((result.length()==1) && result.equals("."))
+            {
+                result = " ";
+            }
+        }
+        return result;
     }
     
       
