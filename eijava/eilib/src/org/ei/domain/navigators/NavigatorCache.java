@@ -44,6 +44,7 @@ public class NavigatorCache
             return;
         }
 
+        String navstring = StringUtil.EMPTY_STRING;
         ConnectionBroker broker = null;
         Connection con = null;
         CallableStatement pstmt = null;
@@ -88,20 +89,27 @@ public class NavigatorCache
             pstmt.setString(intStmtIndex++, (nav.getNavigatorByName(EiNavigator.CV) != null) ? nav.getNavigatorByName(EiNavigator.CV).toString() : StringUtil.EMPTY_STRING);
 //          pstmt.setString(intStmtIndex++, "");
 
-            pstmt.setString(intStmtIndex++, (nav.getNavigatorByName(EiNavigator.CL) != null) ? nav.getNavigatorByName(EiNavigator.CL).toString() : StringUtil.EMPTY_STRING);
+            navstring = StringUtil.EMPTY_STRING;
+            if(nav.getNavigatorByName(EiNavigator.CL) != null) {
+              navstring = nav.getNavigatorByName(EiNavigator.CL).toString();
+            }
+            else if(nav.getNavigatorByName(EiNavigator.IC) != null)
+            {
+              navstring = nav.getNavigatorByName(EiNavigator.IC).toString();
+            }
+            pstmt.setString(intStmtIndex++, navstring);
 
-            String flnav = (nav.getNavigatorByName(EiNavigator.FL) != null) ? nav.getNavigatorByName(EiNavigator.FL).toString() : StringUtil.EMPTY_STRING;   
+            String flnav = (nav.getNavigatorByName(EiNavigator.FL) != null) ? nav.getNavigatorByName(EiNavigator.FL).toString() : StringUtil.EMPTY_STRING;
             if(nav.getNavigatorByName(EiNavigator.KY) != null)
             {
-            	flnav = nav.getNavigatorByName(EiNavigator.KY).toString();
+              flnav = nav.getNavigatorByName(EiNavigator.KY).toString();
             }
             pstmt.setString(intStmtIndex++, zipText(flnav));
 
-            String stnav = (nav.getNavigatorByName(EiNavigator.ST) != null) ? nav.getNavigatorByName(EiNavigator.ST).toString() : StringUtil.EMPTY_STRING;   
+            String stnav = (nav.getNavigatorByName(EiNavigator.ST) != null) ? nav.getNavigatorByName(EiNavigator.ST).toString() : StringUtil.EMPTY_STRING;
             if(nav.getNavigatorByName(EiNavigator.BKT) != null)
             {
-            	stnav = nav.getNavigatorByName(EiNavigator.BKT).toString();
-                //System.out.println(" BKT " + stnav);
+              stnav = nav.getNavigatorByName(EiNavigator.BKT).toString();
             }
             pstmt.setString(intStmtIndex++, zipText(stnav));
 
@@ -118,19 +126,51 @@ public class NavigatorCache
             pstmt.setString(intStmtIndex++, (nav.getNavigatorByName(EiNavigator.LA) != null) ? nav.getNavigatorByName(EiNavigator.LA).toString() : StringUtil.EMPTY_STRING);
 //          pstmt.setString(intStmtIndex++, "");
 
-            String conav = (nav.getNavigatorByName(EiNavigator.CO) != null) ? nav.getNavigatorByName(EiNavigator.CO).toString() : StringUtil.EMPTY_STRING;   
+            String conav = (nav.getNavigatorByName(EiNavigator.CO) != null) ? nav.getNavigatorByName(EiNavigator.CO).toString() : StringUtil.EMPTY_STRING;
             if(nav.getNavigatorByName(EiNavigator.BKS) != null)
             {
-            	conav = nav.getNavigatorByName(EiNavigator.BKS).toString();
+              conav = nav.getNavigatorByName(EiNavigator.BKS).toString();
             }
             pstmt.setString(intStmtIndex++, zipText(conav));
 
             pstmt.setString(intStmtIndex++, (nav.getNavigatorByName(EiNavigator.PK) != null) ? nav.getNavigatorByName(EiNavigator.PK).toString() : StringUtil.EMPTY_STRING);
-        	pstmt.setString(intStmtIndex++, (nav.getNavigatorByName(EiNavigator.PEC) != null) ? nav.getNavigatorByName(EiNavigator.PEC).toString() : StringUtil.EMPTY_STRING);
-        	pstmt.setString(intStmtIndex++, (nav.getNavigatorByName(EiNavigator.PAC) != null) ? nav.getNavigatorByName(EiNavigator.PAC).toString() : StringUtil.EMPTY_STRING);
-        	pstmt.setString(intStmtIndex++, (nav.getNavigatorByName(EiNavigator.PUC) != null) ? nav.getNavigatorByName(EiNavigator.PUC).toString() : StringUtil.EMPTY_STRING);
-        	pstmt.setString(intStmtIndex++, (nav.getNavigatorByName(EiNavigator.PCI) != null) ? nav.getNavigatorByName(EiNavigator.PCI).toString() : StringUtil.EMPTY_STRING);
-        	pstmt.setString(intStmtIndex++, (nav.getNavigatorByName(EiNavigator.PID) != null) ? nav.getNavigatorByName(EiNavigator.PID).toString() : StringUtil.EMPTY_STRING);
+
+
+            navstring = StringUtil.EMPTY_STRING;
+            if(nav.getNavigatorByName(EiNavigator.PEC) != null)
+            {
+              navstring = nav.getNavigatorByName(EiNavigator.PEC).toString();
+            }
+            else if(nav.getNavigatorByName(EiNavigator.CM) != null)
+            {
+              navstring = nav.getNavigatorByName(EiNavigator.CM).toString();
+            }
+            pstmt.setString(intStmtIndex++, navstring);
+
+            pstmt.setString(intStmtIndex++, (nav.getNavigatorByName(EiNavigator.PAC) != null) ? nav.getNavigatorByName(EiNavigator.PAC).toString() : StringUtil.EMPTY_STRING);
+
+            navstring = StringUtil.EMPTY_STRING;
+            if(nav.getNavigatorByName(EiNavigator.PUC) != null)
+            {
+              navstring = nav.getNavigatorByName(EiNavigator.PUC).toString();
+            }
+            else if(nav.getNavigatorByName(EiNavigator.RO) != null)
+            {
+              navstring = nav.getNavigatorByName(EiNavigator.RO).toString();
+            }
+            pstmt.setString(intStmtIndex++, navstring);
+            pstmt.setString(intStmtIndex++, (nav.getNavigatorByName(EiNavigator.PCI) != null) ? nav.getNavigatorByName(EiNavigator.PCI).toString() : StringUtil.EMPTY_STRING);
+            navstring = StringUtil.EMPTY_STRING;
+            if(nav.getNavigatorByName(EiNavigator.PID) != null)
+            {
+              navstring = nav.getNavigatorByName(EiNavigator.PID).toString();
+            }
+            else if(nav.getNavigatorByName(EiNavigator.CP) != null)
+            {
+              navstring = nav.getNavigatorByName(EiNavigator.CP).toString();
+            }
+            pstmt.setString(intStmtIndex++, navstring);
+
 
 
             pstmt.executeUpdate();
