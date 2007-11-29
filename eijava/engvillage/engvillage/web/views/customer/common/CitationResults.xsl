@@ -207,15 +207,15 @@
             <xsl:text>, </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
       </xsl:if>
     </xsl:template>
-    
+
     <xsl:template match="PAS">
-        <b> Assignee:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>        
+        <b> Assignee:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
     </xsl:template>
-   
+
     <xsl:template match="EASM">
     	<a CLASS="SmBlackText"><b> Patent assignee: </b></a><xsl:apply-templates />
-    </xsl:template> 
-     
+    </xsl:template>
+
     <xsl:template match="PAN">
         <b> Application number:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
     </xsl:template>
@@ -246,7 +246,7 @@
     <xsl:template match="AV">
         <xsl:text> </xsl:text><b>Availability:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
     </xsl:template>
-    
+
     <xsl:template match="PFD">
     <a CLASS="SmBlackText">
         <br/>
@@ -311,15 +311,12 @@
         <xsl:text>, </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text> pp</xsl:text>
     </xsl:template>
 
+    <!-- removed "SmBlkText" anchor class setting - these elements are already surrounded bay <a>...</a> in EI-DOCUMENT template above -->
     <xsl:template match="LA">
-    <a CLASS="SmBlackText">
         <xsl:text> </xsl:text><b>Language:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
-    </a>
     </xsl:template>
     <xsl:template match="NF">
-    <a CLASS="SmBlackText">
-            <xsl:text> </xsl:text><b>Figures:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
-    </a>
+      <xsl:text> </xsl:text><b>Figures:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
     </xsl:template>
 
     <xsl:template match="DBNAME">
@@ -349,13 +346,13 @@
             <span CLASS="SmBlackText"><xsl:text> </xsl:text><xsl:text>(</xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>)</xsl:text></span>
     </xsl:template>
     <xsl:template match="AU|ED|IV|EAS">
-        
+
         <xsl:variable name="NAME"><xsl:value-of select="normalize-space(text())"/></xsl:variable>
         <xsl:variable name="FIELD">
         	<xsl:choose>
         		<xsl:when test="name(.)='EAS'">AF</xsl:when>
         		<xsl:otherwise>AU</xsl:otherwise>
-        	</xsl:choose>       
+        	</xsl:choose>
         </xsl:variable>
 
         <xsl:variable name="THIS-DOCUMENT-DB">
