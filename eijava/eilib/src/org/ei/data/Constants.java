@@ -13,6 +13,9 @@ public class Constants
     public static final Constants PN = new Constants("PN");
     public static final Constants PN_FIX = new Constants("0");
     public static final Constants US = new Constants("US");
+    public static final Constants LA = new Constants("LA");
+    public static final Constants AFF = new Constants("AFF");
+    public static final Constants CO = new Constants("CO");
     
 
     private Constants(String constant)
