@@ -117,9 +117,16 @@ public class NavigatorCache
 //          pstmt.setString(intStmtIndex++, "");
 
             pstmt.setString(intStmtIndex++, zipText((nav.getNavigatorByName(EiNavigator.AU) != null) ? nav.getNavigatorByName(EiNavigator.AU).toString() : StringUtil.EMPTY_STRING));
+            navstring = StringUtil.EMPTY_STRING;
+            if(nav.getNavigatorByName(EiNavigator.AF) != null) {
+              navstring = nav.getNavigatorByName(EiNavigator.AF).toString();
+            }
+            else if(nav.getNavigatorByName(EiNavigator.GD) != null)
+            {
+              navstring = nav.getNavigatorByName(EiNavigator.GD).toString();
+            }
+            pstmt.setString(intStmtIndex++, navstring);
 
-            pstmt.setString(intStmtIndex++, zipText((nav.getNavigatorByName(EiNavigator.AF) != null) ? nav.getNavigatorByName(EiNavigator.AF).toString() : StringUtil.EMPTY_STRING));
-//          pstmt.setString(intStmtIndex++, "");
 
             pstmt.setString(intStmtIndex++, (nav.getNavigatorByName(EiNavigator.DT) != null) ? nav.getNavigatorByName(EiNavigator.DT).toString() : StringUtil.EMPTY_STRING);
 
