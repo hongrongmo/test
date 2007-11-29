@@ -72,7 +72,8 @@ public class EptDatabase extends Database {
     }
 
     public int getStartYear(boolean hasBackFile) {
-        return 1990;
+        // jam - changed for Baja build
+        return 1963;
     }
 
     protected String getBaseTableHook() {

@@ -50,7 +50,10 @@ public class CBNBDatabase extends Database
   private DataDictionary dataDictionary = new CBNBDataDictionary();
 
   public int getStartYear(boolean hasBackFile)
-  { return (1990); }
+  {
+    // jam - changed for Baja build
+    return 1985;
+  }
 
   protected String getBaseTableHook()
   {
