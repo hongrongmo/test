@@ -169,7 +169,7 @@ public class EptCombiner extends Combiner {
                
                 rec.put(rec.AUTHOR_AFFILIATION, prepareMulti(StringUtil.replaceNonAscii(replaceNull(rs.getString("cs")))));
                 rec.put(rec.CLASSIFICATION_CODE, prepareMulti(XMLWriterCommon.formatClassCodes(rs.getString("cc"))));
-                rec.put(rec.LANGUAGE, prepareMulti(rs.getString("la")));
+                rec.put(rec.LANGUAGE, prepareMulti(rs.getString("la"), Constants.LA));
                 lt = StringUtil.replaceNonAscii(replaceNull(lt));
 
                 rec.put(rec.LINKED_TERMS, prepareMultiLinkedTerm(termBuilder.formatCT(lt)));
@@ -227,8 +227,13 @@ public class EptCombiner extends Combiner {
                 qfacet.setProduct(mproduct);
                 rec.put(rec.MAJORPRODUCT_TERMS, prepareMulti(mproduct));
 
-                rec.put(rec.UNCONTROLLED_TERMS, prepareMulti(qfacet.getValue()));
-                
+               // rec.put(rec.UNCONTROLLED_TERMS, prepareMulti(qfacet.getValue()));
+               //11/29/07 TS by new specs q facet mapped to uspto code navigator field
+                rec.put(rec.USPTOCODE, prepareMulti(qfacet.getValue()));
+
+               
+                // added Free language field 
+                rec.put(rec.UNCONTROLLED_TERMS, prepareMulti(termBuilder.formatCT(StringUtil.replaceNonAscii(replaceNull(rs.getString("ut"))))));
                 rec.put(rec.CASREGISTRYNUMBER, prepareMulti(rs.getString("crn")));
          
                 rec.put(rec.ENTRY_YEAR, rs.getString("ey"));
@@ -449,8 +454,12 @@ public class EptCombiner extends Combiner {
                 }
             	else if (constant.equals(Constants.IPC))
                 {
-                    list.add(formatIpc(s));
+                    list.add(removeSpaces(formatIpc(s)));
                 }
+            	else if (constant.equals(Constants.LA))
+            	{
+            	    list.add(convertLanguages(s));
+            	}
             }
             return (String[]) list.toArray(new String[1]);
         }
@@ -569,5 +578,71 @@ public class EptCombiner extends Combiner {
             c.writeCombinedByYear(url, driver, username, password, loadNumber);
         }
 
+    }
+    //  11/29/07 TS by new specs this method is taken from UPO combiner to sync format 
+    // modification of method signature - param and return value from String[] modifyed to String 
+    public String removeSpaces(String code) 
+    {
+        code = perl.substitute("s/\\s+//", code);
+
+        if (perl.match("/\\/\\//", code))
+        {
+            code = perl.substitute("s/\\/\\//\\//", code);
+        }
+
+        if (perl.match("/\\./", code))
+        {
+            code = perl.substitute("s/\\./PERIOD/ig", code);
+        }
+
+        if (perl.match("/\\//", code))
+        {
+           code = perl.substitute("s/\\//SLASH/ig", code);
+        }
+
+        return code;
+    }
+    //11/29/07 TS by new specs EnCompassPAT production problem fix
+    public String convertLanguages(String lang)    
+    {
+        if (lang == null)
+        {
+            return null;
+        }    
+        lang  = lang.trim().toUpperCase();
+        if(lang.length() == 1)
+        {
+            if (lang.equals("E"))
+            {
+                lang = perl.substitute("s/E/English/gi", lang);
+            }
+            else if (lang.equals("J"))
+            {
+                lang = perl.substitute("s/J/Japanese/gi", lang);  
+            }
+            else if (lang.equals("G"))
+            {
+                lang = perl.substitute("s/G/German/gi", lang);  
+            }
+            else if (lang.equals("F"))
+            {
+                lang = perl.substitute("s/F/French/gi", lang);  
+            }
+            else if(lang.equals("R"))
+            {
+                lang = perl.substitute("s/R/Russian/gi", lang);
+            }
+            else if(lang.equals("S"))
+            {
+                lang = perl.substitute("s/S/Spanish/gi", lang);
+            }
+            else if(lang.equals("C"))
+            {
+                lang = perl.substitute("s/C/Chinese/gi", lang);
+            }
+        }
+         
+        return lang;
+        
     }
 }
