@@ -50,7 +50,7 @@ public class PaperChemDatabase extends Database {
 	}
 
     public int getStartYear(boolean hasBackFile) {
-        return (1990);
+        return 1967;
     }
 
     protected String getBaseTableHook() {
