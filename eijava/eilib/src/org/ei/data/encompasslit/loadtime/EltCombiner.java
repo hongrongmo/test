@@ -273,11 +273,10 @@ public class EltCombiner extends Combiner {
                     rec.put(EVCombinedRec.LANGUAGE, prepareMulti(StringUtil.replaceNonAscii(replaceNull(rs.getString("lna")))));
                 }
 
-                // 11/29/07 TS by new specs "oab"  is appended to "ab" to make searchable 
-                rec.put(EVCombinedRec.OTHER_ABSTRACT, StringUtil.replaceNonAscii(replaceNull(rs.getString("oab"))));                
+                // 11/29/07 TS by new specs "oab"  is appended to "ab" to make searchable
+                String oabsract = StringUtil.replaceNonAscii(replaceNull(rs.getString("oab")));
                 if (abString != null) 
-                {
-                    String oabsract = StringUtil.replaceNonAscii(replaceNull(rs.getString("oab")));                    
+                {                                        
                     if (oabsract != null)
                     {
                         abString =  abString.concat(" ").concat(oabsract);
@@ -285,9 +284,9 @@ public class EltCombiner extends Combiner {
            
                     rec.put(EVCombinedRec.ABSTRACT, StringUtil.replaceNonAscii(replaceNull(abString)));
                 }
-                else if (rs.getString("oab") != null)
+                else if (oabsract != null)
                 {
-                    rec.put(EVCombinedRec.ABSTRACT, StringUtil.replaceNonAscii(replaceNull(rs.getString("oab"))));
+                    rec.put(EVCombinedRec.ABSTRACT, StringUtil.replaceNonAscii(replaceNull(oabsract)));
                 }
 
                 if (rs.getString("cnfnam") != null) {
@@ -359,11 +358,6 @@ public class EltCombiner extends Combiner {
 
                 if (rs.getString("sti") != null) {
                     rec.put(EVCombinedRec.SERIAL_TITLE, StringUtil.replaceNonAscii(replaceNull(rs.getString("sti"))));
-                }
-                
-                if (rs.getString("apiut") != null) 
-                {
-                    rec.put(EVCombinedRec.UNCONTROLLED_TERMS, prepareMulti(termBuilder.formatCT(StringUtil.replaceNonAscii(replaceNull(rs.getString("apiut"))))));
                 }
                 
                 String apilt = StringUtil.replaceNonAscii(replaceNull(getStringFromClob(rs.getClob("apilt"))));
@@ -707,29 +701,19 @@ public class EltCombiner extends Combiner {
 
     }
     
-    private static Hashtable removeaff = new Hashtable();
-    
-    static
-    {
-        removeaff.put("s/\\University\\b/ /gi","s/\\University\\b/ /gi");
-
-    }
-    
     
     private String formatAffiliation(String result)
     {        
-        Enumeration en = removeaff.keys();
-        if(result != null && !result.equals(""))
-        {
-            while (en.hasMoreElements()) 
-            {
-                result = perl.substitute((String)en.nextElement(), result);           
-            }
-            if((result.length()==1) && result.equals("."))
-            {
-                result = " ";
-            }
-        }
+
+       if((result.length()==1) && result.equals("."))
+       {
+           result = "";
+       }
+       else if(result.equalsIgnoreCase("University"))
+       {
+           result = "";
+       }
+        
         return result;
     }
     
