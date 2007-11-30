@@ -411,7 +411,7 @@ function calStartYear(selectedDbMask, sYear)
     }
     if (selectedDbMask != 0 && ((selectedDbMask & EPT) == EPT))
     {
-       var eptStartYear = sYear.substr(sYear.indexOf("TST") + 3, 4);
+       var eptStartYear = sYear.substr(sYear.indexOf("MST") + 3, 4);
        dYear = (dYear > eptStartYear) ? eptStartYear : dYear;
     }
 
@@ -478,31 +478,29 @@ function calDisplayYear(selectedDbMask, sYear)
             dYear = (dYear > paStartYear) ? paStartYear : dYear;
         }
         if((selectedDbMask != 0) && ((selectedDbMask & PCH) == PCH))
-	{
-	    var pchStartYear = sYear.substr(sYear.indexOf("AST")+3,4);
-	    dYear = (dYear > pchStartYear) ? pchStartYear : dYear;
-	}
-	if (selectedDbMask != 0 && ((selectedDbMask & CHM) == CHM))
-	{
-	    var chmStartYear = sYear.substr(sYear.indexOf("HST") + 3, 4);
-	    dYear = (dYear > chmStartYear) ? chmStartYear : dYear;
-	}
-	if (selectedDbMask != 0 && ((selectedDbMask & CBN) == CBN))
-	{
-	    var cbnStartYear = sYear.substr(sYear.indexOf("BST") + 3, 4);
-	    dYear = (dYear > cbnStartYear) ? cbnStartYear : dYear;
-	}
-	if (selectedDbMask != 0 && ((selectedDbMask & ELT) == ELT))
-	{
-	    var eltStartYear = sYear.substr(sYear.indexOf("LST") + 3, 4);
-	    dYear = (dYear > eltStartYear) ? eltStartYear : dYear;
-	    dYear= 1990;
-	}
-	if (selectedDbMask != 0 && ((selectedDbMask & EPT) == EPT))
-	{
-	    var eptStartYear = sYear.substr(sYear.indexOf("TST") + 3, 4);
-	    dYear = (dYear > eptStartYear) ? eptStartYear : dYear;
-	    dYear= 1990;
+        {
+            var pchStartYear = sYear.substr(sYear.indexOf("AST")+3,4);
+            dYear = (dYear > pchStartYear) ? pchStartYear : dYear;
+        }
+        if (selectedDbMask != 0 && ((selectedDbMask & CHM) == CHM))
+        {
+            var chmStartYear = sYear.substr(sYear.indexOf("HST") + 3, 4);
+            dYear = (dYear > chmStartYear) ? chmStartYear : dYear;
+        }
+        if (selectedDbMask != 0 && ((selectedDbMask & CBN) == CBN))
+        {
+            var cbnStartYear = sYear.substr(sYear.indexOf("BST") + 3, 4);
+            dYear = (dYear > cbnStartYear) ? cbnStartYear : dYear;
+        }
+        if (selectedDbMask != 0 && ((selectedDbMask & ELT) == ELT))
+        {
+            var eltStartYear = sYear.substr(sYear.indexOf("LST") + 3, 4);
+            dYear = (dYear > eltStartYear) ? eltStartYear : dYear;
+        }
+        if (selectedDbMask != 0 && ((selectedDbMask & EPT) == EPT))
+        {
+          var eptStartYear = sYear.substr(sYear.indexOf("MST") + 3, 4);
+          dYear = (dYear > eptStartYear) ? eptStartYear : dYear;
         }
     }
     else
