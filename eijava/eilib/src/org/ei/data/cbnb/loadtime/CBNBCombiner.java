@@ -205,8 +205,9 @@ public class CBNBCombiner extends Combiner
                 
 				if(rs.getString("sct") != null)
 				{
-					rec.put(EVCombinedRec.COUNTRY, prepareMulti(CountryFormatter.formatCountry(rs.getString("sct"))));
+					rec.put(EVCombinedRec.COUNTRY, prepareMulti(rs.getString("sct"),Constants.CO));
 				}
+				
 
 				if(rs.getString("scc") != null)
 				{
@@ -314,25 +315,43 @@ public class CBNBCombiner extends Combiner
         return (String[]) list.toArray(new String[1]);
 
     }
+    
+    private String[] prepareMulti(String multiString , 
+			  					  	Constants constant) 
+    			throws Exception 
+   {
+        if (multiString != null) {
 
+            AuthorStream astream = new AuthorStream(new ByteArrayInputStream(multiString.getBytes()));
+            String s = null;
+            ArrayList list = new ArrayList();
+            while ((s = astream.readAuthor()) != null) 
+            {
+                s = s.trim();
+                if(constant == null)
+                {
+                    list.add(s);
+                }
+                else if(constant.equals(Constants.CO))
+                {
+                    list.add(CountryFormatter.formatCountry(s));
+                }
+            }
+            return (String[]) list.toArray(new String[1]);
+        }
+        else 
+        {
+            String[] str = new String[] { "" };
+            return str;
+
+        }
+   }
+    
     private String[] prepareMulti(String multiString) throws Exception
     {
-        AuthorStream astream = new AuthorStream(new ByteArrayInputStream(multiString.getBytes()));
-        String s = null;
-        ArrayList list = new ArrayList();
-
-        while ((s = astream.readAuthor()) != null)
-        {
-            s = s.trim();
-            if (s.length() > 0)
-            {
-                list.add(s);
-            }
-        }
-
-        return (String[]) list.toArray(new String[1]);
-
+        return prepareMulti(multiString, null);
     }
+
 
     private String stripAnon(String line)
     {
