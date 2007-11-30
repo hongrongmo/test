@@ -335,6 +335,11 @@ public class PaperChemCombiner
                 rec.put(EVCombinedRec.STARTPAGE, getFirstNumber(rs.getString("xp")));
 
                 rec.put(EVCombinedRec.ACCESSION_NUMBER, rs.getString("an"));
+                
+                if (rs.getString("do") != null)
+                {
+                    rec.put(EVCombinedRec.DOI, rs.getString("do"));
+                }
 
                 this.writer.writeRec(rec);
             }
@@ -370,7 +375,6 @@ public class PaperChemCombiner
         }
 
         return (String[]) list.toArray(new String[1]);
-
     }
 
     public String replaceNull(String sVal)
@@ -594,7 +598,7 @@ public class PaperChemCombiner
             this.writer.begin();
             stmt = con.createStatement();
 
-            rs = stmt.executeQuery("select M_ID, id, an, ex, ig, su, ab, au, cp, em, af, ac, asp, ay, ed, ef, ec, es, ey, mt, st, se, cf, bn, sn, cn, vo, iss, sd, substr(yr,1,4) as yr, md, m1, m2, ml, mc, ms, my, sp, pa, pn, pc, ps, py, pp, xp, vx, la, dt, cc, at, nr, ti, tt, tr, cls, fl, pt, pi, do, rn, media, csess, patno, pling, appln, prior_num, assig, pcode, claim, sourc, nofig, notab, sub_index, specn, suppl, pdfix, LOAD_NUMBER from "+tablename+" where load_number = '"+ weekNumber +"'");
+            rs = stmt.executeQuery("select M_ID, id, an, ex, ig, su, ab, au, cp, em, af, ac, asp, ay, ed, ef, ec, es, ey, mt, st, se, cf, bn, sn, cn, vo, iss, sd, substr(yr,1,4) as yr, md, m1, m2, ml, mc, ms, my, sp, pa, pn, pc, ps, py, pp, xp, vx, la, dt, cc, at, nr, ti, tt, tr, cls, fl, pt, pi, do, rn, media, csess, patno, pling, appln, prior_num, assig, pcode, claim, sourc, nofig, notab, sub_index, specn, suppl, pdfix , LOAD_NUMBER from "+tablename+" where load_number = '"+ weekNumber +"'");
 
             writeRecs(rs);
             this.writer.end();
@@ -656,18 +660,11 @@ public class PaperChemCombiner
             while ((s = astream.readAuthor()) != null) 
             {
                 s = s.trim();
-                if (s.length() > 0) {
-  //              	if(constant == null)
- //               	{
-                		list.add(s);
- //               	}
-//                    else if(constant.equals(Constants.CO_LA))
-//                    {
-//                        list.add(s);
-//                    	//list.add(removeCountry(s));
-//                    	//list.add(removeLanguage(s));
-//                    }
+                if (s.length() > 0) 
+                {
+                    list.add(s);
                 }
+
             }
             return (String[]) list.toArray(new String[1]);
         }
@@ -691,24 +688,6 @@ public class PaperChemCombiner
     European Papermaker 
     PIMA's North American Papermaker 
     */
-    
-    // remove languages from controll vocabulary
-    // remove country from controlled  vocabulary
-    /*
-             308345                  ENGLISH 
-        161123                  PATENTS 
-        49648                   JAPANESE 
-        45592                   EUROPE 
-        44829                   GERMAN 
-        42026                   UNITED STATES 
-        38841                   JAPAN 
-        35567                   RUSSIAN 
-        19488                   CANADA 
-        19029                   FRENCH 
-        17585                   GERMANY 
-        14692                   DOCUMENTS 
-
-     */
     
     private static Hashtable removeaff = new Hashtable();
     
@@ -747,50 +726,4 @@ public class PaperChemCombiner
         return result;
     }
     
-    
-// Controlled vocabulary - parse out country and language 
-    static
-    {
-        cvnoise.put("JAPANESE","JAPANESE");
-        cvnoise.put("JAPAN","JAPAN");
-        cvnoise.put("EUROPE","EUROPE");
-        cvnoise.put("GERMAN","GERMAN");
-        cvnoise.put("GERMANY","GERMANY");
-        cvnoise.put("UNITED STATES","UNITED STATES");        
-        cvnoise.put("RUSSIAN","RUSSIAN");
-        cvnoise.put("CANADA","CANADA");        
-        cvnoise.put("FRENCH","FRENCH");        
-        cvnoise.put("PATENTS","PATENTS");
-        cvnoise.put("DOCUMENTS","DOCUMENTS");        
-    }
-    
-    private String removeCountry(String line)
-    {
-        if(line != null && !line.trim().equals(""))
-        {
-            Enumeration en = cvnoise.keys();
-            while (en.hasMoreElements()) 
-            {
-                String key = (String) en.nextElement();
-                line = perl.substitute("s/" + key+"/ /gi", line);
-            }
-        }
-        return line;
-    }
-//    
-//    private String removeLanguage(String line)
-//    {
-//        Enumeration en = Language.iso639_language.keys();
-//        // using class Language
-//        while (en.hasMoreElements()) 
-//        {
-//           // String key = (String) en.nextElement();
-//          //  String next = (String) Language.iso639_language.get(key);
-//
-//            line = perl.substitute("s/\\b" + (String) en.nextElement() + "\\b/ /gi", line);
-//
-//        }
-//        return line;
-//    }
-
 }
