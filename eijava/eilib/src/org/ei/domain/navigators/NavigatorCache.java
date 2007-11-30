@@ -125,7 +125,7 @@ public class NavigatorCache
             {
               navstring = nav.getNavigatorByName(EiNavigator.GD).toString();
             }
-            pstmt.setString(intStmtIndex++, navstring);
+            pstmt.setString(intStmtIndex++, zipText(navstring));
 
 
             pstmt.setString(intStmtIndex++, (nav.getNavigatorByName(EiNavigator.DT) != null) ? nav.getNavigatorByName(EiNavigator.DT).toString() : StringUtil.EMPTY_STRING);
