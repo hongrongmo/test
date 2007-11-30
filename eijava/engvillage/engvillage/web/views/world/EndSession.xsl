@@ -1,7 +1,10 @@
-<xsl:stylesheet
-	version="1.0"
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+	xmlns:html="http://www.w3.org/TR/REC-html40"
+  exclude-result-prefixes="xsl html"
 >
+<xsl:output method="html" indent="no" doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
+<xsl:strip-space elements="html:* xsl:*" />
 
 <xsl:include href="Footer.xsl"/>
 
@@ -10,34 +13,30 @@
 <head>
 	<title>Engineering Village - Session Ended</title>
 	<SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
+  <SCRIPT LANGUAGE="JavaScript">
+    <xsl:comment>
+    <![CDATA[
+    // This method is here for when the error page
+    // is loaded into a child window.
+    // we do not want the liks to be loaded in the child
+    // but in the parent
+    function forwardLink(url)
+    {
 
-	<xsl:text disable-output-escaping="yes">
-		<![CDATA[
-			<xsl:comment>
-				<SCRIPT LANGUAGE="JavaScript">
+      if (window.opener != null)
+      {
+        window.opener.location = url;
+        self.close();
+      }
+      else
+      {
+        parent.document.location = url;
+      }
 
-					// This method is here for when the error page
-					// is loaded into a child window.
-					// we do not want the liks to be loaded in the child
-					// but in the parent
-					function forwardLink(url)
-					{
-
-						if (window.opener != null)
-						{
-							window.opener.location = url;
-							self.close();
-						}
-						else
-						{
-							parent.document.location = url;
-						}
-
-					}
-				</SCRIPT>
-			</xsl:comment>
-		]]>
-		</xsl:text>
+    }
+    ]]>
+    // </xsl:comment>
+  </SCRIPT>
 </head>
 
 	<body bgcolor="#FFFFFF" topmargin="0" marginheight="0" marginwidth="0">
@@ -64,11 +63,11 @@
 		<tr>
 			<td valign="top" width="20"><img src="/engresources/images/spacer.gif" border="0" width="20"/></td>
 			<td valign="top">
-			
-				
+
+
 				<A CLASS="MedBlackText">You have ended your Engineering Village search session.  To return to Engineering Village, please click on link below</A><br/><br/>
 				<a CLASS="LgBlueLink" href="javascript:forwardLink('/controller/servlet/Controller?CID=home')">Begin a new session</a>
-									
+
 				<xsl:if test="(/PAGE/DAYPASS ='true')">
 				<br/>
 				<br/>
@@ -79,10 +78,10 @@
 				<br/>
 				<A CLASS="MedBlackText">
 
-				To begin a new session please return to your </A><a CLASS="LgBlueLink" href="javascript:forwardLink('https://store.engineeringvillage.com/ppd/myaccount.do')">store account</a> 
+				To begin a new session please return to your </A><a CLASS="LgBlueLink" href="javascript:forwardLink('https://store.engineeringvillage.com/ppd/myaccount.do')">store account</a>
 				<A CLASS="MedBlackText"> and click on an active Day Pass link.</A>
 				</xsl:if>
-			
+
 			</td>
 			<td valign="top" width="10"><img src="/engresources/images/spacer.gif" border="0" width="10"/></td>
 		</tr>
