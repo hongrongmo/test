@@ -249,9 +249,9 @@ public class ChimicaCombiner
 					rec.put(EVCombinedRec.COUNTRY, prepareMulti(CountryFormatter.formatCountry(rs.getString("cna"))));
 				}
 				
-                if (rs.getString("do") != null)
+                if (rs.getString("doi") != null)
                 {
-                    rec.put(EVCombinedRec.DOI, rs.getString("do"));
+                    rec.put(EVCombinedRec.DOI, rs.getString("doi"));
                 }
 				
                 this.writer.writeRec(rec);
