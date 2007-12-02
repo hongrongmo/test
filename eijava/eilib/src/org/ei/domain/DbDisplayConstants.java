@@ -18,101 +18,135 @@ public class DbDisplayConstants
     private String text;
     private String shortText;
     private String textNoMinus;
+    private String imgPlus;
+    private String imgMinus;
 
     private static Hashtable allConstants = new Hashtable();
 
     public static final DbDisplayConstants CPX =
         new DbDisplayConstants(DatabaseConfig.CPX_MASK,
                 "Compendex",
-                "<a class=\"SmBlueTableText\">Compendex</a></br><a class=\"SmBlackText\">A bibliographic database of engineering...</a><img id=\"cpxOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(1); return false;\"/>",
-                "<a class=\"SmBlueTableText\">Compendex</a></br><a class=\"SmBlackText\">A bibliographic database of engineering research containing over nine million references and abstracts taken from over 5,000 engineering journals, conferences and technical reports. Compendex is the most comprehensive bibliographic database of engineering research available today, containing over nine million references and abstracts taken from over 5,000 engineering journals, conferences and technical reports.</a><img id=\"cpxOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(1); return false;\"/>",
-				"<a class=\"SmBlueTableText\">Compendex</a></br><a class=\"SmBlackText\">A bibliographic database of engineering research containing over nine million references and abstracts taken from over 5,000 engineering journals, conferences and technical reports. Compendex is the most comprehensive bibliographic database of engineering research available today, containing over nine million references and abstracts taken from over 5,000 engineering journals, conferences and technical reports.</a>");
-                //"A bibliographic database of engineering research containing over nine million references and abstracts taken from over 5,000 engineering journals, conferences and technical reports. Compendex is the most comprehensive bibliographic database of engineering research available today, containing over nine million references and abstracts taken from over 5,000 engineering journals, conferences and technical reports. ");
+                "<a class=\"SmBlueTableText\">Compendex</a></br><a class=\"SmBlackText\">A bibliographic database of engineering...</a>",
+                "<a class=\"SmBlueTableText\">Compendex</a></br><a class=\"SmBlackText\">Compendex is the most comprehensive bibliographic database of scientific and technical engineering research available, covering all engineering disciplines. It includes millions of bibliographic citations and abstracts from thousands of engineering journals and conference proceedings. When combined with the Engineering Index Backfile (1884-1969), Compendex covers well over 120 years of core engineering literature</a>",
+                "<a class=\"SmBlueTableText\">Compendex</a></br><a class=\"SmBlackText\">Compendex is the most comprehensive bibliographic database of scientific and technical engineering research available, covering all engineering disciplines. It includes millions of bibliographic citations and abstracts from thousands of engineering journals and conference proceedings. When combined with the Engineering Index Backfile (1884-1969), Compendex covers well over 120 years of core engineering literature</a>",
+                "<img id=\"cpxOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(1); return false;\"/>",
+    			"<img id=\"cpxOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(1); return false;\"/>");
 
     public static final DbDisplayConstants INS =
         new DbDisplayConstants(DatabaseConfig.INS_MASK,
                 "Inspec",
-                "<a class=\"SmBlueTableText\">Inspec</a></br><a class=\"SmBlackText\">Provides access to the world&#146;s scientific...</a><img id=\"cpxOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(2); return false;\"/>",
-                "<a class=\"SmBlueTableText\">Inspec</a></br><a class=\"SmBlackText\">is the leading bibliographic database providing access to the world\\'s scientific literature in electrical engineering, electronics, physics, control engineering, information technology, communications, computers, computing, and manufacturing and production engineering. The database contains over eight million bibliographic records taken from 3,500 scientific and technical journals and 1,500 conference proceedings. Over 400,000 new records are added to the database annually.</a><img id=\"cpxOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(2); return false;\"/>",
-                "<a class=\"SmBlueTableText\">Inspec</a></br><a class=\"SmBlackText\">is the leading bibliographic database providing access to the world\\'s scientific literature in electrical engineering, electronics, physics, control engineering, information technology, communications, computers, computing, and manufacturing and production engineering. The database contains over eight million bibliographic records taken from 3,500 scientific and technical journals and 1,500 conference proceedings. Over 400,000 new records are added to the database annually.</a>");
-                //"is the leading bibliographic database providing access to the world's scientific literature in electrical engineering, electronics, physics, control engineering, information technology, communications, computers, computing, and manufacturing and production engineering. The database contains over eight million bibliographic records taken from 3,500 scientific and technical journals and 1,500 conference proceedings. Over 400,000 new records are added to the database annually.");
-
+                "<a class=\"SmBlueTableText\">INSPEC</a></br><a class=\"SmBlackText\">Provides access to the world&#146;s scientific...</a>",
+                "<a class=\"SmBlueTableText\">INSPEC</a></br><a class=\"SmBlackText\">INSPEC includes bibliographic citations and indexed abstracts from publications in the fields of physics, electrical and electronic engineering, communications, computer science, control engineering, information technology, manufacturing and mechanical engineering, operations research, material science, oceanography, engineering mathematics, nuclear engineering, environmental science, geophysics, nanotechnology, biomedical technology and biophysics.</a>",
+                "<a class=\"SmBlueTableText\">INSPEC</a></br><a class=\"SmBlackText\">INSPEC includes bibliographic citations and indexed abstracts from publications in the fields of physics, electrical and electronic engineering, communications, computer science, control engineering, information technology, manufacturing and mechanical engineering, operations research, material science, oceanography, engineering mathematics, nuclear engineering, environmental science, geophysics, nanotechnology, biomedical technology and biophysics.</a>",
+                "<img id=\"insOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(2); return false;\"/>",
+                "<img id=\"insOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(2); return false;\"/>");
+          
 
     public static final DbDisplayConstants NTI =
         new DbDisplayConstants(DatabaseConfig.NTI_MASK,
                 "NTIS",
-                "<a class=\"SmBlueTableText\">NTIS</a></br><a class=\"SmBlackText\">The National Technical Information Service...</a><img id=\"cpxOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(4); return false;\"/>",
-                "<a class=\"SmBlueTableText\">NTIS</a></br><a class=\"SmBlackText\">The National Technical Information Service (NTIS) database from the U.S. Department of Commerce is the premier source for accessing unclassified reports from influential U.S. and international government agencies. The database contains access to over two million critical citations from government departments such as NASA, the U.S. Department of Energy and the U.S. Department of Defense.</a><img id=\"cpxOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(4); return false;\"/>",
-        		"<a class=\"SmBlueTableText\">NTIS</a></br><a class=\"SmBlackText\">The National Technical Information Service (NTIS) database from the U.S. Department of Commerce is the premier source for accessing unclassified reports from influential U.S. and international government agencies. The database contains access to over two million critical citations from government departments such as NASA, the U.S. Department of Energy and the U.S. Department of Defense.</a>");
+                "<a class=\"SmBlueTableText\">NTIS</a></br><a class=\"SmBlackText\">The National Technical Information Service...</a>",
+                "<a class=\"SmBlueTableText\">NTIS</a></br><a class=\"SmBlackText\">NTIS (The National Technical Information Service) is the premier database for accessing unclassified reports from influential U.S. and international government agencies. The database contains access to millions of critical citations from government departments such as NASA, the U.S. Department of Energy and the U.S. Department of Defense.</a>",
+        		"<a class=\"SmBlueTableText\">NTIS</a></br><a class=\"SmBlackText\">NTIS (The National Technical Information Service) is the premier database for accessing unclassified reports from influential U.S. and international government agencies. The database contains access to millions of critical citations from government departments such as NASA, the U.S. Department of Energy and the U.S. Department of Defense.</a>",
+        		"<img id=\"ntiOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(4); return false;\"/>",
+        		"<img id=\"ntiOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(4); return false;\"/>");
 
 
     public static final DbDisplayConstants GEO =
         new DbDisplayConstants(DatabaseConfig.GEO_MASK,
                 "GEOBASE",
-                "<a class=\"SmBlueTableText\">GEOBASE</a></br><a class=\"SmBlackText\">A multidisciplinary database for Earth sciences...</a><img id=\"cpxOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(8192); return false;\"/>",
-                "<a class=\"SmBlueTableText\">GEOBASE</a></br><a class=\"SmBlackText\">is a multidisciplinary database supplying bibliographic information and abstracts for the Earth sciences, ecology, geomechanics, human geography, and oceanography. The database covers approximately 2,000 international journals, including both peer-reviewed titles and trade publications.</a><img id=\"cpxOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(8192); return false;\"/>",
-        		"<a class=\"SmBlueTableText\">GEOBASE</a></br><a class=\"SmBlackText\">is a multidisciplinary database supplying bibliographic information and abstracts for the Earth sciences, ecology, geomechanics, human geography, and oceanography. The database covers approximately 2,000 international journals, including both peer-reviewed titles and trade publications.</a>");
+                "<a class=\"SmBlueTableText\">GEOBASE</a></br><a class=\"SmBlackText\">A multidisciplinary database for Earth sciences...</a>",
+                "<a class=\"SmBlueTableText\">GEOBASE</a></br><a class=\"SmBlackText\">GEOBASE is a multidisciplinary database of indexed research literature on the earth sciences, including geology, human and physical geography, environmental sciences, oceanography, geomechanics, alternative energy sources, pollution, waste management and nature conservation. Covering thousands of peer-reviewed journals, trade publications, book series and conference proceedings, GEOBASE has the most international coverage of any database in the field.",
+        		"<a class=\"SmBlueTableText\">GEOBASE</a></br><a class=\"SmBlackText\">GEOBASE is a multidisciplinary database of indexed research literature on the earth sciences, including geology, human and physical geography, environmental sciences, oceanography, geomechanics, alternative energy sources, pollution, waste management and nature conservation. Covering thousands of peer-reviewed journals, trade publications, book series and conference proceedings, GEOBASE has the most international coverage of any database in the field.</a>",
+        		"<img id=\"geoOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(8192); return false;\"/>",
+				"<img id=\"geoOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(8192); return false;\"/>");
+
 
     public static final DbDisplayConstants PAT =
         new DbDisplayConstants(DatabaseConfig.EUP_MASK,
                 "EI Patents",
-                "<a class=\"SmBlueTableText\">EI Patents</a></br><a class=\"SmBlackText\">The patents databases include US and European...</a><img id=\"cpxOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(16384); return false;\"/>",
-                "<a class=\"SmBlueTableText\">EI Patents</a></br><a class=\"SmBlackText\">EI Patents The patents databases on Engineering Village include US and European patents grants and applications. Currently, there are over 10 million patents that are being offered.</a><img id=\"cpxOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(16384); return false;\"/>",
-        		"<a class=\"SmBlueTableText\">EI Patents</a></br><a class=\"SmBlackText\">EI Patents The patents databases on Engineering Village include US and European patents grants and applications. Currently, there are over 10 million patents that are being offered.</a>" );
+                "<a class=\"SmBlueTableText\">EI Patents</a></br><a class=\"SmBlackText\">The patents databases include US and European...</a>",
+                "<a class=\"SmBlueTableText\">EI Patents</a></br><a class=\"SmBlackText\">Ei Patents comprises millions of patents from the US Patent and Trademark Office and European Patent Office. This database can be cross-searched with other databases on Engineering Village, retrieving results both from patents and scientific literature, a significant advantage for both researchers and businesses. Ei Patents offers more reliable and analytical patent searching features than are supported by the generic free web.</a>",
+                "<a class=\"SmBlueTableText\">EI Patents</a></br><a class=\"SmBlackText\">Ei Patents comprises millions of patents from the US Patent and Trademark Office and European Patent Office. This database can be cross-searched with other databases on Engineering Village, retrieving results both from patents and scientific literature, a significant advantage for both researchers and businesses. Ei Patents offers more reliable and analytical patent searching features than are supported by the generic free web.</a>",
+        		"<img id=\"eupOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(16384); return false;\"/>",
+				"<img id=\"eupOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(16384); return false;\"/>");
+
 
     public static final DbDisplayConstants UPA =
         new DbDisplayConstants(DatabaseConfig.UPA_MASK,
                 "EI Patents",
-                "<a class=\"SmBlueTableText\">EI Patents</a></br><a class=\"SmBlackText\">EI patents includes US and European...</a><img id=\"cpxOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(32768); return false;\"/>",
+                "<a class=\"SmBlueTableText\">EI Patents</a></br><a class=\"SmBlackText\">EI patents includes US and European...</a>",
                 "<a class=\"SmBlueTableText\">EI Patents</a></br><a class=\"SmBlackText\">The patents databases on Engineering Village include US and European patents grants and applications. Currently, there are over 10 million patents that are being offered.</a><img id=\"cpxOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(32768); return false;\"/>",
-        		"<a class=\"SmBlueTableText\">EI Patents</a></br><a class=\"SmBlackText\">The patents databases on Engineering Village include US and European patents grants and applications. Currently, there are over 10 million patents that are being offered.</a>");
+        		"<a class=\"SmBlueTableText\">EI Patents</a></br><a class=\"SmBlackText\">The patents databases on Engineering Village include US and European patents grants and applications. Currently, there are over 10 million patents that are being offered.</a>",
+        		"<img id=\"upaOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(32768); return false;\"/>",
+        		"<img id=\"upaOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(32768); return false;\"/>");
+
 
     public static final DbDisplayConstants PAG =
         new DbDisplayConstants(DatabaseConfig.PAG_MASK,
                 "Referex",
-                "<a class=\"SmBlueTableText\">Referex</a></br><a class=\"SmBlackText\">Provides access to the broadest and deepest...</a><img id=\"cpxOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(131072); return false;\"/>",
-                "<a class=\"SmBlueTableText\">Referex</a></br><a class=\"SmBlackText\">Referex provides access to the broadest and deepest available coverage of engineering reference titles in eBook format. Collections within engineering include the following topic areas: Materials and Mechanical, Electronics and Electrical, Chemical, Petrochemical and Process Civil & Environmental, Security & Networking and Computing. Close to 1400 titles are currently available.</a><img id=\"cpxOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(131072); return false;\"/>",
-        		"<a class=\"SmBlueTableText\">Referex</a></br><a class=\"SmBlackText\">Referex provides access to the broadest and deepest available coverage of engineering reference titles in eBook format. Collections within engineering include the following topic areas: Materials and Mechanical, Electronics and Electrical, Chemical, Petrochemical and Process Civil & Environmental, Security & Networking and Computing. Close to 1400 titles are currently available.</a>");
+                "<a class=\"SmBlueTableText\">Referex</a></br><a class=\"SmBlackText\">Provides access to the broadest and deepest...</a>",
+                "<a class=\"SmBlueTableText\">Referex</a></br><a class=\"SmBlackText\">Referex Engineering is comprised of six collections of professionally focussed e-books, bringing together key sources of engineering reference material. The database is fully searchable and delivers full-text content from the following collections: Chemical, Petrochemical and Process Engineering; Civil and Environmental Engineering; Computing; Electronics and Electrical Engineering; Mechanical Engineering and Materials; Networking and Security.</a>",
+        		"<a class=\"SmBlueTableText\">Referex</a></br><a class=\"SmBlackText\">Referex Engineering is comprised of six collections of professionally focussed e-books, bringing together key sources of engineering reference material. The database is fully searchable and delivers full-text content from the following collections: Chemical, Petrochemical and Process Engineering; Civil and Environmental Engineering; Computing; Electronics and Electrical Engineering; Mechanical Engineering and Materials; Networking and Security.</a>",
+        		"<img id=\"refOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(131072); return false;\"/>",
+        		"<img id=\"refOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(131072); return false;\"/>");
+
 
     public static final DbDisplayConstants ELT =
         new DbDisplayConstants(DatabaseConfig.ELT_MASK,
                 "EnCompassLIT",
-                "<a class=\"SmBlueTableText\">EnCompassLIT</a></br><a class=\"SmBlackText\">Provides access to the broadest and deepest...</a><img id=\"cpxOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(1024); return false;\"/>",
-                "<a class=\"SmBlueTableText\">EnCompassLIT</a></br><a class=\"SmBlackText\">Provides access to the broadest and deepest available coverage of engineering reference titles in eBook format. Collections within engineering include the following topic areas: Materials and Mechanical, Electronics and Electrical, Chemical, Petrochemical and Process Civil & Environmental, Security & Networking and Computing. Close to 1400 titles are currently available.</a><img id=\"cpxOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(1024); return false;\"/>",
-        		"<a class=\"SmBlueTableText\">EnCompassLIT</a></br><a class=\"SmBlackText\">Provides access to the broadest and deepest available coverage of engineering reference titles in eBook format. Collections within engineering include the following topic areas: Materials and Mechanical, Electronics and Electrical, Chemical, Petrochemical and Process Civil & Environmental, Security & Networking and Computing. Close to 1400 titles are currently available.</a>");
+                "<a class=\"SmBlueTableText\">EnCompassLIT</a></br><a class=\"SmBlackText\">Provides access to the broadest and deepest...</a>",
+                "<a class=\"SmBlueTableText\">EnCompassLIT</a></br><a class=\"SmBlackText\">EnCompassLIT™ is a bibliographic service uniquely devoted to covering technical literature published worldwide on the downstream petroleum, petrochemical, natural gas, energy and allied industries. Upstream coverage focuses solely on oil field chemicals. The EnCompass Thesaurus facilitates precision searching via controlled vocabulary.</a>",
+        		"<a class=\"SmBlueTableText\">EnCompassLIT</a></br><a class=\"SmBlackText\">EnCompassLIT™ is a bibliographic service uniquely devoted to covering technical literature published worldwide on the downstream petroleum, petrochemical, natural gas, energy and allied industries. Upstream coverage focuses solely on oil field chemicals. The EnCompass Thesaurus facilitates precision searching via controlled vocabulary.</a>",
+        		"<img id=\"eltOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(1024); return false;\"/>",
+        		"<img id=\"eltOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(1024); return false;\"/>");
+
 
 
     public static final DbDisplayConstants EPT =
         new DbDisplayConstants(DatabaseConfig.EPT_MASK,
                 "EnCompassPAT",
-                "<a class=\"SmBlueTableText\">EnCompassPAT</a></br><a class=\"SmBlackText\">Covers worldwide patent information on...</a><img id=\"cpxOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(2048); return false;\"/>",
-                "<a class=\"SmBlueTableText\">EnCompassPAT</a></br><a class=\"SmBlackText\">Is the only bibliographic service in the world devoted solely to covering worldwide patents on the downstream and upstream (only oil field chemicals) petroleum, petrochemical, natural gas, energy and allied industries. EnCompassPAT database back to 1964 and contains over 360, 000 records, and contains especially selected patents from 40 patenting authorities throughout the world, indexed on the basis of the EnCompass Thesaurus. More than 25,000 records are added annually, in weekly updates.</a><img id=\"cpxOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(2048); return false;\"/>",
-        		"<a class=\"SmBlueTableText\">EnCompassPAT</a></br><a class=\"SmBlackText\">Is the only bibliographic service in the world devoted solely to covering worldwide patents on the downstream and upstream (only oil field chemicals) petroleum, petrochemical, natural gas, energy and allied industries. EnCompassPAT database back to 1964 and contains over 360, 000 records, and contains especially selected patents from 40 patenting authorities throughout the world, indexed on the basis of the EnCompass Thesaurus. More than 25,000 records are added annually, in weekly updates.</a>");
+                "<a class=\"SmBlueTableText\">EnCompassPAT</a></br><a class=\"SmBlackText\">Covers worldwide patent information on...</a>",
+                "<a class=\"SmBlueTableText\">EnCompassPAT</a></br><a class=\"SmBlackText\">EnCompassPAT™ is a patent service uniquely devoted to covering worldwide patents on the downstream petroleum, petrochemical, natural gas, energy and allied industries. Patents indexed are selected from 40 international patenting authorities. The EnCompass Thesaurus facilitates precision searching via controlled vocabulary.</a>",
+        		"<a class=\"SmBlueTableText\">EnCompassPAT</a></br><a class=\"SmBlackText\">EnCompassPAT™ is a patent service uniquely devoted to covering worldwide patents on the downstream petroleum, petrochemical, natural gas, energy and allied industries. Patents indexed are selected from 40 international patenting authorities. The EnCompass Thesaurus facilitates precision searching via controlled vocabulary.</a>",
+        		"<img id=\"eptOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(2048); return false;\"/>",
+        		"<img id=\"eptOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(2048); return false;\"/>");
+
 
 
     public static final DbDisplayConstants CHM =
         new DbDisplayConstants(DatabaseConfig.CHM_MASK,
                 "Chimica",
-                "<a class=\"SmBlueTableText\">Chimica</a></br><a class=\"SmBlackText\">Provides exceptional focus on applied...</a><img id=\"cpxOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(128); return false;\"/>",
-                "<a class=\"SmBlueTableText\">Chimica</a></br><a class=\"SmBlackText\">Provides access to over 600 of the most influential international journals related to chemistry and chemical engineering. Chimica provides exceptional focus on applied and analytical chemistry, and extends to cover physical chemistry, health and safety, organic and inorganic chemistry, and materials science. Coverage in Chimica starts in 1970.</a><img id=\"cpxOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(128); return false;\"/>",
-        		"<a class=\"SmBlueTableText\">Chimica</a></br><a class=\"SmBlackText\">Provides access to over 600 of the most influential international journals related to chemistry and chemical engineering. Chimica provides exceptional focus on applied and analytical chemistry, and extends to cover physical chemistry, health and safety, organic and inorganic chemistry, and materials science. Coverage in Chimica starts in 1970.</a>");
+                "<a class=\"SmBlueTableText\">Chimica</a></br><a class=\"SmBlackText\">Provides exceptional focus on applied...</a>",
+                "<a class=\"SmBlueTableText\">Chimica</a></br><a class=\"SmBlackText\">Chimica provides access to hundreds of the most influential international journals focused on chemistry and chemical engineering, with emphasis on applied and analytical chemistry, extending to physical chemistry, health and safety, organic and inorganic chemistry, and materials science. Coverage in Chimica starts in 1970.</a>",
+        		"<a class=\"SmBlueTableText\">Chimica</a></br><a class=\"SmBlackText\">Chimica provides access to hundreds of the most influential international journals focused on chemistry and chemical engineering, with emphasis on applied and analytical chemistry, extending to physical chemistry, health and safety, organic and inorganic chemistry, and materials science. Coverage in Chimica starts in 1970.</a>",
+        		"<img id=\"chmOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(128); return false;\"/>",
+        		"<img id=\"chmOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(128); return false;\"/>");
+
 
 
     public static final DbDisplayConstants CBN =
         new DbDisplayConstants(DatabaseConfig.CBN_MASK,
                 "CBNB",
-                "<a class=\"SmBlueTableText\">CBNB</a></br><a class=\"SmBlackText\">The leading provider of worldwide chemical...</a><img id=\"cpxOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(256); return false;\"/>",
-                "<a class=\"SmBlueTableText\">CBNB</a></br><a class=\"SmBlackText\">Chemical Business NewsBase (CBNB) is the leading provider of worldwide chemical business news and information. Search for facts, figures, views, and comments on the chemical industry worldwide, from 1985 to the present.  Sources include over 300 core trade journals, newspapers and company newsletters, plus hundreds of books, market research reports, annual and interim company reports, press releases and other \"grey literature\" sources.</a><img id=\"cpxOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(256); return false;\"/>",
-        		"<a class=\"SmBlueTableText\">CBNB</a></br><a class=\"SmBlackText\">Chemical Business NewsBase (CBNB) is the leading provider of worldwide chemical business news and information. Search for facts, figures, views, and comments on the chemical industry worldwide, from 1985 to the present.  Sources include over 300 core trade journals, newspapers and company newsletters, plus hundreds of books, market research reports, annual and interim company reports, press releases and other \"grey literature\" sources.</a>");
+                "<a class=\"SmBlueTableText\">CBNB</a></br><a class=\"SmBlackText\">The leading provider of worldwide chemical...</a>",
+                "<a class=\"SmBlueTableText\">CBNB</a></br><a class=\"SmBlackText\">Chemical Business NewsBase (CBNB) is the leading provider of global chemical business news and information. Search for facts, figures, views, and comments on the chemical industry worldwide, from 1985 to the present.  Sources include hundreds of core trade journals, newspapers and company newsletters, plus books, market research reports, annual and interim company reports, press releases and other \"grey literature\" sources.</a>",
+        		"<a class=\"SmBlueTableText\">CBNB</a></br><a class=\"SmBlackText\">Chemical Business NewsBase (CBNB) is the leading provider of global chemical business news and information. Search for facts, figures, views, and comments on the chemical industry worldwide, from 1985 to the present.  Sources include hundreds of core trade journals, newspapers and company newsletters, plus books, market research reports, annual and interim company reports, press releases and other \"grey literature\" sources.</a>",
+        		"<img id=\"cbnOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(256); return false;\"/>",
+        		"<img id=\"cbnOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(256); return false;\"/>");
+
 
 
 
     public static final DbDisplayConstants PCH =
-        new DbDisplayConstants(DatabaseConfig.CBN_MASK,
+        new DbDisplayConstants(DatabaseConfig.PCH_MASK,
                 "PaperChem",
-                "<a class=\"SmBlueTableText\">PaperChem</a></br><a class=\"SmBlackText\">Covering international literature related to...</a><img id=\"cpxOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(64); return false;\"/>",
-                "<a class=\"SmBlueTableText\">PaperChem</a></br><a class=\"SmBlackText\">Is a comprehensive bibliographic database covering international literature related to pulp and paper technology. It includes abstracts of journal articles, conference papers and technical reports with more than 590,000 records. Subjects covered are: Chemistry of Cellulose, Corrugated and Particle Board, Engineering and Process Control, Films, Foils and Laminates, Forestry and Pulpwood, Graphic Arts (prior to 1998), Lignin and Extractives, Mill Construction and Operation, Pulp, Paper and Board Pollution, Silver Chemicals and Residues, Tissue Culture, Corrosion, Economics and Research, Fiber Webs and NonWovens, Finishing and Converting, Gluing, Labeling, and Sealing, Hemicellulose, Machinery Equipment and Maintenance, Packaging, Power, Spent Liquors and Pollution Control and Water. The database was created in 1967 and records are added weekly. There are also some records in the database with publication years prior to 1967.</a><img id=\"cpxOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(64); return false;\"/>",
-        		"<a class=\"SmBlueTableText\">PaperChem</a></br><a class=\"SmBlackText\">Is a comprehensive bibliographic database covering international literature related to pulp and paper technology. It includes abstracts of journal articles, conference papers and technical reports with more than 590,000 records. Subjects covered are: Chemistry of Cellulose, Corrugated and Particle Board, Engineering and Process Control, Films, Foils and Laminates, Forestry and Pulpwood, Graphic Arts (prior to 1998), Lignin and Extractives, Mill Construction and Operation, Pulp, Paper and Board Pollution, Silver Chemicals and Residues, Tissue Culture, Corrosion, Economics and Research, Fiber Webs and NonWovens, Finishing and Converting, Gluing, Labeling, and Sealing, Hemicellulose, Machinery Equipment and Maintenance, Packaging, Power, Spent Liquors and Pollution Control and Water. The database was created in 1967 and records are added weekly. There are also some records in the database with publication years prior to 1967.</a>");
+                "<a class=\"SmBlueTableText\">PaperChem</a></br><a class=\"SmBlackText\">Covering international literature related to...</a>",
+                "<a class=\"SmBlueTableText\">PaperChem</a></br><a class=\"SmBlackText\">PaperChem is a database comprised of indexed bibliographic citations and abstracts from journals, conference proceedings, and technical reports focused on pulp and paper technology. Coverage is from 1967 to present, and covers such topics as the chemistry of cellulose, corrugated and particle board; films, foils and laminates; forestry and pulpwood, lignin and extractives, non-wovens, and much more.</a>",
+        		"<a class=\"SmBlueTableText\">PaperChem</a></br><a class=\"SmBlackText\">PaperChem is a database comprised of indexed bibliographic citations and abstracts from journals, conference proceedings, and technical reports focused on pulp and paper technology. Coverage is from 1967 to present, and covers such topics as the chemistry of cellulose, corrugated and particle board; films, foils and laminates; forestry and pulpwood, lignin and extractives, non-wovens, and much more.</a>",
+        		"<img id=\"pchOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(64); return false;\"/>",
+        		"<img id=\"pchOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(64); return false;\"/>");
+
+        		
 
     static
     {
@@ -136,13 +170,17 @@ public class DbDisplayConstants
             				   String dbName,
             				   String shortText,
             				   String text,
-            				   String textNoMinus)
+            				   String textNoMinus,
+            				   String imgPlus,
+            				   String imgMinus)
     {
         this.dbmask = dbmask;
         this.dbName = dbName;
         this.shortText = shortText;
         this.text = text;
         this.textNoMinus = textNoMinus;
+        this.imgPlus = imgPlus;
+        this.imgMinus = imgMinus;
     }
     public int getDbmask()
     {
@@ -166,6 +204,15 @@ public class DbDisplayConstants
     {
         return this.shortText;
     }
+    
+    public String getImgPlus()
+    {
+        return this.imgPlus;
+    }
+    public String getImgMinus()
+    {
+        return this.imgMinus;
+    }
 
     public static String getDbname(String dbcode)
     {
@@ -188,10 +235,24 @@ public class DbDisplayConstants
         DbDisplayConstants ddc =(DbDisplayConstants) allConstants.get(dbcode);
         return ddc.getDisplayShortText();
     }
+    
+    public static String getImgPlus(String dbcode)
+    {
+        DbDisplayConstants ddc =(DbDisplayConstants) allConstants.get(dbcode);
+        return ddc.getImgPlus();
+    }
+    
+    public static String getImgMinus(String dbcode)
+    {
+        DbDisplayConstants ddc =(DbDisplayConstants) allConstants.get(dbcode);
+        return ddc.getImgMinus();
+    }
 
     public String constDispName(String dbname)
     {
         DbDisplayConstants dbconst =(DbDisplayConstants) allConstants.get(dbname);
         return dbconst.dbName;
     }
+    
+
 }
