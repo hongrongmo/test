@@ -234,9 +234,10 @@ public class DatabaseDisplayHelper {
 	        this.flag = dbcode.concat("Flag");
 	        this.terms = dbcode.concat("Terms");
 	        this.inputField = dbcode.concat("inputField");	 
-	        this.img = dbcode.concat("OpenClose");
+	        
 	        	        	        
 	        this.dbDispName = DbDisplayConstants.getDbname(dbcode);
+	        this.img = DbDisplayConstants.getImgPlus(dbcode);
 	        this.text = DbDisplayConstants.getDisplayText(dbcode);	
 	        this.textNoMinus = DbDisplayConstants.getDisplayTextNoMinus(dbcode);
 	        this.shortText = DbDisplayConstants.getDisplayShortText(dbcode);
@@ -250,8 +251,10 @@ public class DatabaseDisplayHelper {
 	    private StringBuffer writeHTMLfragment()
 	    {
 	        StringBuffer html = new StringBuffer();
-			
-			html.append("<tr><td valign=\"top\" width=\"3\"><img src=\"/engresources/images/s.gif\" width=\"3\"/></td><td valign=\"top\">"); 
+			html.append("<tr><td valign=\"top\" width=\"14\">" +
+					"<img src=\"/engresources/images/s.gif\" width=\"2\" height=\"3\"/></br><img src=\"/engresources/images/s.gif\" width=\"2\"/>" +
+					this.img +
+					"<img src=\"/engresources/images/s.gif\" width=\"2\"/></td><td valign=\"top\">"); 
 		    		    
 		    if (!this.isTwodb)
 		    {
@@ -285,7 +288,10 @@ public class DatabaseDisplayHelper {
 	    private String dbShortText;
 	    private String dbcode;
 	    private int dbmask;
-	    private String imgOpenClose;
+	    private String img;
+	    private String imgMinus;
+	    private String imgPlus;
+	    
 	    
 	    
 	    private jsFragment(String dbcode)
@@ -305,7 +311,17 @@ public class DatabaseDisplayHelper {
 	        String mask = (String)dbConversion.get(dbcode);
 	        
 	        this.dbmask = Integer.parseInt(mask);
-	        this.imgOpenClose = dbcode.concat("OpenClose");
+	       
+	        this.img = DbDisplayConstants.getImgPlus(dbcode);
+	        
+	        this.imgPlus = "<img src=\"/engresources/images/s.gif\" width=\"2\" height=\"3\"/></br><img src=\"/engresources/images/s.gif\" width=\"2\"/>" +
+	        DbDisplayConstants.getImgPlus(dbcode) +
+			"<img src=\"/engresources/images/s.gif\" width=\"2\"/>";
+	        
+	        this.imgMinus = "<img src=\"/engresources/images/s.gif\" width=\"2\" height=\"3\"/></br><img src=\"/engresources/images/s.gif\" width=\"2\"/>" +
+	        DbDisplayConstants.getImgMinus(dbcode) +
+			"<img src=\"/engresources/images/s.gif\" width=\"2\"/>";
+	       
 	        
 	    }
 	    
@@ -318,25 +334,39 @@ public class DatabaseDisplayHelper {
 	                ")\n {  \n if ("+
 	                this.flag +
 	                " == 1 )\n{"+	                
-	                "\ncel=document.getElementById(\'newsTable\').rows["+
+	                "\n cel=document.getElementById(\'newsTable\').rows["+
 	                htmlraw+
 	                "].cells;"+
-	                "\ncel[1].innerHTML = " +
+
+	                "\n cel[0].innerHTML = " +
+	                this.dbcode+
+	                "imgMinus"+
+	                "; \n" +
+	                
+	                "\n cel[1].innerHTML = " +
 	                this.dbcode+
 	                "DispText"+
-	                "; \n" +	    	        
+	                "; \n" +
+
 	                this.flag +
 	    	        " = 2; \n"+
 	                "} else if ("+
 	    	        this.flag +
 	    	        " == 2 )\n{"+	                
-	    	        "\ncel=document.getElementById(\'newsTable\').rows["+
+	    	        "\n cel=document.getElementById(\'newsTable\').rows["+
 	    	        htmlraw+
 	    	        "].cells;"+
-	    	        "\ncel[1].innerHTML = " +
+	                
+	                "\n cel[0].innerHTML = " +
+	                this.dbcode+
+	                "imgPlus"+
+	                "; \n" +
+	                
+	    	        "\n cel[1].innerHTML = " +
 	    	        this.dbcode+
 	    	        "ShortText"+
 	    	        "; \n" +
+	    	        
 	    	        this.flag +
 	    	        " = 1; \n"+
 	    	        "} \n}"	 );
@@ -359,6 +389,16 @@ public class DatabaseDisplayHelper {
 	                "var "+ this.dbcode+"ShortText"+	                
 	                " = \'"+
 	                this.dbShortText +
+	                "\';\n" +
+	                
+	                "var "+ this.dbcode+"imgPlus"+	                
+	                " = \'"+
+	                this.imgPlus +
+	                "\';\n" +
+	                
+	                "var "+ this.dbcode+"imgMinus"+	                
+	                " = \'"+
+	                this.imgMinus +
 	                "\';\n" +
 	                
 	                "var "+ this.dbcode+"Flag"+
@@ -385,7 +425,19 @@ public class DatabaseDisplayHelper {
 		     "ShortText"+	                
 		     " = \'"+
 		     this.dbShortText +
-		     "\';\n" +		                
+		     "\';\n" +
+		     
+             "var "+ this.dbcode+"imgPlus"+	                
+             " = \'"+
+             this.imgPlus +
+             "\';\n" +
+             
+             "var "+ this.dbcode+"imgMinus"+	                
+             " = \'"+
+             this.imgMinus +
+             "\';\n" +
+             
+             
 		     "var "+ 
 		     this.dbcode+
 		     "Flag"+
