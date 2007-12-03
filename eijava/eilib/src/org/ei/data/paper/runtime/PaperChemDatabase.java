@@ -148,4 +148,16 @@ public class PaperChemDatabase extends Database {
 	        return false;
 	    }
     }
+
+	public boolean linkLocalHoldings(String linklabel)
+	{
+		if(linklabel.indexOf("NTIS") > -1)
+		{
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
 }
