@@ -48,7 +48,7 @@ import org.apache.oro.text.perl.*;
   * list of docids come from PaperSearchControl and
   *
   */
-public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
+public class PaperChemDocBuilder implements DocumentBuilder
 {
     public static String PAPER_TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright 2007 Elsevier Engineering Information, Inc.";
     public static String PAPER_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2007 Elsevier Engineering Information, Inc.";
@@ -84,6 +84,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
 	        Keys.ISSN,
 	        Keys.LANGUAGE ,
 	        Keys.NO_SO,
+	        Keys.DOI,
 	        Keys.COPYRIGHT,
 	        Keys.COPYRIGHT_TEXT};
 	private static final Key[] ABSTRACT_KEYS = {
@@ -123,6 +124,7 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
 	        Keys.ABSTRACT,
 	        Keys.NUMBER_OF_REFERENCES,
 	        Keys.NO_SO,
+	       	Keys.DOI,
 	        Keys.COPYRIGHT,
 	        Keys.COPYRIGHT_TEXT };
 	private static final Key[] DETAILED_KEYS = {
@@ -179,164 +181,6 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
 	private static final Key[] RIS_KEYS = { Keys.RIS_TY, Keys.RIS_LA , Keys.RIS_N1 , Keys.RIS_TI , Keys.RIS_T1 , Keys.RIS_BT , Keys.RIS_JO ,Keys.RIS_T3 , Keys.RIS_AUS , Keys.RIS_AD , Keys.RIS_EDS , Keys.RIS_VL , Keys.RIS_IS , Keys.RIS_PY , Keys.RIS_AN , Keys.RIS_SP , Keys.RIS_EP, Keys.RIS_SN ,  Keys.RIS_S1 , Keys.RIS_MD ,Keys.RIS_CY , Keys.RIS_PB,  Keys.RIS_N2 , Keys.RIS_KW , Keys.RIS_CVS , Keys.RIS_FLS , Keys.RIS_DO };
 	private static final Key[] XML_KEYS = { Keys.ISSN , Keys.MAIN_HEADING , Keys.NO_SO , Keys.MONOGRAPH_TITLE , Keys.PUBLICATION_YEAR  , Keys.CONTROLLED_TERM , Keys.ISBN , Keys.AUTHORS , Keys.DOCID , Keys.SOURCE , Keys.NUMVOL , Keys.EDITOR_AFFS , Keys.EDITORS , Keys.PUBLISHER , Keys.VOLUME , Keys.AUTHOR_AFFS , Keys.PROVIDER , Keys.ISSUE_DATE_PAPER , Keys.COPYRIGHT_TEXT , Keys.DOI  , Keys.PUBLICATION_DATE , Keys.TITLE , Keys.LANGUAGE , Keys.PAGE_RANGE , Keys.PAPER_NUMBER , Keys.COPYRIGHT , Keys.ISSUE , Keys.ACCESSION_NUMBER , PAPER_CONTROLLED_TERMS};
 	private static String DELIM;
-
-
-
-  private static Map m_labels = new Hashtable();
-  private static List m_order = new ArrayList();
-/*
-  static {
-    m_labels.put("AN","Accession number");
-    m_labels.put("TI","Title");
-    m_labels.put("TT","Translated title");
-    m_labels.put("AUS","Authors");
-    m_labels.put("EDS","Editors");
-    m_labels.put("IVS","Inventors");
-    m_labels.put("PAD","Patent application date");
-    m_labels.put("PID","Patent issue date");
-    m_labels.put("PAS","Assignee");
-    m_labels.put("PAP","Application number");
-    m_labels.put("PRIORN","Priority number");
-    m_labels.put("PAN","Patent number");
-    m_labels.put("PFD","Filing date");
-    m_labels.put("PPD","Publication date");
-    m_labels.put("CAUS","Corresponding author");
-    m_labels.put("AF","Author affiliations");
-    m_labels.put("EF","Editor affiliation");
-    m_labels.put("ST","Serial title");
-    m_labels.put("SE","Abbreviated serial title");
-    m_labels.put("VO","Volume/Issue");
-    m_labels.put("VOM","Volume");
-    m_labels.put("IS","Issue");
-    m_labels.put("MT","Monograph title");
-    m_labels.put("IORG","Issuing organization");
-    m_labels.put("RN","Report number");
-    m_labels.put("SD","Issue date");
-    m_labels.put("PD_YR","Publication date");
-    m_labels.put("YR","Publication year");
-    m_labels.put("PR","Paper number");
-    m_labels.put("PA","Part number");
-    m_labels.put("PP","Pages");
-    m_labels.put("SO","Original source field");
-    m_labels.put("LA","Language");
-    m_labels.put("SN","ISSN");
-    m_labels.put("CN","CODEN");
-    m_labels.put("BN","ISBN");
-    m_labels.put("DT","Document type");
-    m_labels.put("COPA","Country of application");
-    m_labels.put("CF","Conference name");
-    m_labels.put("MD","Conference date");
-    m_labels.put("ML","Conference location");
-    m_labels.put("CC","Conference code");
-    m_labels.put("SP","Sponsor");
-    m_labels.put("PN","Publisher");
-    m_labels.put("PLA","Place of publication");
-    m_labels.put("PL","Country of publication");
-    m_labels.put("FTTJ","Translation serial title");
-    m_labels.put("TTJ","Translation abbreviated serial title");
-    m_labels.put("VOLT","Translation volume");
-    m_labels.put("ISST","Translation issue");
-    m_labels.put("TDATE","Translation publication date");
-    m_labels.put("IPNT","Translation pages");
-    m_labels.put("SNT","Translation ISSN");
-    m_labels.put("CNT","Translation CODEN");
-    m_labels.put("CPUBT","Translation country of publication");
-    m_labels.put("MI","Material Identity Number");
-    m_labels.put("AB","Abstract");
-    m_labels.put("AT","Abstract type");
-    m_labels.put("CSESS","Session name number");
-    m_labels.put("CLAIM", "Number of claims");
-    m_labels.put("NOFIG","Number of figures");
-    m_labels.put("NOTAB","Number of tables");
-    m_labels.put("NR","Number of references");
-    m_labels.put("CVS","Index terms");
-    m_labels.put("FLS","Uncontrolled terms");
-    m_labels.put("NDI","Numerical data indexing");
-    m_labels.put("AOI","Astronomical object indexing");
-    m_labels.put("CI","Chemical indexing");
-    m_labels.put("DISPS","Discipline");
-    m_labels.put("SPECN","Specific Names");
-    m_labels.put("DB","Database");
-  }
-  static {
-    m_order.add("AN");
-    m_order.add("TI");
-    m_order.add("TT");
-    m_order.add("AUS");
-    m_order.add("EDS");
-    m_order.add("AF");
-    m_order.add("EF");
-    m_order.add("IVS");
-    m_order.add("PAD");
-    m_order.add("PID");
-    m_order.add("PAS");
-    m_order.add("PAP");
-    m_order.add("PRIORN");
-    m_order.add("PAN");
-    m_order.add("PFD");
-    m_order.add("PPD");
-    m_order.add("CAUS");
-    m_order.add("ST");
-    m_order.add("SE");
-    m_order.add("VO");
-    m_order.add("VOM");
-    m_order.add("IS");
-    m_order.add("MT");
-    m_order.add("IORG");
-    m_order.add("RN");
-    m_order.add("SD");
-    m_order.add("PD_YR");
-    m_order.add("YR");
-    m_order.add("PR");
-    m_order.add("PA");
-    m_order.add("PP");
-    m_order.add("SO");
-    m_order.add("LA");
-    m_order.add("SN");
-    m_order.add("CN");
-    m_order.add("BN");
-    m_order.add("DT");
-    m_order.add("COPA");
-    m_order.add("CF");
-    m_order.add("MD");
-    m_order.add("ML");
-    m_order.add("CSESS");
-    m_order.add("CC");
-    m_order.add("SP");
-    m_order.add("PN");
-    m_order.add("PLA");
-    m_order.add("PL");
-    m_order.add("FTTJ");
-    m_order.add("TTJ");
-    m_order.add("VOLT");
-    m_order.add("ISST");
-    m_order.add("TDATE");
-    m_order.add("IPNT");
-    m_order.add("SNT");
-    m_order.add("CNT");
-    m_order.add("CPUBT");
-    m_order.add("MI");
-    m_order.add("AB");
-    m_order.add("AT");
-    m_order.add("CLAIM");
-    m_order.add("NOFIG");
-    m_order.add("NOTAB");
-    m_order.add("NR");
-    m_order.add("CVS");
-    m_order.add("FLS");
-    m_order.add("NDI");
-    m_order.add("AOI");
-    m_order.add("CI");
-    m_order.add("DISPS");
-    m_order.add("SPECN");
-    m_order.add("DB");
-    m_order.add("CPR");
-  }
-*/
-  // document builder interface methods which are called by EIDoc classes
-  // for building detailed XML views of documents
-  public Map getLabels() { return m_labels; }
-  public List getOrder() { return m_order; }
 
     private Perl5Util perl = new Perl5Util();
     private Database database;
@@ -1046,6 +890,10 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     }
                 }
 
+				if(rset.getString("DO") != null)
+				{
+					ht.put(Keys.DOI, new XMLWrapper(Keys.DOI, rset.getString("DO")));
+				}
 
                 EIDoc eiDoc = new EIDoc(did,ht, Abstract.ABSTRACT_FORMAT);
                 eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
@@ -1775,6 +1623,11 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                             ht.put(Keys.SPECIFIC_NAMES,new XMLWrapper(Keys.SPECIFIC_NAMES,specn));
                         }
                     }
+
+					if(rset.getString("DO") != null)
+					{
+						ht.put(Keys.DOI, new XMLWrapper(Keys.DOI, rset.getString("DO")));
+					}
 
                     EIDoc eiDoc = new EIDoc(did,ht, Detail.FULLDOC_FORMAT);
                     eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
@@ -2592,6 +2445,13 @@ public class PaperChemDocBuilder implements DocumentBuilder, DetailedBuilder
                     ht.put(Keys.LANGUAGE,
                             new XMLWrapper (Keys.LANGUAGE,StringUtil.replaceNullWithEmptyString(rset.getString("LA"))));
                 }
+
+				//DO
+				if(rset.getString("DO") != null)
+				{
+					ht.put(Keys.DOI, new XMLWrapper(Keys.DOI, rset.getString("DO")));
+				}
+
 
                 // STT - INSPEC ONLY
 
