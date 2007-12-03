@@ -21,8 +21,8 @@ import org.apache.oro.text.perl.*;
   */
 public class EltDocBuilder implements DocumentBuilder, Keys {
     private static final String LT_MSG = "Please click here to view all linked terms";
-    public static String ELT_TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright 2007 Elsevier Engineering Information, Inc.";
-    public static String ELT_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2007 Elsevier Engineering Information, Inc.";
+    public static String ELT_TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright 2007 Elsevier, Inc.";
+    public static String ELT_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2007 Elsevier, Inc.";
     public static String PROVIDER = "EnCompassLIT";
     public EltDocTypes doctype = new EltDocTypes();
     private static final Key ELT_CONTROLLED_TERMS = new Key(Keys.CONTROLLED_TERMS, "Controlled terms");
@@ -172,10 +172,13 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
             {
                 l = loadLinkedTerms(listOfDocIDs);
             }
-            else if (dataFormat.equalsIgnoreCase("RIS")) {
+            else if (dataFormat.equalsIgnoreCase(RIS.RIS_FORMAT)) {
                 l = loadRIS(listOfDocIDs);
             }
-
+            else if (dataFormat.equalsIgnoreCase(Citation.XMLCITATION_FORMAT))
+            {
+                l = loadXMLCitations(listOfDocIDs);
+            }
         }
         catch (Exception e) {
             throw new DocumentBuilderException(e);
@@ -851,15 +854,15 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
 
     }
     /**
-                    *   This method basically takes list Of DocIDs as Parameter
-                    *   This list of Docids use buildINString() method to build
-                    *   the required IN clause String.This is appended to sql String
-                    *   The resultSet so obtained by executing the sql,is iterated,
-                    *   to build Detailed EIDoc objects,which are then added to EIdocumentList
-                    *   @param listOfDocIDs
-                    *   @return EIDocumentList
-                    *   @exception Exception
-                    */
+      *   This method basically takes list Of DocIDs as Parameter
+      *   This list of Docids use buildINString() method to build
+      *   the required IN clause String.This is appended to sql String
+      *   The resultSet so obtained by executing the sql,is iterated,
+      *   to build Detailed EIDoc objects,which are then added to EIdocumentList
+      *   @param listOfDocIDs
+      *   @return EIDocumentList
+      *   @exception Exception
+      */
     private List loadDetailed(List listOfDocIDs) throws Exception {
         Hashtable oidTable = getDocIDTable(listOfDocIDs);
         List list = new ArrayList();
@@ -1621,17 +1624,17 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
     }
 
     /*
-                                     * PRIVATE UTILITY METHODS
-                                     * /
+     * PRIVATE UTILITY METHODS
+     * /
 
-                                     /* This method builds the IN String
-                                     * from list of docId objects.
-                                     * The select query will get the result set in a reverse way
-                                     * So in order to get in correct order we are doing a reverse
-                                     * example of return String--(23,22,1,12...so on);
-                                     * @param listOfDocIDs
-                                     * @return String
-                                     * */
+     /* This method builds the IN String
+     * from list of docId objects.
+     * The select query will get the result set in a reverse way
+     * So in order to get in correct order we are doing a reverse
+     * example of return String--(23,22,1,12...so on);
+     * @param listOfDocIDs
+     * @return String
+     * */
     private String buildINString(List listOfDocIDs) {
         StringBuffer sQuery = new StringBuffer();
         sQuery.append("(");
@@ -1834,6 +1837,275 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
     }
 
 
+    private List loadXMLCitations(List listOfDocIDs) throws Exception {
+        Hashtable oidTable = getDocIDTable(listOfDocIDs);
+        List list = new ArrayList();
+        int count = 0;
+        Connection con = null;
+        Statement stmt = null;
+        ResultSet rset = null;
+        ConnectionBroker broker = null;
+        String INString = buildINString(listOfDocIDs);
+        CVSTermBuilder termBuilder = new CVSTermBuilder();
+
+        try {
+            broker = ConnectionBroker.getInstance();
+            con = broker.getConnection(DatabaseConfig.SEARCH_POOL);
+            stmt = con.createStatement();
+
+            rset = stmt.executeQuery(queryAbstracts + INString);
+
+            DatabaseConfig dconfig = DatabaseConfig.getInstance();
+
+            while (rset.next()) {
+                ElementDataMap ht = new ElementDataMap();
+                // Common Fields
+                DocID did = (DocID) oidTable.get(rset.getString("M_ID"));
+                did.setDatabase(dconfig.getDatabase("elt"));
+                ht.put(Keys.DOCID, did);
+
+                ht.put(Keys.PROVIDER, new XMLWrapper(Keys.PROVIDER, EltDocBuilder.PROVIDER));
+                ht.put(Keys.COPYRIGHT, new XMLWrapper(Keys.COPYRIGHT, EltDocBuilder.ELT_HTML_COPYRIGHT));
+                ht.put(Keys.COPYRIGHT_TEXT, new XMLWrapper(Keys.COPYRIGHT_TEXT, EltDocBuilder.ELT_TEXT_COPYRIGHT));
+
+                String cc = StringUtil.substituteChars(rset.getString("APICC"));
+
+                String secondarySrc = StringUtil.substituteChars(rset.getString("SEC"));
+                String secondaryTitle = StringUtil.substituteChars(rset.getString("SECSTI"));
+                String abs = null;
+
+                if (!perl.match("/Chemical Abstracts/i", secondarySrc) && !perl.match("/Chemical Abstracts/i", secondaryTitle)) {
+
+                    if ((abs = hasAbstract(rset.getClob("ABS"))) != null) {
+                        ht.put(Keys.ABSTRACT, new XMLWrapper(Keys.ABSTRACT, StringUtil.substituteChars(abs)));
+                    }
+                    else {
+
+                        if (rset.getString("OAB") != null)
+                            ht.put(Keys.ABSTRACT, new XMLWrapper(Keys.ABSTRACT, StringUtil.substituteChars(rset.getString("OAB"))));
+                    }
+
+                }
+                else {
+
+                    if (perl.match("/Oil Field Chemicals/i", cc)) {
+
+                        if ((abs = hasAbstract(rset.getClob("ABS"))) != null) {
+                            ht.put(Keys.ABSTRACT, new XMLWrapper(Keys.ABSTRACT, StringUtil.substituteChars(abs)));
+                        }
+                        else {
+
+                            if (rset.getString("OAB") != null)
+                                ht.put(Keys.ABSTRACT, new XMLWrapper(Keys.ABSTRACT, StringUtil.substituteChars(rset.getString("OAB"))));
+                        }
+                    }
+                }
+
+                //DO
+                if (rset.getString("DOI") != null) {
+                    ht.put(Keys.DOI, new XMLWrapper(Keys.DOI, rset.getString("DOI")));
+                }
+
+                //CAS
+                if (rset.getString("APICRN") != null) {
+                    ht.put(Keys.CAS_REGISTRY_CODES, new XMLMultiWrapper2(Keys.CAS_REGISTRY_CODES, setCRC(StringUtil.substituteChars(removePoundSign(rset.getString("APICRN"))))));
+
+                }
+                if (rset.getString("TIE") != null) {
+                    ht.put(Keys.TITLE, new XMLWrapper(Keys.TITLE, StringUtil.substituteChars(rset.getString("TIE"))));
+                }
+
+                if (rset.getString("TIF") != null) {
+                    ht.put(Keys.TITLE_TRANSLATION, new XMLWrapper(Keys.TITLE_TRANSLATION, StringUtil.substituteChars(rset.getString("TIF"))));
+                }
+
+                if (rset.getString("AUT") != null) {
+
+                    Contributors authors = null;
+
+                    int loadNumber = rset.getInt("LOAD_NUMBER");
+                    if (loadNumber >= 200000)
+                    {
+                        authors = new Contributors(Keys.AUTHORS, getContributors(StringUtil.substituteChars(ausFormatter.formatAuthors(rset.getString("AUT"))), Keys.AUTHORS));
+                    }
+                    else
+                    {
+                        authors = new Contributors(Keys.AUTHORS, getContributors(StringUtil.substituteChars(rset.getString("AUT")), Keys.AUTHORS));
+                    }
+
+                    ht.put(Keys.AUTHORS, authors);
+                }
+
+                if (rset.getString("SO") != null)
+                {
+                    ht.put(Keys.SOURCE, new XMLWrapper(Keys.SOURCE, StringUtil.substituteChars(rset.getString("SO"))));
+                }
+                else
+                {
+                    StringBuffer source = new StringBuffer();
+
+                    if (rset.getString("STI") != null) {
+
+                        source.append((StringUtil.substituteChars(rset.getString("STI"))));
+                    }
+                    else {
+                        if (rset.getString("STA") != null) {
+                            source.append((StringUtil.substituteChars(rset.getString("STA"))));
+                        }
+                    }
+                    // VO
+                    if (rset.getString("VLN") != null) {
+                        source.append(" ").append(formatVOLUME(rset.getString("VLN")));
+                    }
+                    if (rset.getString("ISN") != null) {
+                        if (rset.getString("VLN") == null)
+                            source.append(" ");
+                        source.append("(").append(formatISSUE(rset.getString("ISN"))).append(")");
+                    }
+
+                    if (rset.getString("SPD") != null) {
+                        source.append(" ").append(getYear(rset.getString("SPD")));
+                    }
+                    else {
+                        if (rset.getString("PYR") != null) {
+                            source.append(" ").append(rset.getString("PYR"));
+                        }
+                    }
+
+                    if (rset.getString("PAG") != null) {
+                        source.append(" p. ").append(formatPAGE(rset.getString("PAG")));
+                    }
+
+                    if (rset.getString("CNFNAM") != null) {
+                        source.append(", ").append(StringUtil.substituteChars(rset.getString("CNFNAM")));
+                    }
+
+                    if ((rset.getString("CNFSTD") != null)) {
+                        source.append(", ").append(getYear(rset.getString("CNFSTD")));
+                    }
+
+                    if (rset.getString("CNFCTY") != null) {
+                        source.append(", ").append(StringUtil.substituteChars(rset.getString("CNFCTY")));
+                    }
+
+                    if (rset.getString("SECSTI") != null) {
+                        source.append(", ").append(StringUtil.substituteChars(rset.getString("SECSTI")));
+                    }
+                    if (rset.getString("SECVLN") != null) {
+                        source.append(" ").append(formatVOLUME(rset.getString("SECVLN")));
+                    }
+                    if (rset.getString("SECISN") != null) {
+                        source.append("(").append(formatISSUE(rset.getString("SECISN"))).append(")");
+                    }
+                    if (rset.getString("SAN") != null) {
+                        source.append(" ").append(formatSAN(rset.getString("SAN")));
+                    }
+                    if (rset.getString("SECPYR") != null) {
+                        source.append(" ").append(formatSECPYR(rset.getString("SECPYR")));
+                    }
+
+                    ht.put(Keys.SOURCE, new XMLWrapper(Keys.SOURCE, StringUtil.substituteChars(source.toString())));
+
+                }
+
+                //PUB
+                if (rset.getString("PUB") != null) {
+                    ht.put(Keys.PUBLISHER, new XMLWrapper(Keys.PUBLISHER, StringUtil.substituteChars(rset.getString("PUB"))));
+                }
+
+                //IBN
+                if (rset.getString("ISBN") != null) {
+                    ht.put(Keys.ISBN, new ISBN(rset.getString("ISBN")));
+                }
+
+                //ISN
+                if (rset.getString("ISSN") != null) {
+                    ht.put(Keys.ISSN, new ISSN(formatISSN(rset.getString("ISSN"))));
+                }
+
+                if ((rset.getString("LNA") != null) && (!rset.getString("LNA").equalsIgnoreCase("ENGLISH")))
+                {
+                    String la = rset.getString("LNA");
+                    if (la.length() > 1)
+                    {
+                        ht.put(Keys.LANGUAGE, new XMLWrapper(Keys.LANGUAGE, formatLanguage(StringUtil.substituteChars(rset.getString("LNA")))));
+                    }
+                }
+                if (rset.getString("apict") != null)
+                {
+
+        					String ct = StringUtil.replaceNullWithEmptyString(rset.getString("APICT"));
+        					String cv = termBuilder.getNonMajorTerms(ct);
+        					String mh = termBuilder.getMajorTerms(ct);
+        					StringBuffer cvBuffer = new StringBuffer();
+
+        					String expandedMajorTerms = termBuilder.expandMajorTerms(mh);
+        					String expandedMH = termBuilder.getMajorTerms(expandedMajorTerms);
+        					String expandedCV1 = termBuilder.expandNonMajorTerms(cv);
+        					String expandedCV2 = termBuilder.getNonMajorTerms(expandedMajorTerms);
+
+        					if (!expandedCV1.equals(""))
+        					{
+        						cvBuffer.append(expandedCV1);
+        					}
+        					if (!expandedCV2.equals(""))
+        					{
+        						cvBuffer.append(";").append(expandedCV2);
+        					}
+
+        					String parsedCV = termBuilder.formatCT(cvBuffer.toString());
+        					parsedCV = StringUtil.replaceNonAscii(parsedCV);
+        					String parsedMH = termBuilder.formatCT(expandedMH);
+        					parsedMH = StringUtil.replaceNonAscii(parsedMH);
+
+        					StringBuffer nonMajorTerms = new StringBuffer();
+
+        					nonMajorTerms.append(termBuilder.getStandardTerms(parsedCV));
+        					nonMajorTerms.append(";").append(termBuilder.getNoRoleTerms(parsedCV));
+        					nonMajorTerms.append(";").append(termBuilder.getReagentTerms(parsedCV));
+        					nonMajorTerms.append(";").append(termBuilder.getProductTerms(parsedCV));
+
+        					// ht.put(Keys.CONTROLLED_TERMS, formatCV(nonMajorTerms.toString()));
+
+        					StringBuffer majorTerms = new StringBuffer();
+
+        					majorTerms.append(termBuilder.removeRoleTerms(parsedMH));
+        					majorTerms.append(";").append(termBuilder.getMajorNoRoleTerms(parsedMH));
+        					majorTerms.append(";").append(termBuilder.getMajorReagentTerms(parsedMH));
+        					majorTerms.append(";").append(termBuilder.getMajorProductTerms(parsedMH));
+
+        					//ht.put(EIDoc.MAJOR_TERMS, formatCV(majorTerms.toString()));
+
+        					if (nonMajorTerms.length() > 0)
+        					{
+        						ht.put(ELT_CONTROLLED_TERMS, new XMLMultiWrapper2(ELT_CONTROLLED_TERMS,setCVS(StringUtil.substituteChars(nonMajorTerms.toString()))));
+        					}
+
+        					if (majorTerms.length() > 0)
+        					{
+        						ht.put(ELT_MAJOR_TERMS, new XMLMultiWrapper2(ELT_MAJOR_TERMS,setCVS(StringUtil.substituteChars(majorTerms.toString()))));
+        					}
+
+                }
+
+                EIDoc eiDoc = new EIDoc(did, ht, Citation.XMLCITATION_FORMAT);
+                eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
+                eiDoc.exportLabels(true);
+                eiDoc.setOutputKeys(ABSTRACT_KEYS);
+                list.add(eiDoc);
+                count++;
+            } // while
+
+        }
+        finally {
+            close(rset);
+            close(stmt);
+            close(con, broker);
+        }
+
+        return list;
+
+    }
 
 
 } //End Of EltDocBuilder
