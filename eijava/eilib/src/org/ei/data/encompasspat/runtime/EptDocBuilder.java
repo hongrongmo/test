@@ -36,8 +36,8 @@ import java.io.*;
   *
   */
 public class EptDocBuilder implements DocumentBuilder, Keys {
-    public static String PAT_TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright 2007 Elsevier Engineering Information, Inc.";
-    public static String PAT_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2007 Elsevier Engineering Information, Inc.";
+    public static String PAT_TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright 2007 Elsevier, Inc.";
+    public static String PAT_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2007 Elsevier, Inc.";
     public static String PROVIDER = "EnCompassPAT";
     private static final Key EPT_CONTROLLED_TERMS = new Key(Keys.CONTROLLED_TERMS, "Controlled terms");
     private static final Key LINKED_TERMS_HOLDER = new Key(Keys.LINKED_TERMS_HOLDER, "Linked terms");
@@ -125,7 +125,9 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
         *  @ return List --list of EIDoc's
         *  @ exception DocumentBuilderException
         */
-    public List buildPage(List listOfDocIDs, String dataFormat) throws DocumentBuilderException {
+    public List buildPage(List listOfDocIDs, String dataFormat)
+      throws DocumentBuilderException
+    {
         List l = null;
         try {
             if (dataFormat.equals(Citation.CITATION_FORMAT)) {
@@ -140,10 +142,13 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
             else if (dataFormat.equals(LinkedTermDetail.LINKEDTERM_FORMAT)) {
                 l = loadLinkedTerms(listOfDocIDs);
             }
-            else if (dataFormat.equalsIgnoreCase("RIS")) {
+            else if (dataFormat.equalsIgnoreCase(RIS.RIS_FORMAT)) {
                 l = loadRIS(listOfDocIDs);
             }
-
+            else if (dataFormat.equalsIgnoreCase(Citation.XMLCITATION_FORMAT))
+            {
+                l = loadXMLCitations(listOfDocIDs);
+            }
         }
         catch (Exception e) {
             throw new DocumentBuilderException(e);
@@ -396,8 +401,8 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                 if (lstAsg != null && lstAsg.size() > 0) {
                     ht.put(Keys.PATEPTASSIGN, new XMLMultiWrapper(Keys.PATEPTASSIGN, setAssignees(lstAsg)));
                 }
-                
-               
+
+
                 ht.put(Keys.NO_SO, new XMLWrapper(Keys.NO_SO, "NO_SO"));
 
                 if (rset.getString("PD") != null) {
@@ -438,11 +443,11 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                 }
 
                 //add patent info
-                if (rset.getString("PAT") != null) 
+                if (rset.getString("PAT") != null)
                 {
                     ht.put(Keys.PATENT_INFORMATION, new XMLWrapper(Keys.PATENT_INFORMATION, formatPriorityInfo(removeSemiColon(rset.getString("PAT")))));
                 }
-                
+
                 //add pat priority info
                 if (rset.getString("PRI") != null) {
                     ht.put(Keys.PRIORITY_INFORMATION, new XMLWrapper(Keys.PRIORITY_INFORMATION, removeSemiColon(formatPriorityInfo(rset.getString("PRI")), ";","|")));
@@ -509,7 +514,7 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                     ht.put(EPT_MAJOR_TERMS, new XMLMultiWrapper2(EPT_MAJOR_TERMS, setCVS(StringUtil.substituteChars(formatCV(majorTerms.toString())))));
 
                 }
-                               
+
                 EIDoc eiDoc = new EIDoc(did, ht, Abstract.ABSTRACT_FORMAT);
                 eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
                 eiDoc.exportLabels(true);
@@ -550,7 +555,7 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
             if (!token.equals(""))
                 pi.append(token).append(";");
         }
-        
+
         priorityInfo = perl.substitute("s/;$//g", priorityInfo);
 
         return priorityInfo;
@@ -770,7 +775,7 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                 }
                 //AF- CS
 
-                if (lstAsg != null && lstAsg.size() > 0) 
+                if (lstAsg != null && lstAsg.size() > 0)
                 {
                     ht.put(new Key(Keys.PATASSIGN,"Patent assignee"), new XMLMultiWrapper(new Key(Keys.PATASSIGN,"Patent assignee"), setAssignees(lstAsg)));
                 }
@@ -1319,13 +1324,13 @@ System.out.println(" -- doc builder 7");
                     ht.put(Keys.AUTH_CODE, new XMLWrapper(Keys.AUTH_CODE, rset.getString("PC")));
 
                 }
-                
+
                 //add patent info
-                if (rset.getString("PAT") != null) 
+                if (rset.getString("PAT") != null)
                 {
                     ht.put(Keys.PATENT_INFORMATION, new XMLWrapper(Keys.PATENT_INFORMATION, formatPriorityInfo(removeSemiColon(rset.getString("PAT")))));
                 }
-                
+
                 //PY
 
                 if (rset.getString("PD") != null) {
@@ -1488,10 +1493,10 @@ System.out.println(" -- doc builder 7");
 
         return result;
     }
-    
-    public String removeSemiColon(String str, String ch, String rplCh) 
+
+    public String removeSemiColon(String str, String ch, String rplCh)
     {
-        
+
 
         String result = perl.substitute("s/"+ch+"/"+rplCh+"/g", str);
 
@@ -1633,6 +1638,211 @@ System.out.println(" -- doc builder 7");
         catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    private List loadXMLCitations(List listOfDocIDs) throws Exception {
+        Hashtable oidTable = getDocIDTable(listOfDocIDs);
+
+        List list = new ArrayList();
+        int count = 0;
+        Connection con = null;
+        Statement stmt = null;
+        ResultSet rset = null;
+        ConnectionBroker broker = null;
+        String INString = buildINString(listOfDocIDs);
+
+        try {
+            broker = ConnectionBroker.getInstance();
+            con = broker.getConnection(DatabaseConfig.SEARCH_POOL);
+            stmt = con.createStatement();
+            rset = stmt.executeQuery(queryAbstracts + INString);
+
+            DatabaseConfig dconfig = DatabaseConfig.getInstance();
+
+            while (rset.next()) {
+
+                ElementDataMap ht = new ElementDataMap();
+                // Common Fields
+                DocID did = (DocID) oidTable.get(rset.getString("M_ID"));
+                did.setDatabase(dconfig.getDatabase("ept"));
+                ht.put(Keys.DOCID, did);
+
+                ht.put(Keys.PROVIDER, new XMLWrapper(Keys.PROVIDER, EptDocBuilder.PROVIDER));
+                ht.put(Keys.COPYRIGHT, new XMLWrapper(Keys.COPYRIGHT, EptDocBuilder.PAT_HTML_COPYRIGHT));
+                ht.put(Keys.COPYRIGHT_TEXT, new XMLWrapper(Keys.COPYRIGHT_TEXT, EptDocBuilder.PAT_TEXT_COPYRIGHT));
+
+                String strTitle = StringUtil.EMPTY_STRING;
+
+                // AccessNum Derwent Number
+                if (rset.getString("DN") != null) {
+                    ht.put(Keys.ACCESSION_NUMBER, new XMLWrapper(Keys.ACCESSION_NUMBER, rset.getString("DN")));
+                }
+                //Title
+                if (rset.getString("TI") != null) {
+                    ht.put(Keys.TITLE, new XMLWrapper(Keys.TITLE, StringUtil.substituteChars(rset.getString("TI"))));
+                }
+                strTitle = null;
+
+                //Inventors
+                List lstAsg = null;
+                List lstInv = null;
+
+                if (rset.getString("PAT_IN") != null) {
+                    lstInv = convertString2List(StringUtil.substituteChars(rset.getString("PAT_IN")));
+                }
+
+                if (rset.getString("CS") != null) {
+                    lstAsg = convertString2List(StringUtil.substituteChars(rset.getString("CS")));
+                }
+
+                String authCD = "";
+
+                if (rset.getString("PC") != null) {
+                    authCD = rset.getString("PC");
+                }
+
+                if (lstAsg != null && lstInv != null)
+                    lstAsg = AssigneeFilter.filterInventors(lstInv, lstAsg, true);
+
+                // IN Inventor
+                if (lstInv != null && lstInv.size() > 0) {
+                    Contributors authors = new Contributors(Keys.AUTHORS, setContributors(lstInv, Keys.AUTHORS));
+                    ht.put(Keys.AUTHORS, authors);
+                }
+
+                if (lstAsg != null && lstAsg.size() > 0) {
+                    ht.put(Keys.PATEPTASSIGN, new XMLMultiWrapper(Keys.PATEPTASSIGN, setAssignees(lstAsg)));
+                }
+
+
+                ht.put(Keys.NO_SO, new XMLWrapper(Keys.NO_SO, "NO_SO"));
+
+                if (rset.getString("PD") != null) {
+                	String strYR = formatDate(StringUtil.replaceNullWithEmptyString(rset.getString("PD")));
+                    ht.put(Keys.UPAT_PUBDATE, new XMLWrapper(Keys.UPAT_PUBDATE, strYR));
+
+                }
+
+                // Language
+                if ((rset.getString("LA") != null)) {
+                    String language = rset.getString("LA");
+                    if (language.length() > 1)
+                        ht.put(Keys.LANGUAGE, new XMLWrapper(Keys.LANGUAGE, StringUtil.substituteChars(rset.getString("LA"))));
+                }
+
+                StringBuffer pubNum = new StringBuffer();
+
+                //Publication Number
+                if (rset.getString("PC") != null) {
+                    pubNum.append(rset.getString("PC"));
+                }
+
+                if (rset.getString("PN") != null) {
+                    pubNum.append(removeLeadingZeros(rset.getString("PN")));
+                }
+
+                if (pubNum.length() > 0)
+                    ht.put(Keys.PATENT_NUMBER, new XMLWrapper(Keys.PATENT_NUMBER, pubNum.toString()));
+
+                if (rset.getString("PN") != null) {
+                    ht.put(Keys.PATNUM, new XMLWrapper(Keys.PATNUM, removeLeadingZeros(rset.getString("PN"))));
+                }
+
+                //Application Information
+                String appinfo = rset.getString("LL");
+                if ((appinfo != null)) {
+                    ht.put(Keys.PATAPP_INFO, new XMLWrapper(Keys.PATAPP_INFO, formatPriorityInfo(removeSemiColon(rset.getString("LL")))));
+                }
+
+                //add patent info
+                if (rset.getString("PAT") != null)
+                {
+                    ht.put(Keys.PATENT_INFORMATION, new XMLWrapper(Keys.PATENT_INFORMATION, formatPriorityInfo(removeSemiColon(rset.getString("PAT")))));
+                }
+
+                //add pat priority info
+                if (rset.getString("PRI") != null) {
+                    ht.put(Keys.PRIORITY_INFORMATION, new XMLWrapper(Keys.PRIORITY_INFORMATION, removeSemiColon(formatPriorityInfo(rset.getString("PRI")), ";","|")));
+                }
+                //AB
+                String abs = null;
+                if ((abs = hasAbstract(rset.getClob("AB"))) != null) {
+                    ht.put(Keys.ABSTRACT, new XMLWrapper(Keys.ABSTRACT, StringUtil.substituteChars(abs)));
+                }
+                //              IC
+                if (rset.getString("IC") != null) {
+                    String[] arrIpcs = IPCClassNormalizer.trimLeadingZeroFromSubClass(rset.getString("IC"));
+                    ht.put(Keys.INTERNATCL_CODE, new Classifications(Keys.INTERNATCL_CODE, getIPCClssifications(arrIpcs)));
+
+                }
+
+                //CRN
+
+                if (rset.getString("CRN") != null) {
+                    ht.put(Keys.CAS_REGISTRY_CODES, new XMLMultiWrapper2(Keys.CAS_REGISTRY_CODES, setCRC(StringUtil.substituteChars(removePoundSign(rset.getString("CRN"))))));
+                }
+                //CT
+                CVSTermBuilder termBuilder = new CVSTermBuilder();
+                if (rset.getString("CT") != null) {
+                    String ct = StringUtil.replaceNullWithEmptyString(rset.getString("CT"));
+                    String cv = termBuilder.getNonMajorTerms(ct);
+                    String mh = termBuilder.getMajorTerms(ct);
+                    StringBuffer cvBuffer = new StringBuffer();
+
+                    String expandedMajorTerms = termBuilder.expandMajorTerms(mh);
+
+                    String expandedMH = termBuilder.getMajorTerms(expandedMajorTerms);
+
+                    String expandedCV1 = termBuilder.expandNonMajorTerms(cv);
+                    String expandedCV2 = termBuilder.getNonMajorTerms(expandedMajorTerms);
+
+                    if (!expandedCV1.equals(""))
+                        cvBuffer.append(expandedCV1);
+                    if (!expandedCV2.equals(""))
+                        cvBuffer.append(";").append(expandedCV2);
+
+                    String parsedCV = termBuilder.formatCT(cvBuffer.toString());
+                    parsedCV = StringUtil.replaceNonAscii(parsedCV);
+                    String parsedMH = termBuilder.formatCT(expandedMH);
+                    parsedMH = StringUtil.replaceNonAscii(parsedMH);
+
+                    StringBuffer nonMajorTerms = new StringBuffer();
+
+                    nonMajorTerms.append(termBuilder.getStandardTerms(parsedCV));
+                    nonMajorTerms.append(";").append(termBuilder.getNoRoleTerms(parsedCV));
+                    nonMajorTerms.append(";").append(termBuilder.getReagentTerms(parsedCV));
+                    nonMajorTerms.append(";").append(termBuilder.getProductTerms(parsedCV));
+
+                    ht.put(EPT_CONTROLLED_TERMS, new XMLMultiWrapper2(EPT_CONTROLLED_TERMS, setCVS(StringUtil.substituteChars(formatCV(nonMajorTerms.toString())))));
+
+
+                    StringBuffer majorTerms = new StringBuffer();
+
+                    majorTerms.append(termBuilder.removeRoleTerms(parsedMH));
+                    majorTerms.append(";").append(termBuilder.getMajorNoRoleTerms(parsedMH));
+                    majorTerms.append(";").append(termBuilder.getMajorReagentTerms(parsedMH));
+                    majorTerms.append(";").append(termBuilder.getMajorProductTerms(parsedMH));
+
+                    ht.put(EPT_MAJOR_TERMS, new XMLMultiWrapper2(EPT_MAJOR_TERMS, setCVS(StringUtil.substituteChars(formatCV(majorTerms.toString())))));
+
+                }
+
+                EIDoc eiDoc = new EIDoc(did, ht, Citation.XMLCITATION_FORMAT);
+                eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
+                eiDoc.exportLabels(true);
+                eiDoc.setOutputKeys(ABSTRACT_KEYS);
+                list.add(eiDoc);
+                count++;
+            }
+
+        }
+        finally {
+            close(rset);
+            close(stmt);
+            close(con, broker);
+        }
+
+        return list;
     }
 
 }
