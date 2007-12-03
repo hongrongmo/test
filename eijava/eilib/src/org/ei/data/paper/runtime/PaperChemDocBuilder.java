@@ -558,8 +558,6 @@ public class PaperChemDocBuilder implements DocumentBuilder
                     }
                 }
 
-                // RN - INSPEC ONLY
-
                 // SD
                 if("PA".equalsIgnoreCase(strDocType))
                 {
@@ -661,7 +659,26 @@ public class PaperChemDocBuilder implements DocumentBuilder
                         }
                     }
 
-                // PA
+
+				//These are needed for local holding.
+				if (rset.getString("ST") != null)
+				{
+					String st =rset.getString("ST");
+					ht.put(Keys.SERIAL_TITLE, new XMLWrapper(Keys.SERIAL_TITLE,st));
+				}
+
+				if (rset.getString("SE") != null)
+				{
+					String se = rset.getString("SE");
+					ht.put(Keys.ABBRV_SERIAL_TITLE, new XMLWrapper(Keys.ABBRV_SERIAL_TITLE, se));
+				}
+
+				if(rset.getString("YR") != null)
+				{
+					String strYR = rset.getString("YR");
+					ht.put(Keys.PUBLICATION_YEAR, new Year(Keys.PUBLICATION_YEAR, strYR, perl));
+				}
+
                 if(rset.getString("PA") != null)
                 {
                     String pa = StringUtil.replaceNullWithEmptyString(rset.getString("PA"));
@@ -1255,12 +1272,8 @@ public class PaperChemDocBuilder implements DocumentBuilder
                     // YR
                     if(rset.getString("YR") != null)
                     {
-                        String strYR = StringUtil.replaceNullWithEmptyString(rset.getString("YR"));
-
-                        if (!strYR.equals(StringUtil.EMPTY_STRING))
-                        {
-                            ht.put(Keys.PUBLICATION_YEAR, new Year(Keys.PUBLICATION_YEAR, strYR, perl));
-                        }
+                        String strYR = rset.getString("YR");
+                        ht.put(Keys.PUBLICATION_YEAR, new Year(Keys.PUBLICATION_YEAR, strYR, perl));
                     }
 
                     //  PA
@@ -2407,7 +2420,26 @@ public class PaperChemDocBuilder implements DocumentBuilder
                     }
                 }
 
-                // PA
+
+				//These are needed for local holding.
+				if (rset.getString("ST") != null)
+				{
+					String st =rset.getString("ST");
+					ht.put(Keys.SERIAL_TITLE, new XMLWrapper(Keys.SERIAL_TITLE,st));
+				}
+
+				if (rset.getString("SE") != null)
+				{
+					String se = rset.getString("SE");
+					ht.put(Keys.ABBRV_SERIAL_TITLE, new XMLWrapper(Keys.ABBRV_SERIAL_TITLE, se));
+				}
+
+				if(rset.getString("YR") != null)
+				{
+					String strYR = rset.getString("YR");
+					ht.put(Keys.PUBLICATION_YEAR, new Year(Keys.PUBLICATION_YEAR, strYR, perl));
+				}
+
                 if(rset.getString("PA") != null)
                 {
 
