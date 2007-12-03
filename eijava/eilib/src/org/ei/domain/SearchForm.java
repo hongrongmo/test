@@ -125,21 +125,19 @@ public class SearchForm {
            (selecteddbMask & DatabaseConfig.CBF_MASK)!= DatabaseConfig.CBF_MASK &&
            (selecteddbMask & DatabaseConfig.PAG_MASK)!= DatabaseConfig.PAG_MASK)
         {
-			if((selecteddbMask & DatabaseConfig.UPA_MASK) != DatabaseConfig.UPA_MASK &&
-			   (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
-			   (selecteddbMask & DatabaseConfig.EUP_MASK) != DatabaseConfig.EUP_MASK)
+			if( selecteddbMask == DatabaseConfig.UPA_MASK ||
+				selecteddbMask == DatabaseConfig.EUP_MASK ||
+				selecteddbMask == DatabaseConfig.EPT_MASK ||
+				selecteddbMask == DatabaseConfig.EPT_MASK + DatabaseConfig.UPA_MASK ||
+				selecteddbMask == DatabaseConfig.EUP_MASK + DatabaseConfig.EPT_MASK ||
+				selecteddbMask == DatabaseConfig.EUP_MASK + DatabaseConfig.UPA_MASK ||
+				selecteddbMask == DatabaseConfig.EPT_MASK + DatabaseConfig.EUP_MASK + DatabaseConfig.UPA_MASK)
 			{
-				 sectiontype.put("AF", "Author affiliation");
+				sectiontype.put("AF", "Assignee");
 			}
-			else if(selecteddbMask == DatabaseConfig.UPA_MASK ||
-					selecteddbMask == DatabaseConfig.EUP_MASK ||
-					selecteddbMask == DatabaseConfig.EUP_MASK + DatabaseConfig.UPA_MASK)
+			else
 			{
-				 sectiontype.put("AF", "Assignee");
-			}
-			else if(selecteddbMask == DatabaseConfig.EPT_MASK)
-			{
-				 sectiontype.put("AF", "Patent assignee");
+				sectiontype.put("AF", "Author affiliation/Assignee");
 			}
 		}
 
@@ -653,23 +651,6 @@ public class SearchForm {
         {
             doctype.put("JA", "Journal article");
         }
-
-        //if(selecteddbMask == DatabaseConfig.ELT_MASK)
-        //{
-			//doctype.put("({J_AB} or {J_AR} or {J_BZ} or {J_CP} or {J_ED} or {J_ER} or {J_LE} or {J_NO} or {J_RE} or {J_SH} or {D_AR} or {D_BZ} or {D_CP} or {J_BK} or {J_BR} or {J_CH} or {J_CR} or {J_DI} or {J_PA} or {J_PR} or {J_RP} or {J_WP})", "Journal article");
-		    //doctype.put("(P or {P_AR} or {P_CP} or {P_AB} or {P_BK} or {P_BR} or {P_BZ} or {P_CH} or {P_CR} or {P_DI} or {P_ED} or {P_ER} or {P_LE} or {P_NO} or {P_PA} or {P_PR} or {P_RE} or {P_SH} or {P_RP} or {P_WP} or {D_CP} or {J_CP})","Conference");
-			//doctype.put("({J_BZ} or {D_BZ} or {D_AR} or {D_CP} or {D_LE} or {D_NO} or {B_BZ} or {K_BZ} or {M_BZ} or {P_BZ} or {R_BZ})","Business article");
-		    //doctype.put("(AB or {J_AB} or {R_AB} or {P_AB} or {B_AB} or {D_AB} or {K_AB} or {M_AB})", "Abstract");
-		//	doctype.put("JA", "Journal article");
-		//	doctype.put("CA", "Conference");
-		//	doctype.put("MC", "Monograph chapter");
-		//	doctype.put("Other", "Other");
-		//}
-		//else if((selecteddbMask & DatabaseConfig.ELT_MASK) == DatabaseConfig.ELT_MASK)
-		//{
-		//	doctype.put("(AB or {J_AB} or {R_AB} or {P_AB} or {B_AB} or {D_AB} or {K_AB} or {M_AB})", "Abstract");
-			//doctype.put("JA or ({J_AB} or {J_AR} or {J_BZ} or {J_CP} or {J_ED} or {J_ER} or {J_LE} or {J_NO} or {J_RE} or {J_SH} or {D_AR} or {D_BZ} or {D_CP} or {J_BK} or {J_BR} or {J_CH} or {J_CR} or {J_DI} or {J_PA} or {J_PR} or {J_RP} or {J_WP})", "Journal article");
-		//}
 
 
         if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
