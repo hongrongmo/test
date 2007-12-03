@@ -121,22 +121,21 @@ function generateSection(selecteddbMask)
       ((selecteddbMask & CBF) != CBF) &&
       ((selecteddbMask & CBN) != CBN))
    {
-      if((selecteddbMask & US_PATENTS) != US_PATENTS &&
-         (selecteddbMask & EU_PATENTS) != EU_PATENTS &&
-         (selecteddbMask & EPT)   != EPT)
-      {
-      	 searchin[index++] = new Field("AF", "Author affiliation");
-      }
-      else if( 	(selecteddbMask == US_PATENTS) ||
-         	(selecteddbMask == EU_PATENTS) ||
-         	(selecteddbMask == US_EU_PATENTS))
+      if( (selecteddbMask == US_PATENTS) ||
+          (selecteddbMask == EU_PATENTS) ||
+          (selecteddbMask == EPT) ||
+          (selecteddbMask == EPT + US_PATENTS) ||
+          (selecteddbMask == EPT + EU_PATENTS) ||
+          (selecteddbMask == US_EU_PATENTS) ||
+          (selecteddbMask == EPT + US_EU_PATENTS))
       {
       	 searchin[index++] = new Field("AF", "Assignee");
       }
-      else if(selecteddbMask == EPT)
+      else
       {
-      	 searchin[index++] = new Field("AF", "Patent assignee");
+         searchin[index++] = new Field("AF", "Author affiliation/Assignee");
       }
+      
    }
 
    // TI
