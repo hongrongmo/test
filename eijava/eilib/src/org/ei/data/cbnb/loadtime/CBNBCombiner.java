@@ -48,22 +48,22 @@ public class CBNBCombiner extends Combiner
         CombinedWriter writer = new CombinedXMLWriter(recsPerfile, loadNumber, "cbn");
 
         CBNBCombiner c = new CBNBCombiner(writer);
-//		if(loadNumber > 3000 || loadNumber < 1000)
-//		{
+		if(loadNumber > 3000 || loadNumber < 1000)
+		{
 				c.writeCombinedByWeekNumber(url,
 											driver,
 											username,
 											password,
 											loadNumber);
-//		}
-//	    else
-//		{
-//				c.writeCombinedByYear(url,
-//									  driver,
-//									  username,
-//									  password,
-//									  loadNumber);
-//		}
+		}
+	    else
+		{
+				c.writeCombinedByYear(url,
+									  driver,
+									  username,
+									  password,
+									  loadNumber);
+		}
 
         System.out.println("write year" + loadNumber);
 
