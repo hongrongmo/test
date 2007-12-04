@@ -511,6 +511,10 @@ public class FastQueryWriter
             {
                 t = "\""+eTerm.getNodeValue()+"DCLS\"";
             }
+            else if(currentField.equalsIgnoreCase("cr"))
+            {
+                t = "\""+perl.substitute("s/\\sand\\s/%/g", eTerm.getNodeValue())+"\"";
+            }
             else if(currentField.equalsIgnoreCase("cl"))
             {
                  t = "\""+perl.substitute("s/\\./DQD/g", eTerm.getNodeValue())+"\"";
@@ -526,15 +530,15 @@ public class FastQueryWriter
             else if(currentField.equalsIgnoreCase("puc") ||
 			        currentField.equalsIgnoreCase("pec") ||
 			        currentField.equalsIgnoreCase("pid"))
-			{
-				t = perl.substitute("s/\\./PERIOD/g", eTerm.getNodeValue());
-				t = perl.substitute("s/\\//SLASH/g", t);
-				t = "\"QQDelQQ "+t+" QQDelQQ\"";
-			}
-			else if(currentField.equalsIgnoreCase("bks") ||
-					currentField.equalsIgnoreCase("bkt"))
-			{
-				t = "B64"+Base64Coder.encode(eTerm.getNodeValue().toLowerCase().trim());
+            {
+              t = perl.substitute("s/\\./PERIOD/g", eTerm.getNodeValue());
+              t = perl.substitute("s/\\//SLASH/g", t);
+              t = "\"QQDelQQ "+t+" QQDelQQ\"";
+            }
+            else if(currentField.equalsIgnoreCase("bks") ||
+                currentField.equalsIgnoreCase("bkt"))
+            {
+              t = "B64"+Base64Coder.encode(eTerm.getNodeValue().toLowerCase().trim());
             }
             else
             {
