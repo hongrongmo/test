@@ -659,7 +659,7 @@
             <span CLASS="MedBlackText"><xsl:value-of select="normalize-space(text())"/></span>
            <img src="/engresources/images/plus.gif" border="0"/>
         -->
-           <xsl:text> </xsl:text><span CLASS="MedBlackText">
+           <xsl:text> </xsl:text><span CLASS="SmBlackText">
            <xsl:value-of select="crlkup:getName(normalize-space(text()))" disable-output-escaping="yes"/></span>
            <xsl:if test="position()!=last()">
            <a class="SmBlkText">&#160; - &#160;</a>
