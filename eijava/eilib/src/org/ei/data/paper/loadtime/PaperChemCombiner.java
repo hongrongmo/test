@@ -45,14 +45,14 @@ public class PaperChemCombiner
 
         PaperChemCombiner c = new PaperChemCombiner(writer);
         c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
-//        if (loadNumber > 3000 || loadNumber < 1000)
-//        {
-//            c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
-//        }
-//        else
-//        {
-//            c.writeCombinedByYear(url, driver, username, password, loadNumber);
-//        }
+        if (loadNumber > 3000 || loadNumber < 1000)
+        {
+            c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
+        }
+        else
+        {
+            c.writeCombinedByYear(url, driver, username, password, loadNumber);
+        }
         System.out.println("finished loadnumber " + loadNumber);
     }
 
