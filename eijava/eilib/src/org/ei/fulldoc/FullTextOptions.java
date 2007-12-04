@@ -10,6 +10,8 @@ public class FullTextOptions
 
 	private static final String IEEE_PUBPREFIX = "10.1109";
 	private static final String IOP_PUBPREFIX = "10.1088";
+	private static final String ELSEVIER_PUBPREFIX = "10.1016";
+	private static final String ACADEMIC_PRESS_PUBPREFIX = "10.1006";
 
 	private static final String ANALOG_CUSTID = "3797";
 
@@ -71,7 +73,9 @@ public class FullTextOptions
 			*/
 
 			if(doi != null && ((doi.indexOf(IEEE_PUBPREFIX) == 0) ||
-			                   (doi.indexOf(IOP_PUBPREFIX) == 0)))
+			                   (doi.indexOf(IOP_PUBPREFIX) == 0)  ||
+			                   (doi.indexOf(ELSEVIER_PUBPREFIX) == 0)  ||
+			                   (doi.indexOf(ACADEMIC_PRESS_PUBPREFIX) == 0)))
 			{
 				return "true";
 			}
