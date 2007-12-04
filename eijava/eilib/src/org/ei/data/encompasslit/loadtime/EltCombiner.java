@@ -165,7 +165,7 @@ public class EltCombiner extends Combiner {
                 rec.put(rec.MAIN_HEADING, prepareMulti(StringUtil.replaceNonAscii(termBuilder.removeRoleTerms(parsedMH)), Constants.CVS));
                 
                 //this field is added to generate navigators for Major terms
-                rec.put(rec.ECLA_CODES, prepareMulti(StringUtil.replaceNonAscii(termBuilder.removeRoleTerms(parsedMH))));
+                rec.put(rec.ECLA_CODES, prepareMulti(StringUtil.replaceNonAscii(termBuilder.removeRoleTerms(parsedMH)),Constants.CVS ));
 
                 String norole = termBuilder.getNoRoleTerms(parsedCV);
                 qfacet.setNorole(norole);                
