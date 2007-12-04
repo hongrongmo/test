@@ -143,7 +143,7 @@ public class ChimicaCombiner
 
                 if (rs.getString("adr") != null)
                 {
-                    rec.put(EVCombinedRec.AUTHOR_AFFILIATION, rs.getString("adr"));
+                    rec.put(EVCombinedRec.AUTHOR_AFFILIATION, removeAuNames(rs.getString("adr")));
                 }
 
                 if (rs.getString("tie") != null)
@@ -338,6 +338,18 @@ public class ChimicaCombiner
 
         return (String[]) list.toArray(new String[1]);
 
+    }
+    //this method is parsing out the occurrences of author name in followed by comma 
+    // from adr author aff field
+
+    private String removeAuNames(String adr)
+    {
+        int m = adr.indexOf(", ");
+        if(m > 0)
+        {
+            adr = adr.substring(m+1);
+        }
+        return adr;       
     }
 
     private String[] prepareAuthor(String aString)
