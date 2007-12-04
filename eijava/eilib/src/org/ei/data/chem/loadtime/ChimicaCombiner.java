@@ -339,8 +339,9 @@ public class ChimicaCombiner
         return (String[]) list.toArray(new String[1]);
 
     }
-    //this method is parsing out the occurrences of author name in followed by comma 
+    //12/04/2007  TS based on the final specs this method is parsing out the occurrences of author name in followed by comma 
     // from adr author aff field
+//  12/04/2007  TS added spec on it : if there is no comma in the adr field - this is a redundant au name - remove it
 
     private String removeAuNames(String adr)
     {
@@ -348,6 +349,10 @@ public class ChimicaCombiner
         if(m > 0)
         {
             adr = adr.substring(m+1);
+        }
+        else if(m == -1)
+        {
+            return "";
         }
         return adr;       
     }
