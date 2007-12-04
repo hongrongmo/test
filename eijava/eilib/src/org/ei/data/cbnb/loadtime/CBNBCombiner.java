@@ -195,19 +195,19 @@ public class CBNBCombiner extends Combiner
                 {
                     rec.put(EVCombinedRec.PUB_YEAR, rs.getString("pyr"));
                 }
-                
+
                 // add companies to INT_PATENT_CLASSIFICATION , facet
                 if (rs.getString("src") != null)
                 {
                     rec.put(EVCombinedRec.COMPANIES, prepareMulti(rs.getString("src")));
-                    rec.put(EVCombinedRec.INT_PATENT_CLASSIFICATION, prepareMulti(rs.getString("src")));                   
-                }                       
-                
+                    rec.put(EVCombinedRec.INT_PATENT_CLASSIFICATION, prepareMulti(rs.getString("src")));
+                }
+
 				if(rs.getString("sct") != null)
 				{
 					rec.put(EVCombinedRec.COUNTRY, prepareMulti(rs.getString("sct"),Constants.CO));
 				}
-				
+
 
 				if(rs.getString("scc") != null)
 				{
@@ -226,7 +226,7 @@ public class CBNBCombiner extends Combiner
                     rec.put(EVCombinedRec.CHEMICALTERMS, prepareMulti(rs.getString("cin")));
                     rec.put(EVCombinedRec.ECLA_CODES, prepareMulti(rs.getString("cin")));
                 }
-               
+
                 if (rs.getString("reg") != null)
                 {
                     rec.put(EVCombinedRec.CASREGISTRYNUMBER, prepareMulti(rs.getString("reg")));
@@ -236,13 +236,18 @@ public class CBNBCombiner extends Combiner
                 {
                     rec.put(EVCombinedRec.CHEMICALACRONYMS, prepareMulti(rs.getString("cym")));
                 }
-                
-                // Standard Industrial Code added to class codes field and facet
+
+                // Standard Industrial Code added to patent kind field and facet
                 if (rs.getString("sic") != null)
                 {
-                    rec.put(EVCombinedRec.INDUSTRIALCODES, prepareMulti(rs.getString("sic")));
-                    rec.put(EVCombinedRec.CLASSIFICATION_CODE,prepareMulti(rs.getString("sic")));
+                    rec.put(EVCombinedRec.PATENT_KIND, prepareMulti(rs.getString("sic")));
                 }
+
+				// Industrial Sector Code added to patent kind field and facet
+				if (rs.getString("gic") != null)
+				{
+					rec.put(EVCombinedRec.CLASSIFICATION_CODE, prepareMulti(rs.getString("gic")));
+				}
 
                 // add gid to facets
                 if (rs.getString("gid") != null)
@@ -250,7 +255,7 @@ public class CBNBCombiner extends Combiner
                     rec.put(EVCombinedRec.INDUSTRIALSECTORS, prepareMulti(rs.getString("gid")));
                     rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareMulti(rs.getString("gid")));
                 }
-               
+
 
                 if (rs.getString("atl") != null)
                 {
@@ -281,7 +286,7 @@ public class CBNBCombiner extends Combiner
                 rec.put(EVCombinedRec.ISSUE, getFirstNumber(rs.getString("iss")));
                 rec.put(EVCombinedRec.STARTPAGE, getFirstNumber(rs.getString("pag")));
                 rec.put(EVCombinedRec.ACCESSION_NUMBER, rs.getString("abn"));
-                
+
 				if(rs.getString("pbr") != null)
 				{
 					rec.put(EVCombinedRec.PUBLISHER_NAME, prepareMulti(rs.getString("pbr")));
@@ -315,17 +320,17 @@ public class CBNBCombiner extends Combiner
         return (String[]) list.toArray(new String[1]);
 
     }
-    
-    private String[] prepareMulti(String multiString , 
-			  					  	Constants constant) 
-    			throws Exception 
+
+    private String[] prepareMulti(String multiString ,
+			  					  	Constants constant)
+    			throws Exception
    {
         if (multiString != null) {
 
             AuthorStream astream = new AuthorStream(new ByteArrayInputStream(multiString.getBytes()));
             String s = null;
             ArrayList list = new ArrayList();
-            while ((s = astream.readAuthor()) != null) 
+            while ((s = astream.readAuthor()) != null)
             {
                 s = s.trim();
                 if(constant == null)
@@ -339,14 +344,14 @@ public class CBNBCombiner extends Combiner
             }
             return (String[]) list.toArray(new String[1]);
         }
-        else 
+        else
         {
             String[] str = new String[] { "" };
             return str;
 
         }
    }
-    
+
     private String[] prepareMulti(String multiString) throws Exception
     {
         return prepareMulti(multiString, null);
