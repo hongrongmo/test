@@ -106,6 +106,8 @@
                         <td valign="top" colspan="3" height="6"><img src="/engresources/images/s.gif" height="6"/></td>
                     </tr>
                     -->
+                    <!-- 12/07  specs removing this link -->
+                    <!--
                     <tr>
                         <td valign="top" width="3"><img src="/engresources/images/s.gif" width="3"/></td>
                         <td valign="top" align="right">
@@ -115,6 +117,7 @@
                         </td>
                         <td valign="top" width="2"><img src="/engresources/images/s.gif" width="2"/></td>
                     </tr>
+                    -->
                     <!--
                     <tr>
                         <td valign="top" colspan="3" height="5"><img src="/engresources/images/s.gif"/></td>
