@@ -20,187 +20,189 @@ import org.ei.util.StringUtil;
 
 public class FastClient
 {
-	// preProcess navigators
-	// This can/will/should eb refactored into a set of classes
-	// with a generic interface/base class and subclasses
-	// which override the base method(s)
-	private boolean preProcessNavid(String navid, int mask)
-	{
-		// Always include DB
-		if(EiNavigator.DB.equals(navid)){
-			return true;
-		}
-		// include YR only if this isn't Referex by itself
-		else if(EiNavigator.YR.equals(navid)) {
-			if(mask != DatabaseConfig.PAG_MASK){
-				return true;
-			}
-		}
-		// include CV only if this isn't Referex by itself
-		else if(EiNavigator.CV.equals(navid)) {
-			if(mask != DatabaseConfig.PAG_MASK) {
-				return true;
-			}
-		}
-		// include CL only if Referex isn't combined with another database
-		else if(EiNavigator.CL.equals(navid)) {
-			if((mask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK) {
-				return true;
-			}
-			else if(mask == DatabaseConfig.PAG_MASK) {
-				return true;
-			}
-			else {
-				return false;
-			}
-		}
-		// include ST only if Referex isn't combined with another database
-		//		TS -  and CBF
-		else if(EiNavigator.ST.equals(navid))
-		{
-			if(mask == DatabaseConfig.PAG_MASK ||
-			   mask == DatabaseConfig.CPX_MASK ||
-			   mask == DatabaseConfig.INS_MASK ||
-			   mask == DatabaseConfig.GEO_MASK ||
-			   mask == DatabaseConfig.CBN_MASK ||
-			   mask == DatabaseConfig.CHM_MASK ||
-			   mask == DatabaseConfig.PCH_MASK ||
-			   mask == DatabaseConfig.ELT_MASK ||
-			   mask == DatabaseConfig.EPT_MASK ||
-			   mask == DatabaseConfig.CBF_MASK
-			   )
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
-		}
-		// include FL only if Referex is alone,
-		// ELT, EPT removed
-		else if(EiNavigator.FL.equals(navid)) {
-			if(mask == DatabaseConfig.PAG_MASK)
-			{
-				return true;
-			}
-			else if(((mask & (DatabaseConfig.CHM_MASK +
-			       DatabaseConfig.PCH_MASK)) > 0))
+  // preProcess navigators
+  // This can/will/should eb refactored into a set of classes
+  // with a generic interface/base class and subclasses
+  // which override the base method(s)
+  private boolean preProcessNavid(String navid, int mask)
+  {
+    // Always include DB
+    if(EiNavigator.DB.equals(navid)){
+      return true;
+    }
+    // include YR only if this isn't Referex by itself
+    else if(EiNavigator.YR.equals(navid)) {
+      if(mask != DatabaseConfig.PAG_MASK){
+        return true;
+      }
+    }
+    // include CV only if this isn't Referex by itself
+    else if(EiNavigator.CV.equals(navid)) {
+      if(mask != DatabaseConfig.PAG_MASK) {
+        return true;
+      }
+    }
+    // include CL only if Referex isn't combined with another database
+    else if(EiNavigator.CL.equals(navid)) {
+      if((mask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK) {
+        return true;
+      }
+      else if(mask == DatabaseConfig.PAG_MASK) {
+        return true;
+      }
+      else {
+        return false;
+      }
+    }
+    // include ST only if Referex isn't combined with another database
+    //    TS -  and CBF
+    else if(EiNavigator.ST.equals(navid))
+    {
+      if(mask == DatabaseConfig.PAG_MASK ||
+         mask == DatabaseConfig.CPX_MASK ||
+         mask == DatabaseConfig.INS_MASK ||
+         mask == DatabaseConfig.GEO_MASK ||
+         mask == DatabaseConfig.CBN_MASK ||
+         mask == DatabaseConfig.CHM_MASK ||
+         mask == DatabaseConfig.PCH_MASK ||
+         mask == DatabaseConfig.ELT_MASK ||
+         mask == DatabaseConfig.EPT_MASK ||
+         mask == DatabaseConfig.CBF_MASK
+         )
       {
         return true;
-			}
-		}
-		// include PN only if CPX, INS, or Referex
-		//TS -  and CBF
-		else if(EiNavigator.PN.equals(navid)) {
-			if(((mask & (DatabaseConfig.CPX_MASK +
-						 DatabaseConfig.INS_MASK +
-						 DatabaseConfig.PAG_MASK +
-			       DatabaseConfig.CBN_MASK +
-			       DatabaseConfig.CHM_MASK +
-			       DatabaseConfig.PCH_MASK +
-						 DatabaseConfig.ELT_MASK +
-						 DatabaseConfig.EPT_MASK +
-						 DatabaseConfig.CBF_MASK)) > 0)){
-				return true;
-			}
-		}
-		// Always include AU
-		else if(EiNavigator.AU.equals(navid)) {
+      }
+      else
+      {
+        return false;
+      }
+    }
+    // include FL only if Referex is alone,
+    // ELT, EPT removed
+    else if(EiNavigator.FL.equals(navid)) {
+      if(mask == DatabaseConfig.PAG_MASK)
+      {
+        return true;
+      }
+      else if(((mask & (DatabaseConfig.CHM_MASK +
+             DatabaseConfig.PCH_MASK)) > 0))
+      {
+        return true;
+      }
+    }
+    // include PN only if CPX, INS, or Referex
+    //TS -  and CBF
+    else if(EiNavigator.PN.equals(navid)) {
+      if(((mask & (DatabaseConfig.CPX_MASK +
+             DatabaseConfig.INS_MASK +
+             DatabaseConfig.PAG_MASK +
+             DatabaseConfig.CBN_MASK +
+             DatabaseConfig.CHM_MASK +
+             DatabaseConfig.PCH_MASK +
+             DatabaseConfig.ELT_MASK +
+             DatabaseConfig.EPT_MASK +
+             DatabaseConfig.CBF_MASK)) > 0)){
+        return true;
+      }
+    }
+    // Always include AU
+    else if(EiNavigator.AU.equals(navid)) {
       if(mask != DatabaseConfig.CBN_MASK) {
         return true;
       }
-		}
-		// include AF only if this isn't Referex by itself
-		else if(EiNavigator.AF.equals(navid)) {
-			if(mask != DatabaseConfig.PAG_MASK){
-				return true;
-			}
-		}
-		// include DT only if Referex isn't combined with another database
-		else if(EiNavigator.DT.equals(navid)) {
-			if((mask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK) {
-				return true;
-			}
-			else if(mask == DatabaseConfig.PAG_MASK) {
-				// DT will be removed from display in this case
-				return true;
-			}
-			else {
-				return false;
-			}
-		}
-		// include LA if CPX, INS, NTI or GEO
-		//		TS -  and CBF
-		else if(EiNavigator.LA.equals(navid)) {
-			if(((mask & (DatabaseConfig.CPX_MASK +
-							DatabaseConfig.INS_MASK +
-							DatabaseConfig.NTI_MASK +
-							DatabaseConfig.GEO_MASK +
-							DatabaseConfig.CBF_MASK +
+    }
+    // include AF only if this isn't Referex by itself
+    else if(EiNavigator.AF.equals(navid)) {
+      if(mask != DatabaseConfig.PAG_MASK){
+        return true;
+      }
+    }
+    // include DT only if Referex isn't combined with another database
+    else if(EiNavigator.DT.equals(navid)) {
+      if((mask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK) {
+        return true;
+      }
+      else if(mask == DatabaseConfig.PAG_MASK) {
+        // DT will be removed from display in this case
+        return true;
+      }
+      else {
+        return false;
+      }
+    }
+    // include LA if CPX, INS, NTI or GEO
+    //    TS -  and CBF
+    else if(EiNavigator.LA.equals(navid)) {
+      if(((mask & (DatabaseConfig.CPX_MASK +
+              DatabaseConfig.INS_MASK +
+              DatabaseConfig.NTI_MASK +
+              DatabaseConfig.GEO_MASK +
+              DatabaseConfig.CBF_MASK +
               DatabaseConfig.CBN_MASK +
               DatabaseConfig.CHM_MASK +
               DatabaseConfig.PCH_MASK +
-							DatabaseConfig.ELT_MASK+
-							DatabaseConfig.EPT_MASK)) > 0)){
-				return true;
-			}
-		}
-		// include CO only if Referex isn't combined with another database
-		else if(EiNavigator.CO.equals(navid)) {
-			if((mask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK) {
-				return true;
-			}
-			else if(mask == DatabaseConfig.PAG_MASK) {
-				return true;
-			}
-			else {
-				return false;
-			}
-		}
-		// include PEC only if Patents are included
-		else if(EiNavigator.PEC.equals(navid)) {
-			if((mask & (DatabaseConfig.EUP_MASK +
-					DatabaseConfig.UPA_MASK+
+              DatabaseConfig.ELT_MASK+
+              DatabaseConfig.EPT_MASK)) > 0)){
+        return true;
+      }
+    }
+    // include CO only if Referex isn't combined with another database
+    else if(EiNavigator.CO.equals(navid)) {
+      if((mask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK) {
+        return true;
+      }
+      else if(mask == DatabaseConfig.PAG_MASK) {
+        return true;
+      }
+      else {
+        return false;
+      }
+    }
+    // include PEC only if Patents are included
+    else if(EiNavigator.PEC.equals(navid)) {
+      if((mask & (DatabaseConfig.EUP_MASK +
+          DatabaseConfig.UPA_MASK+
           DatabaseConfig.CBN_MASK +
-					DatabaseConfig.ELT_MASK +
-					DatabaseConfig.EPT_MASK)) > 0) {
-				return true;
-			}
-		}
-		// include PID only if Patents are included
-		else if(EiNavigator.PID.equals(navid)) {
-			if((mask & (DatabaseConfig.EUP_MASK +
-						DatabaseConfig.UPA_MASK+
+          DatabaseConfig.ELT_MASK +
+          DatabaseConfig.EPT_MASK)) > 0) {
+        return true;
+      }
+    }
+    // include PID only if Patents are included
+    else if(EiNavigator.PID.equals(navid)) {
+      if((mask & (DatabaseConfig.EUP_MASK +
+            DatabaseConfig.UPA_MASK+
             DatabaseConfig.CBN_MASK +
-						DatabaseConfig.EPT_MASK)) > 0) {
-				return true;
-			}
-		}
-		// include PUC only if Patents are included
-		else if(EiNavigator.PUC.equals(navid)) {
-			if((mask & (DatabaseConfig.EUP_MASK +
-						DatabaseConfig.UPA_MASK +
-						DatabaseConfig.ELT_MASK +
-						DatabaseConfig.EPT_MASK)) > 0)
-			{
-				return true;
-			}
-		}
-		// include PAC only if EncomapssPat
-		else if(EiNavigator.PAC.equals(navid)) {
-			if(mask == DatabaseConfig.EPT_MASK)
-			{
-				return true;
-			}
-		}
-		// NEVER include PK
-		else if(EiNavigator.PK.equals(navid)) {
-				return false;
-		}
+            DatabaseConfig.EPT_MASK)) > 0) {
+        return true;
+      }
+    }
+    // include PUC only if Patents are included
+    else if(EiNavigator.PUC.equals(navid)) {
+      if((mask & (DatabaseConfig.EUP_MASK +
+            DatabaseConfig.UPA_MASK +
+            DatabaseConfig.ELT_MASK +
+            DatabaseConfig.EPT_MASK)) > 0)
+      {
+        return true;
+      }
+    }
+    // include PAC only if EncomapssPat
+    else if(EiNavigator.PAC.equals(navid)) {
+      if(mask == DatabaseConfig.EPT_MASK)
+      {
+        return true;
+      }
+    }
+    // include PK for CBNB (as IC)
+    else if(EiNavigator.PK.equals(navid)) {
+      if(mask == DatabaseConfig.CBN_MASK) {
+        return true;
+      }
+    }
 
-		return false;
-	}
+    return false;
+  }
 
     // Create string of active navigators for use in doNavigators clause of buildSearchURL
     public String getNavigatorString()
