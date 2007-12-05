@@ -308,20 +308,9 @@ public class ResultNavigator
         anav = getNavigatorByName(EiNavigator.CL);
         if(anav != null)
         {
-          // Classification Code - NOTE: chimica and paperchem do not have classification codes.
-          //if(mask == cbn)
-          if(m_cbnbOnly)
-          {
-            fastnavigators.remove(anav);
-
-            // if cbnb and nothing else
-            //CL (Industrial sector, GIC->CL)
-            EiNavigator clnav = copyNavigator(anav, new EiNavigator(EiNavigator.IC));
-
-            fastnavigators.add(clnav);
-          }
-          //else if (mask = pag)
-          else if(m_booksOnly)
+          // removed logic for mapping IC to CL for CBNB (moved to PK)
+          //if (mask = pag)
+          if(m_booksOnly)
           {
             // if books and nothing else
             // Uses CleanCLFacet
@@ -332,7 +321,8 @@ public class ResultNavigator
           //else if((mask :: cpx  || mask :: cbf || mask :: ins  || mask :: nti  ||  mask :: geo || mask :: elt) && (mask !: cbn || mask !: upa || mask !: eup || mask !: pag || mask !: chm || mask !: pch || mask !: ept))
           else if((m_compendex || m_inspec || m_ntis || m_geobase || m_encompasslit) && !(m_cbnb || m_uspatents || m_eupatents || m_books || m_chimica || m_paperchem || m_encompasspat))
           {
-            anav.setDisplayname("Classification code");
+            // Relabel the CL "Industrial Sector Code"
+            anav.setDisplayname("Industrial sector code");
           }
           else
           {
@@ -514,7 +504,7 @@ public class ResultNavigator
           if(m_uspatentsOnly)
           {
           	//PUC (US Classification, PUC)
-            anav.setDisplayname("US Classification");
+            anav.setDisplayname("US classification");
           }
           // else if(mask == elt || mask == ept || mask == elt + ept)
           else if((m_encompasslit || m_encompasspat) && !(m_compendex ||  m_inspec || m_ntis || m_geobase || m_cbnb || m_chimica || m_paperchem || m_uspatents || m_eupatents || m_books))
@@ -536,8 +526,18 @@ public class ResultNavigator
         anav = getNavigatorByName(EiNavigator.PK);
         if(anav != null)
         {
-          /* Totally suppressed */
-          fastnavigators.remove(anav);
+          // Classification Code - NOTE: chimica and paperchem do not have classification codes.
+          //if(mask == cbn)
+          if(m_cbnbOnly)
+          {
+            fastnavigators.remove(anav);
+
+            // if cbnb and nothing else
+            //CL (Industrial sector, GIC->CL)
+            EiNavigator clnav = copyNavigator(anav, new EiNavigator(EiNavigator.IC));
+
+            fastnavigators.add(clnav);
+          }
         }
 
         // PAC
@@ -564,235 +564,6 @@ public class ResultNavigator
         }
 
     }
-/*
-    private void adjustComposition()
-    {
-        EiNavigator dbnavigator = this.getNavigatorByName(EiNavigator.DB);
-
-        // if we have dbnavigator, use it to decide how to clean out
-        // and change Navigators and Modifiers depending on results DB composition
-        if(dbnavigator != null)
-        {
-            List dbmods = dbnavigator.getModifiers();
-
-            if(dbmods != null)
-            {
-                // 1. remove patents navs (PK, etc.) if results other than patents are in result set
-                // 2. change AU navigator displayname if patents are in set along with others
-                if((m_mixed) && m_patents)
-                {
-                    //log.info("removing Patent only navigators from mixed results");
-                    EiNavigator anav = getNavigatorByName(EiNavigator.PK);
-                    if(anav != null)
-                    {
-                    	fastnavigators.remove(anav);
-                    }
-                    anav = getNavigatorByName(EiNavigator.PAC);
-                    if(anav != null)
-                    {
-                    	fastnavigators.remove(anav);
-                    }
-                    anav = getNavigatorByName(EiNavigator.PCI);
-                    if(anav != null)
-                    {
-                    	fastnavigators.remove(anav);
-                    }
-                    anav = getNavigatorByName(EiNavigator.PEC);
-                    if(anav != null)
-                    {
-                    	fastnavigators.remove(anav);
-                    }
-                    anav = getNavigatorByName(EiNavigator.PID);
-                    if(anav != null)
-                    {
-                    	fastnavigators.remove(anav);
-                    }
-                    anav = getNavigatorByName(EiNavigator.PUC);
-                    if(anav != null)
-                    {
-                    	fastnavigators.remove(anav);
-                    }
-
-                    // change AU Nav title for mixed results
-                    anav = getNavigatorByName(EiNavigator.AU);
-                    if(anav != null)
-                    {
-                        anav.setDisplayname("Author/Inventor");
-                    }
-                    anav = getNavigatorByName(EiNavigator.AF);
-                    if(anav != null)
-                    {
-                        anav.setDisplayname("Author affiliation/Assignee");
-                    }
-
-                    // remove PN and LA from mixed results
-                    anav = getNavigatorByName(EiNavigator.PN);
-                    if(anav != null)
-                    {
-                    	fastnavigators.remove(anav);
-                    }
-                    anav = getNavigatorByName(EiNavigator.LA);
-                    if(anav != null)
-                    {
-                    	fastnavigators.remove(anav);
-                    }
-
-                    anav = getNavigatorByName(EiNavigator.DT);
-                    if(anav != null)
-                    {
-	                    anav.getModifiers().remove(EiModifier.US_GRANTS);
-	                    anav.getModifiers().remove(EiModifier.US_APPLICATIONS);
-	                    anav.getModifiers().remove(EiModifier.EU_GRANTS);
-	                    anav.getModifiers().remove(EiModifier.EU_APPLICATIONS);
-                    }
-                }
-                if((!m_mixed) && m_patents)
-                {
-                    // if ONLY patents in results set
-                    // handle DT if only patents in results set
-                    EiNavigator anav = getNavigatorByName(EiNavigator.AU);
-                    if(anav != null)
-                    {
-                    	anav.setDisplayname("Inventor");
-                    }
-                    anav = getNavigatorByName(EiNavigator.AF);
-                    if(anav != null)
-                    {
-                    	anav.setDisplayname("Assignee");
-                    }
-                    anav = getNavigatorByName(EiNavigator.DT);
-                    if(anav != null)
-                    {
-	                    anav.setDisplayname("Patent type");
-	                    anav.getModifiers().remove(EiModifier.PATENT);
-                    }
-
-                    // remove PN and LA from mixed results
-                    anav = getNavigatorByName(EiNavigator.PN);
-                    if(anav != null)
-                    {
-                    	fastnavigators.remove(anav);
-                    }
-                    anav = getNavigatorByName(EiNavigator.LA);
-                    if(anav != null)
-                    {
-                    	fastnavigators.remove(anav);
-                    }
-                }
-                if((!m_mixed) && m_other)
-                {
-                    // change AU Nav title for mixed results
-                    EiNavigator anav = getNavigatorByName(EiNavigator.AU);
-                    if(anav != null)
-                    {
-                    	anav.setDisplayname("Author");
-                    }
-                    anav = getNavigatorByName(EiNavigator.AF);
-                    if(anav != null)
-                    {
-                    	anav.setDisplayname("Author affiliation");
-                    }
-                    // if compostion includes NTIS, exlcude PN navigator
-                    if(dbmods.contains(EiModifier.MOD_NTI))
-                    {
-                      // remove PN and LA from mixed results
-                      anav = getNavigatorByName(EiNavigator.PN);
-                      if(anav != null)
-                      {
-                    	  fastnavigators.remove(anav);
-                      }
-                    }
-                }
-                if(m_books)
-                {
-                  EiNavigator anav = getNavigatorByName(EiNavigator.CL);
-                  if(anav != null)
-                  {
-                    anav = BookNavigator.cleanCLNavigator(anav);
-                    fastnavigators.add(anav);
-                  }
-                }
-                if((!m_mixed) && m_books)
-                {
-                	// get DT nav and always remove it if books only
-                	EiNavigator anav = getNavigatorByName(EiNavigator.DT);
-	                if(anav != null)
-	                {
-                      fastnavigators.remove(anav);
-                      // check for bookrecords and pagerecords doctypes in results
-                      List dtmods = anav.getModifiers();
-                      boolean bookrecords = dtmods.contains(EiModifier.DT_BOOK);
-                      boolean pagerecords = dtmods.contains(EiModifier.DT_PAGE);
-                      // if only book records remove ST (book title) nav
-                      if((bookrecords) && (!pagerecords))
-                      {
-                    	  EiNavigator tinav = getNavigatorByName(EiNavigator.ST);
-                    	  fastnavigators.remove(tinav);
-                      }
-	                }
-
-                	// change Class. Code to chapter for when results are books only
-                  anav = getNavigatorByName(EiNavigator.CL);
-                  if(anav != null)
-                  {
-	                  anav.setDisplayname("Book Collection");
-                  }
-                  anav = getNavigatorByName(EiNavigator.FL);
-                  if(anav != null)
-                  {
-	                  anav.setDisplayname("Keyword");
-	                  anav.setFieldname("ky");
-	                  anav.setName("kynav");
-                  }
-                  // change Serial title to Book Title for when results are books only
-                  anav = getNavigatorByName(EiNavigator.ST);
-                  if(anav != null)
-                  {
-                	  fastnavigators.remove(anav);
-                      anav = BookNavigator.createBookNavigator(anav);
-                      fastnavigators.add(anav);
-                  }
-
-                  // change Country to chapter for when results are books only
-                  anav = getNavigatorByName(EiNavigator.CO);
-                  if(anav != null)
-                  {
-                    fastnavigators.remove(anav);
-                    anav = BookNavigator.createBookNavigator(anav);
-                    fastnavigators.add(anav);
-                  }
-                }
-                if(m_mixed && m_books)
-                {
-                  // remove CO from mixed results that contain books
-                  EiNavigator anav = getNavigatorByName(EiNavigator.CO);
-                  if(anav != null)
-                  {
-                	  fastnavigators.remove(anav);
-                  }
-
-                  // remove ST from mixed results that contain books
-                  anav = getNavigatorByName(EiNavigator.ST);
-                  if(anav != null)
-                  {
-                	  fastnavigators.remove(anav);
-                  }
-                  // remove FL from mixed results that contain books
-                  anav = getNavigatorByName(EiNavigator.FL);
-                  if(anav != null)
-                  {
-                	  fastnavigators.remove(anav);
-                  }
-                }
-
-                // we used to remove the DB nav if its size was 1 here
-                // but we need it later on and want it in the cache too
-                // so the toXML has been modified to skip DBNAV with size() == 1
-
-            } // if(mods != null)
-        } //  if(dbnavigator != null)
-    }
-*/
 
     public void removeRefinements(Refinements xrefs)
     {
@@ -1267,6 +1038,24 @@ public class ResultNavigator
             neworder.add(EiNavigator.ST);
             neworder.add(EiNavigator.PN);
             neworder.add(EiNavigator.DT);
+        }
+        if((getCompositionMask() == DatabaseConfig.PCH_MASK) || (getCompositionMask() == DatabaseConfig.CHM_MASK) ||
+            (getCompositionMask() == DatabaseConfig.PCH_MASK + DatabaseConfig.CHM_MASK))
+        {
+            // For PaperChem and Chimica, move the uncontrolled terms navigator so that it is directly underneath controlled vocabulary.
+            neworder = new ArrayList();
+            neworder.add(EiNavigator.DB);
+            neworder.add(EiNavigator.AU);
+            neworder.add(EiNavigator.AF);
+            neworder.add(EiNavigator.CV);
+            neworder.add(EiNavigator.FL);
+            neworder.add(EiNavigator.CL);
+            neworder.add(EiNavigator.CO);
+            neworder.add(EiNavigator.DT);
+            neworder.add(EiNavigator.LA);
+            neworder.add(EiNavigator.YR);
+            neworder.add(EiNavigator.ST);
+            neworder.add(EiNavigator.PN);
         }
         return neworder;
     }
