@@ -106,66 +106,32 @@ public class DatabaseDisplayHelper {
 //			mask = mask - 131072;
 //		}
 
-		if((mask & DatabaseConfig.CPX_MASK) == DatabaseConfig.CPX_MASK)
-		{		    
-		    html.append(htmlWriter(String.valueOf(DatabaseConfig.CPX_MASK)));
-		    jsWriter(String.valueOf(1));
-
-		}
-		if((mask & DatabaseConfig.INS_MASK) == DatabaseConfig.INS_MASK)
-		{
-		    jsWriter(String.valueOf(2));
-		    html.append(htmlWriter(String.valueOf(DatabaseConfig.INS_MASK)));
-
-		}
-		if((mask & DatabaseConfig.NTI_MASK) == DatabaseConfig.NTI_MASK)
-		{
-		    jsWriter(String.valueOf(4));
-		    html.append(htmlWriter(String.valueOf(DatabaseConfig.NTI_MASK)));
-
-		}
-		if((mask & DatabaseConfig.GEO_MASK) == DatabaseConfig.GEO_MASK)
-		{
-		    jsWriter(String.valueOf(8192));
-		    html.append(htmlWriter(String.valueOf(DatabaseConfig.GEO_MASK)));
-
-		}
-		if((mask & DatabaseConfig.PAG_MASK) == DatabaseConfig.PAG_MASK)
-		{
-		    jsWriter(String.valueOf(131072));
-		    html.append(htmlWriter(String.valueOf(DatabaseConfig.PAG_MASK)));
-
-		}
-//		if((mask & DatabaseConfig.REF_MASK) == DatabaseConfig.REF_MASK)
-//		{
-//		    jsWriter(String.valueOf(65536));
-//		    html.append(htmlWriter(String.valueOf(DatabaseConfig.REF_MASK)));
-//
-//		}
-		if(((mask & DatabaseConfig.EUP_MASK) == DatabaseConfig.EUP_MASK) ||
-		((mask & DatabaseConfig.UPA_MASK) == DatabaseConfig.UPA_MASK))
-		{
-		    jsWriter(String.valueOf(16384));
-		    html.append(htmlWriter(String.valueOf(DatabaseConfig.EUP_MASK)));
-		}
-		if((mask & DatabaseConfig.CHM_MASK) == DatabaseConfig.CHM_MASK)
-		{
-		    jsWriter(String.valueOf(128));
-		    html.append(htmlWriter(String.valueOf(DatabaseConfig.CHM_MASK)));
-
-		}	
-		if((mask & DatabaseConfig.PCH_MASK) == DatabaseConfig.PCH_MASK)
-		{
-		    jsWriter(String.valueOf(64));
-		    html.append(htmlWriter(String.valueOf(DatabaseConfig.PCH_MASK)));
-
-		}
 		if((mask & DatabaseConfig.CBN_MASK) == DatabaseConfig.CBN_MASK)
 		{
 		    jsWriter(String.valueOf(256));
 		    html.append(htmlWriter(String.valueOf(DatabaseConfig.CBN_MASK)));
 
 		}
+		if((mask & DatabaseConfig.CHM_MASK) == DatabaseConfig.CHM_MASK)
+		{
+		    jsWriter(String.valueOf(128));
+		    html.append(htmlWriter(String.valueOf(DatabaseConfig.CHM_MASK)));
+
+		}
+				
+		if((mask & DatabaseConfig.CPX_MASK) == DatabaseConfig.CPX_MASK)
+		{		    
+		    html.append(htmlWriter(String.valueOf(DatabaseConfig.CPX_MASK)));
+		    jsWriter(String.valueOf(1));
+
+		}
+		
+		if(((mask & DatabaseConfig.EUP_MASK) == DatabaseConfig.EUP_MASK) )
+		{
+		    jsWriter(String.valueOf(16384));
+		    html.append(htmlWriter(String.valueOf(DatabaseConfig.EUP_MASK)));
+		}
+		
 		if((mask & DatabaseConfig.ELT_MASK) == DatabaseConfig.ELT_MASK)
 		{
 		    jsWriter(String.valueOf(1024));
@@ -178,6 +144,55 @@ public class DatabaseDisplayHelper {
 		    html.append(htmlWriter(String.valueOf(DatabaseConfig.EPT_MASK)));
 
 		}
+		
+		if((mask & DatabaseConfig.GEO_MASK) == DatabaseConfig.GEO_MASK)
+		{
+		    jsWriter(String.valueOf(8192));
+		    html.append(htmlWriter(String.valueOf(DatabaseConfig.GEO_MASK)));
+
+		}
+		
+		if((mask & DatabaseConfig.INS_MASK) == DatabaseConfig.INS_MASK)
+		{
+		    jsWriter(String.valueOf(2));
+		    html.append(htmlWriter(String.valueOf(DatabaseConfig.INS_MASK)));
+
+		}
+		if((mask & DatabaseConfig.NTI_MASK) == DatabaseConfig.NTI_MASK)
+		{
+		    jsWriter(String.valueOf(4));
+		    html.append(htmlWriter(String.valueOf(DatabaseConfig.NTI_MASK)));
+
+		}
+		if((mask & DatabaseConfig.PCH_MASK) == DatabaseConfig.PCH_MASK)
+		{
+		    jsWriter(String.valueOf(64));
+		    html.append(htmlWriter(String.valueOf(DatabaseConfig.PCH_MASK)));
+
+		}
+
+		if((mask & DatabaseConfig.PAG_MASK) == DatabaseConfig.PAG_MASK)
+		{
+		    jsWriter(String.valueOf(131072));
+		    html.append(htmlWriter(String.valueOf(DatabaseConfig.PAG_MASK)));
+
+		}
+		if((mask & DatabaseConfig.UPA_MASK) == DatabaseConfig.UPA_MASK)
+		{
+		    jsWriter(String.valueOf(16384));
+		    html.append(htmlWriter(String.valueOf(DatabaseConfig.EUP_MASK)));
+		}
+//		if((mask & DatabaseConfig.REF_MASK) == DatabaseConfig.REF_MASK)
+//		{
+//		    jsWriter(String.valueOf(65536));
+//		    html.append(htmlWriter(String.valueOf(DatabaseConfig.REF_MASK)));
+//
+//		}
+
+	
+
+
+
 
 		jsInitVars.append("}");
 		jsRedrawCell.append("\n return false;}");		
@@ -252,9 +267,12 @@ public class DatabaseDisplayHelper {
 	    {
 	        StringBuffer html = new StringBuffer();
 			html.append("<tr><td valign=\"top\" width=\"14\">" +
-					"<img src=\"/engresources/images/s.gif\" width=\"2\" height=\"3\"/></br><img src=\"/engresources/images/s.gif\" width=\"2\"/>" +
-					this.img +
-					"<img src=\"/engresources/images/s.gif\" width=\"2\"/></td><td valign=\"top\">"); 
+					"<img src=\"/engresources/images/s.gif\" width=\"2\" height=\"3\"/></br><img src=\"/engresources/images/s.gif\" width=\"2\"/>");
+				    if (!this.isTwodb)
+				    {
+				        html.append(this.img);
+				    }
+				    html.append("<img src=\"/engresources/images/s.gif\" width=\"2\"/></td><td valign=\"top\">"); 
 		    		    
 		    if (!this.isTwodb)
 		    {
