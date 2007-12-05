@@ -1,14 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE xsl:stylesheet [
-  <!ENTITY nbsp '<xsl:text disable-output-escaping="yes">&amp;nbsp;</xsl:text>'>
-  <!ENTITY copy '<xsl:text disable-output-escaping="yes">&amp;copy;</xsl:text>'>
-]>
+<?xml version="1.0" ?>
+
 <xsl:stylesheet version="1.0"
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-	xmlns:html="http://www.w3.org/TR/REC-html40"
-	xmlns:gui="java:org.ei.bulletins.BulletinGUI"
-	xmlns:java="java:java.net.URLEncoder"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:html="http://www.w3.org/TR/REC-html40"
+  xmlns:gui="java:org.ei.bulletins.BulletinGUI"
+  xmlns:java="java:java.net.URLEncoder"
+  exclude-result-prefixes="xsl html gui java"
 >
+  <xsl:output method="html" indent="no" doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
+  <xsl:strip-space elements="html:* xsl:*" />
+
  <xsl:variable name="RESOURCE-PATH">
         <xsl:value-of select="/PAGE/RESOURCE-PATH"/>
  </xsl:variable>
@@ -57,7 +58,7 @@
   <xsl:variable name="SELECTED-DB">
         <xsl:value-of select="/PAGE/SELECTED-DB"/>
   </xsl:variable>
-   
+
 <xsl:include href="bulletinTemplates.xsl"/>
 <xsl:include href="../Header.xsl" />
 <xsl:include href="../GlobalLinks.xsl"/>
@@ -68,20 +69,14 @@
  <head>
   <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Bulletin.js"/>
   <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
-  <SCRIPT LANGUAGE="Javascript" SRC="/engresources/stylesheets/ev2ie.css"/>
-  <SCRIPT LANGUAGE="Javascript" SRC="/engresources/stylesheets/ev2net.css"/>
   <title>EnCompass Bulletins</title>
-
- 
-
   </head>
-
  <body>
  <table width="100%" align="center" cellspacing="0" cellpadding="0">
  <tr>
  <td>
   <div style="text-align: center">
-  
+
   <!-- INCLUDE THE HEADER -->
     <xsl:apply-templates select="HEADER">
   	<xsl:with-param name="SESSION-ID" select="$SESSION-ID"/>
@@ -90,7 +85,7 @@
     </xsl:apply-templates>
     <table>
     	<tr>
-    	    <td> 
+    	    <td>
     	<img src="/engresources/images/s.gif" border="0" height="5"/>
     	    </td>
     	</tr>
@@ -186,18 +181,18 @@
 		   </td>
 	        </tr>
 
-	        <tr>      
+	        <tr>
 		   <td valign="top">
-			<input type="radio" name="db" onclick="refreshCategories()" checked="true" value="1"></input>
-			<a class="SmBlackText">EnCompassLIT</a> &nbsp;
+			<input type="radio" name="db" id="radLit" onclick="refreshCategories()" checked="true" value="1"></input>
+			<a class="SmBlackText"><label for="radLit">EnCompassLIT</label></a> &#160;
 		   </td>
 	       </tr>
 	       <tr>
 		   <td valign="top">
-			<input type="radio" name="db" onclick="refreshCategories()" value="2"></input> 
-			<a class="SmBlackText">EnCompassPAT</a> &nbsp; 
+			<input type="radio" name="db" id="radPat" onclick="refreshCategories()" value="2"></input>
+			<a class="SmBlackText"><label for="radPat">EnCompassPAT</label></a> &#160;
 		   </td>
-		  <!-- end of search form -->  
+		  <!-- end of search form -->
 	       </tr>
 
 	       <tr>
@@ -217,8 +212,8 @@
 			<a class="SmBlackText">
 			<!-- Start of table for search form -->
 			<xsl:value-of disable-output-escaping="yes" select="gui:createYearLb()"/>
-			<!-- end of search form -->        
-			</a> 
+			<!-- end of search form -->
+			</a>
 		   </td>
 	       </tr>
 
@@ -250,7 +245,7 @@
 
 	       <tr>
 		   <td valign="top" align="right">
-			<input type="image" name="display" value="Display" src="/engresources/images/display.gif" border="0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</input>
+			<input type="image" name="display" value="Display" src="/engresources/images/display.gif" border="0"/>
 		   </td>
 	       </tr>
 	       <tr>
@@ -266,7 +261,7 @@
 	   </tr>
            </table>
            </form>
-           </td>         
+           </td>
            <td>
            <table border="0" cellspacing="0" cellpadding="0" width="100%">
    	   <tr>
@@ -281,7 +276,7 @@
                <td width="20" bgcolor="#3173B5" align="left">
 	    	   <img src="/engresources/images/s.gif" width="20"></img>
                </td>
-	       <td align="left" bgcolor="#3173B5" height="20" colspan="2">       	
+	       <td align="left" bgcolor="#3173B5" height="20" colspan="2">
 		   <a CLASS="SmWhiteText"><b>MOST RECENT BULLETINS</b></a>
 	       </td>
 	       <td width="20">
@@ -304,29 +299,29 @@
 
      	        <td valign="top" align="left" colspan="2">
       	        <!-- Left side table for bulletins display -->
-	        <table border="0" cellspacing="0" cellpadding="0" width="100%">	       
+	        <table border="0" cellspacing="0" cellpadding="0" width="100%">
 	        <tr>
 		    <td height="15" colspan="2">
 		   	<img src="/engresources/images/s.gif" height="15"></img>
 		    </td>
 	        </tr>
-	      
+
 	        <tr>
 		   <td valign="top" colspan="2">
 		   	<a class="LgBlackText"><b>EnCompassLIT</b></a>
-		   </td>	
+		   </td>
 	        </tr>
-	        
-	        <tr>		
+
+	        <tr>
 		   <td valign="top" colspan="2" height="10" >
 			<img src="/engresources/images/s.gif" height="10"></img>
-		   </td>		  
+		   </td>
 	        </tr>
-	       
-	        <tr>		
+
+	        <tr>
 		   <td valign="top" colspan="2" height="1" bgcolor="#3173B5">
 			<img src="/engresources/images/s.gif" height="1"></img>
-		   </td>		  
+		   </td>
 	        </tr>
 
 	        <tr>
@@ -392,7 +387,7 @@
 		       <td valign="top" colspan="2" height="1">
 		      	   <img src="/engresources/images/s.gif" height="1"></img>
 		       </td>
-		   </tr>		 
+		   </tr>
 		   </table>
 		   </td>
 		   <td width="5">
@@ -408,7 +403,7 @@
         	<img src="/engresources/images/s.gif" height="20"></img>
              </td>
           </tr>
-       
+
           <xsl:if test="boolean($HAS-PAT='true')">
           <tr>
              <td width="20">
@@ -418,7 +413,7 @@
         	<a class="LgBlackText"><b>EnCompassPAT</b></a>
              </td>
           </tr>
-      
+
           <tr>
              <td width="20">
 	         <img src="/engresources/images/s.gif" width="20"></img>
@@ -430,22 +425,22 @@
 			   <img src="/engresources/images/s.gif" height="1"></img>
 		      </td>
 		 </tr>
-		 <tr>		
+		 <tr>
 		      <td valign="top" colspan="2" height="10" >
 			   <img src="/engresources/images/s.gif" height="1"></img>
-		      </td>		  
+		      </td>
 		 </tr>
 
-		 <tr>		
+		 <tr>
 		      <td valign="top" colspan="2" height="1" bgcolor="#3173B5">
 			   <img src="/engresources/images/s.gif" height="1"></img>
-		      </td>		  
+		      </td>
 		 </tr>
 
-		 <tr>		
+		 <tr>
 		      <td valign="top" colspan="2" height="10" >
 				<img src="/engresources/images/s.gif" height="10"></img>
-		      </td>		  
+		      </td>
 		 </tr>
 
 		 <tr>
@@ -466,7 +461,7 @@
 
 			     <td width="5">
 				<img src="/engresources/images/s.gif" width="5" height="20"></img>
-			     </td> 
+			     </td>
 			     <td valign="top" width="90">
 				<a class="SmBlackText"><b>PDF</b></a>
 			     </td>
@@ -512,8 +507,8 @@
 			   <img src="/engresources/images/s.gif" width="5"></img>
 		     </td>
 		  </tr>
-          </xsl:if>     
-          </table>  
+          </xsl:if>
+          </table>
           </td>
           <td>
 	       	<img src="/engresources/images/s.gif"></img>

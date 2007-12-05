@@ -1,10 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE xsl:stylesheet [
-  <!ENTITY nbsp '<xsl:text disable-output-escaping="yes">&amp;nbsp;</xsl:text>'>
-  <!ENTITY copy '<xsl:text disable-output-escaping="yes">&amp;copy;</xsl:text>'>
-]>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:java="java:java.net.URLEncoder" xmlns:gui="java:org.ei.bulletins.BulletinGUI">
+<?xml version="1.0" ?>
+
+<xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:html="http://www.w3.org/TR/REC-html40"
+  xmlns:gui="java:org.ei.bulletins.BulletinGUI"
+  xmlns:java="java:java.net.URLEncoder"
+  exclude-result-prefixes="xsl html gui java"
+>
+  <xsl:output method="html" indent="no" doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
+  <xsl:strip-space elements="html:* xsl:*" />
+
     <xsl:variable name="RESOURCE-PATH">
         <xsl:value-of select="/PAGE/RESOURCE-PATH"/>
     </xsl:variable>
@@ -28,7 +33,7 @@
     </xsl:variable>
     <xsl:variable name="QCAT">
         <xsl:value-of select="/PAGE/QTOP/QCAT"/>
-    </xsl:variable>    
+    </xsl:variable>
     <xsl:variable name="DB">
         <xsl:value-of select="/PAGE/DB"/>
     </xsl:variable>
@@ -71,8 +76,8 @@
   <xsl:variable name="SHOW-PDF">
         <xsl:value-of select="/PAGE/SHOW-PDF"/>
   </xsl:variable>
-   
-    
+
+
   <xsl:include href="../Header.xsl"/>
   <xsl:include href="../GlobalLinks.xsl"/>
   <xsl:include href="../Footer.xsl" />
@@ -98,7 +103,7 @@
 	</xsl:apply-templates>
 	<table>
 	    <tr>
-	    	<td> 
+	    	<td>
 	    		<img src="/engresources/images/s.gif" border="0" height="5"/>
 	    	</td>
 	    </tr>
@@ -151,7 +156,7 @@
 	    <input type="hidden" name="litcr" value="{$LITCR}"/>
 	    <input type="hidden" name="patcr" value="{$PATCR}"/>
 	    <input type="hidden" name="database" value="{$SELECTED-DB}"/>
-	    <input type="hidden" name="CID" value="bulletinResults"/>	
+	    <input type="hidden" name="CID" value="bulletinResults"/>
 	    <table border="0" cellspacing="0" cellpadding="0" width="100%" bgcolor="#C3C8D1">
 	       <tr>
 	       <td width="10" bgcolor="#C3C8D1">
@@ -175,7 +180,7 @@
 			<img src="/engresources/images/s.gif" height="20"></img>
 		   </td>
 		</tr>
-	    
+
 		<tr>
 		   <td valign="top">
 			<a class="SmBlackText">In order to view the Bulletins Archives, please select Database, Year of Publication and Category and hit the "Display" button.</a>
@@ -194,33 +199,33 @@
 		   </td>
 		</tr>
 
-		<tr>      
+		<tr>
 		   <td valign="top">
 		   	<xsl:choose>
 			<xsl:when test="($DB = '1')">
-			<input type="radio" name="db" onclick="refreshCategories()" checked="true" value="1"></input>
+			<input type="radio" name="db" id="radLit" onclick="refreshCategories()" checked="true" value="1"></input>
 			</xsl:when>
 			<xsl:otherwise>
-			<input type="radio" name="db" onclick="refreshCategories()" value="1"></input>		
+			<input type="radio" name="db" id="radLit" onclick="refreshCategories()" value="1"></input>
 			</xsl:otherwise>
-			</xsl:choose>			
-			<a class="SmBlackText">EnCompassLIT</a> &nbsp;
+			</xsl:choose>
+			<a class="SmBlackText"><label for="radLit">EnCompassLIT</label></a> &#160;
 		   </td>
 	       </tr>
 	       <tr>
 		   <td valign="top">
 		   	<xsl:choose>
 			<xsl:when test="($DB = '2')">
-			<input type="radio" name="db" onclick="refreshCategories()" value="2" checked="true"></input> 
+			<input type="radio" name="db" id="radPat" onclick="refreshCategories()" value="2" checked="true"></input>
 			</xsl:when>
 			<xsl:otherwise>
-			<input type="radio" name="db" onclick="refreshCategories()" value="2"></input> 
+			<input type="radio" name="db" id="radPat" onclick="refreshCategories()" value="2"></input>
 			</xsl:otherwise>
 			</xsl:choose>
-			<a class="SmBlackText">EnCompassPAT</a> &nbsp; 
+			<a class="SmBlackText"><label for="radPat">EnCompassPAT</label></a> &#160;
 		   </td>
 	       </tr>
-	    
+
 	       <tr>
 		   <td valign="top" height="10">
 			<img src="/engresources/images/s.gif" height="10"></img>
@@ -238,8 +243,8 @@
 			<a class="SmBlackText">
 			<!-- Start of table for search form -->
 			<xsl:value-of disable-output-escaping="yes" select="gui:createYearLb($QSTR)"/>
-			<!-- end of search form -->        
-			</a> 
+			<!-- end of search form -->
+			</a>
 		   </td>
 	       </tr>
 
@@ -262,7 +267,7 @@
 		   <!-- end of search form -->
 		   </td>
 	       </tr>
-	    
+
 	       <tr>
 		   <td valign="top" height="15">
 			<img src="/engresources/images/s.gif" height="15"></img>
@@ -271,7 +276,7 @@
 
 	       <tr>
 		   <td valign="top" align="right">
-			<input type="image" name="display" value="Display" src="/engresources/images/display.gif" border="0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</input>
+			<input type="image" name="display" value="Display" src="/engresources/images/display.gif" border="0"/>
 		   </td>
 	       </tr>
 	       <tr>
@@ -303,12 +308,12 @@
 	       <td width="20" bgcolor="#3173B5" align="left">
 	    	   <img src="/engresources/images/s.gif" width="20" />
                </td>
-	       <td align="left" bgcolor="#3173B5" height="20">       	
+	       <td align="left" bgcolor="#3173B5" height="20">
 		   <a CLASS="SmWhiteText"><b><xsl:value-of select="$QTIT" disable-output-escaping="yes"/></b></a>
 	       </td>
 	       <td align="right" bgcolor="#3173B5">
 	   	    <a href="/controller/servlet/Controller?CID=bulletinSearch&amp;queryStr={$ENCODED-QSTR}&amp;EISESSION={$SESSION-ID}&amp;database={$SELECTED-DB}">
-		    	<img src="/engresources/images/rec.gif" border="0">&nbsp;&nbsp;&nbsp;&nbsp;</img>
+		    	<img src="/engresources/images/rec.gif" border="0"/>
 		    </a>
                </td>
                <td width="20" align="right" >
@@ -340,12 +345,12 @@
 		    <b>
 		    <xsl:value-of select="$QDIS" disable-output-escaping="yes"/>
 		    </b>
-		    &nbsp;&nbsp;
+		    &#160;&#160;
 		    <b>
 		       <xsl:choose>
 			  <xsl:when test="$QCO = 0"> 0 bulletins found. </xsl:when>
 			  <xsl:otherwise>
-			    <xsl:value-of select="$QCO"/> bulletins found. 
+			    <xsl:value-of select="$QCO"/> bulletins found.
 			  </xsl:otherwise>
 		      </xsl:choose>
 		    </b>
@@ -402,14 +407,14 @@
 			<xsl:otherwise>
 			<td width="15%" nowrap="true" colspan="2">
 			    <a class="SmBlackText"><b>GIF</b></a>
-			</td>			
+			</td>
 			</xsl:otherwise>
 			</xsl:choose>
 			<td width="20">
 				<img src="/engresources/images/s.gif" width="20"/>
 			</td>
 		    </tr>
-		    
+
 		    <xsl:apply-templates select="BULLETINS" mode="RESULTS"/>
 		    <tr>
 		        <td colspan="8" height="10">
@@ -436,7 +441,7 @@
 			    <a href="/controller/servlet/Controller?CID=bulletinResults&amp;docIndex={$PRV}&amp;queryStr={$ENCODED-QSTR}&amp;EISESSION={$SESSION-ID}&amp;database={$SELECTED-DB}">
 			    <img src="/engresources/images/pp.gif" border="0"/>
 			    </a>
-			    </xsl:if> &nbsp; &nbsp; &nbsp; 
+			    </xsl:if> &#160; &#160; &#160;
 			    <xsl:if test="($NXT &gt; 0)">
 		    		<a href="/controller/servlet/Controller?CID=bulletinResults&amp;docIndex={$NXT}&amp;queryStr={$ENCODED-QSTR}&amp;EISESSION={$SESSION-ID}&amp;database={$SELECTED-DB}">
 		    		<img src="/engresources/images/np.gif" border="0"/>
@@ -447,9 +452,9 @@
 	   	</tr>
 	   	</table>
 	   	</td>
-           </tr>     
+           </tr>
          </table>
-         </td> 
+         </td>
          <td width="5">
        	      <img src="/engresources/images/s.gif" width="5"></img>
          </td>
