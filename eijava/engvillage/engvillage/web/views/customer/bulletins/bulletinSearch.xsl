@@ -69,7 +69,7 @@
  <head>
   <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Bulletin.js"/>
   <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
-  <title>EnCompass Bulletins</title>
+  <title>Engineering Village - EnCompass Bulletins</title>
   </head>
  <body>
  <table width="100%" align="center" cellspacing="0" cellpadding="0">
