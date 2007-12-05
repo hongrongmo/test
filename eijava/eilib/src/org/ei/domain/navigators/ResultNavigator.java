@@ -318,11 +318,14 @@ public class ResultNavigator
             cleanCLFacet();
             anav.setDisplayname("Book Collection");
           }
+          else if(m_cbnbOnly)
+          {
+            anav.setDisplayname("Industrial sector code");
+          }
           //else if((mask :: cpx  || mask :: cbf || mask :: ins  || mask :: nti  ||  mask :: geo || mask :: elt) && (mask !: cbn || mask !: upa || mask !: eup || mask !: pag || mask !: chm || mask !: pch || mask !: ept))
           else if((m_compendex || m_inspec || m_ntis || m_geobase || m_encompasslit) && !(m_cbnb || m_uspatents || m_eupatents || m_books || m_chimica || m_paperchem || m_encompasspat))
           {
-            // Relabel the CL "Industrial Sector Code"
-            anav.setDisplayname("Industrial sector code");
+            anav.setDisplayname("Classification code");
           }
           else
           {
