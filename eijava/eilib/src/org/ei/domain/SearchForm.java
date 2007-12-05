@@ -904,7 +904,6 @@ public class SearchForm {
 
         int dYear = 1973;
         try {
-			System.out.println("sYear= "+sYear);
 
 	        if (sYear != null && sYear.length() > 0) {
 	            if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.CPX_MASK) == DatabaseConfig.CPX_MASK)) {
