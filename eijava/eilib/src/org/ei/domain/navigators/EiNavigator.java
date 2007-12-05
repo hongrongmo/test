@@ -75,29 +75,29 @@ public class EiNavigator
     static {
         displayNames.put(EiNavigator.DB,"Database");
         displayNames.put(EiNavigator.YR,"Year");
-        displayNames.put(EiNavigator.CV,"Controlled Vocabulary");
-        displayNames.put(EiNavigator.CL,"Classification Code");
-        displayNames.put(EiNavigator.FL,"Species Terms");
-        displayNames.put(EiNavigator.ST,"Serial Title");
+        displayNames.put(EiNavigator.CV,"Controlled vocabulary");
+        displayNames.put(EiNavigator.CL,"Classification code");
+        displayNames.put(EiNavigator.FL,"Species terms");
+        displayNames.put(EiNavigator.ST,"Serial title");
         displayNames.put(EiNavigator.PN,"Publisher");
         displayNames.put(EiNavigator.AU,"Author");
-        displayNames.put(EiNavigator.AF,"Author Affiliation");
-        displayNames.put(EiNavigator.DT,"Document Type");
+        displayNames.put(EiNavigator.AF,"Author affiliation");
+        displayNames.put(EiNavigator.DT,"Document type");
         displayNames.put(EiNavigator.LA,"Language");
         displayNames.put(EiNavigator.CO,"Country");
-        displayNames.put(EiNavigator.PK,"Patent Kind");
-        displayNames.put(EiNavigator.PAC,"Patent Authority Code");
-        displayNames.put(EiNavigator.PCI,"Patent - Cited by Index");
+        displayNames.put(EiNavigator.PK,"Patent kind");
+        displayNames.put(EiNavigator.PAC,"Patent authority code");
+        displayNames.put(EiNavigator.PCI,"Patent - Cited by index");
         displayNames.put(EiNavigator.PEC,"ECLA Code");
         displayNames.put(EiNavigator.PID,"IPC Code");
         displayNames.put(EiNavigator.PUC,"US Classification");
         displayNames.put(EiNavigator.KY,"Keyword");
-        displayNames.put(EiNavigator.BKT,"Book Title");
-        displayNames.put(EiNavigator.BKS,"Book Chapter");
+        displayNames.put(EiNavigator.BKT,"Book title");
+        displayNames.put(EiNavigator.BKS,"Book chapter");
 
 
-        displayNames.put(EiNavigator.GD,"Industrial Sector");
-        displayNames.put(EiNavigator.IC,"SIC Code");
+        displayNames.put(EiNavigator.GD,"Industrial sector");
+        displayNames.put(EiNavigator.IC,"SIC code");
         displayNames.put(EiNavigator.CM,"Chemicals");
         displayNames.put(EiNavigator.CP,"Companies");
 
