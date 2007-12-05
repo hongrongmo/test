@@ -138,7 +138,8 @@ public class DatabaseDisplayHelper {
 		    html.append(htmlWriter(String.valueOf(DatabaseConfig.ELT_MASK)));
 
 		}
-		if((mask & DatabaseConfig.EPT_MASK) == DatabaseConfig.EPT_MASK)
+		if((mask & DatabaseConfig.EPT_MASK) == DatabaseConfig.EPT_MASK ||
+		        (mask & DatabaseConfig.UPA_MASK) == DatabaseConfig.UPA_MASK)
 		{
 		    jsWriter(String.valueOf(2048));
 		    html.append(htmlWriter(String.valueOf(DatabaseConfig.EPT_MASK)));
@@ -177,11 +178,11 @@ public class DatabaseDisplayHelper {
 		    html.append(htmlWriter(String.valueOf(DatabaseConfig.PAG_MASK)));
 
 		}
-		if((mask & DatabaseConfig.UPA_MASK) == DatabaseConfig.UPA_MASK)
-		{
-		    jsWriter(String.valueOf(16384));
-		    html.append(htmlWriter(String.valueOf(DatabaseConfig.EUP_MASK)));
-		}
+//		if((mask & DatabaseConfig.UPA_MASK) == DatabaseConfig.UPA_MASK)
+//		{
+//		    jsWriter(String.valueOf(16384));
+//		    html.append(htmlWriter(String.valueOf(DatabaseConfig.EUP_MASK)));
+//		}
 //		if((mask & DatabaseConfig.REF_MASK) == DatabaseConfig.REF_MASK)
 //		{
 //		    jsWriter(String.valueOf(65536));
