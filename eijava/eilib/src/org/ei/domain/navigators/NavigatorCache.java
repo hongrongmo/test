@@ -87,7 +87,6 @@ public class NavigatorCache
             pstmt.setString(intStmtIndex++, (nav.getNavigatorByName(EiNavigator.YR) != null) ? nav.getNavigatorByName(EiNavigator.YR).toString() : StringUtil.EMPTY_STRING);
 
             pstmt.setString(intStmtIndex++, (nav.getNavigatorByName(EiNavigator.CV) != null) ? nav.getNavigatorByName(EiNavigator.CV).toString() : StringUtil.EMPTY_STRING);
-//          pstmt.setString(intStmtIndex++, "");
 
             navstring = StringUtil.EMPTY_STRING;
             if(nav.getNavigatorByName(EiNavigator.CL) != null) {
@@ -110,7 +109,6 @@ public class NavigatorCache
             pstmt.setString(intStmtIndex++, zipText(stnav));
 
             pstmt.setString(intStmtIndex++, zipText((nav.getNavigatorByName(EiNavigator.PN) != null) ? nav.getNavigatorByName(EiNavigator.PN).toString() : StringUtil.EMPTY_STRING));
-//          pstmt.setString(intStmtIndex++, "");
 
             pstmt.setString(intStmtIndex++, zipText((nav.getNavigatorByName(EiNavigator.AU) != null) ? nav.getNavigatorByName(EiNavigator.AU).toString() : StringUtil.EMPTY_STRING));
             navstring = StringUtil.EMPTY_STRING;
@@ -127,7 +125,6 @@ public class NavigatorCache
             pstmt.setString(intStmtIndex++, (nav.getNavigatorByName(EiNavigator.DT) != null) ? nav.getNavigatorByName(EiNavigator.DT).toString() : StringUtil.EMPTY_STRING);
 
             pstmt.setString(intStmtIndex++, (nav.getNavigatorByName(EiNavigator.LA) != null) ? nav.getNavigatorByName(EiNavigator.LA).toString() : StringUtil.EMPTY_STRING);
-//          pstmt.setString(intStmtIndex++, "");
 
             String conav = (nav.getNavigatorByName(EiNavigator.CO) != null) ? nav.getNavigatorByName(EiNavigator.CO).toString() : StringUtil.EMPTY_STRING;
             if(nav.getNavigatorByName(EiNavigator.BKS) != null)
@@ -145,7 +142,7 @@ public class NavigatorCache
             {
               navstring = nav.getNavigatorByName(EiNavigator.IC).toString();
             }
-
+            pstmt.setString(intStmtIndex++, navstring);
 
             navstring = StringUtil.EMPTY_STRING;
             if(nav.getNavigatorByName(EiNavigator.PEC) != null)
@@ -181,8 +178,6 @@ public class NavigatorCache
               navstring = nav.getNavigatorByName(EiNavigator.CP).toString();
             }
             pstmt.setString(intStmtIndex++, navstring);
-
-
 
             pstmt.executeUpdate();
 
