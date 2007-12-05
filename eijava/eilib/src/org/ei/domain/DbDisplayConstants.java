@@ -33,8 +33,8 @@ public class DbDisplayConstants
     			"<img id=\"cpxOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(1); return false;\"/>");
    
     
-    public static final DbDisplayConstants CBF =
-        new DbDisplayConstants(DatabaseConfig.CBF_MASK,
+    public static final DbDisplayConstants C84 =
+        new DbDisplayConstants(DatabaseConfig.C84_MASK,
                 "Ei Backfile",
                 "<a class=\"SmBlueTableText\">Ei Backfile</a></br><a class=\"SmBlackText\">Since its creation in 1884, the Engineering Index&#174 has...</a></br><img  src=\"/engresources/images/s.gif\" border=\"0\" width=\"1\" height=\"6\" />",
                 "<a class=\"SmBlueTableText\">Ei Backfile</a></br><a class=\"SmBlackText\">Since its creation in 1884, the Engineering Index&#174 has covered virtually every major engineering innovation from around the world. It serves as the historical record of virtually every major engineering innovation in the past century.  The Engineering Index Backfile can be searched via controlled vocabulary or free text.   All volume years can be searched simultaneously, eliminating the need to scan multiple volumes. Combined with the Compendex&#174 database, the Ei Backfile provides users with the most comprehensive overview of well over 120 years of engineering literature. </a></br><img  src=\"/engresources/images/s.gif\" border=\"0\" width=\"1\" height=\"6\" />",
@@ -162,6 +162,7 @@ public class DbDisplayConstants
     static
     {
         allConstants.put("cpx", CPX);
+        allConstants.put("c84", C84);
         allConstants.put("ins", INS);
         allConstants.put("nti", NTI);
         allConstants.put("geo", GEO);
