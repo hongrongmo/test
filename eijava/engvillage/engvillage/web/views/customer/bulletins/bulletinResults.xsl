@@ -85,7 +85,7 @@
   <xsl:template match="PAGE">
   <html>
     <head>
-	<title>EnCompass Bulletins</title>
+	<title>Engineering Village - EnCompass Bulletins</title>
 	<SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Bulletin.js"/>
 	<SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
     </head>
