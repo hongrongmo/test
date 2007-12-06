@@ -320,6 +320,48 @@ public class FastClient
         }
     }
 
+    public static boolean unitTestCounts(String args[])
+	throws Exception
+	{
+        BufferedReader in = null;
+        boolean testResult = false;
+
+        try
+        {
+            StringBuffer queryBuf = new StringBuffer();
+            int expectedResult = Integer.parseInt( args[0]);
+            if (args[1] != null)
+            {
+                queryBuf.append(args[1]);
+            }
+            FastClient client = new FastClient();
+            client.setBaseURL("http://rei11.bos3.fastsearch.net:15100");
+            client.setResultView("ei");
+            client.setOffSet(0);
+            client.setPageSize(25);
+            client.setQueryString(queryBuf.toString());
+            client.setDoCatCount(true);
+            client.setDoNavigators(true);
+            client.setPrimarySort("ausort");
+            client.setPrimarySortDirection("+");
+            client.search();
+            int countresult = client.getHitCount();
+            if(expectedResult == countresult)
+            {
+                testResult = true;
+            }
+        }
+        finally
+        {
+            if(in != null)
+            {
+                in.close();
+            }
+        }
+        return testResult;
+	}    
+
+    
     public static boolean unitTest(String args[])
     									throws Exception
     {
