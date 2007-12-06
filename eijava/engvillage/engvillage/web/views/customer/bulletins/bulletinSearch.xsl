@@ -73,7 +73,7 @@
   </head>
   <body bgcolor="#FFFFFF" topmargin="0" marginheight="0" marginwidth="0">
     <center>
-      <table border="0" width="100%" align="center" cellspacing="0" cellpadding="0">
+      <table border="0" cellspacing="0" cellpadding="0" width="100%">
         <tr>
           <td>
             <!-- INCLUDE THE HEADER -->
@@ -93,27 +93,27 @@
         </tr>
         <tr>
           <td>
-            <table border="0" width="99%" bgcolor="#C3C8D1" cellspacing="0" cellpadding="0" align="center">
+            <table border="0" bgcolor="#C3C8D1" cellspacing="0" cellpadding="0" width="99%">
               <tr>
                 <td width="1" bgcolor="#C3C8D1">
                   <img src="/engresources/images/s.gif"/>
                 </td>
                 <td width="100%">
-                  <table border="0" width="100%" cellspacing="0" cellpadding="0" bgcolor="#C3C8D1">
+                  <table border="0" bgcolor="#C3C8D1" cellspacing="0" cellpadding="0" width="100%">
                     <tr>
                       <td valign="top" height="20">
                         <img src="/engresources/images/s.gif" height="20"/>
                       </td>
                     </tr>
                   </table>
-                  <table border="0" width="100%" cellspacing="0" cellpadding="0" bgcolor="#F5F5F5">
+                  <table border="0" bgcolor="#F5F5F5" cellspacing="0" cellpadding="0" width="100%">
                     <tr>
                       <td valign="top" height="20">
                         <img src="/engresources/images/s.gif" height="20"/>
                       </td>
                     </tr>
                   </table>
-                  <table border="0" bgcolor="#F5F5F5"cellspacing="0" cellpadding="0" width="100%">
+                  <table border="0" bgcolor="#F5F5F5" cellspacing="0" cellpadding="0" width="100%">
                     <tr>
                       <td width="20">
                         <img src="/engresources/images/s.gif" width="20"/>
