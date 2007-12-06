@@ -72,8 +72,16 @@ public class DbDisplayConstants
         		"<img id=\"geoOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(8192); return false;\"/>",
 				"<img id=\"geoOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(8192); return false;\"/>");
 
-
     public static final DbDisplayConstants PAT =
+        new DbDisplayConstants(DatabaseConfig.EUP_MASK,
+                "EI Patents",
+                "<a class=\"SmBlueTableText\">EI Patents</a></br><a class=\"SmBlackText\">Ei Patents comprises millions of patents from the US...</a></br><img  src=\"/engresources/images/s.gif\" border=\"0\" width=\"1\" height=\"6\" />",
+                "<a class=\"SmBlueTableText\">EI Patents</a></br><a class=\"SmBlackText\">Ei Patents comprises millions of patents from the US Patent and Trademark Office and European Patent Office. This database can be cross-searched with other databases on Engineering Village, retrieving results both from patents and scientific literature, a significant advantage for both researchers and businesses. Ei Patents offers more reliable and analytical patent searching features than are supported by the generic free web.</a></br><img  src=\"/engresources/images/s.gif\" border=\"0\" width=\"1\" height=\"6\" />",
+                "<a class=\"SmBlueTableText\">EI Patents</a></br><a class=\"SmBlackText\">Ei Patents comprises millions of patents from the US Patent and Trademark Office and European Patent Office. This database can be cross-searched with other databases on Engineering Village, retrieving results both from patents and scientific literature, a significant advantage for both researchers and businesses. Ei Patents offers more reliable and analytical patent searching features than are supported by the generic free web.</a></br><img  src=\"/engresources/images/s.gif\" border=\"0\" width=\"1\" height=\"6\" />",
+        		"<img id=\"eupOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(16384); return false;\"/>",
+				"<img id=\"eupOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(16384); return false;\"/>");
+
+    public static final DbDisplayConstants EUP =
         new DbDisplayConstants(DatabaseConfig.EUP_MASK,
                 "EI Patents",
                 "<a class=\"SmBlueTableText\">EI Patents</a></br><a class=\"SmBlackText\">Ei Patents comprises millions of patents from the US...</a></br><img  src=\"/engresources/images/s.gif\" border=\"0\" width=\"1\" height=\"6\" />",
@@ -166,14 +174,14 @@ public class DbDisplayConstants
         allConstants.put("ins", INS);
         allConstants.put("nti", NTI);
         allConstants.put("geo", GEO);
-        allConstants.put("pat", PAT);
-        allConstants.put("upa", PAT);
+        allConstants.put("pat", EUP);
+        allConstants.put("upa", UPA);
         allConstants.put("pch", PCH);
         allConstants.put("cbn", CBN);
         allConstants.put("chm", CHM);
         allConstants.put("elt", ELT);
         allConstants.put("ept", EPT);
-        allConstants.put("eup", PAT);
+        allConstants.put("eup", EUP);
        // allConstants.put("ref", REF);
         allConstants.put("pag", PAG);
     }
