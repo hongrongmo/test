@@ -56,12 +56,25 @@ public class DatabaseDisplayHelper {
     {
         int i = 0;
         Iterator itr  = maskConversion.keySet().iterator();
+        boolean isPatentsSet = false;
         while(itr.hasNext())
         {
             String db = (String) itr.next();
-            if ((mask & Integer.parseInt(db)) == Integer.parseInt(db))
-            {
-                i++;
+            int dbmask = Integer.parseInt(db);
+            if ((mask & dbmask) == dbmask)
+            { 
+                if(dbmask != DatabaseConfig.EUP_MASK &&
+                   dbmask != DatabaseConfig.UPA_MASK) 
+                {
+                    i++;
+                } 
+                else if((dbmask  == DatabaseConfig.EUP_MASK || 
+                        dbmask == DatabaseConfig.UPA_MASK) && 
+                        !isPatentsSet)
+                {
+                    isPatentsSet = true;
+                    i++;
+                } 
             }
         }
         
@@ -99,13 +112,11 @@ public class DatabaseDisplayHelper {
 		{
 		    jsWriter(DatabaseConfig.CBN_MASK);
 		    html.append(htmlWriter(DatabaseConfig.CBN_MASK));
-
 		}
 		if((mask & DatabaseConfig.CHM_MASK) == DatabaseConfig.CHM_MASK)
 		{
 		    jsWriter(DatabaseConfig.CHM_MASK);
 		    html.append(htmlWriter(DatabaseConfig.CHM_MASK));
-
 		}
 				
 		if((mask & DatabaseConfig.CPX_MASK) == DatabaseConfig.CPX_MASK)
@@ -119,57 +130,60 @@ public class DatabaseDisplayHelper {
 		    jsWriter(DatabaseConfig.C84_MASK);
 		    html.append(htmlWriter(DatabaseConfig.C84_MASK));
 		}		
-		if(((mask & DatabaseConfig.EUP_MASK) == DatabaseConfig.EUP_MASK) )
-		{
-		    jsWriter(DatabaseConfig.EUP_MASK);
-		    html.append(htmlWriter(DatabaseConfig.EUP_MASK));
-		}
 		
 		if((mask & DatabaseConfig.ELT_MASK) == DatabaseConfig.ELT_MASK)
 		{
 		    jsWriter(DatabaseConfig.ELT_MASK);
 		    html.append(htmlWriter(DatabaseConfig.ELT_MASK));
-
 		}
-		if((mask & DatabaseConfig.EPT_MASK) == DatabaseConfig.EPT_MASK ||
-		        (mask & DatabaseConfig.UPA_MASK) == DatabaseConfig.UPA_MASK)
+				
+		if((mask & DatabaseConfig.EPT_MASK) == DatabaseConfig.EPT_MASK )
 		{
 		    jsWriter(DatabaseConfig.EPT_MASK);
 		    html.append(htmlWriter(DatabaseConfig.EPT_MASK));
-
+		}
+		
+		boolean isPatentsSet = false;
+		if((mask & DatabaseConfig.EUP_MASK) == DatabaseConfig.EUP_MASK )
+		{
+		    isPatentsSet = true;
+		    jsWriter(DatabaseConfig.EUP_MASK);
+		    html.append(htmlWriter(DatabaseConfig.EUP_MASK));
+		}
+		
+		if(((mask & DatabaseConfig.UPA_MASK) == DatabaseConfig.UPA_MASK) && 
+		        !isPatentsSet)
+		{
+		    jsWriter(DatabaseConfig.UPA_MASK);
+		    html.append(htmlWriter(DatabaseConfig.UPA_MASK));
 		}
 		
 		if((mask & DatabaseConfig.GEO_MASK) == DatabaseConfig.GEO_MASK)
 		{
 		    jsWriter(DatabaseConfig.GEO_MASK);
 		    html.append(htmlWriter(DatabaseConfig.GEO_MASK));
-
 		}
 		
 		if((mask & DatabaseConfig.INS_MASK) == DatabaseConfig.INS_MASK)
 		{
 		    jsWriter(DatabaseConfig.INS_MASK);
 		    html.append(htmlWriter(DatabaseConfig.INS_MASK));
-
 		}
 		if((mask & DatabaseConfig.NTI_MASK) == DatabaseConfig.NTI_MASK)
 		{
 		    jsWriter(DatabaseConfig.NTI_MASK);
 		    html.append(htmlWriter(DatabaseConfig.NTI_MASK));
-
 		}
 		if((mask & DatabaseConfig.PCH_MASK) == DatabaseConfig.PCH_MASK)
 		{
 		    jsWriter(DatabaseConfig.PCH_MASK);
 		    html.append(htmlWriter(DatabaseConfig.PCH_MASK));
-
 		}
 
 		if((mask & DatabaseConfig.PAG_MASK) == DatabaseConfig.PAG_MASK)
 		{
 		    jsWriter(DatabaseConfig.PAG_MASK);
 		    html.append(htmlWriter(DatabaseConfig.PAG_MASK));
-
 		}
 
 		jsInitVars.append("}");
