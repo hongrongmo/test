@@ -30,10 +30,6 @@ public class URLPlucker {
                 " # match the hostname part                       \n"+
                 " (                                               \n"+
                 " (?: ftp|https? ): // [-\\w]+(?: \\.\\w[-\\w]*)+ \n"+
-                " |                                               \n"+
-                " " + Hostname + "                                \n"+
-                " |                                               \n"+
-                " (?: \\w[-.\\w]*)@" + Hostname + "               \n"+
                 " )                                               \n"+
                 " # allow optional port                           \n"+
                 " ( : \\d+ )?                                     \n"+
