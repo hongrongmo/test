@@ -51,6 +51,8 @@ public class EptDatabase extends Database {
     	searchfield.put("CVMP", "Y");
     	searchfield.put("CVN", "Y");
     	searchfield.put("CVP", "Y");
+    	searchfield.put("DPID", "Y");
+		searchfield.put("RO", "Y");
     	searchfield.put("DG", "Y");
     	searchfield.put("FL", "Y");
     	searchfield.put("IP", "Y");
@@ -140,8 +142,16 @@ public class EptDatabase extends Database {
         return EptLinkingStrategy;
     }
 
-    public boolean hasField(SearchField searchField) {
-        return searchfield.containsKey(searchField.getID());
-    }
-
+	public boolean hasField(SearchField searchField,
+			int mask)
+	{
+		if(searchfield.containsKey(searchField.getID()))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
 }
