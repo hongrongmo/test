@@ -46,7 +46,7 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
 
     private static final Key[] CITATION_KEYS = { Keys.DOCID,Keys.PATENT_INFORMATION,Keys.PRIORITY_INFORMATION, Keys.TITLE, Keys.AUTHORS, Keys.PATASSIGN, Keys.AUTH_CODE, Keys.UPAT_PUBDATE, Keys.PROVIDER, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT, Keys.LANGUAGE, Keys.NO_SO };
     private static final Key[] ABSTRACT_KEYS =
-        { Keys.DOCID, Keys.PATENT_NUMBER, Keys.DERWENT_NO, Keys.TITLE, Keys.AUTHORS, Keys.PATEPTASSIGN, Keys.PUBLICATION_YEAR, Keys.UPAT_PUBDATE, Keys.LANGUAGE, Keys.ABSTRACT, Keys.PATAPP_INFO,Keys.PATENT_INFORMATION, Keys.PRIORITY_INFORMATION, Keys.CAS_REGISTRY_CODES, Keys.INTERNATCL_CODE, EPT_MAJOR_TERMS, EPT_CONTROLLED_TERMS, Keys.NO_SO, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT, Keys.PROVIDER };
+        { Keys.DOCID, Keys.PATENT_NUMBER, Keys.DERWENT_NO, Keys.TITLE, Keys.AUTHORS, Keys.PATEPTASSIGN, Keys.PUBLICATION_YEAR, Keys.UPAT_PUBDATE, Keys.LANGUAGE, Keys.ABSTRACT, Keys.PATAPP_INFO,Keys.PATENT_INFORMATION, Keys.PRIORITY_INFORMATION, Keys.CAS_REGISTRY_CODES, Keys.INTERNATCL_CODE, EPT_MAJOR_TERMS, EPT_CONTROLLED_TERMS,Keys.UNCONTROLLED_TERMS, Keys.NO_SO, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT, Keys.PROVIDER };
     private static final Key[] LINKED_TERM_KEYS = { Keys.LINKED_TERMS };
 
 
@@ -73,7 +73,7 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
             Keys.CAS_REGISTRY_CODES,
             EPT_MAJOR_TERMS,
             EPT_CONTROLLED_TERMS,
-           // Keys.UNCONTROLLED_TERMS,
+            Keys.UNCONTROLLED_TERMS,
             Keys.INDEXING_TEMPLATE,
             Keys.MANUAL_LINKED_TERMS,
             Keys.LINKED_TERMS,
@@ -125,8 +125,8 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
         *  @ return List --list of EIDoc's
         *  @ exception DocumentBuilderException
         */
-    public List buildPage(List listOfDocIDs, String dataFormat)
-      throws DocumentBuilderException
+    public List buildPage(List listOfDocIDs, String dataFormat) 
+    	throws DocumentBuilderException 
     {
         List l = null;
         try {
@@ -149,6 +149,7 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
             {
                 l = loadXMLCitations(listOfDocIDs);
             }
+
         }
         catch (Exception e) {
             throw new DocumentBuilderException(e);
@@ -190,7 +191,6 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                 if (rset.getString("TI") != null) {
                     ht.put(Keys.TITLE, new XMLWrapper(Keys.TITLE, StringUtil.substituteChars(rset.getString("TI"))));
                 }
-
 
                 //Inventors
                 if ((rset.getString("PAT_IN") != null) && (!rset.getString("PAT_IN").equals(""))) {
@@ -301,6 +301,7 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
 
         return (String[]) assignees.toArray(new String[assignees.size()]);
     }
+    
     public String replaceSemiWithComma(String s) {
         byte[] sbytes = s.getBytes();
         char[] chars = new char[sbytes.length];
@@ -389,8 +390,8 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                     authCD = rset.getString("PC");
                 }
 
-                if (lstAsg != null && lstInv != null)
-                    lstAsg = AssigneeFilter.filterInventors(lstInv, lstAsg, true);
+//                if (lstAsg != null && lstInv != null)
+//                    lstAsg = AssigneeFilter.filterInventors(lstInv, lstAsg, true);
 
                 // IN Inventor
                 if (lstInv != null && lstInv.size() > 0) {
@@ -401,8 +402,8 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                 if (lstAsg != null && lstAsg.size() > 0) {
                     ht.put(Keys.PATEPTASSIGN, new XMLMultiWrapper(Keys.PATEPTASSIGN, setAssignees(lstAsg)));
                 }
-
-
+                
+               
                 ht.put(Keys.NO_SO, new XMLWrapper(Keys.NO_SO, "NO_SO"));
 
                 if (rset.getString("PD") != null) {
@@ -443,11 +444,11 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                 }
 
                 //add patent info
-                if (rset.getString("PAT") != null)
+                if (rset.getString("PAT") != null) 
                 {
                     ht.put(Keys.PATENT_INFORMATION, new XMLWrapper(Keys.PATENT_INFORMATION, formatPriorityInfo(removeSemiColon(rset.getString("PAT")))));
                 }
-
+                
                 //add pat priority info
                 if (rset.getString("PRI") != null) {
                     ht.put(Keys.PRIORITY_INFORMATION, new XMLWrapper(Keys.PRIORITY_INFORMATION, removeSemiColon(formatPriorityInfo(rset.getString("PRI")), ";","|")));
@@ -514,7 +515,12 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                     ht.put(EPT_MAJOR_TERMS, new XMLMultiWrapper2(EPT_MAJOR_TERMS, setCVS(StringUtil.substituteChars(formatCV(majorTerms.toString())))));
 
                 }
-
+                
+                //UT
+                if (rset.getString("UT") != null) {
+                    ht.put(Keys.UNCONTROLLED_TERMS, new XMLMultiWrapper(Keys.UNCONTROLLED_TERMS, setElementData(StringUtil.substituteChars(removePoundSign(rset.getString("UT"))))));
+                }
+                               
                 EIDoc eiDoc = new EIDoc(did, ht, Abstract.ABSTRACT_FORMAT);
                 eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
                 eiDoc.exportLabels(true);
@@ -532,6 +538,7 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
 
         return list;
     }
+    
     public static String removePoundSign(String ct) {
 
         Perl5Util perl = new Perl5Util();
@@ -555,7 +562,7 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
             if (!token.equals(""))
                 pi.append(token).append(";");
         }
-
+        
         priorityInfo = perl.substitute("s/;$//g", priorityInfo);
 
         return priorityInfo;
@@ -763,8 +770,11 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                     authCD = rset.getString("PC");
                 }
 
-                if (lstAsg != null && lstInv != null)
-                    lstAsg = AssigneeFilter.filterInventors(lstInv, lstAsg, true);
+//                if (lstAsg != null && lstInv != null)
+//                {
+//                    lstAsg = AssigneeFilter.filterInventors(lstInv, lstAsg, true);
+//                }
+                    
 
                 // IN Inventor
 
@@ -775,7 +785,7 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                 }
                 //AF- CS
 
-                if (lstAsg != null && lstAsg.size() > 0)
+                if (lstAsg != null && lstAsg.size() > 0) 
                 {
                     ht.put(new Key(Keys.PATASSIGN,"Patent assignee"), new XMLMultiWrapper(new Key(Keys.PATASSIGN,"Patent assignee"), setAssignees(lstAsg)));
                 }
@@ -784,10 +794,14 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
 
                     if (rset.getClob("LTM") != null) {
 
-                        String ltm = StringUtil.getStringFromClob(rset.getClob("LTM"));
+                        String ltm = StringUtil.getLTStringFromClob(rset.getClob("LTM"));
 
                         if (!ltm.equalsIgnoreCase("QQ"))
-                            ht.put(Keys.MANUAL_LINKED_TERMS, new LinkedTerms(Keys.MANUAL_LINKED_TERMS, getLinkedTerms(StringUtil.substituteChars(ltm), Keys.LINKED_SUB_TERM)));
+                        {
+                          //  ht.put(Keys.MANUAL_LINKED_TERMS, new LinkedTerms(Keys.MANUAL_LINKED_TERMS, getLinkedTerms(StringUtil.substituteChars(ltm), Keys.LINKED_SUB_TERM)));
+                            ht.put(Keys.MANUAL_LINKED_TERMS, 
+                                    new XMLWrapper(Keys.MANUAL_LINKED_TERMS, StringUtil.substituteChars(ltm)));
+                        }
 
                     }
                 }
@@ -867,6 +881,13 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                     ht.put(new Key(Keys.INTERNATCL_CODE_EPT,"Int. patent classification"),  new Classifications(new Key(Keys.INTERNATCL_CODE_EPT,"Int. patent classification"), getIPCClssificationsDT(arrIpcs)));
 
                 }
+                
+                //              IC
+//                if (rset.getString("IC") != null) {
+//                    String[] arrIpcs = IPCClassNormalizer.trimLeadingZeroFromSubClass(rset.getString("IC"));
+//                    ht.put(Keys.INTERNATCL_CODE, new Classifications(Keys.INTERNATCL_CODE, getIPCClssifications(arrIpcs)));
+//
+//                }
 
                 //APPLICATION INFO
                 if ((rset.getString("LL") != null)) {
@@ -1002,8 +1023,8 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                     ht.put(Keys.UNCONTROLLED_TERMS, new XMLMultiWrapper(Keys.UNCONTROLLED_TERMS, setElementData(StringUtil.substituteChars(removePoundSign(rset.getString("UT"))))));
                 }
                 //ATM
+
                 if (rset.getString("ATM") != null) {
-                    System.out.println("ATM::"+rset.getString("ATM"));
                     StringBuffer tempterms = new StringBuffer(rset.getString("ATM"));
                     if (rset.getString("ATM1") != null) {
                         tempterms.append(rset.getString("ATM1"));
@@ -1011,19 +1032,23 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
 
                     ht.put(Keys.INDEXING_TEMPLATE, new XMLWrapper(Keys.INDEXING_TEMPLATE, StringUtil.substituteChars(replaceBar(formatATM(tempterms.toString())))));
 
-                    if (rset.getClob("LT") != null) {
+                    if (rset.getClob("LT") != null) 
+                    {
                         String label = getLTLink();
-                        ht.put(LINKED_TERMS_HOLDER, new XMLWrapper(LINKED_TERMS_HOLDER, label));
-
+                        ht.put(LINKED_TERMS_HOLDER, new XMLWrapper(LINKED_TERMS_HOLDER, label));                  
                     }
                 }
-                else {
-                    if (rset.getClob("LT") != null) {
-                        String linkedTerms = StringUtil.replaceNullWithEmptyString(StringUtil.getStringFromClob(rset.getClob("LT")));
+                else 
+                {                   
+                    if (rset.getClob("LT") != null) 
+                    {
+                        String linkedTerms = StringUtil.replaceNullWithEmptyString(StringUtil.getLTStringFromClob(rset.getClob("LT")));
 
                         if (!linkedTerms.equals("") && !linkedTerms.equalsIgnoreCase("QQ"))
-                            ht.put(Keys.LINKED_TERMS, new LinkedTerms(Keys.LINKED_TERMS, getLinkedTerms(StringUtil.substituteChars(CVSTermBuilder.formatCT(linkedTerms)), Keys.LINKED_SUB_TERM)));
-
+                        {
+                            ht.put(Keys.LINKED_TERMS, new XMLWrapper(Keys.LINKED_TERMS, 
+                                    StringUtil.substituteChars(removePoundSign(linkedTerms))));                            
+                        }                     
                     }
                 }
 
@@ -1143,12 +1168,10 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
 
                 list.add(k);
             }
-
         }
-
         return (KeyValuePair[]) list.toArray(new KeyValuePair[list.size()]);
-
     }
+    
     public String formatDerwentNo(String accession) {
 
         if (accession == null)
@@ -1198,31 +1221,26 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
             stmt = con.createStatement();
             rset = stmt.executeQuery(queryLinkedTerms + INString);
             String results = null;
-System.out.println(" -- doc builder 1");
             DatabaseConfig dconfig = DatabaseConfig.getInstance();
             CVSTermBuilder termBuilder = new CVSTermBuilder();
             if (rset.next()) {
-            	System.out.println(" -- doc builder 2");
                 // Common Fields
                 ElementDataMap ht = new ElementDataMap();
                 // Common Fields
                 String mid = rset.getString("M_ID");
 
                 DocID did = new DocID(mid, dconfig.getDatabase("ept"));
-System.out.println(" -- doc builder 3");
+               
                 if (rset.getClob("LT") != null)
                 {
-System.out.println(" -- doc builder 3 - 1");
-                   String linkedTerms = StringUtil.getStringFromClob(rset.getClob("LT"));
-System.out.println(" -- doc builder  3- 2");
-                   results =  termBuilder.formatCT(StringUtil.replaceNonAscii(linkedTerms));
-System.out.println(" -- doc builder 4");
-                   if (results != null && !results.equalsIgnoreCase("QQ"))
+                   String linkedTerms = termBuilder.formatCT(StringUtil.replaceNonAscii(StringUtil.getLTStingFromClob(rset.getClob("LT"))));
+                   
+                   if (linkedTerms != null && !linkedTerms.equalsIgnoreCase("QQ"))
                    {
-                       ht.put(Keys.LINKED_TERMS, new XMLWrapper(Keys.LINKED_TERMS, results));
+                       ht.put(Keys.LINKED_TERMS, new XMLWrapper(Keys.LINKED_TERMS, linkedTerms));
                    }
                 }
-System.out.println(" -- doc builder 5");
+                         
                 EIDoc eiDoc = new EIDoc(did, ht, LinkedTermDetail.LINKEDTERM_FORMAT);
                 eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
                 eiDoc.exportLabels(false);
@@ -1230,14 +1248,12 @@ System.out.println(" -- doc builder 5");
                 list.add(eiDoc);
                 count++;
             }
-System.out.println(" -- doc builder 6");
         }
         finally {
             close(rset);
             close(stmt);
             close(con, broker);
         }
-System.out.println(" -- doc builder 7");
         return list;
     }
 
@@ -1305,32 +1321,30 @@ System.out.println(" -- doc builder 7");
                     authCD = rset.getString("PC");
                 }
 
-                if (lstAsg != null && lstInv != null)
-                    lstAsg = AssigneeFilter.filterInventors(lstInv, lstAsg, true);
+//                if (lstAsg != null && lstInv != null)
+//                    lstAsg = AssigneeFilter.filterInventors(lstInv, lstAsg, true);
 
                 // IN Inventor
                 if (lstInv != null && lstInv.size() > 0) {
                     Contributors authors = new Contributors(Keys.AUTHORS, setContributors(lstInv, Keys.AUTHORS));
                     ht.put(Keys.AUTHORS, authors);
-
                 }
                 //AF- CS
                 if (lstAsg != null && lstAsg.size() > 0) {
-                    ht.put(Keys.PATASSIGN, new XMLMultiWrapper(Keys.PATASSIGN, setAssignees(lstAsg)));
-
+                    ht.put(Keys.PATEPTASSIGN, new XMLMultiWrapper(Keys.PATEPTASSIGN, setAssignees(lstAsg)));
                 }
 
                 if (rset.getString("PC") != null) {
                     ht.put(Keys.AUTH_CODE, new XMLWrapper(Keys.AUTH_CODE, rset.getString("PC")));
 
                 }
-
+                
                 //add patent info
-                if (rset.getString("PAT") != null)
+                if (rset.getString("PAT") != null) 
                 {
                     ht.put(Keys.PATENT_INFORMATION, new XMLWrapper(Keys.PATENT_INFORMATION, formatPriorityInfo(removeSemiColon(rset.getString("PAT")))));
                 }
-
+                
                 //PY
 
                 if (rset.getString("PD") != null) {
@@ -1493,10 +1507,10 @@ System.out.println(" -- doc builder 7");
 
         return result;
     }
-
-    public String removeSemiColon(String str, String ch, String rplCh)
+    
+    public String removeSemiColon(String str, String ch, String rplCh) 
     {
-
+        
 
         String result = perl.substitute("s/"+ch+"/"+rplCh+"/g", str);
 
@@ -1639,7 +1653,7 @@ System.out.println(" -- doc builder 7");
             e.printStackTrace();
         }
     }
-
+    
     private List loadXMLCitations(List listOfDocIDs) throws Exception {
         Hashtable oidTable = getDocIDTable(listOfDocIDs);
 
