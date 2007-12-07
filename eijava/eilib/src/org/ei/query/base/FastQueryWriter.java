@@ -139,7 +139,7 @@ public class FastQueryWriter
         mappings.setProperty("bks", "co");
         mappings.setProperty("bkt", "st");
         mappings.setProperty("ic", "pk");
-        mappings.setProperty("ro", "puk");
+        mappings.setProperty("ro", "puc");
 
 
         ///EnCompass fields
