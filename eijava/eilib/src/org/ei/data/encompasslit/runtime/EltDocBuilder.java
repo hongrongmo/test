@@ -31,7 +31,7 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
     private static final Key[] RIS_KEYS = { Keys.RIS_TY, Keys.RIS_LA, Keys.RIS_TI, Keys.RIS_T3, Keys.RIS_VL, Keys.RIS_IS, Keys.RIS_SP, Keys.RIS_AUS, RIS_AD, Keys.RIS_EDS, Keys.RIS_PY, Keys.RIS_U1, Keys.RIS_N2, Keys.RIS_N1, Keys.RIS_AD, Keys.RIS_CVS };
     private static final Key[] LINKED_TERM_KEYS = { Keys.LINKED_TERMS };
     private static final Key[] CITATION_KEYS = { Keys.DOCID, Keys.TITLE, Keys.AUTHORS, Keys.SOURCE, Keys.PUBLICATION_YEAR, Keys.PUBLISHER, Keys.ISSN, Keys.LANGUAGE, Keys.NO_SO, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT };
-    private static final Key[] ABSTRACT_KEYS = { Keys.TITLE, Keys.AUTHORS, Keys.LANGUAGE, Keys.ISSN, Keys.PUBLISHER, Keys.ABSTRACT, ELT_MAJOR_TERMS, ELT_CONTROLLED_TERMS, Keys.CAS_REGISTRY_CODES, Keys.SOURCE, Keys.PROVIDER, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT, Keys.DOCID };
+    private static final Key[] ABSTRACT_KEYS = { Keys.TITLE, Keys.AUTHORS, Keys.LANGUAGE, Keys.ISSN, Keys.PUBLISHER, Keys.ABSTRACT, ELT_MAJOR_TERMS, ELT_CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS,  Keys.CAS_REGISTRY_CODES, Keys.SOURCE, Keys.PROVIDER, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT, Keys.DOCID };
     private static final Key[] DETAILED_KEYS =
         {
             Keys.ACCESSION_NUMBER,
@@ -128,7 +128,7 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
 
     private static String queryCitation = "select M_ID,DOI,CORG,TIE,TIF,PUB,PYR,AUT,AAF,STI,VLN,ISN,PAG,SPD,LNA,LOAD_NUMBER,SO,CF,ISSN,SECSTI,SECVLN,SECISN,SECPYR,CNFNAM,CNFSTD,CNFEND,CNFCTY,SPD,SO,SECIST,DT,STY,SEC,STA,SAN,PUB from elt_master where M_ID IN ";
 
-    private static String queryAbstracts = "select M_ID,DOI,CORG,TIE,TIF,PUB,PYR,AUT,AAF,STI,VLN,ISN,PAG,SPD,CNFNAM,ISBN,ISSN,LNA,CNFNAM,CNFSTD,CNFEND,CNFVEN,CNFCTY,CNFCNY,SECSTI,SECVLN,SECISN,SECPYR,APICT,SO,ABS,SEC,CF,APICRN,SECIST,OAB,APICC,STA,SAN,LOAD_NUMBER,CVS,CVM,CVA,CVP,CVN,CVMA,CVMP,CVMN,APICRN from elt_master where M_ID IN ";
+    private static String queryAbstracts = "select M_ID,DOI,CORG,TIE,TIF,PUB,PYR,AUT,AAF,STI,VLN,ISN,PAG,SPD,CNFNAM,ISBN,ISSN,LNA,CNFNAM,CNFSTD,CNFEND,CNFVEN,CNFCTY,CNFCNY,SECSTI,SECVLN,SECISN,SECPYR,APICT,SO,ABS,SEC,CF,APICRN,SECIST,OAB,APICC,STA,SAN,LOAD_NUMBER,CVS,CVM,CVA,CVP,CVN,CVMA,CVMP,CVMN,APICRN,APIUT from elt_master where M_ID IN ";
 
     // jam 12/30/2002
     // New Index - field change from AN to EX
@@ -644,6 +644,12 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
 					{
 						ht.put(ELT_MAJOR_TERMS, new XMLMultiWrapper2(ELT_MAJOR_TERMS,setCVS(StringUtil.substituteChars(majorTerms.toString()))));
 					}
+					
+		            //ATM
+	                if (rset.getString("APIUT") != null) 
+	                {
+	                   ht.put(Keys.UNCONTROLLED_TERMS, new XMLMultiWrapper(Keys.UNCONTROLLED_TERMS, setElementData(StringUtil.substituteChars(removePoundSign(rset.getString("APIUT"))))));
+	                }
 
                 }
 
@@ -881,7 +887,8 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
             rset = stmt.executeQuery(queryDetailed + INString);
             DatabaseConfig dconfig = DatabaseConfig.getInstance();
 
-            while (rset.next()) {
+            while (rset.next()) 
+            {
 
                 ElementDataMap ht = new ElementDataMap();
                 // Common Fields
@@ -932,11 +939,19 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
                 // TS 02/10/03  the following elements added to ht for xml document mapping
                 if (rset.getString("APIATM") != null) {
 
-                    if (rset.getString("APILTM") != null) {
-
+                    if (rset.getString("APILTM") != null) 
+                    {
                         String ltm = rset.getString("APILTM");
+                        
                         if (!ltm.equalsIgnoreCase("QQ"))
-                            ht.put(Keys.MANUAL_LINKED_TERMS, new LinkedTerms(Keys.MANUAL_LINKED_TERMS, getLinkedTerms(StringUtil.substituteChars(ltm), Keys.LINKED_SUB_TERM)));
+                        {
+                            ht.put(Keys.MANUAL_LINKED_TERMS, 
+                                    new XMLWrapper(Keys.MANUAL_LINKED_TERMS, StringUtil.substituteChars(ltm)));
+                        }
+                        
+                        
+          //              if (!ltm.equalsIgnoreCase("QQ"))
+          //                  ht.put(Keys.MANUAL_LINKED_TERMS, new LinkedTerms(Keys.MANUAL_LINKED_TERMS, getLinkedTerms(StringUtil.substituteChars(ltm), Keys.LINKED_SUB_TERM)));
 
                     }
                 } // AN
@@ -980,11 +995,11 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
 //                    ht.put(Keys.CORRESPONDING_AUTHORS,authors);
 //                }
 
-              if (rset.getString("CPRS") != null)
-              {
+                if (rset.getString("CPRS") != null)
+                {
 
-                  ht.put(Keys.CORRESPONDING_AUTHORS,new XMLWrapper(Keys.CORRESPONDING_AUTHORS, StringUtil.substituteChars(rset.getString("CPRS"))));
-              }
+                    ht.put(Keys.CORRESPONDING_AUTHORS,new XMLWrapper(Keys.CORRESPONDING_AUTHORS, StringUtil.substituteChars(rset.getString("CPRS"))));
+                }
 
                 if (rset.getString("CORG") != null) {
                     ht.put(Keys.CORRESPONDING_AUTHORS_AFF, new XMLWrapper(Keys.CORRESPONDING_AUTHORS_AFF, StringUtil.substituteChars(rset.getString("CORG"))));
@@ -1186,20 +1201,18 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
 					}
                 }
 
-//                //ATM
-//                if (rset.getString("APIUT") != null) {
-//                    ht.put(Keys.UNCONTROLLED_TERMS, new XMLMultiWrapper(Keys.UNCONTROLLED_TERMS, setElementData(StringUtil.substituteChars(removePoundSign(rset.getString("APIUT"))))));
-//                }
-
-                // use free language fields for qualifiers fasets
-
-
+               //ATM
+                if (rset.getString("APIUT") != null) 
+                {
+                   ht.put(Keys.UNCONTROLLED_TERMS, new XMLMultiWrapper(Keys.UNCONTROLLED_TERMS, setElementData(StringUtil.substituteChars(removePoundSign(rset.getString("APIUT"))))));
+                }
 
                 if (rset.getString("APICC") != null) {
                     ht.put(Keys.CLASS_CODES_MULTI, new XMLMultiWrapper(ELT_CLASS_CODES, setElementData(StringUtil.substituteChars(rset.getString("APICC")))));
                 }
 
-                if (rset.getString("APIATM") != null) {
+                if (rset.getString("APIATM") != null) 
+                {
                     ht.put(Keys.INDEXING_TEMPLATE, new XMLWrapper(Keys.INDEXING_TEMPLATE, replaceBar(formatATM(StringUtil.substituteChars(rset.getString("APIATM"))))));
 
                     if (rset.getClob("APILT") != null) {
@@ -1207,15 +1220,18 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
                         ht.put(Keys.LINKED_TERMS_HOLDER, new XMLWrapper(Keys.LINKED_TERMS_HOLDER, LT_MSG));
                     }
                 }
-                else {
-                    String linkedTerms = StringUtil.getStringFromClob(rset.getClob("APILT"));
+                else 
+                {
+                    String linkedTerms = StringUtil.replaceNullWithEmptyString(StringUtil.getLTStringFromClob(rset.getClob("APILT")));
 
-                    if (rset.getClob("APILT") != null) {
-                        if (!linkedTerms.equals("") && !linkedTerms.equalsIgnoreCase("QQ"))
-                            ht.put(Keys.LINKED_TERMS, new LinkedTerms(Keys.LINKED_TERMS, getLinkedTerms(StringUtil.substituteChars(removePoundSign(linkedTerms)), Keys.LINKED_SUB_TERM)));
-
-                    }
+                    if (!linkedTerms.equals("") && !linkedTerms.equalsIgnoreCase("QQ"))
+                    {
+                        ht.put(Keys.LINKED_TERMS, new XMLWrapper(Keys.LINKED_TERMS, 
+                                StringUtil.substituteChars(removePoundSign(linkedTerms))));                            
+                    }                     
+              
                 }
+                                
 
                 EIDoc eiDoc = new EIDoc(did, ht, Detail.FULLDOC_FORMAT);
                 eiDoc.exportLabels(true);
@@ -1374,9 +1390,8 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
         ResultSet rset = null;
         ConnectionBroker broker = null;
 
-        try {
-
-        	System.out.println("loadLinkedTerms");
+        try 
+        {
             broker = ConnectionBroker.getInstance();
             con = broker.getConnection(DatabaseConfig.SEARCH_POOL);
             stmt = con.createStatement();
@@ -1394,28 +1409,15 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
 
                 DocID did = new DocID(mid, dconfig.getDatabase("elt"));
 
-                if (rset.getClob("APILT") != null) {
-                    String linkedTerms = StringUtil.getStringFromClob(rset.getClob("APILT"));
-
-//                    if (!linkedTerms.equals("") && !linkedTerms.equalsIgnoreCase("QQ"))
-//                    {
-//                    	ht.put(EIDoc.LINKED_TERMS, new LinkedTerms(Keys.LINKED_TERMS,termBuilder.formatCT(StringUtil.replaceNonAscii(linkedTerms), Keys.LINKED_SUB_TERM)));
-//                    }
-
-                    results =  termBuilder.formatCT(StringUtil.replaceNonAscii(linkedTerms));
-                   if (results != null && !results.equalsIgnoreCase("QQ"))
-                   {
-       //                 ht.put(Keys.LINKED_TERMS, new LinkedTerms(Keys.LINKED_TERMS, getLinkedTerms(StringUtil.substituteChars(removePoundSign(linkedTerms)), Keys.LINKED_SUB_TERM)));
-                       ht.put(Keys.LINKED_TERMS, new XMLWrapper(Keys.LINKED_TERMS, results));
-                	  // ht.put(Keys.LINKED_TERMS,results);
-                   }
-
-
+                if (rset.getClob("APILT") != null) 
+                {
+                    String linkedTerms = termBuilder.formatCT(StringUtil.replaceNonAscii(StringUtil.getLTStringFromClob(rset.getClob("APILT"))));
+                    
+                    if (linkedTerms != null && !linkedTerms.equalsIgnoreCase("QQ"))
+                    {
+                        ht.put(Keys.LINKED_TERMS, new XMLWrapper(Keys.LINKED_TERMS, linkedTerms));
+                    }
                 }
-
-
-                System.out.println("--loadLinkedTerms results::"+results);
-
 
                 EIDoc eiDoc = new EIDoc(did, ht, LinkedTermDetail.LINKEDTERM_FORMAT);
                 eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
