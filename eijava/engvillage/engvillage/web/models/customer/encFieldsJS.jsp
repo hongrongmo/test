@@ -200,7 +200,7 @@
 			varDiv.style.border = "black 0px solid";	
 			varDiv.style.left = gleft + "px";
 			varDiv.style.top = gtop + "px";		
-			varTable.style.width = "560px"; 
+			varTable.style.width = "360px"; 
 	
 	}
        
