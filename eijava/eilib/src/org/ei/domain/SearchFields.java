@@ -71,6 +71,8 @@ public class SearchFields
 	public static SearchField IP = new SearchField("IP", "Int.patent classification");
 	public static SearchField CR = new SearchField("CR", "CAS registry number");
 	public static SearchField RO = new SearchField("RO", "Role");
+	public static SearchField DPID = new SearchField("DPID", "Derwent IPC");
+
 
 
 
@@ -78,7 +80,7 @@ public class SearchFields
 
 
 	public static final SearchField[] ALL_FIELDS = {
-		AB , AF , AG , AI , ALL , AN , AU , AV , BN , CC , CF , CI , CL , CN , CO , CR  , CT , CV , CVA , CVM , CVMA , CVMN , CVMP , CVN , CVP , DI , DT , FL , IP , KY , LA , LT , MH , MI , NI , NT , OC , PA , PAC , PAM , PAN , PC  , PCI , PCO , PD  , PE  , PEC , PFD , PI  , PID , PM  , PN  , PRN , PU , PUC , RGI , RN  , RO , SN , SO  , ST  , TI  , TR  , YR};
+		AB , AF , AG , AI , ALL , AN , AU , AV , BN , CC , CF , CI , CL , CN , CO , CR  , CT , CV , CVA , CVM , CVMA , CVMN , CVMP , CVN , CVP , DI , DT , FL , IP , KY , LA , LT , MH , MI , NI , NT , OC , PA , PAC , PAM , PAN , PC  , PCI , PCO , PD  , PE  , PEC , PFD , PI  , PID , DPID, PM  , PN  , PRN , PU , PUC , RGI , RN  , RO , SN , SO  , ST  , TI  , TR  , YR};
 
 	/*
 	* This method is used to an array of CustomeSearchFields based on
@@ -106,6 +108,8 @@ public class SearchFields
 			ArrayList databaseList = new ArrayList();
 			for(int c=0; c<databases.length; c++)
 			{
+				System.out.println("Database:"+databases[c].getID());
+
 				if(databases[c].hasField(sf, userMaskMax))
 				{
 					databaseList.add(databases[c]);
