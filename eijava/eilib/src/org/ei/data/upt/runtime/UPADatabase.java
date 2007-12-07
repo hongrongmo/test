@@ -28,6 +28,7 @@ public class UPADatabase extends Database {
 		searchfield.put("PRN", "Y");
 		searchfield.put("PUC", "Y");
 		searchfield.put("TI", "Y");
+		searchfield.put("YR", "Y");
 		searchfield.put("PAC", "Y");
 		searchfield.put("PAM", "Y");
 		searchfield.put("PAN", "Y");

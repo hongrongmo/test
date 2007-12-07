@@ -29,6 +29,7 @@ public class EUPDatabase extends Database {
 		searchfield.put("PID", "Y");
 		searchfield.put("PRN", "Y");
 		searchfield.put("TI", "Y");
+		searchfield.put("YR", "Y");
 		searchfield.put("PEC", "Y");
 		searchfield.put("PAC", "Y");
 		searchfield.put("PAM", "Y");
