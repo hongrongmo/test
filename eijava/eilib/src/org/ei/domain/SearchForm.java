@@ -58,8 +58,7 @@ public class SearchForm {
 
         // All fields
         // do not show all fields if Database is only PAG or CBF
-        if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
-           (selecteddbMask & DatabaseConfig.CBF_MASK) != DatabaseConfig.CBF_MASK)
+        if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK)
         {
              sectiontype.put("NO-LIMIT", "All fields");
         }
@@ -69,8 +68,7 @@ public class SearchForm {
         // do not show KY as S/T/A if DB is only PAG
         if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
            (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
-           (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
-           (selecteddbMask & DatabaseConfig.CBF_MASK) != DatabaseConfig.CBF_MASK)
+           (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK)
         {
              sectiontype.put("KY", "Subject/Title/Abstract");
         }
@@ -88,15 +86,13 @@ public class SearchForm {
         }
 
         // AB
-        if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
-           (selecteddbMask & DatabaseConfig.CBF_MASK) != DatabaseConfig.CBF_MASK)
+        if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK)
         {
              sectiontype.put("AB", "Abstract");
         }
 
         //AU
-        if((selecteddbMask & DatabaseConfig.CBN_MASK)!= DatabaseConfig.CBN_MASK &&
-           (selecteddbMask & DatabaseConfig.CBF_MASK)!= DatabaseConfig.CBF_MASK)
+        if((selecteddbMask & DatabaseConfig.CBN_MASK)!= DatabaseConfig.CBN_MASK)
         {
 			if((selecteddbMask & DatabaseConfig.UPA_MASK) != DatabaseConfig.UPA_MASK &&
 			   (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
@@ -122,7 +118,6 @@ public class SearchForm {
 
         //AF ---  only cpx,ins,ntis
         if((selecteddbMask & DatabaseConfig.CBN_MASK)!= DatabaseConfig.CBN_MASK &&
-           (selecteddbMask & DatabaseConfig.CBF_MASK)!= DatabaseConfig.CBF_MASK &&
            (selecteddbMask & DatabaseConfig.PAG_MASK)!= DatabaseConfig.PAG_MASK)
         {
 			if( selecteddbMask == DatabaseConfig.UPA_MASK ||
@@ -151,7 +146,7 @@ public class SearchForm {
         {
 			sectiontype.put("TI", "Patent title");
 		}
-		else if((selecteddbMask & DatabaseConfig.CBF_MASK) != DatabaseConfig.CBF_MASK)
+		else
         {
             sectiontype.put("TI", "Title");
         }
@@ -219,7 +214,8 @@ public class SearchForm {
         }
 
         //SN
-        if((selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
+        if((selecteddbMask & DatabaseConfig.CBF_MASK) != DatabaseConfig.CBF_MASK &&
+           (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
 		   (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
 		   (selecteddbMask & DatabaseConfig.CRC_MASK) != DatabaseConfig.CRC_MASK &&
 		   (selecteddbMask & DatabaseConfig.ELT_MASK) != DatabaseConfig.ELT_MASK &&
@@ -238,6 +234,7 @@ public class SearchForm {
 
         //MH
         if(selecteddbMask == DatabaseConfig.CPX_MASK ||
+           selecteddbMask == DatabaseConfig.CBF_MASK ||
            selecteddbMask == DatabaseConfig.CPX_MASK + DatabaseConfig.C84_MASK)
         {
             sectiontype.put("MH","Ei main heading");
@@ -245,7 +242,6 @@ public class SearchForm {
 
         //PN
         if((selecteddbMask & DatabaseConfig.GEO_MASK) != DatabaseConfig.GEO_MASK &&
-           (selecteddbMask & DatabaseConfig.CBF_MASK) != DatabaseConfig.CBF_MASK &&
            (selecteddbMask & DatabaseConfig.UPA_MASK) != DatabaseConfig.UPA_MASK &&
            (selecteddbMask & DatabaseConfig.EUP_MASK) != DatabaseConfig.EUP_MASK &&
            (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK &&
@@ -257,8 +253,7 @@ public class SearchForm {
         }
 
         //ST
-        if((selecteddbMask & DatabaseConfig.CBF_MASK) != DatabaseConfig.CBF_MASK &&
-		   (selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
+        if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
            (selecteddbMask & DatabaseConfig.UPA_MASK) != DatabaseConfig.UPA_MASK &&
            (selecteddbMask & DatabaseConfig.EUP_MASK) != DatabaseConfig.EUP_MASK &&
            (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
@@ -314,6 +309,7 @@ public class SearchForm {
 
         //CV
         if(selecteddbMask == DatabaseConfig.CPX_MASK ||
+           selecteddbMask == DatabaseConfig.CBF_MASK ||
            selecteddbMask == DatabaseConfig.C84_MASK + DatabaseConfig.CPX_MASK)
         {
              sectiontype.put("CV", "Ei controlled term");
@@ -348,8 +344,7 @@ public class SearchForm {
         }
 
         //CO or PC
-        if((selecteddbMask & DatabaseConfig.CBF_MASK) != DatabaseConfig.CBF_MASK &&
-		   (selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
+        if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
            (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
            (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK &&
            (selecteddbMask & DatabaseConfig.ELT_MASK) != DatabaseConfig.ELT_MASK &&
@@ -691,7 +686,6 @@ public class SearchForm {
            (selecteddbMask & DatabaseConfig.EUP_MASK) != DatabaseConfig.EUP_MASK &&
            (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK &&
            (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
-           //(selecteddbMask & DatabaseConfig.ELT_MASK) != DatabaseConfig.ELT_MASK &&
 		   (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
 		   (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
            (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK)
@@ -719,7 +713,6 @@ public class SearchForm {
            (selecteddbMask & DatabaseConfig.EUP_MASK) != DatabaseConfig.EUP_MASK &&
            (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK &&
            (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
-           //(selecteddbMask & DatabaseConfig.ELT_MASK) != DatabaseConfig.ELT_MASK &&
 		   (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
 		   (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
            (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK)
@@ -734,7 +727,6 @@ public class SearchForm {
            (selecteddbMask & DatabaseConfig.EUP_MASK) != DatabaseConfig.EUP_MASK &&
            (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK &&
            (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
-           //(selecteddbMask & DatabaseConfig.ELT_MASK) != DatabaseConfig.ELT_MASK &&
 		   (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
 		   (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
            (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK)
@@ -750,7 +742,6 @@ public class SearchForm {
            (selecteddbMask & DatabaseConfig.CBF_MASK) != DatabaseConfig.CBF_MASK &&
            (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK &&
            (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
-           //(selecteddbMask & DatabaseConfig.ELT_MASK) != DatabaseConfig.ELT_MASK &&
 		   (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
 		   (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
 		   (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK)
@@ -910,10 +901,7 @@ public class SearchForm {
 	                int cpxStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("CST") + 3, sYear.indexOf("CST") + 7));
 	                dYear = (dYear > cpxStartYear) ? cpxStartYear : dYear;
 	            }
-                //if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.C84_MASK) == DatabaseConfig.C84_MASK)) {
-                //    int cpxStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("ZST") + 3, sYear.indexOf("ZST") + 7));
-                //    dYear = (dYear > cpxStartYear) ? cpxStartYear : dYear;
-                //}
+
                 if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.INS_MASK) == DatabaseConfig.INS_MASK)) {
 	                int insStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("IST") + 3, sYear.indexOf("IST") + 7));
 	                dYear = (dYear > insStartYear) ? insStartYear : dYear;
@@ -981,7 +969,7 @@ public class SearchForm {
 					dYear = (dYear > paStartYear) ? paStartYear : dYear;
 	            }
 	            if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.CBF_MASK) == DatabaseConfig.CBF_MASK)) {
-					int paStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("ZST") + 3, sYear.indexOf("ZST") + 7));
+					int paStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("YST") + 3, sYear.indexOf("YST") + 7));
 					dYear = (dYear > paStartYear) ? paStartYear : dYear;
 	            }
 	        }
@@ -1096,7 +1084,7 @@ public class SearchForm {
 	                dYear = (dYear > paStartYear) ? paStartYear : dYear;
 	            }
                 if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.CBF_MASK) == DatabaseConfig.CBF_MASK)) {
-                    int cbfStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("ZSY") + 3, sYear.indexOf("ZSY") + 7));
+                    int cbfStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("YSY") + 3, sYear.indexOf("YSY") + 7));
                     dYear = (dYear > cbfStartYear) ? cbfStartYear : dYear;
                 }
                 if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.PCH_MASK) == DatabaseConfig.PCH_MASK)) {
