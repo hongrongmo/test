@@ -48,8 +48,7 @@ function generateSection(selecteddbMask)
    var index = 0;
 
   //All fields
-   if((selecteddbMask & REFEREX) != REFEREX &&
-      (selecteddbMask & CBF) != CBF)
+   if((selecteddbMask & REFEREX) != REFEREX)     
    {
       searchin[index++] = new Field("NO-LIMIT", "All fields");
    }
@@ -57,8 +56,7 @@ function generateSection(selecteddbMask)
    //KY
    if((selecteddbMask & REFEREX) != REFEREX &&
       (selecteddbMask & EPT) != EPT &&
-      (selecteddbMask & CBN) != CBN &&
-      (selecteddbMask & CBF) != CBF)
+      (selecteddbMask & CBN) != CBN)
    {
 	searchin[index++] = new Field("KY", "Subject/Title/Abstract");
    }
@@ -77,15 +75,13 @@ function generateSection(selecteddbMask)
 
 
    //AB
-   if((selecteddbMask & REFEREX) != REFEREX &&
-      (selecteddbMask & CBF) != CBF)
+   if((selecteddbMask & REFEREX) != REFEREX)
    {
       searchin[index++] = new Field("AB", "Abstract");
    }
 
    //AU
-   if((selecteddbMask & CBN) != CBN &&
-      (selecteddbMask & CBF) != CBF)
+   if((selecteddbMask & CBN) != CBN)
    {
        if((selecteddbMask & US_PATENTS) != US_PATENTS &&
           (selecteddbMask & EPT) != EPT &&
@@ -118,7 +114,6 @@ function generateSection(selecteddbMask)
 
    //AF
    if(((selecteddbMask & REFEREX) != REFEREX) &&
-      ((selecteddbMask & CBF) != CBF) &&
       ((selecteddbMask & CBN) != CBN))
    {
       if( (selecteddbMask == US_PATENTS) ||
@@ -143,7 +138,7 @@ function generateSection(selecteddbMask)
    {
    	searchin[index++] = new Field("TI", "Patent title");
    }
-   else if((selecteddbMask & CBF) != CBF)
+   else
    {
      	searchin[index++] = new Field("TI", "Title");
    }
@@ -212,7 +207,8 @@ function generateSection(selecteddbMask)
    }
 
    //SN
-   if((selecteddbMask & CBN) != CBN &&
+   if((selecteddbMask & CBF) != CBF &&
+      (selecteddbMask & CBN) != CBN &&
       (selecteddbMask & CHM) != CHM &&
       (selecteddbMask & CRC) != CRC &&
       (selecteddbMask & ELT) != ELT &&
@@ -231,14 +227,14 @@ function generateSection(selecteddbMask)
 
    //MH
    if(selecteddbMask == CPX ||
-      selecteddbMask == (CBF + C84))
+      selecteddbMask == CBF ||
+      selecteddbMask == (CPX + C84))
    {
      searchin[index++] = new Field("MH","Ei main heading");
    }
 
    //PN
    if((selecteddbMask & GEO)     	!= GEO &&
-      (selecteddbMask & CBF)     	!= CBF &&
       (selecteddbMask & US_PATENTS)     != US_PATENTS &&
       (selecteddbMask & EU_PATENTS)     != EU_PATENTS &&
       (selecteddbMask & NTIS)       	!= NTIS &&
@@ -252,7 +248,6 @@ function generateSection(selecteddbMask)
    //ST
    if((selecteddbMask & US_PATENTS)     != US_PATENTS &&
       (selecteddbMask & EU_PATENTS)     != EU_PATENTS &&
-      (selecteddbMask & CBF)        	!= CBF &&
       (selecteddbMask & NTIS)      	!= NTIS &&
       (selecteddbMask & EPT)        	!= EPT &&
       (selecteddbMask & REFEREX)    	!= REFEREX)
@@ -309,6 +304,7 @@ function generateSection(selecteddbMask)
 
    //CV
    if(selecteddbMask == CPX ||
+      selecteddbMask == CBF ||
       selecteddbMask == (CPX + C84))
    {
      searchin[index++] = new Field("CV", "Ei controlled term");
@@ -347,7 +343,6 @@ function generateSection(selecteddbMask)
       (selecteddbMask & CBN)    != CBN &&
       (selecteddbMask & ELT)    != ELT &&
       (selecteddbMask & EPT)    != EPT &&
-      (selecteddbMask & CBF)    != CBF &&
       (selecteddbMask & PCH)    != PCH &&
       (selecteddbMask & CHM)    != CHM)
    {
@@ -580,7 +575,6 @@ function generateDoctypes(selecteddbMask)
      (selecteddbMask & CBF) != CBF &&
      (selecteddbMask & REFEREX) != REFEREX &&
      (selecteddbMask & EPT) != EPT &&
-     //(selecteddbMask & ELT) != ELT &&
      (selecteddbMask & CBN) != CBN &&
      (selecteddbMask & CHM) != CHM &&
      (selecteddbMask & PCH) != PCH)
@@ -597,7 +591,7 @@ function generateDoctypes(selecteddbMask)
         doctypes[index++] = new Field("PA", "Patents (before 1970)");
   }
   else if(selecteddbMask == CBF ||
-      selecteddbMask == PCH)
+          selecteddbMask == PCH)
   {
         doctypes[index++] = new Field("PA", "Patents");
   }
@@ -983,7 +977,7 @@ function calStartYear(selectedDbMask, sYear)
 
     if((selectedDbMask != 0) && ((selectedDbMask & CBF) == CBF))
     {
-        var cbfStartYear = sYear.substr(sYear.indexOf("ZST")+3,4);
+        var cbfStartYear = sYear.substr(sYear.indexOf("YST")+3,4);
         dYear = (dYear > cbfStartYear) ? cbfStartYear : dYear;
     }
     if((selectedDbMask != 0) && ((selectedDbMask & CPX) == CPX))
@@ -1078,7 +1072,7 @@ function calDisplayYear(selectedDbMask, sYear)
 
       if((selectedDbMask != 0) && ((selectedDbMask & CBF) == CBF))
       {
-          var cbfStartYear = sYear.substr(sYear.indexOf("ZSY")+3,4);
+          var cbfStartYear = sYear.substr(sYear.indexOf("YSY")+3,4);
           dYear = (dYear > cbfStartYear) ? cbfStartYear : dYear;
       }
 
