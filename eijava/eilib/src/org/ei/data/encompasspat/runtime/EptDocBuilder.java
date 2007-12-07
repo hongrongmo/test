@@ -1233,7 +1233,7 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                
                 if (rset.getClob("LT") != null)
                 {
-                   String linkedTerms = termBuilder.formatCT(StringUtil.replaceNonAscii(StringUtil.getLTStingFromClob(rset.getClob("LT"))));
+                   String linkedTerms = termBuilder.formatCT(StringUtil.replaceNonAscii(StringUtil.getLTStringFromClob(rset.getClob("LT"))));
                    
                    if (linkedTerms != null && !linkedTerms.equalsIgnoreCase("QQ"))
                    {
