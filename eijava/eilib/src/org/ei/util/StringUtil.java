@@ -171,6 +171,28 @@ public class StringUtil {
         }
         return temp;
     }
+    
+    /**
+     *   This method takes a clob object and builds a
+     *   String out of it.
+     *   @param clob
+     *   @return String
+     *   @exception InvalidEIDocException
+     *   if clob is longer than 10000 - it trims to 10000
+     **/
+     public static String getLTStringFromClob(java.sql.Clob clob) throws Exception 
+     {
+         String temp = StringUtil.EMPTY_STRING;
+         if (clob != null) {
+             int len =(int) clob.length();
+             if (len > 10000)
+             {
+                 len = 10000;
+             }             
+             temp = clob.getSubString(1, len);
+         }
+         return temp;
+     }
 
 
 
