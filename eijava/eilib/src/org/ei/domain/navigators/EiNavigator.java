@@ -66,6 +66,7 @@ public class EiNavigator
   public static final String CM = "cmnav";
   public static final String CP = "cpnav";
   public static final String RO = "ronav";
+  public static final String CVM = "cvmnav";
 
   // for search within search
   public static final String ALL = "all";
@@ -101,6 +102,7 @@ public class EiNavigator
         displayNames.put(EiNavigator.CM,"Chemicals");
         displayNames.put(EiNavigator.CP,"Companies");
 
+        displayNames.put(EiNavigator.CVM,"Major terms");
         displayNames.put(EiNavigator.RO,"Role");
    }
 
@@ -121,6 +123,7 @@ public class EiNavigator
         navigatorNames.add(EiNavigator.YR);
         navigatorNames.add(EiNavigator.PUC);
         navigatorNames.add(EiNavigator.PEC);
+        navigatorNames.add(EiNavigator.CVM);
         navigatorNames.add(EiNavigator.PID);
         navigatorNames.add(EiNavigator.PK);
         navigatorNames.add(EiNavigator.PAC);
@@ -173,6 +176,7 @@ public class EiNavigator
         fieldNames.put(EiNavigator.CM,"cm");
         fieldNames.put(EiNavigator.CP,"cp");
         fieldNames.put(EiNavigator.RO,"ro");
+        fieldNames.put(EiNavigator.CVM,"cvm");
     }
 
     private String name = StringUtil.EMPTY_STRING;
