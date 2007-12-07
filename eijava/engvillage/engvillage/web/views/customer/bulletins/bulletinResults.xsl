@@ -285,8 +285,7 @@
                               <a CLASS="SmWhiteText"><b><xsl:value-of select="$QTIT" disable-output-escaping="yes"/></b></a>
                             </td>
                             <td align="right" valign="middle" bgcolor="#3173B5">
-                              <a title="Most Recent Bulletins" href="/controller/servlet/Controller?CID=bulletinSearch&amp;queryStr={$ENCODED-QSTR}&amp;EISESSION={$SESSION-ID}&amp;database={$SELECTED-DB}">
-                                <img src="/engresources/images/rec.gif" border="0"/></a>&#160;
+                              <a title="Most Recent Bulletins" href="/controller/servlet/Controller?CID=bulletinSearch&amp;queryStr={$ENCODED-QSTR}&amp;EISESSION={$SESSION-ID}&amp;database={$SELECTED-DB}"><img src="/engresources/images/rec.gif" border="0"/></a>&#160;
                             </td>
                             <td width="20" align="right" >
                               <img src="/engresources/images/s.gif" width="20" />
