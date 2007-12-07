@@ -25,9 +25,9 @@
   <xsl:include href="LocalHolding.xsl" />
 
   <xsl:include href="common/AbstractResults.xsl" />
-  
 
-  
+
+
   <xsl:template match="PAGE">
 
     <xsl:variable name="SESSION-ID">
@@ -49,7 +49,7 @@
 
     <html>
       <head>
-        <title><xsl:value-of select="$SEARCH-TYPE"/> Abstract Format</title>
+        <title><xsl:value-of select="$SEARCH-TYPE"/> Search Abstract Format</title>
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js" />
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/lindaHall.js" />
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Autocomplete.js"/>
@@ -426,18 +426,18 @@
       	</xsl:if>
       </xsl:if>
     </tr>
-    
+
     <xsl:variable name="FULLTEXT">
   	<xsl:value-of select="//FULLTEXT" />
     </xsl:variable>
     <xsl:variable name="FULLTEXT-LINK">
   	<xsl:value-of select="//PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/FT/@FTLINK" />
     </xsl:variable>
-    
+
     <xsl:variable name="CHECK-CUSTOM-OPT">
 	<xsl:value-of select="custoptions:checkFullText($FULLTEXT, $FULLTEXT-LINK, $CUST-ID, //PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/DO , //PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/DOC/DB/DBMASK)" />
     </xsl:variable>
-    
+
     <xsl:if test="(string(//LOCALHOLDINGS) or ($CHECK-CUSTOM-OPT ='true') or string(//LHL))">
       <tr>
         <td colspan="4"><img src="/engresources/images/s.gif" border="0" height="15"/></td>
