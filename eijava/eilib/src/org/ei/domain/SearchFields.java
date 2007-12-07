@@ -24,7 +24,7 @@ public class SearchFields
 	public static SearchField CVA = new SearchField("CVA","Controlled term as a reagent");
 	public static SearchField CVN = new SearchField("CVN","Controlled term with no role");
 	public static SearchField CVM = new SearchField("CVM", "Major term");
-	public static SearchField CVMA = new SearchField("CVMA","Major term as a reagent");  
+	public static SearchField CVMA = new SearchField("CVMA","Major term as a reagent");
 	public static SearchField CVMN = new SearchField("CVMN","Major term with no role");
 	public static SearchField CVMP = new SearchField("CVMP", "Major term as a product");
 	public static SearchField PU = new SearchField("PU", "Country of application");
@@ -70,12 +70,15 @@ public class SearchFields
 	public static SearchField PC = new SearchField("PC", "Patent Country");
 	public static SearchField IP = new SearchField("IP", "Int.patent classification");
 	public static SearchField CR = new SearchField("CR", "CAS registry number");
-	
+	public static SearchField RO = new SearchField("RO", "Role");
+
+
+
 	//EnCompass fields
 
 
 	public static final SearchField[] ALL_FIELDS = {
-		AB , AF , AG , AI , ALL , AN , AU , AV , BN , CC , CF , CI , CL , CN , CO , CR  , CT , CV , CVA , CVM , CVMA , CVMN , CVMP , CVN , CVP , DI , DT , FL , IP , KY , LA , LT , MH , MI , NI , NT , OC , PA , PAC , PAM , PAN , PC  , PCI , PCO , PD  , PE  , PEC , PFD , PI  , PID , PM  , PN  , PRN , PU , PUC , RGI , RN  , SN , SO  , ST  , TI  , TR  , YR};
+		AB , AF , AG , AI , ALL , AN , AU , AV , BN , CC , CF , CI , CL , CN , CO , CR  , CT , CV , CVA , CVM , CVMA , CVMN , CVMP , CVN , CVP , DI , DT , FL , IP , KY , LA , LT , MH , MI , NI , NT , OC , PA , PAC , PAM , PAN , PC  , PCI , PCO , PD  , PE  , PEC , PFD , PI  , PID , PM  , PN  , PRN , PU , PUC , RGI , RN  , RO , SN , SO  , ST  , TI  , TR  , YR};
 
 	/*
 	* This method is used to an array of CustomeSearchFields based on
