@@ -153,6 +153,10 @@ public class NavigatorCache
             {
               navstring = nav.getNavigatorByName(EiNavigator.CM).toString();
             }
+            else if(nav.getNavigatorByName(EiNavigator.CVM) != null)
+            {
+              navstring = nav.getNavigatorByName(EiNavigator.CVM).toString();
+            }
             pstmt.setString(intStmtIndex++, navstring);
 
             pstmt.setString(intStmtIndex++, (nav.getNavigatorByName(EiNavigator.PAC) != null) ? nav.getNavigatorByName(EiNavigator.PAC).toString() : StringUtil.EMPTY_STRING);
