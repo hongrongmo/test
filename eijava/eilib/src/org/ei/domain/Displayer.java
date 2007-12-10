@@ -257,11 +257,17 @@ public class Displayer {
         // sort checkboxes based on sort value
         Collections.sort(lstinnerCheckboxes);
         Iterator itrChk = lstinnerCheckboxes.iterator();
+        int easycount = 1;
+        int spliteasyevery = 6;
         while(itrChk.hasNext())
         {
           DatabaseCheckbox dbcheck = (DatabaseCheckbox) itrChk.next();
           innercheckboxes.append(dbcheck.toString());
           innercheckboxes.append("&nbsp;&nbsp;");
+          if((easycount % spliteasyevery) == 0) {
+            innercheckboxes.append("<br/>");
+          }
+          easycount = easycount + 1;
         }
 
         // finish the 'All' checkbox, label, and spacers
@@ -341,6 +347,9 @@ public class Displayer {
 
         // maximum/default is 5 on one row
         int splitevery = 5;
+        if(lstinnerCheckboxes.size() > 5) {
+          splitevery = 4;
+        }
         if((lstinnerCheckboxes.size() % 4) == 0) {
           splitevery = 4;
         }
