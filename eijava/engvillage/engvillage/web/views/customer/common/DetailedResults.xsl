@@ -14,8 +14,8 @@
     xmlns:ctd="java:org.ei.domain.ClassTitleDisplay"
     xmlns:rfx="java:org.ei.books.collections.ReferexCollection"
     xmlns:crlkup="java:org.ei.data.CRNLookup"
-	xmlns:cvt="java:org.ei.data.CVSTermBuilder"
-	xmlns:detail="java:org.ei.domain.TermDetail"
+    xmlns:cvt="java:org.ei.data.CVSTermBuilder"
+    xmlns:detail="java:org.ei.domain.TermDetail"
     exclude-result-prefixes="schar hlight java html ibfab xsl rfx ctd crlkup cvt detail"
 >
 
@@ -40,7 +40,7 @@
     <!-- Book Templates -->
 
     <!-- top level elements with labels and nested value children -->
-    <xsl:template match="SC|AV|DT|MJSM|CRM|CLGM|PIDEPM|BKYS|AGS|AUS|EDS|IVS|CLS|FLS|CVS|RGIS|DISPS|CTS|OCVS|OCLS|NDI|CHI|AOI|AFS|EFS|PASM|PEXM|PIM|PAPIM">
+    <xsl:template match="DGS|COS|SC|AV|DT|MJSM|CRM|CLGM|PIDEPM|BKYS|AGS|AUS|EDS|IVS|CLS|FLS|CVS|RGIS|DISPS|CTS|OCVS|OCLS|NDI|CHI|AOI|AFS|EFS|PASM|PEXM|PIM|PAPIM">
         <tr>
 
             <td valign="top" ><img src="/engresources/images/s.gif" border="0"/></td>
@@ -67,7 +67,7 @@
 
     <!-- top level elements for correspondence -->
     <xsl:template match="CAUS">
-           
+
         <xsl:choose>
     	<xsl:when test="CAU/EMAIL">
 		<tr>
@@ -83,7 +83,7 @@
         <xsl:call-template name="SPACER"/>
         </xsl:when>
         <xsl:otherwise>
-        
+
         <tr>
 		    <td valign="top" ><img src="/engresources/images/s.gif" border="0"/></td>
 		    <td xsl:use-attribute-sets="r-align-label">
@@ -148,7 +148,7 @@
     </xsl:template>
 
   <!-- Controlled/Uncontrolled child node(s) within VALUE under FLS/CVS/AGS -->
-      <xsl:template match="MJS|BKY|FL|CV|AG|CT|OC|PS|RGI|CM|IC|GC|GD|CP|CE">
+      <xsl:template match="DG|CO|MJS|BKY|FL|CV|AG|CT|OC|PS|RGI|CM|IC|GC|GD|CP|CE">
 
       <xsl:if test="name()='LST'">
       <xsl:if test="position()=1">
@@ -548,10 +548,10 @@
  	<xsl:variable name="SEARCH-CONTEXT">
  		<xsl:value-of select="/PAGE/SEARCH-CONTEXT"/>
  	</xsl:variable>
- 	
- 	
-  	<xsl:template match="LTH"> 	   
-  	
+
+
+  	<xsl:template match="LTH">
+
   	<xsl:variable name="DOCID">
       <xsl:value-of select="ancestor::EI-DOCUMENT/DOC/DOC-ID"/>
     </xsl:variable>
@@ -560,7 +560,7 @@
             <td xsl:use-attribute-sets="r-align-label">
             <span CLASS="MedBlackText"><b>Linked terms: </b> </span>
             </td>
-            <td valign="top" width="10">           
+            <td valign="top" width="10">
             <img src="/engresources/images/s.gif" border="0" width="10"/></td>
             <td valign="top" align="left">
             	<div class="longltdiv" id="longltdiv{$DOCID}">
@@ -584,13 +584,13 @@
     </xsl:template>
 
     <xsl:template match="LSTM">
-    
+
     <xsl:variable name="DOCID">
       <xsl:value-of select="ancestor::EI-DOCUMENT/DOC/DOC-ID"/>
     </xsl:variable>
         <tr>
             <td valign="top" ><img src="/engresources/images/s.gif" border="0"/></td>
-            <td xsl:use-attribute-sets="r-align-label"> 
+            <td xsl:use-attribute-sets="r-align-label">
 			<span CLASS="MedBlackText"><b> Linked Terms: </b> </span>
             </td>
 
@@ -618,13 +618,13 @@
     </xsl:template>
 
     <xsl:template match="MLT">
-    
+
     <xsl:variable name="DOCID">
-      <xsl:value-of select="ancestor::EI-DOCUMENT/DOC/DOC-ID"/>   
+      <xsl:value-of select="ancestor::EI-DOCUMENT/DOC/DOC-ID"/>
     </xsl:variable>
         <tr>
             <td valign="top" ><img src="/engresources/images/s.gif" border="0"/></td>
-            <td xsl:use-attribute-sets="r-align-label">   
+            <td xsl:use-attribute-sets="r-align-label">
             <span CLASS="MedBlackText"><b> Manually linked terms: </b> </span>
             </td>
 
@@ -652,7 +652,7 @@
     </xsl:template>
 
     <xsl:template match="ATM">
-    
+
     <xsl:variable name="DOCID">
       <xsl:value-of select="ancestor::EI-DOCUMENT/DOC/DOC-ID"/>
     </xsl:variable>
@@ -756,17 +756,17 @@
             <xsl:call-template name="LINK">
            <xsl:with-param name="TERM"><xsl:value-of select="normalize-space(text())"/></xsl:with-param>
            <xsl:with-param name="FIELD">CR</xsl:with-param>
-     
+
        </xsl:call-template>
-       <!--  
+       <!--
             <span CLASS="MedBlackText"><xsl:value-of select="normalize-space(text())"/></span>
-           <img src="/engresources/images/plus.gif" border="0"/> 
-        --> 
+           <img src="/engresources/images/plus.gif" border="0"/>
+        -->
            <xsl:text> </xsl:text><span CLASS="MedBlackText">
-           <xsl:value-of select="crlkup:getName(normalize-space(text()))" disable-output-escaping="yes"/></span>       
+           <xsl:value-of select="crlkup:getName(normalize-space(text()))" disable-output-escaping="yes"/></span>
            <xsl:if test="position()!=last()">
            <a class="SmBlkText">&#160; - &#160;</a>
-           </xsl:if>      
+           </xsl:if>
 
   </xsl:template>
 
