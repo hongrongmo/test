@@ -31,8 +31,8 @@ public class DbDisplayConstants
                 "<a class=\"SmBlueTableText\">Compendex</a></br><a class=\"SmBlackText\">Compendex is the most comprehensive bibliographic database of scientific and technical engineering research available, covering all engineering disciplines. It includes millions of bibliographic citations and abstracts from thousands of engineering journals and conference proceedings. When combined with the Engineering Index Backfile (1884-1969), Compendex covers well over 120 years of core engineering literature.</a></br><img  src=\"/engresources/images/s.gif\" border=\"0\" width=\"1\" height=\"6\" />",
                 "<img id=\"cpxOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(1); return false;\"/>",
     			"<img id=\"cpxOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(1); return false;\"/>");
-   
-    
+
+
     public static final DbDisplayConstants C84 =
         new DbDisplayConstants(DatabaseConfig.C84_MASK,
                 "Ei Backfile",
@@ -42,16 +42,16 @@ public class DbDisplayConstants
                 "<img id=\"cbfOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(1); return false;\"/>",
     			"<img id=\"cbfOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(1); return false;\"/>");
 
-    
+
     public static final DbDisplayConstants INS =
         new DbDisplayConstants(DatabaseConfig.INS_MASK,
                 "Inspec",
-                "<a class=\"SmBlueTableText\">Inspec</a></br><a class=\"SmBlackText\">INSPEC includes bibliographic citations and indexed...</a></br><img  src=\"/engresources/images/s.gif\" border=\"0\" width=\"1\" height=\"6\" />",
-                "<a class=\"SmBlueTableText\">Inspec</a></br><a class=\"SmBlackText\">INSPEC includes bibliographic citations and indexed abstracts from publications in the fields of physics, electrical and electronic engineering, communications, computer science, control engineering, information technology, manufacturing and mechanical engineering, operations research, material science, oceanography, engineering mathematics, nuclear engineering, environmental science, geophysics, nanotechnology, biomedical technology and biophysics.</a></br><img  src=\"/engresources/images/s.gif\" border=\"0\" width=\"1\" height=\"6\" />",
-                "<a class=\"SmBlueTableText\">Inspec</a></br><a class=\"SmBlackText\">INSPEC includes bibliographic citations and indexed abstracts from publications in the fields of physics, electrical and electronic engineering, communications, computer science, control engineering, information technology, manufacturing and mechanical engineering, operations research, material science, oceanography, engineering mathematics, nuclear engineering, environmental science, geophysics, nanotechnology, biomedical technology and biophysics.</a></br><img  src=\"/engresources/images/s.gif\" border=\"0\" width=\"1\" height=\"6\" />",
+                "<a class=\"SmBlueTableText\">Inspec</a></br><a class=\"SmBlackText\">Inspec includes bibliographic citations and indexed...</a></br><img  src=\"/engresources/images/s.gif\" border=\"0\" width=\"1\" height=\"6\" />",
+                "<a class=\"SmBlueTableText\">Inspec</a></br><a class=\"SmBlackText\">Inspec includes bibliographic citations and indexed abstracts from publications in the fields of physics, electrical and electronic engineering, communications, computer science, control engineering, information technology, manufacturing and mechanical engineering, operations research, material science, oceanography, engineering mathematics, nuclear engineering, environmental science, geophysics, nanotechnology, biomedical technology and biophysics.</a></br><img  src=\"/engresources/images/s.gif\" border=\"0\" width=\"1\" height=\"6\" />",
+                "<a class=\"SmBlueTableText\">Inspec</a></br><a class=\"SmBlackText\">Inspec includes bibliographic citations and indexed abstracts from publications in the fields of physics, electrical and electronic engineering, communications, computer science, control engineering, information technology, manufacturing and mechanical engineering, operations research, material science, oceanography, engineering mathematics, nuclear engineering, environmental science, geophysics, nanotechnology, biomedical technology and biophysics.</a></br><img  src=\"/engresources/images/s.gif\" border=\"0\" width=\"1\" height=\"6\" />",
                 "<img id=\"insOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(2); return false;\"/>",
                 "<img id=\"insOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(2); return false;\"/>");
-          
+
 
     public static final DbDisplayConstants NTI =
         new DbDisplayConstants(DatabaseConfig.NTI_MASK,
@@ -165,7 +165,7 @@ public class DbDisplayConstants
         		"<img id=\"pchOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(64); return false;\"/>",
         		"<img id=\"pchOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(64); return false;\"/>");
 
-        		
+
 
     static
     {
@@ -224,7 +224,7 @@ public class DbDisplayConstants
     {
         return this.shortText;
     }
-    
+
     public String getImgPlus()
     {
         return this.imgPlus;
@@ -255,13 +255,13 @@ public class DbDisplayConstants
         DbDisplayConstants ddc =(DbDisplayConstants) allConstants.get(dbcode);
         return ddc.getDisplayShortText();
     }
-    
+
     public static String getImgPlus(String dbcode)
     {
         DbDisplayConstants ddc =(DbDisplayConstants) allConstants.get(dbcode);
         return ddc.getImgPlus();
     }
-    
+
     public static String getImgMinus(String dbcode)
     {
         DbDisplayConstants ddc =(DbDisplayConstants) allConstants.get(dbcode);
@@ -273,6 +273,6 @@ public class DbDisplayConstants
         DbDisplayConstants dbconst =(DbDisplayConstants) allConstants.get(dbname);
         return dbconst.dbName;
     }
-    
+
 
 }
