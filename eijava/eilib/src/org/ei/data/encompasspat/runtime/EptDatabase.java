@@ -59,7 +59,11 @@ public class EptDatabase extends Database {
     	searchfield.put("KY", "Y");
     	searchfield.put("LA", "Y");
     	searchfield.put("LT", "Y");
+    	searchfield.put("PA", "Y");
+    	searchfield.put("PAC", "Y");
+    	searchfield.put("PAM", "Y");
     	searchfield.put("PC", "Y");
+    	searchfield.put("PCO", "Y");
     	searchfield.put("PM", "Y");
     	searchfield.put("PRC", "Y");
     	searchfield.put("PRD", "Y");

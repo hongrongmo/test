@@ -9,6 +9,8 @@ public class SearchFields
 	public static SearchField AB = new SearchField("AB", "Abstract");
 	public static SearchField AN = new SearchField("AN", "Accession number");
 	public static SearchField AI = new SearchField("AI", "Astronomical indexing");
+	public static SearchField AJ = new SearchField("AJ", "Derwent accession number");
+
 	public static SearchField AU = new AuthorSearchField("AU", "Author");
 	public static SearchField AF = new AffiliationSearchField("AF", "Author affiliation");
 	public static SearchField AV = new SearchField("AV", "Availability");
@@ -27,6 +29,7 @@ public class SearchFields
 	public static SearchField CVMA = new SearchField("CVMA","Major term as a reagent");
 	public static SearchField CVMN = new SearchField("CVMN","Major term with no role");
 	public static SearchField CVMP = new SearchField("CVMP", "Major term as a product");
+	public static SearchField DPID = new SearchField("DPID", "Derwent IPC");
 	public static SearchField PU = new SearchField("PU", "Country of application");
 	public static SearchField CO = new SearchField("CO", "Country of origin ");
 	public static SearchField DI = new SearchField("DI", "Discipline");
@@ -54,6 +57,10 @@ public class SearchFields
 	public static SearchField PCO = new SearchField("PCO", "Patent application country");
 	public static SearchField PFD = new SearchField("PFD", "Patent filing date");
 	public static SearchField PRN = new SearchField("PRN", "Patent priority information");
+	public static SearchField PRD = new SearchField("PRD", "Priority date");
+	public static SearchField PRC = new SearchField("PRC", "Priority country");
+
+
 	public static SearchField PM = new SearchField("PM", "Patent number");
 	public static SearchField PE = new SearchField("PE", "Patent examiner");
 	public static SearchField SO  = new SearchField("SO", "Source");
@@ -71,7 +78,6 @@ public class SearchFields
 	public static SearchField IP = new SearchField("IP", "Int.patent classification");
 	public static SearchField CR = new SearchField("CR", "CAS registry number");
 	public static SearchField RO = new SearchField("RO", "Role");
-	public static SearchField DPID = new SearchField("DPID", "Derwent IPC");
 
 
 
@@ -80,7 +86,7 @@ public class SearchFields
 
 
 	public static final SearchField[] ALL_FIELDS = {
-		AB , AF , AG , AI , ALL , AN , AU , AV , BN , CC , CF , CI , CL , CN , CO , CR  , CT , CV , CVA , CVM , CVMA , CVMN , CVMP , CVN , CVP , DI , DT , FL , IP , KY , LA , LT , MH , MI , NI , NT , OC , PA , PAC , PAM , PAN , PC  , PCI , PCO , PD  , PE  , PEC , PFD , PI  , PID , DPID, PM  , PN  , PRN , PU , PUC , RGI , RN  , RO , SN , SO  , ST  , TI  , TR  , YR};
+		AB , AF , AG , AI , AJ, ALL , AN , AU , AV , BN , CC , CF , CI , CL , CN , CO , CR  , CT , CV , CVA , CVM , CVMA , CVMN , CVMP , CVN , CVP , DI , DT , FL , IP , KY , LA , LT , MH , MI , NI , NT , OC , PA , PAC , PAM , PAN , PC  , PCI , PCO , PD  , PE  , PEC , PFD , PI  , PID , DPID, PM  , PN  , PRN , PRC, PRD, PU , PUC , RGI , RN  , RO , SN , SO  , ST  , TI  , TR  , YR};
 
 	/*
 	* This method is used to an array of CustomeSearchFields based on
