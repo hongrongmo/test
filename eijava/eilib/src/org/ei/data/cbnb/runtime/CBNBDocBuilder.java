@@ -33,7 +33,7 @@ public class CBNBDocBuilder implements DocumentBuilder {
     public static String PROVIDER_TEXT = "";
 
     private static final Key CBNB_CONTROLLED_TERMS = new Key(Keys.CONTROLLED_TERMS, "Controlled terms");
-    private static final Key CBNB_COUNTRY = new Key(Keys.COUNTRY, "Country of origin");
+    private static final Key CBNB_COUNTRY = new Key(Keys.MULTIPLE_COUNTRY, "Country of origin");
     private static final Key[] CITATION_KEYS = {Keys.DOCID, Keys.PROVIDER, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT, Keys.SERIAL_TITLE, Keys.TITLE, Keys.VOLISSUE, Keys.ISSUE_DATE, Keys.SOURCE, Keys.p_PAGE_RANGE, Keys.NO_SO, Keys.PUBLICATION_DATE, Keys.ISBN, Keys.ISSN,Keys.AVAILABILITY, Keys.LANGUAGE, Keys.CODEN};
     private static final Key[] ABSTRACT_KEYS = {Keys.DOCID, Keys.PROVIDER, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT,Keys.DOC_TYPE, Keys.SERIAL_TITLE, Keys.TITLE, Keys.VOLISSUE, Keys.ISSUE_DATE,Keys.SOURCE, Keys.p_PAGE_RANGE, Keys.NO_SO, Keys.PUBLICATION_DATE, Keys.AVAILABILITY, Keys.ISBN, Keys.ISSN, Keys.LANGUAGE, Keys.CODEN, Keys.SCOPE, Keys.ABSTRACT, Keys.COMPANIES, Keys.CAS_REGISTRY_CODES, CBNB_CONTROLLED_TERMS, Keys.COUNTRY, Keys.CHEMICALS};
     private static final Key[] DETAILED_KEYS = {Keys.ACCESSION_NUMBER,Keys.TITLE, Keys.TITLE_TRANSLATION, Keys.SERIAL_TITLE, Keys.VOLUME, Keys.ISSUE, Keys.PUBLICATION_DATE, Keys.PAGE_RANGE, Keys.LANGUAGE, Keys.ISBN, Keys.ISSN,  Keys.CODEN, Keys.DOC_TYPE, Keys.AVAILABILITY, Keys.SCOPE, Keys.ABSTRACT, CBNB_CONTROLLED_TERMS, Keys.COMPANIES, Keys.CAS_REGISTRY_CODES, Keys.CHEMICALS, Keys.CHEMICAL_ACRONS,  Keys.SIC_CODES, Keys.COUNTRY, Keys.COUNTRY_CODES,  Keys.INDUSTRIAL_SEC_CODES, Keys.INDUSTRIAL_SECTORS,Keys.DOCID, Keys.COPYRIGHT, Keys.PROVIDER,Keys.COPYRIGHT_TEXT};
@@ -408,7 +408,7 @@ public class CBNBDocBuilder implements DocumentBuilder {
                 }
 
                 if (rset.getString("SCT") != null) {
-                  ht.put(Keys.COUNTRY, new XMLWrapper(CBNB_COUNTRY, StringUtil.replaceNullWithEmptyString(rset.getString("SCT"))));
+                  ht.put(Keys.COUNTRY, new XMLMultiWrapper(CBNB_COUNTRY, setElementData(rset.getString("SCT"))));
                 }
 
                 if (rset.getString("CIN") != null) {
@@ -592,12 +592,12 @@ public class CBNBDocBuilder implements DocumentBuilder {
                   ht.put(CBNB_CONTROLLED_TERMS,new XMLMultiWrapper2(CBNB_CONTROLLED_TERMS,setCVS(rset.getString("EBT"))));
                 }
 
-             //   if (rset.getString("SCT") != null) {
-           //       ht.put(Keys.COUNTRY, new XMLWrapper(CBNB_COUNTRY, StringUtil.replaceNullWithEmptyString(rset.getString("SCT"))));
-             //   }
+                if (rset.getString("SCT") != null) {
+                  ht.put(Keys.COUNTRY, new XMLMultiWrapper(CBNB_COUNTRY, setElementData(rset.getString("SCT"))));
+                }
 
                 if (rset.getString("SCC") != null) {
-                  ht.put(Keys.COUNTRY_CODES , new XMLWrapper(Keys.COUNTRY_CODES,StringUtil.replaceNullWithEmptyString(rset.getString("SCC"))));
+                  ht.put(Keys.COUNTRY_CODES , new XMLMultiWrapper(Keys.COUNTRY_CODES, setElementData(rset.getString("SCC"))));
                 }
 
                 if (rset.getString("CIN") != null) {
