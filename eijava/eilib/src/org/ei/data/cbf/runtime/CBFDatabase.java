@@ -70,7 +70,7 @@ public class CBFDatabase extends C84Database
 
     public String getName()
     {
-        return "EI Backfile";
+        return "Ei Backfile";
     }
 
     public String getIndexName()
@@ -80,7 +80,7 @@ public class CBFDatabase extends C84Database
 
     public String getShortName()
     {
-        return "EI Backfile";
+        return "Ei Backfile";
     }
 
     public int getMask()
