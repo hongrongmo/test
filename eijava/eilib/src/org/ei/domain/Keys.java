@@ -71,8 +71,9 @@ public interface Keys
     public static final Key COPYRIGHT_TEXT = new Key("CPRT");
     public static final Key CORPORATE_SOURCE_CODES = new Key("CAC","Corporate source codes");
     public static final Key COUNTRY = new Key("CO","Country");
+    public static final Key MULTIPLE_COUNTRY = new Key("COS","Country");
     public static final Key COUNTRY_OF_PUB = new Key("CPUB", "Country of publication");
-		public static final Key COUNTRY_CODES = new Key("SCC", "Geographical indexing");
+		public static final Key COUNTRY_CODES = new Key("DGS", "Geographical indexing");
 		public static final Key CHEMICALS = new Key("CMS", "Chemicals");
 		public static final Key CHEMICAL_ACRONS = new Key("CES", "Chemical Acronyms");
     public static final Key DERWENT_NO = new Key("DERW", "DERWENT accession no.");
@@ -305,9 +306,9 @@ public interface Keys
     public static final Key[] CV_HIGHLIGHT_KEYS = {Keys.CONTROLLED_TERMS,Keys.ORIGINAL_CONTROLLED_TERMS,Keys.MAIN_HEADING};
     public static final Key[] MH_HIGHLIGHT_KEYS = {Keys.MAIN_HEADING};
     public static final Key[] MJS_HIGHLIGHT_KEYS = {Keys.MAJOR_TERMS};
-    public static final Key[] LT_HIGHLIGHT_KEYS = {Keys.LINKED_TERMS, Keys.LINKED_SUB_TERM};  
-    public static final Key[] TEMPLATE_HIGHLIGHT_KEYS = {Keys.INDEXING_TEMPLATE};    
-    public static final Key[] MLT_HIGHLIGHT_KEYS = {Keys.MANUAL_LINKED_TERMS};    
+    public static final Key[] LT_HIGHLIGHT_KEYS = {Keys.LINKED_TERMS, Keys.LINKED_SUB_TERM};
+    public static final Key[] TEMPLATE_HIGHLIGHT_KEYS = {Keys.INDEXING_TEMPLATE};
+    public static final Key[] MLT_HIGHLIGHT_KEYS = {Keys.MANUAL_LINKED_TERMS};
     public static final Key[] AV_HIGHLIGHT_KEYS = {Keys.AVAILABILITY};
     public static final Key[] CO_HIGHLIGHT_KEYS = {Keys.COUNTRY};
     public static final Key[] TI_HIGHLIGHT_KEYS = {Keys.TITLE, TITLE_TRANSLATION};
