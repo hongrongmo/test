@@ -39,7 +39,8 @@ public class AuthorSearchField
 		for(int i=0; i<databases.length; i++)
 		{
 			if(databases[i].getMask() == 16384||
-			   databases[i].getMask() == 32768)
+			   databases[i].getMask() == 32768 ||
+			   databases[i].getMask() == 2048)
 			{
 				return true;
 			}
@@ -53,9 +54,13 @@ public class AuthorSearchField
 	{
 		for(int i=0; i<databases.length; i++)
 		{
-			if(databases[i].getMask() == 1||
-			   databases[i].getMask() == 2 ||
-			   databases[i].getMask() == 4 ||
+			if(databases[i].getMask() == 1   ||
+			   databases[i].getMask() == 2   ||
+			   databases[i].getMask() == 4   ||
+			   databases[i].getMask() == 64  ||
+			   databases[i].getMask() == 128 ||
+			   databases[i].getMask() == 256 ||
+			   databases[i].getMask() == 1024 ||
 			   databases[i].getMask() == 8192)
 			{
 				return true;
