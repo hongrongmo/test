@@ -714,7 +714,7 @@ function checkLastUpdates()
   {
     document.quicksearch.yearselect[0].checked = true;
     document.quicksearch.yearselect[0].focus();
-    alert("Last updates selection does not apply to EI Backfile.");
+    alert("Last updates selection does not apply to Ei Backfile.");
     return false;
   }
   else if((document.quicksearch.yearselect[1].checked == true) &&
@@ -722,7 +722,7 @@ function checkLastUpdates()
   {
     document.quicksearch.yearselect[0].checked = true;
     document.quicksearch.yearselect[0].focus();
-    alert("Last updates selection does not apply to EI Backfile and REFEREX collections.");
+    alert("Last updates selection does not apply to Ei Backfile and Referex collections.");
     return false;
   }
   else
