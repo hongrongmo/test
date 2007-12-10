@@ -30,7 +30,7 @@
       <xsl:apply-templates select="EDS"/>
       <xsl:apply-templates select="IVS"/>
 
-      <a CLASS="SmBlackText">
+      <span CLASS="SmBlackText">
       <xsl:choose>
           <xsl:when test ="string(NO_SO)">
               <xsl:text></xsl:text>
@@ -102,7 +102,7 @@
       <xsl:apply-templates select="NF"/>
       <!-- CBNB availability -->
       <xsl:apply-templates select="AV"/>
-      </a>
+      </span>
 
       <xsl:if test="$ascii='true'">
         <xsl:text>&#xD;&#xA;</xsl:text>
