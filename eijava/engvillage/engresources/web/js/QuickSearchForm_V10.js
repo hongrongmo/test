@@ -48,7 +48,7 @@ function generateSection(selecteddbMask)
    var index = 0;
 
   //All fields
-   if((selecteddbMask & REFEREX) != REFEREX)     
+   if((selecteddbMask & REFEREX) != REFEREX)
    {
       searchin[index++] = new Field("NO-LIMIT", "All fields");
    }
@@ -130,7 +130,7 @@ function generateSection(selecteddbMask)
       {
          searchin[index++] = new Field("AF", "Author affiliation/Assignee");
       }
-      
+
    }
 
    // TI
@@ -1871,21 +1871,21 @@ function checkLastUpdates()
   {
     document.quicksearch.yearselect[0].checked = true;
     document.quicksearch.yearselect[0].focus();
-    alert("Last updates selection does not apply to REFEREX collections.");
+    alert("Last updates selection does not apply to Referex collections.");
     return false;
   }
   else if((document.quicksearch.yearselect[1].checked == true) && (seldbmask == CBF))
   {
     document.quicksearch.yearselect[0].checked = true;
     document.quicksearch.yearselect[0].focus();
-    alert("Last updates selection does not apply to EI Backfile.");
+    alert("Last updates selection does not apply to Ei Backfile.");
     return false;
   }
   else if((document.quicksearch.yearselect[1].checked == true) && (seldbmask == (CBF + REFEREX)))
   {
     document.quicksearch.yearselect[0].checked = true;
     document.quicksearch.yearselect[0].focus();
-    alert("Last updates selection does not apply to EI Backfile and REFEREX collections.");
+    alert("Last updates selection does not apply to Ei Backfile and Referex collections.");
     return false;
   }
   else
