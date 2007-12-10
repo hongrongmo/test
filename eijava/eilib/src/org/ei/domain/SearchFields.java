@@ -20,8 +20,11 @@ public class SearchFields
 	public static SearchField CN = new SearchField("CN", "CODEN");
 	public static SearchField CC = new SearchField("CC", "Conference code");
 	public static SearchField CF = new SearchField("CF", "Conference information");
+	public static SearchField CE = new SearchField("CE", "Chemical Acronyms");
 	public static SearchField CT = new SearchField("CT", "Contract number");
 	public static SearchField CV = new SearchField("CV", "Controlled term");
+	public static SearchField CP = new SearchField("CP", "Companies");
+	public static SearchField CM = new SearchField("CM", "Chemicals");
 	public static SearchField CVP = new SearchField("CVP","Controlled term as a product");
 	public static SearchField CVA = new SearchField("CVA","Controlled term as a reagent");
 	public static SearchField CVN = new SearchField("CVN","Controlled term with no role");
@@ -30,6 +33,7 @@ public class SearchFields
 	public static SearchField CVMN = new SearchField("CVMN","Major term with no role");
 	public static SearchField CVMP = new SearchField("CVMP", "Major term as a product");
 	public static SearchField DPID = new SearchField("DPID", "Derwent IPC");
+	public static SearchField GD = new SearchField("GD", "Industrial Sectors");
 	public static SearchField PU = new SearchField("PU", "Country of application");
 	public static SearchField CO = new SearchField("CO", "Country of origin ");
 	public static SearchField DI = new SearchField("DI", "Discipline");
@@ -37,6 +41,7 @@ public class SearchFields
 	public static SearchField PA = new SearchField("PA", "Patent application date");
 	public static SearchField BN = new SearchField("BN", "ISBN");
 	public static SearchField SN = new SearchField("SN", "ISSN");
+	public static SearchField IC = new SearchField("IC", "SIC Codes");
 	public static SearchField LA = new SearchField("LA", "Language");
 	public static SearchField LT  = new SearchField("LT", "Linked term");
 	public static SearchField MH = new SearchField("MH", "Ei main heading");
@@ -86,7 +91,7 @@ public class SearchFields
 
 
 	public static final SearchField[] ALL_FIELDS = {
-		AB , AF , AG , AI , AJ, ALL , AN , AU , AV , BN , CC , CF , CI , CL , CN , CO , CR  , CT , CV , CVA , CVM , CVMA , CVMN , CVMP , CVN , CVP , DI , DT , FL , IP , KY , LA , LT , MH , MI , NI , NT , OC , PA , PAC , PAM , PAN , PC  , PCI , PCO , PD  , PE  , PEC , PFD , PI  , PID , DPID, PM  , PN  , PRN , PRC, PRD, PU , PUC , RGI , RN  , RO , SN , SO  , ST  , TI  , TR  , YR};
+		AB , AF , AG , AI , AJ, ALL , AN , AU , AV , BN , CC , CE, CF , CI , CL , CM, CN , CO , CP, CR , CT , CV , CVA , CVM , CVMA , CVMN , CVMP , CVN , CVP , DI , DT , FL , GD , IC, IP , KY , LA , LT , MH , MI , NI , NT , OC , PA , PAC , PAM , PAN , PC  , PCI , PCO , PD  , PE  , PEC , PFD , PI  , PID , DPID, PM  , PN  , PRN , PRC, PRD, PU , PUC , RGI , RN  , RO , SN , SO  , ST  , TI  , TR  , YR};
 
 	/*
 	* This method is used to an array of CustomeSearchFields based on
