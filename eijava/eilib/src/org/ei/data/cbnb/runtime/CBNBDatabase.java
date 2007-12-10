@@ -27,10 +27,12 @@ public class CBNBDatabase extends Database
 
     searchfield.put("ALL", "Y");
     searchfield.put("AB", "Y");
+    searchfield.put("AV", "Y");
     searchfield.put("CR", "Y");
+    searchfield.put("CE", "Y");
+    searchfield.put("CP", "Y");
     searchfield.put("CM", "Y");
     searchfield.put("CN", "Y");
-    searchfield.put("PE", "Y");
     searchfield.put("DT", "Y");
     searchfield.put("CV", "Y");
     searchfield.put("BN", "Y");
