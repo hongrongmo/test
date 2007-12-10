@@ -32,7 +32,10 @@ public class PaperChemDatabase extends Database {
 		searchfield.put("AU", "Y");
 		searchfield.put("AF", "Y");
 		searchfield.put("CN", "Y");
+		searchfield.put("CL", "Y");
+		searchfield.put("CC", "Y");
 		searchfield.put("CF", "Y");
+		searchfield.put("CP", "Y");
 		searchfield.put("CV", "Y");
 		searchfield.put("PU", "Y");
 		searchfield.put("DT", "Y");
@@ -44,6 +47,7 @@ public class PaperChemDatabase extends Database {
 		searchfield.put("PM", "Y");
 		searchfield.put("PN", "Y");
 		searchfield.put("ST", "Y");
+		searchfield.put("TR", "Y");
 		searchfield.put("KY", "Y");
 		searchfield.put("TI", "Y");
 		searchfield.put("FL", "Y");
