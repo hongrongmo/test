@@ -142,7 +142,7 @@ public class NavigatorCache
             {
               navstring = nav.getNavigatorByName(EiNavigator.IC).toString();
             }
-            pstmt.setString(intStmtIndex++, navstring);
+            pstmt.setString(intStmtIndex++, zipText(navstring));
 
             navstring = StringUtil.EMPTY_STRING;
             if(nav.getNavigatorByName(EiNavigator.PEC) != null)
@@ -266,7 +266,7 @@ public class NavigatorCache
                 sb.append(EiNavigator.NAVS_DELIM);
                 sb.append(unZipText(rset.getString("CO")));
                 sb.append(EiNavigator.NAVS_DELIM);
-                sb.append(rset.getString("PK"));
+                sb.append(unZipText(rset.getString("PK")));
                 sb.append(EiNavigator.NAVS_DELIM);
                 sb.append(rset.getString("PEC"));
                 sb.append(EiNavigator.NAVS_DELIM);
