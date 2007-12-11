@@ -170,15 +170,14 @@
 
 
 <xsl:template name="DEDUP-SCRIPT">
-<xsl:text disable-output-escaping="yes">
-
-<![CDATA[
-<xsl:comment>
 <script language="javascript">
-</script>
-</xsl:comment>
+<xsl:comment>
+<xsl:text disable-output-escaping="yes">
+<![CDATA[
 ]]>
 </xsl:text>
+// </xsl:comment>
+</script>
 </xsl:template>
 
 <xsl:template name="DUPRECORD">
