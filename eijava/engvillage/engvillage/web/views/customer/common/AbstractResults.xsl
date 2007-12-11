@@ -184,19 +184,19 @@
  <!-- EPT Templates -->
 
      <xsl:template match="PINFO">
-        <a CLASS="MedBlackText"><br/><b> Patent information:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/></a>
+        <br/><b> Patent information:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
     </xsl:template>
 
     <xsl:template match="PAPIM">
-        <a CLASS="MedBlackText"><b> Application information:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/></a>
+        <b> Application information:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
     </xsl:template>
 
     <xsl:template match="PIM">
-       <a CLASS="MedBlackText"><b> Priority information:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/> </a>
+       <b> Priority information:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
     </xsl:template>
 
     <xsl:template match="EASM">
-    	<a CLASS="MedBlackText"><b> Patent assignee: </b></a><xsl:apply-templates />
+    	<b> Patent assignee: </b><xsl:apply-templates />
     </xsl:template>
 
     <xsl:template match="EAS">
