@@ -523,9 +523,7 @@
     </xsl:template>
 
     <xsl:template match="LA">
-    <a CLASS="MedBlackText">
       <xsl:text> </xsl:text><b>Language:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text> </xsl:text>
-    </a>
     </xsl:template>
 
     <xsl:template match="SN">
