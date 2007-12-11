@@ -22,12 +22,16 @@ public class EltDatabase extends Database
 
 	  static {
 		  searchfield.put("ALL", "Y");
+		  searchfield.put("AB", "Y");
 		  searchfield.put("AF", "Y");
 		  searchfield.put("All", "Y");
 		  searchfield.put("AN", "Y");
 		  searchfield.put("AU", "Y");
+		  searchfield.put("BN", "Y");
 		  searchfield.put("CF", "Y");
+		  searchfield.put("CC", "Y");
 		  searchfield.put("CL", "Y");
+		  searchfield.put("CO", "Y");
 		  searchfield.put("CR", "Y");
 		  searchfield.put("CV", "Y");
 		  searchfield.put("CVA", "Y");
