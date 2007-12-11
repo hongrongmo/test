@@ -403,9 +403,7 @@
     </xsl:template>
  <!-- upt fields  -->
     <xsl:template match="PAP">
-    <a CLASS="MedBlackText">
     <br/><b> Patent number:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
-    </a>
     </xsl:template>
 
     <xsl:variable name ="PPN" >
@@ -440,24 +438,18 @@
       <xsl:if test="(not($PAP) and not($PPN))" >
         <br/>
       </xsl:if>
-      <a CLASS="MedBlackText">
       <b> Application number:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
-     </a>
     </xsl:template>
 
     <xsl:template match="PM">
-    <a CLASS="MedBlackText">
       <xsl:if test="(not($PAP) and not($PPN) and not($PAN))" >
         <br/>
       </xsl:if>
       <b> Publication Number:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
-    </a>
     </xsl:template>
-      <xsl:template match="PM1">
-      <a CLASS="MedBlackText">
-        <b>Publication Number:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
-       </a>
-      </xsl:template>
+    <xsl:template match="PM1">
+      <b>Publication Number:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
+    </xsl:template>
 
     <xsl:variable name = "IPC">
       <xsl:value-of select = "IPC"/>
@@ -477,21 +469,16 @@
     <!-- upt fields -->
 
     <xsl:template match="PFD">
-    <a CLASS="MedBlackText"><xsl:text>&#xD;&#xA;</xsl:text><br/>
+    <xsl:text>&#xD;&#xA;</xsl:text><br/>
       <b> Filing date:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
-    </a>
     </xsl:template>
     <xsl:template match="PPD">
-     <a CLASS="MedBlackText">
       <b> Publication date:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
-     </a>
     </xsl:template>
 
     <!-- upt pub date -->
     <xsl:template match="UPD">
-     <a CLASS="MedBlackText">
       <b> Publication date:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
-     </a>
     </xsl:template>
 
     <xsl:template match="YR">
@@ -536,10 +523,11 @@
 
     <!-- CBNB Document type, Availability and Scope -->
     <xsl:template match="DT">
-      <br/><a class="SmBlackText"><b><xsl:value-of select="@label"/>:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/></a><xsl:text> </xsl:text>
+      <br/><b><xsl:value-of select="@label"/>:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text> </xsl:text>
     </xsl:template>
+    <!-- AV may have <a> anchor in it so we cannot have a nested anchor so we use a span here -->
     <xsl:template match="AV|SC">
-      <a class="SmBlackText"><b><xsl:value-of select="@label"/>:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/></a><xsl:text> </xsl:text>
+      <span class="SmBlackText"><b><xsl:value-of select="@label"/>:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/></span><xsl:text> </xsl:text>
     </xsl:template>
 
     <xsl:template match="CN">
