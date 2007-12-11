@@ -29,7 +29,7 @@
       <xsl:apply-templates select="EDS"/>
       <xsl:apply-templates select="IVS"/>
 
-      <a CLASS="SmBlackText">
+      <span CLASS="SmBlackText">
       <xsl:choose>
         <xsl:when test ="string(NO_SO)">
           <xsl:text></xsl:text>
@@ -138,7 +138,7 @@
       <xsl:apply-templates select="CPUB"/>
 
       <xsl:apply-templates select="FTTJ"/>
-      </a>
+      </span>
       <xsl:apply-templates select="DT"/>
       <xsl:apply-templates select="AV"/>
       <xsl:apply-templates select="SC"/>
