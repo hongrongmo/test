@@ -517,7 +517,7 @@ public class ResultNavigator
           {
             fastnavigators.remove(anav);
 
-            EiNavigator pecnav = copyNavigator(anav, new EiNavigator(EiNavigator.RO));
+            EiNavigator pecnav = copyNavigator(anav, new RONavigator());
 
             fastnavigators.add(pecnav);
           }
@@ -1133,7 +1133,6 @@ public class ResultNavigator
 
     private EiNavigator copyNavigator(EiNavigator anav, EiNavigator newnav)
     {
-
       List copiedmods = new ArrayList();
       Iterator itrMods = anav.getModifiers().iterator();
       while (itrMods.hasNext()) {
@@ -1142,25 +1141,7 @@ public class ResultNavigator
         if((amod != null) && (amod.getLabel().length() != 0))
         {
           EiModifier newmod = null;
-          // This is a hack - it should not be here!
-          // but it is too late. The PUC nav is clobbering the title so
-          // we have t set the titles here when copying the Navigator
-      		if(newnav.getName().equalsIgnoreCase(EiNavigator.RO)) {
-            String title = null;
-            if(amod.getValue().toUpperCase().equalsIgnoreCase("R")) {
-              title = "Reagent";
-            }
-            else if(amod.getValue().toUpperCase().equalsIgnoreCase("P")) {
-              title = "Product";
-            }
-            if(amod.getValue().toUpperCase().equalsIgnoreCase("N")) {
-              title = "No Role";
-            }
-            newmod = newnav.createModifier(amod.getCount(), title, amod.getValue());
-        	}
-        	else {
-            newmod = newnav.createModifier(amod.getCount(), amod.getLabel(), amod.getValue());
-          }
+          newmod = newnav.createModifier(amod.getCount(), amod.getLabel(), amod.getValue());
           if(newmod != null)
           {
             copiedmods.add(newmod);
