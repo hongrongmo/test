@@ -235,9 +235,17 @@
 		]]>
 
 		</xsl:text>
+		
+		<!-- javascript for Encompass fileds -->
+		
+    	<xsl:variable name="ENCOMPASS-FIELDS-JS">
+    		<xsl:value-of select="/PAGE/ENCOMPASS-FIELDS-JS" />
+    	</xsl:variable>
+ 		<xsl:if test="('LTH' or 'LSTM' or  'MLT' or  'ATM')" >
+    		<xsl:value-of select="$ENCOMPASS-FIELDS-JS" disable-output-escaping="yes"/>
+    	</xsl:if>
 
-		<!-- End of javascript -->
-
+	<!-- End of javascript -->
     </head>
       <body bgcolor="#FFFFFF" topmargin="0" marginheight="0" marginwidth="0">
         <xsl:apply-templates select="HEADER">
