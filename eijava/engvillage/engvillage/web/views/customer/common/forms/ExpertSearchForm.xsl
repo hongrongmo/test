@@ -92,13 +92,13 @@
                     <tr>
                       <td valign="top" width="3"><img src="/engresources/images/s.gif" width="3"/></td>
                       <td valign="top"><a CLASS="SmBlackText">
-                     --> 
+                     -->
                       <xsl:value-of select="//NEWS-TEXT" disable-output-escaping="yes"/>
                       <!--
                       </a></td>
                       <td valign="top" width="2"><img src="/engresources/images/s.gif" width="2"/></td>
-                      
-                      
+
+
                     </tr>
                     -->
                     <!--
@@ -111,9 +111,9 @@
                     <tr>
                         <td valign="top" width="3"><img src="/engresources/images/s.gif" width="3"/></td>
                         <td valign="top" align="right">
-			 				<a class="MedBlueLink" href="javascript:makeUrl('Content_Resources_Introduction.htm')">
-			  				<b>More</b>
-			  				</a>
+                          <a class="MedBlueLink" href="javascript:makeUrl('Content_Resources_Introduction.htm')">
+                          <b>More</b>
+                          </a>
                         </td>
                         <td valign="top" width="2"><img src="/engresources/images/s.gif" width="2"/></td>
                     </tr>
@@ -256,33 +256,31 @@
                                 </a>
                               </input>
                               <a class="SmBlackText">&#160;<label for="rdupdt">Updates</label></a>
-				 <a href="javascript:makeUrl('Date_Limits.htm')">
-				<img src="/engresources/images/blue_help1.gif" border="0"/>
-				</a>
+                               <a href="javascript:makeUrl('Date_Limits.htm')">
+                              <img src="/engresources/images/blue_help1.gif" border="0"/>
+                              </a>
                             </td>
                           </tr>
                         </table>
                       </td>
                       <td valign="top" width="15"><img src="/engresources/images/s.gif" width="15"/></td>
                       <td valign="top">
-
-                            <!-- jam - "Turkey" added context sensitive help icon to relevance -->
-                            <input type="radio" name="sort" id="chkrel" value="relevance">
-                              <xsl:if test="($SORT-OPTION='relevance') or not(($SORT-OPTION='publicationYear') or ($SORT-OPTION='yr'))">
-                                <xsl:attribute name="checked"/>
-                              </xsl:if>
-                            </input>
-                            <a CLASS="SmBlackText"><label for="chkrel">Relevance</label></a>&#160;
-			    <a href="javascript:makeUrl('Sorting_from_the_Search_Form.htm')">
-				<img src="/engresources/images/blue_help1.gif" border="0"/>
-			    </a>
-                            <input type="radio" name="sort" id="chkyr" value="yr">
-                              <xsl:if test="($SORT-OPTION='publicationYear') or ($SORT-OPTION='yr')">
-                                <xsl:attribute name="checked"/>
-                              </xsl:if>
-                            </input>
-                            <a CLASS="SmBlackText"><label for="chkyr">Publication year</label></a>
-
+                        <!-- jam - "Turkey" added context sensitive help icon to relevance -->
+                        <input type="radio" name="sort" id="chkrel" value="relevance">
+                          <xsl:if test="($SORT-OPTION='relevance') or not(($SORT-OPTION='publicationYear') or ($SORT-OPTION='yr'))">
+                            <xsl:attribute name="checked"/>
+                          </xsl:if>
+                        </input>
+                        <a CLASS="SmBlackText"><label for="chkrel">Relevance</label></a>&#160;
+                        <a href="javascript:makeUrl('Sorting_from_the_Search_Form.htm')">
+                        <img src="/engresources/images/blue_help1.gif" border="0"/>
+                        </a>
+                        <input type="radio" name="sort" id="chkyr" value="yr">
+                          <xsl:if test="($SORT-OPTION='publicationYear') or ($SORT-OPTION='yr')">
+                            <xsl:attribute name="checked"/>
+                          </xsl:if>
+                        </input>
+                        <a CLASS="SmBlackText"><label for="chkyr">Publication year</label></a>
                         <br/>
                         <a CLASS="SmBlackText">
                         <input type="checkbox" id="chkstm" name="autostem" >
@@ -294,8 +292,8 @@
                         </a>
                         &#160;&#160;
                         <a href="javascript:makeUrl('Autostemming.htm')">
-			<img src="/engresources/images/blue_help1.gif" border="0"/>
-			</a>
+                        <img src="/engresources/images/blue_help1.gif" border="0"/>
+                        </a>
                       </td>
                     </tr>
                     <tr>
@@ -318,26 +316,33 @@
         <!-- Start of table for lookup indexes -->
         <td valign="top" align="right" width="120" bgcolor="#C3C8D1">
           <div id="browseindexes">
-          <!-- Start of Right most table for lookup or login -->
-          <table border="0" width="130" align="right" cellspacing="0" cellpadding="0">
-             <tr><td valign="top" height="20" colspan="4"><img src="/engresources/images/spacer.gif" height="20" border="0"/></td></tr>
-             <tr><td valign="top" bgcolor="#3173B5" height="15" colspan="4"><a CLASS="LgWhiteText"><b>&#160; Browse Indexes</b></a> &#160; 
-             <a href="javascript:makeUrl('Browse_Indexes.htm')">
-	     	<img src="/engresources/images/help_white.gif" border="0"/>
-	     </a></td></tr>
-             <tr><td valign="top" width="1" bgcolor="#3173B5"><img src="/engresources/images/spacer.gif" border="0" width="1"/></td>
-                 <td width="4" bgcolor="#FFFFFF"><img src="/engresources/images/spacer.gif" width="4"/></td>
-                 <td width="120" valign="top" bgcolor="#FFFFFF">
-                   <div id="lookups"></div>
-                 </td>                 
-                    <td valign="top" width="1" bgcolor="#3173B5"><img src="/engresources/images/spacer.gif" width="1"/></td>
-                    <td valign="top" width="1" bgcolor="#C3C8D1"><img src="/engresources/images/spacer.gif" width="1"/></td></tr>
-              <tr><td valign="top" colspan="3" height="1" bgcolor="#3173B5"><img src="/engresources/images/spacer.gif" height="1"/></td></tr>
-             </table>
-             </div>
-             </td>
-             <!-- End of Right most table for lookup or login -->
-           <td valign="top" width="5" bgcolor="#C3C8D1"><img src="/engresources/images/s.gif" width="5"/></td></tr>
+            <!-- Start of Right most table for lookup -->
+            <table border="0" width="130" align="right" cellspacing="0" cellpadding="0">
+              <tr>
+                <td valign="top" height="20" colspan="5"><img src="/engresources/images/s.gif" height="20"/></td>
+              </tr>
+              <tr>
+                <td valign="top" bgcolor="#3173B5" height="15" colspan="5">
+                  &#160; <a CLASS="LgWhiteText"><b>Browse Indexes</b></a> &#160;
+                  <a href="javascript:makeUrl('Browse_Indexes.htm')"><img src="/engresources/images/help_white.gif" border="0"/></a>
+                </td>
+              </tr>
+              <tr>
+                <td width="1" bgcolor="#3173B5"><img src="/engresources/images/s.gif" width="1"/></td>
+                <td width="4" bgcolor="#FFFFFF"><img src="/engresources/images/s.gif" width="4"/></td>
+                <td width="120" bgcolor="#FFFFFF">
+                    <div id="lookups"> &#160; <br/> &#160; </div>
+                </td>
+                <td width="4" bgcolor="#FFFFFF"><img src="/engresources/images/s.gif" width="4"/></td>
+                <td width="1" bgcolor="#3173B5"><img src="/engresources/images/s.gif" width="1"/></td>
+              </tr>
+              <tr><td valign="top" colspan="5" height="1" bgcolor="#3173B5"><img src="/engresources/images/s.gif" height="1"/></td></tr>
+            </table>
+            <!-- End of Right most table for lookup -->
+          </div>
+        </td>
+        <td valign="top" width="5" bgcolor="#C3C8D1"><img src="/engresources/images/s.gif" width="5"/></td>
+      </tr>
        <tr><td valgn="top" colspan="4" height="15" bgcolor="#C3C8D1"><img src="/engresources/images/s.gif" height="15"/></td></tr>
        <!-- Start of table for Expert Search Codes -->
        <tr><td valign="top" colspan="4" bgcolor="#C3C8D1">
@@ -350,7 +355,7 @@
         <tr><td valign="top" height="10" bgcolor="#8294B4" colspan="3"><a CLASS="LgWhiteText"><b>&#160; Search Codes</b></a> &#160;
         <a href="javascript:makeUrl('Expert_Search_Fields_and_Fields__Codes.htm')">
        	   <img src="/engresources/images/blue_help1.gif" border="0"/>
-	</a>
+        </a>
         </td></tr>
         <tr><td valign="top" bgcolor="#000000" height="1" colspan="3"><img src="/engresources/images/s.gif" height="1"/></td></tr>
         <tr><td valign="top" width="4"><img src="/engresources/images/s.gif" width="4"/></td>
@@ -394,14 +399,14 @@
                     <a class="SmBlackText">
                       <xsl:value-of select="@LABEL"/>
                       <xsl:if test="string(DB)">
-		         <a class="SmBlackText">&#160;(</a>
-		         <xsl:for-each select="DB">
-		         <span class="BoldBlueText"><xsl:value-of select="."/></span>
-		         <xsl:if test="not(position()=last())"><A CLASS="SmBlackText"> , </A></xsl:if>
-		         </xsl:for-each>
-		         <a class="SmBlackText">)</a>
-		      </xsl:if>
-		    </a>
+                       <a class="SmBlackText">&#160;(</a>
+                       <xsl:for-each select="DB">
+                       <span class="BoldBlueText"><xsl:value-of select="."/></span>
+                       <xsl:if test="not(position()=last())"><A CLASS="SmBlackText"> , </A></xsl:if>
+                       </xsl:for-each>
+                       <a class="SmBlackText">)</a>
+                    </xsl:if>
+                  </a>
                   </td>
                   <td valign="top">&#160;&#160;&#160;</td>
                   <td valign="top">
