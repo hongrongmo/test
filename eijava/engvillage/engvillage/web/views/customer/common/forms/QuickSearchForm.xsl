@@ -581,7 +581,7 @@
                       <tr>
                         <td valign="top" bgcolor="#3173B5" height="15" colspan="5">
                           &#160; <a CLASS="LgWhiteText"><b>Browse Indexes</b></a> &#160;
-                          <a href="javascript:makeUrl('Browse_Indexes.htm')"><img src="/engresources/images/help_white.gif" border="0"/>            		        </a>
+                          <a href="javascript:makeUrl('Browse_Indexes.htm')"><img src="/engresources/images/help_white.gif" border="0"/></a>
                         </td>
                       </tr>
                       <tr>
@@ -595,8 +595,8 @@
                       </tr>
                       <tr><td valign="top" colspan="5" height="1" bgcolor="#3173B5"><img src="/engresources/images/s.gif" height="1"/></td></tr>
                     </table>
+                    <!-- End of Right most table for lookup -->
                   </div>
-                <!-- End of Right most table for lookup -->
                 </td>
                 <td valign="top" width="5" bgcolor="#C3C8D1"><img src="/engresources/images/s.gif" width="5"/></td>
               </tr>
