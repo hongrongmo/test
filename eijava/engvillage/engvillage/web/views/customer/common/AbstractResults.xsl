@@ -138,10 +138,11 @@
       <xsl:apply-templates select="CPUB"/>
 
       <xsl:apply-templates select="FTTJ"/>
-      </span>
+      <!-- moved DT, SC and AV for CBNB inot 'Citation' area of abstract view -->
       <xsl:apply-templates select="DT"/>
       <xsl:apply-templates select="AV"/>
       <xsl:apply-templates select="SC"/>
+      </span>
 
       <xsl:apply-templates select="AB"/>
       <xsl:apply-templates select="BAB"/>
