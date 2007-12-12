@@ -634,26 +634,17 @@
       <xsl:apply-templates/>
     </xsl:template>
 
-
     <xsl:template match="CR">
+      <xsl:call-template name="LINK">
+        <xsl:with-param name="TERM"><xsl:value-of select="normalize-space(text())"/></xsl:with-param>
+        <xsl:with-param name="FIELD">CR</xsl:with-param>
+      </xsl:call-template>
+      <span CLASS="SmBlackText"><xsl:value-of select="crlkup:getName(normalize-space(text()))" disable-output-escaping="yes"/></span>
+      <xsl:if test="position()!=last()">
+        <a class="SmBlkText">&#160; - &#160;</a>
+      </xsl:if>
+    </xsl:template>
 
-            <xsl:call-template name="LINK">
-           <xsl:with-param name="TERM"><xsl:value-of select="normalize-space(text())"/></xsl:with-param>
-           <xsl:with-param name="FIELD">CR</xsl:with-param>
-
-       </xsl:call-template>
-       <!--
-            <span CLASS="MedBlackText"><xsl:value-of select="normalize-space(text())"/></span>
-           <img src="/engresources/images/plus.gif" border="0"/>
-        -->
-           <xsl:text> </xsl:text><span CLASS="SmBlackText">
-           <xsl:value-of select="crlkup:getName(normalize-space(text()))" disable-output-escaping="yes"/></span>
-           <xsl:if test="position()!=last()">
-           <a class="SmBlkText">&#160; - &#160;</a>
-           </xsl:if>
-
-  </xsl:template>
-<!--  end  -->
 
     <xsl:template match="FLS">
       <xsl:choose>
