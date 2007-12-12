@@ -47,10 +47,32 @@ public class ConvertModifierTitle
 				    title = ResultNavigator.REMOVE_MODIFIER;
 				}
 			}
+			else if(navName.equalsIgnoreCase(EiNavigator.PAC))
+			{
+				title = dbConfig.getAuthorityCode(code.toUpperCase());
+				if(title == null)
+				{
+				    title = ResultNavigator.REMOVE_MODIFIER;
+				}
+			}
+			// Roles are stored in the PUC navigator
+			else if(navName.equalsIgnoreCase(EiNavigator.RO))
+			{
+			  title = null;
+				if(code.toUpperCase().equalsIgnoreCase("R")) {
+				  title = "Reagent";
+				}
+				else if(code.toUpperCase().equalsIgnoreCase("P")) {
+				  title = "Product";
+				}
+				if(code.toUpperCase().equalsIgnoreCase("N")) {
+				  title = "No Role";
+				}
+			}
 			else if(navName.equalsIgnoreCase(EiNavigator.AU))
 			{
 
-                // look a string, ed*, surrounded by () or []
+        // look a string, ed*, surrounded by () or []
 				if(p5.match("m/(\\[|\\()ed[^\\1].*(\\]|\\))/i",code))
 				{
 				    //log.info(" REMOVING " + code);
@@ -103,9 +125,9 @@ public class ConvertModifierTitle
 				title = p5.substitute("s#C\\.\\/O\\.#c\\/o#",title);
 			}
 			else if(navName.equalsIgnoreCase(EiNavigator.PID) || navName.equalsIgnoreCase(EiNavigator.PEC))
-            {
+      {
    				title = code.toUpperCase();
-            }
+      }
 			else if(navName.equalsIgnoreCase(EiNavigator.PN)
 					|| navName.equalsIgnoreCase(EiNavigator.ST)
 					|| navName.equalsIgnoreCase(EiNavigator.FL)
@@ -115,7 +137,6 @@ public class ConvertModifierTitle
 					|| navName.equalsIgnoreCase(EiNavigator.CO)
 					|| navName.equalsIgnoreCase(EiNavigator.LA)
 					|| navName.equalsIgnoreCase(EiNavigator.PK)
-					|| navName.equalsIgnoreCase(EiNavigator.PAC)
 					|| navName.equalsIgnoreCase(EiNavigator.PCI)
 					|| navName.equalsIgnoreCase(EiNavigator.PUC))
 			{
@@ -124,20 +145,14 @@ public class ConvertModifierTitle
                 // (\\u not supported in java 1.4 regexp pkg)
                 title = p5.substitute("s/(\\w+)/\\u$1/g",code);
 
-//				if(p5.match("m/\\w(\\()\\w/i",title))
-//              {
-//              	title = p5.substitute("s/(\\w)(\\()(\\w)/$1 $2$3/g",title);
-//				    log.info(" ADDED SPACE " + title);
-//              }
-            }
+      }
 			else
 			{
 				title = code;
 			}
 		}
 
-		//log.info(" navName:[" + navName + "] title:" + title + " code:" + code);
-
+    //System.out.println(" navName:[" + navName + "] title:" + title + " code:" + code);
 		return title;
 	}
 
