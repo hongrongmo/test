@@ -2,7 +2,8 @@ package org.ei.data;
 
 import java.util.*;
 
-import org.apache.oro.text.perl.Perl5Util;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class CRNLookup
 {
@@ -1211,54 +1212,40 @@ public class CRNLookup
         htCrns.put("7758-87-4", "hydroxyapatite");
     }
 
+    private static final Pattern casregistryno = Pattern.compile("([0-9]*-[0-9]*-[0-9]*)");
+    private static final Pattern Chimica_casregistryno = Pattern.compile("\\sand\\s");
+
+    // This method looks up a value based on the passed in registry number and appends a string to the end of the passed in value and returns a string
+    // i.e. 123-45-6786 returns 123-45-6786 (acid)
     public static String addName(String crn)
     {
-
-        Perl5Util perl = new Perl5Util();
-        StringBuffer name = new StringBuffer();
-        String sVal = "";
-
-        if (perl.match("/[0-9]*-[0-9]*-[0-9]*/", crn))
-        {
-            sVal = perl.getMatch().toString().trim();
+        String crnName = CRNLookup.getName(crn);
+        if(crnName != null && !crnName.equals("")) {
+          crn = crn.concat(crnName);
         }
 
-        String crnName = (String) htCrns.get(sVal);
-
-        if (crnName == null)
-        {
-            name.append(crn);
-        }
-        else
-        {
-
-            name.append(crn).append(" ").append("(").append(crnName).append(")");
-        }
-
-        return name.toString();
+        return crn;
     }
-    
+
+    // This method looks up a value based on the passed in registry number and returns a string in parentheses
+    // i.e. 123-45-6786 returns (acid)
+    // Called in AbstractResults.xsl
     public static String getName(String crn)
     {
+        StringBuffer name = new StringBuffer();
 
-        Perl5Util perl = new Perl5Util();
-        StringBuffer name = new StringBuffer(); 
-        String sVal = "";
-
-        if (perl.match("/[0-9]*-[0-9]*-[0-9]*/", crn))
-        {
-            sVal = perl.getMatch().toString().trim();
+        Matcher m = Chimica_casregistryno.matcher(crn);
+        if (!m.find()) {
+          m = casregistryno.matcher(crn);
+          if (m.find()) {
+            String sVal = m.group(1);
+            String crnName = (String) htCrns.get(sVal);
+            if (crnName != null) {
+                name.append(" (").append(crnName).append(")");
+            }
+          }
         }
-
-        String crnName = (String) htCrns.get(sVal);
-        
-        if (crnName != null)
-        {
-            name.append("(").append(crnName).append(")");           
-            return name.toString();
-        }
-
-        return "";
+        return name.toString();
     }
-    
+
 }
