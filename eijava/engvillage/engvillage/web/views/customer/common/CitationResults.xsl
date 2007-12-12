@@ -208,8 +208,8 @@
       </xsl:if>
     </xsl:template>
 
-    <xsl:template match="PAS">
-        <b> Assignee:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
+    <xsl:template match="PASM">
+	<b> Assignee:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
     </xsl:template>
 
     <xsl:template match="EASM">
