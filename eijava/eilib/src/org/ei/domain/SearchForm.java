@@ -74,7 +74,7 @@ public class SearchForm {
         }
         else if((selecteddbMask & DatabaseConfig.CBN_MASK) == DatabaseConfig.CBN_MASK)
 		{
-		     sectiontype.put("KY", "Title/Abstract");
+		     sectiontype.put("KY", "Subject/Abstract");
         }
         else if((selecteddbMask & DatabaseConfig.EPT_MASK) == DatabaseConfig.EPT_MASK)
 		{
