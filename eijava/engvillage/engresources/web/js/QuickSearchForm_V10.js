@@ -1409,6 +1409,13 @@ function clearAlldb()
 
     while(adiv.firstChild) adiv.removeChild(adiv.firstChild);
 
+    var uldiv = document.createElement("ul");
+    uldiv.style.listStyleType = "none";
+    uldiv.style.margin = "0";
+    uldiv.style.padding = "0";
+    uldiv.style.marginBottom = "1px";
+    adiv.appendChild(uldiv);
+
     if((selectedDbMask & REFEREX) == REFEREX)
     {
       bdiv.style.display = "none";
@@ -1451,8 +1458,9 @@ function clearAlldb()
         link.appendChild(document.createTextNode("Author/Inventor"));
       }
 
-      adiv.appendChild(link);
-      adiv.appendChild(document.createElement("br"));
+      lidiv = document.createElement("li");
+      lidiv.appendChild(link);
+      uldiv.appendChild(lidiv);
     }
 
 
@@ -1480,20 +1488,23 @@ function clearAlldb()
         link.appendChild(document.createTextNode("Affiliation/Assignee"));
       }
 
-      adiv.appendChild(link);
-      adiv.appendChild(document.createElement("br"));
+      lidiv = document.createElement("li");
+      lidiv.appendChild(link);
+      uldiv.appendChild(lidiv);
     }
 
     //CT
     if((selectedDbMask & US_PATENTS) != US_PATENTS &&
        (selectedDbMask & EU_PATENTS) != EU_PATENTS)
     {
-        link = newLookupLink();
-        link.onclick=OpenLookup_CVS;
+      link = newLookupLink();
+      link.onclick=OpenLookup_CVS;
 
-        link.appendChild(document.createTextNode("Controlled term"));
-        adiv.appendChild(link);
-        adiv.appendChild(document.createElement("br"));
+      link.appendChild(document.createTextNode("Controlled term"));
+
+      lidiv = document.createElement("li");
+      lidiv.appendChild(link);
+      uldiv.appendChild(lidiv);
     }
 
     //ST
@@ -1502,12 +1513,14 @@ function clearAlldb()
        (selectedDbMask & EPT) != EPT &&
        (selectedDbMask & NTIS) != NTIS)
     {
-        link = newLookupLink();
-        link.onclick=OpenLookup_ST;
+      link = newLookupLink();
+      link.onclick=OpenLookup_ST;
 
-        link.appendChild(document.createTextNode("Serial title"));
-        adiv.appendChild(link);
-        adiv.appendChild(document.createElement("br"));
+      link.appendChild(document.createTextNode("Serial title"));
+
+      lidiv = document.createElement("li");
+      lidiv.appendChild(link);
+      uldiv.appendChild(lidiv);
     }
 
     //PB
@@ -1519,12 +1532,14 @@ function clearAlldb()
        (selectedDbMask & CHM) != CHM &&
        (selectedDbMask & EPT) != EPT)
     {
-        link = newLookupLink();
-        link.onclick=OpenLookup_PN;
+      link = newLookupLink();
+      link.onclick=OpenLookup_PN;
 
-        link.appendChild(document.createTextNode("Publisher"));
-        adiv.appendChild(link);
-        adiv.appendChild(document.createElement("br"));
+      link.appendChild(document.createTextNode("Publisher"));
+
+      lidiv = document.createElement("li");
+      lidiv.appendChild(link);
+      uldiv.appendChild(lidiv);
     }
 
     //PC
@@ -1538,13 +1553,17 @@ function clearAlldb()
        (selectedDbMask & ELT) != ELT &&
        (selectedDbMask & CHM) != CHM)
     {
-        link = newLookupLink();
-        link.onclick=OpenLookup_PC
+      link = newLookupLink();
+      link.onclick=OpenLookup_PC
 
-        link.appendChild(document.createTextNode("Country"));
-        adiv.appendChild(link);
-        adiv.appendChild(document.createElement("br"));
+      link.appendChild(document.createTextNode("Country"));
+
+      lidiv = document.createElement("li");
+      lidiv.appendChild(link);
+      uldiv.appendChild(lidiv);
     }
+
+    adiv.appendChild(document.createElement("br"));
 
   }
 
@@ -1605,8 +1624,6 @@ function updateUI(dbMask, sYear, strYear, eYear, sec1, sec2, sec3, dtype, trtype
     if(!(dbMask == 8) && !(dbMask == 16))
     {
         flipImage(dbMask);
-        var adiv = document.getElementById("lookups");
-        adiv.appendChild(document.createElement("br"));
 
         searchin = generateSection(dbMask);
         doctypes = generateDoctypes(dbMask);
