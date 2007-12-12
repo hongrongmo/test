@@ -119,8 +119,6 @@ public class SearchFields
 			ArrayList databaseList = new ArrayList();
 			for(int c=0; c<databases.length; c++)
 			{
-				System.out.println("Database:"+databases[c].getID());
-
 				if(databases[c].hasField(sf, userMaskMax))
 				{
 					databaseList.add(databases[c]);
