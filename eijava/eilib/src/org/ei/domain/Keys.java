@@ -109,7 +109,6 @@ public interface Keys
     public static final Key E_ISSN  = new Key("E_ISSN","Electronic ISSN");
     public static final Key ISSUE = new Key("IS", "Issue");
     public static final Key ISSUE_DATE = new Key("SD","Issue date");
-    public static final Key ISSUE_DATE_PAPER = new Key("PSD", "Issue date");
     public static final Key ISSUING_ORG = new Key("IORG","Issuing organization");
     public static final Key I_PUBLISHER = new Key("I_PN", "Publisher");
     public static final Key JOURNAL_ANNOUNCEMENT = new Key("VI","Journal announcement");
