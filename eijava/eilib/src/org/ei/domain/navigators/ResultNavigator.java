@@ -214,9 +214,13 @@ public class ResultNavigator
         if(anav != null)
         {
           //if((mask :: cpx || mask :: cbf || mask :: ins || mask :: nti || mask :: geo || mask :: cbn || mask :: chm || mask :: pch || mask :: elt || mask :: ept) && (mask !: upa || mask !: eup || mask !: pag))
-          if((m_compendex || m_inspec || m_ntis || m_geobase || m_cbnb || m_chimica || m_paperchem || m_encompasslit || m_encompasspat) && !(m_uspatents || m_eupatents || m_books ))
+          if((m_compendex || m_inspec || m_ntis || m_geobase) && !(m_cbnb || m_chimica || m_paperchem || m_encompasslit || m_encompasspat || m_uspatents || m_eupatents || m_books ))
           {
             anav.setDisplayname("Controlled vocabulary");
+          }
+          else if((m_compendex || m_inspec || m_ntis || m_geobase || m_cbnb || m_chimica || m_paperchem || m_encompasslit || m_encompasspat) && !(m_uspatents || m_eupatents || m_books ))
+          {
+            anav.setDisplayname("Controlled terms");
           }
           else
           {
