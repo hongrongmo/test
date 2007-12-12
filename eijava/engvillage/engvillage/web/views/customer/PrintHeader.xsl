@@ -17,6 +17,7 @@
     <head>
         <title>Print Records</title>
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
+        <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/encompassFields.js"/>
     </head>
 
     <xsl:text disable-output-escaping="yes">
