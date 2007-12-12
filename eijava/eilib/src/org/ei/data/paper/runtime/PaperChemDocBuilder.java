@@ -2097,7 +2097,10 @@ public class PaperChemDocBuilder implements DocumentBuilder
                 ht.put(Keys.COPYRIGHT_TEXT,new XMLWrapper (Keys.COPYRIGHT_TEXT, PaperChemDocBuilder.PAPER_TEXT_COPYRIGHT));
 
                 // Always needed for IVIP
-                ht.put(Keys.ISSN,new ISSN (StringUtil.replaceNullWithEmptyString(rset.getString("SN"))));
+				if(rset.getString("SN") != null)
+				{
+					ht.put(Keys.ISSN,new ISSN (rset.getString("SN")));
+				}
 
                 String strTitle = StringUtil.EMPTY_STRING;
 
