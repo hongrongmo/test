@@ -104,7 +104,7 @@ public class PaperChemDocBuilder implements DocumentBuilder
 	        Keys.SOURCE,
 	        Keys.PUBLICATION_YEAR_PAPER,
 	        Keys.PUBLICATION_DATE_PAPER,
-	        Keys.ISSUE_DATE_PAPER,
+          Keys.ISSUE_DATE,
 	        Keys.PAGE_RANGE,
 	        Keys.REPORT_NUMBER_PAPER,
 	        Keys.MONOGRAPH_TITLE,
@@ -179,7 +179,7 @@ public class PaperChemDocBuilder implements DocumentBuilder
 	        Keys.COPYRIGHT_TEXT,
 	        Keys.PROVIDER };
 	private static final Key[] RIS_KEYS = { Keys.RIS_TY, Keys.RIS_LA , Keys.RIS_N1 , Keys.RIS_TI , Keys.RIS_T1 , Keys.RIS_BT , Keys.RIS_JO ,Keys.RIS_T3 , Keys.RIS_AUS , Keys.RIS_AD , Keys.RIS_EDS , Keys.RIS_VL , Keys.RIS_IS , Keys.RIS_PY , Keys.RIS_AN , Keys.RIS_SP , Keys.RIS_EP, Keys.RIS_SN ,  Keys.RIS_S1 , Keys.RIS_MD ,Keys.RIS_CY , Keys.RIS_PB,  Keys.RIS_N2 , Keys.RIS_KW , Keys.RIS_CVS , Keys.RIS_FLS , Keys.RIS_DO };
-	private static final Key[] XML_KEYS = { Keys.ISSN , Keys.MAIN_HEADING , Keys.NO_SO , Keys.MONOGRAPH_TITLE , Keys.PUBLICATION_YEAR  , Keys.CONTROLLED_TERM , Keys.ISBN , Keys.AUTHORS , Keys.DOCID , Keys.SOURCE , Keys.NUMVOL , Keys.EDITOR_AFFS , Keys.EDITORS , Keys.PUBLISHER , Keys.VOLUME , Keys.AUTHOR_AFFS , Keys.PROVIDER , Keys.ISSUE_DATE_PAPER , Keys.COPYRIGHT_TEXT , Keys.DOI  , Keys.PUBLICATION_DATE , Keys.TITLE , Keys.LANGUAGE , Keys.PAGE_RANGE , Keys.PAPER_NUMBER , Keys.COPYRIGHT , Keys.ISSUE , Keys.ACCESSION_NUMBER , PAPER_CONTROLLED_TERMS};
+	private static final Key[] XML_KEYS = { Keys.ISSN , Keys.MAIN_HEADING , Keys.NO_SO , Keys.MONOGRAPH_TITLE , Keys.PUBLICATION_YEAR  , Keys.CONTROLLED_TERM , Keys.ISBN , Keys.AUTHORS , Keys.DOCID , Keys.SOURCE , Keys.NUMVOL , Keys.EDITOR_AFFS , Keys.EDITORS , Keys.PUBLISHER , Keys.VOLUME , Keys.AUTHOR_AFFS , Keys.PROVIDER , Keys.ISSUE_DATE , Keys.COPYRIGHT_TEXT , Keys.DOI  , Keys.PUBLICATION_DATE , Keys.TITLE , Keys.LANGUAGE , Keys.PAGE_RANGE , Keys.PAPER_NUMBER , Keys.COPYRIGHT , Keys.ISSUE , Keys.ACCESSION_NUMBER , PAPER_CONTROLLED_TERMS};
 	private static String DELIM;
 
     private Perl5Util perl = new Perl5Util();
@@ -341,65 +341,58 @@ public class PaperChemDocBuilder implements DocumentBuilder
                 else
                 {
                     if(rset.getString("ED") != null)
-					{
-						String strED = StringUtil.replaceNullWithEmptyString(rset.getString("ED"));
-						if(perl.match("/(Ed[.]\\s*)/", strED))
-						{
-							strED = perl.substitute("s/\\(Ed[.]\\s*\\)//gi", strED);
-						}
+                    {
+                      String strED = StringUtil.replaceNullWithEmptyString(rset.getString("ED"));
+                      if(perl.match("/(Ed[.]\\s*)/", strED))
+                      {
+                        strED = perl.substitute("s/\\(Ed[.]\\s*\\)//gi", strED);
+                      }
 
-						Contributors editors = new Contributors(Keys.EDITORS, getContributors(strED, Keys.EDITORS));
-						ht.put(Keys.EDITORS,editors);
+                      Contributors editors = new Contributors(Keys.EDITORS, getContributors(strED, Keys.EDITORS));
+                      ht.put(Keys.EDITORS,editors);
 
-						if(rset.getString("EF") != null)
-						{
-							Affiliation eaffil = new Affiliation(Keys.EDITOR_AFFS, rset.getString("EF"));
-							editors.setFirstAffiliation(eaffil);
-							ht.put(Keys.EDITOR_AFFS, new Affiliations(Keys.EDITOR_AFFS, eaffil));
-						}
-					}
+                      if(rset.getString("EF") != null)
+                      {
+                        Affiliation eaffil = new Affiliation(Keys.EDITOR_AFFS, rset.getString("EF"));
+                        editors.setFirstAffiliation(eaffil);
+                        ht.put(Keys.EDITOR_AFFS, new Affiliations(Keys.EDITOR_AFFS, eaffil));
+                      }
+                    }
                 }
 
                 // Patent Records
                 String strDocType = StringUtil.replaceNullWithEmptyString(rset.getString("DT"));
                 if("PA".equalsIgnoreCase(strDocType))
                 {
-                    // suppress 'Source:' label
-                    {
-                        ht.put(Keys.NO_SO,new XMLWrapper(Keys.NO_SO, "NO_SO"));
-                    }
+                  // suppress 'Source:' label
+                  {
+                      ht.put(Keys.NO_SO,new XMLWrapper(Keys.NO_SO, "NO_SO"));
+                  }
 
-                    if((rset.getString("ASSIG") != null))
-                    {
-
-                        List lstAsg = convertString2List(StringUtil.substituteChars(StringUtil.replaceNullWithEmptyString(rset.getString("ASSIG"))));
-
-                        if (lstAsg != null && lstAsg.size() > 0)
-                        {
-                            ht.put(Keys.PATASSIGN, new XMLMultiWrapper(Keys.PATASSIGN, setAssignees(lstAsg)));
-
-                        }
-
-                    }
-                    if((rset.getString("APPLN") != null))
-                    {
-                        String appln = StringUtil.replaceNullWithEmptyString(rset.getString("APPLN"));
-                        if (!appln.equals(StringUtil.EMPTY_STRING))
-                        {
-                        	ht.put( Keys.PATAPPNUM, new XMLWrapper(Keys.PATAPPNUM, appln ));
-						}
-
-                    }
-
-                    if((rset.getString("PATNO") != null))
-                    {
-                        String patno = StringUtil.replaceNullWithEmptyString(rset.getString("PATNO"));
-                        if (!patno.equals(StringUtil.EMPTY_STRING))
-                        {
-                            ht.put( Keys.PATNUM, new XMLWrapper(Keys.PATNUM , patno ));
-                        }
-                    }
-
+                  if((rset.getString("ASSIG") != null))
+                  {
+                      List lstAsg = convertString2List(StringUtil.substituteChars(StringUtil.replaceNullWithEmptyString(rset.getString("ASSIG"))));
+                      if (lstAsg != null && lstAsg.size() > 0)
+                      {
+                          ht.put(Keys.PATASSIGN, new XMLMultiWrapper(Keys.PATASSIGN, setAssignees(lstAsg)));
+                      }
+                  }
+                  if((rset.getString("APPLN") != null))
+                  {
+                      String appln = StringUtil.replaceNullWithEmptyString(rset.getString("APPLN"));
+                      if (!appln.equals(StringUtil.EMPTY_STRING))
+                      {
+                        ht.put( Keys.PATAPPNUM, new XMLWrapper(Keys.PATAPPNUM, appln ));
+                      }
+                  }
+                  if((rset.getString("PATNO") != null))
+                  {
+                      String patno = StringUtil.replaceNullWithEmptyString(rset.getString("PATNO"));
+                      if (!patno.equals(StringUtil.EMPTY_STRING))
+                      {
+                        ht.put( Keys.PATNUM, new XMLWrapper(Keys.PATNUM , patno ));
+                      }
+                  }
                 } // "PA".equalsIgnoreCase(strDocType)
                 else
                 { // All other doctypes
@@ -453,45 +446,39 @@ public class PaperChemDocBuilder implements DocumentBuilder
                             }
                         }
 
-
                         if (rset.getString("ST") != null ||
                                 rset.getString("SE") != null)
                         {
-
                             if(rset.getString("ST") != null)
                             {
                                 String st = StringUtil.replaceNullWithEmptyString(rset.getString("ST"));
 
                                 if (!st.equals(StringUtil.EMPTY_STRING))
                                 {
-                                	ht.put(Keys.SOURCE, new XMLWrapper(Keys.SOURCE ,st));
-								}
+                                  ht.put(Keys.SOURCE, new XMLWrapper(Keys.SOURCE ,st));
+                                }
                             }
                             else if(rset.getString("SE") != null)
                             {
                                 String se = StringUtil.replaceNullWithEmptyString(rset.getString("SE"));
-
                                 if (!se.equals(StringUtil.EMPTY_STRING))
                                 {
-
-                                	ht.put(Keys.SOURCE,new XMLWrapper(Keys.SOURCE , se));
-								}
+                                  ht.put(Keys.SOURCE,new XMLWrapper(Keys.SOURCE , se));
+                                }
                             }
-                    // an MT can accompany the ST (or SE)
+                            // an MT can accompany the ST (or SE)
                             if(rset.getString("MT") != null)
-
                             {
-								String mt = StringUtil.replaceNullWithEmptyString(rset.getString("MT"));
-
-								if (!mt.equals(StringUtil.EMPTY_STRING))
-								{
-                                	ht.put(Keys.MONOGRAPH_TITLE, new XMLWrapper(Keys.MONOGRAPH_TITLE ,mt ));
-								}
+                              String mt = StringUtil.replaceNullWithEmptyString(rset.getString("MT"));
+                              if (!mt.equals(StringUtil.EMPTY_STRING))
+                              {
+                                ht.put(Keys.MONOGRAPH_TITLE, new XMLWrapper(Keys.MONOGRAPH_TITLE ,mt ));
+                              }
                             }
                         }
                         else if((rset.getString("ST") == null &&
-                        			rset.getString("SE") == null) &&
-                        			( rset.getString("MT") != null))
+                          rset.getString("SE") == null) &&
+                          ( rset.getString("MT") != null))
                         {
                             if(rset.getString("MT") != null)
                             {
@@ -581,11 +568,10 @@ public class PaperChemDocBuilder implements DocumentBuilder
                             }
                         }
 
-
                        if (!strSD.equals(StringUtil.EMPTY_STRING))
                        {
-                        	ht.put(Keys.PATENT_ISSUE_DATE, new XMLWrapper(Keys.PATENT_ISSUE_DATE, strSD));
-					   }
+                          ht.put(Keys.PATENT_ISSUE_DATE, new XMLWrapper(Keys.PATENT_ISSUE_DATE, strSD));
+                        }
                     }
                     else if(rset.getString("YR") != null)
                     {
@@ -630,7 +616,7 @@ public class PaperChemDocBuilder implements DocumentBuilder
                                 }
                                 if (!strSD.equals(StringUtil.EMPTY_STRING))
                                 {
-                                    ht.put(Keys.ISSUE_DATE_PAPER,new XMLWrapper(Keys.ISSUE_DATE_PAPER , strSD));
+                                    ht.put(Keys.ISSUE_DATE,new XMLWrapper(Keys.ISSUE_DATE, strSD));
                                 }
 
                             }
