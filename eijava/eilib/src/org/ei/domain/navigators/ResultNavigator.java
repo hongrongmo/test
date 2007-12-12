@@ -920,7 +920,7 @@ public class ResultNavigator
                         modifiers.add(modifier);
 
                     }
-                    System.out.println(navigatorname + " ==> " + modifiers);
+                    //System.out.println(navigatorname + " ==> " + modifiers);
                     navigator.setModifiers(modifiers);
                     navigators.add(navigator);
                 }
