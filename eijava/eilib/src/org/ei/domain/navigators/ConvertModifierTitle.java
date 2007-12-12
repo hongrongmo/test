@@ -58,16 +58,11 @@ public class ConvertModifierTitle
 			// Roles are stored in the PUC navigator
 			else if(navName.equalsIgnoreCase(EiNavigator.RO))
 			{
-			  title = null;
-				if(code.toUpperCase().equalsIgnoreCase("R")) {
-				  title = "Reagent";
-				}
-				else if(code.toUpperCase().equalsIgnoreCase("P")) {
-				  title = "Product";
-				}
-				if(code.toUpperCase().equalsIgnoreCase("N")) {
-				  title = "No Role";
-				}
+        // RO title Convertion Code is in RONavigator class
+        // RONavigator is a virtual navigator for the PUC Navifgator
+        // The titles are converted before the RO Nvaigator is created
+        // from the PUC navigator - so we convert them inside the RONavigator class
+        // instead
 			}
 			else if(navName.equalsIgnoreCase(EiNavigator.AU))
 			{
