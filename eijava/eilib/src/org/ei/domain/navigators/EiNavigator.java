@@ -117,13 +117,13 @@ public class EiNavigator
         navigatorNames.add(EiNavigator.AF);
         navigatorNames.add(EiNavigator.CV);
         navigatorNames.add(EiNavigator.CL);
+        navigatorNames.add(EiNavigator.CVM);
         navigatorNames.add(EiNavigator.CO);
         navigatorNames.add(EiNavigator.DT);
         navigatorNames.add(EiNavigator.LA);
         navigatorNames.add(EiNavigator.YR);
         navigatorNames.add(EiNavigator.PUC);
         navigatorNames.add(EiNavigator.PEC);
-        navigatorNames.add(EiNavigator.CVM);
         navigatorNames.add(EiNavigator.PID);
         navigatorNames.add(EiNavigator.PK);
         navigatorNames.add(EiNavigator.PAC);
