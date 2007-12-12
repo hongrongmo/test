@@ -74,7 +74,7 @@ public class OpenURL extends HttpServlet
     String spage = null;
 
     //variable to hold service id and database id
-    String sid = null;
+    String[] sid = null;
 
     //variable to hold database ID
     String dbID = null;
@@ -88,6 +88,7 @@ public class OpenURL extends HttpServlet
 
     String endYear = null;
 
+	int dbMask = 0;
 
     /** get all parameters through OpenURL
      *  currently we support 9 out of 25 fields, will add more later
@@ -315,11 +316,16 @@ public class OpenURL extends HttpServlet
            *  7 Combined Compendex & INSPEC & NTIS
            */
 
-          if ((request.getParameter("sid") != null)
-               && (request.getParameter("sid").trim().length() > 0))
+          if (request.getParameterValues("sid") != null)
           {
-            sid = request.getParameter("sid");
-            dbID = sid.substring(sid.indexOf(':')+1);
+            sid = request.getParameterValues("sid");
+            for(int i=0;i<sid.length;i++)
+            {
+				String sidString = sid[i];
+				if(sidString.length()>0 && sidString.indexOf(":")>0)
+				dbID = sidString.substring(sidString.indexOf(':')+1);
+				dbMask = dbMask + Integer.parseInt(dbID);
+			}
           }
 
 
@@ -343,7 +349,7 @@ public class OpenURL extends HttpServlet
           startYear = "1969";
           endYear = String.valueOf(SearchForm.ENDYEAR);
           //forward to expert search results page
-          response.sendRedirect("http://"+serverName+"/controller/servlet/Controller?CID=expertSearchCitationFormat&searchtype="+Query.TYPE_EXPERT+"&database="+dbID+"&searchWord1="+URLEncoder.encode(searchWord.toString())+"&yearselect=yearrange&startYear="+startYear+"&endYear="+endYear);
+          response.sendRedirect("http://"+serverName+"/controller/servlet/Controller?CID=expertSearchCitationFormat&searchtype="+Query.TYPE_EXPERT+"&database="+dbMask+"&searchWord1="+URLEncoder.encode(searchWord.toString())+"&yearselect=yearrange&startYear="+startYear+"&endYear="+endYear);
 		}
 
     }
