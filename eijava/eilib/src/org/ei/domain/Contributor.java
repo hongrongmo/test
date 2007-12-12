@@ -41,7 +41,16 @@ public class Contributor
 
 	public String getFirstName()
 	{
-		StringTokenizer st = new StringTokenizer(this.name,",",false);
+		StringTokenizer st = null;
+		if(this.name.indexOf(",") > -1)
+		{
+			st = new StringTokenizer(this.name,",",false);
+		}
+		else
+		{
+			st = new StringTokenizer(this.name," ",false);
+		}
+
 		if (st.countTokens() > 1)
 		{
 			String tmpStr = st.nextToken();
@@ -76,9 +85,19 @@ public class Contributor
 		return this.email;
 	}
 
+
 	public String getLastName()
 	{
-		StringTokenizer st = new StringTokenizer(this.name,",",false);
+		StringTokenizer st = null;
+		if(this.name.indexOf(",") > -1)
+		{
+			st = new StringTokenizer(this.name,",",false);
+		}
+		else
+		{
+			st = new StringTokenizer(this.name," ",false);
+		}
+
 		if (st.countTokens() > 0)
 		{
 			return st.nextToken();
