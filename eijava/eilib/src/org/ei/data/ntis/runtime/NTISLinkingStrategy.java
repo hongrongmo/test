@@ -1,3 +1,4 @@
+
 package org.ei.data.ntis.runtime;
 
 import org.ei.domain.EIDoc;
@@ -13,11 +14,9 @@ public class NTISLinkingStrategy implements LinkingStrategy
     	LinkInfo linkInfo = new LinkInfo();
     	String accnum = eid.getAccNumber();
     	StringBuffer buf = new StringBuffer();
-    	buf.append("http://www.ntis.gov/search/product.asp?ABBR=");
+    	buf.append("http://www.ntis.gov/search/product.aspx?ABBR=");
     	buf.append(accnum);
-    	buf.append("&starDB=GRAHIST");
     	linkInfo.url = buf.toString();
-
         return linkInfo;
     }
 
