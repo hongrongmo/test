@@ -36,7 +36,7 @@ public class ChemDocBuilder implements DocumentBuilder {
     private static final Key CHEM_CONTROLLED_TERMS = new Key(Keys.CONTROLLED_TERMS, "Controlled terms");
     private static final Key CHEM_CLASS_CODES = new Key(Keys.CLASS_CODES, "Numeric Class. Code");
 
-    private static final Key[] CITATION_KEYS = {Keys.DOCID, Keys.PROVIDER, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT, Keys.SERIAL_TITLE, Keys.PUBLICATION_YEAR, Keys.TITLE, Keys.AUTHORS, Keys.AUTHOR_AFFS, Keys.SOURCE, Keys.VOLISSUE, Keys.p_PAGE_RANGE,Keys.DOI};
+    private static final Key[] CITATION_KEYS = {Keys.DOCID, Keys.PROVIDER, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT, Keys.SERIAL_TITLE, Keys.PUBLICATION_YEAR, Keys.TITLE, Keys.AUTHORS, Keys.AUTHOR_AFFS, Keys.SOURCE, Keys.ISSN, Keys.VOLISSUE, Keys.p_PAGE_RANGE,Keys.DOI};
     private static final Key[] ABSTRACT_KEYS = {Keys.DOCID, Keys.PROVIDER, Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT, Keys.SERIAL_TITLE, Keys.TITLE, Keys.AUTHORS, Keys.AUTHOR_AFFS, Keys.SOURCE, Keys.VOLISSUE, Keys.VOLUME, Keys.ISSUE, Keys.p_PAGE_RANGE, Keys.NO_SO, Keys.PUBLICATION_YEAR, Keys.ISSN, Keys.CODEN, Keys.DOI,Keys.NUMBER_OF_REFERENCES, Keys.ABSTRACT, Keys.CAS_REGISTRY_CODES, Keys.CONTROLLED_TERMS};
     private static final Key[] DETAILED_KEYS = {Keys.ACCESSION_NUMBER,Keys.TITLE, Keys.AUTHORS, Keys.AUTHOR_AFFS, Keys.SERIAL_TITLE, Keys.VOLUME, Keys.ISSUE,Keys.PUBLICATION_YEAR, Keys.PAGE_RANGE, Keys.LANGUAGE, Keys.ISSN, Keys.CODEN, Keys.DOC_TYPE, Keys.ABSTRACT, Keys.NUMBER_OF_REFERENCES, Keys.CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS, Keys.CAS_REGISTRY_CODES, Keys.CLASS_CODES, Keys.DOI, Keys.DOCID, Keys.COPYRIGHT, Keys.PROVIDER,Keys.COPYRIGHT_TEXT};
     private static final Key[] RIS_KEYS = { Keys.RIS_TY, Keys.RIS_N1, Keys.RIS_TI, Keys.RIS_AUS, Keys.RIS_AD, Keys.RIS_VL, Keys.RIS_IS, Keys.RIS_PY, Keys.RIS_AN , Keys.RIS_SP , Keys.RIS_SN, Keys.RIS_N2, Keys.RIS_DO,Keys.RIS_CVS, Keys.RIS_FLS};
@@ -361,6 +361,10 @@ public class ChemDocBuilder implements DocumentBuilder {
                 	ht.put(Keys.ISSN,new ISSN(StringUtil.replaceNullWithEmptyString(rset.getString("ISN"))));
                 }
 
+			   if (rset.getString("PAG") != null) {
+					ht.put(Keys.PAGE_RANGE, new PageRange(StringUtil.replaceNullWithEmptyString(rset.getString("PAG")), perl));
+				}
+
                 if (rset.getString("COD") != null) {
                 	ht.put(Keys.CODEN,new XMLWrapper(Keys.CODEN,StringUtil.replaceNullWithEmptyString(rset.getString("COD"))));
                 }
@@ -645,7 +649,6 @@ public class ChemDocBuilder implements DocumentBuilder {
         Hashtable oidTable = getDocIDTable(listOfDocIDs);
 
         List list = new ArrayList();
-        int count = 0;
         Connection con = null;
         Statement stmt = null;
         ResultSet rset = null;
@@ -695,6 +698,10 @@ public class ChemDocBuilder implements DocumentBuilder {
                     String strVol = replaceVolumeNullWithEmptyString(rset.getString("VOL"));
 					ht.put(Keys.VOLUME, new Volume(Keys.VOLUME, strVol, perl));
                 }
+
+			   if (rset.getString("PAG") != null) {
+					ht.put(Keys.PAGE_RANGE, new PageRange(StringUtil.replaceNullWithEmptyString(rset.getString("PAG")), perl));
+				}
 
                 String strTitle = StringUtil.EMPTY_STRING;
                 if ((rset.getString("TIE") != null) && (rset.getString("TIF") != null)) {
@@ -755,7 +762,6 @@ public class ChemDocBuilder implements DocumentBuilder {
         				eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
         				eiDoc.setOutputKeys(CITATION_KEYS);
         				list.add(eiDoc);
-                count++;
             }
 
         }

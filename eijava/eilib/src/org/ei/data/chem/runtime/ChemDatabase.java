@@ -116,10 +116,17 @@ public class ChemDatabase extends Database
     }
     public int getSortValue(){ return getMask(); }
 
-    public boolean linkLocalHoldings(String linklabel)
-    {
-      return false;
-    }
+ 	public boolean linkLocalHoldings(String linklabel)
+ 	{
+ 		if(linklabel.indexOf("NTIS") > -1)
+ 		{
+ 			return false;
+ 		}
+ 		else
+ 		{
+ 			return true;
+ 		}
+ 	}
 
     public boolean hasField(SearchField searchField, int userMaskMax)
     {
