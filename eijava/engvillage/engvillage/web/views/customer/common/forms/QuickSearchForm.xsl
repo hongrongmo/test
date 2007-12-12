@@ -162,7 +162,7 @@
                     </tr>
                      -->
                      <!-- 12/07 specs removing this link -->
-                     <!-- 
+                     <!--
                     <tr>
                       <td valign="top" width="3"><img src="/engresources/images/s.gif" width="3"/></td>
 
@@ -580,20 +580,18 @@
                       </tr>
                       <tr>
                         <td valign="top" bgcolor="#3173B5" height="15" colspan="5">
-                        <a CLASS="LgWhiteText"><b>&#160; Browse Indexes</b></a> &#160;
-                        <a href="javascript:makeUrl('Browse_Indexes.htm')">
-            		      	<img src="/engresources/images/help_white.gif" border="0"/>
-            		        </a>
+                          &#160; <a CLASS="LgWhiteText"><b>Browse Indexes</b></a> &#160;
+                          <a href="javascript:makeUrl('Browse_Indexes.htm')"><img src="/engresources/images/help_white.gif" border="0"/>            		        </a>
                         </td>
                       </tr>
                       <tr>
-                        <td width="1" valign="top" bgcolor="#3173B5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
+                        <td width="1" bgcolor="#3173B5"><img src="/engresources/images/s.gif" width="1"/></td>
                         <td width="4" bgcolor="#FFFFFF"><img src="/engresources/images/s.gif" width="4"/></td>
-                        <td width="120" valign="top" bgcolor="#FFFFFF">
-                            <div id="lookups"></div>
+                        <td width="120" bgcolor="#FFFFFF">
+                            <div id="lookups"> &#160; <br/> &#160; </div>
                         </td>
                         <td width="4" bgcolor="#FFFFFF"><img src="/engresources/images/s.gif" width="4"/></td>
-                        <td width="1" valign="top" bgcolor="#3173B5"><img src="/engresources/images/s.gif" width="1"/></td>
+                        <td width="1" bgcolor="#3173B5"><img src="/engresources/images/s.gif" width="1"/></td>
                       </tr>
                       <tr><td valign="top" colspan="5" height="1" bgcolor="#3173B5"><img src="/engresources/images/s.gif" height="1"/></td></tr>
                     </table>
