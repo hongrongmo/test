@@ -126,7 +126,7 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
     private Perl5Util perl = new Perl5Util();
     private Database database;
 
-    private static String queryCitation = "select M_ID,DOI,CORG,TIE,TIF,PUB,PYR,AUT,AAF,STI,VLN,ISN,PAG,SPD,LNA,LOAD_NUMBER,SO,CF,ISSN,SECSTI,SECVLN,SECISN,SECPYR,CNFNAM,CNFSTD,CNFEND,CNFCTY,SPD,SO,SECIST,DT,STY,SEC,STA,SAN,PUB from elt_master where M_ID IN ";
+    private static String queryCitation = "select M_ID,DOI,CORG,TIE,TIF,PUB,PYR,AUT,AAF,STI,VLN,ISN,PAG,SPD,LNA,LOAD_NUMBER,SO,CF,ISSN,SECSTI,SECVLN,SECISN,SECPYR,CNFNAM,CNFSTD,CNFEND,CNFCTY,SPD,SO,SECIST,DT,STY,SEC,STA,SAN,PUB,ISBN from elt_master where M_ID IN ";
 
     private static String queryAbstracts = "select M_ID,DOI,CORG,TIE,TIF,PUB,PYR,AUT,AAF,STI,VLN,ISN,PAG,SPD,CNFNAM,ISBN,ISSN,LNA,CNFNAM,CNFSTD,CNFEND,CNFVEN,CNFCTY,CNFCNY,SECSTI,SECVLN,SECISN,SECPYR,APICT,SO,ABS,SEC,CF,APICRN,SECIST,OAB,APICC,STA,SAN,LOAD_NUMBER,CVS,CVM,CVA,CVP,CVN,CVMA,CVMP,CVMN,APICRN,APIUT from elt_master where M_ID IN ";
 
@@ -508,7 +508,8 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
                 if (rset.getString("SO") != null) {
                     ht.put(Keys.SOURCE, new XMLWrapper(Keys.SOURCE, StringUtil.substituteChars(rset.getString("SO"))));
                 }
-                else {
+                else
+                {
                     StringBuffer source = new StringBuffer();
 
                     if (rset.getString("STI") != null) {
@@ -538,6 +539,8 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
                             source.append(" ").append(rset.getString("PYR"));
                         }
                     }
+
+
 
                     if (rset.getString("PAG") != null) {
                         source.append(" p. ").append(formatPAGE(rset.getString("PAG")));
@@ -584,6 +587,35 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
                 if (rset.getString("ISBN") != null) {
                     ht.put(Keys.ISBN, new ISBN(rset.getString("ISBN")));
                 }
+
+				if (rset.getString("STI") != null)
+				{
+					ht.put(Keys.SERIAL_TITLE, new XMLWrapper(Keys.SERIAL_TITLE, StringUtil.substituteChars(rset.getString("STI"))));
+				}
+
+				if (rset.getString("VLN") != null)
+				{
+
+					String strVol = StringUtil.substituteChars(rset.getString("VLN"));
+					ht.put(Keys.VOLUME, new Volume(strVol, perl));
+				}
+
+				if (rset.getString("ISN") != null)
+				{
+
+					String strIss = formatISSUE(StringUtil.substituteChars((rset.getString("ISN"))));
+					ht.put(Keys.ISSUE, new Issue(strIss, perl));
+				}
+
+				if (rset.getString("PAG") != null)
+				{
+					ht.put(Keys.PAGE_RANGE, new PageRange(StringUtil.substituteChars(rset.getString("PAG")), perl));
+				}
+
+				if (rset.getString("STA") != null)
+				{
+					ht.put(Keys.ABBRV_SERIAL_TITLE, new XMLWrapper(Keys.ABBRV_SERIAL_TITLE, StringUtil.substituteChars(rset.getString("STA"))));
+				}
 
                 //ISN
                 if (rset.getString("ISSN") != null) {
@@ -644,9 +676,9 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
 					{
 						ht.put(ELT_MAJOR_TERMS, new XMLMultiWrapper2(ELT_MAJOR_TERMS,setCVS(StringUtil.substituteChars(majorTerms.toString()))));
 					}
-					
+
 		            //ATM
-	                if (rset.getString("APIUT") != null) 
+	                if (rset.getString("APIUT") != null)
 	                {
 	                   ht.put(Keys.UNCONTROLLED_TERMS, new XMLMultiWrapper(Keys.UNCONTROLLED_TERMS, setElementData(StringUtil.substituteChars(removePoundSign(rset.getString("APIUT"))))));
 	                }
@@ -887,7 +919,7 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
             rset = stmt.executeQuery(queryDetailed + INString);
             DatabaseConfig dconfig = DatabaseConfig.getInstance();
 
-            while (rset.next()) 
+            while (rset.next())
             {
 
                 ElementDataMap ht = new ElementDataMap();
@@ -939,17 +971,17 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
                 // TS 02/10/03  the following elements added to ht for xml document mapping
                 if (rset.getString("APIATM") != null) {
 
-                    if (rset.getString("APILTM") != null) 
+                    if (rset.getString("APILTM") != null)
                     {
                         String ltm = rset.getString("APILTM");
-                        
+
                         if (!ltm.equalsIgnoreCase("QQ"))
                         {
-                            ht.put(Keys.MANUAL_LINKED_TERMS, 
+                            ht.put(Keys.MANUAL_LINKED_TERMS,
                                     new XMLWrapper(Keys.MANUAL_LINKED_TERMS, StringUtil.substituteChars(ltm)));
                         }
-                        
-                        
+
+
           //              if (!ltm.equalsIgnoreCase("QQ"))
           //                  ht.put(Keys.MANUAL_LINKED_TERMS, new LinkedTerms(Keys.MANUAL_LINKED_TERMS, getLinkedTerms(StringUtil.substituteChars(ltm), Keys.LINKED_SUB_TERM)));
 
@@ -1202,7 +1234,7 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
                 }
 
                //ATM
-                if (rset.getString("APIUT") != null) 
+                if (rset.getString("APIUT") != null)
                 {
                    ht.put(Keys.UNCONTROLLED_TERMS, new XMLMultiWrapper(Keys.UNCONTROLLED_TERMS, setElementData(StringUtil.substituteChars(removePoundSign(rset.getString("APIUT"))))));
                 }
@@ -1211,7 +1243,7 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
                     ht.put(Keys.CLASS_CODES_MULTI, new XMLMultiWrapper(ELT_CLASS_CODES, setElementData(StringUtil.substituteChars(rset.getString("APICC")))));
                 }
 
-                if (rset.getString("APIATM") != null) 
+                if (rset.getString("APIATM") != null)
                 {
                     ht.put(Keys.INDEXING_TEMPLATE, new XMLWrapper(Keys.INDEXING_TEMPLATE, replaceBar(formatATM(StringUtil.substituteChars(rset.getString("APIATM"))))));
 
@@ -1220,18 +1252,18 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
                         ht.put(Keys.LINKED_TERMS_HOLDER, new XMLWrapper(Keys.LINKED_TERMS_HOLDER, LT_MSG));
                     }
                 }
-                else 
+                else
                 {
                     String linkedTerms = StringUtil.replaceNullWithEmptyString(StringUtil.getLTStringFromClob(rset.getClob("APILT")));
 
                     if (!linkedTerms.equals("") && !linkedTerms.equalsIgnoreCase("QQ"))
                     {
-                        ht.put(Keys.LINKED_TERMS, new XMLWrapper(Keys.LINKED_TERMS, 
-                                StringUtil.substituteChars(removePoundSign(linkedTerms))));                            
-                    }                     
-              
+                        ht.put(Keys.LINKED_TERMS, new XMLWrapper(Keys.LINKED_TERMS,
+                                StringUtil.substituteChars(removePoundSign(linkedTerms))));
+                    }
+
                 }
-                                
+
 
                 EIDoc eiDoc = new EIDoc(did, ht, Detail.FULLDOC_FORMAT);
                 eiDoc.exportLabels(true);
@@ -1390,7 +1422,7 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
         ResultSet rset = null;
         ConnectionBroker broker = null;
 
-        try 
+        try
         {
             broker = ConnectionBroker.getInstance();
             con = broker.getConnection(DatabaseConfig.SEARCH_POOL);
@@ -1409,10 +1441,10 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
 
                 DocID did = new DocID(mid, dconfig.getDatabase("elt"));
 
-                if (rset.getClob("APILT") != null) 
+                if (rset.getClob("APILT") != null)
                 {
                     String linkedTerms = termBuilder.formatCT(StringUtil.replaceNonAscii(StringUtil.getLTStringFromClob(rset.getClob("APILT"))));
-                    
+
                     if (linkedTerms != null && !linkedTerms.equalsIgnoreCase("QQ"))
                     {
                         ht.put(Keys.LINKED_TERMS, new XMLWrapper(Keys.LINKED_TERMS, linkedTerms));
@@ -1573,10 +1605,43 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
                         ht.put(Keys.LANGUAGE, new XMLWrapper(Keys.LANGUAGE, formatLanguage(StringUtil.substituteChars(rset.getString("LNA")))));
                 }
 
+				if (rset.getString("STI") != null)
+				{
+					ht.put(Keys.SERIAL_TITLE, new XMLWrapper(Keys.SERIAL_TITLE, StringUtil.substituteChars(rset.getString("STI"))));
+				}
+
+				if (rset.getString("VLN") != null)
+				{
+
+					String strVol = StringUtil.substituteChars(rset.getString("VLN"));
+					ht.put(Keys.VOLUME, new Volume(strVol, perl));
+				}
+
+				if (rset.getString("ISN") != null)
+				{
+
+					String strIss = formatISSUE(StringUtil.substituteChars((rset.getString("ISN"))));
+					ht.put(Keys.ISSUE, new Issue(strIss, perl));
+				}
+
+				if (rset.getString("PAG") != null)
+				{
+					ht.put(Keys.PAGE_RANGE, new PageRange(StringUtil.substituteChars(rset.getString("PAG")), perl));
+				}
+
+				if (rset.getString("STA") != null)
+				{
+					ht.put(Keys.ABBRV_SERIAL_TITLE, new XMLWrapper(Keys.ABBRV_SERIAL_TITLE, StringUtil.substituteChars(rset.getString("STA"))));
+				}
+
                 //ISN
                 if (rset.getString("ISSN") != null) {
                     ht.put(Keys.ISSN, new ISSN(formatISSN(rset.getString("ISSN"))));
                 }
+
+				if (rset.getString("ISBN") != null) {
+					ht.put(Keys.ISBN, new ISBN(rset.getString("ISBN")));
+				}
 
                 EIDoc eiDoc = new EIDoc(did, ht, Citation.CITATION_FORMAT);
                 eiDoc.exportLabels(false);
