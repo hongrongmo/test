@@ -23,12 +23,7 @@
     <xsl:strip-space elements="html:* xsl:*" />
 
     <xsl:template match="EI-DOCUMENT">
-    <xsl:variable name="ENCOMPASS-FIELDS-JS">
-    	<xsl:value-of select="//PAGE/ENCOMPASS-FIELDS-JS" />
-    </xsl:variable>
- 	<xsl:if test="('LTH' or 'LSTM' or  'MLT' or  'ATM')" >
-    	<xsl:value-of select="$ENCOMPASS-FIELDS-JS" disable-output-escaping="yes"/>
-    </xsl:if>
+
       <table border="0" width="99%" cellspacing="0" cellpadding="0">
         <xsl:apply-templates />
       </table>
