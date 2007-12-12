@@ -99,9 +99,18 @@ public class EltDatabase extends Database
 	   return false;
    }
 
-   public boolean linkLocalHoldings(String linklabel) {
-	   return false;
-   }
+
+	public boolean linkLocalHoldings(String linklabel)
+	{
+		if(linklabel.indexOf("NTIS") > -1)
+		{
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
 
    public int getSortValue() {
 	   return getMask();
