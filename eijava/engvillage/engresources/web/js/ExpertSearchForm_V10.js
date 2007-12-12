@@ -28,13 +28,69 @@ var selectedDbMask = 0;
     return alink;
   }
 
-function flipImage(selectedDbMask)
+  function OpenLookup_AUS()
+  {
+    OpenLookup("AUS");
+  }
+  function OpenLookup_AF()
+  {
+    OpenLookup("AF");
+  }
+  function OpenLookup_CVS()
+  {
+    OpenLookup("CVS");
+  }
+  function OpenLookup_ST()
+  {
+    OpenLookup("ST");
+  }
+  function OpenLookup_PN()
+  {
+    OpenLookup("PN");
+  }
+  function OpenLookup_LA()
+  {
+    OpenLookup("LA");
+  }
+  function OpenLookup_DT()
+  {
+    OpenLookup("DT");
+  }
+  function OpenLookup_PB()
+  {
+    OpenLookup("PB");
+  }
+  function OpenLookup_TR()
+  {
+    OpenLookup("TR");
+  }
+  function OpenLookup_DSC()
+  {
+    OpenLookup("DSC");
+  }
+  function OpenLookup_PC()
+  {
+    OpenLookup("PC");
+  }
+  function OpenLookup_DI()
+  {
+    OpenLookup("DI");
+  }
+
+  function flipImage(selectedDbMask)
   {
     var bdiv = document.getElementById("browseindexes");
     var adiv = document.getElementById("lookups");
     var link;
 
     while(adiv.firstChild) adiv.removeChild(adiv.firstChild);
+
+    var uldiv = document.createElement("ul");
+    uldiv.style.listStyleType = "none";
+    uldiv.style.margin = "0";
+    uldiv.style.padding = "0";
+    uldiv.style.marginBottom = "1px";
+    adiv.appendChild(uldiv);
 
     if((selectedDbMask & REFEREX) == REFEREX)
     {
@@ -49,62 +105,59 @@ function flipImage(selectedDbMask)
          link = newLookupLink();
          link.onclick=OpenLookup_AUS
 
-	 if((selectedDbMask & UPA) != UPA &&
-	    (selectedDbMask & EUP) != EUP &&
-	    (selectedDbMask & EPT) != EPT)
-	 {
-	   	link.appendChild(document.createTextNode("Author"));
-	 }
-	 else if(selectedDbMask == UPA ||
-		 selectedDbMask == EUP ||
-		 selectedDbMask == US_EU_PATENTS ||
-		 selectedDbMask == EPT)
-	 {
-		link.appendChild(document.createTextNode("Inventor"));
+    if((selectedDbMask & UPA) != UPA &&
+      (selectedDbMask & EUP) != EUP &&
+      (selectedDbMask & EPT) != EPT)
+    {
+      link.appendChild(document.createTextNode("Author"));
+    }
+    else if(selectedDbMask == UPA ||
+     selectedDbMask == EUP ||
+     selectedDbMask == US_EU_PATENTS ||
+     selectedDbMask == EPT)
+    {
+      link.appendChild(document.createTextNode("Inventor"));
+    }
+    else
+    {
+      link.appendChild(document.createTextNode("Author/Inventor"));
+    }
 
-	 }
-	 else
-	 {
-		link.appendChild(document.createTextNode("Author/Inventor"));
-	 }
-
-	adiv.appendChild(link);
-	adiv.appendChild(document.createElement("br"));
-
-
+      lidiv = document.createElement("li");
+      lidiv.appendChild(link);
+      uldiv.appendChild(lidiv);
     }
 
 
     if((selectedDbMask & CBN) != CBN)
     {
          //AF
-
-	 if((selectedDbMask & UPA) != UPA &&
-	    (selectedDbMask & EUP) != EUP &&
-	    (selectedDbMask & EPT) != EPT )
-	 {
-                link = newLookupLink();
-                link.onclick=OpenLookup_AF;
-		link.appendChild(document.createTextNode("Author affiliation"));
-	 }
-	 else if(selectedDbMask == UPA ||
-		 selectedDbMask == EUP ||
-		 selectedDbMask == US_EU_PATENTS ||
-		 selectedDbMask == EPT )
-	 {
-                link = newLookupLink();
-                link.onclick=OpenLookup_AF;
-		link.appendChild(document.createTextNode("Assignee"));
-	 }
-	 else
-	 {
-                link = newLookupLink();
-                link.onclick=OpenLookup_AF;
-		link.appendChild(document.createTextNode("Affiliation/Assignee"));
-	 }
-
-	adiv.appendChild(link);
-	adiv.appendChild(document.createElement("br"));
+      if((selectedDbMask & UPA) != UPA &&
+        (selectedDbMask & EUP) != EUP &&
+        (selectedDbMask & EPT) != EPT )
+      {
+        link = newLookupLink();
+        link.onclick=OpenLookup_AF;
+        link.appendChild(document.createTextNode("Author affiliation"));
+      }
+      else if(selectedDbMask == UPA ||
+        selectedDbMask == EUP ||
+        selectedDbMask == US_EU_PATENTS ||
+        selectedDbMask == EPT )
+      {
+        link = newLookupLink();
+        link.onclick=OpenLookup_AF;
+        link.appendChild(document.createTextNode("Assignee"));
+      }
+      else
+      {
+        link = newLookupLink();
+        link.onclick=OpenLookup_AF;
+        link.appendChild(document.createTextNode("Affiliation/Assignee"));
+      }
+      lidiv = document.createElement("li");
+      lidiv.appendChild(link);
+      uldiv.appendChild(lidiv);
     }
 
     //CT
@@ -137,10 +190,11 @@ function flipImage(selectedDbMask)
     {
         link = newLookupLink();
         link.onclick=OpenLookup_LA;
-
         link.appendChild(document.createTextNode("Language"));
-        adiv.appendChild(link);
-        adiv.appendChild(document.createElement("br"));
+
+        lidiv = document.createElement("li");
+        lidiv.appendChild(link);
+        uldiv.appendChild(lidiv);
     }
 
     //ST
@@ -155,10 +209,11 @@ function flipImage(selectedDbMask)
     {
         link = newLookupLink();
         link.onclick=OpenLookup_ST;
-
         link.appendChild(document.createTextNode("Serial title"));
-        adiv.appendChild(link);
-        adiv.appendChild(document.createElement("br"));
+
+        lidiv = document.createElement("li");
+        lidiv.appendChild(link);
+        uldiv.appendChild(lidiv);
     }
 
     //DT
@@ -170,10 +225,11 @@ function flipImage(selectedDbMask)
     {
         link = newLookupLink();
         link.onclick=OpenLookup_DT;
-
         link.appendChild(document.createTextNode("Document type"));
-        adiv.appendChild(link);
-        adiv.appendChild(document.createElement("br"));
+
+        lidiv = document.createElement("li");
+        lidiv.appendChild(link);
+        uldiv.appendChild(lidiv);
     }
 
     //PB
@@ -185,10 +241,11 @@ function flipImage(selectedDbMask)
     {
         link = newLookupLink();
         link.onclick=OpenLookup_PN;
-
         link.appendChild(document.createTextNode("Publisher"));
-        adiv.appendChild(link);
-        adiv.appendChild(document.createElement("br"));
+
+        lidiv = document.createElement("li");
+        lidiv.appendChild(link);
+        uldiv.appendChild(lidiv);
     }
 
     //TR
@@ -197,10 +254,11 @@ function flipImage(selectedDbMask)
     {
         link = newLookupLink();
         link.onclick=OpenLookup_TR;
-
         link.appendChild(document.createTextNode("Treatment type"));
-        adiv.appendChild(link);
-        adiv.appendChild(document.createElement("br"));
+
+        lidiv = document.createElement("li");
+        lidiv.appendChild(link);
+        uldiv.appendChild(lidiv);
     }
 
     //PC
@@ -219,10 +277,11 @@ function flipImage(selectedDbMask)
     {
         link = newLookupLink();
         link.onclick=OpenLookup_DI;
-
         link.appendChild(document.createTextNode("Discipline"));
-        adiv.appendChild(link);
-        adiv.appendChild(document.createElement("br"));
+
+        lidiv = document.createElement("li");
+        lidiv.appendChild(link);
+        uldiv.appendChild(lidiv);
     }
 
   }
@@ -538,8 +597,6 @@ function updateUI(dbMask, sYear, strYear, eYear)
     if(!(dbMask == 8) && !(dbMask == 16))
     {
         flipImage(dbMask);
-        var adiv = document.getElementById("lookups");
-        adiv.appendChild(document.createElement("br"));
 
         generateYear(dbMask, sYear, strYear, eYear, document.quicksearch);
 
@@ -730,51 +787,3 @@ function checkLastUpdates()
     return true;
   }
 }
-  function OpenLookup_AUS()
-  {
-    OpenLookup("AUS");
-  }
-  function OpenLookup_AF()
-  {
-    OpenLookup("AF");
-  }
-  function OpenLookup_CVS()
-  {
-    OpenLookup("CVS");
-  }
-  function OpenLookup_ST()
-  {
-    OpenLookup("ST");
-  }
-  function OpenLookup_PN()
-  {
-    OpenLookup("PN");
-  }
-  function OpenLookup_LA()
-  {
-    OpenLookup("LA");
-  }
-  function OpenLookup_DT()
-  {
-    OpenLookup("DT");
-  }
-  function OpenLookup_PB()
-  {
-    OpenLookup("PB");
-  }
-  function OpenLookup_TR()
-  {
-    OpenLookup("TR");
-  }
-  function OpenLookup_DSC()
-  {
-    OpenLookup("DSC");
-  }
-  function OpenLookup_PC()
-  {
-    OpenLookup("PC");
-  }
-  function OpenLookup_DI()
-  {
-    OpenLookup("DI");
-  }
