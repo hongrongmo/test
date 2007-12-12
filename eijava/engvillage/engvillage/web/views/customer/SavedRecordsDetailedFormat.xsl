@@ -66,6 +66,7 @@
             <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/SavedRecords.js"/>
             <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
             <SCRIPT LANGUAGE="Javascript" SRC="/engresources/lindaHall.js"/>
+            <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/encompassFields.js"/>
     </head>
     <!-- start of body tag -->
     <body bgcolor="#FFFFFF" topmargin="0" marginheight="0" marginwidth="0">
