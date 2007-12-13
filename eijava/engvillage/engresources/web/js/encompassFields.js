@@ -82,7 +82,6 @@
 
 	function flipEncImg(terms, termtype, docid)
 	{
-alert("wn flipEncImg" );
 		var varid = termtype +docid;
 
 			// if image set to plus open change to minuse close and drow terms
