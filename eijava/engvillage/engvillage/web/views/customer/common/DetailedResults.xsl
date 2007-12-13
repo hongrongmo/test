@@ -631,9 +631,9 @@
             	<div class="mltdiv" id="mltdiv{$DOCID}">
                 	<input type="hidden" name="mltfield{$DOCID}" id="mltfield{$DOCID}" disable-output-escaping = "yes"/>
    					<a class="SmBlueText" onclick="javascript:flipEncImg('{$ML}','mlt','{$DOCID}'); return false;">
-   					<img name="mltOpenClose{$DOCID}" src="/engresources/images/encMltOpen.gif"  border="0"  />
+   					<img id="mltOpenClose{$DOCID}" src="/engresources/images/encMltOpen.gif"  border="0"  />
    					<img src="/engresources/images/s.gif" border="0" width="5"/>
-   					<img name="mlt{$DOCID}" src="/engresources/images/encPlus.gif"  border="0" />
+   					<img id="mlt{$DOCID}" src="/engresources/images/encPlus.gif"  border="0" />
    					</a>
 
    					<table style="margin:0px; padding:0px; border:0px black solid; width:100%" id="mlt_table{$DOCID}">
@@ -668,9 +668,9 @@
 	      	<div class="atmdiv" id="atmdiv{$DOCID}">
           	<input type="hidden" name="atmfield{$DOCID}" id="atmfield{$DOCID}" disable-output-escaping = "yes"/>
    			<a class="SmBlueText" onclick="javascript:flipEncImg('{$AT}','atm','{$DOCID}'); return false;">
-   				<img name="atmOpenClose{$DOCID}" src="/engresources/images/encTemplatesOpen.gif"  border="0" />
+   				<img id="atmOpenClose{$DOCID}" src="/engresources/images/encTemplatesOpen.gif"  border="0" />
    				<img src="/engresources/images/s.gif" border="0" width="5"/>
-   				<img name="atm{$DOCID}" src="/engresources/images/encPlus.gif"  border="0" />
+   				<img id="atm{$DOCID}" src="/engresources/images/encPlus.gif"  border="0" />
    			</a>
 			<table style="margin:0px; padding:0px; border:0px black solid; width:100%" id="atm_table{$DOCID}">
 				<tbody id="atm_table_body{$DOCID}">
