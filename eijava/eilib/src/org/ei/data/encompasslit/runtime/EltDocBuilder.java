@@ -128,12 +128,12 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
 
     private static String queryCitation = "select M_ID,DOI,CORG,TIE,TIF,PUB,PYR,AUT,AAF,STI,VLN,ISN,PAG,SPD,LNA,LOAD_NUMBER,SO,CF,ISSN,SECSTI,SECVLN,SECISN,SECPYR,CNFNAM,CNFSTD,CNFEND,CNFCTY,SPD,SO,SECIST,DT,STY,SEC,STA,SAN,PUB,ISBN from elt_master where M_ID IN ";
 
-    private static String queryAbstracts = "select M_ID,DOI,CORG,TIE,TIF,PUB,PYR,AUT,AAF,STI,VLN,ISN,PAG,SPD,CNFNAM,ISBN,ISSN,LNA,CNFNAM,CNFSTD,CNFEND,CNFVEN,CNFCTY,CNFCNY,SECSTI,SECVLN,SECISN,SECPYR,APICT,SO,ABS,SEC,CF,APICRN,SECIST,OAB,APICC,STA,SAN,LOAD_NUMBER,CVS,CVM,CVA,CVP,CVN,CVMA,CVMP,CVMN,APICRN,APIUT from elt_master where M_ID IN ";
+    private static String queryAbstracts = "select M_ID,DOI,CORG,TIE,TIF,PUB,PYR,AUT,AAF,STI,VLN,ISN,PAG,SPD,CNFNAM,ISBN,ISSN,LNA,CNFNAM,CNFSTD,CNFEND,CNFVEN,CNFCTY,CNFCNY,SECSTI,SECVLN,SECISN,SECPYR,APICT,SO,ABS,SEC,CF,APICRN,SECIST,OAB,APICC,STA,SAN,LOAD_NUMBER,CVS,CVM,CVA,CVP,CVN,CVMA,CVMP,APICRN,APIUT from elt_master where M_ID IN ";
 
     // jam 12/30/2002
     // New Index - field change from AN to EX
     private static String queryDetailed =
-        "select M_ID,DOI,CIP,TIE,TIF,PUB,PYR,AUT,AAF,STI,STA,RNR,VLN,ISN,PAG,SPD,CNFNAM,CNFSTD,CNFEND,CNFCTY,CNFCNY,CNFEDN,CNFEDO,CNFCOD,CNFSPO,CPRS,CORG,EML,SECSTI,SECVLN,SECISN,SECPYR,ISBN,ISSN,LNA,STY,ITY,REF,APICT,APICRN,APIUT,APICC,APILTM,APILT,APIATM,SO,ABS,DT,SEC,CF,OAB,SECIST,LOAD_NUMBER,SAN,CVS,CVM,CVA,CVP,CVN,CVMA,CVMP,CVMN from elt_master where M_ID IN ";
+        "select M_ID,DOI,CIP,TIE,TIF,PUB,PYR,AUT,AAF,STI,STA,RNR,VLN,ISN,PAG,SPD,CNFNAM,CNFSTD,CNFEND,CNFCTY,CNFCNY,CNFEDN,CNFEDO,CNFCOD,CNFSPO,CPRS,CORG,EML,SECSTI,SECVLN,SECISN,SECPYR,ISBN,ISSN,LNA,STY,ITY,REF,APICT,APICRN,APIUT,APICC,APILTM,APILT,APIATM,SO,ABS,DT,SEC,CF,OAB,SECIST,LOAD_NUMBER,SAN,CVS,CVM,CVA,CVP,CVN,CVMA,CVMP from elt_master where M_ID IN ";
 
     private static String queryLinkedTerms = "select M_ID,APILT,LOAD_NUMBER from elt_master where M_ID in ";
     EltAusFormatter ausFormatter = new EltAusFormatter();
@@ -1820,13 +1820,12 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
 	//format DocumentType
      private String formatDT(String docType)
 	 {
-		System.out.println("DT1= "+docType);
 		docType = doctype.getMappedDocType(docType);
-		System.out.println("DT2= "+docType);
 		if (docType != null && !docType.equals(""))
 		{
 			if (docType.equals("JA")){docType = "Journal article (JA)";}
-			else if (docType.equals("CA")){docType = "Conference article (CA)";}
+			else if(docType.equals("AB")){docType = "Journal article (JA)";}
+			else if (docType.equals("CA")){docType = "Conference article (CA)";}			
 			else if (docType.equals("CP")){docType = "Conference proceeding (CP)";}
 			else if (docType.equals("MC")){docType = "Monograph chapter (MC)";}
 			else if (docType.equals("MR")){docType = "Monograph review (MR)";}
@@ -1839,7 +1838,6 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
 		{
 			docType = "Other";
 		}
-		System.out.println("DT3= "+docType);
 		return docType;
     }
     public String formatISSN(String issn) {
