@@ -408,7 +408,7 @@ public class CBNBDocBuilder implements DocumentBuilder {
                 }
 
                 if (rset.getString("SCT") != null) {
-                  ht.put(Keys.COUNTRY, new XMLMultiWrapper(CBNB_COUNTRY, setElementData(rset.getString("SCT"))));
+                  ht.put(Keys.COUNTRY, new XMLWrapper(CBNB_COUNTRY, StringUtil.replaceNullWithEmptyString(rset.getString("SCT"))));
                 }
 
                 if (rset.getString("CIN") != null) {
@@ -593,7 +593,7 @@ public class CBNBDocBuilder implements DocumentBuilder {
                 }
 
                 if (rset.getString("SCT") != null) {
-                  ht.put(Keys.COUNTRY, new XMLMultiWrapper(CBNB_COUNTRY, setElementData(rset.getString("SCT"))));
+                  ht.put(Keys.COUNTRY, new XMLWrapper(CBNB_COUNTRY, StringUtil.replaceNullWithEmptyString(rset.getString("SCT"))));
                 }
 
                 if (rset.getString("SCC") != null) {
