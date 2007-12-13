@@ -93,9 +93,9 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
     private Database database;
     private static String queryCitation = "select ID,M_ID,DN,PAT_IN,PRI,CS,TI,AJ,AC,AD,AP,PC,PD,PN,PAT,LA,PY,PC,LOAD_NUMBER from ept_master where M_ID IN ";
 
-    private static String queryAbstracts = "select ID,M_ID,DN,PAT_IN,CS,TI,TI2,PRI,AJ,AC,AD,AP,PC,PD,PN,PAT,LA,PY,DS,IC,LL,EY,CC,DT,CR,LTM,ATM,ATM1,ALC,AMS,APC,ANC,AT_API,CT,CRN,LT,UT,AB,LOAD_NUMBER,cvs,cvm,cva,cvp,cvn,cvma,cvmp from ept_master where M_ID    IN ";
+    private static String queryAbstracts = "select ID,M_ID,DN,PAT_IN,CS,TI,TI2,PRI,AJ,AC,AD,AP,PC,PD,PN,PAT,LA,PY,DS,IC,LL,EY,CC,DT,CR,LTM,ATM,ATM1,ALC,AMS,APC,ANC,AT_API,CT,CRN,LT,UT,AB,LOAD_NUMBER,cvs,cvm,cva,cvp,cvn from ept_master where M_ID    IN ";
 
-    private static String queryDetailed = "select   " + "ID,M_ID,DN,PAT_IN,CS,TI,TI2,PRI,AJ,AC,AD,AP,PC,PD,PN,PAT,LA,PY,DS,IC,LL,EY,CC,DT,CR,LTM,ATM,ATM1,ALC,AMS,APC,ANC,AT_API,CT,CRN,LT,UT,AB,LOAD_NUMBER,cvs,cvm,cva,cvp,cvn,cvma,cvmp from ept_master where M_ID  IN ";
+    private static String queryDetailed = "select   " + "ID,M_ID,DN,PAT_IN,CS,TI,TI2,PRI,AJ,AC,AD,AP,PC,PD,PN,PAT,LA,PY,DS,IC,LL,EY,CC,DT,CR,LTM,ATM,ATM1,ALC,AMS,APC,ANC,AT_API,CT,CRN,LT,UT,AB,LOAD_NUMBER,cvs,cvm,cva,cvp,cvn from ept_master where M_ID  IN ";
 
     private static String queryLinkedTerms = "select M_ID,LT,LOAD_NUMBER from ept_master where M_ID in ";
 
