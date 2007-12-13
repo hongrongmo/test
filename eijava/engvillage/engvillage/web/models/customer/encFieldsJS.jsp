@@ -90,18 +90,11 @@
 
 	function flipEncImg(terms, termtype, docid)
 	{
-
-		var varid = termtype +docid;
-
-			// if image set to plus open change to minuse close and drow terms
-			// else clearTerms and set img to plus open
-
-				//draw(terms, termtype);
+				var varid = termtype +docid;
 				var imgname = termtype+'OpenClose'+docid;
-				var elementimg = document.getElementById(imgname);											
-				var imgsrc = elementimg.src;
-								
-				var imgTermname = termtype+docid;
+				var elementimg = document.getElementById(imgname);									
+				var imgsrc = elementimg.src;								
+				var imgTermname = termtype+docid;							
 				var elementimgTerm = document.getElementById(imgTermname);
 				var imgTermsrc = elementimg.src;
 				
@@ -255,7 +248,10 @@
 			if (nextNode != "")
 			{
 				var sepimg = document.createElement("img");
-				sepimg.setAttribute("src", "/engresources/images/separator.gif");
+				if (termtype != "atm")
+				{
+					sepimg.setAttribute("src", "/engresources/images/separator.gif");
+				}
 	    		sepimg.setAttribute("height", "7");
 	    		sepimg.setAttribute("width", "7");
 	    		sepimg.setAttribute("alt", "separ");
@@ -269,7 +265,7 @@
 	    	}
 					   	    
 			cell.style.paddingLeft="5px";				
-			if (nextNode != "")
+			if (nextNode != "" && termtype != "atm")
 			{
 				nextNode = "<img src=\"/engresources/images/separator.gif\">"  + nextNode;
 			}
