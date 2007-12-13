@@ -93,9 +93,9 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
     private Database database;
     private static String queryCitation = "select ID,M_ID,DN,PAT_IN,PRI,CS,TI,AJ,AC,AD,AP,PC,PD,PN,PAT,LA,PY,PC,LOAD_NUMBER from ept_master where M_ID IN ";
 
-    private static String queryAbstracts = "select ID,M_ID,DN,PAT_IN,CS,TI,TI2,PRI,AJ,AC,AD,AP,PC,PD,PN,PAT,LA,PY,DS,IC,LL,EY,CC,DT,CR,LTM,ATM,ATM1,ALC,AMS,APC,ANC,AT_API,CT,CRN,LT,UT,AB,LOAD_NUMBER,cvs,cvm,cva,cvp,cvn from ept_master where M_ID    IN ";
+    private static String queryAbstracts = "select ID,M_ID,DN,PAT_IN,CS,TI,TI2,PRI,AJ,AC,AD,AP,PC,PD,PN,PAT,LA,PY,DS,IC,LL,EY,CC,DT,CR,LTM,ATM,ATM1,ALC,AMS,APC,ANC,AT_API,CT,CRN,LT,UT,AB,LOAD_NUMBER from ept_master where M_ID    IN ";
 
-    private static String queryDetailed = "select   " + "ID,M_ID,DN,PAT_IN,CS,TI,TI2,PRI,AJ,AC,AD,AP,PC,PD,PN,PAT,LA,PY,DS,IC,LL,EY,CC,DT,CR,LTM,ATM,ATM1,ALC,AMS,APC,ANC,AT_API,CT,CRN,LT,UT,AB,LOAD_NUMBER,cvs,cvm,cva,cvp,cvn from ept_master where M_ID  IN ";
+    private static String queryDetailed = "select   " + "ID,M_ID,DN,PAT_IN,CS,TI,TI2,PRI,AJ,AC,AD,AP,PC,PD,PN,PAT,LA,PY,DS,IC,LL,EY,CC,DT,CR,LTM,ATM,ATM1,ALC,AMS,APC,ANC,AT_API,CT,CRN,LT,UT,AB,LOAD_NUMBER from ept_master where M_ID  IN ";
 
     private static String queryLinkedTerms = "select M_ID,LT,LOAD_NUMBER from ept_master where M_ID in ";
 
@@ -224,33 +224,10 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
 
                 }
 
-                if (rset.getString("ct") != null) {
+                if (rset.getString("ct") != null) 
+                {
 
-                    StringBuffer cvs = new StringBuffer();
-
-                    if (rset.getString("cvs") != null) {
-                        cvs.append(rset.getString("cvs"));
-                    }
-                    if (rset.getString("cva") != null) {
-                        if (cvs.length() > 0)
-                            cvs.append(";").append(rset.getString("cva"));
-                        else
-                            cvs.append(rset.getString("cva"));
-                    }
-                    if (rset.getString("cvp") != null) {
-                        if (cvs.length() > 0)
-                            cvs.append(";").append(rset.getString("cvp"));
-                        else
-                            cvs.append(rset.getString("cvp"));
-                    }
-                    if (rset.getString("cvn") != null) {
-                        if (cvs.length() > 0)
-                            cvs.append(";").append(rset.getString("cvn"));
-                        else
-                            cvs.append(rset.getString("cvn"));
-                    }
-
-                    ht.put(Keys.RIS_CVS, new XMLMultiWrapper(Keys.RIS_CVS, setElementData(StringUtil.substituteChars(cvs.toString()))));
+                    ht.put(Keys.RIS_CVS, new XMLMultiWrapper(Keys.RIS_CVS, setElementData(StringUtil.substituteChars(rset.getString("ct")))));
 
                 }
 
