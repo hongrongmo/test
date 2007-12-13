@@ -963,7 +963,7 @@
 				]]>
 			</xsl:text>
 			<!-- end of java script -->
-			<title>Lookup - </title>
+			<title>Engineering Village - Browse Index - Lookup <xsl:value-of select="$SELECTEDLOOKUP"/></title>
 		</head>
 
 	<body bgcolor="#FFFFFF" marginwidth="0" marginheight="0" topmargin="0">
