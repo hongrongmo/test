@@ -62,7 +62,7 @@ function generateSection(selecteddbMask)
    }
    else if((selecteddbMask & CBN) == CBN)
    {
-	searchin[index++] = new Field("KY", "Title/Abstract");
+	searchin[index++] = new Field("KY", "Subject/Abstract");
    }
    else if((selecteddbMask & EPT) == EPT)
    {
