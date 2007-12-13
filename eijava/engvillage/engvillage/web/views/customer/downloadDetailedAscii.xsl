@@ -2,7 +2,7 @@
 	version="1.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:java="java:java.net.URLEncoder"
-	xmlns:ibfab="java:org.ei.data.inspec.InspecArchiveAbstract"
+	xmlns:ibfab="java:org.ei.data.insback.runtime.InspecArchiveAbstract"
 	xmlns:cal="java:java.util.GregorianCalendar"
 	exclude-result-prefixes="cal java xsl"
 >

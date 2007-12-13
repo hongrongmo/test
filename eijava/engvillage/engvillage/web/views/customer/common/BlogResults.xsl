@@ -7,7 +7,7 @@
     xmlns:java="java:java.net.URLEncoder"
     xmlns:schar="java:org.ei.query.base.SpecialCharHandler"
     xmlns:hlight="java:org.ei.query.base.HitHighlightFinisher"
-    xmlns:ibfab="java:org.ei.data.inspec.InspecArchiveAbstract"
+    xmlns:ibfab="java:org.ei.data.insback.runtime.InspecArchiveAbstract"
     exclude-result-prefixes="hlight schar ibfab java html xsl"
 >
 
