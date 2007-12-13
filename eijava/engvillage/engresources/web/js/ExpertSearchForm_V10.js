@@ -92,7 +92,7 @@ var selectedDbMask = 0;
     uldiv.style.marginBottom = "1px";
     adiv.appendChild(uldiv);
 
-    if((selectedDbMask & REFEREX) == REFEREX)
+    if(selectedDbMask == REFEREX)
     {
       bdiv.style.display = "none";
       return;
@@ -100,7 +100,8 @@ var selectedDbMask = 0;
 
     bdiv.style.display = "block";
 
-    if((selectedDbMask & CBN) != CBN)
+    if(selectedDbMask != CBN &&
+       selectedDbMask != (CBN+REFEREX))
     {
       link = newLookupLink();
       link.onclick=OpenLookup_AUS
@@ -112,9 +113,16 @@ var selectedDbMask = 0;
         link.appendChild(document.createTextNode("Author"));
       }
       else if(selectedDbMask == UPA ||
-         selectedDbMask == EUP ||
-         selectedDbMask == US_EU_PATENTS ||
-         selectedDbMask == EPT)
+              selectedDbMask == EUP ||
+              selectedDbMask == US_EU_PATENTS ||
+              selectedDbMask == EPT ||
+              selectedDbMask == (US_EU_PATENTS + EPT) ||
+              selectedDbMask == (UPA + REFEREX) ||
+	      selectedDbMask == (EUP + REFEREX) ||
+	      selectedDbMask == (US_EU_PATENTS + REFEREX) ||
+	      selectedDbMask == (EPT + REFEREX) ||
+              selectedDbMask == (US_EU_PATENTS + EPT + REFEREX) 
+              )
       {
         link.appendChild(document.createTextNode("Inventor"));
       }
@@ -129,7 +137,8 @@ var selectedDbMask = 0;
     }
 
 
-    if((selectedDbMask & CBN) != CBN)
+    if(selectedDbMask != CBN &&
+       selectedDbMask != (CBN+REFEREX))
     {
       link = newLookupLink();
       link.onclick=OpenLookup_AF;
@@ -143,7 +152,14 @@ var selectedDbMask = 0;
       else if(selectedDbMask == UPA ||
         selectedDbMask == EUP ||
         selectedDbMask == US_EU_PATENTS ||
-        selectedDbMask == EPT )
+        selectedDbMask == EPT || 
+        selectedDbMask == (EPT + US_EU_PATENTS) ||
+        selectedDbMask == (UPA + REFEREX) ||
+	selectedDbMask == (EUP + REFEREX) ||
+	selectedDbMask == (US_EU_PATENTS + REFEREX) ||
+	selectedDbMask == (EPT + REFEREX) || 
+        selectedDbMask == (EPT + US_EU_PATENTS + REFEREX)
+        )
       {
         link.appendChild(document.createTextNode("Assignee"));
       }
