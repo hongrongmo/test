@@ -10,7 +10,7 @@
     xmlns:java="java:java.net.URLEncoder"
     xmlns:hlight="java:org.ei.query.base.HitHighlightFinisher"
     xmlns:schar="java:org.ei.query.base.SpecialCharHandler"
-    xmlns:ibfab="java:org.ei.data.inspec.InspecArchiveAbstract"
+    xmlns:ibfab="java:org.ei.data.insback.runtime.InspecArchiveAbstract"
     xmlns:ctd="java:org.ei.domain.ClassTitleDisplay"
     xmlns:rfx="java:org.ei.books.collections.ReferexCollection"
     xmlns:crlkup="java:org.ei.data.CRNLookup"
