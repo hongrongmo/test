@@ -94,11 +94,12 @@
 
   <html>
   <head>
-  <title>Selected Set - Detailed Format</title>
+  <title>Selected Set - Detailed Format</title>  	
     <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
     <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/URLEncode.js"/>
     <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/SelectedSet_V7.js"/>
     <SCRIPT LANGUAGE="Javascript" SRC="/engresources/lindaHall.js"/>
+    <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/encompassFields.js"/>
   </head>
 
   <body bgcolor="#FFFFFF" topmargin="0" marginheight="0" marginwidth="0">
