@@ -537,7 +537,6 @@
   flipImage(<xsl:value-of select="$SELECTED-DB"/>);
   // </xsl:comment>
   </script>
-</SCRIPT>
 </xsl:template>
 
 </xsl:stylesheet>
