@@ -22,7 +22,7 @@ public class DatabaseDisplayHelper {
         maskConversion.put("1","cpx");
         maskConversion.put("2","ins");
         maskConversion.put("4","nti");
-        maskConversion.put("32","c84");
+        maskConversion.put("262144","c84");
         maskConversion.put("64","pch");
         maskConversion.put("128","chm");
         maskConversion.put("256","cbn");
@@ -37,7 +37,7 @@ public class DatabaseDisplayHelper {
         dbConversion.put("cpx","1");
         dbConversion.put("ins","2");
         dbConversion.put("nti","4");
-        dbConversion.put("c84","32");
+        dbConversion.put("c84","262144");
         dbConversion.put("pch","64");
         dbConversion.put("chm", "128");
         dbConversion.put("cbn", "256");
@@ -124,11 +124,11 @@ public class DatabaseDisplayHelper {
 		    jsWriter(DatabaseConfig.CPX_MASK);
 		    html.append(htmlWriter(DatabaseConfig.CPX_MASK));
 		}
-		if((mask & DatabaseConfig.C84_MASK) == DatabaseConfig.C84_MASK &&
+		if((mask & DatabaseConfig.CBF_MASK) == DatabaseConfig.CBF_MASK &&
 		        (mask & DatabaseConfig.CPX_MASK) != DatabaseConfig.CPX_MASK )
 		{		    
-		    jsWriter(DatabaseConfig.C84_MASK);
-		    html.append(htmlWriter(DatabaseConfig.C84_MASK));
+		    jsWriter(DatabaseConfig.CBF_MASK);
+		    html.append(htmlWriter(DatabaseConfig.CBF_MASK));
 		}		
 		
 		if((mask & DatabaseConfig.ELT_MASK) == DatabaseConfig.ELT_MASK)
