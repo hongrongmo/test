@@ -213,6 +213,10 @@ public class ResultNavigator
         anav = getNavigatorByName(EiNavigator.CV);
         if(anav != null)
         {
+          anav.getModifiers().remove(new EiModifier(0, "S300", "S300"));
+          anav.getModifiers().remove(new EiModifier(0, "WOBL", "WOBL"));
+          anav.getModifiers().remove(new EiModifier(0, "406", "406"));
+
           //if((mask :: cpx || mask :: cbf || mask :: ins || mask :: nti || mask :: geo || mask :: cbn || mask :: chm || mask :: pch || mask :: elt || mask :: ept) && (mask !: upa || mask !: eup || mask !: pag))
           if((m_compendex || m_inspec || m_ntis || m_geobase) && !(m_cbnb || m_chimica || m_paperchem || m_encompasslit || m_encompasspat || m_uspatents || m_eupatents || m_books ))
           {
