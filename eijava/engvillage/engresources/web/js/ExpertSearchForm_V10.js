@@ -283,6 +283,8 @@ var selectedDbMask = 0;
         uldiv.appendChild(lidiv);
     }
 
+    adiv.appendChild(document.createElement("br"));
+
   }
 
 function calEndYear(selectedDbMask)
