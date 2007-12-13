@@ -66,21 +66,11 @@ public class SearchForm {
 
         // KY
         // do not show KY as S/T/A if DB is only PAG
-        if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
-           (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
-           (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK)
+        if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK)
         {
              sectiontype.put("KY", "Subject/Title/Abstract");
         }
-        else if((selecteddbMask & DatabaseConfig.CBN_MASK) == DatabaseConfig.CBN_MASK)
-		{
-		     sectiontype.put("KY", "Subject/Abstract");
-        }
-        else if((selecteddbMask & DatabaseConfig.EPT_MASK) == DatabaseConfig.EPT_MASK)
-		{
-			sectiontype.put("KY", "Subject/(Patent) title/Abstract");
-        }
-        else if((selecteddbMask & DatabaseConfig.PAG_MASK) == DatabaseConfig.PAG_MASK)
+        else
         {
         	 sectiontype.put("KY", "Keyword");
         }
@@ -120,13 +110,20 @@ public class SearchForm {
         if((selecteddbMask & DatabaseConfig.CBN_MASK)!= DatabaseConfig.CBN_MASK &&
            (selecteddbMask & DatabaseConfig.PAG_MASK)!= DatabaseConfig.PAG_MASK)
         {
-			if( selecteddbMask == DatabaseConfig.UPA_MASK ||
-				selecteddbMask == DatabaseConfig.EUP_MASK ||
-				selecteddbMask == DatabaseConfig.EPT_MASK ||
-				selecteddbMask == DatabaseConfig.EPT_MASK + DatabaseConfig.UPA_MASK ||
-				selecteddbMask == DatabaseConfig.EUP_MASK + DatabaseConfig.EPT_MASK ||
-				selecteddbMask == DatabaseConfig.EUP_MASK + DatabaseConfig.UPA_MASK ||
-				selecteddbMask == DatabaseConfig.EPT_MASK + DatabaseConfig.EUP_MASK + DatabaseConfig.UPA_MASK)
+
+			if((selecteddbMask & DatabaseConfig.UPA_MASK) != DatabaseConfig.UPA_MASK &&
+			   (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
+			   (selecteddbMask & DatabaseConfig.EUP_MASK) != DatabaseConfig.EUP_MASK)
+			{
+				sectiontype.put("AU", "Author affiliation");
+			}
+			else if(selecteddbMask == DatabaseConfig.UPA_MASK ||
+				    selecteddbMask == DatabaseConfig.EUP_MASK ||
+				    selecteddbMask == DatabaseConfig.EPT_MASK ||
+				    selecteddbMask == DatabaseConfig.EPT_MASK + DatabaseConfig.UPA_MASK ||
+				    selecteddbMask == DatabaseConfig.EUP_MASK + DatabaseConfig.EPT_MASK ||
+				    selecteddbMask == DatabaseConfig.EUP_MASK + DatabaseConfig.UPA_MASK ||
+				    selecteddbMask == DatabaseConfig.EPT_MASK + DatabaseConfig.EUP_MASK + DatabaseConfig.UPA_MASK)
 			{
 				sectiontype.put("AF", "Assignee");
 			}
