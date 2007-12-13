@@ -246,7 +246,10 @@
 			if (nextNode != "")
 			{
 				var sepimg = document.createElement("img");
-				sepimg.setAttribute("src", "/engresources/images/separator.gif");
+				if (termtype != "atm")
+				{
+					sepimg.setAttribute("src", "/engresources/images/separator.gif");
+				}
 	    		sepimg.setAttribute("height", "7");
 	    		sepimg.setAttribute("width", "7");
 	    		sepimg.setAttribute("alt", "separ");
@@ -259,8 +262,9 @@
 	    		cell.appendChild(spaceimg);
 	    	}
 					   	    
-			cell.style.paddingLeft="5px";				
-			if (nextNode != "")
+			cell.style.paddingLeft="5px";	
+						
+			if (nextNode != "" && termtype != "atm")
 			{
 				nextNode = "<img src=\"/engresources/images/separator.gif\">"  + nextNode;
 			}
