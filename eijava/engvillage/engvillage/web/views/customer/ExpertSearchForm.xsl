@@ -108,6 +108,17 @@
 	</xsl:apply-templates>
 
   </center>
+
+
+		<!-- ADDED BY JM -->
+    <script TYPE="text/javascript" language="javascript">
+      <xsl:comment>
+      if(typeof(document.quicksearch.searchWord1) != 'undefined') {
+        document.quicksearch.searchWord1.focus();
+      }
+      // </xsl:comment>
+    </script>
+
 	</body>
   </html>
 

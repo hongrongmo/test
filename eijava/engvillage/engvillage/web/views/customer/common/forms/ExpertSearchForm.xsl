@@ -532,8 +532,11 @@
 <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/RemoteDbLink_V5.js"/>
 
 <!-- End of table for content below the navigation bar -->
-<SCRIPT LANGUAGE="Javascript">
+  <script TYPE="text/javascript" language="javascript">
+  <xsl:comment>
   flipImage(<xsl:value-of select="$SELECTED-DB"/>);
+  // </xsl:comment>
+  </script>
 </SCRIPT>
 </xsl:template>
 
