@@ -54,21 +54,11 @@ function generateSection(selecteddbMask)
    }
 
    //KY
-   if((selecteddbMask & REFEREX) != REFEREX &&
-      (selecteddbMask & EPT) != EPT &&
-      (selecteddbMask & CBN) != CBN)
+   if((selecteddbMask & REFEREX) != REFEREX)
    {
 	searchin[index++] = new Field("KY", "Subject/Title/Abstract");
    }
-   else if((selecteddbMask & CBN) == CBN)
-   {
-	searchin[index++] = new Field("KY", "Subject/Abstract");
-   }
-   else if((selecteddbMask & EPT) == EPT)
-   {
-	searchin[index++] = new Field("KY","Subject/(Patent) title/Abstract");
-   }
-   else if((selecteddbMask & REFEREX) == REFEREX)
+   else
    {
 	 searchin[index++] = new Field("KY", "Keyword");
    }
@@ -116,21 +106,27 @@ function generateSection(selecteddbMask)
    if(((selecteddbMask & REFEREX) != REFEREX) &&
       ((selecteddbMask & CBN) != CBN))
    {
-      if( (selecteddbMask == US_PATENTS) ||
-          (selecteddbMask == EU_PATENTS) ||
-          (selecteddbMask == EPT) ||
-          (selecteddbMask == EPT + US_PATENTS) ||
-          (selecteddbMask == EPT + EU_PATENTS) ||
-          (selecteddbMask == US_EU_PATENTS) ||
-          (selecteddbMask == EPT + US_EU_PATENTS))
-      {
-      	 searchin[index++] = new Field("AF", "Assignee");
-      }
-      else
-      {
-         searchin[index++] = new Field("AF", "Author affiliation/Assignee");
-      }
-
+   
+	if((selecteddbMask & US_PATENTS) != US_PATENTS &&
+	   (selecteddbMask & EPT) != EPT &&
+	   (selecteddbMask & EU_PATENTS) != EU_PATENTS)
+	{
+		searchin[index++] = new Field("AU", "Author affiliation");
+	}
+        else if( (selecteddbMask == US_PATENTS) ||
+                 (selecteddbMask == EU_PATENTS) ||
+                 (selecteddbMask == EPT) ||
+                 (selecteddbMask == EPT + US_PATENTS) ||
+                 (selecteddbMask == EPT + EU_PATENTS) ||
+                 (selecteddbMask == US_EU_PATENTS) ||
+                 (selecteddbMask == EPT + US_EU_PATENTS))
+      	{
+      		searchin[index++] = new Field("AF", "Assignee");
+      	}
+      	else
+      	{
+      		searchin[index++] = new Field("AF", "Author affiliation/Assignee");
+      	}
    }
 
    // TI
