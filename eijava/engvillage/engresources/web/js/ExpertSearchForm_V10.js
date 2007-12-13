@@ -682,7 +682,7 @@ function searchValidation()
 
 var lookupWind;
 
-function OpenLookup(sessionId,lookupindex)
+function OpenLookup(lookupindex)
 {
     selectedDbMask = calculateMask(document.quicksearch.database);
 
@@ -705,7 +705,7 @@ function OpenLookup(sessionId,lookupindex)
     else
     {
         var tabloc;
-        tabloc="/controller/servlet/Controller?EISESSION="+sessionId+"&CID=lookupIndexes&database="+escape(selectedDbMask)+"&lookup="+escape(lookupindex)+"&searchtype=Expert";
+        tabloc="/controller/servlet/Controller?CID=lookupIndexes&database="+escape(selectedDbMask)+"&lookup="+escape(lookupindex)+"&searchtype=Expert";
 
         if (tabloc)
         {
