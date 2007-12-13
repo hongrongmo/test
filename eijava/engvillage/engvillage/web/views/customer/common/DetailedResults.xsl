@@ -35,7 +35,7 @@
     <!-- Book Templates -->
 
     <!-- top level elements with labels and nested value children -->
-    <xsl:template match="DGS|COS|SC|AV|DT|MJSM|CRM|CLGM|PIDEPM|BKYS|AGS|AUS|EDS|IVS|CLS|FLS|CVS|RGIS|DISPS|CTS|OCVS|OCLS|NDI|CHI|AOI|AFS|EFS|PASM|PEXM|PIM|PAPIM">
+    <xsl:template match="DGS|SC|AV|DT|MJSM|CRM|CLGM|PIDEPM|BKYS|AGS|AUS|EDS|IVS|CLS|FLS|CVS|RGIS|DISPS|CTS|OCVS|OCLS|NDI|CHI|AOI|AFS|EFS|PASM|PEXM|PIM|PAPIM">
         <tr>
 
             <td valign="top" ><img src="/engresources/images/s.gif" border="0"/></td>
@@ -143,7 +143,7 @@
     </xsl:template>
 
   <!-- Controlled/Uncontrolled child node(s) within VALUE under FLS/CVS/AGS -->
-      <xsl:template match="DG|CO|MJS|BKY|FL|CV|AG|CT|OC|PS|RGI|CM|IC|GC|GD|CP|CE">
+      <xsl:template match="DG|MJS|BKY|FL|CV|AG|CT|OC|PS|RGI|CM|IC|GC|GD|CP|CE">
 
       <xsl:if test="name()='LST'">
       <xsl:if test="position()=1">
