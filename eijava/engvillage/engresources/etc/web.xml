@@ -15,10 +15,6 @@
       <param-value>@controller_server@</param-value>
     </context-param>
     <context-param>
-      <param-name>bulletinServer</param-name>
-      <param-value>@bulletin_server@</param-value>
-    </context-param>
-    <context-param>
       <param-name>authURL</param-name>
       <param-value>http://@session_server@/sessionservice/servlet/SessionService</param-value>
     </context-param>
@@ -47,7 +43,7 @@
       </init-param>
       <init-param>
        <param-name>bulletinFileLocation</param-name>
-       <param-value>c:/tmp/data</param-value>
+       <param-value>@bulletin_FileLocation@</param-value>
       </init-param>
     </servlet>
 
