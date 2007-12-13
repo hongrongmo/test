@@ -128,12 +128,12 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
 
     private static String queryCitation = "select M_ID,DOI,CORG,TIE,TIF,PUB,PYR,AUT,AAF,STI,VLN,ISN,PAG,SPD,LNA,LOAD_NUMBER,SO,CF,ISSN,SECSTI,SECVLN,SECISN,SECPYR,CNFNAM,CNFSTD,CNFEND,CNFCTY,SPD,SO,SECIST,DT,STY,SEC,STA,SAN,PUB,ISBN from elt_master where M_ID IN ";
 
-    private static String queryAbstracts = "select M_ID,DOI,CORG,TIE,TIF,PUB,PYR,AUT,AAF,STI,VLN,ISN,PAG,SPD,CNFNAM,ISBN,ISSN,LNA,CNFNAM,CNFSTD,CNFEND,CNFVEN,CNFCTY,CNFCNY,SECSTI,SECVLN,SECISN,SECPYR,APICT,SO,ABS,SEC,CF,APICRN,SECIST,OAB,APICC,STA,SAN,LOAD_NUMBER,CVS,CVA,CVP,CVN,APICRN,APIUT from elt_master where M_ID IN ";
+    private static String queryAbstracts = "select M_ID,DOI,CORG,TIE,TIF,PUB,PYR,AUT,AAF,STI,VLN,ISN,PAG,SPD,CNFNAM,ISBN,ISSN,LNA,CNFNAM,CNFSTD,CNFEND,CNFVEN,CNFCTY,CNFCNY,SECSTI,SECVLN,SECISN,SECPYR,APICT,SO,ABS,SEC,CF,APICRN,SECIST,OAB,APICC,STA,SAN,LOAD_NUMBER,APICRN,APIUT from elt_master where M_ID IN ";
 
     // jam 12/30/2002
     // New Index - field change from AN to EX
     private static String queryDetailed =
-        "select M_ID,DOI,CIP,TIE,TIF,PUB,PYR,AUT,AAF,STI,STA,RNR,VLN,ISN,PAG,SPD,CNFNAM,CNFSTD,CNFEND,CNFCTY,CNFCNY,CNFEDN,CNFEDO,CNFCOD,CNFSPO,CPRS,CORG,EML,SECSTI,SECVLN,SECISN,SECPYR,ISBN,ISSN,LNA,STY,ITY,REF,APICT,APICRN,APIUT,APICC,APILTM,APILT,APIATM,SO,ABS,DT,SEC,CF,OAB,SECIST,LOAD_NUMBER,SAN,CVS,CVA,CVP,CVN from elt_master where M_ID IN ";
+        "select M_ID,DOI,CIP,TIE,TIF,PUB,PYR,AUT,AAF,STI,STA,RNR,VLN,ISN,PAG,SPD,CNFNAM,CNFSTD,CNFEND,CNFCTY,CNFCNY,CNFEDN,CNFEDO,CNFCOD,CNFSPO,CPRS,CORG,EML,SECSTI,SECVLN,SECISN,SECPYR,ISBN,ISSN,LNA,STY,ITY,REF,APICT,APICRN,APIUT,APICC,APILTM,APILT,APIATM,SO,ABS,DT,SEC,CF,OAB,SECIST,LOAD_NUMBER,SAN from elt_master where M_ID IN ";
 
     private static String queryLinkedTerms = "select M_ID,APILT,LOAD_NUMBER from elt_master where M_ID in ";
     EltAusFormatter ausFormatter = new EltAusFormatter();
@@ -299,36 +299,9 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
 
                 }
 
-                if (rset.getString("apict") != null) {
-
-                    StringBuffer cvs = new StringBuffer();
-
-                    if (rset.getString("cvs") != null) {
-                        cvs.append(rset.getString("cvs"));
-                    }
-                    if (rset.getString("cva") != null) {
-                        if (cvs.length() > 0)
-                            cvs.append(";").append(rset.getString("cva"));
-                        else
-                            cvs.append(rset.getString("cva"));
-                    }
-
-                    if (rset.getString("cvp") != null) {
-                        if (cvs.length() > 0)
-                            cvs.append(";").append(rset.getString("cvp"));
-                        else
-                            cvs.append(rset.getString("cvp"));
-                    }
-                    if (rset.getString("cvn") != null) {
-                        if (cvs.length() > 0)
-                            cvs.append(";").append(rset.getString("cvn"));
-                        else
-                            cvs.append(rset.getString("cvn"));
-                    }
-
-                    if (cvs.length() > 0)
-                        ht.put(Keys.RIS_CVS, new XMLMultiWrapper(Keys.RIS_CVS, setElementData(StringUtil.substituteChars(cvs.toString()))));
-
+                if (rset.getString("apict") != null) 
+                {
+                    ht.put(Keys.RIS_CVS, new XMLMultiWrapper(Keys.RIS_CVS, setElementData(StringUtil.substituteChars(rset.getString("apict")))));
                 }
                 //FLS
                 if (rset.getString("APIUT") != null)
