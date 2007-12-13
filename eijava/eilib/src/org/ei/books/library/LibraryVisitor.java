@@ -179,7 +179,7 @@ public class LibraryVisitor implements Visitor
 
   							int colmask = allcolls[i].getColMask();
   							out
-  									.write("<BSTATE><![CDATA[<a class=\"SpLink\" href=\"/controller/servlet/Controller?CID=ebookSearch&bstate="
+  									.write("<BSTATE><![CDATA[<a class=\"SpLink\" href=\"/controller/servlet/Controller?database=131072&CID=ebookSearch&bstate="
   											+ String
   													.valueOf(((bstate & colmask) == colmask) ? (bstate - colmask)
   															: (bstate + colmask))
