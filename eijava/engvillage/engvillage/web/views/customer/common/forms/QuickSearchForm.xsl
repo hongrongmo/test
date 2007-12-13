@@ -672,8 +672,10 @@
 <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Login.js"/>
 <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/RemoteDbLink_V5.js"/>
 <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Robohelp.js"/>
-<SCRIPT LANGUAGE="Javascript">
+  <script type="text/javascript"  language="javascript">
+  <xsl:comment>
   flipImage(<xsl:value-of select="$SELECTED-DB"/>);
-</SCRIPT>
+  // </xsl:comment>
+  </script>
   </xsl:template>
 </xsl:stylesheet>
