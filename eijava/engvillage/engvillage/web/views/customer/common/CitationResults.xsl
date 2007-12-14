@@ -264,10 +264,19 @@
     </a>
     </xsl:template>
     <!-- EPT -->
-    <xsl:template match="UPD">
-    <a CLASS="SmBlackText">
-        <b> Publication date: </b><xsl:value-of select="." disable-output-escaping="yes"/>
-    </a>
+    <xsl:template match="UPD">   
+       <xsl:choose>
+       		<xsl:when test="not(ancestor::EI-DOCUMENT/DOC/DB/DBMASK='2048')">
+       			<a CLASS="SmBlackText">
+        			<b> Publication date: </b><xsl:value-of select="." disable-output-escaping="yes"/>
+    			</a>       		
+       		</xsl:when>
+       		<xsl:otherwise>
+       			<a CLASS="SmBlackText">
+        			<b> Publication year: </b><xsl:value-of select="." disable-output-escaping="yes"/>
+    			</a>
+         	</xsl:otherwise>
+       </xsl:choose> 
     </xsl:template>
 
   <!-- jam added for 1884 -->
