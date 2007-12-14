@@ -43,10 +43,11 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
     private static final Key LINKED_TERMS_HOLDER = new Key(Keys.LINKED_TERMS_HOLDER, "Linked terms");
     private static final Key EPT_MAJOR_TERMS = new Key(Keys.MAJOR_TERMS, "Major terms");
     private static final Key EPT_CLASS_CODES = new Key(Keys.CLASS_CODES_MULTI, "Classification codes");
+    private static final Key EPT_UPAT_PUBDATE = new Key(Keys.UPAT_PUBDATE, "Publication year");
 
     private static final Key[] CITATION_KEYS = { Keys.DOCID,Keys.PATENT_INFORMATION,Keys.PRIORITY_INFORMATION, Keys.TITLE, Keys.AUTHORS, Keys.PATASSIGN, Keys.AUTH_CODE, Keys.UPAT_PUBDATE, Keys.PROVIDER, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT, Keys.LANGUAGE, Keys.NO_SO };
     private static final Key[] ABSTRACT_KEYS =
-        { Keys.DOCID, Keys.DERWENT_NO, Keys.TITLE, Keys.AUTHORS, Keys.PATEPTASSIGN, Keys.PUBLICATION_YEAR, Keys.UPAT_PUBDATE, Keys.LANGUAGE, Keys.ABSTRACT, Keys.PATAPP_INFO,Keys.PATENT_INFORMATION, Keys.PRIORITY_INFORMATION, Keys.CAS_REGISTRY_CODES, Keys.INTERNATCL_CODE, EPT_MAJOR_TERMS, EPT_CONTROLLED_TERMS,Keys.UNCONTROLLED_TERMS, Keys.NO_SO, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT, Keys.PROVIDER };
+        { Keys.DOCID, Keys.DERWENT_NO, Keys.TITLE, Keys.AUTHORS, Keys.PATEPTASSIGN, Keys.PUBLICATION_YEAR, EPT_UPAT_PUBDATE, Keys.LANGUAGE, Keys.ABSTRACT, Keys.PATAPP_INFO,Keys.PATENT_INFORMATION, Keys.PRIORITY_INFORMATION, Keys.CAS_REGISTRY_CODES, Keys.INTERNATCL_CODE_EPT, EPT_MAJOR_TERMS, EPT_CONTROLLED_TERMS,Keys.UNCONTROLLED_TERMS, Keys.NO_SO, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT, Keys.PROVIDER };
     private static final Key[] LINKED_TERM_KEYS = { Keys.LINKED_TERMS };
 
 
@@ -383,11 +384,10 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                
                 ht.put(Keys.NO_SO, new XMLWrapper(Keys.NO_SO, "NO_SO"));
 
-                if (rset.getString("PD") != null) {
+                if (rset.getString("PY") != null) {
                     //specs 11/07 - no formating for date
                 	//String strYR = formatDate(StringUtil.replaceNullWithEmptyString(rset.getString("PD")));
-                    ht.put(Keys.UPAT_PUBDATE, new XMLWrapper(Keys.UPAT_PUBDATE, rset.getString("PD")));
-
+                    ht.put(Keys.UPAT_PUBDATE, new XMLWrapper(EPT_UPAT_PUBDATE, rset.getString("PY")));
                 }
 
                 // Language
@@ -437,10 +437,10 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                     ht.put(Keys.ABSTRACT, new XMLWrapper(Keys.ABSTRACT, StringUtil.substituteChars(abs)));
                 }
                 //              IC
-                if (rset.getString("IC") != null) {
+                if (rset.getString("IC") != null) 
+                {
                     String[] arrIpcs = IPCClassNormalizer.trimLeadingZeroFromSubClass(rset.getString("IC"));
-                    ht.put(Keys.INTERNATCL_CODE, new Classifications(Keys.INTERNATCL_CODE, getIPCClssifications(arrIpcs)));
-
+                    ht.put(Keys.INTERNATCL_CODE_EPT, new Classifications(Keys.INTERNATCL_CODE_EPT, getIPCClssificationsDT(arrIpcs)));
                 }
 
                 //CRN
@@ -1326,11 +1326,10 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                 
                 //PY
 
-                if (rset.getString("PD") != null) {
+                if (rset.getString("PY") != null) {
                     // 11/07 specs on pubdate
                 	//String strYR = formatDate(StringUtil.replaceNullWithEmptyString(rset.getString("PD")));
-                    ht.put(Keys.UPAT_PUBDATE, new XMLWrapper(Keys.UPAT_PUBDATE, rset.getString("PD")));
-
+                    ht.put(Keys.UPAT_PUBDATE, new XMLWrapper(Keys.UPAT_PUBDATE, rset.getString("PY")));
                 }
                 StringBuffer pubNum = new StringBuffer();
                 //Publication Number
