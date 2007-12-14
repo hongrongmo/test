@@ -53,7 +53,7 @@ public class SearchFields
 	public static SearchField NI = new SearchField("NI", "Numerical indexing");
 	public static SearchField PD = new SearchField("PD", "Publication date");
 	public static SearchField PI = new SearchField("PI", "Patent issue date");
-	public static SearchField PID = new SearchField("PID", "IPC code");
+	public static SearchField PID = new SearchField("PID", "Int.patent classification");
 	public static SearchField PEC = new SearchField("PEC", "ECLA code");
 	public static SearchField PAC = new SearchField("PAC", "Patent authority code");
 	public static SearchField PAM = new SearchField("PAM", "Patent application number");

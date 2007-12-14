@@ -153,7 +153,7 @@ public class FastQueryWriter
         mappings.setProperty("rc", "rc");
         mappings.setProperty("si", "si");///???
         mappings.setProperty("gc", "gc");
-        mappings.setProperty("ip", "pid");
+        mappings.setProperty("ip", "pk");
         mappings.setProperty("ppa", "af");
         mappings.setProperty("gd", "ds");
 

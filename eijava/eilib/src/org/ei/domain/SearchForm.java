@@ -401,9 +401,13 @@ public class SearchForm {
         //PID
          if(selecteddbMask == DatabaseConfig.UPA_MASK ||
 		    selecteddbMask == DatabaseConfig.EUP_MASK ||
-            selecteddbMask == DatabaseConfig.UPA_MASK + DatabaseConfig.EUP_MASK)
+            selecteddbMask == DatabaseConfig.UPA_MASK + DatabaseConfig.EUP_MASK ||
+            selecteddbMask == DatabaseConfig.EPT_MASK ||
+            selecteddbMask == DatabaseConfig.EPT_MASK + DatabaseConfig.UPA_MASK + DatabaseConfig.EUP_MASK ||
+            selecteddbMask == DatabaseConfig.EPT_MASK + DatabaseConfig.UPA_MASK ||
+            selecteddbMask == DatabaseConfig.EPT_MASK + DatabaseConfig.EUP_MASK )
         {
-             sectiontype.put("PID","IPC code");
+             sectiontype.put("PID","Int. patent classification");
         }
 
         //PUC
@@ -433,7 +437,7 @@ public class SearchForm {
   		//IP
 		if(selecteddbMask == DatabaseConfig.EPT_MASK)
 		{
-			sectiontype.put("IP","Int. patent classification");
+			sectiontype.put("PID","Int. patent classification");
   		}
 
         return sectiontype;

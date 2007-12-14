@@ -395,9 +395,13 @@ function generateSection(selecteddbMask)
   //PID
   if( selecteddbMask == US_PATENTS ||
       selecteddbMask == EU_PATENTS ||
-      selecteddbMask == US_EU_PATENTS)
+      selecteddbMask == US_EU_PATENTS ||
+      selecteddbMask == EPT ||
+      selecteddbMask == EPT + US_PATENTS ||
+      selecteddbMask == EPT + EU_PATENTS ||
+      selecteddbMask == EPT + US_EU_PATENTS)
   {
-     searchin[index++] = new Field("PID","IPC code");
+     searchin[index++] = new Field("PID","Int. patent classification");
   }
 
   //PUC
@@ -423,13 +427,6 @@ function generateSection(selecteddbMask)
   {
       searchin[index++] = new Field("PC","Patent country");
   }
-
-  //IP
-  if(selecteddbMask == EPT)
-  {
-      searchin[index++] = new Field("IP","Int. patent classification");
-  }
-
 
   return searchin;
 
