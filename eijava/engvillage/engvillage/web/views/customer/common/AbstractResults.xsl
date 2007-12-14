@@ -166,6 +166,7 @@
       <xsl:apply-templates select="CLS"/>
       <xsl:apply-templates select="RGIS"/>
       <xsl:apply-templates select="PIDM"/>
+      <xsl:apply-templates select="PIDEPM"/>
       <xsl:apply-templates select="PIDM8"/>
       <xsl:apply-templates select="PUCM"/>
       <xsl:apply-templates select="PECM"/>
@@ -280,11 +281,12 @@
 
 <!-- Book Templates -->
 
-  <xsl:template match="PIDM8|PIDM|PUCM|PECM">
+  <xsl:template match="PIDM8|PIDM|PUCM|PECM|PIDEPM">
     <br/><br/>
     <a class="MedBlackText"><b>
     <xsl:choose>
       <xsl:when test="name(.)='PIDM'">IPC Code:</xsl:when>
+      <xsl:when test="name(.)='PIDEPM'">IPC Code:</xsl:when>
       <xsl:when test="name(.)='PIDM8'">IPC-8 Code:</xsl:when>
       <xsl:when test="name(.)='PUCM'">US Classification:</xsl:when>
       <xsl:when test="name(.)='PECM'">ELCA Code:</xsl:when>
@@ -293,7 +295,7 @@
     <xsl:apply-templates/>
   </xsl:template>
 
-  <xsl:template match="PID|PUC|PEC">
+  <xsl:template match="PID|PUC|PEC|PIDEP">
       <xsl:variable name="CLASS">
          <xsl:choose>
             <xsl:when test="(@level='A') and (@type='I')">SpBoldItalicLink</xsl:when>
@@ -304,11 +306,10 @@
       </xsl:variable>
 
       <xsl:variable name="FIELDNAME">
+      <xsl:message><xsl:value-of select="name(.)"/></xsl:message>
       	<xsl:choose>
-      		<xsl:when test="not(../../DOC/DB/DBMASK='2048')">
-      			<xsl:value-of select="name(.)"/>
-      		</xsl:when>
-      		<xsl:otherwise>IP</xsl:otherwise>
+      		<xsl:when test="name()='PIDEP'">DPID</xsl:when>
+      		<xsl:otherwise><xsl:value-of select="name(.)"/></xsl:otherwise>
       	</xsl:choose>
       </xsl:variable>
 
@@ -479,7 +480,14 @@
 
     <!-- upt pub date -->
     <xsl:template match="UPD">
-      <b> Publication date:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
+       <xsl:choose>       		
+       		<xsl:when test="string(@label)">
+      			<b> <xsl:value-of select="@label"/>:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
+       		</xsl:when>
+       		<xsl:otherwise>
+       			<b> Publication date:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
+       		</xsl:otherwise>
+       </xsl:choose>       
     </xsl:template>
 
     <xsl:template match="YR">
