@@ -308,7 +308,7 @@
       <xsl:variable name="FIELDNAME">
       <xsl:message><xsl:value-of select="name(.)"/></xsl:message>
       	<xsl:choose>
-      		<xsl:when test="name()='PIDEP'">DPID</xsl:when>
+      		<xsl:when test="name()='PIDEP'">PID</xsl:when>
       		<xsl:otherwise><xsl:value-of select="name(.)"/></xsl:otherwise>
       	</xsl:choose>
       </xsl:variable>
