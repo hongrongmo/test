@@ -1,70 +1,62 @@
 package org.ei.bulletins;
 
-
-import java.util.Calendar;
-import java.net.URLEncoder;
 import org.ei.util.MD5Digester;
-
-
 
 public class BulletinSecurity
 {
-    private static final String SECRET="qazwsxeujm";
-	private static final int expired=10; //10 minutes
+    private static final String SECRET = "qazwsxeujm";
+    private static final long TWENTY_MINUTES = 1200000; // 20 minutes
 
-    public boolean isValidKey(String authorityCode,
-                            		 String date)
-                            throws Exception
+    public boolean isValidKey(String authorityCode, String date) throws Exception
     {
-        boolean test=false;
-
-
-
-        if(authorityCode != null)
+        boolean isvalid = false;
+        if (authorityCode != null)
         {
             String md5key1 = getKey(date);
-            if(authorityCode.equalsIgnoreCase(md5key1))
-                test=true;
+            if (authorityCode.equalsIgnoreCase(md5key1))
+            {
+                isvalid = true;
+            }
         }
-
-        return test;
-
+        return isvalid;
     }
 
-    public boolean isExpired(String time) throws Exception
+    public boolean isExpired(String timems)
     {
-		boolean isExpired = true;
-		if((Long.parseLong(getTime())-Long.parseLong(time))<expired)
-		{
-			isExpired = false;
-		}
-		return isExpired;
-	}
+        boolean isExpired = false;
+        // Test if time diff is greater than xx minutes
+        try
+        {
+          if ((System.currentTimeMillis() - (Long.parseLong(timems))) > BulletinSecurity.TWENTY_MINUTES)
+          {
+              isExpired = true;
+          }
+        }
+        catch(NumberFormatException e)
+        {
+          /// if we cannot parse the timestring, fail the validation
+          isExpired = true;
+        }
+        return isExpired;
+    }
 
-	public String getKey() throws Exception
-	{
-		String time = getTime();
-		return getKey(time);
-	}
+    public String getKey() throws Exception
+    {
+        String time = getTime();
+        return getKey(time);
+    }
 
-    public String getKey(String date) throws Exception
+    public String getKey(String timems) throws Exception
     {
         MD5Digester digester = new MD5Digester();
         StringBuffer dataBuffer = new StringBuffer();
-        dataBuffer.append(SECRET).append(date);
+        dataBuffer.append(BulletinSecurity.SECRET).append(timems);
         String strMD5 = digester.asHex(digester.digest(dataBuffer.toString()));
         return strMD5;
     }
 
     public String getTime() throws Exception
-	{
-		int days = 0;
-		Calendar c1 = Calendar.getInstance();
-		c1.setTimeInMillis(System.currentTimeMillis());
-
-		String DATE_FORMAT = "yyyyMMddHHmm";
-		java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat(DATE_FORMAT);
-
-		return sdf.format(c1.getTime());
+    {
+        return String.valueOf(System.currentTimeMillis());
     }
 }
