@@ -214,8 +214,8 @@
           <xsl:otherwise>SpLink</xsl:otherwise>
         </xsl:choose>
       </xsl:variable>
- <!--
-      <xsl:variable name="FIELDNAME">
+ 	  <!--
+      	<xsl:variable name="FIELDNAME">
       	<xsl:choose>
       		<xsl:when test="not(./DOC/DB/DBMASK='2048')">
       			<xsl:value-of select="name(.)"/>
@@ -223,7 +223,7 @@
       		<xsl:otherwise>IP</xsl:otherwise>
       	</xsl:choose>
       </xsl:variable>
-   -->
+   	  -->
 
 
       <tr>
@@ -242,7 +242,7 @@
 
      <xsl:template match="FS">
             <xsl:text> </xsl:text>
-    <!--            <xsl:value-of select="normalize-space(text())" /> -->
+    <!--      <xsl:value-of select="normalize-space(text())" /> -->
 
             <span CLASS="MedBlackText"><xsl:value-of select="normalize-space(text())"/></span>
 				<!--  <img src="/engresources/images/plus.gif" border="0"/>  -->
@@ -702,7 +702,7 @@
 
           <xsl:call-template name="LINK">
            <xsl:with-param name="TERM"><xsl:value-of select="$CCID"/></xsl:with-param>
-           <xsl:with-param name="FIELD">IP</xsl:with-param>
+           <xsl:with-param name="FIELD">DPID</xsl:with-param>
            <xsl:with-param name="CLASS"><xsl:value-of select="$CLASS"/></xsl:with-param>
           <!--    <xsl:with-param name="ONMOUSEOVER">this.T_WIDTH=450;return escape('<xsl:value-of select="ctd:getDisplayTitle(hlight:addMarkup(./CTI))"/>')</xsl:with-param>            -->
           </xsl:call-template>
