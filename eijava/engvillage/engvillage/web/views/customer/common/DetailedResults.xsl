@@ -702,7 +702,7 @@
 
           <xsl:call-template name="LINK">
            <xsl:with-param name="TERM"><xsl:value-of select="$CCID"/></xsl:with-param>
-           <xsl:with-param name="FIELD">DPID</xsl:with-param>
+           <xsl:with-param name="FIELD">PID</xsl:with-param>
            <xsl:with-param name="CLASS"><xsl:value-of select="$CLASS"/></xsl:with-param>
           <!--    <xsl:with-param name="ONMOUSEOVER">this.T_WIDTH=450;return escape('<xsl:value-of select="ctd:getDisplayTitle(hlight:addMarkup(./CTI))"/>')</xsl:with-param>            -->
           </xsl:call-template>
