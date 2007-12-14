@@ -14,13 +14,13 @@
 
 
     RuntimeProperties eiProps = null;
-  	
+
   	public void jspInit()
   	{
     	try
     	{
       		eiProps = ConfigService.getRuntimeProperties();
-     
+
     	}
     	catch(Exception e)
     	{
@@ -31,19 +31,19 @@
  <%
 
     ControllerClient client = new ControllerClient(request, response);
-    
+
     UserSession ussession=(UserSession)client.getUserSession();
     ClientCustomizer clientCustomizer=new ClientCustomizer(ussession);
     boolean isPersonalizationPresent=clientCustomizer.checkPersonalization();
-    SessionID sessionId = ussession.getSessionID();  
+    SessionID sessionId = ussession.getSessionID();
     String sesID = sessionId.toString();
-    
+
     User user = ussession.getUser();
     String cartridges[] = user.getCartridge();
     String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
     //String appID = ussession.getProperty(UserSession.APPLICATION_KEY);
     SessionID sessionIdObj = ussession.getSessionID();
-    	
+
     boolean showLitPdf = false;
     boolean showPatPdf = false;
     boolean showLitHtml = false;
@@ -61,37 +61,37 @@
     }
 
     String resourcePath   = eiProps.getProperty("resourcePath");
-    String queryString = request.getParameter("queryStr");	
-    String selectedDB = request.getParameter("database");	
+    String queryString = request.getParameter("queryStr");
+    String selectedDB = request.getParameter("database");
 
     int pageSize = 25;
-	   
+
     BulletinQuery query = new BulletinQuery();
-    
+
     int docIndex = Integer.parseInt(request.getParameter("docIndex"));
-    
-    
+
+
     BulletinPage btPage = null;
     BulletinBuilder builder = new BulletinBuilder();
     BulletinResultNavigator navigator = null;
     String db = "";
     String yr = "";
     String category = null;
-        
+
     if(queryString != null)
-    {    
+    {
 	query.setQuery(queryString);
-	        
+
 	yr = query.getYr();
 	db = query.getDatabase();
-	category = query.getCategory();		
+	category = query.getCategory();
 	btPage = builder.buildBulletinResults(db,yr,category);
-		
-    } 
-    else 
-    {		
-	db = request.getParameter("db");	
-	yr = request.getParameter("yr");	
+
+    }
+    else
+    {
+	db = request.getParameter("db");
+	yr = request.getParameter("yr");
 	category = request.getParameter("cy");
 
 	query.setYr(yr);
@@ -102,29 +102,29 @@
     }
     boolean showPdf = false;
     boolean showHtml = false;
-	
+
     if(db.equals("1")){
 	showPdf = showLitPdf;
 	showHtml = showLitHtml;
     }
-    else 
+    else
     {
 	showPdf = showPatPdf;
 	showHtml = showPatHtml;
     }
-		
+
     	navigator = new BulletinResultNavigator(docIndex,pageSize,btPage.size());
     	btPage = navigator.filter(btPage);
-    
+
     	BulletinXMLVisitor xmlVisitor = new BulletinXMLVisitor(out,cartridges);
-    	
+
     	StringBuffer sbCartridges = new StringBuffer();
     	StringBuffer litCartidges = new StringBuffer();
     	StringBuffer patCartridges = new StringBuffer();
     	BulletinGUI gui = new BulletinGUI();
-  	
+
   	for (int i = 0; i < cartridges.length; i++) {
-  	
+
         if(gui.validCartridge(db,cartridges[i])){
         	sbCartridges.append(cartridges[i].toUpperCase());
         	 if(i != cartridges.length - 1)
@@ -135,23 +135,23 @@
         	if(i != cartridges.length - 1)
         	litCartidges.append(";");
         }
-        
+
         if(gui.isPATCartridge(cartridges[i])){
         	patCartridges.append(cartridges[i].toUpperCase());
         	if(i != cartridges.length - 1)
         	patCartridges.append(";");
         }
-         
-       
-        	
+
+
+
     }
-    
+
 	client.log("request", "bulletinSearch");
 	client.log("dbname", db);
 	client.log("category",category);
 	client.log("year",yr);
-	client.log("custid", user.getCustomerID());	
-	
+	client.log("custid", user.getCustomerID());
+
 	client.setRemoteControl();
 
 	out.write("<PAGE>");
@@ -187,8 +187,8 @@
 	out.write(category.toUpperCase());
 	out.write("]]></QCAT>");
 	out.write("</QTOP>");
-	System.out.println("Title Query= "+query.getTitleQuery()+" category= "+ category+" QSTR= "+query.toString()+" QDIS="+query.getDisplayQuery()+" QCAT= "+category.toUpperCase());
-	    
+	//System.out.println("Title Query= "+query.getTitleQuery()+" category= "+ category+" QSTR= "+query.toString()+" QDIS="+query.getDisplayQuery()+" QCAT= "+category.toUpperCase());
+
 	if(btPage != null){
 		out.write("<BULLETINS>");
 		btPage.accept(xmlVisitor);
