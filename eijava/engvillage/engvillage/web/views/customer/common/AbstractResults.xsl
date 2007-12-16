@@ -480,14 +480,14 @@
 
     <!-- upt pub date -->
     <xsl:template match="UPD">
-       <xsl:choose>       		
+       <xsl:choose>
        		<xsl:when test="string(@label)">
       			<b> <xsl:value-of select="@label"/>:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
        		</xsl:when>
        		<xsl:otherwise>
        			<b> Publication date:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
        		</xsl:otherwise>
-       </xsl:choose>       
+       </xsl:choose>
     </xsl:template>
 
     <xsl:template match="YR">
@@ -581,15 +581,11 @@
     </xsl:template>
 
     <xsl:template match="COPA">
-	<a CLASS="MedBlackText">
       <b> Country of application:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
-    </a>
     </xsl:template>
     <xsl:template match="CPUB">
-    <a  CLASS="MedBlackText">
       <xsl:text>&#xD;&#xA;</xsl:text><br/>
       <b>Country of publication: </b><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
-    </a>
     </xsl:template>
 
     <xsl:template match="FTTJ">
