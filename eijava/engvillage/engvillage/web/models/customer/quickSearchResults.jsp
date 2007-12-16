@@ -677,6 +677,7 @@
 
                 client.log("search_id", queryObject.getID());
                 client.log("query_string", queryObject.getPhysicalQuery());
+                client.log("bookcreds", BookCredentials.toString(credentials));
                 client.log("sort_by", queryObject.getSortOption().getSortField());
                 client.log("sort_direction", queryObject.getSortOption().getSortDirection());
                 client.log("suppress_stem", queryObject.getAutoStemming());

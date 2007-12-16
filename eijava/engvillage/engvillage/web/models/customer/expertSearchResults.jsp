@@ -684,26 +684,24 @@
             {
                 out.write("<PAGE>");
 
-				StringBuffer backurl = new StringBuffer();
-				backurl.append("CID=expertSearchCitationFormat").append("&");
-				backurl.append("SEARCHID=").append(searchID).append("&");
-				backurl.append("COUNT=").append(index).append("&");
-				backurl.append("database=").append(dbName);
-				String encodedBackURL = URLEncoder.encode(backurl.toString());
-				String newSearchURL = URLEncoder.encode(getnsURL(dbName, queryObject.getSearchType()));
-				out.write("<BACKURL>");
-				out.write(encodedBackURL);
-				out.write("</BACKURL>");
-				out.write("<PAGE-NAV>");
-				out.write("<RESULTS-NAV>");
-				out.write(encodedBackURL);
-				out.write("</RESULTS-NAV>");
-				out.write("<NEWSEARCH-NAV>");
-				out.write(newSearchURL);
-				out.write("</NEWSEARCH-NAV>");
-				out.write("</PAGE-NAV>");
-
-
+		StringBuffer backurl = new StringBuffer();
+		backurl.append("CID=expertSearchCitationFormat").append("&");
+		backurl.append("SEARCHID=").append(searchID).append("&");
+		backurl.append("COUNT=").append(index).append("&");
+		backurl.append("database=").append(dbName);
+		String encodedBackURL = URLEncoder.encode(backurl.toString());
+		String newSearchURL = URLEncoder.encode(getnsURL(dbName, queryObject.getSearchType()));
+		out.write("<BACKURL>");
+		out.write(encodedBackURL);
+		out.write("</BACKURL>");
+		out.write("<PAGE-NAV>");
+		out.write("<RESULTS-NAV>");
+		out.write(encodedBackURL);
+		out.write("</RESULTS-NAV>");
+		out.write("<NEWSEARCH-NAV>");
+		out.write(newSearchURL);
+		out.write("</NEWSEARCH-NAV>");
+		out.write("</PAGE-NAV>");
                 out.write("<BACKURL>");
                 out.write(URLEncoder.encode(backurl.toString()));
                 out.write("</BACKURL>");
@@ -869,6 +867,7 @@
                 // Logging
                 client.log("SEARCH_ID", searchID);
                 client.log("QUERY_STRING", queryObject.getPhysicalQuery());
+                client.log("bookcreds", BookCredentials.toString(credentials));
                 client.log("sort_by", queryObject.getSortOption().getSortField());
                 client.log("sort_direction", queryObject.getSortOption().getSortDirection());
                 client.log("suppress_stem", queryObject.getAutoStemming());
