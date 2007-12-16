@@ -238,7 +238,8 @@ public class ResultNavigator
           if(m_booksOnly)
           {
             // check for bookrecords and pagerecords doctypes in results
-            List dtmods = anav.getModifiers();
+            EiNavigator dtnav = getNavigatorByName(EiNavigator.DT);
+            List dtmods = dtnav.getModifiers();
             boolean bookrecords = dtmods.contains(EiModifier.DT_BOOK);
             boolean pagerecords = dtmods.contains(EiModifier.DT_PAGE);
             // if only book records remove ST (book title) nav
