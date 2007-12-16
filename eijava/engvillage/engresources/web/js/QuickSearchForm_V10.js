@@ -111,7 +111,7 @@ function generateSection(selecteddbMask)
 	   (selecteddbMask & EPT) != EPT &&
 	   (selecteddbMask & EU_PATENTS) != EU_PATENTS)
 	{
-		searchin[index++] = new Field("AU", "Author affiliation");
+		searchin[index++] = new Field("AF", "Author affiliation");
 	}
         else if( (selecteddbMask == US_PATENTS) ||
                  (selecteddbMask == EU_PATENTS) ||

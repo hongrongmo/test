@@ -115,7 +115,7 @@ public class SearchForm {
 			   (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
 			   (selecteddbMask & DatabaseConfig.EUP_MASK) != DatabaseConfig.EUP_MASK)
 			{
-				sectiontype.put("AU", "Author affiliation");
+				sectiontype.put("AF", "Author affiliation");
 			}
 			else if(selecteddbMask == DatabaseConfig.UPA_MASK ||
 				    selecteddbMask == DatabaseConfig.EUP_MASK ||
