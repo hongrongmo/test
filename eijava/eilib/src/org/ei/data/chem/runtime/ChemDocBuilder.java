@@ -115,7 +115,8 @@ public class ChemDocBuilder implements DocumentBuilder {
     }
 
 
-    private List loadRIS(List listOfDocIDs) throws Exception {
+    private List loadRIS(List listOfDocIDs) throws Exception
+    {
 
         List list = new ArrayList();
         int count = 0;
@@ -127,7 +128,8 @@ public class ChemDocBuilder implements DocumentBuilder {
 
         String INString = buildINString(listOfDocIDs);
 
-        try {
+        try
+        {
             broker = ConnectionBroker.getInstance();
             con = broker.getConnection(DatabaseConfig.SEARCH_POOL);
             stmt = con.createStatement();
@@ -227,30 +229,40 @@ public class ChemDocBuilder implements DocumentBuilder {
                 count++;
             }
         }
-        finally {
-            if (rset != null) {
-                try {
+        finally
+        {
+            if(rset != null)
+            {
+                try
+                {
                     rset.close();
                 }
-                catch (SQLException e1) {
+                catch (Exception e1)
+                {
                     e1.printStackTrace();
                 }
             }
 
-            if (stmt != null) {
-                try {
+            if(stmt != null)
+            {
+                try
+                {
                     stmt.close();
                 }
-                catch (SQLException sqle) {
+                catch (Exception sqle)
+                {
                     sqle.printStackTrace();
                 }
             }
 
-            if (con != null) {
-                try {
+            if(con != null)
+            {
+                try
+                {
                     broker.replaceConnection(con, DatabaseConfig.SEARCH_POOL);
                 }
-                catch (ConnectionPoolException cpe) {
+                catch (ConnectionPoolException cpe)
+                {
                     cpe.printStackTrace();
                 }
             }
@@ -261,7 +273,8 @@ public class ChemDocBuilder implements DocumentBuilder {
 
 
 
-   private List loadAbstracts(List listOfDocIDs) throws Exception {
+   private List loadAbstracts(List listOfDocIDs) throws Exception
+   {
         Hashtable oidTable = getDocIDTable(listOfDocIDs);
 
         List list = new ArrayList();
@@ -271,13 +284,15 @@ public class ChemDocBuilder implements DocumentBuilder {
         ResultSet rset = null;
         ConnectionBroker broker = null;
         String INString = buildINString(listOfDocIDs);
-        try {
+        try
+        {
             broker = ConnectionBroker.getInstance();
             con = broker.getConnection(DatabaseConfig.SEARCH_POOL);
             stmt = con.createStatement();
             rset = stmt.executeQuery(queryAbstracts + INString);
 
-            while (rset.next()) {
+            while (rset.next())
+            {
                 ElementDataMap ht = new ElementDataMap();
 
                 DocID did = (DocID) oidTable.get(rset.getString("M_ID"));
@@ -404,31 +419,40 @@ public class ChemDocBuilder implements DocumentBuilder {
 			}
 
         }
-        finally {
-
-            if (rset != null) {
-                try {
+        finally
+        {
+            if(rset != null)
+            {
+                try
+                {
                     rset.close();
                 }
-                catch (SQLException e1) {
+                catch (Exception e1)
+                {
                     e1.printStackTrace();
                 }
             }
 
-            if (stmt != null) {
-                try {
+            if(stmt != null)
+            {
+                try
+                {
                     stmt.close();
                 }
-                catch (SQLException sqle) {
+                catch (Exception sqle)
+                {
                     sqle.printStackTrace();
                 }
             }
 
-            if (con != null) {
-                try {
+            if(con != null)
+            {
+                try
+                {
                     broker.replaceConnection(con, DatabaseConfig.SEARCH_POOL);
                 }
-                catch (ConnectionPoolException cpe) {
+                catch (ConnectionPoolException cpe)
+                {
                     cpe.printStackTrace();
                 }
             }
@@ -447,7 +471,8 @@ public class ChemDocBuilder implements DocumentBuilder {
         *   @return EIDocumentList
         *   @exception Exception
         */
-   private List loadDetailed(List listOfDocIDs) throws Exception {
+   private List loadDetailed(List listOfDocIDs) throws Exception
+   {
         Hashtable oidTable = getDocIDTable(listOfDocIDs);
 
         List list = new ArrayList();
@@ -457,13 +482,15 @@ public class ChemDocBuilder implements DocumentBuilder {
         ResultSet rset = null;
         ConnectionBroker broker = null;
         String INString = buildINString(listOfDocIDs);
-        try {
+        try
+        {
             broker = ConnectionBroker.getInstance();
             con = broker.getConnection(DatabaseConfig.SEARCH_POOL);
             stmt = con.createStatement();
             rset = stmt.executeQuery(queryDetailed + INString);
 
-            while (rset.next()) {
+            while (rset.next())
+            {
 
                 ElementDataMap ht = new ElementDataMap();
                 DocID did = (DocID) oidTable.get(rset.getString("M_ID"));
@@ -601,30 +628,40 @@ public class ChemDocBuilder implements DocumentBuilder {
             }
 
         }
-        finally {
-            if (rset != null) {
-                try {
+        finally
+        {
+            if (rset != null)
+            {
+                try
+                {
                     rset.close();
                 }
-                catch (SQLException e1) {
+                catch (Exception e1)
+                {
                     e1.printStackTrace();
                 }
             }
 
-            if (stmt != null) {
-                try {
+            if (stmt != null)
+            {
+                try
+                {
                     stmt.close();
                 }
-                catch (SQLException sqle) {
+                catch (Exception sqle)
+                {
                     sqle.printStackTrace();
                 }
             }
 
-            if (con != null) {
-                try {
+            if (con != null)
+            {
+                try
+                {
                     broker.replaceConnection(con, DatabaseConfig.SEARCH_POOL);
                 }
-                catch (ConnectionPoolException cpe) {
+                catch (ConnectionPoolException cpe)
+                {
                     cpe.printStackTrace();
                 }
             }
@@ -656,14 +693,16 @@ public class ChemDocBuilder implements DocumentBuilder {
 
         String INString = buildINString(listOfDocIDs);
 
-        try {
+        try
+        {
             broker = ConnectionBroker.getInstance();
             con = broker.getConnection(DatabaseConfig.SEARCH_POOL);
             stmt = con.createStatement();
 
             rset = stmt.executeQuery(queryCitation + INString);
 
-            while (rset.next()) {
+            while (rset.next())
+            {
                 ElementDataMap ht = new ElementDataMap();
 
                 // Common Fields
@@ -765,32 +804,42 @@ public class ChemDocBuilder implements DocumentBuilder {
             }
 
         }
-        finally {
-            if (rset != null) {
-                try {
+        finally
+        {
+            if (rset != null)
+            {
+                try
+                {
                     rset.close();
                     rset = null;
                 }
-                catch (SQLException e1) {
+                catch (Exception e1)
+                {
                     e1.printStackTrace();
                 }
             }
 
-            if (stmt != null) {
-                try {
+            if (stmt != null)
+            {
+                try
+                {
                     stmt.close();
                     stmt = null;
                 }
-                catch (SQLException sqle) {
+                catch (Exception sqle)
+                {
                     sqle.printStackTrace();
                 }
             }
 
-            if (con != null) {
-                try {
+            if (con != null)
+            {
+                try
+                {
                     broker.replaceConnection(con, DatabaseConfig.SEARCH_POOL);
                 }
-                catch (ConnectionPoolException cpe) {
+                catch (ConnectionPoolException cpe)
+                {
                     cpe.printStackTrace();
                 }
             }
@@ -947,34 +996,40 @@ public class ChemDocBuilder implements DocumentBuilder {
     } // try
     finally
     {
-        if (rset != null)
+        if(rset != null)
         {
-            try {
+            try
+            {
                 rset.close();
                 rset = null;
             }
-            catch (SQLException e1) {
+            catch (Exception e1)
+            {
                 e1.printStackTrace();
             }
         }
 
         if (stmt != null)
         {
-            try {
+            try
+            {
                 stmt.close();
                 stmt = null;
             }
-            catch (SQLException sqle) {
+            catch (Exception sqle)
+            {
                 sqle.printStackTrace();
             }
         }
 
         if (con != null)
         {
-            try {
+            try
+            {
                 broker.replaceConnection(con, DatabaseConfig.SEARCH_POOL);
             }
-            catch (ConnectionPoolException cpe) {
+            catch (ConnectionPoolException cpe)
+            {
                 cpe.printStackTrace();
             }
         }

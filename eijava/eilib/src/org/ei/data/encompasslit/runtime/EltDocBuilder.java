@@ -186,7 +186,8 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
 
         return l;
     }
-    private List loadRIS(List listOfDocIDs) throws Exception {
+    private List loadRIS(List listOfDocIDs) throws Exception
+    {
         Hashtable oidTable = getDocIDTable(listOfDocIDs);
         List list = new ArrayList();
         int count = 0;
@@ -196,7 +197,8 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
         ConnectionBroker broker = null;
         String INString = buildINString(listOfDocIDs);
 
-        try {
+        try
+        {
             broker = ConnectionBroker.getInstance();
             con = broker.getConnection(DatabaseConfig.SEARCH_POOL);
             stmt = con.createStatement();
@@ -299,7 +301,7 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
 
                 }
 
-                if (rset.getString("apict") != null) 
+                if (rset.getString("apict") != null)
                 {
                     ht.put(Keys.RIS_CVS, new XMLMultiWrapper(Keys.RIS_CVS, setElementData(StringUtil.substituteChars(rset.getString("apict")))));
                 }
@@ -363,7 +365,8 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
                 count++;
             }
         }
-        finally {
+        finally
+        {
 
             close(rset);
             close(stmt);
@@ -382,7 +385,8 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
         }
         return str;
     }
-    private List loadAbstracts(List listOfDocIDs) throws Exception {
+    private List loadAbstracts(List listOfDocIDs) throws Exception
+    {
         Hashtable oidTable = getDocIDTable(listOfDocIDs);
         List list = new ArrayList();
         int count = 0;
@@ -667,7 +671,8 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
             }
 
         }
-        finally {
+        finally
+        {
             close(rset);
             close(stmt);
             close(con, broker);
@@ -874,7 +879,8 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
       *   @return EIDocumentList
       *   @exception Exception
       */
-    private List loadDetailed(List listOfDocIDs) throws Exception {
+    private List loadDetailed(List listOfDocIDs) throws Exception
+    {
         Hashtable oidTable = getDocIDTable(listOfDocIDs);
         List list = new ArrayList();
         int count = 0;
@@ -1247,7 +1253,8 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
             }
 
         }
-        finally {
+        finally
+        {
             close(rset);
             close(stmt);
             close(con, broker);
@@ -1443,7 +1450,8 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
     }
     /**    This method basically takes list Of DocIDs as Parameter
                                                                                                                                                                                                                                                                                                */
-    private List loadCitations(List listOfDocIDs) throws Exception {
+    private List loadCitations(List listOfDocIDs) throws Exception
+    {
         Hashtable oidTable = getDocIDTable(listOfDocIDs);
         List list = new ArrayList();
         int count = 0;
@@ -1625,7 +1633,8 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
             }
 
         }
-        finally {
+        finally
+        {
             close(rset);
             close(stmt);
             close(con, broker);
@@ -1798,7 +1807,7 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
 		{
 			if (docType.equals("JA")){docType = "Journal article (JA)";}
 			else if(docType.equals("AB")){docType = "Journal article (JA)";}
-			else if (docType.equals("CA")){docType = "Conference article (CA)";}			
+			else if (docType.equals("CA")){docType = "Conference article (CA)";}
 			else if (docType.equals("CP")){docType = "Conference proceeding (CP)";}
 			else if (docType.equals("MC")){docType = "Monograph chapter (MC)";}
 			else if (docType.equals("MR")){docType = "Monograph review (MR)";}
@@ -2135,7 +2144,8 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
             } // while
 
         }
-        finally {
+        finally
+        {
             close(rset);
             close(stmt);
             close(con, broker);

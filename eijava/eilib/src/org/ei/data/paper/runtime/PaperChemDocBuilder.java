@@ -906,28 +906,42 @@ public class PaperChemDocBuilder implements DocumentBuilder
                 count++;
             }
 
-        } finally {
+        }
+        finally
+        {
 
-            if(rset != null) {
-                try {
+            if(rset != null)
+            {
+                try
+                {
                     rset.close();
-                } catch(SQLException e1) {
+                }
+                catch(Exception e1)
+                {
                     e1.printStackTrace();
                 }
             }
 
-            if(stmt != null) {
-                try {
+            if(stmt != null)
+            {
+                try
+                {
                     stmt.close();
-                } catch(SQLException sqle) {
+                }
+                catch(Exception sqle)
+                {
                     sqle.printStackTrace();
                 }
             }
 
-            if(con != null) {
-                try {
+            if(con != null)
+            {
+                try
+                {
                     broker.replaceConnection(con, DatabaseConfig.SEARCH_POOL);
-                } catch(ConnectionPoolException cpe) {
+                }
+                catch(ConnectionPoolException cpe)
+                {
                         cpe.printStackTrace();
                 }
             }
@@ -1637,28 +1651,42 @@ public class PaperChemDocBuilder implements DocumentBuilder
 
                 }
 
-            } finally {
-                if(rset != null) {
-                    try {
+            }
+            finally
+            {
+                if(rset != null)
+                {
+                    try
+                    {
                         rset.close();
-                    } catch(SQLException e1) {
+                    }
+                    catch(Exception e1)
+                    {
                         e1.printStackTrace();
                     }
                 }
 
-                if(stmt != null) {
-                    try {
+                if(stmt != null)
+                {
+                    try
+                    {
                             stmt.close();
-                    } catch(SQLException sqle) {
+                    }
+                    catch(Exception sqle)
+                    {
                             sqle.printStackTrace();
                     }
                 }
 
-                if(con != null) {
-                    try {
+                if(con != null)
+                {
+                    try
+                    {
                         broker.replaceConnection(con,
                         DatabaseConfig.SEARCH_POOL);
-                    } catch(ConnectionPoolException cpe) {
+                    }
+                    catch(ConnectionPoolException cpe)
+                    {
                         cpe.printStackTrace();
                     }
                 }
@@ -2024,28 +2052,42 @@ public class PaperChemDocBuilder implements DocumentBuilder
                     count++;
                 }
 
-            } finally {
-                if(rset != null) {
-                    try {
+            }
+            finally
+            {
+                if(rset != null)
+                {
+                    try
+                    {
                         rset.close();
-                    } catch(SQLException e1) {
+                    }
+                    catch(Exception e1)
+                    {
                         e1.printStackTrace();
                     }
                 }
 
-                if(stmt != null) {
-                    try {
+                if(stmt != null)
+                {
+                    try
+                    {
                             stmt.close();
-                    } catch(SQLException sqle) {
+                    }
+                    catch(Exception sqle)
+                    {
                             sqle.printStackTrace();
                     }
                 }
 
-                if(con != null) {
-                    try {
+                if(con != null)
+                {
+                    try
+                    {
                         broker.replaceConnection(con,
                         DatabaseConfig.SEARCH_POOL);
-                    } catch(ConnectionPoolException cpe) {
+                    }
+                    catch(ConnectionPoolException cpe)
+                    {
                         cpe.printStackTrace();
                     }
                 }
@@ -2488,28 +2530,40 @@ public class PaperChemDocBuilder implements DocumentBuilder
         }
         finally
         {
-            if(rset != null) {
-                try {
+            if(rset != null)
+            {
+                try
+                {
                     rset.close();
                     rset = null;
-                } catch(SQLException e1) {
+                }
+                catch(Exception e1)
+                {
                     e1.printStackTrace();
                 }
             }
 
-            if(stmt != null) {
-                try {
+            if(stmt != null)
+            {
+                try
+                {
                     stmt.close();
                     stmt = null;
-                } catch(SQLException sqle) {
+                }
+                catch(Exception sqle)
+                {
                     sqle.printStackTrace();
                 }
             }
 
-            if(con != null) {
-                try {
+            if(con != null)
+            {
+                try
+                {
                     broker.replaceConnection(con, DatabaseConfig.SEARCH_POOL);
-                } catch(ConnectionPoolException cpe) {
+                }
+                catch(ConnectionPoolException cpe)
+                {
                     cpe.printStackTrace();
                 }
             }

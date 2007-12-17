@@ -106,7 +106,8 @@ public class CBNBDocBuilder implements DocumentBuilder {
     }
 
 
-    private List loadRIS(List listOfDocIDs) throws Exception {
+    private List loadRIS(List listOfDocIDs) throws Exception
+    {
 
         List list = new ArrayList();
         int count = 0;
@@ -118,14 +119,16 @@ public class CBNBDocBuilder implements DocumentBuilder {
 
         String INString = buildINString(listOfDocIDs);
 
-        try {
+        try
+        {
             broker = ConnectionBroker.getInstance();
             con = broker.getConnection(DatabaseConfig.SEARCH_POOL);
             stmt = con.createStatement();
 
             rset = stmt.executeQuery(queryDetailed + INString);
 
-            while (rset.next()) {
+            while (rset.next())
+            {
                 ElementDataMap ht = new ElementDataMap();
 
                 DocID did = (DocID) oidTable.get(rset.getString("M_ID"));
@@ -160,67 +163,65 @@ public class CBNBDocBuilder implements DocumentBuilder {
                 }
 
                 if (rset.getString("PBD") != null) {
-          ht.put(Keys.RIS_PY, new Year(Keys.RIS_PY,rset.getString("PBD"), perl));
+          			ht.put(Keys.RIS_PY, new Year(Keys.RIS_PY,rset.getString("PBD"), perl));
                 }
 
                 String strPages = StringUtil.EMPTY_STRING;
                 if(rset.getString("PAG") != null) {
                     strPages = StringUtil.replaceNullWithEmptyString(rset.getString("PAG"));
                 }
-                if((strPages !=  null) && !(strPages.equals(StringUtil.EMPTY_STRING))) {
-          // Strip out and store the start page and end page
-          if(perl.match("/(\\d+)[^\\d](\\d+)/", strPages)) {
-            if(perl.match("/(\\d+)/", strPages)) {
-              ht.put(Keys.RIS_SP,new XMLWrapper(Keys.RIS_SP ,perl.group(0).toString()));
-              if(perl.match("/(\\d+)/", perl.postMatch())) {
-                ht.put(Keys.RIS_EP,new XMLWrapper(Keys.RIS_EP ,perl.group(0).toString()));
-              }
-            }
-          } else {
-            ht.put(Keys.RIS_SP,new XMLWrapper(Keys.RIS_SP ,strPages));
-          }
-        }
+                if((strPages !=  null) && !(strPages.equals(StringUtil.EMPTY_STRING)))
+                {
+        		  // Strip out and store the start page and end page
+          			if(perl.match("/(\\d+)[^\\d](\\d+)/", strPages))
+          			{
+            			if(perl.match("/(\\d+)/", strPages))
+            			{
+              				ht.put(Keys.RIS_SP,new XMLWrapper(Keys.RIS_SP ,perl.group(0).toString()));
+              				if(perl.match("/(\\d+)/", perl.postMatch()))
+              				{
+                				ht.put(Keys.RIS_EP,new XMLWrapper(Keys.RIS_EP ,perl.group(0).toString()));
+              				}
+            			}
+          			}
+          			else
+          			{
+            			ht.put(Keys.RIS_SP,new XMLWrapper(Keys.RIS_SP ,strPages));
+          			}
+        		}
 
-                if (rset.getString("ISN") != null) {
-          ht.put(Keys.RIS_SN,new ISSN(rset.getString("ISN")));
+                if (rset.getString("ISN") != null)
+                {
+        			ht.put(Keys.RIS_SN,new ISSN(rset.getString("ISN")));
                 }
-                if (rset.getString("EBT") != null) {
-                  ht.put(Keys.RIS_CVS ,new XMLMultiWrapper(Keys.RIS_CVS,setElementData(rset.getString("EBT"))));
+                if (rset.getString("EBT") != null)
+                {
+                	ht.put(Keys.RIS_CVS ,new XMLMultiWrapper(Keys.RIS_CVS,setElementData(rset.getString("EBT"))));
                 }
 
-                if (rset.getClob("ABS") != null) {
-          String abs = null;
-          abs = checkAbstract(StringUtil.getStringFromClob(rset.getClob("ABS")));
-          if(!((abs).equals("")) && abs != null )
-          {
-            ht.put(Keys.RIS_N2,new XMLWrapper(Keys.RIS_N2,abs));
-          }
-        }
+                if (rset.getClob("ABS") != null)
+                {
+          			String abs = null;
+          			abs = checkAbstract(StringUtil.getStringFromClob(rset.getClob("ABS")));
+          			if(!((abs).equals("")) && abs != null )
+          			{
+            			ht.put(Keys.RIS_N2,new XMLWrapper(Keys.RIS_N2,abs));
+          			}
+        		}
                 String docType = "";
 
-                if (rset.getString("DOC") != null) {
+                if (rset.getString("DOC") != null)
+                {
                     docType = rset.getString("DOC");
 
                     if (docType.equalsIgnoreCase("Journal"))
                         docType = "JOUR";
                      ht.put(Keys.RIS_TY, new XMLWrapper(Keys.RIS_TY, StringUtil.replaceNullWithEmptyString(docType)));
                 }
-                /* jam - 2/7/06 - OLD code replaced by new JO/ST logic above
-                if (docType != null && docType.equals("JOUR")) {
-                    if (rset.getString("FJL") != null) {
-                      ht.put(Keys.RIS_JO,new XMLWrapper(Keys.RIS_JO ,StringUtil.replaceNullWithEmptyString(rset.getString("FJL"))));
-                    }
-                }
-                else {
-                    if (rset.getString("FJL") != null) {
-            ht.put(Keys.RIS_T3,new XMLWrapper(Keys.RIS_T3,StringUtil.replaceNullWithEmptyString(rset.getString("FJL"))));
-                    }
-                } */
-                // jam - 2/7/06 - miami bug fix - empty doctypes end up putting ST in T3 field
-                // and RIS readers cannot find it there.
-                // New Logic: ALWAYS put FJL in JO
-                if (rset.getString("FJL") != null) {
-                  ht.put(Keys.RIS_JO,new XMLWrapper(Keys.RIS_JO ,StringUtil.replaceNullWithEmptyString(rset.getString("FJL"))));
+
+                if (rset.getString("FJL") != null)
+                {
+                	ht.put(Keys.RIS_JO,new XMLWrapper(Keys.RIS_JO ,StringUtil.replaceNullWithEmptyString(rset.getString("FJL"))));
                 }
 
                 EIDoc eiDoc = new EIDoc(did, ht,RIS.RIS_FORMAT);
@@ -230,30 +231,40 @@ public class CBNBDocBuilder implements DocumentBuilder {
                 count++;
             }
         }
-        finally {
-            if (rset != null) {
-                try {
+        finally
+        {
+            if(rset != null)
+            {
+                try
+                {
                     rset.close();
                 }
-                catch (SQLException e1) {
+                catch (Exception e1)
+                {
                     e1.printStackTrace();
                 }
             }
 
-            if (stmt != null) {
-                try {
+            if(stmt != null)
+            {
+                try
+                {
                     stmt.close();
                 }
-                catch (SQLException sqle) {
+                catch (Exception sqle)
+                {
                     sqle.printStackTrace();
                 }
             }
 
-            if (con != null) {
-                try {
+            if(con != null)
+            {
+                try
+                {
                     broker.replaceConnection(con, DatabaseConfig.SEARCH_POOL);
                 }
-                catch (ConnectionPoolException cpe) {
+                catch (ConnectionPoolException cpe)
+                {
                     cpe.printStackTrace();
                 }
             }
@@ -264,7 +275,8 @@ public class CBNBDocBuilder implements DocumentBuilder {
 
 
 
-   private List loadAbstracts(List listOfDocIDs) throws Exception {
+   private List loadAbstracts(List listOfDocIDs) throws Exception
+   {
         Hashtable oidTable = getDocIDTable(listOfDocIDs);
 
         List list = new ArrayList();
@@ -274,13 +286,15 @@ public class CBNBDocBuilder implements DocumentBuilder {
         ResultSet rset = null;
         ConnectionBroker broker = null;
         String INString = buildINString(listOfDocIDs);
-        try {
+        try
+        {
             broker = ConnectionBroker.getInstance();
             con = broker.getConnection(DatabaseConfig.SEARCH_POOL);
             stmt = con.createStatement();
             rset = stmt.executeQuery(queryAbstracts + INString);
 
-            while (rset.next()) {
+            while (rset.next())
+            {
                 ElementDataMap ht = new ElementDataMap();
 
                 DocID did = (DocID) oidTable.get(rset.getString("M_ID"));
@@ -424,28 +438,35 @@ public class CBNBDocBuilder implements DocumentBuilder {
             }
 
         }
-        finally {
-
-            if (rset != null) {
-                try {
+        finally
+        {
+            if (rset != null)
+            {
+                try
+                {
                     rset.close();
                 }
-                catch (SQLException e1) {
+                catch (Exception e1)
+                {
                     e1.printStackTrace();
                 }
             }
 
-            if (stmt != null) {
-                try {
+            if (stmt != null)
+            {
+                try
+                {
                     stmt.close();
                 }
-                catch (SQLException sqle) {
+                catch (Exception sqle) {
                     sqle.printStackTrace();
                 }
             }
 
-            if (con != null) {
-                try {
+            if (con != null)
+            {
+                try
+                {
                     broker.replaceConnection(con, DatabaseConfig.SEARCH_POOL);
                 }
                 catch (ConnectionPoolException cpe) {
@@ -467,7 +488,8 @@ public class CBNBDocBuilder implements DocumentBuilder {
         *   @return EIDocumentList
         *   @exception Exception
         */
-      private List loadDetailed(List listOfDocIDs) throws Exception {
+      private List loadDetailed(List listOfDocIDs) throws Exception
+      {
         Hashtable oidTable = getDocIDTable(listOfDocIDs);
 
         List list = new ArrayList();
@@ -477,13 +499,15 @@ public class CBNBDocBuilder implements DocumentBuilder {
         ResultSet rset = null;
         ConnectionBroker broker = null;
         String INString = buildINString(listOfDocIDs);
-        try {
+        try
+        {
             broker = ConnectionBroker.getInstance();
             con = broker.getConnection(DatabaseConfig.SEARCH_POOL);
             stmt = con.createStatement();
             rset = stmt.executeQuery(queryDetailed + INString);
 
-            while (rset.next()) {
+            while (rset.next())
+            {
 
                 ElementDataMap ht = new ElementDataMap();
 
@@ -629,30 +653,40 @@ public class CBNBDocBuilder implements DocumentBuilder {
             }
 
         }
-        finally {
-            if (rset != null) {
-                try {
+        finally
+        {
+            if(rset != null)
+            {
+                try
+                {
                     rset.close();
                 }
-                catch (SQLException e1) {
+                catch(Exception e1)
+                {
                     e1.printStackTrace();
                 }
             }
 
-            if (stmt != null) {
-                try {
+            if(stmt != null)
+            {
+                try
+                {
                     stmt.close();
                 }
-                catch (SQLException sqle) {
+                catch(Exception sqle)
+                {
                     sqle.printStackTrace();
                 }
             }
 
-            if (con != null) {
-                try {
+            if(con != null)
+            {
+                try
+                {
                     broker.replaceConnection(con, DatabaseConfig.SEARCH_POOL);
                 }
-                catch (ConnectionPoolException cpe) {
+                catch(ConnectionPoolException cpe)
+                {
                     cpe.printStackTrace();
                 }
             }
@@ -672,7 +706,8 @@ public class CBNBDocBuilder implements DocumentBuilder {
     *   @return EIDocumentList
     *   @exception Exception
     */
-    private List loadCitations(List listOfDocIDs) throws Exception {
+    private List loadCitations(List listOfDocIDs) throws Exception
+    {
         Hashtable oidTable = getDocIDTable(listOfDocIDs);
 
         List list = new ArrayList();
@@ -682,14 +717,16 @@ public class CBNBDocBuilder implements DocumentBuilder {
         ResultSet rset = null;
         ConnectionBroker broker = null;
         String INString = buildINString(listOfDocIDs);
-        try {
+        try
+        {
             broker = ConnectionBroker.getInstance();
             con = broker.getConnection(DatabaseConfig.SEARCH_POOL);
             stmt = con.createStatement();
 
             rset = stmt.executeQuery(queryCitation + INString);
 
-            while (rset.next()) {
+            while (rset.next())
+            {
                 ElementDataMap ht = new ElementDataMap();
 
                 // Common Fields
@@ -802,32 +839,42 @@ public class CBNBDocBuilder implements DocumentBuilder {
                 count++;
             }
         }
-        finally {
-            if (rset != null) {
-                try {
+        finally
+        {
+            if(rset != null)
+            {
+                try
+                {
                     rset.close();
                     rset = null;
                 }
-                catch (SQLException e1) {
+                catch (Exception e1)
+                {
                     e1.printStackTrace();
                 }
             }
 
-            if (stmt != null) {
-                try {
+            if (stmt != null)
+            {
+                try
+                {
                     stmt.close();
                     stmt = null;
                 }
-                catch (SQLException sqle) {
+                catch (Exception sqle)
+                {
                     sqle.printStackTrace();
                 }
             }
 
-            if (con != null) {
-                try {
+            if (con != null)
+            {
+                try
+                {
                     broker.replaceConnection(con, DatabaseConfig.SEARCH_POOL);
                 }
-                catch (ConnectionPoolException cpe) {
+                catch (ConnectionPoolException cpe)
+                {
                     cpe.printStackTrace();
                 }
             }
@@ -866,7 +913,8 @@ public class CBNBDocBuilder implements DocumentBuilder {
       stmt = con.createStatement();
       rset=stmt.executeQuery(queryXMLCitation+INString);
 
-            while (rset.next()) {
+            while (rset.next())
+            {
                 ElementDataMap ht = new ElementDataMap();
 
                 // Common Fields
@@ -989,32 +1037,42 @@ public class CBNBDocBuilder implements DocumentBuilder {
                 count++;
             }
         }
-        finally {
-            if (rset != null) {
-                try {
+        finally
+        {
+            if(rset != null)
+            {
+                try
+                {
                     rset.close();
                     rset = null;
                 }
-                catch (SQLException e1) {
+                catch(Exception e1)
+                {
                     e1.printStackTrace();
                 }
             }
 
-            if (stmt != null) {
-                try {
+            if(stmt != null)
+            {
+                try
+                {
                     stmt.close();
                     stmt = null;
                 }
-                catch (SQLException sqle) {
+                catch (Exception sqle)
+                {
                     sqle.printStackTrace();
                 }
             }
 
-            if (con != null) {
-                try {
+            if(con != null)
+            {
+                try
+                {
                     broker.replaceConnection(con, DatabaseConfig.SEARCH_POOL);
                 }
-                catch (ConnectionPoolException cpe) {
+                catch (ConnectionPoolException cpe)
+                {
                     cpe.printStackTrace();
                 }
             }
