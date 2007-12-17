@@ -50,21 +50,20 @@ public class ViewBulletin extends HttpServlet
         try
         {
             String cType = request.getParameter("cType");
-            String db = request.getParameter("db");
-            String fn = request.getParameter("fn");
-            String yr = request.getParameter("yr");
-            String cy = request.getParameter("cy");
-            String tm = request.getParameter("tm");
-            String sc = request.getParameter("sc");
+            String db 	= request.getParameter("db");
+            String fn 	= request.getParameter("fn");
+            String yr 	= request.getParameter("yr");
+            String cy 	= request.getParameter("cy");
+            String tm 	= request.getParameter("tm");
+            String sc 	= request.getParameter("sc");
             String link = null;
 
             BulletinSecurity bSecurity = new BulletinSecurity();
 
-            if (tm != null && sc != null)
+            if (fn != null && tm != null && sc != null)
             {
-                if (!bSecurity.isExpired(tm) && bSecurity.isValidKey(sc, tm))
+                if (!bSecurity.isExpired(tm) && bSecurity.isValidKey(sc, tm, fn))
                 {
-
                     if (db.equals("1"))
                     {
                         link = LIT_PATH;
@@ -135,7 +134,6 @@ public class ViewBulletin extends HttpServlet
                             .append("/").append(link).append(yr).append("/")
                             .append(cy).append("/").append(type).append("/")
                             .append(filename).toString();
-                    // System.out.println("fullLink"+fullLink);
                     bulletinFile = new File(fullLink);
 
                     bout = new BufferedOutputStream(response.getOutputStream());
@@ -155,7 +153,7 @@ public class ViewBulletin extends HttpServlet
                     if (bSecurity.isExpired(tm))
                     {
                         out.write("<DISPLAY>Your link has expired, please refresh the search page and try again.</DISPLAY>");
-                    } else if (!bSecurity.isValidKey(sc, tm)) {
+                    } else if (!bSecurity.isValidKey(sc, tm, fn)) {
                         out.write("<DISPLAY>Invalid link</DISPLAY>");
                     }
                 }
