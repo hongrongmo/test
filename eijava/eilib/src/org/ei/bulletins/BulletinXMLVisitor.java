@@ -54,8 +54,9 @@ public class BulletinXMLVisitor implements BulletinVisitor {
     public void visitWith(Bulletin bulletin) throws Exception
     {
 
-		 String securityCode = bSecurity.getKey();
-    	 String time = bSecurity.getTime();
+		String fileName = bulletin.getFileName();
+		String securityCode = bSecurity.getKey(fileName);
+    	String time = bSecurity.getTime();
         if (displayBulletin(bulletin.getCategory(), bulletin.getDatabase(), bulletin.getId())) {
 
             out.write("<BL");
