@@ -562,8 +562,8 @@
             	<input type="hidden" id="istag{$DOCID}" name="istag{$DOCID}"  value='{$SEARCH-CONTEXT}' disable-output-escaping = "yes"/>
                 	<input type="hidden" name="longltfield{$DOCID}" id="longltfield{$DOCID}" disable-output-escaping = "yes"/>
                 	<input type="hidden" name="schid{$DOCID}" id="schid{$DOCID}"  value='{$SEARCHID}' disable-output-escaping = "yes"/>
-                	<a class="SmBlueText" onclick="javascript:flipEncImg('{$DOCID}','longlt','{$DOCID}'); return false;">
-   					<img id="longltOpenClose{$DOCID}" src="/engresources/images/encLinkedOpen.gif"  border="0"  />
+                	<a href="" class="SmBlueText" onclick="javascript:flipEncImg('{$DOCID}','longlt','{$DOCID}'); return false;">
+   					<img id="longltOpenClose{$DOCID}" src="/engresources/images/encLinkedOpen.gif"  border="0"  />   					
    					<img src="/engresources/images/s.gif" border="0" width="5"/>
    					<img id="longlt{$DOCID}" src="/engresources/images/encPlus.gif"  border="0" />
    					</a>
@@ -596,7 +596,7 @@
             	</xsl:variable>
             	<div class="lstdiv" id="lstdiv{$DOCID}">
                 	<input type="hidden" name="lstfield{$DOCID}" id="lstfield{$DOCID}" disable-output-escaping = "yes"/>
-   					<a class="SmBlueText" onclick="javascript:flipEncImg('{$LST}','lst','{$DOCID}'); return false;">
+   					<a href="" class="SmBlueText" onclick="javascript:flipEncImg('{$LST}','lst','{$DOCID}'); return false;">
    					<img id="lstOpenClose{$DOCID}" src="/engresources/images/encLinkedOpen.gif"  border="0"  />
    					<img src="/engresources/images/s.gif" border="0" width="5"/>
    					<img id="lst{$DOCID}" src="/engresources/images/encPlus.gif"  border="0" />
@@ -630,7 +630,7 @@
             	</xsl:variable>
             	<div class="mltdiv" id="mltdiv{$DOCID}">
                 	<input type="hidden" name="mltfield{$DOCID}" id="mltfield{$DOCID}" disable-output-escaping = "yes"/>
-   					<a class="SmBlueText" onclick="javascript:flipEncImg('{$ML}','mlt','{$DOCID}'); return false;">
+   					<a href="" class="SmBlueText" onclick="javascript:flipEncImg('{$ML}','mlt','{$DOCID}'); return false;">
    					<img id="mltOpenClose{$DOCID}" src="/engresources/images/encMltOpen.gif"  border="0"  />
    					<img src="/engresources/images/s.gif" border="0" width="5"/>
    					<img id="mlt{$DOCID}" src="/engresources/images/encPlus.gif"  border="0" />
@@ -667,7 +667,7 @@
             <td valign="top" align="left">
 	      	<div class="atmdiv" id="atmdiv{$DOCID}">
           	<input type="hidden" name="atmfield{$DOCID}" id="atmfield{$DOCID}" disable-output-escaping = "yes"/>
-   			<a class="SmBlueText" onclick="javascript:flipEncImg('{$AT}','atm','{$DOCID}'); return false;">
+   			<a href="" class="SmBlueText" onclick="javascript:flipEncImg('{$AT}','atm','{$DOCID}'); return false;">
    				<img id="atmOpenClose{$DOCID}" src="/engresources/images/encTemplatesOpen.gif"  border="0" />
    				<img src="/engresources/images/s.gif" border="0" width="5"/>
    				<img id="atm{$DOCID}" src="/engresources/images/encPlus.gif"  border="0" />
