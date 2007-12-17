@@ -1,6 +1,12 @@
 <?xml version="1.0"?>
+<xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:html="http://www.w3.org/TR/REC-html40"
+  exclude-result-prefixes="xsl">
 
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:output method="html" indent="no" doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
+  <xsl:strip-space elements="html:* xsl:*" />
+
 	<xsl:template match="PAGE">
 	<!-- This file displays the lookup index window and transfer selected data into search form fields  -->
 
@@ -36,11 +42,10 @@
 	<html>
 		<head>
   		<SCRIPT TYPE="text/javascript" LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
-
-			<xsl:text disable-output-escaping="yes">
-				<![CDATA[
-					<xsl:comment>
-						<script language="javascript">
+      <script language="javascript">
+		    <xsl:comment>
+			    <xsl:text disable-output-escaping="yes">
+				    <![CDATA[
 							curIndex = new Object();
 							curIndex.fieldDefault = "NULL";
 
@@ -132,9 +137,8 @@
 									    break;
 									}
 				 				}
-                              					document.location='/controller/servlet/Controller?EISESSION='+sessionId+'&CID=lookupIndexes&lookup='+fieldname+'&database='+database+'&searchtype='+searchtype;
-                             					return false;
-
+                    document.location='/controller/servlet/Controller?EISESSION='+sessionId+'&CID=lookupIndexes&lookup='+fieldname+'&database='+database+'&searchtype='+searchtype;
+                    return false;
 							}
 
 
@@ -309,9 +313,10 @@
 									{
 										curIndex.field = "PUB"
 									}
-
-
-
+									else if ( document.lookupform.lookup[document.lookupform.lookup.selectedIndex].value == "PC" )
+									{
+										curIndex.field = "PC"
+									}
 
 									var currentBooleanValue;
 									for (var j = 0; j < document.lookup_box.lookup.length; j++ )
@@ -479,7 +484,10 @@
 									{
 										curIndex.field = "TR"
 									}
-
+									else if ( document.lookupform.lookup[document.lookupform.lookup.selectedIndex].value == "PC" )
+									{
+										curIndex.field = "PC"
+									}
 
 									term = cleanTerm(term);
 									if (( !/^\s+$/.test(self.opener.document.quicksearch.searchWord1.value) )
@@ -957,11 +965,10 @@
 								tmpOutput = SearchAndReplace(tmpOutput, '"', " ") ;
 								return tmpOutput;
 							}
-
-						</script>
-					</xsl:comment>
-				]]>
-			</xsl:text>
+				  ]]>
+			  </xsl:text>
+      // </xsl:comment>
+		</script>
 			<!-- end of java script -->
 			<title>Engineering Village - Browse Index - Lookup <xsl:value-of select="$SELECTEDLOOKUP"/></title>
 		</head>
@@ -1260,9 +1267,6 @@
 </xsl:choose>
 </body>
 </html>
-
-
-
 
 </xsl:template>
 
