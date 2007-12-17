@@ -55,8 +55,10 @@ public class BulletinXMLVisitor implements BulletinVisitor {
     {
 
 		String fileName = bulletin.getFileName();
-		String securityCode = bSecurity.getKey(fileName);
-    	String time = bSecurity.getTime();
+		String time = bSecurity.getTime();
+		String securityCode = bSecurity.getKey(fileName, time);
+
+
         if (displayBulletin(bulletin.getCategory(), bulletin.getDatabase(), bulletin.getId())) {
 
             out.write("<BL");
