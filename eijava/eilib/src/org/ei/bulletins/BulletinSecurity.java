@@ -7,12 +7,12 @@ public class BulletinSecurity
     private static final String SECRET = "qazwsxeujm";
     private static final long TWENTY_MINUTES = 1200000; // 20 minutes
 
-    public boolean isValidKey(String authorityCode, String date) throws Exception
+    public boolean isValidKey(String authorityCode, String date, String filename) throws Exception
     {
         boolean isvalid = false;
         if (authorityCode != null)
         {
-            String md5key1 = getKey(date);
+            String md5key1 = getKey(filename,date);
             if (authorityCode.equalsIgnoreCase(md5key1))
             {
                 isvalid = true;
@@ -40,17 +40,17 @@ public class BulletinSecurity
         return isExpired;
     }
 
-    public String getKey() throws Exception
+    public String getKey(String fileName) throws Exception
     {
         String time = getTime();
-        return getKey(time);
+        return getKey(fileName,time);
     }
 
-    public String getKey(String timems) throws Exception
+    public String getKey(String fileName,String timems) throws Exception
     {
         MD5Digester digester = new MD5Digester();
         StringBuffer dataBuffer = new StringBuffer();
-        dataBuffer.append(BulletinSecurity.SECRET).append(timems);
+        dataBuffer.append(BulletinSecurity.SECRET).append(timems+fileName);
         String strMD5 = digester.asHex(digester.digest(dataBuffer.toString()));
         return strMD5;
     }
