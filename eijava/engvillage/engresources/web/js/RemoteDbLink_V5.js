@@ -34,7 +34,7 @@ function openRemoteDb(name,sessionId,searchtype)
         }
         else if (name=="EEVL")
         {
-            wndLocation="http://www.eevl.ac.uk/";
+            wndLocation="http://www.intute.ac.uk/sciences/";
         }
         else if (name=="OJPS")
         {

@@ -32,7 +32,7 @@
 
     // - - - -WEB SEARCH- - - -
     dataBaseNames.put("SCI", "Scirus|Scirus");
-    dataBaseNames.put("EEV", "EEVL|EEVL");
+    dataBaseNames.put("EEV", "EEVL|Intute");
     // EMSAT cartridge is back in use but it point to KellySearch (email from Rafael 1/31/2005)
     // jam - it now points to ReedLink (email from Rafael 6/09/2005)
     dataBaseNames.put("EMS", "ReedLink|ReedLink");
