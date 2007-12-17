@@ -73,7 +73,7 @@
 							<li>Patents from USPTO and esp@cenet</li>
 							<li>GlobalSpec</li>
 							<li>Scirus</li>
-							<li>EEVL</li>
+							<li>Intute</li>
 							<li>LexisNexis News</li>
 						</ul>
 					</dd>
