@@ -506,8 +506,7 @@
                                     <xsl:attribute name="checked"/>
                                   </xsl:if>
                                   </input>&#160;
-                                  <xsl:message> START-YEAR <xsl:value-of select="$START-YEAR" /> </xsl:message>
-                                  <xsl:message>END-YEAR <xsl:value-of select="$END-YEAR"/></xsl:message>
+                                 
                                   <select name="startYear" onchange="selectYearRange(0);">
                                     <xsl:value-of disable-output-escaping="yes" select="SF:getYear($SELECTED-DB,$START-YEAR,$YEAR-STRING,'startYear')"/>
                                   </select>
