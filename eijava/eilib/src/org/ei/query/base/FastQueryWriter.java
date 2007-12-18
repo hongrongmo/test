@@ -527,7 +527,8 @@ public class FastQueryWriter
                     currentField.equalsIgnoreCase("pn") ||
                     currentField.equalsIgnoreCase("cv") ||
                     currentField.equalsIgnoreCase("st") ||
-                    currentField.equalsIgnoreCase("af"))
+                    currentField.equalsIgnoreCase("af") ||
+                    currentField.equalsIgnoreCase("cvm"))
             {
                 t = "\"QQDelQQ "+eTerm.getNodeValue()+" QQDelQQ\"";
             }
