@@ -1025,8 +1025,9 @@ public class ResultNavigator
             neworder.add(EiNavigator.YR);
             neworder.add(EiNavigator.LA);
         }
-        if(getCompositionMask() == DatabaseConfig.ELT_MASK)
+        if(getCompositionMask() == DatabaseConfig.EPT_MASK)
         {
+            neworder = new ArrayList();
             neworder.add(EiNavigator.AU);
             neworder.add(EiNavigator.AF);
             neworder.add(EiNavigator.CV);
