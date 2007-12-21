@@ -27,7 +27,7 @@
   <xsl:include href="LocalHolding.xsl" />
 
   <xsl:include href="common/DetailedResults.xsl" />
-  <!-- 
+  <!--
 <xsl:param name="CUST-ID">0</xsl:param>
  -->
 <xsl:template match="PAGE">
@@ -54,10 +54,10 @@
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/lindaHall.js"/>
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Autocomplete.js"/>
+		<script language="javascript">
+		<xsl:comment>
 		<xsl:text disable-output-escaping="yes">
 		<![CDATA[
-		<xsl:comment>
-		<script language="javascript">
 			function printFormat(sessionid,searchtype,searchid,database,databaseid)
 			{
 
@@ -227,23 +227,15 @@
 				  document.images['image_basket'].src="/engresources/Basket.jsp?select=unmark&handle="+handle+"&docid="+docid+"&database="+escape(database)+"&sessionid="+sessionid+"&searchquery="+escape(searchquery)+"&searchid="+searchid+"&timestamp="+ milli ;
 			  }
 			 }
-
+		]]>
+		</xsl:text>
+		</xsl:comment>
 		</script>
 
-		</xsl:comment>
-
-		]]>
-
-		</xsl:text>
-		
 		<!-- javascript for Encompass fileds -->
-		
-    	<xsl:variable name="ENCOMPASS-FIELDS-JS">
-    		<xsl:value-of select="/PAGE/ENCOMPASS-FIELDS-JS" />
-    	</xsl:variable>
- 		<xsl:if test="('LTH' or 'LSTM' or  'MLT' or  'ATM')" >
-    		<xsl:value-of select="$ENCOMPASS-FIELDS-JS" disable-output-escaping="yes"/>
-    	</xsl:if>
+    <xsl:if test="(//EI-DOCUMENT/LTH or //EI-DOCUMENT/LSTM or //EI-DOCUMENT/MLT or //EI-DOCUMENT/ATM)" >
+      <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/encompassFields.js"/>
+    </xsl:if>
 
 	<!-- End of javascript -->
     </head>
@@ -440,7 +432,7 @@
         <td valign="top"><a CLASS="MedBlackText"><xsl:value-of select="$INDEX" />.</a></td>
         <td valign="top"><img src="/engresources/images/s.gif" border="0" width="4"/></td>
         <td valign="top" width="100%" align="left">
-     
+
         <xsl:apply-templates select="EI-DOCUMENT" />
         </td>
         <!-- THIS DEFINES TWO MORE COLUMNS IN THIS TABLE -->
