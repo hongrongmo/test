@@ -9,6 +9,7 @@ import java.util.TreeSet;
 import java.util.Comparator;
 import java.util.Arrays;
 import org.ei.books.collections.ReferexCollection;
+import java.net.URLEncoder;
 
 public class LibraryVisitor implements Visitor
 {
@@ -191,7 +192,7 @@ public class LibraryVisitor implements Visitor
 
   							out
   									.write("<HEAD><![CDATA[<a class=\"SmWhiteText\" href=\"/controller/servlet/Controller?database=131072&sortdir=up&sort=stsort&yearselect=yearrange&CID=quickSearchCitationFormat&searchtype=Book&col="
-  											+ allcolls[i].getShortname()
+  											+ URLEncoder.encode(allcolls[i].getShortname())
   											+ "\"><b>"
   											+ allcolls[i].getDisplayName()
   											+ " ("
@@ -233,9 +234,9 @@ public class LibraryVisitor implements Visitor
   											{
   												out
   														.write("<CV><![CDATA[<a class=\"SpLink\" href=\"/controller/servlet/Controller?database=131072&sortdir=up&sort=stsort&yearselect=yearrange&CID=quickSearchCitationFormat&searchtype=Book&searchWord1={"
-  																+ curCVS
+  																+ URLEncoder.encode(curCVS)
   																+ "}&section1=CV&boolean1=AND&col="
-  																+ curCollectionName
+  																+ URLEncoder.encode(curCollectionName)
   																+ "\">"
   																+ curCVS
   																+ " ("
