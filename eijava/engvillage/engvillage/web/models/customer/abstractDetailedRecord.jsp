@@ -494,11 +494,11 @@
         databaseConfig.toXML(credentials, out);
         entry.toXML(out);
 
-        out.write("</PAGE-RESULTS>");   
+        out.write("</PAGE-RESULTS>");
         %>
-		
-        <%@ include file="encFieldsJS.jsp"%>
-        
+
+
+
         <%
          out.write("</PAGE>");
         out.write("<!--END-->");
