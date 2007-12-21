@@ -1,22 +1,20 @@
-<?xml version="1.0"?>
-
 <xsl:stylesheet
-  	 version="1.0"
-  	 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  	 xmlns:java="http://www.jclark.com/xt/java/java.net.URLEncoder">
-
+	version="1.0"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:html="http://www.w3.org/TR/REC-html40"
+	exclude-result-prefixes="xsl html"
+>
 <xsl:include href="Footer.xsl"/>
+
+<xsl:output method="html" indent="no" doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
 
 <xsl:template match="root">
 
 
 <html>
-
 <head>
-		<SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
-
-	<title>About Engineering Village</title>
-
+	<SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
+  <title>About Engineering Village</title>
 </head>
 
 <body bgcolor="#FFFFFF" topmargin="0" marginheight="0" marginwidth="0">
@@ -42,25 +40,20 @@
 Engineering Village features: </a>
 <ul>
 <li><a class="MedBlackText">Access to the top information resources in the applied science, technical and engineering fields:</a><br/>
-<a class="MedBlackText"><b>Compendex </b><br/>
-Compendex is the most comprehensive bibliographic database of engineering research available today, containing references and abstracts to over 5,000 engineering journals and conferences. The broad subject areas of engineering and applied science are comprehensively represented. Coverage includes chemical and process engineering, computers and data processing, applied physics, electronics and communications, civil, mechanical and materials engineering, as well as narrower subtopics within all these major fields. Online coverage is from 1969 to the present. Around 600,000 new records are added to the database annually. Compendex is updated weekly to ensure access to critical developments in your field.</a><br/><br/>
-
-<a class="MedBlackText"><b>Engineering Index Backfile within Compendex</b><br/>
-The Engineering Index Backfile is available covering the information from the printed Engineering Index from 1884-1968. If your institution purchased the Backfile you will be able to search one Compendex database covering 130 years worth of engineering references. This will add about two million additional records to the database.</a><br/><br/>
-
-<a class="MedBlackText"><b>Inspec</b><br/>
-Inspec is a bibliographic database concentrating on electrical and electronic engineering, physics, information technology, and computer and control systems. The database contains over 9 million bibliographic records taken from 3,500 scientific and technical journals and 1,500 conference proceedings. Online coverage is from 1969 to the present, and files are updated weekly.</a><br/><br/>
-
-<a class="MedBlackText"><b>NTIS</b><br/>
-The National Technical Information Service (NTIS) is the premier source for accessing unclassified reports from influential U.S. and international government agencies. The database contains access to over two million critical citations from government departments such as NASA, the U.S. Department of Energy and the U.S. Department of Defense. The database is updated weekly. The NTIS database was created in 1964 but the material cited in it can date back as far as 1899. </a><br/><br/>
-
-<a class="MedBlackText"><b>Referex Engineering</b><br/>
-Referex Engineering provides access to the broadest and deepest available coverage of engineering reference titles in ebook format.  Collections within engineering include topic areas Materials and Mechanical, Electronics and Electrical, and Chemical, Petrochemical and Process.</a><br/><br/>
-
-<a class="MedBlackText"><b>GeoBase</b><br/>
-GeoBase&#174; is a multidisciplinary database that deeply indexes research literature across the earth sciences including geology, human and physical geography, environmental sciences,oceanography and geomechanics. The database contains over 1.8 million bibliographic records taken from 2,000 scientific and technical journals. Online coverage is from 1980 to the present, and files are updated weekly.</a>
+    <a class="MedBlackText"><b>Compendex</b><br/>Compendex is the most comprehensive bibliographic database of scientific and technical engineering research available, covering all engineering disciplines. It includes millions of bibliographic citations and abstracts from thousands of engineering journals and conference proceedings. When combined with the Engineering Index Backfile (1884-1969), Compendex covers well over 120 years of core engineering literature.</a><br/><br/>
+    <a class="MedBlackText"><b>Ei Backfile</b><br/>Since its creation in 1884, the Engineering Index&#174; has covered virtually every major engineering innovation from around the world. It serves as the historical record of virtually every major engineering innovation in the past century.  The Engineering Index Backfile can be searched via controlled vocabulary or free text.   All volume years can be searched simultaneously, eliminating the need to scan multiple volumes. Combined with the Compendex&#174; database, the Ei Backfile provides users with the most comprehensive overview of well over 120 years of engineering literature.</a><br/><br/>
+    <a class="MedBlackText"><b>Inspec</b><br/>Inspec includes bibliographic citations and indexed abstracts from publications in the fields of physics, electrical and electronic engineering, communications, computer science, control engineering, information technology, manufacturing and mechanical engineering, operations research, material science, oceanography, engineering mathematics, nuclear engineering, environmental science, geophysics, nanotechnology, biomedical technology and biophysics.</a><br/><br/>
+    <a class="MedBlackText"><b>NTIS</b><br/>NTIS (The National Technical Information Service) is the premier database for accessing unclassified reports from influential U.S. and international government agencies. The database contains access to millions of critical citations from government departments such as NASA, the U.S. Department of Energy and the U.S. Department of Defense.</a><br/><br/>
+    <a class="MedBlackText"><b>Referex</b><br/>Referex is comprised of six collections of professionally focussed e-books, bringing together key sources of engineering reference material. The database is fully searchable and delivers full-text content from the following collections: Chemical, Petrochemical and Process Engineering; Civil and Environmental Engineering; Computing; Electronics and Electrical Engineering; Mechanical Engineering and Materials; Networking and Security.</a><br/><br/>
+    <a class="MedBlackText"><b>GeoBase</b><br/>GeoBase&#174; is a multidisciplinary database of indexed research literature on the earth sciences, including geology, human and physical geography, environmental sciences, oceanography, geomechanics, alternative energy sources, pollution, waste management and nature conservation. Covering thousands of peer-reviewed journals, trade publications, book series and conference proceedings, GeoBase has the most international coverage of any database in the field.</a><br/><br/>
+    <a class="MedBlackText"><b>EI Patents</b><br/>EI Patents comprises millions of patents from the US Patent and Trademark Office and European Patent Office. This database can be cross-searched with other databases on Engineering Village, retrieving results both from patents and scientific literature, a significant advantage for both researchers and businesses. Ei Patents offers more reliable and analytical patent searching features than are supported by the generic free web.</a><br/><br/>
+    <a class="MedBlackText"><b>EnCompassLIT</b><br/>EnCompassLIT&#153; is a bibliographic service uniquely devoted to covering technical literature published worldwide on the downstream petroleum, petrochemical, natural gas, energy and allied industries. Upstream coverage focuses solely on oil field chemicals. The EnCompass Thesaurus facilitates precision searching via controlled vocabulary.</a><br/><br/>
+    <a class="MedBlackText"><b>EnCompassPAT</b><br/>EnCompassPAT&#153; is a patent service uniquely devoted to covering worldwide patents on the downstream petroleum, petrochemical, natural gas, energy and allied industries. Patents indexed are selected from 40 international patenting authorities. The EnCompass Thesaurus facilitates precision searching via controlled vocabulary.</a><br/><br/>
+    <a class="MedBlackText"><b>Chimica</b><br/>Chimica provides access to hundreds of the most influential international journals focused on chemistry and chemical engineering, with emphasis on applied and analytical chemistry, extending to physical chemistry, health and safety, organic and inorganic chemistry, and materials science. Coverage in Chimica starts in 1970.</a><br/><br/>
+    <a class="MedBlackText"><b>CBNB</b><br/>Chemical Business NewsBase (CBNB) is the leading provider of global chemical business news and information. Search for facts, figures, views, and comments on the chemical industry worldwide, from 1985 to the present.  Sources include hundreds of core trade journals, newspapers and company newsletters, plus books, market research reports, annual and interim company reports, press releases and other "grey literature" sources.</a><br/><br/>
+    <a class="MedBlackText"><b>PaperChem</b><br/>PaperChem is a database comprised of indexed bibliographic citations and abstracts from journals, conference proceedings, and technical reports focused on pulp and paper technology. Coverage is from 1967 to present, and covers such topics as the chemistry of cellulose, corrugated and particle board; films, foils and laminates; forestry and pulpwood, lignin and extractives, non-wovens, and much more.</a><br/><br/>
 </li>
-<br/><br/>
+<br/>
 <li><a class="MedBlacktext">Two modes of searching: </a><br/>
 <a class="MedBlackText"><b>Quick Search</b>, an easy-to-use form featuring pull-down menus and links to contextual help screens.<br/>
 <b>Expert Search</b>, a powerful and flexible interface that supports Boolean searching on multiple fields.</a>
@@ -76,10 +69,10 @@ GeoBase&#174; is a multidisciplinary database that deeply indexes research liter
 <a class="MedBlackText">To request more information about Engineering Village, please complete our </a><a class="LgBlueLink" HREF="/controller/servlet/Controller?CID=ncFeedback">Customer Feedback form.</a>
 </P>
 <P>
-<a class="MedBlackText">To learn about other Elsevier Engineering Information Inc.  products and services, please visit our Web site at </a><a class="LgBLueLink" HREF="#" onClick="window.open('http://www.ei.org', 'newpg', 'status=yes,resizable,scrollbars=yes,menubar=yes,location=yes,directories=yes,width=700,height=450')">http://www.ei.org</a>.
+<a class="MedBlackText">To learn about other Elsevier Engineering Information products and services, please visit our Web site at </a><a class="LgBLueLink" HREF="#" onClick="window.open('http://www.ei.org', 'newpg', 'status=yes,resizable,scrollbars=yes,menubar=yes,location=yes,directories=yes,width=700,height=450')">http://www.ei.org</a>.
 </P>
 <P>
-<a class="MedBlackText">Last revised:  June 21st, 2007</a>
+<a class="MedBlackText">Last revised:  December 21, 2007</a>
 </P>
 <P>
 <a class="LgBlueLink" href="/controller/servlet/Controller?CID=home">Back to Login Page</a>
@@ -93,7 +86,6 @@ GeoBase&#174; is a multidisciplinary database that deeply indexes research liter
 
 <!-- end of the lower area below the navigation bar -->
 <xsl:apply-templates select="FOOTER"/>
-
 
 </body>
 </html>
