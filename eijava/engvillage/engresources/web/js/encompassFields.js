@@ -1,56 +1,57 @@
-    var varTableBody;
-	var varTable;
-	var varDiv;
-	var varTerms;
-	var varInputField;
-	var varTerms;
-	var varMid;
-	var xmlHttp;
-	var schid;
-	var istag;
+  var varTableBody;
+  var varTable;
+  var varDiv;
+  var varTerms;
+  var varInputField;
+  var varTerms;
+  var varMid;
+  var xmlHttpEncFields;
+  var schid;
+  var istag;
 
-	function createXMLHttpRequest()
+	function createXMLHttpRequestEnc()
 	{
     	try
     	{
-       		xmlHttp = new XMLHttpRequest();
+       		xmlHttpEncFields = new XMLHttpRequest();
     	}
     	catch (trymicrosoft)
     	{
 			try
 			{
-				xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+				xmlHttpEncFields = new ActiveXObject("Msxml2.XMLHTTP");
 			}
 			catch (othermicrosoft)
 			{
 				try
 				{
-					xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+					xmlHttpEncFields = new ActiveXObject("Microsoft.XMLHTTP");
 				}
 				catch (failed)
 				{
-					xmlHttp = null;
+					xmlHttpEncFields = null;
 				}
 			}
     	}
-    	if (xmlHttp == null)
+    	if (xmlHttpEncFields == null)
+    	{
         alert("Error creating request object!");
+      }
 	}
 
 	function findLongLinkTerms(mid)
 	{
 	   	var nameschid = "schid"+mid;
 	   	varMid = mid;
-        schid = document.getElementById(nameschid).value;
-       	var nameistag = "istag"+mid;
-        var varistag = document.getElementById(nameistag).value;
+      schid = document.getElementById(nameschid).value;
+     	var nameistag = "istag"+mid;
+      var varistag = document.getElementById(nameistag).value;
     	var date = new Date();
-    	createXMLHttpRequest();
+    	createXMLHttpRequestEnc();
     	var url = "/controller/servlet/Controller?CID=encLongterms&searchId="+schid+"&istag="+varistag+"&docid="+mid+"&timestamp="+date.getTime();
-    	xmlHttp.open("GET", url, true);
-
-    	xmlHttp.onreadystatechange = callbackEncFields;
-    	xmlHttp.send(null);
+    	xmlHttpEncFields.open("GET", url, true);
+    	xmlHttpEncFields.onreadystatechange = callbackEncFields;
+    	xmlHttpEncFields.send(null);
 
 	}
 
@@ -58,20 +59,20 @@
 	function callbackEncFields()
 	{
 
-    	if (xmlHttp.readyState == 4)
+    	if (xmlHttpEncFields.readyState == 4)
     	{
 
-        	if (xmlHttp.status == 200)
+        	if (xmlHttpEncFields.status == 200)
         	{
-            	var allterms = xmlHttp.responseXML;
+            	var allterms = xmlHttpEncFields.responseXML;
             	var terms = allterms.getElementsByTagName("body");
             	if (terms != null && terms[0].firstChild != null)
             	{
                 	if (terms[0].firstChild.nodeValue != null)
                 	{
                     	var longltTerms = terms[0].firstChild.nodeValue;
-						initVars(longltTerms,"longlt", varMid)
-						varTerms = longltTerms;
+          						initVarsEncFields(longltTerms,"longlt", varMid)
+          						varTerms = longltTerms;
                     	drawTerms("longlt", varMid);
                 	}
             	}
@@ -149,7 +150,7 @@
 
 	}
 
-	function initVars(terms,termtype, docid)
+	function initVarsEncFields(terms,termtype, docid)
 	{
 
 			varTerms = terms;
@@ -163,28 +164,29 @@
 			varTable = document.getElementById(nameTable);
 
 			if (termtype == "longlt")
-        	{
-            	varTerms = "Retrieving...";
-        	}
+    	{
+        	varTerms = "Retrieving...";
+    	}
+    	return;
 	}
 
 
 
   	function draw(terms, termtype, docid)
-	{
-		initVars(terms,termtype, docid);
-        if(termtype == "longlt")
-        {
-            findLongLinkTerms(terms);
-        }
-		setOffsetTerms(termtype , docid);
-		drawTerms(termtype, docid);
-		return false;
-	}
+    {
+      initVarsEncFields(terms,termtype, docid);
+      if(termtype == "longlt")
+      {
+          findLongLinkTerms(terms);
+      }
+  		setOffsetTerms(termtype , docid);
+  		drawTerms(termtype, docid);
+  		return false;
+  	}
 
 
     function setOffsetTerms(termtype, docid)
-	{
+	  {
 			var gend = varInputField.offsetWidth;
 			var gleft = calculateOffsetLeftGroup1(varInputField)+gend;
 			var gtop = calculateOffsetTopGroup1(varInputField);
@@ -193,7 +195,7 @@
 			varDiv.style.top = gtop + "px";
 			varTable.style.width = "360px";
 
-	}
+	  }
 
 
 	function clearTerms(termtype, docid)
@@ -227,17 +229,13 @@
 		}
 		else
 		{
-            allterms = varTerms.split("|");
-        }
-        var size = allterms.length;
+      allterms = varTerms.split("|");
+    }
+    var size = allterms.length;
 		var row, cell, txtNode;
 		for (var i = 0; i < size; i++)
 		{
 			var nextNode = allterms[i];
-	//		if (termtype == "lst")
-	//		{
-	//			nextNode="/engresources/images/separator.gif"+nextNode;
-	//		}
 			row = document.createElement("tr");
 			cell = document.createElement("td");
 			cell.tabIndex =1;
