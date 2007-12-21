@@ -1,8 +1,4 @@
 <?xml version="1.0" ?>
-  <!DOCTYPE xsl:stylesheet [
-  <!ENTITY nbsp '<xsl:text disable-output-escaping="yes">&amp;nbsp;</xsl:text>'>
-   ]>
-   
    <xsl:stylesheet
     version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -12,27 +8,25 @@
 >
 
 <xsl:template match="HELP-TEMPLATE" name="HELP-TEMPLATE">
-<SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Robohelp.js"/>
+  <xsl:param name="SELECTED-DB"/>
+  <xsl:param name="CH-ICON"/>
 
-<xsl:text disable-output-escaping="yes">
-    <![CDATA[
-    <xsl:comment>
+    <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Robohelp.js"/>
     <script language="javascript">
-     var newWin;
-
+    <xsl:comment>
+    <xsl:text disable-output-escaping="yes">
+    <![CDATA[
+    var newWin;
     function openTrainingHelp(url)
     {
-       newWin=window.open(url,'NewWindow','status=yes,resizable,scrollbars=1,menubar=yes,addressbar=1,width=700,height=500');
-       if (window.focus) {newWin.focus()}
-	return false;
+      newWin=window.open(url,'NewWindow','status=yes,resizable,scrollbars=1,menubar=yes,addressbar=1,width=700,height=500');
+      if (window.focus) {newWin.focus()}
+      return false;
     }
-   </script>
-   </xsl:comment>
     ]]>
-  </xsl:text>
-
-<xsl:param name="SELECTED-DB"/>
-<xsl:param name="CH-ICON"/>
+    </xsl:text>
+   // </xsl:comment>
+   </script>
 
 <center>
 <table border="0" width="99%" cellspacing="0" cellpadding="0">
@@ -84,7 +78,7 @@
 		    <tr><td valign="top"><a CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/documents/Inspec.ppt')">Inspec on Engineering Village</a></td></tr>
 		    <tr><td valign="top"><a CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/documents/NTIS.ppt')">NTIS on Engineering Village</a></td></tr>
 		    <tr><td valign="top"><a CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/documents/NTISandPatents.ppt')">Combining NTIS and Patents Databases to Identify Technology Transfer of Government Funded Research</a></td></tr>
-		    <tr><td valign="top"><a CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/documents/FromNanosciencetoNanotechnology.ppt')">From Nanosicence to Nanotechnology : Tracking carbon nanotubes products from research through development to patent issuance </a></td></tr>
+		    <tr><td valign="top"><a CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/documents/FromNanosciencetoNanotechnology.ppt')">From Nanoscience to Nanotechnology : Tracking carbon nanotubes products from research through development to patent issuance</a></td></tr>
 		    </td></tr>
 		    </table>
 	    </td>
