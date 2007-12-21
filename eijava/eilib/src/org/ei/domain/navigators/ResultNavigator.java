@@ -1025,6 +1025,18 @@ public class ResultNavigator
             neworder.add(EiNavigator.YR);
             neworder.add(EiNavigator.LA);
         }
+        if(getCompositionMask() == DatabaseConfig.ELT_MASK)
+        {
+            neworder.add(EiNavigator.AU);
+            neworder.add(EiNavigator.AF);
+            neworder.add(EiNavigator.CV);
+            neworder.add(EiNavigator.CVM);
+            neworder.add(EiNavigator.PID);
+            neworder.add(EiNavigator.PAC);
+            neworder.add(EiNavigator.RO);
+            neworder.add(EiNavigator.LA);
+            neworder.add(EiNavigator.YR);
+        }
         if(getCompositionMask() == DatabaseConfig.PAG_MASK)
         {
             neworder = new ArrayList();
