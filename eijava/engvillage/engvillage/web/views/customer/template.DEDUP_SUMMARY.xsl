@@ -59,7 +59,7 @@
       <xsl:when test="($DB-PREF='geo')">GEOBASE</xsl:when>
       <xsl:when test="($DB-PREF='pch')">PaperChem</xsl:when>
       <xsl:when test="($DB-PREF='elt')">EnCompassLit</xsl:when>
-      <xsl:when test="($DB-PREF='chm')">Chimica</xsl:when>      
+      <xsl:when test="($DB-PREF='chm')">Chimica</xsl:when>
       <xsl:otherwise>Compendex</xsl:otherwise>
     </xsl:choose>
   </xsl:variable>
@@ -104,7 +104,7 @@
         <td colspan="3"><a CLASS="MedBlackText"><b>Deduplication Summary</b></a>&#160;<a CLASS="SmBlackText">(First 1000 search results)</a></td>
       </tr>
       <tr>
-        <td><a class="SrtLink" href="/controller/servlet/Controller?CID=dedupForm&amp;database={$SELECTED-DB}&amp;SEARCHID={$SEARCH-ID}&amp;COUNT=1&amp;SEARCHTYPE={$SEARCH-TYPE}&amp;RESULTSCOUNT={$RESULTS-COUNT}">Deduplication criteria</a></td>
+        <td><a class="SrtLink" href="/controller/servlet/Controller?CID=dedupForm&amp;database={$SELECTED-DB}&amp;SEARCHID={$SEARCH-ID}&amp;COUNT=1&amp;SEARCHTYPE={$SEARCH-TYPE}&amp;RESULTSCOUNT={$RESULTS-COUNT}&amp;dbpref={$DB-PREF}&amp;fieldpref={$FIELD-PREF}">Deduplication criteria</a></td>
         <td width="20"><img src="/engresources/images/s.gif" width="20" height="1"/></td>
         <td><a CLASS="SmBlackText"><xsl:value-of select="$PREF-FIELD"/>&#160;Preferred;&#160;&#160;<xsl:value-of select="$PREF-DB"/>&#160;Preferred</a>&#160; </td>
       </tr>
