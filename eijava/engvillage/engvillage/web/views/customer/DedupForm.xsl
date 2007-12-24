@@ -104,16 +104,44 @@
               <tr>
                 <td valign="top"><a class="MedBlackText"><b>Field Preferences:</b></a>&#160;
                     <a class="DecLink" href="javascript:makeUrl('Deduplication_Feature.htm')">
-		    	<img src="/engresources/images/blue_help.gif" align="absmiddle" border="0"/>
-	            </a>  
+                    <img src="/engresources/images/blue_help.gif" align="absmiddle" border="0"/>
+	                  </a>
                 </td>
               </tr>
               <tr>
+                <xsl:variable name="FIELDPREF">
+                  <xsl:choose>
+                    <xsl:when test="/PAGE/FORM/REMOVEDUP/FIELDPREF">
+                      <xsl:value-of select="/PAGE/FORM/REMOVEDUP/FIELDPREF"/>
+                    </xsl:when>
+                    <xsl:otherwise>0</xsl:otherwise>
+                  </xsl:choose>
+                </xsl:variable>
                 <td valign="middle">
-                  &#160; &#160; <input type = "radio" id="rdo0" name="fieldpref" value="0" checked="checked"/><a CLASS="MedBlackText"><label for="rdo0">No field preference</label></a><br/>
-                  &#160; &#160; <input type = "radio" id="rdo4" name="fieldpref" value="4"/><a CLASS="MedBlackText"><label for="rdo4">Has Full Text</label></a><br/>
-                  &#160; &#160; <input type = "radio" id="rdo1" name="fieldpref" value="1"/><a CLASS="MedBlackText"><label for="rdo1">Has Abstract</label></a><br/>
-                  &#160; &#160; <input type = "radio" id="rdo2" name="fieldpref" value="2"/><a CLASS="MedBlackText"><label for="rdo2">Has Index Terms</label></a><br/>
+                  <input type="radio" id="rdo0" name="fieldpref" value="0">
+                  <xsl:if test="$FIELDPREF='0'">
+                    <xsl:attribute name="checked">checked</xsl:attribute>
+                  </xsl:if>
+                  </input>
+                  <a class="MedBlackText"><label for="rdo0">No field preference</label></a><br/>
+                  <input type="radio" id="rdo4" name="fieldpref" value="4">
+                  <xsl:if test="$FIELDPREF='4'">
+                    <xsl:attribute name="checked">checked</xsl:attribute>
+                  </xsl:if>
+                  </input>
+                  <a class="MedBlackText"><label for="rdo4">Has Full Text</label></a><br/>
+                  <input type="radio" id="rdo1" name="fieldpref" value="1">
+                  <xsl:if test="$FIELDPREF='1'">
+                    <xsl:attribute name="checked">checked</xsl:attribute>
+                  </xsl:if>
+                  </input>
+                  <a class="MedBlackText"><label for="rdo1">Has Abstract</label></a><br/>
+                  <input type="radio" id="rdo2" name="fieldpref" value="2">
+                  <xsl:if test="$FIELDPREF='2'">
+                    <xsl:attribute name="checked">checked</xsl:attribute>
+                  </xsl:if>
+                  </input>
+                  <a class="MedBlackText"><label for="rdo2">Has Index Terms</label></a><br/>
                 </td>
               </tr>
             </table>
@@ -125,7 +153,7 @@
                 <td valign="top"><a class="MedBlackText"><b><label for="dbpref">Database Preferences:</label></b></a>&#160;
                  <a class="DecLink" href="javascript:makeUrl('Deduplication_Feature.htm')">
      		    	<img src="/engresources/images/blue_help.gif" align="absmiddle" border="0"/>
-	            </a> 
+	            </a>
                 </td>
               </tr>
               <tr>
@@ -135,13 +163,13 @@
                 <td valign="middle">&#160; &#160; <a class="MedBlackText">
                   <select id="dbpref" name="dbpref">
                     <xsl:for-each select="DEDUPABLE-DB/DB">
-                        <option>
-                            <xsl:attribute name="value"><xsl:value-of select="@ID"/></xsl:attribute>
-                            <xsl:if test="(position()=1)">
-                            <xsl:attribute name="selected">selected</xsl:attribute>
-                            </xsl:if>
-                            <xsl:value-of select="@NAME"/>
-                        </option>
+                      <option>
+                        <xsl:attribute name="value"><xsl:value-of select="@ID"/></xsl:attribute>
+                        <xsl:if test="/PAGE/FORM/REMOVEDUP/DBPREF=@ID">
+                          <xsl:attribute name="selected">selected</xsl:attribute>
+                        </xsl:if>
+                        <xsl:value-of select="@NAME"/>
+                      </option>
                     </xsl:for-each>
                   </select></a>
                 </td>
