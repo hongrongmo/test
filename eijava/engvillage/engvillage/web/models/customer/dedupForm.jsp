@@ -67,13 +67,13 @@
 		isPersonalizationPresent=clientCustomizer.checkPersonalization();
 		customizedLogo=clientCustomizer.getLogo();
 	}
-	
+
 	searchId = request.getParameter("SEARCHID");
 	database = request.getParameter("database");
 	count = request.getParameter("COUNT");
 	searchType = request.getParameter("SEARCHTYPE");
 	resultsCount=request.getParameter("RESULTSCOUNT");
-	
+
 	//DatabaseConfig databaseConfig = DatabaseConfig.getInstance();
 	NavigatorCache navcache = new NavigatorCache(sessionId);
 	ResultNavigator nav = navcache.getFromCache(searchId);
@@ -92,7 +92,7 @@
 
 	String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
 
-	
+
 
 	out.write("<PAGE>");
 	out.write("<SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
@@ -109,9 +109,25 @@
 	out.write("<SEARCH-TYPE>"+searchType+"</SEARCH-TYPE>");
 	out.write("<RESULTS-COUNT>"+resultsCount+"</RESULTS-COUNT>");
 	out.write("<DEDUPFORM-NAVIGATION-BAR/>");
+
+  out.write("<FORM>");
+  out.write("<REMOVEDUP>");
+  String dbpref = request.getParameter("dbpref");
+  String fieldpref = request.getParameter("fieldpref");
+  if(dbpref != null)
+  {
+    out.write("<DBPREF>" + dbpref + "</DBPREF>");
+  }
+  if(fieldpref != null)
+  {
+    out.write("<FIELDPREF>" + fieldpref + "</FIELDPREF>");
+  }
+
+  out.write("</REMOVEDUP>");
+  out.write("</FORM>");
+
 	Iterator it = dedupableDb.iterator();
 	out.write("<DEDUPABLE-DB>");
-
 	while(it.hasNext())
 	{
 		Database db = (Database)it.next();
