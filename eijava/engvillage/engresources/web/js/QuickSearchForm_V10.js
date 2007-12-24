@@ -106,7 +106,7 @@ function generateSection(selecteddbMask)
    if(((selecteddbMask & REFEREX) != REFEREX) &&
       ((selecteddbMask & CBN) != CBN))
    {
-   
+
 	if((selecteddbMask & US_PATENTS) != US_PATENTS &&
 	   (selecteddbMask & EPT) != EPT &&
 	   (selecteddbMask & EU_PATENTS) != EU_PATENTS)
@@ -1408,6 +1408,11 @@ function clearAlldb()
     uldiv.style.padding = "0";
     uldiv.style.marginBottom = "1px";
     adiv.appendChild(uldiv);
+
+    if(selectedDbMask == 0)
+    {
+      return;
+    }
 
     if((selectedDbMask & REFEREX) == REFEREX)
     {
