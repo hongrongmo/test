@@ -76,7 +76,7 @@
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/ThesaurusForm_V5.js"/>
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Robohelp.js"/>
-        
+
 </head>
 
 <body topmargin="0" marginwidth="0" marginheight="0">
@@ -159,7 +159,7 @@
                         </a>
 			<a href="javascript:makeUrl('Limits.htm')">
 			    <img src="/engresources/images/blue_help1.gif" border="0"/>
-			 </a>  
+			 </a>
                     </td>
                     <td valign="top" ><img src="/engresources/images/spacer.gif" border="0" width="4"/></td>
                     <td valign="top" ><img src="/engresources/images/spacer.gif" border="0" width="4"/></td>
@@ -229,7 +229,7 @@
                                 </xsl:choose>
                             </xsl:for-each>
                         </select>
-			<a href="javascript:makeUrl('Limits.htm')"><img src="/engresources/images/blue_help1.gif" border="0"/></a>                          
+			<a href="javascript:makeUrl('Limits.htm')"><img src="/engresources/images/blue_help1.gif" border="0"/></a>
                     </td>
 
                     <td valign="top" ><img src="/engresources/images/spacer.gif" border="0" width="4"/></td>
@@ -250,7 +250,7 @@
                             <a CLASS="SmBlackText">Relevance</a>&#160;
 			    <a href="javascript:makeUrl('Sorting_from_the_Search_Form.htm')">
 			         <img src="/engresources/images/blue_help1.gif" border="0"/>
-			    </a>                              
+			    </a>
                             <input type="radio" name="sort" value="yr">
                               <xsl:if test="($SORT-OPTION='publicationYear') or ($SORT-OPTION='yr')">
                                 <xsl:attribute name="checked"/>
@@ -298,8 +298,8 @@
                             </a>
 			  <a href="javascript:makeUrl('Limits.htm')">
 			    <img src="/engresources/images/blue_help1.gif" border="0"/>
-			    </a>  
-                            
+			    </a>
+
                         </td>
                         <td valign="top" ><img src="/engresources/images/spacer.gif" border="0" width="4"/></td>
                         <td valign="top" ><img src="/engresources/images/spacer.gif" border="0" width="4"/></td>
@@ -415,7 +415,7 @@
             <a class="SmBlackText">&#160;Updates </a>
 		<a href="javascript:makeUrl('Date_Limits.htm')">
 		    <img src="/engresources/images/blue_help1.gif" border="0"/>
-		    </a>              
+		    </a>
                         <!-- end of yearrange - last four updates -->
                     </td>
                     <td valign="top" ><img src="/engresources/images/spacer.gif" border="0" width="4"/></td>
@@ -479,16 +479,16 @@
         <TR><TD>
             <CENTER>
 
-                <A CLASS="MedBlueLink" TARGET="_parent" HREF="/controller/servlet/Controller?CID=aboutEI&amp;database=Compendex">About Ei</A> 
+                <A CLASS="MedBlueLink" TARGET="_parent" HREF="/controller/servlet/Controller?CID=aboutEI&amp;database=Compendex">About Ei</A>
                 <A CLASS="SmBlackText">&#160; - &#160;</A>
-                <A CLASS="MedBlueLink" TARGET="_parent" HREF="/controller/servlet/Controller?CID=aboutEV&amp;database=Compendex">About Engineering Village</A> 
+                <A CLASS="MedBlueLink" TARGET="_parent" HREF="/controller/servlet/Controller?CID=aboutEV&amp;database=Compendex">About Engineering Village</A>
                 <A CLASS="SmBlackText">&#160; - &#160;</A>
                 <A CLASS="MedBlueLink" TARGET="_parent" HREF="/controller/servlet/Controller?CID=feedback&amp;database=Compendex">Feedback</A>
                 <A CLASS="SmBlackText">&#160; - &#160;</A>
                 <A CLASS="MedBlueLink" TARGET="_parent" HREF="/controller/servlet/Controller?CID=privacyPolicy&amp;database=Compendex">Privacy Policy</A>
                 <br/>
 
-            <A CLASS="SmBlackText">&#169; 2007 Elsevier Inc. All rights reserved.</A>
+            <A CLASS="SmBlackText">&#169; 2008 Elsevier Inc. All rights reserved.</A>
             </CENTER>
         </TD></TR>
         </TABLE>
