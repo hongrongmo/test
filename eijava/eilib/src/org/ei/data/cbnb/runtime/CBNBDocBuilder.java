@@ -28,8 +28,8 @@ import java.util.regex.Pattern;
   *
   */
 public class CBNBDocBuilder implements DocumentBuilder {
-    public static String CBNB_TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright 2008 Elsevier Inc. All rights reserved";
-    public static String CBNB_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2008 Elsevier  Inc. All rights reserved";
+    public static String CBNB_TEXT_COPYRIGHT = Database.DEFAULT_ELSEVIER_TEXT_COPYRIGHT;
+    public static String CBNB_HTML_COPYRIGHT = Database.DEFAULT_ELSEVIER_HTML_COPYRIGHT;
     public static String PROVIDER_TEXT = "";
 
     private static final Key CBNB_CONTROLLED_TERMS = new Key(Keys.CONTROLLED_TERMS, "Controlled terms");

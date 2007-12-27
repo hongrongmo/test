@@ -10,6 +10,7 @@ import org.ei.connectionpool.*;
 import org.ei.data.AuthorStream;
 import org.ei.data.DataCleaner;
 import org.ei.domain.*;
+import org.ei.domain.Database;
 import org.ei.util.StringUtil;
 
 import org.apache.oro.text.perl.*;
@@ -21,8 +22,8 @@ public class C84DocBuilder implements DocumentBuilder
 {
     //private static Log log = LogFactory.getLog("Constants");
 
-    public static String C84_TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright 2007 Elsevier Inc.";
-    public static String C84_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2007 Elsevier Inc.";
+    public static String C84_TEXT_COPYRIGHT = Database.DEFAULT_ELSEVIER_TEXT_COPYRIGHT;
+    public static String C84_HTML_COPYRIGHT = Database.DEFAULT_ELSEVIER_HTML_COPYRIGHT;
     public static String PROVIDER_TEXT = "Ei";
     private static Map issnARFix = new HashMap();
     private static final Key CPX_CONTROLLED_TERMS = new Key(Keys.CONTROLLED_TERMS, "Ei controlled terms");
