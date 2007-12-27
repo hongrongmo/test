@@ -619,7 +619,7 @@
 	                    <li><a href="http://www.ei.org/about/privacy.html">Privacy</a></li>
 	                </ul>
 	                <ul>
-	                    <li class="first_child">Copyright &copy; 2006 Elsevier Inc. All Rights Reserved</li>
+	                    <li class="first_child">Copyright &copy; 2008 Elsevier Inc. All Rights Reserved</li>
 	                </ul>
 	            </dd>
 	        </dl>
