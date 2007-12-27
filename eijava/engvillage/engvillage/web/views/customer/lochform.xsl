@@ -355,7 +355,7 @@
   <br/><br/>
   <table width="100%" cellspacing="0" cellpadding="0" border="0">
   <tr><td>
-  <center><A CLASS="SmBlackText">&#169; 2007 Elsevier Inc. All rights reserved.</A></center>
+  <center><A CLASS="SmBlackText">&#169; 2008 Elsevier Inc. All rights reserved.</A></center>
   </td></tr>
   </table>
   </BODY>
