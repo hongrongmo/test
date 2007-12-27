@@ -50,8 +50,8 @@ import org.apache.oro.text.perl.*;
   */
 public class PaperChemDocBuilder implements DocumentBuilder
 {
-    public static String PAPER_TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright 2007 Elsevier Engineering Information, Inc.";
-    public static String PAPER_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2007 Elsevier Engineering Information, Inc.";
+    public static String PAPER_TEXT_COPYRIGHT = Database.DEFAULT_ELSEVIER_TEXT_COPYRIGHT;
+    public static String PAPER_HTML_COPYRIGHT = Database.DEFAULT_ELSEVIER_HTML_COPYRIGHT;
     public static String PROVIDER_TEXT = "Ei";
 
 

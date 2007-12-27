@@ -18,8 +18,8 @@ import org.apache.oro.text.perl.*;
 public class GEODocBuilder
     implements DocumentBuilder
 {
-    public static String CPX_TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright 2007 Elsevier Inc. All rights reserved";
-    public static String CPX_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2007 Elsevier Inc. All rights reserved";
+    public static String GEO_TEXT_COPYRIGHT = Database.DEFAULT_ELSEVIER_TEXT_COPYRIGHT;
+    public static String GEO_HTML_COPYRIGHT = Database.DEFAULT_ELSEVIER_HTML_COPYRIGHT;
     public static String PROVIDER_TEXT = "Ei";
     private static final Key E_ISSN = new Key(Keys.E_ISSN, "Electronic ISSN");
     private static final Key GEO_CLASS_CODES = new Key(Keys.CLASS_CODES, "Classification codes");
@@ -125,9 +125,9 @@ public class GEODocBuilder
 
                 ht.put(Keys.PROVIDER,new XMLWrapper(Keys.PROVIDER, PROVIDER_TEXT));
 
-                ht.put(Keys.COPYRIGHT,new XMLWrapper(Keys.COPYRIGHT, CPX_HTML_COPYRIGHT));
+                ht.put(Keys.COPYRIGHT,new XMLWrapper(Keys.COPYRIGHT, GEO_HTML_COPYRIGHT));
 
-                ht.put(Keys.COPYRIGHT_TEXT,new XMLWrapper(Keys.COPYRIGHT_TEXT, CPX_TEXT_COPYRIGHT));
+                ht.put(Keys.COPYRIGHT_TEXT,new XMLWrapper(Keys.COPYRIGHT_TEXT, GEO_TEXT_COPYRIGHT));
 
                 //EX
                 if(rset.getString("ACCESSION_NUMBER") != null)
@@ -636,9 +636,9 @@ public class GEODocBuilder
 
                     ht.put(Keys.PROVIDER,new XMLWrapper(Keys.PROVIDER, PROVIDER_TEXT));
 
-                    ht.put(Keys.COPYRIGHT,new XMLWrapper(Keys.COPYRIGHT, CPX_HTML_COPYRIGHT));
+                    ht.put(Keys.COPYRIGHT,new XMLWrapper(Keys.COPYRIGHT, GEO_HTML_COPYRIGHT));
 
-                    ht.put(Keys.COPYRIGHT_TEXT,new XMLWrapper(Keys.COPYRIGHT_TEXT, CPX_TEXT_COPYRIGHT));
+                    ht.put(Keys.COPYRIGHT_TEXT,new XMLWrapper(Keys.COPYRIGHT_TEXT, GEO_TEXT_COPYRIGHT));
 
                     if(rset.getString("ACCESSION_NUMBER") != null)
                     {
@@ -1453,9 +1453,9 @@ public class GEODocBuilder
 
                 ht.put(Keys.PROVIDER,new XMLWrapper(Keys.PROVIDER, PROVIDER_TEXT));
 
-                ht.put(Keys.COPYRIGHT,new XMLWrapper(Keys.COPYRIGHT, CPX_HTML_COPYRIGHT));
+                ht.put(Keys.COPYRIGHT,new XMLWrapper(Keys.COPYRIGHT, GEO_HTML_COPYRIGHT));
 
-                ht.put(Keys.COPYRIGHT_TEXT,new XMLWrapper(Keys.COPYRIGHT_TEXT, CPX_TEXT_COPYRIGHT));
+                ht.put(Keys.COPYRIGHT_TEXT,new XMLWrapper(Keys.COPYRIGHT_TEXT, GEO_TEXT_COPYRIGHT));
 
                 // PP
                 String strPages=getPage(rset.getString("SOURCE_PAGERANGE"),
@@ -1885,9 +1885,9 @@ public class GEODocBuilder
 
                     ht.put(Keys.PROVIDER,new XMLWrapper(Keys.PROVIDER, PROVIDER_TEXT));
 
-                    ht.put(Keys.COPYRIGHT,new XMLWrapper(Keys.COPYRIGHT, CPX_HTML_COPYRIGHT));
+                    ht.put(Keys.COPYRIGHT,new XMLWrapper(Keys.COPYRIGHT, GEO_HTML_COPYRIGHT));
 
-                    ht.put(Keys.COPYRIGHT_TEXT,new XMLWrapper(Keys.COPYRIGHT_TEXT, CPX_TEXT_COPYRIGHT));
+                    ht.put(Keys.COPYRIGHT_TEXT,new XMLWrapper(Keys.COPYRIGHT_TEXT, GEO_TEXT_COPYRIGHT));
 
                     // Always needed for IVIP
                     if (rset.getString("ISSN") != null)

@@ -36,8 +36,8 @@ import java.io.*;
   *
   */
 public class EptDocBuilder implements DocumentBuilder, Keys {
-    public static String PAT_TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright 2007 Elsevier, Inc.";
-    public static String PAT_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2007 Elsevier, Inc.";
+    public static String PAT_TEXT_COPYRIGHT = Database.DEFAULT_ELSEVIER_TEXT_COPYRIGHT;
+    public static String PAT_HTML_COPYRIGHT = Database.DEFAULT_ELSEVIER_HTML_COPYRIGHT;
     public static String PROVIDER = "EnCompassPAT";
     private static final Key EPT_CONTROLLED_TERMS = new Key(Keys.CONTROLLED_TERMS, "Controlled terms");
     private static final Key LINKED_TERMS_HOLDER = new Key(Keys.LINKED_TERMS_HOLDER, "Linked terms");

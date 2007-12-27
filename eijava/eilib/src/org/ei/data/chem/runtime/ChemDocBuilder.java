@@ -27,8 +27,8 @@ import org.ei.domain.Keys;
   *
   */
 public class ChemDocBuilder implements DocumentBuilder {
-    public static String CHEM_TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright 2007 Elsevier Inc.";
-    public static String CHEM_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2007 Elsevier Inc.";
+    public static String CHEM_TEXT_COPYRIGHT = Database.DEFAULT_ELSEVIER_TEXT_COPYRIGHT;
+    public static String CHEM_HTML_COPYRIGHT = Database.DEFAULT_ELSEVIER_HTML_COPYRIGHT;
     public static String PROVIDER = "";
     public static String PROVIDER_TEXT = "";
 

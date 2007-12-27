@@ -21,8 +21,8 @@ import org.apache.oro.text.perl.*;
   */
 public class EltDocBuilder implements DocumentBuilder, Keys {
     private static final String LT_MSG = "Please click here to view all linked terms";
-    public static String ELT_TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright 2007 Elsevier, Inc.";
-    public static String ELT_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2007 Elsevier, Inc.";
+    public static String ELT_TEXT_COPYRIGHT = Database.DEFAULT_ELSEVIER_TEXT_COPYRIGHT;
+    public static String ELT_HTML_COPYRIGHT = Database.DEFAULT_ELSEVIER_HTML_COPYRIGHT;
     public static String PROVIDER = "EnCompassLIT";
     public EltDocTypes doctype = new EltDocTypes();
     private static final Key ELT_CONTROLLED_TERMS = new Key(Keys.CONTROLLED_TERMS, "Controlled terms");

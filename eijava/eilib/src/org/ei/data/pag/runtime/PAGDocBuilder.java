@@ -56,8 +56,8 @@ public class PAGDocBuilder implements DocumentBuilder
 
   private static Pattern nonAscii = Pattern.compile("[\\x00-\\x1F\\x80-\\xFF]");
 
-  public static String TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright 2007 Elsevier Inc. All rights reserved";
-  public static String HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2007 Elsevier Inc. All rights reserved";
+  public static String TEXT_COPYRIGHT = Database.DEFAULT_ELSEVIER_TEXT_COPYRIGHT;
+  public static String HTML_COPYRIGHT = Database.DEFAULT_ELSEVIER_HTML_COPYRIGHT;
   public static String PROVIDER_TEXT = "Elsevier";
 
   public Perl5Util perl = new Perl5Util();
