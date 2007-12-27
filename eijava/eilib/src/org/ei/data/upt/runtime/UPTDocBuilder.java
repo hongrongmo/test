@@ -17,8 +17,8 @@ import org.ei.xml.Entity;
 import org.apache.oro.text.perl.*;
 
 public class UPTDocBuilder implements DocumentBuilder, Keys {
-    public static String UPT_TEXT_COPYRIGHT = "Compilation and indexing terms, 2007 LexisNexis Univentio B.V.";
-    public static String UPT_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2007 LexisNexis Univentio B.V.";
+    public static String UPT_TEXT_COPYRIGHT = "Compilation and indexing terms, 2008 LexisNexis Univentio B.V.";
+    public static String UPT_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2008 LexisNexis Univentio B.V.";
 
 
     public static String PROVIDER = "Ei";

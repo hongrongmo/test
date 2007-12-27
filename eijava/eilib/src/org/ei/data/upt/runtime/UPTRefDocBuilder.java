@@ -25,8 +25,8 @@ import org.apache.oro.text.perl.*;
 public class UPTRefDocBuilder implements
     DocumentBuilder
 {
-    public static String UPTRef_TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright 2007 Elsevier Inc.";
-    public static String UPTRef_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2007 Elsevier Inc.";
+    public static String UPTRef_TEXT_COPYRIGHT = Database.DEFAULT_ELSEVIER_TEXT_COPYRIGHT;
+    public static String UPTRef_HTML_COPYRIGHT = Database.DEFAULT_ELSEVIER_HTML_COPYRIGHT;
     public static String PROVIDER = "Ei";
 
 
