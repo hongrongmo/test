@@ -12,7 +12,7 @@
         		<title><xsl:value-of select="CATEGORY-TITLE"/></title>
   			<xsl:text disable-output-escaping="yes"><![CDATA[<link>]]></xsl:text>
 				http://daypass.engineeringvillage.com
-  			<xsl:text disable-output-escaping="yes"><![CDATA[</link>]]></xsl:text>  
+  			<xsl:text disable-output-escaping="yes"><![CDATA[</link>]]></xsl:text>
   			<description>Engineering Village RSS results for database
     				<xsl:value-of select="DD:getDisplayName(DBMASK)"/>
     				and search query of <xsl:value-of select="CATEGORY-TITLE"/>
@@ -22,7 +22,7 @@
   			<image>
 			    http://localhost/engresources/images/ev2logo5.gif
     			</image>
-  			<copyright>Copyright 2007 Elsevier Inc. All rights reserved.</copyright>
+  			<copyright>Copyright 2008 Elsevier Inc. All rights reserved.</copyright>
   			<xsl:apply-templates select="EI-DOCUMENT"/>
   		</channel>
   	</rss>
@@ -36,20 +36,20 @@
     <xsl:apply-templates select="AUS"/>
     <description>
     	<xsl:value-of select="SU:teaser(AB)"/>...
-    	
-    	
+
+
     	<p/>
-    	For more information about this article and other similar 
+    	For more information about this article and other similar
     	articles subscribe to Engineering Village Day Pass.
     </description>
-    
+
     <xsl:text disable-output-escaping="yes"><![CDATA[<link>]]></xsl:text>
 	http://daypass.engineeringvillage.com
-    <xsl:text disable-output-escaping="yes"><![CDATA[</link>]]></xsl:text>  
+    <xsl:text disable-output-escaping="yes"><![CDATA[</link>]]></xsl:text>
     <guid>
     	<xsl:value-of select="DOC/DOC-ID"/>
     </guid>
-  </item> 
+  </item>
 </xsl:template>
 
 <xsl:template match="AUS">

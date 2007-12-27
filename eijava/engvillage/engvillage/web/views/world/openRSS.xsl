@@ -32,7 +32,7 @@
   </description>
   <language>en-us</language>
   <ttl>2880</ttl>
-  <copyright>Copyright 2007 Elsevier Inc. All rights reserved.</copyright>
+  <copyright>Copyright 2008 Elsevier Inc. All rights reserved.</copyright>
 </xsl:template>
 
 <xsl:template match="FOOTER">
