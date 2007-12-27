@@ -16,7 +16,7 @@
     <xsl:template match="SECTION-DELIM">
         <xsl:apply-templates/>
     </xsl:template>
-    
+
     <xsl:template match="LINK"></xsl:template>
 
     <xsl:template match="PAGE-ENTRY">
@@ -32,7 +32,7 @@
 
     <xsl:template match="FOOTER">
         <xsl:text disable-output-escaping="yes">
-            <![CDATA[</table></center><br/><center><TABLE cellSpacing="0" cellPadding="0" border="0" width="99%"><TR><TD><CENTER><A class="SmBlackText">&#169; 2007 Elsevier Inc. All rights reserved.</A></CENTER></TD></TR></TABLE></center></body></html>]]>
+            <![CDATA[</table></center><br/><center><TABLE cellSpacing="0" cellPadding="0" border="0" width="99%"><TR><TD><CENTER><A class="SmBlackText">&#169; 2008 Elsevier Inc. All rights reserved.</A></CENTER></TD></TR></TABLE></center></body></html>]]>
         </xsl:text>
     </xsl:template>
 

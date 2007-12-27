@@ -29,7 +29,7 @@
   ]]>
 </xsl:text>
 
-</head> 
+</head>
 
 <body bgcolor="#ffffff">
 <table cellspacing="0" cellpadding="0" width="100%" border="0"><!-- start logo/title bar -->
@@ -83,7 +83,7 @@
   <tbody>
   <tr>
     <td>
-      <center><a class="SmBlackText">&#169; 2007 Elsevier Inc. All rights reserved.
+      <center><a class="SmBlackText">&#169; 2008 Elsevier Inc. All rights reserved.
 </a></center></td></tr></tbody>
 </table>
 </body>
