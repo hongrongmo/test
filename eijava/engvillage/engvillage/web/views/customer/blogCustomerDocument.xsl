@@ -30,7 +30,7 @@
   <head>
     <title>EI DOCUMENT</title>
     <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
-      
+
   </head>
   <!-- start of body tag -->
   <body bgcolor="#FFFFFF" topmargin="0" marginheight="0" marginwidth="0">
@@ -42,10 +42,10 @@
             <tr><td colspan="2" height="25"><img src="/engresources/images/s.gif" height="25"/></td></tr>
           </table>
         </center>
-  
-  
+
+
     <center>
-      <table border="0" width="99%" cellspacing="0" cellpadding="0">    
+      <table border="0" width="99%" cellspacing="0" cellpadding="0">
     <xsl:apply-templates select="PAGE-RESULTS"/>
       </table>
     </center>
@@ -67,7 +67,7 @@
     <xsl:variable name="DATABASE-ID">
       <xsl:value-of select="EI-DOCUMENT/DBID"/>
     </xsl:variable>
-    
+
     <xsl:variable name="DOC-ID">
       <xsl:value-of select="EI-DOCUMENT/DOC-ID"/>
     </xsl:variable>
@@ -89,7 +89,7 @@
     <tr>
        <td valign="top" width="6" colspan="2"><img src="/engresources/images/s.gif" border="0" width="6"/></td>
        <td colspan="3" align="center">
-      <A CLASS="SmBlackText">&#169; 2007 Elsevier Inc. All rights reserved.</A>
+      <A CLASS="SmBlackText">&#169; 2008 Elsevier Inc. All rights reserved.</A>
        </td>
     </tr>
 
