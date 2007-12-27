@@ -110,8 +110,7 @@
 	out.write("<RESULTS-COUNT>"+resultsCount+"</RESULTS-COUNT>");
 	out.write("<DEDUPFORM-NAVIGATION-BAR/>");
 
-  out.write("<FORM>");
-  out.write("<REMOVEDUP>");
+  out.write("<FORM NAME=\"removedup\">");
   String dbpref = request.getParameter("dbpref");
   String fieldpref = request.getParameter("fieldpref");
   if(dbpref != null)
@@ -122,8 +121,6 @@
   {
     out.write("<FIELDPREF>" + fieldpref + "</FIELDPREF>");
   }
-
-  out.write("</REMOVEDUP>");
   out.write("</FORM>");
 
 	Iterator it = dedupableDb.iterator();
