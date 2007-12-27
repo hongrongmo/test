@@ -10,7 +10,7 @@
     <xsl:variable name="QCO">
         <xsl:value-of select="/PAGE/QTOP/QCO"/>
     </xsl:variable>
-    
+
     <xsl:variable name="ENCODED-QSTR">
         <xsl:value-of select="java:encode(/PAGE/QTOP/QSTR)"/>
     </xsl:variable>
@@ -28,7 +28,7 @@
      <xsl:variable name="ISBN">
         <xsl:value-of select="/PAGE/BP/BN"/>
     </xsl:variable>
-    
+
     <xsl:include href="bookTemplates.xsl"/>
     <xsl:template match="PAGE">
         <html>
@@ -81,7 +81,7 @@
                         <TR>
                             <TD>
                                 <CENTER>
-                                    <A class="SmBlackText">&#169; 2007 Elsevier Inc. All rights reserved.</A>
+                                    <A class="SmBlackText">&#169; 2008 Elsevier Inc. All rights reserved.</A>
                                 </CENTER>
                             </TD>
                         </TR>
