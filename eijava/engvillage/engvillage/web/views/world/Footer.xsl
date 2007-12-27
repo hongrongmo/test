@@ -22,7 +22,7 @@
        <A CLASS="SmBlackText">&#160; - &#160;</A>
        <A CLASS="MedBlueLink" HREF="/controller/servlet/Controller?CID=ncTermsandConditions">Terms and Conditions</A>
        <br/>
-     <A CLASS="SmBlackText">&#169; 2007 Elsevier Inc. All rights reserved. </A>
+     <A CLASS="SmBlackText">&#169; 2008 Elsevier Inc. All rights reserved. </A>
   </CENTER>
   </TD></TR>
 </TABLE>
