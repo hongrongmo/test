@@ -152,7 +152,7 @@
     <td>
       <center>
         <A CLASS="SmBlackText">
-          &#169; 2007 Elsevier Inc. All rights reserved.
+          &#169; 2008 Elsevier Inc. All rights reserved.
         </A>
       </center>
     </td>
