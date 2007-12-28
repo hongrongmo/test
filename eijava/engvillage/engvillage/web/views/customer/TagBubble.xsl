@@ -18,7 +18,6 @@
 
     <xsl:text disable-output-escaping="yes">
     <![CDATA[
-    <xsl:comment>
       <script language="javascript">
         var tageditTableBody;
         var tageditTable;
@@ -58,7 +57,6 @@
           return false;
         }
       </script>
-    </xsl:comment>
     ]]>
     </xsl:text>
 
@@ -68,7 +66,6 @@
 
     <xsl:text disable-output-escaping="yes">
     <![CDATA[
-      <xsl:comment>
         <script language="javascript">
 
           function clearEdit()
@@ -113,9 +110,9 @@
             }
             return goffset;
           }
-          
 
-          
+
+
         function addNewTag()
         {
             if (document.tagbubble.tagname.value != null)
@@ -129,10 +126,10 @@
 				    {
 			            alert("Tag title should not exceed 30 characters : "+arr[k]);
 				        return false;
-				    }					
+				    }
 			    }
 			}
-			  
+
             var url = document.tagbubble.addtagurl.value;
             var tag = encodeURIComponent(document.tagbubble.tagname.value);
             var scopelength = document.tagbubble.scope.length;
@@ -287,16 +284,16 @@
 
             parentDiv.replaceChild(newSpan,oldSpan);
           }
-          
-          
-          
+
+
+
         function validateEdit()
         {
           	var j = 0;
 
 			for (j = 0 ; j < document.tagedit.length ; j++)
 			{
-				var name = document.tagedit.elements[j].name;			
+				var name = document.tagedit.elements[j].name;
 				if (name.substring(0,4) == "Edit")
 				{
 					var evalue = document.tagedit.elements[j].value;
@@ -308,17 +305,16 @@
 						{
 							alert("Tag title should not exceed 30 characters : "+arr[k]);
 							return false;
-						}					
+						}
 					}
 				}
 
 			}
 			return true;
 		}
-          
+
 
         </script>
-    </xsl:comment>
     ]]>
     </xsl:text>
 
