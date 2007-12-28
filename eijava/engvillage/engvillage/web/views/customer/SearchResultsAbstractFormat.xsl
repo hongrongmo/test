@@ -55,10 +55,10 @@
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Autocomplete.js"/>
 				<link href="/engresources/stylesheets/booktoc.css" rel="stylesheet" type="text/css" />
 
+  <script language="javascript">
+    <xsl:comment>
     <xsl:text disable-output-escaping="yes">
     <![CDATA[
-    <xsl:comment>
-    <script language="javascript">
 
     function printFormat(sessionid,searchtype,searchid,database,databaseid)
     {
@@ -229,10 +229,10 @@
       }
      }
 
-    </script>
-    </xsl:comment>
     ]]>
     </xsl:text>
+    //</xsl:comment>
+    </script>
     <!-- End of javascript -->
     </head>
       <body bgcolor="#FFFFFF" topmargin="0" marginheight="0" marginwidth="0">

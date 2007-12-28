@@ -229,7 +229,7 @@
 			 }
 		]]>
 		</xsl:text>
-		</xsl:comment>
+		//</xsl:comment>
 		</script>
 
 		<!-- javascript for Encompass fileds -->
