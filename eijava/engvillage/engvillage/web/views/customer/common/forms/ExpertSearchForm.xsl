@@ -299,7 +299,7 @@
                     <tr>
                       <td valign="top" colspan="2">&#160;</td>
                       <td valign="top" colspan="2">
-                        <A CLASS="MedBlackText" onClick="return searchValidation()"><input type="image" src="/engresources/images/search_orange1.gif" border="0"/></A>&#160; &#160;
+                        <A CLASS="MedBlackText" onClick="return searchValidation()"><input name="search" value="Search" type="image" src="/engresources/images/search_orange1.gif" border="0"/></A>&#160; &#160;
                         <a href="/controller/servlet/Controller?CID=expertSearch&amp;database={$SELECTED-DB}">
                           <img src="/engresources/images/reset_orange1.gif" border="0"/>
                         </a>
