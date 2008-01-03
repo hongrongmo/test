@@ -10,10 +10,34 @@ import java.util.Date;
 import java.util.Iterator;
 
 import org.apache.oro.text.perl.Perl5Util;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
 
 import sun.misc.BASE64Encoder;
 
 public class StringUtil {
+
+    public static final Pattern HtmlRegex = Pattern.compile("<([^>]*)>");
+
+    public static void main(String[] args) {
+     StringUtil.stripHtml("The <sup>3</sup>0<inf>u</inf><sup>+</sup> (4 <sup>3</sup> P<inf>1</inf>)-state potential parameters of Zn<inf>2</inf> were determined (&omega;<inf>e</inf><sup>&prime;</sup> = 20.6 cm -1, &omega ;<inf>e</inf><sup>&prime;</sup> x<inf>e</inf><sup>&prime;</sup> = 0.58 cm -1, D<inf>e</inf><sup>&prime;</sup> = 182.6 cm -1, R<inf>e</inf><sup>&prime ;</sup> = 4.58 A&ring;) from vibrational progressions recorded in an excitation spectrum. The molecules were produced in a free-jet supersonic beam using two different carriers, Ar and Kr, and were excited from the X <sup>1</sup> 0<inf>g</inf><sup>+</sup> ground state directly to the <sup>3</sup> 0<inf>u</inf><sup>+</sup> state using a dye-laser. Analysis of the recorded vibrational progressions yielded also information on the X <sup>1</sup> 0<inf>g</inf><sup>+</sup>-state potential parameters (&omega ;<inf>e</inf><sup>&Prime;</sup> = 25.9 cm -1, &omega ;<inf>e</inf><sup>&Prime;</sup> x<inf>e</inf><sup>&Prime;</sup> = 0.69 cm -1, D<inf>e</inf><sup>&Prime;</sup> = 242 cm -1, R<inf>e</inf><sup>&Prime ;</sup> = 4.19 A&ring;). Natural isotopic composition of Zn<inf>2</inf> was included in the analysis. Valence ab initio calculations ofthe potential energy curves for the ground and several excites states were performed, taking relativistic and spin-orbit effects into account. The possibility of ZnAr or ZnKr excitation in the beam was also analyzed. &copy; 2006 Elsevier B.V. All rights reserved. ");
+    }
+
+    // remove html and return  - also trim string on return to avoid another call in XSL
+    // called in RISResults.xsl for RIS format to fix EndNote bug
+    // You could see the problem in this CPX record: 062910013901
+    public static String stripHtml(String sVal)
+    {
+      if(sVal != null)
+      {
+        Matcher m = HtmlRegex.matcher(sVal);
+        if(m.find())
+        {
+          sVal = m.replaceAll(StringUtil.EMPTY_STRING);
+        }
+      }
+      return sVal.trim();
+    }
 
     public static final int REPLACE_GLOBAL = 1;
     public static final int REPLACE_FIRST = 2;
@@ -101,6 +125,7 @@ public class StringUtil {
     }
 
     public String replace(String mainString, String replace, String replaceWith, int global, int caseTest) {
+
         int shift = 0;
         String mainStringTest = null;
         String replaceTest = null;
@@ -139,6 +164,7 @@ public class StringUtil {
             }
         }
         return mainString;
+
     }
 
     public String computeUniqueHash(String hashThis) throws StringUtilException {
@@ -171,7 +197,7 @@ public class StringUtil {
         }
         return temp;
     }
-    
+
     /**
      *   This method takes a clob object and builds a
      *   String out of it.
@@ -180,7 +206,7 @@ public class StringUtil {
      *   @exception InvalidEIDocException
      *   if clob is longer than 10000 - it trims to 10000
      **/
-     public static String getLTStringFromClob(java.sql.Clob clob) throws Exception 
+     public static String getLTStringFromClob(java.sql.Clob clob) throws Exception
      {
          String temp = StringUtil.EMPTY_STRING;
          if (clob != null) {
@@ -188,7 +214,7 @@ public class StringUtil {
              if (len > 10000)
              {
                  len = 10000;
-             }             
+             }
              temp = clob.getSubString(1, len);
          }
          return temp;
