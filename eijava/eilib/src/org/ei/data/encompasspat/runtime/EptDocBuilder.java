@@ -1085,7 +1085,6 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
 
         while (st.hasMoreTokens()) {
             strToken = st.nextToken().trim();
-            strToken = strToken.replace('-', ' ');
             if (strToken.length() > 0 && !strToken.equals("")) {
                 KeyValuePair k = new KeyValuePair(getTermField(strToken), strToken);
                 list.add(k);
