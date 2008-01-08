@@ -144,7 +144,6 @@
 
   <!-- Controlled/Uncontrolled child node(s) within VALUE under FLS/CVS/AGS -->
       <xsl:template match="DG|MJS|BKY|FL|CV|AG|CT|OC|PS|RGI|CM|IC|GC|GD|CP|CE">
-
       <xsl:if test="name()='LST'">
       <xsl:if test="position()=1">
       <img src="/engresources/images/separator.gif" border="0" width="6" height="6"/>
@@ -158,8 +157,7 @@
       		<xsl:otherwise><xsl:value-of select="name(.)"/></xsl:otherwise>
       	</xsl:choose>
       </xsl:variable>
-
-
+      
       <xsl:call-template name="LINK">
         <xsl:with-param name="TERM"><xsl:value-of select="normalize-space(text())" disable-output-escaping="yes"/></xsl:with-param>
         <xsl:with-param name="FIELD"><xsl:value-of select="$FIELDNAME"/></xsl:with-param>
@@ -180,6 +178,18 @@
       </xsl:variable>
       <xsl:if test="not(position()=last())"><a CLASS="SmBlackText"><xsl:value-of select="$SEPARATOR"/></a></xsl:if>
 
+    </xsl:template>
+    
+    <xsl:template match="CVN|CVP|CVA|CVMN|CVMP|CVMA">
+      <xsl:call-template name="LINK">
+        <xsl:with-param name="TERM"><xsl:value-of select="normalize-space(text())"/></xsl:with-param>
+        <xsl:with-param name="FIELD"><xsl:value-of select="name(.)"/></xsl:with-param>
+      </xsl:call-template>
+      <span CLASS="SmBlackText">
+      <xsl:value-of select="crlkup:getName(normalize-space(text()))" disable-output-escaping="yes"/></span>
+      <xsl:if test="not(position()=last())">
+        <A CLASS="SmBlackText">&#160; - &#160;</A>
+      </xsl:if>
     </xsl:template>
 
     <xsl:template match="C_SUBJECT">
