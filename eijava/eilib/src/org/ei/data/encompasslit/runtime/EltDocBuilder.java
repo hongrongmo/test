@@ -706,7 +706,6 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
 
         while (st.hasMoreTokens()) {
             strToken = st.nextToken().trim();
-            strToken = strToken.replace('-', ' ');
             if (strToken.length() > 0) {
                 KeyValuePair k = new KeyValuePair(getTermField(strToken), strToken);
                 list.add(k);
