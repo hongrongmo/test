@@ -43,6 +43,7 @@ public final class DatabaseConfig
 
     public static final String C84_PREF = "c84";
     public static final String CBF_PREF = "zbf";
+    public static final String IBS_PREF = "ibs";
     public static final String EPT_PREF = "ept";
     public static final int CBF_ENDYEAR  = 1969;
 
