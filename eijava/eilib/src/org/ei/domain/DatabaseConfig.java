@@ -36,6 +36,10 @@ public final class DatabaseConfig
     public static final int PAG_MASK  	= 131072;
     public static final int CBF_MASK  	= 262144;
     public static final int UPT_MASK 	= 524288;
+    public static final int IBS_MASK 	= 1048576;
+
+
+
 
     public static final String C84_PREF = "c84";
     public static final String CBF_PREF = "zbf";

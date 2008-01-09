@@ -30,7 +30,7 @@ public class DriverConfig
 		driverTable.put("pag","org.ei.data.pag.runtime.PAGDatabase");//131072
 		driverTable.put("zbf","org.ei.data.cbf.runtime.CBFDatabase");//262144
 		driverTable.put("upt","org.ei.data.upt.runtime.UPTDatabase");//0
-
+		driverTable.put("ibs","org.ei.data.ibs.runtime.IbsDatabase");//0
 	}
 
 	public static Map getDriverTable()

@@ -31,6 +31,7 @@ public class FastSearchControl
     private boolean lazy;
     private boolean usenavigators = true;
     private boolean backfileStandAlone = false;
+    private boolean archiveStandAlone = false;
     public static String BASE_URL;
     private String errorCode;
 
@@ -201,6 +202,12 @@ public class FastSearchControl
 			this.backfileStandAlone = true;
 		}
 
+		if((sQuery.getDataBase() & DatabaseConfig.IBS_MASK) == DatabaseConfig.IBS_MASK)
+		{
+			this.archiveStandAlone = true;
+		}
+
+
         this.query = sQuery;
         this.sessionID = sSessionID;
         this.pageSize = nPageSize;
@@ -254,7 +261,7 @@ public class FastSearchControl
             }
 
             Database[] databases = dConfig.getDatabases(query.getDataBase());
-            
+
 
             if(databases.length > 1)
             {
@@ -312,6 +319,11 @@ public class FastSearchControl
     	{
 			return DatabaseConfig.CBF_PREF.concat(mid.substring(3));
     	}
+    	else if(backfileStandAlone &&
+    			mid.indexOf("ibf") == 0)
+    	{
+			return "ibs".concat(mid.substring(3));
+		}
 
 		return mid;
 	}
@@ -329,6 +341,23 @@ public class FastSearchControl
 					if(dataElement[0].equals(DatabaseConfig.C84_PREF))
 					{
 						dataElement[0] = DatabaseConfig.CBF_PREF;
+						break;
+					}
+				}
+			}
+		}
+
+		if(archiveStandAlone)
+		{
+			List navlist =(List) hnavs.get(EiNavigator.DB);
+			if(navlist != null)
+			{
+				for(int i=0; i<navlist.size(); i++)
+				{
+					String[] dataElement  = (String[]) navlist.get(i);
+					if(dataElement[0].equals("ibf"))
+					{
+						dataElement[0] = "ibs";
 						break;
 					}
 				}
@@ -539,7 +568,7 @@ public class FastSearchControl
 		{
 			//System.out.println("Not checking basket");
 			int dsize = docList.size();
-			
+
 			for(int i=0;i<dsize; i++)
 			{
 				PageEntry entry = new PageEntry();
