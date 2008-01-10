@@ -423,11 +423,26 @@ public class EIDoc implements Highlightable, XMLSerializable, LocalHoldingLinker
             return getHighlightMap(CV_HIGHLIGHT_KEYS);
 
         }
+        else if (field.equalsIgnoreCase("cvp")) {
+
+            return getHighlightMap(CV_HIGHLIGHT_KEYS);
+
+        }
+        else if (field.equalsIgnoreCase("cvn")) {
+
+            return getHighlightMap(CV_HIGHLIGHT_KEYS);
+
+        }
+        else if (field.equalsIgnoreCase("cva")) {
+
+            return getHighlightMap(CV_HIGHLIGHT_KEYS);
+
+        }
+
         else if (field.equalsIgnoreCase("mh")) {
             return getHighlightMap(MH_HIGHLIGHT_KEYS);
 
         }
-
         else if (field.equalsIgnoreCase("av")) {
             return getHighlightMap(AV_HIGHLIGHT_KEYS);
 
@@ -448,6 +463,21 @@ public class EIDoc implements Highlightable, XMLSerializable, LocalHoldingLinker
         else if (field.equalsIgnoreCase("cvm")) {
 
             return getHighlightMap(MJS_HIGHLIGHT_KEYS);
+        }
+        else if (field.equalsIgnoreCase("cvmp")) {
+
+            return getHighlightMap(MJSP_HIGHLIGHT_KEYS);
+
+        }
+        else if (field.equalsIgnoreCase("cvmn")) {
+
+            return getHighlightMap(MJSN_HIGHLIGHT_KEYS);
+
+        }
+        else if (field.equalsIgnoreCase("cvma")) {
+
+            return getHighlightMap(MJSA_HIGHLIGHT_KEYS);
+
         }
         else if (field.equalsIgnoreCase("lt")) {
 
