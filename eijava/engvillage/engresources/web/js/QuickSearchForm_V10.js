@@ -18,6 +18,7 @@ var US_EU_PATENTS = 49152;
 var REF = 65536
 var REFEREX = 131072;
 var CBF = 262144;
+var IBS = 1048576;
 var UPT = 524288;
 
 var startYear;
@@ -148,7 +149,8 @@ function generateSection(selecteddbMask)
          searchin[index++] = new Field("CL", "Ei Classification code");
    }
    else if((selecteddbMask == INS) ||
-   	  (selecteddbMask == GEO) ||
+   	      (selecteddbMask == GEO) ||
+   	      (selecteddbMask == IBS) ||
           (selecteddbMask == INS + IBF) ||
           (selecteddbMask == INS + GEO) ||
           (selecteddbMask == INS + IBF + GEO))
@@ -272,6 +274,7 @@ function generateSection(selecteddbMask)
 
    //PA
    if(selecteddbMask == INS ||
+      selecteddbMask == IBS ||
       selecteddbMask == (INS + IBF))
    {
       searchin[index++] = new Field("PA","Filing date");
@@ -279,6 +282,7 @@ function generateSection(selecteddbMask)
 
    //PI
    if(selecteddbMask == INS ||
+      selecteddbMask == IBS ||
       selecteddbMask == (INS + IBF))
    {
      searchin[index++] = new Field("PI","Patent issue date");
@@ -286,6 +290,7 @@ function generateSection(selecteddbMask)
 
    //PU
    if(selecteddbMask == INS ||
+      selecteddbMask == IBS  ||
       selecteddbMask == (INS + IBF))
    {
      searchin[index++] = new Field("PU","Country of application");
@@ -293,6 +298,7 @@ function generateSection(selecteddbMask)
 
    //MI
    if(selecteddbMask == INS ||
+      selecteddbMask == IBS  ||
       selecteddbMask == (INS + IBF))
    {
      searchin[index++] = new Field("MI","Material Identity Number");
@@ -306,6 +312,7 @@ function generateSection(selecteddbMask)
      searchin[index++] = new Field("CV", "Ei controlled term");
    }
    else if(selecteddbMask == INS ||
+   		   selecteddbMask == IBS  ||
            selecteddbMask == (INS + IBF))
    {
      searchin[index++] = new Field("CV","Inspec controlled term");
@@ -575,7 +582,7 @@ function generateDoctypes(selecteddbMask)
         doctypes[index++] = new Field("DS", "Dissertation");
   }
 
-  if(selecteddbMask == INS)
+  if(selecteddbMask == INS || selecteddbMask == IBS)
   {
         doctypes[index++] = new Field("UP", "Unpublished paper");
   }
@@ -588,7 +595,7 @@ function generateDoctypes(selecteddbMask)
   {
         doctypes[index++] = new Field("PA", "Patents");
   }
-  else if(selecteddbMask == INS)
+  else if(selecteddbMask == INS || selecteddbMask == IBS)
   {
         doctypes[index++] = new Field("PA", "Patents (before 1977)");
   }
@@ -606,6 +613,7 @@ function generateDoctypes(selecteddbMask)
   else if((selecteddbMask & GEO) != GEO &&
       (selecteddbMask & CPX) != CPX &&
       (selecteddbMask & INS) != INS &&
+      (selecteddbMask & IBS) != IBS &&
       (selecteddbMask & NTIS) != NTIS &&
       (selecteddbMask & CBF) != CBF &&
       (selecteddbMask & REFEREX) != REFEREX &&
@@ -782,15 +790,15 @@ function generateTreattypes(selecteddbMask)
    }
    //Inspec fields
    //NEW
-   if(selecteddbMask == INS)
+   if(selecteddbMask == INS || selecteddbMask == IBS)
    {
      treattypes[index++] = new Field("NEW", "New development");
    }
-   if(selecteddbMask == INS)
+   if(selecteddbMask == INS || selecteddbMask == IBS)
    {
      treattypes[index++] = new Field("PRA", "Practical");
    }
-   if(selecteddbMask == INS)
+   if(selecteddbMask == INS || selecteddbMask == IBS)
    {
       treattypes[index++] = new Field("PRO", "Product review");
    }
@@ -850,36 +858,39 @@ function generateDisciplines(selecteddbMask)
    var disciplines = new Array();
    var index = 0;
    // NOT 2 is INS
-  if(selecteddbMask != INS)
+  if(selecteddbMask != INS  )
   {
-    disciplines[index++] = new Field("NO-LIMIT", "Discipline type not available");
+   	if (selecteddbMask != IBS )
+   	{
+        disciplines[index++] = new Field("NO-LIMIT", "Discipline type not available");
+    }
   }
   else
   {
     disciplines[index++] = new Field("NO-LIMIT", "All disciplines");
   }
   // A for INS
-  if(selecteddbMask == INS)
+  if(selecteddbMask == INS || selecteddbMask == IBS)
   {
      disciplines[index++] = new Field("A", "Physics");
   }
   //B
-  if(selecteddbMask == INS)
+  if(selecteddbMask == INS || selecteddbMask == IBS)
   {
     disciplines[index++] = new Field("B", "Electrical/Electronic engineering");
   }
   //C
-  if(selecteddbMask == INS)
+  if(selecteddbMask == INS || selecteddbMask == IBS)
   {
     disciplines[index++] = new Field("C", "Computers/Control engineering");
   }
   //D
-  if(selecteddbMask == INS)
+  if(selecteddbMask == INS || selecteddbMask == IBS)
   {
     disciplines[index++] = new Field("D", "Information technology");
   }
   //E
-  if(selecteddbMask == INS)
+  if(selecteddbMask == INS || selecteddbMask == IBS)
   {
     disciplines[index++] = new Field("E", "Manufacturing and production engineering");
   }
@@ -890,9 +901,13 @@ function generateDisciplines(selecteddbMask)
 
 function calEndYear(selectedDbMask)
 {
-    if (selectedDbMask != CBF)
+    if (selectedDbMask != CBF && selecteddbMask != IBS)
     {
         return 2008;
+    }
+    else if (selecteddbMask == IBS)
+    {
+    	return 1968;
     }
     else // CBF
     {
@@ -983,6 +998,12 @@ function calStartYear(selectedDbMask, sYear)
         var insStartYear = sYear.substr(sYear.indexOf("IST")+3,4);
         dYear = (dYear > insStartYear) ? insStartYear : dYear;
     }
+    
+    if((selectedDbMask != 0) && ((selectedDbMask & IBS) == IBS))
+    {
+        var ibsStartYear = sYear.substr(sYear.indexOf("FSY")+3,4);
+        dYear = (dYear > ibsStartYear) ? ibsStartYear : dYear;
+    }
 
     if((selectedDbMask != 0) && ((selectedDbMask & NTIS) == NTIS))
     {
@@ -1061,6 +1082,11 @@ function calDisplayYear(selectedDbMask, sYear)
       {
           var insStartYear = sYear.substr(sYear.indexOf("ISY")+3,4);
           dYear = (dYear > insStartYear) ? insStartYear : dYear;
+      }
+      if((selectedDbMask != 0) && ((selectedDbMask & IBS) == IBS))
+      {
+          var ibsStartYear = sYear.substr(sYear.indexOf("FSY")+3,4);
+          dYear = (dYear > ibsStartYear) ? ibsStartYear : dYear;
       }
 
       if((selectedDbMask != 0) && ((selectedDbMask & CBF) == CBF))
@@ -1541,7 +1567,9 @@ function clearAlldb()
     }
 
     //PC
-    if((selectedDbMask & INS) != INS && (selectedDbMask & CPX) != CPX &&
+    if((selectedDbMask & INS) != INS && 
+       (selectedDbMask & IBS) != IBS &&
+       (selectedDbMask & CPX) != CPX &&
        (selectedDbMask & GEO) != GEO &&
        (selectedDbMask & PCH) != PCH &&
        (selectedDbMask & US_PATENTS) != US_PATENTS &&
