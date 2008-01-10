@@ -10,42 +10,27 @@ public class SearchForm {
 
 
     public static Map getDiscipline(int selecteddbMask) {
-
         Map disctype = new LinkedHashMap();
-
-        // NOT 2 is DatabaseConfig.INS_MASK
-        if(selecteddbMask != DatabaseConfig.INS_MASK)
+        boolean isDiscipline = false;
+        
+        if(selecteddbMask == DatabaseConfig.INS_MASK  || 
+                selecteddbMask == DatabaseConfig.IBS_MASK )
         {
-             disctype.put("NO-LIMIT", "Discipline type not available");
+            isDiscipline = true;
+            disctype.put("NO-LIMIT", "All disciplines");
         }
         else
         {
-            disctype.put("NO-LIMIT", "All disciplines");
+            disctype.put("NO-LIMIT", "Discipline type not available");
         }
-        // A for DatabaseConfig.INS_MASK
-        if(selecteddbMask == DatabaseConfig.INS_MASK)
+
+        if(isDiscipline)
         {
              disctype.put("A", "Physics");
-        }
-        //B
-        if(selecteddbMask == DatabaseConfig.INS_MASK)
-        {
-            disctype.put("B", "Electrical/Electronic engineering");
-        }
-        //C
-        if(selecteddbMask == DatabaseConfig.INS_MASK)
-        {
-            disctype.put("C", "Computers/Control engineering");
-        }
-        //D
-        if(selecteddbMask == DatabaseConfig.INS_MASK)
-        {
-            disctype.put("D", "Information technology");
-        }
-        //E
-        if(selecteddbMask == DatabaseConfig.INS_MASK)
-        {
-            disctype.put("E", "Manufacturing and production engineering");
+             disctype.put("B", "Electrical/Electronic engineering");
+             disctype.put("C", "Computers/Control engineering");
+             disctype.put("D", "Information technology");
+             disctype.put("E", "Manufacturing and production engineering");
         }
 
         return disctype;
@@ -156,6 +141,7 @@ public class SearchForm {
              sectiontype.put("CL", "Ei Classification code");
         }
         else if(selecteddbMask == DatabaseConfig.INS_MASK ||
+                selecteddbMask == DatabaseConfig.IBS_MASK ||
         		selecteddbMask == DatabaseConfig.GEO_MASK ||
         	    selecteddbMask == DatabaseConfig.INS_MASK + DatabaseConfig.IBF_MASK ||
         	    selecteddbMask == DatabaseConfig.INS_MASK + DatabaseConfig.GEO_MASK ||
@@ -278,6 +264,7 @@ public class SearchForm {
 
         //PA
         if(selecteddbMask == DatabaseConfig.INS_MASK ||
+           selecteddbMask == DatabaseConfig.IBS_MASK ||
            selecteddbMask == DatabaseConfig.INS_MASK + DatabaseConfig.IBF_MASK)
         {
             sectiontype.put("PA","Filing date");
@@ -285,6 +272,7 @@ public class SearchForm {
 
         //PI
         if(selecteddbMask == DatabaseConfig.INS_MASK ||
+           selecteddbMask == DatabaseConfig.IBS_MASK ||
            selecteddbMask == DatabaseConfig.INS_MASK + DatabaseConfig.IBF_MASK)
         {
             sectiontype.put("PI","Patent issue date");
@@ -292,6 +280,7 @@ public class SearchForm {
 
         //PU
         if(selecteddbMask == DatabaseConfig.INS_MASK ||
+           selecteddbMask == DatabaseConfig.IBS_MASK ||
            selecteddbMask == DatabaseConfig.INS_MASK + DatabaseConfig.IBF_MASK)
         {
             sectiontype.put("PU","Country of application");
@@ -299,6 +288,7 @@ public class SearchForm {
 
         //MI
         if(selecteddbMask == DatabaseConfig.INS_MASK ||
+           selecteddbMask == DatabaseConfig.IBS_MASK ||
            selecteddbMask == DatabaseConfig.INS_MASK + DatabaseConfig.IBF_MASK)
         {
             sectiontype.put("MI","Material Identity Number");
@@ -312,6 +302,7 @@ public class SearchForm {
              sectiontype.put("CV", "Ei controlled term");
         }
         else if(selecteddbMask == DatabaseConfig.INS_MASK ||
+                selecteddbMask == DatabaseConfig.IBS_MASK ||
         	    selecteddbMask == DatabaseConfig.INS_MASK + DatabaseConfig.IBF_MASK)
         {
              sectiontype.put("CV","Inspec controlled term");
@@ -571,15 +562,18 @@ public class SearchForm {
 
         //Inspec fields
         //NEW
-        if(selecteddbMask == DatabaseConfig.INS_MASK)
+        if(selecteddbMask == DatabaseConfig.INS_MASK || 
+           selecteddbMask == DatabaseConfig.IBS_MASK)
         {
              treattype.put("NEW", "New development");
         }
-        if(selecteddbMask == DatabaseConfig.INS_MASK)
+        if(selecteddbMask == DatabaseConfig.INS_MASK ||
+           selecteddbMask == DatabaseConfig.IBS_MASK)
         {
              treattype.put("PRA", "Practical");
         }
-        if(selecteddbMask == DatabaseConfig.INS_MASK)
+        if(selecteddbMask == DatabaseConfig.INS_MASK ||
+           selecteddbMask == DatabaseConfig.IBS_MASK)
         {
              treattype.put("PRO", "Product review");
         }
@@ -750,7 +744,8 @@ public class SearchForm {
             doctype.put("DS", "Dissertation");
         }
 
-        if(selecteddbMask == DatabaseConfig.INS_MASK)
+        if(selecteddbMask == DatabaseConfig.INS_MASK ||
+           selecteddbMask == DatabaseConfig.IBS_MASK)
         {
             doctype.put("UP", "Unpublished paper");
         }
@@ -764,7 +759,8 @@ public class SearchForm {
         {
             doctype.put("PA", "Patents");
         }
-        else if(selecteddbMask == DatabaseConfig.INS_MASK)
+        else if(selecteddbMask == DatabaseConfig.INS_MASK ||
+                selecteddbMask == DatabaseConfig.IBS_MASK)
         {
             doctype.put("PA", "Patents (before 1977)");
         }
@@ -783,6 +779,7 @@ public class SearchForm {
 				(selecteddbMask & DatabaseConfig.GEO_MASK) != DatabaseConfig.GEO_MASK &&
                 (selecteddbMask & DatabaseConfig.CPX_MASK) != DatabaseConfig.CPX_MASK &&
                 (selecteddbMask & DatabaseConfig.INS_MASK) != DatabaseConfig.INS_MASK &&
+                (selecteddbMask & DatabaseConfig.IBS_MASK) != DatabaseConfig.IBS_MASK &&
            		(selecteddbMask & DatabaseConfig.CBF_MASK) != DatabaseConfig.CBF_MASK &&
                 (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK &&
                 (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
@@ -973,6 +970,10 @@ public class SearchForm {
 					int paStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("YST") + 3, sYear.indexOf("YST") + 7));
 					dYear = (dYear > paStartYear) ? paStartYear : dYear;
 	            }
+	            if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.IBS_MASK) == DatabaseConfig.IBS_MASK)) {
+					int ibsStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("FST") + 3, sYear.indexOf("FST") + 7));
+					dYear = (dYear > ibsStartYear) ? ibsStartYear : dYear;
+	            }
 	        }
 		}
 		catch(NumberFormatException e)
@@ -988,6 +989,10 @@ public class SearchForm {
     	if(selectedDbMask == DatabaseConfig.CBF_MASK)
         {
     		return DatabaseConfig.CBF_ENDYEAR;
+        }
+    	if(selectedDbMask == DatabaseConfig.IBS_MASK)
+        {
+     		return DatabaseConfig.IBS_ENDYEAR;
         }
         return SearchForm.ENDYEAR;
 
@@ -1088,6 +1093,10 @@ public class SearchForm {
                     int cbfStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("YSY") + 3, sYear.indexOf("YSY") + 7));
                     dYear = (dYear > cbfStartYear) ? cbfStartYear : dYear;
                 }
+                if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.IBS_MASK) == DatabaseConfig.IBS_MASK)) {
+                    int ibsStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("FSY") + 3, sYear.indexOf("FSY") + 7));
+                    dYear = (dYear > ibsStartYear) ? ibsStartYear : dYear;
+                }
                 if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.PCH_MASK) == DatabaseConfig.PCH_MASK)) {
 					int cbfStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("ASY") + 3, sYear.indexOf("ASY") + 7));
 					dYear = (dYear > cbfStartYear) ? cbfStartYear : dYear;
@@ -1130,7 +1139,7 @@ public class SearchForm {
         {
           System.out.println("Problem with BackOffice \"Default Database:\" Settings! Selected DBMask contains values which user does not have permission for.");
         }
-
+        System.out.println("endind dYear "+dYear);
         return dYear;
     }
 
