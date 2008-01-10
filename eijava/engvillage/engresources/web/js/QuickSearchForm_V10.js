@@ -444,8 +444,6 @@ function generateDoctypes(selecteddbMask)
    var doctypes = new Array();
    var index = 0;
 
-   //alert("windows = "+selecteddbMask);
-
   // NO-LIMIT
   if((selecteddbMask & US_PATENTS) 	!= US_PATENTS &&
      (selecteddbMask & REFEREX) 	!= REFEREX &&
@@ -857,63 +855,44 @@ function generateDisciplines(selecteddbMask)
 {
    var disciplines = new Array();
    var index = 0;
+   var isDisciplines = 0;
    // NOT 2 is INS
-  if(selecteddbMask != INS  )
+  if(selecteddbMask == INS  || selecteddbMask == IBS)
   {
-   	if (selecteddbMask != IBS )
-   	{
-        disciplines[index++] = new Field("NO-LIMIT", "Discipline type not available");
-    }
-  }
-  else
-  {
+  	isDisciplines = 1;
     disciplines[index++] = new Field("NO-LIMIT", "All disciplines");
   }
+  else
+  {  
+  	disciplines[index++] = new Field("NO-LIMIT", "Discipline type not available");    
+  }
   // A for INS
-  if(selecteddbMask == INS || selecteddbMask == IBS)
+  if( isDisciplines == 1 )
   {
      disciplines[index++] = new Field("A", "Physics");
+     disciplines[index++] = new Field("B", "Electrical/Electronic engineering");
+     disciplines[index++] = new Field("C", "Computers/Control engineering");
+     disciplines[index++] = new Field("D", "Information technology");
+     disciplines[index++] = new Field("E", "Manufacturing and production engineering");
+     
   }
-  //B
-  if(selecteddbMask == INS || selecteddbMask == IBS)
-  {
-    disciplines[index++] = new Field("B", "Electrical/Electronic engineering");
-  }
-  //C
-  if(selecteddbMask == INS || selecteddbMask == IBS)
-  {
-    disciplines[index++] = new Field("C", "Computers/Control engineering");
-  }
-  //D
-  if(selecteddbMask == INS || selecteddbMask == IBS)
-  {
-    disciplines[index++] = new Field("D", "Information technology");
-  }
-  //E
-  if(selecteddbMask == INS || selecteddbMask == IBS)
-  {
-    disciplines[index++] = new Field("E", "Manufacturing and production engineering");
-  }
-
   return disciplines;
-
 }
 
 function calEndYear(selectedDbMask)
 {
-    if (selectedDbMask != CBF && selecteddbMask != IBS)
-    {
-        return 2008;
-    }
-    else if (selecteddbMask == IBS)
+	if (selecteddbMask == IBS)
     {
     	return 1968;
     }
-    else // CBF
+    else if (selecteddbMask == CBF) 
     {
         return 1969;
     }
-
+    else
+    {
+    	return 2008;
+    }
 }
 
 function generateYear(selectedDbMask, sYear, strYear, eYear, searchform)
@@ -957,6 +936,7 @@ function generateYear(selectedDbMask, sYear, strYear, eYear, searchform)
 // default start year
 function calStartYear(selectedDbMask, sYear)
 {
+
     // 1969 is arbitrary, but in case all else fails?
     // but we will never be able to get above this default value
     // since we will only overwrite this value if we find one less than
@@ -1062,6 +1042,7 @@ function calStartYear(selectedDbMask, sYear)
 // customized selected start year
 function calDisplayYear(selectedDbMask, sYear)
 {
+
     // 2006 since displayed start year could be a very recent value
     // (i.e. An account could have 2000-2006 as their default range)
     // We set this as high as possible and then compare to
