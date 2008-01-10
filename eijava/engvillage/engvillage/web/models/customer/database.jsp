@@ -114,7 +114,7 @@
         // Local Databases come first
 
         // - - - -BIBLIOGRAPHIC DATABASES- - - -
-      	int[] dbMasks = {1, 2, 4, 32768, 16384, 8192, 262144};
+      	int[] dbMasks = {1, 2, 4, 32768, 16384, 8192, 262144, 1048576};
         for(int x=0; x < dbMasks.length ; x++)
         {
             if((userMask & dbMasks[x]) == dbMasks[x])
