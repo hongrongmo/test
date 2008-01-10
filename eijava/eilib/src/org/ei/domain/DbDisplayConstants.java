@@ -42,6 +42,15 @@ public class DbDisplayConstants
                 "<a href=\"\"><img id=\"cbfOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(1); return false;\"/></a>",
     			"<a href=\"\"><img id=\"cbfOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(1); return false;\"/></a>");
 
+    public static final DbDisplayConstants IBS =
+        new DbDisplayConstants(DatabaseConfig.IBS_MASK,
+                "Inspec Archive",
+                "<a class=\"SmBlueTableText\">Inspec Archive</a></br><a class=\"SmBlackText\">The Inspec Archive is the digital successor to the entire...</a></br><img  src=\"/engresources/images/s.gif\" border=\"0\" width=\"1\" height=\"6\" />",
+                "<a class=\"SmBlueTableText\">Inspec Archive</a></br><a class=\"SmBlackText\">The Inspec Archive is the digital successor to the entire collection of the Science Abstracts Journals. The Archive covers over 873,000 historical abstract records from 1898 to 1968 in the fields of physics, electrical engineering, electronics computing and control engineering. </a></br><img  src=\"/engresources/images/s.gif\" border=\"0\" width=\"1\" height=\"6\" />",
+                "<a class=\"SmBlueTableText\">Inspec Archive</a></br><a class=\"SmBlackText\">The Inspec Archive is the digital successor to the entire collection of the Science Abstracts Journals. The Archive covers over 873,000 historical abstract records from 1898 to 1968 in the fields of physics, electrical engineering, electronics computing and control engineering. </a></br><img  src=\"/engresources/images/s.gif\" border=\"0\" width=\"1\" height=\"6\" />",
+                "<a href=\"\"><img id=\"ibsOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(1048576); return false;\"/></a>",
+    			"<a href=\"\"><img id=\"ibsOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(1048576); return false;\"/></a>");
+
 
     public static final DbDisplayConstants INS =
         new DbDisplayConstants(DatabaseConfig.INS_MASK,
@@ -184,6 +193,7 @@ public class DbDisplayConstants
         allConstants.put("eup", EUP);
        // allConstants.put("ref", REF);
         allConstants.put("pag", PAG);
+        allConstants.put("ibs", IBS);
     }
 
     private DbDisplayConstants(int dbmask,
