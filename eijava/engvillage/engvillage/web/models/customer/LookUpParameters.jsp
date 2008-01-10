@@ -35,6 +35,7 @@
     	int REF = 65536;
     	int PAG = 131072;
     	int CBF = 262144;
+    	int IBS = 1048576;
    
          
 	String searchtype = null;
@@ -160,7 +161,8 @@
 		<FIELD SHORTNAME="CVS" DISPLAYNAME="Ei Controlled Term"/>
 <%
 	}
-	else if(selectedDbMask == INSPEC)
+	else if(selectedDbMask == INSPEC ||
+		selectedDbMask == IBS)
 	{
 %>
 		<FIELD SHORTNAME="CVS" DISPLAYNAME="Inspec Controlled Term"/>		   
@@ -249,6 +251,7 @@
    	if (((selectedDbMask & CPX) == CPX) || 
    	    ((selectedDbMask & CBF) == CBF) || 
    	    ((selectedDbMask & INSPEC) == INSPEC) || 
+   	    ((selectedDbMask & IBS) == IBS) ||
    	    ((selectedDbMask & GEO) == GEO) || 
    	    ((selectedDbMask & PCH) == PCH) || 
    	    ((selectedDbMask & CHM) == CHM) || 
@@ -274,6 +277,7 @@
       	if (((selectedDbMask & CPX) == CPX) || 
       	    ((selectedDbMask & CBF) == CBF) || 
       	    ((selectedDbMask & INSPEC) == INSPEC) || 
+      	    ((selectedDbMask & IBS) == IBS) ||
       	    ((selectedDbMask & GEO) == GEO) || 
       	    ((selectedDbMask & PCH) == PCH) || 
       	    ((selectedDbMask & CHM) == CHM) || 
@@ -294,7 +298,8 @@
 	    ((selectedDbMask & CHM) == CHM) || 
 	    ((selectedDbMask & ELT) == ELT) || 
 	    ((selectedDbMask & CBN) == CBN) || 
-	    ((selectedDbMask & INSPEC) == INSPEC))
+	    ((selectedDbMask & INSPEC) == INSPEC) ||
+	    ((selectedDbMask & IBS) == IBS))
 	{
 %>
          	<FIELD SHORTNAME="ST" DISPLAYNAME="Serial title"/>
@@ -308,7 +313,8 @@
      	    ((selectedDbMask & CHM) == CHM) || 
      	    ((selectedDbMask & ELT) == ELT) || 
      	    ((selectedDbMask & CBN) == CBN) || 
-     	    ((selectedDbMask & INSPEC) == INSPEC))
+     	    ((selectedDbMask & INSPEC) == INSPEC) ||
+     	    ((selectedDbMask & IBS) == IBS))
      	{
 %>
        		<FIELD SHORTNAME="DT" DISPLAYNAME="Document type"/>
@@ -319,21 +325,22 @@
 	    ((selectedDbMask & CBF) == CBF) || 
 	    ((selectedDbMask & PCH) == PCH) || 
 	    ((selectedDbMask & ELT) == ELT) || 
-	    ((selectedDbMask & INSPEC) == INSPEC))
+	    ((selectedDbMask & INSPEC) == INSPEC) ||
+	    ((selectedDbMask & IBS) == IBS))
 	{
 %>    
          <FIELD SHORTNAME="PN" DISPLAYNAME="Publisher"/>
 <%	}
       
      	//TR
-     	if (((selectedDbMask & CPX) == CPX) ||  ((selectedDbMask & INSPEC) == INSPEC))
+     	if (((selectedDbMask & CPX) == CPX) ||  ((selectedDbMask & INSPEC) == INSPEC) || ((selectedDbMask & IBS) == IBS))
      	{
 %>
       		<FIELD SHORTNAME="TR" DISPLAYNAME="Treatment type"/>
 <%   	}
      
      	//DSC
-     	if ((selectedDbMask & INSPEC) == INSPEC)
+     	if (((selectedDbMask & INSPEC) == INSPEC) || ((selectedDbMask & IBS) == IBS))
      	{
 %> 
       		<FIELD SHORTNAME="DI" DISPLAYNAME="Discipline"/>
