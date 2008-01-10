@@ -394,6 +394,7 @@
                             	or boolean(bit:hasBitSet($USERMASK,16384))
                             	or boolean(bit:hasBitSet($USERMASK,32768))
                             	or boolean(bit:hasBitSet($USERMASK,262144))
+                            	or boolean(bit:hasBitSet($USERMASK,1048576))
                             	or boolean(bit:hasBitSet($USERMASK,8192)))">
                               <tr>
                                 <td>
