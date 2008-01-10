@@ -218,7 +218,7 @@
 
             <A CLASS="LgBlueLink" HREF="{$HREF-PREFIX}/controller/servlet/Controller?{$ABSTRACT-LINK-CID}&amp;{$HREF-QUERY}&amp;{$SYSTEM_PASSTHROUGH}&amp;DOCINDEX={$INDEX}&amp;PAGEINDEX={$CURRENT-PAGE}&amp;format={$ABSTRACT-CID}">Abstract</A> &#160;
             <A CLASS="MedBlackText">-</A> &#160;
-            <A CLASS="LgBlueLink" HREF="{$HREF-PREFIX}/controller/servlet/Controller?{$DETAILED-LINK-CID}&amp;{$HREF-QUERY}&amp;{$SYSTEM_PASSTHROUGH}&amp;DOCINDEX={$INDEX}&amp;PAGEINDEX={$CURRENT-PAGE}&amp;format={$DETAILED-CID}">Detailed Record</A>
+            <A CLASS="LgBlueLink" HREF="{$HREF-PREFIX}/controller/servlet/Controller?{$DETAILED-LINK-CID}&amp;{$HREF-QUERY}&amp;{$SYSTEM_PASSTHROUGH}&amp;DOCINDEX={$INDEX}&amp;PAGEINDEX={$CURRENT-PAGE}&amp;format={$DETAILED-CID}">Detailed</A>
           </td>
         </tr>
         <tr>
