@@ -33,6 +33,7 @@ public class DatabaseDisplayHelper {
         maskConversion.put("32768","upa");
         maskConversion.put("131072","pag");
         maskConversion.put("65536","ref"); 
+        maskConversion.put("1048576","ibs");
         
         dbConversion.put("cpx","1");
         dbConversion.put("ins","2");
@@ -48,6 +49,7 @@ public class DatabaseDisplayHelper {
         dbConversion.put("pag", "131072");       
         dbConversion.put("upa", "32768");
         dbConversion.put("ref", "65536");
+        dbConversion.put("ibs", "1048576");
 
    
     }
@@ -129,7 +131,7 @@ public class DatabaseDisplayHelper {
 		{		    
 		    jsWriter(DatabaseConfig.CBF_MASK);
 		    html.append(htmlWriter(DatabaseConfig.CBF_MASK));
-		}		
+		}	
 		
 		if((mask & DatabaseConfig.ELT_MASK) == DatabaseConfig.ELT_MASK)
 		{
@@ -168,6 +170,12 @@ public class DatabaseDisplayHelper {
 		{
 		    jsWriter(DatabaseConfig.INS_MASK);
 		    html.append(htmlWriter(DatabaseConfig.INS_MASK));
+		}
+		if((mask & DatabaseConfig.IBS_MASK) == DatabaseConfig.IBS_MASK &&
+		        (mask & DatabaseConfig.INS_MASK) != DatabaseConfig.INS_MASK )
+		{		    
+		    jsWriter(DatabaseConfig.IBS_MASK);
+		    html.append(htmlWriter(DatabaseConfig.IBS_MASK));
 		}
 		if((mask & DatabaseConfig.NTI_MASK) == DatabaseConfig.NTI_MASK)
 		{
