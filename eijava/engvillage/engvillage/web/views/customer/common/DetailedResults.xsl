@@ -186,7 +186,7 @@
         <xsl:with-param name="FIELD"><xsl:value-of select="name(.)"/></xsl:with-param>
       </xsl:call-template>
       <span CLASS="SmBlackText">
-      <xsl:value-of select="crlkup:getName(normalize-space(text()))" disable-output-escaping="yes"/></span>
+      <xsl:value-of select="hlight:addMarkup(crlkup:getName(normalize-space(text())))" disable-output-escaping="yes"/></span>
       <xsl:if test="not(position()=last())">
         <A CLASS="SmBlackText">&#160; - &#160;</A>
       </xsl:if>
