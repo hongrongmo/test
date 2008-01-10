@@ -30,7 +30,8 @@ public class Displayer {
 
   // list of all whole masks which can be displayed on the page
   private static int[] dbMasks = new int[] { DatabaseConfig.CPX_MASK,
-      DatabaseConfig.INS_MASK, DatabaseConfig.NTI_MASK,
+      DatabaseConfig.INS_MASK, DatabaseConfig.IBS_MASK,
+      DatabaseConfig.NTI_MASK,
       DatabaseConfig.GEO_MASK, DatabaseConfig.EUP_MASK,
       DatabaseConfig.UPA_MASK, DatabaseConfig.PAG_MASK,
       DatabaseConfig.CBF_MASK, DatabaseConfig.CHM_MASK,
