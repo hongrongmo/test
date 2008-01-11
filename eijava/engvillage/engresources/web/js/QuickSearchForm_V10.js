@@ -863,8 +863,8 @@ function generateDisciplines(selecteddbMask)
     disciplines[index++] = new Field("NO-LIMIT", "All disciplines");
   }
   else
-  {  
-  	disciplines[index++] = new Field("NO-LIMIT", "Discipline type not available");    
+  {
+  	disciplines[index++] = new Field("NO-LIMIT", "Discipline type not available");
   }
   // A for INS
   if( isDisciplines == 1 )
@@ -874,7 +874,7 @@ function generateDisciplines(selecteddbMask)
      disciplines[index++] = new Field("C", "Computers/Control engineering");
      disciplines[index++] = new Field("D", "Information technology");
      disciplines[index++] = new Field("E", "Manufacturing and production engineering");
-     
+
   }
   return disciplines;
 }
@@ -885,7 +885,7 @@ function calEndYear(selectedDbMask)
     {
     	return 1968;
     }
-    else if (selecteddbMask == CBF) 
+    else if (selecteddbMask == CBF)
     {
         return 1969;
     }
@@ -978,10 +978,10 @@ function calStartYear(selectedDbMask, sYear)
         var insStartYear = sYear.substr(sYear.indexOf("IST")+3,4);
         dYear = (dYear > insStartYear) ? insStartYear : dYear;
     }
-    
+
     if((selectedDbMask != 0) && ((selectedDbMask & IBS) == IBS))
     {
-        var ibsStartYear = sYear.substr(sYear.indexOf("FSY")+3,4);
+        var ibsStartYear = sYear.substr(sYear.indexOf("FST")+3,4);
         dYear = (dYear > ibsStartYear) ? ibsStartYear : dYear;
     }
 
@@ -1548,7 +1548,7 @@ function clearAlldb()
     }
 
     //PC
-    if((selectedDbMask & INS) != INS && 
+    if((selectedDbMask & INS) != INS &&
        (selectedDbMask & IBS) != IBS &&
        (selectedDbMask & CPX) != CPX &&
        (selectedDbMask & GEO) != GEO &&
