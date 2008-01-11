@@ -881,11 +881,11 @@ function generateDisciplines(selecteddbMask)
 
 function calEndYear(selectedDbMask)
 {
-	if (selecteddbMask == IBS)
+	if (selectedDbMask == IBS)
     {
     	return 1968;
     }
-    else if (selecteddbMask == CBF)
+    else if (selectedDbMask == CBF)
     {
         return 1969;
     }
