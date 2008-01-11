@@ -1,6 +1,6 @@
 var NTIS = 4;
 var INSPEC = 2;
-var INS_BACKFILE = 1048576;
+var INSPEC_BACKFILE = 1048576;
 var CPX = 1;
 var C84 = 33;
 var GEO = 8192;
