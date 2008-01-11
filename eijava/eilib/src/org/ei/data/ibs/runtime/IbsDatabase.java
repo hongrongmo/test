@@ -86,7 +86,8 @@ public class IbsDatabase extends Database
     }
     public boolean isBackfile()
     {
-        return true;
+        // JM This is not the INS Backfile - it is a standalone database
+        return false;
     }
 
     public String getShortName()
