@@ -121,6 +121,7 @@ public class ResultNavigator
         boolean m_ntis = false;
         boolean m_geobase = false;
         boolean m_inspec = false;
+        boolean m_inspecarchive = false;
         boolean m_compendex = false;
         boolean m_uspatents = false;
         boolean m_eupatents = false;
@@ -133,6 +134,7 @@ public class ResultNavigator
 
             m_compendex = mods.contains(EiModifier.MOD_CPX) || mods.contains(EiModifier.MOD_CBF);
             m_inspec = mods.contains(EiModifier.MOD_INS);
+            m_inspecarchive = mods.contains(EiModifier.MOD_IBS);
             m_ntis = mods.contains(EiModifier.MOD_NTI);
             m_geobase = mods.contains(EiModifier.MOD_GEO);
             m_encompasspat = mods.contains(EiModifier.MOD_EPT);
@@ -161,13 +163,13 @@ public class ResultNavigator
             anav.setDisplayname("Inventor");
           }
           //else if((mask :: cpx || mask :: cbf || mask :: ins || mask :: nti || mask :: geo || mask :: chm || mask :: pag || mask :: pch || mask :: elt) && (mask !: cbn || mask !: upa || mask !: eup || mask !: ept))
-          else if((m_compendex || m_inspec || m_ntis || m_geobase || m_encompasslit || m_paperchem || m_chimica || m_books) && !m_cbnb && !(m_uspatents || m_eupatents || m_encompasspat))
+          else if((m_compendex || m_inspec || m_inspecarchive || m_ntis || m_geobase || m_encompasslit || m_paperchem || m_chimica || m_books) && !m_cbnb && !(m_uspatents || m_eupatents || m_encompasspat))
           {
             anav.setDisplayname("Author");
           }
           // Author/Inventor if database combination doesn't contain CBNB AND does contain A&I database(s) AND also a patent database
           //else if((mask :: cpx || mask :: cbf || mask :: ins || mask :: nti || mask :: geo || mask :: chm || mask :: pag || mask :: pch || mask :: elt) && (mask !: cbn) && (mask :: upa || mask :: eup || mask :: ept))
-          else if((m_compendex || m_inspec || m_ntis || m_geobase || m_encompasslit || m_paperchem || m_chimica || m_books) && !m_cbnb && (m_uspatents || m_eupatents || m_encompasspat))
+          else if((m_compendex || m_inspec || m_ntis || m_inspecarchive || m_geobase || m_encompasslit || m_paperchem || m_chimica || m_books) && !m_cbnb && (m_uspatents || m_eupatents || m_encompasspat))
           {
             anav.setDisplayname("Author/Inventor");
           }
@@ -194,13 +196,13 @@ public class ResultNavigator
             anav.setDisplayname("Assignee");
           }
           //else if((mask :: cpx || mask :: cbf || mask :: ins || mask :: nti || mask :: geo || mask :: chm || mask :: pag || mask :: pch || mask :: elt) && (mask !: cbn || mask !: upa || mask !: eup || mask !: ept))
-          else if((m_compendex || m_inspec || m_ntis || m_geobase || m_encompasslit || m_paperchem || m_chimica || m_books) && !m_cbnb && !(m_uspatents || m_eupatents || m_encompasspat))
+          else if((m_compendex || m_inspec || m_ntis || m_geobase || m_encompasslit || m_paperchem || m_chimica || m_books) && !m_cbnb && !(m_inspecarchive || m_uspatents || m_eupatents || m_encompasspat))
           {
             anav.setDisplayname("Author affiliation");
           }
           // Author/Inventor if database combination doesn't contain CBNB AND does contain A&I database(s) AND also a patent database
           //else if((mask :: cpx || mask :: cbf || mask :: ins || mask :: nti || mask :: geo || mask :: chm || mask :: pag || mask :: pch || mask :: elt) && (mask !: cbn) && (mask :: upa || mask :: eup || mask :: ept))
-          else if((m_compendex || m_inspec || m_ntis || m_geobase || m_encompasslit || m_paperchem || m_chimica || m_books) && !m_cbnb && (m_uspatents || m_eupatents || m_encompasspat))
+          else if((m_compendex || m_inspec || m_ntis || m_geobase || m_encompasslit || m_paperchem || m_chimica || m_books) && !m_cbnb && (m_inspecarchive || m_uspatents || m_eupatents || m_encompasspat))
           {
             anav.setDisplayname("Author affiliation/Assignee");
           }
@@ -222,7 +224,7 @@ public class ResultNavigator
           {
             anav.setDisplayname("Controlled vocabulary");
           }
-          else if((m_compendex || m_inspec || m_ntis || m_geobase || m_cbnb || m_chimica || m_paperchem || m_encompasslit || m_encompasspat) && !(m_uspatents || m_eupatents || m_books ))
+          else if((m_compendex || m_inspec || m_inspecarchive || m_ntis || m_geobase || m_cbnb || m_chimica || m_paperchem || m_encompasslit || m_encompasspat) && !(m_uspatents || m_eupatents || m_books ))
           {
             anav.setDisplayname("Controlled terms");
           }
@@ -258,7 +260,7 @@ public class ResultNavigator
             }
           }
           //if((mask :: cpx || mask :: cbf || mask :: ins || mask :: nti || mask :: geo || mask :: cbn || mask :: chm || mask :: pch || mask :: elt) && (mask !: upa || mask !: eup || mask !: pag || mask !: ept))
-          else if((m_compendex || m_inspec || m_ntis || m_geobase || m_cbnb || m_chimica || m_paperchem || m_encompasslit) && !(m_uspatents || m_eupatents || m_books || m_encompasspat))
+          else if((m_compendex || m_inspec || m_inspecarchive || m_ntis || m_geobase || m_cbnb || m_chimica || m_paperchem || m_encompasslit) && !(m_uspatents || m_eupatents || m_books || m_encompasspat))
           {
             anav.setDisplayname("Serial title");
           }
@@ -273,7 +275,7 @@ public class ResultNavigator
         {
           // Publisher
           //if((mask :: cpx || mask :: cbf || mask :: ins || mask :: cbn || mask :: chm || mask :: pag || mask :: pch || mask :: elt) && (mask !: nti || mask !: geo || mask !: upa || mask !: eup || mask !: ept))
-          if((m_compendex || m_inspec || m_ntis || m_cbnb || m_chimica || m_books || m_paperchem || m_encompasslit) && !(m_ntis || m_geobase || m_uspatents || m_eupatents || m_encompasspat))
+          if((m_compendex || m_inspec || m_inspecarchive || m_ntis || m_cbnb || m_chimica || m_books || m_paperchem || m_encompasslit) && !(m_ntis || m_geobase || m_uspatents || m_eupatents || m_encompasspat))
           {
             anav.setDisplayname("Publisher");
           }
@@ -288,7 +290,7 @@ public class ResultNavigator
         {
           // Language
           //if((mask :: cpx || mask :: cbf || mask :: ins || mask :: nti || mask :: geo || mask :: cbn || mask :: chm || mask :: pch || mask :: elt || mask :: ept) && (mask !: upa || mask !: eup || mask !: pag))
-          if((m_compendex || m_inspec || m_ntis || m_geobase || m_cbnb || m_chimica || m_paperchem || m_encompasslit || m_encompasspat) && !(m_uspatents || m_eupatents || m_books))
+          if((m_compendex || m_inspec || m_inspecarchive || m_ntis || m_geobase || m_cbnb || m_chimica || m_paperchem || m_encompasslit || m_encompasspat) && !(m_uspatents || m_eupatents || m_books))
           {
             anav.setDisplayname("Language");
           }
@@ -332,7 +334,7 @@ public class ResultNavigator
             anav.setDisplayname("Industrial sector code");
           }
           //else if((mask :: cpx  || mask :: cbf || mask :: ins  || mask :: nti  ||  mask :: geo || mask :: elt) && (mask !: cbn || mask !: upa || mask !: eup || mask !: pag || mask !: chm || mask !: pch || mask !: ept))
-          else if((m_compendex || m_inspec || m_ntis || m_geobase || m_encompasslit) && !(m_cbnb || m_uspatents || m_eupatents || m_books || m_chimica || m_paperchem || m_encompasspat))
+          else if((m_compendex || m_inspec || m_inspecarchive || m_ntis || m_geobase || m_encompasslit) && !(m_cbnb || m_uspatents || m_eupatents || m_books || m_chimica || m_paperchem || m_encompasspat))
           {
             anav.setDisplayname("Classification code");
           }
@@ -354,7 +356,7 @@ public class ResultNavigator
           }
           // There is some document type data for EnCompassPAT, but it is only present for US patents.  Mary doesn't think DT navigatior should be displayed for EPT.
           //if((mask :: cpx || mask :: cbf || mask :: ins || mask :: nti || mask :: geo || mask :: cbn || mask :: upa || mask :: eup  || mask :: chm || mask :: pch || mask :: elt) && (mask !: pag || mask !: ept))
-          else if((m_compendex || m_inspec || m_ntis || m_geobase || m_cbnb || m_uspatents || m_eupatents  || m_chimica || m_paperchem || m_encompasslit) && !(m_books || m_encompasspat))
+          else if((m_compendex || m_inspec || m_inspecarchive || m_ntis || m_geobase || m_cbnb || m_uspatents || m_eupatents  || m_chimica || m_paperchem || m_encompasslit) && !(m_books || m_encompasspat))
           {
             anav.setDisplayname("Document type");
           }
@@ -406,7 +408,7 @@ public class ResultNavigator
           }
           // No longer used for Qualifier for EncLit and EncPat - now uses PUC as Role
           //else if((mask :: chm || mask :: pch) && (mask !: cpx || mask !: cbf || mask !: ins || mask !: nti || mask !: geo || mask !: cbn || mask !: upa || mask !: eup || mask !: pag || mask !: elt || mask !: ept))
-          else if((m_chimica || m_paperchem) && !(m_compendex || m_inspec || m_ntis || m_geobase || m_cbnb || m_uspatents || m_eupatents || m_books || m_encompasslit || m_encompasspat))
+          else if((m_chimica || m_paperchem || m_inspecarchive) && !(m_compendex || m_inspec || m_ntis || m_geobase || m_cbnb || m_uspatents || m_eupatents || m_books || m_encompasslit || m_encompasspat))
           {
             //FL (Uncontrolled Terms, FL)
             anav.setDisplayname("Uncontrolled terms");
@@ -432,7 +434,7 @@ public class ResultNavigator
             fastnavigators.add(anav);
           }
           //else if((mask :: cpx || mask :: cbf || mask :: ins || mask :: nti || mask :: geo || mask :: cbn || mask :: upa || mask :: eup || mask :: elt || mask :: pch) & (mask !: pag || mask !: ept))
-          else if((m_compendex || m_inspec || m_ntis || m_geobase || m_cbnb || m_chimica || m_uspatents || m_eupatents || m_encompasslit || m_paperchem) && !(m_books || m_encompasspat))
+          else if((m_compendex || m_inspec || m_ntis || m_geobase || m_cbnb || m_chimica || m_uspatents || m_eupatents || m_encompasslit || m_paperchem) && !(m_inspecarchive || m_books || m_encompasspat))
           {
             anav.setDisplayname("Country");
           }
@@ -486,7 +488,7 @@ public class ResultNavigator
             fastnavigators.add(pecnav);
           }
           // else if(mask == elt || mask == ept || mask == elt + ept)
-          else if((m_encompasslit || m_encompasspat) && !(m_compendex ||  m_inspec || m_ntis || m_geobase || m_cbnb || m_chimica || m_paperchem || m_uspatents || m_eupatents || m_books))
+          else if((m_encompasslit || m_encompasspat) && !(m_compendex ||  m_inspec || m_inspecarchive || m_ntis || m_geobase || m_cbnb || m_chimica || m_paperchem || m_uspatents || m_eupatents || m_books))
           {
             fastnavigators.remove(anav);
 
@@ -518,7 +520,7 @@ public class ResultNavigator
             anav.setDisplayname("US classification");
           }
           // else if(mask == elt || mask == ept || mask == elt + ept)
-          else if((m_encompasslit || m_encompasspat) && !(m_compendex ||  m_inspec || m_ntis || m_geobase || m_cbnb || m_chimica || m_paperchem || m_uspatents || m_eupatents || m_books))
+          else if((m_encompasslit || m_encompasspat) && !(m_compendex ||  m_inspec || m_inspecarchive || m_ntis || m_geobase || m_cbnb || m_chimica || m_paperchem || m_uspatents || m_eupatents || m_books))
           {
             fastnavigators.remove(anav);
 
@@ -933,7 +935,7 @@ public class ResultNavigator
                 {
                     //System.out.println(" skipped NULL Fast INavigator ==> " + navigatorname);
                 }
-            } // while
+            } // whilem
 
         } //  if (navs != null)
 
