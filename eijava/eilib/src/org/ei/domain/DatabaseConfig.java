@@ -46,6 +46,8 @@ public final class DatabaseConfig
     public static final String IBS_PREF = "ibs";
     public static final String EPT_PREF = "ept";
     public static final int CBF_ENDYEAR  = 1969;
+    public static final int IBS_ENDYEAR  = 1969;
+
 
     protected static Log log = LogFactory.getLog(DatabaseConfig.class);
     private static Hashtable dtName = new Hashtable();

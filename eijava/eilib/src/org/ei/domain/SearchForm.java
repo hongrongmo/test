@@ -12,8 +12,8 @@ public class SearchForm {
     public static Map getDiscipline(int selecteddbMask) {
         Map disctype = new LinkedHashMap();
         boolean isDiscipline = false;
-        
-        if(selecteddbMask == DatabaseConfig.INS_MASK  || 
+
+        if(selecteddbMask == DatabaseConfig.INS_MASK  ||
                 selecteddbMask == DatabaseConfig.IBS_MASK )
         {
             isDiscipline = true;
@@ -93,7 +93,8 @@ public class SearchForm {
 
         //AF ---  only cpx,ins,ntis
         if((selecteddbMask & DatabaseConfig.CBN_MASK)!= DatabaseConfig.CBN_MASK &&
-           (selecteddbMask & DatabaseConfig.PAG_MASK)!= DatabaseConfig.PAG_MASK)
+           (selecteddbMask & DatabaseConfig.PAG_MASK)!= DatabaseConfig.PAG_MASK &&
+           (selecteddbMask & DatabaseConfig.IBS_MASK)!= DatabaseConfig.IBS_MASK)
         {
 
 			if((selecteddbMask & DatabaseConfig.UPA_MASK) != DatabaseConfig.UPA_MASK &&
@@ -166,7 +167,8 @@ public class SearchForm {
            (selecteddbMask & DatabaseConfig.REF_MASK) != DatabaseConfig.REF_MASK &&
            (selecteddbMask & DatabaseConfig.UPA_MASK) != DatabaseConfig.UPA_MASK &&
            (selecteddbMask & DatabaseConfig.UPT_MASK) != DatabaseConfig.UPT_MASK &&
-           (selecteddbMask & DatabaseConfig.USPTO_MASK) != DatabaseConfig.USPTO_MASK)
+           (selecteddbMask & DatabaseConfig.USPTO_MASK) != DatabaseConfig.USPTO_MASK &&
+           (selecteddbMask & DatabaseConfig.IBS_MASK)!= DatabaseConfig.IBS_MASK)
         {
             sectiontype.put("CN", "CODEN");
         }
@@ -210,7 +212,8 @@ public class SearchForm {
 		   (selecteddbMask & DatabaseConfig.REF_MASK) != DatabaseConfig.REF_MASK &&
 		   (selecteddbMask & DatabaseConfig.UPA_MASK) != DatabaseConfig.UPA_MASK &&
 		   (selecteddbMask & DatabaseConfig.UPT_MASK) != DatabaseConfig.UPT_MASK &&
-           (selecteddbMask & DatabaseConfig.USPTO_MASK) != DatabaseConfig.USPTO_MASK)
+           (selecteddbMask & DatabaseConfig.USPTO_MASK) != DatabaseConfig.USPTO_MASK &&
+           (selecteddbMask & DatabaseConfig.IBS_MASK)!= DatabaseConfig.IBS_MASK)
         {
             sectiontype.put("SN","ISSN");
         }
@@ -230,7 +233,8 @@ public class SearchForm {
            (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK &&
            (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
            (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
-           (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK)
+           (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
+           (selecteddbMask & DatabaseConfig.IBS_MASK)!= DatabaseConfig.IBS_MASK)
         {
             sectiontype.put("PN","Publisher");
         }
@@ -264,7 +268,6 @@ public class SearchForm {
 
         //PA
         if(selecteddbMask == DatabaseConfig.INS_MASK ||
-           selecteddbMask == DatabaseConfig.IBS_MASK ||
            selecteddbMask == DatabaseConfig.INS_MASK + DatabaseConfig.IBF_MASK)
         {
             sectiontype.put("PA","Filing date");
@@ -272,7 +275,6 @@ public class SearchForm {
 
         //PI
         if(selecteddbMask == DatabaseConfig.INS_MASK ||
-           selecteddbMask == DatabaseConfig.IBS_MASK ||
            selecteddbMask == DatabaseConfig.INS_MASK + DatabaseConfig.IBF_MASK)
         {
             sectiontype.put("PI","Patent issue date");
@@ -280,7 +282,6 @@ public class SearchForm {
 
         //PU
         if(selecteddbMask == DatabaseConfig.INS_MASK ||
-           selecteddbMask == DatabaseConfig.IBS_MASK ||
            selecteddbMask == DatabaseConfig.INS_MASK + DatabaseConfig.IBF_MASK)
         {
             sectiontype.put("PU","Country of application");
@@ -288,7 +289,6 @@ public class SearchForm {
 
         //MI
         if(selecteddbMask == DatabaseConfig.INS_MASK ||
-           selecteddbMask == DatabaseConfig.IBS_MASK ||
            selecteddbMask == DatabaseConfig.INS_MASK + DatabaseConfig.IBF_MASK)
         {
             sectiontype.put("MI","Material Identity Number");
@@ -337,7 +337,8 @@ public class SearchForm {
            (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK &&
            (selecteddbMask & DatabaseConfig.ELT_MASK) != DatabaseConfig.ELT_MASK &&
            (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
-           (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK)
+           (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
+           (selecteddbMask & DatabaseConfig.IBS_MASK) != DatabaseConfig.IBS_MASK)
         {
             sectiontype.put("CO","Country of origin");
         }
@@ -449,7 +450,8 @@ public class SearchForm {
 		   (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
 		   (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK &&
            (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
-           (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK)
+           (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK &&
+           (selecteddbMask & DatabaseConfig.IBS_MASK) != DatabaseConfig.IBS_MASK)
         {
              treattype.put("NO-LIMIT", "All treatment types");
         }
@@ -469,7 +471,8 @@ public class SearchForm {
 		   (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
 		   (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK &&
            (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
-           (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK)
+           (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK &&
+           (selecteddbMask & DatabaseConfig.IBS_MASK) != DatabaseConfig.IBS_MASK)
         {
              treattype.put("APP", "Applications");
         }
@@ -485,7 +488,8 @@ public class SearchForm {
 		   (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
 		   (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK &&
            (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
-           (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK)
+           (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK &&
+           (selecteddbMask & DatabaseConfig.IBS_MASK) != DatabaseConfig.IBS_MASK)
         {
              treattype.put("BIO", "Biographical");
         }
@@ -501,7 +505,8 @@ public class SearchForm {
 		   (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
 		   (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK &&
            (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
-           (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK)
+           (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK &&
+           (selecteddbMask & DatabaseConfig.IBS_MASK) != DatabaseConfig.IBS_MASK)
         {
              treattype.put("ECO", "Economic");
         }
@@ -517,7 +522,8 @@ public class SearchForm {
 		   (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
 		   (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK &&
            (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
-           (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK)
+           (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK &&
+           (selecteddbMask & DatabaseConfig.IBS_MASK) != DatabaseConfig.IBS_MASK)
         {
              treattype.put("EXP", "Experimental");
         }
@@ -533,7 +539,8 @@ public class SearchForm {
 		   (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
 		   (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK &&
            (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
-           (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK)
+           (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK &&
+           (selecteddbMask & DatabaseConfig.IBS_MASK) != DatabaseConfig.IBS_MASK)
         {
              treattype.put("GEN", "General review");
         }
@@ -562,18 +569,15 @@ public class SearchForm {
 
         //Inspec fields
         //NEW
-        if(selecteddbMask == DatabaseConfig.INS_MASK || 
-           selecteddbMask == DatabaseConfig.IBS_MASK)
+        if(selecteddbMask == DatabaseConfig.INS_MASK)
         {
              treattype.put("NEW", "New development");
         }
-        if(selecteddbMask == DatabaseConfig.INS_MASK ||
-           selecteddbMask == DatabaseConfig.IBS_MASK)
+        if(selecteddbMask == DatabaseConfig.INS_MASK)
         {
              treattype.put("PRA", "Practical");
         }
-        if(selecteddbMask == DatabaseConfig.INS_MASK ||
-           selecteddbMask == DatabaseConfig.IBS_MASK)
+        if(selecteddbMask == DatabaseConfig.INS_MASK)
         {
              treattype.put("PRO", "Product review");
         }
@@ -588,7 +592,8 @@ public class SearchForm {
 		   (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
 		   (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK &&
            (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
-           (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK)
+           (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK &&
+           (selecteddbMask & DatabaseConfig.IBS_MASK) != DatabaseConfig.IBS_MASK)
         {
              treattype.put("THR", "Theoretical");
         }
@@ -755,12 +760,12 @@ public class SearchForm {
             doctype.put("PA", "Patents (before 1970)");
         }
         else if(selecteddbMask == DatabaseConfig.CBF_MASK ||
-        		selecteddbMask == DatabaseConfig.PCH_MASK )
+        		selecteddbMask == DatabaseConfig.PCH_MASK ||
+        		selecteddbMask == DatabaseConfig.IBS_MASK)
         {
             doctype.put("PA", "Patents");
         }
-        else if(selecteddbMask == DatabaseConfig.INS_MASK ||
-                selecteddbMask == DatabaseConfig.IBS_MASK)
+        else if(selecteddbMask == DatabaseConfig.INS_MASK)
         {
             doctype.put("PA", "Patents (before 1977)");
         }

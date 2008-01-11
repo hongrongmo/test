@@ -409,7 +409,7 @@
                                 </td>
                               </tr>
                             </xsl:if>
-                              <xsl:if test="(boolean(bit:hasBitSet($USERMASK,1)) or boolean(bit:hasBitSet($USERMASK,2)) or boolean(bit:hasBitSet($USERMASK,1048576)))">                                 
+                              <xsl:if test="(boolean(bit:hasBitSet($USERMASK,1)) or boolean(bit:hasBitSet($USERMASK,2)))">                                 
                                 <tr>
                                   <td valign="top" ><img src="/engresources/images/s.gif" height="4"/></td>
                                 </tr>
