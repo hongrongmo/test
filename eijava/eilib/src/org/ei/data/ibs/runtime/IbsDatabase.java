@@ -2,12 +2,33 @@ package org.ei.data.ibs.runtime;
 
 import org.ei.domain.*;
 import org.ei.data.insback.runtime.*;
-import java.util.Map;
-import java.util.Hashtable;
+import java.util.*;
 import org.ei.data.compendex.runtime.CPXLinkingStrategy;
 import org.ei.fulldoc.LinkingStrategy;
 public class IbsDatabase extends Database
 {
+	private static Map searchfield = new HashMap();
+	static
+	{
+		searchfield.put("ALL", "Y");
+		searchfield.put("AB", "Y");
+		searchfield.put("AN", "Y");
+		searchfield.put("AU", "Y");
+		searchfield.put("CL", "Y");
+		searchfield.put("OC", "Y");
+		searchfield.put("CF", "Y");
+		searchfield.put("CV", "Y");
+		searchfield.put("DI", "Y");
+		searchfield.put("DT", "Y");
+		searchfield.put("LA", "Y");
+		searchfield.put("PN", "Y");
+		searchfield.put("ST", "Y");
+		searchfield.put("KY", "Y");
+		searchfield.put("TI", "Y");
+		searchfield.put("FL", "Y");
+	}
+
+
     private DataDictionary dataDictionary = new org.ei.data.inspec.runtime.InspecDataDictionary();
     public int getStartYear(boolean hasBackFile) { return 1896; }
 
@@ -51,7 +72,7 @@ public class IbsDatabase extends Database
 
     public String getLegendID()
     {
-        return "ib";
+        return "ia";
     }
 
     public String getName()
@@ -77,6 +98,20 @@ public class IbsDatabase extends Database
   	{
 	 	return false;
   	}
+
+	public boolean hasField(SearchField searchField,
+							int mask)
+	{
+		if(searchfield.containsKey(searchField.getID()))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
 
 	public LinkingStrategy getLinkingStrategy()
 	{
