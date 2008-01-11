@@ -61,6 +61,7 @@ public class FastClient
       if(mask == DatabaseConfig.PAG_MASK ||
          mask == DatabaseConfig.CPX_MASK ||
          mask == DatabaseConfig.INS_MASK ||
+         mask == DatabaseConfig.IBS_MASK ||
          mask == DatabaseConfig.GEO_MASK ||
          mask == DatabaseConfig.CBN_MASK ||
          mask == DatabaseConfig.CHM_MASK ||
@@ -95,6 +96,7 @@ public class FastClient
     else if(EiNavigator.PN.equals(navid)) {
       if(((mask & (DatabaseConfig.CPX_MASK +
              DatabaseConfig.INS_MASK +
+             DatabaseConfig.IBS_MASK +
              DatabaseConfig.PAG_MASK +
              DatabaseConfig.CBN_MASK +
              DatabaseConfig.CHM_MASK +
@@ -135,6 +137,7 @@ public class FastClient
     else if(EiNavigator.LA.equals(navid)) {
       if(((mask & (DatabaseConfig.CPX_MASK +
               DatabaseConfig.INS_MASK +
+              DatabaseConfig.IBS_MASK +
               DatabaseConfig.NTI_MASK +
               DatabaseConfig.GEO_MASK +
               DatabaseConfig.CBF_MASK +
@@ -161,7 +164,7 @@ public class FastClient
     // include PEC only if Patents are included
     else if(EiNavigator.PEC.equals(navid)) {
       if((mask & (DatabaseConfig.EUP_MASK +
-          DatabaseConfig.UPA_MASK+
+          DatabaseConfig.UPA_MASK +
           DatabaseConfig.CBN_MASK +
           DatabaseConfig.ELT_MASK +
           DatabaseConfig.EPT_MASK)) > 0) {
@@ -359,9 +362,9 @@ public class FastClient
             }
         }
         return testResult;
-	}    
+	}
 
-    
+
     public static boolean unitTest(String args[])
     									throws Exception
     {
