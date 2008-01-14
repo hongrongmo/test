@@ -122,7 +122,7 @@ var selectedDbMask = 0;
 	      selectedDbMask == (EUP + REFEREX) ||
 	      selectedDbMask == (US_EU_PATENTS + REFEREX) ||
 	      selectedDbMask == (EPT + REFEREX) ||
-              selectedDbMask == (US_EU_PATENTS + EPT + REFEREX) 
+              selectedDbMask == (US_EU_PATENTS + EPT + REFEREX)
               )
       {
         link.appendChild(document.createTextNode("Inventor"));
@@ -153,12 +153,12 @@ var selectedDbMask = 0;
       else if(selectedDbMask == UPA ||
         selectedDbMask == EUP ||
         selectedDbMask == US_EU_PATENTS ||
-        selectedDbMask == EPT || 
+        selectedDbMask == EPT ||
         selectedDbMask == (EPT + US_EU_PATENTS) ||
         selectedDbMask == (UPA + REFEREX) ||
 	selectedDbMask == (EUP + REFEREX) ||
 	selectedDbMask == (US_EU_PATENTS + REFEREX) ||
-	selectedDbMask == (EPT + REFEREX) || 
+	selectedDbMask == (EPT + REFEREX) ||
         selectedDbMask == (EPT + US_EU_PATENTS + REFEREX)
         )
       {
@@ -308,15 +308,18 @@ var selectedDbMask = 0;
 
 function calEndYear(selectedDbMask)
 {
-	if (selectedDbMask != CBF)
+  if(selectedDbMask == INSPEC_BACKFILE)
+  {
+    return 1968;
+  }
+  else if (selectedDbMask == CBF)
+  {
+      return 1969;
+  }
+	else // All others
 	{
  		return 2008;
 	}
-	else // CBF
-	{
- 		return 1969;
-	}
-
 }
 
 
@@ -438,6 +441,11 @@ function calStartYear(selectedDbMask, sYear)
         var insStartYear = sYear.substr(sYear.indexOf("IST")+3,4);
         dYear = (dYear > insStartYear) ? insStartYear : dYear;
     }
+    if((selectedDbMask != 0) && ((selectedDbMask & INSPEC_BACKFILE) == INSPEC_BACKFILE))
+    {
+        var ibsStartYear = sYear.substr(sYear.indexOf("FST")+3,4);
+        dYear = (dYear > ibsStartYear) ? ibsStartYear : dYear;
+    }
     if((selectedDbMask != 0) && ((selectedDbMask & NTIS) == NTIS))
     {
         var ntiStartYear = sYear.substr(sYear.indexOf("NST")+3,4);
@@ -525,6 +533,11 @@ function calDisplayYear(selectedDbMask, sYear)
         {
             var insStartYear = sYear.substr(sYear.indexOf("ISY")+3,4);
             dYear = (dYear > insStartYear) ? insStartYear : dYear;
+        }
+        if((selectedDbMask != 0) && ((selectedDbMask & INSPEC_BACKFILE) == INSPEC_BACKFILE))
+        {
+            var ibsStartYear = sYear.substr(sYear.indexOf("FSY")+3,4);
+            dYear = (dYear > ibsStartYear) ? ibsStartYear : dYear;
         }
         if((selectedDbMask != 0) && ((selectedDbMask & NTIS) == NTIS))
         {
