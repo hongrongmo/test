@@ -466,17 +466,17 @@ public class EIDoc implements Highlightable, XMLSerializable, LocalHoldingLinker
         }
         else if (field.equalsIgnoreCase("cvmp")) {
 
-            return getHighlightMap(MJSP_HIGHLIGHT_KEYS);
+            return getHighlightMap(MJS_HIGHLIGHT_KEYS);
 
         }
         else if (field.equalsIgnoreCase("cvmn")) {
 
-            return getHighlightMap(MJSN_HIGHLIGHT_KEYS);
+            return getHighlightMap(MJS_HIGHLIGHT_KEYS);
 
         }
         else if (field.equalsIgnoreCase("cvma")) {
 
-            return getHighlightMap(MJSA_HIGHLIGHT_KEYS);
+            return getHighlightMap(MJS_HIGHLIGHT_KEYS);
 
         }
         else if (field.equalsIgnoreCase("lt")) {
@@ -505,7 +505,6 @@ public class EIDoc implements Highlightable, XMLSerializable, LocalHoldingLinker
         for (int i = 0; i < keys.length; i++) {
             Key key = keys[i];
             if (mapDocument.get(key) != null) {
-                
                 m.put(key, ((ElementData) mapDocument.get(key)).getElementData());
             }
         }
