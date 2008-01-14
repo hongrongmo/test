@@ -668,7 +668,7 @@
         </tr>
       </table>
     </center>
-<SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/QuickSearchForm_V10.js"/>
+<SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/QuickSearchForm_V11.js"/>
 <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Login.js"/>
 <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/RemoteDbLink_V5.js"/>
 <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Robohelp.js"/>
