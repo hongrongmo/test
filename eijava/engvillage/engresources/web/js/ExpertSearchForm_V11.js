@@ -310,7 +310,7 @@ function calEndYear(selectedDbMask)
 {
   if(selectedDbMask == INSPEC_BACKFILE)
   {
-    return 1968;
+    return 1969;
   }
   else if (selectedDbMask == CBF)
   {

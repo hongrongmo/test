@@ -890,7 +890,7 @@ function calEndYear(selectedDbMask)
 {
 	if (selectedDbMask == IBS)
     {
-    	return 1968;
+    	return 1969;
     }
     else if (selectedDbMask == CBF)
     {
