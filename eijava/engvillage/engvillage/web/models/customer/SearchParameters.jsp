@@ -204,6 +204,11 @@
     {
     	endYear=Integer.toString(DatabaseConfig.CBF_ENDYEAR);
     }
+    // endYear for IBS - 1969
+    if (dbName.trim().equals(Integer.toString(DatabaseConfig.IBS_MASK)))
+    {
+    	endYear=Integer.toString(DatabaseConfig.IBS_ENDYEAR);
+    }
 
     if((request.getParameter("searchWord1")!=null) && (request.getParameter("searchWord1").trim().length()>0))
     {
