@@ -204,6 +204,7 @@ public class FastSearchControl
 
 		if((sQuery.getDataBase() & DatabaseConfig.IBS_MASK) == DatabaseConfig.IBS_MASK)
 		{
+			System.out.println("Is archive.");
 			this.archiveStandAlone = true;
 		}
 
@@ -319,7 +320,7 @@ public class FastSearchControl
     	{
 			return DatabaseConfig.CBF_PREF.concat(mid.substring(3));
     	}
-    	else if(backfileStandAlone &&
+    	else if(archiveStandAlone &&
     			mid.indexOf("ibf") == 0)
     	{
 			return "ibs".concat(mid.substring(3));

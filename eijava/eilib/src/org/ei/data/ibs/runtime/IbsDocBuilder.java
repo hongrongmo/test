@@ -28,7 +28,6 @@ import org.ei.util.StringUtil;
 public class IbsDocBuilder
     extends InsBackDocBuilder
 {
-    private Database database;
 
     public DocumentBuilder newInstance(Database database)
     {
@@ -41,7 +40,7 @@ public class IbsDocBuilder
 
     public IbsDocBuilder(Database database)
     {
-        this.database = database;
+        super(database);
     }
 
     protected String buildINString(List listOfDocIDs)
