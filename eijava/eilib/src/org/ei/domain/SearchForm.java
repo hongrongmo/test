@@ -898,88 +898,85 @@ public class SearchForm {
         int dYear = 1973;
         try {
 
-	        if (sYear != null && sYear.length() > 0) {
-	            if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.CPX_MASK) == DatabaseConfig.CPX_MASK)) {
-	                int cpxStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("CST") + 3, sYear.indexOf("CST") + 7));
-	                dYear = (dYear > cpxStartYear) ? cpxStartYear : dYear;
-	            }
-
-                if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.INS_MASK) == DatabaseConfig.INS_MASK)) {
-	                int insStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("IST") + 3, sYear.indexOf("IST") + 7));
-	                dYear = (dYear > insStartYear) ? insStartYear : dYear;
-	            }
-	            if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.IBF_MASK) == DatabaseConfig.IBF_MASK)) {
-					int insStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("FST") + 3, sYear.indexOf("FST") + 7));
-					dYear = (dYear > insStartYear) ? insStartYear : dYear;
-	            }
-	            if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.NTI_MASK) == DatabaseConfig.NTI_MASK)) {
-	                int ntiStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("NST") + 3, sYear.indexOf("NST") + 7));
-	                dYear = (dYear > ntiStartYear) ? ntiStartYear : dYear;
-	            }
-	            if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.UPA_MASK) == DatabaseConfig.UPA_MASK)) {
-	                int upStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("UST") + 3, sYear.indexOf("UST") + 7));
-	                dYear = (dYear > upStartYear) ? upStartYear : dYear;
-	            }
-
-	            if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.USPTO_MASK) == DatabaseConfig.USPTO_MASK)) {
-					int upStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("SST") + 3, sYear.indexOf("SST") + 7));
-					dYear = (dYear > upStartYear) ? upStartYear : dYear;
-	            }
-
-	            if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.REF_MASK) == DatabaseConfig.REF_MASK)) {
-					int upStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("DST") + 3, sYear.indexOf("DST") + 7));
-					dYear = (dYear > upStartYear) ? upStartYear : dYear;
-	            }
-	            if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.UPT_MASK) == DatabaseConfig.UPT_MASK)) {
-					int upStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("TST") + 3, sYear.indexOf("TST") + 7));
-					dYear = (dYear > upStartYear) ? upStartYear : dYear;
-	            }
-	            if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.EUP_MASK) == DatabaseConfig.EUP_MASK)) {
-	                int epStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("EST") + 3, sYear.indexOf("EST") + 7));
-	                dYear = (dYear > epStartYear) ? epStartYear : dYear;
-	            }
-	            if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.GEO_MASK) == DatabaseConfig.GEO_MASK)) {
-	                int geStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("GST") + 3, sYear.indexOf("GST") + 7));
-	                dYear = (dYear > geStartYear) ? geStartYear : dYear;
-	            }
-	            if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.PAG_MASK) == DatabaseConfig.PAG_MASK)) {
-	                int paStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("PST") + 3, sYear.indexOf("PST") + 7));
-	                dYear = (dYear > paStartYear) ? paStartYear : dYear;
-	            }
-	            if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.PCH_MASK) == DatabaseConfig.PCH_MASK)) {
-					int paStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("AST") + 3, sYear.indexOf("AST") + 7));
-					dYear = (dYear > paStartYear) ? paStartYear : dYear;
-	            }
-	            if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.CHM_MASK) == DatabaseConfig.CHM_MASK)) {
-					int paStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("HST") + 3, sYear.indexOf("HST") + 7));
-					dYear = (dYear > paStartYear) ? paStartYear : dYear;
-	            }
-	            if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.CBN_MASK) == DatabaseConfig.CBN_MASK)) {
-					int paStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("BST") + 3, sYear.indexOf("BST") + 7));
-					dYear = (dYear > paStartYear) ? paStartYear : dYear;
-				}
-				if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.ELT_MASK) == DatabaseConfig.ELT_MASK)) {
-					int paStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("LST") + 3, sYear.indexOf("LST") + 7));
-					dYear = (dYear > paStartYear) ? paStartYear : dYear;
-	            }
-	            if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.EPT_MASK) == DatabaseConfig.EPT_MASK)) {
-					int paStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("MST") + 3, sYear.indexOf("MST") + 7));
-					dYear = (dYear > paStartYear) ? paStartYear : dYear;
-	            }
-	            if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.CRC_MASK) == DatabaseConfig.CRC_MASK)) {
-					int paStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("RST") + 3, sYear.indexOf("RST") + 7));
-					dYear = (dYear > paStartYear) ? paStartYear : dYear;
-	            }
-	            if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.CBF_MASK) == DatabaseConfig.CBF_MASK)) {
-					int paStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("YST") + 3, sYear.indexOf("YST") + 7));
-					dYear = (dYear > paStartYear) ? paStartYear : dYear;
-	            }
-	            if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.IBS_MASK) == DatabaseConfig.IBS_MASK)) {
-					int ibsStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("FST") + 3, sYear.indexOf("FST") + 7));
-					dYear = (dYear > ibsStartYear) ? ibsStartYear : dYear;
-	            }
-	        }
-		}
+          if (sYear != null && sYear.length() > 0) {
+              if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.CPX_MASK) == DatabaseConfig.CPX_MASK)) {
+                  int cpxStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("CST") + 3, sYear.indexOf("CST") + 7));
+                  dYear = (dYear > cpxStartYear) ? cpxStartYear : dYear;
+              }
+              if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.INS_MASK) == DatabaseConfig.INS_MASK)) {
+                  int insStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("IST") + 3, sYear.indexOf("IST") + 7));
+                  dYear = (dYear > insStartYear) ? insStartYear : dYear;
+              }
+              if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.IBS_MASK) == DatabaseConfig.IBS_MASK)) {
+                int insStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("FST") + 3, sYear.indexOf("FST") + 7));
+                dYear = (dYear > insStartYear) ? insStartYear : dYear;
+              }
+              if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.NTI_MASK) == DatabaseConfig.NTI_MASK)) {
+                  int ntiStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("NST") + 3, sYear.indexOf("NST") + 7));
+                  dYear = (dYear > ntiStartYear) ? ntiStartYear : dYear;
+              }
+              if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.UPA_MASK) == DatabaseConfig.UPA_MASK)) {
+                  int upStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("UST") + 3, sYear.indexOf("UST") + 7));
+                  dYear = (dYear > upStartYear) ? upStartYear : dYear;
+              }
+              if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.USPTO_MASK) == DatabaseConfig.USPTO_MASK)) {
+                  int upStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("SST") + 3, sYear.indexOf("SST") + 7));
+                  dYear = (dYear > upStartYear) ? upStartYear : dYear;
+              }
+              if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.REF_MASK) == DatabaseConfig.REF_MASK)) {
+                  int upStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("DST") + 3, sYear.indexOf("DST") + 7));
+                  dYear = (dYear > upStartYear) ? upStartYear : dYear;
+              }
+              if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.UPT_MASK) == DatabaseConfig.UPT_MASK)) {
+                  int upStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("TST") + 3, sYear.indexOf("TST") + 7));
+                  dYear = (dYear > upStartYear) ? upStartYear : dYear;
+              }
+              if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.EUP_MASK) == DatabaseConfig.EUP_MASK)) {
+                  int epStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("EST") + 3, sYear.indexOf("EST") + 7));
+                  dYear = (dYear > epStartYear) ? epStartYear : dYear;
+              }
+              if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.GEO_MASK) == DatabaseConfig.GEO_MASK)) {
+                  int geStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("GST") + 3, sYear.indexOf("GST") + 7));
+                  dYear = (dYear > geStartYear) ? geStartYear : dYear;
+              }
+              if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.PAG_MASK) == DatabaseConfig.PAG_MASK)) {
+                  int paStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("PST") + 3, sYear.indexOf("PST") + 7));
+                  dYear = (dYear > paStartYear) ? paStartYear : dYear;
+              }
+              if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.PCH_MASK) == DatabaseConfig.PCH_MASK)) {
+                  int paStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("AST") + 3, sYear.indexOf("AST") + 7));
+                  dYear = (dYear > paStartYear) ? paStartYear : dYear;
+              }
+              if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.CHM_MASK) == DatabaseConfig.CHM_MASK)) {
+                  int paStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("HST") + 3, sYear.indexOf("HST") + 7));
+                  dYear = (dYear > paStartYear) ? paStartYear : dYear;
+              }
+              if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.CBN_MASK) == DatabaseConfig.CBN_MASK)) {
+                  int paStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("BST") + 3, sYear.indexOf("BST") + 7));
+                  dYear = (dYear > paStartYear) ? paStartYear : dYear;
+              }
+              if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.ELT_MASK) == DatabaseConfig.ELT_MASK)) {
+                  int paStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("LST") + 3, sYear.indexOf("LST") + 7));
+                  dYear = (dYear > paStartYear) ? paStartYear : dYear;
+              }
+              if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.EPT_MASK) == DatabaseConfig.EPT_MASK)) {
+                  int paStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("MST") + 3, sYear.indexOf("MST") + 7));
+                  dYear = (dYear > paStartYear) ? paStartYear : dYear;
+              }
+              if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.CRC_MASK) == DatabaseConfig.CRC_MASK)) {
+                  int paStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("RST") + 3, sYear.indexOf("RST") + 7));
+                  dYear = (dYear > paStartYear) ? paStartYear : dYear;
+              }
+              if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.CBF_MASK) == DatabaseConfig.CBF_MASK)) {
+                  int paStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("YST") + 3, sYear.indexOf("YST") + 7));
+                  dYear = (dYear > paStartYear) ? paStartYear : dYear;
+              }
+              if (selectedDbMask != 0 && ((selectedDbMask & DatabaseConfig.IBS_MASK) == DatabaseConfig.IBS_MASK)) {
+                  int ibsStartYear = Integer.parseInt(sYear.substring(sYear.indexOf("FST") + 3, sYear.indexOf("FST") + 7));
+                  dYear = (dYear > ibsStartYear) ? ibsStartYear : dYear;
+              }
+          }
+    }
 		catch(NumberFormatException e)
 		{
 			System.out.println("Problem with BackOffice \"Default Database:\" Settings! Selected DBMask contains values which user does not have permission for.");
