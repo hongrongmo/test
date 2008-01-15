@@ -302,15 +302,9 @@ public interface Keys
     public static final Key[] ST_HIGHLIGHT_KEYS = {Keys.SERIAL_TITLE,Keys.SOURCE,Keys.ASOURCES};
     public static final Key[] NT_HIGHLIGHT_KEYS = {Keys.NOTES};
     public static final Key[] PN_HIGHLIGHT_KEYS = {Keys.PUBLISHER,Keys.I_PUBLISHER};
-    public static final Key[] CV_HIGHLIGHT_KEYS = {Keys.CONTROLLED_TERMS,Keys.ORIGINAL_CONTROLLED_TERMS,Keys.MAIN_HEADING, Keys.NOROLE_TERM, Keys.PRODUCT_TERM, Keys.REAGENT_TERM};
-    public static final Key[] CVN_HIGHLIGHT_KEYS ={Keys.NOROLE_TERM};
-    public static final Key[] CVP_HIGHLIGHT_KEYS ={Keys.PRODUCT_TERM};
-    public static final Key[] CVA_HIGHLIGHT_KEYS ={Keys.REAGENT_TERM};
+    public static final Key[] CV_HIGHLIGHT_KEYS = {Keys.CONTROLLED_TERMS,Keys.ORIGINAL_CONTROLLED_TERMS,Keys.MAIN_HEADING};
     public static final Key[] MH_HIGHLIGHT_KEYS = {Keys.MAIN_HEADING};
-    public static final Key[] MJS_HIGHLIGHT_KEYS = {Keys.MAJOR_TERMS, Keys.MAJOR_NOROLE_TERM,Keys.MAJOR_PRODUCT_TERM, Keys.MAJOR_REAGENT_TERM };
-    public static final Key[] MJSN_HIGHLIGHT_KEYS = {Keys.MAJOR_NOROLE_TERM};
-    public static final Key[] MJSP_HIGHLIGHT_KEYS = {Keys.MAJOR_PRODUCT_TERM};
-    public static final Key[] MJSA_HIGHLIGHT_KEYS = {Keys.MAJOR_REAGENT_TERM};
+    public static final Key[] MJS_HIGHLIGHT_KEYS = {Keys.MAJOR_TERMS};
     public static final Key[] LT_HIGHLIGHT_KEYS = {Keys.LINKED_TERMS, Keys.LINKED_SUB_TERM};
     public static final Key[] TEMPLATE_HIGHLIGHT_KEYS = {Keys.INDEXING_TEMPLATE};
     public static final Key[] MLT_HIGHLIGHT_KEYS = {Keys.MANUAL_LINKED_TERMS};
