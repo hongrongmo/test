@@ -20,6 +20,7 @@ var REFEREX = 131072;
 var CBF = 262144;
 var IBS = 1048576;
 var UPT = 524288;
+var INSPEC_BACKFILE = 1048576;
 
 var startYear;
 var stringYear;
@@ -1476,7 +1477,7 @@ function clearAlldb()
     }
 
 
-    if((selectedDbMask & CBN) != CBN)
+    if((selectedDbMask & CBN) != CBN && (selectedDbMask & INSPEC_BACKFILE) != INSPEC_BACKFILE)
     {
       //AF
       link = newLookupLink();
@@ -1484,7 +1485,8 @@ function clearAlldb()
 
       if((selectedDbMask & US_PATENTS) != US_PATENTS &&
           (selectedDbMask & EU_PATENTS) != EU_PATENTS &&
-          (selectedDbMask & EPT) != EPT)
+          (selectedDbMask & EPT) != EPT &&
+          (selectedDbMask & INSPEC_BACKFILE) != INSPEC_BACKFILE)
       {
         link.appendChild(document.createTextNode("Author affiliation"));
       }
@@ -1507,7 +1509,8 @@ function clearAlldb()
 
     //CT
     if((selectedDbMask & US_PATENTS) != US_PATENTS &&
-       (selectedDbMask & EU_PATENTS) != EU_PATENTS)
+       (selectedDbMask & EU_PATENTS) != EU_PATENTS &&
+       (selectedDbMask & INSPEC_BACKFILE) != INSPEC_BACKFILE)
     {
       link = newLookupLink();
       link.onclick=OpenLookup_CVS;
@@ -1565,7 +1568,8 @@ function clearAlldb()
        (selectedDbMask & NTIS) != NTIS &&
        (selectedDbMask & CBN) != CBN &&
        (selectedDbMask & ELT) != ELT &&
-       (selectedDbMask & CHM) != CHM)
+       (selectedDbMask & CHM) != CHM &&
+       (selectedDbMask & INSPEC_BACKFILE) != INSPEC_BACKFILE)
     {
       link = newLookupLink();
       link.onclick=OpenLookup_PC
