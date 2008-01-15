@@ -139,14 +139,15 @@ var selectedDbMask = 0;
 
 
     if(selectedDbMask != CBN &&
-       selectedDbMask != (CBN+REFEREX))
+       selectedDbMask != (CBN+REFEREX)
+       && (selectedDbMask & INSPEC_BACKFILE) != INSPEC_BACKFILE)
     {
       link = newLookupLink();
       link.onclick=OpenLookup_AF;
        //AF
       if((selectedDbMask & UPA) != UPA &&
         (selectedDbMask & EUP) != EUP &&
-        (selectedDbMask & EPT) != EPT )
+        (selectedDbMask & EPT) != EPT)
       {
         link.appendChild(document.createTextNode("Author affiliation"));
       }
