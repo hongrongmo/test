@@ -34,56 +34,7 @@ public class FastSearchControl
     private boolean archiveStandAlone = false;
     public static String BASE_URL;
     private String errorCode;
-
     private String searchID;
-
-	private static int currentIndex = 0;
-
-
-
-
-	private static String[] baseURLS = {"http://66.151.181.135:15100",
-										"http://66.151.181.136:15100",
-										"http://66.151.181.142:15100",
-										"http://66.151.181.143:15100",
-										"http://66.151.181.144:15100",
-										"http://66.151.181.145:15100",
-										"http://66.151.181.146:15100",
-										"http://66.151.181.147:15100",
-										"http://66.151.181.148:15100",
-										"http://66.151.181.149:15100"};
-
-
-	public static synchronized String getBaseURL()
-	{
-		String u = null;
-		if(currentIndex < baseURLS.length)
-		{
-			u = baseURLS[currentIndex];
-		}
-		else
-		{
-			currentIndex = 0;
-			u = baseURLS[0];
-		}
-
-		currentIndex++;
-		return u;
-	}
-
-	private String chooseURL()
-	{
-		String loc = System.getProperty("loc");
-		if (loc != null &&
-			loc.equals("china"))
-		{
-			return getBaseURL();
-		}
-		else
-		{
-			return BASE_URL;
-		}
-	}
 
     private HitHighlighter highlighter;
 
@@ -204,7 +155,6 @@ public class FastSearchControl
 
 		if((sQuery.getDataBase() & DatabaseConfig.IBS_MASK) == DatabaseConfig.IBS_MASK)
 		{
-			System.out.println("Is archive.");
 			this.archiveStandAlone = true;
 		}
 
@@ -248,7 +198,7 @@ public class FastSearchControl
             Sort sortOption = query.getSortOption();
 
             FastClient client = new FastClient();
-            client.setBaseURL(chooseURL());
+            client.setBaseURL(BASE_URL);
             client.setQueryString(fastSearchString);
             client.setOffSet(offset);
             client.setPageSize(pSize);
@@ -451,7 +401,7 @@ public class FastSearchControl
 		Sort sortOption = query.getSortOption();
 
 		FastClient client = new FastClient();
-		client.setBaseURL(chooseURL());
+		client.setBaseURL(BASE_URL);
 		client.setQueryString(fastSearchString);
 		client.setOffSet(0);
 		client.setPageSize(dupsetSize);
