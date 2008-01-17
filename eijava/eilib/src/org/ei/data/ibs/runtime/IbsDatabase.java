@@ -5,6 +5,8 @@ import org.ei.data.insback.runtime.*;
 import java.util.*;
 import org.ei.data.compendex.runtime.CPXLinkingStrategy;
 import org.ei.fulldoc.LinkingStrategy;
+import org.ei.domain.sort.SortField;
+
 public class IbsDatabase extends Database
 {
 	private static Map searchfield = new HashMap();
@@ -28,6 +30,9 @@ public class IbsDatabase extends Database
 		searchfield.put("FL", "Y");
 	}
 
+    public List getSortableFields() {
+      return Arrays.asList(new SortField[]{SortField.RELEVANCE, SortField.AUTHOR, SortField.YEAR, SortField.SOURCE, SortField.PUBLISHER});
+    }
 
     private DataDictionary dataDictionary = new org.ei.data.inspec.runtime.InspecDataDictionary();
     public int getStartYear(boolean hasBackFile) { return 1896; }
