@@ -44,7 +44,7 @@ public class PaperChemCombiner
         System.out.println("write year" + loadNumber);
 
         PaperChemCombiner c = new PaperChemCombiner(writer);
-        c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
+
         if (loadNumber > 3000 || loadNumber < 1000)
         {
             c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
