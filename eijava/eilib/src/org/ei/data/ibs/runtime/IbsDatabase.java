@@ -32,6 +32,8 @@ public class IbsDatabase extends Database
     private DataDictionary dataDictionary = new org.ei.data.inspec.runtime.InspecDataDictionary();
     public int getStartYear(boolean hasBackFile) { return 1896; }
 
+    public int getEndYear() { return 1969; }
+
     private LinkingStrategy linkingStrategy = new IBFLinkingStrategy();
     protected String getBaseTableHook()
     {
