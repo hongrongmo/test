@@ -1416,11 +1416,6 @@ function clearAlldb()
     uldiv.style.marginBottom = "1px";
     adiv.appendChild(uldiv);
 
-    if(selectedDbMask == 0)
-    {
-      return;
-    }
-
     if((selectedDbMask & REFEREX) == REFEREX)
     {
       bdiv.style.display = "none";
