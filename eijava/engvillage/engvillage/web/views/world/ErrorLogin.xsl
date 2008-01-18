@@ -68,13 +68,15 @@
 							<li>Inspec&#174;</li>
 							<li>Inspec Archive</li>
 							<li>NTIS</li>
-							<li>Referex Engineering</li>
-							<li>ENGnetBASE</li>
+							<li>Referex</li>							
 							<li>Patents from USPTO and esp@cenet</li>
-							<li>GlobalSpec</li>
-							<li>Scirus</li>
-							<li>Intute</li>
-							<li>LexisNexis News</li>
+							<li>Ei Patents</li> 
+							<li>EnCompassLIT</li>
+							<li>EnCompassPAT</li>
+							<li>GeoBase</li>
+							<li>Chimica</li>
+							<li>CBNB</li>
+							<li>PaperChem</li>						
 						</ul>
 					</dd>
 				</dl>
@@ -112,10 +114,10 @@
 				<dt><span>Engineering Village provides:</span></dt>
 				<dd>
 					<ul>
-						<li>Combined database searching of Compendex, Inspec and NTIS, including deduplication of Compendex and Inspec records.</li>
+					    <li>Combined database searching of all databases including deduplication.</li>
 						<li>Personalized e-mail alerts.</li>
 						<li>The ability to save searches and create personalized folders.</li>
-						<li>Quick &amp; Expert Search options, both of which allow you to save and combine searches.</li>
+						<li>Easy, Quick &amp; Expert Search options, all of which allow you to save and combine searches.</li>
 						<li>The ability to choose preferred output formats (citation, abstracts or detailed) for Selected Record sets, which can then be viewed, printed, saved, downloaded or e-mailed.</li>
 					</ul>
 				</dd>
@@ -130,6 +132,7 @@
 						<li>Context sensitive help.</li>
 						<li>Reference Services: Ask a Librarian &amp; Ask an Engineer.</li>
 						<li>RSS Feeds and Faceted Searching.</li>
+						<li>Tags &amp; Groups.</li>
 					</ul>
 				</dd>
 			</dl>
