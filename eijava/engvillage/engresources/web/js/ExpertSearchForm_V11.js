@@ -789,35 +789,56 @@ function selectYearRange(radioidx)
     }
   }
 }
+
 function checkLastUpdates()
 {
-  var seldbmask = calculateMask(document.quicksearch.database)
+  var result = true;
+  var seldbmask = calculateMask(document.quicksearch.database);
+  var alertmsg = "";
 
-  if((document.quicksearch.yearselect[1].checked == true) && (seldbmask == REFEREX))
+  if(document.quicksearch.yearselect[1].checked == true)
   {
+    if(seldbmask == REFEREX)
+    {
+      alertmsg = "Last updates selection does not apply to Referex collections.";
+      result =  false;
+    }
+    else if(seldbmask == CBF)
+    {
+      alertmsg = "Last updates selection does not apply to Ei Backfile.";
+      result =  false;
+    }
+    else if(seldbmask == IBS)
+    {
+      alertmsg = "Last updates selection does not apply to Inspec Archive.";
+      result =  false;
+    }
+    else if(seldbmask == (IBS + CBF))
+    {
+      alertmsg = "Last updates selection does not apply to Ei Backfile and Inspec Archive.";
+      result =  false;
+    }
+    else if(seldbmask == (IBS + REFEREX))
+    {
+      alertmsg = "Last updates selection does not apply to Inspec Archive and Referex collections.";
+      result =  false;
+    }
+    else if(seldbmask == (CBF + REFEREX))
+    {
+      alertmsg = "Last updates selection does not apply to Ei Backfile and Referex collections.";
+      result =  false;
+    }
+    else if(seldbmask == (IBS + CBF + REFEREX))
+    {
+      alertmsg = "Last updates selection does not apply to Ei Backfile, Inspec Archive and Referex collections.";
+      result =  false;
+    }
+  }
+  if(!result)
+  {
+    alert(alertmsg);
     document.quicksearch.yearselect[0].checked = true;
     document.quicksearch.yearselect[0].focus();
-    alert("Last updates selection does not apply to Referex collections.");
-    return false;
   }
-  else if((document.quicksearch.yearselect[1].checked == true) &&
-  										(seldbmask == CBF))
-  {
-    document.quicksearch.yearselect[0].checked = true;
-    document.quicksearch.yearselect[0].focus();
-    alert("Last updates selection does not apply to Ei Backfile.");
-    return false;
-  }
-  else if((document.quicksearch.yearselect[1].checked == true) &&
-  										(seldbmask == (CBF + REFEREX)))
-  {
-    document.quicksearch.yearselect[0].checked = true;
-    document.quicksearch.yearselect[0].focus();
-    alert("Last updates selection does not apply to Ei Backfile and Referex collections.");
-    return false;
-  }
-  else
-  {
-    return true;
-  }
+  return result;
 }
