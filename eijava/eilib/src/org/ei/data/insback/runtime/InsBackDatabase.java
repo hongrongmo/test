@@ -5,6 +5,11 @@ import java.util.Map;
 import java.util.Hashtable;
 import org.ei.data.compendex.runtime.CPXLinkingStrategy;
 import org.ei.fulldoc.LinkingStrategy;
+
+import java.util.List;
+import java.util.Arrays;
+import org.ei.domain.sort.SortField;
+
 public class InsBackDatabase extends Database
 {
     private DataDictionary dataDictionary = new org.ei.data.inspec.runtime.InspecDataDictionary();
@@ -16,6 +21,9 @@ public class InsBackDatabase extends Database
         return "ibf_master";
     }
 
+    public List getSortableFields() {
+      return Arrays.asList(new SortField[]{SortField.RELEVANCE, SortField.AUTHOR, SortField.YEAR, SortField.SOURCE, SortField.PUBLISHER});
+    }
 
     public DocumentBuilder newBuilderInstance()
     {
