@@ -490,8 +490,7 @@ function generateDoctypes(selecteddbMask)
   {
      doctypes[index++] = new Field("CA", "Conference article");
   }
-  else if (selecteddbMask == EPT ||
-           selecteddbMask == ELT )
+  else if (selecteddbMask == ELT )
   {
   	doctypes[index++] = new Field("CA", "Conference");
   }
