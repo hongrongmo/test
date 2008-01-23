@@ -37,6 +37,7 @@ public final class DatabaseConfig
     public static final int CBF_MASK  	= 262144;
     public static final int UPT_MASK 	= 524288;
     public static final int IBS_MASK 	= 1048576;
+    public static final int GRF_MASK 	= 2097152;
 
 
 
