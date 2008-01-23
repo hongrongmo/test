@@ -36,7 +36,8 @@ public class Displayer {
       DatabaseConfig.UPA_MASK, DatabaseConfig.PAG_MASK,
       DatabaseConfig.CBF_MASK, DatabaseConfig.CHM_MASK,
       DatabaseConfig.PCH_MASK, DatabaseConfig.ELT_MASK,
-      DatabaseConfig.EPT_MASK, DatabaseConfig.CBN_MASK,};
+      DatabaseConfig.EPT_MASK, DatabaseConfig.CBN_MASK,
+      DatabaseConfig.GRF_MASK,};
   static {
     Arrays.sort(dbMasks);
   }
