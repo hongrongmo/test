@@ -50,12 +50,12 @@ public class GRFDatabase extends Database
     private DataDictionary dataDictionary = new GRFDataDictionary();
     public int getStartYear(boolean hasBackFile)
     {
-      return 1973;
+      return 1966;
     }
 
     protected String getBaseTableHook()
     {
-      return "grf_master";
+      return "GEOREF_TEST";
     }
 
 
