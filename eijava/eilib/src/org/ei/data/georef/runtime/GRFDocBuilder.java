@@ -20,7 +20,7 @@ public class GRFDocBuilder
     implements DocumentBuilder
 {
     public static final String AUDELIMITER = new String(new char[] {30});
-    public static final String IDDELIMITER = new String(new char[] {29});
+    public static final String IDDELIMITER = new String(new char[] {31});
     public static final String GROUPDELIMITER = new String(new char[] {02});
     public static String GRF_TEXT_COPYRIGHT = Database.DEFAULT_ELSEVIER_TEXT_COPYRIGHT;
     public static String GRF_HTML_COPYRIGHT = Database.DEFAULT_ELSEVIER_HTML_COPYRIGHT;
@@ -30,6 +30,10 @@ public class GRFDocBuilder
     private static final Key GRF_CONTROLLED_TERMS = new Key(Keys.CONTROLLED_TERMS, "Index terms");
 
     private static final Key ILLUSTRATION = new Key("ILLUS", "Illustrations");
+    private static final Key ANNOTATION = new Key("ANT", "Annotations");
+    private static final Key MAP_SCALE = new Key("MPS", "Map scale");
+    private static final Key MAP_TYPE = new Key("MPT", "Map type");
+    private static final Key AFFILIATION_OTHER = new Key("OAF", "Other affiliation");
 
 
     private Database database;
@@ -141,11 +145,11 @@ public class GRFDocBuilder
                 }
                 else
                 {
-                    String strmonotitle = rset.getString("TITLE_OF_MONOGRAPH");
-                    if(strmonotitle != null)
-                    {
-                      ht.put(Keys.MONOGRAPH_TITLE, new XMLWrapper(Keys.MONOGRAPH_TITLE,strmonotitle));
-                    }
+                  String strmonotitle = rset.getString("TITLE_OF_MONOGRAPH");
+                  if(strmonotitle != null)
+                  {
+                    ht.put(Keys.MONOGRAPH_TITLE, new XMLWrapper(Keys.MONOGRAPH_TITLE,strmonotitle));
+                  }
                 }
                 if(strtitle != null)
                 {
@@ -168,6 +172,25 @@ public class GRFDocBuilder
                   }
                 }
 
+                String straffl = null;
+                straffl = rset.getString("AUTHOR_AFFILIATION");
+                if(straffl != null)
+                {
+                  if(rset.getString("AUTHOR_AFFILIATION_CITY") != null)
+                  {
+                    straffl = straffl.concat(", ").concat(rset.getString("AUTHOR_AFFILIATION_CITY"));
+                  }
+                  if(rset.getString("AUTHOR_AFFILIATION_COUNTRY") != null)
+                  {
+                    straffl = straffl.concat(", ").concat(rset.getString("AUTHOR_AFFILIATION_COUNTRY"));
+                  }
+                  Affiliation affil = new Affiliation(Keys.AUTHOR_AFFS, straffl);
+                  ht.put(Keys.AUTHOR_AFFS, new Affiliations(Keys.AUTHOR_AFFS, affil));
+                  if(authors != null)
+                  {
+                    authors.setFirstAffiliation(affil);
+                  }
+                }
 
                 // SN
                 if(rset.getString("ISSN") != null)
@@ -211,15 +234,23 @@ public class GRFDocBuilder
                     ht.put(Keys.LANGUAGE, new XMLWrapper(Keys.LANGUAGE , rset.getString("LANGUAGE_TEXT")));
                 }
                 // PAGES - PP
-                if(rset.getString("COLLATION_ANALYTIC") != null)
+                String strpages = rset.getString("COLLATION_ANALYTIC");
+                if(strpages == null)
                 {
-                  ht.put(Keys.PAGE_RANGE, new PageRange(rset.getString("COLLATION_ANALYTIC"), perl));
+                  if((rset.getString("TITLE_OF_MONOGRAPH") != null) && rset.getString("COLLATION_MONOGRAPH") != null)
+                  {
+                    strpages = rset.getString("COLLATION_MONOGRAPH");
+                  }
+                }
+                if(strpages != null)
+                {
+                  ht.put(Keys.PAGE_RANGE, new PageRange(strpages, perl));
                 }
 
                 // PUBLISHER - PN
                 if(rset.getString("PUBLISHER") != null )
                 {
-                  ht.put(Keys.PUBLISHER,new XMLWrapper(Keys.PUBLISHER,rset.getString("PUBLISHER")));
+                  ht.put(Keys.PUBLISHER, new XMLWrapper(Keys.PUBLISHER,rset.getString("PUBLISHER")));
                 }
 
                 // YR
@@ -256,6 +287,15 @@ public class GRFDocBuilder
                   }
                 }
 
+                // COUNTRY OF PUBLICATION - CPUB
+                if(viewformat.isIncluded(Keys.COUNTRY_OF_PUB))
+                {
+                  if(rset.getString("COUNTRY_OF_PUBLICATION") != null)
+                  {
+                    ht.put(Keys.COUNTRY_OF_PUB, new XMLWrapper(Keys.COUNTRY_OF_PUB,rset.getString("COUNTRY_OF_PUBLICATION")));
+                  }
+                }
+
                 // CONFERENCE DATE
                 if(viewformat.isIncluded(Keys.CONF_DATE))
                 {
@@ -270,6 +310,7 @@ public class GRFDocBuilder
                     }
                   }
                 }
+                // CONFERENCE NAME
                 if(viewformat.isIncluded(Keys.CONFERENCE_NAME))
                 {
                   String strconf= rset.getString("NAME_OF_MEETING");
@@ -279,41 +320,37 @@ public class GRFDocBuilder
                   }
                 }
 
-
-                // COPYRIGHT
-                if(viewformat.isIncluded(Keys.COPYRIGHT))
+                // INDEX_TERMS
+                if(viewformat.isIncluded(Keys.INDEX_TERM))
                 {
-                  if(rset.getString("COPYRIGHT") != null)
+                  String stridxtrms = rset.getString("INDEX_TERMS");
+                  if(stridxtrms != null)
                   {
-                    ht.put(Keys.COPYRIGHT,new XMLWrapper(Keys.COPYRIGHT, rset.getString("COPYRIGHT")));
+                    stridxtrms = stridxtrms.replaceAll(GRFDocBuilder.IDDELIMITER,":");
+                    ht.put(Keys.INDEX_TERM, new XMLMultiWrapper(Keys.INDEX_TERM, stridxtrms.split(GRFDocBuilder.AUDELIMITER)));
                   }
                 }
 
-                // ACCESSION NUMBER
-                if(viewformat.isIncluded(Keys.ACCESSION_NUMBER))
-                {
-                  if(rset.getString("ID_NUMBER") != null)
-                  {
-                    ht.put(Keys.ACCESSION_NUMBER,new XMLWrapper(Keys.ACCESSION_NUMBER, rset.getString("ID_NUMBER")));
-                  }
-                }
+                ht = viewformat.includeField(Keys.COPYRIGHT, "COPYRIGHT", ht, rset);
+                ht = viewformat.includeField(Keys.ACCESSION_NUMBER, "ID_NUMBER", ht, rset);
+                ht = viewformat.includeField(Keys.NUMBER_OF_REFERENCES, "NUMBER_OF_REFERENCES", ht, rset);
+                ht = viewformat.includeField(Keys.DOC_URL, "URL", ht, rset);
+                ht = viewformat.includeField(Keys.REPORT_NUMBER, "REPORT_NUMBER", ht, rset);
+                ht = viewformat.includeField(Keys.DOI, "DOI", ht, rset);
 
-                // AB
+                ht = viewformat.includeField(GRFDocBuilder.ILLUSTRATION, "ILLUSTRATION", ht, rset);
+                ht = viewformat.includeField(GRFDocBuilder.ANNOTATION, "ANNOTATION", ht, rset);
+                ht = viewformat.includeField(GRFDocBuilder.MAP_SCALE, "MAP_SCALE", ht, rset);
+                ht = viewformat.includeField(GRFDocBuilder.MAP_TYPE, "MAP_TYPE", ht, rset);
+                ht = viewformat.includeField(GRFDocBuilder.AFFILIATION_OTHER, "AFFILIATION_SECONDARY", ht, rset);
+
+                // ABSTRACT - AB
                 if(viewformat.isIncluded(Keys.ABSTRACT))
                 {
                   String abstr = hasAbstract(rset);
                   if(abstr != null)
                   {
                     ht.put(Keys.ABSTRACT, new XMLWrapper(Keys.ABSTRACT, abstr));
-                  }
-                }
-
-                //DO
-                if(viewformat.isIncluded(Keys.DOI))
-                {
-                  if(rset.getString("DOI") != null)
-                  {
-                    ht.put(Keys.DOI, new XMLWrapper(Keys.DOI ,rset.getString("DOI")));
                   }
                 }
 
@@ -406,16 +443,16 @@ public class GRFDocBuilder
         Clob clob = rs.getClob("ABSTRACT");
         if(clob != null)
         {
-            abs = StringUtil.getStringFromClob(clob);
+          abs = StringUtil.getStringFromClob(clob);
         }
 
         if(abs == null || abs.length() < 100)
         {
-            return null;
+          return null;
         }
         else
         {
-            return abs;
+          return abs;
         }
     }
 
@@ -477,6 +514,28 @@ public class GRFDocBuilder
           return (Arrays.asList(getKeys()).contains(key));
         }
 
+        public ElementDataMap includeField(Key key, String strfieldname, ElementDataMap ht, ResultSet rs)
+          throws Exception
+        {
+          try
+          {
+            if(isIncluded(key))
+            {
+              String strvalue = rs.getString(strfieldname);
+              if(strvalue != null)
+              {
+                ht.put(key, new XMLWrapper(key, strvalue));
+              }
+            }
+          }
+          catch(java.sql.SQLException sqle)
+          {
+            sqle.printStackTrace();
+            throw sqle;
+          }
+          return ht;
+        }
+
         public String toString() { return getFormat() + "\n == \n" + getQuery(); }
     }
 
@@ -491,13 +550,17 @@ public class GRFDocBuilder
                                                         "TITLE_OF_MONOGRAPH",
                                                         "PERSON_ANALYTIC",
                                                         "PERSON_MONOGRAPH",
+                                                        "AUTHOR_AFFILIATION",
+                                                        "AUTHOR_AFFILIATION_CITY",
+                                                        "AUTHOR_AFFILIATION_COUNTRY",
                                                         "DATE_OF_PUBLICATION",
                                                         "DATE_OF_MEETING",
                                                         "LANGUAGE_TEXT",
                                                         "PUBLISHER",
                                                         "LOAD_NUMBER",
                                                         "COPYRIGHT",
-                                                        "COLLATION_ANALYTIC"});
+                                                        "COLLATION_ANALYTIC",
+                                                        "COLLATION_MONOGRAPH"});
         private Key[] keys = new Key[]{Keys.AUTHORS,
                                         Keys.AUTHOR_AFFS,
                                         Keys.COPYRIGHT,
@@ -575,29 +638,42 @@ public class GRFDocBuilder
     private class DetailedView extends DocumentView {
 
         private List fields = Arrays.asList(new String[]{"DOI",
+                                                        "URL",
                                                         "ILLUSTRATION",
-                                                        "ID_NUMBER"});
+                                                        "ID_NUMBER",
+                                                        "MAP_TYPE",
+                                                        "MAP_SCALE",
+                                                        "ANNOTATION",
+                                                        "AFFILIATION_SECONDARY",
+                                                        "COUNTRY_OF_PUBLICATION",
+                                                        "REPORT_NUMBER",
+                                                        "NUMBER_OF_REFERENCES"});
 
         private Key[] keys = new Key[]{Keys.ABBRV_SERIAL_TITLE,
                                         Keys.ABSTRACT_TYPE,
                                         Keys.ACCESSION_NUMBER,
+                                        GRFDocBuilder.AFFILIATION_OTHER,
+                                        GRFDocBuilder.ANNOTATION,
                                         Keys.ARTICLE_NUMBER,
-                                        Keys.CLASS_CODES,
                                         Keys.CONF_CODE,
-                                        Keys.CONTROLLED_TERMS,
+                                        Keys.COUNTRY_OF_PUB,
                                         Keys.DOC_TYPE,
                                         Keys.DOI,
                                         Keys.GLOBAL_TAGS,
                                         Keys.ISSUE,
                                         GRFDocBuilder.ILLUSTRATION,
+                                        GRFDocBuilder.MAP_SCALE,
+                                        GRFDocBuilder.MAP_TYPE,
                                         Keys.MEETING_LOCATION,
                                         Keys.NUMBER_OF_REFERENCES,
                                         Keys.PAGE_COUNT,
                                         Keys.PRIVATE_TAGS,
                                         Keys.REGION_CONTROLLED_TERMS,
+                                        Keys.REPORT_NUMBER,
                                         Keys.SERIAL_TITLE,
                                         Keys.SOURCE_COUNTRY,
                                         Keys.TITLE_TRANSLATION,
+                                        Keys.DOC_URL,
                                         Keys.TREATMENTS,
                                         Keys.VOLUME};
 
