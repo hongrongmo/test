@@ -35,7 +35,7 @@
     <!-- Book Templates -->
 
     <!-- top level elements with labels and nested value children -->
-    <xsl:template match="DGS|SC|AV|DT|MJSM|CRM|CLGM|PIDEPM|BKYS|AGS|AUS|EDS|IVS|CLS|FLS|CVS|RGIS|DISPS|CTS|OCVS|OCLS|NDI|CHI|AOI|AFS|EFS|PASM|PEXM|PIM|PAPIM">
+    <xsl:template match="ILLUS|DGS|SC|AV|DT|MJSM|CRM|CLGM|PIDEPM|BKYS|AGS|AUS|EDS|IVS|CLS|FLS|CVS|RGIS|DISPS|CTS|OCVS|OCLS|NDI|CHI|AOI|AFS|EFS|PASM|PEXM|PIM|PAPIM">
         <tr>
 
             <td valign="top" ><img src="/engresources/images/s.gif" border="0"/></td>
@@ -157,7 +157,7 @@
       		<xsl:otherwise><xsl:value-of select="name(.)"/></xsl:otherwise>
       	</xsl:choose>
       </xsl:variable>
-      
+
       <xsl:call-template name="LINK">
         <xsl:with-param name="TERM"><xsl:value-of select="normalize-space(text())" disable-output-escaping="yes"/></xsl:with-param>
         <xsl:with-param name="FIELD"><xsl:value-of select="$FIELDNAME"/></xsl:with-param>
@@ -179,7 +179,7 @@
       <xsl:if test="not(position()=last())"><a CLASS="SmBlackText"><xsl:value-of select="$SEPARATOR"/></a></xsl:if>
 
     </xsl:template>
-    
+
     <xsl:template match="CVN|CVP|CVA|CVMN|CVMP|CVMA">
       <xsl:call-template name="LINK">
         <xsl:with-param name="TERM"><xsl:value-of select="normalize-space(text())"/></xsl:with-param>
@@ -573,7 +573,7 @@
                 	<input type="hidden" name="longltfield{$DOCID}" id="longltfield{$DOCID}" disable-output-escaping = "yes"/>
                 	<input type="hidden" name="schid{$DOCID}" id="schid{$DOCID}"  value='{$SEARCHID}' disable-output-escaping = "yes"/>
                 	<a href="" class="SmBlueText" onclick="javascript:flipEncImg('{$DOCID}','longlt','{$DOCID}'); return false;">
-   					<img id="longltOpenClose{$DOCID}" src="/engresources/images/encLinkedOpen.gif"  border="0"  />   					
+   					<img id="longltOpenClose{$DOCID}" src="/engresources/images/encLinkedOpen.gif"  border="0"  />
    					<img src="/engresources/images/s.gif" border="0" width="5"/>
    					<img id="longlt{$DOCID}" src="/engresources/images/encPlus.gif"  border="0" />
    					</a>
