@@ -2,6 +2,16 @@ package org.ei.domain;
 
 import java.util.ArrayList;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+import java.io.Reader;
+import java.io.StringWriter;
+import java.io.Writer;
+
 public class FakeSearchControl
 	extends FastSearchControl
 {
@@ -27,26 +37,50 @@ public class FakeSearchControl
     System.out.println(" FAKE SEARCH FAKE SEARCH FAKE SEARCH FAKE SEARCH FAKE");
 
 
-		try
-		{
+    try
+    {
+      DatabaseConfig dConfig = DatabaseConfig.getInstance();
+      String fastSearchString = query.getSearchQuery();
+      int intSortOption = 0;
+      if(query.getSortOption() != null)
+      {
+        System.out.println("Setting sort option to 1");
+        intSortOption = 1;
+      }
 
-			DatabaseConfig dConfig = DatabaseConfig.getInstance();
-			String fastSearchString = query.getSearchQuery();
-			int intSortOption = 0;
-			if(query.getSortOption() != null)
-			{
-				System.out.println("Setting sort option to 1");
-				intSortOption = 1;
-			}
+      int i = 1;
 
-			int i = 1;
-			{
-          testDocs.add(new DocID(i++,"gref_1d4755d7117c220db66M745014536192163" ,dConfig.getDatabase("grf")));
+      File georefids = new File("c:\\mids.txt");
+      if(georefids.exists())
+      {
+        BufferedReader rdr = new BufferedReader(new FileReader(georefids)); //new InputStreamReader(getResourceAsStream("georefids.txt")));
+        try {
+         if(rdr != null)
+          {
+            while(rdr.ready())
+            {
+              String aline = rdr.readLine();
+              testDocs.add(new DocID(i++,aline,dConfig.getDatabase("grf")));
+            }
+          }
+          else
+          {
+            System.out.println("Response is null");
+          }
+        }
+        catch(IOException e) {}
+        finally {
+          try {
+          rdr.close();
+          }
+          catch(IOException e) {}
+        }
+        georefids = null;
+      }
+      else
+      {
           testDocs.add(new DocID(i++,"gref_M7e9e911c117c21f8a93M7fdd14536192163" ,dConfig.getDatabase("grf")));
-          testDocs.add(new DocID(i++,"gref_M7e9e911c117c21f8a93M7fdd14536192163" ,dConfig.getDatabase("grf")));
-
-			}
-			System.out.println(" result Count " + testDocs.size());
+      }
 
 /*			else if(fastSearchString.indexOf("page") >-1 )
 			{
