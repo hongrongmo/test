@@ -15,9 +15,7 @@ import org.apache.oro.text.perl.*;
 
 import java.util.regex.*;
 
-
-public class GRFDocBuilder
-    implements DocumentBuilder
+public class GRFDocBuilder implements DocumentBuilder
 {
     public static final String AUDELIMITER = new String(new char[] {30});
     public static final String IDDELIMITER = new String(new char[] {31});
@@ -25,7 +23,6 @@ public class GRFDocBuilder
     public static String GRF_TEXT_COPYRIGHT = "GeoRef, Copyright 2008, American Geological Institute.";
     public static String GRF_HTML_COPYRIGHT = "GeoRef, Copyright &copy; 2008, American Geological Institute.";
     public static String PROVIDER_TEXT = "Ei";
-    private static final Key E_ISSN = new Key(Keys.E_ISSN, "Electronic ISSN");
     private static final Key GRF_CLASS_CODES = new Key(Keys.CLASS_CODES, "Classification codes");
     private static final Key GRF_CONTROLLED_TERMS = new Key(Keys.CONTROLLED_TERMS, "Index terms");
 
@@ -53,7 +50,8 @@ public class GRFDocBuilder
         this.database = database;
     }
 
-   /** This method takes a list of DocID objects and dataFormat
+
+    /** This method takes a list of DocID objects and dataFormat
     *  and returns a List of EIDoc Objects based on a particular
     *  dataformat
     *  @ param listOfDocIDs
@@ -139,33 +137,8 @@ public class GRFDocBuilder
                 ht.put(Keys.COPYRIGHT_TEXT,new XMLWrapper(Keys.COPYRIGHT_TEXT, GRF_TEXT_COPYRIGHT));
 
                 // TI
-                String strtitle = rset.getString("TITLE_OF_ANALYTIC");
-                if(strtitle == null)
-                {
-                  strtitle = rset.getString("TITLE_OF_MONOGRAPH");
-                }
-                else
-                {
-                  String strmonotitle = rset.getString("TITLE_OF_MONOGRAPH");
-                  if(strmonotitle != null)
-                  {
-                    String[] strtitles = strmonotitle.split(GRFDocBuilder.AUDELIMITER);
-                    if(strtitles.length > 0)
-                    {
-                      strmonotitle = strtitles[0].replaceAll(GRFDocBuilder.IDDELIMITER," - ");
-                    }
-                    ht.put(Keys.MONOGRAPH_TITLE, new XMLWrapper(Keys.MONOGRAPH_TITLE,strmonotitle));
-                  }
-                }
-                if(strtitle != null)
-                {
-                  String[] strtitles = strtitle.split(GRFDocBuilder.AUDELIMITER);
-                  if(strtitles.length > 0)
-                  {
-                    strtitle = strtitles[0].replaceAll(GRFDocBuilder.IDDELIMITER," - ");
-                  }
-                  ht.put(Keys.TITLE, new XMLWrapper(Keys.TITLE,strtitle));
-                }
+                ht = viewformat.includeField(Keys.TITLE, ht, new Title(rset));
+                ht = viewformat.includeField(Keys.TITLE_TRANSLATION, ht, new TranslatedTitle(rset));
 
                 // AU-AUS
                 Contributors authors = null;
@@ -183,6 +156,7 @@ public class GRFDocBuilder
                   }
                 }
 
+                // AFF
                 String straffl = null;
                 straffl = rset.getString("AUTHOR_AFFILIATION");
                 if(straffl != null)
@@ -208,12 +182,16 @@ public class GRFDocBuilder
                 {
                   ht.put(Keys.ISSN, new ISSN(rset.getString("ISSN")));
                 }
-
-                // ST
-                if(rset.getString("TITLE_OF_SERIAL") != null)
+                if(viewformat.isIncluded(Keys.E_ISSN))
                 {
-                  ht.put(Keys.SOURCE, new XMLWrapper(Keys.SOURCE,rset.getString("TITLE_OF_SERIAL")));
+                  // E_ISSN
+                  String streissns = rset.getString("EISSN");
+                  if(streissns != null)
+                  {
+                    //ht.put(Keys.E_ISSN, new XMLMultiWrapper(Keys.E_ISSN, strissns.split(GRFDocBuilder.AUDELIMITER)));
+                  }
                 }
+
                 // VOISS
                 // VO
                 String strvoliss = rset.getString("VOLUME_ID");
@@ -239,11 +217,6 @@ public class GRFDocBuilder
                   ht.put(Keys.VOLISSUE, new XMLWrapper(Keys.VOLISSUE ,strvoliss));
                 }
 
-                // LANGUAGE - LA
-                if((rset.getString("LANGUAGE_TEXT") != null) && (!rset.getString("LANGUAGE_TEXT").equalsIgnoreCase("EL")))
-                {
-                    ht.put(Keys.LANGUAGE, new XMLWrapper(Keys.LANGUAGE , rset.getString("LANGUAGE_TEXT")));
-                }
                 // PAGES - PP
                 String strpages = rset.getString("COLLATION_ANALYTIC");
                 if(strpages == null)
@@ -257,12 +230,6 @@ public class GRFDocBuilder
                 if(strpages != null)
                 {
                   ht.put(Keys.PAGE_RANGE, new PageRange(strpages, perl));
-                }
-
-                // PUBLISHER - PN
-                if(rset.getString("PUBLISHER") != null )
-                {
-                  ht.put(Keys.PUBLISHER, new XMLWrapper(Keys.PUBLISHER,rset.getString("PUBLISHER")));
                 }
 
                 // YR
@@ -290,24 +257,6 @@ public class GRFDocBuilder
                   }
                 }
 
-                // CODEN - CN
-                if(viewformat.isIncluded(Keys.CODEN))
-                {
-                  if(rset.getString("CODEN") != null)
-                  {
-                    ht.put(Keys.CODEN, new XMLWrapper(Keys.CODEN,rset.getString("CODEN")));
-                  }
-                }
-
-                // COUNTRY OF PUBLICATION - CPUB
-                if(viewformat.isIncluded(Keys.COUNTRY_OF_PUB))
-                {
-                  if(rset.getString("COUNTRY_OF_PUBLICATION") != null)
-                  {
-                    ht.put(Keys.COUNTRY_OF_PUB, new XMLWrapper(Keys.COUNTRY_OF_PUB,rset.getString("COUNTRY_OF_PUBLICATION")));
-                  }
-                }
-
                 // CONFERENCE DATE
                 if(viewformat.isIncluded(Keys.CONF_DATE))
                 {
@@ -322,15 +271,6 @@ public class GRFDocBuilder
                     }
                   }
                 }
-                // CONFERENCE NAME
-                if(viewformat.isIncluded(Keys.CONFERENCE_NAME))
-                {
-                  String strconf= rset.getString("NAME_OF_MEETING");
-                  if(strconf != null)
-                  {
-                    ht.put(Keys.CONFERENCE_NAME, new XMLWrapper(Keys.CONFERENCE_NAME, strconf));
-                  }
-                }
 
                 // INDEX_TERMS
                 if(viewformat.isIncluded(Keys.INDEX_TERM))
@@ -343,6 +283,11 @@ public class GRFDocBuilder
                   }
                 }
 
+                ht = viewformat.includeField(Keys.CONFERENCE_NAME, "NAME_OF_MEETING", ht, rset);
+                ht = viewformat.includeField(Keys.COUNTRY_OF_PUB, "COUNTRY_OF_PUBLICATION", ht, rset);
+                ht = viewformat.includeField(Keys.CODEN, "CODEN", ht, rset);
+                ht = viewformat.includeField(Keys.PUBLISHER, "PUBLISHER", ht, rset);
+                ht = viewformat.includeField(Keys.SOURCE, "TITLE_OF_SERIAL", ht, rset);
                 ht = viewformat.includeField(Keys.COPYRIGHT, "COPYRIGHT", ht, rset);
                 ht = viewformat.includeField(Keys.ACCESSION_NUMBER, "ID_NUMBER", ht, rset);
                 ht = viewformat.includeField(Keys.NUMBER_OF_REFERENCES, "NUMBER_OF_REFERENCES", ht, rset);
@@ -354,11 +299,13 @@ public class GRFDocBuilder
                 ht = viewformat.includeField(GRFDocBuilder.ANNOTATION, "ANNOTATION", ht, rset);
                 ht = viewformat.includeField(GRFDocBuilder.MAP_SCALE, "MAP_SCALE", ht, rset);
                 ht = viewformat.includeField(GRFDocBuilder.MAP_TYPE, "MAP_TYPE", ht, rset);
-                //ht = viewformat.includeField(GRFDocBuilder.AFFILIATION_OTHER, "AFFILIATION_SECONDARY", ht, rset);
+
+                ht = viewformat.includeField(GRFDocBuilder.AFFILIATION_OTHER, ht, new OtherAffiliation(rset));
 
                 ht = viewformat.includeField(Keys.DOC_TYPE, ht, new DocumenttypeDecorator(new DocumentType(rset)));
                 ht = viewformat.includeField(GRFDocBuilder.CATEGORY, ht, new CategoryDecorator(new Category(rset)));
                 ht = viewformat.includeField(Keys.ABSTRACT_TYPE, ht, new BibliographicLevelDecorator(new BibliographicLevel(rset)));
+                ht = viewformat.includeField(Keys.LANGUAGE, ht, new LanguageDecorator(new Language(rset)));
 
                 // ABSTRACT - AB
                 if(viewformat.isIncluded(Keys.ABSTRACT))
@@ -624,6 +571,7 @@ public class GRFDocBuilder
         private List fields = Arrays.asList(new String[]{"ABSTRACT",
                                                         "BIBLIOGRAPHIC_LEVEL_CODE",
                                                         "CODEN",
+                                                        "EISSN",
                                                         "INDEX_TERMS",
                                                         "NAME_OF_MEETING",
                                                         "ISBN"});
@@ -679,7 +627,6 @@ public class GRFDocBuilder
                                                         "NUMBER_OF_REFERENCES"});
 
         private Key[] keys = new Key[]{Keys.ABBRV_SERIAL_TITLE,
-                                        Keys.ABSTRACT_TYPE,
                                         Keys.ACCESSION_NUMBER,
                                         GRFDocBuilder.AFFILIATION_OTHER,
                                         GRFDocBuilder.ANNOTATION,
@@ -798,7 +745,7 @@ public class GRFDocBuilder
                                                         "ABSTRACT_LANGUAGE",
                                                         "TITLETEXT_LANGUAGE",
                                                         "ISSN",
-                                                        "E_ISSN",
+                                                        "EISSN",
                                                         "DOI",
                                                         "ISBN",
                                                         "LOAD_NUMBER",
@@ -846,18 +793,34 @@ public class GRFDocBuilder
         public String getFormat() { return RIS.RIS_FORMAT; }
     }
 
-
     /* ========================================================================= */
     /* Fields
     /* ========================================================================= */
     public abstract class DocumentField
     {
+      public Map tokenize(String field)
+      {
+        Map multivalues = new HashMap();
+        if(field != null)
+        {
+          String[] strvaluepairs = field.split(GRFDocBuilder.AUDELIMITER);
+          for(int i = 0; i < strvaluepairs.length; i++)
+          {
+            String[] strkeyvalue = strvaluepairs[i].split(GRFDocBuilder.IDDELIMITER);
+            if(strkeyvalue.length == 2)
+            {
+              multivalues.put(strkeyvalue[0],strkeyvalue[1]);
+            }
+          }
+        }
+        return multivalues;
+      }
       public abstract String getValue();
     }
 
     public abstract class ResultsSetField extends DocumentField
     {
-      private ResultSet rs;
+      protected ResultSet rs;
       public ResultsSetField(ResultSet rs)
       {
         this.rs = rs;
@@ -884,6 +847,43 @@ public class GRFDocBuilder
       public abstract String getColumn();
     }
 
+    public class OtherAffiliation extends ResultsSetField
+    {
+      public OtherAffiliation(ResultSet rs)
+      {
+        super(rs);
+      }
+      public String getValue()
+      {
+        String strvalue = super.getValue();
+        if(strvalue != null)
+        {
+          strvalue = strvalue.replaceAll(GRFDocBuilder.AUDELIMITER,";");
+        }
+        return strvalue;
+      }
+      public String getColumn() { return "AFFILIATION_SECONDARY"; }
+    }
+
+    public class Language extends ResultsSetField
+    {
+      public Language(ResultSet rs)
+      {
+        super(rs);
+      }
+      public String getValue()
+      {
+        String strvalue = super.getValue();
+        if((strvalue != null) && strvalue.equalsIgnoreCase("EL"))
+        {
+          strvalue = null;
+        }
+        return strvalue;
+      }
+      public String getColumn() { return "LANGUAGE_TEXT"; }
+    }
+
+
     public class DocumentType extends ResultsSetField
     {
       public DocumentType(ResultSet rs)
@@ -907,6 +907,86 @@ public class GRFDocBuilder
         super(rs);
       }
       public String getColumn() { return "BIBLIOGRAPHIC_LEVEL_CODE"; }
+    }
+
+    public abstract class MultiKeyValueField extends ResultsSetField
+    {
+      public MultiKeyValueField(ResultSet rs)
+      {
+        super(rs);
+      }
+      public Map getValueMap()
+      {
+        Map mapvalues = new HashMap();
+        String strvalue = super.getValue();
+        if(strvalue != null)
+        {
+          mapvalues = tokenize(strvalue);
+        }
+        return mapvalues;
+      }
+
+      public abstract String getValue();
+      public abstract String getColumn();
+    }
+
+    public class Title extends MultiKeyValueField
+    {
+      private MultiKeyValueField alternate = null;
+
+      public Title(ResultSet rs)
+      {
+        super(rs);
+      }
+
+      public String getValue()
+      {
+        this.alternate = new MonographTitle(rs);
+        String strvalue = null;
+        Map mapvalues = getValueMap();
+        if(mapvalues.isEmpty() && (alternate !=null))
+        {
+          mapvalues = alternate.getValueMap();
+        }
+        if(mapvalues.containsKey(getKeyCode()))
+        {
+          strvalue = (String) mapvalues.get(getKeyCode());
+        }
+        else
+        {
+          strvalue = (String) mapvalues.get("T");
+        }
+        //System.out.println(getColumn()+"/"+getKeyCode() + " == " + strvalue);
+        return strvalue;
+      }
+
+      // O Original title, i.e. the title, if any, as given on the document entered in the original language and alphabet
+      // M Original title in original language and alphabet, but modified or enriched in content as part of the cataloguing process
+      // L Original title transliterated or transcribed as part of the cataloging process. Used only for Cyrillic alphabet in GeoRef.
+      // T Original title translated (with or without modification of content) as part of the cataloging process
+
+      public String getColumn() { return "TITLE_OF_ANALYTIC"; }
+      public String getKeyCode() { return "O"; }
+    }
+
+    public class TranslatedTitle extends Title
+    {
+      public TranslatedTitle(ResultSet rs)
+      {
+        super(rs);
+      }
+
+      // T Original title translated (with or without modification of content) as part of the cataloging process
+      public String getKeyCode() { return "L"; }
+    }
+
+    public class MonographTitle extends Title
+    {
+      public MonographTitle(ResultSet rs)
+      {
+        super(rs);
+      }
+      public String getColumn() { return "TITLE_OF_MONOGRAPH"; }
     }
 
     /* ========================================================================= */
@@ -944,6 +1024,30 @@ public class GRFDocBuilder
       public abstract CodeTranslator getTranslator();
     }
 
+    public class LanguageDecorator extends TranslationDecorator
+    {
+      public LanguageDecorator(DocumentField field)
+      {
+        super(field);
+      }
+      public CodeTranslator getTranslator()
+      {
+        return new LanguageTranslator();
+      }
+    }
+
+    public class BibliographicLevelDecorator extends TranslationDecorator
+    {
+      public BibliographicLevelDecorator(DocumentField field)
+      {
+        super(field);
+      }
+      public CodeTranslator getTranslator()
+      {
+        return new BibliographicLevelTranslator();
+      }
+    }
+
     public class CategoryDecorator extends TranslationDecorator
     {
       public CategoryDecorator(DocumentField field)
@@ -971,18 +1075,6 @@ public class GRFDocBuilder
       public CodeTranslator getTranslator()
       {
         return new CategoryTranslator();
-      }
-    }
-
-    public class BibliographicLevelDecorator extends TranslationDecorator
-    {
-      public BibliographicLevelDecorator(DocumentField field)
-      {
-        super(field);
-      }
-      public CodeTranslator getTranslator()
-      {
-        return new BibliographicLevelTranslator();
       }
     }
 
@@ -1057,6 +1149,13 @@ public class GRFDocBuilder
       public Map getTranslationTable()
       {
         return (new GRFDataDictionary()).getBibliographiccodes();
+      }
+    }
+    public class LanguageTranslator extends CodeTranslator
+    {
+      public Map getTranslationTable()
+      {
+        return (new GRFDataDictionary()).getLanguages();
       }
     }
 }
