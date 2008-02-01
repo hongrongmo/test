@@ -38,9 +38,8 @@
     }
   }
 
-  function getNavigators()
+  function getNavigators(searchid)
   {
-    var searchid = "";
     createXMLHttpRequestNav();
     var url = "/controller/servlet/Controller?CID=dynamicNavigators&searchId="+searchid+"&timestamp="+(new Date()).getTime();
     xmlHttpNav.open("GET", url, true);
@@ -59,36 +58,49 @@
         {
           var navdiv = document.getElementById("navigators");
           navdiv.style.border = "0px black solid";
-          navdiv.style.background="#c3c8d1";
+          /* navdiv.style.background="#c3c8d1";*/
 
           var navigators = xmlDocument.getElementsByTagName("NAVIGATOR")
           for(var count = 0; count < navigators.length; count++)
           {
+            var navfield = navigators[count].getAttribute("FIELD")
+
             navfieldset = document.createElement("fieldset");
             navlegend = document.createElement("legend");
-            navlegend.appendChild(document.createTextNode(navigators[count].getAttribute("LABEL")));
-            navlegend.className="MedOrangeText";
+
+            var legendlink = document.createElement("a");
+            legendlink.setAttribute("href","javascript:toggleNavigator('" + navfield + "')");
+            legendlink.className="MedOrangeText";
+            legendlink.appendChild(document.createTextNode(navigators[count].getAttribute("LABEL")));
+
+            navlegend.appendChild(legendlink);
             navfieldset.appendChild(navlegend);
 
-            var navfield = navigators[count].getAttribute("FIELD")
             var modul = newUL();
             modul.id = navfield;
             modul.setAttribute("shown",MODSTATECOUNT);
+            modul.setAttribute("visible","true");
 
             var mods = navigators[count].getElementsByTagName("MODIFIER");
             for(var modcount = 0; (modcount < mods.length); modcount++)
             {
-              var modid = navfield + modcount;
+              var modid = navfield + "nav" + modcount;
+              var modifier_count = mods[modcount].getAttribute("COUNT");
+              var modifier_label = mods[modcount].getElementsByTagName("LABEL")[0].firstChild.nodeValue;
+              var modifier_value = mods[modcount].getElementsByTagName("VALUE")[0].firstChild.nodeValue;
+
               /* create checkbox */
               modchk = document.createElement("input");
               modchk.setAttribute("type","checkbox");
               modchk.id = modid;
+              modchk.name = navfield + "nav";
+              modchk.value =  modifier_count + "~" + modifier_value  + "~" + modifier_label;
               /* create label */
               modlbl = document.createElement("label");
               modlbl.className = "SmBlackText";
               modlbl.htmlFor = modid;
-              modlbl.appendChild(document.createTextNode(mods[modcount].getElementsByTagName("LABEL")[0].firstChild.nodeValue));
-              modlbl.appendChild(document.createTextNode(" (" + mods[modcount].getAttribute("COUNT") + ")"));
+              modlbl.appendChild(document.createTextNode(modifier_label));
+              modlbl.appendChild(document.createTextNode(" (" + modifier_count+ ")"));
 
               /* create listitem */
               modli = document.createElement("li");
@@ -124,6 +136,29 @@
             navdiv.appendChild(navfieldset);
           }
         }
+      }
+    }
+  }
+
+  function toggleNavigator(navfieldid)
+  {
+    var navul = document.getElementById(navfieldid);
+    if(navul != null)
+    {
+      var pagerdiv = document.getElementById(navfieldid + "pagers");
+      var isvisible = navul.getAttribute("visible");
+
+      if(isvisible == "true")
+      {
+        navul.style.display="none";
+        pagerdiv.style.display="none";
+        navul.setAttribute("visible","false");
+      }
+      else
+      {
+        navul.style.display="block";
+        pagerdiv.style.display="block";
+        navul.setAttribute("visible","true");
       }
     }
   }
