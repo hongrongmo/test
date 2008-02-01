@@ -56,8 +56,8 @@
         var xmlDocument = xmlHttpNav.responseXML;
         if(typeof(xmlDocument) != 'undefined')
         {
-          var navdiv = document.getElementById("navigators");
-          navdiv.style.border = "0px black solid";
+          var navcontainer = document.getElementById("navigators");
+          navcontainer.style.border = "0px black solid";
           /* navdiv.style.background="#c3c8d1";*/
 
           var navigators = xmlDocument.getElementsByTagName("NAVIGATOR")
@@ -65,14 +65,12 @@
           {
             var navfield = navigators[count].getAttribute("FIELD")
 
-            navfieldset = document.createElement("fieldset");
-            navlegend = document.createElement("legend");
-
+            var navfieldset = document.createElement("fieldset");
+            var navlegend = document.createElement("legend");
             var legendlink = document.createElement("a");
             legendlink.setAttribute("href","javascript:toggleNavigator('" + navfield + "')");
             legendlink.className="MedOrangeText";
             legendlink.appendChild(document.createTextNode(navigators[count].getAttribute("LABEL")));
-
             navlegend.appendChild(legendlink);
             navfieldset.appendChild(navlegend);
 
@@ -90,20 +88,20 @@
               var modifier_value = mods[modcount].getElementsByTagName("VALUE")[0].firstChild.nodeValue;
 
               /* create checkbox */
-              modchk = document.createElement("input");
+              var modchk = document.createElement("input");
               modchk.setAttribute("type","checkbox");
               modchk.id = modid;
               modchk.name = navfield + "nav";
               modchk.value =  modifier_count + "~" + modifier_value  + "~" + modifier_label;
               /* create label */
-              modlbl = document.createElement("label");
+              var modlbl = document.createElement("label");
               modlbl.className = "SmBlackText";
               modlbl.htmlFor = modid;
               modlbl.appendChild(document.createTextNode(modifier_label));
               modlbl.appendChild(document.createTextNode(" (" + modifier_count+ ")"));
 
               /* create listitem */
-              modli = document.createElement("li");
+              var modli = document.createElement("li");
               modli.style.display="none";
 
               /* append checkbox and label */
@@ -121,7 +119,6 @@
             /* append unordered list of modifiers */
             navfieldset.appendChild(modul);
 
-            /* <PAGERS FIELD="yr"><MORE COUNT="20"/></PAGERS> */
             var divpagers = document.createElement("div");
             divpagers.style.textAlign="right";
             divpagers.id = navfield + "pagers";
@@ -133,7 +130,7 @@
             }
 
             navfieldset.appendChild(divpagers);
-            navdiv.appendChild(navfieldset);
+            navcontainer.appendChild(navfieldset);
           }
         }
       }
@@ -182,7 +179,7 @@
       var decrement = ((shown % MODSTATECOUNT) == 0) ? MODSTATECOUNT : (shown % MODSTATECOUNT);
       for(; ((shown > 0) && (lindex > shown - decrement)); lindex--)
       {
-        navdiv.childNodes[lindex].style.display="none";
+        navdiv.childNodes[lindex-1].style.display="none";
       }
       navdiv.setAttribute("shown",lindex);
     }
@@ -209,8 +206,7 @@
     var modpager = document.createElement("a");
     modpager.className="MedBlueLink";
     modpager.setAttribute("href","javascript:pageModifiers('" + navfield + "','" + linklabel + "')");
-    modpager.appendChild(document.createTextNode(linklabel));
-    modpager.appendChild(document.createTextNode('\u0085'));
+    modpager.innerHTML = (linklabel == MORE) ? linklabel + "&#133" : "&#133" + linklabel;
 
 
     return modpager;
