@@ -170,9 +170,9 @@ public class LibraryVisitor implements Visitor
 
   					if (curCollectionName.equals(allcolls[i].getAbbrev()))
   					{
-  						if (((j + 1) < creds.length && !curCollectionName
-  								.equals(creds[j + 1].substring(0, 3)))
-  								|| (!perpetual && creds[j].length() == 3))
+ 						if (j == creds.length-1
+  						|| ((j + 1) < creds.length && !curCollectionName.equals(creds[j + 1].substring(0, 3)))
+  						|| (!perpetual && creds[j].length() == 3))
   						{
   							Integer subCount = (Integer) collectionMap
   									.get(allcolls[i].getAbbrev());
