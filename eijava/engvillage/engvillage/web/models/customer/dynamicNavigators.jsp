@@ -47,7 +47,7 @@
     searchId = "1474e45117d09b01c1M7ff814536192173";
   } */
 
-  if(searchId != null && !searchId.equals(""))
+  if(searchId != null && !searchId.equals("") && !searchId.equals("undefined"))
   {
     log("dynamicNavigators => searchId: " + searchId + ", sessionId " + sessionId);
 
@@ -79,11 +79,11 @@
 	if(nav != null)
 	{
     out.write(nav.toXML(queryObject.getResultsState()));
-    log(nav.toXML(queryObject.getResultsState()));
 	}
   else
   {
     out.write("<NAVIGATORS>");
+    /*
     out.write("<NAVIGATOR ");
     out.write(" NAME=\"Test\"");
     out.write(" LABEL=\"Test\"");
@@ -94,6 +94,7 @@
     out.write("<LABEL><![CDATA[One]]></LABEL>");
     out.write("</MODIFIER>");
     out.write("</NAVIGATOR>");
+    */
     out.write("</NAVIGATORS>");
   }
 	out.close();
