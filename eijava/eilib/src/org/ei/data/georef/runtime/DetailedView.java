@@ -26,40 +26,62 @@ import org.ei.domain.FullDoc;
                                                         "REPORT_NUMBER",
                                                         "NUMBER_OF_REFERENCES"});
 
-        private Key[] keys = new Key[]{Keys.ABBRV_SERIAL_TITLE,
-                                        Keys.ACCESSION_NUMBER,
-                                        GRFDocBuilder.AFFILIATION_OTHER,
-                                        GRFDocBuilder.ANNOTATION,
-                                        Keys.ARTICLE_NUMBER,
-                                        Keys.CONF_CODE,
-                                        Keys.COUNTRY_OF_PUB,
-                                        Keys.DOC_TYPE,
-                                        Keys.DOI,
-                                        Keys.GLOBAL_TAGS,
+        // Since the order of these keys dtermines their display on the Detailed record page
+        // explicitly set the Key values here instead of comibing with Abstract or Citation classes
+        private Key[] keys = new Key[]{Keys.ACCESSION_NUMBER,
+                                        Keys.TITLE,
+                                        Keys.TITLE_TRANSLATION,
+                                        Keys.AUTHORS,
+                                        Keys.EDITORS,
+                                        Keys.AUTHOR_AFFS,
+                                        Keys.EDITOR_AFFS,
+                                        Keys.CORRESPONDENCE_PERSON,
+                                        Keys.SERIAL_TITLE,
+                                        Keys.ABBRV_SERIAL_TITLE,
+                                        Keys.VOLUME,
                                         Keys.ISSUE,
+                                        Keys.MONOGRAPH_TITLE,
+                                        Keys.ISSUE_DATE,
+                                        Keys.PUBLICATION_YEAR,
+                                        Keys.PAGE_RANGE,
+                                        Keys.PAGE_COUNT,
+                                        Keys.ARTICLE_NUMBER,
+                                        Keys.LANGUAGE,
+                                        Keys.ISSN,
+                                        Keys.E_ISSN,
+                                        Keys.CODEN,
+                                        Keys.ISBN,
+                                        Keys.DOC_TYPE,
+                                        Keys.SOURCE_COUNTRY,
+                                        Keys.CONFERENCE_NAME,
+                                        Keys.CONF_DATE,
+                                        Keys.MEETING_LOCATION,
+                                        Keys.CONF_CODE,
+                                        Keys.SPONSOR,
+                                        Keys.PUBLISHER,
+                                        Keys.ABSTRACT,
+                                        Keys.ABSTRACT_TYPE,
+                                        Keys.NUMBER_OF_REFERENCES,
                                         GRFDocBuilder.ILLUSTRATION,
                                         GRFDocBuilder.MAP_SCALE,
                                         GRFDocBuilder.MAP_TYPE,
                                         GRFDocBuilder.CATEGORY,
-                                        Keys.MEETING_LOCATION,
-                                        Keys.NUMBER_OF_REFERENCES,
-                                        Keys.PAGE_COUNT,
-                                        Keys.PRIVATE_TAGS,
+                                        Keys.MAIN_HEADING,
+                                        Keys.CONTROLLED_TERMS,
+                                        Keys.SPECIES_TERMS,
                                         Keys.REGION_CONTROLLED_TERMS,
-                                        Keys.REPORT_NUMBER,
-                                        Keys.SERIAL_TITLE,
-                                        Keys.SOURCE_COUNTRY,
-                                        Keys.TITLE_TRANSLATION,
-                                        Keys.DOC_URL,
+                                        Keys.CLASS_CODES,
                                         Keys.TREATMENTS,
-                                        Keys.VOLUME};
+                                        Keys.GLOBAL_TAGS,
+                                        Keys.PRIVATE_TAGS,
+                                        Keys.DOI,
+                                        Keys.DOCID,
+                                        Keys.COPYRIGHT,
+                                        Keys.COPYRIGHT_TEXT,
+                                        Keys.PROVIDER};
 
         public Key[] getKeys() {
-          List abstractkeys = new ArrayList();
-          abstractkeys.addAll(Arrays.asList((new AbstractView()).getKeys()));
-          abstractkeys.addAll(Arrays.asList(keys));
-          abstractkeys.remove(Keys.VOLISSUE);
-          return (Key[]) abstractkeys.toArray(new Key[]{});
+          return keys;
         }
 
         public List getFields()
