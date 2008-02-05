@@ -44,9 +44,8 @@ public abstract class DocumentView {
       // TI
       addDocumentValue(Keys.TITLE, getTitle());
       addDocumentValue(Keys.VOLISSUE, getVolIssue());
-      addDocumentValue(Keys.TITLE_TRANSLATION, new TranslatedTitle());
-      addDocumentValue(Keys.VOLUME, new Volume());
-      addDocumentValue(Keys.ISSUE, new Issue());
+      addDocumentValue(Keys.TITLE_TRANSLATION, getTranslatedTitle());
+      addDocumentValue(Keys.ABSTRACT, getAbstract());
 
       // AU-AUS
       Contributors authors = null;
@@ -165,30 +164,34 @@ public abstract class DocumentView {
         }
       }
 
-      addDocumentValue(Keys.CONFERENCE_NAME, new ColumnValueField("NAME_OF_MEETING"));
-      addDocumentValue(Keys.COUNTRY_OF_PUB, new ColumnValueField("COUNTRY_OF_PUBLICATION"));
-      addDocumentValue(Keys.CODEN, new ColumnValueField("CODEN"));
-      addDocumentValue(Keys.PUBLISHER, new ColumnValueField("PUBLISHER"));
-      addDocumentValue(Keys.SOURCE, new ColumnValueField("TITLE_OF_SERIAL"));
-      addDocumentValue(Keys.COPYRIGHT, new ColumnValueField("COPYRIGHT"));
-      addDocumentValue(Keys.ACCESSION_NUMBER, new ColumnValueField("ID_NUMBER"));
-      addDocumentValue(Keys.NUMBER_OF_REFERENCES, new ColumnValueField("NUMBER_OF_REFERENCES"));
-      addDocumentValue(Keys.DOC_URL, new ColumnValueField("URL"));
-      addDocumentValue(Keys.REPORT_NUMBER, new ColumnValueField("REPORT_NUMBER"));
-      addDocumentValue(Keys.DOI, new ColumnValueField("DOI"));
+      addDocumentValue(Keys.VOLUME, createColumnValueField("VOLUME_ID"));
+      addDocumentValue(Keys.ISSUE, createColumnValueField("ISSUE_ID"));
 
-      addDocumentValue(GRFDocBuilder.ILLUSTRATION, new ColumnValueField("ILLUSTRATION"));
-      addDocumentValue(GRFDocBuilder.ANNOTATION, new ColumnValueField("ANNOTATION"));
-      addDocumentValue(GRFDocBuilder.MAP_SCALE, new ColumnValueField("MAP_SCALE"));
-      addDocumentValue(GRFDocBuilder.MAP_TYPE, new ColumnValueField("MAP_TYPE"));
+      addDocumentValue(Keys.CONFERENCE_NAME, createColumnValueField("NAME_OF_MEETING"));
+      addDocumentValue(Keys.COUNTRY_OF_PUB, createColumnValueField("COUNTRY_OF_PUBLICATION"));
+      addDocumentValue(Keys.CODEN, createColumnValueField("CODEN"));
+      addDocumentValue(Keys.PUBLISHER, createColumnValueField("PUBLISHER"));
+      addDocumentValue(Keys.SOURCE, createColumnValueField("TITLE_OF_SERIAL"));
+      addDocumentValue(Keys.COPYRIGHT, createColumnValueField("COPYRIGHT"));
+      addDocumentValue(Keys.ACCESSION_NUMBER, createColumnValueField("ID_NUMBER"));
+      addDocumentValue(Keys.NUMBER_OF_REFERENCES, createColumnValueField("NUMBER_OF_REFERENCES"));
+      addDocumentValue(Keys.DOC_URL, createColumnValueField("URL"));
+      addDocumentValue(Keys.REPORT_NUMBER, createColumnValueField("REPORT_NUMBER"));
+      addDocumentValue(Keys.DOI, createColumnValueField("DOI"));
 
-      addDocumentValue(GRFDocBuilder.AFFILIATION_OTHER, new OtherAffiliation());
-      addDocumentValue(Keys.ABSTRACT, new DocumentAbstract());
+      addDocumentValue(GRFDocBuilder.ILLUSTRATION, createColumnValueField("ILLUSTRATION"));
+      addDocumentValue(GRFDocBuilder.ANNOTATION, createColumnValueField("ANNOTATION"));
+      addDocumentValue(GRFDocBuilder.MAP_SCALE, createColumnValueField("MAP_SCALE"));
+      addDocumentValue(GRFDocBuilder.MAP_TYPE, createColumnValueField("MAP_TYPE"));
+      addDocumentValue(GRFDocBuilder.HOLDING_LIBRARY, createColumnValueField("HOLDING_LIBRARY"));
+      addDocumentValue(GRFDocBuilder.TARGET_AUDIENCE, createColumnValueField("TARGET_AUDIENCE"));
 
-      addDocumentValue(Keys.DOC_TYPE, new DocumenttypeDecorator(new DocumentType()));
-      addDocumentValue(Keys.ABSTRACT_TYPE, new BibliographicLevelDecorator(new BibliographicLevel()));
-      addDocumentValue(Keys.LANGUAGE, new LanguageDecorator(new Language()));
-      addDocumentValue(GRFDocBuilder.CATEGORY, new CategoryDecorator(new Category()));
+
+      addDocumentValue(GRFDocBuilder.AFFILIATION_OTHER, new OtherAffiliationDecorator(createColumnValueField("AFFILIATION_SECONDARY")));
+      addDocumentValue(Keys.DOC_TYPE, new DocumentTypeDecorator(createColumnValueField("DOCUMENT_TYPE")));
+      addDocumentValue(Keys.LANGUAGE, new LanguageDecorator(createColumnValueField("LANGUAGE_TEXT")));
+      addDocumentValue(Keys.ABSTRACT_TYPE, new BibliographicLevelDecorator(createColumnValueField("BIBLIOGRAPHIC_LEVEL_CODE")));
+      addDocumentValue(GRFDocBuilder.CATEGORY, new CategoryDecorator(createColumnValueField("CATEGORY_CODE")));
 
       EIDoc eiDoc = new EIDoc(did, ht, getFormat());
       eiDoc.exportLabels(exportLabels());
@@ -198,6 +201,8 @@ public abstract class DocumentView {
       return eiDoc;
     }
 
+    public String toString() { return getFormat() + "\n == \n" + getQuery(); }
+
     public String getQuery()
     {
       return "SELECT " + StringUtil.join(getFields(),",") + " FROM GEOREF_MASTER WHERE M_ID IN ";
@@ -205,6 +210,14 @@ public abstract class DocumentView {
     public boolean isIncluded(Key key)
     {
       return (Arrays.asList(getKeys()).contains(key));
+    }
+
+    private ResultsSetField createColumnValueField(String columnname)
+    {
+      ResultsSetField rsfield = new ColumnValueField(columnname);
+      rsfield.setResultSet(rset);
+
+      return rsfield;
     }
 
     public void addDocumentValue(Key key, String strfieldvalue)
@@ -225,15 +238,6 @@ public abstract class DocumentView {
       }
     }
 
-    public void addDocumentValue(Key key, ResultsSetField field)
-        throws Exception
-    {
-      if(isIncluded(key))
-      {
-        putXMLWrappedValue(key, field.setResultSet(rset).getValue());
-      }
-    }
-
     private void putXMLWrappedValue(Key key, String strvalue)
     {
       if(strvalue != null)
@@ -241,8 +245,6 @@ public abstract class DocumentView {
         ht.put(key, new XMLWrapper(key, strvalue));
       }
     }
-
-    public String toString() { return getFormat() + "\n == \n" + getQuery(); }
 
     private List getContributors(String strAuthors, Key key)
     {
@@ -271,35 +273,53 @@ public abstract class DocumentView {
       return list;
     }
 
-    public String getTitle()
+    private String getTranslatedTitle()
     {
       String strvalue = null;
       if(strvalue == null)
       {
-        strvalue = (new OriginalTitle()).setResultSet(rset).getValue();
-      }
-      if(strvalue == null)
-      {
-        strvalue = (new TransliteratedTitle()).setResultSet(rset).getValue();
-      }
-      if(strvalue == null)
-      {
-        strvalue = (new MonographTitle()).setResultSet(rset).getValue();
+        ResultsSetField afield = new TranslatedTitle();
+        afield.setResultSet(rset);
+        strvalue = afield.getValue();
       }
       return strvalue;
     }
 
-    public String getVolIssue()
+    private String getTitle()
+    {
+      String strvalue = null;
+      if(strvalue == null)
+      {
+        ResultsSetField afield = new OriginalTitle();
+        afield.setResultSet(rset);
+        strvalue = afield.getValue();
+      }
+      if(strvalue == null)
+      {
+        ResultsSetField afield = new TransliteratedTitle();
+        afield.setResultSet(rset);
+        strvalue = afield.getValue();
+      }
+      if(strvalue == null)
+      {
+        ResultsSetField afield = new MonographTitle();
+        afield.setResultSet(rset);
+        strvalue = afield.getValue();
+      }
+      return strvalue;
+    }
+
+    private String getVolIssue()
     {
       String strvalue = null;
       List lstvalues = new ArrayList();
-      strvalue = (new Volume()).setResultSet(rset).getValue();
+      strvalue = createColumnValueField("VOLUME_ID").getValue();
       if(strvalue != null)
       {
         lstvalues.add(strvalue);
         strvalue = null;
       }
-      strvalue = (new Issue()).setResultSet(rset).getValue();
+      strvalue = createColumnValueField("ISSUE_ID").getValue();
       if(strvalue != null)
       {
         lstvalues.add(strvalue);
@@ -310,6 +330,31 @@ public abstract class DocumentView {
       }
 
       return strvalue;
+    }
+
+    private String getAbstract()
+    {
+      String strvalue = null;
+      if(isIncluded(Keys.ABSTRACT))
+      {
+        try
+        {
+          Clob clob = rset.getClob("ABSTRACT");
+          if(clob != null)
+          {
+            strvalue = StringUtil.getStringFromClob(clob);
+          }
+        }
+        catch(SQLException sqle)
+        {
+          sqle.printStackTrace();
+        }
+        catch(Exception e)
+        {
+          e.printStackTrace();
+        }
+      }
+      return (strvalue == null || strvalue.length() < GRFDocBuilder.MINIMUM_ABSTRACT_LENGTH) ? null : strvalue;
     }
 
     /* ========================================================================= */
@@ -328,10 +373,9 @@ public abstract class DocumentView {
     public abstract class ResultsSetField extends DocumentField
     {
       protected  ResultSet rs = null;
-      public ResultsSetField setResultSet(ResultSet rs)
+      public void setResultSet(ResultSet rs)
       {
         this.rs = rs;
-        return this;
       }
 
       public String getValue()
@@ -367,82 +411,6 @@ public abstract class DocumentView {
       }
       public String getColumn() { return m_column; }
     }
-
-    public class DocumentAbstract extends ResultsSetField
-    {
-      public String getValue()
-      {
-        String strvalue = null;
-        try
-        {
-          Clob clob = rs.getClob("ABSTRACT");
-          if(clob != null)
-          {
-            strvalue = StringUtil.getStringFromClob(clob);
-          }
-        }
-        catch(SQLException sqle)
-        {
-          sqle.printStackTrace();
-        }
-        catch(Exception e)
-        {
-          e.printStackTrace();
-        }
-        return (strvalue == null || strvalue.length() < 100) ? null : strvalue;
-      }
-      public String getColumn() { return "ABSTRACT"; }
-    }
-
-    public class OtherAffiliation extends ResultsSetField
-    {
-      public String getValue()
-      {
-        String strvalue = super.getValue();
-        if(strvalue != null)
-        {
-          strvalue = strvalue.replaceAll(GRFDocBuilder.AUDELIMITER,";");
-        }
-        return strvalue;
-      }
-      public String getColumn() { return "AFFILIATION_SECONDARY"; }
-    }
-
-    public class Language extends ResultsSetField
-    {
-      public String getValue()
-      {
-        String strvalue = super.getValue();
-        if((strvalue != null) && strvalue.equalsIgnoreCase("EL"))
-        {
-          strvalue = null;
-        }
-        return strvalue;
-      }
-      public String getColumn() { return "LANGUAGE_TEXT"; }
-    }
-
-    public class DocumentType extends ResultsSetField
-    {
-      public String getColumn() { return "DOCUMENT_TYPE"; }
-    }
-    public class Category extends ResultsSetField
-    {
-      public String getColumn() { return "CATEGORY_CODE"; }
-    }
-    public class BibliographicLevel extends ResultsSetField
-    {
-      public String getColumn() { return "BIBLIOGRAPHIC_LEVEL_CODE"; }
-    }
-    public class Issue extends ResultsSetField
-    {
-      public String getColumn() { return "ISSUE_ID"; }
-    }
-    public class Volume extends ResultsSetField
-    {
-      public String getColumn() { return "VOLUME_ID"; }
-    }
-
 
     public abstract class MultiNameValueField extends ResultsSetField
     {
@@ -522,6 +490,24 @@ public abstract class DocumentView {
     {
     }
 
+    public class OtherAffiliationDecorator extends FieldDecorator
+    {
+      protected  DocumentField field;
+      public OtherAffiliationDecorator(DocumentField field)
+      {
+        this.field = field;
+      }
+      public String getValue()
+      {
+        String strvalue = field.getValue();
+        if(strvalue != null)
+        {
+          strvalue = strvalue.replaceAll(GRFDocBuilder.AUDELIMITER,";");
+        }
+        return strvalue;
+      }
+    }
+
     /*
     * Translation Decorators
     */
@@ -561,6 +547,19 @@ public abstract class DocumentView {
       public LanguageDecorator(DocumentField field)
       {
         super(field);
+      }
+      public String getValue()
+      {
+        String strvalue = field.getValue();
+        if((strvalue != null) && !strvalue.equalsIgnoreCase("EL"))
+        {
+          strvalue = super.getValue();
+        }
+        else
+        {
+          strvalue = null;
+        }
+        return strvalue;
       }
       public Map getLookupTable()
       {
@@ -626,9 +625,9 @@ public abstract class DocumentView {
       }
     }
 
-    public class DocumenttypeDecorator extends MultiValueTranslationDecorator
+    public class DocumentTypeDecorator extends MultiValueTranslationDecorator
     {
-      public DocumenttypeDecorator(DocumentField field)
+      public DocumentTypeDecorator(DocumentField field)
       {
         super(field);
       }
