@@ -10,7 +10,6 @@ import org.ei.domain.Abstract;
     public class AbstractView extends DocumentView {
 
         private List fields = Arrays.asList(new String[]{"ABSTRACT",
-                                                        "BIBLIOGRAPHIC_LEVEL_CODE",
                                                         "CODEN",
                                                         "EISSN",
                                                         "INDEX_TERMS",
@@ -18,7 +17,6 @@ import org.ei.domain.Abstract;
                                                         "ISBN"});
 
         private Key[] keys = new Key[]{Keys.ABSTRACT,
-                                        Keys.ABSTRACT_TYPE,
                                         Keys.CLASS_CODES,
                                         Keys.CODEN,
                                         Keys.CONFERENCE_NAME,

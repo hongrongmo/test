@@ -12,6 +12,7 @@ import org.ei.domain.FullDoc;
 
         private List fields = Arrays.asList(new String[]{"DOI",
                                                         "URL",
+                                                        "BIBLIOGRAPHIC_LEVEL_CODE",
                                                         "ILLUSTRATION",
                                                         "ID_NUMBER",
                                                         "MAP_TYPE",
