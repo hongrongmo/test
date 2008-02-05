@@ -17,6 +17,8 @@ import java.util.regex.*;
 
 public class GRFDocBuilder implements DocumentBuilder
 {
+    public static final int MINIMUM_ABSTRACT_LENGTH = 100;
+
     public static final String AUDELIMITER = new String(new char[] {30});
     public static final String IDDELIMITER = new String(new char[] {31});
     public static final String GROUPDELIMITER = new String(new char[] {02});
@@ -32,6 +34,9 @@ public class GRFDocBuilder implements DocumentBuilder
     public static final Key MAP_TYPE = new Key("MPT", "Map type");
     public static final Key AFFILIATION_OTHER = new Key("OAF", "Other affiliation");
     public static final Key CATEGORY = new Key("CAT", "Category");
+    public static final Key TARGET_AUDIENCE = new Key("AUD", "Target audience");
+    public static final Key HOLDING_LIBRARY = new Key("HOLD", "Holding Library");
+
 
     private Database database;
 
