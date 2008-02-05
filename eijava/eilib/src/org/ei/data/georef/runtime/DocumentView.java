@@ -42,13 +42,11 @@ public abstract class DocumentView {
       ht.put(Keys.COPYRIGHT_TEXT,new XMLWrapper(Keys.COPYRIGHT_TEXT, GRFDocBuilder.GRF_TEXT_COPYRIGHT));
 
       // TI
-      ht.put(Keys.TITLE, new XMLWrapper(Keys.TITLE, getTitle()));
-
+      addDocumentValue(Keys.TITLE, getTitle());
+      addDocumentValue(Keys.VOLISSUE, getVolIssue());
       addDocumentValue(Keys.TITLE_TRANSLATION, new TranslatedTitle());
       addDocumentValue(Keys.VOLUME, new Volume());
       addDocumentValue(Keys.ISSUE, new Issue());
-      addDocumentValue(Keys.VOLISSUE, new VolIssue());
-
 
       // AU-AUS
       Contributors authors = null;
@@ -167,22 +165,22 @@ public abstract class DocumentView {
         }
       }
 
-      addDocumentValue(Keys.CONFERENCE_NAME, "NAME_OF_MEETING");
-      addDocumentValue(Keys.COUNTRY_OF_PUB, "COUNTRY_OF_PUBLICATION");
-      addDocumentValue(Keys.CODEN, "CODEN");
-      addDocumentValue(Keys.PUBLISHER, "PUBLISHER");
-      addDocumentValue(Keys.SOURCE, "TITLE_OF_SERIAL");
-      addDocumentValue(Keys.COPYRIGHT, "COPYRIGHT");
-      addDocumentValue(Keys.ACCESSION_NUMBER, "ID_NUMBER");
-      addDocumentValue(Keys.NUMBER_OF_REFERENCES, "NUMBER_OF_REFERENCES");
-      addDocumentValue(Keys.DOC_URL, "URL");
-      addDocumentValue(Keys.REPORT_NUMBER, "REPORT_NUMBER");
-      addDocumentValue(Keys.DOI, "DOI");
+      addDocumentValue(Keys.CONFERENCE_NAME, new ColumnValueField("NAME_OF_MEETING"));
+      addDocumentValue(Keys.COUNTRY_OF_PUB, new ColumnValueField("COUNTRY_OF_PUBLICATION"));
+      addDocumentValue(Keys.CODEN, new ColumnValueField("CODEN"));
+      addDocumentValue(Keys.PUBLISHER, new ColumnValueField("PUBLISHER"));
+      addDocumentValue(Keys.SOURCE, new ColumnValueField("TITLE_OF_SERIAL"));
+      addDocumentValue(Keys.COPYRIGHT, new ColumnValueField("COPYRIGHT"));
+      addDocumentValue(Keys.ACCESSION_NUMBER, new ColumnValueField("ID_NUMBER"));
+      addDocumentValue(Keys.NUMBER_OF_REFERENCES, new ColumnValueField("NUMBER_OF_REFERENCES"));
+      addDocumentValue(Keys.DOC_URL, new ColumnValueField("URL"));
+      addDocumentValue(Keys.REPORT_NUMBER, new ColumnValueField("REPORT_NUMBER"));
+      addDocumentValue(Keys.DOI, new ColumnValueField("DOI"));
 
-      addDocumentValue(GRFDocBuilder.ILLUSTRATION, "ILLUSTRATION");
-      addDocumentValue(GRFDocBuilder.ANNOTATION, "ANNOTATION");
-      addDocumentValue(GRFDocBuilder.MAP_SCALE, "MAP_SCALE");
-      addDocumentValue(GRFDocBuilder.MAP_TYPE, "MAP_TYPE");
+      addDocumentValue(GRFDocBuilder.ILLUSTRATION, new ColumnValueField("ILLUSTRATION"));
+      addDocumentValue(GRFDocBuilder.ANNOTATION, new ColumnValueField("ANNOTATION"));
+      addDocumentValue(GRFDocBuilder.MAP_SCALE, new ColumnValueField("MAP_SCALE"));
+      addDocumentValue(GRFDocBuilder.MAP_TYPE, new ColumnValueField("MAP_TYPE"));
 
       addDocumentValue(GRFDocBuilder.AFFILIATION_OTHER, new OtherAffiliation());
       addDocumentValue(Keys.ABSTRACT, new DocumentAbstract());
@@ -209,16 +207,12 @@ public abstract class DocumentView {
       return (Arrays.asList(getKeys()).contains(key));
     }
 
-    public void addDocumentValue(Key key, String strfieldname)
+    public void addDocumentValue(Key key, String strfieldvalue)
         throws Exception
     {
       if(isIncluded(key))
       {
-        String strvalue = this.rset.getString(strfieldname);
-        if(strvalue != null)
-        {
-          ht.put(key, new XMLWrapper(key, strvalue));
-        }
+        putXMLWrappedValue(key, strfieldvalue);
       }
     }
 
@@ -227,11 +221,7 @@ public abstract class DocumentView {
     {
       if(isIncluded(key))
       {
-        String strvalue = field.getValue();
-        if(strvalue != null)
-        {
-          ht.put(key, new XMLWrapper(key, strvalue));
-        }
+        putXMLWrappedValue(key, field.getValue());
       }
     }
 
@@ -240,11 +230,15 @@ public abstract class DocumentView {
     {
       if(isIncluded(key))
       {
-        String strvalue = field.setResultSet(rset).getValue();
-        if(strvalue != null)
-        {
-          ht.put(key, new XMLWrapper(key, strvalue));
-        }
+        putXMLWrappedValue(key, field.setResultSet(rset).getValue());
+      }
+    }
+
+    private void putXMLWrappedValue(Key key, String strvalue)
+    {
+      if(strvalue != null)
+      {
+        ht.put(key, new XMLWrapper(key, strvalue));
       }
     }
 
@@ -295,8 +289,31 @@ public abstract class DocumentView {
       return strvalue;
     }
 
+    public String getVolIssue()
+    {
+      String strvalue = null;
+      List lstvalues = new ArrayList();
+      strvalue = (new Volume()).setResultSet(rset).getValue();
+      if(strvalue != null)
+      {
+        lstvalues.add(strvalue);
+        strvalue = null;
+      }
+      strvalue = (new Issue()).setResultSet(rset).getValue();
+      if(strvalue != null)
+      {
+        lstvalues.add(strvalue);
+      }
+      if(!lstvalues.isEmpty())
+      {
+        strvalue = StringUtil.join(lstvalues,", ");
+      }
+
+      return strvalue;
+    }
+
     /* ========================================================================= */
-    /* Inner classes */
+    /* Inner classes                                                             */
     /* ========================================================================= */
 
 
@@ -308,43 +325,6 @@ public abstract class DocumentView {
       public abstract String getValue();
     }
 
-    public abstract class ConcatendatedDocumentFields extends DocumentField
-    {
-      public String getValue()
-      {
-        String strreturnvalue = null;
-
-        List values = new ArrayList();
-        Iterator itr = getFields().iterator();
-        while(itr.hasNext())
-        {
-          DocumentField field = (DocumentField) itr.next();
-          String strvalue = field.getValue();
-          if(strvalue != null)
-          {
-            values.add(field.getValue());
-          }
-        }
-        if(!values.isEmpty())
-        {
-          strreturnvalue = StringUtil.join(values,getConcatenationString());
-        }
-        return strreturnvalue;
-      }
-      public String getConcatenationString()
-      {
-        return ", ";
-      }
-      public abstract List getFields();
-    }
-
-    public class VolIssue extends ConcatendatedDocumentFields
-    {
-      public List getFields()
-      {
-        return Arrays.asList(new DocumentField[]{new Volume(), new Issue()});
-      }
-    }
     public abstract class ResultsSetField extends DocumentField
     {
       protected  ResultSet rs = null;
@@ -377,6 +357,16 @@ public abstract class DocumentView {
       public abstract String getColumn();
     }
 
+    public class ColumnValueField extends ResultsSetField
+    {
+      String m_column = null;
+
+      public ColumnValueField(String column)
+      {
+        m_column = column;
+      }
+      public String getColumn() { return m_column; }
+    }
 
     public class DocumentAbstract extends ResultsSetField
     {
@@ -563,7 +553,6 @@ public abstract class DocumentView {
         }
         return decoratedvalue;
       }
-
       public abstract Map getLookupTable();
     }
 
@@ -619,10 +608,8 @@ public abstract class DocumentView {
         }
         return decoratedvalue;
       }
-
       public abstract String getSplitExpression();
       public abstract String getConcatenationString();
-
     }
 
     public class CategoryDecorator extends MultiValueTranslationDecorator
@@ -645,7 +632,6 @@ public abstract class DocumentView {
       {
         super(field);
       }
-
       public String getSplitExpression() { return "\\w"; }
       public String getConcatenationString() { return ", "; }
       public Map getLookupTable()
