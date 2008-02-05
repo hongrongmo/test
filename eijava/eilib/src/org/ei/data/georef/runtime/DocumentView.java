@@ -533,6 +533,8 @@ public abstract class DocumentView {
     */
     public abstract class TranslationDecorator extends FieldDecorator
     {
+      protected GRFDataDictionary dataDictionary = new GRFDataDictionary();
+
       protected  DocumentField field;
       public TranslationDecorator(DocumentField field)
       {
@@ -544,7 +546,7 @@ public abstract class DocumentView {
         String strvalue = field.getValue();
         if(strvalue != null)
         {
-          String strtranslated = getTranslator().getValue(strvalue);
+          String strtranslated = dataDictionary.translateValue(strvalue,getLookupTable());
           if(strtranslated != null)
           {
             decoratedvalue = strtranslated;
@@ -553,7 +555,7 @@ public abstract class DocumentView {
         return decoratedvalue;
       }
 
-      public abstract CodeTranslator getTranslator();
+      public abstract Map getLookupTable();
     }
 
     public class LanguageDecorator extends TranslationDecorator
@@ -562,9 +564,9 @@ public abstract class DocumentView {
       {
         super(field);
       }
-      public CodeTranslator getTranslator()
+      public Map getLookupTable()
       {
-        return new LanguageTranslator();
+        return dataDictionary.getLanguages();
       }
     }
 
@@ -574,15 +576,18 @@ public abstract class DocumentView {
       {
         super(field);
       }
-      public CodeTranslator getTranslator()
+      public Map getLookupTable()
       {
-        return new BibliographicLevelTranslator();
+        return dataDictionary.getBibliographiccodes();
       }
     }
 
-    public class CategoryDecorator extends TranslationDecorator
+    /*
+    * MultiValueTranslationDecorator
+    */
+    public abstract class MultiValueTranslationDecorator extends TranslationDecorator
     {
-      public CategoryDecorator(DocumentField field)
+      public MultiValueTranslationDecorator(DocumentField field)
       {
         super(field);
       }
@@ -592,102 +597,50 @@ public abstract class DocumentView {
         String strvalue = field.getValue();
         if(strvalue != null)
         {
-          String[] codes = strvalue.split(GRFDocBuilder.AUDELIMITER);
+          String[] codes = strvalue.split(getSplitExpression());
           for(int i = 0; i < codes.length; i++)
           {
-            String strtranslated = getTranslator().getValue(codes[i]);
+            String strtranslated = dataDictionary.translateValue(codes[i],getLookupTable());
             if(strtranslated != null)
             {
-              decoratedvalue = (decoratedvalue == null) ? strtranslated : decoratedvalue.concat("; ").concat(strtranslated);
+              decoratedvalue = (decoratedvalue == null) ? strtranslated : decoratedvalue.concat(getConcatenationString()).concat(strtranslated);
             }
           }
         }
         return decoratedvalue;
       }
-      public CodeTranslator getTranslator()
+
+      public abstract String getSplitExpression();
+      public abstract String getConcatenationString();
+
+    }
+
+    public class CategoryDecorator extends MultiValueTranslationDecorator
+    {
+      public CategoryDecorator(DocumentField field)
       {
-        return new CategoryTranslator();
+        super(field);
+      }
+      public String getSplitExpression() { return GRFDocBuilder.AUDELIMITER; }
+      public String getConcatenationString() { return "; "; }
+      public Map getLookupTable()
+      {
+        return dataDictionary.getCategories();
       }
     }
 
-    public class DocumenttypeDecorator extends TranslationDecorator
+    public class DocumenttypeDecorator extends MultiValueTranslationDecorator
     {
       public DocumenttypeDecorator(DocumentField field)
       {
         super(field);
       }
 
-      public String getValue()
+      public String getSplitExpression() { return "\\w"; }
+      public String getConcatenationString() { return ", "; }
+      public Map getLookupTable()
       {
-        String decoratedvalue = null;
-        String strvalue = field.getValue();
-        if(strvalue != null)
-        {
-          String[] doctypes = strvalue.split("\\w");
-          for(int i = 0; i < doctypes.length; i++)
-          {
-            String strtranslated = getTranslator().getValue(doctypes[i]);
-            if(strtranslated != null)
-            {
-              decoratedvalue = (decoratedvalue == null) ? strtranslated : decoratedvalue.concat(", ").concat(strtranslated);
-            }
-          }
-        }
-        return decoratedvalue;
-      }
-      public CodeTranslator getTranslator()
-      {
-        return new DocumenttypeTranslator();
-      }
-    }
-
-    /* ========================================================================= */
-    /* Code Translators                                                          */
-    /* ========================================================================= */
-    public abstract class CodeTranslator
-    {
-      public String getValue(String strcode)
-      {
-        String strtranslated = null;
-        if(strcode != null)
-        {
-          Map transtable = getTranslationTable();
-          if(transtable.containsKey(strcode))
-          {
-            strtranslated = (String) transtable.get(strcode);
-          }
-        }
-        return strtranslated;
-      }
-      public abstract Map getTranslationTable();
-    }
-
-    public class DocumenttypeTranslator extends CodeTranslator
-    {
-      public Map getTranslationTable()
-      {
-        return (new GRFDataDictionary()).getDocumenttypes();
-      }
-    }
-    public class CategoryTranslator extends CodeTranslator
-    {
-      public Map getTranslationTable()
-      {
-        return (new GRFDataDictionary()).getCategories();
-      }
-    }
-    public class BibliographicLevelTranslator extends CodeTranslator
-    {
-      public Map getTranslationTable()
-      {
-        return (new GRFDataDictionary()).getBibliographiccodes();
-      }
-    }
-    public class LanguageTranslator extends CodeTranslator
-    {
-      public Map getTranslationTable()
-      {
-        return (new GRFDataDictionary()).getLanguages();
+        return dataDictionary.getDocumenttypes();
       }
     }
 }
