@@ -42,11 +42,12 @@ public abstract class DocumentView {
       ht.put(Keys.COPYRIGHT_TEXT,new XMLWrapper(Keys.COPYRIGHT_TEXT, GRFDocBuilder.GRF_TEXT_COPYRIGHT));
 
       // TI
-      includeField(Keys.TITLE, new Title());
-      includeField(Keys.TITLE_TRANSLATION, new TranslatedTitle());
-      includeField(Keys.VOLUME, new Volume());
-      includeField(Keys.ISSUE, new Issue());
-      includeField(Keys.VOLISSUE, new VolIssue());
+      ht.put(Keys.TITLE, new XMLWrapper(Keys.TITLE, getTitle()));
+
+      addDocumentValue(Keys.TITLE_TRANSLATION, new TranslatedTitle());
+      addDocumentValue(Keys.VOLUME, new Volume());
+      addDocumentValue(Keys.ISSUE, new Issue());
+      addDocumentValue(Keys.VOLISSUE, new VolIssue());
 
 
       // AU-AUS
@@ -166,30 +167,30 @@ public abstract class DocumentView {
         }
       }
 
-      includeField(Keys.CONFERENCE_NAME, "NAME_OF_MEETING");
-      includeField(Keys.COUNTRY_OF_PUB, "COUNTRY_OF_PUBLICATION");
-      includeField(Keys.CODEN, "CODEN");
-      includeField(Keys.PUBLISHER, "PUBLISHER");
-      includeField(Keys.SOURCE, "TITLE_OF_SERIAL");
-      includeField(Keys.COPYRIGHT, "COPYRIGHT");
-      includeField(Keys.ACCESSION_NUMBER, "ID_NUMBER");
-      includeField(Keys.NUMBER_OF_REFERENCES, "NUMBER_OF_REFERENCES");
-      includeField(Keys.DOC_URL, "URL");
-      includeField(Keys.REPORT_NUMBER, "REPORT_NUMBER");
-      includeField(Keys.DOI, "DOI");
+      addDocumentValue(Keys.CONFERENCE_NAME, "NAME_OF_MEETING");
+      addDocumentValue(Keys.COUNTRY_OF_PUB, "COUNTRY_OF_PUBLICATION");
+      addDocumentValue(Keys.CODEN, "CODEN");
+      addDocumentValue(Keys.PUBLISHER, "PUBLISHER");
+      addDocumentValue(Keys.SOURCE, "TITLE_OF_SERIAL");
+      addDocumentValue(Keys.COPYRIGHT, "COPYRIGHT");
+      addDocumentValue(Keys.ACCESSION_NUMBER, "ID_NUMBER");
+      addDocumentValue(Keys.NUMBER_OF_REFERENCES, "NUMBER_OF_REFERENCES");
+      addDocumentValue(Keys.DOC_URL, "URL");
+      addDocumentValue(Keys.REPORT_NUMBER, "REPORT_NUMBER");
+      addDocumentValue(Keys.DOI, "DOI");
 
-      includeField(GRFDocBuilder.ILLUSTRATION, "ILLUSTRATION");
-      includeField(GRFDocBuilder.ANNOTATION, "ANNOTATION");
-      includeField(GRFDocBuilder.MAP_SCALE, "MAP_SCALE");
-      includeField(GRFDocBuilder.MAP_TYPE, "MAP_TYPE");
+      addDocumentValue(GRFDocBuilder.ILLUSTRATION, "ILLUSTRATION");
+      addDocumentValue(GRFDocBuilder.ANNOTATION, "ANNOTATION");
+      addDocumentValue(GRFDocBuilder.MAP_SCALE, "MAP_SCALE");
+      addDocumentValue(GRFDocBuilder.MAP_TYPE, "MAP_TYPE");
 
-      includeField(GRFDocBuilder.AFFILIATION_OTHER, new OtherAffiliation());
-      includeField(Keys.ABSTRACT, new Abstract());
+      addDocumentValue(GRFDocBuilder.AFFILIATION_OTHER, new OtherAffiliation());
+      addDocumentValue(Keys.ABSTRACT, new DocumentAbstract());
 
-      includeField(Keys.DOC_TYPE, new DocumenttypeDecorator(new DocumentType()));
-      includeField(Keys.ABSTRACT_TYPE, new BibliographicLevelDecorator(new BibliographicLevel()));
-      includeField(Keys.LANGUAGE, new LanguageDecorator(new Language()));
-      includeField(GRFDocBuilder.CATEGORY, new CategoryDecorator(new Category()));
+      addDocumentValue(Keys.DOC_TYPE, new DocumenttypeDecorator(new DocumentType()));
+      addDocumentValue(Keys.ABSTRACT_TYPE, new BibliographicLevelDecorator(new BibliographicLevel()));
+      addDocumentValue(Keys.LANGUAGE, new LanguageDecorator(new Language()));
+      addDocumentValue(GRFDocBuilder.CATEGORY, new CategoryDecorator(new Category()));
 
       EIDoc eiDoc = new EIDoc(did, ht, getFormat());
       eiDoc.exportLabels(exportLabels());
@@ -208,7 +209,7 @@ public abstract class DocumentView {
       return (Arrays.asList(getKeys()).contains(key));
     }
 
-    public void includeField(Key key, String strfieldname)
+    public void addDocumentValue(Key key, String strfieldname)
         throws Exception
     {
       if(isIncluded(key))
@@ -221,7 +222,7 @@ public abstract class DocumentView {
       }
     }
 
-    public void includeField(Key key, DocumentField field)
+    public void addDocumentValue(Key key, DocumentField field)
         throws Exception
     {
       if(isIncluded(key))
@@ -234,7 +235,7 @@ public abstract class DocumentView {
       }
     }
 
-    public void includeField(Key key, ResultsSetField field)
+    public void addDocumentValue(Key key, ResultsSetField field)
         throws Exception
     {
       if(isIncluded(key))
@@ -274,6 +275,24 @@ public abstract class DocumentView {
       {
       }
       return list;
+    }
+
+    public String getTitle()
+    {
+      String strvalue = null;
+      if(strvalue == null)
+      {
+        strvalue = (new OriginalTitle()).setResultSet(rset).getValue();
+      }
+      if(strvalue == null)
+      {
+        strvalue = (new TransliteratedTitle()).setResultSet(rset).getValue();
+      }
+      if(strvalue == null)
+      {
+        strvalue = (new MonographTitle()).setResultSet(rset).getValue();
+      }
+      return strvalue;
     }
 
     /* ========================================================================= */
@@ -321,7 +340,6 @@ public abstract class DocumentView {
         return Arrays.asList(new DocumentField[]{new Volume(), new Issue()});
       }
     }
-
     public abstract class ResultsSetField extends DocumentField
     {
       protected  ResultSet rs = null;
@@ -340,6 +358,10 @@ public abstract class DocumentView {
           {
             strvalue = rs.getString(getColumn());
           }
+          else
+          {
+            System.out.println("Skipping column  " + getColumn() + " RS is null");
+          }
         }
         catch(SQLException sqle)
         {
@@ -350,7 +372,8 @@ public abstract class DocumentView {
       public abstract String getColumn();
     }
 
-    public class Abstract extends ResultsSetField
+
+    public class DocumentAbstract extends ResultsSetField
     {
       public String getValue()
       {
@@ -461,6 +484,7 @@ public abstract class DocumentView {
       {
         String strvalue = null;
         Map mapvalues = getValueMap();
+        //System.out.println(" getValue " + mapvalues);
         if(mapvalues.containsKey(geNameValueCode()))
         {
           strvalue = (String) mapvalues.get(geNameValueCode());
@@ -469,27 +493,6 @@ public abstract class DocumentView {
       }
 
       public abstract String geNameValueCode();
-    }
-
-    public class Title extends DocumentField
-    {
-      public String getValue()
-      {
-        String strvalue = null;
-        if(strvalue == null)
-        {
-          strvalue = (new OriginalTitle()).getValue();
-        }
-        if(strvalue == null)
-        {
-          strvalue = (new TransliteratedTitle()).getValue();
-        }
-        if(strvalue == null)
-        {
-          strvalue = (new MonographTitle()).getValue();
-        }
-        return strvalue;
-      }
     }
 
     // O Original title, i.e. the title, if any, as given on the document entered in the original language and alphabet
