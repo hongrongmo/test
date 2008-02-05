@@ -282,6 +282,13 @@ public abstract class DocumentView {
         afield = new TranslatedTitleDecorator(createColumnValueField("TITLE_OF_MONOGRAPH"));
         strvalue = afield.getValue();
       }
+      if(strvalue != null)
+      {
+        if(strvalue.equals(getTitle()))
+        {
+          strvalue = null;
+        }
+      }
       return strvalue;
     }
 
@@ -476,9 +483,6 @@ public abstract class DocumentView {
         {
           strtitle = (String) mapvalues.get("L");
         }
-
-        System.out.println("TitleDecorator = " + strtitle);
-
         return strtitle;
       }
     }
@@ -499,9 +503,6 @@ public abstract class DocumentView {
         {
           strtitle = (String) mapvalues.get("O");
         }
-
-        System.out.println("TranslatedTitleDecorator = " + strtitle);
-
         return strtitle;
       }
     }
