@@ -296,6 +296,11 @@ public abstract class DocumentView {
     }
 
     /* ========================================================================= */
+    /* Inner classes */
+    /* ========================================================================= */
+
+
+    /* ========================================================================= */
     /* Fields                                                                    */
     /* ========================================================================= */
     public abstract class DocumentField
@@ -484,7 +489,6 @@ public abstract class DocumentView {
       {
         String strvalue = null;
         Map mapvalues = getValueMap();
-        //System.out.println(" getValue " + mapvalues);
         if(mapvalues.containsKey(geNameValueCode()))
         {
           strvalue = (String) mapvalues.get(geNameValueCode());
@@ -530,6 +534,11 @@ public abstract class DocumentView {
 
     /*
     * Translation Decorators
+    */
+
+    /*
+    * This base decorator will take a code decorate it by translating it into a readable string.
+    * The code is a String key which is looked up in a Map
     */
     public abstract class TranslationDecorator extends FieldDecorator
     {
@@ -583,7 +592,8 @@ public abstract class DocumentView {
     }
 
     /*
-    * MultiValueTranslationDecorator
+    * This decorator extends the TranslationDecorator by splitting the code into multiple values, based on a split expression
+    * and then conctenating each decorated value into a single string, using a concatenationstring to join the decorated values
     */
     public abstract class MultiValueTranslationDecorator extends TranslationDecorator
     {
