@@ -275,11 +275,11 @@ public abstract class DocumentView {
 
     private String getTranslatedTitle()
     {
-      String strvalue = null;
+      DocumentField afield = new TranslatedTitleDecorator(createColumnValueField("TITLE_OF_ANALYTIC"));
+      String strvalue = afield.getValue();
       if(strvalue == null)
       {
-        ResultsSetField afield = new TranslatedTitle();
-        afield.setResultSet(rset);
+        afield = new TranslatedTitleDecorator(createColumnValueField("TITLE_OF_MONOGRAPH"));
         strvalue = afield.getValue();
       }
       return strvalue;
@@ -287,23 +287,11 @@ public abstract class DocumentView {
 
     private String getTitle()
     {
-      String strvalue = null;
+      DocumentField afield = new TitleDecorator(createColumnValueField("TITLE_OF_ANALYTIC"));
+      String strvalue = afield.getValue();
       if(strvalue == null)
       {
-        ResultsSetField afield = new OriginalTitle();
-        afield.setResultSet(rset);
-        strvalue = afield.getValue();
-      }
-      if(strvalue == null)
-      {
-        ResultsSetField afield = new TransliteratedTitle();
-        afield.setResultSet(rset);
-        strvalue = afield.getValue();
-      }
-      if(strvalue == null)
-      {
-        ResultsSetField afield = new MonographTitle();
-        afield.setResultSet(rset);
+        afield = new TitleDecorator(createColumnValueField("TITLE_OF_MONOGRAPH"));
         strvalue = afield.getValue();
       }
       return strvalue;
@@ -412,9 +400,12 @@ public abstract class DocumentView {
       public String getColumn() { return m_column; }
     }
 
-    public abstract class MultiNameValueField extends ResultsSetField
+    /* ========================================================================= */
+    /* Field Decorators                                                          */
+    /* ========================================================================= */
+    public abstract class FieldDecorator extends DocumentField
     {
-      private Map tokenize(String field)
+      protected Map tokenize(String field)
       {
         Map multivalues = new HashMap();
         if(field != null)
@@ -431,63 +422,6 @@ public abstract class DocumentView {
         }
         return multivalues;
       }
-
-      public Map getValueMap()
-      {
-        Map mapvalues = new HashMap();
-        String strvalue = super.getValue();
-        if(strvalue != null)
-        {
-          mapvalues = tokenize(strvalue);
-        }
-        return mapvalues;
-      }
-
-      public String getValue()
-      {
-        String strvalue = null;
-        Map mapvalues = getValueMap();
-        if(mapvalues.containsKey(geNameValueCode()))
-        {
-          strvalue = (String) mapvalues.get(geNameValueCode());
-        }
-        return strvalue;
-      }
-
-      public abstract String geNameValueCode();
-    }
-
-    // O Original title, i.e. the title, if any, as given on the document entered in the original language and alphabet
-    // M Original title in original language and alphabet, but modified or enriched in content as part of the cataloguing process
-    // L Original title transliterated or transcribed as part of the cataloging process. Used only for Cyrillic alphabet in GeoRef.
-    // T Original title translated (with or without modification of content) as part of the cataloging process
-
-    public class OriginalTitle extends MultiNameValueField
-    {
-      public String getColumn() { return "TITLE_OF_ANALYTIC"; }
-      public String geNameValueCode() { return "O"; }
-    }
-    public class TransliteratedTitle extends MultiNameValueField
-    {
-      public String getColumn() { return "TITLE_OF_ANALYTIC"; }
-      public String geNameValueCode() { return "T"; }
-    }
-    public class TranslatedTitle extends MultiNameValueField
-    {
-      public String getColumn() { return "TITLE_OF_ANALYTIC"; }
-      public String geNameValueCode() { return "L"; }
-    }
-    public class MonographTitle extends MultiNameValueField
-    {
-      public String getColumn() { return "TITLE_OF_MONOGRAPH"; }
-      public String geNameValueCode() { return "O"; }
-    }
-
-    /* ========================================================================= */
-    /* Field Decorators                                                          */
-    /* ========================================================================= */
-    public abstract class FieldDecorator extends DocumentField
-    {
     }
 
     public class OtherAffiliationDecorator extends FieldDecorator
@@ -505,6 +439,70 @@ public abstract class DocumentView {
           strvalue = strvalue.replaceAll(GRFDocBuilder.AUDELIMITER,";");
         }
         return strvalue;
+      }
+    }
+
+
+    // O Original title, i.e. the title, if any, as given on the document entered in the original language and alphabet
+    // M Original title in original language and alphabet, but modified or enriched in content as part of the cataloguing process
+    // L Original title transliterated or transcribed as part of the cataloging process. Used only for Cyrillic alphabet in GeoRef.
+    // T Original title translated (with or without modification of content) as part of the cataloging process
+
+    public class TitleDecorator extends FieldDecorator
+    {
+      protected  DocumentField field;
+      public TitleDecorator(DocumentField field)
+      {
+        this.field = field;
+      }
+      public String getValue()
+      {
+        String strtitle = null;
+        String strvalue = field.getValue();
+        Map mapvalues = tokenize(strvalue);
+        if(mapvalues.containsKey("T"))
+        {
+          strtitle = (String) mapvalues.get("T");
+        }
+        else if((strtitle == null) && mapvalues.containsKey("O"))
+        {
+          strtitle = (String) mapvalues.get("O");
+        }
+        else if((strtitle == null) && mapvalues.containsKey("M"))
+        {
+          strtitle = (String) mapvalues.get("M");
+        }
+        else if((strtitle == null) && mapvalues.containsKey("L"))
+        {
+          strtitle = (String) mapvalues.get("L");
+        }
+
+        System.out.println("TitleDecorator = " + strtitle);
+
+        return strtitle;
+      }
+    }
+
+    public class TranslatedTitleDecorator extends FieldDecorator
+    {
+      protected  DocumentField field;
+      public TranslatedTitleDecorator(DocumentField field)
+      {
+        this.field = field;
+      }
+      public String getValue()
+      {
+        String strtitle = null;
+        String strvalue = field.getValue();
+        Map mapvalues = tokenize(strvalue);
+        if(mapvalues.containsKey("O"))
+        {
+          strtitle = (String) mapvalues.get("O");
+        }
+
+        System.out.println("TranslatedTitleDecorator = " + strtitle);
+
+        return strtitle;
       }
     }
 
