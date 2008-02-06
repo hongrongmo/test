@@ -36,6 +36,8 @@ public class GRFDocBuilder implements DocumentBuilder
     public static final Key CATEGORY = new Key("CAT", "Category");
     public static final Key TARGET_AUDIENCE = new Key("AUD", "Target audience");
     public static final Key HOLDING_LIBRARY = new Key("HOLD", "Holding Library");
+    public static final Key DEGREE_TYPE = new Key("DEG", "Degree");
+    public static final Key UNIVERSITY = new Key("UNV", "University");
 
 
     private Database database;
