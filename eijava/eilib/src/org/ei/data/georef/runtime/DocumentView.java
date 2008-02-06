@@ -46,6 +46,7 @@ public abstract class DocumentView {
       addDocumentValue(Keys.VOLISSUE, getVolIssue());
       addDocumentValue(Keys.TITLE_TRANSLATION, getTranslatedTitle());
       addDocumentValue(Keys.ABSTRACT, getAbstract());
+      addDocumentValue(Keys.PUBLISHER, getPublisher());
 
       // AU-AUS
       Contributors authors = null;
@@ -170,7 +171,6 @@ public abstract class DocumentView {
       addDocumentValue(Keys.CONFERENCE_NAME, createColumnValueField("NAME_OF_MEETING"));
       addDocumentValue(Keys.COUNTRY_OF_PUB, createColumnValueField("COUNTRY_OF_PUBLICATION"));
       addDocumentValue(Keys.CODEN, createColumnValueField("CODEN"));
-      addDocumentValue(Keys.PUBLISHER, createColumnValueField("PUBLISHER"));
       addDocumentValue(Keys.SOURCE, createColumnValueField("TITLE_OF_SERIAL"));
       addDocumentValue(Keys.COPYRIGHT, createColumnValueField("COPYRIGHT"));
       addDocumentValue(Keys.ACCESSION_NUMBER, createColumnValueField("ID_NUMBER"));
@@ -326,6 +326,17 @@ public abstract class DocumentView {
 
       return strvalue;
     }
+
+    private String getPublisher()
+    {
+      String strvalue = createColumnValueField("PUBLISHER").getValue();
+      if(strvalue != null)
+      {
+        strvalue = strvalue.replaceAll(GRFDocBuilder.AUDELIMITER,";");
+      }
+      return strvalue;
+    }
+
 
     private String getAbstract()
     {
@@ -592,9 +603,14 @@ public abstract class DocumentView {
       {
         String decoratedvalue = null;
         String strvalue = field.getValue();
+
         if(strvalue != null)
         {
-          String[] codes = strvalue.split(getSplitExpression());
+          String[] codes = new String[]{strvalue};
+          if(getSplitPattern().matcher(strvalue).find())
+          {
+            codes = getSplitPattern().split(strvalue);
+          }
           for(int i = 0; i < codes.length; i++)
           {
             String strtranslated = dataDictionary.translateValue(codes[i],getLookupTable());
@@ -606,7 +622,7 @@ public abstract class DocumentView {
         }
         return decoratedvalue;
       }
-      public abstract String getSplitExpression();
+      public abstract Pattern getSplitPattern();
       public abstract String getConcatenationString();
     }
 
@@ -616,7 +632,7 @@ public abstract class DocumentView {
       {
         super(field);
       }
-      public String getSplitExpression() { return GRFDocBuilder.AUDELIMITER; }
+      public Pattern getSplitPattern() { return Pattern.compile(GRFDocBuilder.AUDELIMITER); }
       public String getConcatenationString() { return "; "; }
       public Map getLookupTable()
       {
@@ -630,7 +646,8 @@ public abstract class DocumentView {
       {
         super(field);
       }
-      public String getSplitExpression() { return "\\w"; }
+      // empty pattern will split string into single characters
+      public Pattern getSplitPattern() { return Pattern.compile(""); }
       public String getConcatenationString() { return ", "; }
       public Map getLookupTable()
       {
