@@ -178,7 +178,10 @@ public abstract class DocumentView {
       addDocumentValue(Keys.DOC_URL, createColumnValueField("URL"));
       addDocumentValue(Keys.REPORT_NUMBER, createColumnValueField("REPORT_NUMBER"));
       addDocumentValue(Keys.DOI, createColumnValueField("DOI"));
+      addDocumentValue(Keys.AVAILABILITY, createColumnValueField("AVAILABILITY"));
 
+      addDocumentValue(GRFDocBuilder.UNIVERSITY, createColumnValueField("UNIVERSITY"));
+      addDocumentValue(GRFDocBuilder.DEGREE_TYPE, createColumnValueField("TYPE_OF_DEGREE"));
       addDocumentValue(GRFDocBuilder.ILLUSTRATION, createColumnValueField("ILLUSTRATION"));
       addDocumentValue(GRFDocBuilder.ANNOTATION, createColumnValueField("ANNOTATION"));
       addDocumentValue(GRFDocBuilder.MAP_SCALE, createColumnValueField("MAP_SCALE"));
