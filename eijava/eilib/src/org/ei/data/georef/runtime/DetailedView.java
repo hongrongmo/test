@@ -79,7 +79,6 @@ import org.ei.domain.FullDoc;
                                         Keys.MAIN_HEADING,
                                         Keys.CONTROLLED_TERMS,
                                         Keys.UNCONTROLLED_TERMS,
-                                        Keys.SPECIES_TERMS,
                                         Keys.REGION_CONTROLLED_TERMS,
                                         Keys.CLASS_CODES,
                                         Keys.TREATMENTS,
