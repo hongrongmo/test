@@ -13,6 +13,7 @@ import org.ei.domain.Abstract;
                                                         "CODEN",
                                                         "EISSN",
                                                         "INDEX_TERMS",
+                                                        "UNCONTROLLED_TERMS",
                                                         "NAME_OF_MEETING",
                                                         "ISBN"});
 
@@ -24,6 +25,7 @@ import org.ei.domain.Abstract;
                                         Keys.EDITOR_AFFS,
                                         Keys.E_ISSN,
                                         Keys.INDEX_TERM,
+                                        Keys.UNCONTROLLED_TERMS,
                                         Keys.ISBN,
                                         Keys.I_PUBLISHER,
                                         Keys.MAIN_HEADING,
