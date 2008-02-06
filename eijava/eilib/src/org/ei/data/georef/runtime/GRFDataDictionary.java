@@ -62,7 +62,7 @@ public class GRFDataDictionary implements DataDictionary
       categories.put("17","General geophysics");
       categories.put("17A","General geophysics (Includes physical properties of rocks and minerals)");
       categories.put("17B","Geophysics of minerals and rocks, Includes phase transitions, high pressure-temperature studies of rocks and minerals (applied to core and mantle composition)");
-      categories.put("18","Solid-earth geophysics (Includes tectonophysics, crust, mantle, core, application of seismicity, plate tectonics, paleomagnetism, heat flow, isostasy, sea-floor spreading, magnetic field, gravity field, Earth’s orbit and rotation)");
+      categories.put("18","Solid-earth geophysics (Includes tectonophysics, crust, mantle, core, application of seismicity, plate tectonics, paleomagnetism, heat flow, isostasy, sea-floor spreading, magnetic field, gravity field, Earth's orbit and rotation)");
       categories.put("19","Seismology (Includes earthquakes, seismicity, explosions, elastic waves, seismic sources)");
       categories.put("20","Applied geophysics (Includes acoustical surveys, Earth-current surveys, electrical surveys, electromagnetic surveys, gravity surveys, infrared surveys, magnetic surveys, magnetotelluric surveys, seismic surveys, geodesy, heat flow, remote sensing, well-logging)");
       categories.put("21","Hydrogeology (Includes water resources)");
