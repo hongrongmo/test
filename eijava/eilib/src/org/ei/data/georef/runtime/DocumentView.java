@@ -15,9 +15,9 @@ import org.apache.oro.text.perl.*;
 
 import java.util.regex.*;
 
- /* ========================================================================= */
-/*                                                                           */
-/* ========================================================================= */
+/* =========================================================================
+ *
+ * ========================================================================= */
 public abstract class DocumentView {
 
     public abstract String getFormat();
@@ -37,18 +37,16 @@ public abstract class DocumentView {
 
       ht.put(Keys.DOCID, did);
 
-      ht.put(Keys.PROVIDER,new XMLWrapper(Keys.PROVIDER, GRFDocBuilder.PROVIDER_TEXT));
-      ht.put(Keys.COPYRIGHT,new XMLWrapper(Keys.COPYRIGHT, GRFDocBuilder.GRF_HTML_COPYRIGHT));
-      ht.put(Keys.COPYRIGHT_TEXT,new XMLWrapper(Keys.COPYRIGHT_TEXT, GRFDocBuilder.GRF_TEXT_COPYRIGHT));
+      addDocumentValue(Keys.PROVIDER, GRFDocBuilder.PROVIDER_TEXT);
+      addDocumentValue(Keys.COPYRIGHT, GRFDocBuilder.GRF_HTML_COPYRIGHT);
+      addDocumentValue(Keys.COPYRIGHT_TEXT, GRFDocBuilder.GRF_TEXT_COPYRIGHT);
 
-      // TI
       addDocumentValue(Keys.TITLE, getTitle());
       addDocumentValue(Keys.VOLISSUE, getVolIssue());
       addDocumentValue(Keys.TITLE_TRANSLATION, getTranslatedTitle());
       addDocumentValue(Keys.ABSTRACT, getAbstract());
-      addDocumentValue(Keys.PUBLISHER, getPublisher());
 
-      // AU-AUS
+      // AUS
       Contributors authors = null;
       String strauthors = rset.getString("PERSON_ANALYTIC");
       if(strauthors == null || strauthors.equalsIgnoreCase("Anonymous"))
@@ -85,76 +83,19 @@ public abstract class DocumentView {
         }
       }
 
-      // SN
-      if(rset.getString("ISSN") != null)
-      {
-        ht.put(Keys.ISSN, new ISSN(rset.getString("ISSN")));
-      }
-      if(isIncluded(Keys.E_ISSN))
-      {
-        // E_ISSN
-        String streissns = rset.getString("EISSN");
-        if(streissns != null)
-        {
-          //ht.put(Keys.E_ISSN, new XMLMultiWrapper(Keys.E_ISSN, strissns.split(GRFDocBuilder.AUDELIMITER)));
-        }
-      }
-      // ISBN - BN
-      if(isIncluded(Keys.ISBN))
-      {
-        if(rset.getString("ISBN") != null)
-        {
-          ht.put(Keys.ISBN, new ISBN(rset.getString("ISBN")));
-        }
-      }
+      addDocumentValue(Keys.VOLUME, createColumnValueField("VOLUME_ID"), new Volume(StringUtil.EMPTY_STRING,perl));
+      addDocumentValue(Keys.ISSUE, createColumnValueField("ISSUE_ID"), new Issue(StringUtil.EMPTY_STRING,perl));
 
-      // PAGES - PP
-      String strpages = rset.getString("COLLATION_ANALYTIC");
-      if(strpages == null)
-      {
-        // if we are using the monograph title
-        if((rset.getString("TITLE_OF_MONOGRAPH") != null) && rset.getString("COLLATION_MONOGRAPH") != null)
-        {
-          strpages = rset.getString("COLLATION_MONOGRAPH");
-        }
-      }
-      if(strpages != null)
-      {
-        ht.put(Keys.PAGE_RANGE, new PageRange(strpages, perl));
-      }
+      addDocumentValue(Keys.ISSN, createColumnValueField("ISSN"), new ISSN(StringUtil.EMPTY_STRING));
+      addDocumentValue(Keys.ISBN, createColumnValueField("ISBN"), new ISBN(StringUtil.EMPTY_STRING));
+      //addDocumentValue(Keys.E_ISSN, eIssnDecorator(createColumnValueField("EISSN")), new ISSN(StringUtil.EMPTY_STRING));
 
-      // YR
-      String strdate = rset.getString("DATE_OF_PUBLICATION");
-      if(strdate == null)
-      {
-        // if there is no pubdate, check if there is a conference date
-        strdate = rset.getString("DATE_OF_MEETING");
-      }
-      if(strdate != null)
-      {
-        Matcher yearmatch = Pattern.compile("^(\\d{4})").matcher(strdate);
-        if(yearmatch.find())
-        {
-          ht.put(Keys.PUBLICATION_YEAR, new Year(yearmatch.group(1), perl));
-        }
-      }
 
-      // CONFERENCE DATE
-      if(isIncluded(Keys.CONF_DATE))
-      {
-        String strconfdate = rset.getString("DATE_OF_MEETING");
-        if(strconfdate != null)
-        {
-          Matcher yearmatch = Pattern.compile("^(\\d{4})(\\d{2})(\\d{2})$").matcher(strconfdate);
-          if(yearmatch.find())
-          {
-            String strmmddyyy = yearmatch.group(2) + "/" + yearmatch.group(3) + "/" + yearmatch.group(1);
-            ht.put(Keys.CONF_DATE, new XMLWrapper(Keys.CONF_DATE, strmmddyyy));
-          }
-        }
-      }
+      addDocumentValue(Keys.PAGE_RANGE, new SimpleValueField(getPages()), new PageRange(StringUtil.EMPTY_STRING, perl));
+      addDocumentValue(Keys.PAGE_RANGE, new SimpleValueField(getYear()), new Year(StringUtil.EMPTY_STRING, perl));
 
-      // INDEX_TERMS
+
+      // INDEX_TERMS (CVS)
       if(isIncluded(Keys.INDEX_TERM))
       {
         String stridxtrms = rset.getString("INDEX_TERMS");
@@ -164,12 +105,20 @@ public abstract class DocumentView {
           ht.put(Keys.INDEX_TERM, new XMLMultiWrapper(Keys.INDEX_TERM, stridxtrms.split(GRFDocBuilder.AUDELIMITER)));
         }
       }
+      // UNCONTROLLED_TERMS (FLS)
+      if(isIncluded(Keys.UNCONTROLLED_TERMS))
+      {
+        String stridxtrms = rset.getString("UNCONTROLLED_TERMS");
+        if(stridxtrms != null)
+        {
+          stridxtrms = stridxtrms.replaceAll(GRFDocBuilder.IDDELIMITER,":");
+          ht.put(Keys.UNCONTROLLED_TERMS, new XMLMultiWrapper(Keys.UNCONTROLLED_TERMS, stridxtrms.split(GRFDocBuilder.AUDELIMITER)));
+        }
+      }
 
-      addDocumentValue(Keys.VOLUME, createColumnValueField("VOLUME_ID"));
-      addDocumentValue(Keys.ISSUE, createColumnValueField("ISSUE_ID"));
 
+      addDocumentValue(Keys.CONF_DATE, new ConferenceDateDecorator(createColumnValueField("DATE_OF_MEETING")));
       addDocumentValue(Keys.CONFERENCE_NAME, createColumnValueField("NAME_OF_MEETING"));
-      addDocumentValue(Keys.COUNTRY_OF_PUB, createColumnValueField("COUNTRY_OF_PUBLICATION"));
       addDocumentValue(Keys.CODEN, createColumnValueField("CODEN"));
       addDocumentValue(Keys.SOURCE, createColumnValueField("TITLE_OF_SERIAL"));
       addDocumentValue(Keys.COPYRIGHT, createColumnValueField("COPYRIGHT"));
@@ -189,7 +138,8 @@ public abstract class DocumentView {
       addDocumentValue(GRFDocBuilder.HOLDING_LIBRARY, createColumnValueField("HOLDING_LIBRARY"));
       addDocumentValue(GRFDocBuilder.TARGET_AUDIENCE, createColumnValueField("TARGET_AUDIENCE"));
 
-
+      addDocumentValue(Keys.PUBLISHER, new PublisherDecorator(createColumnValueField("PUBLISHER")));
+      addDocumentValue(Keys.COUNTRY_OF_PUB, new CountryDecorator(createColumnValueField("COUNTRY_OF_PUBLICATION")));
       addDocumentValue(GRFDocBuilder.AFFILIATION_OTHER, new OtherAffiliationDecorator(createColumnValueField("AFFILIATION_SECONDARY")));
       addDocumentValue(Keys.DOC_TYPE, new DocumentTypeDecorator(createColumnValueField("DOCUMENT_TYPE")));
       addDocumentValue(Keys.LANGUAGE, new LanguageDecorator(createColumnValueField("LANGUAGE_TEXT")));
@@ -215,6 +165,9 @@ public abstract class DocumentView {
       return (Arrays.asList(getKeys()).contains(key));
     }
 
+    /*
+     * "Factory" prevents having to pass around ResultSet when creating objects
+     */
     private ResultsSetField createColumnValueField(String columnname)
     {
       ResultsSetField rsfield = new ColumnValueField(columnname);
@@ -223,29 +176,35 @@ public abstract class DocumentView {
       return rsfield;
     }
 
+    /*
+     * addDocumentValue wrappers. These check to see if a field is included
+     * before calling getValue()
+     */
     public void addDocumentValue(Key key, String strfieldvalue)
         throws Exception
     {
-      if(isIncluded(key))
-      {
-        putXMLWrappedValue(key, strfieldvalue);
-      }
+      addDocumentValue(key, new SimpleValueField(strfieldvalue));
     }
 
     public void addDocumentValue(Key key, DocumentField field)
-        throws Exception
+    {
+      addDocumentValue(key, field, new XMLWrapper(key,StringUtil.EMPTY_STRING));
+    }
+
+    public void addDocumentValue(Key key, DocumentField field, ElementData data)
     {
       if(isIncluded(key))
       {
-        putXMLWrappedValue(key, field.getValue());
+        data.setElementData(new String[]{field.getValue()});
+        putElementData(key, data);
       }
     }
 
-    private void putXMLWrappedValue(Key key, String strvalue)
+    private void putElementData(Key key, ElementData data)
     {
-      if(strvalue != null)
+      if(data != null)
       {
-        ht.put(key, new XMLWrapper(key, strvalue));
+        ht.put(key, data);
       }
     }
 
@@ -276,6 +235,18 @@ public abstract class DocumentView {
       return list;
     }
 
+    private String getTitle()
+    {
+      DocumentField afield = new TitleDecorator(createColumnValueField("TITLE_OF_ANALYTIC"));
+      String strvalue = afield.getValue();
+      if(strvalue == null)
+      {
+        afield = new TitleDecorator(createColumnValueField("TITLE_OF_MONOGRAPH"));
+        strvalue = afield.getValue();
+      }
+      return strvalue;
+    }
+
     private String getTranslatedTitle()
     {
       DocumentField afield = new TranslatedTitleDecorator(createColumnValueField("TITLE_OF_ANALYTIC"));
@@ -295,51 +266,30 @@ public abstract class DocumentView {
       return strvalue;
     }
 
-    private String getTitle()
-    {
-      DocumentField afield = new TitleDecorator(createColumnValueField("TITLE_OF_ANALYTIC"));
-      String strvalue = afield.getValue();
-      if(strvalue == null)
-      {
-        afield = new TitleDecorator(createColumnValueField("TITLE_OF_MONOGRAPH"));
-        strvalue = afield.getValue();
-      }
-      return strvalue;
-    }
-
     private String getVolIssue()
     {
       String strvalue = null;
-      List lstvalues = new ArrayList();
-      strvalue = createColumnValueField("VOLUME_ID").getValue();
-      if(strvalue != null)
+      if(isIncluded(Keys.VOLISSUE))
       {
-        lstvalues.add(strvalue);
-        strvalue = null;
-      }
-      strvalue = createColumnValueField("ISSUE_ID").getValue();
-      if(strvalue != null)
-      {
-        lstvalues.add(strvalue);
-      }
-      if(!lstvalues.isEmpty())
-      {
-        strvalue = StringUtil.join(lstvalues,", ");
-      }
-
-      return strvalue;
-    }
-
-    private String getPublisher()
-    {
-      String strvalue = createColumnValueField("PUBLISHER").getValue();
-      if(strvalue != null)
-      {
-        strvalue = strvalue.replaceAll(GRFDocBuilder.AUDELIMITER,";");
+        List lstvalues = new ArrayList();
+        strvalue = createColumnValueField("VOLUME_ID").getValue();
+        if(strvalue != null)
+        {
+          lstvalues.add(strvalue);
+          strvalue = null;
+        }
+        strvalue = createColumnValueField("ISSUE_ID").getValue();
+        if(strvalue != null)
+        {
+          lstvalues.add(strvalue);
+        }
+        if(!lstvalues.isEmpty())
+        {
+          strvalue = StringUtil.join(lstvalues,", ");
+        }
       }
       return strvalue;
     }
-
 
     private String getAbstract()
     {
@@ -366,17 +316,74 @@ public abstract class DocumentView {
       return (strvalue == null || strvalue.length() < GRFDocBuilder.MINIMUM_ABSTRACT_LENGTH) ? null : strvalue;
     }
 
-    /* ========================================================================= */
-    /* Inner classes                                                             */
-    /* ========================================================================= */
+    private String getPages()
+    {
+      String strvalue = null;
+      DocumentField pagesAnalytic = createColumnValueField("COLLATION_ANALYTIC");
+      strvalue = pagesAnalytic.getValue();
+      if(strvalue == null)
+      {
+        DocumentField pagesMono = createColumnValueField("COLLATION_MONOGRAPH");
+        DocumentField titleMono = createColumnValueField("TITLE_OF_MONOGRAPH");
+        // if we are using the monograph title
+        if((titleMono.getValue() != null) && (pagesMono.getValue() != null))
+        {
+          strvalue = pagesMono.getValue();
+        }
+      }
+      return strvalue;
+    }
+
+    private String getYear()
+    {
+      String strvalue = null;
+      DocumentField yearPub = createColumnValueField("DATE_OF_PUBLICATION");
+      String strdate = yearPub.getValue();
+      if(strdate == null)
+      {
+        DocumentField yearMeeting = createColumnValueField("DATE_OF_MEETING");
+        // if there is no pubdate, check if there is a conference date
+        strdate = yearMeeting.getValue();
+      }
+      if(strdate != null)
+      {
+        Matcher yearmatch = Pattern.compile("^(\\d{4})").matcher(strdate);
+        if(yearmatch.find())
+        {
+          strvalue = yearmatch.group(1);
+        }
+      }
+      return strvalue;
+    }
+
+    /* =========================================================================
+     * Inner classes
+     * =========================================================================
+     */
 
 
-    /* ========================================================================= */
-    /* Fields                                                                    */
-    /* ========================================================================= */
+    /* =========================================================================
+     * Fields
+     * =========================================================================
+     */
     public abstract class DocumentField
     {
       public abstract String getValue();
+    }
+
+    /* =========================================================================
+     * This is a simple field for wrapping strings so getValue() can be caled
+     * on them in the addDocument() methods
+     * =========================================================================
+     */
+    public class SimpleValueField extends DocumentField
+    {
+      private String value = null;
+      public  SimpleValueField(String strvalue)
+      {
+        this.value = strvalue;
+      }
+      public String getValue() { return this.value; }
     }
 
     public abstract class ResultsSetField extends DocumentField
@@ -410,20 +417,26 @@ public abstract class DocumentView {
       public abstract String getColumn();
     }
 
+    /* =========================================================================
+     * This is a simple field for wrapping values which are store as strings
+     * in a result set - this is mainly for a delayed load so we can check
+     * whether or not they are part of the document before calling getValue()
+     * =========================================================================
+     */
     public class ColumnValueField extends ResultsSetField
     {
-      String m_column = null;
+      private String m_column = null;
 
       public ColumnValueField(String column)
       {
-        m_column = column;
+        this.m_column = column;
       }
-      public String getColumn() { return m_column; }
+      public String getColumn() { return this.m_column; }
     }
 
-    /* ========================================================================= */
-    /* Field Decorators                                                          */
-    /* ========================================================================= */
+    /* =========================================================================
+     * Field Decorators
+     * ========================================================================= */
     public abstract class FieldDecorator extends DocumentField
     {
       protected Map tokenize(String field)
@@ -445,10 +458,10 @@ public abstract class DocumentView {
       }
     }
 
-    public class OtherAffiliationDecorator extends FieldDecorator
+    public abstract class ReplaceDelimiterDecorator extends FieldDecorator
     {
-      protected  DocumentField field;
-      public OtherAffiliationDecorator(DocumentField field)
+      private DocumentField field;
+      public ReplaceDelimiterDecorator(DocumentField field)
       {
         this.field = field;
       }
@@ -457,12 +470,54 @@ public abstract class DocumentView {
         String strvalue = field.getValue();
         if(strvalue != null)
         {
-          strvalue = strvalue.replaceAll(GRFDocBuilder.AUDELIMITER,";");
+          strvalue = strvalue.replaceAll(GRFDocBuilder.AUDELIMITER,getSeparator());
         }
         return strvalue;
       }
+      public abstract String getSeparator();
     }
 
+    public class PublisherDecorator extends ReplaceDelimiterDecorator
+    {
+      public PublisherDecorator(DocumentField field)
+      {
+        super(field);
+      }
+      public String getSeparator() { return ";"; }
+    }
+
+    public class OtherAffiliationDecorator extends ReplaceDelimiterDecorator
+    {
+      public OtherAffiliationDecorator(DocumentField field)
+      {
+        super(field);
+      }
+      public String getSeparator() { return ";"; }
+    }
+    public static Pattern patternYYYYMMDD = Pattern.compile("^(\\d{4})(\\d{2})(\\d{2})$");
+
+    public class ConferenceDateDecorator extends FieldDecorator
+    {
+      private DocumentField field;
+      public ConferenceDateDecorator(DocumentField field)
+      {
+        this.field = field;
+      }
+      public String getValue()
+      {
+        String strdate = null;
+        String strconfdate = field.getValue();
+        if(strconfdate != null)
+        {
+          Matcher yearmatch = DocumentView.patternYYYYMMDD.matcher(strconfdate);
+          if(yearmatch.find())
+          {
+            strdate = yearmatch.group(2) + "/" + yearmatch.group(3) + "/" + yearmatch.group(1);
+          }
+        }
+        return strdate;
+      }
+    }
 
     // O Original title, i.e. the title, if any, as given on the document entered in the original language and alphabet
     // M Original title in original language and alphabet, but modified or enriched in content as part of the cataloguing process
@@ -529,12 +584,12 @@ public abstract class DocumentView {
     * This base decorator will take a code decorate it by translating it into a readable string.
     * The code is a String key which is looked up in a Map
     */
-    public abstract class TranslationDecorator extends FieldDecorator
+    public abstract class LookupValueDecorator extends FieldDecorator
     {
       protected GRFDataDictionary dataDictionary = new GRFDataDictionary();
 
       protected  DocumentField field;
-      public TranslationDecorator(DocumentField field)
+      public LookupValueDecorator(DocumentField field)
       {
         this.field = field;
       }
@@ -555,7 +610,7 @@ public abstract class DocumentView {
       public abstract Map getLookupTable();
     }
 
-    public class LanguageDecorator extends TranslationDecorator
+    public class LanguageDecorator extends LookupValueDecorator
     {
       public LanguageDecorator(DocumentField field)
       {
@@ -580,7 +635,19 @@ public abstract class DocumentView {
       }
     }
 
-    public class BibliographicLevelDecorator extends TranslationDecorator
+    public class CountryDecorator extends LookupValueDecorator
+    {
+      public CountryDecorator(DocumentField field)
+      {
+        super(field);
+      }
+      public Map getLookupTable()
+      {
+        return dataDictionary.getCountries();
+      }
+    }
+
+    public class BibliographicLevelDecorator extends LookupValueDecorator
     {
       public BibliographicLevelDecorator(DocumentField field)
       {
@@ -593,12 +660,12 @@ public abstract class DocumentView {
     }
 
     /*
-    * This decorator extends the TranslationDecorator by splitting the code into multiple values, based on a split expression
+    * This decorator extends the LookupValueDecorator by splitting the code into multiple values, based on a split expression
     * and then conctenating each decorated value into a single string, using a concatenationstring to join the decorated values
     */
-    public abstract class MultiValueTranslationDecorator extends TranslationDecorator
+    public abstract class MultiValueLookupValueDecorator extends LookupValueDecorator
     {
-      public MultiValueTranslationDecorator(DocumentField field)
+      public MultiValueLookupValueDecorator(DocumentField field)
       {
         super(field);
       }
@@ -629,7 +696,7 @@ public abstract class DocumentView {
       public abstract String getConcatenationString();
     }
 
-    public class CategoryDecorator extends MultiValueTranslationDecorator
+    public class CategoryDecorator extends MultiValueLookupValueDecorator
     {
       public CategoryDecorator(DocumentField field)
       {
@@ -643,18 +710,18 @@ public abstract class DocumentView {
       }
     }
 
-    public class DocumentTypeDecorator extends MultiValueTranslationDecorator
+    public class DocumentTypeDecorator extends MultiValueLookupValueDecorator
     {
       public DocumentTypeDecorator(DocumentField field)
       {
         super(field);
       }
       // empty pattern will split string into single characters
-      public Pattern getSplitPattern() { return Pattern.compile(""); }
+      public Pattern getSplitPattern() { return Pattern.compile(StringUtil.EMPTY_STRING); }
       public String getConcatenationString() { return ", "; }
       public Map getLookupTable()
       {
         return dataDictionary.getDocumenttypes();
       }
     }
-}
+} //  End of DocumentView class
