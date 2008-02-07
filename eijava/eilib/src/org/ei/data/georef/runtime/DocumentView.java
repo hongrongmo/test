@@ -47,46 +47,61 @@ public abstract class DocumentView {
       addDocumentValue(Keys.VOLISSUE, getVolIssue());
       addDocumentValue(Keys.ABSTRACT, getAbstract());
 
-      // AUS/EDS
+      // AUS
       Contributors contributors = null;
-      Key keyContributors = Keys.AUTHORS;
-      Key keyAffiliation = Keys.AUTHOR_AFFS;
+      Key keyAffiliation = null;
+
       String strpersons = createColumnValueField("PERSON_ANALYTIC").getValue();
-      if(strpersons == null || strpersons.equalsIgnoreCase("Anonymous"))
+      if(strpersons != null &&  !strpersons.equalsIgnoreCase("Anonymous"))
       {
-        strpersons = createColumnValueField("PERSON_MONOGRAPH").getValue();
-        keyContributors = Keys.EDITORS;
-        keyAffiliation = Keys.EDITOR_AFFS;
+        Contributors authors = new Contributors(Keys.AUTHORS,getContributors(strpersons,Keys.AUTHORS));
+        if(authors != null)
+        {
+          ht.put(Keys.AUTHORS, authors);
+          contributors = authors;
+        }
+        // if there is an AUTHOR_AFFILIATION
+        // then it will be a PERSON_ANALYTIC affiliation since PERSON_ANALYTIC is not empty
+        keyAffiliation = Keys.AUTHOR_AFFS;
       }
-      if(strpersons != null)
+
+      // EDS
+      strpersons = createColumnValueField("PERSON_MONOGRAPH").getValue();
+      if(strpersons != null &&  !strpersons.equalsIgnoreCase("Anonymous"))
       {
-        contributors = new Contributors(keyContributors,getContributors(strpersons,keyContributors));
+        Contributors editors = new Contributors(Keys.EDITORS,getContributors(strpersons,Keys.EDITORS));
+        if(editors != null)
+        {
+          ht.put(Keys.EDITORS, editors);
+        }
+        // if there was no PERSON_ANALYTIC, if there is an AUTHOR_AFFILIATION,
+        // then it is the PERSON_MONOGRAPH affiliation since PERSON_MONOGRAPH is not empty and PERSON_ANALYTIC was empty
+        if(keyAffiliation == null)
+        {
+          keyAffiliation = Keys.EDITOR_AFFS;
+          contributors = editors;
+        }
+      }
+
+      // AFS/EFS
+      String straffl = createColumnValueField("AUTHOR_AFFILIATION").getValue();
+      if(straffl != null)
+      {
+        String straddr = createColumnValueField("AUTHOR_AFFILIATION_ADDRESS").getValue();
+        if(straddr != null)
+        {
+          straffl = straffl.concat(", ").concat(straddr);
+        }
+        String strcountry = new CountryDecorator(createColumnValueField("AUTHOR_AFFILIATION_COUNTRY")).getValue();
+        if(strcountry != null)
+        {
+          straffl = straffl.concat(", ").concat(strcountry);
+        }
+        Affiliation affil = new Affiliation(keyAffiliation, straffl);
+        ht.put(keyAffiliation, new Affiliations(keyAffiliation, affil));
         if(contributors != null)
         {
-          ht.put(keyContributors, contributors);
-
-          // AFS/EFS
-          String straffl = null;
-          straffl = createColumnValueField("AUTHOR_AFFILIATION").getValue();
-          if(straffl != null)
-          {
-            String straddr = createColumnValueField("AUTHOR_AFFILIATION_ADDRESS").getValue();
-            if(straddr != null)
-            {
-              straffl = straffl.concat(", ").concat(straddr);
-            }
-            String strcountry = new CountryDecorator(createColumnValueField("AUTHOR_AFFILIATION_COUNTRY")).getValue();
-            if(strcountry != null)
-            {
-              straffl = straffl.concat(", ").concat(strcountry);
-            }
-            Affiliation affil = new Affiliation(keyAffiliation, straffl);
-            ht.put(keyAffiliation, new Affiliations(keyAffiliation, affil));
-            if(contributors != null)
-            {
-              contributors.setFirstAffiliation(affil);
-            }
-          }
+          contributors.setFirstAffiliation(affil);
         }
       }
 
