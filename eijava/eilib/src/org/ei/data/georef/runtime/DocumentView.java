@@ -159,6 +159,7 @@ public abstract class DocumentView {
       addDocumentValue(Keys.REPORT_NUMBER, createColumnValueField("REPORT_NUMBER"));
       addDocumentValue(Keys.DOI, createColumnValueField("DOI"));
       addDocumentValue(Keys.AVAILABILITY, createColumnValueField("AVAILABILITY"));
+      addDocumentValue(Keys.EDITION, createColumnValueField("EDITION"));
 
       addDocumentValue(GRFDocBuilder.UNIVERSITY, createColumnValueField("UNIVERSITY"));
       addDocumentValue(GRFDocBuilder.DEGREE_TYPE, createColumnValueField("TYPE_OF_DEGREE"));

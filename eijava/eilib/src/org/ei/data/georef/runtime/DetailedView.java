@@ -12,6 +12,7 @@ import org.ei.domain.FullDoc;
 
         private List fields = Arrays.asList(new String[]{"DOI",
                                                         "URL",
+                                                        "EDITION",
                                                         "CORPORATE_BODY_ANALYTIC",
                                                         "CORPORATE_BODY_MONOGRAPH",
                                                         "CORPORATE_BODY_COLLECTION",
@@ -48,6 +49,7 @@ import org.ei.domain.FullDoc;
                                         Keys.ABBRV_SERIAL_TITLE,
                                         Keys.VOLUME,
                                         Keys.ISSUE,
+                                        Keys.EDITION,
                                         Keys.MONOGRAPH_TITLE,
                                         Keys.COLLECTION_TITLE,
                                         Keys.ISSUE_DATE,
