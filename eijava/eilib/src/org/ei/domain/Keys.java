@@ -60,6 +60,7 @@ public interface Keys
     public static final Key CLASS_CODES = new Key("CLS");
     public static final Key CLASS_CODES_MULTI= new Key("CLGM");
     public static final Key CODEN = new Key("CN","CODEN");
+    public static final Key COLLECTION_TITLE = new Key("CLT", "Collection title");
     public static final Key CONFERENCE_NAME  = new Key("CF","Conference name");
     public static final Key CONF_CODE = new Key("CC", "Conference code");
     public static final Key CONF_DATE = new Key("MD", "Conference date");;
