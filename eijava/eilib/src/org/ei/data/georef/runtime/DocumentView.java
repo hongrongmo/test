@@ -90,10 +90,8 @@ public abstract class DocumentView {
       addDocumentValue(Keys.ISBN, createColumnValueField("ISBN"), new ISBN(StringUtil.EMPTY_STRING));
       //addDocumentValue(Keys.E_ISSN, eIssnDecorator(createColumnValueField("EISSN")), new ISSN(StringUtil.EMPTY_STRING));
 
-
       addDocumentValue(Keys.PAGE_RANGE, new SimpleValueField(getPages()), new PageRange(StringUtil.EMPTY_STRING, perl));
-      addDocumentValue(Keys.PAGE_RANGE, new SimpleValueField(getYear()), new Year(StringUtil.EMPTY_STRING, perl));
-
+      addDocumentValue(Keys.PUBLICATION_YEAR, new SimpleValueField(getYear()), new Year(StringUtil.EMPTY_STRING, perl));
 
       // INDEX_TERMS (CVS)
       if(isIncluded(Keys.INDEX_TERM))
@@ -195,8 +193,13 @@ public abstract class DocumentView {
     {
       if(isIncluded(key))
       {
-        data.setElementData(new String[]{field.getValue()});
-        putElementData(key, data);
+        String fieldvalue = field.getValue();
+        if(fieldvalue != null)
+        {
+          //System.out.println("Setting " + key.getKey() + " value =" + fieldvalue);
+          data.setElementData(new String[]{fieldvalue});
+          putElementData(key, data);
+        }
       }
     }
 
