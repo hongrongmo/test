@@ -71,9 +71,10 @@ public abstract class DocumentView {
         {
           straffl = straffl.concat(", ").concat(rset.getString("AUTHOR_AFFILIATION_ADDRESS"));
         }
-        if(rset.getString("AUTHOR_AFFILIATION_COUNTRY") != null)
+        String strcountry = new CountryDecorator(createColumnValueField("AUTHOR_AFFILIATION_COUNTRY")).getValue();
+        if(strcountry != null)
         {
-          straffl = straffl.concat(", ").concat(rset.getString("AUTHOR_AFFILIATION_COUNTRY"));
+          straffl = straffl.concat(", ").concat(strcountry);
         }
         Affiliation affil = new Affiliation(Keys.AUTHOR_AFFS, straffl);
         ht.put(Keys.AUTHOR_AFFS, new Affiliations(Keys.AUTHOR_AFFS, affil));
