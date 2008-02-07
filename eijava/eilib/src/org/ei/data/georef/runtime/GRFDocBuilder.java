@@ -24,12 +24,12 @@ public class GRFDocBuilder implements DocumentBuilder
     public static final String GROUPDELIMITER = new String(new char[] {02});
     public static String GRF_TEXT_COPYRIGHT = "GeoRef, Copyright 2008, American Geological Institute.";
     public static String GRF_HTML_COPYRIGHT = "GeoRef, Copyright &copy; 2008, American Geological Institute.";
-    public static String PROVIDER_TEXT = "Ei";
+    public static String PROVIDER_TEXT = "American Geological Institute";
     private static final Key GRF_CLASS_CODES = new Key(Keys.CLASS_CODES, "Classification codes");
     private static final Key GRF_CONTROLLED_TERMS = new Key(Keys.CONTROLLED_TERMS, "Index terms");
 
     public static final Key ILLUSTRATION = new Key("ILLUS", "Illustrations");
-    public static final Key ANNOTATION = new Key("ANT", "Annotations");
+    public static final Key ANNOTATION = new Key("ANT", "Annotation");
     public static final Key MAP_SCALE = new Key("MPS", "Map scale");
     public static final Key MAP_TYPE = new Key("MPT", "Map type");
     public static final Key AFFILIATION_OTHER = new Key("OAF", "Other affiliation");
@@ -38,6 +38,7 @@ public class GRFDocBuilder implements DocumentBuilder
     public static final Key HOLDING_LIBRARY = new Key("HOLD", "Holding Library");
     public static final Key DEGREE_TYPE = new Key("DEG", "Degree");
     public static final Key UNIVERSITY = new Key("UNV", "University");
+    public static final Key RESEARCH_PROGRAM = new Key("RPGM", "Research program");
 
 
     private Database database;
