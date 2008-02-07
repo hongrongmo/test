@@ -49,6 +49,7 @@ import org.ei.domain.FullDoc;
                                         Keys.VOLUME,
                                         Keys.ISSUE,
                                         Keys.MONOGRAPH_TITLE,
+                                        Keys.COLLECTION_TITLE,
                                         Keys.ISSUE_DATE,
                                         Keys.PUBLICATION_YEAR,
                                         Keys.PAGE_RANGE,
