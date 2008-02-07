@@ -42,8 +42,9 @@ public abstract class DocumentView {
       addDocumentValue(Keys.COPYRIGHT_TEXT, GRFDocBuilder.GRF_TEXT_COPYRIGHT);
 
       addDocumentValue(Keys.TITLE, getTitle());
-      addDocumentValue(Keys.VOLISSUE, getVolIssue());
       addDocumentValue(Keys.TITLE_TRANSLATION, getTranslatedTitle());
+      addDocumentValue(Keys.MONOGRAPH_TITLE, getMonographTitle());
+      addDocumentValue(Keys.VOLISSUE, getVolIssue());
       addDocumentValue(Keys.ABSTRACT, getAbstract());
 
       // AUS/EDS
@@ -91,7 +92,6 @@ public abstract class DocumentView {
 
       addDocumentValue(Keys.VOLUME, createColumnValueField("VOLUME_ID"), new Volume(StringUtil.EMPTY_STRING,perl));
       addDocumentValue(Keys.ISSUE, createColumnValueField("ISSUE_ID"), new Issue(StringUtil.EMPTY_STRING,perl));
-
       addDocumentValue(Keys.ISSN, createColumnValueField("ISSN"), new ISSN(StringUtil.EMPTY_STRING));
       addDocumentValue(Keys.ISBN, createColumnValueField("ISBN"), new ISBN(StringUtil.EMPTY_STRING));
       //addDocumentValue(Keys.E_ISSN, eIssnDecorator(createColumnValueField("EISSN")), new ISSN(StringUtil.EMPTY_STRING));
@@ -155,6 +155,7 @@ public abstract class DocumentView {
       addDocumentValue(GRFDocBuilder.HOLDING_LIBRARY, createColumnValueField("HOLDING_LIBRARY"));
       addDocumentValue(GRFDocBuilder.TARGET_AUDIENCE, createColumnValueField("TARGET_AUDIENCE"));
 
+      addDocumentValue(Keys.COLLECTION_TITLE, new TitleDecorator(createColumnValueField("TITLE_OF_COLLECTION")));
       addDocumentValue(Keys.PUBLISHER, new PublisherDecorator(createColumnValueField("PUBLISHER")));
       addDocumentValue(Keys.COUNTRY_OF_PUB, new CountryDecorator(createColumnValueField("COUNTRY_OF_PUBLICATION")));
       addDocumentValue(GRFDocBuilder.AFFILIATION_OTHER, new OtherAffiliationDecorator(createColumnValueField("AFFILIATION_SECONDARY")));
@@ -230,6 +231,11 @@ public abstract class DocumentView {
       }
     }
 
+
+    /* =========================================================================
+     * Virtual Fields that require conditions for determining their values
+     * =========================================================================
+     */
     private List getContributors(String strAuthors, Key key)
     {
 
@@ -278,6 +284,20 @@ public abstract class DocumentView {
         afield = new TranslatedTitleDecorator(createColumnValueField("TITLE_OF_MONOGRAPH"));
         strvalue = afield.getValue();
       }
+      if(strvalue != null)
+      {
+        if(strvalue.equals(getTitle()))
+        {
+          strvalue = null;
+        }
+      }
+      return strvalue;
+    }
+
+    private String getMonographTitle()
+    {
+      DocumentField afield = new TitleDecorator(createColumnValueField("TITLE_OF_MONOGRAPH"));
+      String strvalue = afield.getValue();
       if(strvalue != null)
       {
         if(strvalue.equals(getTitle()))
@@ -385,7 +405,7 @@ public abstract class DocumentView {
 
 
     /* =========================================================================
-     * Fields
+     * DocumentField
      * =========================================================================
      */
     public abstract class DocumentField
@@ -408,6 +428,10 @@ public abstract class DocumentView {
       public String getValue() { return this.value; }
     }
 
+    /* =========================================================================
+     * This is for wrapping strings ResultSet fields
+     * =========================================================================
+     */
     public abstract class ResultsSetField extends DocumentField
     {
       protected  ResultSet rs = null;
