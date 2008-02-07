@@ -46,41 +46,46 @@ public abstract class DocumentView {
       addDocumentValue(Keys.TITLE_TRANSLATION, getTranslatedTitle());
       addDocumentValue(Keys.ABSTRACT, getAbstract());
 
-      // AUS
-      Contributors authors = null;
-      String strauthors = rset.getString("PERSON_ANALYTIC");
-      if(strauthors == null || strauthors.equalsIgnoreCase("Anonymous"))
+      // AUS/EDS
+      Contributors contributors = null;
+      Key keyContributors = Keys.AUTHORS;
+      Key keyAffiliation = Keys.AUTHOR_AFFS;
+      String strpersons = createColumnValueField("PERSON_ANALYTIC").getValue();
+      if(strpersons == null || strpersons.equalsIgnoreCase("Anonymous"))
       {
-        strauthors = rset.getString("PERSON_MONOGRAPH");
+        strpersons = createColumnValueField("PERSON_MONOGRAPH").getValue();
+        keyContributors = Keys.EDITORS;
+        keyAffiliation = Keys.EDITOR_AFFS;
       }
-      if(strauthors != null)
+      if(strpersons != null)
       {
-        authors = new Contributors(Keys.AUTHORS,getContributors(strauthors,Keys.AUTHORS));
-        if(authors != null)
+        contributors = new Contributors(keyContributors,getContributors(strpersons,keyContributors));
+        if(contributors != null)
         {
-          ht.put(Keys.AUTHORS, authors);
-        }
-      }
+          ht.put(keyContributors, contributors);
 
-      // AFF - Uses authors Collection
-      String straffl = null;
-      straffl = rset.getString("AUTHOR_AFFILIATION");
-      if(straffl != null)
-      {
-        if(rset.getString("AUTHOR_AFFILIATION_ADDRESS") != null)
-        {
-          straffl = straffl.concat(", ").concat(rset.getString("AUTHOR_AFFILIATION_ADDRESS"));
-        }
-        String strcountry = new CountryDecorator(createColumnValueField("AUTHOR_AFFILIATION_COUNTRY")).getValue();
-        if(strcountry != null)
-        {
-          straffl = straffl.concat(", ").concat(strcountry);
-        }
-        Affiliation affil = new Affiliation(Keys.AUTHOR_AFFS, straffl);
-        ht.put(Keys.AUTHOR_AFFS, new Affiliations(Keys.AUTHOR_AFFS, affil));
-        if(authors != null)
-        {
-          authors.setFirstAffiliation(affil);
+          // AFS/EFS
+          String straffl = null;
+          straffl = createColumnValueField("AUTHOR_AFFILIATION").getValue();
+          if(straffl != null)
+          {
+            String straddr = createColumnValueField("AUTHOR_AFFILIATION_ADDRESS").getValue();
+            if(straddr != null)
+            {
+              straffl = straffl.concat(", ").concat(straddr);
+            }
+            String strcountry = new CountryDecorator(createColumnValueField("AUTHOR_AFFILIATION_COUNTRY")).getValue();
+            if(strcountry != null)
+            {
+              straffl = straffl.concat(", ").concat(strcountry);
+            }
+            Affiliation affil = new Affiliation(keyAffiliation, straffl);
+            ht.put(keyAffiliation, new Affiliations(keyAffiliation, affil));
+            if(contributors != null)
+            {
+              contributors.setFirstAffiliation(affil);
+            }
+          }
         }
       }
 
@@ -97,7 +102,7 @@ public abstract class DocumentView {
       // INDEX_TERMS (CVS)
       if(isIncluded(Keys.INDEX_TERM))
       {
-        String stridxtrms = rset.getString("INDEX_TERMS");
+        String stridxtrms = createColumnValueField("INDEX_TERMS").getValue();
         if(stridxtrms != null)
         {
           stridxtrms = stridxtrms.replaceAll(GRFDocBuilder.IDDELIMITER,":");
@@ -107,14 +112,26 @@ public abstract class DocumentView {
       // UNCONTROLLED_TERMS (FLS)
       if(isIncluded(Keys.UNCONTROLLED_TERMS))
       {
-        String stridxtrms = rset.getString("UNCONTROLLED_TERMS");
+        String stridxtrms = createColumnValueField("UNCONTROLLED_TERMS").getValue();
         if(stridxtrms != null)
         {
           stridxtrms = stridxtrms.replaceAll(GRFDocBuilder.IDDELIMITER,":");
           ht.put(Keys.UNCONTROLLED_TERMS, new XMLMultiWrapper(Keys.UNCONTROLLED_TERMS, stridxtrms.split(GRFDocBuilder.AUDELIMITER)));
         }
       }
-
+      // SPONSOR
+      if(isIncluded(Keys.RSRCH_SPONSOR))
+      {
+        String strsponsor = createColumnValueField("CORPORATE_BODY_ANALYTIC").getValue();
+        if(strsponsor == null)
+        {
+          strsponsor = createColumnValueField("CORPORATE_BODY_MONOGRAPH").getValue();
+        }
+        if(strsponsor != null)
+        {
+          addDocumentValue(Keys.RSRCH_SPONSOR, new PublisherDecorator(new SimpleValueField(strsponsor)));
+        }
+      }
 
       addDocumentValue(Keys.CONF_DATE, new ConferenceDateDecorator(createColumnValueField("DATE_OF_MEETING")));
       addDocumentValue(Keys.CONFERENCE_NAME, createColumnValueField("NAME_OF_MEETING"));
@@ -130,6 +147,7 @@ public abstract class DocumentView {
 
       addDocumentValue(GRFDocBuilder.UNIVERSITY, createColumnValueField("UNIVERSITY"));
       addDocumentValue(GRFDocBuilder.DEGREE_TYPE, createColumnValueField("TYPE_OF_DEGREE"));
+      addDocumentValue(GRFDocBuilder.RESEARCH_PROGRAM, createColumnValueField("RESEARCH_PROGRAM"));
       addDocumentValue(GRFDocBuilder.ILLUSTRATION, createColumnValueField("ILLUSTRATION"));
       addDocumentValue(GRFDocBuilder.ANNOTATION, createColumnValueField("ANNOTATION"));
       addDocumentValue(GRFDocBuilder.MAP_SCALE, createColumnValueField("MAP_SCALE"));
@@ -167,7 +185,7 @@ public abstract class DocumentView {
     /*
      * "Factory" prevents having to pass around ResultSet when creating objects
      */
-    private ResultsSetField createColumnValueField(String columnname)
+    private DocumentField createColumnValueField(String columnname)
     {
       ResultsSetField rsfield = new ColumnValueField(columnname);
       rsfield.setResultSet(rset);
@@ -414,7 +432,8 @@ public abstract class DocumentView {
         }
         catch(SQLException sqle)
         {
-          sqle.printStackTrace();
+          //sqle.printStackTrace();
+          System.out.println("getValue() error.  Possible missing or misspelled column name " + getColumn() + ".");
         }
         return strvalue;
       }
