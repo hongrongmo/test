@@ -88,6 +88,7 @@ public interface Keys
     public static final Key DOMESTIC_APPNUM = new Key("DAN");
     public static final Key EDITORS = new Key("EDS", "Editors");
     public static final Key EDITOR_AFFS = new Key("EFS", "First editor affiliation");
+    public static final Key EDITION = new Key("EDI", "Edition");
     public static final Key END_PAGE= new Key("EPG");
     public static final Key EUROPCL_CODE = new Key("PECM","ECLA Code" );
     public static final Key EUR_PATCLASSES = new Key("ECC", "European patent classes");
