@@ -161,6 +161,10 @@ public abstract class DocumentView {
       addDocumentValue(Keys.AVAILABILITY, createColumnValueField("AVAILABILITY"));
       addDocumentValue(Keys.EDITION, createColumnValueField("EDITION"));
 
+      addDocumentValue(GRFDocBuilder.SOURCE_MEDIUM, createColumnValueField("MEDIUM_OF_SOURCE"));
+      addDocumentValue(GRFDocBuilder.SOURCE_NOTE, createColumnValueField("SOURCE_NOTE"));
+      addDocumentValue(GRFDocBuilder.SUMMARY_ONLY_NOTE, createColumnValueField("SUMMARY_ONLY_NOTE"));
+
       addDocumentValue(GRFDocBuilder.UNIVERSITY, createColumnValueField("UNIVERSITY"));
       addDocumentValue(GRFDocBuilder.DEGREE_TYPE, createColumnValueField("TYPE_OF_DEGREE"));
       addDocumentValue(GRFDocBuilder.RESEARCH_PROGRAM, createColumnValueField("RESEARCH_PROGRAM"));
@@ -387,6 +391,15 @@ public abstract class DocumentView {
         if((titleMono.getValue() != null) && (pagesMono.getValue() != null))
         {
           strvalue = pagesMono.getValue();
+        }
+        // settle on the collation field for the collection if it exists
+        if(strvalue == null)
+        {
+          DocumentField pagesColl = createColumnValueField("COLLATION_COLLECTION");
+          if(pagesColl.getValue() != null)
+          {
+            strvalue = pagesMono.getValue();
+          }
         }
       }
       return strvalue;
