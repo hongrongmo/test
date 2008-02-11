@@ -30,7 +30,8 @@ public class CitationView extends DocumentView {
                                                     "LOAD_NUMBER",
                                                     "COPYRIGHT",
                                                     "COLLATION_ANALYTIC",
-                                                    "COLLATION_MONOGRAPH"});
+                                                    "COLLATION_MONOGRAPH",
+                                                    "COLLATION_COLLECTION"});
     private Key[] keys = new Key[]{Keys.AUTHORS,
                                     Keys.AUTHOR_AFFS,
                                     Keys.COPYRIGHT,
