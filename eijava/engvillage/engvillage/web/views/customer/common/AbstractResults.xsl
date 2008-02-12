@@ -161,7 +161,7 @@
       <xsl:apply-templates select="CVS">
         <xsl:with-param name="DBNAME" select="DOC/DB/DBNAME"/>
       </xsl:apply-templates>
-      
+
       <xsl:apply-templates select="CRM"/>
       <xsl:apply-templates select="FLS"/>
       <xsl:apply-templates select="CLS"/>
@@ -318,7 +318,7 @@
          <xsl:with-param name="TERM"><xsl:value-of select="./CID"/></xsl:with-param>
          <xsl:with-param name="FIELD"><xsl:value-of select="$FIELDNAME"/></xsl:with-param>
           <xsl:with-param name="CLASS"><xsl:value-of select="$CLASS"/></xsl:with-param>
-         <xsl:with-param name="ONMOUSEOVER">this.T_WIDTH=450;return escape('<xsl:value-of select="ctd:getDisplayTitle(hlight:addMarkup(./CTI))"/>')</xsl:with-param>
+         <xsl:with-param name="ONMOUSEOVER">Tip('<xsl:value-of select="ctd:getDisplayTitle(hlight:addMarkup(./CTI))"/>',WIDTH,450)</xsl:with-param>
       </xsl:call-template>
       <xsl:if test="position()!=last()">
         <a class="SmBlkText">&#160; - &#160;</a>
@@ -638,7 +638,7 @@
         </xsl:choose>:&#160;&#160;</b></a>
       <xsl:apply-templates/>
     </xsl:template>
-    
+
     <xsl:template match="CR">
       <xsl:call-template name="LINK">
         <xsl:with-param name="TERM"><xsl:value-of select="normalize-space(text())"/></xsl:with-param>
@@ -758,7 +758,7 @@
         <A CLASS="SmBlackText">&#160; - &#160;</A>
       </xsl:if>
     </xsl:template>
-    
+
 
    <xsl:template match="CVN|CVP|CVA|CVMN|CVMP|CVMA">
       <xsl:call-template name="LINK">
@@ -771,7 +771,7 @@
         <A CLASS="SmBlackText">&#160; - &#160;</A>
       </xsl:if>
     </xsl:template>
-    
+
 
     <xsl:template match="MJS">
       <xsl:call-template name="LINK">
@@ -794,7 +794,7 @@
             <A CLASS="SmBlackText">&#160; - &#160;</A>
           </xsl:if>
     </xsl:template>
-    
+
     <xsl:template match="RGI">
     	<xsl:call-template name="LINK">
             <xsl:with-param name="TERM"><xsl:value-of select="normalize-space(text())"/></xsl:with-param>
@@ -820,7 +820,7 @@
       <xsl:param name="NAME"/>
       <xsl:param name="ONMOUSEOVER"/>
       <xsl:param name="CLASS"/>
-      
+
       <xsl:variable name="ENCODED-SEARCH-TERM">
         <xsl:value-of select="java:encode(schar:preprocess(hlight:removeMarkup($TERM)))" disable-output-escaping="yes"/>
       </xsl:variable>
