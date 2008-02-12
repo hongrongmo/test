@@ -151,7 +151,8 @@
             </td>
 
             <td width="220" valign="top">
-              <xsl:apply-templates select="NAVIGATORS"/>
+                <xsl:call-template name="NAVIGATORS"/>
+                <!-- <xsl:apply-templates select="NAVIGATORS"/> -->
             </td>
 
             </tr>
@@ -166,6 +167,11 @@
       </xsl:apply-templates>
 
       <br/>
+
+      <script language="JavaScript" type="text/javascript" src="/engresources/js/navigators.js"/>
+      <script language="JavaScript" type="text/javascript">
+      getNavigators("<xsl:value-of select="$SEARCH-ID"/>");
+      </script>
 
       <script language="JavaScript" type="text/javascript" src="/engresources/js/wz_tooltip.js"></script>
 
@@ -409,9 +415,9 @@
               &nbsp;<A class="MedBlackText">(<xsl:value-of select="$CIT-CNT"/>)</A>
             </xsl:if>
 
-	    <xsl:variable name="CHECK-CUSTOM-OPT">
-		<xsl:value-of select="custoptions:checkFullText($FULLTEXT, $FULLTEXT-LINK, $CUST-ID, EI-DOCUMENT/DO ,EI-DOCUMENT/DOC/DB/DBMASK)" />
-	    </xsl:variable>
+            <xsl:variable name="CHECK-CUSTOM-OPT">
+              <xsl:value-of select="custoptions:checkFullText($FULLTEXT, $FULLTEXT-LINK, $CUST-ID, EI-DOCUMENT/DO ,EI-DOCUMENT/DOC/DB/DBMASK)" />
+            </xsl:variable>
 
             <xsl:if test="($CHECK-CUSTOM-OPT ='true')">
               <a class="MedBlackText">&#160; - &#160;</a>
@@ -496,15 +502,15 @@
     <xsl:attribute name="HREF">/controller/servlet/Controller?CID=<xsl:value-of select="$RERUN-CID"/>&amp;database=<xsl:value-of select="/PAGE/DBMASK"/>&amp;sortdir=<xsl:value-of select="@dir"/>&amp;sort=<xsl:value-of select="../@value"/>&amp;RERUN=<xsl:value-of select="//SESSION-DATA/QUERY-ID"/></xsl:attribute>
 </xsl:template>
 
-<xsl:template match="NAVIGATORS">
+<xsl:template name="NAVIGATORS"> <!-- match="NAVIGATORS" -->
 
-    <!-- jam turkey - added for Help link to have proper anchor to reflect page context -->
-    <xsl:variable name="REFCTX">
-	<xsl:choose>
-            <xsl:when test="(/PAGE/SESSION-DATA/SEARCH-TYPE='Easy')">Refine_Within_Easy_Search.htm</xsl:when>
-            <xsl:otherwise>Refining_within_Quick_Search_or_Expert_Search_or_Thesaurus_Search.htm</xsl:otherwise>
-        </xsl:choose>
-    </xsl:variable>
+  <!-- jam turkey - added for Help link to have proper anchor to reflect page context -->
+  <xsl:variable name="REFCTX">
+    <xsl:choose>
+      <xsl:when test="(/PAGE/SESSION-DATA/SEARCH-TYPE='Easy')">Refine_Within_Easy_Search.htm</xsl:when>
+      <xsl:otherwise>Refining_within_Quick_Search_or_Expert_Search_or_Thesaurus_Search.htm</xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
 
   <form name="navigator" method="POST" >
     <xsl:attribute name="action">/controller/servlet/Controller?CID=expertSearchCitationFormat&amp;database=<xsl:value-of select="/PAGE/DBMASK"/>&amp;RERUN=<xsl:value-of select="//SESSION-DATA/QUERY-ID"/></xsl:attribute>
@@ -519,123 +525,121 @@
 
     <!-- jam  This refine search form ALWAYS becomes an expert search -->
     <table border="0" cellspacing="0" cellpadding="0" width="100%" >
-        <tr><td colspan="3" height="4"><img src="/engresources/images/s.gif" height="4"/></td></tr>
-        <tr><td colspan="3" height="1" bgcolor="#3173B5"><img src="/engresources/images/s.gif" border="0" height="1"/></td></tr>
-        <tr>
-            <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" height="3" width="1"/></td>
-            <td valign="top"><img src="/engresources/images/s.gif" border="0" height="3" width="1" /></td>
-            <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" height="3" width="1"/></td>
-        </tr>
-        <tr>
-            <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
-            <td valign="middle">
-                <table border="0" cellspacing="0" cellpadding="0" width="100%">
-                    <tr>
-                        <td valign="bottom" align="left"><a class="LgOrangeText">&#160; <b>Refine Results</b></a></td>
-                        <td valign="top" align="right"><a class="SmBlueText"><b>?</b></a>
-			<a class="DecLink" href="javascript:makeUrl('{$REFCTX}')">
-			    Help</a>&#160;&#160;</td>
-                    </tr>
-                </table>
-            </td>
-            <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
-        </tr>
+      <tr><td colspan="3" height="4"><img src="/engresources/images/s.gif" height="4"/></td></tr>
+      <tr><td colspan="3" height="1" bgcolor="#3173B5"><img src="/engresources/images/s.gif" border="0" height="1"/></td></tr>
+      <tr>
+        <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" height="3" width="1"/></td>
+        <td valign="top"><img src="/engresources/images/s.gif" border="0" height="3" width="1" /></td>
+        <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" height="3" width="1"/></td>
+      </tr>
+      <tr>
+        <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
+        <td valign="middle">
+          <table border="0" cellspacing="0" cellpadding="0" width="100%">
+            <tr>
+              <td valign="bottom" align="left"><a class="LgOrangeText">&#160; <b>Refine Results</b></a></td>
+              <td valign="top" align="right"><a class="SmBlueText"><b>?</b></a>
+                <a class="DecLink" href="javascript:makeUrl('{$REFCTX}')">Help</a>&#160;&#160;</td>
+            </tr>
+          </table>
+        </td>
+        <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
+      </tr>
       <xsl:if test="not(/PAGE/SESSION-DATA/SEARCH-TYPE='Easy')">
         <tr>
-            <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
-            <td valign="top" align="right"><input onclick="javascript:return navigatorsOnsubmit('limit');" type="image" src="/engresources/images/sch.gif" align="absbottom" name="search" value="Search" border="0" />&#160;&#160;<input onclick="javascript:return navigatorsOnsubmit('exclude');" type="image" src="/engresources/images/xsch.gif" align="absbottom" name="exclude" value="Exclude" border="0" />&#160;&#160;</td>
-            <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
+          <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
+          <td valign="top" align="right"><input onclick="javascript:return navigatorsOnsubmit('limit');" type="image" src="/engresources/images/sch.gif" align="absbottom" name="search" value="Search" border="0" />&#160;&#160;<input onclick="javascript:return navigatorsOnsubmit('exclude');" type="image" src="/engresources/images/xsch.gif" align="absbottom" name="exclude" value="Exclude" border="0" />&#160;&#160;</td>
+          <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
         </tr>
       </xsl:if>
+      <tr>
+        <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
+        <td valign="top">
 
-        <tr>
-            <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
-            <td valign="top">
-            <xsl:apply-templates/>
-            </td>
-            <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
-        </tr>
+          <div id="navigators"></div>
+<!--        <xsl:apply-templates/> -->
+        </td>
+        <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
+      </tr>
       <xsl:if test="not(/PAGE/SESSION-DATA/SEARCH-TYPE='Easy')">
-            <tr>
-                <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
-                <td valign="top">
+        <tr>
+          <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
+          <td valign="top">
 
             <!-- use same format as a Navigator/Modifier for Add a term checkbox and input -->
             <table border="0" width="100%" cellspacing="0" cellpadding="0">
             <tr>
-                <td>
-                    <table border="0" width="100%" cellspacing="0" cellpadding="0">
-                        <tr><td colspan="3" ><img src="/engresources/images/s.gif" height="2"/></td></tr>
-                        <tr><td width="4" valign="top" ><img src="/engresources/images/s.gif" width="4"/></td><td valign="top" colspan="2"><a class="MedOrangeText"><label for="txtAdd"><b>Add a term</b></label></a></td></tr>
-                <tr>
+              <td>
+                <table border="0" width="100%" cellspacing="0" cellpadding="0">
+                  <tr><td colspan="3" ><img src="/engresources/images/s.gif" height="2"/></td></tr>
+                  <tr><td width="4" valign="top" ><img src="/engresources/images/s.gif" width="4"/></td><td valign="top" colspan="2"><a class="MedOrangeText"><label for="txtAdd"><b>Add a term</b></label></a></td></tr>
+                  <tr>
                     <td width="4"><img src="/engresources/images/s.gif" width="4"/></td>
                     <td width="4" align="left" >
-                        <!-- jam replaced checkbox with spacer -->
-                        <img src="/engresources/images/s.gif" width="4"/>
+                      <!-- jam replaced checkbox with spacer -->
+                      <img src="/engresources/images/s.gif" width="4"/>
                     </td>
                     <td width="100%" valign="top" align="left">
                     <a class="SmBlackText"><input id="txtAdd" type="text" name="append" class="SmBlackText" size="15" maxlength="30"/></a>
                     </td>
-                </tr>
-                <tr><td colspan="3" ><img src="/engresources/images/s.gif" height="2"/></td></tr>
-                        <tr><td colspan="3" ><img src="/engresources/images/s.gif" height="2"/></td></tr>
-                    </table>
-                </td>
+                  </tr>
+                  <tr><td colspan="3" ><img src="/engresources/images/s.gif" height="2"/></td></tr>
+                  <tr><td colspan="3" ><img src="/engresources/images/s.gif" height="2"/></td></tr>
+                </table>
+              </td>
             </tr>
             </table>
-
-                </td>
-                <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
-            </tr>
-            <tr>
-                <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
-                <td valign="middle" align="left">
-              <A class="SmBlackText">
-                &#160;<input id="rdRes" checked="checked" type="radio" name="resultsorall" value="results"/><label for="rdRes">Search within results</label><br/>
-                &#160;<input id="rdAll" type="radio" name="resultsorall" value="all"/><label for="rdAll">Search all content</label><br/>
-              </A>
-                </td>
-                <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
-            </tr>
-          <tr>
-                <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" height="2" width="1"/></td>
-                <td valign="top"><img src="/engresources/images/s.gif" border="0" height="2" width="1" /></td>
-                <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" height="2" width="1"/></td>
-            </tr>
-            <tr>
-                <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
-                <td valign="middle" align="right"><input type="image" onclick="javascript:return navigatorsOnsubmit('limit');" src="/engresources/images/sch.gif" name="search" align="absbottom" value="Search" border="0" />&#160;&#160;<input onclick="javascript:return navigatorsOnsubmit('exclude');" type="image" src="/engresources/images/xsch.gif" align="absbottom" name="exclude" value="Exclude" border="0" />&#160;&#160;</td>
-                <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
-            </tr>
+          </td>
+          <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
+        </tr>
+        <tr>
+          <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
+          <td valign="middle" align="left">
+            <A class="SmBlackText">
+              &#160;<input id="rdRes" checked="checked" type="radio" name="resultsorall" value="results"/><label for="rdRes">Search within results</label><br/>
+              &#160;<input id="rdAll" type="radio" name="resultsorall" value="all"/><label for="rdAll">Search all content</label><br/>
+            </A>
+          </td>
+          <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
+        </tr>
+        <tr>
+          <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" height="2" width="1"/></td>
+          <td valign="top"><img src="/engresources/images/s.gif" border="0" height="2" width="1" /></td>
+          <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" height="2" width="1"/></td>
+        </tr>
+        <tr>
+          <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
+          <td valign="middle" align="right"><input type="image" onclick="javascript:return navigatorsOnsubmit('limit');" src="/engresources/images/sch.gif" name="search" align="absbottom" value="Search" border="0" />&#160;&#160;<input onclick="javascript:return navigatorsOnsubmit('exclude');" type="image" src="/engresources/images/xsch.gif" align="absbottom" name="exclude" value="Exclude" border="0" />&#160;&#160;</td>
+          <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
+        </tr>
       </xsl:if>
 
-             <tr>
-             <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" height="4" width="1"/></td>
-             <td valign="top"><img src="/engresources/images/s.gif" border="0" height="4" width="1" /></td>
-             <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" height="4" width="1"/></td>
-            </tr>
-             <tr>
-            <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" height="5" width="1"/></td>
-            <td valign="top" align="right"><a class="SmBlueText"><b>?</b></a>
-            <a class="DecLink" href="javascript:makeUrl('{$REFCTX}')">
-			    Help</a>&#160;&#160;</td>
-            <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" height="5" width="1"/></td>
-            </tr>
-        <tr>
-            <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
-            <td valign="top">
-                <xsl:apply-templates select="../NAVPAGER"/>
-            </td>
-            <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
-        </tr>
-          <tr>
-            <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" height="3" width="1"/></td>
-            <td valign="top"><img src="/engresources/images/s.gif" border="0" height="3" width="1" /></td>
-            <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" height="3" width="1"/></td>
-        </tr>
-        <tr>
-            <td colspan="3" height="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" height="1" border="0"/></td>
-        </tr>
+      <tr>
+        <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" height="4" width="1"/></td>
+        <td valign="top"><img src="/engresources/images/s.gif" border="0" height="4" width="1" /></td>
+        <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" height="4" width="1"/></td>
+      </tr>
+      <tr>
+        <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" height="5" width="1"/></td>
+        <td valign="top" align="right"><a class="SmBlueText"><b>?</b></a>
+        <a class="DecLink" href="javascript:makeUrl('{$REFCTX}')">Help</a>&#160;&#160;</td>
+        <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" height="5" width="1"/></td>
+      </tr>
+      <tr>
+        <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
+        <td valign="top">
+          <!-- <xsl:apply-templates select="../NAVPAGER"/> -->
+        </td>
+        <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
+      </tr>
+      <tr>
+        <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" height="3" width="1"/></td>
+        <td valign="top"><img src="/engresources/images/s.gif" border="0" height="3" width="1" /></td>
+        <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" height="3" width="1"/></td>
+      </tr>
+      <tr>
+        <td colspan="3" height="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" height="1" border="0"/></td>
+      </tr>
     </table>
   </form>
 
