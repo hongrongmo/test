@@ -95,18 +95,32 @@
               modchk.value =  modifier_count + "~" + modifier_value  + "~" + modifier_label;
               /* create label */
               var modlbl = document.createElement("label");
-              modlbl.className = "SmBlackText";
               modlbl.htmlFor = modid;
               modlbl.appendChild(document.createTextNode(modifier_label));
               modlbl.appendChild(document.createTextNode(" (" + modifier_count+ ")"));
+
+              var modanchor = document.createElement("a");
+
+              if(mods[modcount].childNodes.length > 2)
+              {
+                var mouseover_title = mods[modcount].getElementsByTagName("TITLE")[0].firstChild.nodeValue;
+                modanchor.onmouseover = function() {Tip(mouseover_title,WIDTH,450);};
+                modanchor.className = "SmBoldBlueText2";
+              }
+              else
+              {
+                modlbl.className = "SmBlackText";
+              }
 
               /* create listitem */
               var modli = document.createElement("li");
               modli.style.display="none";
 
               /* append checkbox and label */
+              modanchor.appendChild(modlbl);
               modli.appendChild(modchk);
-              modli.appendChild(modlbl);
+              //modli.appendChild(modlbl);
+              modli.appendChild(modanchor);
 
               /* don't show them all */
               if(modcount < MODSTATECOUNT)
