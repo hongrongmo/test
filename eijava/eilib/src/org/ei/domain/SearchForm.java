@@ -488,10 +488,17 @@ public class SearchForm {
 		   (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK &&
            (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
            (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK &&
+           (selecteddbMask & DatabaseConfig.INS_MASK) != DatabaseConfig.INS_MASK &&
            (selecteddbMask & DatabaseConfig.IBS_MASK) != DatabaseConfig.IBS_MASK)
         {
              treattype.put("BIO", "Biographical");
         }
+
+        //BIB
+        if(selecteddbMask == DatabaseConfig.INS_MASK)
+        {
+			treattype.put("BIB", "Bibliography");
+		}
 
         //ECO
         if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
