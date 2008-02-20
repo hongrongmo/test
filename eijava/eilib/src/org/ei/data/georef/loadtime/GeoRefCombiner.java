@@ -213,10 +213,7 @@ public class GeoRefCombiner
         {
           year = yearmatch.group(1);
         }
-        if (year != null)
-        {
-          rec.put(EVCombinedRec.PUB_YEAR, year);
-        }
+        rec.putIfNotNull(EVCombinedRec.PUB_YEAR, year);
 
         // AUS
         String aString = rs.getString("PERSON_ANALYTIC");
@@ -238,22 +235,6 @@ public class GeoRefCombiner
           {
             rec.put(EVCombinedRec.EDITOR, eString.split(AUDELIMITER));
           }
-        }
-
-        String title = runtimeDocview.getTitle();
-        if (title != null)
-        {
-          rec.put(EVCombinedRec.TITLE, title);
-        }
-        String ttitle = runtimeDocview.getTranslatedTitle();
-        if (ttitle != null)
-        {
-          rec.put(EVCombinedRec.TRANSLATED_TITLE, ttitle);
-        }
-        String mtitle = runtimeDocview.getMonographTitle();
-        if (mtitle != null)
-        {
-          rec.put(EVCombinedRec.MONOGRAPH_TITLE, mtitle);
         }
 
         // CO - Author Aff. Country
@@ -278,6 +259,7 @@ public class GeoRefCombiner
           rec.put(EVCombinedRec.ABSTRACT, abString);
         }
 
+        // SN
         if (rs.getString("ISSN") != null || rs.getString("EISSN") != null)
         {
           String issn = rs.getString("ISSN");
@@ -297,46 +279,32 @@ public class GeoRefCombiner
           }
           rec.put(EVCombinedRec.ISSN, (issnString.toString()).split(AUDELIMITER));
         }
-
-        if (rs.getString("CODEN") != null)
-        {
-          rec.put(EVCombinedRec.CODEN, rs.getString("CODEN"));
-        }
+        // BN
         if (rs.getString("ISBN") != null)
         {
           rec.put(EVCombinedRec.ISBN,(rs.getString("ISBN")).split(AUDELIMITER));
         }
 
+        rec.putIfNotNull(EVCombinedRec.TITLE, runtimeDocview.getTitle());
+        rec.putIfNotNull(EVCombinedRec.TRANSLATED_TITLE, runtimeDocview.getTranslatedTitle());
+        rec.putIfNotNull(EVCombinedRec.MONOGRAPH_TITLE, runtimeDocview.getMonographTitle());
 
-        String pages = rs.getString("COLLATION_ANALYTIC");
-        if(pages==null)
-        {
-          pages = rs.getString("COLLATION_COLLECTION");
-          if(pages==null)
-          {
-            pages = rs.getString("COLLATION_MONOGRAPH");
-          }
-        }
-
+        String pages = runtimeDocview.getPages();
         rec.put(EVCombinedRec.DEDUPKEY,
                 getDedupKey(rec.getString(EVCombinedRec.ISSN),
                 rec.getString(EVCombinedRec.CODEN),
                 rs.getString("VOLUME_ID"),
                 rs.getString("ISSUE_ID"),
                 pages));
-        rec.put(EVCombinedRec.STARTPAGE, getFirstPage(pages));
-
-        rec.put(EVCombinedRec.DOCID, rs.getString("M_ID"));
-        rec.put(EVCombinedRec.DATABASE, "gref");
-        rec.put(EVCombinedRec.LOAD_NUMBER, rs.getString("LOAD_NUMBER"));
-        rec.put(EVCombinedRec.VOLUME, getFirstNumber(rs.getString("VOLUME_ID")));
-        rec.put(EVCombinedRec.ISSUE, getFirstNumber(rs.getString("ISSUE_ID")));
-        rec.put(EVCombinedRec.ACCESSION_NUMBER,rs.getString("ID_NUMBER"));
-
-        if(rs.getString("DOI") != null)
-        {
-          rec.put(EVCombinedRec.DOI, rs.getString("DOI"));
-        }
+        rec.putIfNotNull(EVCombinedRec.STARTPAGE, getFirstPage(pages));
+        rec.putIfNotNull(EVCombinedRec.CODEN, rs.getString("CODEN"));
+        rec.putIfNotNull(EVCombinedRec.DOCID, rs.getString("M_ID"));
+        rec.putIfNotNull(EVCombinedRec.DATABASE, "gref");
+        rec.putIfNotNull(EVCombinedRec.LOAD_NUMBER, rs.getString("LOAD_NUMBER"));
+        rec.putIfNotNull(EVCombinedRec.VOLUME, getFirstNumber(rs.getString("VOLUME_ID")));
+        rec.putIfNotNull(EVCombinedRec.ISSUE, getFirstNumber(rs.getString("ISSUE_ID")));
+        rec.putIfNotNull(EVCombinedRec.ACCESSION_NUMBER,rs.getString("ID_NUMBER"));
+        rec.putIfNotNull(EVCombinedRec.DOI, rs.getString("DOI"));
 
         rec.put(EVCombinedRec.PUB_SORT, Integer.toString(i));
 
@@ -416,7 +384,6 @@ public class GeoRefCombiner
 
   private String getFirstNumber(String v)
   {
-
     MatchResult mResult = null;
     if (v == null)
     {
