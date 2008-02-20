@@ -409,7 +409,7 @@ public abstract class DocumentView {
       return strvalue;
     }
 
-    private String getYear()
+    public String getYear()
     {
       String strvalue = null;
       DocumentField yearPub = createColumnValueField("DATE_OF_PUBLICATION");
