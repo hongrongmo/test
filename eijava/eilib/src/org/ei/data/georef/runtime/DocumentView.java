@@ -382,7 +382,7 @@ public abstract class DocumentView {
       return (strvalue == null || strvalue.length() < GRFDocBuilder.MINIMUM_ABSTRACT_LENGTH) ? null : strvalue;
     }
 
-    private String getPages()
+    public String getPages()
     {
       String strvalue = null;
       DocumentField pagesAnalytic = createColumnValueField("COLLATION_ANALYTIC");
