@@ -1,20 +1,21 @@
 package org.ei.data.georef.loadtime;
 
+import java.io.*;
 import java.sql.Clob;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.*;
 import java.util.regex.*;
-import java.io.*;
 
+import org.ei.data.*;
 import org.ei.data.georef.runtime.*;
+import org.ei.domain.*;
+import org.ei.util.StringUtil;
+import org.ei.util.GUID;
 
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
-import org.ei.domain.*;
-import org.ei.data.*;
-import org.ei.util.GUID;
 
 public class GeoRefCombiner
   extends Combiner
@@ -178,9 +179,11 @@ public class GeoRefCombiner
   private void writeRecs(ResultSet rs)
                           throws Exception
   {
-    DocumentView runtimeDocview = new CitationView();
     try
     {
+      DocumentView runtimeDocview = new CitationView();
+      runtimeDocview.setResultSet(rs);
+
       int i = 1;
       while (rs.next())
       {
@@ -227,16 +230,49 @@ public class GeoRefCombiner
             rec.put(EVCombinedRec.AUTHOR, aString.split(AUDELIMITER));
           }
         }
-        // CO - Uses Runtime Docview instance to access
-        // decorator class
+        // EDS
+        String eString = rs.getString("PERSON_MONOGRAPH");
+        if(eString != null)
+        {
+          if(eString != null)
+          {
+            rec.put(EVCombinedRec.EDITOR, eString.split(AUDELIMITER));
+          }
+        }
+
+        String title = runtimeDocview.getTitle();
+        if (title != null)
+        {
+          rec.put(EVCombinedRec.TITLE, title);
+        }
+        String ttitle = runtimeDocview.getTranslatedTitle();
+        if (ttitle != null)
+        {
+          rec.put(EVCombinedRec.TRANSLATED_TITLE, ttitle);
+        }
+        String mtitle = runtimeDocview.getMonographTitle();
+        if (mtitle != null)
+        {
+          rec.put(EVCombinedRec.MONOGRAPH_TITLE, mtitle);
+        }
+
+        // CO - Author Aff. Country
+        // Uses runtime Docview instance to access decorator class
         String country = rs.getString("AUTHOR_AFFILIATION_COUNTRY");
         if(country != null)
         {
           DocumentView.FieldDecorator cd = runtimeDocview.new CountryDecorator(country);
           rec.put(EVCombinedRec.COUNTRY, new String[]{country, cd.getValue()});
         }
+        // LA
+        String laString = runtimeDocview.new LanguageDecorator(runtimeDocview.createColumnValueField("LANGUAGE_TEXT")).getValue();
+        if(laString != null)
+        {
+          rec.put(EVCombinedRec.LANGUAGE, laString.split(AUDELIMITER));
+        }
 
-        String abString = getStringFromClob(rs.getClob("ABSTRACT"));
+        // AB
+        String abString =  StringUtil.getStringFromClob(rs.getClob("ABSTRACT"));
         if (abString != null && abString.length() > 0)
         {
           rec.put(EVCombinedRec.ABSTRACT, abString);
@@ -475,13 +511,4 @@ public class GeoRefCombiner
     return perl.match("/[1-9][0-9][0-9][0-9]/", year);
   }
 
-  private String getStringFromClob(Clob clob) throws Exception
-  {
-    String temp = null;
-    if (clob != null)
-    {
-      temp = clob.getSubString(1, (int) clob.length());
-    }
-    return temp;
-  }
 }
