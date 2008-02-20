@@ -8,6 +8,8 @@ import java.util.*;
 import java.util.regex.*;
 import java.io.*;
 
+import org.ei.data.georef.runtime.*;
+
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
 import org.ei.domain.*;
@@ -139,10 +141,8 @@ public class GeoRefCombiner
       199601, 199602, 199603, etc. through 199624. Prior to 1994, only the year (first four digits) is
       given in this field. */
 
-System.out.println("select * from " + Combiner.TABLENAME + " where UPDATE_CODE is NOT NULL and SUBSTR(UPDATE_CODE,1,4) =  " + year);
-
-      //return all records which do not have source_publicationyear and source_publicationdate
-      rs = stmt.executeQuery("select * from " + Combiner.TABLENAME + " where UPDATE_CODE is NOT NULL and SUBSTR(UPDATE_CODE,1,4) =  " + year);
+      String sqlquery = "SELECT * FROM " + Combiner.TABLENAME + " WHERE UPDATE_CODE IS NOT NULL AND SUBSTR(UPDATE_CODE,1,4) =  " + year;
+      rs = stmt.executeQuery(sqlquery);
 
       writeRecs(rs);
       this.writer.end();
@@ -178,6 +178,7 @@ System.out.println("select * from " + Combiner.TABLENAME + " where UPDATE_CODE i
   private void writeRecs(ResultSet rs)
                           throws Exception
   {
+    DocumentView runtimeDocview = new CitationView();
     try
     {
       int i = 1;
@@ -212,6 +213,27 @@ System.out.println("select * from " + Combiner.TABLENAME + " where UPDATE_CODE i
         if (year != null)
         {
           rec.put(EVCombinedRec.PUB_YEAR, year);
+        }
+
+        // AUS
+        String aString = rs.getString("PERSON_ANALYTIC");
+        if(aString != null)
+        {
+          // alternate spellings
+          String altAuthor = rs.getString("ALTERNATE_AUTHOR");
+          if(altAuthor != null)
+          {
+            aString = aString.concat(AUDELIMITER).concat(altAuthor);
+            rec.put(EVCombinedRec.AUTHOR, aString.split(AUDELIMITER));
+          }
+        }
+        // CO - Uses Runtime Docview instance to access
+        // decorator class
+        String country = rs.getString("AUTHOR_AFFILIATION_COUNTRY");
+        if(country != null)
+        {
+          DocumentView.FieldDecorator cd = runtimeDocview.new CountryDecorator(country);
+          rec.put(EVCombinedRec.COUNTRY, new String[]{country, cd.getValue()});
         }
 
         String abString = getStringFromClob(rs.getClob("ABSTRACT"));
@@ -254,10 +276,10 @@ System.out.println("select * from " + Combiner.TABLENAME + " where UPDATE_CODE i
         if(pages==null)
         {
           pages = rs.getString("COLLATION_COLLECTION");
-        }
-        if(pages==null)
-        {
-          pages = rs.getString("COLLATION_MONOGRAPH");
+          if(pages==null)
+          {
+            pages = rs.getString("COLLATION_MONOGRAPH");
+          }
         }
 
         rec.put(EVCombinedRec.DEDUPKEY,
@@ -352,16 +374,7 @@ System.out.println("select * from " + Combiner.TABLENAME + " where UPDATE_CODE i
                                 throws Exception
   {
     String[] authorArray = null;
-    if(aString.indexOf(AUDELIMITER)>-1)
-    {
-      authorArray = aString.split(AUDELIMITER);
-    }
-    else
-    {
-      authorArray = new String[1];
-      authorArray[0] = aString;
-    }
-
+    authorArray = aString.split(AUDELIMITER);
     return authorArray;
   }
 
