@@ -5,12 +5,13 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.*;
+import java.util.regex.*;
+import java.io.*;
 
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
 import org.ei.domain.*;
 import org.ei.data.*;
-import java.io.*;
 import org.ei.util.GUID;
 
 public class GeoRefCombiner
@@ -27,17 +28,18 @@ public class GeoRefCombiner
 
   private static String tablename;
 
-  public static void main(String args[])        throws Exception
+  public static void main(String args[])
+                          throws Exception
   {
     String driver = "oracle.jdbc.driver.OracleDriver";
     String url  = "jdbc:oracle:thin:@206.137.75.51:1521:EI";
-    String username = "AP_EV_SEARCH";
+    String username = "AP_PRO1";
     String password = "ei3it";
     url = args[0];
     driver  = args[1];
-    username  = args[2];
+//    username  = args[2];
     password  = args[3];
-    int loadNumber = Integer.parseInt(args[4]);
+    int loadNumber = 2008; //Integer.parseInt(args[4]);
     int recsPerfile = Integer.parseInt(args[5]);
     int exitAt = Integer.parseInt(args[6]);
     tablename = args[7];
@@ -47,10 +49,11 @@ public class GeoRefCombiner
 
     CombinedWriter writer = new CombinedXMLWriter(recsPerfile,
                                                   loadNumber,
-                                                  "grf");
+                                                  "gref");
 
     GeoRefCombiner c = new GeoRefCombiner(writer);
-    if (loadNumber > 3000 || loadNumber < 1000)
+//    if (loadNumber > 3000 || loadNumber < 1000)
+    if(false)
     {
       c.writeCombinedByWeekNumber(url,
                                   driver,
@@ -128,17 +131,19 @@ public class GeoRefCombiner
     {
       this.writer.begin();
       stmt = con.createStatement();
-      if(year == 1000)
-      {
-        //return all records which do not have source_publicationyear and source_publicationdate
-        rs = stmt.executeQuery("select AUTHOR_AFFILIATION_STATE,ARTICLE_NUMBER,AUTHOR_AFFILIATION_COUNTRY,AUTHOR_AFFILIATION_CITY,ABSTRACT, m_id, doi, SOURCE_VOLUME, SOURCE_ISSUE, ACCESSION_NUMBER,AUTHOR_AFFILIATION, SOURCE_PAGERANGE, AUTHORS, AUTHOR2, ISBN, CLASSIFICATION, CONFERENCE_CODE,CONFERENCE_CITY, CONFERENCE_NAME, CODEN, DESCRIPTOR_MAINTERM_GDE, DESCRIPTOR_MAINTERM_RGI, DOCUMENT_TYPE, SOURCE_EDITOR, DESCRIPTOR_MAINTERM_SPC, DESCRIPTOR_MAINTERM_SPC2, CITATION_LANGUAGE, ABSTRACT_LANGUAGE, TITLETEXT_LANGUAGE, CONFERENCE_CITY, CLASSIFICATION_SUBJECT, CONFERENCE_STATE, ISSUE_TITLE, CONFERENCE_COUNTRY, CONFERENCE_DATE, PAGES, PAGECOUNT, PUBLISHER_NAME, ABBR_SOURCETITLE, ISSN,E_ISSN, CONFERENCE_SPONSORS, SOURCE_TITLE, CITATION_TITLE, TRANSLATED_TITLE, SOURCE_TYPE, VOLUME_TITLE, SOURCE_PUBLICATIONYEAR, SOURCE_PUBLICATIONDATE,PAGECOUNT,PAGES,load_number, CREATED_DATE, SORT_DATE from " + Combiner.TABLENAME + " where SOURCE_PUBLICATIONYEAR is null and SOURCE_PUBLICATIONDATE is null AND load_number != 0 and load_number < 1000000");
-      }
-      else
-      {
-        //use for update translated_title
-        //String sqlQuery = "select AUTHOR_AFFILIATION_STATE,ARTICLE_NUMBER,AUTHOR_AFFILIATION_COUNTRY,AUTHOR_AFFILIATION_CITY,ABSTRACT, m_id, doi, SOURCE_VOLUME, SOURCE_ISSUE, ACCESSION_NUMBER,AUTHOR_AFFILIATION, SOURCE_PAGERANGE, AUTHORS, AUTHOR2, ISBN, CLASSIFICATION, CONFERENCE_CODE,CONFERENCE_CITY, CONFERENCE_NAME, CODEN, DESCRIPTOR_MAINTERM_GDE, DESCRIPTOR_MAINTERM_RGI, DOCUMENT_TYPE, SOURCE_EDITOR, DESCRIPTOR_MAINTERM_SPC, DESCRIPTOR_MAINTERM_SPC2, CITATION_LANGUAGE, ABSTRACT_LANGUAGE, TITLETEXT_LANGUAGE, CONFERENCE_CITY, CLASSIFICATION_SUBJECT, CONFERENCE_STATE, ISSUE_TITLE, CONFERENCE_COUNTRY, CONFERENCE_DATE, PAGES, PAGECOUNT, PUBLISHER_NAME, ABBR_SOURCETITLE, ISSN,E_ISSN, CONFERENCE_SPONSORS, SOURCE_TITLE, CITATION_TITLE, TRANSLATED_TITLE, SOURCE_TYPE, VOLUME_TITLE, SOURCE_PUBLICATIONYEAR, SOURCE_PUBLICATIONDATE,PAGECOUNT,PAGES,load_number, CREATED_DATE, SORT_DATE from " + Combiner.TABLENAME + " where TRANSLATED_TITLE is not null";
-        rs = stmt.executeQuery("select AUTHOR_AFFILIATION_STATE,ARTICLE_NUMBER,AUTHOR_AFFILIATION_COUNTRY,AUTHOR_AFFILIATION_CITY,ABSTRACT, m_id, doi, SOURCE_VOLUME, SOURCE_ISSUE, ACCESSION_NUMBER,AUTHOR_AFFILIATION, SOURCE_PAGERANGE, AUTHORS, AUTHOR2, ISBN, CLASSIFICATION, CONFERENCE_CODE,CONFERENCE_CITY, CONFERENCE_NAME, CODEN, DESCRIPTOR_MAINTERM_GDE, DESCRIPTOR_MAINTERM_RGI, DOCUMENT_TYPE, SOURCE_EDITOR, DESCRIPTOR_MAINTERM_SPC, DESCRIPTOR_MAINTERM_SPC2, CITATION_LANGUAGE, ABSTRACT_LANGUAGE, TITLETEXT_LANGUAGE, CONFERENCE_CITY, CLASSIFICATION_SUBJECT, CONFERENCE_STATE, ISSUE_TITLE, CONFERENCE_COUNTRY, CONFERENCE_DATE, PAGES, PAGECOUNT, PUBLISHER_NAME, ABBR_SOURCETITLE, ISSN,E_ISSN, CONFERENCE_SPONSORS, SOURCE_TITLE, CITATION_TITLE, TRANSLATED_TITLE, SOURCE_TYPE, VOLUME_TITLE, SOURCE_PUBLICATIONYEAR, SOURCE_PUBLICATIONDATE,PAGECOUNT,PAGES,load_number, CREATED_DATE, SORT_DATE from " + Combiner.TABLENAME + " where (SOURCE_PUBLICATIONYEAR ='" + year + "' or SOURCE_PUBLICATIONDATE like '%"+ year +"%') AND load_number != 0 and load_number < 1000000");
-      }
+
+      // Here we will use the Z44: UPDATE CODE to get break the data into years
+      /* Field Z44 is used to enter the update code. The update code consists of six digits. The first four
+      are the update year. The last two are the number of the update within the year. Currently, GeoRef
+      is updated twice per month, so there are 24 updates per year and the update codes for 1996 are
+      199601, 199602, 199603, etc. through 199624. Prior to 1994, only the year (first four digits) is
+      given in this field. */
+
+System.out.println("select * from " + Combiner.TABLENAME + " where UPDATE_CODE is NOT NULL and SUBSTR(UPDATE_CODE,1,4) =  " + year);
+
+      //return all records which do not have source_publicationyear and source_publicationdate
+      rs = stmt.executeQuery("select * from " + Combiner.TABLENAME + " where UPDATE_CODE is NOT NULL and SUBSTR(UPDATE_CODE,1,4) =  " + year);
+
       writeRecs(rs);
       this.writer.end();
     }
@@ -175,342 +180,119 @@ public class GeoRefCombiner
   {
     try
     {
-
-      int i = 0;
-      String mid = null;
+      int i = 1;
       while (rs.next())
       {
-        mid = rs.getString("M_ID");
         EVCombinedRec rec = new EVCombinedRec();
-        ++i;
 
         if (Combiner.EXITNUMBER != 0 && i > Combiner.EXITNUMBER)
         {
           break;
         }
 
+        String mid = rs.getString("M_ID");
+        String year = rs.getString("DATE_OF_PUBLICATION");
+        if(year == null)
+        {
+          year = rs.getString("DATE_OF_MEETING");
+          if(year == null)
+          {
+            year = rs.getString("OTHER_DATE");
+            if(year == null)
+            {
+              year = rs.getString("UPDATE_CODE");
+            }
+          }
+        }
+        Matcher yearmatch = Pattern.compile("^(\\d{4})").matcher(year);
+        if(yearmatch.find())
+        {
+          year = yearmatch.group(1);
+        }
+        if (year != null)
+        {
+          rec.put(EVCombinedRec.PUB_YEAR, year);
+        }
+
         String abString = getStringFromClob(rs.getClob("ABSTRACT"));
-        String year = rs.getString("SOURCE_PUBLICATIONYEAR");
-        if(year == null || year.equals("null") || year.length()<1)
+        if (abString != null && abString.length() > 0)
         {
-          year = rs.getString("SOURCE_PUBLICATIONDATE");
-          if(year != null && year.indexOf("-")>-1)
-          {
-            year = year.substring(year.lastIndexOf("-")+1);
-          }
+          rec.put(EVCombinedRec.ABSTRACT, abString);
         }
 
-        if(year == null || year.equals("null") || year.length()<1)
+        if (rs.getString("ISSN") != null || rs.getString("EISSN") != null)
         {
-          year = rs.getString("SORT_DATE");
-          if(year != null && year.indexOf("-")>-1)
+          String issn = rs.getString("ISSN");
+          String e_issn = rs.getString("EISSN");
+          StringBuffer issnString = new StringBuffer();
+          if(issn != null && issn.length()>0)
           {
-            year = year.substring(year.lastIndexOf("-")+1);
+            issnString.append(issn);
           }
+          if(issn !=null && e_issn != null && issn.length()>0 && e_issn.length()>0)
+          {
+            issnString.append(AUDELIMITER);
+          }
+          if(e_issn != null && e_issn.length()>0)
+          {
+            issnString.append(e_issn);
+          }
+          rec.put(EVCombinedRec.ISSN, (issnString.toString()).split(AUDELIMITER));
         }
 
-        if(year == null || year.equals("null") || year.length()<1)
+        if (rs.getString("CODEN") != null)
         {
-          year = rs.getString("CREATED_DATE");
-          if(year != null && year.indexOf("-")>-1)
-          {
-            year = year.substring(year.lastIndexOf("-")+1);
-          }
+          rec.put(EVCombinedRec.CODEN, rs.getString("CODEN"));
+        }
+        if (rs.getString("ISBN") != null)
+        {
+          rec.put(EVCombinedRec.ISBN,(rs.getString("ISBN")).split(AUDELIMITER));
         }
 
-        if (validYear(year))
+
+        String pages = rs.getString("COLLATION_ANALYTIC");
+        if(pages==null)
         {
-          if (rs.getString("AUTHORS") != null)
-          {
-            String  authors = rs.getString("AUTHORS");
-            if (rs.getString("AUTHOR2") != null)
-            {
-              authors = authors + rs.getString("AUTHOR2");
-            }
-            authors = LoadLookup.removeSpecialCharacter(authors);
-            rec.put(EVCombinedRec.AUTHOR, prepareAuthor(authors));
-
-            if (rs.getString("AUTHOR_AFFILIATION") != null)
-            {
-              String  authorAffiliation = rs.getString("AUTHOR_AFFILIATION");
-              authorAffiliation = LoadLookup.removeSpecialCharacter(authorAffiliation);
-              rec.put(EVCombinedRec.AUTHOR_AFFILIATION, authorAffiliation);
-
-              StringBuffer affilLoc = new StringBuffer();
-              if (rs.getString("AUTHOR_AFFILIATION_COUNTRY") != null)
-              {
-                String  country = rs.getString("AUTHOR_AFFILIATION_COUNTRY");
-                String  countryFormatted = null;
-
-                if(country != null)
-                {
-                  countryFormatted = Country.formatCountry(country.toLowerCase());
-                }
-
-                if (countryFormatted != null)
-                {
-                  affilLoc.append(countryFormatted);
-                  rec.put(EVCombinedRec.COUNTRY, countryFormatted.split(AUDELIMITER));
-                }
-              }
-
-              if (rs.getString("AUTHOR_AFFILIATION_STATE") != null)
-              {
-                String  state = rs.getString("AUTHOR_AFFILIATION_STATE");
-                affilLoc.append(" ");
-                affilLoc.append(state);
-              }
-
-              if (rs.getString("AUTHOR_AFFILIATION_CITY") != null)
-              {
-                String  city = rs.getString("AUTHOR_AFFILIATION_CITY");
-                affilLoc.append(" ");
-                affilLoc.append(city);
-              }
-
-              if (affilLoc.length() > 0)
-              {
-                rec.put(EVCombinedRec.AFFILIATION_LOCATION, (affilLoc.toString()).split(AUDELIMITER));
-              }
-            }
-          }
-          else if (rs.getString("SOURCE_EDITOR") != null)
-          {
-
-            rec.put(EVCombinedRec.EDITOR, prepareAuthor(rs.getString("SOURCE_EDITOR")));
-
-          }
-
-
-          if (rs.getString("DOI") != null)
-          {
-            rec.put(EVCombinedRec.DOI, rs.getString("DOI"));
-          }
-
-
-          if (rs.getString("CITATION_TITLE") != null)
-          {
-            rec.put(EVCombinedRec.TITLE, rs.getString("CITATION_TITLE"));
-          }
-
-          if (rs.getString("TRANSLATED_TITLE") != null)
-          {
-            rec.put(EVCombinedRec.TRANSLATED_TITLE, rs.getString("TRANSLATED_TITLE"));
-          }
-
-          if (rs.getString("VOLUME_TITLE") != null)
-          {
-            rec.put(EVCombinedRec.VOLUME_TITLE, rs.getString("VOLUME_TITLE"));
-          }
-
-          if (abString != null && abString.length() > 0)
-          {
-            rec.put(EVCombinedRec.ABSTRACT, abString);
-          }
-
-          String cvs = rs.getString("DESCRIPTOR_MAINTERM_GDE");
-          if (cvs != null)
-          {
-            cvs = LoadLookup.removeSpecialCharacter(cvs);
-            rec.put(EVCombinedRec.CONTROLLED_TERMS, (rs.getString("DESCRIPTOR_MAINTERM_GDE").split(AUDELIMITER)));
-          }
-
-          if (rs.getString("DESCRIPTOR_MAINTERM_SPC") != null)
-          {
-            String sTerm = rs.getString("DESCRIPTOR_MAINTERM_SPC");
-            if (rs.getString("DESCRIPTOR_MAINTERM_SPC2") != null)
-            {
-              sTerm = sTerm + rs.getString("DESCRIPTOR_MAINTERM_SPC2");
-            }
-            rec.put(EVCombinedRec.UNCONTROLLED_TERMS, (sTerm).split(AUDELIMITER));
-          }
-
-          if (rs.getString("ISSN") != null || rs.getString("E_ISSN") != null)
-          {
-            String issn = rs.getString("ISSN");
-            String e_issn = rs.getString("E_ISSN");
-            StringBuffer issnString = new StringBuffer();
-
-            if(issn != null && issn.length()>0)
-            {
-              issnString.append(issn);
-            }
-
-            if(issn !=null && e_issn != null && issn.length()>0 && e_issn.length()>0)
-            {
-              issnString.append(AUDELIMITER);
-            }
-
-            if(e_issn != null && e_issn.length()>0)
-            {
-              issnString.append(e_issn);
-            }
-
-            rec.put(EVCombinedRec.ISSN, (issnString.toString()).split(AUDELIMITER));
-          }
-
-          if (rs.getString("CODEN") != null)
-          {
-            rec.put(EVCombinedRec.CODEN, rs.getString("CODEN"));
-          }
-
-          if (rs.getString("ISBN") != null)
-          {
-            rec.put(EVCombinedRec.ISBN,(rs.getString("ISBN")).split(AUDELIMITER));
-          }
-
-          String st = rs.getString("SOURCE_TITLE");
-          st = LoadLookup.removeSpecialCharacter(st);
-          if (st == null)
-          {
-            st = rs.getString("ABBR_SOURCETITLE");
-          }
-
-          if (st != null)
-          {
-            rec.put(EVCombinedRec.SERIAL_TITLE, st);
-          }
-
-          String publisherName = rs.getString("PUBLISHER_NAME");
-          if (publisherName != null)
-          {
-            publisherName = LoadLookup.removeSpecialCharacter(publisherName);
-            rec.put(EVCombinedRec.PUBLISHER_NAME, publisherName.split(AUDELIMITER));
-          }
-
-          String la = rs.getString("CITATION_LANGUAGE");
-          if (la == null)
-          {
-            la = rs.getString("ABSTRACT_LANGUAGE");
-          }
-
-          if (la == null)
-          {
-            la = rs.getString("TITLETEXT_LANGUAGE");
-          }
-
-          if (la != null)
-          {
-            rec.put(EVCombinedRec.LANGUAGE,getLanguage(la).split(AUDELIMITER));
-          }
-
-          String docType = rs.getString("SOURCE_TYPE");
-
-          /*
-          if (rec.containsKey(EVCombinedRec.CONTROLLED_TERMS))
-          {
-          docType = docType + " CORE";
-          }
-          */
-
-          rec.put(EVCombinedRec.DOCTYPE, docType);
-
-          if (rs.getString("CLASSIFICATION") != null)
-          {
-            rec.put(EVCombinedRec.CLASSIFICATION_CODE,(XMLWriterCommon.formatClassCodes(rs.getString("CLASSIFICATION"))).split(AUDELIMITER));
-          }
-
-          if (rs.getString("CONFERENCE_CODE") != null)
-          {
-            rec.put(EVCombinedRec.CONFERENCE_CODE, rs.getString("CONFERENCE_CODE"));
-          }
-
-          if (rs.getString("CONFERENCE_NAME") != null)
-          {
-            rec.put(EVCombinedRec.CONFERENCE_NAME, rs.getString("CONFERENCE_NAME"));
-          }
-
-          String cl = rs.getString("CONFERENCE_STATE"); // rs.getString("CONFERENCE_CITY"), rs.getString("CONFERENCE_COUNTRY"));
-
-          if (cl.length() > 2)
-          {
-            rec.put(EVCombinedRec.CONFERENCE_LOCATION, cl);
-          }
-
-          if (rs.getString("CONFERENCE_DATE") != null)
-          {
-            rec.put(EVCombinedRec.MEETING_DATE, rs.getString("CONFERENCE_DATE"));
-          }
-
-          if (rs.getString("CONFERENCE_SPONSORS") != null)
-          {
-            rec.put(EVCombinedRec.SPONSOR_NAME, rs.getString("CONFERENCE_SPONSORS"));
-          }
-
-          if (rs.getString("ISSUE_TITLE") != null)
-          {
-            rec.put(EVCombinedRec.MONOGRAPH_TITLE, rs.getString("ISSUE_TITLE"));
-          }
-
-          rec.put(EVCombinedRec.DOCID, rs.getString("M_ID"));
-
-          rec.put(EVCombinedRec.DATABASE, "geo");
-          rec.put(EVCombinedRec.LOAD_NUMBER, rs.getString("LOAD_NUMBER"));
-
-          if (year != null)
-          {
-            rec.put(EVCombinedRec.PUB_YEAR, year);
-          }
-
-          String pages = rs.getString("SOURCE_PAGERANGE");
-
-          if(pages==null)
-          {
-            pages = rs.getString("PAGES");
-          }
-
-          if(pages==null)
-          {
-            pages = rs.getString("PAGECOUNT");
-          }
-
-          rec.put(EVCombinedRec.DEDUPKEY,
-                  getDedupKey(rec.getString(EVCombinedRec.ISSN),
-                  rec.getString(EVCombinedRec.CODEN),
-                  rs.getString("SOURCE_VOLUME"),
-                  rs.getString("SOURCE_ISSUE"),
-                  pages));
-
-          rec.put(EVCombinedRec.VOLUME, getFirstNumber(rs.getString("SOURCE_VOLUME")));
-          rec.put(EVCombinedRec.ISSUE, getFirstNumber(rs.getString("SOURCE_ISSUE")));
-          rec.put(EVCombinedRec.STARTPAGE, getFirstPage(pages));
-          String notes = null;
-          if(rs.getString("CLASSIFICATION_SUBJECT")!=null)
-          {
-            notes = rs.getString("CLASSIFICATION_SUBJECT");
-          }
-
-          if(rs.getString("CLASSIFICATION_SUBJECT")!=null)
-          {
-            notes = notes+AUDELIMITER;
-          }
-
-          if(notes != null)
-          {
-            rec.put(EVCombinedRec.NOTES, notes.split(AUDELIMITER));
-          }
-
-          if (rs.getString("DESCRIPTOR_MAINTERM_RGI") != null)
-          {
-            rec.put(EVCombinedRec.CHEMICALTERMS, (rs.getString("DESCRIPTOR_MAINTERM_RGI").split(AUDELIMITER)));
-          }
-
-          rec.put(EVCombinedRec.ACCESSION_NUMBER,rs.getString("ACCESSION_NUMBER"));
-
-          rec.put(EVCombinedRec.PUB_SORT, Integer.toString(i));
-
-          try
-          {
-            this.writer.writeRec(rec);
-          }
-          catch(Exception e)
-          {
-            System.out.println("MID= "+mid);
-            e.printStackTrace();
-          }
+          pages = rs.getString("COLLATION_COLLECTION");
+        }
+        if(pages==null)
+        {
+          pages = rs.getString("COLLATION_MONOGRAPH");
         }
 
-      }
+        rec.put(EVCombinedRec.DEDUPKEY,
+                getDedupKey(rec.getString(EVCombinedRec.ISSN),
+                rec.getString(EVCombinedRec.CODEN),
+                rs.getString("VOLUME_ID"),
+                rs.getString("ISSUE_ID"),
+                pages));
+        rec.put(EVCombinedRec.STARTPAGE, getFirstPage(pages));
+
+        rec.put(EVCombinedRec.DOCID, rs.getString("M_ID"));
+        rec.put(EVCombinedRec.DATABASE, "gref");
+        rec.put(EVCombinedRec.LOAD_NUMBER, rs.getString("LOAD_NUMBER"));
+        rec.put(EVCombinedRec.VOLUME, getFirstNumber(rs.getString("VOLUME_ID")));
+        rec.put(EVCombinedRec.ISSUE, getFirstNumber(rs.getString("ISSUE_ID")));
+        rec.put(EVCombinedRec.ACCESSION_NUMBER,rs.getString("ID_NUMBER"));
+
+        if(rs.getString("DOI") != null)
+        {
+          rec.put(EVCombinedRec.DOI, rs.getString("DOI"));
+        }
+
+        rec.put(EVCombinedRec.PUB_SORT, Integer.toString(i));
+
+        try
+        {
+          this.writer.writeRec(rec);
+        }
+        catch(Exception e)
+        {
+          System.out.println("MID= "+mid);
+          e.printStackTrace();
+        }
+        i++;
+      } // while
     }
     catch(Exception e)
     {
