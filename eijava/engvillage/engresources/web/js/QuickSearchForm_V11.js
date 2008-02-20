@@ -39,11 +39,6 @@ function Field(value, label) {
    this.value = value;
 }
 
-
-
-
-
-
 function generateSection(selecteddbMask)
 {
    var searchin = new Array();
@@ -715,10 +710,17 @@ function generateTreattypes(selecteddbMask)
       (selecteddbMask & CBN) != CBN &&
       (selecteddbMask & CHM) != CHM &&
       (selecteddbMask & PCH) != PCH &&
+      (selecteddbMask & INS) != INS &&
       (selecteddbMask & IBS) != IBS)
    {
       treattypes[index++] = new Field("BIO", "Biographical");
    }
+   
+   if(selecteddbMask  == INS)
+   {
+   	treattypes[index++] = new Field("BIB", "Bibliography");
+   }
+   
 
    //ECO
    if((selecteddbMask & GEO) != GEO &&
