@@ -194,27 +194,6 @@ public class GeoRefCombiner
           break;
         }
 
-        String mid = rs.getString("M_ID");
-        String year = rs.getString("DATE_OF_PUBLICATION");
-        if(year == null)
-        {
-          year = rs.getString("DATE_OF_MEETING");
-          if(year == null)
-          {
-            year = rs.getString("OTHER_DATE");
-            if(year == null)
-            {
-              year = rs.getString("UPDATE_CODE");
-            }
-          }
-        }
-        Matcher yearmatch = Pattern.compile("^(\\d{4})").matcher(year);
-        if(yearmatch.find())
-        {
-          year = yearmatch.group(1);
-        }
-        rec.putIfNotNull(EVCombinedRec.PUB_YEAR, year);
-
         // AUS
         String aString = rs.getString("PERSON_ANALYTIC");
         if(aString != null)
@@ -243,14 +222,13 @@ public class GeoRefCombiner
         if(country != null)
         {
           DocumentView.FieldDecorator cd = runtimeDocview.new CountryDecorator(country);
+          // here we put the raw (abbreviated) value AND the full (decorated) value
+          // i.e CAN CANADA
           rec.put(EVCombinedRec.COUNTRY, new String[]{country, cd.getValue()});
         }
         // LA
         String laString = runtimeDocview.new LanguageDecorator(runtimeDocview.createColumnValueField("LANGUAGE_TEXT")).getValue();
-        if(laString != null)
-        {
-          rec.put(EVCombinedRec.LANGUAGE, laString.split(AUDELIMITER));
-        }
+        rec.putIfNotNull(EVCombinedRec.LANGUAGE, laString);
 
         // AB
         String abString =  StringUtil.getStringFromClob(rs.getClob("ABSTRACT"));
@@ -268,10 +246,10 @@ public class GeoRefCombiner
           if(issn != null && issn.length()>0)
           {
             issnString.append(issn);
-          }
-          if(issn !=null && e_issn != null && issn.length()>0 && e_issn.length()>0)
-          {
-            issnString.append(AUDELIMITER);
+            if(e_issn != null && e_issn.length()>0)
+            {
+              issnString.append(AUDELIMITER);
+            }
           }
           if(e_issn != null && e_issn.length()>0)
           {
@@ -279,12 +257,8 @@ public class GeoRefCombiner
           }
           rec.put(EVCombinedRec.ISSN, (issnString.toString()).split(AUDELIMITER));
         }
-        // BN
-        if (rs.getString("ISBN") != null)
-        {
-          rec.put(EVCombinedRec.ISBN,(rs.getString("ISBN")).split(AUDELIMITER));
-        }
 
+        rec.putIfNotNull(EVCombinedRec.PUB_YEAR, runtimeDocview.getYear());
         rec.putIfNotNull(EVCombinedRec.TITLE, runtimeDocview.getTitle());
         rec.putIfNotNull(EVCombinedRec.TRANSLATED_TITLE, runtimeDocview.getTranslatedTitle());
         rec.putIfNotNull(EVCombinedRec.MONOGRAPH_TITLE, runtimeDocview.getMonographTitle());
@@ -292,12 +266,13 @@ public class GeoRefCombiner
         String pages = runtimeDocview.getPages();
         rec.put(EVCombinedRec.DEDUPKEY,
                 getDedupKey(rec.getString(EVCombinedRec.ISSN),
-                rec.getString(EVCombinedRec.CODEN),
-                rs.getString("VOLUME_ID"),
-                rs.getString("ISSUE_ID"),
-                pages));
+                            rec.getString(EVCombinedRec.CODEN),
+                            rs.getString("VOLUME_ID"),
+                            rs.getString("ISSUE_ID"),
+                            pages));
         rec.putIfNotNull(EVCombinedRec.STARTPAGE, getFirstPage(pages));
         rec.putIfNotNull(EVCombinedRec.CODEN, rs.getString("CODEN"));
+        rec.putIfNotNull(EVCombinedRec.ISBN,rs.getString("ISBN"));
         rec.putIfNotNull(EVCombinedRec.DOCID, rs.getString("M_ID"));
         rec.putIfNotNull(EVCombinedRec.DATABASE, "gref");
         rec.putIfNotNull(EVCombinedRec.LOAD_NUMBER, rs.getString("LOAD_NUMBER"));
@@ -314,7 +289,7 @@ public class GeoRefCombiner
         }
         catch(Exception e)
         {
-          System.out.println("MID= "+mid);
+          System.out.println("MID = " + rs.getString("M_ID"));
           e.printStackTrace();
         }
         i++;
