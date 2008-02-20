@@ -29,6 +29,10 @@ public abstract class DocumentView {
     private ElementDataMap ht = null;
     private Perl5Util perl = new Perl5Util();
 
+    public void setResultSet(ResultSet anrset) {
+      this.rset = anrset;
+    }
+
     public EIDoc buildDocument(ResultSet rset, DocID did)
               throws Exception
     {
@@ -180,7 +184,7 @@ public abstract class DocumentView {
       addDocumentValue(Keys.COUNTRY_OF_PUB, new CountryDecorator(createColumnValueField("COUNTRY_OF_PUBLICATION")));
       addDocumentValue(GRFDocBuilder.AFFILIATION_OTHER, new OtherAffiliationDecorator(createColumnValueField("AFFILIATION_SECONDARY")));
       addDocumentValue(Keys.DOC_TYPE, new DocumentTypeDecorator(createColumnValueField("DOCUMENT_TYPE")));
-      addDocumentValue(Keys.LANGUAGE, new LanguageDecorator(createColumnValueField("LANGUAGE_TEXT")));
+      addDocumentValue(Keys.LANGUAGE, new NonEnglishLanguageDecorator(new LanguageDecorator(createColumnValueField("LANGUAGE_TEXT"))));
       addDocumentValue(Keys.ABSTRACT_TYPE, new BibliographicLevelDecorator(createColumnValueField("BIBLIOGRAPHIC_LEVEL_CODE")));
       addDocumentValue(GRFDocBuilder.CATEGORY, new CategoryDecorator(createColumnValueField("CATEGORY_CODE")));
 
@@ -206,7 +210,7 @@ public abstract class DocumentView {
     /*
      * "Factory" prevents having to pass around ResultSet when creating objects
      */
-    private DocumentField createColumnValueField(String columnname)
+    public DocumentField createColumnValueField(String columnname)
     {
       ResultsSetField rsfield = new ColumnValueField(columnname);
       rsfield.setResultSet(rset);
@@ -283,7 +287,7 @@ public abstract class DocumentView {
       return list;
     }
 
-    private String getTitle()
+    public String getTitle()
     {
       DocumentField afield = new TitleDecorator(createColumnValueField("TITLE_OF_ANALYTIC"));
       String strvalue = afield.getValue();
@@ -295,7 +299,7 @@ public abstract class DocumentView {
       return strvalue;
     }
 
-    private String getTranslatedTitle()
+    public String getTranslatedTitle()
     {
       DocumentField afield = new TranslatedTitleDecorator(createColumnValueField("TITLE_OF_ANALYTIC"));
       String strvalue = afield.getValue();
@@ -314,7 +318,7 @@ public abstract class DocumentView {
       return strvalue;
     }
 
-    private String getMonographTitle()
+    public String getMonographTitle()
     {
       DocumentField afield = new TitleDecorator(createColumnValueField("TITLE_OF_MONOGRAPH"));
       String strvalue = afield.getValue();
@@ -613,6 +617,11 @@ public abstract class DocumentView {
       {
         this.field = field;
       }
+      public TitleDecorator(String stringvalue)
+      {
+        this(new SimpleValueField(stringvalue));
+      }
+
       public String getValue()
       {
         String strtitle = null;
@@ -644,6 +653,10 @@ public abstract class DocumentView {
       public TranslatedTitleDecorator(DocumentField field)
       {
         this.field = field;
+      }
+      public TranslatedTitleDecorator(String stringvalue)
+      {
+        this(new SimpleValueField(stringvalue));
       }
       public String getValue()
       {
@@ -698,10 +711,22 @@ public abstract class DocumentView {
       {
         super(field);
       }
+      public Map getLookupTable()
+      {
+        return dataDictionary.getLanguages();
+      }
+    }
+
+    public class NonEnglishLanguageDecorator extends LanguageDecorator
+    {
+      public NonEnglishLanguageDecorator(DocumentField field)
+      {
+        super(field);
+      }
       public String getValue()
       {
         String strvalue = field.getValue();
-        if((strvalue != null) && !strvalue.equalsIgnoreCase("EL"))
+        if((strvalue != null) && !strvalue.equalsIgnoreCase("English") && !strvalue.equalsIgnoreCase("EL"))
         {
           strvalue = super.getValue();
         }
@@ -710,10 +735,6 @@ public abstract class DocumentView {
           strvalue = null;
         }
         return strvalue;
-      }
-      public Map getLookupTable()
-      {
-        return dataDictionary.getLanguages();
       }
     }
 
