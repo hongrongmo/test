@@ -27,6 +27,7 @@ public class CitationView extends DocumentView {
                                                     "DATE_OF_MEETING",
                                                     "LANGUAGE_TEXT",
                                                     "PUBLISHER",
+                                                    "PUBLISHER_ADDRESS",
                                                     "LOAD_NUMBER",
                                                     "COPYRIGHT",
                                                     "COLLATION_ANALYTIC",
