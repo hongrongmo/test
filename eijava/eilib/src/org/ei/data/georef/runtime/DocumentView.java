@@ -428,7 +428,13 @@ public abstract class DocumentView {
     }
 
     /* =========================================================================
-     * Inner classes
+     * Nested Inner classes (@see http://java.sun.com/docs/books/tutorial/java/javaOO/nested.html)
+     * These classes are public and are accessible through an instance of
+     * the DocumentView class.
+     * i.e.
+     *          DocumentView runtimeDocview = new CitationView();
+     *          DocumentView.FieldDecorator cd = runtimeDocview.new CountryDecorator(country);
+     *
      * =========================================================================
      */
 
@@ -716,6 +722,10 @@ public abstract class DocumentView {
       public CountryDecorator(DocumentField field)
       {
         super(field);
+      }
+      public CountryDecorator(String stringvalue)
+      {
+        super(new SimpleValueField(stringvalue));
       }
       public Map getLookupTable()
       {
