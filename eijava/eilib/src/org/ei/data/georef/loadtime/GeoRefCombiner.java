@@ -301,61 +301,6 @@ public class GeoRefCombiner
     }
   }
 
-  private String getLanguage(String code)
-  {
-    StringBuffer languageName= new StringBuffer();
-    String lName = null;
-    if(code.indexOf(AUDELIMITER)>-1)
-    {
-      StringTokenizer tokens = new StringTokenizer(code, AUDELIMITER);
-      while(tokens.hasMoreTokens())
-      {
-        String  sCode = tokens.nextToken().trim();
-        lName = Language.getIso639Language(sCode);
-        if(lName!=null)
-        languageName.append(lName+AUDELIMITER);
-        else
-        languageName.append(sCode+AUDELIMITER);
-      }
-    }
-    else
-    {
-      lName = Language.getIso639Language(code);
-      if(lName!=null)
-      languageName.append(lName);
-      else
-      languageName.append(code);
-    }
-    return languageName.toString();
-  }
-
-  private String[] prepareMulti(String multiString)
-                                throws Exception
-  {
-    AuthorStream astream = new AuthorStream(new ByteArrayInputStream(multiString.getBytes()));
-    String s = null;
-    ArrayList list = new ArrayList();
-
-    while ((s = astream.readAuthor()) != null)
-    {
-      s = s.trim();
-      if (s.length() > 0)
-      {
-        list.add(s);
-      }
-    }
-
-    return (String[]) list.toArray(new String[1]);
-
-  }
-
-  private String[] prepareAuthor(String aString)
-                                throws Exception
-  {
-    String[] authorArray = null;
-    authorArray = aString.split(AUDELIMITER);
-    return authorArray;
-  }
 
   private String getFirstNumber(String v)
   {
@@ -437,20 +382,4 @@ public class GeoRefCombiner
     return buf.toString().toLowerCase();
 
   }
-
-  private boolean validYear(String year)
-  {
-    if (year == null)
-    {
-      return false;
-    }
-
-    if (year.length() != 4)
-    {
-      return false;
-    }
-
-    return perl.match("/[1-9][0-9][0-9][0-9]/", year);
-  }
-
 }
