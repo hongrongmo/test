@@ -42,6 +42,7 @@ public class GRFDocBuilder implements DocumentBuilder
     public static final Key DEGREE_TYPE = new Key("DEG", "Degree");
     public static final Key UNIVERSITY = new Key("UNV", "University");
     public static final Key RESEARCH_PROGRAM = new Key("RPGM", "Research program");
+    public static final Key COORDINATES= new Key("CRDN", "Coordinates");
 
 
     private Database database;

@@ -11,6 +11,7 @@ import org.ei.domain.FullDoc;
     public class DetailedView extends DocumentView {
 
         private List fields = Arrays.asList(new String[]{"DOI",
+                                                        "COORDINATES",
                                                         "URL",
                                                         "EDITION",
                                                         "MEDIUM_OF_SOURCE",
@@ -71,6 +72,7 @@ import org.ei.domain.FullDoc;
                                         GRFDocBuilder.DEGREE_TYPE,
                                         GRFDocBuilder.UNIVERSITY,
                                         GRFDocBuilder.RESEARCH_PROGRAM,
+                                        GRFDocBuilder.COORDINATES,
                                         Keys.SOURCE_COUNTRY,
                                         Keys.CONFERENCE_NAME,
                                         Keys.CONF_DATE,
