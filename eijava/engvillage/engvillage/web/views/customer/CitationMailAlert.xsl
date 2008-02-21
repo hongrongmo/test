@@ -49,6 +49,12 @@
               <tr>
                   <td valign="top" colspan="5" ><img src="cid:spacergif" border="0" width="0"/><A CLASS="MedBlackText"><b>Engineering Village E-mail Alert</b></A></td>
               </tr>
+			  <tr>
+				  <td valign="top" colspan="5" align="left"><img src="cid:spacergif" border="0" width="0"/><A CLASS="MedBlackText">Please do not reply to this email address.  Please send all responses and questions to eicustomersupport@elsevier.com.</A></td>
+			  </tr>
+              <tr>
+                  <td valign="top" colspan="5"><img src="cid:spacergif" border="0" width="3"/><br/><br/></td>
+              </tr>
               <tr>
                   <td valign="top" colspan="5" ><img src="cid:spacergif" border="0" width="3"/></td>
               </tr>
@@ -78,7 +84,7 @@
                   </td>
               </tr>
               <tr>
-                  <td valign="top" colspan="5"><img src="cid:spacergif" border="0" width="3"/></td>
+                  <td valign="top" colspan="5"><img src="cid:spacergif" border="0" width="3"/><br/></td>
               </tr>
               <xsl:if test="($RESULTS-COUNT &gt; 25)">
                   <tr>
