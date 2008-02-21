@@ -29,15 +29,42 @@
       </table>
     </xsl:template>
 
-    <!-- Book Templates -->
+
         <!-- sit on this -->
         <xsl:template match="NO_SO"/>
-    <!-- Book Templates -->
+
+    <xsl:template match="CRDN">
+      <tr>
+        <td valign="top" ><img src="/engresources/images/s.gif" border="0"/></td>
+        <td xsl:use-attribute-sets="r-align-label">
+        <xsl:if test="string(@label)">
+            <span CLASS="MedBlackText"><b><xsl:value-of select="@label"/>:</b> </span>
+        </xsl:if>
+        </td>
+        <td valign="top" width="10"><img src="/engresources/images/s.gif" border="0" width="10"/></td>
+        <td valign="top" align="left">
+        <span CLASS="MedBlackText">
+          <div id="map" style="display:block;border:1px solid black;">
+            <div id="map_canvas" style="float:left; width: 100%; height: 300px;"></div>
+          </div>
+        </span>
+        </td>
+      </tr>
+      <xsl:call-template name="SPACER"/>
+    </xsl:template>
+
+
+    <xsl:template match="LOC">
+      <a>
+        <xsl:attribute name="href">javascript:toggleRectangle('<xsl:value-of select="@ID"/>');</xsl:attribute>
+        <xsl:value-of disable-output-escaping="yes" select="."/>
+      </a><br/>
+    </xsl:template>
+
 
     <!-- top level elements with labels and nested value children -->
     <xsl:template match="SRCNT|SUM|MED|EDI|RPGM|DEG|UNV|HOLD|AUD|CAT|OAF|ANT|MPS|MPT|ILLUS|DGS|SC|AV|DT|MJSM|CRM|CLGM|PIDEPM|BKYS|AGS|AUS|EDS|IVS|CLS|FLS|CVS|RGIS|DISPS|CTS|OCVS|OCLS|NDI|CHI|AOI|AFS|EFS|PASM|PEXM|PIM|PAPIM">
         <tr>
-
             <td valign="top" ><img src="/engresources/images/s.gif" border="0"/></td>
             <td xsl:use-attribute-sets="r-align-label">
             <xsl:if test="string(@label)">
@@ -46,8 +73,7 @@
             </td>
             <td valign="top" width="10"><img src="/engresources/images/s.gif" border="0" width="10"/></td>
             <td valign="top" align="left">
-
-            <span CLASS="MedBlackText"><xsl:apply-templates /></span>
+              <span CLASS="MedBlackText"><xsl:apply-templates /></span>
             </td>
         </tr>
         <xsl:call-template name="SPACER"/>
