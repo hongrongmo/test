@@ -55,10 +55,10 @@ public abstract class DocumentView {
       Contributors contributors = null;
       Key keyAffiliation = null;
 
-      String strpersons = createColumnValueField("PERSON_ANALYTIC").getValue();
-      if(strpersons != null &&  !strpersons.equalsIgnoreCase("Anonymous"))
+      String strperson_analytic = createColumnValueField("PERSON_ANALYTIC").getValue();
+      if(strperson_analytic != null &&  !strperson_analytic.equalsIgnoreCase("Anonymous"))
       {
-        Contributors authors = new Contributors(Keys.AUTHORS,getContributors(strpersons,Keys.AUTHORS));
+        Contributors authors = new Contributors(Keys.AUTHORS,getContributors(strperson_analytic,Keys.AUTHORS));
         if(authors != null)
         {
           ht.put(Keys.AUTHORS, authors);
@@ -70,10 +70,17 @@ public abstract class DocumentView {
       }
 
       // EDS
-      strpersons = createColumnValueField("PERSON_MONOGRAPH").getValue();
-      if(strpersons != null &&  !strpersons.equalsIgnoreCase("Anonymous"))
+      String strperson_monograph = createColumnValueField("PERSON_MONOGRAPH").getValue();
+      if(strperson_monograph != null &&  !strperson_monograph.equalsIgnoreCase("Anonymous"))
       {
-        Contributors editors = new Contributors(Keys.EDITORS,getContributors(strpersons,Keys.EDITORS));
+        // Editors of the Collection/Series
+        // String strperson_collection = createColumnValueField("PERSON_COLLECTION").getValue();
+        // if(strperson_collection != null)
+        //{
+          //strperson_monograph = strperson_monograph.concat(GRFDocBuilder.AUDELIMITER).concat(strperson_collection);
+        //}
+
+        Contributors editors = new Contributors(Keys.EDITORS,getContributors(strperson_monograph,Keys.EDITORS));
         if(editors != null)
         {
           ht.put(Keys.EDITORS, editors);
@@ -111,9 +118,9 @@ public abstract class DocumentView {
 
       addDocumentValue(Keys.VOLUME, createColumnValueField("VOLUME_ID"), new Volume(StringUtil.EMPTY_STRING,perl));
       addDocumentValue(Keys.ISSUE, createColumnValueField("ISSUE_ID"), new Issue(StringUtil.EMPTY_STRING,perl));
-      addDocumentValue(Keys.ISSN, createColumnValueField("ISSN"), new ISSN(StringUtil.EMPTY_STRING));
       addDocumentValue(Keys.ISBN, createColumnValueField("ISBN"), new ISBN(StringUtil.EMPTY_STRING));
-      //addDocumentValue(Keys.E_ISSN, eIssnDecorator(createColumnValueField("EISSN")), new ISSN(StringUtil.EMPTY_STRING));
+      addDocumentValue(Keys.ISSN, new IssnDecorator(createColumnValueField("ISSN")), new ISSN(StringUtil.EMPTY_STRING));
+      addDocumentValue(Keys.E_ISSN, new IssnDecorator(createColumnValueField("EISSN")), new ISSN(StringUtil.EMPTY_STRING));
 
       addDocumentValue(Keys.PAGE_RANGE, new SimpleValueField(getPages()), new PageRange(StringUtil.EMPTY_STRING, perl));
       addDocumentValue(Keys.PUBLICATION_YEAR, new SimpleValueField(getYear()), new Year(StringUtil.EMPTY_STRING, perl));
@@ -152,6 +159,22 @@ public abstract class DocumentView {
         }
       }
 
+      // COORDINATES
+      if(isIncluded(GRFDocBuilder.COORDINATES))
+      {
+// Latitude. Latitude indicates the number of degrees north or south of the equator (0 degrees). Latitude is indicated by a character string of seven characters: a letter N or S to indicate direction (i.e., north or south of the equator) and a six-digit number indicating the number of degrees, minutes, and seconds. Latitude coordinates are also cascaded to the full degree (i.e., first two digits): N451430 is North, 45 degrees, 14 minutes, 30 seconds; it is also cascaded to N45.
+// Longitude. Longitude indicates the number of degrees east or west of the prime meridian (0 degrees). Longitude is indicated by a character string of eight characters: a letter E or W to indicate direction (i.e., east or west of the prime meridian) and a seven-digit number indicating the number of degrees, minutes, and seconds. Longitude coordinates are also cascaded to the full degree (i.e., first three digits): W1211752 is West, 121 degrees, 17 minutes, 52 seconds; it is also cascaded to W121
+// Coordinates are assigned as follows: Starting from the lower right-hand corner, a latitude is assigned, followed by the latitude of the upper right-hand corner (counterclockwise), the longitude of that point, and finally the longitude of the upper left-hand corner.
+// i.e. N174800N180000W0661000W0664000
+// S230000S100000E1530000E1430000
+
+        String strcoordinates = createColumnValueField("COORDINATES").getValue();
+        if(strcoordinates != null)
+        {
+          ht.put(GRFDocBuilder.COORDINATES, new RectangleCoordinates(strcoordinates.split(GRFDocBuilder.AUDELIMITER)));
+        }
+      }
+
       addDocumentValue(Keys.CONF_DATE, new ConferenceDateDecorator(createColumnValueField("DATE_OF_MEETING")));
       addDocumentValue(Keys.CONFERENCE_NAME, createColumnValueField("NAME_OF_MEETING"));
       addDocumentValue(Keys.CODEN, createColumnValueField("CODEN"));
@@ -180,7 +203,7 @@ public abstract class DocumentView {
       addDocumentValue(GRFDocBuilder.TARGET_AUDIENCE, createColumnValueField("TARGET_AUDIENCE"));
 
       addDocumentValue(Keys.COLLECTION_TITLE, new TitleDecorator(createColumnValueField("TITLE_OF_COLLECTION")));
-      addDocumentValue(Keys.PUBLISHER, new PublisherDecorator(createColumnValueField("PUBLISHER")));
+      addDocumentValue(Keys.PUBLISHER, new PublisherDecorator(new SimpleValueField(getPublisher())));
       addDocumentValue(Keys.COUNTRY_OF_PUB, new CountryDecorator(createColumnValueField("COUNTRY_OF_PUBLICATION")));
       addDocumentValue(GRFDocBuilder.AFFILIATION_OTHER, new OtherAffiliationDecorator(createColumnValueField("AFFILIATION_SECONDARY")));
       addDocumentValue(Keys.DOC_TYPE, new DocumentTypeDecorator(createColumnValueField("DOCUMENT_TYPE")));
@@ -328,6 +351,18 @@ public abstract class DocumentView {
         {
           strvalue = null;
         }
+      }
+      return strvalue;
+    }
+
+    public String getPublisher()
+    {
+      String strvalue = createColumnValueField("PUBLISHER").getValue();
+      String strvalueaddr = createColumnValueField("PUBLISHER_ADDRESS").getValue();
+
+      if((strvalue != null) && (strvalueaddr != null))
+      {
+        strvalue = strvalue.concat(", ").concat(strvalueaddr);
       }
       return strvalue;
     }
@@ -602,6 +637,33 @@ public abstract class DocumentView {
           }
         }
         return strdate;
+      }
+    }
+
+    public class IssnDecorator extends FieldDecorator
+    {
+      protected  DocumentField field;
+      public IssnDecorator(DocumentField field)
+      {
+        this.field = field;
+      }
+      public String getValue()
+      {
+        String strtitle = null;
+        String strvalue = field.getValue();
+        if(strvalue != null)
+        {
+          String[] strvalues = strvalue.split(GRFDocBuilder.IDDELIMITER);
+          if(strvalues != null && strvalues.length > 1)
+          {
+            strtitle = strvalues[0];
+          }
+          else
+          {
+            strtitle = strvalue;
+          }
+        }
+        return strtitle;
       }
     }
 
