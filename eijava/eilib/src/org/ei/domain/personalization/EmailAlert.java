@@ -270,7 +270,7 @@ public class EmailAlert {
 
                         // create an instance of eimessage and call the respective set methods
                         eimessage = new EIMessage();
-                        eimessage.setSender("<eicustomersupport@elsevier.com>");
+                        eimessage.setSender("<eiemailalert@elsevier.com>");
 
                         String strEmailAddresses = StringUtil.EMPTY_STRING;
                         if (eiProps.getProperty("TESTRECEPIENTS") != null)
