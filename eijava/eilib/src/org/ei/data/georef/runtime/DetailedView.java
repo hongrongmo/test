@@ -72,7 +72,6 @@ import org.ei.domain.FullDoc;
                                         GRFDocBuilder.DEGREE_TYPE,
                                         GRFDocBuilder.UNIVERSITY,
                                         GRFDocBuilder.RESEARCH_PROGRAM,
-                                        GRFDocBuilder.COORDINATES,
                                         Keys.SOURCE_COUNTRY,
                                         Keys.CONFERENCE_NAME,
                                         Keys.CONF_DATE,
@@ -104,6 +103,8 @@ import org.ei.domain.FullDoc;
                                         Keys.PRIVATE_TAGS,
                                         Keys.DOI,
                                         Keys.DOCID,
+                                        GRFDocBuilder.LOCATIONS,
+                                        GRFDocBuilder.COORDINATES,
                                         Keys.COPYRIGHT,
                                         Keys.COPYRIGHT_TEXT,
                                         Keys.PROVIDER};
