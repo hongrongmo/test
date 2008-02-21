@@ -1,14 +1,11 @@
 package org.ei.data.georef.loadtime;
 
 import java.io.*;
-import java.net.URL;
 import java.util.*;
 import org.jdom.*;
 import org.jdom.input.*;
-import org.jdom.output.*;
 
 import org.apache.oro.text.perl.*;
-import org.apache.oro.text.regex.*;
 import org.ei.util.GUID;
 
 public class GeorefReader {
@@ -95,22 +92,13 @@ public class GeorefReader {
 			Element article = (Element) rec.next();
 			record = new Hashtable();
 
-			// Reference Elements
-
-			// Element reference = article.getChild("Reference");
-
 			// ISSN
 			if (article.getChild("A01") != null) {
 				Element issn = article.getChild("A01");
-				if (issn.getChild("A01_2") != null
-						&& issn.getChild("A01_1").getText().equals("P")) {
-					// record.put("EISSN","");
-					record.put("ISSN", concatSubElements(article, "A01", 2));
-				} else {
-					// record.put("ISSN","");
-					record.put("EISSN", concatSubElements(article, "A01", 2));
+				if (issn.getChild("A01_2") != null) {
+					record.put("ISSN", concatISSN(article,"P"));
+					record.put("EISSN", concatISSN(article,"E"));
 				}
-
 			}
 
 			// CODEN
@@ -120,7 +108,8 @@ public class GeorefReader {
 
 			// TITLE HTML???
 			if (article.getChild("A03") != null) {
-				record.put("A03", concatSubElements(article, "A03", 2));
+				record.put("A03", new StringBuffer(article.getChild("A03")
+						.getTextTrim()));
 
 			}
 
@@ -509,8 +498,6 @@ public class GeorefReader {
 
 			// INDEX CODE
 			if (article.getChild("Z50") != null) {
-				// Element indexTerms = article.getChild("Z50");
-
 				record.put("INDEX_TERMS", getIndexTerms(article));
 				record.put("UNCONTROLLED_TERMS", getUncontrolledTerms(article));
 			}
@@ -633,6 +620,8 @@ public class GeorefReader {
 				if (t.getAttribute("att1").getValue().equals("1")) {
 					if (t.getAttribute("att2") != null) {
 						field.append(t.getAttribute("att2").getValue());
+						if (t.getAttribute("att3") != null)
+							field.append(t.getAttribute("att3").getValue());
 						field.append(IDDELIMITER);
 					}
 
@@ -720,14 +709,16 @@ public class GeorefReader {
 
 				if (t.getChild(elemSubName) != null) {
 					getMixData(t.getChild(elemSubName).getContent(), field);
-					field.append(",");
+					field.append(IDDELIMITER);
+					//field.append(",");
 				}
 
 				elemSubName = elemName + "_2";
 
 				if (t.getChild(elemSubName) != null) {
 					getMixData(t.getChild(elemSubName).getContent(), field);
-					field.append(",");
+					field.append(IDDELIMITER);
+					//field.append(",");
 				}
 
 				elemSubName = elemName + "_4";
@@ -849,6 +840,34 @@ public class GeorefReader {
 		}
 	}
 
+	public StringBuffer concatISSN(Element e,  String issnType) {
+		String elemName = "A01";
+		int subInt = 2;
+		
+		StringBuffer field = new StringBuffer();
+		List lt = e.getChildren();
+
+		for (int i = 0; i < lt.size(); i++) {
+			Element t = (Element) lt.get(i);
+
+			if (t.getName().equals(elemName)) {
+				String elemSubName = elemName + "_" + subInt;
+				String elemSubType= elemName + "_1";
+				
+				if (t.getChild(elemSubName) != null && t.getChild(elemSubType).getText().equals(issnType)) {
+					getMixData(t.getChild(elemSubName).getContent(), field);
+					field.append(AUDELIMITER);
+				}
+			}
+		}
+
+		if (field.lastIndexOf(AUDELIMITER) != -1) {
+			return field.delete(field.lastIndexOf(AUDELIMITER), field.length());
+		} else {
+			return field;
+		}
+	}
+	
 	private StringBuffer getRepeatable(Element e, String name) {
 		StringBuffer field = new StringBuffer();
 		List lt = e.getChildren();
