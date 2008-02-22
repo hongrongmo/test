@@ -470,6 +470,30 @@ public class GRFDataDictionary implements DataDictionary
       return countries;
     }
 
+    public Map getThesaurusTermType() {
+
+      Map termtypes = new Hashtable();
+
+      termtypes.put("A",""); // Primary terms (access points for print indexes)
+      termtypes.put("B","geochronology methods");
+      termtypes.put("C","commodities");
+      termtypes.put("D","elements, isotopes");
+      termtypes.put("E","geologic age");
+      termtypes.put("F","fossils");
+      termtypes.put("G","meteorites");
+      termtypes.put("H","igneous rocks");
+      termtypes.put("I","sedimentary rocks");
+      termtypes.put("J","metamorphic rocks");
+      termtypes.put("K","sedimentary structures");
+      termtypes.put("L","minerals");
+      termtypes.put("M","soils");
+      termtypes.put("N","sediments");
+      termtypes.put("O","geography"); // all geography including DSDP/ODP Sites and Legs
+      termtypes.put("R","rock formations");
+
+      return termtypes;
+    }
+
     public String translateValue(String strcode, Map transtable)
     {
       String strtranslated = null;
