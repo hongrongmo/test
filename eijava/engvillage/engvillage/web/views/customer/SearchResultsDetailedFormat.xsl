@@ -243,6 +243,7 @@
       <script type="text/javascript">
         var polygons = {};
         var rects = [];
+        var MAXZOOM = 5;
         function initialize() {
           if (GBrowserIsCompatible()) {
 
@@ -265,7 +266,7 @@
               bounds.extend(new GLatLng(<xsl:value-of select="POINT[4]/LAT"/>, <xsl:value-of select="POINT[4]/LONG"/>));
               bounds.extend(new GLatLng(<xsl:value-of select="POINT[2]/LAT"/>, <xsl:value-of select="POINT[2]/LONG"/>));
             </xsl:for-each>
-            map.setCenter(bounds.getCenter(), map.getBoundsZoomLevel(bounds));
+            map.setCenter(bounds.getCenter(), map.getBoundsZoomLevel(bounds) > MAXZOOM ? MAXZOOM : map.getBoundsZoomLevel(bounds));
           }
         }
         //<![CDATA[
