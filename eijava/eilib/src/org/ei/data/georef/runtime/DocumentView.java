@@ -131,10 +131,15 @@ public abstract class DocumentView {
         String stridxtrms = createColumnValueField("INDEX_TERMS").getValue();
         if(stridxtrms != null)
         {
-          stridxtrms = stridxtrms.replaceAll(GRFDocBuilder.IDDELIMITER,":");
-          ht.put(Keys.INDEX_TERM, new XMLMultiWrapper(Keys.INDEX_TERM, stridxtrms.split(GRFDocBuilder.AUDELIMITER)));
+          String[] idxterms = stridxtrms.split(GRFDocBuilder.AUDELIMITER);
+          for(int i = 0; i < idxterms.length; i++)
+          {
+            idxterms[i] = idxterms[i].replaceAll("[A-Z]*" + GRFDocBuilder.IDDELIMITER,"");
+          }
+          ht.put(Keys.INDEX_TERM, new XMLMultiWrapper(Keys.INDEX_TERM, idxterms));
         }
       }
+
       // UNCONTROLLED_TERMS (FLS)
       if(isIncluded(Keys.UNCONTROLLED_TERMS))
       {
