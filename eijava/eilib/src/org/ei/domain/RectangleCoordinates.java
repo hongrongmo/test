@@ -73,10 +73,10 @@ public class RectangleCoordinates
       Matcher rectangle = RectangleCoordinates.RECTANGLEPATTERN.matcher(coordinates[i]);
       if(rectangle.find())
       {
-        String lat1 = String.valueOf(Long.parseLong(rectangle.group(2)) + (Long.parseLong(rectangle.group(3)) * 1/60) + (Long.parseLong(rectangle.group(4)) * 1/360));
-        String lat2 = String.valueOf(Long.parseLong(rectangle.group(6)) + (Long.parseLong(rectangle.group(7)) * 1/60) + (Long.parseLong(rectangle.group(8)) * 1/360));
-        String lng1 = String.valueOf(Long.parseLong(rectangle.group(10)) + (Long.parseLong(rectangle.group(11)) * 1/60) + (Long.parseLong(rectangle.group(12)) * 1/360));
-        String lng2 = String.valueOf(Long.parseLong(rectangle.group(14)) + (Long.parseLong(rectangle.group(15)) * 1/60) + (Long.parseLong(rectangle.group(16)) * 1/360));
+        String lat1 = String.valueOf(Long.parseLong(rectangle.group(2)) * (rectangle.group(1).equals("S") ? -1 : 1) + (Long.parseLong(rectangle.group(3)) * 1/60) + (Long.parseLong(rectangle.group(4)) * 1/360));
+        String lat2 = String.valueOf(Long.parseLong(rectangle.group(6)) * (rectangle.group(5).equals("S") ? -1 : 1) + (Long.parseLong(rectangle.group(7)) * 1/60) + (Long.parseLong(rectangle.group(8)) * 1/360));
+        String lng1 = String.valueOf(Long.parseLong(rectangle.group(10)) * (rectangle.group(9).equals("W") ? -1 : 1) + (Long.parseLong(rectangle.group(11)) * 1/60) + (Long.parseLong(rectangle.group(12)) * 1/360));
+        String lng2 = String.valueOf(Long.parseLong(rectangle.group(14)) * (rectangle.group(13).equals("W") ? -1 : 1) + (Long.parseLong(rectangle.group(15)) * 1/60) + (Long.parseLong(rectangle.group(16)) * 1/360));
 
         out.write("<RECT ID=\"" + i + "\">");
         out.write("<POINT>");
