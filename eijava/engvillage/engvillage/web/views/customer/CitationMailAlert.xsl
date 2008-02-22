@@ -52,13 +52,13 @@
 			  <tr>
 				  <td valign="top" colspan="5" align="left"><img src="cid:spacergif" border="0" width="0"/><A CLASS="MedBlackText">Please do not reply to this email address.  Please send all responses and questions to eicustomersupport@elsevier.com.</A></td>
 			  </tr>
+              <xsl:if test="($RESULTS-COUNT &gt; 0)">
               <tr>
-                  <td valign="top" colspan="5"><img src="cid:spacergif" border="0" width="3"/><br/><br/></td>
+                  <td valign="top" colspan="5" ><img src="cid:spacergif" border="0" width="3"/></td>
               </tr>
               <tr>
                   <td valign="top" colspan="5" ><img src="cid:spacergif" border="0" width="3"/></td>
               </tr>
-              <xsl:if test="($RESULTS-COUNT &gt; 0)">
                   <tr>
                       <td valign="top" colspan="5" align="left"><img src="cid:spacergif" border="0" width="0"/><A CLASS="MedBlackText">Click on the links below to execute search or view a record in Engineering Village.</A></td>
                   </tr>
@@ -84,7 +84,7 @@
                   </td>
               </tr>
               <tr>
-                  <td valign="top" colspan="5"><img src="cid:spacergif" border="0" width="3"/><br/></td>
+                  <td valign="top" colspan="5"><img src="cid:spacergif" border="0" width="3"/></td>
               </tr>
               <xsl:if test="($RESULTS-COUNT &gt; 25)">
                   <tr>
