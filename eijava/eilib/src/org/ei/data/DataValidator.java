@@ -42,7 +42,6 @@ public class DataValidator
   }
 
   public DataValidator()
-    throws Exception
   {
     System.setProperty("javax.xml.parsers.SAXParserFactory","org.apache.xerces.jaxp.SAXParserFactoryImpl");
 
