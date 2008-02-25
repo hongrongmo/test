@@ -17,6 +17,13 @@ import org.ei.util.GUID;
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
 
+import org.xml.sax.EntityResolver;
+import org.xml.sax.ErrorHandler;
+import org.xml.sax.InputSource;
+import org.xml.sax.SAXException;
+import org.xml.sax.SAXParseException;
+import org.xml.sax.XMLReader;
+
 public class GeoRefCombiner
   extends Combiner
 {
@@ -77,6 +84,13 @@ public class GeoRefCombiner
   public GeoRefCombiner(CombinedWriter writer)
   {
     super(writer);
+
+    DataValidator d = new DataValidator();
+    d.setErrorHandler(new LocalErrorHandler());
+    d.setEntityResolver(new LocalEntityResolver());
+
+    ((CombinedXMLWriter) writer).setDataValidator(d);
+
   }
 
   public void writeCombinedByWeekHook(Connection con,
@@ -230,6 +244,13 @@ public class GeoRefCombiner
         String laString = runtimeDocview.new LanguageDecorator(runtimeDocview.createColumnValueField("LANGUAGE_TEXT")).getValue();
         rec.putIfNotNull(EVCombinedRec.LANGUAGE, laString);
 
+        // DT
+        String dtString = runtimeDocview.new DocumentTypeDecorator(runtimeDocview.createColumnValueField("DOCUMENT_TYPE")).getValue();
+        if(dtString != null)
+        {
+          rec.put(EVCombinedRec.DOCTYPE, dtString.split(", "));
+        }
+
         // AB
         String abString =  StringUtil.getStringFromClob(rs.getClob("ABSTRACT"));
         if (abString != null && abString.length() > 0)
@@ -257,6 +278,17 @@ public class GeoRefCombiner
           }
           rec.put(EVCombinedRec.ISSN, (issnString.toString()).split(AUDELIMITER));
         }
+        // Multiple ISBNs exist in GeoRef (ID:2008-005033)
+        if(rs.getString("ISBN") != null)
+        {
+          rec.put(EVCombinedRec.ISBN,(rs.getString("ISBN")).split(AUDELIMITER));
+        }
+        if(rs.getString("PUBLISHER") != null)
+        {
+          rec.put(EVCombinedRec.PUBLISHER_NAME,(rs.getString("PUBLISHER")).split(AUDELIMITER));
+        }
+
+
 
         rec.putIfNotNull(EVCombinedRec.PUB_YEAR, runtimeDocview.getYear());
         rec.putIfNotNull(EVCombinedRec.TITLE, runtimeDocview.getTitle());
@@ -272,7 +304,7 @@ public class GeoRefCombiner
                             pages));
         rec.putIfNotNull(EVCombinedRec.STARTPAGE, getFirstPage(pages));
         rec.putIfNotNull(EVCombinedRec.CODEN, rs.getString("CODEN"));
-        rec.putIfNotNull(EVCombinedRec.ISBN,rs.getString("ISBN"));
+
         rec.putIfNotNull(EVCombinedRec.DOCID, rs.getString("M_ID"));
         rec.putIfNotNull(EVCombinedRec.DATABASE, "gref");
         rec.putIfNotNull(EVCombinedRec.LOAD_NUMBER, rs.getString("LOAD_NUMBER"));
@@ -381,5 +413,61 @@ public class GeoRefCombiner
 
     return buf.toString().toLowerCase();
 
+  }
+
+  private class LocalEntityResolver implements EntityResolver {
+
+    private String dtdCatalogPath = "C:\\Documents and Settings\\JMoschet\\Desktop\\DTDs\\";
+
+    public LocalEntityResolver() {
+        // TODO Auto-generated constructor stub
+    }
+    public InputSource resolveEntity(String publicId, String systemId) {
+        InputStreamReader is = null;
+//        try {
+            String dtdfile = new File(systemId).getName();
+            System.out.println("<!--" + dtdfile + " == " + systemId + "-->");
+            //is = new InputStreamReader(new FileInputStream(dtdCatalogPath + dtdfile));
+            InputStream in = this.getClass().getClassLoader().getResourceAsStream("org/ei/data/" + dtdfile);
+            if(in != null)
+            {
+              is = new InputStreamReader(in);
+            }
+            else
+            {
+              System.out.println("Cannot open resource as stream");
+            }
+//        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+//            e.printStackTrace();
+//        }
+        return new InputSource(is);
+    }
+
+  }
+
+  private class LocalErrorHandler implements ErrorHandler {
+    public void warning(SAXParseException e) throws SAXException {
+      System.out.println("Warning: ");
+      printInfo(e);
+    }
+
+    public void error(SAXParseException e) throws SAXException {
+      System.out.println("Error: ");
+      printInfo(e);
+    }
+
+    public void fatalError(SAXParseException e) throws SAXException {
+      System.out.println("Fatal error: ");
+      printInfo(e);
+    }
+
+    private void printInfo(SAXParseException e) {
+      System.out.println("   Public ID: " + e.getPublicId());
+      System.out.println("   System ID: " + e.getSystemId());
+      System.out.println("   Line number: " + e.getLineNumber());
+      System.out.println("   Column number: " + e.getColumnNumber());
+      System.out.println("   Message: " + e.getMessage());
+    }
   }
 }
