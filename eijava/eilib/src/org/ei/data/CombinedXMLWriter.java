@@ -16,6 +16,7 @@ public class CombinedXMLWriter
 
     private PorterStemmer stemmer = new PorterStemmer();
     private DataCleaner cleaner = new DataCleaner();
+    private DataValidator d = new DataValidator();
 
     private int recsPerfile;
 
@@ -62,6 +63,10 @@ public class CombinedXMLWriter
       out = awriter;
     }
 
+    public void setDataValidator(DataValidator avalidator)
+    {
+      this.d = avalidator;
+    }
 
     public CombinedXMLWriter(int recsPerfile,
                              int numberID,
@@ -588,7 +593,6 @@ public class CombinedXMLWriter
             finalFileName.append(part6);
             System.out.println(" finalFileName :: "+finalFileName.toString());
             f.renameTo(new File(finalFileName.toString()));
-            DataValidator d = new DataValidator();
             d.validateFile(finalFileName.toString());
             open = false;
         }
