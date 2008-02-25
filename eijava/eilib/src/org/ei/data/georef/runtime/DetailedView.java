@@ -102,6 +102,7 @@ import org.ei.domain.FullDoc;
                                         Keys.GLOBAL_TAGS,
                                         Keys.PRIVATE_TAGS,
                                         Keys.DOI,
+                                        Keys.DOC_URL,
                                         Keys.DOCID,
                                         GRFDocBuilder.LOCATIONS,
                                         GRFDocBuilder.COORDINATES,
