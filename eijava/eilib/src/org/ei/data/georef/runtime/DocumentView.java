@@ -187,7 +187,6 @@ public abstract class DocumentView {
       addDocumentValue(Keys.COPYRIGHT, createColumnValueField("COPYRIGHT"));
       addDocumentValue(Keys.ACCESSION_NUMBER, createColumnValueField("ID_NUMBER"));
       addDocumentValue(Keys.NUMBER_OF_REFERENCES, createColumnValueField("NUMBER_OF_REFERENCES"));
-      addDocumentValue(Keys.DOC_URL, createColumnValueField("URL"));
       addDocumentValue(Keys.REPORT_NUMBER, createColumnValueField("REPORT_NUMBER"));
       addDocumentValue(Keys.DOI, createColumnValueField("DOI"));
       addDocumentValue(Keys.AVAILABILITY, createColumnValueField("AVAILABILITY"));
@@ -207,6 +206,7 @@ public abstract class DocumentView {
       addDocumentValue(GRFDocBuilder.HOLDING_LIBRARY, createColumnValueField("HOLDING_LIBRARY"));
       addDocumentValue(GRFDocBuilder.TARGET_AUDIENCE, createColumnValueField("TARGET_AUDIENCE"));
 
+      addDocumentValue(Keys.DOC_URL, new URLDecorator(createColumnValueField("URL")));
       addDocumentValue(Keys.COLLECTION_TITLE, new TitleDecorator(createColumnValueField("TITLE_OF_COLLECTION")));
       addDocumentValue(Keys.PUBLISHER, new PublisherDecorator(new SimpleValueField(getPublisher())));
       addDocumentValue(Keys.COUNTRY_OF_PUB, new CountryDecorator(createColumnValueField("COUNTRY_OF_PUBLICATION")));
@@ -898,4 +898,56 @@ public abstract class DocumentView {
         return dataDictionary.getDocumenttypes();
       }
     }
+
+    public class URLDecorator extends MultiValueLookupValueDecorator
+    {
+      public URLDecorator(DocumentField field)
+      {
+        super(field);
+      }
+
+      public String getValue()
+      {
+        String decoratedvalue = null;
+        String strvalue = field.getValue();
+
+        if(strvalue != null)
+        {
+          String[] urls = new String[]{strvalue};
+          if(getSplitPattern().matcher(strvalue).find())
+          {
+            urls = getSplitPattern().split(strvalue);
+          }
+          for(int i = 0; i < urls.length; i++)
+          {
+            String[] urlstrings = urls[i].split(",");
+            String strtranslated = dataDictionary.translateValue(urlstrings[0],getLookupTable());
+            if(strtranslated != null)
+            {
+              strtranslated = strtranslated.concat(" [").concat(urlstrings[1]).concat("] ");
+              decoratedvalue = (decoratedvalue == null) ? strtranslated : decoratedvalue.concat(getConcatenationString()).concat(strtranslated);
+            }
+          }
+        }
+        return decoratedvalue;
+      }
+
+      public Pattern getSplitPattern() { return Pattern.compile(GRFDocBuilder.AUDELIMITER); }
+      public String getConcatenationString() { return ", "; }
+      public Map getLookupTable()
+      {
+        Map urlmap = new HashMap();
+
+        urlmap.put("F","Full-text");
+        urlmap.put("A","Availability");
+        urlmap.put("P","Publisher");
+        urlmap.put("S","Series");
+
+        return urlmap;
+      }
+    }
+
+
 } //  End of DocumentView class
+
+
