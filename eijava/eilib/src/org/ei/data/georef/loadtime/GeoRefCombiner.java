@@ -288,7 +288,11 @@ public class GeoRefCombiner
           rec.put(EVCombinedRec.PUBLISHER_NAME,(rs.getString("PUBLISHER")).split(AUDELIMITER));
         }
 
-
+        String[] landData = parseMeridianData(rs.getString("LAND"));
+        if(landData != null)
+        {
+          rec.put(EVCombinedRec.INT_PATENT_CLASSIFICATION,landData);
+        }
 
         rec.putIfNotNull(EVCombinedRec.PUB_YEAR, runtimeDocview.getYear());
         rec.putIfNotNull(EVCombinedRec.TITLE, runtimeDocview.getTitle());
@@ -333,6 +337,20 @@ public class GeoRefCombiner
     }
   }
 
+  private String[] parseMeridianData(String column)
+  {
+    String[] keys = null;
+    if(column != null)
+    {
+      String[] features = column.split("\\|");
+      keys = new String[features.length];
+      for(int i = 0; i < features.length; i++)
+      {
+        keys[i] = features[i].split(";")[0];
+      }
+    }
+    return keys;
+  }
 
   private String getFirstNumber(String v)
   {
