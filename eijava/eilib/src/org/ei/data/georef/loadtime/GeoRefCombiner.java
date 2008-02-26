@@ -253,12 +253,13 @@ public class GeoRefCombiner
         }
 
 
-        // CO - Author Aff. Country
+        // CO - Author Affiliation Countries and Author Affiliation Location(s)
         // Uses runtime Docview instance to access decorator class
         String country = rs.getString("AUTHOR_AFFILIATION_COUNTRY");
         if(country != null)
         {
           List affcountries = new ArrayList();
+          List affilitationlocations = new ArrayList();
 
           DocumentView.FieldDecorator cd = runtimeDocview.new CountryDecorator(country);
           affcountries.add(cd.getValue());
@@ -278,13 +279,29 @@ public class GeoRefCombiner
                 {
                   affcountries.add(values[x]);
                 }
+                else if(x != 0)
+                {
+                  // pick up address info that is not the first entry, which is the Affiliated Institution
+                  // or the name of a country
+                  affilitationlocations.add(values[x]);
+                }
               }
             }
           }
           if(!affcountries.isEmpty())
           {
             rec.putIfNotNull(EVCombinedRec.COUNTRY, (String[]) affcountries.toArray(new String[]{}));
+            affilitationlocations.addAll(affcountries);
           }
+          if(rs.getString("AUTHOR_AFFILIATION_ADDRESS") != null)
+          {
+            affilitationlocations.add(rs.getString("AUTHOR_AFFILIATION_ADDRESS"));
+          }
+          if(!affilitationlocations.isEmpty())
+          {
+            rec.putIfNotNull(EVCombinedRec.AFFILIATION_LOCATION, (String[]) affilitationlocations.toArray(new String[]{}));
+          }
+
         }
 
         // LA
@@ -359,11 +376,13 @@ public class GeoRefCombiner
         rec.putIfNotNull(EVCombinedRec.USPTOCODE, parseMeridianData(rs.getString("OIL")));
         rec.putIfNotNull(EVCombinedRec.PATENT_KIND, parseMeridianData(rs.getString("CITIES")));
 
+
         rec.putIfNotNull(EVCombinedRec.PUB_YEAR, runtimeDocview.getYear());
         rec.putIfNotNull(EVCombinedRec.TITLE, runtimeDocview.getTitle());
         rec.putIfNotNull(EVCombinedRec.TRANSLATED_TITLE, runtimeDocview.getTranslatedTitle());
         rec.putIfNotNull(EVCombinedRec.MONOGRAPH_TITLE, runtimeDocview.getMonographTitle());
         rec.putIfNotNull(EVCombinedRec.SERIAL_TITLE, rs.getString("TITLE_OF_SERIAL"));
+        rec.putIfNotNull(EVCombinedRec.AVAILABILITY, rs.getString("AVAILABILITY"));
 
 
         // CL
