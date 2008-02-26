@@ -27,10 +27,8 @@ import org.xml.sax.XMLReader;
 public class GeoRefCombiner
   extends Combiner
 {
-
-  public static final String AUDELIMITER    = new String(new char[] {30});
-  public static final String IDDELIMITER    = new String(new char[] {31});
-  public static final String GROUPDELIMITER   = new String(new char[] {02});
+  public static final String AUDELIMITER = GRFDocBuilder.AUDELIMITER;
+  public static final String IDDELIMITER = GRFDocBuilder.IDDELIMITER;
 
   Perl5Util perl = new Perl5Util();
 
@@ -230,6 +228,31 @@ public class GeoRefCombiner
           }
         }
 
+        // AFF
+        String affilitation = rs.getString("AUTHOR_AFFILIATION");
+        if(affilitation != null)
+        {
+          List affilations= new ArrayList();
+          affilations.add(affilitation);
+
+          // parse out second Affilitation institutions
+          if(rs.getString("AFFILIATION_SECONDARY") != null)
+          {
+            String secondaffiliations = rs.getString("AFFILIATION_SECONDARY");
+            String[] affilvalues = secondaffiliations.split(AUDELIMITER);
+            for(int x = 0 ; x < affilvalues.length; x++)
+            {
+              String[] values = affilvalues[x].split(IDDELIMITER);
+              affilations.add(values[0]);
+            }
+          }
+          if(!affilations.isEmpty())
+          {
+            rec.putIfNotNull(EVCombinedRec.AUTHOR_AFFILIATION, (String[]) affilations.toArray(new String[]{}));
+          }
+        }
+
+
         // CO - Author Aff. Country
         // Uses runtime Docview instance to access decorator class
         String country = rs.getString("AUTHOR_AFFILIATION_COUNTRY");
@@ -240,14 +263,15 @@ public class GeoRefCombiner
           DocumentView.FieldDecorator cd = runtimeDocview.new CountryDecorator(country);
           affcountries.add(cd.getValue());
 
+          // parse out second Affilitation Countries
           if(rs.getString("AFFILIATION_SECONDARY") != null)
           {
             Map countries = (new GRFDataDictionary()).getCountries();
-            String secondcountries = rs.getString("AFFILIATION_SECONDARY");
-            String[] affils = secondcountries.split(AUDELIMITER);
-            for(int z = 0 ; z < affils.length; z++)
+            String secondaffiliations = rs.getString("AFFILIATION_SECONDARY");
+            String[] affilvalues = secondaffiliations.split(AUDELIMITER);
+            for(int z = 0 ; z < affilvalues.length; z++)
             {
-              String[] values = affils[z].split(IDDELIMITER);
+              String[] values = affilvalues[z].split(IDDELIMITER);
               for(int x = 0; x < values.length; x++)
               {
                 if(countries.containsValue(values[x]))
@@ -257,12 +281,12 @@ public class GeoRefCombiner
               }
             }
           }
-
           if(!affcountries.isEmpty())
           {
             rec.putIfNotNull(EVCombinedRec.COUNTRY, (String[]) affcountries.toArray(new String[]{}));
           }
         }
+
         // LA
         String laString = runtimeDocview.new LanguageDecorator(runtimeDocview.createColumnValueField("LANGUAGE_TEXT")).getValue();
         rec.putIfNotNull(EVCombinedRec.LANGUAGE, laString);
@@ -311,6 +335,25 @@ public class GeoRefCombiner
           rec.put(EVCombinedRec.PUBLISHER_NAME,(rs.getString("PUBLISHER")).split(AUDELIMITER));
         }
 
+
+        // INDEX_TERMS (CVS)
+        if(rs.getString("INDEX_TERMS") != null)
+        {
+          String[] idxterms = stridxtrms.split(AUDELIMITER);
+          for(int i = 0; i < idxterms.length; i++)
+          {
+            idxterms[i] = idxterms[i].replaceAll("[A-Z]*" + IDDELIMITER,"");
+          }
+          rec.putIfNotNull(EVCombinedRec.CONTROLLED_TERMS, idxterms);
+        }
+
+        // FLS
+        if(rs.getString("UNCONTROLLED_TERMS") != null)
+        {
+          rec.put(EVCombinedRec.UNCONTROLLED_TERMS,(rs.getString("UNCONTROLLED_TERMS")).split(AUDELIMITER));
+        }
+
+        // Meridian data in Patent Navigators
         rec.putIfNotNull(EVCombinedRec.INT_PATENT_CLASSIFICATION, parseMeridianData(rs.getString("LAND")));
         rec.putIfNotNull(EVCombinedRec.ECLA_CODES, parseMeridianData(rs.getString("WATER")));
         rec.putIfNotNull(EVCombinedRec.USPTOCODE, parseMeridianData(rs.getString("OIL")));
