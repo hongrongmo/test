@@ -210,12 +210,12 @@ public class GeoRefCombiner
         String aString = rs.getString("PERSON_ANALYTIC");
         if(aString != null)
         {
-          // alternate spellings
-          String altAuthor = rs.getString("ALTERNATE_AUTHOR");
+          // DO NOT USE - alternate spellings
+          /* String altAuthor = rs.getString("ALTERNATE_AUTHOR");
           if(altAuthor != null)
           {
             aString = aString.concat(AUDELIMITER).concat(altAuthor);
-          }
+          } */
           rec.put(EVCombinedRec.AUTHOR, aString.split(AUDELIMITER));
         }
 
