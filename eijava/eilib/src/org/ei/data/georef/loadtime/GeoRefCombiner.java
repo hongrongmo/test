@@ -215,17 +215,20 @@ public class GeoRefCombiner
           if(altAuthor != null)
           {
             aString = aString.concat(AUDELIMITER).concat(altAuthor);
-            rec.put(EVCombinedRec.AUTHOR, aString.split(AUDELIMITER));
           }
+          rec.put(EVCombinedRec.AUTHOR, aString.split(AUDELIMITER));
         }
+
         // EDS
         String eString = rs.getString("PERSON_MONOGRAPH");
         if(eString != null)
         {
-          if(eString != null)
+          String otherEditors = rs.getString("PERSON_COLLECTION");
+          if(otherEditors != null)
           {
-            rec.put(EVCombinedRec.EDITOR, eString.split(AUDELIMITER));
+            eString = eString.concat(AUDELIMITER).concat(otherEditors);
           }
+          rec.put(EVCombinedRec.EDITOR, eString.split(AUDELIMITER));
         }
 
         // AFF
@@ -370,6 +373,11 @@ public class GeoRefCombiner
           rec.put(EVCombinedRec.UNCONTROLLED_TERMS,(rs.getString("UNCONTROLLED_TERMS")).split(AUDELIMITER));
         }
 
+        if(rs.getString("AVAILABILITY") != null)
+        {
+          rec.putIfNotNull(EVCombinedRec.AVAILABILITY, rs.getString("AVAILABILITY").split(AUDELIMITER));
+        }
+
         // Meridian data in Patent Navigators
         rec.putIfNotNull(EVCombinedRec.INT_PATENT_CLASSIFICATION, parseMeridianData(rs.getString("LAND")));
         rec.putIfNotNull(EVCombinedRec.ECLA_CODES, parseMeridianData(rs.getString("WATER")));
@@ -382,8 +390,8 @@ public class GeoRefCombiner
         rec.putIfNotNull(EVCombinedRec.TRANSLATED_TITLE, runtimeDocview.getTranslatedTitle());
         rec.putIfNotNull(EVCombinedRec.MONOGRAPH_TITLE, runtimeDocview.getMonographTitle());
         rec.putIfNotNull(EVCombinedRec.SERIAL_TITLE, rs.getString("TITLE_OF_SERIAL"));
-        rec.putIfNotNull(EVCombinedRec.AVAILABILITY, rs.getString("AVAILABILITY"));
-
+        rec.putIfNotNull(EVCombinedRec.REPORTNUMBER, rs.getString("REPORT_NUMBER"));
+        rec.putIfNotNull(EVCombinedRec.CONFERENCE_LOCATION, rs.getString("LOCATION_OF_MEETING"));
 
         // CL
         if(rs.getString("CATEGORY_CODE") != null)
