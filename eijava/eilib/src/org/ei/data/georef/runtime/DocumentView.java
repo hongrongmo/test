@@ -179,6 +179,12 @@ public abstract class DocumentView {
         }
       }
 
+      String stravail = createColumnValueField("AVAILABILITY").getValue();
+      if(stravail != null)
+      {
+        ht.put(Keys.AVAILABILITY, new XMLMultiWrapper(Keys.AVAILABILITY, stravail.split(GRFDocBuilder.AUDELIMITER)));
+      }
+
       addDocumentValue(Keys.CONF_DATE, new ConferenceDateDecorator(createColumnValueField("DATE_OF_MEETING")));
       addDocumentValue(Keys.CONFERENCE_NAME, createColumnValueField("NAME_OF_MEETING"));
       addDocumentValue(Keys.CODEN, createColumnValueField("CODEN"));
@@ -188,7 +194,6 @@ public abstract class DocumentView {
       addDocumentValue(Keys.NUMBER_OF_REFERENCES, createColumnValueField("NUMBER_OF_REFERENCES"));
       addDocumentValue(Keys.REPORT_NUMBER, createColumnValueField("REPORT_NUMBER"));
       addDocumentValue(Keys.DOI, createColumnValueField("DOI"));
-      addDocumentValue(Keys.AVAILABILITY, createColumnValueField("AVAILABILITY"));
       addDocumentValue(Keys.EDITION, createColumnValueField("EDITION"));
 
       addDocumentValue(GRFDocBuilder.SOURCE_MEDIUM, createColumnValueField("MEDIUM_OF_SOURCE"));
