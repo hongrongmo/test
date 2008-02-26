@@ -29,7 +29,7 @@ public class GeoRefCombiner
 {
 
   public static final String AUDELIMITER    = new String(new char[] {30});
-  public static final String IDDELIMITER    = new String(new char[] {29});
+  public static final String IDDELIMITER    = new String(new char[] {31});
   public static final String GROUPDELIMITER   = new String(new char[] {02});
 
   Perl5Util perl = new Perl5Util();
@@ -235,10 +235,33 @@ public class GeoRefCombiner
         String country = rs.getString("AUTHOR_AFFILIATION_COUNTRY");
         if(country != null)
         {
+          List affcountries = new ArrayList();
+
           DocumentView.FieldDecorator cd = runtimeDocview.new CountryDecorator(country);
-          // here we put the raw (abbreviated) value AND the full (decorated) value
-          // i.e CAN CANADA
-          rec.put(EVCombinedRec.COUNTRY, new String[]{country, cd.getValue()});
+          affcountries.add(cd.getValue());
+
+          if(rs.getString("AFFILIATION_SECONDARY") != null)
+          {
+            Map countries = (new GRFDataDictionary()).getCountries();
+            String secondcountries = rs.getString("AFFILIATION_SECONDARY");
+            String[] affils = secondcountries.split(AUDELIMITER);
+            for(int z = 0 ; z < affils.length; z++)
+            {
+              String[] values = affils[z].split(IDDELIMITER);
+              for(int x = 0; x < values.length; x++)
+              {
+                if(countries.containsValue(values[x]))
+                {
+                  affcountries.add(values[x]);
+                }
+              }
+            }
+          }
+
+          if(!affcountries.isEmpty())
+          {
+            rec.putIfNotNull(EVCombinedRec.COUNTRY, (String[]) affcountries.toArray(new String[]{}));
+          }
         }
         // LA
         String laString = runtimeDocview.new LanguageDecorator(runtimeDocview.createColumnValueField("LANGUAGE_TEXT")).getValue();
@@ -248,7 +271,7 @@ public class GeoRefCombiner
         String dtString = runtimeDocview.new DocumentTypeDecorator(runtimeDocview.createColumnValueField("DOCUMENT_TYPE")).getValue();
         if(dtString != null)
         {
-          rec.put(EVCombinedRec.DOCTYPE, dtString.split(", "));
+          rec.putIfNotNull(EVCombinedRec.DOCTYPE, dtString.split(", "));
         }
 
         // AB
@@ -288,11 +311,10 @@ public class GeoRefCombiner
           rec.put(EVCombinedRec.PUBLISHER_NAME,(rs.getString("PUBLISHER")).split(AUDELIMITER));
         }
 
-        String[] landData = parseMeridianData(rs.getString("LAND"));
-        if(landData != null)
-        {
-          rec.put(EVCombinedRec.INT_PATENT_CLASSIFICATION,landData);
-        }
+        rec.putIfNotNull(EVCombinedRec.INT_PATENT_CLASSIFICATION, parseMeridianData(rs.getString("LAND")));
+        rec.putIfNotNull(EVCombinedRec.ECLA_CODES, parseMeridianData(rs.getString("WATER")));
+        rec.putIfNotNull(EVCombinedRec.USPTOCODE, parseMeridianData(rs.getString("OIL")));
+        rec.putIfNotNull(EVCombinedRec.PATENT_KIND, parseMeridianData(rs.getString("CITIES")));
 
         rec.putIfNotNull(EVCombinedRec.PUB_YEAR, runtimeDocview.getYear());
         rec.putIfNotNull(EVCombinedRec.TITLE, runtimeDocview.getTitle());
@@ -308,6 +330,9 @@ public class GeoRefCombiner
                             pages));
         rec.putIfNotNull(EVCombinedRec.STARTPAGE, getFirstPage(pages));
         rec.putIfNotNull(EVCombinedRec.CODEN, rs.getString("CODEN"));
+
+        rec.putIfNotNull(EVCombinedRec.CONFERENCE_NAME, rs.getString("NAME_OF_MEETING"));
+        rec.putIfNotNull(EVCombinedRec.MEETING_DATE, rs.getString("DATE_OF_MEETING"));
 
         rec.putIfNotNull(EVCombinedRec.DOCID, rs.getString("M_ID"));
         rec.putIfNotNull(EVCombinedRec.DATABASE, "gref");
