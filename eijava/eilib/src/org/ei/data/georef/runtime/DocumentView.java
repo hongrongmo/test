@@ -146,7 +146,6 @@ public abstract class DocumentView {
         String stridxtrms = createColumnValueField("UNCONTROLLED_TERMS").getValue();
         if(stridxtrms != null)
         {
-          stridxtrms = stridxtrms.replaceAll(GRFDocBuilder.IDDELIMITER,":");
           ht.put(Keys.UNCONTROLLED_TERMS, new XMLMultiWrapper(Keys.UNCONTROLLED_TERMS, stridxtrms.split(GRFDocBuilder.AUDELIMITER)));
         }
       }
