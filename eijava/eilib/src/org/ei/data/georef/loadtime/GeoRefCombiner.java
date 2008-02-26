@@ -339,10 +339,10 @@ public class GeoRefCombiner
         // INDEX_TERMS (CVS)
         if(rs.getString("INDEX_TERMS") != null)
         {
-          String[] idxterms = stridxtrms.split(AUDELIMITER);
-          for(int i = 0; i < idxterms.length; i++)
+          String[] idxterms = rs.getString("INDEX_TERMS").split(AUDELIMITER);
+          for(int z = 0; z < idxterms.length; z++)
           {
-            idxterms[i] = idxterms[i].replaceAll("[A-Z]*" + IDDELIMITER,"");
+            idxterms[z] = idxterms[z].replaceAll("[A-Z]*" + IDDELIMITER,"");
           }
           rec.putIfNotNull(EVCombinedRec.CONTROLLED_TERMS, idxterms);
         }
@@ -363,6 +363,14 @@ public class GeoRefCombiner
         rec.putIfNotNull(EVCombinedRec.TITLE, runtimeDocview.getTitle());
         rec.putIfNotNull(EVCombinedRec.TRANSLATED_TITLE, runtimeDocview.getTranslatedTitle());
         rec.putIfNotNull(EVCombinedRec.MONOGRAPH_TITLE, runtimeDocview.getMonographTitle());
+        rec.putIfNotNull(EVCombinedRec.SERIAL_TITLE, rs.getString("SERIAL_TITLE"));
+
+
+        // CL
+        if(rs.getString("CATEGORY_CODE") != null)
+        {
+          rec.put(EVCombinedRec.CLASSIFICATION_CODE,(rs.getString("CATEGORY_CODE")).split(AUDELIMITER));
+        }
 
         String pages = runtimeDocview.getPages();
         rec.put(EVCombinedRec.DEDUPKEY,
@@ -512,7 +520,7 @@ public class GeoRefCombiner
         InputStreamReader is = null;
 //        try {
             String dtdfile = new File(systemId).getName();
-            System.out.println("<!--" + dtdfile + " == " + systemId + "-->");
+            //System.out.println("<!--" + dtdfile + " == " + systemId + "-->");
             //is = new InputStreamReader(new FileInputStream(dtdCatalogPath + dtdfile));
             InputStream in = this.getClass().getClassLoader().getResourceAsStream("org/ei/data/" + dtdfile);
             if(in != null)
