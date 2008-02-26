@@ -363,7 +363,7 @@ public class GeoRefCombiner
         rec.putIfNotNull(EVCombinedRec.TITLE, runtimeDocview.getTitle());
         rec.putIfNotNull(EVCombinedRec.TRANSLATED_TITLE, runtimeDocview.getTranslatedTitle());
         rec.putIfNotNull(EVCombinedRec.MONOGRAPH_TITLE, runtimeDocview.getMonographTitle());
-        rec.putIfNotNull(EVCombinedRec.SERIAL_TITLE, rs.getString("SERIAL_TITLE"));
+        rec.putIfNotNull(EVCombinedRec.SERIAL_TITLE, rs.getString("TITLE_OF_SERIAL"));
 
 
         // CL
