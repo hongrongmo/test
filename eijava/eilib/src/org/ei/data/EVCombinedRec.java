@@ -163,13 +163,20 @@ public class EVCombinedRec {
 	}
 
 
-	public void put(String key,
-					String[] value)
+	public void put(String key, String[] value)
 	{
 		h.put(key, value);
 	}
 
 	public void putIfNotNull(String key, String value)
+	{
+	  if(value != null)
+	  {
+	    this.put(key, value);
+    }
+	}
+
+	public void putIfNotNull(String key, String[] value)
 	{
 	  if(value != null)
 	  {
