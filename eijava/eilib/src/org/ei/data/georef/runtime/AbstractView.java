@@ -10,6 +10,7 @@ import org.ei.domain.Abstract;
     public class AbstractView extends DocumentView {
 
         private List fields = Arrays.asList(new String[]{"ABSTRACT",
+                                                        "COORDINATES",
                                                         "CODEN",
                                                         "EISSN",
                                                         "INDEX_TERMS",
@@ -30,7 +31,10 @@ import org.ei.domain.Abstract;
                                         Keys.I_PUBLISHER,
                                         Keys.MAIN_HEADING,
                                         Keys.PROVIDER,
-                                        Keys.SPONSOR};
+                                        Keys.SPONSOR,
+                                        GRFDocBuilder.LOCATIONS,
+                                        GRFDocBuilder.COORDINATES
+                                        };
 
         public Key[] getKeys() {
           List abstractkeys = new ArrayList();
