@@ -179,10 +179,13 @@ public abstract class DocumentView {
         }
       }
 
-      String stravail = createColumnValueField("AVAILABILITY").getValue();
-      if(stravail != null)
+      if(isIncluded(Keys.AVAILABILITY))
       {
-        ht.put(Keys.AVAILABILITY, new XMLMultiWrapper(Keys.AVAILABILITY, stravail.split(GRFDocBuilder.AUDELIMITER)));
+        String stravail = createColumnValueField("AVAILABILITY").getValue();
+        if(stravail != null)
+        {
+          ht.put(Keys.AVAILABILITY, new XMLMultiWrapper(Keys.AVAILABILITY, stravail.split(GRFDocBuilder.AUDELIMITER)));
+        }
       }
 
       addDocumentValue(Keys.CONF_DATE, new ConferenceDateDecorator(createColumnValueField("DATE_OF_MEETING")));
