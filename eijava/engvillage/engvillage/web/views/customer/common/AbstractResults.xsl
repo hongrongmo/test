@@ -202,14 +202,17 @@
     </xsl:template>
 
     <xsl:template match="LOCS">
-      <br/><span CLASS="MedBlackText"><b><xsl:value-of select="@label"/>:</b> </span>
+      <br/><span CLASS="MedBlackText"><b><xsl:value-of select="@label"/>:</b>&#160;</span>
       <xsl:apply-templates select="LOC"/><br/>
     </xsl:template>
 
     <xsl:template match="LOC">
-      <xsl:text>, </xsl:text><a CLASS="SpLink">
+      <a CLASS="SpLink">
       <xsl:attribute name="href">javascript:toggleRectangle('<xsl:value-of select="@ID"/>');</xsl:attribute>
       <xsl:value-of disable-output-escaping="yes" select="."/></a>
+      <xsl:if test="not(position()=last())">
+        <span class="SmBlackText">,&#160;</span>
+      </xsl:if>
     </xsl:template>
 
     <!-- EPT Templates -->
