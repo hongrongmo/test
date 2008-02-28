@@ -173,6 +173,9 @@
       <xsl:apply-templates select="PECM"/>
       <xsl:apply-templates select="COL"/>
 
+      <xsl:apply-templates select="CRDN"/>
+      <xsl:apply-templates select="LOCS"/>
+
       <BR/>
       <xsl:if test="$ascii='true'">
         <xsl:text>&#xD;&#xA;</xsl:text>
@@ -184,22 +187,46 @@
       <script language="JavaScript" type="text/javascript" src="/engresources/js/wz_tooltip.js"></script>
 
     </xsl:template>
- <!-- EPT Templates -->
 
-     <xsl:template match="PINFO">
-        <br/><b> Patent information:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
+    <!-- GeoRef Templates -->
+    <xsl:template match="CRDN">
+      <br/><br/>
+      <!-- <xsl:if test="string(@label)">
+        <span CLASS="MedBlackText"><b><xsl:value-of select="@label"/>:</b> </span>
+      </xsl:if> -->
+      <span CLASS="MedBlackText">
+        <div id="map" style="display:block;border:1px solid black;">
+          <div id="map_canvas" style="float:left; width: 100%; height: 300px;"></div>
+        </div>
+      </span>
+    </xsl:template>
+
+    <xsl:template match="LOCS">
+      <br/><span CLASS="MedBlackText"><b><xsl:value-of select="@label"/>:</b> </span>
+      <xsl:apply-templates select="LOC"/><br/>
+    </xsl:template>
+
+    <xsl:template match="LOC">
+      <xsl:text>, </xsl:text><a CLASS="SpLink">
+      <xsl:attribute name="href">javascript:toggleRectangle('<xsl:value-of select="@ID"/>');</xsl:attribute>
+      <xsl:value-of disable-output-escaping="yes" select="."/></a>
+    </xsl:template>
+
+    <!-- EPT Templates -->
+    <xsl:template match="PINFO">
+      <br/><b> Patent information:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
     </xsl:template>
 
     <xsl:template match="PAPIM">
-        <b> Application information:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
+      <b> Application information:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
     </xsl:template>
 
     <xsl:template match="PIM">
-       <b> Priority information:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
+      <b> Priority information:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
     </xsl:template>
 
     <xsl:template match="EASM">
-    	<b> Patent assignee: </b><xsl:apply-templates />
+      <b> Patent assignee: </b><xsl:apply-templates />
     </xsl:template>
 
     <xsl:template match="EAS">
