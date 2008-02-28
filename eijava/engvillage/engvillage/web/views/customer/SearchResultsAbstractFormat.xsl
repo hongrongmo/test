@@ -233,9 +233,60 @@
     </xsl:text>
     //</xsl:comment>
     </script>
+
+    <xsl:if test="(PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/CRDN)" >
+      <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAR--2D6WLLGcr7L3QlwZCBRTWp_Jg7UwMVr-ESRqyz6fZCklfjxRMuUlG4X-qIrTCMhuYZ8sO4fVZEA"
+              type="text/javascript"></script>
+      <script type="text/javascript">
+        var polygons = {};
+        var rects = [];
+        var MAXZOOM = 5;
+        function initialize() {
+          if (GBrowserIsCompatible()) {
+
+            var map = new GMap(document.getElementById("map_canvas"));
+            map.setMapType(G_PHYSICAL_MAP);
+            map.setCenter(new GLatLng(0, 0), 1);
+            map.addControl(new GLargeMapControl());
+
+            var polygon;
+            var bounds = new GLatLngBounds();
+            <xsl:for-each select="PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/CRDN/RECT">
+              polygon = new GPolygon([
+              <xsl:for-each select="POINT">
+                new GLatLng(<xsl:value-of select="LAT"/>, <xsl:value-of select="LONG"/>),
+              </xsl:for-each>
+                new GLatLng(<xsl:value-of select="POINT[1]/LAT"/>, <xsl:value-of select="POINT[1]/LONG"/>)
+              ], "#f33f00", 5, 1, "#ff0000", 0.2);
+              map.addOverlay(polygon);
+              polygons["<xsl:value-of select="@ID"/>"] = polygon;
+              bounds.extend(new GLatLng(<xsl:value-of select="POINT[4]/LAT"/>, <xsl:value-of select="POINT[4]/LONG"/>));
+              bounds.extend(new GLatLng(<xsl:value-of select="POINT[2]/LAT"/>, <xsl:value-of select="POINT[2]/LONG"/>));
+            </xsl:for-each>
+            map.setCenter(bounds.getCenter(), map.getBoundsZoomLevel(bounds) > MAXZOOM ? MAXZOOM : map.getBoundsZoomLevel(bounds));
+          }
+        }
+        //<![CDATA[
+        function toggleRectangle(id) {
+          var polygon = polygons[id];
+          if (polygon.isHidden()) {
+            polygon.show();
+          } else {
+            polygon.hide();
+          }
+        }
+        //]]>
+        </script>
+    </xsl:if>
+
     <!-- End of javascript -->
     </head>
       <body bgcolor="#FFFFFF" topmargin="0" marginheight="0" marginwidth="0">
+        <xsl:if test="(PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/CRDN)" >
+          <xsl:attribute name="onload">initialize()</xsl:attribute>
+          <xsl:attribute name="onunload">GUnload()</xsl:attribute>
+        </xsl:if>
+
         <xsl:apply-templates select="HEADER">
           <xsl:with-param name="SEARCH-TYPE" select="$SEARCH-TYPE" />
         </xsl:apply-templates>
