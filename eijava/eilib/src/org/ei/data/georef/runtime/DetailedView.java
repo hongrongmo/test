@@ -106,6 +106,7 @@ import org.ei.domain.FullDoc;
                                         Keys.DOCID,
                                         GRFDocBuilder.LOCATIONS,
                                         GRFDocBuilder.COORDINATES,
+                                        GRFDocBuilder.MERIDIAN,
                                         Keys.COPYRIGHT,
                                         Keys.COPYRIGHT_TEXT,
                                         Keys.PROVIDER};

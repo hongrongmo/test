@@ -33,7 +33,8 @@ import org.ei.domain.Abstract;
                                         Keys.PROVIDER,
                                         Keys.SPONSOR,
                                         GRFDocBuilder.LOCATIONS,
-                                        GRFDocBuilder.COORDINATES
+                                        GRFDocBuilder.COORDINATES,
+                                        GRFDocBuilder.MERIDIAN
                                         };
 
         public Key[] getKeys() {
