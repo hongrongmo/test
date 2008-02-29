@@ -303,14 +303,22 @@
           map.setCenter(bounds.getCenter(), map.getBoundsZoomLevel(bounds) > MAXZOOM ? MAXZOOM : map.getBoundsZoomLevel(bounds));
         }
 
+        function toggleMarker(id) {
+          toggleMapOverlay(id, markers);
+        }
         function toggleRectangle(id) {
-          var polygon = polygons[id];
-          if (polygon.isHidden()) {
-            polygon.show();
+          toggleMapOverlay(id, polygons);
+        }
+
+        function toggleMapOverlay(id, array) {
+          var overlay = array[id];
+          if (overlay.isHidden()) {
+            overlay.show();
           } else {
-            polygon.hide();
+            overlay.hide();
           }
         }
+
         //]]>
         </script>
     </xsl:if>
