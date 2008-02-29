@@ -57,14 +57,9 @@
 
     <xsl:template match="LOC">
       <a>
-        <xsl:attribute name="href">javascript:toggleRectangle('<xsl:value-of select="@ID"/>');</xsl:attribute>
-        <xsl:value-of disable-output-escaping="yes" select="."/>
+        <xsl:attribute name="href">javascript:toggleMarker('<xsl:value-of select="@ID"/>');</xsl:attribute>
+        <xsl:value-of select="@ID"/> - <xsl:value-of disable-output-escaping="yes" select="."/>
       </a><br/>
-    </xsl:template>
-
-    <xsl:template match="FEATURE">
-      <xsl:value-of select="@ID"/> [<xsl:value-of disable-output-escaping="yes" select="POINT/LAT"/>, <xsl:value-of disable-output-escaping="yes" select="POINT/LONG"/>]
-      <xsl:if test="not(position()=last())">, </xsl:if>
     </xsl:template>
 
     <!-- top level elements with labels and nested value children -->

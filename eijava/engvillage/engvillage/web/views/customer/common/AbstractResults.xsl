@@ -175,7 +175,6 @@
 
       <xsl:apply-templates select="CRDN"/>
       <xsl:apply-templates select="LOCS"/>
-      <xsl:apply-templates select="MRDN"/>
 
       <BR/>
       <xsl:if test="$ascii='true'">
@@ -210,23 +209,12 @@
 
     <xsl:template match="LOC">
       <a CLASS="SpLink">
-      <xsl:attribute name="href">javascript:toggleRectangle('<xsl:value-of select="@ID"/>');</xsl:attribute>
-      <xsl:value-of disable-output-escaping="yes" select="."/></a>
+      <xsl:attribute name="href">javascript:toggleMarker('<xsl:value-of select="@ID"/>');</xsl:attribute>
+      <xsl:value-of select="@ID"/> - <xsl:value-of disable-output-escaping="yes" select="."/></a>
       <xsl:if test="not(position()=last())">
         <span class="SmBlackText">,&#160;</span>
       </xsl:if>
     </xsl:template>
-
-    <xsl:template match="MRDN">
-      <br/><span CLASS="MedBlackText"><b><xsl:value-of select="@label"/>:</b>&#160;</span>
-      <xsl:apply-templates select="FEATURE"/>
-    </xsl:template>
-
-    <xsl:template match="FEATURE">
-      <span class="MedBlackText"><xsl:value-of select="@ID"/> [<xsl:value-of disable-output-escaping="yes" select="POINT/LAT"/>, <xsl:value-of disable-output-escaping="yes" select="POINT/LONG"/>]
-      <xsl:if test="not(position()=last())">, </xsl:if></span>
-    </xsl:template>
-
 
     <!-- EPT Templates -->
     <xsl:template match="PINFO">
