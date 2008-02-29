@@ -263,6 +263,7 @@
             var polygon;
             var rectangle;
             var marker;
+            var ptname;
             <xsl:for-each select="PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/CRDN/RECT">
 
               <!-- polygon = new GPolygon([
@@ -277,14 +278,14 @@
 
               rectangle = new GLatLngBounds(new GLatLng(<xsl:value-of select="POINT[4]/LAT"/>, <xsl:value-of select="POINT[4]/LONG"/>),
                                             new GLatLng(<xsl:value-of select="POINT[2]/LAT"/>, <xsl:value-of select="POINT[2]/LONG"/>));
-              marker = new GMarker(rectangle.getCenter());
+              ptname = "<xsl:value-of select="@ID"/>";
+              marker = new GMarker(rectangle.getCenter(),{title:ptname});
               map.addOverlay(marker);
-              markers["<xsl:value-of select="@ID"/>"] = marker;
+              markers[ptname] = marker;
               bounds.extend(rectangle.getSouthWest());
               bounds.extend(rectangle.getNorthEast());
             </xsl:for-each>
             <!-- var pticon;
-            var ptname;
             <xsl:for-each select="PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/MRDN/FEATURE">
               pticon = new GIcon(G_DEFAULT_ICON);
               pticon.image = markerIcons["<xsl:value-of select="@TYPE"/>"];
