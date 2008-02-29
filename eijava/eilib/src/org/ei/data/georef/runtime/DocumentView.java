@@ -178,6 +178,22 @@ public abstract class DocumentView {
           ht.put(GRFDocBuilder.COORDINATES, new RectangleCoordinates(strcoordinates.split(GRFDocBuilder.AUDELIMITER)));
         }
       }
+/*      if(isIncluded(GRFDocBuilder.MERIDIAN))
+      {
+        MeridianData md = new MeridianData();
+        String strfeatures = createColumnValueField("LAND").getValue();
+        if(strfeatures != null)
+        {
+          md.setFeatures(strfeatures.split("\\|"),"Land");
+        }
+        strfeatures = createColumnValueField("WATER").getValue();
+        if(strfeatures != null)
+        {
+          md.setFeatures(strfeatures.split("\\|"),"Water");
+        }
+        ht.put(GRFDocBuilder.MERIDIAN, md);
+      }
+*/
 
       if(isIncluded(Keys.AVAILABILITY))
       {
