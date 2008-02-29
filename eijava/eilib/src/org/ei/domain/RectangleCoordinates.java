@@ -71,50 +71,68 @@ public class RectangleCoordinates
 
     for(int i = 0; i < coordinates.length; i++)
     {
-      Matcher rectangle = RectangleCoordinates.RECTANGLEPATTERN.matcher(coordinates[i]);
-      if(rectangle.find())
+      String[] termcoordinate = coordinates[i].split(GRFDocBuilder.IDDELIMITER);
+      String term = null;
+      String coordinate = null;
+      if(termcoordinate.length == 1)
       {
-        String lat1 = String.valueOf(Long.parseLong(rectangle.group(2)) * (rectangle.group(1).equals("S") ? -1 : 1) + (Long.parseLong(rectangle.group(3)) * 1/60) + (Long.parseLong(rectangle.group(4)) * 1/360));
-        String lat2 = String.valueOf(Long.parseLong(rectangle.group(6)) * (rectangle.group(5).equals("S") ? -1 : 1) + (Long.parseLong(rectangle.group(7)) * 1/60) + (Long.parseLong(rectangle.group(8)) * 1/360));
-        String lng1 = String.valueOf(Long.parseLong(rectangle.group(10)) * (rectangle.group(9).equals("W") ? -1 : 1) + (Long.parseLong(rectangle.group(11)) * 1/60) + (Long.parseLong(rectangle.group(12)) * 1/360));
-        String lng2 = String.valueOf(Long.parseLong(rectangle.group(14)) * (rectangle.group(13).equals("W") ? -1 : 1) + (Long.parseLong(rectangle.group(15)) * 1/60) + (Long.parseLong(rectangle.group(16)) * 1/360));
+        coordinate = termcoordinate[0];
+      }
+      else
+      {
+        term = termcoordinate[0];
+        coordinate = termcoordinate[1];
+      }
 
-        out.write("<RECT ID=\"" + i + "\">");
-        out.write("<POINT>");
-        out.write("<LAT>");out.write(lat1);out.write("</LAT>");out.write("<LONG>");out.write(lng1);out.write("</LONG>");
-        out.write("</POINT>");
-        out.write("<POINT>");
-        out.write("<LAT>");out.write(lat2);out.write("</LAT>");out.write("<LONG>");out.write(lng1);out.write("</LONG>");
-        out.write("</POINT>");
-        out.write("<POINT>");
-        out.write("<LAT>");out.write(lat2);out.write("</LAT>");out.write("<LONG>");out.write(lng2);out.write("</LONG>");
-        out.write("</POINT>");
-        out.write("<POINT>");
-        out.write("<LAT>");out.write(lat1);out.write("</LAT>");out.write("<LONG>");out.write(lng2);out.write("</LONG>");
-        out.write("</POINT>");
-        out.write("</RECT>");
-
-        locations.append("<LOC ID=\"" + i + "\">");
-        // LAT_LOW_RIGHT LAT_UPPER_RIGHT LONG_UPPER_RIGHT LONG_UPPER_LEFT
-        locations.append("<![CDATA[");
-        for(int x = 0; x < 4; x++)
+      if(coordinate != null)
+      {
+        Matcher rectangle = RectangleCoordinates.RECTANGLEPATTERN.matcher(coordinate);
+        if(rectangle.find())
         {
-          int base = x * 4;
-          // degress and N/S/E/W
-          locations.append(rectangle.group(base + 2) + "&#176;" + rectangle.group(base + 1) + " ");
-          // Minutes
-          if(!rectangle.group(base + 3).equals("00"))
+          String lat1 = String.valueOf(Long.parseLong(rectangle.group(2)) * (rectangle.group(1).equals("S") ? -1 : 1) + (Long.parseLong(rectangle.group(3)) * 1/60) + (Long.parseLong(rectangle.group(4)) * 1/360));
+          String lat2 = String.valueOf(Long.parseLong(rectangle.group(6)) * (rectangle.group(5).equals("S") ? -1 : 1) + (Long.parseLong(rectangle.group(7)) * 1/60) + (Long.parseLong(rectangle.group(8)) * 1/360));
+          String lng1 = String.valueOf(Long.parseLong(rectangle.group(10)) * (rectangle.group(9).equals("W") ? -1 : 1) + (Long.parseLong(rectangle.group(11)) * 1/60) + (Long.parseLong(rectangle.group(12)) * 1/360));
+          String lng2 = String.valueOf(Long.parseLong(rectangle.group(14)) * (rectangle.group(13).equals("W") ? -1 : 1) + (Long.parseLong(rectangle.group(15)) * 1/60) + (Long.parseLong(rectangle.group(16)) * 1/360));
+
+          out.write("<RECT ");
+          out.write((term != null) ? (" ID=\"" + term + "\" ") : "");
+          out.write(">");
+          out.write("<POINT>");
+          out.write("<LAT>");out.write(lat1);out.write("</LAT>");out.write("<LONG>");out.write(lng1);out.write("</LONG>");
+          out.write("</POINT>");
+          out.write("<POINT>");
+          out.write("<LAT>");out.write(lat2);out.write("</LAT>");out.write("<LONG>");out.write(lng1);out.write("</LONG>");
+          out.write("</POINT>");
+          out.write("<POINT>");
+          out.write("<LAT>");out.write(lat2);out.write("</LAT>");out.write("<LONG>");out.write(lng2);out.write("</LONG>");
+          out.write("</POINT>");
+          out.write("<POINT>");
+          out.write("<LAT>");out.write(lat1);out.write("</LAT>");out.write("<LONG>");out.write(lng2);out.write("</LONG>");
+          out.write("</POINT>");
+          out.write("</RECT>");
+
+          locations.append("<LOC ID=\"" + i + "\">");
+          // LAT_LOW_RIGHT LAT_UPPER_RIGHT LONG_UPPER_RIGHT LONG_UPPER_LEFT
+          locations.append("<![CDATA[");
+          for(int x = 0; x < 4; x++)
           {
-            locations.append(rectangle.group(base + 3) + "\" ");
-            // Seconds
-            if(!rectangle.group(base + 4).equals("00"))
+            int base = x * 4;
+            // degress and N/S/E/W
+            locations.append(rectangle.group(base + 2) + "&#176;" + rectangle.group(base + 1) + " ");
+            // Minutes
+            if(!rectangle.group(base + 3).equals("00"))
             {
-              locations.append(rectangle.group(base + 4) + "' ");
+              locations.append(rectangle.group(base + 3) + "\" ");
+              // Seconds
+              if(!rectangle.group(base + 4).equals("00"))
+              {
+                locations.append(rectangle.group(base + 4) + "' ");
+              }
             }
           }
+          locations.append("]]>");
+          locations.append("</LOC>");
         }
-        locations.append("]]>");
-        locations.append("</LOC>");
       }
     }
     locations.append("</LOCS>");
