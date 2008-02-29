@@ -175,6 +175,7 @@
 
       <xsl:apply-templates select="CRDN"/>
       <xsl:apply-templates select="LOCS"/>
+      <xsl:apply-templates select="MRDN"/>
 
       <BR/>
       <xsl:if test="$ascii='true'">
@@ -199,6 +200,7 @@
           <div id="map_canvas" style="float:left; width: 100%; height: 300px;"></div>
         </div>
       </span>
+      <a class="SpLink" href="javascript:resetCenterAndZoom();">Reset view</a>
     </xsl:template>
 
     <xsl:template match="LOCS">
@@ -214,6 +216,17 @@
         <span class="SmBlackText">,&#160;</span>
       </xsl:if>
     </xsl:template>
+
+    <xsl:template match="MRDN">
+      <br/><span CLASS="MedBlackText"><b><xsl:value-of select="@label"/>:</b>&#160;</span>
+      <xsl:apply-templates select="FEATURE"/>
+    </xsl:template>
+
+    <xsl:template match="FEATURE">
+      <span class="MedBlackText"><xsl:value-of select="@ID"/> [<xsl:value-of disable-output-escaping="yes" select="POINT/LAT"/>, <xsl:value-of disable-output-escaping="yes" select="POINT/LONG"/>]
+      <xsl:if test="not(position()=last())">, </xsl:if></span>
+    </xsl:template>
+
 
     <!-- EPT Templates -->
     <xsl:template match="PINFO">
