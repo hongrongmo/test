@@ -3,6 +3,7 @@ package org.ei.domain;
 import java.io.*;
 import java.util.regex.*;
 
+import org.ei.data.georef.runtime.GRFDocBuilder;
 
 public class RectangleCoordinates
   implements ElementData
@@ -13,7 +14,7 @@ public class RectangleCoordinates
 
   public RectangleCoordinates(String[] s)
   {
-    this.key =  new Key("CRDN", "Coordinates");
+    this.key = GRFDocBuilder.COORDINATES;
     this.coordinates = s;
   }
 
