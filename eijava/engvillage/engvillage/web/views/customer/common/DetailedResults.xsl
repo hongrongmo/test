@@ -48,6 +48,7 @@
             <div id="map_canvas" style="float:left; width: 100%; height: 300px;"></div>
           </div>
         </span>
+        <a class="SpLink" href="javascript:resetCenterAndZoom();">Reset view</a>
         </td>
       </tr>
       <xsl:call-template name="SPACER"/>
@@ -61,6 +62,10 @@
       </a><br/>
     </xsl:template>
 
+    <xsl:template match="FEATURE">
+      <xsl:value-of select="@ID"/> [<xsl:value-of disable-output-escaping="yes" select="POINT/LAT"/>, <xsl:value-of disable-output-escaping="yes" select="POINT/LONG"/>]
+      <xsl:if test="not(position()=last())">, </xsl:if>
+    </xsl:template>
 
     <!-- top level elements with labels and nested value children -->
     <xsl:template match="SRCNT|SUM|MED|EDI|RPGM|DEG|UNV|HOLD|AUD|CAT|OAF|ANT|MPS|MPT|ILLUS|DGS|SC|AV|DT|MJSM|CRM|CLGM|PIDEPM|BKYS|AGS|AUS|EDS|IVS|CLS|FLS|CVS|RGIS|DISPS|CTS|OCVS|OCLS|NDI|CHI|AOI|AFS|EFS|PASM|PEXM|PIM|PAPIM">
