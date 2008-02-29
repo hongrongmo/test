@@ -44,6 +44,7 @@ public class GRFDocBuilder implements DocumentBuilder
     public static final Key RESEARCH_PROGRAM = new Key("RPGM", "Research program");
     public static final Key COORDINATES = new Key("CRDN", "Coordinates");
     public static final Key LOCATIONS = new Key("LOCS", "Locations");
+    public static final Key MERIDIAN = new Key("MRDN", "Meridian data");
 
     private Database database;
 
