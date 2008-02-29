@@ -258,8 +258,11 @@
             map.addControl(new GLargeMapControl());
 
             var polygon;
+            var rectangle;
+            var marker;
             <xsl:for-each select="PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/CRDN/RECT">
-              polygon = new GPolygon([
+
+              <!-- polygon = new GPolygon([
               <xsl:for-each select="POINT">
                 new GLatLng(<xsl:value-of select="LAT"/>, <xsl:value-of select="LONG"/>),
               </xsl:for-each>
@@ -267,36 +270,35 @@
               ], "#f33f00", 5, 1, "#ff0000", 0.2);
               map.addOverlay(polygon);
               polygons["<xsl:value-of select="@ID"/>"] = polygon;
-              bounds.extend(new GLatLng(<xsl:value-of select="POINT[4]/LAT"/>, <xsl:value-of select="POINT[4]/LONG"/>));
-              bounds.extend(new GLatLng(<xsl:value-of select="POINT[2]/LAT"/>, <xsl:value-of select="POINT[2]/LONG"/>));
+              -->
+
+              rectangle = new GLatLngBounds(new GLatLng(<xsl:value-of select="POINT[4]/LAT"/>, <xsl:value-of select="POINT[4]/LONG"/>),
+                                            new GLatLng(<xsl:value-of select="POINT[2]/LAT"/>, <xsl:value-of select="POINT[2]/LONG"/>));
+              marker = new GMarker(rectangle.getCenter());
+              map.addOverlay(marker);
+              markers["<xsl:value-of select="@ID"/>"] = marker;
+              bounds.extend(rectangle.getSouthWest());
+              bounds.extend(rectangle.getNorthEast());
             </xsl:for-each>
-            var marker;
-            var mappoint;
-            var pticon;
+            <!-- var pticon;
             var ptname;
             <xsl:for-each select="PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/MRDN/FEATURE">
-              mappoint = new GLatLng(<xsl:value-of select="POINT/LAT"/>, <xsl:value-of select="POINT/LONG"/>);
-
               pticon = new GIcon(G_DEFAULT_ICON);
               pticon.image = markerIcons["<xsl:value-of select="@TYPE"/>"];
               ptname = "<xsl:value-of select="@ID"/>";
-              marker = new GMarker(mappoint, {icon:pticon, title:ptname});
+              marker = new GMarker(new GLatLng(<xsl:value-of select="POINT/LAT"/>, <xsl:value-of select="POINT/LONG"/>), {icon:pticon, title:ptname});
               map.addOverlay(marker);
               markers["<xsl:value-of select="@ID"/>"] = marker;
-              bounds.extend(mappoint);
-            </xsl:for-each>
-            map.setCenter(bounds.getCenter(), map.getBoundsZoomLevel(bounds) > MAXZOOM ? MAXZOOM : map.getBoundsZoomLevel(bounds));
-
-
-            function resetCenterAndZoom() {
-              map.setCenter(bounds.getCenter(), map.getBoundsZoomLevel(bounds) > MAXZOOM ? MAXZOOM : map.getBoundsZoomLevel(bounds));
-              }
+              bounds.extend(marker.getPoint());
+            </xsl:for-each> -->
+            resetCenterAndZoom();
           }
         }
         //<![CDATA[
         function resetCenterAndZoom() {
           map.setCenter(bounds.getCenter(), map.getBoundsZoomLevel(bounds) > MAXZOOM ? MAXZOOM : map.getBoundsZoomLevel(bounds));
         }
+
         function toggleRectangle(id) {
           var polygon = polygons[id];
           if (polygon.isHidden()) {
