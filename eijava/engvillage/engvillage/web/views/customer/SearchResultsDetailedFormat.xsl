@@ -250,16 +250,17 @@
         var markers = {};
         var rects = [];
         var MAXZOOM = 5;
+        var bounds = new GLatLngBounds();
+        var map;
         function initialize() {
           if (GBrowserIsCompatible()) {
 
-            var map = new GMap(document.getElementById("map_canvas"));
+            map = new GMap(document.getElementById("map_canvas"));
             map.setMapType(G_PHYSICAL_MAP);
             map.setCenter(new GLatLng(0, 0), 1);
             map.addControl(new GLargeMapControl());
 
             var polygon;
-            var bounds = new GLatLngBounds();
             <xsl:for-each select="PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/CRDN/RECT">
               polygon = new GPolygon([
               <xsl:for-each select="POINT">
@@ -288,9 +289,14 @@
               bounds.extend(mappoint);
             </xsl:for-each>
             map.setCenter(bounds.getCenter(), map.getBoundsZoomLevel(bounds) > MAXZOOM ? MAXZOOM : map.getBoundsZoomLevel(bounds));
+
           }
         }
         //<![CDATA[
+        function resetCenterAndZoom() {
+          map.setCenter(bounds.getCenter(), map.getBoundsZoomLevel(bounds) > MAXZOOM ? MAXZOOM : map.getBoundsZoomLevel(bounds));
+        }
+
         function toggleRectangle(id) {
           var polygon = polygons[id];
           if (polygon.isHidden()) {
