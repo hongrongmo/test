@@ -94,9 +94,7 @@ public class RectangleCoordinates
           String lng1 = String.valueOf(Long.parseLong(rectangle.group(10)) * (rectangle.group(9).equals("W") ? -1 : 1) + (Long.parseLong(rectangle.group(11)) * 1/60) + (Long.parseLong(rectangle.group(12)) * 1/360));
           String lng2 = String.valueOf(Long.parseLong(rectangle.group(14)) * (rectangle.group(13).equals("W") ? -1 : 1) + (Long.parseLong(rectangle.group(15)) * 1/60) + (Long.parseLong(rectangle.group(16)) * 1/360));
 
-          out.write("<RECT ");
-          out.write((term != null) ? (" ID=\"" + term + "\" ") : "");
-          out.write(">");
+          out.write("<RECT ID=\"" + ((term != null) ? term : String.valueOf(i)) + "\">");
           out.write("<POINT>");
           out.write("<LAT>");out.write(lat1);out.write("</LAT>");out.write("<LONG>");out.write(lng1);out.write("</LONG>");
           out.write("</POINT>");
@@ -111,7 +109,7 @@ public class RectangleCoordinates
           out.write("</POINT>");
           out.write("</RECT>");
 
-          locations.append("<LOC ID=\"" + i + "\">");
+          locations.append("<LOC ID=\"" + ((term != null) ? term : String.valueOf(i)) + "\">");
           // LAT_LOW_RIGHT LAT_UPPER_RIGHT LONG_UPPER_RIGHT LONG_UPPER_LEFT
           locations.append("<![CDATA[");
           for(int x = 0; x < 4; x++)
