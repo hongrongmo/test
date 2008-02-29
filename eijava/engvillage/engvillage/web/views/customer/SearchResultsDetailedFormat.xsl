@@ -241,7 +241,13 @@
       <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAR--2D6WLLGcr7L3QlwZCBRTWp_Jg7UwMVr-ESRqyz6fZCklfjxRMuUlG4X-qIrTCMhuYZ8sO4fVZEA"
               type="text/javascript"></script>
       <script type="text/javascript">
+      var markerIcons = { "Oil":"http://maps.google.com/intl/en_us/mapfiles/ms/icons/red-dot.png",
+                          "Water":"http://maps.google.com/intl/en_us/mapfiles/ms/icons/blue-dot.png",
+                          "Cities":"http://maps.google.com/intl/en_us/mapfiles/ms/icons/yellow-dot.png",
+                          "Land":"http://maps.google.com/intl/en_us/mapfiles/ms/icons/green-dot.png"};
+
         var polygons = {};
+        var markers = {};
         var rects = [];
         var MAXZOOM = 5;
         function initialize() {
@@ -265,6 +271,21 @@
               polygons["<xsl:value-of select="@ID"/>"] = polygon;
               bounds.extend(new GLatLng(<xsl:value-of select="POINT[4]/LAT"/>, <xsl:value-of select="POINT[4]/LONG"/>));
               bounds.extend(new GLatLng(<xsl:value-of select="POINT[2]/LAT"/>, <xsl:value-of select="POINT[2]/LONG"/>));
+            </xsl:for-each>
+            var marker;
+            var mappoint;
+            var pticon;
+            var ptname;
+            <xsl:for-each select="PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/MRDN/FEATURE">
+              mappoint = new GLatLng(<xsl:value-of select="POINT/LAT"/>, <xsl:value-of select="POINT/LONG"/>);
+
+              pticon = new GIcon(G_DEFAULT_ICON);
+              pticon.image = markerIcons["<xsl:value-of select="@TYPE"/>"];
+              ptname = "<xsl:value-of select="@ID"/>";
+              marker = new GMarker(mappoint, {icon:pticon, title:ptname});
+              map.addOverlay(marker);
+              markers["<xsl:value-of select="@ID"/>"] = marker;
+              bounds.extend(mappoint);
             </xsl:for-each>
             map.setCenter(bounds.getCenter(), map.getBoundsZoomLevel(bounds) > MAXZOOM ? MAXZOOM : map.getBoundsZoomLevel(bounds));
           }

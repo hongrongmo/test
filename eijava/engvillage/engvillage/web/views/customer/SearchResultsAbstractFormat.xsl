@@ -263,6 +263,21 @@
               bounds.extend(new GLatLng(<xsl:value-of select="POINT[4]/LAT"/>, <xsl:value-of select="POINT[4]/LONG"/>));
               bounds.extend(new GLatLng(<xsl:value-of select="POINT[2]/LAT"/>, <xsl:value-of select="POINT[2]/LONG"/>));
             </xsl:for-each>
+            var marker;
+            var mappoint;
+            var pticon;
+            var ptname;
+            <xsl:for-each select="PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/MRDN/FEATURE">
+              mappoint = new GLatLng(<xsl:value-of select="POINT/LAT"/>, <xsl:value-of select="POINT/LONG"/>);
+
+              pticon = new GIcon(G_DEFAULT_ICON);
+              pticon.image = markerIcons["<xsl:value-of select="@TYPE"/>"];
+              ptname = "<xsl:value-of select="@ID"/>";
+              marker = new GMarker(mappoint, {icon:pticon, title:ptname});
+              map.addOverlay(marker);
+              markers["<xsl:value-of select="@ID"/>"] = marker;
+              bounds.extend(mappoint);
+            </xsl:for-each>
             map.setCenter(bounds.getCenter(), map.getBoundsZoomLevel(bounds) > MAXZOOM ? MAXZOOM : map.getBoundsZoomLevel(bounds));
           }
         }
@@ -278,8 +293,8 @@
         //]]>
         </script>
     </xsl:if>
-
     <!-- End of javascript -->
+
     </head>
       <body bgcolor="#FFFFFF" topmargin="0" marginheight="0" marginwidth="0">
         <xsl:if test="(PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/CRDN)" >
