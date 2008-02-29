@@ -238,7 +238,13 @@
       <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAR--2D6WLLGcr7L3QlwZCBRTWp_Jg7UwMVr-ESRqyz6fZCklfjxRMuUlG4X-qIrTCMhuYZ8sO4fVZEA"
               type="text/javascript"></script>
       <script type="text/javascript">
+      var markerIcons = { "Oil":"http://maps.google.com/intl/en_us/mapfiles/ms/icons/red-dot.png",
+                          "Water":"http://maps.google.com/intl/en_us/mapfiles/ms/icons/blue-dot.png",
+                          "Cities":"http://maps.google.com/intl/en_us/mapfiles/ms/icons/yellow-dot.png",
+                          "Land":"http://maps.google.com/intl/en_us/mapfiles/ms/icons/green-dot.png"};
+
         var polygons = {};
+        var markers = {};
         var rects = [];
         var MAXZOOM = 5;
         function initialize() {
