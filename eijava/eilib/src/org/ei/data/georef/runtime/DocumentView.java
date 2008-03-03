@@ -229,7 +229,7 @@ public abstract class DocumentView {
       addDocumentValue(GRFDocBuilder.HOLDING_LIBRARY, createColumnValueField("HOLDING_LIBRARY"));
       addDocumentValue(GRFDocBuilder.TARGET_AUDIENCE, createColumnValueField("TARGET_AUDIENCE"));
 
-      addDocumentValue(Keys.DOC_URL, new URLDecorator(createColumnValueField("URL")));
+      addDocumentValue(GRFDocBuilder.GRF_URLS, new URLDecorator(createColumnValueField("URL")));
       addDocumentValue(Keys.COLLECTION_TITLE, new TitleDecorator(createColumnValueField("TITLE_OF_COLLECTION")));
       addDocumentValue(Keys.PUBLISHER, new PublisherDecorator(new SimpleValueField(getPublisher())));
       addDocumentValue(Keys.COUNTRY_OF_PUB, new CountryDecorator(createColumnValueField("COUNTRY_OF_PUBLICATION")));
