@@ -35,10 +35,6 @@
     <include name="**/xerces.jar"/>
   </fileset>
 
-  <fileset id="appserver-jars" dir="${env.CATALINA_HOME}/common/lib/">
-    <include name="**/servlet.jar"/>
-  </fileset>
-
   <path id="project.classpath">
     <fileset refid="appserver-jars" />
     <fileset refid="ext-jars" />
@@ -49,16 +45,18 @@
    <mkdir dir="${classes.home}"/>
   </target>
 
-		<patternset id="books.exclude">
-		  <exclude name="org/ei/data/books/tools/**"/>
-		  <exclude name="org/ei/data/books/tocs/*"/>
-		</patternset>
+	<patternset id="books.exclude">
+	  <exclude name="org/ei/data/books/tools/**"/>
+	  <exclude name="org/ei/data/books/tocs/*"/>
+	</patternset>
 
 
   <target name="compile" depends="prepare">
 
     <property name="cp" refid="project.classpath"/>
     <echo message="Classpath is ${cp}"/>
+
+    <copy overwrite="yes" filtering="yes" file="src/org/ei/data/EVROWSET.dtd" tofile="classes/org/ei/data/EVROWSET.dtd" />
 
     <javac srcdir="src" destdir="${classes.home}" debug="on" optimize="off" deprecation="off">
     	<patternset refid="books.exclude" />
