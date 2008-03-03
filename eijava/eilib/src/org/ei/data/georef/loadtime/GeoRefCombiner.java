@@ -356,6 +356,26 @@ public class GeoRefCombiner
         }
 
 
+        // COORDINATES - Extract attached Index Terms
+        if(rs.getString("COORDINATES") != null)
+        {
+          String strcoordinates = rs.getString("COORDINATES");
+          String[] termcoordinate = strcoordinates.split(GRFDocBuilder.AUDELIMITER);
+          List geoterms = new ArrayList();
+          for(int j = 0; j < termcoordinate.length; j++)
+          {
+            String[] termcoordinates = termcoordinate[j].split(GRFDocBuilder.IDDELIMITER)
+            if(termcoordinates.length == 2)
+            {
+              geoterms.add(termcoordinates[0]);
+            }
+          }
+          if(!geoterms.isEmpty())
+          {
+            rec.putIfNotNull(EVCombinedRec.INT_PATENT_CLASSIFICATION, (String[])geoterms.toArray(new String[]{}));
+          }
+        }
+
         // INDEX_TERMS (CVS)
         if(rs.getString("INDEX_TERMS") != null)
         {
@@ -379,10 +399,10 @@ public class GeoRefCombiner
         }
 
         // Meridian data in Patent Navigators
-        rec.putIfNotNull(EVCombinedRec.INT_PATENT_CLASSIFICATION, parseMeridianData(rs.getString("LAND")));
+        /*rec.putIfNotNull(EVCombinedRec.INT_PATENT_CLASSIFICATION, parseMeridianData(rs.getString("LAND")));
         rec.putIfNotNull(EVCombinedRec.ECLA_CODES, parseMeridianData(rs.getString("WATER")));
         rec.putIfNotNull(EVCombinedRec.USPTOCODE, parseMeridianData(rs.getString("OIL")));
-        rec.putIfNotNull(EVCombinedRec.PATENT_KIND, parseMeridianData(rs.getString("CITIES")));
+        rec.putIfNotNull(EVCombinedRec.PATENT_KIND, parseMeridianData(rs.getString("CITIES"))); */
 
 
         rec.putIfNotNull(EVCombinedRec.PUB_YEAR, runtimeDocview.getYear());
