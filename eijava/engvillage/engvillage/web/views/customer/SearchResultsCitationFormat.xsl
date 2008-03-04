@@ -190,8 +190,8 @@
     <body bgcolor="#FFFFFF" topmargin="0" marginheight="0" marginwidth="0">
       <xsl:if test="boolean(bit:hasBitSet(/PAGE/DBMASK,2097152))">
         <xsl:attribute name="onload">initialize()</xsl:attribute>
+        <xsl:attribute name="onunload">GUnload()</xsl:attribute>
       </xsl:if>
-      <xsl:attribute name="onunload">GUnload()</xsl:attribute>
     <center>
 
       <!-- APPLY HEADER -->
