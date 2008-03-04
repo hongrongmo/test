@@ -3,77 +3,76 @@
 <CONTENTCONFIG>
 
     <AUTHGROUP NAME="world">
-
         <CONTENTDESCRIPTOR BULKMODE="YES">
-        <ID>openRSS</ID>
-        <DATASOURCEURL>http://@data_server@/engvillage/models/world/rss.jsp</DATASOURCEURL>
-        <DISPLAYURL>http://@data_server@/engvillage/views/world/openRSS.xsl</DISPLAYURL>
-        <MIMETYPE>text/xml</MIMETYPE>
+          <ID>openRSS</ID>
+          <DATASOURCEURL>http://@data_server@/engvillage/models/world/rss.jsp</DATASOURCEURL>
+          <DISPLAYURL>http://@data_server@/engvillage/views/world/openRSS.xsl</DISPLAYURL>
+          <MIMETYPE>text/xml</MIMETYPE>
         </CONTENTDESCRIPTOR>
         <CONTENTDESCRIPTOR BULKMODE="NO">
-        	<ID>openRSSP</ID>
-		<DATASOURCEURL>http://@data_server@/engvillage/models/world/rssp.jsp</DATASOURCEURL>
-		<DISPLAYURL>http://@data_server@/engvillage/views/world/openRSSP.xsl</DISPLAYURL>
-		<MIMETYPE>text/xml</MIMETYPE>
+          <ID>openRSSP</ID>
+          <DATASOURCEURL>http://@data_server@/engvillage/models/world/rssp.jsp</DATASOURCEURL>
+          <DISPLAYURL>http://@data_server@/engvillage/views/world/openRSSP.xsl</DISPLAYURL>
+          <MIMETYPE>text/xml</MIMETYPE>
         </CONTENTDESCRIPTOR>
         <CONTENTDESCRIPTOR BULKMODE="NO">
-		<ID>tokenExpired</ID>
-		<DATASOURCEURL>http://@data_server@/engvillage/models/world/tokenExpired.jsp</DATASOURCEURL>
-		 <DISPLAYURL>http://@data_server@/engvillage/views/world/tokenExpired.xsl</DISPLAYURL>
-            <MIMETYPE>text/html</MIMETYPE>
+          <ID>tokenExpired</ID>
+          <DATASOURCEURL>http://@data_server@/engvillage/models/world/tokenExpired.jsp</DATASOURCEURL>
+          <DISPLAYURL>http://@data_server@/engvillage/views/world/tokenExpired.xsl</DISPLAYURL>
+          <MIMETYPE>text/html</MIMETYPE>
         </CONTENTDESCRIPTOR>
         <CONTENTDESCRIPTOR BULKMODE="NO">
-	        <ID>tokenConcurrent</ID>
-	        <DATASOURCEURL>http://@data_server@/engvillage/models/world/tokenConcurrent.jsp</DATASOURCEURL>
-		<DISPLAYURL>http://@data_server@/engvillage/views/world/tokenConcurrent.xsl</DISPLAYURL>
-            <MIMETYPE>text/html</MIMETYPE>
+         <ID>tokenConcurrent</ID>
+          <DATASOURCEURL>http://@data_server@/engvillage/models/world/tokenConcurrent.jsp</DATASOURCEURL>
+          <DISPLAYURL>http://@data_server@/engvillage/views/world/tokenConcurrent.xsl</DISPLAYURL>
+          <MIMETYPE>text/html</MIMETYPE>
         </CONTENTDESCRIPTOR>
         <CONTENTDESCRIPTOR BULKMODE="NO">
-        <ID>openBlog</ID>
-        <DATASOURCEURL>http://@data_server@/engvillage/models/world/blog.jsp</DATASOURCEURL>
-        <DISPLAYURL>http://@data_server@/engvillage/views/world/openBlog.xsl</DISPLAYURL>
-        <MIMETYPE>text/html</MIMETYPE>
-        </CONTENTDESCRIPTOR>
-
-        <CONTENTDESCRIPTOR BULKMODE="NO">
-        <ID>blogDocument</ID>
-        <DATASOURCEURL>http://@data_server@/engvillage/models/world/blogDocument.jsp</DATASOURCEURL>
-        <DISPLAYURL>http://@data_server@/engvillage/views/world/blogDocument.xsl</DISPLAYURL>
-        <MIMETYPE>text/html</MIMETYPE>
+          <ID>openBlog</ID>
+          <DATASOURCEURL>http://@data_server@/engvillage/models/world/blog.jsp</DATASOURCEURL>
+          <DISPLAYURL>http://@data_server@/engvillage/views/world/openBlog.xsl</DISPLAYURL>
+          <MIMETYPE>text/html</MIMETYPE>
         </CONTENTDESCRIPTOR>
 
         <CONTENTDESCRIPTOR BULKMODE="NO">
-            <ID>REDIRECT</ID>
-            <DATASOURCEURL>http://@data_server@/engvillage/models/world/redirect.jsp</DATASOURCEURL>
-            <DISPLAYURL>nothing</DISPLAYURL>
-            <MIMETYPE>text/html</MIMETYPE>
+          <ID>blogDocument</ID>
+          <DATASOURCEURL>http://@data_server@/engvillage/models/world/blogDocument.jsp</DATASOURCEURL>
+          <DISPLAYURL>http://@data_server@/engvillage/views/world/blogDocument.xsl</DISPLAYURL>
+          <MIMETYPE>text/html</MIMETYPE>
         </CONTENTDESCRIPTOR>
 
         <CONTENTDESCRIPTOR BULKMODE="NO">
-            <ID>MONITOR</ID>
-            <DATASOURCEURL>http://@data_server@/engvillage/models/world/monitor.jsp</DATASOURCEURL>
-            <DISPLAYURL>http://@data_server@/engvillage/views/world/copy-of.xsl</DISPLAYURL>
-            <MIMETYPE>text/html</MIMETYPE>
+          <ID>REDIRECT</ID>
+          <DATASOURCEURL>http://@data_server@/engvillage/models/world/redirect.jsp</DATASOURCEURL>
+          <DISPLAYURL>nothing</DISPLAYURL>
+          <MIMETYPE>text/html</MIMETYPE>
+        </CONTENTDESCRIPTOR>
+
+        <CONTENTDESCRIPTOR BULKMODE="NO">
+          <ID>MONITOR</ID>
+          <DATASOURCEURL>http://@data_server@/engvillage/models/world/monitor.jsp</DATASOURCEURL>
+          <DISPLAYURL>http://@data_server@/engvillage/views/world/copy-of.xsl</DISPLAYURL>
+          <MIMETYPE>text/html</MIMETYPE>
         </CONTENTDESCRIPTOR>
         <CONTENTDESCRIPTOR BULKMODE="NO">
-            <ID>LAZY</ID>
-            <DATASOURCEURL>http://@data_server@/engvillage/models/world/monitor.jsp</DATASOURCEURL>
-            <DISPLAYURL>http://@data_server@/engvillage/views/world/copy-of.xsl</DISPLAYURL>
-            <MIMETYPE>text/html</MIMETYPE>
+          <ID>LAZY</ID>
+          <DATASOURCEURL>http://@data_server@/engvillage/models/world/monitor.jsp</DATASOURCEURL>
+          <DISPLAYURL>http://@data_server@/engvillage/views/world/copy-of.xsl</DISPLAYURL>
+          <MIMETYPE>text/html</MIMETYPE>
         </CONTENTDESCRIPTOR>
 
 
         <CONTENTDESCRIPTOR BULKMODE="NO">
-            <ID>expertSearchCitationFormat</ID>
-            <DATASOURCEURL>http://@data_server@/engvillage/models/world/SearchError.jsp</DATASOURCEURL>
-            <DISPLAYURL>http://@data_server@/engvillage/views/world/SearchError.xsl</DISPLAYURL>
-            <MIMETYPE>text/html</MIMETYPE>
+          <ID>expertSearchCitationFormat</ID>
+          <DATASOURCEURL>http://@data_server@/engvillage/models/world/SearchError.jsp</DATASOURCEURL>
+          <DISPLAYURL>http://@data_server@/engvillage/views/world/SearchError.xsl</DISPLAYURL>
+          <MIMETYPE>text/html</MIMETYPE>
         </CONTENTDESCRIPTOR>
         <CONTENTDESCRIPTOR BULKMODE="NO">
-            <ID>quickSearchCitationFormat</ID>
-            <DATASOURCEURL>http://@data_server@/engvillage/models/world/SearchError.jsp</DATASOURCEURL>
-            <DISPLAYURL>http://@data_server@/engvillage/views/world/SearchError.xsl</DISPLAYURL>
-            <MIMETYPE>text/html</MIMETYPE>
+          <ID>quickSearchCitationFormat</ID>
+          <DATASOURCEURL>http://@data_server@/engvillage/models/world/SearchError.jsp</DATASOURCEURL>
+          <DISPLAYURL>http://@data_server@/engvillage/views/world/SearchError.xsl</DISPLAYURL>
+          <MIMETYPE>text/html</MIMETYPE>
         </CONTENTDESCRIPTOR>
 
         <!-- ************************** End Session ***********************************************  -->
@@ -153,7 +152,7 @@
             <DISPLAYURL>http://@data_server@/engvillage/views/world/GeneralError.xsl</DISPLAYURL>
             <MIMETYPE>text/html</MIMETYPE>
         </CONTENTDESCRIPTOR>
-        
+
         <CONTENTDESCRIPTOR BULKMODE="NO">
 	            <ID>bulletinException</ID>
 	            <DATASOURCEURL>http://{{DATA_SERVER}}/village/models/world/exception.jsp</DATASOURCEURL>
@@ -169,15 +168,15 @@
             <DISPLAYURL>http://@data_server@/engvillage/views/world/ncAboutEI.xsl</DISPLAYURL>
             <MIMETYPE>text/html</MIMETYPE>
         </CONTENTDESCRIPTOR>
-        
-        
+
+
         <CONTENTDESCRIPTOR BULKMODE="NO">
-		<ID>tagAcceptInvitation</ID>
+          <ID>tagAcceptInvitation</ID>
 	        <DATASOURCEURL>http://@data_server@/engvillage/models/world/ncFeedbackForm.jsp</DATASOURCEURL>
 	        <DISPLAYURL>http://@data_server@/engvillage/views/world/acceptInvitation.xsl</DISPLAYURL>
 	        <MIMETYPE>text/html</MIMETYPE>
         </CONTENTDESCRIPTOR>
-        
+
 
         <!-- ***************************** Displays the about Engineering Village page ***************** -->
 
@@ -222,7 +221,7 @@
 
         <CONTENTDESCRIPTOR BULKMODE="NO">
             <ID>chinaLinking</ID>
-                <DATASOURCEURL>http://@data_server@/engvillage/models/customer/chinaLinking.jsp</DATASOURCEURL>
+            <DATASOURCEURL>http://@data_server@/engvillage/models/customer/chinaLinking.jsp</DATASOURCEURL>
             <DISPLAYURL>nothing</DISPLAYURL>
             <MIMETYPE>text/html</MIMETYPE>
         </CONTENTDESCRIPTOR>
@@ -280,7 +279,7 @@
             <MIMETYPE>text/html</MIMETYPE>
         </CONTENTDESCRIPTOR>
 
-	<!-- Connotea -->
+        <!-- Connotea -->
         <!-- for RIS format  -->
         <CONTENTDESCRIPTOR BULKMODE="YES">
             <ID>downloadRis</ID>
@@ -293,6 +292,14 @@
 
 
     <AUTHGROUP NAME="customer">
+
+        <CONTENTDESCRIPTOR BULKMODE="NO">
+          <ID>dynamicNavigators</ID>
+          <DATASOURCEURL>http://@data_server@/engvillage/models/customer/dynamicNavigators.jsp</DATASOURCEURL>
+          <DISPLAYURL>http://@data_server@/engvillage/views/world/copy-of.xsl</DISPLAYURL>
+          <MIMETYPE>text/xml</MIMETYPE>
+        </CONTENTDESCRIPTOR>
+
 
         <CONTENTDESCRIPTOR BULKMODE="NO">
             <ID>whoami</ID>
@@ -353,7 +360,7 @@
             </CONTENTDESCRIPTOR>
 
     <!-- ******************     End of Fulltext Link CID ********************* -->
-    
+
     <!-- ******************     Encompass Long Link Terms CID   ****************   -->
 
     <CONTENTDESCRIPTOR BULKMODE="NO">
@@ -362,8 +369,8 @@
     	<DISPLAYURL>http://@data_server@/engvillage/views/customer/encLongterms.xsl</DISPLAYURL>
     	<MIMETYPE>text/xml</MIMETYPE>
     </CONTENTDESCRIPTOR>
-    
-    
+
+
     <!-- ******************     Tag CID   ****************   -->
 
 
@@ -421,8 +428,8 @@
 	       <DISPLAYURL>http://@data_server@/engvillage/views/customer/tagAcceptInvitation.xsl</DISPLAYURL>
 	       <MIMETYPE>text/html</MIMETYPE>
 	    </CONTENTDESCRIPTOR>
-            
-            
+
+
 	    <CONTENTDESCRIPTOR BULKMODE="NO">
 		<ID>tagAcceptInvitationFinal</ID>
 		<DATASOURCEURL>http://@data_server@/engvillage/models/customer/tagAcceptInvitationFinal.jsp</DATASOURCEURL>
@@ -449,14 +456,14 @@
                 <DISPLAYURL>http://@data_server@/engvillage/views/customer/tagGroups.xsl</DISPLAYURL>
                 <MIMETYPE>text/html</MIMETYPE>
             </CONTENTDESCRIPTOR>
-            
+
 	   <CONTENTDESCRIPTOR BULKMODE="NO">
 		<ID>tagMemberDeleteForward</ID>
 		<DATASOURCEURL>http://@data_server@/engvillage/models/customer/memberDeleteForward.jsp</DATASOURCEURL>
 		<DISPLAYURL>http://@data_server@/engvillage/views/customer/tagGroups.xsl</DISPLAYURL>
 		<MIMETYPE>text/html</MIMETYPE>
            </CONTENTDESCRIPTOR>
-            
+
 
           <CONTENTDESCRIPTOR BULKMODE="NO">
                 <ID>editForward</ID>
@@ -464,9 +471,9 @@
                 <DISPLAYURL>http://@data_server@/engvillage/views/customer/SearchResultsAbstractFormat.xsl</DISPLAYURL>
                 <MIMETYPE>text/html</MIMETYPE>
           </CONTENTDESCRIPTOR>
-    
+
     <!-- ******************     End of Tag CID ********************* -->
-      
+
     <!-- ******************     End of Tag Editorial System ******** -->
 
 
@@ -494,21 +501,21 @@
           <DISPLAYURL>http://@data_server@/engvillage/views/customer/books/bookDetail.xsl</DISPLAYURL>
           <MIMETYPE>text/html</MIMETYPE>
         </CONTENTDESCRIPTOR>
-        
+
 	<CONTENTDESCRIPTOR BULKMODE="NO">
 	  <ID>tagSearchBookSummary</ID>
 	  <DATASOURCEURL>http://@data_server@/engvillage/models/customer/books/tagBookDetailForward.jsp</DATASOURCEURL>
 	  <DISPLAYURL>http://@data_server@/engvillage/views/customer/books/bookDetail.xsl</DISPLAYURL>
 	  <MIMETYPE>text/html</MIMETYPE>
 	</CONTENTDESCRIPTOR>
-	
+
 	<CONTENTDESCRIPTOR BULKMODE="NO">
 	  <ID>dedupSearchBookSummary</ID>
 	  <DATASOURCEURL>http://@data_server@/engvillage/models/customer/books/dedupSearchBookDetailForward.jsp</DATASOURCEURL>
 	  <DISPLAYURL>http://@data_server@/engvillage/views/customer/books/bookDetail.xsl</DISPLAYURL>
 	  <MIMETYPE>text/html</MIMETYPE>
 	</CONTENTDESCRIPTOR>
-	
+
         <CONTENTDESCRIPTOR BULKMODE="NO">
           <ID>bookToc</ID>
           <DATASOURCEURL>http://@data_server@/engvillage/models/customer/books/bookDetail.jsp</DATASOURCEURL>
@@ -543,7 +550,7 @@
           <DISPLAYURL>http://@data_server@/engvillage/views/customer/EBookSearchForm.xsl</DISPLAYURL>
           <MIMETYPE>text/html</MIMETYPE>
         </CONTENTDESCRIPTOR>
-        
+
 	<CONTENTDESCRIPTOR BULKMODE="NO">
 	  <ID>keyWordSearch</ID>
 	  <DATASOURCEURL>http://@data_server@/engvillage/models/customer/books/bookredir.jsp</DATASOURCEURL>
@@ -951,7 +958,7 @@
             <DISPLAYURL>http://@data_server@/engvillage/views/customer/SearchResultsPatentRefsFormat.xsl</DISPLAYURL>
             <MIMETYPE>text/html</MIMETYPE>
         </CONTENTDESCRIPTOR>
-        
+
 	<CONTENTDESCRIPTOR BULKMODE="NO">
 	    <ID>dedupSearchReferencesFormat</ID>
 	    <DATASOURCEURL>http://@data_server@/engvillage/models/customer/dedupPatentRefsForward.jsp</DATASOURCEURL>
@@ -977,7 +984,7 @@
             <DISPLAYURL>http://@data_server@/engvillage/views/customer/SearchResultsPatentRefsFormat.xsl</DISPLAYURL>
             <MIMETYPE>text/html</MIMETYPE>
         </CONTENTDESCRIPTOR>
-        
+
 	<CONTENTDESCRIPTOR BULKMODE="NO">
 	    <ID>tagEditConfirm</ID>
 	    <DATASOURCEURL>http://@data_server@/engvillage/models/customer/tagEditConfirm.jsp</DATASOURCEURL>
@@ -1972,7 +1979,7 @@
 
 
     </AUTHGROUP>
-    
+
     <AUTHGROUP NAME="923358">
 
         <!-- ******************     Special CID for EI customer  ****************   -->
@@ -1990,8 +1997,8 @@
             <DISPLAYURL>http://@data_server@/engvillage/views/customer/ei/viewTrial.xsl</DISPLAYURL>
             <MIMETYPE>text/html</MIMETYPE>
         </CONTENTDESCRIPTOR>
-        
-        
+
+
         <!-- ******************    Tag Editorial System *************** -->
 
 
@@ -2000,7 +2007,7 @@
 	    <DATASOURCEURL>http://@data_server@/engvillage/models/customer/tagEditorial.jsp</DATASOURCEURL>
 	    <DISPLAYURL>http://@data_server@/engvillage/views/customer/tagEditorial.xsl</DISPLAYURL>
 	    <MIMETYPE>text/html</MIMETYPE>
-	</CONTENTDESCRIPTOR>   
+	</CONTENTDESCRIPTOR>
 
 
 	<CONTENTDESCRIPTOR BULKMODE="NO">
@@ -2008,12 +2015,12 @@
 	    <DATASOURCEURL>http://@data_server@/engvillage/models/customer/tagEditorialDetail.jsp</DATASOURCEURL>
 	    <DISPLAYURL>http://@data_server@/engvillage/views/customer/tagEditorialDetail.xsl</DISPLAYURL>
 	    <MIMETYPE>text/html</MIMETYPE>
-	</CONTENTDESCRIPTOR> 
+	</CONTENTDESCRIPTOR>
 
 
     </AUTHGROUP>
-    
-       
+
+
 
     <AUTHGROUP NAME="1000911">
 
