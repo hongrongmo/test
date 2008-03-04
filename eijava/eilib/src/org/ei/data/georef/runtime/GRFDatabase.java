@@ -15,6 +15,7 @@ import org.ei.domain.SearchField;
 import org.ei.domain.sort.SortField;
 import org.ei.data.compendex.runtime.CPXLinkingStrategy;
 import org.ei.fulldoc.LinkingStrategy;
+import org.ei.domain.SearchFields;
 
 public class GRFDatabase extends Database
 {
@@ -22,24 +23,28 @@ public class GRFDatabase extends Database
     private static Map searchfield = new HashMap();
     static
     {
-      searchfield.put("ALL", "Y");
-      searchfield.put("AB", "Y");
-      searchfield.put("AN", "Y");
-      searchfield.put("AU", "Y");
-      searchfield.put("AF", "Y");
-      searchfield.put("CL", "Y");
-      searchfield.put("CV", "Y");
-      searchfield.put("DT", "Y");
-      searchfield.put("BN", "Y");
-      searchfield.put("SN", "Y");
-      searchfield.put("LA", "Y");
-      searchfield.put("PN", "Y");
-      searchfield.put("ST", "Y");
-      searchfield.put("KY", "Y");
-      searchfield.put("TI", "Y");
-      searchfield.put("FL", "Y");
-      searchfield.put("RGI", "Y");
-      searchfield.put("CO", "Y");
+      searchfield.put(SearchFields.ALL.getID(), "Y");
+      searchfield.put(SearchFields.AB.getID(), "Y");
+      searchfield.put(SearchFields.AN.getID(), "Y");
+      searchfield.put(SearchFields.AU.getID(), "Y");
+      searchfield.put(SearchFields.AF.getID(), "Y");
+      searchfield.put(SearchFields.CL.getID(), "Y");
+      searchfield.put(SearchFields.CV.getID(), "Y");
+      searchfield.put(SearchFields.DT.getID(), "Y");
+      searchfield.put(SearchFields.BN.getID(), "Y");
+      searchfield.put(SearchFields.SN.getID(), "Y");
+      searchfield.put(SearchFields.CN.getID(), "Y");
+      searchfield.put(SearchFields.LA.getID(), "Y");
+      searchfield.put(SearchFields.PN.getID(), "Y");
+      searchfield.put(SearchFields.ST.getID(), "Y");
+      searchfield.put(SearchFields.KY.getID(), "Y");
+      searchfield.put(SearchFields.TI.getID(), "Y");
+      searchfield.put(SearchFields.FL.getID(), "Y");
+      searchfield.put(SearchFields.CO.getID(), "Y");
+      searchfield.put(SearchFields.AV.getID(), "Y");
+      searchfield.put(SearchFields.YR.getID(), "Y");
+      searchfield.put(SearchFields.RN.getID(), "Y");
+      searchfield.put(SearchFields.CF.getID(), "Y");
     }
 
     public List getSortableFields()
