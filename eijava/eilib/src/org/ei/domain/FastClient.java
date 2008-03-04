@@ -749,8 +749,12 @@ public class FastClient
                                navNames,
                                navCounts);
             }
+        } // while
 
-        }
+        line = "#NAV NAME landnav";
+        String navNames = "#NAV NAMES Mount WashingtonHowe cavernsDevils towerLake meadGrand canyonHudson river valleySalt lakeDeath valleyPainted desertSnake canyonSalt flatssuzuki mkumar azhang yzhang jwatanabe ttanaka kkobayashi tkobayashi knakamura hsuzuki kli ytakahashi twang ytanaka tsuzuki stakahashi kliu ysato msato ksuzuki ytakahashi huchida sishii myamamoto kwatanabe ycavagnaro d mli jtanaka mwang zwang xtakahashi myoshida hinoue ywang lsato sfujii tchen yyamamoto mchen s hli weilehmann e jskaggs r wgupta s kinoue tsmith rwang weichen jparker l twang l k";
+        String navCounts = "#NAV CNTS 745357347330305304301295292291289289280277274269269264255254249241239237237232227226226225221220210209208208206206205205203202202194191190190187185184184182182182182181178178177170";
+        parseNavigator(line, navNames, navCounts);
     }
 
     private void parseNavigator(String navLine,
