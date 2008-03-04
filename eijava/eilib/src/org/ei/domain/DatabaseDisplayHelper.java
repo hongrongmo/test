@@ -195,6 +195,11 @@ public class DatabaseDisplayHelper {
 		    jsWriter(DatabaseConfig.PAG_MASK);
 		    html.append(htmlWriter(DatabaseConfig.PAG_MASK));
 		}
+    if((mask & DatabaseConfig.GRF_MASK) == DatabaseConfig.GRF_MASK)
+    {
+        jsWriter(DatabaseConfig.GRF_MASK);
+        html.append(htmlWriter(DatabaseConfig.GRF_MASK));
+    }
 
 		jsInitVars.append("}");
 		jsRedrawCell.append("\n return false;}");
