@@ -68,6 +68,8 @@ public class EiNavigator
   public static final String RO = "ronav";
   public static final String CVM = "cvmnav";
 
+  public static final String LAND = "landnav";
+
   // for search within search
   public static final String ALL = "all";
 
@@ -104,6 +106,9 @@ public class EiNavigator
 
         displayNames.put(EiNavigator.CVM,"Major terms");
         displayNames.put(EiNavigator.RO,"Role");
+
+        displayNames.put(EiNavigator.LAND,"Geography");
+
    }
 
     // The default order of appearance is driven off the order of this list.
@@ -112,6 +117,8 @@ public class EiNavigator
     private static List navigatorNames = new ArrayList();
     static
     {
+        navigatorNames.add(EiNavigator.LAND);
+
         navigatorNames.add(EiNavigator.DB);
         navigatorNames.add(EiNavigator.AU);
         navigatorNames.add(EiNavigator.AF);
@@ -177,6 +184,9 @@ public class EiNavigator
         fieldNames.put(EiNavigator.CP,"cp");
         fieldNames.put(EiNavigator.RO,"ro");
         fieldNames.put(EiNavigator.CVM,"cvm");
+
+        fieldNames.put(EiNavigator.LAND,"land");
+
     }
 
     private String name = StringUtil.EMPTY_STRING;
@@ -337,7 +347,7 @@ public class EiNavigator
       Iterator itrmods = (this.getModifiers()).iterator();
       for(int mindex = 0;itrmods.hasNext();mindex++)
       {
-        if(mindex == modifiercount) { break; }
+        //if(mindex == modifiercount) { break; }
 
         EiModifier modifier = (EiModifier) itrmods.next();
         if(modifier != null)
@@ -345,7 +355,7 @@ public class EiNavigator
           sb.append(modifier.toXML());
         }
       }
-      sb.append(ResultsState.getPagers(getModifiers().size(), modifiercount,this.getFieldname()));
+      //sb.append(ResultsState.getPagers(getModifiers().size(), modifiercount,this.getFieldname()));
       sb.append("</NAVIGATOR>");
       return sb.toString();
     }
