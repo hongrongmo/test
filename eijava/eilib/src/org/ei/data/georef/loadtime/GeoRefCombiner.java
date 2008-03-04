@@ -43,10 +43,10 @@ public class GeoRefCombiner
     String url  = "jdbc:oracle:thin:@206.137.75.51:1521:EI";
     String username = "AP_PRO1";
     String password = "ei3it";
-    url = args[0];
-    driver  = args[1];
+//    url = args[0];
+//    driver  = args[1];
 //    username  = args[2];
-    password  = args[3];
+//    password  = args[3];
     int loadNumber = 2008; //Integer.parseInt(args[4]);
     int recsPerfile = Integer.parseInt(args[5]);
     int exitAt = Integer.parseInt(args[6]);
@@ -60,8 +60,7 @@ public class GeoRefCombiner
                                                   "gref");
 
     GeoRefCombiner c = new GeoRefCombiner(writer);
-//    if (loadNumber > 3000 || loadNumber < 1000)
-    if(false)
+    if(loadNumber > 200801)
     {
       c.writeCombinedByWeekNumber(url,
                                   driver,
@@ -364,7 +363,7 @@ public class GeoRefCombiner
           List geoterms = new ArrayList();
           for(int j = 0; j < termcoordinate.length; j++)
           {
-            String[] termcoordinates = termcoordinate[j].split(GRFDocBuilder.IDDELIMITER)
+            String[] termcoordinates = termcoordinate[j].split(GRFDocBuilder.IDDELIMITER);
             if(termcoordinates.length == 2)
             {
               geoterms.add(termcoordinates[0]);
