@@ -3,12 +3,13 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:html="http://www.w3.org/TR/REC-html40"
   xmlns:java="java:java.net.URLEncoder"
+  xmlns:cimage="java:org.ei.gui.CustomerImage"
   exclude-result-prefixes="java html xsl"
 >
 
 <xsl:output method="html" indent="no"/>
 <xsl:strip-space elements="html:* xsl:*" />
-
+<xsl:param name="CUST-ID">0</xsl:param>
 <xsl:template match="HEADER">
 
   <xsl:variable name="CUSTOMIZED-LOGO">
@@ -106,6 +107,21 @@
             <td valign="top">
               <a target="_top" href="/controller/servlet/Controller?CID=home">
               <xsl:choose>
+                
+                
+                <xsl:when test="cimage:containsCustomer($CUST-ID)">
+                	<xsl:variable name="CUSTOMER-IMAGE">
+				<xsl:value-of select="cimage:getImage($CUST-ID)"/>
+			</xsl:variable>
+			<xsl:variable name="CUSTOMER-URL">
+				<xsl:value-of select="cimage:getURL($CUST-ID)"/>
+			</xsl:variable>
+	             	<a href="{$CUSTOMER-URL}" border="0">
+	             		<img src="/engresources/custimages/{$CUSTOMER-IMAGE}" border="0"/>
+                	</a>
+                </xsl:when>
+                
+                
                 <xsl:when test="not($CUSTOMIZED-LOGO='')">
                   <img src="/engresources/custimages/{$CUSTOMIZED-LOGO}.gif" border="0"/>
                 </xsl:when>
