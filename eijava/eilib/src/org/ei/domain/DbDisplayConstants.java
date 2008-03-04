@@ -175,6 +175,15 @@ public class DbDisplayConstants
         		"<a href=\"\"><img id=\"pchOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(64); return false;\"/></a>");
 
 
+    public static final DbDisplayConstants GRF =
+        new DbDisplayConstants(DatabaseConfig.GRF_MASK,
+                "PaperChem",
+                "<a class=\"SmBlueTableText\">GeoRef</a></br><a class=\"SmBlackText\">The GeoRef database, established by the American Geological...</a></br><img  src=\"/engresources/images/s.gif\" border=\"0\" width=\"1\" height=\"6\" />",
+                "<a class=\"SmBlueTableText\">GeoRef</a></br><a class=\"SmBlackText\">The GeoRef database, established by the American Geological Institute in 1966, provides access to the geoscience literature of the world. GeoRef is the most comprehensive database in the geosciences and continues to grow by more than 90,000 references a year. The database contains over 2.9 million references to geoscience journal articles, books, maps, conference papers, reports and theses.</a></br><img  src=\"/engresources/images/s.gif\" border=\"0\" width=\"1\" height=\"6\" />",
+                "<a class=\"SmBlueTableText\">GeoRef</a></br><a class=\"SmBlackText\">The GeoRef database, established by the American Geological Institute in 1966, provides access to the geoscience literature of the world. GeoRef is the most comprehensive database in the geosciences and continues to grow by more than 90,000 references a year. The database contains over 2.9 million references to geoscience journal articles, books, maps, conference papers, reports and theses.</a></br><img  src=\"/engresources/images/s.gif\" border=\"0\" width=\"1\" height=\"6\" />",
+            		"<a href=\"\"><img id=\"grfOpenClose\" src=\"/engresources/images/sidebPlus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(64); return false;\"/></a>",
+            		"<a href=\"\"><img id=\"grfOpenClose\" src=\"/engresources/images/sidebMinus.gif\" border=\"0\" width=\"10\" height=\"10\" onclick=\"javascript:redrawCell(64); return false;\"/></a>");
+
 
     static
     {
@@ -194,6 +203,7 @@ public class DbDisplayConstants
        // allConstants.put("ref", REF);
         allConstants.put("pag", PAG);
         allConstants.put("ibs", IBS);
+        allConstants.put("grf", GRF);
     }
 
     private DbDisplayConstants(int dbmask,
