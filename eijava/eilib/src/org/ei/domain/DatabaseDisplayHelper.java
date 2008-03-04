@@ -7,16 +7,16 @@ import org.ei.util.StringUtil;
 
 
 public class DatabaseDisplayHelper {
-       
+
     private static StringBuffer jsVars = new StringBuffer("<script language=\"javascript\">");
     private static StringBuffer jsInitVars = new StringBuffer();
     private static StringBuffer jsRedrawCell = new StringBuffer();
     private static Hashtable maskConversion = new Hashtable();
-    private static Hashtable dbConversion = new Hashtable();    
+    private static Hashtable dbConversion = new Hashtable();
     private static int htmlraw = 0;
     private static boolean isTwoDb = false;
-                     
-		
+
+
     static
     {
         maskConversion.put("1","cpx");
@@ -32,9 +32,10 @@ public class DatabaseDisplayHelper {
         maskConversion.put("16384","eup");
         maskConversion.put("32768","upa");
         maskConversion.put("131072","pag");
-        maskConversion.put("65536","ref"); 
+        maskConversion.put("65536","ref");
         maskConversion.put("1048576","ibs");
-        
+        maskConversion.put("2097152","grf");
+
         dbConversion.put("cpx","1");
         dbConversion.put("ins","2");
         dbConversion.put("nti","4");
@@ -46,14 +47,15 @@ public class DatabaseDisplayHelper {
         dbConversion.put("ept", "2048");
         dbConversion.put("geo", "8192");
         dbConversion.put("eup", "16384");
-        dbConversion.put("pag", "131072");       
+        dbConversion.put("pag", "131072");
         dbConversion.put("upa", "32768");
         dbConversion.put("ref", "65536");
         dbConversion.put("ibs", "1048576");
+        dbConversion.put("grf", "2097152");
 
-   
+
     }
-    
+
     private static boolean setDBCount( int mask)
     {
         int i = 0;
@@ -64,40 +66,40 @@ public class DatabaseDisplayHelper {
             String db = (String) itr.next();
             int dbmask = Integer.parseInt(db);
             if ((mask & dbmask) == dbmask)
-            { 
+            {
                 if(dbmask != DatabaseConfig.EUP_MASK &&
-                   dbmask != DatabaseConfig.UPA_MASK) 
+                   dbmask != DatabaseConfig.UPA_MASK)
                 {
                     i++;
-                } 
-                else if((dbmask  == DatabaseConfig.EUP_MASK || 
-                        dbmask == DatabaseConfig.UPA_MASK) && 
+                }
+                else if((dbmask  == DatabaseConfig.EUP_MASK ||
+                        dbmask == DatabaseConfig.UPA_MASK) &&
                         !isPatentsSet)
                 {
                     isPatentsSet = true;
                     i++;
-                } 
+                }
             }
         }
-        
+
         if (i < 3)
         {
             return true;
         }
         return false;
     }
-    
+
 	public static String getNewsText(int mask) {
 	    htmlraw = 0;
 	    StringBuffer result = new StringBuffer();
 		String strText = StringUtil.EMPTY_STRING;
-		jsVars  = new StringBuffer("<script language=\"javascript\">");		 
-		jsInitVars = new StringBuffer("\nfunction initVars(termtype)\n{");		
+		jsVars  = new StringBuffer("<script language=\"javascript\">");
+		jsInitVars = new StringBuffer("\nfunction initVars(termtype)\n{");
 		jsRedrawCell = new StringBuffer("\n\nfunction redrawCell(db)\n{ \n var cel ;" );
-		
+
 		isTwoDb = setDBCount(mask);
-	
-		StringBuffer html = new StringBuffer();				
+
+		StringBuffer html = new StringBuffer();
 		if((mask & 8) == 8)
 		{
 			//System.out.println("Removing CRC");
@@ -120,31 +122,31 @@ public class DatabaseDisplayHelper {
 		    jsWriter(DatabaseConfig.CHM_MASK);
 		    html.append(htmlWriter(DatabaseConfig.CHM_MASK));
 		}
-				
+
 		if((mask & DatabaseConfig.CPX_MASK) == DatabaseConfig.CPX_MASK)
-		{		    
+		{
 		    jsWriter(DatabaseConfig.CPX_MASK);
 		    html.append(htmlWriter(DatabaseConfig.CPX_MASK));
 		}
 		if((mask & DatabaseConfig.CBF_MASK) == DatabaseConfig.CBF_MASK &&
 		        (mask & DatabaseConfig.CPX_MASK) != DatabaseConfig.CPX_MASK )
-		{		    
+		{
 		    jsWriter(DatabaseConfig.CBF_MASK);
 		    html.append(htmlWriter(DatabaseConfig.CBF_MASK));
-		}	
-		
+		}
+
 		if((mask & DatabaseConfig.ELT_MASK) == DatabaseConfig.ELT_MASK)
 		{
 		    jsWriter(DatabaseConfig.ELT_MASK);
 		    html.append(htmlWriter(DatabaseConfig.ELT_MASK));
 		}
-				
+
 		if((mask & DatabaseConfig.EPT_MASK) == DatabaseConfig.EPT_MASK )
 		{
 		    jsWriter(DatabaseConfig.EPT_MASK);
 		    html.append(htmlWriter(DatabaseConfig.EPT_MASK));
 		}
-		
+
 		boolean isPatentsSet = false;
 		if((mask & DatabaseConfig.EUP_MASK) == DatabaseConfig.EUP_MASK )
 		{
@@ -152,20 +154,20 @@ public class DatabaseDisplayHelper {
 		    jsWriter(DatabaseConfig.EUP_MASK);
 		    html.append(htmlWriter(DatabaseConfig.EUP_MASK));
 		}
-		
-		if(((mask & DatabaseConfig.UPA_MASK) == DatabaseConfig.UPA_MASK) && 
+
+		if(((mask & DatabaseConfig.UPA_MASK) == DatabaseConfig.UPA_MASK) &&
 		        !isPatentsSet)
 		{
 		    jsWriter(DatabaseConfig.UPA_MASK);
 		    html.append(htmlWriter(DatabaseConfig.UPA_MASK));
 		}
-		
+
 		if((mask & DatabaseConfig.GEO_MASK) == DatabaseConfig.GEO_MASK)
 		{
 		    jsWriter(DatabaseConfig.GEO_MASK);
 		    html.append(htmlWriter(DatabaseConfig.GEO_MASK));
 		}
-		
+
 		if((mask & DatabaseConfig.INS_MASK) == DatabaseConfig.INS_MASK)
 		{
 		    jsWriter(DatabaseConfig.INS_MASK);
@@ -173,7 +175,7 @@ public class DatabaseDisplayHelper {
 		}
 		if((mask & DatabaseConfig.IBS_MASK) == DatabaseConfig.IBS_MASK &&
 		        (mask & DatabaseConfig.INS_MASK) != DatabaseConfig.INS_MASK )
-		{		    
+		{
 		    jsWriter(DatabaseConfig.IBS_MASK);
 		    html.append(htmlWriter(DatabaseConfig.IBS_MASK));
 		}
@@ -195,35 +197,35 @@ public class DatabaseDisplayHelper {
 		}
 
 		jsInitVars.append("}");
-		jsRedrawCell.append("\n return false;}");		
+		jsRedrawCell.append("\n return false;}");
 		jsVars.append(jsInitVars)
 		.append(jsRedrawCell)
 		.append("</script>");
-		
-		
+
+
 		result.append(jsVars);
 		result.append(html);
-		
+
 		return result.toString();
 
 	}
-	
+
 	private static void jsWriter(int mask )
-	
+
 	{
 	    String m = String.valueOf(mask);
-	    jsVars.append(new jsFragment((String)maskConversion.get(m)).writeJSfragment());   
+	    jsVars.append(new jsFragment((String)maskConversion.get(m)).writeJSfragment());
 	    jsRedrawCell.append(new jsFragment((String)maskConversion.get(m)).writeRedrawCell());
 	}
-	
+
 	private static StringBuffer htmlWriter(int mask )
 	{
 	    String m = String.valueOf(mask);
 	    StringBuffer buf = new StringBuffer();
-	    buf = new htmlFragment((String)maskConversion.get(m)).writeHTMLfragment();    
+	    buf = new htmlFragment((String)maskConversion.get(m)).writeHTMLfragment();
 	    return buf;
 	}
-	
+
 
 	private static class htmlFragment
 	{
@@ -237,34 +239,34 @@ public class DatabaseDisplayHelper {
 	    private String shortText;
 	    private String img;
 	    private int dbmask;
-	    
+
 	    private String terms;
 	    private String flag;
 	    private String dbcode;
 	    boolean isTwodb;
-	    	    
+
 	    private htmlFragment(String dbcode)
-	    { 
+	    {
 	        this.table = dbcode.concat("Table");
 	        this.tableBody = dbcode.concat("TableBody");
 	        this.div = dbcode.concat("Div");
 	        this.flag = dbcode.concat("Flag");
 	        this.terms = dbcode.concat("Terms");
-	        this.inputField = dbcode.concat("inputField");	 
-	        
-	        	        	        
+	        this.inputField = dbcode.concat("inputField");
+
+
 	        this.dbDispName = DbDisplayConstants.getDbname(dbcode);
 	        this.img = DbDisplayConstants.getImgPlus(dbcode);
-	        this.text = DbDisplayConstants.getDisplayText(dbcode);	
+	        this.text = DbDisplayConstants.getDisplayText(dbcode);
 	        this.textNoMinus = DbDisplayConstants.getDisplayTextNoMinus(dbcode);
 	        this.shortText = DbDisplayConstants.getDisplayShortText(dbcode);
 	        this.dbcode = dbcode;
 	        String mask = (String)dbConversion.get(dbcode);
-	        this.dbmask = Integer.parseInt(mask);	        
+	        this.dbmask = Integer.parseInt(mask);
 	        this.isTwodb = isTwoDb;
 	    }
-	   
-	    
+
+
 	    private StringBuffer writeHTMLfragment()
 	    {
 	        StringBuffer html = new StringBuffer();
@@ -274,8 +276,8 @@ public class DatabaseDisplayHelper {
 				    {
 				        html.append(this.img);
 				    }
-				    html.append("<img src=\"/engresources/images/s.gif\" width=\"2\"/></td><td valign=\"top\">"); 
-		    		    
+				    html.append("<img src=\"/engresources/images/s.gif\" width=\"2\"/></td><td valign=\"top\">");
+
 		    if (!this.isTwodb)
 		    {
 		        html.append(this.shortText);
@@ -284,15 +286,15 @@ public class DatabaseDisplayHelper {
 		    {
 		        html.append(this.textNoMinus);
 		    }
-	    
+
 		    html.append("</td><td valign=\"top\" width=\"2\"><img src=\"/engresources/images/s.gif\" width=\"2\"/></td></tr>");
 
 		    return html;
 	    }
-	    
+
 	}
-	
-	
+
+
 	private static class jsFragment
 	{
 	    private String tableBody;
@@ -311,40 +313,40 @@ public class DatabaseDisplayHelper {
 	    private String img;
 	    private String imgMinus;
 	    private String imgPlus;
-	    
-	    	    
+
+
 	    private jsFragment(String dbcode)
-	    { 
+	    {
 	        this.table = dbcode.concat("Table");
 	        this.tableBody = dbcode.concat("TableBody");
 	        this.div = dbcode.concat("Div");
 	        this.flag = dbcode.concat("Flag");
 	        this.terms = dbcode.concat("Terms");
-	        this.inputField = dbcode.concat("InputField");	 	        
-	        	        	        
+	        this.inputField = dbcode.concat("InputField");
+
 	        this.dbDispName = DbDisplayConstants.getDbname(dbcode);
 	        this.dbDispText = DbDisplayConstants.getDisplayText(dbcode);
 	        this.dbDispTextNoMinus = DbDisplayConstants.getDisplayTextNoMinus(dbcode);
 	        this.dbShortText = DbDisplayConstants.getDisplayShortText(dbcode);
 	        this.dbcode = dbcode;
 	        String mask = (String)dbConversion.get(dbcode);
-	        
+
 	        this.dbmask = Integer.parseInt(mask);
-	       
+
 	        this.img = DbDisplayConstants.getImgPlus(dbcode);
-	        
+
 	        this.imgPlus = "<img src=\"/engresources/images/s.gif\" width=\"2\" height=\"3\"/></br><img src=\"/engresources/images/s.gif\" width=\"2\"/>" +
 	        DbDisplayConstants.getImgPlus(dbcode) +
 			"<img src=\"/engresources/images/s.gif\" width=\"2\"/>";
-	        
+
 	        this.imgMinus = "<img src=\"/engresources/images/s.gif\" width=\"2\" height=\"3\"/></br><img src=\"/engresources/images/s.gif\" width=\"2\"/>" +
 	        DbDisplayConstants.getImgMinus(dbcode) +
 			"<img src=\"/engresources/images/s.gif\" width=\"2\"/>";
-	       
-	        
+
+
 	    }
-	    
-	    
+
+
 	    private StringBuffer writeRedrawCell()
 	    {
 
@@ -352,7 +354,7 @@ public class DatabaseDisplayHelper {
 	                this.dbmask+
 	                ")\n {  \n if ("+
 	                this.flag +
-	                " == 1 )\n{"+	                
+	                " == 1 )\n{"+
 	                "\n cel=document.getElementById(\'newsTable\').rows["+
 	                htmlraw+
 	                "].cells;"+
@@ -361,7 +363,7 @@ public class DatabaseDisplayHelper {
 	                this.dbcode+
 	                "imgMinus"+
 	                "; \n" +
-	                
+
 	                "\n cel[1].innerHTML = " +
 	                this.dbcode+
 	                "DispText"+
@@ -371,101 +373,101 @@ public class DatabaseDisplayHelper {
 	    	        " = 2; \n"+
 	                "} else if ("+
 	    	        this.flag +
-	    	        " == 2 )\n{"+	                
+	    	        " == 2 )\n{"+
 	    	        "\n cel=document.getElementById(\'newsTable\').rows["+
 	    	        htmlraw+
 	    	        "].cells;"+
-	                
+
 	                "\n cel[0].innerHTML = " +
 	                this.dbcode+
 	                "imgPlus"+
 	                "; \n" +
-	                
+
 	    	        "\n cel[1].innerHTML = " +
 	    	        this.dbcode+
 	    	        "ShortText"+
 	    	        "; \n" +
-	    	        
+
 	    	        this.flag +
 	    	        " = 1; \n"+
 	    	        "} \n}"	 );
-	        
-	        htmlraw++;	 
+
+	        htmlraw++;
 	        return jso;
 	    }
-	    
-	    
+
+
 	    private StringBuffer writeInitVars()
 	    {
-	        
+
 	        StringBuffer jsiv = new StringBuffer
-	        		("\n var " +            
-	                this.dbcode+"DispText"+	                
+	        		("\n var " +
+	                this.dbcode+"DispText"+
 	                " = \'"+
 	                this.dbDispText +
 	                "\';\n" +
-	                
-	                "var "+ this.dbcode+"ShortText"+	                
+
+	                "var "+ this.dbcode+"ShortText"+
 	                " = \'"+
 	                this.dbShortText +
 	                "\';\n" +
-	                
-	                "var "+ this.dbcode+"imgPlus"+	                
+
+	                "var "+ this.dbcode+"imgPlus"+
 	                " = \'"+
 	                this.imgPlus +
 	                "\';\n" +
-	                
-	                "var "+ this.dbcode+"imgMinus"+	                
+
+	                "var "+ this.dbcode+"imgMinus"+
 	                " = \'"+
 	                this.imgMinus +
 	                "\';\n" +
-	                
+
 	                "var "+ this.dbcode+"Flag"+
 	                " = 1 ;\n"
-	                
-	        		);	                	        
-	        
+
+	        		);
+
 	        return jsiv;
 	    }
-	    
-	    
+
+
 	    private StringBuffer writeJSfragment()
 	    {
-	         	        
+
 	        StringBuffer js = new StringBuffer
-	        ("\n var " +				                
+	        ("\n var " +
 		     this.dbcode+
-		     "DispText"+	                
+		     "DispText"+
 		     " = \'"+
 		     this.dbDispText +
 		     "\';\n" +
-		     "var "+ 
+		     "var "+
 		     this.dbcode+
-		     "ShortText"+	                
+		     "ShortText"+
 		     " = \'"+
 		     this.dbShortText +
 		     "\';\n" +
-		     
-             "var "+ this.dbcode+"imgPlus"+	                
+
+             "var "+ this.dbcode+"imgPlus"+
              " = \'"+
              this.imgPlus +
              "\';\n" +
-             
-             "var "+ this.dbcode+"imgMinus"+	                
+
+             "var "+ this.dbcode+"imgMinus"+
              " = \'"+
              this.imgMinus +
              "\';\n" +
-             
-             
-		     "var "+ 
+
+
+		     "var "+
 		     this.dbcode+
 		     "Flag"+
 		     " = 1 ;\n");
 	        return js;
-	    }  
-	   
+	    }
+
 	}
-	
+
 	public static String getDisplayName(int mask) {
 
 		StringBuffer buf = new StringBuffer();
