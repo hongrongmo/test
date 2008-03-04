@@ -76,10 +76,122 @@
           <xsl:call-template name="DEDUP-SCRIPT" />
         </xsl:if>
 
-        <!-- End of javascript -->
+    <xsl:if test="boolean(bit:hasBitSet(/PAGE/DBMASK,2097152))">
+      <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAR--2D6WLLGcr7L3QlwZCBRTWp_Jg7UwMVr-ESRqyz6fZCklfjxRMuUlG4X-qIrTCMhuYZ8sO4fVZEA"
+              type="text/javascript"></script>
+      <script type="text/javascript">
+      //<![CDATA[
+          var markerGroups = { "Oil": [], "Water": [], "Cities": [], "Land": []};
+
+          var populated = false;
+          var MAXZOOM = 5;
+          var bounds = new GLatLngBounds();
+          var map;
+          function showmap() {
+            if (GBrowserIsCompatible()) {
+              map = new GMap(document.getElementById("map_canvas"));
+              map.setMapType(G_PHYSICAL_MAP);
+              map.setCenter(new GLatLng(0, 0), 1);
+
+              map.addControl(new GLargeMapControl());
+              /* map.addControl(new GOverviewMapControl()); */
+
+              // Monitor the window resize event and let the map know when it occurs
+              var mapdiv = document.getElementById("map_canvas")
+              if (mapdiv.attachEvent) {
+                mapdiv.attachEvent("onresize", function() {map.onResize()} );
+              } else {
+                mapdiv.addEventListener("resize", function() {map.onResize()} , false);
+              }
+            }
+          }
+          function initialize() {
+            if (GBrowserIsCompatible()) {
+              var atoggle = document.getElementById("mapToggle");
+              atoggle.appendChild(document.createTextNode("Show Geographic Map"));
+              atoggle.href="javascript:togglemap();"
+            }
+          }
+
+          function togglemap()
+          {
+            var divmap = document.getElementById("map");
+            var atoggle = document.getElementById("mapToggle");
+
+            while(atoggle.firstChild) atoggle.removeChild(atoggle.firstChild);
+            if(divmap.style.display == "block")
+            {
+              divmap.style.display="none";
+              atoggle.appendChild(document.createTextNode("Show Geographic Map"));
+            }
+            else {
+              divmap.style.display="block";
+              atoggle.appendChild(document.createTextNode("Hide Geographic Map"));
+              showmap();
+              populatemap();
+            }
+          }
+
+          function resetCenterAndZoom() {
+            map.setCenter(bounds.getCenter(), map.getBoundsZoomLevel(bounds) - 1  > MAXZOOM ? MAXZOOM : map.getBoundsZoomLevel(bounds) - 1);
+          }
+
+          function createMarker(point,name,description,type) {
+            var newIcon = new GIcon(G_DEFAULT_ICON);
+            var marker = new GMarker(point,{icon:newIcon, title:name});
+            GEvent.addListener(marker, "click", function() {
+              alert("You clicked the " + name + " marker.");
+             });
+            GEvent.addListener(marker, "mouseover", function() {
+              marker.openInfoWindowHtml("<h3>" + name + "</h3><br>" + description);
+             });
+            GEvent.addListener(marker, "mouseout", function() {
+              marker.closeInfoWindow();
+             });
+            return marker;
+          }
+
+          function populatemap() {
+            var request = GXmlHttp.create();
+            request.open("GET", "/engvillage/models/world/kmltest.jsp", true);
+            request.onreadystatechange = function() {
+              if (request.readyState == 4) {
+                if (request.status == 200)
+                {
+                  var xmlDoc = request.responseXML;
+
+                  placemarks = xmlDoc.documentElement.getElementsByTagName("Placemark");
+                  for(var i = 0; i < placemarks.length; i++) {
+
+                    var point = placemarks[i].getElementsByTagName("Point")[0];
+                    var coords = point.getElementsByTagName("coordinates")[0].childNodes[0].nodeValue;
+                    coords = coords.split(",");
+                    var name = placemarks[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+                    var description = placemarks[i].getElementsByTagName("description")[0].childNodes[0].nodeValue;
+
+                    var type = placemarks[i].getAttribute("type");
+                    var marker = createMarker(new GLatLng(parseFloat(coords[1]),parseFloat(coords[0])),name,description,type);
+                    map.addOverlay(marker);
+                    markerGroups[type].push(marker);
+                    bounds.extend(marker.getPoint());
+                  }
+                  resetCenterAndZoom();
+                }
+              }
+            }
+            request.send(null);
+          }
+      //]]>
+      </script>
+    </xsl:if>
+    <!-- End of javascript -->
     </head>
 
-    <body bgcolor="#FFFFFF" topmargin="0" marginheight="0" marginwidth="0" >
+    <body bgcolor="#FFFFFF" topmargin="0" marginheight="0" marginwidth="0">
+      <xsl:if test="boolean(bit:hasBitSet(/PAGE/DBMASK,2097152))">
+        <xsl:attribute name="onload">initialize()</xsl:attribute>
+      </xsl:if>
+      <xsl:attribute name="onunload">GUnload()</xsl:attribute>
     <center>
 
       <!-- APPLY HEADER -->
@@ -118,10 +230,21 @@
                 <xsl:apply-templates select="//SESSION-DATA/SC"/>
             </xsl:if>
             <xsl:apply-templates select="//SESSION-DATA/DATABASE"/>
-            <xsl:apply-templates select="//SESSION-DATA/REFINE-STACK"/>
-            <xsl:apply-templates select="SORTABLE-FIELDS"/>
+              <a class="SpLink" id="mapToggle"/>
+              <div id="map" style="clear:both;display:none;">
+                <a class="SpLink" id="resetcenter" href="javascript:resetCenterAndZoom()">Reset Map Center and Zoom</a><br/>
+                <div id="map_spacer" style="float:left; border:0px solid black; width: 40px; height: 300px"></div>
+                <div id="map_canvas" style="float:left; width: 600px; height: 300px">&#160;</div>
+                <div id="map_sidebar" class="SmBlackText" style="display:none; float:left; border:1px solid black; width: 110px; height: 300px"><form name="formlegend"><fieldset><legend>Legend</legend><ul style="list-style-type:none; margin:0; padding:0; margin-bottom:1px;" id="legend"></ul></fieldset></form></div>
+              </div>
 
-              <xsl:apply-templates select="PAGE-RESULTS"/>
+              <div style="clear:both;"/>
+              <xsl:apply-templates select="//SESSION-DATA/REFINE-STACK"/>
+
+              <div style="clear:both;">
+                <xsl:apply-templates select="SORTABLE-FIELDS"/>
+                <xsl:apply-templates select="PAGE-RESULTS"/>
+              </div>
 
               <!-- Display of 'Next Page' Navigation Bar -->
               <xsl:apply-templates select="NAVIGATION-BAR">
