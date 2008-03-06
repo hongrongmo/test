@@ -6,7 +6,7 @@ public class CustomerImage
 {
 
 	private static Map customerMap = new HashMap();
-	private static String[] TAN  = {"tan.jpg", "url"};
+	private static String[] TAN  = {"tan.jpg", "http://www.ulakbim.gov.tr/cabim/ekual/"};
     private static String[] FCCN = {"fccn.jpg", "/controller/servlet/Controller"};
 
 	public static boolean containsCustomer(String custID)
