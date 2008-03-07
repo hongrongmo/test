@@ -11,6 +11,11 @@ public class CustomerImage
 
 	public static boolean containsCustomer(String custID)
 	{
+		if(custID == null)
+		{
+			return false;
+		}
+
 		return customerMap.containsKey(custID);
 	}
 
