@@ -5,21 +5,22 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.*;
+import java.io.*;
 
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
 import org.ei.domain.*;
 import org.ei.data.*;
-import java.io.*;
+import org.ei.data.georef.loadtime.GeobaseToGeorefMap;
 import org.ei.util.GUID;
 
 public class GeobaseCombiner
     extends Combiner
 {
 
-	public static final String AUDELIMITER 		= new String(new char[] {30});
-	public static final String IDDELIMITER 		= new String(new char[] {29});
-	public static final String GROUPDELIMITER 	= new String(new char[] {02});
+    public static final String AUDELIMITER    = new String(new char[] {30});
+    public static final String IDDELIMITER    = new String(new char[] {29});
+    public static final String GROUPDELIMITER   = new String(new char[] {02});
 
     Perl5Util perl = new Perl5Util();
 
@@ -29,14 +30,14 @@ public class GeobaseCombiner
 
     public static void main(String args[])        throws Exception
     {
-       	String driver 		= "oracle.jdbc.driver.OracleDriver";
-		String url 			= "jdbc:oracle:thin:@206.137.75.51:1521:EI";
-		String username		= "AP_EV_SEARCH";
-	 	String password 	= "ei3it";
-	 	url					= args[0];
-	 	driver 				= args[1];
-	 	username			= args[2];
-	 	password			= args[3];
+        String driver = "oracle.jdbc.driver.OracleDriver";
+        String url = "jdbc:oracle:thin:@206.137.75.51:1521:EI";
+        String username = "AP_EV_SEARCH";
+        String password = "ei3it";
+        url = args[0];
+        driver = args[1];
+        username = args[2];
+        password = args[3];
         int loadNumber = Integer.parseInt(args[4]);
         int recsPerfile = Integer.parseInt(args[5]);
         int exitAt = Integer.parseInt(args[6]);
@@ -72,6 +73,55 @@ public class GeobaseCombiner
     {
         super(writer);
     }
+    public void writeCombinedByWeekHook(Connection con,
+                                        int weekNumber)
+        throws Exception
+    {
+        Statement stmt = null;
+        ResultSet rs = null;
+
+        try
+        {
+            this.writer.begin();
+            stmt = con.createStatement();
+            String sqlQuery = "select DESCRIPTOR_MAINTERM_SPC2,AUTHOR2,AUTHOR_AFFILIATION_STATE,ARTICLE_NUMBER,AUTHOR_AFFILIATION_COUNTRY,AUTHOR_AFFILIATION_CITY,ABSTRACT, m_id, doi, SOURCE_VOLUME, SOURCE_ISSUE, ACCESSION_NUMBER,AUTHOR_AFFILIATION, SOURCE_PAGERANGE, AUTHORS, ISBN, CLASSIFICATION, CONFERENCE_CITY, CONFERENCE_CODE,CONFERENCE_NAME, CODEN, DESCRIPTOR_MAINTERM_GDE, DESCRIPTOR_MAINTERM_RGI,DOCUMENT_TYPE, SOURCE_EDITOR, DESCRIPTOR_MAINTERM_SPC, CITATION_LANGUAGE, ABSTRACT_LANGUAGE, TITLETEXT_LANGUAGE, CONFERENCE_CITY, CLASSIFICATION_SUBJECT, CONFERENCE_STATE, ISSUE_TITLE, CONFERENCE_COUNTRY, CONFERENCE_DATE, PAGES, PAGECOUNT, PUBLISHER_NAME, ABBR_SOURCETITLE, ISSN,E_ISSN, CONFERENCE_SPONSORS, SOURCE_TITLE, CITATION_TITLE, TRANSLATED_TITLE, SOURCE_TYPE, VOLUME_TITLE, SOURCE_PUBLICATIONYEAR, SOURCE_PUBLICATIONDATE, load_number, CREATED_DATE, SORT_DATE from " + Combiner.TABLENAME + " where load_number ='" + weekNumber + "' AND load_number != 0 and load_number < 1000000";
+            //use for update translated_title
+            //String sqlQuery = "select DESCRIPTOR_MAINTERM_SPC2,AUTHOR2,AUTHOR_AFFILIATION_STATE,ARTICLE_NUMBER,AUTHOR_AFFILIATION_COUNTRY,AUTHOR_AFFILIATION_CITY,ABSTRACT, m_id, doi, SOURCE_VOLUME, SOURCE_ISSUE, ACCESSION_NUMBER,AUTHOR_AFFILIATION, SOURCE_PAGERANGE, AUTHORS, ISBN, CLASSIFICATION, CONFERENCE_CITY, CONFERENCE_CODE,CONFERENCE_NAME, CODEN, DESCRIPTOR_MAINTERM_GDE, DESCRIPTOR_MAINTERM_RGI,DOCUMENT_TYPE, SOURCE_EDITOR, DESCRIPTOR_MAINTERM_SPC, CITATION_LANGUAGE, ABSTRACT_LANGUAGE, TITLETEXT_LANGUAGE, CONFERENCE_CITY, CLASSIFICATION_SUBJECT, CONFERENCE_STATE, ISSUE_TITLE, CONFERENCE_COUNTRY, CONFERENCE_DATE, PAGES, PAGECOUNT, PUBLISHER_NAME, ABBR_SOURCETITLE, ISSN,E_ISSN, CONFERENCE_SPONSORS, SOURCE_TITLE, CITATION_TITLE, TRANSLATED_TITLE, SOURCE_TYPE, VOLUME_TITLE, SOURCE_PUBLICATIONYEAR, SOURCE_PUBLICATIONDATE, load_number, CREATED_DATE, SORT_DATE from " + Combiner.TABLENAME + " where translated_title is not null AND load_number != 0 and load_number < 1000000";
+            //System.out.println("sqlQuery= "+sqlQuery);
+            rs = stmt.executeQuery(sqlQuery);
+            writeRecs(rs);
+            this.writer.end();
+
+        }
+        finally
+        {
+
+            if (rs != null)
+            {
+                try
+                {
+                    rs.close();
+                }
+                catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
+            }
+
+            if (stmt != null)
+            {
+                try
+                {
+                    stmt.close();
+                }
+                catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+    }
 
     public void writeCombinedByYearHook(Connection con,
                                         int year)
@@ -87,15 +137,15 @@ public class GeobaseCombiner
             stmt = con.createStatement();
             if(year == 1000)
             {
-				//return all records which do not have source_publicationyear and source_publicationdate
-				rs = stmt.executeQuery("select AUTHOR_AFFILIATION_STATE,ARTICLE_NUMBER,AUTHOR_AFFILIATION_COUNTRY,AUTHOR_AFFILIATION_CITY,ABSTRACT, m_id, doi, SOURCE_VOLUME, SOURCE_ISSUE, ACCESSION_NUMBER,AUTHOR_AFFILIATION, SOURCE_PAGERANGE, AUTHORS, AUTHOR2, ISBN, CLASSIFICATION, CONFERENCE_CODE,CONFERENCE_CITY, CONFERENCE_NAME, CODEN, DESCRIPTOR_MAINTERM_GDE, DESCRIPTOR_MAINTERM_RGI, DOCUMENT_TYPE, SOURCE_EDITOR, DESCRIPTOR_MAINTERM_SPC, DESCRIPTOR_MAINTERM_SPC2, CITATION_LANGUAGE, ABSTRACT_LANGUAGE, TITLETEXT_LANGUAGE, CONFERENCE_CITY, CLASSIFICATION_SUBJECT, CONFERENCE_STATE, ISSUE_TITLE, CONFERENCE_COUNTRY, CONFERENCE_DATE, PAGES, PAGECOUNT, PUBLISHER_NAME, ABBR_SOURCETITLE, ISSN,E_ISSN, CONFERENCE_SPONSORS, SOURCE_TITLE, CITATION_TITLE, TRANSLATED_TITLE, SOURCE_TYPE, VOLUME_TITLE, SOURCE_PUBLICATIONYEAR, SOURCE_PUBLICATIONDATE,PAGECOUNT,PAGES,load_number, CREATED_DATE, SORT_DATE from " + Combiner.TABLENAME + " where SOURCE_PUBLICATIONYEAR is null and SOURCE_PUBLICATIONDATE is null AND load_number != 0 and load_number < 1000000");
-			}
-			else
-			{
-				//use for update translated_title
-				//String sqlQuery = "select AUTHOR_AFFILIATION_STATE,ARTICLE_NUMBER,AUTHOR_AFFILIATION_COUNTRY,AUTHOR_AFFILIATION_CITY,ABSTRACT, m_id, doi, SOURCE_VOLUME, SOURCE_ISSUE, ACCESSION_NUMBER,AUTHOR_AFFILIATION, SOURCE_PAGERANGE, AUTHORS, AUTHOR2, ISBN, CLASSIFICATION, CONFERENCE_CODE,CONFERENCE_CITY, CONFERENCE_NAME, CODEN, DESCRIPTOR_MAINTERM_GDE, DESCRIPTOR_MAINTERM_RGI, DOCUMENT_TYPE, SOURCE_EDITOR, DESCRIPTOR_MAINTERM_SPC, DESCRIPTOR_MAINTERM_SPC2, CITATION_LANGUAGE, ABSTRACT_LANGUAGE, TITLETEXT_LANGUAGE, CONFERENCE_CITY, CLASSIFICATION_SUBJECT, CONFERENCE_STATE, ISSUE_TITLE, CONFERENCE_COUNTRY, CONFERENCE_DATE, PAGES, PAGECOUNT, PUBLISHER_NAME, ABBR_SOURCETITLE, ISSN,E_ISSN, CONFERENCE_SPONSORS, SOURCE_TITLE, CITATION_TITLE, TRANSLATED_TITLE, SOURCE_TYPE, VOLUME_TITLE, SOURCE_PUBLICATIONYEAR, SOURCE_PUBLICATIONDATE,PAGECOUNT,PAGES,load_number, CREATED_DATE, SORT_DATE from " + Combiner.TABLENAME + " where TRANSLATED_TITLE is not null";
-            	rs = stmt.executeQuery("select AUTHOR_AFFILIATION_STATE,ARTICLE_NUMBER,AUTHOR_AFFILIATION_COUNTRY,AUTHOR_AFFILIATION_CITY,ABSTRACT, m_id, doi, SOURCE_VOLUME, SOURCE_ISSUE, ACCESSION_NUMBER,AUTHOR_AFFILIATION, SOURCE_PAGERANGE, AUTHORS, AUTHOR2, ISBN, CLASSIFICATION, CONFERENCE_CODE,CONFERENCE_CITY, CONFERENCE_NAME, CODEN, DESCRIPTOR_MAINTERM_GDE, DESCRIPTOR_MAINTERM_RGI, DOCUMENT_TYPE, SOURCE_EDITOR, DESCRIPTOR_MAINTERM_SPC, DESCRIPTOR_MAINTERM_SPC2, CITATION_LANGUAGE, ABSTRACT_LANGUAGE, TITLETEXT_LANGUAGE, CONFERENCE_CITY, CLASSIFICATION_SUBJECT, CONFERENCE_STATE, ISSUE_TITLE, CONFERENCE_COUNTRY, CONFERENCE_DATE, PAGES, PAGECOUNT, PUBLISHER_NAME, ABBR_SOURCETITLE, ISSN,E_ISSN, CONFERENCE_SPONSORS, SOURCE_TITLE, CITATION_TITLE, TRANSLATED_TITLE, SOURCE_TYPE, VOLUME_TITLE, SOURCE_PUBLICATIONYEAR, SOURCE_PUBLICATIONDATE,PAGECOUNT,PAGES,load_number, CREATED_DATE, SORT_DATE from " + Combiner.TABLENAME + " where (SOURCE_PUBLICATIONYEAR ='" + year + "' or SOURCE_PUBLICATIONDATE like '%"+ year +"%') AND load_number != 0 and load_number < 1000000");
-			}
+              //return all records which do not have source_publicationyear and source_publicationdate
+              rs = stmt.executeQuery("select AUTHOR_AFFILIATION_STATE,ARTICLE_NUMBER,AUTHOR_AFFILIATION_COUNTRY,AUTHOR_AFFILIATION_CITY,ABSTRACT, m_id, doi, SOURCE_VOLUME, SOURCE_ISSUE, ACCESSION_NUMBER,AUTHOR_AFFILIATION, SOURCE_PAGERANGE, AUTHORS, AUTHOR2, ISBN, CLASSIFICATION, CONFERENCE_CODE,CONFERENCE_CITY, CONFERENCE_NAME, CODEN, DESCRIPTOR_MAINTERM_GDE, DESCRIPTOR_MAINTERM_RGI, DOCUMENT_TYPE, SOURCE_EDITOR, DESCRIPTOR_MAINTERM_SPC, DESCRIPTOR_MAINTERM_SPC2, CITATION_LANGUAGE, ABSTRACT_LANGUAGE, TITLETEXT_LANGUAGE, CONFERENCE_CITY, CLASSIFICATION_SUBJECT, CONFERENCE_STATE, ISSUE_TITLE, CONFERENCE_COUNTRY, CONFERENCE_DATE, PAGES, PAGECOUNT, PUBLISHER_NAME, ABBR_SOURCETITLE, ISSN,E_ISSN, CONFERENCE_SPONSORS, SOURCE_TITLE, CITATION_TITLE, TRANSLATED_TITLE, SOURCE_TYPE, VOLUME_TITLE, SOURCE_PUBLICATIONYEAR, SOURCE_PUBLICATIONDATE,PAGECOUNT,PAGES,load_number, CREATED_DATE, SORT_DATE from " + Combiner.TABLENAME + " where SOURCE_PUBLICATIONYEAR is null and SOURCE_PUBLICATIONDATE is null AND load_number != 0 and load_number < 1000000");
+            }
+            else
+            {
+              //use for update translated_title
+              //String sqlQuery = "select AUTHOR_AFFILIATION_STATE,ARTICLE_NUMBER,AUTHOR_AFFILIATION_COUNTRY,AUTHOR_AFFILIATION_CITY,ABSTRACT, m_id, doi, SOURCE_VOLUME, SOURCE_ISSUE, ACCESSION_NUMBER,AUTHOR_AFFILIATION, SOURCE_PAGERANGE, AUTHORS, AUTHOR2, ISBN, CLASSIFICATION, CONFERENCE_CODE,CONFERENCE_CITY, CONFERENCE_NAME, CODEN, DESCRIPTOR_MAINTERM_GDE, DESCRIPTOR_MAINTERM_RGI, DOCUMENT_TYPE, SOURCE_EDITOR, DESCRIPTOR_MAINTERM_SPC, DESCRIPTOR_MAINTERM_SPC2, CITATION_LANGUAGE, ABSTRACT_LANGUAGE, TITLETEXT_LANGUAGE, CONFERENCE_CITY, CLASSIFICATION_SUBJECT, CONFERENCE_STATE, ISSUE_TITLE, CONFERENCE_COUNTRY, CONFERENCE_DATE, PAGES, PAGECOUNT, PUBLISHER_NAME, ABBR_SOURCETITLE, ISSN,E_ISSN, CONFERENCE_SPONSORS, SOURCE_TITLE, CITATION_TITLE, TRANSLATED_TITLE, SOURCE_TYPE, VOLUME_TITLE, SOURCE_PUBLICATIONYEAR, SOURCE_PUBLICATIONDATE,PAGECOUNT,PAGES,load_number, CREATED_DATE, SORT_DATE from " + Combiner.TABLENAME + " where TRANSLATED_TITLE is not null";
+              rs = stmt.executeQuery("select AUTHOR_AFFILIATION_STATE,ARTICLE_NUMBER,AUTHOR_AFFILIATION_COUNTRY,AUTHOR_AFFILIATION_CITY,ABSTRACT, m_id, doi, SOURCE_VOLUME, SOURCE_ISSUE, ACCESSION_NUMBER,AUTHOR_AFFILIATION, SOURCE_PAGERANGE, AUTHORS, AUTHOR2, ISBN, CLASSIFICATION, CONFERENCE_CODE,CONFERENCE_CITY, CONFERENCE_NAME, CODEN, DESCRIPTOR_MAINTERM_GDE, DESCRIPTOR_MAINTERM_RGI, DOCUMENT_TYPE, SOURCE_EDITOR, DESCRIPTOR_MAINTERM_SPC, DESCRIPTOR_MAINTERM_SPC2, CITATION_LANGUAGE, ABSTRACT_LANGUAGE, TITLETEXT_LANGUAGE, CONFERENCE_CITY, CLASSIFICATION_SUBJECT, CONFERENCE_STATE, ISSUE_TITLE, CONFERENCE_COUNTRY, CONFERENCE_DATE, PAGES, PAGECOUNT, PUBLISHER_NAME, ABBR_SOURCETITLE, ISSN,E_ISSN, CONFERENCE_SPONSORS, SOURCE_TITLE, CITATION_TITLE, TRANSLATED_TITLE, SOURCE_TYPE, VOLUME_TITLE, SOURCE_PUBLICATIONYEAR, SOURCE_PUBLICATIONDATE,PAGECOUNT,PAGES,load_number, CREATED_DATE, SORT_DATE from " + Combiner.TABLENAME + " where (SOURCE_PUBLICATIONYEAR ='" + year + "' or SOURCE_PUBLICATIONDATE like '%"+ year +"%') AND load_number != 0 and load_number < 1000000");
+            }
             writeRecs(rs);
             this.writer.end();
 
@@ -132,14 +182,14 @@ public class GeobaseCombiner
     private void writeRecs(ResultSet rs)
         throws Exception
     {
-		try
-		{
+      try
+      {
 
         int i = 0;
-		String mid = null;
+        String mid = null;
         while (rs.next())
         {
-			mid = rs.getString("M_ID");
+            mid = rs.getString("M_ID");
             EVCombinedRec rec = new EVCombinedRec();
             ++i;
 
@@ -152,82 +202,81 @@ public class GeobaseCombiner
             String year = rs.getString("SOURCE_PUBLICATIONYEAR");
             if(year == null || year.equals("null") || year.length()<1)
             {
-				year = rs.getString("SOURCE_PUBLICATIONDATE");
-				if(year != null && year.indexOf("-")>-1)
-				{
-					year = year.substring(year.lastIndexOf("-")+1);
-				}
-			}
+              year = rs.getString("SOURCE_PUBLICATIONDATE");
+              if(year != null && year.indexOf("-")>-1)
+              {
+                year = year.substring(year.lastIndexOf("-")+1);
+              }
+            }
 
-			if(year == null || year.equals("null") || year.length()<1)
-			{
-				year = rs.getString("SORT_DATE");
-				if(year != null && year.indexOf("-")>-1)
-				{
-					year = year.substring(year.lastIndexOf("-")+1);
-				}
-			}
+            if(year == null || year.equals("null") || year.length()<1)
+            {
+              year = rs.getString("SORT_DATE");
+              if(year != null && year.indexOf("-")>-1)
+              {
+                year = year.substring(year.lastIndexOf("-")+1);
+              }
+            }
 
-			if(year == null || year.equals("null") || year.length()<1)
-			{
-				year = rs.getString("CREATED_DATE");
-				if(year != null && year.indexOf("-")>-1)
-				{
-					year = year.substring(year.lastIndexOf("-")+1);
-				}
-			}
+            if(year == null || year.equals("null") || year.length()<1)
+            {
+              year = rs.getString("CREATED_DATE");
+              if(year != null && year.indexOf("-")>-1)
+              {
+                year = year.substring(year.lastIndexOf("-")+1);
+              }
+            }
 
             if (validYear(year))
             {
                 if (rs.getString("AUTHORS") != null)
                 {
-					String 	authors = rs.getString("AUTHORS");
-					if (rs.getString("AUTHOR2") != null)
-                	{
-						authors = authors + rs.getString("AUTHOR2");
-					}
-					authors = LoadLookup.removeSpecialCharacter(authors);
-					authors = removeID(authors,"authors");
+                    String  authors = rs.getString("AUTHORS");
+                    if (rs.getString("AUTHOR2") != null)
+                    {
+                      authors = authors + rs.getString("AUTHOR2");
+                    }
+                    authors = LoadLookup.removeSpecialCharacter(authors);
+                    authors = removeID(authors,"authors");
                     rec.put(EVCombinedRec.AUTHOR, prepareAuthor(authors));
-
                     if (rs.getString("AUTHOR_AFFILIATION") != null)
                     {
-						String 	authorAffiliation = rs.getString("AUTHOR_AFFILIATION");
-								authorAffiliation = LoadLookup.removeSpecialCharacter(authorAffiliation);
-								authorAffiliation = removeID(authorAffiliation,"affiliation");
+                        String  authorAffiliation = rs.getString("AUTHOR_AFFILIATION");
+                        authorAffiliation = LoadLookup.removeSpecialCharacter(authorAffiliation);
+                        authorAffiliation = removeID(authorAffiliation,"affiliation");
                         rec.put(EVCombinedRec.AUTHOR_AFFILIATION, authorAffiliation);
 
                         StringBuffer affilLoc = new StringBuffer();
                         if (rs.getString("AUTHOR_AFFILIATION_COUNTRY") != null)
                         {
-							String 	country = rs.getString("AUTHOR_AFFILIATION_COUNTRY");
-							country = removeID(country,"country");
-							String 	countryFormatted = null;
+                          String  country = rs.getString("AUTHOR_AFFILIATION_COUNTRY");
+                          country = removeID(country,"country");
+                          String  countryFormatted = null;
 
-							if(country != null)
-							{
-								countryFormatted = Country.formatCountry(country.toLowerCase());
-							}
+                          if(country != null)
+                          {
+                            countryFormatted = Country.formatCountry(country.toLowerCase());
+                          }
 
-                            if (countryFormatted != null)
-                            {
-                                affilLoc.append(countryFormatted);
-                                rec.put(EVCombinedRec.COUNTRY, countryFormatted.split(AUDELIMITER));
-                            }
+                          if (countryFormatted != null)
+                          {
+                              affilLoc.append(countryFormatted);
+                              rec.put(EVCombinedRec.COUNTRY, countryFormatted.split(AUDELIMITER));
+                          }
                         }
 
                         if (rs.getString("AUTHOR_AFFILIATION_STATE") != null)
-						{
-							String 	state = rs.getString("AUTHOR_AFFILIATION_STATE");
-									state = removeID(state,"state");
-							affilLoc.append(" ");
-							affilLoc.append(state);
+                        {
+                          String  state = rs.getString("AUTHOR_AFFILIATION_STATE");
+                          state = removeID(state,"state");
+                          affilLoc.append(" ");
+                          affilLoc.append(state);
                         }
 
                         if (rs.getString("AUTHOR_AFFILIATION_CITY") != null)
                         {
-							String 	city = rs.getString("AUTHOR_AFFILIATION_CITY");
-									city = removeID(city,"city");
+                            String  city = rs.getString("AUTHOR_AFFILIATION_CITY");
+                            city = removeID(city,"city");
                             affilLoc.append(" ");
                             affilLoc.append(city);
                         }
@@ -240,9 +289,7 @@ public class GeobaseCombiner
                 }
                 else if (rs.getString("SOURCE_EDITOR") != null)
                 {
-
                     rec.put(EVCombinedRec.EDITOR, prepareAuthor(rs.getString("SOURCE_EDITOR")));
-
                 }
 
 
@@ -272,43 +319,43 @@ public class GeobaseCombiner
                     rec.put(EVCombinedRec.ABSTRACT, abString);
                 }
 
-				String cvs = rs.getString("DESCRIPTOR_MAINTERM_GDE");
+                String cvs = rs.getString("DESCRIPTOR_MAINTERM_GDE");
                 if (cvs != null)
                 {
-					cvs = LoadLookup.removeSpecialCharacter(cvs);
+                    cvs = LoadLookup.removeSpecialCharacter(cvs);
                     rec.put(EVCombinedRec.CONTROLLED_TERMS, (rs.getString("DESCRIPTOR_MAINTERM_GDE").split(AUDELIMITER)));
                 }
 
                 if (rs.getString("DESCRIPTOR_MAINTERM_SPC") != null)
                 {
-					String sTerm = rs.getString("DESCRIPTOR_MAINTERM_SPC");
-					if (rs.getString("DESCRIPTOR_MAINTERM_SPC2") != null)
-                	{
-						sTerm = sTerm + rs.getString("DESCRIPTOR_MAINTERM_SPC2");
-					}
+                  String sTerm = rs.getString("DESCRIPTOR_MAINTERM_SPC");
+                  if (rs.getString("DESCRIPTOR_MAINTERM_SPC2") != null)
+                  {
+                    sTerm = sTerm + rs.getString("DESCRIPTOR_MAINTERM_SPC2");
+                  }
                     rec.put(EVCombinedRec.UNCONTROLLED_TERMS, (sTerm).split(AUDELIMITER));
                 }
 
                 if (rs.getString("ISSN") != null || rs.getString("E_ISSN") != null)
                 {
-					String issn = rs.getString("ISSN");
-					String e_issn = rs.getString("E_ISSN");
-					StringBuffer issnString = new StringBuffer();
+                    String issn = rs.getString("ISSN");
+                    String e_issn = rs.getString("E_ISSN");
+                    StringBuffer issnString = new StringBuffer();
 
-					if(issn != null && issn.length()>0)
-					{
-						issnString.append(issn);
-					}
+                    if(issn != null && issn.length()>0)
+                    {
+                      issnString.append(issn);
+                    }
 
-					if(issn !=null && e_issn != null && issn.length()>0 && e_issn.length()>0)
-					{
-						issnString.append(AUDELIMITER);
-					}
+                    if(issn !=null && e_issn != null && issn.length()>0 && e_issn.length()>0)
+                    {
+                      issnString.append(AUDELIMITER);
+                    }
 
-					if(e_issn != null && e_issn.length()>0)
-					{
-						issnString.append(e_issn);
-					}
+                    if(e_issn != null && e_issn.length()>0)
+                    {
+                      issnString.append(e_issn);
+                    }
 
                     rec.put(EVCombinedRec.ISSN, (issnString.toString()).split(AUDELIMITER));
                 }
@@ -335,10 +382,10 @@ public class GeobaseCombiner
                     rec.put(EVCombinedRec.SERIAL_TITLE, st);
                 }
 
-				String publisherName = rs.getString("PUBLISHER_NAME");
+                String publisherName = rs.getString("PUBLISHER_NAME");
                 if (publisherName != null)
                 {
-					publisherName = LoadLookup.removeSpecialCharacter(publisherName);
+                    publisherName = LoadLookup.removeSpecialCharacter(publisherName);
                     rec.put(EVCombinedRec.PUBLISHER_NAME, publisherName.split(AUDELIMITER));
                 }
 
@@ -349,8 +396,8 @@ public class GeobaseCombiner
                 }
 
                 if (la == null)
-				{
-				 	la = rs.getString("TITLETEXT_LANGUAGE");
+                {
+                  la = rs.getString("TITLETEXT_LANGUAGE");
                 }
 
                 if (la != null)
@@ -360,12 +407,12 @@ public class GeobaseCombiner
 
                 String docType = getGeoDocumentType(rs.getString("SOURCE_TYPE"));
 
-				/*
-                if (rec.containsKey(EVCombinedRec.CONTROLLED_TERMS))
-                {
-                    docType = docType + " CORE";
-                }
-				*/
+                /*
+                  if (rec.containsKey(EVCombinedRec.CONTROLLED_TERMS))
+                  {
+                      docType = docType + " CORE";
+                  }
+                */
 
                 rec.put(EVCombinedRec.DOCTYPE, docType);
 
@@ -420,15 +467,15 @@ public class GeobaseCombiner
 
                 String pages = rs.getString("SOURCE_PAGERANGE");
 
-				if(pages==null)
-				{
-					pages = rs.getString("PAGES");
-				}
+                if(pages==null)
+                {
+                  pages = rs.getString("PAGES");
+                }
 
-				if(pages==null)
-				{
-					pages = rs.getString("PAGECOUNT");
-				}
+                if(pages==null)
+                {
+                  pages = rs.getString("PAGECOUNT");
+                }
 
                 rec.put(EVCombinedRec.DEDUPKEY,
                         getDedupKey(rec.getString(EVCombinedRec.ISSN),
@@ -443,45 +490,63 @@ public class GeobaseCombiner
                 String notes = null;
                 if(rs.getString("CLASSIFICATION_SUBJECT")!=null)
                 {
-					notes = rs.getString("CLASSIFICATION_SUBJECT");
-				}
+                  notes = rs.getString("CLASSIFICATION_SUBJECT");
+                }
 
-				if(rs.getString("CLASSIFICATION_SUBJECT")!=null)
-				{
-					notes = notes+AUDELIMITER;
-				}
+                if(rs.getString("CLASSIFICATION_SUBJECT")!=null)
+                {
+                  notes = notes+AUDELIMITER;
+                }
 
-				if(notes != null)
-				{
-					rec.put(EVCombinedRec.NOTES, notes.split(AUDELIMITER));
-				}
+                if(notes != null)
+                {
+                  rec.put(EVCombinedRec.NOTES, notes.split(AUDELIMITER));
+                }
 
-				if (rs.getString("DESCRIPTOR_MAINTERM_RGI") != null)
-				{
-					rec.put(EVCombinedRec.CHEMICALTERMS, (rs.getString("DESCRIPTOR_MAINTERM_RGI").split(AUDELIMITER)));
-				}
+                if (rs.getString("DESCRIPTOR_MAINTERM_RGI") != null)
+                {
+                  String[] geobasemaintermsrgi = rs.getString("DESCRIPTOR_MAINTERM_RGI").split(AUDELIMITER);
+                  rec.put(EVCombinedRec.CHEMICALTERMS, geobasemaintermsrgi);
+
+                  // jam - Added lookup of DESCRIPTOR_MAINTERM_RGI for creation of INT_PATENT_CLASSIFICATION Navigator
+                  // This Navigator will be used also for mappable GeoRef Index Terms
+                  List navigatorterms = new ArrayList();
+                  GeobaseToGeorefMap lookup = GeobaseToGeorefMap.getInstance();
+                  for(int termindex = 0; termindex < geobasemaintermsrgi.length; termindex++)
+                  {
+                    String georefterm = lookup.lookupGeobaseTerm(geobasemaintermsrgi[termindex]);
+                    if(georefterm != null)
+                    {
+                      //System.out.println(" Found " + georefterm + " for " + geobasemaintermsrgi[termindex]);
+                      navigatorterms.add(georefterm);
+                    }
+                  }
+                  if(!navigatorterms.isEmpty())
+                  {
+                    rec.putIfNotNull(EVCombinedRec.INT_PATENT_CLASSIFICATION, (String[])navigatorterms.toArray(new String[]{}));
+                  }
+                }
 
                 rec.put(EVCombinedRec.ACCESSION_NUMBER,rs.getString("ACCESSION_NUMBER"));
 
                 rec.put(EVCombinedRec.PUB_SORT, Integer.toString(i));
 
-				try
-				{
-                	this.writer.writeRec(rec);
-				}
-				catch(Exception e)
-				{
-					System.out.println("MID= "+mid);
-					e.printStackTrace();
-				}
+                try
+                {
+                  this.writer.writeRec(rec);
+                }
+                catch(Exception e)
+                {
+                  System.out.println("MID= "+mid);
+                  e.printStackTrace();
+                }
             }
-
-        }
-		}
-		catch(Exception e)
-		{
-			e.printStackTrace();
-		}
+          }
+      }
+      catch(Exception e)
+      {
+        e.printStackTrace();
+      }
     }
 
     private String getLanguage(String code)
@@ -717,57 +782,6 @@ public class GeobaseCombiner
 		}
 		return outputString.toString();
 	}
-
-    public void writeCombinedByWeekHook(Connection con,
-                                        int weekNumber)
-        throws Exception
-    {
-        Statement stmt = null;
-        ResultSet rs = null;
-
-        try
-        {
-            this.writer.begin();
-            stmt = con.createStatement();
-            String sqlQuery = "select DESCRIPTOR_MAINTERM_SPC2,AUTHOR2,AUTHOR_AFFILIATION_STATE,ARTICLE_NUMBER,AUTHOR_AFFILIATION_COUNTRY,AUTHOR_AFFILIATION_CITY,ABSTRACT, m_id, doi, SOURCE_VOLUME, SOURCE_ISSUE, ACCESSION_NUMBER,AUTHOR_AFFILIATION, SOURCE_PAGERANGE, AUTHORS, ISBN, CLASSIFICATION, CONFERENCE_CITY, CONFERENCE_CODE,CONFERENCE_NAME, CODEN, DESCRIPTOR_MAINTERM_GDE, DESCRIPTOR_MAINTERM_RGI,DOCUMENT_TYPE, SOURCE_EDITOR, DESCRIPTOR_MAINTERM_SPC, CITATION_LANGUAGE, ABSTRACT_LANGUAGE, TITLETEXT_LANGUAGE, CONFERENCE_CITY, CLASSIFICATION_SUBJECT, CONFERENCE_STATE, ISSUE_TITLE, CONFERENCE_COUNTRY, CONFERENCE_DATE, PAGES, PAGECOUNT, PUBLISHER_NAME, ABBR_SOURCETITLE, ISSN,E_ISSN, CONFERENCE_SPONSORS, SOURCE_TITLE, CITATION_TITLE, TRANSLATED_TITLE, SOURCE_TYPE, VOLUME_TITLE, SOURCE_PUBLICATIONYEAR, SOURCE_PUBLICATIONDATE, load_number, CREATED_DATE, SORT_DATE from " + Combiner.TABLENAME + " where load_number ='" + weekNumber + "' AND load_number != 0 and load_number < 1000000";
-            //use for update translated_title
-            //String sqlQuery = "select DESCRIPTOR_MAINTERM_SPC2,AUTHOR2,AUTHOR_AFFILIATION_STATE,ARTICLE_NUMBER,AUTHOR_AFFILIATION_COUNTRY,AUTHOR_AFFILIATION_CITY,ABSTRACT, m_id, doi, SOURCE_VOLUME, SOURCE_ISSUE, ACCESSION_NUMBER,AUTHOR_AFFILIATION, SOURCE_PAGERANGE, AUTHORS, ISBN, CLASSIFICATION, CONFERENCE_CITY, CONFERENCE_CODE,CONFERENCE_NAME, CODEN, DESCRIPTOR_MAINTERM_GDE, DESCRIPTOR_MAINTERM_RGI,DOCUMENT_TYPE, SOURCE_EDITOR, DESCRIPTOR_MAINTERM_SPC, CITATION_LANGUAGE, ABSTRACT_LANGUAGE, TITLETEXT_LANGUAGE, CONFERENCE_CITY, CLASSIFICATION_SUBJECT, CONFERENCE_STATE, ISSUE_TITLE, CONFERENCE_COUNTRY, CONFERENCE_DATE, PAGES, PAGECOUNT, PUBLISHER_NAME, ABBR_SOURCETITLE, ISSN,E_ISSN, CONFERENCE_SPONSORS, SOURCE_TITLE, CITATION_TITLE, TRANSLATED_TITLE, SOURCE_TYPE, VOLUME_TITLE, SOURCE_PUBLICATIONYEAR, SOURCE_PUBLICATIONDATE, load_number, CREATED_DATE, SORT_DATE from " + Combiner.TABLENAME + " where translated_title is not null AND load_number != 0 and load_number < 1000000";
-            //System.out.println("sqlQuery= "+sqlQuery);
-            rs = stmt.executeQuery(sqlQuery);
-            writeRecs(rs);
-            this.writer.end();
-
-        }
-        finally
-        {
-
-            if (rs != null)
-            {
-                try
-                {
-                    rs.close();
-                }
-                catch (Exception e)
-                {
-                    e.printStackTrace();
-                }
-            }
-
-            if (stmt != null)
-            {
-                try
-                {
-                    stmt.close();
-                }
-                catch (Exception e)
-                {
-                    e.printStackTrace();
-                }
-            }
-        }
-
-    }
-
 
 	public static String getGeoDocumentType(String sourceType)
 	{
