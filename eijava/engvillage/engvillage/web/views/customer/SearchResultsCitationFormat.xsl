@@ -192,6 +192,9 @@
         <xsl:attribute name="onload">initialize()</xsl:attribute>
         <xsl:attribute name="onunload">GUnload()</xsl:attribute>
       </xsl:if>
+
+      <script language="JavaScript" type="text/javascript" src="/engresources/js/wz_tooltip.js"></script>
+
     <center>
 
       <!-- APPLY HEADER -->
@@ -295,8 +298,6 @@
       <script language="JavaScript" type="text/javascript">
       getNavigators("<xsl:value-of select="$SEARCH-ID"/>");
       </script>
-
-      <script language="JavaScript" type="text/javascript" src="/engresources/js/wz_tooltip.js"></script>
 
     </body>
     </html>
