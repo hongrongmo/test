@@ -47,6 +47,9 @@
     xmlHttpNav.send(null);
   }
 
+  function showTip() {
+    Tip(this.getAttribute("tooltip"),WIDTH,450);
+  }
   function callbackNavigators()
   {
     if (xmlHttpNav.readyState == 4)
@@ -103,8 +106,14 @@
 
               if(mods[modcount].childNodes.length > 2)
               {
-                var mouseover_title = mods[modcount].getElementsByTagName("TITLE")[0].firstChild.nodeValue;
-                modanchor.onmouseover = function() {Tip(mouseover_title,WIDTH,450);};
+                var mouseover_title = "'" + mods[modcount].getElementsByTagName("TITLE")[0].firstChild.nodeValue + "'";
+                modanchor.setAttribute("tooltip",mouseover_title);
+                modanchor.onmouseover = showTip;
+                modanchor.onmouseout = UnTip;
+
+               // modanchor.addEventListener( "mouseover", showTip, false);
+               // modanchor.addEventListener( "mouseout", UnTip, false);
+
                 modanchor.className = "SmBoldBlueText2";
               }
               else
