@@ -109,12 +109,12 @@
               <xsl:choose>
                 
                 
-                <xsl:when test="not($CUSTOMIZED-LOGO='' and cimage:containsCustomer($CUSTOMIZED-LOGO)">
+                <xsl:when test="cimage:containsCustomer($CUSTOMIZED-LOGO)">
                 	<xsl:variable name="CUSTOMER-IMAGE">
 				<xsl:value-of select="cimage:getImage($CUSTOMIZED-LOGO)"/>
 			</xsl:variable>
 			<xsl:variable name="CUSTOMER-URL">
-				<xsl:value-of select="cimage:getURL($CUSTOMIZED-LOGO"/>
+				<xsl:value-of select="cimage:getURL($CUSTOMIZED-LOGO)"/>
 			</xsl:variable>
 	             	<a href="{$CUSTOMER-URL}" border="0">
 	             		<img src="/engresources/custimages/{$CUSTOMER-IMAGE}" border="0"/>
