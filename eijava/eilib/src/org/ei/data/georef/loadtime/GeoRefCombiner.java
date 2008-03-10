@@ -269,7 +269,7 @@ public class GeoRefCombiner
           // parse out second Affilitation Countries
           if(rs.getString("AFFILIATION_SECONDARY") != null)
           {
-            Map countries = (new GRFDataDictionary()).getCountries();
+            Map countries = GRFDataDictionary.getInstance().getCountries();
             String secondaffiliations = rs.getString("AFFILIATION_SECONDARY");
             String[] affilvalues = secondaffiliations.split(AUDELIMITER);
             for(int z = 0 ; z < affilvalues.length; z++)
@@ -307,14 +307,14 @@ public class GeoRefCombiner
         }
 
         // LA
-        String laString = runtimeDocview.new LanguageDecorator(runtimeDocview.createColumnValueField("LANGUAGE_TEXT")).getValue();
-        rec.putIfNotNull(EVCombinedRec.LANGUAGE, laString);
+        String[] laStrings = runtimeDocview.new LanguageDecorator(runtimeDocview.createColumnValueField("LANGUAGE_TEXT")).getValue();
+        rec.putIfNotNull(EVCombinedRec.LANGUAGE, laStrings);
 
         // DT
-        String dtString = runtimeDocview.new DocumentTypeDecorator(runtimeDocview.createColumnValueField("DOCUMENT_TYPE")).getValue();
-        if(dtString != null)
+        String[] dtStrings = runtimeDocview.new DocumentTypeDecorator(runtimeDocview.createColumnValueField("DOCUMENT_TYPE")).getValue();
+        if(dtStrings != null)
         {
-          rec.putIfNotNull(EVCombinedRec.DOCTYPE, dtString.split(", "));
+          rec.putIfNotNull(EVCombinedRec.DOCTYPE, dtStrings);
         }
 
         // AB
@@ -557,8 +557,6 @@ public class GeoRefCombiner
 
   private class LocalEntityResolver implements EntityResolver {
 
-    private String dtdCatalogPath = "C:\\Documents and Settings\\JMoschet\\Desktop\\DTDs\\";
-
     public LocalEntityResolver() {
         // TODO Auto-generated constructor stub
     }
@@ -567,7 +565,6 @@ public class GeoRefCombiner
 //        try {
             String dtdfile = new File(systemId).getName();
             //System.out.println("<!--" + dtdfile + " == " + systemId + "-->");
-            //is = new InputStreamReader(new FileInputStream(dtdCatalogPath + dtdfile));
             InputStream in = this.getClass().getClassLoader().getResourceAsStream("org/ei/data/" + dtdfile);
             if(in != null)
             {
