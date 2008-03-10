@@ -307,14 +307,17 @@ public class GeoRefCombiner
         }
 
         // LA
-        String[] laStrings = runtimeDocview.new LanguageDecorator(runtimeDocview.createColumnValueField("LANGUAGE_TEXT")).getValue();
-        rec.putIfNotNull(EVCombinedRec.LANGUAGE, laStrings);
+        String laStrings = runtimeDocview.new LanguageDecorator(runtimeDocview.createColumnValueField("LANGUAGE_TEXT")).getValue();
+        if(laStrings != null)
+        {
+          rec.putIfNotNull(EVCombinedRec.LANGUAGE, laStrings.split(AUDELIMITER));
+        }
 
         // DT
-        String[] dtStrings = runtimeDocview.new DocumentTypeDecorator(runtimeDocview.createColumnValueField("DOCUMENT_TYPE")).getValue();
+        String dtStrings = runtimeDocview.new DocumentTypeDecorator(runtimeDocview.createColumnValueField("DOCUMENT_TYPE")).getValue();
         if(dtStrings != null)
         {
-          rec.putIfNotNull(EVCombinedRec.DOCTYPE, dtStrings);
+          rec.putIfNotNull(EVCombinedRec.DOCTYPE, dtStrings.split(AUDELIMITER));
         }
 
         // AB
