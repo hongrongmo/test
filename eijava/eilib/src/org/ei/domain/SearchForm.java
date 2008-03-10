@@ -610,8 +610,8 @@ public class SearchForm {
         return treattype;
     }
 
-   public static Map getDoctype(int selecteddbMask) {
-
+    public static Map getDoctype(int selecteddbMask)
+    {
       Map doctype = new LinkedHashMap();
 
       // NO-LIMIT
@@ -651,29 +651,11 @@ public class SearchForm {
            //(selecteddbMask & DatabaseConfig.ELT_MASK) != DatabaseConfig.ELT_MASK &&
            (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
            (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK )
-        {
-            doctype.put("JA", "Journal article");
-        }
+      {
+          doctype.put("JA", "Journal article");
+      }
 
-        if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
-            (selecteddbMask & DatabaseConfig.UPA_MASK) != DatabaseConfig.UPA_MASK &&
-            (selecteddbMask & DatabaseConfig.EUP_MASK) != DatabaseConfig.EUP_MASK &&
-            (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK &&
-            (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
-            (selecteddbMask & DatabaseConfig.ELT_MASK) != DatabaseConfig.ELT_MASK &&
-            (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
-            (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
-            (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK)
-        {
-            doctype.put("CA", "Conference article");
-        }
-        else if (selecteddbMask == DatabaseConfig.ELT_MASK )
-        {
-            doctype.put("CA", "Conference");
-        }
-
-        if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
-          (selecteddbMask & DatabaseConfig.GEO_MASK) != DatabaseConfig.GEO_MASK &&
+      if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
           (selecteddbMask & DatabaseConfig.UPA_MASK) != DatabaseConfig.UPA_MASK &&
           (selecteddbMask & DatabaseConfig.EUP_MASK) != DatabaseConfig.EUP_MASK &&
           (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK &&
@@ -682,11 +664,70 @@ public class SearchForm {
           (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
           (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
           (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK)
-        {
-            doctype.put("CP", "Conference proceeding");
-        }
+      {
+          doctype.put("CA", "Conference article");
+      }
+      else if (selecteddbMask == DatabaseConfig.ELT_MASK )
+      {
+          doctype.put("CA", "Conference");
+      }
 
-        if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
+      if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
+        (selecteddbMask & DatabaseConfig.GEO_MASK) != DatabaseConfig.GEO_MASK &&
+        (selecteddbMask & DatabaseConfig.UPA_MASK) != DatabaseConfig.UPA_MASK &&
+        (selecteddbMask & DatabaseConfig.EUP_MASK) != DatabaseConfig.EUP_MASK &&
+        (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK &&
+        (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
+        (selecteddbMask & DatabaseConfig.ELT_MASK) != DatabaseConfig.ELT_MASK &&
+        (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
+        (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
+        (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK)
+      {
+          doctype.put("CP", "Conference proceeding");
+      }
+
+      if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
+        (selecteddbMask & DatabaseConfig.GEO_MASK) != DatabaseConfig.GEO_MASK &&
+        (selecteddbMask & DatabaseConfig.UPA_MASK) != DatabaseConfig.UPA_MASK &&
+        (selecteddbMask & DatabaseConfig.EUP_MASK) != DatabaseConfig.EUP_MASK &&
+        (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK &&
+        (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
+        (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
+        (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
+        (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK)
+      {
+          doctype.put("MC", "Monograph chapter");
+      }
+
+      if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
+        (selecteddbMask & DatabaseConfig.UPA_MASK) != DatabaseConfig.UPA_MASK &&
+        (selecteddbMask & DatabaseConfig.EUP_MASK) != DatabaseConfig.EUP_MASK &&
+        (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK &&
+        (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
+        (selecteddbMask & DatabaseConfig.ELT_MASK) != DatabaseConfig.ELT_MASK &&
+        (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
+        (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
+        (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK)
+      {
+          doctype.put("MR", "Monograph review");
+      }
+
+      //RC
+      if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
+        (selecteddbMask & DatabaseConfig.GEO_MASK) != DatabaseConfig.GEO_MASK &&
+        (selecteddbMask & DatabaseConfig.UPA_MASK) != DatabaseConfig.UPA_MASK &&
+        (selecteddbMask & DatabaseConfig.EUP_MASK) != DatabaseConfig.EUP_MASK &&
+        (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK &&
+        (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
+        (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
+        (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
+        (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK)
+      {
+          doctype.put("RC", "Report chapter");
+      }
+
+      //RR
+      if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
           (selecteddbMask & DatabaseConfig.GEO_MASK) != DatabaseConfig.GEO_MASK &&
           (selecteddbMask & DatabaseConfig.UPA_MASK) != DatabaseConfig.UPA_MASK &&
           (selecteddbMask & DatabaseConfig.EUP_MASK) != DatabaseConfig.EUP_MASK &&
@@ -695,142 +736,107 @@ public class SearchForm {
           (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
           (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
           (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK)
-        {
-            doctype.put("MC", "Monograph chapter");
-        }
+      {
+          doctype.put("RR", "Report review");
+      }
 
-        if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
-          (selecteddbMask & DatabaseConfig.UPA_MASK) != DatabaseConfig.UPA_MASK &&
-          (selecteddbMask & DatabaseConfig.EUP_MASK) != DatabaseConfig.EUP_MASK &&
-          (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK &&
-          (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
-          (selecteddbMask & DatabaseConfig.ELT_MASK) != DatabaseConfig.ELT_MASK &&
-          (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
-          (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
-          (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK)
-        {
-            doctype.put("MR", "Monograph review");
-        }
+      //DS
+      if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
+        (selecteddbMask & DatabaseConfig.GEO_MASK) != DatabaseConfig.GEO_MASK &&
+        (selecteddbMask & DatabaseConfig.UPA_MASK) != DatabaseConfig.UPA_MASK &&
+        (selecteddbMask & DatabaseConfig.EUP_MASK) != DatabaseConfig.EUP_MASK &&
+        (selecteddbMask & DatabaseConfig.CBF_MASK) != DatabaseConfig.CBF_MASK &&
+        (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK &&
+        (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
+        (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
+        (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
+        (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK)
+      {
+          doctype.put("DS", "Dissertation");
+      }
 
-        //RC
-        if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
-          (selecteddbMask & DatabaseConfig.GEO_MASK) != DatabaseConfig.GEO_MASK &&
-          (selecteddbMask & DatabaseConfig.UPA_MASK) != DatabaseConfig.UPA_MASK &&
-          (selecteddbMask & DatabaseConfig.EUP_MASK) != DatabaseConfig.EUP_MASK &&
-          (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK &&
-          (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
-          (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
-          (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
-          (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK)
-        {
-            doctype.put("RC", "Report chapter");
-        }
+      if(selecteddbMask == DatabaseConfig.INS_MASK ||
+         selecteddbMask == DatabaseConfig.IBS_MASK)
+      {
+          doctype.put("UP", "Unpublished paper");
+      }
 
-        //RR
-        if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
-            (selecteddbMask & DatabaseConfig.GEO_MASK) != DatabaseConfig.GEO_MASK &&
-            (selecteddbMask & DatabaseConfig.UPA_MASK) != DatabaseConfig.UPA_MASK &&
-            (selecteddbMask & DatabaseConfig.EUP_MASK) != DatabaseConfig.EUP_MASK &&
-            (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK &&
-            (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
-            (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
-            (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
-            (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK)
-        {
-            doctype.put("RR", "Report review");
-        }
+      if(selecteddbMask == DatabaseConfig.CPX_MASK )
+      {
+          doctype.put("PA", "Patents (before 1970)");
+      }
+      else if(selecteddbMask == DatabaseConfig.CBF_MASK ||
+        selecteddbMask == DatabaseConfig.PCH_MASK ||
+        selecteddbMask == DatabaseConfig.IBS_MASK)
+      {
+          doctype.put("PA", "Patents");
+      }
+      else if(selecteddbMask == DatabaseConfig.INS_MASK)
+      {
+          doctype.put("PA", "Patents (before 1977)");
+      }
 
-        //DS
-        if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
-          (selecteddbMask & DatabaseConfig.GEO_MASK) != DatabaseConfig.GEO_MASK &&
-          (selecteddbMask & DatabaseConfig.UPA_MASK) != DatabaseConfig.UPA_MASK &&
-          (selecteddbMask & DatabaseConfig.EUP_MASK) != DatabaseConfig.EUP_MASK &&
-          (selecteddbMask & DatabaseConfig.CBF_MASK) != DatabaseConfig.CBF_MASK &&
-          (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK &&
-          (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
-          (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
-          (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
-          (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK)
-        {
-            doctype.put("DS", "Dissertation");
-        }
+      if(selecteddbMask == DatabaseConfig.UPA_MASK)
+      {
+          doctype.put("UA", "US Applications");
+          doctype.put("UG", "US Granted");
+      }
+      else if(selecteddbMask == DatabaseConfig.EUP_MASK)
+      {
+          doctype.put("EA", "European Applications");
+          doctype.put("EG", "European Granted");
+      }
+      else if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
+        (selecteddbMask & DatabaseConfig.GEO_MASK) != DatabaseConfig.GEO_MASK &&
+        (selecteddbMask & DatabaseConfig.CPX_MASK) != DatabaseConfig.CPX_MASK &&
+        (selecteddbMask & DatabaseConfig.INS_MASK) != DatabaseConfig.INS_MASK &&
+        (selecteddbMask & DatabaseConfig.IBS_MASK) != DatabaseConfig.IBS_MASK &&
+        (selecteddbMask & DatabaseConfig.CBF_MASK) != DatabaseConfig.CBF_MASK &&
+        (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK &&
+        (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
+        (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
+        (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
+        (selecteddbMask & DatabaseConfig.ELT_MASK) != DatabaseConfig.ELT_MASK &&
+        (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK)
+      {
+          doctype.put("UA", "US Applications");
+          doctype.put("UG", "US Granted");
+          doctype.put("EA", "European Applications");
+          doctype.put("EG", "European Granted");
+      }
 
-        if(selecteddbMask == DatabaseConfig.INS_MASK ||
-           selecteddbMask == DatabaseConfig.IBS_MASK)
-        {
-            doctype.put("UP", "Unpublished paper");
-        }
+      if(selecteddbMask == DatabaseConfig.PCH_MASK)
+      {
+          doctype.put("(CA or CP)","Conferences");
+          doctype.put("PA","Patents");
+          doctype.put("MC or MR or RC or RR or DS or UP", "Other documents");
+      }
 
-        if(selecteddbMask == DatabaseConfig.CPX_MASK )
-        {
-            doctype.put("PA", "Patents (before 1970)");
-        }
-        else if(selecteddbMask == DatabaseConfig.CBF_MASK ||
-          selecteddbMask == DatabaseConfig.PCH_MASK ||
-          selecteddbMask == DatabaseConfig.IBS_MASK)
-        {
-            doctype.put("PA", "Patents");
-        }
-        else if(selecteddbMask == DatabaseConfig.INS_MASK)
-        {
-            doctype.put("PA", "Patents (before 1977)");
-        }
+      if(selecteddbMask == DatabaseConfig.CBN_MASK)
+      {
+          doctype.put("Journal","Journal article");
+          doctype.put("Advertizement","Advertisement");
+          doctype.put("Book","Book");
+          doctype.put("Directory","Directory");
+          doctype.put("Company","Company Report");
+          doctype.put("Stockbroker","Stockbroker Report");
+          doctype.put("Market","Market Research Report");
+          doctype.put("Press","Press Release");
+      }
 
-        if(selecteddbMask == DatabaseConfig.UPA_MASK)
-        {
-            doctype.put("UA", "US Applications");
-            doctype.put("UG", "US Granted");
-        }
-        else if(selecteddbMask == DatabaseConfig.EUP_MASK)
-        {
-            doctype.put("EA", "European Applications");
-            doctype.put("EG", "European Granted");
-        }
-        else if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
-          (selecteddbMask & DatabaseConfig.GEO_MASK) != DatabaseConfig.GEO_MASK &&
-          (selecteddbMask & DatabaseConfig.CPX_MASK) != DatabaseConfig.CPX_MASK &&
-          (selecteddbMask & DatabaseConfig.INS_MASK) != DatabaseConfig.INS_MASK &&
-          (selecteddbMask & DatabaseConfig.IBS_MASK) != DatabaseConfig.IBS_MASK &&
-          (selecteddbMask & DatabaseConfig.CBF_MASK) != DatabaseConfig.CBF_MASK &&
-          (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK &&
-          (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
-          (selecteddbMask & DatabaseConfig.CBN_MASK) != DatabaseConfig.CBN_MASK &&
-          (selecteddbMask & DatabaseConfig.CHM_MASK) != DatabaseConfig.CHM_MASK &&
-          (selecteddbMask & DatabaseConfig.ELT_MASK) != DatabaseConfig.ELT_MASK &&
-          (selecteddbMask & DatabaseConfig.PCH_MASK) != DatabaseConfig.PCH_MASK)
-        {
-            doctype.put("UA", "US Applications");
-            doctype.put("UG", "US Granted");
-            doctype.put("EA", "European Applications");
-            doctype.put("EG", "European Granted");
-        }
+      if(selecteddbMask == DatabaseConfig.ELT_MASK)
+      {
+          doctype.put("AB","Abstract");
+      }
 
-        if(selecteddbMask == DatabaseConfig.PCH_MASK)
-        {
-            doctype.put("(CA or CP)","Conferences");
-            doctype.put("PA","Patents");
-            doctype.put("MC or MR or RC or RR or DS or UP", "Other documents");
-        }
+      // jam - added MAP exclusively for GeoRef
+      if(selecteddbMask == DatabaseConfig.GRF_MASK)
+      {
+          doctype.put("M", "Map");
+      }
 
-        if(selecteddbMask == DatabaseConfig.CBN_MASK)
-        {
-            doctype.put("Journal","Journal article");
-            doctype.put("Advertizement","Advertisement");
-            doctype.put("Book","Book");
-            doctype.put("Directory","Directory");
-            doctype.put("Company","Company Report");
-            doctype.put("Stockbroker","Stockbroker Report");
-            doctype.put("Market","Market Research Report");
-            doctype.put("Press","Press Release");
-        }
-
-        if(selecteddbMask == DatabaseConfig.ELT_MASK)
-        {
-            doctype.put("AB","Abstract");
-        }
-
-        return doctype;
-    }
+      return doctype;
+    } // getDoctype()
 
 
   public static Map getLanguage(int selecteddbMask)
@@ -838,7 +844,7 @@ public class SearchForm {
     Map lang = new LinkedHashMap();
     if((selecteddbMask & DatabaseConfig.PAG_MASK) == DatabaseConfig.PAG_MASK)
     {
-            lang.put("NO-LIMIT", "Language not available");
+      lang.put("NO-LIMIT", "Language not available");
     }
     else
     {
@@ -902,14 +908,14 @@ public class SearchForm {
     private static int calEndYear(int selectedDbMask)
     {
       if(selectedDbMask == DatabaseConfig.CBF_MASK)
-        {
-        return DatabaseConfig.CBF_ENDYEAR;
-        }
+      {
+      return DatabaseConfig.CBF_ENDYEAR;
+      }
       if(selectedDbMask == DatabaseConfig.IBS_MASK)
-        {
-        return DatabaseConfig.IBS_ENDYEAR;
-        }
-        return SearchForm.ENDYEAR;
+      {
+      return DatabaseConfig.IBS_ENDYEAR;
+      }
+      return SearchForm.ENDYEAR;
     }
 
     public static String getYear(int selectedDbMask,
