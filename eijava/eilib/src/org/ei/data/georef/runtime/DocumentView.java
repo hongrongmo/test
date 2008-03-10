@@ -125,6 +125,9 @@ public abstract class DocumentView {
       addDocumentValue(Keys.PAGE_RANGE, new SimpleValueField(getPages()), new PageRange(StringUtil.EMPTY_STRING, perl));
       addDocumentValue(Keys.PUBLICATION_YEAR, new SimpleValueField(getYear()), new Year(StringUtil.EMPTY_STRING, perl));
 
+      // LA is always included - languages in this case.
+      ht.put(Keys.LANGUAGE, new XMLMultiWrapper(Keys.LANGUAGE, getLanguage()));
+
       // INDEX_TERMS (CVS)
       if(isIncluded(Keys.INDEX_TERM))
       {
@@ -159,7 +162,7 @@ public abstract class DocumentView {
         }
         if(strsponsor != null)
         {
-          addDocumentValue(Keys.RSRCH_SPONSOR, new PublisherDecorator(new SimpleValueField(strsponsor)));
+          addDocumentValue(Keys.RSRCH_SPONSOR, new SimpleValueField(strsponsor));
         }
       }
 
@@ -229,14 +232,15 @@ public abstract class DocumentView {
       addDocumentValue(GRFDocBuilder.HOLDING_LIBRARY, createColumnValueField("HOLDING_LIBRARY"));
       addDocumentValue(GRFDocBuilder.TARGET_AUDIENCE, createColumnValueField("TARGET_AUDIENCE"));
 
-      addDocumentValue(GRFDocBuilder.GRF_URLS, new URLDecorator(createColumnValueField("URL")));
-      addDocumentValue(Keys.COLLECTION_TITLE, new TitleDecorator(createColumnValueField("TITLE_OF_COLLECTION")));
-      addDocumentValue(Keys.PUBLISHER, new PublisherDecorator(new SimpleValueField(getPublisher())));
       addDocumentValue(Keys.COUNTRY_OF_PUB, new CountryDecorator(createColumnValueField("COUNTRY_OF_PUBLICATION")));
-      addDocumentValue(GRFDocBuilder.AFFILIATION_OTHER, new OtherAffiliationDecorator(createColumnValueField("AFFILIATION_SECONDARY")));
-      addDocumentValue(Keys.DOC_TYPE, new DocumentTypeDecorator(createColumnValueField("DOCUMENT_TYPE")));
-      addDocumentValue(Keys.LANGUAGE, new NonEnglishLanguageDecorator(new LanguageDecorator(createColumnValueField("LANGUAGE_TEXT"))));
+      addDocumentValue(Keys.COLLECTION_TITLE, new TitleDecorator(createColumnValueField("TITLE_OF_COLLECTION")));
       addDocumentValue(Keys.ABSTRACT_TYPE, new BibliographicLevelDecorator(createColumnValueField("BIBLIOGRAPHIC_LEVEL_CODE")));
+
+      addDocumentValue(Keys.PUBLISHER, new SimpleValueField(getPublisher()));
+      addDocumentValue(GRFDocBuilder.AFFILIATION_OTHER, createColumnValueField("AFFILIATION_SECONDARY"));
+
+      addDocumentValue(GRFDocBuilder.GRF_URLS, new URLDecorator(createColumnValueField("URL")));
+      addDocumentValue(Keys.DOC_TYPE, new DocumentTypeDecorator(createColumnValueField("DOCUMENT_TYPE")));
       addDocumentValue(GRFDocBuilder.CATEGORY, new CategoryDecorator(createColumnValueField("CATEGORY_CODE")));
 
       EIDoc eiDoc = new EIDoc(did, ht, getFormat());
@@ -270,8 +274,7 @@ public abstract class DocumentView {
     }
 
     /*
-     * addDocumentValue wrappers. These check to see if a field is included
-     * before calling getValue()
+     * addDocumentValue wrappers for simple key and String value
      */
     public void addDocumentValue(Key key, String strfieldvalue)
         throws Exception
@@ -279,11 +282,19 @@ public abstract class DocumentView {
       addDocumentValue(key, new SimpleValueField(strfieldvalue));
     }
 
+    /*
+     * addDocumentValue wrappers for simple key DocumentField value
+     */
     public void addDocumentValue(Key key, DocumentField field)
     {
       addDocumentValue(key, field, new XMLWrapper(key,StringUtil.EMPTY_STRING));
     }
 
+    /*
+     * addDocumentValue checks to see if a field is included before calling getValue()!!!
+     * addDocumentValue ALWAYS calls split on the field value, therefore turning simple concatenated strings
+     * into multiple values
+     */
     public void addDocumentValue(Key key, DocumentField field, ElementData data)
     {
       if(isIncluded(key))
@@ -291,8 +302,14 @@ public abstract class DocumentView {
         String fieldvalue = field.getValue();
         if(fieldvalue != null)
         {
-          //System.out.println("Setting " + key.getKey() + " value =" + fieldvalue);
-          data.setElementData(new String[]{fieldvalue});
+          // Is this a hack ? - Tf there IS more than one value in the field string,
+          // change the data element to a XMLMultiWrapper
+          String[] multivalues = fieldvalue.split(GRFDocBuilder.AUDELIMITER);
+          if(multivalues.length > 1)
+          {
+            data = new XMLMultiWrapper(key,new String[]{});
+          }
+          data.setElementData(multivalues);
           putElementData(key, data);
         }
       }
@@ -445,6 +462,27 @@ public abstract class DocumentView {
       return (strvalue == null || strvalue.length() < GRFDocBuilder.MINIMUM_ABSTRACT_LENGTH) ? null : strvalue;
     }
 
+    public String[] getLanguage()
+    {
+      List values = new ArrayList();
+      String[] strvalue = new LanguageDecorator(createColumnValueField("LANGUAGE_TEXT")).getValue().split(GRFDocBuilder.AUDELIMITER);
+      if(strvalue != null)
+      {
+        for(int i = 0; i < strvalue.length; i++)
+        {
+          if(!strvalue[i].equalsIgnoreCase("English") && !strvalue[i].equalsIgnoreCase("EL"))
+          {
+            values.add(strvalue[i]);
+          }
+        }
+      }
+      if(!values.isEmpty())
+      {
+        strvalue = (String[]) values.toArray(new String[]{});
+      }
+      return strvalue;
+    }
+
     public String getPages()
     {
       String strvalue = null;
@@ -507,7 +545,7 @@ public abstract class DocumentView {
 
 
     /* =========================================================================
-     * DocumentField
+     * DocumentField classes
      * =========================================================================
      */
     public abstract class DocumentField
@@ -607,42 +645,6 @@ public abstract class DocumentView {
       }
     }
 
-    public abstract class ReplaceDelimiterDecorator extends FieldDecorator
-    {
-      private DocumentField field;
-      public ReplaceDelimiterDecorator(DocumentField field)
-      {
-        this.field = field;
-      }
-      public String getValue()
-      {
-        String strvalue = field.getValue();
-        if(strvalue != null)
-        {
-          strvalue = strvalue.replaceAll(GRFDocBuilder.AUDELIMITER,getSeparator());
-        }
-        return strvalue;
-      }
-      public abstract String getSeparator();
-    }
-
-    public class PublisherDecorator extends ReplaceDelimiterDecorator
-    {
-      public PublisherDecorator(DocumentField field)
-      {
-        super(field);
-      }
-      public String getSeparator() { return ";"; }
-    }
-
-    public class OtherAffiliationDecorator extends ReplaceDelimiterDecorator
-    {
-      public OtherAffiliationDecorator(DocumentField field)
-      {
-        super(field);
-      }
-      public String getSeparator() { return ";"; }
-    }
     public static Pattern patternYYYYMMDD = Pattern.compile("^(\\d{4})(\\d{2})(\\d{2})$");
 
     public class ConferenceDateDecorator extends FieldDecorator
@@ -677,21 +679,21 @@ public abstract class DocumentView {
       }
       public String getValue()
       {
-        String strtitle = null;
+        String strissn = null;
         String strvalue = field.getValue();
         if(strvalue != null)
         {
           String[] strvalues = strvalue.split(GRFDocBuilder.IDDELIMITER);
           if(strvalues != null && strvalues.length > 1)
           {
-            strtitle = strvalues[0];
+            strissn = strvalues[0];
           }
           else
           {
-            strtitle = strvalue;
+            strissn= strvalue;
           }
         }
-        return strtitle;
+        return strissn;
       }
     }
 
@@ -771,7 +773,7 @@ public abstract class DocumentView {
     */
     public abstract class LookupValueDecorator extends FieldDecorator
     {
-      protected GRFDataDictionary dataDictionary = new GRFDataDictionary();
+      protected GRFDataDictionary dataDictionary = GRFDataDictionary.getInstance();
 
       protected  DocumentField field;
       public LookupValueDecorator(DocumentField field)
@@ -793,39 +795,6 @@ public abstract class DocumentView {
         return decoratedvalue;
       }
       public abstract Map getLookupTable();
-    }
-
-    public class LanguageDecorator extends LookupValueDecorator
-    {
-      public LanguageDecorator(DocumentField field)
-      {
-        super(field);
-      }
-      public Map getLookupTable()
-      {
-        return dataDictionary.getLanguages();
-      }
-    }
-
-    public class NonEnglishLanguageDecorator extends LanguageDecorator
-    {
-      public NonEnglishLanguageDecorator(DocumentField field)
-      {
-        super(field);
-      }
-      public String getValue()
-      {
-        String strvalue = field.getValue();
-        if((strvalue != null) && !strvalue.equalsIgnoreCase("English") && !strvalue.equalsIgnoreCase("EL"))
-        {
-          strvalue = super.getValue();
-        }
-        else
-        {
-          strvalue = null;
-        }
-        return strvalue;
-      }
     }
 
     public class CountryDecorator extends LookupValueDecorator
@@ -860,15 +829,17 @@ public abstract class DocumentView {
     * This decorator extends the LookupValueDecorator by splitting the code into multiple values, based on a split expression
     * and then conctenating each decorated value into a single string, using a concatenationstring to join the decorated values
     */
+
     public abstract class MultiValueLookupValueDecorator extends LookupValueDecorator
     {
       public MultiValueLookupValueDecorator(DocumentField field)
       {
         super(field);
       }
+
       public String getValue()
       {
-        String decoratedvalue = null;
+        List decoratedvalues = new ArrayList();
         String strvalue = field.getValue();
 
         if(strvalue != null)
@@ -883,14 +854,17 @@ public abstract class DocumentView {
             String strtranslated = dataDictionary.translateValue(codes[i],getLookupTable());
             if(strtranslated != null)
             {
-              decoratedvalue = (decoratedvalue == null) ? strtranslated : decoratedvalue.concat(getConcatenationString()).concat(strtranslated);
+              decoratedvalues.add(strtranslated);
             }
           }
         }
-        return decoratedvalue;
+        if(!decoratedvalues.isEmpty())
+        {
+          strvalue = StringUtil.join(decoratedvalues, GRFDocBuilder.AUDELIMITER);
+        }
+        return strvalue;
       }
       public abstract Pattern getSplitPattern();
-      public abstract String getConcatenationString();
     }
 
     public class CategoryDecorator extends MultiValueLookupValueDecorator
@@ -900,10 +874,22 @@ public abstract class DocumentView {
         super(field);
       }
       public Pattern getSplitPattern() { return Pattern.compile(GRFDocBuilder.AUDELIMITER); }
-      public String getConcatenationString() { return "; "; }
       public Map getLookupTable()
       {
         return dataDictionary.getCategories();
+      }
+    }
+
+    public class LanguageDecorator extends MultiValueLookupValueDecorator
+    {
+      public LanguageDecorator(DocumentField field)
+      {
+        super(field);
+      }
+      public Pattern getSplitPattern() { return Pattern.compile(GRFDocBuilder.AUDELIMITER); }
+      public Map getLookupTable()
+      {
+        return dataDictionary.getLanguages();
       }
     }
 
@@ -915,7 +901,6 @@ public abstract class DocumentView {
       }
       // empty pattern will split string into single characters
       public Pattern getSplitPattern() { return Pattern.compile(StringUtil.EMPTY_STRING); }
-      public String getConcatenationString() { return ", "; }
       public Map getLookupTable()
       {
         return dataDictionary.getDocumenttypes();
@@ -931,7 +916,7 @@ public abstract class DocumentView {
 
       public String getValue()
       {
-        String decoratedvalue = null;
+        List decoratedvalues = new ArrayList();
         String strvalue = field.getValue();
 
         if(strvalue != null)
@@ -948,28 +933,30 @@ public abstract class DocumentView {
             if(strtranslated != null)
             {
               strtranslated = strtranslated.concat(" [").concat(urlstrings[1]).concat("] ");
-              decoratedvalue = (decoratedvalue == null) ? strtranslated : decoratedvalue.concat(getConcatenationString()).concat(strtranslated);
+              decoratedvalues.add(strtranslated);
             }
           }
         }
-        return decoratedvalue;
+        if(!decoratedvalues.isEmpty())
+        {
+            strvalue = StringUtil.join(decoratedvalues, GRFDocBuilder.AUDELIMITER);
+        }
+        return strvalue;
       }
 
       public Pattern getSplitPattern() { return Pattern.compile(GRFDocBuilder.AUDELIMITER); }
-      public String getConcatenationString() { return ", "; }
       public Map getLookupTable()
       {
-        Map urlmap = new HashMap();
+        Map urltypes = new HashMap();
 
-        urlmap.put("F","Full-text");
-        urlmap.put("A","Availability");
-        urlmap.put("P","Publisher");
-        urlmap.put("S","Series");
+        urltypes.put("F","Full-text");
+        urltypes.put("A","Availability");
+        urltypes.put("P","Publisher");
+        urltypes.put("S","Series");
 
-        return urlmap;
+        return urltypes;
       }
     }
-
 
 } //  End of DocumentView class
 
