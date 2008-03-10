@@ -52,7 +52,7 @@ public class GRFDatabase extends Database
       return Arrays.asList(new SortField[]{SortField.RELEVANCE, SortField.AUTHOR, SortField.YEAR, SortField.SOURCE});
     }
 
-    private DataDictionary dataDictionary = new GRFDataDictionary();
+    private DataDictionary dataDictionary = GRFDataDictionary.getInstance();
     public int getStartYear(boolean hasBackFile)
     {
       return 1966;
