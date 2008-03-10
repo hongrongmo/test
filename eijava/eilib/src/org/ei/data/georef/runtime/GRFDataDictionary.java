@@ -8,9 +8,21 @@ import java.util.HashMap;
 
 public class GRFDataDictionary implements DataDictionary
 {
-    public GRFDataDictionary()
+    private static GRFDataDictionary instance = null;
+
+    private GRFDataDictionary()
     {
 
+    }
+
+    public static GRFDataDictionary getInstance() {
+      if(instance == null)
+      {
+        synchronized (GRFDataDictionary.class) {
+          instance = new GRFDataDictionary();
+        }
+      }
+      return instance;
     }
 
     public Hashtable getClassCodes() {
