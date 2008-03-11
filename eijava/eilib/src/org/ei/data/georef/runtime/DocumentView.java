@@ -830,6 +830,9 @@ public abstract class DocumentView {
     * and then conctenating each decorated value into a single string, using a concatenationstring to join the decorated values
     */
 
+    public static Pattern patternAUDELIMITER = Pattern.compile(GRFDocBuilder.AUDELIMITER);
+    public static Pattern patternEMPTY_STRING = Pattern.compile(StringUtil.EMPTY_STRING);
+
     public abstract class MultiValueLookupValueDecorator extends LookupValueDecorator
     {
       public MultiValueLookupValueDecorator(DocumentField field)
@@ -873,7 +876,7 @@ public abstract class DocumentView {
       {
         super(field);
       }
-      public Pattern getSplitPattern() { return Pattern.compile(GRFDocBuilder.AUDELIMITER); }
+      public Pattern getSplitPattern() { return patternAUDELIMITER; }
       public Map getLookupTable()
       {
         return dataDictionary.getCategories();
@@ -886,7 +889,7 @@ public abstract class DocumentView {
       {
         super(field);
       }
-      public Pattern getSplitPattern() { return Pattern.compile(GRFDocBuilder.AUDELIMITER); }
+      public Pattern getSplitPattern() { return patternAUDELIMITER; }
       public Map getLookupTable()
       {
         return dataDictionary.getLanguages();
@@ -900,10 +903,95 @@ public abstract class DocumentView {
         super(field);
       }
       // empty pattern will split string into single characters
-      public Pattern getSplitPattern() { return Pattern.compile(StringUtil.EMPTY_STRING); }
+      public Pattern getSplitPattern() { return patternEMPTY_STRING; }
       public Map getLookupTable()
       {
         return dataDictionary.getDocumenttypes();
+      }
+    }
+
+    public class DocumentTypeMappingDecorator extends MultiValueLookupValueDecorator
+    {
+      public DocumentTypeMappingDecorator(DocumentField field)
+      {
+        super(field);
+      }
+      public DocumentTypeMappingDecorator(String stringvalue)
+      {
+        super(new SimpleValueField(stringvalue));
+      }
+      public String getValue()
+      {
+        List decoratedvalues = new ArrayList();
+        String strvalue = field.getValue();
+
+        // passed in value is <DOCTYPE>AUDELIMITER<BIBOCDE>
+        String[] mapcodes = strvalue.split(GRFDocBuilder.AUDELIMITER);
+        if((mapcodes != null) && (mapcodes.length == 2))
+        {
+          String doctypes = mapcodes[0];
+          String bibcode = mapcodes[1];
+          // doctypes are repaeatable but have NO delimieter
+          // so split the doctype string into an array of single characters
+          if(doctypes != null)
+          {
+            String[] doctypecodes = new String[]{doctypes};
+            if(getSplitPattern().matcher(doctypes).find())
+            {
+              doctypecodes = getSplitPattern().split(doctypes);
+            }
+            for(int i = 0; i < doctypecodes.length; i++)
+            {
+              // combine each doctype with the bibliographic code to lookup the EV system wide document type
+              String strtranslated = dataDictionary.translateValue(doctypecodes[i].concat(bibcode),getLookupTable());
+              if(strtranslated != null)
+              {
+                decoratedvalues.add(strtranslated);
+              }
+            }
+          }
+        }
+        if(!decoratedvalues.isEmpty())
+        {
+          strvalue = StringUtil.join(decoratedvalues, GRFDocBuilder.AUDELIMITER);
+        }
+        return strvalue;
+      }
+      // empty pattern will split string into single characters
+      public Pattern getSplitPattern() { return Pattern.compile(StringUtil.EMPTY_STRING); }
+      public Map getLookupTable()
+      {
+        Map mappings = new HashMap();
+
+/*
+Compendex/EV system document type strings and codes
+
+ (str.equals("JA")){str = "Journal article (JA)";}
+(str.equals("CA")){str = "Conference article (CA)";}
+(str.equals("CP")){str = "Conference proceeding (CP)";}
+(str.equals("MC")){str = "Monograph chapter (MC)";}
+(str.equals("MR")){str = "Monograph review (MR)";}
+(str.equals("RC")){str = "Report chapter (RC)";}
+(str.equals("RR")){str = "Report review (RR)";}
+(str.equals("DS")){str = "Dissertation (DS)";}
+(str.equals("UP")){str = "Unpublished paper (UP)";}
+*/
+
+        mappings.put("SA","JA");
+        mappings.put("BA","CA");
+        mappings.put("RA","RC");
+        mappings.put("CA","CA");
+        mappings.put("MA","M");
+        mappings.put("TA","DS");
+
+        mappings.put("SM","MR");
+        mappings.put("BM","MR");
+        mappings.put("RM","RR");
+        mappings.put("CM","CP");
+        mappings.put("MM","M");
+        mappings.put("TM","DS");
+
+        return mappings;
       }
     }
 
