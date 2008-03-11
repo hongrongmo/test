@@ -981,16 +981,32 @@ Compendex/EV system document type strings and codes
         mappings.put("BA","CA");
         mappings.put("RA","RC");
         mappings.put("CA","CA");
-        mappings.put("MA","M");
+        mappings.put("MA","MP");
         mappings.put("TA","DS");
 
         mappings.put("SM","MR");
         mappings.put("BM","MR");
         mappings.put("RM","RR");
         mappings.put("CM","CP");
-        mappings.put("MM","M");
+        mappings.put("MM","MP");
         mappings.put("TM","DS");
+/*
+// GeoRef Collective Level
+        mappings.put("SC","MR");
+        mappings.put("BC","MR");
+        mappings.put("RC","RR");
+        mappings.put("CC","CP");
+        mappings.put("MC","MP");
+        mappings.put("TC","DS");
 
+// GeoRef Serial Level
+        mappings.put("SS","MR");
+        mappings.put("BS","MR");
+        mappings.put("RS","RR");
+        mappings.put("CS","CP");
+        mappings.put("MS","MP");
+        mappings.put("TS","DS");
+*/
         return mappings;
       }
     }
