@@ -21,6 +21,7 @@ var CBF = 262144;
 var IBS = 1048576;
 var UPT = 524288;
 var INSPEC_BACKFILE = 1048576;
+var GRF = 2097152;
 
 var startYear;
 var stringYear;
@@ -651,6 +652,12 @@ function generateDoctypes(selecteddbMask)
 	//doctypes[index++] = new Field("Other", "Other");
   }
 
+  // jam - added MAP exclusively for GeoRef
+  if(selecteddbMask == GRF)
+  {
+    doctypes[index++] = new Field("MP", "Map");
+  }
+
   return doctypes;
 
 }
@@ -715,12 +722,12 @@ function generateTreattypes(selecteddbMask)
    {
       treattypes[index++] = new Field("BIO", "Biographical");
    }
-   
+
    if(selecteddbMask  == INS)
    {
    	treattypes[index++] = new Field("BIB", "Bibliography");
    }
-   
+
 
    //ECO
    if((selecteddbMask & GEO) != GEO &&
