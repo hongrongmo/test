@@ -832,7 +832,7 @@ public class SearchForm {
       // jam - added MAP exclusively for GeoRef
       if(selecteddbMask == DatabaseConfig.GRF_MASK)
       {
-          doctype.put("M", "Map");
+          doctype.put("MP", "Map");
       }
 
       return doctype;
