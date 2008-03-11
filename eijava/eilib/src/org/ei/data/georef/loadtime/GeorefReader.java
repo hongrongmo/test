@@ -96,8 +96,8 @@ public class GeorefReader {
 			if (article.getChild("A01") != null) {
 				Element issn = article.getChild("A01");
 				if (issn.getChild("A01_2") != null) {
-					record.put("ISSN", concatISSN(article,"P"));
-					record.put("EISSN", concatISSN(article,"E"));
+					record.put("ISSN", concatISSN(article, "P"));
+					record.put("EISSN", concatISSN(article, "E"));
 				}
 			}
 
@@ -218,7 +218,7 @@ public class GeorefReader {
 					}
 					if (title.getChild("A14_4") != null) {
 						record.put("AUTH_AFF_CO", new StringBuffer(title
-								.getChild("A14_3").getTextTrim()));
+								.getChild("A14_4").getTextTrim()));
 					}
 
 					record.put("AUTH_ADD", affAdd.toString());
@@ -239,7 +239,7 @@ public class GeorefReader {
 					}
 					if (title.getChild("A15_4") != null) {
 						record.put("AUTH_AFF_CO", new StringBuffer(title
-								.getChild("A15_3").getTextTrim()));
+								.getChild("A15_4").getTextTrim()));
 					}
 
 					record.put("AUTH_ADD", affAdd.toString());
@@ -299,7 +299,7 @@ public class GeorefReader {
 			if (article.getChild("A21") != null) {
 				record.put("A21", new StringBuffer(article.getChild("A21")
 						.getTextTrim()));
-				loadNumber = new String(article.getChild("A21").getTextTrim());
+				
 			}
 
 			// LANGUAGE TEXT
@@ -361,8 +361,11 @@ public class GeorefReader {
 			// DATE OF MEETING
 			if (article.getChild("A32") != null) {
 				Element dateOfMeeting = article.getChild("A32");
+				if(dateOfMeeting.getChild("A32_1") != null)
+				{
 				record.put("A32", new StringBuffer(dateOfMeeting.getChild(
 						"A32_1").getTextTrim()));
+				}
 			}
 
 			// REPORT NUMBER
@@ -494,6 +497,7 @@ public class GeorefReader {
 			if (article.getChild("Z44") != null) {
 				record.put("Z44", new StringBuffer(article.getChild("Z44")
 						.getTextTrim()));
+				loadNumber = new String(article.getChild("Z44").getTextTrim());
 			}
 
 			// INDEX CODE
@@ -710,7 +714,7 @@ public class GeorefReader {
 				if (t.getChild(elemSubName) != null) {
 					getMixData(t.getChild(elemSubName).getContent(), field);
 					field.append(IDDELIMITER);
-					//field.append(",");
+					// field.append(",");
 				}
 
 				elemSubName = elemName + "_2";
@@ -718,7 +722,7 @@ public class GeorefReader {
 				if (t.getChild(elemSubName) != null) {
 					getMixData(t.getChild(elemSubName).getContent(), field);
 					field.append(IDDELIMITER);
-					//field.append(",");
+					// field.append(",");
 				}
 
 				elemSubName = elemName + "_4";
@@ -840,10 +844,10 @@ public class GeorefReader {
 		}
 	}
 
-	public StringBuffer concatISSN(Element e,  String issnType) {
+	public StringBuffer concatISSN(Element e, String issnType) {
 		String elemName = "A01";
 		int subInt = 2;
-		
+
 		StringBuffer field = new StringBuffer();
 		List lt = e.getChildren();
 
@@ -852,9 +856,10 @@ public class GeorefReader {
 
 			if (t.getName().equals(elemName)) {
 				String elemSubName = elemName + "_" + subInt;
-				String elemSubType= elemName + "_1";
-				
-				if (t.getChild(elemSubName) != null && t.getChild(elemSubType).getText().equals(issnType)) {
+				String elemSubType = elemName + "_1";
+
+				if (t.getChild(elemSubName) != null
+						&& t.getChild(elemSubType).getText().equals(issnType)) {
 					getMixData(t.getChild(elemSubName).getContent(), field);
 					field.append(AUDELIMITER);
 				}
@@ -867,7 +872,7 @@ public class GeorefReader {
 			return field;
 		}
 	}
-	
+
 	private StringBuffer getRepeatable(Element e, String name) {
 		StringBuffer field = new StringBuffer();
 		List lt = e.getChildren();
@@ -922,8 +927,11 @@ public class GeorefReader {
 
 				if (t.getChild(elemSubNameOne) != null) {
 					field.append(t.getChild(elemSubNameOne).getText());
-					field.append(", ");
-					field.append(t.getChild(elemSubNameFour).getText());
+					if(t.getChild(elemSubNameFour) != null)
+					{
+						field.append(", ");
+						field.append(t.getChild(elemSubNameFour).getText());
+					}
 				}
 
 				field.append(AUDELIMITER);
@@ -951,10 +959,39 @@ public class GeorefReader {
 
 				if (t.getChild(elemSubNameOne) != null) {
 					field.append(t.getChild(elemSubNameOne).getText());
-					field.append(", ");
-					field.append(t.getChild(elemSubNameThree).getText());
+					if(t.getChild(elemSubNameThree) != null)
+					{
+						field.append(", ");
+						field.append(t.getChild(elemSubNameThree).getText());
+					}
 				}
 
+				field.append(AUDELIMITER);
+
+			}
+		}
+
+		if (field.lastIndexOf(AUDELIMITER) != -1) {
+			return field.delete(field.lastIndexOf(AUDELIMITER), field.length());
+		} else {
+			return field;
+		}
+	}
+
+	private StringBuffer getCoordinates(Element e) {
+		StringBuffer field = new StringBuffer();
+		List lt = e.getChildren();
+
+		for (int i = 0; i < lt.size(); i++) {
+			Element t = (Element) lt.get(i);
+
+			if (t.getName().equals("Z36")) {
+				if (t.getAttribute("att7") != null) {
+					field.append(t.getAttribute("att7").getValue());
+					field.append(IDDELIMITER);
+				}
+
+				getMixData(t.getContent(), field);
 				field.append(AUDELIMITER);
 
 			}
