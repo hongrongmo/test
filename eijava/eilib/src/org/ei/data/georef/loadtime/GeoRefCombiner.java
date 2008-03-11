@@ -47,10 +47,17 @@ public class GeoRefCombiner
     driver  = args[1];
     username  = args[2];
     password  = args[3];
-    int loadNumber = Integer.parseInt(args[4]);
+    int loadNumber = 0;
     int recsPerfile = Integer.parseInt(args[5]);
     int exitAt = Integer.parseInt(args[6]);
     tablename = args[7];
+
+    try {
+      loadNumber = Integer.parseInt(args[4]);
+    }
+    catch(NumberFormatException e) {
+      loadNumber = 0;
+    }
 
     Combiner.TABLENAME = tablename;
     Combiner.EXITNUMBER = exitAt;
@@ -67,6 +74,18 @@ public class GeoRefCombiner
                                   username,
                                   password,
                                   loadNumber);
+    }
+    // extract the whole thing
+    else if(loadNumber == 0)
+    {
+      for(yearIndex = 1960; yearIndex <= 2008; yearIndex++)
+      {
+        c.writeCombinedByYear(url,
+                            driver,
+                            username,
+                            password,
+                            yearIndex);
+      }
     }
     else
     {
