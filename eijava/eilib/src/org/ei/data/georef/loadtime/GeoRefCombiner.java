@@ -78,7 +78,7 @@ public class GeoRefCombiner
     // extract the whole thing
     else if(loadNumber == 0)
     {
-      for(yearIndex = 1960; yearIndex <= 2008; yearIndex++)
+      for(int yearIndex = 1960; yearIndex <= 2008; yearIndex++)
       {
         c.writeCombinedByYear(url,
                             driver,
