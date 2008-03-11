@@ -336,8 +336,17 @@ public class GeoRefCombiner
         String dtStrings = runtimeDocview.new DocumentTypeDecorator(runtimeDocview.createColumnValueField("DOCUMENT_TYPE")).getValue();
         if(dtStrings != null)
         {
+          // Get EV system DOC_TYPE codes for indexing and append them to (or use in favor of ?) the GeoRef values
+          String mappingcode = runtimeDocview.createColumnValueField("DOCUMENT_TYPE").getValue().concat(AUDELIMITER).concat(runtimeDocview.createColumnValueField("BIBLIOGRAPHIC_LEVEL_CODE").getValue());
+          if(mappingcode != null)
+          {
+            // DocumentTypeMappingDecorator takes <DOCTYPE>AUDELIMITER<BIBCODE> String as field argument
+            mappingcode = runtimeDocview.new DocumentTypeMappingDecorator(mappingcode).getValue();
+            dtStrings = dtStrings.concat(AUDELIMITER).concat(mappingcode);
+          }
           rec.putIfNotNull(EVCombinedRec.DOCTYPE, dtStrings.split(AUDELIMITER));
         }
+
 
         // AB
         String abString =  StringUtil.getStringFromClob(rs.getClob("ABSTRACT"));
