@@ -442,7 +442,12 @@ public class GeoRefCombiner
         rec.putIfNotNull(EVCombinedRec.TRANSLATED_TITLE, runtimeDocview.getTranslatedTitle());
         rec.putIfNotNull(EVCombinedRec.MONOGRAPH_TITLE, runtimeDocview.getMonographTitle());
         rec.putIfNotNull(EVCombinedRec.SERIAL_TITLE, rs.getString("TITLE_OF_SERIAL"));
-        rec.putIfNotNull(EVCombinedRec.CONFERENCE_LOCATION, rs.getString("LOCATION_OF_MEETING"));
+
+        // RN - a multi field
+        if(rs.getString("LOCATION_OF_MEETING") != null)
+        {
+          rec.putIfNotNull(EVCombinedRec.CONFERENCE_LOCATION, rs.getString("LOCATION_OF_MEETING").split(AUDELIMITER));
+        }
 
         // RN - a multi field
         if(rs.getString("REPORT_NUMBER") != null)
