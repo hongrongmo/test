@@ -15,7 +15,13 @@
 >
 
 <xsl:output method="html" indent="no"/>
-<xsl:strip-space elements="html:* xsl:*" />
+  <xsl:strip-space elements="html:* xsl:*" />
+
+  <!-- create a lookup table of all of the mapping rectangles in the document and key them by their ID attribute -->
+  <!-- this will be used in the CV template to highlight Index terms that have mapped coordinates -->
+	<xsl:key name="map-lookup" match="RECT" use="@ID" />
+	<xsl:key name="coord-lookup" match="LOC" use="@ID" />
+
   <xsl:template match="EI-DOCUMENT">
       <xsl:param name="ascii">false</xsl:param>
 
@@ -174,7 +180,7 @@
       <xsl:apply-templates select="COL"/>
 
       <xsl:apply-templates select="CRDN"/>
-      <xsl:apply-templates select="LOCS"/>
+      <!-- <xsl:apply-templates select="LOCS"/> -->
 
       <BR/>
       <xsl:if test="$ascii='true'">
@@ -199,21 +205,10 @@
           <div id="map_canvas" style="float:left; width: 100%; height: 300px;"></div>
         </div>
       </span>
-      <a class="SpLink" href="javascript:resetCenterAndZoom();">Reset view</a>
-    </xsl:template>
-
-    <xsl:template match="LOCS">
-      <br/><span CLASS="MedBlackText"><b><xsl:value-of select="@label"/>:</b>&#160;</span>
-      <xsl:apply-templates select="LOC"/><br/>
-    </xsl:template>
-
-    <xsl:template match="LOC">
-      <a CLASS="SpLink">
-      <xsl:attribute name="href">javascript:toggleMarker('<xsl:value-of select="@ID"/>');</xsl:attribute>
-      <xsl:value-of select="@ID"/> - <xsl:value-of disable-output-escaping="yes" select="."/></a>
-      <xsl:if test="not(position()=last())">
-        <span class="SmBlackText">,&#160;</span>
-      </xsl:if>
+      <a class="SpLink" href="javascript:resetCenterAndZoom();">Reset view</a>&#160;
+      <a class="SpLink" href="javascript:resetAllMarkers(true);">Show all Markers</a>&#160;
+      <a class="SpLink" href="javascript:resetAllMarkers();">Hide all Markers</a>&#160;
+      <a class="SpLink" href="javascript:invertMarkers();">Invert Markers</a>
     </xsl:template>
 
     <!-- EPT Templates -->
@@ -668,6 +663,7 @@
           <xsl:otherwise><xsl:text>&#xD;&#xA;</xsl:text><xsl:value-of select="../PVD"/> controlled terms</xsl:otherwise>
         </xsl:choose>:&#160;&#160;</b></a>
       <xsl:apply-templates/>
+
     </xsl:template>
 
     <xsl:template match="CR">
@@ -785,11 +781,23 @@
         <xsl:with-param name="FIELD">CV</xsl:with-param>
         <xsl:with-param name="NAME"><xsl:value-of select="name(.)"/></xsl:with-param>
       </xsl:call-template>
+      <!-- if there is a match here between the CV and the ID of a Map rectangle, the RECT xsl template will be triggered -->
+      <xsl:apply-templates select="key('map-lookup', text())" />
       <xsl:if test="not(position()=last())">
         <A CLASS="SmBlackText">&#160; - &#160;</A>
       </xsl:if>
     </xsl:template>
 
+    <xsl:template match="RECT">
+        <xsl:apply-templates select="key('coord-lookup', @ID)" />
+    </xsl:template>
+
+    <xsl:template match="LOC">
+      &#160;(<a CLASS="SpLink">
+      <xsl:attribute name="href">javascript:toggleMarker('<xsl:value-of select="@ID"/>');</xsl:attribute>
+      <xsl:attribute name="title">Toggle marker on map</xsl:attribute>
+      <xsl:value-of disable-output-escaping="yes" select="."/></a>)
+    </xsl:template>
 
    <xsl:template match="CVN|CVP|CVA|CVMN|CVMP|CVMA">
       <xsl:call-template name="LINK">
