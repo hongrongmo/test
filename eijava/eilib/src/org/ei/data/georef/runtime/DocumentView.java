@@ -208,6 +208,7 @@ public abstract class DocumentView {
       }
 
       addDocumentValue(Keys.CONF_DATE, new ConferenceDateDecorator(createColumnValueField("DATE_OF_MEETING")));
+      // this is a (possible) multi-field that will be split on the AUDELIMITER in addDocumentValue() method
       addDocumentValue(Keys.CONFERENCE_NAME, createColumnValueField("NAME_OF_MEETING"));
       addDocumentValue(Keys.CODEN, createColumnValueField("CODEN"));
       addDocumentValue(Keys.SOURCE, createColumnValueField("TITLE_OF_SERIAL"));
@@ -236,6 +237,7 @@ public abstract class DocumentView {
       addDocumentValue(Keys.COLLECTION_TITLE, new TitleDecorator(createColumnValueField("TITLE_OF_COLLECTION")));
       addDocumentValue(Keys.ABSTRACT_TYPE, new BibliographicLevelDecorator(createColumnValueField("BIBLIOGRAPHIC_LEVEL_CODE")));
 
+      // this is a (possible) multi-field that will be split on the AUDELIMITER in addDocumentValue() method
       addDocumentValue(Keys.PUBLISHER, new SimpleValueField(getPublisher()));
       addDocumentValue(GRFDocBuilder.AFFILIATION_OTHER, createColumnValueField("AFFILIATION_SECONDARY"));
 
