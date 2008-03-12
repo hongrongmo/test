@@ -71,9 +71,12 @@
             var navfieldset = document.createElement("fieldset");
             var navlegend = document.createElement("legend");
             var legendlink = document.createElement("a");
+            legendlink.id = navfield + "link";
             legendlink.setAttribute("href","javascript:toggleNavigator('" + navfield + "')");
             legendlink.className="MedOrangeText";
-            legendlink.appendChild(document.createTextNode(navigators[count].getAttribute("LABEL")));
+            legendlink.title = "Toggle Facet";
+            legendlink.appendChild(document.createTextNode("- " + navigators[count].getAttribute("LABEL")));
+
             navlegend.appendChild(legendlink);
             navfieldset.appendChild(navlegend);
 
@@ -173,19 +176,24 @@
     {
       var pagerdiv = document.getElementById(navfieldid + "pagers");
       var isvisible = navul.getAttribute("visible");
+      var legendlink = document.getElementById(navfieldid + "link");
+      var label = legendlink.firstChild.nodeValue;
 
       if(isvisible == "true")
       {
         navul.style.display="none";
         pagerdiv.style.display="none";
         navul.setAttribute("visible","false");
+        label = "+" + label.substring(1);
       }
       else
       {
         navul.style.display="block";
         pagerdiv.style.display="block";
         navul.setAttribute("visible","true");
+        label = "-" + label.substring(1);
       }
+      legendlink.firstChild.nodeValue = label;
     }
   }
 
