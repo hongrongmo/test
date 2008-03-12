@@ -80,6 +80,8 @@ public class GeoRefCombiner
     {
       for(int yearIndex = 1960; yearIndex <= 2008; yearIndex++)
       {
+        // create  a new writer so we can see the loadNumber/yearNumber in the filename
+        c = new GeoRefCombiner(new CombinedXMLWriter(recsPerfile, yearIndex,"gref"));
         c.writeCombinedByYear(url,
                             driver,
                             username,
@@ -440,8 +442,13 @@ public class GeoRefCombiner
         rec.putIfNotNull(EVCombinedRec.TRANSLATED_TITLE, runtimeDocview.getTranslatedTitle());
         rec.putIfNotNull(EVCombinedRec.MONOGRAPH_TITLE, runtimeDocview.getMonographTitle());
         rec.putIfNotNull(EVCombinedRec.SERIAL_TITLE, rs.getString("TITLE_OF_SERIAL"));
-        rec.putIfNotNull(EVCombinedRec.REPORTNUMBER, rs.getString("REPORT_NUMBER"));
         rec.putIfNotNull(EVCombinedRec.CONFERENCE_LOCATION, rs.getString("LOCATION_OF_MEETING"));
+
+        // RN - a multi field
+        if(rs.getString("REPORT_NUMBER") != null)
+        {
+          rec.putIfNotNull(EVCombinedRec.REPORTNUMBER,(rs.getString("REPORT_NUMBER")).split(AUDELIMITER));
+        }
 
         // CL
         if(rs.getString("CATEGORY_CODE") != null)
