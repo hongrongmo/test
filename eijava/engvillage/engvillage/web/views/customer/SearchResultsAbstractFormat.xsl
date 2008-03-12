@@ -303,6 +303,18 @@
           map.setCenter(bounds.getCenter(), map.getBoundsZoomLevel(bounds) > MAXZOOM ? MAXZOOM : map.getBoundsZoomLevel(bounds));
         }
 
+        function resetAllMarkers(state) {
+          for(marker in markers)
+          {
+            (state != null) ? markers[marker].show() : markers[marker].hide();
+          }
+        }
+        function invertMarkers() {
+          for(marker in markers)
+          {
+            toggleMarker(marker);
+          }
+        }
         function toggleMarker(id) {
           toggleMapOverlay(id, markers);
         }
