@@ -38,8 +38,10 @@
     }
   }
 
+  var thissearchid;
   function getNavigators(searchid)
   {
+    thissearchid =  searchid;
     createXMLHttpRequestNav();
     var url = "/controller/servlet/Controller?CID=dynamicNavigators&searchId="+searchid+"&timestamp="+(new Date()).getTime();
     xmlHttpNav.open("GET", url, true);
@@ -50,6 +52,13 @@
   function showTip() {
     Tip(this.getAttribute("tooltip"),WIDTH,450);
   }
+  function showChart() {
+    window.open('/controller/servlet/Controller?CID=analyzeNav&SEARCHID=' + this.searchid + '&database=188423&field=' + this.navfield)
+  }
+  function showDownload() {
+    Tip(this.getAttribute("tooltip"),WIDTH,450);
+  }
+
   function callbackNavigators()
   {
     if (xmlHttpNav.readyState == 4)
@@ -74,10 +83,36 @@
             legendlink.id = navfield + "link";
             legendlink.setAttribute("href","javascript:toggleNavigator('" + navfield + "')");
             legendlink.className="MedOrangeText";
-            legendlink.title = "Toggle Facet";
+            legendlink.title = "Toggle facet";
             legendlink.appendChild(document.createTextNode("- " + navigators[count].getAttribute("LABEL")));
 
+            var downloadimg = document.createElement("img");
+            downloadimg.src = "/engresources/images/note.gif";
+            downloadimg.border = 0;
+            var downloadlink = document.createElement("a");
+            downloadlink.id = navfield + "download";
+            downloadlink.setAttribute("href","#");
+            downloadlink.title = "Download data";
+            downloadlink.appendChild(downloadimg);
+
+            var chartimg = document.createElement("img");
+            chartimg.src = "/engresources/images/gr_img.gif";
+            chartimg.border = 0;
+            var chartlink = document.createElement("a");
+            chartlink.id = navfield + "chart";
+            chartlink.navfield = navfield;
+            chartlink.searchid = thissearchid;
+            chartlink.onclick = showChart;
+
+            chartlink.title = "View chart";
+            chartlink.appendChild(chartimg);
+
             navlegend.appendChild(legendlink);
+            navlegend.appendChild(document.createTextNode("&nbsp;"));
+            navlegend.appendChild(chartlink);
+            navlegend.appendChild(document.createTextNode("&nbsp;"));
+            navlegend.appendChild(downloadlink);
+
             navfieldset.appendChild(navlegend);
 
             var modul = newUL();
