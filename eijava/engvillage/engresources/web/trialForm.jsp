@@ -545,23 +545,19 @@
 	                                <option value="ev2">Engineering Village</option>
 	                                <option value="">***********************************</option>
 	                                <option value="compendex">Compendex</option>
-	                                <option value="inspec">Inspec</option>
-	                                <option value="ntis">NTIS</option>
-
 	                                <option value="backfile">Engineering Index Backfile</option>
-                                  <option value="inspecback">Inspec Backfile</option>
+	                                <option value="inspec">Inspec</option>
+                                  <option value="inspecback">Inspec Archive</option>
+	                                <option value="ntis">NTIS</option>
 	                                <option value="referex">Referex</option>
 	                                <option value="patents">Ei Patents </option>
-	                                <option value="chem">ChemVillage</option>
-
-	                                <option value="">**************************</option>
+	                                <option value="enclit">EnCompassLIT</option>
+	                                <option value="encpat">EnCompassPAT</option>
+	                                <option value="geobase">GeoBase</option>
 	                                <option value="chimica">Chimica</option>
 	                                <option value="newsbase">Chemical Business NewsBase</option>
-	                                <option value="pv2">Paper Village 2</option>
-
-	                                <option value="">****************************</option>
 	                                <option value="paperchem">PaperChem</option>
-	                                <option value="encompass">Encompass</option>
+	                                <option value="georef">GeoRef</option>
 	                            </select>
 	                        </label>
 
