@@ -68,15 +68,16 @@
 							<li>Inspec&#174;</li>
 							<li>Inspec Archive</li>
 							<li>NTIS</li>
-							<li>Referex</li>							
+							<li>Referex</li>
 							<li>Patents from USPTO and esp@cenet</li>
-							<li>Ei Patents</li> 
+							<li>Ei Patents</li>
 							<li>EnCompassLIT</li>
 							<li>EnCompassPAT</li>
 							<li>GeoBase</li>
 							<li>Chimica</li>
 							<li>CBNB</li>
 							<li>PaperChem</li>
+							<li>GeoRef</li>
 						</ul>
 					</dd>
 				</dl>
