@@ -53,10 +53,10 @@
     Tip(this.getAttribute("tooltip"),WIDTH,450);
   }
   function showChart() {
-    window.open('/controller/servlet/Controller?CID=analyzeNav&SEARCHID=' + this.searchid + '&database=188423&field=' + this.navfield)
+    window.open('/controller/servlet/Controller?CID=analyzeNav&SEARCHID=' + this.searchid + '&database=188423&field=' + this.navfield);
   }
   function showDownload() {
-    Tip(this.getAttribute("tooltip"),WIDTH,450);
+    document.location='/controller/servlet/Controller?CID=downloadNavigatorCSV&SEARCHID=' + this.searchid + '&database=8192&nav=' + this.navfield + 'nav';
   }
 
   function callbackNavigators()
@@ -91,8 +91,10 @@
             downloadimg.border = 0;
             var downloadlink = document.createElement("a");
             downloadlink.id = navfield + "download";
-            downloadlink.setAttribute("href","#");
             downloadlink.title = "Download data";
+            downloadlink.navfield = navfield;
+            downloadlink.searchid = thissearchid;
+            downloadlink.onclick = showDownload;
             downloadlink.appendChild(downloadimg);
 
             var chartimg = document.createElement("img");
@@ -100,17 +102,16 @@
             chartimg.border = 0;
             var chartlink = document.createElement("a");
             chartlink.id = navfield + "chart";
+            chartlink.title = "View chart";
             chartlink.navfield = navfield;
             chartlink.searchid = thissearchid;
             chartlink.onclick = showChart;
-
-            chartlink.title = "View chart";
             chartlink.appendChild(chartimg);
 
             navlegend.appendChild(legendlink);
-            navlegend.appendChild(document.createTextNode("&nbsp;"));
+            navlegend.appendChild(document.createTextNode("\u00a0"));
             navlegend.appendChild(chartlink);
-            navlegend.appendChild(document.createTextNode("&nbsp;"));
+            navlegend.appendChild(document.createTextNode("\u00a0"));
             navlegend.appendChild(downloadlink);
 
             navfieldset.appendChild(navlegend);
