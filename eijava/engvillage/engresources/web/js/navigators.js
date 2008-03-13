@@ -38,10 +38,10 @@
     }
   }
 
-  var thissearchid;
+  var globalsearchid;
   function getNavigators(searchid)
   {
-    thissearchid =  searchid;
+    globalsearchid =  searchid;
     createXMLHttpRequestNav();
     var url = "/controller/servlet/Controller?CID=dynamicNavigators&searchId="+searchid+"&timestamp="+(new Date()).getTime();
     xmlHttpNav.open("GET", url, true);
@@ -53,10 +53,10 @@
     Tip(this.getAttribute("tooltip"),WIDTH,450);
   }
   function showChart() {
-    window.open('/controller/servlet/Controller?CID=analyzeNav&SEARCHID=' + this.searchid + '&database=188423&field=' + this.navfield);
+    window.open('/controller/servlet/Controller?CID=analyzeNav&SEARCHID=' + this.searchid + '&field=' + this.navfield);
   }
   function showDownload() {
-    document.location='/controller/servlet/Controller?CID=downloadNavigatorCSV&SEARCHID=' + this.searchid + '&database=8192&nav=' + this.navfield + 'nav';
+    document.location='/controller/servlet/Controller?CID=downloadNavigatorCSV&SEARCHID=' + this.searchid + '&nav=' + this.navfield + 'nav';
   }
 
   function callbackNavigators()
@@ -82,9 +82,16 @@
             var legendlink = document.createElement("a");
             legendlink.id = navfield + "link";
             legendlink.setAttribute("href","javascript:toggleNavigator('" + navfield + "')");
-            legendlink.className="MedOrangeText";
+            legendlink.className="NavTitle";
             legendlink.title = "Toggle facet";
-            legendlink.appendChild(document.createTextNode("- " + navigators[count].getAttribute("LABEL")));
+            var toggleimg = document.createElement("img");
+            toggleimg.id = navfield + 'toggle';
+            toggleimg.src = "/engresources/images/tagedit_minus.gif";
+            toggleimg.border = 0;
+
+            legendlink.appendChild(toggleimg);
+            legendlink.appendChild(document.createTextNode("\u00a0"));
+            legendlink.appendChild(document.createTextNode(navigators[count].getAttribute("LABEL")));
 
             var downloadimg = document.createElement("img");
             downloadimg.src = "/engresources/images/note.gif";
@@ -93,7 +100,7 @@
             downloadlink.id = navfield + "download";
             downloadlink.title = "Download data";
             downloadlink.navfield = navfield;
-            downloadlink.searchid = thissearchid;
+            downloadlink.searchid = globalsearchid;
             downloadlink.onclick = showDownload;
             downloadlink.appendChild(downloadimg);
 
@@ -104,7 +111,7 @@
             chartlink.id = navfield + "chart";
             chartlink.title = "View chart";
             chartlink.navfield = navfield;
-            chartlink.searchid = thissearchid;
+            chartlink.searchid = globalsearchid;
             chartlink.onclick = showChart;
             chartlink.appendChild(chartimg);
 
@@ -213,23 +220,26 @@
       var pagerdiv = document.getElementById(navfieldid + "pagers");
       var isvisible = navul.getAttribute("visible");
       var legendlink = document.getElementById(navfieldid + "link");
-      var label = legendlink.firstChild.nodeValue;
+      /* WE ARE ASSUMING THE IMAGE IS THE FIRST CHILD SINCE WE PUT IT THERE */
+      var toggleimg = legendlink.firstChild;
 
       if(isvisible == "true")
       {
         navul.style.display="none";
         pagerdiv.style.display="none";
         navul.setAttribute("visible","false");
-        label = "+" + label.substring(1);
+        toggleimg.src = "/engresources/images/tagedit_plus.gif";
+        //label = "+" + label.substring(1);
       }
       else
       {
         navul.style.display="block";
         pagerdiv.style.display="block";
         navul.setAttribute("visible","true");
-        label = "-" + label.substring(1);
+        toggleimg.src = "/engresources/images/tagedit_minus.gif";
+        //label = "-" + label.substring(1);
       }
-      legendlink.firstChild.nodeValue = label;
+      //legendlink.firstChild.nodeValue = label;
     }
   }
 
@@ -280,7 +290,7 @@
     modpager.className="MedBlueLink";
     modpager.setAttribute("href","javascript:pageModifiers('" + navfield + "','" + linklabel + "')");
     modpager.innerHTML = (linklabel == MORE) ? linklabel + "&#133" : "&#133" + linklabel;
-
+    modpager.title = (linklabel == MORE) ? "Show more choices" : "Show less choices" + linklabel;
 
     return modpager;
   }
