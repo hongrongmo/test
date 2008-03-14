@@ -19,7 +19,7 @@ public class PatentXmlReader
 	private Document doc = null;
 	private Iterator rec =null;
 	private Perl5Util perl = new Perl5Util();
-	public static final String IDDELIMITER = new String(new char[] {31});
+	public static final char IDDELIMITER = (char)31;
 	public static final char DELIM = '\t';
 	char AUDELIMITER = (char) 30;
 
@@ -62,7 +62,7 @@ public class PatentXmlReader
 		kindMap.put("A3","PUBL. OF SEARCH REPORT");
 		kindMap.put("A8","CORRECTED TITLE PAGE OF AN EP-A DOCUMENT");
 		kindMap.put("A9","COMPLETE REPRINT OF AN EP-A DOCUMENT");
-		kindMap.put("B1","Utility Patent Grant (no pre-grant publication)");
+		kindMap.put("B1","Patent");
 		kindMap.put("B2","PATENT AFTER MODIFICATION");
 		kindMap.put("B2","Utility Patent Grant (with pre-grant publication)");
 		kindMap.put("B8","CORRECTED FRONT PAGE OF AN EP-B DOCUMENT");
@@ -97,7 +97,7 @@ public class PatentXmlReader
 
 		try
 		{
-			r.init(outputFile, url, username, password);
+			r.init(outputFile, loadNumber, url, username, password);
 			File inputFiles = new File(filename);
 			if(inputFiles.exists())
 			{
@@ -159,7 +159,7 @@ public class PatentXmlReader
 			{
 				if((path.toUpperCase()).endsWith(".ZIP") )
 				{
-					//System.out.println("filename= "+current_file.getName());
+					System.out.println("filename= "+current_file.getName());
 					ZipInputStream zin = new ZipInputStream(new FileInputStream(path));
 					ZipEntry entry = null;
 					int j=0;
@@ -248,7 +248,7 @@ public class PatentXmlReader
 		}
     }
 
-	private void init(String outFile, String URL,String User,String Password)
+	private void init(String outFile, String loadNumber,String URL,String User,String Password)
 	{
 		try
 		{
@@ -259,15 +259,15 @@ public class PatentXmlReader
 			if(patentsOut==null)
 				patentsOut 	= new PrintWriter(new FileWriter(outFile+".out"), true);
 			if(patentsRefOut == null)
-				patentsRefOut = new PrintWriter(new FileWriter(outFile+"_patentRef.out"), true);
+				patentsRefOut = new PrintWriter(new FileWriter("pat_cit."+loadNumber+".out"), true);
 			if(nonPatentsRefOut == null)
-				nonPatentsRefOut = new PrintWriter(new FileWriter(outFile+"_nonPatentRef.out"), true);
+				nonPatentsRefOut = new PrintWriter(new FileWriter("pat_nonpat."+loadNumber+".out"), true);
 			if(updatePatentsOut==null)
-				updatePatentsOut 	= new PrintWriter(new FileWriter("update_"+outFile+".out"), true);
+				updatePatentsOut 	= new PrintWriter(new FileWriter("corr_"+outFile+".out"), true);
 			if(updatePatentsRefOut == null)
-				updatePatentsRefOut = new PrintWriter(new FileWriter("update_"+outFile+"_patentRef.out"), true);
+				updatePatentsRefOut = new PrintWriter(new FileWriter("corr_pat_cit."+loadNumber+".out"), true);
 			if(updateNonPatentsRefOut == null)
-				updateNonPatentsRefOut = new PrintWriter(new FileWriter("update_"+outFile+"_nonPatentRef.out"), true);
+				updateNonPatentsRefOut = new PrintWriter(new FileWriter("corr_pat_nonpat."+loadNumber+".out"), true);
 		}
 		catch (Exception e)
 		{
@@ -470,6 +470,11 @@ public class PatentXmlReader
 			out.print(DELIM);
 
 			// XPB_DT
+			if(singleRecord.get("DATE_OF_PUBLIC")!=null)
+			{
+				//System.out.println("DATE_OF_PUBLIC "+(String)singleRecord.get("DATE_OF_PUBLIC"));
+				out.print((String)singleRecord.get("DATE_OF_PUBLIC"));
+			}
 
 			out.print(DELIM);
 
@@ -565,7 +570,10 @@ public class PatentXmlReader
 				{
 					HashMap ecla = (HashMap)eclaList.get(i);
 					String ecla_text = (String)ecla.get("TEXT");
-
+					if(main_ecla.length()>0)
+					{
+						main_ecla.append(AUDELIMITER);
+					}
 					if(ecla_text!=null)
 					{
 						if(main_ecla_text.length()>0)
@@ -616,12 +624,15 @@ public class PatentXmlReader
 						main_ecla.append(ecla_text);
 					}
 
-					if(main_ecla.length()>0)
-					{
-						main_ecla.append(AUDELIMITER);
-					}
+					//System.out.println("MAINCLASS "+eclaMainclass);
+					//System.out.println("SUBCLASS "+eclaSubclass);
+					//System.out.println("ecla_text "+ecla_text);
+
+
 				}
 			}
+			//System.out.println("main_ecla "+main_ecla.toString());
+			//System.out.println("PN "+patentNumber);
 			if(main_ecla.length()>0)
 			{
 				out.print(main_ecla.toString());
@@ -1088,12 +1099,12 @@ public class PatentXmlReader
 						}
 						if(pcMap.get("DOC_NUMBER") != null)
 						{
-							pcBuffer.append(AUDELIMITER);
+							pcBuffer.append(IDDELIMITER);
 							pcBuffer.append((String)pcMap.get("DOC_NUMBER"));
 						}
 						if(pcMap.get("DATE") != null)
 						{
-							pcBuffer.append(AUDELIMITER);
+							pcBuffer.append(IDDELIMITER);
 							pcBuffer.append((String)pcMap.get("DATE"));
 						}
 						//if(pcMap.get("KIND") != null)
@@ -1494,7 +1505,7 @@ public class PatentXmlReader
 							*/
 
 							out.print(substituteChars(non_patent_citation));
-							//out.print(non_patent_citation);
+							//out.print(substituteChars("GB912066719910928GB920629519920323"));
 						}
 						out.print(DELIM);
 
@@ -2606,9 +2617,10 @@ public class PatentXmlReader
 				if(additional_subgroups != null)
 				{
 					List additional_subgroup = additional_subgroups.getChildren("additional-subgroup");
+					StringBuffer asBuffer = new StringBuffer();
 					if(additional_subgroup != null)
 					{
-						StringBuffer asBuffer = new StringBuffer();
+
 						for(int j=0;j<additional_subgroup.size();j++)
 						{
 							Element additional_subgroup_value = (Element)additional_subgroup.get(j);
@@ -2626,8 +2638,13 @@ public class PatentXmlReader
 						}
 
 						//System.out.println("asBuffer= "+asBuffer);
-						ceTable.put("SUBCLASS",main_group+"/"+subgroup+asBuffer.toString());
+
 					}
+					ceTable.put("SUBCLASS",main_group+"/"+subgroup+asBuffer.toString());
+				}
+				else
+				{
+					ceTable.put("SUBCLASS",main_group+"/"+subgroup);
 				}
 			}
 			ceList.add(ceTable);
@@ -2707,7 +2724,7 @@ public class PatentXmlReader
 				//System.out.println("sequence "+sequence);
 				pcTable.put("SEQUENCE",sequence);
 				String kind = priority_claim.getAttributeValue("kind");
-				System.out.println("kind "+kind);
+				//System.out.println("kind "+kind);
 				pcTable.put("KIND",kind);
 				String country = priority_claim.getChildTextTrim("country");
 				//System.out.println("country "+country);
