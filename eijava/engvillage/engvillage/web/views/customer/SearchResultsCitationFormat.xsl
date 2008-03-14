@@ -296,7 +296,7 @@
 
       <script language="JavaScript" type="text/javascript" src="/engresources/js/navigators.js"/>
       <script language="JavaScript" type="text/javascript">
-      getNavigators("<xsl:value-of select="$SEARCH-ID"/>");
+      getNavigators("<xsl:value-of select="$SEARCH-ID"/>","<xsl:value-of select="$SEARCH-TYPE"/>");
       </script>
 
     </body>
