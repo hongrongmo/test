@@ -1335,10 +1335,7 @@ public class PatentXmlReader
 						{
 							out.print(prt_pk);
 						}
-						else
-						{
-							out.print(" ");
-						}
+
 						out.print(DELIM);
 
 						// CIT_PN
@@ -1348,10 +1345,7 @@ public class PatentXmlReader
 							cit_pn = pnNormalization(cit_pn);
 							out.print(cit_pn);
 						}
-						else
-						{
-							out.print(" ");
-						}
+
 						out.print(DELIM);
 
 						// CIT_CY
@@ -1360,10 +1354,7 @@ public class PatentXmlReader
 						{
 							out.print(cit_cy);
 						}
-						else
-						{
-							out.print(" ");
-						}
+
 						out.print(DELIM);
 
 						// CIT_PK
@@ -1372,10 +1363,7 @@ public class PatentXmlReader
 						{
 							out.print(cit_pk);
 						}
-						else
-						{
-							out.print(" ");
-						}
+
 						out.print(DELIM);
 
 						// CIT_MID
@@ -1389,10 +1377,8 @@ public class PatentXmlReader
 								out.print(cit_mid);
 							}
 						}
-						else
-						{
-							out.print(" ");
-						}
+
+
 						out.print(DELIM);
 
 						// UPT_LINK
