@@ -6,6 +6,7 @@ import org.ei.domain.SearchException;
 import org.ei.parser.base.BooleanQuery;
 
 public class LemQueryWriter extends BookQueryWriter {
+  public static String BASE_URL;
 
 	public String getQuery(BooleanQuery bQuery) {
 		BufferStream lemBuffer = new BufferStream();
@@ -14,7 +15,7 @@ public class LemQueryWriter extends BookQueryWriter {
 			String bookQueryBuffer = super.getQuery(bQuery);
 			String lemQueryBuffer = super.getLemBuffer(bQuery);
 			LemClient client = new LemClient();
-			client.setBaseURL("http://ei-lemm.bos3.fastsearch.net");
+			client.setBaseURL(BASE_URL);
 			// System.out.println("BOOKQUERYBUFFER: " + bookQueryBuffer);\
 			String[] inWords = bookQueryBuffer.split(";");
 			String[] nonExactTerms = lemQueryBuffer.split(";");
