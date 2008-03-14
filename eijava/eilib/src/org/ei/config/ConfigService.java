@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.DriverConfig;
 import org.ei.domain.FastSearchControl;
+import org.ei.books.LemQueryWriter;
 import org.ei.email.EMail;
 import org.ei.thesaurus.ThesaurusSearchControl;
 
@@ -43,10 +44,12 @@ public class ConfigService extends HttpServlet
             props = new RuntimeProperties(propsConf);
             String mainIndexBaseURL = props.getProperty("FastBaseUrl");
             String thesaurusIndexBaseURL = props.getProperty("ThesaurusBaseURL");
+            String lemServiceBaseURL = props.getProperty("FastLemBaseUrl");
             String mailHost = props.getProperty("mail.smtp.host");
             boolean emailDebug = (new Boolean(props.getProperty("debug"))).booleanValue();
             System.out.println("Setting main index base url to:"+mainIndexBaseURL);
             FastSearchControl.BASE_URL = mainIndexBaseURL;
+            LemQueryWriter.BASE_URL = lemServiceBaseURL;
             System.out.println("Setting thesaurus index base url to:"+thesaurusIndexBaseURL);
             ThesaurusSearchControl.BASE_URL = thesaurusIndexBaseURL;
             System.out.println("Setting mailhost:"+mailHost);
