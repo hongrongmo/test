@@ -475,7 +475,7 @@ public class GeoRefCombiner
         rec.putIfNotNull(EVCombinedRec.MEETING_DATE, rs.getString("DATE_OF_MEETING"));
 
         rec.putIfNotNull(EVCombinedRec.DOCID, rs.getString("M_ID"));
-        rec.putIfNotNull(EVCombinedRec.DATABASE, "gref");
+        rec.putIfNotNull(EVCombinedRec.DATABASE, "grf");
         rec.putIfNotNull(EVCombinedRec.LOAD_NUMBER, rs.getString("LOAD_NUMBER"));
         rec.putIfNotNull(EVCombinedRec.VOLUME, getFirstNumber(rs.getString("VOLUME_ID")));
         rec.putIfNotNull(EVCombinedRec.ISSUE, getFirstNumber(rs.getString("ISSUE_ID")));
