@@ -540,9 +540,9 @@ public class GeorefReader {
 						.getTextTrim()));
 			}
 
-			record.put("M_ID", new StringBuffer("gref_"
+			record.put("M_ID", new StringBuffer("grf_"
 					+ (new GUID()).toString()));
-			String m_id = "gref_" + idNumber.replaceAll("-", "");
+			String m_id = "grf_" + idNumber.replaceAll("-", "");
 
 			for (int i = 0; i < elementNames.length; i++) {
 				if (elementNames[i].equals("DOI")) {
