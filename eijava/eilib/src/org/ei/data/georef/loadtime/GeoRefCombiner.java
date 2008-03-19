@@ -35,7 +35,7 @@ public class GeoRefCombiner
   private int exitNumber;
 
   private static String tablename;
-
+  private static final Database GRF_DATABASE = new GRFDatabase();
   public static void main(String args[])
                           throws Exception
   {
@@ -64,7 +64,7 @@ public class GeoRefCombiner
 
     CombinedWriter writer = new CombinedXMLWriter(recsPerfile,
                                                   loadNumber,
-                                                  "gref");
+                                                  GRF_DATABASE.getIndexName());
 
     GeoRefCombiner c = new GeoRefCombiner(writer);
     if(loadNumber > 200801)
@@ -221,6 +221,8 @@ public class GeoRefCombiner
       {
         EVCombinedRec rec = new EVCombinedRec();
 
+        rec.putIfNotNull(EVCombinedRec.DATABASE, GRF_DATABASE.getIndexName());
+
         if (Combiner.EXITNUMBER != 0 && i > Combiner.EXITNUMBER)
         {
           break;
@@ -344,7 +346,8 @@ public class GeoRefCombiner
           {
             // DocumentTypeMappingDecorator takes <DOCTYPE>AUDELIMITER<BIBCODE> String as field argument
             mappingcode = runtimeDocview.new DocumentTypeMappingDecorator(mappingcode).getValue();
-            dtStrings = dtStrings.concat(AUDELIMITER).concat(mappingcode);
+            // DO NOT CONCAY GEOPREF DOCTYPES OR ELSE THEY WILL SHOW UP IN NAVIGATOR TOO
+            dtStrings = mappingcode; // dtStrings.concat(AUDELIMITER).concat(mappingcode);
           }
           rec.putIfNotNull(EVCombinedRec.DOCTYPE, dtStrings.split(AUDELIMITER));
         }
@@ -475,7 +478,6 @@ public class GeoRefCombiner
         rec.putIfNotNull(EVCombinedRec.MEETING_DATE, rs.getString("DATE_OF_MEETING"));
 
         rec.putIfNotNull(EVCombinedRec.DOCID, rs.getString("M_ID"));
-        rec.putIfNotNull(EVCombinedRec.DATABASE, "grf");
         rec.putIfNotNull(EVCombinedRec.LOAD_NUMBER, rs.getString("LOAD_NUMBER"));
         rec.putIfNotNull(EVCombinedRec.VOLUME, getFirstNumber(rs.getString("VOLUME_ID")));
         rec.putIfNotNull(EVCombinedRec.ISSUE, getFirstNumber(rs.getString("ISSUE_ID")));
