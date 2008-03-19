@@ -1278,7 +1278,14 @@ public class PatentXmlReader
 			// IPC8_2
 			if(ipcBuffer.length()>4000)
 			{
-				out.print(ipcBuffer.substring(4000));
+				if(ipcBuffer.length()>8000)
+				{
+					out.print(ipcBuffer.substring(4000,8000));
+				}
+				else
+				{
+					out.print(ipcBuffer.substring(4000));
+				}
 			}
 
 			out.print(DELIM);
