@@ -80,6 +80,7 @@
       <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAR--2D6WLLGcr7L3QlwZCBRTWp_Jg7UwMVr-ESRqyz6fZCklfjxRMuUlG4X-qIrTCMhuYZ8sO4fVZEA"
               type="text/javascript"></script>
       <script type="text/javascript">
+          var g_searchid = "<xsl:value-of select="SEARCH-ID"/>";
       //<![CDATA[
           var markerGroups = { "Oil": [], "Water": [], "Cities": [], "Land": []};
 
@@ -133,7 +134,9 @@
           }
 
           function resetCenterAndZoom() {
-            map.setCenter(bounds.getCenter(), map.getBoundsZoomLevel(bounds) - 1  > MAXZOOM ? MAXZOOM : map.getBoundsZoomLevel(bounds) - 1);
+            var zoom  = map.getBoundsZoomLevel(bounds);
+            zoom = (zoom < 1) ? 1 : zoom;
+            map.setCenter(bounds.getCenter(), zoom > MAXZOOM ? MAXZOOM : zoom);
           }
 
           function createMarker(point,name,description,type) {
@@ -142,18 +145,19 @@
             GEvent.addListener(marker, "click", function() {
               alert("You clicked the " + name + " marker.");
              });
-            GEvent.addListener(marker, "mouseover", function() {
+            /* GEvent.addListener(marker, "mouseover", function() {
               marker.openInfoWindowHtml("<h3>" + name + "</h3><br>" + description);
              });
             GEvent.addListener(marker, "mouseout", function() {
               marker.closeInfoWindow();
              });
+             */
             return marker;
           }
 
-          function populatemap() {
+           function populatemap() {
             var request = GXmlHttp.create();
-            request.open("GET", "/engvillage/models/world/kmltest.jsp", true);
+            request.open("GET", "/controller/servlet/Controller?CID=geoTerms&searchId=" + g_searchid, true);
             request.onreadystatechange = function() {
               if (request.readyState == 4) {
                 if (request.status == 200)
