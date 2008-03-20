@@ -68,7 +68,7 @@ public class EiNavigator
   public static final String RO = "ronav";
   public static final String CVM = "cvmnav";
 
-  public static final String LAND = "landnav";
+  public static final String GEO = "geonav";
 
   // for search within search
   public static final String ALL = "all";
@@ -107,7 +107,7 @@ public class EiNavigator
         displayNames.put(EiNavigator.CVM,"Major terms");
         displayNames.put(EiNavigator.RO,"Role");
 
-        displayNames.put(EiNavigator.LAND,"Geography");
+        displayNames.put(EiNavigator.GEO,"Geo terms");
 
    }
 
@@ -117,7 +117,7 @@ public class EiNavigator
     private static List navigatorNames = new ArrayList();
     static
     {
-        navigatorNames.add(EiNavigator.LAND);
+        navigatorNames.add(EiNavigator.GEO);
 
         navigatorNames.add(EiNavigator.DB);
         navigatorNames.add(EiNavigator.AU);
@@ -185,7 +185,7 @@ public class EiNavigator
         fieldNames.put(EiNavigator.RO,"ro");
         fieldNames.put(EiNavigator.CVM,"cvm");
 
-        fieldNames.put(EiNavigator.LAND,"land");
+        fieldNames.put(EiNavigator.GEO,"geo");
 
     }
 
