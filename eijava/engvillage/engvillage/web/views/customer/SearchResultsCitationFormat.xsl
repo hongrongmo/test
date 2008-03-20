@@ -139,19 +139,12 @@
             map.setCenter(bounds.getCenter(), zoom > MAXZOOM ? MAXZOOM : zoom);
           }
 
-          function createMarker(point,name,description,type) {
+          function createMarker(point,name,description,searchurl) {
             var newIcon = new GIcon(G_DEFAULT_ICON);
             var marker = new GMarker(point,{icon:newIcon, title:name});
             GEvent.addListener(marker, "click", function() {
-              alert("You clicked the " + name + " marker.");
+              document.location = searchurl;
              });
-            /* GEvent.addListener(marker, "mouseover", function() {
-              marker.openInfoWindowHtml("<h3>" + name + "</h3><br>" + description);
-             });
-            GEvent.addListener(marker, "mouseout", function() {
-              marker.closeInfoWindow();
-             });
-             */
             return marker;
           }
 
@@ -172,9 +165,10 @@
                     coords = coords.split(",");
                     var name = placemarks[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
                     var description = placemarks[i].getElementsByTagName("description")[0].childNodes[0].nodeValue;
+                    var searchurl = placemarks[i].getElementsByTagName("search")[0].childNodes[0].nodeValue;
 
                     var type = placemarks[i].getAttribute("type");
-                    var marker = createMarker(new GLatLng(parseFloat(coords[1]),parseFloat(coords[0])),name,description,type);
+                    var marker = createMarker(new GLatLng(parseFloat(coords[1]),parseFloat(coords[0])),name,description,searchurl);
                     map.addOverlay(marker);
                     markerGroups[type].push(marker);
                     bounds.extend(marker.getPoint());
