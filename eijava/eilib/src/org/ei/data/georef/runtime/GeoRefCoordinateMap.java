@@ -131,7 +131,7 @@ public class GeoRefCoordinateMap
     }
     public String toXML()
     {
-      return "<Point><Coordinates>" + lat  + ","+ lng  + ",0</Coordinates></Point>";
+      return "<Point><coordinates>" +  lng + ","+ lat  + ",0</coordinates></Point>";
     }
     public int getLat()
     {
