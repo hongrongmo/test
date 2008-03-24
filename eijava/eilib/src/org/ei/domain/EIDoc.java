@@ -107,10 +107,10 @@ public class EIDoc implements Highlightable, XMLSerializable, LocalHoldingLinker
     public void setLoadNumber(int loadNumber) {
         this.loadNumber = loadNumber;
     }
-    
+
     public String getLongTerms() {
         String longTerms = null;
-        if (mapDocument.containsKey(Keys.LINKED_TERMS)) 
+        if (mapDocument.containsKey(Keys.LINKED_TERMS))
         {
             ElementData doi = (ElementData) mapDocument.get(Keys.LINKED_TERMS);
             String[] edata = doi.getElementData();
@@ -459,7 +459,7 @@ public class EIDoc implements Highlightable, XMLSerializable, LocalHoldingLinker
 
             return getHighlightMap(AB_HIGHLIGHT_KEYS);
         }
-        
+
         else if (field.equalsIgnoreCase("cvm")) {
 
             return getHighlightMap(MJS_HIGHLIGHT_KEYS);
@@ -627,4 +627,37 @@ public class EIDoc implements Highlightable, XMLSerializable, LocalHoldingLinker
         return true;
     }
 
+    // This method maps from the standard Ei/EV Document types
+    // to the RIS document types for the TY element which starts each RIS record
+    // It also exitst as a private method in org.ei.data.compendex.runtime.CPXDocBuilder.java
+    // but it was needed for GeoRef RIS so I made it a public method here
+    public  String  replaceTYwithRIScode(String str)
+    {
+      if(str==null || str.equals("QQ"))
+      {
+        str=StringUtil.EMPTY_STRING;
+      }
+
+      if(!str.equals(StringUtil.EMPTY_STRING))
+      {
+        if (str.equals("JA")){str = "JOUR";}
+        else if (str.equals("CA")){str = "CONF";}
+        else if (str.equals("CP")){str = "CONF";}
+        else if (str.equals("MC")){str = "CHAP";}
+        else if (str.equals("MR")){str = "BOOK";}
+        else if (str.equals("RC")){str = "RPRT";}
+        else if (str.equals("RR")){str = "RPRT";}
+        else if (str.equals("DS")){str = "THES";}
+        else if (str.equals("UP")){str = "UNPB";}
+        else
+        {
+          str="JOUR";
+        }
+      }
+      else
+      {
+        str="JOUR";
+      }
+      return str;
+    }
 }
