@@ -15,6 +15,11 @@ public class IPC8Classifications
     protected Key key;
     protected boolean labels = false;
 
+	public void setKey(Key akey)
+	{
+	  this.key = akey;
+	}
+
     public void exportLabels(boolean labels)
     {
         this.labels = labels;

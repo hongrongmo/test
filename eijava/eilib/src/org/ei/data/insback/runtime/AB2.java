@@ -12,6 +12,12 @@ public class AB2
 	private String ab2;
 	private boolean labels;
 
+	public void setKey(Key akey)
+	{
+	  this.key = akey;
+	}
+
+
 	public AB2(Key key,
 			   String ab2)
 	{

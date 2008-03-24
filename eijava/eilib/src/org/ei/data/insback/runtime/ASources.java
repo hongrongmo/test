@@ -21,6 +21,11 @@ public class ASources
 		parse(raw);
 	}
 
+	public void setKey(Key akey)
+	{
+	  this.key = akey;
+	}
+
 	public void setElementData(String[] edata)
 	{
 		for(int i=0; i<edata.length; i++)

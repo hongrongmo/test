@@ -37,6 +37,11 @@ public class DocID
 	private List dupObjs = new ArrayList();
 
 
+	public void setKey(Key akey)
+	{
+	  this.key = akey;
+	}
+
 	public DocID(String nDocID,
 			 Database sDatabase)
 	{

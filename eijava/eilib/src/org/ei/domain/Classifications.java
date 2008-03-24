@@ -10,6 +10,11 @@ public class Classifications
 	protected Key key;
 	protected boolean labels = false;
 
+	public void setKey(Key akey)
+	{
+	  this.key = akey;
+	}
+
 	public Classifications(ClassificationID[] ids)
 	{
 		this.key = Keys.CLASS_CODES;

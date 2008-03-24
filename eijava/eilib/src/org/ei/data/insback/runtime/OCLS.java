@@ -21,6 +21,11 @@ public class OCLS
 		parse(raw);
 	}
 
+	public void setKey(Key akey)
+	{
+	  this.key = akey;
+	}
+
 	public void setElementData(String[] edata)
 
 	{

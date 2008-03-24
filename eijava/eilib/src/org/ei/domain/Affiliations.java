@@ -12,6 +12,11 @@ public class Affiliations
 	protected boolean labels;
 
 
+	public void setKey(Key akey)
+	{
+	  this.key = akey;
+	}
+
 	public void exportLabels(boolean labels)
 	{
 		this.labels = labels;

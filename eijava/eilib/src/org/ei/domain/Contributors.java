@@ -8,6 +8,11 @@ public class Contributors
 	implements ElementData
 {
 
+	public void setKey(Key akey)
+	{
+	  this.key = akey;
+	}
+
 	protected List contributors = new ArrayList();
 	protected Key key;
 	protected boolean labels = false;
