@@ -76,6 +76,15 @@ import java.util.Collection;
       {
         EIDoc adoc = super.buildDocument(rset, did);
 
+        // Get EV system DOC_TYPE codes for indexing and append them to (or use in favor of ?) the GeoRef values
+        String mappingcode = createColumnValueField("DOCUMENT_TYPE").getValue().concat(GRFDocBuilder.AUDELIMITER).concat(createColumnValueField("BIBLIOGRAPHIC_LEVEL_CODE").getValue());
+        if(mappingcode != null)
+        {
+          // DocumentTypeMappingDecorator takes <DOCTYPE>AUDELIMITER<BIBCODE> String as field argument
+          mappingcode = new DocumentTypeMappingDecorator(mappingcode).getValue();
+          addDocumentValue(Keys.DOC_TYPE, adoc.replaceTYwithRIScode(mappingcode));
+        }
+
         ElementDataMap adoc_ht =  adoc.getElementDataMap();
         setDocumentElementDataMap(adoc_ht);
 
@@ -144,4 +153,5 @@ import java.util.Collection;
 
       return;
     }
+
 }
