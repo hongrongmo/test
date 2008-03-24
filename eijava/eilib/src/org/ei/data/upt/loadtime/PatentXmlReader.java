@@ -728,7 +728,7 @@ public class PatentXmlReader
 								name.append((String)inventor.get("LAST_NAME"));
 								if(inventor.get("FIRST_NAME")!=null)
 								{
-									name.append(" ,");
+									name.append(", ");
 								}
 							}
 							if(inventor.get("FIRST_NAME")!=null)
@@ -751,7 +751,7 @@ public class PatentXmlReader
 							address.append((String)inventor.get("ADDRESS1"));
 							if(inventor.get("CITY")!=null || inventor.get("STATE")!=null || inventor.get("POSTCODE")!=null)
 							{
-								address.append(" ,");
+								address.append(", ");
 							}
 						}
 						if(inventor.get("CITY")!=null)
@@ -759,7 +759,7 @@ public class PatentXmlReader
 							address.append((String)inventor.get("CITY"));
 							if(inventor.get("STATE")!=null || inventor.get("POSTCODE")!=null)
 							{
-								address.append(" ,");
+								address.append(", ");
 							}
 						}
 						if(inventor.get("STATE")!=null)
@@ -767,7 +767,7 @@ public class PatentXmlReader
 							address.append((String)inventor.get("STATE"));
 							if(inventor.get("POSTCODE")!=null)
 							{
-								address.append(" ,");
+								address.append(", ");
 							}
 						}
 						if(inventor.get("POSTCODE")!=null)
@@ -841,7 +841,7 @@ public class PatentXmlReader
 								ap_name.append((String)applicant.get("LAST_NAME"));
 								if(applicant.get("FIRST_NAME")!=null || applicant.get("ORGNAME")!=null)
 								{
-									ap_name.append(",");
+									ap_name.append(", ");
 								}
 							}
 
@@ -850,7 +850,7 @@ public class PatentXmlReader
 								ap_name.append((String)applicant.get("FIRST_NAME"));
 								if(applicant.get("ORGNAME")!=null)
 								{
-									ap_name.append(",");
+									ap_name.append(", ");
 								}
 							}
 
@@ -872,7 +872,7 @@ public class PatentXmlReader
 								ap_address.append((String)applicant.get("ADDRESS1"));
 								if(applicant.get("CITY")!=null || applicant.get("STATE")!=null || applicant.get("POSTCODE")!=null)
 								{
-									ap_address.append(",");
+									ap_address.append(", ");
 								}
 							}
 
@@ -881,7 +881,7 @@ public class PatentXmlReader
 								ap_address.append((String)applicant.get("CITY"));
 								if(applicant.get("STATE")!=null || applicant.get("POSTCODE")!=null)
 								{
-									ap_address.append(",");
+									ap_address.append(", ");
 								}
 							}
 							if(applicant.get("STATE")!=null)
@@ -889,7 +889,7 @@ public class PatentXmlReader
 								ap_address.append((String)applicant.get("STATE"));
 								if(applicant.get("POSTCODE")!=null)
 								{
-									ap_address.append(",");
+									ap_address.append(", ");
 								}
 							}
 							if(applicant.get("POSTCODE")!=null)
@@ -965,7 +965,7 @@ public class PatentXmlReader
 								aty_name.append((String)agent.get("LAST_NAME"));
 								if(agent.get("FIRST_NAME")!=null || agent.get("ORGNAME")!=null)
 								{
-									aty_name.append(",");
+									aty_name.append(", ");
 								}
 							}
 
@@ -974,7 +974,7 @@ public class PatentXmlReader
 								aty_name.append((String)agent.get("FIRST_NAME"));
 								if(agent.get("ORGNAME")!=null)
 								{
-									aty_name.append(",");
+									aty_name.append(", ");
 								}
 							}
 
@@ -997,7 +997,7 @@ public class PatentXmlReader
 								aty_address.append((String)agent.get("ADDRESS1"));
 								if(agent.get("CITY")!=null || agent.get("STATE")!=null || agent.get("POSTCODE")!=null)
 								{
-									aty_address.append(",");
+									aty_address.append(", ");
 								}
 							}
 
@@ -1006,7 +1006,7 @@ public class PatentXmlReader
 								aty_address.append((String)agent.get("CITY"));
 								if(agent.get("STATE")!=null || agent.get("POSTCODE")!=null)
 								{
-									aty_address.append(",");
+									aty_address.append(", ");
 								}
 							}
 							if(agent.get("STATE")!=null)
@@ -1014,7 +1014,7 @@ public class PatentXmlReader
 								aty_address.append((String)agent.get("STATE"));
 								if(agent.get("POSTCODE")!=null)
 								{
-									aty_address.append(",");
+									aty_address.append(", ");
 								}
 							}
 							if(agent.get("POSTCODE")!=null)
@@ -1325,18 +1325,19 @@ public class PatentXmlReader
 						out.print((String)singleRecord.get("MID"));
 						out.print(DELIM);
 
-						// PRT_PN
-						prt_pn = (String)singleRecord.get("PR_DOCID_DOC_NUMBER");
-						prt_pn = pnNormalization(prt_pn);
-						out.print(prt_pn);
-						out.print(DELIM);
-
 						// PRT_CY
 						prt_cy = (String)singleRecord.get("PR_DOCID_COUNTRY");
+						// PRT_PN
+						prt_pn = (String)singleRecord.get("PR_DOCID_DOC_NUMBER");
+						prt_pn = pnNormalization(prt_pn, prt_cy);
+						out.print(prt_pn);
+						out.print(DELIM);
 						out.print(prt_cy);
 						out.print(DELIM);
 
+
 						// PRT_PK
+
 						String prt_pk = (String)singleRecord.get("PR_DOCID_KIND");
 						if(prt_pk != null)
 						{
@@ -1344,19 +1345,19 @@ public class PatentXmlReader
 						}
 
 						out.print(DELIM);
+						String cit_cy = (String)citationMap.get("DI_COUNTRY");
+						String cit_pn = (String)citationMap.get("DOC_NUMBER");
 
 						// CIT_PN
-						String cit_pn = (String)citationMap.get("DOC_NUMBER");
 						if(cit_pn != null)
 						{
-							cit_pn = pnNormalization(cit_pn);
+							cit_pn = pnNormalization(cit_pn, cit_pn);
 							out.print(cit_pn);
 						}
 
 						out.print(DELIM);
 
 						// CIT_CY
-						String cit_cy = (String)citationMap.get("DI_COUNTRY");
 						if(cit_cy != null)
 						{
 							out.print(cit_cy);
@@ -1632,8 +1633,7 @@ public class PatentXmlReader
 
 					if(abstractData.getChildTextTrim("p") != null)
 					{
-						//System.out.println("ABSTRACT_ID "+abstractData.getChildTextTrim("p"));
-						record.put("ABSTRACT_DATA", abstractData.getChildTextTrim("p"));
+						record.put("ABSTRACT_DATA", getMixData(abstractData.getContent(),new StringBuffer()));
 					}
 				}
 
@@ -1654,25 +1654,26 @@ public class PatentXmlReader
 						Element pr_document_id = publication_reference.getChild("document-id");
 						if(pr_document_id != null)
 						{
-							String pr_country = pr_document_id.getChildTextTrim("country");
+
+							String pr_country = pr_document_id.getChildTextTrim("country"); //OK
 							//System.out.println("pr_country= "+pr_country);
 							record.put("PR_DOCID_COUNTRY",pr_country);
 
-							String pr_doc_number = pr_document_id.getChildTextTrim("doc-number");
-							pr_doc_number = pnNormalization(pr_doc_number);
+							String pr_doc_number = pr_document_id.getChildTextTrim("doc-number"); //OK
+							pr_doc_number = pnNormalization(pr_doc_number, pr_country);
 							//System.out.println("pr_doc-number= "+pr_doc_number);
 							patentNumber = pr_doc_number;
 							record.put("PR_DOCID_DOC_NUMBER",pr_doc_number);
 
-							//System.out.println("pr_kind= "+pr_document_id.getChildTextTrim("kind"));
+							//System.out.println("pr_kind= "+pr_document_id.getChildTextTrim("kind")); //OK
 							record.put("PR_DOCID_KIND",pr_document_id.getChildTextTrim("kind"));
 
-							//System.out.println("pr_date= "+pr_document_id.getChildTextTrim("date"));
+							//System.out.println("pr_date= "+pr_document_id.getChildTextTrim("date")); //OK
 							record.put("PR_DOCID_DATE",pr_document_id.getChildTextTrim("date"));
 
 							//System.out.println("pr_desc= "+pr_document_id.getChildTextTrim("name"));
-							record.put("PR_DOCID_NAME",pr_document_id.getChildTextTrim("name"));
 
+							record.put("PR_DOCID_NAME",getMixData(pr_document_id.getChild("name").getContent(),new StringBuffer()));
 
 						}
 					}
@@ -1685,27 +1686,27 @@ public class PatentXmlReader
 						if(ap_document_id != null)
 						{
 							//System.out.println("ap_country= "+ap_document_id.getChildTextTrim("country"));
-							record.put("AP_DOCID_COUNTRY",ap_document_id.getChildTextTrim("country"));
+							record.put("AP_DOCID_COUNTRY",ap_document_id.getChildTextTrim("country")); //OK
 
 							//System.out.println("ap_doc-number= "+ap_document_id.getChildTextTrim("doc-number"));
-							record.put("AP_DOCID_DOC_NUMBER",ap_document_id.getChildTextTrim("doc-number"));
+							record.put("AP_DOCID_DOC_NUMBER",ap_document_id.getChildTextTrim("doc-number")); //OK
 
 							//System.out.println("ap_kind= "+ap_document_id.getChildTextTrim("kind"));
-							record.put("AP_DOCID_KIND",ap_document_id.getChildTextTrim("kind"));
+							record.put("AP_DOCID_KIND",ap_document_id.getChildTextTrim("kind")); //OK
 
 							//System.out.println("ap_date= "+ap_document_id.getChildTextTrim("date"));
-							record.put("AP_DOCID_DATE",ap_document_id.getChildTextTrim("date"));
+							record.put("AP_DOCID_DATE",ap_document_id.getChildTextTrim("date")); //OK
 						}
 					}
 					// language-of-filing
 
 					//System.out.println("language_of_filing= "+bibliographic_data.getChildTextTrim("language-of-filing"));
-					record.put("LANGUAGE_OF_FILING",bibliographic_data.getChildTextTrim("language-of-filing"));
+					record.put("LANGUAGE_OF_FILING",bibliographic_data.getChildTextTrim("language-of-filing")); //OK
 
 					// language-of-publication
 
 					//System.out.println("language-of-publication= "+bibliographic_data.getChildTextTrim("language-of-publication"));
-					record.put("LANGUAGE_OF_PUBLICATION",bibliographic_data.getChildTextTrim("language-of-publication"));
+					record.put("LANGUAGE_OF_PUBLICATION",bibliographic_data.getChildTextTrim("language-of-publication")); //OK
 
 					// priority-claims
 
@@ -1713,7 +1714,7 @@ public class PatentXmlReader
 					if(priority_claims !=null)
 					{
 						List priority_claim = priority_claims.getChildren("priority-claim");
-						setPriority_Claims(record,priority_claim);
+						setPriority_Claims(record,priority_claim); // OK
 					}
 
 					// dates-of-public-availability
@@ -1722,12 +1723,12 @@ public class PatentXmlReader
 					{
 						Element unexamined_printed_without_grant = dates_of_public_availability.getChild("unexamined-printed-without-grant");
 					//System.out.println("DATE_OF_PUBLIC"+unexamined_printed_without_grant.getChildTextTrim("date"));
-						record.put("DATE_OF_PUBLIC",unexamined_printed_without_grant.getChildTextTrim("date"));
+						record.put("DATE_OF_PUBLIC",unexamined_printed_without_grant.getChildTextTrim("date")); //OK
 					}
 
 					// classification-ipc
 					Element c_ipc = bibliographic_data.getChild("classification-ipc");
-					setClassification_ipc(c_ipc,record);
+					setClassification_ipc(c_ipc,record); //OK
 
 
 					// classifications-ipcr
@@ -1736,7 +1737,7 @@ public class PatentXmlReader
 					if(classifications_ipcr != null)
 					{
 						List classification_ipcr = classifications_ipcr.getChildren("classification-ipcr");
-						setClassifications_ipcr(record,classification_ipcr);
+						setClassifications_ipcr(record,classification_ipcr); //OK
 					}
 					// classification-national
 
@@ -1744,7 +1745,7 @@ public class PatentXmlReader
 
 					if(classification_national != null)
 					{
-						setClassification_national(classification_national,record);
+						setClassification_national(classification_national,record); //OK
 					}
 
 					// classifications-ecla
@@ -1753,7 +1754,7 @@ public class PatentXmlReader
 					if(classifications_ecla != null)
 					{
 						List classification_ecla = classifications_ecla.getChildren("classification-ecla");
-						setClassification_ecla(record,classification_ecla);
+						setClassification_ecla(record,classification_ecla);//OK
 					}
 
 					// field-of-search
@@ -1762,24 +1763,26 @@ public class PatentXmlReader
 					if(field_of_search != null)
 					{
 						List fos_classification_national = field_of_search.getChildren("classification-national");
-						setFos_classification_national(record,fos_classification_national);
+						setFos_classification_national(record,fos_classification_national); //OK
 					}
 
 					// invention-title
 
 					List invention_title = bibliographic_data.getChildren("invention-title");
-					setTitle(record,invention_title);
+					setTitle(record,invention_title); //OK
 
 					// references-cited
 					Element references_cited = bibliographic_data.getChild("references-cited");
 					if(references_cited != null)
 					{
 						List citation = references_cited.getChildren("citation");
-						setCitation(record,citation);
+						setCitation(record,citation); //OK
 					}
 
 
 					// related-documents
+
+					//Seems to parse OK but what exactly is it parsing.
 					Element related_documents = bibliographic_data.getChild("related-documents");
 					HashMap docNumberMap = new HashMap();
 					if(related_documents != null)
@@ -1903,7 +1906,7 @@ public class PatentXmlReader
 							List agent = agents.getChildren("agent");
 							setParties(record,agent,"AGENT");
 						}
-					}
+					} //OK
 
 					// examiners
 					Element examiners = bibliographic_data.getChild("examiners");
@@ -1912,18 +1915,18 @@ public class PatentXmlReader
 						Element primary_examiners = examiners.getChild("primary-examiner");
 						if(primary_examiners != null)
 						{
-							String pe_name = primary_examiners.getChildText("name");
-							record.put("PE_NAME",pe_name);
+							StringBuffer pe_name = getMixData(primary_examiners.getChild("name").getContent(), new StringBuffer());
+							record.put("PE_NAME",pe_name.toString());
 						}
 
 						Element assistant_examiners = examiners.getChild("assistant-examiner");
 						if(assistant_examiners != null)
 						{
-							String ae_name = assistant_examiners.getChildText("name");
-							record.put("AE_NAME",ae_name);
+							StringBuffer ae_name = getMixData(assistant_examiners.getChild("name").getContent(), new StringBuffer());
+							record.put("AE_NAME",ae_name.toString());
 						}
 
-					}
+					}//OK
 
 					//designation-of-states
 					Element designation_of_states = bibliographic_data.getChild("designation-of-states");
@@ -1950,7 +1953,7 @@ public class PatentXmlReader
 								}
 							}
 						}
-					}
+					} //OK
 
 				}
 
@@ -2427,7 +2430,8 @@ public class PatentXmlReader
 			titleMap.put("IT_FORMAT",invention_title.getAttributeValue("format"));
 
 			//System.out.println("it_content= "+invention_title.getTextTrim());
-			titleMap.put("IT_CONTENT",invention_title.getTextTrim());
+
+			titleMap.put("IT_CONTENT", getMixData(invention_title.getContent(),new StringBuffer()));
 			titleList.add(titleMap);
 		}
 		record.put("TITLE",titleList);
@@ -2464,9 +2468,10 @@ public class PatentXmlReader
 						String kind = document_id.getChildTextTrim("kind");
 						//System.out.println("kind= "+kind);
 						citationTable.put("KIND",kind);
-						String name = document_id.getChildTextTrim("name");
+
+						StringBuffer name = getMixData(document_id.getChild("name").getContent(),new StringBuffer());
 						//System.out.println("name= "+name);
-						citationTable.put("NAME",name);
+						citationTable.put("NAME", name.toString()); //
 					}
 				}
 
@@ -2527,12 +2532,12 @@ public class PatentXmlReader
 			String last_name = addressbook.getChildTextTrim("last-name");
 			//System.out.println("party_last_name= "+last_name);
 			String first_name = addressbook.getChildTextTrim("first-name");
-			String full_name = addressbook.getChildTextTrim("name");
+			StringBuffer full_name = getMixData(addressbook.getChild("name").getContent(),new StringBuffer());
 			//System.out.println("party_first_name= "+first_name);
 			partiesTable.put("ORGNAME",orgname);
 			partiesTable.put("LAST_NAME",last_name);
 			partiesTable.put("FIRST_NAME",first_name);
-			partiesTable.put("NAME",full_name);
+			partiesTable.put("NAME",full_name.toString());
 
 			Element address = addressbook.getChild("address");
 			if(address != null)
@@ -2780,39 +2785,27 @@ public class PatentXmlReader
 		return htVals;
 	}
 
-	private String pnNormalization(String pn) throws Exception
+	private String pnNormalization(String pn,
+								   String authority) throws Exception
 	{
 		//System.out.println("PN= "+pn);
 		if(pn != null)
 		{
 			pn=pn.replaceFirst("^(D|PP|P|RE|T|H|X|RX|AI)[0]+","$1");
-			/*
-			if(pn.startsWith("PP"))
-			{
-				pn = pn.replaceAll("^PP0*","PP");
-			}
-			if(pn.startsWith("RE"))
-			{
-				pn = pn.replaceAll("^RE0*","RE");
-			}
-			if(pn.startsWith("SS"))
-			{
-				pn = pn.replaceAll("^SS0*","SS");
-			}
-			else if(pn.startsWith("D"))
-			{
-				pn = pn.replaceAll("^D0*","D");
-			}
-			else if(pn.startsWith("X"))
-			{
-				pn = pn.replaceAll("^X0*","X");
-			}
-			else if(pn.startsWith("H"))
-			{
-				pn = pn.substring(1);
-			}
-			*/
+
 		}
+
+
+		// Need to test if this works.
+
+		if(authority.equalsIgnoreCase("EP"))
+		{
+			while(pn.length() < 8 && !checkAvailable(pn, authority))
+			{
+				pn = "0"+pn;
+			}
+		}
+
 		//System.out.println("PN1= "+pn);
 		return pn.trim();
 	}
@@ -2894,6 +2887,47 @@ public class PatentXmlReader
 			}
 		}
 		return htVals;
+	}
+
+	private  StringBuffer getMixData(List l, StringBuffer b)
+	{
+		Iterator it = l.iterator();
+		while(it.hasNext())
+		{
+			Object o = it.next();
+
+			if(o instanceof Text )
+			{
+				String text=((Text)o).getText();
+				text= perl.substitute("s/&/&amp;/g",text);
+				text= perl.substitute("s/</&lt;/g",text);
+				text= perl.substitute("s/>/&gt;/g",text);
+				b.append(text);
+			}
+			else if(o instanceof EntityRef)
+			{
+				b.append("&").append(((EntityRef)o).getName()).append(";");
+			}
+			else if(o instanceof Element)
+			{
+				Element e = (Element)o;
+				b.append("<").append(e.getName());
+				List ats = e.getAttributes();
+				if(!ats.isEmpty())
+				{	Iterator at = ats.iterator();
+					while(at.hasNext())
+					{
+						Attribute a = (Attribute)at.next();
+						b.append(" ").append(a.getName()).append("=\"").append(a.getValue()).append("\"");
+					}
+				}
+				b.append(">");
+				getMixData(e.getContent(), b);
+				b.append("</").append(e.getName()).append(">");
+			}
+		}
+
+		return b;
 	}
 
 	private static String substituteChars(String xml)
