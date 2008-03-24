@@ -47,52 +47,66 @@ import java.util.Collection;
                                         Keys.RIS_DO, // DOI
                                         Keys.BIB_TY };
 
+      public Key[] getKeys() {
+        return super.getKeys();
+      }
+
       public String getFormat() { return RIS.RIS_FORMAT; }
+
+      public RISView()
+      {
+        this.ris_ht = new ElementDataMap();
+      }
+
+      private ElementDataMap ris_ht;
+      private ElementDataMap getRisElementDataMap() {
+        return this.ris_ht;
+      }
+
+      private ElementDataMap doc_ht;
+      private void setDocumentElementDataMap(ElementDataMap ht) {
+        this.doc_ht = ht;
+      }
+      private ElementDataMap getDocumentElementDataMap() {
+        return this.doc_ht;
+      }
 
       public EIDoc buildDocument(ResultSet rset, DocID did)
                 throws Exception
       {
         EIDoc adoc = super.buildDocument(rset, did);
+
         ElementDataMap adoc_ht =  adoc.getElementDataMap();
+        setDocumentElementDataMap(adoc_ht);
 
-        /*Collection keySet = adoc_ht.keySet();
-        Iterator itrKeys = keySet.iterator();
-        while(itrKeys.hasNext())
-        {
-          Key key = (Key) itrKeys.next();
-          Writer w = new StringWriter();
-          ((ElementData) adoc_ht.get(key)).toXML(w);
-        }*/
+        changeElementKey(Keys.DOC_TYPE, Keys.RIS_TY);
+        changeElementKey(Keys.LANGUAGE, Keys.RIS_LA);
+        changeElementKey(Keys.COPYRIGHT_TEXT, Keys.RIS_N1);
+        changeElementKey(Keys.TITLE, Keys.RIS_TI);
+        changeElementKey(Keys.TITLE_TRANSLATION, Keys.RIS_T1);
+        changeElementKey(Keys.MONOGRAPH_TITLE, Keys.RIS_BT);
+        //      Keys.RIS_JO,  // Serial title
+        //      Keys.RIS_T3,  //  Serial title if ! a journal
+        changeElementKey(Keys.AUTHORS, Keys.RIS_AUS);
+        changeElementKey(Keys.AUTHOR_AFFS, Keys.RIS_AD);
+        changeElementKey(Keys.EDITORS, Keys.RIS_EDS);
+        changeElementKey(Keys.VOLUME, Keys.RIS_VL);
+        changeElementKey(Keys.ISSUE, Keys.RIS_IS);
+        changeElementKey(Keys.PUBLICATION_YEAR, Keys.RIS_PY);
 
-        ElementDataMap ris_ht =  new ElementDataMap();
-        ris_ht.put(Keys.RIS_TY, ((ElementData) adoc_ht.get(Keys.DOC_TYPE)));
-        ris_ht.put(Keys.RIS_LA, ((ElementData) adoc_ht.get(Keys.LANGUAGE)));
-        ris_ht.put(Keys.RIS_N1, ((ElementData) adoc_ht.get(Keys.COPYRIGHT_TEXT)));
-        ris_ht.put(Keys.RIS_TI, ((ElementData) adoc_ht.get(Keys.TITLE)));
-        ris_ht.put(Keys.RIS_T1, ((ElementData) adoc_ht.get(Keys.TITLE_TRANSLATION)));
-        ris_ht.put(Keys.RIS_BT, ((ElementData) adoc_ht.get(Keys.MONOGRAPH_TITLE)));
-//      Keys.RIS_JO,  // Serial title
-//      Keys.RIS_T3,  //  Serial title if ! a journal
-        ris_ht.put(Keys.RIS_AUS, ((ElementData) adoc_ht.get(Keys.AUTHORS)));
-        ris_ht.put(Keys.RIS_AD, ((ElementData) adoc_ht.get(Keys.AUTHOR_AFFS)));
-        ris_ht.put(Keys.RIS_EDS, ((ElementData) adoc_ht.get(Keys.EDITORS)));
-        ris_ht.put(Keys.RIS_VL, ((ElementData) adoc_ht.get(Keys.VOLUME)));
-        ris_ht.put(Keys.RIS_IS, ((ElementData) adoc_ht.get(Keys.ISSUE)));
-        ris_ht.put(Keys.RIS_PY, ((ElementData) adoc_ht.get(Keys.PUBLICATION_YEAR)));
-
-        ris_ht.put(Keys.RIS_AN, ((ElementData) adoc_ht.get(Keys.ACCESSION_NUMBER)));
-//      Keys.RIS_SP, // Start Page
-//      Keys.RIS_EP, // End Pg
-        ris_ht.put(Keys.RIS_SN, ((ElementData) adoc_ht.get(Keys.ISSN)));
-        ris_ht.put(Keys.RIS_S1, ((ElementData) adoc_ht.get(Keys.ISBN)));
-//      Keys.RIS_MD, // Meeting Date?
-//      Keys.RIS_CY, // Conference ?
-//      Keys.RIS_PB, // Publisher
-        ris_ht.put(Keys.RIS_N2, ((ElementData) adoc_ht.get(Keys.ABSTRACT)));
-//      Keys.RIS_KW, // Main Heading
-        ris_ht.put(Keys.RIS_CVS, ((ElementData) adoc_ht.get(Keys.INDEX_TERM)));
-        ris_ht.put(Keys.RIS_FLS, ((ElementData) adoc_ht.get(Keys.UNCONTROLLED_TERMS)));
-        ris_ht.put(Keys.RIS_DO, ((ElementData) adoc_ht.get(Keys.DOI)));
+        changeElementKey(Keys.ACCESSION_NUMBER, Keys.RIS_AN);
+        //      Keys.RIS_SP, // Start Page
+        //      Keys.RIS_EP, // End Pg
+        changeElementKey(Keys.ISSN, Keys.RIS_SN);
+        changeElementKey(Keys.ISBN, Keys.RIS_S1);
+        //      Keys.RIS_MD, // Meeting Date?
+        //      Keys.RIS_CY, // Conference ?
+        //      Keys.RIS_PB, // Publisher
+        changeElementKey(Keys.ABSTRACT, Keys.RIS_N2);
+        //      Keys.RIS_KW, // Main Heading
+        changeElementKey(Keys.INDEX_TERM, Keys.RIS_CVS);
+        changeElementKey(Keys.UNCONTROLLED_TERMS, Keys.RIS_FLS);
+        changeElementKey(Keys.DOI, Keys.RIS_DO);
 
         Collection keySet = ris_ht.keySet();
         Iterator itrKeys = keySet.iterator();
@@ -100,14 +114,34 @@ import java.util.Collection;
         {
           Key key = (Key) itrKeys.next();
           Writer w = new StringWriter();
-          //((ElementData) adoc_ht.get(key)).toXML(w);
-          System.out.println(" key: " +  key.getKey());
+          ElementData eldata = ((ElementData) ris_ht.get(key));
+          if(eldata != null)
+          {
+            eldata.toXML(w);
+            System.out.println(" key: " +  key.getKey() + " == " + w.toString());
+          }
+          else
+          {
+            System.out.println(" key: " +  key.getKey() + " NO DATA");
+          }
         }
 
 
         EIDoc risdoc = new EIDoc(did, ris_ht, getFormat());
-        risdoc.setOutputKeys(getKeys());
+        risdoc.setOutputKeys(this.keys);
 
         return risdoc;
       }
+
+    private void changeElementKey(Key oldkey, Key newkey)
+    {
+      ElementData edata = (ElementData) getDocumentElementDataMap().get(oldkey);
+      if(edata != null)
+      {
+        edata.setKey(newkey);
+        ris_ht.put(newkey, edata);
+      }
+
+      return;
+    }
 }
