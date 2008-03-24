@@ -18,6 +18,11 @@ public class RectangleCoordinates
     this.coordinates = s;
   }
 
+	public void setKey(Key akey)
+	{
+	  this.key = akey;
+	}
+
   public RectangleCoordinates(Key key, String[] s)
   {
     this.key = key;

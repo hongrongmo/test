@@ -30,6 +30,11 @@ public class Issue
 		this.perl = perl;
 	}
 
+	public void setKey(Key akey)
+	{
+	  this.key = akey;
+	}
+
 	public void exportLabels(boolean labels)
 	{
 		this.labels = labels;
@@ -73,7 +78,7 @@ public class Issue
 		out.write(this.key.getKey());
 		out.write(">");
 	}
-	
+
 
 	public String getIssue()
 	{

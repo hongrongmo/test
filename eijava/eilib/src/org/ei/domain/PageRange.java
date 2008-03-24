@@ -10,6 +10,11 @@ public class PageRange
 	implements ElementData
 {
 
+	public void setKey(Key akey)
+	{
+	  this.key = akey;
+	}
+
 	protected Perl5Util perl;
 	protected String pageRange;
 	protected String numberPattern = "/[A-Z]?[0-9][0-9]*/";

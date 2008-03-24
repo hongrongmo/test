@@ -12,6 +12,11 @@ public class Volume
 	protected boolean labels;
 	protected Key key;
 
+	public void setKey(Key akey)
+	{
+	  this.key = akey;
+	}
+
 	public Volume(Key key,
 				  String volume,
 				  Perl5Util perl)

@@ -24,6 +24,11 @@ public class ISBN
 	}
 
 
+	public void setKey(Key akey)
+	{
+	  this.key = akey;
+	}
+
   private static char getISBN13CheckDigit(String isbn) {
     int len = isbn.length();
     int digitSum = 0;

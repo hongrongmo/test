@@ -9,6 +9,12 @@ public class ISSN
 	protected Key key;
 	protected boolean labels;
 
+
+	public void setKey(Key akey)
+	{
+	  this.key = akey;
+	}
+
 	public ISSN(String issn)
 	{
 		this.key = Keys.ISSN;

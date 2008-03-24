@@ -13,6 +13,11 @@ public class Treatments
 	protected Key key;
 	protected boolean labels = false;
 
+	public void setKey(Key akey)
+	{
+	  this.key = akey;
+	}
+
 	public Treatments(String[] codes,
 					  Database database)
 	{
@@ -40,7 +45,7 @@ public class Treatments
 		Treatment[] trs = new Treatment[codes.length];
 		for (int i = 0; i< codes.length; i++)
 		{
-		    
+
 		    //System.out.println("TR::"+codes[i]);
 			String title = (String)(dataDictionary.getTreatments()).get(codes[i]);
 			Treatment tr = new Treatment(key,
