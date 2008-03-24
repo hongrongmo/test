@@ -20,6 +20,11 @@ public class Highlights
 	private boolean escape = true;
 	private String label;
 
+	public void setKey(Key akey)
+	{
+	  this.key = akey;
+	}
+
 	public Highlights(Key key,
 					  String text,
 					  int numhits,

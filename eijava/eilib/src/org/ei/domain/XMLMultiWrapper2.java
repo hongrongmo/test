@@ -11,6 +11,11 @@ public class XMLMultiWrapper2
 	private boolean labels = false;
 
 
+	public void setKey(Key akey)
+	{
+	  this.key = akey;
+	}
+
 	public String[] getElementData()
 	{
 		String[] s = new String[keyValuePairs.length];

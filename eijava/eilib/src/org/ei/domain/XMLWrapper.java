@@ -16,6 +16,11 @@ public class XMLWrapper
 		return edata;
 	}
 
+	public void setKey(Key akey)
+	{
+	  this.key = akey;
+	}
+
 	public void exportLabels(boolean labels)
 	{
 		this.labels = labels;

@@ -21,6 +21,11 @@ public class Year
 		this.perl = perl;
 	}
 
+	public void setKey(Key akey)
+	{
+	  this.key = akey;
+	}
+
 	public Year(Key key,
 				String year,
 				Perl5Util perl)
@@ -85,5 +90,5 @@ public class Year
 
 
 
-	
+
 }
