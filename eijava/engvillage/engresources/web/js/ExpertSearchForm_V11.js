@@ -14,6 +14,7 @@ var PCH = 64;
 var ELT	= 1024;
 var EPT = 2048;
 var CBN = 256;
+var GRF = 2097152;
 
 var startYear;
 var stringYear;
@@ -180,6 +181,7 @@ var selectedDbMask = 0;
     	((selectedDbMask & INSPEC) == INSPEC) ||
         ((selectedDbMask & CBF) == CBF) ||
     	((selectedDbMask & GEO) == GEO) ||
+    	((selectedDbMask & GRF) == GRF) ||
     	((selectedDbMask & NTIS) == NTIS) ||
     	((selectedDbMask & CHM) == CHM) ||
     	((selectedDbMask & CBN) == CBN) ||
@@ -201,6 +203,7 @@ var selectedDbMask = 0;
     	((selectedDbMask & CBF) == CBF) ||
     	((selectedDbMask & INSPEC) == INSPEC) ||
     	((selectedDbMask & GEO) == GEO) ||
+    	((selectedDbMask & GRF) == GRF) ||
     	((selectedDbMask & NTIS) == NTIS) ||
     	((selectedDbMask & PCH) == PCH))
     {
@@ -217,6 +220,7 @@ var selectedDbMask = 0;
     if (((selectedDbMask & CPX) == CPX) ||
     	((selectedDbMask & CBF) == CBF) ||
     	((selectedDbMask & GEO) == GEO) ||
+    	((selectedDbMask & GRF) == GRF) ||
     	((selectedDbMask & INSPEC) == INSPEC) ||
     	((selectedDbMask & INSPEC_BACKFILE) == INSPEC_BACKFILE) ||
     	((selectedDbMask & CHM) == CHM) ||
@@ -236,6 +240,7 @@ var selectedDbMask = 0;
     //DT
     if (((selectedDbMask & CPX) == CPX) ||
         ((selectedDbMask & GEO) == GEO) ||
+        ((selectedDbMask & GRF) == GRF) ||
         ((selectedDbMask & CBF) == CBF) ||
         ((selectedDbMask & INSPEC) == INSPEC) ||
         ((selectedDbMask & PCH) == PCH))
@@ -255,6 +260,7 @@ var selectedDbMask = 0;
         ((selectedDbMask & INSPEC) == INSPEC) ||
         ((selectedDbMask & INSPEC_BACKFILE) == INSPEC_BACKFILE) ||
         ((selectedDbMask & ELT) == ELT) ||
+        ((selectedDbMask & GRF) == GRF) ||
         ((selectedDbMask & PCH) == PCH))
     {
         link = newLookupLink();
