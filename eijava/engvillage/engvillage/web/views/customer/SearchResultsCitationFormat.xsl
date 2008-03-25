@@ -77,7 +77,7 @@
         </xsl:if>
 
       <xsl:if test="boolean(bit:hasBitSet(/PAGE/DBMASK,2097152) or bit:hasBitSet(/PAGE/DBMASK,8192))">
-      <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAR--2D6WLLGcr7L3QlwZCBRTWp_Jg7UwMVr-ESRqyz6fZCklfjxRMuUlG4X-qIrTCMhuYZ8sO4fVZEA"
+      <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=@google.maps.api.key@"
               type="text/javascript"></script>
       <script type="text/javascript">
           var g_searchid = "<xsl:value-of select="SEARCH-ID"/>";

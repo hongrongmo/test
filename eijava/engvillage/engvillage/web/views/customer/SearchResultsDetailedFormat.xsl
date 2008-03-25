@@ -238,7 +238,7 @@
     </xsl:if>
 
     <xsl:if test="(PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/CRDN)" >
-      <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAR--2D6WLLGcr7L3QlwZCBRTWp_Jg7UwMVr-ESRqyz6fZCklfjxRMuUlG4X-qIrTCMhuYZ8sO4fVZEA"
+      <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=@google.maps.api.key@"
               type="text/javascript"></script>
       <script type="text/javascript">
       var markerIcons = { "Oil":"http://maps.google.com/intl/en_us/mapfiles/ms/icons/red-dot.png",
