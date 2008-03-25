@@ -29,6 +29,7 @@
 
     String currentPage = null;
     SearchControl sc = new FastSearchControl();
+    sc.setUseNavigators(false);
 
     Refinements parsedrefinements = new Refinements();
 
@@ -684,24 +685,24 @@
             {
                 out.write("<PAGE>");
 
-		StringBuffer backurl = new StringBuffer();
-		backurl.append("CID=expertSearchCitationFormat").append("&");
-		backurl.append("SEARCHID=").append(searchID).append("&");
-		backurl.append("COUNT=").append(index).append("&");
-		backurl.append("database=").append(dbName);
-		String encodedBackURL = URLEncoder.encode(backurl.toString());
-		String newSearchURL = URLEncoder.encode(getnsURL(dbName, queryObject.getSearchType()));
-		out.write("<BACKURL>");
-		out.write(encodedBackURL);
-		out.write("</BACKURL>");
-		out.write("<PAGE-NAV>");
-		out.write("<RESULTS-NAV>");
-		out.write(encodedBackURL);
-		out.write("</RESULTS-NAV>");
-		out.write("<NEWSEARCH-NAV>");
-		out.write(newSearchURL);
-		out.write("</NEWSEARCH-NAV>");
-		out.write("</PAGE-NAV>");
+                StringBuffer backurl = new StringBuffer();
+                backurl.append("CID=expertSearchCitationFormat").append("&");
+                backurl.append("SEARCHID=").append(searchID).append("&");
+                backurl.append("COUNT=").append(index).append("&");
+                backurl.append("database=").append(dbName);
+                String encodedBackURL = URLEncoder.encode(backurl.toString());
+                String newSearchURL = URLEncoder.encode(getnsURL(dbName, queryObject.getSearchType()));
+                out.write("<BACKURL>");
+                out.write(encodedBackURL);
+                out.write("</BACKURL>");
+                out.write("<PAGE-NAV>");
+                out.write("<RESULTS-NAV>");
+                out.write(encodedBackURL);
+                out.write("</RESULTS-NAV>");
+                out.write("<NEWSEARCH-NAV>");
+                out.write(newSearchURL);
+                out.write("</NEWSEARCH-NAV>");
+                out.write("</PAGE-NAV>");
                 out.write("<BACKURL>");
                 out.write(URLEncoder.encode(backurl.toString()));
                 out.write("</BACKURL>");
@@ -777,9 +778,20 @@
 //              commented if((sc != null)) out - sc (FastSearchControl) is used
 //              on w/o checking for null
 //
-                ResultNavigator nav = sc.getNavigator();
+                ResultNavigator nav = null;
+                if(false)
+                {
+                  nav = sc.getNavigator();
+                }
 
-                deDupable = nav.isDeDupable();
+                if(nav != null)
+                {
+                  deDupable = nav.isDeDupable();
+                }
+                else
+                {
+                  deDupable = queryObject.isDeDup();
+                }
 
                 // This is new 'flag' used in XSL - Previously the
                 // XSL just checked the dbmask
@@ -787,21 +799,24 @@
 
                 if(queryObject.getSearchType().equals(Query.TYPE_EASY))
                 {
-                    if(queryObject.getRefinements() != null)
+                    if((nav != null) && (queryObject.getRefinements() != null))
                     {
                         nav.removeRefinements(queryObject.getRefinements());
                     }
                 }
                 else
                 {
-                    if(parsedrefinements.size() != 0)
+                    if((nav != null) && (parsedrefinements.size() != 0))
                     {
                         // Removing Refinements from an Expert search
                         nav.removeRefinements(parsedrefinements);
                     }
                 }
 
-                out.write(nav.toXML(queryObject.getResultsState()));
+                if(nav != null)
+                {
+                  out.write(nav.toXML(queryObject.getResultsState()));
+                }
 
                 queryObject.setDisplay(true);
 
