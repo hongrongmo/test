@@ -781,15 +781,16 @@
         <xsl:with-param name="FIELD">CV</xsl:with-param>
         <xsl:with-param name="NAME"><xsl:value-of select="name(.)"/></xsl:with-param>
       </xsl:call-template>
+
       <!-- if there is a match here between the CV and the ID of a Map rectangle, the RECT xsl template will be triggered -->
-      <xsl:apply-templates select="key('map-lookup', text())" />
+      <xsl:apply-templates select="key('map-lookup', hlight:removeMarkup(text()))" />
       <xsl:if test="not(position()=last())">
         <A CLASS="SmBlackText">&#160; - &#160;</A>
       </xsl:if>
     </xsl:template>
 
     <xsl:template match="RECT">
-        <xsl:apply-templates select="key('coord-lookup', @ID)" />
+      <xsl:apply-templates select="key('coord-lookup', @ID)" />
     </xsl:template>
 
     <xsl:template match="LOC">
