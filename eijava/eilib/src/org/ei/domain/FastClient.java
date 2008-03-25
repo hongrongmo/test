@@ -63,6 +63,7 @@ public class FastClient
          mask == DatabaseConfig.INS_MASK ||
          mask == DatabaseConfig.IBS_MASK ||
          mask == DatabaseConfig.GEO_MASK ||
+         mask == DatabaseConfig.GRF_MASK ||
          mask == DatabaseConfig.CBN_MASK ||
          mask == DatabaseConfig.CHM_MASK ||
          mask == DatabaseConfig.PCH_MASK ||
@@ -140,6 +141,7 @@ public class FastClient
               DatabaseConfig.IBS_MASK +
               DatabaseConfig.NTI_MASK +
               DatabaseConfig.GEO_MASK +
+              DatabaseConfig.GRF_MASK +
               DatabaseConfig.CBF_MASK +
               DatabaseConfig.CBN_MASK +
               DatabaseConfig.CHM_MASK +
@@ -239,7 +241,7 @@ public class FastClient
             }
         }
 
-        //System.out.println(" getNavigatorString() result = " + navstring);
+        System.out.println(" getNavigatorString() result = " + navstring);
         return navstring;
     }
 
