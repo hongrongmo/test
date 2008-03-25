@@ -43,6 +43,7 @@ public class EiModifier implements Comparable
     public static final EiModifier MOD_PAG = new EiModifier(0, "Referex", Integer.toString(DatabaseConfig.PAG_MASK));
     public static final EiModifier MOD_CBF = new EiModifier(0, "Ei Backfile", Integer.toString(DatabaseConfig.CBF_MASK));
     public static final EiModifier MOD_IBS = new EiModifier(0, "Inspec Archive", Integer.toString(DatabaseConfig.IBS_MASK));
+    public static final EiModifier MOD_GRF = new EiModifier(0, "Georef", Integer.toString(DatabaseConfig.GRF_MASK));
 
 
     public static final EiModifier MOD_PCH = new EiModifier(0, "PaperChem", Integer.toString(DatabaseConfig.PCH_MASK));
