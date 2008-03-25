@@ -93,13 +93,17 @@ try
         String geovalue = modifier.getValue();
         int geocount = modifier.getCount();
 
-        out.write("<Placemark type=\"Oil\">");
-        out.write("<search><![CDATA[/controller/servlet/Controller?CID=expertSearchCitationFormat&RERUN="+searchId+"&append=" + geocount + "~" + geovalue  + "~" + geoterm + "&section=geonav]]></search>");
-        out.write("<count><![CDATA[" + modifier.getCount() + "]]></count>");
-        out.write("<name><![CDATA[" + geoterm + "]]></name>");
-        out.write("<description><![CDATA[" + geoterm + "]]></description>");
-        out.write(coords.lookupGeoRefTermCoordinates(geoterm));
-        out.write("</Placemark>");
+        String coordniates = coords.lookupGeoRefTermCoordinates(geoterm);
+        if(coordniates != null)
+        {
+          out.write("<Placemark type=\"Oil\">");
+          out.write("<search><![CDATA[/controller/servlet/Controller?CID=expertSearchCitationFormat&RERUN="+searchId+"&append=" + geocount + "~" + geovalue  + "~" + geoterm + "&section=geonav]]></search>");
+          out.write("<count><![CDATA[" + modifier.getCount() + "]]></count>");
+          out.write("<name><![CDATA[" + geoterm + "]]></name>");
+          out.write("<description><![CDATA[" + geoterm + "]]></description>");
+          out.write(coordniates);
+          out.write("</Placemark>");
+        }
       }
     }
     out.write("</kml>");
