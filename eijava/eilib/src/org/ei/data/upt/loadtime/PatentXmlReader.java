@@ -708,15 +708,15 @@ public class PatentXmlReader
 				StringBuffer country = new StringBuffer();
 
 				List inventors = (List)singleRecord.get("INVENTOR");
+				/*
+				* Possibly need to sort inventors basked on sequence here.
+				*/
+
 				for(int i=0;i<inventors.size();i++)
 				{
 					HashMap inventor = (HashMap)inventors.get(i);
 					if(inventor.get("NAME")!=null ||inventor.get("LAST_NAME")!=null || inventor.get("FIRST_NAME")!=null)
 					{
-						if(name.length()>0)
-						{
-							name.append(AUDELIMITER);
-						}
 						if(inventor.get("NAME")!=null)
 						{
 							name.append((String)inventor.get("NAME"));
@@ -736,16 +736,19 @@ public class PatentXmlReader
 								name.append((String)inventor.get("FIRST_NAME"));
 							}
 						}
-
+					}
+					else
+					{
+						continue;
 					}
 
+					if(i+1 < inventors.size())
+					{
+						name.append(AUDELIMITER);
+					}
 
 					if(inventor.get("ADDRESS1")!=null || inventor.get("CITY")!=null || inventor.get("STATE")!=null || inventor.get("POSTCODE")!=null)
 					{
-						if(address.length()>0)
-						{
-							address.append(AUDELIMITER);
-						}
 						if(inventor.get("ADDRESS1")!=null)
 						{
 							address.append((String)inventor.get("ADDRESS1"));
@@ -774,20 +777,24 @@ public class PatentXmlReader
 						{
 							address.append((String)inventor.get("POSTCODE"));
 						}
+					}
 
+					if(i+1 < inventors.size())
+					{
+						address.append(AUDELIMITER);
 					}
 
 					if(inventor.get("COUNTRY")!=null)
 					{
-						if(country.length()>0)
-						{
-							country.append(AUDELIMITER);
-						}
 						country.append((String)inventor.get("COUNTRY"));
-
 					}
 
+					if(i+1 < inventors.size())
+					{
+						country.append(AUDELIMITER);
+					}
 				}
+
 				if(name.length()>0)
 				{
 					out.print(substituteChars(name.toString()));
@@ -832,10 +839,6 @@ public class PatentXmlReader
 					{
 						if(applicant.get("LAST_NAME")!=null || applicant.get("FIRST_NAME")!=null || applicant.get("ORGNAME")!=null)
 						{
-							if(ap_name.length()>0)
-							{
-								ap_name.append(AUDELIMITER);
-							}
 							if(applicant.get("LAST_NAME")!=null)
 							{
 								ap_name.append((String)applicant.get("LAST_NAME"));
@@ -858,15 +861,19 @@ public class PatentXmlReader
 							{
 								ap_name.append((String)applicant.get("ORGNAME"));
 							}
+						}
+						else
+						{
+							continue;
+						}
 
+						if(i+1 < applicants.size())
+						{
+							ap_name.append(AUDELIMITER);
 						}
 
 						if(applicant.get("ADDRESS1")!=null || applicant.get("CITY")!=null || applicant.get("STATE")!=null || applicant.get("POSTCODE")!=null)
 						{
-							if(ap_address.length()>0)
-							{
-								ap_address.append(AUDELIMITER);
-							}
 							if(applicant.get("ADDRESS1")!=null)
 							{
 								ap_address.append((String)applicant.get("ADDRESS1"));
@@ -896,19 +903,22 @@ public class PatentXmlReader
 							{
 								ap_address.append((String)applicant.get("POSTCODE"));
 							}
+						}
 
+						if(i+1 < applicants.size())
+						{
+							ap_address.append(AUDELIMITER);
 						}
 
 						if(applicant.get("COUNTRY")!=null)
 						{
-							if(ap_country.length()>0)
-							{
-								ap_country.append(AUDELIMITER);
-							}
 							ap_country.append((String)applicant.get("COUNTRY"));
-
 						}
 
+						if(i+1 < applicants.size())
+						{
+							ap_country.append(AUDELIMITER);
+						}
 					}
 				}
 
@@ -956,10 +966,7 @@ public class PatentXmlReader
 					{
 						if(agent.get("LAST_NAME")!=null || agent.get("FIRST_NAME")!=null || agent.get("ORGNAME")!=null)
 						{
-							if(aty_name.length()>0)
-							{
-								aty_name.append(AUDELIMITER);
-							}
+
 							if(agent.get("LAST_NAME")!=null)
 							{
 								aty_name.append((String)agent.get("LAST_NAME"));
@@ -982,7 +989,15 @@ public class PatentXmlReader
 							{
 								aty_name.append((String)agent.get("ORGNAME"));
 							}
+						}
+						else
+						{
+							continue;
+						}
 
+						if(i+1 < agents.size())
+						{
+							aty_name.append(AUDELIMITER);
 						}
 
 						if(agent.get("ADDRESS1")!=null || agent.get("CITY")!=null || agent.get("STATE")!=null || agent.get("POSTCODE")!=null)
@@ -1023,6 +1038,11 @@ public class PatentXmlReader
 							}
 						}
 
+						if(i+1 < agents.size())
+						{
+							aty_address.append(AUDELIMITER);
+						}
+
 						if(agent.get("COUNTRY")!=null)
 						{
 							if(aty_country.length()>0)
@@ -1032,8 +1052,13 @@ public class PatentXmlReader
 							aty_country.append((String)agent.get("COUNTRY"));
 						}
 
+						if(i+1 < agents.size())
+						{
+							aty_country.append(AUDELIMITER);
+						}
 					}
 				}
+
 				if(aty_name.length()>0)
 				{
 					//System.out.println("ATY_NAME "+aty_name.toString());
@@ -2004,8 +2029,8 @@ public class PatentXmlReader
 				}
 				if(main_classification.getChildTextTrim("subgroup")!=null)
 				{
-					ipcBuffer.append("/"+main_classification.getChildTextTrim("subgroup"));
-					iscBuffer.append("/"+main_classification.getChildTextTrim("subgroup"));
+					ipcBuffer.append("/"+padSubGroup(main_classification.getChildTextTrim("subgroup")));
+					iscBuffer.append("/"+padSubGroup(main_classification.getChildTextTrim("subgroup")));
 				}
 
 			}
@@ -2044,8 +2069,8 @@ public class PatentXmlReader
 					}
 					if(further_classification.getChildTextTrim("subgroup")!=null)
 					{
-						tempFicBuffer.append("/"+further_classification.getChildTextTrim("subgroup"));
-						tempIscBuffer.append("/"+further_classification.getChildTextTrim("subgroup"));
+						tempFicBuffer.append("/"+padSubGroup(further_classification.getChildTextTrim("subgroup")));
+						tempIscBuffer.append("/"+padSubGroup(further_classification.getChildTextTrim("subgroup")));
 					}
 					if(ficBuffer.indexOf(tempFicBuffer.toString())<0)
 					{
@@ -2082,6 +2107,17 @@ public class PatentXmlReader
 			record.put("FIC",ficBuffer.toString());
 		}
 	}
+
+	private String padSubGroup(String s)
+	{
+		if(s.length() == 1)
+		{
+			s = "0"+s;
+		}
+
+		return s;
+	}
+
 
 	private String getDocType(String authCode, String kindCode)throws Exception
 	{
