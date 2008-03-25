@@ -176,6 +176,8 @@ public class FastClient
       if((mask & (DatabaseConfig.EUP_MASK +
             DatabaseConfig.UPA_MASK+
             DatabaseConfig.CBN_MASK +
+            DatabaseConfig.GEO_MASK +
+            DatabaseConfig.GRF_MASK +
             DatabaseConfig.EPT_MASK)) > 0) {
         return true;
       }
