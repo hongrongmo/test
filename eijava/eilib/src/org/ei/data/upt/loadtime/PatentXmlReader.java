@@ -19,6 +19,7 @@ public class PatentXmlReader
 	private Document doc = null;
 	private Iterator rec =null;
 	private Perl5Util perl = new Perl5Util();
+	private InventorComp INVENTORS_COMP = new InventorComp();
 	public static final char IDDELIMITER = (char)31;
 	public static final char DELIM = '\t';
 	char AUDELIMITER = (char) 30;
@@ -708,6 +709,7 @@ public class PatentXmlReader
 				StringBuffer country = new StringBuffer();
 
 				List inventors = (List)singleRecord.get("INVENTOR");
+				Collections.sort(inventors, INVENTORS_COMP);
 				/*
 				* Possibly need to sort inventors basked on sequence here.
 				*/
@@ -1325,6 +1327,30 @@ public class PatentXmlReader
 			System.out.println("xmlFile Name is "+xmlFileName);
 			System.out.println("zip file name is "+filename);
 			e.printStackTrace();
+		}
+	}
+
+	class InventorComp implements Comparator
+	{
+		public int compare(Object o1, Object o2)
+		{
+			Map map1 = (Map)o1;
+			Map map2 = (Map)o2;
+
+			int s1 = Integer.parseInt((String)map1.get("SEQUENCE"));
+			int s2 = Integer.parseInt((String)map2.get("SEQUENCE"));
+			if(s1 < s2)
+			{
+				return -1;
+			}
+			if(s1 > s2)
+			{
+				return 1;
+			}
+			else
+			{
+				return 0;
+			}
 		}
 	}
 
