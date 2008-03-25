@@ -42,6 +42,8 @@ public class GeoRefCoordinateMap
 
   public String lookupGeoRefTermCoordinates(String geoterm)
   {
+    geoterm = geoterm.toLowerCase();
+
     if(georefMapCoordinates.containsKey(geoterm))
     {
       return (String) ((Rectangle) georefMapCoordinates.get(geoterm)).toXML();
@@ -83,11 +85,13 @@ public class GeoRefCoordinateMap
           }
           Rectangle r = (new Rectangle(terms[1]));
           georefMapCoordinates.put(terms[0].toLowerCase(),r);
-          log.debug("Loading... " + terms[0] + ", " + r);
+          log.info("Loading... " + terms[0] + ", " + r);
         }
       }
       else
       {
+        log.error("Reader is null");
+        log.error("Reader is null");
         System.out.println("Reader is null");
       }
     }
