@@ -120,6 +120,7 @@ public class ResultNavigator
         boolean m_encompasspat = false;
         boolean m_ntis = false;
         boolean m_geobase = false;
+        boolean m_georef = false;
         boolean m_inspec = false;
         boolean m_inspecarchive = false;
         boolean m_compendex = false;
@@ -137,6 +138,7 @@ public class ResultNavigator
             m_inspecarchive = mods.contains(EiModifier.MOD_IBS);
             m_ntis = mods.contains(EiModifier.MOD_NTI);
             m_geobase = mods.contains(EiModifier.MOD_GEO);
+            m_georef = mods.contains(EiModifier.MOD_GRF);
             m_encompasspat = mods.contains(EiModifier.MOD_EPT);
             m_encompasslit = mods.contains(EiModifier.MOD_ELT);
             m_cbnb = mods.contains(EiModifier.MOD_CBN);
@@ -461,10 +463,18 @@ public class ResultNavigator
           }
           // IPC data from the PK navigator should display if only EnCompassPAT is searched.
           //else if(mask == upa || mask == eup || mask == upa + eup || mask == upa + ept || mask == eup + ept || mask == upa + eup + ept)
-          else if((m_uspatents || m_eupatents || m_encompasspat) && !(m_compendex || m_inspec || m_ntis || m_geobase || m_cbnb ||  m_books || m_encompasslit))
+          else if((m_uspatents || m_eupatents || m_encompasspat) && !(m_compendex || m_inspec || m_ntis || m_georef || m_geobase || m_cbnb ||  m_books || m_encompasslit))
           {
             //PID (IPC Code, PID)
             anav.setDisplayname("IPC code");
+          }
+          else if(m_georef || m_geobase)
+          {
+            fastnavigators.remove(anav);
+
+            EiNavigator pidnav = copyNavigator(anav, new EiNavigator(EiNavigator.GEO));
+
+            fastnavigators.add(pidnav);
           }
           else
           {
