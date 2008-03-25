@@ -29,6 +29,7 @@ try
   User user = null;
   String sessionId = null;
   String[] credentials = new String[]{"CPX", "UPO", "CRC", "SOL", "INS", "DSS", "ESN", "SCI", "EMS", "EEV", "OJP", "SPI", "NTI", "THS", "C84", "IBF", "UPA", "EUP", "CBN", "GEO", "PCH", "CHM", "ELT", "EPT", "GSP", "LHC", "EZY", "GAR", "ELE", "CHE", "MAT", "COM", "CIV", "SEC", "BPE", "ZBF", "CSY2004", "a", "czl", "frl", "he", "ng", "ocl", "prp", "ps_l", "ts", "tl", "czp", "cp", "ets", "frp", "ocp", "pp", "psp", "ps_p", "pol", "tp", "PAG", "GRF", "GRF", "GRF"};
+  int dbmask = 0;
 
   client = new ControllerClient(request, response);
 
@@ -59,6 +60,7 @@ try
       queryObject = Searches.getSearch(searchId);
       if(queryObject != null)
       {
+        dbmask = queryObject.getDataBase();
         queryObject.setSearchQueryWriter(new FastQueryWriter());
         queryObject.setDatabaseConfig(databaseConfig);
         queryObject.setCredentials(credentials);
@@ -97,7 +99,7 @@ try
         if(coordniates != null)
         {
           out.write("<Placemark type=\"Oil\">");
-          out.write("<search><![CDATA[/controller/servlet/Controller?CID=expertSearchCitationFormat&RERUN="+searchId+"&append=" + geocount + "~" + geovalue  + "~" + geoterm + "&section=geonav]]></search>");
+          out.write("<search><![CDATA[/controller/servlet/Controller?CID=expertSearchCitationFormat&database=" + dbmask + "&RERUN="+searchId+"&append=" + geocount + "~" + geovalue  + "~" + geoterm + "&section=geonav]]></search>");
           out.write("<count><![CDATA[" + modifier.getCount() + "]]></count>");
           out.write("<name><![CDATA[" + geoterm + "]]></name>");
           out.write("<description><![CDATA[" + geoterm + "]]></description>");
