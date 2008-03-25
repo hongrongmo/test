@@ -82,7 +82,7 @@ public class GeoRefCoordinateMap
             }
           }
           Rectangle r = (new Rectangle(terms[1]));
-          georefMapCoordinates.put(terms[0],r);
+          georefMapCoordinates.put(terms[0].toLowerCase(),r);
           log.debug("Loading... " + terms[0] + ", " + r);
         }
       }
