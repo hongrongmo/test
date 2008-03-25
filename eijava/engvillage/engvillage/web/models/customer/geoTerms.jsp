@@ -102,7 +102,7 @@ try
           out.write("<search><![CDATA[/controller/servlet/Controller?CID=expertSearchCitationFormat&database=" + dbmask + "&RERUN="+searchId+"&append=" + geocount + "~" + geovalue  + "~" + geoterm + "&section=geonav]]></search>");
           out.write("<count><![CDATA[" + modifier.getCount() + "]]></count>");
           out.write("<name><![CDATA[" + geoterm + "]]></name>");
-          out.write("<description><![CDATA[" + geoterm + "]]></description>");
+          out.write("<description><![CDATA[" + geoterm + " (" + modifier.getCount() + " records)  ]]></description>");
           out.write(coordniates);
           out.write("</Placemark>");
         }
