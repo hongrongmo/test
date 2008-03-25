@@ -751,11 +751,13 @@ public class FastClient
             }
         } // while
 
-        // Faked Navigator!
+        // Fake a Navigator!
+        /*
         line = "#NAV NAME geonav";
         String navNames = "#NAV NAMES Chinkuashih TaiwanClermont FranceCoshocton County OhioCuster County South DakotaAlaskaCayuga County New YorkGreenwood County KansasHampden County MassachusettsKamenka RiverLake SuperiorMatagorda BayMontmorency County MichiganMozambique ChannelOtago PeninsulaPittsburgh PennsylvaniaPuerto RicoRobeson County North CarolinaSchenectady County New YorkSonoma County CaliforniaStewart County Georgia";
         String navCounts = "#NAV CNTS 745357347330305304301295292291289289280277274269269264255254249241239237237232227226226225221220210209208208206206205205203202202194191190190187185184184182182182182181178178177170";
         parseNavigator(line, navNames, navCounts);
+        */
     }
 
     private void parseNavigator(String navLine,
