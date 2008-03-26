@@ -1,6 +1,9 @@
 package org.ei.data.georef.runtime;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -18,6 +21,7 @@ public class GeoRefCoordinateMap
 
   private Map georefMapCoordinates = null;
   private static GeoRefCoordinateMap instance = null;
+
   private static Pattern csvRE;
   public static final String CSV_PATTERN = "\"([^\"]+?)\",?|([^,]+),?|,";
 
@@ -26,8 +30,7 @@ public class GeoRefCoordinateMap
 
   private GeoRefCoordinateMap()
   {
-    GeoRefCoordinateMap.csvRE = Pattern.compile(GeoRefCoordinateMap.CSV_PATTERN);
-    populateMap();
+    //GeoRefCoordinateMap.csvRE = Pattern.compile(GeoRefCoordinateMap.CSV_PATTERN);
   }
 
   public static GeoRefCoordinateMap getInstance() {
@@ -35,6 +38,7 @@ public class GeoRefCoordinateMap
     {
       synchronized (GeoRefCoordinateMap.class) {
         instance = new GeoRefCoordinateMap();
+        instance.populateMap();
       }
     }
     return instance;
@@ -46,10 +50,12 @@ public class GeoRefCoordinateMap
 
     if(georefMapCoordinates.containsKey(geoterm))
     {
+      log.debug("lookup found " + geoterm);
       return (String) ((Rectangle) georefMapCoordinates.get(geoterm)).toXML();
     }
     else
     {
+      log.debug("lookup failed " + geoterm);
       return null;
     }
   }
@@ -57,15 +63,25 @@ public class GeoRefCoordinateMap
   private void populateMap() {
     georefMapCoordinates = new HashMap();
 
-    InputStream in = this.getClass().getClassLoader().getResourceAsStream("org/ei/data/georef/runtime/GeoRefCoodinates.txt");
-    BufferedReader rdr = new BufferedReader(new InputStreamReader(in));
+    //InputStream in = this.getClass().getClassLoader().getResourceAsStream("org/ei/data/georef/runtime/GeoRefCoodinates.txt");
+    BufferedReader rdr = null;
     try {
+      rdr = new BufferedReader(new FileReader("geodata/GeoRefCoodinates.txt"));
+
       if(rdr != null)
       {
         while(rdr.ready())
         {
           String aline = rdr.readLine();
-          String[] terms = aline.split(",");
+
+          int coordstart = aline.lastIndexOf(",");
+          String term = aline.substring(0,coordstart);
+          String coords = aline.substring(coordstart+1);
+          Rectangle r = (new Rectangle(coords));
+          georefMapCoordinates.put(term.trim().toLowerCase(),r);
+
+/*
+          String[] terms = new String[2];// aline.split(",");
           Matcher m = csvRE.matcher(aline);
           // For each field
           int termindex = 0;
@@ -85,12 +101,14 @@ public class GeoRefCoordinateMap
           }
           Rectangle r = (new Rectangle(terms[1]));
           georefMapCoordinates.put(terms[0].toLowerCase(),r);
-          log.info("Loading... " + terms[0] + ", " + r);
-        }
+*/
+          log.debug("Loading... " + term.trim().toLowerCase() + ", " + r);
+
+        } // while
+        System.out.println("Done loading terms...");
       }
       else
       {
-        log.error("Reader is null");
         log.error("Reader is null");
         System.out.println("Reader is null");
       }
@@ -164,6 +182,38 @@ public class GeoRefCoordinateMap
 
     public Rectangle(String coords)
     {
+      //log.debug("Rectange Coords = " + coords);
+
+      coords = coords.trim();
+      int middlespace = coords.indexOf(" ");
+      String strlat = coords.substring(0,middlespace);
+      String strlng = coords.substring(middlespace+1);
+
+      int latsplit = strlat.indexOf("-");
+      int lngsplit = strlng.indexOf("-");
+
+      String strlat1 = strlat.substring(0,latsplit);
+      String strlat2 = strlat.substring(latsplit+1);
+      String strlng1 = strlng.substring(0,lngsplit);
+      String strlng2 = strlng.substring(lngsplit+1);
+
+      int lat1 = Integer.parseInt(strlat1.substring(1,3));
+      int lat2 = Integer.parseInt(strlat2.substring(1,3));
+      int lng1 = Integer.parseInt(strlng1.substring(1,4));
+      int lng2 = Integer.parseInt(strlng2.substring(1,4));
+/*      lat1 = (lat1 > 90) ? (lat1/100) : lat1;
+      lat2 = (lat2 > 90) ? (lat2/100) : lat2;
+      lng1 = (lng1 > 180) ? (lng1/100) : lng1;
+      lng2 = (lng2 > 180) ? (lng2/100) : lng2;*/
+      lat1 = (strlat1.charAt(0) == 83) ? lat1 * -1 : (lat1);
+      lat2 = (strlat2.charAt(0) == 83) ? lat2 * -1 : (lat2);
+      lng1 = (strlng1.charAt(0) == 87) ? lng1 * -1 : (lng1);
+      lng2 = (strlng2.charAt(0) == 87) ? lng2 * -1 : (lng2);
+      sw = new LatLng(lat1,lng2);
+      ne = new LatLng(lat2,lng1);
+
+      //log.debug(this.toString());
+/*
       coordsRE = Pattern.compile(COORDS_PATTERN);
       Matcher m = coordsRE.matcher(coords);
       if(m.find())
@@ -191,6 +241,7 @@ public class GeoRefCoordinateMap
       {
         log.error("Error on:" + coords);
       }
+*/
     }
     public boolean containsLatLng(LatLng pt)
     {
