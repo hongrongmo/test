@@ -582,8 +582,6 @@ public class GeorefReader {
 				text = perl.substitute("s/&/&amp;/g", text);
 				text = perl.substitute("s/</&lt;/g", text);
 				text = perl.substitute("s/>/&gt;/g", text);
-				text = perl.substitute("s/\n//g", text);
-				text = perl.substitute("s/\r//g", text);
 
 				b.append(text);
 
