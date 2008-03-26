@@ -20,7 +20,7 @@ import java.util.regex.*;
 
 public class RISView extends DetailedView {
 
-      private Key[] keys = new Key[]{Keys.RIS_TY, // DocType
+      private Key[] ris_keys = new Key[]{Keys.RIS_TY, // DocType
                                       Keys.RIS_LA, // Language
                                       Keys.RIS_N1, // Copyright
                                       Keys.RIS_TI, // Title
@@ -40,7 +40,7 @@ public class RISView extends DetailedView {
                                       Keys.RIS_SN, // ISSN
                                       Keys.RIS_S1, // ISBN
                                       Keys.RIS_MD, // Meeting Date?
-                                      Keys.RIS_CY,  // Conference ?
+                                      Keys.RIS_CY,  // City of publication
                                       Keys.RIS_PB,  // Publisher
                                       Keys.RIS_N2, // Abstract
                                       Keys.RIS_KW, // Main Heading
@@ -130,9 +130,9 @@ public class RISView extends DetailedView {
 
         changeElementKey(Keys.ISSN, Keys.RIS_SN);
         changeElementKey(Keys.ISBN, Keys.RIS_S1);
-        //      Keys.RIS_MD, // Meeting Date?
-        //      Keys.RIS_CY, // Conference ?
-        //      Keys.RIS_PB, // Publisher
+        //      Keys.RIS_MD, //
+        //      Keys.RIS_CY, //
+        changeElementKey(Keys.PUBLISHER, Keys.RIS_PB);
         changeElementKey(Keys.ABSTRACT, Keys.RIS_N2);
         //      Keys.RIS_KW, // Main Heading
         changeElementKey(Keys.INDEX_TERM, Keys.RIS_CVS);
@@ -142,7 +142,7 @@ public class RISView extends DetailedView {
         // printElementDataXML(ris_ht);
 
         EIDoc risdoc = new EIDoc(did, ris_ht, getFormat());
-        risdoc.setOutputKeys(this.keys);
+        risdoc.setOutputKeys(this.ris_keys);
 
         return risdoc;
       }
