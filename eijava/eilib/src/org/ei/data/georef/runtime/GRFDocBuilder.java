@@ -46,6 +46,7 @@ public class GRFDocBuilder implements DocumentBuilder
     public static final Key LOCATIONS = new Key("LOCS", "Locations");
     public static final Key MERIDIAN = new Key("MRDN", "Meridian data");
     public static final Key GRF_URLS = new Key("GURL", "URL");
+    public static final Key ISBN_NO_SUFFIX = new Key("BN", "ISBN");
 
     private Database database;
 
