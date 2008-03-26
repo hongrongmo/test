@@ -118,9 +118,15 @@ public abstract class DocumentView {
 
       addDocumentValue(Keys.VOLUME, createColumnValueField("VOLUME_ID"), new Volume(StringUtil.EMPTY_STRING,perl));
       addDocumentValue(Keys.ISSUE, createColumnValueField("ISSUE_ID"), new Issue(StringUtil.EMPTY_STRING,perl));
-      addDocumentValue(Keys.ISBN, createColumnValueField("ISBN"), new ISBN(StringUtil.EMPTY_STRING));
+      // Change Key INSIDE ISBN object in order to change Label
+      ElementData isbn = new ISBN(StringUtil.EMPTY_STRING);
+      isbn.setKey(GRFDocBuilder.ISBN_NO_SUFFIX);
+      addDocumentValue(Keys.ISBN, createColumnValueField("ISBN"), isbn);
       addDocumentValue(Keys.ISSN, new IssnDecorator(createColumnValueField("ISSN")), new ISSN(StringUtil.EMPTY_STRING));
-      addDocumentValue(Keys.E_ISSN, new IssnDecorator(createColumnValueField("EISSN")), new ISSN(StringUtil.EMPTY_STRING));
+      // Change Key INSIDE ISSN object in order to change Label
+      ElementData eissn = new ISSN(StringUtil.EMPTY_STRING);
+      eissn.setKey(Keys.E_ISSN);
+      addDocumentValue(Keys.E_ISSN, new IssnDecorator(createColumnValueField("EISSN")), eissn);
 
       addDocumentValue(Keys.PAGE_RANGE, new SimpleValueField(getPages()), new PageRange(StringUtil.EMPTY_STRING, perl));
       addDocumentValue(Keys.PUBLICATION_YEAR, new SimpleValueField(getYear()), new Year(StringUtil.EMPTY_STRING, perl));
@@ -212,6 +218,7 @@ public abstract class DocumentView {
       addDocumentValue(Keys.CONFERENCE_NAME, createColumnValueField("NAME_OF_MEETING"));
       addDocumentValue(Keys.CODEN, createColumnValueField("CODEN"));
       addDocumentValue(Keys.SOURCE, createColumnValueField("TITLE_OF_SERIAL"));
+      addDocumentValue(Keys.SERIAL_TITLE, createColumnValueField("TITLE_OF_SERIAL"));
       addDocumentValue(Keys.COPYRIGHT, createColumnValueField("COPYRIGHT"));
       addDocumentValue(Keys.ACCESSION_NUMBER, createColumnValueField("ID_NUMBER"));
       addDocumentValue(Keys.NUMBER_OF_REFERENCES, createColumnValueField("NUMBER_OF_REFERENCES"));
