@@ -142,6 +142,9 @@ public class FastQueryWriter
         mappings.setProperty("ro", "puc");
         mappings.setProperty("dpid", "pk");
 
+        // geobase/georef navigator
+        mappings.setProperty("geo", "pid");
+
 
 
         ///EnCompass fields
