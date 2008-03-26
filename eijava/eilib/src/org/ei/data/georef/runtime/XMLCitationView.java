@@ -5,6 +5,7 @@ import org.ei.domain.Keys;
 import org.ei.domain.RIS;
 import java.util.Arrays;
 import java.util.List;
+import org.ei.domain.Citation;
 
     public class XMLCitationView extends CitationView {
 
@@ -87,5 +88,5 @@ import java.util.List;
                                         Keys.ACCESSION_NUMBER,
                                         Keys.CONTROLLED_TERMS };
 
-        public String getFormat() { return RIS.RIS_FORMAT; }
+        public String getFormat() { return Citation.XMLCITATION_FORMAT; }
     }
