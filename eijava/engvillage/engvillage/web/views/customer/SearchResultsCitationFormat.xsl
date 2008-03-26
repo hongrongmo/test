@@ -82,7 +82,6 @@
       <script type="text/javascript">
           var g_searchid = "<xsl:value-of select="SEARCH-ID"/>";
       //<![CDATA[
-          var markerGroups = { "Oil": [], "Water": [], "Cities": [], "Land": []};
 
           var populated = false;
           var MAXZOOM = 5;
@@ -141,7 +140,7 @@
 
           function createMarker(point,name,description,searchurl) {
             var newIcon = new GIcon(G_DEFAULT_ICON);
-            var marker = new GMarker(point,{icon:newIcon, title:name});
+            var marker = new GMarker(point,{icon:newIcon, title:description});
             GEvent.addListener(marker, "click", function() {
               document.location = searchurl;
              });
@@ -160,17 +159,29 @@
                   placemarks = xmlDoc.documentElement.getElementsByTagName("Placemark");
                   for(var i = 0; i < placemarks.length; i++) {
 
-                    var point = placemarks[i].getElementsByTagName("Point")[0];
-                    var coords = point.getElementsByTagName("coordinates")[0].childNodes[0].nodeValue;
-                    coords = coords.split(",");
+                    var pointSW = placemarks[i].getElementsByTagName("Point")[0];
+                    var coordsSW = pointSW.getElementsByTagName("coordinates")[0].childNodes[0].nodeValue;
+                    coordsSW = coordsSW.split(",");
+
+                    var pointNE = placemarks[i].getElementsByTagName("Point")[1];
+                    var coordsNE = pointNE.getElementsByTagName("coordinates")[0].childNodes[0].nodeValue;
+                    coordsNE = coordsNE.split(",");
+
                     var name = placemarks[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
                     var description = placemarks[i].getElementsByTagName("description")[0].childNodes[0].nodeValue;
                     var searchurl = placemarks[i].getElementsByTagName("search")[0].childNodes[0].nodeValue;
 
                     var type = placemarks[i].getAttribute("type");
-                    var marker = createMarker(new GLatLng(parseFloat(coords[1]),parseFloat(coords[0])),name,description,searchurl);
+                    var lat1 = parseFloat(coordsSW[1]);
+                    var lng1 = parseFloat(coordsSW[0]);
+                    var lat2 = parseFloat(coordsNE[1]);
+                    var lng2 = parseFloat(coordsNE[0]);
+
+                    var rectangle = new GLatLngBounds(new GLatLng(lat1, lng1), new GLatLng(lat2, lng2));
+                    var marker = createMarker(rectangle.getCenter(),name,description,searchurl);
+
+                    /* var marker = createMarker(new GLatLng(),name,description,searchurl); */
                     map.addOverlay(marker);
-                    markerGroups[type].push(marker);
                     bounds.extend(marker.getPoint());
                   }
                   resetCenterAndZoom();
