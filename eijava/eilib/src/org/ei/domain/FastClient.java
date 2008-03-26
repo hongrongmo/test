@@ -241,7 +241,7 @@ public class FastClient
             }
         }
 
-        System.out.println(" getNavigatorString() result = " + navstring);
+        //System.out.println(" getNavigatorString() result = " + navstring);
         return navstring;
     }
 
