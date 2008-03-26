@@ -49,7 +49,7 @@ public class GRFDatabase extends Database
 
     public List getSortableFields()
     {
-      return Arrays.asList(new SortField[]{SortField.RELEVANCE, SortField.AUTHOR, SortField.YEAR, SortField.SOURCE});
+      return Arrays.asList(new SortField[]{SortField.RELEVANCE, SortField.AUTHOR, SortField.YEAR, SortField.SOURCE, SortField.PUBLISHER});
     }
 
     private DataDictionary dataDictionary = GRFDataDictionary.getInstance();
