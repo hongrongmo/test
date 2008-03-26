@@ -107,7 +107,7 @@ public class EiNavigator
         displayNames.put(EiNavigator.CVM,"Major terms");
         displayNames.put(EiNavigator.RO,"Role");
 
-        displayNames.put(EiNavigator.GEO,"Geo terms");
+        displayNames.put(EiNavigator.GEO,"Geographic terms");
 
    }
 
