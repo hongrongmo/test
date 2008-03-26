@@ -134,6 +134,7 @@
                       /* create checkbox */
                       modchk = document.createElement("input");
                       modchk.setAttribute("type","checkbox");
+                      modchk.style.verticalAlign = "middle"
                       modchk.id = modid;
                       modchk.name = navfield + "nav";
                       modchk.value =  modifier_count + "~" + modifier_value  + "~" + modifier_label;
