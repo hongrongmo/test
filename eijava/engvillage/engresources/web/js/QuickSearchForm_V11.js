@@ -1051,6 +1051,11 @@ function calStartYear(selectedDbMask, sYear)
 
     }
 
+    if((selectedDbMask != 0) && ((selectedDbMask & GRF) == GRF))
+    {
+        var geoStartYear = sYear.substr(sYear.indexOf("XST")+3,4);
+        dYear = (dYear > geoStartYear) ? geoStartYear : dYear;
+    }
     return dYear;
 }
 
@@ -1148,6 +1153,11 @@ function calDisplayYear(selectedDbMask, sYear)
        		var eptStartYear = sYear.substr(sYear.indexOf("MSY") + 3, 4);
        		dYear = (dYear > eptStartYear) ? eptStartYear : dYear;
     	}
+      if((selectedDbMask != 0) && ((selectedDbMask & GRF) == GRF))
+      {
+          var geoStartYear = sYear.substr(sYear.indexOf("XSY")+3,4);
+          dYear = (dYear > geoStartYear) ? geoStartYear : dYear;
+      }    	
     }
     else
     {
@@ -1565,6 +1575,7 @@ function clearAlldb()
        (selectedDbMask & IBS) != IBS &&
        (selectedDbMask & CPX) != CPX &&
        (selectedDbMask & GEO) != GEO &&
+       (selectedDbMask & GRF) != GRF &&
        (selectedDbMask & PCH) != PCH &&
        (selectedDbMask & US_PATENTS) != US_PATENTS &&
        (selectedDbMask & EU_PATENTS) != EU_PATENTS &&
