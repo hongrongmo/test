@@ -192,6 +192,7 @@ public class DbDisplayConstants
         allConstants.put("ins", INS);
         allConstants.put("nti", NTI);
         allConstants.put("geo", GEO);
+        allConstants.put("grf", GRF);
         allConstants.put("pat", EUP);
         allConstants.put("upa", UPA);
         allConstants.put("pch", PCH);
@@ -203,7 +204,6 @@ public class DbDisplayConstants
        // allConstants.put("ref", REF);
         allConstants.put("pag", PAG);
         allConstants.put("ibs", IBS);
-        allConstants.put("grf", GRF);
     }
 
     private DbDisplayConstants(int dbmask,
