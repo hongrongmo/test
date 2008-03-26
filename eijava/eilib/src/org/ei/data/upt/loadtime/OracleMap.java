@@ -38,30 +38,83 @@ public class OracleMap {
 
     }
 
-    public void close() throws Exception {
+    public void close()
+    	throws Exception
+    {
 
          close(stmt);
          close(con);
     }
 
-    public ResultSet get(String key) throws Exception {
-
+    public boolean contains(String key)
+    	throws Exception
+    {
         ResultSet rs = null;
-        try {
+        boolean hit = false;
+        try
+        {
            stmt.setString(1, key);
            stmt.execute();
-
-            rs = stmt.getResultSet();
-
+           rs = stmt.getResultSet();
+           hit = rs.next();
         }
-        catch (Exception sqle) {
+        catch (Exception sqle)
+        {
            sqle.printStackTrace();
-
         }
-
-        return rs;
-
+        finally
+        {
+			try
+			{
+				rs.close();
+			}
+			catch(Exception e)
+			{
+				e.printStackTrace();
+			}
+		}
+		return hit;
     }
+
+	public String getMID(String key, String kindPref)
+		throws Exception
+	{
+		ResultSet rs = null;
+		String mid = null;
+		try
+		{
+		   stmt.setString(1, key);
+		   stmt.execute();
+		   rs = stmt.getResultSet();
+		   while(rs.next())
+		   {
+				mid = rs.getString("m_id");
+				String kind = rs.getString("kind");
+				if(kindPref.equals(kind))
+				{
+					break;
+				}
+		   }
+		}
+		catch (Exception sqle)
+		{
+		   sqle.printStackTrace();
+		}
+		finally
+		{
+			try
+			{
+				rs.close();
+			}
+			catch(Exception e)
+			{
+				e.printStackTrace();
+			}
+		}
+
+		return mid;
+	}
+
     private void close(Statement stmt) {
 
         if (stmt != null) {

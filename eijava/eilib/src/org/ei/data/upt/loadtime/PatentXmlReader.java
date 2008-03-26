@@ -290,7 +290,8 @@ public class PatentXmlReader
 		patentNumber = (String)output_record.get("PR_DOCID_DOC_NUMBER");
 		patentCountry = (String)output_record.get("PR_DOCID_COUNTRY");
 
-		if(!checkAvailable(patentNumber.trim(),patentCountry.trim()))
+		String availablePN = null;
+		if((availablePN = checkAvailable(patentNumber.trim(),patentCountry.trim())) == null)
 		{
 			outputUPTRecord(output_record,patentsOut);
 			outputPatentRef(output_record,patentsRefOut);
@@ -298,6 +299,7 @@ public class PatentXmlReader
 		}
 		else
 		{
+			output_record.put("PR_DOCID_DOC_NUMBER", availablePN);
 			outputUPTRecord(output_record,updatePatentsOut);
 			outputPatentRef(output_record,updatePatentsRefOut);
 			outputNonPatentRef(output_record,updateNonPatentsRefOut);
@@ -1380,7 +1382,7 @@ public class PatentXmlReader
 						prt_cy = (String)singleRecord.get("PR_DOCID_COUNTRY");
 						// PRT_PN
 						prt_pn = (String)singleRecord.get("PR_DOCID_DOC_NUMBER");
-						prt_pn = pnNormalization(prt_pn, prt_cy);
+
 						out.print(prt_pn);
 						out.print(DELIM);
 						out.print(prt_cy);
@@ -1402,7 +1404,13 @@ public class PatentXmlReader
 						// CIT_PN
 						if(cit_pn != null)
 						{
-							cit_pn = pnNormalization(cit_pn, cit_pn);
+							cit_pn = pnNormalization(cit_pn);
+							String availablePN = checkAvailable(cit_pn, cit_cy);
+							if(availablePN != null)
+							{
+								cit_pn = availablePN;
+							}
+
 							out.print(cit_pn);
 						}
 
@@ -1416,27 +1424,17 @@ public class PatentXmlReader
 
 						out.print(DELIM);
 
-						// CIT_PK
-						String cit_pk = (String)citationMap.get("KIND");
-						if(cit_pk != null)
-						{
-							out.print(cit_pk);
-						}
+						// SKIP CIT_PK
 
 						out.print(DELIM);
 
 						// CIT_MID
-						Hashtable citation = getCitDBRec(cit_pn,cit_pk,cit_cy);
-						String cit_mid = null;
-						if(citation != null)
-						{
-							cit_mid = (String)citation.get("MID");
-							if(cit_mid!=null)
-							{
-								out.print(cit_mid);
-							}
-						}
+						String cit_mid  = getCitMID(cit_pn,cit_cy);
 
+						if(cit_mid != null)
+						{
+							out.print(cit_mid);
+						}
 
 						out.print(DELIM);
 
@@ -1711,7 +1709,7 @@ public class PatentXmlReader
 							record.put("PR_DOCID_COUNTRY",pr_country);
 
 							String pr_doc_number = pr_document_id.getChildTextTrim("doc-number"); //OK
-							pr_doc_number = pnNormalization(pr_doc_number, pr_country);
+							pr_doc_number = pnNormalization(pr_doc_number);
 							//System.out.println("pr_doc-number= "+pr_doc_number);
 							patentNumber = pr_doc_number;
 							record.put("PR_DOCID_DOC_NUMBER",pr_doc_number);
@@ -2802,154 +2800,42 @@ public class PatentXmlReader
 		record.put("PRIORITY_CLAIMS",pcList);
 	}
 
-	 public  Hashtable getCitDBRec(String pNum, String kind, String authCode) throws Exception
-	 {
-	 	ResultSet rs = null;
-
-	    Hashtable htVals = new Hashtable(2);
-	    try
-	    {
-			rs = dbMap.get(authCode+pNum);
-	        while(rs != null && rs.next())
-	        {
-	        	String mid = rs.getString("m_id");
-	            String kc = rs.getString("kc");
-	            if(authCode.equalsIgnoreCase("EP") && kc.startsWith("A"))
-	            {
-	            	htVals.put("MID", mid);
-	               	htVals.put("KIND", kc);
-	                break;
-	            }
-	            else
-	            {
-	               htVals.put("MID", mid);
-	               htVals.put("KIND", kc);
-	            }
-	        }
-
-		}
-		catch (Exception sqle)
-		{
-			sqle.printStackTrace();
-		}
-		finally
-		{
-			try
-			{
-				rs.close();
-			}
-			catch(Exception e)
-			{
-				e.printStackTrace();
-			}
-		}
-
-		return htVals;
+	public String getCitMID(String pNum,
+						    String authCode)
+		throws Exception
+	{
+		return dbMap.getMID(authCode+pNum, "A");
 	}
 
-	private String pnNormalization(String pn,
-								   String authority) throws Exception
+	private String pnNormalization(String pn) throws Exception
 	{
-		//System.out.println("PN= "+pn);
 		if(pn != null)
 		{
 			pn=pn.replaceFirst("^(D|PP|P|RE|T|H|X|RX|AI)[0]+","$1");
-
 		}
 
-
-		// Need to test if this works.
-
-		if(authority.equalsIgnoreCase("EP"))
-		{
-			while(pn.length() < 8 && !checkAvailable(pn, authority))
-			{
-				pn = "0"+pn;
-			}
-		}
-
-		//System.out.println("PN1= "+pn);
-		return pn.trim();
+		return pn;
 	}
 
-	public boolean checkAvailable(String pNum,String authCode) throws Exception
+	private String checkAvailable(String pNum,
+								  String authCode)
+		throws Exception
 	{
-		 ResultSet rs = null;
-
-		try
+		while(pNum.length() < 8)
 		{
-			long startTime = System.currentTimeMillis();
-			//System.out.println("startTime= "+startTime);
-			rs = dbMap.get(authCode+pNum);
-		    if(rs != null && rs.next())
-		    {
-		        return true;
-			}
-			long endTime = System.currentTimeMillis();
-			//System.out.println("checkDataBaseTime= "+(endTime-startTime));
-		}
-		catch (Exception sqle)
-		{
-			sqle.printStackTrace();
-		}
-		finally
-		{
-			try
+			if(dbMap.contains(authCode+pNum))
 			{
-				rs.close();
+				return pNum;
 			}
-			catch(Exception e)
+			else
 			{
-				e.printStackTrace();
+				pNum = "0"+pNum;
 			}
 		}
 
-		return false;
+		return null;
 	}
 
-	public  Hashtable getPrtDBRec(String pNum, String kind, String authCode) throws Exception
-	{
-		ResultSet rs = null;
-
-		Hashtable htVals = new Hashtable(2);
-		try
-		{
-			rs = dbMap.get(authCode+pNum);
-			while(rs != null && rs.next())
-			{
-				String mid = rs.getString("m_id");
-				String kc = rs.getString("kc");
-				String ln = rs.getString("load_number");
-				if(authCode.equalsIgnoreCase("EP") && kc.equalsIgnoreCase(kind) && ln.equals(loadNumber))
-				{
-					htVals.put("MID", mid);
-					htVals.put("KIND", kc);
-				}
-				else if(authCode.equalsIgnoreCase("US") && ln.equals(loadNumber))
-				{
-					htVals.put("MID", mid);
-					htVals.put("KIND", kc);
-				}
-			}
-
-		}
-		catch (Exception sqle)
-		{
-			sqle.printStackTrace();
-		}
-		finally
-		{
-			try
-			{
-				rs.close();
-			}
-			catch(Exception e)
-			{
-				e.printStackTrace();
-			}
-		}
-		return htVals;
-	}
 
 	private  StringBuffer getMixData(List l, StringBuffer b)
 	{
