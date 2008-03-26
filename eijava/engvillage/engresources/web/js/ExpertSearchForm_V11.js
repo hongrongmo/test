@@ -508,7 +508,11 @@ function calStartYear(selectedDbMask, sYear)
        var eptStartYear = sYear.substr(sYear.indexOf("MST") + 3, 4);
        dYear = (dYear > eptStartYear) ? eptStartYear : dYear;
     }
-
+    if((selectedDbMask != 0) && ((selectedDbMask & GRF) == GRF))
+    {
+        var ntiStartYear = sYear.substr(sYear.indexOf("XST")+3,4);
+        dYear = (dYear > ntiStartYear) ? ntiStartYear : dYear;
+    }
     return dYear;
 }
 
@@ -601,6 +605,11 @@ function calDisplayYear(selectedDbMask, sYear)
           var eptStartYear = sYear.substr(sYear.indexOf("MST") + 3, 4);
           dYear = (dYear > eptStartYear) ? eptStartYear : dYear;
         }
+        if((selectedDbMask != 0) && ((selectedDbMask & GRF) == GRF))
+        {
+            var ntiStartYear = sYear.substr(sYear.indexOf("XSY")+3,4);
+            dYear = (dYear > ntiStartYear) ? ntiStartYear : dYear;
+        }        
     }
     else
     {
