@@ -820,6 +820,15 @@ public abstract class DocumentView {
       {
         return dataDictionary.getCountries();
       }
+      public String getValue()
+      {
+        String decoratedvalue = super.getValue();
+        if(decoratedvalue == null)
+        {
+          decoratedvalue = field.getValue();
+        }
+        return decoratedvalue;
+      }
     }
 
     public class BibliographicLevelDecorator extends LookupValueDecorator
