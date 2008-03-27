@@ -17,7 +17,6 @@ import org.ei.data.georef.loadtime.*;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-
 public class GeoRefCoordinateMap
 {
   protected static Log log = LogFactory.getLog(GeoRefCoordinateMap.class);
@@ -55,12 +54,12 @@ public class GeoRefCoordinateMap
 
     if(georefMapCoordinates.containsKey(geoterm))
     {
-      log.info("lookup found " + geoterm);
+      log.debug("lookup found " + geoterm);
       return (String) ((Rectangle) georefMapCoordinates.get(geoterm)).toXML();
     }
     else
     {
-      log.info("lookup failed " + geoterm);
+      log.debug("lookup failed " + geoterm);
       return null;
     }
   }
@@ -72,7 +71,7 @@ public class GeoRefCoordinateMap
     String georefterm = georefLookup.lookupGeobaseTerm(geoterm);
     if(georefterm != null)
     {
-      log.info(geoterm + " GEOBASE term translated to GeoRef term " + georefterm);
+      log.debug(geoterm + " GEOBASE term translated to GeoRef term " + georefterm);
       geoterm = georefterm;
     }
 
@@ -80,12 +79,12 @@ public class GeoRefCoordinateMap
 
     if(georefRawCoordinates.containsKey(geoterm))
     {
-      log.info(" RawCoordinates lookup found " + geoterm + " == " + georefRawCoordinates.get(geoterm));
+      log.debug(" RawCoordinates lookup found " + geoterm + " == " + georefRawCoordinates.get(geoterm));
       return (String) georefRawCoordinates.get(geoterm);
     }
     else
     {
-      log.info(" RawCoordinates lookup failed " + geoterm);
+      log.debug(" RawCoordinates lookup failed " + geoterm);
       return null;
     }
   }
