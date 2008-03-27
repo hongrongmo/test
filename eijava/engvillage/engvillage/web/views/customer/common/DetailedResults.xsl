@@ -29,9 +29,32 @@
       </table>
     </xsl:template>
 
+    <!-- sit on this -->
+    <xsl:template match="NO_SO"/>
 
-        <!-- sit on this -->
-        <xsl:template match="NO_SO"/>
+    <!-- These are fixes for GeoREF - Fields that are mutli-value which are not multi value in other databases -->
+    <!-- we need to create special templates for them so they display correctly -->
+    <xsl:template match="CA"> <!-- Category Field -->
+      <span CLASS="MedBlackText">
+        <xsl:apply-templates />
+        <xsl:if test="not(position()=last())"> - </xsl:if>
+      </span>
+    </xsl:template>
+    <xsl:template match="L|A"> <!-- Language Field / Availability -->
+      <span CLASS="MedBlackText">
+        <xsl:apply-templates />
+        <xsl:if test="not(position()=last())">, </xsl:if>
+      </span>
+    </xsl:template>
+    <xsl:template match="D"> <!-- Document type Field -->
+      <xsl:call-template name="LINK">
+        <xsl:with-param name="TERM"><xsl:value-of select="normalize-space(text())" disable-output-escaping="yes"/></xsl:with-param>
+        <xsl:with-param name="FIELD">DT</xsl:with-param>
+      </xsl:call-template>
+      <xsl:if test="not(position()=last())"><a class="SmBlackText">&#160; - &#160;</a></xsl:if>
+    </xsl:template>
+    <!-- End of fixes for GeoREF -->
+
 
     <xsl:template match="CRDN">
       <tr>
@@ -63,7 +86,7 @@
     </xsl:template>
 
     <!-- top level elements with labels and nested value children -->
-    <xsl:template match="SRCNT|SUM|MED|EDI|RPGM|DEG|UNV|HOLD|AUD|CAT|OAF|ANT|MPS|MPT|ILLUS|DGS|SC|AV|DT|MJSM|CRM|CLGM|PIDEPM|BKYS|AGS|AUS|EDS|IVS|CLS|FLS|CVS|RGIS|DISPS|CTS|OCVS|OCLS|NDI|CHI|AOI|AFS|EFS|PASM|PEXM|PIM|PAPIM">
+    <xsl:template match="LA|SRCNT|SUM|MED|EDI|RPGM|DEG|UNV|HOLD|AUD|CAT|OAF|ANT|MPS|MPT|ILLUS|DGS|SC|AV|DT|MJSM|CRM|CLGM|PIDEPM|BKYS|AGS|AUS|EDS|IVS|CLS|FLS|CVS|RGIS|DISPS|CTS|OCVS|OCLS|NDI|CHI|AOI|AFS|EFS|PASM|PEXM|PIM|PAPIM">
         <tr>
             <td valign="top" ><img src="/engresources/images/s.gif" border="0"/></td>
             <td xsl:use-attribute-sets="r-align-label">
@@ -169,7 +192,7 @@
     </xsl:template>
 
   <!-- Controlled/Uncontrolled child node(s) within VALUE under FLS/CVS/AGS -->
-      <xsl:template match="DG|MJS|BKY|FL|CV|AG|CT|OC|PS|RGI|CM|IC|GC|GD|CP|CE">
+    <xsl:template match="DG|MJS|BKY|FL|CV|AG|CT|OC|PS|RGI|CM|IC|GC|GD|CP|CE">
       <xsl:if test="name()='LST'">
       <xsl:if test="position()=1">
       <img src="/engresources/images/separator.gif" border="0" width="6" height="6"/>
@@ -537,6 +560,7 @@
                 <xsl:if test="string(@label)">
                     <span CLASS="MedBlackText"><b><xsl:value-of select="@label"/>:</b> </span>
                 </xsl:if>
+                <!-- Debugging to see what elements are triggering this template/rule [<xsl:value-of select="name()"/>] -->
             </td>
             <td valign="top" width="10"><img src="/engresources/images/s.gif" border="0" width="10"/></td>
             <td valign="top" align="left">
