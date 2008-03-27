@@ -20,6 +20,8 @@ public class GeoRefCoordinateMap
   protected static Log log = LogFactory.getLog(GeoRefCoordinateMap.class);
 
   private Map georefMapCoordinates = null;
+  private Map georefRawCoordinates = null;
+
   private static GeoRefCoordinateMap instance = null;
 
   private static Pattern csvRE;
@@ -60,8 +62,25 @@ public class GeoRefCoordinateMap
     }
   }
 
+  public String lookupGeoBaseTermRawCoordinates(String geoterm)
+  {
+    geoterm = geoterm.toLowerCase();
+
+    if(georefRawCoordinates.containsKey(geoterm))
+    {
+      log.debug("lookup found " + geoterm);
+      return (String) georefRawCoordinates.get(geoterm);
+    }
+    else
+    {
+      log.debug("lookup failed " + geoterm);
+      return null;
+    }
+  }
+
   private void populateMap() {
     georefMapCoordinates = new HashMap();
+    georefRawCoordinates = new HashMap();
 
     //InputStream in = this.getClass().getClassLoader().getResourceAsStream("org/ei/data/georef/runtime/GeoRefCoodinates.txt");
     BufferedReader rdr = null;
@@ -77,9 +96,11 @@ public class GeoRefCoordinateMap
           int coordstart = aline.lastIndexOf(",");
           String term = aline.substring(0,coordstart);
           String coords = aline.substring(coordstart+1);
+          // Load georefMapCoordinates with coordinates for SearchResults Google Mapping
           Rectangle r = (new Rectangle(coords));
           georefMapCoordinates.put(term.trim().toLowerCase(),r);
-
+          // Load georefRawCoordinates with coordinates for Abstarct/Detailed Mapping
+          georefRawCoordinates.put(term.trim().toLowerCase(),coords.replaceAll("\\W",""));
 /*
           String[] terms = new String[2];// aline.split(",");
           Matcher m = csvRE.matcher(aline);
