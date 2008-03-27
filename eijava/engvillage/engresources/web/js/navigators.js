@@ -39,9 +39,6 @@
     var url = "/controller/servlet/Controller?CID=dynamicNavigators&searchId="+searchid+"&timestamp="+(new Date()).getTime();
     xmlHttpNav.open("GET", url, true);
 
-    var navcontainer = document.getElementById("navigators");
-    navcontainer.style.background = "#FFFFFF url(/engresources/images/waiting.gif) no-repeat";
-
     xmlHttpNav.onreadystatechange =
         function()
         {
@@ -53,11 +50,9 @@
               if(typeof(xmlDocument) != 'undefined')
               {
                 var navcontainer = document.getElementById("navigators");
+                // clear out navigators DIV "loading" text and spacers and set background to none
                 while(navcontainer.firstChild) navcontainer.removeChild(navcontainer.firstChild);
-
                 navcontainer.style.background = "none";
-                //navcontainer.style.border = "0px black solid";
-                /* navdiv.style.background="#c3c8d1";*/
 
                 var navigators = xmlDocument.getElementsByTagName("NAVIGATOR")
                 for(var count = 0; count < navigators.length; count++)
