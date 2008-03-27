@@ -179,6 +179,9 @@ public class ResultNavigator
           {
             fastnavigators.remove(anav);
           }
+
+          anav.getModifiers().remove(new EiModifier(0, "Anonymous", "Anonymous"));
+
         }
         // AF
         anav = getNavigatorByName(EiNavigator.AF);
