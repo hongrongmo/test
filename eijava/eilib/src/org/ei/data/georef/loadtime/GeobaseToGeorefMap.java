@@ -54,9 +54,12 @@ public class GeobaseToGeorefMap
   private void populateMap() {
     geobaseToGeorefMap = new HashMap();
 
-    InputStream in = this.getClass().getClassLoader().getResourceAsStream("org/ei/data/georef/loadtime/GeobaseToGeorefTerms.txt");
-    BufferedReader rdr = new BufferedReader(new InputStreamReader(in));
+//    InputStream in = this.getClass().getClassLoader().getResourceAsStream("org/ei/data/georef/loadtime/GeobaseToGeorefTerms.txt");
+//    BufferedReader rdr = new BufferedReader(new InputStreamReader(in));
+    BufferedReader rdr = null;
     try {
+      rdr = new BufferedReader(new FileReader("geodata/GeobaseToGeorefTerms.txt"));
+
       if(rdr != null)
       {
         while(rdr.ready())
@@ -88,6 +91,9 @@ public class GeobaseToGeorefMap
       {
         System.out.println("Reader is null");
       }
+    }
+    catch(FileNotFoundException e) {
+      System.out.println("File Not found.  Look for geodata subdirectory.");
     }
     catch(IOException e) {
       e.printStackTrace();
