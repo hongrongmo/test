@@ -689,7 +689,9 @@
         <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
         <td valign="top">
 
-          <div id="navigators"></div>
+          <div id="navigators">
+            <img src="/engresources/images/s.gif" border="0" width="30" height="30"/>
+              </div>
 <!--        <xsl:apply-templates/> -->
         </td>
         <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
