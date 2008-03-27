@@ -2831,11 +2831,13 @@ public class GEODocBuilder
       GeoRefCoordinateMap coords = GeoRefCoordinateMap.getInstance();
       for(int termindex = 0; termindex < geobasemaintermsrgi.length; termindex++)
       {
-        String georefcoords = coords.lookupGeoBaseTermRawCoordinates(geobasemaintermsrgi[termindex]);
+        String term = geobasemaintermsrgi[termindex];
+        String georefcoords = coords.lookupGeoBaseTermRawCoordinates(term);
         if(georefcoords != null)
         {
           //System.out.println(" Found coords " + georefcoords + " for " + geobasemaintermsrgi[termindex]);
-          mapcoords.add(georefcoords);
+          term = term.concat(GRFDocBuilder.IDDELIMITER).concat(georefcoords);
+          mapcoords.add(term);
         }
       }
       return mapcoords;
