@@ -7,6 +7,7 @@
 <%@ page session="false" %>
 
 <%@ page  import="org.ei.controller.ControllerClient"%>
+<%@ page  import="org.ei.domain.DatabaseConfig"%>
 <%@ page  import="org.ei.session.*"%>
 
 <%@ page errorPage="/error/errorPage.jsp"%>
@@ -16,27 +17,27 @@
 
 	int selectedDbMask = -1;
 	
-	int CPX = 1;
-	int INSPEC = 2;
-	int NTIS = 4;
-	int USPTO = 8;
-	int CRC = 16;
-	int C84 = 33;
-	int PCH = 64;
-	int CHM = 128;
-	int CBN = 256;
-	int ELT = 1024;
-	int EPT = 2048;
-	int IBF = 4096;
-	int GEO = 8192;
-	int EU_PATENTS = 16384;
-	int US_PATENTS = 32768;
-    	int US_EU_PATENTS = 49152;  
-    	int REF = 65536;
-    	int PAG = 131072;
-    	int CBF = 262144;
-    	int IBS = 1048576;
-   	int GRF = 2097152;
+	int CPX = DatabaseConfig.CPX_MASK;
+	int INSPEC = DatabaseConfig.INS_MASK;
+	int NTIS = DatabaseConfig.NTI_MASK;
+	int USPTO = DatabaseConfig.USPTO_MASK;
+	int CRC = DatabaseConfig.CRC_MASK;
+	int C84 = 33; // NOT 32???
+	int PCH = DatabaseConfig.PCH_MASK;
+	int CHM = DatabaseConfig.CHM_MASK;
+	int CBN = DatabaseConfig.CBN_MASK;
+	int ELT = DatabaseConfig.ELT_MASK;
+	int EPT = DatabaseConfig.EPT_MASK;
+	int IBF = DatabaseConfig.IBF_MASK;
+	int GEO = DatabaseConfig.GEO_MASK;
+	int EU_PATENTS = DatabaseConfig.EUP_MASK;
+	int US_PATENTS = DatabaseConfig.UPA_MASK;
+	int US_EU_PATENTS = US_PATENTS + EU_PATENTS;  
+	int REF = DatabaseConfig.REF_MASK;
+	int PAG = DatabaseConfig.PAG_MASK;
+	int CBF = DatabaseConfig.CBF_MASK;
+	int IBS = DatabaseConfig.IBS_MASK;
+	int GRF = DatabaseConfig.GRF_MASK;
          
 	String searchtype = null;
 	
