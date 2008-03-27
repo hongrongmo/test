@@ -57,8 +57,6 @@
     <echo message="Classpath is ${cp}"/>
 
     <copy overwrite="yes" filtering="no" file="src/org/ei/data/EVROWSET.dtd" tofile="classes/org/ei/data/EVROWSET.dtd" />
-    <copy overwrite="yes" filtering="no" file="src/org/ei/data/georef/loadtime/GeobaseToGeorefTerms.txt" todir="classes/org/ei/data/georef/loadtime/" />
-    <copy overwrite="yes" filtering="no" file="src/org/ei/data/georef/runtime/GeoRefCoodinates.txt" todir="classes/org/ei/data/georef/runtime/" />
 
     <javac srcdir="src" destdir="${classes.home}" debug="on" optimize="off" deprecation="off">
     	<patternset refid="books.exclude" />
