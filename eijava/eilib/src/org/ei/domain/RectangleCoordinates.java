@@ -45,8 +45,8 @@ public class RectangleCoordinates
   }
 
 
-  private static final String LAT = "(N|S)(\\d{2})(\\d{2})(\\d{2})";
-  private static final String LONG = "(E|W)(\\d{3})(\\d{2})(\\d{2})";
+  private static final String LAT = "(N|S)(\\d+)";
+  private static final String LONG = "(E|W)(\\d+)";
   private static final Pattern RECTANGLEPATTERN = Pattern.compile(RectangleCoordinates.LAT + RectangleCoordinates.LAT + RectangleCoordinates.LONG + RectangleCoordinates.LONG);
 
   public void toXML(Writer out)
@@ -94,11 +94,16 @@ public class RectangleCoordinates
         Matcher rectangle = RectangleCoordinates.RECTANGLEPATTERN.matcher(coordinate);
         if(rectangle.find())
         {
-          String lat1 = String.valueOf(Long.parseLong(rectangle.group(2)) * (rectangle.group(1).equals("S") ? -1 : 1) + (Long.parseLong(rectangle.group(3)) * 1/60) + (Long.parseLong(rectangle.group(4)) * 1/360));
+          String lat1 = String.valueOf(Long.parseLong(rectangle.group(2).substring(0,2)) * (rectangle.group(1).equals("S") ? -1 : 1));
+          String lat2 = String.valueOf(Long.parseLong(rectangle.group(4).substring(0,2)) * (rectangle.group(3).equals("S") ? -1 : 1));
+          String lng1 = String.valueOf(Long.parseLong(rectangle.group(6).substring(0,2)) * (rectangle.group(5).equals("W") ? -1 : 1));
+          String lng2 = String.valueOf(Long.parseLong(rectangle.group(8).substring(0,2)) * (rectangle.group(7).equals("W") ? -1 : 1));
+
+/*          String lat1 = String.valueOf(Long.parseLong(rectangle.group(2)) * (rectangle.group(1).equals("S") ? -1 : 1) + (Long.parseLong(rectangle.group(3)) * 1/60) + (Long.parseLong(rectangle.group(4)) * 1/360));
           String lat2 = String.valueOf(Long.parseLong(rectangle.group(6)) * (rectangle.group(5).equals("S") ? -1 : 1) + (Long.parseLong(rectangle.group(7)) * 1/60) + (Long.parseLong(rectangle.group(8)) * 1/360));
           String lng1 = String.valueOf(Long.parseLong(rectangle.group(10)) * (rectangle.group(9).equals("W") ? -1 : 1) + (Long.parseLong(rectangle.group(11)) * 1/60) + (Long.parseLong(rectangle.group(12)) * 1/360));
           String lng2 = String.valueOf(Long.parseLong(rectangle.group(14)) * (rectangle.group(13).equals("W") ? -1 : 1) + (Long.parseLong(rectangle.group(15)) * 1/60) + (Long.parseLong(rectangle.group(16)) * 1/360));
-
+*/
           out.write("<RECT ID=\"" + ((term != null) ? term : String.valueOf(i)) + "\">");
           out.write("<POINT>");
           out.write("<LAT>");out.write(lat1);out.write("</LAT>");out.write("<LONG>");out.write(lng1);out.write("</LONG>");
@@ -119,11 +124,11 @@ public class RectangleCoordinates
           locations.append("<![CDATA[");
           for(int x = 0; x < 4; x++)
           {
-            int base = x * 4;
+            int base = x * 2;
             // degress and N/S/E/W
             locations.append(rectangle.group(base + 2) + "&#176;" + rectangle.group(base + 1) + " ");
             // Minutes
-            if(!rectangle.group(base + 3).equals("00"))
+            /*if(!rectangle.group(base + 3).equals("00"))
             {
               locations.append(rectangle.group(base + 3) + "\" ");
               // Seconds
@@ -131,7 +136,7 @@ public class RectangleCoordinates
               {
                 locations.append(rectangle.group(base + 4) + "' ");
               }
-            }
+            }*/
           }
           locations.append("]]>");
           locations.append("</LOC>");
