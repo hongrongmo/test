@@ -36,7 +36,7 @@
     	int PAG = 131072;
     	int CBF = 262144;
     	int IBS = 1048576;
-   
+   	int GRF = 2097152;
          
 	String searchtype = null;
 	
@@ -252,7 +252,8 @@
    	    ((selectedDbMask & CBF) == CBF) || 
    	    ((selectedDbMask & INSPEC) == INSPEC) || 
    	    ((selectedDbMask & IBS) == IBS) ||
-   	    ((selectedDbMask & GEO) == GEO) || 
+   	    ((selectedDbMask & GEO) == GEO) ||
+   	    ((selectedDbMask & GRF) == GRF) ||
    	    ((selectedDbMask & PCH) == PCH) || 
    	    ((selectedDbMask & CHM) == CHM) || 
    	    ((selectedDbMask & EPT) == EPT) || 
@@ -278,7 +279,8 @@
       	    ((selectedDbMask & CBF) == CBF) || 
       	    ((selectedDbMask & INSPEC) == INSPEC) || 
       	    ((selectedDbMask & IBS) == IBS) ||
-      	    ((selectedDbMask & GEO) == GEO) || 
+      	    ((selectedDbMask & GEO) == GEO) ||
+      	    ((selectedDbMask & GRF) == GRF) ||
       	    ((selectedDbMask & PCH) == PCH) || 
       	    ((selectedDbMask & CHM) == CHM) || 
       	    ((selectedDbMask & EPT) == EPT) || 
@@ -293,7 +295,8 @@
         //ST
 	if (((selectedDbMask & CPX) == CPX) || 
 	    ((selectedDbMask & CBF) == CBF) || 
-	    ((selectedDbMask & GEO) == GEO) || 
+	    ((selectedDbMask & GEO) == GEO) ||
+	    ((selectedDbMask & GRF) == GRF) ||
 	    ((selectedDbMask & PCH) == PCH) || 
 	    ((selectedDbMask & CHM) == CHM) || 
 	    ((selectedDbMask & ELT) == ELT) || 
@@ -309,6 +312,7 @@
      	if (((selectedDbMask & CPX) == CPX) || 
      	    ((selectedDbMask & CBF) == CBF) || 
      	    ((selectedDbMask & GEO) == GEO) ||
+     	    ((selectedDbMask & GRF) == GRF) ||
      	    ((selectedDbMask & PCH) == PCH) || 
      	    ((selectedDbMask & CHM) == CHM) || 
      	    ((selectedDbMask & ELT) == ELT) || 
@@ -322,7 +326,8 @@
 
 	//PN
 	if (((selectedDbMask & CPX) == CPX) || 
-	    ((selectedDbMask & CBF) == CBF) || 
+	    ((selectedDbMask & CBF) == CBF) ||
+	    ((selectedDbMask & GRF) == GRF) ||
 	    ((selectedDbMask & PCH) == PCH) || 
 	    ((selectedDbMask & ELT) == ELT) || 
 	    ((selectedDbMask & INSPEC) == INSPEC) ||
