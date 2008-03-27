@@ -1054,7 +1054,8 @@ Compendex/EV system document type strings and codes
             String strtranslated = dataDictionary.translateValue(urlstrings[0],getLookupTable());
             if(strtranslated != null)
             {
-              strtranslated = strtranslated.concat(" [").concat(urlstrings[1]).concat("] ");
+              String strurl = ((urlstrings[1].length() > 60) ? (urlstrings[1].substring(0,59).concat("&#133;")) : (urlstrings[1]));
+              strtranslated = strtranslated.concat("&nbsp<a title=\"External Link\" target=\"_gurl\" class=\"SpLink\" href=\"" + urlstrings[1] + "\">").concat(strurl).concat("</a>");
               decoratedvalues.add(strtranslated);
             }
           }
