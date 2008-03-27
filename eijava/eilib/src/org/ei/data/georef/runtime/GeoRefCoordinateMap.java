@@ -12,8 +12,11 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.ei.data.georef.loadtime.*;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+
 
 public class GeoRefCoordinateMap
 {
@@ -52,28 +55,37 @@ public class GeoRefCoordinateMap
 
     if(georefMapCoordinates.containsKey(geoterm))
     {
-      log.debug("lookup found " + geoterm);
+      log.info("lookup found " + geoterm);
       return (String) ((Rectangle) georefMapCoordinates.get(geoterm)).toXML();
     }
     else
     {
-      log.debug("lookup failed " + geoterm);
+      log.info("lookup failed " + geoterm);
       return null;
     }
   }
 
   public String lookupGeoBaseTermRawCoordinates(String geoterm)
   {
+    // look for term in GeoBase to GeoRef
+    GeobaseToGeorefMap georefLookup = GeobaseToGeorefMap.getInstance();
+    String georefterm = georefLookup.lookupGeobaseTerm(geoterm);
+    if(georefterm != null)
+    {
+      log.info(geoterm + " GEOBASE term translated to GeoRef term " + georefterm);
+      geoterm = georefterm;
+    }
+
     geoterm = geoterm.toLowerCase();
 
     if(georefRawCoordinates.containsKey(geoterm))
     {
-      log.debug("lookup found " + geoterm);
+      log.info(" RawCoordinates lookup found " + geoterm + " == " + georefRawCoordinates.get(geoterm));
       return (String) georefRawCoordinates.get(geoterm);
     }
     else
     {
-      log.debug("lookup failed " + geoterm);
+      log.info(" RawCoordinates lookup failed " + geoterm);
       return null;
     }
   }
@@ -133,6 +145,9 @@ public class GeoRefCoordinateMap
         log.error("Reader is null");
         System.out.println("Reader is null");
       }
+    }
+    catch(FileNotFoundException e) {
+      System.out.println("File Not found.  Look for geodata subdirectory.");
     }
     catch(IOException e) {
       e.printStackTrace();
