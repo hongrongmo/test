@@ -689,9 +689,9 @@
         <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
         <td valign="top">
 
-          <div id="navigators">
-            <img src="/engresources/images/s.gif" border="0" width="30" height="30"/>
-              </div>
+          <div id="navigators" style="background:#FFFFFF url(/engresources/images/waiting.gif) no-repeat;">
+            <img align="absmiddle" src="/engresources/images/s.gif" border="0" width="30" height="30"/><span class="MedBoldBlackText">Loading facets...</span>
+          </div>
 <!--        <xsl:apply-templates/> -->
         </td>
         <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
