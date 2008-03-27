@@ -121,7 +121,6 @@ public class PatentXmlReader
 		}
 	}
 
-
 	private void fileReader(File root) throws Exception
 	{
 		String dirlist[] = root.list();
@@ -155,61 +154,32 @@ public class PatentXmlReader
 			//System.out.println("PATH "+path);
 
 			current_file = new File(path);
-
-			if (!current_file.isDirectory())
+			if((path.toUpperCase()).endsWith(".ZIP") )
 			{
-				if((path.toUpperCase()).endsWith(".ZIP") )
+				System.out.println("filename= "+current_file.getName());
+				ZipFile zipFile = new ZipFile(path);
+				Enumeration entries = zipFile.entries();
+				while (entries.hasMoreElements())
 				{
-					System.out.println("filename= "+current_file.getName());
-					ZipInputStream zin = new ZipInputStream(new FileInputStream(path));
-					ZipEntry entry = null;
-					int j=0;
-					while ((entry = zin.getNextEntry()) != null)
+					BufferedReader xmlReader = null;
+					ZipEntry entry = (ZipEntry)entries.nextElement();
+					try
 					{
-						//System.out.println(j+" Entry "+entry.toString());
-						xmlFileName = entry.getName();
-						if (xmlFileName.toUpperCase().endsWith(".XML"))
+						xmlReader = new BufferedReader(new InputStreamReader(zipFile.getInputStream(entry), "UTF-8"));
+						patentXmlParser(xmlReader);
+					}
+					finally
+					{
+						try
 						{
-							BufferedReader in = new BufferedReader(new InputStreamReader(zin, "UTF-8"));
-
-							StringBuffer xmlBuffer = new StringBuffer();
-							String line = "";
-							while ((line = in.readLine()) != null)
-							{
-								if(line.startsWith("<?xml"))
-								{
-									xmlBuffer = new StringBuffer(line);
-								}
-								else
-								{
-									xmlBuffer.append(line);
-								}
-
-								if(line.startsWith("</lexisnexis-patent-document>"))
-								{
-									Reader xmlReader = new StringReader(xmlBuffer.toString());
-									patentXmlParser(xmlReader);
-								}
-
-							}
+							xmlReader.close();
 						}
-						//j++;
+						catch(Exception e)
+						{
+							e.printStackTrace();
+						}
 					}
 				}
-				else if ((path.toUpperCase()).endsWith(".XML"))
-				{
-					FileInputStream fis = new FileInputStream(current_file);
-					Reader xmlReader = new BufferedReader(new InputStreamReader(fis, "UTF-8"));
-					patentXmlParser(xmlReader);
-				}
-				else
-				{
-					System.out.println("the file is not in zip or xml format "+path);
-				}
-			}
-			else
-			{
-				fileReader(current_file);
 			}
 		}
 	}
