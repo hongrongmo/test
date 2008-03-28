@@ -44,7 +44,7 @@
 <xsl:include href="common/AbstractResults.xsl" />
 
   <!-- Hide Map data -->
-  <xsl:template match="CRDN|RECT|LOC" priority="1"/>
+  <xsl:template match="CRDN|RECT|LOC|LOCS" priority="1"/>
 
 	<xsl:template match="PAGE">
 
