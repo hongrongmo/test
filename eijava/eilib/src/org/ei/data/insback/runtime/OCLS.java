@@ -25,6 +25,7 @@ public class OCLS
 	{
 	  this.key = akey;
 	}
+	public Key getKey() { return this.key; }
 
 	public void setElementData(String[] edata)
 

@@ -22,6 +22,7 @@ public class RectangleCoordinates
 	{
 	  this.key = akey;
 	}
+	public Key getKey() { return this.key; }
 
   public RectangleCoordinates(Key key, String[] s)
   {

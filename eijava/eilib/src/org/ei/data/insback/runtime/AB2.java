@@ -16,7 +16,7 @@ public class AB2
 	{
 	  this.key = akey;
 	}
-
+	public Key getKey() { return this.key; }
 
 	public AB2(Key key,
 			   String ab2)
