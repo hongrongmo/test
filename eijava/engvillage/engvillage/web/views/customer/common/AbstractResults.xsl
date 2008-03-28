@@ -201,7 +201,7 @@
         <span CLASS="MedBlackText"><b><xsl:value-of select="@label"/>:</b> </span>
       </xsl:if> -->
       <span CLASS="MedBlackText">
-        <div id="map" style="display:block;border:1px solid black;">
+        <div id="map" style="display:block;">
           <div id="map_canvas" style="float:left; width: 100%; height: 300px;"></div>
         </div>
       </span>
