@@ -123,61 +123,32 @@ public class PatentXmlReader
 
 	private void fileReader(File root) throws Exception
 	{
-		String dirlist[] = root.list();
-		String path ="";
-
-		String path1 = null;
-		File current_file = null;
-
-		int count = 0;
-		int fileCount =0;
-		if (dirlist == null && root.isFile())
+		String zipfiles[] = root.list();
+		for (int i = 0; i < zipfiles.length; i++)
 		{
-			fileCount = 1;
-		}
-		else
-		{
-			fileCount = dirlist.length;
-		}
-
-		for (int i = 0; i < fileCount; i++)
-		{
-			count++;
-			if(root.isDirectory())
+			String path = root.getPath() + File.separator + zipfiles[i];
+			File current_file = new File(path);
+			System.out.println("filename= "+current_file.getName());
+			ZipFile zipFile = new ZipFile(path);
+			Enumeration entries = zipFile.entries();
+			while (entries.hasMoreElements())
 			{
-				path = root.getPath() + File.separator + dirlist[i];
-			}
-			else if(root.isFile())
-			{
-				path = root.getPath();
-			}
-			//System.out.println("PATH "+path);
-
-			current_file = new File(path);
-			if((path.toUpperCase()).endsWith(".ZIP") )
-			{
-				System.out.println("filename= "+current_file.getName());
-				ZipFile zipFile = new ZipFile(path);
-				Enumeration entries = zipFile.entries();
-				while (entries.hasMoreElements())
+				BufferedReader xmlReader = null;
+				ZipEntry entry = (ZipEntry)entries.nextElement();
+				try
 				{
-					BufferedReader xmlReader = null;
-					ZipEntry entry = (ZipEntry)entries.nextElement();
+					xmlReader = new BufferedReader(new InputStreamReader(zipFile.getInputStream(entry), "UTF-8"));
+					patentXmlParser(xmlReader);
+				}
+				finally
+				{
 					try
 					{
-						xmlReader = new BufferedReader(new InputStreamReader(zipFile.getInputStream(entry), "UTF-8"));
-						patentXmlParser(xmlReader);
+						xmlReader.close();
 					}
-					finally
+					catch(Exception e)
 					{
-						try
-						{
-							xmlReader.close();
-						}
-						catch(Exception e)
-						{
-							e.printStackTrace();
-						}
+						e.printStackTrace();
 					}
 				}
 			}
@@ -258,6 +229,7 @@ public class PatentXmlReader
 		this.abstractData = patentRoot.getChild("abstract");
 		output_record = getRecord(patentRoot);
 		patentNumber = (String)output_record.get("PR_DOCID_DOC_NUMBER");
+		System.out.println("Patent Number:"+ patentNumber);
 		patentCountry = (String)output_record.get("PR_DOCID_COUNTRY");
 
 		String availablePN = null;
@@ -662,8 +634,12 @@ public class PatentXmlReader
 
 						if(fosMap != null && fosMap.get("CN_TEXT")!=null)
 						{
+							if(i>0)
+							{
+								fosBuffer.append(AUDELIMITER);
+							}
+
 							fosBuffer.append((String)fosMap.get("CN_TEXT"));
-							fosBuffer.append(AUDELIMITER);
 						}
 					}
 				}
@@ -1501,21 +1477,7 @@ public class PatentXmlReader
 
 						if(non_patent_citation != null)
 						{
-							/*
-							if(non_patent_citation.indexOf("ATP 1500M")>-1)
-							{
-								//System.out.println("STRING"+non_patent_citation+" "+non_patent_citation.charAt(0)+" "+non_patent_citation.charAt(1));
 
-								char[] charArray = non_patent_citation.toCharArray();
-								for(int j=0;j<charArray.length;j++)
-								{
-									if(charArray[j]>127 || charArray[j]<33)
-									{
-										System.out.print(" "+(int)(charArray[j]));
-									}
-								}
-							}
-							*/
 
 							out.print(substituteChars(non_patent_citation));
 							//out.print(substituteChars("GB912066719910928GB920629519920323"));
@@ -1524,45 +1486,19 @@ public class PatentXmlReader
 
 
 						// DOI
-						out.print(" ");
 						out.print(DELIM);
 
 						// CPX
-						out.print(" ");
 						out.print(DELIM);
 
 						// INS
-						out.print(" ");
 						out.print(DELIM);
 
 						// C84
-						out.print(" ");
 						out.print(DELIM);
 
 						// IBF
-						out.print(" ");
 						out.print(DELIM);
-
-						// FILE_NAME
-						if(filename.length()>128)
-						{
-							int lastPosition =0;
-							if(filename.indexOf("/")>0)
-							{
-								lastPosition = filename.lastIndexOf("/");
-							}
-							else if(filename.indexOf("\\")>0)
-							{
-								lastPosition = filename.lastIndexOf("\\");
-							}
-							else
-							{
-								lastPosition = filename.length()-128;
-							}
-							filename=filename.substring(lastPosition,filename.length());
-							//System.out.println("Filename= "+filename);
-						}
-						out.print(filename);
 						out.print(DELIM);
 
 						// LOAD_NUMBER
@@ -1652,7 +1588,8 @@ public class PatentXmlReader
 
 					if(abstractData.getChildTextTrim("p") != null)
 					{
-						record.put("ABSTRACT_DATA", getMixData(abstractData.getContent(),new StringBuffer()));
+						StringBuffer abstractBuf = getMixData(abstractData.getContent(),new StringBuffer());
+						record.put("ABSTRACT_DATA", abstractBuf.toString());
 					}
 				}
 
@@ -1690,10 +1627,12 @@ public class PatentXmlReader
 							//System.out.println("pr_date= "+pr_document_id.getChildTextTrim("date")); //OK
 							record.put("PR_DOCID_DATE",pr_document_id.getChildTextTrim("date"));
 
-							//System.out.println("pr_desc= "+pr_document_id.getChildTextTrim("name"));
+							System.out.println("pr_desc= "+pr_document_id.getChildTextTrim("name"));
 
-							record.put("PR_DOCID_NAME",getMixData(pr_document_id.getChild("name").getContent(),new StringBuffer()));
-
+							if(pr_document_id.getChild("name") != null)
+							{
+								record.put("PR_DOCID_NAME",getMixData(pr_document_id.getChild("name").getContent(),new StringBuffer()));
+							}
 						}
 					}
 					// application-reference
@@ -2460,8 +2399,8 @@ public class PatentXmlReader
 			titleMap.put("IT_FORMAT",invention_title.getAttributeValue("format"));
 
 			//System.out.println("it_content= "+invention_title.getTextTrim());
-
-			titleMap.put("IT_CONTENT", getMixData(invention_title.getContent(),new StringBuffer()));
+			StringBuffer inventionTitle =  getMixData(invention_title.getContent(),new StringBuffer());
+			titleMap.put("IT_CONTENT", inventionTitle.toString());
 			titleList.add(titleMap);
 		}
 		record.put("TITLE",titleList);
@@ -2499,19 +2438,26 @@ public class PatentXmlReader
 						//System.out.println("kind= "+kind);
 						citationTable.put("KIND",kind);
 
-						StringBuffer name = getMixData(document_id.getChild("name").getContent(),new StringBuffer());
-						//System.out.println("name= "+name);
-						citationTable.put("NAME", name.toString()); //
+						if(document_id.getChild("name") != null)
+						{
+							StringBuffer name = getMixData(document_id.getChild("name").getContent(),new StringBuffer());
+							//System.out.println("name= "+name);
+							citationTable.put("NAME", name.toString()); //
+						}
 					}
 				}
 
 				if(nplcit != null)
 				{
-					String non_patent_citation = nplcit.getChildText("text");
-					if(non_patent_citation != null)
+					if(nplcit.getChild("text") != null)
 					{
-						//System.out.println("non_patent_citation= "+non_patent_citation);
-						citationTable.put("NON_PATENT_CITATION",non_patent_citation);
+						StringBuffer npcBuf = getMixData(nplcit.getChild("text").getContent(),new StringBuffer());
+						String non_patent_citation = npcBuf.toString();
+						if(non_patent_citation != null)
+						{
+							//System.out.println("non_patent_citation= "+non_patent_citation);
+							citationTable.put("NON_PATENT_CITATION",non_patent_citation);
+						}
 					}
 				}
 
@@ -2562,12 +2508,20 @@ public class PatentXmlReader
 			String last_name = addressbook.getChildTextTrim("last-name");
 			//System.out.println("party_last_name= "+last_name);
 			String first_name = addressbook.getChildTextTrim("first-name");
-			StringBuffer full_name = getMixData(addressbook.getChild("name").getContent(),new StringBuffer());
+			StringBuffer full_name = null;
+			if(addressbook.getChild("name") != null)
+			{
+				full_name = getMixData(addressbook.getChild("name").getContent(),new StringBuffer());
+			}
+
 			//System.out.println("party_first_name= "+first_name);
 			partiesTable.put("ORGNAME",orgname);
 			partiesTable.put("LAST_NAME",last_name);
 			partiesTable.put("FIRST_NAME",first_name);
-			partiesTable.put("NAME",full_name.toString());
+			if(full_name != null)
+			{
+				partiesTable.put("NAME",full_name.toString());
+			}
 
 			Element address = addressbook.getChild("address");
 			if(address != null)
