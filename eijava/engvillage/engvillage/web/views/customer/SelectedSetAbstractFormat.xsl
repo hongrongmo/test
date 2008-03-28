@@ -43,6 +43,9 @@
 
 <xsl:include href="common/AbstractResults.xsl" />
 
+  <!-- Hide Map data -->
+  <xsl:template match="CRDN|RECT|LOC" priority="1"/>
+
 	<xsl:template match="PAGE">
 
 		<xsl:variable name="SESSION-ID">

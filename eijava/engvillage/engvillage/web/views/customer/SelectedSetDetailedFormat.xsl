@@ -40,6 +40,8 @@
 
 <xsl:include href="common/DetailedResults.xsl" />
 
+  <xsl:template match="CRDN|RECT|LOC" priority="1"/>
+
   <xsl:template match="PAGE">
 
     <xsl:variable name="SESSION-ID">
@@ -94,7 +96,7 @@
 
   <html>
   <head>
-  <title>Selected Set - Detailed Format</title>  	
+  <title>Selected Set - Detailed Format</title>
     <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
     <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/URLEncode.js"/>
     <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/SelectedSet_V7.js"/>
