@@ -13,6 +13,7 @@ public class LinkedTerms implements ElementData {
 	{
 	  this.key = akey;
 	}
+	public Key getKey() { return this.key; }
 
     public void exportLabels(boolean labels) {
         this.labels = labels;

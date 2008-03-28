@@ -15,6 +15,7 @@ public class XMLMultiWrapper2
 	{
 	  this.key = akey;
 	}
+	public Key getKey() { return this.key; }
 
 	public String[] getElementData()
 	{

@@ -14,6 +14,7 @@ public class ISSN
 	{
 	  this.key = akey;
 	}
+	public Key getKey() { return this.key; }
 
 	public ISSN(String issn)
 	{

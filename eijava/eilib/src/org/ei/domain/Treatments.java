@@ -17,6 +17,7 @@ public class Treatments
 	{
 	  this.key = akey;
 	}
+	public Key getKey() { return this.key; }
 
 	public Treatments(String[] codes,
 					  Database database)

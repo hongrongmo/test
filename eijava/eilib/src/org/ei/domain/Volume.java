@@ -16,6 +16,7 @@ public class Volume
 	{
 	  this.key = akey;
 	}
+	public Key getKey() { return this.key; }
 
 	public Volume(Key key,
 				  String volume,

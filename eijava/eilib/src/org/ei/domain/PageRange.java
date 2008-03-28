@@ -14,6 +14,7 @@ public class PageRange
 	{
 	  this.key = akey;
 	}
+	public Key getKey() { return this.key; }
 
 	protected Perl5Util perl;
 	protected String pageRange;

@@ -25,6 +25,7 @@ public class Year
 	{
 	  this.key = akey;
 	}
+	public Key getKey() { return this.key; }
 
 	public Year(Key key,
 				String year,

@@ -12,6 +12,7 @@ public class Contributors
 	{
 	  this.key = akey;
 	}
+	public Key getKey() { return this.key; }
 
 	protected List contributors = new ArrayList();
 	protected Key key;

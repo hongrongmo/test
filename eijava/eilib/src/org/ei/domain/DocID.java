@@ -41,6 +41,7 @@ public class DocID
 	{
 	  this.key = akey;
 	}
+	public Key getKey() { return this.key; }
 
 	public DocID(String nDocID,
 			 Database sDatabase)
