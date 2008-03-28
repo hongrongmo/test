@@ -34,6 +34,9 @@
     <xsl:value-of select="//FULLTEXT"/>
 </xsl:variable>
 
+  <!-- Hide Map data -->
+  <xsl:template match="CRDN|RECT|LOC|LOCS" priority="1"/>
+
 <xsl:template match="PAGE">
 
     <xsl:variable name="SEARCH-TYPE">
