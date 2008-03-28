@@ -316,7 +316,8 @@ public abstract class DocumentView {
           String[] multivalues = fieldvalue.split(GRFDocBuilder.AUDELIMITER);
           if(multivalues.length > 1)
           {
-            data = new XMLMultiWrapper(key,new String[]{});
+            Key elementDataKey = data.getKey();
+            data = new XMLMultiWrapper(elementDataKey,new String[]{});
           }
           data.setElementData(multivalues);
           putElementData(key, data);
