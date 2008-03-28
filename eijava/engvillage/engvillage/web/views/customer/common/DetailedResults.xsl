@@ -40,18 +40,11 @@
         <xsl:if test="not(position()=last())"> - </xsl:if>
       </span>
     </xsl:template>
-    <xsl:template match="L|A"> <!-- Language Field / Availability -->
+    <xsl:template match="L|A|D"> <!-- Language Field / Availability / Document type -->
       <span CLASS="MedBlackText">
         <xsl:apply-templates />
         <xsl:if test="not(position()=last())">, </xsl:if>
       </span>
-    </xsl:template>
-    <xsl:template match="D"> <!-- Document type Field -->
-      <xsl:call-template name="LINK">
-        <xsl:with-param name="TERM"><xsl:value-of select="normalize-space(text())" disable-output-escaping="yes"/></xsl:with-param>
-        <xsl:with-param name="FIELD">DT</xsl:with-param>
-      </xsl:call-template>
-      <xsl:if test="not(position()=last())"><a class="SmBlackText">&#160; - &#160;</a></xsl:if>
     </xsl:template>
     <xsl:template match="B"> <!-- ISBN -->
       <xsl:call-template name="LINK">
