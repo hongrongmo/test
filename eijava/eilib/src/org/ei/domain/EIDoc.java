@@ -6,7 +6,6 @@ import java.util.Map;
 import java.util.Set;
 import java.io.*;
 import java.net.*;
-import org.ei.domain.DocID;
 import org.ei.query.base.*;
 import org.ei.util.StringUtil;
 import org.ei.fulldoc.*;
@@ -280,14 +279,22 @@ public class EIDoc implements Highlightable, XMLSerializable, LocalHoldingLinker
         }
         else if (field.equals(LocalHoldingLinker.ISBN1)) {
             if (mapDocument.containsKey(Keys.ISBN)) {
-                ISBN isbn = (ISBN) mapDocument.get(Keys.ISBN);
-                value = isbn.withoutDash();
+                ElementData isbn = (ElementData) mapDocument.get(Keys.ISBN);
+                String[] values = isbn.getElementData();
+                if((values != null) && (values.length >= 1))
+                {
+                  value = values[0].replaceAll("\\W","");
+                }
             }
         }
         else if (field.equals(LocalHoldingLinker.ISBN2)) {
             if (mapDocument.containsKey(Keys.ISBN)) {
-                ISBN isbn = (ISBN) mapDocument.get(Keys.ISBN);
-                value = isbn.withDash();
+                ElementData isbn = (ElementData) mapDocument.get(Keys.ISBN);
+                String[] values = isbn.getElementData();
+                if((values != null) && (values.length >= 1))
+                {
+                  value = values[0];
+                }
             }
         }
         else if (field.equals(LocalHoldingLinker.CODEN)) {
