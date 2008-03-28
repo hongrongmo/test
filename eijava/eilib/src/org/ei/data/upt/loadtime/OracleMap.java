@@ -89,7 +89,7 @@ public class OracleMap {
 		   while(rs.next())
 		   {
 				mid = rs.getString("m_id");
-				String kind = rs.getString("kind");
+				String kind = rs.getString("kc");
 				if(kindPref.equals(kind))
 				{
 					break;
