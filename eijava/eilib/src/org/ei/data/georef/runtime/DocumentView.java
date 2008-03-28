@@ -120,8 +120,12 @@ public abstract class DocumentView {
       addDocumentValue(Keys.ISSUE, createColumnValueField("ISSUE_ID"), new Issue(StringUtil.EMPTY_STRING,perl));
       // Change Key INSIDE ISBN object in order to change Label
       ElementData isbn = new ISBN(StringUtil.EMPTY_STRING);
-      isbn.setKey(GRFDocBuilder.ISBN_NO_SUFFIX);
+      isbn.setKey(GRFDocBuilder.MULTI_ISBN);
+      //Include value under ISBN key for linking - but this will NOT be exported to the View
       addDocumentValue(Keys.ISBN, createColumnValueField("ISBN"), isbn);
+      //Include value under alternate ISBN for the View so we can link multiple ISBNs
+      addDocumentValue(GRFDocBuilder.MULTI_ISBN, createColumnValueField("ISBN"), isbn);
+
       addDocumentValue(Keys.ISSN, new IssnDecorator(createColumnValueField("ISSN")), new ISSN(StringUtil.EMPTY_STRING));
       // Change Key INSIDE ISSN object in order to change Label
       ElementData eissn = new ISSN(StringUtil.EMPTY_STRING);
