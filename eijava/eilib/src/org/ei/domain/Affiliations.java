@@ -16,6 +16,7 @@ public class Affiliations
 	{
 	  this.key = akey;
 	}
+	public Key getKey() { return this.key; }
 
 	public void exportLabels(boolean labels)
 	{

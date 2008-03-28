@@ -14,6 +14,7 @@ public class Classifications
 	{
 	  this.key = akey;
 	}
+	public Key getKey() { return this.key; }
 
 	public Classifications(ClassificationID[] ids)
 	{

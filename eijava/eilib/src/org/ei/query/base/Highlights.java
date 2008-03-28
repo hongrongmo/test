@@ -9,8 +9,8 @@ import org.ei.domain.Keys;
 public class Highlights
 	implements ElementData
 {
-    private static final String eTag =":H::";
-    private static final String bTag = "::H:";
+  private static final String eTag =":H::";
+  private static final String bTag = "::H:";
 	private String[] edata = new String[1];
 	private Key key;
 	private int numhits;
@@ -24,6 +24,7 @@ public class Highlights
 	{
 	  this.key = akey;
 	}
+	public Key getKey() { return this.key; }
 
 	public Highlights(Key key,
 					  String text,
