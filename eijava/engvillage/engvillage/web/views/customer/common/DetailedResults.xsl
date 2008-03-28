@@ -46,7 +46,7 @@
         <xsl:if test="not(position()=last())">, </xsl:if>
       </span>
     </xsl:template>
-    <xsl:template match="B"> <!-- ISBN -->
+    <xsl:template match="MBN"> <!-- 'Multi' ISBN (parent key is MBNS -->
       <xsl:call-template name="LINK">
         <xsl:with-param name="TERM"><xsl:value-of select="normalize-space(text())" disable-output-escaping="yes"/></xsl:with-param>
         <xsl:with-param name="FIELD">BN</xsl:with-param>
@@ -86,7 +86,7 @@
     </xsl:template>
 
     <!-- top level elements with labels and nested value children -->
-    <xsl:template match="BN|LA|SRCNT|SUM|MED|EDI|RPGM|DEG|UNV|HOLD|AUD|CAT|OAF|ANT|MPS|MPT|ILLUS|DGS|SC|AV|DT|MJSM|CRM|CLGM|PIDEPM|BKYS|AGS|AUS|EDS|IVS|CLS|FLS|CVS|RGIS|DISPS|CTS|OCVS|OCLS|NDI|CHI|AOI|AFS|EFS|PASM|PEXM|PIM|PAPIM">
+    <xsl:template match="MBNS|LA|SRCNT|SUM|MED|EDI|RPGM|DEG|UNV|HOLD|AUD|CAT|OAF|ANT|MPS|MPT|ILLUS|DGS|SC|AV|DT|MJSM|CRM|CLGM|PIDEPM|BKYS|AGS|AUS|EDS|IVS|CLS|FLS|CVS|RGIS|DISPS|CTS|OCVS|OCLS|NDI|CHI|AOI|AFS|EFS|PASM|PEXM|PIM|PAPIM">
         <tr>
             <td valign="top" ><img src="/engresources/images/s.gif" border="0"/></td>
             <td xsl:use-attribute-sets="r-align-label">
@@ -176,7 +176,7 @@
     </xsl:template>
 
   <!-- top level LINKED node(s) with simple label/value children -->
-    <xsl:template match="SN|BN13|CN|CC|MH|MI|PNUM|E_ISSN">
+    <xsl:template match="BN|SN|BN13|CN|CC|MH|MI|PNUM|E_ISSN">
       <tr>
         <td valign="top" ><img src="/engresources/images/s.gif" border="0"/></td>
         <td xsl:use-attribute-sets="r-align-label"><a CLASS="MedBlackText"><b><xsl:value-of select="@label"/>:</b></a></td>
