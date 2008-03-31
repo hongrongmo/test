@@ -1369,17 +1369,19 @@ public class PatentXmlReader
 						}
 
 						out.print(DELIM);
-
-						// SKIP CIT_PK
+						String[] cit_mid  = getCitMID(cit_pn,cit_cy);
+						if(cit_mid != null)
+						{
+							out.print(cit_mid[1]);
+						}
 
 						out.print(DELIM);
 
 						// CIT_MID
-						String cit_mid  = getCitMID(cit_pn,cit_cy);
 
 						if(cit_mid != null)
 						{
-							out.print(cit_mid);
+							out.print(cit_mid[0]);
 						}
 
 						out.print(DELIM);
@@ -1627,7 +1629,7 @@ public class PatentXmlReader
 							//System.out.println("pr_date= "+pr_document_id.getChildTextTrim("date")); //OK
 							record.put("PR_DOCID_DATE",pr_document_id.getChildTextTrim("date"));
 
-							System.out.println("pr_desc= "+pr_document_id.getChildTextTrim("name"));
+							//System.out.println("pr_desc= "+pr_document_id.getChildTextTrim("name"));
 
 							if(pr_document_id.getChild("name") != null)
 							{
@@ -2724,11 +2726,11 @@ public class PatentXmlReader
 		record.put("PRIORITY_CLAIMS",pcList);
 	}
 
-	public String getCitMID(String pNum,
+	public String[] getCitMID(String pNum,
 						    String authCode)
 		throws Exception
 	{
-		return dbMap.getMID(authCode+pNum, "A");
+		return dbMap.getMID_KC(authCode+pNum, "A");
 	}
 
 	private String pnNormalization(String pn) throws Exception
@@ -2736,6 +2738,7 @@ public class PatentXmlReader
 		if(pn != null)
 		{
 			pn=pn.replaceFirst("^(D|PP|P|RE|T|H|X|RX|AI)[0]+","$1");
+			pn=pn.replaceFirst("^[0]+","");
 		}
 
 		return pn;
@@ -2745,16 +2748,10 @@ public class PatentXmlReader
 								  String authCode)
 		throws Exception
 	{
-		while(pNum.length() < 8)
+
+		if(dbMap.contains(authCode+pNum))
 		{
-			if(dbMap.contains(authCode+pNum))
-			{
-				return pNum;
-			}
-			else
-			{
-				pNum = "0"+pNum;
-			}
+			return pNum;
 		}
 
 		return null;
@@ -2785,7 +2782,7 @@ public class PatentXmlReader
 				Element e = (Element)o;
 				b.append("<").append(e.getName());
 				List ats = e.getAttributes();
-				if(!ats.isEmpty())
+				if(!ats.isEmpty() && !e.getName().equals("p"))
 				{	Iterator at = ats.iterator();
 					while(at.hasNext())
 					{

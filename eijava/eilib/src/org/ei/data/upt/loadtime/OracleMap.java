@@ -76,11 +76,12 @@ public class OracleMap {
 		return hit;
     }
 
-	public String getMID(String key, String kindPref)
+	public String[] getMID_KC(String key,
+							  String kindPref)
 		throws Exception
 	{
 		ResultSet rs = null;
-		String mid = null;
+		String[] mid_kc = null;
 		try
 		{
 		   stmt.setString(1, key);
@@ -88,15 +89,16 @@ public class OracleMap {
 		   rs = stmt.getResultSet();
 		   while(rs.next())
 		   {
-				mid = rs.getString("m_id");
-				String kind = rs.getString("kc");
-				if(kindPref.equals(kind))
+				mid_kc = new String[2];
+				mid_kc[0] = rs.getString("m_id");
+				mid_kc[1] = rs.getString("kc");
+				if(kindPref.equals(mid_kc))
 				{
 					break;
 				}
 		   }
 		}
-		catch (Exception sqle)
+		catch(Exception sqle)
 		{
 		   sqle.printStackTrace();
 		}
@@ -112,7 +114,7 @@ public class OracleMap {
 			}
 		}
 
-		return mid;
+		return mid_kc;
 	}
 
     private void close(Statement stmt) {
