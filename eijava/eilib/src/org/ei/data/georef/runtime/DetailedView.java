@@ -48,6 +48,7 @@ import org.ei.domain.FullDoc;
                                         Keys.EDITORS,
                                         Keys.AUTHOR_AFFS,
                                         Keys.EDITOR_AFFS,
+                                        GRFDocBuilder.AFFILIATION_OTHER,
                                         Keys.CORRESPONDENCE_PERSON,
                                         Keys.SERIAL_TITLE,
                                         Keys.ABBRV_SERIAL_TITLE,
