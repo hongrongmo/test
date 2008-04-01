@@ -465,6 +465,7 @@ public class SearchForm {
         //APP
         if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
             (selecteddbMask & DatabaseConfig.GEO_MASK) != DatabaseConfig.GEO_MASK &&
+           (selecteddbMask & DatabaseConfig.GRF_MASK) != DatabaseConfig.GRF_MASK && // jam - added GeoRef to exclusion list
            (selecteddbMask & DatabaseConfig.UPA_MASK) != DatabaseConfig.UPA_MASK &&
            (selecteddbMask & DatabaseConfig.EUP_MASK) != DatabaseConfig.EUP_MASK &&
            (selecteddbMask & DatabaseConfig.CBF_MASK) != DatabaseConfig.CBF_MASK &&
@@ -482,6 +483,7 @@ public class SearchForm {
         //BIO
         if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
            (selecteddbMask & DatabaseConfig.GEO_MASK) != DatabaseConfig.GEO_MASK &&
+           (selecteddbMask & DatabaseConfig.GRF_MASK) != DatabaseConfig.GRF_MASK && // jam - added GeoRef to exclusion list
            (selecteddbMask & DatabaseConfig.UPA_MASK) != DatabaseConfig.UPA_MASK &&
            (selecteddbMask & DatabaseConfig.EUP_MASK) != DatabaseConfig.EUP_MASK &&
            (selecteddbMask & DatabaseConfig.CBF_MASK) != DatabaseConfig.CBF_MASK &&
@@ -505,7 +507,8 @@ public class SearchForm {
 
         //ECO
         if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
-            (selecteddbMask & DatabaseConfig.GEO_MASK) != DatabaseConfig.GEO_MASK &&
+           (selecteddbMask & DatabaseConfig.GEO_MASK) != DatabaseConfig.GEO_MASK &&
+           (selecteddbMask & DatabaseConfig.GRF_MASK) != DatabaseConfig.GRF_MASK && // jam - added GeoRef to exclusion list
            (selecteddbMask & DatabaseConfig.UPA_MASK) != DatabaseConfig.UPA_MASK &&
            (selecteddbMask & DatabaseConfig.EUP_MASK) != DatabaseConfig.EUP_MASK &&
            (selecteddbMask & DatabaseConfig.CBF_MASK) != DatabaseConfig.CBF_MASK &&
@@ -523,6 +526,7 @@ public class SearchForm {
         //EXP
         if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
            (selecteddbMask & DatabaseConfig.GEO_MASK) != DatabaseConfig.GEO_MASK &&
+           (selecteddbMask & DatabaseConfig.GRF_MASK) != DatabaseConfig.GRF_MASK && // jam - added GeoRef to exclusion list
            (selecteddbMask & DatabaseConfig.UPA_MASK) != DatabaseConfig.UPA_MASK &&
            (selecteddbMask & DatabaseConfig.EUP_MASK) != DatabaseConfig.EUP_MASK &&
            (selecteddbMask & DatabaseConfig.CBF_MASK) != DatabaseConfig.CBF_MASK &&
@@ -539,7 +543,8 @@ public class SearchForm {
 
         //GEN
         if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
-       (selecteddbMask & DatabaseConfig.GEO_MASK) != DatabaseConfig.GEO_MASK &&
+           (selecteddbMask & DatabaseConfig.GEO_MASK) != DatabaseConfig.GEO_MASK &&
+           (selecteddbMask & DatabaseConfig.GRF_MASK) != DatabaseConfig.GRF_MASK && // jam - added GeoRef to exclusion list
            (selecteddbMask & DatabaseConfig.UPA_MASK) != DatabaseConfig.UPA_MASK &&
            (selecteddbMask & DatabaseConfig.EUP_MASK) != DatabaseConfig.EUP_MASK &&
            (selecteddbMask & DatabaseConfig.CBF_MASK) != DatabaseConfig.CBF_MASK &&
@@ -593,6 +598,7 @@ public class SearchForm {
         //THR
         if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
            (selecteddbMask & DatabaseConfig.GEO_MASK) != DatabaseConfig.GEO_MASK &&
+           (selecteddbMask & DatabaseConfig.GRF_MASK) != DatabaseConfig.GRF_MASK && // jam - added GeoRef to exclusion list
            (selecteddbMask & DatabaseConfig.UPA_MASK) != DatabaseConfig.UPA_MASK &&
            (selecteddbMask & DatabaseConfig.EUP_MASK) != DatabaseConfig.EUP_MASK &&
            (selecteddbMask & DatabaseConfig.CBF_MASK) != DatabaseConfig.CBF_MASK &&
