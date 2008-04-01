@@ -55,6 +55,21 @@
 
     <html>
       <head>
+<STYLE type="text/css">
+.nav-minus
+{
+background-image:url(/engresources/images/tagedit_minus.gif);
+height:8px;
+width:8px;
+}
+
+.nav-plus
+{
+background-image:url(/engresources/images/tagedit_plus.gif);
+height:8px;
+width:8px;
+}
+</STYLE>
         <META http-equiv="Expires" content="0"/>
         <META http-equiv="Pragma" content="no-cache"/>
         <META http-equiv="Cache-Control" content="no-cache"/>
