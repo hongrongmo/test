@@ -11,19 +11,19 @@ public class UniventioPDFGateway
 {
 
 
-    private static final String URL= "http://pws.univentio.com/downloadpdf.aspx?lg=Elsevier&pw=Test_Acount&pdf=";
+    private static final String URL= "http://ipdatadirect.lexisnexis.com//downloadpdf.aspx?lg=Elsevier&pw=N3Wservice2&pdf=";
     private static final String SECRET="qazwsxeujm";
 
 
 
     public static String getUniventioLink(String authorityCode,
                                    String patentNumber,
-                                   String kindCode
-                                   )
+                                   String kindCode)
         throws Exception
     {
         StringBuffer fullUrl = new StringBuffer();
         fullUrl.append(URL).append(authorityCode).append(",").append(patentNumber).append(",").append(kindCode);
+        //System.out.println(fullUrl.toString());
         return fullUrl.toString();
     }
 
