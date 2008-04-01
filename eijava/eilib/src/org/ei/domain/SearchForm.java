@@ -794,6 +794,7 @@ public class SearchForm {
       }
       else if((selecteddbMask & DatabaseConfig.PAG_MASK) != DatabaseConfig.PAG_MASK &&
         (selecteddbMask & DatabaseConfig.GEO_MASK) != DatabaseConfig.GEO_MASK &&
+        (selecteddbMask & DatabaseConfig.GRF_MASK) != DatabaseConfig.GRF_MASK &&
         (selecteddbMask & DatabaseConfig.CPX_MASK) != DatabaseConfig.CPX_MASK &&
         (selecteddbMask & DatabaseConfig.INS_MASK) != DatabaseConfig.INS_MASK &&
         (selecteddbMask & DatabaseConfig.IBS_MASK) != DatabaseConfig.IBS_MASK &&
