@@ -656,7 +656,7 @@ public class EIDoc implements Highlightable, XMLSerializable, LocalHoldingLinker
         else if (str.equals("RR")){str = "RPRT";}
         else if (str.equals("DS")){str = "THES";}
         else if (str.equals("UP")){str = "UNPB";}
-        else if (str.equals("MA")){str = "MAP";}
+        else if (str.equals("MP")){str = "MAP";}
         else
         {
           str="JOUR";
