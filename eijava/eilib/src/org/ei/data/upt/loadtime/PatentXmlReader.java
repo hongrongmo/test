@@ -232,8 +232,7 @@ public class PatentXmlReader
 		System.out.println("Patent Number:"+ patentNumber);
 		patentCountry = (String)output_record.get("PR_DOCID_COUNTRY");
 
-		String availablePN = null;
-		if((availablePN = checkAvailable(patentNumber.trim(),patentCountry.trim())) == null)
+		if(!checkAvailable(patentNumber.trim(),patentCountry.trim()))
 		{
 			outputUPTRecord(output_record,patentsOut);
 			outputPatentRef(output_record,patentsRefOut);
@@ -241,7 +240,6 @@ public class PatentXmlReader
 		}
 		else
 		{
-			output_record.put("PR_DOCID_DOC_NUMBER", availablePN);
 			outputUPTRecord(output_record,updatePatentsOut);
 			outputPatentRef(output_record,updatePatentsRefOut);
 			outputNonPatentRef(output_record,updateNonPatentsRefOut);
@@ -1351,12 +1349,6 @@ public class PatentXmlReader
 						if(cit_pn != null)
 						{
 							cit_pn = pnNormalization(cit_pn);
-							String availablePN = checkAvailable(cit_pn, cit_cy);
-							if(availablePN != null)
-							{
-								cit_pn = availablePN;
-							}
-
 							out.print(cit_pn);
 						}
 
@@ -1369,10 +1361,15 @@ public class PatentXmlReader
 						}
 
 						out.print(DELIM);
-						String[] cit_mid  = getCitMID(cit_pn,cit_cy);
-						if(cit_mid != null)
+						String[] cit_mid = null;
+						if(cit_pn != null &&
+						   cit_cy != null)
 						{
-							out.print(cit_mid[1]);
+							cit_mid  = getCitMID(cit_pn,cit_cy);
+							if(cit_mid != null)
+							{
+								out.print(cit_mid[1]);
+							}
 						}
 
 						out.print(DELIM);
@@ -2744,19 +2741,12 @@ public class PatentXmlReader
 		return pn;
 	}
 
-	private String checkAvailable(String pNum,
-								  String authCode)
+	private boolean checkAvailable(String pNum,
+								   String authCode)
 		throws Exception
 	{
-
-		if(dbMap.contains(authCode+pNum))
-		{
-			return pNum;
-		}
-
-		return null;
+		return dbMap.contains(authCode+pNum);
 	}
-
 
 	private  StringBuffer getMixData(List l, StringBuffer b)
 	{
