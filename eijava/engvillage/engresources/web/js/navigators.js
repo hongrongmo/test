@@ -63,13 +63,15 @@
                   var navlegend = document.createElement("legend");
                   var legendlink = document.createElement("a");
                   legendlink.id = navfield + "link";
-                  legendlink.setAttribute("href","javascript:toggleNavigator('" + navfield + "')");
+                  legendlink.setAttribute("href","javascript:toggleFacet('" + navfield + "')");
                   legendlink.className="NavTitle";
-                  legendlink.title = "Toggle facet";
+                  legendlink.title = "Collapse facet";
+
                   var toggleimg = document.createElement("img");
                   toggleimg.id = navfield + 'toggle';
-                  toggleimg.src = "/engresources/images/tagedit_minus.gif";
+                  toggleimg.src = "/engresources/images/s.gif";
                   toggleimg.border = 0;
+                  toggleimg.className = "nav-minus";
 
                   legendlink.appendChild(toggleimg);
                   legendlink.appendChild(document.createTextNode("\u00a0"));
@@ -220,7 +222,7 @@
   }
 
 
-  function toggleNavigator(navfieldid)
+  function toggleFacet(navfieldid)
   {
     var navul = document.getElementById(navfieldid);
     if(navul != null)
@@ -230,20 +232,24 @@
       var legendlink = document.getElementById(navfieldid + "link");
       /* WE ARE ASSUMING THE IMAGE IS THE FIRST CHILD SINCE WE PUT IT THERE */
       var toggleimg = legendlink.firstChild;
+      legendlink.title = "Collapse facet";
 
       if(isvisible == "true")
       {
         navul.style.display="none";
         pagerdiv.style.display="none";
         navul.setAttribute("visible","false");
-        toggleimg.src = "/engresources/images/tagedit_plus.gif";
+        toggleimg.className = "nav-plus";
+        toggleimg.alt = "Expand facet";
+        legendlink.title = "Expand facet";
       }
       else
       {
         navul.style.display="block";
         pagerdiv.style.display="block";
         navul.setAttribute("visible","true");
-        toggleimg.src = "/engresources/images/tagedit_minus.gif";
+        toggleimg.className = "nav-minus";
+        toggleimg.alt = "Collapse facet";
       }
     }
   }
