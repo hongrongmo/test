@@ -669,6 +669,7 @@ function generateTreattypes(selecteddbMask)
     var index = 0;
     // NO-LIMIT
     if((selecteddbMask & GEO) != GEO &&
+       (selecteddbMask & GRF) != GRF &&
        (selecteddbMask & US_PATENTS) != US_PATENTS &&
        (selecteddbMask & EU_PATENTS) != EU_PATENTS &&
        (selecteddbMask & NTIS) != NTIS &&
@@ -690,6 +691,7 @@ function generateTreattypes(selecteddbMask)
 
     //APP
    if((selecteddbMask & GEO) != GEO &&
+      (selecteddbMask & GRF) != GRF &&
       (selecteddbMask & US_PATENTS) != US_PATENTS &&
       (selecteddbMask & EU_PATENTS) != EU_PATENTS &&
       (selecteddbMask & NTIS) != NTIS &&
@@ -707,6 +709,7 @@ function generateTreattypes(selecteddbMask)
 
    //BIO
    if((selecteddbMask & GEO) != GEO &&
+      (selecteddbMask & GRF) != GRF &&
       (selecteddbMask & US_PATENTS) != US_PATENTS &&
       (selecteddbMask & EU_PATENTS) != EU_PATENTS &&
       (selecteddbMask & NTIS) != NTIS &&
@@ -731,6 +734,7 @@ function generateTreattypes(selecteddbMask)
 
    //ECO
    if((selecteddbMask & GEO) != GEO &&
+      (selecteddbMask & GRF) != GRF &&
       (selecteddbMask & US_PATENTS) != US_PATENTS &&
       (selecteddbMask & EU_PATENTS) != EU_PATENTS &&
       (selecteddbMask & NTIS) != NTIS &&
@@ -748,6 +752,7 @@ function generateTreattypes(selecteddbMask)
 
    //EXP
    if((selecteddbMask & GEO) != GEO &&
+      (selecteddbMask & GRF) != GRF &&
       (selecteddbMask & US_PATENTS) != US_PATENTS &&
       (selecteddbMask & EU_PATENTS) != EU_PATENTS &&
       (selecteddbMask & NTIS) != NTIS &&
@@ -765,6 +770,7 @@ function generateTreattypes(selecteddbMask)
 
    //GEN
    if((selecteddbMask & GEO) != GEO &&
+      (selecteddbMask & GRF) != GRF &&
       (selecteddbMask & US_PATENTS) != US_PATENTS &&
       (selecteddbMask & EU_PATENTS) != EU_PATENTS &&
       (selecteddbMask & NTIS) != NTIS &&
@@ -818,6 +824,7 @@ function generateTreattypes(selecteddbMask)
 
    //THR
    if((selecteddbMask & GEO) != GEO &&
+      (selecteddbMask & GRF) != GRF &&
       (selecteddbMask & US_PATENTS) != US_PATENTS &&
       (selecteddbMask & EU_PATENTS) != EU_PATENTS &&
       (selecteddbMask & NTIS) != NTIS &&
@@ -1157,7 +1164,7 @@ function calDisplayYear(selectedDbMask, sYear)
       {
           var geoStartYear = sYear.substr(sYear.indexOf("XSY")+3,4);
           dYear = (dYear > geoStartYear) ? geoStartYear : dYear;
-      }    	
+      }
     }
     else
     {
