@@ -442,12 +442,12 @@ function generateDoctypes(selecteddbMask)
    var index = 0;
 
   // NO-LIMIT
-  if((selecteddbMask & US_PATENTS) 	!= US_PATENTS &&
-     (selecteddbMask & REFEREX) 	!= REFEREX &&
-     (selecteddbMask & EU_PATENTS) 	!= EU_PATENTS &&
-     (selecteddbMask & NTIS) 		!= NTIS &&
-     (selecteddbMask & EPT) 		!= EPT &&
-     (selecteddbMask & CHM) 		!= CHM)
+  if((selecteddbMask & US_PATENTS) != US_PATENTS &&
+     (selecteddbMask & REFEREX) != REFEREX &&
+     (selecteddbMask & EU_PATENTS) != EU_PATENTS &&
+     (selecteddbMask & NTIS) != NTIS &&
+     (selecteddbMask & EPT) != EPT &&
+     (selecteddbMask & CHM) != CHM)
   {
      doctypes[index++] = new Field("NO-LIMIT", "All document types");
   }
@@ -558,7 +558,7 @@ function generateDoctypes(selecteddbMask)
      (selecteddbMask & CHM) != CHM &&
      (selecteddbMask & PCH) != PCH)
   {
-     doctypes[index++] = new Field("RR", "Report review");
+    doctypes[index++] = new Field("RR", "Report review");
   }
 
   //DS
@@ -573,38 +573,39 @@ function generateDoctypes(selecteddbMask)
      (selecteddbMask & CHM) != CHM &&
      (selecteddbMask & PCH) != PCH)
   {
-        doctypes[index++] = new Field("DS", "Dissertation");
+    doctypes[index++] = new Field("DS", "Dissertation");
   }
 
   if(selecteddbMask == INS || selecteddbMask == IBS)
   {
-        doctypes[index++] = new Field("UP", "Unpublished paper");
+    doctypes[index++] = new Field("UP", "Unpublished paper");
   }
   if(selecteddbMask == CPX )
   {
-        doctypes[index++] = new Field("PA", "Patents (before 1970)");
+    doctypes[index++] = new Field("PA", "Patents (before 1970)");
   }
   else if(selecteddbMask == CBF ||
           selecteddbMask == PCH)
   {
-        doctypes[index++] = new Field("PA", "Patents");
+    doctypes[index++] = new Field("PA", "Patents");
   }
   else if(selecteddbMask == INS || selecteddbMask == IBS)
   {
-        doctypes[index++] = new Field("PA", "Patents (before 1977)");
+    doctypes[index++] = new Field("PA", "Patents (before 1977)");
   }
 
   if(selecteddbMask == US_PATENTS)
   {
-        doctypes[index++] = new Field("UA", "US Applications");
-        doctypes[index++] = new Field("UG", "US Granted");
+    doctypes[index++] = new Field("UA", "US Applications");
+    doctypes[index++] = new Field("UG", "US Granted");
   }
   else if(selecteddbMask == EU_PATENTS)
   {
-        doctypes[index++] = new Field("EA", "European Applications");
-        doctypes[index++] = new Field("EG", "European Granted");
+    doctypes[index++] = new Field("EA", "European Applications");
+    doctypes[index++] = new Field("EG", "European Granted");
   }
   else if((selecteddbMask & GEO) != GEO &&
+      (selecteddbMask & GRF) != GRF &&
       (selecteddbMask & CPX) != CPX &&
       (selecteddbMask & INS) != INS &&
       (selecteddbMask & IBS) != IBS &&
@@ -617,10 +618,10 @@ function generateDoctypes(selecteddbMask)
       (selecteddbMask & CHM) != CHM &&
       (selecteddbMask & PCH) != PCH)
   {
-        doctypes[index++] = new Field("UA", "US Applications");
-        doctypes[index++] = new Field("UG", "US Granted");
-        doctypes[index++] = new Field("EA", "European Applications");
-        doctypes[index++] = new Field("EG", "European Granted");
+    doctypes[index++] = new Field("UA", "US Applications");
+    doctypes[index++] = new Field("UG", "US Granted");
+    doctypes[index++] = new Field("EA", "European Applications");
+    doctypes[index++] = new Field("EG", "European Granted");
   }
 
   if(selecteddbMask == PCH)
@@ -628,7 +629,6 @@ function generateDoctypes(selecteddbMask)
     doctypes[index++] = new Field("(CA or CP)","Conferences");
     doctypes[index++] = new Field("MC or MR or RC or RR or DS or UP", "Other documents");
   }
-
 
   if(selecteddbMask == CBN)
   {
