@@ -250,7 +250,7 @@ public abstract class DocumentView {
 
       // this is a (possible) multi-field that will be split on the AUDELIMITER in addDocumentValue() method
       addDocumentValue(Keys.PUBLISHER, new SimpleValueField(getPublisher()));
-      addDocumentValue(GRFDocBuilder.AFFILIATION_OTHER, createColumnValueField("AFFILIATION_SECONDARY"));
+      addDocumentValue(GRFDocBuilder.AFFILIATION_OTHER, new AffiliationDecorator(createColumnValueField("AFFILIATION_SECONDARY")));
 
       addDocumentValue(GRFDocBuilder.GRF_URLS, new URLDecorator(createColumnValueField("URL")));
       addDocumentValue(Keys.DOC_TYPE, new DocumentTypeDecorator(createColumnValueField("DOCUMENT_TYPE")));
@@ -681,6 +681,23 @@ public abstract class DocumentView {
           }
         }
         return strdate;
+      }
+    }
+    public class AffiliationDecorator extends FieldDecorator
+    {
+      private DocumentField field;
+      public AffiliationDecorator(DocumentField field)
+      {
+        this.field = field;
+      }
+      public String getValue()
+      {
+        String straffiliations = field.getValue();
+        if(straffiliations != null)
+        {
+          straffiliations = straffiliations.replaceAll(GRFDocBuilder.IDDELIMITER,", ");
+        }
+        return straffiliations;
       }
     }
 
