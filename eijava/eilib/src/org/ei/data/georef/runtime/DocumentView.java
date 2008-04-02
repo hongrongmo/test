@@ -223,7 +223,7 @@ public abstract class DocumentView {
       addDocumentValue(Keys.CODEN, createColumnValueField("CODEN"));
 
       addDocumentValue(Keys.SOURCE, createColumnValueField("TITLE_OF_SERIAL"));
-      if(createColumnValueField("TITLE_OF_SERIAL").getValue() != null)
+      if(createColumnValueField("TITLE_OF_SERIAL").getValue() == null)
       {
         addDocumentValue(Keys.NO_SO, "NO SOURCE");
       }
