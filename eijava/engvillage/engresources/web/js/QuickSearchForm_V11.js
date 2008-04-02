@@ -92,6 +92,12 @@ function generateSection(selecteddbMask)
       }
     }
 
+    //BN - for Referex - ISBN for GeoRef is added later as to preserve ordering
+    if(selecteddbMask == REFEREX)
+    {
+      searchin[index++] = new Field("BN", "ISBN");
+    }
+
     //AF
     if(((selecteddbMask & REFEREX) != REFEREX) &&
       ((selecteddbMask & CBN) != CBN) &&
@@ -193,8 +199,8 @@ function generateSection(selecteddbMask)
       searchin[index++] = new Field("CC","Conference code");
     }
 
-    //BN
-    if(selecteddbMask == REFEREX || selecteddbMask == GRF)
+    //BN - for GeoRef
+    if(selecteddbMask == GRF)
     {
       searchin[index++] = new Field("BN", "ISBN");
     }
