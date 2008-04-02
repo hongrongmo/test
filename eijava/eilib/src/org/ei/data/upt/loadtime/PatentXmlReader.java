@@ -199,17 +199,17 @@ public class PatentXmlReader
 			dbMap = new OracleMap(URL,User,Password);
 			dbMap.open();
 			if(patentsOut==null)
-				patentsOut 	= new PrintWriter(new FileWriter(outFile+"_master_"+loadNumber+".out"), true);
+				patentsOut 	= new PrintWriter(new FileWriter("out"+File.separator+outFile+"_master_"+loadNumber+".out"), true);
 			if(patentsRefOut == null)
-				patentsRefOut = new PrintWriter(new FileWriter(outFile+"_patref_"+loadNumber+".out"), true);
+				patentsRefOut = new PrintWriter(new FileWriter("out"+File.separator+outFile+"_patref_"+loadNumber+".out"), true);
 			if(nonPatentsRefOut == null)
-				nonPatentsRefOut = new PrintWriter(new FileWriter(outFile+"_nonpatref_"+loadNumber+".out"), true);
+				nonPatentsRefOut = new PrintWriter(new FileWriter("out"+File.separator+outFile+"_nonpatref_"+loadNumber+".out"), true);
 			if(updatePatentsOut==null)
-				updatePatentsOut 	= new PrintWriter(new FileWriter("corr_"+outFile+"_master_"+loadNumber+".out"), true);
+				updatePatentsOut 	= new PrintWriter(new FileWriter("out"+File.separator+"corr_"+outFile+"_master_"+loadNumber+".out"), true);
 			if(updatePatentsRefOut == null)
-				updatePatentsRefOut = new PrintWriter(new FileWriter("corr_"+outFile+"_patref_"+loadNumber+".out"), true);
+				updatePatentsRefOut = new PrintWriter(new FileWriter("out"+File.separator+"corr_"+outFile+"_patref_"+loadNumber+".out"), true);
 			if(updateNonPatentsRefOut == null)
-				updateNonPatentsRefOut = new PrintWriter(new FileWriter("corr_"+outFile+"_nonpatref_"+loadNumber+".out"), true);
+				updateNonPatentsRefOut = new PrintWriter(new FileWriter("out"+File.separator+"corr_"+outFile+"_nonpatref_"+loadNumber+".out"), true);
 		}
 		catch (Exception e)
 		{
