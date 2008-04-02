@@ -119,7 +119,8 @@ public class SearchForm {
           }
         }
 
-        if((selecteddbMask == DatabaseConfig.PAG_MASK) || (selecteddbMask == DatabaseConfig.GRF_MASK))
+        // BN - FOR BOOKS - Added later on for GeoRef so as not mess up ordering for fields in Books
+        if((selecteddbMask == DatabaseConfig.PAG_MASK))
         {
             sectiontype.put("BN", "ISBN");
         }
@@ -196,7 +197,13 @@ public class SearchForm {
         if(selecteddbMask == DatabaseConfig.CPX_MASK ||
            selecteddbMask == DatabaseConfig.CPX_MASK + DatabaseConfig.C84_MASK)
         {
-            sectiontype.put("CC","Conference code");
+          sectiontype.put("CC","Conference code");
+        }
+
+        // BN - For GeoRef
+        if(selecteddbMask == DatabaseConfig.GRF_MASK)
+        {
+          sectiontype.put("BN", "ISBN");
         }
 
         //SN
