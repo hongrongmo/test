@@ -119,7 +119,7 @@ public class SearchForm {
           }
         }
 
-        if((selecteddbMask == DatabaseConfig.PAG_MASK))
+        if((selecteddbMask == DatabaseConfig.PAG_MASK) || (selecteddbMask == DatabaseConfig.GRF_MASK))
         {
             sectiontype.put("BN", "ISBN");
         }
