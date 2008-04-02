@@ -221,7 +221,13 @@ public abstract class DocumentView {
       // this is a (possible) multi-field that will be split on the AUDELIMITER in addDocumentValue() method
       addDocumentValue(Keys.CONFERENCE_NAME, createColumnValueField("NAME_OF_MEETING"));
       addDocumentValue(Keys.CODEN, createColumnValueField("CODEN"));
+
       addDocumentValue(Keys.SOURCE, createColumnValueField("TITLE_OF_SERIAL"));
+      if(createColumnValueField("TITLE_OF_SERIAL").getValue() != null)
+      {
+        addDocumentValue(Keys.NO_SO, "NO SOURCE");
+      }
+
       addDocumentValue(Keys.SERIAL_TITLE, createColumnValueField("TITLE_OF_SERIAL"));
       addDocumentValue(Keys.COPYRIGHT, createColumnValueField("COPYRIGHT"));
       addDocumentValue(Keys.ACCESSION_NUMBER, createColumnValueField("ID_NUMBER"));
