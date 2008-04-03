@@ -301,14 +301,6 @@
         </CONTENTDESCRIPTOR>
 
         <CONTENTDESCRIPTOR BULKMODE="NO">
-          <ID>dynamicNavigators</ID>
-          <DATASOURCEURL>http://@data_server@/engvillage/models/customer/dynamicNavigators.jsp</DATASOURCEURL>
-          <DISPLAYURL>http://@data_server@/engvillage/views/world/copy-of.xsl</DISPLAYURL>
-          <MIMETYPE>text/xml</MIMETYPE>
-        </CONTENTDESCRIPTOR>
-
-
-        <CONTENTDESCRIPTOR BULKMODE="NO">
             <ID>whoami</ID>
             <DATASOURCEURL>http://@data_server@/engvillage/models/customer/whoami.jsp</DATASOURCEURL>
             <DISPLAYURL>http://@data_server@/engvillage/views/world/copy-of.xsl</DISPLAYURL>
