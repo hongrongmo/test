@@ -82,6 +82,24 @@
       <script type="text/javascript">
           var g_searchid = "<xsl:value-of select="SEARCH-ID"/>";
       //<![CDATA[
+          function getCookie(c_name)
+          {
+            if (document.cookie.length>0)
+            {
+              c_start=document.cookie.indexOf(c_name + "=");
+              if (c_start!=-1)
+              {
+                c_start=c_start + c_name.length+1;
+                c_end=document.cookie.indexOf(";",c_start);
+                if (c_end==-1)
+                {
+                  c_end=document.cookie.length;
+                }
+                return unescape(document.cookie.substring(c_start,c_end));
+              }
+            }
+            return "";
+          }
 
           var populated = false;
           var MAXZOOM = 5;
@@ -110,6 +128,11 @@
               var atoggle = document.getElementById("mapToggle");
               atoggle.appendChild(document.createTextNode("Show Geographic Map"));
               atoggle.href="javascript:togglemap();"
+              var mapstate=getCookie('mapstate');
+              if(mapstate == 'open')
+              {
+                togglemap();
+              }
             }
           }
 
@@ -123,13 +146,25 @@
             {
               divmap.style.display="none";
               atoggle.appendChild(document.createTextNode("Show Geographic Map"));
+              setmapstate("closed");
             }
             else {
               divmap.style.display="block";
               atoggle.appendChild(document.createTextNode("Hide Geographic Map"));
               showmap();
               populatemap();
+              setmapstate("open");
             }
+          }
+
+          function setmapstate(state)
+          {
+            document.cookie="mapstate=" + state + ";expires=-1";
+          }
+          function getmapstate()
+          {
+            var mapstate = getCookie('mapstate');
+            return (mapstate == null) ? "closed" : mapstate;
           }
 
           function resetCenterAndZoom() {
@@ -143,6 +178,7 @@
             var marker = new GMarker(point,{icon:newIcon, title:description});
             GEvent.addListener(marker, "click", function() {
               document.location = searchurl;
+              document.cookie="mapstate=open;expires=-1";
              });
             return marker;
           }
@@ -311,18 +347,9 @@
       </script>
       -->
 
-      <xsl:apply-templates select="MAPSTATE"/>
-
-
     </body>
     </html>
 
-  </xsl:template>
-
-  <xsl:template match="MAPSTATE">
-    <script language="JavaScript" type="text/javascript">
-    togglemap();
-    </script>
   </xsl:template>
 
   <!-- This xsl displays the results in Citation Format when the database is Compendex -->
