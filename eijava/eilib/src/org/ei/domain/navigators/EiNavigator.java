@@ -347,7 +347,8 @@ public class EiNavigator
       Iterator itrmods = (this.getModifiers()).iterator();
       for(int mindex = 0;itrmods.hasNext();mindex++)
       {
-        //if(mindex == modifiercount) { break; }
+        // Rolled back change - originally made for AJAX Navigators
+        if(mindex == modifiercount) { break; }
 
         EiModifier modifier = (EiModifier) itrmods.next();
         if(modifier != null)
@@ -355,7 +356,8 @@ public class EiNavigator
           sb.append(modifier.toXML());
         }
       }
-      //sb.append(ResultsState.getPagers(getModifiers().size(), modifiercount,this.getFieldname()));
+      // Rolled back change - originally made for AJAX Navigators
+      sb.append(ResultsState.getPagers(getModifiers().size(), modifiercount,this.getFieldname()));
       sb.append("</NAVIGATOR>");
       return sb.toString();
     }
