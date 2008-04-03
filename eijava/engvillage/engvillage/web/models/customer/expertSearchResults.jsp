@@ -29,7 +29,7 @@
 
     String currentPage = null;
     SearchControl sc = new FastSearchControl();
-    sc.setUseNavigators(false);
+    sc.setUseNavigators(true);
 
     Refinements parsedrefinements = new Refinements();
 
@@ -779,10 +779,7 @@
 //              on w/o checking for null
 //
                 ResultNavigator nav = null;
-                if(false)
-                {
-                  nav = sc.getNavigator();
-                }
+                nav = sc.getNavigator();
 
                 if(nav != null)
                 {
