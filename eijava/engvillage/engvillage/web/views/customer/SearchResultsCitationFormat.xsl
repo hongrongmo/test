@@ -55,21 +55,6 @@
 
     <html>
       <head>
-<STYLE type="text/css">
-.nav-minus
-{
-background-image:url(/engresources/images/tagedit_minus.gif);
-height:8px;
-width:8px;
-}
-
-.nav-plus
-{
-background-image:url(/engresources/images/tagedit_plus.gif);
-height:8px;
-width:8px;
-}
-</STYLE>
         <META http-equiv="Expires" content="0"/>
         <META http-equiv="Pragma" content="no-cache"/>
         <META http-equiv="Cache-Control" content="no-cache"/>
@@ -217,7 +202,7 @@ width:8px;
         <xsl:attribute name="onunload">GUnload()</xsl:attribute>
       </xsl:if>
 
-      <script language="JavaScript" type="text/javascript" src="/engresources/js/wz_tooltip.js"></script>
+      <!-- <script language="JavaScript" type="text/javascript" src="/engresources/js/wz_tooltip.js"></script> AJAX Dynamic navigators change -->
 
     <center>
 
@@ -301,8 +286,8 @@ width:8px;
             </td>
 
             <td width="220" valign="top">
-                <xsl:call-template name="NAVIGATORS"/>
-                <!-- <xsl:apply-templates select="NAVIGATORS"/> -->
+                <!-- <xsl:call-template name="NAVIGATORS"/> AJAX Navigators Call -->
+                <xsl:apply-templates select="NAVIGATORS"/>
             </td>
 
             </tr>
@@ -318,10 +303,13 @@ width:8px;
 
       <br/>
 
+      <script language="JavaScript" type="text/javascript" src="/engresources/js/wz_tooltip.js"></script>
+      <!--
       <script language="JavaScript" type="text/javascript" src="/engresources/js/navigators.js"/>
       <script language="JavaScript" type="text/javascript">
       getNavigators("<xsl:value-of select="$SEARCH-ID"/>","<xsl:value-of select="$SEARCH-TYPE"/>");
       </script>
+      -->
 
     </body>
     </html>
@@ -650,7 +638,7 @@ width:8px;
     <xsl:attribute name="HREF">/controller/servlet/Controller?CID=<xsl:value-of select="$RERUN-CID"/>&amp;database=<xsl:value-of select="/PAGE/DBMASK"/>&amp;sortdir=<xsl:value-of select="@dir"/>&amp;sort=<xsl:value-of select="../@value"/>&amp;RERUN=<xsl:value-of select="//SESSION-DATA/QUERY-ID"/></xsl:attribute>
 </xsl:template>
 
-<xsl:template name="NAVIGATORS"> <!-- match="NAVIGATORS" -->
+<xsl:template match="NAVIGATORS"> <!-- name="NAVIGATORS" AJAX Navigators call -->
 
   <!-- jam turkey - added for Help link to have proper anchor to reflect page context -->
   <xsl:variable name="REFCTX">
@@ -703,11 +691,11 @@ width:8px;
       <tr>
         <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
         <td valign="top">
-
+          <!--  AJAX Navigators call
           <div id="navigators" style="background:#FFFFFF url(/engresources/images/waiting.gif) no-repeat;">
             <img align="absmiddle" src="/engresources/images/s.gif" border="0" width="30" height="30"/><span class="MedBoldBlackText">Loading facets...</span>
-          </div>
-<!--        <xsl:apply-templates/> -->
+          </div> -->
+          <xsl:apply-templates/>
         </td>
         <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
       </tr>
@@ -778,7 +766,7 @@ width:8px;
       <tr>
         <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
         <td valign="top">
-          <!-- <xsl:apply-templates select="../NAVPAGER"/> -->
+          <xsl:apply-templates select="../NAVPAGER"/>
         </td>
         <td width="1" bgcolor="#3173b5"><img src="/engresources/images/s.gif" border="0" width="1"/></td>
       </tr>
