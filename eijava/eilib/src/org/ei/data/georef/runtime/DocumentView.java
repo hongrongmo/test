@@ -147,7 +147,7 @@ public abstract class DocumentView {
           String[] idxterms = stridxtrms.split(GRFDocBuilder.AUDELIMITER);
           for(int i = 0; i < idxterms.length; i++)
           {
-            idxterms[i] = idxterms[i].replaceAll("[A-Z]*" + GRFDocBuilder.IDDELIMITER,"");
+            idxterms[i] = idxterms[i].replaceAll("[A-Z]*" + GRFDocBuilder.IDDELIMITER,StringUtil.EMPTY_STRING);
           }
           ht.put(Keys.INDEX_TERM, new XMLMultiWrapper(Keys.INDEX_TERM, idxterms));
         }
@@ -191,22 +191,6 @@ public abstract class DocumentView {
           ht.put(GRFDocBuilder.COORDINATES, new RectangleCoordinates(strcoordinates.split(GRFDocBuilder.AUDELIMITER)));
         }
       }
-/*      if(isIncluded(GRFDocBuilder.MERIDIAN))
-      {
-        MeridianData md = new MeridianData();
-        String strfeatures = createColumnValueField("LAND").getValue();
-        if(strfeatures != null)
-        {
-          md.setFeatures(strfeatures.split("\\|"),"Land");
-        }
-        strfeatures = createColumnValueField("WATER").getValue();
-        if(strfeatures != null)
-        {
-          md.setFeatures(strfeatures.split("\\|"),"Water");
-        }
-        ht.put(GRFDocBuilder.MERIDIAN, md);
-      }
-*/
 
       if(isIncluded(Keys.AVAILABILITY))
       {
@@ -225,7 +209,18 @@ public abstract class DocumentView {
       addDocumentValue(Keys.SOURCE, createColumnValueField("TITLE_OF_SERIAL"));
       if(createColumnValueField("TITLE_OF_SERIAL").getValue() == null)
       {
-        addDocumentValue(Keys.NO_SO, "NO SOURCE");
+        // Here if there is no Source - pick the firat value from the availability multi-field
+        // if it exists
+        String stravail = createColumnValueField("AVAILABILITY").getValue();
+        if(stravail != null)
+        {
+          String firstAvail = stravail.split(GRFDocBuilder.AUDELIMITER)[0];
+          addDocumentValue(Keys.SOURCE, firstAvail);
+        }
+        else
+        {
+          addDocumentValue(Keys.NO_SO, "NO SOURCE");
+        }
       }
 
       addDocumentValue(Keys.SERIAL_TITLE, createColumnValueField("TITLE_OF_SERIAL"));
