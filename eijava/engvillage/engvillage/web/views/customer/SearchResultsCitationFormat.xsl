@@ -311,9 +311,18 @@
       </script>
       -->
 
+      <xsl:apply-templates select="MAPSTATE"/>
+
+
     </body>
     </html>
 
+  </xsl:template>
+
+  <xsl:template match="MAPSTATE">
+    <script language="JavaScript" type="text/javascript">
+    togglemap();
+    </script>
   </xsl:template>
 
   <!-- This xsl displays the results in Citation Format when the database is Compendex -->
