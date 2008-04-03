@@ -28,6 +28,7 @@ public class CitationView extends DocumentView {
                                                     "LANGUAGE_TEXT",
                                                     "PUBLISHER",
                                                     "PUBLISHER_ADDRESS",
+                                                    "AVAILABILITY",
                                                     "LOAD_NUMBER",
                                                     "COPYRIGHT",
                                                     "COLLATION_ANALYTIC",
