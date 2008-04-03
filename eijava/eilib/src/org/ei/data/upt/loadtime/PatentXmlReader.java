@@ -19,6 +19,7 @@ public class PatentXmlReader
 	private Document doc = null;
 	private Iterator rec =null;
 	private Perl5Util perl = new Perl5Util();
+	private HashMap dupMap = new HashMap();
 	private InventorComp INVENTORS_COMP = new InventorComp();
 	public static final char IDDELIMITER = (char)31;
 	public static final char DELIM = '\t';
@@ -2745,6 +2746,16 @@ public class PatentXmlReader
 								   String authCode)
 		throws Exception
 	{
+		String authPnum = authCode+pNum;
+		if(dupMap.containsKey(authPnum))
+		{
+			return true;
+		}
+		else
+		{
+			dupMap.put(authPnum, authPnum);
+		}
+
 		return dbMap.contains(authCode+pNum);
 	}
 
