@@ -1589,7 +1589,7 @@ public class PatentXmlReader
 					if(abstractData.getChildTextTrim("p") != null)
 					{
 						StringBuffer abstractBuf = getMixData(abstractData.getContent(),new StringBuffer());
-						record.put("ABSTRACT_DATA", abstractBuf.toString());
+						record.put("ABSTRACT_DATA", abstractBuf.toString().trim());
 					}
 				}
 
