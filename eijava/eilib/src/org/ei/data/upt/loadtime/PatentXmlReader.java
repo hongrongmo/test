@@ -58,23 +58,29 @@ public class PatentXmlReader
 		langMap.put("chi","Chinese");
 		langMap.put("rus","Russian");
 
-		kindMap.put("A1","Utility Patent Application");
-		kindMap.put("A2","APPLICATION WITHOUT SEARCH REPORT");
-		kindMap.put("A2","Second or subsequent publication of a Utility Patent Application");
+		kindMap.put("A1","Patent Application Publication");
+		kindMap.put("A2","Patent Application Publication(Republication)");
 		kindMap.put("A3","PUBL. OF SEARCH REPORT");
-		kindMap.put("A8","CORRECTED TITLE PAGE OF AN EP-A DOCUMENT");
-		kindMap.put("A9","COMPLETE REPRINT OF AN EP-A DOCUMENT");
+		kindMap.put("A8","CORRECTED TITLE PAGE OF AN EP-A DOCUMENT");//may not use
+		kindMap.put("A9","Patent Application Publication(Corrected Publication)");
 		kindMap.put("B1","Patent");
-		kindMap.put("B2","PATENT AFTER MODIFICATION");
-		kindMap.put("B2","Utility Patent Grant (with pre-grant publication)");
+		kindMap.put("B2","Patent");
 		kindMap.put("B8","CORRECTED FRONT PAGE OF AN EP-B DOCUMENT");
 		kindMap.put("B9","COMPLETE REPRINT OF AN EP-B DOCUMENT");
-		kindMap.put("E1","Reissue Patent");
-		kindMap.put("H1","Statutory Invention Registration (SIR)");
-		kindMap.put("P1","Plant Patent Application");
-		kindMap.put("P2","Plant Patent Application");
-		kindMap.put("P3","Plant Patent Application");
-		kindMap.put("S1","Design Patent");
+		kindMap.put("C1","Reexamination Certificate");
+		kindMap.put("C2","Reexamination Certificate");
+		kindMap.put("C3","Reexamination Certificate");
+		kindMap.put("E","Reissue Patent");
+		kindMap.put("E1","Reissue Patent");//may not use
+		kindMap.put("H","Statutory Invention Registration (SIR)");
+		kindMap.put("H1","Statutory Invention Registration (SIR)");//may not use
+		kindMap.put("P1","Plant Patent Application Publication");
+		kindMap.put("P2","Plant Patent");
+		kindMap.put("P3","Plant Patent");
+		kindMap.put("P4","Plant Patent Application Publication(Republication)");
+		kindMap.put("P9","Plant Patent Application Publication(Corrected Publication)");
+		kindMap.put("S","Design Patent");
+		kindMap.put("S1","Design Patent");//may not use
 
 	}
 
