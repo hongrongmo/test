@@ -125,6 +125,8 @@ public class PatentXmlReader
 	private void fileReader(File root) throws Exception
 	{
 		String zipfiles[] = root.list();
+		Arrays.sort(zipfiles, new DataFileComp());
+
 		for (int i = 0; i < zipfiles.length; i++)
 		{
 			String path = root.getPath() + File.separator + zipfiles[i];
@@ -155,6 +157,33 @@ public class PatentXmlReader
 			}
 		}
 	}
+
+	class DataFileComp implements Comparator
+	{
+		public int compare(Object o1, Object o2)
+		{
+			String file1 = (String)o1;
+			String file2 = (String)o2;
+			String[] file1Parts = file1.split("_");
+			String[] file2Parts = file2.split("_");
+			int date1 = Integer.parseInt(file1Parts[0]);
+			int date2 = Integer.parseInt(file2Parts[0]);
+
+			if(date1 < date2)
+			{
+				return -1;
+			}
+			else if(date1 > date2)
+			{
+				return 1;
+			}
+			else
+			{
+				return 0;
+			}
+		}
+	}
+
 
 	private void close()
 	{
@@ -1290,7 +1319,7 @@ public class PatentXmlReader
 			{
 				return -1;
 			}
-			if(s1 > s2)
+			else if(s1 > s2)
 			{
 				return 1;
 			}
@@ -1345,11 +1374,13 @@ public class PatentXmlReader
 						out.print(DELIM);
 						String cit_cy = (String)citationMap.get("DI_COUNTRY");
 						String cit_pn = (String)citationMap.get("DOC_NUMBER");
+						String cit_ki = (String)citationMap.get("KIND");
+
 
 						// CIT_PN
 						if(cit_pn != null)
 						{
-							cit_pn = pnNormalization(cit_pn);
+							cit_pn = pnNormalization(cit_pn,cit_ki);
 							out.print(cit_pn);
 						}
 
@@ -1611,18 +1642,21 @@ public class PatentXmlReader
 						if(pr_document_id != null)
 						{
 
+							//System.out.println("pr_kind= "+pr_document_id.getChildTextTrim("kind")); //OK
+							String kind = pr_document_id.getChildTextTrim("kind");
+							record.put("PR_DOCID_KIND", kind);
+
 							String pr_country = pr_document_id.getChildTextTrim("country"); //OK
 							//System.out.println("pr_country= "+pr_country);
 							record.put("PR_DOCID_COUNTRY",pr_country);
 
 							String pr_doc_number = pr_document_id.getChildTextTrim("doc-number"); //OK
-							pr_doc_number = pnNormalization(pr_doc_number);
+							pr_doc_number = pnNormalization(pr_doc_number, kind);
 							//System.out.println("pr_doc-number= "+pr_doc_number);
 							patentNumber = pr_doc_number;
 							record.put("PR_DOCID_DOC_NUMBER",pr_doc_number);
 
-							//System.out.println("pr_kind= "+pr_document_id.getChildTextTrim("kind")); //OK
-							record.put("PR_DOCID_KIND",pr_document_id.getChildTextTrim("kind"));
+
 
 							//System.out.println("pr_date= "+pr_document_id.getChildTextTrim("date")); //OK
 							record.put("PR_DOCID_DATE",pr_document_id.getChildTextTrim("date"));
@@ -2731,8 +2765,17 @@ public class PatentXmlReader
 		return dbMap.getMID_KC(authCode+pNum, "A");
 	}
 
-	private String pnNormalization(String pn) throws Exception
+	private String pnNormalization(String pn,
+								   String kind)
+		throws Exception
 	{
+		if(kind != null &&
+		   kind.equalsIgnoreCase("P1") &&
+		   pn.indexOf("PP") == 0)
+		{
+			pn = pn.substring(2);
+		}
+
 		if(pn != null)
 		{
 			pn=pn.replaceFirst("^(D|PP|P|RE|T|H|X|RX|AI)[0]+","$1");
@@ -2746,6 +2789,11 @@ public class PatentXmlReader
 								   String authCode)
 		throws Exception
 	{
+		if(pNum.indexOf("PP") == 0)
+		{
+			return checkAvailablePP(pNum, authCode);
+		}
+
 		String authPnum = authCode+pNum;
 		if(dupMap.containsKey(authPnum))
 		{
@@ -2756,7 +2804,33 @@ public class PatentXmlReader
 			dupMap.put(authPnum, authPnum);
 		}
 
-		return dbMap.contains(authCode+pNum);
+		return dbMap.contains(authPnum);
+	}
+
+	private boolean checkAvailablePP(String pNum,
+									 String authCode)
+		throws Exception
+	{
+		String authPnum = authCode+pNum;
+
+		if(dupMap.containsKey(authPnum))
+		{
+			return true;
+		}
+		else
+		{
+			dupMap.put(authPnum, authPnum);
+		}
+
+		if(dbMap.contains(authPnum))
+		{
+			return true;
+		}
+		else
+		{
+			authPnum = "PP0"+authPnum.substring(2);
+			return dbMap.contains(authPnum);
+		}
 	}
 
 	private  StringBuffer getMixData(List l, StringBuffer b)
