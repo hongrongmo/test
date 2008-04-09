@@ -282,9 +282,28 @@ public class PatentXmlReader
 		}
 	}
 
+	private boolean enoughData(HashMap singleRecord)
+	{
+		List titleList = (List)singleRecord.get("TITLE");
+		if(titleList != null && titleList.size() > 0)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
 	private void outputUPTRecord(HashMap singleRecord, PrintWriter out)
 	{
 		//String patentNumber = "0";
+		if(!enoughData(singleRecord))
+		{
+			System.out.println("Patent not included due to lack of data:"+(String)singleRecord.get("PR_DOCID_DOC_NUMBER"));
+			return;
+		}
+
 		try
 		{
 			// M_ID
