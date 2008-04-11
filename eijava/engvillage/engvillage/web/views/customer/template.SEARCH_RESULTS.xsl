@@ -77,6 +77,10 @@
   </xsl:variable>
 
 
+  <xsl:variable name="COMPMASK">
+    <xsl:value-of select="/PAGE/NAVIGATORS/COMPMASK"/>
+  </xsl:variable>
+  
     <br/>
     <a class="EvHeaderText">Search Results</a>
     <br/>
@@ -179,7 +183,7 @@
          <A class="DecLink" href="javascript:makeUrl('RSS_Feature.htm')">
 	    <img src="/engresources/images/blue_help.gif" align="absbottom" border="0"/>
 	 </A>
-	 <xsl:if test="($DATABASE='8192' or $DATABASE='2097152' or $DATABASE='2105344')">
+	 <xsl:if test="($COMPMASK='8192' or $COMPMASK='2097152' or $COMPMASK='2105344')">
 	   <div style="float:right" width="120"><a id="mapToggle"><img src="/engresources/images/Map_icon_beta.png" align="middle" border="1" alt="Show Geographic Map"/></a></div>
 	 </xsl:if>  
     </div>
