@@ -80,7 +80,7 @@
   <xsl:variable name="COMPMASK">
     <xsl:value-of select="/PAGE/NAVIGATORS/COMPMASK"/>
   </xsl:variable>
-  
+
     <br/>
     <a class="EvHeaderText">Search Results</a>
     <br/>
@@ -171,29 +171,30 @@
   <!-- this will contain the link for RSS-->
   <xsl:if test="($PERSONALIZATION-PRESENT='true')">
     <xsl:if test="($RSS-LINK='true')">
-    <A CLASS="MedBlackText">&#160; - &#160;</A>
+    <a class="MedBlackText">&#160; - &#160;</a>
     </xsl:if>
   </xsl:if>
-  <xsl:if test="($RSS-LINK='true')">
-    <div class="wrap">
-      <A class="DecLink" HREF="#" onClick="window.open('/controller/servlet/Controller?CID=displayRSSQuery&amp;database={$DATABASE}&amp;term1={java:encode($I-QUERY)}','newwindow','width=700,height=500,toolbar=no,location=no,scrollbars,resizable');return false;">
+    <xsl:if test="($RSS-LINK='true')">
+      <a class="DecLink" HREF="#" onClick="window.open('/controller/servlet/Controller?CID=displayRSSQuery&amp;database={$DATABASE}&amp;term1={java:encode($I-QUERY)}','newwindow','width=700,height=500,toolbar=no,location=no,scrollbars,resizable');return false;">
         <img src="/engresources/images/rss.gif" align="absbottom" border="0"/>
-      </A>
+      </a>
       <xsl:text>  </xsl:text>
-         <A class="DecLink" href="javascript:makeUrl('RSS_Feature.htm')">
-	    <img src="/engresources/images/blue_help.gif" align="absbottom" border="0"/>
-	 </A>
-	 <xsl:if test="($COMPMASK='8192' or $COMPMASK='2097152' or $COMPMASK='2105344')">
-	   <div style="float:right" width="120"><a id="mapToggle"><img src="/engresources/images/Map_icon_beta.png" align="middle" border="1" alt="Show Geographic Map"/></a></div>
-	 </xsl:if>  
-    </div>
-  </xsl:if>
-<div id="map" style="clear:both;display:none;">
-                <a class="SpLink" id="resetcenter" href="javascript:resetCenterAndZoom()">Reset Map Center and Zoom</a><br/>
-                <div id="map_spacer" style="float:left; border:0px solid black; width: 20px; height: 300px"></div>
-                <div id="map_canvas" style="float:left; width: 600px; height: 300px">&#160;</div>
-                <div id="map_sidebar" class="SmBlackText" style="display:none; float:left; border:1px solid black; width: 110px; height: 300px"><form name="formlegend"><fieldset><legend>Legend</legend><ul style="list-style-type:none; margin:0; padding:0; margin-bottom:1px;" id="legend"></ul></fieldset></form></div>
-              </div>  
+      <a class="DecLink" href="javascript:makeUrl('RSS_Feature.htm')">
+      <img src="/engresources/images/blue_help.gif" align="absbottom" border="0"/>
+      </a>
+    </xsl:if>
+
+   <xsl:if test="($COMPMASK='8192' or $COMPMASK='2097152' or $COMPMASK='2105344')">
+     &#160;<a class="SpLink" id="mapToggle"/>
+   </xsl:if>
+
+  <div id="map" style="clear:both;display:none;">
+    <br/>
+    <div id="map_spacer" style="float:left; border:0px solid black; width: 20px; height: 300px"></div>
+    <div id="map_canvas" style="float:left; width: 600px; height: 300px;">&#160;</div>
+    <br style="clear:both;"/>
+    <div id="link_spacer" style="float:left; width: 20px; height: 20px"></div><a class="SpLink" id="resetcenter" href="javascript:resetCenterAndZoom()">Reset Map Center and Zoom</a>
+  </div>
   <br/>
 
 </xsl:template>
