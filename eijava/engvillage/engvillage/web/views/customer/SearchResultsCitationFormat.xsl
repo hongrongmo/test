@@ -107,20 +107,6 @@
           var map;
           function showmap() {
             if (GBrowserIsCompatible()) {
-              map = new GMap(document.getElementById("map_canvas"));
-              map.setMapType(G_PHYSICAL_MAP);
-              map.setCenter(new GLatLng(0, 0), 1);
-
-              map.addControl(new GLargeMapControl());
-              /* map.addControl(new GOverviewMapControl()); */
-
-              // Monitor the window resize event and let the map know when it occurs
-              var mapdiv = document.getElementById("map_canvas")
-              if (mapdiv.attachEvent) {
-                mapdiv.attachEvent("onresize", function() {map.onResize()} );
-              } else {
-                mapdiv.addEventListener("resize", function() {map.onResize()} , false);
-              }
             }
           }
           function initialize() {
@@ -184,6 +170,14 @@
           }
 
            function populatemap() {
+            if(populated) return;
+
+            map = new GMap(document.getElementById("map_canvas"));
+            map.setMapType(G_PHYSICAL_MAP);
+            map.setCenter(new GLatLng(0, 0), 1);
+
+            map.addControl(new GLargeMapControl());
+
             var request = GXmlHttp.create();
             request.open("GET", "/controller/servlet/Controller?CID=geoTerms&searchId=" + g_searchid, true);
             request.onreadystatechange = function() {
@@ -221,6 +215,7 @@
                     bounds.extend(marker.getPoint());
                   }
                   resetCenterAndZoom();
+                  populated = true;
                 }
               }
             }
