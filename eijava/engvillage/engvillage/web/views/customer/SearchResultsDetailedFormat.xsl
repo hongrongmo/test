@@ -279,10 +279,10 @@
               rectangle = new GLatLngBounds(new GLatLng(<xsl:value-of select="POINT[4]/LAT"/>, <xsl:value-of select="POINT[4]/LONG"/>),
                                             new GLatLng(<xsl:value-of select="POINT[2]/LAT"/>, <xsl:value-of select="POINT[2]/LONG"/>));
               ptname = "<xsl:value-of select="@ID"/>";
-              marker = new GMarker(rectangle.getCenter(),{title:ptname});
-              GEvent.addListener(marker, "click", function() {
+              marker = new GMarker(rectangle.getCenter(),{title:ptname, clickable:false});
+              <!-- GEvent.addListener(marker, "click", function() {
                   document.location="/controller/servlet/Controller?CID=quickSearchCitationFormat&amp;searchWord1={<xsl:value-of select="@ID"/>}&amp;section1=CV&amp;database=<xsl:value-of select="$DATABASE"/>&amp;yearselect=yearrange&amp;sort=yr";
-               });
+               }); -->
               map.addOverlay(marker);
               markers[ptname] = marker;
               bounds.extend(rectangle.getSouthWest());
