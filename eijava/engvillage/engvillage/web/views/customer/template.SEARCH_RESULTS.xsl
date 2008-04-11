@@ -179,9 +179,17 @@
          <A class="DecLink" href="javascript:makeUrl('RSS_Feature.htm')">
 	    <img src="/engresources/images/blue_help.gif" align="absbottom" border="0"/>
 	 </A>
+	 <xsl:if test="($DATABASE='8192' or $DATABASE='2097152' or $DATABASE='2105344')">
+	   <div style="float:right" width="120"><a id="mapToggle"><img src="/engresources/images/Map_icon_beta.png" align="middle" border="1" alt="Show Geographic Map"/></a></div>
+	 </xsl:if>  
     </div>
   </xsl:if>
-
+<div id="map" style="clear:both;display:none;">
+                <a class="SpLink" id="resetcenter" href="javascript:resetCenterAndZoom()">Reset Map Center and Zoom</a><br/>
+                <div id="map_spacer" style="float:left; border:0px solid black; width: 20px; height: 300px"></div>
+                <div id="map_canvas" style="float:left; width: 600px; height: 300px">&#160;</div>
+                <div id="map_sidebar" class="SmBlackText" style="display:none; float:left; border:1px solid black; width: 110px; height: 300px"><form name="formlegend"><fieldset><legend>Legend</legend><ul style="list-style-type:none; margin:0; padding:0; margin-bottom:1px;" id="legend"></ul></fieldset></form></div>
+              </div>  
   <br/>
 
 </xsl:template>
