@@ -77,29 +77,11 @@
         </xsl:if>
 
       <xsl:if test="boolean(bit:hasBitSet(/PAGE/DBMASK,2097152) or bit:hasBitSet(/PAGE/DBMASK,8192))">
-      <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=@google.maps.api.key@"
+      <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAR--2D6WLLGcr7L3QlwZCBRTWp_Jg7UwMVr-ESRqyz6fZCklfjxRMuUlG4X-qIrTCMhuYZ8sO4fVZEA"
               type="text/javascript"></script>
       <script type="text/javascript">
           var g_searchid = "<xsl:value-of select="SEARCH-ID"/>";
       //<![CDATA[
-          function getCookie(c_name)
-          {
-            if (document.cookie.length>0)
-            {
-              c_start=document.cookie.indexOf(c_name + "=");
-              if (c_start!=-1)
-              {
-                c_start=c_start + c_name.length+1;
-                c_end=document.cookie.indexOf(";",c_start);
-                if (c_end==-1)
-                {
-                  c_end=document.cookie.length;
-                }
-                return unescape(document.cookie.substring(c_start,c_end));
-              }
-            }
-            return "";
-          }
 
           var populated = false;
           var MAXZOOM = 5;
@@ -126,13 +108,8 @@
           function initialize() {
             if (GBrowserIsCompatible()) {
               var atoggle = document.getElementById("mapToggle");
-              atoggle.appendChild(document.createTextNode("Show Geographic Map"));
+              atoggle.appendChild(document.createTextNode("  Show Geographic Map"));
               atoggle.href="javascript:togglemap();"
-              var mapstate=getCookie('mapstate');
-              if(mapstate == 'open')
-              {
-                togglemap();
-              }
             }
           }
 
@@ -146,25 +123,13 @@
             {
               divmap.style.display="none";
               atoggle.appendChild(document.createTextNode("Show Geographic Map"));
-              setmapstate("closed");
             }
             else {
               divmap.style.display="block";
               atoggle.appendChild(document.createTextNode("Hide Geographic Map"));
               showmap();
               populatemap();
-              setmapstate("open");
             }
-          }
-
-          function setmapstate(state)
-          {
-            document.cookie="mapstate=" + state + ";expires=-1";
-          }
-          function getmapstate()
-          {
-            var mapstate = getCookie('mapstate');
-            return (mapstate == null) ? "closed" : mapstate;
           }
 
           function resetCenterAndZoom() {
@@ -178,7 +143,6 @@
             var marker = new GMarker(point,{icon:newIcon, title:description});
             GEvent.addListener(marker, "click", function() {
               document.location = searchurl;
-              document.cookie="mapstate=open;expires=-1";
              });
             return marker;
           }
@@ -278,13 +242,13 @@
                 <xsl:apply-templates select="//SESSION-DATA/SC"/>
             </xsl:if>
             <xsl:apply-templates select="//SESSION-DATA/DATABASE"/>
-              <a class="SpLink" id="mapToggle"/>
-              <div id="map" style="clear:both;display:none;">
+              <!--a class="SpLink" id="mapToggle"/-->
+              <!--div id="map" style="clear:both;display:none;">
                 <a class="SpLink" id="resetcenter" href="javascript:resetCenterAndZoom()">Reset Map Center and Zoom</a><br/>
                 <div id="map_spacer" style="float:left; border:0px solid black; width: 40px; height: 300px"></div>
                 <div id="map_canvas" style="float:left; width: 600px; height: 300px">&#160;</div>
                 <div id="map_sidebar" class="SmBlackText" style="display:none; float:left; border:1px solid black; width: 110px; height: 300px"><form name="formlegend"><fieldset><legend>Legend</legend><ul style="list-style-type:none; margin:0; padding:0; margin-bottom:1px;" id="legend"></ul></fieldset></form></div>
-              </div>
+              </div-->
 
               <div style="clear:both;"/>
               <xsl:apply-templates select="//SESSION-DATA/REFINE-STACK"/>
@@ -638,8 +602,8 @@
 
 
     <A class="RedText"><B>Sort by:</B></A>&#160;&#160;
-    <xsl:apply-templates select="SORTBYFIELD[(bit:containsBit($SORTMASK,@mask))]"/>
-    <br/>
+    <xsl:apply-templates select="SORTBYFIELD[(bit:containsBit($SORTMASK,@mask))]"/>    
+    <br/>    
     <!-- debugging
     by <xsl:value-of select="//SESSION-DATA/SORT-OPTION" /> - <xsl:value-of select="//SESSION-DATA/SORT-DIRECTION" />
     <br/> -->
