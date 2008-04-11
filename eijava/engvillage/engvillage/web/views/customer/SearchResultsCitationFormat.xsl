@@ -105,14 +105,12 @@
           var MAXZOOM = 5;
           var bounds = new GLatLngBounds();
           var map;
-          function showmap() {
-            if (GBrowserIsCompatible()) {
-            }
-          }
+          var messages = { "show":"Show Geographic Map", "hide":"Hide Geographic Map" };
+
           function initialize() {
             if (GBrowserIsCompatible()) {
               var atoggle = document.getElementById("mapToggle");
-              atoggle.appendChild(document.createTextNode("  Show Geographic Map"));
+              atoggle.appendChild(document.createTextNode(messages["show"]));
               atoggle.href="javascript:togglemap();"
               var mapstate=getCookie('mapstate');
               if(mapstate == 'open')
@@ -131,13 +129,12 @@
             if(divmap.style.display == "block")
             {
               divmap.style.display="none";
-              atoggle.appendChild(document.createTextNode("Show Geographic Map"));
+              atoggle.appendChild(document.createTextNode(messages["show"]));
               setmapstate("closed");
             }
             else {
               divmap.style.display="block";
-              atoggle.appendChild(document.createTextNode("Hide Geographic Map"));
-              showmap();
+              atoggle.appendChild(document.createTextNode(messages["hide"]));
               populatemap();
               setmapstate("open");
             }
@@ -172,11 +169,8 @@
            function populatemap() {
             if(populated) return;
 
-            map = new GMap(document.getElementById("map_canvas"));
-            map.setMapType(G_PHYSICAL_MAP);
-            map.setCenter(new GLatLng(0, 0), 1);
-
-            map.addControl(new GLargeMapControl());
+            var mapcontainer = document.getElementById("map_canvas");
+            mapcontainer.style.background = "#FFFFFF url(/engresources/images/waiting.gif) no-repeat";
 
             var request = GXmlHttp.create();
             request.open("GET", "/controller/servlet/Controller?CID=geoTerms&searchId=" + g_searchid, true);
@@ -184,6 +178,13 @@
               if (request.readyState == 4) {
                 if (request.status == 200)
                 {
+                  mapcontainer.style.background = "none";
+
+                  map = new GMap(document.getElementById("map_canvas"));
+                  map.setMapType(G_PHYSICAL_MAP);
+                  map.setCenter(new GLatLng(0, 0), 1);
+                  map.addControl(new GLargeMapControl());
+
                   var xmlDoc = request.responseXML;
 
                   placemarks = xmlDoc.documentElement.getElementsByTagName("Placemark");
