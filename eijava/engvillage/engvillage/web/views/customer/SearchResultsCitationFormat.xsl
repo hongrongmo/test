@@ -41,7 +41,7 @@
 <xsl:variable name="SESSION-ID"><xsl:value-of select="/PAGE/SESSION-ID" /></xsl:variable>
 <xsl:variable name="CURRENT-PAGE"><xsl:value-of select="/PAGE/CURR-PAGE-ID"/></xsl:variable>
 <xsl:variable name="SELECTED-DB"><xsl:value-of select="/PAGE/DBMASK"/></xsl:variable>
-
+<xsl:variable name="COMPMASK"><xsl:value-of select="/PAGE/NAVIGATORS/COMPMASK"/></xsl:variable>
 
   <xsl:template match="PAGE">
 
@@ -76,7 +76,7 @@
           <xsl:call-template name="DEDUP-SCRIPT" />
         </xsl:if>
 
-      <xsl:if test="boolean(bit:hasBitSet(/PAGE/DBMASK,2097152) or bit:hasBitSet(/PAGE/DBMASK,8192))">
+      <xsl:if test="($COMPMASK='8192' or $COMPMASK='2097152' or $COMPMASK='2105344')">
       <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=@google.maps.api.key@"
               type="text/javascript"></script>
       <script type="text/javascript">
@@ -233,7 +233,7 @@
     </head>
 
     <body bgcolor="#FFFFFF" topmargin="0" marginheight="0" marginwidth="0">
-      <xsl:if test="boolean(bit:hasBitSet(/PAGE/DBMASK,2097152) or bit:hasBitSet(/PAGE/DBMASK,8192))">
+      <xsl:if test="($COMPMASK='8192' or $COMPMASK='2097152' or $COMPMASK='2105344')">
         <xsl:attribute name="onload">initialize()</xsl:attribute>
         <xsl:attribute name="onunload">GUnload()</xsl:attribute>
       </xsl:if>
