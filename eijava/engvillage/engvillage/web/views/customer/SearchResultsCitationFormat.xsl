@@ -144,7 +144,7 @@
 
           function setmapstate(state)
           {
-            createCookie("mapstate=",state,0);
+            createCookie("mapstate",state,0);
           }
           function getmapstate()
           {
