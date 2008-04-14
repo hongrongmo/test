@@ -82,23 +82,25 @@
       <script type="text/javascript">
           var g_searchid = "<xsl:value-of select="SEARCH-ID"/>";
       //<![CDATA[
-          function getCookie(c_name)
-          {
-            if (document.cookie.length>0)
-            {
-              c_start=document.cookie.indexOf(c_name + "=");
-              if (c_start!=-1)
-              {
-                c_start=c_start + c_name.length+1;
-                c_end=document.cookie.indexOf(";",c_start);
-                if (c_end==-1)
-                {
-                  c_end=document.cookie.length;
-                }
-                return unescape(document.cookie.substring(c_start,c_end));
-              }
+          function createCookie(name,value,days) {
+            if (days != 0) {
+              var date = new Date();
+              date.setTime(date.getTime()+(days*24*60*60*1000));
+              var expires = "; expires="+date.toGMTString();
             }
-            return "";
+            else var expires = "";
+            document.cookie = name+"="+value+expires+"; path=/controller/servlet/";
+          }
+
+          function readCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for(var i=0;i < ca.length;i++) {
+              var c = ca[i];
+              while (c.charAt(0)==' ') c = c.substring(1,c.length);
+              if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+            }
+            return null;
           }
 
           var populated = false;
@@ -112,7 +114,7 @@
               var atoggle = document.getElementById("mapToggle");
               atoggle.appendChild(document.createTextNode(messages["show"]));
               atoggle.href="javascript:togglemap();"
-              var mapstate=getCookie('mapstate');
+              var mapstate=getmapstate();
               if(mapstate == 'open')
               {
                 togglemap();
@@ -142,11 +144,11 @@
 
           function setmapstate(state)
           {
-            document.cookie="mapstate=" + state + ";expires=-1";
+            createCookie("mapstate=",state,0);
           }
           function getmapstate()
           {
-            var mapstate = getCookie('mapstate');
+            var mapstate = readCookie('mapstate');
             return (mapstate == null) ? "closed" : mapstate;
           }
 
@@ -166,7 +168,7 @@
             return marker;
           }
 
-           function populatemap() {
+          function populatemap() {
             if(populated) return;
 
             var mapcontainer = document.getElementById("map_canvas");
