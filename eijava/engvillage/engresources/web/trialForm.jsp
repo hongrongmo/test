@@ -174,7 +174,7 @@
 	                                <li><a href="http://www.ei.org/products/engineeringvillage.html">EngineeringVillage</a></li>
 	                                <li><a href="http://www.ei.org/products/chemvillage.html">ChemVillage</a></li>
 	                                <li><a href="http://www.ei.org/products/papervillage.html">PaperVillage</a></li>
-	                                <li><a href="http://www.ei.org/products/encompassweb.html">EnCompassWEB</a></li>
+                                  <li><a href="http://www.ei.org/products/encompassweb.html">EnCompassLIT & PAT</a></li>
 	                            </ul>
 	                        </li>
 	                        <li id="nav_content_databases">
@@ -554,10 +554,10 @@
 	                                <option value="enclit">EnCompassLIT</option>
 	                                <option value="encpat">EnCompassPAT</option>
 	                                <option value="geobase">GeoBase</option>
+	                                <option value="georef">GeoRef</option>
 	                                <option value="chimica">Chimica</option>
 	                                <option value="newsbase">Chemical Business NewsBase</option>
 	                                <option value="paperchem">PaperChem</option>
-	                                <option value="georef">GeoRef</option>
 	                            </select>
 	                        </label>
 
