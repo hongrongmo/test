@@ -105,17 +105,19 @@
 
           var populated = false;
           var MAXZOOM = 5;
+          var MAPSTATE = 'mapstate';
+          var OPEN = 'open';
+          var CLOSED = 'closed';
           var bounds = new GLatLngBounds();
           var map;
-          var messages = { "show":"Show Geographic Map", "hide":"Hide Geographic Map" };
+          var messages = { "show":"Show Geographic Map", "hide":"Hide Geographic Map"};
 
           function initialize() {
             if (GBrowserIsCompatible()) {
               var atoggle = document.getElementById("mapToggle");
               atoggle.appendChild(document.createTextNode(messages["show"]));
               atoggle.href="javascript:togglemap();"
-              var mapstate=getmapstate();
-              if(mapstate == 'open')
+              if(getmapstate() == OPEN)
               {
                 togglemap();
               }
@@ -132,24 +134,23 @@
             {
               divmap.style.display="none";
               atoggle.appendChild(document.createTextNode(messages["show"]));
-              setmapstate("closed");
+              setmapstate(CLOSED);
             }
             else {
               divmap.style.display="block";
               atoggle.appendChild(document.createTextNode(messages["hide"]));
               populatemap();
-              setmapstate("open");
+              setmapstate(OPEN);
             }
           }
 
           function setmapstate(state)
           {
-            createCookie("mapstate",state,0);
+            createCookie(MAPSTATE,state,0);
           }
           function getmapstate()
           {
-            var mapstate = readCookie('mapstate');
-            return (mapstate == null) ? "closed" : mapstate;
+            return (readCookie(MAPSTATE) == null) ? CLOSED : readCookie(MAPSTATE);
           }
 
           function resetCenterAndZoom() {
@@ -163,7 +164,7 @@
             var marker = new GMarker(point,{icon:newIcon, title:description});
             GEvent.addListener(marker, "click", function() {
               document.location = searchurl;
-              document.cookie="mapstate=open;expires=-1";
+              setmapstate(OPEN);
              });
             return marker;
           }
