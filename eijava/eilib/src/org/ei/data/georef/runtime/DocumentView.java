@@ -204,6 +204,8 @@ public abstract class DocumentView {
       addDocumentValue(Keys.CONF_DATE, new ConferenceDateDecorator(createColumnValueField("DATE_OF_MEETING")));
       // this is a (possible) multi-field that will be split on the AUDELIMITER in addDocumentValue() method
       addDocumentValue(Keys.CONFERENCE_NAME, createColumnValueField("NAME_OF_MEETING"));
+      addDocumentValue(Keys.MEETING_LOCATION, createColumnValueField("LOCATION_OF_MEETING"));
+
       addDocumentValue(Keys.CODEN, createColumnValueField("CODEN"));
 
       addDocumentValue(Keys.SOURCE, createColumnValueField("TITLE_OF_SERIAL"));
