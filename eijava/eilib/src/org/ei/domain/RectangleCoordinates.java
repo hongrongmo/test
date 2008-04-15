@@ -53,13 +53,13 @@ public class RectangleCoordinates
   public void toXML(Writer out)
     throws IOException
   {
-    out.write("<");
+/*    out.write("<");
     out.write(this.key.getKey());
     out.write(" label=\"");
     out.write(this.key.getLabel());
     out.write("\"");
     out.write(">");
-
+*/
 // Latitude. Latitude indicates the number of degrees north or south of the equator (0 degrees). Latitude is indicated by a character string of seven characters: a letter N or S to indicate direction (i.e., north or south of the equator) and a six-digit number indicating the number of degrees, minutes, and seconds. Latitude coordinates are also cascaded to the full degree (i.e., first two digits): N451430 is North, 45 degrees, 14 minutes, 30 seconds; it is also cascaded to N45.
 // Longitude. Longitude indicates the number of degrees east or west of the prime meridian (0 degrees). Longitude is indicated by a character string of eight characters: a letter E or W to indicate direction (i.e., east or west of the prime meridian) and a seven-digit number indicating the number of degrees, minutes, and seconds. Longitude coordinates are also cascaded to the full degree (i.e., first three digits): W1211752 is West, 121 degrees, 17 minutes, 52 seconds; it is also cascaded to W121
 // Coordinates are assigned as follows: Starting from the lower right-hand corner, a latitude is assigned, followed by the latitude of the upper right-hand corner (counterclockwise), the longitude of that point, and finally the longitude of the upper left-hand corner.
@@ -68,7 +68,7 @@ public class RectangleCoordinates
 // DEC = DEG + (MIN * 1/60) + (SEC * 1/60 * 1/60)
 
     StringBuffer locations = new StringBuffer();
-    locations.append("<LOCS label=\"Locations\">");
+    locations.append("<LOCS label=\"Coordinates\">");
 
     long xsmall = 0;
     long xlarge = 0;
@@ -105,6 +105,7 @@ public class RectangleCoordinates
           String lng1 = String.valueOf(Long.parseLong(rectangle.group(10)) * (rectangle.group(9).equals("W") ? -1 : 1) + (Long.parseLong(rectangle.group(11)) * 1/60) + (Long.parseLong(rectangle.group(12)) * 1/360));
           String lng2 = String.valueOf(Long.parseLong(rectangle.group(14)) * (rectangle.group(13).equals("W") ? -1 : 1) + (Long.parseLong(rectangle.group(15)) * 1/60) + (Long.parseLong(rectangle.group(16)) * 1/360));
 */
+/*
           out.write("<RECT ID=\"" + ((term != null) ? term : String.valueOf(i)) + "\">");
           out.write("<POINT>");
           out.write("<LAT>");out.write(lat1);out.write("</LAT>");out.write("<LONG>");out.write(lng1);out.write("</LONG>");
@@ -119,8 +120,8 @@ public class RectangleCoordinates
           out.write("<LAT>");out.write(lat1);out.write("</LAT>");out.write("<LONG>");out.write(lng2);out.write("</LONG>");
           out.write("</POINT>");
           out.write("</RECT>");
-
-          locations.append("<LOC ID=\"" + ((term != null) ? term : String.valueOf(i)) + "\">");
+*/
+          locations.append("<LOC " + ((term != null) ?  " ID=\"" + term + "\" " : "") + ">");
           // LAT_LOW_RIGHT LAT_UPPER_RIGHT LONG_UPPER_RIGHT LONG_UPPER_LEFT
           locations.append("<![CDATA[");
           for(int x = 0; x < 4; x++)
@@ -146,9 +147,9 @@ public class RectangleCoordinates
     }
     locations.append("</LOCS>");
 
-    out.write("</");
+/*    out.write("</");
     out.write(key.getKey());
-    out.write(">");
+    out.write(">"); */
 
     out.write(locations.toString());
   }
