@@ -176,16 +176,16 @@
   </xsl:if>
     <xsl:if test="($RSS-LINK='true')">
       <a class="DecLink" HREF="#" onClick="window.open('/controller/servlet/Controller?CID=displayRSSQuery&amp;database={$DATABASE}&amp;term1={java:encode($I-QUERY)}','newwindow','width=700,height=500,toolbar=no,location=no,scrollbars,resizable');return false;">
-        <img src="/engresources/images/rss.gif" align="absbottom" border="0"/>
+        <img src="/engresources/images/rss.gif" align="absmiddle" border="0"/>
       </a>
       <xsl:text>  </xsl:text>
       <a class="DecLink" href="javascript:makeUrl('RSS_Feature.htm')">
-      <img src="/engresources/images/blue_help.gif" align="absbottom" border="0"/>
+      <img src="/engresources/images/blue_help.gif" align="absmiddle" border="0"/>
       </a>
     </xsl:if>
 
    <xsl:if test="($COMPMASK='8192' or $COMPMASK='2097152' or $COMPMASK='2105344')">
-     &#160;<a class="SpLink" id="mapToggle"/>
+      &#160;<a class="SpLink" id="mapToggle"><img src="/engresources/images/s.gif" align="absmiddle" id="mapToggleImage" border="0" width="84" height="18"/></a>
    </xsl:if>
 
   <div id="map" style="clear:both;display:none;">

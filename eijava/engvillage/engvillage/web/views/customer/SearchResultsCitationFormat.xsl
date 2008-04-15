@@ -115,7 +115,10 @@
           function initialize() {
             if (GBrowserIsCompatible()) {
               var atoggle = document.getElementById("mapToggle");
-              atoggle.appendChild(document.createTextNode(messages["show"]));
+              var atoggleImage = document.getElementById("mapToggleImage");
+              atoggleImage.src = "/engresources/images/show_map.gif";
+              atoggleImage.altText = messages["show"];
+
               atoggle.href="javascript:togglemap();"
               if(getmapstate() == OPEN)
               {
@@ -128,19 +131,27 @@
           {
             var divmap = document.getElementById("map");
             var atoggle = document.getElementById("mapToggle");
+            var atoggleImage = document.getElementById("mapToggleImage");
 
-            while(atoggle.firstChild) atoggle.removeChild(atoggle.firstChild);
             if(divmap.style.display == "block")
             {
+              // remove 'Hide' link
+              atoggle.removeChild(atoggle.lastChild);
+              // hide Map
               divmap.style.display="none";
-              atoggle.appendChild(document.createTextNode(messages["show"]));
               setmapstate(CLOSED);
+              // show button
+              atoggleImage.style.display = "inline";
             }
             else {
-              divmap.style.display="block";
+              // create 'Hide' link
               atoggle.appendChild(document.createTextNode(messages["hide"]));
+              // show map
+              divmap.style.display="block";
               populatemap();
               setmapstate(OPEN);
+              // hide button
+              atoggleImage.style.display = "none";
             }
           }
 
