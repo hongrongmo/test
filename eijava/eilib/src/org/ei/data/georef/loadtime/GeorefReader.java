@@ -26,11 +26,11 @@ public class GeorefReader {
 	private static String[] elementNames = new String[] { "M_ID", "ISSN",
 			"EISSN", "A02", "A03", "A05", "A06", "A07", "A08", "A09", "A10",
 			"A11", "A12", "A13", "ALT_SPELL", "AUTH_AFF", "AUTH_ADD",
-			"AUTH_AFF_CO", "A17", "A18", "A19", "A20", "A28", "A29", "A21",
-			"A22", "A23", "A24", "A25_1", "A25_2", "A26", "A27", "A30", "A31",
-			"A32", "A39", "A41", "A42", "A43", "A45", "A46", "DOI",
-			"COPYRIGHT", "Z01", "Z03", "Z04", "Z05", "Z15", "Z24", "Z32",
-			"Z33", "Z34", "Z35", "Z36", "Z37", "Z38", "Z39", "Z44",
+			"AUTH_AFF_CO", "AUTH_EMAIL", "A17", "A18", "A19", "A20", "A28",
+			"A29", "A21", "A22", "A23", "A24", "A25_1", "A25_2", "A26", "A27",
+			"A30", "A31", "A32", "A39", "A41", "A42", "A43", "A45", "A46",
+			"DOI", "COPYRIGHT", "Z01", "Z03", "Z04", "Z05", "Z15", "Z24",
+			"Z32", "Z33", "Z34", "Z35", "Z36", "Z37", "Z38", "Z39", "Z44",
 			"INDEX_TERMS", "UNCONTROLLED_TERMS", "Z60", "Z61", "Z62", "Z63" };
 
 	private static int count = 0;
@@ -152,6 +152,7 @@ public class GeorefReader {
 			// PERSON ASSOCIATED WITH
 			if (article.getChild("A11") != null) {
 				record.put("A11", concatSubElements(article, "A11", 1));
+				record.put("AUTH_EMAIL", getAuthorEmail(article));
 
 				Element title = article.getChild("A11");
 				if (title.getChild("A11_3") != null) {
@@ -200,21 +201,22 @@ public class GeorefReader {
 			}
 
 			// AFFILIATION
+			StringBuffer aff = new StringBuffer();
+			if (article.getChild("A14") != null
+					|| article.getChild("A15") != null
+					|| article.getChild("A16") != null) {
+				aff.append(concatAffiliations(article));
+				record.put("AUTH_AFF", aff.toString());
+			}
+
 			if (article.getChild("A14") != null) {
 
 				if (article.getChild("A14") != null) {
 					Element title = article.getChild("A14");
 					StringBuffer affAdd = new StringBuffer();
 
-					if (title.getChild("A14_1") != null) {
-						record.put("AUTH_AFF", new StringBuffer(title.getChild(
-								"A14_1").getTextTrim()));
-					}
 					if (title.getChild("A14_2") != null) {
 						affAdd.append(title.getChild("A14_2").getTextTrim());
-					}
-					if (title.getChild("A14_3") != null) {
-
 					}
 					if (title.getChild("A14_4") != null) {
 						record.put("AUTH_AFF_CO", new StringBuffer(title
@@ -224,59 +226,16 @@ public class GeorefReader {
 					record.put("AUTH_ADD", affAdd.toString());
 				}
 			}
-			if (article.getChild("A15") != null) {
 
-				if (article.getChild("A15") != null) {
-					Element title = article.getChild("A15");
-					StringBuffer affAdd = new StringBuffer();
-
-					if (title.getChild("A15_1") != null) {
-						record.put("AUTH_AFF", new StringBuffer(title.getChild(
-								"A15_1").getTextTrim()));
-					}
-					if (title.getChild("A15_2") != null) {
-						affAdd.append(title.getChild("A15_2").getTextTrim());
-					}
-					if (title.getChild("A15_4") != null) {
-						record.put("AUTH_AFF_CO", new StringBuffer(title
-								.getChild("A15_4").getTextTrim()));
-					}
-
-					record.put("AUTH_ADD", affAdd.toString());
-				}
-			}
-			if (article.getChild("A16") != null) {
-				Element title = article.getChild("A16");
-				StringBuffer affAdd = new StringBuffer();
-
-				if (article.getChild("A16") != null) {
-
-					if (title.getChild("A16_1") != null) {
-						record.put("AUTH_AFF", new StringBuffer(title.getChild(
-								"A16_1").getTextTrim()));
-					}
-					if (title.getChild("A16_2") != null) {
-						affAdd.append(title.getChild("A16_2").getTextTrim());
-					}
-					if (title.getChild("A16_4") != null) {
-						record.put("AUTH_AFF_CO", new StringBuffer(title
-								.getChild("A16_3").getTextTrim()));
-					}
-
-					record.put("AUTH_ADD", affAdd.toString());
-				}
-			}
 			// CORPORATE BODY ASSOCIATED WITH
 			if (article.getChild("A17") != null) {
-
-				record.put("A17", concatSubElements(article, "A17", 1));
+				record.put("A17", concatCorporateBody(article, "A17"));
 			}
 			if (article.getChild("A18") != null) {
-				record.put("A18", concatSubElements(article, "A18", 1));
+				record.put("A18", concatCorporateBody(article, "A18"));
 			}
 			if (article.getChild("A19") != null) {
-				record.put("A19", concatSubElements(article, "A19", 1));
-
+				record.put("A19", concatCorporateBody(article, "A19"));
 			}
 
 			// COLLATION
@@ -287,19 +246,19 @@ public class GeorefReader {
 			}
 			if (article.getChild("A28") != null) {
 
-				record.put("A28", concatSubElements(article, "A28", 2));
+				record.put("A28", concatSubElements(article, "A28", 1));
 
 			}
 			if (article.getChild("A29") != null) {
 
-				record.put("A29", concatSubElements(article, "A29", 2));
+				record.put("A29", concatSubElements(article, "A29", 1));
 
 			}
 			// DATE OF PUBLICATION
 			if (article.getChild("A21") != null) {
 				record.put("A21", new StringBuffer(article.getChild("A21")
 						.getTextTrim()));
-				
+
 			}
 
 			// LANGUAGE TEXT
@@ -361,10 +320,9 @@ public class GeorefReader {
 			// DATE OF MEETING
 			if (article.getChild("A32") != null) {
 				Element dateOfMeeting = article.getChild("A32");
-				if(dateOfMeeting.getChild("A32_1") != null)
-				{
-				record.put("A32", new StringBuffer(dateOfMeeting.getChild(
-						"A32_1").getTextTrim()));
+				if (dateOfMeeting.getChild("A32_1") != null) {
+					record.put("A32", new StringBuffer(dateOfMeeting.getChild(
+							"A32_1").getTextTrim()));
 				}
 			}
 
@@ -465,7 +423,7 @@ public class GeorefReader {
 
 			// COORDINATES
 			if (article.getChild("Z36") != null) {
-				record.put("Z36", getRepeatable(article, "Z36"));
+				record.put("Z36", getCoordinates(article));
 
 			}
 
@@ -508,15 +466,8 @@ public class GeorefReader {
 
 			// RESEARCH PROGRAM
 			if (article.getChild("Z60") != null) {
-				Element researchProg = article.getChild("Z60");
-				if (researchProg.getChild("Z60_2") != null) {
-					record.put("Z60", new StringBuffer(researchProg.getChild(
-							"Z60_2").getTextTrim()));
-				} else {
-					record.put("Z60", new StringBuffer(researchProg.getChild(
-							"Z60_1").getTextTrim()));
-					// System.err.println(researchProg.getChild("Z60_1").getTextTrim());
-				}
+				record.put("Z60", concatResearchProgram(article));
+
 			}
 
 			// HOLDING LIBRARY
@@ -619,7 +570,9 @@ public class GeorefReader {
 			Element t = (Element) lt.get(i);
 
 			if (t.getName().equals("Z50")) {
-				if (t.getAttribute("att1").getValue().equals("1")) {
+				if (t.getAttribute("att1").getValue().equals("1")
+						|| t.getAttribute("att1").getValue().equals("2")
+						|| t.getAttribute("att1").getValue().equals("3")) {
 					if (t.getAttribute("att2") != null) {
 						field.append(t.getAttribute("att2").getValue());
 						if (t.getAttribute("att3") != null)
@@ -842,6 +795,34 @@ public class GeorefReader {
 		}
 	}
 
+	public StringBuffer concatAffiliations(Element e) {
+		StringBuffer field = new StringBuffer();
+		List lt = e.getChildren();
+
+		for (int i = 0; i < lt.size(); i++) {
+			Element t = (Element) lt.get(i);
+
+			if (t.getName().equals("A14") || t.getName().equals("A15")
+					|| t.getName().equals("A16")) {
+				if (t.getChild("A14_1") != null)
+					getMixData(t.getChild("A14_1").getContent(), field);
+				else if (t.getChild("A15_1") != null)
+					getMixData(t.getChild("A15_1").getContent(), field);
+				else if (t.getChild("A16_1") != null)
+					getMixData(t.getChild("A16_1").getContent(), field);
+
+				field.append(AUDELIMITER);
+
+			}
+		}
+
+		if (field.lastIndexOf(AUDELIMITER) != -1) {
+			return field.delete(field.lastIndexOf(AUDELIMITER), field.length());
+		} else {
+			return field;
+		}
+	}
+
 	public StringBuffer concatISSN(Element e, String issnType) {
 		String elemName = "A01";
 		int subInt = 2;
@@ -925,8 +906,7 @@ public class GeorefReader {
 
 				if (t.getChild(elemSubNameOne) != null) {
 					field.append(t.getChild(elemSubNameOne).getText());
-					if(t.getChild(elemSubNameFour) != null)
-					{
+					if (t.getChild(elemSubNameFour) != null) {
 						field.append(", ");
 						field.append(t.getChild(elemSubNameFour).getText());
 					}
@@ -957,8 +937,7 @@ public class GeorefReader {
 
 				if (t.getChild(elemSubNameOne) != null) {
 					field.append(t.getChild(elemSubNameOne).getText());
-					if(t.getChild(elemSubNameThree) != null)
-					{
+					if (t.getChild(elemSubNameThree) != null) {
 						field.append(", ");
 						field.append(t.getChild(elemSubNameThree).getText());
 					}
@@ -976,7 +955,7 @@ public class GeorefReader {
 		}
 	}
 
-	private StringBuffer getCoordinates(Element e) {
+	public StringBuffer getCoordinates(Element e) {
 		StringBuffer field = new StringBuffer();
 		List lt = e.getChildren();
 
@@ -990,6 +969,95 @@ public class GeorefReader {
 				}
 
 				getMixData(t.getContent(), field);
+				field.append(AUDELIMITER);
+
+			}
+		}
+
+		if (field.lastIndexOf(AUDELIMITER) != -1) {
+			return field.delete(field.lastIndexOf(AUDELIMITER), field.length());
+		} else {
+			return field;
+		}
+	}
+
+	public StringBuffer getAuthorEmail(Element e) {
+		StringBuffer field = new StringBuffer();
+		List lt = e.getChildren();
+
+		for (int i = 0; i < lt.size(); i++) {
+			Element t = (Element) lt.get(i);
+
+			if (t.getName().equals("A11")) {
+				if (t.getAttribute("att3") != null) {
+					field.append(t.getAttribute("att3").getValue());
+				}
+
+			}
+		}
+
+		return field;
+	}
+
+	public StringBuffer concatCorporateBody(Element e, String elemName) {
+		StringBuffer field = new StringBuffer();
+		List lt = e.getChildren();
+
+		for (int i = 0; i < lt.size(); i++) {
+			Element t = (Element) lt.get(i);
+
+			if (t.getName().equals(elemName)) {
+				if (t.getChild("A17_1") != null) {
+					field.append(t.getChild("A17_1").getText());
+
+					if (t.getChild("A17_4") != null) {
+						field.append(", ");
+						field.append(t.getChild("A17_4").getText());
+					}
+				} else if (t.getChild("A18_1") != null) {
+					field.append(t.getChild("A18_1").getText());
+
+					if (t.getChild("A18_4") != null) {
+						field.append(", ");
+						field.append(t.getChild("A18_4").getText());
+					}
+				} else if (t.getChild("A19_1") != null) {
+					field.append(t.getChild("A19_1").getText());
+
+					if (t.getChild("A19_4") != null) {
+						field.append(", ");
+						field.append(t.getChild("A19_4").getText());
+					}
+				}
+
+				field.append(AUDELIMITER);
+
+			}
+		}
+
+		if (field.lastIndexOf(AUDELIMITER) != -1) {
+			return field.delete(field.lastIndexOf(AUDELIMITER), field.length());
+		} else {
+			return field;
+		}
+	}
+
+	public StringBuffer concatResearchProgram(Element e) {
+		StringBuffer field = new StringBuffer();
+		List lt = e.getChildren();
+
+		for (int i = 0; i < lt.size(); i++) {
+			Element t = (Element) lt.get(i);
+
+			if (t.getName().equals("Z60")) {
+				if (t.getChild("Z60_2") != null)
+					field.append(t.getChild("Z60_2").getText());
+				if (t.getChild("Z60_1") != null) {
+					if (t.getChild("Z60_2") != null)
+						field.append(", ");
+					field.append(t.getChild("Z60_1").getText());
+				}
+
 				field.append(AUDELIMITER);
 
 			}
