@@ -109,7 +109,7 @@ import org.ei.domain.FullDoc;
                                         Keys.DOI,
                                         Keys.DOCID,
                                         GRFDocBuilder.LOCATIONS,
-                                        GRFDocBuilder.COORDINATES,
+                                        //GRFDocBuilder.COORDINATES,
                                         GRFDocBuilder.MERIDIAN,
                                         Keys.COPYRIGHT,
                                         Keys.COPYRIGHT_TEXT,

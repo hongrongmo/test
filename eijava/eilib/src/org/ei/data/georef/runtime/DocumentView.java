@@ -177,7 +177,7 @@ public abstract class DocumentView {
       }
 
       // COORDINATES
-      if(isIncluded(GRFDocBuilder.COORDINATES))
+      if(isIncluded(GRFDocBuilder.LOCATIONS))
       {
 // Latitude. Latitude indicates the number of degrees north or south of the equator (0 degrees). Latitude is indicated by a character string of seven characters: a letter N or S to indicate direction (i.e., north or south of the equator) and a six-digit number indicating the number of degrees, minutes, and seconds. Latitude coordinates are also cascaded to the full degree (i.e., first two digits): N451430 is North, 45 degrees, 14 minutes, 30 seconds; it is also cascaded to N45.
 // Longitude. Longitude indicates the number of degrees east or west of the prime meridian (0 degrees). Longitude is indicated by a character string of eight characters: a letter E or W to indicate direction (i.e., east or west of the prime meridian) and a seven-digit number indicating the number of degrees, minutes, and seconds. Longitude coordinates are also cascaded to the full degree (i.e., first three digits): W1211752 is West, 121 degrees, 17 minutes, 52 seconds; it is also cascaded to W121
@@ -188,7 +188,7 @@ public abstract class DocumentView {
         String strcoordinates = createColumnValueField("COORDINATES").getValue();
         if(strcoordinates != null)
         {
-          ht.put(GRFDocBuilder.COORDINATES, new RectangleCoordinates(strcoordinates.split(GRFDocBuilder.AUDELIMITER)));
+          ht.put(GRFDocBuilder.LOCATIONS, new RectangleCoordinates(strcoordinates.split(GRFDocBuilder.AUDELIMITER)));
         }
       }
 
@@ -792,6 +792,10 @@ public abstract class DocumentView {
         if(mapvalues.containsKey("O"))
         {
           strtitle = (String) mapvalues.get("O");
+        }
+        else if((strtitle == null) && mapvalues.containsKey("L"))
+        {
+          strtitle = (String) mapvalues.get("L");
         }
         return strtitle;
       }
