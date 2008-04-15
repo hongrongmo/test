@@ -84,11 +84,15 @@
     </xsl:template>
 
 
+    <xsl:template match="LOC[@ID]">
+      <a>
+      <!-- <xsl:attribute name="href">javascript:toggleMarker('<xsl:value-of select="@ID"/>');</xsl:attribute> -->
+      <xsl:value-of select="@ID"/> - <xsl:value-of disable-output-escaping="yes" select="."/></a><br/>
+    </xsl:template>
     <xsl:template match="LOC">
       <a>
-        <xsl:attribute name="href">javascript:toggleMarker('<xsl:value-of select="@ID"/>');</xsl:attribute>
-        <xsl:value-of select="@ID"/> - <xsl:value-of disable-output-escaping="yes" select="."/>
-      </a><br/>
+      <!-- <xsl:attribute name="href">javascript:toggleMarker('<xsl:value-of select="@ID"/>');</xsl:attribute> -->
+      <xsl:value-of disable-output-escaping="yes" select="."/></a><br/>
     </xsl:template>
 
     <!-- top level elements with labels and nested value children -->
