@@ -1238,7 +1238,7 @@ public class CitationXmlParser {
 
         Hashtable htVals = new Hashtable(2);
         try {
-
+			/*
             rs = dbMap.get(authCode+pNum);
             while(rs != null && rs.next()) {
                 String mid = rs.getString("m_id");
@@ -1253,6 +1253,8 @@ public class CitationXmlParser {
                     htVals.put(KIND, kc);
                 }
             }
+            */
+
 
         }
         catch (Exception sqle) {
@@ -1271,7 +1273,7 @@ public class CitationXmlParser {
 
             Hashtable htVals = new Hashtable(2);
             try {
-
+			/*
                 rs = dbMap.get(authCode+pNum);
                 while(rs != null && rs.next()) {
                     String mid = rs.getString("m_id");
@@ -1289,6 +1291,7 @@ public class CitationXmlParser {
                     }
 
                 }
+			*/
 
             }
             catch (Exception sqle) {
