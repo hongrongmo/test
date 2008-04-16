@@ -46,7 +46,7 @@
         <xsl:if test="not(position()=last())">; </xsl:if>
       </span>
     </xsl:template>
-    <xsl:template match="L|A|D"> <!-- Language Field / Availability / Document type -->
+    <xsl:template match="L|A|D|R"> <!-- Language Field / Availability / Document type / Report Number -->
       <span CLASS="MedBlackText">
         <xsl:apply-templates />
         <xsl:if test="not(position()=last())">, </xsl:if>
