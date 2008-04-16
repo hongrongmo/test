@@ -202,11 +202,8 @@ public class GeorefReader {
 
 			// AFFILIATION
 			StringBuffer aff = new StringBuffer();
-			if (article.getChild("A14") != null
-					|| article.getChild("A15") != null
-					|| article.getChild("A16") != null) {
-				aff.append(concatAffiliations(article));
-				record.put("AUTH_AFF", aff.toString());
+			if (article.getChild("A14") != null) {
+				record.put("AUTH_AFF", concatSubElements(article, "A14", 1));
 			}
 
 			if (article.getChild("A14") != null) {
@@ -794,35 +791,7 @@ public class GeorefReader {
 			return field;
 		}
 	}
-
-	public StringBuffer concatAffiliations(Element e) {
-		StringBuffer field = new StringBuffer();
-		List lt = e.getChildren();
-
-		for (int i = 0; i < lt.size(); i++) {
-			Element t = (Element) lt.get(i);
-
-			if (t.getName().equals("A14") || t.getName().equals("A15")
-					|| t.getName().equals("A16")) {
-				if (t.getChild("A14_1") != null)
-					getMixData(t.getChild("A14_1").getContent(), field);
-				else if (t.getChild("A15_1") != null)
-					getMixData(t.getChild("A15_1").getContent(), field);
-				else if (t.getChild("A16_1") != null)
-					getMixData(t.getChild("A16_1").getContent(), field);
-
-				field.append(AUDELIMITER);
-
-			}
-		}
-
-		if (field.lastIndexOf(AUDELIMITER) != -1) {
-			return field.delete(field.lastIndexOf(AUDELIMITER), field.length());
-		} else {
-			return field;
-		}
-	}
-
+	
 	public StringBuffer concatISSN(Element e, String issnType) {
 		String elemName = "A01";
 		int subInt = 2;
