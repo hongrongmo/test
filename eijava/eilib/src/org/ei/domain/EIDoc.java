@@ -162,7 +162,7 @@ public class EIDoc implements Highlightable, XMLSerializable, LocalHoldingLinker
         return value;
     }
 
-    private String getDOI() {
+    public String getDOI() {
         String value = null;
         if (mapDocument.containsKey(Keys.DOI)) {
             ElementData doi = (ElementData) mapDocument.get(Keys.DOI);
