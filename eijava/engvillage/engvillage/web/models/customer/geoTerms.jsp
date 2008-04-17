@@ -53,7 +53,7 @@ try
 
   if(searchId != null && !searchId.equals("") && !searchId.equals("undefined"))
   {
-    log("dynamicNavigators => searchId: " + searchId + ", sessionId " + sessionId);
+    log("geoTerms => searchId: " + searchId + ", sessionId " + sessionId);
 
     try
     {
