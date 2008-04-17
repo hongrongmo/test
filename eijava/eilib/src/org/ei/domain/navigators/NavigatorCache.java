@@ -181,6 +181,10 @@ public class NavigatorCache
             {
               navstring = nav.getNavigatorByName(EiNavigator.CP).toString();
             }
+            else if(nav.getNavigatorByName(EiNavigator.GEO) != null)
+            {
+              navstring = nav.getNavigatorByName(EiNavigator.GEO).toString();
+            }
             pstmt.setString(intStmtIndex++, navstring);
 
             pstmt.executeUpdate();
