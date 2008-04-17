@@ -482,15 +482,26 @@
           </xsl:if>
           <!-- dividing blue line -->
           <tr><td>&#160;</td><td><div class="idev">&#160;</div></td><td>&#160;</td></tr>
+          <xsl:variable name= "LOCATION">http://<xsl:value-of select="//SERVER-NAME"/>/controller/servlet/Controller?CID=blogDocument&amp;MID=<xsl:value-of select="$ENCODED-DOCID"/>&amp;DATABASE=<xsl:value-of select="$DATABASE-ID"/></xsl:variable>
+          <xsl:variable name="ENCODED-LOCATION">
+            <xsl:value-of select="java:encode($LOCATION)"/>
+          </xsl:variable>
+          <xsl:variable name="COLLABDATA">
+            <xsl:value-of select="/PAGE/COLLABLINKDATA"/>
+          </xsl:variable>
           <tr>
             <td>&#160;</td>
-            <xsl:variable name= "LOCATION">http://<xsl:value-of select="//SERVER-NAME"/>/controller/servlet/Controller?CID=blogDocument&amp;MID=<xsl:value-of select="$ENCODED-DOCID"/>&amp;DATABASE=<xsl:value-of select="$DATABASE-ID"/></xsl:variable>
-      	    <xsl:variable name="ENCODED-LOCATION">
-              <xsl:value-of select="java:encode($LOCATION)"/>
-      	    </xsl:variable>
+            <td><div class="im">
+              <a href="http://www.2collab.com/bookmark/addremote?url={$ENCODED-LOCATION}&amp;title={$TITLE}{$COLLABDATA}" title="Bookmark and share in 2collab (opens in new window)" class="LgBlueLink" onclick="javascript:window.open(this.href); return false;"><img alt="Bookmark and share in 2collab (opens in new window)" border="0" width="113" height="20" src="/engresources/images/gw_ol_2co.gif"/></a>
+            </div></td>
+            <td>&#160;</td>
+          </tr>
+          <tr>
+            <td>&#160;</td>
             <td><div class="im"><a title="del.icio.us" class="LgBlueLink" href="http://del.icio.us/post" onclick="javascript:window.open('http://del.icio.us/post?v=4&amp;noui&amp;jump=close&amp;url={$ENCODED-LOCATION}&amp;title={$TITLE}', 'delicious', 'toolbar=no,width=700,height=400'); return false;">del.icio.us</a></div></td>
             <td>&#160;</td>
           </tr>
+          <tr><td>&#160;</td><td><div class="idev">&#160;</div></td><td>&#160;</td></tr>
           <!-- edit form ends here -->
           <tr><td colspan="3"><img src="/engresources/images/s.gif" height="4"/></td></tr>
         </table>
