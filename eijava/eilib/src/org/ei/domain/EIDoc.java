@@ -142,7 +142,7 @@ public class EIDoc implements Highlightable, XMLSerializable, LocalHoldingLinker
 
     }
 
-    private String getIssueNo() {
+    public String getIssueNo() {
         String value = null;
         if (mapDocument.containsKey(Keys.ISSUE)) {
             Issue issue = (Issue) mapDocument.get(Keys.ISSUE);
@@ -152,7 +152,7 @@ public class EIDoc implements Highlightable, XMLSerializable, LocalHoldingLinker
         return value;
     }
 
-    private String getStartPage() {
+    public String getStartPage() {
         String value = null;
         if (mapDocument.containsKey(Keys.PAGE_RANGE)) {
             PageRange pageRange = (PageRange) mapDocument.get(Keys.PAGE_RANGE);
@@ -171,6 +171,20 @@ public class EIDoc implements Highlightable, XMLSerializable, LocalHoldingLinker
         }
         return value;
     }
+
+    public String getMapDataElement(Key keyname) {
+      String value = null;
+      if (mapDocument.containsKey(keyname)) {
+          ElementData eldata = (ElementData) mapDocument.get(keyname);
+          String[] edata = eldata.getElementData();
+          if((edata != null) && (edata.length >= 1))
+          {
+            value = edata[0];
+          }
+      }
+      return value;
+    }
+
 
     public String getFT()
     {
