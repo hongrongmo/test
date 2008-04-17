@@ -1126,13 +1126,13 @@
 		</tr>
 		<tr>
 			<td valign="top">
-			  	<text URL1111="{$CURRENTPAGECOUNT}"/>
+<!--			<text URL1111="{$CURRENTPAGECOUNT}"/> -->
 				<xsl:if test="not(boolean($CURRENTPAGECOUNT='1'))">
 
 					<a CLASS="LgBlueLink" href="/controller/servlet/Controller?CID=lookupIndexes&amp;searchWord={$SEARCHWORD}&amp;COUNT={$PREVPAGECOUNT}&amp;database={$DATABASE}&amp;lookup={$SELECTEDLOOKUP}&amp;searchtype={$SEARCHTYPE}&amp;lookupSearchID={$LOOKUP-SEARCHID}">Previous page</a>&#160; &#160;
 				</xsl:if>
 				<xsl:variable name="totalcount"><xsl:value-of select="count(LOOKUP-INDEXES/LOOKUP-INDEX)"/></xsl:variable>
-			  	<text URL2222="{$totalcount}"/>
+<!--      <text URL2222="{$totalcount}"/> -->
 				<xsl:if test="boolean($totalcount &gt; 0) and ((boolean($totalcount=100 )) or (boolean($totalcount=101)))">
 					<a CLASS="LgBlueLink" href="/controller/servlet/Controller?CID=lookupIndexes&amp;searchWord={$SEARCHWORD}&amp;COUNT={$NEXTPAGECOUNT}&amp;database={$DATABASE}&amp;lookup={$SELECTEDLOOKUP}&amp;searchtype={$SEARCHTYPE}&amp;lookupSearchID={$LOOKUP-SEARCHID}">Next page</a>
 				</xsl:if>
@@ -1197,14 +1197,14 @@
 		</td></tr>
 		<tr>
 		<td valign="top">
-			<text URL33333="{$CURRENTPAGECOUNT}"/>
+<!--			<text URL33333="{$CURRENTPAGECOUNT}"/> -->
 			<xsl:if test="not(boolean($CURRENTPAGECOUNT='1'))">
 
 				<a CLASS="LgBlueLink" href="/controller/servlet/Controller?CID=lookupIndexes&amp;searchWord={$SEARCHWORD}&amp;COUNT={$PREVPAGECOUNT}&amp;database={$DATABASE}&amp;lookup={$SELECTEDLOOKUP}">Previous page</a>&#160; &#160;
 			</xsl:if>
 
 			<xsl:variable name="totalcount"><xsl:value-of select="count(LOOKUP-INDEXES/LOOKUP-INDEX)"/></xsl:variable>
-			<text URL4444="{$totalcount}"/>
+<!--			<text URL4444="{$totalcount}"/> -->
 			<xsl:if test="boolean($totalcount &gt; 0) and ((boolean($totalcount=100 )) or (boolean($totalcount=101)))">
 
 				<a CLASS="LgBlueLink" href="/controller/servlet/Controller?CID=lookupIndexes&amp;searchWord={$SEARCHWORD}&amp;COUNT={$NEXTPAGECOUNT}&amp;database={$DATABASE}&amp;lookup={$SELECTEDLOOKUP}">Next page</a>
