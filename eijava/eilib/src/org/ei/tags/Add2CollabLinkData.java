@@ -135,6 +135,21 @@ public class Add2CollabLinkData
         {
           out.write("&type=Book");
         }
+        String strpage = String.valueOf(((BookDocument) curdoc).getPageNum());
+        if(strpage != null)
+        {
+          out.write("&volume="+ strpage);
+        }
+        String strctitle = curdoc.getMapDataElement(Keys.BOOK_CHAPTER_TITLE);
+        if(strctitle != null)
+        {
+          out.write("&articletitle="+ strctitle);
+        }
+        String strbyr = curdoc.getMapDataElement(Keys.BOOK_YEAR);
+        if(strbyr != null)
+        {
+          out.write("&date="+ strbyr);
+        }
         String strisbn = ((BookDocument) curdoc).getISBN13();
         if(strisbn != null)
         {
