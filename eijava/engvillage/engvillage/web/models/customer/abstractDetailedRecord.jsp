@@ -451,6 +451,8 @@
         bubble.toXML(out);
         grouper.editXML(bubble.getTags(), out);
 
+        (new Add2CollabLinkData(pUserId,customerId,curDoc)).toXML(out);
+
         out.write("<HEADER/>");
         out.write("<ABSTRACT-DETAILED-NAVIGATION-BAR/>");
         out.write("<DBMASK>");
