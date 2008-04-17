@@ -498,10 +498,9 @@
           </tr>
           <tr>
             <td>&#160;</td>
-            <td><div class="im"><a title="del.icio.us" class="LgBlueLink" href="http://del.icio.us/post" onclick="javascript:window.open('http://del.icio.us/post?v=4&amp;noui&amp;jump=close&amp;url={$ENCODED-LOCATION}&amp;title={$TITLE}', 'delicious', 'toolbar=no,width=700,height=400'); return false;">del.icio.us</a></div></td>
+            <td><div class="im"><img src="/engresources/images/delicious.small.gif" border="0" width="10" height="10" /><a title="Save this page to del.icio.us" class="LgBlueLink" href="http://del.icio.us/post" onclick="javascript:window.open('http://del.icio.us/post?v=4&amp;noui&amp;jump=close&amp;url={$ENCODED-LOCATION}&amp;title={$TITLE}', 'delicious', 'toolbar=no,width=700,height=400'); return false;">del.icio.us</a></div></td>
             <td>&#160;</td>
           </tr>
-          <tr><td>&#160;</td><td><div class="idev">&#160;</div></td><td>&#160;</td></tr>
           <!-- edit form ends here -->
           <tr><td colspan="3"><img src="/engresources/images/s.gif" height="4"/></td></tr>
         </table>
