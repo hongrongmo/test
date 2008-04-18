@@ -60,7 +60,7 @@
 				<td valign="top">
 				<a class="MedBlackText">Elsevier Engineering Information is the leader in providing online information, knowledge, and support of the highest professional relevance for research and industrial practitioners in applied physical sciences and engineering.  Elsevier Engineering Information offers an array of products and services for universities, corporations and government organizations, including: Engineering Village &#153;, EnCompass&#153;, Compendex&#174;, The Engineering Index&#174;, Chemical Business NewsBase&#174;, Chimica&#153; and PaperChem&#153;.<br/>
 				<br/>
-				For more information about Elsevier Engineering Information, please visit our Web site at </a><a class="LgBLueLink" HREF="http://www.ei.org" onClick="window.open('http://www.ei.org', 'newpg', 'status=yes,resizable,scrollbars=yes,menubar=yes,location=yes,directories=yes,width=700,height=450')">http://www.ei.org</a>.
+				For more information about Elsevier Engineering Information, please visit our Web site at </a><a class="LgBLueLink" HREF="http://www.ei.org" onClick="window.open('http://www.ei.org', 'newpg', 'status=yes,resizable,scrollbars=yes,menubar=yes,location=yes,directories=yes,width=700,height=450'); return false;">http://www.ei.org</a>.
 				</td>
 			</tr>
 		</table>
