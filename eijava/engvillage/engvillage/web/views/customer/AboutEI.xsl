@@ -39,7 +39,7 @@
     			<xsl:with-param name="SESSION-ID" select="$SESSION-ID"/>
     		 	<xsl:with-param name="SELECTED-DB" select="$DBMASK"/>
     		</xsl:apply-templates>
-    
+
     	</td></tr>
     </table>
 
@@ -47,20 +47,20 @@
     	<tr><td valign="top" colspan="10" height="20" bgcolor="#C3C8D1"><img src="/engresources/images/s.gif" border="0"/></td></tr>
     	<tr><td valign="top" colspan="10" height="20"><img src="/engresources/images/s.gif" border="0"/></td></tr>
     </table>
-  
+
   </center>
-  
+
 
 	<!-- table for contents -->
 	<center>
 		<table border="0" width="99%" cellspacing="0" cellpadding="0">
 			<tr><td valign="top"><a class="EvHeaderText">About Elsevier Engineering Information</a></td></tr>
-			<tr><td valign="top" height="10"><img src="/engresources/images/spacer.gif" border="0" height="10"/></td></tr>		
+			<tr><td valign="top" height="10"><img src="/engresources/images/spacer.gif" border="0" height="10"/></td></tr>
 			<tr>
 				<td valign="top">
-				<a class="MedBlackText">Elsevier Engineering Information is the leader in providing online information, knowledge, and support of the highest professional relevance for research and industrial practitioners in applied physical sciences and engineering.  Elsevier Engineering Information offers an array of products and services for universities, corporations and government organizations, including: Engineering Village &#153;, ChemVillage&#153;, Paper Village 2&#153;, Encompass&#153;, Compendex&#174;, The Engineering Index&#174;, Chemical Business NewsBase&#174;, Chimica&#153; and PaperChem&#153;.<br/>
+				<a class="MedBlackText">Elsevier Engineering Information is the leader in providing online information, knowledge, and support of the highest professional relevance for research and industrial practitioners in applied physical sciences and engineering.  Elsevier Engineering Information offers an array of products and services for universities, corporations and government organizations, including: Engineering Village &#153;, EnCompass&#153;, Compendex&#174;, The Engineering Index&#174;, Chemical Business NewsBase&#174;, Chimica&#153; and PaperChem&#153;.<br/>
 				<br/>
-				For more information about Elsevier Engineering Information, please visit our Web site at </a><a class="LgBLueLink" HREF="#" onClick="window.open('http://www.ei.org', 'newpg', 'status=yes,resizable,scrollbars=yes,menubar=yes,location=yes,directories=yes,width=700,height=450')">http://www.ei.org</a>.
+				For more information about Elsevier Engineering Information, please visit our Web site at </a><a class="LgBLueLink" HREF="http://www.ei.org" onClick="window.open('http://www.ei.org', 'newpg', 'status=yes,resizable,scrollbars=yes,menubar=yes,location=yes,directories=yes,width=700,height=450')">http://www.ei.org</a>.
 				</td>
 			</tr>
 		</table>
