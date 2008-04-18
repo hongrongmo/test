@@ -55,7 +55,7 @@ public class GeoRefCoordinateMap
     if(georefMapCoordinates.containsKey(geoterm))
     {
       log.debug("lookup found " + geoterm);
-      return (String) ((Rectangle) georefMapCoordinates.get(geoterm)).toXML();
+      return (String) ((Rectangle) georefMapCoordinates.get(geoterm)).toJSON();
     }
     else
     {
@@ -190,6 +190,10 @@ public class GeoRefCoordinateMap
     {
       return "<Point><coordinates>" +  lng + ","+ lat  + ",0</coordinates></Point>";
     }
+    public String toJSON()
+    {
+      return "{ \"point\": { \"lat\":\"" +  lat + "\",\"lng\":\""+ lng  + "\"} }";
+    }
     public int getLat()
     {
       return this.lat;
@@ -296,6 +300,10 @@ public class GeoRefCoordinateMap
     public String toXML()
     {
       return "<RECT>" + sw.toXML() + ne.toXML() + "</RECT>";
+    }
+    public String toJSON()
+    {
+      return "\"rectangle\": [" + sw.toJSON() + "," + ne.toJSON() + "]";
     }
   }
 }
