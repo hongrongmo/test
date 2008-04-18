@@ -193,39 +193,18 @@
                 if (request.status == 200)
                 {
                   mapcontainer.style.background = "none";
+                  var places = eval('(' + request.responseText + ')');
 
                   map = new GMap(document.getElementById("map_canvas"));
                   map.setMapType(G_PHYSICAL_MAP);
                   map.setCenter(new GLatLng(0, 0), 1);
                   map.addControl(new GLargeMapControl());
 
-                  var xmlDoc = request.responseXML;
+                  for(var i = 0; i < 30; i++) {
 
-                  placemarks = xmlDoc.documentElement.getElementsByTagName("Placemark");
-                  for(var i = 0; i < placemarks.length; i++) {
+                    var rectangle = new GLatLngBounds(new GLatLng(places.placemarks[i].rectangle[0].point.lat, places.placemarks[i].rectangle[0].point.lng), new GLatLng(places.placemarks[i].rectangle[1].point.lat, places.placemarks[i].rectangle[1].point.lng));
+                    var marker = createMarker(rectangle.getCenter(),places.placemarks[i].name,places.placemarks[i].description,places.placemarks[i].search);
 
-                    var pointSW = placemarks[i].getElementsByTagName("Point")[0];
-                    var coordsSW = pointSW.getElementsByTagName("coordinates")[0].childNodes[0].nodeValue;
-                    coordsSW = coordsSW.split(",");
-
-                    var pointNE = placemarks[i].getElementsByTagName("Point")[1];
-                    var coordsNE = pointNE.getElementsByTagName("coordinates")[0].childNodes[0].nodeValue;
-                    coordsNE = coordsNE.split(",");
-
-                    var name = placemarks[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
-                    var description = placemarks[i].getElementsByTagName("description")[0].childNodes[0].nodeValue;
-                    var searchurl = placemarks[i].getElementsByTagName("search")[0].childNodes[0].nodeValue;
-
-                    var type = placemarks[i].getAttribute("type");
-                    var lat1 = parseFloat(coordsSW[1]);
-                    var lng1 = parseFloat(coordsSW[0]);
-                    var lat2 = parseFloat(coordsNE[1]);
-                    var lng2 = parseFloat(coordsNE[0]);
-
-                    var rectangle = new GLatLngBounds(new GLatLng(lat1, lng1), new GLatLng(lat2, lng2));
-                    var marker = createMarker(rectangle.getCenter(),name,description,searchurl);
-
-                    /* var marker = createMarker(new GLatLng(),name,description,searchurl); */
                     map.addOverlay(marker);
                     bounds.extend(marker.getPoint());
                   }
