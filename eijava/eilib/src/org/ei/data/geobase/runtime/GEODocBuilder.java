@@ -472,8 +472,8 @@ public class GEODocBuilder
                     ht.put(Keys.REGION_CONTROLLED_TERMS ,
                            new XMLMultiWrapper(Keys.REGION_CONTROLLED_TERMS, setElementData(rset.getString("DESCRIPTOR_MAINTERM_RGI"))));
 
-                    List mapcoords = getMappingCoordinates(rset.getString("DESCRIPTOR_MAINTERM_RGI"));
-                    ht.put(GRFDocBuilder.COORDINATES, new RectangleCoordinates((String[])mapcoords.toArray(new String[]{})));
+                    //List mapcoords = getMappingCoordinates(rset.getString("DESCRIPTOR_MAINTERM_RGI"));
+                    //ht.put(GRFDocBuilder.COORDINATES, new RectangleCoordinates((String[])mapcoords.toArray(new String[]{})));
 
                 }
 
