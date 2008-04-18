@@ -54,12 +54,12 @@ public class GeoRefCoordinateMap
 
     if(georefMapCoordinates.containsKey(geoterm))
     {
-      log.debug("lookup found " + geoterm);
-      return (String) ((Rectangle) georefMapCoordinates.get(geoterm)).toJSON();
+      //log.debug("lookup found " + geoterm);
+      return (String) georefMapCoordinates.get(geoterm);
     }
     else
     {
-      log.debug("lookup failed " + geoterm);
+      //log.debug("lookup failed " + geoterm);
       return null;
     }
   }
@@ -71,7 +71,7 @@ public class GeoRefCoordinateMap
     String georefterm = georefLookup.lookupGeobaseTerm(geoterm);
     if(georefterm != null)
     {
-      log.debug(geoterm + " GEOBASE term translated to GeoRef term " + georefterm);
+      //log.debug(geoterm + " GEOBASE term translated to GeoRef term " + georefterm);
       geoterm = georefterm;
     }
 
@@ -79,12 +79,12 @@ public class GeoRefCoordinateMap
 
     if(georefRawCoordinates.containsKey(geoterm))
     {
-      log.debug(" RawCoordinates lookup found " + geoterm + " == " + georefRawCoordinates.get(geoterm));
+      //log.debug(" RawCoordinates lookup found " + geoterm + " == " + georefRawCoordinates.get(geoterm));
       return (String) georefRawCoordinates.get(geoterm);
     }
     else
     {
-      log.debug(" RawCoordinates lookup failed " + geoterm);
+      //log.debug(" RawCoordinates lookup failed " + geoterm);
       return null;
     }
   }
@@ -96,45 +96,30 @@ public class GeoRefCoordinateMap
     //InputStream in = this.getClass().getClassLoader().getResourceAsStream("org/ei/data/georef/runtime/GeoRefCoodinates.txt");
     BufferedReader rdr = null;
     try {
-      rdr = new BufferedReader(new FileReader("geodata/GeoRefCoodinates.txt"));
+      rdr = new BufferedReader(new FileReader("geodata/GeoRefJSONCoodinates.txt"));
 
       if(rdr != null)
       {
         while(rdr.ready())
         {
           String aline = rdr.readLine();
+          // Load georefMapCoordinates with coordinates for SearchResults Google Mapping
 
+          String[] coords = aline.split("QQDELQQ");
+          georefMapCoordinates.put(coords[0],coords[1]);
+
+/*
           int coordstart = aline.lastIndexOf(",");
           String term = aline.substring(0,coordstart);
           String coords = aline.substring(coordstart+1);
-          // Load georefMapCoordinates with coordinates for SearchResults Google Mapping
           Rectangle r = (new Rectangle(coords));
-          georefMapCoordinates.put(term.trim().toLowerCase(),r);
+          georefMapCoordinates.put(term.toLowerCase(),r);
+          log.debug(term.trim().toLowerCase() + "QQDELQQ" + r.toJSON());
+          */
+
+          // NO MORE MAPS SO WE DO NOT LAOD RAW RECORDS
           // Load georefRawCoordinates with coordinates for Abstarct/Detailed Mapping
-          georefRawCoordinates.put(term.trim().toLowerCase(),coords.replaceAll("\\W",""));
-/*
-          String[] terms = new String[2];// aline.split(",");
-          Matcher m = csvRE.matcher(aline);
-          // For each field
-          int termindex = 0;
-          while (m.find()) {
-            String match = m.group();
-            if (match.endsWith(",")) {  // trim trailing ,
-              match = match.substring(0, match.length() - 1);
-            }
-            if (match.startsWith("\"")) { // assume also ends with
-              match = match.substring(1, match.length() - 1);
-            }
-            if(termindex < 2)
-            {
-              log.debug(termindex + ". Match... " + match);
-              terms[termindex++] = match;
-            }
-          }
-          Rectangle r = (new Rectangle(terms[1]));
-          georefMapCoordinates.put(terms[0].toLowerCase(),r);
-*/
-          log.debug("Loading... " + term.trim().toLowerCase() + ", " + r);
+          //georefRawCoordinates.put(term.trim().toLowerCase(),coords.replaceAll("\\W",""));
 
         } // while
         System.out.println("Done loading terms...");
@@ -295,7 +280,7 @@ public class GeoRefCoordinateMap
     }
     public String toString()
     {
-      return "SW " + ((sw != null) ? sw.toString() : "null") + " NE " + ((ne != null) ? ne.toString() : "null")  + "] ";
+      return "SW " + ((sw != null) ? sw.toString() : "null") + " NE " + ((ne != null) ? ne.toString() : "null")  + ".";
     }
     public String toXML()
     {
