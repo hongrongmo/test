@@ -22,6 +22,8 @@ public class GeorefReader {
 	private boolean inabstract = false;
 
 	private HashSet entity = null;
+	
+	public String loadNumber = null;
 
 	private static String[] elementNames = new String[] { "M_ID", "ISSN",
 			"EISSN", "A02", "A03", "A05", "A06", "A07", "A08", "A09", "A10",
@@ -54,6 +56,7 @@ public class GeorefReader {
 		Hashtable rec;
 		GeorefReader g = new GeorefReader(inFile.toURI().toURL().getPath(),
 				outFile.toURI().toURL().getPath());
+		g.loadNumber = args[2];
 		while ((rec = g.getRecord()) != null) {
 
 		}
@@ -85,7 +88,6 @@ public class GeorefReader {
 
 	public Hashtable getRecord() throws Exception {
 		entity = new HashSet();
-		String loadNumber = null;
 		String idNumber = null;
 
 		if (rec.hasNext()) {
@@ -452,7 +454,7 @@ public class GeorefReader {
 			if (article.getChild("Z44") != null) {
 				record.put("Z44", new StringBuffer(article.getChild("Z44")
 						.getTextTrim()));
-				loadNumber = new String(article.getChild("Z44").getTextTrim());
+				//loadNumber = new String(article.getChild("Z44").getTextTrim());
 			}
 
 			// INDEX CODE
