@@ -97,6 +97,7 @@ public class GeoRefCoordinateMap
     BufferedReader rdr = null;
     try {
       rdr = new BufferedReader(new FileReader("geodata/GeoRefJSONCoodinates.txt"));
+      //rdr = new BufferedReader(new FileReader("geodata/GeoRefCoodinates.txt"));
 
       if(rdr != null)
       {
@@ -107,15 +108,14 @@ public class GeoRefCoordinateMap
 
           String[] coords = aline.split("QQDELQQ");
           georefMapCoordinates.put(coords[0],coords[1]);
-
 /*
           int coordstart = aline.lastIndexOf(",");
           String term = aline.substring(0,coordstart);
           String coords = aline.substring(coordstart+1);
           Rectangle r = (new Rectangle(coords));
           georefMapCoordinates.put(term.toLowerCase(),r);
-          log.debug(term.trim().toLowerCase() + "QQDELQQ" + r.toJSON());
-          */
+          log.debug(term.trim().toLowerCase() + "QQDELQQ" + r.getCenter().toJSON());
+*/
 
           // NO MORE MAPS SO WE DO NOT LAOD RAW RECORDS
           // Load georefRawCoordinates with coordinates for Abstarct/Detailed Mapping
@@ -177,7 +177,7 @@ public class GeoRefCoordinateMap
     }
     public String toJSON()
     {
-      return "{ \"point\": { \"lat\":\"" +  lat + "\",\"lng\":\""+ lng  + "\"} }";
+      return " \"point\": { \"lat\":\"" +  lat + "\",\"lng\":\""+ lng  + "\"} ";
     }
     public int getLat()
     {
@@ -278,6 +278,15 @@ public class GeoRefCoordinateMap
       }
       return result;
     }
+
+    public LatLng getCenter()
+    {
+      int ctrLat = ((sw.getLat() == ne.getLat()) ? sw.getLat() : sw.getLat() - ((sw.getLat() - ne.getLat()) / 2));
+      int ctrLng = ((sw.getLng() == ne.getLng()) ? sw.getLng() : sw.getLng() - ((sw.getLng() - ne.getLng()) / 2));
+
+      return new LatLng(ctrLat, ctrLng);
+    }
+
     public String toString()
     {
       return "SW " + ((sw != null) ? sw.toString() : "null") + " NE " + ((ne != null) ? ne.toString() : "null")  + ".";
@@ -288,7 +297,7 @@ public class GeoRefCoordinateMap
     }
     public String toJSON()
     {
-      return "\"rectangle\": [" + sw.toJSON() + "," + ne.toJSON() + "]";
+      return "\"rectangle\": [{" + sw.toJSON() + "},{" + ne.toJSON() + "},{" + getCenter().toJSON() + "}]";
     }
   }
 }
