@@ -25,7 +25,7 @@ public class ExtractAuthorsGrf {
 		Connection con  = null;
 		ExtractAuthorsGrf eag = new ExtractAuthorsGrf();
 		con = getDbCoonection("jdbc:oracle:thin:@neptune.elsevier.com:1521:EI", "AP_PRO1", "ei3it", "oracle.jdbc.driver.OracleDriver");
-		eag.extract(0, 0, con, "georef_test");
+		eag.extract(0, 0, con, "georef");
 	}
 	public void extract(int load_number_begin, int load_number_end, Connection con,String dbname)
 	throws Exception
@@ -44,13 +44,13 @@ public class ExtractAuthorsGrf {
 
 		if(load_number_end == 0)
 		{
-			pstmt1	= con.prepareStatement(" select person_analytic from "+dbname+" where (person_analytic is not null)");
-			System.out.println("\n\nQuery: "+" select person_analytic from "+dbname+" where (person_analytic is not null)");
+			pstmt1	= con.prepareStatement(" select person_analytic from "+dbname+"_master where (person_analytic is not null)");
+			System.out.println("\n\nQuery: "+" select person_analytic from "+dbname+"_master where (person_analytic is not null)");
 		}
 		else
 		{
-			pstmt1	= con.prepareStatement(" select person_analytic from "+dbname+" where (person_analytic is not null) and load_number >= "+load_number_begin+" and load_number <= "+load_number_end);
-			System.out.println("\n\nQuery: "+" select person_analytic from "+dbname+" where (person_analytic is not null) and load_number >= "+load_number_begin+" and load_number <= "+load_number_end);
+			pstmt1	= con.prepareStatement(" select person_analytic from "+dbname+"_master where (person_analytic is not null) and load_number >= "+load_number_begin+" and load_number <= "+load_number_end);
+			System.out.println("\n\nQuery: "+" select person_analytic from "+dbname+"_master where (person_analytic is not null) and load_number >= "+load_number_begin+" and load_number <= "+load_number_end);
 		}
 
 		rs1		= pstmt1.executeQuery();
