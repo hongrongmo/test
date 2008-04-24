@@ -105,6 +105,7 @@
 
           var populated = false;
           var EV_MAXZOOM = 5;
+          var EV_MAXMARKERCOUNT = 30;
           var EV_MAPSTATE = 'mapstate';
           var EV_OPEN = 'open';
           var EV_CLOSED = 'closed';
@@ -201,14 +202,14 @@
                   map.setCenter(new GLatLng(0, 0), 1);
                   map.addControl(new GLargeMapControl());
                   map.addControl(new EIBetaLogoControl());
+                  var markercount = ((places.placemarks.length < EV_MAXMARKERCOUNT) ? places.placemarks.length : EV_MAXMARKERCOUNT);
+                  for(var i = 0; i < markercount; i++) {
 
-                  for(var i = 0; i < 30; i++) {
-
-                    var rectangle = new GLatLngBounds(new GLatLng(places.placemarks[i].rectangle[0].point.lat, places.placemarks[i].rectangle[0].point.lng), new GLatLng(places.placemarks[i].rectangle[1].point.lat, places.placemarks[i].rectangle[1].point.lng));
-                    var marker = createMarker(rectangle.getCenter(),places.placemarks[i].name,places.placemarks[i].description,places.placemarks[i].search);
+                    var point = new GLatLng(places.placemarks[i].point.lat, places.placemarks[i].point.lng);
+                    var marker = createMarker(point,places.placemarks[i].name,places.placemarks[i].description,places.placemarks[i].search);
 
                     map.addOverlay(marker);
-                    bounds.extend(marker.getPoint());
+                    bounds.extend(point);
                   }
                   resetCenterAndZoom();
                   populated = true;
