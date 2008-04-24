@@ -227,7 +227,7 @@ public class LoadLookup
             System.out.println("\n\nVerify Parm2:Lookup should be INV / ASG......");
           }
         }
-		else if(database.equalsIgnoreCase("grf"))
+		else if(database.equalsIgnoreCase("georef"))
 		{
 		  if(lookup.equalsIgnoreCase("AUS"))
 		  {
@@ -369,7 +369,7 @@ public class LoadLookup
 			System.out.println("\n\nVerify Parm2:Lookup should be AUS / AF / CVS / ST........");
 		  }
 		}
-        else if(database.equalsIgnoreCase("grf"))
+        else if(database.equalsIgnoreCase("georef"))
         {
 			ExtractAuthorsGrf extractAuthorsGrf = new ExtractAuthorsGrf();
 			extractAuthorsGrf.extract(load_number_begin, load_number_end, con,database);
