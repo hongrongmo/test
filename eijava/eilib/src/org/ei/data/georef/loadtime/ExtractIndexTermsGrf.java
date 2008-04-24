@@ -24,7 +24,7 @@ public class ExtractIndexTermsGrf {
 	{
 		Connection con  = null;
 		ExtractIndexTermsGrf eit = new ExtractIndexTermsGrf();
-		con = getDbCoonection("jdbc:oracle:thin:@neptune.elsevier.com:1521:EI", "AP_PRO1", "ei3it", "oracle.jdbc.driver.OracleDriver");
+		con = getDbCoonection("jdbc:oracle:thin:@neptune.elsevier.com:1521:EI", "AP_EV_SEARCH", "ei3it", "oracle.jdbc.driver.OracleDriver");
 		eit.extract(0, 0, con, "georef");
 	}
 	public void extract(int load_number_begin, int load_number_end, Connection con,String dbname)
@@ -44,8 +44,8 @@ public class ExtractIndexTermsGrf {
 
 		if(load_number_end == 0)
 		{
-			pstmt1	= con.prepareStatement(" select index_terms from "+dbname+"_master where (index_terms is not null)");
-			System.out.println("\n\nQuery: "+" select index_terms from "+dbname+"_master where (index_terms is not null)");
+			pstmt1	= con.prepareStatement(" select index_terms from "+dbname+"_master where (index_terms is not null) and load_number = "+load_number_begin);
+			System.out.println("\n\nQuery: "+" select index_terms from "+dbname+"_master where (index_terms is not null) and load_number = "+load_number_begin);
 		}
 		else
 		{
