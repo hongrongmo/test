@@ -5,7 +5,8 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.Hashtable;
+import java.util.Map;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.StringTokenizer;
 import org.ei.xml.Entity;
@@ -13,6 +14,7 @@ import org.ei.util.StringUtil;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import org.ei.data.*;
+import org.ei.data.georef.runtime.GRFDataDictionary;
 
 
 public class ExtractLangGrf {
@@ -31,7 +33,8 @@ public class ExtractLangGrf {
 	throws Exception
 {
 	PrintWriter writerLang 	= null;
-
+	GRFDataDictionary grfdd = GRFDataDictionary.getInstance();
+	HashMap mapLang = new HashMap(grfdd.getLanguages());
 	PreparedStatement pstmt1 	= null;
 	ResultSet rs1 				= null;
 
@@ -89,7 +92,8 @@ public class ExtractLangGrf {
 							String display_name		= st1.nextToken().trim().toUpperCase();
 							display_name 			= Entity.prepareString(display_name);
 							display_name			= LoadLookup.removeSpecialCharacter(display_name);
-							writerLang.println(display_name+"\t"+"grf"+"\t");
+							if(mapLang.get(display_name) != null)
+								writerLang.println(mapLang.get(display_name)+"\t"+"grf"+"\t");
 						}
 					}
 				}
