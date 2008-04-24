@@ -13,6 +13,7 @@ import org.ei.data.ntis.loadtime.*;
 import org.ei.data.upt.loadtime.ExtractInventorsUpt;
 import org.ei.data.upt.loadtime.ExtractAssigneeUpt;
 import org.ei.data.geobase.loadtime.*;
+import org.ei.data.georef.loadtime.*;
 
 public class LoadLookup
 {
@@ -226,6 +227,43 @@ public class LoadLookup
             System.out.println("\n\nVerify Parm2:Lookup should be INV / ASG......");
           }
         }
+		else if(database.equalsIgnoreCase("grf"))
+		{
+		  if(lookup.equalsIgnoreCase("AUS"))
+		  {
+			ExtractAuthorsGrf extractAuthorsGrf = new ExtractAuthorsGrf();
+			extractAuthorsGrf.extract(load_number_begin, load_number_end, con,database);
+		  }
+		  else if(lookup.equalsIgnoreCase("AF"))
+		  {
+			ExtractAuAffGrf extractAuAffGrf = new ExtractAuAffGrf();
+			extractAuAffGrf.extract(load_number_begin, load_number_end, con,database);
+		  }
+		  else if(lookup.equalsIgnoreCase("CVS"))
+		  {
+			ExtractIndexTermsGrf extractIndexTermsGrf = new ExtractIndexTermsGrf();
+			extractIndexTermsGrf.extract(load_number_begin, load_number_end, con,database);
+		  }
+		  else if(lookup.equalsIgnoreCase("ST"))
+		  {
+			ExtractSerialTitleGrf extractSerialTitleGrf = new ExtractSerialTitleGrf();
+			extractSerialTitleGrf.extract(load_number_begin, load_number_end, con,database);
+		  }
+		  else if(lookup.equalsIgnoreCase("PN"))
+		  {
+		  	ExtractPnGrf extractPnGrf = new ExtractPnGrf();
+		  	extractPnGrf.extract(load_number_begin, load_number_end, con,database);
+		  }
+		  else if(lookup.equalsIgnoreCase("LA"))
+		  {
+		  	ExtractLangGrf extractLangGrf = new ExtractLangGrf();
+		  	extractLangGrf.extract(load_number_begin, load_number_end, con,database);
+		  }
+		  else
+		  {
+			System.out.println("\n\nVerify Parm2:Lookup should be AUS / AF / CVS / ST........");
+		  }
+        }
         else
         {
           System.out.println("\n\nVerify Parm1:Database is cpx / ins........");
@@ -331,6 +369,27 @@ public class LoadLookup
 			System.out.println("\n\nVerify Parm2:Lookup should be AUS / AF / CVS / ST........");
 		  }
 		}
+        else if(database.equalsIgnoreCase("grf"))
+        {
+			ExtractAuthorsGrf extractAuthorsGrf = new ExtractAuthorsGrf();
+			extractAuthorsGrf.extract(load_number_begin, load_number_end, con,database);
+
+			ExtractAuAffGrf extractAuAffGrf = new ExtractAuAffGrf();
+			extractAuAffGrf.extract(load_number_begin, load_number_end, con,database);
+
+			ExtractIndexTermsGrf extractIndexTermsGrf = new ExtractIndexTermsGrf();
+			extractIndexTermsGrf.extract(load_number_begin, load_number_end, con,database);
+
+			ExtractSerialTitleGrf extractSerialTitleGrf = new ExtractSerialTitleGrf();
+			extractSerialTitleGrf.extract(load_number_begin, load_number_end, con,database);
+
+			ExtractPnGrf extractPnGrf = new ExtractPnGrf();
+			extractPnGrf.extract(load_number_begin, load_number_end, con,database);
+
+			ExtractLangGrf extractLangGrf = new ExtractLangGrf();
+			extractLangGrf.extract(load_number_begin, load_number_end, con,database);
+
+        }
         else
         {
           System.out.println("\n\nVerify Parm1:Database is cpx / ins........");
