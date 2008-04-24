@@ -396,6 +396,7 @@
                         <xsl:when test="(DBPREF='1')">cpx</xsl:when>
                         <xsl:when test="(DBPREF='2')">ins</xsl:when>
                         <xsl:when test="(DBPREF='8192')">geo</xsl:when>
+                        <xsl:when test="(DBPREF='2097152')">grf</xsl:when>
                         <xsl:when test="(DBPREF='128')">chm</xsl:when>
                         <xsl:when test="(DBPREF='64')">pch</xsl:when>
                         <xsl:when test="(DBPREF='1024')">elt</xsl:when>                        
