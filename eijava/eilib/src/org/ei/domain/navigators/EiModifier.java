@@ -52,7 +52,7 @@ public class EiModifier implements Comparable
     public static final EiModifier MOD_EPT = new EiModifier(0, "EnCompassPat", Integer.toString(DatabaseConfig.EPT_MASK));
     public static final EiModifier MOD_ELT = new EiModifier(0, "EnCompassLit", Integer.toString(DatabaseConfig.ELT_MASK));
 
-    public static final EiModifier[] DEDUPABLE_MODS = {MOD_CHM, MOD_CPX, MOD_ELT, MOD_GEO, MOD_INS, MOD_PCH};
+    public static final EiModifier[] DEDUPABLE_MODS = {MOD_CHM, MOD_CPX, MOD_ELT, MOD_GEO, MOD_GRF, MOD_INS, MOD_PCH};
 
     public EiModifier(int i, String slable, String svalue)
     {
