@@ -678,6 +678,10 @@
             client.log("num_recs", Integer.toString(oPage.docCount()));
             client.log("doc_index", Integer.toString(index));
             client.log("hits", Integer.toString(nTotalDocs));
+            if(request.getParameter("mapevent") != null)
+            {
+              client.log("mapevent", request.getParameter("mapevent"));
+            }
             client.setRemoteControl();
 
             //Writing out XML
