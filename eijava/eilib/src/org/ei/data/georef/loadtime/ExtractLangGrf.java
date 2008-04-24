@@ -27,7 +27,7 @@ public class ExtractLangGrf {
 		Connection con  = null;
 		ExtractLangGrf ela = new ExtractLangGrf();
 		con = getDbCoonection("jdbc:oracle:thin:@neptune.elsevier.com:1521:EI", "AP_PRO1", "ei3it", "oracle.jdbc.driver.OracleDriver");
-		ela.extract(0, 0, con, "georef_test");
+		ela.extract(0, 0, con, "georef");
 	}
 	public void extract(int load_number_begin, int load_number_end, Connection con,String dbname)
 	throws Exception
@@ -47,13 +47,13 @@ public class ExtractLangGrf {
 
 		if(load_number_end == 0)
 		{
-			pstmt1	= con.prepareStatement(" select language_text from "+dbname+" where (language_text is not null)");
-			System.out.println("\n\nQuery: "+" select language_text from "+dbname+" where (language_text is not null)");
+			pstmt1	= con.prepareStatement(" select language_text from "+dbname+"_master where (language_text is not null)");
+			System.out.println("\n\nQuery: "+" select language_text from "+dbname+"_master where (language_text is not null)");
 		}
 		else
 		{
-			pstmt1	= con.prepareStatement(" select language_text from "+dbname+" where (language_text is not null) and load_number >= "+load_number_begin+" and load_number <= "+load_number_end);
-			System.out.println("\n\nQuery: "+" select language_text from "+dbname+" where (language_text is not null) and load_number >= "+load_number_begin+" and load_number <= "+load_number_end);
+			pstmt1	= con.prepareStatement(" select language_text from "+dbname+"_master where (language_text is not null) and load_number >= "+load_number_begin+" and load_number <= "+load_number_end);
+			System.out.println("\n\nQuery: "+" select language_text from "+dbname+"_master where (language_text is not null) and load_number >= "+load_number_begin+" and load_number <= "+load_number_end);
 		}
 
 		rs1		= pstmt1.executeQuery();
