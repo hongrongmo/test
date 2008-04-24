@@ -3,7 +3,8 @@
 	ControllerClient client = new ControllerClient(request, response);
 	UserSession ussession=(UserSession)client.getUserSession();
 	String sessionid = ussession.getID();
-	int basketCount=Integer.parseInt(request.getParameter("basketsize"));
+  // this was failing since basketsize was missing on request - get from DoucmentBasket instead
+	//int basketCount=Integer.parseInt(request.getParameter("basketsize"));
 	int handle = Integer.parseInt(request.getParameter("handle"));
 	String viewType = request.getParameter("viewType");
 	String docID = request.getParameter("docid");
@@ -29,6 +30,7 @@
 		pageIndex  = (handle/50) + 1;
 	}
 
+  int basketCount = documentBasket.getBasketSize();
 	basketCount--;
 	int totalPages = -1;
 	if((basketCount%50) == 0)
