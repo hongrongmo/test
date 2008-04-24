@@ -24,7 +24,7 @@ public class ExtractAuAffGrf {
 	{
 		Connection con  = null;
 		ExtractAuAffGrf eaf = new ExtractAuAffGrf();
-		con = getDbCoonection("jdbc:oracle:thin:@neptune.elsevier.com:1521:EI", "AP_PRO1", "ei3it", "oracle.jdbc.driver.OracleDriver");
+		con = getDbCoonection("jdbc:oracle:thin:@neptune.elsevier.com:1521:EI", "AP_EV_SEARCH", "ei3it", "oracle.jdbc.driver.OracleDriver");
 		eaf.extract(0, 0, con, "georef");
 	}
 	public void extract(int load_number_begin, int load_number_end, Connection con,String dbname)
@@ -44,8 +44,8 @@ public class ExtractAuAffGrf {
 
 		if(load_number_end == 0)
 		{
-			pstmt1	= con.prepareStatement(" select author_affiliation,affiliation_secondary from "+dbname+"_master where (author_affiliation is not null)");
-			System.out.println("\n\nQuery: "+" select author_affiliation,affiliation_secondary from "+dbname+"_master where (author_affiliation is not null)");
+			pstmt1	= con.prepareStatement(" select author_affiliation,affiliation_secondary from "+dbname+"_master where (author_affiliation is not null) and load_number = "+load_number_begin);
+			System.out.println("\n\nQuery: "+" select author_affiliation,affiliation_secondary from "+dbname+"_master where (author_affiliation is not null) and load_number = "+load_number_begin);
 		}
 		else
 		{
