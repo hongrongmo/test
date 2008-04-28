@@ -185,7 +185,7 @@
     </xsl:if>
 
    <xsl:if test="($COMPMASK='8192' or $COMPMASK='2097152' or $COMPMASK='2105344')">
-      &#160;<a class="SpLink" id="mapToggle"><img src="/engresources/images/s.gif" align="absmiddle" id="mapToggleImage" border="0" width="84" height="18"/></a>
+      &#160;<a class="SpLink" id="mapToggle"><img src="/engresources/images/s.gif" align="absmiddle" id="mapToggleImage" border="0" width="110" height="18"/></a>
    </xsl:if>
 
   <div id="map" style="clear:both;display:none;">
