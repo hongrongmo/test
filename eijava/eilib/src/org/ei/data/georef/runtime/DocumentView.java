@@ -256,7 +256,11 @@ public abstract class DocumentView {
       addDocumentValue(GRFDocBuilder.AFFILIATION_OTHER, new AffiliationDecorator(createColumnValueField("AFFILIATION_SECONDARY")));
 
       addDocumentValue(GRFDocBuilder.GRF_URLS, new URLDecorator(createColumnValueField("URL")));
-      addDocumentValue(Keys.DOC_TYPE, new DocumentTypeDecorator(createColumnValueField("DOCUMENT_TYPE")));
+
+      // New Doctype is shown as combination of GeoRef Doctypes and Ei Doctype codes in '()' i.e. Serial (JA), Conference  document (CA)
+      //addDocumentValue(Keys.DOC_TYPE, new DocumentTypeDecorator(createColumnValueField("DOCUMENT_TYPE")));
+      addDocumentValue(Keys.DOC_TYPE, getDocumentTypes());
+
       addDocumentValue(GRFDocBuilder.CATEGORY, new CategoryDecorator(createColumnValueField("CATEGORY_CODE")));
 
       EIDoc eiDoc = new EIDoc(did, ht, getFormat());
@@ -544,6 +548,35 @@ public abstract class DocumentView {
         if(yearmatch.find())
         {
           strvalue = yearmatch.group(1);
+        }
+      }
+      return strvalue;
+    }
+
+    public String getDocumentTypes() {
+
+      String strvalue = null;
+
+      if(isIncluded(Keys.DOC_TYPE))
+      {
+        String dts = (new DocumentTypeDecorator(createColumnValueField("DOCUMENT_TYPE"))).getValue();
+
+        String mappingcode = createColumnValueField("DOCUMENT_TYPE").getValue().concat(GRFDocBuilder.AUDELIMITER).concat(createColumnValueField("BIBLIOGRAPHIC_LEVEL_CODE").getValue());
+        if(mappingcode != null)
+        {
+          mappingcode = new DocumentTypeMappingDecorator(mappingcode).getValue();
+        }
+
+        String[] dtArray = dts.split(GRFDocBuilder.AUDELIMITER);
+        String[] mapcodeArray = mappingcode.split(GRFDocBuilder.AUDELIMITER);
+        if(dtArray.length == mapcodeArray.length)
+        {
+          List decoratedvalues = new ArrayList();
+          for(int x = 0; x < dtArray.length; x++)
+          {
+            decoratedvalues.add(dtArray[x].concat(" (").concat(mapcodeArray[x]).concat(")"));
+          }
+          strvalue = StringUtil.join(decoratedvalues, GRFDocBuilder.AUDELIMITER);
         }
       }
       return strvalue;
