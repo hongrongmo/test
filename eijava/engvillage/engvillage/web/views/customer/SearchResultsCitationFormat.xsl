@@ -110,7 +110,7 @@
           var EV_OPEN = 'open';
           var EV_CLOSED = 'closed';
           var EV_SHOW_MAP_IMAGE = "/engresources/images/show_map.gif";
-          var EV_HIDE_MAP_IMAGE = "/engresources/images/hide_map.jpg";
+          var EV_HIDE_MAP_IMAGE = "/engresources/images/hide_map.gif";
           var bounds = new GLatLngBounds();
           var map;
           var messages = {"show":"Show Geographic Map", "hide":"Hide Geographic Map"};
