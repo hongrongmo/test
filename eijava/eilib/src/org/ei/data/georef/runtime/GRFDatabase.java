@@ -55,7 +55,7 @@ public class GRFDatabase extends Database
     private DataDictionary dataDictionary = GRFDataDictionary.getInstance();
     public int getStartYear(boolean hasBackFile)
     {
-      return 1966;
+      return 1785;
     }
 
     protected String getBaseTableHook()
