@@ -40,7 +40,7 @@ public class ExtractAuthorsGrf {
 	try
 	{
 
-		writerAuthor	= new PrintWriter(new FileWriter(load_number_begin+dbname+"_aus.lkp"));
+		writerAuthor	= new PrintWriter(new FileWriter(dbname+"_aus.lkp"));
 
 		if(load_number_end == 0)
 		{
