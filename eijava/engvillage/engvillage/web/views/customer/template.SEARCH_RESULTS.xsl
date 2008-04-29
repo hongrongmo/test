@@ -186,11 +186,15 @@
 
    <xsl:if test="($COMPMASK='8192' or $COMPMASK='2097152' or $COMPMASK='2105344')">
       &#160;<a class="SpLink" id="mapToggle"><img src="/engresources/images/s.gif" align="absmiddle" id="mapToggleImage" border="0" width="110" height="18"/></a>
-   </xsl:if>
+      <!-- <xsl:text>  </xsl:text>
+      <a class="DecLink" href="javascript:makeUrl('Map_Feature.htm')">
+      <img src="/engresources/images/blue_help.gif" align="absmiddle" border="0"/>
+      </a> -->
+    </xsl:if>
 
   <div id="map" style="clear:both;display:none;">
     <br/>
-    <div id="map_spacer" style="float:left; border:0px solid black; width: 20px; height: 300px"></div>
+    <div id="map_spacer" style="float:left; border:0px solid black; width: 20px; height: 1px"></div>
     <div id="map_canvas" style="float:left; width: 600px; height: 300px;">&#160;</div>
     <br style="clear:both;"/>
     <div id="link_spacer" style="float:left; width: 20px; height: 20px"></div><a class="SpLink" id="resetcenter" href="javascript:resetCenterAndZoom()">Reset Map Center and Zoom</a>
