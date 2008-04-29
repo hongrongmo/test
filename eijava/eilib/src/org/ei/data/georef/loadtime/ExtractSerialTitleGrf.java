@@ -40,7 +40,7 @@ public class ExtractSerialTitleGrf{
 	try
 	{
 
-		writerSerialTitle	= new PrintWriter(new FileWriter(load_number_begin+dbname+"_st.lkp"));
+		writerSerialTitle	= new PrintWriter(new FileWriter(dbname+"_st.lkp"));
 
 		if(load_number_end == 0)
 		{
