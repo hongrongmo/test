@@ -85,7 +85,7 @@ public class ExtractSerialTitleGrf{
 							String display_name		= st1.nextToken().trim().toUpperCase();
 							display_name 			= Entity.prepareString(display_name);
 							display_name			= LoadLookup.removeSpecialCharacter(display_name);
-							writerSerialTitle.println(display_name+"\t"+"grf"+"\t");
+							writerSerialTitle.println("\t"+ display_name+"\t"+"grf"+"\t");
 						}
 					}
 				}
