@@ -119,6 +119,7 @@
             if (GBrowserIsCompatible()) {
               var atoggle = document.getElementById("mapToggle");
               atoggle.href="javascript:togglemap();"
+              atoggle.title = messages["show"];
 
               var atoggleImage = document.getElementById("mapToggleImage");
               atoggleImage.src = EV_SHOW_MAP_IMAGE;
@@ -135,6 +136,7 @@
           {
             var divmap = document.getElementById("map");
             var atoggleImage = document.getElementById("mapToggleImage");
+            var atoggle = document.getElementById("mapToggle");
 
             if(divmap.style.display == "block")
             {
@@ -145,6 +147,8 @@
               atoggleImage.style.display = "inline";
               atoggleImage.src = EV_SHOW_MAP_IMAGE;
               atoggleImage.altText = messages["show"];
+              atoggle.title = messages["show"];
+
             }
             else {
               // show map
@@ -154,6 +158,7 @@
               // change button
               atoggleImage.src = EV_HIDE_MAP_IMAGE;
               atoggleImage.altText = messages["hide"];
+              atoggle.title = messages["hide"];
             }
           }
 
@@ -201,7 +206,7 @@
                   map.setMapType(G_PHYSICAL_MAP);
                   map.setCenter(new GLatLng(0, 0), 1);
                   map.addControl(new GLargeMapControl());
-                  map.addControl(new EIBetaLogoControl());
+
                   var markercount = ((places.placemarks.length < EV_MAXMARKERCOUNT) ? places.placemarks.length : EV_MAXMARKERCOUNT);
                   for(var i = 0; i < markercount; i++) {
 
@@ -220,54 +225,12 @@
             request.send(null);
           }
 
-          function EIBetaLogoControl() {
-          }
-          EIBetaLogoControl.prototype = new GControl();
-
-          // Creates a one DIV for each of the buttons and places them in a container
-          // DIV which is returned as our control element. We add the control to
-          // to the map container and return the element for the map class to
-          // position properly.
-          EIBetaLogoControl.prototype.initialize = function(map) {
-            var container = document.createElement("div");
-            this.setButtonStyle_(container);
-            map.getContainer().appendChild(container);
-            return container;
-          }
-
-          // By default, the control will appear in the top left corner of the
-          // map with 7 pixels of padding.
-          EIBetaLogoControl.prototype.getDefaultPosition = function() {
-            return new GControlPosition(G_ANCHOR_TOP_RIGHT, new GSize(7, 7));
-          }
-
-          // Sets the proper CSS for the given button element.
-          /* Mozilla ignores crazy MS image filters, so it will skip the following */
-          EIBetaLogoControl.prototype.setButtonStyle_ = function(button) {
-            button.className = "eibetacontrol";
-/*            button.style.width = "69";
-            button.style.height = "17";
-            button.style.cursor = "none";
-            button["style"]["background"] = "url(/engresources/images/EI_beta.png) no-repeat";
-            button.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='/engresources/images/EI_beta.png')";
-*/
-          }
-
       //]]>
       </script>
     </xsl:if>
     <!-- End of javascript -->
     <STYLE>
-.eibetacontrol {
-  width:69px;
-  height:17px;
-  /* Mozilla ignores crazy MS image filters, so it will skip the following */
-    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='/engresources/images/EI_beta.png');
-}
-/* IE ignores styles with [attributes], so it will skip the following. */
-.eibetacontrol[class] {
-  background-image:url(/engresources/images/EI_beta.png);
-}
+
     </STYLE>
     </head>
 
