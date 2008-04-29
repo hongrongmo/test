@@ -40,7 +40,7 @@ public class ExtractPnGrf {
 	try
 	{
 
-		writerPub	= new PrintWriter(new FileWriter(load_number_begin+dbname+"_Pn.lkp"));
+		writerPub	= new PrintWriter(new FileWriter(dbname+"_Pn.lkp"));
 
 		if(load_number_end == 0)
 		{
