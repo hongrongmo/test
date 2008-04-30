@@ -67,13 +67,12 @@ public class RectangleCoordinates
 // S230000S100000E1530000E1430000
 // DEC = DEG + (MIN * 1/60) + (SEC * 1/60 * 1/60)
 
-    StringBuffer locations = new StringBuffer();
-    locations.append("<LOCS label=\"Coordinates\">");
-
     long xsmall = 0;
     long xlarge = 0;
     long ysmall  = 0;
     long ylarge = 0;
+
+    out.write("<LOCS label=\"Coordinates\">");
 
     for(int i = 0; i < coordinates.length; i++)
     {
@@ -121,37 +120,37 @@ public class RectangleCoordinates
           out.write("</POINT>");
           out.write("</RECT>");
 */
-          locations.append("<LOC " + ((term != null) ?  " ID=\"" + term + "\" " : "") + ">");
+          out.write("<LOC " + ((term != null) ?  " ID=\"" + term + "\" " : "") + ">");
           // LAT_LOW_RIGHT LAT_UPPER_RIGHT LONG_UPPER_RIGHT LONG_UPPER_LEFT
-          locations.append("<![CDATA[");
+          out.write("<![CDATA[");
           for(int x = 0; x < 4; x++)
           {
             int base = x * 2;
             // degress and N/S/E/W
-            locations.append(rectangle.group(base + 2) + "&#176;" + rectangle.group(base + 1) + " ");
+            out.write(rectangle.group(base + 2) + "&deg;" + rectangle.group(base + 1) + " ");
             // Minutes
             /*if(!rectangle.group(base + 3).equals("00"))
             {
-              locations.append(rectangle.group(base + 3) + "\" ");
+              out.write(rectangle.group(base + 3) + "\" ");
               // Seconds
               if(!rectangle.group(base + 4).equals("00"))
               {
-                locations.append(rectangle.group(base + 4) + "' ");
+                out.write(rectangle.group(base + 4) + "' ");
               }
             }*/
           }
-          locations.append("]]>");
-          locations.append("</LOC>");
+          out.write("]]>");
+          out.write("</LOC>");
         }
       }
     }
-    locations.append("</LOCS>");
+    out.write("</LOCS>");
 
 /*    out.write("</");
     out.write(key.getKey());
     out.write(">"); */
 
-    out.write(locations.toString());
+
   }
 
 }
