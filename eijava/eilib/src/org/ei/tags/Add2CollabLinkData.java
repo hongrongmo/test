@@ -91,6 +91,11 @@ public class Add2CollabLinkData
       {
         out.write("&articletitle="+ stratitle);
       }
+      String strissn = curdoc.getMapDataElement(Keys.ISSN);
+      {
+        out.write("&issn="+ strissn);
+      }
+
       /*
       String strty= curdoc.getType();
       if(strty != null)
