@@ -73,96 +73,107 @@ public class Add2CollabLinkData
     // these are the additional fields
     out.write("<COLLABLINKDATA><![CDATA[");
 
-    // if we supply a DOI, all other fields are filled in automatically ?!
-    String strdoi = curdoc.getDOI();
-    if(strdoi != null)
+    try
     {
-      out.write("&doi="+ strdoi);
-    }
-    else
-    {
-      String strstitle = curdoc.getMapDataElement(Keys.SERIAL_TITLE);
-      if(strstitle != null)
+      if(curdoc != null)
       {
-        out.write("&source="+ strstitle);
-      }
-      String stratitle = curdoc.getMapDataElement(Keys.TITLE);
-      if(stratitle != null)
-      {
-        out.write("&articletitle="+ stratitle);
-      }
-      String strissn = curdoc.getMapDataElement(Keys.ISSN);
-      {
-        out.write("&issn="+ strissn);
-      }
-
-      /*
-      String strty= curdoc.getType();
-      if(strty != null)
-      {
-        out.write("&type="+ replaceTYwith2CollabString(strty));
-      }*/
-      String strabs = curdoc.getMapDataElement(Keys.ABSTRACT);
-      if(strabs != null)
-      {
-        out.write("&description="+ ((strabs.length() > 250) ? strabs.substring(0,249).concat("...") : strabs));
-      }
-      String stryr = curdoc.getYear();
-      if(stryr != null)
-      {
-        out.write("&date="+ stryr);
-      }
-
-      String strvo = curdoc.getVolumeNo();
-      if(strvo != null)
-      {
-        out.write("&volume="+ strvo);
-        String striss = curdoc.getIssueNo();
-        if(striss != null)
+        // if we supply a DOI, all other fields are filled in automatically ?!
+        String strdoi = curdoc.getDOI();
+        if(strdoi != null)
         {
-          out.write(" "+ striss);
-        }
-        String strpg = curdoc.getStartPage();
-        if(strpg != null)
-        {
-          out.write(" "+ strpg);
-        }
-      }
-      if(curdoc.isBook())
-      {
-        String strpii = ((BookDocument) curdoc).getChapterPii();
-        if(strpii != null)
-        {
-          out.write("&pii="+ strpii);
-          out.write("&type=Book Chapter");
+          out.write("&doi="+ strdoi);
         }
         else
         {
-          out.write("&type=Book");
-        }
-        String strpage = String.valueOf(((BookDocument) curdoc).getPageNum());
-        if(strpage != null)
-        {
-          out.write("&volume="+ strpage);
-        }
-        String strctitle = curdoc.getMapDataElement(Keys.BOOK_CHAPTER_TITLE);
-        if(strctitle != null)
-        {
-          out.write("&articletitle="+ strctitle);
-        }
-        String strbyr = curdoc.getMapDataElement(Keys.BOOK_YEAR);
-        if(strbyr != null)
-        {
-          out.write("&date="+ strbyr);
-        }
-        String strisbn = ((BookDocument) curdoc).getISBN13();
-        if(strisbn != null)
-        {
-          out.write("&isbn="+ strisbn);
-        }
+          String strstitle = curdoc.getMapDataElement(Keys.SERIAL_TITLE);
+          if(strstitle != null)
+          {
+            out.write("&source="+ strstitle);
+          }
+          String stratitle = curdoc.getMapDataElement(Keys.TITLE);
+          if(stratitle != null)
+          {
+            out.write("&articletitle="+ stratitle);
+          }
+          String strissn = curdoc.getMapDataElement(Keys.ISSN);
+          if(strissn != null)
+          {
+            out.write("&issn="+ strissn);
+          }
+
+          /*
+          String strty= curdoc.getType();
+          if(strty != null)
+          {
+            out.write("&type="+ replaceTYwith2CollabString(strty));
+          }*/
+          String strabs = curdoc.getMapDataElement(Keys.ABSTRACT);
+          if(strabs != null)
+          {
+            out.write("&description="+ ((strabs.length() > 250) ? strabs.substring(0,249).concat("...") : strabs));
+          }
+          String stryr = curdoc.getYear();
+          if(stryr != null)
+          {
+            out.write("&date="+ stryr);
+          }
+
+          String strvo = curdoc.getVolumeNo();
+          if(strvo != null)
+          {
+            out.write("&volume="+ strvo);
+            String striss = curdoc.getIssueNo();
+            if(striss != null)
+            {
+              out.write(" "+ striss);
+            }
+            String strpg = curdoc.getStartPage();
+            if(strpg != null)
+            {
+              out.write(" "+ strpg);
+            }
+          }
+          if(curdoc.isBook())
+          {
+            String strpii = ((BookDocument) curdoc).getChapterPii();
+            if(strpii != null)
+            {
+              out.write("&pii="+ strpii);
+              out.write("&type=Book Chapter");
+            }
+            else
+            {
+              out.write("&type=Book");
+            }
+            String strpage = String.valueOf(((BookDocument) curdoc).getPageNum());
+            if(strpage != null)
+            {
+              out.write("&volume="+ strpage);
+            }
+            String strctitle = curdoc.getMapDataElement(Keys.BOOK_CHAPTER_TITLE);
+            if(strctitle != null)
+            {
+              out.write("&articletitle="+ strctitle);
+            }
+            String strbyr = curdoc.getMapDataElement(Keys.BOOK_YEAR);
+            if(strbyr != null)
+            {
+              out.write("&date="+ strbyr);
+            }
+            String strisbn = ((BookDocument) curdoc).getISBN13();
+            if(strisbn != null)
+            {
+              out.write("&isbn="+ strisbn);
+            }
+          }
+        } // else
       }
     }
-
+    catch (Exception e)
+    {
+      // we do not want this to mess up the record display if it fails
+      // so continue on and just close the XML tag we opened
+    }
     out.write("]]></COLLABLINKDATA>");
   }
 
