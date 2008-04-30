@@ -17,6 +17,9 @@
       <xsl:apply-templates select="BTI"/>
       <xsl:apply-templates select="BPP"/>
       <xsl:if test="DOC/DB/DBMASK='131072'">
+        <xsl:if test="$ascii='true'">
+          <xsl:text>&#xD;&#xA;</xsl:text>
+        </xsl:if>
         <!-- Book chapter title -->
         <xsl:apply-templates select="BCT"/>
       </xsl:if>
