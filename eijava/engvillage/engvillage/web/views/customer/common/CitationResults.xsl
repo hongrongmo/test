@@ -135,9 +135,9 @@
     </xsl:template>
 
     <!-- Book Section title -->
-<!--    <xsl:template match="ST"><a class="MedBlackText"><b>Section:</b>&#160;<xsl:value-of select="." disable-output-escaping="yes"/></a><br/></xsl:template> -->
+<!--    <xsl:template match="ST"><a class="MedBlackText"><b>Section:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/></a><br/></xsl:template> -->
     <!-- Book Chapter title -->
-    <xsl:template match="BCT"><a class="MedBlackText"><b>Chapter:</b>&#160;<xsl:value-of select="." disable-output-escaping="yes"/></a><br/></xsl:template>
+    <xsl:template match="BCT"><a class="MedBlackText"><b>Chapter:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/></a><br/></xsl:template>
 
     <!-- Book Record Page Number -->
     <xsl:template match="BPP">
@@ -264,19 +264,19 @@
     </a>
     </xsl:template>
     <!-- EPT -->
-    <xsl:template match="UPD">   
+    <xsl:template match="UPD">
        <xsl:choose>
        		<xsl:when test="not(ancestor::EI-DOCUMENT/DOC/DB/DBMASK='2048')">
        			<a CLASS="SmBlackText">
         			<b> Publication date: </b><xsl:value-of select="." disable-output-escaping="yes"/>
-    			</a>       		
+    			</a>
        		</xsl:when>
        		<xsl:otherwise>
        			<a CLASS="SmBlackText">
         			<b> Publication year: </b><xsl:value-of select="." disable-output-escaping="yes"/>
     			</a>
          	</xsl:otherwise>
-       </xsl:choose> 
+       </xsl:choose>
     </xsl:template>
 
   <!-- jam added for 1884 -->
@@ -332,7 +332,7 @@
         <a CLASS="SmBlackText"><br/><b>Database:</b><xsl:text> </xsl:text><xsl:value-of select="."/></a><xsl:text> </xsl:text>
     </xsl:template>
     <xsl:template match="COL">
-        <a CLASS="SmBlackText">&#160;<b>Collection:</b><xsl:text> </xsl:text><xsl:value-of select="text()"/></a><xsl:text> </xsl:text>
+        <a CLASS="SmBlackText"><xsl:text> </xsl:text><b>Collection:</b><xsl:text> </xsl:text><xsl:value-of select="text()"/></a><xsl:text> </xsl:text>
     </xsl:template>
 
     <xsl:template match="FTTJ|STT">
