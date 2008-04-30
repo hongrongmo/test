@@ -94,12 +94,12 @@ public class RectangleCoordinates
         Matcher rectangle = RectangleCoordinates.RECTANGLEPATTERN.matcher(coordinate);
         if(rectangle.find())
         {
-          String lat1 = String.valueOf(Long.parseLong(rectangle.group(2).substring(0,2)) * (rectangle.group(1).equals("S") ? -1 : 1));
+/*          String lat1 = String.valueOf(Long.parseLong(rectangle.group(2).substring(0,2)) * (rectangle.group(1).equals("S") ? -1 : 1));
           String lat2 = String.valueOf(Long.parseLong(rectangle.group(4).substring(0,2)) * (rectangle.group(3).equals("S") ? -1 : 1));
           String lng1 = String.valueOf(Long.parseLong(rectangle.group(6).substring(0,3)) * (rectangle.group(5).equals("W") ? -1 : 1));
           String lng2 = String.valueOf(Long.parseLong(rectangle.group(8).substring(0,3)) * (rectangle.group(7).equals("W") ? -1 : 1));
 
-/*          String lat1 = String.valueOf(Long.parseLong(rectangle.group(2)) * (rectangle.group(1).equals("S") ? -1 : 1) + (Long.parseLong(rectangle.group(3)) * 1/60) + (Long.parseLong(rectangle.group(4)) * 1/360));
+          String lat1 = String.valueOf(Long.parseLong(rectangle.group(2)) * (rectangle.group(1).equals("S") ? -1 : 1) + (Long.parseLong(rectangle.group(3)) * 1/60) + (Long.parseLong(rectangle.group(4)) * 1/360));
           String lat2 = String.valueOf(Long.parseLong(rectangle.group(6)) * (rectangle.group(5).equals("S") ? -1 : 1) + (Long.parseLong(rectangle.group(7)) * 1/60) + (Long.parseLong(rectangle.group(8)) * 1/360));
           String lng1 = String.valueOf(Long.parseLong(rectangle.group(10)) * (rectangle.group(9).equals("W") ? -1 : 1) + (Long.parseLong(rectangle.group(11)) * 1/60) + (Long.parseLong(rectangle.group(12)) * 1/360));
           String lng2 = String.valueOf(Long.parseLong(rectangle.group(14)) * (rectangle.group(13).equals("W") ? -1 : 1) + (Long.parseLong(rectangle.group(15)) * 1/60) + (Long.parseLong(rectangle.group(16)) * 1/360));
@@ -127,7 +127,7 @@ public class RectangleCoordinates
           {
             int base = x * 2;
             // degress and N/S/E/W
-            out.write(rectangle.group(base + 2) + " " + rectangle.group(base + 1) + " ");
+            out.write(rectangle.group(base + 2) + rectangle.group(base + 1) + " ");
             // Minutes
             /*if(!rectangle.group(base + 3).equals("00"))
             {
