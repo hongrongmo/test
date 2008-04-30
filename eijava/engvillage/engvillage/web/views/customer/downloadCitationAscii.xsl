@@ -14,7 +14,7 @@ All the business rules which govern the display format are also provided.
 
 <xsl:include href="common/CitationResults.xsl" />
 
-<xsl:output method="text" indent="no"/>
+<xsl:output method="text" indent="no" encoding="iso-8859-1" />
 
 <xsl:preserve-space elements="text"/>
 

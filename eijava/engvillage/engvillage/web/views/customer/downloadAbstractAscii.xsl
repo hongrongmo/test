@@ -14,7 +14,7 @@ All the business rules which govern the display format are also provided.
 
 <xsl:include href="common/AbstractResults.xsl" />
 
-<xsl:output method="text" indent="no"/>
+<xsl:output method="text" indent="no" encoding="iso-8859-1" />
 
 <xsl:preserve-space elements="text"/>
 
@@ -64,9 +64,9 @@ All the business rules which govern the display format are also provided.
 		<xsl:text>&#xD;&#xA;</xsl:text>
 
 	</xsl:template>
-	
-	
-	
+
+
+
 	<xsl:template match="AB2" priority="1">
 		<xsl:text>&#xD;&#xA;</xsl:text>
 		<a CLASS="MedBlackText"><br/><br/><b>Abstract: </b><xsl:text> </xsl:text><xsl:value-of select="ibfab:getPLAIN(.)" disable-output-escaping="yes"/></a>

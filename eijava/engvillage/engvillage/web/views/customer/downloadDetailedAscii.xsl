@@ -14,7 +14,7 @@ All the business rules which govern the display format are also provided.
 
 <xsl:import href="common/DetailedResults.xsl" />
 
-<xsl:output method="text" indent="no"/>
+<xsl:output method="text" indent="no" encoding="iso-8859-1" />
 
 <xsl:preserve-space elements="text"/>
 
@@ -32,10 +32,10 @@ All the business rules which govern the display format are also provided.
   	<xsl:text>&#xD;&#xA;</xsl:text>
 
   </xsl:template>
-  
+
   <xsl:template match="LINK"></xsl:template>
 
-  
+
   <xsl:template match="SECTION-DELIM">
   	<xsl:apply-templates />
   </xsl:template>
@@ -64,24 +64,24 @@ All the business rules which govern the display format are also provided.
 
   <!-- override the default CPR template in any included stylesheets -->
 	<xsl:template match="CPR" priority="1">
-  </xsl:template> 
+  </xsl:template>
 
   <!-- output the CPRT - Text (non html) copyright element -->
 	<xsl:template match="CPRT" priority="1">
     <xsl:value-of select="." />
-	</xsl:template> 
+	</xsl:template>
 
 	<xsl:template match="ABS" priority="1">
   	<a CLASS="MedBlackText"> <xsl:value-of select="ibfab:getPLAIN(.)" disable-output-escaping="yes"/></a>
  	</xsl:template>
-	
+
 	<!-- higher priority template to override template in DetailedResults to format Author Affiliation for ASCII -->
   <xsl:template match="AF|EF" priority="1">
-    <xsl:if test="(@id)">(<xsl:value-of select="@id"/>)<xsl:text> </xsl:text></xsl:if> 
+    <xsl:if test="(@id)">(<xsl:value-of select="@id"/>)<xsl:text> </xsl:text></xsl:if>
     <xsl:value-of select="normalize-space(text())" disable-output-escaping="yes"/>
     <xsl:if test="not(position()=last())">;</xsl:if>
     <xsl:text> </xsl:text>
-  </xsl:template>    
+  </xsl:template>
 
 	<!-- higher priority template to override template in DetailedResults to format Author for ASCII -->
   <xsl:template match="AU|ED|IV" priority="1">
@@ -94,7 +94,7 @@ All the business rules which govern the display format are also provided.
     </xsl:if>
 
     <!-- put author affiliation id as a value in parens following the author name -->
-    <xsl:if test="(@id)"><xsl:text> </xsl:text>(<xsl:value-of select="@id"/>)</xsl:if>        
+    <xsl:if test="(@id)"><xsl:text> </xsl:text>(<xsl:value-of select="@id"/>)</xsl:if>
     <xsl:if test="not(position()=last())">;</xsl:if>
     <xsl:text> </xsl:text>
   </xsl:template>
