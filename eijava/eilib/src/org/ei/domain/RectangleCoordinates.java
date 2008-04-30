@@ -127,7 +127,7 @@ public class RectangleCoordinates
           {
             int base = x * 2;
             // degress and N/S/E/W
-            out.write(rectangle.group(base + 2) + "&deg;" + rectangle.group(base + 1) + " ");
+            out.write(rectangle.group(base + 2) + " " + rectangle.group(base + 1) + " ");
             // Minutes
             /*if(!rectangle.group(base + 3).equals("00"))
             {
