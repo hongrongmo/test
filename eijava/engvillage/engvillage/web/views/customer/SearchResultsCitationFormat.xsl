@@ -120,14 +120,12 @@
             atoggleDiv.style.cursor = "pointer";
             atoggleDiv.onclick = function() { loadScript(); };
 
-            if(getmapstate() == EV_OPEN)
-            {
+            if(getmapstate() == EV_OPEN) {
               loadScript();
             }
           }
           function uninitialize() {
-            if(populated)
-            {
+            if(populated) {
               GUnload();
             }
           }
@@ -139,21 +137,16 @@
               script.src = "http://maps.google.com/maps?file=api&v=2&async=2&callback=togglemap&key=@google.maps.api.key@";
               document.body.appendChild(script);
             }
-            else {
-              togglemap();
-            }
           }
 
           function togglemap() {
-
             var divmap = document.getElementById("map");
             var atoggleDiv = document.getElementById("mapToggleDiv");
 
             // change function since cript has been loaded
             atoggleDiv.onclick = function() { togglemap(); };
 
-            if(divmap.style.display == "block")
-            {
+            if(divmap.style.display == "block") {
               // hide Map
               divmap.style.display = "none";
               setmapstate(EV_CLOSED);
@@ -162,13 +155,12 @@
               atoggleDiv.style.background = EV_SHOW_MAP_STYLE;
             }
             else {
-              if (GBrowserIsCompatible())
-              {
-                populatemap();
-
+              if (GBrowserIsCompatible()) {
                 // show map
                 divmap.style.display = "block";
                 setmapstate(EV_OPEN);
+
+                populatemap();
 
                 // change button
                 atoggleDiv.style.background = EV_HIDE_MAP_STYLE;
@@ -186,8 +178,7 @@
             request.open("GET", "/controller/servlet/Controller?CID=geoTerms&searchId=" + g_searchid, true);
             request.onreadystatechange = function() {
               if (request.readyState == 4) {
-                if (request.status == 200)
-                {
+                if (request.status == 200) {
                   mapcontainer.style.background = "none";
                   var places = eval('(' + request.responseText + ')');
 
