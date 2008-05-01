@@ -9,12 +9,12 @@ import java.util.Map;
 import java.util.HashMap;
 import org.ei.domain.Abstract;
 
+
     public class AbstractView extends DocumentView {
 
         private List fields = Arrays.asList(new String[]{"ABSTRACT",
                                                         "COORDINATES",
                                                         "CODEN",
-                                                        "EISSN",
                                                         "INDEX_TERMS",
                                                         "UNCONTROLLED_TERMS",
                                                         "NAME_OF_MEETING"});
@@ -27,7 +27,6 @@ import org.ei.domain.Abstract;
                 put(Keys.CONFERENCE_NAME,"");
                 put(Keys.CONF_DATE,"");
                 put(Keys.EDITOR_AFFS,"");
-                put(Keys.E_ISSN,"");
                 put(Keys.INDEX_TERM,"");
                 put(Keys.UNCONTROLLED_TERMS,"");
                 put(Keys.I_PUBLISHER,"");

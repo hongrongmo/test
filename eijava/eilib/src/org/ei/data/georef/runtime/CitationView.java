@@ -7,39 +7,40 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
-
 import org.ei.domain.Citation;
+
 
     public class CitationView extends DocumentView {
 
         private List fields = Arrays.asList(new String[]{"M_ID",
-                                                    "ISSN",
-                                                    "ISBN",
-                                                    "ID_NUMBER",
-                                                    "TITLE_OF_SERIAL",
-                                                    "VOLUME_ID",
-                                                    "ISSUE_ID",
-                                                    "TITLE_OF_ANALYTIC",
-                                                    "TITLE_OF_MONOGRAPH",
-                                                    "TITLE_OF_COLLECTION",
-                                                    "PERSON_ANALYTIC",
-                                                    "PERSON_MONOGRAPH",
-                                                    "PERSON_COLLECTION",
-                                                    "AUTHOR_AFFILIATION",
-                                                    "AUTHOR_AFFILIATION_ADDRESS",
-                                                    "AUTHOR_AFFILIATION_COUNTRY",
-                                                    "DATE_OF_PUBLICATION",
-                                                    "DATE_OF_MEETING",
-                                                    "LANGUAGE_TEXT",
-                                                    "PUBLISHER",
-                                                    "PUBLISHER_ADDRESS",
-                                                    "AVAILABILITY",
-                                                    "LOAD_NUMBER",
-                                                    "COPYRIGHT",
-                                                    "DOI",
-                                                    "COLLATION_ANALYTIC",
-                                                    "COLLATION_MONOGRAPH",
-                                                    "COLLATION_COLLECTION"});
+                                                        "ISSN",
+                                                        "ISBN",
+                                                        "EISSN",
+                                                        "ID_NUMBER",
+                                                        "TITLE_OF_SERIAL",
+                                                        "VOLUME_ID",
+                                                        "ISSUE_ID",
+                                                        "TITLE_OF_ANALYTIC",
+                                                        "TITLE_OF_MONOGRAPH",
+                                                        "TITLE_OF_COLLECTION",
+                                                        "PERSON_ANALYTIC",
+                                                        "PERSON_MONOGRAPH",
+                                                        "PERSON_COLLECTION",
+                                                        "AUTHOR_AFFILIATION",
+                                                        "AUTHOR_AFFILIATION_ADDRESS",
+                                                        "AUTHOR_AFFILIATION_COUNTRY",
+                                                        "DATE_OF_PUBLICATION",
+                                                        "DATE_OF_MEETING",
+                                                        "LANGUAGE_TEXT",
+                                                        "PUBLISHER",
+                                                        "PUBLISHER_ADDRESS",
+                                                        "AVAILABILITY",
+                                                        "LOAD_NUMBER",
+                                                        "COPYRIGHT",
+                                                        "DOI",
+                                                        "COLLATION_ANALYTIC",
+                                                        "COLLATION_MONOGRAPH",
+                                                        "COLLATION_COLLECTION"});
         private Map keymap = new HashMap() {
             {
                 put(Keys.AUTHORS,"");
@@ -49,6 +50,7 @@ import org.ei.domain.Citation;
                 put(Keys.DOCID,"");
                 put(Keys.EDITORS,"");
                 put(Keys.ISSN,"");
+                put(Keys.E_ISSN,"");
                 put(Keys.ISSUE_DATE,"");
                 put(Keys.LANGUAGE ,"");
                 put(Keys.MONOGRAPH_TITLE,"");
