@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.ei.domain.DataDictionary;
+import org.ei.domain.DatabaseConfig;
 import org.ei.domain.Database;
 import org.ei.domain.DocumentBuilder;
 import org.ei.domain.FastSearchControl;
@@ -111,7 +112,7 @@ public class GRFDatabase extends Database
 
     public int getSortValue()
     {
-      return getMask();
+      return (DatabaseConfig.GEO_MASK + 1);
     }
 
     public Map getTreatments()
