@@ -5,6 +5,8 @@ import org.ei.domain.Keys;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import org.ei.domain.Abstract;
 
     public class AbstractView extends DocumentView {
@@ -18,29 +20,36 @@ import org.ei.domain.Abstract;
                                                         "NAME_OF_MEETING",
                                                         "ISBN"});
 
-        private Key[] keys = new Key[]{Keys.ABSTRACT,
-                                        Keys.CLASS_CODES,
-                                        Keys.CODEN,
-                                        Keys.CONFERENCE_NAME,
-                                        Keys.CONF_DATE,
-                                        Keys.EDITOR_AFFS,
-                                        Keys.E_ISSN,
-                                        Keys.INDEX_TERM,
-                                        Keys.UNCONTROLLED_TERMS,
-                                        Keys.ISBN,
-                                        Keys.I_PUBLISHER,
-                                        Keys.MAIN_HEADING,
-                                        Keys.PROVIDER,
-                                        Keys.SPONSOR,
-                                        //GRFDocBuilder.COORDINATES,
-                                        GRFDocBuilder.LOCATIONS
-                                        };
+        private Map keymap = new HashMap() {
+            {
+                put(Keys.ABSTRACT,"");
+                put(Keys.CLASS_CODES,"");
+                put(Keys.CODEN,"");
+                put(Keys.CONFERENCE_NAME,"");
+                put(Keys.CONF_DATE,"");
+                put(Keys.EDITOR_AFFS,"");
+                put(Keys.E_ISSN,"");
+                put(Keys.INDEX_TERM,"");
+                put(Keys.UNCONTROLLED_TERMS,"");
+                put(Keys.ISBN,"");
+                put(Keys.I_PUBLISHER,"");
+                put(Keys.MAIN_HEADING,"");
+                put(Keys.PROVIDER,"");
+                put(Keys.SPONSOR,"");
+                //put(GRFDocBuilder.COORDINATES,"");
+                put(GRFDocBuilder.LOCATIONS,"");
+
+                // HERE WE ARE APPENDING ALL OF THE CITATION VIEW KEYS
+                putAll((new CitationView()).getKeyMap());
+            }
+        };
+
+        public Map getKeyMap() {
+          return keymap;
+        }
 
         public Key[] getKeys() {
-          List abstractkeys = new ArrayList();
-          abstractkeys.addAll(Arrays.asList((new CitationView()).getKeys()));
-          abstractkeys.addAll(Arrays.asList(keys));
-          return (Key[]) abstractkeys.toArray(new Key[]{});
+          return (Key[]) (getKeyMap().keySet()).toArray(new Key[]{});
         }
 
         public List getFields()

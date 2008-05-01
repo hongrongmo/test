@@ -24,6 +24,7 @@ public abstract class DocumentView {
     public abstract Key[] getKeys();
     public abstract List getFields();
     public abstract boolean exportLabels();
+    public abstract Map getKeyMap();
 
     private ResultSet rset = null;
     private ElementDataMap ht = null;
@@ -277,9 +278,9 @@ public abstract class DocumentView {
     {
       return "SELECT " + StringUtil.join(getFields(),",") + " FROM GEOREF_MASTER WHERE M_ID IN ";
     }
-    public boolean isIncluded(Key key)
+    public boolean isIncluded(Key documentkey)
     {
-      return (Arrays.asList(getKeys()).contains(key));
+      return getKeyMap().containsKey(documentkey);
     }
 
     /*

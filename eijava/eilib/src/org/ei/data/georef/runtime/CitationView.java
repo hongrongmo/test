@@ -5,11 +5,14 @@ import org.ei.domain.Keys;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+
 import org.ei.domain.Citation;
 
-public class CitationView extends DocumentView {
+    public class CitationView extends DocumentView {
 
-    private List fields = Arrays.asList(new String[]{"M_ID",
+        private List fields = Arrays.asList(new String[]{"M_ID",
                                                     "ISSN",
                                                     "TITLE_OF_SERIAL",
                                                     "VOLUME_ID",
@@ -34,37 +37,41 @@ public class CitationView extends DocumentView {
                                                     "COLLATION_ANALYTIC",
                                                     "COLLATION_MONOGRAPH",
                                                     "COLLATION_COLLECTION"});
-    private Key[] keys = new Key[]{Keys.AUTHORS,
-                                    Keys.AUTHOR_AFFS,
-                                    Keys.COPYRIGHT,
-                                    Keys.COPYRIGHT_TEXT,
-                                    Keys.DOCID,
-                                    Keys.EDITORS,
-                                    Keys.ISSN,
-                                    Keys.ISSUE_DATE,
-                                    Keys.LANGUAGE ,
-                                    Keys.MONOGRAPH_TITLE,
-                                    Keys.NO_SO,
-                                    Keys.PAGE_RANGE,
-                                    Keys.PUBLICATION_DATE,
-                                    Keys.PUBLICATION_YEAR,
-                                    Keys.PUBLISHER,
-                                    Keys.SOURCE,
-                                    Keys.TITLE,
-                                    Keys.VOLISSUE};
+        private Map keymap = new HashMap() {
+            {
+                put(Keys.AUTHORS,"");
+                put(Keys.AUTHOR_AFFS,"");
+                put(Keys.COPYRIGHT,"");
+                put(Keys.COPYRIGHT_TEXT,"");
+                put(Keys.DOCID,"");
+                put(Keys.EDITORS,"");
+                put(Keys.ISSN,"");
+                put(Keys.ISSUE_DATE,"");
+                put(Keys.LANGUAGE ,"");
+                put(Keys.MONOGRAPH_TITLE,"");
+                put(Keys.NO_SO,"");
+                put(Keys.PAGE_RANGE,"");
+                put(Keys.PUBLICATION_DATE,"");
+                put(Keys.PUBLICATION_YEAR,"");
+                put(Keys.PUBLISHER,"");
+                put(Keys.SOURCE,"");
+                put(Keys.TITLE,"");
+                put(Keys.VOLISSUE,"");
+            }
+        };
 
-    public Key[] getKeys() {
-      List abstractkeys = new ArrayList();
-      abstractkeys.addAll(Arrays.asList(keys));
-      return (Key[]) abstractkeys.toArray(new Key[]{});
-    }
+        public Map getKeyMap() {
+          return keymap;
+        }
 
-    public List getFields()
-    {
-      List abstractfields = new ArrayList();
-      abstractfields.addAll(fields);
-      return abstractfields;
-    }
-    public boolean exportLabels() { return true; }
-    public String getFormat() { return Citation.CITATION_FORMAT; }
+        public Key[] getKeys() {
+          return (Key[]) (getKeyMap().keySet()).toArray(new Key[]{});
+        }
+
+        public List getFields()
+        {
+          return fields;
+        }
+        public boolean exportLabels() { return true; }
+        public String getFormat() { return Citation.CITATION_FORMAT; }
 }
