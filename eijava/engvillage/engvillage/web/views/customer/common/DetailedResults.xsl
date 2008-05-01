@@ -46,7 +46,7 @@
         <xsl:if test="not(position()=last())">; </xsl:if>
       </span>
     </xsl:template>
-    <xsl:template match="L|A|D|R|P"> <!-- Language Field / Availability / Document type / Report Number / Publisher -->
+    <xsl:template match="L|A|D|R|P|GUR"> <!-- Language Field / Availability / Document type / Report Number / Publisher / GeoRef URLs -->
       <span CLASS="MedBlackText">
         <xsl:apply-templates />
         <xsl:if test="not(position()=last())">, </xsl:if>
