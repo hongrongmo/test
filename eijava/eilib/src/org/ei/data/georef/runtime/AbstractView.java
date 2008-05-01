@@ -36,6 +36,7 @@ import org.ei.domain.Abstract;
                 put(Keys.SPONSOR,"");
                 //put(GRFDocBuilder.COORDINATES,"");
                 put(GRFDocBuilder.LOCATIONS,"");
+                put(Keys.ISBN,"");
 
                 // HERE WE ARE APPENDING ALL OF THE CITATION VIEW KEYS
                 putAll((new CitationView()).getKeyMap());
