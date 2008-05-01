@@ -40,13 +40,13 @@
         <xsl:if test="not(position()=last())"> - </xsl:if>
       </span>
     </xsl:template>
-    <xsl:template match="OA"> <!-- Other Affiliation -->
+    <xsl:template match="OA|P"> <!-- Other Affiliation / Publisher -->
       <span CLASS="MedBlackText">
         <xsl:apply-templates />
         <xsl:if test="not(position()=last())">; </xsl:if>
       </span>
     </xsl:template>
-    <xsl:template match="L|A|D|R|P|GUR"> <!-- Language Field / Availability / Document type / Report Number / Publisher / GeoRef URLs -->
+    <xsl:template match="L|A|D|R|GUR"> <!-- Language Field / Availability / Document type / Report Number / GeoRef URLs -->
       <span CLASS="MedBlackText">
         <xsl:apply-templates />
         <xsl:if test="not(position()=last())">, </xsl:if>
