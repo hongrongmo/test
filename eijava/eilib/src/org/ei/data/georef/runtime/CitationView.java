@@ -34,6 +34,7 @@ import org.ei.domain.Citation;
                                                     "AVAILABILITY",
                                                     "LOAD_NUMBER",
                                                     "COPYRIGHT",
+                                                    "DOI",
                                                     "COLLATION_ANALYTIC",
                                                     "COLLATION_MONOGRAPH",
                                                     "COLLATION_COLLECTION"});
@@ -57,6 +58,7 @@ import org.ei.domain.Citation;
                 put(Keys.SOURCE,"");
                 put(Keys.TITLE,"");
                 put(Keys.VOLISSUE,"");
+                put(Keys.DOI,"");
             }
         };
 
