@@ -48,10 +48,6 @@ import org.ei.domain.Abstract;
           return keymap;
         }
 
-        public Key[] getKeys() {
-          return (Key[]) (getKeyMap().keySet()).toArray(new Key[]{});
-        }
-
         public List getFields()
         {
           List abstractfields = new ArrayList();

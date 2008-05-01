@@ -126,10 +126,6 @@ import org.ei.domain.FullDoc;
           return keymap;
         }
 
-        public Key[] getKeys() {
-          return (Key[]) (getKeyMap().keySet()).toArray(new Key[]{});
-        }
-
         public List getFields()
         {
           List abstractfields = new ArrayList();

@@ -21,7 +21,6 @@ import java.util.regex.*;
 public abstract class DocumentView {
 
     public abstract String getFormat();
-    public abstract Key[] getKeys();
     public abstract List getFields();
     public abstract boolean exportLabels();
     public abstract Map getKeyMap();
@@ -29,6 +28,10 @@ public abstract class DocumentView {
     private ResultSet rset = null;
     private ElementDataMap ht = null;
     private Perl5Util perl = new Perl5Util();
+
+    public Key[] getKeys() {
+      return (Key[]) (getKeyMap().keySet()).toArray(new Key[]{});
+    }
 
     public void setResultSet(ResultSet anrset) {
       this.rset = anrset;

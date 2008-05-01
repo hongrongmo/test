@@ -70,10 +70,6 @@ import org.ei.domain.Citation;
           return keymap;
         }
 
-        public Key[] getKeys() {
-          return (Key[]) (getKeyMap().keySet()).toArray(new Key[]{});
-        }
-
         public List getFields()
         {
           return fields;
