@@ -107,8 +107,8 @@
           var EV_MAPSTATE = 'mapstate';
           var EV_OPEN = 'open';
           var EV_CLOSED = 'closed';
-          var EV_SHOW_MAP_STYLE = "#FFFFFF url(/engresources/images/show_map.gif) no-repeat"
-          var EV_HIDE_MAP_STYLE = "#FFFFFF url(/engresources/images/hide_map.gif) no-repeat";
+          var EV_SHOW_MAP_STYLE_BKGRND = "#FFFFFF url(/engresources/images/show_map.gif) no-repeat"
+          var EV_HIDE_MAP_STYLE_BKGRND = "#FFFFFF url(/engresources/images/hide_map.gif) no-repeat";
           var bounds;
           var map;
           var messages = {"show":"Show Geographic Map", "hide":"Hide Geographic Map"};
@@ -116,9 +116,9 @@
           function initialize() {
 
             var atoggleDiv = document.getElementById("mapToggleDiv");
-            atoggleDiv.style.background = EV_SHOW_MAP_STYLE;
+            atoggleDiv.style.background = EV_SHOW_MAP_STYLE_BKGRND;
             atoggleDiv.style.cursor = "pointer";
-            atoggleDiv.onclick = function() { loadScript(); };
+            atoggleDiv.onclick = loadScript;
 
             if(getmapstate() == EV_OPEN) {
               loadScript();
@@ -136,6 +136,11 @@
               script.type = 'text/javascript';
               script.src = "http://maps.google.com/maps?file=api&v=2&async=2&callback=togglemap&key=@google.maps.api.key@";
               document.body.appendChild(script);
+
+              // change onclick function since loadScript has been called we do not want to call
+              // loadScript again
+              var atoggleDiv = document.getElementById("mapToggleDiv");
+              atoggleDiv.onclick = togglemap;
             }
           }
 
@@ -143,16 +148,13 @@
             var divmap = document.getElementById("map");
             var atoggleDiv = document.getElementById("mapToggleDiv");
 
-            // change function since cript has been loaded
-            atoggleDiv.onclick = function() { togglemap(); };
-
             if(divmap.style.display == "block") {
               // hide Map
               divmap.style.display = "none";
               setmapstate(EV_CLOSED);
 
               // change button
-              atoggleDiv.style.background = EV_SHOW_MAP_STYLE;
+              atoggleDiv.style.background = EV_SHOW_MAP_STYLE_BKGRND;
             }
             else {
               if (GBrowserIsCompatible()) {
@@ -163,7 +165,7 @@
                 populatemap();
 
                 // change button
-                atoggleDiv.style.background = EV_HIDE_MAP_STYLE;
+                atoggleDiv.style.background = EV_HIDE_MAP_STYLE_BKGRND;
               }
             }
           }
