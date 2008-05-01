@@ -77,8 +77,6 @@
         </xsl:if>
 
       <xsl:if test="($COMPMASK='8192' or $COMPMASK='2097152' or $COMPMASK='2105344')">
-      <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=@google.maps.api.key@"
-              type="text/javascript"></script>
       <script type="text/javascript">
           var g_searchid = "<xsl:value-of select="SEARCH-ID"/>";
       //<![CDATA[
@@ -109,82 +107,73 @@
           var EV_MAPSTATE = 'mapstate';
           var EV_OPEN = 'open';
           var EV_CLOSED = 'closed';
-          var EV_SHOW_MAP_IMAGE = "/engresources/images/show_map.gif";
-          var EV_HIDE_MAP_IMAGE = "/engresources/images/hide_map.gif";
-          var bounds = new GLatLngBounds();
+          var EV_SHOW_MAP_STYLE = "#FFFFFF url(/engresources/images/show_map.gif) no-repeat"
+          var EV_HIDE_MAP_STYLE = "#FFFFFF url(/engresources/images/hide_map.gif) no-repeat";
+          var bounds;
           var map;
           var messages = {"show":"Show Geographic Map", "hide":"Hide Geographic Map"};
 
           function initialize() {
-            if (GBrowserIsCompatible()) {
-              var atoggle = document.getElementById("mapToggle");
-              atoggle.href="javascript:togglemap();"
-              atoggle.title = messages["show"];
 
-              var atoggleImage = document.getElementById("mapToggleImage");
-              atoggleImage.src = EV_SHOW_MAP_IMAGE;
-              atoggleImage.altText = messages["show"];
+            var atoggleDiv = document.getElementById("mapToggleDiv");
+            atoggleDiv.style.background = EV_SHOW_MAP_STYLE;
+            atoggleDiv.style.cursor = "pointer";
+            atoggleDiv.onclick = function() { loadScript(); };
 
-              if(getmapstate() == EV_OPEN)
-              {
-                togglemap();
-              }
+            if(getmapstate() == EV_OPEN)
+            {
+              loadScript();
+            }
+          }
+          function uninitialize() {
+            if(populated)
+            {
+              GUnload();
             }
           }
 
-          function togglemap()
-          {
+          function loadScript() {
+            if(!populated) {
+              var script = document.createElement("script");
+              script.type = 'text/javascript';
+              script.src = "http://maps.google.com/maps?file=api&v=2&async=2&callback=togglemap&key=@google.maps.api.key@";
+              document.body.appendChild(script);
+            }
+            else {
+              togglemap();
+            }
+          }
+
+          function togglemap() {
+
             var divmap = document.getElementById("map");
-            var atoggleImage = document.getElementById("mapToggleImage");
-            var atoggle = document.getElementById("mapToggle");
+            var atoggleDiv = document.getElementById("mapToggleDiv");
+
+            // change function since cript has been loaded
+            atoggleDiv.onclick = function() { togglemap(); };
 
             if(divmap.style.display == "block")
             {
               // hide Map
-              divmap.style.display="none";
+              divmap.style.display = "none";
               setmapstate(EV_CLOSED);
-              // show button
-              atoggleImage.style.display = "inline";
-              atoggleImage.src = EV_SHOW_MAP_IMAGE;
-              atoggleImage.altText = messages["show"];
-              atoggle.title = messages["show"];
 
+              // change button
+              atoggleDiv.style.background = EV_SHOW_MAP_STYLE;
             }
             else {
-              // show map
-              divmap.style.display="block";
-              populatemap();
-              setmapstate(EV_OPEN);
-              // change button
-              atoggleImage.src = EV_HIDE_MAP_IMAGE;
-              atoggleImage.altText = messages["hide"];
-              atoggle.title = messages["hide"];
+              if (GBrowserIsCompatible())
+              {
+                populatemap();
+
+                // show map
+                divmap.style.display = "block";
+                setmapstate(EV_OPEN);
+
+                // change button
+                atoggleDiv.style.background = EV_HIDE_MAP_STYLE;
+              }
             }
-          }
-
-          function setmapstate(state)
-          {
-            createCookie(EV_MAPSTATE,state,0);
-          }
-          function getmapstate()
-          {
-            return (readCookie(EV_MAPSTATE) == null) ? EV_CLOSED : readCookie(EV_MAPSTATE);
-          }
-
-          function resetCenterAndZoom() {
-            var zoom  = map.getBoundsZoomLevel(bounds);
-            zoom = (zoom < 1) ? 1 : zoom;
-            map.setCenter(bounds.getCenter(), zoom > EV_MAXZOOM ? EV_MAXZOOM : zoom);
-          }
-
-          function createMarker(point,name,description,searchurl) {
-            var newIcon = new GIcon(G_DEFAULT_ICON);
-            var marker = new GMarker(point,{icon:newIcon, title:description});
-            GEvent.addListener(marker, "click", function() {
-              document.location = searchurl;
-              setmapstate(EV_OPEN);
-             });
-            return marker;
           }
 
           function populatemap() {
@@ -206,6 +195,7 @@
                   map.setMapType(G_PHYSICAL_MAP);
                   map.setCenter(new GLatLng(0, 0), 1);
                   map.addControl(new GLargeMapControl());
+                  bounds = new GLatLngBounds();
 
                   var markercount = ((places.placemarks.length < EV_MAXMARKERCOUNT) ? places.placemarks.length : EV_MAXMARKERCOUNT);
                   for(var i = 0; i < markercount; i++) {
@@ -225,6 +215,29 @@
             request.send(null);
           }
 
+          function createMarker(point,name,description,searchurl) {
+            var newIcon = new GIcon(G_DEFAULT_ICON);
+            var marker = new GMarker(point,{icon:newIcon, title:description});
+            GEvent.addListener(marker, "click", function() {
+              document.location = searchurl;
+              setmapstate(EV_OPEN);
+             });
+            return marker;
+          }
+
+          function resetCenterAndZoom() {
+            var zoom  = map.getBoundsZoomLevel(bounds);
+            zoom = (zoom < 1) ? 1 : zoom;
+            map.setCenter(bounds.getCenter(), zoom > EV_MAXZOOM ? EV_MAXZOOM : zoom);
+          }
+
+          function setmapstate(state) {
+            createCookie(EV_MAPSTATE,state,0);
+          }
+          function getmapstate() {
+            return (readCookie(EV_MAPSTATE) == null) ? EV_CLOSED : readCookie(EV_MAPSTATE);
+          }
+
       //]]>
       </script>
     </xsl:if>
@@ -237,7 +250,7 @@
     <body bgcolor="#FFFFFF" topmargin="0" marginheight="0" marginwidth="0">
       <xsl:if test="($COMPMASK='8192' or $COMPMASK='2097152' or $COMPMASK='2105344')">
         <xsl:attribute name="onload">initialize()</xsl:attribute>
-        <xsl:attribute name="onunload">GUnload()</xsl:attribute>
+        <xsl:attribute name="onunload">uninitialize()</xsl:attribute>
       </xsl:if>
 
       <!-- <script language="JavaScript" type="text/javascript" src="/engresources/js/wz_tooltip.js"></script> AJAX Dynamic navigators change -->

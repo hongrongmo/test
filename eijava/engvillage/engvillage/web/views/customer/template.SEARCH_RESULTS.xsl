@@ -84,41 +84,43 @@
     <br/>
     <a class="EvHeaderText">Search Results</a>
     <br/>
-    <a CLASS="SmBlackText">
-      <xsl:choose>
-        <xsl:when test="($RESULTS-COUNT=1)"><xsl:value-of select="$RESULTS-COUNT"/> record</xsl:when>
-        <xsl:otherwise><xsl:value-of select="$RESULTS-COUNT"/> records</xsl:otherwise>
-      </xsl:choose>
-      in <xsl:value-of select="DD:getDisplayName($DATABASE)"/>
-        <xsl:if test="not($SEARCH-TYPE='Easy')">
-        for
-        <!-- jam 5/23/2005 - removed display query -->
-        <!-- : <xsl:value-of select="$DISPLAY-QUERY"/> -->
+    <div id="resultsheaderdiv" style="float:left;" >
+      <div id="nestedresultsheaderdiv" style="padding:1px; float:left; border:0px solid black; display:inline" >
+        <span class="SmBlackText">
+          <xsl:choose>
+            <xsl:when test="($RESULTS-COUNT=1)"><xsl:value-of select="$RESULTS-COUNT"/> record</xsl:when>
+            <xsl:otherwise><xsl:value-of select="$RESULTS-COUNT"/> records</xsl:otherwise>
+          </xsl:choose>
+          in <xsl:value-of select="DD:getDisplayName($DATABASE)"/>
+          <xsl:if test="not($SEARCH-TYPE='Easy')">
+          for
+          <!-- jam 5/23/2005 - removed display query -->
+          <!-- : <xsl:value-of select="$DISPLAY-QUERY"/> -->
 
-        <!-- jam 5/23/2005 - removed leading commas -->
-        <!-- jam 8/19/2003 - change Emailalerts to display 'Week..' String -->
-        <!-- jam 8/19/2003 - changed A(nchor) to SPAN -->
-        <xsl:choose>
-          <!-- display email alerts - priority over last four updates! -->
-          <xsl:when test="string($EMAILALERTWEEK)"> Week <xsl:value-of select="$EMAILALERTWEEK"/></xsl:when>
-          <xsl:when test="string($LAST-FOUR-UPDATES)"> Last <xsl:value-of select="$LAST-FOUR-UPDATES"/> update(s)</xsl:when>
-          <!-- do nothing - year ranges are meaningless with combined searches -->
-          <xsl:when test="($SEARCH-TYPE='Combined')"></xsl:when>
-          <xsl:otherwise> <xsl:value-of select="//PAGE/SESSION-DATA/START-YEAR"/>-<xsl:value-of select="//PAGE/SESSION-DATA/END-YEAR"/></xsl:otherwise>
-        </xsl:choose>
-        </xsl:if>
-    </a>
+          <!-- jam 5/23/2005 - removed leading commas -->
+          <!-- jam 8/19/2003 - change Emailalerts to display 'Week..' String -->
+          <!-- jam 8/19/2003 - changed A(nchor) to SPAN -->
+          <xsl:choose>
+            <!-- display email alerts - priority over last four updates! -->
+            <xsl:when test="string($EMAILALERTWEEK)"> Week <xsl:value-of select="$EMAILALERTWEEK"/></xsl:when>
+            <xsl:when test="string($LAST-FOUR-UPDATES)"> Last <xsl:value-of select="$LAST-FOUR-UPDATES"/> update(s)</xsl:when>
+            <!-- do nothing - year ranges are meaningless with combined searches -->
+            <xsl:when test="($SEARCH-TYPE='Combined')"></xsl:when>
+            <xsl:otherwise> <xsl:value-of select="//PAGE/SESSION-DATA/START-YEAR"/>-<xsl:value-of select="//PAGE/SESSION-DATA/END-YEAR"/></xsl:otherwise>
+          </xsl:choose>
+          </xsl:if>
+        </span>
 
         &#160; &#160;
         <xsl:if test="DEDUPABLE='true'">
           <a class="DecLink" href="/controller/servlet/Controller?CID=dedupForm&amp;database={$DATABASE}&amp;SEARCHID={$QUERY-ID}&amp;COUNT={$COUNT}&amp;SEARCHTYPE={$SEARCH-TYPE}&amp;RESULTSCOUNT={$RESULTS-COUNT}">Remove Duplicates</a>
-      <A CLASS="MedBlackText">&#160; - &#160;</A>
+          <a CLASS="MedBlackText">&#160; - &#160;</a>
         </xsl:if>
 
         <xsl:if test="($PERSONALIZATION-PRESENT='true')">
             <!-- this will contain the redirect for saving the search -->
             <xsl:variable name="NEXTURL">CID=addDeleteSavedSearch&amp;selectvalue=mark&amp;option=SavedSearch&amp;searchid=<xsl:value-of select="$QUERY-ID"/>&amp;database=<xsl:value-of select="$DATABASE"/></xsl:variable>
-            <A target="_top">
+            <a target="_top">
               <xsl:attribute name="class">DecLink</xsl:attribute>
               <xsl:attribute name="HREF">
                 <xsl:choose>
@@ -137,8 +139,8 @@
                 <xsl:when test="($SAVEDSEARCH='On')"><font color="#FF3300"><b>Saved Search</b></font></xsl:when>
                 <xsl:otherwise>Save Search</xsl:otherwise>
               </xsl:choose>
-            </A>
-        <A CLASS="MedBlackText">&#160; - &#160;</A>
+            </a>
+            <a CLASS="MedBlackText">&#160; - &#160;</a>
         </xsl:if>
 
 
@@ -146,51 +148,39 @@
         <xsl:if test="($PERSONALIZATION-PRESENT='true')">
         <!-- this will contain the redirect for saving the search -->
           <xsl:variable name="NEXTURL">CID=addDeleteSavedSearch&amp;selectvalue=mark&amp;option=EmailAlert&amp;searchid=<xsl:value-of select="$QUERY-ID"/>&amp;database=<xsl:value-of select="$DATABASE"/></xsl:variable>
-                <A target="_top">
-                <xsl:attribute name="class">DecLink</xsl:attribute>
-                <xsl:attribute name="HREF">
-                  <xsl:choose>
-                    <xsl:when test="($EMAILALERT='On')">/controller/servlet/Controller?CID=addDeleteSavedSearch&amp;selectvalue=unmark&amp;option=EmailAlert&amp;searchid=<xsl:value-of select="$QUERY-ID"/>&amp;database=<xsl:value-of select="$DATABASE"/>&amp;backurl=<xsl:value-of select="$BACKURL"/></xsl:when>
-                    <xsl:when test="($PERSONALIZATION='true')">/controller/servlet/Controller?CID=addDeleteSavedSearch&amp;selectvalue=mark&amp;option=EmailAlert&amp;searchid=<xsl:value-of select="$QUERY-ID"/>&amp;database=<xsl:value-of select="$DATABASE"/>&amp;backurl=<xsl:value-of select="$BACKURL"/></xsl:when>
-                    <xsl:otherwise>/controller/servlet/Controller?EISESSION=$SESSIONID&amp;CID=personalLoginForm&amp;searchid=<xsl:value-of select="$QUERY-ID"/>&amp;count=<xsl:value-of select="$COUNT"/>&amp;searchtype=<xsl:value-of select="$SEARCH-TYPE"/>&amp;displaylogin=true&amp;database=<xsl:value-of select="$DATABASE"/>&amp;nexturl=<xsl:value-of select="java:encode($NEXTURL)"/>&amp;backurl=<xsl:value-of select="$BACKURL"/></xsl:otherwise>
-                  </xsl:choose>
-                </xsl:attribute>
-                <xsl:attribute name="title">
-                  <xsl:choose>
-                    <xsl:when test="($EMAILALERT='On')">Click here to remove alert</xsl:when>
-                    <xsl:otherwise>Click here to create alert</xsl:otherwise>
-                  </xsl:choose>
-                </xsl:attribute>
-                <xsl:choose>
-                  <xsl:when test="($EMAILALERT='On')"><font color="#FF3300"><b>Remove Alert</b></font></xsl:when>
-                  <xsl:otherwise>Create Alert</xsl:otherwise>
-                </xsl:choose>
-                </A>
+            <a target="_top">
+            <xsl:attribute name="class">DecLink</xsl:attribute>
+            <xsl:attribute name="HREF">
+              <xsl:choose>
+                <xsl:when test="($EMAILALERT='On')">/controller/servlet/Controller?CID=addDeleteSavedSearch&amp;selectvalue=unmark&amp;option=EmailAlert&amp;searchid=<xsl:value-of select="$QUERY-ID"/>&amp;database=<xsl:value-of select="$DATABASE"/>&amp;backurl=<xsl:value-of select="$BACKURL"/></xsl:when>
+                <xsl:when test="($PERSONALIZATION='true')">/controller/servlet/Controller?CID=addDeleteSavedSearch&amp;selectvalue=mark&amp;option=EmailAlert&amp;searchid=<xsl:value-of select="$QUERY-ID"/>&amp;database=<xsl:value-of select="$DATABASE"/>&amp;backurl=<xsl:value-of select="$BACKURL"/></xsl:when>
+                <xsl:otherwise>/controller/servlet/Controller?EISESSION=$SESSIONID&amp;CID=personalLoginForm&amp;searchid=<xsl:value-of select="$QUERY-ID"/>&amp;count=<xsl:value-of select="$COUNT"/>&amp;searchtype=<xsl:value-of select="$SEARCH-TYPE"/>&amp;displaylogin=true&amp;database=<xsl:value-of select="$DATABASE"/>&amp;nexturl=<xsl:value-of select="java:encode($NEXTURL)"/>&amp;backurl=<xsl:value-of select="$BACKURL"/></xsl:otherwise>
+              </xsl:choose>
+            </xsl:attribute>
+            <xsl:attribute name="title">
+              <xsl:choose>
+                <xsl:when test="($EMAILALERT='On')">Click here to remove alert</xsl:when>
+                <xsl:otherwise>Click here to create alert</xsl:otherwise>
+              </xsl:choose>
+            </xsl:attribute>
+            <xsl:choose>
+              <xsl:when test="($EMAILALERT='On')"><font color="#FF3300"><b>Remove Alert</b></font></xsl:when>
+              <xsl:otherwise>Create Alert</xsl:otherwise>
+            </xsl:choose>
+            </a>
+          </xsl:if>
+
+        <!-- this will contain the link for RSS-->
+        <xsl:if test="($RSS-LINK='true')">
+          <a class="MedBlackText">&#160; - &#160;</a>
+          <a class="DecLink" HREF="#" onClick="window.open('/controller/servlet/Controller?CID=displayRSSQuery&amp;database={$DATABASE}&amp;term1={java:encode($I-QUERY)}','newwindow','width=700,height=500,toolbar=no,location=no,scrollbars,resizable');return false;"><img src="/engresources/images/rss.gif" align="absmiddle" border="0"/></a>
+          <xsl:text>  </xsl:text><a class="DecLink" href="javascript:makeUrl('RSS_Feature.htm')"><img src="/engresources/images/blue_help.gif" border="0"/></a>
         </xsl:if>
-
-  <!-- this will contain the link for RSS-->
-  <xsl:if test="($PERSONALIZATION-PRESENT='true')">
-    <xsl:if test="($RSS-LINK='true')">
-    <a class="MedBlackText">&#160; - &#160;</a>
-    </xsl:if>
-  </xsl:if>
-    <xsl:if test="($RSS-LINK='true')">
-      <a class="DecLink" HREF="#" onClick="window.open('/controller/servlet/Controller?CID=displayRSSQuery&amp;database={$DATABASE}&amp;term1={java:encode($I-QUERY)}','newwindow','width=700,height=500,toolbar=no,location=no,scrollbars,resizable');return false;">
-        <img src="/engresources/images/rss.gif" align="absmiddle" border="0"/>
-      </a>
-      <xsl:text>  </xsl:text>
-      <a class="DecLink" href="javascript:makeUrl('RSS_Feature.htm')">
-      <img src="/engresources/images/blue_help.gif" align="absmiddle" border="0"/>
-      </a>
-    </xsl:if>
-
-   <xsl:if test="($COMPMASK='8192' or $COMPMASK='2097152' or $COMPMASK='2105344')">
-      &#160;<a class="SpLink" id="mapToggle"><img src="/engresources/images/s.gif" align="absmiddle" id="mapToggleImage" border="0" width="110" height="18"/></a>
-      <!-- <xsl:text>  </xsl:text>
-      <a class="DecLink" href="javascript:makeUrl('Map_Feature.htm')">
-      <img src="/engresources/images/blue_help.gif" align="absmiddle" border="0"/>
-      </a> -->
-    </xsl:if>
+      </div>
+      <xsl:if test="($COMPMASK='8192' or $COMPMASK='2097152' or $COMPMASK='2105344')">
+        <div id="mapToggleDiv" style="margin-left:4px; float:left; display:inline; border:0px solid black; width:110px; height:18px" />
+      </xsl:if>
+    </div>
 
   <div id="map" style="clear:both;display:none;">
     <br/>
