@@ -17,8 +17,7 @@ import org.ei.domain.Abstract;
                                                         "EISSN",
                                                         "INDEX_TERMS",
                                                         "UNCONTROLLED_TERMS",
-                                                        "NAME_OF_MEETING",
-                                                        "ISBN"});
+                                                        "NAME_OF_MEETING"});
 
         private Map keymap = new HashMap() {
             {
@@ -31,7 +30,6 @@ import org.ei.domain.Abstract;
                 put(Keys.E_ISSN,"");
                 put(Keys.INDEX_TERM,"");
                 put(Keys.UNCONTROLLED_TERMS,"");
-                put(Keys.ISBN,"");
                 put(Keys.I_PUBLISHER,"");
                 put(Keys.MAIN_HEADING,"");
                 put(Keys.PROVIDER,"");
