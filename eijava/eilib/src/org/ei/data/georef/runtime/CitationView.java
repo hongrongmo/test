@@ -14,6 +14,7 @@ import org.ei.domain.Citation;
 
         private List fields = Arrays.asList(new String[]{"M_ID",
                                                     "ISSN",
+                                                    "ID_NUMBER",
                                                     "TITLE_OF_SERIAL",
                                                     "VOLUME_ID",
                                                     "ISSUE_ID",
@@ -58,6 +59,9 @@ import org.ei.domain.Citation;
                 put(Keys.SOURCE,"");
                 put(Keys.TITLE,"");
                 put(Keys.VOLISSUE,"");
+                put(Keys.VOLUME,"");
+                put(Keys.ISSUE,"");
+                put(Keys.ACCESSION_NUMBER,"");
                 put(Keys.DOI,"");
             }
         };
