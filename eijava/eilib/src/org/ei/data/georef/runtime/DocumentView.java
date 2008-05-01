@@ -125,10 +125,20 @@ public abstract class DocumentView {
       // Change Key INSIDE ISBN object in order to change Label
       ElementData isbn = new ISBN(StringUtil.EMPTY_STRING);
       isbn.setKey(GRFDocBuilder.MULTI_ISBN);
-      //Include value under ISBN key for linking - but this will NOT be exported to the View
-      addDocumentValue(Keys.ISBN, createColumnValueField("ISBN"), isbn);
-      //Include value under alternate ISBN for the View so we can link multiple ISBNs
+      //Include value under alternate ISBN for the View so we can display/link multiple ISBNs
       addDocumentValue(GRFDocBuilder.MULTI_ISBN, createColumnValueField("ISBN"), isbn);
+
+      // Include value under ISBN key for linking - but this will NOT be exported to the View
+      // So we bypass the addDocumentValue(0 checks and just add it directly to the document map
+      String fieldvalue = createColumnValueField("ISBN").getValue();
+      if(fieldvalue != null)
+      {
+        String[] multivalues = fieldvalue.split(GRFDocBuilder.AUDELIMITER);
+        if((multivalues != null) && (multivalues.length >= 1))
+        {
+          ht.put(Keys.ISBN, new ISBN(multivalues[0]));
+        }
+      }
 
       addDocumentValue(Keys.ISSN, new IssnDecorator(createColumnValueField("ISSN")), new ISSN(StringUtil.EMPTY_STRING));
       // Change Key INSIDE ISSN object in order to change Label
