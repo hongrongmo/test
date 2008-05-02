@@ -115,6 +115,9 @@
 
           function initialize() {
             var atoggleDiv = document.getElementById("mapToggleDiv");
+            atoggleDiv.style.width = "110px";
+            atoggleDiv.style.height = "18px";
+            atoggleDiv.style.margin = "4px 4px 0px 4px";
             atoggleDiv.style.background = EV_SHOW_MAP_STYLE_BKGRND;
             atoggleDiv.style.cursor = "pointer";
             atoggleDiv.onclick = loadScript;
