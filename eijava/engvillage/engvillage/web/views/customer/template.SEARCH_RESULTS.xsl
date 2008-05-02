@@ -177,7 +177,7 @@
           <xsl:text>  </xsl:text><a class="DecLink" href="javascript:makeUrl('RSS_Feature.htm')">      <img src="/engresources/images/blue_help.gif" align="absmiddle" border="0"/></a>
         </xsl:if>
       </div>
-      <div id="mapToggleDiv" style="margin:4px 4px 0px 4px; float:left; display:inline;" />
+      <div id="mapToggleDiv" style="float:left; display:inline;" />
     </div>
 
   <div id="map" style="clear:both;display:none;">
