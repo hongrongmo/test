@@ -40,7 +40,7 @@ public class ExtractIndexTermsGrf {
 	try
 	{
 
-		writerTerms	= new PrintWriter(new FileWriter(dbname+"_iterms.lkp"));
+		writerTerms	= new PrintWriter(new FileWriter(dbname+"_cvs.lkp"));
 
 		if(load_number_end == 0)
 		{

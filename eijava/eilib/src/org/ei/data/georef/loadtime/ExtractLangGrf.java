@@ -43,7 +43,7 @@ public class ExtractLangGrf {
 	try
 	{
 
-		writerLang	= new PrintWriter(new FileWriter(dbname+"_lang.lkp"));
+		writerLang	= new PrintWriter(new FileWriter(dbname+"_la.lkp"));
 
 		if(load_number_end == 0)
 		{

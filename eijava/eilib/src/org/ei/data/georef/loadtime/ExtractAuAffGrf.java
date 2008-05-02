@@ -40,7 +40,7 @@ public class ExtractAuAffGrf {
 	try
 	{
 
-		writerAuf	= new PrintWriter(new FileWriter(dbname+"_ausAff.lkp"));
+		writerAuf	= new PrintWriter(new FileWriter(dbname+"_af.lkp"));
 
 		if(load_number_end == 0)
 		{
