@@ -76,7 +76,7 @@
           <xsl:call-template name="DEDUP-SCRIPT" />
         </xsl:if>
 
-      <xsl:if test="($COMPMASK='8192' or $COMPMASK='2097152' or $COMPMASK='2105344')">
+      <xsl:if test="($COMPMASK='8192' or $COMPMASK='2097152' or $COMPMASK='2105344') and (//NAVIGATOR[@NAME='geonav'])">
       <script type="text/javascript">
           var g_searchid = "<xsl:value-of select="SEARCH-ID"/>";
       //<![CDATA[
@@ -237,7 +237,7 @@
     </head>
 
     <body bgcolor="#FFFFFF" topmargin="0" marginheight="0" marginwidth="0">
-      <xsl:if test="($COMPMASK='8192' or $COMPMASK='2097152' or $COMPMASK='2105344')">
+      <xsl:if test="($COMPMASK='8192' or $COMPMASK='2097152' or $COMPMASK='2105344') and (//NAVIGATOR[@NAME='geonav'])">
         <xsl:attribute name="onload">initialize()</xsl:attribute>
         <xsl:attribute name="onunload">uninitialize()</xsl:attribute>
       </xsl:if>
