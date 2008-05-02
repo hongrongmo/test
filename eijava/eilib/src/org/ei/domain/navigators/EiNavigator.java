@@ -117,9 +117,8 @@ public class EiNavigator
     private static List navigatorNames = new ArrayList();
     static
     {
-        navigatorNames.add(EiNavigator.GEO);
-
         navigatorNames.add(EiNavigator.DB);
+        navigatorNames.add(EiNavigator.GEO);
         navigatorNames.add(EiNavigator.AU);
         navigatorNames.add(EiNavigator.AF);
         navigatorNames.add(EiNavigator.CV);
