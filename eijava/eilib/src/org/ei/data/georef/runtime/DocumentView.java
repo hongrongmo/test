@@ -437,12 +437,16 @@ public abstract class DocumentView {
 
     public String getPublisher()
     {
-      String strvalue = createColumnValueField("PUBLISHER").getValue();
-      String strvalueaddr = createColumnValueField("PUBLISHER_ADDRESS").getValue();
-
-      if((strvalue != null) && (strvalueaddr != null))
+      String strvalue = null;
+      if(isIncluded(Keys.PUBLISHER))
       {
-        strvalue = strvalue.concat(", ").concat(strvalueaddr);
+        strvalue = createColumnValueField("PUBLISHER").getValue();
+        String strvalueaddr = createColumnValueField("PUBLISHER_ADDRESS").getValue();
+
+        if((strvalue != null) && (strvalueaddr != null))
+        {
+          strvalue = strvalue.concat(", ").concat(strvalueaddr);
+        }
       }
       return strvalue;
     }
