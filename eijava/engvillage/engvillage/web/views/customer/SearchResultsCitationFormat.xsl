@@ -114,16 +114,12 @@
           var messages = {"show":"Show Geographic Map", "hide":"Hide Geographic Map"};
 
           function initialize() {
-
             var atoggleDiv = document.getElementById("mapToggleDiv");
             atoggleDiv.style.background = EV_SHOW_MAP_STYLE_BKGRND;
             atoggleDiv.style.cursor = "pointer";
             atoggleDiv.onclick = loadScript;
-
-            if(getmapstate() == EV_OPEN) {
-              loadScript();
-            }
           }
+
           function uninitialize() {
             if(populated) {
               GUnload();
