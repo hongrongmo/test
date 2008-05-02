@@ -16,6 +16,8 @@ import org.ei.domain.FullDoc;
                                                         "COORDINATES",
                                                         "URL",
                                                         "EDITION",
+                                                        "PUBLISHER",
+                                                        "PUBLISHER_ADDRESS",
                                                         "MEDIUM_OF_SOURCE",
                                                         "SUMMARY_ONLY_NOTE",
                                                         "SOURCE_NOTE",
