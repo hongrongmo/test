@@ -177,9 +177,7 @@
           <xsl:text>  </xsl:text><a class="DecLink" href="javascript:makeUrl('RSS_Feature.htm')">      <img src="/engresources/images/blue_help.gif" align="absmiddle" border="0"/></a>
         </xsl:if>
       </div>
-      <xsl:if test="($COMPMASK='8192' or $COMPMASK='2097152' or $COMPMASK='2105344')">
-        <div id="mapToggleDiv" style="margin:4px 4px 0px 4px; float:left; display:inline; border:0px solid black; width:110px; height:18px" />
-      </xsl:if>
+      <div id="mapToggleDiv" style="margin:4px 4px 0px 4px; float:left; display:inline;" />
     </div>
 
   <div id="map" style="clear:both;display:none;">
