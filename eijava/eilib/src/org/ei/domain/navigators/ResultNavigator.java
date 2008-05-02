@@ -471,7 +471,7 @@ public class ResultNavigator
             //PID (IPC Code, PID)
             anav.setDisplayname("IPC code");
           }
-          else if(m_georef || m_geobase)
+          else if((m_georef || m_geobase) && !(m_compendex || m_inspec || m_ntis || m_uspatents || m_eupatents || m_cbnb ||  m_books || m_encompasslit || m_encompasspat))
           {
             fastnavigators.remove(anav);
 
