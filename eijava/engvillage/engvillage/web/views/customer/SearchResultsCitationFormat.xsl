@@ -133,7 +133,7 @@
             if(!populated) {
               var script = document.createElement("script");
               script.type = 'text/javascript';
-              script.src = "http://maps.google.com/maps?file=api&v=2&async=2&callback=togglemap&key=@google.maps.api.key@";
+              script.src = "http://maps.google.com/maps?oe=utf-8&file=api&v=2&async=2&callback=togglemap&key=@google.maps.api.key@&client=gme-elsevier";
               document.body.appendChild(script);
 
               // change onclick function since loadScript has been called we do not want to call
