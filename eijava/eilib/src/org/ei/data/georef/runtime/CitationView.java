@@ -32,8 +32,6 @@ import org.ei.domain.Citation;
                                                         "DATE_OF_PUBLICATION",
                                                         "DATE_OF_MEETING",
                                                         "LANGUAGE_TEXT",
-                                                        "PUBLISHER",
-                                                        "PUBLISHER_ADDRESS",
                                                         "AVAILABILITY",
                                                         "LOAD_NUMBER",
                                                         "COPYRIGHT",
@@ -58,7 +56,6 @@ import org.ei.domain.Citation;
                 put(Keys.PAGE_RANGE,"");
                 put(Keys.PUBLICATION_DATE,"");
                 put(Keys.PUBLICATION_YEAR,"");
-                put(Keys.PUBLISHER,"");
                 put(Keys.SOURCE,"");
                 put(Keys.TITLE,"");
                 put(Keys.VOLISSUE,"");

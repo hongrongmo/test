@@ -29,7 +29,6 @@ import org.ei.domain.Abstract;
                 put(Keys.EDITOR_AFFS,"");
                 put(Keys.INDEX_TERM,"");
                 put(Keys.UNCONTROLLED_TERMS,"");
-                put(Keys.I_PUBLISHER,"");
                 put(Keys.MAIN_HEADING,"");
                 put(Keys.PROVIDER,"");
                 put(Keys.SPONSOR,"");
