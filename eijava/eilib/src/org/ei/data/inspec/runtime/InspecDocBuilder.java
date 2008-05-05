@@ -1119,25 +1119,25 @@ public class InspecDocBuilder
                 if(strRTYPE.equals("08")) {
                     if (rset.getString("AUS") != null)
                     {
-                            String aus = rset.getString("AUS");
-                            if (rset.getString("AUS2") != null)
-                            {
-                                aus = aus.concat(rset.getString("AUS2"));
-                            }
-                            Contributors inventors = new Contributors(Keys.INVENTORS, getContributors(aus, Keys.INVENTORS));
-                            if(rset.getString("AAFF") != null)
-                            {
-                                String[] afarray = rset.getString("AAFF").split(IDDELIMITER);
-                                if(rset.getString("AFC") != null)
-                                {
-                                    afarray[0] = afarray[0].concat(", ").concat(rset.getString("AFC"));
-                                }
-                                 afarray[1] = afarray[1].substring(afarray[1].lastIndexOf(".")+1) ;
-                                Affiliation affil = new Affiliation(Keys.RIS_AD, afarray[0], afarray[1]);
-                                ht.put(Keys.RIS_AD, new Affiliations(Keys.RIS_AD, affil));
-                            }
-                        ht.put(Keys.RIS_AUS, inventors);
-
+						String aus = rset.getString("AUS");
+						if (rset.getString("AUS2") != null)
+						{
+							aus = aus.concat(rset.getString("AUS2"));
+						}
+						Contributors inventors = new Contributors(Keys.INVENTORS, getContributors(aus, Keys.INVENTORS));
+						inventors.nullAffilID();
+						if(rset.getString("AAFF") != null)
+						{
+							String[] afarray = rset.getString("AAFF").split(IDDELIMITER);
+							if(rset.getString("AFC") != null)
+							{
+								afarray[0] = afarray[0].concat(", ").concat(rset.getString("AFC"));
+							}
+							 afarray[1] = afarray[1].substring(afarray[1].lastIndexOf(".")+1) ;
+							Affiliation affil = new Affiliation(Keys.RIS_AD, afarray[0], afarray[1]);
+							ht.put(Keys.RIS_AD, new Affiliations(Keys.RIS_AD, affil));
+						}
+						ht.put(Keys.RIS_AUS, inventors);
                     }
 
                 } else {
@@ -1149,7 +1149,7 @@ public class InspecDocBuilder
                             aus = aus.concat(rset.getString("AUS2"));
                         }
                         Contributors authors = new Contributors(Keys.AUTHORS, getContributors(aus, Keys.AUTHORS));
-
+						authors.nullAffilID();
                         if(rset.getString("AAFF") != null)
                         {
                             String[] afarray = rset.getString("AAFF").split(IDDELIMITER);
@@ -1174,7 +1174,8 @@ public class InspecDocBuilder
                             }
 
                             Contributors editors = new Contributors(Keys.EDITORS, getContributors(rset.getString("EDS"), Keys.EDITORS));
-                            ht.put(Keys.RIS_EDS,editors);
+                        	editors.nullAffilID();
+                        	ht.put(Keys.RIS_EDS,editors);
 
                             if(rset.getString("EAFF") != null)
                             {

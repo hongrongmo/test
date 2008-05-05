@@ -75,6 +75,11 @@ public class Contributor
 		this.name = name;
 	}
 
+	public void setAffilID(String[] affilID)
+	{
+		this.affilID = affilID;
+	}
+
 	public void setEmail(String email)
 	{
 		this.email = email;

@@ -45,6 +45,15 @@ public class Contributors
 		}
 	}
 
+	public void nullAffilID()
+	{
+		for(int i=0; i<this.contributors.size(); i++)
+		{
+			Contributor c = (Contributor)contributors.get(i);
+			c.setAffilID(null);
+		}
+	}
+
 	public Contributors(Key key,
 				       List list)
 	{
