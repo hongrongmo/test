@@ -84,9 +84,12 @@ public class ISBN
 		out.write("<");
 		out.write(this.key.getKey());
 
+    if(this.labels && this.key.getLabel() != null)
+    {
 			out.write(" label=\"");
 			out.write(this.key.getLabel());
 			out.write("\"");
+    }
 
 		out.write("><![CDATA[");
 		out.write(this.isbn);
