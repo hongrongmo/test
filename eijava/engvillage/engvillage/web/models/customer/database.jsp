@@ -39,16 +39,16 @@
 
     // - - - -LEXISNEXIS NEWS- - - -
     dataBaseNames.put("LEX", "LexisNexis|LexisNexis News");
-    
+
     // - - - -PAPER VILLAGE- - - -
     dataBaseNames.put("PCH", "PaperChem");
-    
+
     // - - - -Chemica VILLAGE- - - -
     dataBaseNames.put("CHM", "Chimica");
-       
+
     // - - - - CBNB - - - -//
     dataBaseNames.put("CBN", "CBNB");
-    
+
     // - - - - Encompass - - - - //
     dataBaseNames.put("ELT", "EncompassLit");
     dataBaseNames.put("EPT", "EncompassPat");
@@ -114,7 +114,16 @@
         // Local Databases come first
 
         // - - - -BIBLIOGRAPHIC DATABASES- - - -
-      	int[] dbMasks = {1, 2, 4, 32768, 16384, 8192, 262144, 1048576};
+      	int[] dbMasks = {org.ei.domain.DatabaseConfig.CPX_MASK,
+      	                  org.ei.domain.DatabaseConfig.INS_MASK,
+      	                  org.ei.domain.DatabaseConfig.NTI_MASK,
+      	                  org.ei.domain.DatabaseConfig.UPA_MASK,
+      	                  org.ei.domain.DatabaseConfig.EUP_MASK,
+      	                  org.ei.domain.DatabaseConfig.GEO_MASK,
+                          org.ei.domain.DatabaseConfig.GRF_MASK,
+                          org.ei.domain.DatabaseConfig.CBF_MASK,
+                          org.ei.domain.DatabaseConfig.IBS_MASK};
+
         for(int x=0; x < dbMasks.length ; x++)
         {
             if((userMask & dbMasks[x]) == dbMasks[x])
@@ -193,8 +202,8 @@
                 out.print(dbNameValues[1]);
                 out.print("\"/>");
             }
-            
-            
+
+
         }
 
     // - - - -STANDARDS- - - -
