@@ -105,6 +105,7 @@
           var EV_MAXZOOM = 5;
           var EV_MAXMARKERCOUNT = 30;
           var EV_MAPSTATE = 'mapstate';
+          var EV_UNAVAILABLE = 'unavailable';
           var EV_OPEN = 'open';
           var EV_CLOSED = 'closed';
           var EV_SHOW_MAP_STYLE_BKGRND = "#FFFFFF url(/engresources/images/show_map.gif) no-repeat"
@@ -112,15 +113,41 @@
           var bounds;
           var map;
           var messages = {"show":"Show Geographic Map", "hide":"Hide Geographic Map"};
+          var apikeys = { "engineeringvillage.com":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhTq1aVOHKz326Ly74ktyh0JEC50cxRcwqEG9_IZn1rf-kXlYHD0OAjeKw", "engineeringvillage2.com":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhQycePdRUCs6MMAMRXc5pXGU3hn3hRfr_zEZfLKIyUShHi94g2KWSfGEw","engineeringvillage.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhSAdZp0PxlTEhTFv3KMS9ULbNb5zBRqzELdPImli2KTwR6NaFokcBv4bA","engineeringvillage2.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhSQVDkHczPvGQBBH-1zyyQlxvW27BTYxtGf1JR2Az5uJMv5BiYUcHc0fg","chemvillage.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhRc2oirmkLapUOdAKcS-7VrLe4NmRRygHzNcODvNaPwfo8u7kjzm8R3Pg","papervillage2.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhRoQ9NpbmNyNRg_ZVHqDXsW5KVm9BQAIDpSj4LWpPYl79Ju3n8FsZYtiA","paperchem.com":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhSwBt7CUughPYSQRGOq0g9Cnw2rgRS09l1TiHYrU0IFHRsrrd0Ioscj6g","papervillage.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhR4KYQ73p3WzPF7syNfyrFgFZtwaxR5sJ7ySrsRekJV7hIExrrtRqD08g","papervillage2.com":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhS3XaAm7oOu6A7GrMVbYRe2u9FCpRSfk-An4_9sm-2YoETe1SnzwtWffg","apiencompass.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhRHcUpwnapUojBcsWU6PxPlD9oAeBR6FefYn5tiecY3qDiH2LruH550xw","eiencompass.com":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhR1px2Xrv_o7VDsm6kNUoHpHa-UvhQXJf3NTv0tT22yWiSZ3EogdInG7Q","encompassvillage.com":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhQyD6pGsbDZ_IMKl1sG3ErY3WRqNRTxQeViRtl5W6vKzuRQpp1iqSg8Ig","encompassvillage.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhQG36b3Ti2jJLY9hFCzqh5YnzGkahRkPw6Cz4ehvpyGlSKiP6_Kp_z9Ug","engineering.info":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhQdj5zTPYNALJdFQ3g4i4SKdwSvaRTVatlT7eTG_ZFbiWw2UFSFdDHnRg","ei.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhRuaXv0upmtkVKGInlPqbnmlfHbchTAnPAuaMYAPTnePG4sN7e7vp9TDA","eiupdate.com":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhSjJoWNZjSUecJsz12uW-MYKVSAGRRZ4zU1D8r7_l5NvZ1sxiO2IfcBJQ","computingvilage.com":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhSXfA8DhS0cX5yip0splZfiPTTUvhRStHk6TCuH_pbilHbHf7oh2_-FeA","computingvilage.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhQW-1Oqs2sSJ0CVE9rnmbTC5ct-FxQbKmoF2h1SML5kcy42qF7yKatCWw","computingvilage2.com":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhS3IEPVyzgN_tZD_BbJlBnZtGYU4hR0_2PcBMQOwFpPz-vCa9pZFQUfMw","computingvilage2.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhQDqIA5XFC2g8g5-6CbiVezTA1ALRT-ahpVQjANJw9Uqtkd8Q39PTcr_A" }
+          var domainkey = null;
+          var devkey = "@google.maps.api.key@";
 
           function initialize() {
+            var strdomain = document.domain;
+            strdomain = strdomain.match(/\w+\.(?:com|org)$/);
+            if(strdomain != null)
+            {
+              domainkey = apikeys[strdomain];
+            }
+            else
+            {
+              strdomain = document.domain;
+              strdomain = strdomain.match(/^(?:\d{1,3}\.){3}\d{1,3}$/);
+              if(strdomain != null)
+              {
+                domainkey = devkey;
+              }
+            }
+
             var atoggleDiv = document.getElementById("mapToggleDiv");
             atoggleDiv.style.width = "110px";
             atoggleDiv.style.height = "18px";
             atoggleDiv.style.margin = "4px 4px 0px 4px";
             atoggleDiv.style.background = EV_SHOW_MAP_STYLE_BKGRND;
             atoggleDiv.style.cursor = "pointer";
-            atoggleDiv.onclick = loadScript;
+            if(domainkey != null)
+            {
+              atoggleDiv.onclick = loadScript;
+            }
+            else
+            {
+              atoggleDiv.onclick = mapUnavailable;
+            }
           }
 
           function uninitialize() {
@@ -129,11 +156,15 @@
             }
           }
 
+          function mapUnavailable() {
+            alert("The Engineering Village mapping tool does not support requests from your current domain (" + document.domain + "). If you feel you have received this message in error please contact eicustomersupport@elsevier.com.");
+          }
+
           function loadScript() {
             if(!populated) {
               var script = document.createElement("script");
               script.type = 'text/javascript';
-              script.src = "http://maps.google.com/maps?oe=utf-8&file=api&v=2&async=2&callback=togglemap&key=@google.maps.api.key@&client=gme-elsevier";
+              script.src = "http://maps.google.com/maps?oe=utf-8&file=api&v=2&async=2&callback=togglemap&key=" + domainkey + "&client=gme-elsevier";
               document.body.appendChild(script);
 
               // change onclick function since loadScript has been called we do not want to call
@@ -234,9 +265,6 @@
       </script>
     </xsl:if>
     <!-- End of javascript -->
-    <STYLE>
-
-    </STYLE>
     </head>
 
     <body bgcolor="#FFFFFF" topmargin="0" marginheight="0" marginwidth="0">
