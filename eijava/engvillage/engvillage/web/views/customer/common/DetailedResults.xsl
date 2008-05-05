@@ -40,7 +40,7 @@
         <xsl:if test="not(position()=last())"> - </xsl:if>
       </span>
     </xsl:template>
-    <xsl:template match="OA|P"> <!-- Other Affiliation / Publisher -->
+    <xsl:template match="OA|P|RS|RPG"> <!-- Other Affiliation / Publisher / Sponsor / Research Program -->
       <span CLASS="MedBlackText">
         <xsl:apply-templates />
         <xsl:if test="not(position()=last())">; </xsl:if>
