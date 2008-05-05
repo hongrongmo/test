@@ -183,10 +183,17 @@
       </xsl:if>
       <xsl:apply-templates select="DB"/>
       <xsl:apply-templates select="DOC/DB/DBNAME"/>
+    	<xsl:if test="(DOC/DB/DBMASK='2097152')">
+        <xsl:apply-templates select="CPR"/>
+      </xsl:if>
       <P/>
 
       <script language="JavaScript" type="text/javascript" src="/engresources/js/wz_tooltip.js"></script>
 
+    </xsl:template>
+
+    <xsl:template match="CPR">
+      <br/><br/><a class="MedBlackText"><xsl:value-of disable-output-escaping="yes" select="."/></a>
     </xsl:template>
 
     <!-- GeoRef Templates -->
