@@ -1,13 +1,15 @@
 package org.ei.data.georef.runtime;
 
+import org.ei.domain.Citation;
 import org.ei.domain.Key;
 import org.ei.domain.Keys;
+import org.ei.util.StringUtil;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
-import org.ei.domain.Citation;
 
 
     public class CitationView extends DocumentView {
@@ -76,4 +78,11 @@ import org.ei.domain.Citation;
         }
         public boolean exportLabels() { return true; }
         public String getFormat() { return Citation.CITATION_FORMAT; }
+
+
+        public String getLanguage()
+        {
+          String strlang = super.getLanguage();
+          return new CitationAbstractLanguageDecorator(super.getLanguage()).getValue();
+        }
 }

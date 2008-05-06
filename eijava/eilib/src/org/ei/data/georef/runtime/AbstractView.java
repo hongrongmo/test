@@ -56,4 +56,10 @@ import org.ei.domain.Abstract;
         }
         public boolean exportLabels() { return true; }
         public String getFormat() { return Abstract.ABSTRACT_FORMAT; }
+
+        public String getLanguage()
+        {
+          String strlang = super.getLanguage();
+          return new CitationAbstractLanguageDecorator(super.getLanguage()).getValue();
+        }
     }
