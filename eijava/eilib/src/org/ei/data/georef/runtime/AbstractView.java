@@ -17,10 +17,12 @@ import org.ei.domain.Abstract;
                                                         "CODEN",
                                                         "INDEX_TERMS",
                                                         "UNCONTROLLED_TERMS",
+                                                        "REPORT_NUMBER",
                                                         "NAME_OF_MEETING"});
 
         private Map keymap = new HashMap() {
             {
+                put(Keys.REPORT_NUMBER,"");
                 put(Keys.ABSTRACT,"");
                 put(Keys.CLASS_CODES,"");
                 put(Keys.CODEN,"");
