@@ -491,8 +491,8 @@
           </xsl:variable>
           <tr>
             <td colspan="3">
-              <div style="display:inline;" class="im"><a href="http://www.2collab.com/bookmark/addremote?url={$ENCODED-LOCATION}&amp;title={$TITLE}{$COLLABDATA}" title="Bookmark and share in 2collab (opens in new window)" class="LgBlueLink" onclick="javascript:window.open(this.href); return false;"><img align="absmiddle" alt="Bookmark and share in 2collab (opens in new window)" border="0" width="113" height="20" src="/engresources/images/gw_ol_2co.gif"/></a></div>
-              <div style="display:inline;" class="im"><img src="/engresources/images/delicious.small.gif" border="0" width="10" height="10" /><a title="Save this page to del.icio.us" class="LgBlueLink" href="http://del.icio.us/post" onclick="javascript:window.open('http://del.icio.us/post?v=4&amp;noui&amp;jump=close&amp;url={$ENCODED-LOCATION}&amp;title={$TITLE}', 'delicious', 'toolbar=no,width=700,height=400'); return false;">del.icio.us</a></div>
+              <div style="display:inline;" class="im"><a href="http://www.2collab.com/bookmark/addremote?url={$ENCODED-LOCATION}&amp;title={$TITLE}{$COLLABDATA}" title="Bookmark and share in 2collab (opens in new window)" class="LgBlueLink" onclick="javascript:window.open(this.href); return false;"><img src="/engresources/images/2collab_logo.gif" align="absmiddle" border="0" width="37" height="24" />Add to 2collab</a></div>
+              <div style="display:inline;" class="im"><a title="Save this page to del.icio.us" class="LgBlueLink" href="http://del.icio.us/post" onclick="javascript:window.open('http://del.icio.us/post?v=4&amp;noui&amp;jump=close&amp;url={$ENCODED-LOCATION}&amp;title={$TITLE}', 'delicious', 'toolbar=no,width=700,height=400'); return false;"><img src="/engresources/images/delicious.small.gif" align="absmiddle" border="0" width="10" height="10" />del.icio.us</a></div>
             </td>
           </tr>
           <!-- edit form ends here -->
