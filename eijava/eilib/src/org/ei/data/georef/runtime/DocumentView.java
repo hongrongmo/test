@@ -149,8 +149,8 @@ public abstract class DocumentView {
       addDocumentValue(Keys.PAGE_RANGE, new SimpleValueField(getPages()), new PageRange(StringUtil.EMPTY_STRING, perl));
       addDocumentValue(Keys.PUBLICATION_YEAR, new SimpleValueField(getYear()), new Year(StringUtil.EMPTY_STRING, perl));
 
-      // LA is always included - languages in this case.
-      ht.put(Keys.LANGUAGE, new XMLMultiWrapper(Keys.LANGUAGE, getLanguage()));
+      // LA is included when not null
+      addDocumentValue(Keys.LANGUAGE, new SimpleValueField(getLanguage()));
 
       // INDEX_TERMS (CVS)
       if(isIncluded(Keys.INDEX_TERM))
@@ -501,25 +501,9 @@ public abstract class DocumentView {
       return (strvalue == null || strvalue.length() < GRFDocBuilder.MINIMUM_ABSTRACT_LENGTH) ? null : strvalue;
     }
 
-    public String[] getLanguage()
+    public String getLanguage()
     {
-      List values = new ArrayList();
-      String[] strvalue = new LanguageDecorator(createColumnValueField("LANGUAGE_TEXT")).getValue().split(GRFDocBuilder.AUDELIMITER);
-      if(strvalue != null)
-      {
-        for(int i = 0; i < strvalue.length; i++)
-        {
-          if(!strvalue[i].equalsIgnoreCase("English") && !strvalue[i].equalsIgnoreCase("EL"))
-          {
-            values.add(strvalue[i]);
-          }
-        }
-      }
-      if(!values.isEmpty())
-      {
-        strvalue = (String[]) values.toArray(new String[]{});
-      }
-      return strvalue;
+      return new LanguageDecorator(createColumnValueField("LANGUAGE_TEXT")).getValue();
     }
 
     public String getPages()
@@ -856,6 +840,43 @@ public abstract class DocumentView {
       }
     }
 
+    public class CitationAbstractLanguageDecorator extends FieldDecorator
+    {
+      protected DocumentField field;
+      public CitationAbstractLanguageDecorator(DocumentField field)
+      {
+        this.field = field;
+      }
+      public CitationAbstractLanguageDecorator(String stringvalue)
+      {
+        this(new SimpleValueField(stringvalue));
+      }
+      public String getValue()
+      {
+        String strvalue = null;
+        String strlang = field.getValue();
+        if(strlang != null)
+        {
+          String[] strlangs = strlang.split(GRFDocBuilder.AUDELIMITER);
+          List lstvalues = new ArrayList();
+          if(strlangs != null)
+          {
+            for(int i = 0; i < strlangs.length; i++)
+            {
+              if(!strlangs[i].equalsIgnoreCase("English") && !strlangs[i].equalsIgnoreCase("EL"))
+              {
+                lstvalues.add(strlangs[i]);
+              }
+            }
+          }
+          if(!lstvalues.isEmpty())
+          {
+            strvalue = StringUtil.join(lstvalues, GRFDocBuilder.AUDELIMITER);
+          }
+        }
+        return strvalue;
+      }
+    }
     /*
     * Translation Decorators
     */
