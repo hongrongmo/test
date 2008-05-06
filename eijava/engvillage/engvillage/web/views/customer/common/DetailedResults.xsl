@@ -156,7 +156,7 @@
     <xsl:template match="CAU">
 	    <A CLASS="SpLink">
 		  <xsl:attribute name="href">mailto:<xsl:value-of select="EMAIL"/></xsl:attribute>
-		  <xsl:attribute name="title">Email the correspondence</xsl:attribute>
+		  <xsl:attribute name="title">Corresponding email</xsl:attribute>
 		  <xsl:value-of select="EMAIL"/>
 	    </A>
 	    <xsl:if test="string(text())">
