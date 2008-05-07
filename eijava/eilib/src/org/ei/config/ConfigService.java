@@ -50,6 +50,7 @@ public class ConfigService extends HttpServlet
             System.out.println("Setting main index base url to:"+mainIndexBaseURL);
             FastSearchControl.BASE_URL = mainIndexBaseURL;
             LemQueryWriter.BASE_URL = lemServiceBaseURL;
+            System.out.println("Setting Lem Service base url to:"+thesaurusIndexBaseURL);
             System.out.println("Setting thesaurus index base url to:"+thesaurusIndexBaseURL);
             ThesaurusSearchControl.BASE_URL = thesaurusIndexBaseURL;
             System.out.println("Setting mailhost:"+mailHost);
