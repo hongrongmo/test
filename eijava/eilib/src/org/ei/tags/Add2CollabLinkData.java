@@ -101,12 +101,6 @@ public class Add2CollabLinkData
             out.write("&issn="+ strissn);
           }
 
-          /*
-          String strty= curdoc.getType();
-          if(strty != null)
-          {
-            out.write("&type="+ replaceTYwith2CollabString(strty));
-          }*/
           String strabs = curdoc.getMapDataElement(Keys.ABSTRACT);
           if(strabs != null)
           {
@@ -176,54 +170,4 @@ public class Add2CollabLinkData
     }
     out.write("]]></COLLABLINKDATA>");
   }
-
-
-    public  String  replaceTYwith2CollabString(String str)
-    {
-        if(str==null || str.equals("QQ"))
-        {
-          str=StringUtil.EMPTY_STRING;
-        }
-/*
-          <option value="Journal Article">Journal Article</option>
-          <option value="Patent">Patent</option>
-
-          <option value="Pre-print">Pre-print</option>
-          <option value="Technical Report">Technical Report</option>
-          <option value="Thesis">Thesis</option>
-          <option value="Dissertation">Dissertation</option>
-          <option value="Journal Homepage">Journal Homepage</option>
-          <option value="E-print">E-print</option>
-
-          <option value="Book">Book</option>
-          <option value="Book Chapter">Book Chapter</option>
-          <option value="Conference Paper">Conference Paper</option>
-          <option value="Article In Press">Article In Press</option>
-          <option value="Web Document">Web Document</option>
-          <option value="Presentation">Presentation</option>
-
-          <option value="Course Material">Course Material</option>
-          <option value="Statistical/Experimental Data">Statistical/Experimental Data</option>
-          <option value="Generic">Generic</option></select>
-*/
-      if(!str.equals(StringUtil.EMPTY_STRING))
-      {
-        if (str.equals("JA")){str = "Journal Article";}
-        else if (str.equals("CA")){str = "Conference Paper";}
-        else if (str.equals("CP")){str = "Conference Paper";}
-        else if (str.equals("MC")){str = "Book Chapter";}
-        else if (str.equals("MR")){str = "Book";}
-        else if (str.equals("RC")){str = "Technical Report";}
-        else if (str.equals("RR")){str = "Technical Report";}
-        else if (str.equals("DS")){str = "Thesis";}
-        else if (str.equals("UP")){str = "";}
-        else if (str.equals("MP")){str = "";}
-        else
-        {
-          str=StringUtil.EMPTY_STRING;
-        }
-      }
-
-      return str;
-    }
 }
