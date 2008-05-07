@@ -60,6 +60,6 @@ import org.ei.domain.Abstract;
         public String getLanguage()
         {
           String strlang = super.getLanguage();
-          return new CitationAbstractLanguageDecorator(super.getLanguage()).getValue();
+          return new CitationAbstractLanguageDecorator(strlang).getValue();
         }
     }

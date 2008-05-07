@@ -83,6 +83,6 @@ import java.util.HashMap;
         public String getLanguage()
         {
           String strlang = super.getLanguage();
-          return new CitationAbstractLanguageDecorator(super.getLanguage()).getValue();
+          return new CitationAbstractLanguageDecorator(strlang).getValue();
         }
 }
