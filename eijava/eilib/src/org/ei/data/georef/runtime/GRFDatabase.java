@@ -61,7 +61,7 @@ public class GRFDatabase extends Database
 
     protected String getBaseTableHook()
     {
-      return "GEOREF_TEST";
+      return "GEOREF_MASTER";
     }
 
 
