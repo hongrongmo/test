@@ -124,9 +124,9 @@ public abstract class DocumentView {
       addDocumentValue(Keys.ISSUE, createColumnValueField("ISSUE_ID"), new Issue(StringUtil.EMPTY_STRING,perl));
       // Change Key INSIDE ISBN object in order to change Label
       ElementData isbn = new ISBN(StringUtil.EMPTY_STRING);
-      isbn.setKey(GRFDocBuilder.MULTI_ISBN);
+      isbn.setKey(Keys.MULTI_ISBN);
       //Include value under alternate ISBN for the View so we can display/link multiple ISBNs
-      addDocumentValue(GRFDocBuilder.MULTI_ISBN, createColumnValueField("ISBN"), isbn);
+      addDocumentValue(Keys.MULTI_ISBN, createColumnValueField("ISBN"), isbn);
 
       // Include value under ISBN key for linking - but this will NOT be exported to the View
       // So we bypass the addDocumentValue(0 checks and just add it directly to the document map
@@ -191,7 +191,7 @@ public abstract class DocumentView {
       }
 
       // COORDINATES
-      if(isIncluded(GRFDocBuilder.LOCATIONS))
+      if(isIncluded(Keys.LOCATIONS))
       {
 // Latitude. Latitude indicates the number of degrees north or south of the equator (0 degrees). Latitude is indicated by a character string of seven characters: a letter N or S to indicate direction (i.e., north or south of the equator) and a six-digit number indicating the number of degrees, minutes, and seconds. Latitude coordinates are also cascaded to the full degree (i.e., first two digits): N451430 is North, 45 degrees, 14 minutes, 30 seconds; it is also cascaded to N45.
 // Longitude. Longitude indicates the number of degrees east or west of the prime meridian (0 degrees). Longitude is indicated by a character string of eight characters: a letter E or W to indicate direction (i.e., east or west of the prime meridian) and a seven-digit number indicating the number of degrees, minutes, and seconds. Longitude coordinates are also cascaded to the full degree (i.e., first three digits): W1211752 is West, 121 degrees, 17 minutes, 52 seconds; it is also cascaded to W121
@@ -202,7 +202,7 @@ public abstract class DocumentView {
         String strcoordinates = createColumnValueField("COORDINATES").getValue();
         if(strcoordinates != null)
         {
-          ht.put(GRFDocBuilder.LOCATIONS, new RectangleCoordinates(strcoordinates.split(GRFDocBuilder.AUDELIMITER)));
+          ht.put(Keys.LOCATIONS, new RectangleCoordinates(strcoordinates.split(GRFDocBuilder.AUDELIMITER)));
         }
       }
 
@@ -247,19 +247,19 @@ public abstract class DocumentView {
       addDocumentValue(Keys.DOI, createColumnValueField("DOI"));
       addDocumentValue(Keys.EDITION, createColumnValueField("EDITION"));
 
-      addDocumentValue(GRFDocBuilder.SOURCE_MEDIUM, createColumnValueField("MEDIUM_OF_SOURCE"));
-      addDocumentValue(GRFDocBuilder.SOURCE_NOTE, createColumnValueField("SOURCE_NOTE"));
-      addDocumentValue(GRFDocBuilder.SUMMARY_ONLY_NOTE, createColumnValueField("SUMMARY_ONLY_NOTE"));
+      addDocumentValue(Keys.SOURCE_MEDIUM, createColumnValueField("MEDIUM_OF_SOURCE"));
+      addDocumentValue(Keys.SOURCE_NOTE, createColumnValueField("SOURCE_NOTE"));
+      addDocumentValue(Keys.SUMMARY_ONLY_NOTE, createColumnValueField("SUMMARY_ONLY_NOTE"));
 
-      addDocumentValue(GRFDocBuilder.UNIVERSITY, createColumnValueField("UNIVERSITY"));
-      addDocumentValue(GRFDocBuilder.DEGREE_TYPE, createColumnValueField("TYPE_OF_DEGREE"));
-      addDocumentValue(GRFDocBuilder.RESEARCH_PROGRAM, createColumnValueField("RESEARCH_PROGRAM"));
-      addDocumentValue(GRFDocBuilder.ILLUSTRATION, createColumnValueField("ILLUSTRATION"));
-      addDocumentValue(GRFDocBuilder.ANNOTATION, createColumnValueField("ANNOTATION"));
-      addDocumentValue(GRFDocBuilder.MAP_SCALE, createColumnValueField("MAP_SCALE"));
-      addDocumentValue(GRFDocBuilder.MAP_TYPE, createColumnValueField("MAP_TYPE"));
-      addDocumentValue(GRFDocBuilder.HOLDING_LIBRARY, createColumnValueField("HOLDING_LIBRARY"));
-      addDocumentValue(GRFDocBuilder.TARGET_AUDIENCE, createColumnValueField("TARGET_AUDIENCE"));
+      addDocumentValue(Keys.UNIVERSITY, createColumnValueField("UNIVERSITY"));
+      addDocumentValue(Keys.DEGREE_TYPE, createColumnValueField("TYPE_OF_DEGREE"));
+      addDocumentValue(Keys.RESEARCH_PROGRAM, createColumnValueField("RESEARCH_PROGRAM"));
+      addDocumentValue(Keys.ILLUSTRATION, createColumnValueField("ILLUSTRATION"));
+      addDocumentValue(Keys.ANNOTATION, createColumnValueField("ANNOTATION"));
+      addDocumentValue(Keys.MAP_SCALE, createColumnValueField("MAP_SCALE"));
+      addDocumentValue(Keys.MAP_TYPE, createColumnValueField("MAP_TYPE"));
+      addDocumentValue(Keys.HOLDING_LIBRARY, createColumnValueField("HOLDING_LIBRARY"));
+      addDocumentValue(Keys.TARGET_AUDIENCE, createColumnValueField("TARGET_AUDIENCE"));
 
       addDocumentValue(Keys.COUNTRY_OF_PUB, new CountryDecorator(createColumnValueField("COUNTRY_OF_PUBLICATION")));
       addDocumentValue(Keys.COLLECTION_TITLE, new TitleDecorator(createColumnValueField("TITLE_OF_COLLECTION")));
@@ -267,15 +267,15 @@ public abstract class DocumentView {
 
       // this is a (possible) multi-field that will be split on the AUDELIMITER in addDocumentValue() method
       addDocumentValue(Keys.PUBLISHER, new SimpleValueField(getPublisher()));
-      addDocumentValue(GRFDocBuilder.AFFILIATION_OTHER, new AffiliationDecorator(createColumnValueField("AFFILIATION_SECONDARY")));
+      addDocumentValue(Keys.AFFILIATION_OTHER, new AffiliationDecorator(createColumnValueField("AFFILIATION_SECONDARY")));
 
-      addDocumentValue(GRFDocBuilder.GRF_URLS, new URLDecorator(createColumnValueField("URL")));
+      addDocumentValue(Keys.GRF_URLS, new URLDecorator(createColumnValueField("URL")));
 
       // New Doctype is shown as combination of GeoRef Doctypes and Ei Doctype codes in '()' i.e. Serial (JA), Conference  document (CA)
       //addDocumentValue(Keys.DOC_TYPE, new DocumentTypeDecorator(createColumnValueField("DOCUMENT_TYPE")));
       addDocumentValue(Keys.DOC_TYPE, getDocumentTypes());
 
-      addDocumentValue(GRFDocBuilder.CATEGORY, new CategoryDecorator(createColumnValueField("CATEGORY_CODE")));
+      addDocumentValue(Keys.CATEGORY, new CategoryDecorator(createColumnValueField("CATEGORY_CODE")));
 
       EIDoc eiDoc = new EIDoc(did, ht, getFormat());
       eiDoc.exportLabels(exportLabels());
