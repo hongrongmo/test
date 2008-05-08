@@ -34,8 +34,8 @@ import org.ei.domain.Abstract;
                 put(Keys.MAIN_HEADING,"");
                 put(Keys.PROVIDER,"");
                 put(Keys.SPONSOR,"");
-                //put(GRFDocBuilder.COORDINATES,"");
-                put(GRFDocBuilder.LOCATIONS,"");
+                //put(Keys.COORDINATES,"");
+                put(Keys.LOCATIONS,"");
                 put(Keys.ISBN,"");
 
                 // HERE WE ARE APPENDING ALL OF THE CITATION VIEW KEYS
