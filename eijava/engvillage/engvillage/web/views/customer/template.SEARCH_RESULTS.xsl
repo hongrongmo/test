@@ -84,8 +84,7 @@
     <br/>
     <a class="EvHeaderText">Search Results</a>
     <br/>
-    <div id="resultsheaderdiv" style="float:left;" >
-      <div id="nestedresultsheaderdiv" style="padding:1px; float:left; border:0px solid black; display:inline" >
+
         <span class="SmBlackText">
           <xsl:choose>
             <xsl:when test="($RESULTS-COUNT=1)"><xsl:value-of select="$RESULTS-COUNT"/> record</xsl:when>
@@ -173,12 +172,10 @@
         <!-- this will contain the link for RSS-->
         <xsl:if test="($RSS-LINK='true')">
           <a class="MedBlackText">&#160; - &#160;</a>
-          <a class="DecLink" HREF="#" onClick="window.open('/controller/servlet/Controller?CID=displayRSSQuery&amp;database={$DATABASE}&amp;term1={java:encode($I-QUERY)}','newwindow','width=700,height=500,toolbar=no,location=no,scrollbars,resizable');return false;"><img src="/engresources/images/rss.gif" align="absmiddle" border="0"/></a>
-          <xsl:text>  </xsl:text><a class="DecLink" href="javascript:makeUrl('RSS_Feature.htm')">      <img src="/engresources/images/blue_help.gif" align="absmiddle" border="0"/></a>
+          <a href="#" onClick="window.open('/controller/servlet/Controller?CID=displayRSSQuery&amp;database={$DATABASE}&amp;term1={java:encode($I-QUERY)}','newwindow','width=700,height=500,toolbar=no,location=no,scrollbars,resizable');return false;"><img style="vertical-align: middle; border:0px;" src="/engresources/images/rss.gif" /></a>
+          <xsl:text>  </xsl:text><a href="javascript:makeUrl('RSS_Feature.htm')"><img style="vertical-align:middle; border:0px;" src="/engresources/images/blue_help.gif" /></a>
+          <xsl:text>  </xsl:text><a href="#" id="mapToggleAnchor"><img id="mapToggleImg" style="vertical-align:middle; border:0px;" src="/engresources/images/s.gif" /></a>
         </xsl:if>
-      </div>
-      <div id="mapToggleDiv" style="float:left; display:inline;" />
-    </div>
 
   <div id="map" style="clear:both;display:none;">
     <br/>
