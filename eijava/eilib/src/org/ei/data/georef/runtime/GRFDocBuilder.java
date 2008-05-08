@@ -25,8 +25,6 @@ public class GRFDocBuilder implements DocumentBuilder
     public static String GRF_TEXT_COPYRIGHT = "GeoRef, Copyright 2008, American Geological Institute.";
     public static String GRF_HTML_COPYRIGHT = "GeoRef, Copyright &copy; 2008, American Geological Institute.";
     public static String PROVIDER_TEXT = "American Geological Institute";
-    private static final Key GRF_CLASS_CODES = new Key(Keys.CLASS_CODES, "Classification codes");
-    private static final Key GRF_CONTROLLED_TERMS = new Key(Keys.CONTROLLED_TERMS, "Index terms");
 
     private Database database;
 
