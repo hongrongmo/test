@@ -108,8 +108,8 @@
           var EV_UNAVAILABLE = 'unavailable';
           var EV_OPEN = 'open';
           var EV_CLOSED = 'closed';
-          var EV_SHOW_MAP_STYLE_BKGRND = "#FFFFFF url(/engresources/images/show_map.gif) no-repeat"
-          var EV_HIDE_MAP_STYLE_BKGRND = "#FFFFFF url(/engresources/images/hide_map.gif) no-repeat";
+          var EV_SHOW_MAP_SRC = "/engresources/images/show_map.gif"
+          var EV_HIDE_MAP_SRC = "/engresources/images/hide_map.gif";
           var bounds;
           var map;
           var messages = {"show":"Show Geographic Map", "hide":"Hide Geographic Map"};
@@ -123,6 +123,7 @@
             if(strdomain != null)
             {
               domainkey = apikeys[strdomain];
+              domainkey = domainkey + "&client=gme-elsevier";
             }
             else
             {
@@ -134,19 +135,20 @@
               }
             }
 
-            var atoggleDiv = document.getElementById("mapToggleDiv");
-            atoggleDiv.style.width = "110px";
-            atoggleDiv.style.height = "18px";
-            atoggleDiv.style.margin = "4px 4px 0px 4px";
-            atoggleDiv.style.background = EV_SHOW_MAP_STYLE_BKGRND;
-            atoggleDiv.style.cursor = "pointer";
+            var atoggleImg = document.getElementById("mapToggleImg");
+            atoggleImg.style.width = "110px";
+            atoggleImg.style.height = "18px";
+            atoggleImg.src = EV_SHOW_MAP_SRC;
+            atoggleImg.title = messages["show"];
+
+            var atoggleAnchor = document.getElementById("mapToggleAnchor");
             if(domainkey != null)
             {
-              atoggleDiv.onclick = loadScript;
+              atoggleAnchor.setAttribute("href","javascript:loadScript()");
             }
             else
             {
-              atoggleDiv.onclick = mapUnavailable;
+              atoggleAnchor.setAttribute("href","javascript:mapUnavailable()");
             }
           }
 
@@ -164,19 +166,20 @@
             if(!populated) {
               var script = document.createElement("script");
               script.type = 'text/javascript';
-              script.src = "http://maps.google.com/maps?oe=utf-8&file=api&v=2&async=2&callback=togglemap&key=" + domainkey + "&client=gme-elsevier";
+              script.src = "http://maps.google.com/maps?oe=utf-8&file=api&v=2&async=2&callback=togglemap&key=" + domainkey;
+
               document.body.appendChild(script);
 
               // change onclick function since loadScript has been called we do not want to call
               // loadScript again
-              var atoggleDiv = document.getElementById("mapToggleDiv");
-              atoggleDiv.onclick = togglemap;
+              var atoggleAnchor = document.getElementById("mapToggleAnchor");
+              atoggleAnchor.setAttribute("href","javascript:togglemap()");
             }
           }
 
           function togglemap() {
             var divmap = document.getElementById("map");
-            var atoggleDiv = document.getElementById("mapToggleDiv");
+            var atoggleImg = document.getElementById("mapToggleImg");
 
             if(divmap.style.display == "block") {
               // hide Map
@@ -184,7 +187,8 @@
               setmapstate(EV_CLOSED);
 
               // change button
-              atoggleDiv.style.background = EV_SHOW_MAP_STYLE_BKGRND;
+              atoggleImg.src = EV_SHOW_MAP_SRC;
+              atoggleImg.title = messages["show"];
             }
             else {
               if (GBrowserIsCompatible()) {
@@ -195,7 +199,8 @@
                 populatemap();
 
                 // change button
-                atoggleDiv.style.background = EV_HIDE_MAP_STYLE_BKGRND;
+                atoggleImg.src = EV_HIDE_MAP_SRC;
+                atoggleImg.title = messages["hide"];
               }
             }
           }
