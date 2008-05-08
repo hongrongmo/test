@@ -14,7 +14,7 @@ public class RectangleCoordinates
 
   public RectangleCoordinates(String[] s)
   {
-    this.key = GRFDocBuilder.COORDINATES;
+    this.key = Keys.COORDINATES;
     this.coordinates = s;
   }
 
@@ -45,7 +45,6 @@ public class RectangleCoordinates
     this.labels = labels;
   }
 
-
   private static final String LAT = "(N|S)(\\d+)";
   private static final String LONG = "(E|W)(\\d+)";
   private static final Pattern RECTANGLEPATTERN = Pattern.compile(RectangleCoordinates.LAT + RectangleCoordinates.LAT + RectangleCoordinates.LONG + RectangleCoordinates.LONG);
@@ -53,13 +52,6 @@ public class RectangleCoordinates
   public void toXML(Writer out)
     throws IOException
   {
-/*    out.write("<");
-    out.write(this.key.getKey());
-    out.write(" label=\"");
-    out.write(this.key.getLabel());
-    out.write("\"");
-    out.write(">");
-*/
 // Latitude. Latitude indicates the number of degrees north or south of the equator (0 degrees). Latitude is indicated by a character string of seven characters: a letter N or S to indicate direction (i.e., north or south of the equator) and a six-digit number indicating the number of degrees, minutes, and seconds. Latitude coordinates are also cascaded to the full degree (i.e., first two digits): N451430 is North, 45 degrees, 14 minutes, 30 seconds; it is also cascaded to N45.
 // Longitude. Longitude indicates the number of degrees east or west of the prime meridian (0 degrees). Longitude is indicated by a character string of eight characters: a letter E or W to indicate direction (i.e., east or west of the prime meridian) and a seven-digit number indicating the number of degrees, minutes, and seconds. Longitude coordinates are also cascaded to the full degree (i.e., first three digits): W1211752 is West, 121 degrees, 17 minutes, 52 seconds; it is also cascaded to W121
 // Coordinates are assigned as follows: Starting from the lower right-hand corner, a latitude is assigned, followed by the latitude of the upper right-hand corner (counterclockwise), the longitude of that point, and finally the longitude of the upper left-hand corner.
@@ -94,32 +86,6 @@ public class RectangleCoordinates
         Matcher rectangle = RectangleCoordinates.RECTANGLEPATTERN.matcher(coordinate);
         if(rectangle.find())
         {
-/*          String lat1 = String.valueOf(Long.parseLong(rectangle.group(2).substring(0,2)) * (rectangle.group(1).equals("S") ? -1 : 1));
-          String lat2 = String.valueOf(Long.parseLong(rectangle.group(4).substring(0,2)) * (rectangle.group(3).equals("S") ? -1 : 1));
-          String lng1 = String.valueOf(Long.parseLong(rectangle.group(6).substring(0,3)) * (rectangle.group(5).equals("W") ? -1 : 1));
-          String lng2 = String.valueOf(Long.parseLong(rectangle.group(8).substring(0,3)) * (rectangle.group(7).equals("W") ? -1 : 1));
-
-          String lat1 = String.valueOf(Long.parseLong(rectangle.group(2)) * (rectangle.group(1).equals("S") ? -1 : 1) + (Long.parseLong(rectangle.group(3)) * 1/60) + (Long.parseLong(rectangle.group(4)) * 1/360));
-          String lat2 = String.valueOf(Long.parseLong(rectangle.group(6)) * (rectangle.group(5).equals("S") ? -1 : 1) + (Long.parseLong(rectangle.group(7)) * 1/60) + (Long.parseLong(rectangle.group(8)) * 1/360));
-          String lng1 = String.valueOf(Long.parseLong(rectangle.group(10)) * (rectangle.group(9).equals("W") ? -1 : 1) + (Long.parseLong(rectangle.group(11)) * 1/60) + (Long.parseLong(rectangle.group(12)) * 1/360));
-          String lng2 = String.valueOf(Long.parseLong(rectangle.group(14)) * (rectangle.group(13).equals("W") ? -1 : 1) + (Long.parseLong(rectangle.group(15)) * 1/60) + (Long.parseLong(rectangle.group(16)) * 1/360));
-*/
-/*
-          out.write("<RECT ID=\"" + ((term != null) ? term : String.valueOf(i)) + "\">");
-          out.write("<POINT>");
-          out.write("<LAT>");out.write(lat1);out.write("</LAT>");out.write("<LONG>");out.write(lng1);out.write("</LONG>");
-          out.write("</POINT>");
-          out.write("<POINT>");
-          out.write("<LAT>");out.write(lat2);out.write("</LAT>");out.write("<LONG>");out.write(lng1);out.write("</LONG>");
-          out.write("</POINT>");
-          out.write("<POINT>");
-          out.write("<LAT>");out.write(lat2);out.write("</LAT>");out.write("<LONG>");out.write(lng2);out.write("</LONG>");
-          out.write("</POINT>");
-          out.write("<POINT>");
-          out.write("<LAT>");out.write(lat1);out.write("</LAT>");out.write("<LONG>");out.write(lng2);out.write("</LONG>");
-          out.write("</POINT>");
-          out.write("</RECT>");
-*/
           out.write("<LOC " + ((term != null) ?  " ID=\"" + term + "\" " : "") + ">");
           // LAT_LOW_RIGHT LAT_UPPER_RIGHT LONG_UPPER_RIGHT LONG_UPPER_LEFT
           out.write("<![CDATA[");
@@ -128,16 +94,6 @@ public class RectangleCoordinates
             int base = x * 2;
             // degress and N/S/E/W
             out.write(rectangle.group(base + 2) + rectangle.group(base + 1) + " ");
-            // Minutes
-            /*if(!rectangle.group(base + 3).equals("00"))
-            {
-              out.write(rectangle.group(base + 3) + "\" ");
-              // Seconds
-              if(!rectangle.group(base + 4).equals("00"))
-              {
-                out.write(rectangle.group(base + 4) + "' ");
-              }
-            }*/
           }
           out.write("]]>");
           out.write("</LOC>");
@@ -145,13 +101,6 @@ public class RectangleCoordinates
       }
     }
     out.write("</LOCS>");
-
-/*    out.write("</");
-    out.write(key.getKey());
-    out.write(">"); */
-
-
   }
-
 }
 
