@@ -28,26 +28,6 @@ public class GRFDocBuilder implements DocumentBuilder
     private static final Key GRF_CLASS_CODES = new Key(Keys.CLASS_CODES, "Classification codes");
     private static final Key GRF_CONTROLLED_TERMS = new Key(Keys.CONTROLLED_TERMS, "Index terms");
 
-    public static final Key ILLUSTRATION = new Key("ILLUS", "Illustrations");
-    public static final Key ANNOTATION = new Key("ANT", "Annotation");
-    public static final Key MAP_SCALE = new Key("MPS", "Map scale");
-    public static final Key MAP_TYPE = new Key("MPT", "Map type");
-    public static final Key SOURCE_MEDIUM = new Key("MED", "Source medium");
-    public static final Key SUMMARY_ONLY_NOTE  = new Key("SUM", "Summary only note");
-    public static final Key SOURCE_NOTE  = new Key("SRCNT", "Source note");
-    public static final Key AFFILIATION_OTHER = new Key("OAF", "Other affiliation");
-    public static final Key CATEGORY = new Key("CAT", "Category");
-    public static final Key TARGET_AUDIENCE = new Key("AUD", "Target audience");
-    public static final Key HOLDING_LIBRARY = new Key("HOLD", "Holding Library");
-    public static final Key DEGREE_TYPE = new Key("DEG", "Degree");
-    public static final Key UNIVERSITY = new Key("UNV", "University");
-    public static final Key RESEARCH_PROGRAM = new Key("RPGM", "Research program");
-    public static final Key COORDINATES = new Key("CRDN", "Coordinates");
-    public static final Key LOCATIONS = new Key("LOCS", "Locations");
-    public static final Key MERIDIAN = new Key("MRDN", "Meridian data");
-    public static final Key GRF_URLS = new Key("GURL", "URL");
-    public static final Key MULTI_ISBN = new Key("MBNS", "ISBN");
-
     private Database database;
 
     public DocumentBuilder newInstance(Database database)
