@@ -22,10 +22,7 @@
 try
 {
   ControllerClient client = null;
-  Query queryObject = null;
-  SearchResult result = null;
   ResultNavigator nav = null;
-  SearchControl sc = new FastSearchControl();
   UserSession ussession = null;
   User user = null;
   String sessionId = null;
@@ -53,32 +50,10 @@ try
 
   if(searchId != null && !searchId.equals("") && !searchId.equals("undefined"))
   {
-    log("geoTerms => searchId: " + searchId + ", sessionId " + sessionId);
-
-    try
-    {
-      queryObject = Searches.getSearch(searchId);
-      if(queryObject != null)
-      {
-        dbmask = queryObject.getDataBase();
-        queryObject.setSearchQueryWriter(new FastQueryWriter());
-        queryObject.setDatabaseConfig(databaseConfig);
-        queryObject.setCredentials(credentials);
-
-        sc.setUseNavigators(true);
-        result = sc.openSearch(queryObject,
-                                sessionId,
-                                1,
-                                false);
-
-        nav = sc.getNavigator();
-      }
-    }
-    catch(Exception e)
-    {
-      log("exception " + e.getMessage());
-      e.printStackTrace();
-    }
+    long start1 = System.currentTimeMillis();
+    NavigatorCache navcache = new NavigatorCache(sessionId);
+    nav = navcache.getFromCache(searchId);
+    System.out.println("done ms: " + String.valueOf(System.currentTimeMillis() - start1));
   }
 
   GeoRefCoordinateMap coords = GeoRefCoordinateMap.getInstance();
@@ -117,12 +92,10 @@ try
         }
       }
     }
-    log("done ms: " + String.valueOf(System.currentTimeMillis() - start));
     out.write(" ]");
     out.write("}");
     out.write("]]></js>");
   }
-
 }
 catch(Exception e)
 {
