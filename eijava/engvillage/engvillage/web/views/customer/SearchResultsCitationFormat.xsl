@@ -212,7 +212,8 @@
             mapcontainer.style.background = "#FFFFFF url(/engresources/images/waiting.gif) no-repeat";
 
             var request = GXmlHttp.create();
-            request.open("GET", "/controller/servlet/Controller?CID=geoTerms&searchId=" + g_searchid, true);
+            var milli = (new Date()).getTime();
+            request.open("GET", "/controller/servlet/Controller?CID=geoTerms&searchId=" + g_searchid + "&timestamp=" + milli, true);
             request.onreadystatechange = function() {
               if (request.readyState == 4) {
                 if (request.status == 200) {
