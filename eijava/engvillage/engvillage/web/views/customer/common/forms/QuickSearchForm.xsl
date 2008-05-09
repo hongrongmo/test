@@ -409,7 +409,7 @@
                                 </td>
                               </tr>
                             </xsl:if>
-                              <xsl:if test="(boolean(bit:hasBitSet($USERMASK,1)) or boolean(bit:hasBitSet($USERMASK,2)))">                                 
+                              <xsl:if test="(boolean(bit:hasBitSet($USERMASK,1)) or boolean(bit:hasBitSet($USERMASK,2)))">
                                 <tr>
                                   <td valign="top" ><img src="/engresources/images/s.gif" height="4"/></td>
                                 </tr>
@@ -507,7 +507,7 @@
                                     <xsl:attribute name="checked"/>
                                   </xsl:if>
                                   </input>&#160;
-                                 
+
                                   <select name="startYear" onchange="selectYearRange(0);">
                                     <xsl:value-of disable-output-escaping="yes" select="SF:getYear($SELECTED-DB,$START-YEAR,$YEAR-STRING,'startYear')"/>
                                   </select>
@@ -668,7 +668,7 @@
         </tr>
       </table>
     </center>
-<SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/QuickSearchForm_V11.js"/>
+<SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/QuickSearchForm_V12.js"/>
 <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Login.js"/>
 <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/RemoteDbLink_V5.js"/>
 <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Robohelp.js"/>

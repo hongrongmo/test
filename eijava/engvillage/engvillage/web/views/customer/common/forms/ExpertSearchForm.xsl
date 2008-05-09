@@ -51,7 +51,7 @@
     <xsl:variable name="AUTOSTEMMING"><xsl:value-of select="//SESSION-DATA/AUTOSTEMMING"/></xsl:variable>
 
   <!-- START OF JAVA SCRIPT -->
-  <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/ExpertSearchForm_V11.js"/>
+  <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/ExpertSearchForm_V12.js"/>
   <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Login.js"/>
   <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Robohelp.js"/>
 
