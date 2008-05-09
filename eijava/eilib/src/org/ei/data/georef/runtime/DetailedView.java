@@ -12,7 +12,7 @@ import org.ei.domain.FullDoc;
 
     public class DetailedView extends DocumentView {
 
-        private List fields = Arrays.asList(new String[]{"DOI",
+        private static final List fields = Arrays.asList(new String[]{"DOI",
                                                         "COORDINATES",
                                                         "URL",
                                                         "EDITION",
@@ -47,7 +47,7 @@ import org.ei.domain.FullDoc;
         // Since the order of these keys dtermines their display on the Detailed record page
         // explicitly set the Key values here instead of comibing with Abstract or Citation classes
         // AND we also use a LinkedHashMap to guarantee iteration order
-        private Map keymap = new LinkedHashMap() {
+        private static final Map keymap = new LinkedHashMap() {
             {
                 put(Keys.ACCESSION_NUMBER,"");
                 put(Keys.TITLE,"");

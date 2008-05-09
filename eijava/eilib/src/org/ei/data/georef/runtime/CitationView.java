@@ -14,7 +14,7 @@ import java.util.HashMap;
 
     public class CitationView extends DocumentView {
 
-        private List fields = Arrays.asList(new String[]{"M_ID",
+        private static final List fields = Arrays.asList(new String[]{"M_ID",
                                                         "ISSN",
                                                         "ISBN",
                                                         "EISSN",
@@ -41,7 +41,7 @@ import java.util.HashMap;
                                                         "COLLATION_ANALYTIC",
                                                         "COLLATION_MONOGRAPH",
                                                         "COLLATION_COLLECTION"});
-        private Map keymap = new HashMap() {
+        private static final Map keymap = new HashMap() {
             {
                 put(Keys.AUTHORS,"");
                 put(Keys.AUTHOR_AFFS,"");

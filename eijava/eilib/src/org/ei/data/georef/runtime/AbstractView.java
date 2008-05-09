@@ -12,7 +12,7 @@ import org.ei.domain.Abstract;
 
     public class AbstractView extends DocumentView {
 
-        private List fields = Arrays.asList(new String[]{"ABSTRACT",
+        private static final List fields = Arrays.asList(new String[]{"ABSTRACT",
                                                         "COORDINATES",
                                                         "CODEN",
                                                         "INDEX_TERMS",
@@ -20,7 +20,7 @@ import org.ei.domain.Abstract;
                                                         "REPORT_NUMBER",
                                                         "NAME_OF_MEETING"});
 
-        private Map keymap = new HashMap() {
+        private static final Map keymap = new HashMap() {
             {
                 put(Keys.REPORT_NUMBER,"");
                 put(Keys.ABSTRACT,"");
