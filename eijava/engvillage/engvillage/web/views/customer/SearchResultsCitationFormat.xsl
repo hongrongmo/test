@@ -113,27 +113,12 @@
           var bounds;
           var map;
           var messages = {"show":"Show Geographic Map", "hide":"Hide Geographic Map"};
-          var apikeys = { "engineeringvillage.com":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhTq1aVOHKz326Ly74ktyh0JEC50cxRcwqEG9_IZn1rf-kXlYHD0OAjeKw", "engineeringvillage2.com":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhQycePdRUCs6MMAMRXc5pXGU3hn3hRfr_zEZfLKIyUShHi94g2KWSfGEw","engineeringvillage.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhSAdZp0PxlTEhTFv3KMS9ULbNb5zBRqzELdPImli2KTwR6NaFokcBv4bA","engineeringvillage2.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhSQVDkHczPvGQBBH-1zyyQlxvW27BTYxtGf1JR2Az5uJMv5BiYUcHc0fg","chemvillage.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhRc2oirmkLapUOdAKcS-7VrLe4NmRRygHzNcODvNaPwfo8u7kjzm8R3Pg","papervillage2.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhRoQ9NpbmNyNRg_ZVHqDXsW5KVm9BQAIDpSj4LWpPYl79Ju3n8FsZYtiA","paperchem.com":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhSwBt7CUughPYSQRGOq0g9Cnw2rgRS09l1TiHYrU0IFHRsrrd0Ioscj6g","papervillage.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhR4KYQ73p3WzPF7syNfyrFgFZtwaxR5sJ7ySrsRekJV7hIExrrtRqD08g","papervillage2.com":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhS3XaAm7oOu6A7GrMVbYRe2u9FCpRSfk-An4_9sm-2YoETe1SnzwtWffg","apiencompass.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhRHcUpwnapUojBcsWU6PxPlD9oAeBR6FefYn5tiecY3qDiH2LruH550xw","eiencompass.com":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhR1px2Xrv_o7VDsm6kNUoHpHa-UvhQXJf3NTv0tT22yWiSZ3EogdInG7Q","encompassvillage.com":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhQyD6pGsbDZ_IMKl1sG3ErY3WRqNRTxQeViRtl5W6vKzuRQpp1iqSg8Ig","encompassvillage.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhQG36b3Ti2jJLY9hFCzqh5YnzGkahRkPw6Cz4ehvpyGlSKiP6_Kp_z9Ug","engineering.info":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhQdj5zTPYNALJdFQ3g4i4SKdwSvaRTVatlT7eTG_ZFbiWw2UFSFdDHnRg","ei.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhRuaXv0upmtkVKGInlPqbnmlfHbchTAnPAuaMYAPTnePG4sN7e7vp9TDA","eiupdate.com":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhSjJoWNZjSUecJsz12uW-MYKVSAGRRZ4zU1D8r7_l5NvZ1sxiO2IfcBJQ","computingvilage.com":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhSXfA8DhS0cX5yip0splZfiPTTUvhRStHk6TCuH_pbilHbHf7oh2_-FeA","computingvilage.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhQW-1Oqs2sSJ0CVE9rnmbTC5ct-FxQbKmoF2h1SML5kcy42qF7yKatCWw","computingvilage2.com":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhS3IEPVyzgN_tZD_BbJlBnZtGYU4hR0_2PcBMQOwFpPz-vCa9pZFQUfMw","computingvilage2.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhQDqIA5XFC2g8g5-6CbiVezTA1ALRT-ahpVQjANJw9Uqtkd8Q39PTcr_A" }
+          var apikeys = { "www.engineeringvillage.com":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhTq1aVOHKz326Ly74ktyh0JEC50cxRcwqEG9_IZn1rf-kXlYHD0OAjeKw", "www.engineeringvillage2.com":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhQycePdRUCs6MMAMRXc5pXGU3hn3hRfr_zEZfLKIyUShHi94g2KWSfGEw","www.engineeringvillage.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhSAdZp0PxlTEhTFv3KMS9ULbNb5zBRqzELdPImli2KTwR6NaFokcBv4bA","www.engineeringvillage2.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhSQVDkHczPvGQBBH-1zyyQlxvW27BTYxtGf1JR2Az5uJMv5BiYUcHc0fg","www.chemvillage.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhRc2oirmkLapUOdAKcS-7VrLe4NmRRygHzNcODvNaPwfo8u7kjzm8R3Pg","www.papervillage2.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhRoQ9NpbmNyNRg_ZVHqDXsW5KVm9BQAIDpSj4LWpPYl79Ju3n8FsZYtiA","www.paperchem.com":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhSwBt7CUughPYSQRGOq0g9Cnw2rgRS09l1TiHYrU0IFHRsrrd0Ioscj6g","www.papervillage.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhR4KYQ73p3WzPF7syNfyrFgFZtwaxR5sJ7ySrsRekJV7hIExrrtRqD08g","www.papervillage2.com":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhS3XaAm7oOu6A7GrMVbYRe2u9FCpRSfk-An4_9sm-2YoETe1SnzwtWffg","www.apiencompass.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhRHcUpwnapUojBcsWU6PxPlD9oAeBR6FefYn5tiecY3qDiH2LruH550xw","www.eiencompass.com":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhR1px2Xrv_o7VDsm6kNUoHpHa-UvhQXJf3NTv0tT22yWiSZ3EogdInG7Q","www.encompassvillage.com":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhQyD6pGsbDZ_IMKl1sG3ErY3WRqNRTxQeViRtl5W6vKzuRQpp1iqSg8Ig","www.encompassvillage.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhQG36b3Ti2jJLY9hFCzqh5YnzGkahRkPw6Cz4ehvpyGlSKiP6_Kp_z9Ug"}
           var domainkey = null;
-          var devkey = "@google.maps.api.key@";
 
           function initialize() {
             var strdomain = document.domain;
-            strdomain = strdomain.match(/\w+\.(?:com|org)$/);
-            if(strdomain != null)
-            {
-              domainkey = apikeys[strdomain];
-              domainkey = domainkey + "&client=gme-elsevier";
-            }
-            else
-            {
-              strdomain = document.domain;
-              strdomain = strdomain.match(/^(?:\d{1,3}\.){3}\d{1,3}$/);
-              if(strdomain != null)
-              {
-                domainkey = devkey;
-              }
-            }
+            domainkey = apikeys[strdomain];
 
             var atoggleImg = document.getElementById("mapToggleImg");
             atoggleImg.style.width = "110px";
@@ -144,6 +129,7 @@
             var atoggleAnchor = document.getElementById("mapToggleAnchor");
             if(domainkey != null)
             {
+              domainkey = domainkey + "&client=gme-elsevier";
               atoggleAnchor.setAttribute("href","javascript:loadScript()");
             }
             else
