@@ -61,7 +61,7 @@
     <a class="MedBlackText"><b>NTIS</b><br/>NTIS (The National Technical Information Service) is the premier database for accessing unclassified reports from influential U.S. and international government agencies. The database contains access to millions of critical citations from government departments such as NASA, the U.S. Department of Energy and the U.S. Department of Defense.</a><br/><br/>
     <a class="MedBlackText"><b>Referex</b><br/>Referex is comprised of six collections of professionally focussed e-books, bringing together key sources of engineering reference material. The database is fully searchable and delivers full-text content from the following collections: Chemical, Petrochemical and Process Engineering; Civil and Environmental Engineering; Computing; Electronics and Electrical Engineering; Mechanical Engineering and Materials; Networking and Security.</a><br/><br/>
     <a class="MedBlackText"><b>GeoBase</b><br/>GeoBase&#174; is a multidisciplinary database of indexed research literature on the earth sciences, including geology, human and physical geography, environmental sciences, oceanography, geomechanics, alternative energy sources, pollution, waste management and nature conservation. Covering thousands of peer-reviewed journals, trade publications, book series and conference proceedings, GeoBase has the most international coverage of any database in the field.</a><br/><br/>
-    <a class="MedBlackText"><b>GeoRef</b><br/>The GeoRef database, established by the American Geological Institute in 1966, provides access to the geoscience literature of the world. GeoRef is the most comprehensive database in the geosciences and continues to grow by more than 90,000 references a year. The database contains over 2.9 million references to geoscience journal articles, books, maps, conference papers, reports and theses.</a><br/><br/>
+    <a class="MedBlackText"><b>GeoRef</b><br/>The American Geological Institute's GeoRef database provides a comprehensive history of geology and its subfields.  With more than 2.9 million records, it includes the information researchers need to evaluate geology and its role in the context of history, economics, engineering, and more.</a><br/><br/>
     <a class="MedBlackText"><b>EI Patents</b><br/>EI Patents comprises millions of patents from the US Patent and Trademark Office and European Patent Office. This database can be cross-searched with other databases on Engineering Village, retrieving results both from patents and scientific literature, a significant advantage for both researchers and businesses. Ei Patents offers more reliable and analytical patent searching features than are supported by the generic free web.</a><br/><br/>
     <a class="MedBlackText"><b>EnCompassLIT</b><br/>EnCompassLIT&#153; is a bibliographic service uniquely devoted to covering technical literature published worldwide on the downstream petroleum, petrochemical, natural gas, energy and allied industries. Upstream coverage focuses solely on oil field chemicals. The EnCompass Thesaurus facilitates precision searching via controlled vocabulary.</a><br/><br/>
     <a class="MedBlackText"><b>EnCompassPAT</b><br/>EnCompassPAT&#153; is a patent service uniquely devoted to covering worldwide patents on the downstream petroleum, petrochemical, natural gas, energy and allied industries. Patents indexed are selected from 40 international patenting authorities. The EnCompass Thesaurus facilitates precision searching via controlled vocabulary.</a><br/><br/>
@@ -70,7 +70,8 @@
     <a class="MedBlackText"><b>PaperChem</b><br/>PaperChem is a database comprised of indexed bibliographic citations and abstracts from journals, conference proceedings, and technical reports focused on pulp and paper technology. Coverage is from 1967 to present, and covers such topics as the chemistry of cellulose, corrugated and particle board; films, foils and laminates; forestry and pulpwood, lignin and extractives, non-wovens, and much more.</a><br/><br/>
     </li>
     <br/>
-    <li><a class="MedBlacktext">Two modes of searching: </a><br/>
+    <li><a class="MedBlacktext">Three modes of searching: </a><br/>
+    <a class="MedBlackText"><b>Easy Search</b>, the simplest way to search with a single field text box.<br/></a>
     <a class="MedBlackText"><b>Quick Search</b>, an easy-to-use form featuring pull-down menus and links to contextual help screens.<br/>
     <b>Expert Search</b>, a powerful and flexible interface that supports Boolean searching on multiple fields.</a>
     </li>
@@ -80,7 +81,7 @@
   <a class="MedBlackText">View or download Engineering Village user guides </a><a class="LgBlueLink" href="/controller/servlet/Controller?CID=help&amp;database={$DBMASK}">here.</a><br/>
   <p><a class="MedBlackText">To request more information about Engineering Village, please complete our </a><a class="LgBlueLink" href="/controller/servlet/Controller?CID=feedback&amp;database={$DBMASK}">Customer Feedback form.</a></p>
   <p><a class="MedBlackText">To learn about other Elsevier Engineering Information products and services, please visit our Web site at </a><a class="LgBLueLink" HREF="#" onClick="window.open('http://www.ei.org', 'newpg', 'status=yes,resizable,scrollbars=yes,menubar=yes,location=yes,directories=yes,width=700,height=450')">http://www.ei.org</a>.</p>
-  <p><a class="MedBlackText">Last revised:  April 15, 2008</a></p>
+  <p><a class="MedBlackText">Last revised:  May 15, 2008</a></p>
 </td></tr>
 </table>
 </center>
