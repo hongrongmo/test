@@ -76,9 +76,10 @@
           <xsl:call-template name="DEDUP-SCRIPT" />
         </xsl:if>
 
-      <xsl:if test="($COMPMASK='8192' or $COMPMASK='2097152' or $COMPMASK='2105344') and (//NAVIGATOR[@NAME='geonav'])">
+      <xsl:if test="($COMPMASK='8192' or $COMPMASK='2097152' or $COMPMASK='2105344') and (/PAGE/NAVIGATORS/NAVIGATOR[@NAME='geonav'])">
       <script type="text/javascript">
-          var g_searchid = "<xsl:value-of select="SEARCH-ID"/>";
+          var ev_searchid = "<xsl:value-of select="$SEARCH-ID"/>";
+          var ev_dbmask = "<xsl:value-of select="$SELECTED-DB"/>";
       //<![CDATA[
           function createCookie(name,value,days) {
             if (days != 0) {
@@ -199,31 +200,32 @@
 
             var request = GXmlHttp.create();
             var milli = (new Date()).getTime();
-            request.open("GET", "/controller/servlet/Controller?CID=geoTerms&searchId=" + g_searchid + "&timestamp=" + milli, true);
+            request.open("GET", "/controller/servlet/Controller?CID=geoTerms&searchId=" + ev_searchid + "&dbmask=" + ev_dbmask + "&timestamp=" + milli, true);
             request.onreadystatechange = function() {
               if (request.readyState == 4) {
                 if (request.status == 200) {
                   mapcontainer.style.background = "none";
                   var places = eval('(' + request.responseText + ')');
+                  if(places.placemarks != undefined)
+                  {
+                    map = new GMap(document.getElementById("map_canvas"));
+                    map.setMapType(G_PHYSICAL_MAP);
+                    map.setCenter(new GLatLng(0, 0), 1);
+                    map.addControl(new GLargeMapControl());
+                    bounds = new GLatLngBounds();
 
-                  map = new GMap(document.getElementById("map_canvas"));
-                  map.setMapType(G_PHYSICAL_MAP);
-                  map.setCenter(new GLatLng(0, 0), 1);
-                  map.addControl(new GLargeMapControl());
-                  bounds = new GLatLngBounds();
+                    var markercount = ((places.placemarks.length < EV_MAXMARKERCOUNT) ? places.placemarks.length : EV_MAXMARKERCOUNT);
+                    for(var i = 0; i < markercount; i++) {
 
-                  var markercount = ((places.placemarks.length < EV_MAXMARKERCOUNT) ? places.placemarks.length : EV_MAXMARKERCOUNT);
-                  for(var i = 0; i < markercount; i++) {
+                      var point = new GLatLng(places.placemarks[i].point.lat, places.placemarks[i].point.lng);
+                      var marker = createMarker(point,places.placemarks[i].name,places.placemarks[i].description,places.placemarks[i].search);
 
-                    var point = new GLatLng(places.placemarks[i].point.lat, places.placemarks[i].point.lng);
-                    var marker = createMarker(point,places.placemarks[i].name,places.placemarks[i].description,places.placemarks[i].search);
-
-                    map.addOverlay(marker);
-                    bounds.extend(point);
+                      map.addOverlay(marker);
+                      bounds.extend(point);
+                    }
+                    resetCenterAndZoom();
+                    populated = true;
                   }
-                  resetCenterAndZoom();
-                  populated = true;
-
                 }
               }
             }
@@ -260,7 +262,7 @@
     </head>
 
     <body bgcolor="#FFFFFF" topmargin="0" marginheight="0" marginwidth="0">
-      <xsl:if test="($COMPMASK='8192' or $COMPMASK='2097152' or $COMPMASK='2105344') and (//NAVIGATOR[@NAME='geonav'])">
+      <xsl:if test="($COMPMASK='8192' or $COMPMASK='2097152' or $COMPMASK='2105344') and (/PAGE/NAVIGATORS/NAVIGATOR[@NAME='geonav'])">
         <xsl:attribute name="onload">initialize()</xsl:attribute>
         <xsl:attribute name="onunload">uninitialize()</xsl:attribute>
       </xsl:if>
