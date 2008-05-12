@@ -11,7 +11,7 @@ try
   UserSession ussession = null;
   User user = null;
   String sessionId = null;
-  int dbmask = 0;
+  String dbmask = null;
 
   client = new ControllerClient(request, response);
 
@@ -26,8 +26,9 @@ try
     }
   }
 
-
   String searchId = request.getParameter("searchId");
+  dbmask = request.getParameter("dbmask");
+
 /*  if(searchId == null)
   {
     searchId = "1474e45117d09b01c1M7ff814536192173";
@@ -35,14 +36,23 @@ try
 
   if(searchId != null && !searchId.equals("") && !searchId.equals("undefined"))
   {
-    long start1 = System.currentTimeMillis();
+    if(dbmask == null)
+    {
+      Query queryObject = Searches.getSearch(searchId);
+      if(queryObject != null)
+      {
+        dbmask = String.valueOf(queryObject.getDataBase());
+      }
+    }
+
     NavigatorCache navcache = new NavigatorCache(sessionId);
     nav = navcache.getFromCache(searchId);
-    System.out.println("done ms: " + String.valueOf(System.currentTimeMillis() - start1));
   }
+
 
   GeoRefCoordinateMap coords = GeoRefCoordinateMap.getInstance();
   EiNavigator geo = nav.getNavigatorByName(EiNavigator.GEO);
+
   if(geo != null)
   {
     out.write("<js><![CDATA[");
@@ -64,7 +74,7 @@ try
         if(coordniates != null)
         {
           out.write("{");
-          out.write("\"search\":\"/controller/servlet/Controller?CID=expertSearchCitationFormat&database=" + dbmask + "&RERUN="+searchId+"&geonav=" + geocount + "~" + geovalue  + "~" + geoterm + "&mapevent=search\",");
+          out.write("\"search\":\"/controller/servlet/Controller?CID=expertSearchCitationFormat" + ((dbmask != null) ? ("&database=" + dbmask) : "") + "&RERUN="+searchId+"&geonav=" + geocount + "~" + geovalue  + "~" + geoterm + "&mapevent=search\",");
           out.write("\"count\":\"" + modifier.getCount() + "\",");
           out.write("\"name\":\"" + geoterm + "\",");
           out.write("\"description\":\"" + geoterm + " (" + modifier.getCount() + " records)\",");
@@ -80,6 +90,10 @@ try
     out.write(" ]");
     out.write("}");
     out.write("]]></js>");
+  }
+  else
+  {
+    out.write("<js/>");
   }
 }
 catch(Exception e)
