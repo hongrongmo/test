@@ -93,7 +93,10 @@ try
   }
   else
   {
-    out.write("<js/>");
+    out.write("<js><![CDATA[");
+    out.write("{");
+    out.write("}");
+    out.write("]]></js>");
   }
 }
 catch(Exception e)
