@@ -56,7 +56,7 @@ Engineering Village features: </a>
     </li>
     <br/>
     <li><a class="MedBlacktext">Three modes of searching: </a><br/>
-    <a class="MedBlackText"><b>Easy Search</b>, the simplest way to search with a single field text box.<br/>
+    <a class="MedBlackText"><b>Easy Search</b>, the simplest way to search with a single field text box.<br/></a>
     <a class="MedBlackText"><b>Quick Search</b>, an easy-to-use form featuring pull-down menus and links to contextual help screens.<br/>
     <b>Expert Search</b>, a powerful and flexible interface that supports Boolean searching on multiple fields.</a>
     </li>
@@ -74,7 +74,7 @@ Engineering Village features: </a>
 <a class="MedBlackText">To learn about other Elsevier Engineering Information products and services, please visit our Web site at </a><a class="LgBLueLink" HREF="#" onClick="window.open('http://www.ei.org', 'newpg', 'status=yes,resizable,scrollbars=yes,menubar=yes,location=yes,directories=yes,width=700,height=450')">http://www.ei.org</a>.
 </P>
 <P>
-<a class="MedBlackText">Last revised:  April 15, 2008</a>
+<a class="MedBlackText">Last revised:  May 15, 2008</a>
 </P>
 <P>
 <a class="LgBlueLink" href="/controller/servlet/Controller?CID=home">Back to Login Page</a>
