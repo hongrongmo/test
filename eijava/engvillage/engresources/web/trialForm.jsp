@@ -172,8 +172,6 @@
 	                            <a onclick="do_toggle(0);"><span>Webproducts</span></a>
 	                            <ul id="webproducts">
 	                                <li><a href="http://www.ei.org/products/engineeringvillage.html">EngineeringVillage</a></li>
-	                                <li><a href="http://www.ei.org/products/chemvillage.html">ChemVillage</a></li>
-	                                <li><a href="http://www.ei.org/products/papervillage.html">PaperVillage</a></li>
                                   <li><a href="http://www.ei.org/products/encompassweb.html">EnCompassLIT & PAT</a></li>
 	                            </ul>
 	                        </li>
@@ -184,6 +182,8 @@
 	                                <li><a href="http://www.ei.org/databases/eib.html">Engineering Index Backfile </a></li>
 	                                <li><a href="http://www.ei.org/databases/inspec.html">Inspec</a></li>
 	                                <li><a href="http://www.ei.org/databases/inspec_archive.html">Inspec Archive</a></li>
+                                  <li><a href="http://www.ei.org/databases/geobase.html">GeoBase</a></li>
+                                  <li><a href="http://www.ei.org/databases/georef.html">GeoRef</a></li>
 	                                <li><a href="http://www.ei.org/databases/ntis_database.html">NTIS Database</a></li>
 	                                <li><a href="http://www.ei.org/databases/ei_patents.html">Ei Patents</a></li>
 	                                <li><a href="http://www.ei.org/databases/paperchem.html">PaperChem</a></li>
@@ -584,8 +584,8 @@
 	                <dt>Key links</dt>
 	                <dd>
 	                    <ul>
-	                        <li id="ten_years"><a href="http://www.ei.org/databases/ei_patents.html"><span>Introducing Ei Patents</span></a></li>
-	                        <li id="new_technology"><a href="http://www.ei.org/support/online_seminars.html"><span>Featured Online Seminars</span></a></li>
+	                        <li id="ten_years"><a href="http://www.ei.org/databases/referex_engineering.html"><span>Referex</span></a></li>
+	                        <li id="new_technology"><a href="http://www.ei.org/support/online_seminars.html"><span>Featured  Seminars</span></a></li>
 	                        <li id="sign_up"><a href="http://daypass.engineeringvillage.com"><span>New Engineering Village Day Pass</span></a></li>
 	                    </ul>
 	                </dd>
