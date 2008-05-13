@@ -179,6 +179,7 @@
 
   <div id="map" style="clear:both;display:none;">
     <br/>
+    <img style="width: 20px; height: 1px" src="/engresources/images/s.gif" /><a class="SpLink" >Click on a pin to narrow search results</a>
     <div id="map_spacer" style="float:left; border:0px solid black; width: 20px; height: 1px"></div>
     <div id="map_canvas" style="float:left; width: 600px; height: 300px;">&#160;</div>
     <br style="clear:both;"/>
