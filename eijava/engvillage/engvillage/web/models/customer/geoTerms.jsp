@@ -49,6 +49,12 @@ try
     nav = navcache.getFromCache(searchId);
   }
 
+  /**
+  *   Log Functionality
+  */
+  client.log("mapevent", "open");
+  client.setRemoteControl();
+
 
   GeoRefCoordinateMap coords = GeoRefCoordinateMap.getInstance();
   EiNavigator geo = nav.getNavigatorByName(EiNavigator.GEO);
