@@ -370,7 +370,7 @@
          <xsl:with-param name="TERM"><xsl:value-of select="./CID"/></xsl:with-param>
          <xsl:with-param name="FIELD"><xsl:value-of select="$FIELDNAME"/></xsl:with-param>
           <xsl:with-param name="CLASS"><xsl:value-of select="$CLASS"/></xsl:with-param>
-         <xsl:with-param name="ONMOUSEOVER">Tip('<xsl:value-of select="ctd:getDisplayTitle(hlight:addMarkup(./CTI))"/>',WIDTH,450)</xsl:with-param>
+         <xsl:with-param name="ONMOUSEOVER">this.T_WIDTH=450;return escape('<xsl:value-of select="ctd:getDisplayTitle(hlight:addMarkup(./CTI))"/>')</xsl:with-param>
       </xsl:call-template>
       <xsl:if test="position()!=last()">
         <a class="SmBlkText">&#160; - &#160;</a>
