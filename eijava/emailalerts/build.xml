@@ -11,13 +11,11 @@
 	<property name="dir.eijava-root" value=".."/>
 	<property name="dir.eilib-jars" value="${dir.eijava-root}/dist" />
 	<property name="dir.ext-jars" value="${dir.eijava-root}/ext" />
-	<property name="dir.englib-jars" value="${dir.eijava-root}/engvillage/englib" />
 	<property name="dir.engvillage-project" value="${dir.eijava-root}/engvillage" />
 
 	<!-- parameterized dir locations for filesets (need to test)
 		dir.ext-jars=../ext/
 		dir.eilib-jars=../dist/
-		dir.englib-jars=../engvillage/englib/
 		dir.engvillage-project=../engvillage/
 	-->
 
@@ -29,9 +27,6 @@
 	</fileset>
 	<fileset id="eilib-jars" dir="${dir.eilib-jars}">
 		<include name="**/eilib.jar"/>
-	</fileset>
-	<fileset id="englib-jars" dir="${dir.englib-jars}">
-		<include name="**/englib.jar"/>
 	</fileset>
 	<fileset id="web-resources" dir="${dir.engvillage-project}/engresources/web/">
 		<include name="**/images/s.gif"/>
@@ -112,7 +107,6 @@
 	<target name="libs" >
 		<copy todir="./lib" flatten="yes">
 			<fileset refid="ext-jars"/>
-			<fileset refid="englib-jars"/>
 			<fileset refid="eilib-jars"/>
 		</copy>
 	</target>
