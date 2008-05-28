@@ -28,7 +28,14 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
     private static final Key ELT_CONTROLLED_TERMS = new Key(Keys.CONTROLLED_TERMS, "Controlled terms");
     private static final Key ELT_CLASS_CODES = new Key(Keys.CLASS_CODES_MULTI, "Class codes");
     private static final Key ELT_MAJOR_TERMS = new Key(Keys.MAJOR_TERMS, "Major terms");
-    private static final Key[] RIS_KEYS = { Keys.RIS_TY, Keys.RIS_LA, Keys.RIS_TI, Keys.RIS_T3, Keys.RIS_VL, Keys.RIS_IS, Keys.RIS_SP, Keys.RIS_AUS, RIS_AD, Keys.RIS_EDS, Keys.RIS_PY, Keys.RIS_U1, Keys.RIS_N2, Keys.RIS_N1, Keys.RIS_AD, Keys.RIS_CVS };
+    // jam - Post 9.2 fix - Keys.RIS_AD (AUthor Affiliation) appeared twice in list of keys, causing it to appear twice in the output
+    // jam - Post 9.2 fix - Keys.RIS_PB (Publisher) was missing so it was not going out in output
+    // jam - Post 9.2 fix - Keys.RIS_JO (Journal Title) was missing so it was not going out in output
+    // jam - Post 9.2 fix - Keys.RIS_SN (ISSN/ISBN) was missing so it was not going out in output
+    // jam - Post 9.2 fix - Keys.RIS_BT (Secondary Title) was missing so it was not going out in output
+    // jam - Post 9.2 fix - Keys.RIS_CY (Publication city) was missing so it was not going out in output
+    // jam - Post 9.2 fix - Keys.RIS_EP (End Page) was missing so it was not going out in output
+    private static final Key[] RIS_KEYS = { Keys.RIS_TY, Keys.RIS_LA, Keys.RIS_TI, Keys.RIS_T3, Keys.RIS_JO, Keys.RIS_PB, Keys.RIS_VL, Keys.RIS_IS, Keys.RIS_SN, Keys.RIS_SP, Keys.RIS_AUS, Keys.RIS_EDS, Keys.RIS_PY, Keys.RIS_U1, Keys.RIS_N2, Keys.RIS_N1, Keys.RIS_AD, Keys.RIS_CVS, Keys.RIS_BT, Keys.RIS_CY, Keys.RIS_EP };
     private static final Key[] LINKED_TERM_KEYS = { Keys.LINKED_TERMS };
     private static final Key[] CITATION_KEYS = { Keys.DOCID, Keys.TITLE, Keys.AUTHORS, Keys.SOURCE, Keys.PUBLICATION_YEAR, Keys.PUBLISHER, Keys.ISSN, Keys.LANGUAGE, Keys.NO_SO, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT };
     private static final Key[] ABSTRACT_KEYS = { Keys.TITLE, Keys.AUTHORS, Keys.LANGUAGE, Keys.ISSN, Keys.PUBLISHER, Keys.ABSTRACT, ELT_MAJOR_TERMS, ELT_CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS,  Keys.CAS_REGISTRY_CODES, Keys.SOURCE, Keys.PROVIDER, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT, Keys.DOCID };
@@ -252,7 +259,8 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
 
                 }
                 if (rset.getString("ISN") != null) {
-                    ht.put(Keys.RIS_IS, new ISSN(rset.getString("ISN")));
+                    // jam - Post 9.2 fix - Issue appeared as ISSN field, now contains formated Issue number
+                    ht.put(Keys.RIS_IS, new Issue(formatISSUE(rset.getString("ISN")), perl));
                 }
                 if (rset.getString("PYR") != null) {
                     ht.put(Keys.RIS_PY, new Year(Keys.RIS_PY, rset.getString("PYR"), perl));
@@ -339,8 +347,8 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
                     }
                 }
 
-                if (rset.getString("DT") != null) {
-                    String docType = rset.getString("DT");
+                String docType = rset.getString("DT");
+                if (docType != null) {
 
                     if (docType.startsWith("B_"))
                         docType = "BOOK";
@@ -355,6 +363,18 @@ public class EltDocBuilder implements DocumentBuilder, Keys {
                     }
 
                     ht.put(Keys.RIS_TY, new XMLWrapper(Keys.RIS_TY, docType));
+                }
+
+                // jam - Post 9.2 fix - Journal Title was not present
+                if (docType != null && docType.equalsIgnoreCase("JOUR"))
+                {
+                  ht.put(Keys.RIS_JO,new XMLWrapper(Keys.RIS_JO ,rset.getString("STI")));
+                }
+
+                // jam - Post 9.2 fix - Publisher was not present
+                if (rset.getString("PUB") != null)
+                {
+                    ht.put(Keys.RIS_PB, new XMLWrapper(Keys.RIS_PB, StringUtil.substituteChars(rset.getString("PUB"))));
                 }
 
                 EIDoc eiDoc = new EIDoc(did, ht, RIS.RIS_FORMAT);
