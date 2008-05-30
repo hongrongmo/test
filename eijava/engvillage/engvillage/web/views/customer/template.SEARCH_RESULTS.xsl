@@ -177,11 +177,11 @@
           <xsl:text>  </xsl:text><a href="#" id="mapToggleAnchor"><img id="mapToggleImg" style="vertical-align:middle; border:0px;" src="/engresources/images/s.gif" /></a>
         </xsl:if>
 
-  <div id="map" style="clear:both;display:none;">
+  <div id="map" style="clear:both;display:none; width:620px;">
     <br/>
     <img style="width: 20px; height: 1px" src="/engresources/images/s.gif" /><img style="width: 16px; height: 16px" src="/engresources/images/red-pin.png" /><a class="SpLink" >Click on a pin to refine search results</a>
     <div id="map_spacer" style="float:left; border:0px solid black; width: 20px; height: 1px"></div>
-    <div id="map_canvas" style="float:left; width: 600px; height: 300px;">&#160;</div>
+    <div id="map_canvas" style="clear:right; float:left; width: 600px; height: 300px;">&#160;</div>
     <br/>
     <div id="link_spacer" style="float:left; width: 20px; height: 20px"></div><a class="SpLink" id="resetcenter" href="javascript:resetCenterAndZoom()">Reset Map Center and Zoom</a>
   </div>
