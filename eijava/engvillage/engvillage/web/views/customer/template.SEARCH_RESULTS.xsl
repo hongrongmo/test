@@ -182,7 +182,7 @@
     <img style="width: 20px; height: 1px" src="/engresources/images/s.gif" /><img style="width: 16px; height: 16px" src="/engresources/images/red-pin.png" /><a class="SpLink" >Click on a pin to refine search results</a>
     <div id="map_spacer" style="float:left; border:0px solid black; width: 20px; height: 1px"></div>
     <div id="map_canvas" style="float:left; width: 600px; height: 300px;">&#160;</div>
-    <br style="clear:both;"/>
+    <br/>
     <div id="link_spacer" style="float:left; width: 20px; height: 20px"></div><a class="SpLink" id="resetcenter" href="javascript:resetCenterAndZoom()">Reset Map Center and Zoom</a>
   </div>
   <br/>
