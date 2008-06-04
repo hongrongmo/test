@@ -4,6 +4,7 @@ import org.ei.domain.Key;
 import org.ei.domain.Keys;
 import org.ei.domain.RIS;
 
+import org.ei.domain.Contributors;
 import org.ei.domain.EIDoc;
 import org.ei.domain.DocID;
 import org.ei.domain.ElementDataMap;
@@ -20,7 +21,7 @@ import java.util.regex.*;
 
 public class RISView extends DetailedView {
 
-      private Key[] ris_keys = new Key[]{Keys.RIS_TY, // DocType
+      private static final Key[] ris_keys = new Key[]{Keys.RIS_TY, // DocType
                                       Keys.RIS_LA, // Language
                                       Keys.RIS_N1, // Copyright
                                       Keys.RIS_TI, // Title
@@ -55,28 +56,13 @@ public class RISView extends DetailedView {
 
       public String getFormat() { return RIS.RIS_FORMAT; }
 
-      public RISView()
-      {
-        this.ris_ht = new ElementDataMap();
-      }
-
-      private ElementDataMap ris_ht;
-      private ElementDataMap getRisElementDataMap() {
-        return this.ris_ht;
-      }
-
-      private ElementDataMap doc_ht;
-      private void setDocumentElementDataMap(ElementDataMap ht) {
-        this.doc_ht = ht;
-      }
-      private ElementDataMap getDocumentElementDataMap() {
-        return this.doc_ht;
-      }
-
       public EIDoc buildDocument(ResultSet rset, DocID did)
                 throws Exception
       {
         EIDoc adoc = super.buildDocument(rset, did);
+        ElementDataMap adoc_ht =  adoc.getElementDataMap();
+
+        ElementDataMap ris_ht = new ElementDataMap();
 
         // Get EV system DOC_TYPE codes for indexing and append them to (or use in favor of ?) the GeoRef values
         String mappingcode = createColumnValueField("DOCUMENT_TYPE").getValue().concat(GRFDocBuilder.AUDELIMITER).concat(createColumnValueField("BIBLIOGRAPHIC_LEVEL_CODE").getValue());
@@ -87,59 +73,65 @@ public class RISView extends DetailedView {
           addDocumentValue(Keys.DOC_TYPE, adoc.replaceTYwithRIScode(mappingcode));
         }
 
-        ElementDataMap adoc_ht =  adoc.getElementDataMap();
-        setDocumentElementDataMap(adoc_ht);
-
-        changeElementKey(Keys.DOC_TYPE, Keys.RIS_TY);
-        changeElementKey(Keys.LANGUAGE, Keys.RIS_LA);
-        changeElementKey(Keys.COPYRIGHT_TEXT, Keys.RIS_N1);
-        changeElementKey(Keys.TITLE, Keys.RIS_TI);
-        changeElementKey(Keys.TITLE_TRANSLATION, Keys.RIS_T1);
-        changeElementKey(Keys.MONOGRAPH_TITLE, Keys.RIS_BT);
+        changeElementKey(ris_ht, adoc_ht, Keys.DOC_TYPE, Keys.RIS_TY);
+        changeElementKey(ris_ht, adoc_ht, Keys.LANGUAGE, Keys.RIS_LA);
+        changeElementKey(ris_ht, adoc_ht, Keys.COPYRIGHT_TEXT, Keys.RIS_N1);
+        changeElementKey(ris_ht, adoc_ht, Keys.TITLE, Keys.RIS_TI);
+        changeElementKey(ris_ht, adoc_ht, Keys.TITLE_TRANSLATION, Keys.RIS_T1);
+        changeElementKey(ris_ht, adoc_ht, Keys.MONOGRAPH_TITLE, Keys.RIS_BT);
         if(mappingcode != null)
         {
           if(mappingcode.equals("JOUR"))
           {
-            changeElementKey(Keys.SERIAL_TITLE, Keys.RIS_JO);
+            changeElementKey(ris_ht, adoc_ht, Keys.SERIAL_TITLE, Keys.RIS_JO);
           }
           else
           {
-            changeElementKey(Keys.SERIAL_TITLE, Keys.RIS_T3);
+            changeElementKey(ris_ht, adoc_ht, Keys.SERIAL_TITLE, Keys.RIS_T3);
           }
         }
-        changeElementKey(Keys.AUTHORS, Keys.RIS_AUS);
-        changeElementKey(Keys.AUTHOR_AFFS, Keys.RIS_AD);
-        changeElementKey(Keys.EDITORS, Keys.RIS_EDS);
-        changeElementKey(Keys.VOLUME, Keys.RIS_VL);
-        changeElementKey(Keys.ISSUE, Keys.RIS_IS);
-        changeElementKey(Keys.PUBLICATION_YEAR, Keys.RIS_PY);
-        changeElementKey(Keys.ACCESSION_NUMBER, Keys.RIS_AN);
+        Contributors contributors = (Contributors) adoc_ht.get(Keys.AUTHORS);
+        if(contributors != null)
+        {
+          contributors.setFirstAffiliation(null);
+        }
+
+        changeElementKey(ris_ht, adoc_ht, Keys.AUTHORS, Keys.RIS_AUS);
+        changeElementKey(ris_ht, adoc_ht, Keys.AUTHOR_AFFS, Keys.RIS_AD);
+        changeElementKey(ris_ht, adoc_ht, Keys.EDITORS, Keys.RIS_EDS);
+        changeElementKey(ris_ht, adoc_ht, Keys.VOLUME, Keys.RIS_VL);
+        changeElementKey(ris_ht, adoc_ht, Keys.ISSUE, Keys.RIS_IS);
+        changeElementKey(ris_ht, adoc_ht, Keys.PUBLICATION_YEAR, Keys.RIS_PY);
+        changeElementKey(ris_ht, adoc_ht, Keys.ACCESSION_NUMBER, Keys.RIS_AN);
 
         String pages = getPages();
-        Pattern patternPages = Pattern.compile("^(\\d+)\\D+(\\d+)$");
-        Matcher pagematch = patternPages.matcher(pages);
-        if(pagematch.find())
+        if(pages != null)
         {
-          ris_ht.put(Keys.RIS_SP, new XMLWrapper(Keys.RIS_SP, pagematch.group(1)));
-          ris_ht.put(Keys.RIS_EP, new XMLWrapper(Keys.RIS_EP, pagematch.group(2)));
-        }
-        else
-        {
-          ris_ht.put(Keys.RIS_SP, new XMLWrapper(Keys.RIS_SP, pages));
+          Pattern patternPages = Pattern.compile("^(\\d+)\\D+(\\d+)$");
+          Matcher pagematch = patternPages.matcher(pages);
+          if(pagematch.find())
+          {
+            ris_ht.put(Keys.RIS_SP, new XMLWrapper(Keys.RIS_SP, pagematch.group(1)));
+            ris_ht.put(Keys.RIS_EP, new XMLWrapper(Keys.RIS_EP, pagematch.group(2)));
+          }
+          else
+          {
+            ris_ht.put(Keys.RIS_SP, new XMLWrapper(Keys.RIS_SP, pages));
+          }
         }
 
-        changeElementKey(Keys.ISSN, Keys.RIS_SN);
-        changeElementKey(Keys.ISBN, Keys.RIS_S1);
+        changeElementKey(ris_ht, adoc_ht, Keys.ISSN, Keys.RIS_SN);
+        changeElementKey(ris_ht, adoc_ht, Keys.ISBN, Keys.RIS_S1);
         //      Keys.RIS_MD, //
         //      Keys.RIS_CY, //
-        changeElementKey(Keys.PUBLISHER, Keys.RIS_PB);
-        changeElementKey(Keys.ABSTRACT, Keys.RIS_N2);
+        changeElementKey(ris_ht, adoc_ht, Keys.PUBLISHER, Keys.RIS_PB);
+        changeElementKey(ris_ht, adoc_ht, Keys.ABSTRACT, Keys.RIS_N2);
         //      Keys.RIS_KW, // Main Heading
-        changeElementKey(Keys.INDEX_TERM, Keys.RIS_CVS);
-        changeElementKey(Keys.UNCONTROLLED_TERMS, Keys.RIS_FLS);
-        changeElementKey(Keys.DOI, Keys.RIS_DO);
+        changeElementKey(ris_ht, adoc_ht, Keys.INDEX_TERM, Keys.RIS_CVS);
+        changeElementKey(ris_ht, adoc_ht, Keys.UNCONTROLLED_TERMS, Keys.RIS_FLS);
+        changeElementKey(ris_ht, adoc_ht, Keys.DOI, Keys.RIS_DO);
 
-        // printElementDataXML(ris_ht);
+        //printElementDataXML(ris_ht);
 
         EIDoc risdoc = new EIDoc(did, ris_ht, getFormat());
         risdoc.setOutputKeys(this.ris_keys);
@@ -147,9 +139,9 @@ public class RISView extends DetailedView {
         return risdoc;
       }
 
-    private void changeElementKey(Key oldkey, Key newkey)
+    private void changeElementKey(ElementDataMap ris_ht, ElementDataMap adoc_ht, Key oldkey, Key newkey)
     {
-      ElementData edata = (ElementData) getDocumentElementDataMap().get(oldkey);
+      ElementData edata = (ElementData) adoc_ht.get(oldkey);
       if(edata != null)
       {
         edata.setKey(newkey);
