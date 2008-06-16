@@ -82,11 +82,11 @@ public class ReferexCombiner {
             else if(strDefault.equals("2007")){
                 extracts.add(new FL2007BookRecord());
                 extracts.add(new FL2007PageRecord());
-              }            
+              }
             else if(strDefault.equals("REPL")){
               extracts.add(new ReplacementBookRecord());
               extracts.add(new ReplacementPageRecord());
-            }            
+            }
             else {
               extracts.add(new BookRecord());
               extracts.add(new PageRecord());
@@ -429,7 +429,7 @@ public class ReferexCombiner {
                 rec.put(EVCombinedRec.CONTROLLED_TERMS, arrCvs);
                 rec.put(EVCombinedRec.CLASSIFICATION_CODE, arrReferexColls);
 
-                rec.put(EVCombinedRec.MAIN_HEADING, new String[]{getExtractType()});
+                //rec.put(EVCombinedRec.MAIN_HEADING, new String[]{getExtractType()});
 
             } // try
             catch (Exception e) {
