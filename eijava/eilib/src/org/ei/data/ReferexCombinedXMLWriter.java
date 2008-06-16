@@ -7,6 +7,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -17,7 +19,8 @@ import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 import org.xml.sax.XMLReader;
-
+import org.xml.sax.EntityResolver;
+import org.xml.sax.InputSource;
 
 public class ReferexCombinedXMLWriter
     extends CombinedXMLWriter
@@ -118,6 +121,8 @@ public class ReferexCombinedXMLWriter
   			System.out.println("InputStreamReader encoding is " + is.getEncoding());
   			saxParser = factory.newSAXParser();
   			XMLReader aparser = saxParser.getXMLReader();
+        aparser.setEntityResolver(new LocalDTDEntityResolver());
+
   			aparser.setErrorHandler(new LocalErrorHandler());
   			aparser.parse(new InputSource(is));
   			System.out.println("Validated.");
@@ -157,4 +162,23 @@ public class ReferexCombinedXMLWriter
 		}
 	}
 
+  private class LocalDTDEntityResolver implements EntityResolver {
+
+    public LocalDTDEntityResolver() {
+        // TODO Auto-generated constructor stub
+    }
+    public InputSource resolveEntity(String publicId, String systemId) {
+        InputStreamReader is = null;
+        try {
+            String dtdfile = new File(systemId).getName();
+            // log.info("<!--" + dtdfile + " == " + systemId + "-->");
+            is = new InputStreamReader(ReferexCombinedXMLWriter.class.getResourceAsStream(dtdfile));
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return new InputSource(is);
+    }
+
+}
 }
