@@ -111,6 +111,13 @@
       <load-on-startup>7</load-on-startup>
     </servlet>
 
+    <servlet>
+      <servlet-name>ShibbolethService</servlet-name>
+      <description>This is servlet handles Shibboleth Authentication</description>
+      <servlet-class>org.ei.shibboleth.ShibbolethService</servlet-class>
+      <load-on-startup>8</load-on-startup>
+    </servlet>
+
     <servlet-mapping>
       <servlet-name>Controller</servlet-name>
       <url-pattern>/servlet/Controller</url-pattern>
@@ -139,6 +146,11 @@
     <servlet-mapping>
       <servlet-name>AthensService</servlet-name>
       <url-pattern>/servlet/AthensService</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+      <servlet-name>ShibbolethService</servlet-name>
+      <url-pattern>/servlet/ShibbolethService</url-pattern>
     </servlet-mapping>
 
     <servlet-mapping>
