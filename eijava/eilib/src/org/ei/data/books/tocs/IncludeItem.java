@@ -6,7 +6,16 @@ import java.util.List;
 public class IncludeItem {
 
     private String pii = null;
+    private String title = null;
     
+    public String getTitle() {
+      return title;
+    }
+
+    public void setTitle(String title) {
+      this.title = title;
+    }
+
     public String getPii() {
         return pii;
     }
@@ -25,5 +34,17 @@ public class IncludeItem {
         pr.setStart(start);
         pr.setEnd(end);
         ranges.add(pr);
+    }
+
+    public String toString() {
+      StringBuffer buffer = new StringBuffer();
+
+      buffer.append(getClass().getName()).append("@").append(Integer.toHexString(hashCode())).append(" [");
+      buffer.append("title").append("='").append(getTitle()).append("' ");
+      buffer.append("pii").append("='").append(getPii()).append("' ");
+      //buffer.append("start").append("='").append(getPii()).append("' ");
+      buffer.append("]");
+
+      return buffer.toString();
     }
 }
