@@ -11,6 +11,9 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
+import javax.xml.transform.Result;
+import javax.xml.transform.stream.StreamResult;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -63,7 +66,7 @@ public class BookCreator
     isbnList.add("9780750680691");
 
     File[] archvies = BookTocTransform.getBookArchvieDirectoryList(BookTocTransform.ARCHIVE_ROOT);
-    for (int arch = 0; arch < 3; arch++) {
+    for (int arch = 0; arch < 0; arch++) {
       String archive = archvies[arch].getName();
       log.info((arch) + ". archive: " + archive);
       File[] files = BookTocTransform.getFileList(BookTocTransform.ARCHIVE_ROOT + archive);
@@ -74,109 +77,11 @@ public class BookCreator
           String isbn =  new File(xmlFile.getParent()).getName();
           if(checkIsbn(isbn)) {
             log.info((xmlFile) + ". isbn: " + isbn);
-            List<IncludeItem> iss = IncludeItemLoader.getIncludeItems(xmlFile);
-            Iterator<IncludeItem> piis = iss.iterator();
-
-            Document document = null;
-            PdfCopy writer = null;
-            int pageOffset = 0;
-            List master = new ArrayList();
-            boolean firstLoop = true;
-            String isbnpdf = files[i].getCanonicalPath() + BookTocTransform.FILE_SEP + isbn + ".pdf";
-            String isbnpdftemp = files[i].getCanonicalPath() + BookTocTransform.FILE_SEP + isbn + "_temp.pdf";
+            List<IncludeItem> includeitems = IncludeItemLoader.getIncludeItems(xmlFile);
+            Iterator<IncludeItem> piis = includeitems.iterator();
             
-            while(piis.hasNext()) {
-              IncludeItem pii = piis.next();
-              String foldername = pii.getPii().replaceAll("\\p{Punct}", "");
-
-              String[] locs = {"FRONT", "BODY","REAR"};
-              File floc = null;
-              for(int l = 0; l < locs.length; l++) {
-                floc = new File(files[i].getCanonicalPath() + BookTocTransform.FILE_SEP + locs[l] + BookTocTransform.FILE_SEP + foldername + BookTocTransform.FILE_SEP + "main.pdf"); 
-                if(floc.exists()) {
-                  log.info(locs[l] + " file. " + floc.getAbsolutePath());
-                  break;
-                }
-              }
-
-              PdfReader reader = new PdfReader(floc.getAbsolutePath());
-              reader.consolidateNamedDestinations();
-              // we retrieve the total number of pages
-              int n = reader.getNumberOfPages();
-              List bookmarks = SimpleBookmark.getBookmark(reader);
-              if (bookmarks != null) {
-                  if (pageOffset != 0) {
-                      SimpleBookmark.shiftPageNumbers(bookmarks, pageOffset, null);
-                  }
-                  master.addAll(bookmarks);
-              }
-
-              HashMap map = new HashMap();
-              map.put("Title", pii.getTitle());
-              map.put("Action", "GoTo");
-              map.put("Page", (pageOffset + 1) + " Fit");
-              master.add(map);
-
-              
-              pageOffset += n;
-
-              if (firstLoop) {
-                // step 1: creation of a document-object
-                document = new Document(reader.getPageSizeWithRotation(1));
-                // step 2: we create a writer that listens to the document
-                try {
-                  writer = new PdfCopy(document, new FileOutputStream(isbnpdftemp));
-                } catch (DocumentException e) {
-                  // TODO Auto-generated catch block
-                  e.printStackTrace();
-                }
-                // step 3: we open the document
-                document.open();
-                firstLoop = false;
-              }
-              
-              PdfImportedPage page;
-              for (int m = 0; m < n;) {
-                  ++m;
-                  page = writer.getImportedPage(reader, m);
-                  try {
-                    writer.addPage(page);
-                  } catch (BadPdfFormatException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                  }
-              }
-              reader.close();
-            } // while 
-            if (!master.isEmpty()) {
-              writer.setOutlines(master);
-            }
-            // step 5: we close the document
-            document.close();
-            
-            try {
-              PdfReader reader = new PdfReader(isbnpdftemp);
-              PdfStamper stamper = new PdfStamper(reader, new FileOutputStream(isbnpdf));
-              
-              HashMap info = reader.getInfo();
-              log.info(" Info " + info);
-              info.put("Producer","Elsevier Engineering Information");
-              ByteArrayOutputStream baos = new ByteArrayOutputStream();
-              XmpWriter xmp = new XmpWriter(baos);
-              XmpSchema dc = new DublinCoreSchema();
-              XmpArray subject = new XmpArray(XmpArray.UNORDERED);
-              subject.add("Referex");
-              dc.setProperty(DublinCoreSchema.SUBJECT, subject);
-              xmp.addRdfDescription(dc);
-              xmp.close();
-              stamper.setXmpMetadata(baos.toByteArray());
-              stamper.setMoreInfo(info);
-              stamper.close();
-              reader.close();
-            } catch (DocumentException e) {
-              // TODO Auto-generated catch block
-              e.printStackTrace();
-            }
+            createPDF(xmlFile, isbn, piis);
+            stampPDF(xmlFile, isbn);
             
           }
         } catch (IOException e) {
@@ -185,7 +90,156 @@ public class BookCreator
         }
 
         xmlFile = null;
+      }
     }
+    
+    File[] seriesarchive = BookTocTransform.getBookSeriesFileList(BookTocTransform.ARCHIVE_ROOT);
+    for(int seriesidx = 0; seriesidx < seriesarchive.length; seriesidx++) {
+      log.debug((seriesidx) + ". series: " + seriesarchive[seriesidx]);
+      if(!"EVIBS01A".equalsIgnoreCase(seriesarchive[seriesidx].getName()))
+      {
+        continue;
+      }
+      File[] files = BookTocTransform.getFileList(seriesarchive[seriesidx].getAbsolutePath());
+      for (int i = 0; i < files.length; i++) {
+        log.debug((i) + ". files: " + files[i]);
+        try {
+          File[] issues = BookTocTransform.getFileList(files[i].getCanonicalPath());
+          for (int j = 0; j < issues.length; j++) {
+            File xmlFile = new File(issues[j].getCanonicalPath() + BookTocTransform.FILE_SEP + "issue.xml");
+            Issue anissue = IssueLoader.getIssue(xmlFile);
+            List<IncludeItem> serialissues = IncludeItemLoader.getIncludeItems(xmlFile);
+            Iterator<IncludeItem> includeitems = serialissues.iterator();
+            log.info((j) + ". " + anissue.getIsbn() + ": " + issues[j]);
+
+            while(includeitems.hasNext()) {
+              IncludeItem includeitem = includeitems.next();
+              String pii = includeitem.getPii().replaceAll("\\p{Punct}", "");
+              pii = pii.replace("S" + files[i].getName(), "");
+              File mainxmlFile = new File(issues[j].getCanonicalPath() + BookTocTransform.FILE_SEP + pii + BookTocTransform.FILE_SEP + "main.xml");
+              IncludeItem article = ArticleLoader.getIncludeItem(mainxmlFile);
+              if(article == null) {
+                log.info(mainxmlFile);
+              }
+              log.info(article.getTitle());
+
+            }
+          }
+        } catch (IOException e) {
+          // TODO Auto-generated catch block
+          e.printStackTrace();
+        }
+      }
     }
+    
+  }
+  
+  private static void stampPDF(File xmlFile, String isbn) throws IOException {
+    String isbnpdf = xmlFile.getCanonicalPath() + BookTocTransform.FILE_SEP + isbn + ".pdf";
+    String stampedpdf = xmlFile.getCanonicalPath() + BookTocTransform.FILE_SEP + isbn + "_stamped.pdf";
+
+    try {
+      PdfReader reader = new PdfReader(isbnpdf);
+      PdfStamper stamper = new PdfStamper(reader, new FileOutputStream(stampedpdf));
+      
+      HashMap info = reader.getInfo();
+      log.info(" Info " + info);
+      info.put("Producer","Elsevier Engineering Information");
+      ByteArrayOutputStream baos = new ByteArrayOutputStream();
+      XmpWriter xmp = new XmpWriter(baos);
+      XmpSchema dc = new DublinCoreSchema();
+      XmpArray subject = new XmpArray(XmpArray.UNORDERED);
+      subject.add("Referex");
+      dc.setProperty(DublinCoreSchema.SUBJECT, subject);
+      xmp.addRdfDescription(dc);
+      xmp.close();
+      stamper.setXmpMetadata(baos.toByteArray());
+      stamper.setMoreInfo(info);
+      stamper.close();
+      reader.close();
+    } catch (DocumentException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
+    
+  }
+  private static void createPDF(File xmlFile, String isbn, Iterator<IncludeItem> piis) throws IOException {
+    // TODO Auto-generated method stub
+    Document document = null;
+    PdfCopy writer = null;
+    int pageOffset = 0;
+    List master = new ArrayList();
+    boolean firstLoop = true;
+    String isbnpdf = xmlFile.getCanonicalPath() + BookTocTransform.FILE_SEP + isbn + ".pdf";
+
+    while(piis.hasNext()) {
+      IncludeItem pii = piis.next();
+      String foldername = pii.getPii().replaceAll("\\p{Punct}", "");
+
+      String[] locs = {"FRONT", "BODY","REAR"};
+      File floc = null;
+      for(int l = 0; l < locs.length; l++) {
+        floc = new File(xmlFile.getCanonicalPath() + BookTocTransform.FILE_SEP + locs[l] + BookTocTransform.FILE_SEP + foldername + BookTocTransform.FILE_SEP + "main.pdf"); 
+        if(floc.exists()) {
+          log.info(locs[l] + " file. " + floc.getAbsolutePath());
+          break;
+        }
+      }
+
+      PdfReader reader = new PdfReader(floc.getAbsolutePath());
+      reader.consolidateNamedDestinations();
+      // we retrieve the total number of pages
+      int n = reader.getNumberOfPages();
+      List bookmarks = SimpleBookmark.getBookmark(reader);
+      if (bookmarks != null) {
+          if (pageOffset != 0) {
+              SimpleBookmark.shiftPageNumbers(bookmarks, pageOffset, null);
+          }
+          master.addAll(bookmarks);
+      }
+
+      HashMap map = new HashMap();
+      map.put("Title", pii.getTitle());
+      map.put("Action", "GoTo");
+      map.put("Page", (pageOffset + 1) + " Fit");
+      master.add(map);
+
+      
+      pageOffset += n;
+
+      if (firstLoop) {
+        // step 1: creation of a document-object
+        document = new Document(reader.getPageSizeWithRotation(1));
+        // step 2: we create a writer that listens to the document
+        try {
+          writer = new PdfCopy(document, new FileOutputStream(isbnpdf));
+        } catch (DocumentException e) {
+          // TODO Auto-generated catch block
+          e.printStackTrace();
+        }
+        // step 3: we open the document
+        document.open();
+        firstLoop = false;
+      }
+      
+      PdfImportedPage page;
+      for (int m = 0; m < n;) {
+          ++m;
+          page = writer.getImportedPage(reader, m);
+          try {
+            writer.addPage(page);
+          } catch (BadPdfFormatException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+          }
+      }
+      reader.close();
+    } // while 
+    if (!master.isEmpty()) {
+      writer.setOutlines(master);
+    }
+    // step 5: we close the document
+    document.close();
+
   }
 }
