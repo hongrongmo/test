@@ -1,25 +1,14 @@
 package org.ei.data.books.tocs;
 
 import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.StringReader;
-import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.parsers.SAXParser;
-import javax.xml.parsers.SAXParserFactory;
-
-import org.apache.commons.digester.Digester;
-import org.apache.commons.digester.xmlrules.DigesterLoader;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
 
-public class IncludeItemLoader {
+public class IncludeItemLoader extends XMLLoader {
     protected static Log log = LogFactory.getLog(IncludeItemLoader.class);
 
     public static void main(String[] args) {
@@ -61,6 +50,7 @@ public class IncludeItemLoader {
         rulesString.append("<object-create-rule classname=\"org.ei.data.books.tocs.IncludeItem\"/>");
         rulesString.append("<set-next-rule methodname=\"add\" paramtype=\"java.lang.Object\"/>");
         rulesString.append("<bean-property-setter-rule pattern=\"ce:pii\" propertyname=\"pii\"/>");
+        rulesString.append("<bean-property-setter-rule pattern=\"ce:title\" propertyname=\"title\"/>");
         rulesString.append("<call-method-rule pattern=\"ce:pages\" methodname=\"addRange\" paramcount=\"2\" />");
         rulesString.append("<call-param-rule pattern=\"ce:pages/ce:first-page\" paramnumber=\"0\"/>");
         rulesString.append("<call-param-rule pattern=\"ce:pages/ce:last-page\" paramnumber=\"1\"/>");
@@ -69,42 +59,11 @@ public class IncludeItemLoader {
     }
     
     public static List<IncludeItem> getIncludeItems(File issue) {
-        List<IncludeItem> piis = new ArrayList<IncludeItem>();
-        digest(issue, rulesString.toString(), piis);
-        return piis;
+        List<IncludeItem> items = new LinkedList<IncludeItem>();
+        digest(issue, rulesString.toString(), items);
+        return items;
     }
     
-    public static void digest(File issue, String rules, List items) {
-
-        System.setProperty("javax.xml.parsers.SAXParserFactory","org.apache.xerces.jaxp.SAXParserFactoryImpl");
-
-        try {
-            InputSource xmlRules = new InputSource(new StringReader(rules));
-            InputSource xmlSource = new InputSource(new FileReader(issue.toString()));
-
-            SAXParserFactory factory = SAXParserFactory.newInstance();
-            SAXParser saxParser = factory.newSAXParser();
-            Digester digester = new Digester(saxParser);
-            
-            digester = DigesterLoader.createDigester(xmlRules, digester);
-            digester.setEntityResolver(new BookDTDEntityResolver());
-            
-            // Push empty List onto Digester's Stack
-            digester.push( items );
-            // Parse the XML document
-            digester.parse(xmlSource);
-        } catch (SAXException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (ParserConfigurationException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-    }
-
     public static String toXML(List<IncludeItem> includeitems) {
         int pageIndex = 0;
         StringBuffer strbuf = new StringBuffer();
