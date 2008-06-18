@@ -107,10 +107,10 @@ public class BookCreator
     File[] seriesarchive = BookTocTransform.getBookSeriesFileList(BookTocTransform.ARCHIVE_ROOT);
     for(int seriesidx = 0; seriesidx < seriesarchive.length; seriesidx++) {
       log.debug((seriesidx) + ". series: " + seriesarchive[seriesidx]);
-      if(!"EVIBS02H".equalsIgnoreCase(seriesarchive[seriesidx].getName()))
-      {
-        continue;
-      }
+//      if(!"EVIBS02I".equalsIgnoreCase(seriesarchive[seriesidx].getName()))
+//      {
+//        continue;
+//      }
       File[] files = BookTocTransform.getFileList(seriesarchive[seriesidx].getAbsolutePath());
       for (int i = 0; i < files.length; i++) {
         log.debug((i) + ". files: " + files[i]);
@@ -134,14 +134,19 @@ public class BookCreator
                 while(includeitems.hasNext()) {
                   IncludeItem includeitem = includeitems.next();
                   String pii = includeitem.getPii().replaceAll("\\p{Punct}", "");
-                  pii = pii.replace("S" + issn, "");
-                  File mainxmlFile = new File(issues[j].getCanonicalPath() + BookTocTransform.FILE_SEP + pii + BookTocTransform.FILE_SEP + "main.xml");
-                  IncludeItem article = ArticleLoader.getIncludeItem(mainxmlFile);
-                  if(article == null) {
-                    log.info(mainxmlFile);
+                  String mainxmlfolder = pii.replace("S" + issn, "");
+                  // article file is in folder which is article pii without the "S<issn>" as the prefix
+                  File mainxmlFile = new File(issues[j].getCanonicalPath() + BookTocTransform.FILE_SEP + mainxmlfolder + BookTocTransform.FILE_SEP + "main.xml");
+                  if(mainxmlFile.exists()) {
+                    IncludeItem article = ArticleLoader.getIncludeItem(mainxmlFile);
+                    if(article == null) {
+                      log.info(mainxmlFile);
+                    }
+                    log.info("\t\t" + article.getTitle());
+                  } else {
+                    log.info("\t Cannot find " + mainxmlFile + "!");
                   }
-                  log.info("\t\t" + article.getTitle());
-    
+                  
                 } // while
               }
             }
