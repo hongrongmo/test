@@ -11,7 +11,7 @@ import org.apache.commons.logging.LogFactory;
 public class PDF_FileInfo implements Visitable {
     protected static Log log = LogFactory.getLog(PDF_FileInfo.class);
   
-    private static final String BN13_PREFIX = "978";
+    public static final String BN13_PREFIX = "978";
 
 
     private static DecimalFormat df;
@@ -149,7 +149,7 @@ public class PDF_FileInfo implements Visitable {
      * @param isbn - the ISBN without dashes
      * @return the check digit
      */
-    private static char getISBN13CheckDigit(final String isbn) {
+    public static char getISBN13CheckDigit(final String isbn) {
         int len = isbn.length();
         int digitSum = 0;
         int calcValue = 0;
