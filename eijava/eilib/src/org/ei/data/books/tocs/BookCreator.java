@@ -11,11 +11,9 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
-import javax.xml.transform.Result;
-import javax.xml.transform.stream.StreamResult;
-
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.ei.data.books.tools.PDF_FileInfo;
 
 import com.lowagie.text.Document;
 import com.lowagie.text.DocumentException;
@@ -45,7 +43,14 @@ public class BookCreator
         result = true;
     }    
     return result;
-}
+  }
+  private static String convertToIsbn13(String isbn) {
+    String newisbn;
+    String isbnroot = PDF_FileInfo.BN13_PREFIX + isbn.substring(0, 9);
+    newisbn = isbnroot + PDF_FileInfo.getISBN13CheckDigit(isbnroot);
+    return newisbn;
+  }
+
   public static void main(String args[])
 		//throws Exception
 	{
@@ -66,6 +71,7 @@ public class BookCreator
     isbnList.add("9780750680691");
 
     File[] archvies = BookTocTransform.getBookArchvieDirectoryList(BookTocTransform.ARCHIVE_ROOT);
+    // skip loop - change arch < archvies.length
     for (int arch = 0; arch < 0; arch++) {
       String archive = archvies[arch].getName();
       log.info((arch) + ". archive: " + archive);
@@ -75,14 +81,19 @@ public class BookCreator
         try {
           xmlFile = new File(files[i].getCanonicalPath() + BookTocTransform.FILE_SEP + "main.xml");
           String isbn =  new File(xmlFile.getParent()).getName();
-          if(checkIsbn(isbn)) {
-            log.info((xmlFile) + ". isbn: " + isbn);
-            List<IncludeItem> includeitems = IncludeItemLoader.getIncludeItems(xmlFile);
-            Iterator<IncludeItem> piis = includeitems.iterator();
-            
-            createPDF(xmlFile, isbn, piis);
-            stampPDF(xmlFile, isbn);
-            
+          if(isbn != null) {
+            if(isbn.length() == 10) {
+              isbn = convertToIsbn13(isbn);
+            }
+            if(checkIsbn(isbn)) {
+              log.info((i) + ". " + isbn + ": " + xmlFile);
+  
+              List<IncludeItem> includeitems = IncludeItemLoader.getIncludeItems(xmlFile);
+              Iterator<IncludeItem> piis = includeitems.iterator();
+              
+              createPDF(xmlFile, isbn, piis);
+              stampPDF(xmlFile, isbn);
+            }
           }
         } catch (IOException e) {
           // TODO Auto-generated catch block
@@ -96,7 +107,7 @@ public class BookCreator
     File[] seriesarchive = BookTocTransform.getBookSeriesFileList(BookTocTransform.ARCHIVE_ROOT);
     for(int seriesidx = 0; seriesidx < seriesarchive.length; seriesidx++) {
       log.debug((seriesidx) + ". series: " + seriesarchive[seriesidx]);
-      if(!"EVIBS01A".equalsIgnoreCase(seriesarchive[seriesidx].getName()))
+      if(!"EVIBS02H".equalsIgnoreCase(seriesarchive[seriesidx].getName()))
       {
         continue;
       }
@@ -108,21 +119,31 @@ public class BookCreator
           for (int j = 0; j < issues.length; j++) {
             File xmlFile = new File(issues[j].getCanonicalPath() + BookTocTransform.FILE_SEP + "issue.xml");
             Issue anissue = IssueLoader.getIssue(xmlFile);
-            List<IncludeItem> serialissues = IncludeItemLoader.getIncludeItems(xmlFile);
-            Iterator<IncludeItem> includeitems = serialissues.iterator();
-            log.info((j) + ". " + anissue.getIsbn() + ": " + issues[j]);
-
-            while(includeitems.hasNext()) {
-              IncludeItem includeitem = includeitems.next();
-              String pii = includeitem.getPii().replaceAll("\\p{Punct}", "");
-              pii = pii.replace("S" + files[i].getName(), "");
-              File mainxmlFile = new File(issues[j].getCanonicalPath() + BookTocTransform.FILE_SEP + pii + BookTocTransform.FILE_SEP + "main.xml");
-              IncludeItem article = ArticleLoader.getIncludeItem(mainxmlFile);
-              if(article == null) {
-                log.info(mainxmlFile);
+            if(anissue != null)
+            {
+              String issn = anissue.getIssn().replaceAll("\\p{Punct}","");
+              List<IncludeItem> serialissues = IncludeItemLoader.getIncludeItems(xmlFile);
+              Iterator<IncludeItem> includeitems = serialissues.iterator();
+              String isbn = anissue.getIsbn().replaceAll("\\p{Punct}","");
+              if(isbn != null) {
+                if(isbn.length() == 10) {
+                  isbn = convertToIsbn13(isbn);
+                }
+                log.info((j) + ". " + isbn + ": " + issues[j]);
+    
+                while(includeitems.hasNext()) {
+                  IncludeItem includeitem = includeitems.next();
+                  String pii = includeitem.getPii().replaceAll("\\p{Punct}", "");
+                  pii = pii.replace("S" + issn, "");
+                  File mainxmlFile = new File(issues[j].getCanonicalPath() + BookTocTransform.FILE_SEP + pii + BookTocTransform.FILE_SEP + "main.xml");
+                  IncludeItem article = ArticleLoader.getIncludeItem(mainxmlFile);
+                  if(article == null) {
+                    log.info(mainxmlFile);
+                  }
+                  log.info("\t\t" + article.getTitle());
+    
+                } // while
               }
-              log.info(article.getTitle());
-
             }
           }
         } catch (IOException e) {
