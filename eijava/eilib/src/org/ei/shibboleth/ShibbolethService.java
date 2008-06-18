@@ -37,7 +37,26 @@ public class ShibbolethService extends HttpServlet
         try
         {
             resources[0] = config.getInitParameter("resource");
+            idpMap.put("157","https://145.36.192.163/idp/shibboleth");
+            idpMap.put("139","https://145.36.192.163/idp/shibboleth");
+            idpMap.put("100","https://145.36.192.163/idp/shibboleth");
+            idpMap.put("165","https://145.36.192.163/idp/shibboleth");
+            idpMap.put("106","https://145.36.192.163/idp/shibboleth");
+            idpMap.put("135","https://145.36.192.163/idp/shibboleth");
+            idpMap.put("180","https://145.36.192.163/idp/shibboleth");
+            idpMap.put("110","https://145.36.192.163/idp/shibboleth");
             idpMap.put("215","https://145.36.192.163/idp/shibboleth");
+            idpMap.put("209","https://145.36.192.163/idp/shibboleth");
+            idpMap.put("248","https://145.36.192.163/idp/shibboleth");
+            idpMap.put("167","https://145.36.192.163/idp/shibboleth");
+            idpMap.put("204","https://145.36.192.163/idp/shibboleth");
+            idpMap.put("137","https://145.36.192.163/idp/shibboleth");
+            idpMap.put("182","https://145.36.192.163/idp/shibboleth");
+            idpMap.put("111","https://145.36.192.163/idp/shibboleth");
+            idpMap.put("224","https://145.36.192.163/idp/shibboleth");
+            idpMap.put("206","https://145.36.192.163/idp/shibboleth");
+            idpMap.put("120","https://145.36.192.163/idp/shibboleth");
+            idpMap.put("176","https://145.36.192.163/idp/shibboleth");
         }
         catch(Exception e)
         {
@@ -79,6 +98,7 @@ public class ShibbolethService extends HttpServlet
 		StringBuffer tokVal = new StringBuffer();
 		String ipaddress = null;
 		boolean isAuthenticated = false;
+		boolean isExpired = false;
         String atok    = request.getParameter("atok");
         String custid  = request.getParameter("custid");
 		String instant = request.getParameter("instant");
@@ -94,23 +114,14 @@ public class ShibbolethService extends HttpServlet
 			{
 
 				Cookie c = clientCookies[i];
-				if(c.getName().equals("atok"))
-					atok = c.getValue();
 				if(c.getName().equals("custid"))
 					custid = c.getValue();
-				if(c.getName().equals("instant"))
-					instant = c.getValue();
 				if(c.getName().equals("idp"))
 					idp = c.getValue();
 			}
 		}
 
-		//System.out.println("INSTANT: " + instant);
-		//System.out.println("SECRET: " + secret);
-		//System.out.println("CUSTID: " + custid);
-
-
-		tokVal.append(instant).append(secret).append(custid);
+		tokVal.append(instant).append(secret).append(idp);
 
 		try
 		{
@@ -133,32 +144,36 @@ public class ShibbolethService extends HttpServlet
 		if(isAuthenticated)
 
 		{
-			/*
+
 			try
 			{
 				DateFormat formatter = new SimpleDateFormat("yyyy-MM-ddHH:mm:ss");
-				String tempDate = instant.substring(0,9) + instant.substring(11,18);
+				//String tempDate = instant.substring(0,10) + instant.substring(11,19);
+				String tempDate = instant;
 				Date instDate = (Date)formatter.parse(tempDate);
+				System.out.println("DATE : " + tempDate);
 				System.out.println("CURRENT : " + System.currentTimeMillis());
 				System.out.println("INSTANT: " + instDate.getTime());
-
-				if((System.currentTimeMillis() - (instDate.getTime())) > 1800000)
+				System.out.println("DIFFERENCE: " + (System.currentTimeMillis() - (instDate.getTime())));
+				//if((System.currentTimeMillis() - (instDate.getTime())) > 1800000)
+				if((System.currentTimeMillis() - (instDate.getTime())) > 120000)
 				{
 					isAuthenticated	= false;
+					isExpired = true;
 				}
 			}
 			catch(Exception e)
 			{
 				printErrorMessage("Session creation exception:" +e, out);
 			}
-			*/
+
 
 
 			String mappedIdp = (String)idpMap.get(custid);
 
 			if(mappedIdp == null || idp == null || !mappedIdp.equals(idp))
 			{
-				isAuthenticated = true;
+				isAuthenticated = false;
 
 			}
 
@@ -179,8 +194,6 @@ public class ShibbolethService extends HttpServlet
 													   null);
 
 					response.addCookie(new Cookie("custid", custid));
-					response.addCookie(new Cookie("atok", atok));
-					response.addCookie(new Cookie("instant", instant));
 					response.addCookie(new Cookie("idp", idp));
 					Cookie cookie = new Cookie("EISESSION", (us.getSessionID()).toString());
 					cookie.setMaxAge(-1);
@@ -195,7 +208,10 @@ public class ShibbolethService extends HttpServlet
 			}
 			else
 			{
-				printErrorMessage("FAILED SHIBBOLETH AUTHENTICATION", out);
+				if(!isExpired)
+					printErrorMessage("FAILED SHIBBOLETH AUTHENTICATION", out);
+				else
+					printErrorMessage("EXPIRED SHIBBOLETH AUTHENTICATION. REAUTHENTICATE AT <a href=\"http://cert-evauth.engineeringvillage.com/phptest.php\">Shibboleth Login Page</a> ", out);
 
 			}
         }
@@ -203,6 +219,13 @@ public class ShibbolethService extends HttpServlet
         {
 
 			System.out.println("FAILED SHIBBOLETH AUTHENTICATION");
+       		System.out.println("ATOK: " + atok);
+       		System.out.println("CUSTID: " + custid);
+       		System.out.println("INSTANT: " + instant);
+       		System.out.println("IDP: " + idp);
+       		System.out.println("TOKVAL: " + tokVal);
+       		System.out.println("ATOKDIGEST:" + atokDigest);
+
 			printErrorMessage("FAILED SHIBBOLETH AUTHENTICATION", out);
 		}
     }
