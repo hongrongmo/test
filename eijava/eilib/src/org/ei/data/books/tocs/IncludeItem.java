@@ -6,7 +6,7 @@ import java.util.List;
 public class IncludeItem {
 
     private String pii = null;
-    private String title = null;
+    private String title = "";
     
     public String getTitle() {
       return title;
