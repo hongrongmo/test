@@ -141,8 +141,9 @@ public class BookCreator
                     IncludeItem article = ArticleLoader.getIncludeItem(mainxmlFile);
                     if(article == null) {
                       log.info(mainxmlFile);
+                    } else {
+                      log.info("\t\t" + article.getTitle());
                     }
-                    log.info("\t\t" + article.getTitle());
                   } else {
                     log.info("\t Cannot find " + mainxmlFile + "!");
                   }
