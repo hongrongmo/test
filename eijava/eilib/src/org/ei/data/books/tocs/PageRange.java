@@ -75,11 +75,6 @@ public class PageRange implements Comparable  {
         this.start = st;
     }
 
-    public String toString() {
-        // TODO Auto-generated method stub
-        return " (" + (getStart()) + ((getEnd() != null) ? ", " + (getEnd()) : "") + ")";
-    }
-    
     public int getLast_page() {
         return format(getEnd());
     }
@@ -110,5 +105,17 @@ public class PageRange implements Comparable  {
 
     public boolean isRoman() {
         return Roman.isRoman(start) || Roman.isRoman(end);
+    }
+
+    public String toString() {
+      StringBuilder builder = new StringBuilder();
+
+      builder.append(getClass().getName()).append("@").append(
+          Integer.toHexString(hashCode())).append(" [");
+      builder.append("start").append("='").append(getStart()).append("' ");
+      builder.append("end").append("='").append(getEnd()).append("' ");
+      builder.append("]");
+
+      return builder.toString();
     }
 }
