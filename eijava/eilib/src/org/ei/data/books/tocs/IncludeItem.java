@@ -1,13 +1,19 @@
 package org.ei.data.books.tocs;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class IncludeItem {
 
     private String pii = null;
     private String title = "";
+    private List<PageRange> pageranges = null;
     
+
+    public IncludeItem() {
+      pageranges = new LinkedList<PageRange>();
+    }
+
     public String getTitle() {
       return title;
     }
@@ -24,16 +30,16 @@ public class IncludeItem {
         this.pii = pii;
     }
 
-    private List<PageRange> ranges = new ArrayList<PageRange>();
+    public List<PageRange> getPageRanges() { 
+        return this.pageranges; 
+    }
     
+    public void setPageRanges(List<PageRange> pageranges) {
+      this.pageranges = pageranges;
+    }
     
-    public List<PageRange> getRanges() { return ranges; }
-    
-    public void addRange(String start, String end) {
-        PageRange pr = new PageRange();
-        pr.setStart(start);
-        pr.setEnd(end);
-        ranges.add(pr);
+    public void addPageRange(PageRange pr) {
+      this.pageranges.add(pr);
     }
 
     public String toString() {
@@ -42,7 +48,7 @@ public class IncludeItem {
       buffer.append(getClass().getName()).append("@").append(Integer.toHexString(hashCode())).append(" [");
       buffer.append("title").append("='").append(getTitle()).append("' ");
       buffer.append("pii").append("='").append(getPii()).append("' ");
-      buffer.append("ranges").append("='").append(getRanges()).append("' ");
+      buffer.append("ranges").append("='").append(getPageRanges()).append("' ");
       buffer.append("]");
 
       return buffer.toString();
