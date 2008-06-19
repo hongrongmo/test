@@ -42,7 +42,7 @@ public class IncludeItem {
       buffer.append(getClass().getName()).append("@").append(Integer.toHexString(hashCode())).append(" [");
       buffer.append("title").append("='").append(getTitle()).append("' ");
       buffer.append("pii").append("='").append(getPii()).append("' ");
-      //buffer.append("start").append("='").append(getPii()).append("' ");
+      buffer.append("ranges").append("='").append(getRanges()).append("' ");
       buffer.append("]");
 
       return buffer.toString();
