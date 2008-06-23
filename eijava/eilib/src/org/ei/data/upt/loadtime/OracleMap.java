@@ -117,6 +117,48 @@ public class OracleMap {
 		return mid_kc;
 	}
 
+	public boolean contains(String key,
+							String kind)
+			throws Exception
+		{
+			ResultSet rs = null;
+			String kc = null;
+			boolean result = false;
+			try
+			{
+			   stmt.setString(1, key);
+			   stmt.execute();
+			   rs = stmt.getResultSet();
+			   while(rs.next())
+			   {
+					kc = rs.getString("kc");
+					if(kc != null && kind != null && kc.length()>0 && kind.length()>0 &&
+						kind.substring(0,1).equalsIgnoreCase(kc.substring(0,1)))
+					{
+						result = true;
+						break;
+					}
+			   }
+			}
+			catch(Exception sqle)
+			{
+			   sqle.printStackTrace();
+			}
+			finally
+			{
+				try
+				{
+					rs.close();
+				}
+				catch(Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+
+			return result;
+	}
+
     private void close(Statement stmt) {
 
         if (stmt != null) {
