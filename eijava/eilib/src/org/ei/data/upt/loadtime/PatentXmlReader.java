@@ -267,8 +267,8 @@ public class PatentXmlReader
 		patentNumber = (String)output_record.get("PR_DOCID_DOC_NUMBER");
 		System.out.println("Patent Number:"+ patentNumber);
 		patentCountry = (String)output_record.get("PR_DOCID_COUNTRY");
-
-		if(!checkAvailable(patentNumber.trim(),patentCountry.trim()))
+		String patentKind = (String)output_record.get("PR_DOCID_KIND");
+		if(!checkAvailable(patentNumber,patentCountry,patentKind))
 		{
 			outputUPTRecord(output_record,patentsOut);
 			outputPatentRef(output_record,patentsRefOut);
@@ -493,8 +493,14 @@ public class PatentXmlReader
 			HashMap related_documents = (HashMap)singleRecord.get("RELATED-DOCUMENT");
 			if(related_documents!=null && related_documents.get("DOCNUMBER") != null)
 			{
-				//System.out.println("DOC NUMBER "+(String)related_documents.get("DOCNUMBER"));
-				out.print((String)related_documents.get("DOCNUMBER"));
+				String ainString = (String)related_documents.get("DOCNUMBER");
+				if(ainString.length()>3999)
+				{
+					ainString = ainString.substring(0,ainString.lastIndexOf(AUDELIMITER,3999));
+					System.out.println("AIN Field too long for record "+ac+" "+patentNumber);
+				}
+
+				out.print(ainString);
 			}
 			out.print(DELIM);
 
@@ -1135,18 +1141,20 @@ public class PatentXmlReader
 							pcBuffer.append(IDDELIMITER);
 							pcBuffer.append((String)pcMap.get("DATE"));
 						}
-						//if(pcMap.get("KIND") != null)
-						//{
-						//	pcBuffer.append(AUDELIMITER);
-						//	pcBuffer.append((String)pcMap.get("KIND"));
-						//}
+
 					}
 				}
 			}
 
 			if(pcBuffer.length()>0)
 			{
-				out.print(pcBuffer.toString());
+				String pcString = pcBuffer.toString();
+				if(pcString.length()>3999)
+				{
+					pcString = pcString.substring(0,pcString.lastIndexOf(AUDELIMITER,3999));
+					System.out.println("PI Field too long for record "+ac+" "+patentNumber);
+				}
+				out.print(pcString);
 			}
 			out.print(DELIM);
 
@@ -2811,25 +2819,33 @@ public class PatentXmlReader
 	}
 
 	private boolean checkAvailable(String pNum,
-								   String authCode)
+								   String authCode,
+								   String kind)
 		throws Exception
 	{
 		if(pNum.indexOf("PP") == 0)
 		{
 			return checkAvailablePP(pNum, authCode);
 		}
-
 		String authPnum = authCode+pNum;
-		if(dupMap.containsKey(authPnum))
+		String authPnumKind = authCode+pNum+kind.charAt(0);
+		if(dupMap.containsKey(authPnumKind))
 		{
 			return true;
 		}
 		else
 		{
-			dupMap.put(authPnum, authPnum);
+			dupMap.put(authPnumKind, authPnumKind);
 		}
 
-		return dbMap.contains(authPnum);
+		if(authCode.equalsIgnoreCase("US"))
+		{
+			return dbMap.contains(authPnum);
+		}
+		else
+		{
+			return dbMap.contains(authPnum,kind);
+		}
 	}
 
 	private boolean checkAvailablePP(String pNum,
