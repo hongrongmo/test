@@ -47,7 +47,7 @@
 
           <table border="0" width="99%" cellspacing="0" cellpadding="0">
               <tr>
-                  <td valign="top" colspan="5" ><img src="cid:spacergif" border="0" width="0"/><A CLASS="MedBlackText"><b>Engineering Village E-mail Alert</b></A></td>
+                  <td valign="top" colspan="5" align="left"><img src="cid:spacergif" border="0" width="0"/><A CLASS="MedBlackText"><b>Engineering Village E-mail Alert</b></A></td>
               </tr>
 			  <tr>
 				  <td valign="top" colspan="5" align="left"><img src="cid:spacergif" border="0" width="0"/><A CLASS="MedBlackText">Please do not reply to this email address.  Please send all responses and questions to eicustomersupport@elsevier.com.</A></td>
@@ -92,7 +92,7 @@
                   </tr>
               </xsl:if>
               <tr>
-                  <td colspan="5">
+                  <td colspan="5" align="left">
                       <table border="0" cellspacing="0" cellpadding="0" width="100%">
                           <xsl:apply-templates select="PAGE-RESULTS"/>
                       </table>
