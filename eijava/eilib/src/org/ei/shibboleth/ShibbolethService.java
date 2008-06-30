@@ -1,6 +1,12 @@
 package org.ei.shibboleth;
 
-
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URLEncoder;
@@ -27,7 +33,8 @@ public class ShibbolethService extends HttpServlet
 {
     private String[] resources = new String[1];
     private String redirURL;
-    Hashtable idpMap = new Hashtable();
+    private ShibbolethIdpMap idpMap = ShibbolethIdpMap.getInstance();
+    //Hashtable idpMap = new Hashtable();
 
     public void init()
         throws ServletException
@@ -37,26 +44,6 @@ public class ShibbolethService extends HttpServlet
         try
         {
             resources[0] = config.getInitParameter("resource");
-            idpMap.put("157","https://145.36.192.163/idp/shibboleth");
-            idpMap.put("139","https://145.36.192.163/idp/shibboleth");
-            idpMap.put("100","https://145.36.192.163/idp/shibboleth");
-            idpMap.put("165","https://145.36.192.163/idp/shibboleth");
-            idpMap.put("106","https://145.36.192.163/idp/shibboleth");
-            idpMap.put("135","https://145.36.192.163/idp/shibboleth");
-            idpMap.put("180","https://145.36.192.163/idp/shibboleth");
-            idpMap.put("110","https://145.36.192.163/idp/shibboleth");
-            idpMap.put("215","https://145.36.192.163/idp/shibboleth");
-            idpMap.put("209","https://145.36.192.163/idp/shibboleth");
-            idpMap.put("248","https://145.36.192.163/idp/shibboleth");
-            idpMap.put("167","https://145.36.192.163/idp/shibboleth");
-            idpMap.put("204","https://145.36.192.163/idp/shibboleth");
-            idpMap.put("137","https://145.36.192.163/idp/shibboleth");
-            idpMap.put("182","https://145.36.192.163/idp/shibboleth");
-            idpMap.put("111","https://145.36.192.163/idp/shibboleth");
-            idpMap.put("224","https://145.36.192.163/idp/shibboleth");
-            idpMap.put("206","https://145.36.192.163/idp/shibboleth");
-            idpMap.put("120","https://145.36.192.163/idp/shibboleth");
-            idpMap.put("176","https://145.36.192.163/idp/shibboleth");
         }
         catch(Exception e)
         {
@@ -148,15 +135,14 @@ public class ShibbolethService extends HttpServlet
 			try
 			{
 				DateFormat formatter = new SimpleDateFormat("yyyy-MM-ddHH:mm:ss");
-				//String tempDate = instant.substring(0,10) + instant.substring(11,19);
 				String tempDate = instant;
 				Date instDate = (Date)formatter.parse(tempDate);
-				System.out.println("DATE : " + tempDate);
-				System.out.println("CURRENT : " + System.currentTimeMillis());
-				System.out.println("INSTANT: " + instDate.getTime());
-				System.out.println("DIFFERENCE: " + (System.currentTimeMillis() - (instDate.getTime())));
-				//if((System.currentTimeMillis() - (instDate.getTime())) > 1800000)
-				if((System.currentTimeMillis() - (instDate.getTime())) > 120000)
+				//System.out.println("DATE : " + tempDate);
+				//System.out.println("CURRENT : " + System.currentTimeMillis());
+				//System.out.println("INSTANT: " + instDate.getTime());
+				//System.out.println("DIFFERENCE: " + (System.currentTimeMillis() - (instDate.getTime())));
+
+				if((System.currentTimeMillis() - (instDate.getTime())) > 3600000)
 				{
 					isAuthenticated	= false;
 					isExpired = true;
@@ -169,7 +155,7 @@ public class ShibbolethService extends HttpServlet
 
 
 
-			String mappedIdp = (String)idpMap.get(custid);
+			String mappedIdp = (String)idpMap.lookupIdp(custid);
 
 			if(mappedIdp == null || idp == null || !mappedIdp.equals(idp))
 			{
@@ -242,6 +228,8 @@ public class ShibbolethService extends HttpServlet
 		}
 		return buf.toString();
 	}
+
+
 }
 
 
