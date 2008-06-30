@@ -9,6 +9,7 @@
     xmlns:html="http://www.w3.org/TR/REC-html40"
     xmlns:java="java:java.net.URLEncoder"
     xmlns:DD="java:org.ei.domain.DatabaseDisplayHelper"
+    xmlns:build="java:org.ei.system.Build"
     xmlns:srt="java:org.ei.domain.Sort"
     xmlns:bit="java:org.ei.util.BitwiseOperators"
     xmlns:book="java:org.ei.books.BookDocument"
@@ -35,7 +36,7 @@
 <xsl:variable name="LOCALHOLDINGS-CITATION"><xsl:value-of select="//LOCALHOLDINGS-CITATION"/></xsl:variable>
 <xsl:variable name="BOOKS_OPEN_WINDOW_PARAMS">height=800,width=700,status=yes,resizable,scrollbars=1,menubar=no</xsl:variable>
 
-
+<xsl:variable name="CHINA"><xsl:value-of select="build:china()"/></xsl:variable>
 <xsl:variable name="DEDUP"><xsl:value-of select="/PAGE/DEDUP"/></xsl:variable>
 <xsl:variable name="SEARCH-ID"><xsl:value-of select="/PAGE/SEARCH-ID"/></xsl:variable>
 <xsl:variable name="SESSION-ID"><xsl:value-of select="/PAGE/SESSION-ID" /></xsl:variable>
@@ -76,7 +77,7 @@
           <xsl:call-template name="DEDUP-SCRIPT" />
         </xsl:if>
 
-      <xsl:if test="($COMPMASK='8192' or $COMPMASK='2097152' or $COMPMASK='2105344') and (/PAGE/NAVIGATORS/NAVIGATOR[@NAME='geonav'])">
+      <xsl:if test="($COMPMASK='8192' or $COMPMASK='2097152' or $COMPMASK='2105344') and (/PAGE/NAVIGATORS/NAVIGATOR[@NAME='geonav']) and ($CHINA='false')">
       <script type="text/javascript">
           var ev_searchid = "<xsl:value-of select="$SEARCH-ID"/>";
           var ev_dbmask = "<xsl:value-of select="$SELECTED-DB"/>";
@@ -262,7 +263,7 @@
     </head>
 
     <body bgcolor="#FFFFFF" topmargin="0" marginheight="0" marginwidth="0">
-      <xsl:if test="($COMPMASK='8192' or $COMPMASK='2097152' or $COMPMASK='2105344') and (/PAGE/NAVIGATORS/NAVIGATOR[@NAME='geonav'])">
+      <xsl:if test="($COMPMASK='8192' or $COMPMASK='2097152' or $COMPMASK='2105344') and (/PAGE/NAVIGATORS/NAVIGATOR[@NAME='geonav']) and ($CHINA='false')">
         <xsl:attribute name="onload">initialize()</xsl:attribute>
         <xsl:attribute name="onunload">uninitialize()</xsl:attribute>
       </xsl:if>
