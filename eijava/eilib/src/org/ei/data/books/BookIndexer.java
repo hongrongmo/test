@@ -11,12 +11,17 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.BatchUpdateException;
 import java.sql.Statement;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import org.apache.oro.text.perl.Perl5Util;
 //import org.ei.query.base.PorterStemmer;
@@ -26,6 +31,7 @@ import org.ei.util.StringUtil;
 
 public class BookIndexer
 {
+    private static Log log = LogFactory.getLog(BookIndexer.class);
 
 //  private static PorterStemmer stemmer = new PorterStemmer();
 //  private static TextFileFilter filter = new TextFileFilter();
@@ -44,61 +50,61 @@ public class BookIndexer
   public static void main(String args[])
     //throws Exception
   {
-        String driver = "oracle.jdbc.driver.OracleDriver";
-        String url = "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI"; //args[1];
-        String username = "AP_PRO1"; //args[2];
-        String password = "ei3it"; //args[3];
+    String driver = "oracle.jdbc.driver.OracleDriver";
+    String url = "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI"; //args[1];
+    String username = "AP_PRO1"; //args[2];
+    String password = "ei3it"; //args[3];
 
-        List terms = new ArrayList();
+    List terms = new ArrayList();
 
-        System.out.println("Using table PAGES_ALL");
-        Connection con = null;
-        ResultSet rs = null;
-        Statement stmt = null;
+    log.info("Using table PAGES_ALL");
+    Connection con = null;
+    ResultSet rs = null;
+    Statement stmt = null;
 
-        try {
-            Class.forName(driver);
-        } catch (ClassNotFoundException e1) {
-            // TODO Auto-generated catch block
-            e1.printStackTrace();
-        }
+    try {
+        Class.forName(driver);
+    } catch (ClassNotFoundException e1) {
+        // TODO Auto-generated catch block
+        e1.printStackTrace();
+    }
 
-        try
+    try
+    {
+        url = "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI"; //args[1];
+        username = "AP_EV_SEARCH"; //args[2];
+        password = "ei3it"; //args[3];
+        con = DriverManager.getConnection(url,username,password);
+
+        stmt = con.createStatement();
+        rs = stmt.executeQuery("select MAIN_TERM_SEARCH from CPX_THESAURUS WHERE STATUS='C'");
+        while(rs.next())
         {
-            url = "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI"; //args[1];
-            username = "AP_EV_SEARCH"; //args[2];
-            password = "ei3it"; //args[3];
-            con = DriverManager.getConnection(url,username,password);
+            String term = rs.getString("MAIN_TERM_SEARCH");
+            terms.add(term);
+//                log.info(term);
+        }
 
-            stmt = con.createStatement();
-            rs = stmt.executeQuery("select MAIN_TERM_SEARCH from CPX_THESAURUS WHERE STATUS='C'");
-            while(rs.next())
-            {
-                String term = rs.getString("MAIN_TERM_SEARCH");
-                terms.add(term);
-//                System.out.println(term);
-            }
-
-            if(rs != null) {
-                close(rs);
-            }
-            if(stmt != null) {
-                close(stmt);
+        if(rs != null) {
+            close(rs);
+        }
+        if(stmt != null) {
+            close(stmt);
+        }
+    }
+    catch(SQLException e) {
+        e.printStackTrace();
+    }
+    finally {
+        if(con != null) {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
             }
         }
-        catch(SQLException e) {
-            e.printStackTrace();
-        }
-        finally {
-            if(con != null) {
-                try {
-                    con.close();
-                } catch (SQLException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
-            }
-        }
+    }
 
     try
     {
@@ -148,7 +154,7 @@ public class BookIndexer
         bookQuery = bookQuery + " WHERE BN13 IN ("+ isbnString + ")";
       }
 
-      System.out.println(bookQuery);
+      log.info(bookQuery);
       rs = stmt.executeQuery(bookQuery);
 
       while(rs.next())
@@ -157,7 +163,7 @@ public class BookIndexer
         String ti = rs.getString("TI");
         books.put(bn,ti);
       }
-      //System.out.println(books.size());
+      //log.info(books.size());
 
       if(rs != null) {
           close(rs);
@@ -173,15 +179,17 @@ public class BookIndexer
       pstmt1 = con.prepareStatement("SELECT docid,page_txt,vo FROM PAGES_ALL WHERE BN13 = ? ORDER BY PAGE_NUM ASC");
 
       long commitCount = 0;
+      con.setAutoCommit(false);
+      Statement batchstmt = con.createStatement();
+
       while(booksIt.hasNext())
       {
-
         String isbn13 = (String)booksIt.next();
         String bookTitle = (String)books.get(isbn13);
         pstmt1.setString(1, isbn13);
         rs = pstmt1.executeQuery();
 
-        System.out.println("/* " + isbn13 + " */");
+        log.info("/* " + isbn13 + " */");
 
         while(rs.next())
         {
@@ -207,46 +215,73 @@ public class BookIndexer
                 keywords = getKeywords(terms, abs);
                 if(keywords != null)
                 {
-                  System.out.println("UPDATE PAGES_ALL SET page_keywords = '" + keywords.replaceAll("'", "''") + "' WHERE docid = '" + id + "';");
+                  log.info(commitCount + " UPDATE PAGES_ALL SET page_keywords = '" + keywords.replaceAll("'", "''") + "' WHERE docid = '" + id + "';");
+                  batchstmt.addBatch("UPDATE PAGES_ALL SET page_keywords = '" + keywords.replaceAll("'", "''") + "' WHERE docid = '" + id + "'");
                   commitCount++;
                 }
                 else {
-                  System.out.println("/* No Keyword matches for " + id + ", " + col + " */");
+                  log.info("/* No Keyword matches for " + id + ", " + col + " */");
                 }
               }
               else {
-                System.out.println("/* NULL Abstract for " + id + " */");
+                log.info("/* NULL Abstract for " + id + " */");
               }
-          }
-          if(commitCount >= 10000) {
-              System.out.println("commit;");
+          } // if
+          if(commitCount >= 100)
+          {
+              int[] updCnt = batchstmt.executeBatch();
+              con.commit();
+              /* for(int i = 0; i < updCnt.length; i++)
+              {
+                log.info("" + i);
+              } */
+              log.info("commit;");
               commitCount = 0;
-            }
-          }
-            }
-            System.out.println("commit;");
 
-            if(rs != null) {
-                close(rs);
-            }
-            if(pstmt1 != null) {
-                close(pstmt1);
-            }
+              batchstmt = con.createStatement();
+          }
+        } // while
+      } // while
+      int[] updCnt = stmt.executeBatch();
+      con.commit();
+      batchstmt.close();
+      log.info("commit;");
+
+      if(rs != null) {
+        close(rs);
+      }
+      if(pstmt1 != null) {
+        close(pstmt1);
+      }
+      if(batchstmt != null) {
+        close(batchstmt);
+      }
+    }
+    catch (BatchUpdateException be) {
+      try
+      {
+        con.rollback();
+      }
+      catch(SQLException e) {
+        log.error("SQLException ",e);
+      }
+      log.error("BatchUpdateException ",be);
+    }
+    catch(SQLException e) {
+      log.error("SQLException ",e);
+    }
+    finally {
+      if(con != null)
+      {
+        try {
+            con.close();
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            log.error("SQLException ",e);
         }
-        catch(SQLException e) {
-            e.printStackTrace();
-        }
-        finally {
-            if(con != null) {
-                try {
-                    con.close();
-                } catch (SQLException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
-            }
-        }
-        System.out.println("quit;");
+      }
+    }
+    log.info("quit;");
   }
 
 /*
@@ -334,7 +369,7 @@ public class BookIndexer
         String regex = "m/\\b"+stemmedTerm+"\\b/";
         if(perl.match(regex,spage))
         {
-          //System.out.println("Hit:"+term);
+          //log.info("Hit:"+term);
           if(termbuf.length() > 0)
           {
             termbuf.append("|");
