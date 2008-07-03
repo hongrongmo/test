@@ -27,42 +27,31 @@ import org.ei.util.StringUtil;
 public class BookIndexer
 {
 
-//	private static PorterStemmer stemmer = new PorterStemmer();
-//	private static TextFileFilter filter = new TextFileFilter();
+//  private static PorterStemmer stemmer = new PorterStemmer();
+//  private static TextFileFilter filter = new TextFileFilter();
     private static Perl5Util perl = new Perl5Util();
-	private static Map stopWords = new HashMap();
-//	private static int numfiles = 0;
-//	private static int numbooks = 0;
+    private static Map stopWords = new HashMap();
+//  private static int numfiles = 0;
+//  private static int numbooks = 0;
 
-	static
-	{
-		stopWords.put("Engineering", "n");
-		stopWords.put("Engineers", "n");
-		stopWords.put("pH", "n");
-	}
+  static
+  {
+    stopWords.put("Engineering", "n");
+    stopWords.put("Engineers", "n");
+    stopWords.put("pH", "n");
+  }
 
-	public static void main(String args[])
-		//throws Exception
-	{
+  public static void main(String args[])
+    //throws Exception
+  {
         String driver = "oracle.jdbc.driver.OracleDriver";
         String url = "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI"; //args[1];
         String username = "AP_PRO1"; //args[2];
         String password = "ei3it"; //args[3];
 
         List terms = new ArrayList();
-        String strDefault = "WOBL";
-        String strBatch = null;
 
-		    if(args != null) {
-  		    if(args.length >= 1 && args[0] != null) {
-              strDefault = args[0];
-            }
-  		    if(args.length >= 2 && args[1] != null) {
-              strBatch = args[1];
-            }
-        }
-        strDefault = strDefault.toUpperCase();
-        System.out.println("Using table BOOK_PAGES_" + strDefault);
+        System.out.println("Using table PAGES_ALL");
         Connection con = null;
         ResultSet rs = null;
         Statement stmt = null;
@@ -75,7 +64,7 @@ public class BookIndexer
         }
 
         try
-		    {
+        {
             url = "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI"; //args[1];
             username = "AP_EV_SEARCH"; //args[2];
             password = "ei3it"; //args[3];
@@ -96,7 +85,7 @@ public class BookIndexer
             if(stmt != null) {
                 close(stmt);
             }
-		    }
+        }
         catch(SQLException e) {
             e.printStackTrace();
         }
@@ -111,8 +100,8 @@ public class BookIndexer
             }
         }
 
-		try
-		{
+    try
+    {
       // "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI", "AP_EV_SEARCH", "ei3it"
 
       Map books = new HashMap();
@@ -126,10 +115,10 @@ public class BookIndexer
       try {
         BufferedReader rdr = new BufferedReader(new FileReader("isbnList.txt"));
         while (rdr.ready()) {
-      	  String aline = rdr.readLine();
-      	  isbnList.add(aline);
-      	}
-      	rdr.close();
+          String aline = rdr.readLine();
+          isbnList.add(aline);
+        }
+        rdr.close();
       }
       catch(IOException ioe) {
 
@@ -154,32 +143,20 @@ public class BookIndexer
 
       // use view which contains all books from both the 407 and 991 tables
       String bookQuery = "SELECT BN13, TI FROM BOOKS_ALL";
-
-      if(isbnString != null || (strBatch != null))
+      if(isbnString != null)
       {
-        if(strBatch != null) {
-           bookQuery = bookQuery + " WHERE NT='" + strBatch + "'";
-        }
-        if(isbnString != null) {
-          if(strBatch != null) {
-             bookQuery = bookQuery + " AND ";
-          }
-          else {
-             bookQuery = bookQuery + " WHERE ";
-          }
-          bookQuery = bookQuery + " BN13 IN ("+ isbnString + ")";
-        }
+        bookQuery = bookQuery + " WHERE BN13 IN ("+ isbnString + ")";
       }
 
       System.out.println(bookQuery);
       rs = stmt.executeQuery(bookQuery);
 
-			while(rs.next())
-			{
-				String bn = rs.getString("BN13");
-				String ti = rs.getString("TI");
-				books.put(bn,ti);
-			}
+      while(rs.next())
+      {
+        String bn = rs.getString("BN13");
+        String ti = rs.getString("TI");
+        books.put(bn,ti);
+      }
       //System.out.println(books.size());
 
       if(rs != null) {
@@ -189,64 +166,63 @@ public class BookIndexer
           close(stmt);
       }
 
-			Iterator booksIt = (books.keySet()).iterator();
+      Iterator booksIt = (books.keySet()).iterator();
 
-			PreparedStatement pstmt1 = null;
+      PreparedStatement pstmt1 = null;
 
-			pstmt1 = con.prepareStatement("select docid,page_txt,vo from BOOK_PAGES_" +  strDefault + " where bn13 = ? ORDER BY PAGE_NUM ASC");
+      pstmt1 = con.prepareStatement("SELECT docid,page_txt,vo FROM PAGES_ALL WHERE BN13 = ? ORDER BY PAGE_NUM ASC");
 
       long commitCount = 0;
-			while(booksIt.hasNext())
-			{
+      while(booksIt.hasNext())
+      {
 
-				String isbn13 = (String)booksIt.next();
-				String bookTitle = (String)books.get(isbn13);
-				pstmt1.setString(1, isbn13);
-				rs = pstmt1.executeQuery();
+        String isbn13 = (String)booksIt.next();
+        String bookTitle = (String)books.get(isbn13);
+        pstmt1.setString(1, isbn13);
+        rs = pstmt1.executeQuery();
 
         System.out.println("/* " + isbn13 + " */");
 
-				while(rs.next())
-				{
-					String id = rs.getString("docid");
+        while(rs.next())
+        {
+          String id = rs.getString("docid");
           String col = rs.getString("vo");
 
-					String keywords = null;
-					Clob clob = rs.getClob("page_txt");
-					if(clob != null)
-					{
-                String abs = null; //getPageTextFromFile(id,isbn13);
-                try {
-                    if(abs == null) {
-                        abs = StringUtil.getStringFromClob(clob);
-                    }
-                } catch (Exception e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
-                if(abs != null) {
-    						  abs = abs.replaceFirst(bookTitle, "");
-                  //abs = abs.replaceFirst("This page intentionally left blank", "");
-      						keywords = getKeywords(terms, abs);
-      						if(keywords != null)
-      						{
-      							System.out.println("update BOOK_PAGES_"  + strDefault + " set page_keywords = '"+keywords.replaceAll("'", "''")+"' where docid = '"+id +"';");
-        						commitCount++;
-      						}
-                  else {
-                    System.out.println("/* No Keyword matches for " + id + ", " + col + " */");
+          String keywords = null;
+          Clob clob = rs.getClob("page_txt");
+          if(clob != null)
+          {
+              String abs = null; //getPageTextFromFile(id,isbn13);
+              try {
+                  if(abs == null) {
+                      abs = StringUtil.getStringFromClob(clob);
                   }
+              } catch (Exception e) {
+                  // TODO Auto-generated catch block
+                  e.printStackTrace();
+              }
+              if(abs != null) {
+                abs = abs.replaceFirst(bookTitle, "");
+                //abs = abs.replaceFirst("This page intentionally left blank", "");
+                keywords = getKeywords(terms, abs);
+                if(keywords != null)
+                {
+                  System.out.println("UPDATE PAGES_ALL SET page_keywords = '" + keywords.replaceAll("'", "''") + "' WHERE docid = '" + id + "';");
+                  commitCount++;
                 }
                 else {
-                  System.out.println("/* NULL Abstract for " + id + " */");
+                  System.out.println("/* No Keyword matches for " + id + ", " + col + " */");
                 }
-					}
-					if(commitCount >= 10000) {
+              }
+              else {
+                System.out.println("/* NULL Abstract for " + id + " */");
+              }
+          }
+          if(commitCount >= 10000) {
               System.out.println("commit;");
               commitCount = 0;
             }
-
-				}
+          }
             }
             System.out.println("commit;");
 
@@ -271,11 +247,11 @@ public class BookIndexer
             }
         }
         System.out.println("quit;");
-	}
+  }
 
 /*
-	private static String getPageTextFromFile(String id, String isbn13) {
-	    String[] idtokens = id.split("_");
+  private static String getPageTextFromFile(String id, String isbn13) {
+      String[] idtokens = id.split("_");
         StringBuffer allPageTxt = new StringBuffer();
         File page_txt = new File(OutputPageData.PATH_PREFIX + System.getProperty("file.separator") + "BurstAndExtracted" + System.getProperty("file.separator") + isbn13 + System.getProperty("file.separator") + "pg_" + PDF_FileInfo.formatPageNumber(Long.parseLong(idtokens[2])) + ".txt");
         BufferedReader rdr = null;
@@ -299,99 +275,99 @@ public class BookIndexer
     }
 */
     private static void close(ResultSet rs)
-	{
-		if(rs != null)
-		{
-			try
-			{
-				rs.close();
-			}
-			catch(Exception e)
-			{
-				e.printStackTrace();
-			}
-		}
-	}
+  {
+    if(rs != null)
+    {
+      try
+      {
+        rs.close();
+      }
+      catch(Exception e)
+      {
+        e.printStackTrace();
+      }
+    }
+  }
 
-	private static void close(Statement stmt)
-	{
-		if(stmt != null)
-		{
-			try
-			{
-				stmt.close();
-			}
-			catch(Exception e)
-			{
-				e.printStackTrace();
-			}
-		}
-	}
+  private static void close(Statement stmt)
+  {
+    if(stmt != null)
+    {
+      try
+      {
+        stmt.close();
+      }
+      catch(Exception e)
+      {
+        e.printStackTrace();
+      }
+    }
+  }
 
-	private static void close(PreparedStatement pstmt)
-	{
-		if(pstmt != null)
-		{
-			try
-			{
-				pstmt.close();
-			}
-			catch(Exception e)
-			{
-				e.printStackTrace();
-			}
-		}
-	}
+  private static void close(PreparedStatement pstmt)
+  {
+    if(pstmt != null)
+    {
+      try
+      {
+        pstmt.close();
+      }
+      catch(Exception e)
+      {
+        e.printStackTrace();
+      }
+    }
+  }
 
-	private static String getKeywords(List terms, String text)
-	{
-		StringBuffer termbuf = new StringBuffer();
-		String spage = stem(text);
-		for(int j=0; j<terms.size();j++)
-		{
-			String term = (String) terms.get(j);
-			term = term.trim();
-			if(term.length()>0 &&
-			   !stopWords.containsKey(term))
-			{
-				String stemmedTerm = stem(term);
-				String regex = "m/\\b"+stemmedTerm+"\\b/";
-				if(perl.match(regex,spage))
-				{
-					//System.out.println("Hit:"+term);
-					if(termbuf.length() > 0)
-					{
-						termbuf.append("|");
-					}
-					termbuf.append(perl.substitute("s/'/''/g",term));
-				}
-			}
-		}
+  private static String getKeywords(List terms, String text)
+  {
+    StringBuffer termbuf = new StringBuffer();
+    String spage = stem(text);
+    for(int j=0; j<terms.size();j++)
+    {
+      String term = (String) terms.get(j);
+      term = term.trim();
+      if(term.length()>0 &&
+         !stopWords.containsKey(term))
+      {
+        String stemmedTerm = stem(term);
+        String regex = "m/\\b"+stemmedTerm+"\\b/";
+        if(perl.match(regex,spage))
+        {
+          //System.out.println("Hit:"+term);
+          if(termbuf.length() > 0)
+          {
+            termbuf.append("|");
+          }
+          termbuf.append(perl.substitute("s/'/''/g",term));
+        }
+      }
+    }
 
-		if(termbuf.length()>0)
-		{
-			return termbuf.toString();
-		}
+    if(termbuf.length()>0)
+    {
+      return termbuf.toString();
+    }
 
-		return null;
-	}
+    return null;
+  }
 
-	private static String stem(String words)
-	{
-		String lwords = words.toLowerCase();
-		String[] splitwords = lwords.split("\\W+");
-		StringBuffer stemmedBuffer = new StringBuffer();
+  private static String stem(String words)
+  {
+    String lwords = words.toLowerCase();
+    String[] splitwords = lwords.split("\\W+");
+    StringBuffer stemmedBuffer = new StringBuffer();
 
-		for(int i=0; i<splitwords.length;i++)
-		{
-			if(stemmedBuffer.length() > 0)
-			{
-				stemmedBuffer.append(" ");
-			}
+    for(int i=0; i<splitwords.length;i++)
+    {
+      if(stemmedBuffer.length() > 0)
+      {
+        stemmedBuffer.append(" ");
+      }
 
-			stemmedBuffer.append(splitwords[i]);
-		}
+      stemmedBuffer.append(splitwords[i]);
+    }
 
-		return stemmedBuffer.toString();
-	}
+    return stemmedBuffer.toString();
+  }
 }
