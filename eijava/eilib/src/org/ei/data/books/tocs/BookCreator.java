@@ -71,21 +71,25 @@ public class BookCreator {
     }
 
     isbnList = new ArrayList();
-    isbnList.add("9780750680691");
-
-    File[] archvies = BookTocTransform
-        .getBookArchvieDirectoryList(BookTocTransform.ARCHIVE_ROOT);
-    // skip loop - change arch < archvies.length
-    for (int arch = 0; arch < 0; arch++) {
-      String archive = archvies[arch].getName();
-      log.info((arch) + ". archive: " + archive);
-      File[] files = BookTocTransform.getFileList(BookTocTransform.ARCHIVE_ROOT
-          + archive);
+    //isbnList.add("9780750680691");
+    
+    if(isbnList.isEmpty()) {
+      log.error("ISBN List is empty! Processing ALL encountered isbns");
+    }
+    
+    File[] archvies = BookTocTransform.getBookArchvieDirectoryList(BookTocTransform.ARCHIVE_ROOT);
+    
+    // to skip loop - change arch < archvies.length
+    for (int arch = 0; arch < archvies.length; arch++) {
+//      if(!"EVF0293".equals(archvies[arch].getName())) {
+//        continue;
+//      }
+      log.info((arch) + ". archive: " + archvies[arch].getPath());
+      File[] files = BookTocTransform.getFileList(archvies[arch].getPath());
       for (int i = 0; i < files.length; i++) {
         File xmlFile;
         try {
-          xmlFile = new File(files[i].getCanonicalPath()
-              + BookTocTransform.FILE_SEP + "main.xml");
+          xmlFile = new File(files[i].getCanonicalPath() + BookTocTransform.FILE_SEP + "main.xml");
           String isbn = new File(xmlFile.getParent()).getName();
           if (isbn != null) {
             if (isbn.length() == 10) {
@@ -98,7 +102,7 @@ public class BookCreator {
               Iterator<IncludeItem> piis = includeitems.iterator();
 
               createPDF(xmlFile, isbn, piis);
-              stampPDF(xmlFile, isbn);
+              //stampPDF(xmlFile, isbn);
             }
           }
         } catch (IOException e) {
@@ -110,24 +114,17 @@ public class BookCreator {
       }
     }
 
-    File[] seriesarchive = BookTocTransform
-        .getBookSeriesFileList(BookTocTransform.ARCHIVE_ROOT);
+    File[] seriesarchive = BookTocTransform.getBookSeriesFileList(BookTocTransform.ARCHIVE_ROOT);
+    
     for (int seriesidx = 0; seriesidx < seriesarchive.length; seriesidx++) {
       log.debug((seriesidx) + ". series: " + seriesarchive[seriesidx]);
-      // if(!"EVIBS02I".equalsIgnoreCase(seriesarchive[seriesidx].getName()))
-      // {
-      // continue;
-      // }
-      File[] archives = BookTocTransform.getFileList(seriesarchive[seriesidx]
-          .getAbsolutePath());
+      File[] archives = BookTocTransform.getFileList(seriesarchive[seriesidx].getAbsolutePath());
       for (int i = 0; i < archives.length; i++) {
         log.debug((i) + ". archive: " + archives[i]);
         try {
-          File[] issues = BookTocTransform.getFileList(archives[i]
-              .getCanonicalPath());
+          File[] issues = BookTocTransform.getFileList(archives[i].getCanonicalPath());
           for (int j = 0; j < issues.length; j++) {
-            File xmlFile = new File(issues[j].getCanonicalPath()
-                + BookTocTransform.FILE_SEP + "issue.xml");
+            File xmlFile = new File(issues[j].getCanonicalPath() + BookTocTransform.FILE_SEP + "issue.xml");
             Issue anissue = IssueLoader.getIssue(xmlFile);
             if (anissue != null) {
               String issn = cleanIdentifier(anissue.getIssn());
@@ -173,12 +170,11 @@ public class BookCreator {
     }
 
   }
+  public static final String WHOLE_PDFS = "V:\\EW\\whole_pdfs\\";
 
   private static void stampPDF(File xmlFile, String isbn) throws IOException {
-    String isbnpdf = xmlFile.getCanonicalPath() + BookTocTransform.FILE_SEP
-        + isbn + ".pdf";
-    String stampedpdf = xmlFile.getCanonicalPath() + BookTocTransform.FILE_SEP
-        + isbn + "_stamped.pdf";
+    String isbnpdf = WHOLE_PDFS + isbn + ".pdf";
+    String stampedpdf = WHOLE_PDFS  + isbn + "_stamped.pdf";
 
     try {
       PdfReader reader = new PdfReader(isbnpdf);
@@ -215,9 +211,8 @@ public class BookCreator {
     int pageOffset = 0;
     List master = new ArrayList();
     boolean firstLoop = true;
-    String isbnpdf = xmlFile.getCanonicalPath() + BookTocTransform.FILE_SEP
-        + isbn + ".pdf";
-
+    String isbnpdf = WHOLE_PDFS + isbn + ".pdf"; 
+    
     while (piis.hasNext()) {
       IncludeItem pii = piis.next();
       String foldername = pii.getPii().replaceAll("\\p{Punct}", "");
@@ -225,7 +220,7 @@ public class BookCreator {
       String[] locs = { "FRONT", "BODY", "REAR" };
       File floc = null;
       for (int l = 0; l < locs.length; l++) {
-        floc = new File(xmlFile.getCanonicalPath() + BookTocTransform.FILE_SEP
+        floc = new File(xmlFile.getParent() + BookTocTransform.FILE_SEP
             + locs[l] + BookTocTransform.FILE_SEP + foldername
             + BookTocTransform.FILE_SEP + "main.pdf");
         if (floc.exists()) {
