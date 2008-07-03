@@ -142,7 +142,7 @@ public class BookIndexer
       }
 
       // use view which contains all books from both the 407 and 991 tables
-      String bookQuery = "SELECT BN13, TI FROM BOOKS_ALL";
+      String bookQuery = "SELECT BN13, TI FROM BOOKS ";
       if(isbnString != null)
       {
         bookQuery = bookQuery + " WHERE BN13 IN ("+ isbnString + ")";
