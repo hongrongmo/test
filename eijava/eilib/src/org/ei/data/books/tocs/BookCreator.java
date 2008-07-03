@@ -81,9 +81,9 @@ public class BookCreator {
     
     // to skip loop - change arch < archvies.length
     for (int arch = 0; arch < archvies.length; arch++) {
-//      if(!"EVF0293".equals(archvies[arch].getName())) {
-//        continue;
-//      }
+      if(!"EVF0293".equals(archvies[arch].getName())) {
+        continue;
+      }
       log.info((arch) + ". archive: " + archvies[arch].getPath());
       File[] files = BookTocTransform.getFileList(archvies[arch].getPath());
       for (int i = 0; i < files.length; i++) {
@@ -102,7 +102,7 @@ public class BookCreator {
               Iterator<IncludeItem> piis = includeitems.iterator();
 
               createPDF(xmlFile, isbn, piis);
-              //stampPDF(xmlFile, isbn);
+              stampPDF(xmlFile, isbn);
             }
           }
         } catch (IOException e) {
@@ -240,13 +240,15 @@ public class BookCreator {
         }
         master.addAll(bookmarks);
       }
-
-      HashMap map = new HashMap();
-      map.put("Title", pii.getTitle());
-      map.put("Action", "GoTo");
-      map.put("Page", (pageOffset + 1) + " Fit");
-      master.add(map);
-
+      else 
+      {
+        HashMap map = new HashMap();
+        map.put("Title", pii.getTitle());
+        map.put("Action", "GoTo");
+        map.put("Page", (pageOffset + 1) + " Fit");
+        master.add(map);
+      }
+      
       pageOffset += n;
 
       if (firstLoop) {
