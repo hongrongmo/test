@@ -1,4 +1,4 @@
-package org.ei.data.books;
+package org.ei.data.books.tools;
 
 import java.io.IOException;
 import java.io.Reader;
