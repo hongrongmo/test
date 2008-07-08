@@ -32,6 +32,7 @@ import org.ei.util.StringUtil;
 public class BookIndexer
 {
     private static Log log = LogFactory.getLog(BookIndexer.class);
+    private static Log sqllog = LogFactory.getLog("SqlBatch");
 
 //  private static PorterStemmer stemmer = new PorterStemmer();
 //  private static TextFileFilter filter = new TextFileFilter();
@@ -139,6 +140,7 @@ public class BookIndexer
           isbnList.add(aline);
         }
         rdr.close();
+        log.info("Using ISBNs found in isbnList.txt file.");
       }
       catch(IOException ioe) {
 
@@ -229,7 +231,7 @@ public class BookIndexer
                 keywords = getKeywords(terms, abs);
                 if(keywords != null)
                 {
-                  log.info("UPDATE PAGES_ALL SET page_keywords = '" + keywords.replaceAll("'", "''") + "' WHERE docid = '" + id + "';");
+                  sqllog.info("UPDATE PAGES_ALL SET page_keywords = '" + keywords.replaceAll("'", "''") + "' WHERE docid = '" + id + "';");
                   if(executeBatch)
                   {
                     batchstmt.addBatch("UPDATE PAGES_ALL SET page_keywords = '" + keywords.replaceAll("'", "''") + "' WHERE docid = '" + id + "'");
@@ -257,7 +259,7 @@ public class BookIndexer
                 batchstmt = con.createStatement();
               }
 
-              log.info("commit;");
+              sqllog.info("commit;");
               commitCount = 0;
 
           }
@@ -268,7 +270,7 @@ public class BookIndexer
         int[] updCnt = stmt.executeBatch();
         con.commit();
       }
-      log.info("commit;");
+      sqllog.info("commit;");
 
       if(rs != null) {
         close(rs);
@@ -304,7 +306,8 @@ public class BookIndexer
         }
       }
     }
-    log.info("quit;");
+    sqllog.info("quit;");
+    log.info("Complete.");
   }
 
 /*
