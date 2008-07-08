@@ -140,10 +140,10 @@ public class BookIndexer
           isbnList.add(aline);
         }
         rdr.close();
-        log.info("Using ISBNs found in isbnList.txt file.");
+        log.info("Processing only ISBNs found in isbnList.txt file.");
       }
       catch(IOException ioe) {
-
+        log.info("Processing all ISBNs from BOOKS table.");
       }
 
       String isbnString = null;
@@ -195,8 +195,13 @@ public class BookIndexer
       pstmt1 = con.prepareStatement("SELECT docid,page_txt,vo FROM PAGES_ALL WHERE BN13 = ? ORDER BY PAGE_NUM ASC");
 
       long commitCount = 0;
-      con.setAutoCommit(false);
-      Statement batchstmt = con.createStatement();
+      Statement batchstmt = null;
+
+      if(executeBatch)
+      {
+        con.setAutoCommit(false);
+        batchstmt = con.createStatement();
+      }
 
       while(booksIt.hasNext())
       {
