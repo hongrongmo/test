@@ -54,8 +54,22 @@ public class BookIndexer
     String url = "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI"; //args[1];
     String username = "AP_PRO1"; //args[2];
     String password = "ei3it"; //args[3];
-
+    boolean executeBatch = false;
     List terms = new ArrayList();
+
+    if(args != null)
+    {
+	    if(args.length >= 1 && args[0] != null) {
+          executeBatch = (args[0].equalsIgnoreCase("batch"));
+      }
+    }
+
+    if(executeBatch) {
+      log.info("Executing batch updates...");
+    }
+    else {
+      log.info("SQL UPDATE statements written to log file...");
+    }
 
     log.info("Using table PAGES_ALL");
     Connection con = null;
@@ -215,8 +229,11 @@ public class BookIndexer
                 keywords = getKeywords(terms, abs);
                 if(keywords != null)
                 {
-                  log.info(commitCount + " UPDATE PAGES_ALL SET page_keywords = '" + keywords.replaceAll("'", "''") + "' WHERE docid = '" + id + "';");
-                  batchstmt.addBatch("UPDATE PAGES_ALL SET page_keywords = '" + keywords.replaceAll("'", "''") + "' WHERE docid = '" + id + "'");
+                  log.info("UPDATE PAGES_ALL SET page_keywords = '" + keywords.replaceAll("'", "''") + "' WHERE docid = '" + id + "';");
+                  if(executeBatch)
+                  {
+                    batchstmt.addBatch("UPDATE PAGES_ALL SET page_keywords = '" + keywords.replaceAll("'", "''") + "' WHERE docid = '" + id + "'");
+                  }
                   commitCount++;
                 }
                 else {
@@ -229,22 +246,28 @@ public class BookIndexer
           } // if
           if(commitCount >= 100)
           {
-              int[] updCnt = batchstmt.executeBatch();
-              con.commit();
-              /* for(int i = 0; i < updCnt.length; i++)
+              if(executeBatch)
               {
-                log.info("" + i);
-              } */
+                int[] updCnt = batchstmt.executeBatch();
+                con.commit();
+                /* for(int i = 0; i < updCnt.length; i++)
+                {
+                  log.info("" + i);
+                } */
+                batchstmt = con.createStatement();
+              }
+
               log.info("commit;");
               commitCount = 0;
 
-              batchstmt = con.createStatement();
           }
-        } // while
-      } // while
-      int[] updCnt = stmt.executeBatch();
-      con.commit();
-      batchstmt.close();
+        } // while rs()
+      } // while bookList()
+      if(executeBatch)
+      {
+        int[] updCnt = stmt.executeBatch();
+        con.commit();
+      }
       log.info("commit;");
 
       if(rs != null) {
