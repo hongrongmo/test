@@ -17,7 +17,11 @@ public class ReferexRunner {
   
   public static void main(String[] args) {
     try {
-      BufferedReader rdr = new BufferedReader(new FileReader("v:\\2008frontlist.txt"));
+      //String isbnlist = "v:\\2008frontlist.txt";
+      String isbnlist = "v:\\2007waiting.txt";
+      //String isbnlist = "v:\\threeupdates.txt";
+      
+      BufferedReader rdr = new BufferedReader(new FileReader(isbnlist));
       while (rdr.ready()) {
         String aline = rdr.readLine();
         isbnList.add(aline);
@@ -28,7 +32,7 @@ public class ReferexRunner {
     }
     /* manually override isbnList here */
 //    isbnList = new ArrayList<String>();
-//    isbnList.add("9781597492669");
+//    isbnList.add("9781597492171");
 
     if (isbnList.isEmpty()) {
       log.error("ISBN list is empty! Processing ALL encountered isbns.");
@@ -48,19 +52,21 @@ public class ReferexRunner {
 //      processor = new BookSeriesTocTransform();
 //      processor.setIsbnList(isbnList);
 //      mapper = new BookSeriesArchiveMapper();
-//      mapper.map(processor);
-//
+//      processed = mapper.map(processor);
+//      log.info("Total processed = " + processed);
+
       processor = new BookCreator();
       processor.setIsbnList(isbnList);
       mapper = new BookArchiveMapper();
       processed = mapper.map(processor);
       log.info("Total processed = " + processed);
-
-//     
+     
 //      processor = new BookSeriesCreator();
 //      processor.setIsbnList(isbnList);
-//      mapper = new BookArchiveMapper();
-//      mapper.map(processor);
+//      mapper = new BookSeriesArchiveMapper();
+//      processed = mapper.map(processor);
+//      log.info("Total processed = " + processed);
+
     } catch (IOException e) {
       // TODO Auto-generated catch block
       e.printStackTrace();
