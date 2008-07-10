@@ -22,7 +22,8 @@ public class BookCreator extends PdfProcessorStamper  {
         Iterator<IncludeItem> piis = includeitems.iterator();
 
         createPDF(xmlFile, isbn, piis);
-        stampPDF(xmlFile, isbn);
+        burstPDF(isbn);
+//        stampPDF(xmlFile, isbn);
         result = true;
       }
     }
