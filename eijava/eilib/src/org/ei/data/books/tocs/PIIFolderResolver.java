@@ -55,7 +55,7 @@ public class PIIFolderResolver implements URIResolver  {
             }
         }
         else if(href.equals("lookup.xml")) {
-            log.info("Creating lookup xml data for " + issuefile.getName());
+            log.debug("Creating lookup xml data for " + issuefile.getName());
             String lookupxml = PIIXMLWriter.toXML(IssueLoader.getIssue(issuefile).getIncludeItems());
             return new StreamSource(new StringReader(lookupxml));
         }
