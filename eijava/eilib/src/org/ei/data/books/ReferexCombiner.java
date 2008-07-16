@@ -1,7 +1,12 @@
 package org.ei.data.books;
 
+import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.InputStream;
+import java.io.IOException;
 
 import java.sql.Clob;
 import java.sql.Connection;
@@ -63,35 +68,10 @@ public class ReferexCombiner {
         CombinedWriter writer = null;
         try {
             createDataSource();
-            String strDefault = "WOBL";
-		        if(args != null) {
-  		        if(args.length >= 1 && args[0] != null) {
-                strDefault = args[0];
-              }
-            }
             List extracts = new ArrayList();
-            if(strDefault.equals("S300"))
-            {
-              extracts.add(new S300BookRecord());
-              extracts.add(new S300PageRecord());
-            }
-            else if(strDefault.equals("406")){
-              extracts.add(new Original406BookRecord());
-              extracts.add(new Original406PageRecord());
-            }
-            else if(strDefault.equals("2007")){
-                extracts.add(new FL2007BookRecord());
-                extracts.add(new FL2007PageRecord());
-              }
-            else if(strDefault.equals("REPL")){
-              extracts.add(new ReplacementBookRecord());
-              extracts.add(new ReplacementPageRecord());
-            }
-            else {
-              extracts.add(new BookRecord());
-              extracts.add(new PageRecord());
-            }
-            writer = new ReferexCombinedXMLWriter(10000, 1, strDefault + "_pag");
+            extracts.add(new BookRecord());
+            extracts.add(new PageRecord());
+            writer = new ReferexCombinedXMLWriter(10000, 1, "pag");
             Iterator itr = extracts.iterator();
             while (itr.hasNext()) {
                 writeRecords((Extractable) itr.next(), writer);
@@ -160,8 +140,43 @@ public class ReferexCombiner {
 
             stmt = conn.createStatement();
 
+            List isbnList = new ArrayList();
+            try {
+              BufferedReader rdr = new BufferedReader(new FileReader("isbnList.txt"));
+              while (rdr.ready()) {
+                String aline = rdr.readLine();
+                isbnList.add(aline);
+              }
+              rdr.close();
+              log.info("Processing only ISBNs found in isbnList.txt file.");
+            }
+            catch(IOException ioe) {
+              log.info("Processing all ISBNs from BOOKS table.");
+            }
+
+            String isbnString = null;
+            if(!isbnList.isEmpty()) {
+              Iterator iItr = isbnList.iterator();
+              while(iItr.hasNext()) {
+                String nextIsbn = "'" + (String) iItr.next() + "'";
+                if(isbnString != null) {
+                  isbnString = isbnString + nextIsbn;
+                }
+                else {
+                  isbnString = nextIsbn;
+                }
+                if(iItr.hasNext()) {
+                  isbnString = isbnString.concat(",");
+                }
+              }
+            }
+            String bookQuery = ext.getQuery();
+            if(isbnString != null)
+            {
+              bookQuery = bookQuery + " AND BN13 IN ("+ isbnString + ")";
+            }
             log.info("Running the query...");
-            log.info(ext.getQuery());
+            log.info(bookQuery);
             rs = stmt.executeQuery(ext.getQuery());
             log.info("Got records ...");
             writer.begin();
@@ -247,9 +262,8 @@ public class ReferexCombiner {
     private static Pattern hundredWords = Pattern.compile("((?:[\\w\\p{Punct}][^\\s]*)\\s+){1,100}", Pattern.MULTILINE);
 
     // These Queries will extract WOBL Extract
-    private static final String BOOK_PAGES_QUERY = "SELECT PAGE_KEYWORDS,DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB, PAGE_NUM, CHAPTER_TITLE, CHAPTER_START, SECTION_TITLE, SECTION_START, PAGE_TXT FROM BOOK_PAGES_WOBL WHERE PAGE_NUM <> 0 ";
-    private static final String BOOK_QUERY = "SELECT DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB FROM BOOK_PAGES_WOBL WHERE PAGE_NUM=0";
-    private static final String EXTRACT_TYPE = "WOBL";
+    private static final String BOOK_PAGES_QUERY = "SELECT PAGE_KEYWORDS,DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB, PAGE_NUM, CHAPTER_TITLE, CHAPTER_START, SECTION_TITLE, SECTION_START, PAGE_TXT FROM PAGES_ALL WHERE PAGE_NUM <> 0 ";
+    private static final String BOOK_QUERY = "SELECT DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB FROM PAGES_ALL WHERE PAGE_NUM=0";
 
     private static final String BOOK_DATABASE = "pag";
     private static final String DOCTYPE_BOOK = "BOOK";
@@ -320,10 +334,6 @@ public class ReferexCombiner {
     }// inner abstract base class ReferexRecord
 
     private class BookRecord extends ReferexRecord {
-
-        public String getExtractType() {
-            return EXTRACT_TYPE;
-        }
 
         public String getDoctype() {
             return DOCTYPE_BOOK;
@@ -428,8 +438,6 @@ public class ReferexCombiner {
                 rec.put(EVCombinedRec.SERIAL_TITLE, b64Title);
                 rec.put(EVCombinedRec.CONTROLLED_TERMS, arrCvs);
                 rec.put(EVCombinedRec.CLASSIFICATION_CODE, arrReferexColls);
-
-                //rec.put(EVCombinedRec.MAIN_HEADING, new String[]{getExtractType()});
 
             } // try
             catch (Exception e) {
@@ -557,102 +565,4 @@ public class ReferexCombiner {
         }
     } // inner class PageRecord
 
-    // These Queries will limit the extract to Non-overlapping S300 Books
-    // by selecting Only BN13s which are not IN the WOBL extract/tables
-    private class S300BookRecord extends BookRecord {
-
-        public String getExtractType() {
-            return "S300";
-        }
-
-        public String getQuery() {
-            return  "SELECT DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB FROM BOOK_PAGES_S300 " +
-                    " WHERE PAGE_NUM=0 AND BN13 IN (SELECT S300S.bn13 FROM S300S LEFT JOIN WOBLS ON SUBSTR(S300S.BN13,1,13)=SUBSTR(WOBLS.BN13,1,13) WHERE WOBLS.bn13 IS NULL)";
-        }
-    }
-
-    private class S300PageRecord extends PageRecord {
-
-        public String getExtractType() {
-            return "S300";
-        }
-
-        public String getQuery() {
-            return "SELECT PAGE_KEYWORDS,DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB, PAGE_NUM, CHAPTER_TITLE, CHAPTER_START, SECTION_TITLE, SECTION_START, PAGE_TXT FROM BOOK_PAGES_S300 " +
-                  "WHERE PAGE_NUM <> 0  AND BN13 IN (SELECT S300S.bn13 FROM S300S LEFT JOIN WOBLS ON SUBSTR(S300S.BN13,1,13)=SUBSTR(WOBLS.BN13,1,13) WHERE WOBLS.bn13 IS NULL)";
-        }
-    }
-
-    // These Queries will limit the extract to Non-overlapping S300 Books
-    // by selecting Only BN13s which are not IN the WOBL extract/tables
-    private class Original406BookRecord extends BookRecord {
-
-        public String getExtractType() {
-            return "406";
-        }
-
-        public String getQuery() {
-              return "SELECT DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB FROM BOOK_PAGES_406 WHERE PAGE_NUM=0";
-        }
-    }
-
-    private class Original406PageRecord extends PageRecord {
-
-        public String getExtractType() {
-            return "406";
-        }
-
-        public String getQuery() {
-            return "SELECT PAGE_KEYWORDS,DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB, PAGE_NUM, CHAPTER_TITLE, CHAPTER_START, SECTION_TITLE, SECTION_START, PAGE_TXT FROM BOOK_PAGES_406 " +
-                  " WHERE PAGE_NUM <> 0";
-        }
-    }
-
-    private class FL2007BookRecord extends BookRecord {
-
-        public String getExtractType() {
-            return "2007";
-        }
-
-        public String getQuery() {
-            return  "SELECT DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB FROM BOOK_PAGES_2007 " +
-                    " WHERE PAGE_NUM=0";
-        }
-    }
-
-    private class FL2007PageRecord extends PageRecord {
-
-        public String getExtractType() {
-            return "2007";
-        }
-
-        public String getQuery() {
-            return "SELECT PAGE_KEYWORDS,DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB, PAGE_NUM, CHAPTER_TITLE, CHAPTER_START, SECTION_TITLE, SECTION_START, PAGE_TXT FROM BOOK_PAGES_2007 " +
-                  "WHERE PAGE_NUM <> 0";
-        }
-    }
-
-    private class ReplacementBookRecord extends BookRecord {
-
-      public String getExtractType() {
-          return "REPL";
-      }
-
-      public String getQuery() {
-          return  "SELECT DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB FROM BOOK_PAGES_REPLACEMENTS " +
-                  " WHERE PAGE_NUM=0";
-      }
-  }
-
-  private class ReplacementPageRecord extends PageRecord {
-
-      public String getExtractType() {
-          return "REPL";
-      }
-
-      public String getQuery() {
-          return "SELECT PAGE_KEYWORDS,DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB, PAGE_NUM, CHAPTER_TITLE, CHAPTER_START, SECTION_TITLE, SECTION_START, PAGE_TXT FROM BOOK_PAGES_REPLACEMENTS " +
-                "WHERE PAGE_NUM <> 0";
-      }
-  }
 }
