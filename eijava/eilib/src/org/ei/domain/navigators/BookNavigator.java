@@ -14,6 +14,7 @@ import org.apache.oro.text.perl.Perl5Util;
 import org.ei.books.collections.ReferexCollection;
 import org.ei.util.Base64Coder;
 import org.ei.books.collections.*;
+import org.ei.util.StringUtil;
 
 import org.ei.books.library.*;
 
@@ -23,9 +24,15 @@ public class BookNavigator extends EiNavigator {
 	    return docview_url;
 	}
 
-	public void setDocviewUrl() {
-	  RuntimeProperties eiProps = ConfigService.getRuntimeProperties();
-    docview_url = eiProps.getProperty("WholeBookDownloadBaseUrl");
+  public void setDocviewUrl() {
+    /* catch null pointer when this Navigator is created from the BarChart servlet since RuntimeProperties is unavailable in the controller */
+    /* It is not needed to render the chart anyway, this is just used to get the modifiers inside the navigator */
+    try {
+      RuntimeProperties eiProps = ConfigService.getRuntimeProperties();
+      docview_url = eiProps.getProperty("WholeBookDownloadBaseUrl");
+    } catch(Exception e)
+    {
+    }
 	}
 
 	public BookNavigator(String navname) {
@@ -53,6 +60,7 @@ public class BookNavigator extends EiNavigator {
 		Iterator itrMods = anav.getModifiers().iterator();
 		while (itrMods.hasNext()) {
 			EiModifier amod = (EiModifier) itrMods.next();
+
 			// skip any empty modifiers
 			if((amod != null) && (amod.getLabel().length() != 0))
 			{
@@ -108,33 +116,17 @@ public class BookNavigator extends EiNavigator {
 			  // This  is an "ISBN" (BKT) navigator
     		isbn = getBookIsbn(svalue.toLowerCase());
 
-    		// get the properly formatted title from the isbn
-    		slabel = getBookTitle(isbn);
-    		// use the properly fomatted title for searching
-    		svalue = slabel;
+        if((isbn != null) && !isbn.equals(StringUtil.EMPTY_STRING))
+        {
+          // get the properly formatted title from the isbn
+          slabel = getBookTitle(isbn);
 
-//			Matcher isIsbn = patIsbn.matcher(svalue);
-//			boolean fromCache = isIsbn.matches();
-//			if(!fromCache)
-//			{
-//				// This is a Raw (BKT) navigator from fast
-//				// value is title
-//	    		isbn = BookNavigator.getBookIsbn(svalue.toLowerCase());
-//	    		// get the properly formatted title from the isbn
-//	    		slabel = BookNavigator.getBookTitle(isbn);
-//	    		// now switch the underlying bktnav value to be the isbn
-//	    		svalue = isbn;
-//			}
-//			else
-//			{
-//				// this is a cached navigator, value is already an isbn
-//				isbn = svalue;
-//			}
+          // use the properly fomatted title for searching
+          svalue = slabel;
 
-    		//title = ("<img border=\"0\" src=\"" + getDocviewUrl() + "/images/" + isbn + "/" + isbn + "small.jpg\" width=\"56\" height=\"69\" style=\"float:left; vertical-align:middle; margin-right:10px;\"/>");
-    		//title = title.concat(BookNavigator.getBookCitation(isbn));
-    		title = getBookCitation(isbn);
-		}
+          title = getBookCitation(isbn);
+        }
+    }
 
         return new BookModifier(mcount, slabel, svalue, title, modtype);
     }
@@ -215,7 +207,7 @@ public class BookNavigator extends EiNavigator {
         String isbn  = "";
         try
         {
-        	Library library = Library.getInstance();
+            Library library = Library.getInstance();
             Book book = library.getBook(title);
             isbn = book.getIsbn();
 
@@ -225,7 +217,7 @@ public class BookNavigator extends EiNavigator {
           }
         }
         catch(Exception e) {
-
+          e.printStackTrace();
         }
         return isbn;
     }
@@ -245,7 +237,7 @@ public class BookNavigator extends EiNavigator {
           }
         }
         catch(Exception e) {
-
+          e.printStackTrace();
         }
         return title;
     }
