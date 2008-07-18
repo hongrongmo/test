@@ -433,8 +433,7 @@ public class EiNavigator
       return sb.toString();
     }
 
-    public static EiNavigator parseNavigator(String nav)
-    {
+    public static EiNavigator parseSimpleNavigator(String nav) {
       EiNavigator navigator = null;
 
       String[] navfields = nav.split(EiNavigator.NAV_DELIM);
@@ -458,6 +457,13 @@ public class EiNavigator
         navigator.setFieldname(navfields[2]);
         navigator.setModifiers(navigator.parseModifiers(navfields[3]));
       }
+
+      return navigator;
+    }
+
+    public static EiNavigator parseNavigator(String nav)
+    {
+      EiNavigator navigator = parseSimpleNavigator(nav);
 
       if((navigator != null) && ((navigator.getName().equals(EiNavigator.BKS)) || (navigator.getName().equals(EiNavigator.BKT))))
       {
