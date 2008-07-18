@@ -129,7 +129,7 @@ public class BarChart extends HttpServlet
 			String navdata = request.getParameter("analyzedata");
 		    navdata = unZipText(navdata);
 
-            EiNavigator anav = EiNavigator.parseNavigator(navdata);
+            EiNavigator anav = EiNavigator.parseSimpleNavigator(navdata);
 			List mods = anav.getModifiers();
 
 			String title = anav.getDisplayname();
