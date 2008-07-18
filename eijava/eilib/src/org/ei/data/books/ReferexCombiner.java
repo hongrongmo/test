@@ -177,7 +177,7 @@ public class ReferexCombiner {
             }
             log.info("Running the query...");
             log.info(bookQuery);
-            rs = stmt.executeQuery(ext.getQuery());
+            rs = stmt.executeQuery(bookQuery);
             log.info("Got records ...");
             writer.begin();
             while (rs.next()) {
