@@ -48,7 +48,8 @@ public class ShibbolethIdpMap
 					String line = bufferedReader.readLine();
 
 					String[] idps = line.split("\t");
-					idpMap.put(idps[0], idps[1]);
+					if(idps != null)
+						idpMap.put(idps[0], idps[1]);
 				}
 			System.out.println("Done loading shibboleth idps");
 
