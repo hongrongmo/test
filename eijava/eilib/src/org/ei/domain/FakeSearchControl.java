@@ -50,17 +50,18 @@ public class FakeSearchControl
 
       int i = 1;
 
-      File georefids = new File("c:\\mids.txt");
-      if(georefids.exists())
+      File mids = new File("c:\\mids.txt");
+      if(mids.exists())
       {
-        BufferedReader rdr = new BufferedReader(new FileReader(georefids)); //new InputStreamReader(getResourceAsStream("georefids.txt")));
+        BufferedReader rdr = new BufferedReader(new FileReader(mids)); //new InputStreamReader(getResourceAsStream("georefids.txt")));
         try {
          if(rdr != null)
           {
             while(rdr.ready())
             {
               String aline = rdr.readLine();
-              testDocs.add(new DocID(i++,aline,dConfig.getDatabase("grf")));
+              String dbprefix = aline.substring(0,aline.indexOf("_"));
+              testDocs.add(new DocID(i++,aline,dConfig.getDatabase(dbprefix)));
             }
           }
           else
@@ -75,11 +76,7 @@ public class FakeSearchControl
           }
           catch(IOException e) {}
         }
-        georefids = null;
-      }
-      else
-      {
-          testDocs.add(new DocID(i++,"gref_M7e9e911c117c21f8a93M7fdd14536192163" ,dConfig.getDatabase("grf")));
+        mids = null;
       }
 
 /*			else if(fastSearchString.indexOf("page") >-1 )
