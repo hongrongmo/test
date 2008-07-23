@@ -261,6 +261,7 @@ public class BookIndexer
                 {
                   log.info("" + i);
                 } */
+                close(batchstmt);
                 batchstmt = con.createStatement();
               }
 
