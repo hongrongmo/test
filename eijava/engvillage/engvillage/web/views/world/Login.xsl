@@ -97,7 +97,7 @@
 						<input type="image" src="/engresources/images/login_button.gif" name="login" alt="Log-In"/>
 						&#160;<a class="MedBlueLink" href="/controller/servlet/AthensService">Athens Log-in</a>
 						</p>
-						<p style="margin-left:134px;"><a class="MedBlueLink" href="https://evauth.engineeringvillage.com/shibboleth/protected.php">Shibboleth Log-in</a></p>
+						<p style="margin-left:70px;"><a class="MedBlueLink" href="https://evauth.engineeringvillage.com/shibboleth/protected.php">Institutional Log-in (Shibboleth)</a></p>
 						<p>You may have access to this product through your library or institutional website. Please consult staff at your library or institution for instructions on remote access.
 						</p>
 						<p><a href="/controller/servlet/Controller?CID=ncFeedback" class="SpLink">Forgot your institutional password?</a></p>
