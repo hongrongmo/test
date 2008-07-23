@@ -371,21 +371,6 @@ public class BookIndexer
     }
   }
 
-  private static void close(PreparedStatement pstmt)
-  {
-    if(pstmt != null)
-    {
-      try
-      {
-        pstmt.close();
-      }
-      catch(Exception e)
-      {
-        e.printStackTrace();
-      }
-    }
-  }
-
   private static String getKeywords(List terms, String text)
   {
     StringBuffer termbuf = new StringBuffer();
