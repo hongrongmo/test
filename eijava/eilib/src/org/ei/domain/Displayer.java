@@ -70,8 +70,16 @@ public class Displayer {
         while (itrColls.hasNext())
         {
           String acoll = (String) itrColls.next();
-          if (Arrays.binarySearch(credentials, acoll) >= 0) {
-            sfs.add(ReferexCollection.getCollection(acoll));
+          // loop through all the cartridges and see if any start with
+          // a collection name and if it does add the collection to the
+          // list
+          for(int cartIndex=0; cartIndex < credentials.length; cartIndex++)
+          {
+            if (credentials[cartIndex].toUpperCase().indexOf(acoll.toUpperCase()) == 0)
+            {
+              sfs.add(ReferexCollection.getCollection(acoll));
+              break;
+            }
           }
         }
 
