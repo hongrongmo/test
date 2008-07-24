@@ -1,7 +1,5 @@
 package org.ei.domain.personalization;
 
-
-
 /*
     UI Helper class
 
@@ -16,130 +14,123 @@ import org.ei.books.collections.ReferexCollection;
 
 public class GlobalLinks {
 
+  public static String toXML(String[] customizedFeatures)
+  {
 
-    public static String toXML(String[] customizedFeatures) {
+    StringBuffer strBufGlobalLinksXML = new StringBuffer();
 
-        StringBuffer strBufGlobalLinksXML = new StringBuffer();
+    boolean hasInsCpx = false;
+    boolean hasThes = false;
+    boolean hasBooks = false;
+    boolean hasRef = true;
+    boolean hasEasy = true;
+    boolean hasTag = true;
+    boolean hasBlt = false;
 
-        boolean hasInsCpx = false;
-        boolean hasThes = false;
-        boolean hasBooks = false;
-		boolean hasRef = true;
-		boolean hasEasy = true;
-		boolean hasTag = true;
-		boolean hasBlt = false;
+    String ppd = null;
 
-		String ppd = null;
+    for(int i=0; i<customizedFeatures.length; ++i)
+    {
+      if(customizedFeatures[i].equalsIgnoreCase("CPX") ||
+         customizedFeatures[i].equalsIgnoreCase("INS"))
+      {
+        hasInsCpx = true;
+      }
 
+      if(customizedFeatures[i].equalsIgnoreCase("THS"))
+      {
+        hasThes = true;
+      }
 
-        for(int i=0; i<customizedFeatures.length; ++i)
+      if (customizedFeatures[i].equalsIgnoreCase("LIT_HTM") || customizedFeatures[i].equalsIgnoreCase("PAT_HTM")
+            || customizedFeatures[i].equalsIgnoreCase("LIT_PDF") || customizedFeatures[i].equalsIgnoreCase("PAT_PDF"))
+      {
+        hasBlt = true;
+      }
+
+      if(!hasBooks)
+      {
+        ReferexCollection[] allcols = ReferexCollection.allcolls;
+        // loop through all the collections and see if this cartrdige starts with
+        // a collection name and if it does the user hasBooks
+        for(int idx = 0; idx < allcols.length; idx++)
         {
-            if(customizedFeatures[i].equalsIgnoreCase("CPX") ||
-               customizedFeatures[i].equalsIgnoreCase("INS"))
-            {
-                hasInsCpx = true;
-            }
-
-            if(customizedFeatures[i].equalsIgnoreCase("THS"))
-            {
-                hasThes = true;
-            }
-
-            if (customizedFeatures[i].equalsIgnoreCase("LIT_HTM") || customizedFeatures[i].equalsIgnoreCase("PAT_HTM")
-				|| customizedFeatures[i].equalsIgnoreCase("LIT_PDF") || customizedFeatures[i].equalsIgnoreCase("PAT_PDF")) {
-			    hasBlt = true;
-            }
-
-			ReferexCollection[] allcols = ReferexCollection.allcolls;
-			for(int idx = 0; idx < allcols.length; idx++)
-			{
-			  if(customizedFeatures[i].equalsIgnoreCase(allcols[idx].getAbbrev()))
-			  {
-				   hasBooks = true;
-				   break;
-			  }
-        	}
-			/*
-            if(customizedFeatures[i].equalsIgnoreCase("ELE") ||
-               customizedFeatures[i].equalsIgnoreCase("MAT") ||
-               customizedFeatures[i].equalsIgnoreCase("CHE"))
-            {
-                 hasBooks = true;
-            }
-            */
-
-            if(customizedFeatures[i].equalsIgnoreCase("REF"))
-            {
-				hasRef = false;
-			}
-
-			if(customizedFeatures[i].equalsIgnoreCase("EZY"))
-			{
-				hasEasy = false;
-			}
-
-			if(customizedFeatures[i].equalsIgnoreCase("TAG"))
-			{
-				hasTag = false;
-			}
-
-			if(customizedFeatures[i].indexOf("PPD") > -1)
-			{
-				ppd = customizedFeatures[i];
-			}
+          if(customizedFeatures[i].toUpperCase().indexOf(allcols[idx].getAbbrev().toUpperCase())==0)
+          {
+            hasBooks = true;
+            break;
+          }
         }
+      }
 
-		if(ppd != null)
-		{
-			strBufGlobalLinksXML.append("<GLOBAL-MESSAGE>");
-			strBufGlobalLinksXML.append(ppd);
-			strBufGlobalLinksXML.append("</GLOBAL-MESSAGE>");
-		}
-		strBufGlobalLinksXML.append("<GLOBAL-LINKS>");
-		// UI features dependent on user settings
-		if(hasTag)
-		{
-        	strBufGlobalLinksXML.append("<TAGGROUPS/>");
-		}
-		// UI features dependent on user settings
-		if(hasEasy)
-		{
-			strBufGlobalLinksXML.append("<EASY/>");
-		}
+      if(customizedFeatures[i].equalsIgnoreCase("REF"))
+      {
+        hasRef = false;
+      }
 
-		// UI features that are hardcoded defaults
-		strBufGlobalLinksXML.append("<QUICK/>");
-		strBufGlobalLinksXML.append("<EXPERT/>");
+      if(customizedFeatures[i].equalsIgnoreCase("EZY"))
+      {
+        hasEasy = false;
+      }
 
-		// jam -- ebook and thesaurus have switched spots
-		// jam 11-4-2004 - ebook and thesaurus have switched BACK
-		if((hasInsCpx) && (hasThes))
-		{
-			strBufGlobalLinksXML.append("<THESAURUS/>");
-		}
+      if(customizedFeatures[i].equalsIgnoreCase("TAG"))
+      {
+        hasTag = false;
+      }
 
-		if (hasBlt)
-		    strBufGlobalLinksXML.append("<BULLETINS/>");
+      if(customizedFeatures[i].indexOf("PPD") > -1)
+      {
+        ppd = customizedFeatures[i];
+      }
+    } // customizedFeatures
 
-
-        // UI features dependent on user settings
-        if(hasBooks)
-        {
-            strBufGlobalLinksXML.append("<BOOK/>");
-        }
-
-        if(hasRef)
-        {
-			strBufGlobalLinksXML.append("<REFERENCE/>");
-		}
-
-		// rest of UI features are hardcoded defaults
-        strBufGlobalLinksXML.append("<HELP/>");
-        strBufGlobalLinksXML.append("</GLOBAL-LINKS>");
-
-        return strBufGlobalLinksXML.toString();
+    if(ppd != null)
+    {
+      strBufGlobalLinksXML.append("<GLOBAL-MESSAGE>");
+      strBufGlobalLinksXML.append(ppd);
+      strBufGlobalLinksXML.append("</GLOBAL-MESSAGE>");
+    }
+    strBufGlobalLinksXML.append("<GLOBAL-LINKS>");
+    // UI features dependent on user settings
+    if(hasTag)
+    {
+      strBufGlobalLinksXML.append("<TAGGROUPS/>");
+    }
+    // UI features dependent on user settings
+    if(hasEasy)
+    {
+      strBufGlobalLinksXML.append("<EASY/>");
     }
 
+    // UI features that are hardcoded defaults
+    strBufGlobalLinksXML.append("<QUICK/>");
+    strBufGlobalLinksXML.append("<EXPERT/>");
 
+    // jam -- ebook and thesaurus have switched spots
+    // jam 11-4-2004 - ebook and thesaurus have switched BACK
+    if((hasInsCpx) && (hasThes))
+    {
+      strBufGlobalLinksXML.append("<THESAURUS/>");
+    }
+
+    if (hasBlt)
+      strBufGlobalLinksXML.append("<BULLETINS/>");
+
+    // UI features dependent on user settings
+    if(hasBooks)
+    {
+      strBufGlobalLinksXML.append("<BOOK/>");
+    }
+
+    if(hasRef)
+    {
+      strBufGlobalLinksXML.append("<REFERENCE/>");
+    }
+
+    // rest of UI features are hardcoded defaults
+    strBufGlobalLinksXML.append("<HELP/>");
+    strBufGlobalLinksXML.append("</GLOBAL-LINKS>");
+
+    return strBufGlobalLinksXML.toString();
+  }
 }
-
