@@ -5,9 +5,11 @@ import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
 
-public class BookSeriesCreator extends PdfProcessorStamper {
+public class BookSeriesCreator extends ReferexBaseProcessor {
 
   public boolean process(String xmlpath) throws IOException {
+    
+    PdfProcessorStamper processor = new PdfProcessorStamper();
     boolean result = false;
     File xmlFile = new File(xmlpath + FILE_SEP + "issue.xml");
     Issue anissue = IssueLoader.getIssue(xmlFile);
@@ -43,8 +45,8 @@ public class BookSeriesCreator extends PdfProcessorStamper {
           } else {
             log.info("\t Cannot find " + mainxmlFile + "!");
           }
-
         } // while
+        processor.burstPDF(new File(WHOLE_PDFS + isbn + ".pdf"), BURST_AND_EXTRACTED + FILE_SEP + isbn);
       }
     }
     return result;
