@@ -1,4 +1,5 @@
 package org.ei.domain;
+import org.ei.data.bd.*;
 
 
 import java.util.ArrayList;
@@ -10,10 +11,6 @@ import java.util.List;
 public class MultiDatabaseDocBuilder
 	implements DocumentBuilder
 {
-
-
-
-
 
 	public DocumentBuilder newInstance(Database database)
 	{
@@ -28,10 +25,12 @@ public class MultiDatabaseDocBuilder
 						  String dataFormat)
 		throws DocumentBuilderException
 	{
-			List finishedList = new ArrayList(listOfDocIDs.size());
-
+			List finishedList = new ArrayList(listOfDocIDs.size());			
 			try
 			{
+			    BdDatabase bdDatabase = new BdDatabase();
+			    boolean isBdDatabase = false;
+			    
 				Hashtable listTable = new Hashtable();
 				for(int i=0; i<listOfDocIDs.size();++i)
 				{
@@ -41,6 +40,13 @@ public class MultiDatabaseDocBuilder
 					if(databaseID.length()> 3)
 					{
 						databaseID = databaseID.substring(0,3);
+					}
+					
+					if(bdDatabase.isBdDatabase(databaseID))
+					{
+					    isBdDatabase = true;					   
+					    databaseID = bdDatabase.getID();
+					    System.out.println("isBdDatabase ::"+databaseID);
 					}
 
 					if(listTable.containsKey(databaseID))
@@ -64,14 +70,32 @@ public class MultiDatabaseDocBuilder
 				while(en.hasMoreElements())
 				{
 					String key = (String)en.nextElement();
+					System.out.println("en.nextElement::"+key);
 					ArrayList l = (ArrayList)listTable.get(key);
-					Database database = dConfig.getDatabase(key);
-					DocumentBuilder builder = database.newBuilderInstance();
+					Database database = null;
+					DocumentBuilder builder = null;
+					
+					if(isBdDatabase)
+					{					   
+					    builder = new BDDocBuilder();
+					}
+					else
+					{ 
+					    database = dConfig.getDatabase(key);
+					    builder = database.newBuilderInstance(); // ??
+					}
+					
+					for(int m=0; m<l.size(); ++m)
+					{
+					    DocID doc = (DocID)l.get(m);
+						System.out.print(" -- " +  (doc.getDocID()));
+					}
+					
 					List bList = builder.buildPage(l, dataFormat);
+
 					for(int k=0; k<bList.size(); ++k)
 					{
 						EIDoc doc = (EIDoc)bList.get(k);
-
 						builtDocsTable.put((doc.getDocID()).getDocID(),
 											doc);
 					}
