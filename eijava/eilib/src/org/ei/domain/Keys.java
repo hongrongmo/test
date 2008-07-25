@@ -61,6 +61,7 @@ public interface Keys
     public static final Key ATTERNEY = new Key("ATY");
     public static final Key ATTERNEY_COUNTRY = new Key("ATY_CTRY");
     public static final Key AUTHORS = new Key("AUS", "Authors");
+    public static final Key BDAUTHORS = new Key("BDAUS", "Authors");
     public static final Key AUTHOR_AFFS = new Key("AFS", "Author affiliation");
     public static final Key AUTH_CODE = new Key("AUTHCD","Patent authority"); // pat num
     public static final Key AVAILABILITY = new Key("AV","Availability");
