@@ -36,7 +36,7 @@ public class PdfProcessorStamper  {
   public void stampPDF(File srcfile, File destfile, HashMap bookInfo) throws IOException {
 
     try {
-      PdfReader reader = new PdfReader(new FileInputStream(srcfile));
+      PdfReader reader = new PdfReader(srcfile.getAbsolutePath());
       PdfStamper stamper = new PdfStamper(reader, new FileOutputStream(destfile));
 
       log.debug(" Stamping Book Information " + bookInfo);
@@ -65,7 +65,7 @@ public class PdfProcessorStamper  {
   {
   
     try {
-      PdfReader reader = new PdfReader(new FileInputStream(srcpdf));
+      PdfReader reader = new PdfReader(srcpdf.getAbsolutePath());
       // we retrieve the total number of pages
       int n = reader.getNumberOfPages();
       log.info("There are " + n + " pages in the original file.");
@@ -98,6 +98,7 @@ public class PdfProcessorStamper  {
         // step 5: we close the document
         document.close();
       }
+      reader.close();
     } catch(DocumentException e) {
       log.error(e);
     } catch (IOException e) {
