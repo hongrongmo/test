@@ -17,11 +17,14 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.sax.SAXSource;
 import javax.xml.transform.stream.StreamSource;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 
-public abstract class TocTransformer extends ReferexBaseProcessor {
+public class TocTransformer  {
+  protected static Log log = LogFactory.getLog(TocTransformer.class);
 
   /**
    * Performs an XSLT transformation sending the results
