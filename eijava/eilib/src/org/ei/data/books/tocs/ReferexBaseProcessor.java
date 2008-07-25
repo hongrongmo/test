@@ -22,10 +22,12 @@ public abstract class ReferexBaseProcessor  implements ArchiveProcessor {
   public static final String WHOLE_PDFS = "V:\\EW\\whole_pdfs\\";
 
   protected PdfProcessorStamper pdfprocessor;
+  protected TocTransformer toctransformer;
 
   public ReferexBaseProcessor() {
     // TODO Auto-generated constructor stub
     pdfprocessor = new PdfProcessorStamper();
+    toctransformer = new TocTransformer();
     createDataSource();
   }
   
