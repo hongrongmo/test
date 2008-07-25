@@ -12,6 +12,7 @@ public class Contributor
 	protected String country;
 	protected String email;
 	protected Key key;
+	protected List bdAffIds;
 
 	public Contributor(Key key,
 					   String name)
@@ -27,6 +28,15 @@ public class Contributor
 		this.key = key;
 		this.name = name;
 		this.affilID = affilID;
+	}
+	
+	public Contributor(Key key,
+			   			String name,
+			   			List affID)
+	{
+	    this.key = key;
+	    this.name = name;
+	    this.bdAffIds = affID;	   
 	}
 
 	public Contributor(Key key,
@@ -74,7 +84,7 @@ public class Contributor
 	{
 		this.name = name;
 	}
-
+	
 	public void setAffilID(String[] affilID)
 	{
 		this.affilID = affilID;
@@ -143,10 +153,21 @@ public class Contributor
 		if(affilID != null)
 		{
 			out.write("<AFS>");
-			for(int i=0; i<affilID.length; i++)
+			for(int i=0; i< this.affilID.length; i++)
 			{
 				out.write("<AFID>");
 				out.write(String.valueOf(affilID[i]));
+				out.write("</AFID>");
+			}
+			out.write("</AFS>");
+		}
+		else if(this.bdAffIds != null && this.bdAffIds.size() > 0)
+		{
+			out.write("<AFS>");
+			for(int i=0; i< this.bdAffIds.size(); i++)
+			{
+				out.write("<AFID>");
+				out.write((String)bdAffIds.get(i));
 				out.write("</AFID>");
 			}
 			out.write("</AFS>");
