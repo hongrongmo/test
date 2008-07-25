@@ -11,9 +11,10 @@ import java.util.List;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.ei.books.collections.ReferexCollection;
 import org.ei.data.books.tools.PDF_FileInfo;
 
-public abstract class ReferexBaseProcessor  implements ArchiveProcessor {
+public abstract class ReferexBaseProcessor implements ArchiveProcessor {
   
   protected static Log log = LogFactory.getLog(ReferexBaseProcessor.class);
 
@@ -72,8 +73,21 @@ public abstract class ReferexBaseProcessor  implements ArchiveProcessor {
         {
             bookInfo.put("Title", rs.getString("TI"));
             bookInfo.put("Author", rs.getString("AUS"));
-            bookInfo.put("Subject",rs.getString("VO"));
-            bookInfo.put("Keywords",rs.getString("CVS"));
+            String col = rs.getString("VO");
+            ReferexCollection referexcol = ReferexCollection.getCollection(col);
+            if(referexcol != null) {
+              col = referexcol.getDisplayName();
+            }
+            bookInfo.put("Subject",col);
+            String cvs = rs.getString("CVS");
+            if(cvs != null) {
+              cvs = "Referex; ".concat(cvs);
+            }
+            else {
+              log.info("CVS are null for " + isbn);
+              cvs = "Referex";
+            }
+            bookInfo.put("Keywords",cvs);
         }
 
         bookInfo.put("Creator", "Engineering Village");
@@ -128,6 +142,59 @@ public abstract class ReferexBaseProcessor  implements ArchiveProcessor {
   
   public String cleanIdentifier(String id) {
     return (id != null) ? id.replaceAll("\\p{Punct}", "") : null;
+  }
+
+  private boolean createWholePdf = false;
+  private boolean burstWholePdf = false;
+  private boolean stampWholePdf = false;
+  private boolean copyChapters = false;
+  private boolean createToc = false;
+  private boolean checkArchive = false;
+  
+  public boolean isBurstWholePdf() {
+    return burstWholePdf;
+  }
+
+  public void setBurstWholePdf(boolean burstWholePdf) {
+    this.burstWholePdf = burstWholePdf;
+  }
+
+  public boolean isCopyChapters() {
+    return copyChapters;
+  }
+
+  public void setCopyChapters(boolean copyChapters) {
+    this.copyChapters = copyChapters;
+  }
+
+  public boolean isCreateWholePdf() {
+    return createWholePdf;
+  }
+
+  public void setCreateWholePdf(boolean createWholePdf) {
+    this.createWholePdf = createWholePdf;
+  }
+
+  public boolean isStampWholePdf() {
+    return stampWholePdf;
+  }
+
+  public void setStampWholePdf(boolean stampWholePdf) {
+    this.stampWholePdf = stampWholePdf;
+  }
+  public boolean isCreateToc() {
+    return createToc;
+  }
+  public void setCreateToc(boolean createToc) {
+    this.createToc = createToc;
+  }
+
+  public boolean isCheckArchive() {
+    return checkArchive;
+  }
+
+  public void setCheckArchive(boolean checkArchives) {
+    this.checkArchive = checkArchives;
   }
 
 }
