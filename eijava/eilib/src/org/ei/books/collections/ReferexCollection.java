@@ -1,6 +1,7 @@
 package org.ei.books.collections;
 
 import java.util.List;
+import java.util.regex.Pattern;
 
 import org.ei.domain.navigators.EiModifier;
 
@@ -23,6 +24,7 @@ public abstract class ReferexCollection implements Comparable {
   public abstract int getSortOrder();
 
   public static final ReferexCollection[] allcolls = new ReferexCollection[] {ELE, CHE, MAT, CIV, COM, SEC};
+  public static final Pattern ALLCOLS_PATTERN = Pattern.compile("(ELE|MAT|CHE|COM|SEC|CIV)(\\d?)");
 
 	public static String translateCollection(String longname) {
 	    String shortname = "";
