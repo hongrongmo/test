@@ -1,5 +1,6 @@
 package org.ei.session;
 
+import org.ei.books.collections.ReferexCollection;
 
 import java.net.URLDecoder;
 import java.net.URLEncoder;
@@ -82,11 +83,11 @@ public class User
         String dataContainerString = d.substring(n.indexOf("=")+1, d.length());
         if((dataContainerString != null) && (!dataContainerString.equals("-")))
         {
-        	if(Pattern.compile("(ELE|MAT|CHE|COM|SEC|CIV)(\\d?)").matcher(dataContainerString).find())
+            if(ReferexCollection.ALLCOLS_PATTERN.matcher(dataContainerString).find())
             {
-            	if(!Pattern.compile("PAG").matcher(dataContainerString).find()) {
-            		dataContainerString = dataContainerString.concat(";PAG");
-            	}
+              if(!Pattern.compile("PAG").matcher(dataContainerString).find()) {
+                dataContainerString = dataContainerString.concat(";PAG");
+              }
             }
 
             cartridge = dataContainerString.split(";");
