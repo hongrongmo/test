@@ -56,8 +56,10 @@ public class LibraryVisitor implements Visitor
 		{
 			for (int i = 0; i < creds.length; i++)
 			{
-				String curColTest = colTest.substring(0,2).toLowerCase();
-				String curCred = creds[i].substring(0,2).toLowerCase();
+			  // substring(0,3) to get three characters - not substring(0,2)
+			  // length of the substring is endIndex-beginIndex.
+				String curColTest = colTest.substring(0,3).toLowerCase();
+				String curCred = creds[i].substring(0,3).toLowerCase();
 				if (curColTest.equals(curCred))
 					return true;
 			}
