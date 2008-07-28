@@ -257,22 +257,14 @@
   </xsl:template>
 
   <!-- Book ISBN  -->
-  <xsl:template match="BN|BN13" mode="BookNav">
-    <xsl:value-of select="@label"/>: <xsl:value-of select="." disable-output-escaping="yes"/>&#160;
-  </xsl:template>
+  <xsl:template match="BN|BN13" mode="BookNav"><xsl:value-of select="@label"/>: <xsl:value-of select="." disable-output-escaping="yes"/></xsl:template>
 
   <!-- Book Total PAge Count -->
-  <xsl:template match="BPC" mode="BookNav">
-    , <xsl:value-of select="." disable-output-escaping="yes"/>&#160;pp
-  </xsl:template>
+  <xsl:template match="BPC" mode="BookNav">, <xsl:value-of select="." disable-output-escaping="yes"/>&#160;pp</xsl:template>
 
-  <xsl:template match="BPN" mode="BookNav">
-    <xsl:value-of select="." disable-output-escaping="yes"/>,&#160;
-  </xsl:template>
+  <xsl:template match="BPN" mode="BookNav"><xsl:value-of select="." disable-output-escaping="yes"/>,&#160;</xsl:template>
 
-  <xsl:template match="BYR" mode="BookNav">
-    <xsl:value-of select="." disable-output-escaping="yes"/>
-  </xsl:template>
+  <xsl:template match="BYR" mode="BookNav"><xsl:value-of select="." disable-output-escaping="yes"/></xsl:template>
 
 
   <!-- override Author/Editor templates in standard Citation XSL -->
