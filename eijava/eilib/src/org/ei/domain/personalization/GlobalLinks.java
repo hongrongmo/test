@@ -48,19 +48,11 @@ public class GlobalLinks {
         hasBlt = true;
       }
 
-      if(!hasBooks)
+      // User class constructor creates PAG cartridge if user has any book collections
+      // so just check for PAG cartridge here
+      if(customizedFeatures[i].equalsIgnoreCase("PAG"))
       {
-        ReferexCollection[] allcols = ReferexCollection.allcolls;
-        // loop through all the collections and see if this cartrdige starts with
-        // a collection name and if it does the user hasBooks
-        for(int idx = 0; idx < allcols.length; idx++)
-        {
-          if(customizedFeatures[i].toUpperCase().indexOf(allcols[idx].getAbbrev().toUpperCase())==0)
-          {
-            hasBooks = true;
-            break;
-          }
-        }
+        hasBooks = true;
       }
 
       if(customizedFeatures[i].equalsIgnoreCase("REF"))
