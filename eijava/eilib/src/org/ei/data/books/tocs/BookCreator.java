@@ -12,13 +12,6 @@ import javax.xml.transform.stream.StreamResult;
 
 public class BookCreator extends ReferexBaseProcessor  {
 
-  private boolean createWholePdf = false;
-  private boolean burstWholePdf = false;
-  private boolean stampWholePdf = false;
-  private boolean copyChapters = false;
-  private boolean createToc = false;
-  private boolean checkArchive = false;
-  
   private static final File xsltFile = new File("xsl\\BookTOC.xsl");
 
   public boolean process(String xmlpath) throws IOException {
@@ -159,50 +152,5 @@ public class BookCreator extends ReferexBaseProcessor  {
     return flagged;
   }
   
-  public boolean isBurstWholePdf() {
-    return burstWholePdf;
-  }
 
-  public void setBurstWholePdf(boolean burstWholePdf) {
-    this.burstWholePdf = burstWholePdf;
-  }
-
-  public boolean isCopyChapters() {
-    return copyChapters;
-  }
-
-  public void setCopyChapters(boolean copyChapters) {
-    this.copyChapters = copyChapters;
-  }
-
-  public boolean isCreateWholePdf() {
-    return createWholePdf;
-  }
-
-  public void setCreateWholePdf(boolean createWholePdf) {
-    this.createWholePdf = createWholePdf;
-  }
-
-  public boolean isStampWholePdf() {
-    return stampWholePdf;
-  }
-
-  public void setStampWholePdf(boolean stampWholePdf) {
-    this.stampWholePdf = stampWholePdf;
-  }
-  public boolean isCreateToc() {
-    return createToc;
-  }
-  public void setCreateToc(boolean createToc) {
-    this.createToc = createToc;
-  }
-
-  public boolean isCheckArchive() {
-    return checkArchive;
-  }
-
-  public void setCheckArchive(boolean checkArchives) {
-    this.checkArchive = checkArchives;
-  }
-  
 }
