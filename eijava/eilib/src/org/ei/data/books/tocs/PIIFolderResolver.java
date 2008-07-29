@@ -28,6 +28,8 @@ public class PIIFolderResolver implements URIResolver  {
 
     private String issuepath = "";
     private File issuefile = null;
+    private String piifoldername = "";
+    
     public PIIFolderResolver(File xml) throws IOException {
         issuefile = xml;
         issuepath = xml.getParent(); 
@@ -43,8 +45,8 @@ public class PIIFolderResolver implements URIResolver  {
             String path[] = href.split("qqDELqq");
             if(path != null && path.length == 2){
                 String prefix = ((String)path[0]).toUpperCase();
-                String foldername = path[1].replaceAll("\\p{Punct}", "");
-                includeitemfile = prefix + System.getProperty("file.separator") + foldername + System.getProperty("file.separator") + "main.xml";
+                piifoldername = path[1].replaceAll("\\p{Punct}", "");
+                includeitemfile = prefix + System.getProperty("file.separator") + piifoldername + System.getProperty("file.separator") + "main.xml";
             }
         }
         else if(href.startsWith("S")) {
@@ -62,8 +64,21 @@ public class PIIFolderResolver implements URIResolver  {
         else {
             includeitemfile = href; 
         }
-        //
-        String xmlFile  = issuepath + System.getProperty("file.separator") + includeitemfile;
+
+        String xmlFile = includeitemfile;
+        if(!(new File(xmlFile)).exists()) {
+          String[] locs = { "FRONT", "BODY", "REAR" };
+          for (int l = 0; l < locs.length; l++) {
+            xmlFile = issuepath + System.getProperty("file.separator") + locs[l] + System.getProperty("file.separator") + System.getProperty("file.separator") + piifoldername + System.getProperty("file.separator") + "main.xml";
+            if (new File(xmlFile).exists()) {
+              break;
+            }
+            else {
+              xmlFile = includeitemfile;
+            }
+          }
+        }
+        
         if(!(new File(xmlFile)).exists()) {
             log.error("File not found " + xmlFile);
             return new StreamSource(new StringReader("<empty/>"));
