@@ -215,24 +215,39 @@ public class PdfProcessorStamper  {
   }
 
   private File getIncludeItem(File xmlFile, String foldername) throws IOException {
-    String[] locs = { "FRONT", "BODY", "REAR" };
     File floc = null;
-    for (int l = 0; l < locs.length; l++) {
-      floc = new File(xmlFile.getParent() + FILE_SEP
-          + locs[l] + FILE_SEP + foldername
-          + FILE_SEP + "main.pdf");
-      if (floc.exists()) {
-        log.debug(locs[l] + " file. " + floc.getAbsolutePath());
-        break;
-      }
-      else {
-        floc = null;
+    // book series
+    if(foldername.startsWith("S"))
+    {
+      // article file is in folder which is article pii without the
+      // "S<issn>" as the prefix so strip the first 9 characters
+      foldername = foldername.substring(9);
+      floc = new File(xmlFile.getParent()
+        + FILE_SEP + foldername
+        + FILE_SEP + "main.pdf");      
+    }
+    else
+    {
+      String[] locs = { "FRONT", "BODY", "REAR" };
+      for (int l = 0; l < locs.length; l++) {
+        floc = new File(xmlFile.getParent() + FILE_SEP
+            + locs[l] + FILE_SEP + foldername
+            + FILE_SEP + "main.pdf");
+        if (floc.exists()) {
+          log.debug(locs[l] + " file. " + floc.getAbsolutePath());
+          break;
+        }
+        else {
+          floc = null;
+        }
       }
     }
     if(floc == null) {
-      log.error("File missing." + floc.getCanonicalPath());
+      log.error("File missing. " + xmlFile.getParent() + " " + foldername);
     }
-    log.debug(floc.getAbsolutePath());
+    else {
+      log.debug(floc.getAbsolutePath());
+    }
     return floc;
   }
 
