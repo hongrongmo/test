@@ -371,7 +371,7 @@ else
   String reqCID = request.getParameter("CID");
   String dbCode = request.getParameter("database");
 
-  if(reqCID != null && dbCode != null && dbCode.equals("131072") && (reqCID.equalsIgnoreCase("ebookSearch") || reqCID.equalsIgnoreCase("errorQuickSearchResult")))
+  if(reqCID != null && dbCode != null && (reqCID.equalsIgnoreCase("ebookSearch") || (dbCode.equals("131072") && reqCID.equalsIgnoreCase("errorQuickSearchResult"))))
   {
   //output browse collections
       String[] creds = user.getCartridge();
