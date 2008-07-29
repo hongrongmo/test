@@ -133,17 +133,25 @@ public class BookIndexer
       stmt = con.createStatement();
 
       List isbnList = new ArrayList();
-      try {
-        BufferedReader rdr = new BufferedReader(new FileReader("isbnList.txt"));
-        while (rdr.ready()) {
-          String aline = rdr.readLine();
-          isbnList.add(aline);
-        }
-        rdr.close();
-        log.info("Processing only ISBNs found in isbnList.txt file.");
+      if((args.length == 1) && (args[0].length() == 13) && (args[0].startsWith("978")))
+      {
+        log.info("ISBN on Command line: " + args[0]);
+        isbnList.add(args[0]);
       }
-      catch(IOException ioe) {
-        log.info("Processing all ISBNs from BOOKS table.");
+      else
+      {
+        try {
+          BufferedReader rdr = new BufferedReader(new FileReader("isbnList.txt"));
+          while (rdr.ready()) {
+            String aline = rdr.readLine();
+            isbnList.add(aline);
+          }
+          rdr.close();
+          log.info("Processing only ISBNs found in isbnList.txt file.");
+        }
+        catch(IOException ioe) {
+          log.info("Processing all ISBNs from BOOKS table.");
+        }
       }
 
       String isbnString = null;
