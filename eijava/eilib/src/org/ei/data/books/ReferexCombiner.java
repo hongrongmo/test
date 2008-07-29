@@ -46,6 +46,7 @@ public class ReferexCombiner {
     private final static String driverClassName = "oracle.jdbc.driver.OracleDriver";
 
     private DataSource localDataSource = null;
+    private List isbnList = new ArrayList();
 
     static {
         // make sure we use the xerces parser for Vaildation
@@ -64,6 +65,27 @@ public class ReferexCombiner {
     }
 
     public void runExtracts(String[] args) {
+
+        if((args.length == 1) && (args[0].length() == 13) && (args[0].startsWith("978")))
+        {
+          log.info("ISBN on Command line: " + args[0]);
+          isbnList.add(args[0]);
+        }
+        else
+        {
+          try {
+            BufferedReader rdr = new BufferedReader(new FileReader("isbnList.txt"));
+            while (rdr.ready()) {
+              String aline = rdr.readLine();
+              isbnList.add(aline);
+            }
+            rdr.close();
+            log.info("Processing only ISBNs found in isbnList.txt file.");
+          }
+          catch(IOException ioe) {
+            log.info("Processing all ISBNs from BOOKS table.");
+          }
+        }
 
         CombinedWriter writer = null;
         try {
@@ -139,20 +161,6 @@ public class ReferexCombiner {
             conn = getDataSourceConnection();
 
             stmt = conn.createStatement();
-
-            List isbnList = new ArrayList();
-            try {
-              BufferedReader rdr = new BufferedReader(new FileReader("isbnList.txt"));
-              while (rdr.ready()) {
-                String aline = rdr.readLine();
-                isbnList.add(aline);
-              }
-              rdr.close();
-              log.info("Processing only ISBNs found in isbnList.txt file.");
-            }
-            catch(IOException ioe) {
-              log.info("Processing all ISBNs from BOOKS table.");
-            }
 
             String isbnString = null;
             if(!isbnList.isEmpty()) {
