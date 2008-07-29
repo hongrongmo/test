@@ -515,8 +515,11 @@ public class ReferexCombiner {
                 // Page num DOES NOT match number in file
                 String pageStartText = pageText;
 
-                // log.info(" pageChapterTitle:" + pageChapterTitle);
                 pageStartText = pageStartText.replaceFirst(bookTitle, "");
+                if(sIsbn13.equals("9780123739735"))
+                {
+                  pageStartText = pageStartText.replaceFirst("System- on- Chip Test Architectures ", "");
+                }
 
                 String pageChapterTitleRegex = pageChapterTitle.replaceAll("\\p{Punct}","");
 
