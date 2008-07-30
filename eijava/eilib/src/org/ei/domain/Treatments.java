@@ -46,8 +46,6 @@ public class Treatments
 		Treatment[] trs = new Treatment[codes.length];
 		for (int i = 0; i< codes.length; i++)
 		{
-
-		    //System.out.println("TR::"+codes[i]);
 			String title = (String)(dataDictionary.getTreatments()).get(codes[i]);
 			Treatment tr = new Treatment(key,
 										 codes[i],
@@ -76,23 +74,25 @@ public class Treatments
 	public void toXML(Writer out)
 		throws IOException
 	{
-
-       	out.write("<");
-       	out.write(this.key.getKey());
-		if(this.labels && (this.key.getLabel() != null))
+		if(treatments.length>0)
 		{
-			out.write(" label=\"");
-			out.write(this.key.getLabel());
-			out.write("\"");
+			out.write("<");
+			out.write(this.key.getKey());
+			if(this.labels && (this.key.getLabel() != null))
+			{
+				out.write(" label=\"");
+				out.write(this.key.getLabel());
+				out.write("\"");
+			}
+			out.write(">");
+			for (int i = 0; i< treatments.length; i++)
+			{
+				treatments[i].toXML(out);
+			}
+			out.write("</");
+			out.write(this.key.getKey());
+			out.write(">");
 		}
-       	out.write(">");
-		for (int i = 0; i< treatments.length; i++)
-		{
-			treatments[i].toXML(out);
-		}
-		out.write("</");
-		out.write(this.key.getKey());
-    	out.write(">");
 	}
 
 }
