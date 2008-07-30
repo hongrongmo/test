@@ -12,7 +12,6 @@ public class Contributor
 	protected String country;
 	protected String email;
 	protected Key key;
-	protected List bdAffIds;
 
 	public Contributor(Key key,
 					   String name)
