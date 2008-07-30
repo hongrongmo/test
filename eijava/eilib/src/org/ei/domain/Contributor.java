@@ -30,14 +30,6 @@ public class Contributor
 		this.affilID = affilID;
 	}
 	
-	public Contributor(Key key,
-			   			String name,
-			   			List affID)
-	{
-	    this.key = key;
-	    this.name = name;
-	    this.bdAffIds = affID;	   
-	}
 
 	public Contributor(Key key,
 			   String name,
@@ -141,9 +133,11 @@ public class Contributor
 			out.write(">");
 		}
 
-		out.write("<![CDATA[");
-		out.write(name);
-		out.write("]]>");
+
+		    out.write("<![CDATA[");
+		    out.write(name);
+		    out.write("]]>");
+
 
 		if(this.affiliation != null)
 		{
@@ -157,17 +151,6 @@ public class Contributor
 			{
 				out.write("<AFID>");
 				out.write(String.valueOf(affilID[i]));
-				out.write("</AFID>");
-			}
-			out.write("</AFS>");
-		}
-		else if(this.bdAffIds != null && this.bdAffIds.size() > 0)
-		{
-			out.write("<AFS>");
-			for(int i=0; i< this.bdAffIds.size(); i++)
-			{
-				out.write("<AFID>");
-				out.write((String)bdAffIds.get(i));
 				out.write("</AFID>");
 			}
 			out.write("</AFS>");
