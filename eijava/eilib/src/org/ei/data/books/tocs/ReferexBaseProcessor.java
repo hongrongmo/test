@@ -1,5 +1,6 @@
 package org.ei.data.books.tocs;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -7,6 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 
 import org.apache.commons.logging.Log;
@@ -20,6 +22,7 @@ public abstract class ReferexBaseProcessor implements ArchiveProcessor {
 
   public static final String FILE_SEP = System.getProperty("file.separator");
   public static final String BURST_AND_EXTRACTED = "V:\\EW\\BurstAndExtracted\\";
+  public static final String BURST_PAGES = "V:\\EW\\Pages\\";
   public static final String WHOLE_PDFS = "V:\\EW\\whole_pdfs\\";
 
   protected PdfProcessorStamper pdfprocessor;
@@ -121,6 +124,18 @@ public abstract class ReferexBaseProcessor implements ArchiveProcessor {
   public void setIsbnList(List<String> isbnlist) { this.isbnList = isbnlist; }
   public List<String> getIsbnList() { return this.isbnList; }
   
+  public int processall() throws IOException {
+    Iterator isbnitr = getIsbnList().iterator();
+    int count = 0;
+    while(isbnitr.hasNext()) {
+      String isbn = (String) isbnitr.next();
+      if(process(isbn)) {
+        count++;
+      }
+    }
+    return count;
+  }
+
   public boolean checkIsbn(String isbn) {
     boolean result = false;
     if((isbn == null) || (!isbnList.isEmpty() && !isbnList.contains(isbn))) {
@@ -133,17 +148,7 @@ public abstract class ReferexBaseProcessor implements ArchiveProcessor {
     return result;
   }
   
-  public String convertToIsbn13(String isbn) {
-    String newisbn;
-    String isbnroot = PDF_FileInfo.BN13_PREFIX + isbn.substring(0, 9);
-    newisbn = isbnroot + PDF_FileInfo.getISBN13CheckDigit(isbnroot);
-    return newisbn;
-  }
-  
-  public String cleanIdentifier(String id) {
-    return (id != null) ? id.replaceAll("\\p{Punct}", "") : null;
-  }
-
+ 
   private boolean createWholePdf = false;
   private boolean burstWholePdf = false;
   private boolean stampWholePdf = false;
