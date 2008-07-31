@@ -2,16 +2,15 @@ package org.ei.data.books.tocs;
 
 import java.io.File;
 import java.io.FileFilter;
-import java.io.IOException;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-public class BookArchiveMapper implements ArchiveMapper {
+public class BookArchiveMapper extends ArchiveMapper {
   protected static Log log = LogFactory.getLog(BookArchiveMapper.class);
 
   private String ARCHIVE_ROOT =  "V:\\EW\\";
-
+  
   public static File[] getFileList(String dir) {
     FileFilter archiveDirFilter = new FileFilter() {
         public boolean accept(File dir) {
@@ -34,22 +33,19 @@ public class BookArchiveMapper implements ArchiveMapper {
       };
       return new File(dir).listFiles(bookArchiveFilter);
   }
+  
+  public BookArchiveMapper() {
+    createmap();
+  }
 
-  public int map(ArchiveProcessor processor) throws IOException
+  public void createmap() 
   {
-    int count = 0;
     File[] archvies = getBookArchvieDirectoryList(ARCHIVE_ROOT);
     for (int arch = 0; arch < archvies.length; arch++) {
-        log.info((arch + 1) + ". archive: " + archvies[arch].getName());
         File[] files = getFileList(archvies[arch].getPath());
         for (int i = 0; i < files.length; i++) {
-        
-          if(processor.process(files[i].getCanonicalPath()))
-          {
-            count++;
-          }
+          addArchviePath(files[i].getName(),files[i].getAbsolutePath()) ;         
         } // for files
     } // for archives
-    return count;
   }
 }

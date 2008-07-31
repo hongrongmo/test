@@ -13,79 +13,86 @@ import javax.xml.transform.stream.StreamResult;
 public class BookCreator extends ReferexBaseProcessor  {
 
   private static final File xsltFile = new File("xsl\\BookTOC.xsl");
+  private ArchiveMapper mapper;
 
-  public boolean process(String xmlpath) throws IOException {
+  public BookCreator() {
+    mapper = new BookArchiveMapper();
+  }
+
+  public boolean process(String isbn) throws IOException {
 
     boolean result = false;
+    String xmlpath = mapper.getArchviePath(isbn);
     File xmlFile = new File(xmlpath + FILE_SEP + "main.xml");
-    String isbn = new File(xmlFile.getParent()).getName();
-    if (isbn != null) {
-      if (isbn.length() == 10) {
-        isbn = convertToIsbn13(isbn);
+    HashMap bookInfo = getBookInfo(isbn);
+    String bookpdf = WHOLE_PDFS + isbn + ".pdf";
+
+    if (xmlFile.exists()) {
+      log.info(isbn + ": " + xmlFile);
+      
+      List<IncludeItem> includeitems = IssueLoader.getIssue(xmlFile).getIncludeItems();
+      Iterator<IncludeItem> piis = includeitems.iterator();
+
+
+      if(isCheckArchive()) {
+        checkBookArchives(xmlFile, isbn);
       }
-      if (checkIsbn(isbn)) {
-        log.info(isbn + ": " + xmlFile);
-        
-        HashMap bookInfo = getBookInfo(isbn);
-        
-        List<IncludeItem> includeitems = IssueLoader.getIssue(xmlFile).getIncludeItems();
-        Iterator<IncludeItem> piis = includeitems.iterator();
+      
+      if(isCreateToc()) {
+        createToc(xmlFile, isbn);
+      }
+      if(isCreateWholePdf()) {
+        pdfprocessor.createPDF(xmlFile, bookpdf, piis);
+      }
+      
+      if(isCopyChapters())
+      {
+        // reset iterator
+        piis = includeitems.iterator();
 
-        String bookpdf = WHOLE_PDFS + isbn + ".pdf";
-        String stampedbookpdf = WHOLE_PDFS + isbn + "_stamped.pdf";
+        while (piis.hasNext()) {
+          IncludeItem pii = piis.next();
+          String foldername = pii.getPii().replaceAll("\\p{Punct}", "");
 
-        if(isCheckArchive()) {
-          checkBookArchives(xmlFile, isbn);
-        }
-        
-        if(isCreateToc()) {
-          createToc(xmlFile, isbn);
-        }
-        if(isCreateWholePdf()) {
-          pdfprocessor.createPDF(xmlFile, bookpdf, piis);
-        }
-        
-        if(isBurstWholePdf()) {
-          pdfprocessor.burstPDF(new File(bookpdf), BURST_AND_EXTRACTED + FILE_SEP + isbn);
-        }
-
-        if(isStampWholePdf())
-        {
-          pdfprocessor.stampPDF(new File(bookpdf),
-              new File(stampedbookpdf),
+          pdfprocessor.copyChapter(xmlFile, isbn, foldername, BURST_AND_EXTRACTED);
+          String chapterpdf = BURST_AND_EXTRACTED + isbn + FILE_SEP + foldername + ".pdf";
+          String stampedchapterpdf = BURST_AND_EXTRACTED + isbn + FILE_SEP + foldername + "_stamped.pdf";
+          pdfprocessor.stampPDF(new File(chapterpdf),
+              new File(stampedchapterpdf),
               bookInfo);
 
-          if(new File(bookpdf).delete())
-          {
-            new File(stampedbookpdf).renameTo(new File(bookpdf));
-          }
+            if(new File(chapterpdf).delete())
+            {
+              new File(stampedchapterpdf).renameTo(new File(chapterpdf));
+            }
         }
-        
-        if(isCopyChapters())
-        {
-          // reset iterator
-          piis = includeitems.iterator();
-
-          while (piis.hasNext()) {
-            IncludeItem pii = piis.next();
-            String foldername = pii.getPii().replaceAll("\\p{Punct}", "");
-  
-            pdfprocessor.copyChapter(xmlFile, isbn, foldername, BURST_AND_EXTRACTED);
-            String chapterpdf = BURST_AND_EXTRACTED + isbn + FILE_SEP + foldername + ".pdf";
-            String stampedchapterpdf = BURST_AND_EXTRACTED + isbn + FILE_SEP + foldername + "_stamped.pdf";
-            pdfprocessor.stampPDF(new File(chapterpdf),
-                new File(stampedchapterpdf),
-                bookInfo);
-  
-              if(new File(chapterpdf).delete())
-              {
-                new File(stampedchapterpdf).renameTo(new File(chapterpdf));
-              }
-          }
-        }
-        result = true;
+      }
+      result = true;
+    }
+    
+    if(isBurstWholePdf()) {
+      File bookpdf_file = new File(bookpdf);
+      if(bookpdf_file.exists()) {
+        pdfprocessor.burstPDF(new File(bookpdf), BURST_PAGES + FILE_SEP + isbn);
       }
     }
+
+    if(isStampWholePdf())
+    {
+      String stampedbookpdf = WHOLE_PDFS + isbn + "_stamped.pdf";
+      File bookpdf_file = new File(bookpdf);
+      if(bookpdf_file.exists()) {
+        pdfprocessor.stampPDF(new File(bookpdf),
+            new File(stampedbookpdf),
+            bookInfo);
+
+        if(new File(bookpdf).delete())
+        {
+          new File(stampedbookpdf).renameTo(new File(bookpdf));
+        }
+      }
+    }
+
     return result;
   }
   
