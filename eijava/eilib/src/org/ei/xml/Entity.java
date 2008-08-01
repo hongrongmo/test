@@ -191,9 +191,6 @@ public class Entity {
     public static String prepareString(String s)
     {
 
-		System.out.print("!! String= "+s);
-
-
         if (s == null) {
             return null;
         }
