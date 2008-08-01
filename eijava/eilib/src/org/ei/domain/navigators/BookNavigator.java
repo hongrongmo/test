@@ -208,10 +208,12 @@ public class BookNavigator extends EiNavigator {
         String isbn  = "";
         try
         {
-            Library library = Library.getInstance();
-            Book book = library.getBook(title);
+          Library library = Library.getInstance();
+          Book book = library.getBook(title);
+          if(book != null)
+          {
             isbn = book.getIsbn();
-
+          }
           if(isbn == null)
           {
             isbn = "Cant find isbn for title =" + title;
