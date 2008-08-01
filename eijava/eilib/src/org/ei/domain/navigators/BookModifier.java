@@ -7,12 +7,12 @@ import org.ei.util.StringUtil;
 
 public class BookModifier extends EiModifier {
 
-	public static final String TYPE_BOOK = "BOOK";	
+	public static final String TYPE_BOOK = "BOOK";
 	public static final String TYPE_SECT = "SECT";
-	
+
 	String title = null;
 	String modtype = null;
-	
+
 	public BookModifier(int i, String slabel, String svalue, String title, String type) {
 		super(i, slabel, svalue);
 		setType(type);
@@ -34,7 +34,7 @@ public class BookModifier extends EiModifier {
 			sb.append("<LABEL><![CDATA[").append(this.getLabel()).append(
 					"]]></LABEL>").append("<TITLE TYPE=\"").append(
 					getType()).append(
-					"\"><![CDATA[").append(URLDecoder.decode(this.getTitle(),"utf-8")).append(
+					"\"><![CDATA[").append((this.getTitle() != null) ? URLDecoder.decode(this.getTitle(),"utf-8") : "").append(
 					"]]></TITLE>").append("</MODIFIER>");
 		} catch (UnsupportedEncodingException e) {
 
