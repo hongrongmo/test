@@ -15,6 +15,7 @@ import org.ei.books.collections.ReferexCollection;
 import org.ei.util.Base64Coder;
 import org.ei.books.collections.*;
 import org.ei.util.StringUtil;
+import org.ei.xml.Entity;
 
 import org.ei.books.library.*;
 
@@ -208,6 +209,8 @@ public class BookNavigator extends EiNavigator {
         String isbn  = "";
         try
         {
+          title = Entity.prepareString(title);
+          System.out.println(title);
           Library library = Library.getInstance();
           Book book = library.getBook(title);
           if(book != null)
