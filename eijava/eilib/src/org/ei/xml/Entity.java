@@ -190,7 +190,10 @@ public class Entity {
 
     public static String prepareString(String s)
     {
-		//System.out.print("String= "+s);
+
+		System.out.print("!! String= "+s);
+
+
         if (s == null) {
             return null;
         }
@@ -208,28 +211,29 @@ public class Entity {
 
         Enumeration keys = matches.keys();
         while (keys.hasMoreElements()) {
+
             StringBuffer pbuf = new StringBuffer();
             String match = (String) keys.nextElement();
             String match1 = null;
             if(match.indexOf("&#") == 0 && match.indexOf("&#x")<0)
             {
-				match1 = convertDecimalToHex(match);
-			}
+              match1 = convertDecimalToHex(match);
+            }
             else if (match.indexOf("&#x") == 0)
             {
-                match1 = match.toLowerCase();
+              match1 = match.toLowerCase();
             }
             else
             {
-                match1 = match;
+              match1 = match;
             }
 
-			//for testing by hongrong
-			if(match1.indexOf("0x1e")>-1)
-			{
-				System.out.println(match1);
-			}
-			// end of test
+            //for testing by hongrong
+            if(match1.indexOf("0x1e")>-1)
+            {
+              System.out.println(match1);
+            }
+            // end of test
 
             String newValue = etable.getProperty(match1);
 
@@ -878,6 +882,8 @@ public class Entity {
 		etable.setProperty("&#x22c9;", "");//left-closed times(&ltimes;)
 		etable.setProperty("&#x2127;", "");//mho(&mho;)
 
+		etable.setProperty("&#x15e;", "S");// Cryllic 'S' (see isbn: 9780444522375)
+		etable.setProperty("&#x131;", "i");// i with no dot (see isbn: 9780444522375)
 
 
 
