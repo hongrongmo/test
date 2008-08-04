@@ -110,5 +110,7 @@
   <xsl:template match="ce:article-footnote" />
   <xsl:template match="ce:keywords" />
   <xsl:template match="ce:author-group" />
+  <xsl:template match="ce:cross-ref" />
+
 
 </xsl:stylesheet>
