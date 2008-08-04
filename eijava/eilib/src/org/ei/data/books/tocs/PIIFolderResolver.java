@@ -1,10 +1,12 @@
 package org.ei.data.books.tocs;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.StringReader;
+import java.nio.charset.Charset;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -86,14 +88,18 @@ public class PIIFolderResolver implements URIResolver  {
         SAXParserFactory factory = SAXParserFactory.newInstance();
         SAXParser saxParser;
         try {
-            InputStreamReader is = new InputStreamReader(new FileInputStream(xmlFile));
+//            InputStreamReader is = new InputStreamReader(new FileInputStream(xmlFile));
+
+            
+            InputStreamReader is = new InputStreamReader(new FileInputStream(xmlFile),Charset.forName("UTF-8"));
+            BufferedReader in = new BufferedReader(is);
 
             factory.setNamespaceAware(true);
             saxParser = factory.newSAXParser();
             XMLReader aparser = saxParser.getXMLReader();
             aparser.setEntityResolver(new BookDTDEntityResolver());
             
-            asource = new SAXSource(aparser,new InputSource(is));
+            asource = new SAXSource(aparser,new InputSource(in));
 
         } catch (IOException e) {
             System.out.println(e.toString());
