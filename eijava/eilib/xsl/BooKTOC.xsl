@@ -6,7 +6,7 @@
   xmlns:ce="http://www.elsevier.com/xml/common/dtd"
   xmlns:sb="http://www.elsevier.com/xml/common/struct-bib/dtd"
   exclude-result-prefixes="html xsl bk ce sb">
-  <xsl:output method="html" indent="yes" encoding="utf-8"/>
+  <xsl:output method="html" indent="yes" encoding="ISO-8859-1"/>
   <xsl:strip-space elements="*" />
 
   <xsl:template match="bk:book">
