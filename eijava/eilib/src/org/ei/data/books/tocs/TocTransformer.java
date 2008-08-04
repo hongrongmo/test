@@ -1,9 +1,12 @@
 package org.ei.data.books.tocs;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.nio.charset.Charset;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
@@ -47,12 +50,16 @@ public class TocTransformer  {
           transFact.setURIResolver(new PIIFolderResolver(xmlFile));
           Transformer trans = transFact.newTransformer(xsltSource);
 
-          InputStreamReader is = new InputStreamReader(new FileInputStream(xmlFile));
+          InputStreamReader is = new InputStreamReader(new FileInputStream(xmlFile),Charset.forName("UTF-8"));
+          BufferedReader in = new BufferedReader(is);
+//          while(in.ready()) {
+//            log.info(in.read());
+//          }
           factory.setNamespaceAware(true);
           saxParser = factory.newSAXParser();
           XMLReader aparser = saxParser.getXMLReader();
           aparser.setEntityResolver(new BookDTDEntityResolver());
-          xmlSource = new SAXSource(aparser,new InputSource(is));
+          xmlSource = new SAXSource(aparser,new InputSource(in));
 
           trans.transform(xmlSource, tresult);
           result = true;
