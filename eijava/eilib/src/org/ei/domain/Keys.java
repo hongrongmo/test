@@ -78,7 +78,7 @@ public interface Keys
     public static final Key CITCNT = new Key("CCT");
     public static final Key CLASS_CODE = new Key("CL");
     public static final Key ELT_CLASS_CODE = new Key("ECL");
-    public static final Key CLASS_CODES = new Key("CLS");
+    public static final Key CLASS_CODES = new Key("CLS","Classification code");
     public static final Key CLASS_CODES_MULTI= new Key("CLGM");
     public static final Key CODEN = new Key("CN","CODEN");
     public static final Key COLLECTION_TITLE = new Key("CLT", "Collection title");
@@ -87,7 +87,7 @@ public interface Keys
     public static final Key CONF_DATE = new Key("MD", "Conference date");;
     public static final Key CONTRACTIN_STATES = new Key("ASG_CST");
     public static final Key CONTRACT_NUMBERS = new Key("CTS","Contract numbers");
-    public static final Key CONTROLLED_TERMS = new Key("CVS");
+    public static final Key CONTROLLED_TERMS = new Key("CVS","Controlled terms");
     public static final Key CONTROLLED_TERM = new Key("CV");
     public static final Key COPYRIGHT = new Key("CPR", "Copyright");
     public static final Key COPYRIGHT_TEXT = new Key("CPRT");
