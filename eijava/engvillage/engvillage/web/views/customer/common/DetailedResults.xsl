@@ -355,9 +355,19 @@
                 <xsl:text>) </xsl:text>
             </xsl:if>
         </xsl:if>
+        
+        <xsl:if test="not(./AFS)">
         <xsl:if test="(@id)">
-       <A CLASS="MedBlackText"><Sup><xsl:value-of select="@id"/></Sup><xsl:text> </xsl:text></A>
+       <A CLASS="MedBlackText"><Sup><xsl:value-of select="@id"/></Sup><xsl:text> </xsl:text></A>       
+        </xsl:if>
+        </xsl:if>
+    
+    <xsl:if test="./AFS">
+      <A CLASS="SmBlackText"><Sup><xsl:apply-templates select="./AFS/AFID"/></Sup>       
+      <xsl:text> </xsl:text></A>       
     </xsl:if>
+
+    
     <!--    <xsl:if test="not(name()='IV')">    -->
             <xsl:if test="not(position()=last())"><A CLASS="SmBlackText">;</A><xsl:text> </xsl:text></xsl:if>
     <!--
@@ -367,6 +377,16 @@
 
         <xsl:if test="position()=last()"><xsl:text> </xsl:text></xsl:if>
     </xsl:template>
+   
+
+	<xsl:template match="AFID">
+		<xsl:value-of select="."/>
+		<xsl:if test="not(position()=last())">,<xsl:text> </xsl:text></xsl:if>
+	</xsl:template>
+	
+	
+	
+	
 
     <xsl:template match="PAS">
         <xsl:variable name="NAME"><xsl:value-of select="normalize-space(text())"/></xsl:variable>
@@ -431,11 +451,11 @@
     </xsl:template>
 
     <!-- NON-HIGHLIGHTED child node(s) within VALUE -->
-        <xsl:template match="AF|EF">
+    <xsl:template match="AF|EF">
             <xsl:if test="(@id)">
-        <A CLASS="MedBlackText"><Sup><xsl:value-of select="@id"/></Sup><xsl:text> </xsl:text></A>
-      </xsl:if>
-        <span CLASS="MedBlackText"><xsl:value-of select="hlight:addMarkup(normalize-space(text()))" disable-output-escaping="yes"/></span>
+        		<A CLASS="MedBlackText"><Sup><xsl:value-of select="@id"/></Sup><xsl:text> </xsl:text></A>
+      		</xsl:if>
+        	<span CLASS="MedBlackText"><xsl:value-of select="hlight:addMarkup(normalize-space(text()))" disable-output-escaping="yes"/></span>
          <!--   <span CLASS="MedBlackText"><xsl:value-of select="normalize-space(text())"/></span> -->
             <xsl:if test="not(position()=last())"><A CLASS="SmBlackText"><br/></A><xsl:text> </xsl:text></xsl:if>
     </xsl:template>
