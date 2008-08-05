@@ -30,6 +30,7 @@
       <xsl:apply-templates select="EDS"/>
       <xsl:apply-templates select="IVS"/>
 
+
       <span CLASS="SmBlackText">
       <xsl:choose>
         <xsl:when test ="string(NO_SO)">
@@ -42,7 +43,7 @@
           <b>Source: </b>
         </xsl:otherwise>
       </xsl:choose>
-
+      
       <xsl:apply-templates select="PF"/>
       <xsl:apply-templates select="RSP"/>
       <xsl:apply-templates select="RN_LABEL"/>
@@ -131,6 +132,10 @@
       <xsl:apply-templates select="MD"/>
       <xsl:apply-templates select="ML"/>
       <xsl:apply-templates select="SP"/>
+      
+
+      <xsl:apply-templates select="AFS"/>
+      
       <xsl:apply-templates select="CLOC"/>
 
       <xsl:apply-templates select="I_PN"/>
@@ -647,7 +652,7 @@
     </xsl:template>
     <xsl:template match="AB|BAB">
       <xsl:text>&#xD;&#xA;</xsl:text>
-      <span CLASS="MedBlackText"><a CLASS="MedBlackText"><br/><br/><b><xsl:value-of select="@label"/>: </b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/></a></span>
+      <span CLASS="MedBlackText"><a CLASS="MedBlackText"><br/><b><xsl:value-of select="@label"/>: </b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/></a></span>
     </xsl:template>
     <xsl:template match="AB2">
       <xsl:text>&#xD;&#xA;</xsl:text>
@@ -741,18 +746,35 @@
       <xsl:text> </xsl:text><xsl:text>(</xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/><xsl:text>)</xsl:text>
     </xsl:template>
 
-    <xsl:template match="AFF">
-      <xsl:apply-templates/>
+    <xsl:template match="AFS">   
+  		<span CLASS="MedBlackText">
+  		<br/><br/>
+  		<A CLASS="MedBlackText"><b>Author affiliation: </b><xsl:text> </xsl:text></A><br/>
+  		</span>    
+  		<table>
+      		<xsl:apply-templates/>
+    	</table>
     </xsl:template>
+ 
+	
 
-    <xsl:template match="AF">
-      <span CLASS="SmBlackText"><xsl:text> (</xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/><xsl:text>)</xsl:text></span>
+    <xsl:template match="AF|EF">
+    <tr><td valign="top">
+        <xsl:if test="(@id)">
+			<A CLASS="SmBlackText"><Sup><xsl:value-of select="@id"/></Sup><xsl:text> </xsl:text></A>
+      	</xsl:if>
+   	</td><td>
+    	<span CLASS="SmBlackText"><xsl:value-of select="hlight:addMarkup(normalize-space(text()))" disable-output-escaping="yes"/></span>
+        <xsl:if test="not(position()=last())"><A CLASS="SmBlackText"><br/></A><xsl:text> </xsl:text></xsl:if>
+    </td></tr>
     </xsl:template>
-
-      <xsl:template match="AU|ED|IV">
+    
+    <xsl:template match="AU|ED|IV">
       <xsl:variable name="NAME"><xsl:value-of select="normalize-space(text())"/></xsl:variable>
 
       <!-- If the name does not contain the text Anon -->
+      
+      <xsl:if test="not(position()=1)"><A CLASS="SmBlackText">;</A><xsl:text> </xsl:text></xsl:if>
       <xsl:if test="boolean(not(contains($NAME,'Anon')))">
         <xsl:call-template name="LINK">
           <xsl:with-param name="TERM"><xsl:value-of select="$NAME"/></xsl:with-param>
@@ -763,20 +785,27 @@
             <a CLASS="SmBlackText"><xsl:text>, ed.</xsl:text></a>
           </xsl:if>
         </xsl:if>
-        <xsl:apply-templates select="AF"/>
       </xsl:if>
       <!-- If the name contains Anon text -->
       <xsl:if test="boolean(contains($NAME,'Anon'))"><A CLASS="SmBlackText"><xsl:value-of select="$NAME"/></A></xsl:if>
-      <xsl:if test="not(position()=last())"><A CLASS="SmBlackText">;</A><xsl:text> </xsl:text></xsl:if>
       <xsl:if test="position()=last()">
         <xsl:if test="name(.)='ED' and not(position()=1)">
           <a CLASS="SmBlackText"><xsl:text> eds.</xsl:text></a>
         </xsl:if>
         <xsl:text> </xsl:text>
       </xsl:if>
+            
+    <xsl:if test="./AFS">
+      <A CLASS="SmBlackText"><Sup><xsl:apply-templates select="./AFS/AFID"/></Sup>       
+      <xsl:text> </xsl:text></A>       
+    </xsl:if>
+    
     </xsl:template>
 
-
+	<xsl:template match="AFID">
+		<xsl:value-of select="."/>
+		<xsl:if test="not(position()=last())">,<xsl:text> </xsl:text></xsl:if>
+	</xsl:template>
 
     <xsl:template match="CM|CP">
       <xsl:call-template name="LINK">
