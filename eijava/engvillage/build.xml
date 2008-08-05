@@ -52,11 +52,13 @@
 
   <fileset id="shared.jars" dir="${basedir}/../ext/">
     <include name="**/ojdbc14.jar"/>
+    <include name="**/saxon.jar"/>
   </fileset>
 
   <target name="shared-jars-present" >
     <condition property="shared.jars.present">
       <and>
+        <available filepath="${env.CATALINA_HOME}/shared/lib/" file="saxon.jar" type="file" />
         <available filepath="${env.CATALINA_HOME}/shared/lib/" file="lucene.jar" type="file" />
         <available filepath="${env.CATALINA_HOME}/shared/lib/" file="ojdbc14.jar" type="file" />
         <available filepath="${env.CATALINA_HOME}/shared/lib/" file="jcommon-1.0.0.jar" type="file" />
