@@ -23,6 +23,7 @@
       <xsl:apply-templates select="BTI"/>
       <xsl:apply-templates select="BPP"/>
       <xsl:apply-templates select="TI"/>
+      <xsl:apply-templates select="TT"/>
       <xsl:if test="$ascii='true'">
           <xsl:text>&#xD;&#xA;</xsl:text>
       </xsl:if>
@@ -392,6 +393,11 @@
 
     <xsl:template match="TI">
       <a CLASS="MedBlackText"><b><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/></b></a><br/>
+    </xsl:template>
+    
+    <xsl:template match="TT">
+            <a class="MedBlackText"><b> (<xsl:value-of select="." disable-output-escaping="yes"/>) </b>
+	</a><br/>
     </xsl:template>
 
     <xsl:template match="AUS|EDS|IVS">
