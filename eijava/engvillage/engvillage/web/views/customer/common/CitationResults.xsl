@@ -25,7 +25,8 @@
       </xsl:if>
 
       <xsl:apply-templates select="TI"/>
-
+      
+      <xsl:apply-templates select="TT"/>
       <xsl:if test="$ascii='true'">
         <xsl:text>&#xD;&#xA;</xsl:text>
       </xsl:if>
@@ -127,6 +128,10 @@
 	</a><br/>
     </xsl:template>
 
+    <xsl:template match="TT">
+        <a class="MedBlackText"><b> (<xsl:value-of select="." disable-output-escaping="yes"/>) </b></a><br/>
+    </xsl:template>
+    
     <xsl:template match="BTI">
       <xsl:if test="(../BPP)='0'">
         <img border="0" width="56" height="72" style="float:left; margin-right:5px;">
