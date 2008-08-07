@@ -51,7 +51,7 @@ public class BdPageCount
 	private List parsePageCount()
 	{
 		List pageCountList = new ArrayList();
-		if(pageCountString != null && pageCountString.indexOf(BdParser.AUDELIMITER)>0)
+		if(pageCountString != null)
 		{
 			StringTokenizer pageCountToken = new StringTokenizer(pageCountString,BdParser.AUDELIMITER);
 
@@ -81,5 +81,28 @@ public class BdPageCount
 			}
 		}
 		return pageCountList;
+	}
+
+	public String getDisplayValue()
+	{
+		List pageCount = parsePageCount();
+		StringBuffer sbuffer = new StringBuffer();
+		for(int i=0; i<pageCount.size(); i++)
+		{
+			if(sbuffer.length()>0)
+			{
+				sbuffer.append("; ");
+			}
+			BdPageCount page = (BdPageCount)pageCount.get(i);
+
+			if(page.getValue() !=null )
+			{
+				sbuffer.append(page.getValue());
+			}
+		}
+		if(sbuffer.length()>0)
+			return sbuffer.toString();
+		else
+			return null;
 	}
 }
