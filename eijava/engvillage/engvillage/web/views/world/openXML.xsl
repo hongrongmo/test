@@ -213,7 +213,24 @@
 				</LANGUAGE>	
 			</xsl:otherwise>
 		</xsl:choose>
-		<xsl:apply-templates select="EI-DOCUMENT/SD|EI-DOCUMENT/YR|EI-DOCUMENT/PD-YR|EI-DOCUMENT/PPD"/>
+		 <xsl:choose>
+		    	<xsl:when test="EI-DOCUMENT/YR">
+		    		<DATE><xsl:value-of select="EI-DOCUMENT/YR"/></DATE>
+		    	</xsl:when>
+		    	<xsl:otherwise>
+		    	     <xsl:choose>
+				<xsl:when test="(EI-DOCUMENT/SD)">
+					<DATE><xsl:value-of select="EI-DOCUMENT/SD"/></DATE>
+				</xsl:when>
+				<xsl:otherwise>   	            
+					<xsl:if test="(EI-DOCUMENT/PD-YR)">
+						<DATE><xsl:value-of select="EI-DOCUMENT/PD-YR"/></DATE>
+					</xsl:if>
+				 </xsl:otherwise>  		
+			    </xsl:choose>
+			</xsl:otherwise>
+		</xsl:choose>
+		
 		<DESCRIPTION>	
 			<ABSTRACT-LINK>
 			   	<xsl:text>http://</xsl:text>
@@ -327,25 +344,6 @@
 		  	</xsl:otherwise>
 		</xsl:choose>	
 	</QUERY>
-</xsl:template>
-
-<xsl:template match="EI-DOCUMENT/YR|EI-DOCUMENT/SD|EI-DOCUMENT/PD-YR|EI-DOCUMENT/PPD">
- 	<DATE>
-    <xsl:choose>
-    	<xsl:when test="EI-DOCUMENT/YR">
-    		<xsl:apply-templates />
-    	</xsl:when>
-    	<xsl:when test="EI-DOCUMENT/SD">
-		    <xsl:apply-templates />
-    	</xsl:when>
-    	<xsl:when test="EI-DOCUMENT/PD-YR">
-		    <xsl:apply-templates />
-    	</xsl:when>
-    	<xsl:otherwise>
-			<xsl:apply-templates />
-		</xsl:otherwise>
-	</xsl:choose>
-	</DATE>
 </xsl:template>
 
 <xsl:template match="//LASTFOURUPDATES">
