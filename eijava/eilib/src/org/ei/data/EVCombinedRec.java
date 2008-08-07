@@ -127,6 +127,12 @@ public class EVCombinedRec {
 	public static final String USPTOCLASS = "125";
 	public static final String USPTOSUBCLASS = "126";
 	public static final String PREFINDEX = "127";
+	public static final String COPYRIGHT = "128";
+	public static final String PII = "129";
+	public static final String PUI = "130";
+	
+	
+	
 
 	private Hashtable h = new Hashtable();
 
