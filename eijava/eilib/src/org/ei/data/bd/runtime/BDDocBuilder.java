@@ -524,46 +524,32 @@ public class BDDocBuilder
 		if(poString !=  null)
 		{
 			String[] poArray = poString.split(BdParser.IDDELIMITER,-1);
-			if(poArray.length>2)
+			for(int i=0;i<poArray.length;i++)
 			{
-				if(poArray[0]!=null && poArray[0].trim().length()>0)
+				if(poArray[i]!=null && poArray[i].trim().length()>0)
 				{
-					poBuffer.append(poArray[0]);
+					poBuffer.append(poArray[i]);
 				}
 				else
 				{
-					poBuffer.append("0000");
+					if(i==0)
+					{
+						poBuffer.append("0000");
+					}
+					else
+					{
+						poBuffer.append("00");
+					}
 				}
 
-				if(poArray[1]!=null && poArray[1].trim().length()>0)
-				{
-					poBuffer.append(poArray[1]);
-				}
-				else
-				{
-					poBuffer.append("00");
-				}
-
-				if(poArray[2]!=null && poArray[2].trim().length()>0)
-				{
-					poBuffer.append(poArray[2]);
-				}
-				else
-				{
-					poBuffer.append("00");
-				}
-				if(poBuffer.length()>0)
-				{
-					return poBuffer.toString();
-				}
-				else
-				{
-					return null;
-				}
+			}
+			if(poBuffer.length()>0)
+			{
+				return poBuffer.toString();
 			}
 			else
 			{
-				return poString;
+				return null;
 			}
 
 		}
