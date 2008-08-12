@@ -210,7 +210,6 @@ public class BookNavigator extends EiNavigator {
         try
         {
           title = Entity.prepareString(title);
-          System.out.println(title);
           Library library = Library.getInstance();
           Book book = library.getBook(title);
           if(book != null)
