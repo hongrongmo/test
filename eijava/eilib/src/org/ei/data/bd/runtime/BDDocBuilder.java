@@ -124,8 +124,8 @@ public class BDDocBuilder
 				formatRIS(buildField(Keys.COPYRIGHT_TEXT,CPX_TEXT_COPYRIGHT,ht), dataFormat, Keys.COPYRIGHT_TEXT, Keys.RIS_N1);
 				buildField(Keys.ISSUE_DATE,rset.getString("PUBLICATIONDATE"),ht);
 				buildField(Keys.MONOGRAPH_TITLE,rset.getString("ISSUETITLE"),ht);
-				buildField(Keys.VOLUME,getVolume(rset.getString("VOLUME"),perl),ht);
-				buildField(Keys.ISSUE,getIssue(rset.getString("ISSUE"),perl),ht);
+				formatRIS(buildField(Keys.VOLUME,getVolume(rset.getString("VOLUME"),perl),ht), dataFormat, Keys.VOLUME, Keys.RIS_VL);
+				formatRIS(buildField(Keys.ISSUE,getIssue(rset.getString("ISSUE"),perl),ht), dataFormat, Keys.ISSUE, Keys.RIS_IS);
 				buildField(Keys.SERIAL_TITLE,rset.getString("SOURCETITLE"),ht);
 				buildField(Keys.CODEN,rset.getString("CODEN"),ht);
 				buildField(Keys.ISSN,getIssn(rset.getString("ISSN"),rset.getString("EISSN")),ht);
