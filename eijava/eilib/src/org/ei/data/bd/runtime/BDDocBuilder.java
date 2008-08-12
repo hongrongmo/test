@@ -909,19 +909,16 @@ public class BDDocBuilder
 
         if(!str.equals(StringUtil.EMPTY_STRING))
         {
-            if (str.equals("JA")){str = "JOUR";}
-            else if (str.equals("CA")){str = "CONF";}
-            else if (str.equals("CP")){str = "CONF";}
-            else if (str.equals("MC")){str = "CHAP";}
-            else if (str.equals("MR")){str = "BOOK";}
-            else if (str.equals("RC")){str = "RPRT";}
-            else if (str.equals("RR")){str = "RPRT";}
-            else if (str.equals("DS")){str = "THES";}
-            else if (str.equals("UP")){str = "UNPB";}
-            else
-            {
-                str="JOUR";
-            }
+
+            if (str.equals("Journal article (JA)")){str = "JOUR";}
+            else if (str.equals("Conference article (CA)")){str = "CONF";}
+            else if (str.equals("Conference proceeding (CP)")){str = "CONF";}
+            else if (str.equals("Monograph chapter (MC)")){str = "CHAP";}
+            else if (str.equals("MMonograph review (MR)")){str = "BOOK";}
+            else if (str.equals("Report chapter (RC)")){str = "RPRT";}
+            else if (str.equals("Report review (RR)")){str = "RPRT";}
+            else if (str.equals("Dissertation (DS)")){str = "THES";}
+            else if (str.equals("Unpublished paper (UP)")){str = "UNPB";}
         }
         else
         {
@@ -1039,8 +1036,12 @@ public class BDDocBuilder
 
 	public void formatRISDocType(ElementDataMap map, String dataFormat, Key ORIGINAL_KEY, Key NEW_KEY)
 	{
+
+
 		if(dataFormat.equals(RIS.RIS_FORMAT))
 		{
+
+
 			ElementData ed = map.get(ORIGINAL_KEY);
 
 			String[] elementDataArray = ed.getElementData();
