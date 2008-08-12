@@ -121,7 +121,7 @@ public class BDDocBuilder
 				buildField(Keys.DOI,rset.getString("DOI"),ht);
 				buildField(Keys.PUBLICATION_YEAR,getYear(rset.getString("PUBLICATIONYEAR"),perl),ht);
 				buildField(Keys.COPYRIGHT,rset.getString("COPYRIGHT"),ht);
-				buildField(Keys.COPYRIGHT_TEXT,CPX_TEXT_COPYRIGHT,ht);
+				formatRIS(buildField(Keys.COPYRIGHT_TEXT,CPX_TEXT_COPYRIGHT,ht), dataFormat, Keys.COPYRIGHT_TEXT, Keys.RIS_N1);
 				buildField(Keys.ISSUE_DATE,rset.getString("PUBLICATIONDATE"),ht);
 				buildField(Keys.MONOGRAPH_TITLE,rset.getString("ISSUETITLE"),ht);
 				buildField(Keys.VOLUME,getVolume(rset.getString("VOLUME"),perl),ht);
@@ -152,7 +152,7 @@ public class BDDocBuilder
 														rset.getString("EISSN")),perl),ht);
 
 				buildField(Keys.PUBLISHER,getPublisher(rset.getString("PUBLISHERNAME"),rset.getString("PUBLISHERADDRESS")),ht);
-				buildField(Keys.LANGUAGE,getLanguage(rset.getString("CITATIONLANGUAGE")),ht);
+				formatRIS(buildField(Keys.LANGUAGE,getLanguage(rset.getString("CITATIONLANGUAGE")),ht),dataFormat, Keys.LANGUAGE, Keys.RIS_LA);
 				buildField(Keys.AUTHORS,getAuthors(Keys.AUTHORS,rset.getString("AUTHOR"),rset.getString("AUTHOR_1")),ht);
 				buildField(Keys.AUTHOR_AFFS,getAuthorsAffiliation(Keys.AUTHOR_AFFS,rset.getString("AFFILIATION"),rset.getString("AFFILIATION_1")),ht);
 				buildField(Keys.PROVIDER,PROVIDER_TEXT,ht);
