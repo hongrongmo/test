@@ -172,7 +172,7 @@ public class BDDocBuilder
 					buildField(Keys.ABSTRACT,getAbstract(rset),ht);
 					buildField(Keys.START_PAGE,getStartPage(rset.getString("PAGE")),ht);
 					buildField(Keys.END_PAGE,getEndPage(rset.getString("PAGE")),ht);
-					buildField(Keys.DOC_TYPE,getDocumentType(rset.getString("CITTYPE"),rset.getString("CONFCODE")),ht);
+					formatRISDocType(buildField(Keys.DOC_TYPE,getDocumentType(rset.getString("CITTYPE"),rset.getString("CONFCODE")),ht),dataFormat,Keys.DOC_TYPE,Keys.RIS_TY);
 					buildField(Keys.CONFERENCE_NAME,rset.getString("CONFNAME"),ht);
 					buildField(Keys.CONF_DATE,rset.getString("CONFDATE"),ht);
 					buildField(Keys.MEETING_LOCATION,getConferenceLocation(rset.getString("CONFLOCATION")),ht);
@@ -385,28 +385,35 @@ public class BDDocBuilder
 		return eiDoc;
 	}
 
-	private void buildField(Key key,ElementData data, ElementDataMap ht) throws Exception
+	private ElementDataMap buildField(Key key,ElementData data, ElementDataMap ht) throws Exception
 	{
 		if(data !=null)
 		{
 			ht.put(key,data);
 		}
+
+		return ht;
 	}
 
-	private void buildField(Key key,String data, ElementDataMap ht) throws Exception
+	private ElementDataMap buildField(Key key,String data, ElementDataMap ht) throws Exception
 	{
 			if(data !=null && (data.trim()).length()>0)
 			{
 				ht.put(key,new XMLWrapper(key,data.trim()));
 			}
+
+			return ht;
 	}
 
-	private void buildField(Key key,String[] data, ElementDataMap ht) throws Exception
+	private ElementDataMap buildField(Key key,String[] data, ElementDataMap ht) throws Exception
 	{
 		if(data !=null && data.length>0)
 		{
 			ht.put(key,new XMLMultiWrapper(key,data));
 		}
+
+		return ht;
+
 	}
 
 	private String getPublisher(String name,String address) throws Exception
@@ -1018,6 +1025,38 @@ public class BDDocBuilder
 		}
 
         return null;
+	}
+
+	public void formatRIS(ElementDataMap map, String dataFormat, Key ORIGINAL_KEY, Key NEW_KEY)
+	{
+		if(dataFormat.equals(RIS.RIS_FORMAT))
+		{
+			ElementData ed = map.get(ORIGINAL_KEY);
+			ed.setKey(NEW_KEY);
+			map.put(NEW_KEY, ed);
+		}
+	}
+
+	public void formatRISDocType(ElementDataMap map, String dataFormat, Key ORIGINAL_KEY, Key NEW_KEY)
+	{
+		if(dataFormat.equals(RIS.RIS_FORMAT))
+		{
+			ElementData ed = map.get(ORIGINAL_KEY);
+
+			String[] elementDataArray = ed.getElementData();
+
+			for(int i = 0; i < elementDataArray.length; i++)
+			{
+				String strDocType = StringUtil.replaceNullWithEmptyString(elementDataArray[i]);
+				String risDocType = replaceTYwithRIScode(strDocType);
+				elementDataArray[i] = risDocType;
+			}
+
+			ed.setKey(NEW_KEY);
+			ed.setElementData(elementDataArray);
+			map.put(NEW_KEY, ed);
+
+		}
 	}
 
 }
