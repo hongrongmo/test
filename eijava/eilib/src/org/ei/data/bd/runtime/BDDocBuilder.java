@@ -126,7 +126,7 @@ public class BDDocBuilder
 				formatRIS(buildField(Keys.MONOGRAPH_TITLE,rset.getString("ISSUETITLE"),ht), dataFormat, Keys.MONOGRAPH_TITLE, Keys.RIS_BT);
 				formatRIS(buildField(Keys.VOLUME,getVolume(rset.getString("VOLUME"),perl),ht), dataFormat, Keys.VOLUME, Keys.RIS_VL);
 				formatRIS(buildField(Keys.ISSUE,getIssue(rset.getString("ISSUE"),perl),ht), dataFormat, Keys.ISSUE, Keys.RIS_IS);
-				formatRISSerialTitle(buildField(Keys.SERIAL_TITLE,rset.getString("SOURCETITLE"),ht), dataFormat, Keys.SERIAL_TITLE);
+				formatRISSerialTitle(buildField(Keys.SERIAL_TITLE,rset.getString("SOURCETITLE"),ht), dataFormat, Keys.SERIAL_TITLE, getDocumentType(rset.getString("CITTYPE"),rset.getString("CONFCODE")));
 				buildField(Keys.CODEN,rset.getString("CODEN"),ht);
 				buildField(Keys.ISSN,getIssn(rset.getString("ISSN"),rset.getString("EISSN")),ht);
 				buildField(Keys.ABBRV_SERIAL_TITLE,rset.getString("SOURCETITLEABBREV"),ht);
@@ -1042,11 +1042,8 @@ public class BDDocBuilder
 
 	public void formatRISDocType(ElementDataMap map, String dataFormat, Key ORIGINAL_KEY, Key NEW_KEY)
 	{
-
-
 		if(dataFormat.equals(RIS.RIS_FORMAT))
 		{
-
 
 			ElementData ed = map.get(ORIGINAL_KEY);
 
@@ -1066,29 +1063,23 @@ public class BDDocBuilder
 		}
 	}
 
-	public void formatRISSerialTitle(ElementDataMap map, String dataFormat, Key ORIGINAL_KEY)
+	public void formatRISSerialTitle(ElementDataMap map, String dataFormat, Key ORIGINAL_KEY, String docType)
 	{
 		if(dataFormat.equals(RIS.RIS_FORMAT) && map != null)
 		{
+			ElementData ed = map.get(ORIGINAL_KEY);
 
-			ElementData edDocType = map.get(Keys.DOC_TYPE);
-			ElementData edOriginal = map.get(ORIGINAL_KEY);
-
-			if(edOriginal != null)
+			if(ed != null)
 			{
-				String[] elementDataDocTypeArray = edDocType.getElementData();
-				String strDocType = StringUtil.replaceNullWithEmptyString(elementDataDocTypeArray[0]);
-				String risDocType = replaceTYwithRIScode(strDocType);
-
-				if(risDocType.equals("JOUR"))
+				if(docType.equals("Journal article (JA)"))
 				{
-					edOriginal.setKey(Keys.RIS_JO);
-					map.put(Keys.RIS_JO, edOriginal);
+					ed.setKey(Keys.RIS_JO);
+					map.put(Keys.RIS_JO, ed);
 				}
 				else
 				{
-					edOriginal.setKey(Keys.RIS_T3);
-					map.put(Keys.RIS_T3, edOriginal);
+					ed.setKey(Keys.RIS_T3);
+					map.put(Keys.RIS_T3, ed);
 				}
 			}
 
