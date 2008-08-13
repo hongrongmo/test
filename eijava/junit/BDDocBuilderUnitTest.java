@@ -72,13 +72,13 @@ public class BDDocBuilderUnitTest extends TestCase {
 		try
 		{
 			//full doc view tests
-			/*
+
 			assertDocID(fullDocPages);
 			assertAccessionNumber(fullDocPages);
-			assertVolume(fullDocPages);
+			assertVolume(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertDOI(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertPubYear(fullDocPages, FullDoc.FULLDOC_FORMAT);
-			assertIssue(fullDocPages);
+			assertIssue(fullDocPages,FullDoc.FULLDOC_FORMAT);
 			assertCopyRight(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertCopyRightText(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertIssueDate(fullDocPages, FullDoc.FULLDOC_FORMAT);
@@ -137,12 +137,14 @@ public class BDDocBuilderUnitTest extends TestCase {
 
 			// xml view test
 			assertFullXmlCitation(xmlPages);
-			*/
+
 			// ris view test
 
 			assertDocType(risPages,RIS.RIS_FORMAT);
 			assertLanguage(risPages, RIS.RIS_FORMAT);
 			assertCopyRightText(risPages, RIS.RIS_FORMAT);
+			assertVolume(risPages, RIS.RIS_FORMAT);
+			assertIssue(risPages,RIS.RIS_FORMAT);
 		}
 		finally
 		{
@@ -228,7 +230,7 @@ public class BDDocBuilderUnitTest extends TestCase {
 		}
 	}
 
-	protected void assertVolume(List EIDocs) throws Exception
+	protected void assertVolume(List EIDocs, String dataFormat) throws Exception
 	{
 		HashMap vols = new HashMap();
 		vols.put("cpx_18a992f10b61b5d4a9M74342061377553", "50");
@@ -249,7 +251,14 @@ public class BDDocBuilderUnitTest extends TestCase {
 			String xmlString = swriter.toString();
 			DocID correctDocId = (DocID)eidoc.getDocID();
 			String docidString = correctDocId.getDocID();
-			correctString = "<VOM label=\"Volume\"><![CDATA[" +(String)vols.get(correctDocId.getDocID()) + "]]></VOM>";
+			if(dataFormat.equals(RIS.RIS_FORMAT))
+			{
+				correctString = "<VL><![CDATA[" +(String)vols.get(correctDocId.getDocID()) +"]]></VL>";
+			}
+			else
+			{
+				correctString = "<VOM label=\"Volume\"><![CDATA[" +(String)vols.get(correctDocId.getDocID()) + "]]></VOM>";
+			}
 
 			if(vols.get(correctDocId.getDocID()) != null)
 			{
@@ -332,7 +341,7 @@ public class BDDocBuilderUnitTest extends TestCase {
 		}
 	}
 
-	protected void assertIssue(List EIDocs) throws Exception
+	protected void assertIssue(List EIDocs, String dataFormat) throws Exception
 	{
 		HashMap iss = new HashMap();
 		iss.put("cpx_18a992f10b61b5d4a9M74342061377553", "6");
@@ -355,7 +364,14 @@ public class BDDocBuilderUnitTest extends TestCase {
 			String docidString = correctDocId.getDocID();
 			if(iss.get(correctDocId.getDocID()) != null)
 			{
-				correctString = "<IS label=\"Issue\"><![CDATA[" + (String)iss.get(correctDocId.getDocID()) + "]]></IS>";
+				if(dataFormat.equals(RIS.RIS_FORMAT))
+				{
+					correctString = "<IS><![CDATA["+ (String)iss.get(correctDocId.getDocID())+"]]></IS>";
+				}
+				else
+				{
+					correctString = "<IS label=\"Issue\"><![CDATA[" + (String)iss.get(correctDocId.getDocID()) + "]]></IS>";
+				}
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
 		}
@@ -1425,7 +1441,7 @@ public class BDDocBuilderUnitTest extends TestCase {
 
 				correctString = "<LA><![CDATA[" +(String)langMap.get(correctDocId.getDocID()) + "]]></LA>";
 			}
-			System.out.println("DOCID= "+correctDocId.getDocID()+" xmlString "+xmlString+" correctString "+correctString);
+			//System.out.println("DOCID= "+correctDocId.getDocID()+" xmlString "+xmlString+" correctString "+correctString);
 			assertTrue(xmlString.indexOf(correctString) != -1);
 		}
 	}
