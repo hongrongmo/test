@@ -123,10 +123,10 @@ public class BDDocBuilder
 				buildField(Keys.COPYRIGHT,rset.getString("COPYRIGHT"),ht);
 				formatRIS(buildField(Keys.COPYRIGHT_TEXT,CPX_TEXT_COPYRIGHT,ht), dataFormat, Keys.COPYRIGHT_TEXT, Keys.RIS_N1);
 				buildField(Keys.ISSUE_DATE,rset.getString("PUBLICATIONDATE"),ht);
-				buildField(Keys.MONOGRAPH_TITLE,rset.getString("ISSUETITLE"),ht);
+				formatRIS(buildField(Keys.MONOGRAPH_TITLE,rset.getString("ISSUETITLE"),ht), dataFormat, Keys.MONOGRAPH_TITLE, Keys.RIS_BT);
 				formatRIS(buildField(Keys.VOLUME,getVolume(rset.getString("VOLUME"),perl),ht), dataFormat, Keys.VOLUME, Keys.RIS_VL);
 				formatRIS(buildField(Keys.ISSUE,getIssue(rset.getString("ISSUE"),perl),ht), dataFormat, Keys.ISSUE, Keys.RIS_IS);
-				buildField(Keys.SERIAL_TITLE,rset.getString("SOURCETITLE"),ht);
+				formatRISSerialTitle(buildField(Keys.SERIAL_TITLE,rset.getString("SOURCETITLE"),ht), dataFormat, Keys.SERIAL_TITLE);
 				buildField(Keys.CODEN,rset.getString("CODEN"),ht);
 				buildField(Keys.ISSN,getIssn(rset.getString("ISSN"),rset.getString("EISSN")),ht);
 				buildField(Keys.ABBRV_SERIAL_TITLE,rset.getString("SOURCETITLEABBREV"),ht);
@@ -139,7 +139,7 @@ public class BDDocBuilder
 										  rset.getString("SOURCETITLEABBREV"),
 										  rset.getString("ISSUETITLE"),
 										  rset.getString("PUBLISHERNAME")),ht);
-				buildField(Keys.TITLE,getCitationTitle(rset.getString("CITATIONTITLE")),ht);
+				formatRIS(buildField(Keys.TITLE,getCitationTitle(rset.getString("CITATIONTITLE")),ht), dataFormat, Keys.TITLE, Keys.RIS_TI);
 				buildField(Keys.TITLE_TRANSLATION,getTranslatedCitationTitle(rset.getString("CITATIONTITLE")),ht);
 				buildField(Keys.ISBN,getIsbn(rset.getString("ISBN"),10),ht);
 				buildField(Keys.ISBN13,getIsbn(rset.getString("ISBN"),13),ht);
@@ -167,7 +167,7 @@ public class BDDocBuilder
 					buildField(Keys.CONF_CODE,rset.getString("CONFCODE"),ht);
 					buildField(Keys.NUMBER_OF_REFERENCES,rset.getString("REFCOUNT"),ht);
 					buildField(Keys.MAIN_HEADING,rset.getString("MAINHEADING"),ht);
-                                        formatRIS(buildField(Keys.UNCONTROLLED_TERMS,setElementData(rset.getString("UNCONTROLLEDTERM")),ht), dataFormat,Keys.UNCONTROLLED_TERMS,Keys.RIS_FLS);			
+                                        formatRIS(buildField(Keys.UNCONTROLLED_TERMS,setElementData(rset.getString("UNCONTROLLEDTERM")),ht), dataFormat,Keys.UNCONTROLLED_TERMS,Keys.RIS_FLS);
 					buildField(Keys.TREATMENTS,getTreatments(rset.getString("TREATMENTCODE"),database),ht);
 					buildField(Keys.ABSTRACT,getAbstract(rset),ht);
 					buildField(Keys.START_PAGE,getStartPage(rset.getString("PAGE")),ht);
@@ -1062,6 +1062,35 @@ public class BDDocBuilder
 			ed.setKey(NEW_KEY);
 			ed.setElementData(elementDataArray);
 			map.put(NEW_KEY, ed);
+
+		}
+	}
+
+	public void formatRISSerialTitle(ElementDataMap map, String dataFormat, Key ORIGINAL_KEY)
+	{
+		if(dataFormat.equals(RIS.RIS_FORMAT) && map != null)
+		{
+
+			ElementData edDocType = map.get(Keys.DOC_TYPE);
+			ElementData edOriginal = map.get(ORIGINAL_KEY);
+
+			if(edOriginal != null)
+			{
+				String[] elementDataDocTypeArray = edDocType.getElementData();
+				String strDocType = StringUtil.replaceNullWithEmptyString(elementDataDocTypeArray[0]);
+				String risDocType = replaceTYwithRIScode(strDocType);
+
+				if(risDocType.equals("JOUR"))
+				{
+					edOriginal.setKey(Keys.RIS_JO);
+					map.put(Keys.RIS_JO, edOriginal);
+				}
+				else
+				{
+					edOriginal.setKey(Keys.RIS_T3);
+					map.put(Keys.RIS_T3, edOriginal);
+				}
+			}
 
 		}
 	}
