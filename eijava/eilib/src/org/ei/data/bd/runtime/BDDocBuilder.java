@@ -167,7 +167,7 @@ public class BDDocBuilder
 					buildField(Keys.CONF_CODE,rset.getString("CONFCODE"),ht);
 					buildField(Keys.NUMBER_OF_REFERENCES,rset.getString("REFCOUNT"),ht);
 					buildField(Keys.MAIN_HEADING,rset.getString("MAINHEADING"),ht);
-                                        formatRIS(buildField(Keys.UNCONTROLLED_TERMS,setElementData(rset.getString("UNCONTROLLEDTERM")),ht), dataFormat,Keys.UNCONTROLLED_TERMS,Keys.RIS_FLS);
+                                        formatRIS(buildField(Keys.UNCONTROLLED_TERMS,setElementData(rset.getString("UNCONTROLLEDTERM")),ht), dataFormat,Keys.UNCONTROLLED_TERMS,Keys.RIS_FLS);			
 					buildField(Keys.TREATMENTS,getTreatments(rset.getString("TREATMENTCODE"),database),ht);
 					buildField(Keys.ABSTRACT,getAbstract(rset),ht);
 					buildField(Keys.START_PAGE,getStartPage(rset.getString("PAGE")),ht);
