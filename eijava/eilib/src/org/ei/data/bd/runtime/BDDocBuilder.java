@@ -159,7 +159,7 @@ public class BDDocBuilder
 				buildField(Keys.EDITORS,getEditors(Keys.EDITORS,rset.getString("AUTHOR"),rset.getString("EDITORS")),ht);
 				buildField(Keys.VOLUME_TITLE,rset.getString("VOLUMETITLE"),ht);
 				buildField(Keys.PAPER_NUMBER,rset.getString("REPORTNUMBER"),ht);
-				buildField(Keys.CONTROLLED_TERMS,setElementData(rset.getString("CONTROLLEDTERM")),ht);
+				formatRIS(buildField(Keys.CONTROLLED_TERMS,setElementData(rset.getString("CONTROLLEDTERM")),ht), dataFormat,Keys.CONTROLLED_TERMS,Keys.RIS_CVS);
 				buildField(Keys.PUBLICATION_ORDER,getPublicationOrder(rset.getString("DATESORT")),ht);
 
 				if(!dataFormat.equals(Citation.CITATION_FORMAT) && !dataFormat.equalsIgnoreCase(Citation.XMLCITATION_FORMAT))
