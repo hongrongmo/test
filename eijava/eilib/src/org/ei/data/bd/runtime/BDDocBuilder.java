@@ -118,7 +118,7 @@ public class BDDocBuilder
 				database = did.getDatabase();
 				buildField(Keys.DOCID,(DocID)oidTable.get(rset.getString("M_ID")),ht);
 				buildField(Keys.ACCESSION_NUMBER,rset.getString("ACCESSNUMBER"),ht);
-                                formatRIS(buildField(Keys.DOI,rset.getString("DOI"),ht), dataFormat,Keys.DOI,Keys.RIS_DO);
+				buildField(Keys.DOI,rset.getString("DOI"),ht);
 				buildField(Keys.PUBLICATION_YEAR,getYear(rset.getString("PUBLICATIONYEAR"),perl),ht);
 				buildField(Keys.COPYRIGHT,rset.getString("COPYRIGHT"),ht);
 				formatRIS(buildField(Keys.COPYRIGHT_TEXT,CPX_TEXT_COPYRIGHT,ht), dataFormat, Keys.COPYRIGHT_TEXT, Keys.RIS_N1);
@@ -167,7 +167,7 @@ public class BDDocBuilder
 					buildField(Keys.CONF_CODE,rset.getString("CONFCODE"),ht);
 					buildField(Keys.NUMBER_OF_REFERENCES,rset.getString("REFCOUNT"),ht);
 					buildField(Keys.MAIN_HEADING,rset.getString("MAINHEADING"),ht);
-                                        formatRIS(buildField(Keys.UNCONTROLLED_TERMS,setElementData(rset.getString("UNCONTROLLEDTERM")),ht), dataFormat,Keys.UNCONTROLLED_TERMS,Keys.RIS_FLS);
+					buildField(Keys.UNCONTROLLED_TERMS,setElementData(rset.getString("UNCONTROLLEDTERM")),ht);
 					buildField(Keys.TREATMENTS,getTreatments(rset.getString("TREATMENTCODE"),database),ht);
 					buildField(Keys.ABSTRACT,getAbstract(rset),ht);
 					buildField(Keys.START_PAGE,getStartPage(rset.getString("PAGE")),ht);
@@ -1028,9 +1028,15 @@ public class BDDocBuilder
 	{
 		if(dataFormat.equals(RIS.RIS_FORMAT))
 		{
-			ElementData ed = map.get(ORIGINAL_KEY);
-			ed.setKey(NEW_KEY);
-			map.put(NEW_KEY, ed);
+			if(map!= null)
+			{
+				ElementData ed = map.get(ORIGINAL_KEY);
+				if(ed != null)
+				{
+					ed.setKey(NEW_KEY);
+					map.put(NEW_KEY, ed);
+				}
+			}
 		}
 	}
 
