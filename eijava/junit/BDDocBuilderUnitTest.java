@@ -94,24 +94,24 @@ public class BDDocBuilderUnitTest extends TestCase {
 			assertUnControlledTerms(fullDocPages,FullDoc.FULLDOC_FORMAT);
 			assertTreatments(fullDocPages);
 			assertTitle(fullDocPages, FullDoc.FULLDOC_FORMAT);
-			assertTranslatedTitle(fullDocPages);
+			assertTranslatedTitle(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertISBN(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertPageRange(fullDocPages,FullDoc.FULLDOC_FORMAT);
 			assertAbstract(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertVolumeTitle(fullDocPages);
 			assertPublisher(fullDocPages,FullDoc.FULLDOC_FORMAT);
 			assertDocType(fullDocPages,FullDoc.FULLDOC_FORMAT);
-			assertConfName(fullDocPages);
+			//assertConfName(fullDocPages,FullDoc.FULLDOC_FORMAT);
 			assertAuthors(fullDocPages, FullDoc.FULLDOC_FORMAT);
-			assertAuthorAffiliations(fullDocPages);
-			assertConfLocation(fullDocPages);
+			assertAuthorAffiliations(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			assertConfLocation(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertSponsor(fullDocPages);
 			assertRegionalTerms(fullDocPages);
 			assertSpeciesTerms(fullDocPages);
 			assertLanguage(fullDocPages, FullDoc.FULLDOC_FORMAT);
-			assertConfDate(fullDocPages);
-			assertStartPage(fullDocPages);
-			assertEndPage(fullDocPages);
+			assertConfDate(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			assertStartPage(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			assertEndPage(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertClassCode(fullDocPages);
 			assertProvider(fullDocPages);
 			assertAbstractType(fullDocPages);
@@ -152,12 +152,19 @@ public class BDDocBuilderUnitTest extends TestCase {
 			assertTitle(risPages, RIS.RIS_FORMAT);
 			assertMainHeading(risPages, RIS.RIS_FORMAT);
 			assertControlledTerms(risPages,RIS.RIS_FORMAT);
-			//assertAbstract(risPages,RIS.RIS_FORMAT);
-			//assertPublisher(risPages,RIS.RIS_FORMAT);
+			assertAbstract(risPages,RIS.RIS_FORMAT);
+			assertPublisher(risPages,RIS.RIS_FORMAT);
 			//assertAccessionNumber(risPages,RIS.RIS_FORMAT);
-			//assertISSN(risPages,RIS.RIS_FORMAT);
-			//assertISBN(risPages,RIS.RIS_FORMAT);
-
+			assertISSN(risPages,RIS.RIS_FORMAT);
+			assertISBN(risPages,RIS.RIS_FORMAT);
+			//assertAuthors(risPages,RIS.RIS_FORMAT);
+			//assertAuthorAffiliations(risPages,RIS.RIS_FORMAT);
+			assertTranslatedTitle(risPages,RIS.RIS_FORMAT);
+			//assertConfName(risPages,RIS.RIS_FORMAT);
+			assertConfDate(risPages,RIS.RIS_FORMAT);
+			assertConfLocation(risPages,RIS.RIS_FORMAT);
+			//assertStartPage(risPages,RIS.RIS_FORMAT);
+			//assertEndPage(risPages,RIS.RIS_FORMAT);
 
 		}
 		finally
@@ -720,7 +727,7 @@ public class BDDocBuilderUnitTest extends TestCase {
 				{
 					correctString = "<MT><![CDATA[" + (String)issueTitles.get(correctDocId.getDocID()) + "]]></MT>";
 				}
-
+				//System.out.println("xmlString "+xmlString+" correctString "+correctString);
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
 		}
@@ -983,7 +990,7 @@ public class BDDocBuilderUnitTest extends TestCase {
 		}
 	}
 
-	protected void assertTranslatedTitle(List EIDocs) throws Exception
+	protected void assertTranslatedTitle(List EIDocs,String dataFormat) throws Exception
 	{
 		HashMap titleMap = new HashMap();
 		titleMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "Erweiterter push out-test zur scha&die;digungscharakterisierung der implantat-knochen-grenzfla&die;che");
@@ -1007,7 +1014,14 @@ public class BDDocBuilderUnitTest extends TestCase {
 
 			if(titleMap.get(correctDocId.getDocID()) != null)
 			{
-				correctString = "<TT label=\"Title of translation\"><T><![CDATA[" + (String)titleMap.get(correctDocId.getDocID()) + "]]></T></TT>";
+				if(dataFormat.equals(RIS.RIS_FORMAT))
+				{
+					correctString = "<T1><T><![CDATA[" + (String)titleMap.get(correctDocId.getDocID()) + "]]></T></T1>";
+				}
+				else
+				{
+					correctString = "<TT label=\"Title of translation\"><T><![CDATA[" + (String)titleMap.get(correctDocId.getDocID()) + "]]></T></TT>";
+				}
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
 
@@ -1020,10 +1034,10 @@ public class BDDocBuilderUnitTest extends TestCase {
 		if(dataFormat.equals(RIS.RIS_FORMAT))
 		{
 			isbnMap.put("cpx_18a992f10b61b5d4a9M74342061377553", null);
-			isbnMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<S1><![CDATA[0819461555]]></S1><S1><![CDATA[9780819461551]]></S1>");
+			isbnMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<S1><![CDATA[0819461555]]></S1>");
 			isbnMap.put("geo_152513a113d01a997cM73da2061377553", null);
-			isbnMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<S1><![CDATA[9780873395953]]></S1>");
-			isbnMap.put("cpx_18a992f10b61b5d4a9M743d2061377553", "<S1><![CDATA[0873396200]]></S1><S1><![CDATA[9780873396202]]></S1>");
+			//isbnMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<S1><![CDATA[9780873395953]]></S1>");
+			isbnMap.put("cpx_18a992f10b61b5d4a9M743d2061377553", "<S1><![CDATA[0873396200]]></S1>");
 		}
 		else
 		{
@@ -1049,6 +1063,7 @@ public class BDDocBuilderUnitTest extends TestCase {
 			if(isbnMap.get(correctDocId.getDocID()) != null)
 			{
 				correctString = (String)isbnMap.get(correctDocId.getDocID());
+				System.out.println("ISBN ID= "+correctDocId.getDocID()+" xmlString "+xmlString+" correctString "+correctString);
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
 
@@ -1282,15 +1297,25 @@ public class BDDocBuilderUnitTest extends TestCase {
 		}
 	}
 
-	protected void assertConfName(List EIDocs) throws Exception
+	protected void assertConfName(List EIDocs,String dataFormat) throws Exception
 	{
 		HashMap cnMap = new HashMap();
-		cnMap.put("cpx_18a992f10b61b5d4a9M74342061377553", null);
-		cnMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<CF label=\"Conference name\"><![CDATA[MEMS/MOEMS Components and Their Applications III]]></CF>");
-		cnMap.put("geo_152513a113d01a997cM73da2061377553", null);
-		cnMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<CF label=\"Conference name\"><![CDATA[12th International Conference on Environmental Degradation of Materials in Nuclear Power Systems-Water Reactors]]></CF>");
-		cnMap.put("cpx_18a992f10b61b5d4a9M743d2061377553", "<CF label=\"Conference name\"><![CDATA[TMS 2006 Annual Meeting -  Magnesium Technology]]></CF>");
-
+		if(dataFormat.equals(RIS.RIS_FORMAT))
+		{
+			cnMap.put("cpx_18a992f10b61b5d4a9M74342061377553", null);
+			cnMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<BT><![CDATA[MEMS/MOEMS Components and Their Applications III]]></BT>");
+			cnMap.put("geo_152513a113d01a997cM73da2061377553", null);
+			cnMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<BT><![CDATA[12th International Conference on Environmental Degradation of Materials in Nuclear Power Systems-Water Reactors]]></BT>");
+			cnMap.put("cpx_18a992f10b61b5d4a9M743d2061377553", "<BT><![CDATA[TMS 2006 Annual Meeting -  Magnesium Technology]]></BT>");
+		}
+		else
+		{
+			cnMap.put("cpx_18a992f10b61b5d4a9M74342061377553", null);
+			cnMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<CF label=\"Conference name\"><![CDATA[MEMS/MOEMS Components and Their Applications III]]></CF>");
+			cnMap.put("geo_152513a113d01a997cM73da2061377553", null);
+			cnMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<CF label=\"Conference name\"><![CDATA[12th International Conference on Environmental Degradation of Materials in Nuclear Power Systems-Water Reactors]]></CF>");
+			cnMap.put("cpx_18a992f10b61b5d4a9M743d2061377553", "<CF label=\"Conference name\"><![CDATA[TMS 2006 Annual Meeting -  Magnesium Technology]]></CF>");
+		}
 		String correctString = null;
 
 		for(int i = 0; i < EIDocs.size();i++)
@@ -1315,17 +1340,28 @@ public class BDDocBuilderUnitTest extends TestCase {
 
 	protected void assertAuthors(List EIDocs, String dataFormat) throws Exception
 	{
-		HashMap authorsFullMap = new HashMap();
-		authorsFullMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "<AUS label=\"Authors\"><AU id=\"1\"><![CDATA[Brandt Jo&die;rg]]><AFS><AFID>1</AFID><AFID>3</AFID></AFS></AU><AU id=\"2\"><![CDATA[Biero&die;gel]]><AFS><AFID>2</AFID></AFS></AU><AU id=\"2\"><![CDATA[Holweg]]><AFS><AFID>2</AFID></AFS></AU><AU id=\"1\"><![CDATA[Hein]]><AFS><AFID>1</AFID></AFS></AU><AU id=\"2\"><![CDATA[Grellmann]]><AFS><AFID>2</AFID></AFS></AU></AUS>");
-		authorsFullMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<AUS label=\"Authors\"><AU id=\"1\"><![CDATA[Macintosh Bruce]]><AFS><AFID>1</AFID><AFID>2</AFID></AFS></AU><AU id=\"1\"><![CDATA[Graham James]]><AFS><AFID>1</AFID><AFID>4</AFID></AFS></AU><AU id=\"1\"><![CDATA[Oppenheimer Ben]]><AFS><AFID>1</AFID><AFID>3</AFID></AFS></AU><AU id=\"1\"><![CDATA[Poyneer Lisa]]><AFS><AFID>1</AFID><AFID>2</AFID></AFS></AU><AU id=\"1\"><![CDATA[Sivaramakrishnan Anand]]><AFS><AFID>1</AFID><AFID>3</AFID></AFS></AU><AU id=\"5\"><![CDATA[Veran Jean-Pierre]]><AFS><AFID>5</AFID></AFS></AU></AUS>");
-		authorsFullMap.put("geo_152513a113d01a997cM73da2061377553", "<AUS label=\"Authors\"><AU id=\"0\"><![CDATA[Watkins Ruth]]><AFS><AFID>0</AFID></AFS></AU><AU id=\"0\"><![CDATA[Scourse James D.]]><AFS><AFID>0</AFID></AFS></AU><AU id=\"0\"><![CDATA[Allen Judy R.M.]]><AFS><AFID>0</AFID></AFS></AU></AUS>");
-		authorsFullMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<AUS label=\"Authors\"><AU id=\"1\"><![CDATA[Kim Hansang]]><AFS><AFID>1</AFID></AFS></AU><AU id=\"2\"><![CDATA[Urquidi-Macdonald Mima]]><AFS><AFID>2</AFID></AFS></AU><AU id=\"1\"><![CDATA[Macdonald Digby]]><AFS><AFID>1</AFID></AFS></AU></AUS>");
-
-		HashMap authorsCitationMap = new HashMap();
-		authorsCitationMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "<AUS><AU id=\"1\"><![CDATA[Brandt Jo&die;rg]]><AFS><AFID>1</AFID><AFID>3</AFID></AFS></AU><AU id=\"2\"><![CDATA[Biero&die;gel]]><AFS><AFID>2</AFID></AFS></AU><AU id=\"2\"><![CDATA[Holweg]]><AFS><AFID>2</AFID></AFS></AU><AU id=\"1\"><![CDATA[Hein]]><AFS><AFID>1</AFID></AFS></AU><AU id=\"2\"><![CDATA[Grellmann]]><AFS><AFID>2</AFID></AFS></AU></AUS>");
-		authorsCitationMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<AUS><AU id=\"1\"><![CDATA[Macintosh Bruce]]><AFS><AFID>1</AFID><AFID>2</AFID></AFS></AU><AU id=\"1\"><![CDATA[Graham James]]><AFS><AFID>1</AFID><AFID>4</AFID></AFS></AU><AU id=\"1\"><![CDATA[Oppenheimer Ben]]><AFS><AFID>1</AFID><AFID>3</AFID></AFS></AU><AU id=\"1\"><![CDATA[Poyneer Lisa]]><AFS><AFID>1</AFID><AFID>2</AFID></AFS></AU><AU id=\"1\"><![CDATA[Sivaramakrishnan Anand]]><AFS><AFID>1</AFID><AFID>3</AFID></AFS></AU><AU id=\"5\"><![CDATA[Veran Jean-Pierre]]><AFS><AFID>5</AFID></AFS></AU></AUS>");
-		authorsCitationMap.put("geo_152513a113d01a997cM73da2061377553", "<AUS><AU id=\"0\"><![CDATA[Watkins Ruth]]><AFS><AFID>0</AFID></AFS></AU><AU id=\"0\"><![CDATA[Scourse James D.]]><AFS><AFID>0</AFID></AFS></AU><AU id=\"0\"><![CDATA[Allen Judy R.M.]]><AFS><AFID>0</AFID></AFS></AU></AUS>");
-		authorsCitationMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<AUS><AU id=\"1\"><![CDATA[Kim Hansang]]><AFS><AFID>1</AFID></AFS></AU><AU id=\"2\"><![CDATA[Urquidi-Macdonald Mima]]><AFS><AFID>2</AFID></AFS></AU><AU id=\"1\"><![CDATA[Macdonald Digby]]><AFS><AFID>1</AFID></AFS></AU></AUS>");
+		HashMap authorsMap = new HashMap();
+		if(dataFormat.equals(Citation.CITATION_FORMAT))
+		{
+			authorsMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "<AUS><AU id=\"1\"><![CDATA[Brandt Jo&die;rg]]><AFS><AFID>1</AFID><AFID>3</AFID></AFS></AU><AU id=\"2\"><![CDATA[Biero&die;gel]]><AFS><AFID>2</AFID></AFS></AU><AU id=\"2\"><![CDATA[Holweg]]><AFS><AFID>2</AFID></AFS></AU><AU id=\"1\"><![CDATA[Hein]]><AFS><AFID>1</AFID></AFS></AU><AU id=\"2\"><![CDATA[Grellmann]]><AFS><AFID>2</AFID></AFS></AU></AUS>");
+			authorsMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<AUS><AU id=\"1\"><![CDATA[Macintosh Bruce]]><AFS><AFID>1</AFID><AFID>2</AFID></AFS></AU><AU id=\"1\"><![CDATA[Graham James]]><AFS><AFID>1</AFID><AFID>4</AFID></AFS></AU><AU id=\"1\"><![CDATA[Oppenheimer Ben]]><AFS><AFID>1</AFID><AFID>3</AFID></AFS></AU><AU id=\"1\"><![CDATA[Poyneer Lisa]]><AFS><AFID>1</AFID><AFID>2</AFID></AFS></AU><AU id=\"1\"><![CDATA[Sivaramakrishnan Anand]]><AFS><AFID>1</AFID><AFID>3</AFID></AFS></AU><AU id=\"5\"><![CDATA[Veran Jean-Pierre]]><AFS><AFID>5</AFID></AFS></AU></AUS>");
+			authorsMap.put("geo_152513a113d01a997cM73da2061377553", "<AUS><AU id=\"0\"><![CDATA[Watkins Ruth]]><AFS><AFID>0</AFID></AFS></AU><AU id=\"0\"><![CDATA[Scourse James D.]]><AFS><AFID>0</AFID></AFS></AU><AU id=\"0\"><![CDATA[Allen Judy R.M.]]><AFS><AFID>0</AFID></AFS></AU></AUS>");
+			authorsMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<AUS><AU id=\"1\"><![CDATA[Kim Hansang]]><AFS><AFID>1</AFID></AFS></AU><AU id=\"2\"><![CDATA[Urquidi-Macdonald Mima]]><AFS><AFID>2</AFID></AFS></AU><AU id=\"1\"><![CDATA[Macdonald Digby]]><AFS><AFID>1</AFID></AFS></AU></AUS>");
+		}
+		else if(dataFormat.equals(RIS.RIS_FORMAT))
+		{
+			authorsMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "<AUS><AU><![CDATA[Brandt Jo&die;rg]]></AU><AU><![CDATA[Biero&die;gel]]></AU><AU><![CDATA[Holweg]]></AU><AU><![CDATA[Hein]]></AU><AU><![CDATA[Grellmann]]></AU></AUS>");
+			authorsMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<AUS><AU><![CDATA[Macintosh Bruce]]></AU><AU><![CDATA[Graham James]]></AU><AU><![CDATA[Oppenheimer Ben]]></AU><AU><![CDATA[Poyneer Lisa]]></AU><AU><![CDATA[Sivaramakrishnan Anand]]></AU><AU><![CDATA[Veran Jean-Pierre]]></AU></AUS>");
+			authorsMap.put("geo_152513a113d01a997cM73da2061377553", "<AUS><AU><![CDATA[Watkins Ruth]]></AU><AU><![CDATA[Scourse James D.]]></AU><AU><![CDATA[Allen Judy R.M.]]></AU></AUS>");
+			authorsMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<AUS ><AU><![CDATA[Kim Hansang]]></AU><AU><![CDATA[Urquidi-Macdonald Mima]]></AU><AU><![CDATA[Macdonald Digby]]></AU></AUS>");
+		}
+		else
+		{
+			authorsMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "<AUS label=\"Authors\"><AU id=\"1\"><![CDATA[Brandt Jo&die;rg]]><AFS><AFID>1</AFID><AFID>3</AFID></AFS></AU><AU id=\"2\"><![CDATA[Biero&die;gel]]><AFS><AFID>2</AFID></AFS></AU><AU id=\"2\"><![CDATA[Holweg]]><AFS><AFID>2</AFID></AFS></AU><AU id=\"1\"><![CDATA[Hein]]><AFS><AFID>1</AFID></AFS></AU><AU id=\"2\"><![CDATA[Grellmann]]><AFS><AFID>2</AFID></AFS></AU></AUS>");
+			authorsMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<AUS label=\"Authors\"><AU id=\"1\"><![CDATA[Macintosh Bruce]]><AFS><AFID>1</AFID><AFID>2</AFID></AFS></AU><AU id=\"1\"><![CDATA[Graham James]]><AFS><AFID>1</AFID><AFID>4</AFID></AFS></AU><AU id=\"1\"><![CDATA[Oppenheimer Ben]]><AFS><AFID>1</AFID><AFID>3</AFID></AFS></AU><AU id=\"1\"><![CDATA[Poyneer Lisa]]><AFS><AFID>1</AFID><AFID>2</AFID></AFS></AU><AU id=\"1\"><![CDATA[Sivaramakrishnan Anand]]><AFS><AFID>1</AFID><AFID>3</AFID></AFS></AU><AU id=\"5\"><![CDATA[Veran Jean-Pierre]]><AFS><AFID>5</AFID></AFS></AU></AUS>");
+			authorsMap.put("geo_152513a113d01a997cM73da2061377553", "<AUS label=\"Authors\"><AU id=\"0\"><![CDATA[Watkins Ruth]]><AFS><AFID>0</AFID></AFS></AU><AU id=\"0\"><![CDATA[Scourse James D.]]><AFS><AFID>0</AFID></AFS></AU><AU id=\"0\"><![CDATA[Allen Judy R.M.]]><AFS><AFID>0</AFID></AFS></AU></AUS>");
+			authorsMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<AUS label=\"Authors\"><AU id=\"1\"><![CDATA[Kim Hansang]]><AFS><AFID>1</AFID></AFS></AU><AU id=\"2\"><![CDATA[Urquidi-Macdonald Mima]]><AFS><AFID>2</AFID></AFS></AU><AU id=\"1\"><![CDATA[Macdonald Digby]]><AFS><AFID>1</AFID></AFS></AU></AUS>");
+		}
 
 		String correctString = null;
 
@@ -1340,31 +1376,33 @@ public class BDDocBuilderUnitTest extends TestCase {
 			DocID correctDocId = (DocID)eidoc.getDocID();
 			String docidString = correctDocId.getDocID();
 
-			if(authorsFullMap.get(correctDocId.getDocID()) != null)
+			if(authorsMap.get(correctDocId.getDocID()) != null)
 			{
-				if(!dataFormat.equals(Citation.CITATION_FORMAT))
-				{
-					correctString = (String)authorsFullMap.get(correctDocId.getDocID());
-				}
-				else
-				{
-					correctString = (String)authorsCitationMap.get(correctDocId.getDocID());
-				}
-
+				correctString = (String)authorsMap.get(correctDocId.getDocID());
+				//System.out.println("ID= "+correctDocId.getDocID()+" xmlString "+xmlString+" correctString "+correctString);
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
 
 		}
 	}
 
-	protected void assertAuthorAffiliations(List EIDocs) throws Exception
+	protected void assertAuthorAffiliations(List EIDocs,String dataFormat) throws Exception
 	{
 		HashMap auafFullMap = new HashMap();
-		auafFullMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "<AFS label=\"Author affiliation\"><AF id=\"1\"><![CDATA[Martin-Luther-Universita&die;t Halle-Wittenberg, Universita&die;tsklinik und Poliklinik fu&die;r Orthopa&die;die und Physikalische Medizin, Magdeburger Stra&szlig;e 22, D-06112 Halle, germany]]></AF><AF id=\"2\"><![CDATA[Martin-Luther-Universita&die;t Halle-Wittenberg, FB Ingenieurwissenschaften, Institut fu&die;r Werkstoffwissenschaft, Geusaer Stra&szlig;e 88, D-06217 Merseburg, germany]]></AF><AF id=\"3\"><![CDATA[Universita&die;tsklinik und Poliklinik fu&die;r Orthopa&die;die und Physikalische Medizin, Magdeburger Stra&szlig;e 22, D-06112 Halle, germany]]></AF></AFS>");
-		auafFullMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<AFS label=\"Author affiliation\"><AF id=\"1\"><![CDATA[NSF Center for Adaptive Optics]]></AF><AF id=\"2\"><![CDATA[Lawrence Livermore National Laboratory, 7000 East Ave., Livermore, CA 94551]]></AF><AF id=\"3\"><![CDATA[Astrophysics Department, American Museum of Natural History, 79th Street at Central Park West, New York, NY 10024-5192]]></AF><AF id=\"4\"><![CDATA[Department of Astronomy, University of California at Berkeley, Berkeley, CA 94720]]></AF><AF id=\"5\"><![CDATA[Herzberg Institute of Astrophysics, 5071 W. Saanich Road, Victoria, canada]]></AF></AFS>");
-		auafFullMap.put("geo_152513a113d01a997cM73da2061377553", null);
-		auafFullMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<AFS label=\"Author affiliation\"><AF id=\"1\"><![CDATA[Department of Materials Science and Engineering, Pennsylvania State University, University Park, PA 16802]]></AF><AF id=\"2\"><![CDATA[Department of Engineering Science and Mechanics, Pennsylvania State University, University Park, PA 16802]]></AF></AFS>");
-
+		if(dataFormat.equals(RIS.RIS_FORMAT))
+		{
+			auafFullMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "<AD><A><![CDATA[Martin-Luther-Universita&die;t Halle-Wittenberg, Universita&die;tsklinik und Poliklinik fu&die;r Orthopa&die;die und Physikalische Medizin, Magdeburger Stra&szlig;e 22, D-06112 Halle, germany]]></A><A><![CDATA[Martin-Luther-Universita&die;t Halle-Wittenberg, FB Ingenieurwissenschaften, Institut fu&die;r Werkstoffwissenschaft, Geusaer Stra&szlig;e 88, D-06217 Merseburg, germany]]></A><A><![CDATA[Universita&die;tsklinik und Poliklinik fu&die;r Orthopa&die;die und Physikalische Medizin, Magdeburger Stra&szlig;e 22, D-06112 Halle, germany]]></A></AD>");
+			auafFullMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<AD><A><![CDATA[NSF Center for Adaptive Optics]]></A><A><![CDATA[Lawrence Livermore National Laboratory, 7000 East Ave., Livermore, CA 94551]]></A><A><![CDATA[Astrophysics Department, American Museum of Natural History, 79th Street at Central Park West, New York, NY 10024-5192]]></A><A><![CDATA[Department of Astronomy, University of California at Berkeley, Berkeley, CA 94720]]></A><A><![CDATA[Herzberg Institute of Astrophysics, 5071 W. Saanich Road, Victoria, canada]]></A></AD>");
+			auafFullMap.put("geo_152513a113d01a997cM73da2061377553", null);
+			auafFullMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<AD><A><![CDATA[Department of Materials Science and Engineering, Pennsylvania State University, University Park, PA 16802]]></A><A><![CDATA[Department of Engineering Science and Mechanics, Pennsylvania State University, University Park, PA 16802]]></A></AD>");
+		}
+		else
+		{
+			auafFullMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "<AFS label=\"Author affiliation\"><AF id=\"1\"><![CDATA[Martin-Luther-Universita&die;t Halle-Wittenberg, Universita&die;tsklinik und Poliklinik fu&die;r Orthopa&die;die und Physikalische Medizin, Magdeburger Stra&szlig;e 22, D-06112 Halle, germany]]></AF><AF id=\"2\"><![CDATA[Martin-Luther-Universita&die;t Halle-Wittenberg, FB Ingenieurwissenschaften, Institut fu&die;r Werkstoffwissenschaft, Geusaer Stra&szlig;e 88, D-06217 Merseburg, germany]]></AF><AF id=\"3\"><![CDATA[Universita&die;tsklinik und Poliklinik fu&die;r Orthopa&die;die und Physikalische Medizin, Magdeburger Stra&szlig;e 22, D-06112 Halle, germany]]></AF></AFS>");
+			auafFullMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<AFS label=\"Author affiliation\"><AF id=\"1\"><![CDATA[NSF Center for Adaptive Optics]]></AF><AF id=\"2\"><![CDATA[Lawrence Livermore National Laboratory, 7000 East Ave., Livermore, CA 94551]]></AF><AF id=\"3\"><![CDATA[Astrophysics Department, American Museum of Natural History, 79th Street at Central Park West, New York, NY 10024-5192]]></AF><AF id=\"4\"><![CDATA[Department of Astronomy, University of California at Berkeley, Berkeley, CA 94720]]></AF><AF id=\"5\"><![CDATA[Herzberg Institute of Astrophysics, 5071 W. Saanich Road, Victoria, canada]]></AF></AFS>");
+			auafFullMap.put("geo_152513a113d01a997cM73da2061377553", null);
+			auafFullMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<AFS label=\"Author affiliation\"><AF id=\"1\"><![CDATA[Department of Materials Science and Engineering, Pennsylvania State University, University Park, PA 16802]]></AF><AF id=\"2\"><![CDATA[Department of Engineering Science and Mechanics, Pennsylvania State University, University Park, PA 16802]]></AF></AFS>");
+		}
 		String correctString = null;
 
 		for(int i = 0; i < EIDocs.size();i++)
@@ -1382,21 +1420,32 @@ public class BDDocBuilderUnitTest extends TestCase {
 			{
 
 				correctString = (String)auafFullMap.get(correctDocId.getDocID());
+				System.out.println("ID= "+correctDocId.getDocID()+" xmlString "+xmlString+" correctString "+correctString);
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
 
 		}
 	}
 
-	protected void assertConfLocation(List EIDocs) throws Exception
+	protected void assertConfLocation(List EIDocs,String dataFormat) throws Exception
 	{
 		HashMap clMap = new HashMap();
-		clMap.put("cpx_18a992f10b61b5d4a9M74342061377553", null);
-		clMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<ML label=\"Conference location\"><![CDATA[San Jose, CA, united states]]></ML>");
-		clMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<ML label=\"Conference location\"><![CDATA[Salt Lake City, UT, united states]]></ML>");
-		clMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<ML label=\"Conference location\"><![CDATA[Salt Lake City, UT, united states]]></ML>");
-		clMap.put("cpx_18a992f10b61b5d4a9M743d2061377553", "<ML label=\"Conference location\"><![CDATA[San Antonio, TX, united states]]></ML>");
-
+		if(dataFormat.equals(RIS.RIS_FORMAT))
+		{
+			clMap.put("cpx_18a992f10b61b5d4a9M74342061377553", null);
+			clMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<CY><![CDATA[San Jose, CA, united states]]></CY>");
+			clMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<CY><![CDATA[Salt Lake City, UT, united states]]></CY>");
+			clMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<CY><![CDATA[Salt Lake City, UT, united states]]></CY>");
+			clMap.put("cpx_18a992f10b61b5d4a9M743d2061377553", "<CY><![CDATA[San Antonio, TX, united states]]></CY>");
+		}
+		else
+		{
+			clMap.put("cpx_18a992f10b61b5d4a9M74342061377553", null);
+			clMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<ML label=\"Conference location\"><![CDATA[San Jose, CA, united states]]></ML>");
+			clMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<ML label=\"Conference location\"><![CDATA[Salt Lake City, UT, united states]]></ML>");
+			clMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<ML label=\"Conference location\"><![CDATA[Salt Lake City, UT, united states]]></ML>");
+			clMap.put("cpx_18a992f10b61b5d4a9M743d2061377553", "<ML label=\"Conference location\"><![CDATA[San Antonio, TX, united states]]></ML>");
+		}
 		String correctString = null;
 
 		for(int i = 0; i < EIDocs.size();i++)
@@ -1577,9 +1626,10 @@ public class BDDocBuilderUnitTest extends TestCase {
 		}
 	}
 
-	protected void assertConfDate(List EIDocs) throws Exception
+	protected void assertConfDate(List EIDocs,String dataFormat) throws Exception
 	{
 		HashMap cdates = new HashMap();
+
 		cdates.put("cpx_18a992f10b61b5d4a9M74342061377553", null);
 		cdates.put("cpx_18a992f10b61b5d4a9M74252061377553", "January 23,2006 - January 25,2006");
 		cdates.put("geo_152513a113d01a997cM73da2061377553", null);
@@ -1600,13 +1650,20 @@ public class BDDocBuilderUnitTest extends TestCase {
 			String docidString = correctDocId.getDocID();
 			if(cdates.get(correctDocId.getDocID()) != null)
 			{
-				correctString = "<MD label=\"Conference date\"><![CDATA[" + (String)cdates.get(correctDocId.getDocID()) + "]]></MD>";
+				if(dataFormat.equals(RIS.RIS_FORMAT))
+				{
+					correctString = "<MD><![CDATA[" + (String)cdates.get(correctDocId.getDocID()) + "]]></MD>";
+				}
+				else
+				{
+					correctString = "<MD label=\"Conference date\"><![CDATA[" + (String)cdates.get(correctDocId.getDocID()) + "]]></MD>";
+				}
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
 		}
 	}
 
-	protected void assertStartPage(List EIDocs) throws Exception
+	protected void assertStartPage(List EIDocs,String dataFormat) throws Exception
 	{
 		HashMap startPageMap = new HashMap();
 		startPageMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "201");
@@ -1629,13 +1686,20 @@ public class BDDocBuilderUnitTest extends TestCase {
 			{
 				ElementData elementData = elementDataMap.get(Keys.START_PAGE);
 				String[] data = elementData.getElementData();
-				correctString = (String)startPageMap.get(correctDocId.getDocID());
+				if(dataFormat.equals(RIS.RIS_FORMAT))
+				{
+					correctString = "<SP><![CDATA["+(String)startPageMap.get(correctDocId.getDocID())+"</SP>";
+				}
+				else
+				{
+					correctString = (String)startPageMap.get(correctDocId.getDocID());
+				}
 				assertTrue(data[0].indexOf(correctString) != -1);
 			}
 		}
 	}
 
-	protected void assertEndPage(List EIDocs) throws Exception
+	protected void assertEndPage(List EIDocs,String dataFormat) throws Exception
 	{
 		HashMap endPageMap = new HashMap();
 		endPageMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "206");
@@ -1658,7 +1722,14 @@ public class BDDocBuilderUnitTest extends TestCase {
 			{
 				ElementData elementData = elementDataMap.get(Keys.END_PAGE);
 				String[] data = elementData.getElementData();
-				correctString = (String)endPageMap.get(correctDocId.getDocID());
+				if(dataFormat.equals(RIS.RIS_FORMAT))
+				{
+					correctString = "<EP><![CDATA["+(String)endPageMap.get(correctDocId.getDocID())+"</EP>";
+				}
+				else
+				{
+					correctString = (String)endPageMap.get(correctDocId.getDocID());
+				}
 				assertTrue(data[0].indexOf(correctString) != -1);
 			}
 		}
