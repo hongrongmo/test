@@ -142,7 +142,7 @@ public class BDDocBuilder
 				formatRIS(buildField(Keys.TITLE,getCitationTitle(rset.getString("CITATIONTITLE")),ht), dataFormat, Keys.TITLE, Keys.RIS_TI);
 				formatRIS(buildField(Keys.TITLE_TRANSLATION,getTranslatedCitationTitle(rset.getString("CITATIONTITLE")),ht), dataFormat, Keys.TITLE_TRANSLATION, Keys.RIS_T1);
 				formatRIS(buildField(Keys.ISBN,getIsbn(rset.getString("ISBN"),10),ht), dataFormat, Keys.ISBN, Keys.RIS_S1);
-				buildField(Keys.ISBN13,getIsbn(rset.getString("ISBN"),13),ht);
+				formatRIS(buildField(Keys.ISBN13,getIsbn(rset.getString("ISBN"),13),ht), dataFormat, Keys.ISBN13, Keys.RIS_S1);
 				buildField(Keys.PAGE_COUNT,getPageCount(rset.getString("PAGECOUNT")),ht);
 				buildField(	Keys.PAGE_RANGE,
 							new PageRange(getPageRange( rset.getString("PAGE"),
@@ -653,6 +653,7 @@ public class BDDocBuilder
 		{
 			isbnString = bdisbn.getISBN13();
 		}
+                System.out.println("isbnString::"+isbnString);
 		return isbnString;
 	}
 
