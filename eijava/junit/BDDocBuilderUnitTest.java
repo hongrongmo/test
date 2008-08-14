@@ -74,7 +74,7 @@ public class BDDocBuilderUnitTest extends TestCase {
 			//full doc view tests
 
 			assertDocID(fullDocPages);
-			assertAccessionNumber(fullDocPages);
+			assertAccessionNumber(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertVolume(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertDOI(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertPubYear(fullDocPages, FullDoc.FULLDOC_FORMAT);
@@ -85,19 +85,19 @@ public class BDDocBuilderUnitTest extends TestCase {
 			assertCoden(fullDocPages);
 			assertConfCode(fullDocPages);
 			assertNumOfRefs(fullDocPages);
-			assertSerialTitle(fullDocPages);
+			assertSerialTitle(fullDocPages,FullDoc.FULLDOC_FORMAT);
 			assertAbbrevSerialTitle(fullDocPages);
-			assertISSN(fullDocPages);
+			assertISSN(fullDocPages,FullDoc.FULLDOC_FORMAT);
 			assertIssueTitle(fullDocPages, FullDoc.FULLDOC_FORMAT);
-			assertMainHeading(fullDocPages);
-			assertControlledTerms(fullDocPages);
-			assertUnControlledTerms(fullDocPages);
+			assertMainHeading(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			assertControlledTerms(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			assertUnControlledTerms(fullDocPages,FullDoc.FULLDOC_FORMAT);
 			assertTreatments(fullDocPages);
 			assertTitle(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertTranslatedTitle(fullDocPages);
-			assertISBN(fullDocPages);
+			assertISBN(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertPageRange(fullDocPages,FullDoc.FULLDOC_FORMAT);
-			assertAbstract(fullDocPages);
+			assertAbstract(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertVolumeTitle(fullDocPages);
 			assertPublisher(fullDocPages,FullDoc.FULLDOC_FORMAT);
 			assertDocType(fullDocPages,FullDoc.FULLDOC_FORMAT);
@@ -145,6 +145,20 @@ public class BDDocBuilderUnitTest extends TestCase {
 			assertCopyRightText(risPages, RIS.RIS_FORMAT);
 			assertVolume(risPages, RIS.RIS_FORMAT);
 			assertIssue(risPages,RIS.RIS_FORMAT);
+			assertDOI(risPages, RIS.RIS_FORMAT);
+			assertUnControlledTerms(risPages,RIS.RIS_FORMAT);
+			assertIssueTitle(risPages, RIS.RIS_FORMAT);
+			assertSerialTitle(risPages,RIS.RIS_FORMAT);
+			assertTitle(risPages, RIS.RIS_FORMAT);
+			assertMainHeading(risPages, RIS.RIS_FORMAT);
+			assertControlledTerms(risPages,RIS.RIS_FORMAT);
+			//assertAbstract(risPages,RIS.RIS_FORMAT);
+			//assertPublisher(risPages,RIS.RIS_FORMAT);
+			//assertAccessionNumber(risPages,RIS.RIS_FORMAT);
+			//assertISSN(risPages,RIS.RIS_FORMAT);
+			//assertISBN(risPages,RIS.RIS_FORMAT);
+
+
 		}
 		finally
 		{
@@ -204,7 +218,7 @@ public class BDDocBuilderUnitTest extends TestCase {
 		}
 	}
 
-	protected void assertAccessionNumber(List EIDocs) throws Exception
+	protected void assertAccessionNumber(List EIDocs, String dataFormat) throws Exception
 	{
 		HashMap aNumbers = new HashMap();
 		aNumbers.put("cpx_18a992f10b61b5d4a9M74342061377553", "06189858062");
@@ -225,7 +239,14 @@ public class BDDocBuilderUnitTest extends TestCase {
 			String xmlString = swriter.toString();
 			DocID correctDocId = (DocID)eidoc.getDocID();
 			String docidString = correctDocId.getDocID();
-			correctString = "<AN label=\"Accession number\"><![CDATA[" +(String)aNumbers.get(correctDocId.getDocID()) + "]]></AN>";
+			if(dataFormat.equals(RIS.RIS_FORMAT))
+			{
+				correctString = "<AN><![CDATA[" +(String)aNumbers.get(correctDocId.getDocID()) + "]]></AN>";
+			}
+			else
+			{
+				correctString = "<AN label=\"Accession number\"><![CDATA[" +(String)aNumbers.get(correctDocId.getDocID()) + "]]></AN>";
+			}
 			assertTrue(xmlString.indexOf(correctString) != -1);
 		}
 	}
@@ -289,16 +310,15 @@ public class BDDocBuilderUnitTest extends TestCase {
 			DocID correctDocId = (DocID)eidoc.getDocID();
 			String docidString = correctDocId.getDocID();
 
-			if(!dataFormat.equals(Citation.CITATION_FORMAT))
+			if(!dataFormat.equals(Citation.CITATION_FORMAT) && !dataFormat.equals(RIS.RIS_FORMAT))
 			{
 				correctString = "<DO label=\"DOI\"><![CDATA[" +(String)dois.get(correctDocId.getDocID()) + "]]></DO>";
 			}
 			else
 			{
-
 				correctString = "<DO><![CDATA[" +(String)dois.get(correctDocId.getDocID()) + "]]></DO>";
 			}
-
+			//System.out.println("xmlString "+xmlString+" correctString "+correctString);
 			if(dois.get(correctDocId.getDocID()) != null)
 			{
 				assertTrue(xmlString.indexOf(correctString) != -1);
@@ -558,7 +578,7 @@ public class BDDocBuilderUnitTest extends TestCase {
 		}
 	}
 
-	protected void assertSerialTitle(List EIDocs) throws Exception
+	protected void assertSerialTitle(List EIDocs,String dataFormat) throws Exception
 	{
 		HashMap stitles = new HashMap();
 		stitles.put("cpx_18a992f10b61b5d4a9M74342061377553", "Biomedizinische Technik");
@@ -581,7 +601,21 @@ public class BDDocBuilderUnitTest extends TestCase {
 			String docidString = correctDocId.getDocID();
 			if(stitles.get(correctDocId.getDocID()) != null)
 			{
-				correctString = "<ST label=\"Serial title\"><![CDATA[" + (String)stitles.get(correctDocId.getDocID()) + "]]></ST>";
+				if(dataFormat.equals(RIS.RIS_FORMAT))
+				{
+					if(xmlString.indexOf("<TY><![CDATA[JOUR]]></TY>")>-1)
+					{
+						correctString = "<JO><![CDATA[" + (String)stitles.get(correctDocId.getDocID()) + "]]></JO>";
+					}
+					else
+					{
+						correctString = "<T3><![CDATA[" + (String)stitles.get(correctDocId.getDocID()) + "]]></T3>";
+					}
+				}
+				else
+				{
+					correctString = "<ST label=\"Serial title\"><![CDATA[" + (String)stitles.get(correctDocId.getDocID()) + "]]></ST>";
+				}
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
 		}
@@ -616,7 +650,7 @@ public class BDDocBuilderUnitTest extends TestCase {
 		}
 	}
 
-	protected void assertISSN(List EIDocs) throws Exception
+	protected void assertISSN(List EIDocs, String dataFormat) throws Exception
 	{
 		HashMap issns = new HashMap();
 		issns.put("cpx_18a992f10b61b5d4a9M74342061377553", "00135585");
@@ -639,7 +673,14 @@ public class BDDocBuilderUnitTest extends TestCase {
 			String docidString = correctDocId.getDocID();
 			if(issns.get(correctDocId.getDocID()) != null)
 			{
-				correctString = "<SN label=\"ISSN\"><![CDATA[" + (String)issns.get(correctDocId.getDocID()) + "]]></SN>";
+				if(dataFormat.equals(RIS.RIS_FORMAT))
+				{
+					correctString = "<SN><![CDATA[" + (String)issns.get(correctDocId.getDocID()) + "]]></SN>";
+				}
+				else
+				{
+					correctString = "<SN label=\"ISSN\"><![CDATA[" + (String)issns.get(correctDocId.getDocID()) + "]]></SN>";
+				}
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
 		}
@@ -653,7 +694,6 @@ public class BDDocBuilderUnitTest extends TestCase {
 		issueTitles.put("geo_152513a113d01a997cM73da2061377553", null);
 		issueTitles.put("cpx_18a992f10c593a6af2M7f882061377553", "Proceedings of the Twelfth International Conference on Environmental Degradation of Materials in Nuclear Power Systems-Water Reactors");
 		issueTitles.put("cpx_18a992f10b61b5d4a9M743d2061377553", null);
-
 		String correctString = null;
 
 		for(int i = 0; i < EIDocs.size();i++)
@@ -668,7 +708,11 @@ public class BDDocBuilderUnitTest extends TestCase {
 			String docidString = correctDocId.getDocID();
 			if(issueTitles.get(correctDocId.getDocID()) != null)
 			{
-				if(!dataFormat.equals(Citation.CITATION_FORMAT))
+				if(dataFormat.equals(RIS.RIS_FORMAT))
+				{
+					correctString = "<BT><![CDATA[" + (String)issueTitles.get(correctDocId.getDocID()) + "]]></BT>";
+				}
+				else if(!dataFormat.equals(Citation.CITATION_FORMAT))
 				{
 					correctString = "<MT label=\"Monograph title\"><![CDATA[" + (String)issueTitles.get(correctDocId.getDocID()) + "]]></MT>";
 				}
@@ -742,7 +786,7 @@ public class BDDocBuilderUnitTest extends TestCase {
 		}
 	}
 
-	protected void assertMainHeading(List EIDocs) throws Exception
+	protected void assertMainHeading(List EIDocs,String dataFormat) throws Exception
 	{
 		HashMap mainheadingMap = new HashMap();
 		mainheadingMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "Implants (surgical)");
@@ -756,7 +800,7 @@ public class BDDocBuilderUnitTest extends TestCase {
 		for(int i = 0; i < EIDocs.size();i++)
 		{
 			StringWriter swriter = new StringWriter();
-			PrintWriter out = new PrintWriter ( swriter ) ;
+			PrintWriter out = new PrintWriter ( swriter );
 			EIDoc eidoc = (EIDoc)EIDocs.get(i);
 			eidoc.toXML(out);
 			out.close();
@@ -766,28 +810,45 @@ public class BDDocBuilderUnitTest extends TestCase {
 
 			if(mainheadingMap.get(correctDocId.getDocID()) != null)
 			{
-				correctString = "<MH label=\"Main heading\"><![CDATA[" + (String)mainheadingMap.get(correctDocId.getDocID()) + "]]></MH>";
+				if(dataFormat.equals(RIS.RIS_FORMAT))
+				{
+					correctString = "<KW><![CDATA[" + (String)mainheadingMap.get(correctDocId.getDocID()) + "]]></KW>";
+				}
+				else
+				{
+					correctString = "<MH label=\"Main heading\"><![CDATA[" + (String)mainheadingMap.get(correctDocId.getDocID()) + "]]></MH>";
+				}
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
 
 		}
 	}
 
-	protected void assertControlledTerms(List EIDocs) throws Exception
+	protected void assertControlledTerms(List EIDocs,String dataFormat) throws Exception
 	{
 		HashMap ctermsMap = new HashMap();
-		ctermsMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "<CVS label=\"Controlled terms\"><CV><![CDATA[Acoustic emission testing]]></CV><CV><![CDATA[Biomaterials]]></CV><CV><![CDATA[Bone]]></CV><CV><![CDATA[Interfaces (materials)]]></CV><CV><![CDATA[Materials science]]></CV><CV><![CDATA[Mechanical alloying]]></CV><CV><![CDATA[Shear strength]]></CV></CVS>");
-		ctermsMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<CVS label=\"Controlled terms\"><CV><![CDATA[Adaptive optics]]></CV><CV><![CDATA[Mirrors]]></CV><CV><![CDATA[Optical design]]></CV><CV><![CDATA[Planets]]></CV><CV><![CDATA[Spectroscopic analysis]]></CV></CVS>");
-		ctermsMap.put("geo_152513a113d01a997cM73da2061377553", "<CVS label=\"Controlled terms\"><CV><![CDATA[charcoal]]></CV><CV><![CDATA[deforestation]]></CV><CV><![CDATA[environmental change]]></CV><CV><![CDATA[Holocene]]></CV><CV><![CDATA[human activity]]></CV><CV><![CDATA[palynology]]></CV><CV><![CDATA[radiocarbon dating]]></CV><CV><![CDATA[spatiotemporal analysis]]></CV><CV><![CDATA[vegetation history]]></CV></CVS>");
-		ctermsMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<CVS label=\"Controlled terms\"><CV><![CDATA[Codes (symbols)]]></CV><CV><![CDATA[Computer simulation]]></CV><CV><![CDATA[Coolants]]></CV><CV><![CDATA[Electrochemical corrosion]]></CV><CV><![CDATA[Electrochemistry]]></CV><CV><![CDATA[Radiolysis]]></CV><CV><![CDATA[Stress corrosion cracking]]></CV></CVS>");
-		ctermsMap.put("cpx_18a992f10b61b5d4a9M743d2061377553", "<CVS label=\"Controlled terms\"><CV><![CDATA[Computer simulation]]></CV><CV><![CDATA[Die casting]]></CV><CV><![CDATA[Light metals]]></CV><CV><![CDATA[Porosity]]></CV><CV><![CDATA[Shrinkage]]></CV></CVS>");
-
+		if(dataFormat.equals(RIS.RIS_FORMAT))
+		{
+			ctermsMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "<CVS><CV><![CDATA[Acoustic emission testing]]></CV><CV><![CDATA[Biomaterials]]></CV><CV><![CDATA[Bone]]></CV><CV><![CDATA[Interfaces (materials)]]></CV><CV><![CDATA[Materials science]]></CV><CV><![CDATA[Mechanical alloying]]></CV><CV><![CDATA[Shear strength]]></CV></CVS>");
+			ctermsMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<CVS><CV><![CDATA[Adaptive optics]]></CV><CV><![CDATA[Mirrors]]></CV><CV><![CDATA[Optical design]]></CV><CV><![CDATA[Planets]]></CV><CV><![CDATA[Spectroscopic analysis]]></CV></CVS>");
+			ctermsMap.put("geo_152513a113d01a997cM73da2061377553", "<CVS><CV><![CDATA[charcoal]]></CV><CV><![CDATA[deforestation]]></CV><CV><![CDATA[environmental change]]></CV><CV><![CDATA[Holocene]]></CV><CV><![CDATA[human activity]]></CV><CV><![CDATA[palynology]]></CV><CV><![CDATA[radiocarbon dating]]></CV><CV><![CDATA[spatiotemporal analysis]]></CV><CV><![CDATA[vegetation history]]></CV></CVS>");
+			ctermsMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<CVS><CV><![CDATA[Codes (symbols)]]></CV><CV><![CDATA[Computer simulation]]></CV><CV><![CDATA[Coolants]]></CV><CV><![CDATA[Electrochemical corrosion]]></CV><CV><![CDATA[Electrochemistry]]></CV><CV><![CDATA[Radiolysis]]></CV><CV><![CDATA[Stress corrosion cracking]]></CV></CVS>");
+			ctermsMap.put("cpx_18a992f10b61b5d4a9M743d2061377553", "<CVS><CV><![CDATA[Computer simulation]]></CV><CV><![CDATA[Die casting]]></CV><CV><![CDATA[Light metals]]></CV><CV><![CDATA[Porosity]]></CV><CV><![CDATA[Shrinkage]]></CV></CVS>");
+		}
+		else
+		{
+			ctermsMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "<CVS label=\"Controlled terms\"><CV><![CDATA[Acoustic emission testing]]></CV><CV><![CDATA[Biomaterials]]></CV><CV><![CDATA[Bone]]></CV><CV><![CDATA[Interfaces (materials)]]></CV><CV><![CDATA[Materials science]]></CV><CV><![CDATA[Mechanical alloying]]></CV><CV><![CDATA[Shear strength]]></CV></CVS>");
+			ctermsMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<CVS label=\"Controlled terms\"><CV><![CDATA[Adaptive optics]]></CV><CV><![CDATA[Mirrors]]></CV><CV><![CDATA[Optical design]]></CV><CV><![CDATA[Planets]]></CV><CV><![CDATA[Spectroscopic analysis]]></CV></CVS>");
+			ctermsMap.put("geo_152513a113d01a997cM73da2061377553", "<CVS label=\"Controlled terms\"><CV><![CDATA[charcoal]]></CV><CV><![CDATA[deforestation]]></CV><CV><![CDATA[environmental change]]></CV><CV><![CDATA[Holocene]]></CV><CV><![CDATA[human activity]]></CV><CV><![CDATA[palynology]]></CV><CV><![CDATA[radiocarbon dating]]></CV><CV><![CDATA[spatiotemporal analysis]]></CV><CV><![CDATA[vegetation history]]></CV></CVS>");
+			ctermsMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<CVS label=\"Controlled terms\"><CV><![CDATA[Codes (symbols)]]></CV><CV><![CDATA[Computer simulation]]></CV><CV><![CDATA[Coolants]]></CV><CV><![CDATA[Electrochemical corrosion]]></CV><CV><![CDATA[Electrochemistry]]></CV><CV><![CDATA[Radiolysis]]></CV><CV><![CDATA[Stress corrosion cracking]]></CV></CVS>");
+			ctermsMap.put("cpx_18a992f10b61b5d4a9M743d2061377553", "<CVS label=\"Controlled terms\"><CV><![CDATA[Computer simulation]]></CV><CV><![CDATA[Die casting]]></CV><CV><![CDATA[Light metals]]></CV><CV><![CDATA[Porosity]]></CV><CV><![CDATA[Shrinkage]]></CV></CVS>");
+		}
 		String correctString = null;
 
 		for(int i = 0; i < EIDocs.size();i++)
 		{
 			StringWriter swriter = new StringWriter();
-			PrintWriter out = new PrintWriter ( swriter ) ;
+			PrintWriter out = new PrintWriter ( swriter );
 			EIDoc eidoc = (EIDoc)EIDocs.get(i);
 			eidoc.toXML(out);
 			out.close();
@@ -804,14 +865,26 @@ public class BDDocBuilderUnitTest extends TestCase {
 		}
 	}
 
-	protected void assertUnControlledTerms(List EIDocs) throws Exception
+	protected void assertUnControlledTerms(List EIDocs,String dataFormat) throws Exception
 	{
 		HashMap uctermsMap = new HashMap();
-		uctermsMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "<FLS label=\"Uncontrolled terms\"><FL><![CDATA[Bone-implant-interface]]></FL><FL><![CDATA[Critical load]]></FL><FL><![CDATA[Interface mechanisms]]></FL><FL><![CDATA[Shear strength, push-out test]]></FL></FLS>");
-		uctermsMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<FLS label=\"Uncontrolled terms\"><FL><![CDATA[Coronagraphs]]></FL><FL><![CDATA[Deformable mirror]]></FL><FL><![CDATA[Extrasolar planets]]></FL><FL><![CDATA[Gemini Planet Imager]]></FL><FL><![CDATA[MEMS]]></FL></FLS>");
-		uctermsMap.put("geo_152513a113d01a997cM73da2061377553", null);
-		uctermsMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<FLS label=\"Uncontrolled terms\"><FL><![CDATA[Accumulated damage]]></FL><FL><![CDATA[Electrochemical corrosion potential]]></FL><FL><![CDATA[IGSCC]]></FL><FL><![CDATA[Intergranular stress corrosion cracking (IGSCC)]]></FL></FLS>");
-		uctermsMap.put("cpx_18a992f10b61b5d4a9M743d2061377553", "<FLS label=\"Uncontrolled terms\"><FL><![CDATA[Atmospheric environments]]></FL><FL><![CDATA[Magnesium casting]]></FL><FL><![CDATA[Rheocast magnesium alloy]]></FL><FL><![CDATA[Shrinkage porosity]]></FL></FLS>");
+		System.out.println(" dataFormat "+dataFormat);
+		if(dataFormat.equals(RIS.RIS_FORMAT))
+		{
+			uctermsMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "<FLS><FL><![CDATA[Bone-implant-interface]]></FL><FL><![CDATA[Critical load]]></FL><FL><![CDATA[Interface mechanisms]]></FL><FL><![CDATA[Shear strength, push-out test]]></FL></FLS>");
+			uctermsMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<FLS><FL><![CDATA[Coronagraphs]]></FL><FL><![CDATA[Deformable mirror]]></FL><FL><![CDATA[Extrasolar planets]]></FL><FL><![CDATA[Gemini Planet Imager]]></FL><FL><![CDATA[MEMS]]></FL></FLS>");
+			uctermsMap.put("geo_152513a113d01a997cM73da2061377553", "<FLS><FL><![CDATA[Alnus]]></FL><FL><![CDATA[Betula]]></FL><FL><![CDATA[Corylus]]></FL><FL><![CDATA[Juniperus]]></FL><FL><![CDATA[Malvaceae]]></FL><FL><![CDATA[Quercus]]></FL><FL><![CDATA[Tilia]]></FL><FL><![CDATA[Ulmus]]></FL></FLS>");
+			uctermsMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<FLS><FL><![CDATA[Accumulated damage]]></FL><FL><![CDATA[Electrochemical corrosion potential]]></FL><FL><![CDATA[IGSCC]]></FL><FL><![CDATA[Intergranular stress corrosion cracking (IGSCC)]]></FL></FLS>");
+			uctermsMap.put("cpx_18a992f10b61b5d4a9M743d2061377553", "<FLS><FL><![CDATA[Atmospheric environments]]></FL><FL><![CDATA[Magnesium casting]]></FL><FL><![CDATA[Rheocast magnesium alloy]]></FL><FL><![CDATA[Shrinkage porosity]]></FL></FLS>");
+		}
+		else
+		{
+			uctermsMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "<FLS label=\"Uncontrolled terms\"><FL><![CDATA[Bone-implant-interface]]></FL><FL><![CDATA[Critical load]]></FL><FL><![CDATA[Interface mechanisms]]></FL><FL><![CDATA[Shear strength, push-out test]]></FL></FLS>");
+			uctermsMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<FLS label=\"Uncontrolled terms\"><FL><![CDATA[Coronagraphs]]></FL><FL><![CDATA[Deformable mirror]]></FL><FL><![CDATA[Extrasolar planets]]></FL><FL><![CDATA[Gemini Planet Imager]]></FL><FL><![CDATA[MEMS]]></FL></FLS>");
+			uctermsMap.put("geo_152513a113d01a997cM73da2061377553", null);
+			uctermsMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<FLS label=\"Uncontrolled terms\"><FL><![CDATA[Accumulated damage]]></FL><FL><![CDATA[Electrochemical corrosion potential]]></FL><FL><![CDATA[IGSCC]]></FL><FL><![CDATA[Intergranular stress corrosion cracking (IGSCC)]]></FL></FLS>");
+			uctermsMap.put("cpx_18a992f10b61b5d4a9M743d2061377553", "<FLS label=\"Uncontrolled terms\"><FL><![CDATA[Atmospheric environments]]></FL><FL><![CDATA[Magnesium casting]]></FL><FL><![CDATA[Rheocast magnesium alloy]]></FL><FL><![CDATA[Shrinkage porosity]]></FL></FLS>");
+		}
 
 		String correctString = null;
 
@@ -829,6 +902,7 @@ public class BDDocBuilderUnitTest extends TestCase {
 			if(uctermsMap.get(correctDocId.getDocID()) != null)
 			{
 				correctString =  (String)uctermsMap.get(correctDocId.getDocID());
+				//System.out.println("xmlString "+xmlString+" correctString "+correctString);
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
 
@@ -890,7 +964,11 @@ public class BDDocBuilderUnitTest extends TestCase {
 
 			if(titleMap.get(correctDocId.getDocID()) != null)
 			{
-				if(!dataFormat.equals(Citation.CITATION_FORMAT))
+				if(dataFormat.equals(RIS.RIS_FORMAT))
+				{
+					correctString = "<TI><![CDATA[" + (String)titleMap.get(correctDocId.getDocID()) + "]]></TI>";
+				}
+				else if(!dataFormat.equals(Citation.CITATION_FORMAT))
 				{
 					correctString = "<TI label=\"Title\"><![CDATA[" + (String)titleMap.get(correctDocId.getDocID()) + "]]></TI>";
 				}
@@ -936,15 +1014,25 @@ public class BDDocBuilderUnitTest extends TestCase {
 		}
 	}
 
-	protected void assertISBN(List EIDocs) throws Exception
+	protected void assertISBN(List EIDocs, String dataFormat) throws Exception
 	{
 		HashMap isbnMap = new HashMap();
-		isbnMap.put("cpx_18a992f10b61b5d4a9M74342061377553", null);
-		isbnMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<BN label=\"ISBN-10\"><![CDATA[0819461555]]></BN><BN13 label=\"ISBN-13\"><![CDATA[9780819461551]]></BN13>");
-		isbnMap.put("geo_152513a113d01a997cM73da2061377553", null);
-		isbnMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<BN13 label=\"ISBN-13\"><![CDATA[9780873395953]]></BN13>");
-		isbnMap.put("cpx_18a992f10b61b5d4a9M743d2061377553", "<BN label=\"ISBN-10\"><![CDATA[0873396200]]></BN><BN13 label=\"ISBN-13\"><![CDATA[9780873396202]]></BN13>");
-
+		if(dataFormat.equals(RIS.RIS_FORMAT))
+		{
+			isbnMap.put("cpx_18a992f10b61b5d4a9M74342061377553", null);
+			isbnMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<S1><![CDATA[0819461555]]></S1><S1><![CDATA[9780819461551]]></S1>");
+			isbnMap.put("geo_152513a113d01a997cM73da2061377553", null);
+			isbnMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<S1><![CDATA[9780873395953]]></S1>");
+			isbnMap.put("cpx_18a992f10b61b5d4a9M743d2061377553", "<S1><![CDATA[0873396200]]></S1><S1><![CDATA[9780873396202]]></S1>");
+		}
+		else
+		{
+			isbnMap.put("cpx_18a992f10b61b5d4a9M74342061377553", null);
+			isbnMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<BN label=\"ISBN-10\"><![CDATA[0819461555]]></BN><BN13 label=\"ISBN-13\"><![CDATA[9780819461551]]></BN13>");
+			isbnMap.put("geo_152513a113d01a997cM73da2061377553", null);
+			isbnMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<BN13 label=\"ISBN-13\"><![CDATA[9780873395953]]></BN13>");
+			isbnMap.put("cpx_18a992f10b61b5d4a9M743d2061377553", "<BN label=\"ISBN-10\"><![CDATA[0873396200]]></BN><BN13 label=\"ISBN-13\"><![CDATA[9780873396202]]></BN13>");
+		}
 		String correctString = null;
 
 		for(int i = 0; i < EIDocs.size();i++)
@@ -1006,15 +1094,25 @@ public class BDDocBuilderUnitTest extends TestCase {
 		}
 	}
 
-	protected void assertAbstract(List EIDocs) throws Exception
+	protected void assertAbstract(List EIDocs,String dataFormat) throws Exception
 	{
 		HashMap absMap = new HashMap();
-		absMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "<AB label=\"Abstract\"><![CDATA[To study the mechanical behaviour of the implant-bone interface the push- or pull-out test was overtaken from material science. Most authors equate the maximum load (break point) with the failure of the implant integration. Extending the test procedure by acoustic emission analysis reveals the possibility to detect the failure of the interface more in detail and from its earliest beginning. The development of disconnection between host and implant was found to start long before the ultimate load is reached and can be monitored and quantified during this period. The active interface mechanisms are characterized by the distribution function of acoustic emissions and the number of hits per time defines the kinetics of the failure. From clinical studies a gradual subsidence of loaded implants is known starting long time before the definite implant failure. The presented extension of the push-out test with acoustic emission analysis allows the detection of a critical shear stress tc which demarks the onset of the gradual interface failure. We believe this value to represent the real critical load which should not be exceeded in the clinical application of intraosseous implants.]]></AB>");
-		absMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<AB label=\"Abstract\"><![CDATA[The next major step in the study of extrasolar planets will be the direct detection, resolved from their parent star, of a significant sample of Jupiter-like extrasolar giant planets. Such detection will open up new parts of the extrasolar planet distribution and allow spectroscopic characterization of the planets themselves. Detecting Jovian planets at 5-50 AU scale orbiting nearby stars requires adaptive optics systems and coronagraphs an order of magnitude more powerful than those available today - the realm of \"Extreme\" adaptive optics. We present the basic requirements and design for such a system, the Gemini Planet Imager (GPI.) GPI will require a MEMS-based deformable mirror with good surface quality, 2-4 micron stroke (operated in tandem with a conventional low-order \"woofer\" mirror), and a fully-functional 48-actuator-diameter aperture. Adaptive optics, extrasolar planets, speckle, coronagraphs.]]></AB>");
-		absMap.put("geo_152513a113d01a997cM73da2061377553", "<AB label=\"Abstract\"><![CDATA[Detailed pollen, charcoal and loss on ignition profiles were analysed from Llyn Cororion, North Wales, UK. The chronology was based on 11 radiocarbon dates. This site is particularly important for this region because its high-resolution record improves the spatial and temporal resolution of records of Holocene vegetation change in an area characterized by a highly variable environment. An early Holocene phase of Juniperus-Betula scrub was succeeded by Betula-Corylus woodland. Quercus and Ulmus were established by c. 8600 <sup>14</sup>C yr BP, with Pinus dominating at c. 8430 <sup>14</sup>C yr BP. Local disturbance then allowed the spread of Alnus; Tilia was a common component of the forest by 5650 <sup>14</sup>C yr BP. Charcoal and pollen records suggest that by c. 2600 <sup>14</sup>C yr BP there was progressive deforestation, increased use of fire and spread of grassland; the first cereal grain was recorded at c. 2900 <sup>14</sup>C yr BP. Compared with data from upland Snowdonia, the results show that within a topographically diverse region there were significant local variations in forest composition. These variations developed as a response to interactions between many environmental parameters and were further complicated by the influence of human activity. In an area such as North Wales it is therefore unlikely that one site can be representative of regional Holocene vegetational development. The site is additionally important because it contributes to the data available for meta-analyses of environmental change in the North Atlantic region, particularly as detailed pollen diagrams from coastal lake sites around estern Europe are rare.]]></AB>");
-		absMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<AB label=\"Abstract\"><![CDATA[Computer codes developed by this group over the past decade for modeling water chemistry and estimating the accumulated damage from stress corrosion cracking in boiling water reactors (BWRs), including DAMAGE_PREDICTOR, REMAIN, and ALERT, have now been superceded by a new code, FOCUS. This new code predicts water chemistry (radiolysis), electrochemical corrosion potential, crack velocity, and accumulated damage (crack depth) in BWR primary coolant circuits at many points simultaneously under normal water chemistry (NWC) and hydrogen water chemistry (HWC) operating protocols over specified operating histories. FOCUS includes the Advanced Coupled Environment Fracture Model (ACEFM) for estimating crack growth rate over a wide temperature range and hence is particularly useful for modeling BWRs that are subject to frequent start ups and shut downs. Additionally, a more robust and flexible water chemistry code is incorporated into FOCUS that allows for more accurate simulation of changes in coolant conductivity under upset conditions. The application of FOCUS for modeling the chemistry, electrochemistry, and the accumulation of intergranular stress corrosion cracking (IGSCC) damage in BWR primary coolant circuits is illustrated in this paper.]]></AB>");
-		absMap.put("cpx_18a992f10b61b5d4a9M743d2061377553", "<AB label=\"Abstract\"><![CDATA[The proceedings contain 87 papers. The topics discussed include: simulation of atmospheric environments for storage and transport of magnesium and its alloys; the physical chemistry of the carbothermic route to magnesium; thermal de-coating of magnesium - a first step towards recycling of coated magnesium; phenomena of formation of gas induced shrinkage porosity in pressure die-cast Mg-alloys; the road to 2020: overview of the magnesium casting industry technology roadmap; heat treatment and mechanical properties of a rheocast magnesium alloy; microstructural refinement of magnesium alloy by electromagnetic vibrations; and fabrication of carbon long fiber reinforced magnesium parts in high pressure die casting.]]></AB>");
-
+		if(dataFormat.equals(RIS.RIS_FORMAT))
+		{
+			absMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "<N2><![CDATA[To study the mechanical behaviour of the implant-bone interface the push- or pull-out test was overtaken from material science. Most authors equate the maximum load (break point) with the failure of the implant integration. Extending the test procedure by acoustic emission analysis reveals the possibility to detect the failure of the interface more in detail and from its earliest beginning. The development of disconnection between host and implant was found to start long before the ultimate load is reached and can be monitored and quantified during this period. The active interface mechanisms are characterized by the distribution function of acoustic emissions and the number of hits per time defines the kinetics of the failure. From clinical studies a gradual subsidence of loaded implants is known starting long time before the definite implant failure. The presented extension of the push-out test with acoustic emission analysis allows the detection of a critical shear stress tc which demarks the onset of the gradual interface failure. We believe this value to represent the real critical load which should not be exceeded in the clinical application of intraosseous implants.]]></N2>");
+			absMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<N2><![CDATA[The next major step in the study of extrasolar planets will be the direct detection, resolved from their parent star, of a significant sample of Jupiter-like extrasolar giant planets. Such detection will open up new parts of the extrasolar planet distribution and allow spectroscopic characterization of the planets themselves. Detecting Jovian planets at 5-50 AU scale orbiting nearby stars requires adaptive optics systems and coronagraphs an order of magnitude more powerful than those available today - the realm of \"Extreme\" adaptive optics. We present the basic requirements and design for such a system, the Gemini Planet Imager (GPI.) GPI will require a MEMS-based deformable mirror with good surface quality, 2-4 micron stroke (operated in tandem with a conventional low-order \"woofer\" mirror), and a fully-functional 48-actuator-diameter aperture. Adaptive optics, extrasolar planets, speckle, coronagraphs.]]></N2>");
+			absMap.put("geo_152513a113d01a997cM73da2061377553", "<N2><![CDATA[Detailed pollen, charcoal and loss on ignition profiles were analysed from Llyn Cororion, North Wales, UK. The chronology was based on 11 radiocarbon dates. This site is particularly important for this region because its high-resolution record improves the spatial and temporal resolution of records of Holocene vegetation change in an area characterized by a highly variable environment. An early Holocene phase of Juniperus-Betula scrub was succeeded by Betula-Corylus woodland. Quercus and Ulmus were established by c. 8600 <sup>14</sup>C yr BP, with Pinus dominating at c. 8430 <sup>14</sup>C yr BP. Local disturbance then allowed the spread of Alnus; Tilia was a common component of the forest by 5650 <sup>14</sup>C yr BP. Charcoal and pollen records suggest that by c. 2600 <sup>14</sup>C yr BP there was progressive deforestation, increased use of fire and spread of grassland; the first cereal grain was recorded at c. 2900 <sup>14</sup>C yr BP. Compared with data from upland Snowdonia, the results show that within a topographically diverse region there were significant local variations in forest composition. These variations developed as a response to interactions between many environmental parameters and were further complicated by the influence of human activity. In an area such as North Wales it is therefore unlikely that one site can be representative of regional Holocene vegetational development. The site is additionally important because it contributes to the data available for meta-analyses of environmental change in the North Atlantic region, particularly as detailed pollen diagrams from coastal lake sites around estern Europe are rare.]]></N2>");
+			absMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<N2><![CDATA[Computer codes developed by this group over the past decade for modeling water chemistry and estimating the accumulated damage from stress corrosion cracking in boiling water reactors (BWRs), including DAMAGE_PREDICTOR, REMAIN, and ALERT, have now been superceded by a new code, FOCUS. This new code predicts water chemistry (radiolysis), electrochemical corrosion potential, crack velocity, and accumulated damage (crack depth) in BWR primary coolant circuits at many points simultaneously under normal water chemistry (NWC) and hydrogen water chemistry (HWC) operating protocols over specified operating histories. FOCUS includes the Advanced Coupled Environment Fracture Model (ACEFM) for estimating crack growth rate over a wide temperature range and hence is particularly useful for modeling BWRs that are subject to frequent start ups and shut downs. Additionally, a more robust and flexible water chemistry code is incorporated into FOCUS that allows for more accurate simulation of changes in coolant conductivity under upset conditions. The application of FOCUS for modeling the chemistry, electrochemistry, and the accumulation of intergranular stress corrosion cracking (IGSCC) damage in BWR primary coolant circuits is illustrated in this paper.]]></N2>");
+			absMap.put("cpx_18a992f10b61b5d4a9M743d2061377553", "<N2><![CDATA[The proceedings contain 87 papers. The topics discussed include: simulation of atmospheric environments for storage and transport of magnesium and its alloys; the physical chemistry of the carbothermic route to magnesium; thermal de-coating of magnesium - a first step towards recycling of coated magnesium; phenomena of formation of gas induced shrinkage porosity in pressure die-cast Mg-alloys; the road to 2020: overview of the magnesium casting industry technology roadmap; heat treatment and mechanical properties of a rheocast magnesium alloy; microstructural refinement of magnesium alloy by electromagnetic vibrations; and fabrication of carbon long fiber reinforced magnesium parts in high pressure die casting.]]></N2>");
+		}
+		else
+		{
+			absMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "<AB label=\"Abstract\"><![CDATA[To study the mechanical behaviour of the implant-bone interface the push- or pull-out test was overtaken from material science. Most authors equate the maximum load (break point) with the failure of the implant integration. Extending the test procedure by acoustic emission analysis reveals the possibility to detect the failure of the interface more in detail and from its earliest beginning. The development of disconnection between host and implant was found to start long before the ultimate load is reached and can be monitored and quantified during this period. The active interface mechanisms are characterized by the distribution function of acoustic emissions and the number of hits per time defines the kinetics of the failure. From clinical studies a gradual subsidence of loaded implants is known starting long time before the definite implant failure. The presented extension of the push-out test with acoustic emission analysis allows the detection of a critical shear stress tc which demarks the onset of the gradual interface failure. We believe this value to represent the real critical load which should not be exceeded in the clinical application of intraosseous implants.]]></AB>");
+			absMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<AB label=\"Abstract\"><![CDATA[The next major step in the study of extrasolar planets will be the direct detection, resolved from their parent star, of a significant sample of Jupiter-like extrasolar giant planets. Such detection will open up new parts of the extrasolar planet distribution and allow spectroscopic characterization of the planets themselves. Detecting Jovian planets at 5-50 AU scale orbiting nearby stars requires adaptive optics systems and coronagraphs an order of magnitude more powerful than those available today - the realm of \"Extreme\" adaptive optics. We present the basic requirements and design for such a system, the Gemini Planet Imager (GPI.) GPI will require a MEMS-based deformable mirror with good surface quality, 2-4 micron stroke (operated in tandem with a conventional low-order \"woofer\" mirror), and a fully-functional 48-actuator-diameter aperture. Adaptive optics, extrasolar planets, speckle, coronagraphs.]]></AB>");
+			absMap.put("geo_152513a113d01a997cM73da2061377553", "<AB label=\"Abstract\"><![CDATA[Detailed pollen, charcoal and loss on ignition profiles were analysed from Llyn Cororion, North Wales, UK. The chronology was based on 11 radiocarbon dates. This site is particularly important for this region because its high-resolution record improves the spatial and temporal resolution of records of Holocene vegetation change in an area characterized by a highly variable environment. An early Holocene phase of Juniperus-Betula scrub was succeeded by Betula-Corylus woodland. Quercus and Ulmus were established by c. 8600 <sup>14</sup>C yr BP, with Pinus dominating at c. 8430 <sup>14</sup>C yr BP. Local disturbance then allowed the spread of Alnus; Tilia was a common component of the forest by 5650 <sup>14</sup>C yr BP. Charcoal and pollen records suggest that by c. 2600 <sup>14</sup>C yr BP there was progressive deforestation, increased use of fire and spread of grassland; the first cereal grain was recorded at c. 2900 <sup>14</sup>C yr BP. Compared with data from upland Snowdonia, the results show that within a topographically diverse region there were significant local variations in forest composition. These variations developed as a response to interactions between many environmental parameters and were further complicated by the influence of human activity. In an area such as North Wales it is therefore unlikely that one site can be representative of regional Holocene vegetational development. The site is additionally important because it contributes to the data available for meta-analyses of environmental change in the North Atlantic region, particularly as detailed pollen diagrams from coastal lake sites around estern Europe are rare.]]></AB>");
+			absMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<AB label=\"Abstract\"><![CDATA[Computer codes developed by this group over the past decade for modeling water chemistry and estimating the accumulated damage from stress corrosion cracking in boiling water reactors (BWRs), including DAMAGE_PREDICTOR, REMAIN, and ALERT, have now been superceded by a new code, FOCUS. This new code predicts water chemistry (radiolysis), electrochemical corrosion potential, crack velocity, and accumulated damage (crack depth) in BWR primary coolant circuits at many points simultaneously under normal water chemistry (NWC) and hydrogen water chemistry (HWC) operating protocols over specified operating histories. FOCUS includes the Advanced Coupled Environment Fracture Model (ACEFM) for estimating crack growth rate over a wide temperature range and hence is particularly useful for modeling BWRs that are subject to frequent start ups and shut downs. Additionally, a more robust and flexible water chemistry code is incorporated into FOCUS that allows for more accurate simulation of changes in coolant conductivity under upset conditions. The application of FOCUS for modeling the chemistry, electrochemistry, and the accumulation of intergranular stress corrosion cracking (IGSCC) damage in BWR primary coolant circuits is illustrated in this paper.]]></AB>");
+			absMap.put("cpx_18a992f10b61b5d4a9M743d2061377553", "<AB label=\"Abstract\"><![CDATA[The proceedings contain 87 papers. The topics discussed include: simulation of atmospheric environments for storage and transport of magnesium and its alloys; the physical chemistry of the carbothermic route to magnesium; thermal de-coating of magnesium - a first step towards recycling of coated magnesium; phenomena of formation of gas induced shrinkage porosity in pressure die-cast Mg-alloys; the road to 2020: overview of the magnesium casting industry technology roadmap; heat treatment and mechanical properties of a rheocast magnesium alloy; microstructural refinement of magnesium alloy by electromagnetic vibrations; and fabrication of carbon long fiber reinforced magnesium parts in high pressure die casting.]]></AB>");
+		}
 		String correctString = null;
 
 		for(int i = 0; i < EIDocs.size();i++)
@@ -1092,7 +1190,11 @@ public class BDDocBuilderUnitTest extends TestCase {
 
 			if(pnMap.get(correctDocId.getDocID()) != null)
 			{
-				if(!dataFormat.equals(Citation.CITATION_FORMAT))
+				if(dataFormat.equals(RIS.RIS_FORMAT))
+				{
+					correctString = "<PB><![CDATA[" + (String)pnMap.get(correctDocId.getDocID()) + "]]></PB>";
+				}
+				else if(!dataFormat.equals(Citation.CITATION_FORMAT))
 				{
 					correctString = "<PN label=\"Publisher\"><![CDATA[" + (String)pnMap.get(correctDocId.getDocID()) + "]]></PN>";
 				}
@@ -1173,7 +1275,6 @@ public class BDDocBuilderUnitTest extends TestCase {
 
 			if(dtMap.get(correctDocId.getDocID()) != null)
 			{
-
 				correctString = (String)dtMap.get(correctDocId.getDocID());
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
