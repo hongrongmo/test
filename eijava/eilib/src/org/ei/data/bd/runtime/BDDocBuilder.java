@@ -128,7 +128,7 @@ public class BDDocBuilder
 				formatRIS(buildField(Keys.ISSUE,getIssue(rset.getString("ISSUE"),perl),ht), dataFormat, Keys.ISSUE, Keys.RIS_IS);
 				formatRISSerialTitle(buildField(Keys.SERIAL_TITLE,rset.getString("SOURCETITLE"),ht), dataFormat, Keys.SERIAL_TITLE, getDocumentType(rset.getString("CITTYPE"),rset.getString("CONFCODE")));
 				buildField(Keys.CODEN,rset.getString("CODEN"),ht);
-				buildField(Keys.ISSN,getIssn(rset.getString("ISSN"),rset.getString("EISSN")),ht);
+				formatRIS(buildField(Keys.ISSN,getIssn(rset.getString("ISSN"),rset.getString("EISSN")),ht), dataFormat, Keys.ISSN, Keys.RIS_SN);
 				buildField(Keys.ABBRV_SERIAL_TITLE,rset.getString("SOURCETITLEABBREV"),ht);
 				buildField(Keys.VOLISSUE,getVolumeIssue(rset.getString("VOLUME"),rset.getString("ISSUE")),ht);
 				buildField(Keys.SOURCE,getSource(rset.getString("SOURCETITLE"),
@@ -141,7 +141,7 @@ public class BDDocBuilder
 										  rset.getString("PUBLISHERNAME")),ht);
 				formatRIS(buildField(Keys.TITLE,getCitationTitle(rset.getString("CITATIONTITLE")),ht), dataFormat, Keys.TITLE, Keys.RIS_TI);
 				formatRIS(buildField(Keys.TITLE_TRANSLATION,getTranslatedCitationTitle(rset.getString("CITATIONTITLE")),ht), dataFormat, Keys.TITLE_TRANSLATION, Keys.RIS_T1);
-				buildField(Keys.ISBN,getIsbn(rset.getString("ISBN"),10),ht);
+				formatRIS(buildField(Keys.ISBN,getIsbn(rset.getString("ISBN"),10),ht), dataFormat, Keys.ISBN, Keys.RIS_S1);
 				buildField(Keys.ISBN13,getIsbn(rset.getString("ISBN"),13),ht);
 				buildField(Keys.PAGE_COUNT,getPageCount(rset.getString("PAGECOUNT")),ht);
 				buildField(	Keys.PAGE_RANGE,
@@ -167,7 +167,7 @@ public class BDDocBuilder
 					buildField(Keys.CONF_CODE,rset.getString("CONFCODE"),ht);
 					buildField(Keys.NUMBER_OF_REFERENCES,rset.getString("REFCOUNT"),ht);
 					formatRIS(buildField(Keys.MAIN_HEADING,rset.getString("MAINHEADING"),ht), dataFormat,Keys.MAIN_HEADING, Keys.RIS_KW);
-                    formatRIS(buildField(Keys.UNCONTROLLED_TERMS,setElementData(rset.getString("UNCONTROLLEDTERM")),ht), dataFormat,Keys.UNCONTROLLED_TERMS,Keys.RIS_FLS);
+					formatRIS(buildField(Keys.UNCONTROLLED_TERMS,setElementData(rset.getString("UNCONTROLLEDTERM")),ht), dataFormat,Keys.UNCONTROLLED_TERMS,Keys.RIS_FLS);
 					buildField(Keys.TREATMENTS,getTreatments(rset.getString("TREATMENTCODE"),database),ht);
 					formatRIS(buildField(Keys.ABSTRACT,getAbstract(rset),ht),dataFormat,Keys.ABSTRACT,Keys.RIS_N2);
 
