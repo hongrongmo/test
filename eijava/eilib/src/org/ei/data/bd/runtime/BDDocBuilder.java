@@ -169,7 +169,8 @@ public class BDDocBuilder
 					formatRIS(buildField(Keys.MAIN_HEADING,rset.getString("MAINHEADING"),ht), dataFormat,Keys.MAIN_HEADING, Keys.RIS_KW);
                     formatRIS(buildField(Keys.UNCONTROLLED_TERMS,setElementData(rset.getString("UNCONTROLLEDTERM")),ht), dataFormat,Keys.UNCONTROLLED_TERMS,Keys.RIS_FLS);
 					buildField(Keys.TREATMENTS,getTreatments(rset.getString("TREATMENTCODE"),database),ht);
-					buildField(Keys.ABSTRACT,getAbstract(rset),ht);
+					formatRISDocType(buildField(Keys.ABSTRACT,getAbstract(rset),ht),dataFormat,Keys.ABSTRACT,Keys.RIS_N2);
+
 					buildField(Keys.START_PAGE,getStartPage(rset.getString("PAGE")),ht);
 					buildField(Keys.END_PAGE,getEndPage(rset.getString("PAGE")),ht);
 					formatRISDocType(buildField(Keys.DOC_TYPE,getDocumentType(rset.getString("CITTYPE"),rset.getString("CONFCODE")),ht),dataFormat,Keys.DOC_TYPE,Keys.RIS_TY);
