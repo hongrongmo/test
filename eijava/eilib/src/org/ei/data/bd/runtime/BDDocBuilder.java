@@ -140,7 +140,7 @@ public class BDDocBuilder
 										  rset.getString("ISSUETITLE"),
 										  rset.getString("PUBLISHERNAME")),ht);
 				formatRIS(buildField(Keys.TITLE,getCitationTitle(rset.getString("CITATIONTITLE")),ht), dataFormat, Keys.TITLE, Keys.RIS_TI);
-				buildField(Keys.TITLE_TRANSLATION,getTranslatedCitationTitle(rset.getString("CITATIONTITLE")),ht);
+				formatRIS(buildField(Keys.TITLE_TRANSLATION,getTranslatedCitationTitle(rset.getString("CITATIONTITLE")),ht), dataFormat, Keys.TITLE_TRANSLATION, Keys.RIS_T1);
 				buildField(Keys.ISBN,getIsbn(rset.getString("ISBN"),10),ht);
 				buildField(Keys.ISBN13,getIsbn(rset.getString("ISBN"),13),ht);
 				buildField(Keys.PAGE_COUNT,getPageCount(rset.getString("PAGECOUNT")),ht);
@@ -153,8 +153,8 @@ public class BDDocBuilder
 
 				buildField(Keys.PUBLISHER,getPublisher(rset.getString("PUBLISHERNAME"),rset.getString("PUBLISHERADDRESS")),ht);
 				formatRIS(buildField(Keys.LANGUAGE,getLanguage(rset.getString("CITATIONLANGUAGE")),ht),dataFormat, Keys.LANGUAGE, Keys.RIS_LA);
-				buildField(Keys.AUTHORS,getAuthors(Keys.AUTHORS,rset.getString("AUTHOR"),rset.getString("AUTHOR_1")),ht);
-				buildField(Keys.AUTHOR_AFFS,getAuthorsAffiliation(Keys.AUTHOR_AFFS,rset.getString("AFFILIATION"),rset.getString("AFFILIATION_1")),ht);
+				formatRIS(buildField(Keys.AUTHORS,getAuthors(Keys.AUTHORS,rset.getString("AUTHOR"),rset.getString("AUTHOR_1")),ht), dataFormat, Keys.AUTHORS, Keys.RIS_AUS);
+				formatRIS(buildField(Keys.AUTHOR_AFFS,getAuthorsAffiliation(Keys.AUTHOR_AFFS,rset.getString("AFFILIATION"),rset.getString("AFFILIATION_1")),ht), dataFormat, Keys.AUTHOR_AFFS, Keys.RIS_AD);
 				buildField(Keys.PROVIDER,PROVIDER_TEXT,ht);
 				buildField(Keys.EDITORS,getEditors(Keys.EDITORS,rset.getString("AUTHOR"),rset.getString("EDITORS")),ht);
 				buildField(Keys.VOLUME_TITLE,rset.getString("VOLUMETITLE"),ht);
@@ -166,8 +166,8 @@ public class BDDocBuilder
 				{
 					buildField(Keys.CONF_CODE,rset.getString("CONFCODE"),ht);
 					buildField(Keys.NUMBER_OF_REFERENCES,rset.getString("REFCOUNT"),ht);
-					formatRIS(buildField(Keys.MAIN_HEADING,rset.getString("MAINHEADING"),ht), dataFormat,Keys.MAIN_HEADING, Keys.RIS_KW);                     		
-                                        formatRIS(buildField(Keys.UNCONTROLLED_TERMS,setElementData(rset.getString("UNCONTROLLEDTERM")),ht), dataFormat,Keys.UNCONTROLLED_TERMS,Keys.RIS_FLS);
+					formatRIS(buildField(Keys.MAIN_HEADING,rset.getString("MAINHEADING"),ht), dataFormat,Keys.MAIN_HEADING, Keys.RIS_KW);
+                    formatRIS(buildField(Keys.UNCONTROLLED_TERMS,setElementData(rset.getString("UNCONTROLLEDTERM")),ht), dataFormat,Keys.UNCONTROLLED_TERMS,Keys.RIS_FLS);
 					buildField(Keys.TREATMENTS,getTreatments(rset.getString("TREATMENTCODE"),database),ht);
 					buildField(Keys.ABSTRACT,getAbstract(rset),ht);
 					buildField(Keys.START_PAGE,getStartPage(rset.getString("PAGE")),ht);
