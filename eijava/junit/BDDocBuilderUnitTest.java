@@ -165,6 +165,7 @@ public class BDDocBuilderUnitTest extends TestCase {
 			assertConfLocation(risPages,RIS.RIS_FORMAT);
 			//assertStartPage(risPages,RIS.RIS_FORMAT);
 			//assertEndPage(risPages,RIS.RIS_FORMAT);
+			//assertPubYear(risPages,RIS.RIS_FORMAT);
 
 		}
 		finally
@@ -355,7 +356,11 @@ public class BDDocBuilderUnitTest extends TestCase {
 			DocID correctDocId = (DocID)eidoc.getDocID();
 			String docidString = correctDocId.getDocID();
 
-			if(!dataFormat.equals(Citation.CITATION_FORMAT))
+			if(dataFormat.equals(RIS.RIS_FORMAT))
+			{
+				correctString = "<PY><![CDATA[" + (String)pyears.get(correctDocId.getDocID()) + "]]></PY>";
+			}
+			else if(!dataFormat.equals(Citation.CITATION_FORMAT))
 			{
 				correctString = "<YR label=\"Publication year\"><![CDATA[" + (String)pyears.get(correctDocId.getDocID()) + "]]></YR>";
 			}
