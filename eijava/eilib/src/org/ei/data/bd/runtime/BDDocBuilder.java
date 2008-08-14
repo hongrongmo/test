@@ -174,7 +174,7 @@ public class BDDocBuilder
 					buildField(Keys.START_PAGE,getStartPage(rset.getString("PAGE")),ht);
 					buildField(Keys.END_PAGE,getEndPage(rset.getString("PAGE")),ht);
 					formatRISDocType(buildField(Keys.DOC_TYPE,getDocumentType(rset.getString("CITTYPE"),rset.getString("CONFCODE")),ht),dataFormat,Keys.DOC_TYPE,Keys.RIS_TY);
-					buildField(Keys.CONFERENCE_NAME,rset.getString("CONFNAME"),ht);
+					formatRIS(buildField(Keys.CONFERENCE_NAME,rset.getString("CONFNAME"),ht),dataFormat,Keys.CONFERENCE_NAME , Keys.RIS_BT);
 					formatRIS(buildField(Keys.CONF_DATE,rset.getString("CONFDATE"),ht),dataFormat,Keys.CONF_DATE , Keys.RIS_MD);
 					formatRIS(buildField(Keys.MEETING_LOCATION,getConferenceLocation(rset.getString("CONFLOCATION")),ht),dataFormat,Keys.MEETING_LOCATION , Keys.RIS_CY);
 					buildField(Keys.SPONSOR,setElementData(rset.getString("CONFSPONSORS")),ht);
