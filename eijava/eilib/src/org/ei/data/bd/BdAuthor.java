@@ -88,7 +88,11 @@ public class BdAuthor
     public String getDisplayName()
     {
         StringBuffer au = new StringBuffer();
-		if(this.getSurname()!=null && this.getGivenName()!=null)
+        if(this.getIndexedName()!=null)
+        {
+			au.append(this.getIndexedName());
+		}
+		else if(this.getSurname()!=null && this.getGivenName()!=null)
 		{
 			au.append(this.getSurname()).append(" ").append(this.getGivenName());
 		}
