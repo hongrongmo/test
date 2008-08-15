@@ -117,7 +117,7 @@ public class BDDocBuilder
 				EIDoc eiDoc = newEIDoc(did, dataFormat,ht);
 				database = did.getDatabase();
 				buildField(Keys.DOCID,(DocID)oidTable.get(rset.getString("M_ID")),ht);
-				buildField(Keys.ACCESSION_NUMBER,rset.getString("ACCESSNUMBER"),ht);
+				formatRIS(buildField(Keys.ACCESSION_NUMBER,rset.getString("ACCESSNUMBER"),ht), dataFormat,Keys.ACCESSION_NUMBER,Keys.RIS_AN);
                                 formatRIS(buildField(Keys.DOI,rset.getString("DOI"),ht), dataFormat,Keys.DOI,Keys.RIS_DO);
 				buildField(Keys.PUBLICATION_YEAR,getYear(rset.getString("PUBLICATIONYEAR"),perl),ht);
 				buildField(Keys.COPYRIGHT,rset.getString("COPYRIGHT"),ht);
