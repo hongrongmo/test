@@ -118,8 +118,8 @@ public class BDDocBuilder
 				database = did.getDatabase();
 				buildField(Keys.DOCID,(DocID)oidTable.get(rset.getString("M_ID")),ht);
 				formatRIS(buildField(Keys.ACCESSION_NUMBER,rset.getString("ACCESSNUMBER"),ht), dataFormat,Keys.ACCESSION_NUMBER,Keys.RIS_AN);
-                                formatRIS(buildField(Keys.DOI,rset.getString("DOI"),ht), dataFormat,Keys.DOI,Keys.RIS_DO);
-				buildField(Keys.PUBLICATION_YEAR,getYear(rset.getString("PUBLICATIONYEAR"),perl),ht);
+				formatRIS(buildField(Keys.DOI,rset.getString("DOI"),ht), dataFormat,Keys.DOI,Keys.RIS_DO);
+				formatRIS(buildField(Keys.PUBLICATION_YEAR,getYear(rset.getString("PUBLICATIONYEAR"),perl),ht), dataFormat,Keys.PUBLICATION_YEAR,Keys.RIS_PY);
 				buildField(Keys.COPYRIGHT,rset.getString("COPYRIGHT"),ht);
 				formatRIS(buildField(Keys.COPYRIGHT_TEXT,CPX_TEXT_COPYRIGHT,ht), dataFormat, Keys.COPYRIGHT_TEXT, Keys.RIS_N1);
 				buildField(Keys.ISSUE_DATE,rset.getString("PUBLICATIONDATE"),ht);
@@ -1046,7 +1046,7 @@ public class BDDocBuilder
 
 	public void formatRIS(ElementDataMap map, String dataFormat, Key ORIGINAL_KEY, Key NEW_KEY)
 	{
-		if(dataFormat.equals(RIS.RIS_FORMAT))
+		if(dataFormat.equalsIgnoreCase(RIS.RIS_FORMAT))
 		{
 			if(map!= null)
 			{
@@ -1062,9 +1062,8 @@ public class BDDocBuilder
 
 	public void formatRISDocType(ElementDataMap map, String dataFormat, Key ORIGINAL_KEY, Key NEW_KEY)
 	{
-		if(dataFormat.equals(RIS.RIS_FORMAT))
+		if(dataFormat.equalsIgnoreCase(RIS.RIS_FORMAT))
 		{
-
 			ElementData ed = map.get(ORIGINAL_KEY);
 
 			String[] elementDataArray = ed.getElementData();
@@ -1079,13 +1078,12 @@ public class BDDocBuilder
 			ed.setKey(NEW_KEY);
 			ed.setElementData(elementDataArray);
 			map.put(NEW_KEY, ed);
-
 		}
 	}
 
 	public void formatRISSerialTitle(ElementDataMap map, String dataFormat, Key ORIGINAL_KEY, String docType)
 	{
-		if(dataFormat.equals(RIS.RIS_FORMAT) && map != null)
+		if(dataFormat.equalsIgnoreCase(RIS.RIS_FORMAT) && map != null)
 		{
 			ElementData ed = map.get(ORIGINAL_KEY);
 
