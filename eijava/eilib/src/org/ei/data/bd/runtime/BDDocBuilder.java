@@ -170,14 +170,13 @@ public class BDDocBuilder
 					formatRIS(buildField(Keys.UNCONTROLLED_TERMS,setElementData(rset.getString("UNCONTROLLEDTERM")),ht), dataFormat,Keys.UNCONTROLLED_TERMS,Keys.RIS_FLS);
 					buildField(Keys.TREATMENTS,getTreatments(rset.getString("TREATMENTCODE"),database),ht);
 					formatRIS(buildField(Keys.ABSTRACT,getAbstract(rset),ht),dataFormat,Keys.ABSTRACT,Keys.RIS_N2);
-
+					buildField(Keys.SPONSOR,setElementData(rset.getString("CONFSPONSORS")),ht);
 					formatRIS(buildField(Keys.START_PAGE,getStartPage(rset.getString("PAGE")),ht),dataFormat,Keys.START_PAGE,Keys.RIS_SP);
 					formatRIS(buildField(Keys.END_PAGE,getEndPage(rset.getString("PAGE")),ht),dataFormat,Keys.END_PAGE,Keys.RIS_EP);
 					formatRISDocType(buildField(Keys.DOC_TYPE,getDocumentType(rset.getString("CITTYPE"),rset.getString("CONFCODE")),ht),dataFormat,Keys.DOC_TYPE,Keys.RIS_TY);
 					formatRIS(buildField(Keys.CONFERENCE_NAME,rset.getString("CONFNAME"),ht),dataFormat,Keys.CONFERENCE_NAME , Keys.RIS_BT);
 					formatRIS(buildField(Keys.CONF_DATE,rset.getString("CONFDATE"),ht),dataFormat,Keys.CONF_DATE , Keys.RIS_MD);
 					formatRIS(buildField(Keys.MEETING_LOCATION,getConferenceLocation(rset.getString("CONFLOCATION")),ht),dataFormat,Keys.MEETING_LOCATION , Keys.RIS_CY);
-					buildField(Keys.SPONSOR,setElementData(rset.getString("CONFSPONSORS")),ht);
 					buildField(Keys.REGION_CONTROLLED_TERMS,setElementData(rset.getString("REGIONALTERM")),ht);
 					buildField(Keys.SPECIES_TERMS,setElementData(rset.getString("SPECIESTERM")),ht);
 					buildField(Keys.CLASS_CODES,getClassification(Keys.CLASS_CODES,rset.getString("CLASSIFICATIONCODE"),database),ht);
