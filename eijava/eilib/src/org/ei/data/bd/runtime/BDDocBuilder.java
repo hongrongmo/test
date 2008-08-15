@@ -720,7 +720,7 @@ public class BDDocBuilder
 			{
 
 				BdAuthor author = (BdAuthor)authorList.get(i);
-				if(dataFormat.equals(RIS.RIS_FORMAT))
+				if(dataFormat.equalsIgnoreCase(RIS.RIS_FORMAT))
 				{
 					authorNames.add(new Contributor(key,
 									author.getDisplayName()));
@@ -794,7 +794,7 @@ public class BDDocBuilder
 	        {
 	            BdAffiliation bdaff = (BdAffiliation)aList.get(i);
 
-	            if(dataFormat.equals(RIS.RIS_FORMAT))
+	            if(dataFormat.equalsIgnoreCase(RIS.RIS_FORMAT))
 	            {
 	            		affList.add(new Affiliation(key,
 	                    bdaff.getDisplayValue()));
