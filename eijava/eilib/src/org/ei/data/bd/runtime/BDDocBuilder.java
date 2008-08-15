@@ -153,10 +153,10 @@ public class BDDocBuilder
 
 				formatRIS(buildField(Keys.PUBLISHER,getPublisher(rset.getString("PUBLISHERNAME"),rset.getString("PUBLISHERADDRESS")),ht),dataFormat, Keys.PUBLISHER, Keys.RIS_PB);
 				formatRIS(buildField(Keys.LANGUAGE,getLanguage(rset.getString("CITATIONLANGUAGE")),ht),dataFormat, Keys.LANGUAGE, Keys.RIS_LA);
-				formatRIS(buildField(Keys.AUTHORS,getAuthors(Keys.AUTHORS,rset.getString("AUTHOR"),rset.getString("AUTHOR_1")),ht), dataFormat, Keys.AUTHORS, Keys.RIS_AUS);
-				formatRIS(buildField(Keys.AUTHOR_AFFS,getAuthorsAffiliation(Keys.AUTHOR_AFFS,rset.getString("AFFILIATION"),rset.getString("AFFILIATION_1")),ht), dataFormat, Keys.AUTHOR_AFFS, Keys.RIS_AD);
+				formatRIS(buildField(Keys.AUTHORS,getAuthors(Keys.AUTHORS,rset.getString("AUTHOR"),rset.getString("AUTHOR_1"), dataFormat),ht), dataFormat, Keys.AUTHORS, Keys.RIS_AUS);
+				formatRIS(buildField(Keys.AUTHOR_AFFS,getAuthorsAffiliation(Keys.AUTHOR_AFFS,rset.getString("AFFILIATION"),rset.getString("AFFILIATION_1"), dataFormat),ht), dataFormat, Keys.AUTHOR_AFFS, Keys.RIS_AD);
 				buildField(Keys.PROVIDER,PROVIDER_TEXT,ht);
-				buildField(Keys.EDITORS,getEditors(Keys.EDITORS,rset.getString("AUTHOR"),rset.getString("EDITORS")),ht);
+				formatRIS(buildField(Keys.EDITORS,getEditors(Keys.EDITORS,rset.getString("AUTHOR"),rset.getString("EDITORS")),ht), dataFormat, Keys.EDITORS, Keys.RIS_EDS);
 				buildField(Keys.VOLUME_TITLE,rset.getString("VOLUMETITLE"),ht);
 				buildField(Keys.PAPER_NUMBER,rset.getString("REPORTNUMBER"),ht);
 				formatRIS(buildField(Keys.CONTROLLED_TERMS,setElementData(rset.getString("CONTROLLEDTERM")),ht), dataFormat,Keys.CONTROLLED_TERMS,Keys.RIS_CVS);
@@ -697,7 +697,7 @@ public class BDDocBuilder
 
 	private Contributors getAuthors(Key key,
 		        					String authorString,
-		        					String authorString1)
+		        					String authorString1, String dataFormat)
 
 	throws Exception
 	{
@@ -721,9 +721,17 @@ public class BDDocBuilder
 			{
 
 				BdAuthor author = (BdAuthor)authorList.get(i);
-				authorNames.add(new Contributor(key,
+				if(dataFormat.equals(RIS.RIS_FORMAT))
+				{
+					authorNames.add(new Contributor(key,
+									author.getDisplayName()));
+				}
+				else
+				{
+					authorNames.add(new Contributor(key,
 									author.getDisplayName(),
 									author.getAffIdList()));
+				}
 			}
 		    return (new Contributors(Keys.AUTHORS,authorNames));
 		}
@@ -767,7 +775,7 @@ public class BDDocBuilder
 
 	private Affiliations getAuthorsAffiliation(Key key,
 			   								   String affString,
-			   								   String affString1) throws Exception
+			   								   String affString1, String dataFormat) throws Exception
     {
 	    StringBuffer affBuffer = new StringBuffer();
 	    if(affString != null)
@@ -786,9 +794,19 @@ public class BDDocBuilder
 	        for(int i=0;i<aList.size();i++)
 	        {
 	            BdAffiliation bdaff = (BdAffiliation)aList.get(i);
-	            affList.add(new Affiliation(key,
+
+	            if(dataFormat.equals(RIS.RIS_FORMAT))
+	            {
+	            		affList.add(new Affiliation(key,
+	                    bdaff.getDisplayValue()));
+				}
+				else
+				{
+	            		affList.add(new Affiliation(key,
 	                    bdaff.getDisplayValue(),
 	                    bdaff.getIdDislpayValue()));
+
+				}
 	        }
 	        return (new Affiliations(Keys.AUTHOR_AFFS,affList));
 
