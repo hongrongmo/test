@@ -18,6 +18,6 @@ public class Build
 
 	public static String version()
 	{
-		return "Baja 9.2";
+		return "Baja 9.2.2";
 	}
 }
