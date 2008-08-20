@@ -67,7 +67,7 @@ public class BaseTableRecord
    	public static final BaseTableRecord PAGECOUNT= new BaseTableRecord("PAGECOUNT", new Integer(32), "cpx");
    	public static final BaseTableRecord ARTICLENUMBER  = new BaseTableRecord("ARTICLENUMBER", new Integer(64), "cpx");
    	public static final BaseTableRecord PUBLICATIONYEAR= new BaseTableRecord("PUBLICATIONYEAR", new Integer(9), "cpx");
-   	public static final BaseTableRecord PUBLICATIONDATE= new BaseTableRecord("PUBLICATIONDATE", new Integer(32), "cpx");
+   	public static final BaseTableRecord PUBLICATIONDATE= new BaseTableRecord("PUBLICATIONDATE", new Integer(40), "cpx");
    	public static final BaseTableRecord EDITORS  = new BaseTableRecord("EDITORS", new Integer(4000), "cpx");
    	public static final BaseTableRecord PUBLISHERNAME  = new BaseTableRecord("PUBLISHERNAME", new Integer(2400), "cpx");
    	public static final BaseTableRecord PUBLISHERADDRESS = new BaseTableRecord("PUBLISHERADDRESS", new Integer(3200), "cpx");
