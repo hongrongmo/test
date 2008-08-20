@@ -43,7 +43,7 @@ public class BaseTableRecord
    	public static final BaseTableRecord AFFILIATION = new BaseTableRecord("AFFILIATION", new Integer(4000), "cpx");
    	public static final BaseTableRecord AFFILIATION_1 = new BaseTableRecord("AFFILIATION_1", new Integer(4000), "cpx");
    	public static final BaseTableRecord CODEN = new BaseTableRecord("CODEN", new Integer(6), "cpx");
-   	public static final BaseTableRecord ISSUE = new BaseTableRecord("ISSUE", new Integer(32), "cpx");
+   	public static final BaseTableRecord ISSUE = new BaseTableRecord("ISSUE", new Integer(65), "cpx");
    	public static final BaseTableRecord TITLELANGUAGE= new BaseTableRecord("TITLELANGUAGE", new Integer(32), "cpx");
    	public static final BaseTableRecord CLASSIFICATIONCODE = new BaseTableRecord("CLASSIFICATIONCODE", new Integer(128), "cpx");
    	public static final BaseTableRecord CONTROLLEDTERM = new BaseTableRecord("CONTROLLEDTERM", new Integer(4000), "cpx");
