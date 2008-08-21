@@ -508,7 +508,15 @@ public class PatentXmlReader
 
 			if(related_documents!=null && related_documents.get("DATE")!= null)
 			{
-				out.print((String)related_documents.get("DATE"));
+
+				String aidString = (String)related_documents.get("DATE");
+				if(aidString.length()>3999)
+				{
+					aidString = aidString.substring(0,aidString.lastIndexOf(AUDELIMITER,3999));
+					System.out.println("AID Field too long for record "+ac+" "+patentNumber);
+				}
+
+				out.print(aidString);
 			}
 			out.print(DELIM);
 
