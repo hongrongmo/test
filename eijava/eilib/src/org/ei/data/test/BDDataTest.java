@@ -208,11 +208,12 @@ public class BDDataTest
 				out.write(updateBuffer.toString()+"\n");
 				if(i>20)
 				{
-					out.write("commit\n");
+					out.write("commit;\n");
 					i=0;
 				}
 				i++;
 			}
+			out.write("commit;\n");
 
 
 		}
