@@ -92,6 +92,25 @@ public class Controller extends HttpServlet
 			return;
 		}
 
+		try
+		{
+			String ip = request.getHeader("x-forwarded-for");
+			if(ip == null)
+			{
+				ip = request.getRemoteAddr();
+			}
+			IPBlocker ipBlocker = IPBlocker.getInstance();
+			if(ipBlocker.block(ip))
+			{
+				System.out.println("Blocking:"+ip);
+				return;
+			}
+		}
+		catch(Exception e)
+		{
+			throw new ServletException("Controller",e);
+		}
+
 
 		try
 		{
