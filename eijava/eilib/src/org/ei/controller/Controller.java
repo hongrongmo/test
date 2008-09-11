@@ -481,6 +481,16 @@ public class Controller extends HttpServlet
         			               password,
         			               entryToken);
 
+		if(!ipGood(us.getUser().getIpAddress(), ipAddress))
+		{
+			System.out.println("Bad IP:"+us.getUser().getIpAddress());
+			throw new Exception("Security Violation Please:"+ipAddress);
+		}
+		else
+		{
+			System.out.println("Good IP:"+us.getUser().getIpAddress());
+		}
+
 
         if(logout != null && logout.equals("true"))
         {
@@ -547,6 +557,26 @@ public class Controller extends HttpServlet
         return us;
 
     }
+
+	private boolean ipGood(String originalIP,
+						   String currentIP)
+	{
+		if(originalIP.equals("-"))
+		{
+			return true;
+		}
+
+		String oip[] = originalIP.split("\\.");
+		String cip[] = currentIP.split("\\.");
+		if(oip[0].equals(cip[0]) && oip[1].equals(cip[1]))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
 
     /*
     *   this method handles the content customization / auth for
