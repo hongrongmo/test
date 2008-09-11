@@ -18,6 +18,7 @@ public class User
     private String startPage = "-";
     private String defaultDB = "-";
     private String refEmail = "-";
+    private String ipAddress = "-";
     private EntryToken entryToken;
 
     public String toString()
@@ -31,6 +32,7 @@ public class User
         buf.append(":SP="+startPage);
         buf.append(":DB="+defaultDB);
         buf.append(":E="+URLEncoder.encode(refEmail));
+        buf.append(":IP="+ipAddress);
         return buf.toString();
     }
 
@@ -103,16 +105,29 @@ public class User
 
         String ct = pairs.nextToken();
         this.contractID = ct.substring(ct.indexOf("=")+1, ct.length());
+		String sp = pairs.nextToken();
+		this.startPage = sp.substring(sp.indexOf("=")+1, sp.length());
+		String db = pairs.nextToken();
+		this.defaultDB = db.substring(db.indexOf("=")+1, db.length());
+		String em = pairs.nextToken();
+		this.refEmail = URLDecoder.decode(em.substring(em.indexOf("=")+1, em.length()));
         if(pairs.hasMoreTokens())
         {
-            String sp = pairs.nextToken();
-            this.startPage = sp.substring(sp.indexOf("=")+1, sp.length());
-            String db = pairs.nextToken();
-            this.defaultDB = db.substring(db.indexOf("=")+1, db.length());
-            String em = pairs.nextToken();
-            this.refEmail = URLDecoder.decode(em.substring(em.indexOf("=")+1, em.length()));
+			String ipt = pairs.nextToken();
+			this.ipAddress = ipt.substring(ipt.indexOf("=")+1, ipt.length());
         }
     }
+
+
+	public void setIpAddress(String ipAddress)
+	{
+		this.ipAddress = ipAddress;
+	}
+
+	public String getIpAddress()
+	{
+		return this.ipAddress;
+	}
 
 	public EntryToken getEntryToken()
 	{
