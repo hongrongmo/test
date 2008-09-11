@@ -44,6 +44,7 @@ public class UserBroker
 			{
 				System.out.println("Looking for entry token:"+entryToken);
 				u = getUserByEntryToken(entryToken, con);
+				u.setIpAddress(ipAddress);
 				return u;
 			}
 
@@ -63,11 +64,14 @@ public class UserBroker
 				if(u == null)
 				{
 					System.out.println("No customer found returning blank user");
-					return new User();
+					u = new User();
+					u.setIpAddress(ipAddress);
+					return u;
 				}
 				else
 				{
 					System.out.println("Found customer found returning user with customer info");
+					u.setIpAddress(ipAddress);
 					return u;
 				}
 			}
@@ -101,9 +105,11 @@ public class UserBroker
 			* If all forms of authentication fail create a new User with no customer info
 			*/
 
+
 			if(u == null)
 			{
 				u = new User();
+				u.setIpAddress(ipAddress);
 			}
 		}
 		catch(Exception e1)
