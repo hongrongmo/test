@@ -484,11 +484,7 @@ public class Controller extends HttpServlet
 		if(!ipGood(us.getUser().getIpAddress(), ipAddress))
 		{
 			System.out.println("Bad IP:"+us.getUser().getIpAddress());
-			throw new Exception("Security Violation Please:"+ipAddress);
-		}
-		else
-		{
-			System.out.println("Good IP:"+us.getUser().getIpAddress());
+			throw new Exception("Security Violation:"+ipAddress);
 		}
 
 
@@ -561,7 +557,7 @@ public class Controller extends HttpServlet
 	private boolean ipGood(String originalIP,
 						   String currentIP)
 	{
-		if(originalIP.equals("-"))
+		if(originalIP.equals("-") || currentIP.equals("127.0.0.1"))
 		{
 			return true;
 		}
