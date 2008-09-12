@@ -111,6 +111,10 @@ public class UserBroker
 				u = new User();
 				u.setIpAddress(ipAddress);
 			}
+			else
+			{
+				u.setIpAddress(ipAddress);
+			}
 		}
 		catch(Exception e1)
 		{
