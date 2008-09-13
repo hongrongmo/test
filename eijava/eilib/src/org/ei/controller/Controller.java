@@ -558,27 +558,28 @@ public class Controller extends HttpServlet
 						   String currentIP,
 						   String customerID)
 	{
-		if(originalIP.equals("-") ||
+		if(originalIP.equals("-")        ||
 		   currentIP.equals("127.0.0.1") ||
-		   customerID.equals("994173") ||
-		   customerID.equals("1001870") ||
-		   customerID.equals("8922") ||
-		   customerID.equals("1000438") ||
-		   customerID.equals("1000438") ||
-		   customerID.equals("525") ||
-		   customerID.equals("1001861") ||
-		   customerID.equals("28244") ||
-		   customerID.equals("826") ||
-		   customerID.equals("4583") ||
-		   customerID.equals("1001837") ||
-		   customerID.equals("1000637") ||
-		   customerID.equals("1001827") ||
-		   customerID.equals("923101") ||
-		   customerID.equals("1000302") ||
-		   customerID.equals("1002808") ||
+		   customerID.equals("994173")   ||
+		   customerID.equals("1001870")  ||
+		   customerID.equals("8922")     ||
+		   customerID.equals("1000438")  ||
+		   customerID.equals("1000173")  ||
+		   customerID.equals("525")      ||
+		   customerID.equals("1001861")  ||
+		   customerID.equals("28244")    ||
+		   customerID.equals("826")      ||
+		   customerID.equals("4583")     ||
+		   customerID.equals("1001837")  ||
+		   customerID.equals("1000637")  ||
+		   customerID.equals("1001827")  ||
+		   customerID.equals("923101")   ||
+		   customerID.equals("1000302")  ||
+		   customerID.equals("1002808")  ||
  		   customerID.equals("21002022") ||
  		   customerID.equals("21007498") ||
- 		   customerID.equals("1000397"))
+ 		   customerID.equals("1000397")  ||
+ 		   customerID.equals("1002014"))
 		{
 			return true;
 		}
