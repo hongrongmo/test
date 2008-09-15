@@ -348,16 +348,17 @@ public class BdDataMids
 	{
 		try
 		{
-			FileWriter out = null;
-			out = new FileWriter("/temp/midUpdates_"+year+".sql");
-			Enumeration keys = htUpdateMid.keys();
 
-			for (int i = 0; i < keys.size();i++)
-			{
-				String oldMID = keys.get(i);
-				BDData b = new htUpdateMid.get(oldMID);
-				out.write("UPDATE bd_master set M_ID='" + b.getMID() + "', FLAG='5' WHERE M_ID= '" + oldMID + "';\n");
-			}
+		Iterator itrtmp = htUpdateMid.keySet().iterator();
+		FileWriter out = null;
+		out = new FileWriter("/temp/midUpdates_"+year+".sql");
+		while (itrtmp.hasNext())
+		{
+		    String cpxMid =(String) itrtmp.next();
+		    BdData bd =(BdData) htUpdateMid.get(cpxMid);
+		    out.write("update nomatchAN set m_id='"+cpxMid+"',updateFlag='"+bd.getUpdateFlag()+"' where m_id='"+bd.getMid()+"';\n");
+		}
+
 
 			out.close();
 		}
