@@ -90,7 +90,11 @@ public class ShibbolethService extends HttpServlet
         String custid  = request.getParameter("custid");
 		String instant = request.getParameter("instant");
 		String idp = request.getParameter("idp");
-		String ipAddress = request.getRemoteAddr();
+		String ipAddress = request.getHeader("x-forwarded-for");
+		if(ipAddress == null)
+		{
+			ipAddress = request.getRemoteAddr();
+		}
 
 		// check for cookies
 		Cookie[] clientCookies = request.getCookies();
@@ -173,7 +177,7 @@ public class ShibbolethService extends HttpServlet
 				{
 					SessionCache sCache = SessionCache.getInstance();
 					UserSession us = sCache.getUserSession(null,
-													   null,
+													   ipAddress,
 													   custid,
 													   null,
 													   null,
