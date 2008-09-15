@@ -127,6 +127,17 @@ public class BdDataMids
 			//this is temp printout
 
 			printResult(htUpdateMid);
+			StringBuffer years = new StringBuffer();
+			if(args.length > 0)
+			{
+				years.append(args[0] + "_" + args[args.length - 1]);
+				writeSqlLoaderFile(htUpdateMid,years.toString());
+				years.append("_problems");
+				writeSqlLoaderFile(htproblems,years.toString());
+			}
+			else
+				System.out.println("NO YEAR(S) PASSED IN ARGS");
+
 
 			// write to bulk update bd_master table file with cpx_mids
 
@@ -342,13 +353,13 @@ public class BdDataMids
 
     }
 
-    public void writeSqlLoaderFile(String tableCpxRecords,
-		        				   Hashtable htUpdateMid,
+    public void writeSqlLoaderFile(Hashtable htUpdateMid,
 		        				   String year)
 	{
 		try
 		{
 
+		int i = 0;
 		Iterator itrtmp = htUpdateMid.keySet().iterator();
 		FileWriter out = null;
 		out = new FileWriter("/temp/midUpdates_"+year+".sql");
@@ -357,6 +368,12 @@ public class BdDataMids
 		    String cpxMid =(String) itrtmp.next();
 		    BdData bd =(BdData) htUpdateMid.get(cpxMid);
 		    out.write("update nomatchAN set m_id='"+cpxMid+"',updateFlag='"+bd.getUpdateFlag()+"' where m_id='"+bd.getMid()+"';\n");
+		    i++;
+		    if(i > 20)
+		    {
+				out.write("commit;\n");
+				i = 0;
+			}
 		}
 
 
