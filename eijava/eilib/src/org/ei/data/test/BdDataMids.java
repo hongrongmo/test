@@ -17,7 +17,7 @@ public class BdDataMids
 
 	private String tableBdRecords = "nonmatchan";
 
-	public Hashtable htproblems = new Hashtable();
+	public static Hashtable htproblems = new Hashtable();
 
 
 	private String findCpxMid(BdData bd, HashMap cpxMap)
@@ -131,9 +131,9 @@ public class BdDataMids
 			if(args.length > 0)
 			{
 				years.append(args[0] + "_" + args[args.length - 1]);
-				writeSqlLoaderFile(htUpdateMid,years.toString());
+				bd.writeSqlLoaderFile(htUpdateMid,years.toString());
 				years.append("_problems");
-				writeSqlLoaderFile(htproblems,years.toString());
+				bd.writeSqlLoaderFile(htproblems,years.toString());
 			}
 			else
 				System.out.println("NO YEAR(S) PASSED IN ARGS");
