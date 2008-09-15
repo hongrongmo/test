@@ -188,7 +188,7 @@ public class BdData
 			updateFlageBuffer.append("0");
 		}
 		System.out.println("update flag "+updateFlageBuffer.toString());
-		o.setUpdateFlag(updateFlageBuffer.toString());
+		setUpdateFlag(updateFlageBuffer.toString());
 	}
 
 	protected String getFirstNumberGroup(String inputString)
