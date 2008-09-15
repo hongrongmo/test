@@ -362,7 +362,7 @@ public class BdDataMids
 		int i = 0;
 		Iterator itrtmp = htUpdateMid.keySet().iterator();
 		FileWriter out = null;
-		out = new FileWriter("/temp/midUpdates_"+year+".sql");
+		out = new FileWriter("./temp/midUpdates_"+year+".sql");
 		while (itrtmp.hasNext())
 		{
 		    String cpxMid =(String) itrtmp.next();
