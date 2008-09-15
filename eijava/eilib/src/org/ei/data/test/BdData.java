@@ -104,6 +104,7 @@ public class BdData
 		{
 			cpxString = o.getIssn().replaceAll("-","");
 			bdString  = this.issn.replaceAll("-","");
+			//System.out.println("cpxString "+cpxString+" bdString "+bdString);
 			if(cpxString.equals(bdString))
 			{
 				updateFlageBuffer.append("1");
@@ -126,6 +127,7 @@ public class BdData
 		{
 			cpxString = o.getVolume();
 			bdString  = getFirstNumberGroup(this.volume);
+			//System.out.println("cpxString "+cpxString+" bdString "+bdString);
 			if(bdString!=null && cpxString.indexOf(bdString)>-1)
 			{
 				updateFlageBuffer.append("1");
@@ -148,6 +150,7 @@ public class BdData
 		{
 			cpxString = o.getIssue();
 			bdString  = getFirstNumberGroup(this.issue);
+			//System.out.println("cpxString "+cpxString+" bdString "+bdString);
 			if(cpxString!=null && cpxString.indexOf(bdString)>-1)
 			{
 				updateFlageBuffer.append("1");
@@ -170,6 +173,7 @@ public class BdData
 		{
 			cpxString = o.getPage();
 			bdString  = getFirstNumberGroup(this.page);
+			//System.out.println("cpxString "+cpxString+" bdString "+bdString);
 			if(cpxString!=null && cpxString.indexOf(bdString)>-1)
 			{
 				updateFlageBuffer.append("1");
@@ -187,7 +191,30 @@ public class BdData
 		{
 			updateFlageBuffer.append("0");
 		}
-		System.out.println("update flag "+updateFlageBuffer.toString());
+
+		if(o.getPublicationYear()!=null && this.publicationYear!=null)
+		{
+			cpxString = o.getPublicationYear();
+			bdString  = getFirstNumberGroup(this.publicationYear);
+			//System.out.println("cpxString "+cpxString+" bdString "+bdString);
+			if(cpxString!=null && cpxString.indexOf(bdString)>-1)
+			{
+				updateFlageBuffer.append("1");
+			}
+			else
+			{
+				updateFlageBuffer.append("0");
+			}
+		}
+		else if(o.getPublicationYear()==null && this.publicationYear==null)
+		{
+			updateFlageBuffer.append("1");
+		}
+		else
+		{
+			updateFlageBuffer.append("0");
+		}
+		//System.out.println("update flag "+updateFlageBuffer.toString());
 		setUpdateFlag(updateFlageBuffer.toString());
 	}
 
@@ -197,7 +224,7 @@ public class BdData
 		{
 			if(perl.match("/(\\d+)/", inputString))
 			{
-				System.out.println("RAW "+inputString+" MATCH "+(String) (perl.group(0).toString()));
+				//System.out.println("RAW "+inputString+" MATCH "+(String) (perl.group(0).toString()));
 				return (String) (perl.group(0).toString());
 			}
 		}
