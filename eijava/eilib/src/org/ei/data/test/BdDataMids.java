@@ -16,7 +16,7 @@ public class BdDataMids
 	private Perl5Util perl = new Perl5Util();
 
 	private String tableBdRecords = "nonmatchan";
-	
+
 	public Hashtable htproblems = new Hashtable();
 
 
@@ -34,12 +34,12 @@ public class BdDataMids
 			    String key = (String)itr.next();
 			    BdData cpx = (BdData)cpxMap.get(key);
 			    if(bd.check(cpx))
-			    {			        
+			    {
 			        cpxMid = key;
 			        counter++;
 			    }
 
-			}			
+			}
 			if(counter == 1)  // found match
 			{
 			    //remove from cpxmap
@@ -48,7 +48,7 @@ public class BdDataMids
 			}
 			else if (counter > 1)
 			{
-			    // more than one match 
+			    // more than one match
 			    // add it to problems table
 			    htproblems.put(cpxMid, cpxMid);
 			}
@@ -86,7 +86,7 @@ public class BdDataMids
 			    int yearsCount = args.length;
 			    sqlCpxMap.append(" where yr in (");
 
-			    
+
 			    for (int m = 0; m < yearsCount - 1 ; m++)
 			    {
 			        sqlCpxMap.append("'"+args[m]+"', ");
@@ -111,7 +111,7 @@ public class BdDataMids
 							cpxMap,
 							tableCpxRecords,
 							sqlCpxMap.toString());
-			
+
 			System.out.println("cpxMap size::"+cpxMap.size());
 			String tableBdRecords = "nonmatchan";
 			if (cpxMap.size() != 0)
@@ -124,9 +124,9 @@ public class BdDataMids
 			}
 
 			//this is temp printout
-			
+
 			printResult(htUpdateMid);
-			
+
 			// write to bulk update bd_master table file with cpx_mids
 
 		}
@@ -150,10 +150,10 @@ public class BdDataMids
 		}
 
 	}
-	
+
 	public static void printResult(Hashtable htUpdateMid)
 	{
-		//temp part to test result 
+		//temp part to test result
 		System.out.println("result set size::"+ htUpdateMid.size());
 		Iterator itrtmp = htUpdateMid.keySet().iterator();
 		while (itrtmp.hasNext())
@@ -182,12 +182,12 @@ public class BdDataMids
 	            if(rsCpx.getString("ti") != null)
 	            {
 	                BdData cpx = new BdData();
-	               
+
 	                //fields to test for now ti and issn
-	                
+
 	                cpx.setCitationTitle(rsCpx.getString("ti"));
 	                cpx.setIssn(rsCpx.getString("sn"));
-	                cpx.setMid("m_id");	                	                
+	                cpx.setMid("m_id");
 	                cpxMap.put( rsCpx.getString("m_id"), cpx);
 	            }
 	        }
@@ -240,14 +240,14 @@ public class BdDataMids
 				if(rsBd.getString("citationtitle")!= null)
 				{
 				    setBdData(bd,rsBd);
-				    
+
 				    String midCpx = findCpxMid(bd, cpxMap);
 
 				    if (midCpx != null)
 				    {
 				        htUpdateMid.put( midCpx, bd.getMid());
 					}
-				
+
 //					System.out.println(cittitleCpx + "::cittitleCpx");
 //					BdCitationTitle bct = new BdCitationTitle(rsBd.getString("ti"));
 //					String cittitleBd = ((BdCitationTitle) bct.getCitationTitle().get(0)).getTitle();
@@ -281,12 +281,12 @@ public class BdDataMids
 			}
 		}
 	}
-	
+
 	public void setBdData(BdData bd, ResultSet rs)
 	{
 	    try
-        {          
-	        bd.setCitationTitle(rs.getString("CITATIONTITLE")); 
+        {
+	        bd.setCitationTitle(rs.getString("CITATIONTITLE"));
             bd.setIssn(rs.getString("issn"));
             bd.setMid(rs.getString("m_id"));
         }
@@ -294,7 +294,7 @@ public class BdDataMids
         {
             e.printStackTrace();
         }
-	    
+
 //		bdo.setDoi(rs.getString("doi"));
 //		bdo.setPii(rs.getString("pii"));
 
@@ -305,9 +305,9 @@ public class BdDataMids
 //		bdo.setVolume(rs.getString("volume"));
 //		bdo.setIssue(rs.getString("issue"));
 //		bdo.setPage(rs.getString("page"));
-	    
+
 	}
-	
+
 
 
 	public Connection getConnection(String url,
@@ -328,6 +328,31 @@ public class BdDataMids
 		return con;
 
     }
+
+	public void writeSqlLoaderFile(String tableCpxRecords,
+	        						Hashtable htUpdateMid,
+	        						String year)
+	{
+		try
+		{
+			FileWriter out = null;
+			out = new FileWriter("/temp/midUpdates_"+year+".sql");
+			Enumeration keys = htUpdateMid.keys();
+			StringBuffer sbuffer = new StringBuffer();
+			for (int i = 0; i < keys.size();i++)
+			{
+				String oldMID = keys.get(i);
+				BDData b = new htUpdateMid.get(oldMID);
+				out.write("UPDATE bd_master set M_ID='" + b.getMID() + "', FLAG='5' WHERE M_ID= '" + oldMID + "';\n";);
+			}
+
+			out.close();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
 
 
 }
