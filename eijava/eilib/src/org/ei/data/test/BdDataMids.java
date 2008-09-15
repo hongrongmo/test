@@ -36,6 +36,7 @@ public class BdDataMids
 			    if(bd.check(cpx))
 			    {
 			        cpxMid = key;
+			        bd.changeUpdateFlag(cpx);
 			        counter++;
 			    }
 
@@ -156,11 +157,14 @@ public class BdDataMids
 		//temp part to test result
 		System.out.println("result set size::"+ htUpdateMid.size());
 		Iterator itrtmp = htUpdateMid.keySet().iterator();
+		String updateString = null;
 		while (itrtmp.hasNext())
 		{
 		    String cpxMid =(String) itrtmp.next();
-		    String bdMid =(String) htUpdateMid.get(cpxMid);
-		    System.out.println("cpxMID::"+cpxMid+"--bdMID::"+bdMid);
+		    BdData bd =(BdData) htUpdateMid.get(cpxMid);
+		    updateString = "update nomatchAN set m_id='"+cpxMid+"',updateFlag='"+bd.getUpdateFlag()+"' where m_id='"+bd.getMid()+"';";
+
+		    System.out.println(updateString);
 		}
 	}
 
@@ -188,6 +192,10 @@ public class BdDataMids
 	                cpx.setCitationTitle(rsCpx.getString("ti"));
 	                cpx.setIssn(rsCpx.getString("sn"));
 	                cpx.setMid("m_id");
+	                cpx.setVolume(rsCpx.getString("vo"));
+	                cpx.setIssue(rsCpx.getString("iss"));
+	                cpx.setPage(rsCpx.getString("xp"));
+	                cpx.setPublicationYear(rsCpx.getString("yr"));
 	                cpxMap.put( rsCpx.getString("m_id"), cpx);
 	            }
 	        }
@@ -245,7 +253,7 @@ public class BdDataMids
 
 				    if (midCpx != null)
 				    {
-				        htUpdateMid.put( midCpx, bd.getMid());
+				        htUpdateMid.put( midCpx, bd);
 					}
 
 //					System.out.println(cittitleCpx + "::cittitleCpx");
@@ -289,6 +297,11 @@ public class BdDataMids
 	        bd.setCitationTitle(rs.getString("CITATIONTITLE"));
             bd.setIssn(rs.getString("issn"));
             bd.setMid(rs.getString("m_id"));
+            bd.setVolume(rs.getString("volume"));
+            bd.setIssue(rs.getString("issue"));
+            bd.setPage(rs.getString("page"));
+            bd.setPublicationYear(rs.getString("PublicationYear"));
+
         }
         catch (SQLException e)
         {
@@ -329,9 +342,9 @@ public class BdDataMids
 
     }
 
-	public void writeSqlLoaderFile(String tableCpxRecords,
-	        						Hashtable htUpdateMid,
-	        						String year)
+    public void writeSqlLoaderFile(String tableCpxRecords,
+		        				   Hashtable htUpdateMid,
+		        				   String year)
 	{
 		try
 		{
@@ -343,7 +356,7 @@ public class BdDataMids
 			{
 				String oldMID = keys.get(i);
 				BDData b = new htUpdateMid.get(oldMID);
-				out.write("UPDATE bd_master set M_ID='" + b.getMID() + "', FLAG='5' WHERE M_ID= '" + oldMID + "';\n";);
+				out.write("UPDATE bd_master set M_ID='" + b.getMID() + "', FLAG='5' WHERE M_ID= '" + oldMID + "';\n");
 			}
 
 			out.close();
