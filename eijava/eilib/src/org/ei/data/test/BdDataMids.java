@@ -338,7 +338,7 @@ public class BdDataMids
 			FileWriter out = null;
 			out = new FileWriter("/temp/midUpdates_"+year+".sql");
 			Enumeration keys = htUpdateMid.keys();
-			StringBuffer sbuffer = new StringBuffer();
+
 			for (int i = 0; i < keys.size();i++)
 			{
 				String oldMID = keys.get(i);
