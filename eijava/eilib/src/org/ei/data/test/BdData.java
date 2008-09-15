@@ -1,4 +1,6 @@
 package org.ei.data.test;
+import org.apache.oro.text.perl.Perl5Util;
+import org.apache.oro.text.regex.MatchResult;
 
 public class BdData
 {
@@ -10,6 +12,8 @@ public class BdData
 	String page;
 	String publicationYear;
 	String updateFlag;
+	private String[] numberPatterns = {"/[1-9][0-9]*/"};
+	private Perl5Util perl = new Perl5Util();
 
 	public void setMid(String mid)
 	{
@@ -91,7 +95,117 @@ public class BdData
 		return this.updateFlag;
 	}
 
-	public boolean equals(BdData o)
+	public void changeUpdateFlag(BdData o)
+	{
+		String cpxString = null;
+		String bdString  = null;
+		StringBuffer updateFlageBuffer = new StringBuffer();
+		if(o.getIssn()!=null && this.issn!=null)
+		{
+			cpxString = o.getIssn().replaceAll("-","");
+			bdString  = this.issn.replaceAll("-","");
+			if(cpxString.equals(bdString))
+			{
+				updateFlageBuffer.append("1");
+			}
+			else
+			{
+				updateFlageBuffer.append("0");
+			}
+		}
+		else if(o.getIssn()==null && this.issn==null )
+		{
+			updateFlageBuffer.append("1");
+		}
+		else
+		{
+			updateFlageBuffer.append("0");
+		}
+
+		if(o.getVolume()!=null && this.volume!=null)
+		{
+			cpxString = o.getVolume();
+			bdString  = getFirstNumberGroup(this.volume);
+			if(bdString!=null && cpxString.indexOf(bdString)>-1)
+			{
+				updateFlageBuffer.append("1");
+			}
+			else
+			{
+				updateFlageBuffer.append("0");
+			}
+		}
+		else if(o.getVolume()==null && this.volume==null)
+		{
+			updateFlageBuffer.append("1");
+		}
+		else
+		{
+			updateFlageBuffer.append("0");
+		}
+
+		if(o.getIssue()!=null && this.issue!=null)
+		{
+			cpxString = o.getIssue();
+			bdString  = getFirstNumberGroup(this.issue);
+			if(cpxString!=null && cpxString.indexOf(bdString)>-1)
+			{
+				updateFlageBuffer.append("1");
+			}
+			else
+			{
+				updateFlageBuffer.append("0");
+			}
+		}
+		else if(o.getIssue()==null && this.issue==null)
+		{
+			updateFlageBuffer.append("1");
+		}
+		else
+		{
+			updateFlageBuffer.append("0");
+		}
+
+		if(o.getPage()!=null && this.page!=null)
+		{
+			cpxString = o.getPage();
+			bdString  = getFirstNumberGroup(this.page);
+			if(cpxString!=null && cpxString.indexOf(bdString)>-1)
+			{
+				updateFlageBuffer.append("1");
+			}
+			else
+			{
+				updateFlageBuffer.append("0");
+			}
+		}
+		else if(o.getPage()==null && this.page==null)
+		{
+			updateFlageBuffer.append("1");
+		}
+		else
+		{
+			updateFlageBuffer.append("0");
+		}
+		System.out.println("update flag "+updateFlageBuffer.toString());
+		o.setUpdateFlag(updateFlageBuffer.toString());
+	}
+
+	protected String getFirstNumberGroup(String inputString)
+	{
+		if(inputString != null)
+		{
+			if(perl.match("/(\\d+)/", inputString))
+			{
+				System.out.println("RAW "+inputString+" MATCH "+(String) (perl.group(0).toString()));
+				return (String) (perl.group(0).toString());
+			}
+		}
+
+		return null;
+	}
+
+	public boolean check(BdData o)
 	{
 		String cpxTitle = o.getCitationTitle();
 		String bdTitle  = null;
@@ -106,6 +220,7 @@ public class BdData
 		}
 		if(bdTitle.indexOf(cpxTitle)>-1)
 		{
+			/*
 			if(this.issn != null && o.getIssn() != null)
 			{
 				String cpxIssn = o.getIssn().replaceAll("-","");
@@ -117,8 +232,9 @@ public class BdData
 			}
 			else if(this.issn == null && o.getIssn() ==null)
 			{
+			*/
 				return true;
-			}
+			//}
 
 		}
 		return false;
