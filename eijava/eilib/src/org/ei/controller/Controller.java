@@ -579,7 +579,11 @@ public class Controller extends HttpServlet
  		   customerID.equals("21002022") ||
  		   customerID.equals("21007498") ||
  		   customerID.equals("1000397")  ||
- 		   customerID.equals("1002014"))
+ 		   customerID.equals("1002014") ||
+ 		   customerID.equals("21031178") ||
+ 		   customerID.equals("1000641") ||
+ 		   customerID.equals("999962") ||
+ 		   customerID.equals("21007265"))
 		{
 			return true;
 		}
