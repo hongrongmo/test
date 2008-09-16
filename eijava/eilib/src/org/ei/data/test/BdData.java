@@ -128,7 +128,7 @@ public class BdData
 			cpxString = o.getVolume();
 			bdString  = getFirstNumberGroup(this.volume);
 			//System.out.println("cpxString "+cpxString+" bdString "+bdString);
-			if(bdString!=null && cpxString.indexOf(bdString)>-1)
+			if(cpxString!=null && bdString!=null && cpxString.indexOf(bdString)>-1)
 			{
 				updateFlageBuffer.append("1");
 			}
@@ -151,7 +151,7 @@ public class BdData
 			cpxString = o.getIssue();
 			bdString  = getFirstNumberGroup(this.issue);
 			//System.out.println("cpxString "+cpxString+" bdString "+bdString);
-			if(cpxString!=null && cpxString.indexOf(bdString)>-1)
+			if(cpxString!=null && bdString!=null && cpxString.indexOf(bdString)>-1)
 			{
 				updateFlageBuffer.append("1");
 			}
@@ -174,7 +174,7 @@ public class BdData
 			cpxString = o.getPage();
 			bdString  = getFirstNumberGroup(this.page);
 			//System.out.println("cpxString "+cpxString+" bdString "+bdString);
-			if(cpxString!=null && cpxString.indexOf(bdString)>-1)
+			if(cpxString!=null && bdString!=null && cpxString.indexOf(bdString)>-1)
 			{
 				updateFlageBuffer.append("1");
 			}
@@ -197,7 +197,7 @@ public class BdData
 			cpxString = o.getPublicationYear();
 			bdString  = getFirstNumberGroup(this.publicationYear);
 			//System.out.println("cpxString "+cpxString+" bdString "+bdString);
-			if(cpxString!=null && cpxString.indexOf(bdString)>-1)
+			if(cpxString!=null && bdString!=null && cpxString.indexOf(bdString)>-1)
 			{
 				updateFlageBuffer.append("1");
 			}
