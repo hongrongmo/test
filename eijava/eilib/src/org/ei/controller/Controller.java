@@ -481,12 +481,14 @@ public class Controller extends HttpServlet
         			               password,
         			               entryToken);
 
-		if(!ipGood(us.getUser().getIpAddress(), ipAddress, us.getUser().getCustomerID()))
+        System.out.println("Usnername:"+us.getUser().getUsername());
+
+		if(us.getUser().getUsername().equals("_IP") &&
+		   !ipGood(us.getUser().getIpAddress(), ipAddress, us.getUser().getCustomerID()))
 		{
 			System.out.println("Bad IP:"+us.getUser().getIpAddress()+" : "+ipAddress+" : "+us.getUser().getCustomerID());
 			throw new Exception("Security Violation:"+ipAddress);
 		}
-
 
         if(logout != null && logout.equals("true"))
         {
@@ -498,7 +500,6 @@ public class Controller extends HttpServlet
                            			   password,
                            			   entryToken);
         }
-
 
         if(us.getStatus().equals(SessionStatus.NEW_HAD_EXPIRED))
         {
@@ -557,33 +558,10 @@ public class Controller extends HttpServlet
 	private boolean ipGood(String originalIP,
 						   String currentIP,
 						   String customerID)
+		throws Exception
 	{
-		if(originalIP.equals("-")        ||
-		   currentIP.equals("127.0.0.1") ||
-		   customerID.equals("994173")   ||
-		   customerID.equals("1001870")  ||
-		   customerID.equals("8922")     ||
-		   customerID.equals("1000438")  ||
-		   customerID.equals("1000173")  ||
-		   customerID.equals("525")      ||
-		   customerID.equals("1001861")  ||
-		   customerID.equals("28244")    ||
-		   customerID.equals("826")      ||
-		   customerID.equals("4583")     ||
-		   customerID.equals("1001837")  ||
-		   customerID.equals("1000637")  ||
-		   customerID.equals("1001827")  ||
-		   customerID.equals("923101")   ||
-		   customerID.equals("1000302")  ||
-		   customerID.equals("1002808")  ||
- 		   customerID.equals("21002022") ||
- 		   customerID.equals("21007498") ||
- 		   customerID.equals("1000397")  ||
- 		   customerID.equals("1002014") ||
- 		   customerID.equals("21031178") ||
- 		   customerID.equals("1000641") ||
- 		   customerID.equals("999962") ||
- 		   customerID.equals("21007265"))
+
+		if(currentIP.equals("127.0.0.1"))
 		{
 			return true;
 		}
@@ -596,7 +574,8 @@ public class Controller extends HttpServlet
 		}
 		else
 		{
-			return false;
+			String testCustomerID = sCache.validateCustomerIP(currentIP);
+			return customerID.equals(testCustomerID);
 		}
 	}
 
