@@ -156,7 +156,11 @@ public class SessionService extends HttpServlet
 				}
 				out.print("good");
 			}
-
+			else if(requestType.equals("r"))
+			{
+				String customerID = uBroker.validateCustomerIP(prodname, ipAddress);
+				response.setHeader("CUSTOMERID", customerID);
+			}
         }
         catch(Exception e)
         {

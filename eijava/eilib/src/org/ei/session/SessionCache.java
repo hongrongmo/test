@@ -154,6 +154,51 @@ public final class SessionCache
         }
     }
 
+	public String validateCustomerIP(String ipAddress)
+		throws SessionException
+	{
+		HttpURLConnection httpConn = null;
+		InputStream inStream = null;
+		String customerID = null;
+		try
+		{
+			StringBuffer buf = new StringBuffer();
+
+			buf.append(authURL).append("?rt=r&ip=").append(ipAddress).append("&ap=").append(this.appName);
+			URL url = new URL(buf.toString());
+			httpConn = (HttpURLConnection) url.openConnection();
+			httpConn.setRequestMethod("GET");
+			httpConn.setDoOutput(true);
+			inStream = httpConn.getInputStream();
+			while(inStream.read() != -1){}
+			customerID = httpConn.getHeaderField("CUSTOMERID");
+		}
+		catch(Exception e)
+		{
+			throw new SessionException(e);
+		}
+		finally
+		{
+			try
+			{
+				if(inStream != null)
+				{
+					inStream.close();
+				}
+			}
+			catch(Exception e)
+			{
+
+			}
+
+			if(httpConn != null)
+			{
+				httpConn.disconnect();
+			}
+		}
+
+		return customerID;
+	}
 
     public UserSession updateUserSession(UserSession uSession)
         throws SessionException

@@ -13,10 +13,45 @@ import org.ei.util.TimedObject;
 
 public class UserBroker
 {
-
 	private static final String AUTH_POOL = "AuthPool";
-
 	private TimedObject gatewayListTO;
+
+	public String validateCustomerIP(String prodname,
+								     String ipAddress)
+		throws SessionException
+	{
+		Connection con = null;
+		try
+		{
+			con = getConnection(AUTH_POOL);
+		    String customerID = getCustomerIDByIp(ipAddress,
+				                                  prodname,
+				                                  con);
+			if(customerID != null)
+			{
+				return customerID;
+			}
+			else
+			{
+				return "invalid_ip";
+			}
+		}
+		catch(Exception e1)
+		{
+			throw new SessionException(e1);
+		}
+		finally
+		{
+			try
+			{
+				replaceConnection(con, AUTH_POOL);
+			}
+			catch(Exception e)
+			{
+				throw new SessionException(e);
+			}
+		}
+	}
 
 	public User getUser(String prodname,
 			    		String username,
@@ -45,6 +80,7 @@ public class UserBroker
 				System.out.println("Looking for entry token:"+entryToken);
 				u = getUserByEntryToken(entryToken, con);
 				u.setIpAddress(ipAddress);
+				u.setUsername("_ET");
 				return u;
 			}
 
@@ -66,6 +102,7 @@ public class UserBroker
 					System.out.println("No customer found returning blank user");
 					u = new User();
 					u.setIpAddress(ipAddress);
+					u.setUsername("_UN_FAIL");
 					return u;
 				}
 				else
@@ -87,6 +124,12 @@ public class UserBroker
 				u = getUserByRefURL(refURL,
 									prodname,
 									con);
+				if(u != null)
+				{
+					u.setIpAddress(ipAddress);
+					u.setUsername("_REF");
+					return u;
+				}
 			}
 
 			/*
@@ -99,22 +142,20 @@ public class UserBroker
 				u = getUserByIp(ipAddress,
 								prodname,
 						        con);
+				if(u != null)
+				{
+					u.setIpAddress(ipAddress);
+					u.setUsername("_IP");
+					return u;
+				}
 			}
 
 			/*
-			* If all forms of authentication fail create a new User with no customer info
+			* All forms of authentication failed so create a new User with no customer info
 			*/
+			u = new User();
+			u.setIpAddress(ipAddress);
 
-
-			if(u == null)
-			{
-				u = new User();
-				u.setIpAddress(ipAddress);
-			}
-			else
-			{
-				u.setIpAddress(ipAddress);
-			}
 		}
 		catch(Exception e1)
 		{
@@ -333,6 +374,87 @@ public class UserBroker
 		return user;
 	}
 
+	/**
+	*	Lightweight method used to re-validate a customerID by IP address
+	**/
+
+	private String getCustomerIDByIp(String ipAddress,
+							 	     String prodname,
+							 	     Connection con)
+		throws SessionException
+	{
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String customerID = null;
+		try
+		{
+			StringBuffer ipBuffer = new StringBuffer();
+			StringTokenizer st = new StringTokenizer(ipAddress, ".");
+			while(st.hasMoreTokens())
+			{
+				String s = st.nextToken();
+				if(s.length() == 1)
+				{
+					s = "00"+s;
+				}
+				else if(s.length() == 2)
+				{
+					s = "0"+s;
+				}
+
+				ipBuffer.append(s);
+			}
+
+			ipAddress = ipBuffer.toString();
+			StringBuffer qBuf = new StringBuffer();
+
+			qBuf.append("select * from ip_data i where ");
+			qBuf.append("i.high_ip >= ? and i.low_ip <= ? and i.prod_name = ?");
+			pstmt = con.prepareStatement(qBuf.toString());
+			pstmt.setString(1, ipAddress);
+			pstmt.setString(2, ipAddress);
+			pstmt.setString(3, prodname);
+			rs = pstmt.executeQuery();
+
+			if(rs.next())
+			{
+				return rs.getString("cust_id");
+			}
+		}
+		catch(Exception e)
+		{
+			throw new SessionException(e);
+		}
+		finally
+		{
+			if(rs != null)
+			{
+				try
+				{
+					rs.close();
+				}
+				catch(Exception e1)
+				{
+					e1.printStackTrace();
+				}
+			}
+
+			if(pstmt != null)
+			{
+				try
+				{
+					pstmt.close();
+				}
+				catch(Exception e1)
+				{
+					e1.printStackTrace();
+				}
+			}
+		}
+
+		return customerID;
+	}
+
 	private User getUserByIp(String ipAddress,
 							 String prodname,
 							 Connection con)
@@ -365,10 +487,7 @@ public class UserBroker
 
 
 			ipAddress = ipBuffer.toString();
-			System.out.println("IP ADDRESS:"+ ipAddress);
 			StringBuffer qBuf = new StringBuffer();
-
-
 
 			qBuf.append("select * from ip_data i where ");
 			qBuf.append("i.high_ip >= ? and i.low_ip <= ? and i.prod_name = ?");
@@ -393,9 +512,6 @@ public class UserBroker
 					user = null;
 				}
 			}
-
-
-
 		}
 		catch(Exception e)
 		{
