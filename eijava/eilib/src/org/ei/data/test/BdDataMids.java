@@ -66,7 +66,7 @@ public class BdDataMids
 
 	public static void main(String[] args)
 	{
-		String url = "jdbc:oracle:thin:@jupiter.elsevier.com:1521:EIDB1";
+		String url = "jdbc:oracle:thin:@206.137.75.51:1521:EI";
 		String userName = "ap_pro1";
 		String password = "ei3it";
 
