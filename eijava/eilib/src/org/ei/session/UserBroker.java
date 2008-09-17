@@ -133,29 +133,27 @@ public class UserBroker
 			}
 
 			/*
-			* If user was not found by refURL. Check IP
-			*
+			* If we've got this far then check for IP address.
 			*/
 
-			if(u == null)
+			u = getUserByIp(ipAddress,
+							prodname,
+							con);
+			if(u != null)
 			{
-				u = getUserByIp(ipAddress,
-								prodname,
-						        con);
-				if(u != null)
-				{
-					u.setIpAddress(ipAddress);
-					u.setUsername("_IP");
-					return u;
-				}
+				u.setIpAddress(ipAddress);
+				u.setUsername("_IP");
+				return u;
 			}
+
 
 			/*
 			* All forms of authentication failed so create a new User with no customer info
 			*/
+
 			u = new User();
 			u.setIpAddress(ipAddress);
-
+			u.setUsername("_FAIL");
 		}
 		catch(Exception e1)
 		{
@@ -176,7 +174,6 @@ public class UserBroker
 		return u;
 
 	}
-
 
 	private User getUserByEntryToken(String entryToken,
 									 Connection con)
