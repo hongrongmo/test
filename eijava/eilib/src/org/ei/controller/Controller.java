@@ -481,8 +481,6 @@ public class Controller extends HttpServlet
         			               password,
         			               entryToken);
 
-        System.out.println("Usnername:"+us.getUser().getUsername());
-
 		if(us.getUser().getUsername().equals("_IP") &&
 		   !ipGood(us.getUser().getIpAddress(), ipAddress, us.getUser().getCustomerID()))
 		{
