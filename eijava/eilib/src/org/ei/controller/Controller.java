@@ -4,6 +4,8 @@ package org.ei.controller;
 import java.io.IOException;
 import java.util.Enumeration;
 import java.util.Properties;
+import java.util.Map;
+import java.util.HashMap;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -41,6 +43,7 @@ public class Controller extends HttpServlet
     private String authURL;
     private String lhlURL;
     private SessionCache sCache;
+    private Map ipBypass = new HashMap();
 
 
     private boolean appendSession;
@@ -60,8 +63,36 @@ public class Controller extends HttpServlet
                               appName);
 
             appendSession = new Boolean(config.getInitParameter("appendSession")).booleanValue();
-
             logger = new Logger(config.getInitParameter("logURL"));
+            this.ipBypass.put("127.0.0.1", "y");
+			this.ipBypass.put("207.158.24.2","y");
+			this.ipBypass.put("207.158.24.3", "y");
+			this.ipBypass.put("207.158.24.4", "y");
+			this.ipBypass.put("207.158.24.5", "y");
+			this.ipBypass.put("207.158.24.6", "y");
+			this.ipBypass.put("207.158.24.7", "y");
+			this.ipBypass.put("207.158.24.8", "y");
+			this.ipBypass.put("207.158.24.10", "y");
+			this.ipBypass.put("207.158.24.11", "y");
+			this.ipBypass.put("207.158.24.12", "y");
+			this.ipBypass.put("207.158.24.13", "y");
+			this.ipBypass.put("207.158.24.14", "y");
+			this.ipBypass.put("207.158.24.15", "y");
+			this.ipBypass.put("207.158.24.16", "y");
+			this.ipBypass.put("207.158.24.17", "y");
+			this.ipBypass.put("207.158.24.18", "y");
+			this.ipBypass.put("207.158.24.19", "y");
+			this.ipBypass.put("207.158.24.20", "y");
+			this.ipBypass.put("207.158.24.21", "y");
+			this.ipBypass.put("207.158.24.22", "y");
+			this.ipBypass.put("207.158.24.23", "y");
+			this.ipBypass.put("207.158.24.24", "y");
+			this.ipBypass.put("207.158.24.25", "y");
+			this.ipBypass.put("207.158.24.26", "y");
+			this.ipBypass.put("207.158.24.27", "y");
+			this.ipBypass.put("207.158.24.28", "y");
+			this.ipBypass.put("207.158.24.29", "y");
+			this.ipBypass.put("207.158.24.30", "y");
         }
         catch(Exception e)
         {
@@ -559,7 +590,7 @@ public class Controller extends HttpServlet
 		throws Exception
 	{
 
-		if(currentIP.equals("127.0.0.1"))
+		if(this.ipBypass.containsKey(currentIP))
 		{
 			return true;
 		}
