@@ -94,6 +94,7 @@ public class BdDataMids
 			    }
 			    sqlCpxMap.append(" '"+args[yearsCount-1]+"' ) ");
 			}
+			
 			System.out.println("Sql cpx stmt::"+sqlCpxMap.toString());
 			BdDataMids bd = new BdDataMids();
 			con = bd.getConnection(url,userName,password);
@@ -107,7 +108,6 @@ public class BdDataMids
 // from CPX saved_record create HashMap citationTitle, m_id
 // get rs of 2 500 000 from bd_master subset
 // for each bd record search for match in CPX hashmap
-
 			bd.setCpxHashmap(con,
 							cpxMap,
 							tableCpxRecords,
@@ -126,7 +126,7 @@ public class BdDataMids
 
 			//this is temp printout
 
-			printResult(htUpdateMid);
+			//printResult(htUpdateMid);
 			StringBuffer years = new StringBuffer();
 			if(args.length > 0)
 			{
@@ -358,25 +358,37 @@ public class BdDataMids
 	{
 		try
 		{
-
-		int i = 0;
-		Iterator itrtmp = htUpdateMid.keySet().iterator();
-		FileWriter out = null;
-		out = new FileWriter("./temp/midUpdates_"+year+".sql");
-		while (itrtmp.hasNext())
-		{
-		    String cpxMid =(String) itrtmp.next();
-		    BdData bd =(BdData) htUpdateMid.get(cpxMid);
-		    out.write("update nomatchAN set m_id='"+cpxMid+"',updateFlag='"+bd.getUpdateFlag()+"' where m_id='"+bd.getMid()+"';\n");
-		    i++;
-		    if(i > 20)
+		    int i = 0;
+		    Iterator itrtmp = htUpdateMid.keySet().iterator();
+		    FileWriter out = null;
+		    out = new FileWriter("./temp/midUpdates_"+year+".sql");
+		    while (itrtmp.hasNext())
 		    {
-				out.write("commit;\n");
-				i = 0;
-			}
-		}
-
-
+		        String cpxMid =(String) itrtmp.next();
+		        if (htUpdateMid.get(cpxMid) != null )
+		        {
+		            Object o = (Object)htUpdateMid.get(cpxMid);
+		            if(o.getClass().getName().equalsIgnoreCase("org.ei.data.test.BdData"))
+		            {
+		                BdData bd =(BdData) htUpdateMid.get(cpxMid);
+		                out.write("update nomatchAN set m_id='"+cpxMid+"',updateFlag='"+bd.getUpdateFlag()+"' where m_id='"+bd.getMid()+"';\n");
+		                i++;
+		                if(i > 20)
+		                {
+		                    out.write("commit;\n");
+		                    i = 0;
+		                }
+		             }
+			        else 
+			        {
+			            out.write("Redundant citation titles");
+			            if(o.getClass()!= null && o.getClass().getName()!= null)
+			            {
+			                out.write("m_id='"+cpxMid+"';\n");		                
+			            }
+			        }
+		        }
+		    }
 			out.close();
 		}
 		catch(Exception e)
