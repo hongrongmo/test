@@ -2,7 +2,6 @@ package org.ei.data.bd.loadtime;
 
 import java.util.*;
 
-
 public class BaseTableRecord
 {
     String name;
@@ -45,7 +44,7 @@ public class BaseTableRecord
    	public static final BaseTableRecord CODEN = new BaseTableRecord("CODEN", new Integer(6), "cpx");
    	public static final BaseTableRecord ISSUE = new BaseTableRecord("ISSUE", new Integer(65), "cpx");
    	public static final BaseTableRecord TITLELANGUAGE= new BaseTableRecord("TITLELANGUAGE", new Integer(32), "cpx");
-   	public static final BaseTableRecord CLASSIFICATIONCODE = new BaseTableRecord("CLASSIFICATIONCODE", new Integer(128), "cpx");
+   	public static final BaseTableRecord CLASSIFICATIONCODE = new BaseTableRecord("CLASSIFICATIONCODE", new Integer(768), "cpx");
    	public static final BaseTableRecord CONTROLLEDTERM = new BaseTableRecord("CONTROLLEDTERM", new Integer(4000), "cpx");
    	public static final BaseTableRecord UNCONTROLLEDTERM = new BaseTableRecord("UNCONTROLLEDTERM", new Integer(4000), "cpx");
    	public static final BaseTableRecord MAINHEADING = new BaseTableRecord("MAINHEADING", new Integer(4000), "cpx");
@@ -63,16 +62,16 @@ public class BaseTableRecord
    	public static final BaseTableRecord EISSN = new BaseTableRecord("EISSN", new Integer(13), "cpx");
    	public static final BaseTableRecord ISBN= new BaseTableRecord("ISBN", new Integer(1000), "cpx");
    	public static final BaseTableRecord VOLUME= new BaseTableRecord("VOLUME", new Integer(32), "cpx");
-   	public static final BaseTableRecord PAGE= new BaseTableRecord("PAGE", new Integer(80), "cpx");
+   	public static final BaseTableRecord PAGE= new BaseTableRecord("PAGE", new Integer(120), "cpx");
    	public static final BaseTableRecord PAGECOUNT= new BaseTableRecord("PAGECOUNT", new Integer(32), "cpx");
    	public static final BaseTableRecord ARTICLENUMBER  = new BaseTableRecord("ARTICLENUMBER", new Integer(64), "cpx");
    	public static final BaseTableRecord PUBLICATIONYEAR= new BaseTableRecord("PUBLICATIONYEAR", new Integer(9), "cpx");
-   	public static final BaseTableRecord PUBLICATIONDATE= new BaseTableRecord("PUBLICATIONDATE", new Integer(40), "cpx");
-   	public static final BaseTableRecord EDITORS  = new BaseTableRecord("EDITORS", new Integer(4000), "cpx");
+   	public static final BaseTableRecord PUBLICATIONDATE= new BaseTableRecord("PUBLICATIONDATE", new Integer(32), "cpx");
+   	public static final BaseTableRecord EDITORS = new BaseTableRecord("EDITORS", new Integer(4000), "cpx");
    	public static final BaseTableRecord PUBLISHERNAME  = new BaseTableRecord("PUBLISHERNAME", new Integer(2400), "cpx");
    	public static final BaseTableRecord PUBLISHERADDRESS = new BaseTableRecord("PUBLISHERADDRESS", new Integer(3200), "cpx");
    	public static final BaseTableRecord PUBLISHERELECTRONICADDRESS = new BaseTableRecord("PUBLISHERELECTRONICADDRESS", new Integer(2400), "cpx");
-   	public static final BaseTableRecord REPORTNUMBER= new BaseTableRecord("REPORTNUMBER", new Integer(32), "cpx");
+   	public static final BaseTableRecord REPORTNUMBER= new BaseTableRecord("REPORTNUMBER", new Integer(128), "cpx");
    	public static final BaseTableRecord CONFNAME = new BaseTableRecord("CONFNAME", new Integer(1200), "cpx");
    	public static final BaseTableRecord CONFCATNUMBER  = new BaseTableRecord("CONFCATNUMBER", new Integer(32), "cpx");
    	public static final BaseTableRecord CONFCODE = new BaseTableRecord("CONFCODE", new Integer(32), "cpx");
@@ -106,6 +105,11 @@ public class BaseTableRecord
 	public static final BaseTableRecord DATABASE= new BaseTableRecord("DATABASE", new Integer(3), "cpx");
 	public static final BaseTableRecord AUTHORKEYWORD= new BaseTableRecord("AUTHORKEYWORD", new Integer(4000), "pch");
 	public static final BaseTableRecord REFCOUNT= new BaseTableRecord("REFCOUNT", new Integer(4), "cpx");
+	public static final BaseTableRecord CASREGISTRYNUMBER= new BaseTableRecord("CASREGISTRYNUMBER", new Integer(4000), "chm");
+	public static final BaseTableRecord CHEMICALTERM= new BaseTableRecord("CHEMICALTERM", new Integer(4000), "chm");
+	public static final BaseTableRecord SEQUENCEBANKS= new BaseTableRecord("SEQUENCEBANKS", new Integer(4000), "chm");
+	public static final BaseTableRecord TRADENAME= new BaseTableRecord("TRADENAME", new Integer(4000), "chm");
+	public static final BaseTableRecord MANUFACTURER= new BaseTableRecord("MANUFACTURER", new Integer(4000), "chm");
 
 	static
 	{
@@ -175,8 +179,15 @@ public class BaseTableRecord
 	    bdTableColumns.add(CORRESPONDENCEEADDRESS);
 	    bdTableColumns.add(CITATIONTITLE);
 	   	bdTableColumns.add(CITATIONLANGUAGE);
-	    bdTableColumns.add(DATABASE);
-	    bdTableColumns.add(AUTHORKEYWORD);
+	   	bdTableColumns.add(AUTHORKEYWORD);
 		bdTableColumns.add(REFCOUNT);
+		bdTableColumns.add(CHEMICALTERM);
+		bdTableColumns.add(CASREGISTRYNUMBER);
+		bdTableColumns.add(SEQUENCEBANKS);
+		bdTableColumns.add(TRADENAME);
+		bdTableColumns.add(MANUFACTURER);
+	    bdTableColumns.add(DATABASE);
+
+
 	}
 }
