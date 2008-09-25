@@ -597,7 +597,8 @@ public class Controller extends HttpServlet
 		throws Exception
 	{
 
-		if(this.ipBypass.containsKey(currentIP))
+		if(this.ipBypass.containsKey(originalIP) ||
+		   this.ipBypass.containsKey(currentIP))
 		{
 			return true;
 		}
