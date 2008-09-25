@@ -64,7 +64,9 @@ public class Controller extends HttpServlet
 
             appendSession = new Boolean(config.getInitParameter("appendSession")).booleanValue();
             logger = new Logger(config.getInitParameter("logURL"));
+            /* App calling itself */
             this.ipBypass.put("127.0.0.1", "y");
+			/* Refworks */
 			this.ipBypass.put("207.158.24.2","y");
 			this.ipBypass.put("207.158.24.3", "y");
 			this.ipBypass.put("207.158.24.4", "y");
@@ -93,6 +95,11 @@ public class Controller extends HttpServlet
 			this.ipBypass.put("207.158.24.28", "y");
 			this.ipBypass.put("207.158.24.29", "y");
 			this.ipBypass.put("207.158.24.30", "y");
+
+			/* Web of Science, calling for IBM */
+
+			this.ipBypass.put("84.18.184.16", "y");
+			this.ipBypass.put("170.107.188.20", "y");
         }
         catch(Exception e)
         {
