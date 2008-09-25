@@ -59,6 +59,7 @@ public class BdParser
 		descriptorsTypeTable.put("CCV","CONTROLLEDTERM");
 		descriptorsTypeTable.put("PCV","CONTROLLEDTERM");
 		descriptorsTypeTable.put("GDE","CONTROLLEDTERM");
+		descriptorsTypeTable.put("MED","CHEMICALTERM");
 		descriptorsTypeTable.put("CTC","TREATMENTCODE");
 		descriptorsTypeTable.put("CFL","UNCONTROLLEDTERM");
 	}
@@ -411,6 +412,19 @@ public class BdParser
 
 									Element classificationgroup = enhancement.getChild("classificationgroup",noNamespace);
 									parseClassificationgroup(classificationgroup,record);
+
+									Element manufacturergroup = enhancement.getChild("manufacturergroup",noNamespace);
+									parseManufacturergroup(manufacturergroup,record);
+
+									Element tradenamegroup = enhancement.getChild("tradenamegroup",noNamespace);
+									parseTradenamegroup(tradenamegroup,record);
+
+									Element sequencebanks = enhancement.getChild("sequencebanks",noNamespace);
+									parseSequencebanks(sequencebanks,record);
+
+									Element chemicalgroup = enhancement.getChild("chemicalgroup",noNamespace);
+									parseChemicalgroup(chemicalgroup,record);
+
 							}
 
 							//SOURCE SOURCETYPE SOURCECOUNTRY SOURCEID
@@ -451,6 +465,229 @@ public class BdParser
 			e.printStackTrace();
 		}
 		return record;
+	}
+
+
+
+	private void parseTradenamegroup(Element tradenamegroup,Hashtable record) throws Exception
+	{
+		StringBuffer tradenamegroupBuffer = new StringBuffer();
+
+		if(tradenamegroup != null)
+		{
+			List tradenamesList = (List) tradenamegroup.getChildren("tradenames",noNamespace);
+			if(tradenamesList != null)
+			{
+				for(int i=0;i<tradenamesList.size();i++)
+				{
+					if(tradenamegroupBuffer.length()>0)
+					{
+						tradenamegroupBuffer.append(AUDELIMITER);
+					}
+					Element tradenames = (Element)tradenamesList.get(i);
+
+					if(tradenames != null)
+					{
+
+						List tradenameList = tradenames.getChildren("trademanuitem",noNamespace);
+						String tradenameType = tradenames.getAttributeValue("type");
+						tradenamegroupBuffer.append(tradenameType);
+
+						tradenamegroupBuffer.append(IDDELIMITER);
+
+						for(int j=0;j<tradenameList.size();j++)
+						{
+							Element tradenameElement = (Element)tradenameList.get(j);
+
+							String tradename =  tradenameElement.getChildText("tradename",noNamespace);
+
+							if(	tradename != null && tradename.length()>0)
+							{
+								tradenamegroupBuffer.append(tradename);
+							}
+
+							tradenamegroupBuffer.append(IDDELIMITER);
+
+						}
+					}
+				}
+			}
+			//System.out.println(tradenamegroupBuffer.toString());
+			if(tradenamegroupBuffer.length() > 0 )
+			{
+				record.put("TRADENAME", tradenamegroupBuffer.toString());
+			}
+		}
+	}
+
+	private void parseManufacturergroup(Element manufacturergroup,Hashtable record) throws Exception
+	{
+		StringBuffer manufacturergroupBuffer = new StringBuffer();
+
+		if(manufacturergroup != null)
+		{
+			List manufacturergroupList = (List) manufacturergroup.getChildren("manufacturers",noNamespace);
+			if(manufacturergroupList != null)
+			{
+				for(int i=0;i<manufacturergroupList.size();i++)
+				{
+					if(manufacturergroupBuffer.length()>0)
+					{
+						manufacturergroupBuffer.append(AUDELIMITER);
+					}
+					Element manufacturers = (Element)manufacturergroupList.get(i);
+
+					if(manufacturers != null)
+					{
+						List manufacturerList = manufacturers.getChildren("manufacturer",noNamespace);
+						String manufacturerType = manufacturers.getAttributeValue("type");
+
+						manufacturergroupBuffer.append(manufacturerType);
+
+						manufacturergroupBuffer.append(IDDELIMITER);
+
+						for(int j=0;j<manufacturerList.size();j++)
+						{
+							Element manufacturerElement = (Element)manufacturerList.get(j);
+							String country = manufacturerElement.getAttributeValue("country");
+							if(country!=null)
+							{
+								manufacturergroupBuffer.append(country);
+							}
+
+							manufacturergroupBuffer.append(GROUPDELIMITER);
+
+							String manufacturer =  manufacturerElement.getText();
+
+							if(	manufacturer != null && manufacturer.length()>0)
+							{
+								manufacturergroupBuffer.append(manufacturer);
+							}
+
+							manufacturergroupBuffer.append(IDDELIMITER);
+
+						}
+					}
+				}
+			}
+			//System.out.println(manufacturergroupBuffer.toString());
+			if(manufacturergroupBuffer.length() > 0 )
+			{
+				record.put("MANUFACTURER", manufacturergroupBuffer.toString());
+			}
+		}
+	}
+
+	private void parseSequencebanks(Element sequencebanks,Hashtable record) throws Exception
+	{
+		StringBuffer sequencebanksBuffer = new StringBuffer();
+
+		if(sequencebanks != null)
+		{
+			List sequencebankList = (List) sequencebanks.getChildren("sequencebank",noNamespace);
+			if(sequencebankList != null)
+			{
+				for(int i=0;i<sequencebankList.size();i++)
+				{
+					if(sequencebanksBuffer.length()>0)
+					{
+						sequencebanksBuffer.append(AUDELIMITER);
+					}
+					Element sequencebank = (Element)sequencebankList.get(i);
+					if(sequencebank != null)
+					{
+						List sequencenumberList = sequencebank.getChildren("sequence-number",noNamespace);
+						String sequencebankName = sequencebank.getAttributeValue("name");
+						sequencebanksBuffer.append(sequencebankName);
+
+						sequencebanksBuffer.append(IDDELIMITER);
+
+						for(int j=0;j<sequencenumberList.size();j++)
+						{
+							Element sequencenumberElement = (Element)sequencenumberList.get(j);
+
+							String sequencenumber =  sequencenumberElement.getText();
+
+							if(	sequencenumber != null && sequencenumber.length()>0)
+							{
+								sequencebanksBuffer.append(sequencenumber);
+							}
+
+							sequencebanksBuffer.append(IDDELIMITER);
+
+						}
+					}
+				}
+			}
+			//System.out.println(sequencebanksBuffer.toString());
+			if(sequencebanksBuffer.length() > 0 )
+			{
+				record.put("SEQUENCEBANKS", sequencebanksBuffer.toString());
+			}
+		}
+	}
+
+	private void parseChemicalgroup(Element chemicalgroup,Hashtable record) throws Exception
+	{
+		StringBuffer chemicalgroupBuffer = new StringBuffer();
+		String cas_registry_number = null;
+		if(chemicalgroup != null)
+		{
+			List chemicalsList = (List) chemicalgroup.getChildren("chemicals",noNamespace);
+			if(chemicalsList != null)
+			{
+				for(int i=0;i<chemicalsList.size();i++)
+				{
+					if(chemicalgroupBuffer.length()>0)
+					{
+						chemicalgroupBuffer.append(AUDELIMITER);
+					}
+					Element chemicals = (Element)chemicalsList.get(i);
+					if(chemicals != null)
+					{
+						List chemicalList = chemicals.getChildren("chemical",noNamespace);
+						for(int j=0;j<chemicalList.size();j++)
+						{
+							Element chemical = (Element)chemicalList.get(j);
+
+							chemicalgroupBuffer.append(IDDELIMITER);
+
+							String chemical_name =  chemical.getChildText("chemical-name",noNamespace);
+							List casregistrynumberList = chemical.getChildren("cas-registry-number",noNamespace);
+
+							if(	chemical_name != null)
+							{
+								chemicalgroupBuffer.append(chemical_name);
+							}
+
+							chemicalgroupBuffer.append(GROUPDELIMITER);
+
+							if(casregistrynumberList != null)
+							{
+								for(int k=0;k<casregistrynumberList.size();k++)
+								{
+									Element casregistrynumberElement = (Element)casregistrynumberList.get(k);
+									if(casregistrynumberElement!=null)
+									{
+										cas_registry_number = casregistrynumberElement.getText();
+										chemicalgroupBuffer.append(cas_registry_number);
+									}
+									if(k<casregistrynumberList.size()-1)
+									{
+										chemicalgroupBuffer.append(GROUPDELIMITER);
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			//System.out.println(chemicalgroupBuffer.toString());
+			if(chemicalgroupBuffer.length() > 0 )
+			{
+				record.put("CASREGISTRYNUMBER", chemicalgroupBuffer.toString());
+			}
+		}
 	}
 
 	private void parseCorrespondenceElement(Element correspondence,Hashtable record) throws Exception
@@ -1967,7 +2204,7 @@ public class BdParser
 		if(descriptorgroup != null)
 		{
 			List descriptorsList = descriptorgroup.getChildren("descriptors",noNamespace);
-
+			String name = null;
 			for(int i=0;i<descriptorsList.size();i++)
 			{
 				Element descriptors = (Element)descriptorsList.get(i);
