@@ -110,6 +110,15 @@ public class BaseTableRecord
 	public static final BaseTableRecord SEQUENCEBANKS= new BaseTableRecord("SEQUENCEBANKS", new Integer(4000), "chm");
 	public static final BaseTableRecord TRADENAME= new BaseTableRecord("TRADENAME", new Integer(4000), "chm");
 	public static final BaseTableRecord MANUFACTURER= new BaseTableRecord("MANUFACTURER", new Integer(4000), "chm");
+	public static final BaseTableRecord MEDIA= new BaseTableRecord("MEDIA", new Integer(26), "pch");
+	public static final BaseTableRecord CSESS= new BaseTableRecord("CSESS", new Integer(140), "pch");
+	public static final BaseTableRecord PATNO= new BaseTableRecord("PATNO", new Integer(22), "pch");
+	public static final BaseTableRecord PLING= new BaseTableRecord("PLING", new Integer(64), "pch");
+	public static final BaseTableRecord APPLN= new BaseTableRecord("APPLN", new Integer(128), "pch");
+	public static final BaseTableRecord PRIOR_NUM= new BaseTableRecord("PRIOR_NUM", new Integer(1200), "pch");
+	public static final BaseTableRecord ASSIG= new BaseTableRecord("ASSIG", new Integer(300), "pch");
+	public static final BaseTableRecord PCODE= new BaseTableRecord("PCODE", new Integer(22), "pch");
+	public static final BaseTableRecord CLAIM= new BaseTableRecord("CLAIM", new Integer(8), "pch");
 
 	static
 	{
@@ -187,7 +196,15 @@ public class BaseTableRecord
 		bdTableColumns.add(TRADENAME);
 		bdTableColumns.add(MANUFACTURER);
 	    bdTableColumns.add(DATABASE);
-
+		bdTableColumns.add(MEDIA);
+		bdTableColumns.add(CSESS);
+		bdTableColumns.add(PATNO);
+		bdTableColumns.add(PLING);
+		bdTableColumns.add(APPLN);
+		bdTableColumns.add(PRIOR_NUM);
+		bdTableColumns.add(ASSIG);
+		bdTableColumns.add(PCODE);
+		bdTableColumns.add(CLAIM);
 
 	}
 }
