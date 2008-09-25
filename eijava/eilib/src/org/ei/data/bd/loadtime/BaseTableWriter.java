@@ -74,7 +74,7 @@ public class BaseTableWriter
 
 			recordBuf.append(FIELDDELIM);
 		}
-		//recordBuf.deleteCharAt(recordBuf.length()-1);
+
 		out.println(recordBuf.toString().trim());
 
 	}
