@@ -50,7 +50,7 @@ public class BDDocBuilderUnitTest extends TestCase {
 			listOfDocIDs.add(new DocID("pch_B9CB8C0806B110C6E03408002081DCA4", databaseConfig.getDatabase("cpx")));
 
 			listOfDocIDs.add(new DocID("cpx_18a992f10b61b5d4a9M74342061377553", databaseConfig.getDatabase("cpx")));
-			listOfDocIDs.add( new DocID("cpx_18a992f10b61b5d4a9M74252061377553", databaseConfig.getDatabase("cpx")));
+			listOfDocIDs.add(new DocID("cpx_18a992f10b61b5d4a9M74252061377553", databaseConfig.getDatabase("cpx")));
 			listOfDocIDs.add(new DocID("geo_152513a113d01a997cM73da2061377553", databaseConfig.getDatabase("geo")));
 			listOfDocIDs.add(new DocID("cpx_18a992f10c593a6af2M7f882061377553", databaseConfig.getDatabase("cpx")));
 			listOfDocIDs.add(new DocID("cpx_18a992f10b61b5d4a9M743d2061377553", databaseConfig.getDatabase("cpx")));
@@ -84,7 +84,9 @@ public class BDDocBuilderUnitTest extends TestCase {
 		try
 		{
 			//full doc view tests
+			assertAssignee(fullDocPages, FullDoc.FULLDOC_FORMAT);
 
+/*
 			assertDocID(fullDocPages);
 
 			assertMedia(fullDocPages);
@@ -93,7 +95,7 @@ public class BDDocBuilderUnitTest extends TestCase {
 			assertAppln(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertPling(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertPriorNum(fullDocPages, FullDoc.FULLDOC_FORMAT);
-			assertAssignee(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			//assertAssignee(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertPcode(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertClaim(fullDocPages, FullDoc.FULLDOC_FORMAT);
 
@@ -190,6 +192,7 @@ public class BDDocBuilderUnitTest extends TestCase {
 			//assertEndPage(risPages,RIS.RIS_FORMAT);
 			//assertPubYear(risPages,RIS.RIS_FORMAT);
 
+*/
 		}
 		finally
 		{
@@ -454,6 +457,50 @@ public class BDDocBuilderUnitTest extends TestCase {
 	{
 		HashMap assignee = new HashMap();
 		assignee.put("pch_B9CB8C0806B010C6E03408002081DCA4", "Procter & Gamble Co.,");
+System.out.println("assertAssignee dataFormat"+dataFormat);
+		String correctString = null;
+
+		for(int i = 0; i < EIDocs.size();i++)
+		{
+			StringWriter swriter = new StringWriter();
+			PrintWriter out = new PrintWriter ( swriter ) ;
+			EIDoc eidoc = (EIDoc)EIDocs.get(i);
+			eidoc.toXML(out);
+			out.close();
+
+			String xmlString = swriter.toString();
+
+System.out.println("pat no"+xmlString);
+			DocID correctDocId = (DocID)eidoc.getDocID();
+			String docidString = correctDocId.getDocID();
+
+System.out.println("docidString"+docidString);
+
+
+
+			if(dataFormat.equals(RIS.RIS_FORMAT))
+			{
+				correctString = "<EASM><![CDATA[" +(String)assignee.get(correctDocId.getDocID()) +"]]></EASM>";
+			}
+			else
+			{
+				correctString = "<EASM label=\"Assignee\"><![CDATA[" +(String)assignee.get(correctDocId.getDocID()) + "]]></EASM>";
+
+			}
+
+System.out.println("\ncorrectString"+correctString);
+
+			if(assignee.get(correctDocId.getDocID()) != null)
+			{
+				assertTrue(xmlString.indexOf(correctString) != -1);
+			}
+		}
+	}
+
+	protected void assertPcode(List EIDocs, String dataFormat) throws Exception
+	{
+		HashMap pcode = new HashMap();
+		pcode.put("pch_B9CB8C0806B010C6E03408002081DCA4", "B65D5/74");
 
 		String correctString = null;
 
@@ -468,95 +515,60 @@ public class BDDocBuilderUnitTest extends TestCase {
 			DocID correctDocId = (DocID)eidoc.getDocID();
 			String docidString = correctDocId.getDocID();
 
-
+			System.out.println("docidString"+docidString);
+			System.out.println("pat no"+xmlString);
+			System.out.println("\ncorrectString"+correctString);
 
 			if(dataFormat.equals(RIS.RIS_FORMAT))
 			{
-				correctString = "<EASM><![CDATA[" +(String)assignee.get(correctDocId.getDocID()) +"]]></EASM>";
+				correctString = "<PCODE><![CDATA[" +(String)pcode.get(correctDocId.getDocID()) +"]]></PCODE>";
 			}
 			else
 			{
-				correctString = "<EASM label=\"Assignee\"><![CDATA[" +(String)assignee.get(correctDocId.getDocID()) + "]]></EASM>";
+				correctString = "<PCODE label=\"Pcode\"><![CDATA[" +(String)pcode.get(correctDocId.getDocID()) + "]]></PCODE>";
 
 			}
 
-			if(assignee.get(correctDocId.getDocID()) != null)
+			if(pcode.get(correctDocId.getDocID()) != null)
 			{
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
 		}
 	}
-		protected void assertPcode(List EIDocs, String dataFormat) throws Exception
+
+	protected void assertClaim(List EIDocs, String dataFormat) throws Exception
+	{
+		HashMap claim = new HashMap();
+		claim.put("pch_B9CB8C0806B010C6E03408002081DCA4", "33");
+
+		String correctString = null;
+
+		for(int i = 0; i < EIDocs.size();i++)
 		{
-			HashMap pcode = new HashMap();
-			pcode.put("pch_B9CB8C0806B010C6E03408002081DCA4", "B65D5/74");
+			StringWriter swriter = new StringWriter();
+			PrintWriter out = new PrintWriter ( swriter ) ;
+			EIDoc eidoc = (EIDoc)EIDocs.get(i);
+			eidoc.toXML(out);
+			out.close();
+			String xmlString = swriter.toString();
+			DocID correctDocId = (DocID)eidoc.getDocID();
+			String docidString = correctDocId.getDocID();
 
-			String correctString = null;
-
-			for(int i = 0; i < EIDocs.size();i++)
+			if(dataFormat.equals(RIS.RIS_FORMAT))
 			{
-				StringWriter swriter = new StringWriter();
-				PrintWriter out = new PrintWriter ( swriter ) ;
-				EIDoc eidoc = (EIDoc)EIDocs.get(i);
-				eidoc.toXML(out);
-				out.close();
-				String xmlString = swriter.toString();
-				DocID correctDocId = (DocID)eidoc.getDocID();
-				String docidString = correctDocId.getDocID();
-
-				System.out.println("docidString"+docidString);
-				System.out.println("pat no"+xmlString);
-				System.out.println("\ncorrectString"+correctString);
-
-				if(dataFormat.equals(RIS.RIS_FORMAT))
-				{
-					correctString = "<PCODE><![CDATA[" +(String)pcode.get(correctDocId.getDocID()) +"]]></PCODE>";
-				}
-				else
-				{
-					correctString = "<PCODE label=\"Pcode\"><![CDATA[" +(String)pcode.get(correctDocId.getDocID()) + "]]></PCODE>";
-
-				}
-
-				if(pcode.get(correctDocId.getDocID()) != null)
-				{
-					assertTrue(xmlString.indexOf(correctString) != -1);
-				}
+				correctString = "<CLAIM><![CDATA[" +(String)claim.get(correctDocId.getDocID()) +"]]></CLAIM>";
 			}
-	}
-		protected void assertClaim(List EIDocs, String dataFormat) throws Exception
-		{
-			HashMap claim = new HashMap();
-			claim.put("pch_B9CB8C0806B010C6E03408002081DCA4", "33");
-
-			String correctString = null;
-
-			for(int i = 0; i < EIDocs.size();i++)
+			else
 			{
-				StringWriter swriter = new StringWriter();
-				PrintWriter out = new PrintWriter ( swriter ) ;
-				EIDoc eidoc = (EIDoc)EIDocs.get(i);
-				eidoc.toXML(out);
-				out.close();
-				String xmlString = swriter.toString();
-				DocID correctDocId = (DocID)eidoc.getDocID();
-				String docidString = correctDocId.getDocID();
+				correctString = "<CLAIM label=\"Number of claims\"><![CDATA[" +(String)claim.get(correctDocId.getDocID()) + "]]></CLAIM>";
 
-				if(dataFormat.equals(RIS.RIS_FORMAT))
-				{
-					correctString = "<CLAIM><![CDATA[" +(String)claim.get(correctDocId.getDocID()) +"]]></CLAIM>";
-				}
-				else
-				{
-					correctString = "<CLAIM label=\"Number of claims\"><![CDATA[" +(String)claim.get(correctDocId.getDocID()) + "]]></CLAIM>";
-
-				}
-
-				if(claim.get(correctDocId.getDocID()) != null)
-				{
-					assertTrue(xmlString.indexOf(correctString) != -1);
-				}
 			}
+
+			if(claim.get(correctDocId.getDocID()) != null)
+			{
+				assertTrue(xmlString.indexOf(correctString) != -1);
+			}
+		}
 	}
 
 
