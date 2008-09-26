@@ -29,6 +29,11 @@ public class BDDocBuilderUnitTest extends TestCase {
 	private static final String COMPLTE_RIS = "<EI-DOCUMENT VIEW=\"ris\"><FT  FTLINK=\"N\"/><TY><![CDATA[JOUR]]></TY><LA><![CDATA[German]]></LA><N1><![CDATA[Compilation and indexing terms, Copyright 2008 Elsevier Inc.]]></N1><TI><![CDATA[Erweiterter push out-test zur schadigungscharakterisierung der implantat-knochen-grenzflache]]></TI><T1><![CDATA[Extended push-out test to characterize the failure of bone-implant interface]]></T1><JO><![CDATA[Biomedizinische Technik]]></JO><AUS><AU><![CDATA[Brandt, Jorg]]></AU><AU><![CDATA[Bierogel, C.]]></AU><AU><![CDATA[Holweg, K.]]></AU><AU><![CDATA[Hein, W.]]></AU><AU><![CDATA[Grellmann, W.]]></AU></AUS><AD><A><![CDATA[Universitatsklinik und Poliklinik fur Orthopadie und Physikalische Medizin, D-06112 Halle, Germany]]></A></AD><VL><![CDATA[ 50]]></VL><IS><![CDATA[ 6]]></IS><PY><![CDATA[2005]]></PY><AN><![CDATA[06189858062]]></AN><SP><![CDATA[201]]></SP><EP><![CDATA[206]]></EP><SN><![CDATA[0013-5585]]></SN><PB><![CDATA[Fachverlag Schiele und Sohn GmbH, Berlin, D-10969, Germany]]></PB><N2><![CDATA[To study the mechanical behaviour of the implant-bone interface the push- or pull-out test was overtaken from material science. Most authors equate the maximum load (break point) with the failure of the implant integration. Extending the test procedure by acoustic emission analysis reveals the possibility to detect the failure of the interface more in detail and from its earliest beginning. The development of disconnection between host and implant was found to start long before the ultimate load is reached and can be monitored and quantified during this period. The active interface mechanisms are characterized by the distribution function of acoustic emissions and the number of hits per time defines the kinetics of the failure. From clinical studies a gradual subsidence of loaded implants is known starting long time before the definite implant failure. The presented extension of the push-out test with acoustic emission analysis allows the detection of a critical shear stress tc which demarks the onset of the gradual interface failure. We believe this value to represent the real critical load which should not be exceeded in the clinical application of intraosseous implants.]]></N2><KW><![CDATA[Implants (surgical)]]></KW><CVS><CV><![CDATA[Bone]]></CV><CV><![CDATA[Interfaces (materials)]]></CV><CV><![CDATA[Biomaterials]]></CV><CV><![CDATA[Acoustic emission testing]]></CV><CV><![CDATA[Shear strength]]></CV><CV><![CDATA[Mechanical alloying]]></CV><CV><![CDATA[Materials science]]></CV></CVS><FLS><FL><![CDATA[Bone-implant-interface]]></FL><FL><![CDATA[Shear strength, push-out test]]></FL><FL><![CDATA[Critical load]]></FL><FL><![CDATA[Interface mechanisms]]></FL></FLS></EI-DOCUMENT>";
 	ConnectionBroker broker = null;
 
+    public static void main(String args[])
+    {
+    	org.junit.runner.JUnitCore.main("org.ei.junit.BDDocBuilderUnitTest");
+    }
+
 	protected void setUp() {
 
 		try
@@ -37,6 +42,13 @@ public class BDDocBuilderUnitTest extends TestCase {
 			DatabaseConfig databaseConfig = DatabaseConfig.getInstance(DriverConfig.getDriverTable());
 			multidbDocBuilder = new MultiDatabaseDocBuilder();
 			listOfDocIDs = new ArrayList();
+			listOfDocIDs.add(new DocID("pch_B9CB8C083E7510C6E03408002081DCA4", databaseConfig.getDatabase("cpx")));
+			listOfDocIDs.add(new DocID("pch_B9CB8C03873410C6E03408002081DCA4", databaseConfig.getDatabase("cpx")));
+			listOfDocIDs.add(new DocID("pch_B9CB8C08184610C6E03408002081DCA4", databaseConfig.getDatabase("cpx")));
+			listOfDocIDs.add(new DocID("pch_B9CB8C07B53010C6E03408002081DCA4", databaseConfig.getDatabase("cpx")));
+			listOfDocIDs.add(new DocID("pch_B9CB8C0806B010C6E03408002081DCA4", databaseConfig.getDatabase("cpx")));
+			listOfDocIDs.add(new DocID("pch_B9CB8C0806B110C6E03408002081DCA4", databaseConfig.getDatabase("cpx")));
+
 			listOfDocIDs.add(new DocID("cpx_18a992f10b61b5d4a9M74342061377553", databaseConfig.getDatabase("cpx")));
 			listOfDocIDs.add( new DocID("cpx_18a992f10b61b5d4a9M74252061377553", databaseConfig.getDatabase("cpx")));
 			listOfDocIDs.add(new DocID("geo_152513a113d01a997cM73da2061377553", databaseConfig.getDatabase("geo")));
@@ -74,6 +86,17 @@ public class BDDocBuilderUnitTest extends TestCase {
 			//full doc view tests
 
 			assertDocID(fullDocPages);
+
+			assertMedia(fullDocPages);
+			assertCsess(fullDocPages);
+			assertPatNo(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			assertAppln(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			assertPling(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			assertPriorNum(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			assertAssignee(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			assertPcode(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			assertClaim(fullDocPages, FullDoc.FULLDOC_FORMAT);
+
 			assertAccessionNumber(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertVolume(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertDOI(fullDocPages, FullDoc.FULLDOC_FORMAT);
@@ -258,6 +281,323 @@ public class BDDocBuilderUnitTest extends TestCase {
 			assertTrue(xmlString.indexOf(correctString) != -1);
 		}
 	}
+
+	protected void assertMedia(List EIDocs) throws Exception
+	{
+		HashMap media = new HashMap();
+		media.put("pch_B9CB8C08184610C6E03408002081DCA4", "paperback printed:PB");
+
+		String correctString = null;
+
+		for(int i = 0; i < EIDocs.size();i++)
+		{
+			StringWriter swriter = new StringWriter();
+			PrintWriter out = new PrintWriter ( swriter ) ;
+			EIDoc eidoc = (EIDoc)EIDocs.get(i);
+			eidoc.toXML(out);
+			out.close();
+			String xmlString = swriter.toString();
+			DocID correctDocId = (DocID)eidoc.getDocID();
+			String docidString = correctDocId.getDocID();
+			correctString = "<MEDIA label=\"Media\"><![CDATA[" +(String)media.get(correctDocId.getDocID()) + "]]></MEDIA>";
+
+			if(media.get(correctDocId.getDocID()) != null)
+			{
+				assertTrue(xmlString.indexOf(correctString) != -1);
+			}
+		}
+	}
+
+	protected void assertCsess(List EIDocs) throws Exception
+	{
+		HashMap csess = new HashMap();
+		csess.put("pch_B9CB8C083E7510C6E03408002081DCA4", "2");
+		String correctString = null;
+
+		for(int i = 0; i < EIDocs.size();i++)
+		{
+			StringWriter swriter = new StringWriter();
+			PrintWriter out = new PrintWriter ( swriter ) ;
+			EIDoc eidoc = (EIDoc)EIDocs.get(i);
+			eidoc.toXML(out);
+			out.close();
+			String xmlString = swriter.toString();
+			DocID correctDocId = (DocID)eidoc.getDocID();
+			String docidString = correctDocId.getDocID();
+			correctString = "<CSESS label=\"Csess\"><![CDATA[" +(String)csess.get(correctDocId.getDocID()) + "]]></CSESS>";
+
+			if(csess.get(correctDocId.getDocID()) != null)
+			{
+				assertTrue(xmlString.indexOf(correctString) != -1);
+			}
+		}
+	}
+
+
+	protected void assertPatNo(List EIDocs, String dataFormat ) throws Exception
+	{
+		HashMap patno = new HashMap();
+		patno.put("pch_B9CB8C03873410C6E03408002081DCA4", "3900621");
+		String correctString = null;
+
+		for(int i = 0; i < EIDocs.size();i++)
+		{
+			StringWriter swriter = new StringWriter();
+			PrintWriter out = new PrintWriter ( swriter ) ;
+			EIDoc eidoc = (EIDoc)EIDocs.get(i);
+			eidoc.toXML(out);
+			out.close();
+			String xmlString = swriter.toString();
+			DocID correctDocId = (DocID)eidoc.getDocID();
+			String docidString = correctDocId.getDocID();
+			correctString = "<PAP label=\"Patent number\"><![CDATA[" +(String)patno.get(correctDocId.getDocID()) + "]]></PAP>";
+
+
+			if(patno.get(correctDocId.getDocID()) != null)
+			{
+				assertTrue(xmlString.indexOf(correctString) != -1);
+			}
+		}
+	}
+
+
+	protected void assertPling(List EIDocs, String dataFormat) throws Exception
+	{
+		HashMap vols = new HashMap();
+		vols.put("pch_B9CB8C07B53010C6E03408002081DCA4", "FR 2752431");
+		vols.put("pch_B9CB8C0806B010C6E03408002081DCA4", "US 5125886");
+		vols.put("pch_B9CB8C0806B110C6E03408002081DCA4", "US 4799618");
+
+		String correctString = null;
+
+		for(int i = 0; i < EIDocs.size();i++)
+		{
+			StringWriter swriter = new StringWriter();
+			PrintWriter out = new PrintWriter ( swriter ) ;
+			EIDoc eidoc = (EIDoc)EIDocs.get(i);
+			eidoc.toXML(out);
+			out.close();
+			String xmlString = swriter.toString();
+			DocID correctDocId = (DocID)eidoc.getDocID();
+			String docidString = correctDocId.getDocID();
+
+			if(dataFormat.equals(RIS.RIS_FORMAT))
+			{
+				correctString = "<PLING><![CDATA[" +(String)vols.get(correctDocId.getDocID()) +"]]></PLING>";
+			}
+			else
+			{
+
+				correctString = "<PLING label=\"Pling\"><![CDATA[" +(String)vols.get(correctDocId.getDocID()) + "]]></PLING>";
+			}
+
+			if(vols.get(correctDocId.getDocID()) != null)
+			{
+				assertTrue(xmlString.indexOf(correctString) != -1);
+			}
+		}
+	}
+	protected void assertPriorNum(List EIDocs, String dataFormat) throws Exception
+	{
+		HashMap priornum = new HashMap();
+		priornum.put("pch_B9CB8C07B53010C6E03408002081DCA4", "FR 16518/84 (1984/10/24 AP)");
+		priornum.put("pch_B9CB8C0806B010C6E03408002081DCA4", "US 451495 (1989/12/15 AP)");
+		priornum.put("pch_B9CB8C0806B110C6E03408002081DCA4", "US 911412 (1986/09/25 Ap)");
+
+		String correctString = null;
+
+		for(int i = 0; i < EIDocs.size();i++)
+		{
+			StringWriter swriter = new StringWriter();
+			PrintWriter out = new PrintWriter ( swriter ) ;
+			EIDoc eidoc = (EIDoc)EIDocs.get(i);
+			eidoc.toXML(out);
+			out.close();
+			String xmlString = swriter.toString();
+			DocID correctDocId = (DocID)eidoc.getDocID();
+			String docidString = correctDocId.getDocID();
+
+			if(dataFormat.equals(RIS.RIS_FORMAT))
+			{
+				correctString = "<PIM><![CDATA[" +(String)priornum.get(correctDocId.getDocID()) +"]]></PIM>";
+			}
+			else
+			{
+
+				correctString = "<PIM label=\"Priority information\"><![CDATA[" +(String)priornum.get(correctDocId.getDocID()) + "]]></PIM>";
+
+			}
+
+
+
+			if(priornum.get(correctDocId.getDocID()) != null)
+			{
+				assertTrue(xmlString.indexOf(correctString) != -1);
+			}
+		}
+	}
+
+			//	assertAssignee(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			//	assertPcode(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			//	assertClaim(fullDocPages, FullDoc.FULLDOC_FORMAT);
+
+
+
+				//ASSIG,PCODE,CLAIM
+				//pch_B9CB8C0806B110C6E03408002081DCA4
+				//pch_B9CB8C0806B010C6E03408002081DCA4 Key("EASM", "Assignee"); ("PCODE","Pcode");
+
+//				("CLAIM", "Number of claims");
+				//pch_B9CB8C08184610C6E03408002081DCA4 Key("EASM", "Assignee"); ("PCODE","Pcode");("CLAIM", "Number of claims");
+
+	protected void assertAssignee(List EIDocs, String dataFormat) throws Exception
+	{
+		HashMap assignee = new HashMap();
+		assignee.put("pch_B9CB8C0806B010C6E03408002081DCA4", "Procter & Gamble Co.,");
+
+		String correctString = null;
+
+		for(int i = 0; i < EIDocs.size();i++)
+		{
+			StringWriter swriter = new StringWriter();
+			PrintWriter out = new PrintWriter ( swriter ) ;
+			EIDoc eidoc = (EIDoc)EIDocs.get(i);
+			eidoc.toXML(out);
+			out.close();
+			String xmlString = swriter.toString();
+			DocID correctDocId = (DocID)eidoc.getDocID();
+			String docidString = correctDocId.getDocID();
+
+
+
+			if(dataFormat.equals(RIS.RIS_FORMAT))
+			{
+				correctString = "<EASM><![CDATA[" +(String)assignee.get(correctDocId.getDocID()) +"]]></EASM>";
+			}
+			else
+			{
+				correctString = "<EASM label=\"Assignee\"><![CDATA[" +(String)assignee.get(correctDocId.getDocID()) + "]]></EASM>";
+
+			}
+
+			if(assignee.get(correctDocId.getDocID()) != null)
+			{
+				assertTrue(xmlString.indexOf(correctString) != -1);
+			}
+		}
+	}
+		protected void assertPcode(List EIDocs, String dataFormat) throws Exception
+		{
+			HashMap pcode = new HashMap();
+			pcode.put("pch_B9CB8C0806B010C6E03408002081DCA4", "B65D5/74");
+
+			String correctString = null;
+
+			for(int i = 0; i < EIDocs.size();i++)
+			{
+				StringWriter swriter = new StringWriter();
+				PrintWriter out = new PrintWriter ( swriter ) ;
+				EIDoc eidoc = (EIDoc)EIDocs.get(i);
+				eidoc.toXML(out);
+				out.close();
+				String xmlString = swriter.toString();
+				DocID correctDocId = (DocID)eidoc.getDocID();
+				String docidString = correctDocId.getDocID();
+
+				System.out.println("docidString"+docidString);
+				System.out.println("pat no"+xmlString);
+				System.out.println("\ncorrectString"+correctString);
+
+				if(dataFormat.equals(RIS.RIS_FORMAT))
+				{
+					correctString = "<PCODE><![CDATA[" +(String)pcode.get(correctDocId.getDocID()) +"]]></PCODE>";
+				}
+				else
+				{
+					correctString = "<PCODE label=\"Pcode\"><![CDATA[" +(String)pcode.get(correctDocId.getDocID()) + "]]></PCODE>";
+
+				}
+
+				if(pcode.get(correctDocId.getDocID()) != null)
+				{
+					assertTrue(xmlString.indexOf(correctString) != -1);
+				}
+			}
+	}
+		protected void assertClaim(List EIDocs, String dataFormat) throws Exception
+		{
+			HashMap claim = new HashMap();
+			claim.put("pch_B9CB8C0806B010C6E03408002081DCA4", "33");
+
+			String correctString = null;
+
+			for(int i = 0; i < EIDocs.size();i++)
+			{
+				StringWriter swriter = new StringWriter();
+				PrintWriter out = new PrintWriter ( swriter ) ;
+				EIDoc eidoc = (EIDoc)EIDocs.get(i);
+				eidoc.toXML(out);
+				out.close();
+				String xmlString = swriter.toString();
+				DocID correctDocId = (DocID)eidoc.getDocID();
+				String docidString = correctDocId.getDocID();
+
+				if(dataFormat.equals(RIS.RIS_FORMAT))
+				{
+					correctString = "<CLAIM><![CDATA[" +(String)claim.get(correctDocId.getDocID()) +"]]></CLAIM>";
+				}
+				else
+				{
+					correctString = "<CLAIM label=\"Number of claims\"><![CDATA[" +(String)claim.get(correctDocId.getDocID()) + "]]></CLAIM>";
+
+				}
+
+				if(claim.get(correctDocId.getDocID()) != null)
+				{
+					assertTrue(xmlString.indexOf(correctString) != -1);
+				}
+			}
+	}
+
+
+
+	protected void assertAppln(List EIDocs, String dataFormat) throws Exception
+	{
+		HashMap appln = new HashMap();
+		appln.put("pch_B9CB8C07B53010C6E03408002081DCA4", "CA 493708 (1985/10/24)");
+		appln.put("pch_B9CB8C0806B010C6E03408002081DCA4", "CA 2067204 (1991/06/16)");
+		appln.put("pch_B9CB8C0806B110C6E03408002081DCA4", "CA 547266 (1987/09/18)");
+
+		String correctString = null;
+
+		for(int i = 0; i < EIDocs.size();i++)
+		{
+			StringWriter swriter = new StringWriter();
+			PrintWriter out = new PrintWriter ( swriter ) ;
+			EIDoc eidoc = (EIDoc)EIDocs.get(i);
+			eidoc.toXML(out);
+			out.close();
+			String xmlString = swriter.toString();
+			DocID correctDocId = (DocID)eidoc.getDocID();
+			String docidString = correctDocId.getDocID();
+
+			if(dataFormat.equals(RIS.RIS_FORMAT))
+			{
+				correctString = "<PAN><![CDATA[" +(String)appln.get(correctDocId.getDocID()) +"]]></PAN>";
+			}
+			else
+			{
+				correctString = "<PAN label=\"Application number\"><![CDATA[" +(String)appln.get(correctDocId.getDocID()) + "]]></PAN>";
+
+			}
+
+			if(appln.get(correctDocId.getDocID()) != null)
+			{
+				assertTrue(xmlString.indexOf(correctString) != -1);
+			}
+		}
+	}
+
 
 	protected void assertVolume(List EIDocs, String dataFormat) throws Exception
 	{
