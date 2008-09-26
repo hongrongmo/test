@@ -119,6 +119,7 @@ public class BDDocBuilder
 				buildField(Keys.DOCID,(DocID)oidTable.get(rset.getString("M_ID")),ht);
 				formatRIS(buildField(Keys.ACCESSION_NUMBER,rset.getString("ACCESSNUMBER"),ht), dataFormat,Keys.ACCESSION_NUMBER,Keys.RIS_AN);
 				formatRIS(buildField(Keys.DOI,rset.getString("DOI"),ht), dataFormat,Keys.DOI,Keys.RIS_DO);
+
 				formatRIS(buildField(Keys.PUBLICATION_YEAR,getYear(rset.getString("PUBLICATIONYEAR"),perl),ht), dataFormat,Keys.PUBLICATION_YEAR,Keys.RIS_PY);
 				buildField(Keys.COPYRIGHT,rset.getString("COPYRIGHT"),ht);
 				formatRIS(buildField(Keys.COPYRIGHT_TEXT,CPX_TEXT_COPYRIGHT,ht), dataFormat, Keys.COPYRIGHT_TEXT, Keys.RIS_N1);
@@ -156,6 +157,7 @@ public class BDDocBuilder
 				formatRIS(buildField(Keys.AUTHORS,getAuthors(Keys.AUTHORS,rset.getString("AUTHOR"),rset.getString("AUTHOR_1"), dataFormat),ht), dataFormat, Keys.AUTHORS, Keys.RIS_AUS);
 				formatRIS(buildField(Keys.AUTHOR_AFFS,getAuthorsAffiliation(Keys.AUTHOR_AFFS,rset.getString("AFFILIATION"),rset.getString("AFFILIATION_1"), dataFormat),ht), dataFormat, Keys.AUTHOR_AFFS, Keys.RIS_AD);
 				buildField(Keys.PROVIDER,PROVIDER_TEXT,ht);
+
 				formatRIS(buildField(Keys.EDITORS,getEditors(Keys.EDITORS,rset.getString("AUTHOR"),rset.getString("EDITORS")),ht), dataFormat, Keys.EDITORS, Keys.RIS_EDS);
 				buildField(Keys.VOLUME_TITLE,rset.getString("VOLUMETITLE"),ht);
 				buildField(Keys.PAPER_NUMBER,rset.getString("REPORTNUMBER"),ht);
@@ -186,6 +188,8 @@ public class BDDocBuilder
 					buildField(Keys.ABSTRACT_TYPE,getAbstractType(rset.getString("ABSTRACTORIGINAL")),ht);
 					buildField(Keys.MEDIA,rset.getString("MEDIA"),ht);
 					buildField(Keys.CSESS,rset.getString("CSESS"),ht);
+					buildField(Keys.PATNUM,rset.getString("PATNO"),ht);
+					buildField(Keys.PATAPPNUM,rset.getString("APPLN"),ht);
 					buildField(Keys.PLING,rset.getString("PLING"),ht);
 					buildField(Keys.PRIORITY_INFORMATION,rset.getString("PRIOR_NUM"),ht);
 					buildField(Keys.PCODE,rset.getString("PCODE"),ht);
@@ -431,6 +435,18 @@ public class BDDocBuilder
 	private String getPublisher(String name,String address) throws Exception
 	{
 		String outputString = null;
+		StringBuffer addressBuffer = new StringBuffer();
+
+		{
+			BdAffiliations aff = new BdAffiliations(address);
+			List aList = aff.getAffiliations();
+			for(int i=0;i<aList.size();i++)
+			{
+				BdAffiliation bdaff = (BdAffiliation)aList.get(i);
+				addressBuffer.append(bdaff.getDisplayValue());
+	        }
+	        address = addressBuffer.toString();
+		}
 
 		if(name != null && name.length()>0 && address != null && address.length()>0)
 		{
