@@ -130,6 +130,9 @@ public class Controller extends HttpServlet
 			return;
 		}
 
+
+
+
 		try
 		{
 			String ip = request.getHeader("x-forwarded-for");
@@ -162,15 +165,18 @@ public class Controller extends HttpServlet
 			throw new ServletException("Controller",e);
 		}
 
-
-
-
-
 		String serverName = request.getServerName();
 		int serverPort = request.getServerPort();
 		if(serverPort != 80)
 		{
 			serverName = serverName+":"+Integer.toString(serverPort);
+		}
+
+		if((request.getHeader("referer") == null || request.getHeader("referer").indexOf(serverName)== -1) &&
+		   (request.getParameter("CID") != null &&
+		   (request.getParameter("CID").equals("quickSearchCitationFormat") || request.getParameter("CID").equals("expertSearchCitationFormat"))))
+		{
+			return;
 		}
 
 		OutputPrinter printer = new OutputPrinter(response,
