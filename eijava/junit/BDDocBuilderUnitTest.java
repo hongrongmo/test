@@ -1,4 +1,4 @@
-
+package org.ei.junit;
 
 import junit.framework.TestCase;
 import java.util.List;
@@ -48,13 +48,13 @@ public class BDDocBuilderUnitTest extends TestCase {
 			listOfDocIDs.add(new DocID("pch_B9CB8C07B53010C6E03408002081DCA4", databaseConfig.getDatabase("cpx")));
 			listOfDocIDs.add(new DocID("pch_B9CB8C0806B010C6E03408002081DCA4", databaseConfig.getDatabase("cpx")));
 			listOfDocIDs.add(new DocID("pch_B9CB8C0806B110C6E03408002081DCA4", databaseConfig.getDatabase("cpx")));
-
+/*
 			listOfDocIDs.add(new DocID("cpx_18a992f10b61b5d4a9M74342061377553", databaseConfig.getDatabase("cpx")));
 			listOfDocIDs.add(new DocID("cpx_18a992f10b61b5d4a9M74252061377553", databaseConfig.getDatabase("cpx")));
 			listOfDocIDs.add(new DocID("geo_152513a113d01a997cM73da2061377553", databaseConfig.getDatabase("geo")));
 			listOfDocIDs.add(new DocID("cpx_18a992f10c593a6af2M7f882061377553", databaseConfig.getDatabase("cpx")));
 			listOfDocIDs.add(new DocID("cpx_18a992f10b61b5d4a9M743d2061377553", databaseConfig.getDatabase("cpx")));
-
+*/
 			fullDocPages = multidbDocBuilder.buildPage(listOfDocIDs, FullDoc.FULLDOC_FORMAT);
 			citationPages = multidbDocBuilder.buildPage(listOfDocIDs, Citation.CITATION_FORMAT);
 			xmlPages = multidbDocBuilder.buildPage(listOfDocIDs, Citation.XMLCITATION_FORMAT);
@@ -81,12 +81,10 @@ public class BDDocBuilderUnitTest extends TestCase {
 	public void testBuildPage() throws Exception
 	{
 
+
 		try
 		{
 			//full doc view tests
-			assertAssignee(fullDocPages, FullDoc.FULLDOC_FORMAT);
-
-/*
 			assertDocID(fullDocPages);
 
 			assertMedia(fullDocPages);
@@ -95,10 +93,21 @@ public class BDDocBuilderUnitTest extends TestCase {
 			assertAppln(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertPling(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertPriorNum(fullDocPages, FullDoc.FULLDOC_FORMAT);
-			//assertAssignee(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			assertAssignee(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertPcode(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertClaim(fullDocPages, FullDoc.FULLDOC_FORMAT);
 
+			assertNofig(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			assertNotab(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			assertSourc(fullDocPages, FullDoc.FULLDOC_FORMAT);
+
+			assertSubIndex(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			assertSpecn(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			assertSuppl(fullDocPages, FullDoc.FULLDOC_FORMAT);
+
+
+			//SOURC,NOFIG,NOTAB
+/*
 			assertAccessionNumber(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertVolume(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertDOI(fullDocPages, FullDoc.FULLDOC_FORMAT);
@@ -457,7 +466,6 @@ public class BDDocBuilderUnitTest extends TestCase {
 	{
 		HashMap assignee = new HashMap();
 		assignee.put("pch_B9CB8C0806B010C6E03408002081DCA4", "Procter & Gamble Co.,");
-System.out.println("assertAssignee dataFormat"+dataFormat);
 		String correctString = null;
 
 		for(int i = 0; i < EIDocs.size();i++)
@@ -470,13 +478,8 @@ System.out.println("assertAssignee dataFormat"+dataFormat);
 
 			String xmlString = swriter.toString();
 
-System.out.println("pat no"+xmlString);
 			DocID correctDocId = (DocID)eidoc.getDocID();
 			String docidString = correctDocId.getDocID();
-
-System.out.println("docidString"+docidString);
-
-
 
 			if(dataFormat.equals(RIS.RIS_FORMAT))
 			{
@@ -484,11 +487,11 @@ System.out.println("docidString"+docidString);
 			}
 			else
 			{
-				correctString = "<EASM label=\"Assignee\"><![CDATA[" +(String)assignee.get(correctDocId.getDocID()) + "]]></EASM>";
+				correctString = "<PASM label=\"Assignee\"><![CDATA[" +(String)assignee.get(correctDocId.getDocID()) + "]]></PASM>";
 
 			}
 
-System.out.println("\ncorrectString"+correctString);
+
 
 			if(assignee.get(correctDocId.getDocID()) != null)
 			{
@@ -514,10 +517,6 @@ System.out.println("\ncorrectString"+correctString);
 			String xmlString = swriter.toString();
 			DocID correctDocId = (DocID)eidoc.getDocID();
 			String docidString = correctDocId.getDocID();
-
-			System.out.println("docidString"+docidString);
-			System.out.println("pat no"+xmlString);
-			System.out.println("\ncorrectString"+correctString);
 
 			if(dataFormat.equals(RIS.RIS_FORMAT))
 			{
@@ -573,6 +572,7 @@ System.out.println("\ncorrectString"+correctString);
 
 
 
+
 	protected void assertAppln(List EIDocs, String dataFormat) throws Exception
 	{
 		HashMap appln = new HashMap();
@@ -609,6 +609,225 @@ System.out.println("\ncorrectString"+correctString);
 			}
 		}
 	}
+
+	protected void assertNofig(List EIDocs, String dataFormat) throws Exception
+	{
+		HashMap nofig = new HashMap();
+		nofig.put("pch_B9CB8C08184610C6E03408002081DCA4", "3");
+		nofig.put("pch_B9CB8C083E7510C6E03408002081DCA4", "8");
+
+		String correctString = null;
+
+		for(int i = 0; i < EIDocs.size();i++)
+		{
+			StringWriter swriter = new StringWriter();
+			PrintWriter out = new PrintWriter ( swriter ) ;
+			EIDoc eidoc = (EIDoc)EIDocs.get(i);
+			eidoc.toXML(out);
+			out.close();
+			String xmlString = swriter.toString();
+			DocID correctDocId = (DocID)eidoc.getDocID();
+			String docidString = correctDocId.getDocID();
+
+
+
+			if(dataFormat.equals(RIS.RIS_FORMAT))
+			{
+				correctString = "<NF><![CDATA[" +(String)nofig.get(correctDocId.getDocID()) +"]]></NF>";
+			}
+			else
+			{
+				correctString = "<NF label=\"Number of figures\"><![CDATA[" +(String)nofig.get(correctDocId.getDocID()) + "]]></NF>";
+
+			}
+
+			if(nofig.get(correctDocId.getDocID()) != null)
+			{
+				assertTrue(xmlString.indexOf(correctString) != -1);
+			}
+		}
+	}
+	protected void assertNotab(List EIDocs, String dataFormat) throws Exception
+	{
+		HashMap notab = new HashMap();
+		notab.put("pch_B9CB8C08184610C6E03408002081DCA4", "2");
+		notab.put("pch_B9CB8C083E7510C6E03408002081DCA4", "6");
+
+		String correctString = null;
+
+		for(int i = 0; i < EIDocs.size();i++)
+		{
+			StringWriter swriter = new StringWriter();
+			PrintWriter out = new PrintWriter ( swriter ) ;
+			EIDoc eidoc = (EIDoc)EIDocs.get(i);
+			eidoc.toXML(out);
+			out.close();
+			String xmlString = swriter.toString();
+			DocID correctDocId = (DocID)eidoc.getDocID();
+			String docidString = correctDocId.getDocID();
+
+			if(dataFormat.equals(RIS.RIS_FORMAT))
+			{
+				correctString = "<NOTAB><![CDATA[" +(String)notab.get(correctDocId.getDocID()) +"]]></NOTAB>";
+			}
+			else
+			{
+				correctString = "<NOTAB label=\"Number of tables\"><![CDATA[" +(String)notab.get(correctDocId.getDocID()) + "]]></NOTAB>";
+
+			}
+
+			if(notab.get(correctDocId.getDocID()) != null)
+			{
+				assertTrue(xmlString.indexOf(correctString) != -1);
+			}
+		}
+	}
+	protected void assertSourc(List EIDocs, String dataFormat) throws Exception
+	{
+		HashMap sourc = new HashMap();
+		sourc.put("pch_B9CB8C03873410C6E03408002081DCA4", "U.S. pat. 3,900,621.  Issued Aug. 19, 1975.  3 claims.  3 p.  Cl.427/430. Filed: U.S. appln. 507,213 (Sept. 18, 1974).  Priority:  U.S. pat. 3,852,230 [filed as] U.S. appln. 177,493 (Sept. 2, 1971); Czechosl. 6906/70 (Oct. 14, 1970).");
+
+		String correctString = null;
+
+		for(int i = 0; i < EIDocs.size();i++)
+		{
+			StringWriter swriter = new StringWriter();
+			PrintWriter out = new PrintWriter ( swriter ) ;
+			EIDoc eidoc = (EIDoc)EIDocs.get(i);
+			eidoc.toXML(out);
+			out.close();
+			String xmlString = swriter.toString();
+			DocID correctDocId = (DocID)eidoc.getDocID();
+			String docidString = correctDocId.getDocID();
+
+			if(dataFormat.equals(RIS.RIS_FORMAT))
+			{
+				correctString = "<SO><![CDATA[" +(String)sourc.get(correctDocId.getDocID()) +"]]></SO>";
+			}
+			else
+			{
+				correctString = "<SO label=\"Source\"><![CDATA[" +(String)sourc.get(correctDocId.getDocID()) + "]]></SO>";
+
+			}
+
+			if(sourc.get(correctDocId.getDocID()) != null)
+			{
+				assertTrue(xmlString.indexOf(correctString) != -1);
+			}
+		}
+	}
+
+
+	protected void assertSubIndex(List EIDocs, String dataFormat) throws Exception
+	{
+		HashMap subindex = new HashMap();
+		subindex.put("pch_B9CB8C083E7510C6E03408002081DCA4","GROUND WOOD PULPING;POPULUS;PRESSURE GROUND WOOD");
+
+
+		String correctString = null;
+
+		for(int i = 0; i < EIDocs.size();i++)
+		{
+			StringWriter swriter = new StringWriter();
+			PrintWriter out = new PrintWriter ( swriter ) ;
+			EIDoc eidoc = (EIDoc)EIDocs.get(i);
+			eidoc.toXML(out);
+			out.close();
+			String xmlString = swriter.toString();
+			DocID correctDocId = (DocID)eidoc.getDocID();
+			String docidString = correctDocId.getDocID();
+
+			//if(dataFormat.equals(RIS.RIS_FORMAT))
+			//{
+			//	correctString = "<SUBINDEX><![CDATA[" +(String)subindex.get(correctDocId.getDocID()) +"]]></SUBINDEX>";
+			//}
+			//else
+			//{
+				correctString = "<SUBINDEX label=\"SubIndex\"><![CDATA[" +(String)subindex.get(correctDocId.getDocID()) + "]]></SUBINDEX>";
+
+			//}
+
+			if(subindex.get(correctDocId.getDocID()) != null)
+			{
+				assertTrue(xmlString.indexOf(correctString) != -1);
+			}
+		}
+	}
+
+
+		protected void assertSpecn(List EIDocs, String dataFormat) throws Exception
+		{
+			HashMap specn = new HashMap();
+			specn.put("pch_B9CB8C083E7510C6E03408002081DCA4","Tampella Pressure Groundwood System");
+
+
+			String correctString = null;
+
+			for(int i = 0; i < EIDocs.size();i++)
+			{
+				StringWriter swriter = new StringWriter();
+				PrintWriter out = new PrintWriter ( swriter ) ;
+				EIDoc eidoc = (EIDoc)EIDocs.get(i);
+				eidoc.toXML(out);
+				out.close();
+				String xmlString = swriter.toString();
+				DocID correctDocId = (DocID)eidoc.getDocID();
+				String docidString = correctDocId.getDocID();
+
+				//if(dataFormat.equals(RIS.RIS_FORMAT))
+				//{
+				//	correctString = "<SPECN><![CDATA[" +(String)specn.get(correctDocId.getDocID()) +"]]></SPECN>";
+				//}
+				//else
+				//{
+					correctString = "<SPECN label=\"Specific Names\"><![CDATA[" +(String)specn.get(correctDocId.getDocID()) + "]]></SPECN>";
+
+				//}
+
+
+				if(specn.get(correctDocId.getDocID()) != null)
+				{
+					assertTrue(xmlString.indexOf(correctString) != -1);
+				}
+			}
+	}
+
+
+		protected void assertSuppl(List EIDocs, String dataFormat) throws Exception
+		{
+			HashMap suppl = new HashMap();
+			suppl.put("pch_B9CB8C08184610C6E03408002081DCA4","Convention Issue");
+
+			String correctString = null;
+
+			for(int i = 0; i < EIDocs.size();i++)
+			{
+				StringWriter swriter = new StringWriter();
+				PrintWriter out = new PrintWriter ( swriter ) ;
+				EIDoc eidoc = (EIDoc)EIDocs.get(i);
+				eidoc.toXML(out);
+				out.close();
+				String xmlString = swriter.toString();
+				DocID correctDocId = (DocID)eidoc.getDocID();
+				String docidString = correctDocId.getDocID();
+
+				//if(dataFormat.equals(RIS.RIS_FORMAT))
+				//{
+				//	correctString = "<SUPPL><![CDATA[" +(String)suppl.get(correctDocId.getDocID()) +"]]></SUPPL>";
+				//}
+				//else
+				//{
+					correctString = "<SUPPL label=\"Suppl\"><![CDATA[" +(String)suppl.get(correctDocId.getDocID()) + "]]></SUPPL>";
+
+				//}
+
+				if(suppl.get(correctDocId.getDocID()) != null)
+				{
+					assertTrue(xmlString.indexOf(correctString) != -1);
+				}
+			}
+	}
+
 
 
 	protected void assertVolume(List EIDocs, String dataFormat) throws Exception
@@ -648,6 +867,8 @@ System.out.println("\ncorrectString"+correctString);
 		}
 	}
 
+
+
 	protected void assertDOI(List EIDocs, String dataFormat) throws Exception
 	{
 		HashMap dois = new HashMap();
@@ -678,7 +899,6 @@ System.out.println("\ncorrectString"+correctString);
 			{
 				correctString = "<DO><![CDATA[" +(String)dois.get(correctDocId.getDocID()) + "]]></DO>";
 			}
-			//System.out.println("xmlString "+xmlString+" correctString "+correctString);
 			if(dois.get(correctDocId.getDocID()) != null)
 			{
 				assertTrue(xmlString.indexOf(correctString) != -1);
@@ -1084,7 +1304,6 @@ System.out.println("\ncorrectString"+correctString);
 				{
 					correctString = "<MT><![CDATA[" + (String)issueTitles.get(correctDocId.getDocID()) + "]]></MT>";
 				}
-				//System.out.println("xmlString "+xmlString+" correctString "+correctString);
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
 		}
@@ -1232,7 +1451,6 @@ System.out.println("\ncorrectString"+correctString);
 	protected void assertUnControlledTerms(List EIDocs,String dataFormat) throws Exception
 	{
 		HashMap uctermsMap = new HashMap();
-		System.out.println(" dataFormat "+dataFormat);
 		if(dataFormat.equals(RIS.RIS_FORMAT))
 		{
 			uctermsMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "<FLS><FL><![CDATA[Bone-implant-interface]]></FL><FL><![CDATA[Critical load]]></FL><FL><![CDATA[Interface mechanisms]]></FL><FL><![CDATA[Shear strength, push-out test]]></FL></FLS>");
@@ -1266,7 +1484,6 @@ System.out.println("\ncorrectString"+correctString);
 			if(uctermsMap.get(correctDocId.getDocID()) != null)
 			{
 				correctString =  (String)uctermsMap.get(correctDocId.getDocID());
-				//System.out.println("xmlString "+xmlString+" correctString "+correctString);
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
 
@@ -1420,7 +1637,6 @@ System.out.println("\ncorrectString"+correctString);
 			if(isbnMap.get(correctDocId.getDocID()) != null)
 			{
 				correctString = (String)isbnMap.get(correctDocId.getDocID());
-				System.out.println("ISBN ID= "+correctDocId.getDocID()+" xmlString "+xmlString+" correctString "+correctString);
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
 
@@ -1777,7 +1993,6 @@ System.out.println("\ncorrectString"+correctString);
 			{
 
 				correctString = (String)auafFullMap.get(correctDocId.getDocID());
-				System.out.println("ID= "+correctDocId.getDocID()+" xmlString "+xmlString+" correctString "+correctString);
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
 
