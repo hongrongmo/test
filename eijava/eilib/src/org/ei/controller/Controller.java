@@ -131,15 +131,15 @@ public class Controller extends HttpServlet
 		}
 
 
-
+		String ip = request.getHeader("x-forwarded-for");
+		if(ip == null)
+		{
+			ip = request.getRemoteAddr();
+		}
 
 		try
 		{
-			String ip = request.getHeader("x-forwarded-for");
-			if(ip == null)
-			{
-				ip = request.getRemoteAddr();
-			}
+
 			IPBlocker ipBlocker = IPBlocker.getInstance();
 			if(ipBlocker.block(ip))
 			{
@@ -172,7 +172,15 @@ public class Controller extends HttpServlet
 			serverName = serverName+":"+Integer.toString(serverPort);
 		}
 
-		if((request.getHeader("referer") == null || request.getHeader("referer").indexOf(serverName)== -1) &&
+		System.out.println("*******************");
+		System.out.println("Servername:"+serverName);
+		System.out.println("Referer:"+request.getHeader("referer"));
+		System.out.println("CID:"+request.getParameter("CID"));
+		System.out.println("*******************");
+
+		if(!this.ipBypass.containsKey(ip) &&
+			request.getParameter("SYSTEM_PT") == null &&
+		   (request.getHeader("referer") == null || request.getHeader("referer").indexOf(serverName)== -1) &&
 		   (request.getParameter("CID") != null &&
 		   (request.getParameter("CID").equals("quickSearchCitationFormat") || request.getParameter("CID").equals("expertSearchCitationFormat"))))
 		{
