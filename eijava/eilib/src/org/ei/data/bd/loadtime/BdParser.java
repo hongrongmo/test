@@ -237,7 +237,7 @@ public class BdParser
 							String  itemid_idtype = itemidElement.getAttributeValue("idtype");
 							String  itemid_idtype1 = itemidElement.getAttributeValue("idtype");
 
-							if(itemid_idtype != null && (itemid_idtype.equals("CPX") || itemid_idtype.equals("GEO")))
+							if(itemid_idtype != null && (itemid_idtype.equals("CPX") || itemid_idtype.equals("GEO") || itemid_idtype.equals("CHEM")))
 							{
 								String  itemid = itemidElement.getTextTrim();
 								record.put("ACCESSNUMBER",itemid);
@@ -1227,7 +1227,8 @@ public class BdParser
 					{
 						paBuffer.append(AUDELIMITER);
 					}
-					publisheraddress = getAffiliation(publisher.getChild("affiliation",noNamespace));
+					publisheraddress = getConfAffiliation(publisher.getChild("affiliation",noNamespace));
+					//System.out.println("publisheraddress "+publisheraddress);
 					if(publisheraddress != null && publisheraddress.length()>1)
 					{
 						paBuffer.append(publisheraddress);
