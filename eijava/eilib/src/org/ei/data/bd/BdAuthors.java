@@ -73,7 +73,7 @@ public class BdAuthors
 		ArrayList searchValue = new ArrayList();
 		if (bdAuthorsMap != null && bdAuthorsMap.size() > 0)
 		{
-			Iterator auenum = bdAuthorsMap.entrySet().iterator();
+			Iterator auenum = bdAuthorsMap.keySet().iterator();
 			while (auenum.hasNext())
 			{
 				BdAuthor nextau = (BdAuthor) auenum.next();
