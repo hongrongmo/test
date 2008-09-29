@@ -46,10 +46,10 @@ public class BdAffiliations
 	        String [] affelements = bdAffiliations.split(BdParser.AUDELIMITER,-1);
 	        for (int i = 0; i < affelements.length; i++)
 	        {
-	            System.out.println(i+"-affelements -");
+	            //System.out.println(i+"-affelements -");
 	            if(affelements[i] != null && !affelements[i].trim().equals(""))
 	            {
-	                System.out.println(i+"-affelements |"+affelements[i]+"|");
+	                //System.out.println(i+"-affelements |"+affelements[i]+"|");
 	                BdAffiliation bdaff = new BdAffiliation(affelements[i], elements);
 	                bdAffiliationsMap.put(bdaff,bdaff);
 	            }
@@ -68,7 +68,7 @@ public class BdAffiliations
 		ArrayList affSearch = new ArrayList();
 		if (bdAffiliationsMap != null && bdAffiliationsMap.size() > 0)
 		{
-			Iterator affenum = bdAffiliationsMap.entrySet().iterator();
+			Iterator affenum = bdAffiliationsMap.keySet().iterator();
 			while (affenum.hasNext())
 			{
 				BdAffiliation nextaff= (BdAffiliation) affenum.next();
@@ -93,7 +93,7 @@ public class BdAffiliations
 		if (bdAffiliationsMap != null && bdAffiliationsMap.size() > 0)
 		{
 
-			Iterator affenum = bdAffiliationsMap.entrySet().iterator();
+			Iterator affenum = bdAffiliationsMap.keySet().iterator();
 			while (affenum.hasNext())
 			{
 				BdAffiliation nextaff= (BdAffiliation) affenum.next();
@@ -109,7 +109,7 @@ public class BdAffiliations
 		if (bdAffiliationsMap != null && bdAffiliationsMap.size() > 0)
 		{
 
-			Iterator affenum = bdAffiliationsMap.entrySet().iterator();
+			Iterator affenum = bdAffiliationsMap.keySet().iterator();
 			while (affenum.hasNext())
 			{
 				BdAffiliation nextaff= (BdAffiliation) affenum.next();
@@ -244,9 +244,9 @@ public class BdAffiliations
 
 		        BdAffiliation aff1 = (BdAffiliation) o1;
 		        BdAffiliation aff2 = (BdAffiliation) o2;
-		        System.out.println(aff1.toString());
-		        System.out.println("------");
-		        System.out.println(aff2.toString());
+		        //System.out.println(aff1.toString());
+		        //System.out.println("------");
+		        //System.out.println(aff2.toString());
 		        if((aff1.getAffOrganization().equals(aff2.getAffOrganization())) &&
 		                (aff1.getAffCityGroup().equals(aff2.getAffCityGroup()))&&
 		                (aff1.getAffAddressPart().equals(aff2.getAffAddressPart())))
