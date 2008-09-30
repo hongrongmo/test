@@ -113,7 +113,7 @@ public class OpenURL extends HttpServlet
         if(genre != null &&
            genre.equals("book"))
         {
-            response.sendRedirect("http://"+serverName+"/controller/servlet/Controller?CID=quickSearchCitationFormat&database=131072&yearselect=yearrange&searchtype=Book&allcol=ALL&section1=BN&searchWord1="+prep(request.getParameter("isbn")));
+            response.sendRedirect("http://"+serverName+"/controller/servlet/Controller?CID=quickSearchCitationFormat&SYSTEM_PT=t&database=131072&yearselect=yearrange&searchtype=Book&allcol=ALL&section1=BN&searchWord1="+prep(request.getParameter("isbn")));
         }
         else
         {
@@ -349,7 +349,7 @@ public class OpenURL extends HttpServlet
           startYear = "1969";
           endYear = String.valueOf(SearchForm.ENDYEAR);
           //forward to expert search results page
-          response.sendRedirect("http://"+serverName+"/controller/servlet/Controller?CID=expertSearchCitationFormat&searchtype="+Query.TYPE_EXPERT+"&database="+dbMask+"&searchWord1="+URLEncoder.encode(searchWord.toString())+"&yearselect=yearrange&startYear="+startYear+"&endYear="+endYear);
+          response.sendRedirect("http://"+serverName+"/controller/servlet/Controller?CID=expertSearchCitationFormat&SYSTEM_PT=t&searchtype="+Query.TYPE_EXPERT+"&database="+dbMask+"&searchWord1="+URLEncoder.encode(searchWord.toString())+"&yearselect=yearrange&startYear="+startYear+"&endYear="+endYear);
 		}
 
     }
