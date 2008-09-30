@@ -172,18 +172,14 @@ public class Controller extends HttpServlet
 			serverName = serverName+":"+Integer.toString(serverPort);
 		}
 
-		System.out.println("*******************");
-		System.out.println("Servername:"+serverName);
-		System.out.println("Referer:"+request.getHeader("referer"));
-		System.out.println("CID:"+request.getParameter("CID"));
-		System.out.println("*******************");
-
 		if(!this.ipBypass.containsKey(ip) &&
 			request.getParameter("SYSTEM_PT") == null &&
 		   (request.getHeader("referer") == null || request.getHeader("referer").indexOf(serverName)== -1) &&
 		   (request.getParameter("CID") != null &&
 		   (request.getParameter("CID").equals("quickSearchCitationFormat") || request.getParameter("CID").equals("expertSearchCitationFormat"))))
 		{
+
+			System.out.println("NO referrer blocking:"+ip);
 			return;
 		}
 
