@@ -17,7 +17,7 @@ public class ExtractPaperChem
 {
 	public static void main(String[] args) throws Exception
 	{
-		String[] m_ids = new String[]{"pch_B9CB8C083E7510C6E03408002081DCA4","pch_B9CB8C03873410C6E03408002081DCA4","pch_B9CB8C08184610C6E03408002081DCA4","pch_B9CB8C07B53010C6E03408002081DCA4","pch_B9CB8C0806B010C6E03408002081DCA4","pch_B9CB8C0806B110C6E03408002081DCA4"};
+		String[] m_ids = new String[]{"pch_115f0a9f85ab60809M7ea819817173212","pch_B9CB8C083E7510C6E03408002081DCA4","pch_B9CB8C03873410C6E03408002081DCA4","pch_B9CB8C08184610C6E03408002081DCA4","pch_B9CB8C07B53010C6E03408002081DCA4","pch_B9CB8C0806B010C6E03408002081DCA4","pch_B9CB8C0806B110C6E03408002081DCA4"};
 		Connection con = getDbCoonection("jdbc:oracle:thin:@neptune.elsevier.com:1521:EI", "AP_PRO1", "ei3it", "oracle.jdbc.driver.OracleDriver");
 		ExtractPaperChem epc = new ExtractPaperChem();
 		epc.extract(m_ids,con);
@@ -57,9 +57,12 @@ public class ExtractPaperChem
             while(rs1.next())
             {
 				writeColumn(rs1, "m_id", writerPub);
-				writeColumn(rs1, "ex", writerPub);
+				writeColumn(rs1, "an", writerPub);
 				writeColumn(rs1, "ab", writerPub);
 				writeColumn(rs1, "au", writerPub);
+				writeColumn(rs1, "cp", writerPub);
+				writeColumn(rs1, "em", writerPub);
+				writeColumn(rs1, "af", writerPub);
 				writeColumn(rs1, "media", writerPub);
 				writeColumn(rs1, "csess", writerPub);
 				writeColumn(rs1, "patno", writerPub);
@@ -133,13 +136,21 @@ public class ExtractPaperChem
 				column = StringUtil.getStringFromClob(clob);
 			}
 		}
+		else if(columnName.equals("af"))
+		{
+			column = formatAffiliation(rs1.getString("af"),rs1.getString("ac"),rs1.getString("asp"),rs1.getString("ay"));
+		}
+		else if(columnName.equals("au"))
+		{
+			column = formatAuthor(rs1.getString("au"));
+		}
+		else if(columnName.equals("cp"))
+		{
+			column = formatPersonalName(0,rs1.getString("cp"));
+		}
 		else
 		{
 			column   = rs1.getString(columnName);
-			if(columnName.equals("au"))
-			{
-				column = formatAuthor(column);
-			}
 		}
 
 		if(column != null)
@@ -147,9 +158,81 @@ public class ExtractPaperChem
 			writerPub.print(column + "\t");
 		}
 		else
+		{
 			writerPub.print("\t");
+		}
 
 	}
+
+	public String formatAffiliation(String affiliation,String city,String state,String country)throws Exception
+	{
+		StringBuffer affBuffer = new StringBuffer();
+		if(affiliation!=null || city!=null || state!=null || country!=null)
+		{
+			affBuffer.append("1");
+			affBuffer.append(BdParser.IDDELIMITER);//affid
+			if(affiliation!=null)
+			{
+				affBuffer.append(affiliation);
+			}
+			affBuffer.append(BdParser.IDDELIMITER);//afforganization
+			affBuffer.append(BdParser.IDDELIMITER);//affcityGroup
+			if(country!=null)
+			{
+				affBuffer.append(country);
+			}
+			affBuffer.append(BdParser.IDDELIMITER);//affCountry
+			affBuffer.append(BdParser.IDDELIMITER);//affAddressPart
+			if(city!=null)
+			{
+				affBuffer.append(city);
+			}
+			affBuffer.append(BdParser.IDDELIMITER);//affCity
+			if(state!=null)
+			{
+				affBuffer.append(state);
+			}
+			affBuffer.append(BdParser.IDDELIMITER);//affState
+			affBuffer.append(BdParser.IDDELIMITER);//affPostalCode
+			affBuffer.append(BdParser.IDDELIMITER);//affText
+		}
+		return affBuffer.toString();
+	}
+
+	public String formatPersonalName(int i,String fullname)
+	{
+		String lastName = null;
+		String givenName = null;
+		StringBuffer nameBuffer = new StringBuffer();
+		if(fullname != null)
+		{
+			if(fullname.indexOf(",")>-1)
+			{
+				lastName  = fullname.substring(0,fullname.indexOf(",")-1);
+				givenName = fullname.substring(fullname.indexOf(",")+1);
+			}
+			else
+			{
+				lastName = fullname;
+				givenName = "";
+			}
+
+			nameBuffer.append(i);
+			nameBuffer.append(BdParser.IDDELIMITER);//id
+			nameBuffer.append(BdParser.IDDELIMITER);//initials
+			nameBuffer.append(BdParser.IDDELIMITER);//indexname
+			nameBuffer.append(BdParser.IDDELIMITER);//Degrees
+			nameBuffer.append(lastName);
+			nameBuffer.append(BdParser.IDDELIMITER);//Surname
+			nameBuffer.append(givenName);
+			nameBuffer.append(BdParser.IDDELIMITER);//givenName
+			nameBuffer.append(BdParser.IDDELIMITER);//Suffix
+			nameBuffer.append(BdParser.IDDELIMITER);//Nametext
+			nameBuffer.append(BdParser.IDDELIMITER);//text
+		}
+		return nameBuffer.toString();
+	}
+
 
 	public String formatAuthor(String column)
 	{
