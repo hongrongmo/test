@@ -200,6 +200,7 @@ public class BDDocBuilder
 					buildField(Keys.SUB_INDEX,rset.getString("SUB_INDEX"),ht);
 					buildField(Keys.SPECIFIC_NAMES,rset.getString("SPECN"),ht);
 					buildField(Keys.SUPPL,rset.getString("SUPPL"),ht);
+					buildField(Keys.PDFIX,rset.getString("PDFIX"),ht);
 				}
 
 				eiDoc.setLoadNumber(rset.getInt("LOADNUMBER"));
