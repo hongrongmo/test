@@ -76,6 +76,7 @@ public class ExtractPaperChem
 				writeColumn(rs1, "sub_index", writerPub);
 				writeColumn(rs1, "specn", writerPub);
 				writeColumn(rs1, "suppl", writerPub);
+				writeColumn(rs1, "pdfix", writerPub);
                 writerPub.println();
             }
 
