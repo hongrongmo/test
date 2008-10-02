@@ -17,7 +17,7 @@ public class ExtractPaperChem
 {
 	public static void main(String[] args) throws Exception
 	{
-		String[] m_ids = new String[]{"pch_115f0a9f85ab60809M7ea819817173212","pch_B9CB8C083E7510C6E03408002081DCA4","pch_B9CB8C03873410C6E03408002081DCA4","pch_B9CB8C08184610C6E03408002081DCA4","pch_B9CB8C07B53010C6E03408002081DCA4","pch_B9CB8C0806B010C6E03408002081DCA4","pch_B9CB8C0806B110C6E03408002081DCA4"};
+		String[] m_ids = new String[]{"pch_B9CB8C08410F10C6E03408002081DCA4","pch_34f213f85aae815aM7e2b19817173212","pch_115f0a9f85ab60809M7ea819817173212","pch_B9CB8C083E7510C6E03408002081DCA4","pch_B9CB8C03873410C6E03408002081DCA4","pch_B9CB8C08184610C6E03408002081DCA4","pch_B9CB8C07B53010C6E03408002081DCA4","pch_B9CB8C0806B010C6E03408002081DCA4","pch_B9CB8C0806B110C6E03408002081DCA4"};
 		Connection con = getDbCoonection("jdbc:oracle:thin:@neptune.elsevier.com:1521:EI", "AP_PRO1", "ei3it", "oracle.jdbc.driver.OracleDriver");
 		ExtractPaperChem epc = new ExtractPaperChem();
 		epc.extract(m_ids,con);
@@ -63,6 +63,10 @@ public class ExtractPaperChem
 				writeColumn(rs1, "cp", writerPub);
 				writeColumn(rs1, "em", writerPub);
 				writeColumn(rs1, "af", writerPub);
+				writeColumn(rs1, "ed", writerPub);
+				writeColumn(rs1, "mt", writerPub);
+				writeColumn(rs1, "st", writerPub);
+				writeColumn(rs1, "se", writerPub);
 				writeColumn(rs1, "media", writerPub);
 				writeColumn(rs1, "csess", writerPub);
 				writeColumn(rs1, "patno", writerPub);
@@ -146,7 +150,11 @@ public class ExtractPaperChem
 		}
 		else if(columnName.equals("cp"))
 		{
-			column = formatPersonalName(0,rs1.getString("cp"));
+			column = formatPersonalName(rs1.getString("cp"));
+		}
+		else if(columnName.equals("ed"))
+		{
+			column = formatPersonalName(rs1.getString("ed"));
 		}
 		else
 		{
@@ -199,36 +207,56 @@ public class ExtractPaperChem
 		return affBuffer.toString();
 	}
 
-	public String formatPersonalName(int i,String fullname)
+	public String formatPersonalName(String names)
 	{
-		String lastName = null;
-		String givenName = null;
+		String lastName     = null;
+		String givenName    = null;
+		String fullname     = null;
+		String[] namesArray = null;
 		StringBuffer nameBuffer = new StringBuffer();
-		if(fullname != null)
+		if(names != null)
 		{
-			if(fullname.indexOf(",")>-1)
+			if(names.indexOf(";")>-1)
 			{
-				lastName  = fullname.substring(0,fullname.indexOf(",")-1);
-				givenName = fullname.substring(fullname.indexOf(",")+1);
+				namesArray = names.split(";",-1);
 			}
 			else
 			{
-				lastName = fullname;
-				givenName = "";
+				namesArray = new String[1];
+				namesArray[0] = names;
 			}
 
-			nameBuffer.append(i);
-			nameBuffer.append(BdParser.IDDELIMITER);//id
-			nameBuffer.append(BdParser.IDDELIMITER);//initials
-			nameBuffer.append(BdParser.IDDELIMITER);//indexname
-			nameBuffer.append(BdParser.IDDELIMITER);//Degrees
-			nameBuffer.append(lastName);
-			nameBuffer.append(BdParser.IDDELIMITER);//Surname
-			nameBuffer.append(givenName);
-			nameBuffer.append(BdParser.IDDELIMITER);//givenName
-			nameBuffer.append(BdParser.IDDELIMITER);//Suffix
-			nameBuffer.append(BdParser.IDDELIMITER);//Nametext
-			nameBuffer.append(BdParser.IDDELIMITER);//text
+			for(int i=0;i<namesArray.length;i++)
+			{
+				fullname = namesArray[i];
+				if(fullname.indexOf(",")>-1)
+				{
+					lastName  = fullname.substring(0,fullname.indexOf(",")-1);
+					givenName = fullname.substring(fullname.indexOf(",")+1);
+				}
+				else
+				{
+					lastName = fullname;
+					givenName = "";
+				}
+
+				nameBuffer.append(i);
+				nameBuffer.append(BdParser.IDDELIMITER);//id
+				nameBuffer.append(BdParser.IDDELIMITER);//initials
+				nameBuffer.append(BdParser.IDDELIMITER);//indexname
+				nameBuffer.append(BdParser.IDDELIMITER);//Degrees
+				nameBuffer.append(lastName);
+				nameBuffer.append(BdParser.IDDELIMITER);//Surname
+				nameBuffer.append(givenName);
+				nameBuffer.append(BdParser.IDDELIMITER);//givenName
+				nameBuffer.append(BdParser.IDDELIMITER);//Suffix
+				nameBuffer.append(BdParser.IDDELIMITER);//Nametext
+				nameBuffer.append(BdParser.IDDELIMITER);//text
+				if(i<namesArray.length-1)
+				{
+					nameBuffer.append(BdParser.AUDELIMITER);
+				}
+			}
 		}
 		return nameBuffer.toString();
 	}
