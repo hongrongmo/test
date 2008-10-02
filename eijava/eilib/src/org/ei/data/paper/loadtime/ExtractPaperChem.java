@@ -142,7 +142,7 @@ public class ExtractPaperChem
 		}
 		else if(columnName.equals("au"))
 		{
-			column = formatAuthor(rs1.getString("au"));
+			column = formatAuthor(rs1.getString("au"),rs1.getString("af"));
 		}
 		else if(columnName.equals("cp"))
 		{
@@ -234,28 +234,34 @@ public class ExtractPaperChem
 	}
 
 
-	public String formatAuthor(String column)
+	public String formatAuthor(String author,String affiliation)
 	{
 		String lastName = null;
 		String fullname = null;
 		String givenName = null;
-		String[] columnArray = null;
+		String[] authorArray = null;
+		String affId = "0";
 		StringBuffer nameBuffer = new StringBuffer();
-		if(column != null)
+		if(author != null)
 		{
-			if(column.indexOf(";")>-1)
+			if(author.indexOf(";")>-1)
 			{
-				columnArray = column.split(";",-1);
+				authorArray = author.split(";",-1);
 			}
 			else
 			{
-				columnArray = new String[1];
-				columnArray[0] = column;
+				authorArray = new String[1];
+				authorArray[0] = author;
 			}
 
-			for(int i=0;i<columnArray.length;i++)
+			if(affiliation!=null&&affiliation.length()>0)
 			{
-				fullname = columnArray[i];
+				affId="1";
+			}
+
+			for(int i=0;i<authorArray.length;i++)
+			{
+				fullname = authorArray[i];
 				if(fullname.indexOf(",")>-1)
 				{
 					lastName  = fullname.substring(0,fullname.indexOf(",")-1);
@@ -264,7 +270,7 @@ public class ExtractPaperChem
 				nameBuffer.append(BdParser.IDDELIMITER);//sec
 				nameBuffer.append(i);
 				nameBuffer.append(BdParser.IDDELIMITER);//auid
-				nameBuffer.append("1");
+				nameBuffer.append(affId);
 				nameBuffer.append(BdParser.IDDELIMITER);//afid
 				nameBuffer.append(BdParser.IDDELIMITER);//indexname
 				nameBuffer.append(BdParser.IDDELIMITER);//initials
