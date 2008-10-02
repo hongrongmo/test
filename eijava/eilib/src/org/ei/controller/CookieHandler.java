@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.ei.session.User;
 import org.ei.session.UserSession;
 import org.ei.util.*;
+import org.ei.security.SecureID;
 import java.io.IOException;
 import org.xml.sax.SAXException;
 import org.xml.sax.InputSource;
@@ -33,6 +34,24 @@ public class CookieHandler
 		Map cookieMap = getCookieMap(request);
 		String customerID = ses.getUser().getCustomerID();
 		String sessionID = ses.getSessionID().toString();
+
+		/*
+			This block handles secureID;
+		*/
+		if(cookieMap.containsKey("SECUREID"))
+		{
+			String secureID = (String)cookieMap.get("SECUREID");
+			if(!SecureID.validSecureID(secureID))
+			{
+				printSecurityViolation(response);
+				return true;
+			}
+		}
+		else
+		{
+			addSecureIDCookie(response);
+		}
+
 
 		/*
 			This block handles clientID cookies
@@ -116,6 +135,16 @@ public class CookieHandler
 	private static synchronized void resetDepartment()
 	{
 		departmentMap = null;
+	}
+
+	private static void printSecurityViolation(HttpServletResponse response)
+			throws Exception
+	{
+		response.setContentType("text/html");
+		Writer out = response.getWriter();
+		out.write("<html><head><title>Security violation</title>");
+		out.write("<SCRIPT LANGUAGE='Javascript' SRC='/engresources/js/StylesheetLinks.js'></SCRIPT>");
+		out.write("</head><body>Security Violation</body></html>");
 	}
 
 	private static void printDepartmentForm(HttpServletRequest request,
@@ -205,4 +234,13 @@ public class CookieHandler
 		clientIDCookie.setMaxAge(63072000);
 		response.addCookie(clientIDCookie);
 	}
+
+	private static void addSecureIDCookie(HttpServletResponse response)
+		throws Exception
+	{
+		Cookie secureIDCookie = new Cookie("SECUREID", SecureID.getSecureID());
+		secureIDCookie.setMaxAge(63072000);
+		response.addCookie(secureIDCookie);
+	}
+
 }
