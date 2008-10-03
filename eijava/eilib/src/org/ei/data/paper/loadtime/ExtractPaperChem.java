@@ -71,6 +71,10 @@ public class ExtractPaperChem
 				writeColumn(rs1, "bn", writerPub);
 				writeColumn(rs1, "sn", writerPub);
 				writeColumn(rs1, "cn", writerPub);
+				writeColumn(rs1, "vo", writerPub);
+				writeColumn(rs1, "iss", writerPub);
+				writeColumn(rs1, "sd", writerPub);
+				writeColumn(rs1, "yr", writerPub);
 				writeColumn(rs1, "media", writerPub);
 				writeColumn(rs1, "csess", writerPub);
 				writeColumn(rs1, "patno", writerPub);
@@ -166,6 +170,14 @@ public class ExtractPaperChem
 		{
 			column = formatISBN(rs1.getString("bn"));
 		}
+		else if(columnName.equals("vo"))
+		{
+			column = formatVOLUME(rs1.getString("vo"));
+		}
+		else if(columnName.equals("iss"))
+		{
+			column = formatISSUE(rs1.getString("iss"));
+		}
 		else
 		{
 			column   = rs1.getString(columnName);
@@ -180,6 +192,24 @@ public class ExtractPaperChem
 			writerPub.print("\t");
 		}
 
+	}
+
+	public String formatVOLUME(String volume)
+	{
+		if(volume != null)
+		{
+			volume = volume.replaceAll("v","").trim();
+		}
+		return volume;
+	}
+
+	public String formatISSUE(String issue)
+	{
+		if(issue != null)
+		{
+			issue = issue.replaceAll("n","").trim();
+		}
+		return issue;
 	}
 
 	public String formatISBN(String isbn)
