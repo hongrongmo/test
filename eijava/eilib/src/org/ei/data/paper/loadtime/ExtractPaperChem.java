@@ -67,6 +67,10 @@ public class ExtractPaperChem
 				writeColumn(rs1, "mt", writerPub);
 				writeColumn(rs1, "st", writerPub);
 				writeColumn(rs1, "se", writerPub);
+				writeColumn(rs1, "cf", writerPub);
+				writeColumn(rs1, "bn", writerPub);
+				writeColumn(rs1, "sn", writerPub);
+				writeColumn(rs1, "cn", writerPub);
 				writeColumn(rs1, "media", writerPub);
 				writeColumn(rs1, "csess", writerPub);
 				writeColumn(rs1, "patno", writerPub);
@@ -158,6 +162,10 @@ public class ExtractPaperChem
 		{
 			column = formatPersonalName(rs1.getString("ed"));
 		}
+		else if(columnName.equals("bn"))
+		{
+			column = formatISBN(rs1.getString("bn"));
+		}
 		else
 		{
 			column   = rs1.getString(columnName);
@@ -172,6 +180,42 @@ public class ExtractPaperChem
 			writerPub.print("\t");
 		}
 
+	}
+
+	public String formatISBN(String isbn)
+	{
+		StringBuffer isbnBuffer = new StringBuffer();
+		String[] isbnArray = null;
+		if(isbn!=null)
+		{
+			if(isbn.indexOf("-")>-1)
+			{
+				isbn = isbn.replaceAll("-","");
+			}
+			if(isbn.indexOf(" ")>-1)
+			{
+				isbnArray = isbn.split(" ",-1);
+			}
+			else
+			{
+				isbnArray = new String[1];
+				isbnArray[0] = isbn;
+			}
+			for(int i=0;i<isbnArray.length;i++)
+			{
+				isbnBuffer.append(BdParser.IDDELIMITER);//isbnType
+				isbnBuffer.append(isbnArray[i].length());
+				isbnBuffer.append(BdParser.IDDELIMITER);//isbnLength
+				isbnBuffer.append(BdParser.IDDELIMITER);//isbnVolume
+				isbnBuffer.append(isbnArray[i]);
+				isbnBuffer.append(BdParser.IDDELIMITER);//isbnValue
+				if(i<isbnArray.length-1)
+				{
+					isbnBuffer.append(BdParser.AUDELIMITER);
+				}
+			}
+		}
+		return isbnBuffer.toString();
 	}
 
 	public String formatAffiliation(String affiliation,String city,String state,String country)throws Exception
