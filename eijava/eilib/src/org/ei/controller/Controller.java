@@ -100,6 +100,11 @@ public class Controller extends HttpServlet
 
 			this.ipBypass.put("84.18.184.16", "y");
 			this.ipBypass.put("170.107.188.20", "y");
+			/* Univ. of Illinois */
+			this.ipBypass.put("128.174.36.130", "y");
+			/*UCLA*/
+			this.ipBypass.put("216.147.218.158", "y");
+
         }
         catch(Exception e)
         {
