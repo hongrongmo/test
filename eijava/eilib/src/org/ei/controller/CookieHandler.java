@@ -26,12 +26,12 @@ public class CookieHandler
 
 	public static boolean handleRequest(HttpServletRequest request,
                         	     		HttpServletResponse response,
+                        	     		Map cookieMap,
                         	     		UserSession ses)
     	throws Exception
 	{
 
 		Map dmap = getDepartmentMap();
-		Map cookieMap = getCookieMap(request);
 		String customerID = ses.getUser().getCustomerID();
 		String sessionID = ses.getSessionID().toString();
 
@@ -100,7 +100,7 @@ public class CookieHandler
 		return false;
 	}
 
-	private static Map getCookieMap(HttpServletRequest request)
+	public static Map getCookieMap(HttpServletRequest request)
 	{
 		Map map = new HashMap();
 		Cookie[] cookies = request.getCookies();
@@ -238,7 +238,7 @@ public class CookieHandler
 	private static void addSecureIDCookie(HttpServletResponse response)
 		throws Exception
 	{
-		Cookie secureIDCookie = new Cookie("SECUREID", SecureID.getSecureID());
+		Cookie secureIDCookie = new Cookie("SECUREID", SecureID.getSecureID(-1));
 		secureIDCookie.setMaxAge(63072000);
 		response.addCookie(secureIDCookie);
 	}
