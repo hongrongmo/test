@@ -201,7 +201,6 @@ public class BDDocBuilder
 					buildField(Keys.SPECIFIC_NAMES,rset.getString("SPECN"),ht);
 					buildField(Keys.SUPPL,rset.getString("SUPPL"),ht);
 					buildField(Keys.PDFIX,rset.getString("PDFIX"),ht);
-					buildField(Keys.REPORT_NUMBER_PAPER,rset.getString("REPORTNUMBER"),ht);
 					buildField(Keys.PI,rset.getString("PII"),ht);
 				}
 
