@@ -85,6 +85,8 @@ public class ExtractPaperChem
 				writeColumn(rs1, "suppl", writerPub);
 				writeColumn(rs1, "pdfix", writerPub);
 				writeColumn(rs1, "rn", writerPub);
+				writeColumn(rs1, "do", writerPub);
+				writeColumn(rs1, "pi", writerPub);
                 writerPub.println();
             }
 
