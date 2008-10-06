@@ -33,6 +33,7 @@
 <!--    <include name="**/saxpath.jar"/> -->
     <include name="**/smtp.jar"/>
     <include name="**/xerces.jar"/>
+    <include name="**/java_memcached-release_1.3.2.jar"/>
   </fileset>
 
   <path id="project.classpath">
