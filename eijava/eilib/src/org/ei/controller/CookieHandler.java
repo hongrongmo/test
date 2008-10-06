@@ -38,20 +38,10 @@ public class CookieHandler
 		/*
 			This block handles secureID;
 		*/
-		if(cookieMap.containsKey("SECUREID"))
-		{
-			Cookie secureID = (Cookie) cookieMap.get("SECUREID");			
-			if(!SecureID.validSecureID(secureID.getValue()))
-			{
-				printSecurityViolation(response);
-				return true;
-			}
-		}
-		else
+		if(!cookieMap.containsKey("SECUREID"))
 		{
 			addSecureIDCookie(response);
 		}
-
 
 		/*
 			This block handles clientID cookies
@@ -137,15 +127,6 @@ public class CookieHandler
 		departmentMap = null;
 	}
 
-	private static void printSecurityViolation(HttpServletResponse response)
-			throws Exception
-	{
-		response.setContentType("text/html");
-		Writer out = response.getWriter();
-		out.write("<html><head><title>Security violation</title>");
-		out.write("<SCRIPT LANGUAGE='Javascript' SRC='/engresources/js/StylesheetLinks.js'></SCRIPT>");
-		out.write("</head><body>Security Violation</body></html>");
-	}
 
 	private static void printDepartmentForm(HttpServletRequest request,
 											HttpServletResponse response,
