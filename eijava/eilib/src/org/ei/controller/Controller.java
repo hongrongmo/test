@@ -274,7 +274,7 @@ public class Controller extends HttpServlet
 				* If captchaID is present then it is coming from a successful captcha
 				* validation.
 				*/
-				String captchaID = request.getParameter("secureID");
+				String captchaID = request.getParameter("captchaID");
 				if(captchaID != null)
 				{
 					/*
