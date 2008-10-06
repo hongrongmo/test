@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.ei.session.User;
 import org.ei.session.UserSession;
 import org.ei.util.*;
-import org.ei.security.SecureID;
+import org.ei.security.utils.SecureID;
 import java.io.IOException;
 import org.xml.sax.SAXException;
 import org.xml.sax.InputSource;
@@ -40,8 +40,8 @@ public class CookieHandler
 		*/
 		if(cookieMap.containsKey("SECUREID"))
 		{
-			String secureID = (String)cookieMap.get("SECUREID");
-			if(!SecureID.validSecureID(secureID))
+			Cookie secureID = (Cookie) cookieMap.get("SECUREID");			
+			if(!SecureID.validSecureID(secureID.getValue()))
 			{
 				printSecurityViolation(response);
 				return true;
