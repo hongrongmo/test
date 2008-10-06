@@ -37,6 +37,14 @@
         <param-name>authURL</param-name>
         <param-value>http://@session_server@/sessionservice/servlet/SessionService</param-value>
       </init-param>
+      <init-param>
+        <param-name>memcacheServers</param-name>
+        <param-value>@memcacheServers@</param-value>
+      </init-param>
+      <init-param>
+        <param-name>memcacheWeights</param-name>
+        <param-value>@memcacheWeights@</param-value>
+      </init-param>
       <load-on-startup>1</load-on-startup>
     </servlet>
 
