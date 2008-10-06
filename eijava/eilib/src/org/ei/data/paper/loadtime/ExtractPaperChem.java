@@ -96,6 +96,7 @@ public class ExtractPaperChem
 				writeColumn(rs1, "do", writerPub);
 				writeColumn(rs1, "pi", writerPub);
 				writeColumn(rs1, "cc", writerPub);
+				writeColumn(rs1, "at", writerPub);
                 writerPub.println();
             }
 
@@ -178,6 +179,14 @@ public class ExtractPaperChem
 		else if(columnName.equals("iss"))
 		{
 			column = formatISSUE(rs1.getString("iss"));
+		}
+		else if(columnName.equals("at"))
+		{
+			column = rs1.getString("at");
+			if(column == null || column.indexOf("Author abstract") != -1)
+				column = "y";
+			else
+				column = "n";
 		}
 		else
 		{
