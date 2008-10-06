@@ -118,6 +118,18 @@
       <load-on-startup>8</load-on-startup>
     </servlet>
 
+    <servlet>
+      <servlet-name>Captcha</servlet-name>
+      <description>The Captcha servlet</description>
+      <servlet-class>org.ei.security.captcha.CaptchaServlet</servlet-class>
+      <load-on-startup>9</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+  	<servlet-name>Captcha</servlet-name>
+	<url-pattern>/servlet/Captcha</url-pattern>
+    </servlet-mapping>
+
     <servlet-mapping>
       <servlet-name>Controller</servlet-name>
       <url-pattern>/servlet/Controller</url-pattern>
