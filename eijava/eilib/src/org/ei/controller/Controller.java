@@ -62,8 +62,8 @@ public class Controller extends HttpServlet
             authURL = config.getInitParameter("authURL");
             appName = config.getInitParameter("appName");
             lhlURL = config.getInitParameter("lindahallURL");
-			memcacheServers = "206.137.75.51:11211";
-			memcacheWeights = "1";
+            memcacheServers = config.getInitParameter("memcacheServers");
+            memcacheWeights = config.getInitParameter("memcacheWeights");
 
 			String[] s = null;
 			String[] w = null;
