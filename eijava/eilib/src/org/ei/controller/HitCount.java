@@ -26,17 +26,19 @@ public class HitCount
 		String [] valueArray = value.split(":");
 		this.createTime = Long.parseLong(valueArray[0]);
 		this.hits = Integer.parseInt(valueArray[1]);
-		this.blocked = Boolean.getBoolean(valueArray[2]);
+		this.blocked = new Boolean(valueArray[2]).booleanValue();
 		this.hits++;
-		//if(this.hits > 12)
-		if(this.hits > 30)
+		long curTime = System.currentTimeMillis();
+		long diff =  curTime - this.createTime;
+		if(diff > 10000)
 		{
-			double hitsPerSecond = (((double)(System.currentTimeMillis()-createTime)/(double)1000)) /(double)(hits);
-			//if(hitsPerSecond > 3)
-			if(hitsPerSecond > 1)
-			{
-				blocked = true;
-			}
+			this.hits = 0;
+			this.createTime = curTime;
+		}
+
+		if(this.hits > 7)
+		{
+			this.blocked = true;
 		}
 	}
 
