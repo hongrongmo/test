@@ -17,7 +17,7 @@ public class ExtractPaperChem
 {
 	public static void main(String[] args) throws Exception
 	{
-		String[] m_ids = new String[]{"pch_B9CB8C08410F10C6E03408002081DCA4","pch_34f213f85aae815aM7e2b19817173212","pch_115f0a9f85ab60809M7ea819817173212","pch_B9CB8C083E7510C6E03408002081DCA4","pch_B9CB8C03873410C6E03408002081DCA4","pch_B9CB8C08184610C6E03408002081DCA4","pch_B9CB8C07B53010C6E03408002081DCA4","pch_B9CB8C0806B010C6E03408002081DCA4","pch_B9CB8C0806B110C6E03408002081DCA4","pch_34f213f85aae815aM672219817173212","pch_34f213f85aae815aM7e1a19817173212"};
+		String[] m_ids = new String[]{"pch_34f213f85aae815aM672219817173212","pch_B9CB8C08410F10C6E03408002081DCA4","pch_34f213f85aae815aM7e2b19817173212","pch_115f0a9f85ab60809M7ea819817173212","pch_B9CB8C083E7510C6E03408002081DCA4","pch_B9CB8C03873410C6E03408002081DCA4","pch_B9CB8C08184610C6E03408002081DCA4","pch_B9CB8C07B53010C6E03408002081DCA4","pch_B9CB8C0806B010C6E03408002081DCA4","pch_B9CB8C0806B110C6E03408002081DCA4","pch_34f213f85aae815aM672219817173212","pch_34f213f85aae815aM7e1a19817173212"};
 		Connection con = getDbCoonection("jdbc:oracle:thin:@neptune.elsevier.com:1521:EI", "AP_PRO1", "ei3it", "oracle.jdbc.driver.OracleDriver");
 		ExtractPaperChem epc = new ExtractPaperChem();
 		epc.extract(m_ids,con);
@@ -75,6 +75,8 @@ public class ExtractPaperChem
 				writeColumn(rs1, "iss", writerPub);
 				writeColumn(rs1, "sd", writerPub);
 				writeColumn(rs1, "yr", writerPub);
+				writeColumn(rs1, "md", writerPub);
+				writeColumn(rs1, "ml", writerPub);
 				writeColumn(rs1, "media", writerPub);
 				writeColumn(rs1, "csess", writerPub);
 				writeColumn(rs1, "patno", writerPub);
@@ -180,6 +182,14 @@ public class ExtractPaperChem
 		{
 			column = formatISSUE(rs1.getString("iss"));
 		}
+		else if(columnName.equals("md"))
+		{
+			column = formatDate(rs1.getString("md"),rs1.getString("m1"),rs1.getString("m2"));
+		}
+		else if(columnName.equals("ml"))
+		{
+			column = formatConferenceLocation(rs1.getString("ml"),rs1.getString("mc"),rs1.getString("ms"),rs1.getString("my"));
+		}
 		else if(columnName.equals("at"))
 		{
 			column = rs1.getString("at");
@@ -201,7 +211,65 @@ public class ExtractPaperChem
 		{
 			writerPub.print("\t");
 		}
+	}
 
+	public String formatConferenceLocation(String location, String city,String state, String country)
+	{
+		StringBuffer affBuffer = new StringBuffer();
+
+		affBuffer.append(BdParser.IDDELIMITER);//affid
+		affBuffer.append(BdParser.IDDELIMITER);//venue
+		affBuffer.append(BdParser.IDDELIMITER);//organization
+		affBuffer.append(BdParser.IDDELIMITER);//address_part
+		affBuffer.append(BdParser.IDDELIMITER);//citygroup
+		if(location != null)
+		{
+			affBuffer.append(location);
+		}
+		else
+		{
+			if(city !=null)
+			{
+				affBuffer.append(city);
+			}
+
+			if(state !=null)
+			{
+				if(city!= null)
+				{
+					affBuffer.append(", ");
+				}
+				affBuffer.append(state);
+			}
+		}
+		affBuffer.append(BdParser.IDDELIMITER);//country
+
+		if(country!= null && location!=null && location.indexOf(country)<0)
+		{
+			affBuffer.append(country);
+		}
+
+
+		return affBuffer.toString();
+
+	}
+
+	public String formatDate(String md,String m1,String m2)
+	{
+		String dateString = null;
+		if(md != null)
+		{
+			dateString = md;
+		}
+		else if(m1 !=null)
+		{
+			dateString = m1;
+		}
+		else if(m2 !=null)
+		{
+			dateString = m2;
+		}
+		return dateString;
 	}
 
 	public String formatVOLUME(String volume)
