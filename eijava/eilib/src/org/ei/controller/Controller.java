@@ -13,11 +13,13 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.RequestDispatcher; 
 
 import org.ei.controller.content.ContentConfig;
 import org.ei.controller.content.ContentDescriptor;
 import org.ei.controller.logging.LogEntry;
 import org.ei.controller.logging.Logger;
+import org.ei.security.utils.SecureID;
 import org.ei.session.SessionCache;
 import org.ei.session.SessionID;
 import org.ei.session.SessionStatus;
@@ -32,7 +34,7 @@ public class Controller extends HttpServlet
     public static String REDIR_PAGE_INVALID_CID = "invalidCID";
     public static String REDIR_TOKEN_EXPIRED = "tokenExpired";
     public static String REDIR_TOKEN_CONCURRENT = "tokenConcurrent";
-    public static String REDIR_PAGE_GENERAL_EXCEPTION = "generalException";
+    public static String REDIR_PAGE_GENERAL_EXCEPTION = "generalException";    
     public static String HOME_CID = "home";
     public static String XML_CID = "openXML";
     public static String REDIR_PAGE_SESSION_EXPIRED = "endSession";
@@ -44,8 +46,9 @@ public class Controller extends HttpServlet
     private String lhlURL;
     private SessionCache sCache;
     private Map ipBypass = new HashMap();
-
-
+    private static MemCached memcached = null;
+	private String memcacheServers;
+    private String memcacheWeights;
     private boolean appendSession;
 
     public void init()
@@ -59,6 +62,22 @@ public class Controller extends HttpServlet
             authURL = config.getInitParameter("authURL");
             appName = config.getInitParameter("appName");
             lhlURL = config.getInitParameter("lindahallURL");
+			memcacheServers = "206.137.75.51:11211";
+			memcacheWeights = "1";
+
+			String[] s = null;
+			String[] w = null;
+
+			if (memcacheServers != null)
+			{
+				s = memcacheServers.split(",");
+				if (memcacheWeights !=  null) {
+					w = memcacheWeights.split(",");
+				}
+				memcached = new MemCached();
+				memcached.initialize(s, w);
+			}
+
             sCache = SessionCache.getInstance(authURL,
                               appName);
 
@@ -104,7 +123,6 @@ public class Controller extends HttpServlet
 			this.ipBypass.put("128.174.36.130", "y");
 			/*UCLA*/
 			this.ipBypass.put("216.147.218.158", "y");
-
         }
         catch(Exception e)
         {
@@ -128,6 +146,7 @@ public class Controller extends HttpServlet
                         HttpServletResponse response)
         throws IOException, ServletException
     {
+   
 		String uagent = request.getHeader("User-Agent");
 		if(uagent != null &&
 		   uagent.indexOf("PEAR") > -1)
@@ -212,12 +231,55 @@ public class Controller extends HttpServlet
 								   response,
 								   printer,
 								   serverName);
-
 			try
-			{
-				if(CookieHandler.handleRequest(request,response,usess))
+			{   
+				Map cookieMap = CookieHandler.getCookieMap(request);
+				if(CookieHandler.handleRequest(request,response,cookieMap, usess))
 				{
 					return;
+				}	
+				if((memcached != null))
+				{
+					HitCount hitcount = null;
+					String memcachedkey = null;
+					String secureID = request.getParameter("secureID");
+										
+					if(cookieMap.containsKey("SECUREID"))
+					{
+						Cookie cookie = (Cookie) cookieMap.get("SECUREID");
+						memcachedkey = cookie.getValue() ;
+					}
+					else
+					{
+						memcachedkey = ip;
+					}
+					if(memcached.keyExists(memcachedkey))
+					{
+						if(secureID != null)
+						{							
+							if(SecureID.validSecureID(secureID))
+								memcached.delete(memcachedkey);								
+						}
+						else
+						{
+							hitcount = new  HitCount(memcachedkey,memcached.get(memcachedkey));
+						}
+					}
+					else
+					{
+						hitcount = new HitCount(memcachedkey);
+					}
+					if(hitcount != null)
+					{
+						System.out.println("ADD to Memcached: key: " + hitcount.getKey() + " with value: " + hitcount.stringValue() );
+						memcached.add(hitcount.getKey(),hitcount.stringValue());					
+						if(hitcount.getBlocked())
+						{
+							RequestDispatcher rd = getServletContext().getRequestDispatcher("/servlet/Captcha");
+							rd.forward(request, response);						
+							return;
+						}
+					}
 				}
 			}
 			catch(Exception e)
