@@ -95,7 +95,7 @@ public class CaptchaServlet extends HttpServlet {
         		out.write("<span style=\"color: rgb(153, 153, 153);\"><span style=\"color: rgb(195, 201, 209);\">shown in the image below.</span><br>");
         		out.write("<br></span></span></big> <table style=\"text-align: left; width: 306px; height: 161px;\" border=\"1\" cellpadding=\"20\" cellspacing=\"0\">");
         		out.write("<tbody><tr><td style=\"background-color: white;\"><table style=\"text-align: left; width: 371px; height: 167px;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">");
-        		out.write("<tbody><tr><td style=\"vertical-align: top;\">");        		
+        		out.write("<tbody><tr><td style=\"vertical-align: top;\">");
         		out.write("<form name='captcha_form' method='post' action='" + serverName + "/controller/servlet/Captcha?requestType=validate'>");
         		out.write("<input type='hidden' name='imageidEnc' value='" + imagetextEnc + "'>");
         		out.write("<input type='hidden' name='redirectEnc' value='" + redirectEnc + "'>");
@@ -105,7 +105,7 @@ public class CaptchaServlet extends HttpServlet {
         		out.write("</td> <td style=\"text-align: left; vertical-align: top;\"> <table style=\"text-align: left; width: 211px; height: 127px;\"");
         		out.write(" border=\"0\" cellpadding=\"3\" cellspacing=\"0\"> <tbody> <tr> <td style=\"vertical-align: middle; white-space: nowrap; text-align: left;\">");
         		out.write("<a href='" + serverName + "/controller/servlet/Captcha?requestType=html&redirectEnc="+ redirectEnc +"'>");
-        		out.write("<img style=\"width: 26px; height: 26px;\" alt=\"\"  border='0' src=\"/engresources/images/refresh.gif\">");
+        		out.write("<img style=\"width: 26px; height: 26px;\" alt=\"\"  border='0' src=\"/engresources/images/refresh_captcha.gif\">");
         		out.write("</a></td> <td align=\"left\" valign=\"top\"></td>");
         		out.write("<td align=\"left\" valign=\"top\"></td> <td align=\"left\" valign=\"top\"></td> <td align=\"left\" valign=\"top\"></td>");
         		out.write("</tr> <tr> <td style=\"vertical-align: top; text-align: left;\">");
@@ -113,7 +113,7 @@ public class CaptchaServlet extends HttpServlet {
         		out.write("<img style=\"height: 27px; width: 27px;\" alt=\"\"  border='0' src=\"/engresources/images/help_captcha.gif\"></a>");
         		out.write("<br> </td> <td align=\"left\" valign=\"top\"></td> <td align=\"left\" valign=\"top\"></td> <td align=\"left\" valign=\"top\"></td>");
         		out.write("<td align=\"left\" valign=\"top\"></td> </tr> <tr> <td style=\"vertical-align: top; text-align: left; white-space: nowrap;\"><br>");
-        		out.write("<input style=\"height: 19px; width: 56px;\" type=\"image\" src=\"/engresources/images/verify.gif\" value=\"submit\" alt=\"submit button\" name=\"submit\">");  
+        		out.write("<input style=\"height: 19px; width: 56px;\" type=\"image\" src=\"/engresources/images/verify.gif\" value=\"submit\" alt=\"submit button\" name=\"submit\">");
         		out.write("</form>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </td>");
         		out.write("<td align=\"left\" valign=\"top\"></td> <td align=\"left\" valign=\"top\"></td> <td align=\"left\" valign=\"top\"></td>");
         		out.write("<td align=\"left\" valign=\"top\"></td> </tr> </tbody> </table></td></tr></tbody></table></td></tr></tbody></table>");
@@ -133,7 +133,7 @@ public class CaptchaServlet extends HttpServlet {
         		out.write("<a class=\"MedBlueLink\" target=\"_self\" href=\"/controller/servlet/Controller?CID=TermsandConditions&amp;database=2289095\">Terms and Conditions</a><br>");
         		out.write("<a class=\"SmBlackText\">© 2008 Elsevier Inc. All rights reserved.</a></center>");
         		out.write("</td></tr></tbody></table></body></html>");
-        
+
 
         	}
         	else if(request.getParameter("requestType").equals("image"))
