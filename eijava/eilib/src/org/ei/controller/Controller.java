@@ -37,6 +37,7 @@ public class Controller extends HttpServlet
     public static String REDIR_PAGE_GENERAL_EXCEPTION = "generalException";
     public static String HOME_CID = "home";
     public static String XML_CID = "openXML";
+    public static String RSS_CID = "openRSS";
     public static String REDIR_PAGE_SESSION_EXPIRED = "endSession";
     private String configFile;
     private String appName;
@@ -46,6 +47,7 @@ public class Controller extends HttpServlet
     private String lhlURL;
     private SessionCache sCache;
     private Map ipBypass = new HashMap();
+    private Map custBypass = new HashMap();
     private static MemCached memcached = null;
 	private String memcacheServers;
     private String memcacheWeights;
@@ -123,6 +125,10 @@ public class Controller extends HttpServlet
 			this.ipBypass.put("128.174.36.130", "y");
 			/*UCLA*/
 			this.ipBypass.put("216.147.218.158", "y");
+
+        	this.custBypass.put("826", "y");
+        	this.custBypass.put("1002198", "y");
+        	this.custBypass.put("34764", "y");
         }
         catch(Exception e)
         {
@@ -154,7 +160,6 @@ public class Controller extends HttpServlet
 			return;
 		}
 
-
 		String ip = request.getHeader("x-forwarded-for");
 		if(ip == null)
 		{
@@ -163,7 +168,6 @@ public class Controller extends HttpServlet
 
 		try
 		{
-
 			IPBlocker ipBlocker = IPBlocker.getInstance();
 			if(ipBlocker.block(ip))
 			{
@@ -175,7 +179,6 @@ public class Controller extends HttpServlet
 		{
 			throw new ServletException("Controller",e);
 		}
-
 
 		try
 		{
@@ -196,17 +199,6 @@ public class Controller extends HttpServlet
 			serverName = serverName+":"+Integer.toString(serverPort);
 		}
 
-		if(!this.ipBypass.containsKey(ip) &&
-			request.getParameter("SYSTEM_PT") == null &&
-		   (request.getHeader("referer") == null || request.getHeader("referer").indexOf(serverName)== -1) &&
-		   (request.getParameter("CID") != null &&
-		   (request.getParameter("CID").equals("quickSearchCitationFormat") || request.getParameter("CID").equals("expertSearchCitationFormat"))))
-		{
-
-			System.out.println("NO referrer blocking:"+ip);
-			return;
-		}
-
 		OutputPrinter printer = new OutputPrinter(response,
 												  appendSession,
 												  serverName);
@@ -220,7 +212,6 @@ public class Controller extends HttpServlet
 		DataResponse dataResponse = null;
 		LogEntry logEntry = null;
 		UserSession usess = null;
-
 
 		/*
 		*	 Get the usersession.
@@ -239,101 +230,106 @@ public class Controller extends HttpServlet
 					return;
 				}
 
-				/*
-				*	CAPTCHA SECURITY CODE.
-				*/
-
-				/*
-				*	Get the secureID of the client. If client does not have a secureID
-				*	use the IP address
-				*/
-				String memcachedkey = null;
-				if(cookieMap.containsKey("SECUREID"))
+				String custID = usess.getUser().getCustomerID();
+				if(!custBypass.containsKey(custID) &&
+					request.getParameter("CID") != null &&
+					!request.getParameter("CID").equals(XML_CID) &&
+					!request.getParameter("CID").equals(RSS_CID))
 				{
-					Cookie cookie = (Cookie) cookieMap.get("SECUREID");
-					memcachedkey = cookie.getValue();
 					/*
-					* Validate secureID and
+					*	CAPTCHA SECURITY CODE.
 					*/
-					if(!SecureID.validSecureID(memcachedkey))
+					/*
+					*	Get the secureID of the client. If client does not have a secureID
+					*	use the IP address
+					*/
+					String memcachedkey = null;
+					if(cookieMap.containsKey("SECUREID"))
+					{
+						Cookie cookie = (Cookie) cookieMap.get("SECUREID");
+						memcachedkey = cookie.getValue();
+						/*
+						* Validate secureID and
+						*/
+						if(!SecureID.validSecureID(memcachedkey))
+						{
+							/*
+							* Invalid secureID, so forward to security servlet.
+							*/
+							RequestDispatcher rd = getServletContext().getRequestDispatcher("/servlet/Security");
+							rd.forward(request, response);
+							return;
+						}
+					}
+					else
+					{
+						memcachedkey = ip;
+					}
+
+					/*
+					* If captchaID is present then it is coming from a successful captcha
+					* validation.
+					*/
+					String captchaID = request.getParameter("captchaID");
+					if(captchaID != null)
 					{
 						/*
-						* Invalid secureID, so forward to security servlet.
+						* Verify the captchID is a valid secureID
 						*/
-						RequestDispatcher rd = getServletContext().getRequestDispatcher("/servlet/Security");
+						if(SecureID.validSecureID(captchaID))
+						{
+							/*
+							* Remove from memcache
+							*/
+							memcached.delete(memcachedkey);
+						}
+					}
+
+					/*
+					* Use the memcache key to locate. If not in memcache create new HitCount
+					*/
+					HitCount hitcount = null;
+					if(memcached.keyExists(memcachedkey))
+					{
+						hitcount = new  HitCount(memcachedkey,memcached.get(memcachedkey));
+					}
+					else
+					{
+						hitcount = new HitCount(memcachedkey);
+					}
+
+					/*
+					* Put the HitCount back into memcache
+					*/
+					memcached.add(hitcount.getKey(),hitcount.stringValue());
+
+					/*
+					* Check the HitCount to determine if the ID has crossed the velocity threshold.
+					*/
+					if(hitcount.getBlocked())
+					{
+						/*
+						*	User is blocked so forward them to the Captcha page.
+						*/
+						System.out.println("Captcha blocked:"+ip);
+						RequestDispatcher rd = getServletContext().getRequestDispatcher("/servlet/Captcha");
 						rd.forward(request, response);
 						return;
 					}
 				}
-				else
-				{
-					memcachedkey = ip;
-				}
-
-				/*
-				* If captchaID is present then it is coming from a successful captcha
-				* validation.
-				*/
-				String captchaID = request.getParameter("captchaID");
-				if(captchaID != null)
-				{
-					/*
-					* Verify the captchID is a valid secureID
-					*/
-					if(SecureID.validSecureID(captchaID))
-					{
-						/*
-						* Remove from memcache
-						*/
-						memcached.delete(memcachedkey);
-					}
-				}
-
-				/*
-				* Use the memcache key to locate. If not in memcache create new HitCount
-				*/
-				HitCount hitcount = null;
-				if(memcached.keyExists(memcachedkey))
-				{
-					hitcount = new  HitCount(memcachedkey,memcached.get(memcachedkey));
-				}
-				else
-				{
-					hitcount = new HitCount(memcachedkey);
-				}
-
-				/*
-				* Put the HitCount back into memcache
-				*/
-				memcached.add(hitcount.getKey(),hitcount.stringValue());
-
-				/*
-				* Check the HitCount to determine if the ID has crossed the velocity threshold.
-				*/
-				if(hitcount.getBlocked())
-				{
-					/*
-					*	User is blocked so forward them to the Captcha page.
-					*/
-
-					RequestDispatcher rd = getServletContext().getRequestDispatcher("/servlet/Captcha");
-					rd.forward(request, response);
-					return;
-				}
 			}
 			catch(Exception e)
 			{
-				log("Error in cookie handler", e);
+					log("Error in cookie handler", e);
 			}
 		}
 		catch(Exception e)
 		{
-			log("Error in getting user session", e);
+				log("Error in getting user session", e);
 		}
 
 		try
 		{
-
 			String tokenConcurrent = usess.getProperty("token_concurrent");
 			String tokenExpired = usess.getProperty("token_expired");
 
@@ -433,8 +429,6 @@ public class Controller extends HttpServlet
 			}
 		}
     }
-
-
 
     protected LogEntry getLogEntry(DataResponse dataResponse,
                                    HttpServletRequest request)
