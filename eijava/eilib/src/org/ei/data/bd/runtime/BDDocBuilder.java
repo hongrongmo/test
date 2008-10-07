@@ -145,12 +145,12 @@ public class BDDocBuilder
 				formatRIS(buildField(Keys.ISBN,getIsbn(rset.getString("ISBN"),10),ht), dataFormat, Keys.ISBN, Keys.RIS_S1);
 				formatRIS(buildField(Keys.ISBN13,getIsbn(rset.getString("ISBN"),13),ht), dataFormat, Keys.ISBN13, Keys.RIS_S1);
 				buildField(Keys.PAGE_COUNT,getPageCount(rset.getString("PAGECOUNT")),ht);
-				buildField(	Keys.PAGE_RANGE,
-							new PageRange(getPageRange( rset.getString("PAGE"),
-														rset.getString("PAGECOUNT"),
-														rset.getString("ARTICLENUMBER"),
-														rset.getString("ISSN"),
-														rset.getString("EISSN")),perl),ht);
+				buildField(Keys.PAGE_RANGE,getPageRange(rset.getString("PAGE"),
+														 rset.getString("PAGECOUNT"),
+														 rset.getString("ARTICLENUMBER"),
+														 rset.getString("ISSN"),
+														 rset.getString("EISSN"),
+														 perl),ht);
 
 				formatRIS(buildField(Keys.PUBLISHER,getPublisher(rset.getString("PUBLISHERNAME"),rset.getString("PUBLISHERADDRESS")),ht),dataFormat, Keys.PUBLISHER, Keys.RIS_PB);
 				formatRIS(buildField(Keys.LANGUAGE,getLanguage(rset.getString("CITATIONLANGUAGE")),ht),dataFormat, Keys.LANGUAGE, Keys.RIS_LA);
@@ -608,9 +608,9 @@ public class BDDocBuilder
 		return null;
 
 	}
-	private String  getPageRange(String page,String pageCount,String articleNumber,String issn,String eissn) throws Exception
+	private PageRange  getPageRange(String page,String pageCount,String articleNumber,String issn,String eissn,Perl5Util perl) throws Exception
 	{
-		String strPage=StringUtil.EMPTY_STRING;
+		String strPage=null;
 
 		if(page != null)
 		{
@@ -652,13 +652,19 @@ public class BDDocBuilder
 			{
 				strPage="p "+articleNumber;
 			}
-			else if(strPage.equals(StringUtil.EMPTY_STRING))
+			else if(strPage != null)
 			{
 				strPage="p "+articleNumber;
 			}
 		}
 
-		return strPage;
+		if(strPage != null )
+		{
+			 PageRange pageRange = new PageRange(strPage,perl);
+			 return pageRange;
+		 }
+
+		 return null;
 	}
 
 	private String getPageCount(String pageCountString)
