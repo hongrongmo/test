@@ -168,7 +168,7 @@ public class CaptchaServlet extends HttpServlet {
     	    	}
     	    	else
     	    	{
-    	    		response.sendRedirect(serverName + "/controller/servlet/Controller" + Base64Coder.decode(redirectEnc) + "captchID=" + SecureID.getSecureID(5000L));
+    	    		response.sendRedirect(serverName + "/controller/servlet/Controller" + Base64Coder.decode(redirectEnc) + "captchaID=" + SecureID.getSecureID(5000L));
     	    	}
     	    }
         } catch (ClassNotFoundException cnf) {
