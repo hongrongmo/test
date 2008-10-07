@@ -43,7 +43,8 @@
   </path>
 
   <target name="prepare">
-   <mkdir dir="${classes.home}"/>
+    <mkdir dir="${classes.home}"/>
+    <copy overwrite="yes" filtering="no" file="src/log4j.properties" todir="classes" />
   </target>
 
 	<patternset id="books.exclude">
