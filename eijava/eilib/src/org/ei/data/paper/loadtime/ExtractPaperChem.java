@@ -77,6 +77,7 @@ public class ExtractPaperChem
 				writeColumn(rs1, "yr", writerPub);
 				writeColumn(rs1, "md", writerPub);
 				writeColumn(rs1, "ml", writerPub);
+				writeColumn(rs1, "sp", writerPub);
 				writeColumn(rs1, "media", writerPub);
 				writeColumn(rs1, "csess", writerPub);
 				writeColumn(rs1, "patno", writerPub);
@@ -257,17 +258,17 @@ public class ExtractPaperChem
 	public String formatDate(String md,String m1,String m2)
 	{
 		String dateString = null;
-		if(md != null)
+		if(m2 != null)
 		{
-			dateString = md;
+			dateString = m2;
 		}
 		else if(m1 !=null)
 		{
 			dateString = m1;
 		}
-		else if(m2 !=null)
+		else if(md !=null)
 		{
-			dateString = m2;
+			dateString = md;
 		}
 		return dateString;
 	}
