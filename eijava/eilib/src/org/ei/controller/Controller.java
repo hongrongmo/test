@@ -232,9 +232,9 @@ public class Controller extends HttpServlet
 
 				String custID = usess.getUser().getCustomerID();
 				if(!custBypass.containsKey(custID) &&
-					request.getParameter("CID") != null &&
-					!request.getParameter("CID").equals(XML_CID) &&
-					!request.getParameter("CID").equals(RSS_CID))
+			       !ipBypass.containsKey(ip) &&
+				   (request.getParameter("CID") != null && !(request.getParameter("CID")).equals(XML_CID)) &&
+				   (request.getParameter("CID") != null && !(request.getParameter("CID")).equals(RSS_CID)))
 				{
 					/*
 					*	CAPTCHA SECURITY CODE.
