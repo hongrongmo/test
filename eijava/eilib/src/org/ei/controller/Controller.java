@@ -6,6 +6,9 @@ import java.util.Enumeration;
 import java.util.Properties;
 import java.util.Map;
 import java.util.HashMap;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -39,6 +42,7 @@ public class Controller extends HttpServlet
     public static String XML_CID = "openXML";
     public static String RSS_CID = "openRSS";
     public static String REDIR_PAGE_SESSION_EXPIRED = "endSession";
+
     private String configFile;
     private String appName;
     private Logger logger;
@@ -116,6 +120,13 @@ public class Controller extends HttpServlet
 			this.ipBypass.put("207.158.24.28", "y");
 			this.ipBypass.put("207.158.24.29", "y");
 			this.ipBypass.put("207.158.24.30", "y");
+			this.ipBypass.put("142.150.190.94", "y");
+			this.ipBypass.put("142.150.190.95", "y");
+			this.ipBypass.put("142.150.190.96", "y");
+			this.ipBypass.put("142.150.190.97", "y");
+			this.ipBypass.put("142.150.190.98", "y");
+			this.ipBypass.put("142.150.190.99", "y");
+			this.ipBypass.put("142.150.190.17", "y");
 
 			/* Web of Science, calling for IBM */
 
@@ -129,6 +140,7 @@ public class Controller extends HttpServlet
         	this.custBypass.put("826", "y");
         	this.custBypass.put("1002198", "y");
         	this.custBypass.put("34764", "y");
+        	this.custBypass.put("1001861", "y");
         }
         catch(Exception e)
         {
@@ -276,8 +288,11 @@ public class Controller extends HttpServlet
 						/*
 						* Verify the captchID is a valid secureID
 						*/
+						System.out.println("removing from cache1:"+memcachedkey);
+
 						if(SecureID.validSecureID(captchaID))
 						{
+							System.out.println("removing from cache2:"+memcachedkey);
 							/*
 							* Remove from memcache
 							*/
@@ -297,6 +312,39 @@ public class Controller extends HttpServlet
 					{
 						hitcount = new HitCount(memcachedkey);
 					}
+
+					/*
+					* Check to see if the search has multiple
+					*/
+
+					String search = request.getParameter("searchWord1");
+					System.out.println("Searchword0:"+ search);
+
+					if(search != null && captchaID == null)
+					{
+						System.out.println("Searchword1:"+ search);
+						// Pattern.compile(regex).split(str, n)
+						String[] wn_an = search.toLowerCase().split("\\s+wn\\s+an",-1);
+						if(wn_an != null)
+						{
+							System.out.println(java.util.Arrays.asList(wn_an));
+							if(wn_an.length > 2)
+							{
+								hitcount.setBlocked(true);
+							}
+							else
+							{
+								for(int i=0; i<wn_an.length; i++)
+								{
+									if(wn_an[i] != null && (wn_an[i].indexOf("*") > -1 || wn_an[i].indexOf("?") > -1))
+									{
+										hitcount.setBlocked(true);
+									}
+								}
+							}
+						}
+					}
+
 
 					/*
 					* Put the HitCount back into memcache
@@ -707,7 +755,8 @@ public class Controller extends HttpServlet
 	{
 
 		if(this.ipBypass.containsKey(originalIP) ||
-		   this.ipBypass.containsKey(currentIP))
+		   this.ipBypass.containsKey(currentIP) ||
+		   this.custBypass.containsKey(customerID))
 		{
 			return true;
 		}
