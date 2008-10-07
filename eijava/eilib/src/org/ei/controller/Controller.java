@@ -256,7 +256,7 @@ public class Controller extends HttpServlet
 							/*
 							* Invalid secureID, so forward to security servlet.
 							*/
-							RequestDispatcher rd = getServletContext().getRequestDispatcher("/servlet/Security");
+							RequestDispatcher rd = getServletContext().getRequestDispatcher("/servlet/SecurityService");
 							rd.forward(request, response);
 							return;
 						}
