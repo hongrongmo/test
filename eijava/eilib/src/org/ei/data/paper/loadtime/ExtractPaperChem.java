@@ -102,7 +102,6 @@ public class ExtractPaperChem
 				writeColumn(rs1, "at", writerPub);
 				writeColumn(rs1, "pt", writerPub);
 				writeColumn(rs1, "pn", writerPub);
-				writeColumn(rs1, "tr", writerPub);
                 writerPub.println();
             }
 
@@ -205,10 +204,6 @@ public class ExtractPaperChem
 		else if(columnName.equals("pt"))
 		{
 			column = formatControlledTerms(rs1.getString("pt"));
-		}
-		else if(columnName.equals("tr"))
-		{
-			column = formatTreatmentType(rs1.getString("tr"));
 		}
 		else
 		{
@@ -336,27 +331,6 @@ public class ExtractPaperChem
 			}
 		}
 		return isbnBuffer.toString();
-	}
-
-	public String formatTreatmentType(String treatments)throws Exception
-	{
-
-		StringBuffer tr = new StringBuffer();
-		if(treatments != null)
-		{
-			int len = treatments.length();
-
-			for (int i= 0; i < len; i++)
-			{
-				tr.append(treatments.charAt(i));
-				tr.append(BdParser.AUDELIMITER);
-
-			}
-
-		}
-
-		return tr.toString();
-
 	}
 
 	public String formatAffiliation(String affiliation,String city,String state,String country)throws Exception
