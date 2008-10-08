@@ -245,6 +245,7 @@ public class Controller extends HttpServlet
 				String custID = usess.getUser().getCustomerID();
 				if(!custBypass.containsKey(custID) &&
 			       !ipBypass.containsKey(ip) &&
+			       request.getParameter("SYSTEM_PT") == null &&
 				   (request.getParameter("CID") != null && !(request.getParameter("CID")).equals(XML_CID)) &&
 				   (request.getParameter("CID") != null && !(request.getParameter("CID")).equals(RSS_CID)))
 				{
