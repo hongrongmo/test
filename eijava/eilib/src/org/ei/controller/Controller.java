@@ -301,68 +301,68 @@ public class Controller extends HttpServlet
 					}
 
 					/*
-					* Use the memcache key to locate. If not in memcache create new HitCount
-					*/
-					HitCount hitcount = null;
-					if(memcached.keyExists(memcachedkey))
-					{
-						hitcount = new  HitCount(memcachedkey,memcached.get(memcachedkey));
-					}
-					else
-					{
-						hitcount = new HitCount(memcachedkey);
-					}
-
-					/*
 					* Check to see if the search has multiple
 					*/
 
 					String search = request.getParameter("searchWord1");
 					System.out.println("Searchword0:"+ search);
-
+					HitCount hitcount = null;
 					if(search != null && captchaID == null)
 					{
 						System.out.println("Searchword1:"+ search);
 						// Pattern.compile(regex).split(str, n)
-						String[] wn_an = search.toLowerCase().split("\\s+wn\\s+an",-1);
+						search = search.toLowerCase();
+						search = search.replace('(', ' ');
+						search = search.replace(')', ' ');
+						search = search.replace('"', ' ');
+						search = search.replace('{', ' ');
+						search = search.replace('}', ' ');
+						System.out.println("Searchword Stripped:"+ search);
+						String[] wn_an = search.split("\\s+wn\\s+an",-1);
 						if(wn_an != null)
 						{
 							System.out.println(java.util.Arrays.asList(wn_an));
-							if(wn_an.length > 2)
+							System.out.println("Num an queries:"+wn_an.length);
+
+							if(wn_an.length >= 2)
 							{
-								hitcount.setBlocked(true);
-							}
-							else
-							{
-								for(int i=0; i<wn_an.length; i++)
+								if(memcached.keyExists(memcachedkey))
 								{
-									if(wn_an[i] != null && (wn_an[i].indexOf("*") > -1 || wn_an[i].indexOf("?") > -1))
+									hitcount = new  HitCount(memcachedkey,memcached.get(memcachedkey));
+								}
+								else
+								{
+									hitcount = new HitCount(memcachedkey);
+								}
+
+								if(wn_an.length > 2)
+								{
+									hitcount.setBlocked(true);
+								}
+								else
+								{
+									for(int i=0; i<wn_an.length; i++)
 									{
-										hitcount.setBlocked(true);
+										if(wn_an[i] != null && (wn_an[i].indexOf("*") > -1 || wn_an[i].indexOf("?") > -1 || wn_an[i].indexOf(" or ") > -1))
+										{
+											hitcount.setBlocked(true);
+										}
 									}
+								}
+
+								memcached.add(hitcount.getKey(),hitcount.stringValue());
+								if(hitcount.getBlocked())
+								{
+									/*
+									*	User is blocked so forward them to the Captcha page.
+									*/
+									System.out.println("Captcha blocked:"+ip);
+									RequestDispatcher rd = getServletContext().getRequestDispatcher("/servlet/Captcha");
+									rd.forward(request, response);
+									return;
 								}
 							}
 						}
-					}
-
-
-					/*
-					* Put the HitCount back into memcache
-					*/
-					memcached.add(hitcount.getKey(),hitcount.stringValue());
-
-					/*
-					* Check the HitCount to determine if the ID has crossed the velocity threshold.
-					*/
-					if(hitcount.getBlocked())
-					{
-						/*
-						*	User is blocked so forward them to the Captcha page.
-						*/
-						System.out.println("Captcha blocked:"+ip);
-						RequestDispatcher rd = getServletContext().getRequestDispatcher("/servlet/Captcha");
-						rd.forward(request, response);
-						return;
 					}
 				}
 			}
@@ -676,12 +676,15 @@ public class Controller extends HttpServlet
         			               password,
         			               entryToken);
 
+		/*
 		if(us.getUser().getUsername().equals("_IP") &&
 		   !ipGood(us.getUser().getIpAddress(), ipAddress, us.getUser().getCustomerID()))
 		{
 			System.out.println("Bad IP:"+us.getUser().getIpAddress()+" : "+ipAddress+" : "+us.getUser().getCustomerID());
 			throw new Exception("Security Violation:"+ipAddress);
 		}
+		*/
+
 
         if(logout != null && logout.equals("true"))
         {
