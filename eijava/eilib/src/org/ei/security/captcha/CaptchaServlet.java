@@ -69,7 +69,7 @@ public class CaptchaServlet extends HttpServlet {
     		    }
     		    randomLetters = randomLetters.replaceAll("I","X");
     		    randomLetters = randomLetters.replaceAll("Q","Z");
-    		    String imagetextClear = randomLetters + "." + request.getSession().getId();
+    		    String imagetextClear = randomLetters + "." + Config.SEED;
     		    String imagetextEnc  = Base64Coder.encode(_stringEncrypter.encrypt(imagetextClear) );
         		String error = request.getParameter("errObject");
         		if(error == null)
@@ -160,7 +160,7 @@ public class CaptchaServlet extends HttpServlet {
                     String sessionID = imageidClear.substring(imageidClear.indexOf(".")+1, imageidClear.length());
                     imageidClear = imageidClear.substring(0, Config.getPropertyInt(Config.MAX_NUMBER));
 
-                    if (!sessionID.equals(request.getSession().getId())) {
+                    if (!sessionID.equals(Config.SEED)) {
                     	failed = true;
                     }
                     imageidClear = imageidClear.trim();
