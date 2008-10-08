@@ -100,6 +100,7 @@ public class ExtractPaperChem
 				writeColumn(rs1, "pi", writerPub);
 				writeColumn(rs1, "cc", writerPub);
 				writeColumn(rs1, "at", writerPub);
+				writeColumn(rs1, "pt", writerPub);
                 writerPub.println();
             }
 
@@ -198,6 +199,10 @@ public class ExtractPaperChem
 				column = "y";
 			else
 				column = "n";
+		}
+		else if(columnName.equals("pt"))
+		{
+			column = formatControlledTerms(rs1.getString("pt"));
 		}
 		else
 		{
@@ -478,6 +483,33 @@ public class ExtractPaperChem
 	}
 
 
+	public String formatControlledTerms(String terms)
+	{
+		String[] termsArray = null;
+		StringBuffer termsBuffer = new StringBuffer();
+		if(terms != null)
+		{
+			if(terms.indexOf(";")>-1)
+			{
+				termsArray = terms.split(";",-1);
+			}
+			else
+			{
+				termsArray = new String[1];
+				termsArray[0] = terms;
+			}
+
+			termsBuffer.append(termsArray[0]);
+
+			for(int i=1;i<termsArray.length;i++)
+			{
+				termsBuffer.append(BdParser.AUDELIMITER);
+				termsBuffer.append(termsArray[i]);
+			}
+		}
+
+		return termsBuffer.toString();
+	}
   public static Connection getDbCoonection(String url,String username,String password, String driver)
     throws Exception
   {
