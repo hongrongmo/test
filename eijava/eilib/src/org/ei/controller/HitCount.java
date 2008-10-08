@@ -19,7 +19,6 @@ public class HitCount
 		this.blocked = false;
 	}
 
-
 	public HitCount(String key, String value)
 	{
 		this.key = key;
@@ -28,15 +27,8 @@ public class HitCount
 		this.hits = Integer.parseInt(valueArray[1]);
 		this.blocked = new Boolean(valueArray[2]).booleanValue();
 		this.hits++;
-		long curTime = System.currentTimeMillis();
-		long diff =  curTime - this.createTime;
-		if(diff > 10000)
-		{
-			this.hits = 0;
-			this.createTime = curTime;
-		}
 
-		if(this.hits > 7)
+		if(this.hits > 10)
 		{
 			this.blocked = true;
 		}
@@ -55,6 +47,11 @@ public class HitCount
 	public boolean getBlocked()
 	{
 		return this.blocked;
+	}
+
+	public void setBlocked(boolean blocked)
+	{
+		this.blocked = blocked;
 	}
 
 	public String stringValue()
