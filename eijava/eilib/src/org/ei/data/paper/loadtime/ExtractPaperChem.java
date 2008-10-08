@@ -101,6 +101,7 @@ public class ExtractPaperChem
 				writeColumn(rs1, "cc", writerPub);
 				writeColumn(rs1, "at", writerPub);
 				writeColumn(rs1, "pt", writerPub);
+				writeColumn(rs1, "pn", writerPub);
                 writerPub.println();
             }
 
