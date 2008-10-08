@@ -44,7 +44,7 @@ public class CaptchaServlet extends HttpServlet {
 	    			String value = (String) request.getParameter(name);
 	    			//redirectParam.append(name + "=" + value + "&");
 	    			redirectParam.append(name + "=" + URLEncoder.encode(value, "UTF-8") + "&");
-	    			
+
 	    		}
 	        	redirectEnc = Base64Coder.encode(redirectParam.toString());
         	}
@@ -76,44 +76,8 @@ public class CaptchaServlet extends HttpServlet {
         			error = "";
         		response.setContentType("text/html");
         		Writer out = response.getWriter();
-        		/*
-        		out.write("<html><head><meta content=\"text/html; charset=ISO-8859-1\" http-equiv=\"content-type\"><title>Image Verification</title>");
-        		out.write("<style> .SmBlackText {font-size:11px; font-family:arial,verdana,geneva; color:#000000;} A.MedBlueLink:link {font-size:11px; ");
-        		out.write("font-family:arial,verdana,geneva; color:#0000FF;}.MedBlackText {font-size:12px; font-family:arial,verdana,geneva; color:#000000;} ");
-        		out.write("</style></head><body><a href=\"http://www.engineeringvillage.com/\"><img alt=\"Engineering Village\" src=\"/engresources/images/ev2logo5.gif\" ");
-        		out.write("align=\"left\" border=\"0\"></a><p><br><br><br><table width=\"100%\" align=\"left\" bgcolor=\"#001902\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">");
-        		out.write("<tbody><tr><td bordercolor=\"#ffffff\" bgcolor=\"#c0c0c0\"><br></td></tr></tbody></table><br></p>");
-        		out.write("<h3><font face=\"Arial\" color=\"red\">  </font><big style=\"FONT-FAMILY: Arial\"><span style=\"COLOR: rgb(102,102,102)\">");
-        		out.write("<span style=\"COLOR: rgb(153,153,153)\"><br></span></span></big>");
-        		if(error.equalsIgnoreCase("failed"))
-        		{        			
-        			out.write("<table width=\"100%\" border=\"0\"><tr><td><h3><font face=\"Arial\" color=\"red\">Validation failed. Please try again. </font></h3></td></tr></table>");
-        		}
-        		out.write("<table height=\"387\" cellspacing=\"2\" cellpadding=\"40\" width=\"648\" align=\"left\" border=\"0\"><tr><td>");
-        		out.write("<big style=\"FONT-FAMILY: Arial\"><span style=\"COLOR: rgb(102,102,102)\"><span style=\"COLOR: rgb(195,201,209)\">");
-        		out.write("This  Engineering Village search session is experiencing heavy activity.</span><br style=\"COLOR: rgb(195,201,209)\">");
-        		out.write("<span style=\"COLOR: rgb(195,201,209)\">In order to continue searching, please enter the code</span>");
-        		out.write("<br style=\"COLOR: rgb(195,201,209)\"><span style=\"COLOR: rgb(153,153,153)\"><span style=\"COLOR: rgb(195,201,209)\">");
-        		out.write("shown in the image below.</span><br><br></span></span></big> ");
-        		out.write("<table height=\"96\" cellspacing=\"0\" cellpadding=\"10\" width=\"376\" align=\"left\" border=\"1\"><tr>");
-        		out.write("<td bgcolor=\"white\" colspan=\"2\"><table height=\"102\" cellspacing=\"0\" cellpadding=\"0\" width=\"89\" align=\"left\" border=\"0\">");
-        		out.write("<tr><form name=\"captcha_form\" action=\"" + serverName + "/controller/servlet/Captcha?requestType=validate\" method=\"post\"></form><input type=\"hidden\" ");
-        		out.write("value=\"" + imagetextEnc + "\" name=\"imageidEnc\"><input type=\"hidden\"  value=\"" + redirectEnc + "\" name=\"redirectEnc\"> ");
-        		out.write("<td valign=\"center\" nowrap=\"\" align=\"left\"><img height=\"40\" alt=\"\" src=\""+ serverName +"/controller/servlet/Captcha?requestType=image&imageidEnc="+ imagetextEnc +"\" width=\"198\" border=\"0\">");
-        		out.write("</td><td valign=\"top\" nowrap=\"\" align=\"left\"><br><a href=\"" + serverName + "/controller/servlet/Captcha?requestType=html&amp;redirectEnc=" + redirectEnc + "\">");
-        		out.write("<img height=\"26\" alt=\"\" src=\"/engresources/images/refresh_captcha.gif\" width=\"26\" border=\"0\"></a><a onclick=\"window.open('/engresources/captchaFAQ.html','_blank','width=400, ");
-        		out.write("height=300, left=' + (screen.width-450) + ', top=100');return false;\" href=\"" + serverName + "/engresources/captchaFAQ.html\">");
-        		out.write("<img height=\"27\" alt=\"\" src=\"/engresources/images/help_captcha.gif\" width=\"27\" border=\"0\"></a><br>");
-        		out.write("</td></tr><tr><td valign=\"top\" align=\"left\"><input size=\"29\" name=\"userEntry\"><br></td>");
-        		out.write("<td valign=\"top\" align=\"left\"><input type=\"image\" height=\"19\" alt=\"submit button\" width=\"56\" src=\"/engresources/images/verify.gif\" value=\"submit\" name=\"submit\"></td>");
-        		out.write("</tr></table></td></tr></table><br><br><br><br><br><br><br><span style=\"COLOR: rgb(102,102,102)\"><span style=\"COLOR: rgb(153,153,153)\"><small style=\"COLOR: black\">");
-        		out.write("<br><font face=\"Arial\" size=\"3\">Please enter the text from the image and click Verify  ");
-        		out.write("button</font> </small><br><small><br><font size=\"3\"><font face=\"Arial\"><span style=\"COLOR: black\">If you have any questions, please contact customer</span><br style=\"COLOR: black\">");
-        		out.write("<span style=\"COLOR: black\">support ");
-        		out.write("at </span></font></font><a style=\"COLOR: black\" href=\"mailto:eicustomersupport@elsevier.com\"><font face=\"Arial\" size=\"3\">eicustomersupport@elsevier.com</font></a></small> </span></span>");        		
-        		out.write("<br><br><br><br></body></html>");   
-        		*/
-        		
+
+
         		out.write("<html><head><meta content=\"text/html; charset=ISO-8859-1\" http-equiv=\"content-type\"><title>Image Verification</title></head><body><p><br>");
         		out.write("<table style=\"Z-INDEX: 100; LEFT: 2px; POSITION: absolute; TOP: 6px\" width=\"100%\" border=\"0\">");
         		out.write("<tr><!-- Row 1 -->");
@@ -121,11 +85,11 @@ public class CaptchaServlet extends HttpServlet {
         		out.write("src=\"/engresources/images/ev2logo5.gif\" width=249 align=left border=0></a></td><!-- Col 1 --></tr>");
         		out.write("<tr><!-- Row 2 -->");
         		out.write("<td bgcolor=\"#c0c0c0\"><BR></td><!-- Col 1 --></tr></table><br></p><h3><font color=\"red\" face=\"Arial\"></font><big style=\"FONT-FAMILY: ");
-        		out.write("Arial\"><span style=\"COLOR: rgb(102,102,102)\"><span style=\"COLOR: rgb(153,153,153)\"><br></span></span></big><table width=\"690\" align=\"left\" ");
+        		out.write("Arial\"><span style=\"COLOR: rgb(102,102,102)\"><span style=\"COLOR: rgb(153,153,153)\"></span></span></big><table width=\"690\" align=\"left\" ");
         		out.write("border=\"0\" cellpadding=\"40\" cellspacing=\"2\" height=\"523\"><tbody><tr><td><big style=\"FONT-FAMILY: Arial\"><span style=\"COLOR: rgb(102,102,102)\">");
         		out.write("<span style=\"COLOR: rgb(195,201,209)\"><FONT size=4>");
         		if(error.equalsIgnoreCase("failed"))
-        		{        			        			
+        		{
         			out.write("<h3><font face=\"Arial\" color=\"red\">Validation failed. Please try again. </font></h3><br><P>We would like to validate the actions you are taking in this ");
         		}
         		else
@@ -142,7 +106,7 @@ public class CaptchaServlet extends HttpServlet {
         		out.write("<IMG height=40 alt=\"\" src=\""+ serverName +"/controller/servlet/Captcha?requestType=image&imageidEnc="+ imagetextEnc +"\" width=\"198\" border=\"0\" ");
         		out.write("width=198 border=0></td><td valign=\"top\" align=\"left\" nowrap><br><a href=\"" + serverName + "/controller/servlet/Captcha?requestType=html&redirectEnc=" + redirectEnc + "\" ");
         		out.write("><IMG height=26 alt=\"\" src=\"/engresources/images/refresh_captcha.gif\" width=26 border=0></a>");
-        		out.write("<a onclick=\"window.open('/engresources/captchaFAQ.html','_blank','width=400, height=300, left=' + (screen.width-450) + ', top=100');return false;\""); 
+        		out.write("<a onclick=\"window.open('/engresources/captchaFAQ.html','_blank','width=400, height=300, left=' + (screen.width-450) + ', top=100');return false;\"");
         		out.write("href=\"" + serverName + "/engresources/captchaFAQ.html\"><IMG height=27 alt=\"\" src=\"/engresources/images/help_captcha.gif\" width=27 border=0>");
         		out.write("</a><br></td></tr><tr><td valign=\"top\" align=\"left\"><input size=\"29\" name=\"userEntry\"><br></td><td valign=\"top\" align=\"left\">");
         		out.write("<input alt=\"submit button\" src=\"/engresources/images/verify.gif\" value=\"submit\" name=\"submit\" type=\"image\" width=\"56\" height=\"19\"></form>");
