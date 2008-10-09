@@ -9,8 +9,7 @@ public class Config {
     static public final String LTR_WIDTH = "33";
     static public final String IMAGE_HEIGHT = "40";
     static public final String PASS_CODE = "n2f3r01-782108h-324908";
-    static public final String ALGORITHM = "PBEWithMD5AndDES";
-    static public final String SEED = "423789492347423";
+    static public final String ALGORITHM = "PBEWithMD5AndDES";    
     static public final String SKEW = "0.5";
     static public final String DRAW_LINES = "3";
     static public final String DRAW_BOXES = "300";
