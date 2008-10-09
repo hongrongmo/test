@@ -17,7 +17,7 @@ public class SkewImageSimple implements ISkewImage {
     private static final int MAX_Y = IMAGE_HEIGHT;
 
     private static final Color [] RANDOM_BG_COLORS = {
-            Color.RED, Color.CYAN, Color.GREEN, Color.MAGENTA, Color.ORANGE, Color.PINK,
+            Color.BLUE, Color.GRAY, Color.GREEN, Color.LIGHT_GRAY, Color.ORANGE,
             Color.YELLOW};
 
     private static final Color [] RANDOM_FG_COLORS = {
@@ -54,13 +54,13 @@ public class SkewImageSimple implements ISkewImage {
             affineTransform.rotate(-angle, (LETTER_WIDTH * i) + (LETTER_WIDTH / 2), MAX_Y / 2);
         }
         for (int i = 0; i < DRAW_LINES; i ++) {
-            g2d.setXORMode(Color.RED);
+            g2d.setXORMode(RANDOM_BG_COLORS[(int) (Math.random() * RANDOM_BG_COLORS.length)]);
             setRandomBGColor(g2d);
             g2d.setStroke(new BasicStroke(4));
             //affineTransform.rotate(0);
             int y1 = (int) (Math.random() * MAX_Y);
             //int y2 = (int) (Math.random() * MAX_Y);
-            //g2d.drawLine(0, y1,    MAX_X, y1);
+            g2d.drawLine(0, y1,    MAX_X, y1);
 
         }
 
