@@ -103,6 +103,7 @@ public class ExtractPaperChem
 				writeColumn(rs1, "pt", writerPub);
 				writeColumn(rs1, "pn", writerPub);
 				writeColumn(rs1, "load_number", writerPub);
+				writeColumn(rs1, "xp", writerPub);
                 writerPub.println();
             }
 
