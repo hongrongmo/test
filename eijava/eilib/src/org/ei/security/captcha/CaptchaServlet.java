@@ -212,7 +212,7 @@ public class CaptchaServlet extends HttpServlet {
                 response.setContentType("image/jpeg");
                 ClassLoader cl = Thread.currentThread().getContextClassLoader();
                 String [] sprocessorClasses = SKEW_PROCESSOR_CLASS.split(":");
-                ISkewImage skewImage = (ISkewImage) cl.loadClass(sprocessorClasses[(int) (Math.random() * sprocessorClasses.length)]).newInstance();
+                ISkewImage skewImage = (ISkewImage) cl.loadClass("org.ei.security.captcha.SkewImageSimple").newInstance();
                 BufferedImage bufferedImage = skewImage.skewImage(imageidClear.substring(0, imageidClear.indexOf(".")));
                 JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(response.getOutputStream());
                 encoder.encode(bufferedImage);
