@@ -34,6 +34,11 @@ public class CaptchaServlet extends HttpServlet {
         	String imageidEnc;
         	String imageidClear;
 
+        	/*        	
+        	 * The requestType parameter can be only be null on the forward call,
+        	 * the forwarded request parameters are appended and stored in a base64
+        	 * encoding.  
+        	 */
         	if(request.getParameter("requestType") == null)
         	{
         		displayHTML = true;
@@ -54,6 +59,9 @@ public class CaptchaServlet extends HttpServlet {
         		redirectEnc = request.getParameter("redirectEnc");
         	}
 
+        	/*
+        	 * Create the server name and port.        	
+        	 */
         	String serverName = "http://" + request.getServerName();
     		int serverPort = request.getServerPort();
     		if(serverPort != 80)
@@ -61,6 +69,12 @@ public class CaptchaServlet extends HttpServlet {
     			serverName = serverName+":"+Integer.toString(serverPort);
     		}
 
+    		/*
+    		 * Outputs the html page with the encoded forwarded request parameters
+    		 * and generates a random string of letters appended by a secureid.  In the
+    		 * image source of this html another call is made back to this servlet
+    		 * with requestType = image.
+    		 */
         	if(displayHTML)
         	{
         		String randomLetters = new String("");
@@ -69,7 +83,7 @@ public class CaptchaServlet extends HttpServlet {
     		    }
     		    randomLetters = randomLetters.replaceAll("I","X");
     		    randomLetters = randomLetters.replaceAll("Q","Z");
-    		    String imagetextClear = randomLetters + "." + Config.SEED;
+    		    String imagetextClear = randomLetters + "." + SecureID.getSecureID(120000L);
     		    String imagetextEnc  = Base64Coder.encode(_stringEncrypter.encrypt(imagetextClear) );
         		String error = request.getParameter("errObject");
         		if(error == null)
@@ -84,38 +98,40 @@ public class CaptchaServlet extends HttpServlet {
         		out.write("</head>");
         		out.write("<body  bgcolor=\"#FFFFFF\" topmargin=\"0\" marginheight=\"0\" marginwidth=\"0\">");
 
-            // logo and gray bar
-            out.write("<center>");
-            out.write("  <table border=\"0\" width=\"99%\" cellspacing=\"0\" cellpadding=\"0\">");
-            out.write("   <tr>");
-            out.write("     <td valign=\"top\">");
-            out.write("       <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\">");
-            out.write("         <tr>");
-            out.write("           <td valign=\"top\">");
-            out.write("             <a target=\"_top\" href=\"" + serverName + "/controller/servlet/Controller?CID=home\">");
-            out.write("                 <img alt=\"Engineering Village\" src=\"/engresources/images/ev2logo5.gif\" border=\"0\"/>");
-            out.write("             </a>");
-            out.write("           </td>");
-            out.write("         </tr>");
-            out.write("       </table>");
-            out.write("     </td>");
-            out.write("   </tr>");
-            out.write("  </table>");
-            out.write("  <table border=\"0\" width=\"99%\" cellspacing=\"0\" cellpadding=\"0\">");
-            out.write("    <tr><td valign=\"top\" colspan=\"10\" height=\"20\" bgcolor=\"#C3C8D1\"><img src=\"/engresources/images/s.gif\" border=\"0\"/></td></tr>");
-            out.write("    <tr><td valign=\"top\" colspan=\"10\" height=\"20\"><img src=\"/engresources/images/s.gif\" border=\"0\"/></td></tr>");
-            out.write("  </table>");
-            out.write("</center>");
+	            // logo and gray bar
+	            out.write("<center>");
+	            out.write("  <table border=\"0\" width=\"99%\" cellspacing=\"0\" cellpadding=\"0\">");
+	            out.write("   <tr>");
+	            out.write("     <td valign=\"top\">");
+	            out.write("       <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\">");
+	            out.write("         <tr>");
+	            out.write("           <td valign=\"top\">");
+	            out.write("             <a target=\"_top\" href=\"" + serverName + "/controller/servlet/Controller?CID=home\">");
+	            out.write("                 <img alt=\"Engineering Village\" src=\"/engresources/images/ev2logo5.gif\" border=\"0\"/>");
+	            out.write("             </a>");
+	            out.write("           </td>");
+	            out.write("         </tr>");
+	            out.write("       </table>");
+	            out.write("     </td>");
+	            out.write("   </tr>");
+	            out.write("  </table>");
+	            out.write("  <table border=\"0\" width=\"99%\" cellspacing=\"0\" cellpadding=\"0\">");
+	            out.write("    <tr><td valign=\"top\" colspan=\"10\" height=\"20\" bgcolor=\"#C3C8D1\"><img src=\"/engresources/images/s.gif\" border=\"0\"/></td></tr>");
+	            out.write("    <tr><td valign=\"top\" colspan=\"10\" height=\"20\"><img src=\"/engresources/images/s.gif\" border=\"0\"/></td></tr>");
+	            out.write("  </table>");
+	            out.write("</center>");
 
-        		// validation error
+        		/*
+        		 * Error of "failed" is returned from the validation below
+        		 */
         		if(error.equalsIgnoreCase("failed"))
         		{
-              out.write("<center>");
-        			out.write("<table border=\"0\" width=\"99%\" cellspacing=\"0\" cellpadding=\"10\"><tr><td><h3><font face=\"Arial\" color=\"red\">Validation failed. Please try again.</font></h3></td></tr></table>");
-              out.write("</center>");
+        				out.write("<center>");
+        				out.write("<table border=\"0\" width=\"99%\" cellspacing=\"0\" cellpadding=\"10\"><tr><td><span CLASS=\"RedText\">Validation failed. Please try again.</span></td></tr></table>");
+        				out.write("</center>");
         		}
-            out.write("<center>");
-            out.write("<table border=\"0\" width=\"99%\" cellspacing=\"0\" cellpadding=\"10\">");
+        		out.write("<center>");
+        		out.write("<table border=\"0\" width=\"99%\" cellspacing=\"0\" cellpadding=\"10\">");
         		out.write("<td>");
         		out.write("<span CLASS=\"EvHeaderText\">");
         		out.write("We would like to validate the actions you are taking in this Engineering Village session.<br>");
@@ -170,10 +186,16 @@ public class CaptchaServlet extends HttpServlet {
         		out.write("</td>");
         		out.write("</tr>");
         		out.write("</table>");
-            out.write("</center>");
+        		out.write("</center>");
         		out.write("<br>");
         		out.write("</body></html>");
         	}
+        	/*
+        	 * This portion of the code returns the image based on the 
+        	 * random characters generated in the html requestType. The
+        	 * generated characters are kept in an encrypted form as a
+        	 * hidden variable on the html page.  
+        	 */
         	else if(request.getParameter("requestType").equals("image"))
         	{
     		    imageidEnc = request.getParameter("imageidEnc");
@@ -195,6 +217,18 @@ public class CaptchaServlet extends HttpServlet {
                 JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(response.getOutputStream());
                 encoder.encode(bufferedImage);
         	}
+        	/*
+        	 * This portion of the code validates the user input, requestType
+        	 * is equal to validate in this portion of the code. The users input
+        	 * is compared with the random letters in the encrypted hidden value.  
+        	 * The secureid is also validated for the correct TTL.  If a validation 
+        	 * error is found the error object is set and the servlet is called 
+        	 * with requestType of html and errObject failed.  A failure will cause
+        	 * the process to start from the beginning. If the validation is successful 
+        	 * the original request parameters are decoded and the user is redirected 
+        	 * back the controller.     
+        	 *   
+        	 */
     	    else
     	    {
     	    	boolean failed = false;
@@ -207,10 +241,10 @@ public class CaptchaServlet extends HttpServlet {
 
                     String imageidDec = Base64Coder.decode(imageidEnc);
                     imageidClear = _stringEncrypter.decrypt(imageidDec);
-                    String sessionID = imageidClear.substring(imageidClear.indexOf(".")+1, imageidClear.length());
+                    String secureID = imageidClear.substring(imageidClear.indexOf(".")+1, imageidClear.length());
                     imageidClear = imageidClear.substring(0, Config.getPropertyInt(Config.MAX_NUMBER));
 
-                    if (!sessionID.equals(Config.SEED)) {
+                    if (!SecureID.validSecureID(secureID)) {
                     	failed = true;
                     }
                     imageidClear = imageidClear.trim();
