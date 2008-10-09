@@ -70,12 +70,13 @@ public class BdPageCount
 							pageCount.setType(singlePageCountObject[0]);
 							pageCount.setValue(singlePageCountObject[1]);
 						}
-						pageCountList.add(pageCount);
+
 					}
 					else
 					{
-						pageCount.setValue(singlePageCountObject[1]);
+						pageCount.setValue(pageCountGroupString);
 					}
+					pageCountList.add(pageCount);
 				}
 
 			}
