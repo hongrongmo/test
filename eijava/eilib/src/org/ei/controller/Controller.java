@@ -43,6 +43,10 @@ public class Controller extends HttpServlet
     public static String RSS_CID = "openRSS";
     public static String REDIR_PAGE_SESSION_EXPIRED = "endSession";
 
+	private static Pattern sp_pattern = Pattern.compile("\\s+");
+	private static Pattern wildcard_pattern = Pattern.compile("(\\*|\\?)");
+	private static Pattern number_pattern = Pattern.compile("\\d{6,}+");
+
     private String configFile;
     private String appName;
     private Logger logger;
@@ -305,62 +309,68 @@ public class Controller extends HttpServlet
 					*/
 
 					String search = request.getParameter("searchWord1");
-				//	System.out.println("Searchword0:"+ search);
 					HitCount hitcount = null;
 					if(search != null && captchaID == null)
 					{
-						//System.out.println("Searchword1:"+ search);
-						// Pattern.compile(regex).split(str, n)
 						search = search.toLowerCase();
 						search = search.replace('(', ' ');
 						search = search.replace(')', ' ');
 						search = search.replace('"', ' ');
 						search = search.replace('{', ' ');
 						search = search.replace('}', ' ');
-				//		System.out.println("Searchword Stripped:"+ search);
-						String[] wn_an = search.split("\\s+wn\\s+an",-1);
-						if(wn_an != null)
+						String queryWords[] = sp_pattern.split(search);
+						int numAccessionPatternMatches = 0;
+						boolean captchaNow = false;
+						for(int i=0; i<queryWords.length; i++)
 						{
-				//			System.out.println(java.util.Arrays.asList(wn_an));
-				//			System.out.println("Num an queries:"+wn_an.length);
+							boolean wildcard = false;;
+							String word = queryWords[i];
 
-							if(wn_an.length >= 2)
+							Matcher wildcard_matcher = wildcard_pattern.matcher(word);
+							if(wildcard_matcher.find())
 							{
-								if(memcached.keyExists(memcachedkey))
-								{
-									hitcount = new  HitCount(memcachedkey,memcached.get(memcachedkey));
-								}
-								else
-								{
-									hitcount = new HitCount(memcachedkey);
-								}
+								word = wildcard_matcher.replaceAll("");
+								wildcard = true;
+							}
 
-								if(wn_an.length > 2)
+							Matcher number_matcher = number_pattern.matcher(word);
+							if(number_matcher.matches())
+							{
+								numAccessionPatternMatches++;
+								if(wildcard)
 								{
-									hitcount.setBlocked(true);
+									captchaNow = true;
+									break;
 								}
-								else
-								{
-									for(int i=0; i<wn_an.length; i++)
-									{
-										if(wn_an[i] != null && (wn_an[i].indexOf("*") > -1 || wn_an[i].indexOf("?") > -1 || wn_an[i].indexOf(" or ") > -1))
-										{
-											hitcount.setBlocked(true);
-										}
-									}
-								}
+							}
+						}
 
-								memcached.add(hitcount.getKey(),hitcount.stringValue());
-								if(hitcount.getBlocked())
-								{
-									/*
-									*	User is blocked so forward them to the Captcha page.
-									*/
-									System.out.println("Captcha blocked:"+ip+" : "+ request.getParameter("searchWord1"));
-									RequestDispatcher rd = getServletContext().getRequestDispatcher("/servlet/Captcha");
-									rd.forward(request, response);
-									return;
-								}
+						if(numAccessionPatternMatches > 0)
+						{
+							if(memcached.keyExists(memcachedkey))
+							{
+								hitcount = new  HitCount(memcachedkey,memcached.get(memcachedkey));
+							}
+							else
+							{
+								hitcount = new HitCount(memcachedkey);
+							}
+
+							if(captchaNow || numAccessionPatternMatches >= 7)
+							{
+								hitcount.setBlocked(true);
+							}
+
+							memcached.add(hitcount.getKey(),hitcount.stringValue());
+							if(hitcount.getBlocked())
+							{
+								/*
+								*	User is blocked so forward them to the Captcha page.
+								*/
+								System.out.println("Captcha blocked:"+ip+" : "+ request.getParameter("searchWord1"));
+								RequestDispatcher rd = getServletContext().getRequestDispatcher("/servlet/Captcha");
+								rd.forward(request, response);
+								return;
 							}
 						}
 					}
