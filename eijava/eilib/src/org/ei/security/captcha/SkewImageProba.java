@@ -16,8 +16,7 @@ public class SkewImageProba implements ISkewImage {
     private static final int MAX_Y = IMAGE_HEIGHT;
 
     private static final Color [] RANDOM_BG_COLORS = {
-            Color.WHITE, Color.WHITE, Color.WHITE, Color.WHITE, Color.WHITE, Color.WHITE,
-            Color.WHITE};
+            Color.WHITE, Color.GREEN, Color.BLUE};
 
     private static final Color [] RANDOM_FG_COLORS = {
             Color.BLACK, Color.BLUE, Color.DARK_GRAY};
@@ -64,11 +63,11 @@ public class SkewImageProba implements ISkewImage {
 
         g2d.setXORMode(RANDOM_BG_COLORS[(int) (Math.random() * RANDOM_BG_COLORS.length)]);
         g2d.setStroke(new BasicStroke(10));
-        //g2d.drawLine(0, MAX_Y / 2, MAX_X, MAX_Y / 2);
+        g2d.drawLine(0, MAX_Y / 2, MAX_X, MAX_Y / 2);
         g2d.setXORMode(RANDOM_BG_COLORS[(int) (Math.random() * RANDOM_BG_COLORS.length)]);
-        //g2d.drawLine(0, (MAX_Y / 2) - 10, MAX_X, (MAX_Y / 2) - 10);
+        g2d.drawLine(0, (MAX_Y / 2) - 10, MAX_X, (MAX_Y / 2) - 10);
         g2d.setXORMode(RANDOM_BG_COLORS[(int) (Math.random() * RANDOM_BG_COLORS.length)]);
-        //g2d.drawLine(0, (MAX_Y / 2) + 10, MAX_X, (MAX_Y / 2) + 10);
+        g2d.drawLine(0, (MAX_Y / 2) + 10, MAX_X, (MAX_Y / 2) + 10);
 
         /*for (int i = 0; i < DRAW_LINES; i ++) {
             g2d.setXORMode(Color.RED);
