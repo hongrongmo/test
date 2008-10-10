@@ -145,6 +145,7 @@ public class Controller extends HttpServlet
         	this.custBypass.put("1002198", "y");
         	this.custBypass.put("34764", "y");
         	this.custBypass.put("1001861", "y");
+        	this.custBypass.put("21014237", "y");
         }
         catch(Exception e)
         {
