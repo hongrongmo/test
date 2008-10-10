@@ -8,6 +8,7 @@ import java.util.Arrays;
 
 
 import org.ei.data.compendex.runtime.CPXLinkingStrategy;
+import org.ei.domain.DataDictionary;
 import org.ei.domain.Database;
 import org.ei.domain.DocumentBuilder;
 import org.ei.domain.FastSearchControl;
@@ -52,6 +53,8 @@ public class PaperChemDatabase extends Database {
 		searchfield.put("TI", "Y");
 		searchfield.put("FL", "Y");
 	}
+	
+	 private DataDictionary dataDictionary = new PaperChemDataDictionary();
 
     public int getStartYear(boolean hasBackFile) {
         return 1967;
@@ -152,7 +155,6 @@ public class PaperChemDatabase extends Database {
 	        return false;
 	    }
     }
-
 	public boolean linkLocalHoldings(String linklabel)
 	{
 		if(linklabel.indexOf("NTIS") > -1)
@@ -164,4 +166,9 @@ public class PaperChemDatabase extends Database {
 			return true;
 		}
 	}
+	
+    public DataDictionary getDataDictionary()
+    {
+        return dataDictionary;
+    }
 }
