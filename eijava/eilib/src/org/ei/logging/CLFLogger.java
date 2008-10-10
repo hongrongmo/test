@@ -10,6 +10,8 @@ public class CLFLogger
 {
     private CLFLogConsumer consumer;
     private LinkedList logQueue = new LinkedList();
+	private long lastChecked;
+
 
     public CLFLogger(String filename)
         throws Exception
@@ -20,17 +22,29 @@ public class CLFLogger
 
     public synchronized void enqueue(CLFMessage message)
     {
-        logQueue.addLast(message);
+        logQueue.add(message);
     }
 
-    public synchronized int queueSize()
+    public synchronized long getLastChecked()
     {
-        return logQueue.size();
+        return this.lastChecked;
     }
 
-    public synchronized CLFMessage dequeue()
+    public synchronized void setLastChecked(long time)
+	{
+		this.lastChecked = time;
+    }
+
+    public synchronized CLFMessage[] dequeue()
     {
-        return (CLFMessage)logQueue.removeLast();
+        CLFMessage[] messages = new CLFMessage[logQueue.size()];
+        for(int i=0; i<messages.length; i++)
+        {
+			messages[i] = (CLFMessage)logQueue.get(i);
+		}
+		logQueue.clear();
+
+		return messages;
     }
 
     public void shutdown()
@@ -61,13 +75,13 @@ public class CLFLogger
         {
             while(!shutdown)
             {
-                int size = queueSize();
-                for(int x=0; x<size;++x)
+				setLastChecked(System.currentTimeMillis());
+				CLFMessage[] messages = dequeue();
+                for(int x=0; x<messages.length;++x)
                 {
-
                     ConnectionBroker broker = null;
                     Connection con = null;
-                    CLFMessage message = dequeue();
+                    CLFMessage message = messages[x];
 
                     try
                     {
@@ -105,10 +119,7 @@ public class CLFLogger
                     {
                         e.printStackTrace();
                     }
-
                 }
-
-
 
                 try
                 {
@@ -118,9 +129,7 @@ public class CLFLogger
                 {
                     e1.printStackTrace();
                 }
-
             }
-
 
             try
             {
