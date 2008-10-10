@@ -29,6 +29,7 @@ import org.ei.session.SessionStatus;
 import org.ei.session.User;
 import org.ei.session.UserSession;
 import org.ei.util.*;
+import org.ei.domain.ISBN;
 
 
 public class Controller extends HttpServlet
@@ -335,7 +336,7 @@ public class Controller extends HttpServlet
 							}
 
 							Matcher number_matcher = number_pattern.matcher(word);
-							if(number_matcher.matches())
+							if(number_matcher.matches() && !isbn(word))
 							{
 								numAccessionPatternMatches++;
 								if(wildcard)
@@ -488,6 +489,41 @@ public class Controller extends HttpServlet
 			}
 		}
     }
+
+	private boolean isbn(String word)
+	{
+		int length = word.length();
+		if(length != 13 && length != 10)
+		{
+			return false;
+		}
+		else if(length == 13)
+		{
+			if(word.indexOf("978") == 0)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		else if(length == 10)
+		{
+			char checkDigit = ISBN.getISBN10CheckDigit(word);
+			if(word.charAt(9) == checkDigit)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+
+		return false;
+	}
+
 
     protected LogEntry getLogEntry(DataResponse dataResponse,
                                    HttpServletRequest request)
