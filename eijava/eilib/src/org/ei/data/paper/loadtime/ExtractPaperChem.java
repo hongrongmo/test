@@ -104,6 +104,7 @@ public class ExtractPaperChem
 				writeColumn(rs1, "pn", writerPub);
 				writeColumn(rs1, "load_number", writerPub);
 				writeColumn(rs1, "xp", writerPub);
+				writeColumn(rs1, "tr", writerPub);
                 writerPub.println();
             }
 
@@ -144,9 +145,7 @@ public class ExtractPaperChem
                 }
             }
         }
-
     }
-
 
 	public void writeColumn(ResultSet rs1, String columnName, PrintWriter writerPub) throws Exception
 	{
@@ -207,6 +206,10 @@ public class ExtractPaperChem
 		{
 			column = formatControlledTerms(rs1.getString("pt"));
 		}
+		else if(columnName.equals("tr"))
+		{
+			column = formatTreatmentType(rs1.getString("tr"));
+		}
 		else
 		{
 			column   = rs1.getString(columnName);
@@ -221,6 +224,28 @@ public class ExtractPaperChem
 			writerPub.print("\t");
 		}
 	}
+	
+	public String formatTreatmentType(String treatments)throws Exception
+	{
+
+		StringBuffer tr = new StringBuffer();
+		if(treatments != null)
+		{
+			int len = treatments.length();
+
+			for (int i= 0; i < len; i++)
+			{
+				tr.append(treatments.charAt(i));
+				tr.append(BdParser.AUDELIMITER);
+
+			}
+
+		}
+
+		return tr.toString();
+
+	}
+
 
 	public String formatConferenceLocation(String location, String city,String state, String country)
 	{
