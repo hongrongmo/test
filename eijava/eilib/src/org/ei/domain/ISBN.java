@@ -51,7 +51,7 @@ public class ISBN
     return (char) (calcValue + '0');
   }
 
-  private static char getISBN10CheckDigit(String isbn) {
+  public static char getISBN10CheckDigit(String isbn) {
 
       int digitSum = 0;
       int calcValue = 0;
