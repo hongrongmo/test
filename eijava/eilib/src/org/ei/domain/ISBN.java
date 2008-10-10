@@ -51,6 +51,29 @@ public class ISBN
     return (char) (calcValue + '0');
   }
 
+  private static char getISBN10CheckDigit(String isbn) {
+
+      int digitSum = 0;
+      int calcValue = 0;
+
+      // length of passed in isbn must be 9 or
+      // we will get a nullpointer here
+      for (int i = 0; i < 9; i++) {
+          int val = Integer.parseInt((isbn.substring(i, i + 1)));
+          int weight = 10 - (i % 10);
+          digitSum += val * weight;
+      }
+
+      calcValue = (11 - (digitSum % 11)) % 11;
+      if(calcValue == 10 ) {
+          return (char) ('X');
+      }
+      else
+      {
+          return (char) (calcValue + '0');
+      }
+  }
+
 	public String withoutDash()
 	{
 		return this.isbn.replaceAll("[-|\\s]","");
