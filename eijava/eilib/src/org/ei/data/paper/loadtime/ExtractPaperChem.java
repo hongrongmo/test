@@ -105,6 +105,7 @@ public class ExtractPaperChem
 				writeColumn(rs1, "load_number", writerPub);
 				writeColumn(rs1, "xp", writerPub);
 				writeColumn(rs1, "tr", writerPub);
+				writeColumn(rs1, "pp", writerPub);
                 writerPub.println();
             }
 
@@ -210,6 +211,10 @@ public class ExtractPaperChem
 		{
 			column = formatTreatmentType(rs1.getString("tr"));
 		}
+		else if(columnName.equals("pp"))
+		{
+			column = rs1.getString("pp");
+		}
 		else
 		{
 			column   = rs1.getString(columnName);
@@ -224,7 +229,7 @@ public class ExtractPaperChem
 			writerPub.print("\t");
 		}
 	}
-	
+
 	public String formatTreatmentType(String treatments)throws Exception
 	{
 
