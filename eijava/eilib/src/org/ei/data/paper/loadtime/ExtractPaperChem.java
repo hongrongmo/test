@@ -106,6 +106,7 @@ public class ExtractPaperChem
 				writeColumn(rs1, "xp", writerPub);
 				writeColumn(rs1, "tr", writerPub);
 				writeColumn(rs1, "pp", writerPub);
+				writeColumn(rs1, "cls", writerPub);
                 writerPub.println();
             }
 
@@ -214,6 +215,10 @@ public class ExtractPaperChem
 		else if(columnName.equals("pp"))
 		{
 			column = rs1.getString("pp");
+		}
+		else if(columnName.equals("cls"))
+		{
+			column = formatClassificationCode(rs1.getString("cls"));
 		}
 		else
 		{
@@ -546,6 +551,33 @@ public class ExtractPaperChem
 		}
 
 		return termsBuffer.toString();
+	}
+	public String formatClassificationCode(String codes)
+	{
+		String[] codesArray = null;
+		StringBuffer codesBuffer = new StringBuffer();
+		if(codes != null)
+		{
+			if(codes.indexOf(";")>-1)
+			{
+				codesArray = codes.split(";",-1);
+			}
+			else
+			{
+				codesArray = new String[1];
+				codesArray[0] = codes;
+			}
+
+			codesBuffer.append(codesArray[0]);
+
+			for(int i=1;i<codesArray.length;i++)
+			{
+				codesBuffer.append(BdParser.AUDELIMITER);
+				codesBuffer.append(codesArray[i]);
+			}
+		}
+
+		return codesBuffer.toString();
 	}
   public static Connection getDbCoonection(String url,String username,String password, String driver)
     throws Exception
