@@ -325,7 +325,7 @@ function calEndYear(selectedDbMask)
   }
 	else // All others
 	{
- 		return 2008;
+ 		return 2009;
 	}
 }
 
@@ -609,7 +609,7 @@ function calDisplayYear(selectedDbMask, sYear)
         {
             var ntiStartYear = sYear.substr(sYear.indexOf("XSY")+3,4);
             dYear = (dYear > ntiStartYear) ? ntiStartYear : dYear;
-        }        
+        }
     }
     else
     {
