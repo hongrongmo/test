@@ -24,9 +24,7 @@ public class AdmitOneTicketer
 	private static final String SHRDKEY = "!MM01234-5-6789MM#";
 	private String id = "Authorised";
 	private static final long expireIn =   172800000L; // 48 Hours
-	private static final long createEvery = 86400000L; // 24 Hours
-	private long createTime = -1L;
-	private Map tickets;
+
 	private static AdmitOneTicketer instance;
 	private static long count = 0;
 
@@ -41,7 +39,7 @@ public class AdmitOneTicketer
 
 	private AdmitOneTicketer()
 	{
-		tickets = new Hashtable();
+
 	}
 
 	public String getPageTicket(String isbn,
@@ -121,23 +119,13 @@ public class AdmitOneTicketer
 				anchor = getAnchor(fullUrl);
 			}
 
-			if((createTime == -1) || ((currentTime - createTime) > createEvery))
-			{
-				tickets = new Hashtable();
-				createTime = currentTime;
-			}
-			else
-			{
-				ticket = (Ticket)tickets.get(path);
-			}
-
+			ticket = null;
 			if(ticket == null)
 			{
 				ticket = new Ticket();
 				formattedExpires = formatExpires(expireIn);
 				ticket.t = getTicket(path + formattedExpires + secretname + secret + id);
 				ticket.e = formattedExpires;
-				tickets.put(path,ticket);
 			}
 
 			buf.append(root);
