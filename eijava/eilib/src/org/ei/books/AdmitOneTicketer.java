@@ -1,32 +1,15 @@
 package org.ei.books;
 
-import org.ei.config.ConfigService;
-import org.ei.config.RuntimeProperties;
-
-import java.net.URLEncoder;
 import java.security.MessageDigest;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Hashtable;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
+
 
 public class AdmitOneTicketer
 {
-
-	private String secretname = "Elsevier";
+	
 	private String secret = "35738437";
-	private static final String SHRDKEY = "!MM01234-5-6789MM#";
-	private static final long expireIn =   172800000L; // 48 Hours
-
+	private static final String SHRDKEY = "!MM01234-5-6789MM#";	
 	private static AdmitOneTicketer instance;
-	private static long count = 0;
-
+	
 	public static synchronized AdmitOneTicketer getInstance()
 	{
 		if(instance == null) {
@@ -64,7 +47,7 @@ public class AdmitOneTicketer
 		return ticket;
 	}
 
-  // PII is the chapter unique identitfier
+  // PII is the chapter unique identifier
 	public String getChapterTicketedURL(String baseUrl, String isbn, String pii,
 										String custID,
 										long currentTime)
@@ -104,29 +87,17 @@ public class AdmitOneTicketer
 								  long currentTime)
 	{
 		StringBuffer buf = new StringBuffer();
-
 		try
-		{
-			String anchor = null;
-
+		{			
 			String root = getRoot(fullUrl);
-			String path = getPath(fullUrl);
-			System.out.println("Full URL:"+fullUrl);
-			System.out.println("Root:"+root);
-			System.out.println("Path:"+path);
-
-
-
+			String path = getPath(fullUrl);					
 			StringBuffer ticketBuffer = new StringBuffer(path);
 			ticketBuffer.append(currentTime).append(secret);
 			String hash = getTicket(ticketBuffer.toString());
-
 			buf.append(root);
 			buf.append(path);
 			buf.append("?expires=");
-			buf.append(currentTime);
-			buf.append("&secretname=");
-			buf.append(secretname);			
+			buf.append(currentTime);						
 			buf.append("&ticket=");
 			buf.append(hash);
 			buf.append("&custid="+custID);
@@ -162,20 +133,13 @@ public class AdmitOneTicketer
 	}
 
 	private String getRoot(String fullUrl)
-	{
+	{	
 		String part1 = fullUrl.substring(0, 7);
 		String rest = fullUrl.substring(7, fullUrl.length());
 		int slashIndex = rest.indexOf("/");
 		return part1 + rest.substring(0, slashIndex);
 	}
-
-	private String getAnchor(String fullUrl)
-	{
-		int hashIndex = fullUrl.indexOf("#") + 1;
-
-		return fullUrl.substring(hashIndex);
-	}
-
+	
 	private String asHex(byte[] hash)
 	{
 		StringBuffer buf = new StringBuffer(hash.length * 2);
