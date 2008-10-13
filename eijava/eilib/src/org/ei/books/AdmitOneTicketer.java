@@ -22,7 +22,6 @@ public class AdmitOneTicketer
 	private String secretname = "Elsevier";
 	private String secret = "35738437";
 	private static final String SHRDKEY = "!MM01234-5-6789MM#";
-	private String id = "Authorised";
 	private static final long expireIn =   172800000L; // 48 Hours
 
 	private static AdmitOneTicketer instance;
@@ -100,55 +99,43 @@ public class AdmitOneTicketer
 
 
 
-	private synchronized String getTicketedURL(String fullUrl,
-											   String custID,
-											   long currentTime)
+	private String getTicketedURL(String fullUrl,
+								  String custID,
+								  long currentTime)
 	{
-		Ticket ticket = null;
 		StringBuffer buf = new StringBuffer();
-		String formattedExpires;
 
 		try
 		{
 			String anchor = null;
+
 			String root = getRoot(fullUrl);
 			String path = getPath(fullUrl);
+			System.out.println("Full URL:"+fullUrl);
+			System.out.println("Root:"+root);
+			System.out.println("Path:"+path);
 
-			if (fullUrl.indexOf("#") > -1)
-			{
-				anchor = getAnchor(fullUrl);
-			}
 
-			ticket = null;
-			if(ticket == null)
-			{
-				ticket = new Ticket();
-				formattedExpires = formatExpires(expireIn);
-				ticket.t = getTicket(path + formattedExpires + secretname + secret + id);
-				ticket.e = formattedExpires;
-			}
+
+			StringBuffer ticketBuffer = new StringBuffer(path);
+			ticketBuffer.append(currentTime).append(secret);
+			String hash = getTicket(ticketBuffer.toString());
 
 			buf.append(root);
 			buf.append(path);
 			buf.append("?expires=");
-			buf.append(ticket.e);
+			buf.append(currentTime);
 			buf.append("&secretname=");
-			buf.append(URLEncoder.encode(secretname,"UTF-8"));
+			buf.append(secretname);
 			buf.append("&id=");
-			buf.append(URLEncoder.encode(id,"UTF-8"));
+			buf.append(id);
 			buf.append("&ticket=");
-			buf.append(ticket.t);
-			buf.append("&f=d.exe");
-			buf.append("&count="+Long.toString(count++));
+			buf.append(hash);
 			buf.append("&custid="+custID);
-			if(count > 1000000)
-			{
-				count = 0;
-			}
 		}
 		catch (Exception e)
 		{
-      e.printStackTrace();
+      		e.printStackTrace();
 		}
 
 		return buf.toString();
@@ -207,21 +194,6 @@ public class AdmitOneTicketer
 		}
 
 		return buf.toString();
-	}
-
-	private String formatExpires(long expireIn)
-	{
-        Calendar cal = Calendar.getInstance();
-        cal.setTimeInMillis(System.currentTimeMillis() + AdmitOneTicketer.expireIn);
-        DateFormat sd = new SimpleDateFormat("yyyyMMddHHmmss");
-        return sd.format(cal.getTime());
-	}
-
-
-	class Ticket
-	{
-		public String t;
-		public String e;
 	}
 
 	public static void main(String[] args) {
