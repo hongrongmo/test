@@ -126,9 +126,7 @@ public class AdmitOneTicketer
 			buf.append("?expires=");
 			buf.append(currentTime);
 			buf.append("&secretname=");
-			buf.append(secretname);
-			buf.append("&id=");
-			buf.append(id);
+			buf.append(secretname);			
 			buf.append("&ticket=");
 			buf.append(hash);
 			buf.append("&custid="+custID);
