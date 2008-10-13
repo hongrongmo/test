@@ -1,4 +1,4 @@
-package org.ei.junit;
+
 
 import junit.framework.TestCase;
 import java.util.List;
@@ -29,10 +29,6 @@ public class BDDocBuilderUnitTest extends TestCase {
 	private static final String COMPLTE_RIS = "<EI-DOCUMENT VIEW=\"ris\"><FT  FTLINK=\"N\"/><TY><![CDATA[JOUR]]></TY><LA><![CDATA[German]]></LA><N1><![CDATA[Compilation and indexing terms, Copyright 2008 Elsevier Inc.]]></N1><TI><![CDATA[Erweiterter push out-test zur schadigungscharakterisierung der implantat-knochen-grenzflache]]></TI><T1><![CDATA[Extended push-out test to characterize the failure of bone-implant interface]]></T1><JO><![CDATA[Biomedizinische Technik]]></JO><AUS><AU><![CDATA[Brandt, Jorg]]></AU><AU><![CDATA[Bierogel, C.]]></AU><AU><![CDATA[Holweg, K.]]></AU><AU><![CDATA[Hein, W.]]></AU><AU><![CDATA[Grellmann, W.]]></AU></AUS><AD><A><![CDATA[Universitatsklinik und Poliklinik fur Orthopadie und Physikalische Medizin, D-06112 Halle, Germany]]></A></AD><VL><![CDATA[ 50]]></VL><IS><![CDATA[ 6]]></IS><PY><![CDATA[2005]]></PY><AN><![CDATA[06189858062]]></AN><SP><![CDATA[201]]></SP><EP><![CDATA[206]]></EP><SN><![CDATA[0013-5585]]></SN><PB><![CDATA[Fachverlag Schiele und Sohn GmbH, Berlin, D-10969, Germany]]></PB><N2><![CDATA[To study the mechanical behaviour of the implant-bone interface the push- or pull-out test was overtaken from material science. Most authors equate the maximum load (break point) with the failure of the implant integration. Extending the test procedure by acoustic emission analysis reveals the possibility to detect the failure of the interface more in detail and from its earliest beginning. The development of disconnection between host and implant was found to start long before the ultimate load is reached and can be monitored and quantified during this period. The active interface mechanisms are characterized by the distribution function of acoustic emissions and the number of hits per time defines the kinetics of the failure. From clinical studies a gradual subsidence of loaded implants is known starting long time before the definite implant failure. The presented extension of the push-out test with acoustic emission analysis allows the detection of a critical shear stress tc which demarks the onset of the gradual interface failure. We believe this value to represent the real critical load which should not be exceeded in the clinical application of intraosseous implants.]]></N2><KW><![CDATA[Implants (surgical)]]></KW><CVS><CV><![CDATA[Bone]]></CV><CV><![CDATA[Interfaces (materials)]]></CV><CV><![CDATA[Biomaterials]]></CV><CV><![CDATA[Acoustic emission testing]]></CV><CV><![CDATA[Shear strength]]></CV><CV><![CDATA[Mechanical alloying]]></CV><CV><![CDATA[Materials science]]></CV></CVS><FLS><FL><![CDATA[Bone-implant-interface]]></FL><FL><![CDATA[Shear strength, push-out test]]></FL><FL><![CDATA[Critical load]]></FL><FL><![CDATA[Interface mechanisms]]></FL></FLS></EI-DOCUMENT>";
 	ConnectionBroker broker = null;
 
-    public static void main(String args[])
-    {
-    	org.junit.runner.JUnitCore.main("org.ei.junit.BDDocBuilderUnitTest");
-    }
 
 	protected void setUp() {
 
@@ -64,7 +60,7 @@ public class BDDocBuilderUnitTest extends TestCase {
 			fullDocPages = multidbDocBuilder.buildPage(listOfDocIDs, FullDoc.FULLDOC_FORMAT);
 			citationPages = multidbDocBuilder.buildPage(listOfDocIDs, Citation.CITATION_FORMAT);
 			xmlPages = multidbDocBuilder.buildPage(listOfDocIDs, Citation.XMLCITATION_FORMAT);
-	//		risPages = multidbDocBuilder.buildPage(listOfDocIDs, RIS.RIS_FORMAT);
+			risPages = multidbDocBuilder.buildPage(listOfDocIDs, RIS.RIS_FORMAT);
 		}
 		catch(Exception e)
 		{
@@ -125,8 +121,8 @@ public class BDDocBuilderUnitTest extends TestCase {
 			assertPi(fullDocPages,FullDoc.FULLDOC_FORMAT);
 			assertDOI(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertConfCode(fullDocPages);
-			assertCorrespondencename(fullDocPages, FullDoc.FULLDOC_FORMAT);
-			assertCorrespondenceeaddress(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			//assertCorrespondencename(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			//assertCorrespondenceeaddress(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertConfName(fullDocPages,FullDoc.FULLDOC_FORMAT);
 			assertISSN(fullDocPages,FullDoc.FULLDOC_FORMAT);
 			assertISBN(fullDocPages,FullDoc.FULLDOC_FORMAT);
@@ -134,6 +130,31 @@ public class BDDocBuilderUnitTest extends TestCase {
 			assertVolume(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertIssue(fullDocPages,FullDoc.FULLDOC_FORMAT);
 			assertPubYear(fullDocPages, FullDoc.FULLDOC_FORMAT);
+
+			/****************************************************/
+
+			assertConfLocation(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			assertConfLocation(risPages, RIS.RIS_FORMAT);
+			assertConfDate(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			assertConfDate(risPages, RIS.RIS_FORMAT);
+
+			assertPublisher(fullDocPages,FullDoc.FULLDOC_FORMAT);
+			assertPublisher(citationPages,Citation.CITATION_FORMAT);
+			assertPublisher(risPages,RIS.RIS_FORMAT);
+			assertControlledTerms(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			assertControlledTerms(risPages,RIS.RIS_FORMAT);
+			assertPageCount(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			//assertLanguage(citationPages, Citation.CITATION_FORMAT);
+			//assertLanguage(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			//assertLanguage(risPages,RIS.RIS_FORMAT);
+			assertSponsor(fullDocPages);
+			//assertTitle(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			//assertTranslatedTitle(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			assertTreatments(fullDocPages);
+			//assertUnControlledTerms(fullDocPages,FullDoc.FULLDOC_FORMAT);
+			assertStartPage(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			assertEndPage(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			//assertClassCode(fullDocPages);
 
 			/*
 
@@ -285,7 +306,10 @@ public class BDDocBuilderUnitTest extends TestCase {
 			out.close();
 			String xmlString = swriter.toString();
 			DocID correctDocId = (DocID)eidoc.getDocID();
+			//System.out.println("DOCID_xmlString= "+xmlString);
+
 			correctString = "<DOC-ID>" + correctDocId.getDocID() + "</DOC-ID>";
+			//System.out.println("DOCID_correctString= "+correctString);
 			assertTrue(xmlString.indexOf(correctString) != -1);
 		}
 	}
@@ -1618,24 +1642,52 @@ public class BDDocBuilderUnitTest extends TestCase {
 		}
 	}
 
+	protected void assertPageCount(List EIDocs,String dataFormat) throws Exception
+	{
+		HashMap ctermsMap = new HashMap();
+
+		ctermsMap.put("pch_34f213f85aae815aM7e1a19817173212", null);
+		ctermsMap.put("pch_B9CB8C0806B110C6E03408002081DCA4", "<PC><![CDATA[24 p.]]></PC>");
+		ctermsMap.put("pch_B9CB8C0806B010C6E03408002081DCA4", "<PC><![CDATA[42 p.]]></PC>");
+
+		String correctString = null;
+
+		for(int i = 0; i < EIDocs.size();i++)
+		{
+			StringWriter swriter = new StringWriter();
+			PrintWriter out = new PrintWriter ( swriter );
+			EIDoc eidoc = (EIDoc)EIDocs.get(i);
+			eidoc.toXML(out);
+			out.close();
+			String xmlString = swriter.toString();
+			DocID correctDocId = (DocID)eidoc.getDocID();
+			String docidString = correctDocId.getDocID();
+
+			if(ctermsMap.get(correctDocId.getDocID()) != null)
+			{
+				correctString = (String)ctermsMap.get(correctDocId.getDocID());
+				//System.out.println("PC correctString= "+ correctString);
+				//System.out.println("PC xmlString= "+	 xmlString);
+				assertTrue(xmlString.indexOf(correctString) != -1);
+			}
+
+		}
+	}
+
 	protected void assertControlledTerms(List EIDocs,String dataFormat) throws Exception
 	{
 		HashMap ctermsMap = new HashMap();
 		if(dataFormat.equals(RIS.RIS_FORMAT))
 		{
-			ctermsMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "<CVS><CV><![CDATA[Acoustic emission testing]]></CV><CV><![CDATA[Biomaterials]]></CV><CV><![CDATA[Bone]]></CV><CV><![CDATA[Interfaces (materials)]]></CV><CV><![CDATA[Materials science]]></CV><CV><![CDATA[Mechanical alloying]]></CV><CV><![CDATA[Shear strength]]></CV></CVS>");
-			ctermsMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<CVS><CV><![CDATA[Adaptive optics]]></CV><CV><![CDATA[Mirrors]]></CV><CV><![CDATA[Optical design]]></CV><CV><![CDATA[Planets]]></CV><CV><![CDATA[Spectroscopic analysis]]></CV></CVS>");
-			ctermsMap.put("geo_152513a113d01a997cM73da2061377553", "<CVS><CV><![CDATA[charcoal]]></CV><CV><![CDATA[deforestation]]></CV><CV><![CDATA[environmental change]]></CV><CV><![CDATA[Holocene]]></CV><CV><![CDATA[human activity]]></CV><CV><![CDATA[palynology]]></CV><CV><![CDATA[radiocarbon dating]]></CV><CV><![CDATA[spatiotemporal analysis]]></CV><CV><![CDATA[vegetation history]]></CV></CVS>");
-			ctermsMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<CVS><CV><![CDATA[Codes (symbols)]]></CV><CV><![CDATA[Computer simulation]]></CV><CV><![CDATA[Coolants]]></CV><CV><![CDATA[Electrochemical corrosion]]></CV><CV><![CDATA[Electrochemistry]]></CV><CV><![CDATA[Radiolysis]]></CV><CV><![CDATA[Stress corrosion cracking]]></CV></CVS>");
-			ctermsMap.put("cpx_18a992f10b61b5d4a9M743d2061377553", "<CVS><CV><![CDATA[Computer simulation]]></CV><CV><![CDATA[Die casting]]></CV><CV><![CDATA[Light metals]]></CV><CV><![CDATA[Porosity]]></CV><CV><![CDATA[Shrinkage]]></CV></CVS>");
+			ctermsMap.put("pch_34f213f85aae815aM7e1a19817173212", "<CVS><CV><![CDATA[Plants]]></CV><CV><![CDATA[Remote sensing]]></CV><CV><![CDATA[Forestry]]></CV></CVS>");
+			ctermsMap.put("pch_B9CB8C0806B110C6E03408002081DCA4", "<CVS><CV><![CDATA[CONTINUOUS FORMS]]></CV><CV><![CDATA[ENGLISH]]></CV><CV><![CDATA[GAA]]></CV><CV><![CDATA[GRAPHIC ARTS]]></CV><CV><![CDATA[MAIL]]></CV><CV><![CDATA[OPENING FEATURES]]></CV><CV><![CDATA[PATENTS]]></CV><CV><![CDATA[PRDS]]></CV><CV><![CDATA[PRINTING ]]></CV></CVS>");
+			ctermsMap.put("pch_B9CB8C0806B010C6E03408002081DCA4", "<CVS><CV><![CDATA[BOXES]]></CV><CV><![CDATA[CONTAINERS]]></CV><CV><![CDATA[ENGLISH]]></CV><CV><![CDATA[HEAT SEALING]]></CV><CV><![CDATA[LEAK PROOF CONTAINERS]]></CV><CV><![CDATA[PAPER BOARD CONTAINERS]]></CV><CV><![CDATA[PATENTS]]></CV><CV><![CDATA[PCKG]]></CV><CV><![CDATA[PLASTIC COATED PAPERS]]></CV><CV><![CDATA[POLYMER PAPER COMBINATIONS]]></CV><CV><![CDATA[POURING SPOUTS]]></CV><CV><![CDATA[SEALING]]></CV></CVS>");
 		}
 		else
 		{
-			ctermsMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "<CVS label=\"Controlled terms\"><CV><![CDATA[Acoustic emission testing]]></CV><CV><![CDATA[Biomaterials]]></CV><CV><![CDATA[Bone]]></CV><CV><![CDATA[Interfaces (materials)]]></CV><CV><![CDATA[Materials science]]></CV><CV><![CDATA[Mechanical alloying]]></CV><CV><![CDATA[Shear strength]]></CV></CVS>");
-			ctermsMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<CVS label=\"Controlled terms\"><CV><![CDATA[Adaptive optics]]></CV><CV><![CDATA[Mirrors]]></CV><CV><![CDATA[Optical design]]></CV><CV><![CDATA[Planets]]></CV><CV><![CDATA[Spectroscopic analysis]]></CV></CVS>");
-			ctermsMap.put("geo_152513a113d01a997cM73da2061377553", "<CVS label=\"Controlled terms\"><CV><![CDATA[charcoal]]></CV><CV><![CDATA[deforestation]]></CV><CV><![CDATA[environmental change]]></CV><CV><![CDATA[Holocene]]></CV><CV><![CDATA[human activity]]></CV><CV><![CDATA[palynology]]></CV><CV><![CDATA[radiocarbon dating]]></CV><CV><![CDATA[spatiotemporal analysis]]></CV><CV><![CDATA[vegetation history]]></CV></CVS>");
-			ctermsMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<CVS label=\"Controlled terms\"><CV><![CDATA[Codes (symbols)]]></CV><CV><![CDATA[Computer simulation]]></CV><CV><![CDATA[Coolants]]></CV><CV><![CDATA[Electrochemical corrosion]]></CV><CV><![CDATA[Electrochemistry]]></CV><CV><![CDATA[Radiolysis]]></CV><CV><![CDATA[Stress corrosion cracking]]></CV></CVS>");
-			ctermsMap.put("cpx_18a992f10b61b5d4a9M743d2061377553", "<CVS label=\"Controlled terms\"><CV><![CDATA[Computer simulation]]></CV><CV><![CDATA[Die casting]]></CV><CV><![CDATA[Light metals]]></CV><CV><![CDATA[Porosity]]></CV><CV><![CDATA[Shrinkage]]></CV></CVS>");
+			ctermsMap.put("pch_34f213f85aae815aM7e1a19817173212", "<CVS label=\"Controlled terms\"><CV><![CDATA[Plants]]></CV><CV><![CDATA[Remote sensing]]></CV><CV><![CDATA[Forestry]]></CV></CVS>");
+			ctermsMap.put("pch_B9CB8C0806B110C6E03408002081DCA4", "<CVS label=\"Controlled terms\"><CV><![CDATA[CONTINUOUS FORMS]]></CV><CV><![CDATA[ENGLISH]]></CV><CV><![CDATA[GAA]]></CV><CV><![CDATA[GRAPHIC ARTS]]></CV><CV><![CDATA[MAIL]]></CV><CV><![CDATA[OPENING FEATURES]]></CV><CV><![CDATA[PATENTS]]></CV><CV><![CDATA[PRDS]]></CV><CV><![CDATA[PRINTING ]]></CV></CVS>");
+			ctermsMap.put("pch_B9CB8C0806B010C6E03408002081DCA4", "<CVS label=\"Controlled terms\"><CV><![CDATA[BOXES]]></CV><CV><![CDATA[CONTAINERS]]></CV><CV><![CDATA[ENGLISH]]></CV><CV><![CDATA[HEAT SEALING]]></CV><CV><![CDATA[LEAK PROOF CONTAINERS]]></CV><CV><![CDATA[PAPER BOARD CONTAINERS]]></CV><CV><![CDATA[PATENTS]]></CV><CV><![CDATA[PCKG]]></CV><CV><![CDATA[PLASTIC COATED PAPERS]]></CV><CV><![CDATA[POLYMER PAPER COMBINATIONS]]></CV><CV><![CDATA[POURING SPOUTS]]></CV><CV><![CDATA[SEALING]]></CV></CVS>");
 		}
 		String correctString = null;
 
@@ -1653,6 +1705,8 @@ public class BDDocBuilderUnitTest extends TestCase {
 			if(ctermsMap.get(correctDocId.getDocID()) != null)
 			{
 				correctString = (String)ctermsMap.get(correctDocId.getDocID());
+				//System.out.println("correctString= "+	 correctString);
+				//System.out.println("xmlString= "+	 xmlString);
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
 
@@ -1672,11 +1726,9 @@ public class BDDocBuilderUnitTest extends TestCase {
 		}
 		else
 		{
-			uctermsMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "<FLS label=\"Uncontrolled terms\"><FL><![CDATA[Bone-implant-interface]]></FL><FL><![CDATA[Critical load]]></FL><FL><![CDATA[Interface mechanisms]]></FL><FL><![CDATA[Shear strength, push-out test]]></FL></FLS>");
-			uctermsMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<FLS label=\"Uncontrolled terms\"><FL><![CDATA[Coronagraphs]]></FL><FL><![CDATA[Deformable mirror]]></FL><FL><![CDATA[Extrasolar planets]]></FL><FL><![CDATA[Gemini Planet Imager]]></FL><FL><![CDATA[MEMS]]></FL></FLS>");
-			uctermsMap.put("geo_152513a113d01a997cM73da2061377553", null);
-			uctermsMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<FLS label=\"Uncontrolled terms\"><FL><![CDATA[Accumulated damage]]></FL><FL><![CDATA[Electrochemical corrosion potential]]></FL><FL><![CDATA[IGSCC]]></FL><FL><![CDATA[Intergranular stress corrosion cracking (IGSCC)]]></FL></FLS>");
-			uctermsMap.put("cpx_18a992f10b61b5d4a9M743d2061377553", "<FLS label=\"Uncontrolled terms\"><FL><![CDATA[Atmospheric environments]]></FL><FL><![CDATA[Magnesium casting]]></FL><FL><![CDATA[Rheocast magnesium alloy]]></FL><FL><![CDATA[Shrinkage porosity]]></FL></FLS>");
+			uctermsMap.put("pch_34f213f85aae815aM7e1a19817173212", "<FLS><FL><![CDATA[Nitrogen fertilization;vegetation indices (VI)]]></FL><FL><![CDATA[Soil moisture]]></FL><FL><![CDATA[Canopy]]></FL><FL><![CDATA[Composite ecosystem degradation index]]></FL><FL><![CDATA[Reflectance anisotropy]]></FL><FL><![CDATA[Interferometric radar]]></FL><FL><![CDATA[Geological hazards]]></FL><FL><![CDATA[EiRev]]></FL></FLS>");
+			uctermsMap.put("pch_B9CB8C0806B110C6E03408002081DCA4", "<FLS><FL><![CDATA[CONTINUOUS FORMS]]></FL><FL><![CDATA[ENGLISH]]></FL><FL><![CDATA[GAA]]></FL><FL><![CDATA[GRAPHIC ARTS]]></FL><FL><![CDATA[MAIL]]></FL><FL><![CDATA[OPENING FEATURES]]></FL><FL><![CDATA[PATENTS]]></FL><FL><![CDATA[PRDS]]></FL><FL><![CDATA[PRINTING ]]></FL></FLS>");
+			uctermsMap.put("pch_B9CB8C0806B010C6E03408002081DCA4", "<FLS><FL><![CDATA[BOXES]]></FL><FL><![CDATA[CONTAINERS]]></FL><FL><![CDATA[ENGLISH]]></FL><FL><![CDATA[HEAT SEALING]]></FL><FL><![CDATA[LEAK PROOF CONTAINERS]]></FL><FL><![CDATA[PAPER BOARD CONTAINERS]]></FL><FL><![CDATA[PATENTS]]></FL><FL><![CDATA[PCKG]]></FL><FL><![CDATA[PLASTIC COATED PAPERS]]></FL><FL><![CDATA[POLYMER PAPER COMBINATIONS]]></FL><FL><![CDATA[POURING SPOUTS]]></FL><FL><![CDATA[SEALING]]></FL></FLS>");
 		}
 
 		String correctString = null;
@@ -1704,11 +1756,11 @@ public class BDDocBuilderUnitTest extends TestCase {
 	protected void assertTreatments(List EIDocs) throws Exception
 	{
 		HashMap treatmentsMap = new HashMap();
-		treatmentsMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "<TRS label=\"Treatment\"><TR><TCO><![CDATA[T]]></TCO><TTI><![CDATA[Theoretical (THR)]]></TTI></TR></TRS>");
-		treatmentsMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<TRS label=\"Treatment\"><TR><TCO><![CDATA[T]]></TCO><TTI><![CDATA[Theoretical (THR)]]></TTI></TR></TRS>");
-		treatmentsMap.put("geo_152513a113d01a997cM73da2061377553", null);
-		treatmentsMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<TRS label=\"Treatment\"><TR><TCO><![CDATA[T]]></TCO><TTI><![CDATA[Theoretical (THR)]]></TTI></TR><TR><TCO><![CDATA[X]]></TCO><TTI><![CDATA[Experimental (EXP)]]></TTI></TR></TRS>");
-		treatmentsMap.put("cpx_18a992f10b61b5d4a9M743d2061377553", "<TRS label=\"Treatment\"><TR><TCO><![CDATA[T]]></TCO><TTI><![CDATA[Theoretical (THR)]]></TTI></TR><TR><TCO><![CDATA[X]]></TCO><TTI><![CDATA[Experimental (EXP)]]></TTI></TR></TRS><DOC>");
+		treatmentsMap.put("pch_34f213f85aae815aM7e1a19817173212", "<TRS label=\"Treatment\"><TR><TCO><![CDATA[G]]></TCO><TTI><![CDATA[General review (GEN)]]></TTI></TR></TRS>");
+		treatmentsMap.put("pch_B9CB8C0806B110C6E03408002081DCA4", null);
+		treatmentsMap.put("pch_B9CB8C0806B010C6E03408002081DCA4", null);
+		treatmentsMap.put("pch_B9CB8C08184610C6E03408002081DCA4", null);
+		treatmentsMap.put("pch_115f0a9f85ab60809M7ea819817173212", "<TRS label=\"Treatment\"><TR><TCO><![CDATA[G]]></TCO><TTI><![CDATA[General review (GEN)]]></TTI></TR><TR><TCO><![CDATA[T]]></TCO><TTI><![CDATA[Theoretical (THR)]]></TTI></TR></TRS>");
 
 		String correctString = null;
 
@@ -1726,6 +1778,10 @@ public class BDDocBuilderUnitTest extends TestCase {
 			if(treatmentsMap.get(correctDocId.getDocID()) != null)
 			{
 				correctString = (String)treatmentsMap.get(correctDocId.getDocID());
+				System.out.println("*************************\n");
+				System.out.println("TR correctString= "+correctString);
+				System.out.println("TR xmlString= "+xmlString);
+				System.out.println("\n*************************");
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
 
@@ -1735,11 +1791,17 @@ public class BDDocBuilderUnitTest extends TestCase {
 	protected void assertTitle(List EIDocs, String dataFormat) throws Exception
 	{
 		HashMap titleMap = new HashMap();
-		titleMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "Extended push-out test to characterize the failure of bone-implant interface");
-		titleMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "MEMS-based extreme adaptive optics for planet detection");
-		titleMap.put("geo_152513a113d01a997cM73da2061377553", "The Holocene vegetation history of the Arfon Platform, North Wales,UK");
-		titleMap.put("cpx_18a992f10c593a6af2M7f882061377553", "The electrochemistry of boiling water reactors");
-		titleMap.put("cpx_18a992f10b61b5d4a9M743d2061377553", "Magnesium Technology 2006 - Proceedings of Symposium Sponsored by the Magnesium Committee of the Light Metals Division of TMS");
+		titleMap.put("pch_34f213f85aae815aM7e1a19817173212", "Remote Sensing for Agriculture, Ecosystems, and Hydrology II: Proceedings");
+		titleMap.put("pch_B9CB8C0806B110C6E03408002081DCA4", "Bifolded Mailer with Insert");
+		titleMap.put("pch_B9CB8C0806B010C6E03408002081DCA4", "Improved One-Piece Pouring Spout Sealed to Innermost and Outermost Surfaces of Moisture-Impervious Carton");
+		titleMap.put("pch_B9CB8C07B53010C6E03408002081DCA4", "Procede pour la preparation des pates papetieres chimiques en vue du blanchiment");
+		titleMap.put("pch_B9CB8C08184610C6E03408002081DCA4", "Ozone for Pulp Bleaching: Market Aspects and Technological Advances");
+
+		titleMap.put("pch_B9CB8C03873410C6E03408002081DCA4", "IMPREGNATING COMPOSITIONS FOR FIBROUS SHEET MATERIALS");
+		titleMap.put("pch_B9CB8C083E7510C6E03408002081DCA4", "Aspen [Populus] Pressure Groundwood Pulp");
+		titleMap.put("pch_115f0a9f85ab60809M7ea819817173212", "A review of the long-term effects of post-harvest silviculture on vertebrate wildlife, and predictive models, with an emphasis on boreal forests in Ontario, Canada");
+		titleMap.put("pch_34f213f85aae815aM7e2b19817173212", "Water budget model of eucalyptus forest using a canopy characterization by remote sensing techniques and a soil water flux parameterization");
+		titleMap.put("pch_B9CB8C08410F10C6E03408002081DCA4", "Resultats 1995: Boomerang conjoncturel?");
 
 		String correctString = null;
 
@@ -1778,11 +1840,17 @@ public class BDDocBuilderUnitTest extends TestCase {
 	protected void assertTranslatedTitle(List EIDocs,String dataFormat) throws Exception
 	{
 		HashMap titleMap = new HashMap();
-		titleMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "Erweiterter push out-test zur scha&die;digungscharakterisierung der implantat-knochen-grenzfla&die;che");
-		titleMap.put("cpx_18a992f10b61b5d4a9M74252061377553", null);
-		titleMap.put("geo_152513a113d01a997cM73da2061377553", null);
-		titleMap.put("cpx_18a992f10c593a6af2M7f882061377553", null);
-		titleMap.put("cpx_18a992f10b61b5d4a9M743d2061377553", null);
+		titleMap.put("pch_34f213f85aae815aM7e1a19817173212", null);
+		titleMap.put("pch_B9CB8C0806B110C6E03408002081DCA4", null);
+		titleMap.put("pch_B9CB8C0806B010C6E03408002081DCA4", null);
+		titleMap.put("pch_B9CB8C07B53010C6E03408002081DCA4", "Process of Preparing Chemical Papermaking Pulps for Bleaching");
+		titleMap.put("pch_B9CB8C08184610C6E03408002081DCA4", null);
+
+		titleMap.put("pch_B9CB8C03873410C6E03408002081DCA4", null);
+		titleMap.put("pch_B9CB8C083E7510C6E03408002081DCA4", null);
+		titleMap.put("pch_115f0a9f85ab60809M7ea819817173212", null);
+		titleMap.put("pch_34f213f85aae815aM7e2b19817173212", null);
+		titleMap.put("pch_B9CB8C08410F10C6E03408002081DCA4", "1995 Results: [for the French Pulp and Paper Industry] Boomerang Economic Climate?");
 
 		String correctString = null;
 
@@ -1979,11 +2047,11 @@ public class BDDocBuilderUnitTest extends TestCase {
 	protected void assertPublisher(List EIDocs, String dataFormat) throws Exception
 	{
 		HashMap pnMap = new HashMap();
-		pnMap.put("cpx_18a992f10b61b5d4a9M74342061377553", null);
-		pnMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "SPIE");
-		pnMap.put("geo_152513a113d01a997cM73da2061377553", null);
-		pnMap.put("cpx_18a992f10c593a6af2M7f882061377553", "Minerals, Metals and Materials Society");
-		pnMap.put("cpx_18a992f10b61b5d4a9M743d2061377553", "Minerals, Metals and Materials Society");
+		pnMap.put("pch_34f213f85aae815aM7e1a19817173212", "The International Society for Optical Engineering");
+		pnMap.put("pch_B9CB8C0806B110C6E03408002081DCA4", null);
+		pnMap.put("pch_B9CB8C0806B010C6E03408002081DCA4", null);
+		pnMap.put("pch_B9CB8C083E7510C6E03408002081DCA4", "Forestry Canada");
+		pnMap.put("pch_115f0a9f85ab60809M7ea819817173212", "Elsevier Science B.V.");
 
 		String correctString = null;
 
@@ -2012,7 +2080,8 @@ public class BDDocBuilderUnitTest extends TestCase {
 				{
 					correctString = "<PN><![CDATA[" + (String)pnMap.get(correctDocId.getDocID()) + "]]></PN>";
 				}
-
+				//System.out.println("PN correctString= "+ correctString);
+				//System.out.println("PN xmlString= "+ xmlString);
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
 
@@ -2236,19 +2305,29 @@ public class BDDocBuilderUnitTest extends TestCase {
 		HashMap clMap = new HashMap();
 		if(dataFormat.equals(RIS.RIS_FORMAT))
 		{
-			clMap.put("cpx_18a992f10b61b5d4a9M74342061377553", null);
-			clMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<CY><![CDATA[San Jose, CA, united states]]></CY>");
-			clMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<CY><![CDATA[Salt Lake City, UT, united states]]></CY>");
-			clMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<CY><![CDATA[Salt Lake City, UT, united states]]></CY>");
-			clMap.put("cpx_18a992f10b61b5d4a9M743d2061377553", "<CY><![CDATA[San Antonio, TX, united states]]></CY>");
+			clMap.put("pch_B9CB8C0806B110C6E03408002081DCA4", null);
+			clMap.put("pch_34f213f85aae815aM7e1a19817173212", "<CY><![CDATA[Barcelona, Spain]]></CY>");
+			clMap.put("pch_B9CB8C0806B010C6E03408002081DCA4", null);
+			clMap.put("pch_B9CB8C07B53010C6E03408002081DCA4", null);
+			clMap.put("pch_B9CB8C08184610C6E03408002081DCA4", "<CY><![CDATA[New Delhi]]></CY>");
+			clMap.put("pch_B9CB8C03873410C6E03408002081DCA4", null);
+			clMap.put("pch_B9CB8C083E7510C6E03408002081DCA4", "<CY><![CDATA[Edmonton , Alberta]]></CY>");
+			clMap.put("pch_115f0a9f85ab60809M7ea819817173212", null);
+			clMap.put("pch_B9CB8C08410F10C6E03408002081DCA4", null);
+			clMap.put("pch_34f213f85aae815aM7e2b19817173212", "<CY><![CDATA[Barcelona, Spain]]></CY>");
 		}
 		else
 		{
-			clMap.put("cpx_18a992f10b61b5d4a9M74342061377553", null);
-			clMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<ML label=\"Conference location\"><![CDATA[San Jose, CA, united states]]></ML>");
-			clMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<ML label=\"Conference location\"><![CDATA[Salt Lake City, UT, united states]]></ML>");
-			clMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<ML label=\"Conference location\"><![CDATA[Salt Lake City, UT, united states]]></ML>");
-			clMap.put("cpx_18a992f10b61b5d4a9M743d2061377553", "<ML label=\"Conference location\"><![CDATA[San Antonio, TX, united states]]></ML>");
+			clMap.put("pch_B9CB8C0806B110C6E03408002081DCA4", null);
+			clMap.put("pch_34f213f85aae815aM7e1a19817173212", "<ML label=\"Conference location\"><![CDATA[Barcelona, Spain]]></ML>");
+			clMap.put("pch_B9CB8C0806B010C6E03408002081DCA4", null);
+			clMap.put("pch_B9CB8C07B53010C6E03408002081DCA4", null);
+			clMap.put("pch_B9CB8C08184610C6E03408002081DCA4", "<ML label=\"Conference location\"><![CDATA[New Delhi]]></ML>");
+			clMap.put("pch_B9CB8C03873410C6E03408002081DCA4", null);
+			clMap.put("pch_B9CB8C083E7510C6E03408002081DCA4", "<ML label=\"Conference location\"><![CDATA[Edmonton , Alberta]]></ML>");
+			clMap.put("pch_115f0a9f85ab60809M7ea819817173212", null);
+			clMap.put("pch_B9CB8C08410F10C6E03408002081DCA4", null);
+			clMap.put("pch_34f213f85aae815aM7e2b19817173212", "<ML label=\"Conference location\"><![CDATA[Barcelona, Spain]]></ML>");
 		}
 		String correctString = null;
 
@@ -2266,6 +2345,8 @@ public class BDDocBuilderUnitTest extends TestCase {
 			if(clMap.get(correctDocId.getDocID()) != null)
 			{
 				correctString = (String)clMap.get(correctDocId.getDocID());
+				//System.out.println("correctString= "+correctString);
+				//System.out.println("xmlString= "+xmlString);
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
 
@@ -2275,11 +2356,15 @@ public class BDDocBuilderUnitTest extends TestCase {
 	protected void assertSponsor(List EIDocs) throws Exception
 	{
 		HashMap sMap = new HashMap();
-		sMap.put("cpx_18a992f10b61b5d4a9M74342061377553", null);
-		sMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<SP label=\"Sponsor\"><S><![CDATA[SPIE]]></S><S><![CDATA[Center for Adaptive Optics, an NSF Science and Technology Center]]></S></SP>");
-		sMap.put("geo_152513a113d01a997cM73da2061377553", null);
-		sMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<SP label=\"Sponsor\"><S><![CDATA[Minerals, Metals and Materials Society, TMS]]></S><S><![CDATA[American Nuclear Society, ANS]]></S><S><![CDATA[NACE International]]></S></SP>");
-		sMap.put("cpx_18a992f10b61b5d4a9M743d2061377553", "<SP label=\"Sponsor\"><S><![CDATA[The Minerals, Metals and Materials Society, TMS]]></S></SP>");
+		sMap.put("pch_B9CB8C0806B110C6E03408002081DCA4",null);
+		sMap.put("pch_34f213f85aae815aM7e1a19817173212","<SP label=\"Sponsor\"><S><![CDATA[EOS;SPIE;NASA]]></S></SP>");
+		sMap.put("pch_B9CB8C0806B010C6E03408002081DCA4",null);
+		sMap.put("pch_B9CB8C07B53010C6E03408002081DCA4",null);
+		sMap.put("pch_B9CB8C08184610C6E03408002081DCA4","<SP label=\"Sponsor\"><S><![CDATA[IPPTA, Saharanpur, India]]></S></SP>");
+		sMap.put("pch_B9CB8C03873410C6E03408002081DCA4",null);
+		sMap.put("pch_B9CB8C083E7510C6E03408002081DCA4","<SP label=\"Sponsor\"><S><![CDATA[Alberta Department of Forestry, Lands, and Wildlife, Edmonton, Alberta, Canada; Forestry Canada, Edmonton, Alberta, Canada]]></S></SP>");
+		sMap.put("pch_115f0a9f85ab60809M7ea819817173212",null);
+		sMap.put("pch_B9CB8C08410F10C6E03408002081DCA4",null);
 
 		String correctString = null;
 
@@ -2297,6 +2382,8 @@ public class BDDocBuilderUnitTest extends TestCase {
 			if(sMap.get(correctDocId.getDocID()) != null)
 			{
 				correctString = (String)sMap.get(correctDocId.getDocID());
+				//System.out.println("correctString= "+correctString);
+				//System.out.println("xmlString= "+xmlString);
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
 
@@ -2366,11 +2453,13 @@ public class BDDocBuilderUnitTest extends TestCase {
 	protected void assertLanguage(List EIDocs, String dataFormat) throws Exception
 	{
 		HashMap langMap = new HashMap();
-		langMap.put("cpx_18a992f10b61b5d4a9M74342061377553","German");
-		langMap.put("cpx_18a992f10b61b5d4a9M74252061377553","English");
-		langMap.put("geo_152513a113d01a997cM73da2061377553","English");
-		langMap.put("cpx_18a992f10c593a6af2M7f882061377553","English");
-		langMap.put("cpx_18a992f10b61b5d4a9M743d2061377553", "English");
+		langMap.put("pch_34f213f85aae815aM7e1a19817173212","English");
+		langMap.put("pch_B9CB8C0806B110C6E03408002081DCA4","English");
+		langMap.put("pch_B9CB8C07B53010C6E03408002081DCA4","French");
+		langMap.put("pch_B9CB8C0806B010C6E03408002081DCA4","English");
+		langMap.put("pch_B9CB8C08184610C6E03408002081DCA4","English");
+		langMap.put("pch_B9CB8C03873410C6E03408002081DCA4","English");
+		langMap.put("pch_B9CB8C083E7510C6E03408002081DCA4","English");
 
 
 		String correctString = null;
@@ -2437,11 +2526,17 @@ public class BDDocBuilderUnitTest extends TestCase {
 	{
 		HashMap cdates = new HashMap();
 
-		cdates.put("cpx_18a992f10b61b5d4a9M74342061377553", null);
-		cdates.put("cpx_18a992f10b61b5d4a9M74252061377553", "January 23,2006 - January 25,2006");
-		cdates.put("geo_152513a113d01a997cM73da2061377553", null);
-		cdates.put("cpx_18a992f10c593a6af2M7f882061377553", "August 14,2005 - August 18,2005");
-		cdates.put("cpx_18a992f10b61b5d4a9M743d2061377553", "March 12,2006 - March 16,2006");
+		cdates.put("pch_34f213f85aae815aM7e2b19817173212", "Sep 25-27 2000");
+		cdates.put("pch_34f213f85aae815aM7e1a19817173212", "Sep 25-27 2000");
+		cdates.put("pch_B9CB8C0806B010C6E03408002081DCA4", null);
+		cdates.put("pch_B9CB8C07B53010C6E03408002081DCA4", null);
+		cdates.put("pch_B9CB8C08184610C6E03408002081DCA4", "1994/12/16 - 1994/12/17");
+		cdates.put("pch_B9CB8C03873410C6E03408002081DCA4", null);
+		cdates.put("pch_B9CB8C083E7510C6E03408002081DCA4", "1987/03/25 - 1987/03/26");
+		cdates.put("pch_115f0a9f85ab60809M7ea819817173212", null);
+		cdates.put("pch_34f213f85aae815aM7e2b19817173212", "Sep 25-27 2000");
+		cdates.put("pch_B9CB8C08410F10C6E03408002081DCA4", null);
+		cdates.put("pch_34f213f85aae815aM672219817173212", "Apr 16-19 2001");
 
 		String correctString = null;
 
@@ -2465,6 +2560,8 @@ public class BDDocBuilderUnitTest extends TestCase {
 				{
 					correctString = "<MD label=\"Conference date\"><![CDATA[" + (String)cdates.get(correctDocId.getDocID()) + "]]></MD>";
 				}
+				//System.out.println("correctString= "+correctString);
+				//System.out.println("xmlString= "+xmlString);
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
 		}
@@ -2473,10 +2570,9 @@ public class BDDocBuilderUnitTest extends TestCase {
 	protected void assertStartPage(List EIDocs,String dataFormat) throws Exception
 	{
 		HashMap startPageMap = new HashMap();
-		startPageMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "201");
-		startPageMap.put("cpx_18a992f10b61b5d4a9M74252061377553", null);
-		startPageMap.put("geo_152513a113d01a997cM73da2061377553", "170");
-		startPageMap.put("cpx_18a992f10c593a6af2M7f882061377553", "125");
+		startPageMap.put("pch_34f213f85aae815aM7e1a19817173212", "392p");
+		startPageMap.put("pch_B9CB8C08184610C6E03408002081DCA4", null);
+
 
 		String correctString = null;
 
@@ -2509,10 +2605,8 @@ public class BDDocBuilderUnitTest extends TestCase {
 	protected void assertEndPage(List EIDocs,String dataFormat) throws Exception
 	{
 		HashMap endPageMap = new HashMap();
-		endPageMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "206");
-		endPageMap.put("cpx_18a992f10b61b5d4a9M74252061377553", null);
-		endPageMap.put("geo_152513a113d01a997cM73da2061377553", "181");
-		endPageMap.put("cpx_18a992f10c593a6af2M7f882061377553", "133");
+		endPageMap.put("pch_34f213f85aae815aM7e1a19817173212", null);
+
 
 		String correctString = null;
 
@@ -2545,11 +2639,11 @@ public class BDDocBuilderUnitTest extends TestCase {
 	protected void assertClassCode(List EIDocs) throws Exception
 	{
 		HashMap ccMap = new HashMap();
-		ccMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "<CLS label=\"Classification code\"><CL><CID>461.2</CID><CTI><![CDATA[Biological Materials and Tissue Engineering]]></CTI></CL><CL><CID>462.4</CID><CTI><![CDATA[Prosthetics]]></CTI></CL><CL><CID>462.5</CID><CTI><![CDATA[Biomaterials (including synthetics)]]></CTI></CL><CL><CID>531</CID><CTI><![CDATA[Metallurgy and Metallography]]></CTI></CL><CL><CID>751.2</CID><CTI><![CDATA[Acoustic Properties of Materials]]></CTI></CL><CL><CID>931.2</CID><CTI><![CDATA[Physical Properties of Gases, Liquids and Solids]]></CTI></CL></CLS>");
-		ccMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<CLS label=\"Classification code\"><CL><CID>657.2</CID><CTI><![CDATA[Extraterrestrial Physics and Stellar Phenomena]]></CTI></CL><CL><CID>741.1</CID><CTI><![CDATA[Light/Optics]]></CTI></CL><CL><CID>741.3</CID><CTI><![CDATA[Optical Devices and Systems]]></CTI></CL><CL><CID>801</CID><CTI><![CDATA[Chemistry]]></CTI></CL></CLS>");
-		ccMap.put("geo_152513a113d01a997cM73da2061377553", "<CLS label=\"Classification code\"><CL><CID>71.3.7</CID><CTI><![CDATA[The Holocene]]></CTI></CL><CL><CID>72.7.7</CID><CTI><![CDATA[The Holocene]]></CTI></CL></CLS>");
-		ccMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<CLS label=\"Classification code\"><CL><CID>803</CID><CTI><![CDATA[Chemical Agents and Basic Industrial Chemicals]]></CTI></CL><CL><CID>802.2</CID><CTI><![CDATA[Chemical Reactions]]></CTI></CL><CL><CID>801.4.1</CID><CTI><![CDATA[Electrochemistry]]></CTI></CL><CL><CID>932.2</CID><CTI><![CDATA[Nuclear Physics]]></CTI></CL><CL><CID>723.5</CID><CTI><![CDATA[Computer Applications]]></CTI></CL><CL><CID>621.1</CID><CTI><![CDATA[Fission Reactors]]></CTI></CL><CL><CID>539.1</CID><CTI><![CDATA[Metals Corrosion]]></CTI></CL><CL><CID>723.2</CID><CTI><![CDATA[Data Processing and Image Processing]]></CTI></CL></CLS>");
-		ccMap.put("cpx_18a992f10b61b5d4a9M743d2061377553", "<CLS label=\"Classification code\"><CL><CID>534.2</CID><CTI><![CDATA[Foundry Practice]]></CTI></CL><CL><CID>537.1</CID><CTI><![CDATA[Heat Treatment Processes]]></CTI></CL><CL><CID>541.1</CID><CTI><![CDATA[Aluminum]]></CTI></CL><CL><CID>542.2</CID><CTI><![CDATA[Magnesium and Alloys]]></CTI></CL><CL><CID>723.5</CID><CTI><![CDATA[Computer Applications]]></CTI></CL><CL><CID>931.2</CID><CTI><![CDATA[Physical Properties of Gases, Liquids and Solids]]></CTI></CL></CLS>");
+		ccMap.put("pch_34f213f85aae815aM7e1a19817173212", "<CLS label=\"Classification code\"><CL><CID>731.1</CID><CTI><![CDATA[Control Systems]]></CTI></CL><CL><CID>821</CID><CTI><![CDATA[Agricultural Equipment and Methods; Vegetation and Pest Control]]></CTI></CL><CL><CID>483.1</CID><CTI><![CDATA[Soils and Soil Mechanics]]></CTI></CL><CL><CID>716.2</CID><CTI><![CDATA[Radar Systems and Equipment]]></CTI></CL><CL><CID>723.2</CID><CTI><![CDATA[Data Processing and Image Processing]]></CTI></CL><CL><CID>741</CID><CTI><![CDATA[Light, Optics and Optical Devices]]></CTI></CL><CL><CID>921</CID><CTI><![CDATA[Mathematics]]></CTI></CL><CL><CID>403</CID><CTI><![CDATA[Urban and Regional Planning and Development]]></CTI></CL><CL><CID>914.2</CID><CTI><![CDATA[Fires and Fire Protection]]></CTI></CL><CL><CID>944.2</CID><CTI><![CDATA[Moisture Measurements]]></CTI></CL><CL><CID>711</CID><CTI><![CDATA[Electromagnetic Waves]]></CTI></CL><CL><CID>821.0</CID><CTI><![CDATA[Woodlands and Forestry]]></CTI></CL></CLS>");
+		ccMap.put("pch_B9CB8C0806B110C6E03408002081DCA4", null);
+		ccMap.put("pch_B9CB8C0806B010C6E03408002081DCA4", null);
+		ccMap.put("pch_B9CB8C07B53010C6E03408002081DCA4", null);
+		ccMap.put("pch_115f0a9f85ab60809M7ea819817173212", "<CLS label=\"Classification code\"><CL><CID>821.0</CID><CTI><![CDATA[Woodlands and Forestry]]></CTI></CL><CL><CID>821.3</CID><CTI><![CDATA[Agricultural Methods]]></CTI></CL><CL><CID>454</CID><CTI><![CDATA[Environmental Engineering]]></CTI></CL><CL><CID>804</CID><CTI><![CDATA[Chemical Products Generally]]></CTI></CL><CL><CID>821.2</CID><CTI><![CDATA[Agricultural Chemicals]]></CTI></CL></CLS>");
 
 		String correctString = null;
 
