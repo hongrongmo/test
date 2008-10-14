@@ -446,16 +446,18 @@ public class BDDocBuilder
 	{
 		String outputString = null;
 		StringBuffer addressBuffer = new StringBuffer();
-
 		{
-			BdAffiliations aff = new BdAffiliations(address);
-			List aList = aff.getAffiliations();
-			for(int i=0;i<aList.size();i++)
+			if(address.indexOf(BdParser.IDDELIMITER)>-1)
 			{
-				BdAffiliation bdaff = (BdAffiliation)aList.get(i);
-				addressBuffer.append(bdaff.getDisplayValue());
-	        }
-	        address = addressBuffer.toString();
+				BdAffiliations aff = new BdAffiliations(address);
+				List aList = aff.getAffiliations();
+				for(int i=0;i<aList.size();i++)
+				{
+					BdAffiliation bdaff = (BdAffiliation)aList.get(i);
+					addressBuffer.append(bdaff.getDisplayValue());
+				}
+	        	address = addressBuffer.toString();
+			}
 		}
 
 		if(name != null && name.length()>0 && address != null && address.length()>0)
