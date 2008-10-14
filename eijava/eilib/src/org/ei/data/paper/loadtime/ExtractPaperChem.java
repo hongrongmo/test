@@ -7,11 +7,14 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Hashtable;
 import java.util.Iterator;
+import java.util.List;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Clob;
 import org.ei.util.*;
+import org.ei.data.bd.BdCitationTitle;
 import org.ei.data.bd.loadtime.*;
+import org.jdom.Element;
 
 public class ExtractPaperChem
 {
@@ -108,6 +111,8 @@ public class ExtractPaperChem
 				writeColumn(rs1, "pp", writerPub);
 				writeColumn(rs1, "cls", writerPub);
 				writeColumn(rs1, "ti", writerPub);
+				writeColumn(rs1, "nr", writerPub);
+				
                 writerPub.println();
             }
 
@@ -225,6 +230,10 @@ public class ExtractPaperChem
 		{
 			column = formatCitationTitle(rs1.getString("ti"), rs1.getString("tt"), rs1.getString("la"));
 		}
+		else if(columnName.equals("nr"))
+		{
+			column = rs1.getString("nr");
+		}
 		else if(columnName.equals("sp"))
 		{
 			column = formatSponsors(rs1.getString("sp"));
@@ -243,67 +252,76 @@ public class ExtractPaperChem
 			writerPub.print("\t");
 		}
 	}
-
-	public String formatCitationTitle(String citTitle, String citTranslatedTitle, String lan)throws Exception
+	
+	public String formatCitationTitle(String citTitle, 
+	        							String citTranslatedTitle, 
+	        							String clanguage)throws Exception
 	{
-	    //cit title is
+	    //cit title is 
 	    // 0 - id, titletext, original: y or no, lang: citlanguage
 	    // 1 - cit transl title -same structure
 	    StringBuffer cittext = new StringBuffer();
 	    int i =0;
+	    String lan = null;
+	    if (clanguage!= null && clanguage.equalsIgnoreCase("English"))
+	    {
+	        lan = "eng";	        
+	    }
+	    else
+	    {
+	        lan = clanguage;
+	    }
+	    //lan == null
 	    String language = "eng";
-	    String translatedLan = "eng";
-
-
-
+	    String translatedLan = "eng";   
 	    if(lan != null)
 	    {
 	        if(citTitle != null)
 	        {
-	            language = lan;
-
+	            language = lan;	            
 	        }
 	        if (citTranslatedTitle != null)
 	        {
 	            language = "eng";
 	            translatedLan = lan;
-	        }
-
-	    }
-	    else //lan == null
-	    {
-	           language = "eng";
-	           translatedLan = "eng";
-	    }
-
+	        }	            
+	    } 
+	        
 		if(citTitle != null)
-		{
+		{				
 		    cittext.append(i);
 		    cittext.append(BdParser.IDDELIMITER);
 		    cittext.append(citTitle);
 		    cittext.append(BdParser.IDDELIMITER);
-		    cittext.append("y");
+		    if(citTranslatedTitle == null)
+		    {
+		        cittext.append("y");
+		    } 
+		    else
+		    {		        
+		        cittext.append("n");
+		    }
 		    cittext.append(BdParser.IDDELIMITER);
 		    cittext.append(language);
-		    cittext.append(BdParser.AUDELIMITER);
+		    cittext.append(BdParser.AUDELIMITER);		 
 		    i++;
 		}
+		
 		if(citTranslatedTitle != null)
 		{
 		    cittext.append(i);
 		    cittext.append(BdParser.IDDELIMITER);
 		    cittext.append(citTranslatedTitle);
 		    cittext.append(BdParser.IDDELIMITER);
-		    cittext.append("n");
+		    cittext.append("y");
 		    cittext.append(BdParser.IDDELIMITER);
 		    cittext.append(translatedLan);
 		    cittext.append(BdParser.AUDELIMITER);
 		}
-
+		
 		return cittext.toString();
-
 	}
-
+	
 	public String formatTreatmentType(String treatments)throws Exception
 	{
 
@@ -316,13 +334,9 @@ public class ExtractPaperChem
 			{
 				tr.append(treatments.charAt(i));
 				tr.append(BdParser.AUDELIMITER);
-
 			}
-
 		}
-
 		return tr.toString();
-
 	}
 
 
@@ -647,8 +661,7 @@ public class ExtractPaperChem
 		}
 
 		return codesBuffer.toString();
-	}
-
+	}	
 	public String formatSponsors(String sponsors)
 	{
 		String[] sponsorsArray = null;
