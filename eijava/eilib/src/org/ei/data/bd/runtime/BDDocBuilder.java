@@ -446,6 +446,7 @@ public class BDDocBuilder
 	{
 		String outputString = null;
 		StringBuffer addressBuffer = new StringBuffer();
+		if(address != null)
 		{
 			if(address.indexOf(BdParser.IDDELIMITER)>-1)
 			{
