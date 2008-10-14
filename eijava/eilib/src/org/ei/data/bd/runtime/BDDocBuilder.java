@@ -458,11 +458,15 @@ public class BDDocBuilder
 				}
 	        	address = addressBuffer.toString();
 			}
+			else if(address.indexOf(BdParser.AUDELIMITER)>-1)
+			{
+				address.replaceAll(BdParser.AUDELIMITER,", ");
+			}
 		}
 
 		if(name != null && name.length()>0 && address != null && address.length()>0)
 		{
-			outputString = name + "," +address;
+			outputString = name + ", " +address;
 		}
 		else if(name != null && name.length()>0)
 		{
