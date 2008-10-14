@@ -225,6 +225,10 @@ public class ExtractPaperChem
 		{
 			column = formatCitationTitle(rs1.getString("ti"), rs1.getString("tt"), rs1.getString("la"));
 		}
+		else if(columnName.equals("sp"))
+		{
+			column = formatSponsors(rs1.getString("sp"));
+		}
 		else
 		{
 			column   = rs1.getString(columnName);
@@ -239,41 +243,41 @@ public class ExtractPaperChem
 			writerPub.print("\t");
 		}
 	}
-	
+
 	public String formatCitationTitle(String citTitle, String citTranslatedTitle, String lan)throws Exception
 	{
-	    //cit title is 
+	    //cit title is
 	    // 0 - id, titletext, original: y or no, lang: citlanguage
 	    // 1 - cit transl title -same structure
 	    StringBuffer cittext = new StringBuffer();
 	    int i =0;
 	    String language = "eng";
-	    String translatedLan = "eng";   
-	    
-	    
-	    
+	    String translatedLan = "eng";
+
+
+
 	    if(lan != null)
 	    {
 	        if(citTitle != null)
 	        {
 	            language = lan;
-	            
+
 	        }
 	        if (citTranslatedTitle != null)
 	        {
 	            language = "eng";
 	            translatedLan = lan;
 	        }
-	            
-	    } 
+
+	    }
 	    else //lan == null
 	    {
 	           language = "eng";
 	           translatedLan = "eng";
 	    }
-	        
+
 		if(citTitle != null)
-		{				
+		{
 		    cittext.append(i);
 		    cittext.append(BdParser.IDDELIMITER);
 		    cittext.append(citTitle);
@@ -281,7 +285,7 @@ public class ExtractPaperChem
 		    cittext.append("y");
 		    cittext.append(BdParser.IDDELIMITER);
 		    cittext.append(language);
-		    cittext.append(BdParser.AUDELIMITER);		 
+		    cittext.append(BdParser.AUDELIMITER);
 		    i++;
 		}
 		if(citTranslatedTitle != null)
@@ -299,7 +303,7 @@ public class ExtractPaperChem
 		return cittext.toString();
 
 	}
-	
+
 	public String formatTreatmentType(String treatments)throws Exception
 	{
 
@@ -643,8 +647,36 @@ public class ExtractPaperChem
 		}
 
 		return codesBuffer.toString();
-	}	
-	
+	}
+
+	public String formatSponsors(String sponsors)
+	{
+		String[] sponsorsArray = null;
+		StringBuffer sponsorsBuffer = new StringBuffer();
+		if(sponsors != null)
+		{
+			if(sponsors.indexOf(";")>-1)
+			{
+				sponsorsArray = sponsors.split(";",-1);
+			}
+			else
+			{
+				sponsorsArray = new String[1];
+				sponsorsArray[0] = sponsors;
+			}
+
+			sponsorsBuffer.append(sponsorsArray[0]);
+
+			for(int i=1;i<sponsorsArray.length;i++)
+			{
+				sponsorsBuffer.append(BdParser.AUDELIMITER);
+				sponsorsBuffer.append(sponsorsArray[i]);
+			}
+		}
+
+		return sponsorsBuffer.toString();
+	}
+
   public static Connection getDbCoonection(String url,String username,String password, String driver)
     throws Exception
   {
