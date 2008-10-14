@@ -17,7 +17,7 @@ public class ExtractPaperChem
 {
 	public static void main(String[] args) throws Exception
 	{
-		String[] m_ids = new String[]{"pch_B9CB8C0218DB10C6E03408002081DCA4","pch_34f213f85aae815aM672219817173212","pch_B9CB8C08410F10C6E03408002081DCA4","pch_34f213f85aae815aM7e2b19817173212","pch_115f0a9f85ab60809M7ea819817173212","pch_B9CB8C083E7510C6E03408002081DCA4","pch_B9CB8C03873410C6E03408002081DCA4","pch_B9CB8C08184610C6E03408002081DCA4","pch_B9CB8C07B53010C6E03408002081DCA4","pch_B9CB8C0806B010C6E03408002081DCA4","pch_B9CB8C0806B110C6E03408002081DCA4","pch_34f213f85aae815aM672219817173212","pch_34f213f85aae815aM7e1a19817173212"};
+		String[] m_ids = new String[]{"pch_34f213f85aae815aM672219817173212","pch_B9CB8C08410F10C6E03408002081DCA4","pch_34f213f85aae815aM7e2b19817173212","pch_115f0a9f85ab60809M7ea819817173212","pch_B9CB8C083E7510C6E03408002081DCA4","pch_B9CB8C03873410C6E03408002081DCA4","pch_B9CB8C08184610C6E03408002081DCA4","pch_B9CB8C07B53010C6E03408002081DCA4","pch_B9CB8C0806B010C6E03408002081DCA4","pch_B9CB8C0806B110C6E03408002081DCA4","pch_34f213f85aae815aM672219817173212","pch_34f213f85aae815aM7e1a19817173212"};
 		Connection con = getDbCoonection("jdbc:oracle:thin:@neptune.elsevier.com:1521:EI", "AP_PRO1", "ei3it", "oracle.jdbc.driver.OracleDriver");
 		ExtractPaperChem epc = new ExtractPaperChem();
 		epc.extract(m_ids,con);
@@ -107,6 +107,7 @@ public class ExtractPaperChem
 				writeColumn(rs1, "tr", writerPub);
 				writeColumn(rs1, "pp", writerPub);
 				writeColumn(rs1, "cls", writerPub);
+				writeColumn(rs1, "ti", writerPub);
                 writerPub.println();
             }
 
@@ -208,10 +209,6 @@ public class ExtractPaperChem
 		{
 			column = formatControlledTerms(rs1.getString("pt"));
 		}
-		else if(columnName.equals("tr"))
-		{
-			column = formatTreatmentType(rs1.getString("tr"));
-		}
 		else if(columnName.equals("pp"))
 		{
 			column = rs1.getString("pp");
@@ -219,6 +216,14 @@ public class ExtractPaperChem
 		else if(columnName.equals("cls"))
 		{
 			column = formatClassificationCode(rs1.getString("cls"));
+		}
+		else if(columnName.equals("tr"))
+		{
+			column = formatTreatmentType(rs1.getString("tr"));
+		}
+		else if(columnName.equals("ti"))
+		{
+			column = formatCitationTitle(rs1.getString("ti"), rs1.getString("tt"), rs1.getString("la"));
 		}
 		else
 		{
@@ -234,7 +239,67 @@ public class ExtractPaperChem
 			writerPub.print("\t");
 		}
 	}
+	
+	public String formatCitationTitle(String citTitle, String citTranslatedTitle, String lan)throws Exception
+	{
+	    //cit title is 
+	    // 0 - id, titletext, original: y or no, lang: citlanguage
+	    // 1 - cit transl title -same structure
+	    StringBuffer cittext = new StringBuffer();
+	    int i =0;
+	    String language = "eng";
+	    String translatedLan = "eng";   
+	    
+	    
+	    
+	    if(lan != null)
+	    {
+	        if(citTitle != null)
+	        {
+	            language = lan;
+	            
+	        }
+	        if (citTranslatedTitle != null)
+	        {
+	            language = "eng";
+	            translatedLan = lan;
+	        }
+	            
+	    } 
+	    else //lan == null
+	    {
+	           language = "eng";
+	           translatedLan = "eng";
+	    }
+	        
+		if(citTitle != null)
+		{				
+		    cittext.append(i);
+		    cittext.append(BdParser.IDDELIMITER);
+		    cittext.append(citTitle);
+		    cittext.append(BdParser.IDDELIMITER);
+		    cittext.append("y");
+		    cittext.append(BdParser.IDDELIMITER);
+		    cittext.append(language);
+		    cittext.append(BdParser.AUDELIMITER);		 
+		    i++;
+		}
+		if(citTranslatedTitle != null)
+		{
+		    cittext.append(i);
+		    cittext.append(BdParser.IDDELIMITER);
+		    cittext.append(citTranslatedTitle);
+		    cittext.append(BdParser.IDDELIMITER);
+		    cittext.append("n");
+		    cittext.append(BdParser.IDDELIMITER);
+		    cittext.append(translatedLan);
+		    cittext.append(BdParser.AUDELIMITER);
+		}
 
+		return cittext.toString();
+
+	}
+	
 	public String formatTreatmentType(String treatments)throws Exception
 	{
 
@@ -578,7 +643,8 @@ public class ExtractPaperChem
 		}
 
 		return codesBuffer.toString();
-	}
+	}	
+	
   public static Connection getDbCoonection(String url,String username,String password, String driver)
     throws Exception
   {
