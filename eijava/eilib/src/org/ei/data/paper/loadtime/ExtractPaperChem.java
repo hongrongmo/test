@@ -14,7 +14,7 @@ public class ExtractPaperChem
 {
 	public static void main(String[] args) throws Exception
 	{
-		String[] m_ids = new String[]{"pch_34f213f85aae815aM7bc019817173212","pch_34f213f85aae815aM672219817173212","pch_B9CB8C08410F10C6E03408002081DCA4","pch_34f213f85aae815aM7e2b19817173212","pch_115f0a9f85ab60809M7ea819817173212","pch_B9CB8C083E7510C6E03408002081DCA4","pch_B9CB8C03873410C6E03408002081DCA4","pch_B9CB8C08184610C6E03408002081DCA4","pch_B9CB8C07B53010C6E03408002081DCA4","pch_B9CB8C0806B010C6E03408002081DCA4","pch_B9CB8C0806B110C6E03408002081DCA4","pch_34f213f85aae815aM672219817173212","pch_34f213f85aae815aM7e1a19817173212"};
+		String[] m_ids = new String[]{"pch_34f213f85aae815aM6fa219817173212","pch_34f213f85aae815aM7bc019817173212","pch_34f213f85aae815aM672219817173212","pch_B9CB8C08410F10C6E03408002081DCA4","pch_34f213f85aae815aM7e2b19817173212","pch_115f0a9f85ab60809M7ea819817173212","pch_B9CB8C083E7510C6E03408002081DCA4","pch_B9CB8C03873410C6E03408002081DCA4","pch_B9CB8C08184610C6E03408002081DCA4","pch_B9CB8C07B53010C6E03408002081DCA4","pch_B9CB8C0806B010C6E03408002081DCA4","pch_B9CB8C0806B110C6E03408002081DCA4","pch_34f213f85aae815aM672219817173212","pch_34f213f85aae815aM7e1a19817173212"};
 		Connection con = getDbCoonection("jdbc:oracle:thin:@neptune.elsevier.com:1521:EI", "AP_PRO1", "ei3it", "oracle.jdbc.driver.OracleDriver");
 		ExtractPaperChem epc = new ExtractPaperChem();
 		epc.extract(m_ids,con);
@@ -92,7 +92,7 @@ public class ExtractPaperChem
 				writeColumn(rs1, "specn", writerPub);
 				writeColumn(rs1, "suppl", writerPub);
 				writeColumn(rs1, "pdfix", writerPub);
-				writeColumn(rs1, "rn", writerPub);
+				writeColumn(rs1, "pa", writerPub);
 				writeColumn(rs1, "do", writerPub);
 				writeColumn(rs1, "pi", writerPub);
 				writeColumn(rs1, "cc", writerPub);
@@ -236,6 +236,10 @@ public class ExtractPaperChem
 		else if(columnName.equals("vx"))
 		{
 			column = formatSponsors(rs1.getString("vx"));
+		}
+		else if(columnName.equals("pa"))
+		{
+			column = formatSponsors(rs1.getString("pa"));
 		}
 		else
 		{
