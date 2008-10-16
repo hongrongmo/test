@@ -14,7 +14,7 @@ public class ExtractPaperChem
 {
 	public static void main(String[] args) throws Exception
 	{
-		String[] m_ids = new String[]{"pch_34f213f85aae815aM6fa219817173212","pch_34f213f85aae815aM7bc019817173212","pch_34f213f85aae815aM672219817173212","pch_B9CB8C08410F10C6E03408002081DCA4","pch_34f213f85aae815aM7e2b19817173212","pch_115f0a9f85ab60809M7ea819817173212","pch_B9CB8C083E7510C6E03408002081DCA4","pch_B9CB8C03873410C6E03408002081DCA4","pch_B9CB8C08184610C6E03408002081DCA4","pch_B9CB8C07B53010C6E03408002081DCA4","pch_B9CB8C0806B010C6E03408002081DCA4","pch_B9CB8C0806B110C6E03408002081DCA4","pch_34f213f85aae815aM672219817173212","pch_34f213f85aae815aM7e1a19817173212"};
+		String[] m_ids = new String[]{"pch_34f213f85aae815aM6fa219817173212","pch_34f213f85aae815aM7bc019817173212","pch_34f213f85aae815aM672219817173212","pch_B9CB8C08410F10C6E03408002081DCA4","pch_34f213f85aae815aM7e2b19817173212","pch_115f0a9f85ab60809M7ea819817173212","pch_B9CB8C083E7510C6E03408002081DCA4","pch_B9CB8C03873410C6E03408002081DCA4","pch_B9CB8C08184610C6E03408002081DCA4","pch_B9CB8C07B53010C6E03408002081DCA4","pch_B9CB8C0806B010C6E03408002081DCA4","pch_B9CB8C0806B110C6E03408002081DCA4","pch_34f213f85aae815aM672219817173212","pch_34f213f85aae815aM7e1a19817173212","pch_6d2baff85ab4375bM7fc519817173212"};
 		Connection con = getDbCoonection("jdbc:oracle:thin:@neptune.elsevier.com:1521:EI", "AP_PRO1", "ei3it", "oracle.jdbc.driver.OracleDriver");
 		ExtractPaperChem epc = new ExtractPaperChem();
 		epc.extract(m_ids,con);
@@ -107,7 +107,8 @@ public class ExtractPaperChem
 				writeColumn(rs1, "ti", writerPub);
 				writeColumn(rs1, "nr", writerPub);
 				writeColumn(rs1, "vx", writerPub);
-				
+				writeColumn(rs1, "pc", writerPub);
+
                 writerPub.println();
             }
 
@@ -241,6 +242,10 @@ public class ExtractPaperChem
 		{
 			column = formatSponsors(rs1.getString("pa"));
 		}
+		else if(columnName.equals("pc"))
+		{
+			column = formatPubAddress(rs1.getString("pc"),rs1.getString("ps"),rs1.getString("py"));
+		}
 		else
 		{
 			column   = rs1.getString(columnName);
@@ -255,12 +260,12 @@ public class ExtractPaperChem
 			writerPub.print("\t");
 		}
 	}
-	
-	public String formatCitationTitle(String citTitle, 
-	        							String citTranslatedTitle, 
+
+	public String formatCitationTitle(String citTitle,
+	        							String citTranslatedTitle,
 	        							String clanguage)throws Exception
 	{
-	    //cit title is 
+	    //cit title is
 	    // 0 - id, titletext, original: y or no, lang: citlanguage
 	    // 1 - cit transl title -same structure
 	    StringBuffer cittext = new StringBuffer();
@@ -268,7 +273,7 @@ public class ExtractPaperChem
 	    String lan = null;
 	    if (clanguage!= null && clanguage.equalsIgnoreCase("English"))
 	    {
-	        lan = "eng";	        
+	        lan = "eng";
 	    }
 	    else
 	    {
@@ -276,22 +281,22 @@ public class ExtractPaperChem
 	    }
 	    //lan == null
 	    String language = "eng";
-	    String translatedLan = "eng";   
+	    String translatedLan = "eng";
 	    if(lan != null)
 	    {
 	        if(citTitle != null)
 	        {
-	            language = lan;	            
+	            language = lan;
 	        }
 	        if (citTranslatedTitle != null)
 	        {
 	            language = "eng";
 	            translatedLan = lan;
-	        }	            
-	    } 
-	        
+	        }
+	    }
+
 		if(citTitle != null)
-		{				
+		{
 		    cittext.append(i);
 		    cittext.append(BdParser.IDDELIMITER);
 		    cittext.append(citTitle);
@@ -299,17 +304,17 @@ public class ExtractPaperChem
 		    if(citTranslatedTitle == null)
 		    {
 		        cittext.append("y");
-		    } 
+		    }
 		    else
-		    {		        
+		    {
 		        cittext.append("n");
 		    }
 		    cittext.append(BdParser.IDDELIMITER);
 		    cittext.append(language);
-		    cittext.append(BdParser.AUDELIMITER);		 
+		    cittext.append(BdParser.AUDELIMITER);
 		    i++;
 		}
-		
+
 		if(citTranslatedTitle != null)
 		{
 		    cittext.append(i);
@@ -321,10 +326,10 @@ public class ExtractPaperChem
 		    cittext.append(translatedLan);
 		    cittext.append(BdParser.AUDELIMITER);
 		}
-		
+
 		return cittext.toString();
 	}
-	
+
 	public String formatTreatmentType(String treatments)throws Exception
 	{
 
@@ -664,7 +669,7 @@ public class ExtractPaperChem
 		}
 
 		return codesBuffer.toString();
-	}	
+	}
 	public String formatSponsors(String sponsors)
 	{
 		String[] sponsorsArray = null;
@@ -691,6 +696,37 @@ public class ExtractPaperChem
 		}
 
 		return sponsorsBuffer.toString();
+	}
+
+	public String formatPubAddress(String city, String state, String country)
+	{
+		StringBuffer affBuffer = new StringBuffer();
+
+		if(city != null)
+		{
+			affBuffer.append(city);
+		}
+		if(state != null)
+		{
+			if(city != null)
+			{
+				affBuffer.append(" ,");
+			}
+
+			affBuffer.append(state);
+		}
+		if(country != null)
+		{
+			if(city != null || state != null)
+			{
+				affBuffer.append(" ,");
+			}
+
+			affBuffer.append(country);
+		}
+
+		return affBuffer.toString();
+
 	}
 
   public static Connection getDbCoonection(String url,String username,String password, String driver)
