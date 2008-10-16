@@ -704,7 +704,7 @@ public class ExtractPaperChem
 
 		if(city != null)
 		{
-			affBuffer.append(city);
+			affBuffer.append(city.trim());
 		}
 		if(state != null)
 		{
@@ -713,7 +713,7 @@ public class ExtractPaperChem
 				affBuffer.append(", ");
 			}
 
-			affBuffer.append(state);
+			affBuffer.append(state.trim());
 		}
 		if(country != null)
 		{
@@ -722,7 +722,7 @@ public class ExtractPaperChem
 				affBuffer.append(", ");
 			}
 
-			affBuffer.append(country);
+			affBuffer.append(country.trim());
 		}
 
 		return affBuffer.toString();
