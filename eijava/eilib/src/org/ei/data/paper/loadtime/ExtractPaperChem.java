@@ -108,6 +108,7 @@ public class ExtractPaperChem
 				writeColumn(rs1, "nr", writerPub);
 				writeColumn(rs1, "vx", writerPub);
 				writeColumn(rs1, "pc", writerPub);
+				writeColumn(rs1, "fl", writerPub);
 
                 writerPub.println();
             }
@@ -245,6 +246,10 @@ public class ExtractPaperChem
 		else if(columnName.equals("pc"))
 		{
 			column = formatPubAddress(rs1.getString("pc"),rs1.getString("ps"),rs1.getString("py"));
+		}
+		else if(columnName.equals("fl"))
+		{
+			column = formatControlledTerms(rs1.getString("fl"));
 		}
 		else
 		{
