@@ -62,7 +62,7 @@ public class ExtractPaperChem
 				writeColumn(rs1, "au", writerPub);
 				writeColumn(rs1, "cp", writerPub);
 				writeColumn(rs1, "em", writerPub);
-				writeColumn(rs1, "af", writerPub);				
+				writeColumn(rs1, "af", writerPub);
 				writeColumn(rs1, "mt", writerPub);
 				writeColumn(rs1, "st", writerPub);
 				writeColumn(rs1, "se", writerPub);
@@ -112,9 +112,10 @@ public class ExtractPaperChem
 				writeColumn(rs1, "pc", writerPub);
 				writeColumn(rs1, "fl", writerPub);
 				writeColumn(rs1, "ed", writerPub);//EDITOR
-				writeColumn(rs1, "ced", writerPub);//CONFERENCEEDITOR 							
+				writeColumn(rs1, "ced", writerPub);//CONFERENCEEDITOR
 				writeColumn(rs1, "ec", writerPub);//CONFERENCEORGANIZATION
 				writeColumn(rs1, "es", writerPub);//CONFERENCEEDITORADDRESS
+				writeColumn(rs1, "la", writerPub);
 
                 writerPub.println();
             }
@@ -254,26 +255,26 @@ public class ExtractPaperChem
 			column = formatControlledTerms(rs1.getString("fl"));
 		}
 		else if(columnName.equals("ed") )
-		{		 
+		{
 		    if(rs1.getString("cc")== null)
 		    {
-		        column = formatPersonalName(rs1.getString("ed"));	
+		        column = formatPersonalName(rs1.getString("ed"));
 		    }
 		}
 		else if(columnName.equals("ced") )
 		{
 		    if(rs1.getString("cc")!= null)
 		    {
-		        column = formatPersonalName(rs1.getString("ed"));	
-		    }		    
+		        column = formatPersonalName(rs1.getString("ed"));
+		    }
 		}
 		else if(columnName.equals("ef"))
-		{		    
-		    column = rs1.getString("ef");	//confed organization	    		    
+		{
+		    column = rs1.getString("ef");	//confed organization
 		}
 		else if(columnName.equals("ec"))
-		{		    
-		    column = formatConfOrganization(rs1);		    		    
+		{
+		    column = formatConfOrganization(rs1);
 		}
 		else
 		{
@@ -289,11 +290,11 @@ public class ExtractPaperChem
 			writerPub.print("\t");
 		}
 	}
-	
-	public String formatConfOrganization(ResultSet rs) 
+
+	public String formatConfOrganization(ResultSet rs)
 											throws SQLException
 	{
-	    
+
 	    StringBuffer buf = new StringBuffer();
 	    if(rs.getString("ec") != null)
 	    {
@@ -301,7 +302,7 @@ public class ExtractPaperChem
 	        if(rs.getString("es") != null ||rs.getString("ey") != null)
 	        {
 	            buf.append(",");
-	        }        
+	        }
 	    }
 	    if(rs.getString("es") != null)
 	    {
@@ -309,7 +310,7 @@ public class ExtractPaperChem
 	        if(rs.getString("ey") != null)
 	        {
 	            buf.append(",");
-	        } 
+	        }
 	    }
 	    if(rs.getString("ey") != null)
 	    {
