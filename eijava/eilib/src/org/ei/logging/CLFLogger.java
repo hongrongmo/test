@@ -3,6 +3,7 @@ package org.ei.logging;
 import java.io.IOException;
 import java.sql.Connection;
 import java.util.LinkedList;
+import java.util.Date;
 
 import org.ei.connectionpool.ConnectionBroker;
 
@@ -17,6 +18,7 @@ public class CLFLogger
         throws Exception
     {
         consumer = new CLFLogConsumer(filename);
+        this.lastChecked = 0L;
         consumer.start();
     }
 
@@ -25,18 +27,17 @@ public class CLFLogger
         logQueue.add(message);
     }
 
-    public synchronized long getLastChecked()
-    {
-        return this.lastChecked;
-    }
-
-    public synchronized void setLastChecked(long time)
-	{
-		this.lastChecked = time;
-    }
-
     public synchronized CLFMessage[] dequeue()
     {
+		long time = System.currentTimeMillis();
+		if(this.lastChecked == 0 || time - this.lastChecked > 600000)
+		{
+			Date date = new Date(time);
+			System.out.println("Checking the log queue, SIZE:"+logQueue.size()+" DATE-TIME: "+date.toString()+" UNIX-TIME: "+Long.toString(time));
+			this.lastChecked = time;
+		}
+
+
         CLFMessage[] messages = new CLFMessage[logQueue.size()];
         for(int i=0; i<messages.length; i++)
         {
@@ -75,7 +76,6 @@ public class CLFLogger
         {
             while(!shutdown)
             {
-				setLastChecked(System.currentTimeMillis());
 				CLFMessage[] messages = dequeue();
                 for(int x=0; x<messages.length;++x)
                 {
