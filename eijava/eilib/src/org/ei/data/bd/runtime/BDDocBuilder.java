@@ -158,7 +158,7 @@ public class BDDocBuilder
 				formatRIS(buildField(Keys.AUTHOR_AFFS,getAuthorsAffiliation(Keys.AUTHOR_AFFS,rset.getString("AFFILIATION"),rset.getString("AFFILIATION_1"), dataFormat),ht), dataFormat, Keys.AUTHOR_AFFS, Keys.RIS_AD);
 				buildField(Keys.PROVIDER,PROVIDER_TEXT,ht);
 
-				formatRIS(buildField(Keys.EDITORS,getEditors(Keys.EDITORS,rset.getString("AUTHOR"),rset.getString("EDITORS")),ht), dataFormat, Keys.EDITORS, Keys.RIS_EDS);
+				formatRIS(buildField(Keys.EDITORS,getEditors(Keys.EDITORS,rset.getString("AUTHOR"),rset.getString("EDITORS"),rset.getString("CONFCODE")),ht), dataFormat, Keys.EDITORS, Keys.RIS_EDS);
 				buildField(Keys.VOLUME_TITLE,rset.getString("VOLUMETITLE"),ht);
 				buildField(Keys.PAPER_NUMBER,rset.getString("REPORTNUMBER"),ht);
 				formatRIS(buildField(Keys.CONTROLLED_TERMS,setElementData(rset.getString("CONTROLLEDTERM")),ht), dataFormat,Keys.CONTROLLED_TERMS,Keys.RIS_CVS);
@@ -166,6 +166,7 @@ public class BDDocBuilder
 				buildField(Keys.PATNUM,rset.getString("PATNO"),ht);
 				buildField(Keys.PATAPPNUM,rset.getString("APPLN"),ht);
 				buildField(Keys.PATASSIGN,rset.getString("ASSIG"),ht);
+				buildField(Keys.CONF_EDITORS,getConfEditors(Keys.EDITORS,rset.getString("EDITORS"), rset.getString("CONFCODE")),ht);
 
 				if(!dataFormat.equals(Citation.CITATION_FORMAT) && !dataFormat.equalsIgnoreCase(Citation.XMLCITATION_FORMAT))
 				{
@@ -795,27 +796,56 @@ public class BDDocBuilder
 	    return null;
 	}
 
-	private ElementData getEditors(Key key,String authorString,String editorsString) throws Exception
+	private ElementData getEditors(Key key,String authorString,String editorsString, String ConfCode) throws Exception
 	{
-		BdEditors editors = new BdEditors(editorsString);
-
-		List editorList = editors.getEditors();
-		List editorNames = new ArrayList();
-		if(authorString == null && editorsString != null)
+		if(ConfCode == null)
 		{
-			for(int i= 0;i<editorList.size();i++)
+			BdEditors editors = new BdEditors(editorsString);
+
+			List editorList = editors.getEditors();
+			List editorNames = new ArrayList();
+			if(authorString == null && editorsString != null)
 			{
-				BdAuthor author = (BdAuthor)editorList.get(i);
-				editorNames.add(new Contributor(key,author.getDisplayName()));
+				for(int i= 0;i<editorList.size();i++)
+				{
+					BdAuthor author = (BdAuthor)editorList.get(i);
+					editorNames.add(new Contributor(key,author.getDisplayName()));
+				}
+				return new Contributors(Keys.EDITORS, editorNames);
 			}
-			return new Contributors(Keys.EDITORS, editorNames);
+			else
+			{
+				return null;
+			}
 		}
-		else
-		{
-			return null;
-		}
-	}
 
+		return null;
+	}
+	private ElementData getConfEditors(Key key, String editorsString, String ConfCode) throws Exception
+	{
+		if(ConfCode != null)
+		{
+			BdEditors editors = new BdEditors(editorsString);
+
+			List editorList = editors.getEditors();
+			List editorNames = new ArrayList();
+			if(editorsString != null)
+			{
+				for(int i= 0;i<editorList.size();i++)
+				{
+					BdAuthor author = (BdAuthor)editorList.get(i);
+					editorNames.add(new Contributor(key,author.getDisplayName()));
+				}
+				return new Contributors(Keys.EDITORS, editorNames);
+			}
+			else
+			{
+				return null;
+			}
+		}
+
+		return null;
+	}
 
 
 	private ElementData getClassification(Key key,String classCode, Database database) throws Exception
