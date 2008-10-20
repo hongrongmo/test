@@ -16,7 +16,7 @@ public class MemCached {
   {
 	 
 	this.mcc = new MemCachedClient();
-	this.pool = SockIOPool.getInstance();    
+	this.pool = SockIOPool.getInstance();    	
 	this.pool.setServers( servers );
 	Integer[] w = null;
 	if (weights != null) {
@@ -105,6 +105,10 @@ public class MemCached {
 	{
 		MemCachedClient mc = this.getMemCachedClient();		
 		return  mc.keyExists(key);
+	}	
+	public void shutdown()
+	{
+		this.pool.shutDown();
 	}
 	
 	/*
