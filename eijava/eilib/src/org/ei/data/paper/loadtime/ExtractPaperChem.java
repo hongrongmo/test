@@ -48,6 +48,7 @@ public class ExtractPaperChem
             writerPub   = new PrintWriter(new FileWriter("paperchem_extract.sql"));
 
 			String sqlQuery = " select * from paper_master where m_id in "+midsList;
+			//String sqlQuery = "select * from paper_master_test";
             pstmt1  = con.prepareStatement(sqlQuery);
             System.out.println("\n\nQuery: "+sqlQuery);
 
@@ -116,7 +117,7 @@ public class ExtractPaperChem
 				writeColumn(rs1, "ec", writerPub);//CONFERENCEORGANIZATION
 				writeColumn(rs1, "es", writerPub);//CONFERENCEEDITORADDRESS
 				writeColumn(rs1, "la", writerPub);
-
+				writeColumn(rs1, "db", writerPub);
                 writerPub.println();
             }
 
@@ -275,6 +276,10 @@ public class ExtractPaperChem
 		else if(columnName.equals("ec"))
 		{
 		    column = formatConfOrganization(rs1);
+		}
+		else if(columnName.equals("db"))
+		{
+			column = "pch";
 		}
 		else
 		{
