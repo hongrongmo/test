@@ -31,7 +31,7 @@ public class ExtractPaperChem
         PreparedStatement pstmt1    = null;
         ResultSet rs1               = null;
 
-        long begin          = System.currentTimeMillis();
+        long begin = System.currentTimeMillis();
 
         try
         {
@@ -415,37 +415,39 @@ public class ExtractPaperChem
 	public String formatConferenceLocation(String location, String city,String state, String country)
 	{
 		StringBuffer affBuffer = new StringBuffer();
-
-		affBuffer.append(BdParser.IDDELIMITER);//affid
-		affBuffer.append(BdParser.IDDELIMITER);//venue
-		affBuffer.append(BdParser.IDDELIMITER);//organization
-		affBuffer.append(BdParser.IDDELIMITER);//address_part
-		affBuffer.append(BdParser.IDDELIMITER);//citygroup
-		if(location != null)
+		if(location != null || city != null || state != null || country!= null)
 		{
-			affBuffer.append(location);
-		}
-		else
-		{
-			if(city !=null)
+			affBuffer.append(BdParser.IDDELIMITER);//affid
+			affBuffer.append(BdParser.IDDELIMITER);//venue
+			affBuffer.append(BdParser.IDDELIMITER);//organization
+			affBuffer.append(BdParser.IDDELIMITER);//address_part
+			affBuffer.append(BdParser.IDDELIMITER);//citygroup
+			if(location != null)
 			{
-				affBuffer.append(city);
+				affBuffer.append(location);
 			}
-
-			if(state !=null)
+			else
 			{
-				if(city!= null)
+				if(city !=null)
 				{
-					affBuffer.append(", ");
+					affBuffer.append(city);
 				}
-				affBuffer.append(state);
-			}
-		}
-		affBuffer.append(BdParser.IDDELIMITER);//country
 
-		if(country!= null && location!=null && location.indexOf(country)<0)
-		{
-			affBuffer.append(country);
+				if(state !=null)
+				{
+					if(city!= null)
+					{
+						affBuffer.append(", ");
+					}
+					affBuffer.append(state);
+				}
+			}
+			affBuffer.append(BdParser.IDDELIMITER);//country
+
+			if(country!= null && location!=null && location.indexOf(country)<0)
+			{
+				affBuffer.append(country);
+			}
 		}
 
 
