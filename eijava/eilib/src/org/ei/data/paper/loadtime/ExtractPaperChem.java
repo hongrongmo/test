@@ -18,7 +18,7 @@ public class ExtractPaperChem
 	public static void main(String[] args) throws Exception
 	{
 		String[] m_ids = new String[]{"pch_34f213f85aae815aM6fa219817173212","pch_34f213f85aae815aM7bc019817173212","pch_34f213f85aae815aM672219817173212","pch_B9CB8C08410F10C6E03408002081DCA4","pch_34f213f85aae815aM7e2b19817173212","pch_115f0a9f85ab60809M7ea819817173212","pch_B9CB8C083E7510C6E03408002081DCA4","pch_B9CB8C03873410C6E03408002081DCA4","pch_B9CB8C08184610C6E03408002081DCA4","pch_B9CB8C07B53010C6E03408002081DCA4","pch_B9CB8C0806B010C6E03408002081DCA4","pch_B9CB8C0806B110C6E03408002081DCA4","pch_34f213f85aae815aM672219817173212","pch_34f213f85aae815aM7e1a19817173212","pch_6d2baff85ab4375bM7fc519817173212"};
-		Connection con = getDbCoonection("jdbc:oracle:thin:@neptune.elsevier.com:1521:EI", "AP_PRO1", "ei3it", "oracle.jdbc.driver.OracleDriver");
+		Connection con = getDbCoonection("jdbc:oracle:thin:@jupiter.elsevier.com:1521:EIDB1", "AP_PRO1", "ei3it", "oracle.jdbc.driver.OracleDriver");
 		ExtractPaperChem epc = new ExtractPaperChem();
 		epc.extract(m_ids,con);
 	}
@@ -47,8 +47,8 @@ public class ExtractPaperChem
 
             writerPub   = new PrintWriter(new FileWriter("paperchem_extract.sql"));
 
-			String sqlQuery = " select * from paper_master where m_id in "+midsList;
-			//String sqlQuery = "select * from paper_master_test";
+			//String sqlQuery = " select * from paper_master where m_id in "+midsList;
+			String sqlQuery = "select * from paper_master_test";
             pstmt1  = con.prepareStatement(sqlQuery);
             System.out.println("\n\nQuery: "+sqlQuery);
 
@@ -586,7 +586,7 @@ public class ExtractPaperChem
 				fullname = namesArray[i];
 				if(fullname.indexOf(",")>-1)
 				{
-					lastName  = fullname.substring(0,fullname.indexOf(",")-1);
+					lastName  = fullname.substring(0,fullname.indexOf(","));
 					givenName = fullname.substring(fullname.indexOf(",")+1);
 				}
 				else
@@ -619,9 +619,9 @@ public class ExtractPaperChem
 
 	public String formatAuthor(String author,String affiliation)
 	{
-		String lastName = null;
-		String fullname = null;
-		String givenName = null;
+		String lastName = "";
+		String fullname = "";
+		String givenName = "";
 		String[] authorArray = null;
 		String affId = "0";
 		StringBuffer nameBuffer = new StringBuffer();
@@ -651,8 +651,13 @@ public class ExtractPaperChem
 				fullname = authorArray[i];
 				if(fullname.indexOf(",")>-1)
 				{
-					lastName  = fullname.substring(0,fullname.indexOf(",")-1);
+					lastName  = fullname.substring(0,fullname.indexOf(","));
 					givenName = fullname.substring(fullname.indexOf(",")+1);
+				}
+				else
+				{
+					lastName = fullname;
+
 				}
 				nameBuffer.append(BdParser.IDDELIMITER);//sec
 				nameBuffer.append(i);
