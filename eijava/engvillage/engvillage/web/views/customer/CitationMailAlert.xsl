@@ -29,7 +29,7 @@
       <xsl:variable name="RESULTS-COUNT"><xsl:value-of select="/PAGE/SESSION-DATA/RESULTS-COUNT"/></xsl:variable>
       <xsl:variable name="ALERTS-PER-PAGE"><xsl:value-of select="/PAGE/ALERTS-PER-PAGE"/></xsl:variable>
       <xsl:variable name="WEEK-OF-YEAR"><xsl:value-of select="/PAGE/WEEK-OF-YEAR"/></xsl:variable>
-      <xsl:variable name="SYSTEM_PASSTHROUGH">SYSTEM_PASSTHROUGH=true</xsl:variable>
+      <xsl:variable name="SYSTEM_PASSTHROUGH">SYSTEM_PT=t</xsl:variable>
 
       <xsl:variable name="SEARCH-CID">
         <xsl:value-of select="xslcid:searchResultsCid($SEARCH-TYPE)"/>
@@ -39,40 +39,40 @@
       <!-- Still NEED CID, Database and emailweek !! Duh -->
       <xsl:variable name="HREF-QUERY">SEARCHID=<xsl:value-of select="$QUERY-ID"/>&amp;location=ALERT&amp;database=<xsl:value-of select="$RESULTS-DATABASE-MASK"/>&amp;emailweek=<xsl:value-of select="$WEEK-OF-YEAR"/></xsl:variable>
 
-      <xsl:template match="PAGE">
+            <xsl:template match="PAGE">
 
-          <center>
+	            <center>
 
-          <!-- Start of table for search results -->
+	            <!-- Start of table for search results -->
 
-          <table border="0" width="99%" cellspacing="0" cellpadding="0">
-              <tr>
-                  <td valign="top" colspan="5" align="left"><A CLASS="MedBlackText"><b>Engineering Village E-mail Alert</b></A></td>
-              </tr>
-			  <tr>
-				  <td valign="top" colspan="5" align="left"><A CLASS="MedBlackText">Please do not reply to this email address. Please send all responses and questions to eicustomersupport@elsevier.com.</A></td>
-			  </tr>
-              <xsl:if test="($RESULTS-COUNT &gt; 0)">
-              <tr>
-                  <td valign="top" colspan="5" height="5">&#160;</td>
-              </tr>
-                  <tr>
-                      <td valign="top" colspan="5" align="left"><A CLASS="MedBlackText">Click on the links below to execute search or view a record in Engineering Village.</A></td>
-                  </tr>
-                  <tr>
-                      <td valign="top" colspan="5" align="left"><A CLASS="MedBlackText"><b>NOTE:</b> The links below will only work if your computer's IP address is recognized by Engineering Village.</A></td>
-                  </tr>
-              </xsl:if>
-              <tr>
-                  <td valign="top" colspan="5" height="5">&#160;</td>
-              </tr>
-              <tr>
-                  <td valign="top" colspan="5" align="left">
-                      <A CLASS="SmBlackText"><xsl:value-of select="$RESULTS-COUNT"/> new records found in <xsl:value-of select="DD:getDisplayName($RESULTS-DATABASE-MASK)"/> for: </A>
-                      <A CLASS="LgBlueLink">
-                      <xsl:if test="($RESULTS-COUNT &gt; 0)">
-                          <xsl:attribute name="href">http://<xsl:value-of select="/PAGE/SERVER-LOCATION"/>/controller/servlet/Controller?CID=<xsl:value-of select="$SEARCH-CID"/>&amp;<xsl:value-of select="$HREF-QUERY"/>&amp;<xsl:value-of select="$SYSTEM_PASSTHROUGH"/></xsl:attribute>
-                      </xsl:if>
+	            <table border="0" width="99%" cellspacing="0" cellpadding="0">
+	                <tr>
+	                    <td valign="top" colspan="5" align="left"><A CLASS="MedBlackText"><b>Engineering Village E-mail Alert</b></A></td>
+	                </tr>
+	                            <tr>
+	                                    <td valign="top" colspan="5" align="left"><A CLASS="MedBlackText">Please do not reply to this email address. Please send all responses and questions to eicustomersupport@elsevier.com.</A></td>
+	                            </tr>
+	                <xsl:if test="($RESULTS-COUNT &gt; 0)">
+	                <tr>
+	                    <td valign="top" colspan="5" height="5">&#160;</td>
+	                </tr>
+	                    <tr>
+	                        <td valign="top" colspan="5" align="left"><A CLASS="MedBlackText">Click on the links below to execute search or view a record in Engineering Village.</A></td>
+	                    </tr>
+	                    <tr>
+	                        <td valign="top" colspan="5" align="left"><A CLASS="MedBlackText"><b>NOTE:</b> The links below will only work if your computer's IP address is recognized by Engineering Village.</A></td>
+	                    </tr>
+	                </xsl:if>
+	                <tr>
+	                    <td valign="top" colspan="5" height="5">&#160;</td>
+	                </tr>
+	                <tr>
+	                    <td valign="top" colspan="5" align="left">
+	                        <A CLASS="SmBlackText"><xsl:value-of select="$RESULTS-COUNT"/> new records found in <xsl:value-of select="DD:getDisplayName($RESULTS-DATABASE-MASK)"/> for: </A>
+	                        <A CLASS="LgBlueLink">
+	                        <xsl:if test="($RESULTS-COUNT &gt; 0)">
+	                            <xsl:attribute name="href">http://<xsl:value-of select="/PAGE/SERVER-LOCATION"/>/controller/servlet/Controller?CID=<xsl:value-of select="$SEARCH-CID"/>&amp;<xsl:value-of select="$HREF-QUERY"/>&amp;<xsl:value-of select="$SYSTEM_PASSTHROUGH"/></xsl:attribute>
+	                        </xsl:if>
                       <xsl:value-of select="$DISPLAY-QUERY"/>, Week <xsl:value-of select="$EMAILALERT"/>
                       </A>
                   </td>
@@ -82,7 +82,7 @@
               </tr>
               <xsl:if test="($RESULTS-COUNT &gt; 25)">
                   <tr>
-                      <td valign="top" colspan="5" align="left"><A CLASS="SmBlackText">Up to the first <xsl:value-of select="$ALERTS-PER-PAGE"/> records are displayed below:</A></br></td>
+                      <td valign="top" colspan="5" align="left"><A CLASS="SmBlackText">Up to the first <xsl:value-of select="$ALERTS-PER-PAGE"/> records are displayed below:</A></td>
                   </tr>
               </xsl:if>
               <tr>
@@ -186,9 +186,9 @@
         <xsl:variable name="INDEX"><xsl:value-of select="EI-DOCUMENT/DOC/HITINDEX"/></xsl:variable>
         <xsl:variable name="DOC-ID"><xsl:value-of select="EI-DOCUMENT/DOC-ID"/></xsl:variable>
 
-        <tr>
+<!--        <tr>
           <td valign="top" colspan="4" height="5">&#160;</td>
-        </tr>
+        </tr> -->
         <tr>
           <td valign="top" align="left">
             <xsl:text disable-output-escaping="yes">&amp;nbsp;</xsl:text>
@@ -196,7 +196,8 @@
           <td valign="top">
             <A CLASS="MedBlackText"><xsl:value-of select="$INDEX" />.</A>
           </td>
-          <td valign="top" width="3">&#160</td>
+          <td valign="top" width="3">&#160;</td>
+           <td valign="top" align="left">
             <xsl:apply-templates select="EI-DOCUMENT"/>
             <br/>
             <xsl:variable name="ABSTRACT-LINK-CID">
