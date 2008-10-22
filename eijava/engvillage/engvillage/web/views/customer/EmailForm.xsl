@@ -165,7 +165,7 @@
 				}
 				return result;
 			}
-			
+
 			// This function basically does email validation(ie @ . and special characters)
 			function validateEmail(email)
 			{
@@ -345,7 +345,8 @@
 
 						<input type="text" name="from" size="25">
 							<xsl:attribute name="value">
-							<xsl:value-of select="EMAIL-FROM"/>email_service@ei.org</xsl:attribute>
+							<xsl:value-of select="EMAIL-FROM"/>
+							</xsl:attribute>
 						</input>
 						</A>
 						</td>
