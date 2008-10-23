@@ -1424,13 +1424,16 @@ public class CPXDocBuilder
                                 new XMLWrapper(Keys.RIS_CY, StringUtil.replaceNullWithEmptyString(StringUtil.join(lstMeetLoc,", "))));
                     }
                     */
-
-                    //  PN, PL
-                    List lstTokens = new ArrayList();
+                    /* JM 10/23/2008
+                       Separated Publisher from location/address to put publisher location in RIS CY field.
+                       See ANUM='083911581212' */
+                    //  PN
                     if (rset.getString("PN") != null)
                     {
-                        lstTokens.add((String) rset.getString("PN"));
+                        ht.put(Keys.RIS_PB,new XMLWrapper(Keys.RIS_PB , rset.getString("PN")));
                     }
+                    // PL
+                    List lstTokens = new ArrayList();
                     if (rset.getString("PC") !=null)
                     {
                         lstTokens.add((String) rset.getString("PC"));
@@ -1449,9 +1452,9 @@ public class CPXDocBuilder
                     }
                     if (lstTokens.size() > 0)
                     {
-                        ht.put(Keys.RIS_PB,new XMLWrapper(Keys.RIS_PB ,StringUtil.join(lstTokens, ", ")));
-                        lstTokens = null;
+                        ht.put(Keys.RIS_CY,new XMLWrapper(Keys.RIS_CY ,StringUtil.join(lstTokens, ", ")));
                     }
+                    lstTokens = null;
 
                     String abs = null;
                     if((abs = hasAbstract(rset)) != null)
