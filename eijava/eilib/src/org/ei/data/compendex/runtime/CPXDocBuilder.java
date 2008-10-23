@@ -1395,6 +1395,12 @@ public class CPXDocBuilder
                         ht.put(Keys.RIS_MD,new XMLWrapper(Keys.RIS_MD ,rset.getString("M2")));
                     }
                     //  ML
+
+                    /*
+                      JM 10/22/2008
+                      Stop putting Conference Location in CY field. CY should be City of publication.
+                      Code was left since we may find another RIS field to put it in*/
+                    /*
                     List lstMeetLoc = new ArrayList();
                     if (rset.getString("MC") !=null)
                     {
@@ -1417,6 +1423,7 @@ public class CPXDocBuilder
                         ht.put(Keys.RIS_CY,
                                 new XMLWrapper(Keys.RIS_CY, StringUtil.replaceNullWithEmptyString(StringUtil.join(lstMeetLoc,", "))));
                     }
+                    */
 
                     //  PN, PL
                     List lstTokens = new ArrayList();
@@ -1446,11 +1453,11 @@ public class CPXDocBuilder
                         lstTokens = null;
                     }
 
-					String abs = null;
+                    String abs = null;
                     if((abs = hasAbstract(rset)) != null)
-                	{
-                    	ht.put(Keys.RIS_N2,new XMLWrapper(Keys.RIS_N2, abs));
-					}
+                    {
+                      ht.put(Keys.RIS_N2,new XMLWrapper(Keys.RIS_N2, abs));
+                    }
 
                     //  MH
                     String mh = rset.getString("MH");
