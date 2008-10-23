@@ -1119,25 +1119,25 @@ public class InspecDocBuilder
                 if(strRTYPE.equals("08")) {
                     if (rset.getString("AUS") != null)
                     {
-						String aus = rset.getString("AUS");
-						if (rset.getString("AUS2") != null)
-						{
-							aus = aus.concat(rset.getString("AUS2"));
-						}
-						Contributors inventors = new Contributors(Keys.INVENTORS, getContributors(aus, Keys.INVENTORS));
-						inventors.nullAffilID();
-						if(rset.getString("AAFF") != null)
-						{
-							String[] afarray = rset.getString("AAFF").split(IDDELIMITER);
-							if(rset.getString("AFC") != null)
-							{
-								afarray[0] = afarray[0].concat(", ").concat(rset.getString("AFC"));
-							}
-							 afarray[1] = afarray[1].substring(afarray[1].lastIndexOf(".")+1) ;
-							Affiliation affil = new Affiliation(Keys.RIS_AD, afarray[0], afarray[1]);
-							ht.put(Keys.RIS_AD, new Affiliations(Keys.RIS_AD, affil));
-						}
-						ht.put(Keys.RIS_AUS, inventors);
+                      String aus = rset.getString("AUS");
+                      if (rset.getString("AUS2") != null)
+                      {
+                        aus = aus.concat(rset.getString("AUS2"));
+                      }
+                      Contributors inventors = new Contributors(Keys.INVENTORS, getContributors(aus, Keys.INVENTORS));
+                      inventors.nullAffilID();
+                      if(rset.getString("AAFF") != null)
+                      {
+                        String[] afarray = rset.getString("AAFF").split(IDDELIMITER);
+                        if(rset.getString("AFC") != null)
+                        {
+                          afarray[0] = afarray[0].concat(", ").concat(rset.getString("AFC"));
+                        }
+                         afarray[1] = afarray[1].substring(afarray[1].lastIndexOf(".")+1) ;
+                        Affiliation affil = new Affiliation(Keys.RIS_AD, afarray[0], afarray[1]);
+                        ht.put(Keys.RIS_AD, new Affiliations(Keys.RIS_AD, affil));
+                      }
+                      ht.put(Keys.RIS_AUS, inventors);
                     }
 
                 } else {
@@ -1149,7 +1149,7 @@ public class InspecDocBuilder
                             aus = aus.concat(rset.getString("AUS2"));
                         }
                         Contributors authors = new Contributors(Keys.AUTHORS, getContributors(aus, Keys.AUTHORS));
-						authors.nullAffilID();
+                        authors.nullAffilID();
                         if(rset.getString("AAFF") != null)
                         {
                             String[] afarray = rset.getString("AAFF").split(IDDELIMITER);
@@ -1391,18 +1391,28 @@ public class InspecDocBuilder
                     ht.put(Keys.RIS_MD,new XMLWrapper(Keys.RIS_MD ,rset.getString("CODATE")));
                 }
 
+                /*
+                  JM 10/22/2008
+                  Stop putting Conference Location in CY field. CY should be City of publication.
+                  Code was left since we may find another RIS field to put it in*/
+                /*
+                /*
                 if(!strRTYPE.equals("08") && rset.getString("CLOC") != null) {
                      ht.put(Keys.RIS_CY, new XMLWrapper(Keys.RIS_CY, rset.getString("CLOC")));
                 }
-
-
+                */
+                /* JM 10/23/2008 Added Publisher address fields for CY */
+                if(rset.getString("BPPUB") != null) {
+                    ht.put(Keys.RIS_CY,new XMLWrapper(Keys.RIS_CY ,rset.getString("BPPUB")));
+                } else if(rset.getString("PCPUB") != null) {
+                    ht.put(Keys.RIS_CY,new XMLWrapper(Keys.RIS_CY ,rset.getString("PCPUB")));
+                }
 
                 String abs = null;
                 if((abs = hasAbstract(rset)) != null)
                 {
                     ht.put(Keys.RIS_N2,new XMLWrapper(Keys.RIS_N2,abs));
                 }
-
 
                 if(rset.getString("PURL") != null) {
                     ht.put(Keys.RIS_UR, new XMLWrapper(Keys.RIS_UR, rset.getString("PURL")));
