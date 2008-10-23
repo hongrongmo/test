@@ -2499,11 +2499,10 @@ public class C84DocBuilder implements DocumentBuilder
                     //  PN, PL
                     if (rset.getString("PN") != null)
                     {
-                        List lstTokens = new ArrayList();
-                        lstTokens.add((String) rset.getString("PN"));
+                        ht.put(Keys.RIS_PB,new XMLWrapper(Keys.RIS_PB , rset.getString("PN")));
 
                         if (rset.getString("PC") !=null){
-                            lstTokens.add((String) rset.getString("PC"));
+                            ht.put(Keys.RIS_CY,new XMLWrapper(Keys.RIS_CY , rset.getString("PC")));
                         }
                         /* NTIS/1884 - Bug #86 - do not duplicate Publisher information
                             same as in loadDetailed()
@@ -2517,11 +2516,6 @@ public class C84DocBuilder implements DocumentBuilder
                             lstTokens.add((String) rset.getString("PY"));
                         }
                         */
-                        if(lstTokens.size() > 0)
-                        {
-                            ht.put(Keys.RIS_PB,new XMLWrapper(Keys.RIS_PB ,StringUtil.replaceNullWithEmptyString(StringUtil.join(lstTokens, ", "))));
-                        }
-                        lstTokens = null;
                     }
 
                 }
