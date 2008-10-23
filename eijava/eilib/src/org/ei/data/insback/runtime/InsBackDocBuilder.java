@@ -1057,9 +1057,15 @@ public class InsBackDocBuilder
                     ht.put(Keys.RIS_MD,new XMLWrapper(Keys.RIS_MD ,StringUtil.replaceNullWithEmptyString(rset.getString("CDATE"))));
                 }
 
+                /*
+                  JM 10/22/2008
+                  Stop putting Conference Location in CY field. CY should be City of publication.
+                  Code was left since we may find another RIS field to put it in*/
+                /*
                 if(!strRTYPE.equals("80") && rset.getString("CLOC") != null) {
                      ht.put(Keys.RIS_CY, new XMLWrapper(Keys.RIS_CY,StringUtil.replaceNullWithEmptyString(rset.getString("CLOC"))));
                 }
+                */
 
                 String abs = null;
                 if((abs = hasAbstract(rset)) != null )
