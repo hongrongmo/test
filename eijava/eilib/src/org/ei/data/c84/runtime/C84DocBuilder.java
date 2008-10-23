@@ -2468,6 +2468,11 @@ public class C84DocBuilder implements DocumentBuilder
                         ht.put(Keys.RIS_MD,new XMLWrapper(Keys.RIS_MD ,StringUtil.replaceNullWithEmptyString(rset.getString("M2"))));
                     }
                     //  ML
+                    /*
+                      JM 10/22/2008
+                      Stop putting Conference Location in CY field. CY should be City of publication.
+                      Code was left since we may find another RIS field to put it in*/
+                    /*
                     List lstMeetLoc = new ArrayList();
                     if (rset.getString("MC") !=null){
                         lstMeetLoc.add(rset.getString("MC"));
@@ -2486,8 +2491,8 @@ public class C84DocBuilder implements DocumentBuilder
                         ht.put(Keys.RIS_CY,
                                  new XMLWrapper(Keys.RIS_CY, StringUtil.replaceNullWithEmptyString(StringUtil.join(lstMeetLoc,", "))));
                     }
-
                     lstMeetLoc = null;
+                    */
 
                     //  PN, PL
                     // jam NTIS - Bug #81 - suppress all Pub info if publisher name is blank
@@ -2518,6 +2523,7 @@ public class C84DocBuilder implements DocumentBuilder
                         }
                         lstTokens = null;
                     }
+
                 }
 
                 if(rset.getString("EX") != null)
