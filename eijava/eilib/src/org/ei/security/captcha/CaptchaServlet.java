@@ -43,11 +43,25 @@ public class CaptchaServlet extends HttpServlet {
         	{
         		displayHTML = true;
         		StringBuffer redirectParam  = new StringBuffer("?");
+        		
 	        	for(Enumeration e = request.getParameterNames(); e.hasMoreElements();)
 	    		{
 	    			String name = (String) e.nextElement();
-	    			String value = (String) request.getParameter(name);
-	    			//redirectParam.append(name + "=" + value + "&");
+	    			String value = "";
+	    			if(name.equalsIgnoreCase("database"))
+	    			{
+	    				int dbvalue = 0;
+	    				String[] multiValue = request.getParameterValues(name);	    				
+	    				for(int i=0;i<multiValue.length; i++)
+	    				{	    					
+	    					dbvalue += Integer.parseInt(multiValue[i]);
+	    				}
+	    				value = Integer.toString(dbvalue);
+	    			}
+	    			else
+	    			{
+	    				value = (String) request.getParameter(name);
+	    			}	    				    				    		
 	    			redirectParam.append(name + "=" + URLEncoder.encode(value, "UTF-8") + "&");
 
 	    		}
