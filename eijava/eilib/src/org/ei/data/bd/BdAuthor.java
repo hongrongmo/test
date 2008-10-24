@@ -94,7 +94,7 @@ public class BdAuthor
 		}
 		else if(this.getSurname()!=null && this.getGivenName()!=null)
 		{
-			au.append(this.getSurname()).append(" ").append(this.getGivenName());
+			au.append(this.getSurname().trim()).append(", ").append(this.getGivenName().trim());
 		}
 		else if(this.getSurname()!=null)
 		{
