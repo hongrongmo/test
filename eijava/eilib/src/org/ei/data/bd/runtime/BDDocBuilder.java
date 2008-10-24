@@ -229,7 +229,7 @@ public class BDDocBuilder
 
 				//following field used for testing only, should be commented out after testing
 				//buildField(Keys.CORRESPONDING_AUTHORS,rset.getString("CORRESPONDENCENAME"),ht);
-				//buildField(Keys.CORRESPONDING_EMAIL,rset.getString("CORRESPONDENCEEADDRESS"),ht);
+				buildField(Keys.CORRESPONDING_EMAIL,getEmail(rset.getString("CORRESPONDENCEEADDRESS")),ht);
 
 				eiDoc.setLoadNumber(rset.getInt("LOADNUMBER"));
 				list.add(eiDoc);
@@ -281,7 +281,14 @@ public class BDDocBuilder
 
 	}
 
-
+	private String getEmail(String email)
+	{
+		if(email!=null && email.indexOf(BdParser.IDDELIMITER)>-1)
+		{
+			email = email.substring(email.indexOf(BdParser.IDDELIMITER)+1);
+		}
+		return email;
+	}
 
 	private String getAbstractType(String abstractType)
 	{
@@ -862,7 +869,7 @@ public class BDDocBuilder
 		}
 		else if(authorString == null && editorsString == null && confEditor != null)
 		{
-			editors = new BdEditors(confEditor);
+			editors = new BdEditors(confEditor.trim());
 			editorList = editors.getEditors();
 
 			for(int i= 0;i<editorList.size();i++)
