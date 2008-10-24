@@ -27,7 +27,7 @@ public class BDDocBuilder
 	private static final Key CPX_MAIN_HEADING = new Key(Keys.MAIN_HEADING, "Ei main heading");
 	private static final Key[] CITATION_KEYS = {Keys.DOCID,Keys.TITLE,Keys.TITLE_TRANSLATION,Keys.EDITORS,Keys.AUTHORS,Keys.AUTHOR_AFFS,Keys.SOURCE,Keys.MONOGRAPH_TITLE, Keys.PAGE_RANGE, Keys.VOLISSUE,Keys.PUBLICATION_YEAR, Keys.PUBLISHER, Keys.ISSUE_DATE, Keys.ISSN, Keys.LANGUAGE ,Keys.NO_SO, Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT, Keys.DOI, Keys.PATAPPNUM, Keys.PATNUM, Keys.PATASSIGN};
 	private static final Key[] ABSTRACT_KEYS = {Keys.DOCID,Keys.TITLE,Keys.TITLE_TRANSLATION,Keys.EDITORS,Keys.AUTHORS,Keys.EDITOR_AFFS, Keys.AUTHOR_AFFS,Keys.VOLISSUE, Keys.SOURCE, Keys.PUBLICATION_YEAR, Keys.ISSUE_DATE, Keys.MONOGRAPH_TITLE, Keys.PAGE_RANGE,Keys.CONFERENCE_NAME, Keys.ISSN,Keys.ISBN, Keys.CODEN, Keys.PUBLISHER,Keys.I_PUBLISHER,Keys.CONF_DATE,Keys.SPONSOR, Keys.PROVIDER ,Keys.LANGUAGE, Keys.MAIN_HEADING, CPX_CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS, Keys.GLOBAL_TAGS, Keys.PRIVATE_TAGS, Keys.ABSTRACT, Keys.NUMBER_OF_REFERENCES,Keys.NO_SO, Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT, Keys.CLASS_CODES , Keys.DOI, Keys.PATAPPNUM, Keys.PATNUM, Keys.PATASSIGN, Keys.REPORT_NUMBER_PAPER};
-	private static final Key[] DETAILED_KEYS = {Keys.PAGE_COUNT,Keys.PUBLICATION_ORDER,Keys.SPECIES_TERMS,Keys.REGION_CONTROLLED_TERMS,Keys.ACCESSION_NUMBER, Keys.TITLE, Keys.VOLUME_TITLE,Keys.TITLE_TRANSLATION, Keys.AUTHORS, Keys.EDITORS, Keys.AUTHOR_AFFS, Keys.EDITOR_AFFS, Keys.SERIAL_TITLE, Keys.ABBRV_SERIAL_TITLE, Keys.VOLUME, Keys.ISSUE, Keys.MONOGRAPH_TITLE, Keys.ISSUE_DATE, Keys.PUBLICATION_YEAR, Keys.PAPER_NUMBER, Keys.PAGE_RANGE, Keys.LANGUAGE, Keys.ISSN, Keys.CODEN, Keys.ISBN,Keys.ISBN13, Keys.DOC_TYPE, Keys.CONFERENCE_NAME, Keys.CONF_DATE, Keys.MEETING_LOCATION, Keys.CONF_CODE, Keys.SPONSOR, Keys.PUBLISHER, Keys.ABSTRACT, Keys.ABSTRACT_TYPE, Keys.NUMBER_OF_REFERENCES, Keys.MAIN_HEADING, Keys.CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS, Keys.CLASS_CODES, Keys.TREATMENTS,Keys.GLOBAL_TAGS, Keys.PRIVATE_TAGS, Keys.DOI, Keys.DOCID, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT,Keys.PROVIDER, Keys.MEDIA, Keys.CSESS, Keys.PATNUM, Keys.PATAPPNUM, Keys.PRIORITY_INFORMATION, Keys.PLING, Keys.PCODE, Keys.PATASSIGN, Keys.NUMBER_OF_CLAIMS, Keys.SOURCE, Keys.NUMBER_OF_FIGURES, Keys.NUMBER_OF_TABLES,Keys.SUB_INDEX, Keys.SPECIFIC_NAMES, Keys.SUPPL, Keys.PDFIX, Keys.REPORT_NUMBER_PAPER, Keys.PI,Keys.CORRESPONDING_EMAIL,Keys.CORRESPONDING_AUTHORS};
+	private static final Key[] DETAILED_KEYS = {Keys.PAGE_COUNT,Keys.PUBLICATION_ORDER,Keys.SPECIES_TERMS,Keys.REGION_CONTROLLED_TERMS,Keys.ACCESSION_NUMBER, Keys.TITLE, Keys.VOLUME_TITLE,Keys.TITLE_TRANSLATION, Keys.AUTHORS, Keys.EDITORS, Keys.AUTHOR_AFFS, Keys.EDITOR_AFFS, Keys.SERIAL_TITLE, Keys.ABBRV_SERIAL_TITLE, Keys.VOLUME, Keys.ISSUE, Keys.MONOGRAPH_TITLE, Keys.ISSUE_DATE, Keys.PUBLICATION_YEAR, Keys.PAPER_NUMBER, Keys.PAGE_RANGE, Keys.LANGUAGE, Keys.ISSN, Keys.CODEN, Keys.ISBN,Keys.ISBN13, Keys.DOC_TYPE, Keys.CONFERENCE_NAME, Keys.CONF_DATE, Keys.MEETING_LOCATION, Keys.CONF_CODE, Keys.SPONSOR, Keys.PUBLISHER, Keys.ABSTRACT, Keys.ABSTRACT_TYPE, Keys.NUMBER_OF_REFERENCES, Keys.MAIN_HEADING, Keys.CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS, Keys.CLASS_CODES, Keys.TREATMENTS,Keys.GLOBAL_TAGS, Keys.PRIVATE_TAGS, Keys.DOI, Keys.DOCID, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT,Keys.PROVIDER, Keys.MEDIA, Keys.CSESS, Keys.PATNUM, Keys.PATAPPNUM, Keys.PRIORITY_INFORMATION, Keys.PLING, Keys.PCODE, Keys.PATASSIGN, Keys.NUMBER_OF_CLAIMS, Keys.SOURCE, Keys.NUMBER_OF_FIGURES, Keys.NUMBER_OF_TABLES,Keys.SUB_INDEX, Keys.SPECIFIC_NAMES, Keys.SUPPL, Keys.PDFIX, Keys.REPORT_NUMBER_PAPER, Keys.PI,Keys.CORRESPONDING_EMAIL,Keys.CORRESPONDING_AUTHORS,Keys.CORRESPONDING_AUTHORS_AFF};
 	private static final Key[] RIS_KEYS = { Keys.RIS_TY, Keys.RIS_LA , Keys.RIS_N1 , Keys.RIS_TI , Keys.RIS_T1 , Keys.RIS_BT , Keys.RIS_JO ,Keys.RIS_T3 , Keys.RIS_AUS , Keys.RIS_AD , Keys.RIS_EDS , Keys.RIS_VL , Keys.RIS_IS , Keys.RIS_PY , Keys.RIS_AN , Keys.RIS_SP , Keys.RIS_EP, Keys.RIS_SN ,  Keys.RIS_S1 , Keys.RIS_MD ,Keys.RIS_CY , Keys.RIS_PB,  Keys.RIS_N2 , Keys.RIS_KW , Keys.RIS_CVS , Keys.RIS_FLS , Keys.RIS_DO};
 	private static final Key[] XML_KEYS = { Keys.ISSN , Keys.MAIN_HEADING , Keys.NO_SO , Keys.MONOGRAPH_TITLE , Keys.PUBLICATION_YEAR , Keys.VOLUME_TITLE , Keys.CONTROLLED_TERM , Keys.ISBN , Keys.AUTHORS , Keys.DOCID , Keys.SOURCE , Keys.NUMVOL , Keys.EDITOR_AFFS , Keys.EDITORS , Keys.PUBLISHER , Keys.VOLUME , Keys.AUTHOR_AFFS , Keys.PROVIDER , Keys.ISSUE_DATE , Keys.COPYRIGHT_TEXT , Keys.DOI , Keys.PAGE_COUNT , Keys.PUBLICATION_DATE , Keys.TITLE , Keys.LANGUAGE , Keys.PAGE_RANGE , Keys.PAPER_NUMBER , Keys.COPYRIGHT , Keys.ISSUE , Keys.ACCESSION_NUMBER , Keys.CONTROLLED_TERMS};
 	public static final String DELIMITER = ",";
@@ -155,7 +155,10 @@ public class BDDocBuilder
 				formatRIS(buildField(Keys.PUBLISHER,getPublisher(rset.getString("PUBLISHERNAME"),rset.getString("PUBLISHERADDRESS")),ht),dataFormat, Keys.PUBLISHER, Keys.RIS_PB);
 				formatRIS(buildField(Keys.LANGUAGE,getLanguage(rset.getString("CITATIONLANGUAGE")),ht),dataFormat, Keys.LANGUAGE, Keys.RIS_LA);
 				formatRIS(buildField(Keys.AUTHORS,getAuthors(Keys.AUTHORS,rset.getString("AUTHOR"),rset.getString("AUTHOR_1"), dataFormat),ht), dataFormat, Keys.AUTHORS, Keys.RIS_AUS);
-				formatRIS(buildField(Keys.AUTHOR_AFFS,getAuthorsAffiliation(Keys.AUTHOR_AFFS,rset.getString("AFFILIATION"),rset.getString("AFFILIATION_1"), dataFormat),ht), dataFormat, Keys.AUTHOR_AFFS, Keys.RIS_AD);
+                if(!rset.getString("DATABASE").equalsIgnoreCase("pch"))
+				{
+				    formatRIS(buildField(Keys.AUTHOR_AFFS,getAuthorsAffiliation(Keys.AUTHOR_AFFS,rset.getString("AFFILIATION"),rset.getString("AFFILIATION_1"), dataFormat),ht), dataFormat, Keys.AUTHOR_AFFS, Keys.RIS_AD);
+                }
 				buildField(Keys.PROVIDER,PROVIDER_TEXT,ht);
 
 				formatRIS(buildField(Keys.EDITORS,getEditors(Keys.EDITORS,rset.getString("AUTHOR"),rset.getString("EDITORS"), rset.getString("CONFERENCEEDITOR")),ht), dataFormat, Keys.EDITORS, Keys.RIS_EDS);
@@ -204,6 +207,25 @@ public class BDDocBuilder
 					buildField(Keys.REPORT_NUMBER_PAPER,rset.getString("REPORTNUMBER"),ht);
 					buildField(Keys.PI,rset.getString("PII"),ht);
 				}
+
+
+				if(rset.getString("DATABASE").equalsIgnoreCase("pch"))
+				{
+
+				    formatRIS(buildField(Keys.CORRESPONDING_AUTHORS,
+				    			getEditors(Keys.CORRESPONDING_AUTHORS,
+				    				null,
+									null,
+									rset.getString("CORRESPONDENCENAME")),ht),
+				    				dataFormat,
+				    				Keys.CORRESPONDING_AUTHORS, Keys.RIS_EDS);
+
+
+					buildField(Keys.CORRESPONDING_AUTHORS_AFF,getCorrespondingAuAff(rset.getString("CORRESPONDENCEAFFILIATION")),ht);
+
+
+				}
+
 
 				//following field used for testing only, should be commented out after testing
 				//buildField(Keys.CORRESPONDING_AUTHORS,rset.getString("CORRESPONDENCENAME"),ht);
@@ -258,6 +280,8 @@ public class BDDocBuilder
         return list;
 
 	}
+
+
 
 	private String getAbstractType(String abstractType)
 	{
@@ -752,6 +776,32 @@ public class BDDocBuilder
 		return null;
 	}
 
+	private String getCorrespondingAuAff(String coAuAff) throws Exception
+	{
+		if(coAuAff != null)
+		{
+			BdCorrespAffiliations aff = new BdCorrespAffiliations(coAuAff);
+			ArrayList l =(ArrayList) aff.getAffiliations();
+
+			if (l == null || l.size() == 0)
+			{
+			   	         return null;
+			}
+			else
+			{
+				StringBuffer buf = new StringBuffer();
+				for (int i = 0; i < l.size(); i++)
+				{
+					BdCorrespAffiliation a  =(BdCorrespAffiliation) l.get(i);
+					buf.append(a.getDisplayValue()).append(" ");
+				}
+				return buf.toString();
+			}
+		}
+
+		return null;
+	}
+
 	private Contributors getAuthors(Key key,
 		        					String authorString,
 		        					String authorString1, String dataFormat)
@@ -820,7 +870,7 @@ public class BDDocBuilder
 				BdAuthor author = (BdAuthor)editorList.get(i);
 				editorNames.add(new Contributor(key,author.getDisplayName()));
 			}
-			return new Contributors(Keys.EDITORS, editorNames);
+			return new Contributors(key, editorNames);
 
 		}
 		else
