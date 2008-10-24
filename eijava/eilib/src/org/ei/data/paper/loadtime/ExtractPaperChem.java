@@ -1,7 +1,6 @@
 package org.ei.data.paper.loadtime;
 
-import java.io.FileWriter;
-import java.io.PrintWriter;
+import java.io.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -10,6 +9,7 @@ import java.sql.Clob;
 import java.sql.SQLException;
 
 import org.ei.util.*;
+import org.ei.data.*;
 import org.ei.data.bd.loadtime.*;
 import org.jdom.Element;
 
@@ -17,7 +17,8 @@ public class ExtractPaperChem
 {
 	public static void main(String[] args) throws Exception
 	{
-		String[] m_ids = new String[]{"pch_34f213f85aae815aM6fa219817173212","pch_34f213f85aae815aM7bc019817173212","pch_34f213f85aae815aM672219817173212","pch_B9CB8C08410F10C6E03408002081DCA4","pch_34f213f85aae815aM7e2b19817173212","pch_115f0a9f85ab60809M7ea819817173212","pch_B9CB8C083E7510C6E03408002081DCA4","pch_B9CB8C03873410C6E03408002081DCA4","pch_B9CB8C08184610C6E03408002081DCA4","pch_B9CB8C07B53010C6E03408002081DCA4","pch_B9CB8C0806B010C6E03408002081DCA4","pch_B9CB8C0806B110C6E03408002081DCA4","pch_34f213f85aae815aM672219817173212","pch_34f213f85aae815aM7e1a19817173212","pch_6d2baff85ab4375bM7fc519817173212"};
+		String[] m_ids = new String[]{"pch_34f213f85aae815aM6fa219817173212","pch_11ffb3af85ab48bb2M7ff119817173212","pch_34f213f85aae815aM7bc019817173212","pch_34f213f85aae815aM672219817173212","pch_B9CB8C08410F10C6E03408002081DCA4","pch_34f213f85aae815aM7e2b19817173212","pch_115f0a9f85ab60809M7ea819817173212","pch_B9CB8C083E7510C6E03408002081DCA4","pch_B9CB8C03873410C6E03408002081DCA4","pch_B9CB8C08184610C6E03408002081DCA4","pch_B9CB8C07B53010C6E03408002081DCA4","pch_B9CB8C0806B010C6E03408002081DCA4","pch_B9CB8C0806B110C6E03408002081DCA4","pch_34f213f85aae815aM672219817173212","pch_34f213f85aae815aM7e1a19817173212","pch_6d2baff85ab4375bM7fc519817173212"};
+		//Connection con = getDbCoonection("jdbc:oracle:thin:@jupiter.elsevier.com:1521:EIDB1", "AP_PRO1", "ei3it", "oracle.jdbc.driver.OracleDriver");
 		Connection con = getDbCoonection("jdbc:oracle:thin:@neptune.elsevier.com:1521:EI", "AP_PRO1", "ei3it", "oracle.jdbc.driver.OracleDriver");
 		ExtractPaperChem epc = new ExtractPaperChem();
 		epc.extract(m_ids,con);
@@ -44,8 +45,9 @@ public class ExtractPaperChem
 			}
 
 			midsList += ")";
-
-            writerPub   = new PrintWriter(new FileWriter("paperchem_extract.sql"));
+			String filename = "paperchem_extract1.out";
+			System.out.println("filename= "+filename);
+            writerPub   = new PrintWriter(new FileWriter(filename));
 
 			String sqlQuery = " select * from paper_master where m_id in "+midsList;
 			//String sqlQuery = "select * from paper_master_test";
@@ -54,7 +56,8 @@ public class ExtractPaperChem
 
 
             rs1     = pstmt1.executeQuery();
-
+			int i=0;
+			int j=1;
             while(rs1.next())
             {
 				writeColumn(rs1, "m_id", writerPub);
@@ -119,6 +122,16 @@ public class ExtractPaperChem
 				writeColumn(rs1, "la", writerPub);
 				writeColumn(rs1, "db", writerPub);
                 writerPub.println();
+                if(i>100000)
+                {
+					writerPub.close();
+					filename = "paperchem_extract"+j+".out";
+					System.out.println("filename= "+filename);
+					writerPub = new PrintWriter(new FileWriter(filename));
+					i=0;
+					j++;
+				}
+				i++;
             }
 
         }
@@ -182,6 +195,13 @@ public class ExtractPaperChem
 		else if(columnName.equals("cp"))
 		{
 			column = formatPersonalName(rs1.getString("cp"));
+		}
+		else if(columnName.equals("em"))
+		{
+			if(rs1.getString("em")!=null && (rs1.getString("em")).length()>0)
+			{
+				column = "email"+BdParser.IDDELIMITER+(rs1.getString("em"));
+			}
 		}
 		else if(columnName.equals("bn"))
 		{
@@ -326,27 +346,27 @@ public class ExtractPaperChem
 	}
 
 	public String formatCitationTitle(String citTitle,
-	        							String citTranslatedTitle,
-	        							String clanguage)throws Exception
+										String citTranslatedTitle,
+										String clanguage)throws Exception
 	{
-	    //cit title is
-	    // 0 - id, transl title if it is there , lan -> "eng"
-	    // 1 - id, title , lan -> from pch master table
+		//cit title is
+		// 0 - id, transl title if it is there , lan -> "eng"
+		// 1 - id, title , lan -> from pch master table
 
-	    StringBuffer cittext = new StringBuffer();
-	    int index =0;
-	    String lan = null;
-	    if (clanguage!= null && clanguage.equalsIgnoreCase("English"))
-	    {
-	        lan = "eng";
-	    }
-	    else
-	    {
-	        lan = clanguage;
-	    }
+		StringBuffer cittext = new StringBuffer();
+		int index =0;
+		String lan = null;
+		if (clanguage!= null && clanguage.equalsIgnoreCase("English"))
+		{
+			lan = "eng";
+		}
+		else
+		{
+			lan = clanguage;
+		}
 
 
-	    if(citTranslatedTitle != null)
+		if(citTranslatedTitle != null)
 		{
 			cittext.append(index);
 			cittext.append(BdParser.IDDELIMITER);
@@ -361,21 +381,21 @@ public class ExtractPaperChem
 
 		if(citTitle != null)
 		{
-		    cittext.append(index);
-		    cittext.append(BdParser.IDDELIMITER);
-		    cittext.append(citTitle);
-		    cittext.append(BdParser.IDDELIMITER);
-		    if(citTranslatedTitle == null)
-		    {
-		        cittext.append("y");
-		    }
-		    else
-		    {
-		        cittext.append("n");
-		    }
-		    cittext.append(BdParser.IDDELIMITER);
-		    cittext.append(lan);
-		    cittext.append(BdParser.AUDELIMITER);
+			cittext.append(index);
+			cittext.append(BdParser.IDDELIMITER);
+			cittext.append(citTitle);
+			cittext.append(BdParser.IDDELIMITER);
+			if(citTranslatedTitle == null)
+			{
+				cittext.append("y");
+			}
+			else
+			{
+				cittext.append("n");
+			}
+			cittext.append(BdParser.IDDELIMITER);
+			cittext.append(lan);
+			cittext.append(BdParser.AUDELIMITER);
 		}
 
 		return cittext.toString();
@@ -519,32 +539,35 @@ public class ExtractPaperChem
 		StringBuffer affBuffer = new StringBuffer();
 		if(affiliation!=null || city!=null || state!=null || country!=null)
 		{
-			affBuffer.append("1");
+			affBuffer.append("0");
 			affBuffer.append(BdParser.IDDELIMITER);//affid
+			affBuffer.append(BdParser.IDDELIMITER);//text
 			if(affiliation!=null)
 			{
 				affBuffer.append(affiliation);
 			}
-			affBuffer.append(BdParser.IDDELIMITER);//afforganization
-			affBuffer.append(BdParser.IDDELIMITER);//affcityGroup
-			if(country!=null)
-			{
-				affBuffer.append(country);
-			}
-			affBuffer.append(BdParser.IDDELIMITER);//affCountry
-			affBuffer.append(BdParser.IDDELIMITER);//affAddressPart
+			affBuffer.append(BdParser.GROUPDELIMITER);//afforganization
+			affBuffer.append(BdParser.GROUPDELIMITER);//address-part
 			if(city!=null)
 			{
 				affBuffer.append(city);
 			}
-			affBuffer.append(BdParser.IDDELIMITER);//affCity
+
 			if(state!=null)
 			{
+				if(city!=null)
+				{
+					affBuffer.append(", ");//city
+				}
 				affBuffer.append(state);
 			}
-			affBuffer.append(BdParser.IDDELIMITER);//affState
-			affBuffer.append(BdParser.IDDELIMITER);//affPostalCode
-			affBuffer.append(BdParser.IDDELIMITER);//affText
+			affBuffer.append(BdParser.GROUPDELIMITER);//country
+			if(country!=null)
+			{
+				affBuffer.append(country);
+			}
+
+
 		}
 		return affBuffer.toString();
 	}
@@ -573,7 +596,7 @@ public class ExtractPaperChem
 				fullname = namesArray[i];
 				if(fullname.indexOf(",")>-1)
 				{
-					lastName  = fullname.substring(0,fullname.indexOf(",")-1);
+					lastName  = fullname.substring(0,fullname.indexOf(","));
 					givenName = fullname.substring(fullname.indexOf(",")+1);
 				}
 				else
@@ -604,43 +627,34 @@ public class ExtractPaperChem
 	}
 
 
-	public String formatAuthor(String author,String affiliation)
+	public String formatAuthor(String authors,String affiliation) throws Exception
 	{
-		String lastName = null;
-		String fullname = null;
-		String givenName = null;
-		String[] authorArray = null;
+		String lastName = "";
+		String givenName = "";
 		String affId = "0";
 		StringBuffer nameBuffer = new StringBuffer();
-		if(author != null)
+		int i=0;
+		if(authors != null)
 		{
-			if(author.indexOf(";")>-1)
+			AuthorStream aStream = new AuthorStream(new ByteArrayInputStream(authors.getBytes()));
+			String author = null;
+			while((author = aStream.readAuthor()) != null)
 			{
-				if(author.indexOf("&amp;")>-1)
+				if(affiliation!=null&&affiliation.length()>0)
 				{
-					author = author.replaceAll("&amp;","&");
+					affId="0";
 				}
-				authorArray = author.split(";",-1);
-			}
-			else
-			{
-				authorArray = new String[1];
-				authorArray[0] = author;
-			}
 
-			if(affiliation!=null&&affiliation.length()>0)
-			{
-				affId="1";
-			}
-
-			for(int i=0;i<authorArray.length;i++)
-			{
-				fullname = authorArray[i];
-				if(fullname.indexOf(",")>-1)
+				if(author.indexOf(",")>-1)
 				{
-					lastName  = fullname.substring(0,fullname.indexOf(",")-1);
-					givenName = fullname.substring(fullname.indexOf(",")+1);
+					lastName  = author.substring(0,author.indexOf(","));
+					givenName = author.substring(author.indexOf(",")+1);
 				}
+				else
+				{
+					lastName = author;
+				}
+
 				nameBuffer.append(BdParser.IDDELIMITER);//sec
 				nameBuffer.append(i);
 				nameBuffer.append(BdParser.IDDELIMITER);//auid
@@ -648,10 +662,10 @@ public class ExtractPaperChem
 				nameBuffer.append(BdParser.IDDELIMITER);//afid
 				nameBuffer.append(BdParser.IDDELIMITER);//indexname
 				nameBuffer.append(BdParser.IDDELIMITER);//initials
-				nameBuffer.append(lastName);
+				nameBuffer.append(lastName.trim());
 				nameBuffer.append(BdParser.IDDELIMITER);//Surname
 				nameBuffer.append(BdParser.IDDELIMITER);//Degrees
-				nameBuffer.append(givenName);
+				nameBuffer.append(givenName.trim());
 				nameBuffer.append(BdParser.IDDELIMITER);//givenName
 				nameBuffer.append(BdParser.IDDELIMITER);//Suffix
 				nameBuffer.append(BdParser.IDDELIMITER);//Nametext
@@ -662,6 +676,7 @@ public class ExtractPaperChem
 				nameBuffer.append(BdParser.IDDELIMITER);//PrefnameGivenname
 				nameBuffer.append(BdParser.IDDELIMITER);//Eaddress
 				nameBuffer.append(BdParser.AUDELIMITER);
+				i++;
 			}
 
 		}
