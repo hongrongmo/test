@@ -1491,9 +1491,12 @@ public class InsBackDocBuilder
                 }
 
                 // Needed for IVIP
+                /* JM 10/24/2008
+                  Column "PSN" Does not exist - this is throwing exception
+                  ISSN does not appear in any other docbuilder methods in this file.
                 if(rset.getString("PSN") != null) {
                     ht.put(Keys.ISSN,new ISSN(rset.getString("PSN")));
-                }
+                } */
                 String strRTYPE = StringUtil.replaceNullWithEmptyString(rset.getString("RTYPE"));
 
                 // TI
