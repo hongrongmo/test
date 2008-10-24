@@ -1656,7 +1656,7 @@ public class InsBackDocBuilder
                 }
 
                 //ISBN
-                ht.put(Keys.ISBN, new ISBN(StringUtil.replaceNullWithEmptyString(rset.getString("SBN"))));
+                //ht.put(Keys.ISBN, new ISBN(StringUtil.replaceNullWithEmptyString(rset.getString("SBN"))));
 
                 //PN
                 if(rset.getString("PUB") != null) {
