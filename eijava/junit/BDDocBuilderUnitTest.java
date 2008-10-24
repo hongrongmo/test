@@ -13,6 +13,9 @@ import org.ei.util.StringUtil;
 import org.ei.data.*;
 import org.ei.data.bd.runtime.*;
 import java.sql.*;
+import java.net.*;
+import java.io.*;
+import java.util.regex.*;
 
 public class BDDocBuilderUnitTest extends TestCase {
 
@@ -30,13 +33,17 @@ public class BDDocBuilderUnitTest extends TestCase {
 	ConnectionBroker broker = null;
 
 
-	protected void setUp() {
+	protected void setUp()
+	{
 
 		try
 		{
 			broker = ConnectionBroker.getInstance("C:/baja/appserver.4/webapps/engvillage/WEB-INF/pools.xml");
 			DatabaseConfig databaseConfig = DatabaseConfig.getInstance(DriverConfig.getDriverTable());
 			multidbDocBuilder = new MultiDatabaseDocBuilder();
+			//Connection con=broker.getConnection(DatabaseConfig.SEARCH_POOL);
+			//String sqlQuery = "select * from paper_master_test";
+			//ResultSet paperResult = getResult(con,sqlQuery);
 			listOfDocIDs = new ArrayList();
 			listOfDocIDs.add(new DocID("pch_B9CB8C083E7510C6E03408002081DCA4", databaseConfig.getDatabase("cpx")));
 			listOfDocIDs.add(new DocID("pch_B9CB8C03873410C6E03408002081DCA4", databaseConfig.getDatabase("cpx")));
@@ -49,9 +56,9 @@ public class BDDocBuilderUnitTest extends TestCase {
 			listOfDocIDs.add(new DocID("pch_34f213f85aae815aM7e1a19817173212", databaseConfig.getDatabase("cpx")));
 			listOfDocIDs.add(new DocID("pch_115f0a9f85ab60809M7ea819817173212", databaseConfig.getDatabase("cpx")));
 			listOfDocIDs.add(new DocID("pch_34f213f85aae815aM7e2b19817173212", databaseConfig.getDatabase("cpx")));
-
+			listOfDocIDs.add(new DocID("pch_34f213f85aae815aM6fa219817173212", databaseConfig.getDatabase("cpx")));
+			listOfDocIDs.add(new DocID("pch_11ffb3af85ab48bb2M7ff119817173212", databaseConfig.getDatabase("cpx")));
 /*
-			listOfDocIDs.add(new DocID("cpx_18a992f10b61b5d4a9M74342061377553", databaseConfig.getDatabase("cpx")));
 			listOfDocIDs.add(new DocID("cpx_18a992f10b61b5d4a9M74252061377553", databaseConfig.getDatabase("cpx")));
 			listOfDocIDs.add(new DocID("geo_152513a113d01a997cM73da2061377553", databaseConfig.getDatabase("geo")));
 			listOfDocIDs.add(new DocID("cpx_18a992f10c593a6af2M7f882061377553", databaseConfig.getDatabase("cpx")));
@@ -87,6 +94,7 @@ public class BDDocBuilderUnitTest extends TestCase {
 		try
 		{
 
+			//webTesting();
 			assertDocID(fullDocPages);
 
 			assertMedia(fullDocPages);
@@ -109,11 +117,13 @@ public class BDDocBuilderUnitTest extends TestCase {
 			assertAbstractType(fullDocPages, FullDoc.FULLDOC_FORMAT);
 
 			assertAuthors(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			assertAuthors(risPages, RIS.RIS_FORMAT);
+			assertAuthors(citationPages,Citation.CITATION_FORMAT);
 			assertAuthorAffiliations(fullDocPages, FullDoc.FULLDOC_FORMAT);
-			assertEditors(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			//assertEditors(fullDocPages, FullDoc.FULLDOC_FORMAT);
 
 			assertPdfix(fullDocPages);
-			assertReportnumber(fullDocPages);
+			//assertReportnumber(fullDocPages);
 			assertAccessionNumber(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertVolumeTitle(fullDocPages);
 			assertSerialTitle(fullDocPages,FullDoc.FULLDOC_FORMAT);
@@ -121,8 +131,8 @@ public class BDDocBuilderUnitTest extends TestCase {
 			assertPi(fullDocPages,FullDoc.FULLDOC_FORMAT);
 			assertDOI(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertConfCode(fullDocPages);
-			//assertCorrespondencename(fullDocPages, FullDoc.FULLDOC_FORMAT);
-			//assertCorrespondenceeaddress(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			assertCorrespondencename(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			assertCorrespondenceeaddress(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertConfName(fullDocPages,FullDoc.FULLDOC_FORMAT);
 			assertISSN(fullDocPages,FullDoc.FULLDOC_FORMAT);
 			assertISBN(fullDocPages,FullDoc.FULLDOC_FORMAT);
@@ -144,17 +154,21 @@ public class BDDocBuilderUnitTest extends TestCase {
 			assertControlledTerms(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertControlledTerms(risPages,RIS.RIS_FORMAT);
 			assertPageCount(fullDocPages, FullDoc.FULLDOC_FORMAT);
-			//assertLanguage(citationPages, Citation.CITATION_FORMAT);
-			//assertLanguage(fullDocPages, FullDoc.FULLDOC_FORMAT);
-			//assertLanguage(risPages,RIS.RIS_FORMAT);
+			assertLanguage(citationPages, Citation.CITATION_FORMAT);
+			assertLanguage(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			assertLanguage(risPages,RIS.RIS_FORMAT);
 			assertSponsor(fullDocPages);
-			//assertTitle(fullDocPages, FullDoc.FULLDOC_FORMAT);
-			//assertTranslatedTitle(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			assertTitle(fullDocPages, FullDoc.FULLDOC_FORMAT);
+			assertTranslatedTitle(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertTreatments(fullDocPages);
-			//assertUnControlledTerms(fullDocPages,FullDoc.FULLDOC_FORMAT);
+			assertUnControlledTerms(fullDocPages,FullDoc.FULLDOC_FORMAT);
 			assertStartPage(fullDocPages, FullDoc.FULLDOC_FORMAT);
 			assertEndPage(fullDocPages, FullDoc.FULLDOC_FORMAT);
-			//assertClassCode(fullDocPages);
+			assertClassCode(fullDocPages);
+			assertNumOfRefs(fullDocPages);
+			assertConfCode(fullDocPages);
+			assertReportNumber(fullDocPages);
+			assertCorrespondenceAffiliations(fullDocPages, FullDoc.FULLDOC_FORMAT);
 
 			/*
 
@@ -257,6 +271,79 @@ public class BDDocBuilderUnitTest extends TestCase {
 		{
 			broker.closeConnections();
 		}
+
+	}
+
+	private void webTesting() throws Exception
+	{
+		InputStream in = null;
+		PrintWriter out = null;
+		HttpURLConnection  ucon = null;
+		//InetAddress	ipaddress = new InetAddress();
+		InetAddress me = InetAddress.getLocalHost();
+		String ip = me.getHostAddress();
+		System.out.println("\nIP   ==   "+ip);
+		String strURL1 = "http://"+ip+"/controller/servlet/Controller?CID=login";
+		String strURL = "http://"+ip+"/controller/servlet/Controller?searchWord1=pch_11ffb3af85ab48bb2M7ff119817173212&database=64&CID=quickSearchCitationFormat&section1=NO-LIMIT&doctype=NO-LIMIT&disciplinetype=NO-LIMIT&language=NO-LIMIT&startYear=1884&endYear=2009&stringYear=CSY1884CST1884ISY1896IST1896NSY1899NST1899ASY1967AST1967HSY1970HST1970BSY1985BST1985LSY1962LST1962MSY1963MST1963GSY1973GST1973XSY1785XST1785USY1790UST1790ESY1978EST1978PSY1987PST1987";
+		String sessionID=getSessionID(strURL);
+		strURL = strURL+"&EISESSION="+sessionID;
+		URL url = new URL(strURL);
+		ucon = (HttpURLConnection) url.openConnection();
+		ucon.setDoOutput(true);
+		ucon.setRequestMethod("POST");
+
+		//System.out.println("OUTPUT= "+ucon.getOutputStream());
+		in = ucon.getInputStream();
+		InputStreamReader inR = new InputStreamReader(in);
+		BufferedReader bin = new BufferedReader(inR);
+		String line = null;
+		int i = 0;
+		StringBuffer tableStringBuffer = new StringBuffer();
+		while((line = bin.readLine()) != null)
+		{
+			tableStringBuffer.append(line);
+		}
+		System.out.println("\nWEBTEST= "+tableStringBuffer.toString());
+
+	}
+
+	private String getSessionID(String strURL) throws Exception
+	{
+		String EISESSION = "";
+		InputStream in = null;
+		PrintWriter out = null;
+		HttpURLConnection  ucon = null;
+		URL url = new URL(strURL);
+		ucon = (HttpURLConnection) url.openConnection();
+		ucon.setDoOutput(true);
+		ucon.setRequestMethod("POST");
+
+		//System.out.println("OUTPUT= "+ucon.getOutputStream());
+		in = ucon.getInputStream();
+		BufferedReader bin = new BufferedReader(new InputStreamReader(in));
+		String line = null;
+		int i = 0;
+		StringBuffer tableStringBuffer = new StringBuffer();
+		while((line = bin.readLine()) != null)
+		{
+			tableStringBuffer.append(line);
+		}
+		Pattern pattern = Pattern.compile("EISESSION=.+CID=home");
+
+		Matcher matcher = pattern.matcher(tableStringBuffer.toString());
+
+		boolean found = false;
+		if (matcher.find()) {
+		EISESSION = matcher.group();
+		if(EISESSION != null && EISESSION.length()>20)
+		{
+			EISESSION = EISESSION.substring(10,EISESSION.length()-9);
+		}
+		System.out.println("IPADDRESS= "+matcher.group());
+		System.out.println("EISESSION= "+EISESSION);
+		}
+
+		return EISESSION;
 
 	}
 
@@ -967,8 +1054,13 @@ public class BDDocBuilderUnitTest extends TestCase {
 	{
 		HashMap cname = new HashMap();
 
-		cname.put("pch_34f213f85aae815aM672219817173212","0Mille C.J.");
+		cname.put("pch_34f213f85aae815aM672219817173212","Miller, C.J.");
+		cname.put("pch_B9CB8C083E7510C6E03408002081DCA4","Mitchell, G.");
+		cname.put("pch_115f0a9f85ab60809M7ea819817173212","Thompson, I.D.");
+		cname.put("pch_34f213f85aae815aM7e2b19817173212","Soares, J.V.");
+
 		/*
+
 		dois.put("cpx_18a992f10b61b5d4a9M74342061377553","10.1016/j.frl.2005.09.001");
 		dois.put("cpx_18a992f10b61b5d4a9M74252061377553","10.1117/12.657463");
 		dois.put("geo_152513a113d01a997cM73da2061377553","10.1080/03009480600991573");
@@ -988,10 +1080,13 @@ public class BDDocBuilderUnitTest extends TestCase {
 			DocID correctDocId = (DocID)eidoc.getDocID();
 			String docidString = correctDocId.getDocID();
 
-			correctString = "<CAUS label=\"Corr. author\"><![CDATA[" +(String)cname.get(correctDocId.getDocID()) + "]]></CAUS>";
+			correctString = "<CAUS label=\"Corr. author\"><CAU><![CDATA[" +(String)cname.get(correctDocId.getDocID()) + "]]></CAU></CAUS>";
 
+			System.out.println("correctString= "+correctString);
+			System.out.println("xmlString= "+xmlString);
 			if(cname.get(correctDocId.getDocID()) != null)
 			{
+
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
 		}
@@ -1006,7 +1101,7 @@ public class BDDocBuilderUnitTest extends TestCase {
 		dois.put("geo_152513a113d01a997cM73da2061377553","10.1080/03009480600991573");
 		dois.put("cpx_18a992f10c593a6af2M7f882061377553",null);
 		dois.put("cpx_18a992f10b61b5d4a9M743d2061377553", null);
-*/
+		*/
 		String correctString = null;
 
 		for(int i = 0; i < EIDocs.size();i++)
@@ -1024,6 +1119,8 @@ public class BDDocBuilderUnitTest extends TestCase {
 
 			if(caddress.get(correctDocId.getDocID()) != null)
 			{
+				System.out.println("eaddress= correctString"+correctString);
+				System.out.println("eaddress= xmlString"+xmlString);
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
 		}
@@ -1288,6 +1385,7 @@ public class BDDocBuilderUnitTest extends TestCase {
 	{
 		HashMap confCodes = new HashMap();
 		confCodes.put("pch_34f213f85aae815aM672219817173212", "58788");
+		confCodes.put("pch_34f213f85aae815aM7bc019817173212","(IEEE cat n 00CB37082)");
 
 		/*
 		confCodes.put("cpx_18a992f10b61b5d4a9M74342061377553", null);
@@ -1318,14 +1416,49 @@ public class BDDocBuilderUnitTest extends TestCase {
 		}
 	}
 
+	private void assertReportNumber(List EIDocs) throws Exception
+	{
+		HashMap numRefs = new HashMap();
+		numRefs.put("pch_34f213f85aae815aM6fa219817173212", "5B0105");
+		numRefs.put("pch_B9CB8C03873410C6E03408002081DCA4", null);
+
+
+		String correctString = null;
+
+		for(int i = 0; i < EIDocs.size();i++)
+		{
+			StringWriter swriter = new StringWriter();
+			PrintWriter out = new PrintWriter ( swriter ) ;
+			EIDoc eidoc = (EIDoc)EIDocs.get(i);
+			eidoc.toXML(out);
+			out.close();
+			String xmlString = swriter.toString();
+			DocID correctDocId = (DocID)eidoc.getDocID();
+			String docidString = correctDocId.getDocID();
+			if(numRefs.get(correctDocId.getDocID()) != null)
+			{
+				correctString = "<PRN label=\"Report number\"><![CDATA[" + (String)numRefs.get(correctDocId.getDocID()) + "]]></PRN>";
+				//System.out.println("/***************************/");
+				//System.out.println("RN correctString= "+correctString);
+				//System.out.println("RN xmlString= "+xmlString);
+				//System.out.println("/***************************/");
+				assertTrue(xmlString.indexOf(correctString) != -1);
+			}
+			else
+			{
+				System.out.println("RN is null");
+			}
+		}
+	}
+
 	protected void assertNumOfRefs(List EIDocs) throws Exception
 	{
 		HashMap numRefs = new HashMap();
-		numRefs.put("cpx_18a992f10b61b5d4a9M74342061377553", "13");
-		numRefs.put("cpx_18a992f10b61b5d4a9M74252061377553", "26");
-		numRefs.put("geo_152513a113d01a997cM73da2061377553", "70");
-		numRefs.put("cpx_18a992f10c593a6af2M7f882061377553", "18");
-		numRefs.put("cpx_18a992f10b61b5d4a9M743d2061377553", null);
+		numRefs.put("pch_34f213f85aae815aM7e1a19817173212", null);
+		numRefs.put("pch_B9CB8C08184610C6E03408002081DCA4", "10");
+		numRefs.put("pch_B9CB8C03873410C6E03408002081DCA4", null);
+		numRefs.put("pch_B9CB8C083E7510C6E03408002081DCA4", "6");
+		numRefs.put("pch_115f0a9f85ab60809M7ea819817173212", "141 Refs.");
 
 		String correctString = null;
 
@@ -1726,9 +1859,10 @@ public class BDDocBuilderUnitTest extends TestCase {
 		}
 		else
 		{
-			uctermsMap.put("pch_34f213f85aae815aM7e1a19817173212", "<FLS><FL><![CDATA[Nitrogen fertilization;vegetation indices (VI)]]></FL><FL><![CDATA[Soil moisture]]></FL><FL><![CDATA[Canopy]]></FL><FL><![CDATA[Composite ecosystem degradation index]]></FL><FL><![CDATA[Reflectance anisotropy]]></FL><FL><![CDATA[Interferometric radar]]></FL><FL><![CDATA[Geological hazards]]></FL><FL><![CDATA[EiRev]]></FL></FLS>");
-			uctermsMap.put("pch_B9CB8C0806B110C6E03408002081DCA4", "<FLS><FL><![CDATA[CONTINUOUS FORMS]]></FL><FL><![CDATA[ENGLISH]]></FL><FL><![CDATA[GAA]]></FL><FL><![CDATA[GRAPHIC ARTS]]></FL><FL><![CDATA[MAIL]]></FL><FL><![CDATA[OPENING FEATURES]]></FL><FL><![CDATA[PATENTS]]></FL><FL><![CDATA[PRDS]]></FL><FL><![CDATA[PRINTING ]]></FL></FLS>");
-			uctermsMap.put("pch_B9CB8C0806B010C6E03408002081DCA4", "<FLS><FL><![CDATA[BOXES]]></FL><FL><![CDATA[CONTAINERS]]></FL><FL><![CDATA[ENGLISH]]></FL><FL><![CDATA[HEAT SEALING]]></FL><FL><![CDATA[LEAK PROOF CONTAINERS]]></FL><FL><![CDATA[PAPER BOARD CONTAINERS]]></FL><FL><![CDATA[PATENTS]]></FL><FL><![CDATA[PCKG]]></FL><FL><![CDATA[PLASTIC COATED PAPERS]]></FL><FL><![CDATA[POLYMER PAPER COMBINATIONS]]></FL><FL><![CDATA[POURING SPOUTS]]></FL><FL><![CDATA[SEALING]]></FL></FLS>");
+			uctermsMap.put("pch_34f213f85aae815aM7e2b19817173212","<FLS label=\"Uncontrolled terms\"><FL><![CDATA[Water budget model]]></FL><FL><![CDATA[Eucalyptus]]></FL></FLS>");
+			uctermsMap.put("pch_34f213f85aae815aM7e1a19817173212","<FLS label=\"Uncontrolled terms\"><FL><![CDATA[Nitrogen fertilization]]></FL><FL><![CDATA[vegetation indices (VI)]]></FL><FL><![CDATA[Soil temperature]]></FL><FL><![CDATA[Soil moisture]]></FL><FL><![CDATA[Canopy]]></FL><FL><![CDATA[Composite ecosystem degradation index]]></FL><FL><![CDATA[Reflectance anisotropy]]></FL><FL><![CDATA[Interferometric radar]]></FL><FL><![CDATA[Geological hazards]]></FL><FL><![CDATA[EiRev]]></FL></FLS>");
+			//uctermsMap.put("pch_B9CB8C0806B110C6E03408002081DCA4", "<FLS><FL><![CDATA[CONTINUOUS FORMS]]></FL><FL><![CDATA[ENGLISH]]></FL><FL><![CDATA[GAA]]></FL><FL><![CDATA[GRAPHIC ARTS]]></FL><FL><![CDATA[MAIL]]></FL><FL><![CDATA[OPENING FEATURES]]></FL><FL><![CDATA[PATENTS]]></FL><FL><![CDATA[PRDS]]></FL><FL><![CDATA[PRINTING ]]></FL></FLS>");
+			//uctermsMap.put("pch_B9CB8C0806B010C6E03408002081DCA4", "<FLS><FL><![CDATA[BOXES]]></FL><FL><![CDATA[CONTAINERS]]></FL><FL><![CDATA[ENGLISH]]></FL><FL><![CDATA[HEAT SEALING]]></FL><FL><![CDATA[LEAK PROOF CONTAINERS]]></FL><FL><![CDATA[PAPER BOARD CONTAINERS]]></FL><FL><![CDATA[PATENTS]]></FL><FL><![CDATA[PCKG]]></FL><FL><![CDATA[PLASTIC COATED PAPERS]]></FL><FL><![CDATA[POLYMER PAPER COMBINATIONS]]></FL><FL><![CDATA[POURING SPOUTS]]></FL><FL><![CDATA[SEALING]]></FL></FLS>");
 		}
 
 		String correctString = null;
@@ -1747,6 +1881,10 @@ public class BDDocBuilderUnitTest extends TestCase {
 			if(uctermsMap.get(correctDocId.getDocID()) != null)
 			{
 				correctString =  (String)uctermsMap.get(correctDocId.getDocID());
+				//System.out.println("*************************\n");
+				//System.out.println("FL correctString= "+correctString);
+				//System.out.println("FL xmlString= "+xmlString);
+				//System.out.println("\n*************************");
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
 
@@ -1778,10 +1916,10 @@ public class BDDocBuilderUnitTest extends TestCase {
 			if(treatmentsMap.get(correctDocId.getDocID()) != null)
 			{
 				correctString = (String)treatmentsMap.get(correctDocId.getDocID());
-				System.out.println("*************************\n");
-				System.out.println("TR correctString= "+correctString);
-				System.out.println("TR xmlString= "+xmlString);
-				System.out.println("\n*************************");
+				//System.out.println("*************************\n");
+				//System.out.println("TR correctString= "+correctString);
+				//System.out.println("TR xmlString= "+xmlString);
+				//System.out.println("\n*************************");
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
 
@@ -1830,7 +1968,10 @@ public class BDDocBuilderUnitTest extends TestCase {
 				{
 					correctString = "<TI><![CDATA[" + (String)titleMap.get(correctDocId.getDocID()) + "]]></TI>";
 				}
-
+				//System.out.println("\n*************************");
+				//System.out.println("TIxmlString= "+xmlString);
+				//System.out.println("TIcorrectString= "+correctString);
+				//System.out.println("\n*************************");
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
 
@@ -1875,6 +2016,9 @@ public class BDDocBuilderUnitTest extends TestCase {
 				{
 					correctString = "<TT label=\"Title of translation\"><T><![CDATA[" + (String)titleMap.get(correctDocId.getDocID()) + "]]></T></TT>";
 				}
+				//System.out.println("\n*************************");
+				//System.out.println("TTxmlString= "+xmlString);
+				//System.out.println("TTcorrectString= "+correctString);
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
 
@@ -2050,9 +2194,9 @@ public class BDDocBuilderUnitTest extends TestCase {
 		pnMap.put("pch_34f213f85aae815aM7e1a19817173212", "The International Society for Optical Engineering");
 		pnMap.put("pch_B9CB8C0806B110C6E03408002081DCA4", null);
 		pnMap.put("pch_B9CB8C0806B010C6E03408002081DCA4", null);
-		pnMap.put("pch_B9CB8C083E7510C6E03408002081DCA4", "Forestry Canada");
-		pnMap.put("pch_115f0a9f85ab60809M7ea819817173212", "Elsevier Science B.V.");
-
+		pnMap.put("pch_B9CB8C083E7510C6E03408002081DCA4", "Forestry Canada, Edmonton, Alberta, Canada");
+		pnMap.put("pch_115f0a9f85ab60809M7ea819817173212","Elsevier Science B.V.");
+		pnMap.put("pch_34f213f85aae815aM7ffb19817173212","Soc of American Foresters, Bethesda, MD, United States");
 		String correctString = null;
 
 		for(int i = 0; i < EIDocs.size();i++)
@@ -2080,6 +2224,7 @@ public class BDDocBuilderUnitTest extends TestCase {
 				{
 					correctString = "<PN><![CDATA[" + (String)pnMap.get(correctDocId.getDocID()) + "]]></PN>";
 				}
+				//System.out.println("/**************************************/\n");
 				//System.out.println("PN correctString= "+ correctString);
 				//System.out.println("PN xmlString= "+ xmlString);
 				assertTrue(xmlString.indexOf(correctString) != -1);
@@ -2210,17 +2355,17 @@ public class BDDocBuilderUnitTest extends TestCase {
 		HashMap authorsMap = new HashMap();
 		if(dataFormat.equals(Citation.CITATION_FORMAT))
 		{
-			authorsMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "<AUS><AU id=\"1\"><![CDATA[Brandt Jo&die;rg]]><AFS><AFID>1</AFID><AFID>3</AFID></AFS></AU><AU id=\"2\"><![CDATA[Biero&die;gel]]><AFS><AFID>2</AFID></AFS></AU><AU id=\"2\"><![CDATA[Holweg]]><AFS><AFID>2</AFID></AFS></AU><AU id=\"1\"><![CDATA[Hein]]><AFS><AFID>1</AFID></AFS></AU><AU id=\"2\"><![CDATA[Grellmann]]><AFS><AFID>2</AFID></AFS></AU></AUS>");
-			authorsMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<AUS><AU id=\"1\"><![CDATA[Macintosh Bruce]]><AFS><AFID>1</AFID><AFID>2</AFID></AFS></AU><AU id=\"1\"><![CDATA[Graham James]]><AFS><AFID>1</AFID><AFID>4</AFID></AFS></AU><AU id=\"1\"><![CDATA[Oppenheimer Ben]]><AFS><AFID>1</AFID><AFID>3</AFID></AFS></AU><AU id=\"1\"><![CDATA[Poyneer Lisa]]><AFS><AFID>1</AFID><AFID>2</AFID></AFS></AU><AU id=\"1\"><![CDATA[Sivaramakrishnan Anand]]><AFS><AFID>1</AFID><AFID>3</AFID></AFS></AU><AU id=\"5\"><![CDATA[Veran Jean-Pierre]]><AFS><AFID>5</AFID></AFS></AU></AUS>");
-			authorsMap.put("geo_152513a113d01a997cM73da2061377553", "<AUS><AU id=\"0\"><![CDATA[Watkins Ruth]]><AFS><AFID>0</AFID></AFS></AU><AU id=\"0\"><![CDATA[Scourse James D.]]><AFS><AFID>0</AFID></AFS></AU><AU id=\"0\"><![CDATA[Allen Judy R.M.]]><AFS><AFID>0</AFID></AFS></AU></AUS>");
-			authorsMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<AUS><AU id=\"1\"><![CDATA[Kim Hansang]]><AFS><AFID>1</AFID></AFS></AU><AU id=\"2\"><![CDATA[Urquidi-Macdonald Mima]]><AFS><AFID>2</AFID></AFS></AU><AU id=\"1\"><![CDATA[Macdonald Digby]]><AFS><AFID>1</AFID></AFS></AU></AUS>");
+			authorsMap.put("pch_B9CB8C08184610C6E03408002081DCA4", "<AUS><AU id=\"0\"><![CDATA[Govers, T. R.]]><AFS><AFID>0</AFID></AFS></AU></AUS>");
+			authorsMap.put("pch_B9CB8C0218DB10C6E03408002081DCA4", "<AUS><AU id=\"0\"><![CDATA[Kachi, Shogo 1 Japan Pulp & Paper Research Inst]]><AFS><AFID>0</AFID></AFS></AU></AUS>");
+			//authorsMap.put("geo_152513a113d01a997cM73da2061377553", "<AUS><AU id=\"0\"><![CDATA[Watkins, Ruth]]><AFS><AFID>0</AFID></AFS></AU><AU id=\"0\"><![CDATA[Scourse, James D.]]><AFS><AFID>0</AFID></AFS></AU><AU id=\"0\"><![CDATA[Allen, Judy R.M.]]><AFS><AFID>0</AFID></AFS></AU></AUS>");
+			//authorsMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<AUS><AU id=\"0\"><![CDATA[Kim, Hansang]]><AFS><AFID>0</AFID></AFS></AU><AU id=\"2\"><![CDATA[Urquidi-Macdonald, Mima]]><AFS><AFID>2</AFID></AFS></AU><AU id=\"1\"><![CDATA[Macdonald, Digby]]><AFS><AFID>1</AFID></AFS></AU></AUS>");
 		}
 		else if(dataFormat.equals(RIS.RIS_FORMAT))
 		{
-			authorsMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "<AUS><AU><![CDATA[Brandt Jo&die;rg]]></AU><AU><![CDATA[Biero&die;gel]]></AU><AU><![CDATA[Holweg]]></AU><AU><![CDATA[Hein]]></AU><AU><![CDATA[Grellmann]]></AU></AUS>");
-			authorsMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<AUS><AU><![CDATA[Macintosh Bruce]]></AU><AU><![CDATA[Graham James]]></AU><AU><![CDATA[Oppenheimer Ben]]></AU><AU><![CDATA[Poyneer Lisa]]></AU><AU><![CDATA[Sivaramakrishnan Anand]]></AU><AU><![CDATA[Veran Jean-Pierre]]></AU></AUS>");
-			authorsMap.put("geo_152513a113d01a997cM73da2061377553", "<AUS><AU><![CDATA[Watkins Ruth]]></AU><AU><![CDATA[Scourse James D.]]></AU><AU><![CDATA[Allen Judy R.M.]]></AU></AUS>");
-			authorsMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<AUS ><AU><![CDATA[Kim Hansang]]></AU><AU><![CDATA[Urquidi-Macdonald Mima]]></AU><AU><![CDATA[Macdonald Digby]]></AU></AUS>");
+			authorsMap.put("pch_B9CB8C08184610C6E03408002081DCA4", "<AUS><AU><![CDATA[Govers, T. R.]]></AU></AUS>");
+			authorsMap.put("pch_B9CB8C0218DB10C6E03408002081DCA4", "<AUS><AU><![CDATA[Kachi, Shogo 1 Japan Pulp & Paper Research Inst]]></AU></AUS>");
+			authorsMap.put("pch_34f213f85aae815aM7e1a19817173212", "<EDS><ED><![CDATA[Owe, M.]]></ED><ED><![CDATA[Urso, G.]]></ED><ED><![CDATA[Zilioli, E.]]></ED></EDS>");
+			//authorsMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<AUS ><AU><![CDATA[Kim, Hansang]]></AU><AU><![CDATA[Urquidi-Macdonald Mima]]></AU><AU><![CDATA[Macdonald, Digby]]></AU></AUS>");
 		}
 		else
 		{
@@ -2230,8 +2375,11 @@ public class BDDocBuilderUnitTest extends TestCase {
 			authorsMap.put("geo_152513a113d01a997cM73da2061377553", "<AUS label=\"Authors\"><AU id=\"0\"><![CDATA[Watkins Ruth]]><AFS><AFID>0</AFID></AFS></AU><AU id=\"0\"><![CDATA[Scourse James D.]]><AFS><AFID>0</AFID></AFS></AU><AU id=\"0\"><![CDATA[Allen Judy R.M.]]><AFS><AFID>0</AFID></AFS></AU></AUS>");
 			authorsMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<AUS label=\"Authors\"><AU id=\"1\"><![CDATA[Kim Hansang]]><AFS><AFID>1</AFID></AFS></AU><AU id=\"2\"><![CDATA[Urquidi-Macdonald Mima]]><AFS><AFID>2</AFID></AFS></AU><AU id=\"1\"><![CDATA[Macdonald Digby]]><AFS><AFID>1</AFID></AFS></AU></AUS>");
 			*/
-			authorsMap.put("pch_B9CB8C08184610C6E03408002081DCA4", "<AUS label=\"Authors\"><AU id=\"1\"><![CDATA[Gover  T. R.]]><AFS><AFID>1</AFID></AFS></AU></AUS>");
-			}
+			authorsMap.put("pch_B9CB8C08184610C6E03408002081DCA4", "<AUS label=\"Authors\"><AU id=\"0\"><![CDATA[Govers, T. R.]]><AFS><AFID>0</AFID></AFS></AU></AUS>");
+			authorsMap.put("pch_B9CB8C0218DB10C6E03408002081DCA4", "<AUS label=\"Authors\"><AU id=\"0\"><![CDATA[Kachi, Shogo 1 Japan Pulp & Paper Research Inst]]><AFS><AFID>0</AFID></AFS></AU></AUS>");
+			authorsMap.put("pch_34f213f85aae815aM7e1a19817173212", "<EDS label=\"Editors\"><ED><![CDATA[Owe, M.]]></ED><ED><![CDATA[Urso, G.]]></ED><ED><![CDATA[Zilioli, E.]]></ED></EDS>");
+
+		}
 
 		String correctString = null;
 
@@ -2246,9 +2394,12 @@ public class BDDocBuilderUnitTest extends TestCase {
 			DocID correctDocId = (DocID)eidoc.getDocID();
 			String docidString = correctDocId.getDocID();
 
+			System.out.println("\nxmlString= "+xmlString);
+
 			if(authorsMap.get(correctDocId.getDocID()) != null)
 			{
 				correctString = (String)authorsMap.get(correctDocId.getDocID());
+				System.out.println("\ncorrectString= "+correctString);
 
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
@@ -2275,7 +2426,7 @@ public class BDDocBuilderUnitTest extends TestCase {
 			auafFullMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<AFS label=\"Author affiliation\"><AF id=\"1\"><![CDATA[Department of Materials Science and Engineering, Pennsylvania State University, University Park, PA 16802]]></AF><AF id=\"2\"><![CDATA[Department of Engineering Science and Mechanics, Pennsylvania State University, University Park, PA 16802]]></AF></AFS>");
 			*/
 
-			auafFullMap.put("pch_B9CB8C08184610C6E03408002081DCA4", "<AFS label=\"Author affiliation\"><AF id=\"1\"><![CDATA[Air Liquide, france]]></AF></AFS>");
+			auafFullMap.put("pch_B9CB8C08184610C6E03408002081DCA4", null);
 		}
 		String correctString = null;
 
@@ -2294,6 +2445,60 @@ public class BDDocBuilderUnitTest extends TestCase {
 			{
 
 				correctString = (String)auafFullMap.get(correctDocId.getDocID());
+				assertTrue(xmlString.indexOf(correctString) != -1);
+			}
+
+		}
+	}
+
+	protected void assertCorrespondenceAffiliations(List EIDocs,String dataFormat) throws Exception
+	{
+		HashMap auafFullMap = new HashMap();
+		if(dataFormat.equals(RIS.RIS_FORMAT))
+		{
+			//auafFullMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "<AD><A><![CDATA[Martin-Luther-Universita&die;t Halle-Wittenberg, Universita&die;tsklinik und Poliklinik fu&die;r Orthopa&die;die und Physikalische Medizin, Magdeburger Stra&szlig;e 22, D-06112 Halle, germany]]></A><A><![CDATA[Martin-Luther-Universita&die;t Halle-Wittenberg, FB Ingenieurwissenschaften, Institut fu&die;r Werkstoffwissenschaft, Geusaer Stra&szlig;e 88, D-06217 Merseburg, germany]]></A><A><![CDATA[Universita&die;tsklinik und Poliklinik fu&die;r Orthopa&die;die und Physikalische Medizin, Magdeburger Stra&szlig;e 22, D-06112 Halle, germany]]></A></AD>");
+			//auafFullMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<AD><A><![CDATA[NSF Center for Adaptive Optics]]></A><A><![CDATA[Lawrence Livermore National Laboratory, 7000 East Ave., Livermore, CA 94551]]></A><A><![CDATA[Astrophysics Department, American Museum of Natural History, 79th Street at Central Park West, New York, NY 10024-5192]]></A><A><![CDATA[Department of Astronomy, University of California at Berkeley, Berkeley, CA 94720]]></A><A><![CDATA[Herzberg Institute of Astrophysics, 5071 W. Saanich Road, Victoria, canada]]></A></AD>");
+			//auafFullMap.put("geo_152513a113d01a997cM73da2061377553", null);
+			//auafFullMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<AD><A><![CDATA[Department of Materials Science and Engineering, Pennsylvania State University, University Park, PA 16802]]></A><A><![CDATA[Department of Engineering Science and Mechanics, Pennsylvania State University, University Park, PA 16802]]></A></AD>");
+		}
+		else
+		{
+			/*
+			auafFullMap.put("cpx_18a992f10b61b5d4a9M74342061377553", "<AFS label=\"Author affiliation\"><AF id=\"1\"><![CDATA[Martin-Luther-Universita&die;t Halle-Wittenberg, Universita&die;tsklinik und Poliklinik fu&die;r Orthopa&die;die und Physikalische Medizin, Magdeburger Stra&szlig;e 22, D-06112 Halle, germany]]></AF><AF id=\"2\"><![CDATA[Martin-Luther-Universita&die;t Halle-Wittenberg, FB Ingenieurwissenschaften, Institut fu&die;r Werkstoffwissenschaft, Geusaer Stra&szlig;e 88, D-06217 Merseburg, germany]]></AF><AF id=\"3\"><![CDATA[Universita&die;tsklinik und Poliklinik fu&die;r Orthopa&die;die und Physikalische Medizin, Magdeburger Stra&szlig;e 22, D-06112 Halle, germany]]></AF></AFS>");
+			auafFullMap.put("cpx_18a992f10b61b5d4a9M74252061377553", "<AFS label=\"Author affiliation\"><AF id=\"1\"><![CDATA[NSF Center for Adaptive Optics]]></AF><AF id=\"2\"><![CDATA[Lawrence Livermore National Laboratory, 7000 East Ave., Livermore, CA 94551]]></AF><AF id=\"3\"><![CDATA[Astrophysics Department, American Museum of Natural History, 79th Street at Central Park West, New York, NY 10024-5192]]></AF><AF id=\"4\"><![CDATA[Department of Astronomy, University of California at Berkeley, Berkeley, CA 94720]]></AF><AF id=\"5\"><![CDATA[Herzberg Institute of Astrophysics, 5071 W. Saanich Road, Victoria, canada]]></AF></AFS>");
+			auafFullMap.put("geo_152513a113d01a997cM73da2061377553", null);
+			auafFullMap.put("cpx_18a992f10c593a6af2M7f882061377553", "<AFS label=\"Author affiliation\"><AF id=\"1\"><![CDATA[Department of Materials Science and Engineering, Pennsylvania State University, University Park, PA 16802]]></AF><AF id=\"2\"><![CDATA[Department of Engineering Science and Mechanics, Pennsylvania State University, University Park, PA 16802]]></AF></AFS>");
+			*/
+			auafFullMap.put("pch_34f213f85aae815aM7e1a19817173212",null);
+			auafFullMap.put("pch_6d2baff85ab4375bM7fc519817173212", "<CAF label=\"Corr. author affiliation\"><![CDATA[Gruman/Butkus Associates, Evanston, IL, united states]]></CAF>");
+			auafFullMap.put("pch_B9CB8C08184610C6E03408002081DCA4", "<CAF label=\"Corr. author affiliation\"><![CDATA[Air Liquide, Paris, france]]></CAF>");
+
+			auafFullMap.put("pch_B9CB8C0806B110C6E03408002081DCA4", null);
+			auafFullMap.put("pch_B9CB8C03873410C6E03408002081DCA4", "<CAF label=\"Corr. author affiliation\"><![CDATA[Statni Vyzkumny Ustav Kozedelny Gottwaldov]]></CAF>");
+			auafFullMap.put("pch_B9CB8C083E7510C6E03408002081DCA4", "<CAF label=\"Corr. author affiliation\"><![CDATA[Tampella Paper Machinery Inc., Atlanta, GA, united states]]></CAF>");
+
+
+		}
+		String correctString = null;
+
+		for(int i = 0; i < EIDocs.size();i++)
+		{
+			StringWriter swriter = new StringWriter();
+			PrintWriter out = new PrintWriter ( swriter ) ;
+			EIDoc eidoc = (EIDoc)EIDocs.get(i);
+			eidoc.toXML(out);
+			out.close();
+			String xmlString = swriter.toString();
+			DocID correctDocId = (DocID)eidoc.getDocID();
+			String docidString = correctDocId.getDocID();
+
+			System.out.println("CAF xmlString= "+xmlString);
+			if(auafFullMap.get(correctDocId.getDocID()) != null)
+			{
+
+				correctString = (String)auafFullMap.get(correctDocId.getDocID());
+				System.out.println("CAF correctString= "+correctString);
+
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
 
@@ -2357,12 +2562,12 @@ public class BDDocBuilderUnitTest extends TestCase {
 	{
 		HashMap sMap = new HashMap();
 		sMap.put("pch_B9CB8C0806B110C6E03408002081DCA4",null);
-		sMap.put("pch_34f213f85aae815aM7e1a19817173212","<SP label=\"Sponsor\"><S><![CDATA[EOS;SPIE;NASA]]></S></SP>");
+		sMap.put("pch_34f213f85aae815aM7e1a19817173212","<SP label=\"Sponsor\"><S><![CDATA[EOS]]></S><S><![CDATA[SPIE]]></S><S><![CDATA[NASA]]></S></SP>");
 		sMap.put("pch_B9CB8C0806B010C6E03408002081DCA4",null);
 		sMap.put("pch_B9CB8C07B53010C6E03408002081DCA4",null);
 		sMap.put("pch_B9CB8C08184610C6E03408002081DCA4","<SP label=\"Sponsor\"><S><![CDATA[IPPTA, Saharanpur, India]]></S></SP>");
 		sMap.put("pch_B9CB8C03873410C6E03408002081DCA4",null);
-		sMap.put("pch_B9CB8C083E7510C6E03408002081DCA4","<SP label=\"Sponsor\"><S><![CDATA[Alberta Department of Forestry, Lands, and Wildlife, Edmonton, Alberta, Canada; Forestry Canada, Edmonton, Alberta, Canada]]></S></SP>");
+		sMap.put("pch_B9CB8C083E7510C6E03408002081DCA4","<SP label=\"Sponsor\"><S><![CDATA[Alberta Department of Forestry, Lands, and Wildlife, Edmonton, Alberta, Canada]]></S><S><![CDATA[ Forestry Canada, Edmonton, Alberta, Canada]]></S></SP>");
 		sMap.put("pch_115f0a9f85ab60809M7ea819817173212",null);
 		sMap.put("pch_B9CB8C08410F10C6E03408002081DCA4",null);
 
@@ -2382,8 +2587,8 @@ public class BDDocBuilderUnitTest extends TestCase {
 			if(sMap.get(correctDocId.getDocID()) != null)
 			{
 				correctString = (String)sMap.get(correctDocId.getDocID());
-				//System.out.println("correctString= "+correctString);
-				//System.out.println("xmlString= "+xmlString);
+				//System.out.println("\n SP correctString = "+correctString);
+				//System.out.println("SP xmlString = "+xmlString);
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
 
@@ -2477,13 +2682,20 @@ public class BDDocBuilderUnitTest extends TestCase {
 
 			if(!dataFormat.equals(Citation.CITATION_FORMAT) && !dataFormat.equals(RIS.RIS_FORMAT))
 			{
-				correctString = "<LA label=\"Language\"><![CDATA[" +(String)langMap.get(correctDocId.getDocID()) + "]]></LA>";
+				if(langMap.get(correctDocId.getDocID()) != null)
+				{
+					correctString = "<LA label=\"Language\"><![CDATA[" +(String)langMap.get(correctDocId.getDocID()) + "]]></LA>";
+				}
 			}
 			else
 			{
-
-				correctString = "<LA><![CDATA[" +(String)langMap.get(correctDocId.getDocID()) + "]]></LA>";
+				if(langMap.get(correctDocId.getDocID()) != null)
+				{
+					correctString = "<LA><![CDATA[" +(String)langMap.get(correctDocId.getDocID()) + "]]></LA>";
+				}
 			}
+			//System.out.println("\ncorrectString= "+correctString);
+			//System.out.println("xmlString= "+xmlString);
 			assertTrue(xmlString.indexOf(correctString) != -1);
 		}
 	}
@@ -2491,8 +2703,9 @@ public class BDDocBuilderUnitTest extends TestCase {
 	protected void assertEditors(List EIDocs,String dataFormat ) throws Exception
 	{
 		HashMap edMap = new HashMap();
-		edMap.put("pch_34f213f85aae815aM7e1a19817173212", "<EDS label=\"Editors\"><ED><![CDATA[Ow  M.]]></ED><ED><![CDATA[Urs  G.]]></ED><ED><![CDATA[Ziliol  E.]]></ED></EDS>");
-
+		//edMap.put("pch_34f213f85aae815aM7e1a19817173212", "<EDS label=\"Editors\"><ED><![CDATA[Ow  M.]]></ED><ED><![CDATA[Urs  G.]]></ED><ED><![CDATA[Ziliol  E.]]></ED></EDS>");
+		edMap.put("pch_B9CB8C083E7510C6E03408002081DCA4","<EDS label=\"Editors\"><ED><![CDATA[Won A.]]></ED><ED><![CDATA[Szab T.]]></ED></EDS>");
+		//edMap.put("pch_34f213f85aae815aM672219817173212","<EDS label=\"Editors\"><ED><![CDATA[]</ED></EDS>");
 
 		/*
 		edMap.put("cpx_18a992f10b61b5d4a9M74342061377553", null);
@@ -2516,6 +2729,8 @@ public class BDDocBuilderUnitTest extends TestCase {
 			if(edMap.get(correctDocId.getDocID()) != null)
 			{
 				correctString = (String)edMap.get(correctDocId.getDocID());
+				//System.out.println("\ncorrectString= "+correctString);
+				//System.out.println("xmlString= "+xmlString);
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
 
@@ -2660,6 +2875,8 @@ public class BDDocBuilderUnitTest extends TestCase {
 			if(ccMap.get(correctDocId.getDocID()) != null)
 			{
 				correctString = (String)ccMap.get(correctDocId.getDocID());
+				//System.out.println("\ncorrectString= "+correctString);
+				//System.out.println("xmlString= "+xmlString);
 				assertTrue(xmlString.indexOf(correctString) != -1);
 			}
 		}
