@@ -190,7 +190,7 @@ public class ExtractPaperChem
 		}
 		else if(columnName.equals("au"))
 		{
-			column = formatAuthor(rs1.getString("au"),rs1.getString("af"));
+			column = formatAuthor(rs1.getString("au"));
 		}
 		else if(columnName.equals("cp"))
 		{
@@ -297,6 +297,10 @@ public class ExtractPaperChem
 		{
 		    column = formatConfOrganization(rs1);
 		}
+		else if(columnName.equals("sn"))
+		{
+		    column = formatISSN(rs1.getString("sn"));
+		}
 		else if(columnName.equals("db"))
 		{
 			column = "pch";
@@ -360,6 +364,10 @@ public class ExtractPaperChem
 		{
 			lan = "eng";
 		}
+		else if (clanguage == null)
+		{
+			lan = "eng";
+		}
 		else
 		{
 			lan = clanguage;
@@ -372,7 +380,7 @@ public class ExtractPaperChem
 			cittext.append(BdParser.IDDELIMITER);
 			cittext.append(citTranslatedTitle);
 			cittext.append(BdParser.IDDELIMITER);
-			cittext.append("y");
+			cittext.append("n");
 			cittext.append(BdParser.IDDELIMITER);
 			cittext.append("eng");
 			cittext.append(BdParser.AUDELIMITER);
@@ -385,14 +393,7 @@ public class ExtractPaperChem
 			cittext.append(BdParser.IDDELIMITER);
 			cittext.append(citTitle);
 			cittext.append(BdParser.IDDELIMITER);
-			if(citTranslatedTitle == null)
-			{
-				cittext.append("y");
-			}
-			else
-			{
-				cittext.append("n");
-			}
+			cittext.append("y");
 			cittext.append(BdParser.IDDELIMITER);
 			cittext.append(lan);
 			cittext.append(BdParser.AUDELIMITER);
@@ -419,7 +420,10 @@ public class ExtractPaperChem
 	}
 
 
-	public String formatConferenceLocation(String location, String city,String state, String country)
+	public String formatConferenceLocation(String location,
+												String city,
+												String state,
+												String country)
 	{
 		StringBuffer affBuffer = new StringBuffer();
 		if(location != null || city != null || state != null || country!= null)
@@ -496,6 +500,25 @@ public class ExtractPaperChem
 			issue = issue.replaceAll("n","").trim();
 		}
 		return issue;
+	}
+		
+	public String formatISSN(String issn)
+	{
+		if(issn!=null)
+		{
+		    issn = issn.replaceAll("-","");
+		}
+	    if(issn.equals("028068000"))// fix for 028068000 typo
+	    {
+	        return "02806800";
+	    }
+	    else if(issn.indexOf(";") >-1) // fix for redundant issns 0029-3156;0029-3156 and 0040-5752;0040-5752
+		{
+		    String [] issnArray = new String[1];
+		    issnArray = issn.split(";");
+		    return issnArray[0];
+		}
+		return issn;
 	}
 
 	public String formatISBN(String isbn)
@@ -627,23 +650,19 @@ public class ExtractPaperChem
 	}
 
 
-	public String formatAuthor(String authors,String affiliation) throws Exception
+	public String formatAuthor(String authors) throws Exception
 	{
 		String lastName = "";
 		String givenName = "";
 		String affId = "0";
 		StringBuffer nameBuffer = new StringBuffer();
-		int i=0;
+		int i=1;
 		if(authors != null)
 		{
 			AuthorStream aStream = new AuthorStream(new ByteArrayInputStream(authors.getBytes()));
 			String author = null;
 			while((author = aStream.readAuthor()) != null)
 			{
-				if(affiliation!=null&&affiliation.length()>0)
-				{
-					affId="0";
-				}
 
 				if(author.indexOf(",")>-1)
 				{
@@ -654,9 +673,9 @@ public class ExtractPaperChem
 				{
 					lastName = author;
 				}
-
+                
+                nameBuffer.append(i);    //starts from 1
 				nameBuffer.append(BdParser.IDDELIMITER);//sec
-				nameBuffer.append(i);
 				nameBuffer.append(BdParser.IDDELIMITER);//auid
 				nameBuffer.append(affId);
 				nameBuffer.append(BdParser.IDDELIMITER);//afid
