@@ -12,7 +12,8 @@ public abstract class CombinedWriter
 
 	public abstract void end()
 		throws Exception;
-
-
-
+	
+	public abstract void flush()
+	throws Exception;
+	
 }
