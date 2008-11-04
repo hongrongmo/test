@@ -29,7 +29,7 @@ public class GeoRefCombiner
 {
   public static final String AUDELIMITER = GRFDocBuilder.AUDELIMITER;
   public static final String IDDELIMITER = GRFDocBuilder.IDDELIMITER;
-
+  public String[] EVCombinedRecKeys = {EVCombinedRec.DATABASE, EVCombinedRec.AUTHOR, EVCombinedRec.EDITOR, EVCombinedRec.AUTHOR_AFFILIATION, EVCombinedRec.COUNTRY, EVCombinedRec.AFFILIATION_LOCATION, EVCombinedRec.LANGUAGE, EVCombinedRec.DOCTYPE, EVCombinedRec.ABSTRACT, EVCombinedRec.ISSN, EVCombinedRec.ISBN, EVCombinedRec.PUBLISHER_NAME, EVCombinedRec.INT_PATENT_CLASSIFICATION, EVCombinedRec.CONTROLLED_TERMS, EVCombinedRec.UNCONTROLLED_TERMS, EVCombinedRec.AVAILABILITY, EVCombinedRec.PUB_YEAR, EVCombinedRec.TITLE, EVCombinedRec.TRANSLATED_TITLE, EVCombinedRec.MONOGRAPH_TITLE, EVCombinedRec.SERIAL_TITLE, EVCombinedRec.CONFERENCE_LOCATION, EVCombinedRec.REPORTNUMBER, EVCombinedRec.CLASSIFICATION_CODE, EVCombinedRec.DEDUPKEY, EVCombinedRec.STARTPAGE, EVCombinedRec.CODEN, EVCombinedRec.CONFERENCE_NAME, EVCombinedRec.MEETING_DATE, EVCombinedRec.LOAD_NUMBER, EVCombinedRec.VOLUME, EVCombinedRec.ISSUE, EVCombinedRec.ACCESSION_NUMBER, EVCombinedRec.DOI, EVCombinedRec.PUB_SORT};
   Perl5Util perl = new Perl5Util();
 
   private int exitNumber;
@@ -81,7 +81,7 @@ public class GeoRefCombiner
       for(int yearIndex = 1960; yearIndex <= 2008; yearIndex++)
       {
         // create  a new writer so we can see the loadNumber/yearNumber in the filename
-        c = new GeoRefCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex, GRF_DATABASE.getIndexName()));
+        c = new GeoRefCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,GRF_DATABASE.getIndexName()));
         c.writeCombinedByYear(url,
                             driver,
                             username,
@@ -120,10 +120,13 @@ public class GeoRefCombiner
 
     try
     {      
-      stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
-      String sqlQuery = "select * from " + Combiner.TABLENAME + " where load_number ='" + weekNumber + "' AND load_number != 0 and load_number < 1000000";
-      rs = stmt.executeQuery(sqlQuery);      
-      writeRecs(rs);      
+      stmt = con.createStatement();
+      //String sqlQuery = "select * from " + Combiner.TABLENAME + " where load_number ='" + weekNumber + "' AND load_number != 0 and load_number < 1000000";
+      //String sqlQuery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7fcd2061377551'";
+      //String sqlQuery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7fcd2061377551' or m_id='grf_1ee3914119594abb20M7fc72061377551'";
+      String sqlQuery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7ff02061377551'";
+      rs = stmt.executeQuery(sqlQuery);
+      writeRecs(rs);
       this.writer.end();
       this.writer.flush();
     }
@@ -164,7 +167,7 @@ public class GeoRefCombiner
 
     try
     {      
-      stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
+      stmt = con.createStatement();
 
       // Here we will use the Z44: UPDATE CODE to get break the data into years
       /* Field Z44 is used to enter the update code. The update code consists of six digits. The first four
@@ -173,7 +176,10 @@ public class GeoRefCombiner
       199601, 199602, 199603, etc. through 199624. Prior to 1994, only the year (first four digits) is
       given in this field. */
 
-      String sqlquery = "SELECT * FROM " + Combiner.TABLENAME + " WHERE UPDATE_CODE IS NOT NULL AND SUBSTR(UPDATE_CODE,1,4) =  " + year;
+      //String sqlquery = "SELECT * FROM " + Combiner.TABLENAME + " WHERE UPDATE_CODE IS NOT NULL AND SUBSTR(UPDATE_CODE,1,4) =  " + year;
+      //String sqlquery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7fcd2061377551'";
+      //String sqlquery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7fcd2061377551' or m_id='grf_1ee3914119594abb20M7fc72061377551'";
+      String sqlquery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7ff02061377551'";
       rs = stmt.executeQuery(sqlquery);
 
       writeRecs(rs);
@@ -208,291 +214,388 @@ public class GeoRefCombiner
     }
   }
 
-
-  
   private void writeRecs(ResultSet rs)
                           throws Exception
   {
     try
-    {          
+    {
       DocumentView runtimeDocview = new CitationView();
       runtimeDocview.setResultSet(rs);
+      EVCombinedRec recSecondBox = null;
 
       int i = 1;
+      int numCoords = 0;
+      int coordCount = 0;
+      String[] coords = null;
+      String[] secondBoxCoords= null;
+      String firstGUID = "";
       while (rs.next())
       {
-        EVCombinedRec rec = new EVCombinedRec();
-
-        rec.putIfNotNull(EVCombinedRec.DATABASE, GRF_DATABASE.getIndexName());
-
-        // AUS
-        String aString = rs.getString("PERSON_ANALYTIC");
-        if(aString != null)
-        {
-          // DO NOT USE - alternate spellings
-          /* String altAuthor = rs.getString("ALTERNATE_AUTHOR");
-          if(altAuthor != null)
+          String sts = rs.getString("COORDINATES");
+          if(sts == null)
           {
-            aString = aString.concat(AUDELIMITER).concat(altAuthor);
-          } */
-          rec.put(EVCombinedRec.AUTHOR, aString.split(AUDELIMITER));
-        }
-
-        // EDS
-        String eString = rs.getString("PERSON_MONOGRAPH");
-        if(eString != null)
-        {
-          String otherEditors = rs.getString("PERSON_COLLECTION");
-          if(otherEditors != null)
+          	numCoords = 1;
+		  }
+		  else
+		  {
+          	String[] tc = sts.split(GRFDocBuilder.AUDELIMITER);
+          	numCoords = tc.length;
+	  	  }
+	  	  //System.out.println("NUMCOORDS: " + numCoords);
+	  	  Vector recVector = new Vector();
+          for(int currentCoord = 0; currentCoord < numCoords; currentCoord++)
           {
-            eString = eString.concat(AUDELIMITER).concat(otherEditors);
-          }
-          rec.put(EVCombinedRec.EDITOR, eString.split(AUDELIMITER));
-        }
+			    coordCount++;
+				EVCombinedRec rec = new EVCombinedRec();
 
-        // AFF
-        String affilitation = rs.getString("AUTHOR_AFFILIATION");
-        if(affilitation != null)
-        {
-          List affilations= new ArrayList();
-          affilations.add(affilitation);
+				rec.putIfNotNull(EVCombinedRec.DATABASE, GRF_DATABASE.getIndexName());
 
-          // parse out second Affilitation institutions
-          if(rs.getString("AFFILIATION_SECONDARY") != null)
-          {
-            String secondaffiliations = rs.getString("AFFILIATION_SECONDARY");
-            String[] affilvalues = secondaffiliations.split(AUDELIMITER);
-            for(int x = 0 ; x < affilvalues.length; x++)
-            {
-              String[] values = affilvalues[x].split(IDDELIMITER);
-              affilations.add(values[0]);
-            }
-          }
-          if(!affilations.isEmpty())
-          {
-            rec.putIfNotNull(EVCombinedRec.AUTHOR_AFFILIATION, (String[]) affilations.toArray(new String[]{}));
-          }
-        }
+				if (Combiner.EXITNUMBER != 0 && i > Combiner.EXITNUMBER)
+				{
+				  break;
+				}
 
+				// AUS
+				String aString = rs.getString("PERSON_ANALYTIC");
+				if(aString != null)
+				{
+				  // DO NOT USE - alternate spellings
+				  /* String altAuthor = rs.getString("ALTERNATE_AUTHOR");
+				  if(altAuthor != null)
+				  {
+					aString = aString.concat(AUDELIMITER).concat(altAuthor);
+				  } */
+				  rec.put(EVCombinedRec.AUTHOR, aString.split(AUDELIMITER));
+				}
 
-        // CO - Author Affiliation Countries and Author Affiliation Location(s)
-        // Uses runtime Docview instance to access decorator class
-        String country = rs.getString("AUTHOR_AFFILIATION_COUNTRY");
-        if(country != null)
-        {
-          List affcountries = new ArrayList();
-          List affilitationlocations = new ArrayList();
+				// EDS
+				String eString = rs.getString("PERSON_MONOGRAPH");
+				if(eString != null)
+				{
+				  String otherEditors = rs.getString("PERSON_COLLECTION");
+				  if(otherEditors != null)
+				  {
+					eString = eString.concat(AUDELIMITER).concat(otherEditors);
+				  }
+				  rec.put(EVCombinedRec.EDITOR, eString.split(AUDELIMITER));
+				}
 
-          DocumentView.FieldDecorator cd = runtimeDocview.new CountryDecorator(country);
-          affcountries.add(cd.getValue());
+				// AFF
+				String affilitation = rs.getString("AUTHOR_AFFILIATION");
+				if(affilitation != null)
+				{
+				  List affilations= new ArrayList();
+				  affilations.add(affilitation);
 
-          // parse out second Affilitation Countries
-          if(rs.getString("AFFILIATION_SECONDARY") != null)
-          {
-            Map countries = GRFDataDictionary.getInstance().getCountries();
-            String secondaffiliations = rs.getString("AFFILIATION_SECONDARY");
-            String[] affilvalues = secondaffiliations.split(AUDELIMITER);
-            for(int z = 0 ; z < affilvalues.length; z++)
-            {
-              String[] values = affilvalues[z].split(IDDELIMITER);
-              for(int x = 0; x < values.length; x++)
-              {
-                if(countries.containsValue(values[x]))
-                {
-                  affcountries.add(values[x]);
-                }
-                else if(x != 0)
-                {
-                  // pick up address info that is not the first entry, which is the Affiliated Institution
-                  // or the name of a country
-                  affilitationlocations.add(values[x]);
-                }
-              }
-            }
-          }
-          if(!affcountries.isEmpty())
-          {
-            rec.putIfNotNull(EVCombinedRec.COUNTRY, (String[]) affcountries.toArray(new String[]{}));
-            affilitationlocations.addAll(affcountries);
-          }
-          if(rs.getString("AUTHOR_AFFILIATION_ADDRESS") != null)
-          {
-            affilitationlocations.add(rs.getString("AUTHOR_AFFILIATION_ADDRESS"));
-          }
-          if(!affilitationlocations.isEmpty())
-          {
-            rec.putIfNotNull(EVCombinedRec.AFFILIATION_LOCATION, (String[]) affilitationlocations.toArray(new String[]{}));
-          }
-
-        }
-
-        // LA
-        String laStrings = runtimeDocview.new LanguageDecorator(runtimeDocview.createColumnValueField("LANGUAGE_TEXT")).getValue();
-        if(laStrings != null)
-        {
-          rec.putIfNotNull(EVCombinedRec.LANGUAGE, laStrings.split(AUDELIMITER));
-        }
-
-        // DT
-        String dtStrings = runtimeDocview.new DocumentTypeDecorator(runtimeDocview.createColumnValueField("DOCUMENT_TYPE")).getValue();
-        if(dtStrings != null)
-        {
-          // Get EV system DOC_TYPE codes for indexing and append them to (or use in favor of ?) the GeoRef values
-          String mappingcode = runtimeDocview.createColumnValueField("DOCUMENT_TYPE").getValue().concat(AUDELIMITER).concat(runtimeDocview.createColumnValueField("BIBLIOGRAPHIC_LEVEL_CODE").getValue());
-          if(mappingcode != null)
-          {
-            // DocumentTypeMappingDecorator takes <DOCTYPE>AUDELIMITER<BIBCODE> String as field argument
-            mappingcode = runtimeDocview.new DocumentTypeMappingDecorator(mappingcode).getValue();
-            // DO NOT CONCAY GEOPREF DOCTYPES OR ELSE THEY WILL SHOW UP IN NAVIGATOR TOO
-            dtStrings = mappingcode; // dtStrings.concat(AUDELIMITER).concat(mappingcode);
-          }
-          rec.putIfNotNull(EVCombinedRec.DOCTYPE, dtStrings.split(AUDELIMITER));
-        }
+				  // parse out second Affilitation institutions
+				  if(rs.getString("AFFILIATION_SECONDARY") != null)
+				  {
+					String secondaffiliations = rs.getString("AFFILIATION_SECONDARY");
+					String[] affilvalues = secondaffiliations.split(AUDELIMITER);
+					for(int x = 0 ; x < affilvalues.length; x++)
+					{
+					  String[] values = affilvalues[x].split(IDDELIMITER);
+					  affilations.add(values[0]);
+					}
+				  }
+				  if(!affilations.isEmpty())
+				  {
+					rec.putIfNotNull(EVCombinedRec.AUTHOR_AFFILIATION, (String[]) affilations.toArray(new String[]{}));
+				  }
+				}
 
 
-        // AB
-        String abString =  StringUtil.getStringFromClob(rs.getClob("ABSTRACT"));
-        if (abString != null && abString.length() > 0)
-        {
-          rec.put(EVCombinedRec.ABSTRACT, abString);
-        }
+				// CO - Author Affiliation Countries and Author Affiliation Location(s)
+				// Uses runtime Docview instance to access decorator class
+				String country = rs.getString("AUTHOR_AFFILIATION_COUNTRY");
+				if(country != null)
+				{
+				  List affcountries = new ArrayList();
+				  List affilitationlocations = new ArrayList();
 
-        // SN
-        if (rs.getString("ISSN") != null || rs.getString("EISSN") != null)
-        {
-          String issn = rs.getString("ISSN");
-          String e_issn = rs.getString("EISSN");
-          StringBuffer issnString = new StringBuffer();
-          if(issn != null && issn.length()>0)
-          {
-            issnString.append(issn);
-            if(e_issn != null && e_issn.length()>0)
-            {
-              issnString.append(AUDELIMITER);
-            }
-          }
-          if(e_issn != null && e_issn.length()>0)
-          {
-            issnString.append(e_issn);
-          }
-          rec.put(EVCombinedRec.ISSN, (issnString.toString()).split(AUDELIMITER));
-        }
-        // Multiple ISBNs exist in GeoRef (ID:2008-005033)
-        if(rs.getString("ISBN") != null)
-        {
-          rec.put(EVCombinedRec.ISBN,(rs.getString("ISBN")).split(AUDELIMITER));
-        }
-        if(rs.getString("PUBLISHER") != null)
-        {
-          rec.put(EVCombinedRec.PUBLISHER_NAME,(rs.getString("PUBLISHER")).split(AUDELIMITER));
-        }
+				  DocumentView.FieldDecorator cd = runtimeDocview.new CountryDecorator(country);
+				  affcountries.add(cd.getValue());
 
+				  // parse out second Affilitation Countries
+				  if(rs.getString("AFFILIATION_SECONDARY") != null)
+				  {
+					Map countries = GRFDataDictionary.getInstance().getCountries();
+					String secondaffiliations = rs.getString("AFFILIATION_SECONDARY");
+					String[] affilvalues = secondaffiliations.split(AUDELIMITER);
+					for(int z = 0 ; z < affilvalues.length; z++)
+					{
+					  String[] values = affilvalues[z].split(IDDELIMITER);
+					  for(int x = 0; x < values.length; x++)
+					  {
+						if(countries.containsValue(values[x]))
+						{
+						  affcountries.add(values[x]);
+						}
+						else if(x != 0)
+						{
+						  // pick up address info that is not the first entry, which is the Affiliated Institution
+						  // or the name of a country
+						  affilitationlocations.add(values[x]);
+						}
+					  }
+					}
+				  }
+				  if(!affcountries.isEmpty())
+				  {
+					rec.putIfNotNull(EVCombinedRec.COUNTRY, (String[]) affcountries.toArray(new String[]{}));
+					affilitationlocations.addAll(affcountries);
+				  }
+				  if(rs.getString("AUTHOR_AFFILIATION_ADDRESS") != null)
+				  {
+					affilitationlocations.add(rs.getString("AUTHOR_AFFILIATION_ADDRESS"));
+				  }
+				  if(!affilitationlocations.isEmpty())
+				  {
+					rec.putIfNotNull(EVCombinedRec.AFFILIATION_LOCATION, (String[]) affilitationlocations.toArray(new String[]{}));
+				  }
 
-        // COORDINATES - Extract attached Index Terms
-        if(rs.getString("COORDINATES") != null)
-        {
-          String strcoordinates = rs.getString("COORDINATES");
-          String[] termcoordinate = strcoordinates.split(GRFDocBuilder.AUDELIMITER);
-          List geoterms = new ArrayList();
-          for(int j = 0; j < termcoordinate.length; j++)
-          {
-            String[] termcoordinates = termcoordinate[j].split(GRFDocBuilder.IDDELIMITER);
-            if(termcoordinates.length == 2)
-            {
-              geoterms.add(termcoordinates[0]);
-            }
-          }
-          if(!geoterms.isEmpty())
-          {
-            rec.putIfNotNull(EVCombinedRec.INT_PATENT_CLASSIFICATION, (String[])geoterms.toArray(new String[]{}));
-          }
-        }
+				}
 
-        // INDEX_TERMS (CVS)
-        if(rs.getString("INDEX_TERMS") != null)
-        {
-          String[] idxterms = rs.getString("INDEX_TERMS").split(AUDELIMITER);
-          for(int z = 0; z < idxterms.length; z++)
-          {
-            idxterms[z] = idxterms[z].replaceAll("[A-Z]*" + IDDELIMITER,"");
-          }
-          rec.putIfNotNull(EVCombinedRec.CONTROLLED_TERMS, idxterms);
-        }
+				// LA
+				String laStrings = runtimeDocview.new LanguageDecorator(runtimeDocview.createColumnValueField("LANGUAGE_TEXT")).getValue();
+				if(laStrings != null)
+				{
+				  rec.putIfNotNull(EVCombinedRec.LANGUAGE, laStrings.split(AUDELIMITER));
+				}
 
-        // FLS
-        if(rs.getString("UNCONTROLLED_TERMS") != null)
-        {
-          rec.put(EVCombinedRec.UNCONTROLLED_TERMS,(rs.getString("UNCONTROLLED_TERMS")).split(AUDELIMITER));
-        }
-
-        if(rs.getString("AVAILABILITY") != null)
-        {
-          rec.putIfNotNull(EVCombinedRec.AVAILABILITY, rs.getString("AVAILABILITY").split(AUDELIMITER));
-        }
-
-        // Meridian data in Patent Navigators
-        /*rec.putIfNotNull(EVCombinedRec.INT_PATENT_CLASSIFICATION, parseMeridianData(rs.getString("LAND")));
-        rec.putIfNotNull(EVCombinedRec.ECLA_CODES, parseMeridianData(rs.getString("WATER")));
-        rec.putIfNotNull(EVCombinedRec.USPTOCODE, parseMeridianData(rs.getString("OIL")));
-        rec.putIfNotNull(EVCombinedRec.PATENT_KIND, parseMeridianData(rs.getString("CITIES"))); */
+				// DT
+				String dtStrings = runtimeDocview.new DocumentTypeDecorator(runtimeDocview.createColumnValueField("DOCUMENT_TYPE")).getValue();
+				if(dtStrings != null)
+				{
+				  // Get EV system DOC_TYPE codes for indexing and append them to (or use in favor of ?) the GeoRef values
+				  String mappingcode = runtimeDocview.createColumnValueField("DOCUMENT_TYPE").getValue().concat(AUDELIMITER).concat(runtimeDocview.createColumnValueField("BIBLIOGRAPHIC_LEVEL_CODE").getValue());
+				  if(mappingcode != null)
+				  {
+					// DocumentTypeMappingDecorator takes <DOCTYPE>AUDELIMITER<BIBCODE> String as field argument
+					mappingcode = runtimeDocview.new DocumentTypeMappingDecorator(mappingcode).getValue();
+					// DO NOT CONCAY GEOPREF DOCTYPES OR ELSE THEY WILL SHOW UP IN NAVIGATOR TOO
+					dtStrings = mappingcode; // dtStrings.concat(AUDELIMITER).concat(mappingcode);
+				  }
+				  rec.putIfNotNull(EVCombinedRec.DOCTYPE, dtStrings.split(AUDELIMITER));
+				}
 
 
-        rec.putIfNotNull(EVCombinedRec.PUB_YEAR, runtimeDocview.getYear());
-        rec.putIfNotNull(EVCombinedRec.TITLE, runtimeDocview.getTitle());
-        rec.putIfNotNull(EVCombinedRec.TRANSLATED_TITLE, runtimeDocview.getTranslatedTitle());
-        rec.putIfNotNull(EVCombinedRec.MONOGRAPH_TITLE, runtimeDocview.getMonographTitle());
-        rec.putIfNotNull(EVCombinedRec.SERIAL_TITLE, rs.getString("TITLE_OF_SERIAL"));
+				// AB
+				String abString =  StringUtil.getStringFromClob(rs.getClob("ABSTRACT"));
+				if (abString != null && abString.length() > 0)
+				{
+				  rec.put(EVCombinedRec.ABSTRACT, abString);
+				}
 
-        // RN - a multi field
-        if(rs.getString("LOCATION_OF_MEETING") != null)
-        {
-          rec.putIfNotNull(EVCombinedRec.CONFERENCE_LOCATION, rs.getString("LOCATION_OF_MEETING").split(AUDELIMITER));
-        }
+				// SN
+				if (rs.getString("ISSN") != null || rs.getString("EISSN") != null)
+				{
+				  String issn = rs.getString("ISSN");
+				  String e_issn = rs.getString("EISSN");
+				  StringBuffer issnString = new StringBuffer();
+				  if(issn != null && issn.length()>0)
+				  {
+					issnString.append(issn);
+					if(e_issn != null && e_issn.length()>0)
+					{
+					  issnString.append(AUDELIMITER);
+					}
+				  }
+				  if(e_issn != null && e_issn.length()>0)
+				  {
+					issnString.append(e_issn);
+				  }
+				  rec.put(EVCombinedRec.ISSN, (issnString.toString()).split(AUDELIMITER));
+				}
+				// Multiple ISBNs exist in GeoRef (ID:2008-005033)
+				if(rs.getString("ISBN") != null)
+				{
+				  rec.put(EVCombinedRec.ISBN,(rs.getString("ISBN")).split(AUDELIMITER));
+				}
+				if(rs.getString("PUBLISHER") != null)
+				{
+				  rec.put(EVCombinedRec.PUBLISHER_NAME,(rs.getString("PUBLISHER")).split(AUDELIMITER));
+				}
 
-        // RN - a multi field
-        if(rs.getString("REPORT_NUMBER") != null)
-        {
-          rec.putIfNotNull(EVCombinedRec.REPORTNUMBER,(rs.getString("REPORT_NUMBER")).split(AUDELIMITER));
-        }
 
-        // CL
-        if(rs.getString("CATEGORY_CODE") != null)
-        {
-          rec.put(EVCombinedRec.CLASSIFICATION_CODE,(rs.getString("CATEGORY_CODE")).split(AUDELIMITER));
-        }
+				// COORDINATES - Extract attached Index Terms
+				if(rs.getString("COORDINATES") != null)
+				{
+				  String strcoordinates = rs.getString("COORDINATES");
+				  String[] termcoordinate = strcoordinates.split(GRFDocBuilder.AUDELIMITER);
+				  List geoterms = new ArrayList();
+				  for(int j = 0; j < termcoordinate.length; j++)
+				  {
+					String[] termcoordinates = termcoordinate[j].split(GRFDocBuilder.IDDELIMITER);
+					if(termcoordinates.length == 2)
+					{
+					  geoterms.add(termcoordinates[0]);
+					  coords = parseCoordinates(termcoordinates[1]);
+					  secondBoxCoords = parseCoordinates(termcoordinates[1]);
+					  if(coords[2].indexOf("-") == -1 && coords[3].indexOf("-") != -1)
+				      {
+			            coords[1] = "180";
+			            //coords[2] = "170";
+			            //coords[3] = "-50";
+			            //coords[4] = "50";
 
-        String pages = runtimeDocview.getPages();
-        rec.put(EVCombinedRec.DEDUPKEY,
-                getDedupKey(rec.getString(EVCombinedRec.ISSN),
-                            rec.getString(EVCombinedRec.CODEN),
-                            rs.getString("VOLUME_ID"),
-                            rs.getString("ISSUE_ID"),
-                            pages));
-        rec.putIfNotNull(EVCombinedRec.STARTPAGE, getFirstPage(pages));
-        rec.putIfNotNull(EVCombinedRec.CODEN, rs.getString("CODEN"));
+			            recSecondBox = new EVCombinedRec();
+		              }
 
-        rec.putIfNotNull(EVCombinedRec.CONFERENCE_NAME, rs.getString("NAME_OF_MEETING"));
-        rec.putIfNotNull(EVCombinedRec.MEETING_DATE, rs.getString("DATE_OF_MEETING"));
+					  if(j == currentCoord)
+					  {
+						rec.put(EVCombinedRec.LAT_SE, coords[1]);
+						rec.put(EVCombinedRec.LAT_NW, coords[2]);
+						rec.put(EVCombinedRec.LNG_NW, coords[4]);
+						rec.put(EVCombinedRec.LNG_NE, coords[4]);
+						rec.put(EVCombinedRec.LAT_SW, coords[2]);
+						rec.put(EVCombinedRec.LNG_SW, coords[3]);
+						rec.put(EVCombinedRec.LAT_NE, coords[1]);
+						rec.put(EVCombinedRec.LNG_SE, coords[3]);
+					  }
+					}
+				  }
+				  if(!geoterms.isEmpty())
+				  {
+					rec.putIfNotNull(EVCombinedRec.INT_PATENT_CLASSIFICATION, (String[])geoterms.toArray(new String[]{}));
+				  }
+				}
 
-        rec.putIfNotNull(EVCombinedRec.DOCID, rs.getString("M_ID"));
-        rec.putIfNotNull(EVCombinedRec.LOAD_NUMBER, rs.getString("LOAD_NUMBER"));
-        rec.putIfNotNull(EVCombinedRec.VOLUME, getFirstNumber(rs.getString("VOLUME_ID")));
-        rec.putIfNotNull(EVCombinedRec.ISSUE, getFirstNumber(rs.getString("ISSUE_ID")));
-        rec.putIfNotNull(EVCombinedRec.ACCESSION_NUMBER,rs.getString("ID_NUMBER"));
-        rec.putIfNotNull(EVCombinedRec.DOI, rs.getString("DOI"));
+				// INDEX_TERMS (CVS)
+				if(rs.getString("INDEX_TERMS") != null)
+				{
+				  String[] idxterms = rs.getString("INDEX_TERMS").split(AUDELIMITER);
+				  for(int z = 0; z < idxterms.length; z++)
+				  {
+					idxterms[z] = idxterms[z].replaceAll("[A-Z]*" + IDDELIMITER,"");
+				  }
+				  rec.putIfNotNull(EVCombinedRec.CONTROLLED_TERMS, idxterms);
+				}
 
-        rec.put(EVCombinedRec.PUB_SORT, Integer.toString(i));
+				// FLS
+				if(rs.getString("UNCONTROLLED_TERMS") != null)
+				{
+				  rec.put(EVCombinedRec.UNCONTROLLED_TERMS,(rs.getString("UNCONTROLLED_TERMS")).split(AUDELIMITER));
+				}
 
-        try
-        {        	
-          this.writer.writeRec(rec);
-        }
-        catch(Exception e)
-        {
-          System.out.println("MID = " + rs.getString("M_ID"));
-          e.printStackTrace();
-        }
-        i++;
+				if(rs.getString("AVAILABILITY") != null)
+				{
+				  rec.putIfNotNull(EVCombinedRec.AVAILABILITY, rs.getString("AVAILABILITY").split(AUDELIMITER));
+				}
+
+				// Meridian data in Patent Navigators
+				/*rec.putIfNotNull(EVCombinedRec.INT_PATENT_CLASSIFICATION, parseMeridianData(rs.getString("LAND")));
+				rec.putIfNotNull(EVCombinedRec.ECLA_CODES, parseMeridianData(rs.getString("WATER")));
+				rec.putIfNotNull(EVCombinedRec.USPTOCODE, parseMeridianData(rs.getString("OIL")));
+				rec.putIfNotNull(EVCombinedRec.PATENT_KIND, parseMeridianData(rs.getString("CITIES"))); */
+
+
+				rec.putIfNotNull(EVCombinedRec.PUB_YEAR, runtimeDocview.getYear());
+				rec.putIfNotNull(EVCombinedRec.TITLE, runtimeDocview.getTitle());
+				rec.putIfNotNull(EVCombinedRec.TRANSLATED_TITLE, runtimeDocview.getTranslatedTitle());
+				rec.putIfNotNull(EVCombinedRec.MONOGRAPH_TITLE, runtimeDocview.getMonographTitle());
+				rec.putIfNotNull(EVCombinedRec.SERIAL_TITLE, rs.getString("TITLE_OF_SERIAL"));
+
+				// RN - a multi field
+				if(rs.getString("LOCATION_OF_MEETING") != null)
+				{
+				  rec.putIfNotNull(EVCombinedRec.CONFERENCE_LOCATION, rs.getString("LOCATION_OF_MEETING").split(AUDELIMITER));
+				}
+
+				// RN - a multi field
+				if(rs.getString("REPORT_NUMBER") != null)
+				{
+				  rec.putIfNotNull(EVCombinedRec.REPORTNUMBER,(rs.getString("REPORT_NUMBER")).split(AUDELIMITER));
+				}
+
+				// CL
+				if(rs.getString("CATEGORY_CODE") != null)
+				{
+				  rec.put(EVCombinedRec.CLASSIFICATION_CODE,(rs.getString("CATEGORY_CODE")).split(AUDELIMITER));
+				}
+
+				String pages = runtimeDocview.getPages();
+				rec.put(EVCombinedRec.DEDUPKEY,
+						getDedupKey(rec.getString(EVCombinedRec.ISSN),
+									rec.getString(EVCombinedRec.CODEN),
+									rs.getString("VOLUME_ID"),
+									rs.getString("ISSUE_ID"),
+									pages));
+				rec.putIfNotNull(EVCombinedRec.STARTPAGE, getFirstPage(pages));
+				rec.putIfNotNull(EVCombinedRec.CODEN, rs.getString("CODEN"));
+
+				rec.putIfNotNull(EVCombinedRec.CONFERENCE_NAME, rs.getString("NAME_OF_MEETING"));
+				rec.putIfNotNull(EVCombinedRec.MEETING_DATE, rs.getString("DATE_OF_MEETING"));
+
+				if(currentCoord == 0)
+				{
+					firstGUID = rs.getString("M_ID");
+				}
+				if(numCoords == 1 && recSecondBox == null)
+				{
+					rec.putIfNotNull(EVCombinedRec.DOCID, firstGUID);
+				}
+				else
+				{
+					rec.putIfNotNull(EVCombinedRec.DOCID, firstGUID + "_" + (coordCount));
+
+				}
+				rec.putIfNotNull(EVCombinedRec.LOAD_NUMBER, rs.getString("LOAD_NUMBER"));
+				rec.putIfNotNull(EVCombinedRec.VOLUME, getFirstNumber(rs.getString("VOLUME_ID")));
+				rec.putIfNotNull(EVCombinedRec.ISSUE, getFirstNumber(rs.getString("ISSUE_ID")));
+				rec.putIfNotNull(EVCombinedRec.ACCESSION_NUMBER,rs.getString("ID_NUMBER"));
+				rec.putIfNotNull(EVCombinedRec.DOI, rs.getString("DOI"));
+
+				rec.put(EVCombinedRec.PUB_SORT, Integer.toString(i));
+
+				try
+				{
+				  recVector.add(rec);
+				  this.writer.writeRec(rec);
+				  if(recSecondBox != null)
+				  {
+					if(coords[2].indexOf("-") == -1 && coords[3].indexOf("-") != -1)
+					{
+						coordCount++;
+						recSecondBox = new EVCombinedRec();
+						for(int b = 0; b < EVCombinedRecKeys.length; b++)
+						{
+							Object recTemp = rec.get(EVCombinedRecKeys[b]);
+							if(recTemp != null)
+							{
+								//System.out.println(recTemp.getClass().getName());
+								//System.out.println(EVCombinedRecKeys.getClass().getName());
+								if(recTemp.getClass().getName().indexOf("[Ljava.lang.String") != -1)
+								{
+									System.out.println("STRING ARRAY");
+								}
+								recSecondBox.put(EVCombinedRecKeys[b],rec.get(EVCombinedRecKeys[b]));
+							}
+						}
+						secondBoxCoords[2] = "-180";
+						recSecondBox.put(EVCombinedRec.LAT_SE, secondBoxCoords[1]);
+						recSecondBox.put(EVCombinedRec.LAT_NW, secondBoxCoords[2]);
+						recSecondBox.put(EVCombinedRec.LNG_NW, secondBoxCoords[4]);
+						recSecondBox.put(EVCombinedRec.LNG_NE, secondBoxCoords[4]);
+						recSecondBox.put(EVCombinedRec.LAT_SW, secondBoxCoords[2]);
+						recSecondBox.put(EVCombinedRec.LNG_SW, secondBoxCoords[3]);
+						recSecondBox.put(EVCombinedRec.LAT_NE, secondBoxCoords[1]);
+						recSecondBox.put(EVCombinedRec.LNG_SE, secondBoxCoords[3]);
+						recSecondBox.putIfNotNull(EVCombinedRec.DOCID, firstGUID + "_" + (coordCount));
+				  		this.writer.writeRec(recSecondBox);
+				  		recVector.add(recSecondBox);
+				  		EVCombinedRec[] recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
+				  		//System.out.println("SIZE: " + recArray.length);
+					}
+				  }
+				}
+				catch(Exception e)
+				{
+				  System.out.println("MID = " + rs.getString("M_ID"));
+				  e.printStackTrace();
+				}
+				i++;
+		} // for
       } // while
     }
     catch(Exception e)
@@ -597,6 +700,25 @@ public class GeoRefCombiner
 
   }
 
+  private String[] parseCoordinates(String cs) throws Exception
+  {
+		String coordString = cs.trim().replaceAll("([NEWS])","-$1");
+
+		String[] coords = coordString.split("-");
+		for(int i=1;i< coords.length;i++)
+		{
+			coords[i] = coords[i].replaceAll("[NE]","+").substring(0,coords[i].length()-4).replaceAll("\\+","");
+			coords[i] = coords[i].replaceAll("[WS]","-");
+		}
+
+		coords[1] = "-170";
+		coords[2] = "170";
+		coords[3] = "-50";
+		coords[4] = "50";
+
+		return coords;
+  }
+
   private class LocalEntityResolver implements EntityResolver {
 
     public LocalEntityResolver() {
@@ -649,4 +771,5 @@ public class GeoRefCombiner
       System.out.println("   Message: " + e.getMessage());
     }
   }
+
 }
