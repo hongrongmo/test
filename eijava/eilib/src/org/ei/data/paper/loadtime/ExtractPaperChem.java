@@ -17,6 +17,8 @@ public class ExtractPaperChem
 {
 	public static void main(String[] args) throws Exception
 	{
+
+
 		String[] m_ids = new String[]{"pch_34f213f85aae815aM6fa219817173212","pch_11ffb3af85ab48bb2M7ff119817173212","pch_34f213f85aae815aM7bc019817173212","pch_34f213f85aae815aM672219817173212","pch_B9CB8C08410F10C6E03408002081DCA4","pch_34f213f85aae815aM7e2b19817173212","pch_115f0a9f85ab60809M7ea819817173212","pch_B9CB8C083E7510C6E03408002081DCA4","pch_B9CB8C03873410C6E03408002081DCA4","pch_B9CB8C08184610C6E03408002081DCA4","pch_B9CB8C07B53010C6E03408002081DCA4","pch_B9CB8C0806B010C6E03408002081DCA4","pch_B9CB8C0806B110C6E03408002081DCA4","pch_34f213f85aae815aM672219817173212","pch_34f213f85aae815aM7e1a19817173212","pch_6d2baff85ab4375bM7fc519817173212"};
 		//Connection con = getDbCoonection("jdbc:oracle:thin:@jupiter.elsevier.com:1521:EIDB1", "AP_PRO1", "ei3it", "oracle.jdbc.driver.OracleDriver");
 		Connection con = getDbCoonection("jdbc:oracle:thin:@neptune.elsevier.com:1521:EI", "AP_PRO1", "ei3it", "oracle.jdbc.driver.OracleDriver");
@@ -45,6 +47,7 @@ public class ExtractPaperChem
 			}
 
 			midsList += ")";
+ 
 			String filename = "paperchem_extract1.out";
 			System.out.println("filename= "+filename);
             writerPub   = new PrintWriter(new FileWriter(filename));
@@ -53,7 +56,6 @@ public class ExtractPaperChem
 			//String sqlQuery = "select * from paper_master_test";
             pstmt1  = con.prepareStatement(sqlQuery);
             System.out.println("\n\nQuery: "+sqlQuery);
-
 
             rs1     = pstmt1.executeQuery();
 			int i=0;
@@ -111,7 +113,7 @@ public class ExtractPaperChem
 				writeColumn(rs1, "pp", writerPub);
 				writeColumn(rs1, "cls", writerPub);
 				writeColumn(rs1, "ti", writerPub);
-				writeColumn(rs1, "nr", writerPub);
+				writeColumn(rs1, "nr", writerPub);   //REFCOUNT
 				writeColumn(rs1, "vx", writerPub);
 				writeColumn(rs1, "pc", writerPub);
 				writeColumn(rs1, "fl", writerPub);
@@ -251,21 +253,9 @@ public class ExtractPaperChem
 		{
 			column = formatCitationTitle(rs1.getString("ti"), rs1.getString("tt"), rs1.getString("la"));
 		}
-		else if(columnName.equals("nr"))
-		{
-			column = rs1.getString("nr");
-		}
 		else if(columnName.equals("sp"))
 		{
 			column = formatSponsors(rs1.getString("sp"));
-		}
-		else if(columnName.equals("vx"))
-		{
-			column = formatSponsors(rs1.getString("vx"));
-		}
-		else if(columnName.equals("pa"))
-		{
-			column = formatSponsors(rs1.getString("pa"));
 		}
 		else if(columnName.equals("pc"))
 		{
@@ -274,6 +264,10 @@ public class ExtractPaperChem
 		else if(columnName.equals("fl"))
 		{
 			column = formatControlledTerms(rs1.getString("fl"));
+		}
+        else if(columnName.equals("nr"))
+		{
+			column = formatRefCount(rs1.getString("nr"));
 		}
 		else if(columnName.equals("ed") )
 		{
@@ -336,7 +330,7 @@ public class ExtractPaperChem
 	    if(rs.getString("es") != null)
 	    {
 	        buf.append(rs.getString("es")).append(",");
-	        if(rs.getString("ey") != null)
+            if(rs.getString("ey") != null)
 	        {
 	            buf.append(",");
 	        }
@@ -360,27 +354,21 @@ public class ExtractPaperChem
 		StringBuffer cittext = new StringBuffer();
 		int index =0;
 		String lan = null;
-		if (clanguage!= null && clanguage.equalsIgnoreCase("English"))
-		{
-			lan = "eng";
-		}
-		else if (clanguage == null)
-		{
-			lan = "eng";
-		}
-		else
-		{
-			lan = clanguage;
-		}
-
-
-		if(citTranslatedTitle != null)
+			    if (clanguage!= null && clanguage.equalsIgnoreCase("English"))
+	    {
+	        lan = "eng";
+	    }
+	    else
+	    {
+	        lan = clanguage;
+	    }
+	    if(citTranslatedTitle != null)
 		{
 			cittext.append(index);
 			cittext.append(BdParser.IDDELIMITER);
 			cittext.append(citTranslatedTitle);
 			cittext.append(BdParser.IDDELIMITER);
-			cittext.append("n");
+			cittext.append("y");
 			cittext.append(BdParser.IDDELIMITER);
 			cittext.append("eng");
 			cittext.append(BdParser.AUDELIMITER);
@@ -389,14 +377,21 @@ public class ExtractPaperChem
 
 		if(citTitle != null)
 		{
-			cittext.append(index);
-			cittext.append(BdParser.IDDELIMITER);
-			cittext.append(citTitle);
-			cittext.append(BdParser.IDDELIMITER);
-			cittext.append("y");
-			cittext.append(BdParser.IDDELIMITER);
-			cittext.append(lan);
-			cittext.append(BdParser.AUDELIMITER);
+		    cittext.append(index);
+		    cittext.append(BdParser.IDDELIMITER);
+		    cittext.append(citTitle);
+		    cittext.append(BdParser.IDDELIMITER);
+		    if(citTranslatedTitle == null)
+		    {
+		        cittext.append("y");
+		    }
+		    else
+		    {
+		        cittext.append("n");
+		    }
+		    cittext.append(BdParser.IDDELIMITER);
+		    cittext.append(lan);
+		    cittext.append(BdParser.AUDELIMITER);
 		}
 
 		return cittext.toString();
@@ -408,14 +403,22 @@ public class ExtractPaperChem
 		StringBuffer tr = new StringBuffer();
 		if(treatments != null)
 		{
+            treatments = treatments.trim();
 			int len = treatments.length();
 
 			for (int i= 0; i < len; i++)
 			{
 				tr.append(treatments.charAt(i));
-				tr.append(BdParser.AUDELIMITER);
+                tr.append(BdParser.AUDELIMITER);
 			}
 		}
+        //trim out last delim
+        int lastdelim = tr.lastIndexOf(BdParser.AUDELIMITER);
+
+        if(lastdelim > 0)
+        {
+            return  tr.toString().substring(0,lastdelim);
+        }
 		return tr.toString();
 	}
 
@@ -521,6 +524,24 @@ public class ExtractPaperChem
 		return issn;
 	}
 
+    public String formatRefCount(String refcount)
+    {
+        if(refcount != null && !refcount.trim().equals(""))
+        {
+            int beginNbeginRefs = refcount.indexOf("Refs");
+            int beginN = refcount.indexOf("N");
+            if(beginRefs > 0)
+            {
+                refcount  = refcount.substring(0, beginRefs);
+                return refcount.trim();
+            }
+            else if(beginN > 0 )
+            {
+                return null; 
+            }
+        }
+        return null;
+    }
 	public String formatISBN(String isbn)
 	{
 		StringBuffer isbnBuffer = new StringBuffer();
@@ -562,7 +583,6 @@ public class ExtractPaperChem
 		StringBuffer affBuffer = new StringBuffer();
 		if(affiliation!=null || city!=null || state!=null || country!=null)
 		{
-			affBuffer.append("0");
 			affBuffer.append(BdParser.IDDELIMITER);//affid
 			affBuffer.append(BdParser.IDDELIMITER);//text
 			if(affiliation!=null)
@@ -589,8 +609,6 @@ public class ExtractPaperChem
 			{
 				affBuffer.append(country);
 			}
-
-
 		}
 		return affBuffer.toString();
 	}
@@ -633,9 +651,9 @@ public class ExtractPaperChem
 				nameBuffer.append(BdParser.IDDELIMITER);//initials
 				nameBuffer.append(BdParser.IDDELIMITER);//indexname
 				nameBuffer.append(BdParser.IDDELIMITER);//Degrees
-				nameBuffer.append(lastName);
+				nameBuffer.append(lastName.trim());
 				nameBuffer.append(BdParser.IDDELIMITER);//Surname
-				nameBuffer.append(givenName);
+				nameBuffer.append(givenName.trim());
 				nameBuffer.append(BdParser.IDDELIMITER);//givenName
 				nameBuffer.append(BdParser.IDDELIMITER);//Suffix
 				nameBuffer.append(BdParser.IDDELIMITER);//Nametext
@@ -645,7 +663,9 @@ public class ExtractPaperChem
 					nameBuffer.append(BdParser.AUDELIMITER);
 				}
 			}
+
 		}
+
 		return nameBuffer.toString();
 	}
 
@@ -757,6 +777,7 @@ public class ExtractPaperChem
 
 		return codesBuffer.toString();
 	}
+
 	public String formatSponsors(String sponsors)
 	{
 		String[] sponsorsArray = null;
@@ -784,6 +805,7 @@ public class ExtractPaperChem
 
 		return sponsorsBuffer.toString();
 	}
+
 
 	public String formatPubAddress(String city, String state, String country)
 	{
