@@ -528,7 +528,7 @@ public class ExtractPaperChem
     {
         if(refcount != null && !refcount.trim().equals(""))
         {
-            int beginNbeginRefs = refcount.indexOf("Refs");
+            int beginRefs = refcount.indexOf("Refs");
             int beginN = refcount.indexOf("N");
             if(beginRefs > 0)
             {
