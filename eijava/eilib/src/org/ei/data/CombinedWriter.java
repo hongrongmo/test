@@ -9,6 +9,9 @@ public abstract class CombinedWriter
 
 	public abstract void writeRec(EVCombinedRec rec)
 		throws Exception;
+	
+	public abstract void writeRec(EVCombinedRec[] rec)
+	throws Exception;
 
 	public abstract void end()
 		throws Exception;
