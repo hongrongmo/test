@@ -1,39 +1,52 @@
 package org.ei.data;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.io.*;
 
 import org.apache.oro.text.perl.Perl5Util;
 import org.ei.query.base.PorterStemmer;
 import org.ei.xml.Entity;
+import org.ei.controller.MemCached;
+import java.util.zip.*; 
+import java.text.*;
+
 
 public class CombinedXMLWriter
     extends CombinedWriter
 {
     private Perl5Util perl = new Perl5Util();
-
     private PorterStemmer stemmer = new PorterStemmer();
     private DataCleaner cleaner = new DataCleaner();
     private DataValidator d = new DataValidator();
-
-    private int recsPerfile;
-
-    private int curRecNum = 0;
-
-    private int numberID;
-
-    private String databaseID;
-
-    private PrintWriter out;
-
+    private int recsPerbatch;
+    private int curRecNum = 0;          
+    private int numberID;    
+    private int batchID;    
+    private String batchPath;    
+    private String databaseID;            
+    private PrintWriter out;       
     private boolean open = false;
-
+    private String root = null;    
     private String filepath;
-
-    //private String bogusAbstract = "";
-
+    private String logpath;
+    private String eid = null;
+    private String operation = "add";
+    private long parentid = 0;    
+    private String lasteid = null;    
+    private final String PARENT_ID = "PARENTID";
+    private HashMap hm = new HashMap();
+    NumberFormat formatter;
+    private String indexKey = null;        
+    private static MemCached memcached = null;	
+    private String memcacheServers;    
+    private String memcacheWeights;
+    
     public String getDatabaseID() {
         return databaseID;
       }
@@ -48,14 +61,16 @@ public class CombinedXMLWriter
     public void setCurRecNum(int recno) {
       curRecNum = recno;
     }
-
+    public void setOperation(String op) {
+    	this.operation = op;
+      }
     public int getCurRecNum() {
       return curRecNum;
     }
 
     public int getNumberID() {
       return numberID;
-    }
+    }    
     public PrintWriter getWriter() {
       return out;
     }
@@ -67,52 +82,165 @@ public class CombinedXMLWriter
     {
       this.d = avalidator;
     }
-
-    public CombinedXMLWriter(int recsPerfile,
+    
+    public CombinedXMLWriter(int recsPerbatch,
                              int numberID,
                              String databaseID)
-
     {
         this.databaseID = databaseID;
         this.numberID = numberID;
-        this.recsPerfile = recsPerfile;
+        this.batchID = 1;
+        formatter = new DecimalFormat("0000");
+        this.recsPerbatch = recsPerbatch;        
+        this.lasteid = null;
+        memcacheServers = "206.137.75.51:21201";
+        memcacheWeights = "1";
+        String[] s = null;
+		String[] w = null;
+		if (memcached == null)
+		{
+			s = memcacheServers.split(",");
+			if (memcacheWeights !=  null) {
+				w = memcacheWeights.split(",");
+			}
+			memcached = new MemCached();
+			memcached.initialize(s, w);
+		}
+		if(numberID != 0)
+			init();
     }
+       
+    public void init()
+    {
+    	File file=new File("ei/index_af");
+    	hm.put("AUTHORAFFILIATION", file.getPath() + "/affiliation-" + this.numberID + "." + this.databaseID);
+    	if(!file.exists())
+    	{
+    		file.mkdir();    		
+    	}
+    	file=new File("ei/index_au");
+    	hm.put("AUTHOR", file.getPath() + "/author-" + this.numberID + "." + this.databaseID);
+    	if(!file.exists())
+    	{
+    		file.mkdir();    		
+    	}
+    	file=new File("ei/index_cv");
+    	hm.put("CONTROLLEDTERMS", file.getPath() + "/controlterms-" + this.numberID + "." + this.databaseID);
+    	if(!file.exists())
+    	{
+    		file.mkdir();    		
+    	}
+    	file=new File("ei/index_st");
+    	hm.put("SERIALTITLE", file.getPath() + "/serialtitle-" + this.numberID + "." + this.databaseID);
+    	if(!file.exists())
+    	{
+    		file.mkdir();    		
+    	}
+    	file=new File("ei/index_pn");
+    	hm.put("PUBLISHERNAME", file.getPath() + "/publishername-" + this.numberID + "." + this.databaseID);
+    	if(!file.exists())
+    	{
+    		file.mkdir();    		
+    	}
+    	file=new File("ei/logs");
+    	if(!file.exists())
+    	{
+    		file.mkdir();    		
+    	}
+    	file=new File("ei/runtime");
+    	if(!file.exists())
+    	{
+    		file.mkdir();    		
+    	}    
+    	createRoot(this.batchID);
 
+    }
     public void begin()
         throws Exception
-    {
-        long time = System.currentTimeMillis();
-        filepath = databaseID + Long.toString(time) + ".xml";
-        out = new PrintWriter(new FileWriter(filepath));
+    {    	    	
+        filepath = this.root + "/" + this.eid + ".xml";        
+        out = new PrintWriter(new FileWriter(filepath));                
         open = true;
-        curRecNum = 0;
         out.println("<?xml version=\"1.0\"?>");
         out.println("<!DOCTYPE ROWSET SYSTEM \"../bin/EVROWSET.dtd\">");
         out.println("<ROWSET>");
     }
-
+    public void createRoot(int batchid)    
+	{       	
+    	this.batchPath = "fast/batch_" + this.numberID + "_" + formatter.format(this.batchID);
+    	File file=new File(batchPath);
+    	if(!file.exists())
+    	{
+    		file.mkdir();
+    	}    		
+		this.root = this.batchPath +"/EIDATA";
+		file=new File(this.root);
+		if(!file.exists())
+    	{
+    		file.mkdir();    		
+    	}    		
+		this.root = this.batchPath +"/EIDATA/tmp";
+		file=new File(this.root);
+		if(!file.exists())
+    	{
+    		file.mkdir();    		
+    	}    		
+		file=new File(this.batchPath +"/PROD");
+		if(!file.exists())
+    	{
+    		file.mkdir();    		
+    	}		
+		file=new File(this.batchPath +"/logs");
+		if(!file.exists())
+    	{
+    		file.mkdir();    		
+    	}
+		this.logpath = this.batchPath +"/logs";
+		file=new File(this.batchPath +"/status");
+		if(!file.exists())
+    	{
+    		file.mkdir();    		
+    	}    	
+	}
+    
+    public void writeRec(EVCombinedRec[] rec)
+    throws Exception
+    {
+    	for(int i=0; i<=rec.length; i++)
+    		writeRec(rec[i]);
+    }
+    
     public void writeRec(EVCombinedRec rec)
         throws Exception
     {
-
-        if (curRecNum >= recsPerfile)
+    	this.eid = rec.getString(EVCombinedRec.DOCID);    	    	    
+        String [] temp = null;
+        temp = this.eid.split("_");        
+        if(this.lasteid != null)
         {
-            if (open)
-            {
-                end();
-            }
-            begin();
+        	if(this.lasteid.compareTo(temp[1]) != 0)
+        	{	
+        		this.lasteid = temp[1];
+        		this.parentid = memcached.getID(this.PARENT_ID);        		 
+        	}
         }
-
+        else
+        {
+        	this.lasteid = temp[1];
+        	this.parentid = memcached.getID(this.PARENT_ID);
+        }
+    	    	    	
+        begin();
         out.println("   <ROW> ");
-        out.println("       <EIDOCID>" + rec.getString(EVCombinedRec.DOCID) + "</EIDOCID>");
+        out.println("       <EIDOCID>" + this.eid + "</EIDOCID>");        
+        out.println("       <PARENTID>" + this.parentid + "</PARENTID>");
         out.println("       <DEDUPKEY>" + rec.getString(EVCombinedRec.DEDUPKEY) + "</DEDUPKEY>");
         out.println("       <DATABASE>" + rec.getString(EVCombinedRec.DATABASE) + "</DATABASE>");
         out.println("       <LOADNUMBER>" + rec.getString(EVCombinedRec.LOAD_NUMBER) + "</LOADNUMBER>");
         out.println("       <PUBYEAR>" + rec.getString(EVCombinedRec.PUB_YEAR) + "</PUBYEAR>");
-        out.println("       <ACCESSIONNUMBER>" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.ACCESSION_NUMBER))) + "</ACCESSIONNUMBER>");
+        out.println("       <ACCESSIONNUMBER>" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.ACCESSION_NUMBER))) + "</ACCESSIONNUMBER>");        
         out.println("       <AUTHOR><![CDATA[" + notNull(Entity.prepareString(formatAuthors(rec.getStrings(EVCombinedRec.AUTHOR)))) + "]]></AUTHOR>");
-        out.println("       <AUTHORAFFILIATION><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.AUTHOR_AFFILIATION)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.AUTHOR_AFFILIATION))))) + "]]></AUTHORAFFILIATION>");
+        out.println("       <AUTHORAFFILIATION><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.AUTHOR_AFFILIATION),"AUTHORAFFILIATION"))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.AUTHOR_AFFILIATION))))) + "]]></AUTHORAFFILIATION>");
         out.println("       <AFFILIATIONLOCATION><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.AFFILIATION_LOCATION)))) + "]]></AFFILIATIONLOCATION>");
         out.println("       <TITLE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.TITLE)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.TITLE))))) + "]]></TITLE>");
         out.println("       <TRANSLATEDTITLE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.TRANSLATED_TITLE)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.TRANSLATED_TITLE))))) + "]]></TRANSLATEDTITLE>");
@@ -122,18 +250,18 @@ public class CombinedXMLWriter
         out.println("       <EDITOR><![CDATA[" + notNull(Entity.prepareString(formatAuthors(rec.getStrings(EVCombinedRec.EDITOR))))+"]]></EDITOR>");
         out.println("       <EDITORAFFILIATION><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.EDITOR_AFFILIATION)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.EDITOR_AFFILIATION))))) + "]]></EDITORAFFILIATION>");
         out.println("       <TRANSLATOR><![CDATA[" + notNull(Entity.prepareString(formatAuthors(rec.getStrings(EVCombinedRec.TRANSLATOR)))) + "]]></TRANSLATOR>");
-        out.println("       <CONTROLLEDTERMS><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CONTROLLED_TERMS)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CONTROLLED_TERMS))))) + "]]></CONTROLLEDTERMS>");
+        out.println("       <CONTROLLEDTERMS><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CONTROLLED_TERMS),"CONTROLLEDTERMS"))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CONTROLLED_TERMS))))) + "]]></CONTROLLEDTERMS>");
         out.println("       <UNCONTROLLEDTERMS><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.UNCONTROLLED_TERMS)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.UNCONTROLLED_TERMS))))) + "]]></UNCONTROLLEDTERMS>");
         out.println("       <ISSN><![CDATA[" + notNull(Entity.prepareString(multiFormat(prepareISSN(rec.getStrings(EVCombinedRec.ISSN))))) + "]]></ISSN>");
         out.println("       <ISSNOFTRANSLATION><![CDATA[" + notNull(Entity.prepareString(multiFormat(prepareISSN(rec.getStrings(EVCombinedRec.ISSN_OF_TRANSLATION))))) + "]]></ISSNOFTRANSLATION>");
         out.println("       <CODEN><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CODEN)))) + "]]></CODEN>");
         out.println("       <CODENOFTRANSLATION><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CODEN_OF_TRANSLATION)))) + "]]></CODENOFTRANSLATION>");
         out.println("       <ISBN><![CDATA[" + notNull(Entity.prepareString(multiFormat(prepareISBN(rec.getStrings(EVCombinedRec.ISBN))))) + "]]></ISBN>");
-        out.println("       <SERIALTITLE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SERIAL_TITLE)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SERIAL_TITLE))))) + "]]></SERIALTITLE>");
+        out.println("       <SERIALTITLE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SERIAL_TITLE),"SERIALTITLE"))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SERIAL_TITLE))))) + "]]></SERIALTITLE>");
         out.println("       <SERIALTITLETRANSLATION><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SERIAL_TITLE_TRANSLATION)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SERIAL_TITLE_TRANSLATION))))) + "]]></SERIALTITLETRANSLATION>");
         out.println("       <MAINHEADING><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MAIN_HEADING)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MAIN_HEADING))))) + "]]></MAINHEADING>");
         out.println("       <SUBHEADING><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.SUB_HEADING))) + "]]></SUBHEADING>");
-        out.println("       <PUBLISHERNAME><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PUBLISHER_NAME)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PUBLISHER_NAME))))) + "]]></PUBLISHERNAME>");
+        out.println("       <PUBLISHERNAME><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PUBLISHER_NAME),"PUBLISHERNAME"))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PUBLISHER_NAME))))) + "]]></PUBLISHERNAME>");
         out.println("       <TREATMENTCODE>" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.TREATMENT_CODE)))) + "</TREATMENTCODE>");
         out.println("       <LANGUAGE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.LANGUAGE)))) + "]]></LANGUAGE>");
         out.println("       <RECTYPE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.DOCTYPE)))) + "]]></RECTYPE>");
@@ -222,9 +350,21 @@ public class CombinedXMLWriter
         out.println("       <PCITEDINDEX><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PCITEDINDEX)))) + "]]></PCITEDINDEX>");
         out.println("       <PREFINDEX><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PREFINDEX)))) + "]]></PREFINDEX>");
         out.println("       <DMASK><![CDATA[" + getMask(rec) + "]]></DMASK>");
-        out.println("       <DOI><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.DOI)))) + hasDOI(rec) + "]]></DOI>");
-        out.println("   </ROW>");
-        ++curRecNum;
+        out.println("       <DOI><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.DOI)))) + hasDOI(rec) + "]]></DOI>");        
+        out.println("       <SCOPUSID><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.SCOPUSID))) + "]]></SCOPUSID>");
+        out.println("       <AUTHORID><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.AUTHORID))) + "]]></AUTHORID>");
+        out.println("       <AFFILIATIONID><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.AFFILIATIONID))) + "]]></AFFILIATIONID>");                
+        out.println("       <LAT_NW><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.LAT_NW))) + "]]></LAT_NW>");
+        out.println("       <LNG_NW><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.LNG_NW))) + "]]></LNG_NW>");
+        out.println("       <LAT_NE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.LAT_NE))) + "]]></LAT_NE>");
+        out.println("       <LNG_NE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.LNG_NE))) + "]]></LNG_NE>");
+        out.println("       <LAT_SW><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.LAT_SW))) + "]]></LAT_SW>");
+        out.println("       <LNG_SW><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.LNG_SW))) + "]]></LNG_SW>");
+        out.println("       <LAT_SE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.LAT_SE))) + "]]></LAT_SE>");
+        out.println("       <LNG_SE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.LNG_SE))) + "]]></LNG_SE>");
+        out.println("   </ROW>");                
+        ++curRecNum;        
+        end();
     }
 
     private String hasDOI(EVCombinedRec rec)
@@ -347,7 +487,7 @@ public class CombinedXMLWriter
         {
             return ISSN;
         }
-
+        
         return null;
     }
 
@@ -408,6 +548,44 @@ public class CombinedXMLWriter
 
     }
 
+    private void addIndex(String s, String key)
+    {
+    	PrintWriter indexlog = null;
+    	try
+        {    		
+	    	String indexfile = hm.get(key).toString();	    		    	
+	    	indexlog = new PrintWriter(new FileWriter(indexfile, true));
+	    	indexlog.println("|"+ Entity.prepareString(s).toUpperCase() + "|" + this.databaseID);
+        }
+    	catch(Exception e)
+        {
+          if(indexlog!=null)
+            e.printStackTrace(indexlog);
+          else        	  
+            e.printStackTrace();         
+        }
+        finally
+        {
+          if(indexlog != null)
+          {
+            try
+            {
+            	indexlog.close();
+            }
+            catch(Exception e1)
+            {
+              e1.printStackTrace();
+            }
+          }
+        }    	
+    }
+    
+    private String multiFormat(String[] strings, String key)
+    {
+    	this.indexKey = key;
+    	return multiFormat(strings);
+    }
+    
     private String multiFormat(String[] strings)
     {
         if (strings == null)
@@ -422,6 +600,11 @@ public class CombinedXMLWriter
             String s = strings[i];
             if (s != null)
             {
+            	if(this.indexKey != null)
+            	{
+            		addIndex(s, this.indexKey);
+            		this.indexKey = null;            		
+            	}
                 s = s.trim();
                 if (s.length() > 0)
                 {
@@ -544,11 +727,12 @@ public class CombinedXMLWriter
         StringBuffer buf = new StringBuffer();
 
         for (int i = 0; i < authors.length; i++)
-        {
+        {        	        		        			        	       
             String s = authors[i];
             if ((s != null )
                         && (!s.trim().equals("")))
             {
+            	addIndex(s, "AUTHOR");            	
                 if (buf.length() > 0)
                 {
                     buf.append(" QQDelQQ ");
@@ -570,31 +754,85 @@ public class CombinedXMLWriter
         return finishedString;
     }
 
+    public void endXML()
+    throws Exception
+    {    	
+    	out.println("</ROWSET>");
+        out.close();
+    	File f = new File(filepath);            
+        StringBuffer GZIPFileName = new StringBuffer();
+        GZIPFileName.append(f.getAbsolutePath());
+        GZIPFileName.append(".gz");
+        d.setLogfile(logpath + "/validator.log");
+        d.validateFile(filepath);
+        FileInputStream in = new FileInputStream(filepath);
+        GZIPOutputStream outgz = new GZIPOutputStream(new FileOutputStream(GZIPFileName.toString()));
+        byte[] buf = new byte[1024];
+        int len;
+        while ((len = in.read(buf)) > 0) {
+        	outgz.write(buf, 0, len);
+        }
+        in.close();
+        outgz.finish();
+        outgz.close(); 
+        f.delete();    	
+    }
+    public void zipBatch()
+    throws Exception
+    {
+    	File tmpDir = new File(this.root);
+    	String[] gzFiles = tmpDir.list(); 
+    	File[] gzFilestoDelete = tmpDir.listFiles();
+    	byte[] buf = new byte[1024];
+    	long time = System.currentTimeMillis();
+    	
+    	String ZipFilename = this.batchPath + "/EIDATA/" + Long.toString(time) + "_"+ databaseID + "_" + this.operation + "_" + this.numberID + "-" + formatter.format(this.batchID) + ".zip";
+    	String ControlFile = this.batchPath + "/EIDATA/PROD/" + Long.toString(time) + "_"+ databaseID + "_" + this.operation + "_" + this.numberID + "-" + formatter.format(this.batchID) + ".ctl";
+    	File f = new File(ControlFile);
+    	if(!f.exists())
+    	{
+    		f.createNewFile();
+    	}
+    	ZipOutputStream outZIP = new ZipOutputStream(new FileOutputStream(ZipFilename));
+    	for (int i=0; i<gzFiles.length; i++) 
+    	{    		
+            FileInputStream in = new FileInputStream(this.root + "/" + gzFiles[i]);    
+            outZIP.putNextEntry(new ZipEntry(gzFiles[i]));    
+            int len;
+            while ((len = in.read(buf)) > 0) {
+            	outZIP.write(buf, 0, len);
+            }    
+            outZIP.closeEntry();                        
+            in.close();
+            gzFilestoDelete[i].delete();            
+        }
+    	outZIP.close();
+    	tmpDir.delete();
+    }
+    
     public void end()
         throws Exception
     {
         if (open)
-        {
-            out.println("</ROWSET>");
-            out.close();
-            File f = new File(filepath);
-            String part1 = Long.toString(System.currentTimeMillis());
-            String part2 = "_updat_rowset_";
-            String part3 = Integer.toString(curRecNum);
-            String part4 = "_" + databaseID + "-";
-            String part5 = Integer.toString(numberID);
-            String part6 = ".xml";
-            StringBuffer finalFileName = new StringBuffer();
-            finalFileName.append(part1);
-            finalFileName.append(part2);
-            finalFileName.append(part3);
-            finalFileName.append(part4);
-            finalFileName.append(part5);
-            finalFileName.append(part6);
-            System.out.println(" finalFileName :: "+finalFileName.toString());
-            f.renameTo(new File(finalFileName.toString()));
-            d.validateFile(finalFileName.toString());
-            open = false;
+        {   
+        	open = false;
+        	endXML();
+        	if (curRecNum >= recsPerbatch)
+        	{        		        		
+        		curRecNum = 0;
+        		zipBatch();
+	        	createRoot(this.batchID++);
+        	}
         }
     }
+    
+    public void flush()
+    throws Exception
+	{
+	    if (curRecNum > 0)
+	    {   	          		
+	    	curRecNum = 0;
+	    	zipBatch();	        
+	    }
+	}
 }
