@@ -130,10 +130,19 @@ public class EVCombinedRec {
 	public static final String COPYRIGHT = "128";
 	public static final String PII = "129";
 	public static final String PUI = "130";
+	public static final String LAT_NW = "131";
+	public static final String LNG_NW = "132";
+	public static final String LAT_NE = "133";
+	public static final String LNG_NE = "134";
+	public static final String LAT_SW = "135";
+	public static final String LNG_SW = "136";
+	public static final String LAT_SE = "137";
+	public static final String LNG_SE = "138";	
+	public static final String SCOPUSID = "139";
+	public static final String AUTHORID = "140";
+	public static final String AFFILIATIONID = "141";
 	
-	
-	
-
+		
 	private Hashtable h = new Hashtable();
 
 	public boolean containsKey(String key)
