@@ -1,5 +1,6 @@
-<!ELEMENT ROWSET (ROW+)>
+<!ELEMENT ROWSET (ROW)>
 <!ELEMENT ROW (EIDOCID,
+               PARENTID,
                DEDUPKEY,
                DATABASE,
                LOADNUMBER,
@@ -116,7 +117,18 @@
                PCITEDINDEX,
                PREFINDEX,
                DMASK,
-               DOI)>
+               DOI,
+               SCOPUSID,
+               AUTHORID,
+               AFFILIATIONID,
+               LAT_NW,
+               LNG_NW,
+               LAT_NE,
+               LNG_NE,
+               LAT_SW,
+               LNG_SW,
+               LAT_SE,
+               LNG_SE)>
 
 <!ELEMENT EIDOCID (#PCDATA) >
 <!--
@@ -125,6 +137,10 @@
 	NTIS Map: AUTO Generated
 -->
 
+<!ELEMENT PARENTID (#PCDATA) >
+<!--
+	Assigned by FAST extraction process	
+-->
 
 <!ELEMENT DEDUPKEY (#PCDATA) >
 <!--
@@ -634,7 +650,6 @@
 	NTIS Map -
 -->
 
-
 <!ELEMENT SCOPE (#PCDATA)>
 <!--
 	CP Map: -
@@ -650,7 +665,6 @@
 -->
 
 <!-- ***** NEW ENCOMPASS LIT ELEMENTS ****** -->
-
 
 <!ELEMENT SOURCE  (#PCDATA)>
 <!--
@@ -700,12 +714,10 @@
 	ELT Map: - LT
 -->
 
-
 <!ELEMENT ENTRYYEAR  (#PCDATA)>
 <!--
 	EPT Map: - EY
 -->
-
 
 <!ELEMENT PRIORITYNUMBER  (#PCDATA)>
 <!--
@@ -787,7 +799,6 @@
 
 -->
 
-
 <!ELEMENT CONFERENCECOUNTRYCODE  (#PCDATA)>
 <!--
 
@@ -798,12 +809,10 @@
 
 -->
 
-
 <!ELEMENT CONFERENCENUMBERPAGES  (#PCDATA)>
 <!--
 
 -->
-
 
 <!ELEMENT CONFERENCEPARTNUMBER  (#PCDATA)>
 <!--
@@ -824,7 +833,6 @@
 <!--
 
 -->
-
 
 <!ELEMENT FILINGDATE  (#PCDATA)>
 <!--
@@ -893,34 +901,33 @@
 
 -->
 
-
-
 <!ELEMENT PATENTKIND  (#PCDATA)>
 <!--
+
 -->
 
 <!ELEMENT KINDDESCRIPTION (#PCDATA)>
 <!--
+
 -->
 
 <!ELEMENT AUTHORITYCODE (#PCDATA)>
-
 <!--
+
 -->
 
 <!ELEMENT PCITED  (#PCDATA)>
 <!--
--->
 
+-->
 
 <!ELEMENT PCITEDINDEX  (#PCDATA)>
 <!--
 	CPX Map: - PCI
 -->	
 <!ELEMENT PREFINDEX  (#PCDATA)>
-
-
-
+<!--
+-->
 
 <!ELEMENT DMASK (#PCDATA)>
 <!--
@@ -930,4 +937,57 @@
 <!--
 -->
 
+<!ELEMENT SCOPUSID (#PCDATA)>
+<!--
+	Scopus ID: Used for linking to Scopus
+-->
 
+<!ELEMENT AUTHORID (#PCDATA)>
+<!--
+	AUTHOR ID: Used to link to same author
+-->
+
+<!ELEMENT AFFILIATIONID (#PCDATA)>
+<!--
+	Affiliation ID: Used for linking same affiliation
+-->
+
+<!ELEMENT LAT_NW (#PCDATA) >
+<!--
+	Map Coordinates: Northwest latitude 
+-->
+
+<!ELEMENT LNG_NW (#PCDATA) >
+<!--
+	Map Coordinates: Northwest longitude		 
+-->
+
+<!ELEMENT LAT_NE (#PCDATA) >
+<!--
+	Map Coordinates: Northeast latitude 
+-->
+
+<!ELEMENT LNG_NE (#PCDATA) >
+<!--
+	Map Coordinates: Northeast longitude		 
+-->
+
+<!ELEMENT LAT_SW (#PCDATA) >
+<!--
+	Map Coordinates: Southwest latitude 
+-->
+
+<!ELEMENT LNG_SW (#PCDATA) >
+<!--
+	Map Coordinates: Southwest longitude		 
+-->
+
+<!ELEMENT LAT_SE (#PCDATA) >
+<!--
+	Map Coordinates: Southeast latitude 
+-->
+
+<!ELEMENT LNG_SE (#PCDATA) >
+<!--
+	Map Coordinates: Southeast longitude		 
+-->
