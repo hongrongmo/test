@@ -119,7 +119,7 @@ public class GeoRefCombiner
     ResultSet rs = null;
 
     try
-    {      
+    {
       stmt = con.createStatement();
       //String sqlQuery = "select * from " + Combiner.TABLENAME + " where load_number ='" + weekNumber + "' AND load_number != 0 and load_number < 1000000";
       //String sqlQuery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7fcd2061377551'";
@@ -166,7 +166,7 @@ public class GeoRefCombiner
     ResultSet rs = null;
 
     try
-    {      
+    {
       stmt = con.createStatement();
 
       // Here we will use the Z44: UPDATE CODE to get break the data into years
@@ -432,7 +432,7 @@ public class GeoRefCombiner
 					  geoterms.add(termcoordinates[0]);
 					  coords = parseCoordinates(termcoordinates[1]);
 					  secondBoxCoords = parseCoordinates(termcoordinates[1]);
-					  if(coords[2].indexOf("-") == -1 && coords[3].indexOf("-") != -1)
+					  if(coords[1].indexOf("-") == -1 && coords[2].indexOf("-") != -1)
 				      {
 			            coords[1] = "180";
 			            //coords[2] = "170";
@@ -551,10 +551,10 @@ public class GeoRefCombiner
 				try
 				{
 				  recVector.add(rec);
-				  this.writer.writeRec(rec);
+				  //this.writer.writeRec(rec);
 				  if(recSecondBox != null)
 				  {
-					if(coords[2].indexOf("-") == -1 && coords[3].indexOf("-") != -1)
+					if(coords[1].indexOf("-") == -1 && coords[2].indexOf("-") != -1)
 					{
 						coordCount++;
 						recSecondBox = new EVCombinedRec();
@@ -582,13 +582,18 @@ public class GeoRefCombiner
 						recSecondBox.put(EVCombinedRec.LAT_NE, secondBoxCoords[1]);
 						recSecondBox.put(EVCombinedRec.LNG_SE, secondBoxCoords[3]);
 						recSecondBox.putIfNotNull(EVCombinedRec.DOCID, firstGUID + "_" + (coordCount));
-				  		this.writer.writeRec(recSecondBox);
+				  		//this.writer.writeRec(recSecondBox);
 				  		recVector.add(recSecondBox);
-				  		EVCombinedRec[] recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
+
+
 				  		//System.out.println("SIZE: " + recArray.length);
 					}
 				  }
+
+				  EVCombinedRec[] recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
+				  this.writer.writeRec(recArray);
 				}
+
 				catch(Exception e)
 				{
 				  System.out.println("MID = " + rs.getString("M_ID"));
@@ -711,10 +716,10 @@ public class GeoRefCombiner
 			coords[i] = coords[i].replaceAll("[WS]","-");
 		}
 
-		coords[1] = "-170";
-		coords[2] = "170";
-		coords[3] = "-50";
-		coords[4] = "50";
+		//coords[1] = "-170";
+		//coords[2] = "170";
+		//coords[3] = "-50";
+		//coords[4] = "50";
 
 		return coords;
   }
