@@ -206,7 +206,7 @@ public class CombinedXMLWriter
     public void writeRec(EVCombinedRec[] rec)
     throws Exception
     {
-    	for(int i=0; i<=rec.length; i++)
+    	for(int i=0; i<rec.length; i++)
     		writeRec(rec[i]);
     }
     
@@ -787,7 +787,7 @@ public class CombinedXMLWriter
     	long time = System.currentTimeMillis();
     	
     	String ZipFilename = this.batchPath + "/EIDATA/" + Long.toString(time) + "_"+ databaseID + "_" + this.operation + "_" + this.numberID + "-" + formatter.format(this.batchID) + ".zip";
-    	String ControlFile = this.batchPath + "/EIDATA/PROD/" + Long.toString(time) + "_"+ databaseID + "_" + this.operation + "_" + this.numberID + "-" + formatter.format(this.batchID) + ".ctl";
+    	String ControlFile = this.batchPath + "/PROD/" + Long.toString(time) + "_"+ databaseID + "_" + this.operation + "_" + this.numberID + "-" + formatter.format(this.batchID) + ".ctl";
     	File f = new File(ControlFile);
     	if(!f.exists())
     	{
