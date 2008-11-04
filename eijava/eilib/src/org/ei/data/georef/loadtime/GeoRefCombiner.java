@@ -48,7 +48,7 @@ public class GeoRefCombiner
     username  = args[2];
     password  = args[3];
     int loadNumber = 0;
-    int recsPerfile = Integer.parseInt(args[5]);
+    int recsPerbatch = Integer.parseInt(args[5]);
     int exitAt = Integer.parseInt(args[6]);
     tablename = args[7];
 
@@ -62,7 +62,7 @@ public class GeoRefCombiner
     Combiner.TABLENAME = tablename;
     Combiner.EXITNUMBER = exitAt;
 
-    CombinedWriter writer = new CombinedXMLWriter(recsPerfile,
+    CombinedWriter writer = new CombinedXMLWriter(recsPerbatch,
                                                   loadNumber,
                                                   GRF_DATABASE.getIndexName());
 
@@ -81,7 +81,7 @@ public class GeoRefCombiner
       for(int yearIndex = 1960; yearIndex <= 2008; yearIndex++)
       {
         // create  a new writer so we can see the loadNumber/yearNumber in the filename
-        c = new GeoRefCombiner(new CombinedXMLWriter(recsPerfile, yearIndex,"gref"));
+        c = new GeoRefCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex, GRF_DATABASE.getIndexName()));
         c.writeCombinedByYear(url,
                             driver,
                             username,
@@ -119,13 +119,13 @@ public class GeoRefCombiner
     ResultSet rs = null;
 
     try
-    {
-      this.writer.begin();
-      stmt = con.createStatement();
+    {      
+      stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
       String sqlQuery = "select * from " + Combiner.TABLENAME + " where load_number ='" + weekNumber + "' AND load_number != 0 and load_number < 1000000";
-      rs = stmt.executeQuery(sqlQuery);
-      writeRecs(rs);
+      rs = stmt.executeQuery(sqlQuery);      
+      writeRecs(rs);      
       this.writer.end();
+      this.writer.flush();
     }
     finally
     {
@@ -163,9 +163,8 @@ public class GeoRefCombiner
     ResultSet rs = null;
 
     try
-    {
-      this.writer.begin();
-      stmt = con.createStatement();
+    {      
+      stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
 
       // Here we will use the Z44: UPDATE CODE to get break the data into years
       /* Field Z44 is used to enter the update code. The update code consists of six digits. The first four
@@ -179,6 +178,7 @@ public class GeoRefCombiner
 
       writeRecs(rs);
       this.writer.end();
+      this.writer.flush();
     }
     finally
     {
@@ -208,11 +208,13 @@ public class GeoRefCombiner
     }
   }
 
+
+  
   private void writeRecs(ResultSet rs)
                           throws Exception
   {
     try
-    {
+    {          
       DocumentView runtimeDocview = new CitationView();
       runtimeDocview.setResultSet(rs);
 
@@ -222,11 +224,6 @@ public class GeoRefCombiner
         EVCombinedRec rec = new EVCombinedRec();
 
         rec.putIfNotNull(EVCombinedRec.DATABASE, GRF_DATABASE.getIndexName());
-
-        if (Combiner.EXITNUMBER != 0 && i > Combiner.EXITNUMBER)
-        {
-          break;
-        }
 
         // AUS
         String aString = rs.getString("PERSON_ANALYTIC");
@@ -487,7 +484,7 @@ public class GeoRefCombiner
         rec.put(EVCombinedRec.PUB_SORT, Integer.toString(i));
 
         try
-        {
+        {        	
           this.writer.writeRec(rec);
         }
         catch(Exception e)
