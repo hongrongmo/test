@@ -26,7 +26,8 @@ import org.xml.sax.EntityResolver;
 public class DataValidator
 {
   private XMLReader validator;
-
+  private String logfile = "validator.log";
+  
   public void setEntityResolver(EntityResolver aresolver) {
     if(this.validator != null)
     {
@@ -60,6 +61,10 @@ public class DataValidator
     }
   }
 
+  public void setLogfile(String filepath)
+  {
+	  this.logfile = filepath;
+  }
 
   public void validateFile(String filepath)
   {
@@ -70,7 +75,7 @@ public class DataValidator
     try
     {
       fin = new FileInputStream(filepath);
-      log = new PrintWriter(new FileWriter("validator.log", true));
+      log = new PrintWriter(new FileWriter(logfile, true));
       log.println((new Date()).toString()+":Validating "+ filepath);
       validator.parse(new InputSource(fin));
       log.println("Done");
