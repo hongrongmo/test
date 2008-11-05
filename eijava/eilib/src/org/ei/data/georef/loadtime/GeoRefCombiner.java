@@ -224,13 +224,13 @@ public class GeoRefCombiner
       EVCombinedRec recSecondBox = null;
 
       int i = 1;
-      int numCoords = 0;
-      int coordCount = 0;
       String[] coords = null;
       String[] secondBoxCoords= null;
       String firstGUID = "";
       while (rs.next())
       {
+          int numCoords = 0;
+          int coordCount = 0;
           String sts = rs.getString("COORDINATES");
           if(sts == null)
           {
