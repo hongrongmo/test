@@ -434,7 +434,7 @@ public class GeoRefCombiner
 					  geoterms.add(termcoordinates[0]);
 					  coords = parseCoordinates(termcoordinates[1]);
 					  secondBoxCoords = parseCoordinates(termcoordinates[1]);
-					  if(coords[3].indexOf("-") == -1 && coords[4].indexOf("-") != -1)
+					  if(coords != null &&  coords[2].indexOf("-") == -1 && coords[1].indexOf("-") != -1)
 				      {
 			            coords[1] = "180";
 			            //coords[2] = "170";
@@ -446,14 +446,14 @@ public class GeoRefCombiner
 
 					  if(j == currentCoord)
 					  {
-						rec.put(EVCombinedRec.LNG_NW, coords[1]);
-						rec.put(EVCombinedRec.LNG_SE, coords[2]);
-						rec.put(EVCombinedRec.LAT_NW, coords[3]);
-						rec.put(EVCombinedRec.LAT_SE, coords[4]);
-						rec.put(EVCombinedRec.LAT_NE, coords[4]);
-						rec.put(EVCombinedRec.LNG_NE, coords[1]);
-						rec.put(EVCombinedRec.LAT_SW, coords[3]);
-						rec.put(EVCombinedRec.LNG_SW, coords[2]);
+						rec.put(EVCombinedRec.LAT_SE, coords[1]);
+						rec.put(EVCombinedRec.LAT_NW, coords[2]);
+						rec.put(EVCombinedRec.LNG_SE, coords[3]);
+						rec.put(EVCombinedRec.LNG_NW, coords[4]);
+						rec.put(EVCombinedRec.LAT_NE, coords[1]);
+						rec.put(EVCombinedRec.LNG_NE, coords[4]);
+						rec.put(EVCombinedRec.LAT_SW, coords[2]);
+						rec.put(EVCombinedRec.LNG_SW, coords[3]);
 					  }
 					}
 				  }
@@ -556,7 +556,7 @@ public class GeoRefCombiner
 				  //this.writer.writeRec(rec);
 				  if(recSecondBox != null)
 				  {
-					if(coords[3].indexOf("-") == -1 && coords[4].indexOf("-") != -1)
+					if(coords != null && coords[2].indexOf("-") == -1 && coords[1].indexOf("-") != -1)
 					{
 						coordCount++;
 						recSecondBox = new EVCombinedRec();
@@ -571,14 +571,14 @@ public class GeoRefCombiner
 							}
 						}
 						secondBoxCoords[2] = "-180";
-						recSecondBox.put(EVCombinedRec.LNG_NW, secondBoxCoords[1]);
-						recSecondBox.put(EVCombinedRec.LNG_SE, secondBoxCoords[2]);
-						recSecondBox.put(EVCombinedRec.LAT_NW, secondBoxCoords[3]);
-						recSecondBox.put(EVCombinedRec.LAT_SE, secondBoxCoords[4]);
-						recSecondBox.put(EVCombinedRec.LAT_NE, secondBoxCoords[4]);
-						recSecondBox.put(EVCombinedRec.LNG_NE, secondBoxCoords[1]);
-						recSecondBox.put(EVCombinedRec.LAT_SW, secondBoxCoords[3]);
-						recSecondBox.put(EVCombinedRec.LNG_SW, secondBoxCoords[2]);
+						recSecondBox.put(EVCombinedRec.LAT_SE, secondBoxCoords[1]);
+						recSecondBox.put(EVCombinedRec.LAT_NW, secondBoxCoords[2]);
+						recSecondBox.put(EVCombinedRec.LNG_SE, secondBoxCoords[3]);
+						recSecondBox.put(EVCombinedRec.LNG_NW, secondBoxCoords[4]);
+						recSecondBox.put(EVCombinedRec.LAT_NE, secondBoxCoords[1]);
+						recSecondBox.put(EVCombinedRec.LNG_NE, secondBoxCoords[4]);
+						recSecondBox.put(EVCombinedRec.LAT_SW, secondBoxCoords[2]);
+						recSecondBox.put(EVCombinedRec.LNG_SW, secondBoxCoords[3]);
 						recSecondBox.putIfNotNull(EVCombinedRec.DOCID, firstGUID + "_" + (coordCount));
 						System.out.println(firstGUID + "_" + (coordCount));
 				  		//this.writer.writeRec(recSecondBox);
