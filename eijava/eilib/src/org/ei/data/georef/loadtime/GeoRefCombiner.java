@@ -222,13 +222,13 @@ public class GeoRefCombiner
       DocumentView runtimeDocview = new CitationView();
       runtimeDocview.setResultSet(rs);
       EVCombinedRec recSecondBox = null;
-
+	  EVCombinedRec[] recArray = null;
       int i = 1;
-      String[] coords = null;
-      String[] secondBoxCoords= null;
-      String firstGUID = "";
       while (rs.next())
       {
+          String[] coords = null;
+          String[] secondBoxCoords= null;
+          String firstGUID = "";
           int numCoords = 0;
           int coordCount = 0;
           String sts = rs.getString("COORDINATES");
@@ -565,10 +565,6 @@ public class GeoRefCombiner
 							{
 								//System.out.println(recTemp.getClass().getName());
 								//System.out.println(EVCombinedRecKeys.getClass().getName());
-								if(recTemp.getClass().getName().indexOf("[Ljava.lang.String") != -1)
-								{
-									System.out.println("STRING ARRAY");
-								}
 								recSecondBox.put(EVCombinedRecKeys[b],rec.get(EVCombinedRecKeys[b]));
 							}
 						}
@@ -582,6 +578,7 @@ public class GeoRefCombiner
 						recSecondBox.put(EVCombinedRec.LAT_NE, secondBoxCoords[1]);
 						recSecondBox.put(EVCombinedRec.LNG_SE, secondBoxCoords[3]);
 						recSecondBox.putIfNotNull(EVCombinedRec.DOCID, firstGUID + "_" + (coordCount));
+						System.out.println(firstGUID + "_" + (coordCount));
 				  		//this.writer.writeRec(recSecondBox);
 				  		recVector.add(recSecondBox);
 
@@ -590,8 +587,6 @@ public class GeoRefCombiner
 					}
 				  }
 
-				  EVCombinedRec[] recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
-				  this.writer.writeRec(recArray);
 				}
 
 				catch(Exception e)
@@ -601,6 +596,9 @@ public class GeoRefCombiner
 				}
 				i++;
 		} // for
+
+		recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
+		this.writer.writeRec(recArray);
       } // while
     }
     catch(Exception e)
