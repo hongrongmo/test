@@ -121,10 +121,10 @@ public class GeoRefCombiner
     try
     {
       stmt = con.createStatement();
-      //String sqlQuery = "select * from " + Combiner.TABLENAME + " where load_number ='" + weekNumber + "' AND load_number != 0 and load_number < 1000000";
+      String sqlQuery = "select * from " + Combiner.TABLENAME + " where load_number ='" + weekNumber + "' AND load_number != 0 and load_number < 1000000";
       //String sqlQuery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7fcd2061377551'";
       //String sqlQuery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7fcd2061377551' or m_id='grf_1ee3914119594abb20M7fc72061377551'";
-      String sqlQuery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7ff02061377551'";
+      //String sqlQuery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7ff02061377551'";
       rs = stmt.executeQuery(sqlQuery);
       writeRecs(rs);
       this.writer.end();
@@ -176,10 +176,10 @@ public class GeoRefCombiner
       199601, 199602, 199603, etc. through 199624. Prior to 1994, only the year (first four digits) is
       given in this field. */
 
-      //String sqlquery = "SELECT * FROM " + Combiner.TABLENAME + " WHERE UPDATE_CODE IS NOT NULL AND SUBSTR(UPDATE_CODE,1,4) =  " + year;
+      String sqlquery = "SELECT * FROM " + Combiner.TABLENAME + " WHERE UPDATE_CODE IS NOT NULL AND SUBSTR(UPDATE_CODE,1,4) =  " + year;
       //String sqlquery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7fcd2061377551'";
       //String sqlquery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7fcd2061377551' or m_id='grf_1ee3914119594abb20M7fc72061377551'";
-      String sqlquery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7ff02061377551'";
+      //String sqlquery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7ff02061377551'";
       rs = stmt.executeQuery(sqlquery);
 
       writeRecs(rs);
