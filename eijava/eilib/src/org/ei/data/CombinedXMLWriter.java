@@ -13,6 +13,7 @@ import org.apache.oro.text.perl.Perl5Util;
 import org.ei.query.base.PorterStemmer;
 import org.ei.xml.Entity;
 import org.ei.controller.MemCached;
+import java.util.Date;
 import java.util.zip.*; 
 import java.text.*;
 
@@ -27,7 +28,8 @@ public class CombinedXMLWriter
     private int recsPerbatch;
     private int curRecNum = 0;          
     private int numberID;    
-    private int batchID;    
+    private int batchID;
+    private String batchidFormat;
     private String batchPath;    
     private String databaseID;            
     private PrintWriter out;       
@@ -35,17 +37,20 @@ public class CombinedXMLWriter
     private String root = null;    
     private String filepath;
     private String logpath;
+    private String logfile;
     private String eid = null;
     private String operation = "add";
-    private long parentid = 0;    
-    private String lasteid = null;    
+    private String environment = "dev";
+    private long parentid = 0;
+    private String lasteid = null;
     private final String PARENT_ID = "PARENTID";
-    private HashMap hm = new HashMap();
-    NumberFormat formatter;
-    private String indexKey = null;        
+    private HashMap hm = new HashMap();    
+    private String indexKey = null;
     private static MemCached memcached = null;	
-    private String memcacheServers;    
-    private String memcacheWeights;
+    private String memcacheServers;
+    private String memcacheWeights; 
+    private NumberFormat formatter;
+    private long starttime = 0;
     
     public String getDatabaseID() {
         return databaseID;
@@ -62,8 +67,13 @@ public class CombinedXMLWriter
       curRecNum = recno;
     }
     public void setOperation(String op) {
-    	this.operation = op;
-      }
+    	this.operation = op.toLowerCase();
+    }
+    
+    public void setEnvironment(String env) {
+    	this.environment = env.toLowerCase();
+    }
+        
     public int getCurRecNum() {
       return curRecNum;
     }
@@ -90,10 +100,17 @@ public class CombinedXMLWriter
         this.databaseID = databaseID;
         this.numberID = numberID;
         this.batchID = 1;
-        formatter = new DecimalFormat("0000");
-        this.recsPerbatch = recsPerbatch;        
+        formatter = new DecimalFormat("0000");        
+        this.recsPerbatch = recsPerbatch;             
         this.lasteid = null;
-        memcacheServers = "206.137.75.51:21201";
+        if(this.environment.equals("prod"))
+        {
+        	memcacheServers = "206.137.75.51:29999";
+        }
+        else
+        {
+        	memcacheServers = "206.137.75.51:21201";
+        }
         memcacheWeights = "1";
         String[] s = null;
 		String[] w = null;
@@ -112,7 +129,17 @@ public class CombinedXMLWriter
        
     public void init()
     {
-    	File file=new File("ei/index_af");
+    	File file=new File("ei");    	
+    	if(!file.exists())
+    	{
+    		file.mkdir();    		
+    	}
+    	file=new File("fast");    	
+    	if(!file.exists())
+    	{
+    		file.mkdir();    		
+    	}    	
+    	file=new File("ei/index_af");
     	hm.put("AUTHORAFFILIATION", file.getPath() + "/affiliation-" + this.numberID + "." + this.databaseID);
     	if(!file.exists())
     	{
@@ -142,23 +169,23 @@ public class CombinedXMLWriter
     	{
     		file.mkdir();    		
     	}
-    	file=new File("ei/logs");
+    	file=new File("ei/logs");    	
     	if(!file.exists())
     	{
     		file.mkdir();    		
     	}
+    	this.logfile = file.getPath() + "/extract.log";    	
     	file=new File("ei/runtime");
     	if(!file.exists())
     	{
     		file.mkdir();    		
     	}    
     	createRoot(this.batchID);
-
     }
     public void begin()
         throws Exception
     {    	    	
-        filepath = this.root + "/" + this.eid + ".xml";        
+        filepath = this.root + "/" + this.eid + ".xml";
         out = new PrintWriter(new FileWriter(filepath));                
         open = true;
         out.println("<?xml version=\"1.0\"?>");
@@ -167,7 +194,9 @@ public class CombinedXMLWriter
     }
     public void createRoot(int batchid)    
 	{       	
-    	this.batchPath = "fast/batch_" + this.numberID + "_" + formatter.format(this.batchID);
+    	batchidFormat = formatter.format(this.batchID);
+    	this.starttime = System.currentTimeMillis();  
+    	this.batchPath = "fast/batch_" + this.numberID + "_" + batchidFormat;
     	File file=new File(batchPath);
     	if(!file.exists())
     	{
@@ -213,7 +242,7 @@ public class CombinedXMLWriter
     public void writeRec(EVCombinedRec rec)
         throws Exception
     {
-    	this.eid = rec.getString(EVCombinedRec.DOCID);    	    	    
+    	this.eid = rec.getString(EVCombinedRec.DOCID);    	    	        	
         String [] temp = null;
         temp = this.eid.split("_");        
         if(this.lasteid != null)
@@ -548,6 +577,37 @@ public class CombinedXMLWriter
 
     }
 
+    private void writeLog(String log)
+    {    	
+    	PrintWriter extractlog = null;
+    	try
+        {       	
+	    	extractlog = new PrintWriter(new FileWriter(this.logfile, true));
+	    	extractlog.println(log);
+        }
+    	catch(Exception e)
+        {
+          if(extractlog!=null)
+            e.printStackTrace(extractlog);
+          else        	  
+            e.printStackTrace();         
+        }
+        finally
+        {
+          if(extractlog != null)
+          {
+            try
+            {
+            	extractlog.close();
+            }
+            catch(Exception e1)
+            {
+              e1.printStackTrace();
+            }
+          }
+       }    	
+    }
+       
     private void addIndex(String s, String key)
     {
     	PrintWriter indexlog = null;
@@ -781,13 +841,17 @@ public class CombinedXMLWriter
     throws Exception
     {
     	File tmpDir = new File(this.root);
-    	String[] gzFiles = tmpDir.list(); 
-    	File[] gzFilestoDelete = tmpDir.listFiles();
+    	String[] gzFiles = tmpDir.list();     	
+    	File[] gzFilestoDelete = tmpDir.listFiles();    	
     	byte[] buf = new byte[1024];
-    	long time = System.currentTimeMillis();
-    	
+    	long time = System.currentTimeMillis();    	
     	String ZipFilename = this.batchPath + "/EIDATA/" + Long.toString(time) + "_"+ databaseID + "_" + this.operation + "_" + this.numberID + "-" + formatter.format(this.batchID) + ".zip";
+    	writeLog( formatTimeStamp(System.currentTimeMillis()) + "adding " + gzFiles.length + " files to zipfile " + ZipFilename);
     	String ControlFile = this.batchPath + "/PROD/" + Long.toString(time) + "_"+ databaseID + "_" + this.operation + "_" + this.numberID + "-" + formatter.format(this.batchID) + ".ctl";
+    	writeLog(formatTimeStamp(System.currentTimeMillis()) + "creating control file " + ControlFile);
+    	long timediff = time - this.starttime;
+    	writeLog(formatTimeStamp(System.currentTimeMillis()) + "batch processed in " + timediff + " milliseconds");    	    	
+    	writeLog(formatTimeStamp(System.currentTimeMillis()) + "last parent id generated is " + this.parentid);    	
     	File f = new File(ControlFile);
     	if(!f.exists())
     	{
@@ -817,8 +881,10 @@ public class CombinedXMLWriter
         {   
         	open = false;
         	endXML();
+        	//System.out.println("Current count at: " + curRecNum + "  --- Number per batch at: " + recsPerbatch);        	
         	if (curRecNum >= recsPerbatch)
-        	{        		        		
+        	{
+        		System.out.print(".");
         		curRecNum = 0;
         		zipBatch();
 	        	createRoot(this.batchID++);
@@ -828,11 +894,17 @@ public class CombinedXMLWriter
     
     public void flush()
     throws Exception
-	{
-	    if (curRecNum > 0)
-	    {   	          		
+	{    	
+    	if (curRecNum > 0)
+	    {	    	
 	    	curRecNum = 0;
 	    	zipBatch();	        
-	    }
+	    }    
 	}
+    
+    public String formatTimeStamp(long timeStamp) 
+    {    	
+        SimpleDateFormat sdtf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");
+        return "[" + sdtf.format(new Date(timeStamp)) + " - LOAD :" + this.numberID  + " - BATCH:"  + batchidFormat  + " ]";
+    }
 }
