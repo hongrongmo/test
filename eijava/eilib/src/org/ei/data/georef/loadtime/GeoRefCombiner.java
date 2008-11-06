@@ -31,9 +31,7 @@ public class GeoRefCombiner
   public static final String IDDELIMITER = GRFDocBuilder.IDDELIMITER;
   public String[] EVCombinedRecKeys = {EVCombinedRec.DATABASE, EVCombinedRec.AUTHOR, EVCombinedRec.EDITOR, EVCombinedRec.AUTHOR_AFFILIATION, EVCombinedRec.COUNTRY, EVCombinedRec.AFFILIATION_LOCATION, EVCombinedRec.LANGUAGE, EVCombinedRec.DOCTYPE, EVCombinedRec.ABSTRACT, EVCombinedRec.ISSN, EVCombinedRec.ISBN, EVCombinedRec.PUBLISHER_NAME, EVCombinedRec.INT_PATENT_CLASSIFICATION, EVCombinedRec.CONTROLLED_TERMS, EVCombinedRec.UNCONTROLLED_TERMS, EVCombinedRec.AVAILABILITY, EVCombinedRec.PUB_YEAR, EVCombinedRec.TITLE, EVCombinedRec.TRANSLATED_TITLE, EVCombinedRec.MONOGRAPH_TITLE, EVCombinedRec.SERIAL_TITLE, EVCombinedRec.CONFERENCE_LOCATION, EVCombinedRec.REPORTNUMBER, EVCombinedRec.CLASSIFICATION_CODE, EVCombinedRec.DEDUPKEY, EVCombinedRec.STARTPAGE, EVCombinedRec.CODEN, EVCombinedRec.CONFERENCE_NAME, EVCombinedRec.MEETING_DATE, EVCombinedRec.LOAD_NUMBER, EVCombinedRec.VOLUME, EVCombinedRec.ISSUE, EVCombinedRec.ACCESSION_NUMBER, EVCombinedRec.DOI, EVCombinedRec.PUB_SORT};
   Perl5Util perl = new Perl5Util();
-
-  private int exitNumber;
-
+ 
   private static String tablename;
   private static final Database GRF_DATABASE = new GRFDatabase();
   public static void main(String args[])
@@ -49,8 +47,9 @@ public class GeoRefCombiner
     password  = args[3];
     int loadNumber = 0;
     int recsPerbatch = Integer.parseInt(args[5]);
-    int exitAt = Integer.parseInt(args[6]);
+    String operation = args[6];
     tablename = args[7];
+    String environment = args[8];
 
     try {
       loadNumber = Integer.parseInt(args[4]);
@@ -60,12 +59,13 @@ public class GeoRefCombiner
     }
 
     Combiner.TABLENAME = tablename;
-    Combiner.EXITNUMBER = exitAt;
-
+    
     CombinedWriter writer = new CombinedXMLWriter(recsPerbatch,
                                                   loadNumber,
                                                   GRF_DATABASE.getIndexName());
-
+    writer.setOperation(operation);
+    writer.setEnvironment(environment);
+    
     GeoRefCombiner c = new GeoRefCombiner(writer);
     if(loadNumber > 200801)
     {
