@@ -705,12 +705,9 @@ public class GeoRefCombiner
 		{
 			coords[i] = coords[i].replaceAll("[NE]","+").substring(0,coords[i].length()-4).replaceAll("\\+","");
 			coords[i] = coords[i].replaceAll("[WS]","-");
+			if(coords[i].substring(0,1).indexOf("0") != -1)
+				coords[i] = coords[i].substring(1,coords[i].length());
 		}
-
-		//coords[1] = "-170";
-		//coords[2] = "170";
-		//coords[3] = "-50";
-		//coords[4] = "50";
 
 		return coords;
   }
