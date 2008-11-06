@@ -228,8 +228,6 @@ public class GeoRefCombiner
       int i = 1;
       while (rs.next())
       {
-          String[] coords = null;
-          String[] secondBoxCoords= null;
           String firstGUID = "";
           int numCoords = 0;
           int coordCount = 0;
@@ -247,6 +245,8 @@ public class GeoRefCombiner
 	  	  Vector recVector = new Vector();
           for(int currentCoord = 0; currentCoord < numCoords; currentCoord++)
           {
+                String[] coords = null;
+                String[] secondBoxCoords= null;
 			    coordCount++;
 				EVCombinedRec rec = new EVCombinedRec();
 
@@ -433,27 +433,26 @@ public class GeoRefCombiner
 					{
 					  geoterms.add(termcoordinates[0]);
 					  coords = parseCoordinates(termcoordinates[1]);
-					  secondBoxCoords = parseCoordinates(termcoordinates[1]);
+
 					  if(coords != null &&  coords[4].indexOf("-") == -1 && coords[3].indexOf("-") != -1)
 				      {
-			            coords[1] = "180";
-			            //coords[2] = "170";
-			            //coords[3] = "-50";
-			            //coords[4] = "50";
-
+						secondBoxCoords = parseCoordinates(termcoordinates[1]);
+						//System.out.println(secondBoxCoords[1] + "," + secondBoxCoords[2] + "," + secondBoxCoords[3] + "," + secondBoxCoords[4]);
+			            coords[3] = "180";
 			            recSecondBox = new EVCombinedRec();
 		              }
 
 					  if(j == currentCoord)
 					  {
+						//System.out.println(coords[1] + "," + coords[2] + "," + coords[3] + "," + coords[4]);
 						rec.put(EVCombinedRec.LAT_SE, coords[1]);
 						rec.put(EVCombinedRec.LAT_NW, coords[2]);
 						rec.put(EVCombinedRec.LNG_SE, coords[3]);
 						rec.put(EVCombinedRec.LNG_NW, coords[4]);
-						rec.put(EVCombinedRec.LAT_NE, coords[1]);
-						rec.put(EVCombinedRec.LNG_NE, coords[4]);
-						rec.put(EVCombinedRec.LAT_SW, coords[2]);
-						rec.put(EVCombinedRec.LNG_SW, coords[3]);
+						rec.put(EVCombinedRec.LAT_NE, coords[2]);
+						rec.put(EVCombinedRec.LNG_NE, coords[3]);
+						rec.put(EVCombinedRec.LAT_SW, coords[1]);
+						rec.put(EVCombinedRec.LNG_SW, coords[4]);
 					  }
 					}
 				  }
@@ -553,39 +552,31 @@ public class GeoRefCombiner
 				try
 				{
 				  recVector.add(rec);
-				  //this.writer.writeRec(rec);
 				  if(recSecondBox != null)
 				  {
-					if(coords != null && coords[4].indexOf("-") == -1 && coords[3].indexOf("-") != -1)
+
+					if(secondBoxCoords != null)
 					{
 						coordCount++;
-						recSecondBox = new EVCombinedRec();
 						for(int b = 0; b < EVCombinedRecKeys.length; b++)
 						{
 							Object recTemp = rec.get(EVCombinedRecKeys[b]);
 							if(recTemp != null)
 							{
-								//System.out.println(recTemp.getClass().getName());
-								//System.out.println(EVCombinedRecKeys.getClass().getName());
 								recSecondBox.put(EVCombinedRecKeys[b],rec.get(EVCombinedRecKeys[b]));
 							}
 						}
-						secondBoxCoords[2] = "-180";
+						secondBoxCoords[4] = "-180";
 						recSecondBox.put(EVCombinedRec.LAT_SE, secondBoxCoords[1]);
 						recSecondBox.put(EVCombinedRec.LAT_NW, secondBoxCoords[2]);
 						recSecondBox.put(EVCombinedRec.LNG_SE, secondBoxCoords[3]);
 						recSecondBox.put(EVCombinedRec.LNG_NW, secondBoxCoords[4]);
-						recSecondBox.put(EVCombinedRec.LAT_NE, secondBoxCoords[1]);
-						recSecondBox.put(EVCombinedRec.LNG_NE, secondBoxCoords[4]);
-						recSecondBox.put(EVCombinedRec.LAT_SW, secondBoxCoords[2]);
-						recSecondBox.put(EVCombinedRec.LNG_SW, secondBoxCoords[3]);
+						recSecondBox.put(EVCombinedRec.LAT_NE, secondBoxCoords[2]);
+						recSecondBox.put(EVCombinedRec.LNG_NE, secondBoxCoords[3]);
+						recSecondBox.put(EVCombinedRec.LAT_SW, secondBoxCoords[1]);
+						recSecondBox.put(EVCombinedRec.LNG_SW, secondBoxCoords[4]);
 						recSecondBox.putIfNotNull(EVCombinedRec.DOCID, firstGUID + "_" + (coordCount));
-						//System.out.println(firstGUID + "_" + (coordCount));
-				  		//this.writer.writeRec(recSecondBox);
 				  		recVector.add(recSecondBox);
-
-
-				  		//System.out.println("SIZE: " + recArray.length);
 					}
 				  }
 
