@@ -251,12 +251,7 @@ public class GeoRefCombiner
 				EVCombinedRec rec = new EVCombinedRec();
 
 				rec.putIfNotNull(EVCombinedRec.DATABASE, GRF_DATABASE.getIndexName());
-
-				if (Combiner.EXITNUMBER != 0 && i > Combiner.EXITNUMBER)
-				{
-				  break;
-				}
-
+				
 				// AUS
 				String aString = rs.getString("PERSON_ANALYTIC");
 				if(aString != null)
@@ -286,17 +281,23 @@ public class GeoRefCombiner
 				String affilitation = rs.getString("AUTHOR_AFFILIATION");
 				if(affilitation != null)
 				{
-				  List affilations= new ArrayList();
-				  affilations.add(affilitation);
+				  List affilations= new ArrayList();				  
+				  String[] affilvalues = null;
+				  String[] values = null;				  
+				  affilvalues = affilitation.split(AUDELIMITER);				  
+				  for(int x = 0 ; x < affilvalues.length; x++)
+				  {					  
+					  affilations.add(affilvalues[x]);
+				  }
 
 				  // parse out second Affilitation institutions
 				  if(rs.getString("AFFILIATION_SECONDARY") != null)
 				  {
 					String secondaffiliations = rs.getString("AFFILIATION_SECONDARY");
-					String[] affilvalues = secondaffiliations.split(AUDELIMITER);
+					affilvalues = secondaffiliations.split(AUDELIMITER);
 					for(int x = 0 ; x < affilvalues.length; x++)
 					{
-					  String[] values = affilvalues[x].split(IDDELIMITER);
+					  values = affilvalues[x].split(IDDELIMITER);
 					  affilations.add(values[0]);
 					}
 				  }
