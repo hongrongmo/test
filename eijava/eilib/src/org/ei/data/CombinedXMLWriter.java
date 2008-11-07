@@ -122,6 +122,11 @@ public class CombinedXMLWriter
 			}
 			memcached = new MemCached();
 			memcached.initialize(s, w);
+			if(memcached.getCounter(this.PARENT_ID) <= 0)
+			{
+				memcached.setID(this.PARENT_ID, 1);
+				System.out.println("WARNING: Reinitializing memcached counter to 1 for PARENTID in " + this.environment.toUpperCase() + " environment.");
+			}
 		}
 		if(numberID != 0)
 			init();
