@@ -15,14 +15,39 @@ import org.jdom.Element;
 
 public class ExtractPaperChem
 {
+    // from shell or bat scritp pass param = "all" to load all data_set
+    // pass load_number to load specific load_number
 	public static void main(String[] args) throws Exception
 	{
 
+        String load_number = null;
 
-		String[] m_ids = new String[]{"pch_34f213f85aae815aM6fa219817173212","pch_11ffb3af85ab48bb2M7ff119817173212","pch_34f213f85aae815aM7bc019817173212","pch_34f213f85aae815aM672219817173212","pch_B9CB8C08410F10C6E03408002081DCA4","pch_34f213f85aae815aM7e2b19817173212","pch_115f0a9f85ab60809M7ea819817173212","pch_B9CB8C083E7510C6E03408002081DCA4","pch_B9CB8C03873410C6E03408002081DCA4","pch_B9CB8C08184610C6E03408002081DCA4","pch_B9CB8C07B53010C6E03408002081DCA4","pch_B9CB8C0806B010C6E03408002081DCA4","pch_B9CB8C0806B110C6E03408002081DCA4","pch_34f213f85aae815aM672219817173212","pch_34f213f85aae815aM7e1a19817173212","pch_6d2baff85ab4375bM7fc519817173212"};
+        if (args != null && args.length > 0)
+        {
+              load_number = args[0];
+        }
+		String[] m_ids = new String[] {"pch_B9CB8C03148510C6E03408002081DCA4", "pch_B9CB8C03147410C6E03408002081DCA4", "pch_B9CB8C03144810C6E03408002081DCA4"};
+
+                //{"pch_34f213f85aae815aM6fa219817173212","pch_11ffb3af85ab48bb2M7ff119817173212","pch_34f213f85aae815aM7bc019817173212","pch_34f213f85aae815aM672219817173212","pch_B9CB8C08410F10C6E03408002081DCA4","pch_34f213f85aae815aM7e2b19817173212","pch_115f0a9f85ab60809M7ea819817173212","pch_B9CB8C083E7510C6E03408002081DCA4","pch_B9CB8C03873410C6E03408002081DCA4","pch_B9CB8C08184610C6E03408002081DCA4","pch_B9CB8C07B53010C6E03408002081DCA4","pch_B9CB8C0806B010C6E03408002081DCA4","pch_B9CB8C0806B110C6E03408002081DCA4","pch_34f213f85aae815aM672219817173212","pch_34f213f85aae815aM7e1a19817173212","pch_6d2baff85ab4375bM7fc519817173212"};
 		//Connection con = getDbCoonection("jdbc:oracle:thin:@jupiter.elsevier.com:1521:EIDB1", "AP_PRO1", "ei3it", "oracle.jdbc.driver.OracleDriver");
 		Connection con = getDbCoonection("jdbc:oracle:thin:@neptune.elsevier.com:1521:EI", "AP_PRO1", "ei3it", "oracle.jdbc.driver.OracleDriver");
 		ExtractPaperChem epc = new ExtractPaperChem();
+
+        // set array for select stmt.
+        if(load_number != null)
+        {
+            String whatToLoad = load_number;
+            if (whatToLoad.equalsIgnoreCase("all"))
+            {
+                m_ids = null;
+            }
+            else
+            {
+                m_ids = new String[1];
+                m_ids[0] = load_number;
+            }
+        }
+
 		epc.extract(m_ids,con);
 	}
 
@@ -47,12 +72,24 @@ public class ExtractPaperChem
 			}
 
 			midsList += ")";
- 
+
 			String filename = "paperchem_extract1.out";
 			System.out.println("filename= "+filename);
             writerPub   = new PrintWriter(new FileWriter(filename));
-
-			String sqlQuery = " select * from paper_master where m_id in "+midsList;
+            String sqlQuery = null;
+            if (m_ids != null  && m_ids.length > 1)
+            {
+			    sqlQuery = " select * from paper_master where m_id in "+midsList;
+            }
+            else if(m_ids != null)
+            {
+                String load_number = m_ids[0];
+                sqlQuery = "select * from paper_master where load_number ="+load_number;
+            }
+            else // select complete data_set
+            {
+                sqlQuery = "select * from paper_master";
+            }
 			//String sqlQuery = "select * from paper_master_test";
             pstmt1  = con.prepareStatement(sqlQuery);
             System.out.println("\n\nQuery: "+sqlQuery);
@@ -108,9 +145,9 @@ public class ExtractPaperChem
 				writeColumn(rs1, "pt", writerPub);
 				writeColumn(rs1, "pn", writerPub);
 				writeColumn(rs1, "load_number", writerPub);
-				writeColumn(rs1, "xp", writerPub);
-				writeColumn(rs1, "tr", writerPub);
-				writeColumn(rs1, "pp", writerPub);
+				writeColumn(rs1, "xp", writerPub); //PAGE
+				writeColumn(rs1, "tr", writerPub); //TREATMENTCODE
+				writeColumn(rs1, "pp", writerPub);  //PAGECOUNT
 				writeColumn(rs1, "cls", writerPub);
 				writeColumn(rs1, "ti", writerPub);
 				writeColumn(rs1, "nr", writerPub);   //REFCOUNT
@@ -239,8 +276,12 @@ public class ExtractPaperChem
 		}
 		else if(columnName.equals("pp"))
 		{
-			column = rs1.getString("pp");
+			column = formatPageCount(rs1.getString("pp"));
 		}
+        else if(columnName.equals("xp"))
+        {
+            column = formatPage(rs1.getString("xp"));
+        }
 		else if(columnName.equals("cls"))
 		{
 			column = formatClassificationCode(rs1.getString("cls"));
@@ -313,6 +354,42 @@ public class ExtractPaperChem
 			writerPub.print("\t");
 		}
 	}
+
+    public String formatPage(String xp)
+    {
+        StringBuffer result = new StringBuffer();
+        if(xp != null && !xp.trim().equals(""))
+        {
+            xp = xp.trim();
+            if(xp.indexOf("p ") == 0)
+            {
+                xp = xp.substring(2);
+            }
+            result.append(xp);
+            result.append(BdParser.AUDELIMITER).append(BdParser.AUDELIMITER);
+        }
+
+
+        return result.toString();
+    }
+
+    public String formatPageCount(String pp)
+    {
+        StringBuffer result= new StringBuffer();
+
+        if(pp != null && !pp.trim().equals(""))
+        {
+			result.append(BdParser.AUDELIMITER);
+            pp = pp.trim();
+            int len = pp.length();
+            if(pp.lastIndexOf("p") == (len-1))
+            {
+               pp = pp.substring(0, (len-1));
+            }
+            result.append(pp);
+        }
+        return result.toString();
+    }
 
 	public String formatConfOrganization(ResultSet rs)
 											throws SQLException
@@ -504,18 +581,18 @@ public class ExtractPaperChem
 		}
 		return issue;
 	}
-		
+
 	public String formatISSN(String issn)
 	{
 		if(issn!=null)
 		{
 		    issn = issn.replaceAll("-","");
 		}
-	    if(issn.equals("028068000"))// fix for 028068000 typo
+	    if(issn!=null && issn.equals("028068000"))// fix for 028068000 typo
 	    {
 	        return "02806800";
 	    }
-	    else if(issn.indexOf(";") >-1) // fix for redundant issns 0029-3156;0029-3156 and 0040-5752;0040-5752
+	    else if(issn!=null && issn.indexOf(";") >-1) // fix for redundant issns 0029-3156;0029-3156 and 0040-5752;0040-5752
 		{
 		    String [] issnArray = new String[1];
 		    issnArray = issn.split(";");
@@ -537,7 +614,7 @@ public class ExtractPaperChem
             }
             else if(beginN > 0 )
             {
-                return null; 
+                return null;
             }
         }
         return null;
@@ -693,7 +770,7 @@ public class ExtractPaperChem
 				{
 					lastName = author;
 				}
-                
+
                 nameBuffer.append(i);    //starts from 1
 				nameBuffer.append(BdParser.IDDELIMITER);//sec
 				nameBuffer.append(BdParser.IDDELIMITER);//auid
