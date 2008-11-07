@@ -80,6 +80,7 @@ public class GeoRefCombiner
     {
       for(int yearIndex = 1960; yearIndex <= 2008; yearIndex++)
       {
+    	System.out.println("Processing year " + yearIndex + "...");
         // create  a new writer so we can see the loadNumber/yearNumber in the filename
         c = new GeoRefCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,GRF_DATABASE.getIndexName()));
         c.writeCombinedByYear(url,
@@ -121,7 +122,7 @@ public class GeoRefCombiner
     try
     {
       stmt = con.createStatement();
-      String sqlQuery = "select * from " + Combiner.TABLENAME + " where load_number ='" + weekNumber + "' AND load_number != 0 and load_number < 1000000";
+      String sqlQuery = "select * from " + Combiner.TABLENAME + " where load_number ='" + weekNumber + "' AND load_number != 0 and load_number < 1000000";      
       //String sqlQuery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7fcd2061377551'";
       //String sqlQuery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7fcd2061377551' or m_id='grf_1ee3914119594abb20M7fc72061377551'";
       //String sqlQuery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7ff02061377551'";
@@ -430,6 +431,14 @@ public class GeoRefCombiner
 				  for(int j = 0; j < termcoordinate.length; j++)
 				  {
 					String[] termcoordinates = termcoordinate[j].split(GRFDocBuilder.IDDELIMITER);
+					if(termcoordinates.length == 1)
+					{
+						String[] termcoordinates_tmp = new String[2];
+						termcoordinates_tmp[0] = j + "";
+						termcoordinates_tmp[1] = termcoordinates[0];
+						termcoordinates = termcoordinates_tmp;
+						
+					}
 					if(termcoordinates.length == 2)
 					{
 					  geoterms.add(termcoordinates[0]);
@@ -455,7 +464,7 @@ public class GeoRefCombiner
 						rec.put(EVCombinedRec.LAT_SW, coords[1]);
 						rec.put(EVCombinedRec.LNG_SW, coords[4]);
 					  }
-					}
+					}					
 				  }
 				  if(!geoterms.isEmpty())
 				  {
