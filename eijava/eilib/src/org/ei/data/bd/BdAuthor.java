@@ -80,6 +80,13 @@ public class BdAuthor
 						this.setAffidString(auelements[i]);
 					}
                 }
+                else if (auField.equals("initials"))
+				{
+					if(auelements[i]!= null && !auelements[i].trim().equals(""))
+					{
+						this.setInitials(auelements[i]);
+					}
+                }
             }
         }
     }
@@ -88,13 +95,17 @@ public class BdAuthor
     public String getDisplayName()
     {
         StringBuffer au = new StringBuffer();
-        if(this.getIndexedName()!=null)
-        {
-			au.append(this.getIndexedName());
-		}
-		else if(this.getSurname()!=null && this.getGivenName()!=null)
+        if(this.getSurname()!=null && this.getGivenName()!=null)
 		{
 			au.append(this.getSurname().trim()).append(", ").append(this.getGivenName().trim());
+		}
+		else if(this.getSurname()!=null && this.getGivenName()==null && this.getInitials()!=null)
+		{
+			au.append(this.getSurname().trim()).append(", ").append(this.getInitials().trim());
+		}
+		else if(this.getIndexedName()!=null)
+		{
+			au.append(this.getIndexedName());
 		}
 		else if(this.getSurname()!=null)
 		{
@@ -104,6 +115,7 @@ public class BdAuthor
 		{
 			au.append(this.getGivenName());
 		}
+
 		return au.toString();
     }
 
