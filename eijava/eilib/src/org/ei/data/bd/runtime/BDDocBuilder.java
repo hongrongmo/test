@@ -228,8 +228,8 @@ public class BDDocBuilder
 
 
 				//following field used for testing only, should be commented out after testing
-				//buildField(Keys.CORRESPONDING_AUTHORS,rset.getString("CORRESPONDENCENAME"),ht);
-				buildField(Keys.CORRESPONDING_EMAIL,getEmail(rset.getString("CORRESPONDENCEEADDRESS")),ht);
+				buildField(Keys.CORRESPONDING_AUTHORS,getCorAuthors(Keys.CORRESPONDING_AUTHORS,rset.getString("CORRESPONDENCENAME"),rset.getString("CORRESPONDENCEEADDRESS")),ht);
+				//buildField(Keys.CORRESPONDING_EMAIL,getEmail(rset.getString("CORRESPONDENCEEADDRESS")),ht);
 
 				eiDoc.setLoadNumber(rset.getInt("LOADNUMBER"));
 				list.add(eiDoc);
@@ -886,7 +886,31 @@ public class BDDocBuilder
 		}
 	}
 
+	private ElementData getCorAuthors(Key key,String authorString,String emailString) throws Exception
+	{
+		BdEditors editors = new BdEditors(authorString);
+		List editorList = editors.getEditors();
+		List editorNames = new ArrayList();
 
+		for(int i= 0;i<editorList.size();i++)
+		{
+			BdAuthor author = (BdAuthor)editorList.get(i);
+			Contributor persons = new Contributor(key,author.getDisplayName());
+
+			if(emailString!= null)
+			{
+				if(emailString.indexOf("email"+BdParser.IDDELIMITER)>-1 )
+				{
+					emailString = emailString.substring(emailString.indexOf(BdParser.IDDELIMITER)+1);
+				}
+
+				persons.setEmail(emailString);
+            }
+			editorNames.add(persons);
+		}
+		return new Contributors(key, editorNames);
+
+	}
 
 	private ElementData getClassification(Key key,String classCode, Database database) throws Exception
 	{
