@@ -445,7 +445,7 @@ public class ExtractPaperChem
 			cittext.append(BdParser.IDDELIMITER);
 			cittext.append(citTranslatedTitle);
 			cittext.append(BdParser.IDDELIMITER);
-			cittext.append("y");
+			cittext.append("n");
 			cittext.append(BdParser.IDDELIMITER);
 			cittext.append("eng");
 			cittext.append(BdParser.AUDELIMITER);
@@ -458,14 +458,7 @@ public class ExtractPaperChem
 		    cittext.append(BdParser.IDDELIMITER);
 		    cittext.append(citTitle);
 		    cittext.append(BdParser.IDDELIMITER);
-		    if(citTranslatedTitle == null)
-		    {
-		        cittext.append("y");
-		    }
-		    else
-		    {
-		        cittext.append("n");
-		    }
+		    cittext.append("y");
 		    cittext.append(BdParser.IDDELIMITER);
 		    cittext.append(lan);
 		    cittext.append(BdParser.AUDELIMITER);
