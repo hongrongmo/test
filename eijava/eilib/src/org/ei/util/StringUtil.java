@@ -1,5 +1,7 @@
 package org.ei.util;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.security.MessageDigest;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -12,6 +14,8 @@ import java.util.Iterator;
 import org.apache.oro.text.perl.Perl5Util;
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
+import java.util.zip.GZIPInputStream;
+import java.util.zip.GZIPOutputStream;
 
 import sun.misc.BASE64Encoder;
 
@@ -2819,5 +2823,67 @@ public class StringUtil {
                 }
         }
         return sb.toString();
+    }
+
+    public static String zipText(String s)
+    {
+        byte[] bytes = s.getBytes();
+        ByteArrayOutputStream bout = new ByteArrayOutputStream();
+        String zippedString = null;
+
+        try
+        {
+            GZIPOutputStream zip = new GZIPOutputStream(bout);
+            zip.write(bytes, 0, bytes.length);
+            zip.close();
+            char chars[] = Base64Coder.encode(bout.toByteArray());
+            zippedString = new String(chars);
+        }
+        catch (Exception ex)
+        {
+            ex.printStackTrace();
+        }
+
+        return zippedString;
+
+    }
+
+    /*
+     * Method returns Decoded - Uncompressed GZIP string
+     * If decode or unzip fails, input string is returned
+     * unmodified!
+     *
+     * If used 'by mistake' on uncompressed text, method will
+     * return input and will not fail.
+     */
+    public static String unZipText(String text)
+    {
+        StringBuffer buf = new StringBuffer();
+
+        try
+        {
+            byte[] decodedStr = Base64Coder.decode(text.toCharArray());
+            ByteArrayInputStream bytesIn = new ByteArrayInputStream(decodedStr);
+            GZIPInputStream in = null;
+
+            in = new GZIPInputStream(bytesIn);
+            byte[] bytes = new byte[1024];
+            int i = -1;
+            buf = new StringBuffer();
+            while ((i = in.read(bytes, 0, 1024)) != -1)
+            {
+                String a = new String(bytes, 0, i);
+                buf.append(a);
+            }
+
+        }
+        catch (Exception ex)
+        {
+            // Upon failure - return input string
+            buf = new StringBuffer(new String(text));
+            ex.printStackTrace();
+        }
+
+        return buf.toString();
     }
 }
