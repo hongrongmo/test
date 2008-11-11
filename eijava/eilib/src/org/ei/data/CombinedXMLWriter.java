@@ -94,15 +94,17 @@ public class CombinedXMLWriter
     }
     
     public CombinedXMLWriter(int recsPerbatch,
-                             int numberID,
-                             String databaseID)
+            int numberID,
+            String databaseID, 
+            String env)
     {
-        this.databaseID = databaseID;
+    	this.databaseID = databaseID;
         this.numberID = numberID;
         this.batchID = 1;
         formatter = new DecimalFormat("0000");        
         this.recsPerbatch = recsPerbatch;             
         this.lasteid = null;
+        this.environment = env;
         if(this.environment.equals("prod"))
         {
         	memcacheServers = "206.137.75.51:29999";
@@ -111,6 +113,38 @@ public class CombinedXMLWriter
         {
         	memcacheServers = "206.137.75.51:21201";
         }
+        memcacheWeights = "1";
+        String[] s = null;
+		String[] w = null;
+		if (memcached == null)
+		{
+			s = memcacheServers.split(",");
+			if (memcacheWeights !=  null) {
+				w = memcacheWeights.split(",");
+			}
+			memcached = new MemCached();
+			memcached.initialize(s, w);
+			if(memcached.getCounter(this.PARENT_ID) <= 0)
+			{
+				memcached.setID(this.PARENT_ID, 1);
+				System.out.println("WARNING: Reinitializing memcached counter to 1 for PARENTID in " + this.environment.toUpperCase() + " environment.");
+			}
+		}
+		if(numberID != 0)
+			init();
+    }
+    
+    public CombinedXMLWriter(int recsPerbatch,
+                             int numberID,
+                             String databaseID)
+    {
+        this.databaseID = databaseID;
+        this.numberID = numberID;
+        this.batchID = 1;
+        formatter = new DecimalFormat("0000");        
+        this.recsPerbatch = recsPerbatch;             
+        this.lasteid = null;               
+        memcacheServers = "206.137.75.51:21201";        
         memcacheWeights = "1";
         String[] s = null;
 		String[] w = null;
@@ -247,7 +281,7 @@ public class CombinedXMLWriter
     public void writeRec(EVCombinedRec rec)
         throws Exception
     {
-    	this.eid = rec.getString(EVCombinedRec.DOCID);    	    	        	
+    	this.eid = rec.getString(EVCombinedRec.DOCID);    	
         String [] temp = null;
         temp = this.eid.split("_");        
         if(this.lasteid != null)
