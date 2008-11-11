@@ -49,7 +49,7 @@ public class GeoRefCombiner
     int recsPerbatch = Integer.parseInt(args[5]);
     String operation = args[6];
     tablename = args[7];
-    String environment = args[8];
+    String environment = args[8].toLowerCase();
 
     try {
       loadNumber = Integer.parseInt(args[4]);
@@ -62,10 +62,9 @@ public class GeoRefCombiner
     
     CombinedWriter writer = new CombinedXMLWriter(recsPerbatch,
                                                   loadNumber,
-                                                  GRF_DATABASE.getIndexName());
+                                                  GRF_DATABASE.getIndexName(), environment);
     writer.setOperation(operation);
-    writer.setEnvironment(environment);
-    
+        
     GeoRefCombiner c = new GeoRefCombiner(writer);
     if(loadNumber > 200801)
     {
@@ -82,7 +81,7 @@ public class GeoRefCombiner
       {
     	System.out.println("Processing year " + yearIndex + "...");
         // create  a new writer so we can see the loadNumber/yearNumber in the filename
-        c = new GeoRefCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,GRF_DATABASE.getIndexName()));
+        c = new GeoRefCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,GRF_DATABASE.getIndexName(), environment));        
         c.writeCombinedByYear(url,
                             driver,
                             username,
@@ -107,7 +106,7 @@ public class GeoRefCombiner
     DataValidator d = new DataValidator();
     d.setErrorHandler(new LocalErrorHandler());
     d.setEntityResolver(new LocalEntityResolver());
-
+    
     ((CombinedXMLWriter) writer).setDataValidator(d);
 
   }
@@ -533,7 +532,25 @@ public class GeoRefCombiner
 									rs.getString("ISSUE_ID"),
 									pages));
 				rec.putIfNotNull(EVCombinedRec.STARTPAGE, getFirstPage(pages));
-				rec.putIfNotNull(EVCombinedRec.CODEN, rs.getString("CODEN"));
+				
+				// CODEN
+				String coden = rs.getString("CODEN");
+				if(coden != null)
+				{
+				  List codens = new ArrayList();
+				  String[] codenvalues = null;				  
+				  codenvalues = coden.split(AUDELIMITER);
+				  for(int x = 0 ; x < codenvalues.length; x++)
+				  {
+					  codens.add(codenvalues[x]);
+				  }				  
+				  if(!codens.isEmpty())
+				  {
+					rec.putIfNotNull(EVCombinedRec.CODEN, (String[]) codens.toArray(new String[]{}));
+				  }
+				}
+				
+				//rec.putIfNotNull(EVCombinedRec.CODEN, rs.getString("CODEN"));
 
 				rec.putIfNotNull(EVCombinedRec.CONFERENCE_NAME, rs.getString("NAME_OF_MEETING"));
 				rec.putIfNotNull(EVCombinedRec.MEETING_DATE, rs.getString("DATE_OF_MEETING"));
