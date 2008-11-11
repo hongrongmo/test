@@ -6,19 +6,14 @@
  */
 package org.ei.domain.navigators;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.zip.GZIPInputStream;
-import java.util.zip.GZIPOutputStream;
 
 import org.ei.connectionpool.ConnectionBroker;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.PageCacheException;
-import org.ei.util.Base64Coder;
 import org.ei.util.StringUtil;
 
 /**
@@ -99,18 +94,18 @@ public class NavigatorCache
             {
               flnav = nav.getNavigatorByName(EiNavigator.KY).toString();
             }
-            pstmt.setString(intStmtIndex++, zipText(flnav));
+            pstmt.setString(intStmtIndex++, StringUtil.zipText(flnav));
 
             String stnav = (nav.getNavigatorByName(EiNavigator.ST) != null) ? nav.getNavigatorByName(EiNavigator.ST).toString() : StringUtil.EMPTY_STRING;
             if(nav.getNavigatorByName(EiNavigator.BKT) != null)
             {
               stnav = nav.getNavigatorByName(EiNavigator.BKT).toString();
             }
-            pstmt.setString(intStmtIndex++, zipText(stnav));
+            pstmt.setString(intStmtIndex++, StringUtil.zipText(stnav));
 
-            pstmt.setString(intStmtIndex++, zipText((nav.getNavigatorByName(EiNavigator.PN) != null) ? nav.getNavigatorByName(EiNavigator.PN).toString() : StringUtil.EMPTY_STRING));
+            pstmt.setString(intStmtIndex++, StringUtil.zipText((nav.getNavigatorByName(EiNavigator.PN) != null) ? nav.getNavigatorByName(EiNavigator.PN).toString() : StringUtil.EMPTY_STRING));
 
-            pstmt.setString(intStmtIndex++, zipText((nav.getNavigatorByName(EiNavigator.AU) != null) ? nav.getNavigatorByName(EiNavigator.AU).toString() : StringUtil.EMPTY_STRING));
+            pstmt.setString(intStmtIndex++, StringUtil.zipText((nav.getNavigatorByName(EiNavigator.AU) != null) ? nav.getNavigatorByName(EiNavigator.AU).toString() : StringUtil.EMPTY_STRING));
             navstring = StringUtil.EMPTY_STRING;
             if(nav.getNavigatorByName(EiNavigator.AF) != null) {
               navstring = nav.getNavigatorByName(EiNavigator.AF).toString();
@@ -119,7 +114,7 @@ public class NavigatorCache
             {
               navstring = nav.getNavigatorByName(EiNavigator.GD).toString();
             }
-            pstmt.setString(intStmtIndex++, zipText(navstring));
+            pstmt.setString(intStmtIndex++, StringUtil.zipText(navstring));
 
 
             pstmt.setString(intStmtIndex++, (nav.getNavigatorByName(EiNavigator.DT) != null) ? nav.getNavigatorByName(EiNavigator.DT).toString() : StringUtil.EMPTY_STRING);
@@ -131,7 +126,7 @@ public class NavigatorCache
             {
               conav = nav.getNavigatorByName(EiNavigator.BKS).toString();
             }
-            pstmt.setString(intStmtIndex++, zipText(conav));
+            pstmt.setString(intStmtIndex++, StringUtil.zipText(conav));
 
             navstring = StringUtil.EMPTY_STRING;
             if(nav.getNavigatorByName(EiNavigator.PK) != null)
@@ -142,7 +137,7 @@ public class NavigatorCache
             {
               navstring = nav.getNavigatorByName(EiNavigator.IC).toString();
             }
-            pstmt.setString(intStmtIndex++, zipText(navstring));
+            pstmt.setString(intStmtIndex++, StringUtil.zipText(navstring));
 
             navstring = StringUtil.EMPTY_STRING;
             if(nav.getNavigatorByName(EiNavigator.PEC) != null)
@@ -254,23 +249,23 @@ public class NavigatorCache
                 sb.append(EiNavigator.NAVS_DELIM);
                 sb.append(rset.getString("CL"));
                 sb.append(EiNavigator.NAVS_DELIM);
-                sb.append(unZipText(rset.getString("FL")));
+                sb.append(StringUtil.unZipText(rset.getString("FL")));
                 sb.append(EiNavigator.NAVS_DELIM);
-                sb.append(unZipText(rset.getString("ST")));
+                sb.append(StringUtil.unZipText(rset.getString("ST")));
                 sb.append(EiNavigator.NAVS_DELIM);
-                sb.append(unZipText(rset.getString("PN")));
+                sb.append(StringUtil.unZipText(rset.getString("PN")));
                 sb.append(EiNavigator.NAVS_DELIM);
-                sb.append(unZipText(rset.getString("AU")));
+                sb.append(StringUtil.unZipText(rset.getString("AU")));
                 sb.append(EiNavigator.NAVS_DELIM);
-                sb.append(unZipText(rset.getString("AF")));
+                sb.append(StringUtil.unZipText(rset.getString("AF")));
                 sb.append(EiNavigator.NAVS_DELIM);
                 sb.append(rset.getString("DT"));
                 sb.append(EiNavigator.NAVS_DELIM);
                 sb.append(rset.getString("LA"));
                 sb.append(EiNavigator.NAVS_DELIM);
-                sb.append(unZipText(rset.getString("CO")));
+                sb.append(StringUtil.unZipText(rset.getString("CO")));
                 sb.append(EiNavigator.NAVS_DELIM);
-                sb.append(unZipText(rset.getString("PK")));
+                sb.append(StringUtil.unZipText(rset.getString("PK")));
                 sb.append(EiNavigator.NAVS_DELIM);
                 sb.append(rset.getString("PEC"));
                 sb.append(EiNavigator.NAVS_DELIM);
@@ -327,7 +322,7 @@ public class NavigatorCache
 
         return new ResultNavigator(sb.toString());
     }
-
+/*
     public String zipText(String s)
     {
         byte[] bytes = s.getBytes();
@@ -350,7 +345,7 @@ public class NavigatorCache
         return zippedString;
 
     }
-
+*/
     /*
      * Method returns Decoded - Uncompressed GZIP string
      * If decode or unzip fails, input string is returned
@@ -359,7 +354,7 @@ public class NavigatorCache
      * If used 'by mistake' on uncompressed text, method will
      * return input and will not fail.
      */
-    private String unZipText(String text)
+/*    private String unZipText(String text)
     {
         StringBuffer buf = new StringBuffer();
 
@@ -389,4 +384,5 @@ public class NavigatorCache
 
         return buf.toString();
     }
+*/
 }
