@@ -440,9 +440,9 @@ public class GeoRefCombiner
 					}
 					if(termcoordinates.length == 2)
 					{
+					 
 					  geoterms.add(termcoordinates[0]);
 					  coords = parseCoordinates(termcoordinates[1]);
-
 					  if(coords != null &&  coords[4].indexOf("-") == -1 && coords[3].indexOf("-") != -1)
 				      {
 						secondBoxCoords = parseCoordinates(termcoordinates[1]);
@@ -725,10 +725,11 @@ public class GeoRefCombiner
 
   private String[] parseCoordinates(String cs) throws Exception
   {
+	    cs = cs.replaceAll("[^a-zA-Z0-9]", "");
 		String coordString = cs.trim().replaceAll("([NEWS])","-$1");
 
 		String[] coords = coordString.split("-");
-		for(int i=1;i< coords.length;i++)
+		for(int i=1;i< 4;i++)
 		{
 			coords[i] = coords[i].replaceAll("[NE]","+").substring(0,coords[i].length()-4).replaceAll("\\+","");
 			coords[i] = coords[i].replaceAll("[WS]","-");
