@@ -35,7 +35,7 @@ public class Searches
     //protected static Log log = LogFactory.getLog(Searches.class);
     public static final int UNCOMPRESSED_LIMIT = 4000;
     public static final String COMPRESSION_INDICATOR = new String(new char[] {31});
-    
+
     private Searches()
     {
     };
@@ -132,14 +132,14 @@ public class Searches
             pstmt.setString(intStmtIndex++, query.getEmailAlert());
             pstmt.setString(intStmtIndex++, query.getSavedSearch());
             pstmt.setString(intStmtIndex++, query.getEmailAlertWeek());
-            
+
             String phrase1 = query.getSeaPhr1();
             String display_query = query.getDisplayQuery();
             if(phrase1.length() >= UNCOMPRESSED_LIMIT) {
               phrase1 = COMPRESSION_INDICATOR + StringUtil.zipText(phrase1);
               display_query = COMPRESSION_INDICATOR + StringUtil.zipText(display_query);
             }
-              
+
             pstmt.setString(intStmtIndex++, phrase1); // rset.getString("SEARCH_PHRASE_1")
             pstmt.setString(intStmtIndex++, query.getSeaPhr2()); //rset.getString("SEARCH_PHRASE_2")
             pstmt.setString(intStmtIndex++, query.getSeaPhr3()); //rset.getString("SEARCH_PHRASE_3")
@@ -489,7 +489,7 @@ public class Searches
 
 //              jam _ 'break_out' fields
                 query.setEmailAlertWeek(rset.getString("EMAILALERTWEEK"));
-                query.setSeaPhr1(localunZipText(rset.getString("SEARCH_PHRASE_1")));
+                query.setSeaPhr1(prepare_unZipText(rset.getString("SEARCH_PHRASE_1")));
                 query.setSeaPhr2(rset.getString("SEARCH_PHRASE_2"));
                 query.setSeaPhr3(rset.getString("SEARCH_PHRASE_3"));
                 query.setSeaOpt1(rset.getString("SEARCH_OPTION_1"));
@@ -506,14 +506,14 @@ public class Searches
 
                 query.setSortOption(new Sort(rset.getString("SORT_OPTION"), rset.getString("SORT_DIRECTION")));
 
-                query.setDisplayQuery(localunZipText(rset.getString("DISPLAY_QUERY")));
+                query.setDisplayQuery(prepare_unZipText(rset.getString("DISPLAY_QUERY")));
                 query.setDocumentType(rset.getString("DOCUMENT_TYPE"));
                 query.setTreatmentType(rset.getString("TREATMENT_TYPE"));
                 query.setDisciplineType(rset.getString("DISCIPLINE_TYPE"));
 
                 // jam - new limiter - ReferexCollections
                 query.setReferexCollections(new ReferexLimiter(rset.getString("RFRX_COLLS")));
-                
+
                 query.setLastFourUpdates(rset.getString("LASTUPDATES"));
                 query.setDupSet(rset.getString("DUPSET"));
                 query.setDeDup(rset.getString("DEDUP"));
@@ -661,7 +661,7 @@ public class Searches
 
 //              jam _ 'break_out' fields
                 query.setEmailAlertWeek(rset.getString("EMAILALERTWEEK"));
-                query.setSeaPhr1(localunZipText(rset.getString("SEARCH_PHRASE_1")));
+                query.setSeaPhr1(prepare_unZipText(rset.getString("SEARCH_PHRASE_1")));
                 query.setSeaPhr2(rset.getString("SEARCH_PHRASE_2"));
                 query.setSeaPhr3(rset.getString("SEARCH_PHRASE_3"));
                 query.setSeaOpt1(rset.getString("SEARCH_OPTION_1"));
@@ -676,7 +676,7 @@ public class Searches
                 query.setEndYear(rset.getString("END_YEAR"));
                 query.setAutoStemming(rset.getString("AUTOSTEMMING"));
                 query.setSortOption(new Sort(rset.getString("SORT_OPTION"), rset.getString("SORT_DIRECTION")));
-                query.setDisplayQuery(localunZipText(rset.getString("DISPLAY_QUERY")));
+                query.setDisplayQuery(prepare_unZipText(rset.getString("DISPLAY_QUERY")));
                 query.setDocumentType(rset.getString("DOCUMENT_TYPE"));
                 query.setTreatmentType(rset.getString("TREATMENT_TYPE"));
                 query.setDisciplineType(rset.getString("DISCIPLINE_TYPE"));
@@ -1037,7 +1037,7 @@ public class Searches
 
 //              jam _ 'break_out' fields
                 query.setEmailAlertWeek(rset.getString("EMAILALERTWEEK"));
-                query.setSeaPhr1(localunZipText(rset.getString("SEARCH_PHRASE_1")));
+                query.setSeaPhr1(prepare_unZipText(rset.getString("SEARCH_PHRASE_1")));
                 query.setSeaPhr2(rset.getString("SEARCH_PHRASE_2"));
                 query.setSeaPhr3(rset.getString("SEARCH_PHRASE_3"));
                 query.setSeaOpt1(rset.getString("SEARCH_OPTION_1"));
@@ -1054,7 +1054,7 @@ public class Searches
 
                 query.setSortOption(new Sort(rset.getString("SORT_OPTION"), rset.getString("SORT_DIRECTION")));
 
-                query.setDisplayQuery(localunZipText(rset.getString("DISPLAY_QUERY")));
+                query.setDisplayQuery(prepare_unZipText(rset.getString("DISPLAY_QUERY")));
                 query.setDocumentType(rset.getString("DOCUMENT_TYPE"));
                 query.setTreatmentType(rset.getString("TREATMENT_TYPE"));
                 query.setDisciplineType(rset.getString("DISCIPLINE_TYPE"));
@@ -1109,9 +1109,9 @@ public class Searches
         return combinesearches;
     }
 
-    private static String localunZipText(String text) {
+    public static String prepare_unZipText(String text) {
       if(text.startsWith(COMPRESSION_INDICATOR)) {
-        return StringUtil.unZipText(text);
+        return StringUtil.unZipText(text.substring(1));
       }
       else {
         return text;
