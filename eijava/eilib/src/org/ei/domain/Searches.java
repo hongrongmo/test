@@ -521,7 +521,7 @@ public class Searches
                 query.setDataBase(Integer.parseInt(rset.getString("MASK")));
                 query.setRefinements(new Refinements(rset.getString("REFINE_STACK")));
                 query.setResultsState(new ResultsState(rset.getString("RESULTS_STATE")));
-                out.write(query.toXMLString());
+                query.toXML(out);
             }
         }
         finally
@@ -625,11 +625,11 @@ public class Searches
     }
 
 
-    public static String getXMLSearch(String strSearchID) throws HistoryException
+/*    public static String getXMLSearch(String strSearchID) throws HistoryException
     {
         return (Searches.getSearch(strSearchID)).toXMLString();
     }
-
+*/
     public static Query getSearch(String strSearchID) throws HistoryException
     {
         ConnectionBroker broker = null;
