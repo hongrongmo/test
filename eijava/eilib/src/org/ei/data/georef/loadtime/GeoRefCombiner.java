@@ -31,7 +31,7 @@ public class GeoRefCombiner
   public static final String IDDELIMITER = GRFDocBuilder.IDDELIMITER;
   public String[] EVCombinedRecKeys = {EVCombinedRec.DATABASE, EVCombinedRec.AUTHOR, EVCombinedRec.EDITOR, EVCombinedRec.AUTHOR_AFFILIATION, EVCombinedRec.COUNTRY, EVCombinedRec.AFFILIATION_LOCATION, EVCombinedRec.LANGUAGE, EVCombinedRec.DOCTYPE, EVCombinedRec.ABSTRACT, EVCombinedRec.ISSN, EVCombinedRec.ISBN, EVCombinedRec.PUBLISHER_NAME, EVCombinedRec.INT_PATENT_CLASSIFICATION, EVCombinedRec.CONTROLLED_TERMS, EVCombinedRec.UNCONTROLLED_TERMS, EVCombinedRec.AVAILABILITY, EVCombinedRec.PUB_YEAR, EVCombinedRec.TITLE, EVCombinedRec.TRANSLATED_TITLE, EVCombinedRec.MONOGRAPH_TITLE, EVCombinedRec.SERIAL_TITLE, EVCombinedRec.CONFERENCE_LOCATION, EVCombinedRec.REPORTNUMBER, EVCombinedRec.CLASSIFICATION_CODE, EVCombinedRec.DEDUPKEY, EVCombinedRec.STARTPAGE, EVCombinedRec.CODEN, EVCombinedRec.CONFERENCE_NAME, EVCombinedRec.MEETING_DATE, EVCombinedRec.LOAD_NUMBER, EVCombinedRec.VOLUME, EVCombinedRec.ISSUE, EVCombinedRec.ACCESSION_NUMBER, EVCombinedRec.DOI, EVCombinedRec.PUB_SORT};
   Perl5Util perl = new Perl5Util();
- 
+
   private static String tablename;
   private static final Database GRF_DATABASE = new GRFDatabase();
   public static void main(String args[])
@@ -59,12 +59,12 @@ public class GeoRefCombiner
     }
 
     Combiner.TABLENAME = tablename;
-    
+
     CombinedWriter writer = new CombinedXMLWriter(recsPerbatch,
                                                   loadNumber,
                                                   GRF_DATABASE.getIndexName(), environment);
     writer.setOperation(operation);
-        
+
     GeoRefCombiner c = new GeoRefCombiner(writer);
     if(loadNumber > 200801)
     {
@@ -81,7 +81,7 @@ public class GeoRefCombiner
       {
     	System.out.println("Processing year " + yearIndex + "...");
         // create  a new writer so we can see the loadNumber/yearNumber in the filename
-        c = new GeoRefCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,GRF_DATABASE.getIndexName(), environment));        
+        c = new GeoRefCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,GRF_DATABASE.getIndexName(), environment));
         c.writeCombinedByYear(url,
                             driver,
                             username,
@@ -106,7 +106,7 @@ public class GeoRefCombiner
     DataValidator d = new DataValidator();
     d.setErrorHandler(new LocalErrorHandler());
     d.setEntityResolver(new LocalEntityResolver());
-    
+
     ((CombinedXMLWriter) writer).setDataValidator(d);
 
   }
@@ -121,7 +121,7 @@ public class GeoRefCombiner
     try
     {
       stmt = con.createStatement();
-      String sqlQuery = "select * from " + Combiner.TABLENAME + " where load_number ='" + weekNumber + "' AND load_number != 0 and load_number < 1000000";      
+      String sqlQuery = "select * from " + Combiner.TABLENAME + " where load_number ='" + weekNumber + "' AND load_number != 0 and load_number < 1000000";
       //String sqlQuery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7fcd2061377551'";
       //String sqlQuery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7fcd2061377551' or m_id='grf_1ee3914119594abb20M7fc72061377551'";
       //String sqlQuery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7ff02061377551'";
@@ -436,11 +436,11 @@ public class GeoRefCombiner
 						termcoordinates_tmp[0] = j + "";
 						termcoordinates_tmp[1] = termcoordinates[0];
 						termcoordinates = termcoordinates_tmp;
-						
+
 					}
 					if(termcoordinates.length == 2)
 					{
-					 
+
 					  geoterms.add(termcoordinates[0]);
 					  coords = parseCoordinates(termcoordinates[1]);
 					  if(coords != null &&  coords[4].indexOf("-") == -1 && coords[3].indexOf("-") != -1)
@@ -463,7 +463,7 @@ public class GeoRefCombiner
 						rec.put(EVCombinedRec.LAT_SW, coords[1]);
 						rec.put(EVCombinedRec.LNG_SW, coords[4]);
 					  }
-					}					
+					}
 				  }
 				  if(!geoterms.isEmpty())
 				  {
@@ -532,24 +532,24 @@ public class GeoRefCombiner
 									rs.getString("ISSUE_ID"),
 									pages));
 				rec.putIfNotNull(EVCombinedRec.STARTPAGE, getFirstPage(pages));
-				
+
 				// CODEN
 				String coden = rs.getString("CODEN");
 				if(coden != null)
 				{
 				  List codens = new ArrayList();
-				  String[] codenvalues = null;				  
+				  String[] codenvalues = null;
 				  codenvalues = coden.split(AUDELIMITER);
 				  for(int x = 0 ; x < codenvalues.length; x++)
 				  {
 					  codens.add(codenvalues[x]);
-				  }				  
+				  }
 				  if(!codens.isEmpty())
 				  {
 					rec.putIfNotNull(EVCombinedRec.CODEN, (String[]) codens.toArray(new String[]{}));
 				  }
 				}
-				
+
 				//rec.putIfNotNull(EVCombinedRec.CODEN, rs.getString("CODEN"));
 
 				rec.putIfNotNull(EVCombinedRec.CONFERENCE_NAME, rs.getString("NAME_OF_MEETING"));
@@ -729,8 +729,15 @@ public class GeoRefCombiner
 		String coordString = cs.trim().replaceAll("([NEWS])","-$1");
 
 		String[] coords = coordString.split("-");
-		for(int i=1;i< 4;i++)
+		for(int i=1;i< 5;i++)
 		{
+			if(coords[i].length() < 7)
+			{
+				int padCount = 8 - coords[i].length();
+				for(int p=0;p < padCount;p++)
+					coords[i] += "0";
+			}
+
 			coords[i] = coords[i].replaceAll("[NE]","+").substring(0,coords[i].length()-4).replaceAll("\\+","");
 			coords[i] = coords[i].replaceAll("[WS]","-");
 			if(coords[i].substring(0,1).indexOf("-") != -1)
