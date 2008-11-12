@@ -1,6 +1,10 @@
 package org.ei.domain;
 
 /** import statements of Java packages */
+import java.io.Writer;
+import java.io.FileWriter;
+import java.io.StringWriter;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -1739,81 +1743,12 @@ public class Query implements Comparable
     *
     * @return String The complete xml of this Object.
     */
-    public String toXMLString() throws HistoryException
+    public String toXMLString() throws HistoryException, IOException
     {
+        Writer strWriter = new StringWriter();
+        toXML(strWriter);
 
-        String sPhrase = "";
-
-        try
-        {
-            sPhrase = getSearchPhrase();
-        }
-        catch (Exception e)
-        {
-            throw new HistoryException(e);
-        }
-
-        StringBuffer strBufQueryXML = new StringBuffer();
-        strBufQueryXML.append("<SESSION-DATA>")
-        .append("<EMAILALERTWEEK>").append(strEmailAlertWeek).append("</EMAILALERTWEEK>")
-        .append("<SEARCH-PHRASE>").append(sPhrase).append("</SEARCH-PHRASE>")
-        .append("<RESULTS-COUNT>").append(getRecordCount()).append("</RESULTS-COUNT>")
-        .append("<LANGUAGE>").append(getLanguage()).append("</LANGUAGE>")
-        .append("<START-YEAR>").append(getStartYear()).append("</START-YEAR>")
-        .append("<END-YEAR>").append(getEndYear()).append("</END-YEAR>")
-        .append("<DATABASE-MASK>").append(mask).append("</DATABASE-MASK>")
-        .append("<AUTOSTEMMING>").append(getAutoStemming()).append("</AUTOSTEMMING>")
-
-        // jam - sort object contains XML representation of sort fields
-        .append(getSortOption().toXML())
-
-        .append("<SEARCH-TYPE>").append(getSearchType()).append("</SEARCH-TYPE>")
-        //jam - added properties which were being 'inserted' in SavedSearches class
-        // getXMLSavedSearches() method
-        .append("<SAVEDSEARCH>").append(getSavedSearch()).append("</SAVEDSEARCH>")
-        .append("<SAVEDSEARCH-DATE>").append(getDisplaySavedDate()).append("</SAVEDSEARCH-DATE>")
-        .append("<EMAIL-ALERT>").append(getEmailAlert()).append("</EMAIL-ALERT>")
-        .append("<CC-LIST>").append(getCCList()).append("</CC-LIST>")
-        .append("<VISIBLE>").append(getVisible()).append("</VISIBLE>")
-        .append("<USER-ID>").append(getUserID()).append("</USER-ID>")
-        .append("<SESSION-ID>").append(getSessionID()).append("</SESSION-ID>")
-        .append("<QUERY-ID>").append(getID()).append("</QUERY-ID>")
-        .append("<DISPLAY-QUERY>").append("<![CDATA[").append((getSearchType().equals(TYPE_EASY) ? getIntermediateQuery() : getDisplayQuery())).append("]]>").append("</DISPLAY-QUERY>")
-        .append("<I-QUERY>").append("<![CDATA[").append(getIntermediateQuery()).append("]]>").append("</I-QUERY>");
-        if(getReferexCollections() != null) {
-        	strBufQueryXML.append(getReferexCollections().toXML());
-  		}
-
-        strBufQueryXML.append("<DOCUMENT-TYPE>").append(getDocumentType()).append("</DOCUMENT-TYPE>")
-        .append("<TREATMENT-TYPE>").append(getTreatmentType()).append("</TREATMENT-TYPE>")
-        .append("<DISCIPLINE-TYPE>").append(getDisciplineType()).append("</DISCIPLINE-TYPE>")
-        .append("<LASTFOURUPDATES>").append(getLastFourUpdates()).append("</LASTFOURUPDATES>").append(getSubcountXML())
-		.append("<DUPSET>");
-
-		for(int i = 0; i < dupSet.size(); i++)
-		{
-			strBufQueryXML.append("<CRITERIA>");
-			String criteria = (String) dupSet.get(i);
-			String[] options = criteria.split(":");
-			if(options.length == 2)
-			{
-    			strBufQueryXML.append("<FIELDPREF>")
-    			.append(options[0])
-    			.append("</FIELDPREF>")
-    			.append("<DBPREF>")
-    			.append(options[1])
-    			.append("</DBPREF>");
-            }
-            strBufQueryXML.append("</CRITERIA>");
-		}
-
-		strBufQueryXML.append("</DUPSET>");
-        strBufQueryXML.append("<DEDUP>").append(isDeDupString()).append("</DEDUP>")
-        .append("<DEDUPDB>").append(getDeDupDB()).append("</DEDUPDB>")
-        .append(getRefinements().toXML())
-        .append("</SESSION-DATA>");
-
-        return strBufQueryXML.toString();
+        return strWriter.toString();
     }
 
     private String getSubcountXML()
@@ -2027,6 +1962,141 @@ public class Query implements Comparable
     public void setVisible(String string)
     {
         visible = string;
+    }
+
+    public void toXML(Writer out) throws HistoryException, IOException
+    {
+      System.out.println(" toXMLString(out) =================================== ");
+
+      String sPhrase = "";
+
+      try
+      {
+        sPhrase = getSearchPhrase();
+      }
+      catch (Exception e)
+      {
+        throw new HistoryException(e);
+      }
+
+        out.write("<SESSION-DATA>");
+        out.write("<EMAILALERTWEEK>");
+        out.write(strEmailAlertWeek);
+        out.write("</EMAILALERTWEEK>");
+        out.write("<SEARCH-PHRASE>");
+        out.write(sPhrase);
+        out.write("</SEARCH-PHRASE>");
+        out.write("<RESULTS-COUNT>");
+        out.write(getRecordCount());
+        out.write("</RESULTS-COUNT>");
+        out.write("<LANGUAGE>");
+        out.write(getLanguage());
+        out.write("</LANGUAGE>");
+        out.write("<START-YEAR>");
+        out.write(getStartYear());
+        out.write("</START-YEAR>");
+        out.write("<END-YEAR>");
+        out.write(getEndYear());
+        out.write("</END-YEAR>");
+        out.write("<DATABASE-MASK>");
+        out.write(String.valueOf(mask));
+        out.write("</DATABASE-MASK>");
+        out.write("<AUTOSTEMMING>");
+        out.write(getAutoStemming());
+        out.write("</AUTOSTEMMING>");
+
+        // jam - sort object contains XML representation of sort fields
+        out.write(getSortOption().toXML());
+
+        out.write("<SEARCH-TYPE>");
+        out.write(getSearchType());
+        out.write("</SEARCH-TYPE>");
+        //jam - added properties which were being 'inserted' in SavedSearches class
+        // getXMLSavedSearches() method
+        out.write("<SAVEDSEARCH>");
+        out.write(getSavedSearch());
+        out.write("</SAVEDSEARCH>");
+        out.write("<SAVEDSEARCH-DATE>");
+        out.write(getDisplaySavedDate());
+        out.write("</SAVEDSEARCH-DATE>");
+        out.write("<EMAIL-ALERT>");
+        out.write(getEmailAlert());
+        out.write("</EMAIL-ALERT>");
+        out.write("<CC-LIST>");
+        out.write(getCCList());
+        out.write("</CC-LIST>");
+        out.write("<VISIBLE>");
+        out.write(getVisible());
+        out.write("</VISIBLE>");
+        out.write("<USER-ID>");
+        out.write(getUserID());
+        out.write("</USER-ID>");
+        out.write("<SESSION-ID>");
+        out.write(getSessionID());
+        out.write("</SESSION-ID>");
+        out.write("<QUERY-ID>");
+        out.write(getID());
+        out.write("</QUERY-ID>");
+        out.write("<DISPLAY-QUERY>");
+        out.write("<![CDATA[");
+        out.write((getSearchType().equals(TYPE_EASY) ? getIntermediateQuery() : getDisplayQuery()));
+        out.write("]]>");
+        out.write("</DISPLAY-QUERY>");
+        out.write("<I-QUERY>");
+        out.write("<![CDATA[");
+        out.write(getIntermediateQuery());
+        out.write("]]>");
+        out.write("</I-QUERY>");
+
+        if(getReferexCollections() != null)
+        {
+          out.write(getReferexCollections().toXML());
+        }
+
+        out.write("<DOCUMENT-TYPE>");
+        out.write(getDocumentType());
+        out.write("</DOCUMENT-TYPE>");
+        out.write("<TREATMENT-TYPE>");
+        out.write(getTreatmentType());
+        out.write("</TREATMENT-TYPE>");
+        out.write("<DISCIPLINE-TYPE>");
+        out.write(getDisciplineType());
+        out.write("</DISCIPLINE-TYPE>");
+        out.write("<LASTFOURUPDATES>");
+        out.write(getLastFourUpdates());
+        out.write("</LASTFOURUPDATES>");
+        out.write(getSubcountXML());
+        out.write("<DUPSET>");
+
+        for(int i = 0; i < dupSet.size(); i++)
+        {
+          out.write("<CRITERIA>");
+          String criteria = (String) dupSet.get(i);
+          String[] options = criteria.split(":");
+          if(options.length == 2);
+          {
+            out.write("<FIELDPREF>");
+            out.write(options[0]);
+            out.write("</FIELDPREF>");
+            out.write("<DBPREF>");
+            out.write(options[1]);
+            out.write("</DBPREF>");
+          }
+          out.write("</CRITERIA>");
+        }
+
+        out.write("</DUPSET>");
+        out.write("<DEDUP>");
+        out.write(isDeDupString());
+        out.write("</DEDUP>");
+        out.write("<DEDUPDB>");
+        out.write(getDeDupDB());
+        out.write("</DEDUPDB>");
+        out.write(getRefinements().toXML());
+        out.write("</SESSION-DATA>");
+
+
+      return;
     }
 
 }
