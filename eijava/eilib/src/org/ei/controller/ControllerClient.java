@@ -22,6 +22,7 @@ public class ControllerClient
     private String redirectURL;
     private String contentDispositionFilename;
     private String view;
+    public static final int HTTP_HEADER_MAX_LENGTH = 4096;
 
     public ControllerClient(HttpServletRequest request, HttpServletResponse response)
     {
@@ -129,7 +130,12 @@ public class ControllerClient
             for(int i=0; i<comments.size();++i)
             {
                 //System.out.println("Setting:"+(String)comments.get(i));
-                response.setHeader("COMMENT"+i, (String)comments.get(i));
+                String strcomment = (String)comments.get(i);
+                if(strcomment.length() >= HTTP_HEADER_MAX_LENGTH)
+                {
+                  strcomment = "Comment too long for header.";
+                }
+                response.setHeader("COMMENT"+i, (String) strcomment);
             }
         }
 
@@ -138,7 +144,12 @@ public class ControllerClient
         while(en.hasMoreElements())
         {
             String lKey = (String)en.nextElement();
-            response.setHeader("LOG."+lKey, logProps.getProperty(lKey));
+            String strlogdata = (String) logProps.getProperty(lKey);
+            if(strlogdata.length() >= HTTP_HEADER_MAX_LENGTH)
+            {
+              strlogdata = "Log data too long for header.";
+            }
+            response.setHeader("LOG."+lKey, strlogdata);
         }
 
         if(updatedSession != null)
