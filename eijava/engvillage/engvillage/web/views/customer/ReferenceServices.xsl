@@ -7,6 +7,9 @@
 	exclude-result-prefixes="java html xsl"
 >
 
+
+<xsl:output method="html" indent="no" doctype-public="-//W3C//DTD XHTML 1.0 Transitional//EN"/>
+
 <xsl:include href="Header.xsl"/>
 <xsl:include href="GlobalLinks.xsl"/>
 <xsl:include href="Footer.xsl"/>
@@ -25,11 +28,64 @@
 	<xsl:value-of select="REFEMAIL"/>
 </xsl:variable>
 
-<html>
-
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 <title>Engineering Village - Ask an Expert</title>
-<SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
+    <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
+    <script type="text/JavaScript" language="JavaScript">
+    <xsl:comment>
+		<![CDATA[
+    function MM_preloadImages() { //v3.0
+      var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+        var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+        if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+    }
+
+    function MM_findObj(n, d) { //v4.01
+      var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+        d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+      if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+      for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+      if(!x && d.getElementById) x=d.getElementById(n); return x;
+    }
+
+    function MM_nbGroup(event, grpName) { //v6.0
+      var i,img,nbArr,args=MM_nbGroup.arguments;
+      if (event == "init" && args.length > 2) {
+        if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+          img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+          if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+          nbArr[nbArr.length] = img;
+          for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+            if (!img.MM_up) img.MM_up = img.src;
+            img.src = img.MM_dn = args[i+1];
+            nbArr[nbArr.length] = img;
+        } }
+      } else if (event == "over") {
+        document.MM_nbOver = nbArr = new Array();
+        for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+          if (!img.MM_up) img.MM_up = img.src;
+          img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+          nbArr[nbArr.length] = img;
+        }
+      } else if (event == "out" ) {
+        for (i=0; i < document.MM_nbOver.length; i++) {
+          img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+      } else if (event == "down") {
+        nbArr = document[grpName];
+        if (nbArr)
+          for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+        document[grpName] = nbArr = new Array();
+        for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+          if (!img.MM_up) img.MM_up = img.src;
+          img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+          nbArr[nbArr.length] = img;
+      } }
+    }
+		]]>
+    // </xsl:comment>
+    </script>
 </head>
 
 <body bgcolor="#FFFFFF" topmargin="0" marginheight="0" marginwidth="0">
@@ -37,7 +93,7 @@
 <center>
 
     <xsl:apply-templates select="HEADER"/>
-		
+
 		<!-- Insert the Global Link table -->
 		<xsl:apply-templates select="GLOBAL-LINKS">
 			<xsl:with-param name="SESSION-ID" select="$SESSION-ID"/>
@@ -50,266 +106,14 @@
     	<tr><td valign="middle" height="24" bgcolor="#C3C8D1"><img src="/engresources/images/s.gif" border="0"/></td></tr>
     </table>
 
-  <xsl:choose>
-    <xsl:when test="boolean(string-length(normalize-space($REFEMAIL))>0)">
 
-    	<table border="0" cellspacing="0" cellpadding="0" width="100%">
-    		<tr><td height="20"><img src="/engresources/images/spacer.gif" height="20"/></td></tr>
-    		<tr><td valign="top"><a class="EvHeaderText">Ask an Expert</a></td></tr>
-    		<tr><td valign="top"><a CLASS="MedBlackText">If you have searched Engineering Village and cannot find the information you need, Reference Services offers two forms of assistance:</a><br/>
-    			<a class="LgBlueLink" href="#librarian">Ask a Librarian</a><br/>
-    			<a class="LgBlueLink" href="#engineer">Ask an Engineer</a>
-    			
-    		<p>
-    		<a NAME="librarian" class="MedBlackText"><b>Ask a Librarian</b><br/>
-    		Your librarian can help you formulate a search in Engineering Village, identify and locate a source for a book or an article, or find Internet resources on a specific topic.</a>
-    
-    		</p>
-    
-    		<p>
-    			<a CLASS="MedBlackText">To send a question to your librarian, click </a><a CLASS="LgBlueLink" href="{$REFEMAIL}">here</a>.
-    		</p>
-    		
-    		<p>
-    			<a NAME="engineer" class="MedBlackText"><b>Ask an Engineer</b> <br/>
-    			Our Engineers will draw on their professional knowledge and experience to answer your technical questions and to point you to the appropriate companies, consultants, research institutes, Web sites, and other resources that can help you solve your problem.</a>
-    		</p>
-    		
-    		<p>
-    			<a class="MedBlackText">To send a question to one of the engineers, simply click on the e-mail address next to engineer's name and type in your question in the e-mail message window that opens.</a>
-    		</p>
-    		
-    		<p>
-    			<a class="MedBlackText">All <b>Ask and Engineer</b> assistance is provided as a complementary service to subscribers of Engineering Village</a>
-    		</p>
-    		
-    		<p>
-    			<a class="MedBlackText"><b>Meet the Engineers</b></a>
-    		</p>
-    		
-    		<p>
-    			<a class="MedBlackText"><b>Ryo Samuel Amano</b></a> &#160; &#160; <a class="LgBlueLink" href="mailto:fluidguru@ei.org">fluidguru@ei.org</a><br/>
-    			<a class="MedBlackText">Mechanical Engineering<br/>
-    			Fluid Mechanics and Thermodynamics professor, Department of Mechanical Engineering, University of Wisconsin-Milwaukee
-    			<br/><br/>
-    			<i>Areas of expertise:</i> CFD, aerodynamics, gas/steam turbines, fluid mechanics/fluid dynamics, rocket/propulsion systems, heat transfer/heat exchangers/engines</a>
-    		</p>
-    		
-    		<p>
-    			<a class="MedBlackText"><b>Robert D. Borchelt</b></a>&#160; &#160; <a class="LgBlueLink" href="mailto:manguru@ei.org">manguru@ei.org</a><br/>
-    			<a class="MedBlackText">Manufacturing Engineering<br/>
-    			Master Black Belt Design for Six Sigma, Cummins Inc.<br/>
-    			Formerly Technical Advisor for Assembly and Automation in the Corporate Manufacturing Engineering Group, Cummins Inc.
-    			<br/><br/>
-    			<i>Areas of expertise:</i> computer integrated manufacturing, automation and advanced manufacturing systems, artificial intelligence applications in robotics and manufacturing, automated diagnosis and error recovery, hybrid knowledge-based systems, programmable logic controller applications, physical modeling of manufacturing systems, engineering management issues related to manufacturing, manufacturing processes, systems integration, expert systems, electronic identification of components, direct part marking, design for six sigma methods, six sigma methods</a>
-    		</p>
-    		
-    		<p>
-    			<a class="MedBlackText"><b>Chi Hau Chen</b></a>&#160; &#160; <a class="LgBlueLink" href="mailto:spquru@ei.org">spquru@ei.org</a><br/>
-    			<a class="MedBlackText">Signal and Image Processing<br/>
-    			Chancellor Professor, Electrical and Computer Engineering, University of Massachusetts 
-    			<br/><br/>
-    			<i>Areas of expertise:</i> pattern recognition, signal/image processing and neural networks, applications to ultrasonic/nondestructive evaluation (NDE), and seismic problems, machine vision, artificial intelligence, time series analysis, wavelet analysis</a>
-    		</p>
-    		
-    		<p>
-    			<a class="MedBlackText"><b>Donald W. Merino, Jr.</b></a>&#160; &#160; <a class="LgBlueLink" href="mailto:tqmguru@ei.org">tqmguru@ei.org</a><br/>
-    			<a class="MedBlackText">Industrial Engineering / Engineering Management
-    			<br/><br/> 
-    			<i>Areas of expertise:</i> production operations, process flow/optimization, process simulation, capital allocation, cost models, concurrent engineering, SQC/SPC (Statistical Quality Control/Statistical Process Control) and applied statistics, TQM philosophy, benchmarking, DOE (Design of Experiments), QFD (Quality Function Deployment), cost of quality, economic/non-economic decision making, optimization </a>
-    		</p>
-    		
-    		<p>
-    			<a class="MedBlackText"><b>Ronald A. Perez</b></a>&#160; &#160; <a class="LgBlueLink" href="mailto:autoguru@ei.org">autoguru@ei.org</a><br/>
-    			<a class="MedBlackText">Mechanical Engineering<br/>
-    			Mechanics, mechanisms, and automation associate professor, Department of Mechanical Engineering, University of Wisconsin 
-    			<br/><br/>
-    			Areas of expertise: control theory and applications, robust multivariable control, nonlinear control, robotics, system modeling, interaction analysis, intelligent control</a>
-    		</p>
-    		
-    		<p>
-    			<a class="MedBlackText"><b>Kanti Prasad</b></a>&#160; &#160; <a class="LgBLueLink" href="mailto:eeguru@ei.org">eeguru@ei.org</a><br/>
-    			<a class="MedBlackText">Electrical Engineering<br/>
-    			Professor, electrical engineering, and director, Microelectronics/VLSI Technology, University of Massachusetts
-    			<br/><br/> 
-    			<i>Areas of expertise:</i> VLSI chip design incorporating microprocessors, controls, communications, intelligent transportation systems, GPS, computer networks, LANs, including wireless LANs, VLSI fabrication incorporating microelectronics processing such as lithography oxidation, diffusion, implantation, and metallization for silicon as well as GaAs technology including packing and reliability analysis, digital and analog design employing VHDL incorporating test and simulation I entirety, i.e., exhaustive testing and simulation with statistically fast and event driven simulators </a>
-    		</p>
-    		
-    		<p>
-    			<a class="MedBlackText"><b>Gregory A. Sedrick</b></a>&#160; &#160; <a class="LgBlueLink" href="mailto:induguru@ei.org">induguru@ei.org </a><br/>
-    			<a class="MedBlackText">Industrial and Manufacturing Engineering<br/>
-    			Director, The CROPIS New Economy Institute (formerly Dean College of Engineering and Computer Science University of Tennessee at Chattanooga, Dean School of Engineering and Engineering Technology, LeTourneau University, and Vice President Academic Affairs, Chattanooga State Technical Community College.) 
-    			<br/><br/>
-    			<i>Areas of expertise:</i> lean manufacturing, six sigma, advanced technology incubation and commercial spin-off, intellectual properties, value engineering,  plant layout, work measurement, engineering economy, work design and improvement, methods improvement, small manufacturing, multimedia-based corporate training in above areas, Baldridge Award preparation/judging, TQM (Total Quality Management), ISO 9000, ISO 9000 certification</a>
-    		</p>
-    		
-    		<p>
-    			<a class="MedBlackText"><b>Keith Sheppard</b></a>&#160; &#160; <a class="LgBLueLink" href="mailto:materials2guru@ei.org">materials2guru@ei.org</a><br/>
-    			<a class="MedBlackText">Materials Engineering<br/>
-    			Professor of Materials Science and Engineering, Stevens Institute of Technology
-    			<br/><br/> 
-    			<i>Areas of expertise:</i> corrosion, electro-deposition, failure of materials, materials characterization, especially scanning and transmission electron microscopy, materials selection, materials processing </a>
-    		</p>
-    		
-    		<p>
-    			<a class="MedBlackText"><b>Earl E. Swartzlander, Jr.</b></a>&#160; &#160; <a class="LgBlueLink" href="mailto:compengguru@ei.org">compengguru@ei.org</a><br/>
-    			<a class="MedBlackText">Computer Engineering<br/>
-    			Professor, Electrical and Computer Engineering, and Schlumberger Centennial Chair in Engineering, University of Texas
-    			<br/><br/> 
-    			<i>Areas of expertise:</i> computer engineering, computer arithmetic, application specific processing, interaction between computer architecture and VLSI technology, signal processing </a>
-    		</p>
-    
-    		</td></tr>
-    	</table>
-    </xsl:when>
-    <xsl:otherwise>
-      <table border="0" width="99%" cellspacing="0" cellpadding="0">
-      <tr><td valign="top" height="20"><img src="/engresources/images/spacer.gif" height="20" border="0"/></td></tr>
-      <tr><td valign="top"><a class="EvHeaderText">Ask an Expert</a></td></tr>
-      <tr><td valign="top" height="10"><img src="/engresources/images/spacer.gif" height="10" border="0"/></td></tr>
-      <tr>
-      <td valign="top">
-      <a class="MedBlackText">If you have searched Engineering Village and cannot find the information you need, Reference Services offers two forms of assistance:</a><br/>
-      &#32; &#32; &#32; <a class="LgBlueLink" href="#Librarian">Ask a Librarian </a><br/>
-      &#32; &#32; &#32; <a class="LgBlueLink" href="#Engineer">Ask an Engineer. </a>
-      
-      <p>
-      <a class="MedBlackText">All assistance is provided as a complementary service to subscribers of Engineering Village</a>
-      </p>
-      
-      <P>
-      <a NAME="Librarian" class="MedBlackText"><b>Ask a Librarian</b><br/>
-      Elsevier Engineering Information's librarians can help you formulate a search in Engineering Village, identify and locate a source for a book or an article, or find Internet resources on a specific topic. </a>
-      </P>
-      
-      <P>
-      <a class="MedBlackText">Questions can also be referred out to the specialists at the Linda Hall Library.  If you would like to send questions to the Linda Hall staff, please indicate this in your request to Ask a Librarian.</a>
-      </P>
-      
-      <p>
-      <a class="MedBlackText"><b>Ask a Librarian e-mail: </b> </a> <a class="LgBlueLink" href="mailto:engineeringlibrarian@ei.org">engineeringlibrarian@ei.org</a>
-      </p>
-      
-      <p>
-      <a class="MedBlackText"><b>Training</b><br/>
-      Elsevier Engineering Information's librarians provide regular training sessions via the Internet to customers and end users of Engineering Village. To sign up for a training session please contact </a><a class="LgBlueLink" href="mailto:eicustomersupport@elsevier.com">eicustomersupport@elsevier.com.</a>
-      </p>
-      
-      <p>
-      <a class="MedBlackText">
-      These training sessions are given live online and hosted by the Ei librarian. You must have simultaneous access to an Internet connection using either Internet Explorer or Netscape browsers and a voice phone line to carry the audio. Calls from within the United States and Canada are toll free. </a>
-      </p>
-      
-      <p>
-      <a class="MedBlackText">
-      Internet based training on Engineering Village is provided as a complementary service and is included in the library's subscription to the service.</a>
-      </p>
-      
-      <P>
-      <a NAME="Engineer" class="MedBlackText"><b>Ask an Engineer </b><br/>
-      Our Senior Engineers will draw on their professional knowledge and experience to answer your technical questions and to point you to the appropriate companies, consultants, research institutes, Web sites, and other resources that can help you solve your problem.</a>
-      </P>
-      
-      <P>
-      <a class="MedBlackText">To send a question to one of the engineers, simply click on the e-mail address next to engineer's name and type in your question in the e-mail message window that opens.</a><br/>
-      </P>
-      
-      <P>
-      <a class="MedBlackText"><b>Meet the Engineers</b></a>
-      </P>
-      </td></tr>
-      <tr><td valign="top" height="15"><img src="/engresources/images/spacer.gif" height="15" border="0"/></td></tr>
-      <tr><td valign="top">
-      <a class="MedBlackText"><b>Ryo Samuel Amano</b></a>&#160; &#160; <a class="LgBlueLink" href="mailto:fluidguru@ei.org">fluidguru@ei.org</a><br/>
-      <a class="MedBlackText">Mechanical Engineering<br/>
-      Fluid and thermodynamics professor, Department of Mechanical Engineering, University of Wisconsin-Milwaukee</a></td></tr>
-      <tr><td valign="top" height="5"><img src="/engresources/images/spacer.gif" height="5" border="0"/></td></tr>
-      <tr><td valign="top"><a class="MedBlackText"><i>Areas of expertise</i>: aerodynamics, gas/steam turbines, fluid mechanics/fluid dynamics, rocket/propulsion systems, heat transfer/heat exchangers/engines</a>
-      </td></tr>
-      
-      
-      <tr><td valign="top" height="25"><img src="/engresources/images/spacer.gif" height="25" border="0"/></td></tr>
-      <tr><td valign="top">
-      <a class="MedBlackText"><b>Robert D. Borchelt</b></a>&#160; &#160; <a class="LgBlueLink" href="mailto:manguru@ei.org">manguru@ei.org</a><br/>
-      <a class="MedBlackText">Manufacturing Engineering<br/>
-      Technical advisor for assembly and automation in the Corporate Operations Analysis Group, Cummins Engine Company</a></td></tr>
-      <tr><td valign="top" height="5"><img src="/engresources/images/spacer.gif" height="5" border="0"/></td></tr>
-      <tr><td valign="top"><a class="MedBlackText"><i>Areas of expertise</i>: computer integrated manufacturing, automation and advanced manufacturing systems, artificial intelligence applications in robotics and manufacturing, automated diagnosis and error recovery, hybrid knowledge-based systems, programmable logic controller applications, physical modeling of manufacturing systems, engineering management issues related to manufacturing, manufacturing processes, systems integration, expert systems </a></td></tr>
-      
-      
-      <tr><td valign="top" height="25"><img src="/engresources/images/spacer.gif" height="25" border="0"/></td></tr>
-      <tr><td valign="top">
-      <a class="MedBlackText"><b>Chi Hau Chen</b></a>&#160; &#160; <a class="LgBlueLink" href="mailto:spguru@ei.org">spguru@ei.org</a><br/>
-      <a class="MedBlackText">Signal Processing<br/>
-      Signal processing professor, Electrical and Computer Engineering, University of Massachusetts</a></td></tr>
-      <tr><td valign="top" height="5"><img src="/engresources/images/spacer.gif" height="5" border="0"/></td></tr>
-      <tr><td valign="top"><a class="MedBlackText"><i>Areas of expertise</i>: pattern recognition, signal/image processing and neural networks, applications to ultrasonic/nondestructive evaluation (NDE), sonar, radar, and seismic problems, machine vision, artificial intelligence, time series analysis, wavelet analysis
-      </a></td></tr>
-      
-      
-      <tr><td valign="top" height="25"><img src="/engresources/images/spacer.gif" height="25" border="0"/></td></tr>
-      <tr><td valign="top">
-      <a class="MedBlackText"><b>Donald W. Merino, Jr.</b></a>&#160; &#160; <a class="LgBlueLink" href="mailto:tqmguru@ei.org">tqmguru@ei.org</a><br/>
-      <a class="MedBlackText">Industrial Engineering / Engineering Management</a></td></tr>
-      <tr><td valign="top" height="5"><img src="/engresources/images/spacer.gif" height="5" border="0"/></td></tr>
-      <tr><td valign="top"><a class="MedBlackText"><i>Areas of expertise</i>: production operations, process flow/optimization, process simulation, capital allocation, cost models, concurrent engineering, SQC/SPC (Statistical Quality Control/Statistical Process Control) and applied statistics, TQM philosophy, benchmarking, DOE (Design of Experiments), QFD (Quality Function Deployment), cost of quality, economic/non-economic decision making, optimization
-      </a></td></tr>
-      
-      
-      <tr><td valign="top" height="25"><img src="/engresources/images/spacer.gif" height="25" border="0"/></td></tr>
-      <tr><td valign="top">
-      <a class="MedBlackText"><b>Ronald A. Perez</b></a>&#160; &#160; <a class="LgBlueLink" href="mailto:autoguru@ei.org">autoguru@ei.org</a><br/>
-      <a class="MedBlackText">Mechanical Engineering<br/>
-      Mechanics, mechanisms, and automation assistant professor, Department of Mechanical Engineering, University of Wisconsin</a></td></tr>
-      <tr><td valign="top" height="5"><img src="/engresources/images/spacer.gif" height="5" border="0"/></td></tr>
-      <tr><td valign="top"><a class="MedBlackText"><i>Areas of expertise</i>: control theory and applications, robust multivariable control, nonlinear control, robotics, system modeling, interaction analysis, intelligent contro
-      </a></td></tr>
-      
-      
-      <tr><td valign="top" height="25"><img src="/engresources/images/spacer.gif" height="25" border="0"/></td></tr>
-      <tr><td valign="top">
-      <a class="MedBlackText"><b>Kanti Prasad</b></a>&#160; &#160; <a class="LgBlueLink" href="mailto:eeguru@ei.org">eeguru@ei.org</a><br/>
-      <a class="MedBlackText">Electrical Engineering<br/>
-      Professor, electrical engineering, and director, Microelectronics/VLSI Technology, University of Massachusetts</a></td></tr>
-      <tr><td valign="top" height="5"><img src="/engresources/images/spacer.gif" height="5" border="0"/></td></tr>
-      <tr><td valign="top"><a class="MedBlackText"><i>Areas of expertise</i>: VLSI chip design incorporating microprocessors, controls, communications, intelligent transportation systems, GPS, computer networks, LANs, including wireless LANs, VLSI fabrication incorporating microelectronics processing such as lithography oxidation, diffusion, implantation, and metallization for silicon as well as GaAs technology including packing and reliability analysis, digital and analog design employing VHDL incorporating test and simulation I entirety, i.e., exhaustive testing and simulation with statistically fast and event driven simulators
-      </a></td></tr>
-      
-      
-      <tr><td valign="top" height="25"><img src="/engresources/images/spacer.gif" height="25" border="0"/></td></tr>
-      <tr><td valign="top">
-      <a class="MedBlackText"><b>Gregory A. Sedrick</b></a>&#160; &#160; <a class="LgBlueLink" href="mailto:induguru@ei.org">induguru@ei.org</a><br/>
-      <a class="MedBlackText">Industrial and Manufacturing Engineering<br/>
-      UC Foundation assistant professor and director, Engineering Management, Industrial and Manufacturing Engineering Programs, University of Tennessee</a></td></tr>
-      <tr><td valign="top" height="5"><img src="/engresources/images/spacer.gif" height="5" border="0"/></td></tr>
-      <tr><td valign="top"><a class="MedBlackText"><i>Areas of expertise</i>: TQM (Total Quality Management), ISO 9000, ISO 9000 certification, work measurement, engineering economy, work design and improvement, methods improvement, small manufacturing, multimedia-based corporate training in above areas, Baldridge Award preparation/judging
-      </a></td></tr>
-      
-      
-      <tr><td valign="top" height="25"><img src="/engresources/images/spacer.gif" height="25" border="0"/></td></tr>
-      <tr><td valign="top">
-      <a class="MedBlackText"><b>Keith Sheppard</b></a>&#160; &#160; <a class="LgBlueLink" href="mailto:materials2guru@ei.org">materials2guru@ei.org</a><br/>
-      <a class="MedBlackText">Materials Engineering<br/>
-      Professor of Materials Science and Engineering, Stevens Institute of Technology</a></td></tr>
-      <tr><td valign="top" height="5"><img src="/engresources/images/spacer.gif" height="5" border="0"/></td></tr>
-      <tr><td valign="top"><a class="MedBlackText"><i>Areas of expertise</i>: corrosion, electro-deposition, failure of materials, materials characterization, especially scanning and transmission electron microscopy, materials selection, materials processing
-      </a></td></tr>
-      
-      
-      <tr><td valign="top" height="25"><img src="/engresources/images/spacer.gif" height="25" border="0"/></td></tr>
-      <tr><td valign="top">
-      <a class="MedBlackText"><b>Earl E. Swartzlander, Jr. </b></a>&#160; &#160; <a class="LgBlueLink" href="mailto:compengguru@ei.org">compengguru@ei.org</a><br/>
-      <a class="MedBlackText">Computer Engineering<br/>
-      Professor, Electrical and Computer Engineering, and Schlumberger Centennial Chair in Engineering, University of Texas</a></td></tr>
-      <tr><td valign="top" height="5"><img src="/engresources/images/spacer.gif" height="5" border="0"/></td></tr>
-      <tr><td valign="top"><a class="MedBlackText"><i>Areas of expertise</i>: computer engineering, computer arithmetic, application specific processing, interaction between computer architecture and VLSI technology, signal processing
-      </a></td></tr>
-      </table>
-    
-    </xsl:otherwise>
-  </xsl:choose>
-
-  <br/><br/>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><a href="javascript:;" target="_top" onclick="MM_nbGroup('down','group1','_1','/engresources/images/halftone_menu/1.jpg',0)" onmouseover="MM_nbGroup('over','_1','/engresources/images/halftone_menu/1_over.jpg','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/halftone_menu/1.jpg" alt="" name="_1" width="306" height="451" border="0" id="_1" onload="MM_nbGroup('init','group1','_1','/engresources/images/halftone_menu/1_gost.jpg',0)" /></a></td>
+    <td><a href="javascript:;" target="_top" onclick="MM_nbGroup('down','group1','_2','/engresources/images/halftone_menu/2.jpg',0)" onmouseover="MM_nbGroup('over','_2','/engresources/images/halftone_menu/2_over.jpg','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/halftone_menu/2.jpg" alt="" name="_2" width="306" height="451" border="0" id="_2" onload="MM_nbGroup('init','group1','_2','/engresources/images/halftone_menu/2_gost.jpg',0)" /></a></td>
+    <td><a href="javascript:;" target="_top" onclick="MM_nbGroup('down','group1','_3','/engresources/images/halftone_menu/3.jpg',0)" onmouseover="MM_nbGroup('over','_3','/engresources/images/halftone_menu/3_over.jpg','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/halftone_menu/3.jpg" alt="" name="_3" width="306" height="451" border="0" id="_3" onload="MM_nbGroup('init','group1','_3','/engresources/images/halftone_menu/3_gost.jpg',0)" /></a></td>
+  </tr>
+</table>
 
   <!-- end of the lower area below the navigation bar -->
   <xsl:apply-templates select="FOOTER">
