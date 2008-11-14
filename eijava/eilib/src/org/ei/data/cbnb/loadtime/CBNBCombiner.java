@@ -38,14 +38,15 @@ public class CBNBCombiner extends Combiner
         String username = args[2];
         String password = args[3];
         int loadNumber = Integer.parseInt(args[4]);
-        int recsPerfile = Integer.parseInt(args[5]);
-        int exitAt = Integer.parseInt(args[6]);
+        int recsPerbatch = Integer.parseInt(args[5]);
+        String operation = args[6];
         tablename = args[7];
+        String environment = args[8].toLowerCase();
         Combiner.TABLENAME = tablename;
-        Combiner.EXITNUMBER = exitAt;
         System.out.println(Combiner.TABLENAME);
 
-        CombinedWriter writer = new CombinedXMLWriter(recsPerfile, loadNumber, "cbn");
+        CombinedWriter writer = new CombinedXMLWriter(recsPerbatch, loadNumber, "cbn");
+		writer.setOperation(operation);
 
         CBNBCombiner c = new CBNBCombiner(writer);
 		if(loadNumber > 3000 || loadNumber < 1000)
@@ -56,6 +57,21 @@ public class CBNBCombiner extends Combiner
 											password,
 											loadNumber);
 		}
+    	// extract the whole thing
+    	else if(loadNumber == 0)
+    	{
+      		for(int yearIndex = 1918; yearIndex <= 2008; yearIndex++)
+      		{
+    			System.out.println("Processing year " + yearIndex + "...");
+        		// create  a new writer so we can see the loadNumber/yearNumber in the filename
+        		c = new CBNBCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,"cbn", environment));
+        		c.writeCombinedByYear(url,
+                            		driver,
+                            		username,
+                            		password,
+                            		yearIndex);
+      		}
+    	}
 	    else
 		{
 				c.writeCombinedByYear(url,
@@ -87,7 +103,6 @@ public class CBNBCombiner extends Combiner
         try
         {
 
-            this.writer.begin();
             stmt = con.createStatement();
             System.out.println("Running the query...");
             rs = stmt.executeQuery("select m_id, abn, doc, sco, fjl, isn, cdn, lan, ibn, src, scc,sct, ebt, cin, vol, iss, pag, reg, cym, sic, gic, gid, atl, otl, abs, edn, SUBSTR(pbn,1,4) pyr,pbn,avl, pbr, load_number from " + Combiner.TABLENAME +" where substr(pbn,1,4) ='"+ year +"'");
@@ -96,6 +111,7 @@ public class CBNBCombiner extends Combiner
             writeRecs(rs);
             System.out.println("Wrote records.");
             this.writer.end();
+            this.writer.flush();
 
         }
         finally
@@ -137,11 +153,6 @@ public class CBNBCombiner extends Combiner
             EVCombinedRec rec = new EVCombinedRec();
             ++i;
 
-            if (Combiner.EXITNUMBER != 0 &&
-                i > Combiner.EXITNUMBER)
-            {
-                break;
-            }
 
             String abString = getStringFromClob(rs.getClob("abs"));
 
@@ -455,11 +466,11 @@ public class CBNBCombiner extends Combiner
         try
         {
 
-            this.writer.begin();
             stmt = con.createStatement();
             rs = stmt.executeQuery("select m_id, abn, doc, sco, fjl, isn, cdn, lan, ibn, src, scc,sct, ebt, cin, vol, iss, pag, reg, cym, sic, gic, gid, atl, otl, abs, edn, SUBSTR(pbn,1,4) pyr,pbn,avl,pbr, load_number from " + Combiner.TABLENAME + " where  load_number ='" + weekNumber + "'");
             writeRecs(rs);
             this.writer.end();
+            this.writer.flush();
 
         }
         finally
