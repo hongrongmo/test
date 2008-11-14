@@ -151,30 +151,50 @@ public class BdAuthors
         }
     }
 
-
-
 	class AlphaAuComp
 		implements Comparator
 	{
+		BdAuthor au1 = null;
+		BdAuthor au2 = null;
 		public int compare(Object o1, Object o2)
 		{
-		    BdAuthor au1 = (BdAuthor)o1;
-			BdAuthor au2 = (BdAuthor)o2;
-			int cpxisorder1 = Integer.parseInt(au1.getSec());
-			int cpxisorder2 = Integer.parseInt(au2.getSec());
+			try
+			{
+				au1 = (BdAuthor)o1;
+				au2 = (BdAuthor)o2;
 
-			if(cpxisorder1 == cpxisorder2)
-			{
-				return 0;
+				if(au1.getSec()==null || (au1.getSec().trim()).length()==0)
+				{
+					au1.setSec("0");
+				}
+
+				if(au2.getSec()==null || (au2.getSec().trim()).length()==0)
+				{
+					au2.setSec("0");
+				}
+
+				int cpxisorder1 = Integer.parseInt(au1.getSec().trim());
+				int cpxisorder2 = Integer.parseInt(au2.getSec().trim());
+
+				if(cpxisorder1 == cpxisorder2)
+				{
+					return 0;
+				}
+				else if(cpxisorder1 > cpxisorder2)
+				{
+					return 1;
+				}
+
+
 			}
-			else if(cpxisorder1 > cpxisorder2)
+			catch(Exception e)
 			{
-				return 1;
+
+				e.printStackTrace();
 			}
-			else
-			{
-				return -1;
-			}
+			return -1;
 		}
+
+
 	}
 }
