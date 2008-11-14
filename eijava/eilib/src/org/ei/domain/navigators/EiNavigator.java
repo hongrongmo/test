@@ -32,6 +32,7 @@ public class EiNavigator
 
   private static final int MODIFIER_LIMIT = 64;
   private static final int NAV_STRING_LIMIT = 6500;
+  private static final int NO_NAV_STRING_LIMIT = -1;
 
     // since patents release - database is now a navigator
   public static final String DB = "dbnav";
@@ -386,10 +387,20 @@ public class EiNavigator
 
     public String toString()
     {
-      return toString(EiNavigator.MODIFIER_LIMIT);
+      return toString(EiNavigator.MODIFIER_LIMIT, EiNavigator.NAV_STRING_LIMIT);
+    }
+
+    public String toStringNoMaxlength()
+    {
+      return toString(EiNavigator.MODIFIER_LIMIT, EiNavigator.NO_NAV_STRING_LIMIT);
     }
 
     public String toString(int showlimit)
+    {
+      return toString(showlimit, EiNavigator.NAV_STRING_LIMIT);
+    }
+
+    public String toString(int showlimit, int maxlength)
     {
       StringBuffer sb = new StringBuffer();
       sb.append((String) this.getName())
@@ -418,9 +429,12 @@ public class EiNavigator
           if(modifier != null)
           {
             String modstring = modifier.toString().concat(EiModifier.MODS_DELIM);
-            if((sb.length() + modstring.length()) > EiNavigator.NAV_STRING_LIMIT)
+            if(maxlength > EiNavigator.NO_NAV_STRING_LIMIT)
             {
-              break;
+              if((sb.length() + modstring.length()) > maxlength)
+              {
+                break;
+              }
             }
             sb.append(modstring);
           }
