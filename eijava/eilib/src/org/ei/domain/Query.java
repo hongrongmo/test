@@ -1745,9 +1745,11 @@ public class Query implements Comparable
     */
     public String toXMLString() throws HistoryException, IOException
     {
-        //Writer fileWriter = new FileWriter("c:/test.xml");
-        //toXML(fileWriter);
-        //fileWriter.close();
+//        String xmloutfilename = System.getProperty("java.io.tmpdir") + System.getProperty("file.separator") + getID() + ".xml";
+//        System.out.println("Logging query XML to: " + xmloutfilename);
+//        Writer fileWriter = new FileWriter(xmloutfilename);
+//        toXML(fileWriter);
+//        fileWriter.close();
 
         Writer strWriter = new StringWriter();
         toXML(strWriter);
@@ -1970,8 +1972,6 @@ public class Query implements Comparable
 
     public void toXML(Writer out) throws HistoryException, IOException
     {
-      System.out.println(" toXML(out) =================================== ");
-
       String sPhrase = "";
 
       try
