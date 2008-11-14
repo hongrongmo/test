@@ -86,6 +86,30 @@
 		]]>
     // </xsl:comment>
     </script>
+
+    <script type="text/JavaScript" language="JavaScript">
+    <xsl:comment>
+		<![CDATA[
+    function toggleDiv(divname)
+    {
+      var allIds = ['zero','one','two','three'];
+      for(var i in allIds)
+      {
+        var thisId = allIds[i];
+        var atoggleDiv = document.getElementById(thisId);
+
+        if(thisId == divname) {
+          atoggleDiv.style.display = "block";
+        }
+        else {
+          atoggleDiv.style.display = "none";
+        }
+      }
+    }
+		]]>
+    // </xsl:comment>
+    </script>
+
 </head>
 
 <body bgcolor="#FFFFFF" topmargin="0" marginheight="0" marginwidth="0">
@@ -106,14 +130,28 @@
     	<tr><td valign="middle" height="24" bgcolor="#C3C8D1"><img src="/engresources/images/s.gif" border="0"/></td></tr>
     </table>
 
-
+<p></p>
 <table border="0" cellpadding="0" cellspacing="0">
   <tr>
-    <td><a href="javascript:;" target="_top" onclick="MM_nbGroup('down','group1','_1','/engresources/images/halftone_menu/1.jpg',0)" onmouseover="MM_nbGroup('over','_1','/engresources/images/halftone_menu/1_over.jpg','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/halftone_menu/1.jpg" alt="" name="_1" width="306" height="451" border="0" id="_1" onload="MM_nbGroup('init','group1','_1','/engresources/images/halftone_menu/1_gost.jpg',0)" /></a></td>
-    <td><a href="javascript:;" target="_top" onclick="MM_nbGroup('down','group1','_2','/engresources/images/halftone_menu/2.jpg',0)" onmouseover="MM_nbGroup('over','_2','/engresources/images/halftone_menu/2_over.jpg','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/halftone_menu/2.jpg" alt="" name="_2" width="306" height="451" border="0" id="_2" onload="MM_nbGroup('init','group1','_2','/engresources/images/halftone_menu/2_gost.jpg',0)" /></a></td>
-    <td><a href="javascript:;" target="_top" onclick="MM_nbGroup('down','group1','_3','/engresources/images/halftone_menu/3.jpg',0)" onmouseover="MM_nbGroup('over','_3','/engresources/images/halftone_menu/3_over.jpg','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/halftone_menu/3.jpg" alt="" name="_3" width="306" height="451" border="0" id="_3" onload="MM_nbGroup('init','group1','_3','/engresources/images/halftone_menu/3_gost.jpg',0)" /></a></td>
+    <td><a href="javascript:;" target="_top" onclick="MM_nbGroup('down','group1','_1','/engresources/images/halftone_menu/1.jpg',0);toggleDiv('one');" onmouseover="MM_nbGroup('over','_1','/engresources/images/halftone_menu/1_over.jpg','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/halftone_menu/1.jpg" alt="" name="_1" width="306" height="451" border="0" id="_1" onload="MM_nbGroup('init','group1','_1','/engresources/images/halftone_menu/1_gost.jpg',0)" /></a></td>
+    <td><a href="javascript:;" target="_top" onclick="MM_nbGroup('down','group1','_2','/engresources/images/halftone_menu/2.jpg',0);toggleDiv('two');" onmouseover="MM_nbGroup('over','_2','/engresources/images/halftone_menu/2_over.jpg','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/halftone_menu/2.jpg" alt="" name="_2" width="306" height="451" border="0" id="_2" onload="MM_nbGroup('init','group1','_2','/engresources/images/halftone_menu/2_gost.jpg',0)" /></a></td>
+    <td><a href="javascript:;" target="_top" onclick="MM_nbGroup('down','group1','_3','/engresources/images/halftone_menu/3.jpg',0);toggleDiv('three');" onmouseover="MM_nbGroup('over','_3','/engresources/images/halftone_menu/3_over.jpg','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/halftone_menu/3.jpg" alt="" name="_3" width="306" height="451" border="0" id="_3" onload="MM_nbGroup('init','group1','_3','/engresources/images/halftone_menu/3_gost.jpg',0)" /></a></td>
   </tr>
 </table>
+
+<div id="zero" style="display: block;">
+  <h1>&#160;</h1>
+</div>
+<div id="one" style="display: none;">
+  <h1>Ask an Engineer</h1>
+</div>
+<div id="two" style="display: none;">
+  <h1>Ask a Product Specialist</h1>
+</div>
+<div id="three" style="display: none;">
+  <h1>Ask a Librarian</h1>
+</div>
+
 
   <!-- end of the lower area below the navigation bar -->
   <xsl:apply-templates select="FOOTER">
