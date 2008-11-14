@@ -7,6 +7,8 @@ import java.sql.ResultSet;
 import java.sql.DriverManager;
 import java.sql.Clob;
 import java.sql.SQLException;
+import org.apache.oro.text.regex.*;
+import org.apache.oro.text.perl.Perl5Util;
 
 import org.ei.util.*;
 import org.ei.data.*;
@@ -26,7 +28,8 @@ public class ExtractPaperChem
         {
               load_number = args[0];
         }
-		String[] m_ids = new String[] {"pch_B9CB8C03148510C6E03408002081DCA4", "pch_B9CB8C03147410C6E03408002081DCA4", "pch_B9CB8C03144810C6E03408002081DCA4"};
+
+		String[] m_ids = new String[] {"pch_B9CB8C05C81610C6E03408002081DCA4" ,  "pch_B9CB8C05C5BB10C6E03408002081DCA4"  ,  "pch_B9CB8C05C6E010C6E03408002081DCA4"  ,  "pch_B9CB8C05C6C710C6E03408002081DCA4"  ,  "pch_B9CB8C03ADF310C6E03408002081DCA4"  ,  "pch_B9CB8C05C76610C6E03408002081DCA4"  ,  "pch_B9CB8C05C6BD10C6E03408002081DCA4"  ,  "pch_B9CB8C05C6BF10C6E03408002081DCA4"  ,  "pch_B9CB8C05C81110C6E03408002081DCA4"  ,  "pch_B9CB8C05C5DC10C6E03408002081DCA4"  ,  "pch_B9CB8C05C59310C6E03408002081DCA4"  ,  "pch_B9CB8C05C69310C6E03408002081DCA4"  ,  "pch_B9CB8C05C5B210C6E03408002081DCA4"  ,  "pch_B9CB8C05C5C110C6E03408002081DCA4"  ,  "pch_B9CB8C05C71410C6E03408002081DCA4"  ,  "pch_B9CB8C05C6D410C6E03408002081DCA4"  ,  "pch_B9CB8C05C6DA10C6E03408002081DCA4"  ,  "pch_B9CB8C05C65110C6E03408002081DCA4"  ,  "pch_B9CB8C05C75410C6E03408002081DCA4"  ,  "pch_B9CB8C05C73510C6E03408002081DCA4"  ,  "pch_B9CB8C05C81510C6E03408002081DCA4"  ,  "pch_B9CB8C05C6AA10C6E03408002081DCA4"  ,  "pch_B9CB8C05C6AC10C6E03408002081DCA4"  ,  "pch_B9CB8C05C6AE10C6E03408002081DCA4"  ,  "pch_B9CB8C05C70D10C6E03408002081DCA4"  ,  "pch_B9CB8C05C7BB10C6E03408002081DCA4"  ,  "pch_B9CB8C05C73010C6E03408002081DCA4"  ,  "pch_B9CB8C05C72310C6E03408002081DCA4"  ,  "pch_B9CB8C05C6CF10C6E03408002081DCA4"  ,  "pch_B9CB8C05C78910C6E03408002081DCA4"  ,  "pch_B9CB8C05C77D10C6E03408002081DCA4"  ,  "pch_B9CB8C05C75110C6E03408002081DCA4"  ,  "pch_B9CB8C05C80810C6E03408002081DCA4"  ,  "pch_B9CB8C05C76110C6E03408002081DCA4"  ,  "pch_B9CB8C05C75510C6E03408002081DCA4"  ,  "pch_B9CB8C05C6C010C6E03408002081DCA4"  ,  "pch_B9CB8C05C76310C6E03408002081DCA4"  ,  "pch_B9CB8C05C6D010C6E03408002081DCA4"  ,  "pch_B9CB8C05C6FA10C6E03408002081DCA4"  ,  "pch_B9CB8C05C75710C6E03408002081DCA4"  ,  "pch_B9CB8C05C6CA10C6E03408002081DCA4"  ,  "pch_B9CB8C05C6B610C6E03408002081DCA4"  ,  "pch_B9CB8C05C6CC10C6E03408002081DCA4"  ,  "pch_B9CB8C05C6D910C6E03408002081DCA4"  ,  "pch_B9CB8C05C5F810C6E03408002081DCA4"  ,  "pch_B9CB8C05C59410C6E03408002081DCA4"  ,  "pch_B9CB8C05C59B10C6E03408002081DCA4"};
 
                 //{"pch_34f213f85aae815aM6fa219817173212","pch_11ffb3af85ab48bb2M7ff119817173212","pch_34f213f85aae815aM7bc019817173212","pch_34f213f85aae815aM672219817173212","pch_B9CB8C08410F10C6E03408002081DCA4","pch_34f213f85aae815aM7e2b19817173212","pch_115f0a9f85ab60809M7ea819817173212","pch_B9CB8C083E7510C6E03408002081DCA4","pch_B9CB8C03873410C6E03408002081DCA4","pch_B9CB8C08184610C6E03408002081DCA4","pch_B9CB8C07B53010C6E03408002081DCA4","pch_B9CB8C0806B010C6E03408002081DCA4","pch_B9CB8C0806B110C6E03408002081DCA4","pch_34f213f85aae815aM672219817173212","pch_34f213f85aae815aM7e1a19817173212","pch_6d2baff85ab4375bM7fc519817173212"};
 		//Connection con = getDbCoonection("jdbc:oracle:thin:@jupiter.elsevier.com:1521:EIDB1", "AP_PRO1", "ei3it", "oracle.jdbc.driver.OracleDriver");
@@ -63,15 +66,7 @@ public class ExtractPaperChem
 
         try
         {
-			String midsList = "(";
-			for(int i = 0; i < m_ids.length; i++)
-			{
-				midsList += "'" + m_ids[i] + "'";
-				if(i != m_ids.length-1)
-					midsList += ",";
-			}
 
-			midsList += ")";
 
 			String filename = "paperchem_extract1.out";
 			System.out.println("filename= "+filename);
@@ -79,6 +74,15 @@ public class ExtractPaperChem
             String sqlQuery = null;
             if (m_ids != null  && m_ids.length > 1)
             {
+				String midsList = "(";
+				for(int i = 0; i < m_ids.length; i++)
+				{
+					midsList += "'" + m_ids[i] + "'";
+					if(i != m_ids.length-1)
+						midsList += ",";
+				}
+
+				midsList += ")";
 			    sqlQuery = " select * from paper_master where m_id in "+midsList;
             }
             else if(m_ids != null)
@@ -106,7 +110,7 @@ public class ExtractPaperChem
 				writeColumn(rs1, "cp", writerPub);
 				writeColumn(rs1, "em", writerPub);
 				writeColumn(rs1, "af", writerPub);
-				writeColumn(rs1, "mt", writerPub);
+				writeColumn(rs1, "mt", writerPub);    //8 mt is mapped to issuetitle in bd_master
 				writeColumn(rs1, "st", writerPub);
 				writeColumn(rs1, "se", writerPub);
 				writeColumn(rs1, "cf", writerPub);
@@ -115,7 +119,7 @@ public class ExtractPaperChem
 				writeColumn(rs1, "cn", writerPub);
 				writeColumn(rs1, "vo", writerPub);
 				writeColumn(rs1, "iss", writerPub);
-				writeColumn(rs1, "sd", writerPub);
+				writeColumn(rs1, "sd", writerPub); // 17 publicationdate - len of the field ?? 32
 				writeColumn(rs1, "yr", writerPub);
 				writeColumn(rs1, "md", writerPub);
 				writeColumn(rs1, "ml", writerPub);
@@ -143,7 +147,7 @@ public class ExtractPaperChem
 				writeColumn(rs1, "cc", writerPub);
 				writeColumn(rs1, "at", writerPub);
 				writeColumn(rs1, "pt", writerPub);
-				writeColumn(rs1, "pn", writerPub);
+				writeColumn(rs1, "pn", writerPub);//17 PUBLISHERNAME
 				writeColumn(rs1, "load_number", writerPub);
 				writeColumn(rs1, "xp", writerPub); //PAGE
 				writeColumn(rs1, "tr", writerPub); //TREATMENTCODE
@@ -336,6 +340,10 @@ public class ExtractPaperChem
 		{
 		    column = formatISSN(rs1.getString("sn"));
 		}
+		else if(columnName.equals("pn"))
+		{
+			column = formatPubName(rs1.getString("pn"));
+		}
 		else if(columnName.equals("db"))
 		{
 			column = "pch";
@@ -355,12 +363,45 @@ public class ExtractPaperChem
 		}
 	}
 
+
+	public String formatPubName(String line)
+    {
+
+		if(line != null && !line.trim().equals(""))
+		{
+			line = line.trim();
+
+			Perl5Util perl = new Perl5Util();
+			if(perl.match("/[\t\n\r\f\b]+/", line))
+			{
+			   line = perl.substitute("s/[\t\n\r\f\b]+//gi", line);
+			}
+		}
+		return line;
+
+	}
+
+
     public String formatPage(String xp)
     {
         StringBuffer result = new StringBuffer();
+
         if(xp != null && !xp.trim().equals(""))
         {
-            xp = xp.trim();
+			xp = xp.trim();
+			// if len. is longer than 50 - truncate
+			int len = xp.length();
+			if (len > 50)
+			{
+				xp = xp.substring(0, 50);
+				// and up to the last delim =";"
+				if(xp.lastIndexOf(";") > -1)
+				{
+				   xp = xp.substring(0, xp.lastIndexOf(";"));
+				}
+
+			}
+
             if(xp.indexOf("p ") == 0)
             {
                 xp = xp.substring(2);
