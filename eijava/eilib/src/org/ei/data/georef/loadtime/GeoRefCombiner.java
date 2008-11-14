@@ -23,6 +23,7 @@ import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 import org.xml.sax.XMLReader;
+import java.sql.SQLException;
 
 public class GeoRefCombiner
   extends Combiner
@@ -77,7 +78,7 @@ public class GeoRefCombiner
     // extract the whole thing
     else if(loadNumber == 0)
     {
-      for(int yearIndex = 1960; yearIndex <= 2008; yearIndex++)
+      for(int yearIndex = 1918; yearIndex <= 2008; yearIndex++)
       {
     	System.out.println("Processing year " + yearIndex + "...");
         // create  a new writer so we can see the loadNumber/yearNumber in the filename
@@ -111,6 +112,23 @@ public class GeoRefCombiner
 
   }
 
+  public static int getResultSetSize(ResultSet resultSet) 
+  {
+	    int size = -1;
+	    try 
+	    {
+	        resultSet.last();
+	        size = resultSet.getRow();
+	        resultSet.beforeFirst();
+	    } 
+	    catch(SQLException e) 
+	    {
+	        return size;
+	    }
+
+	    return size;
+  }
+  
   public void writeCombinedByWeekHook(Connection con,
                                       int weekNumber)
                                       throws Exception
@@ -120,16 +138,20 @@ public class GeoRefCombiner
 
     try
     {
-      stmt = con.createStatement();
+      stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);      
       String sqlQuery = "select * from " + Combiner.TABLENAME + " where load_number ='" + weekNumber + "' AND load_number != 0 and load_number < 1000000";
       //String sqlQuery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7fcd2061377551'";
       //String sqlQuery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7fcd2061377551' or m_id='grf_1ee3914119594abb20M7fc72061377551'";
       //String sqlQuery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7ff02061377551'";
       //String sqlQuery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M80002061377551'";
       rs = stmt.executeQuery(sqlQuery);
-      writeRecs(rs);
-      this.writer.end();
-      this.writer.flush();
+      int rsCount = getResultSetSize(rs);
+      if(rsCount > 0)
+      {
+	      writeRecs(rs);
+	      this.writer.end();
+	      this.writer.flush();
+      }
     }
     finally
     {
@@ -168,7 +190,7 @@ public class GeoRefCombiner
 
     try
     {
-      stmt = con.createStatement();
+      stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
 
       // Here we will use the Z44: UPDATE CODE to get break the data into years
       /* Field Z44 is used to enter the update code. The update code consists of six digits. The first four
@@ -183,10 +205,13 @@ public class GeoRefCombiner
       //String sqlquery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7ff02061377551'";
       //String sqlquery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M80002061377551'";
       rs = stmt.executeQuery(sqlquery);
-
-      writeRecs(rs);
-      this.writer.end();
-      this.writer.flush();
+      int rsCount = getResultSetSize(rs);
+      if(rsCount > 0)
+      {
+	      writeRecs(rs);
+	      this.writer.end();
+	      this.writer.flush();
+      }
     }
     finally
     {
