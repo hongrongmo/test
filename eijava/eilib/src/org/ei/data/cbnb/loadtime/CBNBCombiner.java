@@ -49,7 +49,7 @@ public class CBNBCombiner extends Combiner
 		writer.setOperation(operation);
 
         CBNBCombiner c = new CBNBCombiner(writer);
-		if(loadNumber > 3000 || loadNumber < 1000)
+		if(loadNumber > 3000)
 		{
 				c.writeCombinedByWeekNumber(url,
 											driver,
