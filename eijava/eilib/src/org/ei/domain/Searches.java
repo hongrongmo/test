@@ -135,9 +135,11 @@ public class Searches
 
             String phrase1 = query.getSeaPhr1();
             String display_query = query.getDisplayQuery();
+            String refinements = query.getRefinements().toUnlimitedString();
             if(phrase1.length() >= UNCOMPRESSED_LIMIT) {
               phrase1 = COMPRESSION_INDICATOR + StringUtil.zipText(phrase1);
               display_query = COMPRESSION_INDICATOR + StringUtil.zipText(display_query);
+              refinements = COMPRESSION_INDICATOR + StringUtil.zipText(refinements);
             }
 
             pstmt.setString(intStmtIndex++, phrase1); // rset.getString("SEARCH_PHRASE_1")
@@ -168,7 +170,8 @@ public class Searches
             pstmt.setString(intStmtIndex++, query.getDupSetString());  //rset.getString("DUPSET")
             pstmt.setString(intStmtIndex++, query.isDeDupString()); // DEDUP
             pstmt.setString(intStmtIndex++, query.getDeDupDB()); //rset.getString("DEDUPDB")
-            pstmt.setString(intStmtIndex++, query.getRefinements().toString());
+
+            pstmt.setString(intStmtIndex++, refinements);
             pstmt.setString(intStmtIndex++, query.getResultsState().toString());
             pstmt.executeUpdate();
             result = 1;
@@ -519,7 +522,7 @@ public class Searches
                 query.setDeDup(rset.getString("DEDUP"));
                 query.setDeDupDB(rset.getString("DEDUPDB"));
                 query.setDataBase(Integer.parseInt(rset.getString("MASK")));
-                query.setRefinements(new Refinements(rset.getString("REFINE_STACK")));
+                query.setRefinements(new Refinements(prepare_unZipText(rset.getString("REFINE_STACK"))));
                 query.setResultsState(new ResultsState(rset.getString("RESULTS_STATE")));
                 query.toXML(out);
             }
@@ -690,7 +693,7 @@ public class Searches
                 query.setDeDupDB(rset.getString("DEDUPDB"));
                 query.setDataBase(Integer.parseInt(rset.getString("MASK")));
 
-                query.setRefinements(new Refinements(rset.getString("REFINE_STACK")));
+                query.setRefinements(new Refinements(prepare_unZipText(rset.getString("REFINE_STACK"))));
                 query.setResultsState(new ResultsState(rset.getString("RESULTS_STATE")));
 
             }
@@ -961,6 +964,9 @@ public class Searches
                 broker = ConnectionBroker.getInstance();
                 con = broker.getConnection(DatabaseConfig.SESSION_POOL);
                 proc = con.prepareCall("{ call Searches_updateRefinements(?,?)}");
+                if(refinements.length() >= UNCOMPRESSED_LIMIT) {
+                  refinements = COMPRESSION_INDICATOR + StringUtil.zipText(refinements);
+                }
                 proc.setString(idx++, refinements);
                 proc.setString(idx++, queryid);
                 proc.executeUpdate();
@@ -1067,7 +1073,7 @@ public class Searches
                 query.setDeDup(rset.getString("DEDUP"));
                 query.setDeDupDB(rset.getString("DEDUPDB"));
                 query.setDataBase(Integer.parseInt(rset.getString("MASK")));
-                query.setRefinements(new Refinements(rset.getString("REFINE_STACK")));
+                query.setRefinements(new Refinements(prepare_unZipText(rset.getString("REFINE_STACK"))));
                 query.setResultsState(new ResultsState(rset.getString("RESULTS_STATE")));
 
                 combinesearches.add(query);
