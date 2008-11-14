@@ -7,7 +7,6 @@ import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.io.*;
 
 import org.apache.oro.text.perl.Perl5Util;
 import org.ei.query.base.PorterStemmer;
@@ -34,6 +33,8 @@ public class CombinedXMLWriter
     private String databaseID;            
     private PrintWriter out;       
     private boolean open = false;
+    private boolean isChild = false;
+    private boolean generatePID = false;
     private String root = null;    
     private String filepath;
     private String logpath;
@@ -274,30 +275,44 @@ public class CombinedXMLWriter
     public void writeRec(EVCombinedRec[] rec)
     throws Exception
     {
-    	for(int i=0; i<rec.length; i++)
-    		writeRec(rec[i]);
+    	if(rec.length >1)
+    	{
+	    	for(int i=0; i<rec.length; i++)
+	    	{
+	    		this.generatePID = true;
+	    		if(i>0)    
+	    			this.isChild = true;
+	    		writeRec(rec[i]);    		
+	    	}
+	    	this.isChild = false;
+	    	this.generatePID = false;
+    	}
+    	else
+    	{
+    		for(int i=0; i<rec.length; i++)
+	    	{	    		    		
+	    		writeRec(rec[i]);    		
+	    	}    		
+    	}	    	
     }
     
     public void writeRec(EVCombinedRec rec)
         throws Exception
     {
-    	this.eid = rec.getString(EVCombinedRec.DOCID);    	
-        String [] temp = null;
-        temp = this.eid.split("_");        
-        if(this.lasteid != null)
-        {
-        	if(this.lasteid.compareTo(temp[1]) != 0)
-        	{	
-        		this.lasteid = temp[1];
-        		this.parentid = memcached.getID(this.PARENT_ID);        		 
+    	this.eid = rec.getString(EVCombinedRec.DOCID);    	    	
+    	        
+        if(this.generatePID)
+        {   
+        	if(!this.isChild)
+        	{        		
+        		this.parentid = memcached.getID(this.PARENT_ID);
         	}
         }
         else
-        {
-        	this.lasteid = temp[1];
-        	this.parentid = memcached.getID(this.PARENT_ID);
+        {        	        	
+        	this.parentid = 0;        	
         }
-    	    	    	
+                    	
         begin();
         out.println("   <ROW> ");
         out.println("       <EIDOCID>" + this.eid + "</EIDOCID>");        
@@ -649,34 +664,38 @@ public class CombinedXMLWriter
        
     private void addIndex(String s, String key)
     {
-    	PrintWriter indexlog = null;
-    	try
-        {    		
-	    	String indexfile = hm.get(key).toString();	    		    	
-	    	indexlog = new PrintWriter(new FileWriter(indexfile, true));
-	    	indexlog.println("|"+ Entity.prepareString(s).toUpperCase() + "|" + this.databaseID);
-        }
-    	catch(Exception e)
-        {
-          if(indexlog!=null)
-            e.printStackTrace(indexlog);
-          else        	  
-            e.printStackTrace();         
-        }
-        finally
-        {
-          if(indexlog != null)
-          {
-            try
-            {
-            	indexlog.close();
-            }
-            catch(Exception e1)
-            {
-              e1.printStackTrace();
-            }
-          }
-        }    	
+    	
+    	if(!this.isChild)
+    	{
+	    	PrintWriter indexlog = null;
+	    	try
+	        {    		
+		    	String indexfile = hm.get(key).toString();	    		    	
+		    	indexlog = new PrintWriter(new FileWriter(indexfile, true));
+		    	indexlog.println("|"+ Entity.prepareString(s).toUpperCase() + "|" + this.databaseID);
+	        }
+	    	catch(Exception e)
+	        {
+	          if(indexlog!=null)
+	            e.printStackTrace(indexlog);
+	          else        	  
+	            e.printStackTrace();         
+	        }
+	        finally
+	        {
+	          if(indexlog != null)
+	          {
+	            try
+	            {
+	            	indexlog.close();
+	            }
+	            catch(Exception e1)
+	            {
+	              e1.printStackTrace();
+	            }
+	          }
+	        }
+    	}
     }
     
     private String multiFormat(String[] strings, String key)
