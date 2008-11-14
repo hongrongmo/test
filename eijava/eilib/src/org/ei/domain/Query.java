@@ -1745,6 +1745,10 @@ public class Query implements Comparable
     */
     public String toXMLString() throws HistoryException, IOException
     {
+        //Writer fileWriter = new FileWriter("c:/test.xml");
+        //toXML(fileWriter);
+        //fileWriter.close();
+
         Writer strWriter = new StringWriter();
         toXML(strWriter);
 
@@ -1966,7 +1970,7 @@ public class Query implements Comparable
 
     public void toXML(Writer out) throws HistoryException, IOException
     {
-      System.out.println(" toXMLString(out) =================================== ");
+      System.out.println(" toXML(out) =================================== ");
 
       String sPhrase = "";
 
@@ -2011,6 +2015,7 @@ public class Query implements Comparable
         out.write("<SEARCH-TYPE>");
         out.write(getSearchType());
         out.write("</SEARCH-TYPE>");
+
         //jam - added properties which were being 'inserted' in SavedSearches class
         // getXMLSavedSearches() method
         out.write("<SAVEDSEARCH>");
@@ -2028,8 +2033,11 @@ public class Query implements Comparable
         out.write("<VISIBLE>");
         out.write(getVisible());
         out.write("</VISIBLE>");
+
         out.write("<USER-ID>");
-        out.write(getUserID());
+        if(getUserID() != null) {
+          out.write(getUserID());
+        }
         out.write("</USER-ID>");
         out.write("<SESSION-ID>");
         out.write(getSessionID());
@@ -2084,7 +2092,6 @@ public class Query implements Comparable
           }
           out.write("</CRITERIA>");
         }
-
         out.write("</DUPSET>");
         out.write("<DEDUP>");
         out.write(isDeDupString());
@@ -2092,9 +2099,9 @@ public class Query implements Comparable
         out.write("<DEDUPDB>");
         out.write(getDeDupDB());
         out.write("</DEDUPDB>");
+
         out.write(getRefinements().toXML());
         out.write("</SESSION-DATA>");
-
 
       return;
     }
