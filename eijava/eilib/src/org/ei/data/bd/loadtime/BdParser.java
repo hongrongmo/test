@@ -2201,7 +2201,8 @@ public class BdParser
 
 	private void parseDescriptorgroup(Element descriptorgroup,Hashtable record) throws Exception
 	{
-
+		String term1 = "";
+		String term2 = "";
 		if(descriptorgroup != null)
 		{
 			List descriptorsList = descriptorgroup.getChildren("descriptors",noNamespace);
@@ -2228,7 +2229,18 @@ public class BdParser
 							}
 							mhBuffer.append(mainterm);
 						}
-						record.put(descriptorsTypeTable.get(descriptorsKey),mhBuffer.toString());
+						if(descriptorsType.equals("SPC") && mhBuffer.length()>4000)
+						{
+							term1 = mhBuffer.substring(0,4000);
+							term2 = mhBuffer.substring(4000);
+							record.put("SPECIESTERM",term1);
+							record.put("SPECIESTERM2",term2);
+						}
+						else
+						{
+							record.put(descriptorsTypeTable.get(descriptorsKey),mhBuffer.toString());
+						}
+
 						//System.out.println(descriptorsKey+" "+descriptorsTypeTable.get(descriptorsKey)+" "+mhBuffer.toString());
 					}
 				}
