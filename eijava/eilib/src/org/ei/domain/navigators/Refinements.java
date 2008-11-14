@@ -82,7 +82,7 @@ public class Refinements
         {
             displayquery = "Patents that cite ".concat(m.group(1).toUpperCase());
         }
-  */      
+  */
         // fake "modifier" with count~value~label
         String allmod = "0".concat(EiModifier.MOD_DELIM).concat(physquery).concat(EiModifier.MOD_DELIM).concat(displayquery);
         easynav.setModifierValue(allmod);
@@ -227,6 +227,19 @@ public class Refinements
 		{
 			EiNavigator nav = (EiNavigator) itr.next();
 			sb.append(nav.toString());
+			sb.append(EiNavigator.NAVS_DELIM);
+		}
+		return sb.toString();
+	}
+
+	public String toUnlimitedString()
+	{
+		StringBuffer sb = new StringBuffer();
+		Iterator itr = refinements.iterator();
+		while(itr.hasNext())
+		{
+			EiNavigator nav = (EiNavigator) itr.next();
+			sb.append(nav.toStringNoMaxlength());
 			sb.append(EiNavigator.NAVS_DELIM);
 		}
 		return sb.toString();
