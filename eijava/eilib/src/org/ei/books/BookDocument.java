@@ -348,14 +348,14 @@ System.out.println("CLOUD");
       return;
     }
 
-    private void getTagCloud(Writer out) {
+    public void getTagCloud(Writer out) {
 
       String cloudPath = getTocPath() + System.getProperty("file.separator") + getISBN13() + System.getProperty("file.separator") + getISBN13() + "_cloud.html";
       readFileToWriter(out, cloudPath);
       return ;
     }
 
-    private void getTOC(Writer out) {
+    public void getTOC(Writer out) {
 
       String tocPath = getTocPath() + System.getProperty("file.separator") + getISBN13() + System.getProperty("file.separator") + getISBN13() + "_toc.html";
       readFileToWriter(out, tocPath);
