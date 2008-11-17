@@ -170,7 +170,8 @@
           </xsl:if>
 
         <!-- this will contain the link for RSS-->
-        <xsl:if test="($RSS-LINK='true')">
+        <!-- JAM - suppress RSS link if this is a Book search or the results only include books -->
+        <xsl:if test="($RSS-LINK='true') and not(($SEARCH-TYPE='Book') or $COMPMASK='131072')">
           <a class="MedBlackText">&#160; - &#160;</a>
           <a href="#" onClick="window.open('/controller/servlet/Controller?CID=displayRSSQuery&amp;database={$DATABASE}&amp;term1={java:encode($I-QUERY)}','newwindow','width=700,height=500,toolbar=no,location=no,scrollbars,resizable');return false;"><img style="vertical-align: middle; border:0px;" src="/engresources/images/rss.gif" /></a>
           <xsl:text>  </xsl:text><a href="javascript:makeUrl('RSS_Feature.htm')"><img style="vertical-align:middle; border:0px;" src="/engresources/images/blue_help.gif" /></a>
