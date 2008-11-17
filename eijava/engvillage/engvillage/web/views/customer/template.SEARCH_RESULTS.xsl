@@ -90,7 +90,7 @@
             <xsl:when test="($RESULTS-COUNT=1)"><xsl:value-of select="$RESULTS-COUNT"/> record</xsl:when>
             <xsl:otherwise><xsl:value-of select="$RESULTS-COUNT"/> records</xsl:otherwise>
           </xsl:choose>
-          in <xsl:value-of select="DD:getDisplayName($DATABASE)"/>
+          in <xsl:value-of select="DD:getDisplayName($COMPMASK)"/>
           <xsl:if test="not($SEARCH-TYPE='Easy')">
           for
           <!-- jam 5/23/2005 - removed display query -->
