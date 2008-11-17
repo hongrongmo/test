@@ -99,7 +99,7 @@
     function toggleDiv(divname)
     {
       var allIds = ['zero','one','two','three'];
-      var allIds = {['one','two','three'];
+
       for(var i in allIds)
       {
         var thisId = allIds[i];
@@ -107,7 +107,7 @@
 
         if(thisId == divname) {
           atoggleDiv.style.display = "block";
-          getURL("javascript:pageTracker._trackPageview('/folder/' + pageTitles[divname]);");
+          pageTracker._trackPageview('/folder/' + pageTitles[divname]);
         }
         else {
           atoggleDiv.style.display = "none";
