@@ -225,8 +225,6 @@ public class BookDocument extends EIDoc {
         out.write("]]>");
         out.write("</CLOUD>");
 
-System.out.println("CLOUD");
-
       	out.write("<TOC>");
         out.write("<![CDATA[");
         getTOC(out);
