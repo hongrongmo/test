@@ -398,12 +398,15 @@ System.out.println("pii " + pii);
 
       if(!"bookNav".equalsIgnoreCase(cid))
       {
+        out.write("<CLOUD>");
+        out.write("<![CDATA[");
+        curDoc.getTagCloud(out);
+        out.write("]]>");
+        out.write("</CLOUD>");
+
         out.write("<TOC>");
         out.write("<![CDATA[");
-        String strtoc = curDoc.getTOC();
-        if(strtoc != null) {
-          out.write(strtoc);
-        }
+        curDoc.getTOC(out);
         out.write("]]>");
         out.write("</TOC>");
       }
