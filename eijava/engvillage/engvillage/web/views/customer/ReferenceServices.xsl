@@ -90,9 +90,16 @@
     <script type="text/JavaScript" language="JavaScript">
     <xsl:comment>
 		<![CDATA[
+    var pageTitles = new Array();
+    pageTitles['zero'] = 'Home';
+    pageTitles['one'] = 'Ask an Expert';
+    pageTitles['two'] = 'Ask a Product Specialist';
+    pageTitles['three'] = 'Ask a Libratian';
+
     function toggleDiv(divname)
     {
       var allIds = ['zero','one','two','three'];
+      var allIds = {['one','two','three'];
       for(var i in allIds)
       {
         var thisId = allIds[i];
@@ -100,12 +107,21 @@
 
         if(thisId == divname) {
           atoggleDiv.style.display = "block";
+          getURL("javascript:pageTracker._trackPageview('/folder/' + pageTitles[divname]);");
         }
         else {
           atoggleDiv.style.display = "none";
         }
       }
     }
+
+    function emailFormat(sessionid)
+    {
+      var url = "/controller/servlet/Controller?EISESSION="+sessionid+"&CID=askanexpert&database=1";
+      new_window=window.open(url,'NewWindow','status=yes,resizable,scrollbars,width=600,height=400');
+      new_window.focus();
+    }
+
 		]]>
     // </xsl:comment>
     </script>
@@ -146,7 +162,16 @@
   <h1>Ask an Engineer</h1>
 </div>
 <div id="two" style="display: none;">
+  <p align="left">
   <h1>Ask a Product Specialist</h1>
+  <ul>
+    <li>Which way is up?</li>
+    <li>How much longer to I have to stand here?</li>
+    <li>Do you know where the next stop is?</li>
+    <li>Can I borrow your hair drier?</li>
+  </ul>
+  <a href="javascript:emailFormat('$SESSIONID');">Ask a question</a>
+  </p>
 </div>
 <div id="three" style="display: none;">
   <h1>Ask a Librarian</h1>
@@ -161,7 +186,16 @@
 
 </center>
 
-</body>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6113832-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+      </body>
 </html>
 
 </xsl:template>
