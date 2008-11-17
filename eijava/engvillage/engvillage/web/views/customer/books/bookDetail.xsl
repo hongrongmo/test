@@ -204,8 +204,11 @@
                     </td>
                     <td valign="top" width="100%" align="left">
                       <xsl:apply-templates select="descendant::EI-DOCUMENT"/>
+                      <a name="CLOUD" CLASS="MedBlackText"><b>Keyword Cloud</b></a>
                       <p/>
-                      <a CLASS="MedBlackText"><b>Table of Contents</b></a>
+                      <xsl:value-of disable-output-escaping="yes" select="/PAGE/CLOUD"/>
+                      <p/>
+                      <a name="TOC" CLASS="MedBlackText"><b>Table of Contents</b></a>
                       <p/>
                       <div id="toc">
                       <xsl:value-of disable-output-escaping="yes" select="/PAGE/TOC"/>
