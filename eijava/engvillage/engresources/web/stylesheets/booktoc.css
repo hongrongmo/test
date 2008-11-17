@@ -26,3 +26,11 @@
   font-size:11px;
   font-family:arial,verdana,geneva;
 }
+
+#bookCloud a {background: #FFF;}
+#bookCloud a:hover {background: #CCC;}
+#bookCloud .size1 { font-size: 80%; font-family: arial,verdana,geneva; text-decoration: none;}
+#bookCloud .size2 { font-size: 120%; font-family: arial,verdana,geneva; text-decoration: none;}
+#bookCloud .size3 { font-size: 160%; font-family: arial,verdana,geneva; text-decoration: none;}
+#bookCloud .size4 { font-size: 200%; font-family: arial,verdana,geneva; text-decoration: none;}
+#bookCloud .size5 { font-size: 220%; font-family: arial,verdana,geneva; text-decoration: none;}
