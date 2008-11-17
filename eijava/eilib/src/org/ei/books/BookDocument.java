@@ -219,14 +219,17 @@ public class BookDocument extends EIDoc {
 
       if (getPageNum() == 0 && getDeep()) {
 
+        out.write("<CLOUD>");
+        out.write("<![CDATA[");
+        getTagCloud(out);
+        out.write("]]>");
+        out.write("</CLOUD>");
+
+System.out.println("CLOUD");
+
       	out.write("<TOC>");
         out.write("<![CDATA[");
-
-        String strtoc = getTOC();
-        if(strtoc != null) {
-          out.write(strtoc);
-        }
-
+        getTOC(out);
         out.write("]]>");
         out.write("</TOC>");
       }
@@ -317,64 +320,50 @@ public class BookDocument extends EIDoc {
         return (Arrays.binarySearch(badbooks, isbn) < 0);
     }
 
-    public String getTOC() {
-      if(getTocPath() != null) {
-        return getTOCFs();
-      }
-      else
-        return getTOCHttp();
-    }
+    private void readFileToWriter(Writer out, String filepath) {
 
-    private String readTOC(Reader rdrin) {
+      BufferedReader rdr = null;
 
-      Writer wrtr = new StringWriter();
-
-      BufferedReader rdr = new BufferedReader(rdrin);
-      try {
-       if(rdr != null)
-        {
-          while(rdr.ready())
+      File infile = new File(filepath);
+      if(infile.exists())
+      {
+        try {
+          rdr = new BufferedReader(new FileReader(infile));
+          if(rdr != null)
           {
-            String aline = rdr.readLine();
-            wrtr.write(aline);
+            while(rdr.ready())
+            {
+              out.write(rdr.readLine());
+            }
           }
         }
-        else
-        {
-          System.out.println("Response is null");
-        }
-      }
-      catch(IOException e) {}
-      finally {
-        try {
-        rdr.close();
-        }
         catch(IOException e) {}
+        finally {
+          try {
+          rdr.close();
+          }
+          catch(IOException e) {}
+        }
       }
-
-      return wrtr.toString();
+      return;
     }
 
-    private String getTOCFs() {
+    private void getTagCloud(Writer out) {
 
-      String strtoc = "";
-
-      try {
-        String tocPath =  getTocPath() + System.getProperty("file.separator") + getISBN13() + System.getProperty("file.separator") + getISBN13() + "_toc.html";
-        File doc_data = new File(tocPath);
-        strtoc = readTOC(new FileReader(doc_data));
-        doc_data = null;
-      }
-      catch(FileNotFoundException e)
-      {
-          System.out.println(e.getMessage());
-      }
-      finally
-      {
-      }
-      return strtoc;
+      String cloudPath = getTocPath() + System.getProperty("file.separator") + getISBN13() + System.getProperty("file.separator") + getISBN13() + "_cloud.html";
+      readFileToWriter(out, cloudPath);
+      return ;
     }
 
+    private void getTOC(Writer out) {
+
+      String tocPath = getTocPath() + System.getProperty("file.separator") + getISBN13() + System.getProperty("file.separator") + getISBN13() + "_toc.html";
+      readFileToWriter(out, tocPath);
+      return;
+    }
+
+
+/* JAM - no longer in use.  TOC is always read from filesystem.
     private String getTOCHttp() {
 
       String strtoc = null;
@@ -412,5 +401,5 @@ public class BookDocument extends EIDoc {
           }
       }
       return strtoc;
-    }
+    }*/
 }
