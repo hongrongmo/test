@@ -1086,20 +1086,6 @@ public abstract class DocumentView {
       {
         Map mappings = new HashMap();
 
-/*
-Compendex/EV system document type strings and codes
-
- (str.equals("JA")){str = "Journal article (JA)";}
-(str.equals("CA")){str = "Conference article (CA)";}
-(str.equals("CP")){str = "Conference proceeding (CP)";}
-(str.equals("MC")){str = "Monograph chapter (MC)";}
-(str.equals("MR")){str = "Monograph review (MR)";}
-(str.equals("RC")){str = "Report chapter (RC)";}
-(str.equals("RR")){str = "Report review (RR)";}
-(str.equals("DS")){str = "Dissertation (DS)";}
-(str.equals("UP")){str = "Unpublished paper (UP)";}
-*/
-
         mappings.put("SA","JA");
         mappings.put("BA","CA");
         mappings.put("RA","RC");
@@ -1130,6 +1116,58 @@ Compendex/EV system document type strings and codes
         mappings.put("MS","MP");
         mappings.put("TS","DS");
 */
+        return mappings;
+      }
+    }
+    public class RisDocumentTypeMappingDecorator extends MultiValueLookupValueDecorator
+    {
+      public RisDocumentTypeMappingDecorator(DocumentField field)
+      {
+        super(field);
+      }
+      public RisDocumentTypeMappingDecorator(String stringvalue)
+      {
+        super(new SimpleValueField(stringvalue));
+      }
+      public String getValue()
+      {
+        String strvalue = field.getValue();
+        List decoratedvalues = new ArrayList();
+
+        // passed in value is <DOCTYPE>AUDELIMITER<DOCTYPE>....
+        String[] dtcodes = strvalue.split(GRFDocBuilder.AUDELIMITER);
+        if((dtcodes != null))
+        {
+          String doctype = dtcodes[0];
+          String strtranslated = dataDictionary.translateValue(doctype,getLookupTable());
+          if(strtranslated != null)
+          {
+            decoratedvalues.add(strtranslated);
+          }
+        }
+        if(!decoratedvalues.isEmpty())
+        {
+          strvalue = StringUtil.join(decoratedvalues, GRFDocBuilder.AUDELIMITER);
+        }
+        return strvalue;
+      }
+      // empty pattern will split string into single characters
+      public Pattern getSplitPattern() { return Pattern.compile(StringUtil.EMPTY_STRING); }
+      public Map getLookupTable()
+      {
+        Map mappings = new HashMap();
+
+        mappings.put("JA","JOUR");
+        mappings.put("CA","CONF");
+        mappings.put("CP","CONF");
+        mappings.put("MC","CHAP");
+        mappings.put("MR","BOOK");
+        mappings.put("RC","RPRT");
+        mappings.put("RR","RPRT");
+        mappings.put("DS","THES");
+        mappings.put("UP","UNPB");
+        mappings.put("MP","MAP");
+
         return mappings;
       }
     }
