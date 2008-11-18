@@ -69,8 +69,8 @@ public class RISView extends DetailedView {
         if(mappingcode != null)
         {
           // DocumentTypeMappingDecorator takes <DOCTYPE>AUDELIMITER<BIBCODE> String as field argument
-          mappingcode = new DocumentTypeMappingDecorator(mappingcode).getValue();
-          addDocumentValue(Keys.DOC_TYPE, adoc.replaceTYwithRIScode(mappingcode));
+          mappingcode = new RisDocumentTypeMappingDecorator(new DocumentTypeMappingDecorator(mappingcode)).getValue();
+          addDocumentValue(Keys.DOC_TYPE, mappingcode);
         }
 
         changeElementKey(ris_ht, adoc_ht, Keys.DOC_TYPE, Keys.RIS_TY);
