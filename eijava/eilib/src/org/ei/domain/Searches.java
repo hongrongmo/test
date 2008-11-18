@@ -1116,7 +1116,7 @@ public class Searches
     }
 
     public static String prepare_unZipText(String text) {
-      if(text.startsWith(COMPRESSION_INDICATOR)) {
+      if((text != null) && (text.startsWith(COMPRESSION_INDICATOR))) {
         return StringUtil.unZipText(text.substring(1));
       }
       else {
