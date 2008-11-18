@@ -1745,15 +1745,15 @@ public class Query implements Comparable
     */
     public String toXMLString() throws HistoryException, IOException
     {
-//        String xmloutfilename = System.getProperty("java.io.tmpdir") + System.getProperty("file.separator") + getID() + ".xml";
-//        System.out.println("Logging query XML to: " + xmloutfilename);
-//        Writer fileWriter = new FileWriter(xmloutfilename);
-//        toXML(fileWriter);
-//        fileWriter.close();
-
+/*        String xmloutfilename = System.getProperty("java.io.tmpdir") + System.getProperty("file.separator") + getID() + ".xml";
+        System.out.println("Logging query XML to: " + xmloutfilename);
+        Writer fileWriter = new FileWriter(xmloutfilename);
+        toXML(fileWriter);
+        fileWriter.close();
+*/
         Writer strWriter = new StringWriter();
         toXML(strWriter);
-
+        strWriter.close();
         return strWriter.toString();
     }
 
