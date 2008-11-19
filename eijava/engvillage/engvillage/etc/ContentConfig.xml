@@ -1417,6 +1417,13 @@
 
         <!--  ************************  Email CID    ************************************  -->
 
+        <CONTENTDESCRIPTOR BULKMODE="NO">
+            <ID>askanexpert</ID>
+            <DATASOURCEURL>http://@data_server@/engvillage/models/customer/AskAnExpert.jsp</DATASOURCEURL>
+            <DISPLAYURL>http://@data_server@/engvillage/views/customer/EmailFormAskAnExpert.xsl</DISPLAYURL>
+            <MIMETYPE>text/html</MIMETYPE>
+        </CONTENTDESCRIPTOR>
+
         <!-- Just like Downlaod, all links to email come through one jsp/xsl combo - -->
         <CONTENTDESCRIPTOR BULKMODE="NO">
             <ID>emailForm</ID>
