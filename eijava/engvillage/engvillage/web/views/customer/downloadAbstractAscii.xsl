@@ -65,6 +65,19 @@ All the business rules which govern the display format are also provided.
 
 	</xsl:template>
 
+  <!-- override spacer to prevent char(160) from appearing in files - This character causes problems in China.
+    This character is invisible in standard encodings -->
+	<xsl:template name="DASH_SPACER" priority="1">
+	  <xsl:text> - </xsl:text>
+  </xsl:template>
+
+	<xsl:template name="DOUBLE_SPACER" priority="1">
+	  <xsl:text>  </xsl:text>
+  </xsl:template>
+
+  <xsl:template name="COMMA_SPACER" priority="1">
+    <xsl:text>> , </xsl:text>
+  </xsl:template>
 
 
 	<xsl:template match="AB2" priority="1">
