@@ -54,26 +54,52 @@ public class NTISCombiner
         String username = args[2];
         String password = args[3];
         int loadNumber = Integer.parseInt(args[4]);
-        int recsPerfile = Integer.parseInt(args[5]);
-        int exitAt = Integer.parseInt(args[6]);
+        int recsPerbatch = Integer.parseInt(args[5]);
+        String operation = args[6];
         tablename = args[7];
+        String environment = args[8].toLowerCase();
 
         Combiner.TABLENAME = tablename;
-        Combiner.EXITNUMBER = exitAt;
         System.out.println(Combiner.TABLENAME);
 
-        CombinedWriter writer = new CombinedXMLWriter(recsPerfile,
+        CombinedWriter writer = new CombinedXMLWriter(recsPerbatch,
                 									  loadNumber,
                 									  "ntis");
+		writer.setOperation(operation);
 
         NTISCombiner c = new NTISCombiner(writer);
 
-
+		if(loadNumber > 200801)
+		{
             c.writeCombinedByWeekNumber(url,
                     					driver,
                     					username,
                     					password,
                     					loadNumber);
+		}
+    	// extract the whole thing
+    	else if(loadNumber == 0)
+    	{
+      		for(int yearIndex = 2004; yearIndex <= 2008; yearIndex++)
+      		{
+    			System.out.println("Processing year " + yearIndex + "...");
+      	  		// create  a new writer so we can see the loadNumber/yearNumber in the filename
+       			c = new NTISCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,"ntis", environment));
+        		c.writeCombinedByYear(url,
+                            		driver,
+                            		username,
+                            		password,
+                            		yearIndex);
+      		}
+    	}
+    	else
+    	{
+      		c.writeCombinedByYear(url,
+                            	driver,
+                            	username,
+                            	password,
+                            	loadNumber);
+    	}
 
 
         System.out.println("++end of loadnumber " + loadNumber);
@@ -94,7 +120,6 @@ public class NTISCombiner
         try
         {
 
-            this.writer.begin();
             stmt = con.createStatement();
             System.out.println("Running the query...");
             String q = "select LOAD_NUMBER,M_ID,AN,TI,TN,PN,AB,IC,SU,DES,IDE,SO,PA1,PA2,PA2,PA3,PA4,PA5,RD,RN,CAT,VI,XP,AV,MAA1,MAA2,CT,PR,HN from " + Combiner.TABLENAME + " where load_number = " + year;
@@ -103,6 +128,7 @@ public class NTISCombiner
             writeRecs(rs);
             System.out.println("Wrote records.");
             this.writer.end();
+            this.writer.flush();
 
         }
         finally
@@ -145,10 +171,6 @@ public class NTISCombiner
             EVCombinedRec rec = new EVCombinedRec();
             ++i;
 
-            if (Combiner.EXITNUMBER != 0 && i > Combiner.EXITNUMBER)
-            {
-                break;
-            }
             String aut = NTISAuthor.formatAuthors(rs.getString("PA1"),
                     								 rs.getString("PA2"),
                     								 rs.getString("PA3"),
@@ -1044,11 +1066,11 @@ public class NTISCombiner
         try
         {
 
-            this.writer.begin();
             stmt = con.createStatement();
             rs = stmt.executeQuery("select LOAD_NUMBER,M_ID,AN,TI,TN,PN,AB,IC,SU,DES,IDE,SO,PA1,PA2,PA2,PA3,PA4,PA5,RD,RN,CAT,VI,XP,AV,MAA1,MAA2,CT,PR,HN from " + tablename + " where load_number =" + weekNumber);
             writeRecs(rs);
             this.writer.end();
+            this.writer.flush();
         }
         finally
         {
