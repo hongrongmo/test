@@ -122,7 +122,7 @@ public class NTISCombiner
 
             stmt = con.createStatement();
             System.out.println("Running the query...");
-            String q = "select LOAD_NUMBER,M_ID,AN,TI,TN,PN,AB,IC,SU,DES,IDE,SO,PA1,PA2,PA2,PA3,PA4,PA5,RD,RN,CAT,VI,XP,AV,MAA1,MAA2,CT,PR,HN from " + Combiner.TABLENAME + " where substr(load_number,1,4) '" + year + "%'";
+            String q = "select LOAD_NUMBER,M_ID,AN,TI,TN,PN,AB,IC,SU,DES,IDE,SO,PA1,PA2,PA2,PA3,PA4,PA5,RD,RN,CAT,VI,XP,AV,MAA1,MAA2,CT,PR,HN from " + Combiner.TABLENAME + " where substr(load_number,1,4) ='" + year + "%'";
             rs = stmt.executeQuery(q);
             System.out.println("Got records ...");
             writeRecs(rs);
