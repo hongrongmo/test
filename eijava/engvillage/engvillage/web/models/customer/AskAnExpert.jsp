@@ -7,6 +7,8 @@
 <!-- import statements of Java packages-->
 <%@ page import="java.util.*"%>
 <%@ page import="java.net.*"%>
+<%@ page import="java.io.*"%>
+<%@ page import="javax.mail.internet.*"%>
 
 <!--import statements of ei packages.-->
 <%@ page import="org.ei.controller.ControllerClient"%>
@@ -15,6 +17,7 @@
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.domain.Searches"%>
 <%@ page import="org.ei.config.*"%>
+<%@ page import="org.ei.email.*"%>
 
 <%@ page errorPage="/error/errorPage.jsp" %>
 <!--setting page buffer size to 20kb-->
@@ -28,8 +31,12 @@
     String searchId="";
     // This variable for database name
     String database="";
+    // This variable tells us what action is being taken
+    String action="";
+    String refEmail = "engineeringlibrarian@ei.org";
 
     String section="";
+    String sectionid="";
     String sUserId="";
     String userId = null;
     SessionID sessionIdObj = null;
@@ -42,11 +49,13 @@
      *  Getting the UserSession object from the Controller client .
      *  Getting the session id from the usersession.
      */
-    UserSession ussession=(UserSession)client.getUserSession();
-    sessionId=ussession.getID();
+    UserSession ussession = (UserSession)client.getUserSession();
+    sessionId = ussession.getID();
     sessionIdObj = ussession.getSessionID();
 
-    sUserId=ussession.getProperty("P_USER_ID");
+    sUserId = ussession.getProperty("P_USER_ID");
+
+    ClientCustomizer clientCustomizer = new ClientCustomizer(ussession);
 
     if( sUserId != null)
     {
@@ -66,30 +75,113 @@
     {
         section = request.getParameter("section");
     }
+    if(request.getParameter("sectionid") != null)
+    {
+        sectionid = request.getParameter("sectionid");
+    }
+    action = request.getParameter("action");
 
+    out.write("<PAGE>");
+    out.write("<SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+    out.write("<SEARCH-ID>"+searchId+"</SEARCH-ID>");
+    out.write("<DATABASE>"+database+"</DATABASE>");
+    out.write("<SECTION>"+section+"</SECTION>");
 
-    if(true)
+    if(action == null)
     {
       //Writing the XML
-      out.write("<PAGE>");
-      out.write("<SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
-      out.write("<SEARCH-ID>"+searchId+"</SEARCH-ID>");
-      out.write("<DATABASE>"+database+"</DATABASE>");
-      out.write("<SECTION>"+section+"</SECTION>");
-      out.write("<ERROR-PAGE>false</ERROR-PAGE>");
+      out.write("<ACTION>compose</ACTION>");
       out.write("</PAGE>");
-      out.write("<!--END-->");
-      out.flush();
+    }
+    else if(action.equalsIgnoreCase("send"))
+    {
+      List recipients = new ArrayList();
+		  List ccAddress = new ArrayList();
+
+      recipients.add("j.moschetto@elsevier.com");
+
+      if(sectionid.equals("1"))
+      {
+        // ask an engineer email
+        //recipients.add("j.moschetto@elsevier.com");
+      }
+      else if(sectionid.equals("2"))
+      {
+        //recipients.add("evproductspecialist@elsevier.com");
+      }
+      else if(sectionid.equals("3"))
+      {
+
+        if(clientCustomizer.getRefEmail() != null && clientCustomizer.getRefEmail().length()>0)
+        {
+          refEmail = clientCustomizer.getRefEmail();
+        }
+        log("refEmail: " + refEmail);
+
+        //recipients.add(refEmail);
+      }
+
+      String from_name="";
+      if(request.getParameter("from_name") != null)
+      {
+          from_name = request.getParameter("from_name");
+      }
+
+      String from_email="";
+      if(request.getParameter("from_email") != null)
+      {
+          from_email = request.getParameter("from_email");
+      }
+
+      String institution="";
+      if(request.getParameter("institution") != null)
+      {
+          institution = request.getParameter("institution");
+      }
+
+      String message="";
+      if(request.getParameter("message") != null)
+      {
+          message = request.getParameter("message");
+      }
+
+      EIMessage eimessage = new EIMessage();
+      eimessage.setSender(from_email);
+      eimessage.addTORecepients(recipients);
+      //eimessage.addCCRecepients(ccAddress);
+      eimessage.setSubject(section);
+      eimessage.setSentDate(new Date());
+
+      Writer messagebody = new StringWriter();
+      messagebody.write(from_name);
+      messagebody.write("\n");
+      messagebody.write(institution);
+      messagebody.write("\n");
+      messagebody.write(from_email);
+      messagebody.write("\n");
+      messagebody.write(message);
+      messagebody.write("\n");
+      messagebody.write("---------------------------------------------------");
+      messagebody.write("\n");
+      messagebody.write(ussession.getUser().toString());
+      messagebody.write("\n");
+
+      eimessage.setMessageBody(messagebody.toString());
+
+      EMail email=EMail.getInstance();
+      email.sendMessage(eimessage);
+
+      out.write("<ACTION>confirm</ACTION>");
+      out.write("</PAGE>");
+
     }
     else
     {
-      out.write("<PAGE>");
-      out.write("<SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
-      out.write("<SEARCH-ID>"+searchId+"</SEARCH-ID>");
-      out.write("<DATABASE>"+database+"</DATABASE>");
-      out.write("<ERROR-PAGE>true</ERROR-PAGE>");
+      out.write("<ACTION>error</ACTION>");
       out.write("</PAGE>");
-      out.write("<!--END-->");
-      out.flush();
     }
+
+    out.write("<!--END-->");
+    out.flush();
+
 %>
