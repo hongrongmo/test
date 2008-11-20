@@ -342,9 +342,10 @@
                   </td>
                   <td valign="top" width="100%" align="left">
                     <xsl:apply-templates select="EI-DOCUMENT" />
-                    <a name="cloud" class="MedBlackText"><b>Keyword Cloud</b></a>
-                    <p/>
+                    <div id="bookcloud">
+                    <span class="MedBlackText"><b>Keyword Cloud</b></span><br/>
                     <xsl:value-of disable-output-escaping="yes" select="CLOUD"/>
+                    </div>
                     <p/>
                     <a name="toc" class="MedBlackText"><b>Table of Contents</b></a>
                     <p/>
