@@ -1,3 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xsl:stylesheet [
+  <!ENTITY nbsp '<xsl:text disable-output-escaping="yes">&amp;nbsp;</xsl:text>'>
+]>
 <xsl:stylesheet
   version="1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -12,8 +16,8 @@
   <xsl:variable name="SESSION-ID">
     <xsl:value-of select="SESSION-ID"/>
   </xsl:variable>
-  <xsl:variable name="ERROR-PAGE">
-    <xsl:value-of select="ERROR-PAGE"/>
+  <xsl:variable name="ACTION">
+    <xsl:value-of select="ACTION"/>
   </xsl:variable>
   <xsl:variable name="DATABASE">
     <xsl:value-of select="DATABASE"/>
@@ -133,11 +137,13 @@
     </center>
     <!-- End of logo table -->
     <xsl:choose>
-      <xsl:when test="$ERROR-PAGE='true'">
+      <xsl:when test="$ACTION='confirm'">
+        Thank you!!  Blah Blah Blah
+      </xsl:when>
+      <xsl:when test="$ACTION='error'">
         ERROR PAGE
       </xsl:when>
-      <xsl:otherwise>
-
+      <xsl:when test="$ACTION='compose'">
         <!-- Start of the lower area below the navigation bar -->
         <table border="0" width="100%" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
           <tr>
@@ -182,9 +188,16 @@
                         </xsl:attribute>
                       </input>
 
+                      <input type="hidden" name="action" value="send"/>
+
                       <table border="0" width="200" cellspacing="0" cellpadding="0">
                         <tr><td valign="top" height="15" colspan="3"><img src="/engresources/images/s.gif" border="0" height="15"/></td></tr>
-                        <tr><td valign="top" align="right"><A CLASS="MedBlackText">Name:</A></td><td valign="top" width="6">
+                        <tr><td valign="top" align="right">&nbsp;</td><td valign="top" width="6">
+                          <img src="/engresources/images/s.gif" border="0" width="6"/></td><td valign="top">
+                            <A CLASS="MedBlackText">Name:</A>
+                          </td>
+                        </tr>
+                        <tr><td valign="top" align="right">&nbsp;</td><td valign="top" width="6">
                           <img src="/engresources/images/s.gif" border="0" width="6"/></td><td valign="top">
                             <A CLASS="MedBlackText">
                               <input type="text" name="from_name" size="25">
@@ -193,7 +206,12 @@
                           </td>
                         </tr>
                         <tr><td valign="top" height="15" colspan="3"><img src="/engresources/images/s.gif" border="0" height="15"/></td></tr>
-                        <tr><td valign="top" align="right"><A CLASS="MedBlackText">Institution:</A></td><td valign="top" width="6">
+                        <tr><td valign="top" align="right">&nbsp;</td><td valign="top" width="6">
+                          <img src="/engresources/images/s.gif" border="0" width="6"/></td><td valign="top">
+                              <A CLASS="MedBlackText">Institution:</A>
+                          </td>
+                        </tr>
+                        <tr><td valign="top" align="right">&nbsp;</td><td valign="top" width="6">
                           <img src="/engresources/images/s.gif" border="0" width="6"/></td><td valign="top">
                             <A CLASS="MedBlackText">
                               <input type="text" name="institution" size="25">
@@ -202,7 +220,12 @@
                           </td>
                         </tr>
                         <tr><td valign="top" height="5" colspan="3"><img src="/engresources/images/s.gif" border="0" height="5"/></td></tr>
-                        <tr><td valign="top" align="right"><A CLASS="MedBlackText">Email:</A></td><td valign="top" width="6">
+                        <tr><td valign="top" align="right">&nbsp;</td><td valign="top" width="6">
+                          <img src="/engresources/images/s.gif" border="0" width="6"/></td><td valign="top">
+                              <A CLASS="MedBlackText">Email:</A>
+                          </td>
+                        </tr>
+                        <tr><td valign="top" align="right">&nbsp;</td><td valign="top" width="6">
                           <img src="/engresources/images/s.gif" border="0" width="6"/></td><td valign="top"><A CLASS="MedBlackText">
                           <input type="text" name="from_email" size="25">
                             <xsl:attribute name="value">
@@ -213,9 +236,14 @@
                           </td>
                         </tr>
                         <tr><td valign="top" height="5" colspan="3"><img src="/engresources/images/s.gif" border="0" height="5"/></td></tr>
-                        <tr><td valign="top" align="right"><A CLASS="MedBlackText">Question:</A></td><td valign="top" width="6">
+                        <tr><td valign="top" align="right">&nbsp;</td><td valign="top" width="6">
+                          <img src="/engresources/images/s.gif" border="0" width="6"/></td><td valign="top">
+                              <A CLASS="MedBlackText">Question:</A>
+                          </td>
+                        </tr>
+                        <tr><td valign="top" align="right">&nbsp;</td><td valign="top" width="6">
                           <img src="/engresources/images/s.gif" border="0" width="6"/></td><td valign="top"><A CLASS="MedBlackText">
-                          <TEXTAREA ROWS="3" COLS="20" WRAP="PHYSICAL" NAME="message"></TEXTAREA>
+                          <TEXTAREA ROWS="6" COLS="30" WRAP="PHYSICAL" NAME="message"></TEXTAREA>
                           </A>
                           </td>
                         </tr>
@@ -239,6 +267,9 @@
           </tr>
           <!-- end of the lower area below the navigation bar -->
         </table>
+      </xsl:when>
+      <xsl:otherwise>
+        Huh?
       </xsl:otherwise>
   </xsl:choose>
 
