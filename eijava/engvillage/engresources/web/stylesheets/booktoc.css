@@ -27,10 +27,16 @@
   font-family:arial,verdana,geneva;
 }
 
-#bookCloud a {background: #FFF;}
+#bookcloud { text-align: justify; width: 100%; }
+#bookCloud a {background: #FFF; text-decoration: none;}
 #bookCloud a:hover {background: #CCC;}
-#bookCloud .size1 { font-size: 80%; font-family: arial,verdana,geneva; text-decoration: none;}
-#bookCloud .size2 { font-size: 120%; font-family: arial,verdana,geneva; text-decoration: none;}
-#bookCloud .size3 { font-size: 160%; font-family: arial,verdana,geneva; text-decoration: none;}
-#bookCloud .size4 { font-size: 200%; font-family: arial,verdana,geneva; text-decoration: none;}
-#bookCloud .size5 { font-size: 220%; font-family: arial,verdana,geneva; text-decoration: none;}
+#bookCloud a.booktag1 { font-size: 0.7em; font-weight: 100; }
+#bookCloud a.booktag2 { font-size: 0.8em; font-weight: 200; }
+#bookCloud a.booktag3 { font-size: 0.9em; font-weight: 300; }
+#bookCloud a.booktag4 { font-size: 1.0em; font-weight: 400; }
+#bookCloud a.booktag5 { font-size: 1.2em; font-weight: 500; }
+#bookCloud a.booktag6 { font-size: 1.4em; font-weight: 600; }
+#bookCloud a.booktag7 { font-size: 1.6em; font-weight: 700; }
+#bookCloud a.booktag8 { font-size: 1.8em; font-weight: 800; }
+#bookCloud a.booktag9 { font-size: 2.2em; font-weight: 900; }
+#bookCloud a.booktag10 { font-size: 2.5em; font-weight: 900; }
