@@ -561,17 +561,18 @@
 <div id="two" style="display: none; text-align:left;">
   <p align="left">&nbsp;</p>
   <p align="left" class="style1">Our Product Specialist can help you with search assistance in Engineering Village, training needs and questions regarding features and results. </p>
-
+  <p align="left" class="style1">In addition, our Product Specialist hosts regular weekly trainings on multiple Engineering Village databases, features and functionality and creates training materials and product tours to support that.</p>
   <div align="left">
     <table width="972" border="0" cellspacing="0" cellpadding="0">
       <tr>
-        <td width="429" align="left" valign="top"><a href="http://www.ei.org/support/product_tours.html"><img src="/engresources/images/ae/images/New_Specialist.gif" alt="Ask a Product Specialist" width="429" height="356" border="0" id="Image1" onmouseover="pro_MM_swapImage('Image1','','/engresources/images/ae/images/New_Specialist_over.gif',0)" onmouseout="pro_MM_swapImgRestore()" /></a></td>
+        <td width="429" align="left" valign="top"><a target="_blank" href="http://www.ei.org/support/product_tours.html"><img src="/engresources/images/ae/images/New_Specialist.gif" alt="Ask a Product Specialist" width="429" height="356" border="0" id="Image1" onmouseover="pro_MM_swapImage('Image1','','/engresources/images/ae/images/New_Specialist_over.gif',0)" onmouseout="pro_MM_swapImgRestore()" /></a></td>
         <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-        <td width="518" align="left" valign="middle"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span> <br /></span>
+        <td width="518" align="left" valign="middle"><span class="style2">Sample questions:</span><br />
           <ol>
             <li class="style1">&ldquo;How often do patents to appear on Engineering Village after issuance?&rdquo;</li>
             <li class="style1">&ldquo;How can I use Engineering Village to track competitors?&rdquo;</li>
-            <li class="style1">&ldquo;How would I complete a search for business models and templates?&rdquo;&nbsp;&nbsp; </li>
+            <li class="style1">&ldquo;How would I complete a search for business models and templates?&rdquo;</li>
+            <li class="style1">&ldquo;Is it possible to get personalized trainings?&rdquo;</li>
           </ol>
           <p align="center"><a href="http://www.ei.org/support/online_seminars.html"><img src="/engresources/images/ae/images/training.gif" alt="email" width="167" height="14" border="0" /></a></p>
           <p align="center"><a href="javascript:emailFormat('$SESSIONID','two');"><img src="/engresources/images/ae/images/email_specialist.gif" alt="email_specalist" width="167" height="14" border="0"/></a></p></td>
@@ -579,7 +580,7 @@
     </table>
   </div>
   <p align="left" class="style4"><br />
-  FAQ</p>
+  <a name="faq" id="faq">FAQ</a></p>
   <div align="left">
     <ol>
       <li class="styleunderlined"><a href="#1">When is full text available?</a></li>
@@ -598,38 +599,50 @@
   </div>
   <p align="left" class="style5">1. When is full text available?<a name="1" id="1"></a></p>
   <p align="left" class="style1">Compendex is an A&amp;I database, or abstracts and index. What this means is that your results will all be in citation, and you can choose to look at either the abstract or detailed record format. You can look at the full text when available. What this means is that your institution subscribes to many journals and conferences, so for those journals and conferences, you would have an additional link in Engineering Village to full text, which would open up that particular article or proceeding for you.&nbsp;</p>
+<a class="style1" href="#faq">back</a>
   <p align="left" class="style5">2. How can I obtain a full text document is it is not available to me?<a name="2" id="2"></a></p>
   <p align="left" class="style1">If you would like to access the full text for a record your institution does not access, you can choose to go through a document delivery service. Linda Hall Library is a good one: <a href="http://www.lindahall.org/services/document_delivery/partners/eicompendex.shtml">http://www.lindahall.org/services/document_delivery/partners/eicompendex.shtml</a>. It is quite inexpensive and they are very good at getting you the documents very quickly. You may also contact your librarian about purchasing the article for you, through Linda Hall or another service.</p>
   <p align="left" class="style1">You may be able to get more information on a publisher&rsquo;s site or possibly purchase the article there as well.</p>
+<a class="style1" href="#faq">back</a>
   <p align="left" class="style5">3. Which groups of results data (&quot;facets&quot;) are available to me?<a name="3" id="3"></a></p>
   <p align="left" class="style1">You will see the &ldquo;facets&rdquo; that are available for the database(s) you are searching.&nbsp; Searching multiple databases at a time will change the facts available to you.&nbsp; You will only see the facets that those databases share in common.&nbsp; The Year and Add a Term facets will always appear.</p>
+<a class="style1" href="#faq">back</a>
   <p align="left" class="style4">4. How can I use the grouped result data (&quot;facets&quot;)&nbsp;when viewing my search results?<a name="4" id="4"></a></p>
   <p align="left" class="style1">After performing an initial search, a list of facets will appear on the right side of the search results screen. <br />
   These facets categories include and are not limited to: Databases, Author, Controlled vocabulary, Classification code, Document type, Language, Year, and Publisher. Under each facet, a list of the most recurring terms in that category will appear in descending order.&nbsp; Each facet displays the first 10 items that are relevant for your search. Click on more to find further information within each facet. <br />
   When you check one or more boxes under any of the facets and click 'include', the terms that you selected will be added to your initial search terms, therefore refining the results set. This is similar to doing an AND search with these terms.&nbsp; A number of search terms can be added to the same search, i.e. combining author, year and publication or any other combination which is most appropriate to the search.&nbsp; The &ldquo;Add a Term&rdquo; option allows you to add your own terms for search refinement and can be combined with other terms in the faceted list.</p>
+<a class="style1" href="#faq">back</a>
   <p align="left" class="style5">5. Why would I export the grouped result data (&quot;facets&quot;) into a chart and/or spreadsheet?<a name="5" id="5"></a></p>
   <p align="left" class="style1">The graph and export icons appear next to each facet in the Refine Results section of the search results screen. They are functional elements which allow you to view your faceted results as a bar graph or download a text file that can be exported to other software. <br />
   The Export icon &nbsp;lets you save or open the terms and records counts as a tab file which can be opened with any software. All the terms in a facet are exported at once regardless of the view. &nbsp;When you click on the icon, a download window will appear. Save or open the tab file. You can select in which software you would like the file to open. <br />
   Clicking on the bar graph sign Image &nbsp;will open a new window where an image of the top 10 results in the facet will appear. The bar graph will show the current results in the facet. &nbsp;For example, when you click on 'more', adding 10 more terms are added to the facet, the graph will show the terms that appear on the list that you are viewing. You can save, print or email this image using the windows images utility functions.</p>
+<a class="style1" href="#faq">back</a>
   <p align="left" class="style5">6. How often is content updated on EV?<a name="6" id="6"></a></p>
   <p align="left" class="style1">All of the bibliographic, patent, and news databases are updated with new content weekly.&nbsp; New Referex eBook titles are added annually.</p>
+<a class="style1" href="#faq">back</a>
   <p align="left" class="style5">7. How can I manage my results and save my searches?<a name="7" id="7"></a></p>
   <p align="left" class="style1">Managing your results is easy.&nbsp; Once you have refined your results, you can use the Results Manager to select records, and then view, email, print, download or save the selected records.&nbsp; <br />
   On the Search Results page, there is also a Save Search link, which can be found next to the record count.&nbsp; Simply clicking this link will allow you to save your searched to your Profile.&nbsp; <br />
     In order to save your searches or download specific records to a folder, you must create a personal account.</p>
+<a class="style1" href="#faq">back</a>
   <p align="left" class="style5">8. What is the benefit of email alerts and RSS?<a name="8" id="8"></a></p>
   <p align="left" class="style1">Email alerts and RSS feeds will keep you up to date with recently added content.&nbsp; These features will allow you to get automatic weekly updates of your search queries' results either emailed directly to your inbox via email alerts or straight to your RSS reader.</p>
+<a class="style1" href="#faq">back</a>
   <p align="left" class="style5">9. Why would I blog a record?<a name="9" id="9"></a></p>
   <p align="left" class="style1">The Blog This feature on Engineering Village allows you to Link from a blog to a record of interest on Engineering Village.&nbsp; This can create current awareness by highlighting new publications in a popular subject area.&nbsp; You can also create a forum from which to collaborate with colleagues in your area of research.&nbsp; In addition, the Blog This feature allows you the option of sharing information with an audience outside of your organization.&nbsp; <br />
 &nbsp;In order to use this feature you would simply click the &quot;Blog This&quot; button in an abstract or detailed record.&nbsp; Select the content that is showing in the box and paste it in your blog post.&nbsp; Once you publish your post the title of the record will appear in your blog.</p>
+<a class="style1" href="#faq">back</a>
   <p align="left" class="style5">10. What are tags and how can&nbsp;I use them?<a name="10" id="10"></a></p>
   <p align="left" class="style1">Tagging is a user-defined taxonomy. Such taxonomy is sometimes called a folksonomy and the bookmarks are referred to as tags. <br />
   With Engineering Village tagging you can add, edit and share tags you assigned to records.&nbsp; You can also search other users&rsquo; tags to gain new perspectives or organize your records of interest for yourself and groups. <br />
     You can create groups by inviting people with the same research interest as you to join a group with which you can share tagged records and view records shared by the group. </p>
+<a class="style1" href="#faq">back</a>
   <p align="left" class="style5">11. What does it mean to &quot;Browse Indexes&quot;?<a name="11" id="11"></a></p>
   <p align="left" class="style1">From the Browse Indexes box (located on the right side of Quick and Expert Search), select the index you wish to use by clicking on the link.&nbsp; Once the index is loaded, you can navigate by either selecting the first letter(s) of the term you wish to search for or by typing in the first few letters of the term in the SEARCH FOR box and clicking on &quot;Find.&quot;&nbsp; You can browse the indexes to search for precise terms or look for variations of a term (i.e. spelling or abbreviations). &nbsp;</p>
+<a class="style1" href="#faq">back</a>
   <p align="left" class="style5">12. How can the thesaurus help me when searching for content?<a name="12" id="12"></a></p>
   <p align="left" class="style1">The thesauri are guides to the controlled vocabulary used in indexing articles for Compendex and Inspec. &nbsp;Terms from the controlled vocabulary are assigned to each record to describe the article they are indexing. The controlled vocabulary is used to standardize the way the articles are indexed. The thesauri are hierarchical in nature. Terms are organized by broader, narrower or related concepts.&nbsp; You can use the thesauri to either expend your search or refine your search by finding broader, narrower or related terms to search on your subject area.</p>
+<a class="style1" href="#faq">back</a>
   <p align="left">&nbsp;</p>
 </div>
 
@@ -644,18 +657,16 @@
   <div align="left">
     <table width="972" border="0" cellspacing="0" cellpadding="0">
       <tr>
-        <td width="429" align="left" valign="top"><a href="http://www.ei.org/support/product_tours.html"><img src="/engresources/images/ae/images/Specialist.gif" alt="Ask a Librarian" width="493" height="362" border="0" id="lib_Image1" onmouseover="lib_MM_swapImage('lib_Image1','','/engresources/images/ae/images/Specialist_over.gif',0)" onmouseout="lib_MM_swapImgRestore()" /></a></td>
+        <td width="429" align="left" valign="top"><a target="_blank" href="http://www.ei.org/support/product_tours.html"><img src="/engresources/images/ae/images/New_Specialist.gif" alt="Ask a Librarian" width="429" height="356" border="0" id="lib_Image1" onmouseover="lib_MM_swapImage('lib_Image1','','/engresources/images/ae/images/New_Specialist_over.gif',0)" onmouseout="lib_MM_swapImgRestore()" /></a></td>
         <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-        <td width="518" align="left" valign="top"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span> <br /></span>
+        <td width="518" align="left" valign="middle"><span class="style2">Sample questions:</span><br />
           <ol>
-            <li class="style1">
-              <p>&ldquo;Can you help me find the Journal of Constructional Steel Research?&rdquo;</p>
-            </li>
-            <li class="style1">
-              <p>&ldquo;I&rsquo;d like to do a detailed search on coercive force and material composition but I need assistance.&rdquo;<span class="style1">&nbsp;</span>&nbsp; </p>
-            </li>
+            <li class="style1">&ldquo;Can you help me find the Journal of Constructional Steel Research?&rdquo;</li>
+            <li class="style1">&ldquo;I&rsquo;d like to do a detailed search on coercive force and material composition but I need assistance.&rdquo;</li>
           </ol>
-          <p align="center"><a href="javascript:emailFormat('$SESSIONID','three');"><img src="/engresources/images/ae/images/email_Librarian.gif" alt="Email a Librarian" width="124" height="14" border="0"/></a></p></td>
+          <p align="center"><a href="javascript:emailFormat('$SESSIONID','three');"><img src="/engresources/images/ae/images/email_Librarian.gif" alt="Email a Librarian" width="124" height="14" border="0"/></a></p>
+          <p align="left" class="style1">To learn more about the subject areas that are covered by the databases that are available to you, please visit <a target="_blank" href="http://www.ei.org/databases/compendex.html">http://www.ei.org/databases/compendex.html</a></p>
+        </td>
       </tr>
     </table>
   </div>
