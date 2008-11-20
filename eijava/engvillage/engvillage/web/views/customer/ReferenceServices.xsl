@@ -45,6 +45,11 @@
 	height:2087px;
 	z-index:1;
 }
+#three {
+	width:972px;
+	height:411px;
+	z-index:1;
+}
 .style1 {
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 12px;
@@ -147,6 +152,36 @@
       var i,j=0,x,a=pro_MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
        if ((x=pro_MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
     }
+        ]]>
+    // </xsl:comment>
+    </script>
+
+    <script type="text/JavaScript" language="JavaScript">
+    <xsl:comment>
+    <![CDATA[
+    function lib_MM_preloadImages() { //v3.0
+      var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+        var i,j=d.MM_p.length,a=lib_MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+        if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+    }
+
+    function lib_MM_swapImgRestore() { //v3.0
+      var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+    }
+
+    function lib_MM_findObj(n, d) { //v4.01
+      var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+        d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+      if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+      for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=lib_MM_findObj(n,d.layers[i].document);
+      if(!x && d.getElementById) x=d.getElementById(n); return x;
+    }
+
+    function lib_MM_swapImage() { //v3.0
+      var i,j=0,x,a=lib_MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+       if ((x=lib_MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+    }
+
         ]]>
     // </xsl:comment>
     </script>
@@ -530,7 +565,7 @@
   <div align="left">
     <table width="972" border="0" cellspacing="0" cellpadding="0">
       <tr>
-        <td width="429" align="left" valign="top"><a href="http://www.ei.org/support/product_tours.html"><img src="/engresources/images/ae/images/New_Specialist.gif" alt="AskProductSpecialist " width="429" height="356" border="0" id="Image1" onmouseover="pro_MM_swapImage('Image1','','/engresources/images/ae/images/New_Specialist_over.gif',0)" onmouseout="pro_MM_swapImgRestore()" /></a></td>
+        <td width="429" align="left" valign="top"><a href="http://www.ei.org/support/product_tours.html"><img src="/engresources/images/ae/images/New_Specialist.gif" alt="Ask a Product Specialist" width="429" height="356" border="0" id="Image1" onmouseover="pro_MM_swapImage('Image1','','/engresources/images/ae/images/New_Specialist_over.gif',0)" onmouseout="pro_MM_swapImgRestore()" /></a></td>
         <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
         <td width="518" align="left" valign="middle"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span> <br /></span>
           <ol>
@@ -602,18 +637,29 @@
 <!-- Ask a Librarian -->
 <!-- Ask a Librarian -->
 
-<div id="three" style="display: none;">
-  <h1>Ask a Librarian</h1>
+<div id="three" style="display: none; text-align:left;">
+  <p align="left">&nbsp;</p>
+  <p align="left" class="style1">A librarian can help you formulate a search, identify and locate a source for a book or an article, or find additional resources on a specific topic.</p>
 
-    <xsl:choose>
-      <xsl:when test="$REFEMAIL=''">
-        Our Librarian
-      </xsl:when>
-      <xsl:otherwise>
-        Your Librarian
-      </xsl:otherwise>
-    </xsl:choose>
-    <a href="javascript:emailFormat('$SESSIONID','three');">Ask a question</a>
+  <div align="left">
+    <table width="972" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="429" align="left" valign="top"><a href="http://www.ei.org/support/product_tours.html"><img src="/engresources/images/ae/images/Specialist.gif" alt="Ask a Librarian" width="493" height="362" border="0" id="lib_Image1" onmouseover="lib_MM_swapImage('lib_Image1','','/engresources/images/ae/images/Specialist_over.gif',0)" onmouseout="lib_MM_swapImgRestore()" /></a></td>
+        <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+        <td width="518" align="left" valign="top"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span> <br /></span>
+          <ol>
+            <li class="style1">
+              <p>&ldquo;Can you help me find the Journal of Constructional Steel Research?&rdquo;</p>
+            </li>
+            <li class="style1">
+              <p>&ldquo;I&rsquo;d like to do a detailed search on coercive force and material composition but I need assistance.&rdquo;<span class="style1">&nbsp;</span>&nbsp; </p>
+            </li>
+          </ol>
+          <p align="center"><a href="javascript:emailFormat('$SESSIONID','three');"><img src="/engresources/images/ae/images/email_Librarian.gif" alt="Email a Librarian" width="124" height="14" border="0"/></a></p></td>
+      </tr>
+    </table>
+  </div>
+  <p align="left">&nbsp;</p>
 </div>
 
 
