@@ -33,15 +33,31 @@ public class IBFCombiner
         String username = args[2];
         String password = args[3];
         int loadNumber = Integer.parseInt(args[4]);
-        int recsPerfile = Integer.parseInt(args[5]);
-        Combiner.EXITNUMBER = Integer.parseInt(args[6]);
+        int recsPerbatch = Integer.parseInt(args[5]);
+        String operation = args[6];
         Combiner.TABLENAME = args[7];
+        String environment = args[8].toLowerCase();
 
-        CombinedWriter writer = new CombinedXMLWriter(recsPerfile,
+        CombinedWriter writer = new CombinedXMLWriter(recsPerbatch,
                 									  loadNumber,
                 									  "ibf");
+		writer.setOperation(operation);
         IBFCombiner c = new IBFCombiner(writer);
-        if (loadNumber > 3000 || loadNumber < 1000)
+        // extract the whole thing
+    	if(loadNumber == 0)
+    	{
+			for(int yearIndex = 1898; yearIndex <= 1968; yearIndex++)
+			{
+				System.out.println("Processing year " + yearIndex + "...");
+				c = new IBFCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,"ibf", environment));
+				c.writeCombinedByYear(url,
+								driver,
+								username,
+								password,
+								yearIndex);
+			}
+		}
+        else if (loadNumber > 3000 || loadNumber < 1000)
         {
             c.writeCombinedByWeekNumber(url,
                     					driver,
@@ -69,13 +85,13 @@ public class IBFCombiner
         try
         {
 
-            this.writer.begin();
             stmt = con.createStatement();
             System.out.println("Running the YEAR query...");
             rs = stmt.executeQuery("select " + QUERY_FIELDS + " from " + Combiner.TABLENAME + " where nvl(pyr,substr(su,1,4)) ='" + year + "'");
             writeRecs(rs);
             System.out.println("Wrote records.");
             this.writer.end();
+            this.writer.flush();
         }
         finally
         {
@@ -116,13 +132,13 @@ public class IBFCombiner
         try
         {
 
-            this.writer.begin();
             stmt = con.createStatement();
             System.out.println("Running the LOAD NUMBER query...");
             rs = stmt.executeQuery("select " + QUERY_FIELDS + " from " + Combiner.TABLENAME + " where LOAD_NUMBER = " + loadN);
             writeRecs(rs);
             System.out.println("Wrote records.");
             this.writer.end();
+            this.writer.flush();
         }
         finally
         {
@@ -162,11 +178,6 @@ public class IBFCombiner
         {
             EVCombinedRec rec = new EVCombinedRec();
             ++i;
-
-            if (Combiner.EXITNUMBER != 0 && i > Combiner.EXITNUMBER)
-            {
-                break;
-            }
 
             rec.put(rec.DOCID, rs.getString("M_ID"));
             rec.put(rec.DATABASE, "ibf");
