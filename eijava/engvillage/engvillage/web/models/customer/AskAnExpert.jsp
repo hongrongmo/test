@@ -37,13 +37,15 @@
 
     String section="";
     String sectionid="";
+    String discipline="";
+    String disciplineid="";
+    String guru="";
     String sUserId="";
     String userId = null;
     SessionID sessionIdObj = null;
 
     // This variable is used to hold ControllerClient instance
     ControllerClient client = new ControllerClient(request, response);
-
 
     /**
      *  Getting the UserSession object from the Controller client .
@@ -79,6 +81,18 @@
     {
         sectionid = request.getParameter("sectionid");
     }
+    if(request.getParameter("discipline") != null)
+    {
+        discipline = request.getParameter("discipline");
+    }
+    if(request.getParameter("disciplineid") != null)
+    {
+        disciplineid = request.getParameter("disciplineid");
+    }
+    if(request.getParameter("guru") != null)
+    {
+        guru = request.getParameter("guru");
+    }
     action = request.getParameter("action");
 
     out.write("<PAGE>");
@@ -86,11 +100,15 @@
     out.write("<SEARCH-ID>"+searchId+"</SEARCH-ID>");
     out.write("<DATABASE>"+database+"</DATABASE>");
     out.write("<SECTION>"+section+"</SECTION>");
+    out.write("<SECTIONID>"+sectionid+"</SECTIONID>");
 
     if(action == null)
     {
       //Writing the XML
       out.write("<ACTION>compose</ACTION>");
+      out.write("<DISCIPLINE>"+discipline+"</DISCIPLINE>");
+      out.write("<DISCIPLINEID>"+disciplineid+"</DISCIPLINEID>");
+      out.write("<GURU>"+guru+"</GURU>");
       out.write("</PAGE>");
     }
     else if(action.equalsIgnoreCase("send"))
