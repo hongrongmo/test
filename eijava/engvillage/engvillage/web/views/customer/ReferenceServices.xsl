@@ -76,53 +76,54 @@
     <script type="text/JavaScript" language="JavaScript">
     <xsl:comment>
     <![CDATA[
-    function MM_preloadImages() { //v3.0
-      var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
-        var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
-        if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
-    }
 
-    function MM_findObj(n, d) { //v4.01
-      var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
-        d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
-      if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
-      for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
-      if(!x && d.getElementById) x=d.getElementById(n); return x;
-    }
+      function MM_preloadImages() { //v3.0
+        var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+          var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+          if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+      }
 
-    function MM_nbGroup(event, grpName) { //v6.0
-      var i,img,nbArr,args=MM_nbGroup.arguments;
-      if (event == "init" && args.length > 2) {
-        if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
-          img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
-          if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
-          nbArr[nbArr.length] = img;
-          for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      function MM_findObj(n, d) { //v4.01
+        var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+          d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+        if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+        for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+        if(!x && d.getElementById) x=d.getElementById(n); return x;
+      }
+
+      function MM_nbGroup(event, grpName) { //v6.0
+        var i,img,nbArr,args=MM_nbGroup.arguments;
+        if (event == "init" && args.length > 2) {
+          if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+            img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+            if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+            nbArr[nbArr.length] = img;
+            for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+              if (!img.MM_up) img.MM_up = img.src;
+              img.src = img.MM_dn = args[i+1];
+              nbArr[nbArr.length] = img;
+          } }
+        } else if (event == "over") {
+          document.MM_nbOver = nbArr = new Array();
+          for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
             if (!img.MM_up) img.MM_up = img.src;
-            img.src = img.MM_dn = args[i+1];
+            img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+            nbArr[nbArr.length] = img;
+          }
+        } else if (event == "out" ) {
+          for (i=0; i < document.MM_nbOver.length; i++) {
+            img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+        } else if (event == "down") {
+          nbArr = document[grpName];
+          if (nbArr)
+            for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+          document[grpName] = nbArr = new Array();
+          for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+            if (!img.MM_up) img.MM_up = img.src;
+            img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
             nbArr[nbArr.length] = img;
         } }
-      } else if (event == "over") {
-        document.MM_nbOver = nbArr = new Array();
-        for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
-          if (!img.MM_up) img.MM_up = img.src;
-          img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
-          nbArr[nbArr.length] = img;
-        }
-      } else if (event == "out" ) {
-        for (i=0; i < document.MM_nbOver.length; i++) {
-          img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
-      } else if (event == "down") {
-        nbArr = document[grpName];
-        if (nbArr)
-          for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
-        document[grpName] = nbArr = new Array();
-        for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
-          if (!img.MM_up) img.MM_up = img.src;
-          img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
-          nbArr[nbArr.length] = img;
-      } }
-    }
+      }
 
         ]]>
     // </xsl:comment>
@@ -217,25 +218,31 @@
 
     function emailFormat(sessionid,section)
     {
-      var url = "/controller/servlet/Controller?EISESSION="+sessionid+"&CID=askanexpert&database=1&section="+escape(pageTitles[section])+"&sectionid="+section;
+      emailGuruFormat(sessionid,section)
+    }
+
+    function emailGuruFormat(sessionid,section,discipline,guru)
+    {
+      var url = "/controller/servlet/Controller?EISESSION="+sessionid+"&CID=askanexpert&database=1&section="+escape(pageTitles[section])+"&sectionid="+section+"&discipline="+escape(layerTitles[discipline])+"&disciplineid="+discipline+"&guru="+escape(guru);
       new_window=window.open(url,'NewWindow','status=yes,resizable,scrollbars,width=600,height=600');
       new_window.focus();
     }
 
     var layerTitles = new Array();
-    layerTitles['Layer0'] = 'zero';
-    layerTitles['Layer1'] = 'Chemical';
-    layerTitles['Layer2'] = 'Industrial';
-    layerTitles['Layer3'] = 'Mechanical';
-    layerTitles['Layer4'] = 'Electrical';
-    layerTitles['Layer5'] = 'Signal Processing';
-    layerTitles['Layer6'] = 'Maufacturing';
-    layerTitles['Layer7'] = 'Materials';
-    layerTitles['Layer8'] = 'Engineering Management';
-    layerTitles['Layer9'] = 'Computer';
+    layerTitles['zero'] = 'zero';
+    layerTitles['Layer12'] = 'Chemical';
+    layerTitles['Layer15'] = 'Industrial';
+    layerTitles['Layer1'] = 'Mechanical';
+    layerTitles['Layer8'] = 'Electrical';
+    layerTitles['Layer3'] = 'Signal Processing';
+    layerTitles['Layer2'] = 'Maufacturing';
+    layerTitles['Layer10'] = 'Materials';
+    layerTitles['Layer9'] = 'Engineering Management';
+    layerTitles['Layer11'] = 'Computer';
+
     function toggleDivLayers(divname)
     {
-      var allIds = ['Layer1','Layer2','Layer3','Layer4','Layer5','Layer6','Layer7','Layer8','Layer9'];
+      var allIds = ['Layer12','Layer15','Layer1','Layer8','Layer3','Layer2','Layer10','Layer9','Layer11'];
 
       for(var i in allIds)
       {
@@ -298,261 +305,247 @@
 
 <div id="one" style="display: none;">
 
-  <table border="0" cellpadding="0" cellspacing="0">
-    <tr>
-      <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer1'); MM_nbGroup('down','group1','Chemical','/engresources/images/ae/images/Chemical.gif',0)" onmouseover="MM_nbGroup('over','Chemical','/engresources/images/ae/images/Chemical_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Chemical.gif" alt="Chemical" name="Chemical" width="108" height="128" border="0" id="Chemical" onload="MM_nbGroup('init','group1','Chemical','/engresources/images/ae/images/Chemical_down.gif',0)" /></a></td>
-      <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer2'); MM_nbGroup('down','group1','Industrial','/engresources/images/ae/images/Idustrial.gif',0)" onmouseover="MM_nbGroup('over','Industrial','/engresources/images/ae/images/Idustrial_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Idustrial.gif" alt="industrial" name="Industrial" width="108" height="128" border="0" id="Industrial" onload="MM_nbGroup('init','group1','Industrial','/engresources/images/ae/images/Idustrial_down.gif',0)" /></a></td>
-      <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer3'); MM_nbGroup('down','group1','Mechanical','/engresources/images/ae/images/Mechanical.gif',0)" onmouseover="MM_nbGroup('over','Mechanical','/engresources/images/ae/images/Mechanical_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Mechanical.gif" alt="mecanical" name="Mechanical" width="108" height="128" border="0" id="Mechanical" onload="MM_nbGroup('init','group1','Mechanical','/engresources/images/ae/images/Mechanical_down.gif',0)" /></a></td>
-      <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer4'); MM_nbGroup('down','group1','Electrical','/engresources/images/ae/images/Electrical.gif',0)" onmouseover="MM_nbGroup('over','Electrical','/engresources/images/ae/images/Electrical_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Electrical.gif" alt="Electrical" name="Electrical" width="108" height="128" border="0" id="Electrical" onload="MM_nbGroup('init','group1','Electrical','/engresources/images/ae/images/Electrical_down.gif',0)" /></a></td>
-      <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer5'); MM_nbGroup('down','group1','SignalProcessing','/engresources/images/ae/images/SignalProcessing.gif',0)" onmouseover="MM_nbGroup('over','SignalProcessing','/engresources/images/ae/images/SignalProcessing_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/SignalProcessing.gif" alt="signal" name="SignalProcessing" width="108" height="128" border="0" id="SignalProcessing" onload="MM_nbGroup('init','group1','SignalProcessing','/engresources/images/ae/images/SignalProcessing_down.gif',0)" /></a></td>
-      <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer6'); MM_nbGroup('down','group1','Manufacturing','/engresources/images/ae/images/Manufacturing.gif',0)" onmouseover="MM_nbGroup('over','Manufacturing','/engresources/images/ae/images/Manufacturing_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Manufacturing.gif" alt="manufacturing" name="Manufacturing" width="108" height="128" border="0" id="Manufacturing" onload="MM_nbGroup('init','group1','Manufacturing','/engresources/images/ae/images/Manufacturing_down.gif',0)" /></a></td>
-      <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer7'); MM_nbGroup('down','group1','Materials','/engresources/images/ae/images/Materials.gif',0)" onmouseover="MM_nbGroup('over','Materials','/engresources/images/ae/images/Materials_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Materials.gif" alt="matiterials" name="Materials" width="108" height="128" border="0" id="Materials" onload="MM_nbGroup('init','group1','Materials','/engresources/images/ae/images/Materials_down.gif',0)" /></a></td>
-      <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer8'); MM_nbGroup('down','group1','Management','/engresources/images/ae/images/Management-.gif',0)" onmouseover="MM_nbGroup('over','Management','/engresources/images/ae/images/Management_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Management-.gif" alt="managment" name="Management" width="108" height="128" border="0" id="Management" onload="MM_nbGroup('init','group1','Management','/engresources/images/ae/images/Management_down.gif',0)" /></a></td>
-      <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer9'); MM_nbGroup('down','group1','Computer','/engresources/images/ae/images/Computer-.gif',0)" onmouseover="MM_nbGroup('over','Computer','/engresources/images/ae/images/Computer_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Computer-.gif" alt="computer" name="Computer" width="108" height="128" border="0" id="Computer" onload="MM_nbGroup('init','group1','Computer','/engresources/images/ae/images/Computer_down.gif',0)" /></a></td>
-    </tr>
-  </table>
-
-  <div id="Layer1" style="display: none;">
-    <p><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
-
-    <table width="972" border="0" cellspacing="0" cellpadding="0">
+    <p align="left">&nbsp;</p>
+    <table border="0" cellpadding="0" cellspacing="0">
       <tr>
-        <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/Mechanical.gif" alt="Mechanical" width="108" height="128" /></td>
-        <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-        <td width="417" align="left" valign="top"><p class="style1"><span class="style2">Ryo Samuel Amano&nbsp; &nbsp;</span> <br />
-            Fluid and thermodynamics professor, Department of Mechanical Engineering, University of Wisconsin-Milwaukee<br />
-        </p>
-        <p class="style1">Areas of expertise: aerodynamics, gas/steam turbines, fluid mechanics/fluid dynamics, rocket/propulsion systems, heat transfer/heat exchangers/engines</p></td>
-        <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-        <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span> <br />
-            <br /></span>
-          <ol>
-            <li class="style1">&ldquo;Is it possible to give heat treatment to copper?&rdquo; </li>
-            <li class="style1">&ldquo;How can wet carbon dioxide be responsible for a corrosion problem in iron-containing metals?&rdquo;</li>
-            <li class="style1">&ldquo;What type of steel rod/axle&nbsp;would you use for one way roller bearings.&rdquo;</li>
-          </ol>
-          <p align="center"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" /></p></td>
+        <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer12');MM_nbGroup('down','group1','Chemical','/engresources/images/ae/images/Chemical.gif',0)" onmouseover="MM_nbGroup('over','Chemical','/engresources/images/ae/images/Chemical_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Chemical.gif" alt="Chemical" name="Chemical" width="108" height="128" border="0" id="Chemical" onload="MM_nbGroup('init','group1','Chemical','/engresources/images/ae/images/Chemical_down.gif',0)" /></a></td>
+        <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer15');MM_nbGroup('down','group1','Industrial','/engresources/images/ae/images/Idustrial.gif',0)" onmouseover="MM_nbGroup('over','Industrial','/engresources/images/ae/images/Idustrial_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Idustrial.gif" alt="industrial" name="Industrial" width="108" height="128" border="0" id="Industrial" onload="MM_nbGroup('init','group1','Industrial','/engresources/images/ae/images/Idustrial_down.gif',0)" /></a></td>
+        <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer1');MM_nbGroup('down','group1','Mechanical','/engresources/images/ae/images/Mechanical.gif',0)" onmouseover="MM_nbGroup('over','Mechanical','/engresources/images/ae/images/Mechanical_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Mechanical.gif" alt="mecanical" name="Mechanical" width="108" height="128" border="0" id="Mechanical" onload="MM_nbGroup('init','group1','Mechanical','/engresources/images/ae/images/Mechanical_down.gif',0)" /></a></td>
+        <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer8');MM_nbGroup('down','group1','Electrical','/engresources/images/ae/images/Electrical.gif',0)" onmouseover="MM_nbGroup('over','Electrical','/engresources/images/ae/images/Electrical_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Electrical.gif" alt="Electrical" name="Electrical" width="108" height="128" border="0" id="Electrical" onload="MM_nbGroup('init','group1','Electrical','/engresources/images/ae/images/Electrical_down.gif',0)" /></a></td>
+        <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer3');MM_nbGroup('down','group1','SignalProcessing','/engresources/images/ae/images/SignalProcessing.gif',0)" onmouseover="MM_nbGroup('over','SignalProcessing','/engresources/images/ae/images/SignalProcessing_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/SignalProcessing.gif" alt="signal" name="SignalProcessing" width="108" height="128" border="0" id="SignalProcessing" onload="MM_nbGroup('init','group1','SignalProcessing','/engresources/images/ae/images/SignalProcessing_down.gif',0)" /></a></td>
+        <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer2');MM_nbGroup('down','group1','Manufacturing','/engresources/images/ae/images/Manufacturing.gif',0)" onmouseover="MM_nbGroup('over','Manufacturing','/engresources/images/ae/images/Manufacturing_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Manufacturing.gif" alt="manufacturing" name="Manufacturing" width="108" height="128" border="0" id="Manufacturing" onload="MM_nbGroup('init','group1','Manufacturing','/engresources/images/ae/images/Manufacturing_down.gif',0)" /></a></td>
+        <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer10');MM_nbGroup('down','group1','Materials','/engresources/images/ae/images/Materials.gif',0)" onmouseover="MM_nbGroup('over','Materials','/engresources/images/ae/images/Materials_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Materials.gif" alt="matiterials" name="Materials" width="108" height="128" border="0" id="Materials" onload="MM_nbGroup('init','group1','Materials','/engresources/images/ae/images/Materials_down.gif',0)" /></a></td>
+        <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer9');MM_nbGroup('down','group1','Management','/engresources/images/ae/images/Management-.gif',0)" onmouseover="MM_nbGroup('over','Management','/engresources/images/ae/images/Management_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Management-.gif" alt="managment" name="Management" width="108" height="128" border="0" id="Management" onload="MM_nbGroup('init','group1','Management','/engresources/images/ae/images/Management_down.gif',0)" /></a></td>
+        <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer11');MM_nbGroup('down','group1','Computer','/engresources/images/ae/images/Computer-.gif',0)" onmouseover="MM_nbGroup('over','Computer','/engresources/images/ae/images/Computer_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Computer-.gif" alt="computer" name="Computer" width="108" height="128" border="0" id="Computer" onload="MM_nbGroup('init','group1','Computer','/engresources/images/ae/images/Computer_down.gif',0)" /></a></td>
       </tr>
     </table>
-    <p><br />
+
+    <div id="Layer1" style="display: none;">
+      <p><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
+
+      <table width="972" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="111" height="163" align="left" valign="top"><img src="/engresources/images/ae/images/Mechanical.gif" alt="Mechanical" width="108" height="128" /></td>
+          <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="417" align="left" valign="top"><p align="left" class="style1"><span class="style2">Ryo Samuel Amano&nbsp; &nbsp;</span> <br />
+              Fluid and thermodynamics professor, Department of Mechanical Engineering, University of Wisconsin-Milwaukee</p>
+            <p align="left" class="style1">Areas of expertise: aerodynamics, gas/steam turbines, fluid mechanics/fluid dynamics, rocket/propulsion systems, heat transfer/heat exchangers/engines</p>
+            <p align="left" class="style1">&nbsp;</p>
+            <p align="left" class="style1"><span class="style2">Ronald A. Perez<br />
+            </span>Interim Dean, College of Engineering &amp; Applied Science<br />
+            University of Wisconsin-Milwaukee </p>
+            <p align="left" class="style1">Areasof expertise: production operations, process flow/optimization, process simulation, capital allocation, cost models, concurrent engineering, SQC/SPC (Statistical Quality Control/Statistical Process Control) and applied statistics, TQM philosophy, benchmarking, DOE (Design of Experiments), QFD (Quality Function Deployment), cost of quality, economic/non-economic decision making, optimization</p>
+            <p align="left" class="style1">&nbsp;</p>
+          </td>
+          <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="394" align="left" valign="top"><div align="left"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span></span></div>
+            <p align="left" class="style1">&ldquo;What type of steel rod/axle&nbsp;would you use for one way roller bearings.&rdquo;</p>
+            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','three','Layer1','Ryo Samuel Amano');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0" /></a></p>
+            <p class="style1">&nbsp;</p>
+            <p class="style1">&nbsp;</p>
+            <p align="left" class="style1">&nbsp;&ldquo;How can I calculate or at arrive the capacity of a mechanical press?&rdquo;</p>        <p align="center"><span class="style1"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" /></span></p></td>
+        </tr>
+      </table>
+      <p><br />
+      </p>
+    </div>
+
+    <div id="Layer2" style="display: none;">
+      <p><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
+
+      <table width="972" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/Manufacturing.gif" alt="Manufacturing" width="108" height="128" /></td>
+          <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="417" align="left" valign="top"><p class="style1"><span class="style2">Robert D. Borchelt &nbsp; &nbsp;</span> <br />
+            Technical advisor for assembly and automation in the Corporate Operations Analysis Group, Cummins Engine Company
     </p>
-  </div>
+            <p class="style1">Areas of expertise: computer integrated manufacturing, automation and advanced manufacturing systems, artificial intelligence applications in robotics and manufacturing, automated diagnosis and error recovery, hybrid knowledge-based systems, programmable logic controller applications, physical modeling of manufacturing systems, engineering management issues related to manufacturing, manufacturing processes, systems integration, expert systems </p>
+            <p class="style1">&nbsp;</p>
+            <p class="style1"><span class="style2">Gregory A. Sedrick </span> <br />
+    UC Foundation assistant professor and director, Engineering Management, Industrial and Manufacturing Engineering Programs, University of Tennessee </p>
+            <p class="style1">Areas of expertise: TQM (Total Quality Management), ISO 9000, ISO 9000 certification, work measurement, engineering economy, work design and improvement, methods improvement, small manufacturing, multimedia-based corporate training in above areas, Baldridge Award preparation/judging </p></td>
+          <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="394" align="left" valign="top"><div align="left"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span></span></div>
+            <p align="left" class="style1">&ldquo;How do you organize the value engineering functions in a tractor manufacturing firm?&rdquo;</p>
+            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','three','Layer2','Robert D. Borchelt');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p>
+            <p class="style1">&nbsp;</p>
+            <p class="style1">&nbsp;</p>
+            <p class="style1">&nbsp;</p>
+            <p class="style1">&nbsp;</p>
+            <p class="style1">&ldquo;What&rsquo;s the best individual fabrication system for Bulk-handling machines?&rdquo;</p>
+            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','three','Layer2','Gregory A. Sedrick');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p>
+            <p align="center">&nbsp;</p></td>
+        </tr>
+      </table>
+      <p><br />
+      </p>
+    </div>
 
-  <div id="Layer2" style="display: none;">
-    <p><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
+    <div id="Layer3" style="display: none;">
+      <p><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
 
-    <table width="972" border="0" cellspacing="0" cellpadding="0">
-      <tr>
-        <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/Manufacturing.gif" alt="chem" width="108" height="128" /></td>
-        <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-        <td width="417" align="left" valign="top"><p class="style1"><span class="style2">Robert D. Borchelt &nbsp; &nbsp;</span> <br />
-          Technical advisor for assembly and automation in the Corporate Operations Analysis Group, Cummins Engine Company
-  </p>
-          <p class="style1">Areas of expertise: computer integrated manufacturing, automation and advanced manufacturing systems, artificial intelligence applications in robotics and manufacturing, automated diagnosis and error recovery, hybrid knowledge-based systems, programmable logic controller applications, physical modeling of manufacturing systems, engineering management issues related to manufacturing, manufacturing processes, systems integration, expert systems </p></td>
-        <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-        <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span> <br />
-              <br />
-          </span>
-            <ol>
-              <li class="style1">&ldquo;Is it possible to give heat treatment to copper?&rdquo; </li>
-              <li class="style1">&ldquo;How can wet carbon dioxide be responsible for a corrosion problem in iron-containing metals?&rdquo;</li>
-              <li class="style1">&ldquo;What type of steel rod/axle&nbsp;would you use for one way roller bearings.&rdquo;</li>
-            </ol>
-          <p align="center"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" /></p></td>
-      </tr>
-    </table>
-    <p><br />
+      <table width="972" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/SignalProcessing.gif" alt="SignalProcessing" width="108" height="128" /></td>
+          <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="417" align="left" valign="top"><p class="style1"><span class="style2">Chi Hau Chen    &nbsp; &nbsp;</span> <br />
+            Signal processing professor, Electrical and Computer Engineering, University of Massachusetts</p>
+              <p class="style1">Areas of expertise: pattern recognition, signal/image processing and neural networks, applications to ultrasonic/nondestructive evaluation (NDE), sonar, radar, and seismic problems, machine vision, artificial intelligence, time series analysis, wavelet analysis</p></td>
+          <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span> <br />
+                <br />
+            </span>
+            <p class="style1">Sample Question: &nbsp;&ldquo;Which images or signals inside the tunnel are best for object detection?&rdquo;</p>
+            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','three','Layer3','Chi Hau Chen');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p></td>
+        </tr>
+      </table>
+      <p><br />
+      </p>
+    </div>
+
+
+    <div id="Layer8" style="display: none;">
+      <p><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
+
+      <table width="972" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/Electrical.gif" alt="Electrical" width="108" height="128" /></td>
+          <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="417" align="left" valign="top"><p class="style1"><span class="style2">Kanti Prasad     &nbsp; &nbsp;</span> <br />Professor, electrical engineering, and director, Microelectronics/VLSI Technology, University of Massachusetts</p>
+            <p class="style1">Areas of expertise: VLSI chip design incorporating microprocessors, controls, communications, intelligent transportation systems, GPS, computer networks, LANs, including wireless LANs, VLSI fabrication incorporating microelectronics processing such as lithography oxidation, diffusion, implantation, and metallization for silicon as well as GaAs technology including packing and reliability analysis, digital and analog design employing VHDL incorporating test and simulation I entirety, i.e., exhaustive testing and simulation with statistically fast and event driven simulators </p></td>
+          <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span> <br />
+                <br />
+            </span>
+              <p class="style1">&ldquo;How can I calibrate a current transformer?&rdquo;</p>
+            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','three','Layer8','Kanti Prasad');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p></td>
+        </tr>
+      </table>
+      <p><br />
+      </p>
+    </div>
+
+    <div id="Layer9" style="display: none;">
+      <p><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
+
+      <table width="972" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/Management-.gif" alt="Management" width="108" height="128" /></td>
+          <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="417" align="left" valign="top"><p class="style1"><span class="style2">Donald W. Merino, Jr.      &nbsp; &nbsp;</span> <br />
+            Areas of expertise: production operations, process flow/optimization, process simulation, capital allocation, cost models, concurrent engineering, SQC/SPC (Statistical Quality Control/Statistical Process Control) and applied statistics, TQM philosophy, benchmarking, DOE (Design of Experiments), QFD (Quality Function Deployment), cost of quality, economic/non-economic decision making, optimizatio</p>
+          </td>
+          <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span> <br /></span>
+            <p align="left" class="style1">&ldquo;During design, how is optimization achieved and what factors are considered?&rdquo; </p>
+            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','three','Layer9','Donald W. Merino, Jr.');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p>
+          </td>
+        </tr>
+      </table>
+      <p><br />
+      </p>
+    </div>
+
+    <div id="Layer15" style="display: none;">
+      <p><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
+
+      <table width="972" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/Idustrial.gif" alt="Idustrial" width="108" height="128" /></td>
+          <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="417" align="left" valign="top"><p class="style1"><span class="style2">Donald W. Merino, Jr.      &nbsp; &nbsp;</span> <br />
+            Areas of expertise: production operations, process flow/optimization, process simulation, capital allocation, cost models, concurrent engineering, SQC/SPC (Statistical Quality Control/Statistical Process Control) and applied statistics, TQM philosophy, benchmarking, DOE (Design of Experiments), QFD (Quality Function Deployment), cost of quality, economic/non-economic decision making, optimization</p>
+            <p class="style1">&nbsp;</p>
+            <p class="style1"><span class="style2">Gregory A. Sedrick </span> <br />
+    UC Foundation assistant professor and director, Engineering Management, Industrial and Manufacturing Engineering Programs, University of Tennessee </p>
+            <p class="style1">Areas of expertise: TQM (Total Quality Management), ISO 9000, ISO 9000 certification, work measurement, engineering economy, work design and improvement, methods improvement, small manufacturing, multimedia-based corporate training in above areas, Baldridge Award preparation/judging </p></td>
+          <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span> <br /></span>
+            <p align="left" class="style1">&ldquo;To ensure a certain interval in a time study, how many samples should be done?&rdquo;</p>
+            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','three','Layer9','Donald W. Merino, Jr.');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p>
+            <p class="style1">&nbsp;</p>
+            <p class="style1">&nbsp;</p>
+            <p align="left" class="style1">&ldquo;How can I measure energy produced from water chilled air conditioning?&rdquo;</p>
+            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','three','Layer9','Gregory A. Sedrick');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p></td>
+        </tr>
+      </table>
+      <p><br />
+      </p>
+    </div>
+
+
+    <div id="Layer10" style="display: none;">
+      <p><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
+
+      <table width="972" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/Materials.gif" alt="Materials" width="108" height="128" /></td>
+          <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="417" align="left" valign="top"><p class="style1"><span class="style2">Keith Sheppard      </span> <br />
+            Professor of Materials Science and Engineering, Stevens Institute of Technology
     </p>
-  </div>
+            <p class="style1">Areas of expertise: corrosion, electro-deposition, failure of materials, materials characterization, especially scanning and transmission electron microscopy, materials selection, materials processing </p></td>
+          <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span> <br />
+                <br />
+            </span>
+              <p class="style1">&ldquo;Is it possible to give heat treatment to copper?&rdquo; </p>
+            <p align="center"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" /></p></td>
+        </tr>
+      </table>
+      <p><br />
+      </p>
+    </div>
 
-  <div id="Layer3" style="display: none;">
-    <p><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
 
-    <table width="972" border="0" cellspacing="0" cellpadding="0">
-      <tr>
-        <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/SignalProcessing.gif" alt="chem" width="108" height="128" /></td>
-        <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-        <td width="417" align="left" valign="top"><p class="style1"><span class="style2">Chi Hau Chen    &nbsp; &nbsp;</span> <br />
-          Signal processing professor, Electrical and Computer Engineering, University of Massachusetts</p>
-            <p class="style1">Areas of expertise: pattern recognition, signal/image processing and neural networks, applications to ultrasonic/nondestructive evaluation (NDE), sonar, radar, and seismic problems, machine vision, artificial intelligence, time series analysis, wavelet analysis</p></td>
-        <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-        <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span> <br />
-              <br />
-          </span>
-            <ol>
-              <li class="style1">&ldquo;Is it possible to give heat treatment to copper?&rdquo; </li>
-              <li class="style1">&ldquo;How can wet carbon dioxide be responsible for a corrosion problem in iron-containing metals?&rdquo;</li>
-              <li class="style1">&ldquo;What type of steel rod/axle&nbsp;would you use for one way roller bearings.&rdquo;</li>
-            </ol>
-          <p align="center"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" /></p></td>
-      </tr>
-    </table>
-    <p><br />
+
+    <div id="Layer11" style="display: none;">
+      <p><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
+
+      <table width="972" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/Computer-.gif" alt="Computer" width="108" height="128" /></td>
+          <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="417" align="left" valign="top"><p class="style1"><span class="style2">Earl E. Swartzlander, Jr.       </span> <br />
+            Professor, Electrical and Computer Engineering, and Schlumberger Centennial Chair in Engineering, University of Texas
     </p>
-  </div>
+            <p class="style1">Areas of expertise: computer engineering, computer arithmetic, application specific processing, interaction between computer architecture and VLSI technology, signal processing </p></td>
+          <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span> <br />
+                <br />
+            </span>
+              <p class="style1">&ldquo;What is a "microprogrammed control unit" and what is the difference between "horizontal" and "vertical" microcode?&rdquo;</p>
+            <p align="center"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" /></p></td>
+        </tr>
+      </table>
+      <p><br />
+      </p>
+    </div>
 
 
-  <div id="Layer4" style="display: none;">
-    <p><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
+    <div id="Layer12" style="display: none;">
+      <p><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
 
-    <table width="972" border="0" cellspacing="0" cellpadding="0">
-      <tr>
-        <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/Management-.gif" alt="chem" width="108" height="128" /></td>
-        <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-        <td width="417" align="left" valign="top"><p class="style1"><span class="style2">Donald W. Merino, Jr.    &nbsp; &nbsp;</span> <br />
-          Areas of expertise: production operations, process flow/optimization, process simulation, capital allocation, cost models, concurrent engineering, SQC/SPC (Statistical Quality Control/Statistical Process Control) and applied statistics, TQM philosophy, benchmarking, DOE (Design of Experiments), QFD (Quality Function Deployment), cost of quality, economic/non-economic decision making, optimization</p></td>
-        <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-        <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span> <br />
-              <br />
-          </span>
-            <ol>
-              <li class="style1">&ldquo;Is it possible to give heat treatment to copper?&rdquo; </li>
-              <li class="style1">&ldquo;How can wet carbon dioxide be responsible for a corrosion problem in iron-containing metals?&rdquo;</li>
-              <li class="style1">&ldquo;What type of steel rod/axle&nbsp;would you use for one way roller bearings.&rdquo;</li>
-            </ol>
-          <p align="center"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" /></p></td>
-      </tr>
-    </table>
-    <p><br />
-    </p>
-  </div>
+      <table width="972" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/Chemical.gif" alt="Chemical" width="108" height="128" /></td>
+          <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="417" align="left" valign="top"><p class="style1"><span class="style2">Alan Halecky</span> <br />
+     Areas of expertise: Compounds, Compositions, Ion Exchange, Applications, Gold Plating, Ion Exchange, Lead and Alloys, Removal,  Solutions, Chemical Reactions, Precipitation
+    </p></td>
+          <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span> <br />
+                <br />
+            </span>
+              <p class="style1">&ldquo;How can wet carbon dioxide be responsible for a corrosion problem in iron-containing metals?&rdquo; </p>
+            <p align="center"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" /></p></td>
+        </tr>
+      </table>
+      <p><br />
+      </p>
+    </div>
 
-  <div id="Layer5" style="display: none;">
-    <p><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
-
-    <table width="972" border="0" cellspacing="0" cellpadding="0">
-      <tr>
-        <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/Mechanical.gif" alt="Mechanical" width="108" height="128" /></td>
-        <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-        <td width="417" align="left" valign="top"><p class="style1"><span class="style2">Ronald A. Perez</span> <br />
-          Areas of expertise: production operations, process flow/optimization, process simulation, capital allocation, cost models, concurrent engineering, SQC/SPC (Statistical Quality Control/Statistical Process Control) and applied statistics, TQM philosophy, benchmarking, DOE (Design of Experiments), QFD (Quality Function Deployment), cost of quality, economic/non-economic decision making, optimization</p>
-        </td>
-        <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-        <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span> <br />
-              <br />
-          </span>
-            <ol>
-              <li class="style1">&ldquo;Is it possible to give heat treatment to copper?&rdquo; </li>
-              <li class="style1">&ldquo;How can wet carbon dioxide be responsible for a corrosion problem in iron-containing metals?&rdquo;</li>
-              <li class="style1">&ldquo;What type of steel rod/axle&nbsp;would you use for one way roller bearings.&rdquo;</li>
-            </ol>
-          <p align="center"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" /></p></td>
-      </tr>
-    </table>
-    <p><br />
-    </p>
-  </div>
-
-  <div id="Layer6" style="display: none;">
-    <p><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
-
-    <table width="972" border="0" cellspacing="0" cellpadding="0">
-      <tr>
-        <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/Electrical.gif" alt="chem" width="108" height="128" /></td>
-        <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-        <td width="417" align="left" valign="top"><p class="style1"><span class="style2">Kanti Prasad     &nbsp; &nbsp;</span> <br />Professor, electrical engineering, and director, Microelectronics/VLSI Technology, University of Massachusetts</p>
-          <p class="style1">Areas of expertise: VLSI chip design incorporating microprocessors, controls, communications, intelligent transportation systems, GPS, computer networks, LANs, including wireless LANs, VLSI fabrication incorporating microelectronics processing such as lithography oxidation, diffusion, implantation, and metallization for silicon as well as GaAs technology including packing and reliability analysis, digital and analog design employing VHDL incorporating test and simulation I entirety, i.e., exhaustive testing and simulation with statistically fast and event driven simulators </p></td>
-        <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-        <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span> <br />
-              <br />
-          </span>
-            <ol>
-              <li class="style1">&ldquo;Is it possible to give heat treatment to copper?&rdquo; </li>
-              <li class="style1">&ldquo;How can wet carbon dioxide be responsible for a corrosion problem in iron-containing metals?&rdquo;</li>
-              <li class="style1">&ldquo;What type of steel rod/axle&nbsp;would you use for one way roller bearings.&rdquo;</li>
-            </ol>
-          <p align="center"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" /></p></td>
-      </tr>
-    </table>
-    <p><br />
-    </p>
-  </div>
-
-  <div id="Layer7" style="display: none;">
-    <p><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
-
-    <table width="972" border="0" cellspacing="0" cellpadding="0">
-      <tr>
-        <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/Idustrial.gif" alt="Mechanical" width="108" height="128" /></td>
-        <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-        <td width="417" align="left" valign="top"><p class="style1"><span class="style2">Gregory A. Sedrick  </span> <br />
-          UC Foundation assistant professor and director, Engineering Management, Industrial and Manufacturing Engineering Programs, University of Tennessee
-  </p>
-          <p class="style1">Areas of expertise: TQM (Total Quality Management), ISO 9000, ISO 9000 certification, work measurement, engineering economy, work design and improvement, methods improvement, small manufacturing, multimedia-based corporate training in above areas, Baldridge Award preparation/judging </p></td>
-        <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-        <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span> <br />
-              <br />
-          </span>
-            <ol>
-              <li class="style1">&ldquo;Is it possible to give heat treatment to copper?&rdquo; </li>
-              <li class="style1">&ldquo;How can wet carbon dioxide be responsible for a corrosion problem in iron-containing metals?&rdquo;</li>
-              <li class="style1">&ldquo;What type of steel rod/axle&nbsp;would you use for one way roller bearings.&rdquo;</li>
-            </ol>
-          <p align="center"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" /></p></td>
-      </tr>
-    </table>
-    <p><br />
-    </p>
-  </div>
-
-
-  <div id="Layer8"  style="display: none;">
-    <p><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
-
-    <table width="972" border="0" cellspacing="0" cellpadding="0">
-      <tr>
-        <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/Materials.gif" alt="Mechanical" width="108" height="128" /></td>
-        <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-        <td width="417" align="left" valign="top"><p class="style1"><span class="style2">Keith Sheppard      </span> <br />
-          Professor of Materials Science and Engineering, Stevens Institute of Technology
-  </p>
-          <p class="style1">Areas of expertise: corrosion, electro-deposition, failure of materials, materials characterization, especially scanning and transmission electron microscopy, materials selection, materials processing </p></td>
-        <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-        <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span> <br />
-              <br />
-          </span>
-            <ol>
-              <li class="style1">&ldquo;Is it possible to give heat treatment to copper?&rdquo; </li>
-              <li class="style1">&ldquo;How can wet carbon dioxide be responsible for a corrosion problem in iron-containing metals?&rdquo;</li>
-              <li class="style1">&ldquo;What type of steel rod/axle&nbsp;would you use for one way roller bearings.&rdquo;</li>
-            </ol>
-          <p align="center"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" /></p></td>
-      </tr>
-    </table>
-    <p><br />
-    </p>
-  </div>
-
-
-
-  <div id="Layer9"  style="display: none;">
-    <p><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
-
-    <table width="972" border="0" cellspacing="0" cellpadding="0">
-      <tr>
-        <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/Computer-.gif" alt="Mechanical" width="108" height="128" /></td>
-        <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-        <td width="417" align="left" valign="top"><p class="style1"><span class="style2">Earl E. Swartzlander, Jr.       </span> <br />
-          Professor, Electrical and Computer Engineering, and Schlumberger Centennial Chair in Engineering, University of Texas
-  </p>
-          <p class="style1">Areas of expertise: computer engineering, computer arithmetic, application specific processing, interaction between computer architecture and VLSI technology, signal processing </p></td>
-        <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-        <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span> <br />
-              <br />
-          </span>
-            <ol>
-              <li class="style1">&ldquo;Is it possible to give heat treatment to copper?&rdquo; </li>
-              <li class="style1">&ldquo;How can wet carbon dioxide be responsible for a corrosion problem in iron-containing metals?&rdquo;</li>
-              <li class="style1">&ldquo;What type of steel rod/axle&nbsp;would you use for one way roller bearings.&rdquo;</li>
-            </ol>
-          <p align="center"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" /></p></td>
-      </tr>
-    </table>
-    <p><br />
-    </p>
-  </div>
-
-  <a href="javascript:emailFormat('$SESSIONID','one');">Ask a question</a>
 </div>
 
 <!-- Ask a Product Specialist -->
