@@ -22,14 +22,11 @@
   <xsl:variable name="DATABASE">
     <xsl:value-of select="DATABASE"/>
   </xsl:variable>
-  <xsl:variable name="SECTION">
-    <xsl:value-of select="SECTION"/>
-  </xsl:variable>
 
   <html>
   <head>
 
-  <title><xsl:value-of select="$SECTION"/> Email</title>
+  <title><xsl:value-of select="SECTION"/> Email</title>
   <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
   <xsl:text disable-output-escaping="yes">
   <![CDATA[
@@ -150,7 +147,8 @@
             <td valign="top" height="15" colspan="3"><img src="/engresources/images/s.gif" border="0"/></td></tr>
           <tr>
             <td valign="top" width="20"><img src="/engresources/images/s.gif" border="0" width="20"/></td>
-            <td valign="top" colspan="2"><a class="EvHeaderText"><xsl:value-of select="$SECTION"/></a></td>
+            <td valign="top" colspan="2"><a class="EvHeaderText"><xsl:value-of select="SECTION"/></a></td>
+            <td valign="top" colspan="2"><a class="EvHeaderText"><xsl:value-of select="DISCIPLINE"/></a></td>
           </tr>
           <tr>
             <td valign="top" width="20"><img src="/engresources/images/s.gif" border="0" width="20"/></td>
@@ -175,15 +173,23 @@
 
                     <FORM name="sendemail" METHOD="POST" onSubmit="return validateForm(document.sendemail);">
 
+                      <xsl:if test="$GURU">
+                        <input type="hidden" name="guru">
+                          <xsl:attribute name="value">
+                             <xsl:value-of select="$GURU"/>
+                            </xsl:attribute>
+                        </input>
+                      </xsl:if>
+
                       <input type="hidden" name="sessionid">
                         <xsl:attribute name="value">
-                           <xsl:value-of select="SESSION-ID"/>
+                           <xsl:value-of select="$SESSION-ID"/>
                           </xsl:attribute>
                       </input>
 
                       <input type="hidden" name="database">
                         <xsl:attribute name="value">
-                           <xsl:value-of select="DATABASE"/>
+                           <xsl:value-of select="$DATABASE"/>
                         </xsl:attribute>
                       </input>
 
