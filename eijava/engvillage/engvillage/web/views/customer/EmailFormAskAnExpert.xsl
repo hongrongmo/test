@@ -166,12 +166,11 @@
               <!-- table for outer lines for sendemail form -->
               <table border="0" width="65%" cellspacing="0" cellpadding="0" align="center">
                 <tr>
-                  <td valign="top" width="100%" cellspacing="0" cellpadding="0" height="2" bgcolor="#3173B5" colspan="4">
+                  <td valign="top" height="2" bgcolor="#3173B5" colspan="3">
                   <img src="/engresources/images/s.gif" border="0" height="2"/></td>
                 </tr>
                 <tr>
                   <td valign="top" width="2" bgcolor="#3173B5"><img src="/engresources/images/s.gif" border="0" width="2"/></td>
-                  <td valign="top" width="4"><img src="/engresources/images/s.gif" border="0" width="4"/></td>
                   <td valign="top">
 
                     <FORM name="sendemail" METHOD="POST" onSubmit="return validateForm(document.sendemail);">
@@ -258,7 +257,7 @@
                   <td valign="top" width="2" bgcolor="#3173B5"><img src="/engresources/images/s.gif" border="0" width="2"/></td>
                 </tr>
                 <tr>
-                  <td valign="top" width="100%" cellspacing="0" cellpadding="0" height="2" bgcolor="#3173B5" colspan="4">
+                  <td valign="top" height="2" bgcolor="#3173B5" colspan="3">
                   <img src="/engresources/images/s.gif" border="0" height="2"/></td>
                 </tr>
               </table>
