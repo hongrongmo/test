@@ -340,10 +340,12 @@
           <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
           <td width="394" align="left" valign="top"><div align="left"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span></span></div>
             <p align="left" class="style1">&ldquo;What type of steel rod/axle&nbsp;would you use for one way roller bearings.&rdquo;</p>
-            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','three','Layer1','Ryo Samuel Amano');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0" /></a></p>
+            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer1','Ryo Samuel Amano');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0" /></a></p>
             <p class="style1">&nbsp;</p>
             <p class="style1">&nbsp;</p>
-            <p align="left" class="style1">&nbsp;&ldquo;How can I calculate or at arrive the capacity of a mechanical press?&rdquo;</p>        <p align="center"><span class="style1"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" /></span></p></td>
+            <p align="left" class="style1">&nbsp;&ldquo;How can I calculate or at arrive the capacity of a mechanical press?&rdquo;</p>
+            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer1','Ronald A. Perez');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p>
+            </td>
         </tr>
       </table>
       <p><br />
@@ -368,13 +370,13 @@
           <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
           <td width="394" align="left" valign="top"><div align="left"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span></span></div>
             <p align="left" class="style1">&ldquo;How do you organize the value engineering functions in a tractor manufacturing firm?&rdquo;</p>
-            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','three','Layer2','Robert D. Borchelt');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p>
+            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer2','Robert D. Borchelt');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p>
             <p class="style1">&nbsp;</p>
             <p class="style1">&nbsp;</p>
             <p class="style1">&nbsp;</p>
             <p class="style1">&nbsp;</p>
             <p class="style1">&ldquo;What&rsquo;s the best individual fabrication system for Bulk-handling machines?&rdquo;</p>
-            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','three','Layer2','Gregory A. Sedrick');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p>
+            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer2','Gregory A. Sedrick');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p>
             <p align="center">&nbsp;</p></td>
         </tr>
       </table>
@@ -397,7 +399,7 @@
                 <br />
             </span>
             <p class="style1">Sample Question: &nbsp;&ldquo;Which images or signals inside the tunnel are best for object detection?&rdquo;</p>
-            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','three','Layer3','Chi Hau Chen');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p></td>
+            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer3','Chi Hau Chen');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p></td>
         </tr>
       </table>
       <p><br />
@@ -419,7 +421,7 @@
                 <br />
             </span>
               <p class="style1">&ldquo;How can I calibrate a current transformer?&rdquo;</p>
-            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','three','Layer8','Kanti Prasad');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p></td>
+            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer8','Kanti Prasad');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p></td>
         </tr>
       </table>
       <p><br />
@@ -439,7 +441,7 @@
           <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
           <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span> <br /></span>
             <p align="left" class="style1">&ldquo;During design, how is optimization achieved and what factors are considered?&rdquo; </p>
-            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','three','Layer9','Donald W. Merino, Jr.');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p>
+            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer9','Donald W. Merino, Jr.');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p>
           </td>
         </tr>
       </table>
@@ -463,11 +465,11 @@
           <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
           <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span> <br /></span>
             <p align="left" class="style1">&ldquo;To ensure a certain interval in a time study, how many samples should be done?&rdquo;</p>
-            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','three','Layer9','Donald W. Merino, Jr.');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p>
+            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer15','Donald W. Merino, Jr.');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p>
             <p class="style1">&nbsp;</p>
             <p class="style1">&nbsp;</p>
             <p align="left" class="style1">&ldquo;How can I measure energy produced from water chilled air conditioning?&rdquo;</p>
-            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','three','Layer9','Gregory A. Sedrick');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p></td>
+            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer15','Gregory A. Sedrick');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p></td>
         </tr>
       </table>
       <p><br />
@@ -491,7 +493,7 @@
                 <br />
             </span>
               <p class="style1">&ldquo;Is it possible to give heat treatment to copper?&rdquo; </p>
-            <p align="center"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" /></p></td>
+            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer10','Keith Sheppard ');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p></td>
         </tr>
       </table>
       <p><br />
@@ -516,7 +518,7 @@
                 <br />
             </span>
               <p class="style1">&ldquo;What is a "microprogrammed control unit" and what is the difference between "horizontal" and "vertical" microcode?&rdquo;</p>
-            <p align="center"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" /></p></td>
+            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer11','Earl E. Swartzlander, Jr.');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p></td>
         </tr>
       </table>
       <p><br />
@@ -539,7 +541,7 @@
                 <br />
             </span>
               <p class="style1">&ldquo;How can wet carbon dioxide be responsible for a corrosion problem in iron-containing metals?&rdquo; </p>
-            <p align="center"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" /></p></td>
+            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer12','Alan Halecky');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p></td>
         </tr>
       </table>
       <p><br />
