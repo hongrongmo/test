@@ -13,6 +13,7 @@
 <xsl:include href="Footer.xsl" />
 
 <xsl:template match="PAGE">
+
   <xsl:variable name="SESSION-ID">
     <xsl:value-of select="SESSION-ID"/>
   </xsl:variable>
@@ -173,10 +174,10 @@
 
                     <FORM name="sendemail" METHOD="POST" onSubmit="return validateForm(document.sendemail);">
 
-                      <xsl:if test="$GURU">
+                      <xsl:if test="GURU">
                         <input type="hidden" name="guru">
                           <xsl:attribute name="value">
-                             <xsl:value-of select="$GURU"/>
+                             <xsl:value-of select="GURU"/>
                             </xsl:attribute>
                         </input>
                       </xsl:if>
