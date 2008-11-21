@@ -448,12 +448,12 @@ public class SavedSearches
                 {
                     if(Query.ON.equals(query.getEmailAlert()))
                     {
-                        out.write(query.toXMLString());
+                        query.toXML(out);
                     }
                 }
                 else
                 {
-                    out.write(query.toXMLString());
+                    query.toXML(out);
                 }
             }
             counts[0]=savedSearches;
