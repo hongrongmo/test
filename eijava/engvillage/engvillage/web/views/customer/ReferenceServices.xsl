@@ -58,6 +58,7 @@
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 12px;
 	text-decoration: underline;
+	padding-bottom: 5px;
 }
 .style2 {
 	font-size: 14px;
@@ -217,7 +218,7 @@
     function emailFormat(sessionid,section)
     {
       var url = "/controller/servlet/Controller?EISESSION="+sessionid+"&CID=askanexpert&database=1&section="+escape(pageTitles[section])+"&sectionid="+section;
-      new_window=window.open(url,'NewWindow','status=yes,resizable,scrollbars,width=600,height=500');
+      new_window=window.open(url,'NewWindow','status=yes,resizable,scrollbars,width=600,height=600');
       new_window.focus();
     }
 
@@ -582,7 +583,7 @@
   <p align="left" class="style4"><br />
   <a name="faq" id="faq">FAQ</a></p>
   <div align="left">
-    <ol>
+    <ol class="styleunderlined">
       <li class="styleunderlined"><a href="#1">When is full text available?</a></li>
       <li class="styleunderlined"><a href="#2">How can I obtain a full text document is it is not available to me?</a></li>
       <li class="styleunderlined"><a href="#3">Which groups of results data (&quot;facets&quot;) are available to me?</a></li>
@@ -653,6 +654,7 @@
 <div id="three" style="display: none; text-align:left;">
   <p align="left">&nbsp;</p>
   <p align="left" class="style1">A librarian can help you formulate a search, identify and locate a source for a book or an article, or find additional resources on a specific topic.</p>
+  <p align="left" class="style1">To learn more about the subject areas that are covered by the databases that are available to you, please visit <a target="_blank" href="http://www.ei.org/databases/compendex.html">http://www.ei.org/databases/compendex.html</a></p>
 
   <div align="left">
     <table width="972" border="0" cellspacing="0" cellpadding="0">
@@ -665,7 +667,6 @@
             <li class="style1">&ldquo;I&rsquo;d like to do a detailed search on coercive force and material composition but I need assistance.&rdquo;</li>
           </ol>
           <p align="center"><a href="javascript:emailFormat('$SESSIONID','three');"><img src="/engresources/images/ae/images/email_Librarian.gif" alt="Email a Librarian" width="124" height="14" border="0"/></a></p>
-          <p align="left" class="style1">To learn more about the subject areas that are covered by the databases that are available to you, please visit <a target="_blank" href="http://www.ei.org/databases/compendex.html">http://www.ei.org/databases/compendex.html</a></p>
         </td>
       </tr>
     </table>
