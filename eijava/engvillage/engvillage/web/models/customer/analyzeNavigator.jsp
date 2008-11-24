@@ -71,7 +71,7 @@
 
           String navstring = anav.toString(count);
 
-          out.write("<ANALYZE-DATA><![CDATA[" + navcache.zipText(navstring) + "]]></ANALYZE-DATA>");
+          out.write("<ANALYZE-DATA><![CDATA[" + StringUtil.zipText(navstring) + "]]></ANALYZE-DATA>");
           out.write("<CURRENT-COUNT>"+count+"</CURRENT-COUNT>");
           out.write("<SEARCH-ID>"+searchID+"</SEARCH-ID>");
         }
