@@ -39,9 +39,7 @@
 		database = request.getParameter("database");
 	}
 
-
 	ControllerClient client = new ControllerClient(request, response);
-
 
 	UserSession ussession=(UserSession)client.getUserSession();
 
@@ -52,16 +50,19 @@
 	if((pUserId != null) && (pUserId.trim().length() != 0)){
 		personalization=true;
 	}
-    User user=ussession.getUser();
-	ClientCustomizer clientCustomizer=new ClientCustomizer(ussession);
+  User user=ussession.getUser();
+	ClientCustomizer clientCustomizer = new ClientCustomizer(ussession);
+
+  if(database == null)
+  {
+    database = clientCustomizer.getDefaultDB();
+  }
 
 	if(clientCustomizer.getRefEmail() != null &&
 		clientCustomizer.getRefEmail().length()>0)
 	{
 		refEmail = clientCustomizer.getRefEmail();
 	}
-
-    log("refEmail: "+refEmail);
 
 	if(clientCustomizer.isCustomized())
 	{
