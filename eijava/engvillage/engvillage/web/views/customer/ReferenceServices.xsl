@@ -327,14 +327,14 @@
         <tr>
           <td width="111" height="163" align="left" valign="top"><img src="/engresources/images/ae/images/Mechanical.gif" alt="Mechanical" width="108" height="128" /></td>
           <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-          <td width="417" align="left" valign="top"><p align="left" class="style1"><span class="style2">Ryo Samuel Amano&nbsp; &nbsp;</span> <br />
+          <td width="417" align="left" valign="top"><p align="left" class="style1"><span class="style2"><xsl:apply-templates select="GURUS/GURU[@NAME='Ryo Samuel Amano']"/></span> <br />
               Fluid and thermodynamics professor, Department of Mechanical Engineering, University of Wisconsin-Milwaukee</p>
-            <p align="left" class="style1">Areas of expertise: aerodynamics, gas/steam turbines, fluid mechanics/fluid dynamics, rocket/propulsion systems, heat transfer/heat exchangers/engines</p>
+            <p align="left" class="style1">Areas of expertise: <xsl:apply-templates select="DISCIPLINES/DISCIPLINE[@NAME='mechanical']/GURU[@NAME='Ryo Samuel Amano']/SEARCHES"/></p>
             <p align="left" class="style1">&nbsp;</p>
-            <p align="left" class="style1"><span class="style2">Ronald A. Perez<br />
+            <p align="left" class="style1"><span class="style2"><xsl:apply-templates select="GURUS/GURU[@NAME='Ronald A. Perez']"/><br />
             </span>Interim Dean, College of Engineering &amp; Applied Science<br />
             University of Wisconsin-Milwaukee </p>
-            <p align="left" class="style1">Areasof expertise: production operations, process flow/optimization, process simulation, capital allocation, cost models, concurrent engineering, SQC/SPC (Statistical Quality Control/Statistical Process Control) and applied statistics, TQM philosophy, benchmarking, DOE (Design of Experiments), QFD (Quality Function Deployment), cost of quality, economic/non-economic decision making, optimization</p>
+            <p align="left" class="style1">Areas of expertise: <xsl:apply-templates select="DISCIPLINES/DISCIPLINE[@NAME='mechanical']/GURU[@NAME='Ronald A. Perez']/SEARCHES"/></p>
             <p align="left" class="style1">&nbsp;</p>
           </td>
           <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
@@ -359,16 +359,16 @@
         <tr>
           <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/Manufacturing.gif" alt="Manufacturing" width="108" height="128" /></td>
           <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-          <td width="417" align="left" valign="top"><p class="style1"><span class="style2">Robert D. Borchelt &nbsp; &nbsp;</span> <br />
+          <td width="417" align="left" valign="top"><p class="style1"><span class="style2"><xsl:apply-templates select="GURUS/GURU[@NAME='Robert D. Borchelt']"/></span> <br />
             Technical advisor for assembly and automation in the Corporate Operations Analysis Group, Cummins Engine Company
     </p>
-            <p class="style1">Areas of expertise: computer integrated manufacturing, automation and advanced manufacturing systems, artificial intelligence applications in robotics and manufacturing, automated diagnosis and error recovery, hybrid knowledge-based systems, programmable logic controller applications, physical modeling of manufacturing systems, engineering management issues related to manufacturing, manufacturing processes, systems integration, expert systems </p>
+            <p class="style1">Areas of expertise: <xsl:apply-templates select="DISCIPLINES/DISCIPLINE[@NAME='manufacturing']/GURU[@NAME='Robert D. Borchelt']/SEARCHES"/></p>
             <p class="style1">&nbsp;</p>
-            <p class="style1"><span class="style2">Gregory A. Sedrick </span> <br />
+            <p class="style1"><span class="style2"><xsl:apply-templates select="GURUS/GURU[@NAME='Gregory A. Sedrick']"/></span> <br />
     UC Foundation assistant professor and director, Engineering Management, Industrial and Manufacturing Engineering Programs, University of Tennessee </p>
-            <p class="style1">Areas of expertise: TQM (Total Quality Management), ISO 9000, ISO 9000 certification, work measurement, engineering economy, work design and improvement, methods improvement, small manufacturing, multimedia-based corporate training in above areas, Baldridge Award preparation/judging </p></td>
+            <p class="style1">Areas of expertise: <xsl:apply-templates select="DISCIPLINES/DISCIPLINE[@NAME='manufacturing']/GURU[@NAME='Gregory A. Sedrick']/SEARCHES"/></p></td>
           <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-          <td width="394" align="left" valign="top"><div align="left"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span></span></div>
+          <td width="394" align="left" valign="top"><div align="left"><span class="style1"><span class="style2">Sample question:  &nbsp; &nbsp;</span></span></div>
             <p align="left" class="style1">&ldquo;How do you organize the value engineering functions in a tractor manufacturing firm?&rdquo;</p>
             <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer2','Robert D. Borchelt');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p>
             <p class="style1">&nbsp;</p>
@@ -391,11 +391,11 @@
         <tr>
           <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/SignalProcessing.gif" alt="SignalProcessing" width="108" height="128" /></td>
           <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-          <td width="417" align="left" valign="top"><p class="style1"><span class="style2">Chi Hau Chen    &nbsp; &nbsp;</span> <br />
+          <td width="417" align="left" valign="top"><p class="style1"><span class="style2"><xsl:apply-templates select="GURUS/GURU[@NAME='Chi Hau Chen']"/></span> <br />
             Signal processing professor, Electrical and Computer Engineering, University of Massachusetts</p>
-              <p class="style1">Areas of expertise: pattern recognition, signal/image processing and neural networks, applications to ultrasonic/nondestructive evaluation (NDE), sonar, radar, and seismic problems, machine vision, artificial intelligence, time series analysis, wavelet analysis</p></td>
+              <p class="style1">Areas of expertise: <xsl:apply-templates select="DISCIPLINES/DISCIPLINE[@NAME='signal processing']/GURU[@NAME='Chi Hau Chen']/SEARCHES"/></p></td>
           <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-          <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span> <br />
+          <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample question:  &nbsp; &nbsp;</span> <br />
                 <br />
             </span>
             <p class="style1">Sample Question: &nbsp;&ldquo;Which images or signals inside the tunnel are best for object detection?&rdquo;</p>
@@ -414,10 +414,10 @@
         <tr>
           <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/Electrical.gif" alt="Electrical" width="108" height="128" /></td>
           <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-          <td width="417" align="left" valign="top"><p class="style1"><span class="style2">Kanti Prasad     &nbsp; &nbsp;</span> <br />Professor, electrical engineering, and director, Microelectronics/VLSI Technology, University of Massachusetts</p>
-            <p class="style1">Areas of expertise: VLSI chip design incorporating microprocessors, controls, communications, intelligent transportation systems, GPS, computer networks, LANs, including wireless LANs, VLSI fabrication incorporating microelectronics processing such as lithography oxidation, diffusion, implantation, and metallization for silicon as well as GaAs technology including packing and reliability analysis, digital and analog design employing VHDL incorporating test and simulation I entirety, i.e., exhaustive testing and simulation with statistically fast and event driven simulators </p></td>
+          <td width="417" align="left" valign="top"><p class="style1"><span class="style2"><xsl:apply-templates select="GURUS/GURU[@NAME='Kanti Prasad']"/></span> <br />Professor, electrical engineering, and director, Microelectronics/VLSI Technology, University of Massachusetts</p>
+            <p class="style1">Areas of expertise: <xsl:apply-templates select="DISCIPLINES/DISCIPLINE[@NAME='electrical']/GURU[@NAME='Kanti Prasad']/SEARCHES"/></p></td>
           <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-          <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span> <br />
+          <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample question:  &nbsp; &nbsp;</span> <br />
                 <br />
             </span>
               <p class="style1">&ldquo;How can I calibrate a current transformer?&rdquo;</p>
@@ -435,11 +435,11 @@
         <tr>
           <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/Management-.gif" alt="Management" width="108" height="128" /></td>
           <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-          <td width="417" align="left" valign="top"><p class="style1"><span class="style2">Donald W. Merino, Jr.      &nbsp; &nbsp;</span> <br />
-            Areas of expertise: production operations, process flow/optimization, process simulation, capital allocation, cost models, concurrent engineering, SQC/SPC (Statistical Quality Control/Statistical Process Control) and applied statistics, TQM philosophy, benchmarking, DOE (Design of Experiments), QFD (Quality Function Deployment), cost of quality, economic/non-economic decision making, optimizatio</p>
+          <td width="417" align="left" valign="top"><p class="style1"><span class="style2"><xsl:apply-templates select="GURUS/GURU[@NAME='Donald W. Merino, Jr.']"/></span> <br />
+            Areas of expertise: <xsl:apply-templates select="DISCIPLINES/DISCIPLINE[@NAME='management']/GURU[@NAME='Donald W. Merino, Jr.']/SEARCHES"/></p>
           </td>
           <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-          <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span> <br /></span>
+          <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample question:  &nbsp; &nbsp;</span> <br /></span>
             <p align="left" class="style1">&ldquo;During design, how is optimization achieved and what factors are considered?&rdquo; </p>
             <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer9','Donald W. Merino, Jr.');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p>
           </td>
@@ -454,14 +454,14 @@
 
       <table width="972" border="0" cellspacing="0" cellpadding="0">
         <tr>
-          <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/Idustrial.gif" alt="Idustrial" width="108" height="128" /></td>
+          <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/Idustrial.gif" alt="Industrial" width="108" height="128" /></td>
           <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-          <td width="417" align="left" valign="top"><p class="style1"><span class="style2">Donald W. Merino, Jr.      &nbsp; &nbsp;</span> <br />
-            Areas of expertise: production operations, process flow/optimization, process simulation, capital allocation, cost models, concurrent engineering, SQC/SPC (Statistical Quality Control/Statistical Process Control) and applied statistics, TQM philosophy, benchmarking, DOE (Design of Experiments), QFD (Quality Function Deployment), cost of quality, economic/non-economic decision making, optimization</p>
+          <td width="417" align="left" valign="top"><p class="style1"><span class="style2"><xsl:apply-templates select="GURUS/GURU[@NAME='Donald W. Merino, Jr.']"/></span> <br />
+            Areas of expertise: <xsl:apply-templates select="DISCIPLINES/DISCIPLINE[@NAME='industrial']/GURU[@NAME='Donald W. Merino, Jr.']/SEARCHES"/></p>
             <p class="style1">&nbsp;</p>
-            <p class="style1"><span class="style2">Gregory A. Sedrick </span> <br />
+            <p class="style1"><span class="style2"><xsl:apply-templates select="GURUS/GURU[@NAME='Gregory A. Sedrick']"/></span> <br />
     UC Foundation assistant professor and director, Engineering Management, Industrial and Manufacturing Engineering Programs, University of Tennessee </p>
-            <p class="style1">Areas of expertise: TQM (Total Quality Management), ISO 9000, ISO 9000 certification, work measurement, engineering economy, work design and improvement, methods improvement, small manufacturing, multimedia-based corporate training in above areas, Baldridge Award preparation/judging </p></td>
+            <p class="style1">Areas of expertise: <xsl:apply-templates select="DISCIPLINES/DISCIPLINE[@NAME='industrial']/GURU[@NAME='Gregory A. Sedrick']/SEARCHES"/></p></td>
           <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
           <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span> <br /></span>
             <p align="left" class="style1">&ldquo;To ensure a certain interval in a time study, how many samples should be done?&rdquo;</p>
@@ -484,12 +484,12 @@
         <tr>
           <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/Materials.gif" alt="Materials" width="108" height="128" /></td>
           <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-          <td width="417" align="left" valign="top"><p class="style1"><span class="style2">Keith Sheppard      </span> <br />
+          <td width="417" align="left" valign="top"><p class="style1"><span class="style2"><xsl:apply-templates select="GURUS/GURU[@NAME='Keith Sheppard']"/></span> <br />
             Professor of Materials Science and Engineering, Stevens Institute of Technology
     </p>
-            <p class="style1">Areas of expertise: corrosion, electro-deposition, failure of materials, materials characterization, especially scanning and transmission electron microscopy, materials selection, materials processing </p></td>
+            <p class="style1">Areas of expertise: <xsl:apply-templates select="DISCIPLINES/DISCIPLINE[@NAME='materials']/GURU[@NAME='Keith Sheppard']/SEARCHES"/></p></td>
           <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-          <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span> <br />
+          <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample question:  &nbsp; &nbsp;</span> <br />
                 <br />
             </span>
               <p class="style1">&ldquo;Is it possible to give heat treatment to copper?&rdquo; </p>
@@ -509,12 +509,12 @@
         <tr>
           <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/Computer-.gif" alt="Computer" width="108" height="128" /></td>
           <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-          <td width="417" align="left" valign="top"><p class="style1"><span class="style2">Earl E. Swartzlander, Jr.       </span> <br />
+          <td width="417" align="left" valign="top"><p class="style1"><span class="style2"><xsl:apply-templates select="GURUS/GURU[@NAME='Earl E. Swartzlander, Jr.']"/></span> <br />
             Professor, Electrical and Computer Engineering, and Schlumberger Centennial Chair in Engineering, University of Texas
     </p>
-            <p class="style1">Areas of expertise: computer engineering, computer arithmetic, application specific processing, interaction between computer architecture and VLSI technology, signal processing </p></td>
+            <p class="style1">Areas of expertise: <xsl:apply-templates select="DISCIPLINES/DISCIPLINE[@NAME='computer']/GURU[@NAME='Earl E. Swartzlander, Jr.']/SEARCHES"/></p></td>
           <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-          <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span> <br />
+          <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample question:  &nbsp; &nbsp;</span> <br />
                 <br />
             </span>
               <p class="style1">&ldquo;What is a "microprogrammed control unit" and what is the difference between "horizontal" and "vertical" microcode?&rdquo;</p>
@@ -533,9 +533,9 @@
         <tr>
           <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/Chemical.gif" alt="Chemical" width="108" height="128" /></td>
           <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-          <td width="417" align="left" valign="top"><p class="style1"><span class="style2">Alan Halecky</span> <br />
-     Areas of expertise: Compounds, Compositions, Ion Exchange, Applications, Gold Plating, Ion Exchange, Lead and Alloys, Removal,  Solutions, Chemical Reactions, Precipitation
-    </p></td>
+          <td width="417" align="left" valign="top"><p class="style1"><span class="style2"><xsl:apply-templates select="GURUS/GURU[@NAME='Alan Halecky']"/></span> <br />
+     Areas of expertise: <xsl:apply-templates select="DISCIPLINES/DISCIPLINE[@NAME='chemical']/GURU[@NAME='Alan Halecky']/SEARCHES"/>
+     </p></td>
           <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
           <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span> <br />
                 <br />
@@ -690,6 +690,14 @@ pageTracker._trackPageview();
       </body>
 </html>
 
+</xsl:template>
+
+<xsl:template match="SEARCH|GURU">
+  <a>
+    <xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
+    <xsl:value-of select="@NAME"/>
+  </a>
+  <xsl:if test="not(position()=last())">, </xsl:if>
 </xsl:template>
 
 </xsl:stylesheet>
