@@ -74,14 +74,9 @@
         }
 
         url = "/controller/servlet/Controller?EISESSION="+sessionid+"&CID=emailaskanexpert"
-
-        //url = url + "&to="+sendemail.to.value;
-        //url = url + "&from="+sendemail.from.value;
-        //url = url + "&subject="+sendemail.subject.value;
-        //url = url + "&message="+sendemail.message.value;
         sendemail.action = url;
 
-        return (false);
+        return (true);
 
       }
 
@@ -191,6 +186,28 @@
                       <input type="hidden" name="database">
                         <xsl:attribute name="value">
                            <xsl:value-of select="$DATABASE"/>
+                        </xsl:attribute>
+                      </input>
+
+                      <!-- these are pulled straight from the DOCUMENT - no variables needed/used -->
+                      <input type="hidden" name="discipline">
+                        <xsl:attribute name="value">
+                           <xsl:value-of select="DISCIPLINE"/>
+                        </xsl:attribute>
+                      </input>
+                      <input type="hidden" name="disciplineid">
+                        <xsl:attribute name="value">
+                           <xsl:value-of select="DISCIPLINEID"/>
+                        </xsl:attribute>
+                      </input>
+                      <input type="hidden" name="section">
+                        <xsl:attribute name="value">
+                           <xsl:value-of select="SECTION"/>
+                        </xsl:attribute>
+                      </input>
+                      <input type="hidden" name="sectionid">
+                        <xsl:attribute name="value">
+                           <xsl:value-of select="SECTIONID"/>
                         </xsl:attribute>
                       </input>
 
