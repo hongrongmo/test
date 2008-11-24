@@ -104,7 +104,7 @@
 
     if(action == null)
     {
-      //Writing the XML
+      // Writing the XML for the email form
       out.write("<ACTION>compose</ACTION>");
       out.write("<DISCIPLINE>"+discipline+"</DISCIPLINE>");
       out.write("<DISCIPLINEID>"+disciplineid+"</DISCIPLINEID>");
@@ -202,4 +202,30 @@
     out.write("<!--END-->");
     out.flush();
 
+%><%!
+
+    public void jspInit()
+    {
+      try
+      {
+      } catch(Exception e) {
+        e.printStackTrace();
+      }
+    }
+
+/*    private String getnsURL(String database,
+    						String searchType)
+    {
+		StringBuffer buf = new StringBuffer();
+		if(searchType.equals(Query.TYPE_BOOK))
+		{
+			buf.append("CID=ebookSearch");
+		}
+		else
+		{
+			buf.append("CID=quickSearch&database=");
+			buf.append(database);
+		}
+		return buf.toString();
+	} */
 %>
