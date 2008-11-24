@@ -26,21 +26,21 @@
 
 <%
     // This variable for sessionId
-    String sessionId="";
+    String sessionId = "";
     // This variable for searchId
-    String searchId="";
+    String searchId = "";
     // This variable for database name
-    String database="";
+    String database = "";
     // This variable tells us what action is being taken
-    String action="";
+    String action = "";
     String refEmail = "engineeringlibrarian@ei.org";
 
-    String section="";
-    String sectionid="";
-    String discipline="";
-    String disciplineid="";
-    String guru="";
-    String sUserId="";
+    String section = "";
+    String sectionid = "";
+    String discipline = "";
+    String disciplineid = "";
+    String guru = "";
+    String sUserId = "";
     String userId = null;
     SessionID sessionIdObj = null;
 
@@ -115,19 +115,18 @@
     {
       List recipients = new ArrayList();
 		  List ccAddress = new ArrayList();
+      ccAddress.add("j.moschetto@elsevier.com");
 
-      recipients.add("j.moschetto@elsevier.com");
-
-      if(sectionid.equals("1"))
+      if(sectionid.equals(ASK_AN_ENGINEER))
       {
         // ask an engineer email
-        //recipients.add("j.moschetto@elsevier.com");
+        recipients.add("colleen.hunter@elsevier.com");
       }
-      else if(sectionid.equals("2"))
+      else if(sectionid.equals(ASK_A_PRODUCTSPECIALIST))
       {
-        //recipients.add("evproductspecialist@elsevier.com");
+        recipients.add("colleen.hunter@elsevier.com");
       }
-      else if(sectionid.equals("3"))
+      else if(sectionid.equals(ASK_A_LIBRARIAN))
       {
 
         if(clientCustomizer.getRefEmail() != null && clientCustomizer.getRefEmail().length()>0)
@@ -136,7 +135,7 @@
         }
         log("refEmail: " + refEmail);
 
-        //recipients.add(refEmail);
+        recipients.add(refEmail);
       }
 
       String from_name="";
@@ -161,22 +160,39 @@
       if(request.getParameter("message") != null)
       {
           message = request.getParameter("message");
+
       }
 
       EIMessage eimessage = new EIMessage();
       eimessage.setSender(from_email);
       eimessage.addTORecepients(recipients);
-      //eimessage.addCCRecepients(ccAddress);
+      eimessage.addCCRecepients(ccAddress);
       eimessage.setSubject(section);
       eimessage.setSentDate(new Date());
 
       Writer messagebody = new StringWriter();
+      if(sectionid.equals(ASK_AN_ENGINEER))
+      {
+        messagebody.write(section);
+        messagebody.write("\n");
+        messagebody.write(discipline);
+        messagebody.write("\n");
+        messagebody.write(guru);
+        messagebody.write("\n");
+      }
+      messagebody.write("\n");
+      messagebody.write("Message contents");
+      messagebody.write("\n");
+      messagebody.write("From: ");
       messagebody.write(from_name);
       messagebody.write("\n");
+      messagebody.write("Institution: ");
       messagebody.write(institution);
       messagebody.write("\n");
+      messagebody.write("From email: ");
       messagebody.write(from_email);
       messagebody.write("\n");
+      messagebody.write("Message: \n");
       messagebody.write(message);
       messagebody.write("\n");
       messagebody.write("---------------------------------------------------");
@@ -204,28 +220,18 @@
 
 %><%!
 
+    private final String SPECIALIST_EMAIL = "colleen.hunter@elsevier.com";
+    private final String ASK_AN_ENGINEER = "one";
+    private final String ASK_A_PRODUCTSPECIALIST = "two";
+    private final String ASK_A_LIBRARIAN = "three";
+
     public void jspInit()
     {
       try
       {
       } catch(Exception e) {
         e.printStackTrace();
-      }
+      } finally {}
     }
-
-/*    private String getnsURL(String database,
-    						String searchType)
-    {
-		StringBuffer buf = new StringBuffer();
-		if(searchType.equals(Query.TYPE_BOOK))
-		{
-			buf.append("CID=ebookSearch");
-		}
-		else
-		{
-			buf.append("CID=quickSearch&database=");
-			buf.append(database);
-		}
-		return buf.toString();
-	} */
 %>
+
