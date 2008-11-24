@@ -40,6 +40,11 @@
 <style type="text/css">
     <xsl:comment>
 		<![CDATA[
+#one {
+	width:972px;
+	height:182px;
+	z-index:1;
+}
 #two {
 	width:972px;
 	height:2087px;
@@ -71,7 +76,7 @@
 </style>
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>Engineering Village - Ask an Expert</title>
+<title>Engineering Village - Reference Services</title>
     <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
     <script type="text/JavaScript" language="JavaScript">
     <xsl:comment>
@@ -193,7 +198,7 @@
 		<![CDATA[
     var pageTitles = new Array();
     pageTitles['zero'] = 'Home';
-    pageTitles['one'] = 'Ask an Expert';
+    pageTitles['one'] = 'Ask an Engineer';
     pageTitles['two'] = 'Ask a Product Specialist';
     pageTitles['three'] = 'Ask a Librarian';
 
@@ -321,7 +326,7 @@
     </table>
 
     <div id="Layer1" style="display: none;">
-      <p><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
+      <p align="left" class="style1"><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
 
       <table width="972" border="0" cellspacing="0" cellpadding="0">
         <tr>
@@ -353,7 +358,7 @@
     </div>
 
     <div id="Layer2" style="display: none;">
-      <p><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
+      <p align="left" class="style1"><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
 
       <table width="972" border="0" cellspacing="0" cellpadding="0">
         <tr>
@@ -385,7 +390,7 @@
     </div>
 
     <div id="Layer3" style="display: none;">
-      <p><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
+      <p align="left" class="style1"><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
 
       <table width="972" border="0" cellspacing="0" cellpadding="0">
         <tr>
@@ -408,7 +413,7 @@
 
 
     <div id="Layer8" style="display: none;">
-      <p><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
+      <p align="left" class="style1"><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
 
       <table width="972" border="0" cellspacing="0" cellpadding="0">
         <tr>
@@ -429,7 +434,7 @@
     </div>
 
     <div id="Layer9" style="display: none;">
-      <p><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
+      <p align="left" class="style1"><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
 
       <table width="972" border="0" cellspacing="0" cellpadding="0">
         <tr>
@@ -450,7 +455,7 @@
     </div>
 
     <div id="Layer15" style="display: none;">
-      <p><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
+      <p align="left" class="style1"><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
 
       <table width="972" border="0" cellspacing="0" cellpadding="0">
         <tr>
@@ -478,7 +483,7 @@
 
 
     <div id="Layer10" style="display: none;">
-      <p><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
+      <p align="left" class="style1"><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
 
       <table width="972" border="0" cellspacing="0" cellpadding="0">
         <tr>
@@ -503,7 +508,7 @@
 
 
     <div id="Layer11" style="display: none;">
-      <p><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
+      <p align="left" class="style1"><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
 
       <table width="972" border="0" cellspacing="0" cellpadding="0">
         <tr>
@@ -527,7 +532,7 @@
 
 
     <div id="Layer12" style="display: none;">
-      <p><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
+      <p align="left" class="style1"><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
 
       <table width="972" border="0" cellspacing="0" cellpadding="0">
         <tr>
@@ -537,7 +542,7 @@
      Areas of expertise: <xsl:apply-templates select="DISCIPLINES/DISCIPLINE[@NAME='chemical']/GURU[@NAME='Alan Halecky']/SEARCHES"/>
      </p></td>
           <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-          <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span> <br />
+          <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample question:  &nbsp; &nbsp;</span> <br />
                 <br />
             </span>
               <p class="style1">&ldquo;How can wet carbon dioxide be responsible for a corrosion problem in iron-containing metals?&rdquo; </p>
@@ -570,8 +575,8 @@
             <li class="style1">&ldquo;How would I complete a search for business models and templates?&rdquo;</li>
             <li class="style1">&ldquo;Is it possible to get personalized trainings?&rdquo;</li>
           </ol>
-          <p align="center"><a href="http://www.ei.org/support/online_seminars.html"><img src="/engresources/images/ae/images/training.gif" alt="email" width="167" height="14" border="0" /></a></p>
-          <p align="center"><a href="javascript:emailFormat('$SESSIONID','two');"><img src="/engresources/images/ae/images/email_specialist.gif" alt="email_specalist" width="167" height="14" border="0"/></a></p></td>
+          <p align="center"><a target="_blank" href="http://www.ei.org/support/online_seminars.html"><img src="/engresources/images/ae/images/training.gif" alt="email" width="167" height="14" border="0" /></a></p>
+          <p align="center"><a target="_blank" href="javascript:emailFormat('$SESSIONID','two');"><img src="/engresources/images/ae/images/email_specialist.gif" alt="email_specalist" width="167" height="14" border="0"/></a></p></td>
       </tr>
     </table>
   </div>
