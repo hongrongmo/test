@@ -128,10 +128,29 @@
     <!-- End of logo table -->
     <xsl:choose>
       <xsl:when test="$ACTION='confirm'">
-        Thank you!!  Blah Blah Blah
+        <center>
+          <table border="0" width="99%" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+            <tr>
+                <td valign="top" height="20"><img src="/engresources/images/s.gif" border="0" height="20"/></td>
+            </tr>
+            <tr><td valign="top"><a class="EvHeaderText">Thank you</a></td></tr>
+            <tr>
+              <td valign="top">
+                <P><A CLASS="MedBlackText">Somone will contact you shortly.</A></P>
+              </td>
+            </tr>
+          </table>
+        </center>
       </xsl:when>
       <xsl:when test="$ACTION='error'">
-        ERROR PAGE
+        <center>
+          <table border="0" width="99%" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+            <tr>
+                <td valign="top" height="20"><img src="/engresources/images/s.gif" border="0" height="20"/></td>
+            </tr>
+            <tr><td valign="top"><a class="EvHeaderText">An Error has occured</a></td></tr>
+          </table>
+        </center>
       </xsl:when>
       <xsl:when test="$ACTION='compose'">
         <!-- Start of the lower area below the navigation bar -->
