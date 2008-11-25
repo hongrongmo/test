@@ -28,6 +28,7 @@
 
 	// variable to hold database name
 	String database = null;
+
 	//variable to hold personalization feature
 	boolean  isPersonalizationPresent=true;
 	String customizedLogo="";
@@ -50,7 +51,7 @@
 	if((pUserId != null) && (pUserId.trim().length() != 0)){
 		personalization=true;
 	}
-  User user=ussession.getUser();
+  User user = ussession.getUser();
 	ClientCustomizer clientCustomizer = new ClientCustomizer(ussession);
 
   if(database == null)
@@ -63,6 +64,25 @@
 	{
 		refEmail = clientCustomizer.getRefEmail();
 	}
+
+  /* set the mask to CPX, INS or both. IF neither, default to users default from BO */
+  String[] cars = user.getCartridge();
+  int userMask = (DatabaseConfig.getInstance()).getMask(cars);
+  int refsvcsmask = 0;
+  if((userMask & DatabaseConfig.CPX_MASK) == DatabaseConfig.CPX_MASK) {
+    refsvcsmask += DatabaseConfig.CPX_MASK;
+  }
+  if((userMask & DatabaseConfig.INS_MASK) == DatabaseConfig.INS_MASK) {
+    refsvcsmask += DatabaseConfig.INS_MASK;
+  }
+  if(refsvcsmask == 0) {
+    try {
+      refsvcsmask = Integer.parseInt(clientCustomizer.getDefaultDB());
+    } catch(NumberFormatException e) {
+      refsvcsmask = DatabaseConfig.CPX_MASK;
+    }
+  }
+  log("refsvcsmask " + refsvcsmask);
 
 	if(clientCustomizer.isCustomized())
 	{
@@ -92,7 +112,7 @@
     String gurulink = (String) authorLinks.get(guru);
     if(guru != null) {
       out.write("<GURU NAME='" + guru + "'><![CDATA[");
-      out.write(makeRefSvcsLink(database,gurulink));
+      out.write(makeRefSvcsLink(refsvcsmask,gurulink));
       out.write("]]></GURU>");
     }
   }
@@ -124,7 +144,7 @@
             if((searchky != null) && (searchphrase != null)) {
 
               out.write("<SEARCH NAME='" + searchky + "'><![CDATA[");
-              out.write(makeRefSvcsLink(database,searchphrase));
+              out.write(makeRefSvcsLink(refsvcsmask,searchphrase));
               out.write("]]></SEARCH>");
             }
           }
@@ -258,12 +278,12 @@
         ausearches = new HashMap();
         kysearches = new HashMap();
         kysearches.put("Corrosion","((Corrosion ) WN CV)");
-        kysearches.put("electro-deposition","((electrodeposition ) WN CV)");
+        kysearches.put("electro-deposition","((electrodeposition) WN CV)");
         kysearches.put("failure of materials","(((failure of materials ) WN CV) OR ((materials failure) WN CV))");
         kysearches.put("materials characterization","((materials characterization ) WN CV)");
-        kysearches.put("scanning and transmission electron microscopy","(((scanning ) WN CV) AND ((transmission electron microscopy) WN CV))");
-        kysearches.put("materials selection","((materials selection ) WN CV)");
-        kysearches.put("materials processing","((materials processing ) WN CV)");
+        kysearches.put("scanning and transmission electron microscopy","(((scanning) WN CV) AND ((transmission electron microscopy) WN CV))");
+        kysearches.put("materials selection","((materials selection) WN CV)");
+        kysearches.put("materials processing","((materials processing) WN CV)");
         ausearches.put("Keith Sheppard",kysearches);
         disciplines.put("materials",ausearches);
 
@@ -314,7 +334,7 @@
         kysearches.put("concurrent engineering","((concurrent engineering ) WN CV)");
         kysearches.put("SQC/SPC (Statistical Quality Control/Statistical Process Control) and applied statistics","((((Statistical Quality Control ) WN CV) OR ((Statistical Process Control) WN CV)) OR ((applied statistics) WN CV))");
         kysearches.put("TQM philosophy","((Total Quality Management) WN CV)");
-        kysearches.put("Benchmarking","((benchmarking, ) WN CV)");
+        kysearches.put("Benchmarking","((benchmarking) WN CV)");
         kysearches.put("DOE (Design of Experiments)","(((Design of Experiments) WN CV) OR ((DOE) WN CV))");
         kysearches.put("QFD (Quality Function Deployment)","(((Quality Function Deployment) WN CV) OR ((QFD ) WN CV))");
         kysearches.put("cost of quality","((cost of quality ) WN CV)");
@@ -328,7 +348,7 @@
       }
     }
 
-    private String makeRefSvcsLink(String database, String searchphrase)
+    private String makeRefSvcsLink(int database, String searchphrase)
     {
       StringBuffer buf = new StringBuffer();
 
