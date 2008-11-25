@@ -564,7 +564,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 <div id="two" style="display: none; text-align:left;">
   <p align="left">&nbsp;</p>
   <p align="left" class="style1">Our Product Specialist can help you with search assistance in Engineering Village, training needs and questions regarding features and results. </p>
-  <p align="left" class="style1">In addition, our Product Specialist hosts regular weekly trainings on multiple Engineering Village databases, features and functionality and creates training materials and product tours to support that.</p>
+  <p align="left" class="style1">In addition, our Product Specialist hosts regular weekly trainings on multiple Engineering Village databases, features and functionality and creates training materials and product tours to support your research.</p>
   <div align="left">
     <table width="972" border="0" cellspacing="0" cellpadding="0">
       <tr>
@@ -656,7 +656,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 <div id="three" style="display: none; text-align:left;">
   <p align="left">&nbsp;</p>
   <p align="left" class="style1">A librarian can help you formulate a search, identify and locate a source for a book or an article, or find additional resources on a specific topic.</p>
-  <p align="left" class="style1">To learn more about the subject areas that are covered by the databases that are available to you, please visit <a target="_blank" href="http://www.ei.org/databases/compendex.html">http://www.ei.org/databases/compendex.html</a></p>
+  <p align="left" class="style1">To learn more about the subject areas that are covered by the databases that are available to you, please visit <a target="_blank" href="http://www.ei.org/products/engineeringvillage.html ">http://www.ei.org/products/engineeringvillage.html </a></p>
 
   <div align="left">
     <table width="972" border="0" cellspacing="0" cellpadding="0">
