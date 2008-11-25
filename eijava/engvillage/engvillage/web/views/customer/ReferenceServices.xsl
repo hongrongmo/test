@@ -82,54 +82,53 @@
     <xsl:comment>
     <![CDATA[
 
-      function MM_preloadImages() { //v3.0
-        var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
-          var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
-          if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
-      }
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
 
-      function MM_findObj(n, d) { //v4.01
-        var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
-          d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
-        if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
-        for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
-        if(!x && d.getElementById) x=d.getElementById(n); return x;
-      }
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
 
-      function MM_nbGroup(event, grpName) { //v6.0
-        var i,img,nbArr,args=MM_nbGroup.arguments;
-        if (event == "init" && args.length > 2) {
-          if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
-            img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
-            if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
-            nbArr[nbArr.length] = img;
-            for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
-              if (!img.MM_up) img.MM_up = img.src;
-              img.src = img.MM_dn = args[i+1];
-              nbArr[nbArr.length] = img;
-          } }
-        } else if (event == "over") {
-          document.MM_nbOver = nbArr = new Array();
-          for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
-            if (!img.MM_up) img.MM_up = img.src;
-            img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
-            nbArr[nbArr.length] = img;
-          }
-        } else if (event == "out" ) {
-          for (i=0; i < document.MM_nbOver.length; i++) {
-            img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
-        } else if (event == "down") {
-          nbArr = document[grpName];
-          if (nbArr)
-            for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
-          document[grpName] = nbArr = new Array();
-          for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
-            if (!img.MM_up) img.MM_up = img.src;
-            img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
-            nbArr[nbArr.length] = img;
-        } }
-      }
-
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
         ]]>
     // </xsl:comment>
     </script>
@@ -223,12 +222,14 @@
 
     function emailFormat(sessionid,section)
     {
-      emailGuruFormat(sessionid,section)
+      var url = "/controller/servlet/Controller?EISESSION="+sessionid+"&CID=askanexpert&section="+escape(pageTitles[section])+"&sectionid="+section;
+      new_window=window.open(url,'NewWindow','status=yes,resizable,scrollbars,width=600,height=600');
+      new_window.focus();
     }
 
     function emailGuruFormat(sessionid,section,discipline,guru)
     {
-      var url = "/controller/servlet/Controller?EISESSION="+sessionid+"&CID=askanexpert&database=1&section="+escape(pageTitles[section])+"&sectionid="+section+"&discipline="+escape(layerTitles[discipline])+"&disciplineid="+discipline+"&guru="+escape(guru);
+      var url = "/controller/servlet/Controller?EISESSION="+sessionid+"&CID=askanexpert&section="+escape(pageTitles[section])+"&sectionid="+section+"&discipline="+escape(layerTitles[discipline])+"&disciplineid="+discipline+"&guru="+escape(guru);
       new_window=window.open(url,'NewWindow','status=yes,resizable,scrollbars,width=600,height=600');
       new_window.focus();
     }
@@ -311,19 +312,20 @@
 <div id="one" style="display: none;">
 
     <p align="left">&nbsp;</p>
-    <table border="0" cellpadding="0" cellspacing="0">
-      <tr>
-        <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer12');MM_nbGroup('down','group1','Chemical','/engresources/images/ae/images/Chemical.gif',0)" onmouseover="MM_nbGroup('over','Chemical','/engresources/images/ae/images/Chemical_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Chemical.gif" alt="Chemical" name="Chemical" width="108" height="128" border="0" id="Chemical" onload="MM_nbGroup('init','group1','Chemical','/engresources/images/ae/images/Chemical_down.gif',0)" /></a></td>
-        <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer15');MM_nbGroup('down','group1','Industrial','/engresources/images/ae/images/Idustrial.gif',0)" onmouseover="MM_nbGroup('over','Industrial','/engresources/images/ae/images/Idustrial_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Idustrial.gif" alt="industrial" name="Industrial" width="108" height="128" border="0" id="Industrial" onload="MM_nbGroup('init','group1','Industrial','/engresources/images/ae/images/Idustrial_down.gif',0)" /></a></td>
-        <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer1');MM_nbGroup('down','group1','Mechanical','/engresources/images/ae/images/Mechanical.gif',0)" onmouseover="MM_nbGroup('over','Mechanical','/engresources/images/ae/images/Mechanical_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Mechanical.gif" alt="mecanical" name="Mechanical" width="108" height="128" border="0" id="Mechanical" onload="MM_nbGroup('init','group1','Mechanical','/engresources/images/ae/images/Mechanical_down.gif',0)" /></a></td>
-        <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer8');MM_nbGroup('down','group1','Electrical','/engresources/images/ae/images/Electrical.gif',0)" onmouseover="MM_nbGroup('over','Electrical','/engresources/images/ae/images/Electrical_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Electrical.gif" alt="Electrical" name="Electrical" width="108" height="128" border="0" id="Electrical" onload="MM_nbGroup('init','group1','Electrical','/engresources/images/ae/images/Electrical_down.gif',0)" /></a></td>
-        <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer3');MM_nbGroup('down','group1','SignalProcessing','/engresources/images/ae/images/SignalProcessing.gif',0)" onmouseover="MM_nbGroup('over','SignalProcessing','/engresources/images/ae/images/SignalProcessing_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/SignalProcessing.gif" alt="signal" name="SignalProcessing" width="108" height="128" border="0" id="SignalProcessing" onload="MM_nbGroup('init','group1','SignalProcessing','/engresources/images/ae/images/SignalProcessing_down.gif',0)" /></a></td>
-        <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer2');MM_nbGroup('down','group1','Manufacturing','/engresources/images/ae/images/Manufacturing.gif',0)" onmouseover="MM_nbGroup('over','Manufacturing','/engresources/images/ae/images/Manufacturing_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Manufacturing.gif" alt="manufacturing" name="Manufacturing" width="108" height="128" border="0" id="Manufacturing" onload="MM_nbGroup('init','group1','Manufacturing','/engresources/images/ae/images/Manufacturing_down.gif',0)" /></a></td>
-        <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer10');MM_nbGroup('down','group1','Materials','/engresources/images/ae/images/Materials.gif',0)" onmouseover="MM_nbGroup('over','Materials','/engresources/images/ae/images/Materials_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Materials.gif" alt="matiterials" name="Materials" width="108" height="128" border="0" id="Materials" onload="MM_nbGroup('init','group1','Materials','/engresources/images/ae/images/Materials_down.gif',0)" /></a></td>
-        <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer9');MM_nbGroup('down','group1','Management','/engresources/images/ae/images/Management-.gif',0)" onmouseover="MM_nbGroup('over','Management','/engresources/images/ae/images/Management_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Management-.gif" alt="managment" name="Management" width="108" height="128" border="0" id="Management" onload="MM_nbGroup('init','group1','Management','/engresources/images/ae/images/Management_down.gif',0)" /></a></td>
-        <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer11');MM_nbGroup('down','group1','Computer','/engresources/images/ae/images/Computer-.gif',0)" onmouseover="MM_nbGroup('over','Computer','/engresources/images/ae/images/Computer_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Computer-.gif" alt="computer" name="Computer" width="108" height="128" border="0" id="Computer" onload="MM_nbGroup('init','group1','Computer','/engresources/images/ae/images/Computer_down.gif',0)" /></a></td>
-      </tr>
-    </table>
+
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer12');MM_nbGroup('down','group1','Chemical','/engresources/images/ae/images/Chemical.gif',0)" onmouseover="MM_nbGroup('over','Chemical','/engresources/images/ae/images/Chemical_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Chemical.gif" alt="Chemical" name="Chemical" width="108" height="128" border="0" id="Chemical" onload="MM_nbGroup('init','group1','Chemical','/engresources/images/ae/images/Chemical_down.gif',0)" /></a></td>
+    <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer15');MM_nbGroup('down','group1','Industrial','/engresources/images/ae/images/Idustrial.gif',0)" onmouseover="MM_nbGroup('over','Industrial','/engresources/images/ae/images/Idustrial_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Idustrial.gif" alt="industrial" name="Industrial" width="108" height="128" border="0" id="Industrial" onload="MM_nbGroup('init','group1','Industrial','/engresources/images/ae/images/Idustrial_down.gif',0)" /></a></td>
+    <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer1');MM_nbGroup('down','group1','Mechanical','/engresources/images/ae/images/Mechanical.gif',0)" onmouseover="MM_nbGroup('over','Mechanical','/engresources/images/ae/images/Mechanical_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Mechanical.gif" alt="mecanical" name="Mechanical" width="108" height="128" border="0" id="Mechanical" onload="MM_nbGroup('init','group1','Mechanical','/engresources/images/ae/images/Mechanical_down.gif',0)" /></a></td>
+    <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer8');MM_nbGroup('down','group1','Electrical','/engresources/images/ae/images/Electrical.gif',0)" onmouseover="MM_nbGroup('over','Electrical','/engresources/images/ae/images/Electrical_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Electrical.gif" alt="Electrical" name="Electrical" width="108" height="128" border="0" id="Electrical" onload="MM_nbGroup('init','group1','Electrical','/engresources/images/ae/images/Electrical_down.gif',0)" /></a></td>
+    <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer3');MM_nbGroup('down','group1','SignalProcessing','/engresources/images/ae/images/SignalProcessing.gif',0)" onmouseover="MM_nbGroup('over','SignalProcessing','/engresources/images/ae/images/SignalProcessing_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/SignalProcessing.gif" alt="signal" name="SignalProcessing" width="108" height="128" border="0" id="SignalProcessing" onload="MM_nbGroup('init','group1','SignalProcessing','/engresources/images/ae/images/SignalProcessing_down.gif',0)" /></a></td>
+    <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer2');MM_nbGroup('down','group1','Manufacturing','/engresources/images/ae/images/Manufacturing.gif',0)" onmouseover="MM_nbGroup('over','Manufacturing','/engresources/images/ae/images/Manufacturing_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Manufacturing.gif" alt="manufacturing" name="Manufacturing" width="108" height="128" border="0" id="Manufacturing" onload="MM_nbGroup('init','group1','Manufacturing','/engresources/images/ae/images/Manufacturing_down.gif',0)" /></a></td>
+    <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer10');MM_nbGroup('down','group1','Materials','/engresources/images/ae/images/Materials.gif',0)" onmouseover="MM_nbGroup('over','Materials','/engresources/images/ae/images/Materials_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Materials.gif" alt="matiterials" name="Materials" width="108" height="128" border="0" id="Materials" onload="MM_nbGroup('init','group1','Materials','/engresources/images/ae/images/Materials_down.gif',0)" /></a></td>
+    <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer9');MM_nbGroup('down','group1','Management','/engresources/images/ae/images/Management-.gif',0)" onmouseover="MM_nbGroup('over','Management','/engresources/images/ae/images/Management_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Management-.gif" alt="managment" name="Management" width="108" height="128" border="0" id="Management" onload="MM_nbGroup('init','group1','Management','/engresources/images/ae/images/Management_down.gif',0)" /></a></td>
+    <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer11');MM_nbGroup('down','group1','Computer','/engresources/images/ae/images/Computer-.gif',0)" onmouseover="MM_nbGroup('over','Computer','/engresources/images/ae/images/Computer_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Computer-.gif" alt="computer" name="Computer" width="108" height="128" border="0" id="Computer" onload="MM_nbGroup('init','group1','Computer','/engresources/images/ae/images/Computer_down.gif',0)" /></a></td>
+  </tr>
+</table>
 
     <div id="Layer1" style="display: none;">
       <p align="left" class="style1"><span class="style1">Our Senior Engineers will draw on their professional knowledge and experience to answer your technical engineering questions.&nbsp; They can also point you to the appropriate companies, consultants, research institutes, web sites, and other resources that can help you solve your problem.</span></p>
@@ -576,7 +578,7 @@
             <li class="style1">&ldquo;Is it possible to get personalized trainings?&rdquo;</li>
           </ol>
           <p align="center"><a target="_blank" href="http://www.ei.org/support/online_seminars.html"><img src="/engresources/images/ae/images/training.gif" alt="email" width="167" height="14" border="0" /></a></p>
-          <p align="center"><a target="_blank" href="javascript:emailFormat('$SESSIONID','two');"><img src="/engresources/images/ae/images/email_specialist.gif" alt="email_specalist" width="167" height="14" border="0"/></a></p></td>
+          <p align="center"><a href="javascript:emailFormat('$SESSIONID','two');"><img src="/engresources/images/ae/images/email_specialist.gif" alt="email_specalist" width="167" height="14" border="0"/></a></p></td>
       </tr>
     </table>
   </div>
