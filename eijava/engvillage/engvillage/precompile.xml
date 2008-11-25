@@ -1,6 +1,14 @@
 <project name="Webapp Precompilation" default="all" basedir=".">
 
-<!-- ..\eijava\engvillage\engvillage>ant -f precompile.xml -Dwebapp.path=c:\baja\appserver.4\webapps\engvillage -Dtomcat.home=c:\baja\appserver.4 -->
+
+<!-- Override Values
+  ..\eijava\engvillage\engvillage>ant -f precompile.xml -Dwebapp.path=c:\baja\appserver.4\webapps\engvillage -Dtomcat.home=c:\baja\appserver.4 -->
+  <property environment="env"/>
+
+	<property name="webapp.path" value="${env.CATALINA_HOME}\webapps\engvillage"/>
+	<property name="tomcat.home" value="${env.CATALINA_HOME}"/>
+
+
   <target name="deploy">
     <!-- delete and refresh jsps -->
     <delete dir="${webapp.path}/models"/>
