@@ -38,8 +38,6 @@
       // typically it checks for a valid mail id and not null conditions
       function validateForm(sendemail) {
 
-        var milli = (new Date()).getTime() ;
-
         sendemail.from_email.value = sendemail.from_email.value.replace(/\s+/g,"");
 
         var from_name = sendemail.from_name.value;
@@ -73,11 +71,10 @@
           return false;
         }
 
-        url = "/controller/servlet/Controller?EISESSION="+sessionid+"&CID=emailaskanexpert"
+        url = "/controller/servlet/Controller?EISESSION="+sessionid+"&CID=askanexpert"
         sendemail.action = url;
 
         return (true);
-
       }
 
       // This function basically does email validation(ie @ . and special characters)
@@ -143,8 +140,7 @@
             <td valign="top" height="15" colspan="3"><img src="/engresources/images/s.gif" border="0"/></td></tr>
           <tr>
             <td valign="top" width="20"><img src="/engresources/images/s.gif" border="0" width="20"/></td>
-            <td valign="top" colspan="2"><a class="EvHeaderText"><xsl:value-of select="SECTION"/></a></td>
-            <td valign="top" colspan="2"><a class="EvHeaderText"><xsl:value-of select="DISCIPLINE"/></a></td>
+            <td valign="top" colspan="2"><a class="EvHeaderText"><xsl:value-of select="SECTION"/> <xsl:if test="DISCIPLINE != ''">- <xsl:value-of select="DISCIPLINE"/></xsl:if></a></td>
           </tr>
           <tr>
             <td valign="top" width="20"><img src="/engresources/images/s.gif" border="0" width="20"/></td>
@@ -182,6 +178,7 @@
                            <xsl:value-of select="$SESSION-ID"/>
                           </xsl:attribute>
                       </input>
+
 
                       <input type="hidden" name="database">
                         <xsl:attribute name="value">
