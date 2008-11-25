@@ -42,7 +42,7 @@
 		<![CDATA[
 #one {
 	width:972px;
-	height:182px;
+	height:600px;
 	z-index:1;
 }
 #two {
