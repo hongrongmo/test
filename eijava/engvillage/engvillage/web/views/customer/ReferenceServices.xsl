@@ -405,7 +405,7 @@ function MM_nbGroup(event, grpName) { //v6.0
           <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample question:  &nbsp; &nbsp;</span> <br />
                 <br />
             </span>
-            <p class="style1">Sample Question: &nbsp;&ldquo;Which images or signals inside the tunnel are best for object detection?&rdquo;</p>
+            <p class="style1">&ldquo;Which images or signals inside the tunnel are best for object detection?&rdquo;</p>
             <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer3','Chi Hau Chen');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p></td>
         </tr>
       </table>
