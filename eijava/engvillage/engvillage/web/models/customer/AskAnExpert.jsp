@@ -106,9 +106,12 @@
     {
       // Writing the XML for the email form
       out.write("<ACTION>compose</ACTION>");
-      out.write("<DISCIPLINE>"+discipline+"</DISCIPLINE>");
-      out.write("<DISCIPLINEID>"+disciplineid+"</DISCIPLINEID>");
-      out.write("<GURU>"+guru+"</GURU>");
+      if(sectionid.equals(ASK_AN_ENGINEER))
+      {
+        out.write("<DISCIPLINE>"+discipline+"</DISCIPLINE>");
+        out.write("<DISCIPLINEID>"+disciplineid+"</DISCIPLINEID>");
+        out.write("<GURU>"+guru+"</GURU>");
+      }
       out.write("</PAGE>");
     }
     else if(action.equalsIgnoreCase("send"))
@@ -164,7 +167,7 @@
       }
 
       EIMessage eimessage = new EIMessage();
-      eimessage.setSender(from_email);
+      eimessage.setSender("eicustomersupport@elseiver.com");
       eimessage.addTORecepients(recipients);
       eimessage.addCCRecepients(ccAddress);
       eimessage.setSubject(section);
