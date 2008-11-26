@@ -65,7 +65,7 @@
 		refEmail = clientCustomizer.getRefEmail();
 	}
 
-  /* set the mask to CPX, INS or both. IF neither, default to users default from BO */
+  /* set the mask to CPX, INS or both. Leave empty if neither */
   String[] cars = user.getCartridge();
   int userMask = (DatabaseConfig.getInstance()).getMask(cars);
   int refsvcsmask = 0;
@@ -75,13 +75,7 @@
   if((userMask & DatabaseConfig.INS_MASK) == DatabaseConfig.INS_MASK) {
     refsvcsmask += DatabaseConfig.INS_MASK;
   }
-  if(refsvcsmask == 0) {
-    try {
-      refsvcsmask = Integer.parseInt(clientCustomizer.getDefaultDB());
-    } catch(NumberFormatException e) {
-      refsvcsmask = DatabaseConfig.CPX_MASK;
-    }
-  }
+
   log("refsvcsmask " + refsvcsmask);
 
 	if(clientCustomizer.isCustomized())
@@ -111,9 +105,34 @@
     String guru = (String) itr.next();
     String gurulink = (String) authorLinks.get(guru);
     if(guru != null) {
-      out.write("<GURU NAME='" + guru + "'><![CDATA[");
-      out.write(makeRefSvcsLink(refsvcsmask,gurulink));
-      out.write("]]></GURU>");
+      int gurumask = 0;
+      out.write("<GURU NAME='" + guru + "'>");
+      /* patents only special case */
+      if(guru.equals("Donald W. Merino, Jr."))
+      {
+        if((userMask & DatabaseConfig.EUP_MASK) == DatabaseConfig.EUP_MASK) {
+          gurumask += DatabaseConfig.EUP_MASK;
+        }
+        if((userMask & DatabaseConfig.UPA_MASK) == DatabaseConfig.UPA_MASK) {
+          gurumask += DatabaseConfig.UPA_MASK;
+        }
+      }
+      else
+      {
+        gurumask = refsvcsmask;
+      }
+      /* only link author's name is mask is not 0 */
+      if(gurumask != 0) {
+        out.write("<GURU_SEARCHLINK><![CDATA[");
+        out.write(makeRefSvcsLink(gurumask,gurulink));
+        log(makeRefSvcsLink(gurumask,gurulink));
+
+        out.write("]]></GURU_SEARCHLINK>");
+      }
+      else {
+        log("no link for " + guru);
+      }
+      out.write("</GURU>");
     }
   }
 %>
@@ -121,6 +140,12 @@
 
 <DISCIPLINES>
 <%
+  /* here we link all searches, if calculated reference services mask (CPX or INS)
+  is empty, jsut search the user's default database */
+  if(refsvcsmask == 0)
+  {
+    refsvcsmask = userMask;
+  }
   itr = disciplines.keySet().iterator();
   while(itr.hasNext()) {
     String discipline = (String) itr.next();
