@@ -699,7 +699,19 @@ pageTracker._trackPageview();
 
 </xsl:template>
 
-<xsl:template match="SEARCH|GURU">
+<!-- template for author name links -->
+<xsl:template match="GURU">
+  <a>
+    <xsl:if test="GURU_SEARCHLINK != ''">
+      <xsl:attribute name="href"><xsl:value-of select="GURU_SEARCHLINK"/></xsl:attribute>
+    </xsl:if>
+    <xsl:value-of select="@NAME"/>
+  </a>
+  <xsl:if test="not(position()=last())">, </xsl:if>
+</xsl:template>
+
+<!-- template for author areas of expertise links -->
+<xsl:template match="SEARCH">
   <a>
     <xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
     <xsl:value-of select="@NAME"/>
