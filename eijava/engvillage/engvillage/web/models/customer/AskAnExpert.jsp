@@ -170,7 +170,6 @@
       {
           share_question = request.getParameter("share_question");
       }
-log("Share " + share_question);
 
       EIMessage eimessage = new EIMessage();
       eimessage.setSender("eicustomersupport@elseiver.com");
