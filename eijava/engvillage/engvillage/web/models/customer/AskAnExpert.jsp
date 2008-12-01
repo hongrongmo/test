@@ -163,7 +163,12 @@
       if(request.getParameter("message") != null)
       {
           message = request.getParameter("message");
+      }
 
+      String share_question="";
+      if(request.getParameter("share_question") != null)
+      {
+          share_question = request.getParameter("share_question");
       }
 
       EIMessage eimessage = new EIMessage();
@@ -182,6 +187,13 @@
         messagebody.write("\n");
         messagebody.write(guru);
         messagebody.write("\n");
+      }
+      messagebody.write("Share: ");
+      if(!share_question.equals("true")) {
+        messagebody.write(" User has requested we DO NOT share this question.");
+      }
+      else {
+        messagebody.write(" Anonymously share this question and response with other Engineering Village users");
       }
       messagebody.write("\n");
       messagebody.write("Message contents");
