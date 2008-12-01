@@ -170,6 +170,7 @@
       {
           share_question = request.getParameter("share_question");
       }
+log("Share " + share_question);
 
       EIMessage eimessage = new EIMessage();
       eimessage.setSender("eicustomersupport@elseiver.com");
@@ -189,7 +190,7 @@
         messagebody.write("\n");
       }
       messagebody.write("Share: ");
-      if(!share_question.equals("true")) {
+      if(!share_question.equalsIgnoreCase("on")) {
         messagebody.write(" User has requested we DO NOT share this question.");
       }
       else {
