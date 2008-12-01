@@ -218,6 +218,9 @@ function MM_nbGroup(event, grpName) { //v6.0
           atoggleDiv.style.display = "none";
         }
       }
+      if(divname != 'zero') {
+        document.location = "#top";
+      }
     }
 
     function emailFormat(sessionid,section)
@@ -274,6 +277,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 </head>
 
 <body bgcolor="#FFFFFF" topmargin="0" marginheight="0" marginwidth="0">
+<a id="top" href="top"/>
 
 <center>
 
@@ -303,7 +307,6 @@ function MM_nbGroup(event, grpName) { //v6.0
     <td width="238"><a href="javascript:;" target="_top" onclick="MM_nbGroup('down','group1','Ask_a_Librarian','/engresources/images/ae/images/ask_librarian.gif',0);toggleDiv('three');" onmouseover="MM_nbGroup('over','Ask_a_Librarian','/engresources/images/ae/images/ask_librarian_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/ask_librarian.gif" alt="" name="Ask_a_Librarian" border="0" id="Ask_a_Librarian" onload="MM_nbGroup('init','group1','Ask_a_Librarian','/engresources/images/ae/images/ask_librarian_down.gif',0)" /></a></td>
   </tr>
 </table>
-  <a id="top" href="top"/>
 <div id="zero" style="display: block;">
   <h1>&#160;</h1>
 </div>
