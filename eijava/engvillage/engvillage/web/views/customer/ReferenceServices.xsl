@@ -212,7 +212,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 
         if(thisId == divname) {
           atoggleDiv.style.display = "block";
-          pageTracker._trackPageview('/folder/' + pageTitles[divname]);
+          pageTracker._trackPageview('/ReferenceServices/' + pageTitles[divname]);
         }
         else {
           atoggleDiv.style.display = "none";
@@ -260,7 +260,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 
         if(thisId == divname) {
           atoggleDiv.style.display = "block";
-          pageTracker._trackPageview('/folder/' + layerTitles[divname]);
+          pageTracker._trackPageview('/ReferenceServices/AskAnEngineer/' + layerTitles[divname]);
         }
         else {
           atoggleDiv.style.display = "none";
