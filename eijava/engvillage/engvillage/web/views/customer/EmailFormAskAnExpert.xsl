@@ -286,6 +286,12 @@
                           </A>
                           </td>
                         </tr>
+                        <tr><td valign="top" align="right">&nbsp;</td><td valign="top" width="6">
+                          <img src="/engresources/images/s.gif" border="0" width="6"/></td><td valign="top">
+                          <input type="checkbox" name="share_question" id="share_checkbox" checked="checked" size="25"/><A CLASS="MedBlackText"><label for="share_checkbox">Anonymously share this question and response with other Engineering Village users</label>
+                          </A>
+                          </td>
+                        </tr>
                         <tr><td valign="top" height="15"><img src="/engresources/images/s.gif" border="0" height="15"/></td></tr>
                         <tr><td valign="top" colspan="2">&#160; </td><td valign="top">
                           <A CLASS="SmBlackText"><input type="submit" name="submit" value="Send E-mail" /></A>
