@@ -37,24 +37,42 @@ public class C84Combiner
         String username = args[2];
         String password = args[3];
         int loadNumber = Integer.parseInt(args[4]);
-        int recsPerfile = Integer.parseInt(args[5]);
-        int exitAt = Integer.parseInt(args[6]);
+        int recsPerbatch = Integer.parseInt(args[5]);
+        String operation = args[6];
         tablename = args[7];
+        String environment = args[8].toLowerCase();
 
         Combiner.TABLENAME = tablename;
-        Combiner.EXITNUMBER = exitAt;
         System.out.println(Combiner.TABLENAME);
 
-        CombinedWriter writer = new CombinedXMLWriter(recsPerfile,
+        CombinedWriter writer = new CombinedXMLWriter(recsPerbatch,
                 									  loadNumber,
                 									  "c84");
+		writer.setOperation(operation);
         C84Combiner c = new C84Combiner(writer);
 
-        c.writeCombinedByWeekNumber(url,
-                					driver,
-                					username,
-                					password,
-                					loadNumber);
+        // extract the whole thing
+    	if(loadNumber == 0)
+    	{
+			for(int yearIndex = 1869; yearIndex <= 1968; yearIndex++)
+			{
+				System.out.println("Processing year " + yearIndex + "...");
+				c = new C84Combiner(new CombinedXMLWriter(recsPerbatch, yearIndex,"c84", environment));
+				c.writeCombinedByYear(url,
+								driver,
+								username,
+								password,
+								yearIndex);
+			}
+		}
+		else
+		{
+        	c.writeCombinedByWeekNumber(url,
+                						driver,
+                						username,
+                						password,
+   	            						loadNumber);
+		}
 
     }
 
@@ -73,14 +91,15 @@ public class C84Combiner
         try
         {
 
-            this.writer.begin();
             stmt = con.createStatement();
             System.out.println("Running the query...");
-            rs = stmt.executeQuery("select ab, ac, ay, ey, m_id, vo, iss, xp,af, ex, an, aus, bn, cal, cc, cf, cls, cn, cvs, dt, ed, ef, fls, id, la, lf, mc, me, mh, ms, mt, mv, my, m2, pn, se, sh, sn, sp, st, ti, tt, tr, vt, do, SUBSTR(yr,1,4) yr, load_number from " + Combiner.TABLENAME + " where yr ='" + year + "' AND load_number < 1000000");
+            rs = stmt.executeQuery("select * from " + Combiner.TABLENAME + " where yr ='" + year + "' AND load_number < 1000000");
+            //rs = stmt.executeQuery("select * from " + Combiner.TABLENAME + " where yr in ('1000','1003','1018','1039','1042','1043','1047','1051','1052','1059','1065','1153','1494','1495','1590','1592','1593','1597','1643','1659','1800','1802','1804','1805','1806','1807','1808','1809','1811','1813','1820','1830','1831','1838','1855','1856','1857','1858','1860','1863','1864','1865','1867','1868') or yr is null");
             System.out.println("Got records ...");
             writeRecs(rs);
             System.out.println("Wrote records.");
             this.writer.end();
+            this.writer.flush();
 
         }
         finally
@@ -123,10 +142,6 @@ public class C84Combiner
             EVCombinedRec rec = new EVCombinedRec();
             ++i;
 
-            if (Combiner.EXITNUMBER != 0 && i > Combiner.EXITNUMBER)
-            {
-                break;
-            }
 
             String abString = getStringFromClob(rs.getClob("ab"));
 
@@ -653,12 +668,12 @@ public class C84Combiner
         try
         {
 
-            this.writer.begin();
             stmt = con.createStatement();
 
             rs = stmt.executeQuery("select ay, ac , ey, pe, pm, ad, pd, pu, ab, m_id, vo, iss, xp,af, ex, an, aus, bn, cal, cc, cf, cls, cn, cvs, dt, ed, ef, fls, id, la, lf, mc, me, mh, ms, mt, mv, my, m2, pn, se, sh, sn, sp, st, ti, tt, tr, vt, do, SUBSTR(yr,1,4) yr, load_number from " + tablename + " where load_number =" + weekNumber);
             writeRecs(rs);
             this.writer.end();
+            this.writer.flush();
 
         }
         finally
