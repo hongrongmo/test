@@ -438,10 +438,17 @@
           <xsl:apply-templates select="EI-DOCUMENT" />
 
         </td>
-        <!-- THIS DEFINES TWO MORE COLUMNS IN THIS TABLE -->
         <xsl:if test="not($SEARCH-CONTEXT='dedup')">
         	<xsl:if test="//GLOBAL-LINKS/TAGGROUPS">
-            <xsl:apply-templates select="/PAGE/TAG-BUBBLE"/>
+            <!-- THIS DEFINES TWO MORE COLUMNS IN THIS TABLE -->
+            <td valign="top">
+              <div class="m">
+                <img src="/engresources/images/s.gif" border="0" width="1" />
+              </div>
+            </td>
+            <td valign="top" width="30%" align="left">
+              <xsl:apply-templates select="/PAGE/TAG-BUBBLE"/>
+            </td>
         	</xsl:if>
         </xsl:if>
       </tr>
