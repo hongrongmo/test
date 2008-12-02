@@ -7,28 +7,21 @@
 package org.ei.data.upt.loadtime;
 
 import org.apache.oro.text.perl.Perl5Util;
-import org.apache.oro.text.regex.MatchResult;
 import org.ei.data.CombinedWriter;
 import org.ei.data.CombinedXMLWriter;
 import org.ei.data.CombinerTimestamp;
 import org.ei.data.Combiner;
 import org.ei.data.EVCombinedRec;
-//import org.ei.data.upt.IPC8Classification;
-import org.ei.util.DiskMap;
 import org.ei.util.GUID;
 import org.ei.xml.Entity;
-
-import java.io.FileWriter;
-import java.io.PrintWriter;
+import org.ei.data.upt.runtime.*;
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.List;
-import java.util.StringTokenizer;
 import org.ei.data.Country;
 import org.ei.domain.ClassNodeManager;
+import org.ei.domain.Database;
 
 /**
  * @author KFokuo
@@ -47,10 +40,11 @@ public class UPTCombiner extends CombinerTimestamp {
     ClassNodeManager nodeManager = null;
     public static String US_CY = "US";
     public static String EP_CY = "EP";
+    private static final Database UPTDatabase = new UPTDatabase();
 
     public UPTCombiner(CombinedWriter writer) {
         super(writer);
-        init();
+        //init();
 
     }
     public void init() {
@@ -70,17 +64,15 @@ public class UPTCombiner extends CombinerTimestamp {
         Statement stmt = null;
         ResultSet rs = null;
 
-        try {
-
-            this.writer.begin();
+        try {            
             stmt = con.createStatement();
             System.out.println("Running the query...");
             rs = stmt.executeQuery("SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number FROM "+Combiner.TABLENAME+" WHERE LOAD_NUMBER = " + week);
             System.out.println("Got records ...");
             writeRecs(rs, con);
             System.out.println("Wrote records.");
-
             this.writer.end();
+            this.writer.flush();
 
         }
         catch (Exception e) {
@@ -122,8 +114,7 @@ public class UPTCombiner extends CombinerTimestamp {
         ResultSet rs = null;
 
         try {
-
-            this.writer.begin();
+            
             stmt = con.createStatement();
             System.out.println("Running the query...");
 
@@ -131,8 +122,8 @@ public class UPTCombiner extends CombinerTimestamp {
             System.out.println("Got records ...");
             writeRecs(rs, con);
             System.out.println("Wrote records.");
-
             this.writer.end();
+            this.writer.flush();
 
         }
         catch (Exception e) {
@@ -174,16 +165,15 @@ public class UPTCombiner extends CombinerTimestamp {
         ResultSet rs = null;
 
         try {
-
-            this.writer.begin();
+            
             stmt = con.createStatement();
             System.out.println("Running the query...");
             rs = stmt.executeQuery("SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number FROM "+Combiner.TABLENAME+" WHERE PY = '" + year + "'");
             System.out.println("Got records ...");
             writeRecs(rs, con);
             System.out.println("Wrote records.");
-
             this.writer.end();
+            this.writer.flush();
 
         }
         catch (Exception e) {
@@ -234,10 +224,11 @@ public class UPTCombiner extends CombinerTimestamp {
 
                 EVCombinedRec rec = new EVCombinedRec();
 
+                /*
                 if (Combiner.EXITNUMBER != 0 && i > Combiner.EXITNUMBER) {
                     break;
                 }
-
+                */
                 if (validYear(rs.getString("py"))) {
 
                     if (rs.getClob("ab") != null) {
@@ -601,6 +592,7 @@ public class UPTCombiner extends CombinerTimestamp {
 
                     rec.put(EVCombinedRec.PCITEDINDEX, patentIds);
 
+                    /*
                     List usclNames = new ArrayList();
                     List eclaNames = new ArrayList();
                     List ipcNames = new ArrayList();
@@ -624,7 +616,8 @@ public class UPTCombiner extends CombinerTimestamp {
                     arrNames[0] = replaceNull(arrNames[0]);
 
                     rec.put(EVCombinedRec.NOTES, arrNames);
-
+                    */
+                    
                     writer.writeRec(rec);
 
                 }
@@ -806,7 +799,7 @@ public class UPTCombiner extends CombinerTimestamp {
 
         try {
 
-            stmt = conn.prepareStatement("select cit_pn,cit_cy,cit_mid from patent_refs where prt_mid = ?");
+            stmt = conn.prepareStatement("select cit_pn,cit_cy,cit_mid,cit_pk from patent_refs where prt_mid = ?");
             stmt.setString(1, mid);
 
             rset = stmt.executeQuery();
@@ -820,6 +813,8 @@ public class UPTCombiner extends CombinerTimestamp {
 
                 if (pn != null && cit_cy != null && !pn.equalsIgnoreCase("QQ")) {
                     fullPn.append(cit_cy).append(pn);
+                    if(cit_cy.equalsIgnoreCase("ep")&&rset.getString("cit_pk")!=null)
+                    	fullPn.append(rset.getString("cit_pk"));
                     String pNum = fullPn.toString();
                     ids.add(pNum);
                 }
@@ -1370,31 +1365,30 @@ public class UPTCombiner extends CombinerTimestamp {
         return perl.match("/[1-9][0-9][0-9][0-9]/", year);
     }
 
-    public static void main(String args[]) throws Exception {
-
-
-
+    public static void main(String args[]) throws Exception {    	
         String url = args[0];
         String driver = args[1];
         String username = args[2];
         String password = args[3];
         int loadNumber = Integer.parseInt(args[4]);
         long timestamp=0l;
-        int recsPerfile = Integer.parseInt(args[5]);
-        Combiner.EXITNUMBER = Integer.parseInt(args[6]);
+        int recsPerbatch = Integer.parseInt(args[5]);
+        String operation = args[6];
         Combiner.TABLENAME = args[7];
-        if(args.length==9)
-         timestamp = Long.parseLong(args[8]);
+        String environment = args[8].toLowerCase();
+        if(args.length==10)
+         timestamp = Long.parseLong(args[9]);
 
         System.out.println("Table Name=" + args[7]);
         System.out.println("LoadNumber=" + loadNumber);
-        System.out.println("RecsPerFile=" + recsPerfile);
+        System.out.println("RecsPerFile=" + recsPerbatch);
         System.out.println("Exit At=" + Combiner.EXITNUMBER);
         String dbname = "upt";
         if (timestamp > 0)
             dbname=dbname+"cit";
 
-        CombinedWriter writer = new CombinedXMLWriter(recsPerfile, loadNumber, dbname);
+        CombinedWriter writer = new CombinedXMLWriter(recsPerbatch, loadNumber, dbname);
+        writer.setOperation(operation);
         UPTCombiner c = new UPTCombiner(writer);
         try {
             if (timestamp==0 && (loadNumber > 3000 || loadNumber < 1000))
@@ -1405,16 +1399,28 @@ public class UPTCombiner extends CombinerTimestamp {
             {
                 c.writeCombinedByTimestamp(url, driver, username, password, timestamp);
             }
+            else if(loadNumber == 0 && timestamp < 0)
+            {
+            	//extract all by year            	
+            	for(int yearIndex = 1790; yearIndex <= 2008; yearIndex++)
+                {
+	              	System.out.println("Processing year " + yearIndex + "...");
+	                  // create  a new writer so we can see the loadNumber/yearNumber in the filename
+	                  c = new UPTCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,UPTDatabase.getIndexName(), environment));
+	                  c.writeCombinedByYear(url,
+	                                      driver,
+	                                      username,
+	                                      password,
+	                                      yearIndex);
+                }            	            	               
+            }
             else
             {
                 c.writeCombinedByYear(url, driver, username, password, loadNumber);
             }
-
-
         }
         catch (Exception ex) {
             ex.printStackTrace();
         }
-
     }
 }
