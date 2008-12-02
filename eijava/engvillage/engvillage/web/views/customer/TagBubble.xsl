@@ -363,12 +363,7 @@
         <xsl:value-of select="$TITLE3" />
       </xsl:if>
     </xsl:variable>
-    <td valign="top">
-      <div class="m">
-        <img src="/engresources/images/s.gif" border="0" width="1" />
-      </div>
-    </td>
-    <td valign="top" width="30%" align="left">
+
       <div class="t" style="width:215px;">
       <div class="b">
       <div class="l">
@@ -499,7 +494,6 @@
           <tr><td colspan="3"><img src="/engresources/images/s.gif" height="4"/></td></tr>
         </table>
       </div></div></div></div></div></div></div></div>
-    </td>
 
   </xsl:template>
 
