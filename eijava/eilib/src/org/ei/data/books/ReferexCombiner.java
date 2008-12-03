@@ -462,6 +462,22 @@ public class ReferexCombiner {
             "table of contents", "limited disclaimer and warranty", "subject index",
             "front matter", "frontmatter", "cover", "backmatter", "back matter" };
 
+    public static boolean skipPage(String sectionTitle)
+    {
+      boolean skip = false;
+      if(sectionTitle != null)
+      {
+        for (int i = 0; i < badArray.length; i++) {
+            String badTitle = badArray[i];
+            if (badTitle.equalsIgnoreCase(sectionTitle.trim())) {
+                log.info(" Skipping Chapter or Section Title: " + sectionTitle);
+                skip = true;
+            }
+        }
+      }
+      return skip;
+    }
+
     private class PageRecord extends BookRecord {
         public String getDoctype() {
             return DOCTYPE_PAGE;
@@ -474,6 +490,13 @@ public class ReferexCombiner {
         public EVCombinedRec populate(ResultSet rs) throws Exception {
             EVCombinedRec rec = new EVCombinedRec();
             try {
+                // check if we should bail out first to save time
+                String pageChapterTitle = replaceNull(rs.getString("CHAPTER_TITLE"));
+                String pageSectionTitle = replaceNull(rs.getString("SECTION_TITLE"));
+
+                if(skipPage(pageChapterTitle) || skipPage(pageSectionTitle)) {
+                  return null;
+                }
 
                 // fill common fields
                 rec = super.populate(rs);
@@ -484,22 +507,7 @@ public class ReferexCombiner {
 
                 // get page specific fields
                 String pageText = getStringFromClob(rs.getClob("PAGE_TXT"));
-                String pageChapterTitle = replaceNull(rs.getString("CHAPTER_TITLE"));
-                String pageSectionTitle = replaceNull(rs.getString("SECTION_TITLE"));
                 String pageNum = rs.getString("PAGE_NUM");
-
-                for (int i = 0; i < badArray.length; i++) {
-                    String badTitle = badArray[i];
-                    if (badTitle.equalsIgnoreCase(pageChapterTitle.trim())) {
-                        log.info(" Skipping Chapter ==> " + pageChapterTitle);
-                        return null;
-                    }
-                    if (badTitle.equalsIgnoreCase(pageSectionTitle.trim())) {
-                        log.info(" Skipping Section ==> " + pageSectionTitle);
-                        return null;
-                    }
-                }
-
                 String pageChapterStartPage = rs.getString("CHAPTER_START");
                 String freeLang = rs.getString("PAGE_KEYWORDS");
 
