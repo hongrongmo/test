@@ -22,7 +22,7 @@ public class ConnectionBroker
 	private Hashtable poolsTable = new Hashtable();
 	private boolean loadFailure = false;
 	private String config;
-	private static ConnectionBroker instance;
+	private static ConnectionBroker instance = null;
 	private static String configFileURI="D:/devtools/ei/jakarta-tomcat-3.2.2/webapps/chemvillage/pools.xml";
 
 
@@ -141,6 +141,7 @@ public class ConnectionBroker
 	{
 		Connection c = null;
 		ConnectionPool pool = (ConnectionPool)poolsTable.get(name);
+
 		c = pool.getConnection();
 		return c;
 	}
@@ -160,12 +161,17 @@ public class ConnectionBroker
 					String poolID = (String)en.nextElement();
 					ConnectionPool pool = (ConnectionPool)poolsTable.get(poolID);
 					pool.closeConnections();
+					poolsTable.remove(en);
 				}
 			}
 		}
 		catch(Exception e)
 		{
 			throw new ConnectionPoolException(e);
+		}
+		finally {
+		  instance = null;
+		  poolsTable = new Hashtable();
 		}
 	}
 
