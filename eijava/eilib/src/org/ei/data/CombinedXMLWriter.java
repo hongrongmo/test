@@ -209,6 +209,12 @@ public class CombinedXMLWriter
     	{
     		file.mkdir();    		
     	}
+    	file=new File("ei/index_pc");
+    	hm.put("AUTHORITYCODE", file.getPath() + "/patentcountry-" + this.numberID + "." + this.databaseID);
+    	if(!file.exists())
+    	{
+    		file.mkdir();    		
+    	}
     	file=new File("ei/logs");    	
     	if(!file.exists())
     	{
@@ -428,7 +434,7 @@ public class CombinedXMLWriter
         out.println("       <USPTOCODE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.USPTOCODE)))) + "]]></USPTOCODE>");
         out.println("       <PATENTKIND><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PATENT_KIND)))) + "]]></PATENTKIND>");
         out.println("       <KINDDESCRIPTION><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.KIND_DESCR)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.KIND_DESCR))))) + "]]></KINDDESCRIPTION>");
-        out.println("       <AUTHORITYCODE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.AUTHORITY_CODE))) + "]]></AUTHORITYCODE>");
+        out.println("       <AUTHORITYCODE><![CDATA[" + notNull(Entity.prepareString(singleFormat(rec.getString(EVCombinedRec.AUTHORITY_CODE),"AUTHORITYCODE"))) + "]]></AUTHORITYCODE>");
         out.println("       <PCITED><![CDATA[" + hasPcited(rec.getString(EVCombinedRec.PCITED)) + "]]></PCITED>");
         out.println("       <PCITEDINDEX><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PCITEDINDEX)))) + "]]></PCITEDINDEX>");
         out.println("       <PREFINDEX><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PREFINDEX)))) + "]]></PREFINDEX>");
@@ -702,6 +708,12 @@ public class CombinedXMLWriter
     {
     	this.indexKey = key;
     	return multiFormat(strings);
+    }
+    
+    private String singleFormat(String string, String key)
+    {
+    	addIndex(string, key);
+    	return string;
     }
     
     private String multiFormat(String[] strings)
