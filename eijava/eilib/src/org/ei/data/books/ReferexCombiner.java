@@ -467,11 +467,13 @@ public class ReferexCombiner {
       boolean skip = false;
       if(sectionTitle != null)
       {
+        sectionTitle = sectionTitle.trim();
         for (int i = 0; i < badArray.length; i++) {
             String badTitle = badArray[i];
-            if (badTitle.equalsIgnoreCase(sectionTitle.trim())) {
-                log.info(" Skipping Chapter or Section Title: " + sectionTitle);
+            if (badTitle.equalsIgnoreCase(sectionTitle)) {
+                log.debug(" Skipping Chapter or Section Title: " + sectionTitle);
                 skip = true;
+                break;
             }
         }
       }
