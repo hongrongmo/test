@@ -300,11 +300,11 @@ function MM_nbGroup(event, grpName) { //v6.0
 
 <table border="0" cellpadding="0" cellspacing="0">
   <tr>
-    <td width="238"><a href="javascript:;" target="_top" onclick="MM_nbGroup('down','group1','Ask_an_Engineer','/engresources/images/ae/images/ask_engineer.gif',0);toggleDiv('one');" onmouseover="MM_nbGroup('over','Ask_an_Engineer','/engresources/images/ae/images/ask_engineer_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/ask_engineer.gif" alt="" name="Ask_an_Engineer" width="238" height="339" border="0" id="Ask_an_Engineer" onload="MM_nbGroup('init','group1','Ask_an_Engineer','/engresources/images/ae/images/ask_engineer_down.gif',0)" /></a></td>
-    <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-    <td width="238"><a href="javascript:;" target="_top" onclick="MM_nbGroup('down','group1','Ask_Product_Specialist','/engresources/images/ae/images/ask_specialist.gif',0);toggleDiv('two');" onmouseover="MM_nbGroup('over','Ask_Product_Specialist','/engresources/images/ae/images/ask_specialist_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/ask_specialist.gif" alt="" name="Ask_Product_Specialist" width="238" height="339" border="0" id="Ask_Product_Specialist" onload="MM_nbGroup('init','group1','Ask_Product_Specialist','/engresources/images/ae/images/ask_specialist_down.gif',0)" /></a></td>
-    <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
-    <td width="238"><a href="javascript:;" target="_top" onclick="MM_nbGroup('down','group1','Ask_a_Librarian','/engresources/images/ae/images/ask_librarian.gif',0);toggleDiv('three');" onmouseover="MM_nbGroup('over','Ask_a_Librarian','/engresources/images/ae/images/ask_librarian_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/ask_librarian.gif" alt="" name="Ask_a_Librarian" border="0" id="Ask_a_Librarian" onload="MM_nbGroup('init','group1','Ask_a_Librarian','/engresources/images/ae/images/ask_librarian_down.gif',0)" /></a></td>
+    <td width="238"><a href="javascript:;" target="_top" onclick="MM_nbGroup('down','group1','Ask_an_Engineer','/engresources/images/ae/ask_engineer.gif',0);toggleDiv('one');" onmouseover="MM_nbGroup('over','Ask_an_Engineer','/engresources/images/ae/ask_engineer_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/ask_engineer.gif" alt="" name="Ask_an_Engineer" width="238" height="339" border="0" id="Ask_an_Engineer" onload="MM_nbGroup('init','group1','Ask_an_Engineer','/engresources/images/ae/ask_engineer_down.gif',0)" /></a></td>
+    <td width="25"><img src="/engresources/images/ae/spacer.gif" alt="spacer" width="25" height="1" /></td>
+    <td width="238"><a href="javascript:;" target="_top" onclick="MM_nbGroup('down','group1','Ask_Product_Specialist','/engresources/images/ae/ask_specialist.gif',0);toggleDiv('two');" onmouseover="MM_nbGroup('over','Ask_Product_Specialist','/engresources/images/ae/ask_specialist_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/ask_specialist.gif" alt="" name="Ask_Product_Specialist" width="238" height="339" border="0" id="Ask_Product_Specialist" onload="MM_nbGroup('init','group1','Ask_Product_Specialist','/engresources/images/ae/ask_specialist_down.gif',0)" /></a></td>
+    <td width="25"><img src="/engresources/images/ae/spacer.gif" alt="spacer" width="25" height="1" /></td>
+    <td width="238"><a href="javascript:;" target="_top" onclick="MM_nbGroup('down','group1','Ask_a_Librarian','/engresources/images/ae/ask_librarian.gif',0);toggleDiv('three');" onmouseover="MM_nbGroup('over','Ask_a_Librarian','/engresources/images/ae/ask_librarian_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/ask_librarian.gif" alt="" name="Ask_a_Librarian" border="0" id="Ask_a_Librarian" onload="MM_nbGroup('init','group1','Ask_a_Librarian','/engresources/images/ae/ask_librarian_down.gif',0)" /></a></td>
   </tr>
 </table>
 <div id="zero" style="display: block;">
@@ -322,15 +322,15 @@ function MM_nbGroup(event, grpName) { //v6.0
 
 <table border="0" cellpadding="0" cellspacing="0">
   <tr>
-    <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer12');MM_nbGroup('down','group2','Chemical','/engresources/images/ae/images/Chemical.gif',0)" onmouseover="MM_nbGroup('over','Chemical','/engresources/images/ae/images/Chemical_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Chemical.gif" alt="Chemical" name="Chemical" width="108" height="128" border="0" id="Chemical" onload="MM_nbGroup('init','group2','Chemical','/engresources/images/ae/images/Chemical_down.gif',0)" /></a></td>
-    <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer15');MM_nbGroup('down','group2','Industrial','/engresources/images/ae/images/Idustrial.gif',0)" onmouseover="MM_nbGroup('over','Industrial','/engresources/images/ae/images/Idustrial_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Idustrial.gif" alt="industrial" name="Industrial" width="108" height="128" border="0" id="Industrial" onload="MM_nbGroup('init','group2','Industrial','/engresources/images/ae/images/Idustrial_down.gif',0)" /></a></td>
-    <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer1');MM_nbGroup('down','group2','Mechanical','/engresources/images/ae/images/Mechanical.gif',0)" onmouseover="MM_nbGroup('over','Mechanical','/engresources/images/ae/images/Mechanical_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Mechanical.gif" alt="mecanical" name="Mechanical" width="108" height="128" border="0" id="Mechanical" onload="MM_nbGroup('init','group2','Mechanical','/engresources/images/ae/images/Mechanical_down.gif',0)" /></a></td>
-    <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer8');MM_nbGroup('down','group2','Electrical','/engresources/images/ae/images/Electrical.gif',0)" onmouseover="MM_nbGroup('over','Electrical','/engresources/images/ae/images/Electrical_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Electrical.gif" alt="Electrical" name="Electrical" width="108" height="128" border="0" id="Electrical" onload="MM_nbGroup('init','group2','Electrical','/engresources/images/ae/images/Electrical_down.gif',0)" /></a></td>
-    <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer3');MM_nbGroup('down','group2','SignalProcessing','/engresources/images/ae/images/SignalProcessing.gif',0)" onmouseover="MM_nbGroup('over','SignalProcessing','/engresources/images/ae/images/SignalProcessing_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/SignalProcessing.gif" alt="signal" name="SignalProcessing" width="108" height="128" border="0" id="SignalProcessing" onload="MM_nbGroup('init','group2','SignalProcessing','/engresources/images/ae/images/SignalProcessing_down.gif',0)" /></a></td>
-    <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer2');MM_nbGroup('down','group2','Manufacturing','/engresources/images/ae/images/Manufacturing.gif',0)" onmouseover="MM_nbGroup('over','Manufacturing','/engresources/images/ae/images/Manufacturing_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Manufacturing.gif" alt="manufacturing" name="Manufacturing" width="108" height="128" border="0" id="Manufacturing" onload="MM_nbGroup('init','group2','Manufacturing','/engresources/images/ae/images/Manufacturing_down.gif',0)" /></a></td>
-    <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer10');MM_nbGroup('down','group2','Materials','/engresources/images/ae/images/Materials.gif',0)" onmouseover="MM_nbGroup('over','Materials','/engresources/images/ae/images/Materials_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Materials.gif" alt="matiterials" name="Materials" width="108" height="128" border="0" id="Materials" onload="MM_nbGroup('init','group2','Materials','/engresources/images/ae/images/Materials_down.gif',0)" /></a></td>
-    <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer9');MM_nbGroup('down','group2','Management','/engresources/images/ae/images/Management-.gif',0)" onmouseover="MM_nbGroup('over','Management','/engresources/images/ae/images/Management_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Management-.gif" alt="managment" name="Management" width="108" height="128" border="0" id="Management" onload="MM_nbGroup('init','group2','Management','/engresources/images/ae/images/Management_down.gif',0)" /></a></td>
-    <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer11');MM_nbGroup('down','group2','Computer','/engresources/images/ae/images/Computer-.gif',0)" onmouseover="MM_nbGroup('over','Computer','/engresources/images/ae/images/Computer_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/images/Computer-.gif" alt="computer" name="Computer" width="108" height="128" border="0" id="Computer" onload="MM_nbGroup('init','group2','Computer','/engresources/images/ae/images/Computer_down.gif',0)" /></a></td>
+    <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer12');MM_nbGroup('down','group2','Chemical','/engresources/images/ae/Chemical.gif',0)" onmouseover="MM_nbGroup('over','Chemical','/engresources/images/ae/Chemical_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/Chemical.gif" alt="Chemical" name="Chemical" width="108" height="128" border="0" id="Chemical" onload="MM_nbGroup('init','group2','Chemical','/engresources/images/ae/Chemical_down.gif',0)" /></a></td>
+    <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer15');MM_nbGroup('down','group2','Industrial','/engresources/images/ae/Idustrial.gif',0)" onmouseover="MM_nbGroup('over','Industrial','/engresources/images/ae/Idustrial_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/Idustrial.gif" alt="industrial" name="Industrial" width="108" height="128" border="0" id="Industrial" onload="MM_nbGroup('init','group2','Industrial','/engresources/images/ae/Idustrial_down.gif',0)" /></a></td>
+    <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer1');MM_nbGroup('down','group2','Mechanical','/engresources/images/ae/Mechanical.gif',0)" onmouseover="MM_nbGroup('over','Mechanical','/engresources/images/ae/Mechanical_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/Mechanical.gif" alt="mecanical" name="Mechanical" width="108" height="128" border="0" id="Mechanical" onload="MM_nbGroup('init','group2','Mechanical','/engresources/images/ae/Mechanical_down.gif',0)" /></a></td>
+    <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer8');MM_nbGroup('down','group2','Electrical','/engresources/images/ae/Electrical.gif',0)" onmouseover="MM_nbGroup('over','Electrical','/engresources/images/ae/Electrical_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/Electrical.gif" alt="Electrical" name="Electrical" width="108" height="128" border="0" id="Electrical" onload="MM_nbGroup('init','group2','Electrical','/engresources/images/ae/Electrical_down.gif',0)" /></a></td>
+    <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer3');MM_nbGroup('down','group2','SignalProcessing','/engresources/images/ae/SignalProcessing.gif',0)" onmouseover="MM_nbGroup('over','SignalProcessing','/engresources/images/ae/SignalProcessing_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/SignalProcessing.gif" alt="signal" name="SignalProcessing" width="108" height="128" border="0" id="SignalProcessing" onload="MM_nbGroup('init','group2','SignalProcessing','/engresources/images/ae/SignalProcessing_down.gif',0)" /></a></td>
+    <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer2');MM_nbGroup('down','group2','Manufacturing','/engresources/images/ae/Manufacturing.gif',0)" onmouseover="MM_nbGroup('over','Manufacturing','/engresources/images/ae/Manufacturing_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/Manufacturing.gif" alt="manufacturing" name="Manufacturing" width="108" height="128" border="0" id="Manufacturing" onload="MM_nbGroup('init','group2','Manufacturing','/engresources/images/ae/Manufacturing_down.gif',0)" /></a></td>
+    <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer10');MM_nbGroup('down','group2','Materials','/engresources/images/ae/Materials.gif',0)" onmouseover="MM_nbGroup('over','Materials','/engresources/images/ae/Materials_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/Materials.gif" alt="matiterials" name="Materials" width="108" height="128" border="0" id="Materials" onload="MM_nbGroup('init','group2','Materials','/engresources/images/ae/Materials_down.gif',0)" /></a></td>
+    <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer9');MM_nbGroup('down','group2','Management','/engresources/images/ae/Management-.gif',0)" onmouseover="MM_nbGroup('over','Management','/engresources/images/ae/Management_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/Management-.gif" alt="managment" name="Management" width="108" height="128" border="0" id="Management" onload="MM_nbGroup('init','group2','Management','/engresources/images/ae/Management_down.gif',0)" /></a></td>
+    <td><a href="javascript:;" target="_top" onclick="toggleDivLayers('Layer11');MM_nbGroup('down','group2','Computer','/engresources/images/ae/Computer-.gif',0)" onmouseover="MM_nbGroup('over','Computer','/engresources/images/ae/Computer_over.gif','',0)" onmouseout="MM_nbGroup('out')"><img src="/engresources/images/ae/Computer-.gif" alt="computer" name="Computer" width="108" height="128" border="0" id="Computer" onload="MM_nbGroup('init','group2','Computer','/engresources/images/ae/Computer_down.gif',0)" /></a></td>
   </tr>
 </table>
   <a id="auto_scroller" href="auto_scroller"/>
@@ -340,8 +340,8 @@ function MM_nbGroup(event, grpName) { //v6.0
 
       <table width="972" border="0" cellspacing="0" cellpadding="0">
         <tr>
-          <td width="111" height="163" align="left" valign="top"><img src="/engresources/images/ae/images/Mechanical.gif" alt="Mechanical" width="108" height="128" /></td>
-          <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="111" height="163" align="left" valign="top"><img src="/engresources/images/ae/Mechanical.gif" alt="Mechanical" width="108" height="128" /></td>
+          <td width="25"><img src="/engresources/images/ae/spacer.gif" alt="spacer" width="25" height="1" /></td>
           <td width="417" align="left" valign="top"><p align="left" class="style1"><span class="style2"><xsl:apply-templates select="GURUS/GURU[@NAME='Ryo Samuel Amano']"/></span> <br />
               Fluid and thermodynamics professor, Department of Mechanical Engineering, University of Wisconsin-Milwaukee</p>
             <p align="left" class="style1">Areas of expertise: <xsl:apply-templates select="DISCIPLINES/DISCIPLINE[@NAME='mechanical']/GURU[@NAME='Ryo Samuel Amano']/SEARCHES"/></p>
@@ -352,14 +352,14 @@ function MM_nbGroup(event, grpName) { //v6.0
             <p align="left" class="style1">Areas of expertise: <xsl:apply-templates select="DISCIPLINES/DISCIPLINE[@NAME='mechanical']/GURU[@NAME='Ronald A. Perez']/SEARCHES"/></p>
             <p align="left" class="style1">&nbsp;</p>
           </td>
-          <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="25" align="left" valign="top"><img src="/engresources/images/ae/spacer.gif" alt="spacer" width="25" height="1" /></td>
           <td width="394" align="left" valign="top"><div align="left"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span></span></div>
             <p align="left" class="style1">&ldquo;What type of steel rod/axle&nbsp;would you use for one way roller bearings.&rdquo;</p>
-            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer1','Ryo Samuel Amano');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0" /></a></p>
+            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer1','Ryo Samuel Amano');"><img src="/engresources/images/ae/email.gif" alt="email" width="124" height="14" border="0" /></a></p>
             <p class="style1">&nbsp;</p>
             <p class="style1">&nbsp;</p>
             <p align="left" class="style1">&nbsp;&ldquo;How can I calculate or at arrive the capacity of a mechanical press?&rdquo;</p>
-            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer1','Ronald A. Perez');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p>
+            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer1','Ronald A. Perez');"><img src="/engresources/images/ae/email.gif" alt="email" width="124" height="14" border="0"/></a></p>
             </td>
         </tr>
       </table>
@@ -372,8 +372,8 @@ function MM_nbGroup(event, grpName) { //v6.0
 
       <table width="972" border="0" cellspacing="0" cellpadding="0">
         <tr>
-          <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/Manufacturing.gif" alt="Manufacturing" width="108" height="128" /></td>
-          <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="111" align="left" valign="top"><img src="/engresources/images/ae/Manufacturing.gif" alt="Manufacturing" width="108" height="128" /></td>
+          <td width="25"><img src="/engresources/images/ae/spacer.gif" alt="spacer" width="25" height="1" /></td>
           <td width="417" align="left" valign="top"><p class="style1"><span class="style2"><xsl:apply-templates select="GURUS/GURU[@NAME='Robert D. Borchelt']"/></span> <br />
             Technical advisor for assembly and automation in the Corporate Operations Analysis Group, Cummins Engine Company
     </p>
@@ -382,16 +382,16 @@ function MM_nbGroup(event, grpName) { //v6.0
             <p class="style1"><span class="style2"><xsl:apply-templates select="GURUS/GURU[@NAME='Gregory A. Sedrick']"/></span> <br />
     UC Foundation assistant professor and director, Engineering Management, Industrial and Manufacturing Engineering Programs, University of Tennessee </p>
             <p class="style1">Areas of expertise: <xsl:apply-templates select="DISCIPLINES/DISCIPLINE[@NAME='manufacturing']/GURU[@NAME='Gregory A. Sedrick']/SEARCHES"/></p></td>
-          <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="25" align="left" valign="top"><img src="/engresources/images/ae/spacer.gif" alt="spacer" width="25" height="1" /></td>
           <td width="394" align="left" valign="top"><div align="left"><span class="style1"><span class="style2">Sample question:  &nbsp; &nbsp;</span></span></div>
             <p align="left" class="style1">&ldquo;How do you organize the value engineering functions in a tractor manufacturing firm?&rdquo;</p>
-            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer2','Robert D. Borchelt');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p>
+            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer2','Robert D. Borchelt');"><img src="/engresources/images/ae/email.gif" alt="email" width="124" height="14" border="0"/></a></p>
             <p class="style1">&nbsp;</p>
             <p class="style1">&nbsp;</p>
             <p class="style1">&nbsp;</p>
             <p class="style1">&nbsp;</p>
             <p class="style1">&ldquo;What&rsquo;s the best individual fabrication system for Bulk-handling machines?&rdquo;</p>
-            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer2','Gregory A. Sedrick');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p>
+            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer2','Gregory A. Sedrick');"><img src="/engresources/images/ae/email.gif" alt="email" width="124" height="14" border="0"/></a></p>
             <p align="center">&nbsp;</p></td>
         </tr>
       </table>
@@ -404,17 +404,17 @@ function MM_nbGroup(event, grpName) { //v6.0
 
       <table width="972" border="0" cellspacing="0" cellpadding="0">
         <tr>
-          <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/SignalProcessing.gif" alt="SignalProcessing" width="108" height="128" /></td>
-          <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="111" align="left" valign="top"><img src="/engresources/images/ae/SignalProcessing.gif" alt="SignalProcessing" width="108" height="128" /></td>
+          <td width="25"><img src="/engresources/images/ae/spacer.gif" alt="spacer" width="25" height="1" /></td>
           <td width="417" align="left" valign="top"><p class="style1"><span class="style2"><xsl:apply-templates select="GURUS/GURU[@NAME='Chi Hau Chen']"/></span> <br />
             Signal processing professor, Electrical and Computer Engineering, University of Massachusetts</p>
               <p class="style1">Areas of expertise: <xsl:apply-templates select="DISCIPLINES/DISCIPLINE[@NAME='signal processing']/GURU[@NAME='Chi Hau Chen']/SEARCHES"/></p></td>
-          <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="25" align="left" valign="top"><img src="/engresources/images/ae/spacer.gif" alt="spacer" width="25" height="1" /></td>
           <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample question:  &nbsp; &nbsp;</span> <br />
                 <br />
             </span>
             <p class="style1">&ldquo;Which images or signals inside the tunnel are best for object detection?&rdquo;</p>
-            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer3','Chi Hau Chen');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p></td>
+            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer3','Chi Hau Chen');"><img src="/engresources/images/ae/email.gif" alt="email" width="124" height="14" border="0"/></a></p></td>
         </tr>
       </table>
       <p><br />
@@ -427,16 +427,16 @@ function MM_nbGroup(event, grpName) { //v6.0
 
       <table width="972" border="0" cellspacing="0" cellpadding="0">
         <tr>
-          <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/Electrical.gif" alt="Electrical" width="108" height="128" /></td>
-          <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="111" align="left" valign="top"><img src="/engresources/images/ae/Electrical.gif" alt="Electrical" width="108" height="128" /></td>
+          <td width="25"><img src="/engresources/images/ae/spacer.gif" alt="spacer" width="25" height="1" /></td>
           <td width="417" align="left" valign="top"><p class="style1"><span class="style2"><xsl:apply-templates select="GURUS/GURU[@NAME='Kanti Prasad']"/></span> <br />Professor, electrical engineering, and director, Microelectronics/VLSI Technology, University of Massachusetts</p>
             <p class="style1">Areas of expertise: <xsl:apply-templates select="DISCIPLINES/DISCIPLINE[@NAME='electrical']/GURU[@NAME='Kanti Prasad']/SEARCHES"/></p></td>
-          <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="25" align="left" valign="top"><img src="/engresources/images/ae/spacer.gif" alt="spacer" width="25" height="1" /></td>
           <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample question:  &nbsp; &nbsp;</span> <br />
                 <br />
             </span>
               <p class="style1">&ldquo;How can I calibrate a current transformer?&rdquo;</p>
-            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer8','Kanti Prasad');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p></td>
+            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer8','Kanti Prasad');"><img src="/engresources/images/ae/email.gif" alt="email" width="124" height="14" border="0"/></a></p></td>
         </tr>
       </table>
       <p><br />
@@ -448,15 +448,15 @@ function MM_nbGroup(event, grpName) { //v6.0
 
       <table width="972" border="0" cellspacing="0" cellpadding="0">
         <tr>
-          <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/Management-.gif" alt="Management" width="108" height="128" /></td>
-          <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="111" align="left" valign="top"><img src="/engresources/images/ae/Management-.gif" alt="Management" width="108" height="128" /></td>
+          <td width="25"><img src="/engresources/images/ae/spacer.gif" alt="spacer" width="25" height="1" /></td>
           <td width="417" align="left" valign="top"><p class="style1"><span class="style2"><xsl:apply-templates select="GURUS/GURU[@NAME='Donald W. Merino, Jr.']"/></span> <br />
             Areas of expertise: <xsl:apply-templates select="DISCIPLINES/DISCIPLINE[@NAME='management']/GURU[@NAME='Donald W. Merino, Jr.']/SEARCHES"/></p>
           </td>
-          <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="25" align="left" valign="top"><img src="/engresources/images/ae/spacer.gif" alt="spacer" width="25" height="1" /></td>
           <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample question:  &nbsp; &nbsp;</span> <br /></span>
             <p align="left" class="style1">&ldquo;During design, how is optimization achieved and what factors are considered?&rdquo; </p>
-            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer9','Donald W. Merino, Jr.');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p>
+            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer9','Donald W. Merino, Jr.');"><img src="/engresources/images/ae/email.gif" alt="email" width="124" height="14" border="0"/></a></p>
           </td>
         </tr>
       </table>
@@ -469,22 +469,22 @@ function MM_nbGroup(event, grpName) { //v6.0
 
       <table width="972" border="0" cellspacing="0" cellpadding="0">
         <tr>
-          <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/Idustrial.gif" alt="Industrial" width="108" height="128" /></td>
-          <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="111" align="left" valign="top"><img src="/engresources/images/ae/Idustrial.gif" alt="Industrial" width="108" height="128" /></td>
+          <td width="25"><img src="/engresources/images/ae/spacer.gif" alt="spacer" width="25" height="1" /></td>
           <td width="417" align="left" valign="top"><p class="style1"><span class="style2"><xsl:apply-templates select="GURUS/GURU[@NAME='Donald W. Merino, Jr.']"/></span> <br />
             Areas of expertise: <xsl:apply-templates select="DISCIPLINES/DISCIPLINE[@NAME='industrial']/GURU[@NAME='Donald W. Merino, Jr.']/SEARCHES"/></p>
             <p class="style1">&nbsp;</p>
             <p class="style1"><span class="style2"><xsl:apply-templates select="GURUS/GURU[@NAME='Gregory A. Sedrick']"/></span> <br />
     UC Foundation assistant professor and director, Engineering Management, Industrial and Manufacturing Engineering Programs, University of Tennessee </p>
             <p class="style1">Areas of expertise: <xsl:apply-templates select="DISCIPLINES/DISCIPLINE[@NAME='industrial']/GURU[@NAME='Gregory A. Sedrick']/SEARCHES"/></p></td>
-          <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="25" align="left" valign="top"><img src="/engresources/images/ae/spacer.gif" alt="spacer" width="25" height="1" /></td>
           <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample questions:  &nbsp; &nbsp;</span> <br /></span>
             <p align="left" class="style1">&ldquo;To ensure a certain interval in a time study, how many samples should be done?&rdquo;</p>
-            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer15','Donald W. Merino, Jr.');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p>
+            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer15','Donald W. Merino, Jr.');"><img src="/engresources/images/ae/email.gif" alt="email" width="124" height="14" border="0"/></a></p>
             <p class="style1">&nbsp;</p>
             <p class="style1">&nbsp;</p>
             <p align="left" class="style1">&ldquo;How can I measure energy produced from water chilled air conditioning?&rdquo;</p>
-            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer15','Gregory A. Sedrick');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p></td>
+            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer15','Gregory A. Sedrick');"><img src="/engresources/images/ae/email.gif" alt="email" width="124" height="14" border="0"/></a></p></td>
         </tr>
       </table>
       <p><br />
@@ -497,18 +497,18 @@ function MM_nbGroup(event, grpName) { //v6.0
 
       <table width="972" border="0" cellspacing="0" cellpadding="0">
         <tr>
-          <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/Materials.gif" alt="Materials" width="108" height="128" /></td>
-          <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="111" align="left" valign="top"><img src="/engresources/images/ae/Materials.gif" alt="Materials" width="108" height="128" /></td>
+          <td width="25"><img src="/engresources/images/ae/spacer.gif" alt="spacer" width="25" height="1" /></td>
           <td width="417" align="left" valign="top"><p class="style1"><span class="style2"><xsl:apply-templates select="GURUS/GURU[@NAME='Keith Sheppard']"/></span> <br />
             Professor of Materials Science and Engineering, Stevens Institute of Technology
     </p>
             <p class="style1">Areas of expertise: <xsl:apply-templates select="DISCIPLINES/DISCIPLINE[@NAME='materials']/GURU[@NAME='Keith Sheppard']/SEARCHES"/></p></td>
-          <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="25" align="left" valign="top"><img src="/engresources/images/ae/spacer.gif" alt="spacer" width="25" height="1" /></td>
           <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample question:  &nbsp; &nbsp;</span> <br />
                 <br />
             </span>
               <p class="style1">&ldquo;Is it possible to give heat treatment to copper?&rdquo; </p>
-            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer10','Keith Sheppard ');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p></td>
+            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer10','Keith Sheppard ');"><img src="/engresources/images/ae/email.gif" alt="email" width="124" height="14" border="0"/></a></p></td>
         </tr>
       </table>
       <p><br />
@@ -522,18 +522,18 @@ function MM_nbGroup(event, grpName) { //v6.0
 
       <table width="972" border="0" cellspacing="0" cellpadding="0">
         <tr>
-          <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/Computer-.gif" alt="Computer" width="108" height="128" /></td>
-          <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="111" align="left" valign="top"><img src="/engresources/images/ae/Computer-.gif" alt="Computer" width="108" height="128" /></td>
+          <td width="25"><img src="/engresources/images/ae/spacer.gif" alt="spacer" width="25" height="1" /></td>
           <td width="417" align="left" valign="top"><p class="style1"><span class="style2"><xsl:apply-templates select="GURUS/GURU[@NAME='Earl E. Swartzlander, Jr.']"/></span> <br />
             Professor, Electrical and Computer Engineering, and Schlumberger Centennial Chair in Engineering, University of Texas
     </p>
             <p class="style1">Areas of expertise: <xsl:apply-templates select="DISCIPLINES/DISCIPLINE[@NAME='computer']/GURU[@NAME='Earl E. Swartzlander, Jr.']/SEARCHES"/></p></td>
-          <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="25" align="left" valign="top"><img src="/engresources/images/ae/spacer.gif" alt="spacer" width="25" height="1" /></td>
           <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample question:  &nbsp; &nbsp;</span> <br />
                 <br />
             </span>
               <p class="style1">&ldquo;What is a "microprogrammed control unit" and what is the difference between "horizontal" and "vertical" microcode?&rdquo;</p>
-            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer11','Earl E. Swartzlander, Jr.');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p></td>
+            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer11','Earl E. Swartzlander, Jr.');"><img src="/engresources/images/ae/email.gif" alt="email" width="124" height="14" border="0"/></a></p></td>
         </tr>
       </table>
       <p><br />
@@ -546,17 +546,17 @@ function MM_nbGroup(event, grpName) { //v6.0
 
       <table width="972" border="0" cellspacing="0" cellpadding="0">
         <tr>
-          <td width="111" align="left" valign="top"><img src="/engresources/images/ae/images/Chemical.gif" alt="Chemical" width="108" height="128" /></td>
-          <td width="25"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="111" align="left" valign="top"><img src="/engresources/images/ae/Chemical.gif" alt="Chemical" width="108" height="128" /></td>
+          <td width="25"><img src="/engresources/images/ae/spacer.gif" alt="spacer" width="25" height="1" /></td>
           <td width="417" align="left" valign="top"><p class="style1"><span class="style2"><xsl:apply-templates select="GURUS/GURU[@NAME='Alan Halecky']"/></span> <br />
      Areas of expertise: <xsl:apply-templates select="DISCIPLINES/DISCIPLINE[@NAME='chemical']/GURU[@NAME='Alan Halecky']/SEARCHES"/>
      </p></td>
-          <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+          <td width="25" align="left" valign="top"><img src="/engresources/images/ae/spacer.gif" alt="spacer" width="25" height="1" /></td>
           <td width="394" align="left" valign="top"><span class="style1"><span class="style2">Sample question:  &nbsp; &nbsp;</span> <br />
                 <br />
             </span>
               <p class="style1">&ldquo;How can wet carbon dioxide be responsible for a corrosion problem in iron-containing metals?&rdquo; </p>
-            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer12','Alan Halecky');"><img src="/engresources/images/ae/images/email.gif" alt="email" width="124" height="14" border="0"/></a></p></td>
+            <p align="center"><a href="javascript:emailGuruFormat('$SESSIONID','one','Layer12','Alan Halecky');"><img src="/engresources/images/ae/email.gif" alt="email" width="124" height="14" border="0"/></a></p></td>
         </tr>
       </table>
       <p><br />
@@ -576,8 +576,8 @@ function MM_nbGroup(event, grpName) { //v6.0
   <div align="left">
     <table width="972" border="0" cellspacing="0" cellpadding="0">
       <tr>
-        <td width="429" align="left" valign="top"><a target="_blank" href="http://www.ei.org/support/product_tours.html"><img src="/engresources/images/ae/images/New_Specialist.gif" alt="Ask a Product Specialist" width="429" height="356" border="0" id="Image1" onmouseover="pro_MM_swapImage('Image1','','/engresources/images/ae/images/New_Specialist_over.gif',0)" onmouseout="pro_MM_swapImgRestore()" /></a></td>
-        <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+        <td width="429" align="left" valign="top"><a target="_blank" href="http://www.ei.org/support/product_tours.html"><img src="/engresources/images/ae/New_Specialist.gif" alt="Ask a Product Specialist" width="429" height="356" border="0" id="Image1" onmouseover="pro_MM_swapImage('Image1','','/engresources/images/ae/New_Specialist_over.gif',0)" onmouseout="pro_MM_swapImgRestore()" /></a></td>
+        <td width="25" align="left" valign="top"><img src="/engresources/images/ae/spacer.gif" alt="spacer" width="25" height="1" /></td>
         <td width="518" align="left" valign="middle"><span class="style2">Sample questions:</span><br />
           <ol>
             <li class="style1">&ldquo;How often do patents to appear on Engineering Village after issuance?&rdquo;</li>
@@ -585,8 +585,8 @@ function MM_nbGroup(event, grpName) { //v6.0
             <li class="style1">&ldquo;How would I complete a search for business models and templates?&rdquo;</li>
             <li class="style1">&ldquo;Is it possible to get personalized trainings?&rdquo;</li>
           </ol>
-          <p align="center"><a target="_blank" href="http://www.ei.org/support/online_seminars.html"><img src="/engresources/images/ae/images/training.gif" alt="email" width="167" height="14" border="0" /></a></p>
-          <p align="center"><a href="javascript:emailFormat('$SESSIONID','two');"><img src="/engresources/images/ae/images/email_specialist.gif" alt="email_specalist" width="167" height="14" border="0"/></a></p></td>
+          <p align="center"><a target="_blank" href="http://www.ei.org/support/online_seminars.html"><img src="/engresources/images/ae/training.gif" alt="email" width="167" height="14" border="0" /></a></p>
+          <p align="center"><a href="javascript:emailFormat('$SESSIONID','two');"><img src="/engresources/images/ae/email_specialist.gif" alt="email_specalist" width="167" height="14" border="0"/></a></p></td>
       </tr>
     </table>
   </div>
@@ -669,14 +669,14 @@ function MM_nbGroup(event, grpName) { //v6.0
   <div align="left">
     <table width="972" border="0" cellspacing="0" cellpadding="0">
       <tr>
-        <td width="429" align="left" valign="top"><a target="_blank" href="http://www.ei.org/support/product_tours.html"><img src="/engresources/images/ae/images/New_Specialist.gif" alt="Ask a Librarian" width="429" height="356" border="0" id="lib_Image1" onmouseover="lib_MM_swapImage('lib_Image1','','/engresources/images/ae/images/New_Specialist_over.gif',0)" onmouseout="lib_MM_swapImgRestore()" /></a></td>
-        <td width="25" align="left" valign="top"><img src="/engresources/images/ae/images/spacer.gif" alt="spacer" width="25" height="1" /></td>
+        <td width="429" align="left" valign="top"><a target="_blank" href="http://www.ei.org/support/product_tours.html"><img src="/engresources/images/ae/New_Specialist.gif" alt="Ask a Librarian" width="429" height="356" border="0" id="lib_Image1" onmouseover="lib_MM_swapImage('lib_Image1','','/engresources/images/ae/New_Specialist_over.gif',0)" onmouseout="lib_MM_swapImgRestore()" /></a></td>
+        <td width="25" align="left" valign="top"><img src="/engresources/images/ae/spacer.gif" alt="spacer" width="25" height="1" /></td>
         <td width="518" align="left" valign="middle"><span class="style2">Sample questions:</span><br />
           <ol>
             <li class="style1">&ldquo;Can you help me find the Journal of Constructional Steel Research?&rdquo;</li>
             <li class="style1">&ldquo;I&rsquo;d like to do a detailed search on coercive force and material composition but I need assistance.&rdquo;</li>
           </ol>
-          <p align="center"><a href="javascript:emailFormat('$SESSIONID','three');"><img src="/engresources/images/ae/images/email_Librarian.gif" alt="Email a Librarian" width="124" height="14" border="0"/></a></p>
+          <p align="center"><a href="javascript:emailFormat('$SESSIONID','three');"><img src="/engresources/images/ae/email_Librarian.gif" alt="Email a Librarian" width="124" height="14" border="0"/></a></p>
         </td>
       </tr>
     </table>
