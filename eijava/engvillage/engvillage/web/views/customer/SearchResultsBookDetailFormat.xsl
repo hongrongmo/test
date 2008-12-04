@@ -399,10 +399,9 @@ pageTracker._trackPageview();
                         <tr>
                           <td><img src="/engresources/images/s.gif" border="0" width="1"/></td>
                           <td align="left">
-                              <img src="/engresources/images/cloud_icon.jpg" alt="Keyword Cloud" align="absmiddle" border="0"/>
-                              <span style="font-family:arial,verdana,geneva;  font-size: 18px; color:#000000;">Keyword Cloud</span>&#160;<a href="javascript:makeUrl('Keyword_Cloud.htm')"><img src="/engresources/images/blue_help.gif" alt="" border="0"/></a>
+                              <img src="/engresources/images/cloud_icon.jpg" alt="Keyword Cloud" align="absmiddle" border="0"/>&#160;<span style="font-family:arial,verdana,geneva;  font-size: 18px; color:#000000;">Keyword Cloud</span>&#160;&#160;<a href="javascript:makeUrl('Keyword_Cloud.htm')"><img src="/engresources/images/blue_help.gif" alt="" border="0"/></a>
                               <br/>
-                              <span class="ExSmBlackText">Most frequent key terms within this book</span>
+                              <span class="ExSmBlackText">Keywords that appear most frequently in this book</span>
                               <br/><br/>
                               <xsl:value-of disable-output-escaping="yes" select="CLOUD"/>
                           </td>
