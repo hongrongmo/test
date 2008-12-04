@@ -27,16 +27,19 @@
   font-family:arial,verdana,geneva;
 }
 
-#bookcloud { text-align: justify; width: 100%; }
-#bookCloud a {background: #FFF; text-decoration: none;}
+#bookcloud { text-align: justify; width: 100%;}
+#bookCloud a { text-decoration: none; }
 #bookCloud a:hover {background: #CCC;}
-#bookCloud a.booktag1 { font-size: 0.7em; font-weight: 100; }
-#bookCloud a.booktag2 { font-size: 0.8em; font-weight: 200; }
-#bookCloud a.booktag3 { font-size: 0.9em; font-weight: 300; }
-#bookCloud a.booktag4 { font-size: 1.0em; font-weight: 400; }
-#bookCloud a.booktag5 { font-size: 1.2em; font-weight: 500; }
-#bookCloud a.booktag6 { font-size: 1.4em; font-weight: 600; }
-#bookCloud a.booktag7 { font-size: 1.6em; font-weight: 700; }
-#bookCloud a.booktag8 { font-size: 1.8em; font-weight: 800; }
-#bookCloud a.booktag9 { font-size: 2.2em; font-weight: 900; }
-#bookCloud a.booktag10 { font-size: 2.5em; font-weight: 900; }
+#bookCloud a.booktag1 { font-size: 1.0em; font-weight: 400; }
+#bookCloud a.booktag2 { font-size: 1.4em; font-weight: 600; }
+#bookCloud a.booktag3 { font-size: 1.8em; font-weight: 800; }
+
+/* Tag Groups  */
+#bookcloud .t {background:  #eee url(/engresources/tagimages/dot.gif) 0 0 repeat-x;}
+#bookcloud .b {background: url(/engresources/tagimages/dot.gif) 0 100% repeat-x}
+#bookcloud .l {background: url(/engresources/tagimages/dot.gif) 0 0 repeat-y}
+#bookcloud .r {background: url(/engresources/tagimages/dot.gif) 100% 0 repeat-y}
+#bookcloud .blc {background: url(/engresources/images/t_blc.gif) 0 100% no-repeat; }
+#bookcloud .brc {background: url(/engresources/images/t_brc.gif) 100% 100% no-repeat;  }
+#bookcloud .tlc {background: url(/engresources/images/t_tlc.gif) 0 0 no-repeat; }
+#bookcloud .trc {background: url(/engresources/images/t_trc.gif) 100% 0 no-repeat; }
