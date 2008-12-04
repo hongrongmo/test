@@ -564,6 +564,7 @@ public class EptCombiner extends Combiner {
         System.out.println("RecsPerBatch=" + recsPerbatch);
 
         CombinedWriter writer = new CombinedXMLWriter(recsPerbatch, loadNumber, "ept");
+        writer.setOperation(operation);
         EptCombiner c = new EptCombiner(writer);
 
         // extract the whole thing
