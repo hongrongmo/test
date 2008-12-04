@@ -29,11 +29,11 @@
       </xsl:choose>
     </xsl:variable>
 
-    <HTML>
-    <HEAD>
+    <html>
+    <head>
         <title><xsl:value-of select="$SEARCH-TYPE"/> Search Book Details</title>
-        <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
-        <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/ReferexSearch_V8.js"/>
+        <script LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
+        <script LANGUAGE="Javascript" SRC="/engresources/js/ReferexSearch_V8.js"/>
 		    <link href="/engresources/stylesheets/booktoc.css" rel="stylesheet" type="text/css" />
 
         <!--  Book specific code for loading pages from TOC links (may be moved out to parent XSL) -->
@@ -48,12 +48,19 @@
               {
                 newwwin.focus();
               }
+              pageTracker._trackEvent('Books','TOC',isbn);
+              return;
+            }
+            function searchFromCloud(isbn,tag)
+            {
+              pageTracker._trackEvent('Books','Cloud',isbn + ", " + tag);
+              document.location = "/controller/servlet/Controller?CID=quickSearchCitationFormat&amp;yearselect=yearrange&amp;database=131072&amp;searchWord1={" + escape(tag) + "}&amp;searchWord2=" + isbn + "&amp;boolean1=AND&amp;section1=KY&amp;section2=BN";
               return;
             }
             // </xsl:comment>
         </script>
-    </HEAD>
-    <BODY bgcolor="#FFFFFF" topmargin="0" marginheight="0" marginwidth="0">
+    </head>
+    <body bgcolor="#FFFFFF" topmargin="0" marginheight="0" marginwidth="0">
 
       <xsl:apply-templates select="HEADER">
         <xsl:with-param name="SEARCH-TYPE" select="$SEARCH-TYPE"/>
@@ -172,8 +179,18 @@
           <xsl:with-param name="SELECTED-DB" select="DBMASK" />
         </xsl:apply-templates>
         <br/>
-    </BODY>
-    </HTML>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-6113832-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+    </body>
+    </html>
   </xsl:template>
 
   <xsl:template match="BPP" priority="1">
@@ -204,10 +221,6 @@
                     </td>
                     <td valign="top" width="100%" align="left">
                       <xsl:apply-templates select="descendant::EI-DOCUMENT"/>
-                      <div id="bookcloud">
-                      <span class="MedBlackText"><b>Keyword Cloud</b></span><br/>
-                      <xsl:value-of disable-output-escaping="yes" select="/PAGE/CLOUD"/>
-                      </div>
                       <p/>
                       <a name="TOC" CLASS="MedBlackText"><b>Table of Contents</b></a>
                       <p/>
@@ -216,6 +229,47 @@
                       </div>
                       <p/>
                       <a CLASS="SpBoldLink" href="#top">Back to Top</a>
+                    </td>
+
+                    <td valign="top">
+                      <div class="m">
+                        <img src="/engresources/images/s.gif" border="0" width="1" />
+                      </div>
+                    </td>
+                    <td valign="top" width="30%" align="left">
+                      <xsl:if test="//GLOBAL-LINKS/TAGGROUPS">
+                        <xsl:apply-templates select="/PAGE/TAG-BUBBLE"/>
+                      </xsl:if>
+
+                      <p/>
+                      <div id="bookcloud">
+                        <div class="t" style="width:215px;">
+                        <div class="b">
+                        <div class="l">
+                        <div class="r">
+                        <div class="blc">
+                        <div class="brc">
+                        <div class="tlc">
+                        <div class="trc">
+                          <table border="0" style="margin:0px; padding:0px; width:100%">
+                            <tr><td colspan="3"><img src="/engresources/images/s.gif" height="4"/></td></tr>
+                            <tr>
+                              <td><img src="/engresources/images/s.gif" border="0" width="1"/></td>
+                              <td align="left">
+                                  <img src="/engresources/images/cloud_icon.jpg" alt="Keyword Cloud" align="absmiddle" border="0"/>
+                                  <span style="font-family:arial,verdana,geneva;  font-size: 18px; color:#000000;">Keyword Cloud</span>&#160;<a href="javascript:makeUrl('Keyword_Cloud.htm')"><img src="/engresources/images/blue_help.gif" alt="" border="0"/></a>
+                                  <br/>
+                                  <span class="ExSmBlackText">Most frequent key terms within this book</span>
+                                  <br/><br/>
+                                  <xsl:value-of disable-output-escaping="yes" select="/PAGE/CLOUD"/>
+                              </td>
+                              <td><img src="/engresources/images/s.gif" border="0" width="1"/></td>
+                            </tr>
+                            <tr><td colspan="3"><img src="/engresources/images/s.gif" height="4"/></td></tr>
+                          </table>
+                        </div></div></div></div></div></div></div></div>
+                      </div>
+
                     </td>
                   </tr>
                 </table>
