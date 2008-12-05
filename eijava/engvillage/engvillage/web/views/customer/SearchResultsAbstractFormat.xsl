@@ -53,7 +53,7 @@
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js" />
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/lindaHall.js" />
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Autocomplete.js"/>
-				<link href="/engresources/stylesheets/booktoc.css" rel="stylesheet" type="text/css" />
+				<link href="/engresources/stylesheets/booktoc_v92.css" rel="stylesheet" type="text/css" />
 
   <script language="javascript">
     <xsl:comment>
