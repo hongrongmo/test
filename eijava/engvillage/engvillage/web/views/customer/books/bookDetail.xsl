@@ -34,7 +34,7 @@
         <title><xsl:value-of select="$SEARCH-TYPE"/> Search Book Details</title>
         <script LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
         <script LANGUAGE="Javascript" SRC="/engresources/js/ReferexSearch_V8.js"/>
-		    <link href="/engresources/stylesheets/booktoc.css" rel="stylesheet" type="text/css" />
+		    <link href="/engresources/stylesheets/booktoc_v92.css" rel="stylesheet" type="text/css" />
 
         <!--  Book specific code for loading pages from TOC links (may be moved out to parent XSL) -->
         <script language="JavaScript">
