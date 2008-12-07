@@ -29,6 +29,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.ei.books.collections.ReferexCollection;
 import org.ei.data.CombinedWriter;
+import org.ei.data.CombinedXMLWriter;
 
 import org.ei.data.EVCombinedRec;
 import org.ei.data.AuthorStream;
@@ -40,13 +41,16 @@ import org.ei.xml.Entity;
 
 public class ReferexCombiner {
     private static Log log = LogFactory.getLog(ReferexCombiner.class);
-
-    private final static String jdbcUrl = "jdbc:oracle:thin:AP_PRO1/ei3it@neptune.elsevier.com:1521:EI";
-
-    private final static String driverClassName = "oracle.jdbc.driver.OracleDriver";
+    
+    private String connectionURL = "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI";
+    private String username = "AP_PRO1";
+    private String password = "ei3it";
+    private String driverClassName = "oracle.jdbc.driver.OracleDriver";
 
     private DataSource localDataSource = null;
     private List isbnList = new ArrayList();
+    private static String tablename;
+    private static String environment = "prod";
 
     static {
         // make sure we use the xerces parser for Vaildation
@@ -65,46 +69,121 @@ public class ReferexCombiner {
     }
 
     public void runExtracts(String[] args) {
-
-        if((args.length == 1) && (args[0].length() == 13) && (args[0].startsWith("978")))
-        {
-          log.info("ISBN on Command line: " + args[0]);
-          isbnList.add(args[0]);
-        }
-        else
-        {
-          try {
-            BufferedReader rdr = new BufferedReader(new FileReader("isbnList.txt"));
-            while (rdr.ready()) {
-              String aline = rdr.readLine();
-              isbnList.add(aline);
-            }
-            rdr.close();
-            log.info("Processing only ISBNs found in isbnList.txt file.");
-          }
-          catch(IOException ioe) {
-            log.info("Processing all ISBNs from BOOKS table.");
-          }
-        }
-
-        CombinedWriter writer = null;
-        try {
-            createDataSource();
-            List extracts = new ArrayList();
-            extracts.add(new BookRecord());
-            extracts.add(new PageRecord());
-            writer = new ReferexCombinedXMLWriter(10000, 1, "pag");
-            Iterator itr = extracts.iterator();
-            while (itr.hasNext()) {
-                writeRecords((Extractable) itr.next(), writer);
-            }
-        } catch (Exception e) {
-            log.error("exception:", e);
+    	
+    	int recsPerbatch = 10000;
+    	int index = 1;
+    	try
+    	{
+    		createDataSource();
+	        if((args.length == 1) && (args[0].length() == 13) && (args[0].startsWith("978")))
+	        {
+	          log.info("ISBN on Command line: " + args[0]);
+	          isbnList.add(args[0]);
+	          callCombinedXMLWriter(recsPerbatch, index);
+	        }
+	        else if(args.length == 9)
+	        {
+	        	
+	        	Connection conn = null;
+	            Statement stmt = null;
+	            ResultSet rs = null;
+	            try
+	            {
+		            int loadNumber = 0;
+		            this.connectionURL = args[0];
+		            this.driverClassName = args[1];
+		            this.username = args[2];
+		            this.password = args[3];
+		            recsPerbatch = Integer.parseInt(args[5]);
+		            String operation = args[6];
+		            this.tablename = args[7];
+		            String environment = args[8].toLowerCase();		            
+		            conn = getDataSourceConnection();
+		            stmt = conn.createStatement();
+		            	            
+		            for(int yearIndex = 1987; yearIndex <= 2008; yearIndex++)
+		            {
+		            	isbnList.clear();
+		            	index = yearIndex; 
+		            	log.info("Processing year " + index + "...");		            	
+		            	String yearQuery = "SELECT BN13 FROM PAGES_ALL where PAGE_NUM = 0 and yr = " + index;
+			            rs = stmt.executeQuery(yearQuery);	            
+			            while (rs.next()) {
+			            	if(rs.getString("BN13") != null)
+			            		isbnList.add(rs.getString("BN13"));
+			            }	            		            	
+		            	callCombinedXMLWriter(recsPerbatch, index);
+		            }
+	            }            
+	            catch (SQLException e) {
+	                // TODO Auto-generated catch block
+	                log.error("Error:", e);
+	            } catch (Exception e) {
+	                // TODO Auto-generated catch block
+	                log.error("Error:", e);
+	            } finally {	            	
+	                try {
+	                    if (rs != null) {
+	                        rs.close();
+	                    }
+	                    if (stmt != null) {
+	                        stmt.close();
+	                    }
+	                    if (conn != null) {
+	                        conn.close();
+	                    }
+	                } catch (SQLException e) {
+	                    log.error("Error: finally ", e);
+	                } catch (Exception e) {
+	                    log.error("General Error: finally ", e);
+	                }
+	            }        	
+	        }
+	        else
+	        {
+	          try {
+	            BufferedReader rdr = new BufferedReader(new FileReader("isbnList.txt"));
+	            while (rdr.ready()) {
+	              String aline = rdr.readLine();
+	              isbnList.add(aline);
+	            }
+	            rdr.close();
+	            log.info("Processing only ISBNs found in isbnList.txt file.");
+	            callCombinedXMLWriter(recsPerbatch, index);
+	          }
+	          catch(IOException ioe) {
+	            log.info("Processing all ISBNs from BOOKS table.");
+	          }
+	        }
+    	}
+    	catch (Exception e) {
+            // TODO Auto-generated catch block
+            log.error("Error:", e);
         } finally {
-            releaseDataSource();
-        }
+        	releaseDataSource();
+        }       
     }
+    
+    
+    public void callCombinedXMLWriter(int recsPerbatch, int index){
 
+         try {            
+        	 CombinedWriter writer = new CombinedXMLWriter(recsPerbatch, index,"pag", environment);
+             List extracts = new ArrayList();
+             extracts.add(new BookRecord());
+             extracts.add(new PageRecord());             
+             Iterator itr = extracts.iterator();
+                         
+             while (itr.hasNext()) {
+                 writeRecords((Extractable) itr.next(), writer);
+             }
+             writer.end();
+             writer.flush();
+         } catch (Exception e) {
+             log.error("exception:", e);
+         } 
+    }
+    
     public DataSource getDataSource() {
         return localDataSource;
     }
@@ -118,7 +197,7 @@ public class ReferexCombiner {
 
     public void createDataSource() {
         try {
-            Class.forName(ReferexCombiner.driverClassName);
+            Class.forName(this.driverClassName);
         } catch (ClassNotFoundException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -136,7 +215,7 @@ public class ReferexCombiner {
         DataSource ds = null;
         Connection conn = null;
         try {
-            conn = DriverManager.getConnection(ReferexCombiner.jdbcUrl);
+            conn = DriverManager.getConnection(this.connectionURL, this.username, this.password);
 
             // if(getDataSource() != null) {
             // conn = ds.getConnection();
@@ -164,37 +243,22 @@ public class ReferexCombiner {
 
             String isbnString = null;
             if(!isbnList.isEmpty()) {
+              
               Iterator iItr = isbnList.iterator();
-              while(iItr.hasNext()) {
-                String nextIsbn = "'" + (String) iItr.next() + "'";
-                if(isbnString != null) {
-                  isbnString = isbnString + nextIsbn;
-                }
-                else {
-                  isbnString = nextIsbn;
-                }
-                if(iItr.hasNext()) {
-                  isbnString = isbnString.concat(",");
-                }
+              while(iItr.hasNext()) {                            	              	 
+            	String bookQuery = ext.getQuery();
+            	String isbn = (String) iItr.next();
+            	String nextIsbn = "'" + isbn + "'";            	
+            	bookQuery = bookQuery + " AND BN13 = "+ nextIsbn;
+            	rs = stmt.executeQuery(bookQuery);
+            	while (rs.next()) {
+                    EVCombinedRec rec = ext.populate(rs);
+                    if (rec != null) {
+                        writer.writeRec(rec, isbn);
+                    }
+                }                                
               }
-            }
-            String bookQuery = ext.getQuery();
-            if(isbnString != null)
-            {
-              bookQuery = bookQuery + " AND BN13 IN ("+ isbnString + ")";
-            }
-            log.info("Running the query...");
-            log.info(bookQuery);
-            rs = stmt.executeQuery(bookQuery);
-            log.info("Got records ...");
-            writer.begin();
-            while (rs.next()) {
-                EVCombinedRec rec = ext.populate(rs);
-                if (rec != null) {
-                    writer.writeRec(rec);
-                }
-            }
-            writer.end();
+            }                                                           
             log.info("Wrote records.");
 
         } catch (SQLException e) {
@@ -461,6 +525,7 @@ public class ReferexCombiner {
             "copyright", "title page", "half title page", "back cover", "front cover",
             "table of contents", "limited disclaimer and warranty", "subject index",
             "front matter", "frontmatter", "cover", "backmatter", "back matter" };
+    
 
     public static boolean skipPage(String sectionTitle)
     {
@@ -492,6 +557,7 @@ public class ReferexCombiner {
         public EVCombinedRec populate(ResultSet rs) throws Exception {
             EVCombinedRec rec = new EVCombinedRec();
             try {
+            	
                 // check if we should bail out first to save time
                 String pageChapterTitle = replaceNull(rs.getString("CHAPTER_TITLE"));
                 String pageSectionTitle = replaceNull(rs.getString("SECTION_TITLE"));
@@ -508,8 +574,11 @@ public class ReferexCombiner {
                 String sIsbn13 = replaceNull(rs.getString("BN13"));
 
                 // get page specific fields
-                String pageText = getStringFromClob(rs.getClob("PAGE_TXT"));
+                String pageText = getStringFromClob(rs.getClob("PAGE_TXT"));                
                 String pageNum = rs.getString("PAGE_NUM");
+
+         
+
                 String pageChapterStartPage = rs.getString("CHAPTER_START");
                 String freeLang = rs.getString("PAGE_KEYWORDS");
 
