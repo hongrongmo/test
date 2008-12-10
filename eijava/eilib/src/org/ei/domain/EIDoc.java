@@ -324,6 +324,13 @@ public class EIDoc implements Highlightable, XMLSerializable, LocalHoldingLinker
                 String[] edata = stitle.getElementData();
                 value = edata[0];
             }
+            // JAM - 12/2008 "Reindeer Games" release
+            // put in Conference title if Serial title is not present
+            else if (mapDocument.containsKey(Keys.CONFERENCE_NAME)) {
+                ElementData ctitle = (ElementData) mapDocument.get(Keys.CONFERENCE_NAME);
+                String[] edata = ctitle.getElementData();
+                value = edata[0];
+            }
         }
         else if (field.equals(LocalHoldingLinker.STITLE)) {
             if (mapDocument.containsKey(Keys.ABBRV_SERIAL_TITLE)) {
@@ -345,11 +352,9 @@ public class EIDoc implements Highlightable, XMLSerializable, LocalHoldingLinker
             }
         }
         else if (field.equals(LocalHoldingLinker.CTITLE)) {
-            if (mapDocument.containsKey(Keys.CONFERENCE_NAME)) {
-                ElementData ctitle = (ElementData) mapDocument.get(Keys.CONFERENCE_NAME);
-                String[] edata = ctitle.getElementData();
-                value = edata[0];
-            }
+          // JAM - 12/2008 "Reindeer Games" release
+          // do nothing - there is no mapping for this field
+          // see LocalHoldingLinker.TITLE above
         }
         else if (field.equals(LocalHoldingLinker.VOLUME)) {
             value = getVolumeNo();
