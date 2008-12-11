@@ -288,7 +288,7 @@
                         </tr>
                         <tr><td valign="top" align="right">&nbsp;</td><td valign="top" width="6">
                           <img src="/engresources/images/s.gif" border="0" width="6"/></td><td valign="top">
-                          <input type="checkbox" name="share_question" id="share_checkbox" checked="checked" size="25"/><A CLASS="MedBlackText"><label for="share_checkbox">Anonymously share this question and response with other Engineering Village users</label>
+                          <input type="checkbox" name="share_question" id="share_checkbox" checked="checked" size="25"/><A CLASS="MedBlackText"><label for="share_checkbox">Anonymously share this question and response with others on Ei.org</label>
                           </A>
                           </td>
                         </tr>
