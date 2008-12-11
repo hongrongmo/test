@@ -596,64 +596,80 @@ function MM_nbGroup(event, grpName) { //v6.0
     <ol class="styleunderlined">
       <li class="styleunderlined"><a href="#1">When is full text available?</a></li>
       <li class="styleunderlined"><a href="#2">How can I obtain a full text document is it is not available to me?</a></li>
-      <li class="styleunderlined"><a href="#3">Which groups of results data (&quot;facets&quot;) are available to me?</a></li>
-      <li class="styleunderlined"><a href="#4">How can I use the grouped result data (&quot;facets&quot;)&nbsp;when viewing my search results?</a></li>
-      <li class="styleunderlined"><a href="#5">Why would I export the grouped result data (&quot;facets&quot;) into a chart and/or spreadsheet?</a></li>
-      <li class="styleunderlined"><a href="#6">How often is content updated on EV?</a></li>
+      <li class="styleunderlined"><a href="#3">What are &ldquo;facets&rdquo; and how do they help my search?</a></li>
+      <li class="styleunderlined"><a href="#4">Which groups of results data (&ldquo;facets&rdquo;) are available to me?</a></li>
+      <li class="styleunderlined"><a href="#5">Why would I export the grouped result data (&ldquo;facets&rdquo;) into a chart and/or spreadsheet?</a></li>
+      <li class="styleunderlined"><a href="#6">How often is content updated on Engineering Village?</a></li>
       <li class="styleunderlined"><a href="#7">How can I manage my results and save my searches?</a></li>
       <li class="styleunderlined"><a href="#8">What is the benefit of email alerts and RSS</a></li>
       <li class="styleunderlined"><a href="#9">Why would I blog a record?</a></li>
-      <li class="styleunderlined"><a href="#10">What are tags and how can&nbsp;I use them?</a></li>
-      <li class="styleunderlined"><a href="#11">What does it mean to &quot;Browse Indexes&quot;?</a></li>
+      <li class="styleunderlined"><a href="#10">What are tags and how can I use them?</a></li>
+      <li class="styleunderlined"><a href="#11">What does it mean to &ldquo;Browse Indexes&rdquo;?</a></li>
       <li class="styleunderlined"><a href="#12">How can the thesaurus help me when searching for content?</a></li>
     </ol>
   </div>
   <p align="left" class="style5">1. When is full text available?<a name="1" id="1"></a></p>
-  <p align="left" class="style1">Compendex is an A&amp;I database, or abstracts and index. What this means is that your results will all be in citation, and you can choose to look at either the abstract or detailed record format. You can look at the full text when available. What this means is that your institution subscribes to many journals and conferences, so for those journals and conferences, you would have an additional link in Engineering Village to full text, which would open up that particular article or proceeding for you.&nbsp;</p>
-<a class="style1" href="#faq">back</a>
+  <p align="left" class="style1">Availability of full-text varies depending on which databases you search, the content to which your company or institution subscribes, and what is available for free on the web.<br />
+  Abstract and Index (A&amp;I) databases such as Compendex, Inspec, GeoBase, and others consist of abstract records, not full-text articles. Full-text links on Engineering Village bring you from bibliographic information in A&amp;I databases to publishers&rsquo; sites where, if the article is available for free or if you have subscription access to a particular journal through your library, you will automatically get the full-text. If you do not have access, the links will take you to the publishers&rsquo; site where you can purchase that article. Records in Engineering Village may not include a full-text link if the article is available only in print, if the publisher has provided inconsistent metadata, or if the publisher does not submit their publications to the <a target="_blank" href="http://www.crossref.org">CrossRef</a> linking system.<br />
+  In addition, Engineering Village is compatible with all major link resolvers, including SFX, which help customers manage entitlement and appropriate copies. This ensures that users are directed to the version of the article they have access to through their libraries or institutions.<br />
+  Full-text is included for all electronic books in the Referex database, as well as for patent documents in the Ei Patents database.</p>
+  <a class="style1" href="#faq">back</a>
+
   <p align="left" class="style5">2. How can I obtain a full text document is it is not available to me?<a name="2" id="2"></a></p>
-  <p align="left" class="style1">If you would like to access the full text for a record your institution does not access, you can choose to go through a document delivery service. Linda Hall Library is a good one: <a href="http://www.lindahall.org/services/document_delivery/partners/eicompendex.shtml">http://www.lindahall.org/services/document_delivery/partners/eicompendex.shtml</a>. It is quite inexpensive and they are very good at getting you the documents very quickly. You may also contact your librarian about purchasing the article for you, through Linda Hall or another service.</p>
-  <p align="left" class="style1">You may be able to get more information on a publisher&rsquo;s site or possibly purchase the article there as well.</p>
-<a class="style1" href="#faq">back</a>
-  <p align="left" class="style5">3. Which groups of results data (&quot;facets&quot;) are available to me?<a name="3" id="3"></a></p>
-  <p align="left" class="style1">You will see the &ldquo;facets&rdquo; that are available for the database(s) you are searching.&nbsp; Searching multiple databases at a time will change the facts available to you.&nbsp; You will only see the facets that those databases share in common.&nbsp; The Year and Add a Term facets will always appear.</p>
-<a class="style1" href="#faq">back</a>
-  <p align="left" class="style4">4. How can I use the grouped result data (&quot;facets&quot;)&nbsp;when viewing my search results?<a name="4" id="4"></a></p>
-  <p align="left" class="style1">After performing an initial search, a list of facets will appear on the right side of the search results screen. <br />
-  These facets categories include and are not limited to: Databases, Author, Controlled vocabulary, Classification code, Document type, Language, Year, and Publisher. Under each facet, a list of the most recurring terms in that category will appear in descending order.&nbsp; Each facet displays the first 10 items that are relevant for your search. Click on more to find further information within each facet. <br />
-  When you check one or more boxes under any of the facets and click 'include', the terms that you selected will be added to your initial search terms, therefore refining the results set. This is similar to doing an AND search with these terms.&nbsp; A number of search terms can be added to the same search, i.e. combining author, year and publication or any other combination which is most appropriate to the search.&nbsp; The &ldquo;Add a Term&rdquo; option allows you to add your own terms for search refinement and can be combined with other terms in the faceted list.</p>
-<a class="style1" href="#faq">back</a>
-  <p align="left" class="style5">5. Why would I export the grouped result data (&quot;facets&quot;) into a chart and/or spreadsheet?<a name="5" id="5"></a></p>
-  <p align="left" class="style1">The graph and export icons appear next to each facet in the Refine Results section of the search results screen. They are functional elements which allow you to view your faceted results as a bar graph or download a text file that can be exported to other software. <br />
-  The Export icon &nbsp;lets you save or open the terms and records counts as a tab file which can be opened with any software. All the terms in a facet are exported at once regardless of the view. &nbsp;When you click on the icon, a download window will appear. Save or open the tab file. You can select in which software you would like the file to open. <br />
-  Clicking on the bar graph sign Image &nbsp;will open a new window where an image of the top 10 results in the facet will appear. The bar graph will show the current results in the facet. &nbsp;For example, when you click on 'more', adding 10 more terms are added to the facet, the graph will show the terms that appear on the list that you are viewing. You can save, print or email this image using the windows images utility functions.</p>
-<a class="style1" href="#faq">back</a>
-  <p align="left" class="style5">6. How often is content updated on EV?<a name="6" id="6"></a></p>
-  <p align="left" class="style1">All of the bibliographic, patent, and news databases are updated with new content weekly.&nbsp; New Referex eBook titles are added annually.</p>
-<a class="style1" href="#faq">back</a>
+  <p align="left" class="style1">Full-text links in Engineering Village will take you to the publishers&rsquo; site where you can purchase that article if you do not have access to it through a library subscription.<br />
+  Records in Engineering Village may not include a full-text link if the article is available only in print, if the publisher has provided inconsistent metadata, or if the publisher does not submit their publications to the CrossRef linking system. In this case, you can search for the full-text in your library&rsquo;s print holdings, purchase full-text through a document delivery service such as the Linda Hall Library, or ask your librarian about purchasing the full-text or procuring through an inter-library loan.</p>
+  <a class="style1" href="#faq">back</a>
+
+  <p align="left" class="style5">3. What are &ldquo;facets&rdquo; and how do they help my search?<a name="3" id="3"></a></p>
+  <p align="left" class="style1">&ldquo;Facets&rdquo; appear in the Refine Results box on the right side of the search results screen.<br />
+  Facets represent commonly occurring results data grouped by field. Under each facet is a list of the terms which appear most often in that set of results, along with a record count showing the number of records containing that term. Each facet displays the first 10 items that are relevant for your search, but you can click on &ldquo;more&#0133;&rdquo; to show additional terms.<br />
+  To refine or alter your original search: Select one or more search terms and click on &ldquo;include&rdquo; or &ldquo;exclude.&rdquo; Including terms is similar to adding an AND term to your original search, so will limit results to only those containing that term. Excluding terms is similar to adding a NOT to your search terms, so it will exclude any records containing that term. The &ldquo;Add a Term&rdquo; option allows you to enter your own terms for search refinement and can be combined with other terms in the faceted list.</p>
+  <a class="style1" href="#faq">back</a>
+
+  <p align="left" class="style5">4. Which groups of results data (&ldquo;facets&rdquo;) are available to me?<a name="4" id="4"></a></p>
+  <p align="left" class="style1">You will see the &ldquo;facets&rdquo; (grouped results data from index fields such as author, publication, year, controlled vocabulary) common to all databases you&rsquo;re searching.  Searching multiple databases at the same time results in only the facets that those databases share being displayed.  The Year and Add a Term facets will always appear.</p>
+  <a class="style1" href="#faq">back</a>
+
+  <p align="left" class="style5">5. Why would I export the grouped result data (&ldquo;facets&rdquo;) into a chart and/or spreadsheet?<a name="5" id="5"></a></p>
+  <p align="left" class="style1">Bar Graph and Export icons appear next to each facet in the Refine Results section of the search results screen.  The Bar Chart can be helpful as it shows a visual representation of the faceted terms and their distribution.  Exporting the faceted data gives you a record of the data for analysis and provides an overview of results from which you can build on your search. Having access to the raw data also gives you the freedom to graph it, report on it, or reference it in whatever way you need.<br />
+  Click on the Export icon to save or open the terms and record counts in that facet as a tab file, which allows you to select the software you would like to use to open the file (e.g. Excel). All the terms in a facet are exported, even when only the top 10 are displayed on Engineering Village.<br />
+  Click on the bar graph icon to open a graph of the terms and record counts in a new window. The bar graph will show only the terms being viewed in Engineering Village at that time. For example, by default it will graph the top 10 terms but if you click on &ldquo;more&#0133;&rdquo; to show additional terms, all of those terms displayed will be included on the graph as well. You can then save, print, or email this image.</p>
+  <a class="style1" href="#faq">back</a>
+
+  <p align="left" class="style5">6. How often is content updated on Engineering Village?<a name="6" id="6"></a></p>
+  <p align="left" class="style1">All of the A&amp;I and patent databases are updated weekly.  New eBook titles are added to the Referex database annually.</p>
+  <a class="style1" href="#faq">back</a>
+
   <p align="left" class="style5">7. How can I manage my results and save my searches?<a name="7" id="7"></a></p>
-  <p align="left" class="style1">Managing your results is easy.&nbsp; Once you have refined your results, you can use the Results Manager to select records, and then view, email, print, download or save the selected records.&nbsp; <br />
-  On the Search Results page, there is also a Save Search link, which can be found next to the record count.&nbsp; Simply clicking this link will allow you to save your searched to your Profile.&nbsp; <br />
-    In order to save your searches or download specific records to a folder, you must create a personal account.</p>
-<a class="style1" href="#faq">back</a>
+  <p align="left" class="style1">Managing your results is easy.  From the search results screen, you can select records to view, email, print, download, or save using the &ldquo;Results Manager&rdquo; box at the top of the screen. You can also save searches to rerun later simply by clicking the &ldquo;Save Search&rdquo; link directly above the list of results.<br />
+  In order to save your searches or download specific records to a folder, you must create a personal account. You will be prompted to set up an account automatically when you attempt to use one of these features.</p>
+  <a class="style1" href="#faq">back</a>
+
   <p align="left" class="style5">8. What is the benefit of email alerts and RSS?<a name="8" id="8"></a></p>
-  <p align="left" class="style1">Email alerts and RSS feeds will keep you up to date with recently added content.&nbsp; These features will allow you to get automatic weekly updates of your search queries' results either emailed directly to your inbox via email alerts or straight to your RSS reader.</p>
-<a class="style1" href="#faq">back</a>
+  <p align="left" class="style1">Weekly alerts of new records that fit your search criteria keep you up to date with recently added content, without having to rerun the same searches over and over again.  Engineering Village gives you automatic weekly updates of your search queries&rsquo; results in whichever format you prefer: emailed directly to your inbox via email alerts or delivered straight to your RSS reader.<br />
+  In order to set up email or RSS alerts, you must create a personal account. You will be prompted to set up an account automatically when you attempt to use one of these features.</p>
+  <a class="style1" href="#faq">back</a>
+
   <p align="left" class="style5">9. Why would I blog a record?<a name="9" id="9"></a></p>
-  <p align="left" class="style1">The Blog This feature on Engineering Village allows you to Link from a blog to a record of interest on Engineering Village.&nbsp; This can create current awareness by highlighting new publications in a popular subject area.&nbsp; You can also create a forum from which to collaborate with colleagues in your area of research.&nbsp; In addition, the Blog This feature allows you the option of sharing information with an audience outside of your organization.&nbsp; <br />
-&nbsp;In order to use this feature you would simply click the &quot;Blog This&quot; button in an abstract or detailed record.&nbsp; Select the content that is showing in the box and paste it in your blog post.&nbsp; Once you publish your post the title of the record will appear in your blog.</p>
-<a class="style1" href="#faq">back</a>
-  <p align="left" class="style5">10. What are tags and how can&nbsp;I use them?<a name="10" id="10"></a></p>
-  <p align="left" class="style1">Tagging is a user-defined taxonomy. Such taxonomy is sometimes called a folksonomy and the bookmarks are referred to as tags. <br />
-  With Engineering Village tagging you can add, edit and share tags you assigned to records.&nbsp; You can also search other users&rsquo; tags to gain new perspectives or organize your records of interest for yourself and groups. <br />
-    You can create groups by inviting people with the same research interest as you to join a group with which you can share tagged records and view records shared by the group. </p>
-<a class="style1" href="#faq">back</a>
+  <p align="left" class="style1">The &ldquo;Blog This&rdquo; feature allows you to link from your blog to a record of interest on Engineering Village.   Anyone can view a record following the Blog This link even if they do not subscribe to Engineering Village, so you can share information with an audience outside of your organization. This can help you communicate with your blog readers and allows you to create a forum from which to collaborate with colleagues in your area of research.<br />
+  To use this feature simply click the &ldquo;Blog This&rdquo; button in an abstract or detailed record view.  Select and copy the code that appears in the box and paste it in your blog post.  Once you publish your post the title of the record will appear in your blog.</p>
+  <a class="style1" href="#faq">back</a>
+
+  <p align="left" class="style5">10. What are tags and how can I use them?<a name="10" id="10"></a></p>
+  <p align="left" class="style1">Tags are keywords applied to a record by an Engineering Village user. This allows you to assign meaningful terms either for your own reference and organization or to share with a group, your institution, or the entire Engineering Village community.  You can also search other users&rsquo; tags to gain new perspectives. <br />
+  Engineering Village also lets you tag records externally to del.icio.us or 2collab. 2collab is an online community specifically designed for scientific researchers where you can tag and share records across Elsevier products, including Engineering Village, Scopus, and ScienceDirect. </p>
+  <a class="style1" href="#faq">back</a>
+
   <p align="left" class="style5">11. What does it mean to &quot;Browse Indexes&quot;?<a name="11" id="11"></a></p>
-  <p align="left" class="style1">From the Browse Indexes box (located on the right side of Quick and Expert Search), select the index you wish to use by clicking on the link.&nbsp; Once the index is loaded, you can navigate by either selecting the first letter(s) of the term you wish to search for or by typing in the first few letters of the term in the SEARCH FOR box and clicking on &quot;Find.&quot;&nbsp; You can browse the indexes to search for precise terms or look for variations of a term (i.e. spelling or abbreviations). &nbsp;</p>
-<a class="style1" href="#faq">back</a>
+  <p align="left" class="style1">Indexing is the process by which bibliographic information and thesaurus terms, or controlled vocabulary, are selected to describe the content of an article. On Engineering Village, indexing determines articles&rsquo; relevance to a search query and links related articles together. The index comprises several fields that vary by database (e.g. author, author affiliation, controlled terms, etc.).<br />
+  Browse indexes to find the precise term you need, or to ensure all variations of a term (i.e. spelling or abbreviations) are included in the search so nothing is missed. <br />
+  From the Quick and Expert Search screens on Engineering Village you can select the index you wish to search in the &ldquo;Browse Indexes&rdquo; box. The index will appear in a new window, and you can either browse index terms alphabetically or search for a term by typing the first few letters in the SEARCH FOR box and clicking on &ldquo;Find&rdquo;.  Selecting terms from the index will automatically add them to your search.</p>
+  <a class="style1" href="#faq">back</a>
+
   <p align="left" class="style5">12. How can the thesaurus help me when searching for content?<a name="12" id="12"></a></p>
-  <p align="left" class="style1">The thesauri are guides to the controlled vocabulary used in indexing articles for Compendex and Inspec. &nbsp;Terms from the controlled vocabulary are assigned to each record to describe the article they are indexing. The controlled vocabulary is used to standardize the way the articles are indexed. The thesauri are hierarchical in nature. Terms are organized by broader, narrower or related concepts.&nbsp; You can use the thesauri to either expend your search or refine your search by finding broader, narrower or related terms to search on your subject area.</p>
-<a class="style1" href="#faq">back</a>
+  <p align="left" class="style1">Thesauri are guides to the controlled vocabulary used to index articles for Engineering Village.   Thesauri are hierarchical in nature, organizing terms by broader, narrower, or related concepts.  <br />
+  The &ldquo;Thesaurus Search&rdquo; tab on Engineering Village lets you search or browse the thesaurus for additional related terms. From here, you can expand or refine your search by selecting broader, narrower, or related terms to include. This offers insight into additional topics or terms that were not initially included, ensuring that nothing is missed and that search results provide precisely the information you need.</p>
+  <a class="style1" href="#faq">back</a>
   <p align="left">&nbsp;</p>
 </div>
 
