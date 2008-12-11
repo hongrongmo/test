@@ -44,6 +44,8 @@
     String userId = null;
     SessionID sessionIdObj = null;
 
+    boolean share = true;
+
     // This variable is used to hold ControllerClient instance
     ControllerClient client = new ControllerClient(request, response);
 
@@ -112,7 +114,11 @@
         out.write("<DISCIPLINEID>"+disciplineid+"</DISCIPLINEID>");
         out.write("<GURU>"+guru+"</GURU>");
       }
-      out.write("</PAGE>");
+      if(clientCustomizer.getRefEmail() != null && clientCustomizer.getRefEmail().length()>0)
+      {
+        share = false;
+      }
+      out.write("<SHARE>"+String.valueOf(share)+"</SHARE>");
     }
     else if(action.equalsIgnoreCase("send"))
     {
@@ -221,15 +227,13 @@
       email.sendMessage(eimessage);
 
       out.write("<ACTION>confirm</ACTION>");
-      out.write("</PAGE>");
-
     }
     else
     {
       out.write("<ACTION>error</ACTION>");
-      out.write("</PAGE>");
     }
 
+    out.write("</PAGE>");
     out.write("<!--END-->");
     out.flush();
 
