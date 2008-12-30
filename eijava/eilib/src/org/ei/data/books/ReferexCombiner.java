@@ -254,7 +254,7 @@ public class ReferexCombiner {
             	while (rs.next()) {
                     EVCombinedRec rec = ext.populate(rs);
                     if (rec != null) {
-                        writer.writeRec(rec, isbn);
+                        writer.writeRec(rec);
                     }
                 }                                
               }
