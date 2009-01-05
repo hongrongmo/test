@@ -557,6 +557,14 @@
 	  <MIMETYPE>text/html</MIMETYPE>
 	</CONTENTDESCRIPTOR>
 
+        <!-- CID to handle Mark Records -->
+        <CONTENTDESCRIPTOR BULKMODE="NO">
+          <ID>myBooks</ID>
+          <DATASOURCEURL>http://@data_server@/engvillage/models/customer/books/myBooks.jsp</DATASOURCEURL>
+          <DISPLAYURL>http://@data_server@/engvillage/views/world/copy-of.xsl</DISPLAYURL>
+          <MIMETYPE>text/html</MIMETYPE>
+        </CONTENTDESCRIPTOR>
+
         <!-- ******************   Thesaurus CID Begin **********************  -->
 
         <CONTENTDESCRIPTOR BULKMODE="NO">
