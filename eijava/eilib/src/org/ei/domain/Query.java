@@ -2031,7 +2031,9 @@ public class Query implements Comparable
         out.write(getCCList());
         out.write("</CC-LIST>");
         out.write("<VISIBLE>");
-        out.write(getVisible());
+        if(getVisible() != null) {
+          out.write(getVisible());
+        }
         out.write("</VISIBLE>");
 
         out.write("<USER-ID>");
