@@ -34,12 +34,16 @@
       }
 
     }
+    function clearCookies() {
+      document.cookie = 'RXSESSION=0; expires=Thu, 01-Jan-70 00:00:01 GMT;';
+      document.cookie = 'EISESSION=0; expires=Thu, 01-Jan-70 00:00:01 GMT;';
+    }
     ]]>
     // </xsl:comment>
   </SCRIPT>
 </head>
 
-	<body bgcolor="#FFFFFF" topmargin="0" marginheight="0" marginwidth="0">
+	<body bgcolor="#FFFFFF" topmargin="0" marginheight="0" marginwidth="0" onload="javascript:clearCookies();">
 	<!-- Start of logo table -->
 	<table border="0" width="99%" cellspacing="0" cellpadding="0">
 		<tr><td valign="top"><a href="javascript:forwardLink('/controller/servlet/Controller?CID=home')"><img src="/engresources/images/ev2logo5.gif" border="0"/></a></td></tr>
