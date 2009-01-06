@@ -19,6 +19,7 @@ public class ExtractCompendex
 {
     // from shell or bat scritp pass param = "all" to load all data_set
     // pass load_number to load specific load_number
+    Perl5Util perl = new Perl5Util();
 	public static void main(String[] args) throws Exception
 	{
 
@@ -28,11 +29,9 @@ public class ExtractCompendex
         {
               load_number = args[0];
         }
-		String[] m_ids = new String[] {"pch_B9CB8C03148510C6E03408002081DCA4", "pch_B9CB8C03147410C6E03408002081DCA4", "pch_B9CB8C03144810C6E03408002081DCA4"};
-
-        //{"pch_34f213f85aae815aM6fa219817173212","pch_11ffb3af85ab48bb2M7ff119817173212","pch_34f213f85aae815aM7bc019817173212","pch_34f213f85aae815aM672219817173212","pch_B9CB8C08410F10C6E03408002081DCA4","pch_34f213f85aae815aM7e2b19817173212","pch_115f0a9f85ab60809M7ea819817173212","pch_B9CB8C083E7510C6E03408002081DCA4","pch_B9CB8C03873410C6E03408002081DCA4","pch_B9CB8C08184610C6E03408002081DCA4","pch_B9CB8C07B53010C6E03408002081DCA4","pch_B9CB8C0806B010C6E03408002081DCA4","pch_B9CB8C0806B110C6E03408002081DCA4","pch_34f213f85aae815aM672219817173212","pch_34f213f85aae815aM7e1a19817173212","pch_6d2baff85ab4375bM7fc519817173212"};
-		//Connection con = getDbCoonection("jdbc:oracle:thin:@jupiter.elsevier.com:1521:EIDB1", "AP_PRO1", "ei3it", "oracle.jdbc.driver.OracleDriver");
-		Connection con = getDbCoonection("jdbc:oracle:thin:@neptune.elsevier.com:1521:EI", "AP_PRO1", "ei3it", "oracle.jdbc.driver.OracleDriver");
+		//String[] m_ids = null;//{"pch_B9CB8C03148510C6E03408002081DCA4", "pch_B9CB8C03147410C6E03408002081DCA4", "pch_B9CB8C03144810C6E03408002081DCA4"};
+		String[] m_ids = null;//{"cpx_18a992f10a185ae64fM80002061377553","cpx_18a992f10a185ae64fM7f602061377553","cpx_6966265","cpx_6840258","cpx_2549648","cpx_3060720","cpx_30c221115ec27f59fM7e922061377553","cpx_18a992f108afbc18f6M6cf22061377553","cpx_30c221110dfec28c6M7e6e2061377553","cpx_30c221110dfec28c6M7e682061377553","cpx_10385c11116ae314caM7e992061377553","cpx_30c221117c13ee92bM7f3a2061377553","cpx_1e5e2c311a79bdcfe6M7fd42061377553"};
+		Connection con = getDbCoonection("jdbc:oracle:thin:@jupiter.elsevier.com:1521:EIDB1", "AP_PRO1", "ei3it", "oracle.jdbc.driver.OracleDriver");
 		ExtractCompendex epc = new ExtractCompendex();
 
         // set array for select stmt.
@@ -85,11 +84,13 @@ public class ExtractCompendex
             else if(m_ids != null)
             {
                 String load_number = m_ids[0];
-                sqlQuery = "select * from cpx_master where load_number ='"+load_number+"' and mh is null and cvs is null";
+                sqlQuery = "select * from cpx_master where load_number in ('"+load_number+"') and mh is null and cvs is null";
             }
             else // select complete data_set
             {
                 sqlQuery = "select * from cpx_master where mh is null and cvs is null";
+                //for 161 and 162 sqlQuery = "select * from cpx_master where m_id in(select M_id from cpx_master where  mh is null and cvs is null minus select m_id from bd_master where tocflag='toc')";
+                 //182,183 sqlQuery = "select * from cpx_master where m_id in(select M_id from no_loadnumber_bd_master)";
             }
 
             pstmt1  = con.prepareStatement(sqlQuery);
@@ -100,70 +101,71 @@ public class ExtractCompendex
 			int j=1;
             while(rs1.next())
             {
-				writeColumn(rs1, "m_id", writerPub);//M_ID
-				writeColumn(rs1, "ex", writerPub);//ACCESSNUMBER
-				writeColumn(rs1, "ab", writerPub);//ABSTRACT
-				writeColumn(rs1, "aus", writerPub);//AUTHOR
-				writeColumn(rs1, "cp", writerPub);//CORRESPONDENCENAME
-				writeColumn(rs1, "em", writerPub);//CORRESPONDENCEEADDRESS
-				writeColumn(rs1, "af", writerPub);//CORRESPONDENCEAFFILIATION
-				writeColumn(rs1, "mt", writerPub);//ISSUETITLE
-				writeColumn(rs1, "st", writerPub);//SOURCETITLE
-				writeColumn(rs1, "se", writerPub);//SOURCETITLEABBREV
-				writeColumn(rs1, "cf", writerPub);//CONFNAME
-				writeColumn(rs1, "bn", writerPub);//ISBN
-				writeColumn(rs1, "sn", writerPub);//ISSN
-				writeColumn(rs1, "cn", writerPub);//CODEN
-				writeColumn(rs1, "vo", writerPub);//VOLUME
-				writeColumn(rs1, "iss", writerPub);//ISSUE
-				writeColumn(rs1, "sd", writerPub);//PUBLICATIONDATE
-				writeColumn(rs1, "yr", writerPub);//PUBLICATIONYEAR
-				writeColumn(rs1, "md", writerPub);//CONFDATE
-				writeColumn(rs1, "ml", writerPub);//CONFLOCATION
-				writeColumn(rs1, "sp", writerPub);//CONFSPONSORS
-				writeColumn(rs1, "dt", writerPub);//CITTYPE
-				writeColumn(rs1, "pa", writerPub);//REPORTNUMBER
-				writeColumn(rs1, "do", writerPub);//DOI
-				writeColumn(rs1, "pi", writerPub);//PII
-				writeColumn(rs1, "cc", writerPub);//CONFCODE
-				writeColumn(rs1, "at", writerPub);//ABSTRACTORIGINAL
+				writeColumn(rs1, "m_id", writerPub);//M_ID	1
+				writeColumn(rs1, "ex", writerPub);//ACCESSNUMBER	2
+				writeColumn(rs1, "ab", writerPub);//ABSTRACT	3
+				writeColumn(rs1, "aus", writerPub);//AUTHOR	4
+				writeColumn(rs1, "cp", writerPub);//CORRESPONDENCENAME	5
+				writeColumn(rs1, "em", writerPub);//CORRESPONDENCEEADDRESS	6
+				writeColumn(rs1, "af", writerPub);//CORRESPONDENCEAFFILIATION	7
+				writeColumn(rs1, "mt", writerPub);//ISSUETITLE	8
+				writeColumn(rs1, "st", writerPub);//SOURCETITLE	9
+				writeColumn(rs1, "se", writerPub);//SOURCETITLEABBREV	10
+				writeColumn(rs1, "cf", writerPub);//CONFNAME	11
+				writeColumn(rs1, "bn", writerPub);//ISBN	12
+				writeColumn(rs1, "sn", writerPub);//ISSN	13
+				writeColumn(rs1, "cn", writerPub);//CODEN	14
+				writeColumn(rs1, "vo", writerPub);//VOLUME	15
+				writeColumn(rs1, "iss", writerPub);//ISSUE	16
+				writeColumn(rs1, "sd", writerPub);//PUBLICATIONDATE	17
+				writeColumn(rs1, "yr", writerPub);//PUBLICATIONYEAR	18
+				writeColumn(rs1, "md", writerPub);//CONFDATE	19
+				writeColumn(rs1, "ml", writerPub);//CONFLOCATION	20
+				writeColumn(rs1, "sp", writerPub);//CONFSPONSORS	21
+				writeColumn(rs1, "dt", writerPub);//CITTYPE	22
+				writeColumn(rs1, "pa", writerPub);//REPORTNUMBER	23
+				writeColumn(rs1, "do", writerPub);//DOI	24
+				writeColumn(rs1, "pi", writerPub);//PII	25
+				writeColumn(rs1, "cc", writerPub);//CONFCODE	26
+				writeColumn(rs1, "at", writerPub);//ABSTRACTORIGINAL	27
 				//writeColumn(rs1, "cvs", writerPub);//CONTROLLEDTERM
-				writeColumn(rs1, "pn", writerPub);//PUBLISHERNAME
-				writeColumn(rs1, "load_number", writerPub);//LOADNUMBER
-				writeColumn(rs1, "xp", writerPub);//PAGE
-				writeColumn(rs1, "tr", writerPub);//TREATMENTCODE
-				writeColumn(rs1, "pp", writerPub);//PAGECOUNT
-				writeColumn(rs1, "cls", writerPub);//CLASSIFICATIONCODE
-				writeColumn(rs1, "ti", writerPub);//CITATIONTITLE
-				writeColumn(rs1, "nr", writerPub);//REFCOUNT
-				writeColumn(rs1, "vx", writerPub);//CONFCATNUMBER
-				writeColumn(rs1, "pc", writerPub);//PUBLISHERADDRESS
-				writeColumn(rs1, "fls", writerPub);//UNCONTROLLEDTERM
-				writeColumn(rs1, "ed", writerPub);//EDITOR
-				writeColumn(rs1, "ced", writerPub);//CONFERENCEEDITOR
-				writeColumn(rs1, "ef", writerPub);//CONFERENCEORGANIZATION
-				writeColumn(rs1, "ec", writerPub);//CONFERENCEEDITORADDRESS
-				writeColumn(rs1, "la", writerPub);//CITATIONLANGUAGE
-				writeColumn(rs1, "db", writerPub);//DATABASE
+				writeColumn(rs1, "pn", writerPub);//PUBLISHERNAME	28
+				writeColumn(rs1, "load_number", writerPub);//LOADNUMBER	29
+				writeColumn(rs1, "xp", writerPub);//PAGE	30
+				writeColumn(rs1, "tr", writerPub);//TREATMENTCODE	31
+				writeColumn(rs1, "pp", writerPub);//PAGECOUNT	32
+				writeColumn(rs1, "cls", writerPub);//CLASSIFICATIONCODE	33
+				writeColumn(rs1, "ti", writerPub);//CITATIONTITLE	34
+				writeColumn(rs1, "nr", writerPub);//REFCOUNT	35
+				writeColumn(rs1, "vx", writerPub);//CONFCATNUMBER	36
+				writeColumn(rs1, "pc", writerPub);//PUBLISHERADDRESS	37
+				writeColumn(rs1, "fls", writerPub);//UNCONTROLLEDTERM	38
+				writeColumn(rs1, "ed", writerPub);//EDITOR	39
+				writeColumn(rs1, "ced", writerPub);//CONFERENCEEDITOR	40
+				writeColumn(rs1, "ef", writerPub);//CONFERENCEORGANIZATION	41
+				writeColumn(rs1, "ec", writerPub);//CONFERENCEEDITORADDRESS	42
+				writeColumn(rs1, "la", writerPub);//CITATIONLANGUAGE	43
+				writeColumn(rs1, "db", writerPub);//DATABASE	44
 				//writeColumn(rs1, "mh", writerPub);//MAINHEADING
-				writeColumn(rs1, "en", writerPub);//EISSN
-				writeColumn(rs1, "ty", writerPub);//SOURCETYPE
-				writeColumn(rs1, "vt", writerPub);//VOLUMETITLE
-				writeColumn(rs1, "up", writerPub);//UPDATECODESTAMP
-				writeColumn(rs1, "ur", writerPub);//UPDATERESOURCE
-				writeColumn(rs1, "UPDATE_NUMBER", writerPub);//UPDATENUMBER
-				writeColumn(rs1, "ar", writerPub);//ARTICLENUMBER
-				writeColumn(rs1, "od", writerPub);//UpdateTimeStamp
-				writeColumn(rs1, "toc", writerPub);//TocFlag
+				writeColumn(rs1, "en", writerPub);//EISSN	45
+				writeColumn(rs1, "ty", writerPub);//SOURCETYPE	46
+				writeColumn(rs1, "vt", writerPub);//VOLUMETITLE	47
+				writeColumn(rs1, "up", writerPub);//UPDATECODESTAMP	48
+				writeColumn(rs1, "ur", writerPub);//UPDATERESOURCE	49
+				writeColumn(rs1, "UPDATE_NUMBER", writerPub);//UPDATENUMBER	50
+				writeColumn(rs1, "ar", writerPub);//ARTICLENUMBER	51
+				writeColumn(rs1, "od", writerPub);//UpdateTimeStamp	52
+				writeColumn(rs1, "toc", writerPub);//TocFlag	53
+				writeColumn(rs1, "tg", writerPub);//TgFlag	54
                 writerPub.println();
                 if(i>100000)
                 {
+					j++;
 					writerPub.close();
 					filename = "compendex_extract"+j+".out";
 					System.out.println("filename= "+filename);
 					writerPub = new PrintWriter(new FileWriter(filename));
 					i=0;
-					j++;
 				}
 				i++;
             }
@@ -220,7 +222,7 @@ public class ExtractCompendex
 		}
 		else if(columnName.equals("af"))
 		{
-			column = formatAffiliation(rs1.getString("af"),rs1.getString("ac"),rs1.getString("ass"),rs1.getString("ay"));
+			column = formatAffiliation(rs1.getString("af"),rs1.getString("ac"),rs1.getString("ass"),rs1.getString("av"),rs1.getString("ay"));
 		}
 		else if(columnName.equals("aus"))
 		{
@@ -391,7 +393,6 @@ public class ExtractCompendex
 		{
 			line = line.trim();
 
-			Perl5Util perl = new Perl5Util();
 			if(perl.match("/[\t\n\r\f\b]+/", line))
 			{
 			   line = perl.substitute("s/[\t\n\r\f\b]+//gi", line);
@@ -469,7 +470,7 @@ public class ExtractCompendex
 	            buf.append(",");
 	        }
 	    }
-	    if(state != null)
+	    if(state != null && !perl.match("/[0-9]+/", state))
 	    {
 	        buf.append(state).append(",");
             if(rs.getString("ey") != null)
@@ -477,6 +478,11 @@ public class ExtractCompendex
 	            buf.append(",");
 	        }
 	    }
+	    else
+	    {
+			 buf.append(" ");
+		}
+
 	    if(rs.getString("ey") != null)
 	    {
 	        buf.append(rs.getString("ey"));
@@ -496,14 +502,20 @@ public class ExtractCompendex
 		StringBuffer cittext = new StringBuffer();
 		int index =0;
 		String lan = null;
+
 		if (clanguage!= null && clanguage.equalsIgnoreCase("English"))
 	    {
 	        lan = "eng";
 	    }
-	    else
+	    else if(clanguage!=null)
 	    {
 	        lan = clanguage;
 	    }
+	    else
+	    {
+			lan = "";
+		}
+
 	    if(citTranslatedTitle != null)
 		{
 			cittext.append(index);
@@ -576,12 +588,13 @@ public class ExtractCompendex
 			affBuffer.append(BdParser.IDDELIMITER);//organization
 			affBuffer.append(BdParser.IDDELIMITER);//address_part
 			affBuffer.append(BdParser.IDDELIMITER);//citygroup
-			if(location != null)
+			if(city == null && state == null && country == null)
 			{
 				affBuffer.append(location);
 			}
 			else
 			{
+				location=null;
 				if(city !=null)
 				{
 					affBuffer.append(city);
@@ -598,7 +611,7 @@ public class ExtractCompendex
 			}
 			affBuffer.append(BdParser.IDDELIMITER);//country
 
-			if(country!= null && location!=null && location.indexOf(country)<0)
+			if(country!= null || (location!=null && location.indexOf(country)<0))
 			{
 				affBuffer.append(country);
 			}
@@ -685,78 +698,113 @@ public class ExtractCompendex
 	public String formatISBN(String be,String bn,String bv,String bx)
 	{
 		StringBuffer isbnBuffer = new StringBuffer();
-		String bn13 = null;
-		String bn10 = null;
-		if(bn == null)
-		{
-			bn10 = bx;
-		}
-		else
-		{
-			bn10 = bn;
-		}
 
-		if(be == null)
+		if(be!=null)
 		{
-			bn13 = be;
-		}
-		else
-		{
-			bn13 = bx;
-		}
-
-		if(bn10!=null)
-		{
-			if(bn10.indexOf("-")>-1)
+			if(be.indexOf("-")>-1)
 			{
-				bn10 = bn10.replaceAll("-","");
+				be = be.replaceAll("-","");
 			}
 
-			if(bn10.indexOf(")")>-1)
+			if(be.indexOf(")")>-1)
 			{
-				bn10 = bn10.replaceAll(")","");
-			}
-
-			isbnBuffer.append(BdParser.IDDELIMITER);//isbnType
-			isbnBuffer.append("10");
-			isbnBuffer.append(BdParser.IDDELIMITER);//isbnLength
-			isbnBuffer.append(BdParser.IDDELIMITER);//isbnVolume
-			isbnBuffer.append(bn10);
-			isbnBuffer.append(BdParser.IDDELIMITER);//isbnValue
-		}
-
-		if(bn10 != null && bn13 != null)
-		{
-			isbnBuffer.append(BdParser.AUDELIMITER);
-		}
-
-		if(bn13!=null)
-		{
-			if(bn13.indexOf("-")>-1)
-			{
-				bn13 = bn13.replaceAll("-","");
-			}
-
-			if(bn13.indexOf(")")>-1)
-			{
-				bn13 = bn13.replaceAll(")","");
+				be = be.replaceAll(")","");
 			}
 
 			isbnBuffer.append(BdParser.IDDELIMITER);//isbnType
 			isbnBuffer.append("13");
 			isbnBuffer.append(BdParser.IDDELIMITER);//isbnLength
+			isbnBuffer.append("volume");
 			isbnBuffer.append(BdParser.IDDELIMITER);//isbnVolume
-			isbnBuffer.append(bn13);
-			isbnBuffer.append(BdParser.IDDELIMITER);//isbnValue
+			isbnBuffer.append(be);
+			//isbnBuffer.append(BdParser.IDDELIMITER);//isbnValue
+		}
+
+		if(bn != null || bv != null || bx!=null)
+		{
+			isbnBuffer.append(BdParser.AUDELIMITER);
+		}
+
+		if(bn!=null)
+		{
+			if(bn.indexOf("-")>-1)
+			{
+				bn = bn.replaceAll("-","");
+			}
+
+			if(bn.indexOf(")")>-1)
+			{
+				bn = bn.replaceAll(")","");
+			}
+
+			isbnBuffer.append(BdParser.IDDELIMITER);//isbnType
+			isbnBuffer.append("10");
+			isbnBuffer.append(BdParser.IDDELIMITER);//isbnLength
+			isbnBuffer.append("volume");
+			isbnBuffer.append(BdParser.IDDELIMITER);//isbnVolume
+			isbnBuffer.append(bn);
+			//isbnBuffer.append(BdParser.IDDELIMITER);//isbnValue
+		}
+
+		if(bv != null || bx!=null)
+		{
+			isbnBuffer.append(BdParser.AUDELIMITER);
+		}
+
+		if(bx!=null)
+		{
+			if(bx.indexOf("-")>-1)
+			{
+				bx = bx.replaceAll("-","");
+			}
+
+			if(bx.indexOf(")")>-1)
+			{
+				bx = bx.replaceAll(")","");
+			}
+
+			isbnBuffer.append(BdParser.IDDELIMITER);//isbnType
+			isbnBuffer.append("10");
+			isbnBuffer.append(BdParser.IDDELIMITER);//isbnLength
+			isbnBuffer.append("set");
+			isbnBuffer.append(BdParser.IDDELIMITER);//isbnVolume
+			isbnBuffer.append(bx);
+			//isbnBuffer.append(BdParser.IDDELIMITER);//isbnValue
+		}
+
+		if(bx!=null)
+		{
+			isbnBuffer.append(BdParser.AUDELIMITER);
+		}
+
+		if(bv!=null)
+		{
+			if(bv.indexOf("-")>-1)
+			{
+				bv = bv.replaceAll("-","");
+			}
+
+			if(bv.indexOf(")")>-1)
+			{
+				bv = bv.replaceAll(")","");
+			}
+
+			isbnBuffer.append(BdParser.IDDELIMITER);//isbnType
+			isbnBuffer.append("13");
+			isbnBuffer.append(BdParser.IDDELIMITER);//isbnLength
+			isbnBuffer.append("set");
+			isbnBuffer.append(BdParser.IDDELIMITER);//isbnVolume
+			isbnBuffer.append(bv);
+			//isbnBuffer.append(BdParser.IDDELIMITER);//isbnValue
 		}
 
 		return isbnBuffer.toString();
 	}
 
-	public String formatAffiliation(String affiliation,String city,String state,String country)throws Exception
+	public String formatAffiliation(String affiliation,String city,String state,String province,String country)throws Exception
 	{
 		StringBuffer affBuffer = new StringBuffer();
-		if(affiliation!=null || city!=null || state!=null || country!=null)
+		if(affiliation!=null || city!=null || state!=null || province!=null ||country!=null)
 		{
 			affBuffer.append(BdParser.IDDELIMITER);//affid
 			affBuffer.append(BdParser.IDDELIMITER);//text
@@ -772,6 +820,10 @@ public class ExtractCompendex
 				affBuffer.append(city);
 			}
 
+			if(state==null)
+			{
+				state = province;
+			}
 			if(state!=null)
 			{
 				if(city!=null)
@@ -868,6 +920,11 @@ public class ExtractCompendex
 				else
 				{
 					lastName = author;
+				}
+
+				if(lastName.indexOf(",")>-1)
+				{
+					lastName = lastName.replaceAll(",", "");
 				}
 
                 nameBuffer.append(i);    //starts from 1
