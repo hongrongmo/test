@@ -180,7 +180,7 @@
       EIMessage eimessage = new EIMessage();
       eimessage.setSender("eicustomersupport@elseiver.com");
       eimessage.addTORecepients(recipients);
-      eimessage.addCCRecepients(ccAddress);
+      // eimessage.addCCRecepients(ccAddress);
       eimessage.setSubject(section);
       eimessage.setSentDate(new Date());
 
