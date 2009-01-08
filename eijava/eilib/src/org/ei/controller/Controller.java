@@ -670,7 +670,7 @@ public class Controller extends HttpServlet
             sessionID = request.getParameter("EISESSION");
         }
 
-        if(sessionID != null)
+        if(sessionID != null && !sessionID.equals("0"))
         {
             sesID = new SessionID(sessionID);
         }
