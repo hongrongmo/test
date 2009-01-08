@@ -902,9 +902,9 @@ public class InsBackDocBuilder
               //  ht.put(Keys.PROVIDER, new XMLWrapper(Keys.PROVIDER, PROVIDER_TEXT));
 
                 if(rset.getString("CPR") != null) {
-                    ht.put(Keys.RIS_M1,new XMLWrapper(Keys.RIS_M1,StringUtil.replaceNullWithEmptyString(rset.getString("CPR"))));
+                    ht.put(Keys.RIS_N1,new XMLWrapper(Keys.RIS_N1,StringUtil.replaceNullWithEmptyString(rset.getString("CPR"))));
                 } else {
-                    ht.put(Keys.RIS_M1,new XMLWrapper(Keys.RIS_M1,InsBackDocBuilder.INS_TEXT_COPYRIGHT));
+                    ht.put(Keys.RIS_N1,new XMLWrapper(Keys.RIS_N1,InsBackDocBuilder.INS_TEXT_COPYRIGHT));
                 }
 
                 if (rset.getString("LA") != null)
