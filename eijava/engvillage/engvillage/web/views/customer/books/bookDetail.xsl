@@ -256,7 +256,7 @@ pageTracker._trackPageview();
                             <tr>
                               <td><img src="/engresources/images/s.gif" border="0" width="1"/></td>
                               <td align="left">
-                                  <img src="/engresources/images/cloud_icon.jpg" alt="Keyword Cloud" align="absmiddle" border="0"/>&#160;<span class="CloudTitle">Keyword Cloud</span>&#160;<a href="javascript:makeUrl('Keyword_Cloud.htm')"><img src="/engresources/images/blue_help.gif" alt="" border="0"/></a>
+                                  <img src="/engresources/images/cloud_icon.jpg" alt="Keyword Cloud" align="absmiddle" border="0"/>&#160;<span class="CloudTitle">Keyword Cloud</span>&#160;<a href="javascript:makeUrl('Referex_Keyword_Cloud.htm')"><img src="/engresources/images/blue_help.gif" alt="" border="0"/></a>
                                   <br/>
                                   <span class="ExSmBlackText">Keywords that appear most frequently in this book</span>
                                   <br/><br/>
