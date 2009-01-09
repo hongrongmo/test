@@ -2083,7 +2083,7 @@ public class Query implements Comparable
           out.write("<CRITERIA>");
           String criteria = (String) dupSet.get(i);
           String[] options = criteria.split(":");
-          if(options.length == 2);
+          if(options.length == 2)
           {
             out.write("<FIELDPREF>");
             out.write(options[0]);
