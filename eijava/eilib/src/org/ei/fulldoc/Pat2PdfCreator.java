@@ -339,19 +339,17 @@ public class Pat2PdfCreator {
           tiffile.close();
         }
         result = true;
-      } catch (IOException e) {
-        log.error(e);
-      } catch (DocumentException e) {
-        log.error(e);
+      } catch (Exception e) {
+        throw e;
       }
       finally {
         if(document != null) {
           document.close();
         }
+        if(!result) {
+          pdffile.delete();
+        }
       }
-    }
-    if(!result) {
-      pdffile.delete();
     }
     return result;
   }
