@@ -7,6 +7,8 @@ import java.sql.Statement;
 import java.util.StringTokenizer;
 import java.util.ArrayList;
 import java.util.regex.*;
+import org.ei.domain.*;
+import org.ei.data.inspec.runtime.*;
 
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
@@ -25,7 +27,9 @@ public class INSPECCombiner
 {
 
     Perl5Util perl = new Perl5Util();
-
+    private static String tablename;
+    private static final Database INS_DATABASE = new InspecDatabase();
+    
     public INSPECCombiner(CombinedWriter writer)
     {
         super(writer);
@@ -37,16 +41,30 @@ public class INSPECCombiner
         String url = args[0];
         String driver = args[1];
         String username = args[2];
-        String password = args[3];
-        int loadNumber = Integer.parseInt(args[4]);
-        int recsPerfile = Integer.parseInt(args[5]);
-        Combiner.EXITNUMBER = Integer.parseInt(args[6]);
-        Combiner.TABLENAME = args[7];
+        String password = args[3];                
+        int loadNumber = 0;
+        int recsPerbatch = Integer.parseInt(args[5]);
+        String operation = args[6];
+        tablename = args[7];
+        String environment = args[8].toLowerCase();
+        
+        try {
+            loadNumber = Integer.parseInt(args[4]);
+         }
+         catch(NumberFormatException e) {
+            loadNumber = 0;
+         }
+        
+         Combiner.TABLENAME = tablename;
 
-        CombinedWriter writer = new CombinedXMLWriter(recsPerfile,
+        CombinedWriter writer = new CombinedXMLWriter(recsPerbatch,
                                                       loadNumber,
-                                                      "ins");
+                                                      INS_DATABASE.getIndexName(), environment);
+        
+        
+        writer.setOperation(operation);                                
         INSPECCombiner c = new INSPECCombiner(writer);
+        
         if(loadNumber > 3000)
         {
             c.writeCombinedByWeekNumber(url,
@@ -54,6 +72,32 @@ public class INSPECCombiner
                                         username,
                                         password,
                                         loadNumber);
+        }
+        else if(loadNumber == 2999)
+        {
+        	int yearIndex = loadNumber;
+        	System.out.println("Processing MISC records as loadnumber " + yearIndex + "...");
+    		c = new INSPECCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,INS_DATABASE.getIndexName(), environment));
+    		c.writeCombinedByYear(url,
+    							  driver,
+    							  username,
+    							  password,
+    							  yearIndex);  
+        }
+        // extract the whole thing
+        else if(loadNumber == 0)
+        {
+        	for(int yearIndex = 2007; yearIndex <= 2009; yearIndex++)
+        	{
+        		System.out.println("Processing year " + yearIndex + "...");
+        		//create  a new writer so we can see the loadNumber/yearNumber in the filename
+        		c = new INSPECCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,INS_DATABASE.getIndexName(), environment));
+        		c.writeCombinedByYear(url,
+        							  driver,
+        							  username,
+        							  password,
+        							  yearIndex);        		
+        	}
         }
         else
         {
@@ -77,16 +121,23 @@ public class INSPECCombiner
 
         try
         {
-
-            this.writer.begin();
+            
             stmt = con.createStatement();
             System.out.println("Doing year:"+year);
             //System.out.println("Running the query...select     m_id, aaff, ab, anum, su, pyr, vol, iss, cdate, nrtype, doi, doit, aoi, aus, aus2, rnum, pnum, cpat, ciorg, iorg, pas, cdate, chi, voliss, ipn, cloc, cls, cn, cnt, cvs, eaff, eds, fjt, fls, fttj, la, matid, ndi, pdate, opdate, pub, rtype, sbn, sorg, sn, snt, tc, tdate, thlp, ti, trs, trmc, LOAD_NUMBER from "+Combiner.TABLENAME+" where substr(opdate,length(opdate)-3) ='"+ year +"'");
             //rs = stmt.executeQuery("select     m_id, aaff, ab, anum, su, pyr, nrtype, pdoi, cdate, cedate, aoi, aus, aus2, rnum, pnum, cpat, ciorg, iorg, pas, cdate, chi, voliss, ipn, cloc, cls, cn, cnt, cvs, eaff, eds, fjt, fls, fttj, la, matid, ndi, pdate,opdate, pub, rtype, sbn, sorg, sn, snt, tc, tdate, thlp, ti, trs, trmc, LOAD_NUMBER from "+Combiner.TABLENAME+" where substr(opdate,length(opdate)-3) ='"+ year +"'");
-            rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate, sspdate, aaff, afc, ab, anum, pubti, su, pyr, nrtype, pdoi, cdate, cedate, aoi, aus, aus2, rnum, pnum, cpat, ciorg, iorg, pas, chi, pvoliss, pvol, piss, pipn, cloc, cls, pcdn, scdn, cvs, eaff, eds, pfjt, sfjt, fls, pajt, sajt, la, matid, ndi, pspdate, pepdate, popdate, sopdate, ppub, rtype, sbn, sorg, psn, ssn, tc, pubti, ti, trs, trmc, aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER from "+Combiner.TABLENAME+" where pyr ='"+ year +"'");
+            if(year == 2999)
+            {
+            	rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate, sspdate, aaff, afc, ab, anum, pubti, su, pyr, nrtype, pdoi, cdate, cedate, aoi, aus, aus2, rnum, pnum, cpat, ciorg, iorg, pas, chi, pvoliss, pvol, piss, pipn, cloc, cls, pcdn, scdn, cvs, eaff, eds, pfjt, sfjt, fls, pajt, sajt, la, matid, ndi, pspdate, pepdate, popdate, sopdate, ppub, rtype, sbn, sorg, psn, ssn, tc, pubti, ti, trs, trmc, aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER from "+Combiner.TABLENAME+" where pyr='0294' or pyr='0994' or pyr='1101' or pyr='20007' or pyr='Dec.' or pyr='July' or pyr is null");
+            }
+            else
+            {
+            	rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate, sspdate, aaff, afc, ab, anum, pubti, su, pyr, nrtype, pdoi, cdate, cedate, aoi, aus, aus2, rnum, pnum, cpat, ciorg, iorg, pas, chi, pvoliss, pvol, piss, pipn, cloc, cls, pcdn, scdn, cvs, eaff, eds, pfjt, sfjt, fls, pajt, sajt, la, matid, ndi, pspdate, pepdate, popdate, sopdate, ppub, rtype, sbn, sorg, psn, ssn, tc, pubti, ti, trs, trmc, aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER from "+Combiner.TABLENAME+" where pyr ='"+ year +"'");
+            }
             writeRecs(rs);
             System.out.println("Wrote records.");
             this.writer.end();
+            this.writer.flush();
         }
         finally
         {
@@ -212,12 +263,6 @@ public class INSPECCombiner
             EVCombinedRec rec = new EVCombinedRec();
             ++i;
 
-            if(Combiner.EXITNUMBER != 0 && i > Combiner.EXITNUMBER)
-            {
-                break;
-            }
-
-
             String abString = getStringFromClob(rs.getClob("ab"));
             String strYear ="";
             if(rs.getString("pyr") != null && validYear(getPubYear(rs.getString("pyr"))))
@@ -274,7 +319,7 @@ public class INSPECCombiner
 
 						if (rs.getString("aaffmulti2") != null)
 						{
-							aaff.append(rs.getString("aaffm2"));
+							aaff.append(rs.getString("aaffmulti2"));
 						}
                     }
 
