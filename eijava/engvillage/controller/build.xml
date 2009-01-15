@@ -8,6 +8,7 @@
     <include name="**/commons-httpclient.jar"/>
     <include name="**/java_memcached-release_1.3.2.jar"/>
     <include name="**/log4j-1.2.11.jar"/>
+    <include name="**/iText-2.1.4.jar"/>
   </fileset>
 
   <fileset id="eilib-jars" dir="../../dist">
