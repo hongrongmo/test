@@ -26,10 +26,10 @@ import org.ei.data.Constants;
 
 
 public class EltCombiner extends Combiner {
-	
+
 	private EltDocTypes eltDocTypes = new EltDocTypes();
     Perl5Util perl = new Perl5Util();
-    
+
 
     public static void main(String args[]) throws Exception {
         String url = args[0];
@@ -37,23 +37,38 @@ public class EltCombiner extends Combiner {
         String username = args[2];
         String password = args[3];
         int loadNumber = Integer.parseInt(args[4]);
-        int recsPerfile = Integer.parseInt(args[5]);
-        Combiner.EXITNUMBER = Integer.parseInt(args[6]);
+        int recsPerbatch = Integer.parseInt(args[5]);
+        String operation = args[6];
         Combiner.TABLENAME = args[7];
-        System.out.println("Table Name=" + args[7]);
+        String environment = args[8].toLowerCase();
+        System.out.println("Table Name=" + Combiner.TABLENAME);
         System.out.println("LoadNumber=" + loadNumber);
-        System.out.println("RecsPerFile=" + recsPerfile);
-        System.out.println("Exit At=" + Combiner.EXITNUMBER);
+        System.out.println("RecsPerFile=" + recsPerbatch);
         System.out.println(Combiner.TABLENAME);
 
-        CombinedWriter writer = new CombinedXMLWriter(recsPerfile, loadNumber, "elt");
-
+        CombinedWriter writer = new CombinedXMLWriter(recsPerbatch, loadNumber, "elt");
+		writer.setOperation(operation);
         EltCombiner c = new EltCombiner(writer);
 
         System.out.println("write year");
-        if (loadNumber > 3000 || loadNumber < 1000) {
+        if (loadNumber > 3000 || (loadNumber < 1000 && loadNumber > 0)) {
             c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
         }
+    	// extract the whole thing
+    	else if(loadNumber == 0)
+    	{
+      		for(int yearIndex = 1962; yearIndex <= 2008; yearIndex++)
+      		{
+    			System.out.println("Processing year " + yearIndex + "...");
+        		// create  a new writer so we can see the loadNumber/yearNumber in the filename
+        		c = new EltCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,"elt", environment));
+        		c.writeCombinedByYear(url,
+                            		driver,
+                            		username,
+                            		password,
+                            		yearIndex);
+      		}
+    	}
         else {
             c.writeCombinedByYear(url, driver, username, password, loadNumber);
         }
@@ -71,7 +86,6 @@ public class EltCombiner extends Combiner {
         ResultSet rs = null;
         try {
 
-            this.writer.begin();
             stmt = con.createStatement();
             System.out.println("Running the query...");
 
@@ -82,6 +96,7 @@ public class EltCombiner extends Combiner {
                         + "'");
             writeRecs(rs);
             this.writer.end();
+            this.writer.flush();
         }
         finally {
             if (rs != null) {
@@ -108,16 +123,12 @@ public class EltCombiner extends Combiner {
         StringBuffer tmp = null;
 
         CVSTermBuilder termBuilder = new CVSTermBuilder();
-        
+
         while (rs.next()) {
 
             EVCombinedRec rec = new EVCombinedRec();
             QualifierFacet qfacet = new QualifierFacet();
             ++i;
-
-            if (Combiner.EXITNUMBER != 0 && i > Combiner.EXITNUMBER) {
-                break;
-            }
 
             String abString = getStringFromClob(rs.getClob("abs"));
 
@@ -154,54 +165,54 @@ public class EltCombiner extends Combiner {
                     cvsBuffer.append(expandedCV1).append(";").append(expandedCV2);
                 else
                     cvsBuffer.append(expandedCV1);
-               
+
 
                 String parsedCV = termBuilder.formatCT(cvsBuffer.toString());
-                
+
                 rec.put(rec.CONTROLLED_TERMS, prepareMulti(termBuilder.getStandardTerms(parsedCV), Constants.CVS));
 
                 String parsedMH = termBuilder.formatCT(expandedMH);
 
                 rec.put(rec.MAIN_HEADING, prepareMulti(StringUtil.replaceNonAscii(termBuilder.removeRoleTerms(parsedMH)), Constants.CVS));
-                
+
                 //this field is added to generate navigators for Major terms
                 rec.put(rec.ECLA_CODES, prepareMulti(StringUtil.replaceNonAscii(termBuilder.removeRoleTerms(parsedMH)),Constants.CVS ));
 
                 String norole = termBuilder.getNoRoleTerms(parsedCV);
-                qfacet.setNorole(norole);                
+                qfacet.setNorole(norole);
                 rec.put(rec.NOROLE_TERMS, prepareMulti(norole));
-                
+
                 String reagent = termBuilder.getReagentTerms(parsedCV);
                 qfacet.setReagent(reagent);
                 rec.put(rec.REAGENT_TERMS, prepareMulti(reagent));
-                
+
                 String product = termBuilder.getProductTerms(parsedCV);
                 qfacet.setProduct(product);
                 rec.put(rec.PRODUCT_TERMS, prepareMulti(product));
-                
+
                 String mnorole = termBuilder.getMajorNoRoleTerms(parsedMH);
                 qfacet.setNorole(mnorole);
                 rec.put(rec.MAJORNOROLE_TERMS, prepareMulti(mnorole));
-                
+
                 String mreagent = termBuilder.getMajorReagentTerms(parsedMH);
                 qfacet.setReagent(mreagent);
                 rec.put(rec.MAJORREAGENT_TERMS, prepareMulti(mreagent));
-                
+
                 String mproduct = termBuilder.getMajorProductTerms(parsedMH);
                 qfacet.setProduct(mproduct);
                 rec.put(rec.MAJORPRODUCT_TERMS, prepareMulti(mproduct));
-                
+
                 // rec.put(rec.UNCONTROLLED_TERMS, prepareMulti(qfacet.getValue()));
-                //11/29/07 TS by new specs q facet mapped to uspto code navigator field  
-                
+                //11/29/07 TS by new specs q facet mapped to uspto code navigator field
+
                 rec.put(rec.USPTOCODE, prepareMulti(qfacet.getValue()));
-                
-                // added Free language field 
-                if (rs.getString("apiut") != null) 
+
+                // added Free language field
+                if (rs.getString("apiut") != null)
                 {
                     rec.put(EVCombinedRec.UNCONTROLLED_TERMS, prepareMulti(termBuilder.formatCT(StringUtil.replaceNonAscii(replaceNull(rs.getString("apiut"))))));
                 }
-                
+
                 if (rs.getString("tie") != null) {
                     rec.put(EVCombinedRec.TITLE, StringUtil.replaceNonAscii(replaceNull(rs.getString("tie"))));
                 }
@@ -233,7 +244,7 @@ public class EltCombiner extends Combiner {
                     rec.put(EVCombinedRec.AUTHOR, prepareAuthor(stripDelim(StringUtil.replaceNonAscii(authors.toString()))));
                 }
 
-                if (rs.getString("aaf") != null) 
+                if (rs.getString("aaf") != null)
                 {
 
                     rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareMulti(StringUtil.replaceNonAscii(EltAusFormatter.formatAffiliation(stripDelim(replaceNull(rs.getString("aaf")), ";"))), Constants.AFF));
@@ -276,13 +287,13 @@ public class EltCombiner extends Combiner {
 
                 // 11/29/07 TS by new specs "oab"  is appended to "ab" to make searchable
                 String oabsract = StringUtil.replaceNonAscii(replaceNull(rs.getString("oab")));
-                if (abString != null) 
-                {                                        
+                if (abString != null)
+                {
                     if (oabsract != null)
                     {
                         abString =  abString.concat(" ").concat(oabsract);
                     }
-           
+
                     rec.put(EVCombinedRec.ABSTRACT, StringUtil.replaceNonAscii(replaceNull(abString)));
                 }
                 else if (oabsract != null)
@@ -360,7 +371,7 @@ public class EltCombiner extends Combiner {
                 if (rs.getString("sti") != null) {
                     rec.put(EVCombinedRec.SERIAL_TITLE, StringUtil.replaceNonAscii(replaceNull(rs.getString("sti"))));
                 }
-                
+
                 String apilt = StringUtil.replaceNonAscii(replaceNull(getStringFromClob(rs.getClob("apilt"))));
 
                 rec.put(EVCombinedRec.LINKED_TERMS, prepareMultiLinkedTerm(termBuilder.formatCT(apilt)));
@@ -374,12 +385,12 @@ public class EltCombiner extends Combiner {
                 rec.put(EVCombinedRec.VOLUME, getFirstNumber(rs.getString("vln")));
                 rec.put(EVCombinedRec.ISSUE, getFirstNumber(rs.getString("isn")));
                 rec.put(EVCombinedRec.STARTPAGE, getFirstNumber(rs.getString("pag")));
-                               
+
                 rec.put(EVCombinedRec.DATABASE, "elt");
                 rec.put(EVCombinedRec.LOAD_NUMBER, rs.getString("load_number"));
                 rec.put(EVCombinedRec.SOURCE, StringUtil.replaceNonAscii(replaceNull(rs.getString("so"))));
                 rec.put(EVCombinedRec.SECONDARY_SRC_TITLE, StringUtil.replaceNonAscii(replaceNull(rs.getString("secsti"))));
-                //11/29/07 TS by new specs "oab"  is appended to "ab" to make searchable 
+                //11/29/07 TS by new specs "oab"  is appended to "ab" to make searchable
                 // rec.put(EVCombinedRec.OTHER_ABSTRACT, StringUtil.replaceNonAscii(replaceNull(rs.getString("oab"))));
                 rec.put(EVCombinedRec.MAIN_TERM, prepareMulti(StringUtil.replaceNonAscii(replaceNull(rs.getString("apiams"))), Constants.CVS));
                 // rec.put(EVCombinedRec.EDITOR_AFFILIATION, StringUtil.replaceNonAscii(replaceNull(rs.getString("cna"))));
@@ -509,7 +520,6 @@ public class EltCombiner extends Combiner {
 
         try {
 
-            this.writer.begin();
             stmt = con.createStatement();
             System.out.println("Getting weeks records ...");
             rs =
@@ -519,6 +529,7 @@ public class EltCombiner extends Combiner {
 
             writeRecs(rs);
             this.writer.end();
+            this.writer.flush();
 
         }
         finally {
@@ -545,7 +556,7 @@ public class EltCombiner extends Combiner {
     }
 
     private String[] prepareAuthor(String aString) throws Exception {
-   
+
         AuthorStream astream = new AuthorStream(new ByteArrayInputStream(aString.getBytes()));
         String s = null;
         ArrayList list = new ArrayList();
@@ -569,24 +580,24 @@ public class EltCombiner extends Combiner {
         line = perl.substitute("s/\\(ed\\.\\)/ /gi", line);
         return line;
     }
-    
-    
-    
-    /*  
-    *   stripDelim overloaded method is used to 
-    *   remove delimiters from fields au, aff  
+
+
+
+    /*
+    *   stripDelim overloaded method is used to
+    *   remove delimiters from fields au, aff
     *   second param String newDelim equal to ";" is provided for aff, cv
     *   fields for delim substitution
     */
 
 
-    private String stripDelim(String line) 
+    private String stripDelim(String line)
     {
         return stripDelim(line, "");
 
     }
-    
-    private String stripDelim(String line, String newDelim) 
+
+    private String stripDelim(String line, String newDelim)
     {
         line = perl.substitute("s/\\|+\\d+\\:+/"+newDelim+"/gi", line);
         if(line.indexOf(";")==0)
@@ -595,43 +606,43 @@ public class EltCombiner extends Combiner {
         }
         return line;
     }
-    
-    /*  
-     *   stripAsterics method is used to 
-     *   remove asterisk from fields cv  and mh 
+
+    /*
+     *   stripAsterics method is used to
+     *   remove asterisk from fields cv  and mh
     */
-    
-    private String stripAsterics(String line) 
+
+    private String stripAsterics(String line)
     {
         line = perl.substitute("s/\\*+//gi", line);
         return line;
     }
-    
-    
-    /*  
-     *   prepareMulti method is overloaded 
+
+
+    /*
+     *   prepareMulti method is overloaded
      *   to achieve additional format functioality:
      *   - for cv it calls stripAsterics method to strip prefix asterisk
      *   - for docTypes it calles eltDocTypes.getMappedDocType(s) to retrieve
-     *   additional doc types values for cross-searches with ev2 data sources 
+     *   additional doc types values for cross-searches with ev2 data sources
     */
-    
+
     private String[] prepareMulti(String multiString) throws Exception
     {
         return prepareMulti(multiString, null);
     }
-    
-    private String[] prepareMulti(String multiString , 
-                                  Constants constant) 
-    throws Exception 
+
+    private String[] prepareMulti(String multiString ,
+                                  Constants constant)
+    throws Exception
     {
         if (multiString != null) {
-            
+
             AuthorStream astream = new AuthorStream(new ByteArrayInputStream(multiString.getBytes()));
             String s = null;
-           
+
             ArrayList list = new ArrayList();
-            while ((s = astream.readAuthor()) != null) 
+            while ((s = astream.readAuthor()) != null)
             {
                 s = s.trim();
                 if (s.length() > 0) {
@@ -654,7 +665,7 @@ public class EltCombiner extends Combiner {
                     else if(constant.equals(Constants.CO))
                     {
                         list.add(CountryFormatter.formatCountry(s));
-                    }     
+                    }
                  }
             }
             return (String[]) list.toArray(new String[1]);
@@ -701,10 +712,10 @@ public class EltCombiner extends Combiner {
         }
 
     }
-    
-    
+
+
     private String formatAffiliation(String result)
-    {        
+    {
 
        if((result.length()==1) && result.equals("."))
        {
@@ -714,9 +725,9 @@ public class EltCombiner extends Combiner {
        {
            result = "";
        }
-        
+
         return result;
     }
-    
-      
+
+
 }
