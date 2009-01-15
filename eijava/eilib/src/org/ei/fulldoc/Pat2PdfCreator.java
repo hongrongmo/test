@@ -75,7 +75,7 @@ public class Pat2PdfCreator {
     if(pat_no.length() == 7) {
       // patent
 
-      log.info("...fetching search results");
+      log.debug("...fetching search results");
       String pat_searchurl = Pat2PdfCreator.pat_Issued_Site_URL + Pat2PdfCreator.pat_Issued_Search_URL + pat_no;
       response = getUrlAsString(pat_searchurl);
       //String response = me.getFileAsString(System.getProperty("java.io.tmpdir") + System.getProperty("file.separator") + "Srch" + pat_no + ".htm");
@@ -85,7 +85,7 @@ public class Pat2PdfCreator {
       {
         // look for <META HTTP-EQUIV="REFRESH" CONTENT="1;URL=/....">
         // and get URL
-        log.info("...parsing search results");
+        log.debug("...parsing search results");
         int url_start = response.indexOf(";URL=");
         int url_end = response.indexOf("\"></HEAD>");
         if((url_start < 0) || (url_end < 0)) {
@@ -95,14 +95,14 @@ public class Pat2PdfCreator {
         String pat_url = response.substring(url_start + 5, url_end);
         String pat_docurl = Pat2PdfCreator.pat_Issued_Site_URL + pat_url;
 
-        log.info("...fetching patent page");
+        log.debug("...fetching patent page");
         response = getUrlAsString(pat_docurl);
         //response = me.getFileAsString(System.getProperty("java.io.tmpdir") + System.getProperty("file.separator")+ "Pat" + pat_no + ".htm");
         //log.info(response);
 
         if(response != null && response.length() != 0)
         {
-          log.info("...parsing patent image URL");
+          log.debug("...parsing patent image URL");
           url_start = response.indexOf("a href=http://patimg");
           url_end = response.indexOf(">",url_start);
           if((url_start < 0) || (url_end < 0)) {
@@ -110,20 +110,20 @@ public class Pat2PdfCreator {
             return false;
           }
           img_docurl = response.substring(url_start + 7, url_end);
-          log.info(img_docurl);
+          //log.info(img_docurl);
 
-          log.info("...parsing patent image server");
+          log.debug("...parsing patent image server");
           url_start = img_docurl.indexOf("http://");
           url_end = img_docurl.indexOf("/.piw?",1);
           image_server = img_docurl.substring(url_start, url_end);
-          log.info(image_server);
+          //log.info(image_server);
         }
       }
     }
     else if (pat_no.length() == 11) {
       // patent application
 
-      log.info("...fetching search results");
+      log.debug("...fetching search results");
       String pat_searchurl = Pat2PdfCreator.pat_Application_Site_URL + Pat2PdfCreator.pat_Application_Search_URL + pat_no;
       //String response = me.getFileAsString(System.getProperty("java.io.tmpdir") + System.getProperty("file.separator") + "Srch" + pat_no + ".htm");
       response = getUrlAsString(pat_searchurl);
@@ -131,7 +131,7 @@ public class Pat2PdfCreator {
 
       if(response != null && response.length() != 0)
       {
-        log.info("...parsing search results");
+        log.debug("...parsing search results");
         int url_start = response.indexOf("HREF=/netacgi/nph-Parser");
         int url_end = response.indexOf(">",url_start);
         String pat_url = response.substring(url_start + 5, url_end);
@@ -140,16 +140,16 @@ public class Pat2PdfCreator {
           return false;
         }
         String pat_docurl = Pat2PdfCreator.pat_Application_Site_URL + pat_url;
-        log.info(pat_docurl);
+        //log.info(pat_docurl);
 
-        log.info("...fetching patent page");
+        log.debug("...fetching patent page");
         response = getUrlAsString(pat_docurl);
         //response = getFileAsString(System.getProperty("java.io.tmpdir") + System.getProperty("file.separator") + "Pat" + pat_no + ".htm");
         //log.info(response);
 
         if(response != null && response.length() != 0)
         {
-          log.info("...parsing patent image URL");
+          log.debug("...parsing patent image URL");
           url_start = response.indexOf("a href=http://aiw");
           url_end = response.indexOf(">",url_start);
           if((url_start < 0) || (url_end < 0)) {
@@ -157,13 +157,13 @@ public class Pat2PdfCreator {
             return false;
           }
           img_docurl = response.substring(url_start + 7, url_end);
-          log.info(img_docurl);
+          //log.info(img_docurl);
 
-          log.info("...parsing patent image server");
+          log.debug("...parsing patent image server");
           url_start = img_docurl.indexOf("http://");
           url_end = img_docurl.indexOf("/.aiw?",1);
           image_server = img_docurl.substring(url_start, url_end);
-          log.info(image_server);
+          //log.info(image_server);
         }
       }
     }
@@ -174,11 +174,11 @@ public class Pat2PdfCreator {
     // generic patent code starts here
     // to continue from here we need img_docurl and image_server
     if(img_docurl != null && image_server != null) {
-      log.info("...fetching images page");
+      log.debug("...fetching images page");
       response = getUrlAsString(img_docurl);
       //response = getFileAsString(System.getProperty("java.io.tmpdir") + System.getProperty("file.separator") + "Img" + pat_no + ".htm");
 
-      log.info("...parsing number of pages in patent");
+      log.debug("...parsing number of pages in patent");
       int pages_start = response.indexOf("-- NumPages=");
       int pages_end = response.indexOf(" --",pages_start);
       String num_pages = response.substring(pages_start + 12, pages_end);
@@ -189,9 +189,9 @@ public class Pat2PdfCreator {
         log.error("Cannot parse page count! Patent No: " + pat_no);
         page_count = 0;
       }
-      log.info("[" + page_count + "]");
+      log.debug("[" + page_count + "]");
 
-      log.info("...parsing path to first pages of patent");
+      log.debug("...parsing path to first pages of patent");
       int url_start = response.indexOf("<embed src=\"/.DImg?");
       int url_end = response.indexOf("\" width",url_start);
       if((url_start < 0) || (url_end < 0)) {
@@ -203,19 +203,23 @@ public class Pat2PdfCreator {
 
       if(page_count != 0)
       {
-        log.info("...fetching patent image pages");
         List tiffs = new ArrayList();
-        for(int tiff_index=1; tiff_index <= page_count; tiff_index++) {
-          String tiff_imgurl = image_server + tiff_docurl.replaceAll("PageNum=\\d+", "PageNum=" + tiff_index);
-          String tiff_file_path = System.getProperty("java.io.tmpdir") + System.getProperty("file.separator") + "Pat" + pat_no + "Page" + tiff_index + ".tif";
-          log.info(tiff_imgurl + ", " + tiff_file_path);
-
-          if(saveUrlAsFile(tiff_imgurl, new File(tiff_file_path))) {
-            tiffs.add(tiff_file_path);
+        try {
+          log.debug("...fetching patent image pages");
+          for(int tiff_index=1; tiff_index <= page_count; tiff_index++) {
+            String tif_imgurl = image_server + tiff_docurl.replaceAll("PageNum=\\d+", "PageNum=" + tiff_index);
+              File tif_file = File.createTempFile("pat",".tif");
+              log.info(tif_imgurl + ", " + tif_file.getPath());
+              if(saveUrlAsFile(tif_imgurl, tif_file)) {
+                tiffs.add(tif_file.getPath());
+              }
           }
+        } catch(IOException e) {
+          result = false;
+          tiffs.clear();
         }
 
-        log.info("...combining patent image pages to pdf");
+        log.debug("...combining patent image pages to pdf");
         if(tiffs.size() != 0) {
           try {
             String pdfpath = System.getProperty("java.io.tmpdir") + System.getProperty("file.separator") + "Pat" + pat_no + ".pdf";
