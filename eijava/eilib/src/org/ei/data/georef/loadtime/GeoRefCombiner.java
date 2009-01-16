@@ -112,23 +112,23 @@ public class GeoRefCombiner
 
   }
 
-  public static int getResultSetSize(ResultSet resultSet) 
+  public static int getResultSetSize(ResultSet resultSet)
   {
 	    int size = -1;
-	    try 
+	    try
 	    {
 	        resultSet.last();
 	        size = resultSet.getRow();
 	        resultSet.beforeFirst();
-	    } 
-	    catch(SQLException e) 
+	    }
+	    catch(SQLException e)
 	    {
 	        return size;
 	    }
 
 	    return size;
   }
-  
+
   public void writeCombinedByWeekHook(Connection con,
                                       int weekNumber)
                                       throws Exception
@@ -138,7 +138,7 @@ public class GeoRefCombiner
 
     try
     {
-      stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);      
+      stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
       String sqlQuery = "select * from " + Combiner.TABLENAME + " where load_number ='" + weekNumber + "' AND load_number != 0 and load_number < 1000000";
       //String sqlQuery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7fcd2061377551'";
       //String sqlQuery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7fcd2061377551' or m_id='grf_1ee3914119594abb20M7fc72061377551'";
@@ -204,6 +204,7 @@ public class GeoRefCombiner
       //String sqlquery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7fcd2061377551' or m_id='grf_1ee3914119594abb20M7fc72061377551'";
       //String sqlquery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7ff02061377551'";
       //String sqlquery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M80002061377551'";
+      //String sqlquery = "select * from " + Combiner.TABLENAME + " where m_id='grf_e5855a1195a1d697f21ee2061377551'";
       rs = stmt.executeQuery(sqlquery);
       int rsCount = getResultSetSize(rs);
       if(rsCount > 0)
@@ -465,8 +466,10 @@ public class GeoRefCombiner
 					}
 					if(termcoordinates.length == 2)
 					{
-
-					  geoterms.add(termcoordinates[0]);
+					  if(!termcoordinates[0].matches("\\d+"))
+					  {
+						  geoterms.add(termcoordinates[0]);
+					  }
 					  coords = parseCoordinates(termcoordinates[1]);
 					  if(coords != null &&  coords[4].indexOf("-") == -1 && coords[3].indexOf("-") != -1)
 				      {
