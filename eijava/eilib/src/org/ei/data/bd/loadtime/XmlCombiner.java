@@ -13,6 +13,7 @@ import org.ei.data.*;
 import org.ei.data.bd.*;
 import org.ei.data.bd.loadtime.*;
 import org.ei.data.georef.loadtime.*;
+import org.ei.data.georef.runtime.*;
 
 import java.io.*;
 import org.ei.util.GUID;
@@ -24,10 +25,8 @@ public class XmlCombiner
 	public static final String AUDELIMITER    = new String(new char[] {30});
     public static final String IDDELIMITER    = new String(new char[] {29});
     public static final String GROUPDELIMITER   = new String(new char[] {02});
-    
-    Perl5Util perl = new Perl5Util();
 
-    private int exitNumber;
+    Perl5Util perl = new Perl5Util();
 
     private static String tablename;
 
@@ -59,24 +58,26 @@ public class XmlCombiner
         String username = args[2];
         String password = args[3];
         int loadNumber = Integer.parseInt(args[4]);
-        int recsPerfile = Integer.parseInt(args[5]);
-        int exitAt = Integer.parseInt(args[6]);
+        int recsPerbatch = Integer.parseInt(args[5]);
+        String operation = args[6];
         tablename = args[7];
+        String environment = args[8].toLowerCase();
         long timestamp=0l;
-        if(args.length==9)
-            timestamp = Long.parseLong(args[8]);
+        //if(args.length==9)
+            //timestamp = Long.parseLong(args[8]);
 
         Combiner.TABLENAME = tablename;
-        Combiner.EXITNUMBER = exitAt;
         System.out.println(Combiner.TABLENAME);
         System.out.println("TEST");
 
-        String dbname = "cpx";
+        String dbname = "geo";
         if (timestamp > 0)
             dbname=dbname+"cor";
-        CombinedWriter writer = new CombinedXMLWriter(recsPerfile,
+        CombinedWriter writer = new CombinedXMLWriter(recsPerbatch,
                                                       loadNumber,
-                                                      dbname);
+                                                      dbname, environment);
+
+        writer.setOperation(operation);
 
         XmlCombiner c = new XmlCombiner(writer);
         if (timestamp==0 && (loadNumber > 3000 || loadNumber < 1000))
@@ -111,7 +112,6 @@ public class XmlCombiner
         try
         {
 
-            this.writer.begin();
             stmt = con.createStatement();
             System.out.println("Running the query...");
             rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER,PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER from " + Combiner.TABLENAME + " where PUBLICATIONYEAR ='" + year + "' AND loadnumber != 0 and loadnumber < 1000000");
@@ -119,6 +119,7 @@ public class XmlCombiner
             writeRecs(rs);
             System.out.println("Wrote records.");
             this.writer.end();
+            this.writer.flush();
 
         }
         finally
@@ -159,12 +160,6 @@ public class XmlCombiner
         {
             EVCombinedRec rec = new EVCombinedRec();
             ++i;
-
-			//System.out.println("Combiner.EXITNUMBER= "+Combiner.EXITNUMBER);
-            if (Combiner.EXITNUMBER != 0 && i > Combiner.EXITNUMBER)
-            {
-                break;
-            }
 
             if (validYear(rs.getString("PUBLICATIONYEAR")))
             {
@@ -242,21 +237,42 @@ public class XmlCombiner
 				{
 					 String regionalterm = rs.getString("REGIONALTERM");
 					 String[] geobasemaintermsrgi = regionalterm.split(AUDELIMITER);
+					 String[] coords = null;
 				     rec.put(EVCombinedRec.CHEMICALTERMS, prepareMulti(regionalterm));
 				     List navigatorterms = new ArrayList();
 	                 GeobaseToGeorefMap lookup = GeobaseToGeorefMap.getInstance();
+
+
 	                 for(int termindex = 0; termindex < geobasemaintermsrgi.length; termindex++)
 	                 {
 	                	 String georefterm = lookup.lookupGeobaseTerm(geobasemaintermsrgi[termindex]);
 	                	 if(georefterm != null)
-	                	 {	                      
+	                	 {
 	                		 navigatorterms.add(georefterm);
-	                	 }
+
+	                		 if(rs.getString("DATABASE").equals("geo"))
+	                		 {
+	                		   GeoRefBoxMap coordLookup = GeoRefBoxMap.getInstance();
+                               String coordString = coordLookup.lookupGeoRefTermCoordinates(georefterm.trim());
+                               if(coordString != null)
+                               {
+                                 coords = parseCoordinates(coordString);
+					             rec.put(EVCombinedRec.LAT_SE, coords[1]);
+					             rec.put(EVCombinedRec.LAT_NW, coords[2]);
+					             rec.put(EVCombinedRec.LNG_SE, coords[3]);
+					             rec.put(EVCombinedRec.LNG_NW, coords[4]);
+					             rec.put(EVCombinedRec.LAT_NE, coords[2]);
+					             rec.put(EVCombinedRec.LNG_NE, coords[3]);
+					             rec.put(EVCombinedRec.LAT_SW, coords[1]);
+					             rec.put(EVCombinedRec.LNG_SW, coords[4]);
+					           }
+	                	     }
+					     }
 	                 }
 	                 if(!navigatorterms.isEmpty())
 	                 {
 	                    rec.putIfNotNull(EVCombinedRec.INT_PATENT_CLASSIFICATION, (String[])navigatorterms.toArray(new String[]{}));
-	                 }	                 
+	                 }
                 }
 
                 if (rs.getString("CHEMICALTERM") != null)
@@ -467,12 +483,12 @@ public class XmlCombiner
 				{
                 	rec.put(EVCombinedRec.PUI,rs.getString("PUI"));
 				}
-				
+
 				if (rs.getString("ASSIG") != null)
                 {
                     rec.put(EVCombinedRec.COMPANIES, prepareMulti(rs.getString("ASSIG")));
                 }
-				
+
 				if (rs.getString("CASREGISTRYNUMBER") != null)
                 {
                     rec.put(EVCombinedRec.CASREGISTRYNUMBER, prepareMulti(rs.getString("CASREGISTRYNUMBER")));
@@ -834,6 +850,33 @@ public class XmlCombiner
 
         return temp;
     }
+
+    private String[] parseCoordinates(String cs) throws Exception
+    {
+	    cs = cs.replaceAll("[^a-zA-Z0-9]", "");
+		String coordString = cs.trim().replaceAll("([NEWS])","-$1");
+
+		String[] coords = coordString.split("-");
+		for(int i=1;i< 5;i++)
+		{
+			if(coords[i].length() < 7)
+			{
+				int padCount = 8 - coords[i].length();
+				for(int p=0;p < padCount;p++)
+					coords[i] += "0";
+			}
+
+			coords[i] = coords[i].replaceAll("[NE]","+").substring(0,coords[i].length()-4).replaceAll("\\+","");
+			coords[i] = coords[i].replaceAll("[WS]","-");
+			if(coords[i].substring(0,1).indexOf("-") != -1)
+				coords[i] = coords[i].replaceAll("^(-)0{1,2}(.*?)","$1$2");
+			else
+				coords[i] = coords[i].replaceAll("^0{1,2}(.*?)","$1");
+		}
+
+		return coords;
+    }
+
     public void writeCombinedByTimestampHook(Connection con, long timestamp) throws Exception
     {
             Statement stmt = null;
@@ -842,12 +885,12 @@ public class XmlCombiner
             try
             {
 
-                this.writer.begin();
                 stmt = con.createStatement();
                 rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER,PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER from " + Combiner.TABLENAME + " where loadnumber != 0 and loadnumber < 1000000");
 				System.out.println("Got records1 ...");
                 writeRecs(rs);
                 this.writer.end();
+                this.writer.flush();
 
             }
             finally
@@ -888,13 +931,13 @@ public class XmlCombiner
 
         try
         {
-            this.writer.begin();
             stmt = con.createStatement();
             rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE, CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER,PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER from " + Combiner.TABLENAME + " where loadnumber =" + weekNumber +" AND loadnumber != 0 and loadnumber < 1000000");
 			System.out.println("Got records2 ...");
 
             writeRecs(rs);
             this.writer.end();
+            this.writer.flush();
 
         }
         finally
