@@ -12,7 +12,7 @@ import org.apache.oro.text.regex.MatchResult;
 import org.ei.data.*;
 import org.ei.data.bd.*;
 import org.ei.data.bd.loadtime.*;
-
+import org.ei.data.georef.loadtime.*;
 
 import java.io.*;
 import org.ei.util.GUID;
@@ -21,6 +21,10 @@ public class XmlCombiner
     extends CombinerTimestamp
 {
 
+	public static final String AUDELIMITER    = new String(new char[] {30});
+    public static final String IDDELIMITER    = new String(new char[] {29});
+    public static final String GROUPDELIMITER   = new String(new char[] {02});
+    
     Perl5Util perl = new Perl5Util();
 
     private int exitNumber;
@@ -236,7 +240,23 @@ public class XmlCombiner
 
 				if (rs.getString("REGIONALTERM") != null)
 				{
-				     rec.put(EVCombinedRec.CHEMICALTERMS, prepareMulti(rs.getString("REGIONALTERM")));
+					 String regionalterm = rs.getString("REGIONALTERM");
+					 String[] geobasemaintermsrgi = regionalterm.split(AUDELIMITER);
+				     rec.put(EVCombinedRec.CHEMICALTERMS, prepareMulti(regionalterm));
+				     List navigatorterms = new ArrayList();
+	                 GeobaseToGeorefMap lookup = GeobaseToGeorefMap.getInstance();
+	                 for(int termindex = 0; termindex < geobasemaintermsrgi.length; termindex++)
+	                 {
+	                	 String georefterm = lookup.lookupGeobaseTerm(geobasemaintermsrgi[termindex]);
+	                	 if(georefterm != null)
+	                	 {	                      
+	                		 navigatorterms.add(georefterm);
+	                	 }
+	                 }
+	                 if(!navigatorterms.isEmpty())
+	                 {
+	                    rec.putIfNotNull(EVCombinedRec.INT_PATENT_CLASSIFICATION, (String[])navigatorterms.toArray(new String[]{}));
+	                 }	                 
                 }
 
                 if (rs.getString("CHEMICALTERM") != null)
