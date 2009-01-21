@@ -31,9 +31,6 @@
 	<xsl:value-of select="/PAGE/DBMASK"/>
 </xsl:variable>
 
-<xsl:variable name="REFEMAIL">
-	<xsl:value-of select="REFEMAIL"/>
-</xsl:variable>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -692,7 +689,9 @@ function MM_nbGroup(event, grpName) { //v6.0
             <li class="style1">&ldquo;Can you help me find the Journal of Constructional Steel Research?&rdquo;</li>
             <li class="style1">&ldquo;I&rsquo;d like to do a detailed search on coercive force and material composition but I need assistance.&rdquo;</li>
           </ol>
-          <p align="center"><a href="javascript:emailFormat('$SESSIONID','three');"><img src="/engresources/images/ae/email_Librarian.gif" alt="Email a Librarian" width="124" height="14" border="0"/></a></p>
+          <p align="center">
+            <xsl:apply-templates select="ASKALIBRARIAN"/>
+          </p>
         </td>
       </tr>
     </table>
@@ -722,6 +721,16 @@ pageTracker._trackPageview();
 </html>
 
 </xsl:template>
+
+<xsl:template match="REFLINK">
+    <a target="_blank">
+      <xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
+    Contact your Librarian</a>
+</xsl:template>
+<xsl:template match="REFEMAIL">
+    <a href="javascript:emailFormat('$SESSIONID','three');"><img src="/engresources/images/ae/email_Librarian.gif" alt="Email a Librarian" width="124" height="14" border="0"/></a>
+</xsl:template>
+
 
 <!-- template for author name links -->
 <xsl:template match="GURU">
