@@ -1985,50 +1985,89 @@ public class Query implements Comparable
 
         out.write("<SESSION-DATA>");
         out.write("<EMAILALERTWEEK>");
-        out.write(strEmailAlertWeek);
+        if(strEmailAlertWeek != null)
+        {
+          out.write(strEmailAlertWeek);
+        }
         out.write("</EMAILALERTWEEK>");
         out.write("<SEARCH-PHRASE>");
-        out.write(sPhrase);
+        if(sPhrase != null)
+        {
+          out.write(sPhrase);
+        }
         out.write("</SEARCH-PHRASE>");
         out.write("<RESULTS-COUNT>");
-        out.write(getRecordCount());
+        if(getRecordCount() != null)
+        {
+          out.write(getRecordCount());
+        }
         out.write("</RESULTS-COUNT>");
         out.write("<LANGUAGE>");
-        out.write(getLanguage());
+        if(getLanguage() != null)
+        {
+          out.write(getLanguage());
+        }
         out.write("</LANGUAGE>");
         out.write("<START-YEAR>");
-        out.write(getStartYear());
+        if(getStartYear() != null)
+        {
+          out.write(getStartYear());
+        }
         out.write("</START-YEAR>");
         out.write("<END-YEAR>");
-        out.write(getEndYear());
+        if(getAutoStemming() != null)
+        {
+          out.write(getAutoStemming());
+        }
         out.write("</END-YEAR>");
         out.write("<DATABASE-MASK>");
         out.write(String.valueOf(mask));
         out.write("</DATABASE-MASK>");
         out.write("<AUTOSTEMMING>");
-        out.write(getAutoStemming());
+        if(getAutoStemming() != null)
+        {
+          out.write(getAutoStemming());
+        }
         out.write("</AUTOSTEMMING>");
 
         // jam - sort object contains XML representation of sort fields
-        out.write(getSortOption().toXML());
+        if(getSortOption() != null)
+        {
+          out.write(getSortOption().toXML());
+        }
 
         out.write("<SEARCH-TYPE>");
-        out.write(getSearchType());
+        if(getSearchType() != null)
+        {
+          out.write(getSearchType());
+        }
         out.write("</SEARCH-TYPE>");
 
         //jam - added properties which were being 'inserted' in SavedSearches class
         // getXMLSavedSearches() method
         out.write("<SAVEDSEARCH>");
-        out.write(getSavedSearch());
+        if(getSavedSearch() != null)
+        {
+          out.write(getSavedSearch());
+        }
         out.write("</SAVEDSEARCH>");
         out.write("<SAVEDSEARCH-DATE>");
-        out.write(getDisplaySavedDate());
+        if(getDisplaySavedDate() != null)
+        {
+          out.write(getDisplaySavedDate());
+        }
         out.write("</SAVEDSEARCH-DATE>");
         out.write("<EMAIL-ALERT>");
-        out.write(getEmailAlert());
+        if(getEmailAlert() != null)
+        {
+          out.write(getEmailAlert());
+        }
         out.write("</EMAIL-ALERT>");
         out.write("<CC-LIST>");
-        out.write(getCCList());
+        if(getCCList() != null)
+        {
+          out.write(getCCList());
+        }
         out.write("</CC-LIST>");
         out.write("<VISIBLE>");
         if(getVisible() != null) {
@@ -2042,20 +2081,44 @@ public class Query implements Comparable
         }
         out.write("</USER-ID>");
         out.write("<SESSION-ID>");
-        out.write(getSessionID());
+        if(getSessionID() != null)
+        {
+          out.write(getSessionID());
+        }
         out.write("</SESSION-ID>");
         out.write("<QUERY-ID>");
-        out.write(getID());
+        if(getID() != null)
+        {
+          out.write(getID());
+        }
         out.write("</QUERY-ID>");
         out.write("<DISPLAY-QUERY>");
-        out.write("<![CDATA[");
-        out.write((getSearchType().equals(TYPE_EASY) ? getIntermediateQuery() : getDisplayQuery()));
-        out.write("]]>");
+        if(getSearchType() != null)
+        {
+          out.write("<![CDATA[");
+          if(getSearchType().equals(TYPE_EASY))
+          {
+            if(getIntermediateQuery() != null)
+            {
+              out.write(getIntermediateQuery());
+            }
+          }
+          else {
+            if(getDisplayQuery() != null)
+            {
+              out.write(getDisplayQuery());
+            }
+          }
+          out.write("]]>");
+        }
         out.write("</DISPLAY-QUERY>");
         out.write("<I-QUERY>");
-        out.write("<![CDATA[");
-        out.write(getIntermediateQuery());
-        out.write("]]>");
+        if(getIntermediateQuery() != null)
+        {
+          out.write("<![CDATA[");
+          out.write(getIntermediateQuery());
+          out.write("]]>");
+        }
         out.write("</I-QUERY>");
 
         if(getReferexCollections() != null)
@@ -2064,18 +2127,33 @@ public class Query implements Comparable
         }
 
         out.write("<DOCUMENT-TYPE>");
-        out.write(getDocumentType());
+        if(getDocumentType() != null)
+        {
+          out.write(getDocumentType());
+        }
         out.write("</DOCUMENT-TYPE>");
         out.write("<TREATMENT-TYPE>");
-        out.write(getTreatmentType());
+        if(getTreatmentType() != null)
+        {
+          out.write(getTreatmentType());
+        }
         out.write("</TREATMENT-TYPE>");
         out.write("<DISCIPLINE-TYPE>");
-        out.write(getDisciplineType());
+        if(getDisciplineType() != null)
+        {
+          out.write(getDisciplineType());
+        }
         out.write("</DISCIPLINE-TYPE>");
         out.write("<LASTFOURUPDATES>");
-        out.write(getLastFourUpdates());
+        if(getLastFourUpdates() != null)
+        {
+          out.write(getLastFourUpdates());
+        }
         out.write("</LASTFOURUPDATES>");
-        out.write(getSubcountXML());
+        if(getSubcountXML() != null)
+        {
+          out.write(getSubcountXML());
+        }
         out.write("<DUPSET>");
 
         for(int i = 0; i < dupSet.size(); i++)
@@ -2096,13 +2174,22 @@ public class Query implements Comparable
         }
         out.write("</DUPSET>");
         out.write("<DEDUP>");
-        out.write(isDeDupString());
+        if(isDeDupString() != null)
+        {
+          out.write(isDeDupString());
+        }
         out.write("</DEDUP>");
         out.write("<DEDUPDB>");
-        out.write(getDeDupDB());
+        if(getDeDupDB() != null)
+        {
+          out.write(getDeDupDB());
+        }
         out.write("</DEDUPDB>");
 
-        out.write(getRefinements().toXML());
+        if(getRefinements() != null)
+        {
+          out.write(getRefinements().toXML());
+        }
         out.write("</SESSION-DATA>");
 
       return;
