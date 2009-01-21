@@ -33,7 +33,7 @@
 	boolean  isPersonalizationPresent=true;
 	String customizedLogo="";
 
-	String refEmail = "";
+	String refEmail = "engineeringlibrarian@ei.org";
 
 	if(request.getParameter("database") != null)
 	{
@@ -93,11 +93,13 @@
 <CUSTOMIZED-LOGO><%=customizedLogo%></CUSTOMIZED-LOGO>
 <PERSONALIZATION-PRESENT><%=isPersonalizationPresent%></PERSONALIZATION-PRESENT>
 <PERSONALIZATION><%=personalization%></PERSONALIZATION>
+<ASKALIBRARIAN>
 <% if(refEmail.startsWith("http") || refEmail.startsWith("javascript")) { %>
 <REFLINK><![CDATA[<%=refEmail%>]]></REFLINK>
 <% } else { %>
 <REFEMAIL><![CDATA[<%=refEmail%>]]></REFEMAIL>
 <% }  %>
+</ASKALIBRARIAN>
 <HEADER/>
 <%=	strGlobalLinksXML %>
 <FOOTER/>
