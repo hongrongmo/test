@@ -93,7 +93,11 @@
 <CUSTOMIZED-LOGO><%=customizedLogo%></CUSTOMIZED-LOGO>
 <PERSONALIZATION-PRESENT><%=isPersonalizationPresent%></PERSONALIZATION-PRESENT>
 <PERSONALIZATION><%=personalization%></PERSONALIZATION>
-<REFEMAIL><%=refEmail%></REFEMAIL>
+<% if(refEmail.startsWith("http") || refEmail.startsWith("javascript")) { %>
+<REFLINK><![CDATA[<%=refEmail%>]]></REFLINK>
+<% } else { %>
+<REFEMAIL><![CDATA[<%=refEmail%>]]></REFEMAIL>
+<% }  %>
 <HEADER/>
 <%=	strGlobalLinksXML %>
 <FOOTER/>
