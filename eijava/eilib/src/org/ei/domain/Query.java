@@ -2015,9 +2015,9 @@ public class Query implements Comparable
         }
         out.write("</START-YEAR>");
         out.write("<END-YEAR>");
-        if(getAutoStemming() != null)
+        if(getEndYear() != null)
         {
-          out.write(getAutoStemming());
+          out.write(getEndYear());
         }
         out.write("</END-YEAR>");
         out.write("<DATABASE-MASK>");
