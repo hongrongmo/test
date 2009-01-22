@@ -16,6 +16,7 @@ import org.ei.data.georef.loadtime.*;
 import org.ei.data.georef.runtime.*;
 
 import java.io.*;
+import java.util.Vector;
 import org.ei.util.GUID;
 
 public class XmlCombiner
@@ -25,6 +26,7 @@ public class XmlCombiner
 	public static final String AUDELIMITER    = new String(new char[] {30});
     public static final String IDDELIMITER    = new String(new char[] {29});
     public static final String GROUPDELIMITER   = new String(new char[] {02});
+    public String[] EVCombinedRecKeys = {EVCombinedRec.AUTHOR, EVCombinedRec.AUTHOR_AFFILIATION, EVCombinedRec.AFFILIATION_LOCATION, EVCombinedRec.COUNTRY, EVCombinedRec.EDITOR, EVCombinedRec.TITLE, EVCombinedRec.TRANSLATED_TITLE, EVCombinedRec.VOLUME_TITLE, EVCombinedRec.ABSTRACT, EVCombinedRec.CONTROLLED_TERMS, EVCombinedRec.UNCONTROLLED_TERMS, EVCombinedRec.CHEMICALTERMS, EVCombinedRec.INT_PATENT_CLASSIFICATION, EVCombinedRec.ISSN, EVCombinedRec.CODEN, EVCombinedRec.ISBN, EVCombinedRec.SERIAL_TITLE, EVCombinedRec.MAIN_HEADING, EVCombinedRec.PUBLISHER_NAME, EVCombinedRec.TREATMENT_CODE, EVCombinedRec.LANGUAGE, EVCombinedRec.DOCTYPE, EVCombinedRec.CLASSIFICATION_CODE, EVCombinedRec.CONFERENCE_CODE, EVCombinedRec.CONFERENCE_NAME, EVCombinedRec.CONFERENCE_LOCATION, EVCombinedRec.MEETING_DATE, EVCombinedRec.SPONSOR_NAME, EVCombinedRec.CONFERENCEAFFILIATIONS, EVCombinedRec.CONFERENCEEDITORS, EVCombinedRec.CONFERENCEPARTNUMBER, EVCombinedRec.CONFERENCEPAGERANGE, EVCombinedRec.CONFERENCENUMBERPAGES, EVCombinedRec.MONOGRAPH_TITLE, EVCombinedRec.DATABASE, EVCombinedRec.LOAD_NUMBER, EVCombinedRec.PUB_YEAR, EVCombinedRec.DEDUPKEY, EVCombinedRec.VOLUME, EVCombinedRec.ISSUE, EVCombinedRec.STARTPAGE, EVCombinedRec.ACCESSION_NUMBER, EVCombinedRec.REPORTNUMBER, EVCombinedRec.DOI, EVCombinedRec.COPYRIGHT, EVCombinedRec.PII, EVCombinedRec.PUI, EVCombinedRec.COMPANIES, EVCombinedRec.CASREGISTRYNUMBER, EVCombinedRec.PUB_SORT};
 
     Perl5Util perl = new Perl5Util();
 
@@ -155,11 +157,38 @@ public class XmlCombiner
         throws Exception
     {
         int i = 0;
-
+		EVCombinedRec recSecondBox = null;
+	    EVCombinedRec[] recArray = null;
+	    boolean isGeoBase = false;
         while (rs.next())
         {
-            EVCombinedRec rec = new EVCombinedRec();
-            ++i;
+          ++i;
+          String firstGUID = "";
+          int numCoords = 0;
+          int coordCount = 0;
+	  	  if(rs.getString("DATABASE").equals("geo"))
+	      {
+		    	 isGeoBase = true;
+		  }
+          String sts = rs.getString("REGIONALTERM");
+          if(sts == null || !isGeoBase)
+          {
+          	numCoords = 1;
+		  }
+		  else
+		  {
+          	String[] tc = sts.split(GRFDocBuilder.AUDELIMITER);
+          	numCoords = tc.length;
+	  	  }
+
+	  	  //System.out.println("NUMCOORDS: " + numCoords);
+	  	  Vector recVector = new Vector();
+          for(int currentCoord = 0; currentCoord < numCoords; currentCoord++)
+          {
+			String[] coords = null;
+			String[] secondBoxCoords= null;
+			coordCount++;
+			EVCombinedRec rec = new EVCombinedRec();
 
             if (validYear(rs.getString("PUBLICATIONYEAR")))
             {
@@ -237,34 +266,43 @@ public class XmlCombiner
 				{
 					 String regionalterm = rs.getString("REGIONALTERM");
 					 String[] geobasemaintermsrgi = regionalterm.split(AUDELIMITER);
-					 String[] coords = null;
 				     rec.put(EVCombinedRec.CHEMICALTERMS, prepareMulti(regionalterm));
 				     List navigatorterms = new ArrayList();
 	                 GeobaseToGeorefMap lookup = GeobaseToGeorefMap.getInstance();
 
-
-	                 for(int termindex = 0; termindex < geobasemaintermsrgi.length; termindex++)
+	                 for(int j = 0; j < geobasemaintermsrgi.length; j++)
 	                 {
-	                	 String georefterm = lookup.lookupGeobaseTerm(geobasemaintermsrgi[termindex]);
+	                	 String georefterm = lookup.lookupGeobaseTerm(geobasemaintermsrgi[j]);
 	                	 if(georefterm != null)
 	                	 {
 	                		 navigatorterms.add(georefterm);
 
-	                		 if(rs.getString("DATABASE").equals("geo"))
+	                		 if(isGeoBase)
 	                		 {
 	                		   GeoRefBoxMap coordLookup = GeoRefBoxMap.getInstance();
                                String coordString = coordLookup.lookupGeoRefTermCoordinates(georefterm.trim());
                                if(coordString != null)
                                {
                                  coords = parseCoordinates(coordString);
-					             rec.put(EVCombinedRec.LAT_SE, coords[1]);
-					             rec.put(EVCombinedRec.LAT_NW, coords[2]);
-					             rec.put(EVCombinedRec.LNG_SE, coords[3]);
-					             rec.put(EVCombinedRec.LNG_NW, coords[4]);
-					             rec.put(EVCombinedRec.LAT_NE, coords[2]);
-					             rec.put(EVCombinedRec.LNG_NE, coords[3]);
-					             rec.put(EVCombinedRec.LAT_SW, coords[1]);
-					             rec.put(EVCombinedRec.LNG_SW, coords[4]);
+
+                                 if(coords != null &&  coords[4].indexOf("-") == -1 && coords[3].indexOf("-") != -1)
+							     {
+								   secondBoxCoords = parseCoordinates(coordString);
+								   //System.out.println(secondBoxCoords[1] + "," + secondBoxCoords[2] + "," + secondBoxCoords[3] + "," + secondBoxCoords[4]);
+								   coords[3] = "180";
+								   recSecondBox = new EVCombinedRec();
+		                         }
+								 if(j == currentCoord)
+								 {
+					               rec.put(EVCombinedRec.LAT_SE, coords[1]);
+					               rec.put(EVCombinedRec.LAT_NW, coords[2]);
+					               rec.put(EVCombinedRec.LNG_SE, coords[3]);
+					               rec.put(EVCombinedRec.LNG_NW, coords[4]);
+					               rec.put(EVCombinedRec.LAT_NE, coords[2]);
+					               rec.put(EVCombinedRec.LNG_NE, coords[3]);
+					               rec.put(EVCombinedRec.LAT_SW, coords[1]);
+					               rec.put(EVCombinedRec.LNG_SW, coords[4]);
+							     }
 					           }
 	                	     }
 					     }
@@ -496,9 +534,65 @@ public class XmlCombiner
 
                 rec.put(EVCombinedRec.PUB_SORT, Integer.toString(i));
 
-                this.writer.writeRec(rec);
+				if(currentCoord == 0)
+				{
+					firstGUID = rs.getString("M_ID");
+				}
+				if(numCoords == 1)
+				{
+					rec.putIfNotNull(EVCombinedRec.DOCID, firstGUID);
+				}
+				else
+				{
+					rec.putIfNotNull(EVCombinedRec.DOCID, firstGUID + "_" + (coordCount));
+
+				}
+
+				try
+				{
+		          if(!isGeoBase || (isGeoBase && rec.get(EVCombinedRec.LAT_SE) != null))
+		          {
+					  recVector.add(rec);
+					  if(recSecondBox != null)
+					  {
+
+						if(secondBoxCoords != null)
+						{
+							coordCount++;
+							for(int b = 0; b < EVCombinedRecKeys.length; b++)
+							{
+								Object recTemp = rec.get(EVCombinedRecKeys[b]);
+								if(recTemp != null)
+								{
+									recSecondBox.put(EVCombinedRecKeys[b],rec.get(EVCombinedRecKeys[b]));
+								}
+							}
+							secondBoxCoords[4] = "-180";
+							recSecondBox.put(EVCombinedRec.LAT_SE, secondBoxCoords[1]);
+							recSecondBox.put(EVCombinedRec.LAT_NW, secondBoxCoords[2]);
+							recSecondBox.put(EVCombinedRec.LNG_SE, secondBoxCoords[3]);
+							recSecondBox.put(EVCombinedRec.LNG_NW, secondBoxCoords[4]);
+							recSecondBox.put(EVCombinedRec.LAT_NE, secondBoxCoords[2]);
+							recSecondBox.put(EVCombinedRec.LNG_NE, secondBoxCoords[3]);
+							recSecondBox.put(EVCombinedRec.LAT_SW, secondBoxCoords[1]);
+							recSecondBox.put(EVCombinedRec.LNG_SW, secondBoxCoords[4]);
+							recSecondBox.putIfNotNull(EVCombinedRec.DOCID, firstGUID + "_" + (coordCount));
+							recVector.add(recSecondBox);
+						}
+					  }
+			   	  }
+				}
+
+				catch(Exception e)
+				{
+				  System.out.println("MID = " + rs.getString("M_ID"));
+				  e.printStackTrace();
+				}
             }
 
+            recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
+		    this.writer.writeRec(recArray);
+	      }
         }
     }
 
@@ -859,6 +953,7 @@ public class XmlCombiner
 		String[] coords = coordString.split("-");
 		for(int i=1;i< 5;i++)
 		{
+			System.out.println("ONE: " + coords[i]);
 			if(coords[i].length() < 7)
 			{
 				int padCount = 8 - coords[i].length();
@@ -868,10 +963,28 @@ public class XmlCombiner
 
 			coords[i] = coords[i].replaceAll("[NE]","+").substring(0,coords[i].length()-4).replaceAll("\\+","");
 			coords[i] = coords[i].replaceAll("[WS]","-");
+			System.out.println("TWO: " + coords[i]);
 			if(coords[i].substring(0,1).indexOf("-") != -1)
 				coords[i] = coords[i].replaceAll("^(-)0{1,2}(.*?)","$1$2");
 			else
 				coords[i] = coords[i].replaceAll("^0{1,2}(.*?)","$1");
+
+			int m = Integer.parseInt(coords[i]);
+            if(i < 3)
+            {
+			  if(m > 90)
+			    coords[i] = coords[i].substring(0,2);
+			  if(m < -90)
+			    coords[i] = coords[i].substring(0,3);
+		    }
+		    else
+		    {
+				if(m > 180)
+			      coords[i] = coords[i].substring(0,2);
+				if(m < -180)
+			      coords[i] = coords[i].substring(0,3);
+			}
+			System.out.println("THREE: " + coords[i]);
 		}
 
 		return coords;
