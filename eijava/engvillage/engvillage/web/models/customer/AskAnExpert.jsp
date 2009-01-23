@@ -44,7 +44,7 @@
     String userId = null;
     SessionID sessionIdObj = null;
 
-    boolean share = true;
+    boolean showShareCheckbox = true;
 
     // This variable is used to hold ControllerClient instance
     ControllerClient client = new ControllerClient(request, response);
@@ -116,9 +116,9 @@
       }
       if(clientCustomizer.getRefEmail() != null && clientCustomizer.getRefEmail().length()>0)
       {
-        share = false;
+        showShareCheckbox = false;
       }
-      out.write("<SHARE>"+String.valueOf(share)+"</SHARE>");
+      out.write("<SHARE>"+String.valueOf(showShareCheckbox)+"</SHARE>");
     }
     else if(action.equalsIgnoreCase("send"))
     {
@@ -141,8 +141,9 @@
         if(clientCustomizer.getRefEmail() != null && clientCustomizer.getRefEmail().length()>0)
         {
           refEmail = clientCustomizer.getRefEmail();
+          showShareCheckbox = false;
         }
-        log("refEmail: " + refEmail);
+        //log("refEmail: " + refEmail);
 
         recipients.add(refEmail);
       }
@@ -194,12 +195,15 @@
         messagebody.write(guru);
         messagebody.write("\n");
       }
-      messagebody.write("Share: ");
-      if(!share_question.equalsIgnoreCase("on")) {
-        messagebody.write(" User has requested we DO NOT share this question.");
-      }
-      else {
-        messagebody.write(" Anonymously share this question and response with other Engineering Village users");
+      if(showShareCheckbox)
+      {
+        messagebody.write("Share: ");
+        if(!share_question.equalsIgnoreCase("on")) {
+          messagebody.write(" User has requested we DO NOT share this question.");
+        }
+        else {
+          messagebody.write(" Anonymously share this question and response with other Engineering Village users");
+        }
       }
       messagebody.write("\n");
       messagebody.write("Message contents");
@@ -218,7 +222,15 @@
       messagebody.write("\n");
       messagebody.write("---------------------------------------------------");
       messagebody.write("\n");
-      messagebody.write(ussession.getUser().toString());
+      // if email is coming to default ei.org address, add user info
+      if("engineeringlibrarian@ei.org".equals(refEmail))
+      {
+        messagebody.write(ussession.getUser().toString());
+      }
+      else
+      {
+        messagebody.write("This email was sent to you via Engineering Village Ask a Librarian feature.");
+      }
       messagebody.write("\n");
 
       eimessage.setMessageBody(messagebody.toString());
