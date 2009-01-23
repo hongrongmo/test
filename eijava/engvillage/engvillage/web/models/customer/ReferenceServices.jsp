@@ -33,7 +33,7 @@
 	boolean  isPersonalizationPresent=true;
 	String customizedLogo="";
 
-	String refEmail = "engineeringlibrarian@ei.org";
+	String refEmail = LIBRARIAN_EMAIL;
 
 	if(request.getParameter("database") != null)
 	{
@@ -94,11 +94,28 @@
 <PERSONALIZATION-PRESENT><%=isPersonalizationPresent%></PERSONALIZATION-PRESENT>
 <PERSONALIZATION><%=personalization%></PERSONALIZATION>
 <ASKALIBRARIAN>
-<% if(refEmail.startsWith("http") || refEmail.startsWith("javascript")) { %>
-<REFLINK><![CDATA[<%=refEmail%>]]></REFLINK>
-<% } else { %>
-<REFEMAIL><![CDATA[<%=refEmail%>]]></REFEMAIL>
-<% }  %>
+<%
+  // Case #1 - Customer provides http link or javascript which we link to
+  if(refEmail.startsWith("http") || refEmail.startsWith("javascript"))
+  {
+    out.write("<REFLINK><![CDATA[" + refEmail + "]]></REFLINK>");
+  }
+  // Case #2 - Nothing specified - email will come to our address via email form
+  else if(LIBRARIAN_EMAIL.equals(refEmail))
+  {
+    out.write("<EIEMAIL><![CDATA[" + refEmail + "]]></EIEMAIL>");
+  }
+  // Case #3 - Customer specified email address - send mail to them via maito: link
+  else
+  {
+    // check for mailto: and add on if no there
+    if(!refEmail.startsWith("mailto:"))
+    {
+      refEmail = "mailto:" + refEmail;
+    }
+    out.write("<REFEMAIL><![CDATA[" + refEmail + "]]></REFEMAIL>");
+  }
+%>
 </ASKALIBRARIAN>
 <HEADER/>
 <%=	strGlobalLinksXML %>
@@ -194,6 +211,8 @@
 
 </PAGE>
 <%!
+
+    private final String LIBRARIAN_EMAIL = "engineeringlibrarian@ei.org";
 
     Map authorLinks = new HashMap();
     Map disciplines = new HashMap();
