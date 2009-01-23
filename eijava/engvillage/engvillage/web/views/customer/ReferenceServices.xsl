@@ -725,7 +725,7 @@ pageTracker._trackPageview();
 <xsl:template match="REFLINK">
     <a target="_blank">
       <xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
-    Contact your Librarian</a>
+      <img src="/engresources/images/ae/Contact_your_librarian.gif" alt="Contact your Librarian" width="156" height="14" border="0"/></a>
 </xsl:template>
 <xsl:template match="REFEMAIL">
     <a href="javascript:emailFormat('$SESSIONID','three');"><img src="/engresources/images/ae/email_Librarian.gif" alt="Email a Librarian" width="124" height="14" border="0"/></a>
