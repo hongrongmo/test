@@ -33,7 +33,7 @@
     String database = "";
     // This variable tells us what action is being taken
     String action = "";
-    String refEmail = "engineeringlibrarian@ei.org";
+    String refEmail = LIBRARIAN_EMAIL;
 
     String section = "";
     String sectionid = "";
@@ -123,17 +123,17 @@
     else if(action.equalsIgnoreCase("send"))
     {
       List recipients = new ArrayList();
-		  List ccAddress = new ArrayList();
-      ccAddress.add("j.moschetto@elsevier.com");
+		  //List ccAddress = new ArrayList();
+      //ccAddress.add("j.moschetto@elsevier.com");
 
       if(sectionid.equals(ASK_AN_ENGINEER))
       {
         // ask an engineer email
-        recipients.add("colleen.hunter@elsevier.com");
+        recipients.add(ENGINEER_EMAIL);
       }
       else if(sectionid.equals(ASK_A_PRODUCTSPECIALIST))
       {
-        recipients.add("colleen.hunter@elsevier.com");
+        recipients.add(SPECIALIST_EMAIL);
       }
       else if(sectionid.equals(ASK_A_LIBRARIAN))
       {
@@ -223,7 +223,7 @@
       messagebody.write("---------------------------------------------------");
       messagebody.write("\n");
       // if email is coming to default ei.org address, add user info
-      if("engineeringlibrarian@ei.org".equals(refEmail))
+      if(LIBRARIAN_EMAIL.equals(refEmail))
       {
         messagebody.write(ussession.getUser().toString());
       }
@@ -251,7 +251,9 @@
 
 %><%!
 
+    private final String LIBRARIAN_EMAIL = "engineeringlibrarian@ei.org";
     private final String SPECIALIST_EMAIL = "colleen.hunter@elsevier.com";
+    private final String ENGINEER_EMAIL = "colleen.hunter@elsevier.com";
     private final String ASK_AN_ENGINEER = "one";
     private final String ASK_A_PRODUCTSPECIALIST = "two";
     private final String ASK_A_LIBRARIAN = "three";
