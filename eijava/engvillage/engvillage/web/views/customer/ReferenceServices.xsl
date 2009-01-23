@@ -15,7 +15,7 @@
 >
 
 
-<xsl:output method="html" indent="no" doctype-public="-//W3C//DTD XHTML 1.0 Transitional//EN"/>
+<xsl:output method="html" indent="no" />
 
 <xsl:include href="Header.xsl"/>
 <xsl:include href="GlobalLinks.xsl"/>
@@ -32,7 +32,7 @@
 </xsl:variable>
 
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
 <style type="text/css">
     <xsl:comment>
