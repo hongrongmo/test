@@ -50,7 +50,7 @@ public class BdCoden
 
     }
 
-    public static String convertCoden(String fiveDigitCoden) throws Exception
+    public static String convert(String fiveDigitCoden) throws Exception
     {
 		String returnVal = null;
 		Integer cint = (Integer)codenMap.get(fiveDigitCoden.substring(4,5));
@@ -82,7 +82,7 @@ public class BdCoden
     {
 	   char letter = 'A';
        int x = (int) letter;
- 	   System.out.println(BdCoden.convertCoden("48THA"));
+ 	   System.out.println(BdCoden.convert("48THA"));
 	}
 
 }
