@@ -82,7 +82,6 @@ public class XmlCombiner
 
         Combiner.TABLENAME = tablename;
         System.out.println(Combiner.TABLENAME);
-        System.out.println("TEST");
 
         String dbname = "bd";
         if (timestamp > 0)
@@ -106,7 +105,7 @@ public class XmlCombiner
         }
         else if(loadNumber == 0)
         {
-        	for(int yearIndex = 2007; yearIndex <= 2008; yearIndex++)
+        	for(int yearIndex = 1909; yearIndex <= 2008; yearIndex++)
             {
         	  System.out.println("Processing year " + yearIndex + "...");
               c = new XmlCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,dbname, environment));
