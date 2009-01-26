@@ -286,7 +286,7 @@ public class FastClient
 
             //in = new BufferedReader(new FileReader("test.txt"));
             FastClient client = new FastClient();
-            client.setBaseURL("http://rei11.bos3.fastsearch.net:15100");
+            client.setBaseURL("http://ei-test.bos3.fastsearch.net:15100");
             client.setResultView("ei");
             client.setOffSet(0);
             client.setPageSize(25);
@@ -342,7 +342,7 @@ public class FastClient
                 queryBuf.append(args[1]);
             }
             FastClient client = new FastClient();
-            client.setBaseURL("http://rei11.bos3.fastsearch.net:15100");
+            client.setBaseURL("http://ei-test.bos3.fastsearch.net:15100");
             client.setResultView("ei");
             client.setOffSet(0);
             client.setPageSize(25);
@@ -384,7 +384,7 @@ public class FastClient
                 queryBuf.append(args[1]);
             }
             FastClient client = new FastClient();
-            client.setBaseURL("http://rei11.bos3.fastsearch.net:15100");
+            client.setBaseURL("http://ei-test.bos3.fastsearch.net:15100");
             client.setResultView("ei");
             client.setOffSet(0);
             client.setPageSize(25);
@@ -832,35 +832,40 @@ public class FastClient
 
         return null;
     }
-
+    
     protected void parseDocID(String docIdLine,
-                              String dedupKeyLine,
-                              String doiLine,
-                              String dmaskLine)
-    {
-        String[] id = new String[4];
-        StringTokenizer tokens1 = new StringTokenizer(docIdLine);
-        tokens1.nextToken();
-        id[0] = tokens1.nextToken().trim();
-        StringTokenizer tokens2 = new StringTokenizer(dedupKeyLine);
-        tokens2.nextToken();
-        id[1] = tokens2.nextToken().trim();
-        StringTokenizer tokens3 = new StringTokenizer(doiLine);
-        tokens3.nextToken();
-        if(tokens3.hasMoreTokens())
-        {
-        	tokens3.nextToken();
-        	id[2] = tokens3.nextToken().trim();
+            String dedupKeyLine,
+            String doiLine,
+            String dmaskLine)
+	{    	
+		String[] id = new String[4];
+		StringTokenizer tokens1 = new StringTokenizer(docIdLine);
+		tokens1.nextToken();
+		id[0] = tokens1.nextToken().trim();        
+		if(id[0].matches("^[A-Za-z]+_[A-Za-z0-9]+_[0-9]$"))
+		{
+			String[] temp;
+			temp = id[0].split("_");
+			id[0] = temp[0] + "_" + temp[1]; 
+		}		
+		StringTokenizer tokens2 = new StringTokenizer(dedupKeyLine);
+		tokens2.nextToken();
+		id[1] = tokens2.nextToken().trim();
+		StringTokenizer tokens3 = new StringTokenizer(doiLine);
+		tokens3.nextToken();
+		if(tokens3.hasMoreTokens())
+		{
+			tokens3.nextToken();
+			id[2] = tokens3.nextToken().trim();
 		}
-        StringTokenizer tokens4 = new StringTokenizer(dmaskLine);
-        tokens4.nextToken();
-        if(tokens4.hasMoreTokens())
-        {
-        	id[3] = tokens4.nextToken().trim();
-		}
-
-        docIDs.add(id);
-    }
+		StringTokenizer tokens4 = new StringTokenizer(dmaskLine);
+		tokens4.nextToken();
+		if(tokens4.hasMoreTokens())
+		{
+			id[3] = tokens4.nextToken().trim();
+		}		
+		docIDs.add(id);
+	}
 
     protected void parseTDocID(String docIdLine)
     {
