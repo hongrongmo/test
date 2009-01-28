@@ -627,13 +627,14 @@ public class FastClient
 
 
 
-		buf.append("?type=adv&encoding=utf-8&rpf_clustering:enabled=false&rpf_clustering:root=*&rpf_clustering:overridehits=1");
+		buf.append("?type=adv&collapseon=batvptid&encoding=utf-8&rpf_clustering:enabled=false&rpf_clustering:root=*&rpf_clustering:overridehits=1");
 		buf.append("&query=");
 		buf.append(URLEncoder.encode(this.queryString,"UTF-8"));
 		buf.append("&offset=");
 		buf.append(Integer.toString(this.offSet));
 		buf.append("&hits=");
-		buf.append(Integer.toString(this.pageSize));
+		buf.append(Integer.toString(this.pageSize));		
+	    
 		if(this.primarySort != null)
 		{
 			buf.append("&sortby=");
@@ -670,7 +671,7 @@ public class FastClient
         StringBuffer buf = new StringBuffer(this.baseURL);
         buf.append("/cgi-bin/");
         buf.append(this.resultView);
-        buf.append("?type=adv&encoding=utf-8&rpf_clustering:enabled=false&rpf_clustering:root=*&rpf_clustering:overridehits=1&resultview=");
+        buf.append("?type=adv&collapseon=batvptid&encoding=utf-8&rpf_clustering:enabled=false&rpf_clustering:root=*&rpf_clustering:overridehits=1&resultview=");
         buf.append(this.resultView);
         buf.append("&query=");
         buf.append(URLEncoder.encode(this.queryString,"UTF-8"));
@@ -678,6 +679,7 @@ public class FastClient
         buf.append(Integer.toString(this.offSet));
         buf.append("&hits=");
         buf.append(Integer.toString(this.pageSize));
+               
         if(this.primarySort != null)
         {
             buf.append("&sortby=");
@@ -842,7 +844,7 @@ public class FastClient
 		StringTokenizer tokens1 = new StringTokenizer(docIdLine);
 		tokens1.nextToken();
 		id[0] = tokens1.nextToken().trim();        
-		if(id[0].matches("^[A-Za-z]+_[A-Za-z0-9]+_[0-9]$"))
+		if(id[0].lastIndexOf("_") > 6)
 		{
 			String[] temp;
 			temp = id[0].split("_");
