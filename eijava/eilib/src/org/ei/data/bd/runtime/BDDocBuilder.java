@@ -27,7 +27,7 @@ public class BDDocBuilder
 	private static final Key CPX_MAIN_HEADING = new Key(Keys.MAIN_HEADING, "Ei main heading");
 	private static final Key[] CITATION_KEYS = {Keys.DOCID,Keys.TITLE,Keys.TITLE_TRANSLATION,Keys.EDITORS,Keys.AUTHORS,Keys.AUTHOR_AFFS,Keys.SOURCE,Keys.MONOGRAPH_TITLE, Keys.PAGE_RANGE, Keys.VOLISSUE,Keys.PUBLICATION_YEAR, Keys.PUBLISHER, Keys.ISSUE_DATE, Keys.ISSN, Keys.LANGUAGE ,Keys.NO_SO, Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT, Keys.DOI, Keys.PATAPPNUM, Keys.PATNUM, Keys.PATASSIGN};
 	private static final Key[] ABSTRACT_KEYS = {Keys.DOCID,Keys.TITLE,Keys.TITLE_TRANSLATION,Keys.EDITORS,Keys.AUTHORS,Keys.EDITOR_AFFS, Keys.AUTHOR_AFFS,Keys.VOLISSUE, Keys.SOURCE, Keys.PUBLICATION_YEAR, Keys.ISSUE_DATE, Keys.MONOGRAPH_TITLE, Keys.PAGE_RANGE,Keys.CONFERENCE_NAME, Keys.ISSN,Keys.ISBN, Keys.CODEN, Keys.PUBLISHER,Keys.I_PUBLISHER,Keys.CONF_DATE,Keys.SPONSOR, Keys.PROVIDER ,Keys.LANGUAGE, Keys.MAIN_HEADING, CPX_CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS, Keys.GLOBAL_TAGS, Keys.PRIVATE_TAGS, Keys.ABSTRACT, Keys.NUMBER_OF_REFERENCES,Keys.NO_SO, Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT, Keys.CLASS_CODES , Keys.DOI, Keys.PATAPPNUM, Keys.PATNUM, Keys.PATASSIGN, Keys.REPORT_NUMBER_PAPER};
-	private static final Key[] DETAILED_KEYS = {Keys.ACCESSION_NUMBER, Keys.TITLE, Keys.VOLUME_TITLE,Keys.TITLE_TRANSLATION, Keys.AUTHORS, Keys.EDITORS, Keys.AUTHOR_AFFS, Keys.EDITOR_AFFS, Keys.SERIAL_TITLE, Keys.ABBRV_SERIAL_TITLE, Keys.VOLUME, Keys.ISSUE, Keys.MONOGRAPH_TITLE, Keys.ISSUE_DATE, Keys.PUBLICATION_YEAR, Keys.PAPER_NUMBER, Keys.PAGE_RANGE, Keys.LANGUAGE, Keys.ISSN, Keys.CODEN, Keys.ISBN,Keys.ISBN13, Keys.DOC_TYPE, Keys.CONFERENCE_NAME, Keys.CONF_DATE, Keys.MEETING_LOCATION, Keys.CONF_CODE, Keys.SPONSOR, Keys.PUBLISHER, Keys.ABSTRACT, Keys.ABSTRACT_TYPE, Keys.NUMBER_OF_REFERENCES, Keys.MAIN_HEADING, Keys.CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS, Keys.CLASS_CODES, Keys.TREATMENTS,Keys.GLOBAL_TAGS, Keys.PRIVATE_TAGS, Keys.DOI, Keys.DOCID,Keys.PROVIDER, Keys.MEDIA, Keys.CSESS, Keys.PATNUM, Keys.PATAPPNUM, Keys.PRIORITY_INFORMATION, Keys.PLING, Keys.PCODE, Keys.PATASSIGN, Keys.NUMBER_OF_CLAIMS, Keys.SOURCE, Keys.NUMBER_OF_FIGURES, Keys.NUMBER_OF_TABLES,Keys.SUB_INDEX, Keys.SPECIFIC_NAMES, Keys.SUPPL, Keys.PDFIX, Keys.REPORT_NUMBER_PAPER, Keys.PI,Keys.CORRESPONDING_EMAIL,Keys.CORRESPONDING_AUTHORS,Keys.CORRESPONDING_AUTHORS_AFF,Keys.PAGE_COUNT,Keys.PUBLICATION_ORDER,Keys.SPECIES_TERMS,Keys.REGION_CONTROLLED_TERMS,Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT};
+	private static final Key[] DETAILED_KEYS = {Keys.ACCESSION_NUMBER, Keys.TITLE, Keys.VOLUME_TITLE,Keys.TITLE_TRANSLATION, Keys.AUTHORS, Keys.EDITORS, Keys.AUTHOR_AFFS, Keys.EDITOR_AFFS, Keys.SERIAL_TITLE, Keys.ABBRV_SERIAL_TITLE, Keys.VOLUME, Keys.ISSUE, Keys.MONOGRAPH_TITLE, Keys.ISSUE_DATE, Keys.PUBLICATION_YEAR, Keys.PAPER_NUMBER, Keys.PAGE_RANGE, Keys.LANGUAGE, Keys.ISSN, Keys.CODEN, Keys.ISBN,Keys.ISBN13, Keys.DOC_TYPE, Keys.CONFERENCE_NAME, Keys.CONF_DATE, Keys.MEETING_LOCATION, Keys.CONF_CODE, Keys.SPONSOR, Keys.PUBLISHER, Keys.ABSTRACT, Keys.ABSTRACT_TYPE, Keys.NUMBER_OF_REFERENCES, Keys.MAIN_HEADING, Keys.CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS, Keys.CLASS_CODES, Keys.TREATMENTS,Keys.GLOBAL_TAGS, Keys.PRIVATE_TAGS, Keys.DOI, Keys.DOCID,Keys.PROVIDER, Keys.MEDIA, Keys.CSESS, Keys.PATNUM, Keys.PATAPPNUM, Keys.PRIORITY_INFORMATION, Keys.PLING, Keys.PCODE, Keys.PATASSIGN, Keys.NUMBER_OF_CLAIMS, Keys.SOURCE, Keys.NUMBER_OF_FIGURES, Keys.NUMBER_OF_TABLES,Keys.SUB_INDEX, Keys.SPECIFIC_NAMES, Keys.SUPPL, Keys.PDFIX, Keys.REPORT_NUMBER_PAPER, Keys.PI,Keys.CORRESPONDING_EMAIL,Keys.CORRESPONDING_AUTHORS,Keys.CORRESPONDING_AUTHORS_AFF,Keys.PAGE_COUNT,Keys.SPECIES_TERMS,Keys.REGION_CONTROLLED_TERMS,Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT};
 	private static final Key[] RIS_KEYS = { Keys.RIS_TY, Keys.RIS_LA , Keys.RIS_N1 , Keys.RIS_TI , Keys.RIS_T1 , Keys.RIS_BT , Keys.RIS_JO ,Keys.RIS_T3 , Keys.RIS_AUS , Keys.RIS_AD , Keys.RIS_EDS , Keys.RIS_VL , Keys.RIS_IS , Keys.RIS_PY , Keys.RIS_AN , Keys.RIS_SP , Keys.RIS_EP, Keys.RIS_SN ,  Keys.RIS_S1 , Keys.RIS_MD ,Keys.RIS_CY , Keys.RIS_PB,  Keys.RIS_N2 , Keys.RIS_KW , Keys.RIS_CVS , Keys.RIS_FLS , Keys.RIS_DO};
 	private static final Key[] XML_KEYS = { Keys.ISSN , Keys.MAIN_HEADING , Keys.NO_SO , Keys.MONOGRAPH_TITLE , Keys.PUBLICATION_YEAR , Keys.VOLUME_TITLE , Keys.CONTROLLED_TERM , Keys.ISBN , Keys.AUTHORS , Keys.DOCID , Keys.SOURCE , Keys.NUMVOL , Keys.EDITOR_AFFS , Keys.EDITORS , Keys.PUBLISHER , Keys.VOLUME , Keys.AUTHOR_AFFS , Keys.PROVIDER , Keys.ISSUE_DATE , Keys.COPYRIGHT_TEXT , Keys.DOI , Keys.PAGE_COUNT , Keys.PUBLICATION_DATE , Keys.TITLE , Keys.LANGUAGE , Keys.PAGE_RANGE , Keys.PAPER_NUMBER , Keys.COPYRIGHT , Keys.ISSUE , Keys.ACCESSION_NUMBER , Keys.CONTROLLED_TERMS};
 	public static final String DELIMITER = ",";
@@ -165,7 +165,6 @@ public class BDDocBuilder
 				buildField(Keys.VOLUME_TITLE,rset.getString("VOLUMETITLE"),ht);
 				buildField(Keys.PAPER_NUMBER,rset.getString("REPORTNUMBER"),ht);
 				formatRIS(buildField(Keys.CONTROLLED_TERMS,setElementData(rset.getString("CONTROLLEDTERM")),ht), dataFormat,Keys.CONTROLLED_TERMS,Keys.RIS_CVS);
-				buildField(Keys.PUBLICATION_ORDER,getPublicationOrder(rset.getString("DATESORT")),ht);
 				buildField(Keys.PATNUM,rset.getString("PATNO"),ht);
 				buildField(Keys.PATAPPNUM,rset.getString("APPLN"),ht);
 				buildField(Keys.PATASSIGN,rset.getString("ASSIG"),ht);
@@ -608,44 +607,6 @@ public class BDDocBuilder
 		return strPage.trim();
 	}
 
-	private String getPublicationOrder(String poString)
-	{
-		StringBuffer poBuffer = new StringBuffer();
-		if(poString !=  null)
-		{
-			String[] poArray = poString.split(BdParser.IDDELIMITER,-1);
-			for(int i=0;i<poArray.length;i++)
-			{
-				if(poArray[i]!=null && poArray[i].trim().length()>0)
-				{
-					poBuffer.append(poArray[i]);
-				}
-				else
-				{
-					if(i==0)
-					{
-						poBuffer.append("0000");
-					}
-					else
-					{
-						poBuffer.append("00");
-					}
-				}
-
-			}
-			if(poBuffer.length()>0)
-			{
-				return poBuffer.toString();
-			}
-			else
-			{
-				return null;
-			}
-
-		}
-		return null;
-
-	}
 	private PageRange  getPageRange(String page,String pageCount,String articleNumber,String issn,String eissn,Perl5Util perl) throws Exception
 	{
 		String strPage=null;
