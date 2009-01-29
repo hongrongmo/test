@@ -17,6 +17,8 @@ import org.ei.data.georef.runtime.*;
 
 import java.io.*;
 import java.util.Vector;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import org.ei.util.GUID;
 
 public class XmlCombiner
@@ -105,7 +107,7 @@ public class XmlCombiner
         }
         else if(loadNumber == 0)
         {
-        	for(int yearIndex = 1909; yearIndex <= 2008; yearIndex++)
+        	for(int yearIndex = 1798; yearIndex <= 1976; yearIndex++)
             {
         	  System.out.println("Processing year " + yearIndex + "...");
               c = new XmlCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,dbname, environment));
@@ -136,7 +138,7 @@ public class XmlCombiner
 
             stmt = con.createStatement();
             System.out.println("Running the query...");
-            rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER,PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER from " + Combiner.TABLENAME + " where PUBLICATIONYEAR ='" + year + "' AND loadnumber != 0 and loadnumber < 1000000");
+            rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER,PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER from " + Combiner.TABLENAME + " where PUBLICATIONYEAR='" + year + "' AND loadnumber != 0 and loadnumber < 1000000");
             System.out.println("Got records ...");
             writeRecs(rs);
             System.out.println("Wrote records.");
@@ -498,7 +500,8 @@ public class XmlCombiner
 
                 rec.put(EVCombinedRec.DATABASE, rs.getString("DATABASE"));
 
-                rec.put(EVCombinedRec.LOAD_NUMBER, rs.getString("LOADNUMBER"));
+
+                rec.put(EVCombinedRec.LOAD_NUMBER, prepareLoadNumber(rs.getString("DATESORT"),rs.getString("PUBLICATIONYEAR")));
 
                 if (rs.getString("PUBLICATIONYEAR") != null)
                 {
@@ -553,6 +556,11 @@ public class XmlCombiner
 				if (rs.getString("CASREGISTRYNUMBER") != null)
                 {
                     rec.put(EVCombinedRec.CASREGISTRYNUMBER, prepareMulti(rs.getString("CASREGISTRYNUMBER")));
+                }
+
+				if (rs.getString("DATESORT") != null)
+                {
+                    rec.put(EVCombinedRec.DATESORT, prepareDateSort(rs.getString("DATESORT"),rs.getString("PUBLICATIONYEAR")));
                 }
 
                 rec.put(EVCombinedRec.PUB_SORT, Integer.toString(i));
@@ -753,6 +761,50 @@ public class XmlCombiner
 		return languages;
     }
 
+	private String prepareLoadNumber(String datesort,String publicationyear)
+		throws Exception
+	{
+		String ln = null;
+
+		if(datesort != null)
+		{
+		  String[] dt = datesort.split(BdParser.IDDELIMITER);
+		  Calendar cal = new GregorianCalendar(Integer.parseInt(dt[0]), Integer.parseInt(dt[1]), Integer.parseInt(dt[2]));
+		  cal.set(Calendar.WEEK_OF_MONTH,2);
+		  if(cal.get(Calendar.WEEK_OF_YEAR) < 10)
+		  {
+		    ln = dt[0] + "0" + cal.get(Calendar.WEEK_OF_YEAR);
+	      }
+		  else
+		  {
+			ln = dt[0] + cal.get(Calendar.WEEK_OF_YEAR);
+		  }
+		}
+		else
+		{
+		  ln = publicationyear + "01";
+		}
+
+		return ln;
+    }
+
+	private String prepareDateSort(String datesort,String publicationyear)
+		throws Exception
+	{
+		String ds = null;
+
+		if(datesort != null)
+		{
+		  String[] dt = datesort.split(BdParser.IDDELIMITER);
+		  ds = dt[0]+ dt[1] + dt[2];
+		}
+		else
+		{
+		  ds = publicationyear + "0101";
+		}
+
+		return ds;
+    }
 
     private String getFirstNumber(String v)
     {
