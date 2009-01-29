@@ -394,15 +394,17 @@ public class C84Combiner
                 rec.put(EVCombinedRec.DOCID, rs.getString("M_ID"));
                 rec.put(EVCombinedRec.DATABASE, "c84");
                 rec.put(EVCombinedRec.LOAD_NUMBER, rs.getString("LOAD_NUMBER"));
-
+                
                 if ((rs.getString("yr") != null)
                         && validpubYear(rs.getString("yr")))
-                {
+                {                	
                     rec.put(EVCombinedRec.PUB_YEAR, rs.getString("yr"));
+                    rec.put(EVCombinedRec.DATESORT, rs.getString("yr") + "0000");
                 }
                 else
                 {
                     rec.put(EVCombinedRec.PUB_YEAR, rs.getString("LOAD_NUMBER"));
+                    rec.put(EVCombinedRec.DATESORT, rs.getString("LOAD_NUMBER") + "0000");
                 }
 
                 rec.put(EVCombinedRec.DEDUPKEY,
