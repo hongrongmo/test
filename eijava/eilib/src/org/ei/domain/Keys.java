@@ -209,7 +209,6 @@ public interface Keys
     public static final Key PUBLICATION = new Key("DD");
     public static final Key PUBLICATION_DATE = new Key("PD_YR","Publication date");
     public static final Key PUBLICATION_DATE_PAPER = new Key("PPD_YR", "Publication date");
-    public static final Key PUBLICATION_ORDER = new Key("PO");
     public static final Key PUBLICATION_YEAR = new Key("YR", "Publication year");
     public static final Key PUBLICATION_YEAR_PAPER = new Key("PYR", "Publication year");
     public static final Key PUBLICATION_NUMBER = new Key("PUN","Publication number"); // not needed
