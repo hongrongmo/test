@@ -767,7 +767,9 @@
     <xsl:template match="AF|EF">
     <tr><td valign="top">
         <xsl:if test="(@id)">
-			<A CLASS="SmBlackText"><Sup><xsl:value-of select="@id"/></Sup><xsl:text> </xsl:text></A>
+        	<xsl:if test="not(@id='0')">
+				<A CLASS="SmBlackText"><Sup><xsl:value-of select="@id"/></Sup><xsl:text> </xsl:text></A>
+			</xsl:if>
       	</xsl:if>
    	</td><td>
     	<span CLASS="SmBlackText"><xsl:value-of select="hlight:addMarkup(normalize-space(text()))" disable-output-escaping="yes"/></span>
@@ -802,8 +804,10 @@
       </xsl:if>
             
     <xsl:if test="./AFS">
-      <A CLASS="SmBlackText"><Sup><xsl:apply-templates select="./AFS/AFID"/></Sup>       
-      <xsl:text> </xsl:text></A>       
+    	<xsl:if test="not(@id='0')">
+      		<A CLASS="SmBlackText"><Sup><xsl:apply-templates select="./AFS/AFID"/></Sup>       
+      		<xsl:text> </xsl:text></A>       
+    	</xsl:if>
     </xsl:if>
     
     </xsl:template>
