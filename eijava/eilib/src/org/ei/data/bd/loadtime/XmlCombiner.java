@@ -107,7 +107,7 @@ public class XmlCombiner
         }
         else if(loadNumber == 0)
         {
-        	for(int yearIndex = 1798; yearIndex <= 1976; yearIndex++)
+        	for(int yearIndex = 2002; yearIndex <= 2009; yearIndex++)
             {
         	  System.out.println("Processing year " + yearIndex + "...");
               c = new XmlCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,dbname, environment));
@@ -374,6 +374,7 @@ public class XmlCombiner
 				String isbnString = rs.getString("ISBN");
                 if (isbnString!= null)
                 {
+					System.out.println("ISBN M_ID=" + rs.getString("M_ID"));
                     rec.put(EVCombinedRec.ISBN, prepareISBN(isbnString));
                 }
 
@@ -513,12 +514,12 @@ public class XmlCombiner
                                     rec.getString("CODEN"),
                                     rs.getString("VOLUME"),
                                     rs.getString("ISSUE"),
-                                    getPage(rs.getString("PAGE"), rs.getString("ARTICLENUMBER"), issnArray)));
+                                    getPage(rs.getString("PAGE"), rs.getString("ARTICLENUMBER"))));
 
                 rec.put(EVCombinedRec.VOLUME, rs.getString("VOLUME"));
                 rec.put(EVCombinedRec.ISSUE, rs.getString("ISSUE"));
                 //rec.put(EVCombinedRec.STARTPAGE, getFirstPage(getPage(rs.getString("PAGE"), rs.getString("ARTICLENUMBER"), rs.getString("ISSN"))));
-				rec.put(EVCombinedRec.STARTPAGE, getPage(getFirstPage(rs.getString("PAGE")),rs.getString("ARTICLENUMBER"), issnArray));
+				rec.put(EVCombinedRec.STARTPAGE, getPage(getFirstPage(rs.getString("PAGE")),rs.getString("ARTICLENUMBER")));
 
                 rec.put(EVCombinedRec.ACCESSION_NUMBER,
                         rs.getString("ACCESSNUMBER"));
@@ -617,6 +618,10 @@ public class XmlCombiner
 						}
 					  }
 			   	  }
+			   	  else
+			   	  {
+					  recVector.add(rec);
+			      }
 				}
 
 				catch(Exception e)
@@ -840,28 +845,18 @@ public class XmlCombiner
     }
 
     public String getPage(String xp,
-                          String ar,
-                          String[] issn)
+                          String ar)
     {
         String strPage = null;
 
-        if(xp != null)
+        if(ar != null)
         {
-            strPage = xp;
+            strPage = ar;
         }
-
-
-        if(ar != null && issn != null) // Records with AR field Fix
-        {
-			for(int i=0;i<issn.length;i++)
-			{
-				if(issn[i] != null && issnARFix.containsKey(issn[i].toUpperCase().replaceAll("-",""))) // Check ISSN for AR problem
-				{
-					strPage=ar;
-					break;
-				}
-			}
-        }
+		else
+		{
+		  strPage = xp;
+		}
 
         return strPage;
     }
