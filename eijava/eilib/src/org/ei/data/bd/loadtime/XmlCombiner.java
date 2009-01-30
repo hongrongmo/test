@@ -501,7 +501,7 @@ public class XmlCombiner
                 rec.put(EVCombinedRec.DATABASE, rs.getString("DATABASE"));
 
 
-                rec.put(EVCombinedRec.LOAD_NUMBER, prepareLoadNumber(rs.getString("DATESORT"),rs.getString("PUBLICATIONYEAR")));
+                rec.put(EVCombinedRec.LOAD_NUMBER, prepareLoadNumber(rs.getString("DATESORT"),rs.getString("LOADNUMBER"),rs.getString("PUBLICATIONYEAR")));
 
                 if (rs.getString("PUBLICATIONYEAR") != null)
                 {
@@ -558,7 +558,7 @@ public class XmlCombiner
                     rec.put(EVCombinedRec.CASREGISTRYNUMBER, prepareMulti(rs.getString("CASREGISTRYNUMBER")));
                 }
 
-				if (rs.getString("DATESORT") != null)
+				if (rs.getString("DATABASE").equals("cpx"))
                 {
                     rec.put(EVCombinedRec.DATESORT, prepareDateSort(rs.getString("DATESORT"),rs.getString("PUBLICATIONYEAR")));
                 }
@@ -761,7 +761,7 @@ public class XmlCombiner
 		return languages;
     }
 
-	private String prepareLoadNumber(String datesort,String publicationyear)
+	private String prepareLoadNumber(String datesort,String loadNumber, String publicationyear)
 		throws Exception
 	{
 		String ln = null;
@@ -769,20 +769,20 @@ public class XmlCombiner
 		if(datesort != null)
 		{
 		  String[] dt = datesort.split(BdParser.IDDELIMITER);
-		  Calendar cal = new GregorianCalendar(Integer.parseInt(dt[0]), Integer.parseInt(dt[1]), Integer.parseInt(dt[2]));
-		  cal.set(Calendar.WEEK_OF_MONTH,2);
-		  if(cal.get(Calendar.WEEK_OF_YEAR) < 10)
+		  String weekOfYear = BdLoadNumberHash.getWeekNumber(dt[1]);
+
+		  ln = dt[0] + weekOfYear;
+	    }
+	    else
+	    {
+		  if(loadNumber.length() == 6 && !loadNumber.endsWith("00"))
 		  {
-		    ln = dt[0] + "0" + cal.get(Calendar.WEEK_OF_YEAR);
-	      }
+			ln = loadNumber;
+		  }
 		  else
 		  {
-			ln = dt[0] + cal.get(Calendar.WEEK_OF_YEAR);
-		  }
-		}
-		else
-		{
-		  ln = publicationyear + "01";
+		    ln = publicationyear + "52";
+	      }
 		}
 
 		return ln;
@@ -796,11 +796,23 @@ public class XmlCombiner
 		if(datesort != null)
 		{
 		  String[] dt = datesort.split(BdParser.IDDELIMITER);
-		  ds = dt[0]+ dt[1] + dt[2];
-		}
+		  if(dt.length == 3)
+		  {
+		    ds = dt[0]+ dt[1] + dt[2];
+	      }
+	      else if(dt.length == 2)
+	      {
+		    ds = dt[0] + dt[1] + "31";
+	      }
+	      else
+	      {
+			ds = dt[0] + "1231";
+		  }
+
+	    }
 		else
 		{
-		  ds = publicationyear + "0101";
+		  ds = publicationyear + "1231";
 		}
 
 		return ds;
