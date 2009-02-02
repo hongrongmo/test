@@ -579,7 +579,7 @@ function MM_nbGroup(event, grpName) { //v6.0
         <td width="25" align="left" valign="top"><img src="/engresources/images/ae/spacer.gif" alt="spacer" width="25" height="1" /></td>
         <td width="518" align="left" valign="middle"><span class="style2">Sample questions:</span><br />
           <ol>
-            <li class="style1">&ldquo;How often do patents to appear on Engineering Village after issuance?&rdquo;</li>
+            <li class="style1">&ldquo;How long do patents take to appear on Engineering Village after issuance?&rdquo;</li>
             <li class="style1">&ldquo;How can I use Engineering Village to track competitors?&rdquo;</li>
             <li class="style1">&ldquo;How would I complete a search for business models and templates?&rdquo;</li>
             <li class="style1">&ldquo;Is it possible to get personalized trainings?&rdquo;</li>
@@ -594,7 +594,7 @@ function MM_nbGroup(event, grpName) { //v6.0
   <div align="left">
     <ol class="styleunderlined">
       <li class="styleunderlined"><a href="#1">When is full text available?</a></li>
-      <li class="styleunderlined"><a href="#2">How can I obtain a full text document is it is not available to me?</a></li>
+      <li class="styleunderlined"><a href="#2">How can I obtain a full text document if it is not available to me?</a></li>
       <li class="styleunderlined"><a href="#3">What are &ldquo;facets&rdquo; and how do they help my search?</a></li>
       <li class="styleunderlined"><a href="#4">Which groups of results data (&ldquo;facets&rdquo;) are available to me?</a></li>
       <li class="styleunderlined"><a href="#5">Why would I export the grouped result data (&ldquo;facets&rdquo;) into a chart and/or spreadsheet?</a></li>
