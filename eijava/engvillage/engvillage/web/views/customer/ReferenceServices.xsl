@@ -123,6 +123,8 @@ function MM_nbGroup(event, grpName) { //v6.0
     for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
       if (!img.MM_up) img.MM_up = img.src;
       img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      for(x=1; x<800; x=x+1) { var xyz=x;}
+      //alert('i: ' + i + '\n img sr: ' + img.src);
       nbArr[nbArr.length] = img;
   } }
 }
@@ -313,7 +315,7 @@ function MM_nbGroup(event, grpName) { //v6.0
 <!-- Ask an Engineer -->
 <!-- Ask an Engineer -->
 
-<div id="one" style="display: none;">
+<div id="one" style="z-index:1; display: none;">
 
     <p align="left">&nbsp;</p>
 
@@ -728,6 +730,11 @@ pageTracker._trackPageview();
       <img src="/engresources/images/ae/Contact_your_librarian.gif" alt="Contact your Librarian" width="156" height="14" border="0"/></a>
 </xsl:template>
 <xsl:template match="REFEMAIL">
+    <a >
+      <xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
+      <img src="/engresources/images/ae/Contact_your_librarian.gif" alt="Contact your Librarian" width="156" height="14" border="0"/></a>
+</xsl:template>
+<xsl:template match="EIEMAIL">
     <a href="javascript:emailFormat('$SESSIONID','three');"><img src="/engresources/images/ae/email_Librarian.gif" alt="Email a Librarian" width="124" height="14" border="0"/></a>
 </xsl:template>
 
