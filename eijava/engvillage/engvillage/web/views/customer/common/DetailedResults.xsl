@@ -32,8 +32,8 @@
     <!-- sit on this -->
     <xsl:template match="NO_SO"/>
 
-    <!-- These are fixes for GeoREF - Fields that are mutli-value which are not multi value in other databases -->
-    <!-- we need to create special templates for them so they display correctly -->
+    <!-- These are fixes for GeoREF - Fields that are mutli-value which are not multi value in other databases-->
+    <!-- we need to create special templates for them so they display correctly-->
     <xsl:template match="CA"> <!-- Category Field -->
       <span CLASS="MedBlackText">
         <xsl:apply-templates />
@@ -46,7 +46,7 @@
         <xsl:if test="not(position()=last())">; </xsl:if>
       </span>
     </xsl:template>
-    <xsl:template match="L|A|D|R|GUR"> <!-- Language Field / Availability / Document type / Report Number / GeoRef URLs -->
+    <xsl:template match="L|A|D|R|GUR"> <!-- Language Field / Availability / Document type / Report Number / GeoRef URLs-->
       <span CLASS="MedBlackText">
         <xsl:apply-templates />
         <xsl:if test="not(position()=last())">, </xsl:if>
@@ -86,12 +86,12 @@
 
     <xsl:template match="LOC[@ID]">
       <a>
-      <!-- <xsl:attribute name="href">javascript:toggleMarker('<xsl:value-of select="@ID"/>');</xsl:attribute> -->
+      <!-- <xsl:attribute name="href">javascript:toggleMarker('<xsl:value-of select="@ID"/>');</xsl:attribute>-->
       <xsl:value-of select="@ID"/> - <xsl:value-of disable-output-escaping="yes" select="."/></a><br/>
     </xsl:template>
     <xsl:template match="LOC">
       <a>
-      <!-- <xsl:attribute name="href">javascript:toggleMarker('<xsl:value-of select="@ID"/>');</xsl:attribute> -->
+      <!-- <xsl:attribute name="href">javascript:toggleMarker('<xsl:value-of select="@ID"/>');</xsl:attribute>-->
       <xsl:value-of disable-output-escaping="yes" select="."/></a><br/>
     </xsl:template>
 
@@ -201,7 +201,7 @@
       <xsl:call-template name="SPACER"/>
     </xsl:template>
 
-  <!-- Controlled/Uncontrolled child node(s) within VALUE under FLS/CVS/AGS -->
+  <!-- Controlled/Uncontrolled child node(s) within VALUE under FLS/CVS/AGS-->
     <xsl:template match="DG|MJS|BKY|FL|CV|AG|CT|OC|PS|RGI|CM|IC|GC|GD|CP|CE">
       <xsl:if test="name()='LST'">
       <xsl:if test="position()=1">
@@ -460,15 +460,23 @@
 
     <!-- NON-HIGHLIGHTED child node(s) within VALUE -->
     <xsl:template match="AF|EF">
+            <table>
+            <tr>
+            <td valign="top">
             <xsl:if test="(@id)">
             <xsl:if test="not(@id='0')">
         		<A CLASS="MedBlackText">        		
         		<Sup><xsl:value-of select="@id"/></Sup><xsl:text> </xsl:text></A>
       		</xsl:if>
       		</xsl:if>
+      		</td>      		
+      		<td>
         	<span CLASS="MedBlackText"><xsl:value-of select="hlight:addMarkup(normalize-space(text()))" disable-output-escaping="yes"/></span>
          <!--   <span CLASS="MedBlackText"><xsl:value-of select="normalize-space(text())"/></span> -->
-            <xsl:if test="not(position()=last())"><A CLASS="SmBlackText"><br/></A><xsl:text> </xsl:text></xsl:if>
+            <xsl:if test="not(position()=last())"><A CLASS="SmBlackText"><br/></A><xsl:text> </xsl:text></xsl:if>            
+            </td>
+            </tr>            
+            </table>
     </xsl:template>
 
   <!-- Classification code 'page' -->
