@@ -738,8 +738,22 @@ public class BDDocBuilder
 		if(confLocation != null)
 		{
 			BdConfLocations bdc = new BdConfLocations(confLocation);
-			return bdc.getDisplayValue();
-
+			StringBuffer result = new StringBuffer();
+			String[] cfl = bdc.getDisplayValue().split(",");
+			for(int i = 0; i < cfl.length ; i++)
+			{
+				result.append(cfl[0].substring(0,1).toUpperCase());
+				if(cfl[i].length() > 0)
+				{
+					result.append(cfl[i].substring(1));	
+					if(i < cfl.length-1)
+					{
+						result.append(", ");
+					}
+				}
+								
+			}
+			return result.toString();
 		}
 		return null;
 	}
