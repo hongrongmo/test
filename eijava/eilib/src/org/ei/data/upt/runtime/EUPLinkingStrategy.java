@@ -1,9 +1,9 @@
-
 package org.ei.data.upt.runtime;
 
 import org.ei.domain.EIDoc;
-import org.ei.fulldoc.*;
-
+import org.ei.fulldoc.LinkInfo;
+import org.ei.fulldoc.LinkingStrategy;
+import java.net.URLEncoder;
 
 public class EUPLinkingStrategy implements LinkingStrategy
 {
@@ -12,21 +12,18 @@ public class EUPLinkingStrategy implements LinkingStrategy
     {
         LinkInfo linkInfo = new LinkInfo();
         String pnum = eid.getPatNumber();
-        //String ppub = eid.getPatpubNumber();
         String authcd = eid.getAuthcdNumber();
         String pkind = eid.getPatKind();
-        StringBuffer buf = new StringBuffer();
-        StringBuffer sbRURL = new StringBuffer();
 
-       // String dbid = eid.getDatabase();
-
-        if (authcd != null
-                && "EP".equalsIgnoreCase(authcd))
+        if (pnum != null && authcd != null && "EP".equalsIgnoreCase(authcd))
         {
-            sbRURL.append("http://v3.espacenet.com/textdoc?DB=EPODOC&IDX=");
-            sbRURL.append(authcd.trim());
-            sbRURL.append(pad(pnum.trim()));
-            buf.append(UniventioPDFGateway.getPatentLink(authcd,pnum,pkind,sbRURL.toString()));
+            StringBuffer redirect = new StringBuffer();
+            redirect.append("http://v3.espacenet.com/textdoc?DB=EPODOC&IDX=")
+              .append(authcd.trim())
+              .append(pad(pnum.trim()));
+
+            StringBuffer buf = new StringBuffer();
+            buf.append("/controller/servlet/Patent.pdf?").append("ac=").append(authcd).append("&pn=").append(pnum).append("&kc=").append(pkind).append("&type=PDF").append("&rurl=").append(URLEncoder.encode(redirect.toString(),"UTF-8"));
             linkInfo.url = buf.toString();
         }
 
@@ -45,7 +42,7 @@ public class EUPLinkingStrategy implements LinkingStrategy
 
     public String hasLink(EIDoc eid)
     {
-        String patNum =  eid.getPatNumber();
+        String patNum = eid.getPatNumber();
         String authcd = eid.getAuthcdNumber();
 
         if((patNum != null)
@@ -62,8 +59,8 @@ public class EUPLinkingStrategy implements LinkingStrategy
 
     public String getFT(EIDoc eidoc)
     {
-        String patNum =  eidoc.getPatNumber();
-        String authcd =  eidoc.getAuthcdNumber();
+        String patNum = eidoc.getPatNumber();
+        String authcd = eidoc.getAuthcdNumber();
 
         if((patNum != null)
                 &&(authcd != null))
@@ -75,10 +72,4 @@ public class EUPLinkingStrategy implements LinkingStrategy
             return "N";
         }
     }
-
-
-
-
-
-
 }
