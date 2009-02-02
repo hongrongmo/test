@@ -178,7 +178,7 @@ public class BDDocBuilder
 					formatRIS(buildField(Keys.UNCONTROLLED_TERMS,setElementData(rset.getString("UNCONTROLLEDTERM")),ht), dataFormat,Keys.UNCONTROLLED_TERMS,Keys.RIS_FLS);
 					buildField(Keys.TREATMENTS,getTreatments(rset.getString("TREATMENTCODE"),database),ht);
 					formatRIS(buildField(Keys.ABSTRACT,getAbstract(rset),ht),dataFormat,Keys.ABSTRACT,Keys.RIS_N2);
-					buildField(Keys.SPONSOR,setElementData(rset.getString("CONFSPONSORS")),ht);
+					buildField(Keys.SPONSOR,setSponsorData(rset.getString("CONFSPONSORS")),ht);
 					formatRIS(buildField(Keys.START_PAGE,getStartPage(rset.getString("PAGE")),ht),dataFormat,Keys.START_PAGE,Keys.RIS_SP);
 					formatRIS(buildField(Keys.END_PAGE,getEndPage(rset.getString("PAGE")),ht),dataFormat,Keys.END_PAGE,Keys.RIS_EP);
 					formatRISDocType(buildField(Keys.DOC_TYPE,getDocumentType(rset.getString("CITTYPE"),rset.getString("CONFCODE")),ht),dataFormat,Keys.DOC_TYPE,Keys.RIS_TY);
@@ -1111,7 +1111,39 @@ public class BDDocBuilder
 
         return h;
     }
-
+	
+    
+    public String setSponsorData(String elementVal)
+	{
+		StringBuffer buf = new StringBuffer();
+		String [] array = null;
+		String result = null;
+		if(elementVal!=null && elementVal.trim().length()>0)
+		{
+			if(elementVal.indexOf(BdParser.AUDELIMITER)>-1)
+			{
+				array = elementVal.split(BdParser.AUDELIMITER,-1);
+			}
+			else
+			{
+				array = new String[1];
+				array[0]=elementVal;
+			}
+		}
+		if(array != null)
+		{
+			for (int i=0; i <array.length; i++)
+			{
+				buf.append(array[i]).append("; ");
+			}
+			result = buf.toString();
+			if(result.length() > 2)
+			{
+				result = result.substring(0,result.length() - 2);
+			}
+		}
+		return result;
+	}
 
 	public String[] setElementData(String elementVal)
 	{
@@ -1130,7 +1162,6 @@ public class BDDocBuilder
 		}
 		return array;
 	}
-
 
 	public ElementData getTreatments(String treatments, Database database)
 	{
