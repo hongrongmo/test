@@ -163,7 +163,7 @@
 	    </A>)
     </xsl:template>
 
-    <xsl:template match="TI|TT">
+    <xsl:template match="TI|TT|VT">
       <tr>
         <td valign="top" ><img src="/engresources/images/s.gif" border="0"/></td>
         <td xsl:use-attribute-sets="r-align-label"><span CLASS="MedBlackText"><b><xsl:value-of select="@label"/>:</b></span></td>
