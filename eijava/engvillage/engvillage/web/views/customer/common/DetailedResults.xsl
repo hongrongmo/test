@@ -127,7 +127,7 @@
 		<tr>
 		    <td valign="top" ><img src="/engresources/images/s.gif" border="0"/></td>
 		    <td xsl:use-attribute-sets="r-align-label">
-			<span CLASS="MedBlackText"><b>Corresponding email:</b> </span>
+			<span CLASS="MedBlackText"><b>Corresponding author:</b> </span>
 		    </td>
 		    <td valign="top" width="10"><img src="/engresources/images/s.gif" border="0" width="10"/></td>
 		    <td valign="top" align="left">
@@ -154,14 +154,13 @@
     </xsl:template>
 
     <xsl:template match="CAU">
-	    <A CLASS="SpLink">
+    	<xsl:if test="string(text())">
+   		  <xsl:value-of select="normalize-space(text())" disable-output-escaping="yes"/>
+   	  </xsl:if> (<A CLASS="SpLink">
 		  <xsl:attribute name="href">mailto:<xsl:value-of select="EMAIL"/></xsl:attribute>
-		  <xsl:attribute name="title">Corresponding email</xsl:attribute>
+		  <xsl:attribute name="title">Corresponding author</xsl:attribute>
 		  <xsl:value-of select="EMAIL"/>
-	    </A>
-	    <xsl:if test="string(text())">
-   		  (<xsl:value-of select="normalize-space(text())" disable-output-escaping="yes"/>)
-   	  </xsl:if>
+	    </A>)
     </xsl:template>
 
     <xsl:template match="TI|TT">
