@@ -156,11 +156,15 @@
     <xsl:template match="CAU">
     	<xsl:if test="string(text())">
    		  <xsl:value-of select="normalize-space(text())" disable-output-escaping="yes"/>
-   	  </xsl:if> (<A CLASS="SpLink">
+   	  </xsl:if> 
+
+   	  <xsl:if test="EMAIL">
+   	  (<A CLASS="SpLink">
 		  <xsl:attribute name="href">mailto:<xsl:value-of select="EMAIL"/></xsl:attribute>
 		  <xsl:attribute name="title">Corresponding author</xsl:attribute>
 		  <xsl:value-of select="EMAIL"/>
 	    </A>)
+	   </xsl:if>
     </xsl:template>
 
     <xsl:template match="TI|TT|VT">
