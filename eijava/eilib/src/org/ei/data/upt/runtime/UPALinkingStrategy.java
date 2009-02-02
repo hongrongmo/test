@@ -1,10 +1,9 @@
-
 package org.ei.data.upt.runtime;
 
 import org.ei.domain.EIDoc;
 import org.ei.fulldoc.LinkInfo;
-import org.ei.fulldoc.*;
-
+import org.ei.fulldoc.LinkingStrategy;
+import java.net.URLEncoder;
 
 public class UPALinkingStrategy implements LinkingStrategy
 {
@@ -13,40 +12,35 @@ public class UPALinkingStrategy implements LinkingStrategy
     {
         LinkInfo linkInfo = new LinkInfo();
         String pnum = eid.getPatNumber();
-        //String ppub = eid.getPatpubNumber();
-        String authcd = eid.getAuthcdNumber();
         String pkind = eid.getPatKind();
-        StringBuffer buf = new StringBuffer();
-        StringBuffer sbRURL = new StringBuffer();
+        String authcd = eid.getAuthcdNumber();
         String doctype = eid.getType();
 
-        //String dbid = eid.getDatabase();
-        if (authcd != null &&
-            "US".equalsIgnoreCase(authcd))
+        if (pnum != null && authcd != null && "US".equalsIgnoreCase(authcd))
         {
-            if ((doctype != null)
-                    && (doctype.equalsIgnoreCase("UA")))
+            pnum = pnum.trim();
+            StringBuffer redirect = new StringBuffer();
+            if ((doctype != null) && (doctype.equalsIgnoreCase("UA")))
             {
-                sbRURL.append("http://appft1.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PG01&p=1&u=/netahtml/PTO/srchnum.html&r=1&f=G&l=50&s1=")
-                      .append(pnum.trim())
-                      .append(".PGNR.&OS=DN/")
-                      .append(pnum.trim())
-                      .append("&RS=DN/")
-                      .append(pnum.trim());
-
-                buf.append(UniventioPDFGateway.getPatentLink(authcd,pnum,pkind,sbRURL.toString()));
-                linkInfo.url = buf.toString();
+                // create redirect for patent application
+                redirect.append("http://appft1.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PG01&p=1&u=/netahtml/PTO/srchnum.html&r=1&f=G&l=50&s1=")
+                  .append(pnum)
+                  .append(".PGNR.&OS=DN/")
+                  .append(pnum)
+                  .append("&RS=DN/")
+                  .append(pnum);
             }
             else
             {
-                sbRURL.append("http://patft.uspto.gov/netacgi/nph-Parser?patentnumber=");
-                sbRURL.append(pnum.trim());
-                buf.append(UniventioPDFGateway.getPatentLink(authcd,pnum,pkind,sbRURL.toString()));
-                linkInfo.url = buf.toString();
+                // create redirect for issued patent
+                redirect.append("http://patft.uspto.gov/netacgi/nph-Parser?patentnumber=")
+                  .append(pnum);
             }
+            // create link to patent servlet
+            StringBuffer buf = new StringBuffer();
+            buf.append("/controller/servlet/Patent.pdf?").append("ac=").append(authcd).append("&pn=").append(pnum).append("&kc=").append(pkind).append("&type=PDF").append("&rurl=").append(URLEncoder.encode(redirect.toString(),"UTF-8"));
+            linkInfo.url = buf.toString();
         }
-
-
         return linkInfo;
     }
 
@@ -54,8 +48,7 @@ public class UPALinkingStrategy implements LinkingStrategy
     {
         String patNum =  eid.getPatNumber();
         String authcd =  eid.getAuthcdNumber();
-        if((patNum != null)
-            &&(authcd != null))
+        if((patNum != null) &&(authcd != null))
         {
             return HAS_LINK_ALWAYS;
         }
@@ -63,6 +56,5 @@ public class UPALinkingStrategy implements LinkingStrategy
         {
             return HAS_LINK_NO;
         }
-
     }
 }
