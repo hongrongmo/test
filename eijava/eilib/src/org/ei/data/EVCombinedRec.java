@@ -142,6 +142,7 @@ public class EVCombinedRec {
 	public static final String AUTHORID = "140";
 	public static final String AFFILIATIONID = "141";
 	public static final String DATESORT = "142";
+	public static final String PARENT_ID = "143";
 	
 		
 	private Hashtable h = new Hashtable();
