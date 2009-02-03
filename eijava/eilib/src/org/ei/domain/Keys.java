@@ -277,7 +277,7 @@ public interface Keys
     public static final Key RN_LABEL = new Key("RN_LABEL","Report number");
     public static final Key RSRCH_SPONSOR = new Key("RSP","Sponsor");
     public static final Key SALUTATION = new Key("TL", "Salutation");
-    public static final Key SERIAL_TITLE = new Key("ST","Serial title");
+    public static final Key SERIAL_TITLE = new Key("RIL","Serial title");
     public static final Key SECONDARY_SOURCE = new Key("SEC", "Secondary source");
     public static final Key SESSION_NAME_NUMBER = new Key("CSESS","Session name number");
     public static final Key SPECIFIC_NAMES = new Key("SPECN","Specific Names");
@@ -315,7 +315,7 @@ public interface Keys
     public static final Key REGION_CONTROLLED_TERMS = new Key("RGIS","Regional terms");
     public static final Key CLASSIFICATION_SUBJECT = new Key("C_SUBJECT","Classification subject");
     public static final Key INDEX_TERM = new Key("CVS","Index terms");
-    public static final Key SPECIES_TERMS = new Key("FLS","Species terms");
+    public static final Key SPECIES_TERMS = new Key("LLS","Species terms");
     public static final Key CORRESPONDENCE_PERSON = new Key("CAUS","Correspondence person");
     public static final Key CORRESPONDENCE_AFFILIATION = new Key("CAFS","Correspondence affiliation");
 	public static final Key MEDIA = new Key("MEDIA","Media");
