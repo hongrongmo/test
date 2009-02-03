@@ -53,26 +53,34 @@ public class BdCoden
     public static String convert(String fiveDigitCoden) throws Exception
     {
 		String returnVal = null;
-		Integer cint = (Integer)codenMap.get(fiveDigitCoden.substring(4,5));
-		int checkDigit = 0;
 
-		if(fiveDigitCoden.length() < 5 || cint == null)
+		try
+		{
+			Integer cint = (Integer)codenMap.get(fiveDigitCoden.substring(4,5));
+			int checkDigit = 0;
+
+			if(fiveDigitCoden.length() < 5 || cint == null)
+				return null;
+
+			for(int i = 0; i < 5; i++)
+			{
+				Integer m = (Integer)codenMap.get(fiveDigitCoden.substring(i,i+1));
+				checkDigit += m.intValue() * nums[i];
+			}
+
+			checkDigit = checkDigit % 34;
+			if(checkDigit > 0 && checkDigit < 27)
+			{
+				returnVal = ""+reverseCodenMap.get(""+checkDigit);
+			}
+			else
+			{
+				returnVal = ""+(Integer)remainderMap.get(""+checkDigit);
+			}
+		}
+		catch(Exception e)
+		{
 			return null;
-
-		for(int i = 0; i < 5; i++)
-		{
-			Integer m = (Integer)codenMap.get(fiveDigitCoden.substring(i,i+1));
-			checkDigit += m.intValue() * nums[i];
-		}
-
-		checkDigit = checkDigit % 34;
-		if(checkDigit > 0 && checkDigit < 27)
-		{
-			returnVal = ""+reverseCodenMap.get(""+checkDigit);
-		}
-		else
-		{
-			returnVal = ""+(Integer)remainderMap.get(""+checkDigit);
 		}
 
         return fiveDigitCoden + returnVal;
