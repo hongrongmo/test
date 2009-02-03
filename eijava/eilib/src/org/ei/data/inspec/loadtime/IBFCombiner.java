@@ -18,7 +18,7 @@ public class IBFCombiner
 
     Perl5Util perl = new Perl5Util();
 
-    private static final String QUERY_FIELDS = "m_id, anum, rtype, su, aus, eds, ti, ab,oinfo,  pyr, cls, cvs, ocvs, ocls, fls, fjt, ojt, fttj,ottj, source, tsource, thlp,voliss, vol, iss, ipn, la, pub,  rnum, tc, cdate, cedate, cloc, ccnf, sorg, pnum, pas, cpat,iorg,ciorg, fdate, LOAD_NUMBER";
+    private static final String QUERY_FIELDS = "m_id, anum, rtype, su, aus, eds, ti, ab,oinfo,  pyr, cls, cvs, ocvs, ocls, fls, fjt, ojt, fttj,ottj, source, tsource, thlp,voliss, vol, iss, ipn, la, pub,  rnum, tc, cdate, cedate, cloc, ccnf, sorg, pnum, pas, cpat,iorg,ciorg, fdate, LOAD_NUMBER, SEQ_NUM";
 
     public IBFCombiner(CombinedWriter writer)
     {
@@ -426,6 +426,11 @@ public class IBFCombiner
                             rs.getString("vol"),
                             rs.getString("iss"),
                             rs.getString("ipn")));
+
+			if(rs.getString("seq_num") != null)
+			{
+				rec.put(EVCombinedRec.PARENT_ID, rs.getString("seq_num"));
+			}
 
             writer.writeRec(rec);
 
