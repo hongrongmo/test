@@ -33,8 +33,7 @@ public class CombinedXMLWriter
     private String databaseID;            
     private PrintWriter out;       
     private boolean open = false;
-    private boolean isChild = false;
-    private boolean generatePID = false;
+    private boolean isChild = false;    
     private String root = null;    
     private String filepath;
     private String logpath;
@@ -284,45 +283,27 @@ public class CombinedXMLWriter
     	if(rec.length >1)
     	{
 	    	for(int i=0; i<rec.length; i++)
-	    	{
-	    		this.generatePID = true;
+	    	{	    		
 	    		if(i>0)    
 	    			this.isChild = true;
 	    		writeRec(rec[i]);    		
 	    	}
-	    	this.isChild = false;
-	    	this.generatePID = false;
+	    	this.isChild = false;	    	
     	}
     	else
-    	{
-    		for(int i=0; i<rec.length; i++)
-	    	{	    		    		
-	    		writeRec(rec[i]);    		
-	    	}    		
+    	{    		    		    		
+	    	writeRec(rec[0]);    			    	    		
     	}	    	
     }
     
     public void writeRec(EVCombinedRec rec)
         throws Exception
     {
-    	this.eid = rec.getString(EVCombinedRec.DOCID);    	    	
-    	        
-        if(this.generatePID)
-        {   
-        	if(!this.isChild)
-        	{        		
-        		this.parentid = memcached.getID(this.PARENT_ID);
-        	}
-        }
-        else
-        {        	        	
-        	this.parentid = 0;        	
-        }
-                    	
+    	this.eid = rec.getString(EVCombinedRec.DOCID);    	    	    	                                   	
         begin();
         out.println("   <ROW> ");
         out.println("       <EIDOCID>" + this.eid + "</EIDOCID>");        
-        out.println("       <PARENTID>" + this.parentid + "</PARENTID>");
+        out.println("       <PARENTID>" +  rec.getString(EVCombinedRec.PARENT_ID) + "</PARENTID>");
         out.println("       <DEDUPKEY>" + rec.getString(EVCombinedRec.DEDUPKEY) + "</DEDUPKEY>");
         out.println("       <DATABASE>" + rec.getString(EVCombinedRec.DATABASE) + "</DATABASE>");
         out.println("       <LOADNUMBER>" + rec.getString(EVCombinedRec.LOAD_NUMBER) + "</LOADNUMBER>");
