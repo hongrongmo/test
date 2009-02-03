@@ -141,7 +141,7 @@
         <tr>
 		    <td valign="top" ><img src="/engresources/images/s.gif" border="0"/></td>
 		    <td xsl:use-attribute-sets="r-align-label">
-			<span CLASS="MedBlackText"><b>Corr. author:</b> </span>
+			<span CLASS="MedBlackText"><b>Corresponding author:</b> </span>
 		    </td>
 		    <td valign="top" width="10"><img src="/engresources/images/s.gif" border="0" width="10"/></td>
 		    <td valign="top" align="left">
