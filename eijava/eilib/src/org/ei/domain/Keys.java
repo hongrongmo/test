@@ -129,7 +129,7 @@ public interface Keys
     public static final Key ISBN  = new Key("BN","ISBN-10");
     public static final Key ISBN13  = new Key("BN13","ISBN-13");
     public static final Key ISSN  = new Key("SN","ISSN");
-    public static final Key E_ISSN  = new Key("E_ISSN","Electronic ISSN");
+    public static final Key E_ISSN  = new Key("E_ISSN","E-ISSN");
     public static final Key ISSUE = new Key("IS", "Issue");
     public static final Key ISSUE_DATE = new Key("SD","Issue date");
     public static final Key ISSUING_ORG = new Key("IORG","Issuing organization");
@@ -277,7 +277,7 @@ public interface Keys
     public static final Key RN_LABEL = new Key("RN_LABEL","Report number");
     public static final Key RSRCH_SPONSOR = new Key("RSP","Sponsor");
     public static final Key SALUTATION = new Key("TL", "Salutation");
-    public static final Key SERIAL_TITLE = new Key("RIL","Serial title");
+    public static final Key SERIAL_TITLE = new Key("RIL","Source title");
     public static final Key SECONDARY_SOURCE = new Key("SEC", "Secondary source");
     public static final Key SESSION_NAME_NUMBER = new Key("CSESS","Session name number");
     public static final Key SPECIFIC_NAMES = new Key("SPECN","Specific Names");
