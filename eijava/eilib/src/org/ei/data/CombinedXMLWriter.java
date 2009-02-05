@@ -741,6 +741,7 @@ public class CombinedXMLWriter
 					}
 				}
 			}
+
 		}
 		catch(Exception e)
 		{
@@ -898,7 +899,7 @@ public class CombinedXMLWriter
             if ((s != null )
                         && (!s.trim().equals("")))
             {
-            	addIndex(s, "AUTHOR");
+            	//addIndex(s, "AUTHOR");
                 if (buf.length() > 0)
                 {
                     buf.append(" QQDelQQ ");
