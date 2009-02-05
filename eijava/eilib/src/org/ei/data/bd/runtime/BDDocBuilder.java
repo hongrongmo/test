@@ -6,9 +6,6 @@ import java.io.*;
 
 import org.ei.connectionpool.*;
 import org.ei.domain.*;
-import org.ei.domain.ElementDataMap;
-import org.ei.domain.XMLWrapper;
-import org.ei.domain.XMLMultiWrapper;
 import org.ei.util.StringUtil;
 import org.ei.data.*;
 import org.ei.data.bd.*;
@@ -128,7 +125,7 @@ public class BDDocBuilder
 				formatRIS(buildField(Keys.VOLUME,getVolume(rset.getString("VOLUME"),perl),ht), dataFormat, Keys.VOLUME, Keys.RIS_VL);
 				formatRIS(buildField(Keys.ISSUE,getIssue(rset.getString("ISSUE"),perl),ht), dataFormat, Keys.ISSUE, Keys.RIS_IS);
 				formatRISSerialTitle(buildField(Keys.SERIAL_TITLE,rset.getString("SOURCETITLE"),ht), dataFormat, Keys.SERIAL_TITLE, getDocumentType(rset.getString("CITTYPE"),rset.getString("CONFCODE")));
-				buildField(Keys.CODEN,rset.getString("CODEN"),ht);
+				buildField(Keys.CODEN, BdCoden.convert(rset.getString("CODEN")),ht);
 				formatRIS(buildField(Keys.ISSN,getIssn(rset.getString("ISSN"),rset.getString("EISSN")),ht), dataFormat, Keys.ISSN, Keys.RIS_SN);
 				buildField(Keys.ABBRV_SERIAL_TITLE,rset.getString("SOURCETITLEABBREV"),ht);
 				buildField(Keys.VOLISSUE,getVolumeIssue(rset.getString("VOLUME"),rset.getString("ISSUE")),ht);
@@ -281,6 +278,8 @@ public class BDDocBuilder
         return list;
 
 	}
+    
+
 
 	private String getEmail(String email)
 	{
