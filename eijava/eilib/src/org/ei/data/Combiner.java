@@ -10,6 +10,7 @@ public abstract class Combiner
 {
 
     public static String TABLENAME;
+    public static String CURRENTDB;
     public static int EXITNUMBER;
 
     protected CombinedWriter writer;
