@@ -324,17 +324,17 @@ public class CombinedXMLWriter
 				{
 					setDatabase("bd");
 				}
-	    		//writeRec(rec[i]);
-	    		writeIndexOnly(rec[i]);
+	    		writeRec(rec[i]);
+	    		//writeIndexOnly(rec[i]);
 
 	    	}
 	    	this.isChild = false;
     	}
     	else
     	{
-	    	//writeRec(rec[0]);
-	    	setDatabase(rec[0].getString(EVCombinedRec.DATABASE));
-	    	writeIndexOnly(rec[0]);
+			setDatabase(rec[0].getString(EVCombinedRec.DATABASE));
+	    	writeRec(rec[0]);
+	    	//writeIndexOnly(rec[0]);
     	}
     }
 
@@ -342,24 +342,18 @@ public class CombinedXMLWriter
 	{
 		begin();
 		addIndex(rec.getStrings(EVCombinedRec.AUTHOR),"AUTHOR"); //AUTHOR
-		//System.out.println("AUTHOR= "+rec.getStrings(EVCombinedRec.AUTHOR));
 		if(rec.getStrings(EVCombinedRec.AUTHOR_AFFILIATION)!=null && (rec.getStrings(EVCombinedRec.AUTHOR_AFFILIATION))[0]!=null)
 		{
 			addIndex(rec.getStrings(EVCombinedRec.AUTHOR_AFFILIATION),"AUTHORAFFILIATION");//AUTHOR_AFFILIATION
-			//System.out.println("AUTHOR_AFFILIATION= "+(rec.getStrings(EVCombinedRec.AUTHOR_AFFILIATION))[0]);
 		}
 		else if(rec.getStrings(EVCombinedRec.AFFILIATION_LOCATION)!=null && (rec.getStrings(EVCombinedRec.AFFILIATION_LOCATION))[0]!=null)
 		{
 			addIndex(rec.getStrings(EVCombinedRec.AFFILIATION_LOCATION),"AUTHORAFFILIATION");//AUTHOR_AFFILIATION
-			//System.out.println("AFFILIATION_LOCATION= "+(rec.getStrings(EVCombinedRec.AFFILIATION_LOCATION))[0]);
 		}
 
 		addIndex(rec.getStrings(EVCombinedRec.CONTROLLED_TERMS),"CONTROLLEDTERMS");//CONTROLLEDTERMS
-		// System.out.println("CONTROLLED_TERMS= "+rec.getStrings(EVCombinedRec.CONTROLLED_TERMS));
 		addIndex(rec.getStrings(EVCombinedRec.SERIAL_TITLE),"SERIALTITLE");//SERIALTITLE
-		//multiFormat(rec.getStrings(EVCombinedRec.LANGUAGE),"LANGUAGE");//LANGUAGE
 		addIndex(rec.getStrings(EVCombinedRec.PUBLISHER_NAME),"PUBLISHERNAME");//PUBLISHERNAME
-		// System.out.println("PUBLISHER_NAME= "+rec.getStrings(EVCombinedRec.PUBLISHER_NAME));
 		++curRecNum;
 		end();
 
@@ -724,9 +718,15 @@ public class CombinedXMLWriter
 		try
 		{
 			PrintWriter indexWriter = (PrintWriter)hm.get(key);
-			for(int i=0; i<s.length; i++)
+			if(s!=null)
 			{
-				indexWriter.println("|"+ Entity.prepareString(s[i]).toUpperCase() + "|" + getDatabase());
+				for(int i=0; i<s.length; i++)
+				{
+					if(s[i]!=null)
+					{
+						indexWriter.println("|"+ Entity.prepareString(s[i]).toUpperCase() + "|" + getDatabase());
+					}
+				}
 			}
 		}
 		catch(Exception e)
