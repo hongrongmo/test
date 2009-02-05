@@ -80,7 +80,7 @@ public class NTISCombiner
     	// extract the whole thing
     	else if(loadNumber == 0)
     	{
-      		for(int yearIndex = 1964; yearIndex <= 2008; yearIndex++)
+      		for(int yearIndex = 1964; yearIndex <= 2009; yearIndex++)
       		{
     			System.out.println("Processing year " + yearIndex + "...");
       	  		// create  a new writer so we can see the loadNumber/yearNumber in the filename
@@ -122,7 +122,7 @@ public class NTISCombiner
 
             stmt = con.createStatement();
             System.out.println("Running the query...");
-            String q = "select LOAD_NUMBER,M_ID,AN,TI,TN,PN,AB,IC,SU,DES,IDE,SO,PA1,PA2,PA2,PA3,PA4,PA5,RD,RN,CAT,VI,XP,AV,MAA1,MAA2,CT,PR,HN from " + Combiner.TABLENAME + " where substr(load_number,1,4) ='" + year + "'";
+            String q = "select LOAD_NUMBER,M_ID,AN,TI,TN,PN,AB,IC,SU,DES,IDE,SO,PA1,PA2,PA2,PA3,PA4,PA5,RD,RN,CAT,VI,XP,AV,MAA1,MAA2,CT,PR,HN,seq_num from " + Combiner.TABLENAME + " where seq_num is not null and substr(load_number,1,4) ='" + year + "'";
             rs = stmt.executeQuery(q);
             System.out.println("Got records ...");
             writeRecs(rs);
@@ -260,6 +260,11 @@ public class NTISCombiner
             }
             rec.put(EVCombinedRec.ACCESSION_NUMBER,
                     formatAccessionNumber(rs.getString("AN")));
+
+			if(rs.getString("seq_num") != null)
+			{
+				rec.put(EVCombinedRec.PARENT_ID, rs.getString("seq_num"));
+			}
             this.writer.writeRec(rec);
         }
     }
@@ -1067,7 +1072,7 @@ public class NTISCombiner
         {
 
             stmt = con.createStatement();
-            rs = stmt.executeQuery("select LOAD_NUMBER,M_ID,AN,TI,TN,PN,AB,IC,SU,DES,IDE,SO,PA1,PA2,PA2,PA3,PA4,PA5,RD,RN,CAT,VI,XP,AV,MAA1,MAA2,CT,PR,HN from " + tablename + " where load_number =" + weekNumber);
+            rs = stmt.executeQuery("select LOAD_NUMBER,M_ID,AN,TI,TN,PN,AB,IC,SU,DES,IDE,SO,PA1,PA2,PA2,PA3,PA4,PA5,RD,RN,CAT,VI,XP,AV,MAA1,MAA2,CT,PR,HN,seq_num from " + tablename + " where seq_num is not null and load_number =" + weekNumber);
             writeRecs(rs);
             this.writer.end();
             this.writer.flush();
