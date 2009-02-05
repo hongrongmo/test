@@ -844,7 +844,7 @@ public class FastClient
 		StringTokenizer tokens1 = new StringTokenizer(docIdLine);
 		tokens1.nextToken();
 		id[0] = tokens1.nextToken().trim();        
-		if(id[0].lastIndexOf("_") > 8)
+		if((id[0].lastIndexOf("_") > 8)&&(!id[0].startsWith("pag_")))
 		{
 			String[] temp;
 			temp = id[0].split("_");
