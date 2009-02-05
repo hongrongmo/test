@@ -53,9 +53,9 @@ public class BdCoden
     public static String convert(String fiveDigitCoden) throws Exception
     {
 		String returnVal = null;
-
-		try
+		if(fiveDigitCoden != null )
 		{
+				
 			Integer cint = (Integer)codenMap.get(fiveDigitCoden.substring(4,5));
 			int checkDigit = 0;
 
@@ -77,10 +77,7 @@ public class BdCoden
 			{
 				returnVal = ""+(Integer)remainderMap.get(""+checkDigit);
 			}
-		}
-		catch(Exception e)
-		{
-			return null;
+		
 		}
 
         return fiveDigitCoden + returnVal;
