@@ -13,7 +13,7 @@ import org.ei.query.base.PorterStemmer;
 import org.ei.xml.Entity;
 import org.ei.controller.MemCached;
 import java.util.Date;
-import java.util.zip.*; 
+import java.util.zip.*;
 import java.text.*;
 
 
@@ -25,16 +25,16 @@ public class CombinedXMLWriter
     private DataCleaner cleaner = new DataCleaner();
     private DataValidator d = new DataValidator();
     private int recsPerbatch;
-    private int curRecNum = 0;          
-    private int numberID;    
+    private int curRecNum = 0;
+    private int numberID;
     private int batchID;
     private String batchidFormat;
-    private String batchPath;    
-    private String databaseID;            
-    private PrintWriter out;       
+    private String batchPath;
+    private String databaseID;
+    private PrintWriter out;
     private boolean open = false;
-    private boolean isChild = false;    
-    private String root = null;    
+    private boolean isChild = false;
+    private String root = null;
     private String filepath;
     private String logpath;
     private String logfile;
@@ -44,14 +44,28 @@ public class CombinedXMLWriter
     private long parentid = 0;
     private String lasteid = null;
     private final String PARENT_ID = "PARENTID";
-    private HashMap hm = new HashMap();    
+    private HashMap hm = new HashMap();
+    private PrintWriter affiliationPW = null;
+    private PrintWriter authorPW = null;
+    private PrintWriter controltermsPW = null;
+    private PrintWriter serialtitlePW = null;
+    private PrintWriter publishernamePW = null;
+    private PrintWriter patentcountryPW = null;
     private String indexKey = null;
-    private static MemCached memcached = null;	
+    private static MemCached memcached = null;
     private String memcacheServers;
-    private String memcacheWeights; 
+    private String memcacheWeights;
     private NumberFormat formatter;
     private long starttime = 0;
-    
+    private String database;
+
+	public String getDatabase() {
+		return database;
+	}
+
+	public void setDatabase(String database) {
+		this.database = database;
+    }
     public String getDatabaseID() {
         return databaseID;
       }
@@ -69,18 +83,18 @@ public class CombinedXMLWriter
     public void setOperation(String op) {
     	this.operation = op.toLowerCase();
     }
-    
+
     public void setEnvironment(String env) {
     	this.environment = env.toLowerCase();
     }
-        
+
     public int getCurRecNum() {
       return curRecNum;
     }
 
     public int getNumberID() {
       return numberID;
-    }    
+    }
     public PrintWriter getWriter() {
       return out;
     }
@@ -92,17 +106,17 @@ public class CombinedXMLWriter
     {
       this.d = avalidator;
     }
-    
+
     public CombinedXMLWriter(int recsPerbatch,
             int numberID,
-            String databaseID, 
+            String databaseID,
             String env)
     {
     	this.databaseID = databaseID;
         this.numberID = numberID;
         this.batchID = 1;
-        formatter = new DecimalFormat("0000");        
-        this.recsPerbatch = recsPerbatch;             
+        formatter = new DecimalFormat("0000");
+        this.recsPerbatch = recsPerbatch;
         this.lasteid = null;
         this.environment = env;
         if(this.environment.equals("prod"))
@@ -133,7 +147,7 @@ public class CombinedXMLWriter
 		if(numberID != 0)
 			init();
     }
-    
+
     public CombinedXMLWriter(int recsPerbatch,
                              int numberID,
                              String databaseID)
@@ -141,10 +155,10 @@ public class CombinedXMLWriter
         this.databaseID = databaseID;
         this.numberID = numberID;
         this.batchID = 1;
-        formatter = new DecimalFormat("0000");        
-        this.recsPerbatch = recsPerbatch;             
-        this.lasteid = null;               
-        memcacheServers = "206.137.75.51:21201";        
+        formatter = new DecimalFormat("0000");
+        this.recsPerbatch = recsPerbatch;
+        this.lasteid = null;
+        memcacheServers = "206.137.75.51:21201";
         memcacheWeights = "1";
         String[] s = null;
 		String[] w = null;
@@ -165,153 +179,208 @@ public class CombinedXMLWriter
 		if(numberID != 0)
 			init();
     }
-       
+
     public void init()
     {
-    	File file=new File("ei");    	
-    	if(!file.exists())
+    	try
     	{
-    		file.mkdir();    		
+	    	File file=new File("ei");
+	    	if(!file.exists())
+	    	{
+	    		file.mkdir();
+	    	}
+	    	file=new File("fast");
+	    	if(!file.exists())
+	    	{
+	    		file.mkdir();
+	    	}
+
+	    	file=new File("ei/index_af");
+	    	affiliationPW = new PrintWriter(new FileWriter(file.getPath() + "/affiliation-" + this.numberID + "." + this.databaseID, true));
+	    	hm.put("AUTHORAFFILIATION", affiliationPW);
+	    	if(!file.exists())
+	    	{
+	    		file.mkdir();
+	    	}
+	    	file=new File("ei/index_au");
+	    	authorPW = new PrintWriter(new FileWriter(file.getPath() + "/author-" + this.numberID + "." + this.databaseID, true));
+	    	hm.put("AUTHOR", authorPW);
+	    	if(!file.exists())
+	    	{
+	    		file.mkdir();
+	    	}
+	    	file=new File("ei/index_cv");
+	    	controltermsPW = new PrintWriter(new FileWriter(file.getPath() + "/controlterms-" + this.numberID + "." + this.databaseID, true));
+	    	hm.put("CONTROLLEDTERMS", controltermsPW);
+	    	if(!file.exists())
+	    	{
+	    		file.mkdir();
+	    	}
+	    	file=new File("ei/index_st");
+	    	serialtitlePW = new PrintWriter(new FileWriter(file.getPath() + "/serialtitle-" + this.numberID + "." + this.databaseID, true));
+	    	hm.put("SERIALTITLE", serialtitlePW);
+	    	if(!file.exists())
+	    	{
+	    		file.mkdir();
+	    	}
+	    	file=new File("ei/index_pn");
+	    	publishernamePW = new PrintWriter(new FileWriter(file.getPath() + "/publishername-" + this.numberID + "." + this.databaseID, true));
+	    	hm.put("PUBLISHERNAME", publishernamePW);
+	    	if(!file.exists())
+	    	{
+	    		file.mkdir();
+	    	}
+	    	file=new File("ei/index_pc");
+	    	patentcountryPW = new PrintWriter(new FileWriter(file.getPath() + "/patentcountry-" + this.numberID + "." + this.databaseID, true));
+	    	hm.put("AUTHORITYCODE", patentcountryPW);
+	    	if(!file.exists())
+	    	{
+	    		file.mkdir();
+	    	}
+	    	file=new File("ei/logs");
+	    	if(!file.exists())
+	    	{
+	    		file.mkdir();
+	    	}
+	    	this.logfile = file.getPath() + "/extract.log";
+	    	file=new File("ei/runtime");
+	    	if(!file.exists())
+	    	{
+	    		file.mkdir();
+	    	}
+	    	createRoot(this.batchID);
+    	}catch(Exception e)
+    	{
+    		e.printStackTrace();
     	}
-    	file=new File("fast");    	
-    	if(!file.exists())
-    	{
-    		file.mkdir();    		
-    	}    	
-    	file=new File("ei/index_af");
-    	hm.put("AUTHORAFFILIATION", file.getPath() + "/affiliation-" + this.numberID + "." + this.databaseID);
-    	if(!file.exists())
-    	{
-    		file.mkdir();    		
-    	}
-    	file=new File("ei/index_au");
-    	hm.put("AUTHOR", file.getPath() + "/author-" + this.numberID + "." + this.databaseID);
-    	if(!file.exists())
-    	{
-    		file.mkdir();    		
-    	}
-    	file=new File("ei/index_cv");
-    	hm.put("CONTROLLEDTERMS", file.getPath() + "/controlterms-" + this.numberID + "." + this.databaseID);
-    	if(!file.exists())
-    	{
-    		file.mkdir();    		
-    	}
-    	file=new File("ei/index_st");
-    	hm.put("SERIALTITLE", file.getPath() + "/serialtitle-" + this.numberID + "." + this.databaseID);
-    	if(!file.exists())
-    	{
-    		file.mkdir();    		
-    	}
-    	file=new File("ei/index_pn");
-    	hm.put("PUBLISHERNAME", file.getPath() + "/publishername-" + this.numberID + "." + this.databaseID);
-    	if(!file.exists())
-    	{
-    		file.mkdir();    		
-    	}
-    	file=new File("ei/index_pc");
-    	hm.put("AUTHORITYCODE", file.getPath() + "/patentcountry-" + this.numberID + "." + this.databaseID);
-    	if(!file.exists())
-    	{
-    		file.mkdir();    		
-    	}
-    	file=new File("ei/logs");    	
-    	if(!file.exists())
-    	{
-    		file.mkdir();    		
-    	}
-    	this.logfile = file.getPath() + "/extract.log";    	
-    	file=new File("ei/runtime");
-    	if(!file.exists())
-    	{
-    		file.mkdir();    		
-    	}    
-    	createRoot(this.batchID);
+
     }
     public void begin()
         throws Exception
-    {    	    	
+    {
         filepath = this.root + "/" + this.eid + ".xml";
-        out = new PrintWriter(new FileWriter(filepath));                
+        out = new PrintWriter(new FileWriter(filepath));
         open = true;
         out.println("<?xml version=\"1.0\"?>");
         out.println("<!DOCTYPE ROWSET SYSTEM \"../bin/EVROWSET.dtd\">");
         out.println("<ROWSET>");
     }
-    public void createRoot(int batchid)    
-	{       	
+    public void createRoot(int batchid)
+	{
     	batchidFormat = formatter.format(this.batchID);
-    	this.starttime = System.currentTimeMillis();  
+    	this.starttime = System.currentTimeMillis();
     	this.batchPath = "fast/batch_" + this.numberID + "_" + batchidFormat;
     	File file=new File(batchPath);
     	if(!file.exists())
     	{
     		file.mkdir();
-    	}    		
+    	}
 		this.root = this.batchPath +"/EIDATA";
 		file=new File(this.root);
 		if(!file.exists())
     	{
-    		file.mkdir();    		
-    	}    		
+    		file.mkdir();
+    	}
 		this.root = this.batchPath +"/EIDATA/tmp";
 		file=new File(this.root);
 		if(!file.exists())
     	{
-    		file.mkdir();    		
-    	}    		
+    		file.mkdir();
+    	}
 		file=new File(this.batchPath +"/PROD");
 		if(!file.exists())
     	{
-    		file.mkdir();    		
-    	}		
+    		file.mkdir();
+    	}
 		file=new File(this.batchPath +"/logs");
 		if(!file.exists())
     	{
-    		file.mkdir();    		
+    		file.mkdir();
     	}
 		this.logpath = this.batchPath +"/logs";
 		file=new File(this.batchPath +"/status");
 		if(!file.exists())
     	{
-    		file.mkdir();    		
-    	}    	
+    		file.mkdir();
+    	}
 	}
-    
+
     public void writeRec(EVCombinedRec[] rec)
     throws Exception
     {
     	if(rec.length >1)
     	{
+
 	    	for(int i=0; i<rec.length; i++)
-	    	{	    		
-	    		if(i>0)    
+	    	{
+	    		if(i>0)
 	    			this.isChild = true;
-	    		writeRec(rec[i]);    		
+
+	    		if(rec[i].getString(EVCombinedRec.DATABASE)!=null)
+				{
+					setDatabase(rec[i].getString(EVCombinedRec.DATABASE));
+				}
+				else
+				{
+					setDatabase("bd");
+				}
+	    		//writeRec(rec[i]);
+	    		writeIndexOnly(rec[i]);
+
 	    	}
-	    	this.isChild = false;	    	
+	    	this.isChild = false;
     	}
     	else
-    	{    		    		    		
-	    	writeRec(rec[0]);    			    	    		
-    	}	    	
+    	{
+	    	//writeRec(rec[0]);
+	    	setDatabase(rec[0].getString(EVCombinedRec.DATABASE));
+	    	writeIndexOnly(rec[0]);
+    	}
     }
-    
+
+    public void writeIndexOnly(EVCombinedRec rec)throws Exception
+	{
+		begin();
+		addIndex(rec.getStrings(EVCombinedRec.AUTHOR),"AUTHOR"); //AUTHOR
+		//System.out.println("AUTHOR= "+rec.getStrings(EVCombinedRec.AUTHOR));
+		if(rec.getStrings(EVCombinedRec.AUTHOR_AFFILIATION)!=null && (rec.getStrings(EVCombinedRec.AUTHOR_AFFILIATION))[0]!=null)
+		{
+			addIndex(rec.getStrings(EVCombinedRec.AUTHOR_AFFILIATION),"AUTHORAFFILIATION");//AUTHOR_AFFILIATION
+			//System.out.println("AUTHOR_AFFILIATION= "+(rec.getStrings(EVCombinedRec.AUTHOR_AFFILIATION))[0]);
+		}
+		else if(rec.getStrings(EVCombinedRec.AFFILIATION_LOCATION)!=null && (rec.getStrings(EVCombinedRec.AFFILIATION_LOCATION))[0]!=null)
+		{
+			addIndex(rec.getStrings(EVCombinedRec.AFFILIATION_LOCATION),"AUTHORAFFILIATION");//AUTHOR_AFFILIATION
+			//System.out.println("AFFILIATION_LOCATION= "+(rec.getStrings(EVCombinedRec.AFFILIATION_LOCATION))[0]);
+		}
+
+		addIndex(rec.getStrings(EVCombinedRec.CONTROLLED_TERMS),"CONTROLLEDTERMS");//CONTROLLEDTERMS
+		// System.out.println("CONTROLLED_TERMS= "+rec.getStrings(EVCombinedRec.CONTROLLED_TERMS));
+		addIndex(rec.getStrings(EVCombinedRec.SERIAL_TITLE),"SERIALTITLE");//SERIALTITLE
+		//multiFormat(rec.getStrings(EVCombinedRec.LANGUAGE),"LANGUAGE");//LANGUAGE
+		addIndex(rec.getStrings(EVCombinedRec.PUBLISHER_NAME),"PUBLISHERNAME");//PUBLISHERNAME
+		// System.out.println("PUBLISHER_NAME= "+rec.getStrings(EVCombinedRec.PUBLISHER_NAME));
+		++curRecNum;
+		end();
+
+	}
+
     public void writeRec(EVCombinedRec rec)
         throws Exception
     {
-    	this.eid = rec.getString(EVCombinedRec.DOCID);    	    	    	                                   	
+    	this.eid = rec.getString(EVCombinedRec.DOCID);
         begin();
         out.println("   <ROW> ");
-        out.println("       <EIDOCID>" + this.eid + "</EIDOCID>");        
+        out.println("       <EIDOCID>" + this.eid + "</EIDOCID>");
         out.println("       <PARENTID>" +  rec.getString(EVCombinedRec.PARENT_ID) + "</PARENTID>");
         out.println("       <DEDUPKEY>" + rec.getString(EVCombinedRec.DEDUPKEY) + "</DEDUPKEY>");
         out.println("       <DATABASE>" + rec.getString(EVCombinedRec.DATABASE) + "</DATABASE>");
         out.println("       <LOADNUMBER>" + rec.getString(EVCombinedRec.LOAD_NUMBER) + "</LOADNUMBER>");
-        out.println("       <DATESORT>" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.DATESORT))) + "</DATESORT>");        
+        out.println("       <DATESORT>" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.DATESORT))) + "</DATESORT>");
         out.println("       <PUBYEAR>" + rec.getString(EVCombinedRec.PUB_YEAR) + "</PUBYEAR>");
-        out.println("       <ACCESSIONNUMBER>" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.ACCESSION_NUMBER))) + "</ACCESSIONNUMBER>");        
-        out.println("       <AUTHOR><![CDATA[" + notNull(Entity.prepareString(formatAuthors(rec.getStrings(EVCombinedRec.AUTHOR)))) + "]]></AUTHOR>");
-        out.println("       <AUTHORAFFILIATION><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.AUTHOR_AFFILIATION),"AUTHORAFFILIATION"))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.AUTHOR_AFFILIATION))))) + "]]></AUTHORAFFILIATION>");
+        out.println("       <ACCESSIONNUMBER>" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.ACCESSION_NUMBER))) + "</ACCESSIONNUMBER>");
+        out.println("       <AUTHOR><![CDATA[" + notNull(Entity.prepareString(formatAuthors(addIndex(rec.getStrings(EVCombinedRec.AUTHOR),"AUTHOR")))) + "]]></AUTHOR>");
+        out.println("       <AUTHORAFFILIATION><![CDATA[" + notNull(Entity.prepareString(multiFormat(addIndex(rec.getStrings(EVCombinedRec.AUTHOR_AFFILIATION),"AUTHORAFFILIATION")))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.AUTHOR_AFFILIATION))))) + "]]></AUTHORAFFILIATION>");
         out.println("       <AFFILIATIONLOCATION><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.AFFILIATION_LOCATION)))) + "]]></AFFILIATIONLOCATION>");
         out.println("       <TITLE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.TITLE)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.TITLE))))) + "]]></TITLE>");
         out.println("       <TRANSLATEDTITLE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.TRANSLATED_TITLE)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.TRANSLATED_TITLE))))) + "]]></TRANSLATEDTITLE>");
@@ -321,18 +390,18 @@ public class CombinedXMLWriter
         out.println("       <EDITOR><![CDATA[" + notNull(Entity.prepareString(formatAuthors(rec.getStrings(EVCombinedRec.EDITOR))))+"]]></EDITOR>");
         out.println("       <EDITORAFFILIATION><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.EDITOR_AFFILIATION)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.EDITOR_AFFILIATION))))) + "]]></EDITORAFFILIATION>");
         out.println("       <TRANSLATOR><![CDATA[" + notNull(Entity.prepareString(formatAuthors(rec.getStrings(EVCombinedRec.TRANSLATOR)))) + "]]></TRANSLATOR>");
-        out.println("       <CONTROLLEDTERMS><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CONTROLLED_TERMS),"CONTROLLEDTERMS"))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CONTROLLED_TERMS))))) + "]]></CONTROLLEDTERMS>");
+        out.println("       <CONTROLLEDTERMS><![CDATA[" + notNull(Entity.prepareString(multiFormat(addIndex(rec.getStrings(EVCombinedRec.CONTROLLED_TERMS),"CONTROLLEDTERMS")))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CONTROLLED_TERMS))))) + "]]></CONTROLLEDTERMS>");
         out.println("       <UNCONTROLLEDTERMS><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.UNCONTROLLED_TERMS)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.UNCONTROLLED_TERMS))))) + "]]></UNCONTROLLEDTERMS>");
         out.println("       <ISSN><![CDATA[" + notNull(Entity.prepareString(multiFormat(prepareISSN(rec.getStrings(EVCombinedRec.ISSN))))) + "]]></ISSN>");
         out.println("       <ISSNOFTRANSLATION><![CDATA[" + notNull(Entity.prepareString(multiFormat(prepareISSN(rec.getStrings(EVCombinedRec.ISSN_OF_TRANSLATION))))) + "]]></ISSNOFTRANSLATION>");
         out.println("       <CODEN><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CODEN)))) + "]]></CODEN>");
         out.println("       <CODENOFTRANSLATION><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CODEN_OF_TRANSLATION)))) + "]]></CODENOFTRANSLATION>");
         out.println("       <ISBN><![CDATA[" + notNull(Entity.prepareString(multiFormat(prepareISBN(rec.getStrings(EVCombinedRec.ISBN))))) + "]]></ISBN>");
-        out.println("       <SERIALTITLE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SERIAL_TITLE),"SERIALTITLE"))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SERIAL_TITLE))))) + "]]></SERIALTITLE>");
+        out.println("       <SERIALTITLE><![CDATA[" + notNull(Entity.prepareString(multiFormat(addIndex(rec.getStrings(EVCombinedRec.SERIAL_TITLE),"SERIALTITLE"))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SERIAL_TITLE)))))) + "]]></SERIALTITLE>");
         out.println("       <SERIALTITLETRANSLATION><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SERIAL_TITLE_TRANSLATION)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SERIAL_TITLE_TRANSLATION))))) + "]]></SERIALTITLETRANSLATION>");
         out.println("       <MAINHEADING><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MAIN_HEADING)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MAIN_HEADING))))) + "]]></MAINHEADING>");
         out.println("       <SUBHEADING><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.SUB_HEADING))) + "]]></SUBHEADING>");
-        out.println("       <PUBLISHERNAME><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PUBLISHER_NAME),"PUBLISHERNAME"))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PUBLISHER_NAME))))) + "]]></PUBLISHERNAME>");
+        out.println("       <PUBLISHERNAME><![CDATA[" + notNull(Entity.prepareString(multiFormat(addIndex(rec.getStrings(EVCombinedRec.PUBLISHER_NAME),"PUBLISHERNAME")))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PUBLISHER_NAME))))) + "]]></PUBLISHERNAME>");
         out.println("       <TREATMENTCODE>" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.TREATMENT_CODE)))) + "</TREATMENTCODE>");
         out.println("       <LANGUAGE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.LANGUAGE)))) + "]]></LANGUAGE>");
         out.println("       <RECTYPE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.DOCTYPE)))) + "]]></RECTYPE>");
@@ -416,15 +485,15 @@ public class CombinedXMLWriter
         out.println("       <USPTOCODE><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.USPTOCODE)))) + "]]></USPTOCODE>");
         out.println("       <PATENTKIND><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PATENT_KIND)))) + "]]></PATENTKIND>");
         out.println("       <KINDDESCRIPTION><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.KIND_DESCR)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.KIND_DESCR))))) + "]]></KINDDESCRIPTION>");
-        out.println("       <AUTHORITYCODE><![CDATA[" + notNull(Entity.prepareString(singleFormat(rec.getString(EVCombinedRec.AUTHORITY_CODE),"AUTHORITYCODE"))) + "]]></AUTHORITYCODE>");
+        out.println("       <AUTHORITYCODE><![CDATA[" + notNull(Entity.prepareString(addIndex(rec.getString(EVCombinedRec.AUTHORITY_CODE),"AUTHORITYCODE"))) + "]]></AUTHORITYCODE>");
         out.println("       <PCITED><![CDATA[" + hasPcited(rec.getString(EVCombinedRec.PCITED)) + "]]></PCITED>");
         out.println("       <PCITEDINDEX><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PCITEDINDEX)))) + "]]></PCITEDINDEX>");
         out.println("       <PREFINDEX><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PREFINDEX)))) + "]]></PREFINDEX>");
         out.println("       <DMASK><![CDATA[" + getMask(rec) + "]]></DMASK>");
-        out.println("       <DOI><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.DOI)))) + hasDOI(rec) + "]]></DOI>");        
+        out.println("       <DOI><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.DOI)))) + hasDOI(rec) + "]]></DOI>");
         out.println("       <SCOPUSID><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.SCOPUSID))) + "]]></SCOPUSID>");
         out.println("       <AUTHORID><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.AUTHORID))) + "]]></AUTHORID>");
-        out.println("       <AFFILIATIONID><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.AFFILIATIONID))) + "]]></AFFILIATIONID>");                
+        out.println("       <AFFILIATIONID><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.AFFILIATIONID))) + "]]></AFFILIATIONID>");
         out.println("       <LAT_NW><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.LAT_NW))) + "]]></LAT_NW>");
         out.println("       <LNG_NW><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.LNG_NW))) + "]]></LNG_NW>");
         out.println("       <LAT_NE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.LAT_NE))) + "]]></LAT_NE>");
@@ -433,8 +502,8 @@ public class CombinedXMLWriter
         out.println("       <LNG_SW><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.LNG_SW))) + "]]></LNG_SW>");
         out.println("       <LAT_SE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.LAT_SE))) + "]]></LAT_SE>");
         out.println("       <LNG_SE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.LNG_SE))) + "]]></LNG_SE>");
-        out.println("   </ROW>");                
-        ++curRecNum;        
+        out.println("   </ROW>");
+        ++curRecNum;
         end();
     }
 
@@ -558,7 +627,7 @@ public class CombinedXMLWriter
         {
             return ISSN;
         }
-        
+
         return null;
     }
 
@@ -620,10 +689,10 @@ public class CombinedXMLWriter
     }
 
     private void writeLog(String log)
-    {    	
+    {
     	PrintWriter extractlog = null;
     	try
-        {       	
+        {
 	    	extractlog = new PrintWriter(new FileWriter(this.logfile, true));
 	    	extractlog.println(log);
         }
@@ -631,8 +700,8 @@ public class CombinedXMLWriter
         {
           if(extractlog!=null)
             e.printStackTrace(extractlog);
-          else        	  
-            e.printStackTrace();         
+          else
+            e.printStackTrace();
         }
         finally
         {
@@ -647,57 +716,34 @@ public class CombinedXMLWriter
               e1.printStackTrace();
             }
           }
-       }    	
+       }
     }
-       
-    private void addIndex(String s, String key)
+
+    private String[] addIndex(String s[], String key)
     {
-    	
-    	if(!this.isChild)
-    	{
-	    	PrintWriter indexlog = null;
-	    	try
-	        {    		
-		    	String indexfile = hm.get(key).toString();	    		    	
-		    	indexlog = new PrintWriter(new FileWriter(indexfile, true));
-		    	indexlog.println("|"+ Entity.prepareString(s).toUpperCase() + "|" + this.databaseID);
-	        }
-	    	catch(Exception e)
-	        {
-	          if(indexlog!=null)
-	            e.printStackTrace(indexlog);
-	          else        	  
-	            e.printStackTrace();         
-	        }
-	        finally
-	        {
-	          if(indexlog != null)
-	          {
-	            try
-	            {
-	            	indexlog.close();
-	            }
-	            catch(Exception e1)
-	            {
-	              e1.printStackTrace();
-	            }
-	          }
-	        }
-    	}
+		try
+		{
+			PrintWriter indexWriter = (PrintWriter)hm.get(key);
+			for(int i=0; i<s.length; i++)
+			{
+				indexWriter.println("|"+ Entity.prepareString(s[i]).toUpperCase() + "|" + getDatabase());
+			}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	   	return s;
     }
-    
-    private String multiFormat(String[] strings, String key)
+
+    private String addIndex(String s, String key)
     {
-    	this.indexKey = key;
-    	return multiFormat(strings);
-    }
-    
-    private String singleFormat(String string, String key)
-    {
-    	addIndex(string, key);
-    	return string;
-    }
-    
+		String sarray[] = {s};
+		addIndex(sarray, key);
+		return s;
+	}
+
+
     private String multiFormat(String[] strings)
     {
         if (strings == null)
@@ -712,11 +758,6 @@ public class CombinedXMLWriter
             String s = strings[i];
             if (s != null)
             {
-            	if(this.indexKey != null)
-            	{
-            		addIndex(s, this.indexKey);
-            		this.indexKey = null;            		
-            	}
                 s = s.trim();
                 if (s.length() > 0)
                 {
@@ -839,12 +880,12 @@ public class CombinedXMLWriter
         StringBuffer buf = new StringBuffer();
 
         for (int i = 0; i < authors.length; i++)
-        {        	        		        			        	       
+        {
             String s = authors[i];
             if ((s != null )
                         && (!s.trim().equals("")))
             {
-            	addIndex(s, "AUTHOR");            	
+            	addIndex(s, "AUTHOR");
                 if (buf.length() > 0)
                 {
                     buf.append(" QQDelQQ ");
@@ -868,10 +909,10 @@ public class CombinedXMLWriter
 
     public void endXML()
     throws Exception
-    {    	
+    {
     	out.println("</ROWSET>");
         out.close();
-    	File f = new File(filepath);            
+    	File f = new File(filepath);
         StringBuffer GZIPFileName = new StringBuffer();
         GZIPFileName.append(f.getAbsolutePath());
         GZIPFileName.append(".gz");
@@ -886,54 +927,54 @@ public class CombinedXMLWriter
         }
         in.close();
         outgz.finish();
-        outgz.close(); 
-        f.delete();    	
+        outgz.close();
+        f.delete();
     }
     public void zipBatch()
     throws Exception
     {
     	File tmpDir = new File(this.root);
-    	String[] gzFiles = tmpDir.list();     	
-    	File[] gzFilestoDelete = tmpDir.listFiles();    	
+    	String[] gzFiles = tmpDir.list();
+    	File[] gzFilestoDelete = tmpDir.listFiles();
     	byte[] buf = new byte[1024];
-    	long time = System.currentTimeMillis();    	
+    	long time = System.currentTimeMillis();
     	String ZipFilename = this.batchPath + "/EIDATA/" + Long.toString(time) + "_"+ databaseID + "_" + this.operation + "_" + this.numberID + "-" + formatter.format(this.batchID) + ".zip";
     	writeLog( formatTimeStamp(System.currentTimeMillis()) + "adding " + gzFiles.length + " files to zipfile " + ZipFilename);
     	String ControlFile = this.batchPath + "/PROD/" + Long.toString(time) + "_"+ databaseID + "_" + this.operation + "_" + this.numberID + "-" + formatter.format(this.batchID) + ".ctl";
     	writeLog(formatTimeStamp(System.currentTimeMillis()) + "creating control file " + ControlFile);
     	long timediff = time - this.starttime;
-    	writeLog(formatTimeStamp(System.currentTimeMillis()) + "batch processed in " + timediff + " milliseconds");    	    	
-    	writeLog(formatTimeStamp(System.currentTimeMillis()) + "last parent id generated is " + this.parentid);    	
+    	writeLog(formatTimeStamp(System.currentTimeMillis()) + "batch processed in " + timediff + " milliseconds");
+    	writeLog(formatTimeStamp(System.currentTimeMillis()) + "last parent id generated is " + this.parentid);
     	File f = new File(ControlFile);
     	if(!f.exists())
     	{
     		f.createNewFile();
     	}
     	ZipOutputStream outZIP = new ZipOutputStream(new FileOutputStream(ZipFilename));
-    	for (int i=0; i<gzFiles.length; i++) 
-    	{    		
-            FileInputStream in = new FileInputStream(this.root + "/" + gzFiles[i]);    
-            outZIP.putNextEntry(new ZipEntry(gzFiles[i]));    
+    	for (int i=0; i<gzFiles.length; i++)
+    	{
+            FileInputStream in = new FileInputStream(this.root + "/" + gzFiles[i]);
+            outZIP.putNextEntry(new ZipEntry(gzFiles[i]));
             int len;
             while ((len = in.read(buf)) > 0) {
             	outZIP.write(buf, 0, len);
-            }    
-            outZIP.closeEntry();                        
+            }
+            outZIP.closeEntry();
             in.close();
-            gzFilestoDelete[i].delete();            
+            gzFilestoDelete[i].delete();
         }
     	outZIP.close();
     	tmpDir.delete();
     }
-    
+
     public void end()
         throws Exception
     {
         if (open)
-        {   
+        {
         	open = false;
         	endXML();
-        	//System.out.println("Current count at: " + curRecNum + "  --- Number per batch at: " + recsPerbatch);        	
+        	//System.out.println("Current count at: " + curRecNum + "  --- Number per batch at: " + recsPerbatch);
         	if (curRecNum >= recsPerbatch)
         	{
         		System.out.print(".");
@@ -943,19 +984,59 @@ public class CombinedXMLWriter
         	}
         }
     }
-    
+
     public void flush()
-    throws Exception
-	{    	
-    	if (curRecNum > 0)
-	    {	    	
-	    	curRecNum = 0;
-	    	zipBatch();	        
-	    }    
+	{
+    	try
+    	{
+	    	if (curRecNum > 0)
+		    {
+		    	curRecNum = 0;
+		    	zipBatch();
+		    }
+    	}
+    	catch(Exception e)
+    	{
+    		e.printStackTrace();
+    	}
+    	finally
+        {
+          if(affiliationPW != null)
+          {
+        	  affiliationPW.close();
+        	  affiliationPW = null;
+          }
+          if(authorPW != null)
+          {
+        	  authorPW.close();
+        	  authorPW = null;
+          }
+          if(controltermsPW != null)
+          {
+        	  controltermsPW.close();
+        	  controltermsPW = null;
+          }
+          if(serialtitlePW != null)
+          {
+        	  serialtitlePW.close();
+        	  serialtitlePW = null;
+          }
+          if(publishernamePW != null)
+          {
+        	  publishernamePW.close();
+        	  publishernamePW = null;
+          }
+          if(patentcountryPW != null)
+          {
+        	  patentcountryPW.close();
+        	  patentcountryPW = null;
+          }
+       }
 	}
-    
-    public String formatTimeStamp(long timeStamp) 
-    {    	
+
+
+    public String formatTimeStamp(long timeStamp)
+    {
         SimpleDateFormat sdtf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");
         return "[" + sdtf.format(new Date(timeStamp)) + " - LOAD :" + this.numberID  + " - BATCH:"  + batchidFormat  + " ]";
     }
