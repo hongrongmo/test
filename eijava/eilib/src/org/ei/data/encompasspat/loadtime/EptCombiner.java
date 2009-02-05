@@ -30,7 +30,14 @@ public class EptCombiner extends Combiner {
 
             stmt = con.createStatement();
 
-            rs = stmt.executeQuery("select dn,m_id,pat_in,ti,aj,ap,ad,ac,pn,py,pc,ic,cs,cc,la,lt,ab,ct,cr,ut,ey,crn,load_number,ll,dt,ds from ept_master where  py = '" + year + "'");
+            if(year == 9999)
+            {
+            	rs = stmt.executeQuery("select dn,m_id,pat_in,ti,aj,ap,ad,ac,pn, substr(load_number,1,4) as py,pc,ic,cs,cc,la,lt,ab,ct,cr,ut,ey,crn,load_number,ll,dt,ds,seq_num from ept_master where py = '19' or py is null and seq_num is not null");
+            }
+            else
+            {
+            	rs = stmt.executeQuery("select dn,m_id,pat_in,ti,aj,ap,ad,ac,pn,py,pc,ic,cs,cc,la,lt,ab,ct,cr,ut,ey,crn,load_number,ll,dt,ds,seq_num from ept_master where py = '" + year + "' and seq_num is not null");
+            }            	            	
             writeRecs(rs);
 
             this.writer.end();
@@ -75,7 +82,7 @@ public class EptCombiner extends Combiner {
         try {
 
             stmt = con.createStatement();
-            rs = stmt.executeQuery("select dn,m_id,pat_in,ti,aj,ap,ad,ac,pn,py,pc,ic,cs,cc,la,lt,ab,ct,cr,ut,ey,crn,load_number,ll,dt,ds from ept_master where load_number = " + week);
+            rs = stmt.executeQuery("select dn,m_id,pat_in,ti,aj,ap,ad,ac,pn,py,pc,ic,cs,cc,la,lt,ab,ct,cr,ut,ey,crn,load_number,ll,dt,ds,seq_num from ept_master where load_number = " + week + " and seq_num is not null");
             writeRecs(rs);
             this.writer.end();
             this.writer.flush();
@@ -129,7 +136,6 @@ public class EptCombiner extends Combiner {
             ++i;
             QualifierFacet qfacet = new QualifierFacet();
             EVCombinedRec rec = new EVCombinedRec();
-
             if (validYear(rs.getString("py"))) {
 
                 String abs = replaceNull(getStringFromClob(rs.getClob("ab")));
@@ -138,6 +144,7 @@ public class EptCombiner extends Combiner {
                 String accessionNumber = rs.getString("dn");
 
                 rec.put(rec.DOCID, rs.getString("m_id"));
+                rec.put(rec.PARENT_ID, rs.getString("seq_num"));
                 rec.put(rec.DEDUPKEY, accessionNumber);
                 rec.put(rec.ACCESSION_NUMBER, accessionNumber);
                 rec.put(rec.AUTHOR, prepareMulti(StringUtil.replaceNonAscii(replaceNull(rs.getString("pat_in")))));
@@ -277,7 +284,7 @@ public class EptCombiner extends Combiner {
         if (year == null) {
             return false;
         }
-
+               
         if (year.length() != 4) {
             return false;
         }
@@ -570,7 +577,7 @@ public class EptCombiner extends Combiner {
         // extract the whole thing
     	if(loadNumber == 0)
     	{
-			for(int yearIndex = 1919; yearIndex <= 2008; yearIndex++)
+			for(int yearIndex = 1919; yearIndex <= 2009; yearIndex++)
 			{
 				System.out.println("Processing year " + yearIndex + "...");
 				c = new EptCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,"ept", environment));
@@ -580,6 +587,14 @@ public class EptCombiner extends Combiner {
 								password,
 								yearIndex);
 			}
+			int yearIndex = 9999;
+			System.out.println("Processing year " + yearIndex + "...");
+			c = new EptCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,"ept", environment));
+			c.writeCombinedByYear(url,
+							driver,
+							username,
+							password,
+							yearIndex);
 		}
         else if (loadNumber > 3000 || loadNumber < 1000) {
             c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
