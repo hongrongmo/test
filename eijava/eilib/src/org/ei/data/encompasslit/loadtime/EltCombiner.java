@@ -57,7 +57,7 @@ public class EltCombiner extends Combiner {
     	// extract the whole thing
     	else if(loadNumber == 0)
     	{
-      		for(int yearIndex = 1962; yearIndex <= 2008; yearIndex++)
+      		for(int yearIndex = 1955; yearIndex <= 2009; yearIndex++)
       		{
     			System.out.println("Processing year " + yearIndex + "...");
         		// create  a new writer so we can see the loadNumber/yearNumber in the filename
@@ -91,7 +91,7 @@ public class EltCombiner extends Combiner {
 
             rs =
                 stmt.executeQuery(
-                    "select M_ID,VLN,ISN, PAG, substr(pyr,1,4) as pyr , STI,CIP , AUT , TIE , TIF,MOT, SPD, SPT, AAF, LNA, ABS, STY, APICT, APICT1, APILT ,APILT1 , RNR, ISSN, PUB, ISBN,CNFNAM, CNFSTD, CNFEND, CNFVEN, CNFCTY, CNFCNY, CNFEDN, CNFEDO, CNFEDA, CNFCAT, CNFCOD, CNFPAG, CNFPCT, CNFPRT, CNFSPO , APIUT ,APICC ,APILTM,APIALC, APIATM, APICRN, APIAMS, APIAPC, APIANC, APIAT, APICT, APILT , SUBSTR(pyr,1,4) yr, load_number,so,secsti,oab,apiatm,apiltm,apiams,cna,sta,seciss,cnfstd,cnfend,cnfven,cnfcty,cnfcny,cnfpag,cnfpct,cnfprt,cf,sec,dt,cprs, DOI from elt_master where substr(pyr,1,4) ='"
+                    "select M_ID,VLN,ISN, PAG, substr(pyr,1,4) as pyr , STI,CIP , AUT , TIE , TIF,MOT, SPD, SPT, AAF, LNA, ABS, STY, APICT, APICT1, APILT ,APILT1 , RNR, ISSN, PUB, ISBN,CNFNAM, CNFSTD, CNFEND, CNFVEN, CNFCTY, CNFCNY, CNFEDN, CNFEDO, CNFEDA, CNFCAT, CNFCOD, CNFPAG, CNFPCT, CNFPRT, CNFSPO , APIUT ,APICC ,APILTM,APIALC, APIATM, APICRN, APIAMS, APIAPC, APIANC, APIAT, APICT, APILT , SUBSTR(pyr,1,4) yr, load_number,so,secsti,oab,apiatm,apiltm,apiams,cna,sta,seciss,cnfstd,cnfend,cnfven,cnfcty,cnfcny,cnfpag,cnfpct,cnfprt,cf,sec,dt,cprs, DOI, seq_num from elt_master where seq_num is not null and substr(pyr,1,4) ='"
                         + year
                         + "'");
             writeRecs(rs);
@@ -400,6 +400,10 @@ public class EltCombiner extends Combiner {
                 {
                     rec.put(EVCombinedRec.DOI, rs.getString("doi"));
                 }
+				if(rs.getString("seq_num") != null)
+				{
+					rec.put(EVCombinedRec.PARENT_ID, rs.getString("seq_num"));
+				}
                 this.writer.writeRec(rec);
             }
         }
@@ -524,7 +528,7 @@ public class EltCombiner extends Combiner {
             System.out.println("Getting weeks records ...");
             rs =
                 stmt.executeQuery(
-                    "select M_ID,VLN,ISN, PAG, substr(PYR,1,4) as PYR , STI,CIP , AUT , TIE , TIF,MOT, SPD, SPT, AAF, LNA, ABS, STY, APICT, APICT1, APILT ,APILT1 , RNR, ISSN, PUB, ISBN,CNFNAM, CNFSTD, CNFEND, CNFVEN, CNFCTY, CNFCNY, CNFEDN, CNFEDO, CNFEDA, CNFCAT, CNFCOD, CNFPAG, CNFPCT, CNFPRT, CNFSPO , APIUT ,APICC ,APILTM,APIALC, APIATM, APICRN, APIAMS, APIAPC, APIANC, APIAT, APICT, APILT , SUBSTR(pyr,1,4) yr, load_number,so,secsti,oab,apiatm,apiltm,apiams,cna,sta,seciss,cnfstd,cnfend,cnfven,cnfcty,cnfcny,cnfpag,cnfpct,cnfprt,cf,sec,dt,cprs, DOI from elt_master where load_number="
+                    "select M_ID,VLN,ISN, PAG, substr(PYR,1,4) as PYR , STI,CIP , AUT , TIE , TIF,MOT, SPD, SPT, AAF, LNA, ABS, STY, APICT, APICT1, APILT ,APILT1 , RNR, ISSN, PUB, ISBN,CNFNAM, CNFSTD, CNFEND, CNFVEN, CNFCTY, CNFCNY, CNFEDN, CNFEDO, CNFEDA, CNFCAT, CNFCOD, CNFPAG, CNFPCT, CNFPRT, CNFSPO , APIUT ,APICC ,APILTM,APIALC, APIATM, APICRN, APIAMS, APIAPC, APIANC, APIAT, APICT, APILT , SUBSTR(pyr,1,4) yr, load_number,so,secsti,oab,apiatm,apiltm,apiams,cna,sta,seciss,cnfstd,cnfend,cnfven,cnfcty,cnfcny,cnfpag,cnfpct,cnfprt,cf,sec,dt,cprs, DOI,seq_num from elt_master where seq_num is not null and load_number="
                         + weekNumber);
 
             writeRecs(rs);
