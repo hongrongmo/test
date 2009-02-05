@@ -448,7 +448,7 @@
     <!-- publisher will ONLY show if there is no other leading information
         so this will follow 'Source' label - no comma needed                -->
     <xsl:template match="PN">
-      <xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
+      <br/><b><xsl:text> Publisher: </xsl:text></b><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
     </xsl:template>
 
 
