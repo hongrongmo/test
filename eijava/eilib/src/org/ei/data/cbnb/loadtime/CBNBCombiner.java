@@ -60,7 +60,7 @@ public class CBNBCombiner extends Combiner
     	// extract the whole thing
     	else if(loadNumber == 0)
     	{
-      		for(int yearIndex = 1980; yearIndex <= 2008; yearIndex++)
+      		for(int yearIndex = 1980; yearIndex <= 2009; yearIndex++)
       		{
     			System.out.println("Processing year " + yearIndex + "...");
         		// create  a new writer so we can see the loadNumber/yearNumber in the filename
@@ -105,7 +105,7 @@ public class CBNBCombiner extends Combiner
 
             stmt = con.createStatement();
             System.out.println("Running the query...");
-            rs = stmt.executeQuery("select m_id, abn, doc, sco, fjl, isn, cdn, lan, ibn, src, scc,sct, ebt, cin, vol, iss, pag, reg, cym, sic, gic, gid, atl, otl, abs, edn, SUBSTR(pbn,1,4) pyr,pbn,avl, pbr, load_number from " + Combiner.TABLENAME +" where substr(pbn,1,4) ='"+ year +"'");
+            rs = stmt.executeQuery("select m_id, abn, doc, sco, fjl, isn, cdn, lan, ibn, src, scc,sct, ebt, cin, vol, iss, pag, reg, cym, sic, gic, gid, atl, otl, abs, edn, SUBSTR(pbn,1,4) pyr,pbn,avl, pbr, load_number, seq_num from " + Combiner.TABLENAME +" where substr(pbn,1,4) ='"+ year +"' and seq_num is not null");
 
             System.out.println("Got records ...");
             writeRecs(rs);
@@ -281,6 +281,11 @@ public class CBNBCombiner extends Combiner
                 if (rs.getString("avl") != null)
                 {
                     rec.put(EVCombinedRec.AVAILABILITY, rs.getString("avl"));
+                }
+                
+                if (rs.getString("seq_num") != null)
+                {
+                    rec.put(EVCombinedRec.PARENT_ID, rs.getString("seq_num"));
                 }
 
                 rec.put(EVCombinedRec.DOCID, rs.getString("M_ID"));
