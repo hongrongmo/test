@@ -112,6 +112,10 @@ public class CombinedXMLWriter
             String databaseID,
             String env)
     {
+		System.out.println("recsPerbatch "+recsPerbatch);
+		System.out.println("numberID "+numberID);
+		System.out.println("databaseID "+databaseID);
+		System.out.println("env "+env);
     	this.databaseID = databaseID;
         this.numberID = numberID;
         this.batchID = 1;
@@ -152,6 +156,9 @@ public class CombinedXMLWriter
                              int numberID,
                              String databaseID)
     {
+		System.out.println("recsPerbatch "+recsPerbatch);
+		System.out.println("numberID "+numberID);
+		System.out.println("databaseID "+databaseID);
         this.databaseID = databaseID;
         this.numberID = numberID;
         this.batchID = 1;
@@ -196,47 +203,53 @@ public class CombinedXMLWriter
 	    	}
 
 	    	file=new File("ei/index_af");
+	    	if(!file.exists())
+			{
+				file.mkdir();
+	    	}
 	    	affiliationPW = new PrintWriter(new FileWriter(file.getPath() + "/affiliation-" + this.numberID + "." + this.databaseID, true));
 	    	hm.put("AUTHORAFFILIATION", affiliationPW);
-	    	if(!file.exists())
-	    	{
-	    		file.mkdir();
-	    	}
+
 	    	file=new File("ei/index_au");
+	    	if(!file.exists())
+			{
+				file.mkdir();
+	    	}
 	    	authorPW = new PrintWriter(new FileWriter(file.getPath() + "/author-" + this.numberID + "." + this.databaseID, true));
 	    	hm.put("AUTHOR", authorPW);
-	    	if(!file.exists())
-	    	{
-	    		file.mkdir();
-	    	}
+
 	    	file=new File("ei/index_cv");
+	    	if(!file.exists())
+			{
+				file.mkdir();
+	    	}
 	    	controltermsPW = new PrintWriter(new FileWriter(file.getPath() + "/controlterms-" + this.numberID + "." + this.databaseID, true));
 	    	hm.put("CONTROLLEDTERMS", controltermsPW);
-	    	if(!file.exists())
-	    	{
-	    		file.mkdir();
-	    	}
+
 	    	file=new File("ei/index_st");
+	    	if(!file.exists())
+			{
+				file.mkdir();
+	    	}
 	    	serialtitlePW = new PrintWriter(new FileWriter(file.getPath() + "/serialtitle-" + this.numberID + "." + this.databaseID, true));
 	    	hm.put("SERIALTITLE", serialtitlePW);
-	    	if(!file.exists())
-	    	{
-	    		file.mkdir();
-	    	}
+
 	    	file=new File("ei/index_pn");
+	    	if(!file.exists())
+			{
+				file.mkdir();
+	    	}
 	    	publishernamePW = new PrintWriter(new FileWriter(file.getPath() + "/publishername-" + this.numberID + "." + this.databaseID, true));
 	    	hm.put("PUBLISHERNAME", publishernamePW);
-	    	if(!file.exists())
-	    	{
-	    		file.mkdir();
-	    	}
+
 	    	file=new File("ei/index_pc");
+	    	if(!file.exists())
+			{
+				file.mkdir();
+	    	}
 	    	patentcountryPW = new PrintWriter(new FileWriter(file.getPath() + "/patentcountry-" + this.numberID + "." + this.databaseID, true));
 	    	hm.put("AUTHORITYCODE", patentcountryPW);
-	    	if(!file.exists())
-	    	{
-	    		file.mkdir();
-	    	}
+
 	    	file=new File("ei/logs");
 	    	if(!file.exists())
 	    	{
@@ -324,8 +337,8 @@ public class CombinedXMLWriter
 				{
 					setDatabase("bd");
 				}
-	    		writeRec(rec[i]);
-	    		//writeIndexOnly(rec[i]);
+	    		//writeRec(rec[i]);
+	    		writeIndexOnly(rec[i]);
 
 	    	}
 	    	this.isChild = false;
@@ -333,8 +346,8 @@ public class CombinedXMLWriter
     	else
     	{
 			setDatabase(rec[0].getString(EVCombinedRec.DATABASE));
-	    	writeRec(rec[0]);
-	    	//writeIndexOnly(rec[0]);
+	    	//writeRec(rec[0]);
+	    	writeIndexOnly(rec[0]);
     	}
     }
 
