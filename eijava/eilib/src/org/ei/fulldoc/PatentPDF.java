@@ -6,8 +6,11 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.ByteArrayOutputStream;
 
 import javax.servlet.ServletException;
+import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -41,11 +44,21 @@ public class PatentPDF extends HttpServlet
                 else {
                   Pat2PdfCreator pdfcreator = new Pat2PdfCreator();
                   pdfcreator.init();
-                  if(pdfcreator.createPatentPdf(patNum))
+                  ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                  if(pdfcreator.createPatentPdf(patNum,baos))
                   {
+                      response.setHeader("Expires", "0");
+                      response.setHeader("Cache-Control","must-revalidate, post-check=0, pre-check=0");
+                      response.setHeader("Pragma", "public");
                       response.setContentType("application/pdf");
-                      response.setHeader("Content-Disposition","inline; filename=Pat"+patNum+".pdf");
-                      readPDF(response, new File(pdfcreator.getPatentPdfFilename(patNum)));
+                      response.setHeader("Content-Disposition","inline; filename=PatUS"+patNum+".pdf");
+
+                      //readPDF(baos, new File(pdfcreator.getPatentPdfFilename(patNum)));
+                      response.setContentLength(baos.size());
+
+                      ServletOutputStream out = response.getOutputStream();
+                      baos.writeTo(out);
+                      out.flush();
                   }
                   else {
                       response.sendRedirect(redirect);
@@ -67,34 +80,26 @@ public class PatentPDF extends HttpServlet
         }
     }
 
-    private void readPDF(HttpServletResponse response,File pdffile) throws IOException
+    private void readPDF(OutputStream baos, File pdffile) throws IOException
     {
-      readPDF(response, new FileInputStream(pdffile));
-    }
-
-    private void readPDF(HttpServletResponse response,InputStream pdfstream) throws IOException
-    {
+        InputStream pdfstream = new FileInputStream(pdffile);
         BufferedInputStream bis = null;
         BufferedOutputStream bos = null;
         try {
 
             bis = new BufferedInputStream(pdfstream);
-            bos = new BufferedOutputStream(response.getOutputStream());
             byte[] buff = new byte[1024];
             int bytesRead;
 
             while (-1 != (bytesRead = bis.read(buff, 0, buff.length))) {
                 //System.out.print("#");
-                bos.write(buff, 0, bytesRead);
+                baos.write(buff, 0, bytesRead);
             }
         } catch(final IOException e) {
           throw e;
         } finally {
           if (bis != null) {
             bis.close();
-          }
-          if (bos != null) {
-            bos.close();
           }
         }
     }
