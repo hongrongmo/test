@@ -5,10 +5,14 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.FileNotFoundException;
+
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.OutputStream;
+import java.io.ByteArrayOutputStream;
 
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.HttpStatus;
@@ -52,14 +56,17 @@ public class Pat2PdfCreator {
   public static void main(String[] args) {
     Pat2PdfCreator me = new Pat2PdfCreator();
     me.init();
-    me.createPatentPdf("6421675"); //20010000044
+    try {
+      me.createPatentPdf("6421675", new FileOutputStream("me.pdf")); //20010000044
+    } catch(FileNotFoundException e) {
+    }
   }
 
   public String getPatentPdfFilename(String pat_no) {
     return System.getProperty("java.io.tmpdir") + System.getProperty("file.separator") + "Pat" + pat_no + ".pdf";
   }
 
-  public boolean createPatentPdf(String pat_no) {
+  public boolean createPatentPdf(String pat_no, OutputStream baos) {
 
     boolean result = false;
     String response = null;
@@ -223,7 +230,7 @@ public class Pat2PdfCreator {
         if(tiffs.size() != 0) {
           try {
             String pdfpath = System.getProperty("java.io.tmpdir") + System.getProperty("file.separator") + "Pat" + pat_no + ".pdf";
-            combineTif2Pdf((String[]) tiffs.toArray(new String[0]), new File(pdfpath));
+            combineTif2Pdf((String[]) tiffs.toArray(new String[0]), baos);
             result = true;
           } catch (Exception e) {
             // TODO Auto-generated catch block
@@ -310,7 +317,7 @@ public class Pat2PdfCreator {
     return result;
   }
 
-  public boolean combineTif2Pdf(String[] tiffs, File pdffile) throws Exception {
+  public boolean combineTif2Pdf(String[] tiffs, OutputStream baos) throws Exception {
     boolean result = false;
 
     if((tiffs != null) && tiffs.length > 0)
@@ -322,7 +329,7 @@ public class Pat2PdfCreator {
         tiffile = new RandomAccessFileOrArray(tiffs[0]);
         Image img = TiffImage.getTiffImage(tiffile, 1);
         document = new Document(new Rectangle(img.getScaledWidth(), img.getScaledHeight()));
-        PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream(pdffile));
+        PdfWriter writer = PdfWriter.getInstance(document, baos);
         document.open();
         PdfContentByte cb = writer.getDirectContent();
 
@@ -351,7 +358,7 @@ public class Pat2PdfCreator {
           document.close();
         }
         if(!result) {
-          pdffile.delete();
+          baos.close(); //pdffile.delete();
         }
       }
     }
