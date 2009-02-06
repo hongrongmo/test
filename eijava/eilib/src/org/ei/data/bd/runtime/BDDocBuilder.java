@@ -125,7 +125,10 @@ public class BDDocBuilder
 				formatRIS(buildField(Keys.VOLUME,getVolume(rset.getString("VOLUME"),perl),ht), dataFormat, Keys.VOLUME, Keys.RIS_VL);
 				formatRIS(buildField(Keys.ISSUE,getIssue(rset.getString("ISSUE"),perl),ht), dataFormat, Keys.ISSUE, Keys.RIS_IS);
 				formatRISSerialTitle(buildField(Keys.SERIAL_TITLE,rset.getString("SOURCETITLE"),ht), dataFormat, Keys.SERIAL_TITLE, getDocumentType(rset.getString("CITTYPE"),rset.getString("CONFCODE")));
-				buildField(Keys.CODEN, BdCoden.convert(rset.getString("CODEN")),ht);
+				if(rset.getString("CODEN") != null)
+				{
+					buildField(Keys.CODEN, BdCoden.convert(rset.getString("CODEN")),ht);
+				}
 				formatRIS(buildField(Keys.ISSN,getIssn(rset.getString("ISSN"),rset.getString("EISSN")),ht), dataFormat, Keys.ISSN, Keys.RIS_SN);
 				buildField(Keys.ABBRV_SERIAL_TITLE,rset.getString("SOURCETITLEABBREV"),ht);
 				buildField(Keys.VOLISSUE,getVolumeIssue(rset.getString("VOLUME"),rset.getString("ISSUE")),ht);
@@ -279,7 +282,7 @@ public class BDDocBuilder
 
 	}
     
-
+    //BdCoden.convert
 
 	private String getEmail(String email)
 	{
