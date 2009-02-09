@@ -78,7 +78,7 @@ public class GeoRefCombiner
     // extract the whole thing
     else if(loadNumber == 0)
     {
-      for(int yearIndex = 1918; yearIndex <= 2008; yearIndex++)
+      for(int yearIndex = 1918; yearIndex <= 2009; yearIndex++)
       {
     	System.out.println("Processing year " + yearIndex + "...");
         // create  a new writer so we can see the loadNumber/yearNumber in the filename
@@ -139,7 +139,7 @@ public class GeoRefCombiner
     try
     {
       stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-      String sqlQuery = "select * from " + Combiner.TABLENAME + " where load_number ='" + weekNumber + "' AND load_number != 0 and load_number < 1000000";
+      String sqlQuery = "select * from " + Combiner.TABLENAME + " where seq_num is not null and load_number ='" + weekNumber + "' AND load_number != 0 and load_number < 1000000";
       //String sqlQuery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7fcd2061377551'";
       //String sqlQuery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7fcd2061377551' or m_id='grf_1ee3914119594abb20M7fc72061377551'";
       //String sqlQuery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7ff02061377551'";
@@ -199,7 +199,7 @@ public class GeoRefCombiner
       199601, 199602, 199603, etc. through 199624. Prior to 1994, only the year (first four digits) is
       given in this field. */
 
-      String sqlquery = "SELECT * FROM " + Combiner.TABLENAME + " WHERE UPDATE_CODE IS NOT NULL AND SUBSTR(UPDATE_CODE,1,4) =  " + year;
+      String sqlquery = "SELECT * FROM " + Combiner.TABLENAME + " WHERE SEQ_NUM is not null and UPDATE_CODE IS NOT NULL AND SUBSTR(UPDATE_CODE,1,4) =  " + year;
       //String sqlquery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7fcd2061377551'";
       //String sqlquery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7fcd2061377551' or m_id='grf_1ee3914119594abb20M7fc72061377551'";
       //String sqlquery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7ff02061377551'";
@@ -551,7 +551,10 @@ public class GeoRefCombiner
 				{
 				  rec.put(EVCombinedRec.CLASSIFICATION_CODE,(rs.getString("CATEGORY_CODE")).split(AUDELIMITER));
 				}
-
+				if(rs.getString("seq_num") != null)
+				{
+					rec.put(EVCombinedRec.PARENT_ID, rs.getString("seq_num"));
+				}
 				String pages = runtimeDocview.getPages();
 				rec.put(EVCombinedRec.DEDUPKEY,
 						getDedupKey(rec.getString(EVCombinedRec.ISSN),
