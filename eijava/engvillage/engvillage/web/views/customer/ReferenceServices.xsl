@@ -15,7 +15,7 @@
 >
 
 
-<xsl:output method="html" indent="no" />
+<xsl:output method="html" indent="no" doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN"/>
 
 <xsl:include href="Header.xsl"/>
 <xsl:include href="GlobalLinks.xsl"/>
@@ -74,7 +74,7 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 <title>Engineering Village - Reference Services</title>
-    <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
+    <SCRIPT type="text/JavaScript" language="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
     <script type="text/JavaScript" language="JavaScript">
     <xsl:comment>
     <![CDATA[
@@ -273,7 +273,7 @@ function MM_nbGroup(event, grpName) { //v6.0
     </script>
 </head>
 
-<body bgcolor="#FFFFFF" topmargin="0" marginheight="0" marginwidth="0">
+<body bgcolor="#FFFFFF" topmargin="0" marginheight="0" marginwidth="0" onLoad="MM_preloadImages('/engresources/images/ae/Chemical_over.gif','/engresources/images/ae/Idustrial_over.gif','/engresources/images/ae/Mechanical_over.gif','/engresources/images/ae/Electrical_over.gif','/engresources/images/ae/SignalProcessing_over.gif','/engresources/images/ae/Manufacturing_over.gif','/engresources/images/ae/Materials_over.gif','/engresources/images/ae/Management_over.gif','/engresources/images/ae/Computer_over.gif','/engresources/images/ae/Chemical_down.gif','/engresources/images/ae/Idustrial_down.gif','/engresources/images/ae/Mechanical_down.gif','/engresources/images/ae/Electrical_down.gif','/engresources/images/ae/SignalProcessing_down.gif','/engresources/images/ae/Manufacturing_down.gif','/engresources/images/ae/Materials_down.gif','/engresources/images/ae/Management_down.gif','/engresources/images/ae/Computer_down.gif','/engresources/images/ae/Chemical.gif','/engresources/images/ae/Idustrial.gif','/engresources/images/ae/Mechanical.gif','/engresources/images/ae/Electrical.gif','/engresources/images/ae/SignalProcessing.gif','/engresources/images/ae/Manufacturing.gif','/engresources/images/ae/Materials.gif','/engresources/images/ae/Management.gif','/engresources/images/ae/Computer.gif','/engresources/images/ae/ask_engineer.gif','/engresources/images/ae/ask_specialist.gif','/engresources/images/ae/ask_librarian.gif','/engresources/images/ae/ask_engineer_out.gif','/engresources/images/ae/ask_specialist_out.gif','/engresources/images/ae/ask_librarian_out.gif','/engresources/images/ae/ask_engineer_down.gif','/engresources/images/ae/ask_specialist_down.gif','/engresources/images/ae/ask_librarian_down.gif')">
 <a id="top" href="top"/>
 
 <center>
@@ -591,79 +591,79 @@ function MM_nbGroup(event, grpName) { //v6.0
   <a name="faq" id="faq">FAQ</a></p>
   <div align="left">
     <ol class="styleunderlined">
-      <li class="styleunderlined"><a href="#1">When is full text available?</a></li>
-      <li class="styleunderlined"><a href="#2">How can I obtain a full text document if it is not available to me?</a></li>
-      <li class="styleunderlined"><a href="#3">What are &ldquo;facets&rdquo; and how do they help my search?</a></li>
-      <li class="styleunderlined"><a href="#4">Which groups of results data (&ldquo;facets&rdquo;) are available to me?</a></li>
-      <li class="styleunderlined"><a href="#5">Why would I export the grouped result data (&ldquo;facets&rdquo;) into a chart and/or spreadsheet?</a></li>
-      <li class="styleunderlined"><a href="#6">How often is content updated on Engineering Village?</a></li>
-      <li class="styleunderlined"><a href="#7">How can I manage my results and save my searches?</a></li>
-      <li class="styleunderlined"><a href="#8">What is the benefit of email alerts and RSS</a></li>
-      <li class="styleunderlined"><a href="#9">Why would I blog a record?</a></li>
-      <li class="styleunderlined"><a href="#10">What are tags and how can I use them?</a></li>
-      <li class="styleunderlined"><a href="#11">What does it mean to &ldquo;Browse Indexes&rdquo;?</a></li>
-      <li class="styleunderlined"><a href="#12">How can the thesaurus help me when searching for content?</a></li>
+      <li class="styleunderlined"><a href="#q1">When is full text available?</a></li>
+      <li class="styleunderlined"><a href="#q2">How can I obtain a full text document if it is not available to me?</a></li>
+      <li class="styleunderlined"><a href="#q3">What are &ldquo;facets&rdquo; and how do they help my search?</a></li>
+      <li class="styleunderlined"><a href="#q4">Which groups of results data (&ldquo;facets&rdquo;) are available to me?</a></li>
+      <li class="styleunderlined"><a href="#q5">Why would I export the grouped result data (&ldquo;facets&rdquo;) into a chart and/or spreadsheet?</a></li>
+      <li class="styleunderlined"><a href="#q6">How often is content updated on Engineering Village?</a></li>
+      <li class="styleunderlined"><a href="#q7">How can I manage my results and save my searches?</a></li>
+      <li class="styleunderlined"><a href="#q8">What is the benefit of email alerts and RSS</a></li>
+      <li class="styleunderlined"><a href="#q9">Why would I blog a record?</a></li>
+      <li class="styleunderlined"><a href="#q10">What are tags and how can I use them?</a></li>
+      <li class="styleunderlined"><a href="#q11">What does it mean to &ldquo;Browse Indexes&rdquo;?</a></li>
+      <li class="styleunderlined"><a href="#q12">How can the thesaurus help me when searching for content?</a></li>
     </ol>
   </div>
-  <p align="left" class="style5">1. When is full text available?<a name="1" id="1"></a></p>
+  <p align="left" class="style5">1. When is full text available?<a name="q1" id="q1"></a></p>
   <p align="left" class="style1">Availability of full-text varies depending on which databases you search, the content to which your company or institution subscribes, and what is available for free on the web.<br /><br />
   Abstract and Index (A&amp;I) databases such as Compendex, Inspec, GeoBase, and others consist of abstract records, not full-text articles. Full-text links on Engineering Village bring you from bibliographic information in A&amp;I databases to publishers&rsquo; sites where, if the article is available for free or if you have subscription access to a particular journal through your library, you will automatically get the full-text. If you do not have access, the links will take you to the publishers&rsquo; site where you can purchase that article. Records in Engineering Village may not include a full-text link if the article is available only in print, if the publisher has provided inconsistent metadata, or if the publisher does not submit their publications to the <a target="_blank" href="http://www.crossref.org">CrossRef</a> linking system.<br /><br />
   In addition, Engineering Village is compatible with all major link resolvers, including SFX, which help customers manage entitlement and appropriate copies. This ensures that users are directed to the version of the article they have access to through their libraries or institutions.<br /><br />
   Full-text is included for all electronic books in the Referex database, as well as for patent documents in the Ei Patents database.</p>
   <a class="style1" href="#faq">back</a>
 
-  <p align="left" class="style5">2. How can I obtain a full text document is it is not available to me?<a name="2" id="2"></a></p>
+  <p align="left" class="style5">2. How can I obtain a full text document is it is not available to me?<a name="q2" id="q2"></a></p>
   <p align="left" class="style1">Full-text links in Engineering Village will take you to the publishers&rsquo; site where you can purchase that article if you do not have access to it through a library subscription.<br /><br />
   Records in Engineering Village may not include a full-text link if the article is available only in print, if the publisher has provided inconsistent metadata, or if the publisher does not submit their publications to the CrossRef linking system. In this case, you can search for the full-text in your library&rsquo;s print holdings, purchase full-text through a document delivery service such as the Linda Hall Library, or ask your librarian about purchasing the full-text or procuring through an inter-library loan.</p>
   <a class="style1" href="#faq">back</a>
 
-  <p align="left" class="style5">3. What are &ldquo;facets&rdquo; and how do they help my search?<a name="3" id="3"></a></p>
+  <p align="left" class="style5">3. What are &ldquo;facets&rdquo; and how do they help my search?<a name="q3" id="q3"></a></p>
   <p align="left" class="style1">&ldquo;Facets&rdquo; appear in the Refine Results box on the right side of the search results screen.<br /><br />
-  Facets represent commonly occurring results data grouped by field. Under each facet is a list of the terms which appear most often in that set of results, along with a record count showing the number of records containing that term. Each facet displays the first 10 items that are relevant for your search, but you can click on &ldquo;more&#0133;&rdquo; to show additional terms.<br /><br />
+  Facets represent commonly occurring results data grouped by field. Under each facet is a list of the terms which appear most often in that set of results, along with a record count showing the number of records containing that term. Each facet displays the first 10 items that are relevant for your search, but you can click on &ldquo;more&#8230;&rdquo; to show additional terms.<br /><br />
   To refine or alter your original search: Select one or more search terms and click on &ldquo;include&rdquo; or &ldquo;exclude.&rdquo; Including terms is similar to adding an AND term to your original search, so will limit results to only those containing that term. Excluding terms is similar to adding a NOT to your search terms, so it will exclude any records containing that term. The &ldquo;Add a Term&rdquo; option allows you to enter your own terms for search refinement and can be combined with other terms in the faceted list.</p>
   <a class="style1" href="#faq">back</a>
 
-  <p align="left" class="style5">4. Which groups of results data (&ldquo;facets&rdquo;) are available to me?<a name="4" id="4"></a></p>
+  <p align="left" class="style5">4. Which groups of results data (&ldquo;facets&rdquo;) are available to me?<a name="q4" id="q4"></a></p>
   <p align="left" class="style1">You will see the &ldquo;facets&rdquo; (grouped results data from index fields such as author, publication, year, controlled vocabulary) common to all databases you&rsquo;re searching.  Searching multiple databases at the same time results in only the facets that those databases share being displayed.  The Year facet and Add a Term option will always appear.</p>
   <a class="style1" href="#faq">back</a>
 
-  <p align="left" class="style5">5. Why would I export the grouped result data (&ldquo;facets&rdquo;) into a chart and/or spreadsheet?<a name="5" id="5"></a></p>
+  <p align="left" class="style5">5. Why would I export the grouped result data (&ldquo;facets&rdquo;) into a chart and/or spreadsheet?<a name="q5" id="q5"></a></p>
   <p align="left" class="style1">Bar Graph and Export icons appear next to each facet in the Refine Results section of the search results screen.  The Bar Chart can be helpful as it shows a visual representation of the faceted terms and their distribution.  Exporting the faceted data gives you a record of the data for analysis and provides an overview of results from which you can build on your search. Having access to the raw data also gives you the freedom to graph it, report on it, or reference it in whatever way you need.<br /><br />
   Click on the Export icon to save or open the terms and record counts in that facet as a tab file, which allows you to select the software you would like to use to open the file (e.g. Excel). All the terms in a facet are exported, even when only the top 10 are displayed on Engineering Village.<br /><br />
-  Click on the bar graph icon to open a graph of the terms and record counts in a new window. The bar graph will show only the terms being viewed in Engineering Village at that time. For example, by default it will graph the top 10 terms but if you click on &ldquo;more&#0133;&rdquo; to show additional terms, all of those terms displayed will be included on the graph as well. You can then save, print, or email this image.</p>
+  Click on the bar graph icon to open a graph of the terms and record counts in a new window. The bar graph will show only the terms being viewed in Engineering Village at that time. For example, by default it will graph the top 10 terms but if you click on &ldquo;more&#8230;&rdquo; to show additional terms, all of those terms displayed will be included on the graph as well. You can then save, print, or email this image.</p>
   <a class="style1" href="#faq">back</a>
 
-  <p align="left" class="style5">6. How often is content updated on Engineering Village?<a name="6" id="6"></a></p>
+  <p align="left" class="style5">6. How often is content updated on Engineering Village?<a name="q6" id="q6"></a></p>
   <p align="left" class="style1">All of the A&amp;I and patent databases are updated weekly.  New eBook titles are added to the Referex database annually.</p>
   <a class="style1" href="#faq">back</a>
 
-  <p align="left" class="style5">7. How can I manage my results and save my searches?<a name="7" id="7"></a></p>
+  <p align="left" class="style5">7. How can I manage my results and save my searches?<a name="q7" id="q7"></a></p>
   <p align="left" class="style1">Managing your results is easy.  From the search results screen, you can select records to view, email, print, download, or save using the &ldquo;Results Manager&rdquo; box at the top of the screen. You can also save searches to rerun later simply by clicking the &ldquo;Save Search&rdquo; link directly above the list of results.<br /><br />
   In order to save your searches or download specific records to a folder, you must create a personal account. You will be prompted to set up an account automatically when you attempt to use one of these features.</p>
   <a class="style1" href="#faq">back</a>
 
-  <p align="left" class="style5">8. What is the benefit of email alerts and RSS?<a name="8" id="8"></a></p>
+  <p align="left" class="style5">8. What is the benefit of email alerts and RSS?<a name="q8" id="q8"></a></p>
   <p align="left" class="style1">Weekly alerts of new records that fit your search criteria keep you up to date with recently added content, without having to rerun the same searches over and over again.  Engineering Village gives you automatic weekly updates of your search queries&rsquo; results in whichever format you prefer: emailed directly to your inbox via email alerts or delivered straight to your RSS reader.<br /><br />
   In order to set up email or RSS alerts, you must create a personal account. You will be prompted to set up an account automatically when you attempt to use one of these features.</p>
   <a class="style1" href="#faq">back</a>
 
-  <p align="left" class="style5">9. Why would I blog a record?<a name="9" id="9"></a></p>
+  <p align="left" class="style5">9. Why would I blog a record?<a name="q9" id="q9"></a></p>
   <p align="left" class="style1">The &ldquo;Blog This&rdquo; feature allows you to link from your blog to a record of interest on Engineering Village.   Anyone can view a record following the Blog This link even if they do not subscribe to Engineering Village, so you can share information with an audience outside of your organization. This can help you communicate with your blog readers and allows you to create a forum from which to collaborate with colleagues in your area of research.<br /><br />
   To use this feature simply click the &ldquo;Blog This&rdquo; button in an abstract or detailed record view.  Select and copy the code that appears in the box and paste it in your blog post.  Once you publish your post the title of the record will appear in your blog.</p>
   <a class="style1" href="#faq">back</a>
 
-  <p align="left" class="style5">10. What are tags and how can I use them?<a name="10" id="10"></a></p>
+  <p align="left" class="style5">10. What are tags and how can I use them?<a name="q10" id="q10"></a></p>
   <p align="left" class="style1">Tags are keywords applied to a record by an Engineering Village user. This allows you to assign meaningful terms either for your own reference and organization or to share with a group, your institution, or the entire Engineering Village community.  You can also search other users&rsquo; tags to gain new perspectives. <br /><br />
   Engineering Village also lets you tag records externally to del.icio.us or 2collab. 2collab is an online community specifically designed for scientific researchers where you can tag and share records across Elsevier products, including Engineering Village, Scopus, and ScienceDirect. </p>
   <a class="style1" href="#faq">back</a>
 
-  <p align="left" class="style5">11. What does it mean to &quot;Browse Indexes&quot;?<a name="11" id="11"></a></p>
+  <p align="left" class="style5">11. What does it mean to &quot;Browse Indexes&quot;?<a name="q11" id="q11"></a></p>
   <p align="left" class="style1">Indexing is the process by which bibliographic information and thesaurus terms, or controlled vocabulary, are selected to describe the content of an article. On Engineering Village, indexing determines articles&rsquo; relevance to a search query and links related articles together. The index comprises several fields that vary by database (e.g. author, author affiliation, controlled terms, etc.).<br /><br />
   Browse indexes to find the precise term you need, or to ensure all variations of a term (i.e. spelling or abbreviations) are included in the search so nothing is missed. <br /><br />
   From the Quick and Expert Search screens on Engineering Village you can select the index you wish to search in the &ldquo;Browse Indexes&rdquo; box. The index will appear in a new window, and you can either browse index terms alphabetically or search for a term by typing the first few letters in the SEARCH FOR box and clicking on &ldquo;Find&rdquo;.  Selecting terms from the index will automatically add them to your search.</p>
   <a class="style1" href="#faq">back</a>
 
-  <p align="left" class="style5">12. How can the thesaurus help me when searching for content?<a name="12" id="12"></a></p>
+  <p align="left" class="style5">12. How can the thesaurus help me when searching for content?<a name="q12" id="q12"></a></p>
   <p align="left" class="style1">Thesauri are guides to the controlled vocabulary used to index articles for Engineering Village.   Thesauri are hierarchical in nature, organizing terms by broader, narrower, or related concepts.  <br /><br />
   The &ldquo;Thesaurus Search&rdquo; tab on Engineering Village lets you search or browse the thesaurus for additional related terms. From here, you can expand or refine your search by selecting broader, narrower, or related terms to include. This offers insight into additional topics or terms that were not initially included, ensuring that nothing is missed and that search results provide precisely the information you need.</p>
   <a class="style1" href="#faq">back</a>
