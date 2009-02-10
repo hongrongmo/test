@@ -123,8 +123,6 @@ function MM_nbGroup(event, grpName) { //v6.0
     for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
       if (!img.MM_up) img.MM_up = img.src;
       img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
-      for(x=1; x<800; x=x+1) { var xyz=x;}
-      //alert('i: ' + i + '\n img sr: ' + img.src);
       nbArr[nbArr.length] = img;
   } }
 }
