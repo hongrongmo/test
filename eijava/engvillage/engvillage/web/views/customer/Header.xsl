@@ -4,7 +4,7 @@
   xmlns:html="http://www.w3.org/TR/REC-html40"
   xmlns:java="java:java.net.URLEncoder"
   xmlns:cimage="java:org.ei.gui.CustomerImage"
-  exclude-result-prefixes="java html xsl"
+  exclude-result-prefixes="java html xsl cimage"
 >
 
 <xsl:output method="html" indent="no"/>
@@ -88,8 +88,8 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:variable>
-  
-  
+
+
 <xsl:variable name="RESULTS-NAV">
 	<xsl:value-of select="/PAGE/PAGE-NAV/RESULTS-NAV"/>
 </xsl:variable>
@@ -107,8 +107,8 @@
             <td valign="top">
               <a target="_top" href="/controller/servlet/Controller?CID=home">
               <xsl:choose>
-                
-                
+
+
                 <xsl:when test="cimage:containsCustomer($CUSTOMIZED-LOGO)">
                 	<xsl:variable name="CUSTOMER-IMAGE">
 				<xsl:value-of select="cimage:getImage($CUSTOMIZED-LOGO)"/>
@@ -120,8 +120,8 @@
 	             		<img src="/engresources/custimages/{$CUSTOMER-IMAGE}" border="0"/>
                 	</a>
                 </xsl:when>
-                
-                
+
+
                 <xsl:when test="not($CUSTOMIZED-LOGO='')">
                   <img src="/engresources/custimages/{$CUSTOMIZED-LOGO}.gif" border="0"/>
                 </xsl:when>
