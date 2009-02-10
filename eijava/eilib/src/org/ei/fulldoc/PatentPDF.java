@@ -9,6 +9,14 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.ByteArrayOutputStream;
 
+
+import org.apache.commons.httpclient.HttpClient;
+import org.apache.commons.httpclient.HttpStatus;
+import org.apache.commons.httpclient.methods.GetMethod;
+import org.apache.commons.httpclient.methods.HeadMethod;
+
+import org.apache.commons.httpclient.MultiThreadedHttpConnectionManager;
+
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServlet;
@@ -17,9 +25,15 @@ import javax.servlet.http.HttpServletResponse;
 
 public class PatentPDF extends HttpServlet
 {
+    private HttpClient client;
+
     public void init()
         throws ServletException
     {
+      MultiThreadedHttpConnectionManager connectionManager =  new MultiThreadedHttpConnectionManager();
+
+      client = new HttpClient(connectionManager);
+      client.setConnectionTimeout(3000);
     }
 
     public void service(HttpServletRequest request,
@@ -38,22 +52,56 @@ public class PatentPDF extends HttpServlet
             if(patNum != null && authCode != null && kindCode != null) {
 
                 if("EP".equalsIgnoreCase(authCode)) {
+                  // send to Espacenet site
                   redirect = "http://v3.espacenet.com/publicationDetails/originalDocument?CC=" + authCode + "&NR=" + patNum + kindCode + "&KC=" + kindCode + "&FT=D";
-                  response.sendRedirect(redirect);
-                }
+
+                  boolean redirectsent = false;
+
+                  GetMethod get = new GetMethod(redirect);
+                  // test to see if Espacenet site is up/page exists
+                  try {
+                    client.executeMethod(get);
+                    log("ESPACENET URL: " + redirect + " STATUS: " + get.getStatusCode());
+                    if(get.getStatusCode() == HttpStatus.SC_OK) {
+                      response.sendRedirect(redirect);
+                      redirectsent = true;
+                    }
+                  } catch(Exception e) {
+                    log("Exception connecting to espacenet");
+                    redirectsent = false;
+                  } finally {
+                    get.releaseConnection();
+                  }
+
+                  // if we were not successful - use unvientio
+                  if(!redirectsent) {
+                    String univentiourl = UniventioPDFGateway.getUniventioLink(authCode,patNum,kindCode);
+                    GetMethod pdf_get = new GetMethod(univentiourl);
+                    pdf_get.setFollowRedirects(false);
+                    try {
+                      client.executeMethod(pdf_get);
+                      if(pdf_get.getStatusCode() == HttpStatus.SC_OK) {
+                        response.setContentType("application/pdf");
+                        response.setHeader("Content-Disposition","inline; filename=" + authCode+patNum+kindCode+".pdf");
+                        readPDF(response.getOutputStream(), pdf_get.getResponseBodyAsStream());
+                        redirectsent = true;
+                      }
+                    } finally {
+                      pdf_get.releaseConnection();
+                    }
+                  }
+
+                } // if("EP".equalsIgnoreCase(authCode))
                 else {
+                  // US Patent
                   Pat2PdfCreator pdfcreator = new Pat2PdfCreator();
                   pdfcreator.init();
                   ByteArrayOutputStream baos = new ByteArrayOutputStream();
                   if(pdfcreator.createPatentPdf(patNum,baos))
                   {
-                      response.setHeader("Expires", "0");
-                      response.setHeader("Cache-Control","must-revalidate, post-check=0, pre-check=0");
-                      response.setHeader("Pragma", "public");
                       response.setContentType("application/pdf");
                       response.setHeader("Content-Disposition","inline; filename=PatUS"+patNum+".pdf");
 
-                      //readPDF(baos, new File(pdfcreator.getPatentPdfFilename(patNum)));
                       response.setContentLength(baos.size());
 
                       ServletOutputStream out = response.getOutputStream();
@@ -80,27 +128,30 @@ public class PatentPDF extends HttpServlet
         }
     }
 
-    private void readPDF(OutputStream baos, File pdffile) throws IOException
+    private void readPDF(OutputStream response, InputStream method) throws IOException
     {
-        InputStream pdfstream = new FileInputStream(pdffile);
-        BufferedInputStream bis = null;
-        BufferedOutputStream bos = null;
-        try {
+      BufferedInputStream bis = null;
+      BufferedOutputStream bos = null;
+      try {
+          bis = new BufferedInputStream(method);
+          bos = new BufferedOutputStream(response);
+          byte[] buff = new byte[1024];
+          int bytesRead;
 
-            bis = new BufferedInputStream(pdfstream);
-            byte[] buff = new byte[1024];
-            int bytesRead;
-
-            while (-1 != (bytesRead = bis.read(buff, 0, buff.length))) {
-                //System.out.print("#");
-                baos.write(buff, 0, bytesRead);
-            }
-        } catch(final IOException e) {
-          throw e;
-        } finally {
-          if (bis != null) {
-            bis.close();
+          while (-1 != (bytesRead = bis.read(buff, 0, buff.length))) {
+              //System.out.print("#");
+              bos.write(buff, 0, bytesRead);
           }
+      } catch(IOException e) {
+        throw e;
+      } finally {
+        if (bis != null) {
+          bis.close();
         }
+        if (bos != null) {
+          bos.close();
+        }
+      }
     }
+
 }
