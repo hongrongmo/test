@@ -87,10 +87,15 @@
     	</init-param>
     	<load-on-startup>5</load-on-startup>
     </servlet>
+
     <servlet>
-	  <servlet-name>PatentPDF</servlet-name>
-	  <description>This PatentPDF servlet  get PDFs from Univentio Gateway</description>
-	  <servlet-class>org.ei.fulldoc.PatentPDF</servlet-class>
+      <servlet-name>PatentPDF</servlet-name>
+      <description>This PatentPDF servlet  get PDFs from Univentio Gateway</description>
+      <servlet-class>org.ei.fulldoc.PatentPDF</servlet-class>
+      <init-param>
+        <param-name>logURL</param-name>
+        <param-value>http://@log_server@/logservice/servlet/LogServer</param-value>
+      </init-param>
     </servlet>
 
     <servlet>
@@ -132,7 +137,7 @@
       <servlet-class>org.ei.security.captcha.CaptchaServlet</servlet-class>
       <load-on-startup>9</load-on-startup>
     </servlet>
-    
+
     <servlet>
 	  <servlet-name>SecurityService</servlet-name>
 	  <description>The securtiy servlet</description>
