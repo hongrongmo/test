@@ -18,9 +18,14 @@ public class EUPLinkingStrategy implements LinkingStrategy
         if (pnum != null && authcd != null && "EP".equalsIgnoreCase(authcd))
         {
             StringBuffer redirect = new StringBuffer();
-            redirect.append("http://v3.espacenet.com/textdoc?DB=EPODOC&IDX=")
-              .append(authcd.trim())
-              .append(pad(pnum.trim()));
+            redirect.append("http://v3.espacenet.com/publicationDetails/originalDocument?CC=")
+              .append(authcd)
+              .append("&NR=")
+              .append(pad(pnum))
+              .append(pkind)
+              .append("&KC=")
+              .append(pkind)
+              .append("&FT=D");
 
             StringBuffer buf = new StringBuffer();
             buf.append("/controller/servlet/Patent.pdf?").append("ac=").append(authcd).append("&pn=").append(pnum).append("&kc=").append(pkind).append("&type=PDF").append("&rurl=").append(URLEncoder.encode(redirect.toString(),"UTF-8"));
