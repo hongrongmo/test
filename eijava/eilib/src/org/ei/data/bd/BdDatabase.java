@@ -11,7 +11,6 @@ public class BdDatabase
     static
     {
         bddatasources.add("cpx");
-        bddatasources.add("c84");
         bddatasources.add("geo");
         bddatasources.add("pch");
         //bddatasources.add("elt");
