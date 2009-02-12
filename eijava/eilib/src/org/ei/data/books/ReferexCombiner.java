@@ -106,7 +106,7 @@ public class ReferexCombiner {
 		            	isbnList.clear();
 		            	index = yearIndex; 
 		            	log.info("Processing year " + index + "...");		            	
-		            	String yearQuery = "SELECT BN13 FROM PAGES_ALL where PAGE_NUM = 0 and yr = " + index;
+		            	String yearQuery = "SELECT BN13 FROM PAGES_ALL where PAGE_NUM = 0 and SEQ_NUM is not null and yr = " + index;
 			            rs = stmt.executeQuery(yearQuery);	            
 			            while (rs.next()) {
 			            	if(rs.getString("BN13") != null)
@@ -334,8 +334,8 @@ public class ReferexCombiner {
     private static Pattern hundredWords = Pattern.compile("((?:[\\w\\p{Punct}][^\\s]*)\\s+){1,100}", Pattern.MULTILINE);
 
     // These Queries will extract WOBL Extract
-    private static final String BOOK_PAGES_QUERY = "SELECT PAGE_KEYWORDS,DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB, PAGE_NUM, CHAPTER_TITLE, CHAPTER_START, SECTION_TITLE, SECTION_START, PAGE_TXT FROM PAGES_ALL WHERE PAGE_NUM <> 0 ";
-    private static final String BOOK_QUERY = "SELECT DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB FROM PAGES_ALL WHERE PAGE_NUM=0";
+    private static final String BOOK_PAGES_QUERY = "SELECT PAGE_KEYWORDS,DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB, PAGE_NUM, CHAPTER_TITLE, CHAPTER_START, SECTION_TITLE, SECTION_START, PAGE_TXT,SEQ_NUM FROM PAGES_ALL WHERE PAGE_NUM <> 0 AND SEQ_NUM IS NOT NULL";
+    private static final String BOOK_QUERY = "SELECT DOCID,BN,BN13,PAGE_TOTAL,TI,ST,AB,PN,CVS,AUS,VO,ISS,YR,NVL(SUB,0) AS SUB,SEQ_NUM FROM PAGES_ALL WHERE PAGE_NUM=0 AND SEQ_NUM IS NOT NULL";
 
     private static final String BOOK_DATABASE = "pag";
     private static final String DOCTYPE_BOOK = "BOOK";
@@ -430,6 +430,7 @@ public class ReferexCombiner {
                 String dedupKey = getDeDeupKey();
 
                 String docid = rs.getString("DOCID");
+                String seqnum = rs.getString("SEQ_NUM");
 
                 String sTitle = rs.getString("TI");
                 String sFullTitle = sTitle;
@@ -495,6 +496,7 @@ public class ReferexCombiner {
                 rec.put(EVCombinedRec.DOCTYPE, getDoctype());
 
                 rec.put(EVCombinedRec.DOCID, docid);
+                rec.put(EVCombinedRec.PARENT_ID, seqnum);
                 rec.put(EVCombinedRec.PAGE, pageNum);
                 rec.put(EVCombinedRec.LOAD_NUMBER, loadNumber);
                 rec.put(EVCombinedRec.ACCESSION_NUMBER, accNumber);
