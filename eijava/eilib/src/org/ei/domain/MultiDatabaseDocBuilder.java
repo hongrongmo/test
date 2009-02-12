@@ -75,8 +75,9 @@ public class MultiDatabaseDocBuilder
 					ArrayList l = (ArrayList)listTable.get(key);
 					Database database = null;
 					DocumentBuilder builder = null;
-					
-					if(isBdDatabase)
+										
+					//if(isBdDatabase)
+					if(key.equalsIgnoreCase("bd"))
 					{					   
 					    builder = new BDDocBuilder();
 					}
