@@ -134,6 +134,7 @@ public class CombinedXMLWriter
         memcacheWeights = "1";
         String[] s = null;
 		String[] w = null;
+		/*
 		if (memcached == null)
 		{
 			s = memcacheServers.split(",");
@@ -148,6 +149,7 @@ public class CombinedXMLWriter
 				System.out.println("WARNING: Reinitializing memcached counter to 1 for PARENTID in " + this.environment.toUpperCase() + " environment.");
 			}
 		}
+		*/
 		if(numberID != 0)
 			init();
     }
@@ -169,6 +171,7 @@ public class CombinedXMLWriter
         memcacheWeights = "1";
         String[] s = null;
 		String[] w = null;
+		/*
 		if (memcached == null)
 		{
 			s = memcacheServers.split(",");
@@ -183,6 +186,7 @@ public class CombinedXMLWriter
 				System.out.println("WARNING: Reinitializing memcached counter to 1 for PARENTID in " + this.environment.toUpperCase() + " environment.");
 			}
 		}
+		*/
 		if(numberID != 0)
 			init();
     }
@@ -337,17 +341,17 @@ public class CombinedXMLWriter
 				{
 					setDatabase("bd");
 				}
-	    		//writeRec(rec[i]);
-	    		writeIndexOnly(rec[i]);
+	    		writeRec(rec[i]);
+	    		//writeIndexOnly(rec[i]);
 
 	    	}
 	    	this.isChild = false;
     	}
-    	else
+    	else if(rec.length >0)
     	{
 			setDatabase(rec[0].getString(EVCombinedRec.DATABASE));
-	    	//writeRec(rec[0]);
-	    	writeIndexOnly(rec[0]);
+	    	writeRec(rec[0]);
+	    	//writeIndexOnly(rec[0]);
     	}
     }
 
@@ -365,6 +369,7 @@ public class CombinedXMLWriter
 		}
 
 		addIndex(rec.getStrings(EVCombinedRec.CONTROLLED_TERMS),"CONTROLLEDTERMS");//CONTROLLEDTERMS
+		addIndex(rec.getStrings(EVCombinedRec.CHEMICALTERMS),"CONTROLLEDTERMS");//CHEMICALTERMS
 		addIndex(rec.getStrings(EVCombinedRec.SERIAL_TITLE),"SERIALTITLE");//SERIALTITLE
 		addIndex(rec.getStrings(EVCombinedRec.PUBLISHER_NAME),"PUBLISHERNAME");//PUBLISHERNAME
 		++curRecNum;
@@ -737,7 +742,7 @@ public class CombinedXMLWriter
 				{
 					if(s[i]!=null)
 					{
-						indexWriter.println("|"+ Entity.prepareString(s[i]).toUpperCase() + "|" + getDatabase());
+						indexWriter.println("|"+ Entity.prepareString(s[i]).toUpperCase().trim() + "|" + getDatabase());
 					}
 				}
 			}
