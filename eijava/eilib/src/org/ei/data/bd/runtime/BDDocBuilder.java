@@ -847,8 +847,8 @@ public class BDDocBuilder
 			return new Contributors(Keys.EDITORS, editorNames);
 		}
 		else if(authorString == null && editorsString == null && confEditor != null)
-		{
-			editors = new BdEditors(confEditor.trim());
+		{			
+			editors = new BdEditors(confEditor);
 			editorList = editors.getEditors();
 
 			for(int i= 0;i<editorList.size();i++)
