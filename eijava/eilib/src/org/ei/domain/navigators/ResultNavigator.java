@@ -181,6 +181,7 @@ public class ResultNavigator
           }
 
           anav.getModifiers().remove(new EiModifier(0, "Anonymous", "Anonymous"));
+          anav.getModifiers().remove(new EiModifier(0, "Anon", "Anon"));
 
         }
         // AF
