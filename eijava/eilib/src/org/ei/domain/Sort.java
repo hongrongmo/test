@@ -17,23 +17,28 @@ import org.apache.commons.logging.LogFactory;
  */
 public class Sort
 {
-	protected static Log log = LogFactory.getLog(Sort.class);
-	
+  protected static Log log = LogFactory.getLog(Sort.class);
+
     private static Sort defaultSort = new Sort(Sort.DEFAULT_FIELD, Sort.DOWN);
     public static Sort getDefaultSortOption()
     {
-        return defaultSort;
+      return defaultSort;
     }
 
-	public static final String DISPLAY_UP = "Ascending";
-	public static final String DISPLAY_DOWN = "Descending";
+    public static final String DISPLAY_UP = "Ascending";
+    public static final String DISPLAY_DOWN = "Descending";
 
     public static final String UP = "up";
     public static final String DOWN = "dw";
 
-	public static final String PUB_YEAR_FIELD = "yr";
-	public static final String RELEVANCE_FIELD = "relevance";
-	
+    public static final String PUB_YEAR_FIELD = "yr";
+    public static final String RELEVANCE_FIELD = "relevance";
+
+    // DTS_SORT_MASK = Compendex + Compendex Backfile + Standalone Backfile + PaperChem +  Chimica + Geobase
+    public static final int DTS_SORT_MASK = 270561;
+    public static final String DTS_SORT_FIELD = "dts";
+
+
     public static final String DEFAULT_FIELD = RELEVANCE_FIELD;
 
     private static final String ASC = "+";
@@ -44,24 +49,23 @@ public class Sort
 
     public Sort(String field, String dir)
     {
-        if (field != null)
-        {
-            setSortField(field);
-        }
-        else
-        {
-			setSortField(DEFAULT_FIELD);
-        }
+      if (field != null)
+      {
+        setSortField(field);
+      }
+      else
+      {
+        setSortField(DEFAULT_FIELD);
+      }
 
-        if (dir != null)
-        {
-            setSortDirection(dir);
-        }
-        else
-        {
-            setSortDirection(DOWN);
-        }
-
+      if (dir != null)
+      {
+        setSortDirection(dir);
+      }
+      else
+      {
+        setSortDirection(DOWN);
+      }
     }
 
     /**
@@ -69,7 +73,7 @@ public class Sort
      */
     public String getSortDirection()
     {
-        return sortDirection;
+      return sortDirection;
     }
 
     /**
@@ -77,7 +81,7 @@ public class Sort
      */
     public String getSortField()
     {
-        return sortField;
+      return sortField;
     }
 
     /**
@@ -85,7 +89,7 @@ public class Sort
      */
     public void setSortDirection(String string)
     {
-        sortDirection = string;
+      sortDirection = string;
     }
 
     /**
@@ -93,49 +97,50 @@ public class Sort
      */
     public void setSortField(String string)
     {
-        sortField = string;
+      sortField = string;
     }
 
-	public static String displayDir(String dir)
-	{
-		if (UP.equalsIgnoreCase(dir))
-		{
-			return DISPLAY_UP;
-		}
-		else
-		{
-			return DISPLAY_DOWN;
-		}
-	}
+    public static String displayDir(String dir)
+    {
+      if (UP.equalsIgnoreCase(dir))
+      {
+        return DISPLAY_UP;
+      }
+      else
+      {
+        return DISPLAY_DOWN;
+      }
+    }
+
     public static String not(String dir)
     {
-        if (UP.equalsIgnoreCase(dir))
-        {
-            return DOWN;
-        }
-        else
-        {
-            return UP;
-        }
+      if (UP.equalsIgnoreCase(dir))
+      {
+        return DOWN;
+      }
+      else
+      {
+        return UP;
+      }
     }
 
     public String toString()
     {
-        StringBuffer sb = new StringBuffer();
+      StringBuffer sb = new StringBuffer();
 
-        sb.append(this.sortField);
+      sb.append(this.sortField);
 
-        return sb.toString();
+      return sb.toString();
     }
 
     public String toXML()
     {
-        StringBuffer sb = new StringBuffer();
+      StringBuffer sb = new StringBuffer();
 
-        sb.append("<SORT-OPTION>").append(this.sortField).append("</SORT-OPTION>");
-        sb.append("<SORT-DIRECTION>").append(this.sortDirection).append("</SORT-DIRECTION>");
+      sb.append("<SORT-OPTION>").append(this.sortField).append("</SORT-OPTION>");
+      sb.append("<SORT-DIRECTION>").append(this.sortDirection).append("</SORT-DIRECTION>");
 
-        return sb.toString();
+      return sb.toString();
     }
 
 }
