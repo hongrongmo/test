@@ -221,7 +221,16 @@ public class FastSearchControl
 
             if(sortOption != null)
             {
-                client.setPrimarySort(sortOption.getSortField());
+                String sortField = sortOption.getSortField();
+                if(sortOption.getSortField().equals(Sort.PUB_YEAR_FIELD)) {
+                  int qmask = query.getGatheredMask();
+                  System.out.println("Checking mask for YR sort " + qmask);
+                  if((qmask & Sort.DTS_SORT_MASK) == qmask) {
+                    System.out.println("Changing Fast sort field to DTS ");
+                    sortField = Sort.DTS_SORT_FIELD;
+                  }
+                }
+                client.setPrimarySort(sortField);
                 client.setPrimarySortDirection(getSortDirection(sortOption));
             }
 
