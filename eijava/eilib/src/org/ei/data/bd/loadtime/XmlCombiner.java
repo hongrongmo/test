@@ -34,6 +34,8 @@ public class XmlCombiner
 
     private static String tablename;
 
+	private static String currentDb;
+
     private static HashMap issnARFix = new HashMap();
 
     static
@@ -77,12 +79,13 @@ public class XmlCombiner
         }
         String operation = args[6];
         tablename = args[7];
-        String environment = args[8].toLowerCase();
+        String currentDb = args[8].toLowerCase();
         long timestamp=0;
         //if(args.length==10)
             //timestamp = Long.parseLong(args[9]);
 
         Combiner.TABLENAME = tablename;
+        Combiner.CURRENTDB = currentDb;
         System.out.println(Combiner.TABLENAME);
 
         String dbname = "bd";
@@ -90,7 +93,7 @@ public class XmlCombiner
             dbname=dbname+"cor";
         CombinedWriter writer = new CombinedXMLWriter(recsPerbatch,
                                                       loadNumber,
-                                                      dbname, environment);
+                                                      dbname, "dev");
 
         writer.setOperation(operation);
 
@@ -107,10 +110,10 @@ public class XmlCombiner
         }
         else if(loadNumber == 0)
         {
-        	for(int yearIndex = 2002; yearIndex <= 2009; yearIndex++)
+        	for(int yearIndex = 1952; yearIndex <= 2009; yearIndex++)
             {
         	  System.out.println("Processing year " + yearIndex + "...");
-              c = new XmlCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,dbname, environment));
+              c = new XmlCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,dbname, "dev"));
               c.writeCombinedByYear(url, driver, username, password, yearIndex);
             }
         }
@@ -138,7 +141,7 @@ public class XmlCombiner
 
             stmt = con.createStatement();
             System.out.println("Running the query...");
-            rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER,PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,SEQ_NUM from " + Combiner.TABLENAME + " where PUBLICATIONYEAR='" + year + "' AND loadnumber != 0 and loadnumber < 1000000");
+            rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER,PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,SEQ_NUM from " + Combiner.TABLENAME + " where SEQ_NUM is not null and PUBLICATIONYEAR='" + year + "' AND loadnumber != 0 and loadnumber < 1000000 and database='" + Combiner.CURRENTDB + "'");
             System.out.println("Got records ...");
             writeRecs(rs);
             System.out.println("Wrote records.");
@@ -206,7 +209,6 @@ public class XmlCombiner
           	numCoords = tc.length;
 	  	  }
 
-	  	  //System.out.println("NUMCOORDS: " + numCoords);
 	  	  Vector recVector = new Vector();
           for(int currentCoord = 0; currentCoord < numCoords; currentCoord++)
           {
@@ -223,7 +225,6 @@ public class XmlCombiner
 					{
 						authorString=authorString+rs.getString("AUTHOR_1");
 					}
-					//System.out.println("AUTHOR= "+authorString);
                     rec.put(EVCombinedRec.AUTHOR, prepareBdAuthor(authorString));
 
                     if (rs.getString("AFFILIATION") != null)
@@ -374,7 +375,6 @@ public class XmlCombiner
 				String isbnString = rs.getString("ISBN");
                 if (isbnString!= null)
                 {
-					System.out.println("ISBN M_ID=" + rs.getString("M_ID"));
                     rec.put(EVCombinedRec.ISBN, prepareISBN(isbnString));
                 }
 
@@ -586,6 +586,11 @@ public class XmlCombiner
 						coordCount++;
 					}
 
+					if(coordCount == 0)
+					{
+						coordCount++;
+					}
+
 					rec.putIfNotNull(EVCombinedRec.DOCID, firstGUID + "_" + (coordCount));
 				}
 
@@ -618,6 +623,10 @@ public class XmlCombiner
 							recSecondBox.put(EVCombinedRec.LNG_NE, secondBoxCoords[3]);
 							recSecondBox.put(EVCombinedRec.LAT_SW, secondBoxCoords[1]);
 							recSecondBox.put(EVCombinedRec.LNG_SW, secondBoxCoords[4]);
+							if(coordCount == 0)
+							{
+								coordCount++;
+							}
 							recSecondBox.putIfNotNull(EVCombinedRec.DOCID, firstGUID + "_" + (coordCount));
 							recVector.add(recSecondBox);
 						}
@@ -631,7 +640,6 @@ public class XmlCombiner
 
 				catch(Exception e)
 				{
-				  System.out.println("MID = " + rs.getString("M_ID"));
 				  e.printStackTrace();
 				}
             }
@@ -1050,7 +1058,6 @@ public class XmlCombiner
 		String[] coords = coordString.split("-");
 		for(int i=1;i< 5;i++)
 		{
-			//System.out.println("ONE: " + coords[i]);
 			if(coords[i].length() < 7)
 			{
 				int padCount = 8 - coords[i].length();
@@ -1060,7 +1067,7 @@ public class XmlCombiner
 
 			coords[i] = coords[i].replaceAll("[NE]","+").substring(0,coords[i].length()-4).replaceAll("\\+","");
 			coords[i] = coords[i].replaceAll("[WS]","-");
-			//System.out.println("TWO: " + coords[i]);
+
 			if(coords[i].substring(0,1).indexOf("-") != -1)
 				coords[i] = coords[i].replaceAll("^(-)0{1,2}(.*?)","$1$2");
 			else
@@ -1081,7 +1088,6 @@ public class XmlCombiner
 				if(m < -180)
 			      coords[i] = coords[i].substring(0,3);
 			}
-			//System.out.println("THREE: " + coords[i]);
 		}
 
 		return coords;
@@ -1096,7 +1102,7 @@ public class XmlCombiner
             {
 
                 stmt = con.createStatement();
-                rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER,PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,SEQ_NUM from " + Combiner.TABLENAME + " where loadnumber != 0 and loadnumber < 1000000");
+                rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER,PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,SEQ_NUM from " + Combiner.TABLENAME + " where loadnumber != 0 and loadnumber < 1000000 and database='cpx'");
 				System.out.println("Got records1 ...");
                 writeRecs(rs);
                 this.writer.end();
@@ -1142,7 +1148,8 @@ public class XmlCombiner
         try
         {
             stmt = con.createStatement();
-            rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE, CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER,PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,SEQ_NUM from " + Combiner.TABLENAME + " where loadnumber =" + weekNumber +" AND loadnumber != 0 and loadnumber < 1000000");
+            rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER,PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,SEQ_NUM from " + Combiner.TABLENAME + " where SEQ_NUM is not null and LOADNUMBER='" + weekNumber + "' AND loadnumber != 0 and loadnumber < 1000000 and database='" + Combiner.CURRENTDB + "'");
+			//System.out.println("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER,PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,SEQ_NUM from " + Combiner.TABLENAME + " where SEQ_NUM is not null and LOADNUMBER='" + weekNumber + "' AND loadnumber != 0 and loadnumber < 1000000 and database='" + Combiner.CURRENTDB + "'");
 			System.out.println("Got records2 ...");
 
             writeRecs(rs);
