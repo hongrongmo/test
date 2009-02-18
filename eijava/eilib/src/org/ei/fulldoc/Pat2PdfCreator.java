@@ -2,17 +2,14 @@ package org.ei.fulldoc;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.IOException;
 import java.io.FileNotFoundException;
-
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
-import java.io.OutputStream;
-import java.io.ByteArrayOutputStream;
 
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.HttpStatus;
@@ -21,7 +18,6 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import com.lowagie.text.Document;
-import com.lowagie.text.DocumentException;
 import com.lowagie.text.Image;
 import com.lowagie.text.Rectangle;
 import com.lowagie.text.pdf.PdfContentByte;
@@ -229,7 +225,6 @@ public class Pat2PdfCreator {
         log.debug("...combining patent image pages to pdf");
         if(tiffs.size() != 0) {
           try {
-            String pdfpath = System.getProperty("java.io.tmpdir") + System.getProperty("file.separator") + "Pat" + pat_no + ".pdf";
             combineTif2Pdf((String[]) tiffs.toArray(new String[0]), baos);
             result = true;
           } catch (Exception e) {
@@ -248,22 +243,29 @@ public class Pat2PdfCreator {
     GetMethod get = new GetMethod(url);
     get.setFollowRedirects(false);
 
+    BufferedReader inbuf = null;
     try {
       client.executeMethod(get);
       if(get.getStatusCode() == HttpStatus.SC_OK)
       {
         InputStream in = get.getResponseBodyAsStream();
-        BufferedReader inbuf = new BufferedReader(new InputStreamReader(in));
+        inbuf = new BufferedReader(new InputStreamReader(in));
         String line = null;
         while((line = inbuf.readLine()) != null) {
           response.append(line);
-          //log.info(line);
         }
-        inbuf.close();
       }
     } catch (Exception e) {
       log.error(e);
     } finally {
+      if(inbuf != null) {
+        try {
+          inbuf.close();
+        } catch (IOException e) {
+          // TODO Auto-generated catch block
+          e.printStackTrace();
+        }
+      }
       get.releaseConnection();
     }
     return response.toString();
@@ -334,20 +336,28 @@ public class Pat2PdfCreator {
         PdfContentByte cb = writer.getDirectContent();
 
         // add first image to document here to avoid opening it again later
-        document.newPage();
-        img.setAbsolutePosition(0, 0);
-        cb.addImage(img);
-        tiffile.close();
+        try {
+          document.newPage();
+          img.setAbsolutePosition(0, 0);
+          cb.addImage(img);
+        }
+        finally {
+          tiffile.close();
+        }
 
         int count = tiffs.length;
         // start loop at second position in array
         for (int file_index = 1; file_index < count; file_index++) {
-          tiffile = new RandomAccessFileOrArray(tiffs[file_index]);
-          img = TiffImage.getTiffImage(tiffile, 1);
-          document.newPage();
-          img.setAbsolutePosition(0, 0);
-          cb.addImage(img);
-          tiffile.close();
+          try {
+            tiffile = new RandomAccessFileOrArray(tiffs[file_index]);
+            img = TiffImage.getTiffImage(tiffile, 1);
+            document.newPage();
+            img.setAbsolutePosition(0, 0);
+            cb.addImage(img);
+          }
+          finally {
+            tiffile.close();
+          }
         }
         result = true;
       } catch (Exception e) {
@@ -368,6 +378,7 @@ public class Pat2PdfCreator {
   // Helper method to read in 'cached' http responses
   // to limit the traffic to USPTO
   // during testing
+  /*
   private String getFileAsString(String file) {
     StringBuffer response = new StringBuffer();
     BufferedReader rdr  = null;
@@ -400,5 +411,6 @@ public class Pat2PdfCreator {
     }
     return response.toString();
   }
+  */
 
 }

@@ -2,24 +2,12 @@ package org.ei.fulldoc;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.io.ByteArrayOutputStream;
-
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.util.Enumeration;
 import java.util.Hashtable;
-
-import org.apache.commons.httpclient.HttpClient;
-import org.apache.commons.httpclient.HttpStatus;
-import org.apache.commons.httpclient.methods.GetMethod;
-import org.apache.commons.httpclient.methods.HeadMethod;
-
-import org.apache.commons.httpclient.MultiThreadedHttpConnectionManager;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -28,6 +16,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.httpclient.HttpClient;
+import org.apache.commons.httpclient.HttpStatus;
+import org.apache.commons.httpclient.MultiThreadedHttpConnectionManager;
+import org.apache.commons.httpclient.methods.GetMethod;
 import org.ei.logging.LogClient;
 import org.ei.util.GUID;
 
@@ -88,16 +80,36 @@ public class PatentPDF extends HttpServlet
                     String univentiourl = UniventioPDFGateway.getUniventioLink(authCode,patNum,kindCode);
                     GetMethod pdf_get = new GetMethod(univentiourl);
                     pdf_get.setFollowRedirects(false);
+                    OutputStream responseStream  = null;
+                    InputStream getmethodStream = null;
                     try {
                       client.executeMethod(pdf_get);
                       if(pdf_get.getStatusCode() == HttpStatus.SC_OK) {
                         response.setContentType("application/pdf");
                         response.setHeader("Content-Disposition","inline; filename=" + authCode+patNum+kindCode+".pdf");
-                        readPDF(response.getOutputStream(), pdf_get.getResponseBodyAsStream());
+
+                        responseStream  = response.getOutputStream();
+                        getmethodStream = pdf_get.getResponseBodyAsStream();
+                        readPDF(responseStream, getmethodStream);
                         redirectsent = true;
                         logUniventioCall(request, response);
                       }
-                    } finally {
+                    }
+                    finally {
+                      try {
+                        if(responseStream != null) {
+                          responseStream.close();
+                        }
+                      }
+                      catch(IOException e) {
+                      }
+                      try {
+                        if(getmethodStream != null) {
+                          getmethodStream.close();
+                        }
+                      }
+                      catch(IOException e) {
+                      }
                       pdf_get.releaseConnection();
                     }
                   }
@@ -167,8 +179,6 @@ public class PatentPDF extends HttpServlet
 
     private void logUniventioCall(HttpServletRequest request, HttpServletResponse response) throws IOException, Exception
     {
-        String custid = "0";
-
         long end, start = System.currentTimeMillis();
 
         LogClient logClient;
