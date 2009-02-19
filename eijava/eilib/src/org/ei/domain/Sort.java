@@ -84,6 +84,23 @@ public class Sort
       return sortField;
     }
 
+    /* Code to switch out code sent to fast if Date(YR) sort
+      is chosend and the DB mask is isolated to only BD databases */
+    public String getFastClientSortField(int qmask) {
+
+      String sortField = getSortField();
+
+      if(sortField.equals(Sort.PUB_YEAR_FIELD)) {
+        System.out.println("Checking mask for YR sort " + qmask);
+        if((qmask & Sort.DTS_SORT_MASK) == qmask) {
+          System.out.println("Changing Fast sort field to DTS ");
+          sortField = Sort.DTS_SORT_FIELD;
+        }
+      }
+
+      return sortField;
+    }
+
     /**
      * @param string
      */
