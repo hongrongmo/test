@@ -21,18 +21,6 @@ public class CBNBCombiner extends Combiner
     public static void main(String args[]) throws Exception
     {
 
-        //				if (args[0].equalsIgnoreCase("-v"))
-        //				{
-        //					boolean valid=false;
-        //					DataValidator d = new DataValidator();
-        //					valid = d.isValidateFile(args[1]);
-        //					if(valid)
-        //						System.exit(0);
-        //					else
-        //						System.exit(1);
-        //				}
-        //				else
-        //				{
         String url = args[0];
         String driver = args[1];
         String username = args[2];
@@ -472,7 +460,7 @@ public class CBNBCombiner extends Combiner
         {
 
             stmt = con.createStatement();
-            rs = stmt.executeQuery("select m_id, abn, doc, sco, fjl, isn, cdn, lan, ibn, src, scc,sct, ebt, cin, vol, iss, pag, reg, cym, sic, gic, gid, atl, otl, abs, edn, SUBSTR(pbn,1,4) pyr,pbn,avl,pbr, load_number from " + Combiner.TABLENAME + " where  load_number ='" + weekNumber + "'");
+            rs = stmt.executeQuery("select m_id, abn, doc, sco, fjl, isn, cdn, lan, ibn, src, scc,sct, ebt, cin, vol, iss, pag, reg, cym, sic, gic, gid, atl, otl, abs, edn, SUBSTR(pbn,1,4) pyr,pbn,avl,pbr,seq_num,load_number from " + Combiner.TABLENAME + " where seq_num is not null and load_number ='" + weekNumber + "'");
             writeRecs(rs);
             this.writer.end();
             this.writer.flush();
