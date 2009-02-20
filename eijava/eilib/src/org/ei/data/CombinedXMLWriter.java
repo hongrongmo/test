@@ -324,33 +324,32 @@ public class CombinedXMLWriter
 
     public void writeRec(EVCombinedRec[] rec)
     throws Exception
-    {
+    {    	
     	if(rec.length >1)
-    	{
-
+    	{    		
 	    	for(int i=0; i<rec.length; i++)
 	    	{
 	    		if(i>0)
 	    			this.isChild = true;
 
 	    		if(rec[i].getString(EVCombinedRec.DATABASE)!=null)
-				{
+				{	    		
 					setDatabase(rec[i].getString(EVCombinedRec.DATABASE));
 				}
 				else
-				{
+				{				
 					setDatabase("bd");
-				}
-	    		writeRec(rec[i]);
+				}	    		
+	    		writeRec(rec[i]);	    
 	    		//writeIndexOnly(rec[i]);
 
 	    	}
 	    	this.isChild = false;
     	}
     	else if(rec.length >0)
-    	{
-			setDatabase(rec[0].getString(EVCombinedRec.DATABASE));
-	    	writeRec(rec[0]);
+    	{    		    		
+			setDatabase(rec[0].getString(EVCombinedRec.DATABASE));			
+	    	writeRec(rec[0]);	    	
 	    	//writeIndexOnly(rec[0]);
     	}
     }
@@ -380,8 +379,8 @@ public class CombinedXMLWriter
     public void writeRec(EVCombinedRec rec)
         throws Exception
     {
-    	this.eid = rec.getString(EVCombinedRec.DOCID);
-        begin();
+    	this.eid = rec.getString(EVCombinedRec.DOCID);    	
+        begin();        
         out.println("   <ROW> ");
         out.println("       <EIDOCID>" + this.eid + "</EIDOCID>");
         out.println("       <PARENTID>" +  rec.getString(EVCombinedRec.PARENT_ID) + "</PARENTID>");
@@ -514,9 +513,9 @@ public class CombinedXMLWriter
         out.println("       <LNG_SW><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.LNG_SW))) + "]]></LNG_SW>");
         out.println("       <LAT_SE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.LAT_SE))) + "]]></LAT_SE>");
         out.println("       <LNG_SE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.LNG_SE))) + "]]></LNG_SE>");
-        out.println("   </ROW>");
+        out.println("   </ROW>");        
         ++curRecNum;
-        end();
+        end();        
     }
 
     private String hasDOI(EVCombinedRec rec)
@@ -732,7 +731,7 @@ public class CombinedXMLWriter
     }
 
     private String[] addIndex(String s[], String key)
-    {
+    {    	
 		try
 		{
 			PrintWriter indexWriter = (PrintWriter)hm.get(key);
@@ -742,7 +741,7 @@ public class CombinedXMLWriter
 				{
 					if(s[i]!=null)
 					{
-						indexWriter.println("|"+ Entity.prepareString(s[i]).toUpperCase().trim() + "|" + getDatabase());
+						indexWriter.println(Entity.prepareString(s[i]).toUpperCase().trim() + "\t" + getDatabase());
 					}
 				}
 			}
@@ -756,7 +755,7 @@ public class CombinedXMLWriter
     }
 
     private String addIndex(String s, String key)
-    {
+    {    	
 		String sarray[] = {s};
 		addIndex(sarray, key);
 		return s;
