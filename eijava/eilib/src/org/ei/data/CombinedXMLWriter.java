@@ -19,7 +19,7 @@ import java.text.*;
 
 public class CombinedXMLWriter
     extends CombinedWriter
-{
+{	
     private Perl5Util perl = new Perl5Util();
     private PorterStemmer stemmer = new PorterStemmer();
     private DataCleaner cleaner = new DataCleaner();
@@ -741,7 +741,7 @@ public class CombinedXMLWriter
 				{
 					if(s[i]!=null)
 					{
-						indexWriter.println(Entity.prepareString(s[i]).toUpperCase().trim() + "\t" + getDatabase());
+						indexWriter.println(Entity.prepareString(s[i]).toUpperCase().trim() + "\t" + getDatabase() + "\t");
 					}
 				}
 			}
