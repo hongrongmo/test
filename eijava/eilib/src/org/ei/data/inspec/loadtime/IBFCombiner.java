@@ -87,7 +87,7 @@ public class IBFCombiner
 
             stmt = con.createStatement();
             System.out.println("Running the YEAR query...");
-            rs = stmt.executeQuery("select " + QUERY_FIELDS + " from " + Combiner.TABLENAME + " where nvl(pyr,substr(su,1,4)) ='" + year + "'");
+            rs = stmt.executeQuery("select " + QUERY_FIELDS + " from " + Combiner.TABLENAME + " where seq_num is not null and nvl(pyr,substr(su,1,4)) ='" + year + "'");
             writeRecs(rs);
             System.out.println("Wrote records.");
             this.writer.end();
@@ -134,7 +134,7 @@ public class IBFCombiner
 
             stmt = con.createStatement();
             System.out.println("Running the LOAD NUMBER query...");
-            rs = stmt.executeQuery("select " + QUERY_FIELDS + " from " + Combiner.TABLENAME + " where LOAD_NUMBER = " + loadN);
+            rs = stmt.executeQuery("select " + QUERY_FIELDS + " from " + Combiner.TABLENAME + " where seq_num is not null and LOAD_NUMBER = " + loadN);
             writeRecs(rs);
             System.out.println("Wrote records.");
             this.writer.end();
