@@ -17,8 +17,15 @@ public class EUPLinkingStrategy implements LinkingStrategy
 
         if (pnum != null && authcd != null && "EP".equalsIgnoreCase(authcd))
         {
+            authcd = authcd.trim();
+            pnum = pnum.trim();
+
             StringBuffer redirect = new StringBuffer();
-            redirect.append("http://v3.espacenet.com/publicationDetails/originalDocument?CC=")
+            redirect.append("http://v3.espacenet.com/textdoc?DB=EPODOC&IDX=")
+              .append(authcd)
+              .append(pad(pnum));
+
+/*            redirect.append("http://v3.espacenet.com/publicationDetails/originalDocument?CC=")
               .append(authcd)
               .append("&NR=")
               .append(pad(pnum))
@@ -26,7 +33,7 @@ public class EUPLinkingStrategy implements LinkingStrategy
               .append("&KC=")
               .append(pkind)
               .append("&FT=D");
-
+*/
             StringBuffer buf = new StringBuffer();
             buf.append("/controller/servlet/Patent.pdf?").append("ac=").append(authcd).append("&pn=").append(pnum).append("&kc=").append(pkind).append("&type=PDF").append("&rurl=").append(URLEncoder.encode(redirect.toString(),"UTF-8"));
             linkInfo.url = buf.toString();
@@ -37,6 +44,7 @@ public class EUPLinkingStrategy implements LinkingStrategy
 
     public String pad(String num)
     {
+
         while(num.length() < 7)
         {
             num = "0"+num;
