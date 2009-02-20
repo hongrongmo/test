@@ -103,11 +103,11 @@ public class C84Combiner
             System.out.println("Running the query...");
             if(year == 9999)
             {
-            	rs = stmt.executeQuery("select * from " + Combiner.TABLENAME + " where yr in ('1000','1003','1018','1039','1042','1043','1047','1051','1052','1059','1065','1153','1494','1495','1590','1592','1593','1597','1643','1659','1800','1802','1804','1805','1806','1807','1808','1809','1811','1813','1820','1830','1831','1838','1855','1856','1857','1858','1860','1863','1864','1865','1867','1868','189','19\\ill\\','192','193\\ill\\','1972','1975','1978','1981','1983','1984','1985','1987','1989','1990','1992','1993','1994','1995','7953') or yr is null");
+            	rs = stmt.executeQuery("select * from " + Combiner.TABLENAME + " where seq_num is not null and yr in ('1000','1003','1018','1039','1042','1043','1047','1051','1052','1059','1065','1153','1494','1495','1590','1592','1593','1597','1643','1659','1800','1802','1804','1805','1806','1807','1808','1809','1811','1813','1820','1830','1831','1838','1855','1856','1857','1858','1860','1863','1864','1865','1867','1868','189','19\\ill\\','192','193\\ill\\','1972','1975','1978','1981','1983','1984','1985','1987','1989','1990','1992','1993','1994','1995','7953') or yr is null");
             }
             else
             {
-            	rs = stmt.executeQuery("select * from " + Combiner.TABLENAME + " where substr(yr,1,4) ='" + year + "'");
+            	rs = stmt.executeQuery("select * from " + Combiner.TABLENAME + " where seq_num is not null and substr(yr,1,4) ='" + year + "'");
             }
             
             //
@@ -692,7 +692,7 @@ public class C84Combiner
 
             stmt = con.createStatement();
 
-            rs = stmt.executeQuery("select ay, ac , ey, pe, pm, ad, pd, pu, ab, m_id, vo, iss, xp,af, ex, an, aus, bn, cal, cc, cf, cls, cn, cvs, dt, ed, ef, fls, id, la, lf, mc, me, mh, ms, mt, mv, my, m2, pn, se, sh, sn, sp, st, ti, tt, tr, vt, do, SUBSTR(yr,1,4) yr, load_number, seq_num from " + tablename + " where load_number =" + weekNumber);
+            rs = stmt.executeQuery("select ay, ac , ey, pe, pm, ad, pd, pu, ab, m_id, vo, iss, xp,af, ex, an, aus, bn, cal, cc, cf, cls, cn, cvs, dt, ed, ef, fls, id, la, lf, mc, me, mh, ms, mt, mv, my, m2, pn, se, sh, sn, sp, st, ti, tt, tr, vt, do, SUBSTR(yr,1,4) yr, load_number, seq_num from " + tablename + " where seq_num is not null and load_number =" + weekNumber);
             writeRecs(rs);
             this.writer.end();
             this.writer.flush();
