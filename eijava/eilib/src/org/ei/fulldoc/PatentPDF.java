@@ -27,10 +27,14 @@ public class PatentPDF extends HttpServlet
 {
     private String logServiceURL;
     private HttpClient client;
+    private static final String PAT2PDF_USER_AGENT = "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; MS-RTC LM 8)";
+
 
     public void init()
         throws ServletException
     {
+
+      System.getProperties().setProperty("httpclient.useragent", PatentPDF.PAT2PDF_USER_AGENT);
       MultiThreadedHttpConnectionManager connectionManager =  new MultiThreadedHttpConnectionManager();
 
       client = new HttpClient(connectionManager);
