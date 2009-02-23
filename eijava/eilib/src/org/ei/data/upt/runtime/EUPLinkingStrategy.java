@@ -1,6 +1,9 @@
 package org.ei.data.upt.runtime;
 
 import org.ei.domain.EIDoc;
+import org.ei.domain.Keys;
+import org.ei.domain.ElementDataMap;
+import org.ei.domain.ElementData;
 import org.ei.fulldoc.LinkInfo;
 import org.ei.fulldoc.LinkingStrategy;
 import java.net.URLEncoder;
@@ -21,11 +24,11 @@ public class EUPLinkingStrategy implements LinkingStrategy
             pnum = pnum.trim();
 
             StringBuffer redirect = new StringBuffer();
-            redirect.append("http://v3.espacenet.com/textdoc?DB=EPODOC&IDX=")
+/*            redirect.append("http://v3.espacenet.com/textdoc?DB=EPODOC&IDX=")
               .append(authcd)
               .append(pad(pnum));
-
-/*            redirect.append("http://v3.espacenet.com/publicationDetails/originalDocument?CC=")
+*/
+            redirect.append("http://v3.espacenet.com/publicationDetails/originalDocument?CC=")
               .append(authcd)
               .append("&NR=")
               .append(pad(pnum))
@@ -33,7 +36,9 @@ public class EUPLinkingStrategy implements LinkingStrategy
               .append("&KC=")
               .append(pkind)
               .append("&FT=D");
-*/
+            redirect.append("&DB=EPODOC&locale=en_EP");
+
+
             StringBuffer buf = new StringBuffer();
             buf.append("/controller/servlet/Patent.pdf?").append("ac=").append(authcd).append("&pn=").append(pnum).append("&kc=").append(pkind).append("&type=PDF").append("&rurl=").append(URLEncoder.encode(redirect.toString(),"UTF-8"));
             linkInfo.url = buf.toString();
