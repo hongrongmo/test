@@ -62,7 +62,8 @@ public class Pat2PdfCreator {
     return System.getProperty("java.io.tmpdir") + System.getProperty("file.separator") + "Pat" + pat_no + ".pdf";
   }
 
-  public boolean createPatentPdf(String pat_no, OutputStream baos) {
+  public boolean createPatentPdf(String pat_no, OutputStream baos)
+  {
 
     boolean result = false;
     String response = null;
@@ -237,14 +238,16 @@ public class Pat2PdfCreator {
     return result;
   }
 
-  private String getUrlAsString(String url) {
+  private String getUrlAsString(String url)
+  {
     StringBuffer response = new StringBuffer();
 
     GetMethod get = new GetMethod(url);
     get.setFollowRedirects(false);
 
     BufferedReader inbuf = null;
-    try {
+    try
+    {
       client.executeMethod(get);
       if(get.getStatusCode() == HttpStatus.SC_OK)
       {
@@ -255,23 +258,43 @@ public class Pat2PdfCreator {
           response.append(line);
         }
       }
-    } catch (Exception e) {
-      log.error(e);
-    } finally {
-      if(inbuf != null) {
-        try {
-          inbuf.close();
-        } catch (IOException e) {
-          // TODO Auto-generated catch block
-          e.printStackTrace();
-        }
-      }
-      get.releaseConnection();
     }
+    catch (Exception e)
+    {
+      log.error(e);
+    }
+    finally
+    {
+		if(inbuf != null)
+		{
+			try
+    		{
+    		      inbuf.close();
+    		}
+    		catch (IOException e)
+    		{
+    		      // TODO Auto-generated catch block
+    		      e.printStackTrace();
+    		}
+		}
+
+      	if(get != null)
+      	{
+    	  	try
+    	  	{
+    	  		get.releaseConnection();
+			}
+			catch(Exception e)
+			{
+			}
+		}
+    }
+
     return response.toString();
   }
 
-  private boolean saveUrlAsFile(String url, File file) {
+  private boolean saveUrlAsFile(String url, File file)
+  {
     boolean result = false;
 
     GetMethod get = new GetMethod(url);
@@ -280,7 +303,8 @@ public class Pat2PdfCreator {
     FileOutputStream out = null;
     InputStream in = null;
 
-    try {
+    try
+    {
       client.executeMethod(get);
       if(get.getStatusCode() == HttpStatus.SC_OK)
       {
@@ -294,28 +318,52 @@ public class Pat2PdfCreator {
         out.flush();
         result = true;
       }
-    } catch (Exception e) {
+    }
+    catch (Exception e)
+    {
       log.error(e);
       result = false;
-    } finally {
-      if(in != null) {
-        try {
-          in.close();
-        } catch (IOException e) {
-          // TODO Auto-generated catch block
-          e.printStackTrace();
-        }
-      }
-      if(out != null) {
-        try {
-          out.close();
-        } catch (IOException e) {
-          // TODO Auto-generated catch block
-          e.printStackTrace();
-        }
-      }
-      get.releaseConnection();
     }
+    finally
+    {
+      if(in != null)
+      {
+        try
+        {
+          in.close();
+        }
+        catch (IOException e)
+        {
+          // TODO Auto-generated catch block
+          e.printStackTrace();
+        }
+      }
+
+      if(out != null)
+      {
+        try
+        {
+          out.close();
+        }
+        catch (IOException e)
+        {
+          // TODO Auto-generated catch block
+          e.printStackTrace();
+        }
+      }
+
+      if(get != null)
+      {
+		 	try
+		  	{
+      			get.releaseConnection();
+			}
+			catch(Exception e)
+			{
+			}
+  	  }
+    }
+
     return result;
   }
 
@@ -324,51 +372,78 @@ public class Pat2PdfCreator {
 
     if((tiffs != null) && tiffs.length > 0)
     {
-      RandomAccessFileOrArray tiffile;
+
+	  RandomAccessFileOrArray tiffile = null;
       Document document = null;
-      try {
-        // open first file to get image size and set document size
-        tiffile = new RandomAccessFileOrArray(tiffs[0]);
-        Image img = TiffImage.getTiffImage(tiffile, 1);
-        document = new Document(new Rectangle(img.getScaledWidth(), img.getScaledHeight()));
-        PdfWriter writer = PdfWriter.getInstance(document, baos);
-        document.open();
-        PdfContentByte cb = writer.getDirectContent();
+      PdfContentByte cb = null;
+      try
+      {
 
-        // add first image to document here to avoid opening it again later
-        try {
-          document.newPage();
-          img.setAbsolutePosition(0, 0);
-          cb.addImage(img);
-        }
-        finally {
-          tiffile.close();
+		  	try
+        	{
+        		// open first file to get image size and set document size
+        		tiffile = new RandomAccessFileOrArray(tiffs[0]);
+        		Image img = TiffImage.getTiffImage(tiffile, 1);
+        		document = new Document(new Rectangle(img.getScaledWidth(), img.getScaledHeight()));
+        		PdfWriter writer = PdfWriter.getInstance(document, baos);
+        		document.open();
+				cb = writer.getDirectContent();
+
+        		// add first image to document here to avoid opening it again later
+
+        		document.newPage();
+        		img.setAbsolutePosition(0, 0);
+        		cb.addImage(img);
+        	}
+        	finally
+        	{
+          		tiffile.close();
+        	}
+
+        	int count = tiffs.length;
+        	// start loop at second position in array
+        	for (int file_index = 1; file_index < count; file_index++)
+        	{
+        	  try
+        	  {
+        	    tiffile = new RandomAccessFileOrArray(tiffs[file_index]);
+        	    Image img = TiffImage.getTiffImage(tiffile, 1);
+        	    document.newPage();
+        	    img.setAbsolutePosition(0, 0);
+        	    cb.addImage(img);
+        	  }
+        	  finally
+        	  {
+				if(tiffile != null)
+				{
+					try
+					{
+        	    		tiffile.close();
+					}
+					catch(Exception e)
+					{
+					}
+				}
+          	}
         }
 
-        int count = tiffs.length;
-        // start loop at second position in array
-        for (int file_index = 1; file_index < count; file_index++) {
-          try {
-            tiffile = new RandomAccessFileOrArray(tiffs[file_index]);
-            img = TiffImage.getTiffImage(tiffile, 1);
-            document.newPage();
-            img.setAbsolutePosition(0, 0);
-            cb.addImage(img);
-          }
-          finally {
-            tiffile.close();
-          }
-        }
         result = true;
-      } catch (Exception e) {
+      }
+      catch (Exception e)
+      {
         throw e;
       }
-      finally {
-        if(document != null) {
-          document.close();
-        }
-        if(!result) {
-          baos.close(); //pdffile.delete();
+      finally
+      {
+        if(document != null)
+        {
+			try
+        	{
+          		document.close();
+			}
+			catch(Exception e)
+			{
+			}
         }
       }
     }

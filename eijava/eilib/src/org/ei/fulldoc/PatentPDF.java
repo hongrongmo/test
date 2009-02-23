@@ -99,59 +99,110 @@ public class PatentPDF extends HttpServlet
                         logUniventioCall(request, response);
                       }
                     }
-                    finally {
-                      try {
-                        if(responseStream != null) {
+                    finally
+                    {
+                      try
+                      {
+                        if(responseStream != null)
+                        {
                           responseStream.close();
                         }
                       }
-                      catch(IOException e) {
+                      catch(IOException e)
+                      {
                       }
-                      try {
-                        if(getmethodStream != null) {
+
+                      try
+                      {
+                        if(getmethodStream != null)
+                        {
                           getmethodStream.close();
                         }
                       }
-                      catch(IOException e) {
+                      catch(IOException e)
+                      {
                       }
-                      pdf_get.releaseConnection();
+
+                      try
+                      {
+                      	if(pdf_get != null)
+                      	{
+                      		pdf_get.releaseConnection();
+						}
+					  }
+					  catch(Exception e)
+					  {
+					  }
                     }
                   }
-
                 } // if("EP".equalsIgnoreCase(authCode))
-                else {
+                else
+                {
                   // US Patent
-                  Pat2PdfCreator pdfcreator = new Pat2PdfCreator();
-                  pdfcreator.init();
-                  ByteArrayOutputStream baos = new ByteArrayOutputStream();
-                  if(pdfcreator.createPatentPdf(patNum,baos))
-                  {
-                      response.setContentType("application/pdf");
-                      response.setHeader("Content-Disposition","inline; filename=PatUS"+patNum+".pdf");
-
-                      response.setContentLength(baos.size());
-
-                      ServletOutputStream out = response.getOutputStream();
-                      baos.writeTo(out);
-                      out.flush();
-                  }
-                  else {
-                      response.sendRedirect(redirect);
-                  }
+                	Pat2PdfCreator pdfcreator = new Pat2PdfCreator();
+                	pdfcreator.init();
+                	ByteArrayOutputStream baos = null;
+                	ServletOutputStream out = null;
+                  	try
+                  	{
+                  		baos = new ByteArrayOutputStream();
+                  		if(pdfcreator.createPatentPdf(patNum,baos))
+                  		{
+                  		    response.setContentType("application/pdf");
+                  		    response.setHeader("Content-Disposition","inline; filename=PatUS"+patNum+".pdf");
+                  		    response.setContentLength(baos.size());
+                  			try
+                  			{
+                  				out = response.getOutputStream();
+                  		    	baos.writeTo(out);
+                  		    	out.flush();
+							}
+							finally
+							{
+								if(out != null)
+								{
+									try
+									{
+										out.close();
+									}
+									catch(Exception e)
+									{
+									}
+								}
+							}
+                  		}
+                  		else
+                  		{
+                  		    response.sendRedirect(redirect);
+                  		}
+			  		}
+			  		finally
+			  		{
+						if(baos != null)
+						{
+							try
+							{
+								baos.close();
+							}
+							catch(Exception e1)
+							{
+							}
+						}
+					}
                 }
              }
         }
-        catch(IOException e)  {
+        catch(IOException e)
+        {
             e.printStackTrace();
-            if(redirect != null) {
+            if(redirect != null)
+            {
               response.sendRedirect(redirect);
             }
         }
-        catch(Exception e)  {
+        catch(Exception e)
+        {
             log("PatentPDF", e);
-        }
-        finally {
-
         }
     }
 
@@ -169,14 +220,33 @@ public class PatentPDF extends HttpServlet
               //System.out.print("#");
               bos.write(buff, 0, bytesRead);
           }
-      } catch(IOException e) {
+      }
+      catch(IOException e)
+      {
         throw e;
-      } finally {
-        if (bis != null) {
-          bis.close();
+      }
+      finally
+      {
+        if(bis != null)
+        {
+		  	try
+	  	  	{
+          		bis.close();
+	  		}
+	  		catch(Exception e)
+	  		{
+			}
         }
-        if (bos != null) {
-          bos.close();
+
+        if(bos != null)
+        {
+			try
+			{
+          		bos.close();
+			}
+			catch(Exception e)
+			{
+			}
         }
       }
     }
