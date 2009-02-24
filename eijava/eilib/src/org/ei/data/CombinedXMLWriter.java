@@ -50,10 +50,7 @@ public class CombinedXMLWriter
     private PrintWriter serialtitlePW = null;
     private PrintWriter publishernamePW = null;
     private PrintWriter patentcountryPW = null;
-    private String indexKey = null;
-    private static MemCached memcached = null;
-    private String memcacheServers;
-    private String memcacheWeights;
+    private String indexKey = null;      
     private NumberFormat formatter;
     private long starttime = 0;
     private String database;
