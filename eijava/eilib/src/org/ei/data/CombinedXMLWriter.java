@@ -11,7 +11,6 @@ import java.util.HashMap;
 import org.apache.oro.text.perl.Perl5Util;
 import org.ei.query.base.PorterStemmer;
 import org.ei.xml.Entity;
-import org.ei.controller.MemCached;
 import java.util.Date;
 import java.util.zip.*;
 import java.text.*;
@@ -122,34 +121,7 @@ public class CombinedXMLWriter
         formatter = new DecimalFormat("0000");
         this.recsPerbatch = recsPerbatch;
         this.lasteid = null;
-        this.environment = env;
-        if(this.environment.equals("prod"))
-        {
-        	memcacheServers = "206.137.75.51:29999";
-        }
-        else
-        {
-        	memcacheServers = "206.137.75.51:21201";
-        }
-        memcacheWeights = "1";
-        String[] s = null;
-		String[] w = null;
-		/*
-		if (memcached == null)
-		{
-			s = memcacheServers.split(",");
-			if (memcacheWeights !=  null) {
-				w = memcacheWeights.split(",");
-			}
-			memcached = new MemCached();
-			memcached.initialize(s, w);
-			if(memcached.getCounter(this.PARENT_ID) <= 0)
-			{
-				memcached.setID(this.PARENT_ID, 1);
-				System.out.println("WARNING: Reinitializing memcached counter to 1 for PARENTID in " + this.environment.toUpperCase() + " environment.");
-			}
-		}
-		*/
+        this.environment = env;        
 		if(numberID != 0)
 			init();
     }
@@ -166,27 +138,7 @@ public class CombinedXMLWriter
         this.batchID = 1;
         formatter = new DecimalFormat("0000");
         this.recsPerbatch = recsPerbatch;
-        this.lasteid = null;
-        memcacheServers = "206.137.75.51:21201";
-        memcacheWeights = "1";
-        String[] s = null;
-		String[] w = null;
-		/*
-		if (memcached == null)
-		{
-			s = memcacheServers.split(",");
-			if (memcacheWeights !=  null) {
-				w = memcacheWeights.split(",");
-			}
-			memcached = new MemCached();
-			memcached.initialize(s, w);
-			if(memcached.getCounter(this.PARENT_ID) <= 0)
-			{
-				memcached.setID(this.PARENT_ID, 1);
-				System.out.println("WARNING: Reinitializing memcached counter to 1 for PARENTID in " + this.environment.toUpperCase() + " environment.");
-			}
-		}
-		*/
+        this.lasteid = null;        
 		if(numberID != 0)
 			init();
     }
