@@ -57,10 +57,7 @@ public class GeoRefBoxMap
 
     BufferedReader rdr = null;
     try {
-      //rdr = new BufferedReader(new FileReader("/export/home/hestevez/GeoRefCoodinates.txt"));
-      InputStream in = this.getClass().getClassLoader().getResourceAsStream("org/ei/data/georef/runtime/GeoRefCoodinates.txt");
-      rdr = new BufferedReader(new InputStreamReader(in));
-      
+      rdr = new BufferedReader(new FileReader("GeoRefCoodinates.txt"));
       if(rdr != null)
       {
         while(rdr.ready())
