@@ -46,7 +46,7 @@ public interface Keys
     public static final Key UNIVERSITY = new Key("UNV", "University");
 
     public static final Key ABBRV_MON_MONOGRAPH_TITLE  = new Key("ME", "");
-    public static final Key ABBRV_SERIAL_TITLE = new Key("SE", "Abbreviated serial title");
+    public static final Key ABBRV_SERIAL_TITLE = new Key("SE", "Abbreviated source title");
     public static final Key ABSTRACT = new Key("AB", "Abstract");
     public static final Key ABSTRACT2 = new Key("AB2","Abstract");
     public static final Key ABSTRACT_TYPE = new Key("AT","Abstract type");
