@@ -25,9 +25,6 @@ public class XmlCombiner
     extends CombinerTimestamp
 {
 
-	public static final String AUDELIMITER    = new String(new char[] {30});
-    public static final String IDDELIMITER    = new String(new char[] {29});
-    public static final String GROUPDELIMITER   = new String(new char[] {02});
     public String[] EVCombinedRecKeys = {EVCombinedRec.AUTHOR, EVCombinedRec.AUTHOR_AFFILIATION, EVCombinedRec.AFFILIATION_LOCATION, EVCombinedRec.COUNTRY, EVCombinedRec.EDITOR, EVCombinedRec.TITLE, EVCombinedRec.TRANSLATED_TITLE, EVCombinedRec.VOLUME_TITLE, EVCombinedRec.ABSTRACT, EVCombinedRec.CONTROLLED_TERMS, EVCombinedRec.UNCONTROLLED_TERMS, EVCombinedRec.CHEMICALTERMS, EVCombinedRec.INT_PATENT_CLASSIFICATION, EVCombinedRec.ISSN, EVCombinedRec.CODEN, EVCombinedRec.ISBN, EVCombinedRec.SERIAL_TITLE, EVCombinedRec.MAIN_HEADING, EVCombinedRec.PUBLISHER_NAME, EVCombinedRec.TREATMENT_CODE, EVCombinedRec.LANGUAGE, EVCombinedRec.DOCTYPE, EVCombinedRec.CLASSIFICATION_CODE, EVCombinedRec.CONFERENCE_CODE, EVCombinedRec.CONFERENCE_NAME, EVCombinedRec.CONFERENCE_LOCATION, EVCombinedRec.MEETING_DATE, EVCombinedRec.SPONSOR_NAME, EVCombinedRec.CONFERENCEAFFILIATIONS, EVCombinedRec.CONFERENCEEDITORS, EVCombinedRec.CONFERENCEPARTNUMBER, EVCombinedRec.CONFERENCEPAGERANGE, EVCombinedRec.CONFERENCENUMBERPAGES, EVCombinedRec.MONOGRAPH_TITLE, EVCombinedRec.DATABASE, EVCombinedRec.LOAD_NUMBER, EVCombinedRec.PUB_YEAR, EVCombinedRec.DEDUPKEY, EVCombinedRec.VOLUME, EVCombinedRec.ISSUE, EVCombinedRec.STARTPAGE, EVCombinedRec.ACCESSION_NUMBER, EVCombinedRec.REPORTNUMBER, EVCombinedRec.DOI, EVCombinedRec.COPYRIGHT, EVCombinedRec.PII, EVCombinedRec.PUI, EVCombinedRec.COMPANIES, EVCombinedRec.CASREGISTRYNUMBER, EVCombinedRec.PUB_SORT};
 
     Perl5Util perl = new Perl5Util();
@@ -290,7 +287,7 @@ public class XmlCombiner
 				if (rs.getString("REGIONALTERM") != null)
 				{
 					 String regionalterm = rs.getString("REGIONALTERM");
-					 String[] geobasemaintermsrgi = regionalterm.split(AUDELIMITER);
+					 String[] geobasemaintermsrgi = regionalterm.split(BdParser.AUDELIMITER);
 				     rec.put(EVCombinedRec.CHEMICALTERMS, prepareMulti(regionalterm));
 					 List navigatorterms = null;
 				     if(isGeoBase)
@@ -554,9 +551,9 @@ public class XmlCombiner
                     rec.put(EVCombinedRec.COMPANIES, prepareMulti(rs.getString("ASSIG")));
                 }
 
-				if (rs.getString("CASREGISTRYNUMBER") != null)
-                {
-                    rec.put(EVCombinedRec.CASREGISTRYNUMBER, prepareMulti(rs.getString("CASREGISTRYNUMBER")));
+				if (rs.getString("CASREGISTRYNUMBER") != null)									
+                {									
+                    rec.put(EVCombinedRec.CASREGISTRYNUMBER, prepareCASRegistry(rs.getString("CASREGISTRYNUMBER")));
                 }
 
 				if (rs.getString("DATABASE").equals("cpx"))
@@ -766,6 +763,23 @@ public class XmlCombiner
     {
 		String[] multiStringArray = multiString.split(BdParser.AUDELIMITER,-1);
 		return multiStringArray;
+	}
+	
+	private String[] prepareCASRegistry(String multiString)
+    	throws Exception
+	{
+		ArrayList list = new ArrayList();
+		String[] multiStringArray = multiString.split(BdParser.IDDELIMITER,-1);
+								
+		for(int i = 0; i < multiStringArray.length; i++)
+		{
+			String[] multiStringArray2 = multiStringArray[i].split(BdParser.GROUPDELIMITER,-1);
+			for(int j = 0; j < multiStringArray2.length; j++)
+			{
+				list.add(multiStringArray2[j]);
+			}
+		}
+		return (String[]) list.toArray(new String[0]);	
 	}
 
 	private String[] prepareLanguage(String multiString)
