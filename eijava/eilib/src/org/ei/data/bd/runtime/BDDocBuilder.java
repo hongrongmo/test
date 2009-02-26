@@ -1,6 +1,8 @@
 package org.ei.data.bd.runtime;
 
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.sql.*;
 import java.io.*;
 
@@ -120,7 +122,7 @@ public class BDDocBuilder
 				formatRIS(buildField(Keys.PUBLICATION_YEAR,getYear(rset.getString("PUBLICATIONYEAR"),perl),ht), dataFormat,Keys.PUBLICATION_YEAR,Keys.RIS_PY);
 				buildField(Keys.COPYRIGHT,CPX_HTML_COPYRIGHT,ht);
 				formatRIS(buildField(Keys.COPYRIGHT_TEXT,CPX_TEXT_COPYRIGHT,ht), dataFormat, Keys.COPYRIGHT_TEXT, Keys.RIS_N1);
-				buildField(Keys.ISSUE_DATE,rset.getString("PUBLICATIONDATE"),ht);
+				buildField(Keys.ISSUE_DATE,reFormatDate(rset.getString("PUBLICATIONDATE")),ht);
 				formatRIS(buildField(Keys.MONOGRAPH_TITLE,rset.getString("ISSUETITLE"),ht), dataFormat, Keys.MONOGRAPH_TITLE, Keys.RIS_BT);
 				formatRIS(buildField(Keys.VOLUME,getVolume(rset.getString("VOLUME"),perl),ht), dataFormat, Keys.VOLUME, Keys.RIS_VL);
 				formatRIS(buildField(Keys.ISSUE,getIssue(rset.getString("ISSUE"),perl),ht), dataFormat, Keys.ISSUE, Keys.RIS_IS);
@@ -389,6 +391,28 @@ public class BDDocBuilder
 		return null;
 	}
 
+  private static final Pattern pubdateregex = Pattern.compile("(\\w+) (\\d{2}),(\\d{4})");
+
+  private String reFormatDate(String pubdate)
+  {
+    if(pubdate != null)
+    {
+      Matcher m = pubdateregex.matcher(pubdate);
+      if (m.find() && m.groupCount() == 3) {
+        String days = m.group(2);
+        // check for days which are formatted like July 01
+        if(days.startsWith("0")) {
+          // trim off the leading zero to change to July 1
+          days = days.substring(1);
+        }
+        pubdate = m.group(1).concat(" ").concat(days).concat(", ").concat(m.group(3));
+        System.out.println("reFormatted " + pubdate);
+      }
+    }
+    return pubdate;
+  }
+	
+	
 	private ElementData getVolume(String volume,Perl5Util perl)
 	{
 		if(volume != null)
