@@ -13,6 +13,7 @@ public class BdDatabase
         bddatasources.add("cpx");
         bddatasources.add("geo");
         bddatasources.add("pch");
+        bddatasources.add("chm");
         //bddatasources.add("elt");
     }
 
