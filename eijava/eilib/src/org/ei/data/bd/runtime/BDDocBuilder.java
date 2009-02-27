@@ -159,10 +159,9 @@ public class BDDocBuilder
 				formatRIS(buildField(Keys.PUBLISHER,getPublisher(rset.getString("PUBLISHERNAME"),rset.getString("PUBLISHERADDRESS"), dataFormat),ht),dataFormat, Keys.PUBLISHER, Keys.RIS_PB);
 				formatRIS(buildField(Keys.LANGUAGE,getLanguage(rset.getString("CITATIONLANGUAGE")),ht),dataFormat, Keys.LANGUAGE, Keys.RIS_LA);
 				formatRIS(buildField(Keys.AUTHORS,getAuthors(Keys.AUTHORS,rset.getString("AUTHOR"),rset.getString("AUTHOR_1"), dataFormat),ht), dataFormat, Keys.AUTHORS, Keys.RIS_AUS);
-                if(!rset.getString("DATABASE").equalsIgnoreCase("pch"))
-				{
-				    formatRIS(buildField(Keys.AUTHOR_AFFS,getAuthorsAffiliation(Keys.AUTHOR_AFFS,rset.getString("AFFILIATION"),rset.getString("AFFILIATION_1"), dataFormat),ht),dataFormat, Keys.AUTHOR_AFFS, Keys.RIS_AD);
-                }
+
+				formatRIS(buildField(Keys.AUTHOR_AFFS,getAuthorsAffiliation(Keys.AUTHOR_AFFS,rset.getString("AFFILIATION"),rset.getString("AFFILIATION_1"), dataFormat),ht),dataFormat, Keys.AUTHOR_AFFS, Keys.RIS_AD);
+
 				buildField(Keys.PROVIDER,PROVIDER_TEXT,ht);
 
 				formatRIS(buildField(Keys.EDITORS,getEditors(Keys.EDITORS,rset.getString("AUTHOR"),rset.getString("EDITORS"), rset.getString("CONFERENCEEDITOR")),ht), dataFormat, Keys.EDITORS, Keys.RIS_EDS);
@@ -411,8 +410,8 @@ public class BDDocBuilder
     }
     return pubdate;
   }
-	
-	
+
+
 	private ElementData getVolume(String volume,Perl5Util perl)
 	{
 		if(volume != null)
@@ -501,10 +500,10 @@ public class BDDocBuilder
 	}
 
 	private String getPublisher(String name,
-	        					String address, 
+	        					String address,
 	        					String dataFormat) throws Exception
 	{
-	    
+
 		String outputString = null;
 		StringBuffer addressBuffer = new StringBuffer();
 		if(address != null)
@@ -525,7 +524,7 @@ public class BDDocBuilder
 				address.replaceAll(BdParser.AUDELIMITER,", ");
 			}
 		}
-		
+
 		if(dataFormat.equalsIgnoreCase("RIS") && name != null)
 		{
 		    return name;
