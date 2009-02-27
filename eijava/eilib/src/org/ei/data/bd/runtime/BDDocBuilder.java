@@ -718,7 +718,7 @@ public class BDDocBuilder
 		}
 		else if(eissn !=null)
 		{
-			return new ISSN(eissn);
+			return new ISSN(Keys.E_ISSN, eissn);
 		}
 		return null;
 	}
