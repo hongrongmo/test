@@ -11,11 +11,18 @@ public class ISBN
 	protected Key key;
 	protected boolean labels = true;
 
-	public ISBN(String isbn)
-	{
-		this.key = Keys.ISBN;
-		this.isbn = isbn;
-	}
+  public ISBN(String isbn)
+  {
+    this.isbn = isbn;
+    if((this.isbn != null) && (this.withoutDash().length() == 13))
+    {
+      this.key = Keys.ISBN13;
+    }
+    else
+    {
+      this.key = Keys.ISBN;
+    }
+  }
 
 	public ISBN(Key key, String isbn)
 	{
