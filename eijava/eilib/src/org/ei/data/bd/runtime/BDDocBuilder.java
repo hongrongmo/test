@@ -156,7 +156,7 @@ public class BDDocBuilder
 														 perl),ht);
 				buildField(Keys.PAGE_ARTICLE_NUMBER,rset.getString("ARTICLENUMBER"),ht);
 
-				formatRIS(buildField(Keys.PUBLISHER,getPublisher(rset.getString("PUBLISHERNAME"),rset.getString("PUBLISHERADDRESS")),ht),dataFormat, Keys.PUBLISHER, Keys.RIS_PB);
+				formatRIS(buildField(Keys.PUBLISHER,getPublisher(rset.getString("PUBLISHERNAME"),rset.getString("PUBLISHERADDRESS"), dataFormat),ht),dataFormat, Keys.PUBLISHER, Keys.RIS_PB);
 				formatRIS(buildField(Keys.LANGUAGE,getLanguage(rset.getString("CITATIONLANGUAGE")),ht),dataFormat, Keys.LANGUAGE, Keys.RIS_LA);
 				formatRIS(buildField(Keys.AUTHORS,getAuthors(Keys.AUTHORS,rset.getString("AUTHOR"),rset.getString("AUTHOR_1"), dataFormat),ht), dataFormat, Keys.AUTHORS, Keys.RIS_AUS);
                 if(!rset.getString("DATABASE").equalsIgnoreCase("pch"))
@@ -500,8 +500,11 @@ public class BDDocBuilder
 
 	}
 
-	private String getPublisher(String name,String address) throws Exception
+	private String getPublisher(String name,
+	        					String address, 
+	        					String dataFormat) throws Exception
 	{
+	    
 		String outputString = null;
 		StringBuffer addressBuffer = new StringBuffer();
 		if(address != null)
@@ -521,6 +524,11 @@ public class BDDocBuilder
 			{
 				address.replaceAll(BdParser.AUDELIMITER,", ");
 			}
+		}
+		
+		if(dataFormat.equalsIgnoreCase("RIS") && name != null)
+		{
+		    return name;
 		}
 
 		if(name != null && name.length()>0 && address != null && address.length()>0)
