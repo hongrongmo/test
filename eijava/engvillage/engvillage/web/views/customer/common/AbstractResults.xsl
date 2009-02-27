@@ -44,7 +44,7 @@
           <b>Source: </b>
         </xsl:otherwise>
       </xsl:choose>
-      
+
       <xsl:apply-templates select="PF"/>
       <xsl:apply-templates select="RSP"/>
       <xsl:apply-templates select="RN_LABEL"/>
@@ -133,10 +133,7 @@
       <xsl:apply-templates select="MD"/>
       <xsl:apply-templates select="ML"/>
       <xsl:apply-templates select="SP"/>
-      
 
-      <xsl:apply-templates select="AFS"/>
-      
       <xsl:apply-templates select="CLOC"/>
 
       <xsl:apply-templates select="I_PN"/>
@@ -150,6 +147,10 @@
       <xsl:apply-templates select="AV"/>
       <xsl:apply-templates select="SC"/>
       </span>
+      <!-- put in a line break following the citation section of the abstract -->
+      <br/>
+
+      <xsl:apply-templates select="AFS"/>
 
       <xsl:apply-templates select="AB"/>
       <xsl:apply-templates select="BAB"/>
@@ -394,7 +395,7 @@
     <xsl:template match="TI">
       <a CLASS="MedBlackText"><b><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/></b></a><br/>
     </xsl:template>
-    
+
     <xsl:template match="TT">
             <a class="MedBlackText"><b> (<xsl:value-of select="." disable-output-escaping="yes"/>) </b>
 	</a><br/>
@@ -610,7 +611,7 @@
       <b><xsl:value-of select="@label"/>:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text> </xsl:text>
     </xsl:template>
     <xsl:template match="BN13">
-      <b><xsl:value-of select="@label"/>:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
+      <b><xsl:value-of select="@label"/>:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text> </xsl:text>
     </xsl:template>
 
     <xsl:template match="CF">
@@ -658,11 +659,11 @@
     </xsl:template>
     <xsl:template match="AB|BAB">
       <xsl:text>&#xD;&#xA;</xsl:text>
-      <span CLASS="MedBlackText"><a CLASS="MedBlackText"><br/><b><xsl:value-of select="@label"/>: </b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/></a></span>
+      <br/><span class="MedBlackText"><b><xsl:value-of select="@label"/>: </b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/></span>
     </xsl:template>
     <xsl:template match="AB2">
       <xsl:text>&#xD;&#xA;</xsl:text>
-      <span CLASS="MedBlackText"><a CLASS="MedBlackText"><br/><br/><b>Abstract: </b><xsl:text> </xsl:text><xsl:value-of select="ibfab:getHTML(hlight:addMarkupCheckTagging(.))" disable-output-escaping="yes"/></a></span>
+      <br/><br/><span class="MedBlackText"><b>Abstract: </b><xsl:text> </xsl:text><xsl:value-of select="ibfab:getHTML(hlight:addMarkupCheckTagging(.))" disable-output-escaping="yes"/></span>
     </xsl:template>
 
     <!-- START OF IMAGES from INSPEC BACKFILE -->
@@ -740,7 +741,7 @@
     </xsl:template>
 
     <xsl:template match="DBNAME">
-      <br/><a CLASS="SmBlackText"><b>Database:</b><xsl:text> </xsl:text><xsl:value-of select="."/></a>
+      <br/><span class="MedBlackText"><b>Database:</b><xsl:text> </xsl:text><xsl:value-of select="."/></span>
     </xsl:template>
 
     <xsl:template match="STT">
@@ -752,36 +753,35 @@
       <xsl:text> </xsl:text><xsl:text>(</xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/><xsl:text>)</xsl:text>
     </xsl:template>
 
-    <xsl:template match="AFS">   
-  		<span CLASS="MedBlackText">
-  		<br/><br/>
-  		<A CLASS="MedBlackText"><b>Author affiliation: </b><xsl:text> </xsl:text></A><br/>
-  		</span>    
-  		<table>
-      		<xsl:apply-templates/>
-    	</table>
+    <xsl:template match="AFS">
+      <br/>
+      <span class="SmBlackText"><b>Author affiliation:</b></span><xsl:text> </xsl:text><br/>
+      <table border="0" cellspacing="0" cellpadding="1">
+        <xsl:apply-templates/>
+      </table>
     </xsl:template>
- 
-	
 
     <xsl:template match="AF|EF">
-    <tr><td valign="top">
-        <xsl:if test="(@id)">
-        	<xsl:if test="not(@id='0')">
-				<A CLASS="SmBlackText"><Sup><xsl:value-of select="@id"/></Sup><xsl:text> </xsl:text></A>
-			</xsl:if>
-      	</xsl:if>
-   	</td><td>
-    	<span CLASS="SmBlackText"><xsl:value-of select="hlight:addMarkup(normalize-space(text()))" disable-output-escaping="yes"/></span>
-        <xsl:if test="not(position()=last())"><A CLASS="SmBlackText"><br/></A><xsl:text> </xsl:text></xsl:if>
-    </td></tr>
+      <tr>
+        <td valign="top">
+          <xsl:if test="(@id)">
+            <xsl:if test="not(@id='0')">
+              <span class="SmBlackText"><sup><xsl:value-of select="@id"/></sup></span>
+            </xsl:if>
+          </xsl:if>
+          <xsl:text> </xsl:text>
+        </td>
+        <td>
+          <span class="SmBlackText"><xsl:value-of select="hlight:addMarkup(normalize-space(text()))" disable-output-escaping="yes"/></span>
+        </td>
+      </tr>
     </xsl:template>
-    
+
     <xsl:template match="AU|ED|IV">
       <xsl:variable name="NAME"><xsl:value-of select="normalize-space(text())"/></xsl:variable>
 
       <!-- If the name does not contain the text Anon -->
-      
+
       <xsl:if test="not(position()=1)"><A CLASS="SmBlackText">;</A><xsl:text> </xsl:text></xsl:if>
       <xsl:if test="boolean(not(contains($NAME,'Anon')))">
         <xsl:call-template name="LINK">
@@ -796,20 +796,19 @@
       </xsl:if>
       <!-- If the name contains Anon text -->
       <xsl:if test="boolean(contains($NAME,'Anon'))"><A CLASS="SmBlackText"><xsl:value-of select="$NAME"/></A></xsl:if>
+      <xsl:if test="./AFS">
+        <xsl:if test="not(@id='0')">
+          <span class="SmBlackText"><sup><xsl:apply-templates select="./AFS/AFID"/></sup></span>
+        </xsl:if>
+      </xsl:if>
+
       <xsl:if test="position()=last()">
         <xsl:if test="name(.)='ED' and not(position()=1)">
           <a CLASS="SmBlackText"><xsl:text> eds.</xsl:text></a>
         </xsl:if>
         <xsl:text> </xsl:text>
       </xsl:if>
-            
-    <xsl:if test="./AFS">
-    	<xsl:if test="not(@id='0')">
-      		<A CLASS="SmBlackText"><Sup><xsl:apply-templates select="./AFS/AFID"/></Sup>       
-      		<xsl:text> </xsl:text></A>       
-    	</xsl:if>
-    </xsl:if>
-    
+
     </xsl:template>
 
 	<xsl:template match="AFID">
