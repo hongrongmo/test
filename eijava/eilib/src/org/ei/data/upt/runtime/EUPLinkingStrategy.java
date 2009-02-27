@@ -6,6 +6,9 @@ import org.ei.domain.ElementDataMap;
 import org.ei.domain.ElementData;
 import org.ei.fulldoc.LinkInfo;
 import org.ei.fulldoc.LinkingStrategy;
+import org.ei.fulldoc.PatentPDF;
+import org.ei.security.utils.SecureID;
+
 import java.net.URLEncoder;
 
 public class EUPLinkingStrategy implements LinkingStrategy
@@ -41,6 +44,7 @@ public class EUPLinkingStrategy implements LinkingStrategy
 
             StringBuffer buf = new StringBuffer();
             buf.append("/controller/servlet/Patent.pdf?").append("ac=").append(authcd).append("&pn=").append(pnum).append("&kc=").append(pkind).append("&type=PDF").append("&rurl=").append(URLEncoder.encode(redirect.toString(),"UTF-8"));
+            buf.append("&secureID=").append(SecureID.getSecureID(PatentPDF.PATENT_LINK_EXPIRES));
             linkInfo.url = buf.toString();
         }
 
