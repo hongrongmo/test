@@ -116,6 +116,7 @@
         </xsl:if>
       </xsl:if>
 
+      <xsl:text> </xsl:text>
       <xsl:apply-templates select="SN"/>
       <xsl:apply-templates select="E_ISSN"/>
       <xsl:apply-templates select="CN"/>
@@ -592,7 +593,7 @@
     </xsl:template>
 
     <xsl:template match="E_ISSN">
-      <b>Electronic ISSN:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text> </xsl:text>
+      <b>E-ISSN:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text> </xsl:text>
     </xsl:template>
 
     <!-- CBNB Document type, Availability and Scope -->
