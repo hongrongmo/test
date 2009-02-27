@@ -22,13 +22,14 @@ import org.apache.commons.httpclient.MultiThreadedHttpConnectionManager;
 import org.apache.commons.httpclient.methods.GetMethod;
 import org.ei.logging.LogClient;
 import org.ei.util.GUID;
+import org.ei.security.utils.SecureID;
 
 public class PatentPDF extends HttpServlet
 {
     private String logServiceURL;
     private HttpClient client;
     private static final String PAT2PDF_USER_AGENT = "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; MS-RTC LM 8)";
-
+    public static final long PATENT_LINK_EXPIRES = 600000;
 
     public void init()
         throws ServletException
@@ -50,6 +51,14 @@ public class PatentPDF extends HttpServlet
     {
         String redirect = null;
         try {
+
+            String secureID = request.getParameter("secureID");
+            if((secureID == null) || (secureID.equals("")) || (!SecureID.validSecureID(secureID)))
+            {
+                log("Invalid securID - Access forbidden.");
+                response.sendError(HttpServletResponse.SC_FORBIDDEN);
+                return;
+            }
 
             String patNum = request.getParameter("pn");
             String authCode = request.getParameter("ac");
