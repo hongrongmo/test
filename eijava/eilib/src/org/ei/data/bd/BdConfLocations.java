@@ -2,7 +2,9 @@
 package org.ei.data.bd;
 
 import java.util.*;
+
 import org.ei.data.CountryFormatter;
+import org.ei.data.bd.BdAffiliations.AffIDComp;
 import org.ei.data.bd.loadtime.*;
 
 
@@ -32,6 +34,13 @@ public class BdConfLocations
     {
         this.affs = new BdAffiliations(bdCAffiliations,caffElements);
     }
+    
+   
+	public List getAffiliations()
+	{
+		return this.affs.getAffiliations();
+	}
+
 
     public String getDisplayValue()
 	{
