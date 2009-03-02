@@ -567,6 +567,9 @@ public class BDDocBuilder
 				}
 			}
 		}
+
+    title = cleanBadCharacters(title);
+
 		return title;
 	}
 
@@ -898,23 +901,24 @@ public class BDDocBuilder
 
 		if(auString.length()> 0)
 		{
-		    List authorNames = new ArrayList();
+      List authorNames = new ArrayList();
 			BdAuthors authors = new BdAuthors(auString.toString());
 			List authorList = authors.getAuthors();
 			for(int i= 0;i<authorList.size();i++)
 			{
 
 				BdAuthor author = (BdAuthor)authorList.get(i);
+        String auDisplayName = cleanBadCharacters(author.getDisplayName());
 				if(dataFormat.equalsIgnoreCase(RIS.RIS_FORMAT) ||
 						dataFormat.equalsIgnoreCase(Citation.XMLCITATION_FORMAT))
 				{
 					authorNames.add(new Contributor(key,
-									author.getDisplayName()));
+									auDisplayName));
 				}
 				else
 				{
 					authorNames.add(new Contributor(key,
-									author.getDisplayName(),
+									auDisplayName,
 									author.getAffIdList()));
 				}
 			}
@@ -934,7 +938,8 @@ public class BDDocBuilder
 			for(int i= 0;i<editorList.size();i++)
 			{
 				BdAuthor author = (BdAuthor)editorList.get(i);
-				editorNames.add(new Contributor(key,author.getDisplayName()));
+        String auDisplayName = cleanBadCharacters(author.getDisplayName());
+				editorNames.add(new Contributor(key,auDisplayName));
 			}
 			return new Contributors(Keys.EDITORS, editorNames);
 		}
@@ -946,7 +951,8 @@ public class BDDocBuilder
 			for(int i= 0;i<editorList.size();i++)
 			{
 				BdAuthor author = (BdAuthor)editorList.get(i);
-				editorNames.add(new Contributor(key,author.getDisplayName()));
+        String auDisplayName = cleanBadCharacters(author.getDisplayName());
+				editorNames.add(new Contributor(key,auDisplayName));
 			}
 			return new Contributors(key, editorNames);
 
@@ -966,7 +972,8 @@ public class BDDocBuilder
 		for(int i= 0;i<editorList.size();i++)
 		{
 			BdAuthor author = (BdAuthor)editorList.get(i);
-			Contributor persons = new Contributor(key,author.getDisplayName());
+      String auDisplayName = cleanBadCharacters(author.getDisplayName());
+			Contributor persons = new Contributor(key,auDisplayName);
 
 			if(emailString!= null)
 			{
@@ -1017,31 +1024,29 @@ public class BDDocBuilder
 	        List aList = aff.getAffiliations();
 	        for(int i=0;i<aList.size();i++)
 	        {
-	            BdAffiliation bdaff = (BdAffiliation)aList.get(i);
+              BdAffiliation bdaff = (BdAffiliation)aList.get(i);
+              String strAffDisplay = cleanBadCharacters(bdaff.getDisplayValue());
 
-	            if(i == 0 && dataFormat.equalsIgnoreCase(RIS.RIS_FORMAT))
-	            {
-	            	affList.add(new Affiliation(key,
-	            			bdaff.getDisplayValue()));
-	            	return (new Affiliations(Keys.RIS_AD,affList));
-				}
-	            else if(dataFormat.equalsIgnoreCase(Citation.XMLCITATION_FORMAT)
-	            		&& i==0)
-	            {
-	            	affList.add(new Affiliation(key,bdaff.getDisplayValue()));
-	            	return (new Affiliations(Keys.AUTHOR_AFFS,affList));
-	            }
-				else
-				{
-	            	affList.add(new Affiliation(key,
-	                    bdaff.getDisplayValue(),
-	                    bdaff.getIdDislpayValue()));
-
-				}
-
+              if(i == 0 && dataFormat.equalsIgnoreCase(RIS.RIS_FORMAT))
+              {
+                affList.add(new Affiliation(key,
+                    strAffDisplay));
+                return (new Affiliations(Keys.RIS_AD,affList));
+              }
+              else if(dataFormat.equalsIgnoreCase(Citation.XMLCITATION_FORMAT)
+                  && i==0)
+              {
+                affList.add(new Affiliation(key,strAffDisplay));
+                return (new Affiliations(Keys.AUTHOR_AFFS,affList));
+              }
+              else
+              {
+                affList.add(new Affiliation(key,
+                      strAffDisplay,
+                      bdaff.getIdDislpayValue()));
+              }
 	        }
 	        return (new Affiliations(Keys.AUTHOR_AFFS,affList));
-
 	    }
 	    return null;
     }
