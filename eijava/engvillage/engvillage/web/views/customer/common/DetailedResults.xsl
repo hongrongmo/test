@@ -137,8 +137,8 @@
         <xsl:call-template name="SPACER"/>
         </xsl:when>
         <xsl:otherwise>
-
-        <tr>
+	<xsl:if test="CAU">
+		<tr>
 		    <td valign="top" ><img src="/engresources/images/s.gif" border="0"/></td>
 		    <td xsl:use-attribute-sets="r-align-label">
 			<span CLASS="MedBlackText"><b>Corresponding author:</b> </span>
@@ -148,7 +148,8 @@
 			<span CLASS="MedBlackText"><xsl:apply-templates /></span>
 		    </td>
 		</tr>
-        <xsl:call-template name="SPACER"/>
+		<xsl:call-template name="SPACER"/>
+        </xsl:if>
         </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
