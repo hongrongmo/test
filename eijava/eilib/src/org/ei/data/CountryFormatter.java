@@ -700,8 +700,8 @@ public class CountryFormatter
         htCountry.put("china", "china");
         htCountry.put("fr", "france");
         htCountry.put("west ger", "germany");
-        
-        
+
+
         htCountry.put("ad", "andorra");
         htCountry.put("ae", "united arab emirates");
         htCountry.put("af", "afghanistan");
@@ -953,9 +953,9 @@ public class CountryFormatter
         htCountry.put("zm", "zambia");
         htCountry.put("zr", "zaire");
         htCountry.put("zw", "zimbabwe");
-        
+
         // three letters country code from new ani512.dtd
-        
+
         htCountry.put("afg","afghanistan");
         htCountry.put("alb","albania");
         htCountry.put("dza","algeria");
@@ -1246,8 +1246,38 @@ public class CountryFormatter
 		return coformatted;
     }
 
+    public static String formatCase(String country)
+    {
+		if(country != null)
+		{
+			StringBuffer buf = new StringBuffer();
+			String[] words = country.split(" ");
 
+			for(int i=0; i<words.length;i++)
+			{
+				String word = words[i];
+				if(i>0)
+				{
+					buf.append(" ");
+				}
 
+				if(!word.equals("the") && !word.equals("and") && !word.equals("of"))
+				{
+					String firstChar = word.substring(0,1);
+					buf.append(firstChar.toUpperCase());
+					buf.append(word.substring(1));
+				}
+				else
+				{
+					buf.append(word);
+				}
+			}
+
+			return buf.toString();
+		}
+
+		return null;
+	}
 
     public static void main(String[] args)
     {
