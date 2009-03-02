@@ -863,7 +863,9 @@ public class BDDocBuilder
           String strReplace = (String) badCharacterMap.get(strMatch);
           if(strReplace == null)
           {
-            strReplace = StringUtil.EMPTY_STRING;
+            // if there is no map, just replace with the intial character
+            // i.e. a,S,Z without the trailing entity so it will at least look cleaner
+            strReplace = m.group(1);
           }
           System.out.println("Matched: " + strMatch + " replace with " + strReplace);
           // The appendReplacement method appends everything up to the next match and the replacement for that match.
