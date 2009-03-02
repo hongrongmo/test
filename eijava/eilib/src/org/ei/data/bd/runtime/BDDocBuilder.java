@@ -818,6 +818,65 @@ public class BDDocBuilder
 		return null;
 	}
 
+
+  private static Map badCharacterMap = new HashMap();
+  static {
+    badCharacterMap.put("a&die;","&#228;");
+    badCharacterMap.put("e&die;","&#235;");
+    badCharacterMap.put("i&die;","&#239;");
+    badCharacterMap.put("o&die;","&#246;");
+    badCharacterMap.put("u&die;","&#252;");
+
+    badCharacterMap.put("a&acute;","&#225;");
+    badCharacterMap.put("e&acute;","&#233;");
+    badCharacterMap.put("i&acute;","&#237;");
+    badCharacterMap.put("o&acute;","&#243;");
+    badCharacterMap.put("u&acute;","&#250;");
+
+    badCharacterMap.put("a&grave;","&#224;");
+    badCharacterMap.put("e&grave;","&#232;");
+    badCharacterMap.put("i&grave;","&#236;");
+    badCharacterMap.put("o&grave;","&#242;");
+    badCharacterMap.put("u&grave;","&#249;");
+
+
+    badCharacterMap.put("a&circ;","&#226;");
+
+  }
+
+  /* see http://java.sun.com/developer/technicalArticles/releases/1.4regex/
+    for a full explanation of Simple Word Replacement
+  */
+  private static final Pattern accentregex = Pattern.compile("(\\w)&(\\w+);");
+
+  private String cleanBadCharacters(String strValue) {
+
+    if(strValue != null)
+    {
+        Matcher m = accentregex.matcher(strValue);
+        StringBuffer sb = new StringBuffer();
+        boolean result = m.find();
+
+        while(result)
+        {
+          String strMatch = m.group();
+          String strReplace = (String) badCharacterMap.get(strMatch);
+          if(strReplace == null)
+          {
+            strReplace = StringUtil.EMPTY_STRING;
+          }
+          System.out.println("Matched: " + strMatch + " replace with " + strReplace);
+          // The appendReplacement method appends everything up to the next match and the replacement for that match.
+          m.appendReplacement(sb, strReplace);
+          result = m.find();
+        }
+        // The appendTail appends the strings at the end, after the last match.
+        m.appendTail(sb);
+        strValue = sb.toString();
+    }
+    return strValue;
+  }
+
 	private Contributors getAuthors(Key key,
 		        					String authorString,
 		        					String authorString1, String dataFormat)
