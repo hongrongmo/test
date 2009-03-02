@@ -499,11 +499,30 @@ public class BDDocBuilder
 
 	}
 
+	private String getFirstPublisher(String pubName)
+	{
+		if(pubName != null)
+		{
+			int i = pubName.indexOf(BdParser.AUDELIMITER);
+			if(i>-1)
+			{
+				return pubName.substring(0, i);
+			}
+			else
+			{
+				return pubName;
+			}
+		}
+
+		return null;
+	}
+
 	private String getPublisher(String name,
 								String address,
 								String dataFormat) throws Exception
 	{
 		String outputString = null;
+		name = getFirstPublisher(name);
 		StringBuffer addressBuffer = new StringBuffer();
 		if(dataFormat.equals(FullDoc.FULLDOC_FORMAT) && address != null)
 		{
