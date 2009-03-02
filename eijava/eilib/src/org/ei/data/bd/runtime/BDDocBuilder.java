@@ -510,7 +510,7 @@ public class BDDocBuilder
 		{
 			if(address.indexOf(BdParser.IDDELIMITER)>-1)
 			{
-				BdAffiliations aff = new BdAffiliations(address);
+				BdConfLocations aff = new BdConfLocations(address);
 				List aList = aff.getAffiliations();
 				for(int i=0;i<aList.size();i++)
 				{
@@ -1140,6 +1140,7 @@ public class BDDocBuilder
             else if (str.equals("RR")){str = "Report review (RR)";}
             else if (str.equals("DS")){str = "Dissertation (DS)";}
             else if (str.equals("UP")){str = "Unpublished paper (UP)";}
+            else if (str.equals("PA")){str = "PA";}
         }
         return str;
     }
