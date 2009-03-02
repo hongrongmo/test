@@ -107,7 +107,7 @@ public class XmlCombiner
         }
         else if(loadNumber == 0)
         {
-        	for(int yearIndex = 1952; yearIndex <= 2009; yearIndex++)
+        	for(int yearIndex = 1968; yearIndex <= 2007; yearIndex++)
             {
         	  System.out.println("Processing year " + yearIndex + "...");
               c = new XmlCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,dbname, "dev"));
@@ -853,7 +853,8 @@ public class XmlCombiner
 	private String preparePublisherName(String pn) throws Exception
 	{
 		String[] pnames = pn.split(BdParser.IDDELIMITER);
-		return pnames[0];
+		String[] pnames2 = pnames[0].split(BdParser.AUDELIMITER);
+		return pnames2[0];
 	}
     private String getFirstNumber(String v)
     {
