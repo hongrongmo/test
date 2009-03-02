@@ -150,27 +150,10 @@ public class BdAffiliation
 			{
 				searchValue.append(", ");
 			}
-		 	searchValue.append(authoCo(CountryFormatter.formatCountry(this.affCountry)));
+		 	searchValue.append(CountryFormatter.formatCase(CountryFormatter.formatCountry(this.affCountry)));
 		 }
 
 	    return searchValue.toString();
-    }
-     
-     
-    public String authoCo(String confLocation)
-    {
-    	StringBuffer result = new StringBuffer();
-		if(confLocation != null)
-		{				
-			String cf = confLocation.trim();
-			result.append(cf.substring(0,1).toUpperCase());
-			if(cf.length() > 0)
-			{
-				result.append(cf.substring(1));	
-			}								
-			return result.toString();
-		}
-		return null;
     }
 
     public String getCountriesSearchValue()
