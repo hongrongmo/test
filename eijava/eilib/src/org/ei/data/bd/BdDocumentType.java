@@ -39,6 +39,7 @@ public class BdDocumentType
 		bdDocType.put("sh","JA");
     	bdDocType.put("wp","JA");
     	bdDocType.put("ja","JA");
+    	bdDocType.put("pa","PA");
 	}
 
     public static String getDocType(String doctype,
