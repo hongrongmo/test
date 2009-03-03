@@ -156,7 +156,7 @@ public class BDDocBuilder
 														 perl),ht);
 				buildField(Keys.PAGE_ARTICLE_NUMBER,rset.getString("ARTICLENUMBER"),ht);
 
-				formatRIS(buildField(Keys.PUBLISHER,getPublisher(rset.getString("PUBLISHERNAME"),rset.getString("PUBLISHERADDRESS"), dataFormat),ht),dataFormat, Keys.PUBLISHER, Keys.RIS_PB);
+				formatRIS(buildField(Keys.PUBLISHER,getPublisher(rset.getString("PUBLISHERNAME"),rset.getString("PUBLISHERADDRESS"), dataFormat, ht),ht),dataFormat, Keys.PUBLISHER, Keys.RIS_PB);
 				formatRIS(buildField(Keys.LANGUAGE,getLanguage(rset.getString("CITATIONLANGUAGE")),ht),dataFormat, Keys.LANGUAGE, Keys.RIS_LA);
 				formatRIS(buildField(Keys.AUTHORS,getAuthors(Keys.AUTHORS,rset.getString("AUTHOR"),rset.getString("AUTHOR_1"), dataFormat),ht), dataFormat, Keys.AUTHORS, Keys.RIS_AUS);
 
@@ -519,7 +519,8 @@ public class BDDocBuilder
 
 	private String getPublisher(String name,
 								String address,
-								String dataFormat) throws Exception
+								String dataFormat,
+								ElementDataMap ht) throws Exception
 	{
 		String outputString = null;
 		name = getFirstPublisher(name);
@@ -556,6 +557,31 @@ public class BDDocBuilder
 			}
 
 			return outputString;
+		}
+		else if(dataFormat.equals("RIS"))
+		{
+			if(address != null)
+			{
+				if(address.indexOf(BdParser.IDDELIMITER)>-1)
+				{
+					BdConfLocations aff = new BdConfLocations(address);
+					List aList = aff.getAffiliations();
+					for(int i=0;i<aList.size();i++)
+					{
+						BdAffiliation bdaff = (BdAffiliation)aList.get(i);
+						addressBuffer.append(bdaff.getDisplayValue());
+					}
+					address = addressBuffer.toString();
+				}
+				else if(address.indexOf(BdParser.AUDELIMITER)>-1)
+				{
+					address.replaceAll(BdParser.AUDELIMITER,", ");
+				}
+
+				ht.put(Keys.RIS_CY, new XMLWrapper(Keys.RIS_CY,address));
+			}
+
+			return name;
 		}
 		else
 		{
