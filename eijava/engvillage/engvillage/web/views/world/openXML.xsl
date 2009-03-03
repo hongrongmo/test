@@ -159,7 +159,9 @@
 			</AFFILIATION>
 		</xsl:for-each>
 
-		<TITLE><xsl:value-of select="EI-DOCUMENT/TI"/></TITLE>
+		<TITLE>
+			<xsl:value-of select="EI-DOCUMENT/TI"/> <xsl:if test="EI-DOCUMENT/TT">(<xsl:value-of select="EI-DOCUMENT/TT"/>)</xsl:if>
+		</TITLE>
 		<xsl:choose>
 			<xsl:when test="EI-DOCUMENT/DO">
 				<RELATION>
@@ -231,14 +233,14 @@
 			</xsl:otherwise>
 		</xsl:choose>
 		 <xsl:choose>
-		    	<xsl:when test="EI-DOCUMENT/YR">
-		    		<DATE><xsl:value-of select="EI-DOCUMENT/YR"/></DATE>
-		    	</xsl:when>
+		    	<xsl:when test="(EI-DOCUMENT/SD)">
+				<DATE><xsl:value-of select="EI-DOCUMENT/SD"/></DATE>
+			</xsl:when>
 		    	<xsl:otherwise>
 		    	     <xsl:choose>
-				<xsl:when test="(EI-DOCUMENT/SD)">
-					<DATE><xsl:value-of select="EI-DOCUMENT/SD"/></DATE>
-				</xsl:when>
+		    	     	<xsl:when test="EI-DOCUMENT/YR">
+			     		<DATE><xsl:value-of select="EI-DOCUMENT/YR"/></DATE>
+		    		</xsl:when>
 				<xsl:otherwise>
 					<xsl:if test="(EI-DOCUMENT/PD-YR)">
 						<DATE><xsl:value-of select="EI-DOCUMENT/PD-YR"/></DATE>
