@@ -53,7 +53,7 @@ public class BdCoden
     public static String convert(String fiveDigitCoden) throws Exception
     {
 		String returnVal = null;
-		if(fiveDigitCoden != null && fiveDigitCoden.length() < 7)
+		if(fiveDigitCoden != null && fiveDigitCoden.length() > 5)
 		{
 			return fiveDigitCoden;
 		}
