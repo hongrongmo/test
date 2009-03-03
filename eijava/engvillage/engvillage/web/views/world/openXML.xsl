@@ -205,9 +205,18 @@
 		<xsl:if test="EI-DOCUMENT/SN">
 			<ISSN><xsl:value-of select="EI-DOCUMENT/SN"/></ISSN>
 		</xsl:if>
-		<xsl:if test="EI-DOCUMENT/BN">
-			<ISBN><xsl:value-of select="EI-DOCUMENT/BN"/></ISBN>
-		</xsl:if>
+
+		<xsl:choose>
+			<xsl:when test="EI-DOCUMENT/BN13">
+				<ISBN><xsl:value-of select="EI-DOCUMENT/BN13"/></ISBN>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:if test="EI-DOCUMENT/BN">
+					<ISBN><xsl:value-of select="EI-DOCUMENT/BN"/></ISBN>
+				</xsl:if>
+			</xsl:otherwise>		
+		</xsl:choose>
+		
 		<xsl:apply-templates select="EI-DOCUMENT/PN|EI-DOCUMENT/I_PN"/>
 		<xsl:choose>
 			<xsl:when test="EI-DOCUMENT/LA">
