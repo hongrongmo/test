@@ -149,7 +149,6 @@ public class BDDocBuilder
 				formatRIS(buildField(Keys.ISBN13,getIsbn(rset.getString("ISBN"),13),ht), dataFormat, Keys.ISBN, Keys.RIS_BN);
 				buildField(Keys.PAGE_COUNT,getPageCount(rset.getString("PAGECOUNT")),ht);
 				buildField(Keys.PAGE_RANGE,getPageRange(rset.getString("PAGE"),
-														 rset.getString("PAGECOUNT"),
 														 rset.getString("ARTICLENUMBER"),
 														 rset.getString("ISSN"),
 														 rset.getString("EISSN"),
@@ -687,7 +686,7 @@ public class BDDocBuilder
 		return strPage.trim();
 	}
 
-	private PageRange  getPageRange(String page,String pageCount,String articleNumber,String issn,String eissn,Perl5Util perl) throws Exception
+	private PageRange  getPageRange(String page,String articleNumber,String issn,String eissn,Perl5Util perl) throws Exception
 	{
 		String strPage=null;
 
@@ -715,10 +714,6 @@ public class BDDocBuilder
 				}
 			}
 
-		}
-		else if(pageCount != null)
-		{
-			strPage = getPageCount(pageCount);
 		}
 		else if(articleNumber != null) // Records with AR field Fix
 		{
