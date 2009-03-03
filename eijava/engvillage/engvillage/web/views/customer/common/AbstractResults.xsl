@@ -23,7 +23,6 @@
       <xsl:apply-templates select="BTI"/>
       <xsl:apply-templates select="BPP"/>
       <xsl:apply-templates select="TI"/>
-      <xsl:apply-templates select="TT"/>
       <xsl:if test="$ascii='true'">
           <xsl:text>&#xD;&#xA;</xsl:text>
       </xsl:if>
@@ -147,9 +146,9 @@
       <xsl:apply-templates select="DT"/>
       <xsl:apply-templates select="AV"/>
       <xsl:apply-templates select="SC"/>
-      </span>
-      <!-- put in a line break following the citation section of the abstract -->
+      <!-- put in a small font sized line break following the citation section of the abstract -->
       <br/>
+      </span>
 
       <xsl:apply-templates select="AFS"/>
 
@@ -394,12 +393,11 @@
     </xsl:template>
 
     <xsl:template match="TI">
-      <a CLASS="MedBlackText"><b><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/></b></a><br/>
-    </xsl:template>
-
-    <xsl:template match="TT">
-            <a class="MedBlackText"><b> (<xsl:value-of select="." disable-output-escaping="yes"/>) </b>
-	</a><br/>
+      <a class="MedBlackText"><b><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/></b></a>
+      <xsl:if test="../TT">
+        <a class="MedBlackText"><xsl:text> </xsl:text><b>(<xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>)</b></a>
+      </xsl:if>
+      <br/>
     </xsl:template>
 
     <xsl:template match="AUS|EDS|IVS">
@@ -450,7 +448,7 @@
     <!-- publisher will ONLY show if there is no other leading information
         so this will follow 'Source' label - no comma needed                -->
     <xsl:template match="PN">
-      <br/><b><xsl:text> Publisher: </xsl:text></b><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
+      <xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
     </xsl:template>
 
 
@@ -660,7 +658,7 @@
     </xsl:template>
     <xsl:template match="AB|BAB">
       <xsl:text>&#xD;&#xA;</xsl:text>
-      <br/><span class="MedBlackText"><b><xsl:value-of select="@label"/>: </b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/></span>
+      <span class="SmBlackText"><br/></span><span class="MedBlackText"><b><xsl:value-of select="@label"/>: </b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/></span>
     </xsl:template>
     <xsl:template match="AB2">
       <xsl:text>&#xD;&#xA;</xsl:text>
@@ -755,8 +753,7 @@
     </xsl:template>
 
     <xsl:template match="AFS">
-      <br/>
-      <span class="SmBlackText"><b>Author affiliation:</b></span><xsl:text> </xsl:text><br/>
+      <span class="SmBlackText"><br/><b>Author affiliation:</b></span><xsl:text> </xsl:text><br/>
       <table border="0" cellspacing="0" cellpadding="1">
         <xsl:apply-templates/>
       </table>
