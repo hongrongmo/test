@@ -864,33 +864,77 @@ public class BDDocBuilder
 
   private static Map badCharacterMap = new HashMap();
   static {
+    // &die is the same as an &uml
     badCharacterMap.put("a&die;","&#228;");
     badCharacterMap.put("e&die;","&#235;");
     badCharacterMap.put("i&die;","&#239;");
     badCharacterMap.put("o&die;","&#246;");
     badCharacterMap.put("u&die;","&#252;");
 
-    badCharacterMap.put("a&acute;","&#225;");
-    badCharacterMap.put("e&acute;","&#233;");
-    badCharacterMap.put("i&acute;","&#237;");
-    badCharacterMap.put("o&acute;","&#243;");
-    badCharacterMap.put("u&acute;","&#250;");
-
+    badCharacterMap.put("A&grave;","&#192;");
+    badCharacterMap.put("A&acute;","&#193;");
+    badCharacterMap.put("A&circ;","&#194;");
+    badCharacterMap.put("A&tilde;","&#195;");
+    badCharacterMap.put("A&uml;","&#196;");
+    badCharacterMap.put("A&ring;","&#197;");
+    badCharacterMap.put("C&cedil;","&#199;");
+    badCharacterMap.put("E&grave;","&#200;");
+    badCharacterMap.put("E&acute;","&#201;");
+    badCharacterMap.put("E&circ;","&#202;");
+    badCharacterMap.put("E&uml;","&#203;");
+    badCharacterMap.put("I&grave;","&#204;");
+    badCharacterMap.put("I&acute;","&#205;");
+    badCharacterMap.put("I&circ;","&#206;");
+    badCharacterMap.put("I&uml;","&#207;");
+    badCharacterMap.put("N&tilde;","&#209;");
+    badCharacterMap.put("O&grave;","&#210;");
+    badCharacterMap.put("O&acute;","&#211;");
+    badCharacterMap.put("O&circ;","&#212;");
+    badCharacterMap.put("O&tilde;","&#213;");
+    badCharacterMap.put("O&uml;","&#214;");
+    badCharacterMap.put("O&slash;","&#216;");
+    badCharacterMap.put("S&caron;","&#352;");
+    badCharacterMap.put("U&grave;","&#217;");
+    badCharacterMap.put("U&acute;","&#218;");
+    badCharacterMap.put("U&circ;","&#219;");
+    badCharacterMap.put("U&uml;","&#220;");
+    badCharacterMap.put("Y&acute;","&#221;");
+    badCharacterMap.put("Y&uml;","&#376;");
     badCharacterMap.put("a&grave;","&#224;");
-    badCharacterMap.put("e&grave;","&#232;");
-    badCharacterMap.put("i&grave;","&#236;");
-    badCharacterMap.put("o&grave;","&#242;");
-    badCharacterMap.put("u&grave;","&#249;");
-
-
+    badCharacterMap.put("a&acute;","&#225;");
     badCharacterMap.put("a&circ;","&#226;");
-
+    badCharacterMap.put("a&tilde;","&#227;");
+    badCharacterMap.put("a&uml;","&#228;");
+    badCharacterMap.put("a&ring;","&#229;");
+    badCharacterMap.put("c&cedil;","&#231;");
+    badCharacterMap.put("e&grave;","&#232;");
+    badCharacterMap.put("e&acute;","&#233;");
+    badCharacterMap.put("e&circ;","&#234;");
+    badCharacterMap.put("e&uml;","&#235;");
+    badCharacterMap.put("i&grave;","&#236;");
+    badCharacterMap.put("i&acute;","&#237;");
+    badCharacterMap.put("i&circ;","&#238;");
+    badCharacterMap.put("i&uml;","&#239;");
+    badCharacterMap.put("n&tilde;","&#241;");
+    badCharacterMap.put("o&grave;","&#242;");
+    badCharacterMap.put("o&acute;","&#243;");
+    badCharacterMap.put("o&circ;","&#244;");
+    badCharacterMap.put("o&tilde;","&#245;");
+    badCharacterMap.put("o&uml;","&#246;");
+    badCharacterMap.put("o&slash;","&#248;");
+    badCharacterMap.put("s&caron;","&#353;");
+    badCharacterMap.put("u&grave;","&#249;");
+    badCharacterMap.put("u&acute;","&#250;");
+    badCharacterMap.put("u&circ;","&#251;");
+    badCharacterMap.put("u&uml;","&#252;");
+    badCharacterMap.put("y&acute;","&#253;");
+    badCharacterMap.put("y&uml;","&#255;");
   }
 
   /* see http://java.sun.com/developer/technicalArticles/releases/1.4regex/
     for a full explanation of Simple Word Replacement
   */
-  private static final Pattern accentregex = Pattern.compile("(\\w)&(\\w+);");
+  private static final Pattern accentregex = Pattern.compile("(\\w)(&\\w+;)");
 
   private String cleanBadCharacters(String strValue) {
 
@@ -909,6 +953,10 @@ public class BDDocBuilder
             // if there is no map, just replace with the intial character
             // i.e. a,S,Z without the trailing entity so it will at least look cleaner
             strReplace = m.group(1);
+            // do not strip off trailing &, < or > !  i.e. A&amp; will just remain A&amp;
+            if(m.group(2).equals("&amp;") || m.group(2).equals("&gt;") || m.group(2).equals("&lt;")) {
+              strReplace = m.group();
+            }
           }
           System.out.println("Matched: " + strMatch + " replace with " + strReplace);
           // The appendReplacement method appends everything up to the next match and the replacement for that match.
