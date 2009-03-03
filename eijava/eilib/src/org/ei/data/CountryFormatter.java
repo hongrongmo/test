@@ -964,7 +964,7 @@ public class CountryFormatter
         htCountry.put("ago","angola");
         htCountry.put("aia","anguilla");
         htCountry.put("ata","antarctica");
-        htCountry.put("atg","antigua & barbuda");
+        htCountry.put("atg","antigua");
         htCountry.put("arg","argentina");
         htCountry.put("arm","armenia");
         htCountry.put("abw","aruba");
@@ -986,8 +986,8 @@ public class CountryFormatter
         htCountry.put("bwa","botswana");
         htCountry.put("bvt","bouvet island");
         htCountry.put("bra","brazil");
-        htCountry.put("iot","british indian ocean territory.");
-        htCountry.put("brn","brunei darussalam");
+        htCountry.put("iot","british indian ocean territory");
+        htCountry.put("brn","brunei");
         htCountry.put("bgr","bulgaria");
         htCountry.put("bfa","burkina faso");
         htCountry.put("bdi","burundi");
@@ -1001,13 +1001,13 @@ public class CountryFormatter
         htCountry.put("chl","chile");
         htCountry.put("chn","china");
         htCountry.put("cxr","christmas island");
-        htCountry.put("cck","cocos (keeling) islands.");
+        htCountry.put("cck","cocos (keeling) islands");
         htCountry.put("col","colombia");
         htCountry.put("com","comoros");
         htCountry.put("cog","congo");
         htCountry.put("cok","cook islands");
         htCountry.put("cri","costa rica");
-        htCountry.put("civ","cote d'ivoire");
+        htCountry.put("civ","ivory coast");
         htCountry.put("hrv","croatia");
         htCountry.put("cub","cuba");
         htCountry.put("cyp","cyprus");
@@ -1024,9 +1024,9 @@ public class CountryFormatter
         htCountry.put("eri","eritrea");
         htCountry.put("est","estonia");
         htCountry.put("eth","ethiopia");
-        htCountry.put("flk","falkland islands (malvinas)");
+        htCountry.put("flk","falkland islands");
         htCountry.put("fro","faroe islands");
-        htCountry.put("fsm","federated states of micronesia");
+        htCountry.put("fsm","micronesia");
         htCountry.put("fji","fiji");
         htCountry.put("fin","finland");
         htCountry.put("fra","france");
@@ -1049,7 +1049,7 @@ public class CountryFormatter
         htCountry.put("gnb","guinea-bissau");
         htCountry.put("guy","guyana");
         htCountry.put("hti","haiti");
-        htCountry.put("hmd","heard island and mcdonald islands");
+        htCountry.put("hmd","heard & mcDonald islands");
         htCountry.put("hnd","honduras");
         htCountry.put("hkg","hong kong");
         htCountry.put("hun","hungary");
@@ -1058,7 +1058,7 @@ public class CountryFormatter
         htCountry.put("idn","indonesia");
         htCountry.put("irn","iran");
         htCountry.put("irq","iraq");
-        htCountry.put("irl","irelan");
+        htCountry.put("irl","ireland");
         htCountry.put("isr","israel");
         htCountry.put("ita","italy");
         htCountry.put("jam","jamaica");
@@ -1074,11 +1074,11 @@ public class CountryFormatter
         htCountry.put("lbn","lebanon");
         htCountry.put("lso","lesotho");
         htCountry.put("lbr","liberia");
-        htCountry.put("lby","libyan arab jamahiriya.");
+        htCountry.put("lby","libya");
         htCountry.put("lie","liechtenstein");
         htCountry.put("ltu","lithuania");
         htCountry.put("lux","luxembourg");
-        htCountry.put("mac","macao");
+        htCountry.put("mac","china");
         htCountry.put("mkd","macedonia");
         htCountry.put("mdg","madagascar");
         htCountry.put("mwi","malawi");
@@ -1104,7 +1104,7 @@ public class CountryFormatter
         htCountry.put("nru","nauru");
         htCountry.put("npl","nepal");
         htCountry.put("nld","netherlands");
-        htCountry.put("ant","netherlands antilles");
+        htCountry.put("ant","netherlands");
         htCountry.put("ncl","new caledonia");
         htCountry.put("nzl","new zealand");
         htCountry.put("nic","nicaragua");
@@ -1112,7 +1112,7 @@ public class CountryFormatter
         htCountry.put("nga","nigeria");
         htCountry.put("niu","niue");
         htCountry.put("nfk","norfolk island");
-        htCountry.put("prk","north korea");
+        htCountry.put("prk","Korea, People's Democratic Rep");
         htCountry.put("mnp","northern mariana islands");
         htCountry.put("nor","norway");
         htCountry.put("omn","oman");
@@ -1130,15 +1130,15 @@ public class CountryFormatter
         htCountry.put("pri","puerto rico");
         htCountry.put("qat","qatar");
         htCountry.put("reu","reunion");
-        htCountry.put("twn","republic of china (roc)");
+        htCountry.put("twn","taiwan");
         htCountry.put("rou","romania");
-        htCountry.put("rus","russian federation");
+        htCountry.put("rus","russia");
         htCountry.put("rwa","rwanda");
-        htCountry.put("shn","saint helena");
-        htCountry.put("kna","saint kitts and nevis");
+        htCountry.put("shn","st. helena");
+        htCountry.put("kna","st. kitts and nevis");
         htCountry.put("lca","saint lucia");
-        htCountry.put("spm","saint pierre and miquelon");
-        htCountry.put("vct","saint vincent and the grenadines");
+        htCountry.put("spm","st. pierre & miquelon");
+        htCountry.put("vct","saint vicent & the grenadines");
         htCountry.put("wsm","samoa");
         htCountry.put("smr","san marino");
         htCountry.put("stp","sao tome and principe");
@@ -1154,19 +1154,19 @@ public class CountryFormatter
         htCountry.put("som","somalia");
         htCountry.put("zaf","south africa");
         htCountry.put("sgs","south georgia and the south sandwich islands");
-        htCountry.put("kor","south korea");
+        htCountry.put("kor","Korea, Republic of");
         htCountry.put("esp","spain");
         htCountry.put("lka","sri lanka");
         htCountry.put("sdn","sudan");
         htCountry.put("sur","suriname");
-        htCountry.put("sjm","svalbard and jan mayen");
+        htCountry.put("sjm","svalbard and jan mayen islands");
         htCountry.put("swz","swaziland");
         htCountry.put("swe","sweden");
         htCountry.put("che","switzerland");
-        htCountry.put("syr","syrian arab republic");
-        htCountry.put("twn","taiwan (republic of china)");
+        htCountry.put("syr","syria");
+        htCountry.put("twn","taiwan");
         htCountry.put("tjk","tajikistan");
-        htCountry.put("tza","tanzania");
+        htCountry.put("tza","tanzania, united republic of");
         htCountry.put("tha","thailand");
         htCountry.put("tls","timor-leste");
         htCountry.put("tgo","togo");
@@ -1183,15 +1183,15 @@ public class CountryFormatter
         htCountry.put("are","united arab emirates");
         htCountry.put("gbr","united kingdom");
         htCountry.put("usa","united states");
-        htCountry.put("umi","united states minor outlying islands");
+        htCountry.put("umi","united states");
         htCountry.put("ury","uruguay");
         htCountry.put("uzb","uzbekistan");
         htCountry.put("vut","vanuatu");
         htCountry.put("ven","venezuela");
         htCountry.put("vnm","viet nam");
-        htCountry.put("vgb","virgin islands (british)");
-        htCountry.put("vir","virgin islands (u.s.)");
-        htCountry.put("wlf","wallis and futuna");
+        htCountry.put("vgb","british virgin islands");
+        htCountry.put("vir","united states virgin islands");
+        htCountry.put("wlf","wallis and futuna islands");
         htCountry.put("esh","western sahara");
         htCountry.put("yem","yemen");
         htCountry.put("zmb","zambia");
@@ -1246,38 +1246,8 @@ public class CountryFormatter
 		return coformatted;
     }
 
-    public static String formatCase(String country)
-    {
-		if(country != null)
-		{
-			StringBuffer buf = new StringBuffer();
-			String[] words = country.split(" ");
 
-			for(int i=0; i<words.length;i++)
-			{
-				String word = words[i];
-				if(i>0)
-				{
-					buf.append(" ");
-				}
 
-				if(!word.equals("the") && !word.equals("and") && !word.equals("of"))
-				{
-					String firstChar = word.substring(0,1);
-					buf.append(firstChar.toUpperCase());
-					buf.append(word.substring(1));
-				}
-				else
-				{
-					buf.append(word);
-				}
-			}
-
-			return buf.toString();
-		}
-
-		return null;
-	}
 
     public static void main(String[] args)
     {
