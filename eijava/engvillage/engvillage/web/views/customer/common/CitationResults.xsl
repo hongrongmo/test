@@ -25,8 +25,7 @@
       </xsl:if>
 
       <xsl:apply-templates select="TI"/>
-      
-      <xsl:apply-templates select="TT"/>
+
       <xsl:if test="$ascii='true'">
         <xsl:text>&#xD;&#xA;</xsl:text>
       </xsl:if>
@@ -124,14 +123,13 @@
 
     <xsl:template match="TI">
         <a class="MedBlackText"><b><xsl:value-of select="." disable-output-escaping="yes"/></b>
+        <xsl:if test="../TT">
+          <a class="MedBlackText"><xsl:text> </xsl:text><b>(<xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>)</b></a>
+        </xsl:if>
         <xsl:if test="string(../DOC/TAGDATE)"> (Tag applied on <xsl:value-of select="../DOC/TAGDATE"/>)</xsl:if>
-	</a><br/>
+        </a><br/>
     </xsl:template>
 
-    <xsl:template match="TT">
-        <a class="MedBlackText"><b> (<xsl:value-of select="." disable-output-escaping="yes"/>) </b></a><br/>
-    </xsl:template>
-    
     <xsl:template match="BTI">
       <xsl:if test="(../BPP)='0'">
         <img border="0" width="56" height="72" style="float:left; margin-right:5px;">
