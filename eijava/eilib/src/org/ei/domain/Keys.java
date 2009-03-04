@@ -95,9 +95,10 @@ public interface Keys
     public static final Key COUNTRY = new Key("CO","Country");
     public static final Key MULTIPLE_COUNTRY = new Key("COS","Country");
     public static final Key COUNTRY_OF_PUB = new Key("CPUB", "Country of publication");
-		public static final Key COUNTRY_CODES = new Key("DGS", "Geographical indexing");
-		public static final Key CHEMICALS = new Key("CMS", "Chemicals");
-		public static final Key CHEMICAL_ACRONS = new Key("CES", "Chemical Acronyms");
+	public static final Key COUNTRY_CODES = new Key("DGS", "Geographical indexing");
+	public static final Key CHEMICALS = new Key("CMS", "Chemicals");
+	public static final Key CHEMICAL_ACRONS = new Key("CES", "Chemical Acronyms");
+	public static final Key CHEMICAL_TERMS = new Key ("CHS", "Chemical Terms");
     public static final Key DERWENT_NO = new Key("DERW", "DERWENT accession no.");
     public static final Key DESIGNATED_STATES = new Key("DSM", "Designated states");
     public static final Key DISCIPLINE = new Key("DISP");
