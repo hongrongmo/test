@@ -57,7 +57,7 @@
       <xsl:apply-templates select="RSP"/>
       <xsl:apply-templates select="RN_LABEL"/>
 
-      <xsl:apply-templates select="PN"/>
+<!--      <xsl:apply-templates select="PN"/> -->
       <xsl:apply-templates select="RN"/>
       <xsl:apply-templates select="VO"/>
 
