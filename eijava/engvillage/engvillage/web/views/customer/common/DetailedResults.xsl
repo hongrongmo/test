@@ -32,7 +32,7 @@
     <!-- sit on this -->
     <xsl:template match="NO_SO"/>
 
-    <!-- These are fixes for GeoREF - Fields that are mutli-value which are not multi value in other databases-->
+    <!-- These are fixes for GeoREF - Fields that are mutli-value which are not multi value in other databases -->
     <!-- we need to create special templates for them so they display correctly-->
     <xsl:template match="CA"> <!-- Category Field -->
       <span CLASS="MedBlackText">
@@ -46,7 +46,7 @@
         <xsl:if test="not(position()=last())">; </xsl:if>
       </span>
     </xsl:template>
-    <xsl:template match="L|A|D|R|GUR"> <!-- Language Field / Availability / Document type / Report Number / GeoRef URLs-->
+    <xsl:template match="L|A|D|R|GUR"> <!-- Language Field / Availability / Document type / Report Number / GeoRef URLs -->
       <span CLASS="MedBlackText">
         <xsl:apply-templates />
         <xsl:if test="not(position()=last())">, </xsl:if>
@@ -86,12 +86,12 @@
 
     <xsl:template match="LOC[@ID]">
       <a>
-      <!-- <xsl:attribute name="href">javascript:toggleMarker('<xsl:value-of select="@ID"/>');</xsl:attribute>-->
+      <!-- <xsl:attribute name="href">javascript:toggleMarker('<xsl:value-of select="@ID"/>');</xsl:attribute> -->
       <xsl:value-of select="@ID"/> - <xsl:value-of disable-output-escaping="yes" select="."/></a><br/>
     </xsl:template>
     <xsl:template match="LOC">
       <a>
-      <!-- <xsl:attribute name="href">javascript:toggleMarker('<xsl:value-of select="@ID"/>');</xsl:attribute>-->
+      <!-- <xsl:attribute name="href">javascript:toggleMarker('<xsl:value-of select="@ID"/>');</xsl:attribute> -->
       <xsl:value-of disable-output-escaping="yes" select="."/></a><br/>
     </xsl:template>
 
@@ -157,7 +157,7 @@
     <xsl:template match="CAU">
     	<xsl:if test="string(text())">
    		  <xsl:value-of select="normalize-space(text())" disable-output-escaping="yes"/>
-   	  </xsl:if> 
+   	  </xsl:if>
 
    	  <xsl:if test="EMAIL">
    	  (<A CLASS="SpLink">
@@ -235,7 +235,7 @@
           <xsl:when test="name()='PA'"> </xsl:when>
           <xsl:when test="name(..)='ORGC'">-</xsl:when>
           <xsl:otherwise>
-            <a class="SmBlackText">&#160; - &#160;</a>
+            <xsl:call-template name="DASH_SPACER"/>
           </xsl:otherwise>
         </xsl:choose>
       </xsl:variable>
@@ -251,7 +251,7 @@
       <span CLASS="SmBlackText">
       <xsl:value-of select="hlight:addMarkup(crlkup:getName(normalize-space(text())))" disable-output-escaping="yes"/></span>
       <xsl:if test="not(position()=last())">
-        <A CLASS="SmBlackText">&#160; - &#160;</A>
+        <xsl:call-template name="DASH_SPACER"/>
       </xsl:if>
     </xsl:template>
 
@@ -266,7 +266,7 @@
           <xsl:when test="name()='PA'"> </xsl:when>
           <xsl:when test="name(..)='ORGC'">-</xsl:when>
           <xsl:otherwise>
-                <a class="SmBlackText">&#160; - &#160;</a>
+                <xsl:call-template name="DASH_SPACER"/>
           </xsl:otherwise>
         </xsl:choose>
       </xsl:variable>
@@ -329,7 +329,7 @@
       -->
 
         <xsl:if test="not(position()=last())">
-            <a class="SmBlackText">&#160; - &#160;</a>
+            <xsl:call-template name="DASH_SPACER"/>
         </xsl:if>
         <xsl:if test="position()=last()">
             <xsl:text> </xsl:text>
@@ -359,27 +359,27 @@
                 <xsl:text>) </xsl:text>
             </xsl:if>
         </xsl:if>
-        
+
         <xsl:if test="not(./AFS)">
         <xsl:if test="(@id)">
         <xsl:if test="not(@id='0')">
-       		<A CLASS="MedBlackText"><Sup><xsl:value-of select="@id"/></Sup><xsl:text> </xsl:text></A>       
+       		<A CLASS="MedBlackText"><Sup><xsl:value-of select="@id"/></Sup><xsl:text> </xsl:text></A>
         </xsl:if>
         </xsl:if>
         </xsl:if>
-    
-    <xsl:if test="./AFS">      
+
+    <xsl:if test="./AFS">
       <xsl:if test="not(./AFS/AFID='0')">
       <A CLASS="SmBlackText">
       	<Sup>
       		<xsl:apply-templates select="./AFS/AFID"/>
-      	</Sup> 
+      	</Sup>
       	<xsl:text> </xsl:text></A>
-      </xsl:if>      
-             
+      </xsl:if>
+
     </xsl:if>
 
-    
+
     <!--    <xsl:if test="not(name()='IV')">    -->
             <xsl:if test="not(position()=last())"><A CLASS="SmBlackText">;</A><xsl:text> </xsl:text></xsl:if>
     <!--
@@ -389,16 +389,16 @@
 
         <xsl:if test="position()=last()"><xsl:text> </xsl:text></xsl:if>
     </xsl:template>
-   
+
 
 	<xsl:template match="AFID">
 		<xsl:value-of select="."/>
 		<xsl:if test="not(position()=last())">,<xsl:text> </xsl:text></xsl:if>
 	</xsl:template>
-	
-	
-	
-	
+
+
+
+
 
     <xsl:template match="PAS">
         <xsl:variable name="NAME"><xsl:value-of select="normalize-space(text())"/></xsl:variable>
@@ -434,7 +434,7 @@
 
       <xsl:apply-templates />
       <xsl:if test="not(position()=last())">
-        <a class="SmBlackText">&#160; - &#160;</a>
+        <xsl:call-template name="DASH_SPACER"/>
       </xsl:if>
     </xsl:template>
 
@@ -469,17 +469,17 @@
             <td valign="top">
             <xsl:if test="(@id)">
             <xsl:if test="not(@id='0')">
-        		<A CLASS="MedBlackText">        		
+        		<A CLASS="MedBlackText">
         		<Sup><xsl:value-of select="@id"/></Sup><xsl:text> </xsl:text></A>
       		</xsl:if>
       		</xsl:if>
-      		</td>      		
+      		</td>
       		<td>
         	<span CLASS="MedBlackText"><xsl:value-of select="hlight:addMarkup(normalize-space(text()))" disable-output-escaping="yes"/></span>
          <!--   <span CLASS="MedBlackText"><xsl:value-of select="normalize-space(text())"/></span> -->
-            <xsl:if test="not(position()=last())"><A CLASS="SmBlackText"><br/></A><xsl:text> </xsl:text></xsl:if>            
+            <xsl:if test="not(position()=last())"><A CLASS="SmBlackText"><br/></A><xsl:text> </xsl:text></xsl:if>
             </td>
-            </tr>            
+            </tr>
             </table>
     </xsl:template>
 
@@ -538,7 +538,7 @@
     <xsl:template match="ORGC">
       <xsl:apply-templates />
       <xsl:if test="not(position()=last())">
-        <a class="SmBlackText">&#160; - &#160;</a>
+        <xsl:call-template name="DASH_SPACER"/>
       </xsl:if>
     </xsl:template>
 
@@ -824,7 +824,7 @@
          <!--   <img src="/engresources/images/plus.gif" border="0"/>  -->
             <xsl:text> </xsl:text>
           <xsl:if test="position()!=last()">
-             <a class="SmBlkText">&#160; - &#160;</a>
+             <xsl:call-template name="DASH_SPACER"/>
           </xsl:if>
 
         <!--
@@ -849,8 +849,8 @@
         -->
            <xsl:text> </xsl:text>
            <xsl:if test="position()!=last()">
-           <a class="SmBlkText">&#160; - &#160;</a>
-          	</xsl:if>
+           <xsl:call-template name="DASH_SPACER"/>
+           </xsl:if>
 
         <!--
         <td valign="top">
@@ -874,7 +874,7 @@
            <xsl:text> </xsl:text><span CLASS="MedBlackText">
            <xsl:value-of select="crlkup:getName(normalize-space(text()))" disable-output-escaping="yes"/></span>
            <xsl:if test="position()!=last()">
-           <a class="SmBlkText">&#160; - &#160;</a>
+           <xsl:call-template name="DASH_SPACER"/>
            </xsl:if>
 
   </xsl:template>
@@ -899,7 +899,7 @@
     <xsl:template match="DS">
         <a CLASS="MedBlackText"><xsl:text> </xsl:text><xsl:value-of select="normalize-space(text())"/></a>
         <xsl:if test="not(position()=last())">
-        <a class="SmBlackText">&#160; - &#160;</a>
+        <xsl:call-template name="DASH_SPACER"/>
       </xsl:if>
       <xsl:if test="position()=last()"><xsl:text> </xsl:text></xsl:if>
     </xsl:template>
@@ -907,6 +907,7 @@
 
 
   <!-- START OF UTILITIES named template(s), attribute-set(s) -->
+    <xsl:template name="DASH_SPACER"><a class="SmBlackText">&#160; - &#160;</a></xsl:template>
 
   <!-- NAMED TEMPLATE, aka method -->
     <xsl:template name="SPACER">
