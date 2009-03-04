@@ -191,7 +191,6 @@ public class BDDocBuilder
 					buildField(Keys.CONF_CODE,rset.getString("CONFCODE"),ht);
 					buildField(Keys.NUMBER_OF_REFERENCES,rset.getString("REFCOUNT"),ht);
 					formatRIS(buildField(Keys.MAIN_HEADING,rset.getString("MAINHEADING"),ht), dataFormat,Keys.MAIN_HEADING, Keys.RIS_KW);
-					formatRIS(buildField(Keys.UNCONTROLLED_TERMS,setElementData(rset.getString("UNCONTROLLEDTERM")),ht), dataFormat,Keys.UNCONTROLLED_TERMS,Keys.RIS_FLS);
 					buildField(Keys.TREATMENTS,getTreatments(rset.getString("TREATMENTCODE"),database),ht);
 					formatRIS(buildField(Keys.ABSTRACT,getAbstract(rset),ht),dataFormat,Keys.ABSTRACT,Keys.RIS_N2);
 					buildField(Keys.SPONSOR,setSponsorData(rset.getString("CONFSPONSORS")),ht);
@@ -207,6 +206,7 @@ public class BDDocBuilder
 					if (database.getMask()!=128)
 					{
 						buildField(Keys.CLASS_CODES,getClassification(Keys.CLASS_CODES,rset.getString("CLASSIFICATIONCODE"),database),ht);
+						formatRIS(buildField(Keys.UNCONTROLLED_TERMS,setElementData(rset.getString("UNCONTROLLEDTERM")),ht), dataFormat,Keys.UNCONTROLLED_TERMS,Keys.RIS_FLS);
 					}
 					buildField(Keys.ABSTRACT_TYPE,getAbstractType(rset.getString("ABSTRACTORIGINAL")),ht);
 					buildField(Keys.MEDIA,rset.getString("MEDIA"),ht);
