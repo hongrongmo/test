@@ -76,7 +76,7 @@ All the business rules which govern the display format are also provided.
   </xsl:template>
 
   <xsl:template name="COMMA_SPACER" priority="1">
-    <xsl:text>> , </xsl:text>
+    <xsl:text> , </xsl:text>
   </xsl:template>
 
 
