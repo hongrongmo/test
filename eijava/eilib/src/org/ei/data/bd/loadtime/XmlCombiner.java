@@ -261,7 +261,7 @@ public class XmlCombiner
 				        rec.put(EVCombinedRec.AUTHOR_AFFILIATION,  aff.getSearchValue());
 				        rec.put(EVCombinedRec.AFFILIATION_LOCATION,  aff.getLocationsSearchValue());
                         rec.put(EVCombinedRec.COUNTRY,  aff.getCountriesSearchValue());
-                    	
+
                     }
                     else if(rs.getString("CORRESPONDENCEAFFILIATION") != null)
                     {
@@ -304,10 +304,21 @@ public class XmlCombiner
                     rec.put(EVCombinedRec.ABSTRACT, abString);
                 }
 
-                if (rs.getString("CONTROLLEDTERM") != null)
-                {
-                    rec.put(EVCombinedRec.CONTROLLED_TERMS, prepareMulti(rs.getString("CONTROLLEDTERM")));
-                }
+				if(!isChimica)
+				{
+                	if (rs.getString("CONTROLLEDTERM") != null)
+                	{
+                	    rec.put(EVCombinedRec.CONTROLLED_TERMS, prepareMulti(rs.getString("CONTROLLEDTERM")));
+                	}
+				}
+				else
+				{
+					if (rs.getString("CHEMICALTERMS") != null)
+					{
+						rec.put(EVCombinedRec.CONTROLLED_TERMS, prepareMulti(rs.getString("CHEMICALTERMS")));
+					}
+				}
+
 
                 if (rs.getString("UNCONTROLLEDTERM") != null)
                 {
@@ -370,17 +381,11 @@ public class XmlCombiner
 	                 }
                 }
 
-                if (rs.getString("CHEMICALTERM") != null)
+				if(!isChimica && rs.getString("CHEMICALTERM") != null)
 				{
-                	if(isChimica)
-                	{
-                		rec.put(EVCombinedRec.CONTROLLED_TERMS, prepareMulti(rs.getString("CHEMICALTERM")));
-                	}
-                	else
-                	{
-                		rec.put(EVCombinedRec.CHEMICALTERMS, prepareMulti(rs.getString("CHEMICALTERM")));
-                	}				     
-                }
+                	rec.put(EVCombinedRec.CHEMICALTERMS, prepareMulti(rs.getString("CHEMICALTERM")));
+				}
+
 
 				String[] issnArray = null;
                 if (rs.getString("ISSN") != null && rs.getString("EISSN") != null)
@@ -592,8 +597,8 @@ public class XmlCombiner
                     rec.put(EVCombinedRec.COMPANIES, prepareMulti(rs.getString("ASSIG")));
                 }
 
-				if (rs.getString("CASREGISTRYNUMBER") != null)									
-                {									
+				if (rs.getString("CASREGISTRYNUMBER") != null)
+                {
                     rec.put(EVCombinedRec.CASREGISTRYNUMBER, prepareCASRegistry(rs.getString("CASREGISTRYNUMBER")));
                 }
 
@@ -805,13 +810,13 @@ public class XmlCombiner
 		String[] multiStringArray = multiString.split(BdParser.AUDELIMITER,-1);
 		return multiStringArray;
 	}
-	
+
 	private String[] prepareCASRegistry(String multiString)
     	throws Exception
 	{
 		ArrayList list = new ArrayList();
 		String[] multiStringArray = multiString.split(BdParser.IDDELIMITER,-1);
-								
+
 		for(int i = 0; i < multiStringArray.length; i++)
 		{
 			String[] multiStringArray2 = multiStringArray[i].split(BdParser.GROUPDELIMITER,-1);
@@ -820,7 +825,7 @@ public class XmlCombiner
 				list.add(multiStringArray2[j]);
 			}
 		}
-		return (String[]) list.toArray(new String[0]);	
+		return (String[]) list.toArray(new String[0]);
 	}
 
 	private String[] prepareLanguage(String multiString)
@@ -1206,7 +1211,7 @@ public class XmlCombiner
             stmt = con.createStatement();
             rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER,PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,SEQ_NUM from " + Combiner.TABLENAME + " where SEQ_NUM is not null and LOADNUMBER='" + weekNumber + "' AND loadnumber != 0 and loadnumber < 1000000 and database='" + Combiner.CURRENTDB + "'");
 			//System.out.println("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER,PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,SEQ_NUM from " + Combiner.TABLENAME + " where SEQ_NUM is not null and LOADNUMBER='" + weekNumber + "' AND loadnumber != 0 and loadnumber < 1000000 and database='" + Combiner.CURRENTDB + "'");
-			System.out.println("Got records2 ...");			
+			System.out.println("Got records2 ...");
             writeRecs(rs);
             this.writer.end();
             this.writer.flush();
