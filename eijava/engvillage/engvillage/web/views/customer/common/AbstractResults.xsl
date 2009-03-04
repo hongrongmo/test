@@ -707,17 +707,6 @@
 
     </xsl:template>
 
-    <xsl:template match="CHS">
-    	<xsl:param name="DBNAME"/>
-      <br/><br/><a CLASS="MedBlackText"><b>
-        <xsl:choose>
-          <xsl:when test="@label"><xsl:value-of select="@label"/></xsl:when>
-          <xsl:otherwise><xsl:text>&#xD;&#xA;</xsl:text><xsl:value-of select="../PVD"/> chemical terms</xsl:otherwise>
-        </xsl:choose>:<xsl:call-template name="DOUBLE_SPACER"/></b></a>
-      <xsl:apply-templates/>
-
-    </xsl:template>
-
 
     <xsl:template match="CR">
       <xsl:call-template name="LINK">
@@ -853,7 +842,7 @@
     </xsl:template>
 
 
-    <xsl:template match="CV|MH|CH">
+    <xsl:template match="CV|MH">
       <xsl:call-template name="LINK">
         <xsl:with-param name="TERM"><xsl:value-of select="normalize-space(text())"/></xsl:with-param>
         <xsl:with-param name="FIELD">CV</xsl:with-param>
