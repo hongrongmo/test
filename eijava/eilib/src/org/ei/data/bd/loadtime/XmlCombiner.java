@@ -354,7 +354,7 @@ public class XmlCombiner
 
                 if (rs.getString("CHEMICALTERM") != null)
 				{
-				     rec.put(EVCombinedRec.CHEMICALTERMS, prepareMulti(rs.getString("CHEMICALTERM")));
+				     rec.put(EVCombinedRec.CONTROLLED_TERMS, prepareMulti(rs.getString("CHEMICALTERM")));
                 }
 
 				String[] issnArray = null;
