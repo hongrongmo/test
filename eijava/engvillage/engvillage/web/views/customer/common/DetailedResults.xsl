@@ -168,7 +168,7 @@
 	   </xsl:if>
     </xsl:template>
 
-    <xsl:template match="TI|TT|VT">
+    <xsl:template match="TI|TT">
       <tr>
         <td valign="top" ><img src="/engresources/images/s.gif" border="0"/></td>
         <td xsl:use-attribute-sets="r-align-label"><span CLASS="MedBlackText"><b><xsl:value-of select="@label"/>:</b></span></td>
@@ -179,7 +179,7 @@
     </xsl:template>
 
 
-    <xsl:template match="PAN|PAPD|PAPX|PANS|PANUS|PAPCO|PM|PM1|PA">
+    <xsl:template match="PAN|PAPD|PAPX|PANS|PANUS|PAPCO|PM|PM1|PA|VT">
       <tr>
         <td valign="top" ><img src="/engresources/images/s.gif" border="0"/></td>
         <td xsl:use-attribute-sets="r-align-label"><span CLASS="MedBlackText"><b><xsl:value-of select="@label"/>:</b></span></td>
