@@ -163,7 +163,7 @@ public class BDDocBuilder
 					publisherKey = Keys.I_PUBLISHER;
 				}
 
-				formatRIS(buildField(Keys.PUBLISHER,getPublisher(rset.getString("PUBLISHERNAME"),rset.getString("PUBLISHERADDRESS"), dataFormat, ht),ht),dataFormat, Keys.PUBLISHER, Keys.RIS_PB);
+				formatRIS(buildField(publisherKey,getPublisher(rset.getString("PUBLISHERNAME"),rset.getString("PUBLISHERADDRESS"), dataFormat, ht),ht),dataFormat, Keys.PUBLISHER, Keys.RIS_PB);
 				formatRIS(buildField(Keys.LANGUAGE,getLanguage(rset.getString("CITATIONLANGUAGE")),ht),dataFormat, Keys.LANGUAGE, Keys.RIS_LA);
 				formatRIS(buildField(Keys.AUTHORS,getAuthors(Keys.AUTHORS,rset.getString("AUTHOR"),rset.getString("AUTHOR_1"), dataFormat),ht), dataFormat, Keys.AUTHORS, Keys.RIS_AUS);
 
