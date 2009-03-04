@@ -313,9 +313,9 @@ public class XmlCombiner
 				}
 				else
 				{
-					if (rs.getString("CHEMICALTERMS") != null)
+					if (rs.getString("CHEMICALTERM") != null)
 					{
-						rec.put(EVCombinedRec.CONTROLLED_TERMS, prepareMulti(rs.getString("CHEMICALTERMS")));
+						rec.put(EVCombinedRec.CONTROLLED_TERMS, prepareMulti(rs.getString("CHEMICALTERM")));
 					}
 				}
 
