@@ -155,7 +155,12 @@ public class BDDocBuilder
 														 perl),ht);
 				buildField(Keys.PAGE_ARTICLE_NUMBER,rset.getString("ARTICLENUMBER"),ht);
 
-				formatRIS(buildField(Keys.PUBLISHER,getPublisher(rset.getString("PUBLISHERNAME"),rset.getString("PUBLISHERADDRESS"), dataFormat, ht),ht),dataFormat, Keys.PUBLISHER, Keys.RIS_PB);
+        Key publisherKey = Keys.PUBLISHER;
+        if(dataFormat.equals(Abstract.ABSTRACT_FORMAT))
+        {
+          publisherKey = Keys.I_PUBLISHER;
+        }
+				formatRIS(buildField(publisherKey,getPublisher(rset.getString("PUBLISHERNAME"),rset.getString("PUBLISHERADDRESS"), dataFormat, ht),ht),dataFormat, Keys.PUBLISHER, Keys.RIS_PB);
 				formatRIS(buildField(Keys.LANGUAGE,getLanguage(rset.getString("CITATIONLANGUAGE")),ht),dataFormat, Keys.LANGUAGE, Keys.RIS_LA);
 				formatRIS(buildField(Keys.AUTHORS,getAuthors(Keys.AUTHORS,rset.getString("AUTHOR"),rset.getString("AUTHOR_1"), dataFormat),ht), dataFormat, Keys.AUTHORS, Keys.RIS_AUS);
 
@@ -1355,15 +1360,15 @@ public class BDDocBuilder
 			nu =  nu.replaceAll(BdParser.GROUPDELIMITER, ";");
 			String cas[] = nu.split(";");
 			ArrayList array = new ArrayList();
-			
+
 			for(int i =  0 ; i< cas.length; i++ )
 			{
 				if(cas[i] != null && !cas[i].trim().equals("") )
-				{					
+				{
 					array.add((String)cas[i]);
 				}
 			}
-			
+
 			return (String[]) array.toArray(new String[1]);
 
 		}
