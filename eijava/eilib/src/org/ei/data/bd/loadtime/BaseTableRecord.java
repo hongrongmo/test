@@ -72,6 +72,7 @@ public class BaseTableRecord
    	public static final BaseTableRecord PUBLISHERADDRESS = new BaseTableRecord("PUBLISHERADDRESS", new Integer(3200), "cpx");
    	public static final BaseTableRecord PUBLISHERELECTRONICADDRESS = new BaseTableRecord("PUBLISHERELECTRONICADDRESS", new Integer(2400), "cpx");
    	public static final BaseTableRecord REPORTNUMBER= new BaseTableRecord("REPORTNUMBER", new Integer(128), "cpx");
+   	public static final BaseTableRecord CHEMICALTERMS = new BaseTableRecord("CHEMICAL_TERMS", new Integer(128), "chm");
    	public static final BaseTableRecord CONFNAME = new BaseTableRecord("CONFNAME", new Integer(1200), "cpx");
    	public static final BaseTableRecord CONFCATNUMBER  = new BaseTableRecord("CONFCATNUMBER", new Integer(32), "cpx");
    	public static final BaseTableRecord CONFCODE = new BaseTableRecord("CONFCODE", new Integer(32), "cpx");
@@ -191,6 +192,7 @@ public class BaseTableRecord
 	   	bdTableColumns.add(AUTHORKEYWORD);
 		bdTableColumns.add(REFCOUNT);
 		bdTableColumns.add(CHEMICALTERM);
+		bdTableColumns.add(CHEMICALTERMS);
 		bdTableColumns.add(CASREGISTRYNUMBER);
 		bdTableColumns.add(SEQUENCEBANKS);
 		bdTableColumns.add(TRADENAME);
