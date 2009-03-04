@@ -74,7 +74,7 @@ public interface Keys
     public static final Key CORRESPONDING_EMAIL = new Key("CEML", "Corr. author email");
     public static final Key CHEMICAL_DATA_INDEX = new Key("CI");
     public static final Key CHEMICAL_DATA_INDEXING = new Key("CHI","Chemical indexing");
-		public static final Key COMPANIES = new Key("CPO","Companies");
+	public static final Key COMPANIES = new Key("CPO","Companies");
     public static final Key CITCNT = new Key("CCT");
     public static final Key CLASS_CODE = new Key("CL");
     public static final Key ELT_CLASS_CODE = new Key("ECL");
@@ -98,7 +98,6 @@ public interface Keys
 	public static final Key COUNTRY_CODES = new Key("DGS", "Geographical indexing");
 	public static final Key CHEMICALS = new Key("CMS", "Chemicals");
 	public static final Key CHEMICAL_ACRONS = new Key("CES", "Chemical Acronyms");
-	public static final Key CHEMICAL_TERMS = new Key ("CHS", "Chemical Terms");
     public static final Key DERWENT_NO = new Key("DERW", "DERWENT accession no.");
     public static final Key DESIGNATED_STATES = new Key("DSM", "Designated states");
     public static final Key DISCIPLINE = new Key("DISP");
