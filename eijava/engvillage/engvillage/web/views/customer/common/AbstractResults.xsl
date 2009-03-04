@@ -169,7 +169,7 @@
       <xsl:apply-templates select="CVS">
         <xsl:with-param name="DBNAME" select="DOC/DB/DBNAME"/>
       </xsl:apply-templates>
-      
+
       <xsl:apply-templates select="CHS">
         <xsl:with-param name="DBNAME" select="DOC/DB/DBNAME"/>
       </xsl:apply-templates>
@@ -230,7 +230,7 @@
       <!-- <xsl:attribute name="title">Toggle marker on map</xsl:attribute> -->
       <xsl:value-of select="@ID"/> - <xsl:value-of disable-output-escaping="yes" select="."/></a>
       <xsl:if test="not(position()=last())">
-        <a class="SmBlackText">&#160;, &#160;</a>
+        <xsl:call-template name="COMMA_SPACER"/>
       </xsl:if>
     </xsl:template>
 
@@ -240,12 +240,12 @@
       <!-- <xsl:attribute name="title">Toggle marker on map</xsl:attribute> -->
       <xsl:value-of disable-output-escaping="yes" select="."/></a>
       <xsl:if test="not(position()=last())">
-        <a class="SmBlackText">&#160;, &#160;</a>
+        <xsl:call-template name="COMMA_SPACER"/>
       </xsl:if>
     </xsl:template>
 
     <xsl:template match="LOCS">
-      <br/><br/><a class="MedBlackText"><b><xsl:value-of select="@label"/>:&#160;</b></a><xsl:text> </xsl:text><xsl:apply-templates />
+      <br/><br/><a class="MedBlackText"><b><xsl:value-of select="@label"/>:<xsl:text> </xsl:text></b></a><xsl:text> </xsl:text><xsl:apply-templates />
     </xsl:template>
 
     <!-- EPT Templates -->
@@ -272,7 +272,7 @@
         <xsl:with-param name="NAME"><xsl:value-of select="name(.)"/></xsl:with-param>
       </xsl:call-template>
       <xsl:if test="not(position()=last())">
-        <A CLASS="SmBlackText">&#160; - &#160;</A>
+        <xsl:call-template name="DASH_SPACER"/>
       </xsl:if>
     </xsl:template>
 
@@ -300,7 +300,7 @@
     </xsl:template>
 
     <xsl:template match="BPN">
-      <br/><b>Publisher:</b>&#160;<xsl:value-of select="." disable-output-escaping="yes"/><br/>
+      <br/><b>Publisher:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><br/>
     </xsl:template>
 
   <!--
@@ -315,7 +315,7 @@
     <xsl:variable name="BOOK-SORT-PARAMS">&amp;sortdir=up&amp;sort=stsort</xsl:variable>
 
     <xsl:template match="COL">
-      <br/><br/><a CLASS="SmBlackText"><b><xsl:value-of select="@label"/>:&#160;&#160;</b></a>
+      <br/><br/><a CLASS="SmBlackText"><b><xsl:value-of select="@label"/>:<xsl:call-template name="DOUBLE_SPACER"/></b></a>
 <!-- DO not use LINK template - since we have a special search embedded on the COL link for Boooks -->
       <a class="SpLink">
       <xsl:if test="not(/PAGE/LINK ='false') and not(/SECTION-DELIM/LINK ='false')">
@@ -328,7 +328,7 @@
 
 
     <xsl:template match="BKYS">
-      <br/><br/><a CLASS="MedBlackText"><b><xsl:value-of select="@label"/>:&#160;&#160;</b></a>
+      <br/><br/><a CLASS="MedBlackText"><b><xsl:value-of select="@label"/>:<xsl:call-template name="DOUBLE_SPACER"/></b></a>
       <xsl:apply-templates/>
     </xsl:template>
 
@@ -339,7 +339,7 @@
       <xsl:with-param name="NAME"><xsl:value-of select="name(.)"/></xsl:with-param>
       </xsl:call-template>
       <xsl:if test="not(position()=last())">
-        <A CLASS="SmBlackText">&#160; - &#160;</A>
+        <xsl:call-template name="DASH_SPACER"/>
       </xsl:if>
     </xsl:template>
 
@@ -384,7 +384,7 @@
          <xsl:with-param name="ONMOUSEOVER">this.T_WIDTH=450;return escape('<xsl:value-of select="ctd:getDisplayTitle(hlight:addMarkup(./CTI))"/>')</xsl:with-param>
       </xsl:call-template>
       <xsl:if test="position()!=last()">
-        <a class="SmBlkText">&#160; - &#160;</a>
+        <xsl:call-template name="DASH_SPACER"/>
       </xsl:if>
   </xsl:template>
 
@@ -702,22 +702,22 @@
         <xsl:choose>
           <xsl:when test="@label"><xsl:value-of select="@label"/></xsl:when>
           <xsl:otherwise><xsl:text>&#xD;&#xA;</xsl:text><xsl:value-of select="../PVD"/> controlled terms</xsl:otherwise>
-        </xsl:choose>:&#160;&#160;</b></a>
+        </xsl:choose>:<xsl:call-template name="DOUBLE_SPACER"/></b></a>
       <xsl:apply-templates/>
 
     </xsl:template>
-    
+
     <xsl:template match="CHS">
     	<xsl:param name="DBNAME"/>
       <br/><br/><a CLASS="MedBlackText"><b>
         <xsl:choose>
           <xsl:when test="@label"><xsl:value-of select="@label"/></xsl:when>
           <xsl:otherwise><xsl:text>&#xD;&#xA;</xsl:text><xsl:value-of select="../PVD"/> chemical terms</xsl:otherwise>
-        </xsl:choose>:&#160;&#160;</b></a>
+        </xsl:choose>:<xsl:call-template name="DOUBLE_SPACER"/></b></a>
       <xsl:apply-templates/>
 
     </xsl:template>
-    
+
 
     <xsl:template match="CR">
       <xsl:call-template name="LINK">
@@ -727,7 +727,7 @@
       <span CLASS="SmBlackText">
       <xsl:value-of select="crlkup:getName(normalize-space(text()))" disable-output-escaping="yes"/></span>
       <xsl:if test="position()!=last()">
-        <a class="SmBlkText">&#160; - &#160;</a>
+        <xsl:call-template name="DASH_SPACER"/>
       </xsl:if>
     </xsl:template>
 
@@ -735,10 +735,10 @@
     <xsl:template match="FLS">
       <xsl:choose>
         <xsl:when test="string(@label)">
-          <a CLASS="MedBlackText"><br/><br/><b><xsl:value-of select="@label"/>:&#160;&#160;</b></a>
+          <a CLASS="MedBlackText"><br/><br/><b><xsl:value-of select="@label"/>:<xsl:call-template name="DOUBLE_SPACER"/></b></a>
         </xsl:when>
         <xsl:otherwise>
-          <a CLASS="MedBlackText"><br/><br/><b>Species term:&#160;&#160;</b></a>
+          <a CLASS="MedBlackText"><br/><br/><b>Species term:<xsl:call-template name="DOUBLE_SPACER"/></b></a>
         </xsl:otherwise>
       </xsl:choose>
   	<xsl:apply-templates/>
@@ -746,12 +746,12 @@
 
 
     <xsl:template match="RGIS">
-	<a CLASS="MedBlackText"><br/><br/><b>Regional term: &#160;&#160;</b></a>
+	<a CLASS="MedBlackText"><br/><br/><b>Regional term: <xsl:call-template name="DOUBLE_SPACER"/></b></a>
       	<xsl:apply-templates/>
     </xsl:template>
 
     <xsl:template match="CLS">
-	<a CLASS="MedBlackText"><br/><br/><b>Classification Code: &#160;&#160;</b></a>
+	<a CLASS="MedBlackText"><br/><br/><b>Classification Code: <xsl:call-template name="DOUBLE_SPACER"/></b></a>
         <xsl:apply-templates/>
     </xsl:template>
 
@@ -837,7 +837,7 @@
         <xsl:with-param name="NAME"><xsl:value-of select="name(.)"/></xsl:with-param>
       </xsl:call-template>
       <xsl:if test="not(position()=last())">
-        <A CLASS="SmBlackText">&#160; - &#160;</A>
+        <xsl:call-template name="DASH_SPACER"/>
       </xsl:if>
     </xsl:template>
 
@@ -848,7 +848,7 @@
         <xsl:with-param name="NAME"><xsl:value-of select="name(.)"/></xsl:with-param>
       </xsl:call-template>
       <xsl:if test="not(position()=last())">
-        <A CLASS="SmBlackText">&#160; - &#160;</A>
+        <xsl:call-template name="DASH_SPACER"/>
       </xsl:if>
     </xsl:template>
 
@@ -861,7 +861,7 @@
       </xsl:call-template>
 
       <xsl:if test="not(position()=last())">
-        <A CLASS="SmBlackText">&#160; - &#160;</A>
+        <xsl:call-template name="DASH_SPACER"/>
       </xsl:if>
     </xsl:template>
 
@@ -873,7 +873,7 @@
       <span CLASS="SmBlackText">
       <xsl:value-of select="hlight:addMarkup(crlkup:getName(normalize-space(text())))" disable-output-escaping="yes"/></span>
       <xsl:if test="not(position()=last())">
-        <A CLASS="SmBlackText">&#160; - &#160;</A>
+        <xsl:call-template name="DASH_SPACER"/>
       </xsl:if>
     </xsl:template>
 
@@ -885,7 +885,7 @@
         <xsl:with-param name="NAME"><xsl:value-of select="name(.)"/></xsl:with-param>
       </xsl:call-template>
       <xsl:if test="not(position()=last())">
-        <A CLASS="SmBlackText">&#160; - &#160;</A>
+        <xsl:call-template name="DASH_SPACER"/>
       </xsl:if>
     </xsl:template>
 
@@ -896,7 +896,7 @@
             <xsl:with-param name="NAME"><xsl:value-of select="name(.)"/></xsl:with-param>
           </xsl:call-template>
           <xsl:if test="not(position()=last())">
-            <A CLASS="SmBlackText">&#160; - &#160;</A>
+            <xsl:call-template name="DASH_SPACER"/>
           </xsl:if>
     </xsl:template>
 
@@ -907,16 +907,22 @@
             <xsl:with-param name="NAME"><xsl:value-of select="name(.)"/></xsl:with-param>
       	</xsl:call-template>
        	<xsl:if test="not(position()=last())">
-            <A CLASS="SmBlackText">&#160; - &#160;</A>
+            <xsl:call-template name="DASH_SPACER"/>
        	</xsl:if>
     </xsl:template>
 
     <xsl:template match="CL">
            <xsl:apply-templates/>
            <xsl:if test="not(position()=last())">
-	   	<A CLASS="SmBlackText">&#160; - &#160;</A>
+	   	<xsl:call-template name="DASH_SPACER"/>
       	   </xsl:if>
     </xsl:template>
+
+    <xsl:template name="DASH_SPACER"><a class="SmBlackText">&#160; - &#160;</a></xsl:template>
+
+    <xsl:template name="COMMA_SPACER"><a class="SmBlackText">&#160;, &#160;</a></xsl:template>
+
+    <xsl:template name="DOUBLE_SPACER">&#160;&#160;</xsl:template>
 
     <xsl:template name="LINK">
 
