@@ -278,7 +278,7 @@ public interface Keys
     public static final Key RSRCH_SPONSOR = new Key("RSP","Sponsor");
     public static final Key SALUTATION = new Key("TL", "Salutation");
     public static final Key SERIAL_TITLE = new Key("RIL","Source title");
-    public static final Key SECONDARY_SOURCE = new Key("SEC", "Secondary source");
+    public static final Key SECONDARY_SOURCE = new Key("SEC", "Original source");
     public static final Key SESSION_NAME_NUMBER = new Key("CSESS","Session name number");
     public static final Key SPECIFIC_NAMES = new Key("SPECN","Specific Names");
     public static final Key SOURCE = new Key("SO","Source");
