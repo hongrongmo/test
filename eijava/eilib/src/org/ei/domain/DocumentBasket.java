@@ -2,7 +2,7 @@
  *
  * @author  Engineering Information
  * @author  John A. Moschetto
- * @version $Revision:   1.1  $, $Date:   May 11 2007 15:27:32  $
+ * @version $Revision:   1.2  $, $Date:   Mar 05 2009 16:17:22  $
  * @since       EngVillage2
  */
 package org.ei.domain;
@@ -782,13 +782,6 @@ public class DocumentBasket
 
 //**************************Private methods*********************************************//
 
-        /**
-        *   This is a private method used by page at to get the documents in that page.This calls
-        *   another method which builds the basketEntry object from the database
-        *   This basketEntries objects are place ina hashTable and the docId's are sent to CPXChemDocBuilder to
-        *   build a page.This List of EIdocs are set for the respective basketEntry objects and added
-        *   to the Treeset and the Treeset is returned
-        */
 
     //Gets the Documents in the Document Basket
     private Set getEIDocumentBasketList(int startIndex,
@@ -796,58 +789,21 @@ public class DocumentBasket
                                         String dataFormat)
         throws Exception
     {
-
-        DatabaseConfig databaseConfig = DatabaseConfig.getInstance();
-        Hashtable entryTable = new Hashtable();
-        TreeSet basSet = new TreeSet();
+		TreeSet basSet = new TreeSet();
         List basketDocIDs = buildBasketDocIDs(startIndex,endIndex);
-        Iterator basItor = basketDocIDs.iterator();
-        DocID tempDocID = null;
-        String hashTempDocID = "";
-        while(basItor.hasNext())
-        {
-            tempDocID = (DocID)basItor.next();
-            String database = (tempDocID.getDatabase()).getID();
-
-            if(entryTable.containsKey(database))
-            {
-                List l = (List)entryTable.get(database);
-                l.add(tempDocID);
-            }
-            else
-            {
-                ArrayList l = new ArrayList();
-                l.add(tempDocID);
-                entryTable.put(database, l);
-            }
-
-        }
-
-        Enumeration en = entryTable.keys();
-        ArrayList basketDocumentList = new ArrayList(entryTable.size());
-        while(en.hasMoreElements())
-        {
-            String databaseKey = (String)en.nextElement();
-            List l = (List)entryTable.get(databaseKey);
-            Database d = databaseConfig.getDatabase(databaseKey);
-            DocumentBuilder builder = d.newBuilderInstance();
-            List builtList = builder.buildPage(l, dataFormat);
-            basketDocumentList.addAll(builtList);
-        }
-
-
-        Iterator docItor = basketDocumentList.iterator();
-        while(docItor.hasNext())
-        {
-            Object obj = docItor.next();
-            EIDoc eiDoc = (EIDoc)obj;
-            DocID compareDocID = eiDoc.getDocID();
-            String compDocIDHashCode = Integer.toString(compareDocID.hashCode());
-            BasketEntry bEntry = (BasketEntry)basketTable.get(compDocIDHashCode);
-            bEntry.setEIDoc(eiDoc);
-            //the Set is sorted by the document basket handle
-            basSet.add(bEntry);
-        }
+        MultiDatabaseDocBuilder builder = new MultiDatabaseDocBuilder();
+    	List docs = builder.buildPage(basketDocIDs, dataFormat);
+    	Iterator docItor = docs.iterator();
+		while(docItor.hasNext())
+		{
+			Object obj = docItor.next();
+			EIDoc eiDoc = (EIDoc)obj;
+			DocID compareDocID = eiDoc.getDocID();
+			String compDocIDHashCode = Integer.toString(compareDocID.hashCode());
+			BasketEntry bEntry = (BasketEntry)basketTable.get(compDocIDHashCode);
+			bEntry.setEIDoc(eiDoc);
+			basSet.add(bEntry);
+		}
         return basSet;
     }
 
