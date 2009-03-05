@@ -1326,8 +1326,21 @@ public class BDDocBuilder
 		 {
 			return false;
 		 }
-	}
+	  }
 
+    private static final Map mapDoctypeToRIScode = new HashMap();
+    {
+      mapDoctypeToRIScode.put("Journal article (JA)","JOUR");
+      mapDoctypeToRIScode.put("Conference article (CA)","CONF");
+      mapDoctypeToRIScode.put("Conference proceeding (CP)","CONF");
+      mapDoctypeToRIScode.put("Monograph chapter (MC)","CHAP");
+      mapDoctypeToRIScode.put("Monograph review (MR)","BOOK");
+      mapDoctypeToRIScode.put("Report chapter (RC)","RPRT");
+      mapDoctypeToRIScode.put("Report review (RR)","RPRT");
+      mapDoctypeToRIScode.put("Dissertation (DS)","THES");
+      mapDoctypeToRIScode.put("Unpublished paper (UP)","UNPB");
+      mapDoctypeToRIScode.put("Patent (PA)","PAT");
+    }
 
     // jam XML document mapping, conversion to TY values
     // for RIS format - only called from loadRIS
@@ -1338,28 +1351,33 @@ public class BDDocBuilder
             str=StringUtil.EMPTY_STRING;
         }
 
-        if(!str.equals(StringUtil.EMPTY_STRING))
+        if(!str.equals(StringUtil.EMPTY_STRING) && mapDoctypeToRIScode.containsKey(str))
         {
-
-            if (str.equals("Journal article (JA)")){str = "JOUR";}
-            else if (str.equals("Conference article (CA)")){str = "CONF";}
-            else if (str.equals("Conference proceeding (CP)")){str = "CONF";}
-            else if (str.equals("Monograph chapter (MC)")){str = "CHAP";}
-            else if (str.equals("MMonograph review (MR)")){str = "BOOK";}
-            else if (str.equals("Report chapter (RC)")){str = "RPRT";}
-            else if (str.equals("Report review (RR)")){str = "RPRT";}
-            else if (str.equals("Dissertation (DS)")){str = "THES";}
-            else if (str.equals("Unpublished paper (UP)")){str = "UNPB";}
+            str = (String) mapDoctypeToRIScode.get(str);
         }
         else
         {
+            System.out.println("Missing RIS Code mapping for " + str);
             str="JOUR";
         }
         return str;
     }
 
-    // TS XML document mapping, conversion to dt values 02/10/03
+    private static final Map mapAbbrevToDoctype = new HashMap();
+    {
+      mapAbbrevToDoctype.put("JA","Journal article (JA)");
+      mapAbbrevToDoctype.put("CA","Conference article (CA)");
+      mapAbbrevToDoctype.put("CP","Conference proceeding (CP)");
+      mapAbbrevToDoctype.put("MC","Monograph chapter (MC)");
+      mapAbbrevToDoctype.put("MR","Monograph review (MR)");
+      mapAbbrevToDoctype.put("RC","Report chapter (RC)");
+      mapAbbrevToDoctype.put("RR","Report review (RR)");
+      mapAbbrevToDoctype.put("DS","Dissertation (DS)");
+      mapAbbrevToDoctype.put("UP","Unpublished paper (UP)");
+      mapAbbrevToDoctype.put("PA","Patent (PA)");
+    }
 
+    // TS XML document mapping, conversion to dt values 02/10/03
     private String  replaceDTNullWithEmptyString(String str)
     {
         if(str==null || str.equals("QQ"))
@@ -1367,18 +1385,13 @@ public class BDDocBuilder
             str=StringUtil.EMPTY_STRING;
         }
 
-        if( !str.equals(StringUtil.EMPTY_STRING))
+        if(!str.equals(StringUtil.EMPTY_STRING)  && mapAbbrevToDoctype.containsKey(str))
         {
-            if (str.equals("JA")){str = "Journal article (JA)";}
-            else if (str.equals("CA")){str = "Conference article (CA)";}
-            else if (str.equals("CP")){str = "Conference proceeding (CP)";}
-            else if (str.equals("MC")){str = "Monograph chapter (MC)";}
-            else if (str.equals("MR")){str = "Monograph review (MR)";}
-            else if (str.equals("RC")){str = "Report chapter (RC)";}
-            else if (str.equals("RR")){str = "Report review (RR)";}
-            else if (str.equals("DS")){str = "Dissertation (DS)";}
-            else if (str.equals("UP")){str = "Unpublished paper (UP)";}
-            else if (str.equals("PA")){str = "PA";}
+            str = (String) mapAbbrevToDoctype.get(str);
+        }
+        else
+        {
+            System.out.println("Missing DOCTYPE mapping for " + str);
         }
         return str;
     }
