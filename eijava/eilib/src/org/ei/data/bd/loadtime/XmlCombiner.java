@@ -545,7 +545,7 @@ public class XmlCombiner
                 rec.put(EVCombinedRec.DATABASE, rs.getString("DATABASE"));
 
 
-                rec.put(EVCombinedRec.LOAD_NUMBER, prepareLoadNumber(rs.getString("DATESORT"),rs.getString("LOADNUMBER"),rs.getString("PUBLICATIONYEAR")));
+                rec.put(EVCombinedRec.LOAD_NUMBER, rs.getString("LOADNUMBER"));
 
                 if (rs.getString("PUBLICATIONYEAR") != null)
                 {
@@ -839,6 +839,7 @@ public class XmlCombiner
 		return languages;
     }
 
+/*
 	private String prepareLoadNumber(String datesort,String loadNumber, String publicationyear)
 		throws Exception
 	{
@@ -865,6 +866,8 @@ public class XmlCombiner
 
 		return ln;
     }
+*/
+
 
 	private String prepareDateSort(String datesort,String publicationyear)
 		throws Exception
@@ -890,7 +893,7 @@ public class XmlCombiner
 	    }
 		else
 		{
-		  ds = publicationyear + "1231";
+		  ds = publicationyear + "0101";
 		}
 
 		return ds;
