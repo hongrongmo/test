@@ -143,8 +143,17 @@ public class BDDocBuilder
 										  rset.getString("SOURCETITLEABBREV"),
 										  rset.getString("ISSUETITLE"),
 										  rset.getString("PUBLISHERNAME")),ht);
-				formatRIS(buildField(Keys.TITLE,getCitationTitle(rset.getString("CITATIONTITLE")),ht), dataFormat, Keys.TITLE, Keys.RIS_TI);
-				formatRIS(buildField(Keys.TITLE_TRANSLATION,getTranslatedCitationTitle(rset.getString("CITATIONTITLE")),ht), dataFormat, Keys.TITLE_TRANSLATION, Keys.RIS_T1);
+
+        String strTitle = getCitationTitle(rset.getString("CITATIONTITLE"));
+        if(strTitle == null)
+        {
+				  formatRIS(buildField(Keys.TITLE,getTranslatedCitationTitle(rset.getString("CITATIONTITLE")),ht), dataFormat, Keys.TITLE, Keys.RIS_TI);
+        }
+        else
+        {
+				  formatRIS(buildField(Keys.TITLE,strTitle,ht), dataFormat, Keys.TITLE, Keys.RIS_TI);
+  				formatRIS(buildField(Keys.TITLE_TRANSLATION,getTranslatedCitationTitle(rset.getString("CITATIONTITLE")),ht), dataFormat, Keys.TITLE_TRANSLATION, Keys.RIS_T1);
+        }
 
 				formatRIS(buildField(Keys.ISBN,getIsbn(rset.getString("ISBN"),10),ht), dataFormat, Keys.ISBN, Keys.RIS_BN);
 				formatRIS(buildField(Keys.ISBN13,getIsbn(rset.getString("ISBN"),13),ht), dataFormat, Keys.ISBN, Keys.RIS_BN);
@@ -828,9 +837,9 @@ public class BDDocBuilder
 	}
 
 
-	private String[] getTranslatedCitationTitle(String titleString) throws Exception
+	private String getTranslatedCitationTitle(String titleString) throws Exception
 	{
-		List titleList = new ArrayList();
+		String title = null;
 
 		if(titleString!=null && titleString.length()>0)
 		{
@@ -843,14 +852,17 @@ public class BDDocBuilder
 					BdCitationTitle titleObject = (BdCitationTitle)bdTitleList.get(i);
 					if(titleObject.getTitle()!=null)
 					{
-						titleList.add(titleObject.getTitle());
+						title = titleObject.getTitle();
+						break;
 					}
 				}
 			}
 
 		}
 
-		return (String[])titleList.toArray(new String[titleList.size()]);
+    title = cleanBadCharacters(title);
+
+		return title;
 	}
 
 
