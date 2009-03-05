@@ -365,7 +365,7 @@ public class BDDocBuilder
 	{
 		if(languageString != null)
 		{
-			if((dataFormat.equals(Citation.CITATION_FORMAT) || dataFormat.equals(Abstract.ABSTRACT_FORMAT)) && languageString.equals("en"))
+			if((dataFormat.equals(Citation.CITATION_FORMAT) || dataFormat.equals(Abstract.ABSTRACT_FORMAT)) && (languageString.equals("en") || languageString.equalsIgnoreCase("english")))
 			{
 				return null;
 			}
