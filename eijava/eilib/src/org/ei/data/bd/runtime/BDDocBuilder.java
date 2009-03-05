@@ -145,8 +145,6 @@ public class BDDocBuilder
 				buildField(Keys.ABBRV_SERIAL_TITLE,rset.getString("SOURCETITLEABBREV"),ht);
 				buildField(Keys.VOLISSUE,getVolumeIssue(rset.getString("VOLUME"),rset.getString("ISSUE")),ht);
 
-				if(!dataFormat.equals(Detail.FULLDOC_FORMAT))
-				{
 					buildField(Keys.SOURCE,getSource(rset.getString("SOURCETITLE"),
 										  rset.getString("SOURCETITLEABBREV"),
 										  rset.getString("ISSUETITLE"),
@@ -157,12 +155,6 @@ public class BDDocBuilder
 										  rset.getString("ISSUETITLE"),
 										  rset.getString("PUBLISHERNAME")),ht);
 
-				}
-				else if (database.getMask()==64 && dataFormat.equals(Detail.FULLDOC_FORMAT) )
-				{
-					buildField(Keys.SOURCE,rset.getString("SOURC"),ht);
-
-				}
 
 
         String strTitle = getCitationTitle(rset.getString("CITATIONTITLE"));
