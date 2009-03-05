@@ -15,51 +15,77 @@ import org.ei.data.bd.loadtime.*;
  */
 public class BdDocumentType
 {
-    private static final Hashtable bdDocType = new Hashtable();
+    private static final Map bdDocType = new HashMap();
+
+    public static final String JOURNAL_ARTICLE_CODE = "JA";
+    public static final String CONFERENCE_ARTICLE_CODE = "CA";
+    public static final String CONFERENCE_PROCEEDING_CODE = "CP";
+    public static final String MONOGRAPH_CHAPTER_CODE = "MC";
+    public static final String MONOGRAPH_REVIEW_CODE = "MR";
+    public static final String REPORT_CHAPTER_CODE = "RC";
+    public static final String REPORT_REVIEW_CODE = "RR";
+    public static final String DISSERTATION_CODE = "DS";
+    public static final String UNPUBLISHED_PAPER_CODE = "UP";
+    public static final String PATENT_CODE = "PA";
 
     static
-    {  	bdDocType.put("ab","JA");
-		bdDocType.put("ar","JA");
-		bdDocType.put("bk","MC");
-		bdDocType.put("br","MR");
-		bdDocType.put("bz","JA");
-		bdDocType.put("ch","MC");
-		//bdDocType.put("cp","CA");
-		bdDocType.put("cr","CP");
-		bdDocType.put("di","DS");
-		bdDocType.put("ed","JA");
-		bdDocType.put("er","JA");
-		bdDocType.put("ip","JA");
-		bdDocType.put("le","JA");
-		bdDocType.put("no","JA");
-		bdDocType.put("pa","JA");
-		bdDocType.put("pr","JA");
-		bdDocType.put("re","JA");
-		bdDocType.put("rp","RR");
-		bdDocType.put("sh","JA");
-    	bdDocType.put("wp","JA");
-    	bdDocType.put("ja","JA");
-    	bdDocType.put("pa","PA");
-	}
-
-    public static String getDocType(String doctype,
-    								boolean confCode)
     {
+      bdDocType.put("ab",JOURNAL_ARTICLE_CODE);
+      bdDocType.put("ar",JOURNAL_ARTICLE_CODE);
+      bdDocType.put("bk",MONOGRAPH_CHAPTER_CODE);
+      bdDocType.put("br",MONOGRAPH_REVIEW_CODE);
+      bdDocType.put("bz",JOURNAL_ARTICLE_CODE);
+      bdDocType.put("ca",CONFERENCE_ARTICLE_CODE);
+      bdDocType.put("ch",MONOGRAPH_CHAPTER_CODE);
+      bdDocType.put("cr",CONFERENCE_PROCEEDING_CODE);
+      bdDocType.put("di",DISSERTATION_CODE);
+      bdDocType.put("ds",DISSERTATION_CODE);
+      bdDocType.put("ed",JOURNAL_ARTICLE_CODE);
+      bdDocType.put("er",JOURNAL_ARTICLE_CODE);
+      bdDocType.put("ip",JOURNAL_ARTICLE_CODE);
+      bdDocType.put("le",JOURNAL_ARTICLE_CODE);
+      bdDocType.put("mc",MONOGRAPH_CHAPTER_CODE);
+      bdDocType.put("mr",MONOGRAPH_REVIEW_CODE);
+      bdDocType.put("no",JOURNAL_ARTICLE_CODE);
+      bdDocType.put("pa",JOURNAL_ARTICLE_CODE);
+      bdDocType.put("pr",JOURNAL_ARTICLE_CODE);
+      bdDocType.put("re",JOURNAL_ARTICLE_CODE);
+      bdDocType.put("rp",REPORT_REVIEW_CODE);
+      bdDocType.put("sh",JOURNAL_ARTICLE_CODE);
+      bdDocType.put("wp",JOURNAL_ARTICLE_CODE);
+      bdDocType.put("ja",JOURNAL_ARTICLE_CODE);
+      bdDocType.put("pa",PATENT_CODE);
+
+  }
+
+    public static String getDocType(String doctype, boolean confCode)
+    {
+      if(doctype != null)
+      {
         String dt = doctype.toLowerCase().trim();
-        if(dt.equals("cp"))
+        if(dt.equals(CONFERENCE_PROCEEDING_CODE))
         {
-			if(!confCode)
-			{
-				return "JA";
-			}
-			else
-			{
-				return "CA";
-			}
-		}
-		else
-		{
-			return (String) bdDocType.get(dt);
-		}
+          if(!confCode)
+          {
+            doctype = JOURNAL_ARTICLE_CODE;
+          }
+          else
+          {
+            doctype = CONFERENCE_ARTICLE_CODE;
+          }
+        }
+        else
+        {
+          if(bdDocType.containsKey(dt))
+          {
+            doctype = (String) bdDocType.get(dt);
+          }
+          else
+          {
+            System.out.println("No BdDocumentType mapping for: " + doctype);
+          }
+        }
+      }
+      return doctype;
     }
 }
