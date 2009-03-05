@@ -164,7 +164,7 @@ public class BDDocBuilder
 				}
 
 				formatRIS(buildField(publisherKey,getPublisher(rset.getString("PUBLISHERNAME"),rset.getString("PUBLISHERADDRESS"), dataFormat, ht),ht),dataFormat, Keys.PUBLISHER, Keys.RIS_PB);
-				formatRIS(buildField(Keys.LANGUAGE,getLanguage(rset.getString("CITATIONLANGUAGE")),ht),dataFormat, Keys.LANGUAGE, Keys.RIS_LA);
+				formatRIS(buildField(Keys.LANGUAGE,getLanguage(rset.getString("CITATIONLANGUAGE"),dataFormat),ht),dataFormat, Keys.LANGUAGE, Keys.RIS_LA);
 				formatRIS(buildField(Keys.AUTHORS,getAuthors(Keys.AUTHORS,rset.getString("AUTHOR"),rset.getString("AUTHOR_1"), dataFormat),ht), dataFormat, Keys.AUTHORS, Keys.RIS_AUS);
 
 				formatRIS(buildField(Keys.AUTHOR_AFFS,getAuthorsAffiliation(Keys.AUTHOR_AFFS,rset.getString("AFFILIATION"),rset.getString("AFFILIATION_1"), dataFormat),ht),dataFormat, Keys.AUTHOR_AFFS, Keys.RIS_AD);
@@ -322,10 +322,15 @@ public class BDDocBuilder
 		return null;
 	}
 
-	private String getLanguage(String languageString) throws Exception
+	private String getLanguage(String languageString, String dataFormat) throws Exception
 	{
 		if(languageString != null)
 		{
+			if((dataFormat.equals(Citation.CITATION_FORMAT) || dataFormat.equals(Abstract.ABSTRACT_FORMAT)) && languageString.equals("en"))
+			{
+				return null;
+			}
+
 			return Language.getIso639Language(languageString);
 		}
 
