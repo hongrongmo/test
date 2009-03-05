@@ -28,6 +28,7 @@ import org.ei.domain.Database;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.DocID;
 import org.ei.domain.DocumentBuilder;
+import org.ei.domain.MultiDatabaseDocBuilder;
 import org.ei.domain.EIDoc;
 import org.ei.util.GUID;
 
@@ -979,69 +980,11 @@ public class SavedRecords
     private Set getEIDocumentsOfFolder(Folder aFolder,String dataFormat)
         throws Exception
     {
-
-        DatabaseConfig databaseConfig = DatabaseConfig.getInstance();
-        Hashtable entryTable = new Hashtable();
-        TreeSet folderSet = new TreeSet();
-
+		TreeSet folderSet = new TreeSet();
         List folderDocIDs = buildFolderDocIDs(aFolder);
-
-        Iterator folderItor = folderDocIDs.iterator();
-        DocID tempDocID = null;
-        String hashTempDocID = "";
-        FolderEntry tempFolderEntry=null;
-
-        /** 1.Iterating thru the DocId's of Folder,getting the databse of each docid
-          * 2.Checking in the entry table if the key has the database
-          * 3.if exists getting the value which is a list of docId's and ading this docid to the list
-          * 4.else creating a new list by adding this docId.
-          */
-
-        while(folderItor.hasNext())
-        {
-            tempFolderEntry=(FolderEntry)folderItor.next();
-            if(tempFolderEntry.getRemoteDoc()!=null)
-            {
-                folderSet.add(tempFolderEntry);
-            }
-            else
-            {
-
-                tempDocID = (DocID)tempFolderEntry.getDocID();
-                String database = (tempDocID.getDatabase()).getID();
-                if(entryTable.containsKey(database))
-                {
-                    List l = (List)entryTable.get(database);
-                    l.add(tempDocID);
-                }
-                else
-                {
-                    ArrayList l = new ArrayList();
-                    l.add(tempDocID);
-                    entryTable.put(database, l);
-                }
-            }
-        }
-
-        /** 1.Create an enumeration of all the keys and ietrate thru the enumeration
-          * 2.for each vaue of enumeration(which is a databsekey)
-          * 3.Call the builder corresponding and build page by passing this list
-          * 4.Add this returned list to a general List*/
-
-        Enumeration en = entryTable.keys();
-        ArrayList basketDocumentList = new ArrayList(entryTable.size());
-        while(en.hasMoreElements())
-        {
-            String databaseKey = (String)en.nextElement();
-            List l = (List)entryTable.get(databaseKey);
-            Database d = databaseConfig.getDatabase(databaseKey);
-            DocumentBuilder builder = d.newBuilderInstance();
-            List builtList = builder.buildPage(l, dataFormat);
-            basketDocumentList.addAll(builtList);
-        }
-
-
-        Iterator docItor = basketDocumentList.iterator();
+        MultiDatabaseDocBuilder builder = new MultiDatabaseDocBuilder();
+		List docs = builder.buildPage(folderDocIDs, dataFormat);
+        Iterator docItor = docs.iterator();
         while(docItor.hasNext())
         {
             Object obj = docItor.next();
@@ -1052,6 +995,7 @@ public class SavedRecords
             fEntry.setEIDoc(eiDoc);
             folderSet.add(fEntry);
         }
+
         return folderSet;
     }
 
@@ -1096,7 +1040,7 @@ public class SavedRecords
                 fEntry.setFolderEntrytHitIndex(folderEntryIndex);
                 fEntry.setDocID(docID);
                 folderTable.put(Integer.toString(docID.hashCode()), fEntry);
-                folderDocIDs.add(fEntry);
+                folderDocIDs.add(docID);
             }
         }
         catch(Exception e)
