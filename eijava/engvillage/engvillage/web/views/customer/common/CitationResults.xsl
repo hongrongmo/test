@@ -60,6 +60,11 @@
 <!--      <xsl:apply-templates select="PN"/> -->
       <xsl:apply-templates select="RN"/>
       <xsl:apply-templates select="VO"/>
+      
+	<xsl:apply-templates select="PP"/>
+	<xsl:apply-templates select="ARN"/>
+	<xsl:apply-templates select="p_PP"/>
+	<xsl:apply-templates select="PP_pp"/>
 
       <xsl:apply-templates select="SD"/>
 
@@ -74,9 +79,7 @@
 <!--  <xsl:apply-templates select="UPD"/> -->
       <xsl:apply-templates select="NV"/>
       <xsl:apply-templates select="PA"/>
-      <xsl:apply-templates select="PP"/>
-      <xsl:apply-templates select="p_PP"/>
-      <xsl:apply-templates select="PP_pp"/>
+      
 
       <xsl:apply-templates select="PAS"/>
       <xsl:apply-templates select="PASM"/>
@@ -319,6 +322,11 @@
     <xsl:template match="PP">
         <xsl:text>, </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
     </xsl:template>
+    
+    <xsl:template match="ARN">
+    	<xsl:text>, art. no. </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
+    </xsl:template>
+    
     <xsl:template match="p_PP">
         <xsl:text>, p </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
     </xsl:template>
