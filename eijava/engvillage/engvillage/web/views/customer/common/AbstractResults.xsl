@@ -50,6 +50,14 @@
 
       <xsl:apply-templates select="PN"/>
       <xsl:apply-templates select="VO"/>
+	
+      <xsl:if test="not(string(p_PP) or string(PP_pp))">
+	        <xsl:apply-templates select="PP"/>
+      </xsl:if>
+
+      <xsl:apply-templates select="p_PP"/>
+      <xsl:apply-templates select="PP_pp"/>
+      <xsl:apply-templates select="ARN"/>
 
       <xsl:apply-templates select="RN"/>
       <xsl:apply-templates select="SD"/>
@@ -98,12 +106,7 @@
       <xsl:apply-templates select="ECL"/>
   <!-- end of upt fields -->
 
-      <xsl:if test="not(string(p_PP) or string(PP_pp))">
-        <xsl:apply-templates select="PP"/>
-      </xsl:if>
-
-      <xsl:apply-templates select="p_PP"/>
-      <xsl:apply-templates select="PP_pp"/>
+      
 
 
       <xsl:apply-templates select="LA"/>
@@ -256,7 +259,11 @@
     <xsl:template match="PAPIM">
       <b> Application information:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
     </xsl:template>
-
+    
+    <xsl:template match="ARN">
+	<xsl:text>, art. no. </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
+    </xsl:template>
+    
     <xsl:template match="PIM">
       <b> Priority information:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
     </xsl:template>
