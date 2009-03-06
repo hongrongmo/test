@@ -177,11 +177,12 @@ public class BDDocBuilder
         {
           buildField(Keys.PAGE_COUNT,getPageCount(rset.getString("PAGECOUNT")),ht);
           formatRIS(buildField(Keys.PUBLICATION_YEAR,getYear(rset.getString("PUBLICATIONYEAR"),perl),ht), dataFormat,Keys.PUBLICATION_YEAR,Keys.RIS_PY);
-          buildField(Keys.PAGE_RANGE,getPageRange(rset.getString("PAGE"),
-                               rset.getString("ARTICLENUMBER"),
-                               rset.getString("ISSN"),
-                               rset.getString("EISSN"),
-                               perl),ht);
+          buildField(Keys.PAGE_RANGE,getPageRange(dataFormat,
+          										  rset.getString("PAGE"),
+                                                  rset.getString("ARTICLENUMBER"),
+                                                  rset.getString("ISSN"),
+                                                  rset.getString("EISSN"),
+                                                  perl),ht);
 
         }
         else
@@ -750,7 +751,7 @@ public class BDDocBuilder
 		return strPage.trim();
 	}
 
-	private PageRange  getPageRange(String page,String articleNumber,String issn,String eissn,Perl5Util perl) throws Exception
+	private PageRange  getPageRange(String dataFormat, String page,String articleNumber,String issn,String eissn,Perl5Util perl) throws Exception
 	{
 		String strPage=null;
 
@@ -766,15 +767,15 @@ public class BDDocBuilder
 			{
 				if(pages[1] != null && pages[2] != null)
 				{
-					strPage = ("p "+pages[1] +" - "+ pages[2]);
+					strPage = (pages[1] +"-"+ pages[2]);
 				}
 				else if(pages[1] != null)
 				{
-					strPage = "p "+pages[1];
+					strPage = pages[1];
 				}
 				else if(pages[2] != null)
 				{
-					strPage = "p "+pages[2];
+					strPage = pages[2];
 				}
 			}
 
@@ -788,19 +789,34 @@ public class BDDocBuilder
 
 			if(issn != null && hasARFix(issn)) // Check ISSN for AR problem
 			{
-				strPage="p "+articleNumber;
+				strPage = articleNumber;
 			}
-			else if(strPage != null)
+			else if(strPage == null)
 			{
-				strPage="p "+articleNumber;
+				strPage=articleNumber;
 			}
 		}
 
 		if(strPage != null )
 		{
-			 PageRange pageRange = new PageRange(strPage,perl);
-			 return pageRange;
-		 }
+			if(dataFormat.equals(Citation.CITATION_FORMAT) || dataFormat.equals(Abstract.ABSTRACT_FORMAT))
+			{
+				if(strPage.indexOf("p") == -1)
+				{
+					strPage = "p "+strPage;
+				}
+			}
+			else
+			{
+				if(strPage.indexOf("p") == 0)
+				{
+					strPage = strPage.substring(1).trim();
+				}
+			}
+
+			PageRange pageRange = new PageRange(strPage,perl);
+			return pageRange;
+		}
 
 		 return null;
 	}
