@@ -63,7 +63,7 @@ public class BdDocumentType
       if(doctype != null)
       {
         String dt = doctype.toLowerCase().trim();
-        if(dt.equals(CONFERENCE_PROCEEDING_CODE))
+        if(dt.equalsIgnoreCase(CONFERENCE_PROCEEDING_CODE))
         {
           if(!confCode)
           {
