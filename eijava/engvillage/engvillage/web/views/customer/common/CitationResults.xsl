@@ -124,7 +124,7 @@
     <xsl:template match="TI">
         <a class="MedBlackText"><b><xsl:value-of select="." disable-output-escaping="yes"/></b>
         <xsl:if test="../TT">
-          <a class="MedBlackText"><xsl:text> </xsl:text><b>(<xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>)</b></a>
+          <a class="MedBlackText"><xsl:text> </xsl:text><b>(<xsl:value-of select="hlight:addMarkup(../TT)" disable-output-escaping="yes"/>)</b></a>
         </xsl:if>
         <xsl:if test="string(../DOC/TAGDATE)"> (Tag applied on <xsl:value-of select="../DOC/TAGDATE"/>)</xsl:if>
         </a><br/>
