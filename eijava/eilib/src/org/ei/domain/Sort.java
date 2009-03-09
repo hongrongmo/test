@@ -35,7 +35,8 @@ public class Sort
     public static final String RELEVANCE_FIELD = "relevance";
 
     // DTS_SORT_MASK = Compendex + Compendex Backfile + Standalone Backfile + PaperChem +  Chimica + Geobase
-    public static final int DTS_SORT_MASK = 270561;
+    // jam - Changed to just Compendex + Compendex Backfile + Standalone Backfile
+    public static final int DTS_SORT_MASK = 262177;
     public static final String DTS_SORT_FIELD = "dts";
 
 
