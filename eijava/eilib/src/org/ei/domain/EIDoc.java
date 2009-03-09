@@ -291,8 +291,19 @@ public class EIDoc implements Highlightable, XMLSerializable, LocalHoldingLinker
 
             }
         }
-        else if (field.equals(LocalHoldingLinker.ISBN1)) {
-            if (mapDocument.containsKey(Keys.ISBN)) {
+        else if (field.equals(LocalHoldingLinker.ISBN1))
+        {
+			if(mapDocument.containsKey(Keys.ISBN13))
+			{
+				ElementData isbn = (ElementData) mapDocument.get(Keys.ISBN13);
+				String[] values = isbn.getElementData();
+				if((values != null) && (values.length >= 1))
+				{
+				  value = values[0].replaceAll("\\W","");
+				}
+            }
+            else if(mapDocument.containsKey(Keys.ISBN))
+            {
                 ElementData isbn = (ElementData) mapDocument.get(Keys.ISBN);
                 String[] values = isbn.getElementData();
                 if((values != null) && (values.length >= 1))
@@ -301,15 +312,26 @@ public class EIDoc implements Highlightable, XMLSerializable, LocalHoldingLinker
                 }
             }
         }
-        else if (field.equals(LocalHoldingLinker.ISBN2)) {
-            if (mapDocument.containsKey(Keys.ISBN)) {
-                ElementData isbn = (ElementData) mapDocument.get(Keys.ISBN);
-                String[] values = isbn.getElementData();
-                if((values != null) && (values.length >= 1))
-                {
-                  value = values[0];
-                }
-            }
+        else if (field.equals(LocalHoldingLinker.ISBN2))
+        {
+			if(mapDocument.containsKey(Keys.ISBN13))
+			{
+				ElementData isbn = (ElementData) mapDocument.get(Keys.ISBN13);
+				String[] values = isbn.getElementData();
+				if((values != null) && (values.length >= 1))
+				{
+				  value = values[0].replaceAll("\\W","");
+				}
+			}
+			else if(mapDocument.containsKey(Keys.ISBN))
+			{
+				ElementData isbn = (ElementData) mapDocument.get(Keys.ISBN);
+				String[] values = isbn.getElementData();
+				if((values != null) && (values.length >= 1))
+				{
+				  value = values[0].replaceAll("\\W","");
+				}
+			}
         }
         else if (field.equals(LocalHoldingLinker.CODEN)) {
             if (mapDocument.containsKey(Keys.CODEN)) {
