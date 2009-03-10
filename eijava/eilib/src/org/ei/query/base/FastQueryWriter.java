@@ -200,7 +200,8 @@ public class FastQueryWriter
     {
         this.credentials = credentials;
         bQuery = authorTransformer.transform(bQuery);
-
+        PhraseBooster pbooster = new PhraseBooster();
+        bQuery = pbooster.applyBoost(bQuery);
 		FieldGatherer fg = new FieldGatherer();
 		this.fields = fg.gatherFields(bQuery);
         bQuery.accept(this);
