@@ -107,7 +107,7 @@ public class XmlCombiner
         }
         else if(loadNumber == 0)
         {
-        	for(int yearIndex = 1968; yearIndex <= 2009; yearIndex++)
+        	for(int yearIndex = 1952; yearIndex <= 2009; yearIndex++)
             {
         	  System.out.println("Processing year " + yearIndex + "...");
               c = new XmlCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,dbname, "dev"));
@@ -200,7 +200,7 @@ public class XmlCombiner
         {
           ++i;
           String firstGUID = "";
-          int numCoords = 0;
+          int numCoords = 1;
           int coordCount = 0;
           if(rs.getString("DATABASE") != null)
           {
@@ -213,7 +213,10 @@ public class XmlCombiner
 				  	isChimica = true;
 			  }
 	  	  }
+          
+          /*
           String sts = rs.getString("REGIONALTERM");
+                    
           if(sts == null || !isGeoBase)
           {
           	numCoords = 1;
@@ -223,7 +226,7 @@ public class XmlCombiner
           	String[] tc = sts.split(GRFDocBuilder.AUDELIMITER);
           	numCoords = tc.length;
 	  	  }
-
+		  */
 	  	  Vector recVector = new Vector();
           for(int currentCoord = 0; currentCoord < numCoords; currentCoord++)
           {
@@ -355,10 +358,10 @@ public class XmlCombiner
 
 								   if(coords != null &&  coords[4].indexOf("-") == -1 && coords[3].indexOf("-") != -1)
 								   {
-								     secondBoxCoords = parseCoordinates(coordString);
+								     //secondBoxCoords = parseCoordinates(coordString);
 									 //System.out.println(secondBoxCoords[1] + "," + secondBoxCoords[2] + "," + secondBoxCoords[3] + "," + secondBoxCoords[4]);
 									 coords[3] = "180";
-									 recSecondBox = new EVCombinedRec();
+									 //recSecondBox = new EVCombinedRec();
 								   }
 								   if(j == currentCoord)
 								   {
