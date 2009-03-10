@@ -255,8 +255,9 @@ public class GeoRefCombiner
       while (rs.next())
       {
           String firstGUID = "";
-          int numCoords = 0;
+          int numCoords = 1;
           int coordCount = 0;
+          /*
           String sts = rs.getString("COORDINATES");
           if(sts == null)
           {
@@ -267,6 +268,7 @@ public class GeoRefCombiner
           	String[] tc = sts.split(GRFDocBuilder.AUDELIMITER);
           	numCoords = tc.length;
 	  	  }
+	  	  */
 	  	  //System.out.println("NUMCOORDS: " + numCoords);
 	  	  Vector recVector = new Vector();
           for(int currentCoord = 0; currentCoord < numCoords; currentCoord++)
@@ -473,10 +475,10 @@ public class GeoRefCombiner
 					  coords = parseCoordinates(termcoordinates[1]);
 					  if(coords != null &&  coords[4].indexOf("-") == -1 && coords[3].indexOf("-") != -1)
 				      {
-						secondBoxCoords = parseCoordinates(termcoordinates[1]);
+						//secondBoxCoords = parseCoordinates(termcoordinates[1]);
 						//System.out.println(secondBoxCoords[1] + "," + secondBoxCoords[2] + "," + secondBoxCoords[3] + "," + secondBoxCoords[4]);
 			            coords[3] = "180";
-			            recSecondBox = new EVCombinedRec();
+			            //recSecondBox = new EVCombinedRec();
 		              }
 
 					  if(j == currentCoord)
