@@ -992,8 +992,7 @@ public class INSPECCombiner
 
         try
         {
-
-            this.writer.begin();
+            
             stmt = con.createStatement();
         //  System.out.println("Running the query...");
         //  rs = stmt.executeQuery("select m_id, aaff, su, ab, anum, aoi, aus, aus2,pyr, rnum, pnum, cpat, ciorg, iorg, pas, cdate, cedate, doi, nrtype, doit, chi, voliss, ipn, cloc, cls, cn, cnt, cvs, eaff, eds, fjt, fls, fttj, la, matid, ndi, pdate, pub, rtype, sbn, sorg, sn, snt, tc, tdate, thlp, ti, trs, trmc, LOAD_NUMBER from "+Combiner.TABLENAME+ " where LOAD_NUMBER = "+loadN);
@@ -1012,6 +1011,7 @@ public class INSPECCombiner
             System.out.println("Wrote records.");
 
             this.writer.end();
+            this.writer.flush();            
         }
         finally
         {
