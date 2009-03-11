@@ -1518,10 +1518,6 @@ public class UPTCombiner extends CombinerTimestamp {
         }
         catch (Exception ex) {
             ex.printStackTrace();
-        }
-        finally {
-        	if (c.nodeManager != null)
-                c.nodeManager.close();        	
-        }
+        }        
     }
 }
