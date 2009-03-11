@@ -270,23 +270,12 @@ public class BDDocBuilder
 				}
 
 
-				if(rset.getString("DATABASE").equalsIgnoreCase("pch"))
-				{
+				buildField(Keys.CORRESPONDING_AUTHORS,getCorAuthors(Keys.CORRESPONDING_AUTHORS,rset.getString("CORRESPONDENCENAME"),rset.getString("CORRESPONDENCEEADDRESS")),ht);
 
-				    formatRIS(buildField(Keys.CORRESPONDING_AUTHORS,
-				    			getEditors(Keys.CORRESPONDING_AUTHORS,
-				    				null,
-									null,
-									rset.getString("CORRESPONDENCENAME")),ht),
-				    				dataFormat,
-				    				Keys.CORRESPONDING_AUTHORS, Keys.RIS_EDS);
+				if(rset.getString("AFFILIATION") == null)
+				{
 					buildField(Keys.CORRESPONDING_AUTHORS_AFF,getCorrespondingAuAff(rset.getString("CORRESPONDENCEAFFILIATION")),ht);
 				}
-
-
-				//following field used for testing only, should be commented out after testing
-				buildField(Keys.CORRESPONDING_AUTHORS,getCorAuthors(Keys.CORRESPONDING_AUTHORS,rset.getString("CORRESPONDENCENAME"),rset.getString("CORRESPONDENCEEADDRESS")),ht);
-				//buildField(Keys.CORRESPONDING_EMAIL,getEmail(rset.getString("CORRESPONDENCEEADDRESS")),ht);
 
 				eiDoc.setLoadNumber(rset.getInt("LOADNUMBER"));
 				list.add(eiDoc);
