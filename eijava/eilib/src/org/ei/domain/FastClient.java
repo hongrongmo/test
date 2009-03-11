@@ -816,7 +816,10 @@ public class FastClient
             String[] dataElement = new String[2];
             dataElement[0] = nameTokens.nextToken();
             dataElement[1] = countTokens.nextToken();
-            navData.add(dataElement);
+            if(dataElement[0] != null && !dataElement[0].equals("null"))
+            {
+            	navData.add(dataElement);
+			}
         }
 
         navigators.put(navName, navData);
