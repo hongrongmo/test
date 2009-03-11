@@ -494,7 +494,7 @@ public class FastClient
             String URL = buildSearchURL();
             HttpClient client = new HttpClient();
             method = new GetMethod(URL);
-            //System.out.println(" FastClient URL " + java.net.URLDecoder.decode(URL));
+            System.out.println(" FastClient URL " + URL);
             int statusCode = client.executeMethod(method);
             in = new BufferedReader(new InputStreamReader(method.getResponseBodyAsStream()));
             read(in);
@@ -541,7 +541,7 @@ public class FastClient
 		try
 		{
 			String URL = buildDedupSearchURL();
-			//System.out.println(URL);
+			System.out.println(URL);
 			HttpClient client = new HttpClient();
 			method = new GetMethod(URL);
 			int statusCode = client.executeMethod(method);
@@ -633,20 +633,28 @@ public class FastClient
 		buf.append("&offset=");
 		buf.append(Integer.toString(this.offSet));
 		buf.append("&hits=");
-		buf.append(Integer.toString(this.pageSize));		
-	    
+		buf.append(Integer.toString(this.pageSize));
+
 		if(this.primarySort != null)
 		{
 			buf.append("&sortby=");
-			buf.append(URLEncoder.encode(this.primarySortDirection,"UTF-8"));
-			buf.append(this.primarySort);
-			if(this.primarySort.equals("yr"))
+			if(this.primarySort.equals("relevance"))
+			{
+				buf.append(getRankProfile(this.queryString));
+			}
+			else
 			{
 				buf.append(URLEncoder.encode(this.primarySortDirection,"UTF-8"));
-				buf.append("wk");
-				buf.append("&fullsort=yes");
+				buf.append(this.primarySort);
+				if(this.primarySort.equals("yr"))
+				{
+					buf.append(URLEncoder.encode(this.primarySortDirection,"UTF-8"));
+					buf.append("wk");
+					buf.append("&fullsort=yes");
+				}
 			}
 		}
+
 		return buf.toString();
 	}
 
@@ -679,18 +687,25 @@ public class FastClient
         buf.append(Integer.toString(this.offSet));
         buf.append("&hits=");
         buf.append(Integer.toString(this.pageSize));
-               
+
         if(this.primarySort != null)
         {
             buf.append("&sortby=");
-            buf.append(URLEncoder.encode(this.primarySortDirection,"UTF-8"));
-            buf.append(this.primarySort);
-            if(this.primarySort.equals("yr"))
+            if(this.primarySort.equals("relevance"))
             {
-                buf.append(URLEncoder.encode(this.primarySortDirection,"UTF-8"));
-                buf.append("wk");
-                buf.append("&fullsort=yes");
-            }
+            	buf.append(getRankProfile(this.queryString));
+			}
+			else
+			{
+				buf.append(URLEncoder.encode(this.primarySortDirection,"UTF-8"));
+				buf.append(this.primarySort);
+				if(this.primarySort.equals("yr"))
+				{
+					buf.append(URLEncoder.encode(this.primarySortDirection,"UTF-8"));
+					buf.append("wk");
+					buf.append("&fullsort=yes");
+				}
+			}
         }
 
         if(doNavigators)
@@ -710,6 +725,22 @@ public class FastClient
         //System.out.println(buf.toString());
         return buf.toString();
     }
+
+    private String getRankProfile(String queryString)
+    {
+		if(queryString.indexOf(" all:") > -1)
+		{
+			return "relevance";
+		}
+		else if(queryString.indexOf(" ky:") > -1)
+		{
+			return "ky";
+		}
+		else
+		{
+			return "rank";
+		}
+	}
 
     public void read(BufferedReader in)
         throws IOException
@@ -834,22 +865,22 @@ public class FastClient
 
         return null;
     }
-    
+
     protected void parseDocID(String docIdLine,
             String dedupKeyLine,
             String doiLine,
             String dmaskLine)
-	{    	
+	{
 		String[] id = new String[4];
 		StringTokenizer tokens1 = new StringTokenizer(docIdLine);
 		tokens1.nextToken();
-		id[0] = tokens1.nextToken().trim();        
+		id[0] = tokens1.nextToken().trim();
 		if((id[0].lastIndexOf("_") > 8)&&(!id[0].startsWith("pag_")))
 		{
 			String[] temp;
 			temp = id[0].split("_");
-			id[0] = temp[0] + "_" + temp[1]; 
-		}		
+			id[0] = temp[0] + "_" + temp[1];
+		}
 		StringTokenizer tokens2 = new StringTokenizer(dedupKeyLine);
 		tokens2.nextToken();
 		id[1] = tokens2.nextToken().trim();
@@ -865,7 +896,7 @@ public class FastClient
 		if(tokens4.hasMoreTokens())
 		{
 			id[3] = tokens4.nextToken().trim();
-		}		
+		}
 		docIDs.add(id);
 	}
 
