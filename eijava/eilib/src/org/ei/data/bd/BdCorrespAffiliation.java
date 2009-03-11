@@ -188,7 +188,7 @@ public class BdCorrespAffiliation
 			{
 				searchValue.append(", ");
 			}
-		 	searchValue.append(CountryFormatter.formatCountry(this.affCountry));
+		 	searchValue.append(CountryFormatter.formatCase(CountryFormatter.formatCountry(this.affCountry)));
 		 }
 
 	    return searchValue.toString();
