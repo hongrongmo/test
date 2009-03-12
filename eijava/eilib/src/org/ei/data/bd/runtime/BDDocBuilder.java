@@ -277,7 +277,6 @@ public class BDDocBuilder
 					buildField(Keys.CORRESPONDING_AUTHORS_AFF,getCorrespondingAuAff(rset.getString("CORRESPONDENCEAFFILIATION")),ht);
 				}
 
-				eiDoc.setLoadNumber(rset.getInt("LOADNUMBER"));
 				list.add(eiDoc);
                 count++;
 
