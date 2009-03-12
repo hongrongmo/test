@@ -16,7 +16,7 @@ public class MemCached {
   {
 	 
 	this.mcc = new MemCachedClient();
-	this.pool = SockIOPool.getInstance();    	
+	this.pool = SockIOPool.getInstance();    
 	this.pool.setServers( servers );
 	Integer[] w = null;
 	if (weights != null) {
@@ -74,19 +74,6 @@ public class MemCached {
 	 		mc.add(key, value, getExpiryDate());
 		}
 	}
-  
-  	public void addNoExpiry(String key, String value)
-	{
-		MemCachedClient mc = this.getMemCachedClient();
-		if(mc.keyExists(key))
-		{
-	 		mc.replace(key, value);
-		}
-		else
-		{
-	 		mc.add(key, value);
-		}
-	}
 	
 	public void add(String key, String value, Date expiryDate)
 	{
@@ -118,29 +105,6 @@ public class MemCached {
 	{
 		MemCachedClient mc = this.getMemCachedClient();		
 		return  mc.keyExists(key);
-	}
-	
-	public long getID(String id)
-	{
-		MemCachedClient mc = this.getMemCachedClient();		
-		return  mc.incr(id);
-	}
-	
-	public long getCounter(String id)
-	{
-		MemCachedClient mc = this.getMemCachedClient();		
-		return  mc.getCounter(id);
-	}
-	
-	public void setID(String id, long value)
-	{
-		MemCachedClient mc = this.getMemCachedClient();
-		mc.storeCounter(id, value);
-	}
-	
-	public void shutdown()
-	{
-		this.pool.shutDown();
 	}
 	
 	/*
