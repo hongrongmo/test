@@ -494,7 +494,7 @@ public class FastClient
             String URL = buildSearchURL();
             HttpClient client = new HttpClient();
             method = new GetMethod(URL);
-            System.out.println(" FastClient URL " + URL);
+            //System.out.println(" FastClient URL " + URL);
             int statusCode = client.executeMethod(method);
             in = new BufferedReader(new InputStreamReader(method.getResponseBodyAsStream()));
             read(in);
@@ -627,7 +627,7 @@ public class FastClient
 
 
 
-		buf.append("?type=adv&collapseon=batvptid&encoding=utf-8&rpf_clustering:enabled=false&rpf_clustering:root=*&rpf_clustering:overridehits=1");
+		buf.append("?type=adv&encoding=utf-8&rpf_clustering:enabled=false&rpf_clustering:root=*&rpf_clustering:overridehits=1");
 		buf.append("&query=");
 		buf.append(URLEncoder.encode(this.queryString,"UTF-8"));
 		buf.append("&offset=");
@@ -679,7 +679,7 @@ public class FastClient
         StringBuffer buf = new StringBuffer(this.baseURL);
         buf.append("/cgi-bin/");
         buf.append(this.resultView);
-        buf.append("?type=adv&collapseon=batvptid&encoding=utf-8&rpf_clustering:enabled=false&rpf_clustering:root=*&rpf_clustering:overridehits=1&resultview=");
+        buf.append("?type=adv&encoding=utf-8&rpf_clustering:enabled=false&rpf_clustering:root=*&rpf_clustering:overridehits=1&resultview=");
         buf.append(this.resultView);
         buf.append("&query=");
         buf.append(URLEncoder.encode(this.queryString,"UTF-8"));
@@ -728,12 +728,14 @@ public class FastClient
 
     private String getRankProfile(String queryString)
     {
-		if(queryString.indexOf(" all:") > -1)
+		if(queryString.indexOf("(all:") > -1 || queryString.indexOf(" all:") > -1)
 		{
+			//System.out.println("ALL fields rank.");
 			return "relevance";
 		}
-		else if(queryString.indexOf(" ky:") > -1)
+		else if(queryString.indexOf("(ky:") > -1 || queryString.indexOf(" ky:") > -1)
 		{
+			//System.out.println("KY fields rank.");
 			return "ky";
 		}
 		else

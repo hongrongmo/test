@@ -1027,7 +1027,7 @@ public class BDDocBuilder
               strReplace = m.group();
             }
           }
-          System.out.println("Matched: " + strMatch + " replace with " + strReplace);
+          //System.out.println("Matched: " + strMatch + " replace with " + strReplace);
           // The appendReplacement method appends everything up to the next match and the replacement for that match.
           m.appendReplacement(sb, strReplace);
           result = m.find();

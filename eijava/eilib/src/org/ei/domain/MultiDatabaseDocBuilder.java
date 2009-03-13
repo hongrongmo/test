@@ -12,7 +12,6 @@ import java.util.List;
 public class MultiDatabaseDocBuilder
 	implements DocumentBuilder
 {
-
 	public DocumentBuilder newInstance(Database database)
 	{
 		return new MultiDatabaseDocBuilder();
@@ -26,98 +25,82 @@ public class MultiDatabaseDocBuilder
 						  String dataFormat)
 		throws DocumentBuilderException
 	{
-			List finishedList = new ArrayList(listOfDocIDs.size());			
-			try
+		List finishedList = new ArrayList(listOfDocIDs.size());
+		try
+		{
+			BdDatabase bdDatabase = new BdDatabase();
+			Hashtable listTable = new Hashtable();
+			for(int i=0; i<listOfDocIDs.size();++i)
 			{
-			    BdDatabase bdDatabase = new BdDatabase();
-			    boolean isBdDatabase = false;
-			    
-				Hashtable listTable = new Hashtable();
-				for(int i=0; i<listOfDocIDs.size();++i)
+				DocID id = (DocID)listOfDocIDs.get(i);
+				Database database = id.getDatabase();
+				String databaseID = database.getID();
+				if(databaseID.length()> 3)
 				{
-					DocID id = (DocID)listOfDocIDs.get(i);
-					Database database = id.getDatabase();
-					String databaseID = database.getID();
-					if(databaseID.length()> 3)
-					{
-						databaseID = databaseID.substring(0,3);
-					}
-					
-					if(bdDatabase.isBdDatabase(databaseID))
-					{
-					    isBdDatabase = true;					   
-					    databaseID = bdDatabase.getID();
-					    System.out.println("isBdDatabase ::"+databaseID);
-					}
-
-					if(listTable.containsKey(databaseID))
-					{
-						ArrayList al = (ArrayList)listTable.get(databaseID);
-						al.add(id);
-					}
-					else
-					{
-						ArrayList al = new ArrayList();
-						al.add(id);
-						listTable.put(databaseID, al);
-					}
+					databaseID = databaseID.substring(0,3);
 				}
 
-				DatabaseConfig dConfig = DatabaseConfig.getInstance();
-
-				Enumeration en = listTable.keys();
-				Hashtable builtDocsTable = new Hashtable();
-
-				while(en.hasMoreElements())
+				if(bdDatabase.isBdDatabase(databaseID))
 				{
-					String key = (String)en.nextElement();
-					System.out.println("en.nextElement::"+key);
-					ArrayList l = (ArrayList)listTable.get(key);
-					Database database = null;
-					DocumentBuilder builder = null;
-										
-					//if(isBdDatabase)
-					if(key.equalsIgnoreCase("bd"))
-					{					   
-					    builder = new BDDocBuilder();
-					}
-					else
-					{ 
-					    database = dConfig.getDatabase(key);
-					    builder = database.newBuilderInstance(); // ??
-					}
-					
-					for(int m=0; m<l.size(); ++m)
-					{
-					    DocID doc = (DocID)l.get(m);
-						System.out.print(" -- " +  (doc.getDocID()));
-					}
-					
-					List bList = builder.buildPage(l, dataFormat);
-
-					for(int k=0; k<bList.size(); ++k)
-					{
-						EIDoc doc = (EIDoc)bList.get(k);
-						builtDocsTable.put((doc.getDocID()).getDocID(),
-											doc);
-					}
+					databaseID = bdDatabase.getID();
 				}
 
-				for(int z=0; z<listOfDocIDs.size(); ++z)
+				if(listTable.containsKey(databaseID))
 				{
-					DocID dID = (DocID)listOfDocIDs.get(z);
-
-					finishedList.add(builtDocsTable.get(dID.getDocID()));
+					ArrayList al = (ArrayList)listTable.get(databaseID);
+					al.add(id);
+				}
+				else
+				{
+					ArrayList al = new ArrayList();
+					al.add(id);
+					listTable.put(databaseID, al);
 				}
 			}
-			catch(Exception e)
+
+			DatabaseConfig dConfig = DatabaseConfig.getInstance();
+
+			Enumeration en = listTable.keys();
+			Hashtable builtDocsTable = new Hashtable();
+
+			while(en.hasMoreElements())
 			{
-				throw new DocumentBuilderException(e);
+				String key = (String)en.nextElement();
+				ArrayList l = (ArrayList)listTable.get(key);
+				Database database = null;
+				DocumentBuilder builder = null;
+
+				if(key.equalsIgnoreCase("bd"))
+				{
+					builder = new BDDocBuilder();
+				}
+				else
+				{
+					database = dConfig.getDatabase(key);
+					builder = database.newBuilderInstance(); // ??
+				}
+
+				List bList = builder.buildPage(l, dataFormat);
+
+				for(int k=0; k<bList.size(); ++k)
+				{
+					EIDoc doc = (EIDoc)bList.get(k);
+					builtDocsTable.put((doc.getDocID()).getDocID(),
+										doc);
+				}
 			}
 
-			return finishedList;
+			for(int z=0; z<listOfDocIDs.size(); ++z)
+			{
+				DocID dID = (DocID)listOfDocIDs.get(z);
+				finishedList.add(builtDocsTable.get(dID.getDocID()));
+			}
+		}
+		catch(Exception e)
+		{
+			throw new DocumentBuilderException(e);
+		}
+
+		return finishedList;
 	}
-
-
-
 }
