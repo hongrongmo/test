@@ -541,7 +541,7 @@ public class FastClient
 		try
 		{
 			String URL = buildDedupSearchURL();
-			System.out.println(URL);
+			//System.out.println("Dedup URL:"+URL);
 			HttpClient client = new HttpClient();
 			method = new GetMethod(URL);
 			int statusCode = client.executeMethod(method);
