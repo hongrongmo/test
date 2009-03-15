@@ -91,10 +91,10 @@ public class Sort
 
       String sortField = getSortField();
 
-      if(sortField.equals(Sort.PUB_YEAR_FIELD)) {
-        System.out.println("Checking mask for YR sort " + qmask);
-        if((qmask & Sort.DTS_SORT_MASK) == qmask) {
-          System.out.println("Changing Fast sort field to DTS ");
+      if(sortField.equals(Sort.PUB_YEAR_FIELD))
+      {
+        if((qmask & Sort.DTS_SORT_MASK) == qmask)
+        {
           sortField = Sort.DTS_SORT_FIELD;
         }
       }
