@@ -165,12 +165,15 @@ public class FeedbackComponent {
         try{
             list = new ArrayList();
             String ccRecepients=eiProps.getProperty("CCRecepients");
-            if(!(ccRecepients.trim()=="")){
-                StringTokenizer st=new StringTokenizer(ccRecepients,",");
-                while(st.hasMoreTokens()){
-                    String tempStr=st.nextToken();
-                    list.add(tempStr);
-                }
+            if(ccRecepients != null)
+            {
+              if(!(ccRecepients.trim()=="")){
+                  StringTokenizer st=new StringTokenizer(ccRecepients,",");
+                  while(st.hasMoreTokens()){
+                      String tempStr=st.nextToken();
+                      list.add(tempStr);
+                  }
+              }
             }
         }catch(Exception e){
             e.printStackTrace();
