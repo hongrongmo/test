@@ -206,6 +206,7 @@ public class XmlCombiner
 	    EVCombinedRec[] recArray = null;
 	    boolean isGeoBase = false;
 	    boolean isChimica = false;
+	    boolean isCpx = false;
         while (rs.next())
         {
           ++i;
@@ -221,6 +222,10 @@ public class XmlCombiner
 			  if(rs.getString("DATABASE").equals("chm"))
 			  {
 				  	isChimica = true;
+			  }
+			  if(rs.getString("DATABASE").equals("cpx"))
+			  {
+				  isCpx = true;
 			  }
 	  	  }
           
@@ -486,10 +491,22 @@ public class XmlCombiner
 					String ct = null;
 					if((ct = getCitationType(docType,confCodeFlag)) != null)
 					{
+						if((isCpx)&&((rs.getString("MAINHEADING") != null)|| rec.containsKey(EVCombinedRec.CONTROLLED_TERMS)))
+						{
+							ct = ct + " CORE";
+						}
 						rec.put(EVCombinedRec.DOCTYPE,ct);
 					}
 				}
-
+				else if(isCpx)
+				{
+					docType = "";
+					if ((rs.getString("MAINHEADING") != null)|| rec.containsKey(EVCombinedRec.CONTROLLED_TERMS)){
+						docType = docType + " CORE";
+		            }
+					rec.put(EVCombinedRec.DOCTYPE, docType);
+				}
+																	
                 if (rs.getString("CLASSIFICATIONCODE") != null)
                 {
                     rec.put(EVCombinedRec.CLASSIFICATION_CODE,
