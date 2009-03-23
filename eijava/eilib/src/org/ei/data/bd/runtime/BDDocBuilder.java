@@ -1560,7 +1560,8 @@ public class BDDocBuilder
 
 			if(ed != null)
 			{
-				if(docType.equals("Journal article (JA)"))
+			  // jam - If doctype is null, treat the article as a Journal Article
+				if((docType == null) || docType.equals("Journal article (JA)"))
 				{
 					ed.setKey(Keys.RIS_JO);
 					map.put(Keys.RIS_JO, ed);
