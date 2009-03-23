@@ -889,9 +889,13 @@ public class BDDocBuilder
 			for(int i = 0; i < cfl.length ; i++)
 			{
 				String cf = cfl[i].trim();
-				result.append(cf.substring(0,1).toUpperCase());
-				if(cf.length() > 0)
+				// jam - This code appears to be uppercasing the first character
+				// and then appending the remaining characters
+				// previously it was causing a String index out of range exception
+				// Test here to make sure we have more than a single character
+				if((cf != null) && (cf.length() > 1))
 				{
+  				result.append(cf.substring(0,1).toUpperCase());
 					result.append(cf.substring(1));
 					if(i < cfl.length-1)
 					{
