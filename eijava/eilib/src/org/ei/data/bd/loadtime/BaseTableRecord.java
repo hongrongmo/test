@@ -192,7 +192,6 @@ public class BaseTableRecord
 	   	bdTableColumns.add(AUTHORKEYWORD);
 		bdTableColumns.add(REFCOUNT);
 		bdTableColumns.add(CHEMICALTERM);
-		bdTableColumns.add(CHEMICALTERMS);
 		bdTableColumns.add(CASREGISTRYNUMBER);
 		bdTableColumns.add(SEQUENCEBANKS);
 		bdTableColumns.add(TRADENAME);
