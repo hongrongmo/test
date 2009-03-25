@@ -252,7 +252,7 @@ function generateSection(selecteddbMask)
       (selecteddbMask & EPT)        	!= EPT &&
       (selecteddbMask & REFEREX)    	!= REFEREX)
     {
-      searchin[index++] = new Field("ST","Serial title");
+      searchin[index++] = new Field("ST","Source title");
     }
 
     // Inspec unique fields
@@ -1557,7 +1557,7 @@ function clearAlldb()
       link = newLookupLink();
       link.onclick=OpenLookup_ST;
 
-      link.appendChild(document.createTextNode("Serial title"));
+      link.appendChild(document.createTextNode("Source title"));
 
       lidiv = document.createElement("li");
       lidiv.appendChild(link);
