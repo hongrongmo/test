@@ -44,7 +44,7 @@
 		
 		if ((stitle != null)&& (!stitle.trim().equals("")))
 		{
-			message.append("SERIAL TITLE: ").append(stitle).append("\r\n");		
+			message.append("SOURCE TITLE: ").append(stitle).append("\r\n");		
 		}
 		
 		if ((source != null)&& (!source.trim().equals("")))
