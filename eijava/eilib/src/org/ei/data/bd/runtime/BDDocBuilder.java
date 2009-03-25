@@ -1553,6 +1553,10 @@ public class BDDocBuilder
 				ed.setElementData(elementDataArray);
 				map.put(NEW_KEY, ed);
 			}
+			else
+			{
+				map.put(NEW_KEY, new XMLWrapper(NEW_KEY, "JOUR"));
+			}
 		}
 	}
 
