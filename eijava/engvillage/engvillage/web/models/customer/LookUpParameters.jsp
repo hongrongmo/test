@@ -209,14 +209,14 @@
         (selectedDbMask & NTIS) != NTIS)
      {
 %>
-     	<FIELD SHORTNAME="ST" DISPLAYNAME="Serial title"/>
+     	<FIELD SHORTNAME="ST" DISPLAYNAME="Source title"/>
 <%
      }
      /*
      if (selectedDbMask < 4 || ((selectedDbMask & GEO) == GEO) || ((selectedDbMask & CBF) == CBF))
      { 
 %>  
-       <FIELD SHORTNAME="ST" DISPLAYNAME="Serial title"/>
+       <FIELD SHORTNAME="ST" DISPLAYNAME="Source title"/>
 <%   }
      */
      
@@ -306,7 +306,7 @@
 	    ((selectedDbMask & IBS) == IBS))
 	{
 %>
-         	<FIELD SHORTNAME="ST" DISPLAYNAME="Serial title"/>
+         	<FIELD SHORTNAME="ST" DISPLAYNAME="Source title"/>
 <%	}
 
 	//DT
