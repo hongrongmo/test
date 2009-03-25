@@ -194,7 +194,7 @@
 	                                <li><a href="http://www.ei.org/databases/eib.html">Engineering Index Backfile </a></li>
 	                                <li><a href="http://www.ei.org/databases/inspec.html">Inspec</a></li>
 	                                <li><a href="http://www.ei.org/databases/inspec_archive.html">Inspec Archive</a></li>
-	                                <li><a href="http://www.ei.org/databases/geobase.html">GeoBase</a></li>
+	                                <li><a href="http://www.ei.org/databases/geobase.html">GEOBASE</a></li>
 	                                <li><a href="http://www.ei.org/databases/ntis_database.html">NTIS Database</a></li>
 	                                <li><a href="http://www.ei.org/databases/ei_patents.html">Ei Patents</a></li>
 	                                <li><a href="http://www.ei.org/databases/paperchem.html">PaperChem</a></li>
@@ -566,7 +566,7 @@
 	                                <option value="patents">Ei Patents </option>
 	                                <option value="enclit">EnCompassLIT</option>
 	                                <option value="encpat">EnCompassPAT</option>
-	                                <option value="geobase">GeoBase</option>
+	                                <option value="geobase">GEOBASE</option>
 	                                <option value="chimica">Chimica</option>
 	                                <option value="newsbase">Chemical Business NewsBase</option>
 	                                <option value="paperchem">PaperChem</option>
