@@ -82,7 +82,7 @@ public class EiNavigator
         displayNames.put(EiNavigator.CV,"Controlled vocabulary");
         displayNames.put(EiNavigator.CL,"Classification code");
         displayNames.put(EiNavigator.FL,"Species terms");
-        displayNames.put(EiNavigator.ST,"Serial title");
+        displayNames.put(EiNavigator.ST,"Source title");
         displayNames.put(EiNavigator.PN,"Publisher");
         displayNames.put(EiNavigator.AU,"Author");
         displayNames.put(EiNavigator.AF,"Author affiliation");
