@@ -73,7 +73,7 @@ public class SearchFields
 	public static SearchField PN = new SearchField("PN", "Publisher");
 	public static SearchField PUC = new SearchField("PUC", "US classification");
 	public static SearchField RN = new SearchField("RN", "Report number");
-	public static SearchField ST = new SearchField("ST", "Serial title");
+	public static SearchField ST = new SearchField("ST", "Source title");
 	public static SearchField KY = new SearchField("KY", "Subject/Title/Abstract");
 	public static SearchField TI = new SearchField("TI", "Title");
 	public static SearchField TR = new SearchField("TR", "Treatment type");
