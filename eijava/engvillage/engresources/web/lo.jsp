@@ -13,7 +13,7 @@
 <tr><td>EISSN</td><td><%=request.getParameter("eissn")%></td></tr>
 <tr><td>AUTHOR FIRST NAME</td><td><%=request.getParameter("aufirst")%></td></tr>
 <tr><td>AUTHOR LAST NAME</td><td><%=request.getParameter("aulast")%></td></tr>
-<tr><td>SERIAL TITLE</td><td><%=request.getParameter("title")%></td></tr>
+<tr><td>SOURCE TITLE</td><td><%=request.getParameter("title")%></td></tr>
 <tr><td>ABBREVIATED TITLE</td><td><%=request.getParameter("stitle")%></td></tr>
 <tr><td>ARTICLE TITLE</td><td><%=request.getParameter("atitle")%></td></tr>
 <tr><td>CONFERENCE TITLE</td><td><%=request.getParameter("ctitle")%></td></tr>
