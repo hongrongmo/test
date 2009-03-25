@@ -73,7 +73,7 @@
 							<li>Ei Patents</li>
 							<li>EnCompassLIT</li>
 							<li>EnCompassPAT</li>
-							<li>GeoBase</li>
+							<li>GEOBASE</li>
 							<li>Chimica</li>
 							<li>CBNB</li>
 							<li>PaperChem</li>
