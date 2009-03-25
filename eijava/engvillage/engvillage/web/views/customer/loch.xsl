@@ -118,7 +118,7 @@
 
             <xsl:if test="string($SERIALTITLE)">
             <tr>
-                <td>SERIAL TITLE:  </td>
+                <td>SOURCE TITLE:  </td>
                 <td>
                 <xsl:value-of select="$SERIALTITLE" disable-output-escaping="yes"/>
                 </td>
