@@ -147,7 +147,7 @@
 
     <xsl:if test="string($SERIALTITLE)">
     <TR>
-      <TD align="right" width="25%"><a class="MedBlackText"><b>SERIAL TITLE:</b></a> </TD>
+      <TD align="right" width="25%"><a class="MedBlackText"><b>SOURCE TITLE:</b></a> </TD>
         <td width="5"><img src="/engresources/images/s.gif" width="5"/></td>
         <TD align="left" width="75%">
         <a class="MedBlackText">
