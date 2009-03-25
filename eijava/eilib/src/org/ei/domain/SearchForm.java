@@ -253,7 +253,7 @@ public class SearchForm {
            (selecteddbMask & DatabaseConfig.EPT_MASK) != DatabaseConfig.EPT_MASK &&
            (selecteddbMask & DatabaseConfig.NTI_MASK) != DatabaseConfig.NTI_MASK)
         {
-            sectiontype.put("ST","Serial title");
+            sectiontype.put("ST","Source title");
         }
 
         //PM
