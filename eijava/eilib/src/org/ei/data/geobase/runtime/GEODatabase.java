@@ -85,7 +85,7 @@ public class GEODatabase extends Database
 
     public String getName()
     {
-        return "GeoBase";
+        return "GEOBASE";
     }
 
     public String getIndexName()
