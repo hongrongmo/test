@@ -81,7 +81,7 @@
   <a class="MedBlackText">View or download Engineering Village user guides </a><a class="LgBlueLink" href="/controller/servlet/Controller?CID=help&amp;database={$DBMASK}">here.</a><br/>
   <p><a class="MedBlackText">To request more information about Engineering Village, please complete our </a><a class="LgBlueLink" href="/controller/servlet/Controller?CID=feedback&amp;database={$DBMASK}">Customer Feedback form.</a></p>
   <p><a class="MedBlackText">To learn about other Elsevier Engineering Information products and services, please visit our Web site at </a><a class="LgBLueLink" HREF="#" onClick="window.open('http://www.ei.org', 'newpg', 'status=yes,resizable,scrollbars=yes,menubar=yes,location=yes,directories=yes,width=700,height=450')">http://www.ei.org</a>.</p>
-  <p><a class="MedBlackText">Last revised:  May 15, 2008</a></p>
+  <p><a class="MedBlackText">Last revised:  May 15, 2009</a></p>
 </td></tr>
 </table>
 </center>
