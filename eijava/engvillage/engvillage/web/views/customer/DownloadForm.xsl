@@ -296,7 +296,7 @@
     <tr>
     <td>
     <center>
-    <A CLASS="SmBlackText">&#169; 2008 Elsevier Inc. All rights reserved.</A>
+    <A CLASS="SmBlackText">&#169; 2009 Elsevier Inc. All rights reserved.</A>
     </center>
     </td>
     </tr>
