@@ -179,7 +179,7 @@ public class BarChart extends HttpServlet
             );
 
 
-            TextTitle source = new TextTitle("© 2008 Elsevier Inc.");
+            TextTitle source = new TextTitle("© 2009 Elsevier Inc.");
             source.setFont(new Font("SansSerif", Font.PLAIN, 10));
             source.setPosition(RectangleEdge.BOTTOM);
             source.setHorizontalAlignment(HorizontalAlignment.LEFT);
