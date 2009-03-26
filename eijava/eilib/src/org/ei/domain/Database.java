@@ -17,8 +17,8 @@ import org.ei.fulldoc.LinkingStrategy;
 
 public abstract class Database implements Comparable
 {
-    public static String DEFAULT_ELSEVIER_TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright 2008 Elsevier Inc.";
-    public static String DEFAULT_ELSEVIER_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2008 Elsevier Inc.";
+    public static String DEFAULT_ELSEVIER_TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright 2009 Elsevier Inc.";
+    public static String DEFAULT_ELSEVIER_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2009 Elsevier Inc.";
 
     public List getSortableFields() {
       return Arrays.asList(new SortField[]{SortField.RELEVANCE, SortField.AUTHOR, SortField.YEAR});
