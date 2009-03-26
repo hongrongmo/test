@@ -416,7 +416,7 @@ public class BulletinGUI
 
         lbYear.setOptions(new String[] {"2009","2008", "2007", "2006", "2005", "2004", "2003","2002", "2001"});
         lbYear.setValues(new String[] {"2009","2008", "2007", "2006", "2005", "2004", "2003","2002", "2001"});
-        lbYear.setDefaultChoice("2008");
+        lbYear.setDefaultChoice("2009");
         return lbYear.render();
 
     }
