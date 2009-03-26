@@ -64,7 +64,7 @@ public class ShibbolethService extends HttpServlet
 
         out.println("</b></A><br><br></td><td valign='top' width='10'><img src='/engresources/images/spacer.gif' border='0' width='10'></td></tr></table>");
         out.println("<br>");
-        out.println("<TABLE WIDTH='100%' CELLSPACING='0' CELLPADDING='0' BORDER='0'><TR><TD><CENTER><A CLASS='MedBlueLink' HREF='/controller/servlet/Controller?CID=ncAboutEI'>About Ei</A> |<a CLASS='MedBlueLink' href='/controller/servlet/Controller?CID=ncAboutEV'>About Engineering Village</a> |<A CLASS='MedBlueLink' HREF='/controller/servlet/Controller?CID=ncFeedback'>Feedback</A>&nbsp;|&nbsp;<A CLASS='MedBlueLink' HREF='/controller/servlet/Controller?CID=ncPrivacyPolicy'>Privacy Policy</A><br><A CLASS='SmBlackText'>&copy; 2008 Elsevier Inc. All rights reserved., </A></CENTER></TD></TR></TABLE>");
+        out.println("<TABLE WIDTH='100%' CELLSPACING='0' CELLPADDING='0' BORDER='0'><TR><TD><CENTER><A CLASS='MedBlueLink' HREF='/controller/servlet/Controller?CID=ncAboutEI'>About Ei</A> |<a CLASS='MedBlueLink' href='/controller/servlet/Controller?CID=ncAboutEV'>About Engineering Village</a> |<A CLASS='MedBlueLink' HREF='/controller/servlet/Controller?CID=ncFeedback'>Feedback</A>&nbsp;|&nbsp;<A CLASS='MedBlueLink' HREF='/controller/servlet/Controller?CID=ncPrivacyPolicy'>Privacy Policy</A><br><A CLASS='SmBlackText'>&copy; 2009 Elsevier Inc. All rights reserved., </A></CENTER></TD></TR></TABLE>");
         out.println("</body>");
         out.println("</html>");
     }
