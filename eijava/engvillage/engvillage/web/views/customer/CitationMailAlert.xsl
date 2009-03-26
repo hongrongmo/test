@@ -98,16 +98,16 @@
               <tr>
                   <td valign="top" colspan="5" align="left">
                       <xsl:if test="boolean(bit:hasBitSet($RESULTS-DATABASE-MASK,1))">
-                          <A CLASS="SmBlackText">Compilation and indexing terms, Copyright 2008, Elsevier Inc.</A><BR/>
+                          <A CLASS="SmBlackText">Compilation and indexing terms, Copyright 2009, Elsevier Inc.</A><BR/>
                       </xsl:if>
                       <xsl:if test="boolean(bit:hasBitSet($RESULTS-DATABASE-MASK,2))">
-                          <A CLASS="SmBlackText">Inspec, Copyright 1969-2008, IET</A><BR/>
+                          <A CLASS="SmBlackText">Inspec, Copyright 1969-2009, IET</A><BR/>
                       </xsl:if>
                       <xsl:if test="boolean(bit:hasBitSet($RESULTS-DATABASE-MASK,4))">
-                          <A CLASS="SmBlackText">Compiled and Distributed by the NTIS, US Department of Commerce.  It contains copyrighted material.  All rights reserved. 2008</A><BR/>
+                          <A CLASS="SmBlackText">Compiled and Distributed by the NTIS, US Department of Commerce.  It contains copyrighted material.  All rights reserved. 2009</A><BR/>
                       </xsl:if>
                       <xsl:if test="boolean(bit:hasBitSet($RESULTS-DATABASE-MASK,32768)) or boolean(bit:hasBitSet($RESULTS-DATABASE-MASK,16384))">
-                          <A CLASS="SmBlackText">Compilation and indexing terms, Copyright 2008 LexisNexis Univentio B.V.</A><BR/>
+                          <A CLASS="SmBlackText">Compilation and indexing terms, Copyright 2009 LexisNexis Univentio B.V.</A><BR/>
                       </xsl:if>
                   </td>
               </tr>
