@@ -28,13 +28,13 @@ import org.ei.util.StringUtil;
 public class InspecDocBuilder
     implements DocumentBuilder
 {
-    public static String INS_TEXT_COPYRIGHT = "Copyright 2008, IEE";
-    public static String INS_HTML_COPYRIGHT = "Copyright 2008, IEE";
+    public static String INS_TEXT_COPYRIGHT = "Copyright 2009, IEE";
+    public static String INS_HTML_COPYRIGHT = "Copyright 2009, IEE";
     public static String PROVIDER_TEXT = "Inspec";
     public static String TRANS_SEE_DETAILED = "For translation info., see Detailed Record / Links";
     private static final Key INS_CONTROLLED_TERMS = new Key(Keys.CONTROLLED_TERMS, "Inspec controlled terms");
     private static final Key INS_CLASS_CODES = new Key(Keys.CLASS_CODES, "Inspec classification codes");
-    private static final Key[] CITATION_KEYS = {Keys.DOCID,Keys.TITLE,Keys.EDITORS,Keys.AUTHORS, Keys.INVENTORS, Keys.REPORT_NUMBER, Keys.PUBLISHER,  Keys.PATPUBDATE, Keys.PATFILDATE, Keys.PATASSIGN, Keys.PATAPPNUM, Keys.PATNUM, Keys.PART_NUMBER, Keys.PATCOUNTRY, Keys.NO_SO, Keys.SOURCE, Keys.TRANSLATION_SERIAL_TITLE, Keys.p_PAGE_RANGE, Keys.PAGE_RANGE_pp, Keys.VOLISSUE, Keys.SERIAL_TITLE, Keys.ABBRV_SERIAL_TITLE, Keys.ISSUE_DATE, Keys.LANGUAGE, Keys.ISBN, Keys.DOI, Keys.CODEN, Keys.ISSN,Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT};
+    private static final Key[] CITATION_KEYS = {Keys.DOCID,Keys.TITLE,Keys.EDITORS,Keys.AUTHORS, Keys.INVENTORS, Keys.EDITOR_AFFS, Keys.REPORT_NUMBER, Keys.PUBLISHER,  Keys.PATPUBDATE, Keys.PATFILDATE, Keys.PATASSIGN, Keys.PATAPPNUM, Keys.PATNUM, Keys.PART_NUMBER, Keys.PATCOUNTRY, Keys.NO_SO, Keys.SOURCE, Keys.TRANSLATION_SERIAL_TITLE, Keys.AUTHOR_AFFS, Keys.p_PAGE_RANGE, Keys.PAGE_RANGE_pp, Keys.VOLISSUE, Keys.SERIAL_TITLE, Keys.ABBRV_SERIAL_TITLE, Keys.ISSUE_DATE, Keys.LANGUAGE, Keys.ISBN, Keys.DOI, Keys.CODEN, Keys.ISSN,Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT};
     private static final Key[] ABSTRACT_KEYS = {Keys.DOCID, Keys.TITLE, Keys.INVENTORS, Keys.EDITORS,Keys.AUTHORS,Keys.EDITOR_AFFS, Keys.AUTHOR_AFFS, Keys.VOLISSUE, Keys.NO_SO, Keys.SOURCE, Keys.SERIAL_TITLE, Keys.TRANSLATION_SERIAL_TITLE, Keys.ABBRV_SERIAL_TITLE,  Keys.ISSUE_DATE, Keys.LANGUAGE, Keys.REPORT_NUMBER, Keys.PATFILDATE, Keys.PATASSIGN, Keys.PATAPPNUM, Keys.PATNUM, Keys.PATCOUNTRY, Keys.PATPUBDATE, Keys.p_PAGE_RANGE, Keys.PAGE_RANGE_pp, Keys.COUNTRY_OF_PUB, Keys.ISBN, Keys.ISSN, Keys.CODEN, Keys.CONFERENCE_NAME, Keys.CONF_DATE, Keys.MEETING_LOCATION, Keys.SPONSOR, Keys.PART_NUMBER, Keys.PART_NUMBER, Keys.PUBLISHER,Keys.I_PUBLISHER, Keys.PAGE_COUNT, Keys.PUB_PLACE, Keys.DOI, Keys.PROVIDER, INS_CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS, Keys.ABSTRACT, Keys.NUMBER_OF_REFERENCES,Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT, Keys.CLASS_CODES,};
     private static final Key[] DETAILED_KEYS = {Keys.ACCESSION_NUMBER, Keys.TITLE, Keys.TITLE_TRANSLATION, Keys.AUTHORS, Keys.EDITORS, Keys.INVENTORS, Keys.PATASSIGN, Keys.PATAPPNUM, Keys.PATNUM, Keys.PATFILDATE, Keys.AUTHOR_AFFS, Keys.EDITOR_AFFS, Keys.SOURCE, Keys.SERIAL_TITLE, Keys.ABBRV_SERIAL_TITLE, Keys.VOLUME, Keys.ISSUE, Keys.ISSUING_ORG, Keys.REPORT_NUMBER, Keys.ISSUE_DATE, Keys.PUBLICATION_DATE, Keys.PART_NUMBER, Keys.PART_NUMBER, Keys.PAGE_RANGE, Keys.LANGUAGE, Keys.ISSN, Keys.CODEN, Keys.ISBN, Keys.DOC_TYPE, Keys.PATCOUNTRY, Keys.CONFERENCE_NAME, Keys.CONF_DATE, Keys.MEETING_LOCATION, Keys.CONF_CODE, Keys.SPONSOR, Keys.PUBLISHER, Keys.PUB_PLACE, Keys.PUB_LOCATION, Keys.TRANSLATION_SERIAL_TITLE, Keys.TRANSLATION_ABBREVIATED_SERIAL_TITLE, Keys.TRANSLATION_VOLUME, Keys.TRANSLATION_ISSUE, Keys.TRANSLATION_PUBLICATION_DATE, Keys.TRANSLATION_PAGES, Keys.TRANSLATION_ISSN, Keys.TRANSLATION_CODEN, Keys.TRANSLATION_COUNTRY_OF_PUB, Keys.MATERIAL_ID, Keys.ABSTRACT, Keys.ABSTRACT_TYPE, Keys.NUMBER_OF_REFERENCES, Keys.CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS, Keys.CLASS_CODES, Keys.NUMERICAL_DATA_INDEXING, Keys.ASTRONOMICAL_OBJECT_INDEXING, Keys.CHEMICAL_DATA_INDEXING, Keys.TREATMENTS, Keys.DISCIPLINES, Keys.DOI, Keys.DOCID, Keys.COPYRIGHT, Keys.PROVIDER,Keys.COPYRIGHT_TEXT};
 
@@ -1553,7 +1553,6 @@ public class InspecDocBuilder
                                 aus = aus.concat(rset.getString("AUS2"));
                             }
                             Contributors inventors = new Contributors(Keys.INVENTORS, getContributors(aus, Keys.INVENTORS));
-                            /*
                             if(rset.getString("AAFF") != null)
                             {
                                 String[] afarray = rset.getString("AAFF").split(IDDELIMITER);
@@ -1566,7 +1565,6 @@ public class InspecDocBuilder
                                 inventors.setFirstAffiliation(affil);
                                 ht.put(Keys.AUTHOR_AFFS, new Affiliations(Keys.AUTHOR_AFFS, affil));
                             }
-                            */
                             ht.put(Keys.INVENTORS, inventors);
                     }
 
@@ -1580,10 +1578,8 @@ public class InspecDocBuilder
                         }
                         Contributors authors = new Contributors(Keys.AUTHORS, getContributors(aus, Keys.AUTHORS));
 
-						/*
                         if(rset.getString("AAFF") != null)
                         {
-
                             String[] afarray = rset.getString("AAFF").split(IDDELIMITER);
                             if(rset.getString("AFC") != null)
                             {
@@ -1594,7 +1590,6 @@ public class InspecDocBuilder
                             authors.setFirstAffiliation(affil);
                             ht.put(Keys.AUTHOR_AFFS, new Affiliations(Keys.AUTHOR_AFFS, affil));
                         }
-                        */
                         ht.put(Keys.AUTHORS, authors);
 
                     }
@@ -1610,7 +1605,7 @@ public class InspecDocBuilder
 
                             Contributors editors = new Contributors(Keys.EDITORS, getContributors(rset.getString("EDS"), Keys.EDITORS));
                             ht.put(Keys.EDITORS,editors);
-							/*
+
                             if(rset.getString("EAFF") != null)
                             {
                                 String[] afarray = rset.getString("EAFF").split(IDDELIMITER);
@@ -1619,7 +1614,7 @@ public class InspecDocBuilder
                                 editors.setFirstAffiliation(affil);
                                 ht.put(Keys.EDITOR_AFFS, new Affiliations(Keys.EDITOR_AFFS, affil));
                             }
-							*/
+
 
                         }
                     }
