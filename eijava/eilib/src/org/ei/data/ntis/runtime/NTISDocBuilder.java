@@ -28,7 +28,7 @@ import org.apache.oro.text.perl.*;
 */
 public class NTISDocBuilder implements DocumentBuilder
 {
-    public static String NTIS_TEXT_COPYRIGHT = "Compiled and Distributed by the NTIS, U.S. Department of Commerce.  It contains copyrighted material.  All rights reserved. 2008";
+    public static String NTIS_TEXT_COPYRIGHT = "Compiled and Distributed by the NTIS, U.S. Department of Commerce.  It contains copyrighted material.  All rights reserved. 2009";
     public static String NTIS_HTML_COPYRIGHT = NTIS_TEXT_COPYRIGHT;
     private static final Key NTIS_PRICES = new Key(Keys.CONTROLLED_TERMS, "NTIS price code");
     private static final Key NTIS_COUNTRY = new Key(Keys.COUNTRY, "Country of origin");
