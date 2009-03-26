@@ -50,7 +50,7 @@
     <center>
     <table width="99%" cellspacing="0" cellpadding="0" border="0">
     <tr><td align="middle">
-    <A CLASS="SmBlackText">&#169; 2008 Elsevier Inc. All rights reserved.</A>
+    <A CLASS="SmBlackText">&#169; 2009 Elsevier Inc. All rights reserved.</A>
     </td></tr>
     </table>
     </center>
