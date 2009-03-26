@@ -84,7 +84,7 @@
       <xsl:text>SN  - </xsl:text><xsl:value-of select="normalize-space(.)" /><xsl:text>&#xD;&#xA;</xsl:text>
     </xsl:template>
     <xsl:template match="AFF|AD">
-      <xsl:text>AD  - </xsl:text><xsl:value-of select="normalize-space(.)" /><xsl:text>&#xD;&#xA;</xsl:text>
+      <xsl:text>AD  - </xsl:text><xsl:value-of select="strutil:stripHtml(.)" /><xsl:text>&#xD;&#xA;</xsl:text>
     </xsl:template>
     <xsl:template match="N2">
       <xsl:text>N2  - </xsl:text><xsl:value-of select="strutil:stripHtml(.)"/><xsl:text>&#xD;&#xA;</xsl:text>
