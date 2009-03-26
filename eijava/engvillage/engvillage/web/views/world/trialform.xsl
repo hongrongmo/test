@@ -628,7 +628,7 @@
 	                    <li><a href="http://www.ei.org/about/privacy.html">Privacy</a></li>
 	                </ul>
 	                <ul>
-	                    <li class="first_child"><a href="http://www.ei.org/about/copyright.html">Copyright 2008 Elsevier Inc. All Rights Reserved</a></li>
+	                    <li class="first_child"><a href="http://www.ei.org/about/copyright.html">Copyright 2009 Elsevier Inc. All Rights Reserved</a></li>
 	                </ul>
 	            </dd>
 	        </dl>
