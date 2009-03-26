@@ -22,7 +22,7 @@
   			<image>
 			    http://localhost/engresources/images/ev2logo5.gif
     			</image>
-  			<copyright>Copyright 2008 Elsevier Inc. All rights reserved.</copyright>
+  			<copyright>Copyright 2009 Elsevier Inc. All rights reserved.</copyright>
   			<xsl:apply-templates select="EI-DOCUMENT"/>
   		</channel>
   	</rss>
