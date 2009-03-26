@@ -74,7 +74,7 @@ Engineering Village features: </a>
 <a class="MedBlackText">To learn about other Elsevier Engineering Information products and services, please visit our Web site at </a><a class="LgBLueLink" HREF="#" onClick="window.open('http://www.ei.org', 'newpg', 'status=yes,resizable,scrollbars=yes,menubar=yes,location=yes,directories=yes,width=700,height=450')">http://www.ei.org</a>.
 </P>
 <P>
-<a class="MedBlackText">Last revised:  May 15, 2008</a>
+<a class="MedBlackText">Last revised:  May 15, 2009</a>
 </P>
 <P>
 <a class="LgBlueLink" href="/controller/servlet/Controller?CID=home">Back to Login Page</a>
