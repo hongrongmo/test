@@ -16,6 +16,7 @@ import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
+import org.ei.xml.Entity;
 
 import sun.misc.BASE64Encoder;
 
@@ -30,17 +31,21 @@ public class StringUtil {
     // remove html and return  - also trim string on return to avoid another call in XSL
     // called in RISResults.xsl for RIS format to fix EndNote bug
     // You could see the problem in this CPX record: 062910013901
+    // jam - XML Migration MOved trim() call inside of check for null
+    // Added Entity.prepare string to remoev HTM character codes (see: AN 20075010972862)
     public static String stripHtml(String sVal)
     {
       if(sVal != null)
       {
+        sVal = sVal.trim();
         Matcher m = HtmlRegex.matcher(sVal);
         if(m.find())
         {
           sVal = m.replaceAll(StringUtil.EMPTY_STRING);
         }
+        sVal = Entity.prepareString(sVal);
       }
-      return sVal.trim();
+      return sVal;
     }
 
     public static final int REPLACE_GLOBAL = 1;
