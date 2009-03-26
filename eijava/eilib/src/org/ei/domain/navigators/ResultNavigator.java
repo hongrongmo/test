@@ -268,7 +268,7 @@ public class ResultNavigator
           //if((mask :: cpx || mask :: cbf || mask :: ins || mask :: nti || mask :: geo || mask :: cbn || mask :: chm || mask :: pch || mask :: elt) && (mask !: upa || mask !: eup || mask !: pag || mask !: ept))
           else if((m_compendex || m_inspec || m_inspecarchive || m_ntis || m_geobase || m_georef || m_cbnb || m_chimica || m_paperchem || m_encompasslit) && !(m_uspatents || m_eupatents || m_books || m_encompasspat))
           {
-            anav.setDisplayname("Serial title");
+            anav.setDisplayname("Source title");
           }
           else
           {
