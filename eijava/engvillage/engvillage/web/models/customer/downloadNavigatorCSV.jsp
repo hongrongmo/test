@@ -139,7 +139,7 @@
 
 	out.write("<![CDATA[");
 	out.write("\n");
-  out.write("Copyright 2008 Elsevier Inc. All rights reserved.");
+  out.write("Copyright 2009 Elsevier Inc. All rights reserved.");
 	out.write("]]>");
 
 
