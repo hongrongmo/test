@@ -232,7 +232,7 @@ public class BDDocBuilder
 					formatRIS(buildField(Keys.END_PAGE,getEndPage(rset.getString("PAGE")),ht),dataFormat,Keys.END_PAGE,Keys.RIS_EP);
 					formatRISDocType(buildField(Keys.DOC_TYPE,getDocumentType(rset.getString("CITTYPE"),rset.getString("CONFCODE")),ht),dataFormat,Keys.DOC_TYPE,Keys.RIS_TY);
 					formatRIS(buildField(Keys.CONFERENCE_NAME,rset.getString("CONFNAME"),ht),dataFormat,Keys.CONFERENCE_NAME , Keys.RIS_BT);
-					formatRIS(buildField(Keys.CONF_DATE,rset.getString("CONFDATE"),ht),dataFormat,Keys.CONF_DATE , Keys.RIS_MD);
+					formatRIS(buildField(Keys.CONF_DATE,getConferenceDate(rset.getString("CONFDATE")),ht),dataFormat,Keys.CONF_DATE , Keys.RIS_MD);
 					formatRIS(buildField(Keys.MEETING_LOCATION,getConferenceLocation(rset.getString("CONFLOCATION")),ht),dataFormat,Keys.MEETING_LOCATION , Keys.RIS_CY);
 					buildField(Keys.REGION_CONTROLLED_TERMS,setElementData(rset.getString("REGIONALTERM")),ht);
 					buildField(new Key(Keys.UNCONTROLLED_TERMS, "Species terms"),setElementData(rset.getString("SPECIESTERM")),ht);
@@ -440,6 +440,26 @@ public class BDDocBuilder
 
   private static final Pattern pubdateregex = Pattern.compile("(\\w+) (\\d{2}),(\\d{4})");
 
+  private String getConferenceDate(String cdate)
+  {
+	  if(cdate != null && !cdate.trim().equals(""))
+	  {	  
+		  String [] confDates = cdate.split("-");
+		  StringBuffer result = new StringBuffer();
+		  for (int i = 0; i < confDates.length; i++)		
+		  {
+			  result.append(reFormatDate(confDates[i]));
+			  if(i < confDates.length-1)
+			  {
+				  result.append(" - "); 
+			  }
+		  }	
+		  System.out.println("confDate " + result);
+		  return result.toString();
+	  }	
+	  return cdate;
+  }
+  
   private String reFormatDate(String pubdate)
   {
     if(pubdate != null)
