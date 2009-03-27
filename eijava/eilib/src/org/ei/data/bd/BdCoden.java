@@ -53,7 +53,7 @@ public class BdCoden
     public static String convert(String fiveDigitCoden) throws Exception
     {
 		String returnVal = null;
-		if(fiveDigitCoden != null && fiveDigitCoden.length() > 5)
+		if(fiveDigitCoden != null && ((fiveDigitCoden.length() > 5)||(fiveDigitCoden.indexOf(" ") != -1)))
 		{
 			return fiveDigitCoden;
 		}
@@ -67,8 +67,8 @@ public class BdCoden
 				return null;
 
 			for(int i = 0; i < 5; i++)
-			{
-				Integer m = (Integer)codenMap.get(fiveDigitCoden.substring(i,i+1));
+			{				
+				Integer m = (Integer)codenMap.get(fiveDigitCoden.substring(i,i+1));				
 				checkDigit += m.intValue() * nums[i];
 			}
 
