@@ -32,7 +32,6 @@
       <xsl:apply-templates select="AUS"/>
       <xsl:apply-templates select="EDS"/>
       <xsl:apply-templates select="IVS"/>
-
       <span CLASS="SmBlackText">
       <xsl:choose>
           <xsl:when test ="string(NO_SO)">
@@ -121,8 +120,10 @@
       </xsl:if>
       <xsl:apply-templates select="FTTJ"/>
       <xsl:apply-templates select="STT"/>
-
+      
     </xsl:template>
+    
+
 
     <xsl:template match="TI">
         <a class="MedBlackText"><b><xsl:value-of select="." disable-output-escaping="yes"/></b>
@@ -356,15 +357,24 @@
 
     <xsl:template match="PF">
     <xsl:text> </xsl:text><xsl:text>(</xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>)</xsl:text>
-    </xsl:template>
+    </xsl:template> 
+     
+<!-- AFF for Inspec -->
 
     <xsl:template match="AFF">
-      <xsl:apply-templates/>
+    	<xsl:if test="../DOC/DB/DBMASK='2'" >
+      		<xsl:apply-templates/>
+      	</xsl:if>
     </xsl:template>
 
     <xsl:template match="AF">
+    	<xsl:if test="../DOC/DB/DBMASK='2'" >
             <span CLASS="SmBlackText"><xsl:text> </xsl:text><xsl:text>(</xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>)</xsl:text></span>
+        </xsl:if>
     </xsl:template>
+    
+<!-- end of AFF for Inspec -->
+
     <xsl:template match="EF">
             <span CLASS="SmBlackText"><xsl:text> </xsl:text><xsl:text>(</xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>)</xsl:text></span>
     </xsl:template>
@@ -490,6 +500,11 @@
                 <a CLASS="SmBlackText"><xsl:text> eds.</xsl:text></a>
             </xsl:if>
             <xsl:text> </xsl:text>
+        </xsl:if>
+        <xsl:if test="not(../DOC/DB/DBMASK='2')  and (position()=1) and (string(../../AFS/AF))" >              
+		<span CLASS="SmBlackText"><xsl:text> </xsl:text><xsl:text>(</xsl:text>
+			<xsl:value-of select="../../AFS/AF" disable-output-escaping="yes"/>
+		<xsl:text>); </xsl:text></span>			       
         </xsl:if>
     </xsl:template>
 
