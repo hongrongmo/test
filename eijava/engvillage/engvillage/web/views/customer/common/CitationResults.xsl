@@ -494,7 +494,11 @@
         </xsl:if>
         <!-- If the name contains Anon text -->
         <xsl:if test="boolean(contains($NAME,'Anon'))"><A CLASS="SmBlackText"><xsl:value-of select="$NAME"/></A></xsl:if>
-        <xsl:if test="not(position()=last())"><A CLASS="SmBlackText">;</A><xsl:text> </xsl:text></xsl:if>
+        <xsl:if test="not(position()=last())">
+        	<xsl:if test="not((position()=1 and (string(../../AFS/AF)))) ">
+        		<A CLASS="SmBlackText">;</A><xsl:text> </xsl:text>
+        	</xsl:if>
+        </xsl:if>
         <xsl:if test="position()=last()">
             <xsl:if test="name(.)='ED' and not(position()=1)">
                 <a CLASS="SmBlackText"><xsl:text> eds.</xsl:text></a>
@@ -504,7 +508,14 @@
         <xsl:if test="not(../DOC/DB/DBMASK='2')  and (position()=1) and (string(../../AFS/AF))" >              
 		<span CLASS="SmBlackText"><xsl:text> </xsl:text><xsl:text>(</xsl:text>
 			<xsl:value-of select="../../AFS/AF" disable-output-escaping="yes"/>
-		<xsl:text>); </xsl:text></span>			       
+		<xsl:text>)</xsl:text>
+		
+		<xsl:if test="not(position()=last())">
+			<xsl:text>;</xsl:text> 
+		</xsl:if>
+		
+		<xsl:text> </xsl:text> 
+		</span>			       
         </xsl:if>
     </xsl:template>
 
