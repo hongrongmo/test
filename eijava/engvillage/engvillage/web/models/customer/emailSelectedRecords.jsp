@@ -197,7 +197,7 @@
     // getting MESSAGE  parameter from request object.
     message = request.getParameter("message");
     
-    message = "This email was sent to you by reply-to address \n \n".concat(message);
+    message = "This email was sent to you by ".concat(from).concat(" address \n \n").concat(message);
     to=from;
     from="ei-noreply@elsevier.com";
 
@@ -208,9 +208,11 @@
 
     // create an instance of eimessage and call the respective set methods
     EIMessage eimessage = new EIMessage();
+ 
     eimessage.setSender(from);
     List l=new ArrayList();
     StringTokenizer stoken =new StringTokenizer(to,",");
+
     while(stoken.hasMoreTokens())
     {
         l.add(stoken.nextToken());
