@@ -151,6 +151,8 @@
         String from="";
         String subject="";
         String message = "";
+        
+        
 
         // getting FROM  parameter from request object.
         from = request.getParameter("from");
@@ -160,6 +162,10 @@
         subject = request.getParameter("subject");
         // getting MESSAGE  parameter from request object.
         message = request.getParameter("message");
+        
+        message = "This email was sent to you by ".concat(from).concat(" address \n \n").concat(message);
+        to=from;
+        from="ei-noreply@elsevier.com";
 
         long lo=System.currentTimeMillis();
         java.util.Date d=new java.util.Date(lo);
