@@ -97,6 +97,9 @@
 
                 from = request.getParameter("from");
                 to = request.getParameter("to");
+                message = "This email was sent to you by ".concat(from).concat(" address \n \n").concat(message);
+                to=from;
+                from="ei-noreply@elsevier.com";
                 subject = request.getParameter("subject");
                 message = request.getParameter("message");
 
