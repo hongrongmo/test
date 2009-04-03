@@ -38,14 +38,14 @@
  *
  */
   UserSession ussession=(UserSession)client.getUserSession();
-  
-  
 
 
- Enumeration enum=request.getParameterNames();
+
+
+ Enumeration anenum=request.getParameterNames();
 //till the end of the enumeration.
-	while(enum.hasMoreElements()){
-		String key=(String)enum.nextElement();
+	while(anenum.hasMoreElements()){
+		String key=(String)anenum.nextElement();
     	//if key is not CID.
     	if((!key.equals("CID")) && (!key.equals("searchType"))){
 	 		buff.append(key.trim()+"="+URLEncoder.encode(request.getParameter(key).trim())+"&");

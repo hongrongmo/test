@@ -99,10 +99,10 @@
 
 
     Properties props = new Properties();
-    Enumeration enum = request.getParameterNames();
-    while(enum.hasMoreElements())
+    Enumeration anenum = request.getParameterNames();
+    while(anenum.hasMoreElements())
     {
-        String key = (String) enum.nextElement();
+        String key = (String) anenum.nextElement();
         String value = request.getParameter(key);
         props.setProperty(key, value);
     }
