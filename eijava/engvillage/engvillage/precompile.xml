@@ -27,6 +27,9 @@
     <taskdef classname="org.apache.jasper.JspC" name="jasper2" >
       <classpath id="jspc.classpath">
         <pathelement location="${java.home}/../lib/tools.jar"/>
+        <fileset dir="${tomcat.home}/bin">
+          <include name="*.jar"/>
+        </fileset>
         <fileset dir="${tomcat.home}/server/lib">
           <include name="*.jar"/>
         </fileset>
