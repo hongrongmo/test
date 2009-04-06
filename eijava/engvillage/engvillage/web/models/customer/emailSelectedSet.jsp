@@ -89,22 +89,25 @@
         String from = "";
         String subject = "";
         String message = "";
+        String replyto = "";
+        
         try
         {
             try
             {
                 outWriter = new PrintWriter(new FileWriter(fileName));
 
-                from = request.getParameter("from");
-                to = request.getParameter("to");
-                message = "This email was sent to you by ".concat(from).concat(" address \n \n").concat(message);
-                to=from;
                 from="ei-noreply@elsevier.com";
+                to = request.getParameter("to");
                 subject = request.getParameter("subject");
                 message = request.getParameter("message");
+                replyto = request.getParameter("from");
+                
+                message = "This email was sent to you by ".concat(from).concat(" \n \n").concat(message);
 
                 outWriter.println("Subject: "+subject);
                 outWriter.println("from: "+from);
+                outWriter.println("reply-to: "+replyto);
                 outWriter.println("to: "+to);
                 outWriter.println("");
                 if(message != null && message.length() != 0)
