@@ -99,7 +99,7 @@ public class BdCorrection
 			if(args[3]!=null && args[3].length()>0)
 			{
 				Pattern pattern = Pattern.compile("^\\d*$");
-				Matcher matcher = pattern.matcher(args[6]);
+				Matcher matcher = pattern.matcher(args[3]);
 				if (matcher.find())
 				{
 					updateNumber = Integer.parseInt(args[3]);
@@ -132,7 +132,7 @@ public class BdCorrection
 
 			BaseTableDriver c = new BaseTableDriver(updateNumber,database);
         	c.writeBaseTableFile(fileToBeLoaded);
-			String dataFile=fileToBeLoaded+"."+updateNumber+".out.1";
+			String dataFile=fileToBeLoaded+"."+updateNumber+".out";
 			File f = new File(dataFile);
 			if(!f.exists())
 			{
@@ -140,7 +140,9 @@ public class BdCorrection
 				System.exit(1);
 			}
         	Runtime r = Runtime.getRuntime();
-			r.exec("correctionFileLoader.sh "+dataFile);
+			Process p = r.exec("correctionFileLoader.sh "+dataFile);
+			int t = p.waitFor();
+			System.out.println(" t "+t);
 			int tempTableCount = bdc.getTempTableCount(tableToBeTruncated);
 			if(tempTableCount>0)
 			{
@@ -175,19 +177,22 @@ public class BdCorrection
     private void runCorrection(String fileName,int updateNumber)
     {
 		CallableStatement pstmt = null;
+		Statement stmt = null;
 		boolean blnResult = false;
 		try
 		{
-			pstmt = con.prepareCall("{ update_bd_backup_table(?)}");
+
+			pstmt = con.prepareCall("{ call update_bd_backup_table(?)}");
 			pstmt.setInt(1,updateNumber);
 			pstmt.executeUpdate();
 
-			pstmt = con.prepareCall("{ update_bd_temp_table(?,?)}");
+			pstmt = con.prepareCall("{ call update_bd_temp_table(?,?)}");
 			pstmt.setInt(1,updateNumber);
 			pstmt.setString(2,fileName);
 			pstmt.executeUpdate();
 
-			pstmt = con.prepareCall("{ update_bd_master_table(?)}");
+			runUpdateBdTempTable(updateNumber,fileName);
+			pstmt = con.prepareCall("{ call update_bd_master_table(?)}");
 			pstmt.setInt(1,updateNumber);
 			pstmt.executeUpdate();
 		}
@@ -208,6 +213,11 @@ public class BdCorrection
 				}
 			}
 		}
+
+	}
+
+	private void runUpdateBdTempTable(int updateNumber,String fileName) throws Exception
+	{
 
 	}
 
@@ -300,6 +310,7 @@ public class BdCorrection
 
 			for(int i=0;i<tableName.length;i++)
 			{
+				System.out.println("truncate table "+tableName[i]);
 				stmt.executeUpdate("truncate table "+tableName[i]);
 			}
 
@@ -401,10 +412,8 @@ public class BdCorrection
 			String searchID = (new GUID()).toString();
 			queryObject.setID(searchID);
 			queryObject.setSearchType(Query.TYPE_QUICK);
-        	//queryObject.setAutoStemming("on");
-        	queryObject.setSearchPhrase(term1,searchField,"","","","","","");
-			System.out.println("Term1= "+term1+" searchField= "+searchField);
 
+        	queryObject.setSearchPhrase(term1,searchField,"","","","","","");
 			queryObject.setSearchQueryWriter(new FastQueryWriter());
             queryObject.compile();
 			String sessionId = null;
@@ -435,13 +444,12 @@ public class BdCorrection
 			backupList = (ArrayList)backup.get(field);
 			updateList = (ArrayList)update.get(field);
 			System.out.println("BACKUP SIZE= "+backupList.size());
-			System.out.println("UPSATE SIZE= "+updateList.size());
+			System.out.println("UPDATE SIZE= "+updateList.size());
 			String dData = null;
 			for(int i=0;i<backupList.size();i++)
 			{
 				dData = (String)backupList.get(i);
-				//System.out.println("term= "+dData);
-				//if(updateList.indexOf(dData)<0)
+
 				if(!checkUpdate(updateList,dData))
 				{
 					System.out.println("***term****= "+dData);
