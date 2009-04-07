@@ -21,12 +21,13 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
+
 import javax.mail.internet.MimeMultipart;
 
 
 public class EMail
 {
-
+	
 	public static String MAIL_HOST;
 	public static boolean DEBUG = false;
 	public static String WEBAPPRESOURCEPATH;
@@ -64,14 +65,18 @@ public class EMail
 		throws MessagingException
 	{
 	        // Create message
-	        Message msg = new MimeMessage(session);
-
-	        // Set from address
-	        msg.setFrom(new InternetAddress(message.getSender()));
+			MimeMessage msg = new MimeMessage(session);
+	        msg.setSender(new InternetAddress(message.getSender()));
+	        msg.setFrom(new InternetAddress(message.getFrom()));
 
 	        if(!message.getTORecepients().isEmpty())
 	        {
 	            msg.setRecipients(Message.RecipientType.TO, (Address[]) message.getTORecepients().toArray(new Address[1]));
+	        }
+	        
+	        if(!message.getReplyToRecepients().isEmpty())
+	        {
+	            msg.setReplyTo((Address[]) message.getReplyToRecepients().toArray(new Address[1]));
 	        }
 
 	        if(!message.getCCRecepients().isEmpty())
@@ -83,7 +88,7 @@ public class EMail
 	        {
 	            msg.setRecipients(Message.RecipientType.BCC, (Address[]) message.getBCCRecepients().toArray(new Address[1]));
 	        }
-
+	        
 	        // Setting the Subject and Content Type
 	        msg.setSubject(message.getSubject());
 	        msg.setSentDate(message.getSentDate());
@@ -153,18 +158,30 @@ public class EMail
     /**
      * Send the message using the arguments
      **/
-    public void sendMessage( String recipient, String subject, String message, String sender) throws MessagingException
+    public void sendMessage( String recipient, 
+    						String subject, 
+    						String message, 
+    						String sender,
+    						String replyto,
+    						String from) throws MessagingException
     {
         // Create meassage
-        Message msg = new MimeMessage(session);
+    	MimeMessage msg = new MimeMessage(session);
 
         // Set from address
-        msg.setFrom(new InternetAddress(sender));
-
-        msg.addRecipient(Message.RecipientType.TO, new InternetAddress(recipient));
+        msg.setFrom(new InternetAddress(from));
+        msg.setSender(new InternetAddress(sender));
+        msg.addRecipient(Message.RecipientType.TO, 
+        					new InternetAddress(recipient));
 
         // Setting the Subject and Content Type
         msg.setSubject(subject);
+        InternetAddress iaddress = new InternetAddress(replyto);
+        
+        Address[] address = new InternetAddress[1];
+        address[0]=iaddress;
+        msg.setReplyTo(address);
+        
         msg.setContent(message, "text/plain");
         Transport.send(msg);
     }
