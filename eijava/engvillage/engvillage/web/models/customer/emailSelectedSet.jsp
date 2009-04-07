@@ -90,6 +90,7 @@
         String subject = "";
         String message = "";
         String replyto = "";
+        String sender ="ei-noreply@elsevier.com";
         
         try
         {
@@ -103,12 +104,14 @@
                 message = request.getParameter("message");
                 replyto = request.getParameter("from");
                 
-                message = "This email was sent to you by ".concat(from).concat(" \n \n").concat(message);
+                
+                message = "This email was sent to you on behalf of ".concat(from).concat(" \n \n").concat(message);
 
                 outWriter.println("Subject: "+subject);
                 outWriter.println("from: "+from);
                 outWriter.println("reply-to: "+replyto);
                 outWriter.println("to: "+to);
+                outWriter.println("sender: "+sender);
                 outWriter.println("");
                 if(message != null && message.length() != 0)
                 {
