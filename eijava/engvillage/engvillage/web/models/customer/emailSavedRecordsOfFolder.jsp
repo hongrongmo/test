@@ -184,6 +184,14 @@
         {
             l.add(stoken.nextToken());
         }
+        
+        List lreplyto=new ArrayList();  
+        StringTokenizer token =new StringTokenizer(replyto,",");
+        while(token.hasMoreTokens())
+        {
+        	lreplyto.add(token.nextToken());
+        }      
+        eimessage.addReplyToRecepients(lreplyto);
 
         eimessage.addTORecepients(l);
         eimessage.setSubject(subject);
