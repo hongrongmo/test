@@ -151,6 +151,8 @@
         String from="";
         String subject="";
         String message = "";
+        String replyto="";
+        String sender="ei-noreply@elsevier.com";
         
         
 
@@ -163,9 +165,10 @@
         // getting MESSAGE  parameter from request object.
         message = request.getParameter("message");
         
-        message = "This email was sent to you by ".concat(from).concat(" address \n \n").concat(message);
-        to=from;
-        from="ei-noreply@elsevier.com";
+        replyto = request.getParameter("from");
+        
+        message = "This email was sent to you on behalf of ".concat(from).concat(" address \n \n").concat(message);
+    
 
         long lo=System.currentTimeMillis();
         java.util.Date d=new java.util.Date(lo);
@@ -174,7 +177,7 @@
 
         // create an instance of eimessage and call the respective set methods
         EIMessage eimessage = new EIMessage();
-        eimessage.setSender(from);
+        
         List l=new ArrayList();
         StringTokenizer stoken =new StringTokenizer(to,",");
         while(stoken.hasMoreTokens())
@@ -185,6 +188,8 @@
         eimessage.addTORecepients(l);
         eimessage.setSubject(subject);
         eimessage.setSentDate(d);
+        eimessage.setSender(sender);
+        eimessage.setFrom(from);
 
         TransformerFactory tfactory = new com.icl.saxon.TransformerFactoryImpl();
         ServletContext context = getServletContext();
