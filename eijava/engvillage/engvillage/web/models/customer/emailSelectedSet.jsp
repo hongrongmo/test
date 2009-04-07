@@ -98,7 +98,7 @@
             {
                 outWriter = new PrintWriter(new FileWriter(fileName));
 
-                from="ei-noreply@elsevier.com";
+                from=request.getParameter("from");
                 to = request.getParameter("to");
                 subject = request.getParameter("subject");
                 message = request.getParameter("message");
@@ -109,8 +109,8 @@
 
                 outWriter.println("Subject: "+subject);
                 outWriter.println("from: "+from);
-                outWriter.println("reply-to: "+replyto);
                 outWriter.println("to: "+to);
+                outWriter.println("reply-to: "+replyto);
                 outWriter.println("sender: "+sender);
                 outWriter.println("");
                 if(message != null && message.length() != 0)
