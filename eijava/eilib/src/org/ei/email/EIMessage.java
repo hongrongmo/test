@@ -44,11 +44,15 @@ public class EIMessage {
      * The message subject line.
      **/
     private String subject;
+    
+
 
     /**
      * The message sender address.
      **/
     private InternetAddress  sender;
+    
+    private InternetAddress  from;
 
 	/**
 	 * The message sender address.
@@ -76,8 +80,25 @@ public class EIMessage {
     /**
      * defauls constructor
      **/
-    public EIMessage(){
+    private List replyToRecepients = new ArrayList();
+    
+    public EIMessage()
+    {
 
+    }
+       
+    public void addReplyToRecepients(List recepients) throws AddressException
+    {
+        for(Iterator iter = recepients.iterator();iter.hasNext();)
+        {
+
+            this.replyToRecepients.add(new InternetAddress(((String) iter.next()).toLowerCase()));
+        }
+     }
+
+    public List getReplyToRecepients()
+    {
+        return this.replyToRecepients;
     }
 
     /**
@@ -109,13 +130,21 @@ public class EIMessage {
     public String getSubject(){
         return subject;
     }
+    
 
     /**
      * Sets the sender
      * @param   sender   Sender of the message. This parameter should conform to an RFC822 address.
      **/
-    public void setSender(String sender) throws AddressException{
+    public void setSender(String sender) throws AddressException
+    {
         this.sender = new InternetAddress(sender.toLowerCase());
+    }
+    
+    
+    public void setFrom(String from) throws AddressException
+    {
+        this.from = new InternetAddress(from.toLowerCase());
     }
 
     /**
@@ -126,6 +155,10 @@ public class EIMessage {
         return sender.getAddress();
     }
 
+    
+    public String getFrom(){
+        return from.getAddress();
+    }
 	/**
 	 * Sets the sent date
 	 * @param   sentDate.
@@ -248,7 +281,7 @@ public class EIMessage {
         StringBuffer buf = new StringBuffer();
 
         buf.append("From:");
-        buf.append(getSender().toString());
+        buf.append(getFrom().toString());
         buf.append(ls);
 
         buf.append("To:");
@@ -286,6 +319,22 @@ public class EIMessage {
                 buf.append(ls);
             }
         }
+        
+        buf.append("Reply-to:");
+        buf.append(ls);
+        for(Iterator iter = getReplyToRecepients().iterator();iter.hasNext();){
+            buf.append(iter.next().toString());
+            if(iter.hasNext()){
+                buf.append(", ");
+                buf.append(ls);
+            }else{
+                buf.append(ls);
+            }
+        }
+        
+        buf.append("Sender:");
+        buf.append(getSender().toString());
+        buf.append(ls);
 
         buf.append("Subject:");
         buf.append(getSubject());
