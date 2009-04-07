@@ -340,7 +340,7 @@
 						</td>
 					</tr>
 					<tr><td valign="top" height="5" colspan="3"><img src="/engresources/images/spacer.gif" border="0" height="5"/></td></tr>
-					<tr><td valign="top" align="right"><A CLASS="MedBlackText">From: </A></td><td valign="top" width="6">
+					<tr><td valign="top" align="right"><A CLASS="MedBlackText">Your Email: </A></td><td valign="top" width="6">
 						<img src="/engresources/images/spacer.gif" border="0" width="6"/></td><td valign="top"><A CLASS="MedBlackText">
 
 						<input type="text" name="from" size="25">
