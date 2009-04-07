@@ -331,7 +331,7 @@
 				</input>
 			</xsl:for-each>
 
-				<table border="0" width="200" cellspacing="0" cellpadding="0">
+				<table border="0" width="300" cellspacing="0" cellpadding="0">
 					<tr><td valign="top" height="15" colspan="3"><img src="/engresources/images/spacer.gif" border="0" height="15"/></td></tr>
 					<tr><td valign="top" align="right"><A CLASS="MedBlackText">To: </A></td><td valign="top" width="6">
 						<img src="/engresources/images/spacer.gif" border="0" width="6"/></td><td valign="top"><A CLASS="MedBlackText">
