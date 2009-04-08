@@ -54,7 +54,7 @@ public class CombinedXMLWriter
     private NumberFormat formatter;
     private long starttime = 0;
     private String database;
-
+    
 	public String getDatabase() {
 		return database;
 	}
@@ -328,6 +328,7 @@ public class CombinedXMLWriter
     public void writeRec(EVCombinedRec rec)
         throws Exception
     {
+    	setDatabase(rec.getString(EVCombinedRec.DATABASE));
     	this.eid = rec.getString(EVCombinedRec.DOCID);    	
         begin();        
         out.println("   <ROW> ");
