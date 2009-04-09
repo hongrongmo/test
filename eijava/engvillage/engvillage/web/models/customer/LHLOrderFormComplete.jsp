@@ -130,9 +130,7 @@
 	Database databaseObj = databaseConfig.getDatabase(database);
 	docID=new DocID(docId,databaseObj);
 	l.add(docID);
-	String databaseId=docID.getDatabase().getID();
-	Database d = databaseConfig.getDatabase(databaseId);
-	DocumentBuilder builder = d.newBuilderInstance();
+	MultiDatabaseDocBuilder builder = new MultiDatabaseDocBuilder();
 	List builtList = builder.buildPage(l, Abstract.ABSTRACT_FORMAT);
 
 	PageEntryBuilder eBuilder = new PageEntryBuilder(sessionId);
