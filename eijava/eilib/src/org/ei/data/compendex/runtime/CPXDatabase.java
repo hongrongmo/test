@@ -14,6 +14,7 @@ import org.ei.domain.SearchControl;
 import org.ei.domain.SearchField;
 import org.ei.domain.sort.SortField;
 import org.ei.fulldoc.LinkingStrategy;
+import org.ei.domain.MultiDatabaseDocBuilder;
 
 public class CPXDatabase extends Database
 {
@@ -70,7 +71,7 @@ public class CPXDatabase extends Database
 
     public DocumentBuilder newBuilderInstance()
     {
-        return new CPXDocBuilder(this);
+      return new MultiDatabaseDocBuilder();
     }
 
     public SearchControl newSearchControlInstance()
