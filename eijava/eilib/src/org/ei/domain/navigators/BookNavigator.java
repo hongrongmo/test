@@ -205,6 +205,41 @@ public class BookNavigator extends EiNavigator {
         return citationhtml;
     }
 
+    public String getBookFilterQueryString()
+    {
+      StringBuffer sb = new StringBuffer();
+      int modsize = this.getModifiers().size();
+
+      if(modsize > 1)
+      {
+        sb.append("(");
+      }
+
+      Iterator itrmods = (this.getModifiers()).iterator();
+      while(itrmods.hasNext())
+      {
+        EiModifier modifier = (EiModifier) itrmods.next();
+        if(modifier != null)
+        {
+          String svalue = (String) modifier.getValue();
+          sb.append("{");
+          sb.append(getBookIsbn(svalue.toLowerCase()));
+          sb.append("}");
+          if(itrmods.hasNext())
+          {
+            sb.append(" OR ");
+          }
+        }
+      }
+      if(modsize > 1)
+      {
+        sb.append(")");
+      }
+      sb.append(" WN BN");
+
+      return sb.toString();
+    }
+
     public String getBookIsbn(String title)
     {
         String isbn  = "";
