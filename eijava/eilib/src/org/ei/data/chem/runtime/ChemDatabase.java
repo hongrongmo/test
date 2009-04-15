@@ -13,6 +13,7 @@ import java.io.*;
 import org.ei.fulldoc.LinkingStrategy;
 import org.ei.data.compendex.runtime.CPXLinkingStrategy;
 import org.ei.domain.sort.SortField;
+import org.ei.domain.MultiDatabaseDocBuilder;
 
 public class ChemDatabase extends Database
 {
@@ -62,7 +63,7 @@ public class ChemDatabase extends Database
 
     public DocumentBuilder newBuilderInstance()
     {
-      return new ChemDocBuilder(this);
+      return new MultiDatabaseDocBuilder();
     }
 
     public SearchControl newSearchControlInstance()
