@@ -7,6 +7,7 @@ import org.ei.fulldoc.LinkingStrategy;
 import org.ei.domain.sort.SortField;
 import java.util.List;
 import java.util.Arrays;
+import org.ei.domain.MultiDatabaseDocBuilder;
 
 public class C84Database
 	extends Database
@@ -36,7 +37,7 @@ public class C84Database
 
     public DocumentBuilder newBuilderInstance()
     {
-        return new C84DocBuilder(this);
+        return new MultiDatabaseDocBuilder();
     }
 
     public SearchControl newSearchControlInstance()
