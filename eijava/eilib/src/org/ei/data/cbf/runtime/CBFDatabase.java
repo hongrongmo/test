@@ -8,6 +8,7 @@ import org.ei.data.c84.runtime.*;
 import org.ei.domain.sort.SortField;
 import java.util.List;
 import java.util.Arrays;
+import org.ei.domain.MultiDatabaseDocBuilder;
 
 public class CBFDatabase extends C84Database
 {
@@ -56,7 +57,7 @@ public class CBFDatabase extends C84Database
 
     public DocumentBuilder newBuilderInstance()
     {
-        return new CBFDocBuilder(this);
+        return new MultiDatabaseDocBuilder();
     }
 
     public String getID()
