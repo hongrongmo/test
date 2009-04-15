@@ -13,6 +13,8 @@ import org.ei.domain.FastSearchControl;
 import org.ei.domain.SearchControl;
 import org.ei.domain.SearchField;
 import org.ei.domain.sort.SortField;
+import org.ei.domain.MultiDatabaseDocBuilder;
+
 import org.ei.data.compendex.runtime.CPXLinkingStrategy;
 import org.ei.fulldoc.LinkingStrategy;
 
@@ -65,7 +67,7 @@ public class GEODatabase extends Database
 
     public DocumentBuilder newBuilderInstance()
     {
-        return new GEODocBuilder(this);
+        return new MultiDatabaseDocBuilder();
     }
 
     public SearchControl newSearchControlInstance()
