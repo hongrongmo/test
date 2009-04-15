@@ -10,7 +10,6 @@ import org.ei.data.DataCleaner;
 import org.ei.data.upt.loadtime.AssigneeFilter;
 import org.ei.domain.*;
 import org.ei.data.upt.loadtime.*;
-import org.ei.data.compendex.runtime.CPXDocBuilder;
 
 import org.ei.util.StringUtil;
 import org.ei.xml.Entity;
