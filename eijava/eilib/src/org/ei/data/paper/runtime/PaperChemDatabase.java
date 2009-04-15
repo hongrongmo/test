@@ -16,6 +16,7 @@ import org.ei.domain.SearchControl;
 import org.ei.domain.SearchField;
 import org.ei.fulldoc.LinkingStrategy;
 import org.ei.domain.sort.SortField;
+import org.ei.domain.MultiDatabaseDocBuilder;
 
 public class PaperChemDatabase extends Database {
 
@@ -53,7 +54,7 @@ public class PaperChemDatabase extends Database {
 		searchfield.put("TI", "Y");
 		searchfield.put("FL", "Y");
 	}
-	
+
 	 private DataDictionary dataDictionary = new PaperChemDataDictionary();
 
     public int getStartYear(boolean hasBackFile) {
@@ -65,7 +66,7 @@ public class PaperChemDatabase extends Database {
     }
 
     public DocumentBuilder newBuilderInstance() {
-        return new PaperChemDocBuilder(this);
+        return new MultiDatabaseDocBuilder();
     }
 
     public SearchControl newSearchControlInstance() {
@@ -166,7 +167,7 @@ public class PaperChemDatabase extends Database {
 			return true;
 		}
 	}
-	
+
     public DataDictionary getDataDictionary()
     {
         return dataDictionary;
