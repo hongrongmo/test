@@ -76,7 +76,7 @@ public class XmlCombiner
         }
         String operation = args[6];
         tablename = args[7];
-        String currentDb = args[8].toLowerCase();        
+        String currentDb = args[8].toLowerCase();
         long timestamp=0;
         //if(args.length==10)
             //timestamp = Long.parseLong(args[9]);
@@ -107,7 +107,7 @@ public class XmlCombiner
         }
         else if(loadNumber == 0)
         {
-        	
+
         	for(int yearIndex = 1904; yearIndex <= 2009; yearIndex++)
             {
         	  System.out.println("Processing year " + yearIndex + "...");
@@ -125,13 +125,13 @@ public class XmlCombiner
         		System.out.println("Processing year 9999...");
                 c = new XmlCombiner(new CombinedXMLWriter(recsPerbatch, 9999,dbname, "dev"));
                 c.writeCombinedByYear(url, driver, username, password, 9999);
-        	}        	
+        	}
         	if(Combiner.CURRENTDB.equalsIgnoreCase("cpx"))
         	{
         		System.out.println("Processing year 9999...");
                 c = new XmlCombiner(new CombinedXMLWriter(recsPerbatch, 9999,dbname, "dev"));
                 c.writeCombinedByYear(url, driver, username, password, 9999);
-        	}        
+        	}
         }
         else
         {
@@ -168,7 +168,7 @@ public class XmlCombiner
             else if(Combiner.CURRENTDB.equalsIgnoreCase("cpx")&&(year==9999))
         	{
             	rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER, substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,SEQ_NUM from " + Combiner.TABLENAME + " where SEQ_NUM is not null and PUBLICATIONYEAR in ('1798','1885','1964-1980','1977-1978','1977-1980','1978-1979','1979-1980','1979-1981','1979-1989','1980-1981','1980-1982','1981-1982','1981-1983','1982-1983','1983-1984','1984-1985','1985-1986','1986-1987','1987-1988','1988-1989','1989-190','1989-1989','1989-1990','1989-1993','1990-1991','1991-1991','1991-1992','1992-1993','1992-1994','1993-1994','1993-1995','1993-94','1994-1995','1995-1996','1995-96','1996-1997','1997-1998','1997-2003','1997-98','1998-1999','1998-99','1999-2000','2000-2001','2001-1993','2001-2002','2002-2003','2003-2004','2004-2005','2005-2006','2006-2007','2007-2008','2008-2009','2008;2008') AND loadnumber != 0 and loadnumber < 1000000 and database='" + Combiner.CURRENTDB + "'");
-        	}                      
+        	}
             else
             {
             	rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER,PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,SEQ_NUM from " + Combiner.TABLENAME + " where SEQ_NUM is not null and PUBLICATIONYEAR='" + year + "' AND loadnumber != 0 and loadnumber < 1000000 and database='" + Combiner.CURRENTDB + "'");
@@ -209,7 +209,7 @@ public class XmlCombiner
         }
     }
 
-    private void writeRecs(ResultSet rs)
+    void writeRecs(ResultSet rs)
         throws Exception
     {
         int i = 0;
@@ -239,10 +239,10 @@ public class XmlCombiner
 				  isCpx = true;
 			  }
 	  	  }
-          
+
           /*
           String sts = rs.getString("REGIONALTERM");
-                    
+
           if(sts == null || !isGeoBase)
           {
           	numCoords = 1;
@@ -517,7 +517,7 @@ public class XmlCombiner
 		            }
 					rec.put(EVCombinedRec.DOCTYPE, docType);
 				}
-																	
+
                 if (rs.getString("CLASSIFICATIONCODE") != null)
                 {
                     rec.put(EVCombinedRec.CLASSIFICATION_CODE,
@@ -723,7 +723,7 @@ public class XmlCombiner
 				}
 
 				catch(Exception e)
-				{				 
+				{
 				  e.printStackTrace();
 				}
             }
@@ -748,7 +748,7 @@ public class XmlCombiner
     }
 
 
-	private String[] prepareBdAuthor(String bdAuthor)
+	String[] prepareBdAuthor(String bdAuthor)
 	{
 		if(bdAuthor != null && !bdAuthor.trim().equals(""))
 		{
@@ -845,7 +845,7 @@ public class XmlCombiner
 	}
 
 
-	private String[] prepareMulti(String multiString)
+	String[] prepareMulti(String multiString)
 	        throws Exception
     {
 		String[] multiStringArray = multiString.split(BdParser.AUDELIMITER,-1);
@@ -940,7 +940,7 @@ public class XmlCombiner
 		return ds;
     }
 
-	private String preparePublisherName(String pn) throws Exception
+	String preparePublisherName(String pn) throws Exception
 	{
 		String[] pnames = pn.split(BdParser.IDDELIMITER);
 		String[] pnames2 = pnames[0].split(BdParser.AUDELIMITER);
