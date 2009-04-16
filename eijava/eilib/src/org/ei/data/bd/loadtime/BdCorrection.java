@@ -11,7 +11,7 @@ import org.ei.data.bd.loadtime.*;
 import org.ei.domain.*;
 import org.ei.query.base.*;
 import org.ei.connectionpool.*;
-
+import java.text.*;
 import java.io.*;
 import java.lang.Process;
 import java.util.regex.*;
@@ -29,11 +29,12 @@ public class BdCorrection
 
     private int intDbMask = 1;
     private static Connection con = null;
-    static String url="jdbc:oracle:thin:@jupiter:1521:eidb1";
+    static String url="jdbc:oracle:thin:@neptune:1521:ei";
     static String driver="oracle.jdbc.driver.OracleDriver";
     static String username="ap_correction";
     static String password="ei3it";
     static String database;
+    static String action;
 
 
     public static void main(String args[])
@@ -43,36 +44,31 @@ public class BdCorrection
 		int updateNumber   		= 0;
 		String tableToBeTruncated = "bd_master_temp,deleted_lookupIndex";
 
-		if(args.length>7)
+		if(args.length>8)
 		{
-			if(args[4]!=null)
-			{
-				url = args[4];
-			}
 			if(args[5]!=null)
 			{
-				driver = args[5];
+				url = args[5];
 			}
 			if(args[6]!=null)
 			{
-				username = args[6];
+				driver = args[6];
 			}
 			if(args[7]!=null)
 			{
-				password = args[7];
+				username = args[7];
+			}
+			if(args[8]!=null)
+			{
+				password = args[8];
 			}
 		}
 
-		if(args.length>3)
+		if(args.length>4)
 		{
 			if(args[0]!=null)
 			{
 				fileToBeLoaded = args[0];
-			}
-			else
-			{
-				System.out.println("please enter a filename");
-				System.exit(1);
 			}
 
 
@@ -80,21 +76,13 @@ public class BdCorrection
 			{
 				tableToBeTruncated = args[1];
 			}
-			else
-			{
-				System.out.println("please enter a temp table name");
-				System.exit(1);
-			}
+
 
 			if(args[2]!=null)
 			{
 				database = args[2];
 			}
-			else
-			{
-				System.out.println("please enter a database name");
-				System.exit(1);
-			}
+
 
 			if(args[3]!=null && args[3].length()>0)
 			{
@@ -110,6 +98,12 @@ public class BdCorrection
 					System.exit(1);
 				}
 			}
+
+			if(args[4]!=null)
+			{
+				action = args[4];
+			}
+
 		}
 		else
 		{
@@ -121,7 +115,7 @@ public class BdCorrection
 		try
 		{
 			BdCorrection bdc = new BdCorrection();
-			FastSearchControl.BASE_URL = "http://ei-stage.bos3.fastsearch.net:15100";
+			FastSearchControl.BASE_URL = "http://ei-main.bos3.fastsearch.net:15100";
 			con = bdc.getConnection(url,driver,username,password);
 
 			/**********delete all data from temp table *************/
@@ -142,19 +136,28 @@ public class BdCorrection
         	Runtime r = Runtime.getRuntime();
 			Process p = r.exec("correctionFileLoader.sh "+dataFile);
 			int t = p.waitFor();
-			System.out.println(" t "+t);
+			//System.out.println(" t "+t);
 			int tempTableCount = bdc.getTempTableCount(tableToBeTruncated);
 			if(tempTableCount>0)
 			{
 				System.out.println(tempTableCount+" records was loaded into the temp table");
-				bdc.runCorrection(dataFile,updateNumber);
+				bdc.runCorrection(dataFile,updateNumber,database,action);
 			}
 			else
 			{
 				System.out.println("no record was loaded into the temp table");
 				System.exit(1);
 			}
-			bdc.processLookupIndex(bdc.getLookupData("update"),bdc.getLookupData("backup"));
+			if(action.equalsIgnoreCase("update"))
+			{
+				bdc.processLookupIndex(bdc.getLookupData("update"),bdc.getLookupData("backup"));
+			}
+			else if(action.equalsIgnoreCase("delete"))
+			{
+				bdc.processLookupIndex(new HashMap(),bdc.getLookupData("backup"));
+			}
+			bdc.doFastExtract(updateNumber,database,action);
+
 		}
 		finally
 		{
@@ -174,7 +177,174 @@ public class BdCorrection
         System.exit(1);
     }
 
-    private void runCorrection(String fileName,int updateNumber)
+    private void doFastExtract(int updateNumber,String dbname,String action) throws Exception
+    {
+		CombinedWriter writer = new CombinedXMLWriter(1000,
+		                                              updateNumber,
+		                                              dbname,
+		                                              "dev");
+
+		writer.setOperation("correction");
+
+        XmlCombiner c = new XmlCombiner(writer);
+        Statement stmt = null;
+        ResultSet rs = null;
+        try
+		{
+
+			stmt = con.createStatement();
+			if(action.equalsIgnoreCase("update"))
+			{
+				System.out.println("Running the query...");
+				rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER, substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,SEQ_NUM from bd_master_orig where updateNumber="+updateNumber);
+				//System.out.println("Got records ...");
+				c.writeRecs(rs);
+				//System.out.println("Wrote records.");
+				writer.end();
+			}
+			else if(action.equalsIgnoreCase("delete"))
+			{
+				rs = stmt.executeQuery("select m_id from bd_correction_temp");
+				creatDeleteFile(rs,dbname,updateNumber);
+			}
+
+		}
+		finally
+		{
+
+			if (rs != null)
+			{
+				try
+				{
+					rs.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+
+			if (stmt != null)
+			{
+				try
+				{
+					stmt.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+		}
+    }
+
+    private void creatDeleteFile(ResultSet rs,String database,int updateNumber)
+    {
+
+		String batchidFormat = "0000";
+		String batchID = "0000";
+		String numberID = "0000";
+		File file=new File("fast");
+		FileWriter out= null;
+		//System.out.println("updateNumber= "+updateNumber);
+		try
+		{
+			if(!file.exists())
+			{
+				file.mkdir();
+			}
+			String upNumber = Integer.toString(updateNumber);
+			if(upNumber.length()<5)
+			{
+				numberID = upNumber;
+				batchID = "0000";
+			}
+			else if(upNumber.length()<6)
+			{
+				numberID = upNumber.substring(0,4);
+				batchID = upNumber.substring(4)+"000";
+			}
+			else if (upNumber.length()<7)
+			{
+				numberID = upNumber.substring(0,4);
+				batchID = upNumber.substring(4)+"00";
+			}
+			else if (upNumber.length()<8)
+			{
+				numberID = upNumber.substring(0,4);
+				batchID = upNumber.substring(4)+"0";
+			}
+			else
+			{
+				numberID = upNumber.substring(0,4);
+				batchID = upNumber.substring(4,8);
+			}
+			batchidFormat = batchID;
+			long starttime = System.currentTimeMillis();
+			String batchPath = "fast/batch_" + numberID + "_" + batchidFormat;
+			//System.out.println("PATH= "+batchPath);
+			file=new File(batchPath);
+			if(!file.exists())
+			{
+				file.mkdir();
+			}
+			String root = batchPath +"/EIDATA";
+			file=new File(root);
+
+			if(!file.exists())
+			{
+				file.mkdir();
+			}
+			file = new File(root+"/delete.txt");
+			if(!file.exists())
+			{
+				file.createNewFile();
+			}
+			out = new FileWriter(file);
+			while (rs.next())
+			{
+				if(rs.getString("M_ID") != null)
+				{
+					out.write(rs.getString("M_ID")+"\n");
+				}
+			}
+			out.flush();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			if(rs !=null)
+			{
+				try
+				{
+					rs.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+
+			if(out !=null)
+			{
+				try
+				{
+					out.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+
+		}
+
+	}
+
+    private void runCorrection(String fileName,int updateNumber,String database,String action)
     {
 		CallableStatement pstmt = null;
 		Statement stmt = null;
@@ -182,19 +352,38 @@ public class BdCorrection
 		try
 		{
 
-			pstmt = con.prepareCall("{ call update_bd_backup_table(?)}");
+			pstmt = con.prepareCall("{ call update_bd_backup_table(?,?)}");
 			pstmt.setInt(1,updateNumber);
+			pstmt.setString(2,database);
 			pstmt.executeUpdate();
 
-			pstmt = con.prepareCall("{ call update_bd_temp_table(?,?)}");
-			pstmt.setInt(1,updateNumber);
-			pstmt.setString(2,fileName);
-			pstmt.executeUpdate();
+			if(action != null && action.equalsIgnoreCase("update"))
+			{
+				System.out.println(updateNumber+" "+fileName+" "+database);
+				pstmt = con.prepareCall("{ call update_bd_temp_table(?,?,?)}");
+				pstmt.setInt(1,updateNumber);
+				pstmt.setString(2,fileName);
+				pstmt.setString(3,database);
+				pstmt.executeUpdate();
 
-			runUpdateBdTempTable(updateNumber,fileName);
-			pstmt = con.prepareCall("{ call update_bd_master_table(?)}");
-			pstmt.setInt(1,updateNumber);
-			pstmt.executeUpdate();
+				pstmt = con.prepareCall("{ call update_bd_master_table(?,?)}");
+				pstmt.setInt(1,updateNumber);
+				pstmt.setString(2,database);
+				pstmt.executeUpdate();
+			}
+			else if(action != null && action.equalsIgnoreCase("delete"))
+			{
+				pstmt = con.prepareCall("{ call delete_bd_master_table(?,?)}");
+				pstmt.setInt(1,updateNumber);
+				pstmt.setString(2,database);
+				pstmt.executeUpdate();
+			}
+			else
+			{
+				System.out.println("What do you want me to do? action "+action+" not known");
+				System.exit(1);
+			}
+
 		}
 		catch(Exception e)
 		{
@@ -310,7 +499,7 @@ public class BdCorrection
 
 			for(int i=0;i<tableName.length;i++)
 			{
-				System.out.println("truncate table "+tableName[i]);
+				//System.out.println("truncate table "+tableName[i]);
 				stmt.executeUpdate("truncate table "+tableName[i]);
 			}
 
@@ -348,6 +537,7 @@ public class BdCorrection
 					String term = (String)data.get(i);
 					if(term != null && field != null && database != null)
 					{
+						//System.out.println("insert deleted_lookupIndex= "+term);
 						stmt.executeUpdate("insert into deleted_lookupIndex(field,term,database) values('"+field+"','"+term+"','"+database+"')");
 						con.commit();
 					}
@@ -376,18 +566,22 @@ public class BdCorrection
 
     private void processLookupIndex(HashMap update,HashMap backup) throws Exception
     {
-		database = (String)update.get("DATABASE");
+		//database = (String)update.get("DATABASE");
+		//if(database==null)
+		{
+			database = this.database;
+		}
 		HashMap outputMap = new HashMap();
 		HashMap deletedAuthorLookupIndex 		= getDeleteData(update,backup,"AUTHOR");
 		HashMap deletedAffiliationLookupIndex 	= getDeleteData(update,backup,"AFFILIATION");
-		HashMap deletedControlltermLookupIndex 	= getDeleteData(update,backup,"CONTROLLEDTERM");
-		HashMap deletedPublisherNameLookupIndex = getDeleteData(update,backup,"PUBLISHERNAME");
-		HashMap deletedSerialtitleLookupIndex 	= getDeleteData(update,backup,"SERIALTITLE");
+		//HashMap deletedControlltermLookupIndex 	= getDeleteData(update,backup,"CONTROLLEDTERM");
+		//HashMap deletedPublisherNameLookupIndex = getDeleteData(update,backup,"PUBLISHERNAME");
+		//HashMap deletedSerialtitleLookupIndex 	= getDeleteData(update,backup,"SERIALTITLE");
 		saveDeletedData("AU",checkFast(deletedAuthorLookupIndex,"AU",database),database);
 		saveDeletedData("AF",checkFast(deletedAffiliationLookupIndex,"AF",database),database);
-		saveDeletedData("CV",checkFast(deletedControlltermLookupIndex,"CV",database),database);
-		saveDeletedData("PN",checkFast(deletedPublisherNameLookupIndex,"PN",database),database);
-		saveDeletedData("ST",checkFast(deletedSerialtitleLookupIndex,"ST",database),database);
+		//saveDeletedData("CV",checkFast(deletedControlltermLookupIndex,"CV",database),database);
+		//saveDeletedData("PN",checkFast(deletedPublisherNameLookupIndex,"PN",database),database);
+		//saveDeletedData("ST",checkFast(deletedSerialtitleLookupIndex,"ST",database),database);
 	}
 
 	private List checkFast(HashMap inputMap, String searchField, String database) throws Exception
@@ -397,38 +591,48 @@ public class BdCorrection
 		DatabaseConfig databaseConfig = DatabaseConfig.getInstance(DriverConfig.getDriverTable());
 		String[] credentials = new String[]{"CPX","INS","NTI","UPA","EUP"};
 		String[] dbName = {database};
+		//System.out.println("dbName= "+database);
 		int intDbMask = databaseConfig.getMask(dbName);
 
 		Iterator searchTerms = inputMap.keySet().iterator();
 
 		while (searchTerms.hasNext())
 		{
-			SearchControl sc = new FastSearchControl();
-			String term1 = (String) searchTerms.next();
-			int oc = Integer.parseInt((String)inputMap.get(term1));
-			Query queryObject = new Query(databaseConfig, credentials);
-			queryObject.setDataBase(intDbMask);
-
-			String searchID = (new GUID()).toString();
-			queryObject.setID(searchID);
-			queryObject.setSearchType(Query.TYPE_QUICK);
-
-        	queryObject.setSearchPhrase(term1,searchField,"","","","","","");
-			queryObject.setSearchQueryWriter(new FastQueryWriter());
-            queryObject.compile();
-			String sessionId = null;
-			int pagesize = 25;
-            SearchResult result = sc.openSearch(queryObject,sessionId,pagesize,false);
-			int c = result.getHitCount();
-			String indexCount = (String)inputMap.get(term1);
-			if(indexCount!=null && indexCount!="" && Integer.parseInt(indexCount) >= c)
+			try
 			{
-				outputList.add(term1);
+				SearchControl sc = new FastSearchControl();
+				String term1 = (String) searchTerms.next();
+				int oc = Integer.parseInt((String)inputMap.get(term1));
+				Query queryObject = new Query(databaseConfig, credentials);
+				queryObject.setDataBase(intDbMask);
+
+				String searchID = (new GUID()).toString();
+				queryObject.setID(searchID);
+				queryObject.setSearchType(Query.TYPE_QUICK);
+				System.out.println("term = "+term1+" searchField= "+searchField);
+				queryObject.setSearchPhrase("{"+term1+"}",searchField,"","","","","","");
+				queryObject.setSearchQueryWriter(new FastQueryWriter());
+				queryObject.compile();
+				String sessionId = null;
+				int pagesize = 25;
+				SearchResult result = sc.openSearch(queryObject,sessionId,pagesize,false);
+				int c = result.getHitCount();
+				String indexCount = (String)inputMap.get(term1);
+				if(indexCount!=null && indexCount!="" && Integer.parseInt(indexCount) >= c)
+				{
+					outputList.add(term1);
+				}
+				//System.out.println("IndexCount= "+(String)inputMap.get(term1));
+				//System.out.println("Count= "+c);
 			}
-			System.out.println("IndexCount= "+(String)inputMap.get(term1));
-			System.out.println("Count= "+c);
+			catch(Exception e)
+			{
+				e.printStackTrace();
+			}
 
 		}
+
+		System.out.println("SIZE= "+outputList.size());
 
 		return outputList;
 
@@ -443,25 +647,26 @@ public class BdCorrection
 		{
 			backupList = (ArrayList)backup.get(field);
 			updateList = (ArrayList)update.get(field);
-			System.out.println("BACKUP SIZE= "+backupList.size());
-			System.out.println("UPDATE SIZE= "+updateList.size());
-			String dData = null;
-			for(int i=0;i<backupList.size();i++)
+			if(backupList!=null)
 			{
-				dData = (String)backupList.get(i);
-
-				if(!checkUpdate(updateList,dData))
+				String dData = null;
+				for(int i=0;i<backupList.size();i++)
 				{
-					System.out.println("***term****= "+dData);
-					if(deleteLookupIndex.containsKey(dData.toUpperCase()))
-					{
-						deleteLookupIndex.put(dData.toUpperCase(),Integer.toString(Integer.parseInt((String)deleteLookupIndex.get(dData.toUpperCase()))+1));
-					}
-					else
-					{
-						deleteLookupIndex.put(dData.toUpperCase(),"1");
-					}
+					dData = (String)backupList.get(i);
 
+					if(!checkUpdate(updateList,dData))
+					{
+						System.out.println("***term****= "+dData);
+						if(deleteLookupIndex.containsKey(dData.toUpperCase()))
+						{
+							deleteLookupIndex.put(dData.toUpperCase(),Integer.toString(Integer.parseInt((String)deleteLookupIndex.get(dData.toUpperCase()))+1));
+						}
+						else
+						{
+							deleteLookupIndex.put(dData.toUpperCase(),"1");
+						}
+
+					}
 				}
 			}
 		}
@@ -470,12 +675,15 @@ public class BdCorrection
 
 	private boolean checkUpdate(List update,String term)
 	{
-		for(int i=0;i<update.size();i++)
+		if(update != null)
 		{
-			String updateDate = (String)update.get(i);
-			if(term.equalsIgnoreCase(updateDate))
+			for(int i=0;i<update.size();i++)
 			{
-				return true;
+				String updateDate = (String)update.get(i);
+				if(term.equalsIgnoreCase(updateDate))
+				{
+					return true;
+				}
 			}
 		}
 		return false;
