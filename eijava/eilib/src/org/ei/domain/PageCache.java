@@ -28,7 +28,7 @@ public class PageCache
 {
 
     private String sessionID;
-    private static long timeHolder = 1L;
+    private static int timeHolder = 1;
 
     /**
     *   Constructor which takes session id as argument.
@@ -195,8 +195,8 @@ public class PageCache
             proc = con.prepareCall("{ call PageCache_writePage(?,?,?,?,?)}");
             proc.setString(1,sessionID);
             proc.setString(2,searchID);
-            proc.setLong(3,pageNo);
-            proc.setLong(4,timeHolder);
+            proc.setInt(3,pageNo);
+            proc.setInt(4,timeHolder);
             proc.setString(5,lString);
             proc.executeUpdate();
         }
