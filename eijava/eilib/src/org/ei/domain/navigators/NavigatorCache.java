@@ -42,37 +42,40 @@ public class NavigatorCache
         String navstring = StringUtil.EMPTY_STRING;
         ConnectionBroker broker = null;
         Connection con = null;
-        CallableStatement pstmt = null;
+        PreparedStatement pstmt = null;
         try
         {
             broker = ConnectionBroker.getInstance();
             con = broker.getConnection(DatabaseConfig.SESSION_POOL);
 
-            pstmt = con.prepareCall("{ call NavigatorCache_addToCache(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+            //pstmt = con.prepareCall("{ call NavigatorCache_addToCache(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+            pstmt = con.prepareStatement("INSERT INTO NAVIGATOR_CACHE(SEARCH_ID, SESSION_ID, DB, YR, CV, CL, FL, ST, PN, AU, AF, DT, LA, CO, PK, PEC, PAC, PUC, PCI, PID) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+
             // jam - 11/9/2004 added DB Column
             int intStmtIndex = 1;
 
-//          log.info("UNCOMP " + nav.getNavigatorByName(EiNavigator.YR).toString().length());
-//          log.info("UNCOMP " + nav.getNavigatorByName(EiNavigator.CV).toString().length());
-//          log.info("UNCOMP " + nav.getNavigatorByName(EiNavigator.CL).toString().length());
-//          log.info("UNCOMP " + nav.getNavigatorByName(EiNavigator.FL).toString().length());
-//          log.info("UNCOMP " + nav.getNavigatorByName(EiNavigator.ST).toString().length());
-//          log.info("UNCOMP " + nav.getNavigatorByName(EiNavigator.PN).toString().length());
-//          log.info("UNCOMP " + nav.getNavigatorByName(EiNavigator.AU).toString().length());
-//          log.info("UNCOMP " + nav.getNavigatorByName(EiNavigator.AF).toString().length());
-//          log.info("UNCOMP " + nav.getNavigatorByName(EiNavigator.DT).toString().length());
-//          log.info("UNCOMP " + nav.getNavigatorByName(EiNavigator.LA).toString().length());
+            /*
+            Zipped fields
+            ---------------------------------
+            EiNavigator.FL/EiNavigator.KY
+            EiNavigator.ST/EiNavigator.BKT
+            EiNavigator.PN
+            EiNavigator.AU
+            EiNavigator.AF
+            EiNavigator.CO/EiNavigator.BKS
+            EiNavigator.PK/EiNavigator.IC
+            */
 
-//          log.info(EiNavigator.YR);
-//          log.info(EiNavigator.CV);
-//          log.info(EiNavigator.CL);
-//          log.info(EiNavigator.FL);
-//          log.info(EiNavigator.ST);
-//          log.info(EiNavigator.PN);
-//          log.info(EiNavigator.AU);
-//          log.info(EiNavigator.AF);
-//          log.info(EiNavigator.DT);
-//          log.info(EiNavigator.LA);
+//          log.info("UNCOMP EiNavigator.YR " + nav.getNavigatorByName(EiNavigator.YR).toString().length());
+//          log.info("UNCOMP EiNavigator.CV " + nav.getNavigatorByName(EiNavigator.CV).toString().length());
+//          log.info("UNCOMP EiNavigator.CL " + nav.getNavigatorByName(EiNavigator.CL).toString().length());
+//          log.info("UNCOMP EiNavigator.FL " + nav.getNavigatorByName(EiNavigator.FL).toString().length());
+//          log.info("UNCOMP EiNavigator.ST " + nav.getNavigatorByName(EiNavigator.ST).toString().length());
+//          log.info("UNCOMP EiNavigator.PN " + nav.getNavigatorByName(EiNavigator.PN).toString().length());
+//          log.info("UNCOMP EiNavigator.AU " + nav.getNavigatorByName(EiNavigator.AU).toString().length());
+//          log.info("UNCOMP EiNavigator.AF " + nav.getNavigatorByName(EiNavigator.AF).toString().length());
+//          log.info("UNCOMP EiNavigator.DT " + nav.getNavigatorByName(EiNavigator.DT).toString().length());
+//          log.info("UNCOMP EiNavigator.LA " + nav.getNavigatorByName(EiNavigator.LA).toString().length());
 
             pstmt.setString(intStmtIndex++,searchid);
             pstmt.setString(intStmtIndex++,sessionid);
