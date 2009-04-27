@@ -2,6 +2,7 @@ package org.ei.domain;
 
 // general imports
 import java.sql.CallableStatement;
+import java.sql.PreparedStatement;
 import java.sql.Clob;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -185,19 +186,21 @@ public class PageCache
     {
         ConnectionBroker broker = ConnectionBroker.getInstance();
         Connection con = null;
-        CallableStatement proc = null;
+        PreparedStatement proc = null;
 
         StringBuffer queryString = new StringBuffer();
         try
         {
             broker = ConnectionBroker.getInstance();
             con = broker.getConnection(DatabaseConfig.SESSION_POOL);
-            proc = con.prepareCall("{ call PageCache_writePage(?,?,?,?,?)}");
+            //proc = con.prepareCall("{ call PageCache_writePage(?,?,?,?,?)}");
+            proc = con.prepareStatement("INSERT INTO PAGE_CACHE VALUES(?,?,?,?)");
             proc.setString(1,sessionID);
             proc.setString(2,searchID);
             proc.setInt(3,pageNo);
-            proc.setInt(4,timeHolder);
-            proc.setString(5,lString);
+            // this is not used in insert - variable was ignored in PLSQL
+            //proc.setInt(4,timeHolder);
+            proc.setString(4,lString);
             proc.executeUpdate();
         }
         catch(Exception e)
