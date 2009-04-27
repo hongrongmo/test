@@ -114,7 +114,7 @@ public class Searches
     {
         ConnectionBroker broker = null;
         Connection con = null;
-        CallableStatement pstmt = null;
+        PreparedStatement pstmt = null;
         int result = 0;
 
         try
@@ -122,7 +122,8 @@ public class Searches
 
             broker = ConnectionBroker.getInstance();
             con = broker.getConnection(DatabaseConfig.SESSION_POOL);
-            pstmt = con.prepareCall("{ call Searches_insertSearch(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+            //pstmt = con.prepareCall("{ call Searches_insertSearch(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+            pstmt = con.prepareStatement("INSERT INTO SEARCHES(	SEARCH_ID,USER_ID,SESSION_ID,MASK,SEARCH_TYPE,SAVE_DATE, ACCESS_DATE,EMAIL_ALERT,SAVED,EMAILALERTWEEK,SEARCH_PHRASE_1,SEARCH_PHRASE_2, SEARCH_PHRASE_3,SEARCH_OPTION_1,SEARCH_OPTION_2,SEARCH_OPTION_3,BOOLEAN_1, BOOLEAN_2,RESULTS_COUNT,SUBCOUNTS,LANGUAGE,START_YEAR,END_YEAR,AUTOSTEMMING, SORT_OPTION,SORT_DIRECTION,DISPLAY_QUERY,DOCUMENT_TYPE,TREATMENT_TYPE, DISCIPLINE_TYPE,RFRX_COLLS,LASTUPDATES,DUPSET,DEDUP,DEDUPDB,REFINE_STACK,RESULTS_STATE) VALUES(?,?,?,?,?,SYSDATE,SYSDATE,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
             int intStmtIndex = 1;
             pstmt.setString(intStmtIndex++, query.getID());
             pstmt.setString(intStmtIndex++, query.getUserID());
