@@ -15,6 +15,12 @@
           <DISPLAYURL>http://@data_server@/engvillage/views/world/openRSSP.xsl</DISPLAYURL>
           <MIMETYPE>text/xml</MIMETYPE>
         </CONTENTDESCRIPTOR>
+        <CONTENTDESCRIPTOR BULKMODE="YES">
+          <ID>openATOM</ID>
+          <DATASOURCEURL>http://@data_server@//engvillage/models/world/atom.jsp</DATASOURCEURL>
+          <DISPLAYURL>http://@data_server@//engvillage/views/world/openATOM.xsl</DISPLAYURL>
+          <MIMETYPE>text/xml</MIMETYPE>
+        </CONTENTDESCRIPTOR>         
         <CONTENTDESCRIPTOR BULKMODE="NO">
           <ID>tokenExpired</ID>
           <DATASOURCEURL>http://@data_server@/engvillage/models/world/tokenExpired.jsp</DATASOURCEURL>
