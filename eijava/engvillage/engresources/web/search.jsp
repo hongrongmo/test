@@ -1,3 +1,4 @@
+<% response.setContentType("application/opensearchdescription+xml"); %>
 <%
 		String serverName = request.getServerName();
 		int serverPort = request.getServerPort();
