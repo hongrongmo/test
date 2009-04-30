@@ -112,7 +112,7 @@ try
 		Pagemaker pagemaker = new Pagemaker(sessionId,
 						    25,
 						    docIds,
-						    Citation.XMLCITATION_FORMAT);
+						    FullDoc.FULLDOC_FORMAT);
 		String serverName= ussession.getProperty("ENV_BASEADDRESS");
 		out.write("<!--BH--><HEADER>");
 		out.write("<SEARCH-ID>"+queryID+"</SEARCH-ID>");
