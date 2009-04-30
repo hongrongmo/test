@@ -58,15 +58,19 @@
       </xsl:choose>
     <xsl:text disable-output-escaping="yes"><![CDATA["/>]]></xsl:text>
     <xsl:apply-templates select="AUS"/>
+    <xsl:apply-templates select="AB"/>
   </entry>
 </xsl:template>
 <xsl:template match="AUS">
-	<xsl:text disable-output-escaping="yes"><![CDATA[<author><name>]]></xsl:text>	
 	<xsl:apply-templates select="AU"/>
-	<xsl:text disable-output-escaping="yes"><![CDATA[</name></author>]]></xsl:text>
 </xsl:template>
 <xsl:template match="AU">
-	<xsl:value-of select="text()"/>;
+	<author><name><xsl:value-of select="text()"/></name></author>
+</xsl:template>
+<xsl:template match="AFS">
+</xsl:template>
+<xsl:template match="AB">
+	<summary type="text"><xsl:value-of select="."/></summary>
 </xsl:template>
 </xsl:stylesheet>
 
