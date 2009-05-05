@@ -259,19 +259,18 @@ public class BdCorrection
 
     private void doFastExtract(int updateNumber,String dbname,String action) throws Exception
     {
-		CombinedWriter writer = new CombinedXMLWriter(1000,
+		CombinedWriter writer = new CombinedXMLWriter(50000,
 		                                              updateNumber,
 		                                              dbname,
 		                                              "dev");
 
-		writer.setOperation("correction");
+		writer.setOperation("add");
 
         XmlCombiner c = new XmlCombiner(writer);
         Statement stmt = null;
         ResultSet rs = null;
         try
 		{
-
 			stmt = con.createStatement();
 			if(action.equalsIgnoreCase("update"))
 			{
@@ -280,11 +279,13 @@ public class BdCorrection
 				//System.out.println("Got records ...");
 				c.writeRecs(rs);
 				//System.out.println("Wrote records.");
+
 				writer.end();
+				writer.flush();
 			}
 			else if(action.equalsIgnoreCase("delete"))
 			{
-				rs = stmt.executeQuery("select m_id from bd_correction_temp");
+				rs = stmt.executeQuery("select m_id from bd_master_orig where accessnumber in (select accessnumber from bd_correction_temp)");
 				creatDeleteFile(rs,dbname,updateNumber);
 			}
 
@@ -782,7 +783,7 @@ public class BdCorrection
 				//System.out.println("update "+updateData+" term="+term);
 				if(term.equalsIgnoreCase(updateData))
 				{
-					//System.out.println("***update1 "+updateData+" term="+term);
+					System.out.println("***update1 "+updateData+" term="+term);
 					return true;
 				}
 			}
@@ -871,55 +872,57 @@ public class BdCorrection
 				EVCombinedRec rec = new EVCombinedRec();
 
 				accessNumber = rs.getString("ACCESSNUMBER");
-				//System.out.println("accessNumber= "+accessNumber);
 
-				rec.put(EVCombinedRec.ACCESSION_NUMBER, accessNumber);
-
-				if(rs.getString("AUTHOR") != null)
+				if(accessNumber !=null && accessNumber.length()>5 && !(accessNumber.substring(0,6).equals("200138")))
 				{
-					String authorString = rs.getString("AUTHOR");
-					if(rs.getString("AUTHOR_1") !=null)
+					rec.put(EVCombinedRec.ACCESSION_NUMBER, accessNumber);
+
+					if(rs.getString("AUTHOR") != null)
 					{
-						authorString=authorString+rs.getString("AUTHOR_1");
+						String authorString = rs.getString("AUTHOR");
+						if(rs.getString("AUTHOR_1") !=null)
+						{
+							authorString=authorString+rs.getString("AUTHOR_1");
+						}
+						authorList.addAll(Arrays.asList(xml.prepareBdAuthor(authorString)));
 					}
-					authorList.addAll(Arrays.asList(xml.prepareBdAuthor(authorString)));
-				}
 
-				if (rs.getString("AFFILIATION") != null)
-				{
-					String affiliation = rs.getString("AFFILIATION");
-					if(rs.getString("AFFILIATION_1")!=null)
+					if (rs.getString("AFFILIATION") != null)
 					{
-						affiliation = affiliation+rs.getString("AFFILIATION_1");
+						String affiliation = rs.getString("AFFILIATION");
+						if(rs.getString("AFFILIATION_1")!=null)
+						{
+							affiliation = affiliation+rs.getString("AFFILIATION_1");
+						}
+						BdAffiliations aff = new BdAffiliations(affiliation);
+						affiliationList.addAll(Arrays.asList(aff.getSearchValue()));
+
 					}
-					BdAffiliations aff = new BdAffiliations(affiliation);
-					affiliationList.addAll(Arrays.asList(aff.getSearchValue()));
 
-				}
+					if (rs.getString("CHEMICALTERM") != null)
+					{
+						controltermList.addAll(Arrays.asList(xml.prepareMulti(rs.getString("CHEMICALTERM"))));
+					}
 
-				if (rs.getString("CHEMICALTERM") != null)
-				{
-					controltermList.addAll(Arrays.asList(xml.prepareMulti(rs.getString("CHEMICALTERM"))));
-				}
+					if (rs.getString("CONTROLLEDTERM") != null)
+					{
+						controltermList.addAll(Arrays.asList(xml.prepareMulti(rs.getString("CONTROLLEDTERM"))));
+					}
 
-				if (rs.getString("CONTROLLEDTERM") != null)
-				{
-					controltermList.addAll(Arrays.asList(xml.prepareMulti(rs.getString("CONTROLLEDTERM"))));
-				}
+					if (rs.getString("PUBLISHERNAME") != null)
+					{
+						publishernameList.add(xml.preparePublisherName(rs.getString("PUBLISHERNAME")));
+					}
 
-				if (rs.getString("PUBLISHERNAME") != null)
-				{
-					publishernameList.add(xml.preparePublisherName(rs.getString("PUBLISHERNAME")));
-				}
+					if (rs.getString("SOURCETITLE") != null)
+					{
+						serialTitleList.add(rs.getString("SOURCETITLE"));
+					}
 
-				if (rs.getString("SOURCETITLE") != null)
-				{
-					serialTitleList.add(rs.getString("SOURCETITLE"));
-				}
-
-				if(rs.getString("DATABASE") != null)
-				{
-					database = rs.getString("DATABASE");
+					if(rs.getString("DATABASE") != null)
+					{
+						database = rs.getString("DATABASE");
+					}
 				}
 			}
 
