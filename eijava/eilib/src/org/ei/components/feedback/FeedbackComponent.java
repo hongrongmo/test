@@ -66,8 +66,9 @@ public class FeedbackComponent {
 
         EIMessage msg = new EIMessage();
         msg.setMessageBody(getMessageBody(feedbackForm));
-		msg.setSubject(getMessageSubject(feedbackForm));
-		msg.setSender(feedbackForm.getUserMailAddress());
+        msg.setSubject(getMessageSubject(feedbackForm));
+        msg.setSender("eicustomersupport@elsevier.com");
+        msg.setFrom(feedbackForm.getUserMailAddress());
 
         msg.addTORecepients(getTORecepients());
         msg.addCCRecepients(getCCRecepients());
