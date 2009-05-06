@@ -35,6 +35,8 @@ import javax.mail.internet.InternetAddress;
 **/
 public class EIMessage {
 
+    public static final String DEFAULT_SENDER = "eicustomersupport@elsevier.com";
+
     /**
      * The message body text..
      **/
@@ -44,14 +46,14 @@ public class EIMessage {
      * The message subject line.
      **/
     private String subject;
-    
+
 
 
     /**
      * The message sender address.
      **/
     private InternetAddress  sender;
-    
+
     private InternetAddress  from;
 
 	/**
@@ -81,12 +83,12 @@ public class EIMessage {
      * defauls constructor
      **/
     private List replyToRecepients = new ArrayList();
-    
+
     public EIMessage()
     {
 
     }
-       
+
     public void addReplyToRecepients(List recepients) throws AddressException
     {
         for(Iterator iter = recepients.iterator();iter.hasNext();)
@@ -130,7 +132,7 @@ public class EIMessage {
     public String getSubject(){
         return subject;
     }
-    
+
 
     /**
      * Sets the sender
@@ -140,8 +142,8 @@ public class EIMessage {
     {
         this.sender = new InternetAddress(sender.toLowerCase());
     }
-    
-    
+
+
     public void setFrom(String from) throws AddressException
     {
         this.from = new InternetAddress(from.toLowerCase());
@@ -155,7 +157,7 @@ public class EIMessage {
         return sender.getAddress();
     }
 
-    
+
     public String getFrom(){
         return from.getAddress();
     }
@@ -319,7 +321,7 @@ public class EIMessage {
                 buf.append(ls);
             }
         }
-        
+
         buf.append("Reply-to:");
         buf.append(ls);
         for(Iterator iter = getReplyToRecepients().iterator();iter.hasNext();){
@@ -331,7 +333,7 @@ public class EIMessage {
                 buf.append(ls);
             }
         }
-        
+
         buf.append("Sender:");
         buf.append(getSender().toString());
         buf.append(ls);
