@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.sql.SQLException;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Hashtable;
@@ -71,6 +72,7 @@ public class ThesaurusRecordBroker
             con = broker.getConnection(DatabaseConfig.SEARCH_POOL);
             stmt = con.createStatement();
 
+			//System.out.println("ThesaurusPage::buildPage: " + buf.toString());
             rs = stmt.executeQuery(buf.toString());
             while(rs.next())
             {
@@ -84,17 +86,37 @@ public class ThesaurusRecordBroker
                 ThesaurusRecordImpl trec = new ThesaurusRecordImpl(id);
                 ThesaurusRecordProxy proxy = new ThesaurusRecordProxy(trec);
                 proxy.setLeadinTermIDs(buildRecIDs(rs.getString("LEADIN_TERMS")));
-                proxy.setTopTermIDs(buildRecIDs(rs.getString("TOP_TERMS")));
                 proxy.setRelatedTermIDs(buildRecIDs(rs.getString("RELATED_TERMS")));
-                proxy.setNarrowerTermIDs(buildRecIDs(rs.getString("NARROWER_TERMS")));
+                String nt = null;
+                try
+                {
+				  // when NARROWER_TERMS column is CLOB TYPE
+				  nt = StringUtil.getStringFromClob(rs.getClob("NARROWER_TERMS"));
+				}
+				catch(SQLException e)
+				{
+				  // when NARROWER_TERMS column is VARCHAR2
+				  nt = rs.getString("NARROWER_TERMS");
+				}
+
+                proxy.setNarrowerTermIDs(buildRecIDs(nt));
                 proxy.setBroaderTermIDs(buildRecIDs(rs.getString("BROADER_TERMS")));
                 proxy.setUseTermIDs(buildRecIDs(rs.getString("USE_TERMS")));
-                proxy.setPriorTermIDs(buildRecIDs(rs.getString("PRIOR_TERMS")));
-                proxy.setClassificationIDs(buildClassIDs(rs.getString("CLASS_CODES")));
                 proxy.setScopeNotes(rs.getString("SCOPE_NOTES"));
-                proxy.setHistoryScopeNotes(rs.getString("HISTORY_SCOPE_NOTES"));
-                proxy.setDateOfIntro(rs.getString("DATE_OF_INTRO"));
                 proxy.setStatus(rs.getString("STATUS"));
+                if(database.getIndexName().equals("ins") || database.getIndexName().equals("cpx"))
+                {
+					proxy.setTopTermIDs(buildRecIDs(rs.getString("TOP_TERMS")));
+					proxy.setHistoryScopeNotes(rs.getString("HISTORY_SCOPE_NOTES"));
+					proxy.setClassificationIDs(buildClassIDs(rs.getString("CLASS_CODES")));
+					proxy.setPriorTermIDs(buildRecIDs(rs.getString("PRIOR_TERMS")));
+					proxy.setDateOfIntro(rs.getString("DATE_OF_INTRO"));
+				}
+				if(database.getIndexName().equals("grf"))
+				{
+					proxy.setCoordinates(rs.getString("COORDINATES"));
+					proxy.setType(rs.getString("TYPE"));
+				}
                 int index = getOriginalIndex(id,
                                              thesaurusRecIDs,
                                              beginIndex,
@@ -273,7 +295,8 @@ public class ThesaurusRecordBroker
             broker = ConnectionBroker.getInstance();
             con = broker.getConnection(DatabaseConfig.SEARCH_POOL);
 
-            pstmt = con.prepareStatement("select t_id, main_term_search from "+database.getIndexName()+"_thesaurus where main_term_search like ? order by t_id");
+			pstmt = con.prepareStatement("select t_id, main_term_search from "+database.getIndexName()+"_thesaurus where main_term_search like ? order by t_id");
+            //System.out.println("ThesaurusPage::getAlphaStartingPoint: " + "select t_id, main_term_search from "+database.getIndexName()+"_thesaurus where main_term_search like ? order by t_id");
             boolean keepTrying = true;
 
             int endPoint = basePhrase.length();
@@ -395,7 +418,8 @@ public class ThesaurusRecordBroker
             broker = ConnectionBroker.getInstance();
             con = broker.getConnection(DatabaseConfig.SEARCH_POOL);
 
-            pstmt = con.prepareStatement("select t_id, main_term_search from "+database.getIndexName()+"_thesaurus where main_term_search like ?");
+			pstmt = con.prepareStatement("select t_id, main_term_search from "+database.getIndexName()+"_thesaurus where main_term_search like ?");
+            //System.out.println("ThesaurusPage::getSuggestions: " + "select t_id, main_term_search from "+database.getIndexName()+"_thesaurus where main_term_search like ?");
             boolean keepTrying = true;
 
             int endPoint = basePhrase.length();
