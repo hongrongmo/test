@@ -257,6 +257,109 @@ else if(database.equals("16"))
     </ENGnetBASE-QUICK-SEARCH>
 <%
 }
+else if(database.equals("8192"))
+{
+    startYearOpt = 1973;
+%>
+    <COMBINED-QUICK-SEARCH>
+    <LIMITERS>
+    <CONSTRAINED-FIELD MASK="<%=database %>" SHORTNAME="YR" DISPLAYNAME="YEARS">
+    <OPTIONS>
+    <%    
+    for(;startYearOpt <= endYearOpt; startYearOpt++)
+    { %>
+        <OPTION SHORTNAME="<%=startYearOpt%>" DISPLAYNAME="<%=startYearOpt%>" />
+<%  }
+    %>
+    </OPTIONS>
+    </CONSTRAINED-FIELD>
+    
+    <CONSTRAINED-FIELD MASK="<%=database %>" SHORTNAME="DT" DISPLAYNAME="Document type">
+    <OPTIONS>
+    <OPTION DISPLAYNAME="All document types" SHORTNAME="NO-LIMIT"/>
+    <OPTION DISPLAYNAME="Journal article" SHORTNAME="JA"/>
+    <OPTION DISPLAYNAME="Conference article" SHORTNAME="CA"/>
+    <OPTION DISPLAYNAME="Monograph review" SHORTNAME="MR"/>
+    </OPTIONS>
+    </CONSTRAINED-FIELD>
+    <CONSTRAINED-FIELD MASK="<%=database %>" SHORTNAME="TR" DISPLAYNAME="Treatment type">
+    <OPTIONS>
+    <OPTION DISPLAYNAME="Treatment type not available" SHORTNAME="NO-LIMIT"/>
+    </OPTIONS>
+    </CONSTRAINED-FIELD>
+    <CONSTRAINED-FIELD MASK="<%=database %>" SHORTNAME="LA" DISPLAYNAME="Language">
+    <OPTIONS>
+    <OPTION DISPLAYNAME="All languages" SHORTNAME="NO-LIMIT"/>
+    <OPTION DISPLAYNAME="English" SHORTNAME="English"/>
+    <OPTION DISPLAYNAME="Chinese" SHORTNAME="Chinese"/>
+    <OPTION DISPLAYNAME="French" SHORTNAME="French"/>
+    <OPTION DISPLAYNAME="German" SHORTNAME="German"/>
+    <OPTION DISPLAYNAME="Italian" SHORTNAME="Italian"/>
+    <OPTION DISPLAYNAME="Japanese" SHORTNAME="Japanese"/>
+    <OPTION DISPLAYNAME="Russian" SHORTNAME="Russian"/>
+    <OPTION DISPLAYNAME="Spanish" SHORTNAME="Spanish"/>
+    </OPTIONS>
+    </CONSTRAINED-FIELD>    
+    </LIMITERS>
+    
+    </COMBINED-QUICK-SEARCH>
+<%
+}
+else if(database.equals("2097152"))
+{
+    startYearOpt = 1785;
+%>
+    <COMBINED-QUICK-SEARCH>
+    <LIMITERS>
+    <CONSTRAINED-FIELD MASK="<%=database %>" SHORTNAME="YR" DISPLAYNAME="YEARS">
+    <OPTIONS>
+    <%    
+    for(;startYearOpt <= endYearOpt; startYearOpt++)
+    { %>
+        <OPTION SHORTNAME="<%=startYearOpt%>" DISPLAYNAME="<%=startYearOpt%>" />
+<%  }
+    %>
+    </OPTIONS>
+    </CONSTRAINED-FIELD>
+    
+    <CONSTRAINED-FIELD MASK="<%=database %>" SHORTNAME="DT" DISPLAYNAME="Document type">
+    <OPTIONS>
+    <OPTION DISPLAYNAME="All document types" SHORTNAME="NO-LIMIT"/>
+    <OPTION DISPLAYNAME="Journal article" SHORTNAME="JA"/>
+    <OPTION DISPLAYNAME="Conference article" SHORTNAME="CA"/>
+    <OPTION DISPLAYNAME="Conference proceeding" SHORTNAME="CP"/>
+    <OPTION DISPLAYNAME="Monograph chapter" SHORTNAME="MC"/>
+    <OPTION DISPLAYNAME="Monograph review" SHORTNAME="MR"/>
+    <OPTION DISPLAYNAME="Report chapter" SHORTNAME="RC"/>
+    <OPTION DISPLAYNAME="Report review" SHORTNAME="RR"/>
+    <OPTION DISPLAYNAME="Dissertation" SHORTNAME="DS"/>
+    <OPTION DISPLAYNAME="Map" SHORTNAME="MP"/>
+    </OPTIONS>
+    </CONSTRAINED-FIELD>
+    <CONSTRAINED-FIELD MASK="<%=database %>" SHORTNAME="TR" DISPLAYNAME="Treatment type">
+    <OPTIONS>
+    <OPTION DISPLAYNAME="Treatment type not available" SHORTNAME="NO-LIMIT"/>
+    </OPTIONS>
+    </CONSTRAINED-FIELD>
+    <CONSTRAINED-FIELD MASK="<%=database %>" SHORTNAME="LA" DISPLAYNAME="Language">
+    <OPTIONS>
+    <OPTION DISPLAYNAME="All languages" SHORTNAME="NO-LIMIT"/>
+    <OPTION DISPLAYNAME="English" SHORTNAME="English"/>
+    <OPTION DISPLAYNAME="Chinese" SHORTNAME="Chinese"/>
+    <OPTION DISPLAYNAME="French" SHORTNAME="French"/>
+    <OPTION DISPLAYNAME="German" SHORTNAME="German"/>
+    <OPTION DISPLAYNAME="Italian" SHORTNAME="Italian"/>
+    <OPTION DISPLAYNAME="Japanese" SHORTNAME="Japanese"/>
+    <OPTION DISPLAYNAME="Russian" SHORTNAME="Russian"/>
+    <OPTION DISPLAYNAME="Spanish" SHORTNAME="Spanish"/>
+    </OPTIONS>
+    </CONSTRAINED-FIELD>     
+    </LIMITERS>
+    
+    </COMBINED-QUICK-SEARCH>
+<%
+
+}
 else
 {
 %>
@@ -360,7 +463,7 @@ else
 	   out.write("</FIELD>");
 
    	 }
-
+	 
    	 out.flush();
   %>
 </SEARCH-CODES>
