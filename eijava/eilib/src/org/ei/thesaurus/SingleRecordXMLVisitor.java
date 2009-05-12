@@ -87,6 +87,10 @@ public class SingleRecordXMLVisitor
 				out.write("</UT>");
 			}
 
+			if(this.status != null)
+			{
+				out.write("<STATUS>" + this.status + "</STATUS>");
+			}
 			out.write("</TREC>");
 		}
 		catch(Exception e)
