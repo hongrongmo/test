@@ -4,6 +4,10 @@ import java.io.IOException;
 import java.io.Writer;
 
 import org.ei.domain.ClassificationID;
+import java.util.Hashtable;
+import java.util.Map;
+import java.util.StringTokenizer;
+import org.ei.data.georef.runtime.GRFDataDictionary;
 
 public class ThesaurusRecordImpl
     implements ThesaurusRecord
@@ -14,6 +18,8 @@ public class ThesaurusRecordImpl
     private String scopeNotes;
     private String dateOfIntro;
     private String historyScopeNotes;
+    private String coordinates;
+    private String type;
     private ThesaurusPage useTerms;
     private ThesaurusPage leadinTerms;
     private ThesaurusPage narrowerTerms;
@@ -193,13 +199,59 @@ public class ThesaurusRecordImpl
         return this.dateOfIntro;
     }
 
+    public void setCoordinates(String coordinates)
+    {
+        this.coordinates = coordinates;
+    }
+
+    public String getCoordinates()
+    {
+        return this.coordinates;
+    }
+
+    public void setType(String type)
+    {
+        this.type = type;
+    }
+
+    public String getType()
+    {
+        return this.type;
+    }
+
+    public String getTranslatedType()
+    {
+		StringBuffer translatedVal = new StringBuffer();
+		if(this.type != null)
+		{
+			StringTokenizer stk = new StringTokenizer(this.type,";");
+			while(stk.hasMoreTokens())
+			{
+				String curToken = (String)stk.nextElement();
+				GRFDataDictionary gdd = GRFDataDictionary.getInstance();
+				Map tt = gdd.getThesaurusTranslatedTermType();
+				translatedVal.append((String)tt.get(curToken));
+				if(stk.hasMoreTokens())
+				{
+					translatedVal.append("; ");
+				}
+			}
+
+			return translatedVal.toString();
+		}
+		else
+			return null;
+    }
+
     public boolean hasInfo()
     {
 
         if((scopeNotes != null) ||
            (dateOfIntro != null) ||
            (historyScopeNotes != null) ||
-           (classificationIDs != null))
+           (classificationIDs != null) ||
+           (coordinates != null) ||
+           (type != null))
         {
             return true;
         }
