@@ -62,7 +62,14 @@ function validate()
 
 function scopenotes(term2,database)
 {
-	window.open('/controller/servlet/Controller?EISESSION=$SESSIONID&CID=thesScopeNotes&database='+database+'&term='+term2,'NewWindow','status=no,resizable,scrollbars=1,width=300,height=250');void('');
+	if(database == 2097152)
+	{
+		window.open('/controller/servlet/Controller?EISESSION=$SESSIONID&CID=thesScopeNotes&database='+database+'&term='+term2,'NewWindow','status=no,resizable,scrollbars=1,width=300,height=400');void('');
+	}
+	else
+	{
+		window.open('/controller/servlet/Controller?EISESSION=$SESSIONID&CID=thesScopeNotes&database='+database+'&term='+term2,'NewWindow','status=no,resizable,scrollbars=1,width=300,height=250');void('');
+	}
 }
 
 function checkTerms()
@@ -675,7 +682,19 @@ function replaceSubstring(inputString, fromString, toString)
 
 <xsl:template match="PR" mode="TERM">
 	<td valign="top" colspan="5">&#160;
-	<a CLASS="DBlueText"><b><i><xsl:value-of select="." disable-output-escaping="yes"/></i>*</b></a>
+	<a CLASS="DBlueText">
+		<b><i>
+		<xsl:choose>
+			<xsl:when test="(//DOC/DATA/HIT/TREC/STATUS!='N')">
+				<xsl:value-of select="concat(.,' *')" disable-output-escaping="yes"/>
+			</xsl:when>
+			<xsl:otherwise>
+				<xsl:value-of select="concat(.,' ')" disable-output-escaping="yes"/>
+			</xsl:otherwise>
+		</xsl:choose>
+		</i>
+		</b></a>
+		
 		<xsl:variable name="MT2">
 			<xsl:value-of select="java:encode(.)" disable-output-escaping="yes"/>
 		</xsl:variable>
@@ -685,8 +704,9 @@ function replaceSubstring(inputString, fromString, toString)
 			<xsl:value-of select="sutil:replaceSingleQuotes(.)" disable-output-escaping="yes"/>
 		</xsl:variable>
 
-
-		<input type="checkbox" name="selectUnselect" onclick="parent.clipFrame.addRemoveFromClipBoard('{$MTP}')" value="{$MTP}"/><a CLASS="ExSmBlackText">(Select)</a>&#160;
+		<xsl:if test="(//DOC/DATA/HIT/TREC/STATUS!='N')">
+			<input type="checkbox" name="selectUnselect" onclick="parent.clipFrame.addRemoveFromClipBoard('{$MTP}')" value="{$MTP}"/><a CLASS="ExSmBlackText">(Select)</a>&#160;
+		</xsl:if>
 
 		<!-- Explode Check Boxes Commented as of now
 		<input type="checkbox" name="1"/><a CLASS="ExSmBlackText">(Explode)</a>&#160;&#160;
@@ -697,7 +717,7 @@ function replaceSubstring(inputString, fromString, toString)
 		<xsl:choose>
 			<xsl:when test="(//DOC/DATA/HIT/TREC/@INFO='true')">
 				<a href='javascript: scopenotes("{$MT2}","{$DATABASE}");'>
-					<img src="/engresources/images/i1.gif" border="0"/>
+				<img src="/engresources/images/i1.gif" border="0"/>
 				</a>
 			</xsl:when>
 		</xsl:choose>
