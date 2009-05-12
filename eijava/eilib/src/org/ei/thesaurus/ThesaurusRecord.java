@@ -24,6 +24,16 @@ public interface ThesaurusRecord
 
     public String getHistoryScopeNotes();
 
+    public void setCoordinates(String coordinates);
+
+    public String getCoordinates();
+
+    public void setType(String type);
+
+    public String getType();
+
+    public String getTranslatedType();
+
     public void setUseTerms(ThesaurusPage useTerms);
 
     public ThesaurusPage getUseTerms()
