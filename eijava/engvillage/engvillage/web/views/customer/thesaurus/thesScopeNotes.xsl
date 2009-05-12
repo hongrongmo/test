@@ -32,7 +32,9 @@
 	<xsl:apply-templates select="DATE"/>
 	<xsl:apply-templates select="HSN"/>
 	<xsl:apply-templates select="CPAGE"/>
-
+	<xsl:apply-templates select="TYPE"/>
+	<xsl:apply-templates select="COORDINATES"/>
+	
   <tr><td valign="top" height="20"><img src="/engresources/images/s.gif" border="0" height="20"/></td></tr>
 
 </table>
@@ -82,6 +84,49 @@
 	<tr><td valign="top"><a CLASS="SmBlackText"><b>History: </b>
 		<xsl:value-of select="."/>
 	</a></td></tr>
+</xsl:template>
+
+<xsl:template match="TYPE">
+	<tr><td valign="top" height="6"><img src="/engresources/images/s.gif" border="0" height="6"/></td></tr>
+	<tr><td valign="top"><a CLASS="SmBlackText"><b>Type of term: </b>
+		<xsl:value-of select="."/>
+	</a></td></tr>
+</xsl:template>
+
+<xsl:template match="COORDINATES">
+	<tr><td valign="top" height="6"><img src="/engresources/images/s.gif" border="0" height="6"/></td></tr>
+	<tr><td valign="top"><a CLASS="SmBlackText"><b>Coordinates: </b>
+		<xsl:value-of select="."/>
+	</a>
+	<tr><td valign="top" height="20"><img src="/engresources/images/s.gif" border="0" height="20"/></td></tr>
+	
+	<xsl:if test="/TREC/DRAWMAP">	
+	  <xsl:variable name="COORD1">
+	    <xsl:value-of select="//TREC/COORD1"/>
+	  </xsl:variable>
+	  <xsl:variable name="COORD2">
+	    <xsl:value-of select="//TREC/COORD2"/>
+	  </xsl:variable>
+	  <xsl:variable name="COORD3">
+	    <xsl:value-of select="//TREC/COORD3"/>
+	  </xsl:variable>
+	  <xsl:variable name="COORD4">
+	    <xsl:value-of select="//TREC/COORD4"/>
+	  </xsl:variable>
+	  
+	  <xsl:if test="$COORD1 != $COORD2 and $COORD3 != $COORD4">
+	    <xsl:variable name="GMAPPATH">
+	      <xsl:value-of select="concat($COORD2,',',$COORD3,'|',$COORD1,',',$COORD3,'|',$COORD1,',',$COORD4,'|',$COORD2,',',$COORD4,'|',$COORD2,',',$COORD3)"/>
+	    </xsl:variable>
+	    <tr>
+	    <td>
+	    <img src="{concat('http://maps.google.com/staticmap?path=rgba:0x0000FFff,weight:5|',$GMAPPATH,'&amp;size=250x200&amp;hl=en&amp;frame=true&amp;key=ABQIAAAA2JoOc6eMgOpYWlI72idgNRQ0Tqc8m8OJLX5cEM3TPnW6nFiZKRROkrDUTNbLerO7mgfClEI2yKOpJQ')}"/>
+	    </td>
+	    </tr>
+	  </xsl:if>
+	</xsl:if>
+	
+	</td></tr>
 </xsl:template>
 
 </xsl:stylesheet>
