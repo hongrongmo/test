@@ -141,7 +141,8 @@ public class SavedSearches
             String phrase1 = query.getSeaPhr1();
             String display_query = query.getDisplayQuery();
             String refinements = query.getRefinements().toUnlimitedString();
-            if(phrase1.length() >= Searches.UNCOMPRESSED_LIMIT) {
+            if((phrase1.length() >= Searches.UNCOMPRESSED_LIMIT) || (display_query.length() >= Searches.UNCOMPRESSED_LIMIT) || (refinements.length() >= Searches.UNCOMPRESSED_LIMIT))
+            {
               phrase1 = Searches.COMPRESSION_INDICATOR + StringUtil.zipText(phrase1);
               display_query = Searches.COMPRESSION_INDICATOR + StringUtil.zipText(display_query);
               refinements = Searches.COMPRESSION_INDICATOR + StringUtil.zipText(refinements);
