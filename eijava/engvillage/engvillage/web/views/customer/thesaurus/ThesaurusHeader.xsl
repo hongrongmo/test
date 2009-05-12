@@ -11,7 +11,12 @@
 <xsl:variable name="HAS-CPX">
     <xsl:value-of select="//DOC/HAS-CPX"/>
 </xsl:variable>
-
+<xsl:variable name="HAS-GRF">
+    <xsl:value-of select="//DOC/HAS-GRF"/>
+</xsl:variable>
+<xsl:variable name="HAS-GEO">
+    <xsl:value-of select="//DOC/HAS-GEO"/>
+</xsl:variable>
 
 <xsl:template match="//DOC/THESAURUS-HEADER">
 
@@ -117,17 +122,57 @@
                     </xsl:otherwise>
                 </xsl:choose>
                 <a CLASS="MedBlackText"><label for="rdIns">Inspec</label></a>&#160;
-            </xsl:when>
-        </xsl:choose>
+            </xsl:when>            
+        </xsl:choose>       
         <a href="javascript:makeUrl('Select_Thesarus_.htm')">
 	    <img src="/engresources/images/blue_help1.gif" border="0"/>
 	</a>
         </td><td valign="top" width="15"><img src="/engresources/images/spacer.gif" border="0" width="15"/></td><td valign="top">
 
 
-            <input id="txtTrm" type="text" name="term" size="29" value="{$TERM}"/></td></tr>
-
+            <input id="txtTrm" type="text" name="term" size="29" value="{$TERM}"/></td></tr> 
             <tr><td valign="top" colspan="6" bgcolor="#C3C8D1" height="4"><img src="/engresources/images/spacer.gif" border="0" height="4"/></td></tr>
+        <tr>
+        <td valign="top" width="4"><img src="/engresources/images/s.gif" border="0" width="4"/></td><td valign="top" width="15"><img src="/engresources/images/s.gif" border="0" width="15"/></td>
+        <td>
+        <xsl:choose>
+            <xsl:when test="($HAS-GRF='true')">
+                <xsl:choose>
+                    <xsl:when test="($DATABASE='2097152')">
+                        <a CLASS="MedBlackText">
+                            <input id="rdGrf" type="radio" name="database" value="2097152" checked="true" onclick="flipClip('2097152')"/>
+                        </a>
+                        <a CLASS="MedBlackText"><label for="rdGrf">GeoRef</label></a>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <a CLASS="MedBlackText">
+                            <input id="rdGrf" type="radio" name="database" value="2097152" onclick="flipClip('2097152')"/>
+                        </a>
+                        <a CLASS="MedBlackText"><label for="rdGrf">GeoRef</label></a>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:when>            
+        </xsl:choose>
+        <xsl:choose>
+            <xsl:when test="($HAS-GEO='true')">
+                <xsl:choose>
+                    <xsl:when test="($DATABASE='8192')">
+                        <a CLASS="MedBlackText">
+                            <input id="rdGeo" type="radio" name="database" value="8192" checked="true" onclick="flipClip('8192')"/>
+                        </a>
+                        <a CLASS="MedBlackText"><label for="rdGeo">GEOBASE</label></a>&#160;
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <a CLASS="MedBlackText">
+                            <input id="rdGeo" type="radio" name="database" value="8192" onclick="flipClip('8192')"/>
+                        </a>
+                        <a CLASS="MedBlackText"><label for="rdGeo">GEOBASE</label></a>&#160;
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:when>            
+        </xsl:choose>
+        </td>
+        </tr>
             <tr><td valign="top" width="4" colspan="3"><img src="/engresources/images/spacer.gif" border="0" width="4"/></td><td valign="top" colspan="2">
 
             <xsl:choose>
