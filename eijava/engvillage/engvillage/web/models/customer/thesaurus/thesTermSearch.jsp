@@ -72,9 +72,17 @@
             customizedEndYear=clientCustomizer.getEndYear();
         }
     }
-    else
+    else if(dbName.equals("2"))
     {
         databaseID = "ins";
+    }
+    else if(dbName.equals("8192"))
+    {
+        databaseID = "geo";
+    }    
+    else if(dbName.equals("2097152"))
+    {
+        databaseID = "grf";
     }
 
     ThesaurusPath tpath = new ThesaurusPath(sessionID);
@@ -105,6 +113,8 @@
     out.write("<SEARCH-TYPE>Thesaurus</SEARCH-TYPE>");
     out.write("<HAS-INSPEC>"+UserCredentials.hasCredentials(2, databaseConfig.getMask(user.getCartridge()))+"</HAS-INSPEC>");
     out.write("<HAS-CPX>"+UserCredentials.hasCredentials(1, databaseConfig.getMask(user.getCartridge()))+"</HAS-CPX>");
+    out.write("<HAS-GEO>"+UserCredentials.hasCredentials(8192, databaseConfig.getMask(user.getCartridge()))+"</HAS-GEO>");
+    out.write("<HAS-GRF>"+UserCredentials.hasCredentials(2097152, databaseConfig.getMask(user.getCartridge()))+"</HAS-GRF>");
     out.write(strGlobalLinksXML);
     out.write("<FOOTER/>");
     out.write("<SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
