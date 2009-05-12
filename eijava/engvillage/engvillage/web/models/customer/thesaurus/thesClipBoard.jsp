@@ -48,7 +48,7 @@
 		BooleanQuery bq  = tQuery.getParseTree();
 		String strThesTerm = "";
 
-		ExactTermGatherer etg = new ExactTermGatherer();
+		ExactTermGatherer etg = new ThesaurusCVTermGatherer();
 		List lstThesTerms = etg.gatherExactTerms(bq);
 		Iterator itrThesTerms = lstThesTerms.iterator();
 		String firstCon = etg.getFirstConnector();
