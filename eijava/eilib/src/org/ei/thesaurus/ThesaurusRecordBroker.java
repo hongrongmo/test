@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.sql.SQLException;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Hashtable;
@@ -87,19 +86,7 @@ public class ThesaurusRecordBroker
                 ThesaurusRecordProxy proxy = new ThesaurusRecordProxy(trec);
                 proxy.setLeadinTermIDs(buildRecIDs(rs.getString("LEADIN_TERMS")));
                 proxy.setRelatedTermIDs(buildRecIDs(rs.getString("RELATED_TERMS")));
-                String nt = null;
-                try
-                {
-				  // when NARROWER_TERMS column is CLOB TYPE
-				  nt = StringUtil.getStringFromClob(rs.getClob("NARROWER_TERMS"));
-				}
-				catch(SQLException e)
-				{
-				  // when NARROWER_TERMS column is VARCHAR2
-				  nt = rs.getString("NARROWER_TERMS");
-				}
-
-                proxy.setNarrowerTermIDs(buildRecIDs(nt));
+                proxy.setNarrowerTermIDs(buildRecIDs(rs.getString("NARROWER_TERMS")));
                 proxy.setBroaderTermIDs(buildRecIDs(rs.getString("BROADER_TERMS")));
                 proxy.setUseTermIDs(buildRecIDs(rs.getString("USE_TERMS")));
                 proxy.setScopeNotes(rs.getString("SCOPE_NOTES"));
