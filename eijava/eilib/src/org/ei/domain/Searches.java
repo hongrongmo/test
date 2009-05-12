@@ -137,11 +137,13 @@ public class Searches
             String phrase1 = query.getSeaPhr1();
             String display_query = query.getDisplayQuery();
             String refinements = query.getRefinements().toUnlimitedString();
-            if(phrase1.length() >= UNCOMPRESSED_LIMIT) {
+            if((phrase1.length() >= UNCOMPRESSED_LIMIT) || (display_query.length() >= UNCOMPRESSED_LIMIT) || (refinements.length() >= UNCOMPRESSED_LIMIT))
+            {
               phrase1 = COMPRESSION_INDICATOR + StringUtil.zipText(phrase1);
               display_query = COMPRESSION_INDICATOR + StringUtil.zipText(display_query);
               refinements = COMPRESSION_INDICATOR + StringUtil.zipText(refinements);
             }
+
 
             pstmt.setString(intStmtIndex++, phrase1); // rset.getString("SEARCH_PHRASE_1")
             pstmt.setString(intStmtIndex++, query.getSeaPhr2()); //rset.getString("SEARCH_PHRASE_2")
