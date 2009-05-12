@@ -424,6 +424,31 @@ public class ThesaurusRecordProxy
         return this.impl.getDateOfIntro();
     }
 
+    public void setCoordinates(String coordinates)
+    {
+    	impl.setCoordinates(coordinates);
+    }
+
+    public String getCoordinates()
+    {
+        return this.impl.getCoordinates();
+    }
+
+    public void setType(String type)
+    {
+    	impl.setType(type);
+    }
+
+    public String getType()
+    {
+        return this.impl.getType();
+    }
+
+	public String getTranslatedType()
+	{
+		return this.impl.getTranslatedType();
+	}
+
     public boolean hasInfo()
     {
 
