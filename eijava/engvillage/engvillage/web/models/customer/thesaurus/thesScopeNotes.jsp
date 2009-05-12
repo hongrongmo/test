@@ -15,9 +15,17 @@
     {
         databaseID = "cpx";
     }
-    else
+    else if(dbName.equals("2"))
     {
         databaseID = "ins";
+    }
+    else if(dbName.equals("8192"))
+    {
+        databaseID = "geo";
+    }    
+    else if(dbName.equals("2097152"))
+    {
+        databaseID = "grf";
     }
 
 
