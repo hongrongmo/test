@@ -74,7 +74,7 @@
 <html>
 <head>
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
-        <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/ThesaurusForm_V5.js"/>
+        <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/ThesaurusForm_V6.js"/>
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Robohelp.js"/>
 
 </head>
