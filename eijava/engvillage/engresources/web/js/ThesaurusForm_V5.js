@@ -163,16 +163,54 @@
 				{
 					sumList = sumList +  "{" + list.options[i].text +"}) WN CV)" ;
 				}
-			}
+			}			
 
 			return sumList;
 		}
+		
+		function checkFormGeoBase(form)
+		{
+			var list = form.clip;
+			var sumList = "(";
+			var andor ;
+			var listlen ;
+			for (var i=0; i < form.andor.length; i++)
+			{
+				if (  form.andor[i].checked)
+				{
+			 		andor = form.andor[i].value;
+			 	}
+			}
+
+			for (var i=0; i< list.length;i++)
+			{
+				if (((list.options[i].text != null)&&(list.options[i].text != ""))&&(list.options[i].text != '____________________________________________________') )
+				{
+					listlen = i;
+				}
+			}
+
+			for ( var i=0; i <= listlen ; i++)
+			{
+				if (i < listlen)
+				{
+					sumList = sumList + "({" + list.options[i].text +"} WN CV OR {" + list.options[i].text +"} WN RGI) ";
+					sumList = sumList + andor + " ";
+				}
+				else if( i==listlen )
+				{
+					sumList = sumList + "({" + list.options[i].text +"} WN CV OR {" + list.options[i].text +"} WN RGI))";
+				}
+
+			}
+			
+			return sumList;
+		}		
 
 		function runSearch1(thisForm)
 		{
 			var var_db;
 
-			thisForm.searchWord1.value = checkForm(thisForm);
 			if(typeof(parent.frames.length) != "undefined" &&
 			   parent.frames.length > 0)
 			{
@@ -183,11 +221,24 @@
 					{
 
 						var_db = parent.frames[0].document.forms["search"].database[0].value;
+						thisForm.searchWord1.value = checkForm(thisForm);
 					}
-					else
+					else if ( parent.frames[0].document.forms["search"].database[1].checked)
 					{
 						var_db = parent.frames[0].document.forms["search"].database[1].value;
+						thisForm.searchWord1.value = checkForm(thisForm);
 					}
+					else if ( parent.frames[0].document.forms["search"].database[2].checked)
+					{
+						var_db = parent.frames[0].document.forms["search"].database[2].value;
+						thisForm.searchWord1.value = checkForm(thisForm);
+					}
+					else if ( parent.frames[0].document.forms["search"].database[3].checked)
+					{
+						var_db = parent.frames[0].document.forms["search"].database[3].value;
+						thisForm.searchWord1.value = checkFormGeoBase(thisForm);
+						
+					}					
 				}
 				else
 				{
@@ -204,8 +255,15 @@
 			{
 				if (var_db == "inspec") {
 					thisForm.database.value = "INSPEC";
+					
 				} else  if (var_db == "cpx" ) {
 					thisForm.database.value = "Compendex";
+				}
+				  else  if (var_db == "grf" ) {
+					thisForm.database.value = "GeoRef";
+				}
+				  else  if (var_db == "geo" ) {
+					thisForm.database.value = "GEOBASE";
 				} else {
 					thisForm.database.value = var_db;
 				}
