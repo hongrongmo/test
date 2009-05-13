@@ -68,19 +68,13 @@
 	    </td>
 	    <td></td>
 	    <td valign="top">
-		    <table  border="0">
-		    <tr><td height="10" valign="top">
-		    <tr><td valign="top"><a CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/documents/CPXsource.pdf')">Compendex source list</a></td></tr>
-		    <tr><td valign="top"><a CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/documents/EngVillCompendex.ppt')">Searching Compendex on Engineering Village</a></td></tr>
-		    <tr><td valign="top"><a CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/documents/RSSBlogs.ppt')">Using RSS and Blog this! on Engineering Village</a></td></tr>
-		    <tr><td valign="top"><a CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/documents/faceted%20searching%20and%20browsing_NewT.ppt')">Faceted Searching and Browsing on Engineering Village</a></td></tr>
-		    <tr><td valign="top"><a CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/documents/PatentsonEV2.ppt')">Patents searching on Engineering Village</a></td></tr>
-		    <tr><td valign="top"><a CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/documents/Inspec.ppt')">Inspec on Engineering Village</a></td></tr>
-		    <tr><td valign="top"><a CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/documents/NTIS.ppt')">NTIS on Engineering Village</a></td></tr>
-		    <tr><td valign="top"><a CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/documents/NTISandPatents.ppt')">Combining NTIS and Patents Databases to Identify Technology Transfer of Government Funded Research</a></td></tr>
-		    <tr><td valign="top"><a CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/documents/FromNanosciencetoNanotechnology.ppt')">From Nanoscience to Nanotechnology : Tracking carbon nanotubes products from research through development to patent issuance</a></td></tr>
-		    </td></tr>
-		    </table>
+        <A CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/userfiles/SourceLists/COMPENDEX2009Journals.pdf')">Compendex source list</A>
+        <A CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/trainingpresentations')">Training Presentations</A>
+        <A CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/trainingpresentations')">Product Tours</A>
+        <A CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/newsletter')">Ei Newsletter</A>
+        <A CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/trainingsessionsschedule')">Training Session Schedules</A>
+        <A CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/node/31')">Podcasts</A>
+        <A CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/bulletinboard')">Ask-An-Expert Bulletin Board</A>
 	    </td>
 	  </tr>
 	</table>
