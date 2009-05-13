@@ -29,58 +29,56 @@
    </script>
 
 <center>
-<table border="0" width="99%" cellspacing="0" cellpadding="0">
-<tr><td valign="top">
-	<table width="870" height="306" border="0">
-	  <tr>
-	    <td><a CLASS="taggroup_title">Help</a></td>
-	    <td width="20"></td>
-	    <td></td>
-	  </tr>
-	  <tr></tr>
-	  <tr>
-	    <td height="30" valign="top"><a CLASS="MedGreyTextTag"> Engineering Village help is available in the following formats:</a></td>
-	    <td></td>
-	    <td height="30" valign="top"><a CLASS="MedGreyTextTag"> Training Materials: </a></td>
-	  </tr>
-	  <tr>
-	    <td>
-	      <table border="0">
-	       <tr>
-		   <td  height = "1" valign="top"><a href="javascript: window.open('/EngineeringVillageHelp/Printed Documentation/Printed_Documentation.pdf','NewWindow','location=no,toolbar=no,menubar=no,status=no,scrollbars=yes,resizable=no,width=700,height=500');void('');"><img src="/engresources/images/RobohelpPDF.gif" border="0"/></a></td>
-		   <td  height = "1" valign="top"><a href="javascript: window.open('/EngineeringVillageHelp/Flash/Engineering_Village_Help.htm','NewWindow','location=no,toolbar=no,menubar=no,status=no,scrollbars=yes,resizable=no,width=700,height=500');void('');"> <img src="/engresources/images/Flash.gif" border="0"/></a><img src="/engresources/images/s.gif" width="4" /></td>
-		   <td  height = "1" valign="top"><a href="javascript: window.open('/EngineeringVillageHelp/Printed Documentation/Printed_Documentation.doc','NewWindow','location=no,toolbar=no,menubar=no,status=no,scrollbars=yes,resizable=no,width=700,height=500');void('');"><img src="/engresources/images/Word.gif" border="0"/></a></td>
-	       </tr>
-	       <tr>
-		   <td  height = "1" valign="top"><img src="/engresources/images/s.gif" width="17" height="9"/><a CLASS = "LgBlueLink" href="javascript: window.open('/EngineeringVillageHelp/Printed Documentation/Printed_Documentation.pdf','NewWindow','location=no,toolbar=no,menubar=no,status=no,scrollbars=yes,resizable=no,width=700,height=500');void('');">PDF</a><img src="/engresources/images/s.gif" width="18" height="7"/></td>
-		   <td  height = "1" valign="top"><img src="/engresources/images/s.gif" width="13" height="9"/><a CLASS = "LgBlueLink" href="javascript: window.open('/EngineeringVillageHelp/Flash/Engineering_Village_Help.htm','NewWindow','location=no,toolbar=no,menubar=no,status=no,scrollbars=yes,resizable=no,width=700,height=500');void('');">Flash</a><img src="/engresources/images/s.gif" width="5" height="7"/></td>
-		   <td  height = "1" valign="top"><img src="/engresources/images/s.gif" width="14" height="9"/><a CLASS = "LgBlueLink" href="javascript: window.open('/EngineeringVillageHelp/Printed Documentation/Printed_Documentation.doc','NewWindow','location=no,toolbar=no,menubar=no,status=no,scrollbars=yes,resizable=no,width=700,height=500');void('');">MS Word</a></td>
-	       </tr>
-	       	<tr><td valign="top"><img width="8" height="7" src="/engresources/images/s.gif" border="0" /></td></tr>
-	      </table>
-	      <a CLASS="MedGreyTextTag"> Chinese and Japanese versions of Engineering Village are also available:</a>
-	      <table>
-	      	<tr><td valign="top"><img width="8" height="7" src="/engresources/images/s.gif" border="0" /></td></tr>
-	       <tr>
-	           <td valign="top"><xsl:if test="($CH-ICON='true')"><a href="/controller/servlet/Controller?CID=chinahelp&amp;database={$SELECTED-DB}"><img src="/engresources/images/Chinese.gif" border="0"/></a></xsl:if> <img src="/engresources/images/s.gif" width="30" height="7"/><a href="javascript: window.open('/engresources/help/EVJapaneseHelp.pdf','NewWindow','status=yes,resizable,scrollbars=1,menubar=yes,addressbar=1,width=700,height=500');void('');"><img src="/engresources/images/Japnes.gif" border="0"/></a></td>
-	       </tr>
-	      </table>
-	    </td>
-	    <td></td>
-	    <td valign="top">
-        <A CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/userfiles/SourceLists/COMPENDEX2009Journals.pdf')">Compendex source list</A>
-        <A CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/trainingpresentations')">Training Presentations</A>
-        <A CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/trainingpresentations')">Product Tours</A>
-        <A CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/newsletter')">Ei Newsletter</A>
-        <A CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/trainingsessionsschedule')">Training Session Schedules</A>
-        <A CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/node/31')">Podcasts</A>
-        <A CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/bulletinboard')">Ask-An-Expert Bulletin Board</A>
-	    </td>
-	  </tr>
-	</table>
-     </td>
-  </tr>
-</table>
+  <table border="0" width="99%" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top">
+        <table border="0">
+          <tr>
+            <td colspan="3"><a class="taggroup_title">Help</a></td>
+          </tr>
+          <tr>
+            <td colspan="3">&#160;</td>
+          </tr>
+          <tr>
+            <td height="30" valign="top"><a CLASS="MedGreyTextTag"> Engineering Village help is available in the following formats:</a></td>
+            <td height="30" >&#160;</td>
+            <td height="30" valign="top"><a CLASS="MedGreyTextTag"> Training Materials: </a></td>
+          </tr>
+          <tr>
+            <td>
+              <table border="0">
+                <tr>
+                  <td  height = "1" valign="top"><a href="javascript: window.open('/EngineeringVillageHelp/Printed Documentation/Printed_Documentation.pdf','NewWindow','location=no,toolbar=no,menubar=no,status=no,scrollbars=yes,resizable=no,width=700,height=500');void('');"><img src="/engresources/images/RobohelpPDF.gif" border="0"/></a></td>
+                  <td  height = "1" valign="top"><a href="javascript: window.open('/EngineeringVillageHelp/Flash/Engineering_Village_Help.htm','NewWindow','location=no,toolbar=no,menubar=no,status=no,scrollbars=yes,resizable=no,width=700,height=500');void('');"> <img src="/engresources/images/Flash.gif" border="0"/></a><img src="/engresources/images/s.gif" width="4" /></td>
+                  <td  height = "1" valign="top"><a href="javascript: window.open('/EngineeringVillageHelp/Printed Documentation/Printed_Documentation.doc','NewWindow','location=no,toolbar=no,menubar=no,status=no,scrollbars=yes,resizable=no,width=700,height=500');void('');"><img src="/engresources/images/Word.gif" border="0"/></a></td>
+                </tr>
+                <tr>
+                  <td  height = "1" valign="top"><img src="/engresources/images/s.gif" width="17" height="9"/><a CLASS = "LgBlueLink" href="javascript: window.open('/EngineeringVillageHelp/Printed Documentation/Printed_Documentation.pdf','NewWindow','location=no,toolbar=no,menubar=no,status=no,scrollbars=yes,resizable=no,width=700,height=500');void('');">PDF</a><img src="/engresources/images/s.gif" width="18" height="7"/></td>
+                  <td  height = "1" valign="top"><img src="/engresources/images/s.gif" width="13" height="9"/><a CLASS = "LgBlueLink" href="javascript: window.open('/EngineeringVillageHelp/Flash/Engineering_Village_Help.htm','NewWindow','location=no,toolbar=no,menubar=no,status=no,scrollbars=yes,resizable=no,width=700,height=500');void('');">Flash</a><img src="/engresources/images/s.gif" width="5" height="7"/></td>
+                  <td  height = "1" valign="top"><img src="/engresources/images/s.gif" width="14" height="9"/><a CLASS = "LgBlueLink" href="javascript: window.open('/EngineeringVillageHelp/Printed Documentation/Printed_Documentation.doc','NewWindow','location=no,toolbar=no,menubar=no,status=no,scrollbars=yes,resizable=no,width=700,height=500');void('');">MS Word</a></td>
+                </tr>
+              </table>
+              <a CLASS="MedGreyTextTag"> Chinese and Japanese versions of Engineering Village are also available:</a>
+              <table border="0">
+                <tr><td valign="top"><img width="8" height="7" src="/engresources/images/s.gif" border="0" /></td></tr>
+                <tr><td valign="top"><xsl:if test="($CH-ICON='true')"><a href="/controller/servlet/Controller?CID=chinahelp&amp;database={$SELECTED-DB}"><img src="/engresources/images/Chinese.gif" border="0"/></a></xsl:if> <img src="/engresources/images/s.gif" width="30" height="7"/><a href="javascript: window.open('/engresources/help/EVJapaneseHelp.pdf','NewWindow','status=yes,resizable,scrollbars=1,menubar=yes,addressbar=1,width=700,height=500');void('');"><img src="/engresources/images/Japnes.gif" border="0"/></a></td></tr>
+              </table>
+            </td>
+            <td>&#160;</td>
+            <td valign="top">
+              <A CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/userfiles/SourceLists/COMPENDEX2009Journals.pdf')">Compendex source list</A><BR/>
+              <A CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/trainingpresentations')">Training Presentations</A><BR/>
+              <A CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/trainingpresentations')">Product Tours</A><BR/>
+              <A CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/newsletter')">Ei Newsletter</A><BR/>
+              <A CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/trainingsessionsschedule')">Training Session Schedules</A><BR/>
+              <A CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/node/31')">Podcasts</A><BR/>
+              <A CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/bulletinboard')">Ask-An-Expert Bulletin Board</A><BR/>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
 </center>
 </xsl:template>
 </xsl:stylesheet>
