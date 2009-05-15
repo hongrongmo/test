@@ -36,6 +36,7 @@ import javax.mail.internet.InternetAddress;
 public class EIMessage {
 
     public static final String DEFAULT_SENDER = "eicustomersupport@elsevier.com";
+    public static final String NOREPLY_SENDER = "ei-noreply@elsevier.com";
 
     /**
      * The message body text..
