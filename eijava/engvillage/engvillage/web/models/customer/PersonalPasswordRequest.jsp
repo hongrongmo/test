@@ -271,7 +271,11 @@
 						EMail email = EMail.getInstance();
 						EIMessage message = new EIMessage();
 						message.setSubject("Your Requested Password");
-						message.setSender("\"EI Customer Support\"<eicustomersupport@elsevier.com>");
+            //setSender no longer sets from address - use setFrom for From and setSender for Sender
+            //message.setSender("\"EI Customer Support\"<eicustomersupport@elsevier.com>");
+            message.setSender(EIMessage.DEFAULT_SENDER);
+            message.setFrom(EIMessage.DEFAULT_SENDER);
+
 						message.addTORecepient(sEmail);
 						long milli = System.currentTimeMillis();
 						Date date=new Date(milli);

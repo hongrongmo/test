@@ -159,7 +159,11 @@
 				java.util.Date d=new java.util.Date(lo);
 				EMail email=EMail.getInstance();
 				EIMessage eimessage = new EIMessage();
-				eimessage.setSender(from);
+        //setSender no longer sets from address - use setFrom for From and setSender for Sender
+        //eimessage.setSender(from);
+        eimessage.setSender(EIMessage.DEFAULT_SENDER);
+        eimessage.setFrom(from);
+
         if(tolist.size() == 1) {
           /* send to the dfsingle recipient */
           eimessage.addTORecepients(tolist);

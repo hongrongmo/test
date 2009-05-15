@@ -328,7 +328,11 @@
 			{
     			// send mail with the required information.
     			EIMessage message = new EIMessage();
-    			message.setSender("\"EI Customer Support\"<eicustomersupport@elsevier.com>");
+          //setSender no longer sets from address - use setFrom for From and setSender for Sender
+          //message.setSender("\"EI Customer Support\"<eicustomersupport@elsevier.com>");
+          message.setSender(EIMessage.DEFAULT_SENDER);
+          message.setFrom(EIMessage.DEFAULT_SENDER);
+
     			message.addTORecepient(sEmail);
     			message.setSubject("Your Ei Personal Account Has Been Created");
     			message.setMessageBody(emailText.toString());
