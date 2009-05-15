@@ -29,7 +29,8 @@ public class BdCorrection
 
     private int intDbMask = 1;
     private static Connection con = null;
-    static String url="jdbc:oracle:thin:@jupiter:1521:eidb1";
+    //static String url="jdbc:oracle:thin:@jupiter:1521:eidb1";
+    static String url="jdbc:oracle:thin:@neptune:1521:ei";
     static String driver="oracle.jdbc.driver.OracleDriver";
     static String username="ap_correction";
     static String password="ei3it";
@@ -162,7 +163,6 @@ public class BdCorrection
 				System.in.read();
 				int answer = System.in.read();
 				Thread.currentThread().sleep(1000);
-				System.out.println("your input is "+answer);
 			}
 			BdCorrection bdc = new BdCorrection();
 			con = bdc.getConnection(url,driver,username,password);
@@ -685,10 +685,10 @@ public class BdCorrection
 
 	private List checkFast(HashMap inputMap, String searchField, String database) throws Exception
 	{
-
+		System.out.println(searchField+" SIZE= "+inputMap.size());
 		List outputList = new ArrayList();
 		DatabaseConfig databaseConfig = DatabaseConfig.getInstance(DriverConfig.getDriverTable());
-		String[] credentials = new String[]{"CPX","INS","NTI","UPA","EUP"};
+		String[] credentials = new String[]{"CPX","INS","NTI","UPA","EUP","PCH","CHM"};
 		String[] dbName = {database};
 		//System.out.println("dbName= "+database);
 		int intDbMask = databaseConfig.getMask(dbName);
@@ -708,7 +708,7 @@ public class BdCorrection
 				String searchID = (new GUID()).toString();
 				queryObject.setID(searchID);
 				queryObject.setSearchType(Query.TYPE_QUICK);
-				System.out.println("term = "+term1+" searchField= "+searchField);
+
 				queryObject.setSearchPhrase("{"+term1+"}",searchField,"","","","","","");
 				queryObject.setSearchQueryWriter(new FastQueryWriter());
 				queryObject.compile();
@@ -746,16 +746,16 @@ public class BdCorrection
 		{
 			backupList = (ArrayList)backup.get(field);
 			updateList = (ArrayList)update.get(field);
+
 			if(backupList!=null)
 			{
 				String dData = null;
 				for(int i=0;i<backupList.size();i++)
 				{
 					dData = (String)backupList.get(i);
-
-					if(!checkUpdate(updateList,dData))
+					//if(!checkUpdate(updateList,dData))
+					if(updateList==null ||(updateList!=null && !updateList.contains(dData)))
 					{
-						System.out.println("***term****= "+dData+" field= "+field+" count= "+(String)deleteLookupIndex.get(dData.toUpperCase()));
 						if(deleteLookupIndex.containsKey(dData.toUpperCase()))
 						{
 							deleteLookupIndex.put(dData.toUpperCase(),Integer.toString(Integer.parseInt((String)deleteLookupIndex.get(dData.toUpperCase()))+1));
@@ -766,7 +766,6 @@ public class BdCorrection
 						}
 
 					}
-
 				}
 			}
 		}
@@ -780,10 +779,9 @@ public class BdCorrection
 			for(int i=0;i<update.size();i++)
 			{
 				String updateData = (String)update.get(i);
-				//System.out.println("update "+updateData+" term="+term);
+
 				if(term.equalsIgnoreCase(updateData))
 				{
-					System.out.println("***update1 "+updateData+" term="+term);
 					return true;
 				}
 			}
@@ -884,7 +882,7 @@ public class BdCorrection
 						{
 							authorString=authorString+rs.getString("AUTHOR_1");
 						}
-						authorList.addAll(Arrays.asList(xml.prepareBdAuthor(authorString)));
+						authorList.addAll(Arrays.asList(xml.prepareBdAuthor(authorString.toUpperCase())));
 					}
 
 					if (rs.getString("AFFILIATION") != null)
@@ -894,29 +892,29 @@ public class BdCorrection
 						{
 							affiliation = affiliation+rs.getString("AFFILIATION_1");
 						}
-						BdAffiliations aff = new BdAffiliations(affiliation);
+						BdAffiliations aff = new BdAffiliations(affiliation.toUpperCase());
 						affiliationList.addAll(Arrays.asList(aff.getSearchValue()));
 
 					}
 
 					if (rs.getString("CHEMICALTERM") != null)
 					{
-						controltermList.addAll(Arrays.asList(xml.prepareMulti(rs.getString("CHEMICALTERM"))));
+						controltermList.addAll(Arrays.asList(xml.prepareMulti(rs.getString("CHEMICALTERM").toUpperCase())));
 					}
 
 					if (rs.getString("CONTROLLEDTERM") != null)
 					{
-						controltermList.addAll(Arrays.asList(xml.prepareMulti(rs.getString("CONTROLLEDTERM"))));
+						controltermList.addAll(Arrays.asList(xml.prepareMulti(rs.getString("CONTROLLEDTERM").toUpperCase())));
 					}
 
 					if (rs.getString("PUBLISHERNAME") != null)
 					{
-						publishernameList.add(xml.preparePublisherName(rs.getString("PUBLISHERNAME")));
+						publishernameList.add(xml.preparePublisherName(rs.getString("PUBLISHERNAME").toUpperCase()));
 					}
 
 					if (rs.getString("SOURCETITLE") != null)
 					{
-						serialTitleList.add(rs.getString("SOURCETITLE"));
+						serialTitleList.add(rs.getString("SOURCETITLE").toUpperCase());
 					}
 
 					if(rs.getString("DATABASE") != null)
