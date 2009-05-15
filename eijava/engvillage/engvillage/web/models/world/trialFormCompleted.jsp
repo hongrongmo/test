@@ -91,7 +91,8 @@
 
     msg.setMessageBody(sb.toString());
     msg.setSubject("EI products Free 30-day Trial");
-    msg.setSender("eicustomersupport@elsevier.com");
+    msg.setSender(EIMessage.DEFAULT_SENDER);
+    msg.setFrom(EIMessage.DEFAULT_SENDER);
     msg.addTORecepient(trialUser.getEmail());
     mail.sendMessage(msg);
 
@@ -141,7 +142,9 @@
     msg.setSender("eicustomersupport@elsevier.com");
     //msg.addTORecepient("h.mo@elsevier.com");
     //msg.addTORecepient("l.fiszer@elsevier.com");
-    msg.addTORecepient("eicustomersupport@elsevier.com");
+    msg.setSender(EIMessage.DEFAULT_SENDER);
+    msg.setFrom(EIMessage.DEFAULT_SENDER);
+    msg.addTORecepient(EIMessage.DEFAULT_SENDER);
     mail.sendMessage(msg);
 
     //finish send email
