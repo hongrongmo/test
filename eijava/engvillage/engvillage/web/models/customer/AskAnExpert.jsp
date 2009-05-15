@@ -179,7 +179,10 @@
       }
 
       EIMessage eimessage = new EIMessage();
-      eimessage.setSender("eicustomersupport@elseiver.com");
+      //eimessage.setSender("eicustomersupport@elseiver.com");
+      eimessage.setSender(EIMessage.DEFAULT_SENDER);
+      eimessage.setFrom(EIMessage.DEFAULT_SENDER);
+
       eimessage.addTORecepients(recipients);
       // eimessage.addCCRecepients(ccAddress);
       eimessage.setSubject(section);

@@ -102,12 +102,16 @@
 			java.util.Date d=new java.util.Date(lo);
 			EMail email=EMail.getInstance();
 			EIMessage eimessage = new EIMessage();
-			eimessage.setSender(from);
+			//setSender no longer sets from address - use setFrom for From and setSender for Sender
+			//eimessage.setSender(from);
+      eimessage.setSender(EIMessage.DEFAULT_SENDER);
+      eimessage.setFrom(from);
+
 			eimessage.addTORecepient(from);
 			eimessage.addBCCRecepients(toList);
 			eimessage.setSubject(subject);
 			eimessage.setSentDate(d);
-      		eimessage.setContentType("text/html");
+      eimessage.setContentType("text/html");
 			eimessage.setMessageBody(strmessage);
 			email.sendMessage(eimessage);
 		}
