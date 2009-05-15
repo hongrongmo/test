@@ -329,7 +329,11 @@
 		EMail email=EMail.getInstance();
 		// create an instance of eimessage and call the respective set methods
 		EIMessage eimessage = new EIMessage();
-		eimessage.setSender(from);
+    //setSender no longer sets from address - use setFrom for From and setSender for Sender
+    //eimessage.setSender(from);
+    eimessage.setSender(EIMessage.DEFAULT_SENDER);
+    eimessage.setFrom(from);
+
 		eimessage.addTORecepients(toAddress);
 		eimessage.addCCRecepients(ccAddress);
 		eimessage.setSentDate(d);
