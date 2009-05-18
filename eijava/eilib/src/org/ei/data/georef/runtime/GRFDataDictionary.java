@@ -506,6 +506,30 @@ public class GRFDataDictionary implements DataDictionary
       return termtypes;
     }
 
+    public Map getThesaurusTranslatedTermType() {
+
+      Map termtypes = new Hashtable();
+
+      termtypes.put("A","Primary terms (A)");
+      termtypes.put("B","geochronology methods (B)");
+      termtypes.put("C","commodities (C)");
+      termtypes.put("D","elements, isotopes (D)");
+      termtypes.put("E","geologic age (E)");
+      termtypes.put("F","fossils (F)");
+      termtypes.put("G","meteorites (G)");
+      termtypes.put("H","igneous rocks (H)");
+      termtypes.put("I","sedimentary rocks (I)");
+      termtypes.put("J","metamorphic rocks (J)");
+      termtypes.put("K","sedimentary structures (K) ");
+      termtypes.put("L","minerals (L)");
+      termtypes.put("M","soils (M)");
+      termtypes.put("N","sediments (N)");
+      termtypes.put("O","all geography including DSDP/ODP Sites and Legs (O)");
+      termtypes.put("R","rock formations (R)");
+
+      return termtypes;
+    }
+
     public String translateValue(String strcode, Map transtable)
     {
       String strtranslated = null;
