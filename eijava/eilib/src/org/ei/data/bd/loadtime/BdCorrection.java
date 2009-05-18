@@ -482,9 +482,10 @@ public class BdCorrection
 					System.in.read();
 					Thread.currentThread().sleep(1000);
 				}
-				pstmt = con.prepareCall("{ call delete_bd_master_table(?,?)}");
+				pstmt = con.prepareCall("{ call delete_bd_master_table(?,?,?)}");
 				pstmt.setInt(1,updateNumber);
-				pstmt.setString(2,database);
+				pstmt.setString(2,fileName);
+				pstmt.setString(3,database);
 				pstmt.executeUpdate();
 			}
 			else
