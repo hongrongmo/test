@@ -16,12 +16,26 @@
 <head>
   <title>Scope notes</title>
   <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
+  <script type="text/javascript">
+  //<![CDATA[
+  function initialize()
+  {
+  var strdomain = document.domain;
+  var apikeys = { "www.engineeringvillage.com":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhTq1aVOHKz326Ly74ktyh0JEC50cxRcwqEG9_IZn1rf-kXlYHD0OAjeKw", "cert.engineeringvillage.com":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhTq1aVOHKz326Ly74ktyh0JEC50cxRcwqEG9_IZn1rf-kXlYHD0OAjeKw", "www.engineeringvillage2.com":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhQycePdRUCs6MMAMRXc5pXGU3hn3hRfr_zEZfLKIyUShHi94g2KWSfGEw","www.engineeringvillage.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhSAdZp0PxlTEhTFv3KMS9ULbNb5zBRqzELdPImli2KTwR6NaFokcBv4bA","www.engineeringvillage2.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhSQVDkHczPvGQBBH-1zyyQlxvW27BTYxtGf1JR2Az5uJMv5BiYUcHc0fg","www.chemvillage.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhRc2oirmkLapUOdAKcS-7VrLe4NmRRygHzNcODvNaPwfo8u7kjzm8R3Pg","www.papervillage2.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhRoQ9NpbmNyNRg_ZVHqDXsW5KVm9BQAIDpSj4LWpPYl79Ju3n8FsZYtiA","www.paperchem.com":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhSwBt7CUughPYSQRGOq0g9Cnw2rgRS09l1TiHYrU0IFHRsrrd0Ioscj6g","www.papervillage.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhR4KYQ73p3WzPF7syNfyrFgFZtwaxR5sJ7ySrsRekJV7hIExrrtRqD08g","www.papervillage2.com":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhS3XaAm7oOu6A7GrMVbYRe2u9FCpRSfk-An4_9sm-2YoETe1SnzwtWffg","www.apiencompass.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhRHcUpwnapUojBcsWU6PxPlD9oAeBR6FefYn5tiecY3qDiH2LruH550xw","www.eiencompass.com":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhR1px2Xrv_o7VDsm6kNUoHpHa-UvhQXJf3NTv0tT22yWiSZ3EogdInG7Q","www.encompassvillage.com":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhQyD6pGsbDZ_IMKl1sG3ErY3WRqNRTxQeViRtl5W6vKzuRQpp1iqSg8Ig","www.encompassvillage.org":"ABQIAAAAkbhUQPChkkl1dfIAvmBVFhQG36b3Ti2jJLY9hFCzqh5YnzGkahRkPw6Cz4ehvpyGlSKiP6_Kp_z9Ug"};
+  var domainkey = apikeys[strdomain];
+  var staticImage = document.getElementById("mapStaticImage");
+  var staticImageURL = staticImage.getAttribute("src") + domainkey;
+  staticImage.setAttribute("src",staticImageURL);
+  }
+  //]]>
+  </script>
   <style type="text/css">
     body {font-family:arial,verdana,geneva; margin: 5; padding: 5; background: #CEEBFF;}
   </style>
 </head>
 
 <body bgcolor="#CEEBFF" topmargin="0">
+<xsl:attribute name="onload">initialize()</xsl:attribute>
 <table border="0" cellspacing="0" cellpadding="0" width="99%">
   <tr><td valign="top" height="4"><img src="/engresources/images/s.gif" border="0" height="4"/></td></tr>
   <tr><td valign="top" align="right"><a href="javascript:window.close();"><img src="/engresources/images/close.gif" border="0"/></a></td></tr>
@@ -120,7 +134,7 @@
 	    </xsl:variable>
 	    <tr>
 	    <td>
-	    <img src="{concat('http://maps.google.com/staticmap?path=rgba:0x0000FFff,weight:5|',$GMAPPATH,'&amp;size=250x200&amp;hl=en&amp;frame=true&amp;key=ABQIAAAA2JoOc6eMgOpYWlI72idgNRQ0Tqc8m8OJLX5cEM3TPnW6nFiZKRROkrDUTNbLerO7mgfClEI2yKOpJQ')}"/>
+	    <img id="mapStaticImage" src="{concat('http://maps.google.com/staticmap?path=rgba:0x0000FFff,weight:5|',$GMAPPATH,'&amp;size=250x200&amp;hl=en&amp;frame=true&amp;key=')}"/>
 	    </td>
 	    </tr>
 	  </xsl:if>
