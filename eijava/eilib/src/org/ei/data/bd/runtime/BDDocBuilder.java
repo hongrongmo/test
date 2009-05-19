@@ -443,23 +443,23 @@ public class BDDocBuilder
   private String getConferenceDate(String cdate)
   {
 	  if(cdate != null && !cdate.trim().equals(""))
-	  {	  
+	  {
 		  String [] confDates = cdate.split("-");
 		  StringBuffer result = new StringBuffer();
-		  for (int i = 0; i < confDates.length; i++)		
+		  for (int i = 0; i < confDates.length; i++)
 		  {
 			  result.append(reFormatDate(confDates[i]));
 			  if(i < confDates.length-1)
 			  {
-				  result.append(" - "); 
+				  result.append(" - ");
 			  }
-		  }	
-		  System.out.println("confDate " + result);
+		  }
+		  //System.out.println("confDate " + result);
 		  return result.toString();
-	  }	
+	  }
 	  return cdate;
   }
-  
+
   private String reFormatDate(String pubdate)
   {
     if(pubdate != null)
