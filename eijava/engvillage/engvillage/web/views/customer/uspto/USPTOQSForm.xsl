@@ -53,7 +53,7 @@
         <xsl:value-of select="//SESSION-DATA/START-YEAR"/>
     </xsl:variable>
 
-    <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/QuickSearchForm_V7.js"/>
+    <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/QuickSearchForm_V14.js"/>
     <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/RemoteDbLink_V5.js"/>
     <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Robohelp.js"/>
 
