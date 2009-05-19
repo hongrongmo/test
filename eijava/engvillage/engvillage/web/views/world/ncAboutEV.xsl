@@ -68,7 +68,7 @@ Engineering Village features: </a>
 <b>Expert Search Help:</b> Online | PDF </a>
 
 <P>
-<a class="MedBlackText">To request more information about Engineering Village, please complete our </a><a class="LgBlueLink" HREF="/controller/servlet/Controller?CID=ncFeedback">Customer Feedback form.</a>
+<a class="MedBlackText">To request more information about Engineering Village, please complete our </a><a class="LgBlueLink" target="_blank" href="http://www.ei.org/contact-us">Customer Feedback form.</a>
 </P>
 <P>
 <a class="MedBlackText">To learn about other Elsevier Engineering Information products and services, please visit our Web site at </a><a class="LgBLueLink" HREF="#" onClick="window.open('http://www.ei.org', 'newpg', 'status=yes,resizable,scrollbars=yes,menubar=yes,location=yes,directories=yes,width=700,height=450')">http://www.ei.org</a>.
