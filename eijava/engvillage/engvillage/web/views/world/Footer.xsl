@@ -16,7 +16,7 @@
        <A CLASS="SmBlackText">&#160; - &#160;</A>
        <a CLASS="MedBlueLink" href="/controller/servlet/Controller?CID=ncAboutEV">About Engineering Village</a>
        <A CLASS="SmBlackText">&#160; - &#160;</A>
-       <A CLASS="MedBlueLink" HREF="/controller/servlet/Controller?CID=ncFeedback">Feedback</A>
+       <A CLASS="MedBlueLink" target="_blank" href="http://www.ei.org/contact-us">Feedback</A>
        <A CLASS="SmBlackText">&#160; - &#160;</A>
        <A CLASS="MedBlueLink" HREF="/controller/servlet/Controller?CID=ncPrivacyPolicy">Privacy Policy</A>
        <A CLASS="SmBlackText">&#160; - &#160;</A>

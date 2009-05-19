@@ -100,13 +100,13 @@
 						<p style="margin-left:70px;"><a class="MedBlueLink" href="https://evauth.engineeringvillage.com/shibboleth/protected.php">Institutional Log-in (Shibboleth)</a></p>
 						<p>You may have access to this product through your library or institutional website. Please consult staff at your library or institution for instructions on remote access.
 						</p>
-						<p><a href="/controller/servlet/Controller?CID=ncFeedback" class="SpLink">Forgot your institutional password?</a></p>
+						<p><a target="_blank" href="http://www.ei.org/contact-us" class="SpLink">Forgot your institutional password?</a></p>
 					</form>
 				</div>
 			  <div id="evoptions">
 	        <div id="nav_buy"><h3><a href="https://store.engineeringvillage.com/ppd/choose.do"><span>Buy a Day Pass</span></a></h3></div>
 	        <div id="nav_tour"><h3><a href="#" onClick="window.open('/engresources/tour/tour_databases.html', 'newpg', 'status=yes,resizable,scrollbars=1,width=740,height=500')"><span>Tour Engineering Village</span></a></h3></div>
-	        <div id="nav_trial"><h3><a target="_blank" href="/engresources/trialForm.jsp"><span>Request a Free Trial</span></a></h3></div>
+	        <div id="nav_trial"><h3><a target="_blank" href="http://www.ei.org/contact-us"><span>Request a Free Trial</span></a></h3></div>
 				</div>
 			</div>
 		</div>
