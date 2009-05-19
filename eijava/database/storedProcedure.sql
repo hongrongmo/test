@@ -1052,3 +1052,228 @@ WHEN OTHERS THEN
 
 end;
 /
+
+CREATE OR REPLACE PROCEDURE update_bd_backup_table(v_load_number NUMBER,dbName VARCHAR2) IS
+	message VARCHAR2(4000);
+	BEGIN
+		INSERT INTO BD_CORRECTION_BACKUP SELECT * FROM BD_MASTER_ORIG WHERE DATABASE=dbName AND accessnumber IN (SELECT accessnumber FROM BD_CORRECTION_TEMP);
+		INSERT INTO BD_TEMP_BACKUP SELECT * FROM BD_MASTER_ORIG WHERE DATABASE=dbName AND accessnumber IN (SELECT accessnumber FROM BD_CORRECTION_TEMP);
+		COMMIT;
+	EXCEPTION
+	WHEN OTHERS THEN
+		ROLLBACK;
+		message :=SQLERRM;
+		INSERT INTO BD_CORRECTION_ERROR VALUES('000000',v_load_number,systimestamp,message,'update_bd_backup_table');
+		COMMIT;
+		RAISE_APPLICATION_ERROR(-20101,'Error '||SQLERRM);
+	END;
+/
+
+CREATE OR REPLACE PROCEDURE update_bd_master_table(v_update_number NUMBER,dbName VARCHAR2) AS
+
+v_accessnumber    BD_CORRECTION_TEMP.accessnumber%TYPE :='0';
+message VARCHAR2(4000);
+CURSOR getAccessionNumber IS SELECT accessnumber FROM BD_CORRECTION_TEMP;
+
+BEGIN
+	FOR a IN getAccessionNumber LOOP
+	    v_accessnumber :=a.accessnumber;
+	    BEGIN
+	    IF INSTR(v_accessnumber,'200138',1,1)<1 THEN
+
+		  DELETE FROM BD_MASTER_ORIG WHERE DATABASE = dbName AND accessnumber=a.accessnumber;
+		  IF SQL%NOTFOUND THEN
+			INSERT INTO BD_CORRECTION_NEW SELECT * FROM BD_CORRECTION_TEMP WHERE accessnumber = a.accessnumber;
+
+			INSERT INTO BD_CORRECTION_ERROR(ex,update_number,action_date,message,source) VALUES (a.accessnumber,v_update_number,systimestamp,'record '||a.accessnumber||' not found on master table','update_bd_master_table');
+
+			COMMIT;
+		  ELSE
+			  INSERT INTO BD_PRO_CORRECTION_LOG(ex,update_number,action_date,message,source) VALUES (a.accessnumber,v_update_number,systimestamp,'delete','update_bd_master_table');
+
+		 END IF;
+
+		  INSERT INTO BD_MASTER_ORIG SELECT * FROM BD_CORRECTION_TEMP WHERE accessnumber = a.accessnumber;
+
+		  INSERT INTO BD_PRO_CORRECTION_LOG(ex,update_number,action_date,message,source) VALUES(a.accessnumber,v_update_number,systimestamp,'insert','update_master_table');
+	    ELSE
+	    	  INSERT INTO BD_PRO_CORRECTION_LOG(ex,update_number,action_date,message,source) VALUES(a.accessnumber,v_update_number,systimestamp,'skip','update_master_table');
+	    END IF;
+
+	    COMMIT;
+
+	    EXCEPTION
+	    WHEN OTHERS THEN
+		  ROLLBACK;
+		  message := SQLERRM;
+		 INSERT INTO BD_CORRECTION_ERROR(ex,update_number,action_date,message,source) VALUES (a.accessnumber,10000,systimestamp,'message','update_bd_master_table');
+		COMMIT;
+		RAISE_APPLICATION_ERROR(-20101,'Error '||SQLERRM);
+	    END;
+
+	END LOOP;
+
+ EXCEPTION
+	WHEN OTHERS THEN
+	    ROLLBACK;
+	    message := SQLERRM;
+	    INSERT INTO BD_CORRECTION_ERROR(ex,update_number,action_date,message,source) VALUES (v_accessnumber,v_update_number,systimestamp,message,'update_bd_master_table');
+	    COMMIT;
+	    RAISE_APPLICATION_ERROR(-20101,'Error '||SQLERRM);
+
+END;
+/
+
+CREATE OR REPLACE PROCEDURE update_bd_temp_table(v_update_number NUMBER,fileName VARCHAR2,dbName VARCHAR2) IS
+
+v_ex          BD_CORRECTION_TEMP.accessnumber%TYPE :='00';
+v_m_id        BD_CORRECTION_TEMP.m_id%TYPE;
+v_load_number BD_CORRECTION_TEMP.loadnumber%TYPE :=1;
+v_doi         BD_CORRECTION_TEMP.doi%TYPE;
+v_t_doi       VARCHAR2(128);
+v_pn          BD_CORRECTION_TEMP.publishername%TYPE;
+v_pc          BD_CORRECTION_TEMP.publisheraddress%TYPE;
+v_ur	      BD_CORRECTION_TEMP.updateresource%TYPE;
+v_uc 	      BD_CORRECTION_TEMP.updatecodestamp%TYPE;
+v_ut	      BD_CORRECTION_TEMP.updatetimestamp%TYPE;
+
+message       VARCHAR2(4000);
+
+CURSOR getSingleRecord IS
+	SELECT accessnumber,m_id,loadnumber,doi,publishername,publisheraddress,updatecodestamp,updateresource,updatetimestamp
+	FROM BD_MASTER_ORIG WHERE DATABASE = dbName AND accessnumber IN(SELECT accessnumber FROM BD_CORRECTION_TEMP);
+
+BEGIN
+	OPEN getSingleRecord;
+	LOOP
+	   FETCH getSingleRecord INTO v_ex,v_m_id,v_load_number,v_doi,v_pn,v_pc,v_uc,v_ur,v_ut;
+	   EXIT WHEN getSingleRecord%NOTFOUND;
+	   SELECT doi INTO v_t_doi FROM BD_CORRECTION_TEMP WHERE accessnumber=v_ex;
+
+	   IF(v_t_doi IS NULL OR v_t_doi='') THEN
+		UPDATE BD_CORRECTION_TEMP SET m_id=v_m_id,loadnumber=v_load_number,doi=v_doi,publishername=v_pn,publisheraddress=v_pc,
+		updatenumber=v_update_number,updatecodestamp=v_uc||' '||'UPDATE',updateresource=v_ur||' '||fileName,updatetimestamp=systimestamp WHERE accessnumber=v_ex;
+	   ELSE
+		UPDATE BD_CORRECTION_TEMP SET m_id=v_m_id,loadnumber=v_load_number,publishername=v_pn,publisheraddress=v_pc,updatenumber=v_update_number,
+		updatecodestamp=v_uc||' '||'UPDATE',updateresource=v_ur||' '||fileName,updatetimestamp=systimestamp WHERE accessnumber=v_ex;
+	   END IF;
+	 COMMIT;
+	 END LOOP;
+
+CLOSE getSingleRecord;
+
+	UPDATE BD_CORRECTION_TEMP SET updatenumber=v_update_number,updatecodestamp='NEW',updateresource=fileName,updatetimestamp=systimestamp WHERE updatenumber IS NULL;
+	COMMIT;
+
+EXCEPTION
+WHEN OTHERS THEN
+	ROLLBACK;
+	message := SQLERRM;
+	INSERT INTO BD_CORRECTION_ERROR VALUES (v_ex,v_update_number,systimestamp,message,'update_bd_temp_table');
+	COMMIT;
+	dbms_output.put_line('error= '||SQLERRM);
+	RAISE_APPLICATION_ERROR(-20101, 'Error in procedure update_bd_temp_table, error='||SQLERRM);
+
+END;
+/
+
+CREATE OR REPLACE PROCEDURE delete_bd_lookup_table AS
+
+v_field    	DELETED_LOOKUPINDEX.field%TYPE;
+v_term    	DELETED_LOOKUPINDEX.term%TYPE;
+v_database    	DELETED_LOOKUPINDEX.DATABASE%TYPE;
+
+message VARCHAR2(4000);
+CURSOR getlookupData IS SELECT field,term,DATABASE FROM DELETED_LOOKUPINDEX;
+
+BEGIN
+	FOR a IN getlookupData LOOP
+	    v_field :=a.field;
+	    v_term :=a.term;
+	    v_database :=a.DATABASE;
+	    BEGIN
+	    	  IF v_field='AU' THEN
+
+		  	DELETE FROM CMB_AU_LOOKUP WHERE DBASE = v_database AND display_name=UPPER(v_term);
+
+		  ELSIF v_field='AF' THEN
+
+		  	DELETE FROM CMB_AF_LOOKUP WHERE DBASE = v_database AND institute_name=UPPER(v_term);
+
+		  ELSIF v_field='PN' THEN
+
+		  	DELETE FROM CMB_PN_LOOKUP WHERE DBASE = v_database AND publisher_name=UPPER(v_term);
+
+		  ELSIF v_field='ST' THEN
+
+		  	DELETE FROM CMB_ST_LOOKUP WHERE DBASE = v_database AND source_title=UPPER(v_term);
+		  END IF;
+		  INSERT INTO BD_LOOKUPINDEX_LOG(field,term,DATABASE,TIMESTAMP) VALUES (v_field,v_term,v_database,systimestamp);
+		  COMMIT;
+
+	    EXCEPTION
+	    WHEN OTHERS THEN
+		message := SQLERRM;
+		INSERT INTO BD_LOOKUPINDEX_ERROR(field,term,DATABASE,TIMESTAMP,message) VALUES (v_field,v_term,v_database,systimestamp,message);
+	    COMMIT;
+	    END;
+
+	END LOOP;
+
+ EXCEPTION
+	WHEN OTHERS THEN
+	    ROLLBACK;
+	    message := SQLERRM;
+	    INSERT INTO BD_LOOKUPINDEX_ERROR(field,term,DATABASE,TIMESTAMP,message) VALUES (v_field,v_term,v_database,systimestamp,message);
+	    COMMIT;
+
+END;
+/
+
+CREATE OR REPLACE PROCEDURE delete_bd_master_table(v_update_number NUMBER,fileName VARCHAR2,dbName VARCHAR2) AS
+
+v_accessnumber    BD_CORRECTION_TEMP.accessnumber%TYPE :='0';
+message VARCHAR2(4000);
+CURSOR getAccessionNumber IS SELECT accessnumber FROM BD_CORRECTION_TEMP;
+
+BEGIN
+	FOR a IN getAccessionNumber LOOP
+	    v_accessnumber :=a.accessnumber;
+	    BEGIN
+		  UPDATE BD_MASTER_ORIG SET UPDATENUMBER=v_update_number,updateresource=updateresource||' '||fileName,UPDATECODESTAMP='DELETE',updatetimestamp=systimestamp WHERE accessnumber=a.accessnumber AND DATABASE=dbName;
+		  IF SQL%NOTFOUND THEN
+			INSERT INTO BD_CORRECTION_NEW SELECT * FROM BD_CORRECTION_TEMP WHERE accessnumber = a.accessnumber;
+
+			INSERT INTO BD_CORRECTION_ERROR(ex,update_number,action_date,message,source) VALUES (a.accessnumber,v_update_number,systimestamp,'record '||a.accessnumber||' not found on master table','delete_bd_master_table');
+
+			COMMIT;
+		  ELSE
+			INSERT INTO BD_PRO_CORRECTION_LOG(ex,update_number,action_date,message,source) VALUES (a.accessnumber,v_update_number,systimestamp,'delete','update_bd_master_table');
+
+		 END IF;
+
+		 COMMIT;
+
+	    EXCEPTION
+	    WHEN OTHERS THEN
+		ROLLBACK;
+		message := SQLERRM;
+		INSERT INTO BD_CORRECTION_ERROR(ex,update_number,action_date,message,source) VALUES (a.accessnumber,10000,systimestamp,'message','delete_bd_master_table');
+		COMMIT;
+		RAISE_APPLICATION_ERROR(-20101,'Error '||SQLERRM);
+	    END;
+
+	END LOOP;
+
+ EXCEPTION
+	WHEN OTHERS THEN
+	    ROLLBACK;
+	    message := SQLERRM;
+	    dbms_output.put_line('***********************************************************');
+	    INSERT INTO BD_CORRECTION_ERROR(ex,update_number,action_date,message,source) VALUES (v_accessnumber,v_update_number,SYSDATE,message,'delete_bd_master_table');
+	    COMMIT;
+	    RAISE_APPLICATION_ERROR(-20101,'Error '||SQLERRM);
+
+END;
+/
+
