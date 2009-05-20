@@ -51,14 +51,18 @@
 	if((pUserId != null) && (pUserId.trim().length() != 0)){
 		personalization=true;
 	}
-    User user=ussession.getUser();
+  User user=ussession.getUser();
 	ClientCustomizer clientCustomizer=new ClientCustomizer(ussession);
 	if(clientCustomizer.isCustomized())
 	{
 		isPersonalizationPresent=clientCustomizer.checkPersonalization();
 		customizedLogo=clientCustomizer.getLogo();
 	}
-
+  if(feedbackText != null)
+  {
+    String userinfo = System.getProperty("line.separator") + "---------------------------------------------------" + System.getProperty("line.separator") + ussession.getUser().toString();
+    feedbackText = feedbackText.concat(userinfo);
+  }
 	String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
 
 	try {
