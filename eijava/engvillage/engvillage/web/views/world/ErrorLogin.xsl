@@ -107,7 +107,7 @@
 			  <div id="evoptions">
 	        <div id="nav_buy"><h3><a href="https://store.engineeringvillage.com/ppd/choose.do"><span>Buy a Day Pass</span></a></h3></div>
 	        <div id="nav_tour"><h3><a href="#" onClick="window.open('/engresources/tour/tour_databases.html', 'newpg', 'status=yes,resizable,scrollbars=1,width=740,height=500')"><span>Tour Engineering Village</span></a></h3></div>
-	        <div id="nav_trial"><h3><a target="_blank" href="/engresources/trialForm.jsp"><span>Request a Free Trial</span></a></h3></div>
+	        <div id="nav_trial"><h3><a target="_blank" href="http://www.ei.org/contact-us" ><span>Request a Free Trial</span></a></h3></div>
 				</div>
 			</div>
 		</div>
