@@ -455,7 +455,9 @@ function replaceSubstring(inputString, fromString, toString)
 
     <tr>
     <td valign="top" width="55" height="1"><img src="/engresources/images/spacer.gif" border="0" width="55" height="1"/></td><td valign="top"><a CLASS="RollLink" href="/controller/servlet/Controller?CID=thesFullRec&amp;term={$MT}&amp;database={$DATABASE}"><i>
-    <xsl:value-of select="." disable-output-escaping="yes"/></i>*</a></td><td valign="top" width="8" align="left"><img src="/engresources/images/spacer.gif" border="0" width="8"/></td><td valign="top" align="left"><input type="checkbox" name="selectUnselect" onclick="parent.clipFrame.addRemoveFromClipBoard('{$MTP}')" value="{$MTP}"/></td><td valign="top" width="8"><img src="/engresources/images/spacer.gif" border="0" width="8"/></td>
+    <xsl:value-of select="." disable-output-escaping="yes"/></i>
+    <xsl:if test="(//DOC/DATA/HIT/TREC/STATUS!='N')">*</xsl:if>
+    </a></td><td valign="top" width="8" align="left"><img src="/engresources/images/spacer.gif" border="0" width="8"/></td><td valign="top" align="left"><xsl:if test="(//DOC/DATA/HIT/TREC/STATUS!='N')"><input type="checkbox" name="selectUnselect" onclick="parent.clipFrame.addRemoveFromClipBoard('{$MTP}')" value="{$MTP}"/></xsl:if></td><td valign="top" width="8"><img src="/engresources/images/spacer.gif" border="0" width="8"/></td>
 
 
     <td valign="top"></td>
@@ -484,7 +486,8 @@ function replaceSubstring(inputString, fromString, toString)
     <xsl:variable name="MT"><xsl:value-of select="java:encode(.)" disable-output-escaping="yes"/></xsl:variable>
 
     <a CLASS="RollLink" href="/controller/servlet/Controller?CID=thesFullRec&amp;term={$MT}&amp;database={$DATABASE}">
-    <i><xsl:value-of select="." disable-output-escaping="yes"/></i>*
+    <i><xsl:value-of select="." disable-output-escaping="yes"/></i>
+    <xsl:if test="(//DOC/DATA/HIT/TREC/STATUS!='N')">*</xsl:if>
     </a>
 </xsl:template>
 
