@@ -362,7 +362,7 @@ function replaceSubstring(inputString, fromString, toString)
 	</xsl:variable>
 
 		<a CLASS="RollLink" href="/controller/servlet/Controller?CID=thesFullRec&amp;term={$MT}&amp;database={$DATABASE}">
-		<i><xsl:value-of select="." disable-output-escaping="yes" /></i>*</a></td>
+		<i><xsl:value-of select="." disable-output-escaping="yes" /></i><xsl:if test="(//DOC/DATA/HIT/TREC/STATUS!='N')">*</xsl:if></a></td>
 	<td valign="top" width="8" align="left"><img src="/engresources/images/spacer.gif" border="0" width="8"/>
 	</td>
 	<td valign="top" align="left">
@@ -370,7 +370,7 @@ function replaceSubstring(inputString, fromString, toString)
 		<xsl:value-of select="sutil:replaceSingleQuotes(.)"/>
 	</xsl:variable>
 
-	&#160;<input type="checkbox" name="selectUnselect" onclick="parent.clipFrame.addRemoveFromClipBoard('{$MTP}')" value="{$MTP}"/>
+	&#160;<xsl:if test="(//DOC/DATA/HIT/TREC/STATUS!='N')"><input type="checkbox" name="selectUnselect" onclick="parent.clipFrame.addRemoveFromClipBoard('{$MTP}')" value="{$MTP}"/></xsl:if>
 	</td>
 
 	<td valign="top" width="8"><img src="/engresources/images/spacer.gif" border="0" width="8"/></td>
