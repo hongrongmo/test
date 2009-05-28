@@ -1095,9 +1095,9 @@ BEGIN
 
 		  INSERT INTO BD_MASTER_ORIG SELECT * FROM BD_CORRECTION_TEMP WHERE accessnumber = a.accessnumber;
 
-		  INSERT INTO BD_PRO_CORRECTION_LOG(ex,update_number,action_date,message,source) VALUES(a.accessnumber,v_update_number,systimestamp,'insert','update_master_table');
+		  INSERT INTO BD_PRO_CORRECTION_LOG(ex,update_number,action_date,message,source) VALUES(a.accessnumber,v_update_number,systimestamp,'insert','update_bd_master_table');
 	    ELSE
-	    	  INSERT INTO BD_PRO_CORRECTION_LOG(ex,update_number,action_date,message,source) VALUES(a.accessnumber,v_update_number,systimestamp,'skip','update_master_table');
+	    	  INSERT INTO BD_PRO_CORRECTION_LOG(ex,update_number,action_date,message,source) VALUES(a.accessnumber,v_update_number,systimestamp,'skip','update_bd_master_table');
 	    END IF;
 
 	    COMMIT;
@@ -1136,31 +1136,32 @@ v_pc          BD_CORRECTION_TEMP.publisheraddress%TYPE;
 v_ur	      BD_CORRECTION_TEMP.updateresource%TYPE;
 v_uc 	      BD_CORRECTION_TEMP.updatecodestamp%TYPE;
 v_ut	      BD_CORRECTION_TEMP.updatetimestamp%TYPE;
+v_snum	      BD_CORRECTION_TEMP.SEQ_NUM%TYPE;
 
 message       VARCHAR2(4000);
 
 CURSOR getSingleRecord IS
-	SELECT accessnumber,m_id,loadnumber,doi,publishername,publisheraddress,updatecodestamp,updateresource,updatetimestamp
+	SELECT accessnumber,m_id,loadnumber,doi,publishername,publisheraddress,updatecodestamp,updateresource,updatetimestamp,SEQ_NUM
 	FROM BD_MASTER_ORIG WHERE DATABASE = dbName AND accessnumber IN(SELECT accessnumber FROM BD_CORRECTION_TEMP);
 
 BEGIN
 	OPEN getSingleRecord;
 	LOOP
-	   FETCH getSingleRecord INTO v_ex,v_m_id,v_load_number,v_doi,v_pn,v_pc,v_uc,v_ur,v_ut;
+	   FETCH getSingleRecord INTO v_ex,v_m_id,v_load_number,v_doi,v_pn,v_pc,v_uc,v_ur,v_ut,v_snum;
 	   EXIT WHEN getSingleRecord%NOTFOUND;
 	   SELECT doi INTO v_t_doi FROM BD_CORRECTION_TEMP WHERE accessnumber=v_ex;
 
 	   IF(v_t_doi IS NULL OR v_t_doi='') THEN
 		UPDATE BD_CORRECTION_TEMP SET m_id=v_m_id,loadnumber=v_load_number,doi=v_doi,publishername=v_pn,publisheraddress=v_pc,
-		updatenumber=v_update_number,updatecodestamp=v_uc||' '||'UPDATE',updateresource=v_ur||' '||fileName,updatetimestamp=systimestamp WHERE accessnumber=v_ex;
+		updatenumber=v_update_number,updatecodestamp=v_uc||' '||'UPDATE',updateresource=v_ur||' '||fileName,updatetimestamp=systimestamp,SEQ_NUM=v_snum WHERE accessnumber=v_ex;
 	   ELSE
 		UPDATE BD_CORRECTION_TEMP SET m_id=v_m_id,loadnumber=v_load_number,publishername=v_pn,publisheraddress=v_pc,updatenumber=v_update_number,
-		updatecodestamp=v_uc||' '||'UPDATE',updateresource=v_ur||' '||fileName,updatetimestamp=systimestamp WHERE accessnumber=v_ex;
+		updatecodestamp=v_uc||' '||'UPDATE',updateresource=v_ur||' '||fileName,updatetimestamp=systimestamp,SEQ_NUM=v_snum WHERE accessnumber=v_ex;
 	   END IF;
 	 COMMIT;
 	 END LOOP;
 
-CLOSE getSingleRecord;
+	CLOSE getSingleRecord;
 
 	UPDATE BD_CORRECTION_TEMP SET updatenumber=v_update_number,updatecodestamp='NEW',updateresource=fileName,updatetimestamp=systimestamp WHERE updatenumber IS NULL;
 	COMMIT;
@@ -1240,7 +1241,8 @@ BEGIN
 	FOR a IN getAccessionNumber LOOP
 	    v_accessnumber :=a.accessnumber;
 	    BEGIN
-		  UPDATE BD_MASTER_ORIG SET UPDATENUMBER=v_update_number,updateresource=updateresource||' '||fileName,UPDATECODESTAMP='DELETE',updatetimestamp=systimestamp WHERE accessnumber=a.accessnumber AND DATABASE=dbName;
+		  UPDATE BD_MASTER_ORIG SET UPDATENUMBER=v_update_number,updateresource=updateresource||' '||fileName,UPDATECODESTAMP='DELETE',
+		  updatetimestamp=systimestamp,accessnumber='D'||a.accessnumber,loadnumber='3'||loadnumber WHERE accessnumber=a.accessnumber AND DATABASE=dbName;
 		  IF SQL%NOTFOUND THEN
 			INSERT INTO BD_CORRECTION_NEW SELECT * FROM BD_CORRECTION_TEMP WHERE accessnumber = a.accessnumber;
 
