@@ -573,7 +573,7 @@ function MM_nbGroup(event, grpName) { //v6.0
   <div align="left">
     <table width="972" border="0" cellspacing="0" cellpadding="0">
       <tr>
-        <td width="429" align="left" valign="top"><a target="_blank" href="http://www.ei.org/support/product_tours.html"><img src="/engresources/images/ae/New_Specialist.gif" alt="Ask a Product Specialist" width="429" height="356" border="0" id="Image1" onmouseover="pro_MM_swapImage('Image1','','/engresources/images/ae/New_Specialist_over.gif',0)" onmouseout="pro_MM_swapImgRestore()" /></a></td>
+        <td width="429" align="left" valign="top"><a target="_blank" href="http://www.ei.org/trainingpresentations"><img src="/engresources/images/ae/New_Specialist.gif" alt="Ask a Product Specialist" width="429" height="356" border="0" id="Image1" onmouseover="pro_MM_swapImage('Image1','','/engresources/images/ae/New_Specialist_over.gif',0)" onmouseout="pro_MM_swapImgRestore()" /></a></td>
         <td width="25" align="left" valign="top"><img src="/engresources/images/ae/spacer.gif" alt="spacer" width="25" height="1" /></td>
         <td width="518" align="left" valign="middle"><span class="style2">Sample questions:</span><br />
           <ol>
@@ -582,7 +582,7 @@ function MM_nbGroup(event, grpName) { //v6.0
             <li class="style1">&ldquo;How would I complete a search for business models and templates?&rdquo;</li>
             <li class="style1">&ldquo;Is it possible to get personalized trainings?&rdquo;</li>
           </ol>
-          <p align="center"><a target="_blank" href="http://www.ei.org/support/online_seminars.html"><img src="/engresources/images/ae/training.gif" alt="email" width="167" height="14" border="0" /></a></p>
+          <p align="center"><a target="_blank" href="http://www.ei.org/trainingsessionsschedule"><img src="/engresources/images/ae/training.gif" alt="email" width="167" height="14" border="0" /></a></p>
           <p align="center"><a href="javascript:emailFormat('$SESSIONID','two');"><img src="/engresources/images/ae/email_specialist.gif" alt="email_specalist" width="167" height="14" border="0"/></a></p></td>
       </tr>
     </table>
@@ -677,12 +677,12 @@ function MM_nbGroup(event, grpName) { //v6.0
 <div id="three" style="display: none; text-align:left;">
   <p align="left">&nbsp;</p>
   <p align="left" class="style1">A librarian can help you formulate a search, identify and locate a source for a book or an article, or find additional resources on a specific topic.</p>
-  <p align="left" class="style1">To learn more about the subject areas that are covered by the databases that are available to you, please visit <a target="_blank" href="http://www.ei.org/products/engineeringvillage.html ">http://www.ei.org/engineeringvillage</a></p>
+  <p align="left" class="style1">To learn more about the subject areas that are covered by the databases that are available to you, please visit <a target="_blank" href="http://www.ei.org/engineeringvillage">http://www.ei.org/engineeringvillage</a></p>
 
   <div align="left">
     <table width="972" border="0" cellspacing="0" cellpadding="0">
       <tr>
-        <td width="429" align="left" valign="top"><a target="_blank" href="http://www.ei.org/support/product_tours.html"><img src="/engresources/images/ae/New_Specialist.gif" alt="Ask a Librarian" width="429" height="356" border="0" id="lib_Image1" onmouseover="lib_MM_swapImage('lib_Image1','','/engresources/images/ae/New_Specialist_over.gif',0)" onmouseout="lib_MM_swapImgRestore()" /></a></td>
+        <td width="429" align="left" valign="top"><a target="_blank" href="http://www.ei.org/trainingpresentations"><img src="/engresources/images/ae/New_Specialist.gif" alt="Ask a Librarian" width="429" height="356" border="0" id="lib_Image1" onmouseover="lib_MM_swapImage('lib_Image1','','/engresources/images/ae/New_Specialist_over.gif',0)" onmouseout="lib_MM_swapImgRestore()" /></a></td>
         <td width="25" align="left" valign="top"><img src="/engresources/images/ae/spacer.gif" alt="spacer" width="25" height="1" /></td>
         <td width="518" align="left" valign="middle"><span class="style2">Sample questions:</span><br />
           <ol>
