@@ -29,8 +29,8 @@ public class BdCorrection
 
     private int intDbMask = 1;
     private static Connection con = null;
-    //static String url="jdbc:oracle:thin:@jupiter:1521:eidb1";
-    static String url="jdbc:oracle:thin:@neptune:1521:ei";
+    static String url="jdbc:oracle:thin:@jupiter:1521:eidb1";
+    //static String url="jdbc:oracle:thin:@neptune:1521:ei";
     static String driver="oracle.jdbc.driver.OracleDriver";
     static String username="ap_correction";
     static String password="ei3it";
@@ -42,6 +42,7 @@ public class BdCorrection
     public static void main(String args[])
         throws Exception
     {
+		long startTime = System.currentTimeMillis();
 		String fileToBeLoaded 	= null;
 		int updateNumber   		= 0;
 		String input;
@@ -79,27 +80,27 @@ public class BdCorrection
 
 		}
 
-		if(args.length>8)
+		if(args.length>9)
 		{
-			if(args[5]!=null)
-			{
-				url = args[5];
-			}
 			if(args[6]!=null)
 			{
-				driver = args[6];
+				url = args[6];
 			}
 			if(args[7]!=null)
 			{
-				username = args[7];
+				driver = args[7];
 			}
 			if(args[8]!=null)
 			{
-				password = args[8];
+				username = args[8];
+			}
+			if(args[9]!=null)
+			{
+				password = args[9];
 			}
 		}
 
-		if(args.length>4)
+		if(args.length>5)
 		{
 			if(args[0]!=null)
 			{
@@ -138,6 +139,23 @@ public class BdCorrection
 			{
 				action = args[4];
 			}
+			else
+			{
+				System.out.println("Are we doing 'update' or 'delete'");
+				System.exit(1);
+			}
+
+			if(args[5]!=null)
+			{
+				FastSearchControl.BASE_URL = args[5];
+			}
+			else
+			{
+				System.out.println("Does not have FastSearch URL");
+				System.exit(1);
+			}
+
+
 
 		}
 		else
@@ -151,7 +169,7 @@ public class BdCorrection
 		{
 
 			//FastSearchControl.BASE_URL = "http://ei-main.bos3.fastsearch.net:15100";
-			FastSearchControl.BASE_URL = "http://ei-test.bos3.fastsearch.net:15100";
+			//FastSearchControl.BASE_URL = "http://ei-test.bos3.fastsearch.net:15100";
 
 
 			/**********delete all data from temp table *************/
@@ -161,7 +179,6 @@ public class BdCorrection
 				System.out.println("press enter to continue");
 				Thread.currentThread().sleep(500);
 				System.in.read();
-				int answer = System.in.read();
 				Thread.currentThread().sleep(1000);
 			}
 			BdCorrection bdc = new BdCorrection();
@@ -252,6 +269,7 @@ public class BdCorrection
 					e.printStackTrace();
 				}
 			}
+			System.out.println("total process time "+(System.currentTimeMillis()-startTime)/1000.0+" seconds");
 		}
 
         System.exit(1);
@@ -285,7 +303,7 @@ public class BdCorrection
 			}
 			else if(action.equalsIgnoreCase("delete"))
 			{
-				rs = stmt.executeQuery("select m_id from bd_master_orig where accessnumber in (select accessnumber from bd_correction_temp)");
+				rs = stmt.executeQuery("select m_id from bd_master_orig where accessnumber in (select 'D'||accessnumber from bd_correction_temp)");
 				creatDeleteFile(rs,dbname,updateNumber);
 			}
 
@@ -515,11 +533,6 @@ public class BdCorrection
 
 	}
 
-	private void runUpdateBdTempTable(int updateNumber,String fileName) throws Exception
-	{
-
-	}
-
     private int getTempTableCount()
 	{
 		Statement stmt = null;
@@ -544,23 +557,22 @@ public class BdCorrection
 		}
 		finally
 		{
-			if (stmt != null)
+			if (rs != null)
 			{
 				try
 				{
-					stmt.close();
+					rs.close();
 				}
 				catch (Exception e)
 				{
 					e.printStackTrace();
 				}
 			}
-
-			if (rs != null)
+			if (stmt != null)
 			{
 				try
 				{
-					rs.close();
+					stmt.close();
 				}
 				catch (Exception e)
 				{
@@ -623,7 +635,6 @@ public class BdCorrection
 		PreparedStatement stmt = null;
 		try
 		{
-			//stmt = con.createStatement();
 			if(data!=null)
 			{
 				for(int i=0;i<data.size();i++)
@@ -631,15 +642,11 @@ public class BdCorrection
 					String term = (String)data.get(i);
 					if(term != null && field != null && database != null)
 					{
-						System.out.println("term "+term+" ,field= "+field+" database= "+database);
-						//stmt.executeUpdate("insert into deleted_lookupIndex(field,term,database) values('"+field+"','"+term+"','"+database+"')");
 						stmt = con.prepareStatement("insert into deleted_lookupIndex(field,term,database) values(?,?,?)");
 						stmt.setString(1,field);
 						stmt.setString(2,term);
 						stmt.setString(3,database);
 						stmt.executeUpdate();
-
-						con.commit();
 					}
 				}
 			}
@@ -666,16 +673,14 @@ public class BdCorrection
 
     private void processLookupIndex(HashMap update,HashMap backup) throws Exception
     {
-		//database = (String)update.get("DATABASE");
-		//if(database==null)
-		{
-			database = this.database;
-		}
+
+		database = this.database;
+
 		HashMap outputMap = new HashMap();
-		HashMap deletedAuthorLookupIndex 		= getDeleteData(update,backup,"AUTHOR");
-		HashMap deletedAffiliationLookupIndex 	= getDeleteData(update,backup,"AFFILIATION");
+		HashMap deletedAuthorLookupIndex 			= getDeleteData(update,backup,"AUTHOR");
+		HashMap deletedAffiliationLookupIndex 		= getDeleteData(update,backup,"AFFILIATION");
 		//HashMap deletedControlltermLookupIndex 	= getDeleteData(update,backup,"CONTROLLEDTERM");
-		//HashMap deletedPublisherNameLookupIndex = getDeleteData(update,backup,"PUBLISHERNAME");
+		//HashMap deletedPublisherNameLookupIndex 	= getDeleteData(update,backup,"PUBLISHERNAME");
 		//HashMap deletedSerialtitleLookupIndex 	= getDeleteData(update,backup,"SERIALTITLE");
 		saveDeletedData("AU",checkFast(deletedAuthorLookupIndex,"AU",database),database);
 		saveDeletedData("AF",checkFast(deletedAffiliationLookupIndex,"AF",database),database);
@@ -686,12 +691,12 @@ public class BdCorrection
 
 	private List checkFast(HashMap inputMap, String searchField, String database) throws Exception
 	{
-		System.out.println(searchField+" SIZE= "+inputMap.size());
+
 		List outputList = new ArrayList();
 		DatabaseConfig databaseConfig = DatabaseConfig.getInstance(DriverConfig.getDriverTable());
-		String[] credentials = new String[]{"CPX","INS","NTI","UPA","EUP","PCH","CHM"};
+		String[] credentials = new String[]{"CPX","PCH","CHM","GEO"};
 		String[] dbName = {database};
-		//System.out.println("dbName= "+database);
+
 		int intDbMask = databaseConfig.getMask(dbName);
 
 		Iterator searchTerms = inputMap.keySet().iterator();
@@ -702,6 +707,7 @@ public class BdCorrection
 			{
 				SearchControl sc = new FastSearchControl();
 				String term1 = (String) searchTerms.next();
+
 				int oc = Integer.parseInt((String)inputMap.get(term1));
 				Query queryObject = new Query(databaseConfig, credentials);
 				queryObject.setDataBase(intDbMask);
@@ -722,8 +728,7 @@ public class BdCorrection
 				{
 					outputList.add(term1);
 				}
-				System.out.println("IndexCount= "+(String)inputMap.get(term1));
-				System.out.println("FastCount= "+c);
+				//System.out.println("search term= "+term1+" fastCount="+c+" count="+indexCount);
 			}
 			catch(Exception e)
 			{
@@ -731,8 +736,6 @@ public class BdCorrection
 			}
 
 		}
-
-		System.out.println("SIZE= "+outputList.size());
 
 		return outputList;
 
@@ -751,25 +754,29 @@ public class BdCorrection
 			if(backupList!=null)
 			{
 				String dData = null;
+				//System.out.println("backup size= "+backupList.size());
 				for(int i=0;i<backupList.size();i++)
 				{
 					dData = (String)backupList.get(i);
-					//if(!checkUpdate(updateList,dData))
-					if(updateList==null ||(updateList!=null && !updateList.contains(dData)))
+					if(dData != null)
 					{
-						if(deleteLookupIndex.containsKey(dData.toUpperCase()))
+						if(updateList==null ||(updateList!=null && !updateList.contains(dData)))
 						{
-							deleteLookupIndex.put(dData.toUpperCase(),Integer.toString(Integer.parseInt((String)deleteLookupIndex.get(dData.toUpperCase()))+1));
-						}
-						else
-						{
-							deleteLookupIndex.put(dData.toUpperCase(),"1");
-						}
+							if(deleteLookupIndex.containsKey(dData.toUpperCase()))
+							{
+								deleteLookupIndex.put(dData.toUpperCase(),Integer.toString(Integer.parseInt((String)deleteLookupIndex.get(dData.toUpperCase()))+1));
+							}
+							else
+							{
+								deleteLookupIndex.put(dData.toUpperCase(),"1");
+							}
 
+						}
 					}
 				}
 			}
 		}
+		//System.out.println("deleteLookupIndex size= "+deleteLookupIndex.size());
 		return deleteLookupIndex;
 	}
 
