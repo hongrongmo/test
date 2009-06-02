@@ -32,7 +32,11 @@ public class GlobalLinks {
     for(int i=0; i<customizedFeatures.length; ++i)
     {
       if(customizedFeatures[i].equalsIgnoreCase("CPX") ||
-         customizedFeatures[i].equalsIgnoreCase("INS"))
+         customizedFeatures[i].equalsIgnoreCase("INS") ||
+         customizedFeatures[i].equalsIgnoreCase("GEO") ||
+         customizedFeatures[i].equalsIgnoreCase("GRF"))
+
+
       {
         hasInsCpx = true;
       }
