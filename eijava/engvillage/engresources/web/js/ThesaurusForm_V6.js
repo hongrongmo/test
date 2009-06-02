@@ -221,22 +221,18 @@
 					{
 
 						var_db = parent.frames[0].document.forms["search"].database[0].value;
-						thisForm.searchWord1.value = checkForm(thisForm);
 					}
 					else if ( parent.frames[0].document.forms["search"].database[1].checked)
 					{
 						var_db = parent.frames[0].document.forms["search"].database[1].value;
-						thisForm.searchWord1.value = checkForm(thisForm);
 					}
 					else if ( parent.frames[0].document.forms["search"].database[2].checked)
 					{
 						var_db = parent.frames[0].document.forms["search"].database[2].value;
-						thisForm.searchWord1.value = checkForm(thisForm);
 					}
 					else if ( parent.frames[0].document.forms["search"].database[3].checked)
 					{
 						var_db = parent.frames[0].document.forms["search"].database[3].value;
-						thisForm.searchWord1.value = checkFormGeoBase(thisForm);
 						
 					}					
 				}
@@ -245,6 +241,16 @@
 					var_db = parent.frames[0].document.forms["search"].database.value;
 
 				}
+				
+				if(var_db != "8192")
+				{
+					thisForm.searchWord1.value = checkForm(thisForm);
+					
+				}
+				else
+				{
+					thisForm.searchWord1.value = checkFormGeoBase(thisForm);
+				}				
 			}
 			else
 			{
