@@ -188,10 +188,10 @@
     String replyto="";
     String subject="";
     String message = "";
-    String sender="ei-noreply@elsevier.com";
+    String sender=EIMessage.NOREPLY_SENDER;
 
     // getting FROM  parameter from request object.
-   
+
     from = request.getParameter("from");
     replyto = request.getParameter("from");
     // getting TO  parameter from request object.
@@ -200,7 +200,7 @@
     subject = request.getParameter("subject");
     // getting MESSAGE  parameter from request object.
     message = request.getParameter("message");
-    
+
     message = "This email was sent to you on behalf of ".concat(from).concat(" \n \n").concat(message);
 
     long lo=System.currentTimeMillis();
@@ -210,10 +210,10 @@
 
     // create an instance of eimessage and call the respective set methods
     EIMessage eimessage = new EIMessage();
- 
+
     eimessage.setFrom(from);
     eimessage.setSender(sender);
- 
+
     List l=new ArrayList();
     StringTokenizer stoken =new StringTokenizer(to,",");
 
@@ -225,18 +225,18 @@
     eimessage.addTORecepients(l);
     eimessage.setSubject(subject);
     eimessage.setSentDate(d);
-    
-    List lreplyto=new ArrayList();  
+
+    List lreplyto=new ArrayList();
     StringTokenizer token =new StringTokenizer(replyto,",");
     while(token.hasMoreTokens())
     {
     	lreplyto.add(token.nextToken());
-    }      
+    }
     eimessage.addReplyToRecepients(lreplyto);
-    
-      
-    
-    
+
+
+
+
 
     TransformerFactory tfactory = new com.icl.saxon.TransformerFactoryImpl();
     ServletContext context = getServletContext();

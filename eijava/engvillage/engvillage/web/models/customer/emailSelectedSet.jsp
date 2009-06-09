@@ -90,8 +90,8 @@
         String subject = "";
         String message = "";
         String replyto = "";
-        String sender ="ei-noreply@elsevier.com";
-        
+        String sender = EIMessage.NOREPLY_SENDER;
+
         try
         {
             try
@@ -103,8 +103,8 @@
                 subject = request.getParameter("subject");
                 message = request.getParameter("message");
                 replyto = request.getParameter("from");
-                
-                
+
+
                 message = "This email was sent to you on behalf of ".concat(from).concat(" \n \n").concat(message);
 
                 outWriter.println("Subject: "+subject);
