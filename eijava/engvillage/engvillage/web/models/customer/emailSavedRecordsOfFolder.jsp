@@ -152,9 +152,8 @@
         String subject="";
         String message = "";
         String replyto="";
-        String sender="ei-noreply@elsevier.com";
-        
-        
+        String sender= EIMessage.NOREPLY_SENDER;
+
 
         // getting FROM  parameter from request object.
         from = request.getParameter("from");
@@ -164,11 +163,11 @@
         subject = request.getParameter("subject");
         // getting MESSAGE  parameter from request object.
         message = request.getParameter("message");
-        
+
         replyto = request.getParameter("from");
-        
+
         message = "This email was sent to you on behalf of ".concat(from).concat(" address \n \n").concat(message);
-    
+
 
         long lo=System.currentTimeMillis();
         java.util.Date d=new java.util.Date(lo);
@@ -177,20 +176,20 @@
 
         // create an instance of eimessage and call the respective set methods
         EIMessage eimessage = new EIMessage();
-        
+
         List l=new ArrayList();
         StringTokenizer stoken =new StringTokenizer(to,",");
         while(stoken.hasMoreTokens())
         {
             l.add(stoken.nextToken());
         }
-        
-        List lreplyto=new ArrayList();  
+
+        List lreplyto=new ArrayList();
         StringTokenizer token =new StringTokenizer(replyto,",");
         while(token.hasMoreTokens())
         {
         	lreplyto.add(token.nextToken());
-        }      
+        }
         eimessage.addReplyToRecepients(lreplyto);
 
         eimessage.addTORecepients(l);
