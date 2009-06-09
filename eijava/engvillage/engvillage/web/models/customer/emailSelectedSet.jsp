@@ -98,14 +98,16 @@
             {
                 outWriter = new PrintWriter(new FileWriter(fileName));
 
-                from=request.getParameter("from");
+                // setting from to be no-reply address to match sending domain
+                from=EIMessage.NOREPLY_SENDER;
                 to = request.getParameter("to");
                 subject = request.getParameter("subject");
                 message = request.getParameter("message");
+                // 'from' form value will be used as the reply-to header and embedded into the message
                 replyto = request.getParameter("from");
 
 
-                message = "This email was sent to you on behalf of ".concat(from).concat(" \n \n").concat(message);
+                message = "This email was sent to you on behalf of ".concat(replyto).concat(" \n \n").concat(message);
 
                 outWriter.println("Subject: "+subject);
                 outWriter.println("from: "+from);

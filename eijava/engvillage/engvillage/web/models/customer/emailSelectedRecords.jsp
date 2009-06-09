@@ -190,9 +190,9 @@
     String message = "";
     String sender=EIMessage.NOREPLY_SENDER;
 
-    // getting FROM  parameter from request object.
-
-    from = request.getParameter("from");
+    // setting from to be no-reply address to match sending domain
+    from = EIMessage.NOREPLY_SENDER;
+    // 'from' form value will be used as the reply-to header and embedded into the message
     replyto = request.getParameter("from");
     // getting TO  parameter from request object.
     to = request.getParameter("to");
@@ -201,7 +201,7 @@
     // getting MESSAGE  parameter from request object.
     message = request.getParameter("message");
 
-    message = "This email was sent to you on behalf of ".concat(from).concat(" \n \n").concat(message);
+    message = "This email was sent to you on behalf of ".concat(replyto).concat(" \n \n").concat(message);
 
     long lo=System.currentTimeMillis();
     java.util.Date d=new java.util.Date(lo);

@@ -154,19 +154,18 @@
         String replyto="";
         String sender= EIMessage.NOREPLY_SENDER;
 
-
-        // getting FROM  parameter from request object.
-        from = request.getParameter("from");
+        // setting from to be no-reply address to match sending domain
+        from = EIMessage.NOREPLY_SENDER;
         // getting TO  parameter from request object.
         to = request.getParameter("to");
         // getting SUBJECT  parameter from request object.
         subject = request.getParameter("subject");
         // getting MESSAGE  parameter from request object.
         message = request.getParameter("message");
-
+        // 'from' form value will be used as the reply-to header and embedded into the message
         replyto = request.getParameter("from");
 
-        message = "This email was sent to you on behalf of ".concat(from).concat(" address \n \n").concat(message);
+        message = "This email was sent to you on behalf of ".concat(replyto).concat(" address \n \n").concat(message);
 
 
         long lo=System.currentTimeMillis();
