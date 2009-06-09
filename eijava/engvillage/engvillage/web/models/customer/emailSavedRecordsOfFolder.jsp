@@ -165,7 +165,7 @@
         // 'from' form value will be used as the reply-to header and embedded into the message
         replyto = request.getParameter("from");
 
-        message = "This email was sent to you on behalf of ".concat(replyto).concat(" address \n \n").concat(message);
+        message = "This email was sent to you on behalf of ".concat(replyto).concat(" \n \n").concat(message);
 
 
         long lo=System.currentTimeMillis();
