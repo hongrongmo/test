@@ -1241,6 +1241,9 @@ BEGIN
 	FOR a IN getAccessionNumber LOOP
 	    v_accessnumber :=a.accessnumber;
 	    BEGIN
+	    	  UPDATE BD_CORRECTION_TEMP SET UPDATENUMBER=v_update_number,updateresource=updateresource||' '||fileName,UPDATECODESTAMP='DELETE',
+		  updatetimestamp=systimestamp,accessnumber='D'||a.accessnumber,loadnumber='3'||loadnumber;
+	    
 		  UPDATE BD_MASTER_ORIG SET UPDATENUMBER=v_update_number,updateresource=updateresource||' '||fileName,UPDATECODESTAMP='DELETE',
 		  updatetimestamp=systimestamp,accessnumber='D'||a.accessnumber,loadnumber='3'||loadnumber WHERE accessnumber=a.accessnumber AND DATABASE=dbName;
 		  IF SQL%NOTFOUND THEN
