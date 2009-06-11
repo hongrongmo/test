@@ -1241,19 +1241,19 @@ BEGIN
 	FOR a IN getAccessionNumber LOOP
 	    v_accessnumber :=a.accessnumber;
 	    BEGIN
-	    	  UPDATE BD_CORRECTION_TEMP SET UPDATENUMBER=v_update_number,updateresource=updateresource||' '||fileName,UPDATECODESTAMP='DELETE',
-		  updatetimestamp=systimestamp,accessnumber='D'||a.accessnumber,loadnumber='3'||loadnumber;
-	    
+	    	  UPDATE BD_CORRECTION_TEMP SET UPDATENUMBER=v_update_number,updateresource=fileName,UPDATECODESTAMP='DELETE',
+		  updatetimestamp=systimestamp,loadnumber=loadnumber;
+	          commit;
 		  UPDATE BD_MASTER_ORIG SET UPDATENUMBER=v_update_number,updateresource=updateresource||' '||fileName,UPDATECODESTAMP='DELETE',
 		  updatetimestamp=systimestamp,accessnumber='D'||a.accessnumber,loadnumber='3'||loadnumber WHERE accessnumber=a.accessnumber AND DATABASE=dbName;
 		  IF SQL%NOTFOUND THEN
 			INSERT INTO BD_CORRECTION_NEW SELECT * FROM BD_CORRECTION_TEMP WHERE accessnumber = a.accessnumber;
 
-			INSERT INTO BD_CORRECTION_ERROR(ex,update_number,action_date,message,source) VALUES (a.accessnumber,v_update_number,systimestamp,'record '||a.accessnumber||' not found on master table','delete_bd_master_table');
+			INSERT INTO BD_CORRECTION_ERROR(ex,update_number,action_date,message,source) VALUES (a.accessnumber,v_update_number,sysdate,'record '||a.accessnumber||' not found on master table','delete_bd_master_table');
 
 			COMMIT;
 		  ELSE
-			INSERT INTO BD_PRO_CORRECTION_LOG(ex,update_number,action_date,message,source) VALUES (a.accessnumber,v_update_number,systimestamp,'delete','update_bd_master_table');
+			INSERT INTO BD_PRO_CORRECTION_LOG(ex,update_number,action_date,message,source) VALUES (a.accessnumber,v_update_number,sysdate,'delete','update_bd_master_table');
 
 		 END IF;
 
@@ -1263,7 +1263,7 @@ BEGIN
 	    WHEN OTHERS THEN
 		ROLLBACK;
 		message := SQLERRM;
-		INSERT INTO BD_CORRECTION_ERROR(ex,update_number,action_date,message,source) VALUES (a.accessnumber,10000,systimestamp,'message','delete_bd_master_table');
+		INSERT INTO BD_CORRECTION_ERROR(ex,update_number,action_date,message,source) VALUES (v_accessnumber,v_update_number,sysdate,message,'delete_bd_master_table');
 		COMMIT;
 		RAISE_APPLICATION_ERROR(-20101,'Error '||SQLERRM);
 	    END;
