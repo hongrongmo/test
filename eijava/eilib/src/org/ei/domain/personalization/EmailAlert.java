@@ -270,6 +270,7 @@ public class EmailAlert {
 
                         // create an instance of eimessage and call the respective set methods
                         eimessage = new EIMessage();
+                        eimessage.setFrom("<eiemailalert@elsevier.com>");
                         eimessage.setSender("<eiemailalert@elsevier.com>");
 
                         String strEmailAddresses = StringUtil.EMPTY_STRING;
@@ -310,7 +311,8 @@ public class EmailAlert {
                             eimessage.addCCRecepients(Arrays.asList(ccrecepients));
                             // When testing the strEmailAddresses sometimes is a lsit
                             // which was causing and error so changed to single sender emailAddress
-                            eimessage.setSender(emailAddress);
+                            eimessage.setFrom(emailAddress);
+                            eimessage.setSender("<eiemailalert@elsevier.com>");
                         }
 
                         // change taken from Query Object toXMLString
@@ -701,7 +703,9 @@ public class EmailAlert {
                 blnSuccess = true;
                 if(eimessage != null)
                 {
-                    m_emailInstance.sendMultiPartMessage(eimessage);
+//                    m_emailInstance.sendMultiPartMessage(eimessage);
+//ZY 06/11/09: do not include s.gif in the email
+					  m_emailInstance.sendMessage(eimessage);
 
                     pstmt2 = con.prepareStatement("INSERT INTO EMAIL_ALERT_TRANS VALUES(?,?,?,?,SYSDATE)");
                     pstmt2.setString(1,strUserId);
