@@ -46,7 +46,7 @@ public class BdCorrection
 		String fileToBeLoaded 	= null;
 		int updateNumber   		= 0;
 		String input;
-		String tableToBeTruncated = "bd_master_temp,deleted_lookupIndex,bd_temp_backup";
+		String tableToBeTruncated = "bd_correction_temp,deleted_lookupIndex,bd_temp_backup";
 		int iThisChar; // To read individual chars with System.in.read()
 
 		try
@@ -185,7 +185,7 @@ public class BdCorrection
 			con = bdc.getConnection(url,driver,username,password);
 			bdc.cleanUp(tableToBeTruncated);
 
-			/***********load data into temp table ****************/
+			/************** load data into temp table ****************/
 
 			if(test)
 			{
@@ -277,14 +277,12 @@ public class BdCorrection
 
     private void doFastExtract(int updateNumber,String dbname,String action) throws Exception
     {
-		CombinedWriter writer = new CombinedXMLWriter(50000,
+		CombinedXMLWriter writer = new CombinedXMLWriter(50000,
 		                                              updateNumber,
 		                                              dbname,
 		                                              "dev");
 
-		writer.setOperation("add");
 
-        XmlCombiner c = new XmlCombiner(writer);
         Statement stmt = null;
         ResultSet rs = null;
         try
@@ -293,19 +291,25 @@ public class BdCorrection
 			if(action.equalsIgnoreCase("update"))
 			{
 				System.out.println("Running the query...");
+				writer.setOperation("add");
+        		XmlCombiner c = new XmlCombiner(writer);
 				rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER, substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,SEQ_NUM from bd_master_orig where updateNumber="+updateNumber);
 				//System.out.println("Got records ...");
 				c.writeRecs(rs);
 				//System.out.println("Wrote records.");
-
-				writer.end();
-				writer.flush();
 			}
 			else if(action.equalsIgnoreCase("delete"))
 			{
+				writer.setOperation("delete");
+        		//XmlCombiner c = new XmlCombiner(writer);
 				rs = stmt.executeQuery("select m_id from bd_master_orig where accessnumber in (select 'D'||accessnumber from bd_correction_temp)");
+				//c.writeRecs(rs);
+
 				creatDeleteFile(rs,dbname,updateNumber);
+				writer.zipBatch();
 			}
+			writer.end();
+			writer.flush();
 
 		}
 		finally
@@ -341,10 +345,11 @@ public class BdCorrection
     {
 
 		String batchidFormat = "0000";
-		String batchID = "0000";
+		String batchID = "0001";
 		String numberID = "0000";
 		File file=new File("fast");
 		FileWriter out= null;
+		CombinedWriter writer = new CombinedXMLWriter(10000,10000,database);
 		//System.out.println("updateNumber= "+updateNumber);
 		try
 		{
@@ -352,49 +357,25 @@ public class BdCorrection
 			{
 				file.mkdir();
 			}
-			String upNumber = Integer.toString(updateNumber);
-			if(upNumber.length()<5)
-			{
-				numberID = upNumber;
-				batchID = "0000";
-			}
-			else if(upNumber.length()<6)
-			{
-				numberID = upNumber.substring(0,4);
-				batchID = upNumber.substring(4)+"000";
-			}
-			else if (upNumber.length()<7)
-			{
-				numberID = upNumber.substring(0,4);
-				batchID = upNumber.substring(4)+"00";
-			}
-			else if (upNumber.length()<8)
-			{
-				numberID = upNumber.substring(0,4);
-				batchID = upNumber.substring(4)+"0";
-			}
-			else
-			{
-				numberID = upNumber.substring(0,4);
-				batchID = upNumber.substring(4,8);
-			}
-			batchidFormat = batchID;
+
 			long starttime = System.currentTimeMillis();
-			String batchPath = "fast/batch_" + numberID + "_" + batchidFormat;
-			//System.out.println("PATH= "+batchPath);
+			String batchPath = "fast/batch_" + updateNumber+"_"+batchID;
+
 			file=new File(batchPath);
 			if(!file.exists())
 			{
 				file.mkdir();
 			}
-			String root = batchPath +"/EIDATA";
+			String root = batchPath +"/EIDATA/tmp";
 			file=new File(root);
 
 			if(!file.exists())
 			{
 				file.mkdir();
 			}
+
 			file = new File(root+"/delete.txt");
+			//file = new File("delete.txt");
 			if(!file.exists())
 			{
 				file.createNewFile();
