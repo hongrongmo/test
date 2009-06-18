@@ -13,6 +13,9 @@ import java.util.zip.ZipFile;
 import java.util.zip.ZipInputStream;
 import org.ei.data.*;
 import org.ei.data.bd.*;
+import org.ei.data.encompasslit.loadtime.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class BdParser
 {
@@ -155,6 +158,8 @@ public class BdParser
 	public Hashtable getRecord(Element cpxRoot) throws Exception
 	{
 		Hashtable record = new Hashtable();
+		Element source = null;
+		String midstr= null;
 		try
 		{
 			if(cpxRoot != null)
@@ -165,11 +170,27 @@ public class BdParser
 					noNamespace = Namespace.getNamespace("","http://www.elsevier.com/xml/ani/ani");;
 				}
 				Element item = cpxRoot.getChild("item",noNamespace);
+
 				if(item!= null)
 				{
-				    //M_ID
-				    String mid = getDatabaseName().toLowerCase()+"_"+(new GUID()).toString();
-				    record.put("M_ID",mid);
+
+				    if(item.getChild("m_id",noNamespace) != null )
+				    {
+				    	Element mid = item.getChild("m_id",noNamespace);
+				    	midstr = mid.getText();
+				    	record.put("M_ID",mid.getText());
+					}
+					else
+					{
+						String mid = getDatabaseName().toLowerCase()+"_"+(new GUID()).toString();
+						record.put("M_ID",mid);
+					}
+
+
+				    if(item.getChild("seq_num", noNamespace) != null)
+					{
+						record.put("SEQ_NUM",item.getChild("seq_num", noNamespace).getText());
+					}
 				    //PUBDATE
 					Element processinfo = item.getChild("process-info",aitNamespace);
 					if(processinfo!=null)
@@ -235,20 +256,27 @@ public class BdParser
 						{
 							Element itemidElement = (Element)itemidList.get(i);
 							String  itemid_idtype = itemidElement.getAttributeValue("idtype");
-							String  itemid_idtype1 = itemidElement.getAttributeValue("idtype");
 
-							if(itemid_idtype != null && (itemid_idtype.equals("CPX") || itemid_idtype.equals("GEO") || itemid_idtype.equals("CHEM")))
+							if(itemid_idtype != null &&
+									 (itemid_idtype.equals("CPX")||
+									itemid_idtype.equals("GEO")||
+									itemid_idtype.equals("API")||
+									itemid_idtype.equals("APILIT")||
+									itemid_idtype.equals("CHEM")))
 							{
 								String  itemid = itemidElement.getTextTrim();
 								record.put("ACCESSNUMBER",itemid);
 								setAccessNumber(itemid);
-
 							}
 							else if (itemid_idtype != null && itemid_idtype.equals("PUI"))
 							{
 								String  pui = itemidElement.getTextTrim();
 								record.put("PUI",pui);
-
+							}
+							else if (itemid_idtype != null && itemid_idtype.equals("SEC"))
+							{
+								String  pui = itemidElement.getTextTrim();
+								record.put("SEC",pui);
 							}
 						}
 
@@ -256,7 +284,6 @@ public class BdParser
 						Element head = bibrecord.getChild("head",noNamespace);
 						if(head != null)
 						{
-
 							Element citinfo = head.getChild("citation-info",noNamespace);
 							if(citinfo != null)
 							{
@@ -269,7 +296,12 @@ public class BdParser
 										record.put("CITATIONLANGUAGE",lang.getValue());
 									}
 								}
-
+								Element figinfo = citinfo.getChild("figure-information",noNamespace);
+								if(figinfo != null)
+								{
+									String fig = figinfo.getTextTrim();
+									record.put("FIG", fig);
+								}
 
 								Element cittype = citinfo.getChild("citation-type",noNamespace);
 								if(cittype != null)
@@ -280,6 +312,7 @@ public class BdParser
 										record.put("CITTYPE",type.getValue());
 									}
 								}
+
 								Element authorKeywords = citinfo.getChild("author-keywords",noNamespace);
 								if(authorKeywords != null)
 								{
@@ -304,7 +337,6 @@ public class BdParser
 									//System.out.println("AUTHORKEYWORD "+authorKeywordBuffer.toString());
 									record.put("AUTHORKEYWORD",authorKeywordBuffer.toString());
 								}
-
 							}
 
 							//citation title
@@ -345,8 +377,6 @@ public class BdParser
 								}
 							}
 
-							///abstracts
-
 							Element abstracts = head.getChild("abstracts",noNamespace);
 							if(abstracts!= null && abstracts.getChild("abstract",noNamespace)!=null)
 							{
@@ -368,9 +398,9 @@ public class BdParser
 
 								if(abstractData.getChildTextTrim("para",ceNamespace) != null)
 								{
+									System.out.println();
 									String abstractString = dictionary.mapEntity(getMixData(abstractData.getChild("para",ceNamespace).getContent()));
 									record.put("ABSTRACTDATA", abstractString);
-									//System.out.println("ABSTRACTDATA "+abstractString);
 								}
 
 							}
@@ -402,9 +432,9 @@ public class BdParser
 								record.put("AFFILIATION_1",secondAffGroup.toString());
 							}
 
-
 							//enhancement
 							Element enhancement = head.getChild("enhancement",noNamespace);
+
 							if(enhancement != null)
 							{
 									Element descriptorgroup = enhancement.getChild("descriptorgroup",noNamespace);
@@ -424,17 +454,352 @@ public class BdParser
 
 									Element chemicalgroup = enhancement.getChild("chemicalgroup",noNamespace);
 									parseChemicalgroup(chemicalgroup,record);
+							}
+
+							if(enhancement != null)
+							{
+									Element apidescriptorgroup = enhancement.getChild("API-descriptorgroup",noNamespace);
+									Element autoposting = apidescriptorgroup.getChild("autoposting",noNamespace);
+							//APICC
+									Element classificationdescription = autoposting.getChild("API-CC", noNamespace);
+
+									Element classification = classificationdescription.getChild("classification", noNamespace);
+
+									if(classification != null)
+									{
+
+										List apicc = classification.getChildren("classification-description",noNamespace);
+										StringBuffer apiccterms = new StringBuffer();
+										for (int i = 0; i < apicc.size(); i++)
+										{
+											Element el = (Element)apicc.get(i);
+											apiccterms.append((String)el.getTextTrim());
+											if(i<(apicc.size()-1) )
+											{
+												apiccterms.append(AUDELIMITER);
+											}
+										}
+
+										if(apiccterms != null && apiccterms.length()> 0)
+										{
+											String apiccstr = apiccterms.toString();
+											record.put("CLASSIFICATIONDESC",apiccstr);
+										}
+
+									}
+
+								//APICT
+
+									Element apicttop = autoposting.getChild("API-CT",noNamespace);
+									if(apicttop != null)
+									{
+										List ctTerms = apicttop.getChildren("autoposting-term",noNamespace);
+										
+										StringBuffer apict = new StringBuffer();
+										StringBuffer apictextended = new StringBuffer();
+										
+										for (int j = 0; j < ctTerms.size(); j++)
+										{
+											Element el = (Element)ctTerms.get(j);
+
+											StringBuffer termbuf = new StringBuffer();
+											String pref = (String)el.getAttributeValue("prefix");
+											String postf = (String)el.getAttributeValue("postfix");
+											String term = (String)el.getTextTrim();
+											if ( pref != null && pref.length() > 0)
+											{
+												termbuf.append(pref).append("-");
+											}
+											termbuf.append(term);
+											if ( postf != null && postf.length() > 0)
+											{
+												termbuf.append("-").append(postf);
+											}
+											if(apict.length() < 3000)
+											{
+												apict.append(termbuf.toString()).append(IDDELIMITER);
+											}
+											else if(apict.length() >= 3000)
+											{
+												apictextended.append(termbuf.toString()).append(IDDELIMITER);
+											}
+										}
+										
+										record.put("APICT",apict.toString());
+										
+										if(apictextended.toString() != null)
+										{
+											record.put("APICT1",apictextended.toString());
+										}
+										
+									}
+
+									Element apilt = autoposting.getChild("API-LT",noNamespace);
+									StringBuffer apiterms = new StringBuffer();
+									StringBuffer apigroups = new StringBuffer();
+									StringBuffer apiterms1 = new StringBuffer();
+									StringBuffer apigroups1 = new StringBuffer();
+									if(apilt != null)
+									{
+										List apiltgroup = apilt.getChildren("API-LT-GROUP",noNamespace);
+										for (int i = 0; i < apiltgroup.size(); i++)
+										{
+											Element ltgroup =(Element) apiltgroup.get(i);
+											List apilttop = ltgroup.getChildren("autoposting-term",noNamespace);
+											apiterms = new StringBuffer();
+											if(apilttop != null)
+											{
+													for (int j = 0; j < apilttop.size(); j++)
+													{
+														Element el = (Element)apilttop.get(j);
+
+														StringBuffer termbuf = new StringBuffer();
+														String pref = (String)el.getAttributeValue("prefix");
+														String postf = (String)el.getAttributeValue("postfix");
+														String term = (String)el.getTextTrim();
+														if ( pref != null && pref.length() > 0)
+														{
+															termbuf.append(pref).append("-");
+														}
+														termbuf.append(term);
+														if ( postf != null && postf.length() > 0)
+														{
+															termbuf.append("-").append(postf);
+														}
+														if(apiterms.length() < 3000)
+														{
+
+															apiterms.append(termbuf.toString()).append(IDDELIMITER);
+														}
+														else if(apiterms.length() >= 3000)
+														{
+															apiterms1.append(termbuf.toString()).append(IDDELIMITER);
+														}
+													}
+
+											}
+											apigroups.append(apiterms);
+											apigroups.append(GROUPDELIMITER);
+											if(apiterms1 != null && apiterms1.length()>0)
+											{
+												apigroups1.append(apiterms1);
+												apigroups1.append(GROUPDELIMITER);
+											}
+										}
+										// end of groups
+										record.put("APILT",apigroups.toString());
+										if(apiterms1 != null && apiterms1.length()>0)
+										{
+											record.put("APILT1",apiterms1.toString());
+										}
+
+									}
+									Element apiams = autoposting.getChild("API-AMS",noNamespace);
+
+									if(apiams != null)
+									{
+										StringBuffer apiamsbuf = new StringBuffer();
+										if(apiams.getChild("API-term",noNamespace)!= null)
+										{
+											Element ams = apiams.getChild("API-term",noNamespace);
+											apiamsbuf.append(ams.getTextTrim());
+										}
+										record.put("APIAMS",apiamsbuf.toString());
+									}
+
+									//API-APC field
+
+									Element apiapc = autoposting.getChild("API-APC", noNamespace);
+
+									if(apiapc != null)
+									{
+										StringBuffer apiapcbuf = new StringBuffer();
+										if(apiapc.getChildren("API-term", noNamespace)!= null)
+										{
+											List l = apiapc.getChildren("API-term", noNamespace);
+											for (int i = 0; i < l.size(); i++)
+											{
+												Element el = (Element)l.get(i);
+												apiapcbuf.append(el.getTextTrim());
+												apiapcbuf.append(IDDELIMITER);
+											}
+
+										}
+										if(apiapcbuf != null && apiapcbuf.length()> 0)
+										{
+											record.put("APIAPC", apiapcbuf.toString());
+										}
+									}
+
+
+									//API-CRN field
+
+									Element apicrn = autoposting.getChild("API-CRN", noNamespace);
+
+									if(apicrn != null)
+									{
+										StringBuffer apicrnbuf = new StringBuffer();
+										if(apicrn.getChildren("autoposting-term", noNamespace)!= null)
+										{
+											List l = apicrn.getChildren("autoposting-term", noNamespace);
+
+											for (int i = 0; i < l.size(); i++)
+											{
+												Element el = (Element)l.get(i);
+												if(el.getAttributeValue("CAS-nr") != null)
+												{
+													String carnr =(String) el.getAttributeValue("CAS-nr");
+													apicrnbuf.append(carnr);
+
+												}
+												apicrnbuf.append(AUDELIMITER);
+												if(el.getAttributeValue("postfix") != null)
+												{
+													String carnr =(String) el.getAttributeValue("postfix");
+													apicrnbuf.append(carnr);
+
+												}
+												apicrnbuf.append(AUDELIMITER);
+												apicrnbuf.append(el.getTextTrim());
+												apicrnbuf.append(IDDELIMITER);
+											}
+										}
+										if(apicrnbuf != null && apicrnbuf.length()> 0)
+										{
+											record.put("CASREGISTRYNUMBER", apicrnbuf.toString());
+										}
+									}
+
+									Element apialc = autoposting.getChild("API-ALC",noNamespace);
+									if(apialc != null)
+									{
+										StringBuffer apialcbuf = new StringBuffer();
+										if(apialc.getChild("LTM-COUNT",noNamespace)!= null)
+										{
+											Element ltmcount = apialc.getChild("LTM-COUNT",noNamespace);
+											apialcbuf.append(ltmcount.getTextTrim());
+
+										}
+										apialcbuf.append(IDDELIMITER);
+										if(apialc.getChild("LT-COUNT", noNamespace) != null)
+										{
+											Element ltcount = apialc.getChild("LT-COUNT", noNamespace);
+											apialcbuf.append(ltcount.getTextTrim());
+										}
+										if(apialc.getChild("LTM-COUNT",noNamespace)!= null  || 
+												apialc.getChild("LT-COUNT", noNamespace) != null)
+										{
+											record.put("APIALC",apialcbuf.toString());
+										}
+									}
+
+									Element apiatm = autoposting.getChild("API-ATM",noNamespace);
+									if(apiatm != null)
+									{
+										if(apiatm.getChild("API-term",noNamespace)!= null)
+										{
+											Element e = apiatm.getChild("API-term",noNamespace);
+											record.put("APIATM",e.getTextTrim());
+										}
+									}
+	//APIAT
+
+									Element apiat = autoposting.getChild("API-AT",noNamespace);
+									if(apiat != null)
+									{
+										StringBuffer termsbuf = new StringBuffer();
+										List apiltmtop = apiat.getChildren("autoposting-term",noNamespace);
+										for (int i = 0; i < apiltmtop.size(); i++)
+										{
+											Element el =(Element) apiltmtop.get(i);
+											StringBuffer buf= new StringBuffer();
+											String pref = (String)el.getAttributeValue("prefix");
+											String postf = (String)el.getAttributeValue("postfix");
+											String term = (String)el.getTextTrim();
+											if ( pref != null && pref.length() > 0)
+											{
+												buf.append(pref).append("-");
+											}
+											buf.append(term);
+											if ( postf != null && postf.length() > 0)
+											{
+												buf.append("-").append(postf);
+											}
+
+											termsbuf.append(buf.toString()).append(IDDELIMITER);
+
+										}
+
+										//end of groups
+										record.put("APIAT",termsbuf.toString());
+									}
+
+
+									Element apiltm = autoposting.getChild("API-LTM",noNamespace);
+									if(apiltm != null)
+									{
+										StringBuffer apimterms = new StringBuffer();
+										StringBuffer apimgroups = new StringBuffer();
+
+
+
+
+										List apiltmgroup = apiltm.getChildren("API-LTM-GROUP",noNamespace);
+										for (int i = 0; i < apiltmgroup.size(); i++)
+										{
+
+											Element egroup =(Element) apiltmgroup.get(i);
+											List apiltmtop = egroup.getChildren("autoposting-term",noNamespace);
+											apimterms = new StringBuffer();
+
+											if(apiltmtop != null)
+											{
+
+													for (int j = 0; j < apiltmtop.size(); j++)
+													{
+														Element el = (Element)apiltmtop.get(j);
+
+														StringBuffer termbuf = new StringBuffer();
+														String pref = (String)el.getAttributeValue("prefix");
+														String postf = (String)el.getAttributeValue("postfix");
+														String term = (String)el.getTextTrim();
+														if ( pref != null && pref.length() > 0)
+														{
+															termbuf.append(pref).append("-");
+														}
+														termbuf.append(term);
+														if ( postf != null && postf.length() > 0)
+														{
+															termbuf.append("-").append(postf);
+														}
+
+														apimterms.append(termbuf.toString()).append(IDDELIMITER);
+													}
+
+
+											}
+											apimgroups.append(apimterms);
+											apimgroups.append(GROUPDELIMITER);
+										}
+										//end of groups
+										record.put("APILTM",apimgroups.toString());
+									}
 
 							}
 
 							//SOURCE SOURCETYPE SOURCECOUNTRY SOURCEID
 
-							Element source =(Element) head.getChild("source",noNamespace);
+							source =(Element) head.getChild("source",noNamespace);
 							parseSourceElement(source,record);
 
 							//CORRESPONDENCE
 							Element correspondence = (Element) head.getChild("correspondence",noNamespace);
 							parseCorrespondenceElement(correspondence,record);
+
+							if(source != null && source.getChild("sourc", noNamespace) != null)
+							{
+								record.put("SOURC", source.getChild("sourc", noNamespace).getText());
+							}
 
 						}
 
@@ -446,15 +811,92 @@ public class BdParser
 							{
 								record.put("REFCOUNT",(String)bibliography.getAttributeValue("refcount"));
 							}
-							//System.out.println("REFCOUNT "+(String)bibliography.getAttributeValue("refcount"));
 						}
 
-
 						//weekNumber
-						record.put("LOADNUMBER",weekNumber);
-						//System.out.println("DATABASE "+databaseName+" "+databaseName.length());
+						//record.put("LOADNUMBER",weekNumber);
+						// only for elt database conversion
 						record.put("DATABASE",databaseName.trim());
 					}
+
+					if(item.getChild("loadnumber", noNamespace) != null)
+					{
+						record.put("LOADNUMBER",item.getChild("loadnumber", noNamespace).getText());
+					}
+
+
+
+
+                   // record.put("LOADNUMBER", item.getChildText("load-number", noNamespace));
+
+					Element additionalsrcinfo = null;
+					if( source != null)
+					{
+						additionalsrcinfo = source.getChild("additional-srcinfo",noNamespace);
+					}
+					Element additionalsrcinfosecjournal = null;
+					if(additionalsrcinfo != null)
+					{
+						additionalsrcinfosecjournal = additionalsrcinfo.getChild("additional-srcinfo-secjournal",noNamespace);
+					}
+
+					Element secondaryjournal = null;
+					if(additionalsrcinfosecjournal != null)
+					{
+						secondaryjournal = additionalsrcinfosecjournal.getChild("secondaryjournal",noNamespace);
+					}
+
+                    if (secondaryjournal != null)
+                    {
+                		if(secondaryjournal.getChild("sourcetitle", noNamespace) != null)
+    					{
+                			record.put("SECSTI", secondaryjournal.getChild("sourcetitle", noNamespace).getText());
+    					}
+                		if(secondaryjournal.getChild("issn", noNamespace) != null)
+    					{
+                			record.put("SECISS", secondaryjournal.getChild("issn", noNamespace).getText());
+    					}
+
+                        Element voliss = secondaryjournal.getChild("voliss",noNamespace);
+                        if(voliss != null && voliss.getAttributeValue("volume")!=null)
+				        {
+					        record.put("SECVOLUME",(String)voliss.getAttributeValue("volume"));
+					    }
+                        if(voliss != null && voliss.getAttributeValue("issue")!=null)
+						{
+					        record.put("SECISSUE",(String)voliss.getAttributeValue("issue"));
+						}
+
+                         Element secpublicationdate = secondaryjournal.getChild("publicationdate",noNamespace);
+
+                        if(secpublicationdate != null)
+                        {
+                            StringBuffer secpubdate = new StringBuffer();
+
+                            if(secpublicationdate.getChild("year", noNamespace) != null)
+                            {
+                                  secpubdate.append(secpublicationdate.getChild("year", noNamespace).getText());
+                            }
+                            secpubdate.append(IDDELIMITER);
+                            if(secpublicationdate.getChild("month", noNamespace) != null)
+                            {
+                                secpubdate.append(secpublicationdate.getChild("month", noNamespace).getText());
+                            }
+                            secpubdate.append(IDDELIMITER);
+                            if(secpublicationdate.getChild("day", noNamespace) != null)
+                            {
+                                secpubdate.append(secpublicationdate.getChild("day", noNamespace).getText());
+                            }
+                            secpubdate.append(IDDELIMITER);
+                            if(secpublicationdate.getChild("date-text", noNamespace) != null)
+                            {
+                                secpubdate.append(secpublicationdate.getChild("date-text", noNamespace).getText());
+                            }
+                            secpubdate.append(IDDELIMITER);
+                            record.put("SECPUBDATE", secpubdate.toString());
+                        }
+                     }
+
 				}
 
 			}
@@ -512,7 +954,6 @@ public class BdParser
 					}
 				}
 			}
-			//System.out.println(tradenamegroupBuffer.toString());
 			if(tradenamegroupBuffer.length() > 0 )
 			{
 				record.put("TRADENAME", tradenamegroupBuffer.toString());
@@ -570,7 +1011,6 @@ public class BdParser
 					}
 				}
 			}
-			//System.out.println(manufacturergroupBuffer.toString());
 			if(manufacturergroupBuffer.length() > 0 )
 			{
 				record.put("MANUFACTURER", manufacturergroupBuffer.toString());
@@ -1164,26 +1604,26 @@ public class BdParser
 	{
 		StringBuffer dateBuffer = new StringBuffer();
 		String cMonth = null;
-		if(month != null)
+		if(month != null && !month.equals("00"))
 		{
 			cMonth = convertMonth(month);
 			dateBuffer.append(cMonth);
 		}
 
-		if(day!= null)
+		if(day!= null && !day.equals("00"))
 		{
 			if(dateBuffer.length()>0)
 			{
 				dateBuffer.append(" ");
 			}
-			dateBuffer.append(day);
+			dateBuffer.append(reFormatDate(day));
 		}
 
 		if(year!=null)
 		{
 			if(dateBuffer.length()>0)
 			{
-				dateBuffer.append(",");
+				dateBuffer.append(", ");
 			}
 			dateBuffer.append(year);
 		}
@@ -1191,6 +1631,28 @@ public class BdParser
 		return dateBuffer.toString();
 	}
 
+
+	  private static final Pattern pubdateregex = Pattern.compile("(\\d{2})");
+
+	  private String reFormatDate(String pubdate)
+	  {
+	    if(pubdate != null)
+	    {
+	      Matcher m = pubdateregex.matcher(pubdate);
+	      if (m.find() && m.groupCount() == 1) {
+	        String days = m.group(0);
+	        // check for days which are formatted like July 01
+	        if(days.startsWith("0"))
+	        {
+	          // trim off the leading zero to change to July 1
+	          days = days.substring(1);
+	        }
+	        return days;
+	       // System.out.println("reFormatted " + pubdate);
+	      }
+	    }
+	    return pubdate;
+	  }
 
 	private void setPublisher(Hashtable record,List publisherList)
 	{
@@ -2197,8 +2659,6 @@ public class BdParser
 		return null;
 
 	}
-
-
 	private void parseDescriptorgroup(Element descriptorgroup,Hashtable record) throws Exception
 	{
 		String term1 = "";
@@ -2261,7 +2721,9 @@ public class BdParser
 				Element classifications = (Element)classificationsList.get(i);
 				String classificationType = classifications.getAttributeValue("type");
 				StringBuffer clBuffer = new StringBuffer();
-				if(classificationType != null && (classificationType.equals("CPXCLASS")||classificationType.equals("GEOCLASS")))
+				if(classificationType != null &&
+						(classificationType.equals("CPXCLASS")||
+								classificationType.equals("GEOCLASS")))
 				{
 					List classificationList = classifications.getChildren("classification",noNamespace);
 					for(int j=0;j<classificationList.size();j++)
@@ -2314,12 +2776,15 @@ public class BdParser
             {
 
 				String text=((Text)o).getText();
+
+				//System.out.println("text::"+text);
+				
 				text= perl.substitute("s/&/&amp;/g",text);
 				text= perl.substitute("s/</&lt;/g",text);
 				text= perl.substitute("s/>/&gt;/g",text);
 				text= perl.substitute("s/\n//g",text);
 				text= perl.substitute("s/\r//g",text);
-
+				 
 				b.append(text);
 
             }
