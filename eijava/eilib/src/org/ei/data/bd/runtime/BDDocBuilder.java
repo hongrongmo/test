@@ -50,7 +50,7 @@ public class BDDocBuilder
 
     private Database database;
 
- 	private static String queryBD="select * from bd_master where M_ID IN  ";
+ 	private static String queryBD="select * from bd_master_eltgroovy where M_ID IN  ";
 
     public DocumentBuilder newInstance(Database database)
     {
@@ -1473,7 +1473,10 @@ public class BDDocBuilder
 
 			for(int i =  0 ; i< cas.length; i++ )
 			{
-				if(cas[i] != null && !cas[i].trim().equals("") )
+				if(cas[i] != null && 
+						!cas[i].trim().equals("")&&
+						!cas[i].trim().equals("y")&&
+						!cas[i].trim().equals("b"))
 				{
 					array.add((String)cas[i]);
 				}
