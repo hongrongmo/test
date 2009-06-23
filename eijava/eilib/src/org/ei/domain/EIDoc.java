@@ -239,7 +239,6 @@ public class EIDoc implements Highlightable, XMLSerializable, LocalHoldingLinker
             URL = sUtil.replace(URL, LocalHoldingLinker.localHoldingFields[i], getDataForLocalHolding(LocalHoldingLinker.localHoldingFields[i]), StringUtil.REPLACE_GLOBAL, StringUtil.MATCH_CASE_SENSITIVE);
 
         }
-
         return URL;
     }
 
@@ -275,21 +274,54 @@ public class EIDoc implements Highlightable, XMLSerializable, LocalHoldingLinker
                 value = author.getName();
             }
         }
-        else if (field.equals(LocalHoldingLinker.ISSN)) {
-            value = getISSN2();
+        else if (field.equals(LocalHoldingLinker.ISSN))
+        {
+			if(mapDocument.containsKey(Keys.ISSN))
+			{
+				ISSN issn = (ISSN) mapDocument.get(Keys.ISSN);
+
+				if(issn.getKey().getKey().equals(Keys.E_ISSN.getKey()))
+				{
+					value = null;
+				}
+				else
+				{
+			        value = issn.withoutDash();
+				}
+	        }
         }
         else if (field.equals(LocalHoldingLinker.ISSN9)) {
-            if (mapDocument.containsKey(Keys.ISSN)) {
+            if (mapDocument.containsKey(Keys.ISSN))
+            {
                 ISSN issn = (ISSN) mapDocument.get(Keys.ISSN);
-                value = issn.withDash();
+                if(issn.getKey().getKey().equals(Keys.E_ISSN.getKey()))
+                {
+					value = null;
+				}
+				else
+				{
+                	value = issn.withDash();
+				}
             }
         }
-        else if (field.equals(LocalHoldingLinker.EISSN)) {
-            if (mapDocument.containsKey(Keys.E_ISSN)) {
+        else if (field.equals(LocalHoldingLinker.EISSN))
+        {
+            if(mapDocument.containsKey(Keys.E_ISSN))
+            {
                 ISSN issn = (ISSN) mapDocument.get(Keys.E_ISSN);//Electronic ISSN
                 value = issn.withoutDash();
-
             }
+            else
+            {
+				if(mapDocument.containsKey(Keys.ISSN))
+				{
+					ISSN issn = (ISSN) mapDocument.get(Keys.ISSN);
+					if(issn.getKey().getKey().equals(Keys.E_ISSN.getKey()))
+					{
+						value = issn.withoutDash();
+					}
+				}
+			}
         }
         else if (field.equals(LocalHoldingLinker.ISBN1))
         {
