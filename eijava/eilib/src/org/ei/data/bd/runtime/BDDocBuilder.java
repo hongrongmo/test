@@ -123,12 +123,21 @@ public class BDDocBuilder
 				formatRIS(buildField(Keys.COPYRIGHT_TEXT,CPX_TEXT_COPYRIGHT,ht), dataFormat, Keys.COPYRIGHT_TEXT, Keys.RIS_N1);
 
 				Key issuedateKey = Keys.ISSUE_DATE;
-        String strDocType = rset.getString("CITTYPE");
+        		String strDocType = rset.getString("CITTYPE");
 				if(("PA").equalsIgnoreCase(strDocType))
 				{
 				  issuedateKey = Keys.PATENT_ISSUE_DATE;
 				}
-				buildField(issuedateKey,reFormatDate(rset.getString("PUBLICATIONDATE")),ht);
+
+				String pyr = rset.getString("PUBLICATIONYEAR");
+				String pyd = reFormatDate(rset.getString("PUBLICATIONDATE"));
+
+				if(pyd != null && !pyd.matches(".*[1-9][0-9][0-9][0-9].*"))
+				{
+					pyd = pyd+" "+pyr;
+				}
+
+				buildField(issuedateKey,pyd,ht);
 
 				formatRIS(buildField(Keys.MONOGRAPH_TITLE,rset.getString("ISSUETITLE"),ht), dataFormat, Keys.MONOGRAPH_TITLE, Keys.RIS_BT);
 				formatRIS(buildField(Keys.VOLUME,getVolume(rset.getString("VOLUME"),perl),ht), dataFormat, Keys.VOLUME, Keys.RIS_VL);
