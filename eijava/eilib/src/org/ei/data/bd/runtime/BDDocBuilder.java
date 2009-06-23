@@ -132,7 +132,7 @@ public class BDDocBuilder
 				String pyr = rset.getString("PUBLICATIONYEAR");
 				String pyd = reFormatDate(rset.getString("PUBLICATIONDATE"));
 
-				if(pyd != null && !pyd.matches(".*[1-9][0-9][0-9][0-9].*"))
+				if(pyd != null && pyr != null && !pyd.matches(".*[1-9][0-9][0-9][0-9].*"))
 				{
 					pyd = pyd+" "+pyr;
 				}
