@@ -246,10 +246,16 @@ public class BDDocBuilder
 					buildField(Keys.REGION_CONTROLLED_TERMS,setElementData(rset.getString("REGIONALTERM")),ht);
 					buildField(new Key(Keys.UNCONTROLLED_TERMS, "Species terms"),setElementData(rset.getString("SPECIESTERM")),ht);
 					//chem
-					if (database.getMask()!=128)
+					if (database.getMask()!=128 && database.getMask()!=1024)
 					{
 						buildField(Keys.CLASS_CODES,getClassification(Keys.CLASS_CODES,rset.getString("CLASSIFICATIONCODE"),database),ht);
 						formatRIS(buildField(Keys.MAIN_HEADING,rset.getString("MAINHEADING"),ht), dataFormat,Keys.MAIN_HEADING, Keys.RIS_KW);
+					}
+					else if (database.getMask()==1024)
+					{
+						buildField(Keys.CLASS_CODES,setElementData(rset.getString("CLASSIFICATIONDESC")),ht);
+						//formatRIS(buildField(Keys.MAIN_HEADING,rset.getString("MAINHEADING"),ht), dataFormat,Keys.MAIN_HEADING, Keys.RIS_KW);
+
 					}
 					formatRIS(buildField(Keys.UNCONTROLLED_TERMS,setElementData(rset.getString("UNCONTROLLEDTERM")),ht), dataFormat,Keys.UNCONTROLLED_TERMS,Keys.RIS_FLS);
 					buildField(Keys.ABSTRACT_TYPE,getAbstractType(rset.getString("ABSTRACTORIGINAL")),ht);
