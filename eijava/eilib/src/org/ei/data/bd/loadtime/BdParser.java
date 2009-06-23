@@ -460,32 +460,44 @@ public class BdParser
 							{
 									Element apidescriptorgroup = enhancement.getChild("API-descriptorgroup",noNamespace);
 									Element autoposting = apidescriptorgroup.getChild("autoposting",noNamespace);
-							//APICC
+							//APICC													
 									Element classificationdescription = autoposting.getChild("API-CC", noNamespace);
 
-									Element classification = classificationdescription.getChild("classification", noNamespace);
-
-									if(classification != null)
+									if(classificationdescription != null)
 									{
-
-										List apicc = classification.getChildren("classification-description",noNamespace);
+										List classdescgroup = classificationdescription.getChildren("classification", noNamespace);
 										StringBuffer apiccterms = new StringBuffer();
-										for (int i = 0; i < apicc.size(); i++)
-										{
-											Element el = (Element)apicc.get(i);
-											apiccterms.append((String)el.getTextTrim());
-											if(i<(apicc.size()-1) )
+										if(classdescgroup != null)
+										{											
+											for (int j = 0; j < classdescgroup.size(); j++)
 											{
-												apiccterms.append(AUDELIMITER);
-											}
+												Element ell = (Element)classdescgroup.get(j);											
+												List apicc = ell.getChildren("classification-description",noNamespace);
+												
+												if(apicc != null)
+												{
+													for (int i = 0; i < apicc.size(); i++)
+													{
+														Element el = (Element)apicc.get(i);
+														apiccterms.append((String)el.getTextTrim());
+														if(i<(apicc.size()-1) )
+														{
+															apiccterms.append(AUDELIMITER);
+														}
+													}
+												}	
+												if(j<(classdescgroup.size()-1) )
+												{
+													apiccterms.append(AUDELIMITER);
+												}
+											}																																	
 										}
-
+										
 										if(apiccterms != null && apiccterms.length()> 0)
 										{
 											String apiccstr = apiccterms.toString();
 											record.put("CLASSIFICATIONDESC",apiccstr);
-										}
-
+										}																				
 									}
 
 								//APICT
@@ -541,7 +553,7 @@ public class BdParser
 									StringBuffer apigroups1 = new StringBuffer();
 									if(apilt != null)
 									{
-										List apiltgroup = apilt.getChildren("API-LT-GROUP",noNamespace);
+										List apiltgroup = apilt.getChildren("API-LT-group",noNamespace);
 										for (int i = 0; i < apiltgroup.size(); i++)
 										{
 											Element ltgroup =(Element) apiltgroup.get(i);
@@ -744,7 +756,7 @@ public class BdParser
 
 
 
-										List apiltmgroup = apiltm.getChildren("API-LTM-GROUP",noNamespace);
+										List apiltmgroup = apiltm.getChildren("API-LTM-group",noNamespace);
 										for (int i = 0; i < apiltmgroup.size(); i++)
 										{
 
