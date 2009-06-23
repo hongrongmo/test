@@ -100,10 +100,13 @@ public class LocalHolding
 
                         sdynamicUrl = st2.nextToken();
 
-                        if (sdynamicUrl != " " && issn != null)
+						String localURL = null;
+
+                        if (sdynamicUrl != null && sdynamicUrl.length() > 0)
                         {
+							localURL = doc.getLocalHoldingLink(sdynamicUrl);
                             strbuff.append("<DYNAMIC-URL>");
-                            strbuff.append("<![CDATA["+doc.getLocalHoldingLink(sdynamicUrl)+"]]>");
+                            strbuff.append("<![CDATA["+localURL+"]]>");
                             strbuff.append("</DYNAMIC-URL>");
                         }
                         else
@@ -112,10 +115,10 @@ public class LocalHolding
                         }
 
                         sdefaultUrl = st2.nextToken();
-                        if (sdefaultUrl != " " && issn == null)
+                        if (localURL != null)
                         {
                             strbuff.append("<DEFAULT-URL>");
-                            strbuff.append("<![CDATA["+doc.getLocalHoldingLink(sdefaultUrl)+"]]>");
+                            strbuff.append("<![CDATA["+localURL+"]]>");
                             strbuff.append("</DEFAULT-URL>");
                         }
                         else
@@ -156,7 +159,6 @@ public class LocalHolding
 			strbuff.insert(0,"<LOCAL-HOLDINGS>");
         	strbuff.append("</LOCAL-HOLDINGS>");
 		}
-
         return strbuff.toString();
     }
 
