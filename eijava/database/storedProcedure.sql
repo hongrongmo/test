@@ -1089,9 +1089,9 @@ BEGIN
 
 			COMMIT;
 		  ELSE
-			  INSERT INTO BD_PRO_CORRECTION_LOG(ex,update_number,action_date,message,source) VALUES (a.accessnumber,v_update_number,systimestamp,'delete','update_bd_master_table');
+			INSERT INTO BD_CORRECTION_DELETION SELECT * FROM BD_CORRECTION_TEMP WHERE accessnumber = a.accessnumber;
 
-		 END IF;
+		  END IF;
 
 		  INSERT INTO BD_MASTER_ORIG SELECT * FROM BD_CORRECTION_TEMP WHERE accessnumber = a.accessnumber;
 
@@ -1106,9 +1106,9 @@ BEGIN
 	    WHEN OTHERS THEN
 		  ROLLBACK;
 		  message := SQLERRM;
-		 INSERT INTO BD_CORRECTION_ERROR(ex,update_number,action_date,message,source) VALUES (a.accessnumber,10000,systimestamp,'message','update_bd_master_table');
-		COMMIT;
-		RAISE_APPLICATION_ERROR(-20101,'Error '||SQLERRM);
+		  INSERT INTO BD_CORRECTION_ERROR(ex,update_number,action_date,message,source) VALUES (a.accessnumber,10000,systimestamp,'message','update_bd_master_table');
+		  COMMIT;
+		  RAISE_APPLICATION_ERROR(-20101,'Error '||SQLERRM);
 	    END;
 
 	END LOOP;
