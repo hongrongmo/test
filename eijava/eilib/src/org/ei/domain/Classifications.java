@@ -64,7 +64,10 @@ public class Classifications
 
 			String classTitle = dataDictionary.getClassCodeTitle(ids[i].getClassCode());
 			Classification cl = new Classification(key, ids[i]);
-			cl.setClassTitle(classTitle);
+			if(database.getMask() != 1024)
+			{
+				cl.setClassTitle(classTitle);
+			}
 			cls[i] = cl;
 		}
 
