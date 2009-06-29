@@ -12,6 +12,9 @@ import org.ei.util.StringUtil;
 import org.ei.data.*;
 import org.ei.data.bd.*;
 import org.ei.data.bd.loadtime.*;
+import org.ei.data.bd.CVTerm;
+import org.ei.data.bd.CVTerms;
+import org.jdom.Element;
 import org.apache.oro.text.perl.*;
 
 public class BDDocBuilder
@@ -21,12 +24,16 @@ public class BDDocBuilder
 	public static String CPX_HTML_COPYRIGHT = Database.DEFAULT_ELSEVIER_HTML_COPYRIGHT;
 	public static String PROVIDER_TEXT = "Ei";
 	private static Map issnARFix = new HashMap();
+    private static final Key ELT_CONTROLLED_TERMS = new Key(Keys.CONTROLLED_TERMS, "Controlled terms");
+    private static final Key ELT_CLASS_CODES = new Key(Keys.CLASS_CODES_MULTI, "Class codes");
+    private static final Key ELT_MAJOR_TERMS = new Key(Keys.MAJOR_TERMS, "Major terms");
 	private static final Key CPX_CONTROLLED_TERMS = new Key(Keys.CONTROLLED_TERMS, "Ei controlled terms");
 	private static final Key CPX_CLASS_CODES = new Key(Keys.CLASS_CODES, "Ei classification codes");
 	private static final Key CPX_MAIN_HEADING = new Key(Keys.MAIN_HEADING, "Ei main heading");
+	private static final String LT_MSG = "Please click here to view all linked terms";
 	private static final Key[] CITATION_KEYS = {Keys.DOCID,Keys.TITLE,Keys.TITLE_TRANSLATION,Keys.EDITORS,Keys.AUTHORS,Keys.AUTHOR_AFFS,Keys.SOURCE,Keys.MONOGRAPH_TITLE, Keys.PAGE_RANGE, Keys.ARTICLE_NUMBER, Keys.VOLISSUE,Keys.PUBLICATION_YEAR, Keys.PUBLISHER, Keys.ISSUE_DATE, Keys.ISSN, Keys.LANGUAGE ,Keys.NO_SO, Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT, Keys.DOI, Keys.PATAPPNUM, Keys.PATNUM, Keys.PATASSIGN, Keys.PATENT_ISSUE_DATE};
 	private static final Key[] ABSTRACT_KEYS = {Keys.DOCID,Keys.TITLE,Keys.TITLE_TRANSLATION,Keys.EDITORS,Keys.AUTHORS,Keys.EDITOR_AFFS, Keys.AUTHOR_AFFS,Keys.VOLISSUE, Keys.SOURCE, Keys.PUBLICATION_YEAR, Keys.ISSUE_DATE, Keys.MONOGRAPH_TITLE, Keys.PAGE_RANGE,Keys.ARTICLE_NUMBER,Keys.CONFERENCE_NAME, Keys.ISSN,Keys.ISBN, Keys.CODEN, Keys.PUBLISHER,Keys.I_PUBLISHER,Keys.CONF_DATE,Keys.SPONSOR, Keys.PROVIDER ,Keys.LANGUAGE, Keys.MAIN_HEADING, CPX_CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS, Keys.GLOBAL_TAGS, Keys.PRIVATE_TAGS, Keys.ABSTRACT, Keys.NUMBER_OF_REFERENCES,Keys.NO_SO, Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT, Keys.CLASS_CODES ,Keys.CAS_REGISTRY_CODES, Keys.DOI, Keys.PATAPPNUM, Keys.PATNUM, Keys.PATASSIGN, Keys.REPORT_NUMBER_PAPER, Keys.PATENT_ISSUE_DATE};
-	private static final Key[] DETAILED_KEYS = {Keys.ACCESSION_NUMBER,  Keys.PATAPPNUM, Keys.PRIORITY_INFORMATION, Keys.PATNUM, Keys.PATASSIGN, Keys.TITLE, Keys.TITLE_TRANSLATION, Keys.AUTHORS,  Keys.AUTHOR_AFFS,Keys.CORRESPONDING_EMAIL,Keys.CORRESPONDING_AUTHORS,Keys.CORRESPONDING_AUTHORS_AFF, Keys.EDITORS,Keys.EDITOR_AFFS, Keys.SERIAL_TITLE, Keys.ABBRV_SERIAL_TITLE, Keys.VOLUME, Keys.ISSUE, Keys.MONOGRAPH_TITLE,Keys.VOLUME_TITLE, Keys.ISSUE_DATE, Keys.PUBLICATION_YEAR, Keys.REPORT_NUMBER_PAPER, Keys.PAPER_NUMBER, Keys.PAGE_RANGE,Keys.ARTICLE_NUMBER, Keys.SECONDARY_SOURCE ,Keys.LANGUAGE, Keys.ISSN, Keys.E_ISSN, Keys.CODEN, Keys.ISBN, Keys.ISBN13, Keys.DOC_TYPE, Keys.CONFERENCE_NAME, Keys.CONF_DATE, Keys.MEETING_LOCATION, Keys.CONF_CODE, Keys.SPONSOR, Keys.PUBLISHER, Keys.ABSTRACT, Keys.ABSTRACT_TYPE, Keys.NUMBER_OF_CLAIMS,Keys.NUMBER_OF_TABLES,Keys.SPECIFIC_NAMES,   Keys.NUMBER_OF_REFERENCES,Keys.GLOBAL_TAGS, Keys.PRIVATE_TAGS, Keys.PROVIDER,  Keys.SUPPL,  Keys.PI,Keys.PAGE_COUNT, Keys.MAIN_HEADING, Keys.CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS,Keys.REGION_CONTROLLED_TERMS, Keys.CAS_REGISTRY_CODES, Keys.CLASS_CODES, Keys.TREATMENTS, Keys.DOI, Keys.DOCID,Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT, Keys.PATENT_ISSUE_DATE};
+	private static final Key[] DETAILED_KEYS = {Keys.ACCESSION_NUMBER,  Keys.PATAPPNUM, Keys.PRIORITY_INFORMATION, Keys.PATNUM, Keys.PATASSIGN, Keys.TITLE, Keys.TITLE_TRANSLATION, Keys.AUTHORS,  Keys.AUTHOR_AFFS,Keys.CORRESPONDING_EMAIL,Keys.CORRESPONDING_AUTHORS,Keys.CORRESPONDING_AUTHORS_AFF, Keys.EDITORS,Keys.EDITOR_AFFS, Keys.SERIAL_TITLE, Keys.ABBRV_SERIAL_TITLE, Keys.VOLUME, Keys.ISSUE, Keys.MONOGRAPH_TITLE,Keys.VOLUME_TITLE, Keys.ISSUE_DATE, Keys.PUBLICATION_YEAR, Keys.REPORT_NUMBER_PAPER, Keys.PAPER_NUMBER, Keys.PAGE_RANGE,Keys.ARTICLE_NUMBER, Keys.SECONDARY_SOURCE ,Keys.LANGUAGE, Keys.ISSN, Keys.E_ISSN, Keys.CODEN, Keys.ISBN, Keys.ISBN13, Keys.DOC_TYPE, Keys.CONFERENCE_NAME, Keys.CONF_DATE, Keys.MEETING_LOCATION, Keys.CONF_CODE, Keys.SPONSOR, Keys.PUBLISHER, Keys.ABSTRACT, Keys.ABSTRACT_TYPE, Keys.NUMBER_OF_CLAIMS,Keys.NUMBER_OF_TABLES,Keys.SPECIFIC_NAMES,   Keys.NUMBER_OF_REFERENCES,Keys.GLOBAL_TAGS, Keys.PRIVATE_TAGS, Keys.PROVIDER,  Keys.SUPPL,  Keys.PI,Keys.PAGE_COUNT, Keys.MAIN_HEADING,ELT_MAJOR_TERMS, Keys.CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS,Keys.REGION_CONTROLLED_TERMS, Keys.CAS_REGISTRY_CODES, Keys.CLASS_CODES, Keys.INDEXING_TEMPLATE,Keys.MANUAL_LINKED_TERMS,Keys.LINKED_TERMS, Keys.LINKED_TERMS_HOLDER, Keys.TREATMENTS, Keys.DOI, Keys.DOCID,Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT, Keys.PATENT_ISSUE_DATE};
 	private static final Key[] RIS_KEYS = { Keys.RIS_TY, Keys.RIS_LA , Keys.RIS_N1 , Keys.RIS_TI , Keys.RIS_T1 , Keys.RIS_BT , Keys.RIS_JO ,Keys.RIS_T3 , Keys.RIS_AUS , Keys.RIS_AD , Keys.RIS_EDS , Keys.RIS_VL , Keys.RIS_IS , Keys.RIS_PY , Keys.RIS_AN , Keys.RIS_SP , Keys.RIS_EP, Keys.RIS_SN ,  Keys.RIS_BN ,  Keys.RIS_MD ,Keys.RIS_CY , Keys.RIS_PB,  Keys.RIS_N2 , Keys.RIS_KW , Keys.RIS_CVS , Keys.RIS_FLS , Keys.RIS_DO};
 	private static final Key[] XML_KEYS = { Keys.ISSN , Keys.MAIN_HEADING , Keys.NO_SO , Keys.MONOGRAPH_TITLE , Keys.PUBLICATION_YEAR , Keys.VOLUME_TITLE , Keys.CONTROLLED_TERM , Keys.ISBN, Keys.ISBN13, Keys.AUTHORS , Keys.DOCID , Keys.SOURCE , Keys.NUMVOL , Keys.EDITOR_AFFS , Keys.EDITORS , Keys.PUBLISHER , Keys.VOLUME , Keys.AUTHOR_AFFS , Keys.PROVIDER , Keys.ISSUE_DATE , Keys.COPYRIGHT_TEXT , Keys.DOI , Keys.PAGE_COUNT , Keys.PUBLICATION_DATE , Keys.TITLE ,Keys.TITLE_TRANSLATION, Keys.LANGUAGE , Keys.PAGE_RANGE , Keys.PAPER_NUMBER , Keys.COPYRIGHT , Keys.ISSUE , Keys.ACCESSION_NUMBER , Keys.CONTROLLED_TERMS, Keys.PATENT_ISSUE_DATE};
 	public static final String DELIMITER = ",";
@@ -216,11 +223,11 @@ public class BDDocBuilder
 				buildField(Keys.VOLUME_TITLE,rset.getString("VOLUMETITLE"),ht);
 				//buildField(Keys.PAPER_NUMBER,rset.getString("REPORTNUMBER"),ht);
 				//chem
-				if (database.getMask()!=128)
+				if (database.getMask()!=128 && database.getMask()!=1024)
 				{
 					formatRIS(buildField(Keys.CONTROLLED_TERMS,setElementData(rset.getString("CONTROLLEDTERM")),ht), dataFormat,Keys.CONTROLLED_TERMS,Keys.RIS_CVS);
 				}
-				else
+				else if(database.getMask()!=1024)
 				{
 					formatRIS(buildField(Keys.CONTROLLED_TERMS,setElementData(rset.getString("CHEMICALTERM")),ht), dataFormat,Keys.CONTROLLED_TERMS,Keys.RIS_CVS);
 				}
@@ -257,6 +264,60 @@ public class BDDocBuilder
 						//formatRIS(buildField(Keys.MAIN_HEADING,rset.getString("MAINHEADING"),ht), dataFormat,Keys.MAIN_HEADING, Keys.RIS_KW);
 
 					}
+					
+					String apict =rset.getString("APICT");
+					ArrayList mcv = new ArrayList();			
+			
+					CVTerms cvterms = null;
+					if(apict != null && !apict.trim().equals(""))
+					{
+						cvterms = new CVTerms(apict);
+						cvterms.parse();
+												
+					}
+					//String apictstr = cvterms.getAPICT();
+			
+					if(cvterms != null)
+					{						
+						String cvtstr = cvterms.getCvexpandstr();
+						String cvtmjr = cvterms.getCvmexpandstr();
+						if (cvtstr != null  && cvtstr.length() > 0)
+						{
+							ht.put(ELT_CONTROLLED_TERMS, new XMLMultiWrapper2(ELT_CONTROLLED_TERMS,setCVS(StringUtil.substituteChars(cvtstr)))); 
+							formatRIS(ht,dataFormat,Keys.CONTROLLED_TERMS,Keys.RIS_CVS);
+						}
+						if (cvtmjr != null && cvtmjr.length() > 0)
+						{
+							ht.put(ELT_MAJOR_TERMS, new XMLMultiWrapper2(ELT_MAJOR_TERMS,setCVS(StringUtil.substituteChars(cvtmjr))));
+						}
+					}
+					
+					if (rset.getString("APIATM") != null)
+	                {
+	                    ht.put(Keys.INDEXING_TEMPLATE, new XMLWrapper(Keys.INDEXING_TEMPLATE, replaceBar(formatATM(StringUtil.substituteChars(rset.getString("APIATM"))))));
+
+	                    if (rset.getClob("APILT") != null) {
+
+	                        ht.put(Keys.LINKED_TERMS_HOLDER, new XMLWrapper(Keys.LINKED_TERMS_HOLDER, LT_MSG));
+	                    }
+	                }
+	                else
+	                {
+	                    String linkedTerms = StringUtil.replaceNullWithEmptyString(rset.getString("APILT"));
+	                    String apiltowerflow = rset.getString("APILT1");
+
+	                    if (!linkedTerms.equals("") && !linkedTerms.equalsIgnoreCase("QQ"))
+	                    {
+		                    if(apiltowerflow != null && !apiltowerflow.trim().equals("") )
+		                    {
+		                    	linkedTerms = linkedTerms.concat(apiltowerflow);
+		
+		                    }		                    
+	                        ht.put(Keys.LINKED_TERMS, new XMLWrapper(Keys.LINKED_TERMS,
+	                                StringUtil.substituteChars(removePoundSign(linkedTerms))));
+	                    }
+	                }					
+												
 					formatRIS(buildField(Keys.UNCONTROLLED_TERMS,setElementData(rset.getString("UNCONTROLLEDTERM")),ht), dataFormat,Keys.UNCONTROLLED_TERMS,Keys.RIS_FLS);
 					buildField(Keys.ABSTRACT_TYPE,getAbstractType(rset.getString("ABSTRACTORIGINAL")),ht);
 					buildField(Keys.MEDIA,rset.getString("MEDIA"),ht);
@@ -288,6 +349,11 @@ public class BDDocBuilder
 				buildField(Keys.CORRESPONDING_AUTHORS,getCorAuthors(Keys.CORRESPONDING_AUTHORS,rset.getString("CORRESPONDENCENAME"),rset.getString("CORRESPONDENCEEADDRESS")),ht);
 
 				if(rset.getString("AFFILIATION") == null)
+				{
+					buildField(Keys.CORRESPONDING_AUTHORS_AFF,getCorrespondingAuAff(rset.getString("CORRESPONDENCEAFFILIATION")),ht);
+				}
+				
+				if (database.getMask()==1024 && rset.getString("CORRESPONDENCEAFFILIATION") != null)
 				{
 					buildField(Keys.CORRESPONDING_AUTHORS_AFF,getCorrespondingAuAff(rset.getString("CORRESPONDENCEAFFILIATION")),ht);
 				}
@@ -340,7 +406,96 @@ public class BDDocBuilder
         return list;
 
 	}
+    
+    public String replaceBar(String str) {
+        String result = perl.substitute("s/\\||/<\\/br>/g", str);
+        return result;
+    }
+    public String formatATM(String str) {
 
+        if (str == null)
+            return "";
+
+        String template = perl.substitute("s/A\\$\\$/TEMPLATE TITLE: /g", str);
+        template = perl.substitute("s/P\\$\\$/TEMPLATE TITLE: /g", template);
+        template = perl.substitute("s/\\$\\$/TEMPLATE TITLE: /g", template);
+        template = perl.substitute("s/##/NUMBER OF TEMPLATE-GENERATED LINK TERMS: /g", template);
+        template = perl.substitute("s/0//g", template);
+        StringBuffer sbTemplate = new StringBuffer();
+
+        List lstTokens = new ArrayList();
+
+        perl.split(lstTokens, "/\\|/", template);
+
+        int numOfTplts = 0;
+
+        for (int i = 0; i < lstTokens.size(); i++) {
+            String term = (String) lstTokens.get(i);
+
+            if (perl.match("/TEMPLATE TITLE:/i", term))
+                ++numOfTplts;
+        }
+
+        if (numOfTplts >= 1) {
+            for (int i = 0; i < lstTokens.size(); i++) {
+                String term = (String) lstTokens.get(i);
+
+                if (perl.match("/TEMPLATE TITLE:/i", term)) {
+
+                    if (i == 0)
+                        sbTemplate.append(term);
+                    else
+                        sbTemplate.append("<br/>").append(term);
+
+                }
+                else {
+
+                    if (!perl.match("/NUMBER OF TEMPLATE-GENERATED LINK TERMS:/", term) && !perl.match("/V[0-9]/i", term) && !term.startsWith(">") && !perl.match("/S[0-9]/i", term)) {
+                       // sbTemplate.append("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;").
+                        sbTemplate.append(term);
+
+                    }
+                    else {
+                        sbTemplate.append(term);
+                    }
+
+                }
+                if (i > 0)
+                    sbTemplate.append("|");
+            }
+
+            String result = sbTemplate.toString();
+            result =result.replaceAll("</br>", "<br>");
+            result =result.replaceAll("<br/>", "<br>");
+          //  System.out.println(result);
+            return result;
+        }
+        else {
+        	template =template.replaceAll("</br>", "<br>");
+        	template =template.replaceAll("<br/>", "<br>");
+      //  	System.out.println(template);
+            return template;
+        }
+    }
+    
+    
+    public static String removePoundSign(String ct) {
+
+        Perl5Util perl = new Perl5Util();
+
+        if (ct == null)
+            return "";
+        String parsedCT = perl.substitute("s/\\#//g", ct);
+        String gd = new String(BdParser.GROUPDELIMITER);
+        String id= new String(BdParser.IDDELIMITER);
+        parsedCT = perl.substitute("s/"+gd+"/|/g", parsedCT);
+        parsedCT = perl.substitute("s/"+id+"/;/g", parsedCT);
+        
+      //  parsedCT = perl.substitute("s/IDDELIMITER/;/g", parsedCT);
+
+        return parsedCT;
+
+    }
     //BdCoden.convert
 
 	private String getEmail(String email)
@@ -581,6 +736,8 @@ public class BDDocBuilder
 		return ht;
 
 	}
+	
+
 
 	private String getFirstPublisher(String pubName)
 	{
@@ -1482,7 +1639,8 @@ public class BDDocBuilder
 				if(cas[i] != null && 
 						!cas[i].trim().equals("")&&
 						!cas[i].trim().equals("y")&&
-						!cas[i].trim().equals("b"))
+						!cas[i].trim().equals("b") &&
+						!cas[i].trim().equals("n"))
 				{
 					array.add((String)cas[i]);
 				}
@@ -1496,6 +1654,41 @@ public class BDDocBuilder
 			return null;
 		}
 
+	}
+	private Perl5Util perl = new Perl5Util();
+	
+	public String[] setEltTermsElementData(String elementVal, ArrayList mcv)
+	{
+		String[] array = null;
+		ArrayList cv = new ArrayList();
+		
+		
+		if(elementVal!=null && elementVal.trim().length()>0)
+		{
+			if(elementVal.indexOf(BdParser.IDDELIMITER)>-1)
+			{
+				array = elementVal.split(BdParser.IDDELIMITER,-1);
+			}
+			else
+			{
+				array = new String[1];
+				array[0]=elementVal;
+			}
+		}
+		
+		for (int i = 0; i < array.length; i++)
+		{
+			if(perl.match("/[*]/",array[i]))
+			{				
+				System.out.println("Major term"+ array[i]);
+				mcv.add(array[i]);
+			}
+			else
+			{
+				cv.add(array[i]);
+			}			
+		}
+		return (String[]) cv.toArray(new String[0]);
 	}
 
 	public String[] setElementData(String elementVal)
@@ -1621,6 +1814,54 @@ public class BDDocBuilder
 
 		}
 	}
+	
+	  private KeyValuePair[] setCVS(String cvs) {
+	        ArrayList list = new ArrayList();
+	        StringTokenizer st = new StringTokenizer(cvs, ";", false);
+	        String strToken = null;
+
+	        while (st.hasMoreTokens()) {
+	            strToken = st.nextToken().trim();
+	            if (strToken.length() > 0) {
+	                KeyValuePair k = new KeyValuePair(getTermField(strToken), strToken);
+	                list.add(k);
+	            }
+
+	        }
+
+	        return (KeyValuePair[]) list.toArray(new KeyValuePair[list.size()]);
+
+	    }
+
+
+	    public Key getTermField(String cv) {
+
+	        Key field = null;
+
+	        if (cv.startsWith("*")) {
+	            if (cv.endsWith("-A"))
+	                field = Keys.MAJOR_REAGENT_TERM;
+	            else if (cv.endsWith("-P"))
+	                field = Keys.MAJOR_PRODUCT_TERM;
+	            else if (cv.endsWith("-N"))
+	                field = Keys.MAJOR_NOROLE_TERM;
+	            else
+	                field = Keys.MAJOR_TERM;
+	        }
+	        else {
+	            if (cv.endsWith("-A"))
+	                field = Keys.REAGENT_TERM;
+	            else if (cv.endsWith("-P"))
+	                field = Keys.PRODUCT_TERM;
+	            else if (cv.endsWith("-N"))
+	                field = Keys.NOROLE_TERM;
+	            else
+	                field = Keys.CONTROLLED_TERM;
+	        }
+
+	        return field;
+
+	    }
 
 }
 
