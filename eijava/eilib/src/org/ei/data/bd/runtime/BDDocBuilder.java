@@ -260,7 +260,7 @@ public class BDDocBuilder
 					}
 					else if (database.getMask()==1024)
 					{
-						buildField(Keys.CLASS_CODES,setElementData(rset.getString("CLASSIFICATIONDESC")),ht);
+						buildField(Keys.CLASS_CODES,getClassification(Keys.CLASS_CODES,rset.getString("CLASSIFICATIONDESC"),database),ht);
 						//formatRIS(buildField(Keys.MAIN_HEADING,rset.getString("MAINHEADING"),ht), dataFormat,Keys.MAIN_HEADING, Keys.RIS_KW);
 
 					}
