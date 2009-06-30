@@ -1080,16 +1080,13 @@ BEGIN
 	    v_accessnumber :=a.accessnumber;
 	    BEGIN
 	    IF INSTR(v_accessnumber,'200138',1,1)<1 THEN
-
+		  
+		  INSERT INTO BD_CORRECTION_DELETION SELECT * FROM BD_MASTER_ORIG WHERE DATABASE = dbName AND accessnumber=a.accessnumber;
 		  DELETE FROM BD_MASTER_ORIG WHERE DATABASE = dbName AND accessnumber=a.accessnumber;
 		  IF SQL%NOTFOUND THEN
 			INSERT INTO BD_CORRECTION_NEW SELECT * FROM BD_CORRECTION_TEMP WHERE accessnumber = a.accessnumber;
 
 			INSERT INTO BD_CORRECTION_ERROR(ex,update_number,action_date,message,source) VALUES (a.accessnumber,v_update_number,systimestamp,'record '||a.accessnumber||' not found on master table','update_bd_master_table');
-
-			COMMIT;
-		  ELSE
-			INSERT INTO BD_CORRECTION_DELETION SELECT * FROM BD_CORRECTION_TEMP WHERE accessnumber = a.accessnumber;
 
 		  END IF;
 
