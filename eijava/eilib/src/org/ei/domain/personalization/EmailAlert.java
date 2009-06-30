@@ -311,7 +311,7 @@ public class EmailAlert {
                             eimessage.addCCRecepients(Arrays.asList(ccrecepients));
                             // When testing the strEmailAddresses sometimes is a lsit
                             // which was causing and error so changed to single sender emailAddress
-                            eimessage.setFrom(emailAddress);
+                            eimessage.setFrom("<eiemailalert@elsevier.com>");
                             eimessage.setSender("<eiemailalert@elsevier.com>");
                         }
 
