@@ -171,89 +171,94 @@ public class BdCorrection
 			//FastSearchControl.BASE_URL = "http://ei-main.bos3.fastsearch.net:15100";
 			//FastSearchControl.BASE_URL = "http://ei-test.bos3.fastsearch.net:15100";
 
-
-			/**********delete all data from temp table *************/
-			if(test)
-			{
-				System.out.println("about to truncate table "+tableToBeTruncated);
-				System.out.println("press enter to continue");
-				Thread.currentThread().sleep(500);
-				System.in.read();
-				Thread.currentThread().sleep(1000);
-			}
 			BdCorrection bdc = new BdCorrection();
 			con = bdc.getConnection(url,driver,username,password);
-			bdc.cleanUp(tableToBeTruncated);
-
-			/************** load data into temp table ****************/
-
-			if(test)
+			if(action!=null && !(action.equals("extractupdate")||action.equals("extractdelete")))
 			{
-				System.out.println("about to parse data file "+fileToBeLoaded);
-				System.out.println("press enter to continue");
-				System.in.read();
-				Thread.currentThread().sleep(1000);
-			}
-
-			BaseTableDriver c = new BaseTableDriver(updateNumber,database);
-        	c.writeBaseTableFile(fileToBeLoaded);
-			String dataFile=fileToBeLoaded+"."+updateNumber+".out";
-			File f = new File(dataFile);
-			if(!f.exists())
-			{
-				System.out.println("datafile "+dataFile+" does not exists");
-				System.exit(1);
-			}
-
-			if(test)
-			{
-				System.out.println("sql loader file "+dataFile+" created;");
-				System.out.println("about to load data file "+dataFile);
-				System.out.println("press enter to continue");
-				System.in.read();
-				Thread.currentThread().sleep(1000);
-			}
-        	Runtime r = Runtime.getRuntime();
-
-			Process p = r.exec("correctionFileLoader.sh "+dataFile);
-			int t = p.waitFor();
-			//System.out.println(" t "+t);
-			int tempTableCount = bdc.getTempTableCount();
-			if(tempTableCount>0)
-			{
-				System.out.println(tempTableCount+" records was loaded into the temp table");
+				/**********delete all data from temp table *************/
 				if(test)
 				{
-					System.out.println("begin to update tables");
+					System.out.println("about to truncate table "+tableToBeTruncated);
+					System.out.println("press enter to continue");
+					Thread.currentThread().sleep(500);
+					System.in.read();
+					Thread.currentThread().sleep(1000);
+				}
+
+
+				bdc.cleanUp(tableToBeTruncated);
+
+				/************** load data into temp table ****************/
+
+				if(test)
+				{
+					System.out.println("about to parse data file "+fileToBeLoaded);
 					System.out.println("press enter to continue");
 					System.in.read();
 					Thread.currentThread().sleep(1000);
 				}
-				bdc.runCorrection(dataFile,updateNumber,database,action);
-			}
-			else
-			{
-				System.out.println("no record was loaded into the temp table");
-				System.exit(1);
-			}
 
-			if(test)
-			{
-				System.out.println("finished updating tables");
-				System.out.println("begin to process lookup index");
-				System.out.println("press enter to continue");
-				System.in.read();
-				Thread.currentThread().sleep(1000);
-			}
-			if(action.equalsIgnoreCase("update"))
-			{
-				bdc.processLookupIndex(bdc.getLookupData("update"),bdc.getLookupData("backup"));
-			}
-			else if(action.equalsIgnoreCase("delete"))
-			{
-				bdc.processLookupIndex(new HashMap(),bdc.getLookupData("backup"));
+				BaseTableDriver c = new BaseTableDriver(updateNumber,database);
+				c.writeBaseTableFile(fileToBeLoaded);
+				String dataFile=fileToBeLoaded+"."+updateNumber+".out";
+				File f = new File(dataFile);
+				if(!f.exists())
+				{
+					System.out.println("datafile "+dataFile+" does not exists");
+					System.exit(1);
+				}
+
+				if(test)
+				{
+					System.out.println("sql loader file "+dataFile+" created;");
+					System.out.println("about to load data file "+dataFile);
+					System.out.println("press enter to continue");
+					System.in.read();
+					Thread.currentThread().sleep(1000);
+				}
+				Runtime r = Runtime.getRuntime();
+
+				Process p = r.exec("correctionFileLoader.sh "+dataFile);
+				int t = p.waitFor();
+				//System.out.println(" t "+t);
+				int tempTableCount = bdc.getTempTableCount();
+				if(tempTableCount>0)
+				{
+					System.out.println(tempTableCount+" records was loaded into the temp table");
+					if(test)
+					{
+						System.out.println("begin to update tables");
+						System.out.println("press enter to continue");
+						System.in.read();
+						Thread.currentThread().sleep(1000);
+					}
+					bdc.runCorrection(dataFile,updateNumber,database,action);
+				}
+				else
+				{
+					System.out.println("no record was loaded into the temp table");
+					System.exit(1);
+				}
+
+				if(test)
+				{
+					System.out.println("finished updating tables");
+					System.out.println("begin to process lookup index");
+					System.out.println("press enter to continue");
+					System.in.read();
+					Thread.currentThread().sleep(1000);
+				}
+				if(action.equalsIgnoreCase("update"))
+				{
+					bdc.processLookupIndex(bdc.getLookupData("update"),bdc.getLookupData("backup"));
+				}
+				else if(action.equalsIgnoreCase("delete"))
+				{
+					bdc.processLookupIndex(new HashMap(),bdc.getLookupData("backup"));
+				}
 			}
 			bdc.doFastExtract(updateNumber,database,action);
+
 
 		}
 		finally
@@ -288,17 +293,17 @@ public class BdCorrection
         try
 		{
 			stmt = con.createStatement();
-			if(action.equalsIgnoreCase("update"))
+			if(action.equalsIgnoreCase("update") || action.equalsIgnoreCase("extractupdate"))
 			{
 				System.out.println("Running the query...");
 				writer.setOperation("add");
         		XmlCombiner c = new XmlCombiner(writer);
-				rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER, substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,SEQ_NUM from bd_master_orig where updateNumber="+updateNumber);
+				rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER, substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,SEQ_NUM from bd_master_orig where updateNumber='"+updateNumber+"'");
 				//System.out.println("Got records ...");
 				c.writeRecs(rs);
 				//System.out.println("Wrote records.");
 			}
-			else if(action.equalsIgnoreCase("delete"))
+			else if(action.equalsIgnoreCase("delete") || action.equalsIgnoreCase("extractdelete"))
 			{
 				writer.setOperation("delete");
         		//XmlCombiner c = new XmlCombiner(writer);
