@@ -16,7 +16,7 @@ public class CVTerms
    private List arrcvTerms = new ArrayList();
 
 
-private List cvt = new ArrayList();
+   private List cvt = new ArrayList();
    private List cvm = new ArrayList();
    private List cva = new ArrayList();
    private List cvn = new ArrayList();
@@ -56,26 +56,23 @@ private List cvt = new ArrayList();
 		}
 
 		List l = Arrays.asList(cvelements);
-		System.out.println("cvTerms::"+this.cvTerms);
 		if(l.size() > 0)
 		{
 			for(int i = 0; i < l.size(); i++)
-			{
+			{								
 				String str =(String) l.get(i);
-				CVTerm cvt = new CVTerm();
-
-				System.out.println("str::"+str);
-				
+				CVTerm cvt = new CVTerm();				
 				int boffset = 0;
 				int eoffset = str.length();
-				if(str.length()>0 && str.substring(0,1).equals("*"))
+				if(str.length()>0 && str.substring(0,2).equals("*-"))
 				{
 					cvt.setPrefix("*");
-					boffset =1;
+					boffset =2;
+					
 				}
-				if(str.contains("-") && str.indexOf("-")>1)
+				if(str.contains("-") && str.lastIndexOf("-")>1)
 				{
-					int offset = str.indexOf("-");
+					int offset = str.lastIndexOf("-");
 					String pf = str.substring(offset+1);
 					if(pf.equals("*N*A*P") ||
 							pf.equals("*N*AP") ||
@@ -110,11 +107,10 @@ private List cvt = new ArrayList();
 
 				}
 				cvt.setTerm(str.substring(boffset, eoffset));
-				System.out.println("pref::"+cvt.getPrefix());
-				System.out.println("postf::"+cvt.getPostfix());
-				System.out.println("term::"+cvt.getTerm());
-				addToarrcvTerms(cvt);
-				
+				//System.out.println("pref::"+cvt.getPrefix());
+				//System.out.println("postf::"+cvt.getPostfix());
+				//System.out.println("term::"+cvt.getTerm());
+				addToarrcvTerms(cvt);				
 			}
 		}
 		parse(this.arrcvTerms);
@@ -125,8 +121,7 @@ private List cvt = new ArrayList();
 		if(cvterms != null && cvterms.size() >0)
 		{
 			ArrayList cvarr = new ArrayList();
-			ArrayList cvmarr = new ArrayList();
-			
+			ArrayList cvmarr = new ArrayList();			
 			for (int i = 0; i < cvterms.size();i++)
 			{
 				CVTerm cvt = (CVTerm)cvterms.get(i);
@@ -205,7 +200,7 @@ private List cvt = new ArrayList();
 						cvt.getPostfix().equals("")))
 				{
 					String term = cvt.getTerm();
-					cvm.add(term);
+					this.cvm.add(term);
 					cvmarr.add("*".concat(term));
 				}
 				if(cvarr != null && cvarr.size()>0)
@@ -214,7 +209,8 @@ private List cvt = new ArrayList();
 				}
 				if(cvmarr != null && cvmarr.size()>0)
 				{
-					this.cvmexpand = (String[]) cvmarr.toArray(new String[0]);
+					this.cvmexpand = (String[]) cvmarr.toArray(new String[0]);					
+					
 				}
 			}
 		}
