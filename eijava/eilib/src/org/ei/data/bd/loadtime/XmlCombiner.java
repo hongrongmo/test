@@ -7,18 +7,15 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Vector;
+
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
 import org.ei.data.*;
 import org.ei.data.bd.*;
-import org.ei.data.bd.loadtime.*;
 import org.ei.data.georef.loadtime.*;
 import org.ei.data.georef.runtime.*;
 
-import java.io.*;
-import java.util.Vector;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
 import org.ei.util.GUID;
 
 public class XmlCombiner
@@ -56,6 +53,7 @@ public class XmlCombiner
     public static void main(String args[])
         throws Exception
     {
+    	System.out.println("STARTING UP");
         String url = args[0];
         String driver = args[1];
         String username = args[2];
@@ -81,6 +79,7 @@ public class XmlCombiner
         //if(args.length==10)
             //timestamp = Long.parseLong(args[9]);
 
+        System.out.println("table name "+tablename);
         Combiner.TABLENAME = tablename;
         Combiner.CURRENTDB = currentDb;
         System.out.println(Combiner.TABLENAME);
@@ -159,21 +158,21 @@ public class XmlCombiner
             System.out.println("Running the query...");
             if(Combiner.CURRENTDB.equalsIgnoreCase("chm")&&(year==9999))
         	{
-            	rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER, substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,SEQ_NUM from " + Combiner.TABLENAME + " where SEQ_NUM is not null and PUBLICATIONYEAR in ('1940','1981-1982','1982-1983','1983-1984','1984-1985','1987-1988','1988-1989','1989-1989','1989-1990','1990-1991','1991-1991','1993-1994','1994-1995','1995-1996','1996-1997','1997-1998','1999-2000','2000-2001','2001-1993','2001-2002','2002-2003','2003-2004','2004-2005','2005-2006','2006-2007') AND loadnumber != 0 and loadnumber < 1000000 and database='" + Combiner.CURRENTDB + "'");
+            	rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER, substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,APICT, APICT1,APILT, APILT1,SEQ_NUM from " + Combiner.TABLENAME + " where SEQ_NUM is not null and PUBLICATIONYEAR in ('1940','1981-1982','1982-1983','1983-1984','1984-1985','1987-1988','1988-1989','1989-1989','1989-1990','1990-1991','1991-1991','1993-1994','1994-1995','1995-1996','1996-1997','1997-1998','1999-2000','2000-2001','2001-1993','2001-2002','2002-2003','2003-2004','2004-2005','2005-2006','2006-2007') AND loadnumber != 0 and loadnumber < 1000000 and database='" + Combiner.CURRENTDB + "'");
         	}
             else if(Combiner.CURRENTDB.equalsIgnoreCase("geo")&&(year==9999))
         	{
-            	rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER, substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,SEQ_NUM from " + Combiner.TABLENAME + " where SEQ_NUM is not null and PUBLICATIONYEAR in ('1944-1995','1952-1985','1960-1976','1973-1982','1974-1975','1974-1978','1975-1976','1975-1978','1976-1977','1976-1981','1976-1987','1977-1978','1977-1979','1977-1980','1978-1979','1978-1980','1979-1980','1979-1981','1979-1982','1979-1983','1979-1994','1980-1981','1980-1982','1980-1983','1980-1984','1981-1982','1981-1983','1981-1984','1981-1985','1981-1986','1981-1992','1982-1983','1982-1984','1982-1985','1982-1986','1982-1987','1982-1988','1982-1989','1982-1999','1983-1984','1983-1985','1983-1986','1983-1987','1983-1988','1983-1989','1984-1985','1984-1986','1984-1987','1984-1988','1984-1989','1985-1986','1985-1987','1985-1988','1985-1989','1985-1990','1986-1987','1986-1988','1986-1989','1987-1988','1987-1989','1987-1990','1987-1991','1988-1988','1988-1989','1988-1990','1988-1991','1989-1990','1989-1991','1989-1992','1989-1993','1990-1991','1990-1992','1990-1993','1991-1992','1991-1993','1991-1994','1992-1992','1992-1993','1992-1994','1992-1995','1993-1994','1993-1995','1994-1995','1994-1996','1995-1996','1995-1997','1996-1997','1997-1998','1997-1999','1998-1999','1999-2000','2000-2001','2000-2002','2001-2002','2002-2003','2003-2004','2004-2005','2005-2006','2005-2007','2006-2007','2007-2008','2008-2009') AND loadnumber != 0 and loadnumber < 1000000 and database='" + Combiner.CURRENTDB + "'");
+            	rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER, substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,APICT, APICT1,APILT, APILT1,SEQ_NUM from " + Combiner.TABLENAME + " where SEQ_NUM is not null and PUBLICATIONYEAR in ('1944-1995','1952-1985','1960-1976','1973-1982','1974-1975','1974-1978','1975-1976','1975-1978','1976-1977','1976-1981','1976-1987','1977-1978','1977-1979','1977-1980','1978-1979','1978-1980','1979-1980','1979-1981','1979-1982','1979-1983','1979-1994','1980-1981','1980-1982','1980-1983','1980-1984','1981-1982','1981-1983','1981-1984','1981-1985','1981-1986','1981-1992','1982-1983','1982-1984','1982-1985','1982-1986','1982-1987','1982-1988','1982-1989','1982-1999','1983-1984','1983-1985','1983-1986','1983-1987','1983-1988','1983-1989','1984-1985','1984-1986','1984-1987','1984-1988','1984-1989','1985-1986','1985-1987','1985-1988','1985-1989','1985-1990','1986-1987','1986-1988','1986-1989','1987-1988','1987-1989','1987-1990','1987-1991','1988-1988','1988-1989','1988-1990','1988-1991','1989-1990','1989-1991','1989-1992','1989-1993','1990-1991','1990-1992','1990-1993','1991-1992','1991-1993','1991-1994','1992-1992','1992-1993','1992-1994','1992-1995','1993-1994','1993-1995','1994-1995','1994-1996','1995-1996','1995-1997','1996-1997','1997-1998','1997-1999','1998-1999','1999-2000','2000-2001','2000-2002','2001-2002','2002-2003','2003-2004','2004-2005','2005-2006','2005-2007','2006-2007','2007-2008','2008-2009') AND loadnumber != 0 and loadnumber < 1000000 and database='" + Combiner.CURRENTDB + "'");
         	}
             else if(Combiner.CURRENTDB.equalsIgnoreCase("cpx")&&(year==9999))
         	{
-            	rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER, substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,SEQ_NUM from " + Combiner.TABLENAME + " where SEQ_NUM is not null and PUBLICATIONYEAR in ('1798','1885','1964-1980','1977-1978','1977-1980','1978-1979','1979-1980','1979-1981','1979-1989','1980-1981','1980-1982','1981-1982','1981-1983','1982-1983','1983-1984','1984-1985','1985-1986','1986-1987','1987-1988','1988-1989','1989-190','1989-1989','1989-1990','1989-1993','1990-1991','1991-1991','1991-1992','1992-1993','1992-1994','1993-1994','1993-1995','1993-94','1994-1995','1995-1996','1995-96','1996-1997','1997-1998','1997-2003','1997-98','1998-1999','1998-99','1999-2000','2000-2001','2001-1993','2001-2002','2002-2003','2003-2004','2004-2005','2005-2006','2006-2007','2007-2008','2008-2009','2008;2008') AND loadnumber != 0 and loadnumber < 1000000 and database='" + Combiner.CURRENTDB + "'");
+            	rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER, substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,APICT, APICT1,APILT, APILT1,SEQ_NUM from " + Combiner.TABLENAME + " where SEQ_NUM is not null and PUBLICATIONYEAR in ('1798','1885','1964-1980','1977-1978','1977-1980','1978-1979','1979-1980','1979-1981','1979-1989','1980-1981','1980-1982','1981-1982','1981-1983','1982-1983','1983-1984','1984-1985','1985-1986','1986-1987','1987-1988','1988-1989','1989-190','1989-1989','1989-1990','1989-1993','1990-1991','1991-1991','1991-1992','1992-1993','1992-1994','1993-1994','1993-1995','1993-94','1994-1995','1995-1996','1995-96','1996-1997','1997-1998','1997-2003','1997-98','1998-1999','1998-99','1999-2000','2000-2001','2001-1993','2001-2002','2002-2003','2003-2004','2004-2005','2005-2006','2006-2007','2007-2008','2008-2009','2008;2008') AND loadnumber != 0 and loadnumber < 1000000 and database='" + Combiner.CURRENTDB + "'");
         	}
             else
             {
-            	rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER,PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,SEQ_NUM from " + Combiner.TABLENAME + " where SEQ_NUM is not null and PUBLICATIONYEAR='" + year + "' AND loadnumber != 0 and loadnumber < 1000000 and database='" + Combiner.CURRENTDB + "'");
+            	rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER,PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,APICT, APICT1,APILT, APILT1, SEQ_NUM from " + Combiner.TABLENAME + " where SEQ_NUM is not null and PUBLICATIONYEAR='" + year + "' AND loadnumber != 0 and loadnumber < 1000000 and database='" + Combiner.CURRENTDB + "'");
             }
-            System.out.println("Got records ...");
+            System.out.println("Got records ...from table::"+Combiner.TABLENAME);
             writeRecs(rs);
             System.out.println("Wrote records.");
             this.writer.end();
@@ -638,9 +637,9 @@ public class XmlCombiner
                     rec.put(EVCombinedRec.COMPANIES, prepareMulti(rs.getString("ASSIG")));
                 }
 
-				if (rs.getString("CASREGISTRYNUMBER") != null)
+				if (rs.getString("CASREGISTRYNUMBER") != null && rs.getString("DATABASE") != null)
                 {
-                    rec.put(EVCombinedRec.CASREGISTRYNUMBER, prepareCASRegistry(rs.getString("CASREGISTRYNUMBER")));
+                    rec.put(EVCombinedRec.CASREGISTRYNUMBER, prepareCASRegistry(rs.getString("CASREGISTRYNUMBER"), rs.getString("DATABASE")));
                 }
 
 				if (rs.getString("DATABASE").equals("cpx"))
@@ -677,6 +676,97 @@ public class XmlCombiner
 
 					rec.putIfNotNull(EVCombinedRec.DOCID, firstGUID + "_" + (coordCount));
 				}
+				CVTerms cvterms = null;
+                String apict = replaceNull(rs.getString("apict"));
+                String apict1 = replaceNull(rs.getString("apict1"));
+      
+				if(apict != null && !apict.trim().equals(""))
+				{
+					if(apict1 != null && 
+							!apict1.trim().equals(""))
+					{
+						apict = apict.concat(apict1);
+					}
+					cvterms = new CVTerms(apict);
+					cvterms.parse();
+											
+				}
+				
+				if(cvterms != null)
+				{						
+					String cvtstr = cvterms.getCvexpandstr();
+					String cvtmjr = cvterms.getCvmexpandstr();
+					if(cvtstr != null)
+					{
+						rec.put(EVCombinedRec.CONTROLLED_TERMS, prepareELTCV(cvtstr));
+					}
+		            
+		            if(cvtmjr != null)
+		            {
+		            	 rec.put(EVCombinedRec.MAIN_HEADING, prepareELTCV(cvtmjr));
+		            }
+		            
+		            String norole = getCvstr(cvterms.getCvn());
+		            if(norole != null)
+		            {            
+		                 rec.put(EVCombinedRec.NOROLE_TERMS, prepareMulti(norole));
+		            }
+		            String reagent = getCvstr(cvterms.getCva());
+		            if(reagent != null)
+		            {
+		            	rec.put(EVCombinedRec.REAGENT_TERMS, prepareMulti(reagent));
+		            }
+		            
+		            String product = getCvstr(cvterms.getCvp());
+	                if(product != null)
+	                {
+	                	rec.put(EVCombinedRec.PRODUCT_TERMS, prepareMulti(product));
+	                }
+	                
+	                String mnorole = getCvstr(cvterms.getCvmn());
+	                if(mnorole != null)
+	                {
+	                	rec.put(EVCombinedRec.MAJORNOROLE_TERMS, prepareMulti(mnorole));
+	                }
+	                
+	                String mreagent = getCvstr(cvterms.getCvma());
+	                if(mreagent != null)
+	                {	                	
+	                	rec.put(EVCombinedRec.MAJORREAGENT_TERMS, prepareMulti(mreagent));
+	                }
+	                	                
+	                String mproduct = getCvstr(cvterms.getCvmp());
+	                if(mproduct != null)
+	                {
+	                	rec.put(EVCombinedRec.MAJORPRODUCT_TERMS, prepareMulti(mproduct));
+	                }
+				}
+				
+				CVTerms ltterms = null;
+                String apilt = replaceNull(rs.getString("apilt"));
+                String apilt1 = replaceNull(rs.getString("apilt1"));
+                      
+				if(apilt != null && !apilt.trim().equals(""))
+				{
+					if(apilt1 != null && 
+							!apilt1.trim().equals(""))
+					{
+						apilt = apilt.concat(apilt1);
+					}
+					ltterms = new CVTerms(apilt);
+					ltterms.parse();											
+				}
+			
+				if(ltterms != null)
+				{						
+					String ltstr = ltterms.getCvexpandstr();
+			
+					if(ltstr != null)
+					{
+						rec.put(EVCombinedRec.LINKED_TERMS, prepareELTCV(ltstr));
+					}
+				}
+				                
 
 				try
 				{
@@ -712,6 +802,12 @@ public class XmlCombiner
 								coordCount++;
 							}
 							recSecondBox.putIfNotNull(EVCombinedRec.DOCID, firstGUID + "_" + (coordCount));
+							
+							
+							
+							
+							
+							
 							recVector.add(recSecondBox);
 						}
 					  }
@@ -848,24 +944,41 @@ public class XmlCombiner
 	String[] prepareMulti(String multiString)
 	        throws Exception
     {
+		
+
 		String[] multiStringArray = multiString.split(BdParser.AUDELIMITER,-1);
 		return multiStringArray;
-	}
 
-	private String[] prepareCASRegistry(String multiString)
+	}
+	
+	private String[] prepareCASRegistry(String multiString, String database)
     	throws Exception
 	{
 		ArrayList list = new ArrayList();
-		String[] multiStringArray = multiString.split(BdParser.IDDELIMITER,-1);
-
-		for(int i = 0; i < multiStringArray.length; i++)
+		String[] multiStringArray =  multiString.split(BdParser.IDDELIMITER,-1);
+		if(multiString.length()>0 && database.equalsIgnoreCase("elt"))
 		{
-			String[] multiStringArray2 = multiStringArray[i].split(BdParser.GROUPDELIMITER,-1);
-			for(int j = 0; j < multiStringArray2.length; j++)
+			for(int i = 0; i < multiStringArray.length; i++)
 			{
-				list.add(multiStringArray2[j]);
+				String[] multiStringArray2 = multiStringArray[i].split(BdParser.AUDELIMITER,-1);	
+				if(multiStringArray2.length == 3)
+				{
+					list.add(multiStringArray2[2]);
+				}
 			}
 		}
+		else
+		{
+			for(int i = 0; i < multiStringArray.length; i++)
+			{
+				String[] multiStringArray2 = multiStringArray[i].split(BdParser.GROUPDELIMITER,-1);
+				for(int j = 0; j < multiStringArray2.length; j++)
+				{
+					list.add(multiStringArray2[j]);
+				}
+			}
+		}
+				
 		return (String[]) list.toArray(new String[0]);
 	}
 
@@ -1243,6 +1356,57 @@ public class XmlCombiner
             }
 
     }
+    
+	public String[] prepareELTCV(String multiString)
+    throws Exception
+    {
+		if(multiString != null && multiString.length() >0)
+		{	
+			String[] multiStringArray = null;
+			if(multiString.contains(";"))
+			{
+				multiStringArray = multiString.split(";",-1);
+				return multiStringArray;
+			}
+			else
+			{
+				String[] multiStringArray1 = {multiString};
+				return multiStringArray1;
+			}
+		}
+	
+		return null;
+		
+    }
+    
+	
+    public String replaceNull(String sVal) {
+
+        if (sVal == null)
+            sVal = "";
+
+        return sVal;
+    }
+    
+    
+    public String getCvstr(List l)
+   	{
+   	
+   		if(l != null && l.size() > 0)
+   		{
+   			StringBuffer buf = new StringBuffer();
+
+   			for (int i = 0; i < l.size(); i++)
+   			{
+   				CVTerm cvt = (CVTerm)l.get(i);
+   				buf.append(cvt.getTerm()).append(BdParser.AUDELIMITER);
+   			}
+   			return buf.toString();
+   		}
+   		return null;
+   	}
+    
+    
     public void writeCombinedByWeekHook(Connection con,
                                         int weekNumber)
         throws Exception
@@ -1253,7 +1417,7 @@ public class XmlCombiner
         try
         {
             stmt = con.createStatement();
-            rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER,substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,SEQ_NUM from " + Combiner.TABLENAME + " where SEQ_NUM is not null and LOADNUMBER='" + weekNumber + "' AND loadnumber != 0 and loadnumber < 1000000 and database='" + Combiner.CURRENTDB + "'");
+            rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER,substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,APICT, APICT1,APILT, APILT1,SEQ_NUM from " + Combiner.TABLENAME + " where SEQ_NUM is not null and LOADNUMBER='" + weekNumber + "' AND loadnumber != 0 and loadnumber < 1000000 and database='" + Combiner.CURRENTDB + "'");
 			//System.out.println("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER,PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,SEQ_NUM from " + Combiner.TABLENAME + " where SEQ_NUM is not null and LOADNUMBER='" + weekNumber + "' AND loadnumber != 0 and loadnumber < 1000000 and database='" + Combiner.CURRENTDB + "'");
 			System.out.println("Got records2 ...");
             writeRecs(rs);
