@@ -1662,10 +1662,11 @@ public class BDDocBuilder
 			for(int i =  0 ; i< cas.length; i++ )
 			{
 				if(cas[i] != null && 
-						!cas[i].trim().equals("")&&
-						!cas[i].trim().equals("y")&&
-						!cas[i].trim().equals("b") &&
-						!cas[i].trim().equals("n"))
+						!cas[i].trim().equalsIgnoreCase("")&&
+						!cas[i].trim().equalsIgnoreCase("y")&&
+						!cas[i].trim().equalsIgnoreCase("b") &&
+						!cas[i].trim().equalsIgnoreCase("n") &&
+						!cas[i].trim().equalsIgnoreCase("a"))
 				{
 					array.add((String)cas[i]);
 				}
