@@ -57,7 +57,7 @@ public class BDDocBuilder
 
     private Database database;
 
- 	private static String queryBD="select * from bd_master_eltgroovy where M_ID IN  ";
+ 	private static String queryBD="select * from bd_master_eltbd where M_ID IN  ";
 
     public DocumentBuilder newInstance(Database database)
     {
@@ -220,7 +220,7 @@ public class BDDocBuilder
 
 				formatRIS(buildField(publisherKey,getPublisher(rset.getString("PUBLISHERNAME"),rset.getString("PUBLISHERADDRESS"), dataFormat, ht),ht),dataFormat, Keys.PUBLISHER, Keys.RIS_PB);
 				formatRIS(buildField(Keys.LANGUAGE,getLanguage(rset.getString("CITATIONLANGUAGE"),dataFormat),ht),dataFormat, Keys.LANGUAGE, Keys.RIS_LA);
-				formatRIS(buildField(Keys.AUTHORS,getAuthors(Keys.AUTHORS,rset.getString("AUTHOR"),rset.getString("AUTHOR_1"), dataFormat),ht), dataFormat, Keys.AUTHORS, Keys.RIS_AUS);
+				formatRIS(buildField(Keys.AUTHORS,getAuthors(Keys.AUTHORS,rset.getString("AUTHOR"),rset.getString("AUTHOR_1"), dataFormat, rset.getString("AFFILIATION")),ht), dataFormat, Keys.AUTHORS, Keys.RIS_AUS);
 
 				formatRIS(buildField(Keys.AUTHOR_AFFS,getAuthorsAffiliation(Keys.AUTHOR_AFFS,rset.getString("AFFILIATION"),rset.getString("AFFILIATION_1"), dataFormat),ht),dataFormat, Keys.AUTHOR_AFFS, Keys.RIS_AD);
 
@@ -1262,7 +1262,9 @@ public class BDDocBuilder
 
 	private Contributors getAuthors(Key key,
 		        					String authorString,
-		        					String authorString1, String dataFormat)
+		        					String authorString1, 
+		        					String dataFormat,
+		        					String affiliations)
 
 	throws Exception
 	{
@@ -1279,7 +1281,7 @@ public class BDDocBuilder
 
 		if(auString.length()> 0)
 		{
-      List authorNames = new ArrayList();
+			List authorNames = new ArrayList();
 			BdAuthors authors = new BdAuthors(auString.toString());
 			List authorList = authors.getAuthors();
 			for(int i= 0;i<authorList.size();i++)
@@ -1291,13 +1293,19 @@ public class BDDocBuilder
 						dataFormat.equalsIgnoreCase(Citation.XMLCITATION_FORMAT))
 				{
 					authorNames.add(new Contributor(key,
-									auDisplayName));
+											auDisplayName));
+				}
+				else if(affiliations != null && 
+						!affiliations.trim().equals(""))
+				{
+					authorNames.add(new Contributor(key,
+											auDisplayName,
+											author.getAffIdList()));
 				}
 				else
 				{
 					authorNames.add(new Contributor(key,
-									auDisplayName,
-									author.getAffIdList()));
+											auDisplayName));
 				}
 			}
 		    return (new Contributors(Keys.AUTHORS,authorNames));
