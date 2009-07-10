@@ -57,7 +57,7 @@ public class BDDocBuilder
 
     private Database database;
 
- 	private static String queryBD="select * from bd_master_eltbd where M_ID IN  ";
+ 	private static String queryBD="select * from bd_master_eltgroovy where M_ID IN  ";
 
     public DocumentBuilder newInstance(Database database)
     {
@@ -1867,18 +1867,21 @@ public class BDDocBuilder
 		}
 	}
 	
-	  private KeyValuePair[] setCVS(String cvs) {
+	  private KeyValuePair[] setCVS(String cvs) 
+	  {
 	        ArrayList list = new ArrayList();
 	        StringTokenizer st = new StringTokenizer(cvs, ";", false);
 	        String strToken = null;
 
-	        while (st.hasMoreTokens()) {
+	        while (st.hasMoreTokens()) 
+	        {
 	            strToken = st.nextToken().trim();
-	            if (strToken.length() > 0) {
+	            if (strToken.length() > 0) 
+	            {
+	            	strToken = perl.substitute("s/\\#//g", strToken);
 	                KeyValuePair k = new KeyValuePair(getTermField(strToken), strToken);
 	                list.add(k);
 	            }
-
 	        }
 
 	        return (KeyValuePair[]) list.toArray(new KeyValuePair[list.size()]);
