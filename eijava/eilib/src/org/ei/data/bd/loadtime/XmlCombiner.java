@@ -706,11 +706,11 @@ public class XmlCombiner
 				if(cvterms != null)
 				{						
 					QualifierFacet qfacet = new QualifierFacet();
-					String cvtstr = cvterms.getCvexpandstr();
-					String cvtmjr = cvterms.getCvmexpandstr();
-					if(cvtstr != null)
+
+					String cvt = getCvstr(cvterms.getCvt());					
+					if(cvt != null)
 					{
-						rec.put(EVCombinedRec.CONTROLLED_TERMS, prepareELTCV(cvtstr));
+						rec.put(EVCombinedRec.CONTROLLED_TERMS, prepareMulti(cvt));
 					}
 					
 					//System.out.println(cvterms.getCvm());
