@@ -990,7 +990,15 @@ public class XmlCombiner
 				String[] multiStringArray2 = multiStringArray[i].split(BdParser.AUDELIMITER,-1);	
 				if(multiStringArray2.length == 3)
 				{
-					list.add(multiStringArray2[2]);
+					if(multiStringArray2[1] != null &&
+							!multiStringArray2[1].equals(""))
+					{
+						list.add(multiStringArray2[2].concat("-").concat(multiStringArray2[1]));
+					}
+					else
+					{
+						list.add(multiStringArray2[2]);
+					}
 				}
 			}
 		}
