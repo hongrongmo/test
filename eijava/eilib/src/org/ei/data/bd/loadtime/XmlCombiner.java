@@ -718,9 +718,9 @@ public class XmlCombiner
 		            if(cvtm != null && 
 	                		rs.getString("DATABASE").equalsIgnoreCase("elt"))
 		            {
-		            	 rec.put(EVCombinedRec.MAIN_HEADING, prepareELTCV(cvtm));
+		            	 rec.put(EVCombinedRec.MAIN_HEADING, prepareMulti(cvtm));
 		            	 //this field is added to generate navigators for Major terms
-		                 rec.put(rec.ECLA_CODES, prepareELTCV(cvtm));
+		                 rec.put(rec.ECLA_CODES, prepareMulti(cvtm));
 
 		            }
 		            
