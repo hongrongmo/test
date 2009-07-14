@@ -24,6 +24,7 @@ public class CVTerms
    private List cvma = new ArrayList();
    private List cvmn = new ArrayList();
    private List cvmp = new ArrayList();
+   
    private String [] cvexpand = null;
    private String cvexpandstr = null;
 
@@ -200,7 +201,7 @@ public class CVTerms
 						cvt.getPostfix().equals("")))
 				{
 					String term = cvt.getTerm();
-					this.cvm.add(term);
+					this.cvm.add(cvt);
 					cvmarr.add("*".concat(term));
 				}
 				if(cvarr != null && cvarr.size()>0)
