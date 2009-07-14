@@ -17,6 +17,7 @@ import org.ei.data.georef.loadtime.*;
 import org.ei.data.georef.runtime.*;
 
 import org.ei.util.GUID;
+import org.ei.util.StringUtil;
 
 public class XmlCombiner
     extends CombinerTimestamp
@@ -466,10 +467,7 @@ public class XmlCombiner
 					 rec.put(EVCombinedRec.ABBRV_SRC_TITLE, sta);
 				}
 
-                if (rs.getString("MAINHEADING") != null)
-                {
-                    rec.put(EVCombinedRec.MAIN_HEADING, prepareMulti(rs.getString("MAINHEADING")));
-                }
+
 
                 if (rs.getString("PUBLISHERNAME") != null)
                 {
@@ -692,54 +690,75 @@ public class XmlCombiner
 											
 				}
 				
+                if (rs.getString("MAINHEADING") != null && 
+                		!rs.getString("DATABASE").equalsIgnoreCase("elt"))
+                {
+                    rec.put(EVCombinedRec.MAIN_HEADING, prepareMulti(rs.getString("MAINHEADING")));
+                }
+
+				
 				if(cvterms != null)
 				{						
+					QualifierFacet qfacet = new QualifierFacet();
 					String cvtstr = cvterms.getCvexpandstr();
 					String cvtmjr = cvterms.getCvmexpandstr();
 					if(cvtstr != null)
 					{
 						rec.put(EVCombinedRec.CONTROLLED_TERMS, prepareELTCV(cvtstr));
 					}
-		            
-		            if(cvtmjr != null)
+					String cvtm = getCvstr(cvterms.getCvm());
+		            if(cvtm != null && 
+	                		rs.getString("DATABASE").equalsIgnoreCase("elt"))
 		            {
-		            	 rec.put(EVCombinedRec.MAIN_HEADING, prepareELTCV(cvtmjr));
+		            	 rec.put(EVCombinedRec.MAIN_HEADING, prepareELTCV(cvtm));
+		            	 //this field is added to generate navigators for Major terms
+		                 rec.put(rec.ECLA_CODES, prepareELTCV(cvtm));
+
 		            }
 		            
 		            String norole = getCvstr(cvterms.getCvn());
 		            if(norole != null)
 		            {            
+		            	 qfacet.setNorole(norole);
 		                 rec.put(EVCombinedRec.NOROLE_TERMS, prepareMulti(norole));
 		            }
+		            
 		            String reagent = getCvstr(cvterms.getCva());
+		            
 		            if(reagent != null)
 		            {
+		            	qfacet.setReagent(reagent);
 		            	rec.put(EVCombinedRec.REAGENT_TERMS, prepareMulti(reagent));
 		            }
 		            
 		            String product = getCvstr(cvterms.getCvp());
 	                if(product != null)
 	                {
+	                	qfacet.setProduct(product);
 	                	rec.put(EVCombinedRec.PRODUCT_TERMS, prepareMulti(product));
 	                }
 	                
 	                String mnorole = getCvstr(cvterms.getCvmn());
 	                if(mnorole != null)
 	                {
+	                	qfacet.setNorole(mnorole);
 	                	rec.put(EVCombinedRec.MAJORNOROLE_TERMS, prepareMulti(mnorole));
 	                }
 	                
 	                String mreagent = getCvstr(cvterms.getCvma());
 	                if(mreagent != null)
-	                {	                	
+	                {	    
+	                	qfacet.setReagent(mreagent);
 	                	rec.put(EVCombinedRec.MAJORREAGENT_TERMS, prepareMulti(mreagent));
 	                }
 	                	                
 	                String mproduct = getCvstr(cvterms.getCvmp());
 	                if(mproduct != null)
 	                {
+	                	qfacet.setProduct(mproduct);
 	                	rec.put(EVCombinedRec.MAJORPRODUCT_TERMS, prepareMulti(mproduct));
 	                }
+	                rec.put(rec.USPTOCODE, prepareMulti(qfacet.getValue()));	                
 				}
 				
 				CVTerms ltterms = null;
@@ -1362,6 +1381,8 @@ public class XmlCombiner
     {
 		if(multiString != null && multiString.length() >0)
 		{	
+			multiString = stripAsterics(multiString);
+			
 			String[] multiStringArray = null;
 			if(multiString.contains(";"))
 			{
@@ -1405,6 +1426,12 @@ public class XmlCombiner
    		}
    		return null;
    	}
+    
+    private String stripAsterics(String line)
+    {
+        line = perl.substitute("s/\\*+//gi", line);
+        return line;
+    }
     
     
     public void writeCombinedByWeekHook(Connection con,
