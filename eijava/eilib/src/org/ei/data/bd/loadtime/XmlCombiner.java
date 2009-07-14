@@ -1436,7 +1436,13 @@ public class XmlCombiner
    			for (int i = 0; i < l.size(); i++)
    			{
    				CVTerm cvt = (CVTerm)l.get(i);
-   				buf.append(cvt.getTerm()).append(BdParser.AUDELIMITER);
+   				buf.append(cvt.getTerm());
+   				if(cvt.getPostfix() != null && 
+   					!cvt.getPostfix().equals(""))
+   				{
+   					buf.append("-").append(cvt.getPostfix());
+   				}
+   				buf.append(BdParser.AUDELIMITER);
    			//	System.out.println("::cv term::"+l.get(i));
    			//	buf.append((String)l.get(i)).append(BdParser.AUDELIMITER);
    			}
