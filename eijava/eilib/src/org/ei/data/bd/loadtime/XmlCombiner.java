@@ -515,12 +515,18 @@ public class XmlCombiner
 					rec.put(EVCombinedRec.DOCTYPE, docType);
 				}
 
-                if (rs.getString("CLASSIFICATIONCODE") != null)
+                if (rs.getString("CLASSIFICATIONCODE") != null && 
+                		!rs.getString("DATABASE").equalsIgnoreCase("elt"))
                 {
                     rec.put(EVCombinedRec.CLASSIFICATION_CODE,
                             prepareMulti(formatClassCodes(rs.getString("CLASSIFICATIONCODE"))));
                 }
-
+                if (rs.getString("CLASSIFICATIONDESC") != null && 
+                		rs.getString("DATABASE").equalsIgnoreCase("elt"))
+                {
+                    rec.put(EVCombinedRec.CLASSIFICATION_CODE,
+                            prepareMulti(rs.getString("CLASSIFICATIONDESC")));
+                }
                 if (rs.getString("CONFCODE") != null)
                 {
                     rec.put(EVCombinedRec.CONFERENCE_CODE, rs.getString("CONFCODE"));
