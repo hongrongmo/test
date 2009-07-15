@@ -1,5 +1,7 @@
 package org.ei.data;
 
+import org.ei.data.bd.loadtime.BdParser;
+
 public class QualifierFacet
 {
 	private boolean norole;
@@ -33,15 +35,15 @@ public class QualifierFacet
 		StringBuffer value = new StringBuffer();
 		if(norole)
 		{
-			value.append("N").append(";");
+			value.append("N").append(BdParser.AUDELIMITER);
 		}
 		if(reagent)
 		{
-			value.append("R").append(";");
+			value.append("R").append(BdParser.AUDELIMITER);
 		}
 		if(product)
 		{
-			value.append("P").append(";");
+			value.append("P").append(BdParser.AUDELIMITER);
 		}
 		
 		return value.toString();    			
