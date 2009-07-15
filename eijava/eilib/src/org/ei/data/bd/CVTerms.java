@@ -71,7 +71,7 @@ public class CVTerms
 					boffset =2;
 					
 				}
-				if(str.contains("-") && str.lastIndexOf("-")>1)
+				if(str.lastIndexOf("-")>1)
 				{
 					int offset = str.lastIndexOf("-");
 					String pf = str.substring(offset+1);
@@ -192,7 +192,8 @@ public class CVTerms
 						(cvt.getPostfix() == null ||
 						cvt.getPostfix().equals("")))
 				{
-					String term = cvt.getTerm();
+					this.cvt.add(cvt);
+					String term = cvt.getTerm();					
 					cvarr.add(term);
 				}
 				if((cvt.getPrefix() != null &&
