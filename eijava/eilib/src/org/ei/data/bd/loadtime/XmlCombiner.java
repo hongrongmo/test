@@ -975,9 +975,7 @@ public class XmlCombiner
 
 	String[] prepareMulti(String multiString)
 	        throws Exception
-    {
-		
-
+    {		
 		String[] multiStringArray = multiString.split(BdParser.AUDELIMITER,-1);
 		return multiStringArray;
 
@@ -1405,7 +1403,7 @@ public class XmlCombiner
 			multiString = stripAsterics(multiString);
 			
 			String[] multiStringArray = null;
-			if(multiString.contains(";"))
+			if(multiString.indexOf(";") >0)
 			{
 				multiStringArray = multiString.split(";",-1);
 				return multiStringArray;
