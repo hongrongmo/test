@@ -57,7 +57,7 @@ public class BDDocBuilder
 
     private Database database;
 
- 	private static String queryBD="select * from bd_master_eltgroovy where M_ID IN  ";
+ 	private static String queryBD="select * from bd_master_eltbd where M_ID IN  ";
 
     public DocumentBuilder newInstance(Database database)
     {
