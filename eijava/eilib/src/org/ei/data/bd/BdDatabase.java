@@ -14,7 +14,7 @@ public class BdDatabase
         bddatasources.add("geo");
         bddatasources.add("pch");
         bddatasources.add("chm");
-        //bddatasources.add("elt");
+        bddatasources.add("elt");
     }
 
     public boolean isBdDatabase(String dbKey)
