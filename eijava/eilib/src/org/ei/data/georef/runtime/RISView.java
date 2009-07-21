@@ -65,7 +65,16 @@ public class RISView extends DetailedView {
         ElementDataMap ris_ht = new ElementDataMap();
 
         // Get EV system DOC_TYPE codes for indexing and append them to (or use in favor of ?) the GeoRef values
-        String mappingcode = createColumnValueField("DOCUMENT_TYPE").getValue().concat(GRFDocBuilder.AUDELIMITER).concat(createColumnValueField("BIBLIOGRAPHIC_LEVEL_CODE").getValue());
+        String doctype = createColumnValueField("DOCUMENT_TYPE").getValue();
+        String bibcode = createColumnValueField("BIBLIOGRAPHIC_LEVEL_CODE").getValue();
+        String mappingcode = null;
+        if((doctype == null) || (bibcode == null)) {
+          mappingcode = "S".concat(GRFDocBuilder.AUDELIMITER).concat("A");
+        }
+        else {
+          mappingcode = doctype.concat(GRFDocBuilder.AUDELIMITER).concat(bibcode);
+        }
+
         if(mappingcode != null)
         {
           // DocumentTypeMappingDecorator takes <DOCTYPE>AUDELIMITER<BIBCODE> String as field argument
