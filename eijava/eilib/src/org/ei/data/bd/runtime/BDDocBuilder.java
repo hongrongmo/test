@@ -57,7 +57,7 @@ public class BDDocBuilder
 
     private Database database;
 
- 	private static String queryBD="select * from bd_master_eltbd where M_ID IN  ";
+ 	private static String queryBD="select * from bd_master_eltgroovy where M_ID IN  ";
 
     public DocumentBuilder newInstance(Database database)
     {
@@ -247,9 +247,34 @@ public class BDDocBuilder
 				{
 					buildField(Keys.CONF_CODE,rset.getString("CONFCODE"),ht);
 					buildField(Keys.NUMBER_OF_REFERENCES,rset.getString("REFCOUNT"),ht);
-
 					buildField(Keys.TREATMENTS,getTreatments(rset.getString("TREATMENTCODE"),database),ht);
-					formatRIS(buildField(Keys.ABSTRACT,getAbstract(rset),ht),dataFormat,Keys.ABSTRACT,Keys.RIS_N2);
+					
+					if(database.getMask() != 1024)
+					{
+						formatRIS(buildField(Keys.ABSTRACT,getAbstract(rset),ht),dataFormat,Keys.ABSTRACT,Keys.RIS_N2);
+					}
+					else
+					{
+						String abs = null;
+						String secondarySrc = StringUtil.substituteChars(rset.getString("SECSOURCE"));
+						String secondaryTitle = StringUtil.substituteChars(rset.getString("SECSOURCETITLE"));
+						String cc = StringUtil.substituteChars(rset.getString("CLASSIFICATIONDESC"));
+						
+						 if (!perl.match("/Chemical Abstracts/i", secondarySrc) 
+								 && !perl.match("/Chemical Abstracts/i", secondaryTitle)) 
+						 {
+							 formatRIS(buildField(Keys.ABSTRACT,getAbstract(rset),ht),
+			                    				dataFormat,Keys.ABSTRACT,Keys.RIS_N2);
+						 }
+			             else 
+			             {
+			            	 if (perl.match("/Oil Field Chemicals/i", cc))
+			            	 {	
+			            		 formatRIS(buildField(Keys.ABSTRACT,getAbstract(rset),ht),
+				                    			dataFormat,Keys.ABSTRACT,Keys.RIS_N2);			                 
+			            	 }
+			            }			                
+					}
 					buildField(Keys.SPONSOR,setSponsorData(rset.getString("CONFSPONSORS")),ht);
 					formatRIS(buildField(Keys.START_PAGE,getStartPage(rset.getString("PAGE")),ht),dataFormat,Keys.START_PAGE,Keys.RIS_SP);
 					formatRIS(buildField(Keys.END_PAGE,getEndPage(rset.getString("PAGE")),ht),dataFormat,Keys.END_PAGE,Keys.RIS_EP);
@@ -357,6 +382,10 @@ public class BDDocBuilder
 					if(database.getMask()==64)
 					{
 						buildField(Keys.SECONDARY_SOURCE,rset.getString("SOURC"),ht);
+					}
+					else if(database.getMask()==1024)
+					{
+						buildField(Keys.SECONDARY_SOURCE,rset.getString("SECSOURCE"),ht);
 					}
 					buildField(Keys.NUMBER_OF_FIGURES,rset.getString("NOFIG"),ht);
 					buildField(Keys.NUMBER_OF_TABLES,rset.getString("NOTAB"),ht);
@@ -1524,6 +1553,7 @@ public class BDDocBuilder
 		if(clob != null)
 		{
 			abs = StringUtil.getStringFromClob(clob);
+
 		}
 
         return abs;
