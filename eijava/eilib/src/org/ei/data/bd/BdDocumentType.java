@@ -30,6 +30,7 @@ public class BdDocumentType
 
     static
     {
+      bdDocType.put("cp",CONFERENCE_ARTICLE_CODE);
       bdDocType.put("ab",JOURNAL_ARTICLE_CODE);
       bdDocType.put("ar",JOURNAL_ARTICLE_CODE);
       bdDocType.put("bk",MONOGRAPH_CHAPTER_CODE);
@@ -63,28 +64,16 @@ public class BdDocumentType
       if(doctype != null)
       {
         String dt = doctype.toLowerCase().trim();
-        if(dt.equalsIgnoreCase(CONFERENCE_PROCEEDING_CODE))
+  
+        if(bdDocType.containsKey(dt))
         {
-          if(!confCode)
-          {
-            doctype = JOURNAL_ARTICLE_CODE;
-          }
-          else
-          {
-            doctype = CONFERENCE_ARTICLE_CODE;
-          }
+        	doctype = (String) bdDocType.get(dt);
         }
         else
         {
-          if(bdDocType.containsKey(dt))
-          {
-            doctype = (String) bdDocType.get(dt);
-          }
-          else
-          {
-            System.out.println("No BdDocumentType mapping for: " + doctype);
-          }
+        	System.out.println("No BdDocumentType mapping for: " + doctype);
         }
+        
       }
       return doctype;
     }
