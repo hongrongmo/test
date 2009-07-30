@@ -827,6 +827,7 @@ public class BdParser
 
 						//weekNumber
 						//record.put("LOADNUMBER",weekNumber);
+						
 						// only for elt database conversion
 						record.put("DATABASE",databaseName.trim());
 					}
@@ -834,6 +835,10 @@ public class BdParser
 					if(item.getChild("loadnumber", noNamespace) != null)
 					{
 						record.put("LOADNUMBER",item.getChild("loadnumber", noNamespace).getText());
+					}
+					else
+					{
+						record.put("LOADNUMBER",weekNumber);
 					}
 
 
