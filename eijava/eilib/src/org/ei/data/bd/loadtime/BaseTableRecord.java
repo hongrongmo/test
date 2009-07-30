@@ -72,7 +72,6 @@ public class BaseTableRecord
    	public static final BaseTableRecord PUBLISHERADDRESS = new BaseTableRecord("PUBLISHERADDRESS", new Integer(3200), "cpx");
    	public static final BaseTableRecord PUBLISHERELECTRONICADDRESS = new BaseTableRecord("PUBLISHERELECTRONICADDRESS", new Integer(2400), "cpx");
    	public static final BaseTableRecord REPORTNUMBER= new BaseTableRecord("REPORTNUMBER", new Integer(128), "cpx");
-   	public static final BaseTableRecord CHEMICALTERMS = new BaseTableRecord("CHEMICAL_TERMS", new Integer(128), "chm");
    	public static final BaseTableRecord CONFNAME = new BaseTableRecord("CONFNAME", new Integer(1200), "cpx");
    	public static final BaseTableRecord CONFCATNUMBER  = new BaseTableRecord("CONFCATNUMBER", new Integer(32), "cpx");
    	public static final BaseTableRecord CONFCODE = new BaseTableRecord("CONFCODE", new Integer(32), "cpx");
@@ -120,6 +119,27 @@ public class BaseTableRecord
 	public static final BaseTableRecord ASSIG= new BaseTableRecord("ASSIG", new Integer(300), "pch");
 	public static final BaseTableRecord PCODE= new BaseTableRecord("PCODE", new Integer(22), "pch");
 	public static final BaseTableRecord CLAIM= new BaseTableRecord("CLAIM", new Integer(8), "pch");
+	public static final BaseTableRecord CLASSIFICATIONDESC= new BaseTableRecord("CLASSIFICATIONDESC", new Integer(1100), "cpx");
+	public static final BaseTableRecord APICT= new BaseTableRecord("APICT", new Integer(4000), "elt");
+	public static final BaseTableRecord APICT1= new BaseTableRecord("APICT1", new Integer(4000), "elt");
+	public static final BaseTableRecord SOURC = new BaseTableRecord("SOURC", new Integer(768), "elt");
+	public static final BaseTableRecord SECSTI = new BaseTableRecord("SECSTI", new Integer(76), "elt");
+	public static final BaseTableRecord SECISS = new BaseTableRecord("SECISS", new Integer(8), "elt");
+	public static final BaseTableRecord SEC = new BaseTableRecord("SEC", new Integer(100), "elt");
+	public static final BaseTableRecord SECPUBDATE = new BaseTableRecord("SECPUBDATE", new Integer(250), "elt");
+	public static final BaseTableRecord FIG = new BaseTableRecord("FIG", new Integer(250), "elt");
+	public static final BaseTableRecord SECVOLUME = new BaseTableRecord("SECVOLUME", new Integer(250), "elt");
+	public static final BaseTableRecord SECISSUE = new BaseTableRecord("SECISSUE", new Integer(250), "elt");
+	public static final BaseTableRecord APILTM = new BaseTableRecord("APILTM", new Integer(4000), "elt");
+	public static final BaseTableRecord APILT = new BaseTableRecord("APILT", new Integer(4000), "elt");
+	public static final BaseTableRecord APILT1 = new BaseTableRecord("APILT1", new Integer(4000), "elt");
+	public static final BaseTableRecord APIALC = new BaseTableRecord("APIALC", new Integer(500), "elt");
+	public static final BaseTableRecord APIAMS = new BaseTableRecord("APIAMS", new Integer(200), "elt");
+	public static final BaseTableRecord APIAPC = new BaseTableRecord("APIAPC", new Integer(600), "elt");
+	public static final BaseTableRecord APIATM = new BaseTableRecord("APIATM", new Integer(4000), "elt");
+	public static final BaseTableRecord APIAT = new BaseTableRecord("APIAT", new Integer(4000), "elt");
+	public static final BaseTableRecord SEQ_NUM = new BaseTableRecord("SEQ_NUM", new Integer(4000), "elt");
+
 
 	static
 	{
@@ -206,6 +226,27 @@ public class BaseTableRecord
 		bdTableColumns.add(ASSIG);
 		bdTableColumns.add(PCODE);
 		bdTableColumns.add(CLAIM);
+	    bdTableColumns.add(CLASSIFICATIONDESC);
+	    bdTableColumns.add(APICT);
+	    bdTableColumns.add(APICT1);
+	    bdTableColumns.add(SOURC);
+	    bdTableColumns.add(SECSTI);
+	    bdTableColumns.add(SECISS);
+	    bdTableColumns.add(SEC);
+	    bdTableColumns.add(SECPUBDATE);
+	    bdTableColumns.add(FIG);
+	    bdTableColumns.add(SECVOLUME);
+	    bdTableColumns.add(SECISSUE);	    
+	    bdTableColumns.add(APILT);
+	    bdTableColumns.add(APILT1);
+	    bdTableColumns.add(APILTM);
+	    bdTableColumns.add(APIALC);
+	    bdTableColumns.add(APIAMS);
+	    bdTableColumns.add(APIAPC);
+	    bdTableColumns.add(APIATM);
+	    bdTableColumns.add(APIAT);
+	    bdTableColumns.add(SEQ_NUM);
+	    
 
 	}
 }
