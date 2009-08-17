@@ -6,11 +6,15 @@ import java.io.*;
 
 import org.ei.connectionpool.*;
 import org.ei.domain.*;
-import org.ei.domain.ElementDataMap;
-import org.ei.domain.XMLWrapper;
-import org.ei.domain.XMLMultiWrapper;
 import org.ei.util.StringUtil;
 import org.ei.data.*;
+import org.ei.data.bd.BdAffiliation;
+import org.ei.data.bd.BdAffiliations;
+import org.ei.data.bd.InspecAuthors;
+import org.ei.data.bd.InspecAffiliations;
+import org.ei.data.bd.BdAuthor;
+import org.ei.data.bd.BdAuthors;
+import org.ei.data.bd.loadtime.BdParser;
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
 import java.util.regex.*;
@@ -47,10 +51,10 @@ public class InspecDocBuilder
     private Database database;
     private Perl5Util perl = new Perl5Util();
 
-    private static String queryCitation="select SOPDATE, SSPDATE, CDATE, SU, SBN, ANUM, PCDN, M_ID, NRTYPE,RTYPE,LA,PIPN,NPL1,NPL2,PARTNO,PCPUB,BPPUB,PPUB,EAFF,EDS,AUS,AUS2,AAFF,AFC,TI,TC,IORG,RNUM,POPDATE,PFJT,PAJT,PVOLISS,PVOL,PISS,SVOL,SISS,SFJT,SAJT,PAS,OPAN,FDATE,OFDATE,PNUM,PSN,CPR,LOAD_NUMBER,COPA,PDOI,PUBTI,PYR from new_ins_master where M_ID IN ";
-    private static String queryXMLCitation="select  SOPDATE,M_ID,NRTYPE,RTYPE,ANUM,LA,PIPN,NPL1,NPL2,PARTNO,PCPUB,PPUB,BPPUB,EAFF,EDS,AUS,AUS2,AAFF,AFC,TI,IORG,RNUM,POPDATE,PFJT,PAJT,SFJT,SAJT,PVOLISS,PVOL,PISS,SVOL,SISS,PAS,OPAN,FDATE,OFDATE,PNUM,PSN,CPR,LOAD_NUMBER,COPA,PDOI,CVS,SBN,PUBTI,PYR from new_ins_master where M_ID IN ";
-    private static String queryAbstracts="select SOPDATE, SSPDATE, CDATE, SU, M_ID,ANUM,NRTYPE,RTYPE,TI,AUS,AUS2,AAFF,AFC,PFJT,SFJT,PAJT,SAJT,PVOLISS,PVOL,PISS,SVOL,SISS,POPDATE,PARTNO,PIPN,NPL1,NPL2,LA,PSN,PCDN,TC,CODATE,CLOC,SORG,BPPUB,PPUB,PCPUB,AB,XREFNO,CVS,FLS,EDS,EAFF,SBN,IORG,RNUM,PAS,OPAN,COPA,PNUM,FDATE,OFDATE,CPR,PDOI,PUBTI,PYR,LOAD_NUMBER,CLS from new_ins_master where M_ID IN ";
-    private static String queryDetailed="select SOPDATE,SSPDATE, CDATE, SU, M_ID,NRTYPE,RTYPE,ANUM,TI,AUS,AUS2,EDS,AAFF,AFC,EAFF,PFJT,SFJT,PAJT,SAJT,PVOLISS,PVOL,PISS,SVOLISS,SVOL,SISS,POPDATE,PIPN,NPL1,NPL2,LA,PSN,PCDN,TC,CODATE,CLOC,SORG,COPA,BPPUB,PPUB,PCPUB,SVOLISS,SOPDATE,SIPN,SSN,SCDN,SCPUB,MATID,PARTNO,RNUM,SBN,IORG,FDATE,OFDATE,PYR,PAS,OPAN,PNUM,AB,XREFNO,CVS,FLS,CLS,NDI,CHI,AOI,TRMC,CPR,PURL,PUM,PDOI,PUBTI,LOAD_NUMBER from new_ins_master where M_ID IN ";
+    private static String queryCitation="select SOPDATE, SSPDATE, CDATE, SU, SBN, ANUM, PCDN, M_ID, NRTYPE,RTYPE,LA,PIPN,NPL1,NPL2,PARTNO,PCPUB,BPPUB,PPUB,EAFF,EDS,AUS,AUS2,AAFF,AFC,TI,TC,IORG,RNUM,POPDATE,PFJT,PAJT,PVOLISS,PVOL,PISS,SVOL,SISS,SFJT,SAJT,PAS,OPAN,FDATE,OFDATE,PNUM,PSN,CPR,LOAD_NUMBER,COPA,PDOI,PUBTI,PYR,AAFFMULTI1, AAFFMULTI2, EAFFMULTI1, EAFFMULTI2, EFC  from new_ins_master where M_ID IN ";
+    private static String queryXMLCitation="select  SOPDATE,M_ID,NRTYPE,RTYPE,ANUM,LA,PIPN,NPL1,NPL2,PARTNO,PCPUB,PPUB,BPPUB,EAFF,EDS,AUS,AUS2,AAFF,AFC,TI,IORG,RNUM,POPDATE,PFJT,PAJT,SFJT,SAJT,PVOLISS,PVOL,PISS,SVOL,SISS,PAS,OPAN,FDATE,OFDATE,PNUM,PSN,CPR,LOAD_NUMBER,COPA,PDOI,CVS,SBN,PUBTI,PYR,AAFFMULTI1, AAFFMULTI2, EAFFMULTI1, EAFFMULTI2, EFC  from new_ins_master where M_ID IN ";
+    private static String queryAbstracts="select SOPDATE, SSPDATE, CDATE, SU, M_ID,ANUM,NRTYPE,RTYPE,TI,AUS,AUS2,AAFF,AFC,PFJT,SFJT,PAJT,SAJT,PVOLISS,PVOL,PISS,SVOL,SISS,POPDATE,PARTNO,PIPN,NPL1,NPL2,LA,PSN,PCDN,TC,CODATE,CLOC,SORG,BPPUB,PPUB,PCPUB,AB,XREFNO,CVS,FLS,EDS,EAFF,SBN,IORG,RNUM,PAS,OPAN,COPA,PNUM,FDATE,OFDATE,CPR,PDOI,PUBTI,PYR,LOAD_NUMBER,CLS, AAFFMULTI1, AAFFMULTI2, EAFFMULTI1, EAFFMULTI2, EFC  from new_ins_master where M_ID IN ";
+    private static String queryDetailed="select SOPDATE,SSPDATE, CDATE, SU, M_ID,NRTYPE,RTYPE,ANUM,TI,AUS,AUS2,EDS,AAFF,AFC,EAFF,PFJT,SFJT,PAJT,SAJT,PVOLISS,PVOL,PISS,SVOLISS,SVOL,SISS,POPDATE,PIPN,NPL1,NPL2,LA,PSN,PCDN,TC,CODATE,CLOC,SORG,COPA,BPPUB,PPUB,PCPUB,SVOLISS,SOPDATE,SIPN,SSN,SCDN,SCPUB,MATID,PARTNO,RNUM,SBN,IORG,FDATE,OFDATE,PYR,PAS,OPAN,PNUM,AB,XREFNO,CVS,FLS,CLS,NDI,CHI,AOI,TRMC,CPR,PURL,PUM,PDOI,PUBTI,LOAD_NUMBER, AAFFMULTI1, AAFFMULTI2, EAFFMULTI1, EAFFMULTI2, EFC  from new_ins_master where M_ID IN ";
 
     public DocumentBuilder newInstance(Database database)
     {
@@ -123,7 +127,7 @@ public class InspecDocBuilder
         ResultSet rset=null;
         ConnectionBroker broker=null;
         String INString=buildINString(listOfDocIDs);
-
+        String dataFormat = Abstract.ABSTRACT_FORMAT;
         try
         {
             broker=ConnectionBroker.getInstance();
@@ -209,49 +213,49 @@ public class InspecDocBuilder
                 if(strRTYPE.equals("08")) {
                     if (rset.getString("AUS") != null)
                     {
-                        String aus = rset.getString("AUS");
-                        if(rset.getString("AUS2") != null)
-                        {
-                            aus = aus.concat(rset.getString("AUS2"));
-                        }
-                        Contributors inventors = new Contributors(Keys.INVENTORS, getContributors(aus, Keys.INVENTORS));
+
+                        Contributors inventors = new Contributors
+                        	(Keys.INVENTORS, getContributors(Keys.INVENTORS, 
+                        			rset.getString("AUS"),
+                        			rset.getString("AUS2"),
+                        			Abstract.ABSTRACT_FORMAT,
+                        			rset.getString("AAFFMULTI1"),
+                        			rset.getString("AAFF")));
 
                         if(rset.getString("AAFF") != null)
                         {
-                            String[] afarray = rset.getString("AAFF").split(IDDELIMITER);
-                            if(rset.getString("AFC") != null)
-                            {
-                                afarray[0] = afarray[0].concat(", ").concat(rset.getString("AFC"));
-                            }
-                            afarray[1] = afarray[1].substring(afarray[1].lastIndexOf(".")+1) ;
-                            Affiliation affil = new Affiliation(Keys.AUTHOR_AFFS, afarray[0], afarray[1]);
-                            inventors.setFirstAffiliation(affil);
-                            ht.put(Keys.AUTHOR_AFFS, new Affiliations(Keys.AUTHOR_AFFS, affil));
+                                                        
+                            ht.put(Keys.AUTHOR_AFFS, getAuthorsAffiliation(
+                            							Keys.AUTHOR_AFFS,
+                            							rset.getString("AAFF"),
+                            							rset.getString("AFC"),
+                            							rset.getString("AAFFMULTI1"), 
+                            							rset.getString("AAFFMULTI2"), 
+                            							dataFormat));
                         }
                         ht.put(Keys.INVENTORS, inventors);
                     }
                 } else {
                     if (rset.getString("AUS") != null)
                     {
-                        String aus = rset.getString("AUS");
-                        if(rset.getString("AUS2") != null)
-                        {
-                            aus = aus.concat(rset.getString("AUS2"));
-                        }
-                        Contributors authors = new Contributors(Keys.AUTHORS, getContributors(aus, Keys.AUTHORS));
+                        Contributors authors = new Contributors(Keys.AUTHORS, 
+                        								getContributors(Keys.AUTHORS, 
+                        								rset.getString("AUS"),
+                        								rset.getString("AUS2"),
+                        								Abstract.ABSTRACT_FORMAT,
+                        								rset.getString("AAFFMULTI1"),
+                        								rset.getString("AAFF")));
 
                         if(rset.getString("AAFF") != null)
                         {
-                            String aaff = rset.getString("AAFF");
-                            String[] afarray = aaff.split(IDDELIMITER);
-                            if(rset.getString("AFC") != null)
-                            {
-                                afarray[0] = afarray[0].concat(", ").concat(rset.getString("AFC"));
-                            }
-                            afarray[1] = afarray[1].substring(afarray[1].lastIndexOf(".")+1) ;
-                            Affiliation affil = new Affiliation(Keys.AUTHOR_AFFS, afarray[0], afarray[1]);
-                            authors.setFirstAffiliation(affil);
-                            ht.put(Keys.AUTHOR_AFFS, new Affiliations(Keys.AUTHOR_AFFS, affil));
+                           
+                            ht.put(Keys.AUTHOR_AFFS,  getAuthorsAffiliation(
+        							Keys.AUTHOR_AFFS,
+        							rset.getString("AAFF"),
+        							rset.getString("AFC"),
+        							rset.getString("AAFFMULTI1"), 
+        							rset.getString("AAFFMULTI2"), 
+        							dataFormat));
                         }
 
                         ht.put(Keys.AUTHORS, authors);
@@ -267,19 +271,26 @@ public class InspecDocBuilder
                                 strED = perl.substitute("s/\\(Ed[.]\\s*\\)//gi", strED);
                             }
 
-                            Contributors editors = new Contributors(Keys.EDITORS, getContributors(rset.getString("EDS"), Keys.EDITORS));
+                            Contributors editors = new Contributors(Keys.EDITORS, 
+                            								getContributors(Keys.EDITORS, 
+                            								strED,
+                            								null,
+                            								Abstract.ABSTRACT_FORMAT,
+                            								rset.getString("EAFFMULTI1"),
+                            								rset.getString("EDS")));
                             ht.put(Keys.EDITORS,editors);
 
                             if(rset.getString("EAFF") != null)
                             {
-                                String[] afarray = rset.getString("EAFF").split(IDDELIMITER);
-                                afarray[1] = afarray[1].substring(afarray[1].lastIndexOf(".")+1) ;
-                                Affiliation affil = new Affiliation(Keys.EDITOR_AFFS, afarray[0], afarray[1]);
-                                editors.setFirstAffiliation(affil);
-                                ht.put(Keys.EDITOR_AFFS, new Affiliations(Keys.EDITOR_AFFS, affil));
+       
+                                ht.put(Keys.EDITOR_AFFS, getAuthorsAffiliation(
+                                		Keys.EDITOR_AFFS,
+            							rset.getString("EAFF"),
+            							rset.getString("EFC"),
+            							rset.getString("EAFFMULTI1"), 
+            							rset.getString("EAFFMULTI2"), 
+            							dataFormat));
                             }
-
-
                         }
                     }
                 }
@@ -592,6 +603,7 @@ public class InspecDocBuilder
         ResultSet rset=null;
         ConnectionBroker broker=null;
         String INString=buildINString(listOfDocIDs);
+        String dataFormat = FullDoc.FULLDOC_FORMAT;
         try
         {
             broker=ConnectionBroker.getInstance();
@@ -651,31 +663,33 @@ public class InspecDocBuilder
                     ht.put(Keys.TITLE, new XMLWrapper(Keys.TITLE,rset.getString("TI")));
                 }
 
-                if(strRTYPE.equals("08")) {
+                if(strRTYPE.equals("08")) 
+                {
                     if (rset.getString("AUS") != null)
                     {
-                        String aus = rset.getString("AUS");
-                        if (rset.getString("AUS2") != null)
-                        {
-                            aus = aus.concat(rset.getString("AUS2"));
-                        }
-                        Contributors inventors = new Contributors(Keys.INVENTORS, getContributors(aus, Keys.INVENTORS));
+                        Contributors inventors = new Contributors(Keys.INVENTORS, 
+         								getContributors(Keys.INVENTORS, 
+         								rset.getString("AUS"),
+         								rset.getString("AUS2"),
+         								Abstract.ABSTRACT_FORMAT,
+         								rset.getString("AAFFMULTI1"),
+         								rset.getString("AAFF")));
 
                         if(rset.getString("AAFF") != null)
                         {
-                            String[] afarray = rset.getString("AAFF").split(IDDELIMITER);
-                            if(rset.getString("AFC") != null)
-                            {
-                                afarray[0] = afarray[0].concat(", ").concat(rset.getString("AFC"));
-                            }
-                            afarray[1] = afarray[1].substring(afarray[1].lastIndexOf(".")+1) ;
-                            Affiliation affil = new Affiliation(Keys.AUTHOR_AFFS, afarray[0], afarray[1]);
-                            inventors.setFirstAffiliation(affil);
-                            ht.put(Keys.AUTHOR_AFFS, new Affiliations(Keys.AUTHOR_AFFS, affil));
+                            ht.put(Keys.AUTHOR_AFFS, getAuthorsAffiliation(
+        							Keys.AUTHOR_AFFS,
+        							rset.getString("AAFF"),
+        							rset.getString("AFC"),
+        							rset.getString("AAFFMULTI1"), 
+        							rset.getString("AAFFMULTI2"), 
+        							dataFormat));
                         }
                         ht.put(Keys.INVENTORS, inventors);
                     }
-                } else {
+                } 
+                else 
+                {
                     if (rset.getString("AUS") != null)
                     {
                         String aus = rset.getString("AUS");
@@ -683,20 +697,25 @@ public class InspecDocBuilder
                         {
                             aus = aus.concat(rset.getString("AUS2"));
                         }
-                        Contributors authors = new Contributors(Keys.AUTHORS, getContributors(aus, Keys.AUTHORS));
+                        Contributors authors = new Contributors(Keys.AUTHORS,
+                        				getContributors(Keys.AUTHORS, 
+         								rset.getString("AUS"),
+         								rset.getString("AUS2"),
+         								Abstract.ABSTRACT_FORMAT,
+         								rset.getString("AAFFMULTI1"),
+         								rset.getString("AAFF")));
+                        		
                         ht.put(Keys.AUTHORS, authors);
 
                         if(rset.getString("AAFF") != null)
                         {
-                            String[] afarray = rset.getString("AAFF").split(IDDELIMITER);
-                            if(rset.getString("AFC") != null)
-                            {
-                                afarray[0] = afarray[0].concat(", ").concat(rset.getString("AFC"));
-                            }
-                             afarray[1] = afarray[1].substring(afarray[1].lastIndexOf(".")+1) ;
-                            Affiliation affil = new Affiliation(Keys.AUTHOR_AFFS, afarray[0], afarray[1]);
-                            authors.setFirstAffiliation(affil);
-                            ht.put(Keys.AUTHOR_AFFS, new Affiliations(Keys.AUTHOR_AFFS, affil));
+                            ht.put(Keys.AUTHOR_AFFS, getAuthorsAffiliation(
+        							Keys.AUTHOR_AFFS,
+        							rset.getString("AAFF"),
+        							rset.getString("AFC"),
+        							rset.getString("AAFFMULTI1"), 
+        							rset.getString("AAFFMULTI2"), 
+        							dataFormat));
                         }
 
 
@@ -711,16 +730,24 @@ public class InspecDocBuilder
                                 strED = perl.substitute("s/\\(Ed[.]\\s*\\)//gi", strED);
                             }
 
-                            Contributors editors = new Contributors(Keys.EDITORS, getContributors(rset.getString("EDS"), Keys.EDITORS));
+                            Contributors editors = new Contributors(Keys.EDITORS, 
+                            										getContributors(Keys.EDITORS, 
+                            										strED,
+                            										null,
+                            										Abstract.ABSTRACT_FORMAT,
+                            										rset.getString("EAFFMULTI1"),
+                            										rset.getString("EDS")));
                             ht.put(Keys.EDITORS,editors);
 
                             if(rset.getString("EAFF") != null)
                             {
-                                String[] afarray = rset.getString("EAFF").split(IDDELIMITER);
-                                afarray[1] = afarray[1].substring(afarray[1].lastIndexOf(".")+1) ;
-                                Affiliation eaffil = new Affiliation(Keys.EDITOR_AFFS, afarray[0], afarray[1]);
-                                editors.setFirstAffiliation(eaffil);
-                                ht.put(Keys.EDITOR_AFFS, new Affiliations(Keys.EDITOR_AFFS, eaffil));
+                            	ht.put(Keys.EDITOR_AFFS, getAuthorsAffiliation(
+                                		Keys.EDITOR_AFFS,
+            							rset.getString("EAFF"),
+            							rset.getString("EFC"),
+            							rset.getString("EAFFMULTI1"), 
+            							rset.getString("EAFFMULTI2"),
+            							dataFormat));
                             }
 
 
@@ -1080,6 +1107,7 @@ public class InspecDocBuilder
         ResultSet rset=null;
         ConnectionBroker broker=null;
         String INString=buildINString(listOfDocIDs);
+        String dataFormat = "RIS";
         try {
             broker=ConnectionBroker.getInstance();
             con=broker.getConnection(DatabaseConfig.SEARCH_POOL);
@@ -1119,23 +1147,23 @@ public class InspecDocBuilder
                 if(strRTYPE.equals("08")) {
                     if (rset.getString("AUS") != null)
                     {
-                      String aus = rset.getString("AUS");
-                      if (rset.getString("AUS2") != null)
-                      {
-                        aus = aus.concat(rset.getString("AUS2"));
-                      }
-                      Contributors inventors = new Contributors(Keys.INVENTORS, getContributors(aus, Keys.INVENTORS));
+                      Contributors inventors = new Contributors(Keys.INVENTORS,
+                    		  		getContributors(Keys.INVENTORS, 
+                    		  		rset.getString("AUS"),
+                    		  		rset.getString("AUS2"),
+       								Abstract.ABSTRACT_FORMAT,
+       								rset.getString("AAFFMULTI1"),
+       								rset.getString("AAFF")));
                       inventors.nullAffilID();
                       if(rset.getString("AAFF") != null)
                       {
-                        String[] afarray = rset.getString("AAFF").split(IDDELIMITER);
-                        if(rset.getString("AFC") != null)
-                        {
-                          afarray[0] = afarray[0].concat(", ").concat(rset.getString("AFC"));
-                        }
-                         afarray[1] = afarray[1].substring(afarray[1].lastIndexOf(".")+1) ;
-                        Affiliation affil = new Affiliation(Keys.RIS_AD, afarray[0], afarray[1]);
-                        ht.put(Keys.RIS_AD, new Affiliations(Keys.RIS_AD, affil));
+                          ht.put(Keys.RIS_AD, getAuthorsAffiliation(Keys.RIS_AD,
+      							rset.getString("AAFF"),
+      							rset.getString("AFC"),
+      							rset.getString("AAFFMULTI1"), 
+      							rset.getString("AAFFMULTI2"), 
+      							dataFormat));
+                       
                       }
                       ht.put(Keys.RIS_AUS, inventors);
                     }
@@ -1143,23 +1171,25 @@ public class InspecDocBuilder
                 } else {
                     if (rset.getString("AUS") != null)
                     {
-                        String aus = rset.getString("AUS");
-                        if (rset.getString("AUS2") != null)
-                        {
-                            aus = aus.concat(rset.getString("AUS2"));
-                        }
-                        Contributors authors = new Contributors(Keys.AUTHORS, getContributors(aus, Keys.AUTHORS));
+      
+                    	
+                        Contributors authors = new Contributors(Keys.AUTHORS,
+                        				getContributors(Keys.AUTHORS, 
+                        		  		rset.getString("AUS"),
+                        		  		rset.getString("AUS2"),
+           								Abstract.ABSTRACT_FORMAT,
+           								rset.getString("AAFFMULTI1"),
+           								rset.getString("AAFF")));
+                        		
                         authors.nullAffilID();
                         if(rset.getString("AAFF") != null)
                         {
-                            String[] afarray = rset.getString("AAFF").split(IDDELIMITER);
-                            if(rset.getString("AFC") != null)
-                            {
-                                afarray[0] = afarray[0].concat(", ").concat(rset.getString("AFC"));
-                            }
-                            afarray[1] = afarray[1].substring(afarray[1].lastIndexOf(".")+1) ;
-                            Affiliation affil = new Affiliation(Keys.RIS_AD, afarray[0], afarray[1]);
-                            ht.put(Keys.RIS_AD, new Affiliations(Keys.RIS_AD, affil));
+                        	ht.put(Keys.RIS_AD, getAuthorsAffiliation(Keys.RIS_AD,
+          							rset.getString("AAFF"),
+          							rset.getString("AFC"),
+          							rset.getString("AAFFMULTI1"), 
+          							rset.getString("AAFFMULTI2"), 
+          							dataFormat));
                         }
                         ht.put(Keys.RIS_AUS, authors);
                     }
@@ -1173,16 +1203,26 @@ public class InspecDocBuilder
                                 strED = perl.substitute("s/\\(Ed[.]\\s*\\)//gi", strED);
                             }
 
-                            Contributors editors = new Contributors(Keys.EDITORS, getContributors(rset.getString("EDS"), Keys.EDITORS));
+                            Contributors editors = new Contributors(Keys.EDITORS,
+                            				getContributors(Keys.EDITORS, 
+                            				rset.getString("EDS"),
+                            		  		null,
+               								Abstract.ABSTRACT_FORMAT,
+               								rset.getString("EAFFMULTI1"),
+               								rset.getString("EDS")));
+                            		
                         	editors.nullAffilID();
                         	ht.put(Keys.RIS_EDS,editors);
 
                             if(rset.getString("EAFF") != null)
                             {
-                                String[] afarray = rset.getString("AAFF").split(IDDELIMITER);
-                                 afarray[1] = afarray[1].substring(afarray[1].lastIndexOf(".")+1) ;
-                                Affiliation affil = new Affiliation(Keys.RIS_AD, afarray[0], afarray[1]);
-                                ht.put(Keys.RIS_AD, new Affiliations(Keys.RIS_AD, affil));
+ 
+                                ht.put(Keys.RIS_AD, getAuthorsAffiliation(Keys.RIS_AD,
+              							rset.getString("EAFF"),
+              							null,
+              							null, 
+              							null, 
+              							dataFormat));
                             }
 
                         }
@@ -1506,6 +1546,7 @@ public class InspecDocBuilder
         ResultSet rset=null;
         ConnectionBroker broker=null;
         String INString=buildINString(listOfDocIDs);
+        String dataFormat = Citation.CITATION_FORMAT;
         try
         {
             broker=ConnectionBroker.getInstance();
@@ -1547,23 +1588,26 @@ public class InspecDocBuilder
                 if(strRTYPE.equals("08")) {
                     if (rset.getString("AUS") != null)
                     {
-                            String aus = rset.getString("AUS");
-                            if (rset.getString("AUS2") != null)
-                            {
-                                aus = aus.concat(rset.getString("AUS2"));
-                            }
-                            Contributors inventors = new Contributors(Keys.INVENTORS, getContributors(aus, Keys.INVENTORS));
+                            
+                            Contributors inventors = new Contributors(Keys.INVENTORS, 
+                            				getContributors(Keys.INVENTORS, 
+                            				rset.getString("AUS"),
+                            				rset.getString("AUS2"),
+               								Abstract.ABSTRACT_FORMAT,
+               								rset.getString("AAFFMULTI1"),
+               								rset.getString("AAFF")));
+                            
                             if(rset.getString("AAFF") != null)
                             {
-                                String[] afarray = rset.getString("AAFF").split(IDDELIMITER);
-                                if(rset.getString("AFC") != null)
-                                {
-                                    afarray[0] = afarray[0].concat(", ").concat(rset.getString("AFC"));
-                                }
-                                afarray[1] = afarray[1].substring(afarray[1].lastIndexOf(".")+1) ;
-                                Affiliation affil = new Affiliation(Keys.AUTHOR_AFFS, afarray[0], afarray[1]);
-                                inventors.setFirstAffiliation(affil);
-                                ht.put(Keys.AUTHOR_AFFS, new Affiliations(Keys.AUTHOR_AFFS, affil));
+    
+                                ht.put(Keys.AUTHOR_AFFS, getAuthorsAffiliation(
+            							Keys.AUTHOR_AFFS,
+            							rset.getString("AAFF"),
+            							rset.getString("AFC"),
+            							rset.getString("AAFFMULTI1"), 
+            							rset.getString("AAFFMULTI2"), 
+            							dataFormat));
+                              
                             }
                             ht.put(Keys.INVENTORS, inventors);
                     }
@@ -1571,26 +1615,25 @@ public class InspecDocBuilder
                 } else {
                     if (rset.getString("AUS") != null)
                     {
-                        String aus = rset.getString("AUS");
-                        if (rset.getString("AUS2") != null)
-                        {
-                            aus = aus.concat(rset.getString("AUS2"));
-                        }
-                        Contributors authors = new Contributors(Keys.AUTHORS, getContributors(aus, Keys.AUTHORS));
+                        Contributors inventors = new Contributors(Keys.AUTHORS, 
+                									getContributors(Keys.AUTHORS, 
+                									rset.getString("AUS"),
+                									rset.getString("AUS2"),
+                									Abstract.ABSTRACT_FORMAT,
+                									rset.getString("AAFFMULTI1"),
+                									rset.getString("AAFF")));
 
                         if(rset.getString("AAFF") != null)
                         {
-                            String[] afarray = rset.getString("AAFF").split(IDDELIMITER);
-                            if(rset.getString("AFC") != null)
-                            {
-                                afarray[0] = afarray[0].concat(", ").concat(rset.getString("AFC"));
-                            }
-                             afarray[1] = afarray[1].substring(afarray[1].lastIndexOf(".")+1) ;
-                            Affiliation affil = new Affiliation(Keys.AUTHOR_AFFS, afarray[0], afarray[1]);
-                            authors.setFirstAffiliation(affil);
-                            ht.put(Keys.AUTHOR_AFFS, new Affiliations(Keys.AUTHOR_AFFS, affil));
+                            ht.put(Keys.AUTHOR_AFFS, getAuthorsAffiliation(
+        							Keys.AUTHOR_AFFS,
+        							rset.getString("AAFF"),
+        							rset.getString("AFC"),
+        							rset.getString("AAFFMULTI1"), 
+        							rset.getString("AAFFMULTI2"), 
+        							dataFormat));
                         }
-                        ht.put(Keys.AUTHORS, authors);
+                        ht.put(Keys.AUTHORS, inventors);
 
                     }
                     else
@@ -1602,20 +1645,27 @@ public class InspecDocBuilder
                             {
                                 strED = perl.substitute("s/\\(Ed[.]\\s*\\)//gi", strED);
                             }
+                            
+                            Contributors editors = new Contributors(Keys.EDITORS, 
+									getContributors(Keys.EDITORS, 
+									strED,
+									null,
+									Abstract.ABSTRACT_FORMAT,
+									rset.getString("EAFFMULTI1"),
+									rset.getString("EDS")));
 
-                            Contributors editors = new Contributors(Keys.EDITORS, getContributors(rset.getString("EDS"), Keys.EDITORS));
-                            ht.put(Keys.EDITORS,editors);
+                             ht.put(Keys.EDITORS,editors);
 
                             if(rset.getString("EAFF") != null)
                             {
-                                String[] afarray = rset.getString("EAFF").split(IDDELIMITER);
-                                 afarray[1] = afarray[1].substring(afarray[1].lastIndexOf(".")+1) ;
-                                Affiliation affil = new Affiliation(Keys.EDITOR_AFFS, afarray[0], afarray[1]);
-                                editors.setFirstAffiliation(affil);
-                                ht.put(Keys.EDITOR_AFFS, new Affiliations(Keys.EDITOR_AFFS, affil));
+                            	ht.put(Keys.EDITOR_AFFS, getAuthorsAffiliation(
+                                		Keys.EDITOR_AFFS,
+            							rset.getString("EAFF"),
+            							rset.getString("EFC"),
+            							rset.getString("EAFFMULTI1"), 
+            							rset.getString("EAFFMULTI2"),
+            							dataFormat));
                             }
-
-
                         }
                     }
                 }
@@ -1632,7 +1682,8 @@ public class InspecDocBuilder
                     ht.put(Keys.SOURCE, new XMLWrapper(Keys.SOURCE, strFJT));
 
                     if(rset.getString("SFJT") != null) {
-                        ht.put(Keys.TRANSLATION_SERIAL_TITLE, new XMLWrapper(Keys.TRANSLATION_SERIAL_TITLE ,TRANS_SEE_DETAILED));
+                        ht.put(Keys.TRANSLATION_SERIAL_TITLE, 
+                        		new XMLWrapper(Keys.TRANSLATION_SERIAL_TITLE ,TRANS_SEE_DETAILED));
                     }
 
                     if(rset.getString("PVOLISS") != null) {
@@ -1897,6 +1948,7 @@ public class InspecDocBuilder
         ResultSet rset=null;
         ConnectionBroker broker=null;
         String INString=buildINString(listOfDocIDs);
+        String dataFormat = Citation.XMLCITATION_FORMAT;
         try
         {
             broker=ConnectionBroker.getInstance();
@@ -1937,48 +1989,47 @@ public class InspecDocBuilder
                 if(strRTYPE.equals("08")) {
                     if (rset.getString("AUS") != null)
                     {
-                            String aus = rset.getString("AUS");
-                            if (rset.getString("AUS2") != null)
-                            {
-                                aus = aus.concat(rset.getString("AUS2"));
-                            }
-                            Contributors inventors = new Contributors(Keys.INVENTORS, getContributors(aus, Keys.INVENTORS));
+                            Contributors inventors =  new Contributors(Keys.INVENTORS, 
+									getContributors(Keys.INVENTORS, 
+									rset.getString("AUS"),
+									rset.getString("AUS2"),
+									Abstract.ABSTRACT_FORMAT,
+									rset.getString("AAFFMULTI1"),
+									rset.getString("AAFF")));
+                            
                             if(rset.getString("AAFF") != null)
                             {
-                                String[] afarray = rset.getString("AAFF").split(IDDELIMITER);
-                                if(rset.getString("AFC") != null)
-                                {
-                                    afarray[0] = afarray[0].concat(", ").concat(rset.getString("AFC"));
-                                }
-                                afarray[1] = afarray[1].substring(afarray[1].lastIndexOf(".")+1) ;
-                                Affiliation affil = new Affiliation(Keys.AUTHOR_AFFS, afarray[0], afarray[1]);
-                                inventors.setFirstAffiliation(affil);
-                                ht.put(Keys.AUTHOR_AFFS, new Affiliations(Keys.AUTHOR_AFFS, affil));
+                                ht.put(Keys.AUTHOR_AFFS, getAuthorsAffiliation(
+            							Keys.AUTHOR_AFFS,
+            							rset.getString("AAFF"),
+            							rset.getString("AFC"),
+            							rset.getString("AAFFMULTI1"), 
+            							rset.getString("AAFFMULTI2"), 
+            							dataFormat));
                             }
                             ht.put(Keys.INVENTORS, inventors);
                     }
-
                 } else {
                     if (rset.getString("AUS") != null)
-                    {
-                        String aus = rset.getString("AUS");
-                        if (rset.getString("AUS2") != null)
-                        {
-                            aus = aus.concat(rset.getString("AUS2"));
-                        }
-                        Contributors authors = new Contributors(Keys.AUTHORS, getContributors(aus, Keys.AUTHORS));
+                    {                      
+                        Contributors authors = new Contributors(Keys.AUTHORS, 
+														getContributors(Keys.AUTHORS, 
+														rset.getString("AUS"),
+														rset.getString("AUS2"),
+														Abstract.ABSTRACT_FORMAT,
+														rset.getString("AAFFMULTI1"),
+														rset.getString("AAFF")));
 
                         if(rset.getString("AAFF") != null)
                         {
-                            String[] afarray = rset.getString("AAFF").split(IDDELIMITER);
-                            if(rset.getString("AFC") != null)
-                            {
-                                afarray[0] = afarray[0].concat(", ").concat(rset.getString("AFC"));
-                            }
-                            afarray[1] = afarray[1].substring(afarray[1].lastIndexOf(".")+1) ;
-                            Affiliation affil = new Affiliation(Keys.AUTHOR_AFFS, afarray[0], afarray[1]);
-                            authors.setFirstAffiliation(affil);
-                            ht.put(Keys.AUTHOR_AFFS, new Affiliations(Keys.AUTHOR_AFFS, affil));
+   
+                            ht.put(Keys.AUTHOR_AFFS, getAuthorsAffiliation(
+        							Keys.AUTHOR_AFFS,
+        							rset.getString("AAFF"),
+        							rset.getString("AFC"),
+        							rset.getString("AAFFMULTI1"), 
+        							rset.getString("AAFFMULTI2"), 
+        							dataFormat));
                         }
                         ht.put(Keys.AUTHORS, authors);
 
@@ -1992,20 +2043,27 @@ public class InspecDocBuilder
                             {
                                 strED = perl.substitute("s/\\(Ed[.]\\s*\\)//gi", strED);
                             }
+                            
+                            Contributors editors = new Contributors(Keys.EDITORS, 
+													getContributors(Keys.EDITORS, 
+													strED,
+													null,
+													Abstract.ABSTRACT_FORMAT,
+													rset.getString("EAFFMULTI1"),
+													rset.getString("EDS")));
 
-                            Contributors editors = new Contributors(Keys.EDITORS, getContributors(rset.getString("EDS"), Keys.EDITORS));
                             ht.put(Keys.EDITORS,editors);
 
                             if(rset.getString("EAFF") != null)
                             {
-                                String[] afarray = rset.getString("EAFF").split(IDDELIMITER);
-                                 afarray[1] = afarray[1].substring(afarray[1].lastIndexOf(".")+1) ;
-                                Affiliation affil = new Affiliation(Keys.EDITOR_AFFS, afarray[0], afarray[1]);
-                                editors.setFirstAffiliation(affil);
-                                ht.put(Keys.EDITOR_AFFS, new Affiliations(Keys.EDITOR_AFFS, affil));
+                            	ht.put(Keys.EDITOR_AFFS, getAuthorsAffiliation(
+                                		Keys.EDITOR_AFFS,
+            							rset.getString("EAFF"),
+            							rset.getString("EFC"),
+            							rset.getString("EAFFMULTI1"), 
+            							rset.getString("EAFFMULTI2"),
+            							dataFormat));
                             }
-
-
                         }
                     }
                 }
@@ -2255,48 +2313,147 @@ public class InspecDocBuilder
         return list;
 
     } // loadXMLCitation
+    
+    // new method for multy authors
+    
+	private Affiliations getAuthorsAffiliation(Key key,
+			   String affFirstString,
+			   String country,
+			   String affString,
+			   String affString1,
+			   String dataFormat) throws Exception
+   {
+		        
+
+		
+		StringBuffer affBuffer = new StringBuffer();
 
 
+		if(affString == null || affString.trim().equals(""))
+		{
+			if(affFirstString != null && 
+					!affFirstString.trim().equals(""))
+			{
+				
+				String[] afarray = null;
+				
+				if(affFirstString.indexOf(BdParser.IDDELIMITER) > 0)
+				{
+					afarray = affFirstString.split(IDDELIMITER);
+				}
+				else if(affFirstString.indexOf(BdParser.GROUPDELIMITER) > 0)
+				{
+					afarray = affFirstString.split(BdParser.GROUPDELIMITER);
+				}
+		        if(country != null)
+		        {
+		        	afarray[0] = afarray[0].concat(", ").concat(country);
+		        }
 
-   public List getContributors(String strAuthors,
-                                Key key)
-    {
+		        afarray[1] = afarray[1].substring(afarray[1].lastIndexOf(".")+1) ;	
+	        	
+	        	affBuffer.append(affFirstString);
+		     //   affBuffer.append(afarray[0]).append(afarray[1]);
+				
+			}			
+		}
+		if (affString != null)
+		{
+			affBuffer.append(affString);
+		}
+		
+		if(affString1 != null)
+		{
+			affBuffer.append(affString1);
+		}
+		
+		if(affBuffer.length()>0)
+		{
+			List affList = new ArrayList();
+			InspecAffiliations aff = new InspecAffiliations(affBuffer.toString());
+			List aList = aff.getAffiliations();
+			for(int i=0;i<aList.size();i++)
+			{
+				BdAffiliation bdaff = (BdAffiliation)aList.get(i);
+				String strAffDisplay = bdaff.getDisplayValue();
 
-        List list = new ArrayList();
-        StringTokenizer strToken = new StringTokenizer(strAuthors, AUDELIMITER);
-         String au;
-         while(strToken.hasMoreTokens())
-         {
-            au = strToken.nextToken().trim();
-            ArrayList id = new ArrayList();
-            if(au.length() > 0)
-            {
-                if(au.indexOf(IDDELIMITER) > -1)
-                {
-                        int i = au.indexOf(IDDELIMITER);
-                        String idindex = au.substring(i+1);
-                        int j = idindex.lastIndexOf('.');
-                        String idsubscript = null;
-                        if(j != -1)
-                        {
-                            idsubscript = idindex.substring(j+1);
-                        }
-                      id.add(idsubscript);
-                      au = au.substring(0,i);
-                    list.add(new Contributor(key, au, (String[]) id.toArray(new String[1])));
-                }
-                else
-                {
-                    list.add(new Contributor(key, au.trim()));
+				if(i == 0 && dataFormat.equalsIgnoreCase(RIS.RIS_FORMAT))
+				{
+					affList.add(new Affiliation(key,
+							strAffDisplay));
+					return (new Affiliations(Keys.RIS_AD,affList));
+				}
+				else if(dataFormat.equalsIgnoreCase(Citation.XMLCITATION_FORMAT)
+						&& i==0)
+				{
+						affList.add(new Affiliation(key,strAffDisplay));
+						return (new Affiliations(Keys.AUTHOR_AFFS,affList));
+				}
+				else
+				{
+					affList.add(new Affiliation(key,
+							strAffDisplay,
+							bdaff.getIdDislpayValue()));
+				}
+			}
+			return (new Affiliations(key,affList));
+		}
+		return null;
+	}
+	
 
-                }
+	private List getContributors(Key key,
+			String authorString,
+			String authorString1, 
+			String dataFormat,
+			String affiliations,
+			String FirstAuAffiliations)
+	throws Exception
+	{
+			StringBuffer auString = new StringBuffer();
 
+			if(authorString != null)
+			{
+				auString.append(authorString);
+			}
+			if(authorString1 != null)
+			{
+				auString.append(authorString1);
+			}
 
-            }
-         }
-
-         return list;
-     }
+			if(auString != null && auString.length()> 0 )
+			{
+				List authorNames = new ArrayList();
+				InspecAuthors authors = new InspecAuthors(auString.toString());
+				List authorList = authors.getInspecAuthors();
+				for(int i= 0;i<authorList.size();i++)
+				{
+					BdAuthor author = (BdAuthor)authorList.get(i);
+					String auDisplayName = author.getDisplayName();
+					if(dataFormat.equalsIgnoreCase(RIS.RIS_FORMAT) ||
+							dataFormat.equalsIgnoreCase(Citation.XMLCITATION_FORMAT))
+					{
+						authorNames.add(new Contributor(key,
+														auDisplayName));
+					}
+					else if((affiliations != null && 
+							!affiliations.trim().equals("")) ||
+							(FirstAuAffiliations != null && 
+							!FirstAuAffiliations.trim().equals("")))
+					{
+						authorNames.add(new Contributor(key,
+														auDisplayName,
+														author.getAffIdList()));
+					}
+					else
+					{
+						authorNames.add(new Contributor(key, auDisplayName));
+					}
+				}
+				return authorNames;
+			}
+			return null;
+	}
 
    /* This method builds the IN String
     * from list of docId objects.
@@ -2391,12 +2548,9 @@ public class InspecDocBuilder
                 if(strToken.length() > 0)
                 {
                     KeyValuePair k = new KeyValuePair(Keys.CONTROLLED_TERM, strToken);
-
                     list.add(k);
                 }
-
         }
-
         return (KeyValuePair[])list.toArray(new KeyValuePair[list.size()]);
 
     }
@@ -2711,7 +2865,6 @@ public class InspecDocBuilder
                 {
                     list.add(s.trim());
                 }
-
             }
          }
 
