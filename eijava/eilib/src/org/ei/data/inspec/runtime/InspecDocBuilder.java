@@ -9,24 +9,12 @@ import org.ei.domain.*;
 import org.ei.util.StringUtil;
 import org.ei.data.*;
 import org.ei.data.bd.BdAffiliation;
-import org.ei.data.bd.BdAffiliations;
-import org.ei.data.bd.InspecAuthors;
-import org.ei.data.bd.InspecAffiliations;
 import org.ei.data.bd.BdAuthor;
-import org.ei.data.bd.BdAuthors;
 import org.ei.data.bd.loadtime.BdParser;
 import org.apache.oro.text.perl.Perl5Util;
-import org.apache.oro.text.regex.MatchResult;
 import java.util.regex.*;
-
-
 import java.text.*;
-import java.io.File;
-import java.io.BufferedReader;
-import java.io.Reader;
 import java.io.IOException;
-import org.ei.config.*;
-import org.ei.util.StringUtil;
 
 
 public class InspecDocBuilder
