@@ -39,14 +39,14 @@ public class InspecXMLReader extends FilterReader
     {
     	String filename = args[0];
     	Hashtable rec;
-    	/*
+    	
         BufferedReader in = new BufferedReader(new FileReader(new File(args[0])));
         InspecXMLReader r = new InspecXMLReader(in);
         while((rec=r.getRecord())!=null)
         {
         	System.out.println(rec.toString());
 		}
-		*/
+		
 	}
 
 	public InspecXMLReader(Reader r)throws Exception
@@ -221,6 +221,12 @@ public class InspecXMLReader extends FilterReader
 				record.put("CVS",getIndexing(idxGroup.getChild("cindg"),"term"));
 			if(idxGroup.getChild("ccg")!=null)
 				record.put("CLS",getIndexing(idxGroup.getChild("ccg"),"cc"));
+			
+			
+			if(idxGroup.getChild("ipcg")!=null)
+			{
+				record.put("IPC",getIndexing(idxGroup.getChild("ipcg"),"cc"));
+			}
 			if(idxGroup.getChild("ucindg")!=null)
 				record.put("FLS",getIndexing(idxGroup.getChild("ucindg"),"term"));
 			//VB:tcg
@@ -346,13 +352,39 @@ public class InspecXMLReader extends FilterReader
 			   name.append(", ");
 			   getMixData(n.getChild("sfix").getContent(),name);
 		   }
-
+		   name.append(IDDELIMITER);
 		   if(n.getAttribute("id")!=null)
 		   {
-			  name.append(IDDELIMITER);
 			  name.append(n.getAttribute("id").getValue());
 		   }
-		    name.append(AUDELIMITER);
+		   name.append(IDDELIMITER);
+		   if(n.getChildren("fnm") != null)
+		   {
+			   List l = n.getChildren("fnm");
+			   for (int k = 0; k < l.size(); k++)
+			   {
+				   Element el = (Element) l.get(k);
+				   name.append(el.getContent());
+				   if(k < (l.size()-1))
+				   {
+					   name.append(", ");
+				   }				   
+			   }			   
+		   }
+		   
+		   name.append(IDDELIMITER);
+		   if(n.getChild("email")!=null)
+		   {
+			   name.append(", ");
+			   name.append(n.getChild("email").getContent());
+		   }
+		   name.append(IDDELIMITER);
+		   if(n.getChild("pid") != null)
+		   {
+			   name.append(", ");
+			   name.append(n.getChild("pid").getContent());			   
+		   }
+		   name.append(AUDELIMITER);
 	    }
 
         if(name.lastIndexOf(AUDELIMITER) != -1) {
@@ -393,13 +425,12 @@ public class InspecXMLReader extends FilterReader
     	        	aff.append(m.getAttribute("rid").getValue());
     	        }
         	}
-
+        	oneAffiliation.append(IDDELIMITER);
 	        if(m.getAttribute("rid")!=null)
-	        {
-	        	oneAffiliation.append(IDDELIMITER);
+	        {	        	
 	        	oneAffiliation.append(m.getAttribute("rid").getValue());
 	        }
-
+	        oneAffiliation.append(IDDELIMITER);
 	        if(m.getChild("cntry")!=null)
 	        {
 	        	getMixData(m.getChild("cntry").getContent(),country);
@@ -411,9 +442,73 @@ public class InspecXMLReader extends FilterReader
 	        	}
 
 	        	//add country to AAFFMULTI, EAFFMULTI fields
-	        	oneAffiliation.append(IDDELIMITER);
+	        	
 	        	oneAffiliation.append(country);
 		    }
+	        
+	        // add new xml elements to aff.
+	        //orgn
+	        oneAffiliation.append(IDDELIMITER);
+	        if(m.getChild("orgn")!= null)
+	        {
+	        	oneAffiliation.append(m.getChild("orgn").getContent());	        	
+	        }
+	        //dept
+	        oneAffiliation.append(IDDELIMITER);
+	        if(m.getChild("dept") != null)
+	        {
+	        	oneAffiliation.append(m.getChild("dept").getContent());	        	
+	        }
+	        //addressline - could be multy
+	        oneAffiliation.append(IDDELIMITER);
+	        
+	        if(m.getChildren("addline") != null)
+	        {
+	        	List l = m.getChildren("addline");
+	        	StringBuffer addline = new StringBuffer();
+	        	for (int i = 0 ; i < l.size(); i++)
+	        	{
+	        		Element el = (Element) l.get(i);
+	        		addline.append(el.getContent());
+	        		if(i < (l.size()-1))
+	        		{
+	        			addline.append(", ");
+	        		}
+	        	}
+	        	oneAffiliation.append(addline);
+	        }
+	        
+	        oneAffiliation.append(IDDELIMITER);
+	        //city
+	        if(m.getChild("city")!= null)
+	        {
+	        	oneAffiliation.append(m.getChild("city").getContent());
+	        	
+	        }
+	        
+	        oneAffiliation.append(IDDELIMITER);
+	        //state
+	        if(m.getChild("state") != null)
+	        {
+	        	oneAffiliation.append(m.getChild("state").getContent());
+	        }
+	        
+	        oneAffiliation.append(IDDELIMITER);
+	        //pcode
+	        if(m.getChild("pcode") != null)
+	        {
+	        	oneAffiliation.append(m.getChild("pcode").getContent());
+	        }
+	        
+	        oneAffiliation.append(IDDELIMITER);
+	        //orgid
+	        
+	        if(m.getChild("orgid") != null)
+	        {
+	        	oneAffiliation.append(m.getChild("orgid").getContent());
+	        }
+	        
+	        
 
 
 	        if(affmulti1.length() > 0 )
@@ -996,13 +1091,18 @@ public class InspecXMLReader extends FilterReader
 					terms.append("*");
 				}
 				terms.append(t.getChildTextTrim("code"));
+				
+				if(type.trim().equalsIgnoreCase("ipcg") &&  t.getChild("cct")!= null )
+				{
+					terms.append(IDDELIMITER);
+					terms.append(t.getChildTextTrim("cct"));
+				}
 				terms.append(AUDELIMITER);
 			}
 			else
 			{
 				getMixData(t.getContent(),terms);
 				terms.append(AUDELIMITER);
-
 			}
 		}
 		return terms.delete(terms.lastIndexOf(AUDELIMITER),terms.length());
