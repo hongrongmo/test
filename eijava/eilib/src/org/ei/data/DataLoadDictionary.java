@@ -336,7 +336,7 @@ public class DataLoadDictionary
     					case 8772 :sb.append("&nsime;");break;  //not asymptotically equal to
     					case 8773 :sb.append("&cong;");break;	//approximaterly equal to
     					case 8775 :sb.append("&ncong;");break;	//neither aproximately nor actually equal to
-    					case 8776 :sb.append("&asyum;");break;  //almost equal to, asymptotic to
+    					case 8776 :sb.append("&asymp;");break;  //almost equal to, asymptotic to
     					case 8777 :sb.append("&nap;");break; 	//not almost equal to
     					case 8778 :sb.append("&ape;");break;	//almost equal or equal to
     					case 8786 :sb.append("&efDot;");break;  //approximately equal to or the image of
