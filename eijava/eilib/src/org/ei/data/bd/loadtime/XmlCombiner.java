@@ -332,6 +332,7 @@ public class XmlCombiner
                 {
                     rec.put(EVCombinedRec.ABSTRACT, abString);
                 }
+                
 
 				if(!isChimica)
 				{
@@ -993,15 +994,28 @@ public class XmlCombiner
 				String[] multiStringArray2 = multiStringArray[i].split(BdParser.AUDELIMITER,-1);	
 				if(multiStringArray2.length == 3)
 				{
-					if(multiStringArray2[1] != null &&
-							!multiStringArray2[1].equals(""))
+					if(multiStringArray2[2].indexOf(multiStringArray2[1])== -1)
 					{
-						list.add(multiStringArray2[2].concat("-").concat(multiStringArray2[1]));
+						if(multiStringArray2[0] != null && multiStringArray2[0].equalsIgnoreCase("b"))
+						{
+							list.add(multiStringArray2[2].concat("-").concat("(BT)").concat("-").concat(multiStringArray2[1]));
+						}	
+						else
+						{
+							list.add(multiStringArray2[2].concat("-").concat(multiStringArray2[1]));
+						}
 					}
 					else
 					{
-						list.add(multiStringArray2[2]);
-					}
+						if(multiStringArray2[0] != null && multiStringArray2[0].equalsIgnoreCase("b"))
+						{
+							list.add(multiStringArray2[2].concat("-").concat("(BT)"));
+						}
+						else
+						{
+							list.add(multiStringArray2[2]);
+						}
+					}					
 				}
 			}
 		}
