@@ -20,28 +20,133 @@ public class InspecAffiliations
 {
     private BdAffiliations affs ;
     private static ArrayList  affElements = new ArrayList();
+    private static ArrayList  affElementsExpanded = new ArrayList();
+    private boolean isExpanded = false;
 
     static
     {
     	affElements.add("affOrganization");
-        affElements.add("affid");       
-       
-       // affElements.add("affDepartment");
-       // affElements.add("affAddressPart");
-       // affElements.add("affCityGroup");
-       // affElements.add("affCity");
-       // affElements.add("affState");
-       // affElements.add("affPostalCode");
+        affElements.add("affid");            
         affElements.add("affCountry");
-       // affElements.add("affOrganisationIdentifier");
+    }
+    
+    static
+    {
+    	affElementsExpanded.add("affOrganization");
+        affElementsExpanded.add("affid");              
+        affElementsExpanded.add("affDepartment");
+        affElementsExpanded.add("affAddressPart");
+        affElementsExpanded.add("affCityGroup");
+        affElementsExpanded.add("affCity");
+        affElementsExpanded.add("affState");
+        affElementsExpanded.add("affPostalCode");
+        affElementsExpanded.add("affCountry");
+        affElementsExpanded.add("affOrganisationIdentifier");
     }
 
-    public InspecAffiliations(String bdCAffiliations)
+    public InspecAffiliations(String insAffiliations)
     {
+
+    	this.affs = new BdAffiliations(formatAffStr(insAffiliations));
+    }
+    
+    
+    public String formatAffStr(String dAffs)
+    {
+    	String [] bdaf =  dAffs.split(BdParser.IDDELIMITER);
+
+    	if(bdaf.length > 3)
+    	{
+    		isExpanded = true;
+    	}
     	
-    	System.out.println("bdCAffiliations"+bdCAffiliations);
+    	StringBuffer formatedData = new StringBuffer();
     	
-        this.affs = new BdAffiliations(bdCAffiliations,affElements);
+    	String[] daffs = dAffs.split(BdParser.AUDELIMITER);   	
+    	for(int i = 0; i < daffs.length; i++)
+    	{
+    		if(daffs[i] != null && daffs[i].length() > 0)
+    		{
+    			String []daff = daffs[i].split(BdParser.IDDELIMITER);
+    			if(daff != null && daff.length > 0)
+    			{
+    				if(!isExpanded)
+    				{
+    					if(daff.length >1 && daff[1] != null)
+    					{
+    						formatedData.append(daff[1]);
+    					}    				
+    					formatedData.append(BdParser.IDDELIMITER);
+    					if(daff.length >0 && daff[0] != null)
+    					{
+    						formatedData.append(daff[0]);
+    					}
+    					formatedData.append(BdParser.IDDELIMITER);
+    					if(daff.length >2 && daff[2] != null)
+    					{
+    						formatedData.append(daff[2]);
+    					}
+    					formatedData.append(BdParser.IDDELIMITER);
+    					formatedData.append(BdParser.IDDELIMITER);
+    					formatedData.append(BdParser.IDDELIMITER);
+    					formatedData.append(BdParser.IDDELIMITER);
+    					formatedData.append(BdParser.IDDELIMITER);
+    					formatedData.append(BdParser.IDDELIMITER);   		
+    				}
+    				else
+    				{
+    					if(daff.length >1 && daff[1] != null)
+    					{
+    						formatedData.append(daff[1]);
+    					}
+    					formatedData.append(BdParser.IDDELIMITER);
+    					if(daff.length >2 && daff[2] != null)
+    					{
+    						formatedData.append(daff[2]);
+    					}
+    					formatedData.append(BdParser.IDDELIMITER);
+    					if(daff.length >4 && daff[4] != null)
+    					{
+    						formatedData.append(daff[4]); //2
+    					}
+    					formatedData.append(BdParser.IDDELIMITER);
+    					if(daff.length >8 && daff[8] != null)
+    					{
+    						formatedData.append(daff[8]); //3
+    					}
+    					formatedData.append(BdParser.IDDELIMITER);
+    					if(daff.length >8 && daff[8] != null)
+    					{
+    						formatedData.append(daff[8]); //4
+    					}
+    					formatedData.append(BdParser.IDDELIMITER);
+    					if(daff.length >5 && daff[5] != null)
+    					{
+    						formatedData.append(daff[5]); //5
+    					}
+    					formatedData.append(BdParser.IDDELIMITER);
+    					if(daff.length >6 && daff[6] != null)
+    					{
+    						formatedData.append(daff[6]); //6
+    					}
+    					formatedData.append(BdParser.IDDELIMITER);
+    					if(daff.length >7 && daff[7] != null)
+    					{
+    						formatedData.append(daff[7]); //7
+    					}
+    					formatedData.append(BdParser.IDDELIMITER);
+    					if(daff.length >0 && daff[0] != null)
+    					{
+    						formatedData.append(daff[0]);
+    					}	
+    				}    		
+    			}
+    		}   		
+    		formatedData.append(BdParser.AUDELIMITER);
+    	}
+    	
+    	return formatedData.toString();
+
     }
     
    
