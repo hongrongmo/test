@@ -33,17 +33,18 @@ public class InspecAffiliations
     static
     {
     	affElementsExpanded.add("affOrganization");
-        affElementsExpanded.add("affid");              
+        affElementsExpanded.add("affid");             
         affElementsExpanded.add("affDepartment");
         affElementsExpanded.add("affAddressPart");
-        affElementsExpanded.add("affCityGroup");
-        affElementsExpanded.add("affCity");
+        affElementsExpanded.add("affCityGroup");  
+        affElementsExpanded.add("affCity"); 
         affElementsExpanded.add("affState");
         affElementsExpanded.add("affPostalCode");
-        affElementsExpanded.add("affCountry");
+        affElementsExpanded.add("affCountry"); 
         affElementsExpanded.add("affOrganisationIdentifier");
     }
 
+    
     public InspecAffiliations(String insAffiliations)
     {
 
@@ -72,21 +73,25 @@ public class InspecAffiliations
     			{
     				if(!isExpanded)
     				{
+    					//0
     					if(daff.length >1 && daff[1] != null)
     					{
     						formatedData.append(daff[1]);
     					}    				
     					formatedData.append(BdParser.IDDELIMITER);
+    					//1
     					if(daff.length >0 && daff[0] != null)
     					{
     						formatedData.append(daff[0]);
     					}
     					formatedData.append(BdParser.IDDELIMITER);
+    					//2
+    					formatedData.append(BdParser.IDDELIMITER);
+    					//3
     					if(daff.length >2 && daff[2] != null)
     					{
     						formatedData.append(daff[2]);
     					}
-    					formatedData.append(BdParser.IDDELIMITER);
     					formatedData.append(BdParser.IDDELIMITER);
     					formatedData.append(BdParser.IDDELIMITER);
     					formatedData.append(BdParser.IDDELIMITER);
@@ -95,46 +100,55 @@ public class InspecAffiliations
     				}
     				else
     				{
+    					//0
     					if(daff.length >1 && daff[1] != null)
     					{
     						formatedData.append(daff[1]);
     					}
     					formatedData.append(BdParser.IDDELIMITER);
-    					if(daff.length >2 && daff[2] != null)
+    					//1
+    					if(daff.length >0 && daff[0] != null)
     					{
-    						formatedData.append(daff[2]);
+    						formatedData.append(daff[0]);
     					}
     					formatedData.append(BdParser.IDDELIMITER);
+    					//2
     					if(daff.length >4 && daff[4] != null)
     					{
-    						formatedData.append(daff[4]); //2
+    						formatedData.append(daff[4]); 
     					}
     					formatedData.append(BdParser.IDDELIMITER);
+    					//3
     					if(daff.length >8 && daff[8] != null)
     					{
     						formatedData.append(daff[8]); //3
     					}
     					formatedData.append(BdParser.IDDELIMITER);
-    					if(daff.length >8 && daff[8] != null)
+    					//4
+    					if(daff.length >3 && daff[3] != null)
     					{
-    						formatedData.append(daff[8]); //4
+    						formatedData.append(daff[3]); //4
     					}
     					formatedData.append(BdParser.IDDELIMITER);
+    					//5
     					if(daff.length >5 && daff[5] != null)
     					{
-    						formatedData.append(daff[5]); //5
+    						formatedData.append(daff[5]); 
     					}
     					formatedData.append(BdParser.IDDELIMITER);
+    					//6
     					if(daff.length >6 && daff[6] != null)
     					{
-    						formatedData.append(daff[6]); //6
+    						formatedData.append(daff[6]); 
     					}
     					formatedData.append(BdParser.IDDELIMITER);
+    					//7
     					if(daff.length >7 && daff[7] != null)
     					{
     						formatedData.append(daff[7]); //7
     					}
     					formatedData.append(BdParser.IDDELIMITER);
+    					//8
     					if(daff.length >0 && daff[0] != null)
     					{
     						formatedData.append(daff[0]);
