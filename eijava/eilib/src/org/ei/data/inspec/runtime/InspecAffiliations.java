@@ -63,12 +63,15 @@ public class InspecAffiliations
     	
     	StringBuffer formatedData = new StringBuffer();
     	
-    	String[] daffs = dAffs.split(BdParser.AUDELIMITER);   	
+    	String[] daffs = dAffs.split(BdParser.AUDELIMITER, -1);   	
+    	
+    	
     	for(int i = 0; i < daffs.length; i++)
     	{
     		if(daffs[i] != null && daffs[i].length() > 0)
     		{
-    			String []daff = daffs[i].split(BdParser.IDDELIMITER);
+    			String []daff = daffs[i].split(BdParser.IDDELIMITER, -1);
+  
     			if(daff != null && daff.length > 0)
     			{
     				if(!isExpanded)
@@ -76,6 +79,7 @@ public class InspecAffiliations
     					//0
     					if(daff.length >1 && daff[1] != null)
     					{
+    						daff[1] = daff[1].substring(daff[1].lastIndexOf(".")+1) ;
     						formatedData.append(daff[1]);
     					}    				
     					formatedData.append(BdParser.IDDELIMITER);
@@ -90,6 +94,7 @@ public class InspecAffiliations
     					//3
     					if(daff.length >2 && daff[2] != null)
     					{
+    						
     						formatedData.append(daff[2]);
     					}
     					formatedData.append(BdParser.IDDELIMITER);
@@ -103,6 +108,7 @@ public class InspecAffiliations
     					//0
     					if(daff.length >1 && daff[1] != null)
     					{
+    						daff[1] = daff[1].substring(daff[1].lastIndexOf(".")+1) ;
     						formatedData.append(daff[1]);
     					}
     					formatedData.append(BdParser.IDDELIMITER);
@@ -153,10 +159,11 @@ public class InspecAffiliations
     					{
     						formatedData.append(daff[0]);
     					}	
-    				}    		
+    				} 
+    				formatedData.append(BdParser.AUDELIMITER);
     			}
     		}   		
-    		formatedData.append(BdParser.AUDELIMITER);
+    		
     	}
     	
     	return formatedData.toString();
@@ -225,6 +232,7 @@ public class InspecAffiliations
 
 			   if(aff.getAffCountry()!=null)
 			   {
+				   System.out.println("COUNTRY"+aff.getAffCountry());
 				   if(affBuf.length()>0)
 				   {
 						affBuf.append(", ");
