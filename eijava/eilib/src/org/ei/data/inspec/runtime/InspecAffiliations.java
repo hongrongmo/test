@@ -54,24 +54,23 @@ public class InspecAffiliations
     
     public String formatAffStr(String dAffs)
     {
-    	String [] bdaf =  dAffs.split(BdParser.IDDELIMITER);
-
-    	if(bdaf.length > 3)
-    	{
-    		isExpanded = true;
-    	}
-    	
+  	
     	StringBuffer formatedData = new StringBuffer();
     	
     	String[] daffs = dAffs.split(BdParser.AUDELIMITER, -1);   	
-    	
-    	
+
     	for(int i = 0; i < daffs.length; i++)
     	{
     		if(daffs[i] != null && daffs[i].length() > 0)
-    		{
+    		{ 			
+    			String [] bdaf =  dAffs.split(BdParser.IDDELIMITER);
+
+    	    	if(bdaf.length > 3)
+    	    	{
+    	    		isExpanded = true;
+    	    	}
+    	    	
     			String []daff = daffs[i].split(BdParser.IDDELIMITER, -1);
-  
     			if(daff != null && daff.length > 0)
     			{
     				if(!isExpanded)
@@ -125,9 +124,9 @@ public class InspecAffiliations
     					}
     					formatedData.append(BdParser.IDDELIMITER);
     					//3
-    					if(daff.length >8 && daff[8] != null)
+    					if(daff.length >2 && daff[2] != null)
     					{
-    						formatedData.append(daff[8]); //3
+    						formatedData.append(daff[2]); //3
     					}
     					formatedData.append(BdParser.IDDELIMITER);
     					//4
@@ -160,6 +159,7 @@ public class InspecAffiliations
     						formatedData.append(daff[0]);
     					}	
     				} 
+    				System.out.println(formatedData.toString());
     				formatedData.append(BdParser.AUDELIMITER);
     			}
     		}   		
