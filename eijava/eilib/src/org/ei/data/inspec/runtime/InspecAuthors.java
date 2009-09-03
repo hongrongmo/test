@@ -49,14 +49,7 @@ public class InspecAuthors
     
     
     public String formatAuStr(String dAus)
-    {
-    	String [] a = dAus.split(BdParser.IDDELIMITER);
-    
-    	if(a.length > 1)
-    	{
-    		isExpanded = true;
-    	}
-    	
+    {   	
     	StringBuffer formatedData = new StringBuffer();
     	
     	String[] daus = dAus.split(BdParser.AUDELIMITER);   	
@@ -64,7 +57,13 @@ public class InspecAuthors
     	{
     		if(daus[i] != null && daus[i].length() > 0)
     		{
-    			String []dau = daus[i].split(BdParser.IDDELIMITER);
+    			String []dau = daus[i].split(BdParser.IDDELIMITER,-1);
+    			
+    		  	if(dau.length > 1)
+    	    	{
+    	    		isExpanded = true;
+    	    	}
+    		  	
     			if(daus != null && daus.length > 0)
     			{
     				if(!isExpanded)
