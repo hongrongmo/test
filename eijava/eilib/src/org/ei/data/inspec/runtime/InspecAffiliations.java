@@ -62,15 +62,14 @@ public class InspecAffiliations
     	for(int i = 0; i < daffs.length; i++)
     	{
     		if(daffs[i] != null && daffs[i].length() > 0)
-    		{ 			
-    			String [] bdaf =  dAffs.split(BdParser.IDDELIMITER);
-
-    	    	if(bdaf.length > 3)
+    		{ 			    	    	
+    			String []daff = daffs[i].split(BdParser.IDDELIMITER, -1);
+    			
+    	    	if(daff.length > 3)
     	    	{
     	    		isExpanded = true;
     	    	}
-    	    	
-    			String []daff = daffs[i].split(BdParser.IDDELIMITER, -1);
+
     			if(daff != null && daff.length > 0)
     			{
     				if(!isExpanded)
