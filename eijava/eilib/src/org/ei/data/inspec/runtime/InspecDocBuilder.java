@@ -1696,8 +1696,6 @@ public class InspecDocBuilder
                         }
 
                     }
-
-
                 } else if(
                 (strRTYPE.equals("03"))
                 ||
@@ -2311,38 +2309,18 @@ public class InspecDocBuilder
 			   String affString1,
 			   String dataFormat) throws Exception
    {
-		        
-
-		
+	
 		StringBuffer affBuffer = new StringBuffer();
-
-
 		if(affString == null || affString.trim().equals(""))
 		{
 			if(affFirstString != null && 
 					!affFirstString.trim().equals(""))
-			{
-				
-				String[] afarray = null;
-				
-				if(affFirstString.indexOf(BdParser.IDDELIMITER) > 0)
-				{
-					afarray = affFirstString.split(IDDELIMITER);
-				}
-				else if(affFirstString.indexOf(BdParser.GROUPDELIMITER) > 0)
-				{
-					afarray = affFirstString.split(BdParser.GROUPDELIMITER);
-				}
+			{								
 		        if(country != null)
-		        {
-		        	afarray[0] = afarray[0].concat(", ").concat(country);
+		        {		        
+		        	affFirstString=affFirstString.concat(BdParser.IDDELIMITER).concat(country);
 		        }
-
-		        afarray[1] = afarray[1].substring(afarray[1].lastIndexOf(".")+1) ;	
-	        	
-	        	affBuffer.append(affFirstString);
-		     //   affBuffer.append(afarray[0]).append(afarray[1]);
-				
+		        affBuffer.append(affFirstString);				
 			}			
 		}
 		if (affString != null)
