@@ -20,10 +20,9 @@ import org.ei.data.bd.loadtime.*;
 public class InspecAuthors
 {
     private BdAuthors au ;
-    private static ArrayList  auElements = new ArrayList();
-    
+    private static ArrayList  auElements = new ArrayList();  
     private static ArrayList  auElementsExpanded = new ArrayList();
-    private boolean isExpanded = false;
+    
 
     static
     {      
@@ -50,6 +49,7 @@ public class InspecAuthors
     
     public String formatAuStr(String dAus)
     {   	
+    	boolean isExpanded = false;
     	StringBuffer formatedData = new StringBuffer();
     	
     	String[] daus = dAus.split(BdParser.AUDELIMITER);   	
