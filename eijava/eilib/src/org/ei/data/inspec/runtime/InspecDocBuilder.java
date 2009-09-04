@@ -206,7 +206,7 @@ public class InspecDocBuilder
                         	(Keys.INVENTORS, getContributors(Keys.INVENTORS, 
                         			rset.getString("AUS"),
                         			rset.getString("AUS2"),
-                        			Abstract.ABSTRACT_FORMAT,
+                        			dataFormat,
                         			rset.getString("AAFFMULTI1"),
                         			rset.getString("AAFF")));
 
@@ -230,7 +230,7 @@ public class InspecDocBuilder
                         								getContributors(Keys.AUTHORS, 
                         								rset.getString("AUS"),
                         								rset.getString("AUS2"),
-                        								Abstract.ABSTRACT_FORMAT,
+                        								dataFormat,
                         								rset.getString("AAFFMULTI1"),
                         								rset.getString("AAFF")));
 
@@ -263,7 +263,7 @@ public class InspecDocBuilder
                             								getContributors(Keys.EDITORS, 
                             								strED,
                             								null,
-                            								Abstract.ABSTRACT_FORMAT,
+                            								dataFormat,
                             								rset.getString("EAFFMULTI1"),
                             								rset.getString("EDS")));
                             ht.put(Keys.EDITORS,editors);
@@ -659,7 +659,7 @@ public class InspecDocBuilder
          								getContributors(Keys.INVENTORS, 
          								rset.getString("AUS"),
          								rset.getString("AUS2"),
-         								Abstract.ABSTRACT_FORMAT,
+         								dataFormat,
          								rset.getString("AAFFMULTI1"),
          								rset.getString("AAFF")));
 
@@ -689,7 +689,7 @@ public class InspecDocBuilder
                         				getContributors(Keys.AUTHORS, 
          								rset.getString("AUS"),
          								rset.getString("AUS2"),
-         								Abstract.ABSTRACT_FORMAT,
+         								dataFormat,
          								rset.getString("AAFFMULTI1"),
          								rset.getString("AAFF")));
                         		
@@ -722,7 +722,7 @@ public class InspecDocBuilder
                             										getContributors(Keys.EDITORS, 
                             										strED,
                             										null,
-                            										Abstract.ABSTRACT_FORMAT,
+                            										dataFormat,
                             										rset.getString("EAFFMULTI1"),
                             										rset.getString("EDS")));
                             ht.put(Keys.EDITORS,editors);
@@ -1139,7 +1139,7 @@ public class InspecDocBuilder
                     		  		getContributors(Keys.INVENTORS, 
                     		  		rset.getString("AUS"),
                     		  		rset.getString("AUS2"),
-       								Abstract.ABSTRACT_FORMAT,
+                    		  		dataFormat,
        								rset.getString("AAFFMULTI1"),
        								rset.getString("AAFF")));
                       inventors.nullAffilID();
@@ -1165,7 +1165,7 @@ public class InspecDocBuilder
                         				getContributors(Keys.AUTHORS, 
                         		  		rset.getString("AUS"),
                         		  		rset.getString("AUS2"),
-           								Abstract.ABSTRACT_FORMAT,
+                        		  		dataFormat,
            								rset.getString("AAFFMULTI1"),
            								rset.getString("AAFF")));
                         		
@@ -1195,7 +1195,7 @@ public class InspecDocBuilder
                             				getContributors(Keys.EDITORS, 
                             				rset.getString("EDS"),
                             		  		null,
-               								Abstract.ABSTRACT_FORMAT,
+                            		  		dataFormat,
                								rset.getString("EAFFMULTI1"),
                								rset.getString("EDS")));
                             		
@@ -1581,7 +1581,7 @@ public class InspecDocBuilder
                             				getContributors(Keys.INVENTORS, 
                             				rset.getString("AUS"),
                             				rset.getString("AUS2"),
-               								Abstract.ABSTRACT_FORMAT,
+                            				dataFormat,
                								rset.getString("AAFFMULTI1"),
                								rset.getString("AAFF")));
                             
@@ -1607,7 +1607,7 @@ public class InspecDocBuilder
                 									getContributors(Keys.AUTHORS, 
                 									rset.getString("AUS"),
                 									rset.getString("AUS2"),
-                									Abstract.ABSTRACT_FORMAT,
+                									dataFormat,
                 									rset.getString("AAFFMULTI1"),
                 									rset.getString("AAFF")));
 
@@ -1638,7 +1638,7 @@ public class InspecDocBuilder
 									getContributors(Keys.EDITORS, 
 									strED,
 									null,
-									Abstract.ABSTRACT_FORMAT,
+									dataFormat,
 									rset.getString("EAFFMULTI1"),
 									rset.getString("EDS")));
 
@@ -1979,7 +1979,7 @@ public class InspecDocBuilder
 									getContributors(Keys.INVENTORS, 
 									rset.getString("AUS"),
 									rset.getString("AUS2"),
-									Abstract.ABSTRACT_FORMAT,
+									dataFormat,
 									rset.getString("AAFFMULTI1"),
 									rset.getString("AAFF")));
                             
@@ -2002,7 +2002,7 @@ public class InspecDocBuilder
 														getContributors(Keys.AUTHORS, 
 														rset.getString("AUS"),
 														rset.getString("AUS2"),
-														Abstract.ABSTRACT_FORMAT,
+														dataFormat,
 														rset.getString("AAFFMULTI1"),
 														rset.getString("AAFF")));
 
@@ -2034,7 +2034,7 @@ public class InspecDocBuilder
 													getContributors(Keys.EDITORS, 
 													strED,
 													null,
-													Abstract.ABSTRACT_FORMAT,
+													dataFormat,
 													rset.getString("EAFFMULTI1"),
 													rset.getString("EDS")));
 
