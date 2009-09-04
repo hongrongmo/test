@@ -21,7 +21,7 @@ public class InspecAffiliations
     private BdAffiliations affs ;
     private static ArrayList  affElements = new ArrayList();
     private static ArrayList  affElementsExpanded = new ArrayList();
-    private boolean isExpanded = false;
+    
 
     static
     {
@@ -54,7 +54,7 @@ public class InspecAffiliations
     
     public String formatAffStr(String dAffs)
     {
-  	
+    	boolean isExpanded = false;
     	StringBuffer formatedData = new StringBuffer();
     	
     	String[] daffs = dAffs.split(BdParser.AUDELIMITER, -1);   	
