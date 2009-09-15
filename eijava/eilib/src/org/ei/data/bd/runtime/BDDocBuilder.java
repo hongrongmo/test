@@ -161,7 +161,7 @@ public class BDDocBuilder
 
 				if(database.getMask()==1024 && 
 						rset.getString("SOURC") != null &&
-						dataFormat.equals(Detail.FULLDOC_FORMAT))
+						dataFormat.equals(FullDoc.FULLDOC_FORMAT))
 				{
 					ht.put(Keys.SOURCE, new XMLWrapper(Keys.SOURCE, StringUtil.substituteChars(rset.getString("SOURC"))));  	
 				}
@@ -705,7 +705,8 @@ public class BDDocBuilder
 		{
 			return "NO_SO";
 		}
-		else if(sourceTitle == null && 
+		else if(BitMaskNumber != 1024 &&
+				sourceTitle == null && 
 				sourceTitleAbbrev == null &&
 				issueTitle  == null && 
 				publisherName   == null )			
