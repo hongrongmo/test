@@ -57,7 +57,7 @@ public class BDDocBuilder
 
     private Database database;
 
- 	private static String queryBD="select * from bd_master where M_ID IN  ";
+ 	private static String queryBD="select * from bd_master_eltgroovy where M_ID IN  ";
 
     public DocumentBuilder newInstance(Database database)
     {
@@ -159,19 +159,28 @@ public class BDDocBuilder
 				buildField(Keys.ABBRV_SERIAL_TITLE,rset.getString("SOURCETITLEABBREV"),ht);
 				buildField(Keys.VOLISSUE,getVolumeIssue(rset.getString("VOLUME"),rset.getString("ISSUE")),ht);
 
-				if(database.getMask()==1024 && rset.getString("SOURC") != null)
+				if(database.getMask()==1024 && 
+						rset.getString("SOURC") != null &&
+						dataFormat.equals(Detail.FULLDOC_FORMAT))
 				{
-					ht.put(Keys.SOURCE, new XMLWrapper(Keys.SOURCE, StringUtil.substituteChars(rset.getString("SOURC"))));
-		                	
+					ht.put(Keys.SOURCE, new XMLWrapper(Keys.SOURCE, StringUtil.substituteChars(rset.getString("SOURC"))));  	
 				}
-				else
+				else if(dataFormat.equals(Citation.CITATION_FORMAT)||
+								dataFormat.equals(Abstract.ABSTRACT_FORMAT)||
+								dataFormat.equalsIgnoreCase(Citation.XMLCITATION_FORMAT))
 				{
-					buildField(Keys.SOURCE,getSource(rset.getString("SOURCETITLE"),
+					buildField(Keys.SOURCE,getSource(
+									  database.getMask(),
+									  rset.getString("SOURC"),
+									  rset.getString("SOURCETITLE"),
 									  rset.getString("SOURCETITLEABBREV"),
 									  rset.getString("ISSUETITLE"),
 									  rset.getString("PUBLISHERNAME")),ht);
 
-					buildField(Keys.NO_SO,getNoSource(rset.getString("SOURCETITLE"),
+					buildField(Keys.NO_SO,getNoSource(
+									  database.getMask(),
+									  rset.getString("SOURC"),
+									  rset.getString("SOURCETITLE"),
 									  rset.getString("SOURCETITLEABBREV"),
 									  rset.getString("ISSUETITLE"),
 									  rset.getString("PUBLISHERNAME")),ht);
@@ -206,7 +215,6 @@ public class BDDocBuilder
 														  rset.getString("ISSN"),
 														  rset.getString("EISSN"),
 														  perl),ht);
-
 				}
 
 				buildField(Keys.ARTICLE_NUMBER,rset.getString("ARTICLENUMBER"),ht);
@@ -387,7 +395,7 @@ public class BDDocBuilder
 					{
 						
 				        if (rset.getString("SECSOURCETITLE") != null) 
-				        {
+				        {			
 				        	StringBuffer strSecSour = new StringBuffer();
 		                    strSecSour.append(rset.getString("SECSOURCETITLE"));
 		                    if (rset.getString("SECVOLUME") != null) {
@@ -402,13 +410,16 @@ public class BDDocBuilder
 		                    if (rset.getString("SECPUBDATE") != null) {
 		                        strSecSour.append(" (").append(formatJournalSourcePub(rset.getString("SECPUBDATE"))).append(")");
 		                    }
-		                    buildField(Keys.SECONDARY_SOURCE,strSecSour.toString(),ht);
+		                    buildField(new Key(Keys.SECONDARY_SOURCE,"Secondary source"),strSecSour.toString(),ht);
+		                    
+		                    // remove source
 				        }
+				        
 				        else
 				        {
-		   
-				        	buildField(Keys.SECONDARY_SOURCE,rset.getString("SECSOURCE"),ht);
+				        	buildField(new Key(Keys.SECONDARY_SOURCE,"Secondary source"),rset.getString("SECSOURCE"),ht);
 				        }
+				        
 					}
 					buildField(Keys.NUMBER_OF_FIGURES,rset.getString("NOFIG"),ht);
 					buildField(Keys.NUMBER_OF_TABLES,rset.getString("NOTAB"),ht);
@@ -638,11 +649,24 @@ public class BDDocBuilder
 	}
 
 
-	private String getSource(String sourceTitle,String sourceTitleAbbrev,String issueTitle,String publisherName)
+	private String getSource(
+			int BitMaskNumber,
+			String sourc,
+			String sourceTitle,
+			String sourceTitleAbbrev,
+			String issueTitle,
+			String publisherName)
 	{
 		String source = null;
-		if(sourceTitle != null || sourceTitleAbbrev != null ||
-		   issueTitle  != null || publisherName     != null )
+		if(BitMaskNumber == 1024 && 
+				sourc != null)
+		{
+			return sourc;
+		}
+		else if(sourceTitle != null || 
+				sourceTitleAbbrev != null ||
+				issueTitle  != null || 
+				publisherName  != null )
 		{
 			if(sourceTitle != null)
 			{
@@ -664,11 +688,27 @@ public class BDDocBuilder
 		return source;
 	}
 
-	private String getNoSource(String sourceTitle,String sourceTitleAbbrev,String issueTitle,String publisherName)
+	private String getNoSource(
+				int BitMaskNumber,
+				String sourc,
+				String sourceTitle,
+				String sourceTitleAbbrev,
+				String issueTitle,
+				String publisherName)
 	{
-
-		if(sourceTitle == null && sourceTitleAbbrev == null &&
-		   issueTitle  == null && publisherName     == null )
+		if(BitMaskNumber == 1024 &&
+				sourc == null &&
+				sourceTitle == null &&
+				sourceTitleAbbrev == null &&
+				issueTitle  == null && 
+				publisherName   == null )
+		{
+			return "NO_SO";
+		}
+		else if(sourceTitle == null && 
+				sourceTitleAbbrev == null &&
+				issueTitle  == null && 
+				publisherName   == null )			
 		{
 				return "NO_SO";
 		}
@@ -684,6 +724,7 @@ public class BDDocBuilder
 		}
 		return null;
 	}
+	
 
   private static final Pattern pubdateregex = Pattern.compile("(\\w+) (\\d{2}),(\\d{4})");
 
@@ -2056,6 +2097,7 @@ public class BDDocBuilder
 	        volume = perl.substitute("s/\\^/-/g", volume);
 	        return volume;
 	    } 
+	    
 	    
 	    private String formatIssue(String str) 
 	    {
