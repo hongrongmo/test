@@ -129,10 +129,11 @@
       <xsl:value-of select="//PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT/PM"/>
     </xsl:variable>
 
+<!-- ZY 9/15/09 Append patent kind in searchword1 for EP patents -->
     <xsl:variable name="CITEDBY-QSTR">
       <xsl:choose>
-        <xsl:when test="($SEARCH-TYPE='Quick')">CID=quickSearchCitationFormat&amp;searchWord1=<xsl:value-of select="$CITEDBY-PM"/>&amp;section1=PCI&amp;database=49152&amp;pcinav=0~<xsl:value-of select="$CITEDBY-PM"/>~<xsl:value-of select="java:encode('Patents that cite ')"/><xsl:value-of select="$CITEDBY-PM"/></xsl:when>
-        <xsl:otherwise>CID=expertSearchCitationFormat&amp;searchWord1=<xsl:value-of select="$CITEDBY-PM"/><xsl:value-of select="java:encode(' WN PCI')"/>&amp;database=49152&amp;pcinav=0~<xsl:value-of select="$CITEDBY-PM"/>~<xsl:value-of select="java:encode('Patents that cite ')"/><xsl:value-of select="$CITEDBY-PM"/></xsl:otherwise>
+        <xsl:when test="($SEARCH-TYPE='Quick')">CID=quickSearchCitationFormat&amp;searchWord1=<xsl:value-of select="$CITEDBY-PM"/><xsl:if test="$AUTH-CODE='EP'"><xsl:value-of select="$KIND"/></xsl:if>&amp;section1=PCI&amp;database=49152&amp;pcinav=0~<xsl:value-of select="$CITEDBY-PM"/>~<xsl:value-of select="java:encode('Patents that cite ')"/><xsl:value-of select="$CITEDBY-PM"/></xsl:when>
+        <xsl:otherwise>CID=expertSearchCitationFormat&amp;searchWord1=<xsl:value-of select="$CITEDBY-PM"/><xsl:if test="$AUTH-CODE='EP'"><xsl:value-of select="$KIND"/></xsl:if><xsl:value-of select="java:encode(' WN PCI')"/>&amp;database=49152&amp;pcinav=0~<xsl:value-of select="$CITEDBY-PM"/>~<xsl:value-of select="java:encode('Patents that cite ')"/><xsl:value-of select="$CITEDBY-PM"/></xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
 
