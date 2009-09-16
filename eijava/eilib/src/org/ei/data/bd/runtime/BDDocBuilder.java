@@ -4,7 +4,6 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.sql.*;
-import java.io.*;
 
 import org.ei.connectionpool.*;
 import org.ei.domain.*;
@@ -12,9 +11,7 @@ import org.ei.util.StringUtil;
 import org.ei.data.*;
 import org.ei.data.bd.*;
 import org.ei.data.bd.loadtime.*;
-import org.ei.data.bd.CVTerm;
 import org.ei.data.bd.CVTerms;
-import org.jdom.Element;
 import org.apache.oro.text.perl.*;
 
 public class BDDocBuilder
@@ -428,23 +425,34 @@ public class BDDocBuilder
 					buildField(Keys.SUPPL,rset.getString("SUPPL"),ht);
 					buildField(Keys.PDFIX,rset.getString("PDFIX"),ht);
 					buildField(Keys.REPORT_NUMBER_PAPER,rset.getString("REPORTNUMBER"),ht);
-					buildField(Keys.CAS_REGISTRY_CODES,setCasRegNumber(rset.getString("CASREGISTRYNUMBER"), database.getMask()),ht);
+
+					buildField(Keys.CAS_REGISTRY_CODES,
+								new CRNumStrategy(rset.getString("CASREGISTRYNUMBER")).getCRN(database.getMask()),
+								ht);
 
 					//buildField(Keys.PI,rset.getString("PII"),ht);
 				}
 				
-				if(rset.getString("CORRESPONDENCENAME")!= null || rset.getString("CORRESPONDENCEEADDRESS") != null)
+				if(rset.getString("CORRESPONDENCENAME")!= null || 
+						rset.getString("CORRESPONDENCEEADDRESS") != null)
 				{
-					buildField(Keys.CORRESPONDING_AUTHORS,getCorAuthors(Keys.CORRESPONDING_AUTHORS,rset.getString("CORRESPONDENCENAME"),rset.getString("CORRESPONDENCEEADDRESS")),ht);
-				}
-				if(rset.getString("AFFILIATION") == null)
-				{
-					buildField(Keys.CORRESPONDING_AUTHORS_AFF,getCorrespondingAuAff(rset.getString("CORRESPONDENCEAFFILIATION")),ht);
+					buildField(Keys.CORRESPONDING_AUTHORS,
+							getCorAuthors(Keys.CORRESPONDING_AUTHORS,
+									rset.getString("CORRESPONDENCENAME"),
+									rset.getString("CORRESPONDENCEEADDRESS")),ht);
 				}
 				
-				if (database.getMask()==1024 && rset.getString("CORRESPONDENCEAFFILIATION") != null)
+				if(rset.getString("AFFILIATION") == null)
 				{
-					buildField(Keys.CORRESPONDING_AUTHORS_AFF,getCorrespondingAuAff(rset.getString("CORRESPONDENCEAFFILIATION")),ht);
+					buildField(Keys.CORRESPONDING_AUTHORS_AFF,
+							getCorrespondingAuAff(rset.getString("CORRESPONDENCEAFFILIATION")),ht);
+				}
+				
+				if (database.getMask()==1024 && 
+						rset.getString("CORRESPONDENCEAFFILIATION") != null)
+				{
+					buildField(Keys.CORRESPONDING_AUTHORS_AFF,
+							getCorrespondingAuAff(rset.getString("CORRESPONDENCEAFFILIATION")),ht);
 				}
 
 				list.add(eiDoc);
@@ -1388,7 +1396,7 @@ public class BDDocBuilder
 				{
 					authorNames.add(new Contributor(key,
 											auDisplayName));
-				}
+				}				
 				else if(affiliations != null && 
 						!affiliations.trim().equals(""))
 				{
@@ -1396,6 +1404,7 @@ public class BDDocBuilder
 											auDisplayName,
 											author.getAffIdList()));
 				}
+				
 				else
 				{
 					authorNames.add(new Contributor(key,
@@ -1750,83 +1759,6 @@ public class BDDocBuilder
 		}
 		return result;
 	}
-
-	public String[] setCasRegNumber(String elementVal , int db)
-	{
-		if(elementVal != null && db == 1024)
-		{
-			ArrayList list = new ArrayList();
-			String[] multiStringArray =  elementVal.split(BdParser.IDDELIMITER,-1);
-			if(elementVal.length()>0)
-			{
-				for(int i = 0; i < multiStringArray.length; i++)
-				{
-					String[] multiStringArray2 = multiStringArray[i].split(BdParser.AUDELIMITER,-1);	
-					if(multiStringArray2.length == 3)
-					{
-						if(multiStringArray2[1] != null &&
-								!multiStringArray2[1].equals(""))
-						{
-							if(multiStringArray2[2].indexOf(multiStringArray2[1])== -1)
-							{
-								if(multiStringArray2[0] != null && multiStringArray2[0].equalsIgnoreCase("b"))
-								{
-									list.add(multiStringArray2[2].concat("-").concat("(BT)").concat("-").concat(multiStringArray2[1]));
-								}	
-								else
-								{
-									list.add(multiStringArray2[2].concat("-").concat(multiStringArray2[1]));
-								}
-							}
-							else
-							{
-								if(multiStringArray2[0] != null && multiStringArray2[0].equalsIgnoreCase("b"))
-								{
-									list.add(multiStringArray2[2].concat("-").concat("(BT)"));
-								}
-								else
-								{
-									list.add(multiStringArray2[2]);
-								}
-							}
-						}						
-						else
-						{
-							if(multiStringArray2[0] != null && multiStringArray2[0].equalsIgnoreCase("b"))
-							{
-								list.add(multiStringArray2[2].concat("-").concat("(BT)"));
-							}
-							list.add(multiStringArray2[2]);
-						}
-					}
-				}
-			}
-			return (String[]) list.toArray(new String[0]);
-		}
-		else if(elementVal!=null && elementVal.trim().length()>0)
-		{
-			String nu =  elementVal.replaceAll(BdParser.AUDELIMITER, ";");
-			nu =  nu.replaceAll(BdParser.IDDELIMITER, ";");
-			nu =  nu.replaceAll(BdParser.GROUPDELIMITER, ";");
-			String cas[] = nu.split(";");
-			ArrayList array = new ArrayList();
-
-			for(int i =  0 ; i< cas.length; i++ )
-			{
-				if(cas[i] != null && !cas[i].trim().equals("") )
-				{
-					array.add((String)cas[i]);
-				}
-			}
-
-			return (String[]) array.toArray(new String[1]);
-
-		}
-		else
-		{
-			return null;
-		}
-	}
 	
 	private Perl5Util perl = new Perl5Util();
 	
@@ -1844,7 +1776,7 @@ public class BDDocBuilder
 	        str = perl.substitute("s/"+au+"/;/g", str);
 	        str = perl.substitute("s/;;/|/g", str);
 		}
-		System.out.println("str "+str);
+
 		return str;
 	}
 	
