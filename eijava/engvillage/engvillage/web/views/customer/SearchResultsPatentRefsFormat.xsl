@@ -628,10 +628,11 @@
       <xsl:value-of select="EI-DOCUMENT/PM"/>
     </xsl:variable>
 
+    <!-- ZY 9/15/09 Append patent kind in searchword1 for EP patents -->
     <xsl:variable name="CITEDBY-QSTR">
       <xsl:choose>
-        <xsl:when test="($SEARCH-TYPE='Quick')">searchWord1=<xsl:value-of select="$CITEDBY-PM"/>&amp;section1=PCI&amp;database=49152&amp;pcinav=0~<xsl:value-of select="$CITEDBY-PM"/>~<xsl:value-of select="java:encode('Patents that cite ')"/><xsl:value-of select="$CITEDBY-PM"/></xsl:when>
-        <xsl:otherwise>searchWord1=<xsl:value-of select="$CITEDBY-PM"/><xsl:value-of select="java:encode(' WN PCI')"/>&amp;database=49152&amp;pcinav=0~<xsl:value-of select="$CITEDBY-PM"/>~<xsl:value-of select="java:encode('Patents that cite ')"/><xsl:value-of select="$CITEDBY-PM"/></xsl:otherwise>
+        <xsl:when test="($SEARCH-TYPE='Quick')">searchWord1=<xsl:value-of select="$CITEDBY-PM"/><xsl:if test="$AUTH-CODE='EP'"><xsl:value-of select="$KIND-CODE"/></xsl:if>&amp;section1=PCI&amp;database=49152&amp;pcinav=0~<xsl:value-of select="$CITEDBY-PM"/>~<xsl:value-of select="java:encode('Patents that cite ')"/><xsl:value-of select="$CITEDBY-PM"/></xsl:when>
+        <xsl:otherwise>searchWord1=<xsl:value-of select="$CITEDBY-PM"/><xsl:if test="$AUTH-CODE='EP'"><xsl:value-of select="$KIND-CODE"/></xsl:if><xsl:value-of select="java:encode(' WN PCI')"/>&amp;database=49152&amp;pcinav=0~<xsl:value-of select="$CITEDBY-PM"/>~<xsl:value-of select="java:encode('Patents that cite ')"/><xsl:value-of select="$CITEDBY-PM"/></xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
 
@@ -886,10 +887,11 @@
       <xsl:value-of select="EI-DOCUMENT/PM"/>
     </xsl:variable>
 
+<!-- ZY: 9/15/09 Append Kind to searchWord1 for EP patents -->
     <xsl:variable name="REF-CITEDBY-QSTR">
       <xsl:choose>
-        <xsl:when test="($SEARCH-TYPE='Quick')">searchWord1=<xsl:value-of select="$REF-CITEDBY-PM"/>&amp;section1=PCI&amp;database=49152&amp;pcinav=0~<xsl:value-of select="$REF-CITEDBY-PM"/>~<xsl:value-of select="java:encode('Patents that cite ')"/><xsl:value-of select="$REF-CITEDBY-PM"/></xsl:when>
-        <xsl:otherwise>searchWord1=<xsl:value-of select="$REF-CITEDBY-PM"/><xsl:value-of select="java:encode(' WN PCI')"/>&amp;database=49152&amp;pcinav=0~<xsl:value-of select="$REF-CITEDBY-PM"/>~<xsl:value-of select="java:encode('Patents that cite ')"/><xsl:value-of select="$REF-CITEDBY-PM"/></xsl:otherwise>
+        <xsl:when test="($SEARCH-TYPE='Quick')">searchWord1=<xsl:value-of select="$REF-CITEDBY-PM"/><xsl:if test="$AUTH-CODE='EP'"><xsl:value-of select="$KIND-CODE"/></xsl:if>&amp;section1=PCI&amp;database=49152&amp;pcinav=0~<xsl:value-of select="$REF-CITEDBY-PM"/>~<xsl:value-of select="java:encode('Patents that cite ')"/><xsl:value-of select="$REF-CITEDBY-PM"/></xsl:when>
+        <xsl:otherwise>searchWord1=<xsl:value-of select="$REF-CITEDBY-PM"/><xsl:if test="$AUTH-CODE='EP'"><xsl:value-of select="$KIND-CODE"/></xsl:if><xsl:value-of select="java:encode(' WN PCI')"/>&amp;database=49152&amp;pcinav=0~<xsl:value-of select="$REF-CITEDBY-PM"/>~<xsl:value-of select="java:encode('Patents that cite ')"/><xsl:value-of select="$REF-CITEDBY-PM"/></xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
 
