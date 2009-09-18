@@ -54,7 +54,7 @@ public class BDDocBuilder
 
     private Database database;
 
- 	private static String queryBD="select * from bd_master_eltgroovy where M_ID IN  ";
+ 	private static String queryBD="select * from bd_master where M_ID IN  ";
 
     public DocumentBuilder newInstance(Database database)
     {
@@ -365,11 +365,6 @@ public class BDDocBuilder
 	                            ht.put(Keys.MANUAL_LINKED_TERMS,
 	                                    new XMLWrapper(Keys.MANUAL_LINKED_TERMS, (StringUtil.substituteChars(replaceDelim(ltm)))));
 	                        }
-
-
-	          //              if (!ltm.equalsIgnoreCase("QQ"))
-	          //                  ht.put(Keys.MANUAL_LINKED_TERMS, new LinkedTerms(Keys.MANUAL_LINKED_TERMS, getLinkedTerms(StringUtil.substituteChars(ltm), Keys.LINKED_SUB_TERM)));
-
 	                    }
 	                } // AN
 												
@@ -565,13 +560,11 @@ public class BDDocBuilder
             String result = sbTemplate.toString();
             result =result.replaceAll("</br>", "<br>");
             result =result.replaceAll("<br/>", "<br>");
-            System.out.println(result);
             return result;
         }
         else {
         	template =template.replaceAll("</br>", "<br>");
         	template =template.replaceAll("<br/>", "<br>");
-        	System.out.println(template);
             return template;
         }
     }
@@ -751,7 +744,6 @@ public class BDDocBuilder
 				  result.append(" - ");
 			  }
 		  }
-		  //System.out.println("confDate " + result);
 		  return result.toString();
 	  }
 	  return cdate;
@@ -770,7 +762,7 @@ public class BDDocBuilder
           days = days.substring(1);
         }
         pubdate = m.group(1).concat(" ").concat(days).concat(", ").concat(m.group(3));
-       // System.out.println("reFormatted " + pubdate);
+
       }
     }
     return pubdate;
@@ -1350,8 +1342,7 @@ public class BDDocBuilder
               strReplace = m.group();
             }
           }
-          //System.out.println("Matched: " + strMatch + " replace with " + strReplace);
-          // The appendReplacement method appends everything up to the next match and the replacement for that match.
+           // The appendReplacement method appends everything up to the next match and the replacement for that match.
           m.appendReplacement(sb, strReplace);
           result = m.find();
         }
@@ -1390,26 +1381,22 @@ public class BDDocBuilder
 			{
 
 				BdAuthor author = (BdAuthor)authorList.get(i);
+				
 				String auDisplayName = cleanBadCharacters(author.getDisplayName());
 				if(dataFormat.equalsIgnoreCase(RIS.RIS_FORMAT) ||
 						dataFormat.equalsIgnoreCase(Citation.XMLCITATION_FORMAT))
 				{
 					authorNames.add(new Contributor(key,
 											auDisplayName));
-				}				
-				else if(affiliations != null && 
-						!affiliations.trim().equals(""))
+				}	
+				
+				else 
 				{
 					authorNames.add(new Contributor(key,
 											auDisplayName,
 											author.getAffIdList()));
 				}
-				
-				else
-				{
-					authorNames.add(new Contributor(key,
-											auDisplayName));
-				}
+
 			}
 		    return (new Contributors(Keys.AUTHORS,authorNames));
 		}
@@ -1803,7 +1790,6 @@ public class BDDocBuilder
 		{
 			if(perl.match("/[*]/",array[i]))
 			{				
-				System.out.println("Major term"+ array[i]);
 				mcv.add(array[i]);
 			}
 			else
