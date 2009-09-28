@@ -633,8 +633,21 @@ public class BdCorrection
 						stmt.setString(2,term);
 						stmt.setString(3,database);
 						stmt.executeUpdate();
+						if(i%20==0)
+						{
+							con.commit();
+							if(stmt != null)
+							{
+								stmt.close();
+							}
+						}
 					}
 				}
+			}
+			con.commit();
+			if(stmt != null)
+			{
+				stmt.close();
 			}
 		}
 		catch(Exception e)
