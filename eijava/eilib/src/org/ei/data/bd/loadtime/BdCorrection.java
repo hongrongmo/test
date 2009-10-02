@@ -307,7 +307,7 @@ public class BdCorrection
 			{
 				writer.setOperation("delete");
         		//XmlCombiner c = new XmlCombiner(writer);
-				rs = stmt.executeQuery("select m_id from bd_master_orig where accessnumber in (select 'D'||accessnumber from bd_correction_temp)");
+				rs = stmt.executeQuery("select m_id from bd_master_orig where updateNumber='"+updateNumber+"' and accessnumber in (select 'D'||accessnumber from bd_correction_temp)");
 				//c.writeRecs(rs);
 
 				creatDeleteFile(rs,dbname,updateNumber);
