@@ -332,7 +332,10 @@ public class InspecXMLReader extends FilterReader
 
    	private StringBuffer getName(Element e)
     {
-		StringBuffer name = new StringBuffer();
+   		//pname: snm , init , sfix :IDDELIMITER: id:IDDELIMITER: 
+   		//  fnm (, multi):IDDELIMITER: email :IDDELIMITER: ,email :IDDELIMITER: ,pid :AUDELIMITER
+		
+   		StringBuffer name = new StringBuffer();
 		List pname = e.getChildren("pname");
 
 		for(int i=0;i<pname.size();i++)
@@ -370,18 +373,15 @@ public class InspecXMLReader extends FilterReader
 					   name.append(", ");
 				   }				   
 			   }			   
-		   }
-		   
+		   }		   
 		   name.append(IDDELIMITER);
 		   if(n.getChild("email")!=null)
 		   {
-			   name.append(", ");
 			   name.append(n.getChild("email").getContent());
 		   }
 		   name.append(IDDELIMITER);
 		   if(n.getChild("pid") != null)
 		   {
-			   name.append(", ");
 			   name.append(n.getChild("pid").getContent());			   
 		   }
 		   name.append(AUDELIMITER);
@@ -508,9 +508,6 @@ public class InspecXMLReader extends FilterReader
 	        	oneAffiliation.append(m.getChild("orgid").getContent());
 	        }
 	        
-	        
-
-
 	        if(affmulti1.length() > 0 )
 	        {
 	        	affmulti1.append(AUDELIMITER);
