@@ -432,7 +432,6 @@ public class BdCorrection
     private void runCorrection(String fileName,int updateNumber,String database,String action)
     {
 		CallableStatement pstmt = null;
-		Statement stmt = null;
 		boolean blnResult = false;
 		try
 		{
@@ -633,13 +632,11 @@ public class BdCorrection
 						stmt.setString(2,term);
 						stmt.setString(3,database);
 						stmt.executeUpdate();
-						if(i%20==0)
+
+						con.commit();
+						if(stmt != null)
 						{
-							con.commit();
-							if(stmt != null)
-							{
-								stmt.close();
-							}
+							stmt.close();
 						}
 					}
 				}
