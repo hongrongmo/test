@@ -284,7 +284,7 @@ public class BDDocBuilderUnitTest extends TestCase {
 		String ip = me.getHostAddress();
 		System.out.println("\nIP   ==   "+ip);
 		String strURL1 = "http://"+ip+"/controller/servlet/Controller?CID=login";
-		String strURL = "http://"+ip+"/controller/servlet/Controller?searchWord1=pch_11ffb3af85ab48bb2M7ff119817173212&database=64&CID=quickSearchCitationFormat&section1=NO-LIMIT&doctype=NO-LIMIT&disciplinetype=NO-LIMIT&language=NO-LIMIT&startYear=1884&endYear=2009&stringYear=CSY1884CST1884ISY1896IST1896NSY1899NST1899ASY1967AST1967HSY1970HST1970BSY1985BST1985LSY1962LST1962MSY1963MST1963GSY1973GST1973XSY1785XST1785USY1790UST1790ESY1978EST1978PSY1987PST1987";
+		String strURL = "http://"+ip+"/controller/servlet/Controller?searchWord1=pch_11ffb3af85ab48bb2M7ff119817173212&database=64&CID=quickSearchCitationFormat&section1=NO-LIMIT&doctype=NO-LIMIT&disciplinetype=NO-LIMIT&language=NO-LIMIT&startYear=1884&endYear=2010&stringYear=CSY1884CST1884ISY1896IST1896NSY1899NST1899ASY1967AST1967HSY1970HST1970BSY1985BST1985LSY1962LST1962MSY1963MST1963GSY1973GST1973XSY1785XST1785USY1790UST1790ESY1978EST1978PSY1987PST1987";
 		String sessionID=getSessionID(strURL);
 		strURL = strURL+"&EISESSION="+sessionID;
 		URL url = new URL(strURL);
