@@ -48,7 +48,7 @@ public class CBNBCombiner extends Combiner
     	// extract the whole thing
     	else if(loadNumber == 0)
     	{
-      		for(int yearIndex = 1980; yearIndex <= 2009; yearIndex++)
+      		for(int yearIndex = 1980; yearIndex <= 2010; yearIndex++)
       		{
     			System.out.println("Processing year " + yearIndex + "...");
         		// create  a new writer so we can see the loadNumber/yearNumber in the filename
@@ -270,7 +270,7 @@ public class CBNBCombiner extends Combiner
                 {
                     rec.put(EVCombinedRec.AVAILABILITY, rs.getString("avl"));
                 }
-                
+
                 if (rs.getString("seq_num") != null)
                 {
                     rec.put(EVCombinedRec.PARENT_ID, rs.getString("seq_num"));
