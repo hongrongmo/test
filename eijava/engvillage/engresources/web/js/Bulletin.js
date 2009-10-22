@@ -110,6 +110,7 @@ function refreshCategories(){
 		frm.yr.options[2] = new Option("2007","2007");
 		frm.yr.options[1] = new Option("2008","2008");
 		frm.yr.options[0] = new Option("2009","2009");
+		frm.yr.options[0] = new Option("2010","2010");
 		frm.yr.selectedIndex = 0;
 }
 function refreshYears(){
@@ -136,6 +137,7 @@ function refreshYears(){
 		frm.yr.options[2] = new Option("2007","2007");
 		frm.yr.options[1] = new Option("2008","2008");
 		frm.yr.options[0] = new Option("2009","2009");
+		frm.yr.options[0] = new Option("2010","2010");
 		frm.yr.selectedIndex = selectedyr;
 	}
 	

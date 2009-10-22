@@ -78,7 +78,7 @@ public class GeoRefCombiner
     // extract the whole thing
     else if(loadNumber == 0)
     {
-      for(int yearIndex = 1918; yearIndex <= 2009; yearIndex++)
+      for(int yearIndex = 1918; yearIndex <= 2010; yearIndex++)
       {
     	System.out.println("Processing year " + yearIndex + "...");
         // create  a new writer so we can see the loadNumber/yearNumber in the filename

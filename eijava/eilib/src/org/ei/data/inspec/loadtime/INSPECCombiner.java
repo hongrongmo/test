@@ -29,7 +29,7 @@ public class INSPECCombiner
     Perl5Util perl = new Perl5Util();
     private static String tablename;
     private static final Database INS_DATABASE = new InspecDatabase();
-    
+
     public INSPECCombiner(CombinedWriter writer)
     {
         super(writer);
@@ -41,30 +41,30 @@ public class INSPECCombiner
         String url = args[0];
         String driver = args[1];
         String username = args[2];
-        String password = args[3];                
+        String password = args[3];
         int loadNumber = 0;
         int recsPerbatch = Integer.parseInt(args[5]);
         String operation = args[6];
         tablename = args[7];
         String environment = args[8].toLowerCase();
-        
+
         try {
             loadNumber = Integer.parseInt(args[4]);
          }
          catch(NumberFormatException e) {
             loadNumber = 0;
          }
-        
+
          Combiner.TABLENAME = tablename;
 
         CombinedWriter writer = new CombinedXMLWriter(recsPerbatch,
                                                       loadNumber,
                                                       INS_DATABASE.getIndexName(), environment);
-        
-        
-        writer.setOperation(operation);                                
+
+
+        writer.setOperation(operation);
         INSPECCombiner c = new INSPECCombiner(writer);
-        
+
         if(loadNumber > 3000)
         {
             c.writeCombinedByWeekNumber(url,
@@ -82,12 +82,12 @@ public class INSPECCombiner
     							  driver,
     							  username,
     							  password,
-    							  yearIndex);  
+    							  yearIndex);
         }
         // extract the whole thing
         else if(loadNumber == 0)
         {
-        	for(int yearIndex = 2005; yearIndex <= 2009; yearIndex++)
+        	for(int yearIndex = 2005; yearIndex <= 2010; yearIndex++)
         	{
         		System.out.println("Processing year " + yearIndex + "...");
         		//create  a new writer so we can see the loadNumber/yearNumber in the filename
@@ -96,7 +96,7 @@ public class INSPECCombiner
         							  driver,
         							  username,
         							  password,
-        							  yearIndex);        		
+        							  yearIndex);
         	}
         }
         else
@@ -121,7 +121,7 @@ public class INSPECCombiner
 
         try
         {
-            
+
             stmt = con.createStatement();
             System.out.println("Doing year:"+year);
             //System.out.println("Running the query...select     m_id, aaff, ab, anum, su, pyr, vol, iss, cdate, nrtype, doi, doit, aoi, aus, aus2, rnum, pnum, cpat, ciorg, iorg, pas, cdate, chi, voliss, ipn, cloc, cls, cn, cnt, cvs, eaff, eds, fjt, fls, fttj, la, matid, ndi, pdate, opdate, pub, rtype, sbn, sorg, sn, snt, tc, tdate, thlp, ti, trs, trmc, LOAD_NUMBER from "+Combiner.TABLENAME+" where substr(opdate,length(opdate)-3) ='"+ year +"'");
@@ -651,7 +651,7 @@ public class INSPECCombiner
 
                 rec.put(EVCombinedRec.DOCID, rs.getString("M_ID"));
                 rec.put(EVCombinedRec.PARENT_ID, rs.getString("seq_num"));
-                
+
                 rec.put(EVCombinedRec.DATABASE, "ins");
                 rec.put(EVCombinedRec.LOAD_NUMBER, rs.getString("LOAD_NUMBER"));
 
@@ -992,7 +992,7 @@ public class INSPECCombiner
 
         try
         {
-            
+
             stmt = con.createStatement();
         //  System.out.println("Running the query...");
         //  rs = stmt.executeQuery("select m_id, aaff, su, ab, anum, aoi, aus, aus2,pyr, rnum, pnum, cpat, ciorg, iorg, pas, cdate, cedate, doi, nrtype, doit, chi, voliss, ipn, cloc, cls, cn, cnt, cvs, eaff, eds, fjt, fls, fttj, la, matid, ndi, pdate, pub, rtype, sbn, sorg, sn, snt, tc, tdate, thlp, ti, trs, trmc, LOAD_NUMBER from "+Combiner.TABLENAME+ " where LOAD_NUMBER = "+loadN);
@@ -1011,7 +1011,7 @@ public class INSPECCombiner
             System.out.println("Wrote records.");
 
             this.writer.end();
-            this.writer.flush();            
+            this.writer.flush();
         }
         finally
         {

@@ -37,7 +37,7 @@ public class EptCombiner extends Combiner {
             else
             {
             	rs = stmt.executeQuery("select dn,m_id,pat_in,ti,aj,ap,ad,ac,pn,py,pc,ic,cs,cc,la,lt,ab,ct,cr,ut,ey,crn,load_number,ll,dt,ds,seq_num from ept_master where py = '" + year + "' and seq_num is not null");
-            }            	            	
+            }
             writeRecs(rs);
 
             this.writer.end();
@@ -284,7 +284,7 @@ public class EptCombiner extends Combiner {
         if (year == null) {
             return false;
         }
-               
+
         if (year.length() != 4) {
             return false;
         }
@@ -577,7 +577,7 @@ public class EptCombiner extends Combiner {
         // extract the whole thing
     	if(loadNumber == 0)
     	{
-			for(int yearIndex = 1919; yearIndex <= 2009; yearIndex++)
+			for(int yearIndex = 1919; yearIndex <= 2010; yearIndex++)
 			{
 				System.out.println("Processing year " + yearIndex + "...");
 				c = new EptCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,"ept", environment));
