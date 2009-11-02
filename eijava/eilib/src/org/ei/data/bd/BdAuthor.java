@@ -50,6 +50,14 @@ public class BdAuthor
             {
                 String auField = (String) elements.get(i);
 
+                if(auField.equals("sec"))
+                {
+                    if(auelements[i]!= null && !auelements[i].trim().equals(""))
+                    {
+                        this.setSec(auelements[i]);
+                    }
+
+                }
                 if(auField.equals("surname"))
                 {
                     if(auelements[i]!= null && !auelements[i].trim().equals(""))
@@ -115,7 +123,7 @@ public class BdAuthor
 		{
 			au.append(this.getGivenName());
 		}
-
+System.out.println("bdAuthor get disp name ::"+au.toString());
 		return au.toString();
     }
 
@@ -192,6 +200,7 @@ public class BdAuthor
         List result = null;
 		if(this.affidStr != null && !this.affidStr.trim().equals(""))
 		{
+			System.out.println("in set getAffList in BdAuthors this.affidStr"+this.affidStr);
 			if(this.affidStr.indexOf(BdParser.GROUPDELIMITER)>0)
 			{
 			    List l = Arrays.asList(this.affidStr.split(BdParser.GROUPDELIMITER,-1));
