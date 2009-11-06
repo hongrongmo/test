@@ -145,6 +145,7 @@ public class BookNavigator extends EiNavigator {
 	    anav.getModifiers().remove(new EiModifier(0,col.getAbbrev().concat("3"),col.getAbbrev().concat("3")));
 	    anav.getModifiers().remove(new EiModifier(0,col.getAbbrev().concat("4"),col.getAbbrev().concat("4")));
 	    anav.getModifiers().remove(new EiModifier(0,col.getAbbrev().concat("5"),col.getAbbrev().concat("5")));
+	    anav.getModifiers().remove(new EiModifier(0,col.getAbbrev().concat("6"),col.getAbbrev().concat("6")));
 	}
 
 	public static EiNavigator cleanCLNavigator(EiNavigator anav)
