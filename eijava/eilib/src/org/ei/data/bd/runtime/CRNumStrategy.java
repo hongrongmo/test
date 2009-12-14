@@ -8,6 +8,7 @@ public class CRNumStrategy
 	
 	public final int ELT_BIT_MASK = 1024;
 	public final int PCM_BIT_MASK = 54;
+	public final int CHM_BIT_MASK = 128;
 	
 	public CRNumStrategy(){};
 	
@@ -25,6 +26,11 @@ public class CRNumStrategy
 			return crn.crnAlgorithm();
 		}
 		else if((PCM_BIT_MASK & bitMask) == PCM_BIT_MASK)
+		{
+			crn = new CRNumStrategyBData(crnumraw);
+			return crn.crnAlgorithm();
+		}
+		else if((CHM_BIT_MASK & bitMask) == CHM_BIT_MASK)
 		{
 			crn = new CRNumStrategyBData(crnumraw);
 			return crn.crnAlgorithm();
