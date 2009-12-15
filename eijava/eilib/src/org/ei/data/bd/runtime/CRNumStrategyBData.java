@@ -6,7 +6,14 @@ import org.ei.data.bd.loadtime.BdParser;
 
 public class CRNumStrategyBData extends CRNumStrategy
 {
-
+	//IDDELIMITER = 31	
+	//chm GROUPDELIMITER = 29
+	//format in bd_master
+	//chm   ch=31IDDELIMITER  aluminum ch=29GROUPDELIMITER 7429-90-5  ch=31IDDELIMITER zinc oxide ch=29GROUPDELIMITER 1314-13-2
+	//parsing is identical to the prod site parsing (but seems to be en error - should be ch=31 field for desc CRN)
+	
+	public static String NOCRN = "";
+	
 	public CRNumStrategyBData(String crnumRaw) 
 	{
 		super.crnumraw = crnumRaw;
@@ -14,24 +21,22 @@ public class CRNumStrategyBData extends CRNumStrategy
 
 	public String[] crnAlgorithm()
 	{
+		
 		if(crnumraw!=null && crnumraw.trim().length()>0)
-		{
-			String nu =  crnumraw.replaceAll(BdParser.AUDELIMITER, ";");
-			nu =  nu.replaceAll(BdParser.IDDELIMITER, ";");
+		{			
+			String nu =  crnumraw.replaceAll(BdParser.IDDELIMITER, ";");
 			nu =  nu.replaceAll(BdParser.GROUPDELIMITER, ";");
-			String cas[] = nu.split(";");
+			String crn[] = nu.split(";");
 			ArrayList array = new ArrayList();
 
-			for(int i =  0 ; i< cas.length; i++ )
+			for(int i =  0 ; i< crn.length; i++ )
 			{
-				if(cas[i] != null && !cas[i].trim().equals("") )
+				if(crn[i] != null && !crn[i].trim().equals(NOCRN) )
 				{
-					array.add((String)cas[i]);
+					array.add((String)crn[i]);			
 				}
 			}
-
 			return (String[]) array.toArray(new String[1]);
-
 		}
 		else
 		{
