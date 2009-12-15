@@ -8,6 +8,7 @@ import org.ei.data.bd.loadtime.BdParser;
 //y105-58-8y1333-86-4y24937-79-9y9000-11-7y96-49-1// 2009
 //y y ch=30 ch=30 10102-43-9b11104-93-1 (BT)y124-38-9b12624-32-7 (BT)
 //AUDELIMITER = 30 IDDELIMITER = 31
+// new xml format b AP 12795-06-1
 
 public class CRNumStrategyEncompass 
 							extends CRNumStrategy 
@@ -39,6 +40,12 @@ public class CRNumStrategyEncompass
 						broad = true;							
 					}
 				}
+				if(prf.equals("b")) // new xml fromat
+				{
+					broad=true;
+					broadembedded = false;
+					
+				}
 				if(list.length > 1)
 				{
 					psf = (String)crns[1].trim();
@@ -64,9 +71,9 @@ public class CRNumStrategyEncompass
 			}				
 			if(broad && !broadembedded)
 			{
-				buf.append("-").append("BT");					
+				buf.append("-").append("(BT)");					
 			}
-			else if(!psf.equals(""))
+			if(!psf.equals(""))
 			{
 				buf.append("-").append(psf);
 			}
