@@ -30,6 +30,7 @@ public class CRNumStrategyEncompass
 			{
 				crns = list;
 				prf =(String) crns[0].trim();
+				
 				if(crns.length > 2)
 				{	
 					crn = (String) crns[2].trim();
@@ -39,13 +40,14 @@ public class CRNumStrategyEncompass
 						broadembedded = true;
 						broad = true;							
 					}
+					else if(prf.equals("b")) // new xml fromat
+					{
+						broad=true;
+						broadembedded = false;
+						
+					}
 				}
-				if(prf.equals("b")) // new xml fromat
-				{
-					broad=true;
-					broadembedded = false;
-					
-				}
+				
 				if(list.length > 1)
 				{
 					psf = (String)crns[1].trim();
