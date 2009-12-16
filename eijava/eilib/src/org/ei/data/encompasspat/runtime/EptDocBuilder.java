@@ -86,7 +86,7 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
             Keys.COPYRIGHT_TEXT,
             Keys.PROVIDER
         };
-    private static final Key[] RIS_KEYS = { Keys.RIS_TY, Keys.RIS_LA, Keys.RIS_TI,RIS_U2, Keys.RIS_AUS, Keys.RIS_EDS, Keys.RIS_PY, Keys.RIS_U1, Keys.RIS_N2, Keys.RIS_N1, Keys.RIS_AD, Keys.RIS_CVS };
+    private static final Key[] RIS_KEYS = { Keys.RIS_TY, Keys.RIS_M1, Keys.RIS_LA, Keys.RIS_TI,RIS_U2, Keys.RIS_AUS, Keys.RIS_EDS, Keys.RIS_PY, Keys.RIS_U1, Keys.RIS_N2, Keys.RIS_N1, Keys.RIS_AD, Keys.RIS_CVS };
 
     private static final Key[] XML_KEYS = { Keys.PATASSIGN, Keys.NO_SO, Keys.PATENT_ISSUE_DATE, Keys.AUTHORS, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT, Keys.PATCOUNTRY, Keys.PATNUM, Keys.PATFILDATE, Keys.TITLE, Keys.DOCID };
 
@@ -248,8 +248,11 @@ public class EptDocBuilder implements DocumentBuilder, Keys {
                 }
 
                 ht.put(Keys.RIS_TY, new XMLWrapper(Keys.RIS_TY, "PAT"));
+                
+                ht.put(Keys.RIS_M1, new XMLWrapper(Keys.RIS_M1,"EnCompassPAT"));
 
                 EIDoc eiDoc = new EIDoc(did, ht, RIS.RIS_FORMAT);
+                
                 eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
                 eiDoc.exportLabels(false);
                 eiDoc.setOutputKeys(RIS_KEYS);
