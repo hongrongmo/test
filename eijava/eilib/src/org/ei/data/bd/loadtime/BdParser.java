@@ -174,23 +174,10 @@ public class BdParser
 				if(item!= null)
 				{
 
-				    if(item.getChild("m_id",noNamespace) != null )
-				    {
-				    	Element mid = item.getChild("m_id",noNamespace);
-				    	midstr = mid.getText();
-				    	record.put("M_ID",mid.getText());
-					}
-					else
-					{
-						String mid = getDatabaseName().toLowerCase()+"_"+(new GUID()).toString();
-						record.put("M_ID",mid);
-					}
+	
+					String mid = getDatabaseName().toLowerCase()+"_"+(new GUID()).toString();
+					record.put("M_ID",mid);
 
-
-				    if(item.getChild("seq_num", noNamespace) != null)
-					{
-						record.put("SEQ_NUM",item.getChild("seq_num", noNamespace).getText());
-					}
 				    //PUBDATE
 					Element processinfo = item.getChild("process-info",aitNamespace);
 					if(processinfo!=null)
@@ -808,10 +795,6 @@ public class BdParser
 							Element correspondence = (Element) head.getChild("correspondence",noNamespace);
 							parseCorrespondenceElement(correspondence,record);
 
-							if(source != null && source.getChild("sourc", noNamespace) != null)
-							{
-								record.put("SOURC", source.getChild("sourc", noNamespace).getText());
-							}
 
 						}
 
