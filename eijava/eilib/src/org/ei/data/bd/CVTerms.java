@@ -128,10 +128,7 @@ public class CVTerms
 				CVTerm cvt = (CVTerm)cvterms.get(i);
 		
 				//N and *N
-				if(perl.match("/\\*N/i",cvt.getPostfix()) ||
-						(perl.match("/N/i",cvt.getPostfix()) &&
-						cvt.getPrefix() != null &&
-						!cvt.getPrefix().equals("")))
+				if(perl.match("/\\*N/i",cvt.getPostfix()))
 				{
 					this.cvmn.add(cvt);
 					String term = cvt.getTerm().concat("-N");
@@ -148,10 +145,7 @@ public class CVTerms
 				}
 
 				//P and *P
-				if(perl.match("/\\*P/i",cvt.getPostfix()) ||
-						(perl.match("/P/i",cvt.getPostfix()) &&
-						cvt.getPrefix() != null &&
-						!cvt.getPrefix().equals("")))
+				if(perl.match("/\\*P/i",cvt.getPostfix()))
 				{
 					this.cvmp.add(cvt);
 					String term = cvt.getTerm().concat("-P");
@@ -168,10 +162,7 @@ public class CVTerms
 				}
 
 				//P and *P
-				if(perl.match("/\\*A/i",cvt.getPostfix()) ||
-						(perl.match("/A/i",cvt.getPostfix()) &&
-						cvt.getPrefix() != null &&
-						!cvt.getPrefix().equals("")))
+				if(perl.match("/\\*A/i",cvt.getPostfix()))
 				{
 					this.cvma.add(cvt);
 					String term = cvt.getTerm().concat("-A");
