@@ -230,7 +230,7 @@ public class BDDocBuilder
 
 				formatRIS(buildField(publisherKey,getPublisher(rset.getString("PUBLISHERNAME"),rset.getString("PUBLISHERADDRESS"), dataFormat, ht),ht),dataFormat, Keys.PUBLISHER, Keys.RIS_PB);
 				formatRIS(buildField(Keys.LANGUAGE,getLanguage(rset.getString("CITATIONLANGUAGE"),dataFormat),ht),dataFormat, Keys.LANGUAGE, Keys.RIS_LA);
-				formatRIS(buildField(Keys.AUTHORS,getAuthors(Keys.AUTHORS,rset.getString("AUTHOR"),rset.getString("AUTHOR_1"), dataFormat, rset.getString("AFFILIATION")),ht), dataFormat, Keys.AUTHORS, Keys.RIS_AUS);
+				formatRIS(buildField(Keys.AUTHORS,getAuthors(Keys.AUTHORS,rset.getString("AUTHOR"),rset.getString("AUTHOR_1"), dataFormat),ht), dataFormat, Keys.AUTHORS, Keys.RIS_AUS);
 
 				formatRIS(buildField(Keys.AUTHOR_AFFS,getAuthorsAffiliation(Keys.AUTHOR_AFFS,rset.getString("AFFILIATION"),rset.getString("AFFILIATION_1"), dataFormat),ht),dataFormat, Keys.AUTHOR_AFFS, Keys.RIS_AD);
 
@@ -612,6 +612,7 @@ public class BDDocBuilder
 
 	private String getLanguage(String languageString, String dataFormat) throws Exception
 	{
+		
 		if(languageString != null)
 		{
 			if((dataFormat.equals(Citation.CITATION_FORMAT) || 
@@ -1365,8 +1366,7 @@ public class BDDocBuilder
 	private Contributors getAuthors(Key key,
 		        					String authorString,
 		        					String authorString1, 
-		        					String dataFormat,
-		        					String affiliations)
+		        					String dataFormat)
 
 	throws Exception
 	{
@@ -1457,7 +1457,7 @@ public class BDDocBuilder
 		for(int i= 0;i<editorList.size();i++)
 		{
 			BdAuthor author = (BdAuthor)editorList.get(i);
-      String auDisplayName = cleanBadCharacters(author.getDisplayName());
+			String auDisplayName = cleanBadCharacters(author.getDisplayName());
 			Contributor persons = new Contributor(key,auDisplayName);
 
 			if(emailString!= null)
