@@ -31,7 +31,7 @@ public class BDDocBuilder
 	private static final Key[] CITATION_KEYS = {Keys.DOCID,Keys.TITLE,Keys.TITLE_TRANSLATION,Keys.EDITORS,Keys.AUTHORS,Keys.AUTHOR_AFFS,Keys.SOURCE,Keys.MONOGRAPH_TITLE, Keys.PAGE_RANGE, Keys.ARTICLE_NUMBER, Keys.VOLISSUE,Keys.PUBLICATION_YEAR, Keys.PUBLISHER, Keys.ISSUE_DATE, Keys.ISSN, Keys.LANGUAGE ,Keys.NO_SO, Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT, Keys.DOI, Keys.PATAPPNUM, Keys.PATNUM, Keys.PATASSIGN, Keys.PATENT_ISSUE_DATE};
 	private static final Key[] ABSTRACT_KEYS = {Keys.DOCID,Keys.TITLE,Keys.TITLE_TRANSLATION,Keys.EDITORS,Keys.AUTHORS,Keys.EDITOR_AFFS, Keys.AUTHOR_AFFS,Keys.VOLISSUE, Keys.SOURCE, Keys.PUBLICATION_YEAR, Keys.ISSUE_DATE, Keys.MONOGRAPH_TITLE, Keys.PAGE_RANGE,Keys.ARTICLE_NUMBER,Keys.CONFERENCE_NAME, Keys.ISSN,Keys.ISBN, Keys.CODEN, Keys.PUBLISHER,Keys.I_PUBLISHER,Keys.CONF_DATE,Keys.SPONSOR, Keys.PROVIDER ,Keys.LANGUAGE, Keys.MAIN_HEADING,ELT_MAJOR_TERMS, CPX_CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS, Keys.GLOBAL_TAGS, Keys.PRIVATE_TAGS, Keys.ABSTRACT, Keys.NUMBER_OF_REFERENCES,Keys.NO_SO, Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT, Keys.CLASS_CODES ,Keys.CAS_REGISTRY_CODES, Keys.DOI, Keys.PATAPPNUM, Keys.PATNUM, Keys.PATASSIGN, Keys.REPORT_NUMBER_PAPER, Keys.PATENT_ISSUE_DATE};
 	private static final Key[] DETAILED_KEYS = {Keys.ACCESSION_NUMBER,  Keys.PATAPPNUM, Keys.PRIORITY_INFORMATION, Keys.PATNUM, Keys.PATASSIGN, Keys.TITLE, Keys.TITLE_TRANSLATION, Keys.AUTHORS,  Keys.AUTHOR_AFFS,Keys.CORRESPONDING_EMAIL,Keys.CORRESPONDING_AUTHORS,Keys.CORRESPONDING_AUTHORS_AFF, Keys.EDITORS,Keys.EDITOR_AFFS, Keys.SERIAL_TITLE, Keys.ABBRV_SERIAL_TITLE, Keys.VOLUME, Keys.ISSUE, Keys.SOURCE, Keys.MONOGRAPH_TITLE,Keys.VOLUME_TITLE, Keys.ISSUE_DATE, Keys.PUBLICATION_YEAR, Keys.REPORT_NUMBER_PAPER, Keys.PAPER_NUMBER, Keys.PAGE_RANGE,Keys.ARTICLE_NUMBER, Keys.SECONDARY_SOURCE ,Keys.LANGUAGE, Keys.ISSN, Keys.E_ISSN, Keys.CODEN, Keys.ISBN, Keys.ISBN13, Keys.DOC_TYPE, Keys.CONFERENCE_NAME, Keys.CONF_DATE, Keys.MEETING_LOCATION, Keys.CONF_CODE, Keys.SPONSOR, Keys.PUBLISHER, Keys.ABSTRACT, Keys.ABSTRACT_TYPE, Keys.NUMBER_OF_CLAIMS,Keys.NUMBER_OF_TABLES,Keys.SPECIFIC_NAMES,   Keys.NUMBER_OF_REFERENCES,Keys.GLOBAL_TAGS, Keys.PRIVATE_TAGS, Keys.PROVIDER,  Keys.SUPPL,  Keys.PI,Keys.PAGE_COUNT, Keys.MAIN_HEADING,ELT_MAJOR_TERMS, Keys.CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS,Keys.REGION_CONTROLLED_TERMS, Keys.CAS_REGISTRY_CODES, Keys.CLASS_CODES, Keys.INDEXING_TEMPLATE,Keys.MANUAL_LINKED_TERMS,Keys.LINKED_TERMS, Keys.LINKED_TERMS_HOLDER, Keys.TREATMENTS, Keys.DOI, Keys.DOCID,Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT, Keys.PATENT_ISSUE_DATE};
-	private static final Key[] RIS_KEYS = { Keys.RIS_TY, Keys.RIS_LA , Keys.RIS_N1 ,Keys.RIS_M1 , Keys.RIS_TI , Keys.RIS_T1 , Keys.RIS_BT , Keys.RIS_JO ,Keys.RIS_T3 , Keys.RIS_AUS , Keys.RIS_AD , Keys.RIS_EDS , Keys.RIS_VL , Keys.RIS_IS , Keys.RIS_PY , Keys.RIS_AN , Keys.RIS_SP , Keys.RIS_EP, Keys.RIS_SN ,  Keys.RIS_BN ,  Keys.RIS_MD ,Keys.RIS_CY , Keys.RIS_PB,  Keys.RIS_N2 , Keys.RIS_KW , Keys.RIS_CVS , Keys.RIS_FLS , Keys.RIS_DO};
+	private static final Key[] RIS_KEYS = { Keys.RIS_TY, Keys.RIS_LA , Keys.RIS_N1 ,Keys.RIS_M1 , Keys.RIS_TI , Keys.RIS_T1 , Keys.RIS_BT , Keys.RIS_JO ,Keys.RIS_T3 , Keys.RIS_AUS , Keys.RIS_AD , Keys.RIS_EDS , Keys.RIS_VL , Keys.RIS_IS , Keys.RIS_PY , Keys.RIS_AN , Keys.RIS_SP , Keys.RIS_EP, Keys.RIS_SN ,  Keys.RIS_BN ,  Keys.RIS_MD ,Keys.RIS_CY , Keys.RIS_PB,  Keys.RIS_N2 , Keys.RIS_CVS,Keys.RIS_KWS , Keys.RIS_FLS , Keys.RIS_DO};
 	private static final Key[] XML_KEYS = { Keys.ISSN , Keys.MAIN_HEADING , Keys.NO_SO , Keys.MONOGRAPH_TITLE , Keys.PUBLICATION_YEAR , Keys.VOLUME_TITLE , Keys.CONTROLLED_TERM , Keys.ISBN, Keys.ISBN13, Keys.AUTHORS , Keys.DOCID , Keys.SOURCE , Keys.NUMVOL , Keys.EDITOR_AFFS , Keys.EDITORS , Keys.PUBLISHER , Keys.VOLUME , Keys.AUTHOR_AFFS , Keys.PROVIDER , Keys.ISSUE_DATE , Keys.COPYRIGHT_TEXT , Keys.DOI , Keys.PAGE_COUNT , Keys.PUBLICATION_DATE , Keys.TITLE ,Keys.TITLE_TRANSLATION, Keys.LANGUAGE , Keys.PAGE_RANGE , Keys.PAPER_NUMBER , Keys.COPYRIGHT , Keys.ISSUE , Keys.ACCESSION_NUMBER , Keys.CONTROLLED_TERMS, Keys.PATENT_ISSUE_DATE};
 	public static final String DELIMITER = ",";
 	static
@@ -323,23 +323,28 @@ public class BDDocBuilder
 						cvterms.parse();
 												
 					}
-					//String apictstr = cvterms.getAPICT();
 			
 					if(cvterms != null)
 					{						
 						String cvtstr = cvterms.getCvexpandstr();
 						String cvtmjr = cvterms.getCvmexpandstr();
+						
+						StringBuffer cvtris = new StringBuffer();						
+						cvtris = cvtris.append(cvtstr).append(cvtmjr);
+						
 						if (cvtstr != null  && cvtstr.length() > 0)
 						{
-							ht.put(ELT_CONTROLLED_TERMS, new XMLMultiWrapper2(ELT_CONTROLLED_TERMS,setCVS(StringUtil.substituteChars(cvtstr)))); 
+							ht.put(ELT_CONTROLLED_TERMS, new XMLMultiWrapper2(ELT_CONTROLLED_TERMS,setCVS(StringUtil.substituteChars(cvtstr), dataFormat))); 
 							formatRIS(ht,dataFormat,Keys.CONTROLLED_TERMS,Keys.RIS_CVS);
 						}
 						if (cvtmjr != null && cvtmjr.length() > 0)
 						{
-							ht.put(ELT_MAJOR_TERMS, new XMLMultiWrapper2(ELT_MAJOR_TERMS,setCVS(StringUtil.substituteChars(cvtmjr))));
+							ht.put(ELT_MAJOR_TERMS, new XMLMultiWrapper2(ELT_MAJOR_TERMS,setCVS(StringUtil.substituteChars(cvtmjr), dataFormat)));
+							formatRIS(ht,dataFormat,ELT_MAJOR_TERMS,Keys.RIS_KWS);
 						}
-											
+							
 					}
+				
 					
 					if (rset.getString("APIATM") != null)
 	                {
@@ -1868,8 +1873,12 @@ public class BDDocBuilder
 
 	public void formatRIS(ElementDataMap map, String dataFormat, Key ORIGINAL_KEY, Key NEW_KEY)
 	{
+		
+		System.out.println("FORMAT::"+RIS.RIS_FORMAT+"OLD KEY"+NEW_KEY.getKey()+"ORK"+ORIGINAL_KEY.getKey());
 		if(dataFormat.equalsIgnoreCase(RIS.RIS_FORMAT))
 		{
+			
+			
 			if(map!= null)
 			{
 				ElementData ed = map.get(ORIGINAL_KEY);
@@ -1933,8 +1942,10 @@ public class BDDocBuilder
 		}
 	}
 	
-	  private KeyValuePair[] setCVS(String cvs) 
+	  private KeyValuePair[] setCVS(String cvs,String dataFormat) 
 	  {
+		  
+		  System.out.println("in setCVS::"+cvs+"FORMAT::"+dataFormat);
 	        ArrayList list = new ArrayList();
 	        StringTokenizer st = new StringTokenizer(cvs, ";", false);
 	        String strToken = null;
@@ -1945,7 +1956,18 @@ public class BDDocBuilder
 	            if (strToken.length() > 0) 
 	            {
 	            	strToken = perl.substitute("s/\\#//g", strToken);
-	                KeyValuePair k = new KeyValuePair(getTermField(strToken), strToken);
+	            	KeyValuePair k = null;
+	            	if(!dataFormat.equalsIgnoreCase(RIS.RIS_FORMAT))
+	            	{
+	            		k = new KeyValuePair(getTermField(strToken), strToken);
+	            		
+	            	}
+	            	else
+	            	{
+	            		System.out.println(" - cvs --key set "+Keys.CONTROLLED_TERM.getKey());
+	            		k = new KeyValuePair(Keys.CONTROLLED_TERM,(String) strToken);
+	            	}
+	            	
 	                list.add(k);
 	            }
 	        }
@@ -1979,7 +2001,7 @@ public class BDDocBuilder
 	            else
 	                field = Keys.CONTROLLED_TERM;
 	        }
-
+System.out.println(" getTErmField::"+field.getKey());
 	        return field;
 
 	    }
