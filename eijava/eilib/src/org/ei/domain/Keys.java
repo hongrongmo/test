@@ -243,7 +243,6 @@ public interface Keys
     public static final Key RIS_IS = new Key("IS");
     public static final Key RIS_JO = new Key("JO");
     public static final Key RIS_KW = new Key("KW");
-    public static final Key RIS_KWS = new Key("KWS");
     public static final Key RIS_CVM = new Key("CVM");
     public static final Key RIS_LA = new Key("LA");
     public static final Key RIS_MD = new Key("MD");
