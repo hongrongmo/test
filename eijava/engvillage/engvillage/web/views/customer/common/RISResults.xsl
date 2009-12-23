@@ -67,7 +67,7 @@
       <xsl:value-of select="name()"/><xsl:text>  - </xsl:text><xsl:value-of select="normalize-space(.)" /><xsl:text>&#xD;&#xA;</xsl:text>
     </xsl:template>
 
-    <xsl:template match="CV|MH|KW">
+    <xsl:template match="CV|MH|KW|CVM">
       <xsl:text>KW  - </xsl:text><xsl:value-of select="normalize-space(.)" /><xsl:text>&#xD;&#xA;</xsl:text>
     </xsl:template>
     <xsl:template match="FL">
