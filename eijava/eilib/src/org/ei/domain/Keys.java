@@ -243,6 +243,8 @@ public interface Keys
     public static final Key RIS_IS = new Key("IS");
     public static final Key RIS_JO = new Key("JO");
     public static final Key RIS_KW = new Key("KW");
+    public static final Key RIS_KWS = new Key("KWS");
+    public static final Key RIS_CVM = new Key("CVM");
     public static final Key RIS_LA = new Key("LA");
     public static final Key RIS_MD = new Key("MD");
     public static final Key RIS_MT = new Key("BT");
@@ -273,7 +275,7 @@ public interface Keys
     public static final Key RIS_U3 = new Key("U3");
     public static final Key RIS_U4 = new Key("U4");
     public static final Key RIS_U5 = new Key("U5");
-    public static final Key BIB_TY = new Key("BY");
+    public static final Key BIB_TY = new Key("BY");   
     public static final Key RN_LABEL = new Key("RN_LABEL","Report number");
     public static final Key RSRCH_SPONSOR = new Key("RSP","Sponsor");
     public static final Key SALUTATION = new Key("TL", "Salutation");
