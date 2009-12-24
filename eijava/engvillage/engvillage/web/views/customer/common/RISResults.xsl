@@ -67,13 +67,24 @@
       <xsl:value-of select="name()"/><xsl:text>  - </xsl:text><xsl:value-of select="normalize-space(.)" /><xsl:text>&#xD;&#xA;</xsl:text>
     </xsl:template>
 
-    <xsl:template match="CV|MH|KW|CVM">
+    <xsl:template match="MH|KW|CV">
       <xsl:text>KW  - </xsl:text><xsl:value-of select="normalize-space(.)" /><xsl:text>&#xD;&#xA;</xsl:text>
     </xsl:template>
-    <xsl:template match="FL">
-      <xsl:text>U2  - </xsl:text><xsl:value-of select="strutil:stripHtml(.)" /><xsl:text>&#xD;&#xA;</xsl:text>
+    
+    <xsl:template match="CVS">
+    	<xsl:apply-templates />
     </xsl:template>
-
+    <xsl:template match="CVMS">
+      	<xsl:apply-templates />
+    </xsl:template>
+    <xsl:template match="CVMA|CVMN|CVMP|CVM|CVA|CVN|CVP">
+      	<xsl:text>KW  - </xsl:text><xsl:value-of select="normalize-space(.)" /><xsl:text>&#xD;&#xA;</xsl:text>
+    </xsl:template>
+    
+   <xsl:template match="FL">
+      <xsl:text>U2  - </xsl:text><xsl:value-of select="strutil:stripHtml(.)" /><xsl:text>&#xD;&#xA;</xsl:text>
+   </xsl:template>
+   
    <xsl:template match="CY">
       <xsl:text>CY  - </xsl:text><xsl:value-of select="normalize-space(.)" /><xsl:text>&#xD;&#xA;</xsl:text>
    </xsl:template>
