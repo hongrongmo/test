@@ -77,7 +77,7 @@
     <xsl:template match="CVMS">
       	<xsl:apply-templates />
     </xsl:template>
-    <xsl:template match="CVMA|CVMN|CVMP|CVM|CVA|CVN|CVP">
+    <xsl:template match="CVMA|CVMN|CVMP|CVM|CVA|CVN|CVP|MJS">
       	<xsl:text>KW  - </xsl:text><xsl:value-of select="normalize-space(.)" /><xsl:text>&#xD;&#xA;</xsl:text>
     </xsl:template>
     
