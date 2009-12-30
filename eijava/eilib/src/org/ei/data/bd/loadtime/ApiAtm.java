@@ -47,17 +47,19 @@ public class ApiAtm
 				if(apiatm.getChild("ATM-template",noNamespace)!= null)
 				{
 					Element e = apiatm.getChild("ATM-template",noNamespace);
-					//template role
-					if(e.getAttribute("template-role")!= null)
-					{
-						String role = (String)e.getAttributeValue("template-role");
-						apiatmStr.append(role);
-						apiatmStr.append(" ");
-					}
+	
 					// template name
 					apiatmStr.append("$$ ");
 					apiatmStr.append(e.getTextTrim());
 					apiatmStr.append(" ");
+					//template role
+					if(e.getAttribute("template-role")!= null)
+					{
+						String role = (String)e.getAttributeValue("template-role");
+						apiatmStr.append("ROLE: ");
+						apiatmStr.append(role);
+						apiatmStr.append(" ");
+					}
 				}
 				// count
 				if(apiatm.getChild("LT-count",noNamespace)!= null)
@@ -82,8 +84,7 @@ public class ApiAtm
 				List sgroups = apiatm.getChildren("ATM-Sgroup", noNamespace);
 				apiatmStr.append(setGroups(sgroups));
 			}
-		}
-		System.out.println("ster"+apiatmStr.toString());			
+		}		
 	}
 	
 	public StringBuffer setGroups(List groupList)
