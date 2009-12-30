@@ -174,7 +174,7 @@ public class BdParser
 				if(item!= null)
 				{
 
-	
+
 					String mid = getDatabaseName().toLowerCase()+"_"+(new GUID()).toString();
 					record.put("M_ID",mid);
 
@@ -447,7 +447,7 @@ public class BdParser
 							{
 									Element apidescriptorgroup = enhancement.getChild("API-descriptorgroup",noNamespace);
 									Element autoposting = apidescriptorgroup.getChild("autoposting",noNamespace);
-							//APICC													
+							//APICC
 									Element classificationdescription = autoposting.getChild("API-CC", noNamespace);
 
 									if(classificationdescription != null)
@@ -455,12 +455,12 @@ public class BdParser
 										List classdescgroup = classificationdescription.getChildren("classification", noNamespace);
 										StringBuffer apiccterms = new StringBuffer();
 										if(classdescgroup != null)
-										{											
+										{
 											for (int j = 0; j < classdescgroup.size(); j++)
 											{
-												Element ell = (Element)classdescgroup.get(j);											
+												Element ell = (Element)classdescgroup.get(j);
 												List apicc = ell.getChildren("classification-description",noNamespace);
-												
+
 												if(apicc != null)
 												{
 													for (int i = 0; i < apicc.size(); i++)
@@ -472,19 +472,19 @@ public class BdParser
 															apiccterms.append(AUDELIMITER);
 														}
 													}
-												}	
+												}
 												if(j<(classdescgroup.size()-1) )
 												{
 													apiccterms.append(AUDELIMITER);
 												}
-											}																																	
+											}
 										}
-										
+
 										if(apiccterms != null && apiccterms.length()> 0)
 										{
 											String apiccstr = apiccterms.toString();
 											record.put("CLASSIFICATIONDESC",apiccstr);
-										}																				
+										}
 									}
 
 								//APICT
@@ -493,10 +493,10 @@ public class BdParser
 									if(apicttop != null)
 									{
 										List ctTerms = apicttop.getChildren("autoposting-term",noNamespace);
-										
+
 										StringBuffer apict = new StringBuffer();
 										StringBuffer apictextended = new StringBuffer();
-										
+
 										for (int j = 0; j < ctTerms.size(); j++)
 										{
 											Element el = (Element)ctTerms.get(j);
@@ -523,14 +523,14 @@ public class BdParser
 												apictextended.append(termbuf.toString()).append(IDDELIMITER);
 											}
 										}
-										
+
 										record.put("APICT",apict.toString());
-										
+
 										if(apictextended.toString() != null)
 										{
 											record.put("APICT1",apictextended.toString());
 										}
-										
+
 									}
 
 									Element apilt = autoposting.getChild("API-LT",noNamespace);
@@ -685,24 +685,22 @@ public class BdParser
 											Element ltcount = apialc.getChild("LT-COUNT", noNamespace);
 											apialcbuf.append(ltcount.getTextTrim());
 										}
-										if(apialc.getChild("LTM-COUNT",noNamespace)!= null  || 
+										if(apialc.getChild("LTM-COUNT",noNamespace)!= null  ||
 												apialc.getChild("LT-COUNT", noNamespace) != null)
 										{
 											record.put("APIALC",apialcbuf.toString());
 										}
 									}
-
-									Element apiatm = autoposting.getChild("API-ATM",noNamespace);
-									if(apiatm != null)
+									//APIATM
+									
+									if(autoposting.getChild("API-ATM-group",noNamespace) != null)
 									{
-										if(apiatm.getChild("API-term",noNamespace)!= null)
-										{
-											Element e = apiatm.getChild("API-term",noNamespace);
-											record.put("APIATM",e.getTextTrim());
-										}
+										ApiAtm apiatm = new ApiAtm(autoposting.getChild("API-ATM-group",noNamespace));
+										record.put("APIATM",apiatm.toAPIString());										
 									}
-	//APIAT
 
+									//APIAT
+									
 									Element apiat = autoposting.getChild("API-AT",noNamespace);
 									if(apiat != null)
 									{
@@ -735,25 +733,20 @@ public class BdParser
 
 
 									Element apiltm = autoposting.getChild("API-LTM",noNamespace);
+
 									if(apiltm != null)
 									{
 										StringBuffer apimterms = new StringBuffer();
 										StringBuffer apimgroups = new StringBuffer();
-
-
-
-
 										List apiltmgroup = apiltm.getChildren("API-LTM-group",noNamespace);
 										for (int i = 0; i < apiltmgroup.size(); i++)
 										{
-
 											Element egroup =(Element) apiltmgroup.get(i);
 											List apiltmtop = egroup.getChildren("autoposting-term",noNamespace);
 											apimterms = new StringBuffer();
 
 											if(apiltmtop != null)
 											{
-
 													for (int j = 0; j < apiltmtop.size(); j++)
 													{
 														Element el = (Element)apiltmtop.get(j);
@@ -774,7 +767,6 @@ public class BdParser
 
 														apimterms.append(termbuf.toString()).append(IDDELIMITER);
 													}
-
 
 											}
 											apimgroups.append(apimterms);
@@ -810,7 +802,7 @@ public class BdParser
 
 						//weekNumber
 						//record.put("LOADNUMBER",weekNumber);
-						
+
 						// only for elt database conversion
 						record.put("DATABASE",databaseName.trim());
 					}
@@ -2778,13 +2770,13 @@ public class BdParser
 				String text=((Text)o).getText();
 
 				//System.out.println("text::"+text);
-				
+
 				text= perl.substitute("s/&/&amp;/g",text);
 				text= perl.substitute("s/</&lt;/g",text);
 				text= perl.substitute("s/>/&gt;/g",text);
 				text= perl.substitute("s/\n//g",text);
 				text= perl.substitute("s/\r//g",text);
-				 
+
 				b.append(text);
 
             }
