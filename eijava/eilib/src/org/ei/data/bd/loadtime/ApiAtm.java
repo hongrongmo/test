@@ -127,7 +127,7 @@ public class ApiAtm
 					Element mtoc = (Element)groupList.get(m);
 					String mtocStr = mtoc.getTextTrim();
 					
-					if(mtocStr.contains(SEMDELIM))
+					if(mtocStr.indexOf(SEMDELIM) > 0)
 					{
 						// add brackets
 						groupStr.append(OPEN_BRACKET);
