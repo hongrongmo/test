@@ -252,6 +252,9 @@ public class BdParser
 									itemid_idtype.equals("CHEM")))
 							{
 								String  itemid = itemidElement.getTextTrim();
+								
+								System.out.println("ACCESSNUMBER" +itemid);
+								
 								record.put("ACCESSNUMBER",itemid);
 								setAccessNumber(itemid);
 							}
@@ -385,7 +388,6 @@ public class BdParser
 
 								if(abstractData.getChildTextTrim("para",ceNamespace) != null)
 								{
-									System.out.println();
 									String abstractString = dictionary.mapEntity(getMixData(abstractData.getChild("para",ceNamespace).getContent()));
 									record.put("ABSTRACTDATA", abstractString);
 								}
@@ -488,6 +490,7 @@ public class BdParser
 									}
 
 								//APICT
+								// exclude CRN from API-CT 
 
 									Element apicttop = autoposting.getChild("API-CT",noNamespace);
 									if(apicttop != null)
@@ -500,33 +503,50 @@ public class BdParser
 										for (int j = 0; j < ctTerms.size(); j++)
 										{
 											Element el = (Element)ctTerms.get(j);
-
-											StringBuffer termbuf = new StringBuffer();
-											String pref = (String)el.getAttributeValue("prefix");
-											String postf = (String)el.getAttributeValue("postfix");
-											String term = (String)el.getTextTrim();
-											if ( pref != null && pref.length() > 0)
+											boolean isCRN = false;
+											
+											
+											if(el.getAttribute("CAS-nr")!= null  &&
+													(el.getAttributeValue("CAS-nr").equals("y")||
+													 el.getAttributeValue("CAS-nr").equals("b")))
 											{
-												termbuf.append(pref).append("-");
+												System.out.println("removing from API-CT CRN"+el.getTextTrim());
+												isCRN = true;												
 											}
-											termbuf.append(term);
-											if ( postf != null && postf.length() > 0)
+											if(!isCRN)
 											{
-												termbuf.append("-").append(postf);
-											}
-											if(apict.length() < 3000)
-											{
-												apict.append(termbuf.toString()).append(IDDELIMITER);
-											}
-											else if(apict.length() >= 3000)
-											{
-												apictextended.append(termbuf.toString()).append(IDDELIMITER);
+												StringBuffer termbuf = new StringBuffer();
+												String pref = (String)el.getAttributeValue("prefix");
+												String postf = (String)el.getAttributeValue("postfix");
+												String term = (String)el.getTextTrim();
+												if ( pref != null && pref.length() > 0)
+												{
+													termbuf.append(pref).append("-");
+												}
+												termbuf.append(term);
+												if ( postf != null && postf.length() > 0)
+												{
+													termbuf.append("-").append(postf);
+												}
+												if(apict.length() < 3000)
+												{
+													apict.append(termbuf.toString()).append(IDDELIMITER);
+												}
+												else if(apict.length() >= 3000)
+												{
+													apictextended.append(termbuf.toString()).append(IDDELIMITER);
+												}
 											}
 										}
+										if(apict != null && 
+												apict.toString().length() > 0)
+										{
 
-										record.put("APICT",apict.toString());
+											record.put("APICT",apict.toString());
+										}
 
-										if(apictextended.toString() != null)
+										if(apictextended != null && 
+												apictextended.toString().length()> 0)
 										{
 											record.put("APICT1",apictextended.toString());
 										}
@@ -551,34 +571,48 @@ public class BdParser
 													for (int j = 0; j < apilttop.size(); j++)
 													{
 														Element el = (Element)apilttop.get(j);
-
-														StringBuffer termbuf = new StringBuffer();
-														String pref = (String)el.getAttributeValue("prefix");
-														String postf = (String)el.getAttributeValue("postfix");
-														String term = (String)el.getTextTrim();
-														if ( pref != null && pref.length() > 0)
+														boolean isCRN = false;
+														if(el.getAttribute("CAS-nr")!= null  &&
+																(el.getAttributeValue("CAS-nr").equals("y")||
+																 el.getAttributeValue("CAS-nr").equals("b")))
 														{
-															termbuf.append(pref).append("-");
+															System.out.println("removing from API-LT CRN"+el.getTextTrim());
+															isCRN = true;
 														}
-														termbuf.append(term);
-														if ( postf != null && postf.length() > 0)
-														{
-															termbuf.append("-").append(postf);
-														}
-														if(apiterms.length() < 3000)
+														if(!isCRN)
 														{
 
-															apiterms.append(termbuf.toString()).append(IDDELIMITER);
-														}
-														else if(apiterms.length() >= 3000)
-														{
-															apiterms1.append(termbuf.toString()).append(IDDELIMITER);
+															StringBuffer termbuf = new StringBuffer();
+															String pref = (String)el.getAttributeValue("prefix");
+															String postf = (String)el.getAttributeValue("postfix");
+															String term = (String)el.getTextTrim();
+															if ( pref != null && pref.length() > 0)
+															{
+																termbuf.append(pref).append("-");
+															}
+															termbuf.append(term);
+															if ( postf != null && postf.length() > 0)
+															{
+																termbuf.append("-").append(postf);
+															}
+															if(apiterms.length() < 3000)
+															{
+
+																apiterms.append(termbuf.toString()).append(IDDELIMITER);
+															}
+															else if(apiterms.length() >= 3000)
+															{
+																apiterms1.append(termbuf.toString()).append(IDDELIMITER);
+															}
 														}
 													}
 
 											}
-											apigroups.append(apiterms);
-											apigroups.append(GROUPDELIMITER);
+											if(apiterms != null && apiterms.length()>0)
+											{
+												apigroups.append(apiterms);
+												apigroups.append(GROUPDELIMITER);
+											}
 											if(apiterms1 != null && apiterms1.length()>0)
 											{
 												apigroups1.append(apiterms1);
@@ -586,7 +620,10 @@ public class BdParser
 											}
 										}
 										// end of groups
-										record.put("APILT",apigroups.toString());
+										if(apiterms != null && apiterms.length()>0)
+										{
+											record.put("APILT",apigroups.toString());
+										}
 										if(apiterms1 != null && apiterms1.length()>0)
 										{
 											record.put("APILT1",apiterms1.toString());
