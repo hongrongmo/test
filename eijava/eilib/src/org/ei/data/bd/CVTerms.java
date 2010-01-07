@@ -129,52 +129,52 @@ public class CVTerms
 		
 				//N and *N
 				if(perl.match("/\\*N/i",cvt.getPostfix()))
-				{
-					this.cvmn.add(cvt);
+				{					
 					String term = cvt.getTerm().concat("-N");
+					this.cvmn.add(term);
 					cvmarr.add("*".concat(term));
 				}
 				else if
 				(perl.match("/N/i",cvt.getPostfix())  &&
 						(cvt.getPrefix() == null ||
 						cvt.getPrefix().equals("")))
-				{
-					this.cvn.add(cvt);
+				{					
 					String term = cvt.getTerm().concat("-N");
+					this.cvn.add(term);
 					cvarr.add(term);
 				}
 
 				//P and *P
 				if(perl.match("/\\*P/i",cvt.getPostfix()))
 				{
-					this.cvmp.add(cvt);
 					String term = cvt.getTerm().concat("-P");
+					this.cvmp.add(term);
 					cvmarr.add("*".concat(term));
 				}
 				else if
 				(perl.match("/P/i",cvt.getPostfix())  &&
 						(cvt.getPrefix() == null ||
 						cvt.getPrefix().equals("")))
-				{
-					this.cvp.add(cvt);
+				{					
 					String term = cvt.getTerm().concat("-P");
+					this.cvp.add(term);
 					cvarr.add(term);
 				}
 
 				//P and *P
 				if(perl.match("/\\*A/i",cvt.getPostfix()))
-				{
-					this.cvma.add(cvt);
+				{					
 					String term = cvt.getTerm().concat("-A");
+					this.cvma.add(term);
 					cvmarr.add("*".concat(term));
 				}
 				else if
 				(perl.match("/A/i",cvt.getPostfix())  &&
 						(cvt.getPrefix() == null ||
 						cvt.getPrefix().equals("")))
-				{
-					this.cva.add(cvt);
+				{					
 					String term = cvt.getTerm().concat("-A");
+					this.cva.add(term);
 					cvarr.add(term);
 				}
 
@@ -182,9 +182,9 @@ public class CVTerms
 						cvt.getPrefix().equals(""))&&
 						(cvt.getPostfix() == null ||
 						cvt.getPostfix().equals("")))
-				{
-					this.cvt.add(cvt);
-					String term = cvt.getTerm();					
+				{					
+					String term = cvt.getTerm();	
+					this.cvt.add(term);
 					cvarr.add(term);
 				}
 				if((cvt.getPrefix() != null &&
@@ -193,7 +193,7 @@ public class CVTerms
 						cvt.getPostfix().equals("")))
 				{
 					String term = cvt.getTerm();
-					this.cvm.add(cvt);
+					this.cvm.add(term);
 					cvmarr.add("*".concat(term));
 				}
 				if(cvarr != null && cvarr.size()>0)
@@ -202,15 +202,12 @@ public class CVTerms
 				}
 				if(cvmarr != null && cvmarr.size()>0)
 				{
-					this.cvmexpand = (String[]) cvmarr.toArray(new String[0]);					
-					
+					this.cvmexpand = (String[]) cvmarr.toArray(new String[0]);										
 				}
 			}
 		}
 	}
 	
-
-
 
    public String getCvmexpandstr()
    	{
