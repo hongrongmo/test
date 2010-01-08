@@ -252,9 +252,6 @@ public class BdParser
 									itemid_idtype.equals("CHEM")))
 							{
 								String  itemid = itemidElement.getTextTrim();
-								
-								System.out.println("ACCESSNUMBER" +itemid);
-								
 								record.put("ACCESSNUMBER",itemid);
 								setAccessNumber(itemid);
 							}
@@ -389,6 +386,13 @@ public class BdParser
 								if(abstractData.getChildTextTrim("para",ceNamespace) != null)
 								{
 									String abstractString = dictionary.mapEntity(getMixData(abstractData.getChild("para",ceNamespace).getContent()));
+									//System.out.println("about to replace ::"+abstractString);
+									if(this.databaseName.equalsIgnoreCase("elt"))
+									{
+										abstractString = abstractString.replaceAll("<inf>", "<sub>");
+										abstractString = abstractString.replaceAll("</inf>", "</sub>");		
+									}
+									
 									record.put("ABSTRACTDATA", abstractString);
 								}
 
@@ -510,7 +514,6 @@ public class BdParser
 													(el.getAttributeValue("CAS-nr").equals("y")||
 													 el.getAttributeValue("CAS-nr").equals("b")))
 											{
-												System.out.println("removing from API-CT CRN"+el.getTextTrim());
 												isCRN = true;												
 											}
 											if(!isCRN)
@@ -576,7 +579,6 @@ public class BdParser
 																(el.getAttributeValue("CAS-nr").equals("y")||
 																 el.getAttributeValue("CAS-nr").equals("b")))
 														{
-															System.out.println("removing from API-LT CRN"+el.getTextTrim());
 															isCRN = true;
 														}
 														if(!isCRN)
