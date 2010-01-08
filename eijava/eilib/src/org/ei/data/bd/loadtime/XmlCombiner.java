@@ -97,17 +97,14 @@ public class XmlCombiner
         XmlCombiner c = new XmlCombiner(writer);
         if (timestamp==0 && (loadNumber > 3000 || loadNumber < 1000) && (loadNumber != 0))
         {
-
            c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
         }
         else if(timestamp > 0)
         {
-
            c.writeCombinedByTimestamp(url, driver, username, password, timestamp);
         }
         else if(loadNumber == 0)
         {
-
         	for(int yearIndex = 1904; yearIndex <= 2009; yearIndex++)
             {
         	  System.out.println("Processing year " + yearIndex + "...");
@@ -135,7 +132,6 @@ public class XmlCombiner
         }
         else
         {
-
            c.writeCombinedByYear(url, driver, username, password, loadNumber);
         }
     }
@@ -149,7 +145,6 @@ public class XmlCombiner
                                         int year)
         throws Exception
     {
-
         Statement stmt = null;
         ResultSet rs = null;
         try
@@ -172,7 +167,7 @@ public class XmlCombiner
             else
             {
             	rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER,PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,APICT, APICT1,APILT, APILT1,CLASSIFICATIONDESC,APIAMS, SEQ_NUM from " + Combiner.TABLENAME + " where SEQ_NUM is not null and PUBLICATIONYEAR='" + year + "' AND loadnumber != 0 and loadnumber < 1000000 and database='" + Combiner.CURRENTDB + "'");
-            }
+             }
             System.out.println("Got records ...from table::"+Combiner.TABLENAME);
             writeRecs(rs);
             System.out.println("Wrote records.");
@@ -468,8 +463,6 @@ public class XmlCombiner
 					 rec.put(EVCombinedRec.ABBRV_SRC_TITLE, sta);
 				}
 
-
-
                 if (rs.getString("PUBLISHERNAME") != null)
                 {
                     rec.put(EVCombinedRec.PUBLISHER_NAME, preparePublisherName(rs.getString("PUBLISHERNAME")));
@@ -708,64 +701,70 @@ public class XmlCombiner
 				{						
 					QualifierFacet qfacet = new QualifierFacet();
 
-					String cvt = getCvstr(cvterms.getCvt());					
+					String[] cvt = getCvs(cvterms.getCvt());
+					
 					if(cvt != null)
 					{
-						rec.put(EVCombinedRec.CONTROLLED_TERMS, prepareMulti(cvt));
+						
+						rec.put(EVCombinedRec.CONTROLLED_TERMS, cvt);
 					}
 					
-					//System.out.println(cvterms.getCvm());
-					String cvtm = getCvstr(cvterms.getCvm());
+					String[] cvtm = getCvs(cvterms.getCvm());
+					
 		            if(cvtm != null && 
 	                		rs.getString("DATABASE").equalsIgnoreCase("elt"))
 		            {
-		            	 rec.put(EVCombinedRec.MAIN_HEADING, prepareMulti(cvtm));
+		            	 rec.put(EVCombinedRec.MAIN_HEADING, cvtm);
 		            	 //this field is added to generate navigators for Major terms
-		                 rec.put(rec.ECLA_CODES, prepareMulti(cvtm));
+		                 rec.put(rec.ECLA_CODES, cvtm);
+		            }
+		            
+		            String[] norole = getCvs(cvterms.getCvn());
 
-		            }
-		            
-		            String norole = getCvstr(cvterms.getCvn());
 		            if(norole != null)
-		            {            
-		            	 qfacet.setNorole(norole);
-		                 rec.put(EVCombinedRec.NOROLE_TERMS, prepareMulti(norole));
+		            {  
+		            	 qfacet.setNorole(norole.toString());
+		                 rec.put(EVCombinedRec.NOROLE_TERMS, norole);
 		            }
-		            
-		            String reagent = getCvstr(cvterms.getCva());
-		            
+
+		            String[] reagent = getCvs(cvterms.getCva());
+      
 		            if(reagent != null)
 		            {
-		            	qfacet.setReagent(reagent);
-		            	rec.put(EVCombinedRec.REAGENT_TERMS, prepareMulti(reagent));
+		            	qfacet.setReagent(reagent.toString());
+		            	rec.put(EVCombinedRec.REAGENT_TERMS, reagent);
 		            }
 		            
-		            String product = getCvstr(cvterms.getCvp());
+		            String[] product = getCvs(cvterms.getCvp());
+		            
 	                if(product != null)
 	                {
-	                	qfacet.setProduct(product);
-	                	rec.put(EVCombinedRec.PRODUCT_TERMS, prepareMulti(product));
+	                	qfacet.setProduct(product.toString());
+	                	rec.put(EVCombinedRec.PRODUCT_TERMS, product);
 	                }
 	                
-	                String mnorole = getCvstr(cvterms.getCvmn());
+	                String[] mnorole = getCvs(cvterms.getCvmn());
+
 	                if(mnorole != null)
 	                {
-	                	qfacet.setNorole(mnorole);
-	                	rec.put(EVCombinedRec.MAJORNOROLE_TERMS, prepareMulti(mnorole));
+	                	qfacet.setNorole(mnorole.toString());
+	                	rec.put(EVCombinedRec.MAJORNOROLE_TERMS, mnorole);
 	                }
 	                
-	                String mreagent = getCvstr(cvterms.getCvma());
+	                String[] mreagent = getCvs(cvterms.getCvma());
+
 	                if(mreagent != null)
-	                {	    
-	                	qfacet.setReagent(mreagent);
-	                	rec.put(EVCombinedRec.MAJORREAGENT_TERMS, prepareMulti(mreagent));
+	                {		                	
+	                	qfacet.setReagent(mreagent.toString());
+	                	rec.put(EVCombinedRec.MAJORREAGENT_TERMS, mreagent);
 	                }
 	                	                
-	                String mproduct = getCvstr(cvterms.getCvmp());
+	                String[] mproduct = getCvs(cvterms.getCvmp());
+	                	                
 	                if(mproduct != null)
-	                {
-	                	qfacet.setProduct(mproduct);
-	                	rec.put(EVCombinedRec.MAJORPRODUCT_TERMS, prepareMulti(mproduct));
+	                {	                	
+	                	qfacet.setProduct(mproduct.toString());
+	                	rec.put(EVCombinedRec.MAJORPRODUCT_TERMS, mproduct);
 	                }
 	                rec.put(rec.USPTOCODE, prepareMulti(qfacet.getValue()));	                
 				}
@@ -835,12 +834,7 @@ public class XmlCombiner
 								coordCount++;
 							}
 							recSecondBox.putIfNotNull(EVCombinedRec.DOCID, firstGUID + "_" + (coordCount));
-							
-							
-							
-							
-							
-							
+														
 							recVector.add(recSecondBox);
 						}
 					  }
@@ -998,22 +992,22 @@ public class XmlCombiner
 					{
 						if(multiStringArray2[0] != null && multiStringArray2[0].equalsIgnoreCase("b"))
 						{
-							list.add(multiStringArray2[2].concat("-").concat("(BT)").concat("-").concat(multiStringArray2[1]));
+							list.add(stripAsterics(multiStringArray2[2]).concat("-").concat("(BT)").concat("-").concat(stripAsterics(multiStringArray2[1])));
 						}	
 						else
 						{
-							list.add(multiStringArray2[2].concat("-").concat(multiStringArray2[1]));
+							list.add(stripAsterics(multiStringArray2[2]).concat("-").concat(stripAsterics(multiStringArray2[1])));
 						}
 					}
 					else
 					{
 						if(multiStringArray2[0] != null && multiStringArray2[0].equalsIgnoreCase("b"))
 						{
-							list.add(multiStringArray2[2].concat("-").concat("(BT)"));
+							list.add(stripAsterics(multiStringArray2[2]).concat("-").concat("(BT)"));
 						}
 						else
 						{
-							list.add(multiStringArray2[2]);
+							list.add(stripAsterics(multiStringArray2[2]));
 						}
 					}					
 				}
@@ -1026,7 +1020,7 @@ public class XmlCombiner
 				String[] multiStringArray2 = multiStringArray[i].split(BdParser.GROUPDELIMITER,-1);
 				for(int j = 0; j < multiStringArray2.length; j++)
 				{
-					list.add(multiStringArray2[j]);
+					list.add(stripAsterics(multiStringArray2[j]));
 				}
 			}
 		}
@@ -1443,31 +1437,17 @@ public class XmlCombiner
     }
     
     
-    public String getCvstr(List l)
+    public String[] getCvs(List list)
    	{
-   	
-   		if(l != null && l.size() > 0)
+    	
+   		if(list != null && list.size() > 0)
    		{
-   			StringBuffer buf = new StringBuffer();
-
-   			for (int i = 0; i < l.size(); i++)
-   			{
-   				CVTerm cvt = (CVTerm)l.get(i);
-   				buf.append(cvt.getTerm());
-   				if(cvt.getPostfix() != null && 
-   					!cvt.getPostfix().equals(""))
-   				{
-   					buf.append("-").append(cvt.getPostfix());
-   				}
-   				buf.append(BdParser.AUDELIMITER);
-   			//	System.out.println("::cv term::"+l.get(i));
-   			//	buf.append((String)l.get(i)).append(BdParser.AUDELIMITER);
-   			}
-   			return buf.toString();
+   			return (String[]) list.toArray(new String[0]);
+   			
    		}
    		return null;
    	}
-    
+        
     private String stripAsterics(String line)
     {
         line = perl.substitute("s/\\*+//gi", line);
