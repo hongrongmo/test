@@ -360,6 +360,16 @@ public class BdParser
 											cittext.append(AUDELIMITER);
 										}
 									}
+									String citation = cittext.toString();
+									if(this.databaseName.equalsIgnoreCase("elt"))
+									{
+										citation = citation.replaceAll("<inf>", "<sub>");
+										citation = citation.replaceAll("</inf>", "</sub>");		
+										
+										System.out.println("\nreplacing inf ::"+citation);
+									}
+									
+									
 									record.put("CITATIONTITLE",cittext.toString());
 								}
 							}
@@ -386,11 +396,13 @@ public class BdParser
 								if(abstractData.getChildTextTrim("para",ceNamespace) != null)
 								{
 									String abstractString = dictionary.mapEntity(getMixData(abstractData.getChild("para",ceNamespace).getContent()));
-									//System.out.println("about to replace ::"+abstractString);
+									//System.out.println(this.databaseName+"  ::about to replace ::"+abstractString);
 									if(this.databaseName.equalsIgnoreCase("elt"))
 									{
 										abstractString = abstractString.replaceAll("<inf>", "<sub>");
 										abstractString = abstractString.replaceAll("</inf>", "</sub>");		
+										
+										//System.out.println("\nreplacing inf ::"+abstractString);
 									}
 									
 									record.put("ABSTRACTDATA", abstractString);
