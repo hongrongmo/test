@@ -365,12 +365,10 @@ public class BdParser
 									{
 										citation = citation.replaceAll("<inf>", "<sub>");
 										citation = citation.replaceAll("</inf>", "</sub>");		
-										
-										System.out.println("\nreplacing inf ::"+citation);
+
 									}
-									
-									
-									record.put("CITATIONTITLE",cittext.toString());
+																		
+									record.put("CITATIONTITLE",citation);
 								}
 							}
 
