@@ -152,9 +152,7 @@ public class CVTerms
 					cvmarr.add("*".concat(term));
 				}
 				else if
-				(perl.match("/P/i",cvt.getPostfix())  &&
-						(cvt.getPrefix() == null ||
-						cvt.getPrefix().equals("")))
+				(perl.match("/P/i",cvt.getPostfix()))
 				{					
 					String term = cvt.getTerm().concat("-P");
 					this.cvp.add(term);
@@ -169,9 +167,7 @@ public class CVTerms
 					cvmarr.add("*".concat(term));
 				}
 				else if
-				(perl.match("/A/i",cvt.getPostfix())  &&
-						(cvt.getPrefix() == null ||
-						cvt.getPrefix().equals("")))
+				(perl.match("/A/i",cvt.getPostfix()))
 				{					
 					String term = cvt.getTerm().concat("-A");
 					this.cva.add(term);
