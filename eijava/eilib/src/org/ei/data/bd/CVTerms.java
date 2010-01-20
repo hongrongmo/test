@@ -24,7 +24,7 @@ public class CVTerms
    private List cvma = new ArrayList();
    private List cvmn = new ArrayList();
    private List cvmp = new ArrayList();
-   
+
    private String [] cvexpand = null;
    private String cvexpandstr = null;
 
@@ -60,16 +60,16 @@ public class CVTerms
 		if(l.size() > 0)
 		{
 			for(int i = 0; i < l.size(); i++)
-			{								
+			{
 				String str =(String) l.get(i);
-				CVTerm cvt = new CVTerm();				
+				CVTerm cvt = new CVTerm();
 				int boffset = 0;
 				int eoffset = str.length();
 				if(str.length()>0 && str.substring(0,2).equals("*-"))
 				{
 					cvt.setPrefix("*");
 					boffset =2;
-					
+
 				}
 				if(str.lastIndexOf("-")>1)
 				{
@@ -111,34 +111,32 @@ public class CVTerms
 				//System.out.println("pref::"+cvt.getPrefix());
 				//System.out.println("postf::"+cvt.getPostfix());
 				//System.out.println("term::"+cvt.getTerm());
-				addToarrcvTerms(cvt);				
+				addToarrcvTerms(cvt);
 			}
 		}
 		parse(this.arrcvTerms);
 	}
-	
+
 	public void parse(List cvterms)
 	{
 		if(cvterms != null && cvterms.size() >0)
 		{
 			ArrayList cvarr = new ArrayList();
-			ArrayList cvmarr = new ArrayList();			
+			ArrayList cvmarr = new ArrayList();
 			for (int i = 0; i < cvterms.size();i++)
 			{
 				CVTerm cvt = (CVTerm)cvterms.get(i);
-		
+
 				//N and *N
 				if(perl.match("/\\*N/i",cvt.getPostfix()))
-				{					
+				{
 					String term = cvt.getTerm().concat("-N");
 					this.cvmn.add(term);
 					cvmarr.add("*".concat(term));
 				}
 				else if
-				(perl.match("/N/i",cvt.getPostfix())  &&
-						(cvt.getPrefix() == null ||
-						cvt.getPrefix().equals("")))
-				{					
+				(perl.match("/N/i",cvt.getPostfix()))
+				{
 					String term = cvt.getTerm().concat("-N");
 					this.cvn.add(term);
 					cvarr.add(term);
@@ -153,7 +151,7 @@ public class CVTerms
 				}
 				else if
 				(perl.match("/P/i",cvt.getPostfix()))
-				{					
+				{
 					String term = cvt.getTerm().concat("-P");
 					this.cvp.add(term);
 					cvarr.add(term);
@@ -161,14 +159,14 @@ public class CVTerms
 
 				//P and *P
 				if(perl.match("/\\*A/i",cvt.getPostfix()))
-				{					
+				{
 					String term = cvt.getTerm().concat("-A");
 					this.cvma.add(term);
 					cvmarr.add("*".concat(term));
 				}
 				else if
 				(perl.match("/A/i",cvt.getPostfix()))
-				{					
+				{
 					String term = cvt.getTerm().concat("-A");
 					this.cva.add(term);
 					cvarr.add(term);
@@ -178,8 +176,8 @@ public class CVTerms
 						cvt.getPrefix().equals(""))&&
 						(cvt.getPostfix() == null ||
 						cvt.getPostfix().equals("")))
-				{					
-					String term = cvt.getTerm();	
+				{
+					String term = cvt.getTerm();
 					this.cvt.add(term);
 					cvarr.add(term);
 				}
@@ -198,12 +196,12 @@ public class CVTerms
 				}
 				if(cvmarr != null && cvmarr.size()>0)
 				{
-					this.cvmexpand = (String[]) cvmarr.toArray(new String[0]);										
+					this.cvmexpand = (String[]) cvmarr.toArray(new String[0]);
 				}
 			}
 		}
 	}
-	
+
 
    public String getCvmexpandstr()
    	{
@@ -316,19 +314,19 @@ public class CVTerms
 	{
 		return cvt;
 	}
-	
-	public List getArrcvTerms() 
+
+	public List getArrcvTerms()
 	{
 		return arrcvTerms;
 	}
 
-	public void setArrcvTerms(List arrcvTerms) 
+	public void setArrcvTerms(List arrcvTerms)
 	{
 		this.arrcvTerms = arrcvTerms;
 	}
 
-	public void addToarrcvTerms(CVTerm term) 
+	public void addToarrcvTerms(CVTerm term)
 	{
 		this.arrcvTerms.add(term);
-	}	
+	}
 }
