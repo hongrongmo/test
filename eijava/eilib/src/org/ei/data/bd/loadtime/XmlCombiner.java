@@ -54,7 +54,6 @@ public class XmlCombiner
     public static void main(String args[])
         throws Exception
     {
-    	System.out.println("STARTING UP");
         String url = args[0];
         String driver = args[1];
         String username = args[2];
@@ -105,6 +104,7 @@ public class XmlCombiner
         }
         else if(loadNumber == 0)
         {
+
         	for(int yearIndex = 1904; yearIndex <= 2009; yearIndex++)
             {
         	  System.out.println("Processing year " + yearIndex + "...");
@@ -167,7 +167,7 @@ public class XmlCombiner
             else
             {
             	rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER,PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,APICT, APICT1,APILT, APILT1,CLASSIFICATIONDESC,APIAMS, SEQ_NUM from " + Combiner.TABLENAME + " where SEQ_NUM is not null and PUBLICATIONYEAR='" + year + "' AND loadnumber != 0 and loadnumber < 1000000 and database='" + Combiner.CURRENTDB + "'");
-             }
+            }
             System.out.println("Got records ...from table::"+Combiner.TABLENAME);
             writeRecs(rs);
             System.out.println("Wrote records.");
@@ -591,8 +591,8 @@ public class XmlCombiner
                 }
 
                 rec.put(EVCombinedRec.DEDUPKEY,
-                        getDedupKey(rec.getString("ISSN"),
-                                    rec.getString("CODEN"),
+                        getDedupKey(rec.get(EVCombinedRec.ISSN),
+                                    rec.get(EVCombinedRec.CODEN),
                                     rs.getString("VOLUME"),
                                     rs.getString("ISSUE"),
                                     getPage(rs.getString("PAGE"), rs.getString("ARTICLENUMBER"))));
@@ -601,7 +601,7 @@ public class XmlCombiner
                 rec.put(EVCombinedRec.ISSUE, rs.getString("ISSUE"));
                 //rec.put(EVCombinedRec.STARTPAGE, getFirstPage(getPage(rs.getString("PAGE"), rs.getString("ARTICLENUMBER"), rs.getString("ISSN"))));
 				rec.put(EVCombinedRec.STARTPAGE, getPage(getFirstPage(rs.getString("PAGE")),rs.getString("ARTICLENUMBER")));
-
+                
                 rec.put(EVCombinedRec.ACCESSION_NUMBER,
                         rs.getString("ACCESSNUMBER"));
 
@@ -833,8 +833,7 @@ public class XmlCombiner
 							{
 								coordCount++;
 							}
-							recSecondBox.putIfNotNull(EVCombinedRec.DOCID, firstGUID + "_" + (coordCount));
-														
+							recSecondBox.putIfNotNull(EVCombinedRec.DOCID, firstGUID + "_" + (coordCount));														
 							recVector.add(recSecondBox);
 						}
 					  }
@@ -1149,8 +1148,7 @@ public class XmlCombiner
 		BdPage pages = new BdPage(v);
 		return pages.getStartPage();
 	}
-
-
+    
     private String getDedupKey(String issn,
                                String coden,
                                String volume,
@@ -1158,7 +1156,6 @@ public class XmlCombiner
                                String page)
         throws Exception
     {
-
         String firstVolume = getFirstNumber(volume);
         String firstIssue = getFirstNumber(issue);
         String firstPage = getFirstPage(page);
@@ -1367,7 +1364,6 @@ public class XmlCombiner
 
                 stmt = con.createStatement();
                 rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER,PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,CLASSIFICATIONDESC,APIAMS,SEQ_NUM from " + Combiner.TABLENAME + " where seq_num is not null and loadnumber != 0 and loadnumber < 1000000 and database='" + Combiner.CURRENTDB + "'");
-				System.out.println("Got records1 ...");
                 writeRecs(rs);
                 this.writer.end();
                 this.writer.flush();
