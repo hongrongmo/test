@@ -153,19 +153,19 @@ public class BDDocBuilder
 				}
         // do not call build field, getIssn will return the ElementDataMap
 				formatRIS(getIssn(rset.getString("ISSN"),rset.getString("EISSN"),ht,dataFormat), dataFormat, Keys.ISSN, Keys.RIS_SN);
-				
+
 				buildField(Keys.ABBRV_SERIAL_TITLE,rset.getString("SOURCETITLEABBREV"),ht);
-				
-				
+
+
 				formatRIS(buildField(Keys.RIS_M1, database.getName(), ht),dataFormat,Keys.RIS_M1,Keys.RIS_M1);
-						
+
 				buildField(Keys.VOLISSUE,getVolumeIssue(rset.getString("VOLUME"),rset.getString("ISSUE")),ht);
 
-				if(database.getMask()==1024 && 
+				if(database.getMask()==1024 &&
 						rset.getString("SOURC") != null &&
 						dataFormat.equals(FullDoc.FULLDOC_FORMAT))
 				{
-					ht.put(Keys.SOURCE, new XMLWrapper(Keys.SOURCE, StringUtil.substituteChars(rset.getString("SOURC"))));  	
+					ht.put(Keys.SOURCE, new XMLWrapper(Keys.SOURCE, StringUtil.substituteChars(rset.getString("SOURC"))));
 				}
 				else if(dataFormat.equals(Citation.CITATION_FORMAT)||
 								dataFormat.equals(Abstract.ABSTRACT_FORMAT)||
@@ -253,13 +253,13 @@ public class BDDocBuilder
 				buildField(Keys.PATAPPNUM,rset.getString("APPLN"),ht);
 				buildField(Keys.PATASSIGN,rset.getString("ASSIG"),ht);
 
-				if(!dataFormat.equals(Citation.CITATION_FORMAT) && 
+				if(!dataFormat.equals(Citation.CITATION_FORMAT) &&
 						!dataFormat.equalsIgnoreCase(Citation.XMLCITATION_FORMAT))
 				{
 					buildField(Keys.CONF_CODE,rset.getString("CONFCODE"),ht);
 					buildField(Keys.NUMBER_OF_REFERENCES,rset.getString("REFCOUNT"),ht);
 					buildField(Keys.TREATMENTS,getTreatments(rset.getString("TREATMENTCODE"),database),ht);
-					
+
 					if(database.getMask() != 1024)
 					{
 						formatRIS(buildField(Keys.ABSTRACT,getAbstract(rset),ht),dataFormat,Keys.ABSTRACT,Keys.RIS_N2);
@@ -269,21 +269,21 @@ public class BDDocBuilder
 						String secondarySrc = StringUtil.substituteChars(rset.getString("SECSOURCE"));
 						String secondaryTitle = StringUtil.substituteChars(rset.getString("SECSOURCETITLE"));
 						String cc = StringUtil.substituteChars(rset.getString("CLASSIFICATIONDESC"));
-						
-						 if (!perl.match("/Chemical Abstracts/i", secondarySrc) 
-								 && !perl.match("/Chemical Abstracts/i", secondaryTitle)) 
+
+						 if (!perl.match("/Chemical Abstracts/i", secondarySrc)
+								 && !perl.match("/Chemical Abstracts/i", secondaryTitle))
 						 {
 							 formatRIS(buildField(Keys.ABSTRACT,getAbstract(rset),ht),
 			                    				dataFormat,Keys.ABSTRACT,Keys.RIS_N2);
 						 }
-			             else 
+			             else
 			             {
 			            	 if (perl.match("/Oil Field Chemicals/i", cc))
-			            	 {	
+			            	 {
 			            		 formatRIS(buildField(Keys.ABSTRACT,getAbstract(rset),ht),
-				                    			dataFormat,Keys.ABSTRACT,Keys.RIS_N2);			                 
+				                    			dataFormat,Keys.ABSTRACT,Keys.RIS_N2);
 			            	 }
-			            }			                
+			            }
 					}
 					buildField(Keys.SPONSOR,setSponsorData(rset.getString("CONFSPONSORS")),ht);
 					formatRIS(buildField(Keys.START_PAGE,getStartPage(rset.getString("PAGE")),ht),dataFormat,Keys.START_PAGE,Keys.RIS_SP);
@@ -298,67 +298,67 @@ public class BDDocBuilder
 					if (database.getMask()!=128 && database.getMask()!=1024)
 					{
 						buildField(Keys.CLASS_CODES,getClassification(Keys.CLASS_CODES,rset.getString("CLASSIFICATIONCODE"),database),ht);
-						formatRIS(buildField(Keys.MAIN_HEADING,rset.getString("MAINHEADING"),ht), dataFormat,Keys.MAIN_HEADING, Keys.RIS_KW);
+						formatRIS(buildField(Keys.MAIN_HEADING,getMainTerm(rset.getString("MAINHEADING")),ht), dataFormat,Keys.MAIN_HEADING, Keys.RIS_KW);
 					}
 					else if (database.getMask()==1024)
 					{
 						buildField(Keys.CLASS_CODES,getClassification(Keys.CLASS_CODES,rset.getString("CLASSIFICATIONDESC"),database),ht);
-						
+
 						//formatRIS(buildField(Keys.MAIN_HEADING,rset.getString("MAINHEADING"),ht), dataFormat,Keys.MAIN_HEADING, Keys.RIS_KW);
 
 					}
-					
+
 					String apict =rset.getString("APICT");
 					String apict1 = rset.getString("APICT1");
-					ArrayList mcv = new ArrayList();			
-			
+					ArrayList mcv = new ArrayList();
+
 					CVTerms cvterms = null;
 					if(apict != null && !apict.trim().equals(""))
 					{
-						if(apict1 != null && 
+						if(apict1 != null &&
 								!apict1.trim().equals(""))
 						{
 							apict = apict.concat(apict1);
 						}
 						cvterms = new CVTerms(apict);
-						cvterms.parse();												
+						cvterms.parse();
 					}
-			
+
 					if(cvterms != null)
-					{						
+					{
 						String cvtstr = cvterms.getCvexpandstr();
 						String cvtmjr = cvterms.getCvmexpandstr();
 						if (cvtstr != null  && cvtstr.length() > 0)
 						{
-							ht.put(ELT_CONTROLLED_TERMS, new XMLMultiWrapper2(ELT_CONTROLLED_TERMS,setCVS(StringUtil.substituteChars(cvtstr)))); 
+							ht.put(ELT_CONTROLLED_TERMS, new XMLMultiWrapper2(ELT_CONTROLLED_TERMS,setCVS(StringUtil.substituteChars(cvtstr))));
 							formatRIS(ht,dataFormat,Keys.CONTROLLED_TERMS,Keys.RIS_CVS);
 						}
 						if (cvtmjr != null && cvtmjr.length() > 0)
 						{
 							ht.put(ELT_MAJOR_TERMS, new XMLMultiWrapper2(ELT_MAJOR_TERMS,setCVS(StringUtil.substituteChars(cvtmjr))));
-							formatRIS(ht,dataFormat,ELT_MAJOR_TERMS,Keys.RIS_CVMS);						
+							formatRIS(ht,dataFormat,ELT_MAJOR_TERMS,Keys.RIS_CVMS);
 						}
-											
+
 					}
-					
+
 					if (rset.getString("APIATM") != null)
 	                {
-	                    ht.put(Keys.INDEXING_TEMPLATE, new XMLWrapper(Keys.INDEXING_TEMPLATE, 	                    		
-	                    		replaceBar(formatATM(StringUtil.substituteChars(rset.getString("APIATM"))))));	                    
+	                    ht.put(Keys.INDEXING_TEMPLATE, new XMLWrapper(Keys.INDEXING_TEMPLATE,
+	                    		replaceBar(formatATM(StringUtil.substituteChars(rset.getString("APIATM"))))));
 	                }
-	     
+
 	                String linkedTerms = StringUtil.replaceNullWithEmptyString(rset.getString("APILT"));
 	                if (!linkedTerms.equals("") && !linkedTerms.equalsIgnoreCase("QQ"))
 	                {
 	                	String apiltowerflow = rset.getString("APILT1");
 	                	if(apiltowerflow != null && !apiltowerflow.trim().equals("") )
 	                	{
-	                		linkedTerms = linkedTerms.concat(StringUtil.replaceNullWithEmptyString(apiltowerflow));		
-		                }		                    
+	                		linkedTerms = linkedTerms.concat(StringUtil.replaceNullWithEmptyString(apiltowerflow));
+		                }
 	                    ht.put(Keys.LINKED_TERMS, new XMLWrapper(Keys.LINKED_TERMS,
 	                                StringUtil.substituteChars(removePoundSign(replaceDelim(linkedTerms)))));
 	                }
-	                							
+
 					if (rset.getString("APIATM") != null) {
 
 	                    if (rset.getString("APILTM") != null)
@@ -372,7 +372,7 @@ public class BDDocBuilder
 	                        }
 	                    }
 	                } // AN
-												
+
 					formatRIS(buildField(Keys.UNCONTROLLED_TERMS,setElementData(rset.getString("UNCONTROLLEDTERM")),ht), dataFormat,Keys.UNCONTROLLED_TERMS,Keys.RIS_FLS);
 					buildField(Keys.ABSTRACT_TYPE,getAbstractType(rset.getString("ABSTRACTORIGINAL")),ht);
 					buildField(Keys.MEDIA,rset.getString("MEDIA"),ht);
@@ -390,9 +390,9 @@ public class BDDocBuilder
 					}
 					else if(database.getMask()==1024)
 					{
-						
-				        if (rset.getString("SECSOURCETITLE") != null) 
-				        {			
+
+				        if (rset.getString("SECSOURCETITLE") != null)
+				        {
 				        	StringBuffer strSecSour = new StringBuffer();
 		                    strSecSour.append(rset.getString("SECSOURCETITLE"));
 		                    if (rset.getString("SECVOLUME") != null) {
@@ -408,15 +408,15 @@ public class BDDocBuilder
 		                        strSecSour.append(" (").append(formatJournalSourcePub(rset.getString("SECPUBDATE"))).append(")");
 		                    }
 		                    buildField(new Key(Keys.SECONDARY_SOURCE,"Secondary source"),strSecSour.toString(),ht);
-		                    
+
 		                    // remove source
 				        }
-				        
+
 				        else
 				        {
 				        	buildField(new Key(Keys.SECONDARY_SOURCE,"Secondary source"),rset.getString("SECSOURCE"),ht);
 				        }
-				        
+
 					}
 					buildField(Keys.NUMBER_OF_FIGURES,rset.getString("NOFIG"),ht);
 					buildField(Keys.NUMBER_OF_TABLES,rset.getString("NOTAB"),ht);
@@ -432,8 +432,8 @@ public class BDDocBuilder
 
 					//buildField(Keys.PI,rset.getString("PII"),ht);
 				}
-				
-				if(rset.getString("CORRESPONDENCENAME")!= null || 
+
+				if(rset.getString("CORRESPONDENCENAME")!= null ||
 						rset.getString("CORRESPONDENCEEADDRESS") != null)
 				{
 					buildField(Keys.CORRESPONDING_AUTHORS,
@@ -441,14 +441,14 @@ public class BDDocBuilder
 									rset.getString("CORRESPONDENCENAME"),
 									rset.getString("CORRESPONDENCEEADDRESS")),ht);
 				}
-				
+
 				if(rset.getString("AFFILIATION") == null)
 				{
 					buildField(Keys.CORRESPONDING_AUTHORS_AFF,
 							getCorrespondingAuAff(rset.getString("CORRESPONDENCEAFFILIATION")),ht);
 				}
-				
-				if (database.getMask()==1024 && 
+
+				if (database.getMask()==1024 &&
 						rset.getString("CORRESPONDENCEAFFILIATION") != null)
 				{
 					buildField(Keys.CORRESPONDING_AUTHORS_AFF,
@@ -503,7 +503,7 @@ public class BDDocBuilder
         return list;
 
 	}
-    
+
     public String replaceBar(String str) {
         String result = perl.substitute("s/\\|/<\\/br>/g", str);
         return result;
@@ -584,7 +584,7 @@ public class BDDocBuilder
         String id= new String(BdParser.IDDELIMITER);
         parsedCT = perl.substitute("s/"+gd+"/|/g", parsedCT);
         parsedCT = perl.substitute("s/"+id+"/;/g", parsedCT);
-        
+
       //  parsedCT = perl.substitute("s/IDDELIMITER/;/g", parsedCT);
 
         return parsedCT;
@@ -612,12 +612,12 @@ public class BDDocBuilder
 
 	private String getLanguage(String languageString, String dataFormat) throws Exception
 	{
-		
+
 		if(languageString != null)
 		{
-			if((dataFormat.equals(Citation.CITATION_FORMAT) || 
-					dataFormat.equals(Abstract.ABSTRACT_FORMAT)) && 
-					(languageString.equals("en") || 
+			if((dataFormat.equals(Citation.CITATION_FORMAT) ||
+					dataFormat.equals(Abstract.ABSTRACT_FORMAT)) &&
+					(languageString.equals("en") ||
 					languageString.equals("eng") ||
 					languageString.equalsIgnoreCase("english")))
 			{
@@ -669,14 +669,14 @@ public class BDDocBuilder
 			String publisherName)
 	{
 		String source = null;
-		if(BitMaskNumber == 1024 && 
+		if(BitMaskNumber == 1024 &&
 				sourc != null)
 		{
 			return sourc;
 		}
-		else if(sourceTitle != null || 
+		else if(sourceTitle != null ||
 				sourceTitleAbbrev != null ||
-				issueTitle  != null || 
+				issueTitle  != null ||
 				publisherName  != null )
 		{
 			if(sourceTitle != null)
@@ -711,16 +711,16 @@ public class BDDocBuilder
 				sourc == null &&
 				sourceTitle == null &&
 				sourceTitleAbbrev == null &&
-				issueTitle  == null && 
+				issueTitle  == null &&
 				publisherName   == null )
 		{
 			return "NO_SO";
 		}
 		else if(BitMaskNumber != 1024 &&
-				sourceTitle == null && 
+				sourceTitle == null &&
 				sourceTitleAbbrev == null &&
-				issueTitle  == null && 
-				publisherName   == null )			
+				issueTitle  == null &&
+				publisherName   == null )
 		{
 				return "NO_SO";
 		}
@@ -736,7 +736,7 @@ public class BDDocBuilder
 		}
 		return null;
 	}
-	
+
 
   private static final Pattern pubdateregex = Pattern.compile("(\\w+) (\\d{2}),(\\d{4})");
 
@@ -865,7 +865,7 @@ public class BDDocBuilder
 		return ht;
 
 	}
-	
+
 
 
 	private String getFirstPublisher(String pubName)
@@ -1365,7 +1365,7 @@ public class BDDocBuilder
 
 	private Contributors getAuthors(Key key,
 		        					String authorString,
-		        					String authorString1, 
+		        					String authorString1,
 		        					String dataFormat)
 
 	throws Exception
@@ -1390,16 +1390,16 @@ public class BDDocBuilder
 			{
 
 				BdAuthor author = (BdAuthor)authorList.get(i);
-				
+
 				String auDisplayName = cleanBadCharacters(author.getDisplayName());
 				if(dataFormat.equalsIgnoreCase(RIS.RIS_FORMAT) ||
 						dataFormat.equalsIgnoreCase(Citation.XMLCITATION_FORMAT))
 				{
 					authorNames.add(new Contributor(key,
 											auDisplayName));
-				}	
-				
-				else 
+				}
+
+				else
 				{
 					authorNames.add(new Contributor(key,
 											auDisplayName,
@@ -1755,14 +1755,14 @@ public class BDDocBuilder
 		}
 		return result;
 	}
-	
+
 	private Perl5Util perl = new Perl5Util();
-	
+
 	public String replaceDelim(String str)
 	{
-		if(str.indexOf(BdParser.IDDELIMITER)>-1 || 
+		if(str.indexOf(BdParser.IDDELIMITER)>-1 ||
 				str.indexOf(BdParser.GROUPDELIMITER)>-1 ||
-				str.indexOf(BdParser.AUDELIMITER)>-1) 
+				str.indexOf(BdParser.AUDELIMITER)>-1)
 		{
 	        String gd = new String(BdParser.GROUPDELIMITER);
 	        String id= new String(BdParser.IDDELIMITER);
@@ -1775,13 +1775,13 @@ public class BDDocBuilder
 
 		return str;
 	}
-	
+
 	public String[] setEltTermsElementData(String elementVal, ArrayList mcv)
 	{
 		String[] array = null;
 		ArrayList cv = new ArrayList();
-		
-		
+
+
 		if(elementVal!=null && elementVal.trim().length()>0)
 		{
 			if(elementVal.indexOf(BdParser.IDDELIMITER)>-1)
@@ -1794,17 +1794,17 @@ public class BDDocBuilder
 				array[0]=elementVal;
 			}
 		}
-		
+
 		for (int i = 0; i < array.length; i++)
 		{
 			if(perl.match("/[*]/",array[i]))
-			{				
+			{
 				mcv.add(array[i]);
 			}
 			else
 			{
 				cv.add(array[i]);
-			}			
+			}
 		}
 		return (String[]) cv.toArray(new String[0]);
 	}
@@ -1825,6 +1825,20 @@ public class BDDocBuilder
 			}
 		}
 		return array;
+	}
+
+	public String getMainTerm(String mainTerm)
+	{
+		String term = mainTerm;
+		if (mainTerm.indexOf(BdParser.AUDELIMITER)>-1)
+		{
+			term = mainTerm.substring(0,mainTerm.indexOf(BdParser.AUDELIMITER));
+
+		}
+		//System.out.println("mainTerm= "+mainTerm);
+		//System.out.println("term= "+term);
+		return term;
+
 	}
 
 	public ElementData getTreatments(String treatments, Database database)
@@ -1932,17 +1946,17 @@ public class BDDocBuilder
 
 		}
 	}
-	
-	  private KeyValuePair[] setCVS(String cvs) 
+
+	  private KeyValuePair[] setCVS(String cvs)
 	  {
 	        ArrayList list = new ArrayList();
 	        StringTokenizer st = new StringTokenizer(cvs, ";", false);
 	        String strToken = null;
 
-	        while (st.hasMoreTokens()) 
+	        while (st.hasMoreTokens())
 	        {
 	            strToken = st.nextToken().trim();
-	            if (strToken.length() > 0) 
+	            if (strToken.length() > 0)
 	            {
 	            	strToken = perl.substitute("s/\\#//g", strToken);
 	                KeyValuePair k = new KeyValuePair(getTermField(strToken), strToken);
@@ -1983,8 +1997,8 @@ public class BDDocBuilder
 	        return field;
 
 	    }
-	    
-	    
+
+
 	    public String formatJournalSourcePub (String jspub)
 	    {
 	    	if(jspub!=null && jspub.indexOf(BdParser.IDDELIMITER)>-1)
@@ -1995,15 +2009,15 @@ public class BDDocBuilder
 		            {
 		            	jspub = (String) parms.get(0);
 		            }
-			}	    	    	
+			}
 			return jspub;
 	    }
-	    
-	    public String formatAbstrNumber(String sVal) 
+
+	    public String formatAbstrNumber(String sVal)
 	    {
 	        StringBuffer sbSan = new StringBuffer();
 	        sVal = perl.substitute("s/;//g", sVal);
-	        if (sVal.indexOf(":") > -1) 
+	        if (sVal.indexOf(":") > -1)
 	        {
 	            List parms = new ArrayList();
 	            perl.split(parms, "/:/", sVal);
@@ -2012,25 +2026,25 @@ public class BDDocBuilder
 	        }
 	        sbSan.append("abstract no. ").append(sVal);
 	        return sbSan.toString();
-	    } 
-	    
-	    private String formatVolume(String str) 
+	    }
+
+	    private String formatVolume(String str)
 	    {
 	        String volume = "";
-	        if (str == null) 
+	        if (str == null)
 	        {
 	            return "";
 	        }
 	        volume = perl.substitute("s/[v,V,\\.]//g", str);
 	        volume = perl.substitute("s/\\^/-/g", volume);
 	        return volume;
-	    } 
-	    
-	    
-	    private String formatIssue(String str) 
+	    }
+
+
+	    private String formatIssue(String str)
 	    {
 	        String issue = new String();
-	        if (str == null) 
+	        if (str == null)
 	        {
 	            return "";
 	        }
