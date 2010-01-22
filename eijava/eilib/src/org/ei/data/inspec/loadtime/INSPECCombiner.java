@@ -756,7 +756,7 @@ public class INSPECCombiner
     {
 
         String year = "";
-        String regularExpression = "((19\\d|200)\\d)\\w?";
+        String regularExpression = "((19\\d|20\\d)\\d)\\w?";
         Pattern p = Pattern.compile(regularExpression);
         Matcher m = p.matcher(y);
         if (m.find())
@@ -770,7 +770,7 @@ public class INSPECCombiner
    private boolean validYear(String year)
     {
 
-        return year.matches("[1-2][09][0-9][0-9]");
+        return year.matches("[1-2][0-9][0-9][0-9]");
     }
 
    // 06/07 TS - method added to extract print and online issn from new fields naaff , neaff
