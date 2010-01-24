@@ -1829,6 +1829,10 @@ public class BDDocBuilder
 
 	public String getMainTerm(String mainTerm)
 	{
+		if(mainTerm == null)
+		{
+			return null;
+		}
 		String term = mainTerm;
 		if (mainTerm.indexOf(BdParser.AUDELIMITER)>-1)
 		{
