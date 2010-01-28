@@ -836,13 +836,15 @@ public class BDDocBuilder
 
 	private ElementDataMap buildField(Key key,ElementData data, ElementDataMap ht) throws Exception
 	{
-		if(data !=null)
+		if(data !=null && data.getElementData() != null)
 		{
 			ht.put(key,data);
 		}
 
 		return ht;
 	}
+	
+
 
 	private ElementDataMap buildField(Key key,String data, ElementDataMap ht) throws Exception
 	{
