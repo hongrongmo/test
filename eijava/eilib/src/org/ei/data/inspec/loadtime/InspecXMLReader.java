@@ -367,7 +367,7 @@ public class InspecXMLReader extends FilterReader
 			   for (int k = 0; k < l.size(); k++)
 			   {
 				   Element el = (Element) l.get(k);
-				   name.append(el.getContent());
+				   name.append(el.getTextTrim());
 				   if(k < (l.size()-1))
 				   {
 					   name.append(", ");
@@ -377,12 +377,12 @@ public class InspecXMLReader extends FilterReader
 		   name.append(IDDELIMITER);
 		   if(n.getChild("email")!=null)
 		   {
-			   name.append(n.getChild("email").getContent());
+			   name.append(n.getChild("email").getTextTrim());
 		   }
 		   name.append(IDDELIMITER);
 		   if(n.getChild("pid") != null)
 		   {
-			   name.append(n.getChild("pid").getContent());			   
+			   name.append(n.getChild("pid").getTextTrim());			   
 		   }
 		   name.append(AUDELIMITER);
 	    }
@@ -451,13 +451,13 @@ public class InspecXMLReader extends FilterReader
 	        oneAffiliation.append(IDDELIMITER);
 	        if(m.getChild("orgn")!= null)
 	        {
-	        	oneAffiliation.append(m.getChild("orgn").getContent());	        	
+	        	oneAffiliation.append(m.getChild("orgn").getTextTrim());	        	
 	        }
 	        //dept
 	        oneAffiliation.append(IDDELIMITER);
 	        if(m.getChild("dept") != null)
 	        {
-	        	oneAffiliation.append(m.getChild("dept").getContent());	        	
+	        	oneAffiliation.append(m.getChild("dept").getTextTrim());	        	
 	        }
 	        //addressline - could be multy
 	        oneAffiliation.append(IDDELIMITER);
@@ -469,7 +469,7 @@ public class InspecXMLReader extends FilterReader
 	        	for (int i = 0 ; i < l.size(); i++)
 	        	{
 	        		Element el = (Element) l.get(i);
-	        		addline.append(el.getContent());
+	        		addline.append(el.getTextTrim());
 	        		if(i < (l.size()-1))
 	        		{
 	        			addline.append(", ");
@@ -482,7 +482,7 @@ public class InspecXMLReader extends FilterReader
 	        //city
 	        if(m.getChild("city")!= null)
 	        {
-	        	oneAffiliation.append(m.getChild("city").getContent());
+	        	oneAffiliation.append(m.getChild("city").getTextTrim());
 	        	
 	        }
 	        
@@ -490,14 +490,14 @@ public class InspecXMLReader extends FilterReader
 	        //state
 	        if(m.getChild("state") != null)
 	        {
-	        	oneAffiliation.append(m.getChild("state").getContent());
+	        	oneAffiliation.append(m.getChild("state").getTextTrim());
 	        }
 	        
 	        oneAffiliation.append(IDDELIMITER);
 	        //pcode
 	        if(m.getChild("pcode") != null)
 	        {
-	        	oneAffiliation.append(m.getChild("pcode").getContent());
+	        	oneAffiliation.append(m.getChild("pcode").getTextTrim());
 	        }
 	        
 	        oneAffiliation.append(IDDELIMITER);
@@ -505,7 +505,7 @@ public class InspecXMLReader extends FilterReader
 	        
 	        if(m.getChild("orgid") != null)
 	        {
-	        	oneAffiliation.append(m.getChild("orgid").getContent());
+	        	oneAffiliation.append(m.getChild("orgid").getTextTrim());
 	        }
 	        
 	        if(affmulti1.length() > 0 )
