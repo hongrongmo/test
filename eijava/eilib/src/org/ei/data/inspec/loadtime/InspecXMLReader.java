@@ -400,6 +400,7 @@ public class InspecXMLReader extends FilterReader
 
 	private StringBuffer getAffiliation(Element e, String keyprfx)
     {
+		    
 		// field AAFF or EAFF depend on keyprfx
 		StringBuffer aff = new StringBuffer();
 		// 06/07 new db field for multi affiliations and field overflow
@@ -1075,6 +1076,7 @@ public class InspecXMLReader extends FilterReader
 	private StringBuffer getIndexing(Element e,String type)
 	{
 		StringBuffer terms = new StringBuffer();
+		String elementname = e.getName().trim();
 		List lt = e.getChildren(type);
 
 		for(int i=0;i<lt.size();i++)
@@ -1082,19 +1084,20 @@ public class InspecXMLReader extends FilterReader
 			Element t = (Element)lt.get(i);
 			if(t.getName().equals("cc"))
 			{
-
 				if(t.getAttributeValue("type")!=null && (t.getAttributeValue("type")).equals("prime"))
 				{
 					terms.append("*");
 				}
 				terms.append(t.getChildTextTrim("code"));
 				
-				if(type.trim().equalsIgnoreCase("ipcg") &&  t.getChild("cct")!= null )
+				if(elementname.equalsIgnoreCase("ipcg") &&  
+										t.getChild("cct")!= null )
 				{
 					terms.append(IDDELIMITER);
 					terms.append(t.getChildTextTrim("cct"));
 				}
 				terms.append(AUDELIMITER);
+
 			}
 			else
 			{
