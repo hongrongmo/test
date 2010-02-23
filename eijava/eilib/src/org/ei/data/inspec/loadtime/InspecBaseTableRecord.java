@@ -45,7 +45,8 @@ public class InspecBaseTableRecord
 								"TDATE",
 								"FDATE",
    								"PPDATE",
-							    "LOAD_NUMBER"};
+							    "LOAD_NUMBER",
+							    "IPC"};
 		public static final String[] ibfbaseTableFields=
 		{
 									"M_ID",
@@ -115,7 +116,8 @@ public class InspecBaseTableRecord
 									"TPODATE",
 									"FDATE",
 									"FODATE",
-									"LOAD_NUMBER"
+									"LOAD_NUMBER",
+									"IPC"
 									};
 
 	public static final String[] insxmlbaseTableFields=
@@ -225,7 +227,8 @@ public class InspecBaseTableRecord
 									"OFDATE",
 									"PPDATE",
 									"OPPDATE",
-									"LOAD_NUMBER"
+									"LOAD_NUMBER",
+									"IPC"
 									};
 
 
