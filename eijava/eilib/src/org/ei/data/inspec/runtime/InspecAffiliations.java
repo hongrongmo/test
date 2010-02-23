@@ -16,6 +16,7 @@ import org.ei.data.bd.loadtime.*;
  * TODO To change the template for this generated type comment go to
  * Window - Preferences - Java - Code Style - Code Templates
  */
+  //(aff?, orgn?, dept?, addline*, city?, state?, pcode?, cntry?, orgid?)  -- raw data
 public class InspecAffiliations
 {
     private BdAffiliations affs ;
@@ -44,7 +45,6 @@ public class InspecAffiliations
         affElementsExpanded.add("affOrganisationIdentifier");
     }
 
-    
     public InspecAffiliations(String insAffiliations)
     {
 
@@ -113,18 +113,20 @@ public class InspecAffiliations
     					//1
     					if(daff.length >0 && daff[0] != null)
     					{
-    						formatedData.append(daff[0]);
+    						//formatedData.append(daff[0]);
     					}
     					formatedData.append(BdParser.IDDELIMITER);
     					//2
     					if(daff.length >4 && daff[4] != null)
     					{
+    						//ok
     						formatedData.append(daff[4]); 
     					}
     					formatedData.append(BdParser.IDDELIMITER);
     					//3
     					if(daff.length >2 && daff[2] != null)
     					{
+    						//ok
     						formatedData.append(daff[2]); //3
     					}
     					formatedData.append(BdParser.IDDELIMITER);
@@ -137,7 +139,7 @@ public class InspecAffiliations
     					//5
     					if(daff.length >5 && daff[5] != null)
     					{
-    						formatedData.append(daff[5]); 
+    						//formatedData.append(daff[5]); 
     					}
     					formatedData.append(BdParser.IDDELIMITER);
     					//6
@@ -149,16 +151,15 @@ public class InspecAffiliations
     					//7
     					if(daff.length >7 && daff[7] != null)
     					{
-    						formatedData.append(daff[7]); //7
+    						//formatedData.append(daff[7]); //7
     					}
     					formatedData.append(BdParser.IDDELIMITER);
     					//8
     					if(daff.length >0 && daff[0] != null)
     					{
-    						formatedData.append(daff[0]);
+    						//formatedData.append(daff[0]);
     					}	
     				} 
-    				System.out.println(formatedData.toString());
     				formatedData.append(BdParser.AUDELIMITER);
     			}
     		}   		
