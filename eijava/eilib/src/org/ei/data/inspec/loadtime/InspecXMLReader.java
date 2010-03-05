@@ -421,10 +421,10 @@ public class InspecXMLReader extends FilterReader
         	{
         		getMixData(m.getChild("aff").getContent(),aff);
     	        if(m.getAttribute("rid")!=null)
-    	        {
-    	        	aff.append(IDDELIMITER);
+    	        {   	        	
     	        	aff.append(m.getAttribute("rid").getValue());
     	        }
+    	        aff.append(IDDELIMITER);
         	}
         	oneAffiliation.append(IDDELIMITER);
 	        if(m.getAttribute("rid")!=null)
@@ -450,6 +450,7 @@ public class InspecXMLReader extends FilterReader
 	        // add new xml elements to aff.
 	        //orgn
 	        oneAffiliation.append(IDDELIMITER);
+	        
 	        if(m.getChild("orgn")!= null)
 	        {
 	        	oneAffiliation.append(m.getChild("orgn").getTextTrim());	        	
@@ -475,6 +476,7 @@ public class InspecXMLReader extends FilterReader
 	        		{
 	        			addline.append(", ");
 	        		}
+	        		
 	        	}
 	        	oneAffiliation.append(addline);
 	        }
