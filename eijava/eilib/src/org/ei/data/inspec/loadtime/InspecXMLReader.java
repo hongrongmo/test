@@ -414,19 +414,24 @@ public class InspecXMLReader extends FilterReader
 		{
 	        Element m = (Element)auaff.get(j);
 	        StringBuffer oneAffiliation = new StringBuffer();
-	        StringBuffer country = new StringBuffer();
+	        StringBuffer country = new StringBuffer();	       
 	        getMixData(m.getChild("aff").getContent(),oneAffiliation);
+	        oneAffiliation.append(IDDELIMITER);
 
-        	if(aff.length() < 1)
+        	//first author affiliation, independent from au-affiliation:
+	        // check if it is empty then add the value
+
+	        if(aff.length() < 1)
         	{
         		getMixData(m.getChild("aff").getContent(),aff);
+        		aff.append(IDDELIMITER);
     	        if(m.getAttribute("rid")!=null)
-    	        {   	        	
+    	        {   	
     	        	aff.append(m.getAttribute("rid").getValue());
-    	        }
-    	        aff.append(IDDELIMITER);
+    	        }    	        
         	}
-        	oneAffiliation.append(IDDELIMITER);
+	        // end of first author affiliation
+	               	
 	        if(m.getAttribute("rid")!=null)
 	        {	        	
 	        	oneAffiliation.append(m.getAttribute("rid").getValue());
@@ -441,7 +446,6 @@ public class InspecXMLReader extends FilterReader
 	        		record.put(keyprfx+"FC",country);
 
 	        	}
-
 	        	//add country to AAFFMULTI, EAFFMULTI fields
 	        	
 	        	oneAffiliation.append(country);
