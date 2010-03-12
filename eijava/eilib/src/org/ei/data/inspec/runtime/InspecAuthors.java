@@ -38,13 +38,51 @@ public class InspecAuthors
         auElementsExpanded.add("initials");
         auElementsExpanded.add("suffix");
         auElementsExpanded.add("eAddress"); 
-        auElementsExpanded.add("id");
+        auElementsExpanded.add("id");       
     }
 
     public InspecAuthors(String dAus)
-    { 
+    {    		
     	au = new BdAuthors(formatAuStr(dAus));  	
     }
+    
+    public String getAffIdList(String affidStr)
+    {
+        StringBuffer result = null;
+		if(affidStr != null && !affidStr.trim().equals(""))
+		{
+			if(affidStr.indexOf(" ")>0)
+			{
+			    List l = Arrays.asList(affidStr.split(" ",-1));
+			    result = new StringBuffer();
+			    for(int i = 0;  i < l.size(); i++)
+			    {
+			        String str  = (String)l.get(i);
+			        if(str != null && !str.trim().equals(""))
+			        {			        	
+			        	str = str.substring(str.lastIndexOf(".")+1);				
+			            result.append(str);
+			            if(i < (l.size() -1))
+			            {
+			            	result.append(", ");
+			            }
+			        }
+			    }
+			}
+			else
+			{
+			    result = new StringBuffer();
+			    String str = affidStr;
+			    str = str.substring(str.lastIndexOf(".")+1);
+			    result.append(str);
+			}
+		}
+		if(result != null && result.length() > 0)
+		{			
+		    return result.toString();
+		}
+		return null;
+    }  
     
     
     public String formatAuStr(String dAus)
@@ -66,15 +104,17 @@ public class InspecAuthors
     		  	
     			if(daus != null && daus.length > 0)
     			{
+  
     				if(!isExpanded)
     				{   //0
     					formatedData.append(BdParser.IDDELIMITER);
     					//1
     					formatedData.append(BdParser.IDDELIMITER);
-    					//2
+    					//2					    					
     					if(dau.length >1 && dau[1] != null)
-    					{
-    						formatedData.append(dau[1].substring(dau[1].lastIndexOf(".")+1));
+    					{   	
+    						String str = getAffIdList(dau[1]);    						
+    						formatedData.append(str);   						
     					}    				
     					formatedData.append(BdParser.IDDELIMITER);
     					if(dau.length >0 && dau[0] != null)
@@ -96,10 +136,11 @@ public class InspecAuthors
     					//1
      					formatedData.append(BdParser.IDDELIMITER);
     					//2
-     					if(dau.length >1 && dau[1] != null)
-    					{
-     						formatedData.append(dau[1].substring(dau[1].lastIndexOf(".")+1));
-    					}    				
+    					if(dau.length >1 && dau[1] != null)
+    					{   	
+    						String str = getAffIdList(dau[1]);   
+    						formatedData.append(str);
+    					}     
     					formatedData.append(BdParser.IDDELIMITER);
     					//3
     					if(dau.length >0 && dau[0] != null)
