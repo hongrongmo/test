@@ -255,8 +255,8 @@
 %><%!
 
     private final String LIBRARIAN_EMAIL = "engineeringlibrarian@ei.org";
-    private final String SPECIALIST_EMAIL = "ky.lee@elsevier.com";
-    private final String ENGINEER_EMAIL = "ky.lee@elsevier.com";
+    private final String SPECIALIST_EMAIL = "engineeringlibrarian@ei.org";
+    private final String ENGINEER_EMAIL = "engineeringlibrarian@ei.org";
     private final String ASK_AN_ENGINEER = "one";
     private final String ASK_A_PRODUCTSPECIALIST = "two";
     private final String ASK_A_LIBRARIAN = "three";
