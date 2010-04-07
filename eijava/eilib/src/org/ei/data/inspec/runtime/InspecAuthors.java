@@ -87,6 +87,7 @@ public class InspecAuthors
     
     public String formatAuStr(String dAus)
     {   	
+    	
     	boolean isExpanded = false;
     	StringBuffer formatedData = new StringBuffer();
     	
@@ -110,11 +111,11 @@ public class InspecAuthors
     					formatedData.append(BdParser.IDDELIMITER);
     					//1
     					formatedData.append(BdParser.IDDELIMITER);
-    					//2					    					
-    					if(dau.length >1 && dau[1] != null)
-    					{   	
+    					//2	
+    					if(dau.length >1 && dau[1] != null && dau[1].trim().length()>0)
+    					{   	   						
     						String str = getAffIdList(dau[1]);    						
-    						formatedData.append(str);   						
+    						formatedData.append(str);     						
     					}    				
     					formatedData.append(BdParser.IDDELIMITER);
     					if(dau.length >0 && dau[0] != null)
@@ -136,7 +137,7 @@ public class InspecAuthors
     					//1
      					formatedData.append(BdParser.IDDELIMITER);
     					//2
-    					if(dau.length >1 && dau[1] != null)
+    					if(dau.length >1 && dau[1] != null && dau[1].trim().length()>0 )
     					{   	
     						String str = getAffIdList(dau[1]);   
     						formatedData.append(str);
