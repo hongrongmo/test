@@ -24,12 +24,12 @@ public class InspecAffiliations
     private BdAffiliations affs ;
     private static ArrayList  affElements = new ArrayList();
     private static ArrayList  affElementsExpanded = new ArrayList();
-    
+
     public InspecAffiliations(String insAffiliations)
     {
     	this.affs = new BdAffiliations(formatAffStr(insAffiliations));
     }
-       
+
     public String formatAffStrNewXMLformatOptFirst(String[] daff)
     {
     	StringBuffer formatedData = new StringBuffer();
@@ -38,12 +38,12 @@ public class InspecAffiliations
 		{
 			daff[1] = daff[1].substring(daff[1].lastIndexOf(".")+1) ;
 			formatedData.append(daff[1]);
-		}    
+		}
 		formatedData.append(BdParser.IDDELIMITER);
     	if(daff.length > 0 && daff[0] != null)
     	{
-    		formatedData.append(daff[0]);    		
-    		
+    		formatedData.append(daff[0]);
+
     	}
     	formatedData.append(BdParser.IDDELIMITER);
     	//city group
@@ -54,20 +54,20 @@ public class InspecAffiliations
     		formatedData.append(daff[2]);
     	}
 
-    	System.out.println("aff is in data "+formatedData.toString());
+    	//System.out.println("aff is in data "+formatedData.toString());
     	return formatedData.toString();
     }
-    
+
     public String formatAffStrNewXMLformatOptSecond(String[] daff)
     {
 
     	StringBuffer formatedData = new StringBuffer();
-    	
+
 		if(daff.length >1 && daff[1] != null)
 		{
 			daff[1] = daff[1].substring(daff[1].lastIndexOf(".")+1) ;
 			formatedData.append(daff[1]);
-		}    
+		}
 		formatedData.append(BdParser.IDDELIMITER);
 		//organization - aff isn't there - use department field
 		if(daff.length > 4 && daff[4] != null)
@@ -79,64 +79,64 @@ public class InspecAffiliations
 		if(daff.length > 3 && daff[3] != null)
 		{
 			formatedData.append(daff[3]);
-		}		
+		}
 		formatedData.append(BdParser.IDDELIMITER);
 		//country - country field
-		
+
 		if(daff.length > 2 && daff[2] != null)
 		{
 			formatedData.append(daff[2]);
 		}
-		
+
 		formatedData.append(BdParser.IDDELIMITER);
 		// address line - address part
 		if(daff.length > 5 && daff[5] != null)
 		{
 			formatedData.append(daff[5]);
 		}
-		
+
 		formatedData.append(BdParser.IDDELIMITER);
 		// city
 		if(daff.length >6  && daff[6] != null)
-		{ 
+		{
 			formatedData.append(daff[6]);
-			
+
 		}
 		formatedData.append(BdParser.IDDELIMITER);
 		//state
 		if(daff.length >7  && daff[7] != null)
-		{ 
+		{
 			formatedData.append(daff[7]);
-			
+
 		}
 		formatedData.append(BdParser.IDDELIMITER);
 		//postal code
 		if(daff.length >8  && daff[8] != null)
-		{ 
-			formatedData.append(daff[8]);				
+		{
+			formatedData.append(daff[8]);
 		}
-		
+
 		formatedData.append(BdParser.IDDELIMITER);
 		//text
 		formatedData.append(BdParser.IDDELIMITER);
-		
 
-		System.out.println("no aff in data"+formatedData.toString());
+
+		//System.out.println("no aff in data"+formatedData.toString());
     	return formatedData.toString();
     }
-    
+
   // method to use when only three fields aval
-    
+
    public String formatAffStrThreeFields(String[] daff)
    {
-	   System.out.println(" daff ");
+	    //System.out.println(" daff ");
 	   	StringBuffer formatedData = new StringBuffer();
-    	
+
 		if(daff.length >1 && daff[1] != null)
 		{
 			daff[1] = daff[1].substring(daff[1].lastIndexOf(".")+1) ;
 			formatedData.append(daff[1]);
-		}    				
+		}
 		formatedData.append(BdParser.IDDELIMITER);
 		//1
 		if(daff.length >0 && daff[0] != null)
@@ -156,28 +156,28 @@ public class InspecAffiliations
 		formatedData.append(BdParser.IDDELIMITER);
 		formatedData.append(BdParser.IDDELIMITER);
 		formatedData.append(BdParser.IDDELIMITER);
-		
-		
-		System.out.println(" curr data "+formatedData.toString());
-				
+
+
+		//System.out.println(" curr data "+formatedData.toString());
+
 		return formatedData.toString();
-		
+
     }
-   
+
 
     public String formatAffStr(String dAffs)
     {
     	boolean isExpanded = false;
     	StringBuffer formatedData = new StringBuffer();
-    	
-    	String[] daffs = dAffs.split(BdParser.AUDELIMITER, -1);   	
+
+    	String[] daffs = dAffs.split(BdParser.AUDELIMITER, -1);
 
     	for(int i = 0; i < daffs.length; i++)
     	{
     		if(daffs[i] != null && daffs[i].length() > 0)
-    		{ 			    	    	
+    		{
     			String []daff = daffs[i].split(BdParser.IDDELIMITER, -1);
-    			
+
     	    	if(daff.length > 3)
     	    	{
     	    		isExpanded = true;
@@ -186,8 +186,8 @@ public class InspecAffiliations
     			if(daff != null && daff.length > 0)
     			{
     				if(!isExpanded)
-    				{    					
-    					formatedData.append(formatAffStrThreeFields(daff));   				  				
+    				{
+    					formatedData.append(formatAffStrThreeFields(daff));
     				}
     				else
     				{
@@ -199,20 +199,20 @@ public class InspecAffiliations
     					//else if(daff[2] != null && !daff[2].trim().equals(""))
     					else
     					{
-    						formatedData.append(formatAffStrNewXMLformatOptSecond(daff));   						
+    						formatedData.append(formatAffStrNewXMLformatOptSecond(daff));
     					}
     				}
-    					    		 
+
     				formatedData.append(BdParser.AUDELIMITER);
     			}
-    		}   		   		
+    		}
     	}
-    	
+
     	return formatedData.toString();
 
     }
-    
-   
+
+
 	public List getAffiliations()
 	{
 		return this.affs.getAffiliations();
@@ -225,7 +225,7 @@ public class InspecAffiliations
 		StringBuffer affBuf = new StringBuffer();
 		if (bdConfAff != null)
 		{
-			
+
 			for (int i=0;i<bdConfAff.size();i++)
 			{
 				BdAffiliation aff = (BdAffiliation)bdConfAff.get(i);
@@ -274,7 +274,7 @@ public class InspecAffiliations
 
 			   if(aff.getAffCountry()!=null)
 			   {
-				   System.out.println("COUNTRY"+aff.getAffCountry());
+				   //System.out.println("COUNTRY"+aff.getAffCountry());
 				   if(affBuf.length()>0)
 				   {
 						affBuf.append(", ");
