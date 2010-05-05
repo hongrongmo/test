@@ -2,6 +2,8 @@ package org.ei.data.bd;
 
 import java.util.*;
 import org.ei.data.bd.loadtime.*;
+import org.ei.data.compendex.runtime.CPXDataDictionary;
+import org.ei.domain.DataDictionary;
 
 public class BdDatabase
 {
@@ -33,5 +35,7 @@ public class BdDatabase
     {
         return BD;
     }
+    
+    private DataDictionary dataDictionary = new CPXDataDictionary();
 
 }
