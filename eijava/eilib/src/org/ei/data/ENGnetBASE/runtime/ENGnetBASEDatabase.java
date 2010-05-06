@@ -56,5 +56,10 @@ public class ENGnetBASEDatabase extends Database
 	{
 		return "R";
 	}
+	
+	 public DataDictionary getDataDictionary()
+	    {
+	        return null;
+	    }
 
 }
