@@ -42,4 +42,8 @@ public class PAGDataDictionary  implements DataDictionary
     {
     	return null;
     }
+    public String getTreatmentTitle(String mTreatmentCode)
+    {
+    	return null;
+    }
 }
