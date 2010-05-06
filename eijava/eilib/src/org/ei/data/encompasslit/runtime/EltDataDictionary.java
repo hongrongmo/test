@@ -32,5 +32,9 @@ public class EltDataDictionary implements DataDictionary
         {
 
         }
+        public String getTreatmentTitle(String mTreatmentCode)
+        {
+        	return null;
+        }
     
 }
