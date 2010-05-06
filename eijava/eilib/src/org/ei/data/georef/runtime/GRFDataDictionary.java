@@ -535,4 +535,9 @@ public class GRFDataDictionary implements DataDictionary
       }
       return strtranslated;
     }
+    
+    public String getTreatmentTitle(String mTreatmentCode)
+    {
+    	return null;
+    }
 }
