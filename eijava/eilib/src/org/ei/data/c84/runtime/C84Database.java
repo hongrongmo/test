@@ -1,6 +1,7 @@
 package org.ei.data.c84.runtime;
 
 import org.ei.domain.*;
+
 import java.util.Map;
 import java.util.Hashtable;
 import org.ei.fulldoc.LinkingStrategy;
@@ -113,4 +114,9 @@ public class C84Database
 			return true;
 		}
 	}
+	
+	 public DataDictionary getDataDictionary()
+	    {
+	        return null;
+	    }
 }
