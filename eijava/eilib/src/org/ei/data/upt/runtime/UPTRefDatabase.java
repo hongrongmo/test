@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.Hashtable;
 import org.ei.fulldoc.LinkingStrategy;
 import org.ei.util.StringUtil;
+import org.ei.domain.DataDictionary;
 import org.ei.domain.SearchField;
 import org.ei.domain.SearchFields;
 import java.util.*;
@@ -94,6 +95,11 @@ public class UPTRefDatabase extends Database {
     public String getSingleCharName()
 	{
 		return "D";
+	}
+    
+	public DataDictionary getDataDictionary()
+	{
+		return null;
 	}
 
 }
