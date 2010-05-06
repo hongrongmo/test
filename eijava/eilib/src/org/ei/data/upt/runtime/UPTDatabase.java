@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.ei.domain.DataDictionary;
 import org.ei.domain.Database;
 import org.ei.domain.DocumentBuilder;
 import org.ei.domain.FastSearchControl;
@@ -115,4 +116,8 @@ public class UPTDatabase extends Database {
 	{
 		return "T";
 	}
+    public DataDictionary getDataDictionary()
+    {
+        return null;
+    }
 }
