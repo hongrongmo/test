@@ -76,4 +76,9 @@ public class CBNBDataDictionary
     {
     	return null;
     }
+
+	public String getTreatmentTitle(String treatmentTitle) {
+		return null;
+	}
+	
 }
