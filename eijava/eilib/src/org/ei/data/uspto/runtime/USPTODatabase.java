@@ -3,6 +3,7 @@ package org.ei.data.uspto.runtime;
 import org.ei.domain.*;
 import org.ei.fulldoc.LinkingStrategy;
 import org.ei.util.StringUtil;
+import org.ei.domain.DataDictionary;
 import org.ei.domain.SearchField;
 import org.ei.domain.SearchFields;
 
@@ -63,6 +64,9 @@ public class USPTODatabase extends Database
 	{
 		return "S";
 	}
-
-
+	
+	public DataDictionary getDataDictionary()
+	{
+		return null;
+	}
 }
