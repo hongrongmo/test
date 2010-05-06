@@ -19,9 +19,16 @@ public class CPXDataDictionary
     {
         return this.classCodes;
     }
-    public Hashtable getTreatments()
+    	
+    public String getTreatmentTitle(String mTreatmentCode)
     {
-        return this.treatmentCodes;
+    	String treatmentcode = null;
+    	
+    	if(treatmentCodes.containsKey(mTreatmentCode))
+    	{
+    		treatmentcode  = (String) treatmentCodes.get(mTreatmentCode);
+    	}
+        return treatmentcode;       
     }
 
     public CPXDataDictionary()
@@ -944,4 +951,11 @@ public class CPXDataDictionary
     {
     	return null;
     }
+
+
+
+	public Hashtable getTreatments() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
