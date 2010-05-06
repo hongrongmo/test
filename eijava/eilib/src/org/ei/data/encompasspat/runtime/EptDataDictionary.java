@@ -81,4 +81,8 @@ public class EptDataDictionary
     	authorityCodes.put("ZA","South Africa");
 
     }
+    public String getTreatmentTitle(String mTreatmentCode)
+    {
+    	return null;
+    }
 }
