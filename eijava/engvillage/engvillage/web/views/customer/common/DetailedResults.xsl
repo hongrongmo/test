@@ -439,7 +439,7 @@
     </xsl:template>
 
   <!-- NON-HIGHLIGHTED child node(s) within VALUE -->
-      <xsl:template match="DISP|ND|CI|AI|TTI">
+      <xsl:template match="DISP|ND|CI|AI|TTI|TR">
       <span CLASS="MedBlackText"><xsl:value-of select="normalize-space(text())"/></span>
         <xsl:if test="not(position()=last())">; </xsl:if>
      </xsl:template>
@@ -455,7 +455,14 @@
             <td valign="top" width="10"><img src="/engresources/images/s.gif" border="0" width="10"/></td>
             <td valign="top" align="left">
                 <span CLASS="MedBlackText">
-                <xsl:apply-templates select="TR/TTI"/>
+  				<xsl:choose>
+  					<xsl:when test="TR/TTI"> 			
+                		<xsl:apply-templates select="TR/TTI"/>
+               		</xsl:when>
+                	<xsl:otherwise>	 				
+                		<xsl:apply-templates select="TR"/>                
+                	</xsl:otherwise>
+            	</xsl:choose>               
                 </span>
             </td>
         </tr>
