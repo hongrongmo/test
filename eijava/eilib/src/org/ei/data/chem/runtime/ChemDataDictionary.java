@@ -75,4 +75,8 @@ public class ChemDataDictionary
     {
     	return null;
     }
+    public String getTreatmentTitle(String mTreatmentCode)
+    {
+    	return null;
+    }   
 }
