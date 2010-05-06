@@ -414,4 +414,9 @@ public class NTISDataDictionary
     {
     	return null;
     }
+    
+    public String getTreatmentTitle(String mTreatmentCode)
+    {
+    	return null;
+    }
 }
