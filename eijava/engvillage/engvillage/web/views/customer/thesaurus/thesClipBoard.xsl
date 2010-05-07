@@ -488,7 +488,7 @@
                 <A CLASS="MedBlueLink" TARGET="_parent" HREF="/controller/servlet/Controller?CID=privacyPolicy&amp;database=Compendex">Privacy Policy</A>
                 <br/>
 
-            <A CLASS="SmBlackText">&#169; 2009 Elsevier Inc. All rights reserved.</A>
+            <A CLASS="SmBlackText">&#169; 2010 Elsevier Inc. All rights reserved.</A>
             </CENTER>
         </TD></TR>
         </TABLE>
