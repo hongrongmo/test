@@ -52,6 +52,8 @@ public class EltDatabase extends Database
 		  searchfield.put("ST", "Y");
 		  searchfield.put("TI", "Y");
 		  searchfield.put("YR", "Y");
+		  searchfield.put("VO", "Y");
+		  searchfield.put("SU", "Y");
 
 	  }
 
@@ -160,5 +162,6 @@ public class EltDatabase extends Database
     {
         return "L";
     }
+
 
 }
