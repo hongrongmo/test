@@ -84,7 +84,7 @@
     <tr>
        <td valign="top" width="6" colspan="2"><img src="/engresources/images/s.gif" border="0" width="6"/></td>
        <td colspan="3" align="center">
-      <A CLASS="SmBlackText">&#169; 2009 Elsevier Inc. All rights reserved.</A>
+      <A CLASS="SmBlackText">&#169; 2010 Elsevier Inc. All rights reserved.</A>
        </td>
     </tr>
 
