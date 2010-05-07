@@ -94,7 +94,7 @@ public class SearchFields
 
 
 	public static final SearchField[] ALL_FIELDS = {
-		AB , AF , AG , AI , AJ, ALL , AN , AU , AV , BN , CC , CE, CF , CI , CL , CM, CN , CO , CP, CR , CT , CV , CVA , CVM , CVMA , CVMN , CVMP , CVN , CVP , DI , DT , FL , GD , IC, IP , KY , LA , LT , MH , MI , NI , NT , OC , PA , PAC , PAM , PAN , PC  , PCI , PCO , PD  , PE  , PEC , PFD , PI  , PID , DPID, PM  , PN  , PRN , PRC, PRD, PU , PUC , RGI , RN  , RO , SN , SO  , ST  , TI  , TR  , YR , VO ,SU};
+		AB , AF , AG , AI , AJ, ALL , AN , AU , AV , BN , CC , CE, CF , CI , CL , CM, CN , CO , CP, CR , CT , CV , CVA , CVM , CVMA , CVMN , CVMP , CVN , CVP , DI , DT , FL , GD , IC, IP , KY , LA , LT , MH , MI , NI , NT , OC , PA , PAC , PAM , PAN , PC  , PCI , PCO , PD  , PE  , PEC , PFD , PI  , PID , DPID, PM  , PN  , PRN , PRC, PRD, PU , PUC , RGI , RN  , RO , SN , SO  , ST  ,SU , TI  , TR , VO, YR };
 
 	/*
 	* This method is used to an array of CustomeSearchFields based on
