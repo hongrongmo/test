@@ -252,13 +252,14 @@ public class BDDocBuilder
 				buildField(Keys.PATNUM,rset.getString("PATNO"),ht);
 				buildField(Keys.PATAPPNUM,rset.getString("APPLN"),ht);
 				buildField(Keys.PATASSIGN,rset.getString("ASSIG"),ht);
-
+				
 				if(!dataFormat.equals(Citation.CITATION_FORMAT) &&
 						!dataFormat.equalsIgnoreCase(Citation.XMLCITATION_FORMAT))
 				{
 					buildField(Keys.CONF_CODE,rset.getString("CONFCODE"),ht);
 					buildField(Keys.NUMBER_OF_REFERENCES,rset.getString("REFCOUNT"),ht);
-					buildField(Keys.TREATMENTS,getTreatments(rset.getString("TREATMENTCODE"),database),ht);
+					
+					buildField(Keys.TREATMENTS,setTreatments(rset.getString("TREATMENTCODE"), database),ht);
 
 					if(database.getMask() != 1024)
 					{
@@ -455,9 +456,11 @@ public class BDDocBuilder
 				}
 
 				list.add(eiDoc);
-                count++;
+                count++;                
 
 			}
+        	
+    
 		}
 		finally
 		{
@@ -498,6 +501,8 @@ public class BDDocBuilder
 				}
 			}
 		}
+		
+		
 
         return list;
 
@@ -836,6 +841,7 @@ public class BDDocBuilder
 
 	private ElementDataMap buildField(Key key,ElementData data, ElementDataMap ht) throws Exception
 	{
+
 		if(data !=null && data.getElementData() != null)
 		{
 			ht.put(key,data);
@@ -866,8 +872,6 @@ public class BDDocBuilder
 		return ht;
 
 	}
-
-
 
 	private String getFirstPublisher(String pubName)
 	{
@@ -1195,7 +1199,7 @@ public class BDDocBuilder
 
 		}
 
-    title = cleanBadCharacters(title);
+		title = cleanBadCharacters(title);
 
 		return title;
 	}
@@ -1713,14 +1717,11 @@ public class BDDocBuilder
     private Hashtable getDocIDTable(List listOfDocIDs)
     {
         Hashtable h = new Hashtable();
-
         for(int i=0; i<listOfDocIDs.size(); ++i)
         {
             DocID d = (DocID)listOfDocIDs.get(i);
             h.put(d.getDocID(), d);
         }
-
-
         return h;
     }
 
@@ -1773,7 +1774,6 @@ public class BDDocBuilder
 	        str = perl.substitute("s/"+au+"/;/g", str);
 	        str = perl.substitute("s/;;/|/g", str);
 		}
-
 		return str;
 	}
 
@@ -1827,7 +1827,27 @@ public class BDDocBuilder
 		}
 		return array;
 	}
-
+	
+	public String[] setTreatments(String treatments, Database db)
+	{
+		String[] array = null;
+		ArrayList result = new ArrayList();
+		if(treatments!=null && treatments.trim().length()>0)
+		{
+			if(db != null && db.getDataDictionary()!= null)
+			{
+				array = treatments.split(BdParser.AUDELIMITER,-1);
+				
+				for (int j = 0; j < array.length ; j++)
+				{
+					result.add((String)db.getDataDictionary().getTreatmentTitle(array[j]));					
+				}				
+			}		
+			return (String[]) result.toArray(new String[0]);
+		}		
+		return null;		
+	}
+		
 	public String getMainTerm(String mainTerm)
 	{
 		if(mainTerm == null)
@@ -1838,53 +1858,11 @@ public class BDDocBuilder
 		if (mainTerm.indexOf(BdParser.AUDELIMITER)>-1)
 		{
 			term = mainTerm.substring(0,mainTerm.indexOf(BdParser.AUDELIMITER));
-
 		}
-		//System.out.println("mainTerm= "+mainTerm);
-		//System.out.println("term= "+term);
 		return term;
 
 	}
-
-	public ElementData getTreatments(String treatments, Database database)
-	{
-	    ArrayList result = new ArrayList();
-	    int len = 0;
-	    int trlen = 0;
-	    String ch = "";
-	    if(treatments!=null)
-	    {
-			trlen = treatments.length();
-			if (trlen >= 0 && trlen < 10 && trlen > 0)
-			{
-				for (int i = 0; i< trlen ; i++)
-				{
-					if (len < trlen)
-					{
-						ch = treatments.substring(len,len+1);
-					}
-					else
-					{
-						ch = treatments.substring(len);
-					}
-
-					if (ch != null && !ch.equals("") &&
-						!ch.equals(BdParser.AUDELIMITER) &&
-						!ch.equals("QQ")&&
-						!ch.equals(";"))
-					{
-					  result.add(ch);
-					}
-					len ++;
-					ch = "";
-				}
-			}
-			return new Treatments((String[])result.toArray(new String[result.size()]),database);
-		}
-
-        return null;
-	}
-
+	
 	public void formatRIS(ElementDataMap map, String dataFormat, Key ORIGINAL_KEY, Key NEW_KEY)
 	{
 		if(dataFormat.equalsIgnoreCase(RIS.RIS_FORMAT))
