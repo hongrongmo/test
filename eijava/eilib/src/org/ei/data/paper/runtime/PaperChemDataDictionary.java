@@ -50,7 +50,11 @@ public class PaperChemDataDictionary
 	
     public String getTreatmentTitle(String mTreatmentCode)
     {
-    	return null;
+    	if(treatmentCodes.containsKey(mTreatmentCode))
+    	{
+    		return (String) treatmentCodes.get(mTreatmentCode);
+    	}
+    	return "A";
     }
 
 }
