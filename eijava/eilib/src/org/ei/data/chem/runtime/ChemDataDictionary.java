@@ -8,7 +8,19 @@ public class ChemDataDictionary
     implements DataDictionary
 {
     private Hashtable classCodes;
+    private Hashtable treatmentCodes;
 
+    public String getTreatmentTitle(String mTreatmentCode)
+    {
+    	String treatmentcode = null;
+    	
+    	if(treatmentCodes.containsKey(mTreatmentCode))
+    	{
+    		treatmentcode  = (String) treatmentCodes.get(mTreatmentCode);
+    	}
+        return treatmentcode;       
+    }
+    
     public String getClassCodeTitle(String classCode)
     {
         if (classCode != null)
@@ -70,13 +82,23 @@ public class ChemDataDictionary
 	   classCodes.put("TR-40","Trends - General");
 	   classCodes.put("dMS-05","Agrochemicals");
 	   classCodes.put("fMS-20","Other Industries");
+	   
+       treatmentCodes = new Hashtable();
+
+       treatmentCodes.put("A","Applications (APP)");
+       treatmentCodes.put("B","Biographical (BIO)");
+       treatmentCodes.put("E","Economic (ECO)");
+       treatmentCodes.put("X","Experimental (EXP)");
+       treatmentCodes.put("G","General review (GEN)");
+       treatmentCodes.put("H","Historical (HIS)");
+       treatmentCodes.put("L","Literature review (LIT)");
+       treatmentCodes.put("M","Management aspects (MAN)");
+       treatmentCodes.put("N","Numerical (NUM)");
+       treatmentCodes.put("T","Theoretical (THR)");
    }
     public Hashtable getAuthorityCodes()
     {
     	return null;
     }
-    public String getTreatmentTitle(String mTreatmentCode)
-    {
-    	return null;
-    }   
+  
 }
