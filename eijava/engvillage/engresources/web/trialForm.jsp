@@ -586,7 +586,6 @@
 	                    <ul>
 	                        <li id="ten_years"><a href="http://www.ei.org/databases/referex_engineering.html"><span>Referex</span></a></li>
 	                        <li id="new_technology"><a href="http://www.ei.org/support/online_seminars.html"><span>Featured  Seminars</span></a></li>
-	                        <li id="sign_up"><a href="http://daypass.engineeringvillage.com"><span>New Engineering Village Day Pass</span></a></li>
 	                    </ul>
 	                </dd>
 	            </dl>
