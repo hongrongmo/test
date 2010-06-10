@@ -126,6 +126,16 @@
 									   return false;
 								}
 						}
+
+						var fnameValid = validateName(register.firstname.value);
+						if(!fnameValid)
+						{
+							window.alert("Please type English in first name field");
+							register.firstname.value = "";
+							register.firstname.focus();
+							return false;
+						}
+
 						if (register.lastname.value =="")
 						{
 							alert ("Please enter your Last Name");
@@ -134,23 +144,33 @@
 						}
 						else
 						{
-								var nameLength= register.lastname.value.length;
-								var tempName = register.lastname.value;
-								var tempLength=0;
+							var nameLength= register.lastname.value.length;
+							var tempName = register.lastname.value;
+							var tempLength=0;
 
-								while (tempName.substring(0,1) == ' ')
-								{
-									   tempName = tempName.substring(1);
-									   tempLength = tempLength + 1;
-								}
-								if ( nameLength == tempLength)
-								{
-									   window.alert("Spaces are not allowed as Last Name");
-									   register.lastname.value="";
-									   register.lastname.focus();
-									   return false;
-								}
+							while (tempName.substring(0,1) == ' ')
+							{
+								   tempName = tempName.substring(1);
+								   tempLength = tempLength + 1;
+							}
+							if ( nameLength == tempLength)
+							{
+								   window.alert("Spaces are not allowed as Last Name");
+								   register.lastname.value="";
+								   register.lastname.focus();
+								   return false;
+							}								
 						}
+
+						var lnameValid = validateName(register.lastname.value);
+						if(!lnameValid)
+						{
+							window.alert("Please enter English in last name field");
+							register.lastname.value = "";
+							register.lastname.focus();
+							return false;
+						}
+
 						 if (register.email.value =="")
 						 {
 							alert ("Please enter your E-mail address");
@@ -248,6 +268,20 @@
 								 	return true;
 							   }
 							return false;
+					}
+					
+					//This function validates names
+					function validateName(name)
+					{
+						var reg = /^[a-zA-Z]+$/;
+						if(name.match(reg) == null)
+						{							
+							return false;
+						}
+						else 
+						{
+							return true;
+						}
 					}
 
 				</SCRIPT>
