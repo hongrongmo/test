@@ -84,6 +84,14 @@
 									   return false;
 								}
 						}
+						var fnameValid = validateName(register.firstname.value);
+						if(!fnameValid)
+						{
+							window.alert("Please do not insert non-English accents or characters in first name field");
+							register.firstname.value = "";
+							register.firstname.focus();
+							return false;
+						}
 						if (register.lastname.value =="")
 						{
 							alert ("Please enter your Last Name");
@@ -109,8 +117,17 @@
 									   return false;
 								}
 						}
-						 if (register.email.value =="")
-						 {
+						var lnameValid = validateName(register.lastname.value);
+						if(!lnameValid)
+						{
+							window.alert("Please do not insert non-English accents or characters in last name field");
+							register.lastname.value = "";
+							register.lastname.focus();
+							return false;
+						}
+
+						if (register.email.value =="")
+						{
 							alert ("Please enter your e-mail address");
 							register.email.focus();
 							return false;
@@ -206,6 +223,19 @@
 									return true;
 							   }
 							   return false;
+					}
+					//This function validates names
+					function validateName(name)
+					{
+						var reg = /^[a-zA-Z]+$/;
+						if(name.match(reg) == null)
+						{							
+							return false;
+						}
+						else 
+						{
+							return true;
+						}
 					}
 					// this function inform the user before deletion of user account.
 					function deleteAlert(database)
