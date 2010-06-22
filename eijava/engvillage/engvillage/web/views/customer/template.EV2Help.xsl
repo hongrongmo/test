@@ -66,7 +66,8 @@
             </td>
             <td>&#160;</td>
             <td valign="top">
-              <A CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/userfiles/SourceLists/COMPENDEX2009Journals.pdf')">Compendex source list</A><BR/>
+              <A CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/userfiles/SourceLists/CPX%20JOURNAL%20LIST_%202010_0402.pdf')">Compendex Source List for Journals</A><BR/>
+              <A CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/userfiles/SourceLists/CPX%20MONO%20SOURCE%20LIST_%202010_0402.pdf')">Compendex Source List for all other sources</A><BR/>
               <A CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/trainingpresentations')">Training Presentations</A><BR/>
               <A CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/trainingpresentations')">Product Tours</A><BR/>
               <A CLASS="LgBlueLink" href="#" onclick = "return openTrainingHelp('http://www.ei.org/newsletter')">Ei Newsletter</A><BR/>
