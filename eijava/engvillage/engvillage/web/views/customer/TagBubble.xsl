@@ -364,6 +364,32 @@
       </xsl:if>
     </xsl:variable>
 
+
+ <div class="t" style="width:200px;" id="citedby_box">
+ <!--
+      <div class="b"> 
+      <div class="l"> 
+      <div class="rc">
+        <table border="0" style="margin:0px; padding:0px; width:100%">
+        	<tr>
+        	<td bgcolor="#C3C8D1" align="center" padding="0" border="0" margin="0"><a class="MedBlackText"><font color="red"><b>Cited by in Scopus</b></font></a></td>
+        	</tr>
+        	<tr><td><a class="MedBlackText" id="citedbyDetailLink">
+        	<span id="citedby_year"/></a></td></tr>
+        	<tr>
+        	<td bgcolor="#F5F5F5"><a class="BlueText"><span id="citedby_content"/></a></td>
+        	</tr>
+        	<tr>
+        	<td><a href="javascript:newwindow=window.open('http://www.scopus.com','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable');%20void('');" class="BlueText"><b>Learn more about Scopus</b></a></td>
+        	</tr>
+        </table>
+        </div></div></div>
+       -->
+        </div>
+        <div>
+        <table><tr><td><img src="/engresources/images/s.gif" height="4"/></td></tr></table>
+        </div>
+
       <div class="t" style="width:215px;">
       <div class="b">
       <div class="l">
@@ -383,11 +409,12 @@
                 <input type = "hidden"  name="personalization"  value ="{$PLOGIN}" />
                 <input type = "hidden"  name="personallogin" value ="{$PERSONALLOGIN}" />
                 <input type = "hidden"  name="tagdoc" value ="{$TAGDOC}" />
+             
 
                 <a title="Separate each tag with a comma: nanotech, carbon nanotubes, Environmental 101" class="tag_title"><label for="tagname">Add a tag</label></a>&nbsp;
                  <a title="Separate each tag with a comma: nanotech, carbon nanotubes, Environmental 101" href="javascript:makeUrl('Tagging_a_record.htm')">
-			              <img src="/engresources/images/blue_help.gif" alt="Separate each tag with a comma: nanotech, carbon nanotubes, Environmental 101" border="0"/>
-	                </a>
+			<img src="/engresources/images/blue_help.gif" alt="Separate each tag with a comma: nanotech, carbon nanotubes, Environmental 101" border="0"/>
+	         </a>
                 <br/>
 
                 <br/>
@@ -396,7 +423,7 @@
                   <option value="2">Private</option>
                   <option value="4">My Institution</option>
                   <xsl:if test="$PLOGIN=''">
-		  	            <option value="6">Login for groups</option>
+		 	<option value="6">Login for groups</option>
                   </xsl:if>
                   <xsl:for-each select="TGROUPS/TGROUP">
                     <option>
@@ -481,12 +508,12 @@
           <xsl:variable name="ENCODED-LOCATION">
             <xsl:value-of select="java:encode($LOCATION)"/>
           </xsl:variable>
-<!--          <xsl:variable name="COLLABDATA">
+          <!--<xsl:variable name="COLLABDATA">
             <xsl:value-of select="/PAGE/COLLABLINKDATA"/>
-          </xsl:variable> -->
+          </xsl:variable>-->
           <tr>
             <td colspan="3">
-              <!-- <div style="display:inline;" class="im"><a href="http://www.2collab.com/bookmark/addremote?url={$ENCODED-LOCATION}&amp;title={$TITLE}{$COLLABDATA}" title="Bookmark and share in 2collab (opens in new window)" class="LgBlueLink" onclick="javascript:window.open(this.href); return false;"><img src="/engresources/images/2collab_logo.gif" align="absmiddle" border="0" width="37" height="24" />Add to 2collab</a></div> -->
+            <!--  <div style="display:inline;" class="im"><a href="http://www.2collab.com/bookmark/addremote?url={$ENCODED-LOCATION}&amp;title={$TITLE}{$COLLABDATA}" title="Bookmark and share in 2collab (opens in new window)" class="LgBlueLink" onclick="javascript:window.open(this.href); return false;"><img src="/engresources/images/2collab_logo.gif" align="absmiddle" border="0" width="37" height="24" />Add to 2collab</a></div>-->
               <div style="display:inline;" class="im"><a title="Save this page to del.icio.us" class="LgBlueLink" href="http://del.icio.us/post" onclick="javascript:window.open('http://del.icio.us/post?v=4&amp;noui&amp;jump=close&amp;url={$ENCODED-LOCATION}&amp;title={$TITLE}', 'delicious', 'toolbar=no,width=700,height=400'); return false;"><img src="/engresources/images/delicious.small.gif" align="absmiddle" border="0" width="10" height="10" />del.icio.us</a></div>
             </td>
           </tr>
