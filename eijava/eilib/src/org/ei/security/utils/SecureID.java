@@ -7,6 +7,29 @@ public class SecureID
 {
 	private static final String SEED = "fkjhsd9tr87whfs3297fshjk";
 
+	private static final String citedBySaltKey = "Kyvs.FpdJvCAXVa:9TK13xB!a01ZV(iW";
+
+	public static String getCitedbyMD5(String sessionID,String accessNumber)
+	{
+		MD5Digester digester = new MD5Digester();
+		String theDigest=null;
+		try
+		{
+			if(sessionID.indexOf("_")>-1)
+			{
+				sessionID = sessionID.substring(sessionID.indexOf("_")+1);
+			}
+			theDigest = digester.asHex(digester.digest(sessionID+accessNumber+citedBySaltKey));
+			//System.out.println("ACCESSNUMBER= "+accessNumber+" Session-ID="+sessionID+" MD5="+theDigest);
+
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return theDigest;
+	}
+
 	public static String getSecureID(long ttl)
 		throws Exception
 	{
