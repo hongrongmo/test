@@ -18,6 +18,10 @@
         <param-value>http://@session_server@/sessionservice/servlet/LindaHallService</param-value>
       </init-param>
       <init-param>
+              <param-name>citedByURL</param-name>
+              <param-value>http://@citedby_server@/citedby/servlet/CitedByService</param-value>
+      </init-param>
+      <init-param>
         <param-name>contentConfig</param-name>
         <param-value>http://@data_server@/engvillage/servlet/ConfigService?configName=ContentConfig.xml</param-value>
       </init-param>
@@ -130,6 +134,14 @@
       <servlet-class>org.ei.shibboleth.ShibbolethService</servlet-class>
       <load-on-startup>8</load-on-startup>
     </servlet>
+    
+    <servlet>
+      <servlet-name>CitedByService</servlet-name>
+      <description>
+          This is servlet handles citedby webservices call to scopus
+      </description>
+      <servlet-class>org.ei.webservices.CitedByService</servlet-class>   
+    </servlet>
 
     <servlet>
       <servlet-name>Captcha</servlet-name>
@@ -203,4 +215,9 @@
     <session-config>
       <session-timeout>0</session-timeout><!-- 30 minutes -->
     </session-config>
+    
+     <servlet-mapping>
+       <servlet-name>CitedByService</servlet-name>
+       <url-pattern>/servlet/CitedByService</url-pattern>
+    </servlet-mapping>
 </web-app>
