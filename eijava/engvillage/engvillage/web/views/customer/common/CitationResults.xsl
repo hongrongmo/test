@@ -5,6 +5,7 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:html="http://www.w3.org/TR/REC-html40"
     xmlns:java="java:java.net.URLEncoder"
+    xmlns:security="java:org.ei.security.utils.SecureID"
     xmlns:hlight="java:org.ei.query.base.HitHighlightFinisher"
     exclude-result-prefixes="hlight java html xsl"
 >
@@ -13,6 +14,8 @@
 <xsl:strip-space elements="html:* xsl:*" />
 
     <xsl:template match="EI-DOCUMENT" >
+       
+      
       <xsl:param name="ascii">false</xsl:param>
       <xsl:apply-templates select="BTI"/>
       <xsl:apply-templates select="BPP"/>
@@ -78,7 +81,7 @@
 <!--  <xsl:apply-templates select="UPD"/> -->
       <xsl:apply-templates select="NV"/>
       <xsl:apply-templates select="PA"/>
-      
+      <xsl:apply-templates select="CITEDBY"/>
 
       <xsl:apply-templates select="PAS"/>
       <xsl:apply-templates select="PASM"/>
@@ -132,6 +135,43 @@
         </xsl:if>
         <xsl:if test="string(../DOC/TAGDATE)"> (Tag applied on <xsl:value-of select="../DOC/TAGDATE"/>)</xsl:if>
         </a><br/>
+    </xsl:template>
+    
+   
+    
+    
+    <xsl:template match="CITEDBY">
+            <CITEDBY>      	              
+	    <xsl:variable name="CITEDBY-MD5">
+	         <xsl:value-of select="security:getCitedbyMD5($SESSION-ID,@AN)" />
+            </xsl:variable> 
+            <xsl:if test="(@ISSN)">
+            	<xsl:attribute name="ISSN"><xsl:value-of select="@ISSN"/></xsl:attribute>
+            </xsl:if>
+            <xsl:if test="(@firstIssue)">
+            	<xsl:attribute name="ISSUE"><xsl:value-of select="@firstIssue"/></xsl:attribute>
+            </xsl:if>
+            <xsl:if test="(@firstVolume)">
+            	<xsl:attribute name="VOLUME"><xsl:value-of select="@firstVolume"/></xsl:attribute>
+            </xsl:if>
+            <xsl:if test="(@firstPage)">
+            	<xsl:attribute name="PAGE"><xsl:value-of select="@firstPage"/></xsl:attribute>
+            </xsl:if>
+            <xsl:if test="(@DOI)">
+            	<xsl:attribute name="DOI"><xsl:value-of select="@DOI"/></xsl:attribute>
+            </xsl:if>
+            <xsl:if test="(@PII)">
+            	<xsl:attribute name="PII"><xsl:value-of select="@PII"/></xsl:attribute>
+            </xsl:if>
+             <xsl:if test="(@AN)">
+	        <xsl:attribute name="AN"><xsl:value-of select="@AN"/></xsl:attribute>
+            </xsl:if>
+           
+	    <xsl:attribute name="SECURITY"><xsl:value-of select="$CITEDBY-MD5"/></xsl:attribute>
+	    		 
+	    <xsl:attribute name="SESSION-ID"><xsl:value-of select="$SESSION-ID"/></xsl:attribute>
+            
+            </CITEDBY>
     </xsl:template>
 
     <xsl:template match="BTI">
