@@ -50,10 +50,14 @@
     <html>
       <head>
         <title><xsl:value-of select="$SEARCH-TYPE"/> Search Abstract Format</title>
+        <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/json2.js"/>
+        <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/jquery-1.4.2.min.js"/>
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js" />
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/lindaHall.js" />
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Autocomplete.js"/>
-				<link href="/engresources/stylesheets/booktoc_v92.css" rel="stylesheet" type="text/css" />
+        <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/citedby.js"/>
+        
+	<link href="/engresources/stylesheets/booktoc_v92.css" rel="stylesheet" type="text/css" />
 
   <script language="javascript">
     <xsl:comment>
@@ -277,6 +281,7 @@
     <table border="0" width="99%" cellspacing="0" cellpadding="0">
       <xsl:apply-templates select="PAGE-ENTRY" />
     </table>
+    <script>ajaxCitedByFunction1();</script>
   </xsl:template>
 
   <xsl:variable name="SEARCH-TYPE">
