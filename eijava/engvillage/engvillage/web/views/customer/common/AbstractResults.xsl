@@ -65,9 +65,9 @@
 
       <xsl:apply-templates select="MT"/>
       <xsl:apply-templates select="VT"/>
-
- 	  <xsl:apply-templates select="PAS"/>
- 	  <xsl:apply-templates select="PASM"/>
+      <xsl:apply-templates select="CITEDBY"/>
+      <xsl:apply-templates select="PAS"/>
+      <xsl:apply-templates select="PASM"/>
 
  	   <!-- EPT fields -->
       <xsl:apply-templates select="EASM"/>
@@ -202,7 +202,7 @@
       </xsl:if>
       <P/>
 
-      <script language="JavaScript" type="text/javascript" src="/engresources/js/wz_tooltip.js"></script>
+    <script language="JavaScript" type="text/javascript" src="/engresources/js/wz_tooltip.js"></script>
 
     </xsl:template>
 
@@ -1050,6 +1050,7 @@
       </A>
 
     </xsl:template>
+    
 
 
 </xsl:stylesheet>
