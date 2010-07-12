@@ -51,13 +51,17 @@
     <html>
     <head>
         <title><xsl:value-of select="$SEARCH-TYPE"/> Search Detailed Format</title>
+        <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/json2.js"/>
+        <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/jquery-1.4.2.min.js"/>
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/lindaHall.js"/>
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Autocomplete.js"/>
+        <script language="JavaScript" type="text/javascript" src="/engresources/js/citedby.js"></script>
 		<script language="javascript">
 		<xsl:comment>
 		<xsl:text disable-output-escaping="yes">
 		<![CDATA[
+
 			function printFormat(sessionid,searchtype,searchid,database,databaseid)
 			{
 
@@ -280,6 +284,7 @@
       <table border="0" width="99%" cellspacing="0" cellpadding="0">
       	<xsl:apply-templates select="PAGE-ENTRY"/>
       </table>
+      <script>ajaxCitedByFunction1();</script>
     </xsl:template>
 
     <xsl:variable name="SEARCH-TYPE">
@@ -318,6 +323,10 @@
 
       <xsl:variable name="SEARCH-ID">
         <xsl:value-of select="//SEARCH-ID"/>
+      </xsl:variable>
+      
+      <xsl:variable name="DOI">
+              <xsl:value-of select="//DO"/>
       </xsl:variable>
 
       <xsl:variable name="CURRENT-PAGE">
@@ -436,8 +445,9 @@
         <td valign="top" width="100%" align="left">
 
           <xsl:apply-templates select="EI-DOCUMENT" />
-
+	  
         </td>
+        
         <xsl:if test="not($SEARCH-CONTEXT='dedup')">
         	<xsl:if test="//GLOBAL-LINKS/TAGGROUPS">
             <!-- THIS DEFINES TWO MORE COLUMNS IN THIS TABLE -->
@@ -519,7 +529,7 @@
             </td>
           </tr>
         </xsl:if>
-
+ 
     </xsl:template>
 
 </xsl:stylesheet>
