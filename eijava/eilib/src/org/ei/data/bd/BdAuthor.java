@@ -123,7 +123,7 @@ public class BdAuthor
 		{
 			au.append(this.getGivenName());
 		}
-System.out.println("bdAuthor get disp name ::"+au.toString());
+
 		return au.toString();
     }
 
@@ -200,7 +200,7 @@ System.out.println("bdAuthor get disp name ::"+au.toString());
         List result = null;
 		if(this.affidStr != null && !this.affidStr.trim().equals(""))
 		{
-			System.out.println("in set getAffList in BdAuthors this.affidStr"+this.affidStr);
+
 			if(this.affidStr.indexOf(BdParser.GROUPDELIMITER)>0)
 			{
 			    List l = Arrays.asList(this.affidStr.split(BdParser.GROUPDELIMITER,-1));
