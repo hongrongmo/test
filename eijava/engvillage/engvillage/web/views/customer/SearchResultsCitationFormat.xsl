@@ -43,6 +43,9 @@
 <xsl:variable name="CURRENT-PAGE"><xsl:value-of select="/PAGE/CURR-PAGE-ID"/></xsl:variable>
 <xsl:variable name="SELECTED-DB"><xsl:value-of select="/PAGE/DBMASK"/></xsl:variable>
 <xsl:variable name="COMPMASK"><xsl:value-of select="/PAGE/NAVIGATORS/COMPMASK"/></xsl:variable>
+<xsl:variable name="DOC-ID">
+          <xsl:value-of select="//DOC/DOC-ID"/>
+    </xsl:variable>
 
   <xsl:template match="PAGE">
 
@@ -61,10 +64,13 @@
         <META http-equiv="Cache-Control" content="no-cache"/>
         <title>Engineering Village  - <xsl:value-of select="$DATABASE-DISPLAYNAME"/><xsl:text> </xsl:text><xsl:value-of select="$SEARCH-TYPE"/> Search Results</title>
 
+	<SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/json2.js"/>
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/SearchResults_V7.js"/>
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/URLEncode.js"/>
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Robohelp.js"/>
+      
+         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/jquery-1.4.2.min.js"/>
 
         <xsl:if test="($SEARCH-TYPE='Quick') or ($SEARCH-TYPE='Thesaurus') or ($SEARCH-TYPE='Combined')">
           <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/QuickResults.js"/>
@@ -81,7 +87,8 @@
       <script type="text/javascript">
           var ev_searchid = "<xsl:value-of select="$SEARCH-ID"/>";
           var ev_dbmask = "<xsl:value-of select="$SELECTED-DB"/>";
-      //<![CDATA[
+      //<![CDATA[   	  
+		
           function createCookie(name,value,days) {
             if (days != 0) {
               var date = new Date();
@@ -363,13 +370,8 @@
       <br/>
 
       <script language="JavaScript" type="text/javascript" src="/engresources/js/wz_tooltip.js"></script>
-      <!--
-      <script language="JavaScript" type="text/javascript" src="/engresources/js/navigators.js"/>
-      <script language="JavaScript" type="text/javascript">
-      getNavigators("<xsl:value-of select="$SEARCH-ID"/>","<xsl:value-of select="$SEARCH-TYPE"/>");
-      </script>
-      -->
-
+      <script language="JavaScript" type="text/javascript" src="/engresources/js/citedby2.js"></script>
+      <script>ajaxCitedByFunction();</script>
     </body>
     </html>
 
@@ -377,6 +379,7 @@
 
   <!-- This xsl displays the results in Citation Format when the database is Compendex -->
   <xsl:template match="PAGE-RESULTS">
+    
     <!-- Start of  Citation Results  -->
     <FORM name="quicksearchresultsform">
     <table border="0" cellspacing="0" cellpadding="0" width="100%">
@@ -384,6 +387,7 @@
     </table>
     </FORM>
     <!-- END of  Citation Results  -->
+    
   </xsl:template>
 
   <xsl:template match="PAGE-ENTRY[@DUP='true']">
@@ -450,6 +454,10 @@
     <xsl:variable name="DOC-ID">
       <xsl:value-of select="EI-DOCUMENT/DOC/DOC-ID"/>
     </xsl:variable>
+    
+    <xsl:variable name="AN">
+          <xsl:value-of select="EI-DOCUMENT/AN"/>
+    </xsl:variable>
 
     <xsl:variable name="REFERENCES-LINK-CID">
       <xsl:choose>
@@ -502,7 +510,6 @@
         <xsl:otherwise>searchWord1=<xsl:value-of select="$CITEDBY-PM"/><xsl:if test="$AUTHCD='EP'"><xsl:value-of select="$KIND"/></xsl:if><xsl:value-of select="java:encode(' WN PCI')"/>&amp;database=49152&amp;pcinav=0~<xsl:value-of select="$CITEDBY-PM"/>~<xsl:value-of select="java:encode('Patents that cite ')"/><xsl:value-of select="$CITEDBY-PM"/></xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
-
         <tr>
             <td valign="top" colspan="4" height="5"><img src="/engresources/images/s.gif"/></td>
         </tr>
@@ -545,6 +552,7 @@
               <a class="MedBlackText">&#160; - &#160;</a>
               <a class="LgBlueLink">
                 <xsl:attribute name="TITLE">Detailed</xsl:attribute>
+                <xsl:attribute name="ID"><xsl:value-of select="$AN"/>Detail</xsl:attribute>
                 <xsl:attribute name="HREF">/controller/servlet/Controller?SEARCHID=<xsl:value-of select="$SEARCH-ID"/>&amp;<xsl:value-of select="$DETAILED-LINK-CID"/>&amp;DOCINDEX=<xsl:value-of select="$INDEX"/>&amp;database=<xsl:value-of select="$SELECTED-DB"/>&amp;format=<xsl:value-of select="$CID-PREFIX"/>DetailedFormat</xsl:attribute>Detailed</a>
             </xsl:if>
 
@@ -566,7 +574,7 @@
               <a class="LgBlueLink">
                 <xsl:attribute name="TITLE">Book Details</xsl:attribute>
                 <xsl:if test="not(EI-DOCUMENT/BPP = '0')">
-                  <xsl:attribute name="HREF">/controller/servlet/Controller?CID=bookSummary&amp;SEARCHID=<xsl:value-of select="$SEARCH-ID"/>&amp;DOCINDEX=<xsl:value-of select="$INDEX"/>&amp;database=<xsl:value-of select="$SELECTED-DB"/>&amp;docid=<xsl:value-of select="$DOC-ID"/>&amp;format=<xsl:value-of select="$CID-PREFIX"/>DetailedFormat<xsl:value-of select="$PII"/></xsl:attribute>
+                  <xsl:attribute name="HREF">/controller/servlet/Controller?CID=bookSummary&amp;SEARCHID=<xsl:value-of select="$SEARCH-ID"/>&amp;DOCINDEX=<xsl:value-of select="$INDEX"/>&amp;database=<xsl:value-of select="$SELECTED-DB"/>&amp;docid=<xsl:value-of select="@AN"/>&amp;format=<xsl:value-of select="$CID-PREFIX"/>DetailedFormat<xsl:value-of select="$PII"/></xsl:attribute>
                 </xsl:if>
                 <xsl:if test="(EI-DOCUMENT/BPP = '0')">
                   <xsl:attribute name="HREF">/controller/servlet/Controller?<xsl:value-of select="$ABSTRACT-LINK-CID"/>&amp;SEARCHID=<xsl:value-of select="$SEARCH-ID"/>&amp;DOCINDEX=<xsl:value-of select="$INDEX"/>&amp;database=<xsl:value-of select="$SELECTED-DB"/>&amp;format=<xsl:value-of select="$CID-PREFIX"/>DetailedFormat</xsl:attribute>
@@ -635,7 +643,7 @@
     <tr>
       <td valign="top" colspan="4" height="5"><img src="/engresources/images/s.gif"/></td>
     </tr>
-
+    
 </xsl:template>
 
 
