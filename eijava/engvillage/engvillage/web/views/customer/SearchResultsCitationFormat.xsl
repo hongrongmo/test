@@ -631,6 +631,14 @@
                 <img alt="Full-text" src="/engresources/images/av.gif" id="ftimg"/>
                 </a>
             </xsl:if>
+            
+             <a class="MedBlackText">&#160; - &#160;</a>
+		<a class="LgBlueLink" >
+			<xsl:attribute name="ID"><xsl:value-of select='$AN'/></xsl:attribute>
+			<xsl:attribute name="TITLE">Cited-by</xsl:attribute>
+			<xsl:attribute name="ALT">Scopus Cited-by</xsl:attribute>
+			
+                </a>
 
             <xsl:if test="($LOCALHOLDINGS-CITATION='true')">
               <xsl:apply-templates select="LOCAL-HOLDINGS" mode="CIT">
