@@ -136,14 +136,6 @@
     </servlet>
     
     <servlet>
-      <servlet-name>CitedByService</servlet-name>
-      <description>
-          This is servlet handles citedby webservices call to scopus
-      </description>
-      <servlet-class>org.ei.webservices.CitedByService</servlet-class>   
-    </servlet>
-
-    <servlet>
       <servlet-name>Captcha</servlet-name>
       <description>The Captcha servlet</description>
       <servlet-class>org.ei.security.captcha.CaptchaServlet</servlet-class>
@@ -216,8 +208,4 @@
       <session-timeout>0</session-timeout><!-- 30 minutes -->
     </session-config>
     
-     <servlet-mapping>
-       <servlet-name>CitedByService</servlet-name>
-       <url-pattern>/servlet/CitedByService</url-pattern>
-    </servlet-mapping>
 </web-app>
