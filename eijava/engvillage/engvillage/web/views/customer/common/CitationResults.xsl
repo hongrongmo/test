@@ -137,10 +137,10 @@
         </a><br/>
     </xsl:template>
     
-   
-    
-    
     <xsl:template match="CITEDBY">
+            <xsl:variable name="SESSION-ID">
+	    	<xsl:value-of select="/PAGE/SESSION-ID"/>
+	    </xsl:variable>
             <CITEDBY>      	              
 	    <xsl:variable name="CITEDBY-MD5">
 	         <xsl:value-of select="security:getCitedbyMD5($SESSION-ID,@AN)" />
