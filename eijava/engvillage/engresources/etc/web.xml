@@ -15,6 +15,10 @@
       <param-value>@controller_server@</param-value>
     </context-param>
     <context-param>
+          <param-name>citedbyServer</param-name>
+          <param-value>@citedby_server@</param-value>
+    </context-param>
+    <context-param>
       <param-name>authURL</param-name>
       <param-value>http://@session_server@/sessionservice/servlet/SessionService</param-value>
     </context-param>
