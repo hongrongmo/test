@@ -9,7 +9,15 @@
 .ExSmBlueText       {font-size:10px; font-family:arial,verdana,geneva; color:#194DB5;}
 .SmBlueText         {font-size:11px; font-family:arial,verdana,geneva; color:#003399;}
 .BlueText           {font-size:12px; font-family:arial,verdana,geneva; color:#003399;}
-.DBlueText	    {font-size: 14px; font-family:arial,verdana,geneva; color:#003FB2;}
+.citedbyRedText     {font-size:9pt; font-family:arial,verdana,geneva; color:#ff7800; font-weight:bold;}
+.citedbyBlackText   {font-size:9pt; font-family:arial,verdana,geneva; color:#000000;}
+.medCitedbyBlackText   {font-size:8pt; font-family:arial,verdana,geneva; color:#000000;}
+.citedbyBlueLink    {font-size:9pt; font-family:arial,verdana,geneva; color:#0000FF;}
+.smCitedbyBlueLink  {font-size:8pt; font-family:arial,verdana,geneva; color:#0000FF;}
+.italicCitedbyblack  {font-size:8pt; font-family:arial,verdana,geneva; color:#000000; font-style: italic;}
+
+
+.DBlueText	    {font-size:14px; font-family:arial,verdana,geneva; color:#003FB2;}
 .LBlueText          {font-size:12px; font-family:arial,verdana,geneva; color:#3333FF;}
 .LgBlueText         {font-size:12px; font-family:arial,verdana,geneva; color:#800080;}
 .SmPinkText         {font-size:12px; font-family:arial,verdana,geneva; color:#CC33CC;}
@@ -37,7 +45,7 @@
 .BigBlackText       {font-size:14px; font-family:arial,verdana,geneva; color:#3173b5; font-weight:bold;}
 .BrownText          {font-size:12px; font-family:arial,verdana,geneva; color:#7F007F;}
 .XBlackText         {font-size:18px; font-family:arial,verdana,geneva; color:#3173b5;}
-.TagSimple          {font-size: 12px; font-family:arial,verdana,geneva; text-decoration: none;}
+.TagSimple          {font-size:12px; font-family:arial,verdana,geneva; text-decoration: none;}
 
 .size1        { font-size: 80%; font-family:arial,verdana,geneva; text-decoration:none;}
 .size2        { font-size: 120%; font-family:arial,verdana,geneva; text-decoration:none;}
@@ -52,6 +60,9 @@
 .r { color: #f00 !important; }
 
 A.SmBlueLink:link       {font-size:10px; font-family:arial,verdana,geneva; color:#0000FF;}
+A.citedbyBlueLink:link       {font-size:9pt; font-family:arial,verdana,geneva; color:#0000FF;}
+A.citedbyBlueBoldLink:link       {font-size:9pt; font-family:arial,verdana,geneva; color:#0000FF; font-weight:bold;}
+A.smCitedByBlueLink:link     {font-size:8pt; font-family:arial,verdana,geneva; color:#0000FF;}
 A.SmBlueLink:active     {font-size:10px; font-family:arial,verdana,geneva; color:#FF0055;}
 A.SmBlueLink:visited    {font-size:10px; font-family:arial,verdana,geneva; color:#800080;}
 A.MedBlueLink:link      {font-size:11px; font-family:arial,verdana,geneva; color:#0000FF;}
