@@ -474,7 +474,7 @@ public class BDDocBuilder
 								ht);
 				}
 
-				buildField(Keys.PI,rset.getString("PII"),ht);
+				//buildField(Keys.PI,rset.getString("PII"),ht);
 
 				if(rset.getString("CORRESPONDENCENAME")!= null ||
 						rset.getString("CORRESPONDENCEEADDRESS") != null)
