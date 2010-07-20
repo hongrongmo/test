@@ -365,7 +365,7 @@
     </xsl:variable>
 
 
- <div class="t" style="width:200px;" id="citedby_box">
+ <div class="t" style="width:215px;" id="citedby_box">
  <!--
       <div class="b"> 
       <div class="l"> 
@@ -380,7 +380,7 @@
         	<td bgcolor="#F5F5F5"><a class="BlueText"><span id="citedby_content"/></a></td>
         	</tr>
         	<tr>
-        	<td><a href="javascript:newwindow=window.open('http://www.scopus.com','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable');%20void('');" class="BlueText"><b>Learn more about Scopus</b></a></td>
+        	<td><a href="javascript:newwindow=window.open('http://www.info.scopus.com','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable');%20void('');" class="smCitedByBlueLink"><b>Learn more about Scopus</b></a></td>
         	</tr>
         </table>
         </div></div></div>
