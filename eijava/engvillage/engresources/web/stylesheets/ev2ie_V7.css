@@ -9,11 +9,11 @@
 .ExSmBlueText            	{font-size: 10px; font-family:arial,verdana,geneva; color:#194DB5; font-weight: bold;}
 .SmBlueText            		{font-size: 11px; font-family:arial,verdana,geneva; color:#194DB5;}
 .BlueText            		{font-size: 12px; font-family:arial,verdana,geneva; color:#003399;}
-.citedbyRedText     {font-size:9pt; font-family:arial,verdana,geneva; color:#F57E5F; font-weight:bold;}
-.citedbyBlackText   {font-size:9pt; font-family:arial,verdana,geneva; color:#000000;}
-.medCitedbyBlackText   {font-size:8pt; font-family:arial,verdana,geneva; color:#000000;}
-.citedbyBlueLink    {font-size:9pt; font-family:arial,verdana,geneva; color:#0000FF;}
-.smCitedbyBlueLink  {font-size:8pt; font-family:arial,verdana,geneva; color:#0000FF;}
+.citedbyRedText     {font-size:9pt; font-family:arial; color:#F57E2F; font-weight:bold;}
+.citedbyBlackText   {font-size:9pt; font-family:arial; color:#000000;}
+.medCitedbyBlackText   {font-size:8pt; font-family:arial; color:#000000;}
+.citedbyBlueLink    {font-size:9pt; font-family:arial; color:#0000FF;}
+.smCitedbyBlueLink  {font-size:8pt; font-family:arial; color:#0000FF;}
 .italicCitedbyblack  {font-size:8pt; font-family:arial,verdana,geneva; color:#000000; font-style: italic;}
 
 .DBlueText			{font-size: 14px; font-family:arial,verdana,geneva; color:#003FB2;}
@@ -58,9 +58,16 @@
 .lr { color: #f77; }
 .r { color: #f00 !important; }
 
-A.citedbyBlueLink:link        	{font-size:9pt; font-family:arial,verdana,geneva; color:#0000FF;}
-A.smCitedByBlueLink:link     	{font-size:8pt; font-family:arial,verdana,geneva; color:#0000FF;}
-A.citedbyBlueBoldLink:link       {font-size:9pt; font-family:arial,verdana,geneva; color:#0000FF; font-weight:bold;}
+A.citedbyBlueLink:link        	{font-size:9pt; font-family:arial; color:#0000FF;text-decoration:none;}
+A.smCitedByBlueLink:link     	{font-size:8pt; font-family:arial; color:#0000FF;text-decoration:none;}
+A.citedbyBlueBoldLink:link      {font-size:9pt; font-family:arial; color:#0000FF;font-weight:bold;text-decoration:none;}
+A.citedbyBlueLink:visited       {font-size:9pt; font-family:arial; color:#0000FF;text-decoration:none;}
+A.smCitedByBlueLink:visited     {font-size:8pt; font-family:arial; color:#0000FF;text-decoration:none;}
+A.citedbyBlueBoldLink:visited   {font-size:9pt; font-family:arial; color:#0000FF;font-weight:bold;text-decoration:none;}
+A.citedbyBlueLink:active        {font-size:9pt; font-family:arial; color:#0000FF;text-decoration:none;}
+A.smCitedByBlueLink:active      {font-size:8pt; font-family:arial; color:#0000FF;text-decoration:none;}
+A.citedbyBlueBoldLink:active    {font-size:9pt; font-family:arial; color:#0000FF;font-weight:bold;text-decoration:none;}
+
 A.SmBlueLink:link		{font-size: 10px; font-family:arial,verdana,geneva; color:#0000FF;}
 A.SmBlueLink:active		{font-size: 10px; font-family:arial,verdana,geneva; color:#FF0055;}
 A.SmBlueLink:visited		{font-size: 10px; font-family:arial,verdana,geneva; color:#800080;}
