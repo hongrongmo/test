@@ -230,7 +230,7 @@ var selectedDbMask = 0;
     {
         link = newLookupLink();
         link.onclick=OpenLookup_ST;
-        link.appendChild(document.createTextNode("Serial title"));
+        link.appendChild(document.createTextNode("Source title"));
 
         lidiv = document.createElement("li");
         lidiv.appendChild(link);
