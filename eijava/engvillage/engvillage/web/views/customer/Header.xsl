@@ -146,15 +146,15 @@
 
       <xsl:if test="not($SEARCH-TYPE='EasyForm')">
         <td valign="middle" align="right" target="_top">
-          <a class="DecLink" target="_top" href="/controller/servlet/Controller?CID=viewCompleteSearchHistory&amp;database={$DATABASE}&amp;searchresults={$RESULTS-NAV}&amp;newsearch={$NEWSEARCH-NAV}">Search History</a>
+          <a class="hLink" target="_top" href="/controller/servlet/Controller?CID=viewCompleteSearchHistory&amp;database={$DATABASE}&amp;searchresults={$RESULTS-NAV}&amp;newsearch={$NEWSEARCH-NAV}">Search History</a>
           <a class="SmBlackText">&#160; - &#160;</a>
-          <a class="DecLink" target="_top" href="/controller/servlet/Controller?CID=citationSelectedSet&amp;DATABASETYPE={$DATABASE}&amp;searchresults={$RESULTS-NAV}&amp;newsearch={$NEWSEARCH-NAV}">Selected Records</a>
+          <a class="hLink" target="_top" href="/controller/servlet/Controller?CID=citationSelectedSet&amp;DATABASETYPE={$DATABASE}&amp;searchresults={$RESULTS-NAV}&amp;newsearch={$NEWSEARCH-NAV}">Selected Records</a>
           <xsl:if test="($PERSONALIZATION-PRESENT='true')">
             <a class="SmBlackText">&#160; - &#160;</a>
-            <a class="DecLink" target="_top" HREF="/controller/servlet/Controller?CID=myprofile&amp;database={$DATABASE}&amp;searchresults={$RESULTS-NAV}&amp;newsearch={$NEWSEARCH-NAV}">My Profile</a>
+            <a class="hLink" target="_top" HREF="/controller/servlet/Controller?CID=myprofile&amp;database={$DATABASE}&amp;searchresults={$RESULTS-NAV}&amp;newsearch={$NEWSEARCH-NAV}">My Profile</a>
             <a class="SmBlackText">&#160; - &#160;</a>
             <xsl:variable name="NEXTURL">CID=viewSavedSearches&amp;database=<xsl:value-of select="$DATABASE"/>&amp;show=alerts</xsl:variable>
-            <a class="DecLink" target="_top">
+            <a class="hLink" target="_top">
             <xsl:attribute name="href">
               <xsl:choose>
                 <xsl:when test="($PERSONALIZATION='true')">/controller/servlet/Controller?CID=viewSavedSearches&amp;database=<xsl:value-of select="$DATABASE"/>&amp;show=alerts</xsl:when>
