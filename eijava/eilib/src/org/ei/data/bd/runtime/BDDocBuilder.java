@@ -13,6 +13,7 @@ import org.ei.data.bd.*;
 import org.ei.data.bd.loadtime.*;
 import org.ei.data.bd.CVTerms;
 import org.apache.oro.text.perl.*;
+import java.net.URLEncoder;
 
 public class BDDocBuilder
 	implements DocumentBuilder
@@ -149,7 +150,7 @@ public class BDDocBuilder
 
 				if(rset.getString("DOI")!=null)
 				{
-					citedby.setDoi(rset.getString("DOI"));
+					citedby.setDoi(URLEncoder.encode(rset.getString("DOI")));
 				}
 
 				if(rset.getString("PII")!=null)
