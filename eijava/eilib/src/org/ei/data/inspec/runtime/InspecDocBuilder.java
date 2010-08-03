@@ -15,6 +15,7 @@ import org.apache.oro.text.perl.Perl5Util;
 import java.util.regex.*;
 import java.text.*;
 import java.io.IOException;
+import java.net.URLEncoder;
 
 
 public class InspecDocBuilder
@@ -485,7 +486,7 @@ public class InspecDocBuilder
                 //DOI
                 if(rset.getString("PDOI") != null)
                 {
-                    ht.put(Keys.DOI, new XMLWrapper(Keys.DOI,rset.getString("PDOI")));
+                    ht.put(Keys.DOI, new XMLWrapper(Keys.DOI,URLEncoder.encode(rset.getString("PDOI"))));
                 }
 
                 // CLS
@@ -528,7 +529,7 @@ public class InspecDocBuilder
 
 				if(rset.getString("PDOI")!=null)
 				{
-					citedby.setDoi(rset.getString("PDOI"));
+					citedby.setDoi(URLEncoder.encode(rset.getString("PDOI")));
 				}
 
 				if(rset.getString("PVOLISS") != null)
@@ -1104,7 +1105,7 @@ public class InspecDocBuilder
 
 					if(rset.getString("PDOI")!=null)
 					{
-						citedby.setDoi(rset.getString("PDOI"));
+						citedby.setDoi(URLEncoder.encode(rset.getString("PDOI")));
 					}
 
 					if(rset.getString("PVOLISS") != null)
@@ -1928,6 +1929,7 @@ public class InspecDocBuilder
 
                 //DOI
                 if(rset.getString("PDOI") != null) {
+
                     ht.put(Keys.DOI, new XMLWrapper(Keys.DOI,StringUtil.replaceNullWithEmptyString(rset.getString("PDOI"))));
                 }
 
@@ -1997,7 +1999,7 @@ public class InspecDocBuilder
 
 				if(rset.getString("PDOI")!=null)
 				{
-					citedby.setDoi(rset.getString("PDOI"));
+					citedby.setDoi(URLEncoder.encode(rset.getString("PDOI")));
 				}
 
 				if(rset.getString("PVOLISS") != null)
