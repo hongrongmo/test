@@ -30,7 +30,6 @@ public class BdCorrection
     private int intDbMask = 1;
     private static Connection con = null;
     static String url="jdbc:oracle:thin:@jupiter:1521:eidb1";
-    //static String url="jdbc:oracle:thin:@neptune:1521:ei";
     static String driver="oracle.jdbc.driver.OracleDriver";
     static String username="ap_correction";
     static String password="ei3it";
@@ -168,9 +167,6 @@ public class BdCorrection
 		try
 		{
 
-			//FastSearchControl.BASE_URL = "http://ei-main.bos3.fastsearch.net:15100";
-			//FastSearchControl.BASE_URL = "http://ei-test.bos3.fastsearch.net:15100";
-
 			BdCorrection bdc = new BdCorrection();
 			con = bdc.getConnection(url,driver,username,password);
 			if(action!=null && !(action.equals("extractupdate")||action.equals("extractdelete")))
@@ -184,7 +180,6 @@ public class BdCorrection
 					System.in.read();
 					Thread.currentThread().sleep(1000);
 				}
-
 
 				bdc.cleanUp(tableToBeTruncated);
 
@@ -218,7 +213,7 @@ public class BdCorrection
 				}
 				Runtime r = Runtime.getRuntime();
 
-				Process p = r.exec("correctionFileLoader.sh "+dataFile);
+				Process p = r.exec("./correctionFileLoader.sh "+dataFile);
 				int t = p.waitFor();
 				//System.out.println(" t "+t);
 				int tempTableCount = bdc.getTempTableCount();
@@ -444,10 +439,20 @@ public class BdCorrection
 				Thread.currentThread().sleep(1000);
 			}
 
-			pstmt = con.prepareCall("{ call update_bd_backup_table(?,?)}");
-			pstmt.setInt(1,updateNumber);
-			pstmt.setString(2,database);
-			pstmt.executeUpdate();
+			if(action != null && action.equalsIgnoreCase("aip"))
+			{
+				pstmt = con.prepareCall("{ call update_aip_backup_table(?,?)}");
+				pstmt.setInt(1,updateNumber);
+				pstmt.setString(2,database);
+				pstmt.executeUpdate();
+			}
+			else
+			{
+				pstmt = con.prepareCall("{ call update_bd_backup_table(?,?)}");
+				pstmt.setInt(1,updateNumber);
+				pstmt.setString(2,database);
+				pstmt.executeUpdate();
+			}
 
 			if(action != null && action.equalsIgnoreCase("update"))
 			{
@@ -472,6 +477,33 @@ public class BdCorrection
 					Thread.currentThread().sleep(1000);
 				}
 				pstmt = con.prepareCall("{ call update_bd_master_table(?,?)}");
+				pstmt.setInt(1,updateNumber);
+				pstmt.setString(2,database);
+				pstmt.executeUpdate();
+			}
+			else if(action != null && action.equalsIgnoreCase("aip"))
+			{
+				if(test)
+				{
+					System.out.println("begin to execute stored procedure update_aip_temp_table");
+					System.out.println("press enter to continue");
+					System.in.read();
+					Thread.currentThread().sleep(1000);
+				}
+				pstmt = con.prepareCall("{ call update_aip_temp_table(?,?,?)}");
+				pstmt.setInt(1,updateNumber);
+				pstmt.setString(2,fileName);
+				pstmt.setString(3,database);
+				pstmt.executeUpdate();
+
+				if(test)
+				{
+					System.out.println("begin to execute stored procedure update_aip_master_table");
+					System.out.println("press enter to continue");
+					System.in.read();
+					Thread.currentThread().sleep(1000);
+				}
+				pstmt = con.prepareCall("{ call update_aip_master_table(?,?)}");
 				pstmt.setInt(1,updateNumber);
 				pstmt.setString(2,database);
 				pstmt.executeUpdate();
