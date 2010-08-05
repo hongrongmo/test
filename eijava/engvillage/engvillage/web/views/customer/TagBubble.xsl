@@ -365,27 +365,7 @@
     </xsl:variable>
 
 
- <div class="t" style="width:215px;" id="citedby_box">
- <!--
-      <div class="b"> 
-      <div class="l"> 
-      <div class="rc">
-        <table border="0" style="margin:0px; padding:0px; width:100%">
-        	<tr>
-        	<td bgcolor="#C3C8D1" align="center" padding="0" border="0" margin="0"><a class="MedBlackText"><font color="red"><b>Cited by in Scopus</b></font></a></td>
-        	</tr>
-        	<tr><td><a class="MedBlackText" id="citedbyDetailLink">
-        	<span id="citedby_year"/></a></td></tr>
-        	<tr>
-        	<td bgcolor="#F5F5F5"><a class="BlueText"><span id="citedby_content"/></a></td>
-        	</tr>
-        	<tr>
-        	<td><a href="javascript:newwindow=window.open('http://www.info.scopus.com','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable');%20void('');" class="smCitedByBlueLink"><b>Learn more about Scopus</b></a></td>
-        	</tr>
-        </table>
-        </div></div></div>
-       -->
-        </div>
+ <div  style="width:215px;" id="citedby_box"/>
         <div>
         <table><tr><td><img src="/engresources/images/s.gif" height="4"/></td></tr></table>
         </div>
