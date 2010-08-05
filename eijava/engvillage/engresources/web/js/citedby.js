@@ -86,7 +86,6 @@ function ajaxCitedByFunction1()
 
 		function populateResults(data)
 		{
-
 			var citedby_content="";
 			var year="";
 			var recordEid;
@@ -109,7 +108,7 @@ function ajaxCitedByFunction1()
 			
 			
 			var href ="javascript:newwindow=window.open('http://www.scopus.com/scopus/inward/citedby.url?partnerID=qRss3amk&eid="+eid+"','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable');%20void('');";
-			var head ="<div class=\"b\"><div class=\"l\"><div class=\"rc\"><div class=\"bl\"><div class=\"br\"><div class=\"tl\"><div class=\"trc\"><table border=0 ><tr><td><img src=/engresources/images/s.gif border=0 width=1></td><td valign=bottom padding=0 border=0 margin=0><a class=\"LgBlackText\"><b>Tools in Scopus</b></a></td><td><img src=/engresources/images/s.gif border=0 width=1></td></tr><tr><td colspan=3 align=right valign=top padding=0 border=0 margin=0 height=3><img src=/engresources/tagimages/line.jpg height=3 width=210></td></tr>";
+			var head ="<div class=\"t\"><div class=\"b\"><div class=\"l\"><div class=\"rc\"><div class=\"bl\"><div class=\"br\"><div class=\"tl\"><div class=\"trc\"><table border=0 ><tr><td><img src=/engresources/images/s.gif border=0 width=1></td><td valign=bottom padding=0 border=0 margin=0><a class=\"LgBlackText\"><b>Tools in Scopus</b></a></td><td><img src=/engresources/images/s.gif border=0 width=1></td></tr><tr><td colspan=3 align=right valign=top padding=0 border=0 margin=0 height=3><img src=/engresources/tagimages/line.jpg height=3 width=210></td></tr>";
 			var preLinkText ="<a class=citedbyRedText><b>Cited by: </b></a><a class=citedbyBlackText>This article has been cited </a>";
 			var linkDisplay = "<b>"+count+"</b>";
 			var proLinkText = "<a class=citedbyBlackText>since "+year+"</a><br/>";
@@ -119,7 +118,7 @@ function ajaxCitedByFunction1()
 				linkDisplay = "<b>1</b> "
 				hoverText = "scopus found "+count+" citation for this article";
 			}
-			var content = head+"<tr><td><img src=/engresources/images/s.gif border=0 width=1></td><td>"+preLinkText+"<a title =\""+hoverText+"\" class=citedbyBlueLink href="+href+">"+linkDisplay+"</a> times in Scopus "+proLinkText+"</td><td><img src=/engresources/images/s.gif border=0 width=1></td></tr><tr><td colspan=3><img src=/engresources/images/s.gif border=0 width=1></td></tr><tr><td><img src=/engresources/images/s.gif border=0 width=1></td><td><a class=citedbyBlueText>"+citedby_content+"</a></td><td><img src=/engresources/images/s.gif border=0 width=1></td></tr><tr><td colspan=3 valign=top padding=0 border=0 margin=0 height=3><img src=/engresources/tagimages/line.jpg height=3 width=210></td></tr><tr><td><img src=/engresources/images/s.gif border=0 width=1></td><td><a href=\"javascript:newwindow=window.open('http://www.info.scopus.com','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable');%20void('');\" class=smCitedByBlueLink>Learn more about Scopus</a></td><td><img src=/engresources/images/s.gif border=0 width=1></td></tr></table></div></div></div></div></div></div></div>";
+			var content = head+"<tr><td><img src=/engresources/images/s.gif border=0 width=1></td><td>"+preLinkText+"<a title =\""+hoverText+"\" class=citedbyBlueLink href="+href+">"+linkDisplay+"</a><a class=citedbyBlackText> times in Scopus </a>"+proLinkText+"</td><td><img src=/engresources/images/s.gif border=0 width=1></td></tr><tr><td colspan=3><img src=/engresources/images/s.gif border=0 width=1></td></tr><tr><td><img src=/engresources/images/s.gif border=0 width=1></td><td><a class=citedbyBlueText>"+citedby_content+"</a></td><td><img src=/engresources/images/s.gif border=0 width=1></td></tr><tr><td colspan=3 valign=top padding=0 border=0 margin=0 height=3><img src=/engresources/tagimages/line.jpg height=3 width=210></td></tr><tr><td><img src=/engresources/images/s.gif border=0 width=1></td><td><a href=\"javascript:newwindow=window.open('http://www.info.scopus.com','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable');%20void('');\" class=smCitedByBlueLink>Learn more about Scopus</a></td><td><img src=/engresources/images/s.gif border=0 width=1></td></tr></table></div></div></div></div></div></div></div></div>";
 			document.getElementById("citedby_box").innerHTML = content;
 		
 		}
