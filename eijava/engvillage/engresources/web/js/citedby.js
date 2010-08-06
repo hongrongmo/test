@@ -94,31 +94,34 @@ function ajaxCitedByFunction1()
 			   year=data.result[i].YEAR;
 			   recordEid=data.result[i].EID;
 			   var recordHref="javascript:newwindow=window.open('http://www.scopus.com/scopus/inward/record.url?partnerID=qRss3amk&eid="+recordEid+"','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable');%20void('');";
-			   
-			   if(i<2)
+			   if(i>1)
 			   {
-				   citedby_content = citedby_content+" <a class=citedbyBlueLink>"+data.result[i].AUTHOR+"</a>";
-				   citedby_content = citedby_content+" <br/><a class=citedbyBlueBoldLink href="+recordHref+"><b>"+data.result[i].TITLE+"</b></a>";
-				   citedby_content = citedby_content+"<br/><a class=italicCitedbyblack>("+data.result[i].YEAR+")";
-				   citedby_content = citedby_content+" "+data.result[i].SOURCETITLE;
-				   citedby_content = citedby_content+"</a><br/><br/>";
+			   	break;
 			   }
+			  
+			   citedby_content = citedby_content+" <a class=citedbyBlueLink>"+data.result[i].AUTHOR+"</a>";
+			   citedby_content = citedby_content+" <br/><a class=citedbyBlueBoldLink href="+recordHref+"><b>"+data.result[i].TITLE+"</b></a>";
+			   citedby_content = citedby_content+"<br/><a class=italicCitedbyblack>("+year+")";
+			   citedby_content = citedby_content+" "+data.result[i].SOURCETITLE;
+			   citedby_content = citedby_content+"</a><br/><br/>";
+			   
+			  
 			  			  
 			}
 			
 			
 			var href ="javascript:newwindow=window.open('http://www.scopus.com/scopus/inward/citedby.url?partnerID=qRss3amk&eid="+eid+"','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable');%20void('');";
-			var head ="<div class=\"t\"><div class=\"b\"><div class=\"l\"><div class=\"rc\"><div class=\"bl\"><div class=\"br\"><div class=\"tl\"><div class=\"trc\"><table border=0 ><tr><td><img src=/engresources/images/s.gif border=0 width=1></td><td valign=bottom padding=0 border=0 margin=0><a class=\"LgBlackText\"><b>Tools in Scopus</b></a></td><td><img src=/engresources/images/s.gif border=0 width=1></td></tr><tr><td colspan=3 align=right valign=top padding=0 border=0 margin=0 height=3><img src=/engresources/tagimages/line.jpg height=3 width=210></td></tr>";
+			var head ="<div style=\"width:215px;\" class=\"t\"><div class=\"b\"><div class=\"l\"><div class=\"rc\"><div class=\"bl\"><div class=\"br\"><div class=\"tl\"><div class=\"trc\"><table border=0 ><tr><td><img src=/engresources/images/s.gif border=0 width=1></td><td valign=bottom padding=0 border=0 margin=0><a class=\"LgBlackText\"><b>Tools in Scopus</b></a></td><td><img src=/engresources/images/s.gif border=0 width=1></td></tr><tr><td colspan=3 align=right valign=top padding=0 border=0 margin=0 height=3><img src=/engresources/tagimages/line.jpg height=3 width=210></td></tr>";
 			var preLinkText ="<a class=citedbyRedText><b>Cited by: </b></a><a class=citedbyBlackText>This article has been cited </a>";
-			var linkDisplay = "<b>"+count+"</b>";
-			var proLinkText = "<a class=citedbyBlackText>since "+year+"</a><br/>";
+			var linkDisplay = "<b>"+count+" times</b>";
+			var proLinkText = "<a class=citedbyBlackText>since 1996</a><br/>";
 			var hoverText = "scopus found "+count+" citations for this article";
 			if(count==1)
 			{
-				linkDisplay = "<b>1</b> "
+				linkDisplay = "<b>1 time</b> "
 				hoverText = "scopus found "+count+" citation for this article";
 			}
-			var content = head+"<tr><td><img src=/engresources/images/s.gif border=0 width=1></td><td>"+preLinkText+"<a title =\""+hoverText+"\" class=citedbyBlueLink href="+href+">"+linkDisplay+"</a><a class=citedbyBlackText> times in Scopus </a>"+proLinkText+"</td><td><img src=/engresources/images/s.gif border=0 width=1></td></tr><tr><td colspan=3><img src=/engresources/images/s.gif border=0 width=1></td></tr><tr><td><img src=/engresources/images/s.gif border=0 width=1></td><td><a class=citedbyBlueText>"+citedby_content+"</a></td><td><img src=/engresources/images/s.gif border=0 width=1></td></tr><tr><td colspan=3 valign=top padding=0 border=0 margin=0 height=3><img src=/engresources/tagimages/line.jpg height=3 width=210></td></tr><tr><td><img src=/engresources/images/s.gif border=0 width=1></td><td><a href=\"javascript:newwindow=window.open('http://www.info.scopus.com','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable');%20void('');\" class=smCitedByBlueLink>Learn more about Scopus</a></td><td><img src=/engresources/images/s.gif border=0 width=1></td></tr></table></div></div></div></div></div></div></div></div>";
+			var content = head+"<tr><td><img src=/engresources/images/s.gif border=0 width=1></td><td>"+preLinkText+"<a title =\""+hoverText+"\" class=citedbyunderlineLink  href="+href+">"+linkDisplay+"</a><a class=citedbyBlackText> in Scopus </a>"+proLinkText+"</td><td><img src=/engresources/images/s.gif border=0 width=1></td></tr><tr><td colspan=3><img src=/engresources/images/s.gif border=0 width=1></td></tr><tr><td><img src=/engresources/images/s.gif border=0 width=1></td><td><a class=citedbyBlueText>"+citedby_content+"</a></td><td><img src=/engresources/images/s.gif border=0 width=1></td></tr><tr><td colspan=3 valign=top padding=0 border=0 margin=0 height=3><img src=/engresources/tagimages/line.jpg height=3 width=210></td></tr><tr><td><img src=/engresources/images/s.gif border=0 width=1></td><td><a href=\"javascript:newwindow=window.open('http://www.info.scopus.com','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable');%20void('');\" class=smCitedByBlueLink>Learn more about Scopus</a></td><td><img src=/engresources/images/s.gif border=0 width=1></td></tr></table></div></div></div></div></div></div></div></div>";
 			document.getElementById("citedby_box").innerHTML = content;
 		
 		}
