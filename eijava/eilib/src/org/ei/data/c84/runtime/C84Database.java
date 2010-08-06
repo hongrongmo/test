@@ -1,14 +1,12 @@
 package org.ei.data.c84.runtime;
 
 import org.ei.domain.*;
-
 import java.util.Map;
 import java.util.Hashtable;
 import org.ei.fulldoc.LinkingStrategy;
 import org.ei.domain.sort.SortField;
 import java.util.List;
 import java.util.Arrays;
-import org.ei.domain.MultiDatabaseDocBuilder;
 
 public class C84Database
 	extends Database
@@ -38,7 +36,7 @@ public class C84Database
 
     public DocumentBuilder newBuilderInstance()
     {
-        return new MultiDatabaseDocBuilder();
+        return new C84DocBuilder(this);
     }
 
     public SearchControl newSearchControlInstance()
@@ -114,9 +112,9 @@ public class C84Database
 			return true;
 		}
 	}
-	
-	 public DataDictionary getDataDictionary()
-	    {
-	        return null;
+
+	public DataDictionary getDataDictionary()
+		    {
+		        return null;
 	    }
 }
