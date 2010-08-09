@@ -6,6 +6,7 @@
   // this was failing since basketsize was missing on request - get from DoucmentBasket instead
 	//int basketCount=Integer.parseInt(request.getParameter("basketsize"));
 	int handle = Integer.parseInt(request.getParameter("handle"));
+	
 	String viewType = request.getParameter("viewType");
 	String docID = request.getParameter("docid");
 	String databaseType=request.getParameter("DATABASETYPE");
@@ -29,10 +30,16 @@
 	{
 		pageIndex  = (handle/50) + 1;
 	}
+	
 
   int basketCount = documentBasket.getBasketSize();
+  	
+  	if (basketCount!=1){
 	basketCount--;
+	}
+	
 	int totalPages = -1;
+	
 	if((basketCount%50) == 0)
 	{
 		totalPages  = (basketCount/50);
@@ -41,11 +48,13 @@
 	{
 		totalPages  = (basketCount/50) + 1;
 	}
+	
 
 	if(pageIndex > totalPages)
 	{
 		pageIndex = totalPages;
 	}
+	
 
 	StringBuffer urlbuf = new StringBuffer("/controller/servlet/Controller?CID=");
 	urlbuf.append(viewType);
