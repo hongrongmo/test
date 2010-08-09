@@ -529,7 +529,7 @@ public class InspecDocBuilder
 
 				if(rset.getString("PDOI")!=null)
 				{
-					citedby.setDoi(URLEncoder.encode(rset.getString("PDOI")));
+					citedby.setDoi(URLEncoder.encode((rset.getString("PDOI")).trim()));
 				}
 
 				if(rset.getString("PVOLISS") != null)
@@ -541,8 +541,8 @@ public class InspecDocBuilder
 
 					if(perl.match("/,/", volumeIssue))
 					{
-						citedby.setVolume(perl.preMatch());
-						citedby.setIssue(perl.postMatch());
+						citedby.setVolume((perl.preMatch()).trim());
+						citedby.setIssue((perl.postMatch()).trim());
 					}
 					else
 					{
@@ -550,31 +550,30 @@ public class InspecDocBuilder
 						if(perl.match("/vol/i",volumeIssue))
 						{
 							volumeIssue = perl.substitute("s/vol\\./v /i", volumeIssue);
-							citedby.setVolume(volumeIssue);
+							citedby.setVolume(volumeIssue.trim());
 						}
 						else if(perl.match("/no/i",volumeIssue))
 						{
 							volumeIssue = perl.substitute("s/no\\./n /i", volumeIssue);
-							citedby.setIssue(volumeIssue);
+							citedby.setIssue(volumeIssue.trim());
 						}
 					}
 
 					if(rset.getString("PSN")!=null)
 					{
-						citedby.setIssn(rset.getString("PSN"));
+						citedby.setIssn((rset.getString("PSN")).trim());
 					}
 
 					if(rset.getString("PIPN")!=null)
 					{
-						citedby.setPage(rset.getString("PIPN"));
+						citedby.setPage((rset.getString("PIPN")).trim());
 					}
 
 					if(rset.getString("ANUM")!=null)
 					{
-						citedby.setAccessionNumber(rset.getString("ANUM"));
+						citedby.setAccessionNumber((rset.getString("ANUM")).trim());
 					}
 				}
-
 
 					ht.put(Keys.CITEDBY,citedby);
 
@@ -1105,7 +1104,7 @@ public class InspecDocBuilder
 
 					if(rset.getString("PDOI")!=null)
 					{
-						citedby.setDoi(URLEncoder.encode(rset.getString("PDOI")));
+						citedby.setDoi(URLEncoder.encode((rset.getString("PDOI")).trim()));
 					}
 
 					if(rset.getString("PVOLISS") != null)
@@ -1117,8 +1116,8 @@ public class InspecDocBuilder
 
 						if(perl.match("/,/", volumeIssue))
 						{
-							citedby.setVolume(perl.preMatch());
-							citedby.setIssue(perl.postMatch());
+							citedby.setVolume((perl.preMatch()).trim());
+							citedby.setIssue((perl.postMatch()).trim());
 						}
 						else
 						{
@@ -1126,23 +1125,23 @@ public class InspecDocBuilder
 							if(perl.match("/vol/i",volumeIssue))
 							{
 								volumeIssue = perl.substitute("s/vol\\./v /i", volumeIssue);
-								citedby.setVolume(volumeIssue);
+								citedby.setVolume(volumeIssue.trim());
 							}
 							else if(perl.match("/no/i",volumeIssue))
 							{
 								volumeIssue = perl.substitute("s/no\\./n /i", volumeIssue);
-								citedby.setIssue(volumeIssue);
+								citedby.setIssue(volumeIssue.trim());
 							}
 						}
 
 						if(rset.getString("PSN")!=null)
 						{
-							citedby.setIssn(rset.getString("PSN"));
+							citedby.setIssn((rset.getString("PSN")).trim());
 						}
 
 						if(rset.getString("PIPN")!=null)
 						{
-							citedby.setPage(rset.getString("PIPN"));
+							citedby.setPage((rset.getString("PIPN")).trim());
 						}
 
 						if(rset.getString("ANUM")!=null)
@@ -1151,8 +1150,7 @@ public class InspecDocBuilder
 						}
 					}
 
-
-						ht.put(Keys.CITEDBY,citedby);
+					ht.put(Keys.CITEDBY,citedby);
 
 				// end citedby
 
@@ -1999,7 +1997,7 @@ public class InspecDocBuilder
 
 				if(rset.getString("PDOI")!=null)
 				{
-					citedby.setDoi(URLEncoder.encode(rset.getString("PDOI")));
+					citedby.setDoi(URLEncoder.encode((rset.getString("PDOI")).trim()));
 				}
 
 				if(rset.getString("PVOLISS") != null)
@@ -2011,8 +2009,8 @@ public class InspecDocBuilder
 
 					if(perl.match("/,/", volumeIssue))
 					{
-						citedby.setVolume(perl.preMatch());
-						citedby.setIssue(perl.postMatch());
+						citedby.setVolume((perl.preMatch()).trim());
+						citedby.setIssue((perl.postMatch()).trim());
 					}
 					else
 					{
@@ -2020,23 +2018,23 @@ public class InspecDocBuilder
 						if(perl.match("/vol/i",volumeIssue))
 						{
 							volumeIssue = perl.substitute("s/vol\\./v /i", volumeIssue);
-							citedby.setVolume(volumeIssue);
+							citedby.setVolume(volumeIssue.trim());
 						}
 						else if(perl.match("/no/i",volumeIssue))
 						{
 							volumeIssue = perl.substitute("s/no\\./n /i", volumeIssue);
-							citedby.setIssue(volumeIssue);
+							citedby.setIssue(volumeIssue.trim());
 						}
 					}
 
 					if(rset.getString("PSN")!=null)
 					{
-						citedby.setIssn(rset.getString("PSN"));
+						citedby.setIssn((rset.getString("PSN")).trim());
 					}
 
 					if(rset.getString("PIPN")!=null)
 					{
-						citedby.setPage(rset.getString("PIPN"));
+						citedby.setPage((rset.getString("PIPN")).trim());
 					}
 
 					if(rset.getString("ANUM")!=null)
