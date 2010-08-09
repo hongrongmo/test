@@ -150,32 +150,32 @@ public class BDDocBuilder
 
 				if(rset.getString("DOI")!=null)
 				{
-					citedby.setDoi(URLEncoder.encode(rset.getString("DOI")));
+					citedby.setDoi(URLEncoder.encode((rset.getString("DOI")).trim()));
 				}
 
 				if(rset.getString("PII")!=null)
 				{
-					citedby.setPii(rset.getString("PII"));
+					citedby.setPii((rset.getString("PII")).trim());
 				}
 
 				if(rset.getString("VOLUME")!=null)
 				{
-					citedby.setVolume(rset.getString("VOLUME"));
+					citedby.setVolume((rset.getString("VOLUME")).trim());
 				}
 
 				if(rset.getString("ISSUE")!=null)
 				{
-					citedby.setIssue(rset.getString("ISSUE"));
+					citedby.setIssue((rset.getString("ISSUE")).trim());
 				}
 
 				if(rset.getString("ISSN")!=null)
 				{
-					citedby.setIssn(rset.getString("ISSN"));
+					citedby.setIssn((rset.getString("ISSN")).trim());
 				}
 
 				if(rset.getString("PAGE")!=null)
 				{
-					citedby.setPage(rset.getString("PAGE"));
+					citedby.setPage((rset.getString("PAGE")).trim());
 				}
 
 				if(rset.getString("ACCESSNUMBER")!=null)
