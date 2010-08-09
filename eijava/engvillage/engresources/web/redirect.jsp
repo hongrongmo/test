@@ -10,38 +10,66 @@
 <%
 	
 	String citedbyServer = getServletContext().getInitParameter("citedbyServer");
-
+	URL url = null;
+	HttpURLConnection ucon = null;
+	InputStream in = null;
 
 	try 
 	{
 
 		String urlString   = "http://"+citedbyServer+"/citedby/servlet/CitedByService?";
 		String queryString = request.getQueryString();
-		//System.out.println("URL= "+urlString+queryString);
-		URL url = new URL(urlString+queryString);
-		HttpURLConnection ucon = (HttpURLConnection) url.openConnection();
+		
+		url = new URL(urlString+queryString);
+		ucon = (HttpURLConnection) url.openConnection();
 		ucon.setDoOutput(true);
-
-		InputStream in = ucon.getInputStream();
-		InputStreamReader inR = new InputStreamReader(in);
-		BufferedReader bin = new BufferedReader(inR);
-		String line = null;
-
-		StringBuffer contentBuffer = new StringBuffer();
-	
-	
-	
-		while((line = bin.readLine()) != null)
+		int status = ucon.getResponseCode();
+		
+		if(status==HttpURLConnection.HTTP_OK)
 		{
-			contentBuffer.append(line);
-			
+			in = ucon.getInputStream();
+			InputStreamReader inR = new InputStreamReader(in);
+			BufferedReader bin = new BufferedReader(inR);
+			String line = null;
+
+			StringBuffer contentBuffer = new StringBuffer();
+
+			while((line = bin.readLine()) != null)
+			{
+				contentBuffer.append(line);
+
+			}
+		
+			out.println(contentBuffer.toString());
 		}
-		//System.out.println(contentBuffer.toString());
-		out.println(contentBuffer.toString());
+		else
+		{
+			out.println(status);
+		}
 	}
 	catch(Exception e)
 	{
-		e.printStackTrace();
+		e.getMessage();
+	}
+	finally 
+	{
+	    try
+	    {
+	    	   
+	    	    if(in != null)
+	    	    {
+	    	    	in.close();
+	    	    }
+	    	    
+		    if(ucon!=null)
+		    {
+			ucon.disconnect();
+		    }
+		    
+	    }
+	    catch(Exception e)
+	    {
+	    }
 	}
 %>
 			
