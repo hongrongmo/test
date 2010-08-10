@@ -58,6 +58,7 @@
 .lr { color: #f77; }
 .r { color: #f00 !important; }
 
+A.citedbyunderlineLink:link     {font-size:9pt; font-family:arial; color:#0000FF;text-decoration: underline;}
 A.citedbyBlueLink:link        	{font-size:9pt; font-family:arial; color:#0000FF;text-decoration:none;}
 A.smCitedByBlueLink:link     	{font-size:8pt; font-family:arial; color:#0000FF;text-decoration:none;}
 A.citedbyBlueBoldLink:link      {font-size:9pt; font-family:arial; color:#0000FF;font-weight:bold;text-decoration:none;}
