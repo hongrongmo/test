@@ -61,6 +61,8 @@
 
 A.SmBlueLink:link               {font-size:10px; font-family:arial,verdana,geneva; color:#0000FF;}
 A.citedbyunderlineLink:link     {font-size:9pt; font-family:arial; color:#0000FF;text-decoration: underline;}
+A.citedbyunderlineLink:visited     {font-size:9pt; font-family:arial; color:#0000FF;text-decoration: underline;}
+A.citedbyunderlineLink:active     {font-size:9pt; font-family:arial; color:#0000FF;text-decoration: underline;}
 A.citedbyBlueLink:link          {font-size:9pt; font-family:arial; color:#0000FF;text-decoration:none;}
 A.citedbyBlueBoldLink:link      {font-size:9pt; font-family:arial; color:#0000FF;font-weight:bold;text-decoration:none;}
 A.smCitedByBlueLink:link        {font-size:8pt; font-family:arial; color:#0000FF;text-decoration:none;}
