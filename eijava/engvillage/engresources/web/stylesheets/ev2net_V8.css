@@ -59,10 +59,11 @@
 .lr { color: #f77; }
 .r { color: #f00 !important; }
 
-A.SmBlueLink:link       {font-size:10px; font-family:arial,verdana,geneva; color:#0000FF;}
-A.citedbyBlueLink:link       {font-size:9pt; font-family:arial; color:#0000FF;text-decoration:none;}
-A.citedbyBlueBoldLink:link       {font-size:9pt; font-family:arial; color:#0000FF;font-weight:bold;text-decoration:none;}
-A.smCitedByBlueLink:link     {font-size:8pt; font-family:arial; color:#0000FF;text-decoration:none;}
+A.SmBlueLink:link               {font-size:10px; font-family:arial,verdana,geneva; color:#0000FF;}
+A.citedbyunderlineLink:link     {font-size:9pt; font-family:arial; color:#0000FF;text-decoration: underline;}
+A.citedbyBlueLink:link          {font-size:9pt; font-family:arial; color:#0000FF;text-decoration:none;}
+A.citedbyBlueBoldLink:link      {font-size:9pt; font-family:arial; color:#0000FF;font-weight:bold;text-decoration:none;}
+A.smCitedByBlueLink:link        {font-size:8pt; font-family:arial; color:#0000FF;text-decoration:none;}
 A.citedbyBlueLink:visited       {font-size:9pt; font-family:arial; color:#0000FF;text-decoration:none;}
 A.smCitedByBlueLink:visited     {font-size:8pt; font-family:arial; color:#0000FF;text-decoration:none;}
 A.citedbyBlueBoldLink:visited   {font-size:9pt; font-family:arial; color:#0000FF;font-weight:bold;text-decoration:none;}
