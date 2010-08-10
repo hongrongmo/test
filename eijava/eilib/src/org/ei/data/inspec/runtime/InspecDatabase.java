@@ -47,6 +47,8 @@ public class InspecDatabase extends Database
 		searchfield.put("TR", "Y");
 		searchfield.put("FL", "Y");
 		searchfield.put("CO", "Y");
+		searchfield.put("VO", "Y");
+		searchfield.put("SU", "Y");
 	}
 
     public List getSortableFields() {

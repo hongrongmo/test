@@ -46,6 +46,9 @@ public class GRFDatabase extends Database
       searchfield.put(SearchFields.YR.getID(), "Y");
       searchfield.put(SearchFields.RN.getID(), "Y");
       searchfield.put(SearchFields.CF.getID(), "Y");
+      searchfield.put(SearchFields.VO.getID(), "Y");
+		  searchfield.put(SearchFields.SU.getID(), "Y");
+
     }
 
     public List getSortableFields()

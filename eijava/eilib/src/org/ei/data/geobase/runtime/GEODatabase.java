@@ -42,6 +42,8 @@ public class GEODatabase extends Database
 		searchfield.put("FL", "Y");
 		searchfield.put("RGI", "Y");
 		searchfield.put("CO", "Y");
+		searchfield.put("VO", "Y");
+		searchfield.put("SU", "Y");
 	}
 
     public List getSortableFields() {

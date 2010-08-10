@@ -53,6 +53,8 @@ public class PaperChemDatabase extends Database {
 		searchfield.put("KY", "Y");
 		searchfield.put("TI", "Y");
 		searchfield.put("FL", "Y");
+		searchfield.put("VO", "Y");
+		searchfield.put("SU", "Y");
 	}
 
 	 private DataDictionary dataDictionary = new PaperChemDataDictionary();

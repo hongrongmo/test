@@ -39,6 +39,8 @@ public class ChemDatabase extends Database
       searchfield.put("TI", "Y");
       searchfield.put("KY", "Y");
       searchfield.put("PN", "Y");
+  		searchfield.put("VO", "Y");
+  		searchfield.put("SU", "Y");
     }
 
     private LinkingStrategy ChemLinkingStrategy = new org.ei.data.compendex.runtime.CPXLinkingStrategy();
