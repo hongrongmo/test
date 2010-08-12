@@ -57,11 +57,10 @@ function ajaxCitedByFunction1()
 	}
 	params = queryString;
 		
-	$.getJSON("/engresources/redirect.jsp?"+params,getEIDResults);
+	$.post("/engresources/redirect.jsp",{citedby:params},getEIDResults,"json");
 	
 	function getEIDResults(data)
-	{
-		
+	{		
 		for(i=0;i<data.result.length;i++)
 		{			
 		   eid = data.result[i].EID;
@@ -73,9 +72,9 @@ function ajaxCitedByFunction1()
 		
 		if(eid.length>0)
 		{
-			var params = "eid="+eid;
+			var params = eid;
 
-			$.getJSON("/engresources/redirect.jsp?"+params,populateResults);		
+			$.post("/engresources/redirect.jsp",{eid:params},populateResults,"json");		
 
 		}
 		else
@@ -103,10 +102,7 @@ function ajaxCitedByFunction1()
 			   citedby_content = citedby_content+" <br/><a class=citedbyBlueBoldLink href="+recordHref+"><b>"+data.result[i].TITLE+"</b></a>";
 			   citedby_content = citedby_content+"<br/><a class=italicCitedbyblack>("+year+")";
 			   citedby_content = citedby_content+" "+data.result[i].SOURCETITLE;
-			   citedby_content = citedby_content+"</a><br/><br/>";
-			   
-			  
-			  			  
+			   citedby_content = citedby_content+"</a><br/><br/>";			  			  
 			}
 			
 			
@@ -115,13 +111,13 @@ function ajaxCitedByFunction1()
 			var preLinkText ="<a class=citedbyRedText><b>Cited by: </b></a><a class=citedbyBlackText>This article has been cited </a>";
 			var linkDisplay = "<b>"+count+" times</b>";
 			var proLinkText = "<a class=citedbyBlackText>since 1996</a><br/>";
-			var hoverText = "scopus found "+count+" citations for this article";
+			var hoverText = "Scopus found "+count+" citations for this article";
 			if(count==1)
 			{
 				linkDisplay = "<b>1 time</b> "
-				hoverText = "scopus found "+count+" citation for this article";
+				hoverText = "Scopus found "+count+" citation for this article";
 			}
-			var content = head+"<tr><td><img src=/engresources/images/s.gif border=0 width=1></td><td>"+preLinkText+"<a title =\""+hoverText+"\" class=citedbyunderlineLink  href="+href+">"+linkDisplay+"</a><a class=citedbyBlackText> in Scopus </a>"+proLinkText+"</td><td><img src=/engresources/images/s.gif border=0 width=1></td></tr><tr><td colspan=3><img src=/engresources/images/s.gif border=0 width=1></td></tr><tr><td><img src=/engresources/images/s.gif border=0 width=1></td><td><a class=citedbyBlueText>"+citedby_content+"</a></td><td><img src=/engresources/images/s.gif border=0 width=1></td></tr><tr><td colspan=3 valign=top padding=0 border=0 margin=0 height=3><img src=/engresources/tagimages/line.jpg height=3 width=210></td></tr><tr><td><img src=/engresources/images/s.gif border=0 width=1></td><td><a href=\"javascript:newwindow=window.open('http://www.info.scopus.com','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable');%20void('');\" class=smCitedByBlueLink>Learn more about Scopus</a></td><td><img src=/engresources/images/s.gif border=0 width=1></td></tr></table></div></div></div></div></div></div></div></div>";
+			var content = head+"<tr><td><img src=/engresources/images/s.gif border=0 width=1></td><td>"+preLinkText+"<a title ='"+hoverText+"' class=citedbyunderlineLink  href="+href+">"+linkDisplay+"</a><a class=citedbyBlackText> in Scopus </a>"+proLinkText+"</td><td><img src=/engresources/images/s.gif border=0 width=1></td></tr><tr><td colspan=3><img src=/engresources/images/s.gif border=0 width=1></td></tr><tr><td><img src=/engresources/images/s.gif border=0 width=1></td><td><a class=citedbyBlueText>"+citedby_content+"</a></td><td><img src=/engresources/images/s.gif border=0 width=1></td></tr><tr><td colspan=3 valign=top padding=0 border=0 margin=0 height=3><img src=/engresources/tagimages/line.jpg height=3 width=210></td></tr><tr><td><img src=/engresources/images/s.gif border=0 width=1></td><td><a href=\"javascript:newwindow=window.open('http://www.info.scopus.com','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable');%20void('');\" class=smCitedByBlueLink>Learn more about Scopus</a></td><td><img src=/engresources/images/s.gif border=0 width=1></td></tr></table></div></div></div></div></div></div></div></div>";
 			document.getElementById("citedby_box").innerHTML = content;
 		
 		}
