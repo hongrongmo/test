@@ -574,7 +574,7 @@
               <a class="LgBlueLink">
                 <xsl:attribute name="TITLE">Book Details</xsl:attribute>
                 <xsl:if test="not(EI-DOCUMENT/BPP = '0')">
-                  <xsl:attribute name="HREF">/controller/servlet/Controller?CID=bookSummary&amp;SEARCHID=<xsl:value-of select="$SEARCH-ID"/>&amp;DOCINDEX=<xsl:value-of select="$INDEX"/>&amp;database=<xsl:value-of select="$SELECTED-DB"/>&amp;docid=<xsl:value-of select="@AN"/>&amp;format=<xsl:value-of select="$CID-PREFIX"/>DetailedFormat<xsl:value-of select="$PII"/></xsl:attribute>
+                  <xsl:attribute name="HREF">/controller/servlet/Controller?CID=bookSummary&amp;SEARCHID=<xsl:value-of select="$SEARCH-ID"/>&amp;DOCINDEX=<xsl:value-of select="$INDEX"/>&amp;database=<xsl:value-of select="$SELECTED-DB"/>&amp;docid=<xsl:value-of select="$DOC-ID"/>&amp;format=<xsl:value-of select="$CID-PREFIX"/>DetailedFormat<xsl:value-of select="$PII"/></xsl:attribute>
                 </xsl:if>
                 <xsl:if test="(EI-DOCUMENT/BPP = '0')">
                   <xsl:attribute name="HREF">/controller/servlet/Controller?<xsl:value-of select="$ABSTRACT-LINK-CID"/>&amp;SEARCHID=<xsl:value-of select="$SEARCH-ID"/>&amp;DOCINDEX=<xsl:value-of select="$INDEX"/>&amp;database=<xsl:value-of select="$SELECTED-DB"/>&amp;format=<xsl:value-of select="$CID-PREFIX"/>DetailedFormat</xsl:attribute>
