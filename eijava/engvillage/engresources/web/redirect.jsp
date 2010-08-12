@@ -1,43 +1,37 @@
 <%@ page language="java" %>
 <%@ page session="false" %>
-<%@ page errorPage="/error/errorPage.jsp"%>
-<%@ page buffer="20kb"%>
-
 <%@ page import="java.util.*"%>
 <%@ page import="java.net.*"%>
 <%@ page import="java.io.*"%>
 
+
 <%
 	
-	String citedbyServer = getServletContext().getInitParameter("citedbyServer");
 	URL url = null;
 	HttpURLConnection ucon = null;
 	InputStream in = null;
-
 	try 
 	{
-
+		String citedbyServer = getServletContext().getInitParameter("citedbyServer");
 		String urlString   = "http://"+citedbyServer+"/citedby/servlet/CitedByService?";
-		String queryString = request.getQueryString();
-		
+		System.out.println("citedbyServer= "+citedbyServer);
+		String queryString = request.getParameter("citedby");	
+		System.out.println("queryString= "+queryString);
 		url = new URL(urlString+queryString);
 		ucon = (HttpURLConnection) url.openConnection();
+		//ucon.setRequestMethod("POST");
 		ucon.setDoOutput(true);
-		int status = ucon.getResponseCode();
-		
+		int status = ucon.getResponseCode();		
 		if(status==HttpURLConnection.HTTP_OK)
 		{
 			in = ucon.getInputStream();
 			InputStreamReader inR = new InputStreamReader(in);
 			BufferedReader bin = new BufferedReader(inR);
 			String line = null;
-
 			StringBuffer contentBuffer = new StringBuffer();
-
 			while((line = bin.readLine()) != null)
 			{
 				contentBuffer.append(line);
-
 			}
 		
 			out.println(contentBuffer.toString());
@@ -54,8 +48,7 @@
 	finally 
 	{
 	    try
-	    {
-	    	   
+	    {	    	   
 	    	    if(in != null)
 	    	    {
 	    	    	in.close();
