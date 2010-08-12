@@ -1,5 +1,6 @@
 function ajaxCitedByFunction()
 {
+	
 	var arr = new Array();
 	arr = document.getElementsByTagName("citedby");
 	var queryString = "citedby=";
@@ -58,7 +59,7 @@ function ajaxCitedByFunction()
 	params = queryString;
 	
 	//$.getJSON("http://145.36.192.167/controller/servlet/Controller?CID=CITEDBY_REDIRECT&"+params,populateResults);
-	$.post("http://localhost/engresources/redirect.jsp",{citedby:params},	
+	$.post("/engresources/redirect.jsp",{citedby:params},	
 	function(data)
 	{
 		//alert("count= "+data.result.length);
