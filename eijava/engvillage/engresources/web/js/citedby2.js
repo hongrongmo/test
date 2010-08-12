@@ -50,16 +50,16 @@ function ajaxCitedByFunction()
 				queryString=queryString+"SID:"+sessionID+"|";
 			}
 		}
-
-		queryString=queryString+"_";
+		if(i<arr.length-1)
+		{
+			queryString=queryString+"_";
+		}
 	}
 	params = queryString;
 	
 	//$.getJSON("http://145.36.192.167/controller/servlet/Controller?CID=CITEDBY_REDIRECT&"+params,populateResults);
-	$.getJSON("/engresources/redirect.jsp?"+params,populateResults);
-
-	
-	function populateResults(data)
+	$.post("http://localhost/engresources/redirect.jsp",{citedby:params},	
+	function(data)
 	{
 		//alert("count= "+data.result.length);
 		
@@ -72,13 +72,11 @@ function ajaxCitedByFunction()
 		   var count = data.result[i].COUNT;
 		   var dashID=id+"dash";
 		   if(document.getElementById(id)!=null && document.getElementById(dashID)!=null)
-		   {
-			
-			
+		   {			
 			document.getElementById(dashID).innerHTML = "&#160; - &#160";
 			var countString="Cited by in Scopus ("+count+")";
 			document.getElementById(id).innerHTML = countString;
-			document.getElementById(id).title="\"scopus found "+count+" citations for this article\"";
+			document.getElementById(id).title="Scopus found "+count+" citations for this article";
 			document.getElementById(id).href = "javascript:newwindow=window.open('http://www.scopus.com/scopus/inward/citedby.url?partnerID=qRss3amk&eid="+eid+"','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable'); void('');";
 			
 		   }
@@ -88,6 +86,5 @@ function ajaxCitedByFunction()
 		   }
 
 		}
-	}
-	
+	},"json");	
 }
