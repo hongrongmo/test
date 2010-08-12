@@ -72,7 +72,7 @@ function ajaxCitedByFunction1()
 		
 		if(eid.length>0)
 		{
-			var params = eid;
+			var params = "eid="+eid;
 
 			$.post("/engresources/redirect.jsp",{eid:params},populateResults,"json");		
 
