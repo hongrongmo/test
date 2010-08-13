@@ -1,8 +1,6 @@
 <%@ page language="java" %>
 <%@ page session="false" %>
-<%@ page import="java.io.*"%>
-<%@ page import="org.apache.commons.httpclient.*"%>
-<%@ page import="org.apache.commons.httpclient.methods.*"%>
+<%@ page import="java.io.*, org.apache.commons.httpclient.*, org.apache.commons.httpclient.methods.*"%>
 
 <%!
 	String citedbyServer = null;
@@ -36,6 +34,7 @@
 				content.append(line);
 			}
 			out.println(content.toString());
+			reader.close();
 		}		
 	}
 	catch(Exception e)
@@ -47,4 +46,3 @@
 	   post.releaseConnection();
 	}
 %>
-			
