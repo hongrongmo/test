@@ -43,9 +43,6 @@
 <xsl:variable name="CURRENT-PAGE"><xsl:value-of select="/PAGE/CURR-PAGE-ID"/></xsl:variable>
 <xsl:variable name="SELECTED-DB"><xsl:value-of select="/PAGE/DBMASK"/></xsl:variable>
 <xsl:variable name="COMPMASK"><xsl:value-of select="/PAGE/NAVIGATORS/COMPMASK"/></xsl:variable>
-<xsl:variable name="DOC-ID">
-          <xsl:value-of select="//DOC/DOC-ID"/>
-    </xsl:variable>
 
   <xsl:template match="PAGE">
 
@@ -64,7 +61,6 @@
         <META http-equiv="Cache-Control" content="no-cache"/>
         <title>Engineering Village  - <xsl:value-of select="$DATABASE-DISPLAYNAME"/><xsl:text> </xsl:text><xsl:value-of select="$SEARCH-TYPE"/> Search Results</title>
 
-	<SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/json2.js"/>
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/SearchResults_V7.js"/>
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/URLEncode.js"/>
