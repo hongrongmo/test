@@ -51,7 +51,6 @@
     <html>
     <head>
         <title><xsl:value-of select="$SEARCH-TYPE"/> Search Detailed Format</title>
-        <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/json2.js"/>
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/jquery-1.4.2.min.js"/>
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/lindaHall.js"/>
