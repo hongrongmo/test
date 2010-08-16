@@ -145,45 +145,48 @@ public class BDDocBuilder
 
 				//added for CITEDBY
 
-				CITEDBY citedby = new CITEDBY();
-				citedby.setKey(Keys.CITEDBY);
-
-				if(rset.getString("DOI")!=null)
+				if(rset.getString("DATABASE")!=null && (rset.getString("DATABASE")).equalsIgnoreCase("cpx"))
 				{
-					citedby.setDoi(URLEncoder.encode((rset.getString("DOI")).trim()));
-				}
+					CITEDBY citedby = new CITEDBY();
+					citedby.setKey(Keys.CITEDBY);
 
-				if(rset.getString("PII")!=null)
-				{
-					citedby.setPii((rset.getString("PII")).trim());
-				}
+					if(rset.getString("DOI")!=null)
+					{
+						citedby.setDoi(URLEncoder.encode((rset.getString("DOI")).trim()));
+					}
 
-				if(rset.getString("VOLUME")!=null)
-				{
-					citedby.setVolume((rset.getString("VOLUME")).trim());
-				}
+					if(rset.getString("PII")!=null)
+					{
+						citedby.setPii((rset.getString("PII")).trim());
+					}
 
-				if(rset.getString("ISSUE")!=null)
-				{
-					citedby.setIssue((rset.getString("ISSUE")).trim());
-				}
+					if(rset.getString("VOLUME")!=null)
+					{
+						citedby.setVolume((rset.getString("VOLUME")).trim());
+					}
 
-				if(rset.getString("ISSN")!=null)
-				{
-					citedby.setIssn((rset.getString("ISSN")).trim());
-				}
+					if(rset.getString("ISSUE")!=null)
+					{
+						citedby.setIssue((rset.getString("ISSUE")).trim());
+					}
 
-				if(rset.getString("PAGE")!=null)
-				{
-					citedby.setPage((rset.getString("PAGE")).trim());
-				}
+					if(rset.getString("ISSN")!=null)
+					{
+						citedby.setIssn((rset.getString("ISSN")).trim());
+					}
 
-				if(rset.getString("ACCESSNUMBER")!=null)
-				{
-					citedby.setAccessionNumber(rset.getString("ACCESSNUMBER"));
-				}
+					if(rset.getString("PAGE")!=null)
+					{
+						citedby.setPage((rset.getString("PAGE")).trim());
+					}
 
-				buildField(Keys.CITEDBY,citedby,ht);
+					if(rset.getString("ACCESSNUMBER")!=null)
+					{
+						citedby.setAccessionNumber(rset.getString("ACCESSNUMBER"));
+					}
+
+					buildField(Keys.CITEDBY,citedby,ht);
+				}
 
 				// end citedby
 
