@@ -65,7 +65,7 @@
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/SearchResults_V7.js"/>
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/URLEncode.js"/>
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Robohelp.js"/>
-      
+
          <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/jquery-1.4.2.min.js"/>
 
         <xsl:if test="($SEARCH-TYPE='Quick') or ($SEARCH-TYPE='Thesaurus') or ($SEARCH-TYPE='Combined')">
@@ -83,8 +83,7 @@
       <script type="text/javascript">
           var ev_searchid = "<xsl:value-of select="$SEARCH-ID"/>";
           var ev_dbmask = "<xsl:value-of select="$SELECTED-DB"/>";
-      //<![CDATA[   	  
-		
+      //<![CDATA[
           function createCookie(name,value,days) {
             if (days != 0) {
               var date = new Date();
@@ -375,7 +374,7 @@
 
   <!-- This xsl displays the results in Citation Format when the database is Compendex -->
   <xsl:template match="PAGE-RESULTS">
-    
+
     <!-- Start of  Citation Results  -->
     <FORM name="quicksearchresultsform">
     <table border="0" cellspacing="0" cellpadding="0" width="100%">
@@ -383,7 +382,7 @@
     </table>
     </FORM>
     <!-- END of  Citation Results  -->
-    
+
   </xsl:template>
 
   <xsl:template match="PAGE-ENTRY[@DUP='true']">
@@ -450,7 +449,7 @@
     <xsl:variable name="DOC-ID">
       <xsl:value-of select="EI-DOCUMENT/DOC/DOC-ID"/>
     </xsl:variable>
-    
+
     <xsl:variable name="AN">
           <xsl:value-of select="EI-DOCUMENT/AN"/>
     </xsl:variable>
@@ -627,7 +626,7 @@
                 <img alt="Full-text" src="/engresources/images/av.gif" id="ftimg"/>
                 </a>
             </xsl:if>
-            	     
+
              <a class="MedBlackText">
              <xsl:attribute name="ID"><xsl:value-of select='$AN'/>dash</xsl:attribute>
              </a>
@@ -635,7 +634,7 @@
 		<xsl:attribute name="ID"><xsl:value-of select='$AN'/></xsl:attribute>
 		<xsl:attribute name="TITLE">Cited-by</xsl:attribute>
 		<xsl:attribute name="ALT">Scopus Cited-by</xsl:attribute>
-			
+
              </a>
 
             <xsl:if test="($LOCALHOLDINGS-CITATION='true')">
@@ -649,7 +648,7 @@
     <tr>
       <td valign="top" colspan="4" height="5"><img src="/engresources/images/s.gif"/></td>
     </tr>
-    
+
 </xsl:template>
 
 
