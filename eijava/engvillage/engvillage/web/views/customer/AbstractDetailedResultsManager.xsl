@@ -7,7 +7,7 @@
   xmlns:book="java:org.ei.books.BookDocument"
   xmlns:custoptions="java:org.ei.fulldoc.FullTextOptions"
   xmlns:security="java:org.ei.security.utils.SecureID"
-  exclude-result-prefixes="java html xsl ti book custoptions">
+  exclude-result-prefixes="java html xsl ti book custoptions security">
 
   <xsl:strip-space elements="html:* xsl:*" />
   <xsl:param name="CUST-ID">0</xsl:param>
@@ -24,7 +24,7 @@
   <xsl:variable name="SCOPE">
     <xsl:value-of select="//SCOPE-REC" />
   </xsl:variable>
-   
+
   <xsl:variable name="GROUP-ID">
     <xsl:value-of select="//GROUP-ID" />
   </xsl:variable>
@@ -269,48 +269,43 @@
         </tr>
       </table>
     </center>
-    
+
     <xsl:apply-templates select="CITEDBY"/>
-     	
+
     <!-- End of table for results manager -->
   </xsl:template>
-  
-  
-  <xsl:template match="CITEDBY">
-              <CITEDBY>   
-            <xsl:variable name="SESSIONID">
-	    	 <xsl:value-of select="/PAGE/SESSION-ID" />
-            </xsl:variable>
-  	    <xsl:variable name="CITEDBY-MD5">
-  	         <xsl:value-of select="security:getCitedbyMD5($SESSIONID,@AN)" />
-              </xsl:variable> 
-              <xsl:if test="(@ISSN)">
-              	<xsl:attribute name="ISSN"><xsl:value-of select="@ISSN"/></xsl:attribute>
-              </xsl:if>
-              <xsl:if test="(@firstIssue)">
-              	<xsl:attribute name="ISSUE"><xsl:value-of select="@firstIssue"/></xsl:attribute>
-              </xsl:if>
-              <xsl:if test="(@firstVolume)">
-              	<xsl:attribute name="VOLUME"><xsl:value-of select="@firstVolume"/></xsl:attribute>
-              </xsl:if>
-              <xsl:if test="(@firstPage)">
-              	<xsl:attribute name="PAGE"><xsl:value-of select="@firstPage"/></xsl:attribute>
-              </xsl:if>
-              <xsl:if test="(@DOI)">
-              	<xsl:attribute name="DOI"><xsl:value-of select="@DOI"/></xsl:attribute>
-              </xsl:if>
-              <xsl:if test="(@PII)">
-              	<xsl:attribute name="PII"><xsl:value-of select="@PII"/></xsl:attribute>
-              </xsl:if>
-               <xsl:if test="(@AN)">
-  	        <xsl:attribute name="AN"><xsl:value-of select="@AN"/></xsl:attribute>
-              </xsl:if>
-                     
-  	    <xsl:attribute name="SECURITY"><xsl:value-of select="$CITEDBY-MD5"/></xsl:attribute>
-  	    		 
-  	    <xsl:attribute name="SESSION-ID"><xsl:value-of select="$SESSIONID"/></xsl:attribute>
-              
-              </CITEDBY>
+
+
+    <xsl:template match="CITEDBY">
+      <xsl:variable name="SESSIONID"><xsl:value-of select="/PAGE/SESSION-ID" /></xsl:variable>
+      <xsl:variable name="CITEDBY-MD5"><xsl:value-of select="security:getCitedbyMD5($SESSIONID,@AN)" /></xsl:variable>
+      <span>
+        <xsl:attribute name="NAME">citedbyspan</xsl:attribute>
+        <xsl:attribute name="style">display:none;</xsl:attribute>
+        <xsl:if test="(@ISSN)">
+          <xsl:attribute name="ISSN"><xsl:value-of select="@ISSN"/></xsl:attribute>
+        </xsl:if>
+        <xsl:if test="(@firstIssue)">
+          <xsl:attribute name="ISSUE"><xsl:value-of select="@firstIssue"/></xsl:attribute>
+        </xsl:if>
+        <xsl:if test="(@firstVolume)">
+          <xsl:attribute name="VOLUME"><xsl:value-of select="@firstVolume"/></xsl:attribute>
+        </xsl:if>
+        <xsl:if test="(@firstPage)">
+          <xsl:attribute name="PAGE"><xsl:value-of select="@firstPage"/></xsl:attribute>
+        </xsl:if>
+        <xsl:if test="(@DOI)">
+          <xsl:attribute name="DOI"><xsl:value-of select="@DOI"/></xsl:attribute>
+        </xsl:if>
+        <xsl:if test="(@PII)">
+          <xsl:attribute name="PII"><xsl:value-of select="@PII"/></xsl:attribute>
+        </xsl:if>
+        <xsl:if test="(@AN)">
+          <xsl:attribute name="AN"><xsl:value-of select="@AN"/></xsl:attribute>
+        </xsl:if>
+        <xsl:attribute name="SECURITY"><xsl:value-of select="$CITEDBY-MD5"/></xsl:attribute>
+        <xsl:attribute name="SESSION-ID"><xsl:value-of select="$SESSIONID"/></xsl:attribute>
+      </span>
     </xsl:template>
 
 </xsl:stylesheet>
