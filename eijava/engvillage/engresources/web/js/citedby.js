@@ -62,11 +62,13 @@ function ajaxCitedByFunction1()
 	function getEIDResults(data)
 	{		
 		for(i=0;i<data.result.length;i++)
-		{			
-		   eid = data.result[i].EID;
-		 
-		   scopusID = data.result[i].SID;
-		   count = data.result[i].COUNT;
+		{
+		   if(data.result[i]!=null && data.result[i]!=undefined)
+		   {
+			   eid = data.result[i].EID;
+			   scopusID = data.result[i].SID;
+			   count = data.result[i].COUNT;
+	 	   }
 		   break;
 		}
 		
@@ -91,18 +93,21 @@ function ajaxCitedByFunction1()
 			for(i=0;i<data.result.length;i++)
 			{			  
 			   year=data.result[i].YEAR;
-			   recordEid=data.result[i].EID;
-			   var recordHref="javascript:newwindow=window.open('http://www.scopus.com/scopus/inward/record.url?partnerID=qRss3amk&eid="+recordEid+"','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable');%20void('');";
-			   if(i>1)
+			   if(data.result[i]!=null && data.result[i]!=undefined)
 			   {
-			   	break;
-			   }
-			  
-			   citedby_content = citedby_content+" <a class=citedbyBlueLink>"+data.result[i].AUTHOR+"</a>";
-			   citedby_content = citedby_content+" <br/><a class=citedbyBlueBoldLink href="+recordHref+"><b>"+data.result[i].TITLE+"</b></a>";
-			   citedby_content = citedby_content+"<br/><a class=italicCitedbyblack>("+year+")";
-			   citedby_content = citedby_content+" "+data.result[i].SOURCETITLE;
-			   citedby_content = citedby_content+"</a><br/><br/>";			  			  
+				   recordEid=data.result[i].EID;
+				   var recordHref="javascript:newwindow=window.open('http://www.scopus.com/scopus/inward/record.url?partnerID=qRss3amk&eid="+recordEid+"','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable');%20void('');";
+				   if(i>1)
+				   {
+					break;
+				   }
+
+				   citedby_content = citedby_content+" <a class=citedbyBlueLink>"+data.result[i].AUTHOR+"</a>";
+				   citedby_content = citedby_content+" <br/><a class=citedbyBlueBoldLink href="+recordHref+"><b>"+data.result[i].TITLE+"</b></a>";
+				   citedby_content = citedby_content+"<br/><a class=italicCitedbyblack>("+year+")";
+				   citedby_content = citedby_content+" "+data.result[i].SOURCETITLE;
+				   citedby_content = citedby_content+"</a><br/><br/>";
+			    }
 			}
 			
 			
