@@ -1,9 +1,10 @@
 function ajaxCitedByFunction1()
 {
-
-	var eid="";	
-	var arr = new Array();
-	arr = document.getElementsByTagName("citedby");
+	var arr = document.getElementsByTagName("citedby");
+	if((arr == null) || (arr == undefined) || (arr.length == 0)) {
+	  return false;
+	}
+	var eid="";
 	var queryString = "citedby=";
 	var count;
 	for(var i=0; i < arr.length; i++)
@@ -16,7 +17,7 @@ function ajaxCitedByFunction1()
 
 		if(tagObj.getAttribute("DOI")!=null)
 		{
-		   queryString=queryString+"DOI:"+tagObj.getAttribute("DOI")+"|";	
+		   queryString=queryString+"DOI:"+tagObj.getAttribute("DOI")+"|";
 		}
 
 		if(tagObj.getAttribute("PII")!=null)
@@ -37,7 +38,7 @@ function ajaxCitedByFunction1()
 		}
 		if(tagObj.getAttribute("AN")!=null)
 		{
-		   queryString=queryString+"AN:"+tagObj.getAttribute("AN")+"|";	
+		   queryString=queryString+"AN:"+tagObj.getAttribute("AN")+"|";
 		}
 		if(tagObj.getAttribute("SECURITY")!=null)
 		{
@@ -56,11 +57,11 @@ function ajaxCitedByFunction1()
 		queryString=queryString+"_";
 	}
 	params = queryString;
-		
+
 	$.post("/engresources/redirect.jsp",{citedby:params},getEIDResults,"json");
-	
+
 	function getEIDResults(data)
-	{		
+	{
 		for(i=0;i<data.result.length;i++)
 		{
 		   if(data.result[i]!=null && data.result[i]!=undefined)
@@ -71,12 +72,12 @@ function ajaxCitedByFunction1()
 	 	   }
 		   break;
 		}
-		
+
 		if(eid.length>0)
 		{
 			var params = "eid="+eid;
 
-			$.post("/engresources/redirect.jsp",{eid:params},populateResults,"json");		
+			$.post("/engresources/redirect.jsp",{eid:params},populateResults,"json");
 
 		}
 		else
@@ -91,7 +92,7 @@ function ajaxCitedByFunction1()
 			var year="";
 			var recordEid;
 			for(i=0;i<data.result.length;i++)
-			{			  
+			{
 			   year=data.result[i].YEAR;
 			   if(data.result[i]!=null && data.result[i]!=undefined)
 			   {
@@ -109,8 +110,8 @@ function ajaxCitedByFunction1()
 				   citedby_content = citedby_content+"</a><br/><br/>";
 			    }
 			}
-			
-			
+
+
 			var href ="javascript:newwindow=window.open('http://www.scopus.com/scopus/inward/citedby.url?partnerID=qRss3amk&eid="+eid+"','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable');%20void('');";
 			var head ="<div style=\"width:215px;\" class=\"t\"><div class=\"b\"><div class=\"l\"><div class=\"rc\"><div class=\"bl\"><div class=\"br\"><div class=\"tl\"><div class=\"trc\"><table border=0 ><tr><td><img src=/engresources/images/s.gif border=0 width=1></td><td valign=bottom padding=0 border=0 margin=0><a class=\"LgBlackText\"><b>Tools in Scopus</b></a></td><td><img src=/engresources/images/s.gif border=0 width=1></td></tr><tr><td colspan=3 align=right valign=top padding=0 border=0 margin=0 height=3><img src=/engresources/tagimages/line.jpg height=3 width=210></td></tr>";
 			var preLinkText ="<a class=citedbyRedText><b>Cited by: </b></a><a class=citedbyBlackText>This article has been cited </a>";
@@ -124,8 +125,7 @@ function ajaxCitedByFunction1()
 			}
 			var content = head+"<tr><td><img src=/engresources/images/s.gif border=0 width=1></td><td>"+preLinkText+"<a title ='"+hoverText+"' class=citedbyunderlineLink  href="+href+">"+linkDisplay+"</a><a class=citedbyBlackText> in Scopus </a>"+proLinkText+"</td><td><img src=/engresources/images/s.gif border=0 width=1></td></tr><tr><td colspan=3><img src=/engresources/images/s.gif border=0 width=1></td></tr><tr><td><img src=/engresources/images/s.gif border=0 width=1></td><td><a class=citedbyBlueText>"+citedby_content+"</a></td><td><img src=/engresources/images/s.gif border=0 width=1></td></tr><tr><td colspan=3 valign=top padding=0 border=0 margin=0 height=3><img src=/engresources/tagimages/line.jpg height=3 width=210></td></tr><tr><td><img src=/engresources/images/s.gif border=0 width=1></td><td><a href=\"javascript:newwindow=window.open('http://www.info.scopus.com','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable');%20void('');\" class=smCitedByBlueLink>Learn more about Scopus</a></td><td><img src=/engresources/images/s.gif border=0 width=1></td></tr></table></div></div></div></div></div></div></div></div>";
 			document.getElementById("citedby_box").innerHTML = content;
-		
+
 		}
 	}
 }
-	

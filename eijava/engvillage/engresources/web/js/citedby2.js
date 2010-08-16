@@ -1,8 +1,9 @@
 function ajaxCitedByFunction()
 {
-	
-	var arr = new Array();
-	arr = document.getElementsByTagName("citedby");
+	var arr = document.getElementsByTagName("citedby");
+	if((arr == null) || (arr == undefined) || (arr.length == 0)) {
+	  return false;
+	}
 	var queryString = "citedby=";
 	for(var i=0; i < arr.length; i++)
 	{
@@ -15,7 +16,7 @@ function ajaxCitedByFunction()
 
 		if(tagObj.getAttribute("DOI")!=null)
 		{
-		   queryString=queryString+"DOI:"+tagObj.getAttribute("DOI")+"|";	
+		   queryString=queryString+"DOI:"+tagObj.getAttribute("DOI")+"|";
 		}
 
 		if(tagObj.getAttribute("PII")!=null)
@@ -36,7 +37,7 @@ function ajaxCitedByFunction()
 		}
 		if(tagObj.getAttribute("AN")!=null)
 		{
-		   queryString=queryString+"AN:"+tagObj.getAttribute("AN")+"|";	
+		   queryString=queryString+"AN:"+tagObj.getAttribute("AN")+"|";
 		}
 		if(tagObj.getAttribute("SECURITY")!=null)
 		{
@@ -57,13 +58,13 @@ function ajaxCitedByFunction()
 		}
 	}
 	params = queryString;
-	
+
 	//$.getJSON("http://145.36.192.167/controller/servlet/Controller?CID=CITEDBY_REDIRECT&"+params,populateResults);
-	$.post("/engresources/redirect.jsp",{citedby:params},	
+	$.post("/engresources/redirect.jsp",{citedby:params},
 	function(data)
 	{
 		//alert("count= "+data.result.length);
-		
+
 		for(i=0;i<data.result.length;i++)
 		{
 		   if(data.result[i]!=null && data.result[i]!=undefined)
@@ -75,7 +76,7 @@ function ajaxCitedByFunction()
 			   var count = data.result[i].COUNT;
 			   var dashID=id+"dash";
 			   if(document.getElementById(id)!=null && document.getElementById(dashID)!=null)
-			   {			
+			   {
 				document.getElementById(dashID).innerHTML = "&#160; - &#160";
 				var countString="Cited by in Scopus ("+count+")";
 				document.getElementById(id).innerHTML = countString;
@@ -97,5 +98,5 @@ function ajaxCitedByFunction()
 		   }
 
 		}
-	},"json");	
+	},"json");
 }
