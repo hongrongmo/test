@@ -7,15 +7,15 @@
     xmlns:java="java:java.net.URLEncoder"
     xmlns:security="java:org.ei.security.utils.SecureID"
     xmlns:hlight="java:org.ei.query.base.HitHighlightFinisher"
-    exclude-result-prefixes="hlight java html xsl"
+    exclude-result-prefixes="hlight java html xsl security"
 >
 
 <xsl:output method="html" indent="no"/>
 <xsl:strip-space elements="html:* xsl:*" />
 
     <xsl:template match="EI-DOCUMENT" >
-       
-      
+
+
       <xsl:param name="ascii">false</xsl:param>
       <xsl:apply-templates select="BTI"/>
       <xsl:apply-templates select="BPP"/>
@@ -62,7 +62,7 @@
 <!--      <xsl:apply-templates select="PN"/> -->
       <xsl:apply-templates select="RN"/>
       <xsl:apply-templates select="VO"/>
-      
+
 	<xsl:apply-templates select="PP"/>
 	<xsl:apply-templates select="ARN"/>
 	<xsl:apply-templates select="p_PP"/>
@@ -81,7 +81,6 @@
 <!--  <xsl:apply-templates select="UPD"/> -->
       <xsl:apply-templates select="NV"/>
       <xsl:apply-templates select="PA"/>
-      <xsl:apply-templates select="CITEDBY"/>
 
       <xsl:apply-templates select="PAS"/>
       <xsl:apply-templates select="PASM"/>
@@ -112,6 +111,8 @@
       <xsl:apply-templates select="AV"/>
       </span>
 
+      <xsl:apply-templates select="CITEDBY"/>
+
       <xsl:if test="$ascii='true'">
         <xsl:text>&#xD;&#xA;</xsl:text>
       </xsl:if>
@@ -123,9 +124,9 @@
       </xsl:if>
       <xsl:apply-templates select="FTTJ"/>
       <xsl:apply-templates select="STT"/>
-      
+
     </xsl:template>
-    
+
 
 
     <xsl:template match="TI">
@@ -136,42 +137,37 @@
         <xsl:if test="string(../DOC/TAGDATE)"> (Tag applied on <xsl:value-of select="../DOC/TAGDATE"/>)</xsl:if>
         </a><br/>
     </xsl:template>
-    
+
     <xsl:template match="CITEDBY">
-            <xsl:variable name="SESSION-ID">
-	    	<xsl:value-of select="/PAGE/SESSION-ID"/>
-	    </xsl:variable>
-            <CITEDBY>      	              
-	    <xsl:variable name="CITEDBY-MD5">
-	         <xsl:value-of select="security:getCitedbyMD5($SESSION-ID,@AN)" />
-            </xsl:variable> 
-            <xsl:if test="(@ISSN)">
-            	<xsl:attribute name="ISSN"><xsl:value-of select="@ISSN"/></xsl:attribute>
-            </xsl:if>
-            <xsl:if test="(@firstIssue)">
-            	<xsl:attribute name="ISSUE"><xsl:value-of select="@firstIssue"/></xsl:attribute>
-            </xsl:if>
-            <xsl:if test="(@firstVolume)">
-            	<xsl:attribute name="VOLUME"><xsl:value-of select="@firstVolume"/></xsl:attribute>
-            </xsl:if>
-            <xsl:if test="(@firstPage)">
-            	<xsl:attribute name="PAGE"><xsl:value-of select="@firstPage"/></xsl:attribute>
-            </xsl:if>
-            <xsl:if test="(@DOI)">
-            	<xsl:attribute name="DOI"><xsl:value-of select="@DOI"/></xsl:attribute>
-            </xsl:if>
-            <xsl:if test="(@PII)">
-            	<xsl:attribute name="PII"><xsl:value-of select="@PII"/></xsl:attribute>
-            </xsl:if>
-             <xsl:if test="(@AN)">
-	        <xsl:attribute name="AN"><xsl:value-of select="@AN"/></xsl:attribute>
-            </xsl:if>
-           
-	    <xsl:attribute name="SECURITY"><xsl:value-of select="$CITEDBY-MD5"/></xsl:attribute>
-	    		 
-	    <xsl:attribute name="SESSION-ID"><xsl:value-of select="$SESSION-ID"/></xsl:attribute>
-            
-            </CITEDBY>
+      <xsl:variable name="SESSION-ID"><xsl:value-of select="/PAGE/SESSION-ID"/></xsl:variable>
+      <xsl:variable name="CITEDBY-MD5"><xsl:value-of select="security:getCitedbyMD5($SESSION-ID,@AN)" /></xsl:variable>
+      <span>
+        <xsl:attribute name="NAME">citedbyspan</xsl:attribute>
+        <xsl:attribute name="style">display:none;</xsl:attribute>
+        <xsl:if test="(@ISSN)">
+          <xsl:attribute name="ISSN"><xsl:value-of select="@ISSN"/></xsl:attribute>
+        </xsl:if>
+        <xsl:if test="(@firstIssue)">
+          <xsl:attribute name="ISSUE"><xsl:value-of select="@firstIssue"/></xsl:attribute>
+        </xsl:if>
+        <xsl:if test="(@firstVolume)">
+          <xsl:attribute name="VOLUME"><xsl:value-of select="@firstVolume"/></xsl:attribute>
+        </xsl:if>
+        <xsl:if test="(@firstPage)">
+          <xsl:attribute name="PAGE"><xsl:value-of select="@firstPage"/></xsl:attribute>
+        </xsl:if>
+        <xsl:if test="(@DOI)">
+          <xsl:attribute name="DOI"><xsl:value-of select="@DOI"/></xsl:attribute>
+        </xsl:if>
+        <xsl:if test="(@PII)">
+          <xsl:attribute name="PII"><xsl:value-of select="@PII"/></xsl:attribute>
+        </xsl:if>
+        <xsl:if test="(@AN)">
+          <xsl:attribute name="AN"><xsl:value-of select="@AN"/></xsl:attribute>
+        </xsl:if>
+        <xsl:attribute name="SECURITY"><xsl:value-of select="$CITEDBY-MD5"/></xsl:attribute>
+        <xsl:attribute name="SESSION-ID"><xsl:value-of select="$SESSION-ID"/></xsl:attribute>
+      </span>
     </xsl:template>
 
     <xsl:template match="BTI">
@@ -363,11 +359,11 @@
     <xsl:template match="PP">
         <xsl:text>, </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
     </xsl:template>
-    
+
     <xsl:template match="ARN">
     	<xsl:text>, art. no. </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
     </xsl:template>
-    
+
     <xsl:template match="p_PP">
         <xsl:text>, p </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
     </xsl:template>
@@ -397,8 +393,8 @@
 
     <xsl:template match="PF">
     <xsl:text> </xsl:text><xsl:text>(</xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>)</xsl:text>
-    </xsl:template> 
-     
+    </xsl:template>
+
 <!-- AFF for Inspec -->
 
     <xsl:template match="AFF">
@@ -412,7 +408,7 @@
             <span CLASS="SmBlackText"><xsl:text> </xsl:text><xsl:text>(</xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>)</xsl:text></span>
         </xsl:if>
     </xsl:template>
-    
+
 <!-- end of AFF for Inspec -->
 
     <xsl:template match="EF">
@@ -545,17 +541,17 @@
             </xsl:if>
             <xsl:text> </xsl:text>
         </xsl:if>
-        <xsl:if test="not(../DOC/DB/DBMASK='2')  and (position()=1) and (string(../../AFS/AF))" >              
+        <xsl:if test="not(../DOC/DB/DBMASK='2')  and (position()=1) and (string(../../AFS/AF))" >
 		<span CLASS="SmBlackText"><xsl:text> </xsl:text><xsl:text>(</xsl:text>
 			<xsl:value-of select="../../AFS/AF" disable-output-escaping="yes"/>
 		<xsl:text>)</xsl:text>
-		
+
 		<xsl:if test="not(position()=last())">
-			<xsl:text>;</xsl:text> 
+			<xsl:text>;</xsl:text>
 		</xsl:if>
-		
-		<xsl:text> </xsl:text> 
-		</span>			       
+
+		<xsl:text> </xsl:text>
+		</span>
         </xsl:if>
     </xsl:template>
 
