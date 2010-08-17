@@ -62,6 +62,10 @@ function ajaxCitedByFunction1()
 
   function getEIDResults(data)
   {
+    if((data == null) || (data.result == null) || (data.result == undefined))
+    {
+      return false;
+    }
     for(i=0;i<data.result.length;i++)
     {
        if(data.result[i]!=null && data.result[i]!=undefined)
@@ -76,9 +80,7 @@ function ajaxCitedByFunction1()
     if(eid.length>0)
     {
       var params = "eid="+eid;
-
       $.post("/engresources/redirect.jsp",{eid:params},populateResults,"json");
-
     }
     else
     {
@@ -88,6 +90,10 @@ function ajaxCitedByFunction1()
 
     function populateResults(data)
     {
+      if((data == null) || (data.result == null) || (data.result == undefined))
+      {
+        return false;
+      }
       var citedby_content="";
       var year="";
       var recordEid;
@@ -100,7 +106,7 @@ function ajaxCitedByFunction1()
            var recordHref="javascript:newwindow=window.open('http://www.scopus.com/scopus/inward/record.url?partnerID=qRss3amk&eid="+recordEid+"','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable');%20void('');";
            if(i>1)
            {
-          break;
+              break;
            }
 
            citedby_content = citedby_content+" <a class=citedbyBlueLink>"+data.result[i].AUTHOR+"</a>";
