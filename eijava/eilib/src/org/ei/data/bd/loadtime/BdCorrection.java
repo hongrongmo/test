@@ -153,9 +153,6 @@ public class BdCorrection
 				System.out.println("Does not have FastSearch URL");
 				System.exit(1);
 			}
-
-
-
 		}
 		else
 		{
@@ -288,7 +285,7 @@ public class BdCorrection
         try
 		{
 			stmt = con.createStatement();
-			if(action.equalsIgnoreCase("update") || action.equalsIgnoreCase("extractupdate"))
+			if(action.equalsIgnoreCase("update") || action.equalsIgnoreCase("extractupdate") || action.equalsIgnoreCase("aip") )
 			{
 				System.out.println("Running the query...");
 				writer.setOperation("add");
@@ -433,7 +430,7 @@ public class BdCorrection
 
 			if(test)
 			{
-				System.out.println("begin to execute stored procedure update_bd_backup_table");
+				System.out.println("begin to execute stored procedure update_aip_backup_table");
 				System.out.println("press enter to continue");
 				System.in.read();
 				Thread.currentThread().sleep(1000);
