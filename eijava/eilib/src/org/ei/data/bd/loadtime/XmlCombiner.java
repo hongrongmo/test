@@ -79,7 +79,6 @@ public class XmlCombiner
         //if(args.length==10)
             //timestamp = Long.parseLong(args[9]);
 
-        System.out.println("table name "+tablename);
         Combiner.TABLENAME = tablename;
         Combiner.CURRENTDB = currentDb;
         System.out.println(Combiner.TABLENAME);
@@ -107,25 +106,21 @@ public class XmlCombiner
 
         	for(int yearIndex = 1904; yearIndex <= 2010; yearIndex++)
             {
-        	  System.out.println("Processing year " + yearIndex + "...");
               c = new XmlCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,dbname, "dev"));
               c.writeCombinedByYear(url, driver, username, password, yearIndex);
             }
         	if(Combiner.CURRENTDB.equalsIgnoreCase("chm"))
         	{
-        		System.out.println("Processing year 9999...");
                 c = new XmlCombiner(new CombinedXMLWriter(recsPerbatch, 9999,dbname, "dev"));
                 c.writeCombinedByYear(url, driver, username, password, 9999);
         	}
         	if(Combiner.CURRENTDB.equalsIgnoreCase("geo"))
         	{
-        		System.out.println("Processing year 9999...");
                 c = new XmlCombiner(new CombinedXMLWriter(recsPerbatch, 9999,dbname, "dev"));
                 c.writeCombinedByYear(url, driver, username, password, 9999);
         	}
         	if(Combiner.CURRENTDB.equalsIgnoreCase("cpx"))
         	{
-        		System.out.println("Processing year 9999...");
                 c = new XmlCombiner(new CombinedXMLWriter(recsPerbatch, 9999,dbname, "dev"));
                 c.writeCombinedByYear(url, driver, username, password, 9999);
         	}
@@ -254,9 +249,9 @@ public class XmlCombiner
 			String[] coords = null;
 			String[] secondBoxCoords= null;
 			EVCombinedRec rec = new EVCombinedRec();
-
             if (validYear(rs.getString("PUBLICATIONYEAR")))
             {
+
                 if(rs.getString("AUTHOR") != null)
                 {
 					String authorString = rs.getString("AUTHOR");
@@ -327,7 +322,7 @@ public class XmlCombiner
                 {
                     rec.put(EVCombinedRec.ABSTRACT, abString);
                 }
-                
+
 
 				if(!isChimica)
 				{
@@ -601,7 +596,7 @@ public class XmlCombiner
                 rec.put(EVCombinedRec.ISSUE, rs.getString("ISSUE"));
                 //rec.put(EVCombinedRec.STARTPAGE, getFirstPage(getPage(rs.getString("PAGE"), rs.getString("ARTICLENUMBER"), rs.getString("ISSN"))));
 				rec.put(EVCombinedRec.STARTPAGE, getPage(getFirstPage(rs.getString("PAGE")),rs.getString("ARTICLENUMBER")));
-                
+
                 rec.put(EVCombinedRec.ACCESSION_NUMBER,
                         rs.getString("ACCESSNUMBER"));
 
@@ -677,7 +672,7 @@ public class XmlCombiner
 				CVTerms cvterms = null;
                 String apict = replaceNull(rs.getString("apict"));
                 String apict1 = replaceNull(rs.getString("apict1"));
-      
+
 				if(apict != null && !apict.trim().equals(""))
 				{
 					if(apict1 != null && 
@@ -687,30 +682,30 @@ public class XmlCombiner
 					}
 					cvterms = new CVTerms(apict);
 					cvterms.parse();
-											
+
 				}
-				
-                if (rs.getString("MAINHEADING") != null && 
+
+                if (rs.getString("MAINHEADING") != null &&
                 		!rs.getString("DATABASE").equalsIgnoreCase("elt"))
                 {
                     rec.put(EVCombinedRec.MAIN_HEADING, prepareMulti(rs.getString("MAINHEADING")));
                 }
 
-				
+
 				if(cvterms != null)
-				{						
+				{
 					QualifierFacet qfacet = new QualifierFacet();
 
 					String[] cvt = getCvs(cvterms.getCvt());
-					
+
 					if(cvt != null)
 					{
-						
+
 						rec.put(EVCombinedRec.CONTROLLED_TERMS, cvt);
 					}
-					
+
 					String[] cvtm = getCvs(cvterms.getCvm());
-					
+
 		            if(cvtm != null && 
 	                		rs.getString("DATABASE").equalsIgnoreCase("elt"))
 		            {
@@ -718,31 +713,31 @@ public class XmlCombiner
 		            	 //this field is added to generate navigators for Major terms
 		                 rec.put(rec.ECLA_CODES, cvtm);
 		            }
-		            
+
 		            String[] norole = getCvs(cvterms.getCvn());
 
 		            if(norole != null)
-		            {  
+		            {
 		            	 qfacet.setNorole(norole.toString());
 		                 rec.put(EVCombinedRec.NOROLE_TERMS, norole);
 		            }
 
 		            String[] reagent = getCvs(cvterms.getCva());
-      
+
 		            if(reagent != null)
 		            {
 		            	qfacet.setReagent(reagent.toString());
 		            	rec.put(EVCombinedRec.REAGENT_TERMS, reagent);
 		            }
-		            
+
 		            String[] product = getCvs(cvterms.getCvp());
-		            
+
 	                if(product != null)
 	                {
 	                	qfacet.setProduct(product.toString());
 	                	rec.put(EVCombinedRec.PRODUCT_TERMS, product);
 	                }
-	                
+
 	                String[] mnorole = getCvs(cvterms.getCvmn());
 
 	                if(mnorole != null)
@@ -750,55 +745,55 @@ public class XmlCombiner
 	                	qfacet.setNorole(mnorole.toString());
 	                	rec.put(EVCombinedRec.MAJORNOROLE_TERMS, mnorole);
 	                }
-	                
+
 	                String[] mreagent = getCvs(cvterms.getCvma());
 
 	                if(mreagent != null)
-	                {		                	
+	                {
 	                	qfacet.setReagent(mreagent.toString());
 	                	rec.put(EVCombinedRec.MAJORREAGENT_TERMS, mreagent);
 	                }
-	                	                
+
 	                String[] mproduct = getCvs(cvterms.getCvmp());
-	                	                
+
 	                if(mproduct != null)
-	                {	                	
+	                {
 	                	qfacet.setProduct(mproduct.toString());
 	                	rec.put(EVCombinedRec.MAJORPRODUCT_TERMS, mproduct);
 	                }
-	                rec.put(rec.USPTOCODE, prepareMulti(qfacet.getValue()));	                
+	                rec.put(rec.USPTOCODE, prepareMulti(qfacet.getValue()));
 				}
-				
+
 				CVTerms ltterms = null;
                 String apilt = replaceNull(rs.getString("apilt"));
                 String apilt1 = replaceNull(rs.getString("apilt1"));
-                      
+
 				if(apilt != null && !apilt.trim().equals(""))
 				{
-					if(apilt1 != null && 
+					if(apilt1 != null &&
 							!apilt1.trim().equals(""))
 					{
 						apilt = apilt.concat(apilt1);
 					}
 					ltterms = new CVTerms(apilt);
-					ltterms.parse();											
+					ltterms.parse();
 				}
-			
+
 				if(ltterms != null)
-				{						
+				{
 					String ltstr = ltterms.getCvexpandstr();
-			
+
 					if(ltstr != null)
 					{
 						rec.put(EVCombinedRec.LINKED_TERMS, prepareELTCV(ltstr));
 					}
 				}
-				
+
 				if(rs.getString("apiams") != null)
 				{
 					rec.put(EVCombinedRec.MAIN_TERM, prepareMulti(rs.getString("apiams")));
 				}
-		                            
+
 
 				try
 				{
@@ -833,7 +828,7 @@ public class XmlCombiner
 							{
 								coordCount++;
 							}
-							recSecondBox.putIfNotNull(EVCombinedRec.DOCID, firstGUID + "_" + (coordCount));														
+							recSecondBox.putIfNotNull(EVCombinedRec.DOCID, firstGUID + "_" + (coordCount));
 							recVector.add(recSecondBox);
 						}
 					  }
@@ -969,12 +964,12 @@ public class XmlCombiner
 
 	String[] prepareMulti(String multiString)
 	        throws Exception
-    {		
+    {
 		String[] multiStringArray = multiString.split(BdParser.AUDELIMITER,-1);
 		return multiStringArray;
 
 	}
-	
+
 	private String[] prepareCASRegistry(String multiString, String database)
     	throws Exception
 	{
@@ -984,7 +979,7 @@ public class XmlCombiner
 		{
 			for(int i = 0; i < multiStringArray.length; i++)
 			{
-				String[] multiStringArray2 = multiStringArray[i].split(BdParser.AUDELIMITER,-1);	
+				String[] multiStringArray2 = multiStringArray[i].split(BdParser.AUDELIMITER,-1);
 				if(multiStringArray2.length == 3)
 				{
 					if(multiStringArray2[2].indexOf(multiStringArray2[1])== -1)
@@ -992,7 +987,7 @@ public class XmlCombiner
 						if(multiStringArray2[0] != null && multiStringArray2[0].equalsIgnoreCase("b"))
 						{
 							list.add(stripAsterics(multiStringArray2[2]).concat("-").concat("(BT)").concat("-").concat(stripAsterics(multiStringArray2[1])));
-						}	
+						}
 						else
 						{
 							list.add(stripAsterics(multiStringArray2[2]).concat("-").concat(stripAsterics(multiStringArray2[1])));
@@ -1008,7 +1003,7 @@ public class XmlCombiner
 						{
 							list.add(stripAsterics(multiStringArray2[2]));
 						}
-					}					
+					}
 				}
 			}
 		}
@@ -1023,7 +1018,7 @@ public class XmlCombiner
 				}
 			}
 		}
-				
+
 		return (String[]) list.toArray(new String[0]);
 	}
 
@@ -1148,7 +1143,7 @@ public class XmlCombiner
 		BdPage pages = new BdPage(v);
 		return pages.getStartPage();
 	}
-    
+
     private String getDedupKey(String issn,
                                String coden,
                                String volume,
@@ -1398,14 +1393,14 @@ public class XmlCombiner
             }
 
     }
-    
+
 	public String[] prepareELTCV(String multiString)
     throws Exception
     {
 		if(multiString != null && multiString.length() >0)
-		{	
+		{
 			multiString = stripAsterics(multiString);
-			
+
 			String[] multiStringArray = null;
 			if(multiString.indexOf(";") >0)
 			{
@@ -1418,12 +1413,12 @@ public class XmlCombiner
 				return multiStringArray1;
 			}
 		}
-	
+
 		return null;
-		
+
     }
-    
-	
+
+
     public String replaceNull(String sVal) {
 
         if (sVal == null)
@@ -1431,26 +1426,26 @@ public class XmlCombiner
 
         return sVal;
     }
-    
-    
+
+
     public String[] getCvs(List list)
    	{
-    	
+
    		if(list != null && list.size() > 0)
    		{
    			return (String[]) list.toArray(new String[0]);
-   			
+
    		}
    		return null;
    	}
-        
+
     private String stripAsterics(String line)
     {
         line = perl.substitute("s/\\*+//gi", line);
         return line;
     }
-    
-    
+
+
     public void writeCombinedByWeekHook(Connection con,
                                         int weekNumber)
         throws Exception
@@ -1462,7 +1457,6 @@ public class XmlCombiner
         {
             stmt = con.createStatement();
             rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER,substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,APICT, APICT1,APILT, APILT1,CLASSIFICATIONDESC,APIAMS,SEQ_NUM from " + Combiner.TABLENAME + " where SEQ_NUM is not null and LOADNUMBER='" + weekNumber + "' AND loadnumber != 0 and loadnumber < 1000000 and database='" + Combiner.CURRENTDB + "'");
-			//System.out.println("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER,PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,SEQ_NUM from " + Combiner.TABLENAME + " where SEQ_NUM is not null and LOADNUMBER='" + weekNumber + "' AND loadnumber != 0 and loadnumber < 1000000 and database='" + Combiner.CURRENTDB + "'");
 			System.out.println("Got records2 ...");
             writeRecs(rs);
             this.writer.end();
