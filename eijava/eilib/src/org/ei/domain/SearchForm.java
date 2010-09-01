@@ -849,6 +849,12 @@ public class SearchForm {
           doctype.put("MP", "Map");
       }
 
+	  //added for AIP
+      if(selecteddbMask == DatabaseConfig.CPX_MASK )
+	  {
+	     doctype.put("IP", "Article in Press");
+      }
+
       return doctype;
     } // getDoctype()
 

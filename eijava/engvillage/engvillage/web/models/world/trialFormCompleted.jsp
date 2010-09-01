@@ -88,14 +88,14 @@
     sb.append("Thank you for your interest in EI products. You will be contacted by an Elsevier Engineering Information representative shortly to establish a trial of EI products. ");
     sb.append("\n\n\n\n");
     sb.append("Ei Customer Support");
-
+    /*
     msg.setMessageBody(sb.toString());
     msg.setSubject("EI products Free 30-day Trial");
     msg.setSender(EIMessage.DEFAULT_SENDER);
     msg.setFrom(EIMessage.DEFAULT_SENDER);
     msg.addTORecepient(trialUser.getEmail());
     mail.sendMessage(msg);
-
+    */
     msg = new EIMessage();
     sb=new StringBuffer();
     sb.append("First Name: "+ trialUser.getFirstName());
@@ -137,6 +137,7 @@
     sb.append("How Hear Explained: "+ trialUser.getHowHearExplained());
     sb.append("\n");
     sb.append("Referring URL: "+ trialUser.getReferringURL());
+    /*
     msg.setMessageBody(sb.toString());
     msg.setSubject("New EI product Trial Request");
     msg.setSender("eicustomersupport@elsevier.com");
@@ -146,7 +147,7 @@
     msg.setFrom(EIMessage.DEFAULT_SENDER);
     msg.addTORecepient(EIMessage.DEFAULT_SENDER);
     mail.sendMessage(msg);
-
+    */
     //finish send email
 
     out.write("<TRIAL>SUCCESS</TRIAL></PAGE>");

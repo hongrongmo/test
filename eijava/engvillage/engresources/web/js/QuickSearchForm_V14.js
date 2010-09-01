@@ -657,6 +657,12 @@ function generateDoctypes(selecteddbMask)
   {
     doctypes[index++] = new Field("MP", "Map");
   }
+  
+  // added for AIP
+  if(selecteddbMask == CPX)
+  {
+	doctypes[index++] = new Field("IP", "Article in Press");
+  }
 
   return doctypes;
 
@@ -1600,6 +1606,19 @@ function clearAlldb()
       lidiv = document.createElement("li");
       lidiv.appendChild(link);
       uldiv.appendChild(lidiv);
+    }
+    
+    //IP
+        if(selectedDbMask == CPX)
+        {
+          link = newLookupLink();
+          link.onclick=OpenLookup_IP
+    
+          link.appendChild(document.createTextNode("Article in Press"));
+    
+          lidiv = document.createElement("li");
+          lidiv.appendChild(link);
+          uldiv.appendChild(lidiv);
     }
 
     adiv.appendChild(document.createElement("br"));
