@@ -149,12 +149,16 @@
     <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/StylesheetLinks.js"/>
     <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/URLEncode.js"/>
     <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/SearchResults_V7.js"/>
+    <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/jquery-1.4.2.min.js"/>
+    
 
     <xsl:if test="($SEARCH-TYPE='Quick') or ($SEARCH-TYPE='Thesaurus') or ($SEARCH-TYPE='Combined')">
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/QuickResults.js"/>
+        <script language="JavaScript" type="text/javascript" src="/engresources/js/citedby2.js"></script>
     </xsl:if>
     <xsl:if test="($SEARCH-TYPE='Expert') or ($SEARCH-TYPE='Easy')">
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/ExpertResults.js"/>
+        <script language="JavaScript" type="text/javascript" src="/engresources/js/citedby.js"></script>
     </xsl:if>
 
     <!-- End of javascript -->
@@ -229,6 +233,7 @@
       </xsl:apply-templates>
 
       <br/>
+      <script>ajaxCitedByFunction();</script>
     </body>
     </html>
 
@@ -263,6 +268,10 @@
 
     <xsl:param name="SEARCH-CID"/>
 
+    <xsl:variable name="AN">
+    	<xsl:value-of select="EI-DOCUMENT/AN"/>
+    </xsl:variable>
+    
     <xsl:variable name="ISDUP">
         <xsl:value-of select="@DUP"/>
     </xsl:variable>
@@ -477,6 +486,15 @@
                 <A CLASS="MedBlackText">&#160; - &#160;</A>
                 <a href="" onclick="window.open('/controller/servlet/Controller?CID=FullTextLink&amp;docID={$DOC-ID}','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable');return false"><img src="/engresources/images/av.gif" align="absbottom" border="0"/></a>
             </xsl:if>
+            
+             <a class="MedBlackText">
+		 <xsl:attribute name="ID"><xsl:value-of select='$AN'/>dash</xsl:attribute>
+		 </a>
+	     <a class="LgBlueLink" >
+		<xsl:attribute name="ID"><xsl:value-of select='$AN'/></xsl:attribute>
+		<xsl:attribute name="TITLE">Cited-by</xsl:attribute>
+		<xsl:attribute name="ALT">Scopus Cited-by</xsl:attribute>
+             </a>
 
             <xsl:if test="($LOCALHOLDINGS-CITATION='true')">
                 <xsl:apply-templates select="LOCAL-HOLDINGS" mode="CIT">
