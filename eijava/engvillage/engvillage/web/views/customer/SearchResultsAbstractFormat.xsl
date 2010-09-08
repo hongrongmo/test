@@ -426,19 +426,34 @@
       <td valign="top" width="100%" align="left">
         <xsl:apply-templates select="EI-DOCUMENT" />
       </td>
-      <xsl:if test="not($SEARCH-CONTEXT='dedup')">
-      	<xsl:if test="//GLOBAL-LINKS/TAGGROUPS">
-          <!-- THIS DEFINES TWO MORE COLUMNS IN THIS TABLE -->
-          <td valign="top">
-            <div class="m">
-              <img src="/engresources/images/s.gif" border="0" width="1" />
-            </div>
-          </td>
-          <td valign="top" width="30%" align="left">
-            <xsl:apply-templates select="/PAGE/TAG-BUBBLE"/>
-          </td>
-      	</xsl:if>
-      </xsl:if>
+      <xsl:choose>
+		<xsl:when test="not($SEARCH-CONTEXT='dedup')">
+			<xsl:if test="//GLOBAL-LINKS/TAGGROUPS">
+			    <!-- THIS DEFINES TWO MORE COLUMNS IN THIS TABLE -->
+			    <td valign="top">
+			      <div class="m">
+				<img src="/engresources/images/s.gif" border="0" width="1" />
+			      </div>
+			    </td>
+			    <td valign="top" width="30%" align="left">
+			      <xsl:apply-templates select="/PAGE/TAG-BUBBLE"/>
+			    </td>
+			</xsl:if>
+		</xsl:when>
+		<xsl:otherwise>
+			<td valign="top">
+			      <div class="m">
+				<img src="/engresources/images/s.gif" border="0" width="1" />
+			      </div>
+			</td>
+			<td valign="top" width="30%" align="left">
+				<div  style="width:215px;" id="citedby_box"/>
+			 </td>
+		</xsl:otherwise>
+	</xsl:choose>
+    </tr>
+    <tr>
+         <td colspan="7"><img src="/engresources/images/s.gif" border="0" height="10"/></td>
     </tr>
 
     <xsl:variable name="FULLTEXT">
