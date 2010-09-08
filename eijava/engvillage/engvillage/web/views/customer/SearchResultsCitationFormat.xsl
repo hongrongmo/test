@@ -634,7 +634,6 @@
 		<xsl:attribute name="ID"><xsl:value-of select='$AN'/></xsl:attribute>
 		<xsl:attribute name="TITLE">Cited-by</xsl:attribute>
 		<xsl:attribute name="ALT">Scopus Cited-by</xsl:attribute>
-
              </a>
 
             <xsl:if test="($LOCALHOLDINGS-CITATION='true')">
