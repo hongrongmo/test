@@ -64,9 +64,6 @@ public class BaseTableWriter
 				}
 			}
 
-
-
-
 			if(valueString != null)
 			{
 				recordBuf.append(valueString);
@@ -74,7 +71,7 @@ public class BaseTableWriter
 
 			recordBuf.append(FIELDDELIM);
 		}
-
+		//System.out.println("record= "+recordBuf.toString().trim());
 		out.println(recordBuf.toString().trim());
 
 	}
