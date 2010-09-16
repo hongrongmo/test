@@ -76,8 +76,6 @@ public class XmlCombiner
         tablename = args[7];
         String currentDb = args[8].toLowerCase();
         long timestamp=0;
-        //if(args.length==10)
-            //timestamp = Long.parseLong(args[9]);
 
         Combiner.TABLENAME = tablename;
         Combiner.CURRENTDB = currentDb;
@@ -103,7 +101,6 @@ public class XmlCombiner
         }
         else if(loadNumber == 0)
         {
-
         	for(int yearIndex = 1904; yearIndex <= 2010; yearIndex++)
             {
               c = new XmlCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,dbname, "dev"));
@@ -208,6 +205,7 @@ public class XmlCombiner
 	    boolean isGeoBase = false;
 	    boolean isChimica = false;
 	    boolean isCpx = false;
+
         while (rs.next())
         {
           ++i;
@@ -230,19 +228,6 @@ public class XmlCombiner
 			  }
 	  	  }
 
-          /*
-          String sts = rs.getString("REGIONALTERM");
-
-          if(sts == null || !isGeoBase)
-          {
-          	numCoords = 1;
-		  }
-		  else
-		  {
-          	String[] tc = sts.split(GRFDocBuilder.AUDELIMITER);
-          	numCoords = tc.length;
-	  	  }
-		  */
 	  	  Vector recVector = new Vector();
           for(int currentCoord = 0; currentCoord < numCoords; currentCoord++)
           {
@@ -375,10 +360,7 @@ public class XmlCombiner
 
 								   if(coords != null &&  coords[4].indexOf("-") == -1 && coords[3].indexOf("-") != -1)
 								   {
-								     //secondBoxCoords = parseCoordinates(coordString);
-									 //System.out.println(secondBoxCoords[1] + "," + secondBoxCoords[2] + "," + secondBoxCoords[3] + "," + secondBoxCoords[4]);
 									 coords[3] = "180";
-									 //recSecondBox = new EVCombinedRec();
 								   }
 								   if(j == currentCoord)
 								   {
@@ -504,13 +486,13 @@ public class XmlCombiner
 					rec.put(EVCombinedRec.DOCTYPE, docType);
 				}
 
-                if (rs.getString("CLASSIFICATIONCODE") != null && 
+                if (rs.getString("CLASSIFICATIONCODE") != null &&
                 		!rs.getString("DATABASE").equalsIgnoreCase("elt"))
                 {
                     rec.put(EVCombinedRec.CLASSIFICATION_CODE,
                             prepareMulti(formatClassCodes(rs.getString("CLASSIFICATIONCODE"))));
                 }
-                if (rs.getString("CLASSIFICATIONDESC") != null && 
+                if (rs.getString("CLASSIFICATIONDESC") != null &&
                 		rs.getString("DATABASE").equalsIgnoreCase("elt"))
                 {
                     rec.put(EVCombinedRec.CLASSIFICATION_CODE,
@@ -675,7 +657,7 @@ public class XmlCombiner
 
 				if(apict != null && !apict.trim().equals(""))
 				{
-					if(apict1 != null && 
+					if(apict1 != null &&
 							!apict1.trim().equals(""))
 					{
 						apict = apict.concat(apict1);
@@ -706,7 +688,7 @@ public class XmlCombiner
 
 					String[] cvtm = getCvs(cvterms.getCvm());
 
-		            if(cvtm != null && 
+		            if(cvtm != null &&
 	                		rs.getString("DATABASE").equalsIgnoreCase("elt"))
 		            {
 		            	 rec.put(EVCombinedRec.MAIN_HEADING, cvtm);
@@ -1456,8 +1438,8 @@ public class XmlCombiner
         try
         {
             stmt = con.createStatement();
-            rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER,substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,APICT, APICT1,APILT, APILT1,CLASSIFICATIONDESC,APIAMS,SEQ_NUM from " + Combiner.TABLENAME + " where SEQ_NUM is not null and LOADNUMBER='" + weekNumber + "' AND loadnumber != 0 and loadnumber < 1000000 and database='" + Combiner.CURRENTDB + "'");
-			System.out.println("Got records2 ...");
+            String sqlString = "select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER,substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,APICT, APICT1,APILT, APILT1,CLASSIFICATIONDESC,APIAMS,SEQ_NUM from " + Combiner.TABLENAME + " where SEQ_NUM is not null and LOADNUMBER='" + weekNumber + "' AND loadnumber != 0 and loadnumber < 1000000 and database='" + Combiner.CURRENTDB + "'";
+            rs = stmt.executeQuery(sqlString);
             writeRecs(rs);
             this.writer.end();
             this.writer.flush();
