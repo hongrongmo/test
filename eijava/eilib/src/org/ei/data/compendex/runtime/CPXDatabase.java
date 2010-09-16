@@ -50,6 +50,7 @@ public class CPXDatabase extends Database
 		searchfield.put("CO", "Y");
 		searchfield.put("VO", "Y");
 		searchfield.put("SU", "Y");
+		searchfield.put("AIP", "Y");
 	}
 
     public List getSortableFields() {
