@@ -33,6 +33,7 @@ public class BdParser
 	private PrintWriter out;
 	private SAXBuilder builder;
 	private String accessNumber;
+	//private String action;
 	private String databaseName = "cpx";
 	private DataLoadDictionary dictionary = new DataLoadDictionary();
 
@@ -108,6 +109,17 @@ public class BdParser
 		return this.weekNumber;
 	}
 
+/*
+	public void setAction(String action)
+	{
+		this.action = action;
+	}
+
+	public String getAction()
+	{
+		return this.action;
+	}
+*/
 	public void setDatabaseName(String databaseName)
 	{
 		this.databaseName = databaseName;
@@ -229,14 +241,12 @@ public class BdParser
 						if(doi != null)
 						{
 							record.put("DOI",doi.getTextTrim());
-							//System.out.println("DOI"+doi.getTextTrim());
 						}
 
 						Element pii = itemidlist.getChild("pii", ceNamespace);
 						if(pii != null)
 						{
 							record.put("PII",pii.getTextTrim());
-							//System.out.println("PII"+pii.getTextTrim());
 						}
 						List itemidList = itemidlist.getChildren("itemid",noNamespace);
 						for(int i=0;i<itemidList.size();i++)
@@ -296,7 +306,13 @@ public class BdParser
 									Attribute type =(Attribute) cittype.getAttribute("code");
 									if(type != null)
 									{
-										record.put("CITTYPE",type.getValue());
+										String cititype=type.getValue();
+
+										if(cititype!=null && cititype.equals("ip"))
+										{
+											cititype="aip";
+										}
+										record.put("CITTYPE",cititype);
 									}
 								}
 
@@ -321,7 +337,7 @@ public class BdParser
 											}
 										}
 									}
-									//System.out.println("AUTHORKEYWORD "+authorKeywordBuffer.toString());
+
 									record.put("AUTHORKEYWORD",authorKeywordBuffer.toString());
 								}
 							}
@@ -462,7 +478,7 @@ public class BdParser
 									if(apidescriptorgroup!=null)
 									{
 										Element autoposting = apidescriptorgroup.getChild("autoposting",noNamespace);
-							//APICC
+								//APICC
 										if(autoposting != null)
 										{
 											Element classificationdescription = autoposting.getChild("API-CC", noNamespace);
@@ -834,7 +850,7 @@ public class BdParser
 							//SOURCE SOURCETYPE SOURCECOUNTRY SOURCEID
 
 							source =(Element) head.getChild("source",noNamespace);
-							parseSourceElement(source,record);
+							parseSourceElement(source,record,bibrecord);
 
 							//CORRESPONDENCE
 							Element correspondence = (Element) head.getChild("correspondence",noNamespace);
@@ -1217,7 +1233,7 @@ public class BdParser
 		}
 	}
 
-	private void parseSourceElement(Element source,Hashtable record) throws Exception
+	private void parseSourceElement(Element source,Hashtable record,Element bibrecord) throws Exception
 	{
 		if(source != null)
 		{
@@ -1487,12 +1503,27 @@ public class BdParser
 				{
 					record.put("PUBLICATIONYEAR",publicationYearLast);
 				}
-			}
+			}//add for AIP
 			else
 			{
-				java.util.Calendar calCurrentDate =  java.util.GregorianCalendar.getInstance();
-				int year = calCurrentDate.get(java.util.Calendar.YEAR);
-				record.put("PUBLICATIONYEAR",Integer.toString(year));
+				String aipPubYear=null;
+				Element history = null;
+				if(bibrecord!=null && bibrecord.getChild("history",noNamespace)!=null)
+				{
+					Element dateCreated = (bibrecord.getChild("history",noNamespace)).getChild("date-created",noNamespace);
+					if(dateCreated!=null && dateCreated.getAttributeValue("year")!=null)
+					{
+						aipPubYear = dateCreated.getAttributeValue("year");
+						record.put("PUBLICATIONYEAR",aipPubYear);
+					}
+				}
+
+				if(aipPubYear==null)
+				{
+					java.util.Calendar calCurrentDate =  java.util.GregorianCalendar.getInstance();
+					int year = calCurrentDate.get(java.util.Calendar.YEAR);
+					record.put("PUBLICATIONYEAR",Integer.toString(year));
+				}
 			}
 
 			//PUBLICATIONDATE
@@ -1516,6 +1547,22 @@ public class BdParser
 						record.put("PUBLICATIONDATE",dateString);
 					}
 				}
+			}//added for AIP
+			else if(bibrecord!=null && bibrecord.getChild("history",noNamespace)!=null)
+			{
+					Element history = bibrecord.getChild("history",noNamespace);
+					Element dateCreated = history.getChild("date-created",noNamespace);
+					if(dateCreated!=null)
+					{
+						String year = dateCreated.getAttributeValue("year");
+						String month= dateCreated.getAttributeValue("month");
+						String day= dateCreated.getAttributeValue("day");
+						dateString = getDateString(year,month,day);
+					}
+					if(dateString != null)
+					{
+						record.put("PUBLICATIONDATE",dateString);
+					}
 			}
 
 			//CONTRIBUTORGROUP
