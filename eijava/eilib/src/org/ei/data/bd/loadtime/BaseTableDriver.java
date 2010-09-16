@@ -13,23 +13,26 @@ import java.util.Hashtable;
 import java.util.Enumeration;
 import org.ei.data.LoadNumber;
 import org.ei.data.bd.*;
+import java.sql.*;
 
 public class BaseTableDriver
 {
     private static BaseTableWriter baseWriter;
     private int loadNumber;
     private String databaseName;
+    private String action;
     private static String startRootElement ="<?xml version=\"1.0\" standalone=\"no\"?><!DOCTYPE bibdataset SYSTEM \"ani512.dtd\"><bibdataset xmlns:ce=\"http://www.elsevier.com/xml/common/dtd\" xmlns:ait=\"http://www.elsevier.com/xml/ait/dtd\">";
 	private static String endRootElement   ="</bibdataset>";
-
+	private static Connection con;
     public static void main(String args[])
         throws Exception
 
     {
         int loadN=0;
-        if(args.length<3)
+        long startTime = System.currentTimeMillis();
+        if(args.length<8)
         {
-			System.out.println("please enter three parameters as \" weeknumber filename databaseName \"");
+			System.out.println("please enter three parameters as \" weeknumber filename databaseName action url driver username password\"");
 			System.exit(1);
 		}
 
@@ -37,17 +40,69 @@ public class BaseTableDriver
 
         String infile = args[1];
         String databaseName = args[2];
-        BaseTableDriver c = new BaseTableDriver(loadN,databaseName);
-        c.writeBaseTableFile(infile);
-    }
+        String action = args[3];
+        String url = args[4];
+        String driver = args[5];
+        String username = args[6];
+        String password = args[7];
+        BaseTableDriver c;
+
+        try
+        {
+			if(args.length>3)
+			{
+				action = args[3];
+			}
+
+			if(action!=null)
+			{
+				c = new BaseTableDriver(loadN,databaseName,action);
+				System.out.println("action="+action);
+			}
+			else
+			{
+				c = new BaseTableDriver(loadN,databaseName);
+			}
+
+			con = c.getConnection(url,driver,username,password);
+			c.writeBaseTableFile(infile,con);
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			if (con != null)
+			{
+				try
+				{
+					con.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+			System.out.println("total process time "+(System.currentTimeMillis()-startTime)/1000.0+" seconds");
+		}
+	}
 
     public BaseTableDriver(int loadN,String databaseName)
     {
         this.loadNumber = loadN;
 		this.databaseName = databaseName;
+		this.action = "normal";
     }
 
-    public void writeBaseTableFile(String infile)
+    public BaseTableDriver(int loadN,String databaseName,String action)
+	{
+	    this.loadNumber = loadN;
+		this.databaseName = databaseName;
+		this.action = action;
+    }
+
+    public void writeBaseTableFile(String infile, Connection con)
         throws Exception
     {
         BufferedReader in = null;
@@ -58,19 +113,21 @@ public class BaseTableDriver
             baseWriter.begin();
             if(infile.toLowerCase().endsWith(".zip"))
             {
+				System.out.println("IS ZIP FILE");
 				ZipFile zipFile = new ZipFile(infile);
 				Enumeration entries = zipFile.entries();
 				while (entries.hasMoreElements())
 				{
 					ZipEntry entry = (ZipEntry)entries.nextElement();
 					in = new BufferedReader(new InputStreamReader(zipFile.getInputStream(entry), "UTF-8"));
-					writeRecs(in);
+					writeRecs(in,con);
 				}
 			}
             else if(infile.toLowerCase().endsWith(".xml"))
             {
+				System.out.println("IS XML FILE");
                 in = new BufferedReader(new FileReader(infile));
-				writeRecs(in);
+				writeRecs(in,con);
 			}
 			else
 			{
@@ -94,15 +151,82 @@ public class BaseTableDriver
         }
     }
 
-    private void writeRecs(BufferedReader xmlReader) throws Exception
+    private boolean checkPUI(String pui, Connection con)
+    {
+		Statement stmt = null;
+		ResultSet rs = null;
+		int count = 0;
+		boolean checkResult = false;
+		try
+		{
+			stmt = con.createStatement();
+
+			rs = stmt.executeQuery("select count(m_id) count from bd_master_orig where pui='"+pui+"'");
+			while (rs.next())
+        	{
+				count = rs.getInt("count");
+			}
+			//System.out.println("pui= "+pui+" SIZE= "+count);
+			if(count>0)
+			{
+				checkResult=true;
+			}
+
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+
+			if (rs != null)
+			{
+				try
+				{
+					rs.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+
+			if (stmt != null)
+			{
+				try
+				{
+					stmt.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+		}
+		return checkResult;
+	}
+
+    private void writeRecs(BufferedReader xmlReader, Connection con) throws Exception
 	{
+		System.out.println("in writeRecs");
         	RecordReader r = new RecordReader(loadNumber,databaseName);
     		while(xmlReader!=null)
     		{
     		    Hashtable h = r.readRecord(xmlReader);
     		    if (h != null)
     		    {
-    		        baseWriter.writeRec(h);
+					if(action.equals("aip"))
+					{
+						if(!checkPUI((String)h.get("PUI"),con))
+						{
+    		        		baseWriter.writeRec(h);
+						}
+					}
+					else
+					{
+						baseWriter.writeRec(h);
+					}
     		    }
     		    else
     		    {
@@ -116,6 +240,7 @@ public class BaseTableDriver
         BdParser r;
         int loadNumber;
 		String databaseName;
+		//String action;
 
         RecordReader(int loadNumber,String databaseName)
         {
@@ -129,6 +254,7 @@ public class BaseTableDriver
     		StringBuffer sBuffer = new StringBuffer();
     		r.setWeekNumber(Integer.toString(loadNumber));
     		r.setDatabaseName(databaseName);
+    		//r.setAction(action);
     		boolean start = false;
     		while((line=xmlReader.readLine())!=null)
     		{
@@ -170,4 +296,17 @@ public class BaseTableDriver
     		return null;
         }
     }
+
+     protected Connection getConnection(String connectionURL,
+		                                         String driver,
+		                                         String username,
+		                                         String password)
+		            throws Exception
+	{
+		Class.forName(driver);
+		Connection con = DriverManager.getConnection(connectionURL,
+										  username,
+										  password);
+		return con;
+     }
 }
