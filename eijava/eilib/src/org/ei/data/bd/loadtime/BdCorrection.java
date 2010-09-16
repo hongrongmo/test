@@ -76,7 +76,6 @@ public class BdCorrection
 		{
 	        System.out.println("IO error trying to read your input!");
 	        System.exit(1);
-
 		}
 
 		if(args.length>9)
@@ -106,18 +105,15 @@ public class BdCorrection
 				fileToBeLoaded = args[0];
 			}
 
-
 			if(args[1]!=null)
 			{
 				tableToBeTruncated = args[1];
 			}
 
-
 			if(args[2]!=null)
 			{
 				database = args[2];
 			}
-
 
 			if(args[3]!=null && args[3].length()>0)
 			{
@@ -191,7 +187,7 @@ public class BdCorrection
 				}
 
 				BaseTableDriver c = new BaseTableDriver(updateNumber,database);
-				c.writeBaseTableFile(fileToBeLoaded);
+				c.writeBaseTableFile(fileToBeLoaded,con);
 				String dataFile=fileToBeLoaded+"."+updateNumber+".out";
 				File f = new File(dataFile);
 				if(!f.exists())
@@ -240,12 +236,14 @@ public class BdCorrection
 					System.in.read();
 					Thread.currentThread().sleep(1000);
 				}
-				if(action.equalsIgnoreCase("update"))
+				if(action.equalsIgnoreCase("update")||action.equalsIgnoreCase("aip"))
 				{
+
 					bdc.processLookupIndex(bdc.getLookupData("update"),bdc.getLookupData("backup"));
 				}
 				else if(action.equalsIgnoreCase("delete"))
 				{
+
 					bdc.processLookupIndex(new HashMap(),bdc.getLookupData("backup"));
 				}
 			}
@@ -279,7 +277,6 @@ public class BdCorrection
 		                                              dbname,
 		                                              "dev");
 
-
         Statement stmt = null;
         ResultSet rs = null;
         try
@@ -291,24 +288,17 @@ public class BdCorrection
 				writer.setOperation("add");
         		XmlCombiner c = new XmlCombiner(writer);
 				rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CLASSIFICATIONDESC,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER, substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,APILT,APILT1,APICT,APICT1,APIAMS,SEQ_NUM from bd_master_orig where updateNumber='"+updateNumber+"'");
-				//rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CLASSIFICATIONDESC,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER, substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,APICT,APICT1,APILT,APILT1,APIAMS,SEQ_NUM
-				//System.out.println("Got records ...");
 				c.writeRecs(rs);
-				//System.out.println("Wrote records.");
 			}
 			else if(action.equalsIgnoreCase("delete") || action.equalsIgnoreCase("extractdelete"))
 			{
 				writer.setOperation("delete");
-        		//XmlCombiner c = new XmlCombiner(writer);
 				rs = stmt.executeQuery("select m_id from bd_master_orig where updateNumber='"+updateNumber+"' and accessnumber in (select 'D'||accessnumber from bd_correction_temp)");
-				//c.writeRecs(rs);
-
 				creatDeleteFile(rs,dbname,updateNumber);
 				writer.zipBatch();
 			}
 			writer.end();
 			writer.flush();
-
 		}
 		finally
 		{
@@ -348,7 +338,7 @@ public class BdCorrection
 		File file=new File("fast");
 		FileWriter out= null;
 		CombinedWriter writer = new CombinedXMLWriter(10000,10000,database);
-		//System.out.println("updateNumber= "+updateNumber);
+
 		try
 		{
 			if(!file.exists())
@@ -373,7 +363,7 @@ public class BdCorrection
 			}
 
 			file = new File(root+"/delete.txt");
-			//file = new File("delete.txt");
+
 			if(!file.exists())
 			{
 				file.createNewFile();
@@ -754,7 +744,7 @@ public class BdCorrection
 				{
 					outputList.add(term1);
 				}
-				//System.out.println("search term= "+term1+" fastCount="+c+" count="+indexCount);
+
 			}
 			catch(Exception e)
 			{
@@ -780,7 +770,7 @@ public class BdCorrection
 			if(backupList!=null)
 			{
 				String dData = null;
-				//System.out.println("backup size= "+backupList.size());
+
 				for(int i=0;i<backupList.size();i++)
 				{
 					dData = (String)backupList.get(i);
@@ -802,7 +792,7 @@ public class BdCorrection
 				}
 			}
 		}
-		//System.out.println("deleteLookupIndex size= "+deleteLookupIndex.size());
+
 		return deleteLookupIndex;
 	}
 
@@ -842,7 +832,7 @@ public class BdCorrection
 			System.out.println("Got records ...");
 			results = setRecs(rs);
 
-			System.out.println("Wrote records.");
+			//System.out.println("Wrote records.");
 
 
 		}
