@@ -22,9 +22,8 @@
     <xsl:output method="html" indent="no"/>
     <xsl:strip-space elements="html:* xsl:*" />
 
-    <xsl:template match="EI-DOCUMENT">
-
-      <table border="0" width="99%" cellspacing="0" cellpadding="0">
+    <xsl:template match="EI-DOCUMENT">	
+        <table border="0" width="99%" cellspacing="0" cellpadding="0">      
         <xsl:apply-templates />
       </table>
     </xsl:template>
@@ -33,12 +32,33 @@
     <xsl:template match="NO_SO"/>
 
     <!-- These are fixes for GeoREF - Fields that are mutli-value which are not multi value in other databases -->
-    <!-- we need to create special templates for them so they display correctly-->
+    <!-- we need to create special templates for them so they display correctly -->
     <xsl:template match="CA"> <!-- Category Field -->
       <span CLASS="MedBlackText">
         <xsl:apply-templates />
         <xsl:if test="not(position()=last())"> - </xsl:if>
       </span>
+    </xsl:template>
+    <xsl:template match="AN"> <!-- accessnumber -->
+    	<xsl:variable name="DOCTYPE" ><xsl:value-of select="//DT"/></xsl:variable>
+    	<tr>
+	        <td valign="top" ><img src="/engresources/images/s.gif" border="0"/></td>
+	        <td xsl:use-attribute-sets="r-align-label">
+	        <xsl:if test="string(@label)">
+	            <span CLASS="MedBlackText"><b><xsl:value-of select="@label"/>:</b> </span>
+	        </xsl:if>
+	        </td>
+	        <td valign="top" width="10"><img src="/engresources/images/s.gif" border="0" width="10"/></td>
+	        <td valign="top" align="left">
+	        <span CLASS="MedBlackText">
+	          <xsl:value-of select="."/>	 
+	             <xsl:if test="$DOCTYPE='Article in Press'">
+		 	<span CLASS="MedBlackText"><br/><img src="/engresources/images/btn_aip.gif" border="0" style="vertical-align:bottom" title="Articles not published yet, but available online"/><xsl:text> Article in Press</xsl:text></span>
+       		     </xsl:if>  
+	        </span>
+	        <br/><br/>
+	        </td>
+      </tr>    
     </xsl:template>
     <xsl:template match="OA|P|RS|RPG"> <!-- Other Affiliation / Publisher / Sponsor / Research Program -->
       <span CLASS="MedBlackText">
@@ -101,7 +121,14 @@
             <td valign="top" ><img src="/engresources/images/s.gif" border="0"/></td>
             <td xsl:use-attribute-sets="r-align-label">
             <xsl:if test="string(@label)">
-                <span CLASS="MedBlackText"><b><xsl:value-of select="@label"/>:</b> </span>
+                <xsl:choose>
+			<xsl:when test="'IP'=@label">
+				<span CLASS="MedBlackText"><b><img src="/engresources/images/btn_aip.gif" border="0" /><xsl:value-of select="@label"/>:</b></span>
+			</xsl:when>
+			<xsl:otherwise>
+				<span CLASS="MedBlackText"><b><xsl:value-of select="@label"/>:</b></span>
+			</xsl:otherwise>
+                </xsl:choose>
             </xsl:if>
             </td>
             <td valign="top" width="10"><img src="/engresources/images/s.gif" border="0" width="10"/></td>
