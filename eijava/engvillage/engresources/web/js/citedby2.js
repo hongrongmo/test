@@ -75,25 +75,28 @@ function ajaxCitedByFunction()
           var scopusID = data.result[i].SID;
           var count = data.result[i].COUNT;
           var dashID=id+"dash";
-          if(document.getElementById(id)!=null && document.getElementById(dashID)!=null)
-          {
-            document.getElementById(dashID).innerHTML = "&#160; - &#160";
-            var countString="Cited by in Scopus ("+count+")";
-            document.getElementById(id).innerHTML = countString;
-            if(count>1)
+            if(count>0)
             {
-              document.getElementById(id).title="Scopus found "+count+" citations for this article";
-            }
-            else
-            {
-              document.getElementById(id).title="Scopus found "+count+" citation for this article";
-            }
-            document.getElementById(id).href = "javascript:newwindow=window.open('http://www.scopus.com/scopus/inward/citedby.url?partnerID=qRss3amk&eid="+eid+"','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable'); void('');";
-          }
-          else
-          {
-            alert("document.getElementById(id) is null");
-          }
+		  if(document.getElementById(id)!=null && document.getElementById(dashID)!=null)
+		  {
+		    document.getElementById(dashID).innerHTML = "&#160; - &#160";
+		    var countString="Cited by in Scopus ("+count+")";
+		    document.getElementById(id).innerHTML = countString;
+		    if(count>1)
+		    {
+		      document.getElementById(id).title="Scopus found "+count+" citations for this article";
+		    }
+		    else
+		    {
+		      document.getElementById(id).title="Scopus found "+count+" citation for this article";
+		    }
+		    document.getElementById(id).href = "javascript:newwindow=window.open('http://www.scopus.com/scopus/inward/citedby.url?partnerID=qRss3amk&eid="+eid+"','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable'); void('');";
+		  }
+		  else
+		  {
+		    alert("document.getElementById(id) is null");
+		  }
+	   }
         }
 
         }
