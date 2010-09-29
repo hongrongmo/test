@@ -154,12 +154,11 @@
 
     <xsl:if test="($SEARCH-TYPE='Quick') or ($SEARCH-TYPE='Thesaurus') or ($SEARCH-TYPE='Combined')">
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/QuickResults.js"/>
-        <script language="JavaScript" type="text/javascript" src="/engresources/js/citedby2.js"></script>
     </xsl:if>
     <xsl:if test="($SEARCH-TYPE='Expert') or ($SEARCH-TYPE='Easy')">
         <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/ExpertResults.js"/>
-        <script language="JavaScript" type="text/javascript" src="/engresources/js/citedby.js"></script>
     </xsl:if>
+    <script language="JavaScript" type="text/javascript" src="/engresources/js/citedby2.js"></script>
 
     <!-- End of javascript -->
 
