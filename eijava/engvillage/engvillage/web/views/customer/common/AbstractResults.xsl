@@ -19,7 +19,6 @@
 
   <xsl:template match="EI-DOCUMENT">
       <xsl:param name="ascii">false</xsl:param>
-
       <xsl:apply-templates select="BTI"/>
       <xsl:apply-templates select="BPP"/>
       <xsl:apply-templates select="TI"/>
@@ -29,8 +28,13 @@
       <xsl:apply-templates select="AUS"/>
       <xsl:apply-templates select="EDS"/>
       <xsl:apply-templates select="IVS"/>
-
-
+      <xsl:variable name="ISBN13">
+      	   <xsl:value-of select="BN13"/>
+      </xsl:variable>
+      
+      <xsl:variable name="EISSN">
+           <xsl:value-of select="E_ISSN"/>
+      </xsl:variable>
       <span CLASS="SmBlackText">
       <xsl:choose>
         <xsl:when test ="string(NO_SO)">
@@ -82,7 +86,7 @@
       <xsl:apply-templates select="PIM"/>
 
 
-    <xsl:apply-templates select="UPD"/>
+      <xsl:apply-templates select="UPD"/>
 
  <!--  <xsl:apply-templates select="KC"/> -->
       <xsl:apply-templates select="KD"/>
@@ -112,18 +116,25 @@
       <xsl:apply-templates select="LA"/>
 
       <xsl:if test="string(SN) or string(CN) or string(BN)">
-        <br/>
+        <!--<br/>-->
         <xsl:if test="$ascii='true'">
           <xsl:text>&#xD;&#xA;</xsl:text>
         </xsl:if>
       </xsl:if>
 
       <xsl:text> </xsl:text>
-      <xsl:apply-templates select="SN"/>
+      
+      <xsl:apply-templates select="SN">
+      	   <xsl:with-param name="EISSN" select= "$EISSN" />
+      </xsl:apply-templates>
       <xsl:apply-templates select="E_ISSN"/>
-      <xsl:apply-templates select="CN"/>
-      <xsl:apply-templates select="BN"/>
+     <!-- <xsl:apply-templates select="CN"/> -->
+      <xsl:apply-templates select="BN">
+      	<xsl:with-param name="ISBN13" select= "$ISBN13" />
+      </xsl:apply-templates>
       <xsl:apply-templates select="BN13"/>
+      <xsl:apply-templates select="DO"/>
+      <xsl:apply-templates select="ARTICLE_NUMBER"/>
     <!-- Book/Page Details (Abstract View)  -->
     <!-- BN will output ISBN: ######## -->
     <!-- Book Page Count -->
@@ -140,6 +151,7 @@
       <xsl:apply-templates select="CLOC"/>
 
       <xsl:apply-templates select="I_PN"/>
+      
       <!-- <xsl:apply-templates select="PL"/> -->
 
       <xsl:apply-templates select="CPUB"/>
@@ -169,6 +181,7 @@
       <xsl:apply-templates select="MJSM">
         <xsl:with-param name="DBNAME" select="DOC/DB/DBNAME"/>
       </xsl:apply-templates>
+      <xsl:apply-templates select="MH"/>
       <xsl:apply-templates select="CVS">
         <xsl:with-param name="DBNAME" select="DOC/DB/DBNAME"/>
       </xsl:apply-templates>
@@ -190,6 +203,8 @@
 
       <!-- <xsl:apply-templates select="CRDN"/> -->
       <xsl:apply-templates select="LOCS"/>
+      
+      <xsl:apply-templates select="TRS"/>
 
       <BR/>
       <xsl:if test="$ascii='true'">
@@ -201,6 +216,7 @@
         <xsl:apply-templates select="CPR"/>
       </xsl:if>
       <P/>
+      
 
     <script language="JavaScript" type="text/javascript" src="/engresources/js/wz_tooltip.js"></script>
 
@@ -250,6 +266,30 @@
     <xsl:template match="LOCS">
       <br/><br/><a class="MedBlackText"><b><xsl:value-of select="@label"/>:<xsl:text> </xsl:text></b></a><xsl:text> </xsl:text><xsl:apply-templates />
     </xsl:template>
+    
+     <xsl:template match="TRS">
+	  <xsl:if test="string(@label)">
+	      <br/><br/><span CLASS="MedBlackText"><b><xsl:value-of select="@label"/>:</b> </span><xsl:text> </xsl:text>
+	  </xsl:if>
+	  <span CLASS="MedBlackText">		
+	  <xsl:choose>
+	     <xsl:when test="TR/TTI"> 			
+		 <xsl:apply-templates select="TR/TTI"/>
+	     </xsl:when>
+	     <xsl:otherwise>	 				
+		 <xsl:apply-templates select="TR"/>			
+	     </xsl:otherwise>
+	  </xsl:choose>   
+	  </span>
+	
+    </xsl:template>
+    
+     <xsl:template match="TR|TR/TTI">
+     	<xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
+     	<xsl:if test="not(position()=last())">
+     	     <xsl:text>; </xsl:text>
+     	</xsl:if>
+     </xsl:template>
 
     <!-- EPT Templates -->
     <xsl:template match="PINFO">
@@ -307,7 +347,7 @@
     </xsl:template>
 
     <xsl:template match="BPN">
-      <br/><b>Publisher:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><br/>
+      <b>Publisher:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><br/>
     </xsl:template>
 
   <!--
@@ -447,7 +487,7 @@
       <xsl:text>,</xsl:text><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
     </xsl:template>
     <xsl:template match="SD">
-      <xsl:text>,</xsl:text><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
+      <xsl:text>,</xsl:text><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/><xsl:text>; </xsl:text>
     </xsl:template>
     <xsl:template match="MT">
       <xsl:text>,</xsl:text><xsl:text> </xsl:text><i><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/></i>
@@ -566,7 +606,7 @@
     </xsl:template>
 
     <xsl:template match="YR">
-      <xsl:text>, </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
+      <xsl:text>, </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>; </xsl:text>
     </xsl:template>
     <xsl:template match="PD_YR">
       <b> Publication date:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
@@ -598,16 +638,27 @@
     </xsl:template>
 
     <xsl:template match="SN">
-      <b>ISSN:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text> </xsl:text>
+       <xsl:param name="EISSN"/>
+       <b>ISSN:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
+       <xsl:choose>
+             <xsl:when test="boolean(string-length(normalize-space($EISSN))>0)">
+                  <xsl:text>,  </xsl:text>
+             </xsl:when>
+             <xsl:otherwise>
+                  <xsl:text>;  </xsl:text>
+             </xsl:otherwise>
+      </xsl:choose>
     </xsl:template>
 
     <xsl:template match="E_ISSN">
-      <b>E-ISSN:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text> </xsl:text>
+      <b>E-ISSN:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>; </xsl:text>
     </xsl:template>
 
-    <!-- CBNB Document type, Availability and Scope -->
+    <!--  Document type, only show AIP -->
     <xsl:template match="DT">
-      <br/><b><xsl:value-of select="@label"/>:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text> </xsl:text>
+      <xsl:if test="text()='Article in Press'">
+    	  <span CLASS="MedBlackText"><br/><img src="/engresources/images/btn_aip.gif" border="0" style="vertical-align:bottom" title="Articles not published yet, but available online"/><xsl:text> Article in Press</xsl:text></span>
+      </xsl:if>    
     </xsl:template>
     <!-- AV may have <a> anchor in it so we cannot have a nested anchor so we use a span here -->
     <xsl:template match="AV|SC">
@@ -618,14 +669,32 @@
       <b>CODEN:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text> </xsl:text>
     </xsl:template>
     <xsl:template match="BN">
-      <b><xsl:value-of select="@label"/>:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text> </xsl:text>
+      <xsl:param name="ISBN13"/>
+      <b><xsl:value-of select="@label"/>:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
+     <xsl:choose>
+	  <xsl:when test="boolean(string-length(normalize-space($ISBN13))>0)">
+		<xsl:text>,  </xsl:text>
+	  </xsl:when>
+	  <xsl:otherwise>
+	       <xsl:text>;  </xsl:text>
+	  </xsl:otherwise>
+      </xsl:choose>
     </xsl:template>
+    
     <xsl:template match="BN13">
-      <b><xsl:value-of select="@label"/>:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text> </xsl:text>
+      <b><xsl:value-of select="@label"/>:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>; </xsl:text>
+    </xsl:template>
+    
+    <xsl:template match="DO">
+          <b><xsl:value-of select="@label"/>:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>; </xsl:text>
+    </xsl:template>
+    
+    <xsl:template match="ARTICLE_NUMBER">
+          <b><xsl:value-of select="@label"/>:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text>; </xsl:text>
     </xsl:template>
 
     <xsl:template match="CF">
-      <xsl:text>&#xD;&#xA;</xsl:text><br/>
+      <xsl:text>&#xD;&#xA;</xsl:text>
       <b>Conference:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
     </xsl:template>
     <xsl:template match="MD">
@@ -639,8 +708,8 @@
     </xsl:template>
 
     <xsl:template match="I_PN">
-      <xsl:text>&#xD;&#xA;</xsl:text><br/>
-      <b>Publisher:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/>
+      <xsl:text>&#xD;&#xA;</xsl:text>
+      <b>Publisher:</b><xsl:text> </xsl:text><xsl:value-of select="hlight:addMarkup(.)" disable-output-escaping="yes"/><xsl:text>.</xsl:text>
     </xsl:template>
     <xsl:template match="PL">
       <xsl:text>, </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
@@ -711,7 +780,15 @@
           <xsl:otherwise><xsl:text>&#xD;&#xA;</xsl:text><xsl:value-of select="../PVD"/> controlled terms</xsl:otherwise>
         </xsl:choose>:<xsl:call-template name="DOUBLE_SPACER"/></b></a>
       <xsl:apply-templates/>
-
+    </xsl:template>
+    
+    <xsl:template match="MH"> 
+        <br/><br/><span class="SmBlackText"><b>Main Heading:</b></span><xsl:text> </xsl:text>
+        <xsl:call-template name="LINK">
+        	<xsl:with-param name="TERM"><xsl:value-of select="normalize-space(text())"/></xsl:with-param>
+        	<xsl:with-param name="FIELD">MH</xsl:with-param>
+        	<xsl:with-param name="NAME"><xsl:value-of select="name(.)"/></xsl:with-param>
+      </xsl:call-template> 
     </xsl:template>
 
 
@@ -849,7 +926,7 @@
     </xsl:template>
 
 
-    <xsl:template match="CV|MH">
+    <xsl:template match="CV">
       <xsl:call-template name="LINK">
         <xsl:with-param name="TERM"><xsl:value-of select="normalize-space(text())"/></xsl:with-param>
         <xsl:with-param name="FIELD">CV</xsl:with-param>
@@ -1045,7 +1122,7 @@
         <xsl:if test="string($ONMOUSEOVER)">
           <xsl:attribute name="onmouseover"><xsl:value-of select="$ONMOUSEOVER"/></xsl:attribute>
         </xsl:if>
-        <xsl:if test="$NAME='MH'"><b><xsl:value-of select="hlight:addMarkup($TERM)" disable-output-escaping="yes"/></b></xsl:if>
+        <xsl:if test="$NAME='MH'"><xsl:value-of select="hlight:addMarkup($TERM)" disable-output-escaping="yes"/></xsl:if>
         <xsl:if test="not($NAME='MH')"><xsl:value-of select="hlight:addMarkup($TERM)" disable-output-escaping="yes"/></xsl:if>
       </A>
 
