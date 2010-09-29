@@ -765,7 +765,8 @@
         <td valign="top">
           <!--  AJAX Navigators call
           <div id="navigators" style="background:#FFFFFF url(/engresources/images/waiting.gif) no-repeat;">
-            <img align="absmiddle" src="/engresources/images/s.gif" border="0" width="30" height="30"/><span class="MedBoldBlackText">Loading facets...</span>
+            <img align="absmiddle" src="/engresources/images/s.gif" border="0" width="30" height="30"/>
+            <span class="MedBoldBlackText">Loading facets...</span>
           </div> -->
           <xsl:apply-templates/>
         </td>
@@ -903,8 +904,10 @@
           <tr>
           <td width="4" valign="top" ><img src="/engresources/images/s.gif" width="4"/></td><td valign="top" colspan="2">&#160;<a class="MedOrangeText" name="{@FIELD}"><b><xsl:value-of select="@LABEL"/></b></a>&nbsp;&nbsp;
             <xsl:if test="/PAGE/NAVCHRT='true'">
-             <a title="View chart" href="" onclick="window.open('/controller/servlet/Controller?CID=analyzeNav&amp;SEARCHID={$SEARCHID}&amp;database={$DATABASE}&amp;field={@FIELD}','newwindow','width=600,height=600,toolbar=no,location=no,scrollbars,resizable');return false"><img src="/engresources/images/gr_img.gif" border="0"/></a>&nbsp;&nbsp;
-             <a title="Download data" href="/controller/servlet/Controller?CID=downloadNavigatorCSV&amp;SEARCHID={$SEARCHID}&amp;database={$DATABASE}&amp;nav={@FIELD}nav"><img src="/engresources/images/note.gif" border="0"/></a>&nbsp;&nbsp;
+             <a title="View chart" href="" onclick="window.open('/controller/servlet/Controller?CID=analyzeNav&amp;SEARCHID={$SEARCHID}&amp;database={$DATABASE}&amp;field={@FIELD}','newwindow','width=600,height=600,toolbar=no,location=no,scrollbars,resizable');return false">
+             <img src="/engresources/images/gr_img.gif" border="0"/></a>&nbsp;&nbsp;
+             <a title="Download data" href="/controller/servlet/Controller?CID=downloadNavigatorCSV&amp;SEARCHID={$SEARCHID}&amp;database={$DATABASE}&amp;nav={@FIELD}nav">
+             <img src="/engresources/images/note.gif" border="0"/></a>&nbsp;&nbsp;
             </xsl:if>
           </td>
           </tr>
