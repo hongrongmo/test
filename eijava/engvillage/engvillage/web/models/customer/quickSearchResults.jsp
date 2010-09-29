@@ -505,7 +505,7 @@
             {
                 //Writing out XML
 
-                //FileWriter out1 = new FileWriter("C://LHfalse.xml");
+                //FileWriter out1 = new FileWriter("C://baja/eijava/citation.xml");
                 // isCitLocalHoldingsPresent = false;
 
                 out.write("<PAGE>");
@@ -595,7 +595,6 @@
                     oPage.setlocalHolding(localHolding);
                 }
                 oPage.toXML(out);
-                //oPage.toXML(out1);
 
                 // jam - temporary - maybe make this an attribute of
                 // the fields in qeryForm? (<FIELD ... SORTABLE='true' MASK=...>)
@@ -612,15 +611,14 @@
 //
                 ResultNavigator nav = sc.getNavigator();
                 out.write(nav.toXML(queryObject.getResultsState()));
-
+		
                 deDupable = nav.isDeDupable();
                 out.write("<DEDUPABLE>" + deDupable + "</DEDUPABLE>");
 
                 out.write("</PAGE>");
                 out.println("<!--END-->");
                 out.flush();
-
-                //out1.close();
+		
             }
 
             if(updateCurrentQuery)
