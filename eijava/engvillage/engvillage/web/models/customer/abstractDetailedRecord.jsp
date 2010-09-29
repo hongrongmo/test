@@ -1,4 +1,27 @@
-<%@ page language="java" %><%@ page session="false" %><%@ page import="java.util.*"%><%@ page import="java.io.FileWriter"%><%@ page import="java.net.URLDecoder"%><%@ page import="java.net.URLEncoder"%><%@ page import="org.ei.controller.ControllerClient"%><%@ page import="org.ei.session.*"%><%@ page import="org.ei.domain.*" %><%@ page import="org.ei.config.*"%><%@ page import="org.ei.parser.base.*"%><%@ page import="org.ei.query.base.*"%><%@ page import="org.ei.domain.personalization.GlobalLinks"%><%@ page import="org.ei.domain.personalization.SavedSearches"%><%@ page import="org.ei.domain.Searches"%><%@ page import="org.ei.tags.*"%><%@ page import="org.ei.config.*"%><%@ page import="org.ei.books.BookDocument"%><%@ page import="org.ei.util.*"%><%@ page import="java.util.*"%><%@ page import="java.net.*"%><%@ page import="java.io.*"%><%@ page errorPage="/error/errorPage.jsp"%><%@ page buffer="20kb"%><%
+<%@ page language="java" %>
+<%@ page session="false" %>
+<%@ page import="java.util.*"%>
+<%@ page import="java.io.FileWriter"%>
+<%@ page import="java.net.URLDecoder"%>
+<%@ page import="java.net.URLEncoder"%>
+<%@ page import="org.ei.controller.ControllerClient"%>
+<%@ page import="org.ei.session.*"%>
+<%@ page import="org.ei.domain.*" %>
+<%@ page import="org.ei.config.*"%>
+<%@ page import="org.ei.parser.base.*"%>
+<%@ page import="org.ei.query.base.*"%>
+<%@ page import="org.ei.domain.personalization.GlobalLinks"%>
+<%@ page import="org.ei.domain.personalization.SavedSearches"%>
+<%@ page import="org.ei.domain.Searches"%>
+<%@ page import="org.ei.tags.*"%>
+<%@ page import="org.ei.config.*"%>
+<%@ page import="org.ei.books.BookDocument"%>
+<%@ page import="org.ei.util.*"%>
+<%@ page import="java.util.*"%>
+<%@ page import="java.net.*"%>
+<%@ page import="java.io.*"%>
+<%@ page errorPage="/error/errorPage.jsp"%>
+<%@ page buffer="20kb"%><%
     FastSearchControl sc = null;
     PageEntry entry =null;
     EIDoc curDoc =null;
@@ -372,9 +395,13 @@
         	client.log("ISSN", curDoc.getISSN());
         }
         client.setRemoteControl();
+        
+        //FileWriter out1 = new FileWriter("C://baja/eijava/abstract.xml");
+        
         out.write("<PAGE>");
         out.write("<SEARCH-CONTEXT>");
         out.write(searchContext);
+        //out1.write(searchContext);
         out.write("</SEARCH-CONTEXT>");
         if(tQuery != null)
         {
@@ -449,6 +476,7 @@
         									  did.getDocID());
 
         bubble.toXML(out);
+        //bubble.toXML(out1);
         grouper.editXML(bubble.getTags(), out);
 
         out.write("<HEADER/>");
@@ -493,16 +521,17 @@
         out.write("<PAGE-RESULTS>");
         databaseConfig.toXML(credentials, out);
         entry.toXML(out);
-
+	//entry.toXML(out1);
         out.write("</PAGE-RESULTS>");
         %>
 
 
 
         <%
-         out.write("</PAGE>");
+        out.write("</PAGE>");
         out.write("<!--END-->");
         out.flush();
+        //out1.flush();
         if(maintainCache)
         {
         	sc.maintainCache(index,0);
