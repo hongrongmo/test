@@ -6,7 +6,7 @@
 
 
     <property file="../engvillage/${properties}.properties"/>
-	<echoproperties prefix="env."/>
+
 
   <fileset id="appserver-jars" dir="${env.CATALINA_HOME}/common/lib/">
     <include name="**/servlet-api.jar"/>
