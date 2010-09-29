@@ -116,7 +116,9 @@
       <xsl:if test="$ascii='true'">
         <xsl:text>&#xD;&#xA;</xsl:text>
       </xsl:if>
+      <xsl:apply-templates select="DT"/>
       <xsl:apply-templates select="DOC/DB/DBNAME"/>
+     
       <xsl:apply-templates select="COL"/>
 
       <xsl:if test="$ascii='true'">
@@ -378,6 +380,12 @@
     <xsl:template match="NF">
       <xsl:text> </xsl:text><b>Figures:</b><xsl:text> </xsl:text><xsl:value-of select="." disable-output-escaping="yes"/>
     </xsl:template>
+    
+    <xsl:template match="DT">    
+    	<xsl:if test="text()='Article in Press'">
+    	      <span CLASS="MedBlackText"><br/><img src="/engresources/images/btn_aip.gif" border="0" style="vertical-align:bottom" title="Articles not published yet, but available online"/><xsl:text> Article in Press</xsl:text></span>
+        </xsl:if> 
+    </xsl:template>
 
     <xsl:template match="DBNAME">
         <a CLASS="SmBlackText"><br/><b>Database:</b><xsl:text> </xsl:text><xsl:value-of select="."/></a><xsl:text> </xsl:text>
@@ -385,6 +393,7 @@
     <xsl:template match="COL">
         <a CLASS="SmBlackText"><xsl:text> </xsl:text><b>Collection:</b><xsl:text> </xsl:text><xsl:value-of select="text()"/></a><xsl:text> </xsl:text>
     </xsl:template>
+    
 
     <xsl:template match="FTTJ|STT">
         <br/>
