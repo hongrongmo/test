@@ -36,6 +36,9 @@ public class BdCorrection
     static String database;
     static String action;
     static boolean test = false;
+    static String tempTable="bd_correction_temp";
+    static String lookupTable="deleted_lookupIndex";
+    static String backupTable="bd_temp_backup";
 
 
     public static void main(String args[])
@@ -165,6 +168,7 @@ public class BdCorrection
 			if(action!=null && !(action.equals("extractupdate")||action.equals("extractdelete")))
 			{
 				/**********delete all data from temp table *************/
+
 				if(test)
 				{
 					System.out.println("about to truncate table "+tableToBeTruncated);
@@ -236,7 +240,7 @@ public class BdCorrection
 					System.in.read();
 					Thread.currentThread().sleep(1000);
 				}
-				if(action.equalsIgnoreCase("update")||action.equalsIgnoreCase("aip"))
+				if(action.equalsIgnoreCase("update"))
 				{
 
 					bdc.processLookupIndex(bdc.getLookupData("update"),bdc.getLookupData("backup"));
@@ -245,6 +249,10 @@ public class BdCorrection
 				{
 
 					bdc.processLookupIndex(new HashMap(),bdc.getLookupData("backup"));
+				}
+				else if(action.equalsIgnoreCase("aip"))
+				{
+					bdc.processLookupIndex(bdc.getLookupData("aip"),bdc.getLookupData("aipBackup"));
 				}
 			}
 			bdc.doFastExtract(updateNumber,database,action);
@@ -293,7 +301,7 @@ public class BdCorrection
 			else if(action.equalsIgnoreCase("delete") || action.equalsIgnoreCase("extractdelete"))
 			{
 				writer.setOperation("delete");
-				rs = stmt.executeQuery("select m_id from bd_master_orig where updateNumber='"+updateNumber+"' and accessnumber in (select 'D'||accessnumber from bd_correction_temp)");
+				rs = stmt.executeQuery("select m_id from bd_master_orig where updateNumber='"+updateNumber+"' and accessnumber in (select 'D'||accessnumber from "+tempTable+")");
 				creatDeleteFile(rs,dbname,updateNumber);
 				writer.zipBatch();
 			}
@@ -549,7 +557,7 @@ public class BdCorrection
 		{
 			stmt = con.createStatement();
 
-			rs = stmt.executeQuery("select count(*) count from BD_CORRECTION_TEMP");
+			rs = stmt.executeQuery("select count(*) count from "+tempTable+"");
 			if(rs.next())
 			{
 				count = rs.getInt("count");
@@ -611,6 +619,20 @@ public class BdCorrection
 			for(int i=0;i<tableName.length;i++)
 			{
 				System.out.println("truncate table "+tableName[i]);
+				if(tableName[i].indexOf("temp")>-1)
+				{
+					this.tempTable=tableName[i];
+				}
+
+				if(tableName[i].indexOf("backup")>-1)
+				{
+					this.backupTable=tableName[i];
+				}
+
+				if(tableName[i].indexOf("lookup")>-1)
+				{
+					this.lookupTable=tableName[i];
+				}
 				stmt.executeUpdate("truncate table "+tableName[i]);
 			}
 
@@ -647,7 +669,7 @@ public class BdCorrection
 					String term = (String)data.get(i);
 					if(term != null && field != null && database != null)
 					{
-						stmt = con.prepareStatement("insert into deleted_lookupIndex(field,term,database) values(?,?,?)");
+						stmt = con.prepareStatement("insert into "+lookupTable+" (field,term,database) values(?,?,?)");
 						stmt.setString(1,field);
 						stmt.setString(2,term);
 						stmt.setString(3,database);
@@ -824,10 +846,14 @@ public class BdCorrection
 		{
 			stmt = con.createStatement();
 			System.out.println("Running the query...");
-			if(action.equals("update"))
-				rs = stmt.executeQuery("select ACCESSNUMBER,AUTHOR,AUTHOR_1,AFFILIATION,AFFILIATION_1,CONTROLLEDTERM,CHEMICALTERM,SOURCETITLE,PUBLISHERNAME,DATABASE FROM BD_CORRECTION_TEMP");
+			if(action.equals("update")||action.equals("aip"))
+			{
+				rs = stmt.executeQuery("select ACCESSNUMBER,AUTHOR,AUTHOR_1,AFFILIATION,AFFILIATION_1,CONTROLLEDTERM,CHEMICALTERM,SOURCETITLE,PUBLISHERNAME,DATABASE FROM "+tempTable);
+			}
 			else
-				rs = stmt.executeQuery("select ACCESSNUMBER,AUTHOR,AUTHOR_1,AFFILIATION,AFFILIATION_1,CONTROLLEDTERM,CHEMICALTERM,SOURCETITLE,PUBLISHERNAME,DATABASE FROM BD_TEMP_BACKUP");
+			{
+				rs = stmt.executeQuery("select ACCESSNUMBER,AUTHOR,AUTHOR_1,AFFILIATION,AFFILIATION_1,CONTROLLEDTERM,CHEMICALTERM,SOURCETITLE,PUBLISHERNAME,DATABASE FROM "+backupTable);
+			}
 
 			System.out.println("Got records ...");
 			results = setRecs(rs);
