@@ -27,7 +27,7 @@ public class BdDocumentType
     public static final String DISSERTATION_CODE = "DS";
     public static final String UNPUBLISHED_PAPER_CODE = "UP";
     public static final String PATENT_CODE = "PA";
-    public static final String ARTICLE_IN_PRESS = "AIP";
+    public static final String ARTICLE_IN_PRESS = "IP";
 
     static
     {
@@ -57,7 +57,7 @@ public class BdDocumentType
       bdDocType.put("wp",JOURNAL_ARTICLE_CODE);
       bdDocType.put("ja",JOURNAL_ARTICLE_CODE);
       bdDocType.put("pa",PATENT_CODE);
-	  bdDocType.put("aip",ARTICLE_IN_PRESS);
+	  bdDocType.put("ip",ARTICLE_IN_PRESS);
   }
 
     public static String getDocType(String doctype, boolean confCode)
