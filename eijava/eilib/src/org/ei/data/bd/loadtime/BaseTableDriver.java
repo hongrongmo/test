@@ -4,6 +4,7 @@ package org.ei.data.bd.loadtime;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.StringReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -24,6 +25,7 @@ public class BaseTableDriver
     private static String startRootElement ="<?xml version=\"1.0\" standalone=\"no\"?><!DOCTYPE bibdataset SYSTEM \"ani512.dtd\"><bibdataset xmlns:ce=\"http://www.elsevier.com/xml/common/dtd\" xmlns:ait=\"http://www.elsevier.com/xml/ait/dtd\">";
 	private static String endRootElement   ="</bibdataset>";
 	private static Connection con;
+	private static String infile;
     public static void main(String args[])
         throws Exception
 
@@ -38,7 +40,7 @@ public class BaseTableDriver
 
         loadN = Integer.parseInt(args[0]);
 
-        String infile = args[1];
+        infile = args[1];
         String databaseName = args[2];
         String action = args[3];
         String url = args[4];
@@ -166,7 +168,7 @@ public class BaseTableDriver
         	{
 				count = rs.getInt("count");
 			}
-			//System.out.println("pui= "+pui+" SIZE= "+count);
+
 			if(count>0)
 			{
 				checkResult=true;
@@ -209,8 +211,11 @@ public class BaseTableDriver
 
     private void writeRecs(BufferedReader xmlReader, Connection con) throws Exception
 	{
-		System.out.println("in writeRecs");
+		FileWriter out = new FileWriter(this.infile+"_not_loaded_record.txt");
+		try
+		{
         	RecordReader r = new RecordReader(loadNumber,databaseName);
+
     		while(xmlReader!=null)
     		{
     		    Hashtable h = r.readRecord(xmlReader);
@@ -221,6 +226,10 @@ public class BaseTableDriver
 						if(!checkPUI((String)h.get("PUI"),con))
 						{
     		        		baseWriter.writeRec(h);
+						}
+						else
+						{
+							out.write((String)h.get("PUI")+"\n");
 						}
 					}
 					else
@@ -233,6 +242,26 @@ public class BaseTableDriver
     		      break;
     		    }
     		}
+    		out.flush();
+		}
+		catch(Exception e)
+		{
+			throw new Exception(e);
+		}
+		finally
+		{
+			if (out != null)
+			{
+				try
+				{
+					out.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+		}
     }
 
     class RecordReader
