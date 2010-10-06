@@ -1284,97 +1284,97 @@ END;
 CREATE OR REPLACE PROCEDURE update_aip_backup_table(v_load_number NUMBER,dbName VARCHAR2) IS
 	message VARCHAR2(4000);
 	BEGIN
-		INSERT INTO BD_CORRECTION_BACKUP SELECT * FROM BD_MASTER_ORIG WHERE DATABASE=dbName AND pui IN (SELECT pui FROM BD_CORRECTION_TEMP);
-		INSERT INTO BD_TEMP_BACKUP SELECT * FROM BD_MASTER_ORIG WHERE DATABASE=dbName AND pui IN (SELECT pui FROM BD_CORRECTION_TEMP);
+		INSERT INTO BD_AIP_BACKUP SELECT * FROM BD_MASTER_ORIG WHERE DATABASE=dbName AND pui IN (SELECT pui FROM BD_AIP_TEMP);
+		INSERT INTO BD_AIP_TEMP_BACKUP SELECT * FROM BD_MASTER_ORIG WHERE DATABASE=dbName AND pui IN (SELECT pui FROM BD_AIP_TEMP);
 		COMMIT;
 	EXCEPTION
 	WHEN OTHERS THEN
 		ROLLBACK;
 		message :=SQLERRM;
-		INSERT INTO BD_CORRECTION_ERROR VALUES('000000',v_load_number,systimestamp,message,'update_aip_backup_table');
+		INSERT INTO BD_AIP_ERROR VALUES('000000',v_load_number,systimestamp,message,'update_aip_backup_table');
 		COMMIT;
 		RAISE_APPLICATION_ERROR(-20101,'Error '||SQLERRM);
-	END;
+END;
 /
 
 CREATE OR REPLACE PROCEDURE update_aip_temp_table(v_update_number NUMBER,fileName VARCHAR2,dbName VARCHAR2) IS
 
-v_ex          BD_CORRECTION_TEMP.accessnumber%TYPE :='00';
-v_m_id        BD_CORRECTION_TEMP.m_id%TYPE;
-v_load_number BD_CORRECTION_TEMP.loadnumber%TYPE :=1;
-v_doi         BD_CORRECTION_TEMP.doi%TYPE;
-v_t_doi       VARCHAR2(128);
-v_pn          BD_CORRECTION_TEMP.publishername%TYPE;
-v_pc          BD_CORRECTION_TEMP.publisheraddress%TYPE;
-v_ur	      BD_CORRECTION_TEMP.updateresource%TYPE;
-v_uc 	      BD_CORRECTION_TEMP.updatecodestamp%TYPE;
-v_ut	      BD_CORRECTION_TEMP.updatetimestamp%TYPE;
-v_snum	      BD_CORRECTION_TEMP.SEQ_NUM%TYPE;
-v_pui	      BD_CORRECTION_TEMP.pui%TYPE;
+v_ex          BD_AIP_TEMP.accessnumber%TYPE :='00';
+v_m_id        BD_AIP_TEMP.m_id%TYPE;
+v_load_number BD_AIP_TEMP.loadnumber%TYPE :=1;
+v_pn          BD_AIP_TEMP.publishername%TYPE;
+v_pc          BD_AIP_TEMP.publisheraddress%TYPE;
+v_ur	      BD_AIP_TEMP.updateresource%TYPE;
+v_uc 	      BD_AIP_TEMP.updatecodestamp%TYPE;
+v_ut	      BD_AIP_TEMP.updatetimestamp%TYPE;
+v_snum	      BD_AIP_TEMP.SEQ_NUM%TYPE;
+v_pui	      BD_AIP_TEMP.pui%TYPE;
 
 message       VARCHAR2(4000);
 
 CURSOR getSingleRecord IS
 	SELECT pui,accessnumber,m_id,loadnumber,updatecodestamp,updateresource,updatetimestamp,SEQ_NUM
-	FROM BD_MASTER_ORIG WHERE DATABASE = dbName AND pui IN(SELECT pui FROM BD_CORRECTION_TEMP);
+	FROM BD_MASTER_ORIG WHERE DATABASE = dbName AND pui IN(SELECT pui FROM BD_AIP_TEMP);
 
 BEGIN
 	OPEN getSingleRecord;
 	LOOP
 	   FETCH getSingleRecord INTO v_pui,v_ex,v_m_id,v_load_number,v_uc,v_ur,v_ut,v_snum;
 	   EXIT WHEN getSingleRecord%NOTFOUND;
-	   
-	   UPDATE BD_CORRECTION_TEMP SET m_id=v_m_id,loadnumber=v_load_number,updatenumber=v_update_number,
+
+	   UPDATE BD_AIP_TEMP SET m_id=v_m_id,loadnumber=v_load_number,updatenumber=v_update_number,
 	   updatecodestamp=v_uc||' '||'AIP',updateresource=v_ur||' '||fileName,updatetimestamp=systimestamp,SEQ_NUM=v_snum WHERE pui=v_pui;
-	 
+
 	   COMMIT;
 	 END LOOP;
 
 	CLOSE getSingleRecord;
 
-	UPDATE BD_CORRECTION_TEMP SET updatenumber=v_update_number,updatecodestamp='AIP',updateresource=fileName,updatetimestamp=systimestamp WHERE updatenumber IS NULL;
+	UPDATE BD_AIP_TEMP SET updatenumber=v_update_number,updatecodestamp='AIP',updateresource=fileName,updatetimestamp=systimestamp WHERE updatenumber IS NULL;
 	COMMIT;
 
 EXCEPTION
 WHEN OTHERS THEN
 	ROLLBACK;
 	message := SQLERRM;
-	INSERT INTO BD_CORRECTION_ERROR VALUES (v_ex,v_update_number,systimestamp,message,'update_aip_temp_table');
+	INSERT INTO BD_AIP_ERROR VALUES (v_pui,v_update_number,systimestamp,message,'update_aip_temp_table');
 	COMMIT;
 	dbms_output.put_line('error= '||SQLERRM);
 	RAISE_APPLICATION_ERROR(-20101, 'Error in procedure update_aip_temp_table, error='||SQLERRM);
 
 END;
+
 /
 
 CREATE OR REPLACE PROCEDURE update_aip_master_table(v_update_number NUMBER,dbName VARCHAR2) AS
 
-v_pui    BD_CORRECTION_TEMP.pui%TYPE :='0';
+v_pui    BD_AIP_TEMP.pui%TYPE :='0';
 message VARCHAR2(4000);
-CURSOR getPui IS SELECT pui FROM BD_CORRECTION_TEMP;
+CURSOR getPui IS SELECT pui FROM BD_AIP_TEMP;
 
 BEGIN
 	FOR a IN getPui LOOP
 	    v_pui :=a.pui;
-	    BEGIN	   	  
-		  
+	    BEGIN
+
 		  DELETE FROM BD_MASTER_ORIG WHERE DATABASE = dbName AND pui=a.pui;
 		  IF SQL%NOTFOUND THEN
-			INSERT INTO BD_CORRECTION_NEW SELECT * FROM BD_CORRECTION_TEMP WHERE pui = a.pui;			
-			INSERT INTO BD_CORRECTION_ERROR(ex,update_number,action_date,message,source) VALUES (a.pui,v_update_number,systimestamp,'record '||a.pui||' not found on master table','update_aip_master_table');			
+			INSERT INTO BD_AIP_NEW SELECT * FROM BD_AIP_TEMP WHERE pui = a.pui;
+			INSERT INTO BD_AIP_ERROR(ex,update_number,action_date,message,source) VALUES (a.pui,v_update_number,systimestamp,'record '||a.pui||' not found on master table','update_aip_master_table');
+		  	INSERT INTO BD_MASTER_ORIG SELECT * FROM BD_AIP_TEMP WHERE pui = a.pui;
+		  	INSERT INTO BD_PRO_AIP_LOG(ex,update_number,action_date,message,source) VALUES(a.pui,v_update_number,systimestamp,'insert','update_aip_master_table');
 		  ELSE
-		  	INSERT INTO BD_CORRECTION_DELETION SELECT * FROM BD_MASTER_ORIG WHERE DATABASE = dbName AND pui=a.pui;		 
+		  	INSERT INTO BD_AIP_DELETION SELECT * FROM BD_MASTER_ORIG WHERE DATABASE = dbName AND pui=a.pui;
+		  	INSERT INTO BD_MASTER_ORIG SELECT * FROM BD_AIP_TEMP WHERE pui = a.pui;
+		  	INSERT INTO BD_PRO_AIP_LOG(ex,update_number,action_date,message,source) VALUES(a.pui,v_update_number,systimestamp,'update','update_aip_master_table');
 		  END IF;
 
-		  INSERT INTO BD_MASTER_ORIG SELECT * FROM BD_CORRECTION_TEMP WHERE pui = a.pui;		 
-		  INSERT INTO BD_PRO_CORRECTION_LOG(ex,update_number,action_date,message,source) VALUES(a.pui,v_update_number,systimestamp,'insert','update_aip_master_table');
-	      
 	    COMMIT;
 	    EXCEPTION
 	    WHEN OTHERS THEN
 		  ROLLBACK;
 		  message := SQLERRM;
-		  INSERT INTO BD_CORRECTION_ERROR(ex,update_number,action_date,message,source) VALUES (a.pui,10000,systimestamp,'message','update_aip_master_table');
+		  INSERT INTO BD_AIP_ERROR(ex,update_number,action_date,message,source) VALUES (a.pui,10000,systimestamp,message,'update_aip_master_table');
 		  COMMIT;
 		  RAISE_APPLICATION_ERROR(-20101,'Error '||SQLERRM);
 	    END;
@@ -1385,7 +1385,7 @@ BEGIN
 	WHEN OTHERS THEN
 	    ROLLBACK;
 	    message := SQLERRM;
-	    INSERT INTO BD_CORRECTION_ERROR(ex,update_number,action_date,message,source) VALUES (v_pui,v_update_number,systimestamp,message,'update_aip_master_table');
+	    INSERT INTO BD_AIP_ERROR(ex,update_number,action_date,message,source) VALUES (v_pui,v_update_number,systimestamp,message,'update_aip_master_table');
 	    COMMIT;
 	    RAISE_APPLICATION_ERROR(-20101,'Error '||SQLERRM);
 
