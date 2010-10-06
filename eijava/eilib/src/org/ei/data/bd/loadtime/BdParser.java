@@ -308,10 +308,10 @@ public class BdParser
 									{
 										String cititype=type.getValue();
 
-										if(cititype!=null && cititype.equals("ip"))
-										{
-											cititype="aip";
-										}
+										//if(cititype!=null && cititype.equals("ip"))
+										//{
+										//	cititype="aip";
+										//}
 										record.put("CITTYPE",cititype);
 									}
 								}
