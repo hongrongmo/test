@@ -29,8 +29,8 @@ public class BDDocBuilder
 	private static final Key CPX_CLASS_CODES = new Key(Keys.CLASS_CODES, "Ei classification codes");
 	private static final Key CPX_MAIN_HEADING = new Key(Keys.MAIN_HEADING, "Ei main heading");
 	private static final String LT_MSG = "Please click here to view all linked terms";
-	private static final Key[] CITATION_KEYS = {Keys.CITEDBY,Keys.PI,Keys.ACCESSION_NUMBER,Keys.DOCID,Keys.TITLE,Keys.TITLE_TRANSLATION,Keys.EDITORS,Keys.AUTHORS,Keys.AUTHOR_AFFS,Keys.SOURCE,Keys.MONOGRAPH_TITLE, Keys.PAGE_RANGE, Keys.ARTICLE_NUMBER, Keys.VOLISSUE,Keys.PUBLICATION_YEAR, Keys.PUBLISHER, Keys.ISSUE_DATE, Keys.ISSN, Keys.LANGUAGE ,Keys.NO_SO, Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT, Keys.DOI, Keys.PATAPPNUM, Keys.PATNUM, Keys.PATASSIGN, Keys.PATENT_ISSUE_DATE};
-	private static final Key[] ABSTRACT_KEYS = {Keys.CITEDBY,Keys.PI,Keys.ACCESSION_NUMBER,Keys.DOCID,Keys.TITLE,Keys.TITLE_TRANSLATION,Keys.EDITORS,Keys.AUTHORS,Keys.EDITOR_AFFS, Keys.AUTHOR_AFFS,Keys.VOLISSUE, Keys.SOURCE, Keys.PUBLICATION_YEAR, Keys.ISSUE_DATE, Keys.MONOGRAPH_TITLE, Keys.PAGE_RANGE,Keys.ARTICLE_NUMBER,Keys.CONFERENCE_NAME, Keys.ISSN,Keys.ISBN, Keys.CODEN, Keys.PUBLISHER,Keys.I_PUBLISHER,Keys.CONF_DATE,Keys.SPONSOR, Keys.PROVIDER ,Keys.LANGUAGE, Keys.MAIN_HEADING,ELT_MAJOR_TERMS, CPX_CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS, Keys.GLOBAL_TAGS, Keys.PRIVATE_TAGS, Keys.ABSTRACT, Keys.NUMBER_OF_REFERENCES,Keys.NO_SO, Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT, Keys.CLASS_CODES ,Keys.CAS_REGISTRY_CODES, Keys.DOI, Keys.PATAPPNUM, Keys.PATNUM, Keys.PATASSIGN, Keys.REPORT_NUMBER_PAPER, Keys.PATENT_ISSUE_DATE};
+	private static final Key[] CITATION_KEYS = {Keys.DOC_TYPE,Keys.CITEDBY,Keys.PI,Keys.ACCESSION_NUMBER,Keys.DOCID,Keys.TITLE,Keys.TITLE_TRANSLATION,Keys.EDITORS,Keys.AUTHORS,Keys.AUTHOR_AFFS,Keys.SOURCE,Keys.MONOGRAPH_TITLE, Keys.PAGE_RANGE, Keys.ARTICLE_NUMBER, Keys.VOLISSUE,Keys.PUBLICATION_YEAR, Keys.PUBLISHER, Keys.ISSUE_DATE, Keys.ISSN, Keys.LANGUAGE ,Keys.NO_SO, Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT, Keys.DOI, Keys.PATAPPNUM, Keys.PATNUM, Keys.PATASSIGN, Keys.PATENT_ISSUE_DATE};
+	private static final Key[] ABSTRACT_KEYS = {Keys.CITEDBY,Keys.PI,Keys.ACCESSION_NUMBER,Keys.DOCID,Keys.TITLE,Keys.TITLE_TRANSLATION,Keys.EDITORS,Keys.AUTHORS,Keys.EDITOR_AFFS, Keys.AUTHOR_AFFS,Keys.VOLISSUE, Keys.SOURCE, Keys.PUBLICATION_YEAR, Keys.ISSUE_DATE, Keys.MONOGRAPH_TITLE, Keys.PAGE_RANGE,Keys.ARTICLE_NUMBER,Keys.CONFERENCE_NAME, Keys.ISSN,Keys.ISBN,Keys.PUBLISHER,Keys.I_PUBLISHER,Keys.CONF_DATE,Keys.SPONSOR, Keys.PROVIDER ,Keys.LANGUAGE, Keys.MAIN_HEADING,ELT_MAJOR_TERMS, CPX_CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS, Keys.GLOBAL_TAGS, Keys.PRIVATE_TAGS, Keys.ABSTRACT, Keys.NUMBER_OF_REFERENCES,Keys.NO_SO, Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT, Keys.CLASS_CODES ,Keys.CAS_REGISTRY_CODES,Keys.TREATMENTS, Keys.DOI, Keys.PATAPPNUM, Keys.PATNUM, Keys.PATASSIGN, Keys.REPORT_NUMBER_PAPER, Keys.PATENT_ISSUE_DATE, Keys.ISBN13, Keys.E_ISSN, Keys.DOC_TYPE};
 	private static final Key[] DETAILED_KEYS = {Keys.CITEDBY,Keys.PI,Keys.ACCESSION_NUMBER,Keys.PATAPPNUM, Keys.PRIORITY_INFORMATION, Keys.PATNUM, Keys.PATASSIGN, Keys.TITLE, Keys.TITLE_TRANSLATION, Keys.AUTHORS,  Keys.AUTHOR_AFFS,Keys.CORRESPONDING_EMAIL,Keys.CORRESPONDING_AUTHORS,Keys.CORRESPONDING_AUTHORS_AFF, Keys.EDITORS,Keys.EDITOR_AFFS, Keys.SERIAL_TITLE, Keys.ABBRV_SERIAL_TITLE, Keys.VOLUME, Keys.ISSUE, Keys.SOURCE, Keys.MONOGRAPH_TITLE,Keys.VOLUME_TITLE, Keys.ISSUE_DATE, Keys.PUBLICATION_YEAR, Keys.REPORT_NUMBER_PAPER, Keys.PAPER_NUMBER, Keys.PAGE_RANGE,Keys.ARTICLE_NUMBER, Keys.SECONDARY_SOURCE ,Keys.LANGUAGE, Keys.ISSN, Keys.E_ISSN, Keys.CODEN, Keys.ISBN, Keys.ISBN13, Keys.DOC_TYPE, Keys.CONFERENCE_NAME, Keys.CONF_DATE, Keys.MEETING_LOCATION, Keys.CONF_CODE, Keys.SPONSOR, Keys.PUBLISHER, Keys.ABSTRACT, Keys.ABSTRACT_TYPE, Keys.NUMBER_OF_CLAIMS,Keys.NUMBER_OF_TABLES,Keys.SPECIFIC_NAMES,   Keys.NUMBER_OF_REFERENCES,Keys.GLOBAL_TAGS, Keys.PRIVATE_TAGS, Keys.PROVIDER,  Keys.SUPPL,  Keys.PI,Keys.PAGE_COUNT, Keys.MAIN_HEADING,ELT_MAJOR_TERMS, Keys.CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS,Keys.REGION_CONTROLLED_TERMS, Keys.CAS_REGISTRY_CODES, Keys.CLASS_CODES, Keys.CLASS_CODES_MULTI, Keys.INDEXING_TEMPLATE,Keys.MANUAL_LINKED_TERMS,Keys.LINKED_TERMS, Keys.LINKED_TERMS_HOLDER, Keys.TREATMENTS, Keys.DOI, Keys.DOCID,Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT, Keys.PATENT_ISSUE_DATE};
 	private static final Key[] RIS_KEYS = { Keys.RIS_TY, Keys.RIS_LA , Keys.RIS_N1 ,Keys.RIS_M1 , Keys.RIS_TI , Keys.RIS_T1 , Keys.RIS_BT , Keys.RIS_JO ,Keys.RIS_T3 , Keys.RIS_AUS , Keys.RIS_AD , Keys.RIS_EDS , Keys.RIS_VL , Keys.RIS_IS , Keys.RIS_PY , Keys.RIS_AN , Keys.RIS_SP , Keys.RIS_EP, Keys.RIS_SN ,  Keys.RIS_BN ,  Keys.RIS_MD ,Keys.RIS_CY , Keys.RIS_PB,  Keys.RIS_N2 , Keys.RIS_KW ,Keys.RIS_CVMS, Keys.RIS_CVS , Keys.RIS_FLS , Keys.RIS_DO};
 	private static final Key[] XML_KEYS = { Keys.ISSN , Keys.MAIN_HEADING , Keys.NO_SO , Keys.MONOGRAPH_TITLE , Keys.PUBLICATION_YEAR , Keys.VOLUME_TITLE , Keys.CONTROLLED_TERM , Keys.ISBN, Keys.ISBN13, Keys.AUTHORS , Keys.DOCID , Keys.SOURCE , Keys.NUMVOL , Keys.EDITOR_AFFS , Keys.EDITORS , Keys.PUBLISHER , Keys.VOLUME , Keys.AUTHOR_AFFS , Keys.PROVIDER , Keys.ISSUE_DATE , Keys.COPYRIGHT_TEXT , Keys.DOI , Keys.PAGE_COUNT , Keys.PUBLICATION_DATE , Keys.TITLE ,Keys.TITLE_TRANSLATION, Keys.LANGUAGE , Keys.PAGE_RANGE , Keys.PAPER_NUMBER , Keys.COPYRIGHT , Keys.ISSUE , Keys.ACCESSION_NUMBER , Keys.CONTROLLED_TERMS, Keys.PATENT_ISSUE_DATE};
@@ -283,7 +283,7 @@ public class BDDocBuilder
 
 				buildField(Keys.PROVIDER,PROVIDER_TEXT,ht);
 
-
+				formatRISDocType(buildField(Keys.DOC_TYPE,getDocumentType(rset.getString("CITTYPE"),rset.getString("CONFCODE")),ht),dataFormat,Keys.DOC_TYPE,Keys.RIS_TY);
 				formatRIS(buildField(Keys.EDITORS,getEditors(Keys.EDITORS,rset.getString("AUTHOR"),rset.getString("EDITORS"), rset.getString("CONFERENCEEDITOR")),ht), dataFormat, Keys.EDITORS, Keys.RIS_EDS);
 				buildField(Keys.VOLUME_TITLE,rset.getString("VOLUMETITLE"),ht);
 				//buildField(Keys.PAPER_NUMBER,rset.getString("REPORTNUMBER"),ht);
@@ -336,7 +336,9 @@ public class BDDocBuilder
 					buildField(Keys.SPONSOR,setSponsorData(rset.getString("CONFSPONSORS")),ht);
 					formatRIS(buildField(Keys.START_PAGE,getStartPage(rset.getString("PAGE")),ht),dataFormat,Keys.START_PAGE,Keys.RIS_SP);
 					formatRIS(buildField(Keys.END_PAGE,getEndPage(rset.getString("PAGE")),ht),dataFormat,Keys.END_PAGE,Keys.RIS_EP);
-					formatRISDocType(buildField(Keys.DOC_TYPE,getDocumentType(rset.getString("CITTYPE"),rset.getString("CONFCODE")),ht),dataFormat,Keys.DOC_TYPE,Keys.RIS_TY);
+
+					//formatRISDocType(buildField(Keys.DOC_TYPE,getDocumentType(rset.getString("CITTYPE"),rset.getString("CONFCODE")),ht),dataFormat,Keys.DOC_TYPE,Keys.RIS_TY);
+					//display doc type for all format
 					formatRIS(buildField(Keys.CONFERENCE_NAME,rset.getString("CONFNAME"),ht),dataFormat,Keys.CONFERENCE_NAME , Keys.RIS_BT);
 					formatRIS(buildField(Keys.CONF_DATE,getConferenceDate(rset.getString("CONFDATE")),ht),dataFormat,Keys.CONF_DATE , Keys.RIS_MD);
 					formatRIS(buildField(Keys.MEETING_LOCATION,getConferenceLocation(rset.getString("CONFLOCATION")),ht),dataFormat,Keys.MEETING_LOCATION , Keys.RIS_CY);
@@ -902,7 +904,6 @@ public class BDDocBuilder
 			{
 				ht.put(key,new XMLWrapper(key,data.trim()));
 			}
-
 			return ht;
 	}
 
@@ -912,7 +913,6 @@ public class BDDocBuilder
 		{
 			ht.put(key,new XMLMultiWrapper(key,data));
 		}
-
 		return ht;
 
 	}
@@ -1172,12 +1172,12 @@ public class BDDocBuilder
 
   private ElementDataMap getIssn(String issn,String eissn, ElementDataMap ht, String dataFormat) throws Exception
   {
-
-    if(dataFormat.equals(FullDoc.FULLDOC_FORMAT))
+    if(dataFormat.equals(FullDoc.FULLDOC_FORMAT)||dataFormat.equals(Abstract.ABSTRACT_FORMAT))
     {
       // if either exist include both ISSN and EISSN under separate keys
       // Separate keys are used so both EISSN and ISSN display with separate labels
       // and so both EISSN and ISSN are output toXML. Both keys are listed in DETAILED_KEYS
+
       if(issn !=null)
       {
         ht.put(Keys.ISSN, new ISSN(issn));
@@ -1739,6 +1739,7 @@ public class BDDocBuilder
       mapAbbrevToDoctype.put("DS","Dissertation (DS)");
       mapAbbrevToDoctype.put("UP","Unpublished paper (UP)");
       mapAbbrevToDoctype.put("PA","Patent (PA)");
+      mapAbbrevToDoctype.put("IP","Article in Press");
     }
 
     // TS XML document mapping, conversion to dt values 02/10/03
