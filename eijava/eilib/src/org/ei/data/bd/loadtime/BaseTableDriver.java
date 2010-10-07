@@ -108,7 +108,7 @@ public class BaseTableDriver
         throws Exception
     {
         BufferedReader in = null;
-
+		this.infile = infile;
         try
         {
             baseWriter = new BaseTableWriter(infile+"."+loadNumber+".out");
