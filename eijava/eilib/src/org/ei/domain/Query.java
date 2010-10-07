@@ -55,7 +55,7 @@ public class Query implements Comparable
 
     private static final String[] allFields = { "GEO","RGI", "PU", "PM", "PE", "VO", "SU", "SP", "DB", "AN", "RN", "AG", "AV", "CT", "CO", "NT", "PA", "PI", "WK", "YR", "ALL", "KY", "AF", "PN", "ST", "MH", "CL", "CN", "TI", "AB", "AU", "CC", "CV", "FL", "SN", "DT", "BN", "TR", "LA", "CF", "DI", "MI", "NI", "CI", "AI",  "OC","BI" , "PEC" , "PUC" , "PAC", "PK" , "PID" , "PCI","PRN","SIC","PEX","PAM","DOI","PFD","BKS","BKT","PD","CR","PC","IP", "IS", "EB", "CM", "GC", "RC", "RO", "SI", "VOM", "CP", "SC", "GD", "IC","CE", "DS", "DPID", "SD", "SO", "PPA",
     	//EnCompass fields
-    	"AJ", "PRD", "PRC", "AP", "AD", "AC", "EY", "PT",  "LT", "CVA", "CVP", "CVN", "CVM", "CVMN", "CVMA", "CVMP", "DG" };
+    	"AJ", "PRD", "PRC", "AP", "AD", "AC", "EY", "PT",  "LT", "CVA", "CVP", "CVN", "CVM", "CVMN", "CVMA", "CVMP", "DG"};
 
     private static Map quickSearchDiplayOptions = new HashMap();
 
