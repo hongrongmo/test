@@ -60,7 +60,6 @@ public class LookupIndexes
 						   								  	  this.indexesPerPage);
     	lisearcher = lifactory.getIndexSearcher(searchfield);
 
-
 		Database[] databases = config.getDatabases(databaseMask);
 
     	lisearcher.lookupIndexXML(lookupSearchID,
