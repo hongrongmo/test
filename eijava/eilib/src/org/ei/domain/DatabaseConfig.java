@@ -66,7 +66,8 @@ public final class DatabaseConfig
         dtName.put("ST", "Standard");
         dtName.put("PA", "Patent");
         dtName.put("UP", "Unpublished paper");
-        dtName.put("CORE", "CORE");
+        dtName.put("CORE","CORE");
+        dtName.put("IP", "Article in Press");
         //upt dt
         dtName.put("AP", "All patents");
         dtName.put("UA", "US Applications");
