@@ -39,7 +39,7 @@ public class BdCorrection
     static String tempTable="bd_correction_temp";
     static String lookupTable="deleted_lookupIndex";
     static String backupTable="bd_temp_backup";
-
+    static String sqlldrFileName="correctionFileLoader.sh";
 
     public static void main(String args[])
         throws Exception
@@ -81,7 +81,7 @@ public class BdCorrection
 	        System.exit(1);
 		}
 
-		if(args.length>9)
+		if(args.length>10)
 		{
 			if(args[6]!=null)
 			{
@@ -99,9 +99,18 @@ public class BdCorrection
 			{
 				password = args[9];
 			}
+			if(args[10]!=null)
+			{
+				sqlldrFileName = args[10];
+			}
+			else
+			{
+				System.out.println("Does not have sqlldr file");
+				System.exit(1);
+			}
 		}
 
-		if(args.length>5)
+		if(args.length>6)
 		{
 			if(args[0]!=null)
 			{
@@ -152,6 +161,8 @@ public class BdCorrection
 				System.out.println("Does not have FastSearch URL");
 				System.exit(1);
 			}
+
+
 		}
 		else
 		{
@@ -210,9 +221,9 @@ public class BdCorrection
 				}
 				Runtime r = Runtime.getRuntime();
 
-				Process p = r.exec("./correctionFileLoader.sh "+dataFile);
+				Process p = r.exec("./"+sqlldrFileName+" "+dataFile);
 				int t = p.waitFor();
-				//System.out.println(" t "+t);
+
 				int tempTableCount = bdc.getTempTableCount();
 				if(tempTableCount>0)
 				{
@@ -618,21 +629,25 @@ public class BdCorrection
 
 			for(int i=0;i<tableName.length;i++)
 			{
-				System.out.println("truncate table "+tableName[i]);
-				if(tableName[i].indexOf("temp")>-1)
+
+				if(i==0)
 				{
 					this.tempTable=tableName[i];
+					System.out.println("truncate temp table "+this.tempTable);
 				}
 
-				if(tableName[i].indexOf("backup")>-1)
-				{
-					this.backupTable=tableName[i];
-				}
-
-				if(tableName[i].indexOf("lookup")>-1)
+				if(i==1)
 				{
 					this.lookupTable=tableName[i];
+					System.out.println("truncate lookup table "+this.lookupTable);
 				}
+
+				if(i==2)
+				{
+					this.backupTable=tableName[i];
+					System.out.println("truncate backup table "+this.backupTable);
+				}
+
 				stmt.executeUpdate("truncate table "+tableName[i]);
 			}
 
