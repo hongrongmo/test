@@ -18,7 +18,7 @@ import java.text.*;
 
 public class CombinedXMLWriter
     extends CombinedWriter
-{	
+{
     private Perl5Util perl = new Perl5Util();
     private PorterStemmer stemmer = new PorterStemmer();
     private DataCleaner cleaner = new DataCleaner();
@@ -50,11 +50,11 @@ public class CombinedXMLWriter
     private PrintWriter serialtitlePW = null;
     private PrintWriter publishernamePW = null;
     private PrintWriter patentcountryPW = null;
-    private String indexKey = null;      
+    private String indexKey = null;
     private NumberFormat formatter;
     private long starttime = 0;
     private String database;
-    
+
 	public String getDatabase() {
 		return database;
 	}
@@ -118,7 +118,7 @@ public class CombinedXMLWriter
         formatter = new DecimalFormat("0000");
         this.recsPerbatch = recsPerbatch;
         this.lasteid = null;
-        this.environment = env;        
+        this.environment = env;
 		if(numberID != 0)
 			init();
     }
@@ -135,7 +135,7 @@ public class CombinedXMLWriter
         this.batchID = 1;
         formatter = new DecimalFormat("0000");
         this.recsPerbatch = recsPerbatch;
-        this.lasteid = null;        
+        this.lasteid = null;
 		if(numberID != 0)
 			init();
     }
@@ -273,33 +273,30 @@ public class CombinedXMLWriter
 
     public void writeRec(EVCombinedRec[] rec)
     throws Exception
-    {    	
+    {
     	if(rec.length >1)
-    	{    		
+    	{
 	    	for(int i=0; i<rec.length; i++)
 	    	{
 	    		if(i>0)
 	    			this.isChild = true;
 
 	    		if(rec[i].getString(EVCombinedRec.DATABASE)!=null)
-				{	    		
+				{
 					setDatabase(rec[i].getString(EVCombinedRec.DATABASE));
 				}
 				else
-				{				
+				{
 					setDatabase("bd");
-				}	    		
-	    		writeRec(rec[i]);	    
-	    		//writeIndexOnly(rec[i]);
-
+				}
+	    		writeRec(rec[i]);
 	    	}
 	    	this.isChild = false;
     	}
     	else if(rec.length >0)
-    	{    		    		
-			setDatabase(rec[0].getString(EVCombinedRec.DATABASE));			
-	    	writeRec(rec[0]);	    	
-	    	//writeIndexOnly(rec[0]);
+    	{
+			setDatabase(rec[0].getString(EVCombinedRec.DATABASE));
+	    	writeRec(rec[0]);
     	}
     }
 
@@ -329,8 +326,8 @@ public class CombinedXMLWriter
         throws Exception
     {
     	setDatabase(rec.getString(EVCombinedRec.DATABASE));
-    	this.eid = rec.getString(EVCombinedRec.DOCID);    	
-        begin();        
+    	this.eid = rec.getString(EVCombinedRec.DOCID);
+        begin();
         out.println("   <ROW> ");
         out.println("       <EIDOCID>" + this.eid + "</EIDOCID>");
         out.println("       <PARENTID>" +  rec.getString(EVCombinedRec.PARENT_ID) + "</PARENTID>");
@@ -463,9 +460,9 @@ public class CombinedXMLWriter
         out.println("       <LNG_SW><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.LNG_SW))) + "]]></LNG_SW>");
         out.println("       <LAT_SE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.LAT_SE))) + "]]></LAT_SE>");
         out.println("       <LNG_SE><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.LNG_SE))) + "]]></LNG_SE>");
-        out.println("   </ROW>");        
+        out.println("   </ROW>");
         ++curRecNum;
-        end();        
+        end();
     }
 
     private String hasDOI(EVCombinedRec rec)
@@ -681,7 +678,7 @@ public class CombinedXMLWriter
     }
 
     private String[] addIndex(String s[], String key)
-    {    	
+    {
 		try
 		{
 			PrintWriter indexWriter = (PrintWriter)hm.get(key);
@@ -705,7 +702,7 @@ public class CombinedXMLWriter
     }
 
     private String addIndex(String s, String key)
-    {    	
+    {
 		String sarray[] = {s};
 		addIndex(sarray, key);
 		return s;
@@ -942,7 +939,6 @@ public class CombinedXMLWriter
         {
         	open = false;
         	endXML();
-        	//System.out.println("Current count at: " + curRecNum + "  --- Number per batch at: " + recsPerbatch);
         	if (curRecNum >= recsPerbatch)
         	{
         		System.out.print(".");
