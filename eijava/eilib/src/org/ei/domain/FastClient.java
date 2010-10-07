@@ -424,7 +424,7 @@ public class FastClient
                 in.close();
             }
         }
-        System.out.println("fastclient::"+testResult);
+
         return testResult;
     }
 
@@ -757,6 +757,7 @@ public class FastClient
 //                    parseSubcats(line);
 //                }
 //            }
+
             if(line.indexOf("#ERC") == 0)
             {
                 parseErrorCode(line);
@@ -818,6 +819,7 @@ public class FastClient
             String[] dataElement = new String[2];
             dataElement[0] = nameTokens.nextToken();
             dataElement[1] = countTokens.nextToken();
+
             if(dataElement[0] != null && !dataElement[0].equals("null"))
             {
             	navData.add(dataElement);
