@@ -806,7 +806,6 @@ public class ResultNavigator
             while(itrNavs.hasNext())
             {
                 String navigatorname = (String) itrNavs.next();
-
                 List mods = (List) navs.get(navigatorname);
                 if((mods != null) && EiNavigator.DB.equalsIgnoreCase(navigatorname))
                 {
@@ -855,6 +854,7 @@ public class ResultNavigator
                     while(itrmod.hasNext())
                     {
                         String[] mod = (String[]) itrmod.next();
+
                         String dbid = mod[0];
 
                         if(dbid != null)
@@ -908,6 +908,7 @@ public class ResultNavigator
                     for(int i=0;i < mods.size();i++)
                     {
                         String[] mod = (String[]) mods.get(i);
+
                         int modcount = 0;
                         try
                         {
