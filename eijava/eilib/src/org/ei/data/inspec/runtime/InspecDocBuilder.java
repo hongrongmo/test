@@ -15,6 +15,7 @@ import org.apache.oro.text.perl.Perl5Util;
 import java.util.regex.*;
 import java.text.*;
 import java.io.IOException;
+import java.net.URLEncoder;
 
 
 public class InspecDocBuilder
@@ -26,9 +27,9 @@ public class InspecDocBuilder
     public static String TRANS_SEE_DETAILED = "For translation info., see Detailed Record / Links";
     private static final Key INS_CONTROLLED_TERMS = new Key(Keys.CONTROLLED_TERMS, "Inspec controlled terms");
     private static final Key INS_CLASS_CODES = new Key(Keys.CLASS_CODES, "Inspec classification codes");
-    private static final Key[] CITATION_KEYS = {Keys.DOCID,Keys.TITLE,Keys.EDITORS,Keys.AUTHORS, Keys.INVENTORS, Keys.EDITOR_AFFS, Keys.REPORT_NUMBER, Keys.PUBLISHER,  Keys.PATPUBDATE, Keys.PATFILDATE, Keys.PATASSIGN, Keys.PATAPPNUM, Keys.PATNUM, Keys.PART_NUMBER, Keys.PATCOUNTRY, Keys.NO_SO, Keys.SOURCE, Keys.TRANSLATION_SERIAL_TITLE, Keys.AUTHOR_AFFS, Keys.p_PAGE_RANGE, Keys.PAGE_RANGE_pp, Keys.VOLISSUE, Keys.SERIAL_TITLE, Keys.ABBRV_SERIAL_TITLE, Keys.ISSUE_DATE, Keys.LANGUAGE, Keys.ISBN, Keys.DOI, Keys.CODEN, Keys.ISSN,Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT};
-    private static final Key[] ABSTRACT_KEYS = {Keys.DOCID, Keys.TITLE, Keys.INVENTORS, Keys.EDITORS,Keys.AUTHORS,Keys.EDITOR_AFFS, Keys.AUTHOR_AFFS, Keys.VOLISSUE, Keys.NO_SO, Keys.SOURCE, Keys.SERIAL_TITLE, Keys.TRANSLATION_SERIAL_TITLE, Keys.ABBRV_SERIAL_TITLE,  Keys.ISSUE_DATE, Keys.LANGUAGE, Keys.REPORT_NUMBER, Keys.PATFILDATE, Keys.PATASSIGN, Keys.PATAPPNUM, Keys.PATNUM, Keys.PATCOUNTRY, Keys.PATPUBDATE, Keys.p_PAGE_RANGE, Keys.PAGE_RANGE_pp, Keys.COUNTRY_OF_PUB, Keys.ISBN, Keys.ISSN, Keys.CODEN, Keys.CONFERENCE_NAME, Keys.CONF_DATE, Keys.MEETING_LOCATION, Keys.SPONSOR, Keys.PART_NUMBER, Keys.PART_NUMBER, Keys.PUBLISHER,Keys.I_PUBLISHER, Keys.PAGE_COUNT, Keys.PUB_PLACE, Keys.DOI, Keys.PROVIDER, INS_CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS, Keys.ABSTRACT, Keys.NUMBER_OF_REFERENCES,Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT, Keys.CLASS_CODES,};
-    private static final Key[] DETAILED_KEYS = {Keys.ACCESSION_NUMBER, Keys.TITLE, Keys.TITLE_TRANSLATION, Keys.AUTHORS, Keys.EDITORS, Keys.INVENTORS, Keys.PATASSIGN, Keys.PATAPPNUM, Keys.PATNUM, Keys.PATFILDATE, Keys.AUTHOR_AFFS, Keys.EDITOR_AFFS, Keys.SOURCE, Keys.SERIAL_TITLE, Keys.ABBRV_SERIAL_TITLE, Keys.VOLUME, Keys.ISSUE, Keys.ISSUING_ORG, Keys.REPORT_NUMBER, Keys.ISSUE_DATE, Keys.PUBLICATION_DATE, Keys.PART_NUMBER, Keys.PART_NUMBER, Keys.PAGE_RANGE, Keys.LANGUAGE, Keys.ISSN, Keys.CODEN, Keys.ISBN, Keys.DOC_TYPE, Keys.PATCOUNTRY, Keys.CONFERENCE_NAME, Keys.CONF_DATE, Keys.MEETING_LOCATION, Keys.CONF_CODE, Keys.SPONSOR, Keys.PUBLISHER, Keys.PUB_PLACE, Keys.PUB_LOCATION, Keys.TRANSLATION_SERIAL_TITLE, Keys.TRANSLATION_ABBREVIATED_SERIAL_TITLE, Keys.TRANSLATION_VOLUME, Keys.TRANSLATION_ISSUE, Keys.TRANSLATION_PUBLICATION_DATE, Keys.TRANSLATION_PAGES, Keys.TRANSLATION_ISSN, Keys.TRANSLATION_CODEN, Keys.TRANSLATION_COUNTRY_OF_PUB, Keys.MATERIAL_ID, Keys.ABSTRACT, Keys.ABSTRACT_TYPE, Keys.NUMBER_OF_REFERENCES, Keys.CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS, Keys.CLASS_CODES, Keys.NUMERICAL_DATA_INDEXING, Keys.ASTRONOMICAL_OBJECT_INDEXING, Keys.CHEMICAL_DATA_INDEXING, Keys.TREATMENTS, Keys.DISCIPLINES, Keys.DOI, Keys.DOCID, Keys.COPYRIGHT, Keys.PROVIDER,Keys.COPYRIGHT_TEXT};
+    private static final Key[] CITATION_KEYS = {Keys.ACCESSION_NUMBER,Keys.CITEDBY,Keys.DOCID,Keys.TITLE,Keys.EDITORS,Keys.AUTHORS, Keys.INVENTORS, Keys.EDITOR_AFFS, Keys.REPORT_NUMBER, Keys.PUBLISHER,  Keys.PATPUBDATE, Keys.PATFILDATE, Keys.PATASSIGN, Keys.PATAPPNUM, Keys.PATNUM, Keys.PART_NUMBER, Keys.PATCOUNTRY, Keys.NO_SO, Keys.SOURCE, Keys.TRANSLATION_SERIAL_TITLE, Keys.AUTHOR_AFFS, Keys.p_PAGE_RANGE, Keys.PAGE_RANGE_pp, Keys.VOLISSUE, Keys.SERIAL_TITLE, Keys.ABBRV_SERIAL_TITLE, Keys.ISSUE_DATE, Keys.LANGUAGE, Keys.ISBN, Keys.DOI, Keys.CODEN, Keys.ISSN,Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT};
+    private static final Key[] ABSTRACT_KEYS = {Keys.CITEDBY,Keys.DOCID, Keys.TITLE, Keys.INVENTORS, Keys.EDITORS,Keys.AUTHORS,Keys.EDITOR_AFFS, Keys.AUTHOR_AFFS, Keys.VOLISSUE, Keys.NO_SO, Keys.SOURCE, Keys.SERIAL_TITLE, Keys.TRANSLATION_SERIAL_TITLE, Keys.ABBRV_SERIAL_TITLE,  Keys.ISSUE_DATE, Keys.LANGUAGE, Keys.REPORT_NUMBER, Keys.PATFILDATE, Keys.PATASSIGN, Keys.PATAPPNUM, Keys.PATNUM, Keys.PATCOUNTRY, Keys.PATPUBDATE, Keys.p_PAGE_RANGE, Keys.PAGE_RANGE_pp, Keys.COUNTRY_OF_PUB, Keys.ISBN, Keys.ISSN,  Keys.CONFERENCE_NAME, Keys.CONF_DATE, Keys.MEETING_LOCATION, Keys.SPONSOR, Keys.PART_NUMBER, Keys.PART_NUMBER, Keys.PUBLISHER,Keys.I_PUBLISHER, Keys.PAGE_COUNT, Keys.PUB_PLACE, Keys.DOI, Keys.PROVIDER, INS_CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS, Keys.ABSTRACT, Keys.NUMBER_OF_REFERENCES,Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT, Keys.CLASS_CODES,Keys.TREATMENTS};
+    private static final Key[] DETAILED_KEYS = {Keys.CITEDBY,Keys.ACCESSION_NUMBER, Keys.TITLE, Keys.TITLE_TRANSLATION, Keys.AUTHORS, Keys.EDITORS, Keys.INVENTORS, Keys.PATASSIGN, Keys.PATAPPNUM, Keys.PATNUM, Keys.PATFILDATE, Keys.AUTHOR_AFFS, Keys.EDITOR_AFFS, Keys.SOURCE, Keys.SERIAL_TITLE, Keys.ABBRV_SERIAL_TITLE, Keys.VOLUME, Keys.ISSUE, Keys.ISSUING_ORG, Keys.REPORT_NUMBER, Keys.ISSUE_DATE, Keys.PUBLICATION_DATE, Keys.PART_NUMBER, Keys.PART_NUMBER, Keys.PAGE_RANGE, Keys.LANGUAGE, Keys.ISSN, Keys.CODEN, Keys.ISBN, Keys.DOC_TYPE, Keys.PATCOUNTRY, Keys.CONFERENCE_NAME, Keys.CONF_DATE, Keys.MEETING_LOCATION, Keys.CONF_CODE, Keys.SPONSOR, Keys.PUBLISHER, Keys.PUB_PLACE, Keys.PUB_LOCATION, Keys.TRANSLATION_SERIAL_TITLE, Keys.TRANSLATION_ABBREVIATED_SERIAL_TITLE, Keys.TRANSLATION_VOLUME, Keys.TRANSLATION_ISSUE, Keys.TRANSLATION_PUBLICATION_DATE, Keys.TRANSLATION_PAGES, Keys.TRANSLATION_ISSN, Keys.TRANSLATION_CODEN, Keys.TRANSLATION_COUNTRY_OF_PUB, Keys.MATERIAL_ID, Keys.ABSTRACT, Keys.ABSTRACT_TYPE, Keys.NUMBER_OF_REFERENCES, Keys.CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS, Keys.CLASS_CODES, Keys.NUMERICAL_DATA_INDEXING, Keys.ASTRONOMICAL_OBJECT_INDEXING, Keys.CHEMICAL_DATA_INDEXING, Keys.TREATMENTS, Keys.DISCIPLINES, Keys.DOI, Keys.DOCID, Keys.COPYRIGHT, Keys.PROVIDER,Keys.COPYRIGHT_TEXT};
 
     private static final Key[] RIS_KEYS = { Keys.RIS_TY, Keys.RIS_LA,Keys.RIS_M1,Keys.RIS_N1 ,Keys.RIS_Y1, Keys.RIS_Y2, Keys.RIS_A2, Keys.RIS_SE, Keys.RIS_TI, Keys.RIS_T1,Keys.RIS_T2, Keys.RIS_AD, Keys.RIS_BT, Keys.RIS_JO,Keys.RIS_T3, Keys.RIS_AUS,  Keys.RIS_EDS, Keys.RIS_VL, Keys.RIS_IS, Keys.RIS_PY, Keys.RIS_AN, Keys.RIS_SP, Keys.RIS_EP, Keys.RIS_SN, Keys.RIS_BN, Keys.RIS_S1, Keys.RIS_MD,Keys.RIS_CY, Keys.RIS_UR, Keys.RIS_PB,  Keys.RIS_N2, Keys.RIS_KW, Keys.RIS_CVS, Keys.RIS_FLS, Keys.RIS_DO, Keys.BIB_TY };
 
@@ -41,7 +42,7 @@ public class InspecDocBuilder
 
     private static String queryCitation="select SOPDATE, SSPDATE, CDATE, SU, SBN, ANUM, PCDN, M_ID, NRTYPE,RTYPE,LA,PIPN,NPL1,NPL2,PARTNO,PCPUB,BPPUB,PPUB,EAFF,EDS,AUS,AUS2,AAFF,AFC,TI,TC,IORG,RNUM,POPDATE,PFJT,PAJT,PVOLISS,PVOL,PISS,SVOL,SISS,SFJT,SAJT,PAS,OPAN,FDATE,OFDATE,PNUM,PSN,CPR,LOAD_NUMBER,COPA,PDOI,PUBTI,PYR,AAFFMULTI1, AAFFMULTI2, EAFFMULTI1, EAFFMULTI2, EFC  from new_ins_master where M_ID IN ";
     private static String queryXMLCitation="select  SOPDATE,M_ID,NRTYPE,RTYPE,ANUM,LA,PIPN,NPL1,NPL2,PARTNO,PCPUB,PPUB,BPPUB,EAFF,EDS,AUS,AUS2,AAFF,AFC,TI,IORG,RNUM,POPDATE,PFJT,PAJT,SFJT,SAJT,PVOLISS,PVOL,PISS,SVOL,SISS,PAS,OPAN,FDATE,OFDATE,PNUM,PSN,CPR,LOAD_NUMBER,COPA,PDOI,CVS,SBN,PUBTI,PYR,AAFFMULTI1, AAFFMULTI2, EAFFMULTI1, EAFFMULTI2, EFC  from new_ins_master where M_ID IN ";
-    private static String queryAbstracts="select SOPDATE, SSPDATE, CDATE, SU, M_ID,ANUM,NRTYPE,RTYPE,TI,AUS,AUS2,AAFF,AFC,PFJT,SFJT,PAJT,SAJT,PVOLISS,PVOL,PISS,SVOL,SISS,POPDATE,PARTNO,PIPN,NPL1,NPL2,LA,PSN,PCDN,TC,CODATE,CLOC,SORG,BPPUB,PPUB,PCPUB,AB,XREFNO,CVS,FLS,EDS,EAFF,SBN,IORG,RNUM,PAS,OPAN,COPA,PNUM,FDATE,OFDATE,CPR,PDOI,PUBTI,PYR,LOAD_NUMBER,CLS, AAFFMULTI1, AAFFMULTI2, EAFFMULTI1, EAFFMULTI2, EFC  from new_ins_master where M_ID IN ";
+    private static String queryAbstracts="select SOPDATE, SSPDATE, CDATE, SU, M_ID,ANUM,NRTYPE,RTYPE,TI,AUS,AUS2,AAFF,AFC,PFJT,SFJT,PAJT,SAJT,PVOLISS,PVOL,PISS,SVOL,SISS,POPDATE,PARTNO,PIPN,NPL1,NPL2,LA,PSN,PCDN,TC,CODATE,CLOC,SORG,BPPUB,PPUB,PCPUB,AB,XREFNO,CVS,FLS,EDS,EAFF,SBN,IORG,RNUM,PAS,OPAN,COPA,PNUM,FDATE,OFDATE,CPR,PDOI,PUBTI,PYR,LOAD_NUMBER,CLS, AAFFMULTI1, AAFFMULTI2, EAFFMULTI1, EAFFMULTI2, EFC, TRMC  from new_ins_master where M_ID IN ";
     private static String queryDetailed="select SOPDATE,SSPDATE, CDATE, SU, M_ID,NRTYPE,RTYPE,ANUM,TI,AUS,AUS2,EDS,AAFF,AFC,EAFF,PFJT,SFJT,PAJT,SAJT,PVOLISS,PVOL,PISS,SVOLISS,SVOL,SISS,POPDATE,PIPN,NPL1,NPL2,LA,PSN,PCDN,TC,CODATE,CLOC,SORG,COPA,BPPUB,PPUB,PCPUB,SVOLISS,SOPDATE,SIPN,SSN,SCDN,SCPUB,MATID,PARTNO,RNUM,SBN,IORG,FDATE,OFDATE,PYR,PAS,OPAN,PNUM,AB,XREFNO,CVS,FLS,CLS,NDI,CHI,AOI,TRMC,CPR,PURL,PUM,PDOI,PUBTI,LOAD_NUMBER, AAFFMULTI1, AAFFMULTI2, EAFFMULTI1, EAFFMULTI2, EFC  from new_ins_master where M_ID IN ";
 
     public DocumentBuilder newInstance(Database database)
@@ -203,7 +204,7 @@ public class InspecDocBuilder
                     {
 
                         Contributors inventors = new Contributors
-                        	(Keys.INVENTORS, getContributors(Keys.INVENTORS, 
+                        	(Keys.INVENTORS, getContributors(Keys.INVENTORS,
                         			rset.getString("AUS"),
                         			rset.getString("AUS2"),
                         			dataFormat,
@@ -212,13 +213,13 @@ public class InspecDocBuilder
 
                         if(rset.getString("AAFF") != null)
                         {
-                                                        
+
                             ht.put(Keys.AUTHOR_AFFS, getAuthorsAffiliation(
                             							Keys.AUTHOR_AFFS,
                             							rset.getString("AAFF"),
                             							rset.getString("AFC"),
-                            							rset.getString("AAFFMULTI1"), 
-                            							rset.getString("AAFFMULTI2"), 
+                            							rset.getString("AAFFMULTI1"),
+                            							rset.getString("AAFFMULTI2"),
                             							dataFormat));
                         }
                         ht.put(Keys.INVENTORS, inventors);
@@ -226,8 +227,8 @@ public class InspecDocBuilder
                 } else {
                     if (rset.getString("AUS") != null)
                     {
-                        Contributors authors = new Contributors(Keys.AUTHORS, 
-                        								getContributors(Keys.AUTHORS, 
+                        Contributors authors = new Contributors(Keys.AUTHORS,
+                        								getContributors(Keys.AUTHORS,
                         								rset.getString("AUS"),
                         								rset.getString("AUS2"),
                         								dataFormat,
@@ -236,13 +237,13 @@ public class InspecDocBuilder
 
                         if(rset.getString("AAFF") != null)
                         {
-                           
+
                             ht.put(Keys.AUTHOR_AFFS,  getAuthorsAffiliation(
         							Keys.AUTHOR_AFFS,
         							rset.getString("AAFF"),
         							rset.getString("AFC"),
-        							rset.getString("AAFFMULTI1"), 
-        							rset.getString("AAFFMULTI2"), 
+        							rset.getString("AAFFMULTI1"),
+        							rset.getString("AAFFMULTI2"),
         							dataFormat));
                         }
 
@@ -259,8 +260,8 @@ public class InspecDocBuilder
                                 strED = perl.substitute("s/\\(Ed[.]\\s*\\)//gi", strED);
                             }
 
-                            Contributors editors = new Contributors(Keys.EDITORS, 
-                            								getContributors(Keys.EDITORS, 
+                            Contributors editors = new Contributors(Keys.EDITORS,
+                            								getContributors(Keys.EDITORS,
                             								strED,
                             								null,
                             								dataFormat,
@@ -270,13 +271,13 @@ public class InspecDocBuilder
 
                             if(rset.getString("EAFF") != null)
                             {
-       
+
                                 ht.put(Keys.EDITOR_AFFS, getAuthorsAffiliation(
                                 		Keys.EDITOR_AFFS,
             							rset.getString("EAFF"),
             							rset.getString("EFC"),
-            							rset.getString("EAFFMULTI1"), 
-            							rset.getString("EAFFMULTI2"), 
+            							rset.getString("EAFFMULTI1"),
+            							rset.getString("EAFFMULTI2"),
             							dataFormat));
                             }
                         }
@@ -455,6 +456,12 @@ public class InspecDocBuilder
                     }
                 }
 
+                // TR
+				if (rset.getString("TRMC") != null)
+				{
+					ht.put(Keys.TREATMENTS,new Treatments(setTreatments(rset.getString("TRMC")),this.database));
+                }
+
                 if(rset.getString("CODATE") != null) {
                     ht.put(Keys.CONF_DATE, new XMLWrapper(Keys.CONF_DATE , StringUtil.replaceNullWithEmptyString(rset.getString("CODATE"))));
                 }
@@ -515,6 +522,68 @@ public class InspecDocBuilder
                     ht.put(Keys.UNCONTROLLED_TERMS,
                            new XMLMultiWrapper(Keys.UNCONTROLLED_TERMS, setElementData(rset.getString("FLS"))));
                 }
+
+                 //added for CITEDBY
+
+				if(rset.getString("ANUM")!=null)
+				{
+					 ht.put(Keys.ACCESSION_NUMBER, new XMLWrapper(Keys.ACCESSION_NUMBER ,rset.getString("ANUM")));
+				}
+
+				CITEDBY citedby = new CITEDBY();
+				citedby.setKey(Keys.CITEDBY);
+
+				if(rset.getString("PDOI")!=null)
+				{
+					citedby.setDoi((rset.getString("PDOI")).trim());
+				}
+
+				if(rset.getString("PVOLISS") != null)
+				{
+
+					String volumeIssue = rset.getString("PVOLISS");
+					volumeIssue = perl.substitute("s/vol\\./v /i", volumeIssue);
+					volumeIssue = perl.substitute("s/no\\./n /i", volumeIssue);
+
+					if(perl.match("/,/", volumeIssue))
+					{
+						citedby.setVolume((perl.preMatch()).trim());
+						citedby.setIssue((perl.postMatch()).trim());
+					}
+					else
+					{
+						volumeIssue = rset.getString("PVOLISS");
+						if(perl.match("/vol/i",volumeIssue))
+						{
+							volumeIssue = perl.substitute("s/vol\\./v /i", volumeIssue);
+							citedby.setVolume(volumeIssue.trim());
+						}
+						else if(perl.match("/no/i",volumeIssue))
+						{
+							volumeIssue = perl.substitute("s/no\\./n /i", volumeIssue);
+							citedby.setIssue(volumeIssue.trim());
+						}
+					}
+
+					if(rset.getString("PSN")!=null)
+					{
+						citedby.setIssn((rset.getString("PSN")).trim());
+					}
+
+					if(rset.getString("PIPN")!=null)
+					{
+						citedby.setPage((rset.getString("PIPN")).trim());
+					}
+
+					if(rset.getString("ANUM")!=null)
+					{
+						citedby.setAccessionNumber((rset.getString("ANUM")).trim());
+					}
+				}
+
+					ht.put(Keys.CITEDBY,citedby);
+
+				// end citedby
 
                 EIDoc eiDoc = new EIDoc(did,ht, Abstract.ABSTRACT_FORMAT);
                 eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
@@ -651,12 +720,12 @@ public class InspecDocBuilder
                     ht.put(Keys.TITLE, new XMLWrapper(Keys.TITLE,rset.getString("TI")));
                 }
 
-                if(strRTYPE.equals("08")) 
+                if(strRTYPE.equals("08"))
                 {
                     if (rset.getString("AUS") != null)
                     {
-                        Contributors inventors = new Contributors(Keys.INVENTORS, 
-         								getContributors(Keys.INVENTORS, 
+                        Contributors inventors = new Contributors(Keys.INVENTORS,
+         								getContributors(Keys.INVENTORS,
          								rset.getString("AUS"),
          								rset.getString("AUS2"),
          								dataFormat,
@@ -669,14 +738,14 @@ public class InspecDocBuilder
         							Keys.AUTHOR_AFFS,
         							rset.getString("AAFF"),
         							rset.getString("AFC"),
-        							rset.getString("AAFFMULTI1"), 
-        							rset.getString("AAFFMULTI2"), 
+        							rset.getString("AAFFMULTI1"),
+        							rset.getString("AAFFMULTI2"),
         							dataFormat));
                         }
                         ht.put(Keys.INVENTORS, inventors);
                     }
-                } 
-                else 
+                }
+                else
                 {
                     if (rset.getString("AUS") != null)
                     {
@@ -686,13 +755,13 @@ public class InspecDocBuilder
                             aus = aus.concat(rset.getString("AUS2"));
                         }
                         Contributors authors = new Contributors(Keys.AUTHORS,
-                        				getContributors(Keys.AUTHORS, 
+                        				getContributors(Keys.AUTHORS,
          								rset.getString("AUS"),
          								rset.getString("AUS2"),
          								dataFormat,
          								rset.getString("AAFFMULTI1"),
          								rset.getString("AAFF")));
-                        		
+
                         ht.put(Keys.AUTHORS, authors);
 
                         if(rset.getString("AAFF") != null)
@@ -701,8 +770,8 @@ public class InspecDocBuilder
         							Keys.AUTHOR_AFFS,
         							rset.getString("AAFF"),
         							rset.getString("AFC"),
-        							rset.getString("AAFFMULTI1"), 
-        							rset.getString("AAFFMULTI2"), 
+        							rset.getString("AAFFMULTI1"),
+        							rset.getString("AAFFMULTI2"),
         							dataFormat));
                         }
 
@@ -718,8 +787,8 @@ public class InspecDocBuilder
                                 strED = perl.substitute("s/\\(Ed[.]\\s*\\)//gi", strED);
                             }
 
-                            Contributors editors = new Contributors(Keys.EDITORS, 
-                            										getContributors(Keys.EDITORS, 
+                            Contributors editors = new Contributors(Keys.EDITORS,
+                            										getContributors(Keys.EDITORS,
                             										strED,
                             										null,
                             										dataFormat,
@@ -733,7 +802,7 @@ public class InspecDocBuilder
                                 		Keys.EDITOR_AFFS,
             							rset.getString("EAFF"),
             							rset.getString("EFC"),
-            							rset.getString("EAFFMULTI1"), 
+            							rset.getString("EAFFMULTI1"),
             							rset.getString("EAFFMULTI2"),
             							dataFormat));
                             }
@@ -1029,6 +1098,68 @@ public class InspecDocBuilder
                     ht.put(Keys.DOI, new XMLWrapper(Keys.DOI ,rset.getString("PDOI")));
                 }
 
+                 //added for CITEDBY
+
+					if(rset.getString("ANUM")!=null)
+					{
+						 ht.put(Keys.ACCESSION_NUMBER, new XMLWrapper(Keys.ACCESSION_NUMBER ,rset.getString("ANUM")));
+					}
+
+					CITEDBY citedby = new CITEDBY();
+					citedby.setKey(Keys.CITEDBY);
+
+					if(rset.getString("PDOI")!=null)
+					{
+						citedby.setDoi(URLEncoder.encode((rset.getString("PDOI")).trim()));
+					}
+
+					if(rset.getString("PVOLISS") != null)
+					{
+
+						String volumeIssue = rset.getString("PVOLISS");
+						volumeIssue = perl.substitute("s/vol\\./v /i", volumeIssue);
+						volumeIssue = perl.substitute("s/no\\./n /i", volumeIssue);
+
+						if(perl.match("/,/", volumeIssue))
+						{
+							citedby.setVolume((perl.preMatch()).trim());
+							citedby.setIssue((perl.postMatch()).trim());
+						}
+						else
+						{
+							volumeIssue = rset.getString("PVOLISS");
+							if(perl.match("/vol/i",volumeIssue))
+							{
+								volumeIssue = perl.substitute("s/vol\\./v /i", volumeIssue);
+								citedby.setVolume(volumeIssue.trim());
+							}
+							else if(perl.match("/no/i",volumeIssue))
+							{
+								volumeIssue = perl.substitute("s/no\\./n /i", volumeIssue);
+								citedby.setIssue(volumeIssue.trim());
+							}
+						}
+
+						if(rset.getString("PSN")!=null)
+						{
+							citedby.setIssn((rset.getString("PSN")).trim());
+						}
+
+						if(rset.getString("PIPN")!=null)
+						{
+							citedby.setPage((rset.getString("PIPN")).trim());
+						}
+
+						if(rset.getString("ANUM")!=null)
+						{
+							citedby.setAccessionNumber(rset.getString("ANUM"));
+						}
+					}
+
+					ht.put(Keys.CITEDBY,citedby);
+
+				// end citedby
+
                 EIDoc eiDoc = new EIDoc(did, ht, Detail.FULLDOC_FORMAT);
                 eiDoc.exportLabels(true);
                 eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
@@ -1136,7 +1267,7 @@ public class InspecDocBuilder
                     if (rset.getString("AUS") != null)
                     {
                       Contributors inventors = new Contributors(Keys.INVENTORS,
-                    		  		getContributors(Keys.INVENTORS, 
+                    		  		getContributors(Keys.INVENTORS,
                     		  		rset.getString("AUS"),
                     		  		rset.getString("AUS2"),
                     		  		dataFormat,
@@ -1148,10 +1279,10 @@ public class InspecDocBuilder
                           ht.put(Keys.RIS_AD, getAuthorsAffiliation(Keys.RIS_AD,
       							rset.getString("AAFF"),
       							rset.getString("AFC"),
-      							rset.getString("AAFFMULTI1"), 
-      							rset.getString("AAFFMULTI2"), 
+      							rset.getString("AAFFMULTI1"),
+      							rset.getString("AAFFMULTI2"),
       							dataFormat));
-                       
+
                       }
                       ht.put(Keys.RIS_AUS, inventors);
                     }
@@ -1159,24 +1290,24 @@ public class InspecDocBuilder
                 } else {
                     if (rset.getString("AUS") != null)
                     {
-      
-                    	
+
+
                         Contributors authors = new Contributors(Keys.AUTHORS,
-                        				getContributors(Keys.AUTHORS, 
+                        				getContributors(Keys.AUTHORS,
                         		  		rset.getString("AUS"),
                         		  		rset.getString("AUS2"),
                         		  		dataFormat,
            								rset.getString("AAFFMULTI1"),
            								rset.getString("AAFF")));
-                        		
+
                         authors.nullAffilID();
                         if(rset.getString("AAFF") != null)
                         {
                         	ht.put(Keys.RIS_AD, getAuthorsAffiliation(Keys.RIS_AD,
           							rset.getString("AAFF"),
           							rset.getString("AFC"),
-          							rset.getString("AAFFMULTI1"), 
-          							rset.getString("AAFFMULTI2"), 
+          							rset.getString("AAFFMULTI1"),
+          							rset.getString("AAFFMULTI2"),
           							dataFormat));
                         }
                         ht.put(Keys.RIS_AUS, authors);
@@ -1192,24 +1323,24 @@ public class InspecDocBuilder
                             }
 
                             Contributors editors = new Contributors(Keys.EDITORS,
-                            				getContributors(Keys.EDITORS, 
+                            				getContributors(Keys.EDITORS,
                             				rset.getString("EDS"),
                             		  		null,
                             		  		dataFormat,
                								rset.getString("EAFFMULTI1"),
                								rset.getString("EDS")));
-                            		
+
                         	editors.nullAffilID();
                         	ht.put(Keys.RIS_EDS,editors);
 
                             if(rset.getString("EAFF") != null)
                             {
- 
+
                                 ht.put(Keys.RIS_AD, getAuthorsAffiliation(Keys.RIS_AD,
               							rset.getString("EAFF"),
               							null,
-              							null, 
-              							null, 
+              							null,
+              							null,
               							dataFormat));
                             }
 
@@ -1576,26 +1707,26 @@ public class InspecDocBuilder
                 if(strRTYPE.equals("08")) {
                     if (rset.getString("AUS") != null)
                     {
-                            
-                            Contributors inventors = new Contributors(Keys.INVENTORS, 
-                            				getContributors(Keys.INVENTORS, 
+
+                            Contributors inventors = new Contributors(Keys.INVENTORS,
+                            				getContributors(Keys.INVENTORS,
                             				rset.getString("AUS"),
                             				rset.getString("AUS2"),
                             				dataFormat,
                								rset.getString("AAFFMULTI1"),
                								rset.getString("AAFF")));
-                            
+
                             if(rset.getString("AAFF") != null)
                             {
-    
+
                                 ht.put(Keys.AUTHOR_AFFS, getAuthorsAffiliation(
             							Keys.AUTHOR_AFFS,
             							rset.getString("AAFF"),
             							rset.getString("AFC"),
-            							rset.getString("AAFFMULTI1"), 
-            							rset.getString("AAFFMULTI2"), 
+            							rset.getString("AAFFMULTI1"),
+            							rset.getString("AAFFMULTI2"),
             							dataFormat));
-                              
+
                             }
                             ht.put(Keys.INVENTORS, inventors);
                     }
@@ -1603,8 +1734,8 @@ public class InspecDocBuilder
                 } else {
                     if (rset.getString("AUS") != null)
                     {
-                        Contributors inventors = new Contributors(Keys.AUTHORS, 
-                									getContributors(Keys.AUTHORS, 
+                        Contributors inventors = new Contributors(Keys.AUTHORS,
+                									getContributors(Keys.AUTHORS,
                 									rset.getString("AUS"),
                 									rset.getString("AUS2"),
                 									dataFormat,
@@ -1617,8 +1748,8 @@ public class InspecDocBuilder
         							Keys.AUTHOR_AFFS,
         							rset.getString("AAFF"),
         							rset.getString("AFC"),
-        							rset.getString("AAFFMULTI1"), 
-        							rset.getString("AAFFMULTI2"), 
+        							rset.getString("AAFFMULTI1"),
+        							rset.getString("AAFFMULTI2"),
         							dataFormat));
                         }
                         ht.put(Keys.AUTHORS, inventors);
@@ -1633,9 +1764,9 @@ public class InspecDocBuilder
                             {
                                 strED = perl.substitute("s/\\(Ed[.]\\s*\\)//gi", strED);
                             }
-                            
-                            Contributors editors = new Contributors(Keys.EDITORS, 
-									getContributors(Keys.EDITORS, 
+
+                            Contributors editors = new Contributors(Keys.EDITORS,
+									getContributors(Keys.EDITORS,
 									strED,
 									null,
 									dataFormat,
@@ -1650,7 +1781,7 @@ public class InspecDocBuilder
                                 		Keys.EDITOR_AFFS,
             							rset.getString("EAFF"),
             							rset.getString("EFC"),
-            							rset.getString("EAFFMULTI1"), 
+            							rset.getString("EAFFMULTI1"),
             							rset.getString("EAFFMULTI2"),
             							dataFormat));
                             }
@@ -1670,7 +1801,7 @@ public class InspecDocBuilder
                     ht.put(Keys.SOURCE, new XMLWrapper(Keys.SOURCE, strFJT));
 
                     if(rset.getString("SFJT") != null) {
-                        ht.put(Keys.TRANSLATION_SERIAL_TITLE, 
+                        ht.put(Keys.TRANSLATION_SERIAL_TITLE,
                         		new XMLWrapper(Keys.TRANSLATION_SERIAL_TITLE ,TRANS_SEE_DETAILED));
                     }
 
@@ -1802,6 +1933,7 @@ public class InspecDocBuilder
 
                 //DOI
                 if(rset.getString("PDOI") != null) {
+
                     ht.put(Keys.DOI, new XMLWrapper(Keys.DOI,StringUtil.replaceNullWithEmptyString(rset.getString("PDOI"))));
                 }
 
@@ -1858,6 +1990,69 @@ public class InspecDocBuilder
                         ht.put(Keys.CONFERENCE_NAME, new XMLWrapper(Keys.CONFERENCE_NAME ,rset.getString("TI")));
                     }
                 }
+
+                //added for CITEDBY
+
+                if(rset.getString("ANUM")!=null)
+				{
+					 ht.put(Keys.ACCESSION_NUMBER, new XMLWrapper(Keys.ACCESSION_NUMBER ,rset.getString("ANUM")));
+				}
+
+				CITEDBY citedby = new CITEDBY();
+				citedby.setKey(Keys.CITEDBY);
+
+				if(rset.getString("PDOI")!=null)
+				{
+					citedby.setDoi(URLEncoder.encode((rset.getString("PDOI")).trim()));
+				}
+
+				if(rset.getString("PVOLISS") != null)
+				{
+
+					String volumeIssue = rset.getString("PVOLISS");
+					volumeIssue = perl.substitute("s/vol\\./v /i", volumeIssue);
+					volumeIssue = perl.substitute("s/no\\./n /i", volumeIssue);
+
+					if(perl.match("/,/", volumeIssue))
+					{
+						citedby.setVolume((perl.preMatch()).trim());
+						citedby.setIssue((perl.postMatch()).trim());
+					}
+					else
+					{
+						volumeIssue = rset.getString("PVOLISS");
+						if(perl.match("/vol/i",volumeIssue))
+						{
+							volumeIssue = perl.substitute("s/vol\\./v /i", volumeIssue);
+							citedby.setVolume(volumeIssue.trim());
+						}
+						else if(perl.match("/no/i",volumeIssue))
+						{
+							volumeIssue = perl.substitute("s/no\\./n /i", volumeIssue);
+							citedby.setIssue(volumeIssue.trim());
+						}
+					}
+
+					if(rset.getString("PSN")!=null)
+					{
+						citedby.setIssn((rset.getString("PSN")).trim());
+					}
+
+					if(rset.getString("PIPN")!=null)
+					{
+						citedby.setPage((rset.getString("PIPN")).trim());
+					}
+
+					if(rset.getString("ANUM")!=null)
+					{
+						citedby.setAccessionNumber(rset.getString("ANUM"));
+					}
+				}
+
+
+					ht.put(Keys.CITEDBY,citedby);
+
+				// end citedby
 
                 EIDoc eiDoc = new EIDoc(did, ht, Citation.CITATION_FORMAT);
                 eiDoc.exportLabels(false);
@@ -1975,31 +2170,31 @@ public class InspecDocBuilder
                 if(strRTYPE.equals("08")) {
                     if (rset.getString("AUS") != null)
                     {
-                            Contributors inventors =  new Contributors(Keys.INVENTORS, 
-									getContributors(Keys.INVENTORS, 
+                            Contributors inventors =  new Contributors(Keys.INVENTORS,
+									getContributors(Keys.INVENTORS,
 									rset.getString("AUS"),
 									rset.getString("AUS2"),
 									dataFormat,
 									rset.getString("AAFFMULTI1"),
 									rset.getString("AAFF")));
-                            
+
                             if(rset.getString("AAFF") != null)
                             {
                                 ht.put(Keys.AUTHOR_AFFS, getAuthorsAffiliation(
             							Keys.AUTHOR_AFFS,
             							rset.getString("AAFF"),
             							rset.getString("AFC"),
-            							rset.getString("AAFFMULTI1"), 
-            							rset.getString("AAFFMULTI2"), 
+            							rset.getString("AAFFMULTI1"),
+            							rset.getString("AAFFMULTI2"),
             							dataFormat));
                             }
                             ht.put(Keys.INVENTORS, inventors);
                     }
                 } else {
                     if (rset.getString("AUS") != null)
-                    {                      
-                        Contributors authors = new Contributors(Keys.AUTHORS, 
-														getContributors(Keys.AUTHORS, 
+                    {
+                        Contributors authors = new Contributors(Keys.AUTHORS,
+														getContributors(Keys.AUTHORS,
 														rset.getString("AUS"),
 														rset.getString("AUS2"),
 														dataFormat,
@@ -2008,13 +2203,13 @@ public class InspecDocBuilder
 
                         if(rset.getString("AAFF") != null)
                         {
-   
+
                             ht.put(Keys.AUTHOR_AFFS, getAuthorsAffiliation(
         							Keys.AUTHOR_AFFS,
         							rset.getString("AAFF"),
         							rset.getString("AFC"),
-        							rset.getString("AAFFMULTI1"), 
-        							rset.getString("AAFFMULTI2"), 
+        							rset.getString("AAFFMULTI1"),
+        							rset.getString("AAFFMULTI2"),
         							dataFormat));
                         }
                         ht.put(Keys.AUTHORS, authors);
@@ -2029,9 +2224,9 @@ public class InspecDocBuilder
                             {
                                 strED = perl.substitute("s/\\(Ed[.]\\s*\\)//gi", strED);
                             }
-                            
-                            Contributors editors = new Contributors(Keys.EDITORS, 
-													getContributors(Keys.EDITORS, 
+
+                            Contributors editors = new Contributors(Keys.EDITORS,
+													getContributors(Keys.EDITORS,
 													strED,
 													null,
 													dataFormat,
@@ -2046,7 +2241,7 @@ public class InspecDocBuilder
                                 		Keys.EDITOR_AFFS,
             							rset.getString("EAFF"),
             							rset.getString("EFC"),
-            							rset.getString("EAFFMULTI1"), 
+            							rset.getString("EAFFMULTI1"),
             							rset.getString("EAFFMULTI2"),
             							dataFormat));
                             }
@@ -2299,9 +2494,9 @@ public class InspecDocBuilder
         return list;
 
     } // loadXMLCitation
-    
+
     // new method for multy authors
-    
+
 	private Affiliations getAuthorsAffiliation(Key key,
 			   String affFirstString,
 			   String country,
@@ -2309,30 +2504,30 @@ public class InspecDocBuilder
 			   String affString1,
 			   String dataFormat) throws Exception
    {
-	
+
 		StringBuffer affBuffer = new StringBuffer();
 		if(affString == null || affString.trim().equals(""))
 		{
-			if(affFirstString != null && 
+			if(affFirstString != null &&
 					!affFirstString.trim().equals(""))
-			{								
+			{
 		        if(country != null)
-		        {		        
+		        {
 		        	affFirstString=affFirstString.concat(BdParser.IDDELIMITER).concat(country);
 		        }
-		        affBuffer.append(affFirstString);				
-			}			
+		        affBuffer.append(affFirstString);
+			}
 		}
 		if (affString != null)
 		{
 			affBuffer.append(affString);
 		}
-		
+
 		if(affString1 != null)
 		{
 			affBuffer.append(affString1);
 		}
-		
+
 		if(affBuffer.length()>0)
 		{
 			List affList = new ArrayList();
@@ -2366,11 +2561,11 @@ public class InspecDocBuilder
 		}
 		return null;
 	}
-	
+
 
 	private List getContributors(Key key,
 			String authorString,
-			String authorString1, 
+			String authorString1,
 			String dataFormat,
 			String affiliations,
 			String FirstAuAffiliations)
@@ -2402,9 +2597,9 @@ public class InspecDocBuilder
 						authorNames.add(new Contributor(key,
 														auDisplayName));
 					}
-					else if((affiliations != null && 
+					else if((affiliations != null &&
 							!affiliations.trim().equals("")) ||
-							(FirstAuAffiliations != null && 
+							(FirstAuAffiliations != null &&
 							!FirstAuAffiliations.trim().equals("")))
 					{
 						authorNames.add(new Contributor(key,
