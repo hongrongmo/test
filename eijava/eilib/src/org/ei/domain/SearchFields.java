@@ -83,10 +83,9 @@ public class SearchFields
 	public static SearchField IP = new SearchField("IP", "Int.patent classification");
 	public static SearchField CR = new SearchField("CR", "CAS registry number");
 	public static SearchField RO = new SearchField("RO", "Role");
-	
+
 	public static SearchField VO = new SearchField("VO", "Volume");
 	public static SearchField SU = new SearchField("SU", "Issue");
-
 
 
 
