@@ -19,17 +19,18 @@ public class CPXDataDictionary
     {
         return this.classCodes;
     }
-    	
+
     public String getTreatmentTitle(String mTreatmentCode)
     {
     	String treatmentcode = null;
-    	
+
     	if(treatmentCodes.containsKey(mTreatmentCode))
     	{
     		treatmentcode  = (String) treatmentCodes.get(mTreatmentCode);
     	}
-        return treatmentcode;       
-    }
+        return treatmentcode;
+	}
+
 
     public CPXDataDictionary()
     {
@@ -79,20 +80,20 @@ public class CPXDataDictionary
         classCodes.put("414","Masonry Materials");
         classCodes.put("414.1","Brickmaking");
         classCodes.put("414.2","Brick Materials");
-        classCodes.put("414.3","Mortar (Before , use code )");
+        classCodes.put("414.3","Mortar (Before , use code 412)");
         classCodes.put("415","Metals, Plastics, Wood and Other Structural Materials");
         classCodes.put("415.1","Metal Structural Materials");
         classCodes.put("415.2","Plastics Structural Materials");
         classCodes.put("415.3","Wood Structural Materials");
-        classCodes.put("415.4","Other Structural Materials");
+        classCodes.put("415.4","Structural Materials Other Than Metal, Plastics or Wood");
         classCodes.put("420","BUILDING MATERIALS PROPERTIES AND TESTING");
         classCodes.put("421","Strength of Building Materials; Mechanical Properties");
         classCodes.put("422","Strength of Building Materials; Test Equipment and Methods");
-        classCodes.put("422.1","Test Equipment");
-        classCodes.put("422.2","Test Methods");
+        classCodes.put("422.1"," Strength of Building Materials : Test Equipment");
+        classCodes.put("422.2"," Strength of Building Materials : Test Methods");
         classCodes.put("423","Non Mechanical Properties and Tests of Building Materials");
-        classCodes.put("423.1","Test Equipment");
-        classCodes.put("423.2","Test Methods");
+        classCodes.put("423.1"," Non Mechanical Properties of Building Materials: Test Equipment");
+        classCodes.put("423.2"," Non Mechanical Properties of Building Materials: Test Methods");
         classCodes.put("430","TRANSPORTATION");
         classCodes.put("431","Air Transportation");
         classCodes.put("431.1","Air Transportation, General");
@@ -190,7 +191,7 @@ public class CPXDataDictionary
         classCodes.put("481.1.1","Geomorphology");
         classCodes.put("481.2","Geochemistry");
         classCodes.put("481.3","Geophysics");
-        classCodes.put("481.1.2","Petrology (Before , use code )");
+        classCodes.put("481.1.2","Petrology (Before , use code 482)");
         classCodes.put("481.3.1","Geothermal Phenomena");
         classCodes.put("481.4","Geophysical Prospecting");
         classCodes.put("481.3.2","Earth Magnetism and Terrestrial Electricity");
@@ -237,8 +238,8 @@ public class CPXDataDictionary
         classCodes.put("512.2","Natural Gas Deposits");
         classCodes.put("512.1.1","Oil Fields");
         classCodes.put("512.2.1","Natural Gas Fields");
-        classCodes.put("512.1.2","Development Operations");
-        classCodes.put("512.2.2","Development Operations");
+        classCodes.put("512.1.2"," Petroleum Deposits : Development Operations");
+        classCodes.put("512.2.2"," Natural Gas Deposits: Development Operations");
         classCodes.put("513","Petroleum Refining");
         classCodes.put("513.1","Petroleum Refining, General");
         classCodes.put("513.2","Petroleum Refineries");
@@ -342,7 +343,7 @@ public class CPXDataDictionary
         classCodes.put("549","Nonferrous Metals and Alloys");
         classCodes.put("549.1","Alkali Metals");
         classCodes.put("549.2","Alkaline Earth Metals");
-        classCodes.put("549.3","Others, including Bismuth, Boron, Cadmium, Cobalt, Mercury, Niobium, Selenium, Silicon, Tellurium and Zirconium");
+        classCodes.put("549.3"," Nonferrous Metals and Alloys excluding Alkali and Alkaline Earth Metals");
         classCodes.put("600","MECHANICAL ENGINEERING, GENERAL");
         classCodes.put("601","Mechanical Design");
         classCodes.put("601.1","Mechanical Devices");
@@ -390,7 +391,7 @@ public class CPXDataDictionary
         classCodes.put("615.5","Ocean Thermal Energy");
         classCodes.put("615.6","Wave Energy");
         classCodes.put("615.7","Thermionic Power");
-        classCodes.put("615.8","Wind Power (Before , use code )");
+        classCodes.put("615.8","Wind Power (Before , use code 611 )");
         classCodes.put("616","Heat Exchangers");
         classCodes.put("616.1","Heat Exchange Equipment and Components");
         classCodes.put("616.2","Heat Exchanger Applications");
@@ -522,7 +523,7 @@ public class CPXDataDictionary
         classCodes.put("674.1","Small Marine Craft");
         classCodes.put("674.2","Marine Drilling Rigs and Platforms");
         classCodes.put("675","Marine Engineering");
-        classCodes.put("675.1","Ship Propulsion (Before , use code )");
+        classCodes.put("675.1","Ship Propulsion (Before , use code 671)");
         classCodes.put("680","RAILROAD ENGINEERING");
         classCodes.put("681","Railway Plant and Structures");
         classCodes.put("681.1","Railway Plant and Structures, General");
@@ -544,7 +545,7 @@ public class CPXDataDictionary
         classCodes.put("693.1","Cranes");
         classCodes.put("693.2","Derricks");
         classCodes.put("694","Packaging");
-        classCodes.put("694.1","Packaging");
+        classCodes.put("694.1","Packaging, General");
         classCodes.put("694.1.1","Packaging, Wrapping and Materials Handling (Using paper products)");
         classCodes.put("694.2","Packaging Materials");
         classCodes.put("694.2.1","Paper Materials");
@@ -564,7 +565,7 @@ public class CPXDataDictionary
         classCodes.put("702.2","Fuel Cells");
         classCodes.put("702.3","Solar Cells");
         classCodes.put("702.1.2","Secondary Batteries");
-        classCodes.put("702.4","Other Direct Energy Converters");
+        classCodes.put("702.4"," Direct Energy Converters Other Than Batteries, Fuel or Solar Cells");
         classCodes.put("703","Electric Circuits");
         classCodes.put("703.1","Electric Networks");
         classCodes.put("703.2","Electric Filters");
@@ -612,7 +613,7 @@ public class CPXDataDictionary
         classCodes.put("713.2","Oscillators");
         classCodes.put("713.3","Modulators, Demodulators, Limiters, Discriminators, Mixers");
         classCodes.put("713.4","Pulse Circuits");
-        classCodes.put("713.5","Other Electronic Circuits");
+        classCodes.put("713.5","Electronic Circuits Other Than Amplifiers, Oscillators, Modulators, Limiters, Discriminators or Mixers");
         classCodes.put("714","Electronic Components and Tubes");
         classCodes.put("714.1","Electron Tubes");
         classCodes.put("714.2","Semiconductor Devices and Integrated Circuits");
@@ -688,7 +689,7 @@ public class CPXDataDictionary
         classCodes.put("744.4","Solid State Lasers");
         classCodes.put("744.5","Free Electron Lasers");
         classCodes.put("744.4.1","Semiconductor Lasers");
-        classCodes.put("744.6","Other Lasers");
+        classCodes.put("744.6","Lasers Other Than Gas, Liquid, Solid State or Semiconductor");
         classCodes.put("744.7","Laser Components");
         classCodes.put("744.8","Laser Beam Interactions");
         classCodes.put("744.9","Laser Applications");
@@ -946,7 +947,7 @@ public class CPXDataDictionary
 
 
     }
-    
+
     public Hashtable getAuthorityCodes()
     {
     	return null;
