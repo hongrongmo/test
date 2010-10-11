@@ -80,7 +80,7 @@ public class CPXDataDictionary
         classCodes.put("414","Masonry Materials");
         classCodes.put("414.1","Brickmaking");
         classCodes.put("414.2","Brick Materials");
-        classCodes.put("414.3","Mortar (Before , use code 412)");
+        classCodes.put("414.3","Mortar (Before 1993, use code 412)");
         classCodes.put("415","Metals, Plastics, Wood and Other Structural Materials");
         classCodes.put("415.1","Metal Structural Materials");
         classCodes.put("415.2","Plastics Structural Materials");
@@ -191,7 +191,7 @@ public class CPXDataDictionary
         classCodes.put("481.1.1","Geomorphology");
         classCodes.put("481.2","Geochemistry");
         classCodes.put("481.3","Geophysics");
-        classCodes.put("481.1.2","Petrology (Before , use code 482)");
+        classCodes.put("481.1.2","Petrology (Before 1993, use code 482)");
         classCodes.put("481.3.1","Geothermal Phenomena");
         classCodes.put("481.4","Geophysical Prospecting");
         classCodes.put("481.3.2","Earth Magnetism and Terrestrial Electricity");
@@ -391,7 +391,7 @@ public class CPXDataDictionary
         classCodes.put("615.5","Ocean Thermal Energy");
         classCodes.put("615.6","Wave Energy");
         classCodes.put("615.7","Thermionic Power");
-        classCodes.put("615.8","Wind Power (Before , use code 611 )");
+        classCodes.put("615.8","Wind Power (Before 1993, use code 611 )");
         classCodes.put("616","Heat Exchangers");
         classCodes.put("616.1","Heat Exchange Equipment and Components");
         classCodes.put("616.2","Heat Exchanger Applications");
@@ -523,7 +523,7 @@ public class CPXDataDictionary
         classCodes.put("674.1","Small Marine Craft");
         classCodes.put("674.2","Marine Drilling Rigs and Platforms");
         classCodes.put("675","Marine Engineering");
-        classCodes.put("675.1","Ship Propulsion (Before , use code 671)");
+        classCodes.put("675.1","Ship Propulsion (Before 1993, use code 671)");
         classCodes.put("680","RAILROAD ENGINEERING");
         classCodes.put("681","Railway Plant and Structures");
         classCodes.put("681.1","Railway Plant and Structures, General");
