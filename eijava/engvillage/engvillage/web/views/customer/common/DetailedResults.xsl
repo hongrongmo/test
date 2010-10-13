@@ -20,7 +20,7 @@
 >
 
     <xsl:output method="html" indent="no"/>
-    <xsl:strip-space elements="html:* xsl:*" />
+    <xsl:strip-space elements="html:* xsl:* AN" />
 
     <xsl:template match="EI-DOCUMENT">	
         <table border="0" width="99%" cellspacing="0" cellpadding="0">      
@@ -49,15 +49,28 @@
 	        </xsl:if>
 	        </td>
 	        <td valign="top" width="10"><img src="/engresources/images/s.gif" border="0" width="10"/></td>
-	        <td valign="top" align="left">
-	        <span CLASS="MedBlackText">
-	          <xsl:value-of select="."/>	 
-	             <xsl:if test="$DOCTYPE='Article in Press'">
-		 	<span CLASS="MedBlackText"><br/><img src="/engresources/images/btn_aip.gif" border="0" style="vertical-align:bottom" title="Articles not published yet, but available online"/><xsl:text> Article in Press</xsl:text></span>
-       		     </xsl:if>  
-	        </span>
-	        <br/><br/>
-	        </td>
+	        
+	        
+	        <xsl:choose>
+			<xsl:when test="$DOCTYPE='Article in Press'">
+			<td valign="top" align="left">
+			<table border='0' cellspacing="0" cellpadding="0">
+			<tr>
+			   <td align='left' valign='top'><span style="vertical-align:top" CLASS="MedBlackText"><xsl:value-of select="."/></span><img src="/engresources/images/s.gif" width='10' border="0"/>	         
+			   <a href="javascript:window.open('/engresources/aip_help.html','newwind','width=310,height=300,scrollbars=yes,resizable,statusbar=yes');void('');"><img src="/engresources/images/i3.gif" border="0" style="vertical-align:top" /></a></td>
+			</tr>
+			<tr>
+			   <td  colspan='2' align='left' valign='top' height='25'><img src="/engresources/images/btn_aip.gif" border="0" style="vertical-align:top" title="Articles not published yet, but available online"/><span CLASS="MedBlackText" style="vertical-align:text-top"><xsl:text> Article in Press</xsl:text></span></td>
+			</tr>
+			</table>
+			 </td>	
+			</xsl:when>  
+			<xsl:otherwise>
+			   <td><span CLASS="MedBlackText"><xsl:value-of select="."/></span></td>	
+			</xsl:otherwise>
+	        </xsl:choose>
+	             
+	               
       </tr>    
     </xsl:template>
     <xsl:template match="OA|P|RS|RPG"> <!-- Other Affiliation / Publisher / Sponsor / Research Program -->
@@ -120,15 +133,8 @@
         <tr>
             <td valign="top" ><img src="/engresources/images/s.gif" border="0"/></td>
             <td xsl:use-attribute-sets="r-align-label">
-            <xsl:if test="string(@label)">
-                <xsl:choose>
-			<xsl:when test="'IP'=@label">
-				<span CLASS="MedBlackText"><b><img src="/engresources/images/btn_aip.gif" border="0" /><xsl:value-of select="@label"/>:</b></span>
-			</xsl:when>
-			<xsl:otherwise>
-				<span CLASS="MedBlackText"><b><xsl:value-of select="@label"/>:</b></span>
-			</xsl:otherwise>
-                </xsl:choose>
+            <xsl:if test="string(@label)">              
+		<span CLASS="MedBlackText"><b><xsl:value-of select="@label"/>:</b></span>
             </xsl:if>
             </td>
             <td valign="top" width="10"><img src="/engresources/images/s.gif" border="0" width="10"/></td>
