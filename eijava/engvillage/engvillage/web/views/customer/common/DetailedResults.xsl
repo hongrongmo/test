@@ -66,7 +66,7 @@
 			 </td>	
 			</xsl:when>  
 			<xsl:otherwise>
-			   <td><span CLASS="MedBlackText"><xsl:value-of select="."/></span></td>	
+			   <td height='25' valign="top"><span CLASS="MedBlackText"><xsl:value-of select="."/></span></td>	
 			</xsl:otherwise>
 	        </xsl:choose>
 	             
