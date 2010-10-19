@@ -101,16 +101,17 @@ function refreshCategories(){
 	}
 		
 	}
-		frm.yr.options[9] = new Option("2001","2001");
-		frm.yr.options[8] = new Option("2002","2002");
-		frm.yr.options[7] = new Option("2003","2003");
-		frm.yr.options[6] = new Option("2004","2004");
-		frm.yr.options[5] = new Option("2005","2005");
-		frm.yr.options[4] = new Option("2006","2006");
-		frm.yr.options[3] = new Option("2007","2007");
-		frm.yr.options[2] = new Option("2008","2008");
-		frm.yr.options[1] = new Option("2009","2009");
-		frm.yr.options[0] = new Option("2010","2010");
+		frm.yr.options[10] = new Option("2001","2001");
+		frm.yr.options[9] = new Option("2002","2002");
+		frm.yr.options[8] = new Option("2003","2003");
+		frm.yr.options[7] = new Option("2004","2004");
+		frm.yr.options[6] = new Option("2005","2005");
+		frm.yr.options[5] = new Option("2006","2006");
+		frm.yr.options[4] = new Option("2007","2007");
+		frm.yr.options[3] = new Option("2008","2008");
+		frm.yr.options[2] = new Option("2009","2009");
+		frm.yr.options[1] = new Option("2010","2010");
+		frm.yr.options[0] = new Option("2011","2011");
 		frm.yr.selectedIndex = 0;
 }
 function refreshYears(){
@@ -128,16 +129,17 @@ function refreshYears(){
 		frm.yr.options[0] = new Option("2002","2002");
 		frm.yr.selectedIndex = 0;
 	} else {
-		frm.yr.options[8] = new Option("2001","2001");
-		frm.yr.options[7] = new Option("2002","2002");
-		frm.yr.options[6] = new Option("2003","2003");
-		frm.yr.options[5] = new Option("2004","2004");
-		frm.yr.options[4] = new Option("2005","2005");
-		frm.yr.options[3] = new Option("2006","2006");
-		frm.yr.options[2] = new Option("2007","2007");
-		frm.yr.options[1] = new Option("2008","2008");
-		frm.yr.options[0] = new Option("2009","2009");
-		frm.yr.options[0] = new Option("2010","2010");
+		frm.yr.options[10] = new Option("2001","2001");
+		frm.yr.options[9] = new Option("2002","2002");
+		frm.yr.options[8] = new Option("2003","2003");
+		frm.yr.options[7] = new Option("2004","2004");
+		frm.yr.options[6] = new Option("2005","2005");
+		frm.yr.options[5] = new Option("2006","2006");
+		frm.yr.options[4] = new Option("2007","2007");
+		frm.yr.options[3] = new Option("2008","2008");
+		frm.yr.options[2] = new Option("2009","2009");
+		frm.yr.options[1] = new Option("2010","2010");
+		frm.yr.options[0] = new Option("2011","2011");
 		frm.yr.selectedIndex = selectedyr;
 	}
 	
