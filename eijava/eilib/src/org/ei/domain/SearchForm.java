@@ -7,7 +7,7 @@ import java.util.List;
 
 public class SearchForm {
 
-    public static final int ENDYEAR = 2010;
+    public static final int ENDYEAR = 2011;
 
 
     public static Map getDiscipline(int selecteddbMask) {
