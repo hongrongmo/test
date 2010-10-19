@@ -577,7 +577,7 @@ public class EptCombiner extends Combiner {
         // extract the whole thing
     	if(loadNumber == 0)
     	{
-			for(int yearIndex = 1919; yearIndex <= 2010; yearIndex++)
+			for(int yearIndex = 1919; yearIndex <= 2011; yearIndex++)
 			{
 				System.out.println("Processing year " + yearIndex + "...");
 				c = new EptCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,"ept", environment));
