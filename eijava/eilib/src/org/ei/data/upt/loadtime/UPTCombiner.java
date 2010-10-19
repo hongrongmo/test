@@ -1498,7 +1498,7 @@ public class UPTCombiner extends CombinerTimestamp {
             else if(loadNumber == 0 && timestamp < 0)
             {
             	//extract all by year
-            	for(int yearIndex = 1998; yearIndex <= 2010; yearIndex++)
+            	for(int yearIndex = 1998; yearIndex <= 2011; yearIndex++)
                 {
 
 	              	System.out.println("Processing year " + yearIndex + "...");
