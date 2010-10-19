@@ -21,7 +21,7 @@
         <xsl:value-of select="//SESSION-DATA/SEARCH-PHRASE/SEARCH-PHRASE-1"/>
     </xsl:variable>
 
-    <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/ExpertSearchForm_V7.js"/>
+    <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/ExpertSearchForm_V15.js"/>
     <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/RemoteDbLink_V5.js"/>
     <SCRIPT LANGUAGE="Javascript" SRC="/engresources/js/Robohelp.js"/>
 
