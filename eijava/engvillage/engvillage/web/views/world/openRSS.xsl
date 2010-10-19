@@ -51,7 +51,7 @@
       <xsl:text>CID=expertSearchCitationFormat</xsl:text>
       <xsl:text>&amp;yearselect=yearrange&amp;SYSTEM_PT=t</xsl:text>
       <xsl:text>&amp;startYear=1969</xsl:text>
-      <xsl:text>&amp;endYear=2010</xsl:text>
+      <xsl:text>&amp;endYear=2011</xsl:text>
       <xsl:text>&amp;DOCINDEX=1</xsl:text>
       <xsl:text>&amp;format=quickSearchDetailedFormat</xsl:text>
       <xsl:text>&amp;database=</xsl:text>
