@@ -192,13 +192,13 @@ public class BulletinGUI
         if (category != null && !category.equalsIgnoreCase("polymers"))
         {
 
-            lbYear.setOptions(new String[] {"2010", "2009","2008", "2007", "2006", "2005", "2004", "2003","2002","2001" });
-            lbYear.setValues(new String[] {"2010", "2009","2008", "2007", "2006", "2005", "2004", "2003","2002", "2001" });
+            lbYear.setOptions(new String[] {"2011", "2010", "2009","2008", "2007", "2006", "2005", "2004", "2003","2002","2001" });
+            lbYear.setValues(new String[] {"2011", "2010", "2009","2008", "2007", "2006", "2005", "2004", "2003","2002", "2001" });
 
         }
         else
         {
-            lbYear.setOptions(new String[] { "2002", "2001" });
+            lbYear.setOptions(new String[] {"2002", "2001" });
             lbYear.setValues(new String[] { "2002", "2001" });
 
         }
@@ -414,9 +414,9 @@ public class BulletinGUI
 
         lbYear.setName("yr");
 
-        lbYear.setOptions(new String[] {"2010", "2009","2008", "2007", "2006", "2005", "2004", "2003","2002", "2001"});
-        lbYear.setValues(new String[] {"2010", "2009","2008", "2007", "2006", "2005", "2004", "2003","2002", "2001"});
-        lbYear.setDefaultChoice("2010");
+        lbYear.setOptions(new String[] {"2011", "2010", "2009","2008", "2007", "2006", "2005", "2004", "2003","2002", "2001"});
+        lbYear.setValues(new String[] {"2011", "2010", "2009","2008", "2007", "2006", "2005", "2004", "2003","2002", "2001"});
+        lbYear.setDefaultChoice("2011");
         return lbYear.render();
 
     }
