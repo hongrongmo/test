@@ -80,7 +80,7 @@ public class NTISCombiner
     	// extract the whole thing
     	else if(loadNumber == 0)
     	{
-      		for(int yearIndex = 1964; yearIndex <= 2010; yearIndex++)
+      		for(int yearIndex = 1964; yearIndex <= 2011; yearIndex++)
       		{
     			System.out.println("Processing year " + yearIndex + "...");
       	  		// create  a new writer so we can see the loadNumber/yearNumber in the filename
