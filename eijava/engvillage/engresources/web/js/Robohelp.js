@@ -387,7 +387,7 @@ function makeUrl(strUrl)
 	{
 		newWin.close();
 	}
-	strUrl = "/EngineeringVillageHelp/Webhelp/Engineering_Village_Help.htm#" + strUrl;
+	strUrl = "/engresources/EngineeringVillageHelp/Webhelp/Engineering_Village_Help.htm#" + strUrl;
 	var w_left = (screen.width/4);
 	var w_top = (screen.height/4);
 	var w_width = 700;
