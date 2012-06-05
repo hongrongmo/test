@@ -24,6 +24,7 @@ public class AthensService extends HttpServlet
 
     private ClientConfiguration athensConf;
     private String dspid;
+
     private String[] resources = new String[1];
     private String athensBaseURL;
     private String redirURL;
