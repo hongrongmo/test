@@ -4,12 +4,10 @@
   <property name="javadoc.home"   value="javadoc"/>
   <property name="classes.home"   value="classes"/>
 
+	<property name="env.CATALINA_HOME" value="C:\\apache-tomcat-7.0.29"/>
 
-    <property file="../engvillage/${properties}.properties"/>
-
-
-  <fileset id="appserver-jars" dir="${env.CATALINA_HOME}/common/lib/">
-    <include name="**/servlet-api.jar"/>
+  <fileset id="appserver-jars" dir="${env.CATALINA_HOME}/lib/">
+    <include name="**/servlet.jar"/>
   </fileset>
 
   <fileset id="ext-jars" dir="${basedir}/../ext/">
@@ -21,14 +19,15 @@
     <include name="**/commons-logging.jar"/>
     <include name="**/dsapi-dist.jar"/>
     <include name="**/iText-2.1.4.jar"/>
+    <include name="**/tagsoup-1.2.1.jar"/>
 <!--    <include name="**/jaxen-jdom.jar"/> -->
 <!--    <include name="**/jaxen-core.jar"/> -->
     <include name="**/jcommon-1.0.0.jar"/>
     <include name="**/jdom.jar"/>
     <include name="**/jfreechart-1.0.0.jar"/>
     <include name="**/lucene.jar"/>
-    <include name="**/mail.jar"/> 
-  <!--  <include name="**/mailapi.jar"/>-->
+    <include name="**/mail.jar"/>
+    <include name="**/mailapi.jar"/>
     <include name="**/ojdbc14.jar"/>
     <include name="**/oro.jar"/>
     <include name="**/saxon.jar"/>
@@ -36,6 +35,12 @@
     <include name="**/smtp.jar"/>
     <include name="**/xerces.jar"/>
     <include name="**/java_memcached-release_1.3.2.jar"/>
+    <include name="**/resolver.jar"/>
+    <include name="**/commons-dbcp-1.2.1.jar"/>
+    <include name="**/spring-2.5.4.jar"/>
+    <include name="**/commons-cli-1.1.jar"/>
+    <include name="**/log4j-1.2.11.jar"/>
+    <include name="**/commons-validator.jar"/>
   </fileset>
 
   <path id="project.classpath">
@@ -49,10 +54,14 @@
     <copy overwrite="yes" filtering="no" file="src/log4j.properties" todir="classes" />
   </target>
 
-	<patternset id="books.exclude">
-	  <exclude name="org/ei/data/books/tools/**"/>
-	  <exclude name="org/ei/data/books/tocs/*"/>
-	</patternset>
+  <patternset id="books.exclude">
+	<exclude name="org/ei/data/books/tools/**"/>
+	<exclude name="org/ei/data/books/tocs/*"/>
+	<!--<exclude name="org/ei/thesaurus/cpx/*"/>-->
+	<!--<exclude name="org/ei/thesaurus/ins/*"/>-->
+	<!--<exclude name="org/ei/thesaurus/georef/*"/>-->
+	<!--<exclude name="org/ei/thesaurus/ept/*"/>-->
+  </patternset>
 
 
   <target name="compile" depends="prepare">
