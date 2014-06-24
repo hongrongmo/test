@@ -1,0 +1,164 @@
+package org.ei.stripes.action.personalaccount;
+
+import net.sourceforge.stripes.action.DefaultHandler;
+import net.sourceforge.stripes.action.DontValidate;
+import net.sourceforge.stripes.action.ForwardResolution;
+import net.sourceforge.stripes.action.HandlesEvent;
+import net.sourceforge.stripes.action.Resolution;
+import net.sourceforge.stripes.action.StreamingResolution;
+import net.sourceforge.stripes.action.UrlBinding;
+
+import org.apache.commons.httpclient.HttpStatus;
+import org.apache.log4j.Logger;
+import org.ei.biz.security.IAccessControl;
+import org.ei.biz.security.ISecuredAction;
+import org.ei.biz.security.NoAuthAccessControl;
+import org.ei.domain.personalization.IEVWebUser;
+import org.ei.domain.personalization.UserPrefs;
+import org.ei.exception.InfrastructureException;
+import org.ei.session.UserSession;
+import org.ei.stripes.action.EVActionBean;
+
+@UrlBinding("/customer/userprefs.url")
+public class SaveUserPrefsAction extends EVActionBean implements ISecuredAction {
+    private final static Logger log4j = Logger.getLogger(SaveUserPrefsAction.class);
+
+    private UserPrefs userprefs;
+    private UserPrefs currentuserprefs;
+    private int resultsPerPage;
+    private String sortOrder;
+    private String dlOutput;
+    private String dlFormat;
+    private String highlight;
+    private boolean showPreview;
+
+    @Override
+    public IAccessControl getAccessControl() {
+        return new NoAuthAccessControl();
+
+    }
+
+    /**
+     * Default handler for generic reactivate request
+     *
+     * @return Resolution
+     * @throws Exception
+     */
+    @HandlesEvent("save")
+    @DontValidate
+    public Resolution saveUserPrefs() {
+        IEVWebUser user = getContext().getUserSession().getUser();
+        try{
+	        if (user.isIndividuallyAuthenticated()) {
+		        UserPrefs userPrefs = user.getUserPrefs();
+		
+		        userPrefs.setUserid(user.getWebUserId());
+		        userPrefs.setResultsPerPage(this.resultsPerPage);
+		        userPrefs.setDlOutput(this.dlOutput);
+		        userPrefs.setDlFormat(this.dlFormat);
+		        userPrefs.setSort(this.sortOrder);
+		        userPrefs.setShowPreview(this.showPreview);
+		        //userPrefs.setHighlight(this.highlight);
+		        userPrefs.save();
+		        user.setUserPrefs(userPrefs);
+		
+		        UserSession userSession = context.getUserSession();
+		        userSession.setRecordsPerPage(Integer.toString(userPrefs.getResultsPerPage()));
+		        context.updateUserSession(userSession);
+	        }else{
+	        	log4j.info("User is Not individually authenticated!");
+	        	getContext().getResponse().setStatus(HttpStatus.SC_BAD_REQUEST);
+	        	return new StreamingResolution("text", "");
+	        }
+        }catch(Exception e){
+        	log4j.error("User Preferences could not be saved!");
+        	e.printStackTrace();
+        	getContext().getResponse().setStatus(HttpStatus.SC_BAD_REQUEST);
+        	return new StreamingResolution("text", "");
+        }
+        setRoom(ROOM.blank);
+        
+
+        return new StreamingResolution("text", "");
+    }
+
+    /**
+     * default handler will just go to the editprefs.jsp
+     *
+     * @return
+     * @throws InfrastructureException
+     */
+    @DefaultHandler
+    public Resolution display() throws InfrastructureException {
+        IEVWebUser user = getContext().getUserSession().getUser();
+
+        if (user.isIndividuallyAuthenticated()) {
+            this.userprefs = user.getUserPrefs();
+            if (this.userprefs == null) {
+                this.userprefs = new UserPrefs(user.getWebUserId());
+                user.setUserPrefs(this.userprefs);
+            }
+        }
+
+        this.currentuserprefs = this.userprefs;
+
+        return new ForwardResolution("/WEB-INF/pages/customer/prefs/editprefs.jsp");
+    }
+
+    public int getResultsPerPage() {
+        return resultsPerPage;
+    }
+
+    public void setResultsPerPage(int resultsPerPage) {
+        this.resultsPerPage = resultsPerPage;
+    }
+
+    public String getDlOutput() {
+        return dlOutput;
+    }
+
+    public void setDlOutput(String dlOutput) {
+        this.dlOutput = dlOutput;
+    }
+
+    public String getDlFormat() {
+        return dlFormat;
+    }
+
+    public void setDlFormat(String dlFormat) {
+        this.dlFormat = dlFormat;
+    }
+
+    public boolean getShowPreview() {
+        return showPreview;
+    }
+
+    public void setShowPreview(boolean showPreview) {
+        this.showPreview = showPreview;
+    }
+
+    public String getSortOrder() {
+        return sortOrder;
+    }
+
+    public void setSortOrder(String sortOrder) {
+        this.sortOrder = sortOrder;
+    }
+
+    public UserPrefs getUserprefs() {
+        return userprefs;
+    }
+
+    public UserPrefs getCurrentuserprefs() {
+        return currentuserprefs;
+    }
+
+	public String getHighlight() {
+		return highlight;
+	}
+
+	public void setHighlight(String highlight) {
+		this.highlight = highlight;
+	}
+
+}

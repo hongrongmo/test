@@ -1,0 +1,210 @@
+<%@ page language="java" session="false" pageEncoding="UTF-8"%>
+<%@ include file="/WEB-INF/pages/include/taglibs.jsp" %>
+
+<%-- HEADER --%>
+<div id="header">
+	<div id="logoEV" aria-label="Engineering Village" role="banner">
+		<stripesext:link protocol="http" href="/home.url" title="Engineering Village - The information discovery platform of choice for the engineering community" ><img alt="Engineering Village - The information discovery platform of choice for the engineering community" src="/static/images/EV-logo.gif"/></stripesext:link>
+
+		</div>
+
+<%--  TMH removed on 5/18/2012
+	<div id="headerLink">
+		<div class="clearfix" id="suites">
+		<ul class="suites">
+			<li><a
+				title="Hub - SciVerse's integrated search"
+				href="http://www.hub.sciverse.com/"
+				target="_blank">Hub</a></li>
+			<li><a
+				title="ScienceDirect - The world's leading full-text scientific database"
+				href="http://www.sciencedirect.com"
+				target="_blank">ScienceDirect</a></li>
+			<li><a
+				title="Scopus - The largest abstract and citation database of research literature and quality web sources"
+				href="http://www.scopus.com"
+				target="_blank">Scopus</a></li>
+			<li><a class="last selected" title="Engineering Village">Engineering Village</a></li>
+		</ul>
+		</div>
+	</div>
+ --%>
+
+	<c:choose>
+		<c:when	test="${not empty actionBean.context.userSession.carsMetaData.headerContent && actionBean.showLoginBox}">
+        ${actionBean.context.userSession.carsMetaData.headerContent}
+        <script type="text/javascript">$("#loginBox").hide();</script>
+
+        </c:when>
+		<c:otherwise>
+		</c:otherwise>
+	</c:choose>
+
+<div class="clear"></div>
+<div class="navigation txtLarger clearfix" aria-label="Engineering Village main navigation" role="navigation" style="z-index:300;">
+
+<c:set var="startpage">${actionBean.context.userSession.user.startPage}</c:set>
+<c:if test="${empty searchlink}">
+<c:choose>
+    <c:when test="${'quickSearch' eq startpage}"><c:set var="searchlink">/search/quick.url<c:if test="${actionBean.database != null && 'null' ne actionBean.database}">?database=${actionBean.database}</c:if></c:set></c:when>
+    <c:when test="${'expertSearch' eq startpage}"><c:set var="searchlink">/search/expert.url<c:if test="${actionBean.database != null && 'null' ne actionBean.database}">?database=${actionBean.database}</c:if></c:set></c:when>
+    <c:when test="${'ebookSearch' eq startpage}"><c:set var="searchlink">/search/ebook.url<c:if test="${actionBean.database != null && 'null' ne actionBean.database}">?database=${actionBean.database}</c:if></c:set></c:when>
+    <c:when test="${'thesHome' eq startpage}"><c:set var="searchlink">/search/thesHome.url#init</c:set></c:when>
+    <c:otherwise><c:set var="searchlink">/search/quick.url?database=${actionBean.database}</c:set></c:otherwise>
+</c:choose>
+</c:if>
+
+<c:set var="userprefs" value="${actionBean.context.userSession.user.userPreferences}"/>
+
+<ul title="top level navigation" class="nav main" style="z-index:300;">
+	<li><stripesext:link title="Search Engineering Village" href="${searchlink}" class="${actionBean.roomSearch ? 'selected' : ''}" protocol="http">Search</stripesext:link></li>
+	<li><stripesext:link protocol="http" title="Selected Records - View your selected records"	href="/selected/citation.url?CID=citationSelectedSet&DATABASETYPE=${actionBean.database}&searchtype=TagSearch" class="${actionBean.roomSelectedRecords ? 'selected' : ''}">Selected records</stripesext:link></li>
+
+	<c:choose>
+	<c:when test="${actionBean.context.userSession.user.individuallyAuthenticated}">
+		<li<c:if test="${not userprefs.tag and not (userprefs.bulletin and userprefs.bulletinEnt)}"> class="last"</c:if> style="padding-top:0px;display:none;" id="settingDropDown" >
+			<ul  id="settingMenu" style="background:transparent;font-size:13px;">
+				<li style="z-index:300;">
+					<a href="" id="menu-2" style="font-size:14px;height: 20px;padding-top: 2px;" onclick="return false;" title="Set your personal settings">Settings</a>
+					<ul style="max-width:125px;z-index:300;">
+						<li style="z-index:300;"><a style="z-index:305;" href="" class="prefsOverlay" id="prefsOverlay" onclick="return false;" title="Set your preferences for default settings">My Preferences</a></li>
+						<li style="z-index:300;"><a style="z-index:305;" href="/personal/savesearch/display.url" title="Manage your saved searches and email alerts" id="saveSearchSetting">Alerts &amp; Searches</a></li>
+						<li style="z-index:300;"><a style="z-index:305;" href="/personal/folders/display.url?CID=viewPersonalFolders" id="folderSetting" title="View, rename or delete your folders">Folders</a></li>
+						<li style="z-index:300;"><a style="z-index:305;" title="Change your personal information and password" href="/customer/settings.url?database=${actionBean.database}" id="personalDetSetting">Personal Details</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</c:when>
+	<c:otherwise>
+		<li<c:if test="${not userprefs.tag and not (userprefs.bulletin and userprefs.bulletinEnt)}"> class="last"</c:if>><stripesext:link protocol="http" title="Set your personal settings" href="/customer/settings.url?database=${actionBean.database}" class="${actionBean.roomMySettings ? 'selected' : ''}">Settings</stripesext:link></li>
+	</c:otherwise>
+	</c:choose>
+	<c:if test="${userprefs.tag}"><li<c:if test="${not (userprefs.bulletin and userprefs.bulletinEnt)}"> class="last"</c:if>><stripesext:link protocol="http" title="Tags & Groups - View/Edit your tags and groups" href="/tagsgroups/display.url?searchtype=TagSearch" class="${actionBean.roomTagsGroups ? 'selected' : ''}">Tags &amp; Groups</stripesext:link></li></c:if>
+	<c:if test="${userprefs.bulletin and userprefs.bulletinEnt}"><li class="last"><stripesext:link protocol="http" title="Bulletins - View EnCompass bulletins" href="/bulletins/display.url" class="${actionBean.roomBulletins ? 'selected' : ''}">Bulletins</stripesext:link></li></c:if>
+</ul>
+
+<ul class="nav misc" id="helpMenuUL" style="padding-top:0px;display:none;">
+	<li class="${userprefs.reference ? '':'nodivider'}" style="padding:0px;">
+		<ul id="helpMenu" class="nav">
+			  <li>
+			    <a href="" id="menu-1" style="font-size:14px;height: 20px;padding-top: 2px;" onclick="return false;">Support</a>
+			    <ul>
+			      <li>
+					<c:choose>
+						<c:when test="${not empty actionBean.isActionBeanInstance  and  actionBean.searchtype == 'Book' and actionBean.CID ne 'bookSummary' and actionBean.CID ne 'pageDetailedFormat'}">
+							<a title="Help - Find an answer to your question"	id="menu-2" href="${actionBean.helpUrl}#Ebook_search_results.htm" class="helpurl">Help</a>
+						</c:when>
+						<c:when test="${actionBean.showpatentshelp}">
+								<a title="Help - Find an answer to your question"	id="menu-2" href="${actionBean.helpUrl}#Patent_search_results_work_with.htm" class="helpurl">Help</a>
+						</c:when>
+						<c:otherwise>
+							<a title="Help - Find an answer to your question" id="menu-2" href="${actionBean.helpUrl}#${actionBean.helpcontext}" class="helpurl">Help</a>
+						</c:otherwise>
+					 </c:choose>
+			      </li>
+			      <li><a title="Contact Us" href="${contactuslink}" id="menu-3" target="new">Contact</a></li>
+			      <li>
+			      <c:choose>
+			      		<c:when test="${actionBean.context.userSession.user.userPreferences.modalDialog}">
+			      			<a title="What's New in Engineering Village" href="" id="menu-4" class="whatsNewLink" onclick="return false;">What's New</a>
+			      		</c:when>
+			      		<c:otherwise>
+			      			<a title="What's New in Engineering Village" href="http://www.ei.org/releases" id="menu-4" class="whatsNewLink2" target="new">What's New</a>
+			      		</c:otherwise>
+			      </c:choose>
+
+			      </li>
+			    </ul>
+	  		  </li>
+		</ul>
+	</li>
+	<c:if test="${userprefs.reference}">
+		<li class="nodivider"><stripesext:link protocol="http" title="Ask an expert - Get help from an Engineer, Product Specialist, or Librarian" href="/askanexpert/display.url">Ask an expert</stripesext:link></li>
+
+	</c:if>
+	<c:choose>
+	<c:when test="${(not userprefs.clientCustomLogo) || (empty actionBean.customlogo)}">
+	<li class="nodivider" id='custom-logo-li' style='display:none'>
+		<div id="custom-logo-top" align="center">
+		</div>
+	</li>
+	</c:when>
+	<c:otherwise>
+	<li class="nodivider" id='custom-logo-li'>
+		<div id="custom-logo-top" align="center">
+		<a href="${actionBean.customlogo.customerurl}" title="${actionBean.customlogo.customerurl}"><img id="custom-logo-img" src="${actionBean.customlogo.imgsrc}" border="0"/></a>
+		</div>
+	</li>
+	</c:otherwise>
+	</c:choose>
+</ul>
+
+</div>
+
+</div>
+<div id="prefsSaved" style="display:none;text-align:left;"><img src="/static/images/ev_checkmark.png" style="padding-right:5px;width:20px;"/>Preferences Saved!</div>
+<div id="prefsNotSaved" style="display:none;text-align:left;"><img src="/static/images/No_results_found.png" style="padding-right:5px;width:20px;"/>Preferences Could Not Be Saved!</div>
+
+  <script>
+  $(function() {
+	  if($("#settingMenu").length > 0){
+		$("#settingMenu").menu({position:{my:'right+25 top+20'}, icons: { submenu: "ui-icon-triangle-1-s" }});
+		$("#settingDropDown").show();
+		//showTooltip(".settingMenu","We have Added New Settings!", "top-left", 4500, true);
+	  }
+    $( "#helpMenu" ).menu({position:{my:'right top+23'}, icons: { submenu: "ui-icon-triangle-1-s" }});
+    $("#helpMenuUL").show();
+
+
+
+    $(".whatsNewLink").click(function(){
+    	GALIBRARY.createWebEventWithLabel('Dialog Open', 'What\'s New', 'Support Dropdown');
+    	TINY.box.show({html:document.getElementById("modalmsg"),clickmaskclose:false,width:900,height:500,close:true,opacity:20,topsplit:3,closejs:function(){closeX();}});
+    	$("#menu-1").click(function(){return false;});
+    });
+
+   $(".prefsOverlay").click(function(){
+	   	GALIBRARY.createWebEventWithLabel('Dialog Open', 'Edit Preferences', 'Settings Dropdown');
+		TINY.box.show({url:'/customer/userprefs.url',clickmaskclose:false,width:400,height:390,close:true,opacity:20,topsplit:3});
+
+	});
+
+  });
+
+	function submitSavePrefsForm(){
+		$(".saved").hide();
+		var url = "/customer/userprefs.url?save=true&";
+		var params = "";
+		var hlight = "#";
+		$("#userPreferencesForm input:checked").each(function (){
+
+				if(params != ""){params += "&";}
+				params += $(this).attr("name") + "=" + $(this).val();
+				
+				
+		});
+		params += "&highlight=" + $("#hColor").val();
+		hlight += $("#hColor").val();
+		url += params;
+		GALIBRARY.createWebEventWithLabel('Preferences', 'Preferences Saved', params);
+
+		$.ajax({
+			url:url
+		}).success(function(data){
+			TINY.box.hide();
+			//change any highlight color on the fly
+			$(".hit").css("color", hlight);			
+			$("#prefsNotSaved").hide();
+			$("#prefsSaved").fadeIn("slow");
+		}).error(function(data){
+			TINY.box.hide();
+			$("#prefsSaved").hide();
+			$("#prefsNotSaved").fadeIn("slow");
+		});
+
+		return false;
+	}
+
+
+  </script>
