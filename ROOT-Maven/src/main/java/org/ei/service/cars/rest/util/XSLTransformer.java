@@ -34,7 +34,7 @@ import org.ei.session.UserPreferences;
 public class XSLTransformer {
     /** Dummy XML document for transforming XSL */
     public static final String DUMMY_DOCUMENT = XMLFormatter.XML_HEADER + "<document><nodata/></document>";
-    public static final String CARS_RESPONSE_MODIFIER_XSL_PATH = "/resources/common/cars/xslt/CarsResponseModifier.xsl";
+    public static final String CARS_RESPONSE_MODIFIER_XSL_PATH = "/common/cars/xslt/CarsResponseModifier.xsl";
 
     /**
      * This method will be used for creating xml structure
