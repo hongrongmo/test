@@ -5,13 +5,13 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 import javax.mail.MessagingException;
-import javax.mail.internet.AddressException;
 
 import org.ei.config.ConfigService;
 import org.ei.config.RuntimeProperties;
-import org.ei.email.EIMessage;
-import org.ei.email.EMail;
+import org.ei.email.SESEmail;
+import org.ei.email.SESMessage;
 import org.ei.exception.InfrastructureException;
+import org.ei.exception.ServiceException;
 import org.ei.exception.SystemErrorCodes;
 
 /**
@@ -31,10 +31,8 @@ import org.ei.exception.SystemErrorCodes;
  **/
 public class FeedbackComponent {
 
-	/**
-	 * EMail instance used to mail a feedback form
-	 **/
-	EMail mail;
+	
+	
 	RuntimeProperties eiProps;
 
 	/**
@@ -47,7 +45,6 @@ public class FeedbackComponent {
 	 * Initialize the component
 	 **/
 	public void init() throws MessagingException {
-		mail = EMail.getInstance();
 		try {
 			eiProps = ConfigService.getRuntimeProperties();
 		} catch (Exception e) {
@@ -55,24 +52,16 @@ public class FeedbackComponent {
 		}
 	}
 
-	/**
-	 * Build the EIMessage object from the elements of the feedback form.
-	 * 
-	 * @see org.ei.email.EIMessage;
-	 **/
-	private EIMessage buildEIMessage(FeedbackForm feedbackForm) throws AddressException {
 
-		EIMessage msg = new EIMessage();
-		msg.setMessageBody(getMessageBody(feedbackForm));
-		msg.setSubject(getMessageSubject(feedbackForm));
-		msg.setSender(EIMessage.DEFAULT_SENDER);
-		msg.setFrom(feedbackForm.getUserMailAddress());
-
-		msg.addTORecepients(getTORecepients());
-		msg.addCCRecepients(getCCRecepients());
-		msg.addBCCRecepients(getBCCRecepients());
-
-		return msg;
+	private SESMessage buildSESMessage(FeedbackForm feedbackForm) {
+		
+		SESMessage sesmessage = new SESMessage();
+		sesmessage.setMessage(getMessageSubject(feedbackForm), getMessageBody(feedbackForm), false);
+		sesmessage.setFrom(SESMessage.DEFAULT_SENDER);
+		List<String> ccList = getCCRecepients();
+		ccList.add(feedbackForm.getUserMailAddress());
+		sesmessage.setDestination(getTORecepients(), ccList, getBCCRecepients());
+		return sesmessage;
 	}
 
 	/**
@@ -93,14 +82,14 @@ public class FeedbackComponent {
 
 	/**
 	 * submits the feedback form as email
+	 * @throws ServiceException 
 	 * 
 	 * @parm feedbackForm The feedback form submitted by the user
 	 **/
-	public void submit(FeedbackForm feedbackForm) throws MessagingException {
+	public void submit(FeedbackForm feedbackForm) throws ServiceException {
 
-		EIMessage msg = buildEIMessage(feedbackForm);
-
-		mail.sendMessage(msg);
+		SESMessage sesmessage = buildSESMessage(feedbackForm);
+		SESEmail.getInstance().send(sesmessage);
 	}
 
 	/**
