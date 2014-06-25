@@ -43,7 +43,7 @@
 <c:if test="${not empty textzones and ((not empty textzones['OPTION1']) or (not empty textzones['OPTION2']) or (not empty textzones['OPTION3']) or (not empty textzones['OPTION4']) or (not empty textzones['OPTION5']))}">
     <div id="latestresources" class="sidebarbox" title="Latest Resources">
         <h2 class="sidebartitle">Latest Resources</h2>
-        <div class="padding5">As of April 1, eBook Search (Referex database) is only available on ScienceDirect. <a href="http://info.sciencedirect.com/referex" title="Learn more about Referex">Learn more.</a></div>
+        <!-- <div class="padding5">As of April 1, eBook Search (Referex database) is only available on ScienceDirect. <a href="http://info.sciencedirect.com/referex" title="Learn more about Referex">Learn more.</a></div> -->
         <div class="padding5">
         <ul id="latestresourceslist">
         <c:if test="${not empty textzones['OPTION1']}">
