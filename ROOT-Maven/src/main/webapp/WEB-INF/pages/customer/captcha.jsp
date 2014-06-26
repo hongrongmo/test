@@ -14,17 +14,17 @@
 		<div class="paddingT5">
 			<h2 class="txtLargest">Image Verification</h2>
 		</div>
-	
+
 		<stripes:form name="captcha_form" action="/captcha/verify.url" method="post">
-	
+
 		<stripes:hidden name="imagetextenc"/>
 		<stripes:hidden name="redirectenc"/>
-	
+
 		<div style="margin: 7px 0">
 		<p>We would like to	validate the actions you are taking in this Engineering Village	session.</p>
 		<p>In order to continue, please enter the text shown in the image below.</p>
 		</div>
-		
+
 		<stripes:errors>
 		     <stripes:errors-header><ul class="errors" style="padding: 0 0 7px 0"></stripes:errors-header>
 		     <li><stripes:individual-error/></li>
@@ -35,12 +35,12 @@
 		<p>
 			<img height="40" alt="" width="198" border="0"
 				src="/captcha/image.url?imagetextenc=${actionBean.imagetextenc}"/>&nbsp;&nbsp;
-				
+
 			<a	href="/captcha/display.url?redirectenc=${actionBean.imagetextenc}">
 			<img alt="Refresh" src="/static/images/refresh_captcha.gif" height="26" width="26" border="0"/>
 			</a>&nbsp;&nbsp;
 
-			<a	onclick="window.open('/captchaFAQ.html','_blank','width=400, height=300, left=' + (screen.width-450) + ', top=100');return false;" 
+			<a	onclick="window.open('/captchaFAQ.html','_blank','width=400, height=300, left=' + (screen.width-450) + ', top=100');return false;"
 				href="/captchaFAQ.html">
 					<img title="Help" height="27" width="27" border="0"
 					src="/static/images/help_captcha.gif"/>
@@ -48,20 +48,19 @@
 		</p>
 		<br/>
 		<p>
-		<stripes:text name="userentry" style="padding:0;margin:0;width:195px"/>&nbsp;&nbsp;	
-		<stripes:submit value="Verify" title="Verify" name="verify"/>	
+		<stripes:text name="userentry" style="padding:0;margin:0;width:195px"/>&nbsp;&nbsp;
+		<stripes:submit value="Verify" title="Verify" name="verify"/>
 		</p>
 		</div>
-		
+
 		<div style="margin: 7px 0">
 		<p>Please enter the text from the image and click Verify button</p>
-		<p>If you have any questions, please contact customer support at <a style="color: black"
-				href="mailto:${actionBean.supportemail}">${actionBean.supportemail}</a></p>
+		<p>If you have any questions, please <a title="Contact and support (opens in a new window)" href="${contactuslink}" class="evpopup" target="_blank">contact customer support</a></p>
 		</div>
 
 		</stripes:form>
 	</div>
 	</stripes:layout-component>
 
-	
+
 </stripes:layout-render>
