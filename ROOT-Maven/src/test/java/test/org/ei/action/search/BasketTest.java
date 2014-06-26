@@ -18,7 +18,7 @@ import test.org.ei.action.BaseActionTest;
 public class BasketTest extends BaseActionTest {
 	// 	 *     &lt;basketentry sno=num sessionid=id searchid=id docid=id handle=string database=string query=string count=num/&gt;
 	//http://www.engineeringvillage.com/search/doc/abstract.url?&pageType=quickSearch&searchtype=Quick&SEARCHID=M37896083140e2e71f917d17prod4con2&DOCINDEX=1&database=1&format=quickSearchAbstractFormat&tagscope=&displayPagination=yes
-	private static final String basketXML = "<basket><entry sno='1' handle='1' sessionid='12345678' searchid='M37896083140e2e71f917d17prod4con2' docid='cpx_6e3d60135a650a68fM7b512061377553' database='cpx' count='1' query='((stress) WN All fields), 1884-2013'/></basket>";
+	private static final String basketXML = "<basket><entry sno='1' handle='1' sessionid='12345678' searchid='M37896083140e2e71f917d17prod4con2' docid='cpx_6e3d60135a650a68fM7b512061377553' database='cpx' count='1' query='((stress) WN All fields), 1884-2014'/></basket>";
 	@Test
 	public void TestBasket() throws InfrastructureException, DatabaseConfigException, InvalidArgumentException {
         //
@@ -34,7 +34,7 @@ public class BasketTest extends BaseActionTest {
 		docID.setHitIndex(1);
 
 		Query query = new Query();
-		query.setDisplayQuery("((stress) WN All fields), 1884-2013");
+		query.setDisplayQuery("((stress) WN All fields), 1884-2014");
 		query.setID("M37896083140e2e71f917d17prod4con2");
 		query.setRecordCount("187000");
 

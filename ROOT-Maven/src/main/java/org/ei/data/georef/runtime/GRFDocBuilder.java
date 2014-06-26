@@ -36,8 +36,8 @@ public class GRFDocBuilder implements DocumentBuilder {
     public static final String AUDELIMITER = new String(new char[] { 30 });
     public static final String IDDELIMITER = new String(new char[] { 31 });
     public static final String GROUPDELIMITER = new String(new char[] { 02 });
-    public static String GRF_TEXT_COPYRIGHT = "GeoRef, Copyright 2013, American Geological Institute.";
-    public static String GRF_HTML_COPYRIGHT = "GeoRef, Copyright &copy; 2013, American Geological Institute.";
+    public static String GRF_TEXT_COPYRIGHT = "GeoRef, Copyright 2014, American Geological Institute.";
+    public static String GRF_HTML_COPYRIGHT = "GeoRef, Copyright &copy; 2014, American Geological Institute.";
     public static String PROVIDER_TEXT = "American Geological Institute";
 
     private static String queryPreview = "SELECT M_ID, ABSTRACT FROM GEOREF_MASTER WHERE M_ID IN ";

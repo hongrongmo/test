@@ -314,6 +314,7 @@
 	</properties>
 
 	<build>
+		<finalName>ROOT</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -364,8 +365,14 @@
 				</executions>
 			</plugin>
 
-
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<archiveClasses>true</archiveClasses>
+					<attachClasses>true</attachClasses>
+				</configuration>
+			</plugin>
 		</plugins>
-		<finalName>ROOT</finalName>
 	</build>
 </project>

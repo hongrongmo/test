@@ -17,8 +17,8 @@ import org.ei.exception.SystemErrorCodes;
 import org.ei.fulldoc.LinkingStrategy;
 
 public abstract class Database implements Comparable<Object> {
-	public static String DEFAULT_ELSEVIER_TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright 2013 Elsevier Inc.";
-	public static String DEFAULT_ELSEVIER_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2013 Elsevier Inc.";
+	public static String DEFAULT_ELSEVIER_TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright 2014 Elsevier Inc.";
+	public static String DEFAULT_ELSEVIER_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2014 Elsevier Inc.";
 
 	public List<SortField> getSortableFields() {
 		return Arrays.asList(new SortField[] { SortField.RELEVANCE, SortField.AUTHOR, SortField.YEAR });
