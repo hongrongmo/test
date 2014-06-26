@@ -56,8 +56,8 @@ import org.ei.exception.InfrastructureException;
 import org.ei.util.StringUtil;
 
 public class UPTDocBuilder implements DocumentBuilder, Keys {
-    public static String UPT_TEXT_COPYRIGHT = "Compilation and indexing terms, 2013 LexisNexis Univentio B.V.";
-    public static String UPT_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2013 LexisNexis Univentio B.V.";
+    public static String UPT_TEXT_COPYRIGHT = "Compilation and indexing terms, 2014 LexisNexis Univentio B.V.";
+    public static String UPT_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2014 LexisNexis Univentio B.V.";
 
     public static String PROVIDER = "Ei";
     public static final Key[] CITATION_KEYS = { Keys.DOCID, Keys.DOC_TYPE, Keys.KIND_DESCRIPTION, Keys.PATENT_NUMBER, Keys.TITLE, Keys.PUBLICATION_YEAR,
