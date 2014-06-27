@@ -313,6 +313,19 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
 
+	<distributionManagement>
+		<repository>
+			<id>nexus</id>
+			<name>nexus</name>
+			<url>http://atheneum/content/repositories/elsevier-releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus</id>
+			<name>nexus</name>
+			<url>http://atheneum/content/repositories/elsevier-snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
 	<build>
 		<finalName>ROOT</finalName>
 		<plugins>
