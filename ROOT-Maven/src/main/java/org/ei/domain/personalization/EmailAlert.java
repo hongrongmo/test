@@ -27,8 +27,8 @@ import org.ei.domain.FastSearchControl;
 import org.ei.domain.Page;
 import org.ei.domain.Query;
 import org.ei.domain.SearchResult;
-import org.ei.email.EIMessage;
-import org.ei.email.EMail;
+import org.ei.email.SESEmail;
+import org.ei.email.SESMessage;
 import org.ei.query.base.FastQueryWriter;
 import org.ei.util.StringUtil;
 
@@ -59,7 +59,7 @@ public class EmailAlert {
 
     private RuntimeProperties eiProps;
     private ConnectionBroker m_broker = null;
-    private EMail m_emailInstance = null;
+    private SESEmail m_emailInstance = null;
     private Perl5Util perlUtil = new Perl5Util();
 
     private int m_intHitCount = -1;
@@ -95,7 +95,7 @@ public class EmailAlert {
             eiProps = RuntimeProperties.getInstance(m_strPropertiesFile);
 
             // create an instance of EMail Object for sending email
-            m_emailInstance = EMail.getInstance();
+            m_emailInstance = SESEmail.getInstance();
 
             String sAlertSize = eiProps.getProperty("EMAILALERTSIZE");
             serverLocation = eiProps.getProperty("SERVERLOCATION");
@@ -139,7 +139,9 @@ public class EmailAlert {
         String displayString = null;
         String customerid = null;
         EmailAlertResultsManager rm = null;
-        EIMessage eimessage = null;
+        
+        SESMessage sesMessage = null;
+        
         Query queryObject = null;
         Page oPage = null;
 
@@ -244,11 +246,10 @@ public class EmailAlert {
                         displayString = rm.toDisplayFormat();
                         log.info("Message Body Size : " + displayString.length());
 
-                        // create an instance of eimessage and call the respective set methods
-                        eimessage = new EIMessage();
-                        eimessage.setFrom("<eiemailalert@elsevier.com>");
-                        eimessage.setSender("<eiemailalert@elsevier.com>");
-
+                        
+                        sesMessage = new SESMessage();
+                        sesMessage.setFrom("eiemailalert@elsevier.com");
+                        
                         String strEmailAddresses = StringUtil.EMPTY_STRING;
                         if (eiProps.getProperty("TESTRECEPIENTS") != null) {
                             strEmailAddresses = eiProps.getProperty("TESTRECEPIENTS");
@@ -266,20 +267,21 @@ public class EmailAlert {
                             strEmailAddresses = emailAddress.trim();
                         }
 
+                        List<String> toList = new ArrayList<String>();
+                        
                         if (strEmailAddresses != null) {
                             String[] torecepients = strEmailAddresses.split(",");
-                            eimessage.addTORecepients(Arrays.asList(torecepients));
+                            toList.addAll(Arrays.asList(torecepients));
                         }
+                        List<String> ccedList = new ArrayList<String>();
                         if (cclist != null) {
                             // ALWAYS use the 'originator' in the sender text when Cc:'ing
                             queryString.append("<SENDER>").append(emailAddress).append("</SENDER>");
 
                             String[] ccrecepients = cclist.split(",");
-                            eimessage.addCCRecepients(Arrays.asList(ccrecepients));
-                            // When testing the strEmailAddresses sometimes is a lsit
-                            // which was causing and error so changed to single sender emailAddress
-                            eimessage.setFrom("<eiemailalert@elsevier.com>");
-                            eimessage.setSender("<eiemailalert@elsevier.com>");
+                            ccedList.addAll(Arrays.asList(ccrecepients));
+                            
+                            sesMessage.setFrom("eiemailalert@elsevier.com");
                         }
 
                         // change taken from Query Object toXMLString
@@ -292,11 +294,9 @@ public class EmailAlert {
 
                         int MAX_SUBJECT_LINE = 40;
                         // take 22 chars for the "lead in", plus the first forty (or less) from the Display Query String
-                        eimessage.setSubject("Engineering Village Email Alert: "
-                            + ((strDisplayQuery.length() >= MAX_SUBJECT_LINE) ? strDisplayQuery.substring(0, MAX_SUBJECT_LINE) + "..." : strDisplayQuery));
-                        eimessage.setSentDate(new java.util.Date(System.currentTimeMillis()));
-                        eimessage.setContentType("text/html");
-                        eimessage.setMessageBody("\n \n" + displayString);
+                        sesMessage.setMessage("Engineering Village Email Alert: "
+                            + ((strDisplayQuery.length() >= MAX_SUBJECT_LINE) ? strDisplayQuery.substring(0, MAX_SUBJECT_LINE) + "..." : strDisplayQuery), "\n \n" + displayString, true);
+                        sesMessage.setDestination(toList, ccedList);
 
                         log.info("Sending email to " + strEmailAddresses);
                         if (cclist != null) {
@@ -308,9 +308,9 @@ public class EmailAlert {
                         // just directly send message
                         boolean blnSent = false;
                         if (eiProps.getProperty("TESTRECEPIENTS") != null) {
-                            blnSent = testEmailTransaction(userid, strEmailAddresses, queryObject.getID(), eimessage);
+                            blnSent = testEmailTransaction(userid, strEmailAddresses, queryObject.getID(), sesMessage);
                         } else {
-                            blnSent = emailTransaction(userid, emailAddress, queryObject.getID(), eimessage);
+                            blnSent = emailTransaction(userid, emailAddress, queryObject.getID(), sesMessage);
                         }
 
                         log.info((blnSent) ? "Success." : "Failed");
@@ -493,14 +493,14 @@ public class EmailAlert {
         return intCount;
     }
 
-    private boolean testEmailTransaction(String strUserId, String strUserEmail, String strQueryId, EIMessage eimessage) throws Exception {
+    private boolean testEmailTransaction(String strUserId, String strUserEmail, String strQueryId, SESMessage sesMessage) throws Exception {
 
         Connection con = null;
         PreparedStatement pstmt = null;
         boolean blnSuccess = false;
 
         try {
-            blnSuccess = emailTransaction(strUserId, strUserEmail, strQueryId, eimessage);
+            blnSuccess = emailTransaction(strUserId, strUserEmail, strQueryId, sesMessage);
 
             con = m_broker.getConnection(m_strPoolname);
 
@@ -546,7 +546,7 @@ public class EmailAlert {
 
     }
 
-    private boolean emailTransaction(String strUserId, String strUserEmail, String strQueryId, EIMessage eimessage) throws Exception {
+    private boolean emailTransaction(String strUserId, String strUserEmail, String strQueryId, SESMessage sesMessage) throws Exception {
         Connection con = null;
         ResultSet rset = null;
         PreparedStatement pstmt = null;
@@ -572,10 +572,10 @@ public class EmailAlert {
 
             } else {
                 blnSuccess = true;
-                if (eimessage != null) {
-                    // m_emailInstance.sendMultiPartMessage(eimessage);
+                if (sesMessage != null) {
+                    
                     // ZY 06/11/09: do not include s.gif in the email
-                    m_emailInstance.sendMessage(eimessage);
+                    m_emailInstance.send(sesMessage);
 
                     pstmt2 = con.prepareStatement("INSERT INTO EMAIL_ALERT_TRANS VALUES(?,?,?,?,SYSDATE)");
                     pstmt2.setString(1, strUserId);

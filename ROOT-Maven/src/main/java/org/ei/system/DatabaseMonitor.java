@@ -2,9 +2,13 @@ package org.ei.system;
 
 import java.sql.*;
 import java.io.*;
+import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.Calendar;
-import org.ei.email.*;
+import java.util.List;
+
+import org.ei.email.SESEmail;
+import org.ei.email.SESMessage;
 
 public class DatabaseMonitor
 {
@@ -196,15 +200,15 @@ public class DatabaseMonitor
 
         try
         {
-            EIMessage msg = new EIMessage();
-            msg.setMessageBody(sb.toString());
-            msg.setSubject("Database alert");
-            msg.setSender("eicustomersupport@elsevier.com");
-            msg.setFrom("eicustomersupport@elsevier.com");
-            msg.addTORecepient(emailAddress1);
-            msg.addTORecepient(emailAddress2);
-            msg.setSentDate(new java.util.Date(System.currentTimeMillis()));
-            EMail.getInstance().sendMessage(msg);
+        	
+        	SESMessage sesMessage = new SESMessage();
+        	sesMessage.setMessage("Database alert", sb.toString(), false);
+        	sesMessage.setFrom("eicustomersupport@elsevier.com");
+        	List<String> toList = new ArrayList<String>();
+        	toList.add(emailAddress1);
+        	toList.add(emailAddress2);
+        	sesMessage.setDestination(toList);
+        	SESEmail.getInstance().send(sesMessage);
        }
        catch(Exception e1)
        {
@@ -212,15 +216,14 @@ public class DatabaseMonitor
             try
             {
                 
-                EIMessage msg = new EIMessage();
-                msg.setMessageBody(sb.toString());
-                msg.setSubject("Database alert");
-                msg.setSender("eicustomersupport@elsevier.com");
-                msg.setFrom("eicustomersupport@elsevier.com");
-                msg.addTORecepient(emailAddress1);
-                msg.addTORecepient(emailAddress2);
-                msg.setSentDate(new java.util.Date(System.currentTimeMillis()));
-                EMail.getInstance().sendMessage(msg);
+            	SESMessage sesMessage = new SESMessage();
+            	sesMessage.setMessage("Database alert", sb.toString(), false);
+            	sesMessage.setFrom("eicustomersupport@elsevier.com");
+            	List<String> toList = new ArrayList<String>();
+            	toList.add(emailAddress1);
+            	toList.add(emailAddress2);
+            	sesMessage.setDestination(toList);
+            	SESEmail.getInstance().send(sesMessage);
             }
             catch(Exception e2)
             {
