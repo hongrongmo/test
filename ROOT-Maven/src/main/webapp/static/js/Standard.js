@@ -94,38 +94,39 @@ $(document).ready(function() {
 		if (helppop != null) helppop.focus();
 	});
 
-	function openTips(title, url){
-		if(!$("#searchTipsDialog").length){
-			console.log("none");
-			$("body").append('<div id="searchTipsDialog" >	<p id="searchTipsContent"></p></div>');
+	function openTips(title, url, id){
+		var elem = "#" + id + "Dialog";
+		if(!$(elem).length){
+			//console.log("none");
+			$("body").append('<div id="'+id+'Dialog" >	<p id="'+id+'Content"></p></div>');
 		}
-		$( "#searchTipsDialog" ).dialog({
+		$( elem ).dialog({
 			modal:false,
 			width:400,
 			height:300,
-			open:popTips(url),
+			open:popTips(url, "#" + id + "Content"),
 			title:title
 
 		});
 		return false;
 	}
 
-	function popTips(url){
+	function popTips(url, elem){
 		$.ajax({
 			url:url
 		}).success(function(data){
-			$("#searchTipsContent").html(data);
+			$(elem).html(data);
 
 		});
 
 	}
 	// Associate evpopup links with popup functionality
-//	$(".evpopup").click(function(ev){
-//		openTips($(this).text(), $(this).attr("href"));
-//		ev.preventDefault();
-//		ev.stopImmediatePropagation();
-//		return false;
-//	});
+	$(".evpopup").click(function(ev){
+		openTips($(this).text(), $(this).attr("href"), $(this).attr("id"));
+		ev.preventDefault();
+		ev.stopImmediatePropagation();
+		return false;
+	});
 
 	// Associate newsearch class links with function
 	// to check if there's a parent window
@@ -151,7 +152,10 @@ $(document).ready(function() {
 		}
 	});
 
-
+	$(".mosrchsourcesidebarli a").click(function(e) {
+		GALIBRARY.createWebEvent("External Link", $(this).text());
+		return false;
+	});
 });
 
 var timeouthref = "home.url";
