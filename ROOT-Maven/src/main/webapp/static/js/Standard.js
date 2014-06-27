@@ -121,7 +121,7 @@ $(document).ready(function() {
 
 	}
 //	 Associate evpopup links with popup functionality
-	$(".evpopup").click(function(ev){
+	$(".evdialog").click(function(ev){
 		openTips($(this).text(), $(this).attr("href"), $(this).attr("id"));
 		ev.preventDefault();
 		ev.stopImmediatePropagation();
