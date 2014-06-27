@@ -8,7 +8,7 @@
     xmlns:schar="java:org.ei.query.base.SpecialCharHandler"
     xmlns:hlight="java:org.ei.query.base.HitHighlightFinisher"
     xmlns:ctd="java:org.ei.domain.ClassTitleDisplay"
-    xmlns:pid="java:org.ei.util.GetPIDDescription" 
+    xmlns:pid="java:org.ei.util.GetPIDDescription"
     xmlns:rfx="java:org.ei.books.collections.ReferexCollection"
     xmlns:crlkup="java:org.ei.data.CRNLookup"
     xmlns:author="java:org.ei.stripes.view.Author"
@@ -20,7 +20,7 @@
 
 	<!-- Include abstract stylesheet -->
 	<xsl:include href="CitationResults.xsl"/>
-	
+
 	<xsl:variable name="BOOK-SORT-PARAMS">&amp;sortdir=up&amp;sort=stsort</xsl:variable>
 
 	<!-- *************************************************************** -->
@@ -41,7 +41,7 @@
 	   <xsl:value-of select="searchresult:addPatassigneelink($sr,$LINK)"/>
 	   </xsl:for-each>
 	</xsl:template>
-	
+
 	<xsl:template match="PASM">
 		<xsl:param name="sr"/>
 		<xsl:variable name="LABEL"><xsl:value-of select="@label" /></xsl:variable>
@@ -65,8 +65,8 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
-	
-	
+
+
 	<!-- ************************************************************ -->
 	<!-- Templates for various data pieces: DOI, Publisher, etc.      -->
 	<!-- ************************************************************ -->
@@ -75,7 +75,7 @@
 	    <xsl:variable name="abstractrecord" select="searchresult:getAbstractrecord($sr)"/>
 	   <xsl:value-of select="abstractrecord:setDoi($abstractrecord,text())"/>
 	</xsl:template>
-		
+
 	<xsl:template match="SN">
 		<xsl:param name="sr"/>
 	    <xsl:variable name="abstractrecord" select="searchresult:getAbstractrecord($sr)"/>
@@ -90,7 +90,7 @@
 		</xsl:variable>
 	   <xsl:value-of select="abstractrecord:setIssnlink($abstractrecord,$LINK)"/>
 	</xsl:template>
-		
+
 	<xsl:template match="CN">
 		<xsl:param name="sr"/>
 	    <xsl:variable name="abstractrecord" select="searchresult:getAbstractrecord($sr)"/>
@@ -105,7 +105,7 @@
 		</xsl:variable>
 	   <xsl:value-of select="abstractrecord:setCodenlink($abstractrecord,$LINK)"/>
 	</xsl:template>
-		
+
 	<xsl:template match="MI">
 		<xsl:param name="sr"/>
 	    <xsl:variable name="abstractrecord" select="searchresult:getAbstractrecord($sr)"/>
@@ -120,7 +120,7 @@
 		</xsl:variable>
 	   <xsl:value-of select="abstractrecord:setMilink($abstractrecord,$LINK)"/>
 	</xsl:template>
-		
+
 	<xsl:template match="E_ISSN">
 		<xsl:param name="sr"/>
 	    <xsl:variable name="abstractrecord" select="searchresult:getAbstractrecord($sr)"/>
@@ -138,18 +138,18 @@
 	<!-- Conference information -->
 	<xsl:template match="CF"> <!-- Conference name -->
 		<xsl:param name="sr"/>
-		<xsl:value-of select="searchresult:setCf($sr, text())" />
+		<xsl:value-of select="searchresult:setCf($sr, hlight:addMarkup(text()))" />
 	</xsl:template>
 	<xsl:template match="MD"> <!-- Conference date -->
 		<xsl:param name="sr"/>
-        <xsl:value-of select="searchresult:setMd($sr, text())" />
+        <xsl:value-of select="searchresult:setMd($sr, hlight:addMarkup(text()))" />
 	</xsl:template>
 	<xsl:template match="ML"> <!-- Conference location -->
 		<xsl:param name="sr"/>
-		<xsl:value-of select="searchresult:setMl($sr, text())" />
+		<xsl:value-of select="searchresult:setMl($sr, hlight:addMarkup(text()))" />
 	</xsl:template>
 
-		
+
 	<!-- ************************************************************ -->
 	<!-- Templates for abstract text                                  -->
 	<!-- ************************************************************ -->
@@ -191,7 +191,7 @@
 			<xsl:with-param name="FIELD">MH</xsl:with-param>
 			<xsl:with-param name="NAME"><xsl:value-of select="name(.)"/></xsl:with-param>
 		  <xsl:with-param name="TITLE">Search <xsl:value-of select="@label"/></xsl:with-param>
-		</xsl:call-template> 
+		</xsl:call-template>
 		</xsl:variable>
 
 		<xsl:variable name="abstractterm" select="abstractterm:new()"/>
@@ -201,7 +201,7 @@
 
 		<xsl:value-of select="abstractrecord:addTerm($abstractrecord, name(), $abstractterm)"></xsl:value-of>
 	</xsl:template>
-	
+
 	<xsl:template match="LOCS">
 		<xsl:param name="sr"/>
 	    <xsl:variable name="abstractrecord" select="searchresult:getAbstractrecord($sr)"/>
@@ -214,11 +214,11 @@
 				<xsl:when test="@ID"><xsl:value-of select="abstractterm:setValue($abstractterm,concat(@ID,' - ', text()))"/></xsl:when>
 				<xsl:otherwise><xsl:value-of select="abstractterm:setValue($abstractterm,text())"/></xsl:otherwise>
 			</xsl:choose>
-			
+
 			<xsl:value-of select="abstractrecord:addTerm($abstractrecord, 'LOCS', $abstractterm)"></xsl:value-of>
 		</xsl:for-each>
 	</xsl:template>
-	
+
 	<!-- ************************************************************ -->
 	<!-- Templates for controlled terms/Companies/Chemicals/
 		 Chemical Acronyms/SIC Codes/CAS registry number(s)/
@@ -238,7 +238,7 @@
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
-		
+
 		<xsl:choose>
 			<xsl:when test="$LABEL='NTIS price code'">
 				<xsl:value-of select="searchresult:addLabel($sr,'NTISP',$LABEL)"></xsl:value-of>
@@ -261,11 +261,11 @@
 				</xsl:apply-templates>
 			</xsl:otherwise>
 		</xsl:choose>
-		
-		
-		
+
+
+
 	</xsl:template>
-	
+
 	<!-- Controlled vocab terms -->
 	<xsl:template match="CV|MJS|BKY|CVN|CVA|CVP|CVMP|CVMA|CVMP|CLG">
 		<xsl:param name="key"/>
@@ -280,7 +280,7 @@
   		    <xsl:with-param name="TITLE">Search <xsl:value-of select="$label"/></xsl:with-param>
 		</xsl:call-template>
 			<xsl:if test="name()!='CV'">
-				<xsl:value-of select="crlkup:getName(normalize-space(text()))" disable-output-escaping="yes" /> 
+				<xsl:value-of select="crlkup:getName(normalize-space(text()))" disable-output-escaping="yes" />
 			</xsl:if>
 		</xsl:variable>
 
@@ -290,7 +290,7 @@
 		<xsl:value-of select="abstractterm:setSearchlink($abstractterm,normalize-space($LINK))"/>
 
 		<xsl:value-of select="abstractrecord:addTerm($abstractrecord, $key, $abstractterm)"></xsl:value-of>
-		
+
 	</xsl:template>
 
 	<!-- CAS Registry -->
@@ -355,7 +355,7 @@
 			<xsl:with-param name="abstractrecord" select="$abstractrecord"></xsl:with-param>
 		</xsl:apply-templates>
     </xsl:template>
-    
+
     <xsl:template match="RGI">
 		<xsl:param name="key" />
 		<xsl:param name="abstractrecord" />
@@ -367,7 +367,7 @@
 	            <xsl:with-param name="NAME"><xsl:value-of select="name(.)"/></xsl:with-param>
   		        <xsl:with-param name="TITLE">Search Regional terms</xsl:with-param>
 			</xsl:call-template>
-		</xsl:variable>		
+		</xsl:variable>
 
 		<xsl:variable name="abstractterm" select="abstractterm:new()"/>
 		<xsl:value-of select="abstractterm:setValue($abstractterm,text())"/>
@@ -376,7 +376,7 @@
 
 		<xsl:value-of select="abstractrecord:addTerm($abstractrecord, $key, $abstractterm)"></xsl:value-of>
     </xsl:template>
-	
+
 	<!-- ************************************************************ -->
 	<!-- Templates for uncontrolled terms                             -->
 	<!-- ************************************************************ -->
@@ -389,7 +389,7 @@
 			  <xsl:otherwise>Species term</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
-		
+
 		<xsl:value-of select="searchresult:addLabel($sr,name(),$LABEL)"></xsl:value-of>
 
 		<xsl:apply-templates>
@@ -397,14 +397,14 @@
 			<xsl:with-param name="abstractrecord" select="$abstractrecord"></xsl:with-param>
 			<xsl:with-param name="label" select="$LABEL"></xsl:with-param>
 		</xsl:apply-templates>
-		
+
 	</xsl:template>
-	
+
 	<xsl:template match="FL">
 		<xsl:param name="key"/>
 		<xsl:param name="abstractrecord"/>
 		<xsl:param name="label"/>
-		
+
 		<xsl:variable name="LINK">
 		<xsl:call-template name="LINK">
 			<xsl:with-param name="TERM"><xsl:value-of select="normalize-space(text())" /></xsl:with-param>
@@ -413,16 +413,16 @@
 			<xsl:with-param name="TITLE">Search <xsl:value-of select="$label"/></xsl:with-param>
 		</xsl:call-template>
 		</xsl:variable>
-		
+
 		<xsl:variable name="abstractterm" select="abstractterm:new()"/>
 		<xsl:value-of select="abstractterm:setValue($abstractterm,text())"/>
 		<xsl:value-of select="abstractterm:setField($abstractterm,name())"/>
 		<xsl:value-of select="abstractterm:setSearchlink($abstractterm,normalize-space($LINK))"/>
 
 		<xsl:value-of select="abstractrecord:addTerm($abstractrecord, $key, $abstractterm)"></xsl:value-of>
-		
+
 	</xsl:template>
-	
+
 	<!-- ************************************************************ -->
 	<!-- Templates for classification codes                           -->
 	<!-- ************************************************************ -->
@@ -446,7 +446,7 @@
 				<xsl:with-param name="TITLE">Search <xsl:value-of select="$label"/></xsl:with-param>
 		    </xsl:call-template>
 			</xsl:variable>
-			
+
 			<xsl:value-of select="abstractrecord:addClassificationcode($abstractrecord, $label, $ID, $TITLE, normalize-space($LINK))"></xsl:value-of>
 
 		</xsl:for-each>
@@ -466,8 +466,8 @@
 
 		</xsl:for-each>
 	</xsl:template>
-	
-	
+
+
 	<!-- ************************************************************ -->
 	<!-- Templates for IPC codes                                      -->
 	<!-- ************************************************************ -->
@@ -482,10 +482,10 @@
 				<xsl:when test="name(.)='PUCM'">US Classification</xsl:when>
 				<xsl:when test="name(.)='PECM'">ELCA Code</xsl:when>
 			   <xsl:otherwise><xsl:value-of select="@label"/></xsl:otherwise>
-				
+
 		    </xsl:choose>
 	    </xsl:variable>
-    
+
 		<xsl:value-of select="searchresult:addLabel($sr,name(),$LABEL)"></xsl:value-of>
 
 		<xsl:apply-templates>
@@ -494,7 +494,7 @@
 			<xsl:with-param name="label" select="$LABEL"></xsl:with-param>
 		</xsl:apply-templates>
 	</xsl:template>
-	
+
 	<xsl:template match="PID|PUC|PEC|PIDEP">
 		<xsl:param name="key" />
 		<xsl:param name="abstractrecord" />
@@ -508,14 +508,14 @@
 				<xsl:otherwise>SpLink</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
-		
+
 		<xsl:variable name="FIELDNAME">
 			<xsl:choose>
 				<xsl:when test="name()='PIDEP'">PID</xsl:when>
 				<xsl:otherwise><xsl:value-of select="name(.)"/></xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
-				
+
 		<xsl:variable name="IPC-DESCRIPTION">
         <xsl:choose>
       		<xsl:when test="not(ancestor::EI-DOCUMENT/DOC/DB/DBMASK='2')">
@@ -538,10 +538,10 @@
 				<xsl:with-param name="FIELD"><xsl:value-of select="$FIELDNAME"/></xsl:with-param>
 				<xsl:with-param name="CLASS"><xsl:value-of select="$CLASS"/></xsl:with-param>
 				<xsl:with-param name="ONMOUSEOVER"><xsl:value-of select="$MOUSEOVER"/></xsl:with-param>
-				<xsl:with-param name="TITLE">Search <xsl:value-of select="$label"/></xsl:with-param> 
+				<xsl:with-param name="TITLE">Search <xsl:value-of select="$label"/></xsl:with-param>
 			</xsl:call-template>
 		</xsl:variable>
-		
+
 		<xsl:variable name="abstractterm" select="abstractterm:new()"/>
 		<xsl:value-of select="abstractterm:setValue($abstractterm,text())"/>
 		<xsl:value-of select="abstractterm:setCssclass($abstractterm,$CLASS)"/>
@@ -552,26 +552,26 @@
 		<xsl:value-of select="abstractrecord:addTerm($abstractrecord, $key, $abstractterm)"></xsl:value-of>
 
 	</xsl:template>
-	
+
 	<!-- ************************************************************ -->
 	<!-- This template creates links for the various terms that       -->
 	<!-- may be present on the abstract/detailed page                 -->
 	<!-- ************************************************************ -->
 	<xsl:template name="LINK">
-	
+
 		<xsl:param name="TERM" />
 		<xsl:param name="FIELD" />
 		<xsl:param name="NAME" />
 		<xsl:param name="ONMOUSEOVER" />
 		<xsl:param name="CLASS" />
 		<xsl:param name="TITLE" />
-	
+
 		<xsl:variable name="ENCODED-SEARCH-TERM">
 			<xsl:value-of
 				select="java:encode(schar:preprocess(hlight:removeMarkup($TERM)))"
 				disable-output-escaping="yes" />
 		</xsl:variable>
-	
+
 		<xsl:variable name="SEARCH-FIELD">
 			<xsl:choose>
 				<xsl:when test="($FIELD='BKY')">KY</xsl:when>
@@ -581,7 +581,7 @@
 				<xsl:otherwise><xsl:value-of select="$FIELD" /></xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
-	
+
 		<xsl:variable name="THIS-DOCUMENT-DB">
 			<xsl:choose>
 				<xsl:when test="(ancestor::EI-DOCUMENT/DOC/DB/DBMASK)='32'">1</xsl:when>
@@ -589,7 +589,7 @@
 				<xsl:otherwise><xsl:value-of select="ancestor::EI-DOCUMENT/DOC/DB/DBMASK" /></xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
-	
+
 		<xsl:variable name="YEARRANGE">
 			<xsl:choose>
 				<xsl:when test="string(//SESSION-DATA/LASTFOURUPDATES)">
@@ -600,11 +600,11 @@
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
-	
+
 		<xsl:variable name="START-YEAR-PARAM">
 			<xsl:choose>
 				<xsl:when test="($FIELD='AU')"></xsl:when>
-				<!-- <xsl:when test="string(//SESSION-DATA/START-YEAR)">&amp;startYear=<xsl:value-of 
+				<!-- <xsl:when test="string(//SESSION-DATA/START-YEAR)">&amp;startYear=<xsl:value-of
 					select="//SESSION-DATA/START-YEAR"/></xsl:when> -->
 				<xsl:otherwise></xsl:otherwise>
 			</xsl:choose>
@@ -612,26 +612,26 @@
 		<xsl:variable name="END-YEAR-PARAM">
 			<xsl:choose>
 				<xsl:when test="($FIELD='AU')"></xsl:when>
-				<!-- <xsl:when test="string(//SESSION-DATA/END-YEAR)">&amp;endYear=<xsl:value-of 
+				<!-- <xsl:when test="string(//SESSION-DATA/END-YEAR)">&amp;endYear=<xsl:value-of
 					select="//SESSION-DATA/END-YEAR"/></xsl:when> -->
 				<xsl:otherwise></xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
-	
-		<!-- the variable $SEARCH-TYPE can be empty so string($SEARCH-TYPE) can 
+
+		<!-- the variable $SEARCH-TYPE can be empty so string($SEARCH-TYPE) can
 			be FALSE -->
 		<!-- when there is no search in the XML output -->
 		<!-- -->
-		<!-- //SEARCH-TYPE is defined in a SEARCHRESULT as the type of the current 
+		<!-- //SEARCH-TYPE is defined in a SEARCHRESULT as the type of the current
 			search -->
-		<!-- //SEARCH-TYPE is defined in a SELECTEDSET by the type of the last 
+		<!-- //SEARCH-TYPE is defined in a SELECTEDSET by the type of the last
 			search -->
 		<!-- //SEARCH-TYPE is defined in a FOLDER by the type of the last search -->
 		<!-- if there is no search before viewing a folder, the XML <SEARCH-TYPE>NONE</SEARCH-TYPE> -->
 		<!-- is output by viewSavedRecordsOfFolder.jsp when recentXMLQuery==null -->
-	
+
 		<xsl:variable name="SEARCH-TYPE"><xsl:value-of select="//SEARCH-TYPE" /></xsl:variable>
-	
+
 		<xsl:variable name="DATABASE">
 			<xsl:choose>
 				<xsl:when test="(/PAGE/SEARCH-CONTEXT='tag')"><xsl:value-of select="$THIS-DOCUMENT-DB" /></xsl:when>
@@ -650,11 +650,11 @@
 				<xsl:otherwise><xsl:value-of select="/PAGE/DBMASK" /></xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
-	
+
 		<xsl:variable name="ENCODED-DATABASE">
 			<xsl:value-of select="java:encode($DATABASE)" />
 		</xsl:variable>
-	
+
 		<!-- Default Sort Options for these links -->
 		<!-- make changes here(like field or adding direction) -->
 		<!-- <xsl:value-of select="$DEFAULT-LINK-SORT"/> is appended to HREF attribute -->
@@ -665,7 +665,7 @@
 				<xsl:otherwise>&amp;sort=yr</xsl:otherwise>
 			</xsl:choose>
 		</xsl:variable>
-	
+
 		&lt;A CLASS="SpLink"
 			<xsl:if test="string($CLASS)"> class="<xsl:value-of select="$CLASS" />"</xsl:if>
 			<xsl:if test="string($TITLE)"> title="<xsl:value-of select="$TITLE" />" alt="<xsl:value-of select="$TITLE" />"</xsl:if>
@@ -718,7 +718,7 @@
 					disable-output-escaping="yes" />
 			</xsl:if>
 		&lt;/A&gt;
-	
+
 	</xsl:template>
 
 
@@ -755,16 +755,16 @@
 			</xsl:choose>
 			</xsl:variable>
      		<xsl:value-of select="searchresult:addLabel($sr,name(),$LABEL)"></xsl:value-of>
-     		
+
      		<xsl:for-each select="TR">
 				<xsl:choose>
 				<xsl:when test="TTI">
-					<xsl:value-of select="abstractrecord:addTreatment($abstractrecord,TTI)"/>		
+					<xsl:value-of select="abstractrecord:addTreatment($abstractrecord,TTI)"/>
 				</xsl:when>
-				<xsl:otherwise>	 				
-					<xsl:value-of select="abstractrecord:addTreatment($abstractrecord,.)"/>		
+				<xsl:otherwise>
+					<xsl:value-of select="abstractrecord:addTreatment($abstractrecord,.)"/>
 				</xsl:otherwise>
-				</xsl:choose>   
+				</xsl:choose>
 			</xsl:for-each>
     </xsl:template>
 
@@ -773,21 +773,21 @@
 	<!-- ************************************************************ -->
     <xsl:template match="IMG">
 		<xsl:param name="sr"/>
-		
+
 		<xsl:value-of select="searchresult:addLabel($sr,name(),@label)"/>
 	    <xsl:variable name="abstractrecord" select="searchresult:getAbstractrecord($sr)"/>
 		<xsl:for-each select="IMGGRP/IROW/IMAGE">
 			<xsl:value-of select="abstractrecord:addFigure($abstractrecord, @img)"/>
 		</xsl:for-each>
     </xsl:template>
-    
+
     <xsl:template name="CVSMH">
      	<xsl:param name="key"/>
 		<xsl:param name="label"/>
 		<xsl:param name="abstractrecord"/>
-		
+
         <xsl:variable name="textvalue"><xsl:value-of select="MH" /></xsl:variable>
-        
+
 		<xsl:variable name="LINK">
 		<xsl:call-template name="LINK">
 			<xsl:with-param name="TERM"><xsl:value-of select="normalize-space($textvalue)" /></xsl:with-param>
@@ -804,19 +804,19 @@
 		<xsl:value-of select="abstractterm:setSearchlink($abstractterm,normalize-space($LINK))"/>
 
 		<xsl:value-of select="abstractrecord:addTerm($abstractrecord, $key, $abstractterm)"></xsl:value-of>
-     
+
      </xsl:template>
-     
+
      <xsl:template match="ARTICLE_NUMBER"> <!--Article number -->
 		<xsl:param name="sr"/>
 		<xsl:value-of select="searchresult:setArticlenumber($sr, text())" />
 		<xsl:value-of select="searchresult:addLabel($sr,name(),@label)"></xsl:value-of>
 	</xsl:template>
-	
+
 	<!-- COLLECTION (link) -->
 	<xsl:template match="COL">
 		<xsl:param name="sr"/>
-		
+
 		<xsl:variable name="LINK">
 		<xsl:call-template name="LINK">
 		  <xsl:with-param name="TERM"><xsl:value-of select="normalize-space(text())"/></xsl:with-param>
@@ -825,16 +825,16 @@
 		  <xsl:with-param name="TITLE">Search <xsl:value-of select="@label"/></xsl:with-param>
 		</xsl:call-template>
 		</xsl:variable>
-		
+
 		<xsl:value-of select="searchresult:setCollection($sr, $LINK)" />
 	</xsl:template>
-	
+
 	<xsl:template match="FTTJ"> <!-- Translation serial title -->
 		<xsl:param name="sr"/>
 		<xsl:value-of select="searchresult:setFttj($sr, text())" />
 		<xsl:value-of select="searchresult:addLabel($sr,name(),@label)"></xsl:value-of>
 	</xsl:template>
-	
+
 	<xsl:template match="STT"> <!--  -->
 		<xsl:param name="sr"/>
 		<xsl:value-of select="searchresult:setStt($sr, text())" />
