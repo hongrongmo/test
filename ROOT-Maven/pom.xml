@@ -382,7 +382,7 @@
 				<version>2.4</version>
 				<executions>
 					<execution>
-						<phase>compile</phase>
+						<phase>package</phase>
 						<goals>
 							<goal>jar</goal>
 						</goals>
@@ -441,8 +441,8 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<configuration>
-					<archiveClasses>true</archiveClasses>
 					<attachClasses>true</attachClasses>
+					<packagingExcludes>WEB-INF/lib/ROOT*.jar</packagingExcludes>
 				</configuration>
 			</plugin>
 		</plugins>
