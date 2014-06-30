@@ -173,7 +173,7 @@ Use the "deploy" target to build and deploy new WAR file.
 			<classes dir="${ENGVILLAGE_PATH}/livebuild/classes" erroronmissingdir="false">
 			</classes>
 		</war>
-		<antcall target="clean"></antcall>
+		<antcall target="cleaneilib"></antcall>
 	</target>
 
 	<target name="clean" depends="cleaneilib">
