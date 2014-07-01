@@ -59,7 +59,7 @@ public class CBFDatabase extends C84Database {
     }
 
     public DocumentBuilder newBuilderInstance() {
-        return new MultiDatabaseDocBuilder();
+        return new CBFDocBuilder();
     }
 
     public String getID() {

@@ -639,49 +639,49 @@ public class SearchDisplayAction extends BaseSearchAction { // implements
         log4j.info("inside quick");
 
         // Set up to get form information
-        int database = initDatabase();
+        int db = initDatabase();
 
         // Get the database selection checkboxes
         DatabaseSelector dbselect = new DatabaseSelector();
         try {
-            databasecheckboxes = dbselect.getDatabaseCheckboxes(usermask, database);
+            databasecheckboxes = dbselect.getDatabaseCheckboxes(usermask, db);
         } catch (DatabaseConfigException e) {
             log4j.error("Unable to get checkboxes!!", e);
         }
 
         // Get the search-in options
-        section1opts = SearchForm.getOptions(section1, database, "section");
-        section2opts = SearchForm.getOptions(section2, database, "section");
-        section3opts = SearchForm.getOptions(section3, database, "section");
+        section1opts = SearchForm.getOptions(section1, db, "section");
+        section2opts = SearchForm.getOptions(section2, db, "section");
+        section3opts = SearchForm.getOptions(section3, db, "section");
 
         // Get the doc type options (LIMIT BY). This is only set for specific
         // database values!
         if ((usermask & DatabaseConfig.CPX_MASK) == DatabaseConfig.CPX_MASK || (usermask & DatabaseConfig.GEO_MASK) == DatabaseConfig.GEO_MASK
             || (usermask & DatabaseConfig.EUP_MASK) == DatabaseConfig.EUP_MASK || (usermask & DatabaseConfig.UPA_MASK) == DatabaseConfig.UPA_MASK
             || (usermask & DatabaseConfig.CBF_MASK) == DatabaseConfig.CBF_MASK || (usermask & DatabaseConfig.IBS_MASK) == DatabaseConfig.IBS_MASK) {
-            doctypeopts = SearchForm.getOptions(doctype, database, "doctype");
+            doctypeopts = SearchForm.getOptions(doctype, db, "doctype");
         }
 
         // Get the treatment type options (LIMIT BY). This is only set for
         // specific
         // database values!
         if ((usermask & DatabaseConfig.CPX_MASK) == DatabaseConfig.CPX_MASK || (usermask & DatabaseConfig.INS_MASK) == DatabaseConfig.INS_MASK) {
-            treatmenttypeopts = SearchForm.getOptions(treatmentType, database, "treattype");
+            treatmenttypeopts = SearchForm.getOptions(treatmentType, db, "treattype");
         }
 
         // Get the discipline type options (LIMIT BY). This is only set for
         // specific
         // database values!
         if ((usermask & DatabaseConfig.IBS_MASK) == DatabaseConfig.IBS_MASK || (usermask & DatabaseConfig.INS_MASK) == DatabaseConfig.INS_MASK) {
-            disciplinetypeopts = SearchForm.getOptions(disciplinetype, database, "discipline");
+            disciplinetypeopts = SearchForm.getOptions(disciplinetype, db, "discipline");
         }
 
         // Always output language options (LIMIT BY)
-        languageopts = SearchForm.getOptions(language, database, "language");
+        languageopts = SearchForm.getOptions(language, db, "language");
 
         // Get year options
-        startyearopts = SearchForm.getYears(database, startYear, stringYear, "startYear");
-        endyearopts = SearchForm.getYears(database, endYear, stringYear, "endYear");
+        startyearopts = SearchForm.getYears(db, startYear, stringYear, "startYear");
+        endyearopts = SearchForm.getYears(db, Integer.toString(SearchForm.calEndYear(db)), stringYear, "endYear");
 
         // TMH - change per Product management! Autostem fence applies ONLY to
         // quick search!
@@ -712,17 +712,17 @@ public class SearchDisplayAction extends BaseSearchAction { // implements
         setRoom(ROOM.search);
 
         // Get the database selection checkboxes
-        int database = initDatabase();
+        int db = initDatabase();
         DatabaseSelector dbselect = new DatabaseSelector();
         try {
-            databasecheckboxes = dbselect.getDatabaseCheckboxes(usermask, database);
+            databasecheckboxes = dbselect.getDatabaseCheckboxes(usermask, db);
         } catch (DatabaseConfigException e) {
             log4j.error("Unable to get checkboxes!!", e);
         }
 
         // Get year options
-        startyearopts = SearchForm.getYears(database, startYear, stringYear, "startYear");
-        endyearopts = SearchForm.getYears(database, endYear, stringYear, "endYear");
+        startyearopts = SearchForm.getYears(db, startYear, stringYear, "startYear");
+        endyearopts = SearchForm.getYears(db, Integer.toString(SearchForm.calEndYear(db)), stringYear, "endYear");
 
         // TMH - change per Product management! Autostem fence applies ONLY to
         // quick search!
