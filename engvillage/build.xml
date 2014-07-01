@@ -15,7 +15,7 @@ Use the "deploy" target to build and deploy new WAR file.
     <property name="ENGVILLAGE_PATH" value="../engvillage"/>
     <property name="ROOT_PATH" value="../ROOT-Maven"/>
     <property name="EILIB_PATH" value="../ROOT-Maven/target/eilib-client.jar"/>
-	<property name="engvilage.war.path" location="${ENGVILLAGE_PATH}/livebuild/engvillage.war"/>
+	<property name="engvilage.war.path" location="${ENGVILLAGE_PATH}/engvillage.war"/>
 
 	<!-- local directories -->
 	<property name="compile.debug" value="true" />
