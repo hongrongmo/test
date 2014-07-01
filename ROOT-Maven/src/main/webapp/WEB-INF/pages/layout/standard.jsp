@@ -11,6 +11,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+    <meta name="robots" content="index,nofollow" />
     <stripes:layout-component name="metahead"/>
     <title>${pageTitle}</title>
     <link type="image/x-icon" href="/static/images/engineering_village_favicon.gif" rel="SHORTCUT ICON"></link>
@@ -129,13 +130,13 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
 		<c:if test="${actionBean.context.userSession.user.userPreferences.modalDialog && !actionBean.context.userSession.user.userPreferences.modalDialog2}">
 			<script>
 				if((!$.cookie("ev_mm_dontshow") || release != $.cookie("ev_mm_dontshow")) && (!$.cookie("ev_mm_shown") || release != $.cookie("ev_mm_shown"))){
-			
+
 					GALIBRARY.createWebEventWithLabel(['_trackEvent', 'Dialog Open', 'What\'s New', 'Auto Show']);
 					TINY.box.show({html:document.getElementById("modalmsg"),clickmaskclose:false,width:900,height:500,close:true,opacity:20,topsplit:3,closejs:function(){closeX();}});
 					//tell GA that we showed it
-			
+
 				}
-			
+
 			</script>
 		</c:if>
 	</stripes:layout-component>
@@ -148,11 +149,11 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
 				</div>
 				<script>
 				if((!$.cookie("ev_rm_dontshow") || release != $.cookie("ev_rm_dontshow")) && (!$.cookie("ev_rm_shown") || release != $.cookie("ev_rm_shown"))){
-	
+
 					GALIBRARY.createWebEventWithLabel(['_trackEvent', 'Dialog Open', 'Referex', 'Auto Show']);
 					TINY.box.show({html:document.getElementById("modalrmmsg"),clickmaskclose:false,width:600,height:250,close:true,opacity:20,topsplit:3,closejs:function(){closeRMX();}});
 					//tell GA that we showed it
-	
+
 				}
 				</script>
 			</div>

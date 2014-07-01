@@ -5,6 +5,8 @@ import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.HttpMethod;
@@ -13,17 +15,14 @@ import org.ei.config.RuntimeProperties;
 import org.ei.connectionpool.ConnectionBroker;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.FastClient;
-import org.ei.email.EIMessage;
-import org.ei.email.EMail;
+import org.ei.email.SESEmail;
+import org.ei.email.SESMessage;
 import org.ei.session.SessionCache;
 import org.ei.session.SessionID;
 import org.ei.session.UserSession;
 
 public class CheckEV {
-	/**
-	 * EMail instance used to mail a feedback form
-	 **/
-	EMail mail;
+	
 	RuntimeProperties eiProps;
 
 	private String url = "/controller/servlet/Controller?CID=openXML&dbchkbx=1&DATABASE=1&XQUERYX=%3Cquery%3E%3CandQuery%3E%3Cword+path%3D%22db%22%3Ecpx%3C%2Fword%3E%3Cword%3Eworld%3C%2Fword%3E%3C%2FandQuery%3E%3C%2Fquery%3E&AUTOSTEM=on&STARTYEAR=1990&ENDYEAR=2009&SORT=re&xmlsearch=Submit+Query";
@@ -45,11 +44,7 @@ public class CheckEV {
 	}
 
 	public void init() {
-		try {
-			mail = EMail.getInstance();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		
 	}
 
 	public void setServer(String server) {
@@ -220,14 +215,15 @@ public class CheckEV {
 
 	private void sendEmail(String msgString) {
 		try {
-			EIMessage msg = new EIMessage();
-
-			msg.setMessageBody(msgString);
-			msg.setFrom("emergencyalert@elsevier.com");
-			msg.setSubject("Emergency: EV is Down");
-			msg.setSender("h.mo@elsevier.com");
-			msg.addTORecepient("h.mo@elsevier.com");
+			
+			SESMessage sesMessage = new SESMessage();
+			sesMessage.setMessage("Emergency: EV is Down", msgString, false);
+			sesMessage.setFrom("emergencyalert@elsevier.com");
+			List<String> toList = new ArrayList<String>();
+			toList.add("h.mo@elsevier.com");
+			List<String> ccList = new ArrayList<String>();
 			String[] emailArray = null;
+			
 			if (email != null) {
 				if (email.indexOf("|") > -1) {
 					emailArray = email.split("|");
@@ -235,12 +231,19 @@ public class CheckEV {
 					emailArray = new String[1];
 					emailArray[0] = email;
 				}
+				
+				if(emailArray != null && emailArray.length>0){
+					for (int i = 0; i < emailArray.length; i++) {
+						if(emailArray[i] != null){
+							ccList.add(emailArray[i]);
+						}
+					}
+				}
 			}
-			for (int i = 0; i < emailArray.length; i++) {
-				msg.addCCRecepient(emailArray[i]);
-			}
-
-			mail.sendMessage(msg);
+			
+			sesMessage.setDestination(toList,ccList);
+			SESEmail.getInstance().send(sesMessage);
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

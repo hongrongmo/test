@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://jawr.net/tags" prefix="jwr" %>	
+<%@ taglib uri="http://jawr.net/tags" prefix="jwr" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ taglib uri="http://stripes.sourceforge.net/stripes.tld" prefix="stripes" %>
-	
+
 <stripes:layout-render name="/WEB-INF/pages/layout/standard.jsp" pageTitle="Engineering Village - Thesaurus">
 
 	<stripes:layout-component name="csshead">
@@ -19,10 +19,10 @@
 	</style>
 <![endif]-->
 	</stripes:layout-component>
-	
-<%-- **************************************** --%>	
-<%-- CONTENTS                                 --%>	
-<%-- **************************************** --%>	
+
+<%-- **************************************** --%>
+<%-- CONTENTS                                 --%>
+<%-- **************************************** --%>
 	<stripes:layout-component name="contents">
 
 	<div id="container">
@@ -48,8 +48,8 @@
 		<div id="searchcontents" class="shadowbox" role="search" aria-labeledby="ThesaurusSearch">
 			<div id="searchtipsbox">
 				<ul>
-					<li class="databases"><a href="/databases.jsp?dbid=${actionBean.helpdbids}" title="Learn more about databases" id="databaseTipsLink" target="_blank" class="evpopup">Databases</a></li>
-					<li><a href="/searchtips.jsp?topic=thes" id="searchTipsLink" title="Search tips to help" target="_blank" class="notfirst evpopup">Search tips</a></li>
+					<li class="databases"><a href="/databases.jsp?dbid=${actionBean.helpdbids}" title="Learn more about databases" id="databaseTipsLink" target="_blank" class="evdialog">Databases</a></li>
+					<li><a href="/searchtips.jsp?topic=thes" id="searchTipsLink" title="Search tips to help" target="_blank" class="notfirst evdialog">Search tips</a></li>
 				</ul>
 			</div>
 
@@ -90,17 +90,17 @@
                     </c:if>
 
 				</ul>
-			</fieldset>	
+			</fieldset>
 			<div class="clear"></div>
 
-			</div>			
-			
+			</div>
+
 			<%-- ******************************************************** --%>
 			<%-- ******************************************************** --%>
 			<%-- SEARCH TERMS                                             --%>
 			<%-- ******************************************************** --%>
 			<%-- ******************************************************** --%>
-			
+
 			<div class="searchcomponentfullwrap">
 				<h2 class="searchcomponentlabel">SEARCH FOR</h2>
 				<div class="searchforline">
@@ -120,13 +120,13 @@
 			                <input class="searchtype" id="rdBrw" type="radio" name="thesAction" value="thesBrowse" action="/search/thes/browse.url?"/>
 			                <label for="rdBrw">Browse</label>
 			                </span>
-		             </fieldset>   
+		             </fieldset>
 					 <input id="thessubmitbtn" type="submit" value="Submit" title="Submit search" style="float:right; margin-right:52px" class="button"></input>&nbsp;
-					
+
 				</div>
 			</div>
 			</form>
-			
+
 			<div id="firstslide" style="display:none">
 			<%-- ******************************************************** --%>
 			<%-- ******************************************************** --%>
@@ -135,16 +135,16 @@
 			<%-- ******************************************************** --%>
 			<div class="searchcomponentfullwrap" style="padding-bottom:0">
 
-			<div id="thesresultswrap" class="termsearchfromform">  
-				<h2 class="searchcomponentlabel">SEARCH</h2> 
+			<div id="thesresultswrap" class="termsearchfromform">
+				<h2 class="searchcomponentlabel">SEARCH</h2>
 				<div id="termpath"></div>
 				<div class="clear"></div>
 				<div id="termresults" class="termelement"></div>
 			</div>
-			
+
 			</div>
 
-			
+
 			<div class="searchcomponentseparator termsearchfromform" style="padding:0;margin:0;*margin-top:5px;height:1px;display:none"><hr></hr></div>
 
             <stripes:form id="pagesearchform" name="search" onsubmit="return searchValidation();" method="POST" action="/search/thesHome.url">
@@ -155,17 +155,17 @@
 			<input type="hidden" name="searchtype" value="Thesaurus"/>
 
 			<div class="searchcomponentshortwrap termsearchfromform" style="display:none;margin-top:7px;width:100%">
-			
+
 				<%-- ******************************************************** --%>
 				<%-- ******************************************************** --%>
 				<%-- LIMIT BY and SORT BY                                     --%>
 				<%-- ******************************************************** --%>
 				<%-- ******************************************************** --%>
 				<div id="limittowrap" style="width:250px; float:left;">
-				
+
 					<div class="searchcomponentlabel" style="float:none;margin-bottom:10px"><h2 style="font-size:14px;">LIMIT TO <a href="${actionBean.helpUrl}#Limit_to.htm" alt="Learn more about search limits" title="Learn more about search limits" class="helpurl"><img
 						src="/static/images/i.png" border="0" class="infoimg" align="bottom" alt=""/></a></h2></div>
-						
+
 					<div class="searchlimitbybox">
 					<ul>
 						<c:if test="${not empty actionBean.doctypeopts}">
@@ -183,7 +183,7 @@
                         </stripes:select>
 					    </li>
 						</c:if>
-						
+
 						<c:if test="${not empty actionBean.disciplinetypeopts}">
 						<li>
                         <stripes:select name="disciplinetype" class="limittype" title="Choose a Discipline Type">
@@ -191,7 +191,7 @@
                         </stripes:select>
 					    </li>
 						</c:if>
-						
+
 						<%-- Always output language type options --%>
 						<li>
 						<stripes:select name="language" class="limittype" title="Choose a Language">
@@ -201,7 +201,7 @@
 
 						<li>
 						  <stripes:radio name="yearselect" value="yearrange"/>
-						
+
 						  <stripes:select name="startYear" style="width:5em" title="Choose a date range">
                             <stripes:options-collection collection="${actionBean.startyearopts}" label="value" value="name"/>
 						  </stripes:select>
@@ -223,15 +223,15 @@
 								<stripes:option value="3">3</stripes:option>
 								<stripes:option value="4">4</stripes:option>
 	                          </stripes:select>
-	                       
+
                             <label for="rdupdt">Updates</label>
                         </li>
                         </ul>
-                         
+
        				</div>
-                           				
+
 				</div>
-				
+
 				<%-- ******************************************************** --%>
 				<%-- ******************************************************** --%>
 				<%-- CLIPBOARD                                                --%>
@@ -241,7 +241,7 @@
 					<div class="searchcomponentlabel" style="float:none;margin-bottom:10px"><h2 style="font-size:14px;">SEARCH BOX</h2></div>
 					<stripes:select id="clip" name="clip" multiple="true" size="8" style="width:200px">
                         <stripes:options-collection collection="${actionBean.clipoptions}" label="value" value="name"/>
-					</stripes:select>	
+					</stripes:select>
 					<br/>
 					<input class="button" style="margin:5px 0" type="button" value="Remove&nbsp;selected&nbsp;terms" title="Remove selected terms from your query" id="removeterm">
 					<%-- Couldn't find any other way to line these buttons up with the button above!!! --%>
@@ -249,9 +249,9 @@
 						<stripes:submit name="submit" value="Search" class="button" title="Search"/>&nbsp;
 						<input type="reset" title="Reset search" value="Reset" class="button"></input>&nbsp;
 					</div>
-					
-				</div>		
-				
+
+				</div>
+
 				<%-- ******************************************************** --%>
 				<%-- ******************************************************** --%>
 				<%-- COMBINE AND SORT                                         --%>
@@ -262,13 +262,13 @@
 						src="/static/images/i.png" border="0" class="infoimg" align="top" alt=""/></h2></a></div>
 					<div class="searchcombinebox">
 					<fieldset>
-						<input name="andor" id="andorand" value="AND"<c:if test="${actionBean.combine eq 'and'}"> checked="true"</c:if> type="radio">&nbsp;<label for="andorand" >AND</label> 
+						<input name="andor" id="andorand" value="AND"<c:if test="${actionBean.combine eq 'and'}"> checked="true"</c:if> type="radio">&nbsp;<label for="andorand" >AND</label>
 						<input name="andor" id="andoror" value="OR"<c:if test="${actionBean.combine eq 'or'}"> checked="true"</c:if> type="radio">&nbsp;<label for="andoror">OR</label>
 					</fieldset>
 					</div>
-				
+
 					<br/>
-				
+
 					<div class="searchcomponentlabel" style="float:none;margin-bottom:10px"><h2 style="font-size:14px;">SORT BY <a href="${actionBean.helpUrl}#Specify_sort_Thesau_srch.htm" alt="Learn more about choosing sort order" title="Learn more about choosing sort order" class="helpurl"><img
 						src="/static/images/i.png" border="0" class="infoimg" align="bottom" alt=""/></a></h2></div>
 					<div class="searchlimitbybox">
@@ -288,25 +288,25 @@
 
                     </ul>
 					</div>
-				</div> 
+				</div>
 
 				<div class="clear"></div>
-				
-			</div>				
+
+			</div>
 
 				<div class="clear"></div>
-				
+
 		</stripes:form>
 		</div> <!-- END firstslide -->
 		</div> <!-- END searchform -->
 
 		<div class="clear"></div>
-			
+
 		</div>	<!-- END searchcontents -->
 		<br class="clear"/>
 		</div> <!-- END searchformbox -->
 
-		<jsp:include page="parts/history.jsp"></jsp:include> 
+		<jsp:include page="parts/history.jsp"></jsp:include>
 
 		</div> <!-- END searchformwrap -->
 
@@ -322,15 +322,15 @@
 		</div> <!-- END container -->
 
 		<div class="clear"></div>
-				
+
 	<div id="loading" style="display:none"><img src="/static/images/loading.gif"></img></div>
 
 	</stripes:layout-component>
-	
+
 	<stripes:layout-component name="jsbottom_custom">
 	<jwr:script src="/bundles/thes.js"></jwr:script>
 	<script>var flipImage;</script>
-	<jsp:include page="parts/search_common_js.jsp"></jsp:include>	
+	<jsp:include page="parts/search_common_js.jsp"></jsp:include>
 	</stripes:layout-component>
 
 

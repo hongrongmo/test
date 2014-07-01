@@ -120,8 +120,8 @@ $(document).ready(function() {
 		});
 
 	}
-	// Associate evpopup links with popup functionality
-	$(".evpopup").click(function(ev){
+//	 Associate evpopup links with popup functionality
+	$(".evdialog").click(function(ev){
 		openTips($(this).text(), $(this).attr("href"), $(this).attr("id"));
 		ev.preventDefault();
 		ev.stopImmediatePropagation();
@@ -153,8 +153,8 @@ $(document).ready(function() {
 	});
 
 	$(".mosrchsourcesidebarli a").click(function(e) {
-		GALIBRARY.createWebEvent("External Link", $(this).text());
-		return false;
+			GALIBRARY.createWebEvent("External Link", $(this).text());
+			return false;
 	});
 });
 
