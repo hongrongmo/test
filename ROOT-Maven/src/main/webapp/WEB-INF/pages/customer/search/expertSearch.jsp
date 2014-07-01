@@ -37,8 +37,8 @@
         <div id="searchcontents" class="shadowbox" role="search" aria-labeledby="Expert Search"> <!-- gray box -->
             <div id="searchtipsbox">
                 <ul>
-                    <li class="databases"><a href="/databases.jsp?dbid=<c:forEach items="${actionBean.databaseCheckboxes}" var="checkbox" varStatus="status"><c:if test="${status.count>1}">,</c:if>${checkbox.id}</c:forEach>" id="databaseTipsLink" title="Learn more about databases" target="_blank" class="evpopup">Databases</a></li>
-                    <li><a href="/searchtips.jsp?topic=expert" id="searchTipsLink" title="Search tips to help" target="_blank" class="notfirst evpopup">Search tips</a></li>
+                    <li class="databases"><a href="/databases.jsp?dbid=<c:forEach items="${actionBean.databaseCheckboxes}" var="checkbox" varStatus="status"><c:if test="${status.count>1}">,</c:if>${checkbox.id}</c:forEach>" id="databaseTipsLink" title="Learn more about databases" target="_blank" class="evdialog">Databases</a></li>
+                    <li><a href="/searchtips.jsp?topic=expert" id="searchTipsLink" title="Search tips to help" target="_blank" class="notfirst evdialog">Search tips</a></li>
                 </ul>
             </div>
 

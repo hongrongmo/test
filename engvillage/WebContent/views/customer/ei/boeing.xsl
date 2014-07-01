@@ -230,7 +230,7 @@
     <td>
       <center>
         <A CLASS="SmBlackText">
-          &#169; 2013 Elsevier Inc. All rights reserved.
+          &#169; 2014 Elsevier Inc. All rights reserved.
         </A>
       </center>
     </td>

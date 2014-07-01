@@ -89,7 +89,7 @@
     <tr>
        <td valign="top" width="6" colspan="2"><img src="/static/images/s.gif" border="0" width="6"/></td>
        <td colspan="3" align="center">
-      <A CLASS="SmBlackText">&#169; 2013 Elsevier Inc. All rights reserved.</A>
+      <A CLASS="SmBlackText">&#169; 2014 Elsevier Inc. All rights reserved.</A>
        </td>
     </tr>
 

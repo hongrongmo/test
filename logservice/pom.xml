@@ -48,6 +48,20 @@
 		</dependency>
 	</dependencies>
 
+	<distributionManagement>
+		<repository>
+			<id>nexus</id>
+			<name>nexus</name>
+			<url>http://atheneum/content/repositories/elsevier-releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus</id>
+			<name>nexus</name>
+			<url>http://atheneum/content/repositories/elsevier-snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+
 	<build>
 		<finalName>logservice</finalName>
 		<plugins>
