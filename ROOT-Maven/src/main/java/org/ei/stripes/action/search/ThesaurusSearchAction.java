@@ -216,7 +216,7 @@ public class ThesaurusSearchAction extends SearchDisplayAction { // implements I
 
         // Get year options
         startyearopts = SearchForm.getYears(db, startYear, stringYear, "startYear");
-        endyearopts = SearchForm.getYears(db, endYear, stringYear, "endYear");
+        endyearopts = SearchForm.getYears(db, Integer.toString(SearchForm.calEndYear(db)), stringYear, "endYear");
 
         // Display!
         return new ForwardResolution("/WEB-INF/pages/customer/search/thesHome.jsp");
