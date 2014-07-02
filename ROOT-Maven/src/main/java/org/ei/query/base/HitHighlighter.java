@@ -187,10 +187,14 @@ public class HitHighlighter extends BaseNodeVisitor {
                 for (int i = 0; i < value.length; i++) {
                     alreadyDone.clear();
                     ArrayList<String> dataList = new ArrayList<String>();
-                   // util.split(dataList, "/\\W+/", value[i]);
-                   // The above line is commented to fix the defect 210 and added a below line with new regex pattern to support '-'.
-                   util.split(dataList, "/[^a-zA-Z0-9-_]+/",value[i]);
-
+                    
+                    if(stemmedTerm != null && stemmedTerm.contains("-")){
+                    	// The above line is commented to fix the defect 210 and added a below line with new regex pattern to support '-'.
+                        util.split(dataList, "/[^a-zA-Z0-9-_]+/",value[i]);
+                    }else{
+                    	util.split(dataList, "/\\W+/", value[i]);
+                    }
+                    
                     for (int m = 0; m < dataList.size(); m++) {
                         String word = (String) dataList.get(m);
 

@@ -72,7 +72,7 @@ padding: 0;
 margin: 0;
 padding-left: 4px;
 float:left;
-	
+
 }
 .facet_overlay_entries{
 	font-size:.92em;
@@ -84,7 +84,7 @@ float:left;
 
 .overlayValue label{
 	width:80%;
-	
+
 }
 .overlayRightBorder{
 	padding-right: 14px;
@@ -95,7 +95,7 @@ float:left;
 .facet_moreless_overlay{float:left;padding-left:8px;padding-top:12px;}
 
 .w10{
-	width:10%;	
+	width:10%;
 }
 
 
@@ -175,7 +175,7 @@ float:left;
 #resultslist input[name='cbresult'] {margin:0 3 0 0px}
 
 #dedupbox {margin: 7px 20px 20px 7px;}
-#dedupbox p {margin: 3px 0; line-height: 1.4em} 
+#dedupbox p {margin: 3px 0; line-height: 1.4em}
 ul.fieldpreferenceslist {list-style-type:none; list-style:inside; margin:0; padding:0}
 ul.fieldpreferenceslist li {list-style: none inside none; margin:0; padding:0}
 
@@ -221,7 +221,7 @@ ul.fieldpreferenceslist li {list-style: none inside none; margin:0; padding:0}
 #pageselect_boss { padding: 0; margin:7px 0 5px 5px; float:left}
 #pageselect {
     float: left;
-    line-height: 1.8em; 
+    line-height: 1.8em;
     padding: 4px 1px 4px 7px;
     background-color: #f5f5f5;
     width: 40px;
@@ -236,19 +236,21 @@ ul.fieldpreferenceslist li {list-style: none inside none; margin:0; padding:0}
 #pageselect.patentrefs { border: none; width: 50px; *width: 56px; height: auto; background: none; padding-left: 13px; white-space: nowrap}
 
 
-#pageselect .pageselect_default {margin:0 3px 0 0; padding: 0; *top: -3px; } 
+#pageselect .pageselect_default {margin:0 3px 0 0; padding: 0; *top: -3px; }
 #pageselect .pageselect_toggle {position: relative; top: -3px; *top: -5px; border:none; outline:none}
 #pageselect .allchkbox{margin-left: 4px;}
 #pageselect .All{padding-left: 3px;}
 #pageselect .page{padding-left: 4px;}
 ul.pageselect_menu {
-    display:none; 
-    position: absolute; 
+    display:none;
+    position: absolute;
     border: 1px solid #ababab;
-    background-color: white; 
+    background-color: white;
     z-index: 9999;
     width: 150px
 }
-ul.pageselect_menu li {cursor: pointer; width: 100%; margin:0; padding:0} 
+ul.pageselect_menu li {cursor: pointer; width: 100%; margin:0; padding:0}
 ul.pageselect_menu li:hover { background-color: #bbdad2 }
 ul.pageselect_menu li span {padding: 5px; margin:0; line-height: 20px}
+
+.resultcontent label{margin:0px;}
