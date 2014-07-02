@@ -15,7 +15,7 @@ Use the "deploy" target to build and deploy new WAR file.
     <property name="ENGVILLAGE_PATH" value="../engvillage"/>
     <property name="ROOT_PATH" value="../ROOT-Maven"/>
     <property name="EILIB_PATH" value="../ROOT-Maven/target/eilib-client.jar"/>
-	<property name="engvilage.war.path" location="${ENGVILLAGE_PATH}/livebuild/engvillage.war"/>
+	<property name="engvilage.war.path" location="${ENGVILLAGE_PATH}/engvillage.war"/>
 
 	<!-- local directories -->
 	<property name="compile.debug" value="true" />
@@ -26,13 +26,6 @@ Use the "deploy" target to build and deploy new WAR file.
 		<fileset id="engvillage-jars" dir="${ENGVILLAGE_PATH}/WebContent/WEB-INF/lib" includes="*.jar" />
 		<fileset id="tomcat-provided-jars" dir="${ENGVILLAGE_PATH}/tomcat-provided" includes="*.jar" />
 	</path>
-
-    <!-- ********************************************************************************** -->
-    <!-- Setup for local development                                                        -->
-    <!-- ********************************************************************************** -->
-	<target name="setup" depends="clean,cleaneilib, showProperties">
-		<antcall target="eilib"></antcall>
-	</target>
 
 	<!-- ********************************************************************************** -->
 	<!-- Show properties for build                                                          -->
@@ -173,17 +166,12 @@ Use the "deploy" target to build and deploy new WAR file.
 			<classes dir="${ENGVILLAGE_PATH}/livebuild/classes" erroronmissingdir="false">
 			</classes>
 		</war>
-		<antcall target="cleaneilib"></antcall>
+		<antcall target="clean"></antcall>
 	</target>
 
-	<target name="clean" depends="cleaneilib">
+	<target name="clean">
 		<echo>[engvillage build] Cleaning up... </echo>
 		<delete dir="${ENGVILLAGE_PATH}/livebuild" failonerror="false"/>
-	</target>
-
-	<target name="cleaneilib">
-		<echo>[engvillage build] Deleting re-buildable lib directories... </echo>
-		<delete file="${ENGVILLAGE_PATH}/WebContent/WEB-INF/lib/eilib.jar" failonerror="false"/>
 		<delete dir="${ENGVILLAGE_PATH}/tomcat-provided" failonerror="false"/>
 	</target>
 
