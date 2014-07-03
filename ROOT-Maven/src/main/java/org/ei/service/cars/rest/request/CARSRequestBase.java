@@ -37,7 +37,7 @@ import org.ei.session.UserPreferences;
 import org.ei.session.UserSession;
 import org.ei.stripes.util.HttpRequestUtil;
 
-import com.elsevier.webservices.schemas.csas.constants.types.v6.AuthenticationType;
+import com.elsevier.webservices.schemas.csas.constants.types.v7.AuthenticationType;
 
 public abstract class CARSRequestBase implements CARSRequest {
 	private final static Logger log4j = Logger.getLogger(CARSRequestBase.class);

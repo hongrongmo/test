@@ -25,7 +25,7 @@ import org.testng.annotations.Test;
 
 import test.org.ei.action.BaseActionTest;
 
-import com.elsevier.webservices.schemas.csas.constants.types.v6.RefworksAuthTypeCodeType;
+import com.elsevier.webservices.schemas.csas.constants.types.v7.RefworksAuthTypeCodeType;
 
 public class UserSessionTest extends BaseActionTest {
     private static Logger log4j = Logger.getLogger(UserSessionTest.class);

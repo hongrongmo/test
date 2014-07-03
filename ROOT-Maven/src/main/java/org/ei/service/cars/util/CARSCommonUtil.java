@@ -12,7 +12,7 @@ import org.ei.service.cars.XPathEnum;
 import org.ei.service.cars.rest.util.XMLUtil;
 import org.ei.session.BaseCookie;
 
-import com.elsevier.webservices.schemas.csas.constants.types.v6.UserAnonymityType;
+import com.elsevier.webservices.schemas.csas.constants.types.v7.UserAnonymityType;
 
 
 

@@ -2,14 +2,14 @@ package org.ei.service;
 
 import org.ei.exception.ServiceException;
 
-import com.elsevier.webservices.schemas.csas.types.v12.AuthenticateUserRespPayloadType;
-import com.elsevier.webservices.schemas.csas.types.v12.GetContentEntitlementsRespPayloadType;
-import com.elsevier.webservices.schemas.csas.types.v12.GetNonCombEntValueDefaultsRespPayloadType;
-import com.elsevier.webservices.schemas.csas.types.v12.GetNonCombEntValuesForSitesRespPayloadType;
-import com.elsevier.webservices.schemas.csas.types.v12.GetPlatformFenceInfoRespPayloadType;
-import com.elsevier.webservices.schemas.csas.types.v12.NonCombEntValuesForSessionRespPayloadType;
-import com.elsevier.webservices.schemas.csas.types.v12.PasswordReminderRespPayloadType;
-import com.elsevier.webservices.schemas.csas.types.v12.UserProfileRespPayloadType;
+import com.elsevier.webservices.schemas.csas.types.v13.AuthenticateUserRespPayloadType;
+import com.elsevier.webservices.schemas.csas.types.v13.GetContentEntitlementsRespPayloadType;
+import com.elsevier.webservices.schemas.csas.types.v13.GetNonCombEntValueDefaultsRespPayloadType;
+import com.elsevier.webservices.schemas.csas.types.v13.GetNonCombEntValuesForSitesRespPayloadType;
+import com.elsevier.webservices.schemas.csas.types.v13.GetPlatformFenceInfoRespPayloadType;
+import com.elsevier.webservices.schemas.csas.types.v13.NonCombEntValuesForSessionRespPayloadType;
+import com.elsevier.webservices.schemas.csas.types.v13.PasswordReminderRespPayloadType;
+import com.elsevier.webservices.schemas.csas.types.v13.UserProfileRespPayloadType;
 
 
 

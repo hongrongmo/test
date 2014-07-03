@@ -11,10 +11,10 @@ import org.ei.ane.entitlements.UserEntitlement.ENTITLEMENT_TYPE;
 import org.ei.bulletins.BulletinConfig;
 import org.ei.domain.DatabaseConfig;
 
-import com.elsevier.webservices.schemas.csas.constants.types.v6.EntitlementsStatusCodeType;
-import com.elsevier.webservices.schemas.csas.types.v12.ContentEntitlementsMethodLevelRespType;
-import com.elsevier.webservices.schemas.csas.types.v12.EntitlementsResponseStatusType;
-import com.elsevier.webservices.schemas.csas.types.v12.GetContentEntitlementsRespPayloadType;
+import com.elsevier.webservices.schemas.csas.constants.types.v7.EntitlementsStatusCodeType;
+import com.elsevier.webservices.schemas.csas.types.v13.ContentEntitlementsMethodLevelRespType;
+import com.elsevier.webservices.schemas.csas.types.v13.EntitlementsResponseStatusType;
+import com.elsevier.webservices.schemas.csas.types.v13.GetContentEntitlementsRespPayloadType;
 
 public final class UserEntitlementsBuilder {
     private final static Logger log4j = Logger.getLogger(UserEntitlementsBuilder.class);
