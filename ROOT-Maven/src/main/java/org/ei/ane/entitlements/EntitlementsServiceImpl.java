@@ -7,7 +7,7 @@ import org.ei.exception.ServiceException;
 import org.ei.service.CSWebService;
 import org.ei.service.CSWebServiceImpl;
 
-import com.elsevier.webservices.schemas.csas.types.v12.GetContentEntitlementsRespPayloadType;
+import com.elsevier.webservices.schemas.csas.types.v13.GetContentEntitlementsRespPayloadType;
 
 public class EntitlementsServiceImpl implements EntitlementsService {
 

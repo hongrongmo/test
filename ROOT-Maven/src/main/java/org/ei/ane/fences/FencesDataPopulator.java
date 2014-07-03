@@ -11,11 +11,11 @@ import org.ei.service.ANEServiceHelper;
 import org.ei.service.CSWebService;
 import org.ei.service.CSWebServiceImpl;
 
-import com.elsevier.webservices.schemas.csas.constants.types.v6.AppMetaDataStatusCodeType;
-import com.elsevier.webservices.schemas.csas.types.v12.AppMetaDataResponseStatusType;
-import com.elsevier.webservices.schemas.csas.types.v12.FenceListType;
-import com.elsevier.webservices.schemas.csas.types.v12.FenceType;
-import com.elsevier.webservices.schemas.csas.types.v12.GetPlatformFenceInfoRespPayloadType;
+import com.elsevier.webservices.schemas.csas.constants.types.v7.AppMetaDataStatusCodeType;
+import com.elsevier.webservices.schemas.csas.types.v13.AppMetaDataResponseStatusType;
+import com.elsevier.webservices.schemas.csas.types.v13.FenceListType;
+import com.elsevier.webservices.schemas.csas.types.v13.FenceType;
+import com.elsevier.webservices.schemas.csas.types.v13.GetPlatformFenceInfoRespPayloadType;
 
 public class FencesDataPopulator {
 
