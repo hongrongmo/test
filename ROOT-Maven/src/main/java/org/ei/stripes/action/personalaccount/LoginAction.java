@@ -34,7 +34,7 @@ import org.ei.session.UserBroker;
 import org.ei.session.UserSession;
 import org.ei.stripes.action.lindahall.LindaHallAuthAction;
 
-import com.elsevier.webservices.schemas.csas.constants.types.v6.AllowedRegistrationType;
+import com.elsevier.webservices.schemas.csas.constants.types.v7.AllowedRegistrationType;
 
 @UrlBinding("/customer/authenticate.url")
 public class LoginAction extends CARSActionBean {
