@@ -6,10 +6,10 @@ import org.ei.exception.SystemErrorCodes;
 
 import com.elsevier.edit.common.pool.ITSPool;
 import com.elsevier.edit.common.pool.PoolException;
-import com.elsevier.webservices.schemas.csas.types.v12.PlatformInfoType;
+import com.elsevier.webservices.schemas.csas.types.v13.PlatformInfoType;
 import com.elsevier.webservices.schemas.easi.headers.types.v1.LogLevelType;
 import com.elsevier.webservices.schemas.easi.headers.types.v1.RequestHeaderType;
-import com.elsevier.wsdls.csas.service.v12.CSApplicationServicePortTypeV12;
+import com.elsevier.wsdls.csas.service.v13.CSApplicationServicePortTypeV13;
 
 /**
  * This class holds the proxy pool used for csws access. This class provides
@@ -20,20 +20,20 @@ public final class ANEServiceHelper {
 	private final static Logger log4j = Logger.getLogger(ANEServiceHelper.class);
 	private static ITSPool aneWSProxyPool = null;
 
-	public static CSApplicationServicePortTypeV12 getANEService() throws ServiceException {
+	public static CSApplicationServicePortTypeV13 getANEService() throws ServiceException {
 		log4j.info("Getting proxy pool for ANE service...");
-		CSApplicationServicePortTypeV12 port = null;
+		CSApplicationServicePortTypeV13 port = null;
 		aneWSProxyPool = ANEServiceProxy.getProxyPool();
 
 		try {
-			port = (CSApplicationServicePortTypeV12) aneWSProxyPool.get(0);
+			port = (CSApplicationServicePortTypeV13) aneWSProxyPool.get(0);
 		} catch (PoolException e) {
 			throw new ServiceException(SystemErrorCodes.CSWS_NO_PROXY, "error in creating proxy for ANE service", e);
 		}
 		return port;
 	}
 
-	public static void releasePort(CSApplicationServicePortTypeV12 port) {
+	public static void releasePort(CSApplicationServicePortTypeV13 port) {
 		aneWSProxyPool.release(port);
 	}
 

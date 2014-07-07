@@ -25,8 +25,8 @@ import org.ei.service.cars.security.authorization.UserAccessType;
 import org.ei.service.cars.security.authorization.UserAccessTypeFactory;
 import org.ei.session.UserBroker;
 
-import com.elsevier.webservices.schemas.csas.constants.types.v6.AssociationType;
-import com.elsevier.webservices.schemas.csas.constants.types.v6.RefworksAuthTypeCodeType;
+import com.elsevier.webservices.schemas.csas.constants.types.v7.AssociationType;
+import com.elsevier.webservices.schemas.csas.constants.types.v7.RefworksAuthTypeCodeType;
 
 public class UserDataProcessor {
 

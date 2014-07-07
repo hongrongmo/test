@@ -17,13 +17,13 @@ import org.ei.exception.SystemErrorCodes;
 import org.ei.service.CSWebService;
 import org.ei.service.CSWebServiceImpl;
 
-import com.elsevier.webservices.schemas.csas.constants.types.v6.NonCombEntValuesStatusCodeType;
-import com.elsevier.webservices.schemas.csas.types.v12.GetNonCombEntValueDefaultsRespPayloadType;
-import com.elsevier.webservices.schemas.csas.types.v12.NCEIdNameValueType;
-import com.elsevier.webservices.schemas.csas.types.v12.NCEValuesByType;
-import com.elsevier.webservices.schemas.csas.types.v12.NonCombEntValuesStatusInfoType;
-import com.elsevier.webservices.schemas.csas.types.v12.PlatformNCEValuesType;
-import com.elsevier.webservices.schemas.csas.types.v12.ProductNCEValuesType;
+import com.elsevier.webservices.schemas.csas.constants.types.v7.NonCombEntValuesStatusCodeType;
+import com.elsevier.webservices.schemas.csas.types.v13.GetNonCombEntValueDefaultsRespPayloadType;
+import com.elsevier.webservices.schemas.csas.types.v13.NCEIdNameValueType;
+import com.elsevier.webservices.schemas.csas.types.v13.NCEValuesByType;
+import com.elsevier.webservices.schemas.csas.types.v13.NonCombEntValuesStatusInfoType;
+import com.elsevier.webservices.schemas.csas.types.v13.PlatformNCEValuesType;
+import com.elsevier.webservices.schemas.csas.types.v13.ProductNCEValuesType;
 
 public class ANETemplatesLoader {
 

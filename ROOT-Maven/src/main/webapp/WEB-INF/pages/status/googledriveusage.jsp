@@ -8,7 +8,7 @@
 <stripes:layout-render name="/WEB-INF/pages/layout/standard.jsp" pageTitle="Engineering Village - Google Drive Usage">
     <stripes:layout-component name="csshead">
 	    <jsp:include page="include/customcss.jsp"></jsp:include>
-	    <link type="text/css" rel="stylesheet" href="/static/css/custom-theme/jquery.dataTables.css"/>
+	    <link type="text/css" rel="stylesheet" href="/static/css/custom-theme/jquery.dataTables-1.10.0.min.css"/>
 	    <link type="text/css" rel="stylesheet" href="/static/css/custom-theme/jquery.ui.thems.smoothness.css"/>
 	    <style type="text/css">
 	        h2 {font-size: 14px; margin: 3px; padding: 0}
@@ -87,7 +87,7 @@
 							        <tr>
 							            <td></td>
 							            <td>${entry.key}</td>
-							            <td>${entry.value}</td>
+							            <td style="text-align:center">${entry.value}</td>
 							        </tr>
 							    </c:forEach>
 						    </c:when>
@@ -100,6 +100,12 @@
 						    </c:otherwise>
 					    </c:choose>  
 				    </tbody>
+				    <tfoot>
+			            <tr>
+			                <th colspan="2" style="text-align:right">Total:</th>
+			                <th ></th>
+			            </tr>
+			        </tfoot>
 				</table>
 				<br />
 			</div>    
@@ -107,7 +113,7 @@
     </stripes:layout-component>
     
     <stripes:layout-component name="jsbottom">
-   	    <script type="text/javascript" src="/static/js/jquery/jquery.dataTables.min.js"></script>
+   	    <script type="text/javascript" src="/static/js/jquery/jquery.dataTables-1.10.0.min.js"></script>
 	    
 	    <script type="text/javascript">
 	        $(document).ready(function() {
@@ -157,7 +163,39 @@
 		     					$('td:eq(0)', oSettings.aoData[ oSettings.aiDisplay[i] ].nTr ).html( i+1 );
 		     				}
 		     			}
-		     		}
+		     		},
+		     		"footerCallback": function ( row, data, start, end, display ) {
+		                var api = this.api(), data;
+		     
+		                // Remove the formatting to get integer data for summation
+		                var intVal = function ( i ) {
+		                    return typeof i === 'string' ?
+		                        i.replace(/[\$,]/g, '')*1 :
+		                        typeof i === 'number' ?
+		                            i : 0;
+		                };
+		     
+// 		                // Total over all pages
+// 		                data = api.column( 2 ).data();
+// 		                total = data.length ?
+// 		                    data.reduce( function (a, b) {
+// 		                            return intVal(a) + intVal(b);
+// 		                    } ) :
+// 		                    0;
+		     
+		                // Total over this page
+		                data = api.column( 2, { page: 'current'} ).data();
+		                pageTotal = data.length ?
+		                    data.reduce( function (a, b) {
+		                            return intVal(a) + intVal(b);
+		                    } ) :
+		                    0;
+		     
+		                // Update footer
+		                $( api.column( 2 ).footer() ).html(
+		                    pageTotal
+		                );
+		            }
 		     		 
 		         });
 		    	 
