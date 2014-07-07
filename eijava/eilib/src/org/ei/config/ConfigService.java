@@ -11,107 +11,70 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.ei.domain.DatabaseConfig;
-import org.ei.domain.DriverConfig;
-import org.ei.domain.FastSearchControl;
-import org.ei.books.LemQueryWriter;
-import org.ei.email.EMail;
-import org.ei.thesaurus.ThesaurusSearchControl;
+import org.apache.log4j.Logger;
 
+/**
+ * This servlet is used in 2 ways:
+ * 1) From the engvillage app, the RuntimeProperties are used from the static accessor.
+ * 2) From the controller app, both the RuntimeProperties and ContentConfig files are
+ * accessed by HTTP connection
+ *
+ * @author harovetm
+ *
+ */
+@SuppressWarnings("serial")
+public class ConfigService extends HttpServlet {
+	private static RuntimeProperties props;
 
+	private static ServletContext context;
 
-public class ConfigService extends HttpServlet
-{
-    private static RuntimeProperties props;
+	private Logger log4j = Logger.getLogger(ConfigService.class);
 
-    private static ServletContext context;
+	public void init() throws ServletException {
 
-    private static final String SESSION_POOL = "session";
-    private static final String SEARCH_POOL = "search";
+		context = getServletContext();
 
+		try {
+			log4j.debug("Config service starting up. Configuring system...");
+			props = RuntimeProperties.getInstance();
 
-    public void init()
-        throws ServletException
-    {
+		} catch (Exception e) {
+			log("Init Error:", e);
+			throw new ServletException(e.getMessage(), e);
+		}
+	}
 
-        context = getServletContext();
+	public static RuntimeProperties getRuntimeProperties() {
+		return props;
+	}
 
-        try
-        {
-			System.out.println("Config service starting up. Configuring system...");
-            String propsConf = context.getRealPath("/WEB-INF/Runtime.properties");
-            DatabaseConfig.getInstance(DriverConfig.getDriverTable());
-            props = new RuntimeProperties(propsConf);
-            String mainIndexBaseURL = props.getProperty("FastBaseUrl");
-            String thesaurusIndexBaseURL = props.getProperty("ThesaurusBaseURL");
-            String lemServiceBaseURL = props.getProperty("FastLemBaseUrl");
-            String mailHost = props.getProperty("mail.smtp.host");
-            boolean emailDebug = (new Boolean(props.getProperty("debug"))).booleanValue();
-            System.out.println("Setting main index base url to:"+mainIndexBaseURL);
-            FastSearchControl.BASE_URL = mainIndexBaseURL;
-            LemQueryWriter.BASE_URL = lemServiceBaseURL;
-            System.out.println("Setting Lem Service base url to:"+lemServiceBaseURL);
-            System.out.println("Setting thesaurus index base url to:"+thesaurusIndexBaseURL);
-            ThesaurusSearchControl.BASE_URL = thesaurusIndexBaseURL;
-            System.out.println("Setting mailhost:"+mailHost);
-            EMail.MAIL_HOST = mailHost;
-            System.out.println("Setting mail debug:"+emailDebug);
-            EMail.DEBUG = emailDebug;
-        	System.out.println("System configuration complete.");
-        }
-        catch(Exception e)
-        {
-            log("Init Error:", e);
-            throw new ServletException(e.getMessage(), e);
-        }
-    }
+	public static String getConfigPath(String configName) {
+		String configURL = null;
 
-    public static RuntimeProperties getRuntimeProperties()
-    {
-        return props;
-    }
+		try {
+			configURL = context.getRealPath("/WEB-INF/" + configName);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
+		return configURL;
+	}
 
-
-    public static String getConfigPath(String configName)
-    {
-        String configURL = null;
-
-        try
-        {
-            configURL = context.getRealPath("/WEB-INF/"+configName);
-        }
-        catch(Exception e)
-        {
-            e.printStackTrace();
-        }
-
-        return configURL;
-    }
-
-
-
-    public void service(HttpServletRequest request, HttpServletResponse response)
-        throws IOException, ServletException
-    {
-        ServletOutputStream out = response.getOutputStream();
-        BufferedReader reader = new BufferedReader(new FileReader(getConfigPath(request.getParameter("configName"))));
-        try
-        {
-            String s = null;
-            while((s = reader.readLine()) != null)
-            {
-                out.print(s);
-            }
-        }
-        finally
-        {
-            if(reader != null)
-            {
-                reader.close();
-            }
-        }
-    }
-
+	public void service(HttpServletRequest request, HttpServletResponse response)
+			throws IOException, ServletException {
+		ServletOutputStream out = response.getOutputStream();
+		BufferedReader reader = new BufferedReader(new FileReader(
+				getConfigPath(request.getParameter("configName"))));
+		try {
+			String s = null;
+			while ((s = reader.readLine()) != null) {
+				out.println(s);
+			}
+		} finally {
+			if (reader != null) {
+				reader.close();
+			}
+		}
+	}
 
 }
