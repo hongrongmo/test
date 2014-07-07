@@ -14,11 +14,11 @@ import org.ei.exception.ServiceException;
 import org.ei.service.CSWebService;
 import org.ei.service.CSWebServiceImpl;
 
-import com.elsevier.webservices.schemas.csas.constants.types.v6.NonCombEntValuesStatusCodeType;
-import com.elsevier.webservices.schemas.csas.types.v12.NCEIdValuesType;
-import com.elsevier.webservices.schemas.csas.types.v12.NCENameValuesByType;
-import com.elsevier.webservices.schemas.csas.types.v12.NonCombEntValuesForSessionRespPayloadType;
-import com.elsevier.webservices.schemas.csas.types.v12.NonCombEntValuesStatusInfoType;
+import com.elsevier.webservices.schemas.csas.constants.types.v7.NonCombEntValuesStatusCodeType;
+import com.elsevier.webservices.schemas.csas.types.v13.NCEIdValuesType;
+import com.elsevier.webservices.schemas.csas.types.v13.NCENameValuesByType;
+import com.elsevier.webservices.schemas.csas.types.v13.NonCombEntValuesForSessionRespPayloadType;
+import com.elsevier.webservices.schemas.csas.types.v13.NonCombEntValuesStatusInfoType;
 
 public class TextZonesServiceImpl implements TextZonesService {
 

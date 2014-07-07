@@ -14,51 +14,51 @@ import org.ei.domain.personalization.cars.Account;
 import org.ei.exception.ServiceException;
 import org.ei.service.cars.CARSStringConstants;
 
-import com.elsevier.webservices.schemas.csas.constants.types.v6.AuthenticationStatusCodeType;
-import com.elsevier.webservices.schemas.csas.constants.types.v6.AuthenticationType;
-import com.elsevier.webservices.schemas.csas.types.v12.AuthenticateUserReqPayloadType;
-import com.elsevier.webservices.schemas.csas.types.v12.AuthenticateUserRespPayloadType;
-import com.elsevier.webservices.schemas.csas.types.v12.AuthenticateUserResponseType;
-import com.elsevier.webservices.schemas.csas.types.v12.AuthenticateUserType;
-import com.elsevier.webservices.schemas.csas.types.v12.ConnectionInfoType;
-import com.elsevier.webservices.schemas.csas.types.v12.ContentEntitlementsMethodLevelReqType;
-import com.elsevier.webservices.schemas.csas.types.v12.GetContentEntitlementsReqPayloadType;
-import com.elsevier.webservices.schemas.csas.types.v12.GetContentEntitlementsRespPayloadType;
-import com.elsevier.webservices.schemas.csas.types.v12.GetContentEntitlementsResponseType;
-import com.elsevier.webservices.schemas.csas.types.v12.GetContentEntitlementsType;
-import com.elsevier.webservices.schemas.csas.types.v12.GetNonCombEntValueDefaultsRequestType;
-import com.elsevier.webservices.schemas.csas.types.v12.GetNonCombEntValueDefaultsRespPayloadType;
-import com.elsevier.webservices.schemas.csas.types.v12.GetNonCombEntValueDefaultsResponseType;
-import com.elsevier.webservices.schemas.csas.types.v12.GetNonCombEntValuesForSessionRequestType;
-import com.elsevier.webservices.schemas.csas.types.v12.GetNonCombEntValuesForSessionResponseType;
-import com.elsevier.webservices.schemas.csas.types.v12.GetNonCombEntValuesForSitesRequestType;
-import com.elsevier.webservices.schemas.csas.types.v12.GetNonCombEntValuesForSitesRespPayloadType;
-import com.elsevier.webservices.schemas.csas.types.v12.GetNonCombEntValuesForSitesResponseType;
-import com.elsevier.webservices.schemas.csas.types.v12.GetPasswordReminderResponseType;
-import com.elsevier.webservices.schemas.csas.types.v12.GetPasswordReminderType;
-import com.elsevier.webservices.schemas.csas.types.v12.GetPlatformFenceInfoReqPayloadType;
-import com.elsevier.webservices.schemas.csas.types.v12.GetPlatformFenceInfoRespPayloadType;
-import com.elsevier.webservices.schemas.csas.types.v12.GetPlatformFenceInfoResponseType;
-import com.elsevier.webservices.schemas.csas.types.v12.GetPlatformFenceInfoType;
-import com.elsevier.webservices.schemas.csas.types.v12.GetProfileReqPayloadType;
-import com.elsevier.webservices.schemas.csas.types.v12.GetProfileType;
-import com.elsevier.webservices.schemas.csas.types.v12.LoginPasswordCredentialType;
-import com.elsevier.webservices.schemas.csas.types.v12.NonCombEntValueDefaultsRequestPayloadType;
-import com.elsevier.webservices.schemas.csas.types.v12.NonCombEntValuesForSessionRequestPayloadType;
-import com.elsevier.webservices.schemas.csas.types.v12.NonCombEntValuesForSessionRespPayloadType;
-import com.elsevier.webservices.schemas.csas.types.v12.NonCombEntValuesForSitesRequestPayloadType;
-import com.elsevier.webservices.schemas.csas.types.v12.PasswordReminderReqPayloadType;
-import com.elsevier.webservices.schemas.csas.types.v12.PasswordReminderRespPayloadType;
-import com.elsevier.webservices.schemas.csas.types.v12.PathChoiceInfoType;
-import com.elsevier.webservices.schemas.csas.types.v12.TerminateUserSessionReqPayloadType;
-import com.elsevier.webservices.schemas.csas.types.v12.TerminateUserSessionResponseType;
-import com.elsevier.webservices.schemas.csas.types.v12.TerminateUserSessionType;
-import com.elsevier.webservices.schemas.csas.types.v12.UserCredentialsType;
-import com.elsevier.webservices.schemas.csas.types.v12.UserProfileRespPayloadType;
-import com.elsevier.webservices.schemas.csas.types.v12.UserProfileResponseType;
+import com.elsevier.webservices.schemas.csas.constants.types.v7.AuthenticationStatusCodeType;
+import com.elsevier.webservices.schemas.csas.constants.types.v7.AuthenticationType;
+import com.elsevier.webservices.schemas.csas.types.v13.AuthenticateUserReqPayloadType;
+import com.elsevier.webservices.schemas.csas.types.v13.AuthenticateUserRespPayloadType;
+import com.elsevier.webservices.schemas.csas.types.v13.AuthenticateUserResponseType;
+import com.elsevier.webservices.schemas.csas.types.v13.AuthenticateUserType;
+import com.elsevier.webservices.schemas.csas.types.v13.ConnectionInfoType;
+import com.elsevier.webservices.schemas.csas.types.v13.ContentEntitlementsMethodLevelReqType;
+import com.elsevier.webservices.schemas.csas.types.v13.GetContentEntitlementsReqPayloadType;
+import com.elsevier.webservices.schemas.csas.types.v13.GetContentEntitlementsRespPayloadType;
+import com.elsevier.webservices.schemas.csas.types.v13.GetContentEntitlementsResponseType;
+import com.elsevier.webservices.schemas.csas.types.v13.GetContentEntitlementsType;
+import com.elsevier.webservices.schemas.csas.types.v13.GetNonCombEntValueDefaultsRequestType;
+import com.elsevier.webservices.schemas.csas.types.v13.GetNonCombEntValueDefaultsRespPayloadType;
+import com.elsevier.webservices.schemas.csas.types.v13.GetNonCombEntValueDefaultsResponseType;
+import com.elsevier.webservices.schemas.csas.types.v13.GetNonCombEntValuesForSessionRequestType;
+import com.elsevier.webservices.schemas.csas.types.v13.GetNonCombEntValuesForSessionResponseType;
+import com.elsevier.webservices.schemas.csas.types.v13.GetNonCombEntValuesForSitesRequestType;
+import com.elsevier.webservices.schemas.csas.types.v13.GetNonCombEntValuesForSitesRespPayloadType;
+import com.elsevier.webservices.schemas.csas.types.v13.GetNonCombEntValuesForSitesResponseType;
+import com.elsevier.webservices.schemas.csas.types.v13.GetPasswordReminderResponseType;
+import com.elsevier.webservices.schemas.csas.types.v13.GetPasswordReminderType;
+import com.elsevier.webservices.schemas.csas.types.v13.GetPlatformFenceInfoReqPayloadType;
+import com.elsevier.webservices.schemas.csas.types.v13.GetPlatformFenceInfoRespPayloadType;
+import com.elsevier.webservices.schemas.csas.types.v13.GetPlatformFenceInfoResponseType;
+import com.elsevier.webservices.schemas.csas.types.v13.GetPlatformFenceInfoType;
+import com.elsevier.webservices.schemas.csas.types.v13.GetProfileReqPayloadType;
+import com.elsevier.webservices.schemas.csas.types.v13.GetProfileType;
+import com.elsevier.webservices.schemas.csas.types.v13.LoginPasswordCredentialType;
+import com.elsevier.webservices.schemas.csas.types.v13.NonCombEntValueDefaultsRequestPayloadType;
+import com.elsevier.webservices.schemas.csas.types.v13.NonCombEntValuesForSessionRequestPayloadType;
+import com.elsevier.webservices.schemas.csas.types.v13.NonCombEntValuesForSessionRespPayloadType;
+import com.elsevier.webservices.schemas.csas.types.v13.NonCombEntValuesForSitesRequestPayloadType;
+import com.elsevier.webservices.schemas.csas.types.v13.PasswordReminderReqPayloadType;
+import com.elsevier.webservices.schemas.csas.types.v13.PasswordReminderRespPayloadType;
+import com.elsevier.webservices.schemas.csas.types.v13.PathChoiceInfoType;
+import com.elsevier.webservices.schemas.csas.types.v13.TerminateUserSessionReqPayloadType;
+import com.elsevier.webservices.schemas.csas.types.v13.TerminateUserSessionResponseType;
+import com.elsevier.webservices.schemas.csas.types.v13.TerminateUserSessionType;
+import com.elsevier.webservices.schemas.csas.types.v13.UserCredentialsType;
+import com.elsevier.webservices.schemas.csas.types.v13.UserProfileRespPayloadType;
+import com.elsevier.webservices.schemas.csas.types.v13.UserProfileResponseType;
 import com.elsevier.webservices.schemas.easi.headers.types.v1.RequestHeaderType;
 import com.elsevier.webservices.schemas.easi.headers.types.v1.ResponseHeaderType;
-import com.elsevier.wsdls.csas.service.v12.CSApplicationServicePortTypeV12;
+import com.elsevier.wsdls.csas.service.v13.CSApplicationServicePortTypeV13;
 
 /**
  * This class holds the proxy pool used for csws access. This class provides
@@ -69,7 +69,7 @@ public class CSWebServiceImpl implements CSWebService {
 	private final static Logger log4j = Logger.getLogger(CSWebServiceImpl.class);
 
 	public PasswordReminderRespPayloadType getPasswordReminder(String email, String ipaddress) throws ServiceException {
-		CSApplicationServicePortTypeV12 port = null;
+		CSApplicationServicePortTypeV13 port = null;
 
 		final PasswordReminderReqPayloadType payload = new PasswordReminderReqPayloadType();
 		payload.setPlatformInfo(ANEServiceHelper.getEVPlatformInfo());
@@ -96,7 +96,7 @@ public class CSWebServiceImpl implements CSWebService {
 	}
 
 	public AuthenticateUserRespPayloadType authenticateByIP(String IP) throws ServiceException {
-        CSApplicationServicePortTypeV12 port = null;
+        CSApplicationServicePortTypeV13 port = null;
 
         ConnectionInfoType connectioninfo = new ConnectionInfoType();
         connectioninfo.setBrowserType("N/A");
@@ -129,7 +129,7 @@ public class CSWebServiceImpl implements CSWebService {
 	}
 
 	public AuthenticateUserRespPayloadType authenticateLindaHall(String username, String password) throws ServiceException {
-		CSApplicationServicePortTypeV12 port = null;
+		CSApplicationServicePortTypeV13 port = null;
 
 		UserCredentialsType usercredentials = new UserCredentialsType();
 		LoginPasswordCredentialType loginpassword = new LoginPasswordCredentialType();
@@ -172,7 +172,7 @@ public class CSWebServiceImpl implements CSWebService {
 	}
 
 	public void terminate(String authtoken) throws ServiceException {
-		CSApplicationServicePortTypeV12 port = null;
+		CSApplicationServicePortTypeV13 port = null;
 
 		TerminateUserSessionReqPayloadType terminationpayload = new TerminateUserSessionReqPayloadType();
 		terminationpayload.setAuthToken(authtoken);
@@ -195,7 +195,7 @@ public class CSWebServiceImpl implements CSWebService {
 	}
 
 	public UserProfileRespPayloadType getProfile(int webUserID) throws ServiceException {
-		CSApplicationServicePortTypeV12 port = null;
+		CSApplicationServicePortTypeV13 port = null;
 
 		GetProfileType getProfile = new GetProfileType();
 		GetProfileReqPayloadType getProfileReqPayload = new GetProfileReqPayloadType();
@@ -222,7 +222,7 @@ public class CSWebServiceImpl implements CSWebService {
 	}
 
 	public GetNonCombEntValueDefaultsRespPayloadType getNonCombEntValueDefaults() throws ServiceException {
-		CSApplicationServicePortTypeV12 port = null;
+		CSApplicationServicePortTypeV13 port = null;
 
 		GetNonCombEntValueDefaultsRequestType getNonCombEntValueDefaultsRequestType = new GetNonCombEntValueDefaultsRequestType();
 		NonCombEntValueDefaultsRequestPayloadType nonCombEntValueDefaultsRequestPayloadType = new NonCombEntValueDefaultsRequestPayloadType();
@@ -259,7 +259,7 @@ public class CSWebServiceImpl implements CSWebService {
 	public NonCombEntValuesForSessionRespPayloadType getNonCombEntValueForSession(String authToken, String carsSessionId) throws ServiceException {
 
 		log4j.debug("Retrieving NonCombEntData per session value..-Begin");
-		CSApplicationServicePortTypeV12 port = null;
+		CSApplicationServicePortTypeV13 port = null;
 
 		GetNonCombEntValuesForSessionRequestType getNonCombEntValuesForSessionRequestType = new GetNonCombEntValuesForSessionRequestType();
 
@@ -292,7 +292,7 @@ public class CSWebServiceImpl implements CSWebService {
 	}
 
 	public GetNonCombEntValuesForSitesRespPayloadType getNonCombEntValuesForSites(String nceTypeName) throws ServiceException {
-		CSApplicationServicePortTypeV12 port = null;
+		CSApplicationServicePortTypeV13 port = null;
 
 		GetNonCombEntValuesForSitesRequestType getNonCombEntValuesForSitesRequestType = new GetNonCombEntValuesForSitesRequestType();
 		NonCombEntValuesForSitesRequestPayloadType getNonComEntValuesForSitesReqPayloadType = new NonCombEntValuesForSitesRequestPayloadType();
@@ -318,7 +318,7 @@ public class CSWebServiceImpl implements CSWebService {
 
 	public GetPlatformFenceInfoRespPayloadType getPlatformFenceInfo() throws ServiceException {
 
-		CSApplicationServicePortTypeV12 port = null;
+		CSApplicationServicePortTypeV13 port = null;
 
 		GetPlatformFenceInfoType platformFenceInfo = new GetPlatformFenceInfoType();
 		GetPlatformFenceInfoReqPayloadType platformFenceInfoReqPayload = new GetPlatformFenceInfoReqPayloadType();
@@ -357,7 +357,7 @@ public class CSWebServiceImpl implements CSWebService {
 
 	public GetContentEntitlementsRespPayloadType getUserEntitelments(String authToken, String carsSessionId) throws ServiceException {
 
-		CSApplicationServicePortTypeV12 port = null;
+		CSApplicationServicePortTypeV13 port = null;
 
 		GetContentEntitlementsType contentEntitlementsType = new GetContentEntitlementsType();
 		GetContentEntitlementsReqPayloadType entitlementsReqPayloadType = new GetContentEntitlementsReqPayloadType();
@@ -394,7 +394,7 @@ public class CSWebServiceImpl implements CSWebService {
 		return contentEntitlementsResponseHolder.value.getGetContentEntitlementsRespPayload();
 	}
 
-	private void setCARSJSessionIdInSoapCall(CSApplicationServicePortTypeV12 port, String jSessionId) {
+	private void setCARSJSessionIdInSoapCall(CSApplicationServicePortTypeV13 port, String jSessionId) {
 
 		Map<String, List<String>> map = new HashMap<String, List<String>>();
 		List<String> cookies = new ArrayList<String>();
