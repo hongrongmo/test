@@ -10,15 +10,15 @@ public class Issue implements Comparable {
   private String isbn = null;
 
   private List<IncludeItem> includeItems = null;
-  
+
   public Issue() {
     includeItems = new LinkedList<IncludeItem>();
   }
-  
+
   public void addIncludeItem(IncludeItem i) {
     includeItems.add(i);
   }
-  
+
   public List<IncludeItem> getIncludeItems() {
     return includeItems;
   }
@@ -26,9 +26,9 @@ public class Issue implements Comparable {
   public void setIncludeItems(List<IncludeItem> includeItems) {
     this.includeItems = includeItems;
   }
-  
+
   public String getIsbn() {
-    return isbn;
+    return isbn.replaceAll("-","");
   }
 
   public void setIsbn(String isbn) {

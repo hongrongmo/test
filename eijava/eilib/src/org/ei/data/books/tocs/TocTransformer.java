@@ -22,6 +22,7 @@ import javax.xml.transform.stream.StreamSource;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.apache.xml.resolver.tools.CatalogResolver;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
@@ -58,12 +59,13 @@ public class TocTransformer  {
           factory.setNamespaceAware(true);
           saxParser = factory.newSAXParser();
           XMLReader aparser = saxParser.getXMLReader();
-          aparser.setEntityResolver(new BookDTDEntityResolver());
+          aparser.setEntityResolver(new CatalogResolver());
           xmlSource = new SAXSource(aparser,new InputSource(in));
 
           trans.transform(xmlSource, tresult);
           result = true;
           trans = null;
+          is.close();
       } catch (IOException e) {
           log.error(e.toString());
       } catch (SAXException e) {

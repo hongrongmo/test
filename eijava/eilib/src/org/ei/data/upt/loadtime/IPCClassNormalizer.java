@@ -26,7 +26,7 @@ public class IPCClassNormalizer {
 
             String val = diskMap.get(key);
 
-            System.out.println(val);
+            //System.out.println(val);
 
         }
         catch (Exception e) {
@@ -105,9 +105,9 @@ public class IPCClassNormalizer {
         for (int i = 0; i < subs.length; i++) {
             String sub = subs[i];
             if (sub.indexOf("0") == 0) {
-                System.out.println("Checking:" + code);
+               // System.out.println("Checking:" + code);
                 if (code.indexOf(sub) > -1) {
-                    System.out.println("Removing zero for:" + code);
+                    //System.out.println("Removing zero for:" + code);
                     String subNoLeadingZero = sub.substring(1, sub.length());
                     code = code.replaceFirst(sub, subNoLeadingZero);
                     return code;

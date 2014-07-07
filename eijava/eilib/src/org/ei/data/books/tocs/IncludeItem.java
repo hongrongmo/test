@@ -43,14 +43,15 @@ public class IncludeItem {
     }
 
     public String toString() {
-      StringBuffer buffer = new StringBuffer();
+      StringBuilder builder = new StringBuilder();
 
-      buffer.append(getClass().getName()).append("@").append(Integer.toHexString(hashCode())).append(" [");
-      buffer.append("title").append("='").append(getTitle()).append("' ");
-      buffer.append("pii").append("='").append(getPii()).append("' ");
-      buffer.append("ranges").append("='").append(getPageRanges()).append("' ");
-      buffer.append("]");
+      builder.append(getClass().getName()).append("@").append(Integer.toHexString(hashCode()));
+      builder.append("\n[");
+      builder.append("title").append("='").append(getTitle()).append("' ");
+      builder.append("pii").append("='").append(getPii()).append("' ");
+      builder.append("ranges").append("='").append(getPageRanges()).append("' ");
+      builder.append("]");
 
-      return buffer.toString();
+      return builder.toString();
     }
 }

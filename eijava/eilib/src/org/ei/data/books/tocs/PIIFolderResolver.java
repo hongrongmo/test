@@ -21,6 +21,7 @@ import javax.xml.transform.stream.StreamSource;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.apache.xml.resolver.tools.CatalogResolver;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
@@ -31,12 +32,12 @@ public class PIIFolderResolver implements URIResolver  {
     private String issuepath = "";
     private File issuefile = null;
     private String piifoldername = "";
-    
+
     public PIIFolderResolver(File xml) throws IOException {
         issuefile = xml;
-        issuepath = xml.getParent(); 
+        issuepath = xml.getParent();
     }
-    
+
     public Source resolve(String href, String base) throws TransformerException {
         // TODO Auto-generated method stub
         //log.info(" resolve " + href);
@@ -44,6 +45,7 @@ public class PIIFolderResolver implements URIResolver  {
         String includeitemfile = "";
         if(href.indexOf("qqDELqq") >= 0) {
             // B978-0-08-044553-3.50007-2
+            System.out.println("IN 1");
             String path[] = href.split("qqDELqq");
             if(path != null && path.length == 2){
                 String prefix = ((String)path[0]).toUpperCase();
@@ -52,11 +54,24 @@ public class PIIFolderResolver implements URIResolver  {
             }
         }
         else if(href.startsWith("S")) {
+			System.out.println("IN 2");
             Pattern piiIssuePat = Pattern.compile("(\\d{4}-\\d{4})\\(([^\\)]\\d+)\\)(\\d[^-]+)-(\\w)");
             Matcher piiMatch = piiIssuePat.matcher(href);
             if(piiMatch.find()) {
                 includeitemfile = piiMatch.group(2) + piiMatch.group(3) + piiMatch.group(4) + System.getProperty("file.separator") + "main.xml";
             }
+            includeitemfile = issuepath + System.getProperty("file.separator") + includeitemfile;
+        }
+        else if(href.startsWith("B")) {
+			System.out.println("IN 3");
+			//(\d{3})\-(\d{1})\-(\d{3})\-(\d{5})\-(\d{1})\.(\d{5})\-(\w)
+		    Pattern piiIssuePat = Pattern.compile("(\\d{3}-\\d{1}-\\d{3}-\\{5}-\\d{1}\\.\\{5})-(\\w)");
+		    Matcher piiMatch = piiIssuePat.matcher(href);
+		    if(piiMatch.find()) {
+		        includeitemfile = piiMatch.group(2) + piiMatch.group(3) + piiMatch.group(4) + System.getProperty("file.separator") + "main.xml";
+		    }
+		    includeitemfile = issuepath + System.getProperty("file.separator") + includeitemfile;
+		    System.out.println("includeitemfile= "+includeitemfile);
         }
         else if(href.equals("lookup.xml")) {
             log.debug("Creating lookup xml data for " + issuefile.getName());
@@ -64,7 +79,7 @@ public class PIIFolderResolver implements URIResolver  {
             return new StreamSource(new StringReader(lookupxml));
         }
         else {
-            includeitemfile = href; 
+            includeitemfile = href;
         }
 
         String xmlFile = includeitemfile;
@@ -80,7 +95,7 @@ public class PIIFolderResolver implements URIResolver  {
             }
           }
         }
-        
+
         if(!(new File(xmlFile)).exists()) {
             log.error("File not found " + xmlFile);
             return new StreamSource(new StringReader("<empty/>"));
@@ -90,15 +105,15 @@ public class PIIFolderResolver implements URIResolver  {
         try {
 //            InputStreamReader is = new InputStreamReader(new FileInputStream(xmlFile));
 
-            
+
             InputStreamReader is = new InputStreamReader(new FileInputStream(xmlFile),Charset.forName("UTF-8"));
             BufferedReader in = new BufferedReader(is);
 
             factory.setNamespaceAware(true);
             saxParser = factory.newSAXParser();
             XMLReader aparser = saxParser.getXMLReader();
-            aparser.setEntityResolver(new BookDTDEntityResolver());
-            
+            aparser.setEntityResolver(new CatalogResolver());
+
             asource = new SAXSource(aparser,new InputSource(in));
 
         } catch (IOException e) {
@@ -110,7 +125,7 @@ public class PIIFolderResolver implements URIResolver  {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        
+
         return asource;
     }
 

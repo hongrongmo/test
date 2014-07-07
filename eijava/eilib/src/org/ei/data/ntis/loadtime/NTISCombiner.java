@@ -80,7 +80,7 @@ public class NTISCombiner
     	// extract the whole thing
     	else if(loadNumber == 0)
     	{
-      		for(int yearIndex = 1964; yearIndex <= 2011; yearIndex++)
+      		for(int yearIndex = 1964; yearIndex <= 2012; yearIndex++)
       		{
     			System.out.println("Processing year " + yearIndex + "...");
       	  		// create  a new writer so we can see the loadNumber/yearNumber in the filename
@@ -110,6 +110,8 @@ public class NTISCombiner
         super(writer);
     }
 
+
+
     public void writeCombinedByYearHook(Connection con,
             							int year)
     	throws Exception
@@ -122,7 +124,7 @@ public class NTISCombiner
 
             stmt = con.createStatement();
             System.out.println("Running the query...");
-            String q = "select LOAD_NUMBER,M_ID,AN,TI,TN,PN,AB,IC,SU,DES,IDE,SO,PA1,PA2,PA2,PA3,PA4,PA5,RD,RN,CAT,VI,XP,AV,MAA1,MAA2,CT,PR,HN,seq_num from " + Combiner.TABLENAME + " where seq_num is not null and substr(load_number,1,4) ='" + year + "'";
+            String q = "select LOAD_NUMBER,M_ID,AN,TI,TN,PN,AB,IC,SU,DES,IDE,SO,PA1,PA2,PA2,PA3,PA4,PA5,RD,RN,CAT,VI,XP,AV,MAA1,MAA2,CT,PR,HN,seq_num from " + Combiner.TABLENAME + " where substr(load_number,1,4) ='" + year + "'";
             rs = stmt.executeQuery(q);
             System.out.println("Got records ...");
             writeRecs(rs);
@@ -172,11 +174,11 @@ public class NTISCombiner
             ++i;
 
             String aut = NTISAuthor.formatAuthors(rs.getString("PA1"),
-                    								 rs.getString("PA2"),
-                    								 rs.getString("PA3"),
-                    								 rs.getString("PA4"),
-                    								 rs.getString("PA5"),
-                    								 rs.getString("HN"));
+                    							  rs.getString("PA2"),
+                    							  rs.getString("PA3"),
+                    							  rs.getString("PA4"),
+                    							  rs.getString("PA5"),
+                    							  rs.getString("HN"));
 
             if (aut != null)
             {
@@ -297,7 +299,28 @@ public class NTISCombiner
         {
             return null;
         }
+        //Added for xml format data
+		if(num1.indexOf(NTISParser.AUDELIMITER)>-1)
+		{
+			String[] num1Array = num1.split(NTISParser.AUDELIMITER);
+			String num11="";
+			String num12="";
 
+			//added for XML format
+			for(int i=0;i<num1Array.length;i++)
+			{
+				String singleNum1 = num1Array[i];
+				if(singleNum1.indexOf("Contract")>-1)
+				{
+					num11= singleNum1;
+				}
+				else
+				{
+					num12 = num12+";"+singleNum1;
+				}
+			}
+			num1=num11+";"+num12;
+		}
         num1 = num1.replace('{', ' ');
         num2 = num2.replace('{', ' ');
         return num1 + ";" + num2;
@@ -356,7 +379,7 @@ public class NTISCombiner
         return s.replace(',', ';');
     }
 
-    private String formatCV(String cv)
+    public String formatCV(String cv)
     {
         if (cv == null)
         {
@@ -418,14 +441,14 @@ public class NTISCombiner
         return ab;
     }
 
-    private String getPubYear(String rd,
+    public String getPubYear(String rd,
             				  String load_number)
     {
         String mResult = null;
         String years19 = "19";
         String years20 = "20";
 
-        if (load_number != null)
+        if (load_number != null && load_number.length()>3)
         {
             load_number = load_number.substring(0,3);
         }
@@ -466,7 +489,7 @@ public class NTISCombiner
         }
     }
 
-    private String formatDelimiter(String fielddata)
+    public String formatDelimiter(String fielddata)
     {
         if (fielddata == null)
         {
@@ -831,7 +854,7 @@ public class NTISCombiner
         return notes;
     }
 
-    private String formatAffil(String af)
+    public String formatAffil(String af)
     {
         if (af == null)
         {
@@ -1072,7 +1095,7 @@ public class NTISCombiner
         {
 
             stmt = con.createStatement();
-            rs = stmt.executeQuery("select LOAD_NUMBER,M_ID,AN,TI,TN,PN,AB,IC,SU,DES,IDE,SO,PA1,PA2,PA2,PA3,PA4,PA5,RD,RN,CAT,VI,XP,AV,MAA1,MAA2,CT,PR,HN,seq_num from " + tablename + " where seq_num is not null and load_number =" + weekNumber);
+            rs = stmt.executeQuery("select LOAD_NUMBER,M_ID,AN,TI,TN,PN,AB,IC,SU,DES,IDE,SO,PA1,PA2,PA2,PA3,PA4,PA5,RD,RN,CAT,VI,XP,AV,MAA1,MAA2,CT,PR,HN,seq_num from " + tablename + " where load_number =" + weekNumber);
             writeRecs(rs);
             this.writer.end();
             this.writer.flush();
@@ -1107,7 +1130,7 @@ public class NTISCombiner
 
     }
 
-    private String[] prepareAuthor(String aString)
+    public String[] prepareAuthor(String aString)
     	throws Exception
     {
         StringBuffer buf = new StringBuffer();
@@ -1142,7 +1165,7 @@ public class NTISCombiner
         return sVal;
     }
 
-    private String[] prepareMulti(String multiString)
+    public String[] prepareMulti(String multiString)
     	throws Exception
     {
 

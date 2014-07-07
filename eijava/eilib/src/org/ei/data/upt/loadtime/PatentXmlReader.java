@@ -90,7 +90,7 @@ public class PatentXmlReader
 		filename = args[0];
 		String outputFile = args[1];
 		loadNumber = args[2];
-		String url = "jdbc:oracle:thin:@206.137.75.51:1521:EI";
+		String url = "jdbc:oracle:thin:@206.137.75.53:1521:EIDB1";
 		String username = "db_patent";
 		String password = "nynoru6j";
 
@@ -170,8 +170,9 @@ public class PatentXmlReader
 		{
 			String file1 = (String)o1;
 			String file2 = (String)o2;
-			String[] file1Parts = file1.split("_");
-			String[] file2Parts = file2.split("_");
+			String[] file1Parts = file1.split(".zip");
+			String[] file2Parts = file2.split(".zip");
+
 			int date1 = Integer.parseInt(file1Parts[0]);
 			int date2 = Integer.parseInt(file2Parts[0]);
 
@@ -1756,7 +1757,10 @@ public class PatentXmlReader
 					{
 						Element unexamined_printed_without_grant = dates_of_public_availability.getChild("unexamined-printed-without-grant");
 					//System.out.println("DATE_OF_PUBLIC"+unexamined_printed_without_grant.getChildTextTrim("date"));
-						record.put("DATE_OF_PUBLIC",unexamined_printed_without_grant.getChildTextTrim("date")); //OK
+						if(unexamined_printed_without_grant != null)
+						{
+							record.put("DATE_OF_PUBLIC",unexamined_printed_without_grant.getChildTextTrim("date")); //OK
+						}
 					}
 
 					// classification-ipc
@@ -1905,6 +1909,7 @@ public class PatentXmlReader
 							for(int i=0;i<related_publication.size();i++)
 							{
 								Element related_publication_element = (Element)related_publication.get(i);
+
 								Element document_id = related_publication_element.getChild("document-id");
 								if(document_id != null)
 								{
@@ -1948,15 +1953,23 @@ public class PatentXmlReader
 						Element primary_examiners = examiners.getChild("primary-examiner");
 						if(primary_examiners != null)
 						{
-							StringBuffer pe_name = getMixData(primary_examiners.getChild("name").getContent(), new StringBuffer());
-							record.put("PE_NAME",pe_name.toString());
+							Element name = primary_examiners.getChild("name");
+							if(name != null)
+							{
+								StringBuffer pe_name = getMixData(name.getContent(), new StringBuffer());
+								record.put("PE_NAME",pe_name.toString());
+							}
 						}
 
 						Element assistant_examiners = examiners.getChild("assistant-examiner");
 						if(assistant_examiners != null)
 						{
-							StringBuffer ae_name = getMixData(assistant_examiners.getChild("name").getContent(), new StringBuffer());
-							record.put("AE_NAME",ae_name.toString());
+							Element name = assistant_examiners.getChild("name");
+							if(name != null)
+							{
+								StringBuffer ae_name = getMixData(name.getContent(), new StringBuffer());
+								record.put("AE_NAME",ae_name.toString());
+							}
 						}
 
 					}//OK
@@ -2986,7 +2999,7 @@ public class PatentXmlReader
 					case 171 :sb.append("&laquo;");break; 	//left-pointing double angle
 					case 172 :sb.append("&not;");break; 	//not sign
 					case 173 :sb.append("&shy;");break; 	//soft hyphen
-					case 174 :sb.append("&reg");break; 		//registered sign
+					case 174 :sb.append("&reg;");break; 		//registered sign
 					case 175 :sb.append("&macr;");break; 	//macron
 					case 176 :sb.append("&deg;");break; 	//degree sign
 					case 177 :sb.append("&plusmn;");break; 	//plus-minus sign
@@ -2995,7 +3008,7 @@ public class PatentXmlReader
 					case 180 :sb.append("&acute;");break; 	//acute accent
 					case 181 :sb.append("&micro;");break; 	//micro sign
 					case 182 :sb.append("&para;");break; 	//pilcrow sign
-					case 183 :sb.append("&middot");break; 	//middle dot
+					case 183 :sb.append("&middot;");break; 	//middle dot
 					case 184 :sb.append("&cedi1;");break; 	//cedilla
 					case 185 :sb.append("&supl;");break; 	//superscript one
 					case 186 :sb.append("&ordm;");break; 	//masculine ordinal indicator
@@ -3136,16 +3149,16 @@ public class PatentXmlReader
 					case 8222 :sb.append("&bdquo;");break; 	//Double low-9 quotation mark
 					case 8224 :sb.append("&dagger;");break; //Dagger
 					case 8225 :sb.append("&Dagger;");break; //Double Dagger
-					case 8226 :sb.append("&bull");break; 	//Bullet, black small circle
-					case 8230 :sb.append("&hellip");break; 	//Horizontal ellipsis
+					case 8226 :sb.append("&bull;");break; 	//Bullet, black small circle
+					case 8230 :sb.append("&hellip;");break; 	//Horizontal ellipsis
 					case 8240 :sb.append("&permil;");break; //per mille sign
 					case 8242 :sb.append("&prime;");break; 	//prime, minutes,feet
 					case 8243 :sb.append("&Prime;");break; 	//double prime,
 					case 8249 :sb.append("&Isaquo;");break; //single left-pointing angle quotation mark
 					case 8250 :sb.append("&rsaquo;");break; //single right-pointing angle quotation mark
 					case 8254 :sb.append("&oline;");break;  //Overline, spacing overscore
-					case 8260 :sb.append("&frasl");break; 	//Fraction slash
-					case 8364 :sb.append("&euro");break; 	//Euro sign
+					case 8260 :sb.append("&frasl;");break; 	//Fraction slash
+					case 8364 :sb.append("&euro;");break; 	//Euro sign
 					case 8465 :sb.append("&image;");break;  //blackletter capital I
 					case 8472 :sb.append("&weierp;");break; //script capital P, power set, Weierstrass p
 					case 8476 :sb.append("&real;");break; 	//Blackletter capital R, real part symbol,
@@ -3153,8 +3166,8 @@ public class PatentXmlReader
 					case 8501 :sb.append("&alefsym;");break;//Alef symbol, first transfinite cardinal
 					case 8592 :sb.append("&larr;");break; 	//Leftward arrow
 					case 8593 :sb.append("&uarr;");break;   //Upward arrow
-					case 8594 :sb.append("&rarr");break; 	//Righteard arrow
-					case 8595 :sb.append("&darr");break; 	//Downward arrow
+					case 8594 :sb.append("&rarr;");break; 	//Righteard arrow
+					case 8595 :sb.append("&darr;");break; 	//Downward arrow
 					case 8596 :sb.append("&harr;");break;   //left right arrow
 					case 8629 :sb.append("&crarr;");break;  //downward arrow with corner leftward, carriage return
 					case 8656 :sb.append("&lArr;");break; 	//leftward double arrow
@@ -3163,7 +3176,7 @@ public class PatentXmlReader
 					case 8659 :sb.append("&dArr;");break;   //Downward double arrow
 					case 8660 :sb.append("&hArr;");break;  	//left-right double
 					case 8704 :sb.append("&forall;");break; //for all
-					case 8706 :sb.append("&part");break; 	//Partial differential
+					case 8706 :sb.append("&part;");break; 	//Partial differential
 					case 8707 :sb.append("&exist;");break;  //there exist
 					case 8709 :sb.append("&empty;");break; 	//empty set
 					case 8711 :sb.append("&nabla;");break; 	//Nabla, backward difference
@@ -3172,7 +3185,7 @@ public class PatentXmlReader
 					case 8715 :sb.append("&ni;");break;   	//Contains as member
 					case 8719 :sb.append("&prod;");break;  	//n_ary product, product sign
 					case 8721 :sb.append("&sum;");break; 	//n-ary sumation
-					case 8722 :sb.append("&minus");break; 	//Minus sign
+					case 8722 :sb.append("&minus;");break; 	//Minus sign
 					case 8727 :sb.append("&lowast;");break; //Asterisk operation
 					case 8730 :sb.append("&radic;");break; 	//Square root, radical sign
 					case 8733 :sb.append("&prop;");break; 	//proportional to
@@ -3189,7 +3202,7 @@ public class PatentXmlReader
 					case 8776 :sb.append("&asyum;");break;  //almost equal to, asymptotic to
 					case 8800 :sb.append("&ne;");break;  	//not equal
 					case 8801 :sb.append("&equiv;");break; 	//identical to
-					case 8804 :sb.append("&le");break; 		//less - than or equal to
+					case 8804 :sb.append("&le;");break; 		//less - than or equal to
 					case 8805 :sb.append("&ge;");break; 	//greater than or equal to
 					case 8834 :sb.append("&sub;");break; 	//subset of
 					case 8835 :sb.append("&sup;");break; 	//superset of
@@ -3206,7 +3219,7 @@ public class PatentXmlReader
 					case 8971 :sb.append("&rfloor;");break; //right floor
 					case 9001 :sb.append("&lang;");break;  	//left pointing angle bracket, bra
 					case 9002 :sb.append("&rang;");break; 	//right pointing angle bracket, ket
-					case 9674 :sb.append("&loz");break; 	//lozenge
+					case 9674 :sb.append("&loz;");break; 	//lozenge
 					case 9824 :sb.append("&spades;");break; //black spade suit
 					case 9827 :sb.append("&clubs;");break; 	//black club suit, shamrock
 					case 9829 :sb.append("&hearts;");break; //black heart suit, valentine

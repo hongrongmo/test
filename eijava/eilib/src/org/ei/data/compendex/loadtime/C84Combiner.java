@@ -55,14 +55,14 @@ public class C84Combiner
     	if(loadNumber == 0)
     	{
 			for(int yearIndex = 1869; yearIndex <= 1969; yearIndex++)
-			{						
+			{
 				System.out.println("Processing year " + yearIndex + "...");
 				c = new C84Combiner(new CombinedXMLWriter(recsPerbatch, yearIndex,"c84", environment));
 				c.writeCombinedByYear(url,
 								driver,
 								username,
 								password,
-								yearIndex);				
+								yearIndex);
 			}
 			int yearIndex = 9999;
 			System.out.println("Processing year " + yearIndex + "...");
@@ -71,7 +71,7 @@ public class C84Combiner
 							driver,
 							username,
 							password,
-							yearIndex);						
+							yearIndex);
 		}
 		else
 		{
@@ -103,13 +103,13 @@ public class C84Combiner
             System.out.println("Running the query...");
             if(year == 9999)
             {
-            	rs = stmt.executeQuery("select * from " + Combiner.TABLENAME + " where seq_num is not null and yr in ('1000','1003','1018','1039','1042','1043','1047','1051','1052','1059','1065','1153','1494','1495','1590','1592','1593','1597','1643','1659','1800','1802','1804','1805','1806','1807','1808','1809','1811','1813','1820','1830','1831','1838','1855','1856','1857','1858','1860','1863','1864','1865','1867','1868','189','19\\ill\\','192','193\\ill\\','1972','1975','1978','1981','1983','1984','1985','1987','1989','1990','1992','1993','1994','1995','7953') or yr is null");
+            	rs = stmt.executeQuery("select * from " + Combiner.TABLENAME + " where yr in ('1000','1003','1018','1039','1042','1043','1047','1051','1052','1059','1065','1153','1494','1495','1590','1592','1593','1597','1643','1659','1800','1802','1804','1805','1806','1807','1808','1809','1811','1813','1820','1830','1831','1838','1855','1856','1857','1858','1860','1863','1864','1865','1867','1868','189','19\\ill\\','192','193\\ill\\','1972','1975','1978','1981','1983','1984','1985','1987','1989','1990','1992','1993','1994','1995','7953') or yr is null");
             }
             else
             {
-            	rs = stmt.executeQuery("select * from " + Combiner.TABLENAME + " where seq_num is not null and substr(yr,1,4) ='" + year + "'");
+            	rs = stmt.executeQuery("select * from " + Combiner.TABLENAME + " where substr(yr,1,4) ='" + year + "'");
             }
-            
+
             //
             System.out.println("Got records ...");
             writeRecs(rs);
@@ -162,7 +162,7 @@ public class C84Combiner
 			{
             	rec.put(EVCombinedRec.PARENT_ID, rs.getString("seq_num"));
 			}
-            
+
             String abString = getStringFromClob(rs.getClob("ab"));
 
             if (validYear(rs.getString("yr"), rs.getString("LOAD_NUMBER")))
@@ -411,13 +411,13 @@ public class C84Combiner
                     rec.put(EVCombinedRec.PATENTISSUEDATE, rs.getString("pd"));
                 }
 
-                rec.put(EVCombinedRec.DOCID, rs.getString("M_ID"));                                
+                rec.put(EVCombinedRec.DOCID, rs.getString("M_ID"));
                 rec.put(EVCombinedRec.DATABASE, "c84");
                 rec.put(EVCombinedRec.LOAD_NUMBER, rs.getString("LOAD_NUMBER"));
-                
+
                 if ((rs.getString("yr") != null)
                         && validpubYear(rs.getString("yr")))
-                {                	
+                {
                     rec.put(EVCombinedRec.PUB_YEAR, rs.getString("yr"));
                     rec.put(EVCombinedRec.DATESORT, rs.getString("yr") + "0000");
                 }
@@ -692,7 +692,7 @@ public class C84Combiner
 
             stmt = con.createStatement();
 
-            rs = stmt.executeQuery("select ay, ac , ey, pe, pm, ad, pd, pu, ab, m_id, vo, iss, xp,af, ex, an, aus, bn, cal, cc, cf, cls, cn, cvs, dt, ed, ef, fls, id, la, lf, mc, me, mh, ms, mt, mv, my, m2, pn, se, sh, sn, sp, st, ti, tt, tr, vt, do, SUBSTR(yr,1,4) yr, load_number, seq_num from " + tablename + " where seq_num is not null and load_number =" + weekNumber);
+            rs = stmt.executeQuery("select ay, ac , ey, pe, pm, ad, pd, pu, ab, m_id, vo, iss, xp,af, ex, an, aus, bn, cal, cc, cf, cls, cn, cvs, dt, ed, ef, fls, id, la, lf, mc, me, mh, ms, mt, mv, my, m2, pn, se, sh, sn, sp, st, ti, tt, tr, vt, do, SUBSTR(yr,1,4) yr, load_number, seq_num from " + tablename + " where load_number =" + weekNumber);
             writeRecs(rs);
             this.writer.end();
             this.writer.flush();

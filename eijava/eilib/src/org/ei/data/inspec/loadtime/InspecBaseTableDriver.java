@@ -1,12 +1,24 @@
-package org.ei.data.inspec.loadtime;
-import java.io.*;import java.util.zip.*;
-import java.util.*;import org.apache.oro.text.perl.*;import org.ei.util.GUID;
-public class InspecBaseTableDriver{
-    private Perl5Util perl = new Perl5Util();
-    private static InspecBaseTableWriter baseWriter;
-
-    private static int exitNumber;
-    private int counter = 0;
+package org.ei.data.inspec.loadtime;
+
+import java.io.*;
+import java.util.zip.*;
+import java.util.*;
+import org.apache.oro.text.perl.*;
+import org.ei.util.GUID;
+
+public class InspecBaseTableDriver
+{
+
+    private Perl5Util perl = new Perl5Util();
+
+    private static InspecBaseTableWriter baseWriter;
+
+
+
+    private static int exitNumber;
+
+    private int counter = 0;
+
     private int loadNumber = 0;
     private static String filename;
 
@@ -87,10 +99,12 @@ public class InspecBaseTableDriver{
         tagmap.put("830","ppdate");
     }
 
-
+
+
     public static void main(String args[])
         throws Exception
-    {
+    {
+
         int loadN = Integer.parseInt(args[0]);
         String infile = args[1];
         String type;
@@ -113,14 +127,21 @@ public class InspecBaseTableDriver{
         }
 
         InspecBaseTableDriver c = new InspecBaseTableDriver(loadN);
+        c.writeBaseTableFile(infile,type);
 
+    }
 
-        c.writeBaseTableFile(infile,type);
-    }
     public InspecBaseTableDriver(int loadN)
     {
         this.loadNumber = loadN;
     }
+
+    public void writeBaseTableFile(String infile)
+	        throws Exception
+    {
+		String type="XML";
+		writeBaseTableFile(infile,type);
+	}
 
     public void writeBaseTableFile(String infile,String type)
         throws Exception
@@ -132,7 +153,6 @@ public class InspecBaseTableDriver{
         try
         {
 
-            System.out.print("File Name:"+ new File(infile).getName());
             if ( infile.toUpperCase().endsWith(".ZIP") )
             {
                 zin = new ZipInputStream(new FileInputStream(new File(infile)));
@@ -145,7 +165,6 @@ public class InspecBaseTableDriver{
 
                     if(entry.getName().toUpperCase().endsWith("."+type.toUpperCase()))
                     {
-                        System.out.println(":"+ entry.getName());
 
                         System.out.println("Processing XML ...");
                         in = new BufferedReader(new InputStreamReader(zin));
@@ -153,13 +172,14 @@ public class InspecBaseTableDriver{
 
                         if(type.equalsIgnoreCase("XML"))
                         {
+
                             writeRecs(new InspecXMLReader(in));
                         }
                         else
                         {
+
                             writeRecs(in);
                         }
-
 
                     }
 
@@ -191,15 +211,16 @@ public class InspecBaseTableDriver{
 
 
     }catch(Exception e){
-        System.err.println("Error in File:"+filename+" Record Number:"+counter);
         e.printStackTrace();
 
 }
 
-    }
+    }
+
     private void writeRecs(BufferedReader in)
         throws Exception
-    {
+    {
+
         Hashtable record = null;
         String state = null;
         String line = null;
@@ -207,12 +228,13 @@ public class InspecBaseTableDriver{
         String newtag = null;
         boolean ignore = false;
         while((line = in.readLine()) != null)
-        {
+        {
 
             if(exitNumber != 0 && counter > exitNumber)
             {
                 break;
-            }            record = new Hashtable();
+            }
+            record = new Hashtable();
 
             MARC marc = new MARC(line);
             //Get the anum
@@ -294,7 +316,7 @@ public class InspecBaseTableDriver{
                     record.put("M_ID", new StringBuffer("inspec_"+(new GUID()).toString()));
                     baseWriter.writeRec(record);
                     counter++;
-                    //System.out.println("Line:"+counter);
+
                 }
             }
 
@@ -304,17 +326,19 @@ public class InspecBaseTableDriver{
     {
 
         Hashtable record = null;
-
         while((record = r.getRecord())!=null )
         {
             if(exitNumber != 0 && counter > exitNumber)
             {
                 break;
-            }            if (record.get(InspecXMLReader.ARTICLETYPE).equals(InspecXMLReader.CURRENT_DATA))            {
+            }
+            if (record.get(InspecXMLReader.ARTICLETYPE).equals(InspecXMLReader.CURRENT_DATA))
+            {
                 record.put("LOAD_NUMBER", new StringBuffer(Integer.toString(this.loadNumber)));
                 record.put("M_ID", new StringBuffer("inspec_"+(new GUID()).toString()));
                 baseWriter.writeRec(record);
-                counter++;            }
+                counter++;
+            }
 
         }
 

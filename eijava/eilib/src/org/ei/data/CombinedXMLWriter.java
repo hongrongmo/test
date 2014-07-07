@@ -7,10 +7,12 @@ import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.StringTokenizer;
 
 import org.apache.oro.text.perl.Perl5Util;
 import org.ei.query.base.PorterStemmer;
 import org.ei.xml.Entity;
+import org.ei.data.inspec.loadtime.InspecXMLReader;
 import java.util.Date;
 import java.util.zip.*;
 import java.text.*;
@@ -50,6 +52,7 @@ public class CombinedXMLWriter
     private PrintWriter serialtitlePW = null;
     private PrintWriter publishernamePW = null;
     private PrintWriter patentcountryPW = null;
+    private PrintWriter ipcPW = null;
     private String indexKey = null;
     private NumberFormat formatter;
     private long starttime = 0;
@@ -203,6 +206,16 @@ public class CombinedXMLWriter
 	    	patentcountryPW = new PrintWriter(new FileWriter(file.getPath() + "/patentcountry-" + this.numberID + "." + this.databaseID, true));
 	    	hm.put("AUTHORITYCODE", patentcountryPW);
 
+
+	    	file=new File("ei/index_ipc");
+			if(!file.exists())
+			{
+				file.mkdir();
+			}
+			ipcPW = new PrintWriter(new FileWriter(file.getPath() + "/ipc-" + this.numberID + "." + this.databaseID, true));
+			hm.put("INTERNATONALPATENTCLASSIFICATION", ipcPW);
+
+
 	    	file=new File("ei/logs");
 	    	if(!file.exists())
 	    	{
@@ -317,6 +330,8 @@ public class CombinedXMLWriter
 		addIndex(rec.getStrings(EVCombinedRec.CHEMICALTERMS),"CONTROLLEDTERMS");//CHEMICALTERMS
 		addIndex(rec.getStrings(EVCombinedRec.SERIAL_TITLE),"SERIALTITLE");//SERIALTITLE
 		addIndex(rec.getStrings(EVCombinedRec.PUBLISHER_NAME),"PUBLISHERNAME");//PUBLISHERNAME
+		addIndex(rec.getStrings(EVCombinedRec.INT_PATENT_CLASSIFICATION),"INTERNATONALPATENTCLASSIFICATION");//IPC CODE
+
 		++curRecNum;
 		end();
 
@@ -325,6 +340,7 @@ public class CombinedXMLWriter
     public void writeRec(EVCombinedRec rec)
         throws Exception
     {
+
     	setDatabase(rec.getString(EVCombinedRec.DATABASE));
     	this.eid = rec.getString(EVCombinedRec.DOCID);
         begin();
@@ -399,7 +415,7 @@ public class CombinedXMLWriter
         out.println("       <DERWENTACCESSIONNUMBER><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.DERWENT_ACCESSION_NUMBER)))) + "]]></DERWENTACCESSIONNUMBER>");
         out.println("       <APPLICATIONNUMBER><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.APPLICATION_NUMBER)))) + "]]></APPLICATIONNUMBER>");
         out.println("       <APPLICATIONCOUNTRY><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.APPLICATION_COUNTRY))))+ "]]></APPLICATIONCOUNTRY>");
-        out.println("       <INTPATENTCLASSIFICATION><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.INT_PATENT_CLASSIFICATION)))) + "]]></INTPATENTCLASSIFICATION>");
+        out.println("       <INTPATENTCLASSIFICATION><![CDATA[" + notNull(Entity.prepareString(multiFormat(addIpcIndex(rec.getString(EVCombinedRec.INT_PATENT_CLASSIFICATION),"INTERNATONALPATENTCLASSIFICATION")))) + "]]></INTPATENTCLASSIFICATION>");
         out.println("       <LINKEDTERMS><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.LINKED_TERMS)))) + " QstemQ " + notNull(getStems(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.LINKED_TERMS))))) + "]]></LINKEDTERMS>");
         out.println("       <ENTRYYEAR><![CDATA[" + notNull(Entity.prepareString(rec.getString(EVCombinedRec.ENTRY_YEAR))) + "]]></ENTRYYEAR>");
         out.println("       <PRIORITYNUMBER><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PRIORITY_NUMBER)))) + "]]></PRIORITYNUMBER>");
@@ -686,9 +702,9 @@ public class CombinedXMLWriter
 			{
 				for(int i=0; i<s.length; i++)
 				{
-					if(s[i]!=null)
+					if(s[i]!=null && getDatabase()!=null && getDatabase().length()>=3)
 					{
-						indexWriter.println(Entity.prepareString(s[i]).toUpperCase().trim() + "\t" + getDatabase() + "\t");
+						indexWriter.println(Entity.prepareString(s[i]).toUpperCase().trim() + "\t" + getDatabase().substring(0,3) + "\t");
 					}
 				}
 			}
@@ -701,12 +717,90 @@ public class CombinedXMLWriter
 	   	return s;
     }
 
+    private String cleanup(String s)
+	{
+		Perl5Util perl = new Perl5Util();
+
+		if (s!=null && s.length()>0)
+		{
+			s = perl.substitute("s/\"|\\[|\\]|\\(|\\)|\\{|\\}|\\?/ /g"  ,s);
+		}
+
+		return s;
+	}
+
     private String addIndex(String s, String key)
     {
+		s = cleanup(s);
 		String sarray[] = {s};
+		PrintWriter indexWriter = (PrintWriter)hm.get(key);
 		addIndex(sarray, key);
 		return s;
 	}
+
+	private String[] addIpcIndex(String ss, String key)  throws Exception
+	{
+		if(ss==null)
+		{
+			return null;
+		}
+		String[] sArray=prepareIpc(ss);
+		PrintWriter indexWriter = (PrintWriter)hm.get(key);
+		StringTokenizer st = new StringTokenizer(ss, InspecXMLReader.AUDELIMITER);
+		String name="";
+		String code="";
+
+		while (st.hasMoreTokens())
+		{
+			String s = st.nextToken().trim();
+			if(s.length() > 0)
+			{
+				if(s.indexOf(InspecXMLReader.IDDELIMITER) > -1)
+				{
+					 int i = s.indexOf(InspecXMLReader.IDDELIMITER);
+					  code = s.substring(0,i);
+					  name = s.substring(i+1);
+					  indexWriter.println(Entity.prepareString(code).toUpperCase().trim() + "\t" +Entity.prepareString(name).toUpperCase().trim() + "\t" + getDatabase() + "\t");
+				}
+
+			}
+
+		}
+
+
+		return sArray;
+	}
+
+	 String[] prepareIpc(String aString)
+	        throws Exception
+	{
+
+		ArrayList list = new ArrayList();
+		StringTokenizer st = new StringTokenizer(aString, InspecXMLReader.AUDELIMITER);
+		String s;
+
+		while (st.hasMoreTokens())
+		{
+			s = st.nextToken().trim();
+			if(s.length() > 0)
+			{
+				if(s.indexOf(InspecXMLReader.IDDELIMITER) > -1)
+				{
+					 int i = s.indexOf(InspecXMLReader.IDDELIMITER);
+					  s = s.substring(0,i);
+				}
+				s = s.trim();
+
+				list.add(s);
+			}
+
+		}
+
+		return (String[])list.toArray(new String[1]);
+
+	}
+
+
 
 
     private String multiFormat(String[] strings)
@@ -850,7 +944,7 @@ public class CombinedXMLWriter
             if ((s != null )
                         && (!s.trim().equals("")))
             {
-            	//addIndex(s, "AUTHOR");
+
                 if (buf.length() > 0)
                 {
                     buf.append(" QQDelQQ ");

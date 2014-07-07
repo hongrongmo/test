@@ -1443,18 +1443,21 @@ public class BDDocBuilder
 				BdAuthor author = (BdAuthor)authorList.get(i);
 
 				String auDisplayName = cleanBadCharacters(author.getDisplayName());
+				String email = author.getEaddress();
 				if(dataFormat.equalsIgnoreCase(RIS.RIS_FORMAT) ||
 						dataFormat.equalsIgnoreCase(Citation.XMLCITATION_FORMAT))
 				{
 					authorNames.add(new Contributor(key,
 											auDisplayName));
 				}
-
 				else
 				{
-					authorNames.add(new Contributor(key,
-											auDisplayName,
-											author.getAffIdList()));
+					Contributor persons = new Contributor(key,auDisplayName,author.getAffIdList());
+					if(email!=null && !email.equals(""))
+					{
+						persons.setEmail(email);
+					}
+					authorNames.add(persons);
 				}
 
 			}

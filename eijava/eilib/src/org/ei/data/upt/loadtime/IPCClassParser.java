@@ -510,8 +510,7 @@ public class IPCClassParser {
 
         if (node.getTitle() != null) {
             String title = node.getTitle().trim();
-            if (!title.equals(""))
-                System.out.println("** " + node.getTitle() + " - " + node.getID());
+
         }
     }
 

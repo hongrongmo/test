@@ -13,7 +13,7 @@ import org.xml.sax.InputSource;
 public class BookDTDEntityResolver implements EntityResolver {
     protected static Log log = LogFactory.getLog(BookDTDEntityResolver.class);
 
-    private String dtdCatalogPath = System.getProperty("user.home") + "\\Desktop\\Referex EW\\DTDs\\";
+    private String dtdCatalogPath = "." + System.getProperty("file.separator") + "DTDs" + System.getProperty("file.separator");
     
     public BookDTDEntityResolver() {
         // TODO Auto-generated constructor stub

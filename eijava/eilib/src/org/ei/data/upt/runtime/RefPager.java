@@ -2,11 +2,13 @@ package org.ei.data.upt.runtime;
 
 import java.util.*;
 import org.ei.domain.*;
+import org.ei.data.inspec.runtime.InspecWrapper;
 
 public class RefPager
 {
 	private List docIDs;
 	private int pageSize;
+	private int docSize;
 	private PatRefQuery query;
 	private String sessionID;
 
@@ -19,16 +21,47 @@ public class RefPager
 		this.docIDs = docIDs;
 		this.query = query;
 		this.sessionID = sessionID;
+		this.docSize = docIDs.size();
+	}
+
+	public RefPager(int pageSize,int setSize,PatRefQuery query)
+	{
+		this.pageSize = pageSize;
+		this.docSize  = setSize;
+		this.query = query;
 	}
 
 	public int getSetSize()
 	{
-		return docIDs.size();
+		return docSize;
 	}
 
 	public String getQuery()
 	{
 		return query.getQuery();
+	}
+
+	public RefPage getPage(int offset,List builtDocs)
+			throws Exception
+	{
+
+			int endIndex = 0;
+			if(builtDocs.size()>offset+pageSize)
+			{
+				endIndex = offset+pageSize;
+			}
+			else
+			{
+				endIndex = builtDocs.size();
+			}
+			List range = builtDocs.subList(offset,endIndex);
+			System.out.println("start= "+offset+" end= "+endIndex);
+
+			// Build the pageEntries
+			PageEntryBuilder peBuilder = new PageEntryBuilder(this.sessionID);
+			List page = peBuilder.buildPageEntryList(range);
+			RefPage rp = new RefPage(page,offset);
+			return rp;
 	}
 
 	public RefPage getPage(int offset)
@@ -75,8 +108,20 @@ public class RefPager
 		}
 		for(int i=startRange; i<endRange; i++)
 		{
-			PatWrapper w = (PatWrapper)docIDs.get(i);
-			DocID docID = w.did;
+			DocID docID = null;
+			if(docIDs.get(i) instanceof InspecWrapper)
+			{
+				EIDoc eid = ((InspecWrapper)docIDs.get(i)).eiDoc;
+				docID = eid.getDocID();
+				//System.out.println("DOCID-INS= "+docID.getDocID());
+			}
+			else
+			{
+				PatWrapper w = (PatWrapper)docIDs.get(i);
+				docID = w.did;
+				//System.out.println("DOCID-PAT= "+docID.getDocID());
+			}
+
 			range.add(docID);
 			count++;
 			if(count==resultscount)

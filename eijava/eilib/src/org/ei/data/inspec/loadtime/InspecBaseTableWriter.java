@@ -72,8 +72,9 @@ public class InspecBaseTableWriter
 		for(int i=0; i<baseTableFields.length; ++i)
 		{
 			String bf = baseTableFields[i];
-
+			//System.out.println("bf= "+bf);
 			StringBuffer value = (StringBuffer) record.get(bf);
+			//System.out.println("Value= "+value);
 			String valueS = null;
 			if(value != null)
 			{
@@ -120,6 +121,7 @@ public class InspecBaseTableWriter
 
 		}
 		out.println("");
+		out.flush();
 		++curRecNum;
 	}
 

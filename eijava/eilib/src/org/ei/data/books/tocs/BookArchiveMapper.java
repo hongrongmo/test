@@ -2,6 +2,7 @@ package org.ei.data.books.tocs;
 
 import java.io.File;
 import java.io.FileFilter;
+import java.util.regex.Pattern;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -9,8 +10,10 @@ import org.apache.commons.logging.LogFactory;
 public class BookArchiveMapper extends ArchiveMapper {
   protected static Log log = LogFactory.getLog(BookArchiveMapper.class);
 
-  private String ARCHIVE_ROOT =  "V:\\EW\\";
-  
+  private static String DEFAULT_PATTERN  =  "^EV[FI]0";
+
+  private Pattern mappattern;
+
   public static File[] getFileList(String dir) {
     FileFilter archiveDirFilter = new FileFilter() {
         public boolean accept(File dir) {
@@ -24,28 +27,40 @@ public class BookArchiveMapper extends ArchiveMapper {
     }
     return files;
   }
-  
-  public static File[] getBookArchvieDirectoryList(String dir) {
+
+  public File[] getBookArchvieDirectoryList(String dir) {
       FileFilter bookArchiveFilter = new FileFilter() {
           public boolean accept(File dir) {
-              return dir.isDirectory() && (dir.getName().startsWith("EVF0") || dir.getName().startsWith("EVI0"));
+            return dir.isDirectory() && mappattern.matcher(dir.getName()).find(); //(dir.getName().startsWith("EVF0") || dir.getName().startsWith("EVI0"));
           }
       };
       return new File(dir).listFiles(bookArchiveFilter);
   }
-  
-  public BookArchiveMapper() {
+
+  public BookArchiveMapper(String expression) {
+    mappattern = Pattern.compile(expression);
+    setArchive_root(System.getProperty("map_archive_root", ReferexBaseProcessor.DEFAULT_ROOT));
     createmap();
   }
 
-  public void createmap() 
+  public BookArchiveMapper() {
+    this(BookArchiveMapper.DEFAULT_PATTERN);
+  }
+
+  public void createmap()
   {
-    File[] archvies = getBookArchvieDirectoryList(ARCHIVE_ROOT);
-    for (int arch = 0; arch < archvies.length; arch++) {
+    File[] archvies = getBookArchvieDirectoryList(getArchive_root());
+    if(archvies != null) {
+      for (int arch = 0; arch < archvies.length; arch++) {
         File[] files = getFileList(archvies[arch].getPath());
         for (int i = 0; i < files.length; i++) {
-          addArchviePath(files[i].getName(),files[i].getAbsolutePath()) ;         
+          addArchviePath(files[i].getName(),files[i].getAbsolutePath()) ;
         } // for files
-    } // for archives
+      } // for archives
+    }
+    else
+    {
+      log.error("No books in " + getArchive_root() + " found matching " + mappattern.pattern());
+    }
   }
 }

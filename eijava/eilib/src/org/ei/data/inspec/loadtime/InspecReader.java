@@ -39,15 +39,15 @@ public class InspecReader extends FilterReader
 	}
 
 
-		public InspecReader(Reader r)throws Exception
-		{
-			super(r);
-			SAXBuilder builder = new SAXBuilder();
-			builder.setExpandEntities(false);
-			this.doc = builder.build(this);
-			Element inspecRoot = doc.getRootElement();
-			this.articles = inspecRoot.getChildren("article");
-			this.rec=articles.iterator();
+	public InspecReader(Reader r)throws Exception
+	{
+		super(r);
+		SAXBuilder builder = new SAXBuilder();
+		builder.setExpandEntities(false);
+		this.doc = builder.build(this);
+		Element inspecRoot = doc.getRootElement();
+		this.articles = inspecRoot.getChildren("article");
+		this.rec=articles.iterator();
 
 	}
 

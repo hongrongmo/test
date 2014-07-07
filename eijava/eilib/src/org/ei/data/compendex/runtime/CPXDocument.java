@@ -1958,11 +1958,11 @@ public class CPXDocument
 		{
 			value = notNull(getArticleTitle());
 		}
-		else if(field.equals(LocalHoldingLinker.VOLUME))
+		else if(field.equals(LocalHoldingLinker.VOLUME)||field.equals(LocalHoldingLinker.VOLUME2))
 		{
 			value = notNull(getVolumeNo());
 		}
-		else if(field.equals(LocalHoldingLinker.ISSUE))
+		else if(field.equals(LocalHoldingLinker.ISSUE)||field.equals(LocalHoldingLinker.ISSUE2))
 		{
 			value = notNull(getIssueNo());
 		}

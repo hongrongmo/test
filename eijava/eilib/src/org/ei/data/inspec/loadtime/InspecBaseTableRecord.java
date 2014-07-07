@@ -46,7 +46,8 @@ public class InspecBaseTableRecord
 								"FDATE",
    								"PPDATE",
 							    "LOAD_NUMBER",
-							    "IPC"};
+							    "IPC",
+							    "CIT"};
 		public static final String[] ibfbaseTableFields=
 		{
 									"M_ID",
@@ -228,7 +229,8 @@ public class InspecBaseTableRecord
 									"PPDATE",
 									"OPPDATE",
 									"LOAD_NUMBER",
-									"IPC"
+									"IPC",
+									"CIT"
 									};
 
 

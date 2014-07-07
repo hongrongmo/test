@@ -11,6 +11,7 @@ import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
 import org.ei.data.*;
 import org.ei.util.StringUtil;
+import org.ei.data.bd.loadtime.BdParser;
 
 
 
@@ -22,6 +23,7 @@ public class EptCombiner extends Combiner {
     public EptCombiner(CombinedWriter writer) {
         super(writer);
     }
+
     public void writeCombinedByYearHook(Connection con, int year) throws Exception {
         Statement stmt = null;
         ResultSet rs = null;
@@ -32,11 +34,11 @@ public class EptCombiner extends Combiner {
 
             if(year == 9999)
             {
-            	rs = stmt.executeQuery("select dn,m_id,pat_in,ti,aj,ap,ad,ac,pn, substr(load_number,1,4) as py,pc,ic,cs,cc,la,lt,ab,ct,cr,ut,ey,crn,load_number,ll,dt,ds,seq_num from ept_master where py = '19' or py is null and seq_num is not null");
+            	rs = stmt.executeQuery("select dn,m_id,pat_in,ti,aj,ap,ad,ac,pn, substr(load_number,1,4) as py,pc,ic,cs,cc,la,lt,ab,ct,cr,ut,ey,crn,load_number,ll,dt,ds,seq_num from ept_master where py = '19' or py is null");
             }
             else
             {
-            	rs = stmt.executeQuery("select dn,m_id,pat_in,ti,aj,ap,ad,ac,pn,py,pc,ic,cs,cc,la,lt,ab,ct,cr,ut,ey,crn,load_number,ll,dt,ds,seq_num from ept_master where py = '" + year + "' and seq_num is not null");
+            	rs = stmt.executeQuery("select dn,m_id,pat_in,ti,aj,ap,ad,ac,pn,py,pc,ic,cs,cc,la,lt,ab,ct,cr,ut,ey,crn,load_number,ll,dt,ds,seq_num from ept_master where py = '" + year + "'");
             }
             writeRecs(rs);
 
@@ -82,7 +84,7 @@ public class EptCombiner extends Combiner {
         try {
 
             stmt = con.createStatement();
-            rs = stmt.executeQuery("select dn,m_id,pat_in,ti,aj,ap,ad,ac,pn,py,pc,ic,cs,cc,la,lt,ab,ct,cr,ut,ey,crn,load_number,ll,dt,ds,seq_num from ept_master where load_number = " + week + " and seq_num is not null");
+            rs = stmt.executeQuery("select dn,m_id,pat_in,ti,aj,ap,ad,ac,pn,py,pc,ic,cs,cc,la,lt,ab,ct,cr,ut,ey,crn,load_number,ll,dt,ds,seq_num from ept_master where load_number = " + week);
             writeRecs(rs);
             this.writer.end();
             this.writer.flush();
@@ -117,6 +119,71 @@ public class EptCombiner extends Combiner {
         }
     }
 
+
+    public void writeSingleTestRecord(String connectionURL,
+	 			                      String driver,
+	 			                      String username,
+	 			                      String password,
+	 			                      String accessNumber)
+	 				throws Exception
+	 {
+
+
+	 	Connection con = null;
+	  	Statement stmt = null;
+	    ResultSet rs = null;
+	    System.out.println("URL "+connectionURL);
+	    System.out.println("driver "+driver);
+	    System.out.println("username "+username);
+	    System.out.println("password "+password);
+
+
+	 	try
+	 	{
+	 		con = getConnection(connectionURL,
+	 							driver,
+	 							username,
+	 							password);
+
+	        stmt = con.createStatement();
+	        String sqlString = "select dn,m_id,pat_in,ti,aj,ap,ad,ac,pn,py,pc,ic,cs,cc,la,lt,ab,ct,cr,ut,ey,crn,load_number,ll,dt,ds from ept_master where DN = '" + accessNumber + "'";
+	        System.out.println("SQLString "+sqlString);
+	        rs = stmt.executeQuery(sqlString);
+	        writeRecs(rs);
+	        this.writer.end();
+	        this.writer.flush();
+
+	        }
+	        finally
+	        {
+
+	            if (rs != null) {
+	                try {
+	                    rs.close();
+	                }
+	                catch (Exception e) {
+	                    e.printStackTrace();
+	                }
+	            }
+	            if (stmt != null) {
+	                try {
+	                    stmt.close();
+	                }
+	                catch (Exception e) {
+	                    e.printStackTrace();
+	                }
+	            }
+	            if (con != null) {
+	                try {
+	                    con.close();
+	                }
+	                catch (Exception e) {
+	                    e.printStackTrace();
+	                }
+	            }
+	        }
+    }
+
     private String getStringFromClob(Clob clob) throws Exception {
         String temp = null;
         if (clob != null) {
@@ -144,7 +211,7 @@ public class EptCombiner extends Combiner {
                 String accessionNumber = rs.getString("dn");
 
                 rec.put(rec.DOCID, rs.getString("m_id"));
-                rec.put(rec.PARENT_ID, rs.getString("seq_num"));
+                //rec.put(rec.PARENT_ID, rs.getString("seq_num"));
                 rec.put(rec.DEDUPKEY, accessionNumber);
                 rec.put(rec.ACCESSION_NUMBER, accessionNumber);
                 rec.put(rec.AUTHOR, prepareMulti(StringUtil.replaceNonAscii(replaceNull(rs.getString("pat_in")))));
@@ -194,11 +261,11 @@ public class EptCombiner extends Combiner {
                 else
                     cvsBuffer.append(expandedCV1);
 
-                String parsedCV = termBuilder.formatCT(cvsBuffer.toString());
+                String parsedCV = StringUtil.replaceNonAscii(termBuilder.formatCT(cvsBuffer.toString()));
 
                 rec.put(rec.CONTROLLED_TERMS, prepareMulti(termBuilder.getStandardTerms(parsedCV), Constants.CVS));
 
-                String parsedMH = termBuilder.formatCT(expandedMH);
+                String parsedMH = StringUtil.replaceNonAscii(termBuilder.formatCT(expandedMH));
 
                 rec.put(rec.MAIN_HEADING, prepareMulti(StringUtil.replaceNonAscii(termBuilder.removeRoleTerms(parsedMH)), Constants.CVS));
                 //this field is added to generate navigators for Major terms
@@ -218,15 +285,15 @@ public class EptCombiner extends Combiner {
                 qfacet.setProduct(product);
                 rec.put(rec.PRODUCT_TERMS, prepareMulti(product));
 
-                String mnorole = termBuilder.getMajorNoRoleTerms(parsedMH);
+                String mnorole =  StringUtil.replaceNonAscii(replaceNull(termBuilder.getMajorNoRoleTerms(parsedMH)));
                 qfacet.setNorole(mnorole);
                 rec.put(rec.MAJORNOROLE_TERMS, prepareMulti(mnorole));
 
-                String mreagent = termBuilder.getMajorReagentTerms(parsedMH);
+                String mreagent =  StringUtil.replaceNonAscii(replaceNull(termBuilder.getMajorReagentTerms(parsedMH)));
                 qfacet.setReagent(mreagent);
                 rec.put(rec.MAJORREAGENT_TERMS, prepareMulti(mreagent));
 
-                String mproduct = termBuilder.getMajorProductTerms(parsedMH);
+                String mproduct =  StringUtil.replaceNonAscii(replaceNull(termBuilder.getMajorProductTerms(parsedMH)));
                 qfacet.setProduct(mproduct);
                 rec.put(rec.MAJORPRODUCT_TERMS, prepareMulti(mproduct));
 
@@ -431,16 +498,22 @@ public class EptCombiner extends Combiner {
         return line;
     }
 
-    private String[] prepareMulti(String multiString) throws Exception
+    public String[] prepareMulti(String multiString) throws Exception
     {
         return prepareMulti(multiString, null);
     }
 
-    private String[] prepareMulti(String multiString ,
+    public String[] prepareMulti(String multiString ,
             					  Constants constant)
     throws Exception
     {
         if (multiString != null) {
+
+			if(multiString.indexOf(BdParser.AUDELIMITER)>-1)
+			{
+				String[] multiStringArray = multiString.split(BdParser.AUDELIMITER,-1);
+				return multiStringArray;
+			}
 
             AuthorStream astream = new AuthorStream(new ByteArrayInputStream(multiString.getBytes()));
             String s = null;
@@ -577,7 +650,7 @@ public class EptCombiner extends Combiner {
         // extract the whole thing
     	if(loadNumber == 0)
     	{
-			for(int yearIndex = 1919; yearIndex <= 2011; yearIndex++)
+			for(int yearIndex = 1919; yearIndex <= 2012; yearIndex++)
 			{
 				System.out.println("Processing year " + yearIndex + "...");
 				c = new EptCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,"ept", environment));
@@ -596,6 +669,11 @@ public class EptCombiner extends Combiner {
 							password,
 							yearIndex);
 		}
+		else if(loadNumber ==1 && args.length>9)
+		{
+			 System.out.println("AccessNumber=" + args[9]);
+			 c.writeSingleTestRecord(url, driver, username, password, args[9]);
+        }
         else if (loadNumber > 3000 || loadNumber < 1000) {
             c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
         }

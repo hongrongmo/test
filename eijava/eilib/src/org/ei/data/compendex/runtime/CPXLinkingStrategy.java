@@ -36,19 +36,19 @@ public class CPXLinkingStrategy implements LinkingStrategy
 	{
 
 		AlgoLinker algo = new AlgoLinker();
-
+		//System.out.println("DOI-LINK= "+getDOI(eid)+" ISSN2= "+getISSN2(eid)+" volume= "+getVolumeNo(eid)+" issueNo= "+getIssueNo(eid)+" startpage= "+getStartPage(eid));
 		if(algo.hasLink(getISSN2(eid),
 						getVolumeNo(eid),
 						getIssueNo(eid),
 						getStartPage(eid),
 						getDOI(eid)))
 		{
-
+			//System.out.println("HAS_LINK_YES= "+HAS_LINK_YES);
 			return HAS_LINK_YES;
 		}
 		else
 		{
-
+			//System.out.println("HAS_LINK_NO= "+HAS_LINK_NO);
 			return HAS_LINK_NO;
 		}
 	}

@@ -7,6 +7,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.StringTokenizer;
+import java.sql.Clob;
 
 public class ThesaurusXMLExtractor
 {
@@ -77,11 +78,42 @@ public class ThesaurusXMLExtractor
 				out.println("	<ROW>");
 				int recID = rs.getInt("T_ID");
 				String mainTerm = rs.getString("MAIN_TERM_SEARCH");
+
 				String broaderTerms = rs.getString("BROADER_TERMS");
-				String narrowerTerms = rs.getString("NARROWER_TERMS");
+				String narrowerTerms = null;
+				if(this.database.equals("geo"))
+				{
+					narrowerTerms = getStringFromClob(rs.getClob("NARROWER_TERMS"));
+				}
+				else
+				{
+					narrowerTerms = rs.getString("NARROWER_TERMS");
+				}
 				String relatedTerms = rs.getString("RELATED_TERMS");
-				String topTerms = rs.getString("TOP_TERMS");
-				String priorTerms = rs.getString("PRIOR_TERMS");
+				String topTerms = null;
+				String priorTerms = null;
+				String registryNumber = null;
+				String registryNumberBroadterm = null;
+				String seeAlso	= null;
+				String see 	= null;
+				String useFor	= null;
+				String chemicalAspects = null;
+
+
+				if(database.equals("cpx") || database.equals("ins"))
+				{
+					topTerms = rs.getString("TOP_TERMS");
+					priorTerms = rs.getString("PRIOR_TERMS");
+				}
+				else if(database.equals("ept"))
+				{
+					registryNumber = rs.getString("CASE_NUMBER");
+					registryNumberBroadterm = rs.getString("CASE_NUMBER_BROADTERM");
+					seeAlso	= rs.getString("SA");
+					see 	= rs.getString("SEE");
+					useFor	= rs.getString("LEADIN_TERMS");
+					chemicalAspects = rs.getString("CHEMICAL_ASPECTS");
+				}
 
 				out.println("		<TDOCID>"+database+"_"+Integer.toString(recID)+"</TDOCID>");
 				out.println("		<DATABASE>"+database+"</DATABASE>");
@@ -92,6 +124,12 @@ public class ThesaurusXMLExtractor
 				out.println("		<RELATEDTERMS><![CDATA["+notNull(getDelimitedString(relatedTerms))+"]]></RELATEDTERMS>");
 				out.println("		<TOPTERMS><![CDATA["+notNull(getDelimitedString(topTerms))+"]]></TOPTERMS>");
 				out.println("		<PRIORTERMS><![CDATA["+notNull(getDelimitedString(priorTerms))+"]]></PRIORTERMS>");
+				out.println("		<REGISTRYNUMBER><![CDATA["+notNull(registryNumber)+"]]></REGISTRYNUMBER>");
+				out.println("		<REGISTRYNUMBERBROADTERM><![CDATA["+notNull(registryNumberBroadterm)+"]]></REGISTRYNUMBERBROADTERM>");
+				out.println("		<SEEALSO><![CDATA["+notNull(getDelimitedString(seeAlso))+"]]></SEEALSO>");
+				out.println("		<SEE><![CDATA["+notNull(getDelimitedString(see))+"]]></SEE>");
+				out.println("		<USEFOR><![CDATA["+notNull(getDelimitedString(useFor))+"]]></USEFOR>");
+				out.println("		<CHEMICALASPECTS><![CDATA["+notNull(getDelimitedString(chemicalAspects))+"]]></CHEMICALASPECTS>");
 				out.println("	</ROW>");
 			}
 			out.println("</ROWSET>");
@@ -149,6 +187,18 @@ public class ThesaurusXMLExtractor
 			}
 		}
 	}
+
+	private String getStringFromClob(Clob clob) throws Exception
+	{
+		String temp = null;
+		if (clob != null)
+		{
+			temp = clob.getSubString(1, (int) clob.length());
+		}
+
+		return temp;
+	}
+
 
 	public String notNull(String s)
 	{

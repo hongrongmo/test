@@ -25,6 +25,7 @@ import com.lowagie.text.pdf.PdfImportedPage;
 import com.lowagie.text.pdf.PdfReader;
 import com.lowagie.text.pdf.PdfStamper;
 import com.lowagie.text.pdf.PdfWriter;
+import com.lowagie.text.pdf.RandomAccessFileOrArray;
 import com.lowagie.text.pdf.SimpleBookmark;
 
 public class PdfProcessorStamper  {
@@ -33,14 +34,28 @@ public class PdfProcessorStamper  {
 
   protected static Log log = LogFactory.getLog(PdfProcessorStamper.class);
 
-  public void stampPDF(File srcfile, File destfile, HashMap bookInfo) throws IOException {
+  public void stampPDF(File srcfile, File destfile, HashMap bookInfo) {
+
+    if(!srcfile.exists())
+    {
+      log.error("File does niot exist! " + srcfile);
+      return;
+    }
+
+    PdfReader reader = null;
+    OutputStream stampedfile = null;
+    PdfStamper stamper = null;
 
     try {
-      PdfReader reader = new PdfReader(srcfile.getAbsolutePath());
-      PdfStamper stamper = new PdfStamper(reader, new FileOutputStream(destfile));
+      stampedfile = new FileOutputStream(destfile);
+
+      //reader = new PdfReader(srcfile.getAbsolutePath());
+      reader = new PdfReader(new RandomAccessFileOrArray(srcfile.getAbsolutePath()), null);
+
+      stamper = new PdfStamper(reader, stampedfile);
 
       log.debug(" Stamping Book Information " + bookInfo);
-      
+
       /*ByteArrayOutputStream baos = new ByteArrayOutputStream();
       XmpWriter xmp = new XmpWriter(baos);
       XmpSchema dc = new DublinCoreSchema();
@@ -52,24 +67,29 @@ public class PdfProcessorStamper  {
       stamper.setXmpMetadata(baos.toByteArray()); */
 
       stamper.setMoreInfo(bookInfo);
-      stamper.close();
       reader.close();
-    } catch (DocumentException e) {
-      // TODO Auto-generated catch block
-      e.printStackTrace();
-    }
+      stamper.close();
+      stampedfile.close();
 
+    } catch (DocumentException e) {
+      log.error(e);
+    } catch (IOException e) {
+      log.error(e);
+    }
+    finally {
+    }
   }
 
   public void burstPDF(File srcpdf, String destinationFolder)
   {
-  
+    PdfReader reader = null;
+    Document document = null;
     try {
-      PdfReader reader = new PdfReader(srcpdf.getAbsolutePath());
+      log.debug("Counting...");
+      reader = new PdfReader(new RandomAccessFileOrArray(srcpdf.getAbsolutePath()), null);
       // we retrieve the total number of pages
       int n = reader.getNumberOfPages();
       log.info("There are " + n + " pages in the original file.");
-      Document document;
       int pagenumber;
       String filename;
       NumberFormat df = new DecimalFormat("0000");
@@ -81,32 +101,44 @@ public class PdfProcessorStamper  {
 
         // step 1: creation of a document-object
         document = new Document(reader.getPageSizeWithRotation(pagenumber));
+        //document = new Document();
         // step 2: we create a writer that listens to the document
-        PdfWriter writer = PdfWriter.getInstance(document, 
+        PdfWriter writer = PdfWriter.getInstance(document,
             new FileOutputStream(new File(destinationFolder, "pg_" + filename + ".pdf")));
         // step 3: we open the document
         document.open();
+
         PdfContentByte cb = writer.getDirectContent();
         PdfImportedPage page = writer.getImportedPage(reader, pagenumber);
         int rotation = reader.getPageRotation(pagenumber);
         if (rotation == 90 || rotation == 270) {
+          //log.info("rotated");
           cb.addTemplate(page, 0, -1f, 1f, 0, 0, reader.getPageSizeWithRotation(pagenumber).getHeight());
         }
         else {
-          cb.addTemplate(page, 1f, 0, 0, 1f, 0, 0);
+          cb.addTemplate(page, 1f, 0, 0, 1f, 75, 100);
         }
         // step 5: we close the document
         document.close();
+        writer.close();
       }
-      reader.close();
     } catch(DocumentException e) {
       log.error(e);
     } catch (IOException e) {
       // TODO Auto-generated catch block
       log.error(e);
     }
+    finally {
+      if(document != null && document.isOpen()) {
+        document.close();
+      }
+
+      if(reader!=null) {
+        reader.close();
+      }
+    }
   }
-  
+
   public void createPDF(File xmlFile, String isbnpdf, Iterator<IncludeItem> piis) throws IOException {
     // TODO Auto-generated method stub
     Document document = null;
@@ -114,14 +146,15 @@ public class PdfProcessorStamper  {
     int pageOffset = 0;
     List master = new ArrayList();
     boolean firstLoop = true;
-    
+
     while (piis.hasNext()) {
       IncludeItem pii = piis.next();
       String foldername = pii.getPii().replaceAll("\\p{Punct}", "");
 
       File floc = getIncludeItem(xmlFile, foldername);
 
-      PdfReader reader = new PdfReader(floc.getAbsolutePath());
+      //PdfReader reader = new PdfReader(floc.getAbsolutePath());
+      PdfReader reader = new PdfReader(new RandomAccessFileOrArray(floc.getAbsolutePath()), null);
       reader.consolidateNamedDestinations();
       // we retrieve the total number of pages
       int n = reader.getNumberOfPages();
@@ -132,7 +165,7 @@ public class PdfProcessorStamper  {
         }
         master.addAll(bookmarks);
       }
-      else 
+      else
       {
         HashMap<String,String> map = new HashMap<String,String>();
         map.put("Title", pii.getTitle());
@@ -140,7 +173,7 @@ public class PdfProcessorStamper  {
         map.put("Page", (pageOffset + 1) + " Fit");
         master.add(map);
       }
-      
+
       pageOffset += n;
 
       if (firstLoop) {
@@ -180,30 +213,39 @@ public class PdfProcessorStamper  {
   }
 
   public void copyChapter(File xmlFile, String isbn,
-      String foldername, String destinationFolder) throws IOException {
+      String piiname, String destinationFolder) throws IOException {
 
-      File floc = getIncludeItem(xmlFile, foldername);
-      copy(floc, new File(destinationFolder + isbn + FILE_SEP + foldername + ".pdf"));
+      File floc = getIncludeItem(xmlFile, piiname);
+      if(!floc.exists()) {
+        log.error("Missing chapter " + floc);
+      }
+      try {
+        copy(floc, new File(destinationFolder + isbn + FILE_SEP + piiname + ".pdf"));
+      }
+      catch(java.io.FileNotFoundException e) {
+        log.error(e);
+      }
   }
-  
+
   public int countPages(File xmlFile, IncludeItem pii) throws IOException {
-    
+
     String foldername = pii.getPii().replaceAll("\\p{Punct}", "");
     File floc = getIncludeItem(xmlFile, foldername);
-    PdfReader reader = new PdfReader(floc.getAbsolutePath());
+//    PdfReader reader = new PdfReader(floc.getAbsolutePath());
+    PdfReader reader = new PdfReader(new RandomAccessFileOrArray(floc.getAbsolutePath()), null);
     // we retrieve the total number of pages
     int n = reader.getNumberOfPages();
     reader.close();
 
     return n;
-  }  
- 
+  }
+
   // Copies src file to dst file.
   // If the dst file does not exist, it is created
   private void copy(File src, File dst) throws IOException {
       InputStream in = new FileInputStream(src);
       OutputStream out = new FileOutputStream(dst);
-  
+
       // Transfer bytes from in to out
       byte[] buf = new byte[1024];
       int len;
@@ -217,14 +259,27 @@ public class PdfProcessorStamper  {
   private File getIncludeItem(File xmlFile, String foldername) throws IOException {
     File floc = null;
     // book series
-    if(foldername.startsWith("S"))
+    System.out.println("foldername= "+foldername);
+    if(foldername.startsWith("A"))
     {
       // article file is in folder which is article pii without the
       // "S<issn>" as the prefix so strip the first 9 characters
-      foldername = foldername.substring(9);
+      foldername = foldername.substring(13);
+      foldername = foldername.substring(0,1)+"."+foldername.substring(1);
       floc = new File(xmlFile.getParent()
         + FILE_SEP + foldername
-        + FILE_SEP + "main.pdf");      
+        + FILE_SEP + "main.pdf");
+        System.out.println("FILEPATH= "+floc.getAbsolutePath());
+    }
+    else if( foldername.startsWith("S"))
+	{
+	  // article file is in folder which is article pii without the
+	  // "S<issn>" as the prefix so strip the first 9 characters
+	  foldername = foldername.substring(9);
+	  floc = new File(xmlFile.getParent()
+		+ FILE_SEP + foldername
+		+ FILE_SEP + "main.pdf");
+		System.out.println("FILEPATH1= "+floc.getAbsolutePath());
     }
     else
     {

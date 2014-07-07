@@ -26,6 +26,11 @@ public class BaseTableDriver
 	private static String endRootElement   ="</bibdataset>";
 	private static Connection con;
 	private static String infile;
+	private static String url = "jdbc:oracle:thin:@eid.cmdvszxph9cf.us-east-1.rds.amazonaws.com:1521:eid";
+	private static String driver = "oracle.jdbc.driver.OracleDriver";
+	private static String username = "ba_loading";
+    private static String password = "ny5av";
+
     public static void main(String args[])
         throws Exception
 
@@ -42,19 +47,26 @@ public class BaseTableDriver
 
         infile = args[1];
         String databaseName = args[2];
-        String action = args[3];
-        String url = args[4];
-        String driver = args[5];
-        String username = args[6];
-        String password = args[7];
+        String action = null;
+        if(args.length>3)
+        {
+			url = args[4];
+			driver = args[5];
+			username = args[6];
+			password = args[7];
+			action = args[3];
+		}
+		else
+		{
+			System.out.println("USING DEFAULT DATABASE SETTING");
+			System.out.println("DATABASE URL= "+url);
+			System.out.println("DATABASE USERNAME= "+username);
+			System.out.println("DATABASE PASSWORD= "+password);
+		}
         BaseTableDriver c;
 
         try
         {
-			if(args.length>3)
-			{
-				action = args[3];
-			}
 
 			if(action!=null)
 			{

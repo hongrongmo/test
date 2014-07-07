@@ -10,7 +10,17 @@ public abstract class ArchiveMapper {
 
   public abstract void createmap();
   private Map<String, String> archiveMap = new HashMap<String, String>();
-
+  
+  private String archive_root =  null;
+  
+  public void setArchive_root(String location) {
+    archive_root  = location;
+  }
+  public String getArchive_root() {
+    return archive_root;
+  } 
+  
+  
   public String getArchviePath(String isbn) {
     return archiveMap.get(isbn);
   }

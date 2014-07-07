@@ -28,20 +28,26 @@ import org.ei.domain.Database;
  * To change the template for this generated type comment go to
  * Window&gt;Preferences&gt;Java&gt;Code Generation&gt;Code and Comments
  */
+
 public class UPTCombiner extends CombinerTimestamp {
 
     Perl5Util perl = new Perl5Util();
     char DELIM = (char) 30;
     char NESTED_DELIM = (char) 31;
     public static final String AUDELIMITER    = new String(new char[] {30});
-    private static final String setURL = "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI";
-    private static final String setUserName = "ap_pro1";
-    private static final String setPassword = "ei3it";
+    public static  String driver = "oracle.jdbc.driver.OracleDriver";
+    public static  String url = "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI";
+    public static  String username = "ap_pro1";
+    public static  String password = "ei3it";
     public static ClassNodeManager nodeManager = null;
     public static String US_CY = "US";
     public static String EP_CY = "EP";
     Hashtable hashtable = new Hashtable();
     private static final Database UPTDatabase = new UPTDatabase();
+
+    public UPTCombiner(String database,CombinedWriter writer) {
+		super(writer);
+    }
 
     public UPTCombiner(CombinedWriter writer) {
         super(writer);
@@ -67,13 +73,17 @@ public class UPTCombiner extends CombinerTimestamp {
 
         try {
             stmt = con.createStatement();
-            System.out.println("Running the query...");
-            rs = stmt.executeQuery("SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number,seq_num FROM "+Combiner.TABLENAME+" WHERE seq_num is not null and LOAD_NUMBER = " + week);
+
+            String query="SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number,seq_num FROM "+Combiner.TABLENAME+" WHERE  LOAD_NUMBER = " + week;
+            System.out.println("Running the query..."+query);
+            rs = stmt.executeQuery(query);
+
             System.out.println("Got records ...");
             writeRecs(rs, con);
             System.out.println("Wrote records.");
-            this.writer.end();
+
             this.writer.flush();
+            this.writer.end();
 
         }
         catch (Exception e) {
@@ -117,9 +127,10 @@ public class UPTCombiner extends CombinerTimestamp {
         try {
 
             stmt = con.createStatement();
-            System.out.println("Running the query...");
+            String query="SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number,seq_num FROM "+Combiner.TABLENAME+" WHERE  update_number="+timestamp;
+            System.out.println("Running the query..."+query);
 
-            rs = stmt.executeQuery("SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number,seq_num FROM "+Combiner.TABLENAME+" WHERE seq_num is not null and update_number="+timestamp);
+            rs = stmt.executeQuery(query);
             System.out.println("Got records ...");
             writeRecs(rs, con);
             System.out.println("Wrote records.");
@@ -168,14 +179,15 @@ public class UPTCombiner extends CombinerTimestamp {
         try {
 
             stmt = con.createStatement();
-            System.out.println("Running the query...");
-            rs = stmt.executeQuery("SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number,seq_num FROM " + Combiner.TABLENAME + " WHERE seq_num is not null and PY = '" + year + "'");
+            String query="SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number,seq_num FROM " + Combiner.TABLENAME + " WHERE  PY = '" + year + "'";
+            System.out.println("Running the query..."+query);
+            rs = stmt.executeQuery(query);
             //rs = stmt.executeQuery("SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number FROM " +Combiner.TABLENAME + " WHERE M_ID in ('upt_9f671b1194ed5ace833362061377553', 'upt_1bd0dd411759e6051dM78e82061377553', 'upt_1bd0dd411759e6051dM7fe42061377553', 'upt_1bd0dd411759e6051dM7c812061377553', 'upt_1bd0dd411759e6051dM7b7c2061377553', 'upt_1bd0dd411759e6051dM7e6c2061377553', 'upt_1bd0dd411759e6051dM79432061377553', 'upt_d70d7a11759deb7a8M77012061377553', 'upt_1bd0dd411759e6051dM7c1e2061377553', 'upt_b5f53a11759e3aa7cM7bd92061377553', 'upt_1bd0dd411759e6051dM790b2061377553', 'upt_1bd0dd411759e6051dM7f372061377553', 'upt_d70d7a11759deb7a8M74082061377553', 'upt_1bd0dd411759e6051dM77dc2061377553', 'upt_1bd0dd411759e6051dM7e082061377553', 'upt_1bd0dd411759e6051dM7e312061377553')");
             System.out.println("Got records ...");
             writeRecs(rs, con);
             System.out.println("Wrote records.");
-            this.writer.end();
             this.writer.flush();
+            this.writer.end();
 
         }
         catch (Exception e) {
@@ -207,10 +219,11 @@ public class UPTCombiner extends CombinerTimestamp {
                     e.printStackTrace();
                 }
             }
-            //if (nodeManager != null)
-              //  nodeManager.close();
+            if (nodeManager != null)
+                nodeManager.close();
         }
     }
+
     public void writeRecs(ResultSet rs, Connection con) throws Exception {
 
         int i = 0;
@@ -223,7 +236,7 @@ public class UPTCombiner extends CombinerTimestamp {
                 ++i;
 
                 mid = rs.getString("m_id");
-                //System.out.println("MID: " + mid);
+
                 EVCombinedRec rec = new EVCombinedRec();
 
                 /*
@@ -631,8 +644,10 @@ public class UPTCombiner extends CombinerTimestamp {
 
                     if (rs.getString("ucl") != null)
                         usclNames = getUSCLClassName(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ucl")))));
+
                     if (rs.getString("ecl") != null)
                         eclaNames = getECLAClassName(removeSpaces(eclaVals));
+
                     if (rs.getString("ipc") != null || rs.getString("ipc8") != null)
                         ipcNames = getIPCClassName(removeSpaces(ipcValues));
 
@@ -663,10 +678,19 @@ public class UPTCombiner extends CombinerTimestamp {
             }
         }
         catch (Exception ex) {
+			System.out.println("MID=" + mid);
             ex.printStackTrace();
-            System.out.println("MID=" + mid);
+
         }
         finally {
+			 if (rs != null) {
+				try {
+					rs.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+            }
 
         }
     }
@@ -1466,6 +1490,7 @@ public class UPTCombiner extends CombinerTimestamp {
         String driver = args[1];
         String username = args[2];
         String password = args[3];
+
         int loadNumber = Integer.parseInt(args[4]);
         long timestamp=0l;
         int recsPerbatch = Integer.parseInt(args[5]);
@@ -1486,19 +1511,25 @@ public class UPTCombiner extends CombinerTimestamp {
         CombinedWriter writer = new CombinedXMLWriter(recsPerbatch, loadNumber, dbname);
         writer.setOperation(operation);
         UPTCombiner c = new UPTCombiner(writer);
+        c.url=url;
+		c.driver=driver;
+		c.username=username;
+        c.password=password;
         try {
             if (timestamp==0 && (loadNumber > 3000 || loadNumber < 1000))
             {
+				System.out.println("Processing loadnumber " + loadNumber + "...");
                 c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
             }
             else if(timestamp > 0)
             {
+				System.out.println("Processing timestamp " + timestamp + "...");
                 c.writeCombinedByTimestamp(url, driver, username, password, timestamp);
             }
             else if(loadNumber == 0 && timestamp < 0)
             {
             	//extract all by year
-            	for(int yearIndex = 1998; yearIndex <= 2011; yearIndex++)
+            	for(int yearIndex = 1998; yearIndex <= 2012; yearIndex++)
                 {
 
 	              	System.out.println("Processing year " + yearIndex + "...");
@@ -1513,11 +1544,17 @@ public class UPTCombiner extends CombinerTimestamp {
             }
             else
             {
+				System.out.println("Processing combined year " + loadNumber + "...");
                 c.writeCombinedByYear(url, driver, username, password, loadNumber);
             }
         }
         catch (Exception ex) {
             ex.printStackTrace();
         }
+        finally
+        {
+			System.exit(1);
+		}
+		System.exit(1);
     }
 }

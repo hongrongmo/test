@@ -63,8 +63,6 @@ public class IPCCodeParser {
         if (code != null)
             code = code.trim();
 
-        System.out.println("Code=" + code);
-
     }
 
     public void endTITLE() {

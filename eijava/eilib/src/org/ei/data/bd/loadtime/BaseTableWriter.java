@@ -54,10 +54,18 @@ public class BaseTableWriter
 			String valueString = null;
 			if(record.get(thisColumnName)!=null)
 			{
+				try
+				{
 			    columnLength =(Integer) column.getColumnLength();
 				valueString = checkColumnWidth(columnLength.intValue(),
 				        					   thisColumnName,
 				        					   (String)record.get(thisColumnName));
+				}
+				catch(Exception e)
+				{
+					System.out.println("Access Number= "+getAccessionNumber()+" COLUMN NAME= "+thisColumnName);
+					e.printStackTrace();
+				}
 				if(thisColumnName.equals("ACCESSNUMBER"))
 				{
 					setAccessionNumber(valueString);

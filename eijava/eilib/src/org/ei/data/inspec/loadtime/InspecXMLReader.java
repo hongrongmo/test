@@ -20,6 +20,7 @@ public class InspecXMLReader extends FilterReader
 	private HashSet entity = null;
 	public static final String AUDELIMITER = new String(new char[] {30});
 	public static final String IDDELIMITER = new String(new char[] {31});
+	public static final String GROUPDELIMITER = new String(new char[] {29});
 	/*
 	 * If there is field delimiter that is 2 or more values for one field eg, A;B;C,
 	 * use 'AUDELIMITER' between A, B and C
@@ -39,14 +40,14 @@ public class InspecXMLReader extends FilterReader
     {
     	String filename = args[0];
     	Hashtable rec;
-    	
+
         BufferedReader in = new BufferedReader(new FileReader(new File(args[0])));
         InspecXMLReader r = new InspecXMLReader(in);
         while((rec=r.getRecord())!=null)
         {
         	System.out.println(rec.toString());
 		}
-		
+
 	}
 
 	public InspecXMLReader(Reader r)throws Exception
@@ -85,6 +86,7 @@ public class InspecXMLReader extends FilterReader
 			//if type="current" or type is not provided
 			record.put(ARTICLETYPE, CURRENT_DATA);
 
+			/* removed based on frank request on 6/4/2014
 			//if type="backfile" - record extract is not processed
 			if (article.getAttribute("type") != null &&
 					article.getAttribute("type").getValue().equals(BACKFILE_DATA))
@@ -93,6 +95,7 @@ public class InspecXMLReader extends FilterReader
 				record.put(ARTICLETYPE, BACKFILE_DATA);
 				return record;
 			}
+			*/
 
 			//06/07 - the end
 
@@ -221,8 +224,8 @@ public class InspecXMLReader extends FilterReader
 				record.put("CVS",getIndexing(idxGroup.getChild("cindg"),"term"));
 			if(idxGroup.getChild("ccg")!=null)
 				record.put("CLS",getIndexing(idxGroup.getChild("ccg"),"cc"));
-			
-			
+
+
 			if(idxGroup.getChild("ipcg")!=null)
 			{
 				record.put("IPC",getIndexing(idxGroup.getChild("ipcg"),"cc"));
@@ -266,11 +269,546 @@ public class InspecXMLReader extends FilterReader
 			    record.put("SRTDATE",sDate);
 
 			}
+
+			/*
+				Citation Group
+				new May-3-2011
+			*/
+
+			Element citGroup = article.getChild("citeg");
+			if(citGroup!= null)
+			{
+				StringBuffer citation=getCitationGroup(citGroup);
+				record.put("CIT",citation);
+			}
+
 			return record;
 		}
 		return null;
     }
 
+    private StringBuffer getCitationGroup(Element citGroup)
+    {
+		StringBuffer citS = new StringBuffer();
+		try
+		{
+			if(citGroup != null)
+			{
+				List cit = citGroup.getChildren("cite");
+				if(cit != null)
+				{
+					Iterator it = cit.iterator();
+
+					 while(it.hasNext())
+					{
+						Element cite = (Element)it.next();
+
+						//Accessnumber
+						citS.append("ACCESSION_NUMBER::");
+						if(cite.getChild("brfinacc")!=null)
+						{
+							citS.append(cite.getChild("brfinacc").getTextTrim());
+						}
+
+						citS.append(IDDELIMITER);
+
+						//DOI
+						citS.append("DOI::");
+						if(cite.getChild("brfdoi")!=null)
+						{
+							citS.append(cite.getChild("brfdoi").getTextTrim());
+						}
+
+						citS.append(IDDELIMITER);
+
+						//Citation Type
+						citS.append("CITATION_TYPE::");
+						if(cite.getAttributeValue("type")!=null)
+						{
+							citS.append(cite.getAttributeValue("type"));
+						}
+						citS.append(IDDELIMITER);
+
+						// Citation Label
+						citS.append("CITATION_LABEL::");
+						if(cite.getChild("brflab")!=null)
+						{
+							citS.append(cite.getChild("brflab").getTextTrim());
+						}
+
+						citS.append(IDDELIMITER);
+
+						// Citation Author
+						citS.append("AUTHOR::");
+						Element authorGroup = cite.getChild("brfaug");
+						if(authorGroup!=null)
+						{
+
+							List nameList = authorGroup.getChildren("pname");
+							citS.append(getPname(nameList));
+						}
+
+						citS.append(IDDELIMITER);
+
+						// Citation Year
+						citS.append("YEAR::");
+						if(cite.getChild("brfyr")!=null)
+						{
+							citS.append(cite.getChild("brfyr").getTextTrim());
+						}
+
+						citS.append(IDDELIMITER);
+
+						// Journal title
+						citS.append("JOURNAL_TITLE::");
+						if(cite.getChild("brfjrti")!=null)
+						{
+							citS.append(cite.getChild("brfjrti").getTextTrim());
+						}
+
+						citS.append(IDDELIMITER);
+
+
+						// Abbreviated journal title
+						citS.append("ABBR_TITLE::");
+						if(cite.getChild("brfajt")!=null)
+						{
+							citS.append(cite.getChild("brfajt").getTextTrim());
+						}
+
+						citS.append(IDDELIMITER);
+
+
+						// ISSN
+						citS.append("ISSN::");
+						if(cite.getChild("brfissn")!=null)
+						{
+							citS.append(cite.getChild("brfissn").getTextTrim());
+						}
+
+						citS.append(IDDELIMITER);
+
+
+						// Volume and issue data group
+						citS.append("VOLUME_ISSUE::");
+						if(cite.getChild("brfvid")!=null)
+						{
+							Element viGroup=cite.getChild("brfvid");
+							if(viGroup.getChild("voliss")!=null)
+							{
+								citS.append(viGroup.getChild("voliss").getTextTrim());
+							}
+							citS.append(GROUPDELIMITER);
+							if(viGroup.getChild("vol")!=null)
+							{
+								citS.append(viGroup.getChild("vol").getTextTrim());
+							}
+							citS.append(GROUPDELIMITER);
+							if(viGroup.getChild("ino")!=null)
+							{
+								citS.append(viGroup.getChild("ino").getTextTrim());
+							}
+						}
+
+						citS.append(IDDELIMITER);
+
+						// Publication date
+						citS.append("PUBLICATION_DATE::");
+						if(cite.getChild("brfpdt")!=null)
+						{
+							Element pdGroup=cite.getChild("brfpdt");
+							if(pdGroup.getChild("sdate")!=null)
+							{
+								Element sdate = pdGroup.getChild("sdate");
+								if(sdate.getChild("mo")!=null)
+								{
+									citS.append(sdate.getChild("mo").getTextTrim());
+									citS.append("-");
+								}
+
+								if(sdate.getChild("day")!=null)
+								{
+									citS.append(sdate.getChild("day").getTextTrim());
+									citS.append("-");
+								}
+
+							}
+							citS.append(GROUPDELIMITER);
+							if(pdGroup.getChild("edate")!=null)
+							{
+								Element sdate = pdGroup.getChild("edate");
+								if(sdate.getChild("mo")!=null)
+								{
+									citS.append(sdate.getChild("mo").getTextTrim());
+									citS.append("-");
+								}
+
+								if(sdate.getChild("day")!=null)
+								{
+									citS.append(sdate.getChild("day").getTextTrim());
+									citS.append("-");
+								}
+
+							}
+							citS.append(GROUPDELIMITER);
+							if(pdGroup.getChild("odate")!=null)
+							{
+								citS.append(pdGroup.getChild("odate").getTextTrim());
+							}
+						}
+
+						citS.append(IDDELIMITER);
+
+
+						// First Page
+						citS.append("FIRST_PAGE::");
+						if(cite.getChild("brffp")!=null)
+						{
+							citS.append(cite.getChild("brffp").getTextTrim());
+						}
+
+						citS.append(IDDELIMITER);
+
+
+						// Page
+						citS.append("PAGE::");
+						if(cite.getChild("brfpp")!=null)
+						{
+							citS.append(cite.getChild("brfpp").getTextTrim());
+						}
+
+						citS.append(IDDELIMITER);
+
+
+
+						// Raw text
+						citS.append("RAW::");
+						if(cite.getChild("brfraw")!=null)
+						{
+							String rawString = cite.getChild("brfraw").getTextTrim();
+							if(rawString.indexOf("\n")>-1)
+							{
+								rawString = rawString.replaceAll("\n"," ");
+							}
+							citS.append(rawString);
+						}
+
+						citS.append(IDDELIMITER);
+
+
+						// Collaboration
+						citS.append("COLLABORATION::");
+						if(cite.getChild("collab")!=null)
+						{
+							citS.append(cite.getChild("collab").getTextTrim());
+						}
+
+						citS.append(IDDELIMITER);
+
+						// Et al
+						citS.append("ETAL::");
+						if(cite.getChild("etal")!=null)
+						{
+							citS.append(cite.getChild("etal").getTextTrim());
+						}
+
+						citS.append(IDDELIMITER);
+
+
+						//Title
+						citS.append("TITLE::");
+						if(cite.getChild("brfti")!=null)
+						{
+							citS.append(cite.getChild("brfti").getTextTrim());
+						}
+
+						citS.append(IDDELIMITER);
+
+
+
+						//Publication  Title
+						citS.append("PUBLCATION_TITLE::");
+						if(cite.getChild("brfpubti")!=null)
+						{
+							citS.append(cite.getChild("brfpubti").getTextTrim());
+						}
+
+						citS.append(IDDELIMITER);
+
+
+						//Abbreviated journal title
+						citS.append("ABBR_JOURNAL_TITLE::");
+						if(cite.getChild("brfajt")!=null)
+						{
+							citS.append(cite.getChild("brfajt").getTextTrim());
+						}
+
+						citS.append(IDDELIMITER);
+
+
+						//Publisher
+						citS.append("PUBLISHER::");
+						if(cite.getChild("brfpnm")!=null)
+						{
+							citS.append(cite.getChild("brfpnm").getTextTrim());
+						}
+
+						citS.append(IDDELIMITER);
+
+
+
+						//Series title
+						citS.append("SERIES_TITLE::");
+						if(cite.getChild("brfser")!=null)
+						{
+							citS.append(cite.getChild("brfser").getTextTrim());
+						}
+
+						citS.append(IDDELIMITER);
+
+
+						//Editor group
+
+						citS.append("EDITOR::");
+						if(cite.getChild("brfedg")!=null)
+						{
+							Element editorGroup = cite.getChild("brfedg");
+							List editorList = null;
+							if(editorGroup.getChildren("pname")!=null)
+							{
+								editorList = editorGroup.getChildren("pname");
+								citS.append(getPname(editorList));
+							}
+							else if(editorGroup.getChildren("collab")!=null)
+							{
+								editorList = editorGroup.getChildren("collab");
+								citS.append(getCollab(editorList));
+							}
+							else if(editorGroup.getChild("etal")!=null)
+							{
+								citS.append(cite.getChild("etal").getTextTrim());
+							}
+
+						}
+
+						citS.append(IDDELIMITER);
+
+
+						//Issuing Organisation
+						citS.append("ISSUE_ORGANIZATION::");
+						if(cite.getChild("brfisorg")!=null)
+						{
+							Element issuingOrg = cite.getChild("brfisorg");
+							if(issuingOrg.getChild("orgn")!=null)
+							{
+								citS.append(issuingOrg.getChild("orgn").getTextTrim());
+							}
+							else if(issuingOrg.getChild("cntry")!=null)
+							{
+								citS.append(issuingOrg.getChild("cntry").getTextTrim());
+							}
+						}
+
+						citS.append(IDDELIMITER);
+
+
+						//Place of publication
+						citS.append("PUBLICATION_PLACE::");
+						if(cite.getChild("brfloc")!=null)
+						{
+							citS.append(cite.getChild("brfloc").getTextTrim());
+						}
+
+						citS.append(IDDELIMITER);
+
+						//Country
+						citS.append("COUNTRY::");
+						if(cite.getChild("brfcny")!=null)
+						{
+							citS.append(cite.getChild("brfcny").getTextTrim());
+						}
+						citS.append(IDDELIMITER);
+
+						//ISBN
+						citS.append("ISBN::");
+						if(cite.getChild("brfisbn")!=null)
+						{
+							citS.append(cite.getChild("brfisbn").getTextTrim());
+						}
+						citS.append(IDDELIMITER);
+
+
+						//Conference group
+						citS.append("CONFERENCE::");
+						if(cite.getChild("brfcng")!=null)
+						{
+							citS.append(cite.getChild("brfcng").getTextTrim());
+						}
+						citS.append(IDDELIMITER);
+
+
+						//Report number
+						citS.append("REPORT_NUMBER::");
+						if(cite.getChild("brfrepno")!=null)
+						{
+							citS.append(cite.getChild("brfrepno").getTextTrim());
+						}
+						citS.append(IDDELIMITER);
+
+
+						//Standard number
+						citS.append("STANDARD_NUMBER::");
+						if(cite.getChild("brfstdno")!=null)
+						{
+							citS.append(cite.getChild("brfstdno").getTextTrim());
+						}
+						citS.append(IDDELIMITER);
+
+						//Patent details group
+						citS.append("PATENT_DETAIL::");
+						if(cite.getChild("brfstdno")!=null)
+						{
+							citS.append(cite.getChild("brfstdno").getTextTrim());
+						}
+						citS.append(IDDELIMITER);
+
+						//Patent data
+						citS.append("PATENT_DATA::");
+						if(cite.getChild("brfpat")!=null)
+						{
+							citS.append(cite.getChild("brfpat").getTextTrim());
+						}
+						citS.append(IDDELIMITER);
+
+						// Date
+						citS.append("DATE::");
+						if(cite.getChild("brfdate")!=null)
+						{
+							citS.append(cite.getChild("brfdate").getTextTrim());
+						}
+						citS.append(IDDELIMITER);
+
+						// LINK
+						citS.append("LINK::");
+						if(cite.getChild("brflink")!=null)
+						{
+							Element link=cite.getChild("brflink");
+
+							if(link.getAttribute("type")!=null)
+							{
+								citS.append(link.getAttributeValue("type"));
+							}
+							citS.append(GROUPDELIMITER);
+							citS.append(cite.getChild("brflink").getTextTrim());
+						}
+						citS.append(IDDELIMITER);
+
+						// NOTES
+						citS.append("NOTES::");
+						if(cite.getChild("brfnotes")!=null)
+						{
+							citS.append(cite.getChild("brfnotes").getTextTrim());
+						}
+
+						citS.append(AUDELIMITER);
+
+					}
+					if(citS.length()>0)
+					{
+						citS.deleteCharAt(citS.length()-1);
+					}
+				}
+
+
+			}
+		}
+		catch(Exception e)
+		{
+			 e.printStackTrace();
+		}
+
+		return citS;
+	}
+
+	private String getCollab(List collabList)
+	{
+		StringBuffer citS = new StringBuffer();
+		if(collabList!=null)
+		{
+			Iterator collabIt = collabList.iterator();
+			while(collabIt.hasNext())
+			{
+				Element collabEl = (Element)collabIt.next();
+				citS.append(collabEl.getTextTrim());
+				citS.append(GROUPDELIMITER);
+			}
+		}
+		return citS.toString();
+	}
+
+	private String getPname(List nameList)
+	{
+		StringBuffer citS = new StringBuffer();
+		if(nameList!=null)
+		{
+			Iterator nameIt = nameList.iterator();
+			while(nameIt.hasNext())
+			{
+				Element nameEl = (Element)nameIt.next();
+				if(nameEl.getAttribute("id")!=null)
+				{
+				  citS.append(nameEl.getAttribute("id").getValue());
+				}
+				citS.append("|");
+
+				if(nameEl.getChild("snm")!=null)
+				{
+					citS.append(getMixData(nameEl.getChild("snm").getContent(),new StringBuffer()));
+				}
+
+				citS.append("|");
+				if(nameEl.getChild("init")!=null)
+				{
+					citS.append(nameEl.getChild("init").getTextTrim());
+				}
+				citS.append("|");
+
+			   if(nameEl.getChild("sfix")!=null)
+			   {
+				  citS.append(nameEl.getChild("sfix").getTextTrim());
+			   }
+			   citS.append("|");
+
+			   if(nameEl.getChildren("fnm") != null)
+			   {
+				   List l = nameEl.getChildren("fnm");
+				   for (int k = 0; k < l.size(); k++)
+				   {
+					   Element el = (Element) l.get(k);
+					   citS.append(getMixData(el.getContent(),new StringBuffer()));
+					   if(k < (l.size()-1))
+					   {
+						   citS.append(", ");
+					   }
+				   }
+			   }
+			   citS.append("|");
+			   if(nameEl.getChild("email")!=null)
+			   {
+				   citS.append(nameEl.getChild("email").getTextTrim());
+			   }
+			   citS.append("|");
+			   if(nameEl.getChild("pid") != null)
+			   {
+				   citS.append(nameEl.getChild("pid").getTextTrim());
+			   }
+			   citS.append("|");
+			   citS.append(GROUPDELIMITER);
+			}
+		}
+		return citS.toString();
+
+	}
 
     private  StringBuffer getMixData(List l, StringBuffer b)
     {
@@ -332,9 +870,9 @@ public class InspecXMLReader extends FilterReader
 
    	private StringBuffer getName(Element e)
     {
-   		//pname: snm , init , sfix :IDDELIMITER: id:IDDELIMITER: 
+   		//pname: snm , init , sfix :IDDELIMITER: id:IDDELIMITER:
    		//  fnm (, multi):IDDELIMITER: email :IDDELIMITER: ,email :IDDELIMITER: ,pid :AUDELIMITER
-		
+
    		StringBuffer name = new StringBuffer();
 		List pname = e.getChildren("pname");
 
@@ -371,9 +909,9 @@ public class InspecXMLReader extends FilterReader
 				   if(k < (l.size()-1))
 				   {
 					   name.append(", ");
-				   }				   
-			   }			   
-		   }		   
+				   }
+			   }
+		   }
 		   name.append(IDDELIMITER);
 		   if(n.getChild("email")!=null)
 		   {
@@ -382,7 +920,7 @@ public class InspecXMLReader extends FilterReader
 		   name.append(IDDELIMITER);
 		   if(n.getChild("pid") != null)
 		   {
-			   name.append(n.getChild("pid").getTextTrim());			   
+			   name.append(n.getChild("pid").getTextTrim());
 		   }
 		   name.append(AUDELIMITER);
 	    }
@@ -400,7 +938,7 @@ public class InspecXMLReader extends FilterReader
 
 	private StringBuffer getAffiliation(Element e, String keyprfx)
     {
-		    
+
 		// field AAFF or EAFF depend on keyprfx
 		StringBuffer aff = new StringBuffer();
 		// 06/07 new db field for multi affiliations and field overflow
@@ -414,7 +952,7 @@ public class InspecXMLReader extends FilterReader
 		{
 	        Element m = (Element)auaff.get(j);
 	        StringBuffer oneAffiliation = new StringBuffer();
-	        StringBuffer country = new StringBuffer();	       
+	        StringBuffer country = new StringBuffer();
 	        getMixData(m.getChild("aff").getContent(),oneAffiliation);
 	        oneAffiliation.append(IDDELIMITER);
 
@@ -426,14 +964,14 @@ public class InspecXMLReader extends FilterReader
         		getMixData(m.getChild("aff").getContent(),aff);
         		aff.append(IDDELIMITER);
     	        if(m.getAttribute("rid")!=null)
-    	        {   	
+    	        {
     	        	aff.append(m.getAttribute("rid").getValue());
-    	        }    	        
+    	        }
         	}
 	        // end of first author affiliation
-	               	
+
 	        if(m.getAttribute("rid")!=null)
-	        {	        	
+	        {
 	        	oneAffiliation.append(m.getAttribute("rid").getValue());
 	        }
 	        oneAffiliation.append(IDDELIMITER);
@@ -447,27 +985,27 @@ public class InspecXMLReader extends FilterReader
 
 	        	}
 	        	//add country to AAFFMULTI, EAFFMULTI fields
-	        	
+
 	        	oneAffiliation.append(country);
 		    }
-	        
+
 	        // add new xml elements to aff.
 	        //orgn
 	        oneAffiliation.append(IDDELIMITER);
-	        
+
 	        if(m.getChild("orgn")!= null)
 	        {
-	        	oneAffiliation.append(m.getChild("orgn").getTextTrim());	        	
+	        	oneAffiliation.append(m.getChild("orgn").getTextTrim());
 	        }
 	        //dept
 	        oneAffiliation.append(IDDELIMITER);
 	        if(m.getChild("dept") != null)
 	        {
-	        	oneAffiliation.append(m.getChild("dept").getTextTrim());	        	
+	        	oneAffiliation.append(m.getChild("dept").getTextTrim());
 	        }
 	        //addressline - could be multy
 	        oneAffiliation.append(IDDELIMITER);
-	        
+
 	        if(m.getChildren("addline") != null)
 	        {
 	        	List l = m.getChildren("addline");
@@ -480,41 +1018,41 @@ public class InspecXMLReader extends FilterReader
 	        		{
 	        			addline.append(", ");
 	        		}
-	        		
+
 	        	}
 	        	oneAffiliation.append(addline);
 	        }
-	        
+
 	        oneAffiliation.append(IDDELIMITER);
 	        //city
 	        if(m.getChild("city")!= null)
 	        {
 	        	oneAffiliation.append(m.getChild("city").getTextTrim());
-	        	
+
 	        }
-	        
+
 	        oneAffiliation.append(IDDELIMITER);
 	        //state
 	        if(m.getChild("state") != null)
 	        {
 	        	oneAffiliation.append(m.getChild("state").getTextTrim());
 	        }
-	        
+
 	        oneAffiliation.append(IDDELIMITER);
 	        //pcode
 	        if(m.getChild("pcode") != null)
 	        {
 	        	oneAffiliation.append(m.getChild("pcode").getTextTrim());
 	        }
-	        
+
 	        oneAffiliation.append(IDDELIMITER);
 	        //orgid
-	        
+
 	        if(m.getChild("orgid") != null)
 	        {
 	        	oneAffiliation.append(m.getChild("orgid").getTextTrim());
 	        }
-	        
+
 	        if(affmulti1.length() > 0 )
 	        {
 	        	affmulti1.append(AUDELIMITER);
@@ -1095,8 +1633,8 @@ public class InspecXMLReader extends FilterReader
 					terms.append("*");
 				}
 				terms.append(t.getChildTextTrim("code"));
-				
-				if(elementname.equalsIgnoreCase("ipcg") &&  
+
+				if(elementname.equalsIgnoreCase("ipcg") &&
 										t.getChild("cct")!= null )
 				{
 					terms.append(IDDELIMITER);

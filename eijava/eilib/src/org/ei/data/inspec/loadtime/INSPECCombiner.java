@@ -35,6 +35,7 @@ public class INSPECCombiner
         super(writer);
     }
 
+
     public static void main(String args[])
             throws Exception
     {
@@ -57,12 +58,12 @@ public class INSPECCombiner
 
          Combiner.TABLENAME = tablename;
 
-        CombinedWriter writer = new CombinedXMLWriter(recsPerbatch,
+         CombinedWriter writer = new CombinedXMLWriter(recsPerbatch,
                                                       loadNumber,
                                                       INS_DATABASE.getIndexName(), environment);
 
 
-        writer.setOperation(operation);
+         writer.setOperation(operation);
         INSPECCombiner c = new INSPECCombiner(writer);
 
         if(loadNumber > 3000)
@@ -87,7 +88,7 @@ public class INSPECCombiner
         // extract the whole thing
         else if(loadNumber == 0)
         {
-        	for(int yearIndex = 2005; yearIndex <= 2011; yearIndex++)
+        	for(int yearIndex = 2005; yearIndex <= 2012; yearIndex++)
         	{
         		System.out.println("Processing year " + yearIndex + "...");
         		//create  a new writer so we can see the loadNumber/yearNumber in the filename
@@ -124,15 +125,14 @@ public class INSPECCombiner
 
             stmt = con.createStatement();
             System.out.println("Doing year:"+year);
-            //System.out.println("Running the query...select     m_id, aaff, ab, anum, su, pyr, vol, iss, cdate, nrtype, doi, doit, aoi, aus, aus2, rnum, pnum, cpat, ciorg, iorg, pas, cdate, chi, voliss, ipn, cloc, cls, cn, cnt, cvs, eaff, eds, fjt, fls, fttj, la, matid, ndi, pdate, opdate, pub, rtype, sbn, sorg, sn, snt, tc, tdate, thlp, ti, trs, trmc, LOAD_NUMBER from "+Combiner.TABLENAME+" where substr(opdate,length(opdate)-3) ='"+ year +"'");
-            //rs = stmt.executeQuery("select     m_id, aaff, ab, anum, su, pyr, nrtype, pdoi, cdate, cedate, aoi, aus, aus2, rnum, pnum, cpat, ciorg, iorg, pas, cdate, chi, voliss, ipn, cloc, cls, cn, cnt, cvs, eaff, eds, fjt, fls, fttj, la, matid, ndi, pdate,opdate, pub, rtype, sbn, sorg, sn, snt, tc, tdate, thlp, ti, trs, trmc, LOAD_NUMBER from "+Combiner.TABLENAME+" where substr(opdate,length(opdate)-3) ='"+ year +"'");
+
             if(year == 2999)
             {
-            	rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate, sspdate, aaff, afc, ab, anum, pubti, su, pyr, nrtype, pdoi, cdate, cedate, aoi, aus, aus2, rnum, pnum, cpat, ciorg, iorg, pas, chi, pvoliss, pvol, piss, pipn, cloc, cls, pcdn, scdn, cvs, eaff, eds, pfjt, sfjt, fls, pajt, sajt, la, matid, ndi, pspdate, pepdate, popdate, sopdate, ppub, rtype, sbn, sorg, psn, ssn, tc, pubti, ti, trs, trmc, aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num from "+Combiner.TABLENAME+" where pyr='0294' or pyr='0994' or pyr='1101' or pyr='20007' or pyr='Dec.' or pyr='July' or pyr is null and seq_num is not null");
+            	rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate, sspdate, aaff, afc, ab, anum, pubti, su, pyr, nrtype, pdoi, cdate, cedate, aoi, aus, aus2, rnum, pnum, cpat, ciorg, iorg, pas, chi, pvoliss, pvol, piss, pipn, cloc, cls, pcdn, scdn, cvs, eaff, eds, pfjt, sfjt, fls, pajt, sajt, la, matid, ndi, pspdate, pepdate, popdate, sopdate, ppub, rtype, sbn, sorg, psn, ssn, tc, pubti, ti, trs, trmc, aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc from "+Combiner.TABLENAME+" where pyr='0294' or pyr='0994' or pyr='1101' or pyr='20007' or pyr='Dec.' or pyr='July' or pyr is null");
             }
             else
             {
-            	rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate, sspdate, aaff, afc, ab, anum, pubti, su, pyr, nrtype, pdoi, cdate, cedate, aoi, aus, aus2, rnum, pnum, cpat, ciorg, iorg, pas, chi, pvoliss, pvol, piss, pipn, cloc, cls, pcdn, scdn, cvs, eaff, eds, pfjt, sfjt, fls, pajt, sajt, la, matid, ndi, pspdate, pepdate, popdate, sopdate, ppub, rtype, sbn, sorg, psn, ssn, tc, pubti, ti, trs, trmc, aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num from "+Combiner.TABLENAME+" where pyr ='"+ year +"' and seq_num is not null");
+            	rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate, sspdate, aaff, afc, ab, anum, pubti, su, pyr, nrtype, pdoi, cdate, cedate, aoi, aus, aus2, rnum, pnum, cpat, ciorg, iorg, pas, chi, pvoliss, pvol, piss, pipn, cloc, cls, pcdn, scdn, cvs, eaff, eds, pfjt, sfjt, fls, pajt, sajt, la, matid, ndi, pspdate, pepdate, popdate, sopdate, ppub, rtype, sbn, sorg, psn, ssn, tc, pubti, ti, trs, trmc, aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc from "+Combiner.TABLENAME+" where pyr ='"+ year +"'");
             }
             writeRecs(rs);
             System.out.println("Wrote records.");
@@ -253,7 +253,7 @@ public class INSPECCombiner
     }
 
 
-    private void writeRecs(ResultSet rs)
+    void writeRecs(ResultSet rs)
             throws Exception
     {
         int i = 0;
@@ -647,7 +647,12 @@ public class INSPECCombiner
                     }
                 }
 
-
+				if(rs.getString("ipc")!=null)
+				{
+					String ipcString = rs.getString("ipc");
+					ipcString = perl.substitute("s/\\//SLASH/g", ipcString);
+					rec.put(EVCombinedRec.INT_PATENT_CLASSIFICATION, ipcString);
+				}
 
                 rec.put(EVCombinedRec.DOCID, rs.getString("M_ID"));
                 rec.put(EVCombinedRec.PARENT_ID, rs.getString("seq_num"));
@@ -659,10 +664,6 @@ public class INSPECCombiner
                 {
                     rec.put(EVCombinedRec.PUB_YEAR,strYear);
                 }
-
-
-
-
 
                 rec.put(EVCombinedRec.DEDUPKEY,
                         getDedupKey(rec.get(EVCombinedRec.ISSN),
@@ -682,7 +683,7 @@ public class INSPECCombiner
         }
     }
 
-    private String[] prepareMulti(String multiString)
+    public String[] prepareMulti(String multiString)
         throws Exception
     {
         ArrayList list = new ArrayList();
@@ -702,7 +703,7 @@ public class INSPECCombiner
 
     }
 
-    private String[] prepareAuthor(String aString)
+   public  String[] prepareAuthor(String aString)
         throws Exception
     {
 
@@ -721,6 +722,7 @@ public class INSPECCombiner
                       s = s.substring(0,i);
                 }
                 s = s.trim();
+
                 list.add(s);
             }
 
@@ -730,7 +732,7 @@ public class INSPECCombiner
 
     }
 
-    private String[] prepareIndexterms(String aString)
+    public String[] prepareIndexterms(String aString)
         throws Exception
     {
 
@@ -888,7 +890,6 @@ public class INSPECCombiner
 
     }
 
-
     private String getTreatmentCode(String tc)
     {
         StringBuffer buf = new StringBuffer();
@@ -994,19 +995,23 @@ public class INSPECCombiner
         {
 
             stmt = con.createStatement();
+            String sqlQuery = "";
         //  System.out.println("Running the query...");
         //  rs = stmt.executeQuery("select m_id, aaff, su, ab, anum, aoi, aus, aus2,pyr, rnum, pnum, cpat, ciorg, iorg, pas, cdate, cedate, doi, nrtype, doit, chi, voliss, ipn, cloc, cls, cn, cnt, cvs, eaff, eds, fjt, fls, fttj, la, matid, ndi, pdate, pub, rtype, sbn, sorg, sn, snt, tc, tdate, thlp, ti, trs, trmc, LOAD_NUMBER from "+Combiner.TABLENAME+ " where LOAD_NUMBER = "+loadN);
             if (loadN == 3001)
             {
-                rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc, aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num from "+Combiner.TABLENAME+ " where pyr is null and load_number < 200537 and seq_num is not null");
+				sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc, aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc from "+Combiner.TABLENAME+ " where pyr is null and load_number < 200537";
             }
             else if (loadN == 3002)
             {
-                rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn,  LOAD_NUMBER, seq_num from "+Combiner.TABLENAME+ " where pyr like '194%'or pyr like '195%' or (pyr like '196%' and pyr != '1969') and seq_num is not null");
+				sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn,  LOAD_NUMBER, seq_num, ipc from "+Combiner.TABLENAME+ " where pyr like '194%'or pyr like '195%' or (pyr like '196%' and pyr != '1969')";
             }
             else
-            rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num from "+Combiner.TABLENAME+ " where seq_num is not null and LOAD_NUMBER = "+loadN);
-
+            {
+				sqlQuery="select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc from "+Combiner.TABLENAME+ " where LOAD_NUMBER = "+loadN;
+			}
+			//System.out.println("Inspect sqlQuery= "+sqlQuery);
+			rs = stmt.executeQuery(sqlQuery);
             writeRecs(rs);
             System.out.println("Wrote records.");
 

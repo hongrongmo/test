@@ -95,6 +95,13 @@ public class BdAuthor
 						this.setInitials(auelements[i]);
 					}
                 }
+                else if (auField.equals("eAddress"))
+				{
+					if(auelements[i]!= null && !auelements[i].trim().equals(""))
+					{
+						this.setEaddress(auelements[i]);
+					}
+                }
             }
         }
     }

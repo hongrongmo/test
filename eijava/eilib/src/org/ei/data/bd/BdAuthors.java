@@ -27,6 +27,7 @@ public class BdAuthors
         auElements.add("prefnameDegrees");
         auElements.add("prefnameSurname");
         auElements.add("prefnameGivenname");
+        auElements.add("affid");
         auElements.add("eAddress");
     }
 

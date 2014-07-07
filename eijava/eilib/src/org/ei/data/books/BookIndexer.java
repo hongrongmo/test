@@ -2,6 +2,7 @@ package org.ei.data.books;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -33,6 +34,7 @@ public class BookIndexer
 {
     private static Log log = LogFactory.getLog(BookIndexer.class);
     private static Log sqllog = LogFactory.getLog("SqlBatch");
+    static FileWriter  sqlFile;
 
 //  private static PorterStemmer stemmer = new PorterStemmer();
 //  private static TextFileFilter filter = new TextFileFilter();
@@ -77,7 +79,8 @@ public class BookIndexer
     ResultSet rs = null;
     Statement stmt = null;
 
-    try {
+    try
+    {
         Class.forName(driver);
     } catch (ClassNotFoundException e1) {
         // TODO Auto-generated catch block
@@ -86,18 +89,18 @@ public class BookIndexer
 
     try
     {
+		sqlFile = new FileWriter("2011-keyword.txt");
         url = "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI"; //args[1];
         username = "AP_EV_SEARCH"; //args[2];
         password = "ei3it"; //args[3];
         con = DriverManager.getConnection(url,username,password);
-
         stmt = con.createStatement();
         rs = stmt.executeQuery("select MAIN_TERM_SEARCH from CPX_THESAURUS WHERE STATUS='C'");
         while(rs.next())
         {
             String term = rs.getString("MAIN_TERM_SEARCH");
             terms.add(term);
-//                log.info(term);
+//          log.info(term);
         }
 
         if(rs != null) {
@@ -107,7 +110,7 @@ public class BookIndexer
             close(stmt);
         }
     }
-    catch(SQLException e) {
+    catch(Exception e) {
         e.printStackTrace();
     }
     finally {
@@ -123,7 +126,6 @@ public class BookIndexer
 
     try
     {
-      // "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI", "AP_EV_SEARCH", "ei3it"
 
       Map books = new HashMap();
       url = "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI"; //args[1];
@@ -239,15 +241,19 @@ public class BookIndexer
                   e.printStackTrace();
               }
               if(abs != null) {
-                abs = abs.replaceFirst(bookTitle, "");
+               // abs = abs.replaceFirst(bookTitle, "");
                 //abs = abs.replaceFirst("This page intentionally left blank", "");
                 keywords = getKeywords(terms, abs);
                 if(keywords != null)
                 {
-                  sqllog.info("UPDATE PAGES_ALL SET page_keywords = '" + keywords.replaceAll("'", "''") + "' WHERE docid = '" + id + "';");
+					String sqlString = "UPDATE PAGES_ALL SET page_keywords = '" + keywords.replaceAll("'", "''") + "' WHERE docid = '" + id + "';";
+                  	sqllog.info(sqlString);
+                  	sqlFile.write(sqlString+"\n");
                   if(executeBatch)
                   {
-                    batchstmt.addBatch("UPDATE PAGES_ALL SET page_keywords = '" + keywords.replaceAll("'", "''") + "' WHERE docid = '" + id + "'");
+					String sqlBatchString = "UPDATE PAGES_ALL SET page_keywords = '" + keywords.replaceAll("'", "''") + "' WHERE docid = '" + id + "'";
+                    sqlFile.write(sqlString+"\n");
+                    batchstmt.addBatch(sqlBatchString);
                   }
                   commitCount++;
                 }
@@ -274,6 +280,7 @@ public class BookIndexer
               }
 
               sqllog.info("commit;");
+              sqlFile.write("commit;\n");
               commitCount = 0;
 
           }
@@ -285,7 +292,8 @@ public class BookIndexer
         con.commit();
       }
       sqllog.info("commit;");
-
+	  sqlFile.write("commit;\n");
+	  sqlFile.flush();
       if(rs != null) {
         close(rs);
       }
@@ -309,6 +317,9 @@ public class BookIndexer
     catch(SQLException e) {
       log.error("SQLException ",e);
     }
+    catch(IOException e) {
+	      log.error("IOException ",e);
+    }
     finally {
       if(con != null)
       {
@@ -320,6 +331,18 @@ public class BookIndexer
         }
       }
     }
+    if(sqlFile!=null)
+    {
+		try
+		{
+			sqlFile.close();
+		}
+		catch(IOException e)
+		{
+			e.printStackTrace();
+		}
+	}
+
     sqllog.info("quit;");
     log.info("Complete.");
   }

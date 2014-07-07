@@ -27,26 +27,29 @@ public class InspecDocBuilder
     public static String TRANS_SEE_DETAILED = "For translation info., see Detailed Record / Links";
     private static final Key INS_CONTROLLED_TERMS = new Key(Keys.CONTROLLED_TERMS, "Inspec controlled terms");
     private static final Key INS_CLASS_CODES = new Key(Keys.CLASS_CODES, "Inspec classification codes");
-    private static final Key[] CITATION_KEYS = {Keys.ACCESSION_NUMBER,Keys.CITEDBY,Keys.DOCID,Keys.TITLE,Keys.EDITORS,Keys.AUTHORS, Keys.INVENTORS, Keys.EDITOR_AFFS, Keys.REPORT_NUMBER, Keys.PUBLISHER,  Keys.PATPUBDATE, Keys.PATFILDATE, Keys.PATASSIGN, Keys.PATAPPNUM, Keys.PATNUM, Keys.PART_NUMBER, Keys.PATCOUNTRY, Keys.NO_SO, Keys.SOURCE, Keys.TRANSLATION_SERIAL_TITLE, Keys.AUTHOR_AFFS, Keys.p_PAGE_RANGE, Keys.PAGE_RANGE_pp, Keys.VOLISSUE, Keys.SERIAL_TITLE, Keys.ABBRV_SERIAL_TITLE, Keys.ISSUE_DATE, Keys.LANGUAGE, Keys.ISBN, Keys.DOI, Keys.CODEN, Keys.ISSN,Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT};
-    private static final Key[] ABSTRACT_KEYS = {Keys.CITEDBY,Keys.DOCID, Keys.TITLE, Keys.INVENTORS, Keys.EDITORS,Keys.AUTHORS,Keys.EDITOR_AFFS, Keys.AUTHOR_AFFS, Keys.VOLISSUE, Keys.NO_SO, Keys.SOURCE, Keys.SERIAL_TITLE, Keys.TRANSLATION_SERIAL_TITLE, Keys.ABBRV_SERIAL_TITLE,  Keys.ISSUE_DATE, Keys.LANGUAGE, Keys.REPORT_NUMBER, Keys.PATFILDATE, Keys.PATASSIGN, Keys.PATAPPNUM, Keys.PATNUM, Keys.PATCOUNTRY, Keys.PATPUBDATE, Keys.p_PAGE_RANGE, Keys.PAGE_RANGE_pp, Keys.COUNTRY_OF_PUB, Keys.ISBN, Keys.ISSN,  Keys.CONFERENCE_NAME, Keys.CONF_DATE, Keys.MEETING_LOCATION, Keys.SPONSOR, Keys.PART_NUMBER, Keys.PART_NUMBER, Keys.PUBLISHER,Keys.I_PUBLISHER, Keys.PAGE_COUNT, Keys.PUB_PLACE, Keys.DOI, Keys.PROVIDER, INS_CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS, Keys.ABSTRACT, Keys.NUMBER_OF_REFERENCES,Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT, Keys.CLASS_CODES,Keys.TREATMENTS};
-    private static final Key[] DETAILED_KEYS = {Keys.CITEDBY,Keys.ACCESSION_NUMBER, Keys.TITLE, Keys.TITLE_TRANSLATION, Keys.AUTHORS, Keys.EDITORS, Keys.INVENTORS, Keys.PATASSIGN, Keys.PATAPPNUM, Keys.PATNUM, Keys.PATFILDATE, Keys.AUTHOR_AFFS, Keys.EDITOR_AFFS, Keys.SOURCE, Keys.SERIAL_TITLE, Keys.ABBRV_SERIAL_TITLE, Keys.VOLUME, Keys.ISSUE, Keys.ISSUING_ORG, Keys.REPORT_NUMBER, Keys.ISSUE_DATE, Keys.PUBLICATION_DATE, Keys.PART_NUMBER, Keys.PART_NUMBER, Keys.PAGE_RANGE, Keys.LANGUAGE, Keys.ISSN, Keys.CODEN, Keys.ISBN, Keys.DOC_TYPE, Keys.PATCOUNTRY, Keys.CONFERENCE_NAME, Keys.CONF_DATE, Keys.MEETING_LOCATION, Keys.CONF_CODE, Keys.SPONSOR, Keys.PUBLISHER, Keys.PUB_PLACE, Keys.PUB_LOCATION, Keys.TRANSLATION_SERIAL_TITLE, Keys.TRANSLATION_ABBREVIATED_SERIAL_TITLE, Keys.TRANSLATION_VOLUME, Keys.TRANSLATION_ISSUE, Keys.TRANSLATION_PUBLICATION_DATE, Keys.TRANSLATION_PAGES, Keys.TRANSLATION_ISSN, Keys.TRANSLATION_CODEN, Keys.TRANSLATION_COUNTRY_OF_PUB, Keys.MATERIAL_ID, Keys.ABSTRACT, Keys.ABSTRACT_TYPE, Keys.NUMBER_OF_REFERENCES, Keys.CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS, Keys.CLASS_CODES, Keys.NUMERICAL_DATA_INDEXING, Keys.ASTRONOMICAL_OBJECT_INDEXING, Keys.CHEMICAL_DATA_INDEXING, Keys.TREATMENTS, Keys.DISCIPLINES, Keys.DOI, Keys.DOCID, Keys.COPYRIGHT, Keys.PROVIDER,Keys.COPYRIGHT_TEXT};
+    private static final Key[] CITATION_KEYS = {Keys.ACCESSION_NUMBER,Keys.CITEDBY,Keys.DOCID,Keys.TITLE,Keys.EDITORS,Keys.AUTHORS, Keys.INVENTORS, Keys.EDITOR_AFFS, Keys.REPORT_NUMBER, Keys.PUBLISHER,  Keys.PATPUBDATE, Keys.PATFILDATE, Keys.PATASSIGN, Keys.PATAPPNUM, Keys.PATNUM, Keys.PART_NUMBER, Keys.PATCOUNTRY, Keys.NO_SO, Keys.SOURCE, Keys.TRANSLATION_SERIAL_TITLE, Keys.AUTHOR_AFFS, Keys.p_PAGE_RANGE, Keys.PAGE_RANGE_pp, Keys.VOLISSUE, Keys.SERIAL_TITLE, Keys.ABBRV_SERIAL_TITLE, Keys.ISSUE_DATE, Keys.LANGUAGE, Keys.ISBN, Keys.DOI, Keys.CODEN, Keys.ISSN,Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT,Keys.NUMBER_OF_REFERENCES,Keys.REFCNT};
+    private static final Key[] ABSTRACT_KEYS = {Keys.CITEDBY,Keys.DOCID, Keys.TITLE, Keys.INVENTORS, Keys.EDITORS,Keys.AUTHORS,Keys.EDITOR_AFFS, Keys.AUTHOR_AFFS, Keys.VOLISSUE, Keys.NO_SO, Keys.SOURCE, Keys.SERIAL_TITLE, Keys.TRANSLATION_SERIAL_TITLE, Keys.ABBRV_SERIAL_TITLE,  Keys.ISSUE_DATE, Keys.LANGUAGE, Keys.REPORT_NUMBER, Keys.PATFILDATE, Keys.PATASSIGN, Keys.PATAPPNUM, Keys.PATNUM, Keys.PATCOUNTRY, Keys.PATPUBDATE, Keys.p_PAGE_RANGE, Keys.PAGE_RANGE_pp, Keys.COUNTRY_OF_PUB, Keys.ISBN, Keys.ISSN,  Keys.CONFERENCE_NAME, Keys.CONF_DATE, Keys.MEETING_LOCATION, Keys.SPONSOR, Keys.PART_NUMBER, Keys.PART_NUMBER, Keys.PUBLISHER,Keys.I_PUBLISHER, Keys.PAGE_COUNT, Keys.PUB_PLACE, Keys.DOI, Keys.PROVIDER, INS_CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS, Keys.ABSTRACT, Keys.NUMBER_OF_REFERENCES,Keys.COPYRIGHT,Keys.COPYRIGHT_TEXT, Keys.CLASS_CODES,Keys.TREATMENTS,Keys.INTERNATCL_CODE,Keys.CITATION,Keys.REFCNT};
+    private static final Key[] DETAILED_KEYS = {Keys.CITEDBY,Keys.ACCESSION_NUMBER, Keys.TITLE, Keys.TITLE_TRANSLATION, Keys.AUTHORS, Keys.EDITORS, Keys.INVENTORS, Keys.PATASSIGN, Keys.PATAPPNUM, Keys.PATNUM, Keys.PATFILDATE, Keys.AUTHOR_AFFS, Keys.EDITOR_AFFS, Keys.SOURCE, Keys.SERIAL_TITLE, Keys.ABBRV_SERIAL_TITLE, Keys.VOLUME, Keys.ISSUE, Keys.ISSUING_ORG, Keys.REPORT_NUMBER, Keys.ISSUE_DATE, Keys.PUBLICATION_DATE, Keys.PART_NUMBER, Keys.PART_NUMBER, Keys.PAGE_RANGE, Keys.LANGUAGE, Keys.ISSN, Keys.CODEN, Keys.ISBN, Keys.DOC_TYPE, Keys.PATCOUNTRY, Keys.CONFERENCE_NAME, Keys.CONF_DATE, Keys.MEETING_LOCATION, Keys.CONF_CODE, Keys.SPONSOR, Keys.PUBLISHER, Keys.PUB_PLACE, Keys.PUB_LOCATION, Keys.TRANSLATION_SERIAL_TITLE, Keys.TRANSLATION_ABBREVIATED_SERIAL_TITLE, Keys.TRANSLATION_VOLUME, Keys.TRANSLATION_ISSUE, Keys.TRANSLATION_PUBLICATION_DATE, Keys.TRANSLATION_PAGES, Keys.TRANSLATION_ISSN, Keys.TRANSLATION_CODEN, Keys.TRANSLATION_COUNTRY_OF_PUB, Keys.MATERIAL_ID, Keys.ABSTRACT, Keys.ABSTRACT_TYPE, Keys.NUMBER_OF_REFERENCES, Keys.CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS, Keys.CLASS_CODES, Keys.NUMERICAL_DATA_INDEXING, Keys.ASTRONOMICAL_OBJECT_INDEXING, Keys.CHEMICAL_DATA_INDEXING, Keys.TREATMENTS, Keys.DISCIPLINES, Keys.DOI, Keys.DOCID, Keys.INTERNATCL_CODE, Keys.COPYRIGHT, Keys.PROVIDER,Keys.COPYRIGHT_TEXT,Keys.CITATION,Keys.REFCNT};
 
     private static final Key[] RIS_KEYS = { Keys.RIS_TY, Keys.RIS_LA,Keys.RIS_M1,Keys.RIS_N1 ,Keys.RIS_Y1, Keys.RIS_Y2, Keys.RIS_A2, Keys.RIS_SE, Keys.RIS_TI, Keys.RIS_T1,Keys.RIS_T2, Keys.RIS_AD, Keys.RIS_BT, Keys.RIS_JO,Keys.RIS_T3, Keys.RIS_AUS,  Keys.RIS_EDS, Keys.RIS_VL, Keys.RIS_IS, Keys.RIS_PY, Keys.RIS_AN, Keys.RIS_SP, Keys.RIS_EP, Keys.RIS_SN, Keys.RIS_BN, Keys.RIS_S1, Keys.RIS_MD,Keys.RIS_CY, Keys.RIS_UR, Keys.RIS_PB,  Keys.RIS_N2, Keys.RIS_KW, Keys.RIS_CVS, Keys.RIS_FLS, Keys.RIS_DO, Keys.BIB_TY };
 
     private static final Key[] XML_KEYS = {Keys.DOCID,Keys.ACCESSION_NUMBER,Keys.TITLE,Keys.EDITORS,Keys.AUTHORS, Keys.INVENTORS, Keys.EDITOR_AFFS, Keys.REPORT_NUMBER, Keys.PUBLISHER,  Keys.PATPUBDATE, Keys.PATFILDATE, Keys.PATASSIGN, Keys.PATAPPNUM, Keys.PATNUM, Keys.PART_NUMBER, Keys.PATCOUNTRY, Keys.PAGE_COUNT, Keys.NO_SO, Keys.SOURCE, Keys.TRANSLATION_SERIAL_TITLE, Keys.AUTHOR_AFFS, Keys.PAGE_RANGE, Keys.p_PAGE_RANGE, Keys.PAGE_RANGE_pp,Keys.VOLUME,Keys.ISSUE, Keys.VOLISSUE, Keys.SERIAL_TITLE, Keys.ABBRV_SERIAL_TITLE, Keys.ISSUE_DATE, Keys.LANGUAGE, Keys.ISBN, Keys.DOI, Keys.CODEN, Keys.CONTROLLED_TERMS,Keys.I_PUBLISHER, Keys.ISSN, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT};
     public static final String AUDELIMITER = new String(new char[] {30});
     public static final String IDDELIMITER = new String(new char[] {31});
+    public static final String GROUPDELIMITER = new String(new char[] {29});
 
     private Database database;
     private Perl5Util perl = new Perl5Util();
 
-    private static String queryCitation="select SOPDATE, SSPDATE, CDATE, SU, SBN, ANUM, PCDN, M_ID, NRTYPE,RTYPE,LA,PIPN,NPL1,NPL2,PARTNO,PCPUB,BPPUB,PPUB,EAFF,EDS,AUS,AUS2,AAFF,AFC,TI,TC,IORG,RNUM,POPDATE,PFJT,PAJT,PVOLISS,PVOL,PISS,SVOL,SISS,SFJT,SAJT,PAS,OPAN,FDATE,OFDATE,PNUM,PSN,CPR,LOAD_NUMBER,COPA,PDOI,PUBTI,PYR,AAFFMULTI1, AAFFMULTI2, EAFFMULTI1, EAFFMULTI2, EFC  from new_ins_master where M_ID IN ";
-    private static String queryXMLCitation="select  SOPDATE,M_ID,NRTYPE,RTYPE,ANUM,LA,PIPN,NPL1,NPL2,PARTNO,PCPUB,PPUB,BPPUB,EAFF,EDS,AUS,AUS2,AAFF,AFC,TI,IORG,RNUM,POPDATE,PFJT,PAJT,SFJT,SAJT,PVOLISS,PVOL,PISS,SVOL,SISS,PAS,OPAN,FDATE,OFDATE,PNUM,PSN,CPR,LOAD_NUMBER,COPA,PDOI,CVS,SBN,PUBTI,PYR,AAFFMULTI1, AAFFMULTI2, EAFFMULTI1, EAFFMULTI2, EFC  from new_ins_master where M_ID IN ";
-    private static String queryAbstracts="select SOPDATE, SSPDATE, CDATE, SU, M_ID,ANUM,NRTYPE,RTYPE,TI,AUS,AUS2,AAFF,AFC,PFJT,SFJT,PAJT,SAJT,PVOLISS,PVOL,PISS,SVOL,SISS,POPDATE,PARTNO,PIPN,NPL1,NPL2,LA,PSN,PCDN,TC,CODATE,CLOC,SORG,BPPUB,PPUB,PCPUB,AB,XREFNO,CVS,FLS,EDS,EAFF,SBN,IORG,RNUM,PAS,OPAN,COPA,PNUM,FDATE,OFDATE,CPR,PDOI,PUBTI,PYR,LOAD_NUMBER,CLS, AAFFMULTI1, AAFFMULTI2, EAFFMULTI1, EAFFMULTI2, EFC, TRMC  from new_ins_master where M_ID IN ";
-    private static String queryDetailed="select SOPDATE,SSPDATE, CDATE, SU, M_ID,NRTYPE,RTYPE,ANUM,TI,AUS,AUS2,EDS,AAFF,AFC,EAFF,PFJT,SFJT,PAJT,SAJT,PVOLISS,PVOL,PISS,SVOLISS,SVOL,SISS,POPDATE,PIPN,NPL1,NPL2,LA,PSN,PCDN,TC,CODATE,CLOC,SORG,COPA,BPPUB,PPUB,PCPUB,SVOLISS,SOPDATE,SIPN,SSN,SCDN,SCPUB,MATID,PARTNO,RNUM,SBN,IORG,FDATE,OFDATE,PYR,PAS,OPAN,PNUM,AB,XREFNO,CVS,FLS,CLS,NDI,CHI,AOI,TRMC,CPR,PURL,PUM,PDOI,PUBTI,LOAD_NUMBER, AAFFMULTI1, AAFFMULTI2, EAFFMULTI1, EAFFMULTI2, EFC  from new_ins_master where M_ID IN ";
+    private static String queryCitation="select SOPDATE, SSPDATE, CDATE, SU, SBN, ANUM, PCDN, M_ID, NRTYPE,RTYPE,LA,PIPN,NPL1,NPL2,PARTNO,PCPUB,BPPUB,PPUB,EAFF,EDS,AUS,AUS2,AAFF,AFC,TI,TC,IORG,RNUM,POPDATE,PFJT,PAJT,PVOLISS,PVOL,PISS,SVOL,SISS,SFJT,SAJT,PAS,OPAN,FDATE,OFDATE,PNUM,PSN,CPR,LOAD_NUMBER,COPA,PDOI,PUBTI,PYR,AAFFMULTI1, AAFFMULTI2, EAFFMULTI1, EAFFMULTI2, EFC, CITATION, XREFNO  from new_ins_master where M_ID IN ";
+    private static String queryREFCitation="select SOPDATE, SSPDATE, CDATE, SU, SBN, ANUM, PCDN, M_ID, NRTYPE,RTYPE,LA,PIPN,NPL1,NPL2,PARTNO,PCPUB,BPPUB,PPUB,EAFF,EDS,AUS,AUS2,AAFF,AFC,TI,TC,IORG,RNUM,POPDATE,PFJT,PAJT,PVOLISS,PVOL,PISS,SVOL,SISS,SFJT,SAJT,PAS,OPAN,FDATE,OFDATE,PNUM,PSN,CPR,LOAD_NUMBER,COPA,PDOI,PUBTI,PYR,AAFFMULTI1, AAFFMULTI2, EAFFMULTI1, EAFFMULTI2, EFC, CITATION, XREFNO  from new_ins_master where ANUM IN ";
+    private static String queryXMLCitation="select  SOPDATE,M_ID,NRTYPE,RTYPE,ANUM,LA,PIPN,NPL1,NPL2,PARTNO,PCPUB,PPUB,BPPUB,EAFF,EDS,AUS,AUS2,AAFF,AFC,TI,IORG,RNUM,POPDATE,PFJT,PAJT,SFJT,SAJT,PVOLISS,PVOL,PISS,SVOL,SISS,PAS,OPAN,FDATE,OFDATE,PNUM,PSN,CPR,LOAD_NUMBER,COPA,PDOI,CVS,SBN,PUBTI,PYR,AAFFMULTI1, AAFFMULTI2, EAFFMULTI1, EAFFMULTI2, EFC, CITATION  from new_ins_master where M_ID IN ";
+    private static String queryAbstracts="select SOPDATE, SSPDATE, CDATE, SU, M_ID,ANUM,NRTYPE,RTYPE,TI,AUS,AUS2,AAFF,AFC,PFJT,SFJT,PAJT,SAJT,PVOLISS,PVOL,PISS,SVOL,SISS,POPDATE,PARTNO,PIPN,NPL1,NPL2,LA,PSN,PCDN,TC,CODATE,CLOC,SORG,BPPUB,PPUB,PCPUB,AB,XREFNO,CVS,FLS,EDS,EAFF,SBN,IORG,RNUM,PAS,OPAN,COPA,PNUM,FDATE,OFDATE,CPR,PDOI,PUBTI,PYR,LOAD_NUMBER,CLS, AAFFMULTI1, AAFFMULTI2, EAFFMULTI1, EAFFMULTI2, EFC, TRMC, IPC, CITATION  from new_ins_master where M_ID IN ";
+    private static String queryDetailed="select SOPDATE,SSPDATE, CDATE, SU, M_ID,NRTYPE,RTYPE,ANUM,TI,AUS,AUS2,EDS,AAFF,AFC,EAFF,PFJT,SFJT,PAJT,SAJT,PVOLISS,PVOL,PISS,SVOLISS,SVOL,SISS,POPDATE,PIPN,NPL1,NPL2,LA,PSN,PCDN,TC,CODATE,CLOC,SORG,COPA,BPPUB,PPUB,PCPUB,SVOLISS,SOPDATE,SIPN,SSN,SCDN,SCPUB,MATID,PARTNO,RNUM,SBN,IORG,FDATE,OFDATE,PYR,PAS,OPAN,PNUM,AB,XREFNO,CVS,FLS,CLS,NDI,CHI,AOI,TRMC,CPR,PURL,PUM,PDOI,PUBTI,LOAD_NUMBER, AAFFMULTI1, AAFFMULTI2, EAFFMULTI1, EAFFMULTI2, EFC, IPC, CITATION  from new_ins_master where M_ID IN ";
 
     public DocumentBuilder newInstance(Database database)
     {
+
         return new InspecDocBuilder(database);
     }
 
@@ -92,7 +95,10 @@ public class InspecDocBuilder
             {
                 l = loadXMLCitations(listOfDocIDs);
             }
-
+			else if(dataFormat.equalsIgnoreCase(Citation.CITATION_FORMAT_REF))
+			{
+				l = loadREFCitations(listOfDocIDs);
+            }
 
         }
         catch(Exception e)
@@ -318,6 +324,17 @@ public class InspecDocBuilder
 
                     }
 
+                      // VO
+					if(rset.getString("PVOL") != null)
+					{
+						ht.put(Keys.VOLUME, new Volume(Keys.VOLUME, rset.getString("PVOL"), perl));
+					}
+					// ISS
+					if(rset.getString("PISS") != null)
+					{
+						ht.put(Keys.ISSUE,new Issue(rset.getString("PISS") , perl));
+                    }
+
                     if (rset.getString("POPDATE") != null)
                     {
                         ht.put(Keys.ISSUE_DATE,new XMLWrapper(Keys.ISSUE_DATE , StringUtil.replaceNullWithEmptyString(rset.getString("POPDATE"))));
@@ -508,7 +525,6 @@ public class InspecDocBuilder
                     ht.put(Keys.ABSTRACT,new XMLWrapper(Keys.ABSTRACT,abs));
                 }
 
-
                 if(rset.getString("XREFNO") != null) {
                     ht.put(Keys.NUMBER_OF_REFERENCES,new XMLWrapper(Keys.NUMBER_OF_REFERENCES, StringUtil.replaceNullWithEmptyString(rset.getString("XREFNO"))));
                 }
@@ -523,6 +539,12 @@ public class InspecDocBuilder
                            new XMLMultiWrapper(Keys.UNCONTROLLED_TERMS, setElementData(rset.getString("FLS"))));
                 }
 
+                if (rset.getString("IPC") != null)
+				{
+					ht.put(Keys.INTERNATCL_CODE,
+						   new IPCClassifications(Keys.INTERNATCL_CODE, setElementData(rset.getString("IPC")), this.database));
+				}
+
                  //added for CITEDBY
 
 				if(rset.getString("ANUM")!=null)
@@ -535,7 +557,7 @@ public class InspecDocBuilder
 
 				if(rset.getString("PDOI")!=null)
 				{
-					citedby.setDoi((rset.getString("PDOI")).trim());
+					citedby.setDoi(URLEncoder.encode((rset.getString("PDOI")).trim()));
 				}
 
 				if(rset.getString("PVOLISS") != null)
@@ -565,6 +587,8 @@ public class InspecDocBuilder
 						}
 					}
 
+
+
 					if(rset.getString("PSN")!=null)
 					{
 						citedby.setIssn((rset.getString("PSN")).trim());
@@ -579,9 +603,16 @@ public class InspecDocBuilder
 					{
 						citedby.setAccessionNumber((rset.getString("ANUM")).trim());
 					}
+
+					//System.out.println("**ABSTRACT** REFERENCE-COUNT= "+rset.getString("XREFNO")+" CITATION= "+getCitationCount(rset.getClob("CITATION")));
+					if(rset.getString("XREFNO") != null && getCitationCount(rset.getClob("CITATION"))>0) {
+
+					//	ht.put(Keys.REFCNT, new XMLWrapper(Keys.REFCNT, rset.getString("XREFNO")));
+                	}
+
 				}
 
-					ht.put(Keys.CITEDBY,citedby);
+				ht.put(Keys.CITEDBY,citedby);
 
 				// end citedby
 
@@ -652,7 +683,6 @@ public class InspecDocBuilder
     {
         Hashtable oidTable = getDocIDTable(listOfDocIDs);
         Perl5Util perl = new Perl5Util();
-
         List list=new ArrayList();
         int count=0;
         Connection con=null;
@@ -678,14 +708,6 @@ public class InspecDocBuilder
                 ht.put(Keys.PROVIDER, new XMLWrapper(Keys.PROVIDER,
                                                      PROVIDER_TEXT));
 
-                if(rset.getString("CPR") != null) {
-                    ht.put(Keys.COPYRIGHT,new XMLWrapper(Keys.COPYRIGHT, StringUtil.replaceNullWithEmptyString(rset.getString("CPR"))));
-                    ht.put(Keys.COPYRIGHT_TEXT, new XMLWrapper(Keys.COPYRIGHT_TEXT, StringUtil.replaceNullWithEmptyString(rset.getString("CPR"))));
-                } else {
-                    ht.put(Keys.COPYRIGHT,new XMLWrapper(Keys.COPYRIGHT, this.INS_TEXT_COPYRIGHT));
-                    ht.put(Keys.COPYRIGHT_TEXT, new XMLWrapper(Keys.COPYRIGHT_TEXT, this.INS_TEXT_COPYRIGHT));
-
-                }
                 if(rset.getString("PYR") != null)
                 {
                     ht.put(Keys.PUBLICATION_YEAR,
@@ -724,6 +746,7 @@ public class InspecDocBuilder
                 {
                     if (rset.getString("AUS") != null)
                     {
+
                         Contributors inventors = new Contributors(Keys.INVENTORS,
          								getContributors(Keys.INVENTORS,
          								rset.getString("AUS"),
@@ -754,6 +777,7 @@ public class InspecDocBuilder
                         {
                             aus = aus.concat(rset.getString("AUS2"));
                         }
+
                         Contributors authors = new Contributors(Keys.AUTHORS,
                         				getContributors(Keys.AUTHORS,
          								rset.getString("AUS"),
@@ -1098,6 +1122,24 @@ public class InspecDocBuilder
                     ht.put(Keys.DOI, new XMLWrapper(Keys.DOI ,rset.getString("PDOI")));
                 }
 
+                //IPC
+                if (rset.getString("IPC") != null)
+				{
+					ht.put(Keys.INTERNATCL_CODE,
+						   new IPCClassifications(Keys.INTERNATCL_CODE, setElementData(rset.getString("IPC")), this.database));
+				}
+
+				if(rset.getString("CPR") != null)
+				{
+					ht.put(Keys.COPYRIGHT,new XMLWrapper(Keys.COPYRIGHT, StringUtil.replaceNullWithEmptyString(rset.getString("CPR"))));
+					ht.put(Keys.COPYRIGHT_TEXT, new XMLWrapper(Keys.COPYRIGHT_TEXT, StringUtil.replaceNullWithEmptyString(rset.getString("CPR"))));
+				} else {
+					ht.put(Keys.COPYRIGHT,new XMLWrapper(Keys.COPYRIGHT, this.INS_TEXT_COPYRIGHT));
+					ht.put(Keys.COPYRIGHT_TEXT, new XMLWrapper(Keys.COPYRIGHT_TEXT, this.INS_TEXT_COPYRIGHT));
+
+                }
+
+
                  //added for CITEDBY
 
 					if(rset.getString("ANUM")!=null)
@@ -1154,6 +1196,11 @@ public class InspecDocBuilder
 						{
 							citedby.setAccessionNumber(rset.getString("ANUM"));
 						}
+
+						if(rset.getString("XREFNO") != null && getCitationCount(rset.getClob("CITATION"))>0) {
+
+							//ht.put(Keys.REFCNT, new XMLWrapper(Keys.REFCNT, rset.getString("XREFNO")));
+                		}
 					}
 
 					ht.put(Keys.CITEDBY,citedby);
@@ -1655,6 +1702,7 @@ public class InspecDocBuilder
     private List loadCitations(List listOfDocIDs)
         throws Exception
     {
+
         Hashtable oidTable = getDocIDTable(listOfDocIDs);
         Perl5Util perl = new Perl5Util();
 
@@ -1666,6 +1714,7 @@ public class InspecDocBuilder
         ConnectionBroker broker=null;
         String INString=buildINString(listOfDocIDs);
         String dataFormat = Citation.CITATION_FORMAT;
+
         try
         {
             broker=ConnectionBroker.getInstance();
@@ -2054,6 +2103,14 @@ public class InspecDocBuilder
 
 				// end citedby
 
+				// reference count
+
+
+				if(rset.getString("XREFNO") != null && getCitationCount(rset.getClob("CITATION"))>0) {
+
+					//ht.put(Keys.NUMBER_OF_REFERENCES,new XMLWrapper(Keys.NUMBER_OF_REFERENCES, StringUtil.replaceNullWithEmptyString(rset.getString("XREFNO"))));
+                }
+
                 EIDoc eiDoc = new EIDoc(did, ht, Citation.CITATION_FORMAT);
                 eiDoc.exportLabels(false);
                 eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
@@ -2105,6 +2162,988 @@ public class InspecDocBuilder
         return list;
 
     } // loadCitation
+
+     private Hashtable loadREFCitationsWithAccessnumber(List listOfAcceesionNumber)
+	        throws Exception
+	    {
+
+	        Perl5Util perl = new Perl5Util();
+
+	        Hashtable docTable=new Hashtable();
+	        int count=0;
+	        Connection con=null;
+	        Statement stmt=null;
+	        ResultSet rset=null;
+	        ConnectionBroker broker=null;
+	        String INString=buildAccessNumberINString(listOfAcceesionNumber);
+	        String dataFormat = Citation.CITATION_FORMAT;
+
+	        try
+	        {
+	            broker=ConnectionBroker.getInstance();
+	            con=broker.getConnection(DatabaseConfig.SEARCH_POOL);
+	            stmt = con.createStatement();
+	            rset=stmt.executeQuery(queryREFCitation+INString );
+	            while(rset.next())
+	            {
+					String accessNumber = null;
+	                ElementDataMap ht = new ElementDataMap();
+	                String m_id=rset.getString("M_ID");
+	                DocID did = new DocID(rset.getString("M_ID"),database);
+	                ht.put(Keys.DOCID, did);
+	                ht.put(Keys.PROVIDER,
+	                       new XMLWrapper(Keys.PROVIDER, PROVIDER_TEXT));
+	                if(rset.getString("CPR") != null) {
+	                    ht.put(Keys.COPYRIGHT,new XMLWrapper(Keys.COPYRIGHT, rset.getString("CPR")));
+	                    ht.put(Keys.COPYRIGHT_TEXT, new XMLWrapper(Keys.COPYRIGHT_TEXT, rset.getString("CPR")));
+	                } else {
+	                    ht.put(Keys.COPYRIGHT,new XMLWrapper(Keys.COPYRIGHT, INS_HTML_COPYRIGHT));
+	                    ht.put(Keys.COPYRIGHT_TEXT, new XMLWrapper(Keys.COPYRIGHT_TEXT, INS_TEXT_COPYRIGHT));
+	                }
+
+	                // Needed for IVIP
+	                if(rset.getString("PSN") != null)
+	                {
+	                    ht.put(Keys.ISSN,new ISSN(rset.getString("PSN")));
+	                }
+
+	                if(rset.getString("PIPN") != null)
+	                {
+	                    ht.put(Keys.PAGE_RANGE, new PageRange(rset.getString("PIPN"), perl));
+	                }
+
+	                String strRTYPE = StringUtil.replaceNullWithEmptyString(rset.getString("RTYPE"));
+
+	                // TI
+	                if(rset.getString("TI") != null) {
+	                    ht.put(Keys.TITLE, new XMLWrapper(Keys.TITLE, StringUtil.replaceNullWithEmptyString(rset.getString("TI"))));
+	                }
+	                if(strRTYPE.equals("08")) {
+	                    if (rset.getString("AUS") != null)
+	                    {
+
+	                            Contributors inventors = new Contributors(Keys.INVENTORS,
+	                            				getContributors(Keys.INVENTORS,
+	                            				rset.getString("AUS"),
+	                            				rset.getString("AUS2"),
+	                            				dataFormat,
+	               								rset.getString("AAFFMULTI1"),
+	               								rset.getString("AAFF")));
+
+	                            if(rset.getString("AAFF") != null)
+	                            {
+
+	                                ht.put(Keys.AUTHOR_AFFS, getAuthorsAffiliation(
+	            							Keys.AUTHOR_AFFS,
+	            							rset.getString("AAFF"),
+	            							rset.getString("AFC"),
+	            							rset.getString("AAFFMULTI1"),
+	            							rset.getString("AAFFMULTI2"),
+	            							dataFormat));
+
+	                            }
+	                            ht.put(Keys.INVENTORS, inventors);
+	                    }
+
+	                } else {
+	                    if (rset.getString("AUS") != null)
+	                    {
+	                        Contributors inventors = new Contributors(Keys.AUTHORS,
+	                									getContributors(Keys.AUTHORS,
+	                									rset.getString("AUS"),
+	                									rset.getString("AUS2"),
+	                									dataFormat,
+	                									rset.getString("AAFFMULTI1"),
+	                									rset.getString("AAFF")));
+
+	                        if(rset.getString("AAFF") != null)
+	                        {
+	                            ht.put(Keys.AUTHOR_AFFS, getAuthorsAffiliation(
+	        							Keys.AUTHOR_AFFS,
+	        							rset.getString("AAFF"),
+	        							rset.getString("AFC"),
+	        							rset.getString("AAFFMULTI1"),
+	        							rset.getString("AAFFMULTI2"),
+	        							dataFormat));
+	                        }
+	                        ht.put(Keys.AUTHORS, inventors);
+
+	                    }
+	                    else
+	                    {
+	                        if(rset.getString("EDS") != null)
+	                        {
+	                            String strED = StringUtil.replaceNullWithEmptyString(rset.getString("EDS"));
+	                            if(perl.match("/(Ed[.]\\s*)/", strED))
+	                            {
+	                                strED = perl.substitute("s/\\(Ed[.]\\s*\\)//gi", strED);
+	                            }
+
+	                            Contributors editors = new Contributors(Keys.EDITORS,
+										getContributors(Keys.EDITORS,
+										strED,
+										null,
+										dataFormat,
+										rset.getString("EAFFMULTI1"),
+										rset.getString("EDS")));
+
+	                             ht.put(Keys.EDITORS,editors);
+
+	                            if(rset.getString("EAFF") != null)
+	                            {
+	                            	ht.put(Keys.EDITOR_AFFS, getAuthorsAffiliation(
+	                                		Keys.EDITOR_AFFS,
+	            							rset.getString("EAFF"),
+	            							rset.getString("EFC"),
+	            							rset.getString("EAFFMULTI1"),
+	            							rset.getString("EAFFMULTI2"),
+	            							dataFormat));
+	                            }
+	                        }
+	                    }
+	                }
+	                String strFJT = StringUtil.replaceNullWithEmptyString(rset.getString("PFJT"));
+	                String strAJT = StringUtil.replaceNullWithEmptyString(rset.getString("PUBTI"));
+
+	                if(
+	                (strRTYPE.equals("02"))
+	                ||
+	                (strRTYPE.equals("05") && (!strFJT.equals(StringUtil.EMPTY_STRING)))
+	                ||
+	                (strRTYPE.equals("06") && (!strFJT.equals(StringUtil.EMPTY_STRING)))
+	                ) {
+	                    ht.put(Keys.SOURCE, new XMLWrapper(Keys.SOURCE, strFJT));
+
+	                    if(rset.getString("SFJT") != null) {
+	                        ht.put(Keys.TRANSLATION_SERIAL_TITLE,
+	                        		new XMLWrapper(Keys.TRANSLATION_SERIAL_TITLE ,TRANS_SEE_DETAILED));
+	                    }
+
+	                    if(rset.getString("PVOLISS") != null) {
+
+	                        String volumeIssue = rset.getString("PVOLISS");
+	                        volumeIssue = perl.substitute("s/vol\\./v /i", volumeIssue);
+	                        volumeIssue = perl.substitute("s/no\\./n /i", volumeIssue);
+	                        ht.put(Keys.VOLISSUE, new XMLWrapper(Keys.VOLISSUE ,volumeIssue));
+
+	                        if(perl.match("/,/", volumeIssue)) {
+	                            ht.put(Keys.VOLUME, new Volume(Keys.VOLUME, perl.preMatch(), perl));
+	                            ht.put(Keys.ISSUE, new Issue(perl.postMatch() , perl));
+	                        } else {
+	                            volumeIssue = rset.getString("PVOLISS");
+	                            if(perl.match("/vol/i",volumeIssue)) {
+	                                volumeIssue = perl.substitute("s/vol\\./v /i", volumeIssue);
+	                                ht.put(Keys.VOLUME, new Volume(Keys.VOLUME, volumeIssue, perl));
+	                            } else if(perl.match("/no/i",volumeIssue)) {
+	                                volumeIssue = perl.substitute("s/no\\./n /i", volumeIssue);
+	                                ht.put(Keys.ISSUE, new Issue(volumeIssue , perl));
+	                            }
+	                        }
+
+	                    }
+	                } else if(
+	                (strRTYPE.equals("03"))
+	                ||
+	                (strRTYPE.equals("04"))
+	                ||
+	                (strRTYPE.equals("05") && (strFJT.equals(StringUtil.EMPTY_STRING)))
+	                ||
+	                (strRTYPE.equals("06") && (strFJT.equals(StringUtil.EMPTY_STRING)))
+	                ) {
+	                    ht.put(Keys.SOURCE, new XMLWrapper(Keys.SOURCE, strAJT));
+	                    if(strAJT.equals(StringUtil.EMPTY_STRING)) {
+	                        ht.put(Keys.PUBLISHER,new XMLWrapper(Keys.PUBLISHER, StringUtil.replaceNullWithEmptyString(rset.getString("PPUB"))));
+	                    }
+	                } else if(
+	                (strRTYPE.equals("10"))
+	                ||
+	                (strRTYPE.equals("11"))
+	                ||
+	                (strRTYPE.equals("12"))
+	                ) {
+
+	                    ht.put(Keys.SOURCE, new XMLWrapper(Keys.SOURCE, strAJT));
+
+	                    if (rset.getString("IORG") != null) {
+	                        ht.put(Keys.PUBLISHER,new XMLWrapper(Keys.PUBLISHER, StringUtil.replaceNullWithEmptyString(rset.getString("IORG"))));
+	                    } else {
+	                        ht.put(Keys.PUBLISHER,new XMLWrapper(Keys.PUBLISHER, StringUtil.replaceNullWithEmptyString(rset.getString("PPUB"))));
+	                    }
+
+	                    if(rset.getString("POPDATE") != null) {
+	                        ht.put(Keys.ISSUE_DATE, new XMLWrapper(Keys.ISSUE_DATE, StringUtil.replaceNullWithEmptyString(rset.getString("POPDATE"))));
+	                    } else if (rset.getString("OFDATE") != null) {
+	                        ht.put(Keys.ISSUE_DATE, new XMLWrapper(Keys.ISSUE_DATE, StringUtil.replaceNullWithEmptyString(rset.getString("OFDATE"))));
+	                    }
+	                    if(rset.getString("RNUM") != null) {
+	                         ht.put(Keys.REPORT_NUMBER,new XMLWrapper(Keys.REPORT_NUMBER,StringUtil.replaceNullWithEmptyString(rset.getString("RNUM"))));
+	                    }
+	                } else if (strRTYPE.equals("08")) {
+	                    ht.put(Keys.NO_SO, new XMLWrapper(Keys.NO_SO, "NO_SO"));
+
+	                    // RTYPE='08'
+	                    if((rset.getString("OFDATE") !=  null) && !(rset.getString("OFDATE").equals(StringUtil.EMPTY_STRING))) {
+	                        ht.put(Keys.PATFILDATE, new XMLWrapper(Keys.PATFILDATE, rset.getString("OFDATE")));
+	                    }
+	                    if((rset.getString("PAS") !=  null) && !(rset.getString("PAS").equals(StringUtil.EMPTY_STRING))) {
+	                        ht.put(Keys.PATASSIGN, new XMLWrapper(Keys.PATASSIGN, rset.getString("PAS")));
+	                    }
+	                    if((rset.getString("OPAN") !=  null) && !(rset.getString("OPAN").equals(StringUtil.EMPTY_STRING))) {
+	                        ht.put(Keys.PATAPPNUM, new XMLWrapper(Keys.PATAPPNUM, rset.getString("OPAN")));
+	                    }
+	                    if((rset.getString("PNUM") !=  null) && !(rset.getString("PNUM").equals(StringUtil.EMPTY_STRING))) {
+	                        ht.put(Keys.PATNUM, new XMLWrapper(Keys.PATNUM, rset.getString("PNUM")));
+	                    }
+	                    if((rset.getString("COPA") !=  null) && !(rset.getString("COPA").equals(StringUtil.EMPTY_STRING))) {
+	                        ht.put(Keys.PATCOUNTRY, new XMLWrapper(Keys.PATCOUNTRY, rset.getString("COPA")));
+	                    }
+	                    if((rset.getString("POPDATE") !=  null) && !(rset.getString("POPDATE").equals(StringUtil.EMPTY_STRING))) {
+	                        ht.put(Keys.PATPUBDATE, new XMLWrapper(Keys.PATPUBDATE, rset.getString("POPDATE")));
+	                    }
+
+	                }
+
+	                // SD
+	                if(!strRTYPE.equals("08"))
+	                {
+	                    if(rset.getString("POPDATE") != null)
+	                    {
+	                        String strYR = rset.getString("POPDATE");
+	                        ht.put(Keys.ISSUE_DATE, new XMLWrapper(Keys.ISSUE_DATE, strYR));
+	                    }
+	                    else if(rset.getString("OFDATE") != null)
+	                    {
+	                        ht.put(Keys.ISSUE_DATE, new XMLWrapper(Keys.ISSUE_DATE, rset.getString("OFDATE")));
+	                    }
+	                    else if(rset.getString("SOPDATE") != null)
+	                    {
+	                        ht.put(Keys.ISSUE_DATE,new XMLWrapper(Keys.ISSUE_DATE , rset.getString("SOPDATE")));
+	                    }
+	                }
+
+	                if (rset.getString("PARTNO") != null) {
+	                    String PartNumber = getPartNumber(rset.getString("PARTNO"));
+	                    String partNo = "pt. ".concat(StringUtil.replaceNullWithEmptyString(PartNumber));
+	                    ht.put(Keys.PART_NUMBER, new XMLWrapper(Keys.PART_NUMBER, partNo));
+	                }
+
+	                // PP
+	                if(rset.getString("PIPN") != null) {
+	                    ht.put(Keys.p_PAGE_RANGE,new XMLWrapper(Keys.p_PAGE_RANGE , StringUtil.replaceNullWithEmptyString(rset.getString("PIPN"))));
+	                } else {
+	                    if(rset.getString("NPL1") != null) {
+	                      ht.put(Keys.PAGE_RANGE_pp,new XMLWrapper(Keys.PAGE_RANGE_pp , StringUtil.replaceNullWithEmptyString(rset.getString("NPL1"))));
+	                    } else {
+	                        if(rset.getString("NPL2") != null) {
+	                            ht.put(Keys.PAGE_RANGE_pp,new XMLWrapper(Keys.PAGE_RANGE_pp , StringUtil.replaceNullWithEmptyString(rset.getString("NPL2"))));
+	                        }
+	                    }
+	                }
+
+	                // LA
+	                if((rset.getString("LA") != null) && !rset.getString("LA").equalsIgnoreCase("ENGLISH")) {
+	                    ht.put(Keys.LANGUAGE, new XMLWrapper(Keys.LANGUAGE , replaceInvisibleChar(rset.getString("LA"))));
+	                }
+
+	                //DOI
+	                if(rset.getString("PDOI") != null) {
+
+	                    ht.put(Keys.DOI, new XMLWrapper(Keys.DOI,StringUtil.replaceNullWithEmptyString(rset.getString("PDOI"))));
+	                }
+
+	                // jam - Itegrated changes in jamaica build with
+	                // changes made in Inspec Backfile EV2
+
+	                //SBN
+	                if(rset.getString("SBN") != null) {
+	                    ht.put(Keys.ISBN, new ISBN(StringUtil.replaceNullWithEmptyString(rset.getString("SBN"))));
+	                }
+	                //ANUM
+	                if(rset.getString("ANUM") != null) {
+						accessNumber = rset.getString("ANUM");
+	                    ht.put(Keys.ACCESSION_NUMBER, new XMLWrapper (Keys.ACCESSION_NUMBER, StringUtil.replaceNullWithEmptyString(rset.getString("ANUM"))));
+	                }
+	                //CN
+	                if(rset.getString("PCDN") != null) {
+	                    ht.put(Keys.CODEN,new XMLWrapper(Keys.CODEN,StringUtil.replaceNullWithEmptyString(rset.getString("PCDN"))));
+	                }
+	                //FJT
+	                if(rset.getString("PFJT") != null) {
+	                    ht.put(Keys.SERIAL_TITLE, new XMLWrapper(Keys.SERIAL_TITLE, rset.getString("PFJT")));
+	                }
+
+	                //AJT
+	                if(rset.getString("PAJT") != null) {
+	                    ht.put(Keys.ABBRV_SERIAL_TITLE, new XMLWrapper(Keys.ABBRV_SERIAL_TITLE,rset.getString("PAJT")));
+	                }
+
+
+	                //PDATE
+	                if(rset.getString("PYR") != null)
+	                {
+	                    ht.put(Keys.PUBLICATION_YEAR, new Year(rset.getString("PYR"), perl));
+	                }
+	                else
+	                {
+	                    String spyear = selectPubYear(rset.getString("sspdate"),
+	                                                  rset.getString("fdate"),
+	                                                  rset.getString("cdate"),
+	                                                  rset.getString("su"));
+	                    if(spyear != null)
+	                    {
+	                        ht.put(Keys.PUBLICATION_YEAR, new Year(spyear, perl));
+	                    }
+	                }
+
+	                if(rset.getString("TC") != null) {
+	                    ht.put(Keys.CONFERENCE_NAME, new XMLWrapper(Keys.CONFERENCE_NAME ,rset.getString("TC")));
+	                } else {
+
+	                    if(strRTYPE.equals("06")) {
+	                        ht.put(Keys.CONFERENCE_NAME, new XMLWrapper(Keys.CONFERENCE_NAME ,rset.getString("PUBTI")));
+	                    } else if(strRTYPE.equals("05")) {
+	                        ht.put(Keys.CONFERENCE_NAME, new XMLWrapper(Keys.CONFERENCE_NAME ,rset.getString("TI")));
+	                    }
+	                }
+
+	                //added for CITEDBY
+
+	                if(rset.getString("ANUM")!=null)
+					{
+						 ht.put(Keys.ACCESSION_NUMBER, new XMLWrapper(Keys.ACCESSION_NUMBER ,rset.getString("ANUM")));
+					}
+
+					CITEDBY citedby = new CITEDBY();
+					citedby.setKey(Keys.CITEDBY);
+
+					if(rset.getString("PDOI")!=null)
+					{
+						citedby.setDoi(URLEncoder.encode((rset.getString("PDOI")).trim()));
+					}
+
+					if(rset.getString("PVOLISS") != null)
+					{
+
+						String volumeIssue = rset.getString("PVOLISS");
+						volumeIssue = perl.substitute("s/vol\\./v /i", volumeIssue);
+						volumeIssue = perl.substitute("s/no\\./n /i", volumeIssue);
+
+						if(perl.match("/,/", volumeIssue))
+						{
+							citedby.setVolume((perl.preMatch()).trim());
+							citedby.setIssue((perl.postMatch()).trim());
+						}
+						else
+						{
+							volumeIssue = rset.getString("PVOLISS");
+							if(perl.match("/vol/i",volumeIssue))
+							{
+								volumeIssue = perl.substitute("s/vol\\./v /i", volumeIssue);
+								citedby.setVolume(volumeIssue.trim());
+							}
+							else if(perl.match("/no/i",volumeIssue))
+							{
+								volumeIssue = perl.substitute("s/no\\./n /i", volumeIssue);
+								citedby.setIssue(volumeIssue.trim());
+							}
+						}
+
+						if(rset.getString("PSN")!=null)
+						{
+							citedby.setIssn((rset.getString("PSN")).trim());
+						}
+
+						if(rset.getString("PIPN")!=null)
+						{
+							citedby.setPage((rset.getString("PIPN")).trim());
+						}
+
+						if(rset.getString("ANUM")!=null)
+						{
+							citedby.setAccessionNumber(rset.getString("ANUM"));
+						}
+					}
+
+
+						ht.put(Keys.CITEDBY,citedby);
+
+					// end citedby
+
+					// reference count
+
+					String refCount = 	 rset.getString("XREFNO");
+					if(refCount != null && rset.getClob("CITATION")!=null && StringUtil.getStringFromClob(rset.getClob("CITATION")).length()>1) {
+
+						ht.put(Keys.REFCNT, new XMLWrapper(Keys.REFCNT, refCount));
+
+						ht.put(Keys.NUMBER_OF_REFERENCES,new XMLWrapper(Keys.NUMBER_OF_REFERENCES, StringUtil.replaceNullWithEmptyString(refCount)));
+	                }
+
+	                EIDoc eiDoc = new EIDoc(did, ht, Citation.CITATION_FORMAT);
+	                eiDoc.exportLabels(false);
+	                eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
+	                eiDoc.setOutputKeys(CITATION_KEYS);
+	                InspecWrapper w = new InspecWrapper();
+					w.eiDoc = eiDoc;
+                	w.mid = m_id;
+	                docTable.put(accessNumber,w);
+	                count++;
+	            } // while
+
+	        }
+	        finally
+	        {
+	            if(rset != null)
+	            {
+	                try
+	                {
+	                    rset.close();
+	                }
+	                catch(Exception e1)
+	                {
+	                    e1.printStackTrace();
+	                }
+	            }
+
+	            if(stmt != null)
+	            {
+	                try
+	                {
+	                    stmt.close();
+	                }
+	                catch(Exception sqle)
+	                {
+	                    sqle.printStackTrace();
+	                }
+	            }
+
+	            if(con != null)
+	            {
+	                try
+	                {
+	                    broker.replaceConnection(con, DatabaseConfig.SEARCH_POOL);
+	                }
+	                catch(Exception cpe)
+	                {
+	                    cpe.printStackTrace();
+	                }
+	            }
+	        } // try/finally
+
+	        return docTable;
+
+	    } // loadREFCitationsWithAccessnumber
+
+
+     private List loadREFCitations(List listOfDocIDs)
+	        throws Exception
+	    {
+	        Hashtable oidTable = getDocIDTable(listOfDocIDs);
+	        Perl5Util perl = new Perl5Util();
+
+	        List list=new ArrayList();
+	        int count=0;
+	        Connection con=null;
+	        Statement stmt=null;
+	        ResultSet rset=null;
+	        ConnectionBroker broker=null;
+
+	        String INString=buildINString(listOfDocIDs);
+	        String dataFormat = Citation.CITATION_FORMAT;
+
+	        String refCount = "0";
+	        try
+	        {
+	            broker=ConnectionBroker.getInstance();
+	            con=broker.getConnection(DatabaseConfig.SEARCH_POOL);
+	            stmt = con.createStatement();
+	            rset=stmt.executeQuery(queryCitation+INString );
+	            String citationString = null;
+	            String accessNumber = null;
+	            while(rset.next())
+	            {
+
+	                ElementDataMap ht = new ElementDataMap();
+	                String m_id = rset.getString("M_ID");
+	                DocID did = (DocID) oidTable.get(rset.getString("M_ID"));
+	                ht.put(Keys.DOCID, did);
+	                ht.put(Keys.PROVIDER,
+	                       new XMLWrapper(Keys.PROVIDER, PROVIDER_TEXT));
+	                if(rset.getString("CPR") != null) {
+	                    ht.put(Keys.COPYRIGHT,new XMLWrapper(Keys.COPYRIGHT, rset.getString("CPR")));
+	                    ht.put(Keys.COPYRIGHT_TEXT, new XMLWrapper(Keys.COPYRIGHT_TEXT, rset.getString("CPR")));
+	                } else {
+	                    ht.put(Keys.COPYRIGHT,new XMLWrapper(Keys.COPYRIGHT, INS_HTML_COPYRIGHT));
+	                    ht.put(Keys.COPYRIGHT_TEXT, new XMLWrapper(Keys.COPYRIGHT_TEXT, INS_TEXT_COPYRIGHT));
+	                }
+
+	                // Needed for IVIP
+	                if(rset.getString("PSN") != null)
+	                {
+	                    ht.put(Keys.ISSN,new ISSN(rset.getString("PSN")));
+	                }
+
+	                if(rset.getString("PIPN") != null)
+	                {
+	                    ht.put(Keys.PAGE_RANGE, new PageRange(rset.getString("PIPN"), perl));
+	                }
+
+	                String strRTYPE = StringUtil.replaceNullWithEmptyString(rset.getString("RTYPE"));
+
+	                // TI
+	                if(rset.getString("TI") != null) {
+	                    ht.put(Keys.TITLE, new XMLWrapper(Keys.TITLE, StringUtil.replaceNullWithEmptyString(rset.getString("TI"))));
+	                }
+	                if(strRTYPE.equals("08")) {
+	                    if (rset.getString("AUS") != null)
+	                    {
+
+	                            Contributors inventors = new Contributors(Keys.INVENTORS,
+	                            				getContributors(Keys.INVENTORS,
+	                            				rset.getString("AUS"),
+	                            				rset.getString("AUS2"),
+	                            				dataFormat,
+	               								rset.getString("AAFFMULTI1"),
+	               								rset.getString("AAFF")));
+
+	                            if(rset.getString("AAFF") != null)
+	                            {
+
+	                                ht.put(Keys.AUTHOR_AFFS, getAuthorsAffiliation(
+	            							Keys.AUTHOR_AFFS,
+	            							rset.getString("AAFF"),
+	            							rset.getString("AFC"),
+	            							rset.getString("AAFFMULTI1"),
+	            							rset.getString("AAFFMULTI2"),
+	            							dataFormat));
+
+	                            }
+	                            ht.put(Keys.INVENTORS, inventors);
+	                    }
+
+	                } else {
+	                    if (rset.getString("AUS") != null)
+	                    {
+	                        Contributors inventors = new Contributors(Keys.AUTHORS,
+	                									getContributors(Keys.AUTHORS,
+	                									rset.getString("AUS"),
+	                									rset.getString("AUS2"),
+	                									dataFormat,
+	                									rset.getString("AAFFMULTI1"),
+	                									rset.getString("AAFF")));
+
+	                        if(rset.getString("AAFF") != null)
+	                        {
+	                            ht.put(Keys.AUTHOR_AFFS, getAuthorsAffiliation(
+	        							Keys.AUTHOR_AFFS,
+	        							rset.getString("AAFF"),
+	        							rset.getString("AFC"),
+	        							rset.getString("AAFFMULTI1"),
+	        							rset.getString("AAFFMULTI2"),
+	        							dataFormat));
+	                        }
+	                        ht.put(Keys.AUTHORS, inventors);
+
+	                    }
+	                    else
+	                    {
+	                        if(rset.getString("EDS") != null)
+	                        {
+	                            String strED = StringUtil.replaceNullWithEmptyString(rset.getString("EDS"));
+	                            if(perl.match("/(Ed[.]\\s*)/", strED))
+	                            {
+	                                strED = perl.substitute("s/\\(Ed[.]\\s*\\)//gi", strED);
+	                            }
+
+	                            Contributors editors = new Contributors(Keys.EDITORS,
+										getContributors(Keys.EDITORS,
+										strED,
+										null,
+										dataFormat,
+										rset.getString("EAFFMULTI1"),
+										rset.getString("EDS")));
+
+	                             ht.put(Keys.EDITORS,editors);
+
+	                            if(rset.getString("EAFF") != null)
+	                            {
+	                            	ht.put(Keys.EDITOR_AFFS, getAuthorsAffiliation(
+	                                		Keys.EDITOR_AFFS,
+	            							rset.getString("EAFF"),
+	            							rset.getString("EFC"),
+	            							rset.getString("EAFFMULTI1"),
+	            							rset.getString("EAFFMULTI2"),
+	            							dataFormat));
+	                            }
+	                        }
+	                    }
+	                }
+	                String strFJT = StringUtil.replaceNullWithEmptyString(rset.getString("PFJT"));
+	                String strAJT = StringUtil.replaceNullWithEmptyString(rset.getString("PUBTI"));
+
+	                if(
+	                (strRTYPE.equals("02"))
+	                ||
+	                (strRTYPE.equals("05") && (!strFJT.equals(StringUtil.EMPTY_STRING)))
+	                ||
+	                (strRTYPE.equals("06") && (!strFJT.equals(StringUtil.EMPTY_STRING)))
+	                ) {
+	                    ht.put(Keys.SOURCE, new XMLWrapper(Keys.SOURCE, strFJT));
+
+	                    if(rset.getString("SFJT") != null) {
+	                        ht.put(Keys.TRANSLATION_SERIAL_TITLE,
+	                        		new XMLWrapper(Keys.TRANSLATION_SERIAL_TITLE ,TRANS_SEE_DETAILED));
+	                    }
+
+	                    if(rset.getString("PVOLISS") != null) {
+
+	                        String volumeIssue = rset.getString("PVOLISS");
+	                        volumeIssue = perl.substitute("s/vol\\./v /i", volumeIssue);
+	                        volumeIssue = perl.substitute("s/no\\./n /i", volumeIssue);
+	                        ht.put(Keys.VOLISSUE, new XMLWrapper(Keys.VOLISSUE ,volumeIssue));
+
+	                        if(perl.match("/,/", volumeIssue)) {
+	                            ht.put(Keys.VOLUME, new Volume(Keys.VOLUME, perl.preMatch(), perl));
+	                            ht.put(Keys.ISSUE, new Issue(perl.postMatch() , perl));
+	                        } else {
+	                            volumeIssue = rset.getString("PVOLISS");
+	                            if(perl.match("/vol/i",volumeIssue)) {
+	                                volumeIssue = perl.substitute("s/vol\\./v /i", volumeIssue);
+	                                ht.put(Keys.VOLUME, new Volume(Keys.VOLUME, volumeIssue, perl));
+	                            } else if(perl.match("/no/i",volumeIssue)) {
+	                                volumeIssue = perl.substitute("s/no\\./n /i", volumeIssue);
+	                                ht.put(Keys.ISSUE, new Issue(volumeIssue , perl));
+	                            }
+	                        }
+
+	                    }
+	                } else if(
+	                (strRTYPE.equals("03"))
+	                ||
+	                (strRTYPE.equals("04"))
+	                ||
+	                (strRTYPE.equals("05") && (strFJT.equals(StringUtil.EMPTY_STRING)))
+	                ||
+	                (strRTYPE.equals("06") && (strFJT.equals(StringUtil.EMPTY_STRING)))
+	                ) {
+	                    ht.put(Keys.SOURCE, new XMLWrapper(Keys.SOURCE, strAJT));
+	                    if(strAJT.equals(StringUtil.EMPTY_STRING)) {
+	                        ht.put(Keys.PUBLISHER,new XMLWrapper(Keys.PUBLISHER, StringUtil.replaceNullWithEmptyString(rset.getString("PPUB"))));
+	                    }
+	                } else if(
+	                (strRTYPE.equals("10"))
+	                ||
+	                (strRTYPE.equals("11"))
+	                ||
+	                (strRTYPE.equals("12"))
+	                ) {
+
+	                    ht.put(Keys.SOURCE, new XMLWrapper(Keys.SOURCE, strAJT));
+
+	                    if (rset.getString("IORG") != null) {
+	                        ht.put(Keys.PUBLISHER,new XMLWrapper(Keys.PUBLISHER, StringUtil.replaceNullWithEmptyString(rset.getString("IORG"))));
+	                    } else {
+	                        ht.put(Keys.PUBLISHER,new XMLWrapper(Keys.PUBLISHER, StringUtil.replaceNullWithEmptyString(rset.getString("PPUB"))));
+	                    }
+
+	                    if(rset.getString("POPDATE") != null) {
+	                        ht.put(Keys.ISSUE_DATE, new XMLWrapper(Keys.ISSUE_DATE, StringUtil.replaceNullWithEmptyString(rset.getString("POPDATE"))));
+	                    } else if (rset.getString("OFDATE") != null) {
+	                        ht.put(Keys.ISSUE_DATE, new XMLWrapper(Keys.ISSUE_DATE, StringUtil.replaceNullWithEmptyString(rset.getString("OFDATE"))));
+	                    }
+	                    if(rset.getString("RNUM") != null) {
+	                         ht.put(Keys.REPORT_NUMBER,new XMLWrapper(Keys.REPORT_NUMBER,StringUtil.replaceNullWithEmptyString(rset.getString("RNUM"))));
+	                    }
+	                } else if (strRTYPE.equals("08")) {
+	                    ht.put(Keys.NO_SO, new XMLWrapper(Keys.NO_SO, "NO_SO"));
+
+	                    // RTYPE='08'
+	                    if((rset.getString("OFDATE") !=  null) && !(rset.getString("OFDATE").equals(StringUtil.EMPTY_STRING))) {
+	                        ht.put(Keys.PATFILDATE, new XMLWrapper(Keys.PATFILDATE, rset.getString("OFDATE")));
+	                    }
+	                    if((rset.getString("PAS") !=  null) && !(rset.getString("PAS").equals(StringUtil.EMPTY_STRING))) {
+	                        ht.put(Keys.PATASSIGN, new XMLWrapper(Keys.PATASSIGN, rset.getString("PAS")));
+	                    }
+	                    if((rset.getString("OPAN") !=  null) && !(rset.getString("OPAN").equals(StringUtil.EMPTY_STRING))) {
+	                        ht.put(Keys.PATAPPNUM, new XMLWrapper(Keys.PATAPPNUM, rset.getString("OPAN")));
+	                    }
+	                    if((rset.getString("PNUM") !=  null) && !(rset.getString("PNUM").equals(StringUtil.EMPTY_STRING))) {
+	                        ht.put(Keys.PATNUM, new XMLWrapper(Keys.PATNUM, rset.getString("PNUM")));
+	                    }
+	                    if((rset.getString("COPA") !=  null) && !(rset.getString("COPA").equals(StringUtil.EMPTY_STRING))) {
+	                        ht.put(Keys.PATCOUNTRY, new XMLWrapper(Keys.PATCOUNTRY, rset.getString("COPA")));
+	                    }
+	                    if((rset.getString("POPDATE") !=  null) && !(rset.getString("POPDATE").equals(StringUtil.EMPTY_STRING))) {
+	                        ht.put(Keys.PATPUBDATE, new XMLWrapper(Keys.PATPUBDATE, rset.getString("POPDATE")));
+	                    }
+
+	                }
+
+	                // SD
+	                if(!strRTYPE.equals("08"))
+	                {
+	                    if(rset.getString("POPDATE") != null)
+	                    {
+	                        String strYR = rset.getString("POPDATE");
+	                        ht.put(Keys.ISSUE_DATE, new XMLWrapper(Keys.ISSUE_DATE, strYR));
+	                    }
+	                    else if(rset.getString("OFDATE") != null)
+	                    {
+	                        ht.put(Keys.ISSUE_DATE, new XMLWrapper(Keys.ISSUE_DATE, rset.getString("OFDATE")));
+	                    }
+	                    else if(rset.getString("SOPDATE") != null)
+	                    {
+	                        ht.put(Keys.ISSUE_DATE,new XMLWrapper(Keys.ISSUE_DATE , rset.getString("SOPDATE")));
+	                    }
+	                }
+
+	                if (rset.getString("PARTNO") != null) {
+	                    String PartNumber = getPartNumber(rset.getString("PARTNO"));
+	                    String partNo = "pt. ".concat(StringUtil.replaceNullWithEmptyString(PartNumber));
+	                    ht.put(Keys.PART_NUMBER, new XMLWrapper(Keys.PART_NUMBER, partNo));
+	                }
+
+	                // PP
+	                if(rset.getString("PIPN") != null) {
+	                    ht.put(Keys.p_PAGE_RANGE,new XMLWrapper(Keys.p_PAGE_RANGE , StringUtil.replaceNullWithEmptyString(rset.getString("PIPN"))));
+	                } else {
+	                    if(rset.getString("NPL1") != null) {
+	                      ht.put(Keys.PAGE_RANGE_pp,new XMLWrapper(Keys.PAGE_RANGE_pp , StringUtil.replaceNullWithEmptyString(rset.getString("NPL1"))));
+	                    } else {
+	                        if(rset.getString("NPL2") != null) {
+	                            ht.put(Keys.PAGE_RANGE_pp,new XMLWrapper(Keys.PAGE_RANGE_pp , StringUtil.replaceNullWithEmptyString(rset.getString("NPL2"))));
+	                        }
+	                    }
+	                }
+
+	                // LA
+	                if((rset.getString("LA") != null) && !rset.getString("LA").equalsIgnoreCase("ENGLISH")) {
+	                    ht.put(Keys.LANGUAGE, new XMLWrapper(Keys.LANGUAGE , replaceInvisibleChar(rset.getString("LA"))));
+	                }
+
+	                //DOI
+	                if(rset.getString("PDOI") != null) {
+
+	                    ht.put(Keys.DOI, new XMLWrapper(Keys.DOI,StringUtil.replaceNullWithEmptyString(rset.getString("PDOI"))));
+	                }
+
+	                // jam - Itegrated changes in jamaica build with
+	                // changes made in Inspec Backfile EV2
+
+	                //SBN
+	                if(rset.getString("SBN") != null) {
+	                    ht.put(Keys.ISBN, new ISBN(StringUtil.replaceNullWithEmptyString(rset.getString("SBN"))));
+	                }
+
+	                //ANUM
+	                if(rset.getString("ANUM") != null) {
+	                    accessNumber = rset.getString("ANUM");
+	                }
+
+	                //CN
+	                if(rset.getString("PCDN") != null) {
+	                    ht.put(Keys.CODEN,new XMLWrapper(Keys.CODEN,StringUtil.replaceNullWithEmptyString(rset.getString("PCDN"))));
+	                }
+	                //FJT
+	                if(rset.getString("PFJT") != null) {
+	                    ht.put(Keys.SERIAL_TITLE, new XMLWrapper(Keys.SERIAL_TITLE, rset.getString("PFJT")));
+	                }
+
+	                //AJT
+	                if(rset.getString("PAJT") != null) {
+	                    ht.put(Keys.ABBRV_SERIAL_TITLE, new XMLWrapper(Keys.ABBRV_SERIAL_TITLE,rset.getString("PAJT")));
+	                }
+
+
+	                //PDATE
+	                if(rset.getString("PYR") != null)
+	                {
+	                    ht.put(Keys.PUBLICATION_YEAR, new Year(rset.getString("PYR"), perl));
+	                }
+	                else
+	                {
+	                    String spyear = selectPubYear(rset.getString("sspdate"),
+	                                                  rset.getString("fdate"),
+	                                                  rset.getString("cdate"),
+	                                                  rset.getString("su"));
+	                    if(spyear != null)
+	                    {
+	                        ht.put(Keys.PUBLICATION_YEAR, new Year(spyear, perl));
+	                    }
+	                }
+
+	                if(rset.getString("TC") != null) {
+	                    ht.put(Keys.CONFERENCE_NAME, new XMLWrapper(Keys.CONFERENCE_NAME ,rset.getString("TC")));
+	                } else {
+
+	                    if(strRTYPE.equals("06")) {
+	                        ht.put(Keys.CONFERENCE_NAME, new XMLWrapper(Keys.CONFERENCE_NAME ,rset.getString("PUBTI")));
+	                    } else if(strRTYPE.equals("05")) {
+	                        ht.put(Keys.CONFERENCE_NAME, new XMLWrapper(Keys.CONFERENCE_NAME ,rset.getString("TI")));
+	                    }
+	                }
+
+	                //added for CITEDBY
+
+	                if(rset.getString("ANUM")!=null)
+					{
+						 ht.put(Keys.ACCESSION_NUMBER, new XMLWrapper(Keys.ACCESSION_NUMBER ,rset.getString("ANUM")));
+					}
+
+					CITEDBY citedby = new CITEDBY();
+					citedby.setKey(Keys.CITEDBY);
+
+					if(rset.getString("PDOI")!=null)
+					{
+						citedby.setDoi(URLEncoder.encode((rset.getString("PDOI")).trim()));
+					}
+
+					if(rset.getString("PVOLISS") != null)
+					{
+
+						String volumeIssue = rset.getString("PVOLISS");
+						volumeIssue = perl.substitute("s/vol\\./v /i", volumeIssue);
+						volumeIssue = perl.substitute("s/no\\./n /i", volumeIssue);
+
+						if(perl.match("/,/", volumeIssue))
+						{
+							citedby.setVolume((perl.preMatch()).trim());
+							citedby.setIssue((perl.postMatch()).trim());
+						}
+						else
+						{
+							volumeIssue = rset.getString("PVOLISS");
+							if(perl.match("/vol/i",volumeIssue))
+							{
+								volumeIssue = perl.substitute("s/vol\\./v /i", volumeIssue);
+								citedby.setVolume(volumeIssue.trim());
+							}
+							else if(perl.match("/no/i",volumeIssue))
+							{
+								volumeIssue = perl.substitute("s/no\\./n /i", volumeIssue);
+								citedby.setIssue(volumeIssue.trim());
+							}
+						}
+
+						if(rset.getString("PSN")!=null)
+						{
+							citedby.setIssn((rset.getString("PSN")).trim());
+						}
+
+						if(rset.getString("PIPN")!=null)
+						{
+							citedby.setPage((rset.getString("PIPN")).trim());
+						}
+
+						if(rset.getString("ANUM")!=null)
+						{
+							citedby.setAccessionNumber(rset.getString("ANUM"));
+						}
+					}
+
+
+						ht.put(Keys.CITEDBY,citedby);
+
+					// end citedby
+
+					// reference count
+
+					refCount = 	 rset.getString("XREFNO");
+					if(refCount != null && rset.getClob("CITATION")!=null && StringUtil.getStringFromClob(rset.getClob("CITATION")).length()>1) {
+
+	                	ht.put(Keys.REFCNT, new XMLWrapper(Keys.REFCNT, refCount));
+	                	citationString = StringUtil.getStringFromClob(rset.getClob("CITATION"));
+
+	                }
+
+	                EIDoc eiDoc = new EIDoc(did, ht, Citation.CITATION_FORMAT);
+	                eiDoc.exportLabels(false);
+	                eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
+	                eiDoc.setOutputKeys(CITATION_KEYS);
+	                InspecWrapper w = new InspecWrapper();
+					w.eiDoc = eiDoc;
+                	w.mid = m_id;
+	                list.add(w);
+	                count++;
+	            } // while
+
+	            if(citationString !=null)
+	            {
+					List citationList = parseCitationContent(citationString,accessNumber,refCount);
+					Collections.sort(citationList, new MIDComparator());
+					list.addAll(citationList);
+				}
+
+	        }
+	        finally
+	        {
+	            if(rset != null)
+	            {
+	                try
+	                {
+	                    rset.close();
+	                }
+	                catch(Exception e1)
+	                {
+	                    e1.printStackTrace();
+	                }
+	            }
+
+	            if(stmt != null)
+	            {
+	                try
+	                {
+	                    stmt.close();
+	                }
+	                catch(Exception sqle)
+	                {
+	                    sqle.printStackTrace();
+	                }
+	            }
+
+	            if(con != null)
+	            {
+	                try
+	                {
+	                    broker.replaceConnection(con, DatabaseConfig.SEARCH_POOL);
+	                }
+	                catch(Exception cpe)
+	                {
+	                    cpe.printStackTrace();
+	                }
+	            }
+	        } // try/finally
+
+	        return list;
+
+	    } // loadREFCitation
+
+
+	 public List getRefPager(String parentID)
+	        throws Exception
+	    {
+
+			List list = new ArrayList();
+			DatabaseConfig databaseConfig = DatabaseConfig.getInstance();
+			Database ins = databaseConfig.getDatabase("ins");
+			list.add(new DocID(parentID,ins));
+			List eiDoc = buildPage(list,Citation.CITATION_FORMAT_REF);
+	        return eiDoc;
+	    }
+
+	    class MIDComparator
+	        implements Comparator
+	    {
+
+	        public int compare(Object o1, Object o2)
+	        {
+	            InspecWrapper w1 = (InspecWrapper)o1;
+	            InspecWrapper w2 = (InspecWrapper)o2;
+
+	           return w1.mid.compareTo(w2.mid);
+	        }
+	    }
+
 
 
    /**
@@ -2495,6 +3534,457 @@ public class InspecDocBuilder
 
     } // loadXMLCitation
 
+	private List parseCitationContent(String citationString,String anum,String refCount) throws Exception
+	{
+		String[] citationArray = null;
+		Hashtable docTable = new Hashtable();
+		Hashtable docMap = new Hashtable();
+		List docidList = new ArrayList();
+		String accessNumber = "0";
+		if(citationString!=null)
+		{
+			citationArray = citationString.split(AUDELIMITER,-1);
+		}
+
+		for(int i=0;i<citationArray.length;i++)
+		{
+			ElementDataMap ht = new ElementDataMap();
+			String citationRecordString = citationArray[i];
+			if(citationRecordString!=null)
+			{
+				String[] citationRecordArray = citationRecordString.split(IDDELIMITER,-1);
+				StringBuffer sourceString = new StringBuffer();
+				String serialTitle = null;
+				String AbbrSerialTitle = null;
+				String volumeString = null;
+				String issueString = null;
+				String pageString = null;
+				String pageCountString = null;
+				String yearString = null;
+				String dateString = null;
+				DocID  did = null;
+				String m_id= null;
+				String doi = null;
+				String rawString = null;
+				//System.out.println("********************************");
+				for(int j=0;j<citationRecordArray.length;j++)
+				{
+
+					String field = citationRecordArray[j];
+					String fieldName = "";
+					String fieldValue = "";
+					if(field.indexOf("::")>-1)
+					{
+						fieldName = field.substring(0,field.indexOf("::"));
+						fieldValue = field.substring(field.indexOf("::")+2);
+					}
+
+					if(fieldValue.length()>0)
+					//System.out.println(i+" fieldName= "+fieldName+" fieldValue= "+fieldValue);
+
+					if(fieldValue.length()>0 && fieldName.equalsIgnoreCase("DOI"))
+					{
+						doi = fieldValue;
+						ht.put(Keys.DOI, new XMLWrapper(Keys.DOI, doi));
+						//System.out.println("ANUM= "+accessNumber+" DOI= "+fieldValue);
+
+					}
+
+					if(fieldValue.length()>0 && fieldName.equalsIgnoreCase("ACCESSION_NUMBER"))
+					{
+						ht.put(Keys.ACCESSION_NUMBER, new XMLWrapper(Keys.ACCESSION_NUMBER, fieldValue));
+						accessNumber = fieldValue;
+						docidList.add(accessNumber);
+						m_id="ref_ins_"+accessNumber;
+						did = new DocID(i+1,m_id,database);
+
+					}
+					else if(fieldName.equalsIgnoreCase("ACCESSION_NUMBER"))
+					{
+						accessNumber = "ref_ins_"+anum+"_"+i;
+						ht.put(Keys.ACCESSION_NUMBER, new XMLWrapper(Keys.ACCESSION_NUMBER, accessNumber));
+						did = new DocID(i+1,accessNumber,database);
+						m_id = accessNumber;
+					}
+					//System.out.println("DATABASE= "+database.getID());
+
+					if(fieldValue.length()>0 && fieldName.equalsIgnoreCase("AUTHOR"))
+					{
+						Contributors authors = new Contributors(Keys.AUTHORS,getRefContributors(Keys.AUTHORS,fieldValue));
+                        ht.put(Keys.AUTHORS,authors);
+					}
+
+					if(fieldValue.length()>0 && fieldName.equalsIgnoreCase("YEAR"))
+					{
+						yearString = fieldValue;
+						ht.put(Keys.PUBLICATION_YEAR, new XMLWrapper(Keys.PUBLICATION_YEAR, fieldValue));
+					}
+
+					if(fieldValue.length()>0 && fieldName.equalsIgnoreCase("PUBLICATION_DATE"))
+					{
+						dateString = getPublicationData(fieldValue);
+						ht.put(Keys.PUBLICATION_YEAR, new XMLWrapper(Keys.PUBLICATION_DATE, dateString));
+					}
+
+
+					if(fieldValue.length()>0 && fieldName.equalsIgnoreCase("JOURNAL_TITLE"))
+					{
+						serialTitle = fieldValue;
+						ht.put(Keys.SERIAL_TITLE, new XMLWrapper(Keys.SERIAL_TITLE, fieldValue));
+					}
+
+					if(fieldValue.length()>0 && fieldName.equalsIgnoreCase("PUBLCATION_TITLE"))
+					{
+						serialTitle = fieldValue;
+						ht.put(Keys.SERIAL_TITLE, new XMLWrapper(Keys.SERIAL_TITLE, fieldValue));
+					}
+
+					if(fieldValue.length()>0 && fieldName.equalsIgnoreCase("SERIES_TITLE"))
+					{
+						serialTitle = fieldValue;
+						ht.put(Keys.SERIAL_TITLE, new XMLWrapper(Keys.SERIAL_TITLE, fieldValue));
+					}
+
+					if(fieldValue.length()>0 && fieldName.equalsIgnoreCase("ABBR_TITLE"))
+					{
+						AbbrSerialTitle = fieldValue;
+						ht.put(Keys.ABBRV_SERIAL_TITLE, new XMLWrapper(Keys.ABBRV_SERIAL_TITLE, fieldValue));
+					}
+
+					if(fieldValue.length()>0 && fieldName.equalsIgnoreCase("ABBR_JOURNAL_TITLE"))
+					{
+						AbbrSerialTitle = fieldValue;
+						ht.put(Keys.ABBRV_SERIAL_TITLE, new XMLWrapper(Keys.ABBRV_SERIAL_TITLE, fieldValue));
+					}
+
+					if(fieldValue.length()>0 && fieldName.equalsIgnoreCase("ISSN"))
+					{
+						ht.put(Keys.ISSN,new ISSN(fieldValue));
+					}
+
+					if(fieldValue.length()>0 && fieldName.equalsIgnoreCase("VOLUME_ISSUE"))
+					{
+
+						String volumeIssue = fieldValue;
+						if(volumeIssue.indexOf(GROUPDELIMITER)>-1)
+						{
+							String[] volumeIssueArray = volumeIssue.split(GROUPDELIMITER,-1);
+							if(volumeIssueArray.length>3)
+							{
+								if(volumeIssueArray[0].length()>0)
+								{
+									ht.put(Keys.VOLISSUE, new XMLWrapper(Keys.VOLISSUE ,volumeIssueArray[0]));
+									volumeString = volumeIssueArray[0];
+								}
+								if(volumeIssueArray[1].length()>0)
+								{
+									ht.put(Keys.VOLUME, new Volume(Keys.VOLUME,volumeIssueArray[1],perl));
+									volumeString = volumeIssueArray[1];
+								}
+								if(volumeIssueArray[2].length()>0)
+								{
+									issueString = volumeIssueArray[2];
+									ht.put(Keys.ISSUE, new Issue(Keys.ISSUE,volumeIssueArray[2],perl));
+								}
+							}
+						}
+					}
+
+					if(fieldValue.length()>0 && fieldName.equalsIgnoreCase("PAGE"))
+					{
+						pageCountString = fieldValue;
+						ht.put(Keys.PAGE_COUNT, new XMLWrapper(Keys.PAGE_COUNT, fieldValue));
+					}
+
+					if(fieldValue.length()>0 && fieldName.equalsIgnoreCase("FIRST_PAGE"))
+					{
+						pageString = fieldValue;
+						ht.put(Keys.START_PAGE, new XMLWrapper(Keys.START_PAGE, fieldValue));
+					}
+
+
+
+					if(fieldValue.length()>0 && fieldName.equalsIgnoreCase("TITLE"))
+					{
+						ht.put(Keys.TITLE, new XMLWrapper(Keys.TITLE, fieldValue));
+					}
+
+					if(fieldValue.length()>0 && fieldName.equalsIgnoreCase("PUBLISHER"))
+					{
+						ht.put(Keys.PUBLISHER, new XMLWrapper(Keys.PUBLISHER, fieldValue));
+					}
+
+					if(fieldValue.length()>0 && fieldName.equalsIgnoreCase("EDITOR"))
+					{
+						//ht.put(Keys.EDITORS, new XMLWrapper(Keys.EDITORS, fieldValue));
+						Contributors editors = new Contributors(Keys.EDITORS,getRefContributors(Keys.EDITORS,fieldValue));
+                        ht.put(Keys.EDITORS,editors);
+					}
+
+					if(fieldValue.length()>0 && fieldName.equalsIgnoreCase("COUNTRY"))
+					{
+						ht.put(Keys.COUNTRY_OF_PUB, new XMLWrapper(Keys.COUNTRY_OF_PUB, fieldValue));
+					}
+
+					if(fieldValue.length()>0 && fieldName.equalsIgnoreCase("ISBN"))
+					{
+						ht.put(Keys.ISBN, new XMLWrapper(Keys.ISBN, fieldValue));
+					}
+
+					if(fieldValue.length()>0 && fieldName.equalsIgnoreCase("CONFERENCE"))
+					{
+						ht.put(Keys.CONFERENCE_NAME, new XMLWrapper(Keys.CONFERENCE_NAME, fieldValue));
+					}
+
+					if(fieldValue.length()>0 && fieldName.equalsIgnoreCase("REPORT_NUMBER"))
+					{
+						ht.put(Keys.REPORT_NUMBER, new XMLWrapper(Keys.REPORT_NUMBER, fieldValue));
+					}
+
+					if(fieldValue.length()>0 && fieldName.equalsIgnoreCase("PATENT_DETAIL"))
+					{
+						ht.put(Keys.REPORT_NUMBER, new XMLWrapper(Keys.REPORT_NUMBER, fieldValue));
+					}
+
+					if(fieldValue.length()>0 && fieldName.equalsIgnoreCase("RAW"))
+					{
+						rawString =  fieldValue;
+					}
+
+
+
+				}
+
+				if(serialTitle != null)
+				{
+					sourceString.append(serialTitle+", ");
+				}
+				else if(AbbrSerialTitle != null)
+				{
+					sourceString.append(AbbrSerialTitle+", ");
+				}
+
+				if(volumeString != null)
+				{
+					sourceString.append("v "+volumeString+", ");
+				}
+
+				if(issueString != null)
+				{
+					sourceString.append("n "+issueString+", ");
+				}
+
+				if(pageCountString != null)
+				{
+					sourceString.append("p "+pageCountString+", ");
+				}
+				else if(pageString != null)
+				{
+					sourceString.append("p "+pageString+", ");
+				}
+
+				//System.out.println("dateString= "+dateString);
+				if(dateString !=null)
+				{
+					sourceString.append(dateString+", ");
+				}
+				else if(yearString!=null)
+				{
+					sourceString.append(yearString+", ");
+				}
+
+				if(sourceString.length()>2 &&sourceString.charAt(sourceString.length()-2)==',')
+				{
+					sourceString.deleteCharAt(sourceString.length()-2);
+				}
+				else if(sourceString.length()<1 && rawString!=null)
+				{
+					sourceString.append(rawString);
+				}
+				else
+				{
+					sourceString.append("Information is not available yet");
+				}
+
+				if(refCount==null || refCount.length()==0)
+				{
+					 refCount = "0";
+				}
+				ht.put(Keys.REFCNT, new XMLWrapper(Keys.REFCNT, refCount));
+
+				if(sourceString.length()>0)
+				{
+					ht.put(Keys.SOURCE, new XMLWrapper(Keys.SOURCE, sourceString.toString()));
+				}
+				//System.out.println("index= "+(i+1)+" sourceString= "+sourceString);
+				if(doi != null)
+				{
+					did.setDoi(doi);
+				}
+				ht.put(Keys.DOCID, did);
+				EIDoc eiDoc = new EIDoc(did, ht, Citation.CITATION_FORMAT);
+				eiDoc.exportLabels(false);
+				eiDoc.setLoadNumber(201199);
+				eiDoc.setOutputKeys(CITATION_KEYS);
+				InspecWrapper w = new InspecWrapper();
+				w.eiDoc = eiDoc;
+                w.mid = m_id;
+				//docTable.add(eiDoc);
+                docTable.put(accessNumber,w);
+			}
+
+		}
+		Hashtable docWithAccessnumber = null;
+		if(docidList != null && docidList.size()>0)
+		{
+			docWithAccessnumber = loadREFCitationsWithAccessnumber(docidList);
+		}
+		//if(docWithAccessnumber != null)
+		//{
+		//	docTable.addAll(docWithAccessnumber);
+		//}
+		//return docList;
+
+		return updateDoc(docTable,docWithAccessnumber);
+
+	}//parseCitationContent
+
+
+	private String getPublicationData(String date)
+	{
+			String day = null;
+			String month = null;
+			String year = null;
+			StringBuffer dateBuffer = new StringBuffer();
+			HashMap monthConversionTable = new HashMap();
+			monthConversionTable.put("1","January");
+			monthConversionTable.put("2","February");
+			monthConversionTable.put("3","March");
+			monthConversionTable.put("4","April");
+			monthConversionTable.put("5","may");
+			monthConversionTable.put("6","June");
+			monthConversionTable.put("7","July");
+			monthConversionTable.put("8","August");
+			monthConversionTable.put("9","September");
+			monthConversionTable.put("10","October");
+			monthConversionTable.put("11","November");
+			monthConversionTable.put("12","December");
+			if(date.indexOf(GROUPDELIMITER)>-1)
+			{
+				String[] whichDate = date.split(GROUPDELIMITER,-1);
+				for(int i=0;i<whichDate.length;i++)
+				{
+					String thisDate = whichDate[i];
+					if(thisDate!=null && thisDate.length()>0)
+					{
+						if(thisDate.indexOf("-")>-1)
+						{
+							String[] dateArray = whichDate[i].split("-",-1);
+							if(dateArray.length==3)
+							{
+								day = dateArray[0];
+								month = dateArray[1];
+								year = dateArray[2];
+
+								if(day != null && day.length()>0)
+								{
+									dateBuffer.append(day+" ");
+								}
+
+								if(month != null && month.length()>0)
+								{
+									if(monthConversionTable.get(month)!=null)
+									{
+										dateBuffer.append(monthConversionTable.get(month)+" ");
+									}
+									else
+									{
+										dateBuffer.append(month+" ");
+									}
+								}
+
+								if(year != null && year.length()>0)
+								{
+									dateBuffer.append(year);
+								}
+							}
+
+						}
+						else
+						{
+							dateBuffer.append(thisDate);
+						}
+						break;
+					}
+				}
+			}
+
+
+
+			return dateBuffer.toString();
+	}
+
+	private List updateDoc(Hashtable docTable,Hashtable docWithAccessnumber) throws Exception
+	{
+		StringBuffer docidBuffer = new StringBuffer();
+		List newDocList = new ArrayList();
+		//System.out.println("SIZE= "+docTable.size());
+		/*
+		if(docTable != null)
+		{
+			Enumeration key = docTable.keys();
+			while(key.hasMoreElements())
+			{
+				String aNumber = (String)key.nextElement();
+				InspecWrapper insDoc = (InspecWrapper)docTable.get(aNumber);
+				EIDoc doc = insDoc.getEiDoc();
+				DocID docID = doc.getDocID();
+				int hitIndex = docID.getHitIndex();
+				System.out.println("oldHitIndex= "+hitIndex);
+			}
+		}
+		System.out.println("SIZE1= "+docWithAccessnumber.size());
+		*/
+		try
+		{
+			if(docWithAccessnumber != null)
+			{
+				Enumeration keyEnum = docWithAccessnumber.keys();
+				while(keyEnum.hasMoreElements())
+				{
+					String aNumber = (String)keyEnum.nextElement();
+					InspecWrapper insOldDoc = (InspecWrapper)docTable.get(aNumber);
+					EIDoc oldDoc = insOldDoc.eiDoc;
+					DocID oldDocID = oldDoc.getDocID();
+					int hitIndex = oldDocID.getHitIndex();
+					InspecWrapper insNewDoc = (InspecWrapper)docWithAccessnumber.get(aNumber);
+					EIDoc newDoc = insNewDoc.eiDoc;
+					DocID newDocID = newDoc.getDocID();
+					String m_id = newDocID.getDocID();
+					newDocID.setHitIndex(hitIndex);
+					//newDoc.setDocID(newDocID);
+					InspecWrapper w = new InspecWrapper();
+					w.eiDoc = newDoc;
+                	w.mid = m_id;
+					docTable.put(aNumber,w);
+					//System.out.println("hitIndex= "+hitIndex);
+				}
+			}
+
+			Collection c = docTable.values();
+			newDocList = new ArrayList(c);
+
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		} // try/finally
+
+		return newDocList;
+
+
+	}//updateDoc
+
     // new method for multy authors
 
 	private Affiliations getAuthorsAffiliation(Key key,
@@ -2562,6 +4052,37 @@ public class InspecDocBuilder
 		return null;
 	}
 
+	private List getRefContributors(Key key,
+									String auString)
+
+		throws Exception
+		{
+
+
+				if(auString != null && auString.length()> 0 )
+				{
+					List authorNames = new ArrayList();
+					InspecAuthors authors = new InspecAuthors(auString,"ref");
+
+					List authorList = authors.getInspecAuthors();
+					for(int i= 0;i<authorList.size();i++)
+					{
+						BdAuthor author = (BdAuthor)authorList.get(i);
+						String email = author.getInitials();//inspect use initials as email address holder
+						String auDisplayName = author.getDisplayName();
+
+						Contributor persons = new Contributor(key,auDisplayName);
+						if(email!=null && !email.equals(""))
+						{
+							persons.setEmail(email);
+						}
+						authorNames.add(persons);
+					}
+					return authorNames;
+				}
+				return null;
+	}
+
 
 	private List getContributors(Key key,
 			String authorString,
@@ -2586,10 +4107,12 @@ public class InspecDocBuilder
 			{
 				List authorNames = new ArrayList();
 				InspecAuthors authors = new InspecAuthors(auString.toString());
+
 				List authorList = authors.getInspecAuthors();
 				for(int i= 0;i<authorList.size();i++)
 				{
 					BdAuthor author = (BdAuthor)authorList.get(i);
+					String email = author.getInitials();//inspect use initials as email address holder
 					String auDisplayName = author.getDisplayName();
 					if(dataFormat.equalsIgnoreCase(RIS.RIS_FORMAT) ||
 							dataFormat.equalsIgnoreCase(Citation.XMLCITATION_FORMAT))
@@ -2602,13 +4125,22 @@ public class InspecDocBuilder
 							(FirstAuAffiliations != null &&
 							!FirstAuAffiliations.trim().equals("")))
 					{
-						authorNames.add(new Contributor(key,
-														auDisplayName,
-														author.getAffIdList()));
+						Contributor persons = new Contributor(key,auDisplayName,author.getAffIdList());
+						if(email!=null && !email.equals(""))
+						{
+							persons.setEmail(email);
+						}
+						authorNames.add(persons);
 					}
 					else
 					{
-						authorNames.add(new Contributor(key, auDisplayName));
+						Contributor persons = new Contributor(key,auDisplayName);
+						if(email!=null && !email.equals(""))
+						{
+							persons.setEmail(email);
+						}
+						authorNames.add(persons);
+
 					}
 				}
 				return authorNames;
@@ -2643,6 +4175,35 @@ public class InspecDocBuilder
          }//end of for
          sQuery.append(")");
          return sQuery.toString();
+    }
+
+     /* This method builds the IN String
+	    * from list of docId objects.
+	    * The select query will get the result set in a reverse way
+	    * So in order to get in correct order we are doing a reverse
+	    * example of return String--(23,22,1,12...so on);
+	    * @param listOfDocIDs
+	    * @return String
+	    */
+	    private String buildAccessNumberINString(List listOfAccessNumber)
+	    {
+	        StringBuffer sQuery=new StringBuffer();
+	        sQuery.append("(");
+	        for(int k=listOfAccessNumber.size();k>0;k--)
+	        {
+	            String accessnumber = (String)listOfAccessNumber.get(k-1);
+
+	                if((k-1)==0)
+	                {
+	                    sQuery.append("'"+accessnumber+"'");
+	                }
+	                else
+	                {
+	                    sQuery.append("'"+accessnumber+"'").append(",");
+	                }
+	         }//end of for
+	         sQuery.append(")");
+	         return sQuery.toString();
     }
 
     /*TS if volume  is null and str is not null print n  */
@@ -3133,6 +4694,24 @@ public class InspecDocBuilder
         return (KeyValuePair[])list.toArray(new KeyValuePair[list.size()]);
 
     }
+
+    private int getCitationCount(Clob citationClob) throws Exception
+    {
+		String citationString = null;
+		int citationCount = 0;
+		if(citationClob!=null)
+		{
+			citationString = StringUtil.getStringFromClob(citationClob);
+			if(citationString!=null && citationString.length()>1)
+			{
+				String[] citationArray = citationString.split(AUDELIMITER,-1);
+				citationCount = citationArray.length;
+			}
+		}
+
+		return citationCount;
+
+	}
 
     private String selectPubYear(String sspdate,
                                  String fdate,

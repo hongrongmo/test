@@ -79,6 +79,11 @@ public abstract class Combiner
 
 
 
+
+		//public abstract void writeSingleTestRecordHook(Connection con,
+		//												String accessNumber)
+		//				 throws Exception;
+
         public abstract void writeCombinedByYearHook(Connection con,
                                                      int year)
                         throws Exception;
@@ -105,7 +110,7 @@ public abstract class Combiner
         {
 
             Connection con = null;
-                        PrintStream out = null;
+            PrintStream out = null;
 
             try
             {
@@ -156,7 +161,7 @@ public abstract class Combiner
 
 
 
-        protected Connection getConnection(String connectionURL,
+        public Connection getConnection(String connectionURL,
                                          String driver,
                                          String username,
                                          String password)

@@ -49,7 +49,7 @@ public class NTISRecord
 			if(token.length() > 0)
 			{
 				String field = NTISBaseTableRecord.baseTableFields[fieldNumber];
-			//System.out.println(token);
+			    //System.out.println(token);
 				if(startswiththree.contains(field))
 				{
 					token = token.substring(3);

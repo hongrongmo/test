@@ -65,7 +65,7 @@ public class CVTerms
 				CVTerm cvt = new CVTerm();
 				int boffset = 0;
 				int eoffset = str.length();
-				if(str.length()>0 && str.substring(0,2).equals("*-"))
+				if(str.length()>2 && str.substring(0,2).equals("*-"))
 				{
 					cvt.setPrefix("*");
 					boffset =2;

@@ -217,6 +217,7 @@ public class BdParser
 						}
 					}
 
+
 					//bibrecord
 
 					Element bibrecord 	= item.getChild("bibrecord",noNamespace);
@@ -452,6 +453,7 @@ public class BdParser
 							}
 
 							//enhancement
+
 							Element enhancement = head.getChild("enhancement",noNamespace);
 
 							if(enhancement != null)
@@ -477,18 +479,22 @@ public class BdParser
 									Element apidescriptorgroup = enhancement.getChild("API-descriptorgroup",noNamespace);
 									if(apidescriptorgroup!=null)
 									{
+
 										Element autoposting = apidescriptorgroup.getChild("autoposting",noNamespace);
-								//APICC
+								        //APICC
 										if(autoposting != null)
 										{
+
 											Element classificationdescription = autoposting.getChild("API-CC", noNamespace);
 
 											if(classificationdescription != null)
 											{
+
 												List classdescgroup = classificationdescription.getChildren("classification", noNamespace);
 												StringBuffer apiccterms = new StringBuffer();
 												if(classdescgroup != null)
 												{
+													System.out.println("ENTER classdescgroup");
 													for (int j = 0; j < classdescgroup.size(); j++)
 													{
 														Element ell = (Element)classdescgroup.get(j);
@@ -1900,7 +1906,7 @@ public class BdParser
 					Element condate = confevent.getChild("confdate",noNamespace);
 					if(condate != null)
 					{
-						Element date_text = condate.getChild("date-text",noNamespace);
+						String date_text = condate.getChildTextTrim("date-text",noNamespace);
 						Element startdate = condate.getChild("startdate",noNamespace);
 						Element enddate   = condate.getChild("enddate",noNamespace);
 						String startdateString = null;
@@ -1934,6 +1940,7 @@ public class BdParser
 							{
 								record.put("CONFDATE",enddateString);
 							}
+
 							//System.out.println("CONFDATE "+startdateString+" - "+enddateString);
 						}
 
@@ -2232,6 +2239,7 @@ public class BdParser
 
 			}
 		}
+//		System.out.println("AFF:: "+affBuffer.toString());
 		return affBuffer.toString();
 	}
 

@@ -85,9 +85,13 @@ public class BdPage
 		if(page.getPageText()!=null && page.getPageText().trim().length()>0)
 		{
 			firstPage = page.getPageText();
-			if(firstPage.indexOf("-")>-1)
+			firstPage = firstPage.replace('&',' ');
+			firstPage = firstPage.replace(',',' ');
+			firstPage = firstPage.replace(';',' ');
+			firstPage = firstPage.replaceAll("[<>-]"," ");
+			if(firstPage.indexOf(" ")>-1)
 			{
-				firstPage = firstPage.substring(0,firstPage.indexOf("-"));
+				firstPage = firstPage.substring(0,firstPage.indexOf(" "));
 			}
 		}
 		else if(page.getFirstPage()!=null && page.getFirstPage().trim().length()>0)

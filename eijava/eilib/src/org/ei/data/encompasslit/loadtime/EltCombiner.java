@@ -17,6 +17,7 @@ import org.ei.data.Constants;
 
 
 
+
 /*
  * Created on Apr 30, 2004
  *
@@ -57,7 +58,7 @@ public class EltCombiner extends Combiner {
     	// extract the whole thing
     	else if(loadNumber == 0)
     	{
-      		for(int yearIndex = 1955; yearIndex <= 2011; yearIndex++)
+      		for(int yearIndex = 1955; yearIndex <= 2012; yearIndex++)
       		{
     			System.out.println("Processing year " + yearIndex + "...");
         		// create  a new writer so we can see the loadNumber/yearNumber in the filename
@@ -91,7 +92,7 @@ public class EltCombiner extends Combiner {
 
             rs =
                 stmt.executeQuery(
-                    "select M_ID,VLN,ISN, PAG, substr(pyr,1,4) as pyr , STI,CIP , AUT , TIE , TIF,MOT, SPD, SPT, AAF, LNA, ABS, STY, APICT, APICT1, APILT ,APILT1 , RNR, ISSN, PUB, ISBN,CNFNAM, CNFSTD, CNFEND, CNFVEN, CNFCTY, CNFCNY, CNFEDN, CNFEDO, CNFEDA, CNFCAT, CNFCOD, CNFPAG, CNFPCT, CNFPRT, CNFSPO , APIUT ,APICC ,APILTM,APIALC, APIATM, APICRN, APIAMS, APIAPC, APIANC, APIAT, APICT, APILT , SUBSTR(pyr,1,4) yr, load_number,so,secsti,oab,apiatm,apiltm,apiams,cna,sta,seciss,cnfstd,cnfend,cnfven,cnfcty,cnfcny,cnfpag,cnfpct,cnfprt,cf,sec,dt,cprs, DOI, seq_num from elt_master where seq_num is not null and substr(pyr,1,4) ='"
+                    "select M_ID,VLN,ISN, PAG, substr(pyr,1,4) as pyr , STI,CIP , AUT , TIE , TIF,MOT, SPD, SPT, AAF, LNA, ABS, STY, APICT, APICT1, APILT ,APILT1 , RNR, ISSN, PUB, ISBN,CNFNAM, CNFSTD, CNFEND, CNFVEN, CNFCTY, CNFCNY, CNFEDN, CNFEDO, CNFEDA, CNFCAT, CNFCOD, CNFPAG, CNFPCT, CNFPRT, CNFSPO , APIUT ,APICC ,APILTM,APIALC, APIATM, APICRN, APIAMS, APIAPC, APIANC, APIAT, APICT, APILT , SUBSTR(pyr,1,4) yr, load_number,so,secsti,oab,apiatm,apiltm,apiams,cna,sta,seciss,cnfstd,cnfend,cnfven,cnfcty,cnfcny,cnfpag,cnfpct,cnfprt,cf,sec,dt,cprs, DOI, seq_num from elt_master where  substr(pyr,1,4) ='"
                         + year
                         + "'");
             writeRecs(rs);
@@ -528,7 +529,7 @@ public class EltCombiner extends Combiner {
             System.out.println("Getting weeks records ...");
             rs =
                 stmt.executeQuery(
-                    "select M_ID,VLN,ISN, PAG, substr(PYR,1,4) as PYR , STI,CIP , AUT , TIE , TIF,MOT, SPD, SPT, AAF, LNA, ABS, STY, APICT, APICT1, APILT ,APILT1 , RNR, ISSN, PUB, ISBN,CNFNAM, CNFSTD, CNFEND, CNFVEN, CNFCTY, CNFCNY, CNFEDN, CNFEDO, CNFEDA, CNFCAT, CNFCOD, CNFPAG, CNFPCT, CNFPRT, CNFSPO , APIUT ,APICC ,APILTM,APIALC, APIATM, APICRN, APIAMS, APIAPC, APIANC, APIAT, APICT, APILT , SUBSTR(pyr,1,4) yr, load_number,so,secsti,oab,apiatm,apiltm,apiams,cna,sta,seciss,cnfstd,cnfend,cnfven,cnfcty,cnfcny,cnfpag,cnfpct,cnfprt,cf,sec,dt,cprs, DOI,seq_num from elt_master where seq_num is not null and load_number="
+                    "select M_ID,VLN,ISN, PAG, substr(PYR,1,4) as PYR , STI,CIP , AUT , TIE , TIF,MOT, SPD, SPT, AAF, LNA, ABS, STY, APICT, APICT1, APILT ,APILT1 , RNR, ISSN, PUB, ISBN,CNFNAM, CNFSTD, CNFEND, CNFVEN, CNFCTY, CNFCNY, CNFEDN, CNFEDO, CNFEDA, CNFCAT, CNFCOD, CNFPAG, CNFPCT, CNFPRT, CNFSPO , APIUT ,APICC ,APILTM,APIALC, APIATM, APICRN, APIAMS, APIAPC, APIANC, APIAT, APICT, APILT , SUBSTR(pyr,1,4) yr, load_number,so,secsti,oab,apiatm,apiltm,apiams,cna,sta,seciss,cnfstd,cnfend,cnfven,cnfcty,cnfcny,cnfpag,cnfpct,cnfprt,cf,sec,dt,cprs, DOI,seq_num from elt_master where  load_number="
                         + weekNumber);
 
             writeRecs(rs);
@@ -559,7 +560,7 @@ public class EltCombiner extends Combiner {
 
     }
 
-    private String[] prepareAuthor(String aString) throws Exception {
+    public String[] prepareAuthor(String aString) throws Exception {
 
         AuthorStream astream = new AuthorStream(new ByteArrayInputStream(aString.getBytes()));
         String s = null;
@@ -595,13 +596,13 @@ public class EltCombiner extends Combiner {
     */
 
 
-    private String stripDelim(String line)
+    public String stripDelim(String line)
     {
         return stripDelim(line, "");
 
     }
 
-    private String stripDelim(String line, String newDelim)
+    public String stripDelim(String line, String newDelim)
     {
         line = perl.substitute("s/\\|+\\d+\\:+/"+newDelim+"/gi", line);
         if(line.indexOf(";")==0)
@@ -631,12 +632,12 @@ public class EltCombiner extends Combiner {
      *   additional doc types values for cross-searches with ev2 data sources
     */
 
-    private String[] prepareMulti(String multiString) throws Exception
+    public String[] prepareMulti(String multiString) throws Exception
     {
         return prepareMulti(multiString, null);
     }
 
-    private String[] prepareMulti(String multiString ,
+    public String[] prepareMulti(String multiString ,
                                   Constants constant)
     throws Exception
     {

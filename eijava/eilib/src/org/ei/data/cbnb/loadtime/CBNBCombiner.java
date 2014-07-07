@@ -48,7 +48,7 @@ public class CBNBCombiner extends Combiner
     	// extract the whole thing
     	else if(loadNumber == 0)
     	{
-      		for(int yearIndex = 1980; yearIndex <= 2011; yearIndex++)
+      		for(int yearIndex = 1980; yearIndex <= 2012; yearIndex++)
       		{
     			System.out.println("Processing year " + yearIndex + "...");
         		// create  a new writer so we can see the loadNumber/yearNumber in the filename
@@ -93,7 +93,7 @@ public class CBNBCombiner extends Combiner
 
             stmt = con.createStatement();
             System.out.println("Running the query...");
-            rs = stmt.executeQuery("select m_id, abn, doc, sco, fjl, isn, cdn, lan, ibn, src, scc,sct, ebt, cin, vol, iss, pag, reg, cym, sic, gic, gid, atl, otl, abs, edn, SUBSTR(pbn,1,4) pyr,pbn,avl, pbr, load_number, seq_num from " + Combiner.TABLENAME +" where substr(pbn,1,4) ='"+ year +"' and seq_num is not null");
+            rs = stmt.executeQuery("select m_id, abn, doc, sco, fjl, isn, cdn, lan, ibn, src, scc,sct, ebt, cin, vol, iss, pag, reg, cym, sic, gic, gid, atl, otl, abs, edn, SUBSTR(pbn,1,4) pyr,pbn,avl, pbr, load_number, seq_num from " + Combiner.TABLENAME +" where substr(pbn,1,4) ='"+ year +"'");
 
             System.out.println("Got records ...");
             writeRecs(rs);
@@ -356,7 +356,7 @@ public class CBNBCombiner extends Combiner
         }
    }
 
-    private String[] prepareMulti(String multiString) throws Exception
+    public String[] prepareMulti(String multiString) throws Exception
     {
         return prepareMulti(multiString, null);
     }
@@ -460,7 +460,7 @@ public class CBNBCombiner extends Combiner
         {
 
             stmt = con.createStatement();
-            rs = stmt.executeQuery("select m_id, abn, doc, sco, fjl, isn, cdn, lan, ibn, src, scc,sct, ebt, cin, vol, iss, pag, reg, cym, sic, gic, gid, atl, otl, abs, edn, SUBSTR(pbn,1,4) pyr,pbn,avl,pbr,seq_num,load_number from " + Combiner.TABLENAME + " where seq_num is not null and load_number ='" + weekNumber + "'");
+            rs = stmt.executeQuery("select m_id, abn, doc, sco, fjl, isn, cdn, lan, ibn, src, scc,sct, ebt, cin, vol, iss, pag, reg, cym, sic, gic, gid, atl, otl, abs, edn, SUBSTR(pbn,1,4) pyr,pbn,avl,pbr,seq_num,load_number from " + Combiner.TABLENAME + " where load_number ='" + weekNumber + "'");
             writeRecs(rs);
             this.writer.end();
             this.writer.flush();

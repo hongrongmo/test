@@ -22,7 +22,7 @@ public class GeorefReader {
 	private boolean inabstract = false;
 
 	private HashSet entity = null;
-	
+
 	public String loadNumber = null;
 
 	private static String[] elementNames = new String[] { "M_ID", "ISSN",
@@ -76,6 +76,19 @@ public class GeorefReader {
 		this.articles = georefRoot.getChildren("Reference");
 		this.rec = articles.iterator();
 		out = new BufferedWriter(new FileWriter(outfile));
+	}
+
+	public GeorefReader(Reader r, String outfile) throws Exception {
+
+		//super(r);
+		SAXBuilder builder = new SAXBuilder();
+		builder.setExpandEntities(false);
+		this.doc = builder.build(r);
+		Element georefRoot = doc.getRootElement();
+		this.articles = georefRoot.getChildren("Reference");
+		this.rec=articles.iterator();
+		out = new BufferedWriter(new FileWriter(outfile));
+
 	}
 
 	public void close() throws Exception {
@@ -793,7 +806,7 @@ public class GeorefReader {
 			return field;
 		}
 	}
-	
+
 	public StringBuffer concatISSN(Element e, String issnType) {
 		String elemName = "A01";
 		int subInt = 2;

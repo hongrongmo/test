@@ -1,5 +1,10 @@
 package org.ei.data.paper.loadtime;
-import java.io.FileWriter;import java.io.PrintWriter;import java.util.Hashtable;import java.util.Properties;import org.apache.oro.text.perl.Perl5Util;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.util.Hashtable;
+import java.util.Properties;
+import org.apache.oro.text.perl.Perl5Util;
+
 public class PaperChemBaseTableWriter
 {
 	private Perl5Util perl = new Perl5Util();
@@ -7,12 +12,14 @@ public class PaperChemBaseTableWriter
     private int curRecNum = 0;
     private String filename;
     private PrintWriter out;
-    private String filepath;    private int loadnumber;
+    private String filepath;
+    private int loadnumber;
     private int filenumber = 0;
     private boolean open = false;
     private static Properties props;
     private String[] baseTableFields = PaperChemBaseTableRecord.baseTableFields;
-    private PaperChemRecordFixer fixer = new PaperChemRecordFixer();    {
+    private PaperChemRecordFixer fixer = new PaperChemRecordFixer();
+    {
         props = new Properties();
         props.setProperty("M_ID", "GU");
         props.setProperty("ID", "ID");

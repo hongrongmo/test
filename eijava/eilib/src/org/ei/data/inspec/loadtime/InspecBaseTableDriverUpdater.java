@@ -1,25 +1,40 @@
-package org.ei.data.inspec.loadtime;
-
-import java.sql.*;
-import java.io.*;
+package org.ei.data.inspec.loadtime;
+
+
+
+import java.sql.*;
+
+import java.io.*;
+
 import java.util.zip.*;
-import java.util.*;
-import org.apache.oro.text.perl.*;
-import org.apache.oro.text.regex.*;
-import org.ei.util.GUID;
-public class InspecBaseTableDriverUpdater
-{
-	private Perl5Util perl = new Perl5Util();
-	private static InspecBaseTableUpdater baseUpdater;
-	private static int exitNumber;
-	private int counter = 0;
+import java.util.*;
+
+import org.apache.oro.text.perl.*;
+
+import org.apache.oro.text.regex.*;
+
+import org.ei.util.GUID;
+
+public class InspecBaseTableDriverUpdater
+
+{
+
+	private Perl5Util perl = new Perl5Util();
+
+	private static InspecBaseTableUpdater baseUpdater;
+
+	private static int exitNumber;
+
+	private int counter = 0;
+
 	private int updateNumber = 0;
 	private static String filename;
 
 
 	public static void main(String args[])
 		throws Exception
-	{
+	{
+
         String url = args[0];
         String driver = args[1];
         String username = args[2];
@@ -38,7 +53,8 @@ public class InspecBaseTableDriverUpdater
 
 		InspecBaseTableDriverUpdater c = new InspecBaseTableDriverUpdater(updateN);
 
-		c.writeBaseTableFile(url,driver,username,password,infile);
+		c.writeBaseTableFile(url,driver,username,password,infile);
+
 	}
 
 	public InspecBaseTableDriverUpdater(int updateN)
@@ -100,7 +116,8 @@ public class InspecBaseTableDriverUpdater
 
     }
 
-   }
+   }
+
 
 	private void writeRecs(InspecXMLReader r) throws Exception
 	{
