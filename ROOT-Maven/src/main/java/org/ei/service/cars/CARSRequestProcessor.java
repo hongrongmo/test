@@ -278,6 +278,8 @@ public class CARSRequestProcessor {
 				PostMethod postMethod = RESTResourceBuilder.buildPostMethod(carsRequest, httprequest);
 				postMethod.setRequestHeader(CARSStringConstants.ACCEPT_ENCODING.value(), CARSConstants.GZIP);
 				postMethod.setRequestEntity(new MultipartRequestEntity(RESTResourceBuilder.fetchParts(carsRequest, httprequest), postMethod.getParams()));
+				
+				log4j.info("Query String  : "+postMethod.getQueryString() +" : Request Body :"+postMethod.getResponseBodyAsString()+" : request parameters : "+postMethod.getParameters()+" : request headers :"+postMethod.getRequestHeaders());
 				httpClient.executeMethod(postMethod);
 
 				if (postMethod != null && postMethod.getResponseHeader("Content-Encoding").getValue().indexOf("gzip") != -1) {
