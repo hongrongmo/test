@@ -5,30 +5,8 @@
 <div id="header">
 	<div id="logoEV" aria-label="Engineering Village" role="banner">
 		<stripesext:link protocol="http" href="/home.url" title="Engineering Village - The information discovery platform of choice for the engineering community" ><img alt="Engineering Village - The information discovery platform of choice for the engineering community" src="/static/images/EV-logo.gif"/></stripesext:link>
-
-		</div>
-
-<%--  TMH removed on 5/18/2012
-	<div id="headerLink">
-		<div class="clearfix" id="suites">
-		<ul class="suites">
-			<li><a
-				title="Hub - SciVerse's integrated search"
-				href="http://www.hub.sciverse.com/"
-				target="_blank">Hub</a></li>
-			<li><a
-				title="ScienceDirect - The world's leading full-text scientific database"
-				href="http://www.sciencedirect.com"
-				target="_blank">ScienceDirect</a></li>
-			<li><a
-				title="Scopus - The largest abstract and citation database of research literature and quality web sources"
-				href="http://www.scopus.com"
-				target="_blank">Scopus</a></li>
-			<li><a class="last selected" title="Engineering Village">Engineering Village</a></li>
-		</ul>
-		</div>
 	</div>
- --%>
+
 
 	<c:choose>
 		<c:when	test="${not empty actionBean.context.userSession.carsMetaData.headerContent && actionBean.showLoginBox}">
@@ -58,7 +36,7 @@
 
 <ul title="top level navigation" class="nav main" style="z-index:300;">
 	<li><stripesext:link title="Search Engineering Village" href="${searchlink}" class="${actionBean.roomSearch ? 'selected' : ''}" protocol="http">Search</stripesext:link></li>
-	<li><stripesext:link protocol="http" title="Selected Records - View your selected records"	href="/selected/citation.url?CID=citationSelectedSet&DATABASETYPE=${actionBean.database}&searchtype=TagSearch" class="${actionBean.roomSelectedRecords ? 'selected' : ''}">Selected records</stripesext:link></li>
+	<li><stripesext:link protocol="http" title="Selected Records - View your selected records"	href="/selected/citation.url?CID=citationSelectedSet&DATABASEID=${actionBean.database}&searchtype=TagSearch" class="${actionBean.roomSelectedRecords ? 'selected' : ''}">Selected records</stripesext:link></li>
 
 	<c:choose>
 	<c:when test="${actionBean.context.userSession.user.individuallyAuthenticated}">
@@ -181,8 +159,8 @@
 
 				if(params != ""){params += "&";}
 				params += $(this).attr("name") + "=" + $(this).val();
-				
-				
+
+
 		});
 		params += "&highlight=" + $("#hColor").val();
 		hlight += $("#hColor").val();
@@ -194,7 +172,7 @@
 		}).success(function(data){
 			TINY.box.hide();
 			//change any highlight color on the fly
-			$(".hit").css("color", hlight);			
+			$(".hit").css("color", hlight);
 			$("#prefsNotSaved").hide();
 			$("#prefsSaved").fadeIn("slow");
 		}).error(function(data){
