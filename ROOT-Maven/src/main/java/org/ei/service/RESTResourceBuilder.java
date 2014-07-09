@@ -136,6 +136,7 @@ public class RESTResourceBuilder {
                         } catch (UnsupportedEncodingException e) {
                             log4j.error("Error occured while encoding" + pair.getKey().getReqParam());
                         }
+                        resource.queryParam(pair.getKey().getReqParam(), value);
                         resourceLog.append("&"+pair.getKey().getReqParam()+"="+ value);
                     }
                 }
