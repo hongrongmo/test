@@ -66,8 +66,11 @@ public class RESTResourceBuilder {
     public static Resource build(CARSRequest carsrequest, HttpServletRequest request) throws ServiceException {
 
         Resource resource = null;
+        StringBuffer  resourceLog = new StringBuffer();
         try {
 
+        	
+        	
             //
             // Build the resource from CARS endpoint + URI
             //
@@ -76,6 +79,12 @@ public class RESTResourceBuilder {
                 CARSConfigVariables.getConstantAsString(CARSConfigVariables.CARS_END_POINT) +
                 carsrequest.getRequestURI());
 
+            resourceLog.append("Base Url : "+ BaseServiceConstants.getServicesBaseURL() +
+                CARSConfigVariables.getConstantAsString(CARSConfigVariables.CARS_END_POINT) +
+                carsrequest.getRequestURI());
+            
+            
+            
             //
             // Add X_ELS_AUTHENTICATION header
             //
@@ -84,6 +93,8 @@ public class RESTResourceBuilder {
                     CARSConfigVariables.getConstantAsString(CARSConfigVariables.X_ELS_AUTHENTICATION_VALUE)
                     );
 
+            
+            
             resource.header(CARSStringConstants.ACCEPT_ENCODING.value(), CARSConstants.GZIP);
 
             //
@@ -95,6 +106,8 @@ public class RESTResourceBuilder {
                 resource.header(CARSStringConstants.SESSION_AFFINITY_KEY.value(), sessionAffinity);
             }
 
+            resourceLog.append(" | sessionAffinity :"+sessionAffinity+" | query param : ");
+            
             //
             // Process request params if present
             //
@@ -109,6 +122,7 @@ public class RESTResourceBuilder {
                     // If special requset parameter, convert from MultiValuedMap
                     if (CARSStringConstants.REQUEST_PARAMS_HOLDER.value().equalsIgnoreCase(pair.getKey().getReqParam())) {
                         resource.queryParams(convertToMultiValuedMap(pair));
+                        resourceLog.append("&"+convertToMultiValuedMap(pair));
                     }
                     // Otherwise, just process the key/value pair
                     else {
@@ -122,7 +136,7 @@ public class RESTResourceBuilder {
                         } catch (UnsupportedEncodingException e) {
                             log4j.error("Error occured while encoding" + pair.getKey().getReqParam());
                         }
-                        resource.queryParam(pair.getKey().getReqParam(), value);
+                        resourceLog.append("&"+pair.getKey().getReqParam()+"="+ value);
                     }
                 }
             }
@@ -130,7 +144,7 @@ public class RESTResourceBuilder {
             log4j.error("Unable to build Resource!  Exception: " + e.getClass() + ", message: " + e.getMessage());
             throw new ServiceException(SystemErrorCodes.REST_RESOURCE_ERROR, e);
         }
-
+        log4j.info(resourceLog.toString());
         return resource;
     }
 
