@@ -133,22 +133,22 @@ public class SessionBuilderInterceptor implements Interceptor {
         context.setUserSession(usersession);
 
 		// See if the session has expired
-		if (usersession.getStatus().equals(SessionStatus.NEW_HAD_EXPIRED)) {
-            String path = request.getRequestURI();
-			log4j.info("[" + ipaddress + "] Session marked as NEW_HAD_EXPIRED, path='" + path + "'");
-			if (request.getParameter(SessionManager.REQUEST_PT) != null ||
-				GenericValidator.isBlankOrNull(path) ||
-				path.contains("home.url") ||
-				path.contains("CID=home")) {
-				usersession.setProperty(UserSession.SESSION_END_REDIR, "no");
-			} else {
-				// let the request process and authInterceptor will take care the right landing page logic
-	            log4j.info("[" + ipaddress + "] Redirecting to Home page");
-				usersession.setProperty(UserSession.SESSION_END_REDIR, "yes");
-				return new RedirectResolution(EVPathUrl.EV_HOME.value() + "?redir=t", false);
-			}
-
-		}
+//		if (usersession.getStatus().equals(SessionStatus.NEW_HAD_EXPIRED)) {
+//            String path = request.getRequestURI();
+//			log4j.info("[" + ipaddress + "] Session marked as NEW_HAD_EXPIRED, path='" + path + "'");
+//			if (request.getParameter(SessionManager.REQUEST_PT) != null ||
+//				GenericValidator.isBlankOrNull(path) ||
+//				path.contains("home.url") ||
+//				path.contains("CID=home")) {
+//				usersession.setProperty(UserSession.SESSION_END_REDIR, "no");
+//			} else {
+//				// let the request process and authInterceptor will take care the right landing page logic
+//	            log4j.info("[" + ipaddress + "] Redirecting to Home page");
+//				usersession.setProperty(UserSession.SESSION_END_REDIR, "yes");
+//				return new RedirectResolution(EVPathUrl.EV_HOME.value() + "?redir=t", false);
+//			}
+//
+//		}
 
 		// *****************************************************
 		// Print out request information

@@ -24,6 +24,8 @@
 
     <jsp:include page="include/tabs.jsp"/>
 
+    <div style="float:right; padding-right: 10px"><a href="/status/clearcookies.url" title="Clear site cookies">Clear Cookies</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="/status/expiresession.url" title="Expire Session">Expire Session</a></div>
+
     <div class="marginL10">
 
         <c:choose><c:when test="${empty actionBean.viewbean.webappproperties}">No webapp properties found!<br/></c:when>
