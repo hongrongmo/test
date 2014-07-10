@@ -34,9 +34,6 @@
     	<jsp:include page="include/tabs.jsp"/>
         <div class="marginL10">
 	    	<div style="margin-left:5px">
-		    	<stripes:errors>
-	                 <img style="margin-bottom:5px" src="/static/images/red_warning.gif"><b>&nbsp;&nbsp;<stripes:individual-error /></b>
-	            </stripes:errors>
 	            <c:if test="${not empty actionBean.context.messages}">
 				    <c:forEach var="message" items="${actionBean.context.messages}"><span style="font-weight:bold;color: #148C75;">${message.message}</span></c:forEach>
 				</c:if>
