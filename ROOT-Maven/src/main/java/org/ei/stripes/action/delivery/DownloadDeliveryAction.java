@@ -66,25 +66,25 @@ import com.icl.saxon.TransformerFactoryImpl;
 @UrlBinding("/delivery/download/{$event}.url")
 public class DownloadDeliveryAction extends AbstractDeliveryAction {
     private final static Logger log4j = Logger.getLogger(DownloadDeliveryAction.class);
-    
+
     protected String              downloadformat;
     protected String              baseaddress;
     protected StringBuffer        tmpfileName;
-    
-    
+
+
     /** The is referex only records. */
     private boolean referexOnlyRecords = false;
 
     private boolean saveToGoogleEnabled = false;
-    
+
     private boolean saveToDropboxEnabled = false;
-    
+
     private String dropBoxDownloadUrl = "";
-    
+
     private String dropBoxClientid = "";
-    
-    private String downloadMedium = ""; 
-    
+
+    private String downloadMedium = "";
+
    	@DontValidate
     @HandlesEvent("display")
     public Resolution display() throws InfrastructureException {
@@ -101,13 +101,13 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
 		}
         setSaveToGoogleEnabled(isSaveToGoogleEnabled);
         setSaveToDropboxEnabled(isSaveToDropboxEnabled);
-        return new ForwardResolution("/WEB-INF/pages/customer/delivery/download.jsp");
+        return new ForwardResolution("/WEB-INF/pages/customer/delivery/oneclickdl.jsp");
     }
-	
+
 	@DontValidate
     @HandlesEvent("dropbox")
     public Resolution dropbox() throws InfrastructureException {
-		
+
 		boolean isSaveToDropboxEnabled = false;
         RuntimeProperties runtimeprops;
 		try {
@@ -120,12 +120,12 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
 			log4j.warn("Error occured! "+e.getMessage());
 			return SystemMessage.SYSTEM_ERROR_RESOLUTION;
 		}
-		
+
 		if(!isSaveToDropboxEnabled){
 			log4j.warn("Save to Dropbox is not allowed!");
 			return SystemMessage.SYSTEM_ERROR_RESOLUTION;
 		}
-		
+
 		UserSession userSession = context.getUserSession();
 		if(userSession != null){
 			userSession.setProperty("downloadformat", downloadformat);
@@ -134,7 +134,7 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
 		}
         return new ForwardResolution("/WEB-INF/pages/customer/delivery/dropbox.jsp");
     }
-	
+
 	@DontValidate
     @HandlesEvent("dropboxredirect")
     public Resolution dropboxredirect() throws InfrastructureException {
@@ -152,28 +152,28 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
 			log4j.warn("Error occured! "+e.getMessage());
 			return SystemMessage.SYSTEM_ERROR_RESOLUTION;
 		}
-		
+
 		if(!isSaveToDropboxEnabled){
 			log4j.warn("Save to Dropbox is not allowed!");
 			return SystemMessage.SYSTEM_ERROR_RESOLUTION;
 		}
-		
+
         setDropBoxClientid(clientId);
-        
+
         UserSession userSession = context.getUserSession();
 		if(userSession != null){
 			setDownloadformat(userSession.getProperty("downloadformat"));
 			setDropBoxDownloadUrl(userSession.getProperty("dropBoxDownloadUrl"));
 			setDisplayformat(userSession.getProperty("displayformat"));
 		}
-        
+
         return new ForwardResolution("/WEB-INF/pages/customer/delivery/dropbox.jsp");
     }
-    
+
     @DontValidate
     @HandlesEvent("submit")
     public Resolution submit() throws Exception {
-    	
+
     	// Ensure there are documents present
         if (GenericValidator.isBlankOrNull(docidlist) && GenericValidator.isBlankOrNull(folderid) && (basket == null || basket.countPages() == 0)) {
             log4j.warn("No documents to download!");
@@ -182,13 +182,13 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
             log4j.warn("Download format must be selected.");
             return new ForwardResolution("/WEB-INF/pages/customer/delivery/download.jsp");
         }
-        
+
         trackDriveUsage(downloadformat);
-        
+
         // Set the docformat based on incoming displayformat
         String docformat = Citation.CITATION_FORMAT;
         if (!(DOWNLOAD_FORMAT_ASCII.equals(downloadformat)) && !(DOWNLOAD_FORMAT_CSV.equals(downloadformat))
-        		&& !(DOWNLOAD_FORMAT_PDF.equals(downloadformat)) 
+        		&& !(DOWNLOAD_FORMAT_PDF.equals(downloadformat))
         		&& !(DOWNLOAD_FORMAT_RTF.equals(downloadformat))
         		&& !(DOWNLOAD_FORMAT_EXCEL.equals(downloadformat))) {
             docformat = "RIS";
@@ -197,7 +197,7 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
         } else if ("abstract".equals(displayformat)) {
             docformat = Abstract.ABSTRACT_FORMAT;
         }
-        
+
         //
         // Set the response content type and stylesheet name
         // based on the download format
@@ -246,9 +246,9 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
                 stylesheetname += "CitationRTF.xsl";
             }
         }
-        
-        
-        
+
+
+
         //
         // Start the transform process. This will do the following:
         // * Create a temp file name to hold download output
@@ -261,50 +261,50 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
         InputStream returnstream = null;
         ByteArrayOutputStream byteArrayOutputStream = null;
         ByteArrayInputStream byteArrayInputStream = null;
-        
+
         try {
             // Build the file name - NOTE that the tmpfileName var
             // is an instance variable so that the removeTmpFile()
             // method can attempt to delete it after the response!
             buildTmpFileName(docformat);
-            
+
             //
             // Build the XML for transform
             //
             xmlWriter = buildXML(docformat);
             if (xmlWriter == null) { return SystemMessage.SYSTEM_ERROR_RESOLUTION; }
-            
+
             if(DOWNLOAD_FORMAT_PDF.equals(downloadformat)){
-            
+
             	byteArrayOutputStream = new ByteArrayOutputStream();
-            	
+
             	String appPath = context.getServletContext().getRealPath("");
             	FopFactory fopFactory = FopFactory.newInstance();
             	fopFactory.setBaseURL(appPath);
             	Fop fop = fopFactory.newFop(MimeConstants.MIME_PDF, byteArrayOutputStream);
-            	
+
             	String fopStyleSheet = this.getClass().getResource("/transform/delivery/" + stylesheetname).toString();
             	TransformerFactory tFactory = new TransformerFactoryImpl();
             	Transformer transformer = tFactory.newTransformer(new StreamSource(fopStyleSheet));
             	Result res = new SAXResult(fop.getDefaultHandler());
             	transformer.transform(new StreamSource(new StringReader(xmlWriter.toString())), res);
-            	
+
             	byteArrayInputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
             	return new StreamingResolution("application/pdf", byteArrayInputStream).setFilename(tmpfileName.toString());
             }else if (DOWNLOAD_FORMAT_RTF.equals(downloadformat)){
-            	
+
             	byteArrayOutputStream = new ByteArrayOutputStream();
             	String appPath = context.getServletContext().getRealPath("");
             	FopFactory fopFactory = FopFactory.newInstance();
             	fopFactory.setBaseURL(appPath);
             	Fop fop = fopFactory.newFop(MimeConstants.MIME_RTF, byteArrayOutputStream);
-            	
+
             	String fopStyleSheet = this.getClass().getResource("/transform/delivery/" + stylesheetname).toString();
             	TransformerFactory tFactory = new TransformerFactoryImpl();
             	Transformer transformer = tFactory.newTransformer(new StreamSource(fopStyleSheet));
             	Result res = new SAXResult(fop.getDefaultHandler());
             	transformer.transform(new StreamSource(new StringReader(xmlWriter.toString())), res);
-            	
+
             	byteArrayInputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
             	return new StreamingResolution("application/rtf", byteArrayInputStream).setFilename(tmpfileName.toString());
             }else if(DOWNLOAD_FORMAT_EXCEL.equals(downloadformat)){
@@ -321,10 +321,10 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
             	byteArrayInputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
                 return new StreamingResolution("application/ms-excel", byteArrayInputStream).setFilename(tmpfileName.toString());
             }
-            
+
             //tmpWriter = new PrintWriter(new FileWriter("c:\\tmp\\" + tmpfileName.toString()));
             tmpWriter = new PrintWriter(new FileWriter("/tmp/" + tmpfileName.toString()));
-            
+
             //
             // Transform XML
             //
@@ -333,9 +333,9 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
             Templates templates = tFactory.newTemplates(new StreamSource(stylesheet));
             Transformer transformer = templates.newTransformer();
             transformer.transform(new StreamSource(new StringReader(xmlWriter.toString())), new StreamResult(tmpWriter));
-            
+
             tmpWriter.close();
-            
+
             //
             // Stream back the temp file
             //
@@ -346,30 +346,30 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
                 // String strFilename = getContentDispositionFilenameTimestamp(tmpfileName.toString());
                 context.getResponse().setHeader("Content-Disposition", "attachment; filename=" + tmpfileName.toString() + "");
             }
-            
+
             if (log4j.isInfoEnabled()) {
                 //log4j.info("Streaming results from file: 'c:\\tmp\\" + tmpfileName.toString() + "'");
             	log4j.info("Streaming results from file: '/tmp/" + tmpfileName.toString() + "'");
             }
             return new StreamingResolution(contenttype, returnstream);
-            
+
         } catch (Throwable t) {
             log4j.error("Unable to tranform output for download, error = " + t.getClass().getName() + ", message = " + t.getMessage());
             try {
-            	
+
             	// Only try to close this stream when there is an error. Stripes
                 // will close it otherwise.
-            	
+
             	if (byteArrayOutputStream != null) {
                 	byteArrayOutputStream.close();
                 	byteArrayOutputStream = null;
                 }
-                
+
                 if (byteArrayInputStream != null) {
                 	byteArrayInputStream.close();
                 	byteArrayInputStream = null;
                 }
-            	
+
                 if (returnstream != null) {
                     returnstream.close();
                     returnstream = null;
@@ -380,17 +380,17 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
             return SystemMessage.SYSTEM_ERROR_RESOLUTION;
         } finally {
             try {
-            	
+
             	if (byteArrayOutputStream != null) {
                 	byteArrayOutputStream.close();
                 	byteArrayOutputStream = null;
                 }
-                
+
                 if (byteArrayInputStream != null) {
                 	byteArrayInputStream.close();
                 	byteArrayInputStream = null;
                 }
-            	
+
                 if (xmlWriter != null) {
                     xmlWriter.close();
                     xmlWriter = null;
@@ -403,32 +403,32 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
                 log4j.error("Unable to clean up! Error = " + t.getClass().getName() + ", message = " + t.getMessage());
             }
         }
-        
+
     }
-    
+
     /**
      * Builds the XML for the download.
-     * 
+     *
      * @param docformat
      * @param xmlWriter
      * @return
      */
     private Writer buildXML(String docformat) {
-        
+
         Writer xmlWriter = null;
-        
+
         try {
             xmlWriter = new StringWriter();
-            
+
             xmlWriter.write("<PAGE>");
-            
+
             // Build XML based on request params
             if (!GenericValidator.isBlankOrNull(docidlist)) {
                 // ****************************************************************
                 // Get documents from docid list (request param)
                 // ****************************************************************
                 DatabaseConfig databaseConfig = DatabaseConfig.getInstance();
-                
+
                 // Get the docids and handles
                 String[] docidarr = docidlist.split(",");
                 String[] handlearr = handlelist.split(",");
@@ -436,7 +436,7 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
                     log4j.warn("docids size does not equal handles size!");
                     return null;
                 }
-                
+
                 // Add docids to list
                 List<DocID> docidList = new ArrayList<DocID>();
                 DocID docidObj;
@@ -448,7 +448,7 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
                         docidList.add(docidObj);
                     }
                 }
-                
+
                 // Build page of data from doc/handle id lists
                 MultiDatabaseDocBuilder builder = new MultiDatabaseDocBuilder();
                 List<EIDoc> bList = builder.buildPage(docidList, docformat);
@@ -463,20 +463,20 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
                     xmlWriter.write("<PAGE-ENTRY>");
                     doc.toXML(xmlWriter);
                     xmlWriter.write("</PAGE-ENTRY>");
-                    
+
                 }
                 xmlWriter.write("</PAGE-RESULTS>");
-                
+
             } else if (!GenericValidator.isBlankOrNull(this.folderid)) {
                 // ****************************************************************
                 // Get documents from folder id (request param)
                 // ****************************************************************
-                
+
                 // Retrieve folder (this.folder should already be
                 // set by init() method from parent class)
                 SavedRecords savedRecords = new SavedRecords();
                 FolderPage folderpage = (FolderPage) savedRecords.viewRecordsInFolder(this.folderid, docformat);
-                
+
                 if (!DOWNLOAD_FORMAT_ASCII.equals(downloadformat) && !DOWNLOAD_FORMAT_CSV.equals(downloadformat) && !DOWNLOAD_FORMAT_PDF.equals(downloadformat)
                 		&& !DOWNLOAD_FORMAT_RTF.equals(downloadformat) && !DOWNLOAD_FORMAT_EXCEL.equals(downloadformat)) {
                     for (int x = 0; x < folderpage.docCount(); x++) {
@@ -491,7 +491,7 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
                 } else {
                     folderpage.toXML(xmlWriter);
                 }
-                
+
             } else if (basket != null && basket.countPages() > 0) {
                 // ****************************************************************
                 // Get documents from current basket
@@ -513,33 +513,33 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
                         basketPage.toXML(xmlWriter);
                     }
                 }
-                
+
             } else {
                 log4j.warn("Unable to process download - no way to retrieve documents!");
                 return null;
             }
-            
+
             // Signal footer section
             xmlWriter.write("<FOOTER/>");
             xmlWriter.write("</PAGE>");
-            
+
             return xmlWriter;
-            
+
         } catch (Throwable t) {
             log4j.error("Unable to tranform output for download, error = " + t.getClass().getName() + ", message = " + t.getMessage());
             return null;
         }
-        
+
     }
-    
+
     /**
      * Builds the temporary file name
-     * 
+     *
      * @param docformat
      */
     private void buildTmpFileName(String docformat) {
         if (tmpfileName == null) tmpfileName = new StringBuffer();
-        
+
         java.util.Calendar calCurrentDate = java.util.GregorianCalendar.getInstance();
         tmpfileName.append(calCurrentDate.get(java.util.Calendar.DAY_OF_MONTH));
         tmpfileName.append("-");
@@ -549,7 +549,7 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
         tmpfileName.append("-");
         tmpfileName.append(System.currentTimeMillis());
         tmpfileName.append("_");
-        
+
         tmpfileName.append(docformat);
         tmpfileName.append("_");
         tmpfileName.append(downloadformat);
@@ -569,7 +569,7 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
             tmpfileName.append("_.ris");
         }
     }
-    
+
     @After(stages = LifecycleStage.RequestComplete)
     /**
      * Removes any temporary file created during download.  NOTE
@@ -582,7 +582,7 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
             file.delete();
         }
     }
-    
+
     private void trackDriveUsage(String downloadFormat){
     	if(this.downloadMedium.equalsIgnoreCase("googledrive")){
     		String ip = HttpRequestUtil.getIP(context.getRequest());
@@ -590,13 +590,13 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
 			if (usersession == null || usersession.getUser() == null) return;
 			IEVWebUser evWebUser = usersession.getUser();
 			if(evWebUser == null || evWebUser.getAccount() == null ) return;
-			
+
     		String acctNo = evWebUser.getAccount().getAccountId();
-    		
+
     		SaveToGoogleUsage.trackUsage(downloadFormat,ip,acctNo);
     	}
     }
-    
+
     //
     //
     // GETTERS/SETTERS
@@ -605,15 +605,15 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
     public String getDownloadformat() {
         return downloadformat;
     }
-    
+
     public void setDownloadformat(String downloadformat) {
         this.downloadformat = downloadformat;
     }
-    
+
     public String getBaseaddress() {
         return baseaddress;
     }
-    
+
     public boolean isSaveToDropboxEnabled() {
 		return saveToDropboxEnabled;
 	}
@@ -621,11 +621,11 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
 	public void setSaveToDropboxEnabled(boolean saveToDropboxEnabled) {
 		this.saveToDropboxEnabled = saveToDropboxEnabled;
 	}
-    
+
     public boolean isReferexOnlyRecords() {
 		return referexOnlyRecords;
 	}
-    
+
     public String getDropBoxDownloadUrl() {
 		return dropBoxDownloadUrl;
 	}
@@ -641,11 +641,11 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
 	public void setDropBoxClientid(String dropBoxClientid) {
 		this.dropBoxClientid = dropBoxClientid;
 	}
-    
+
 	public void setReferexOnlyRecords(boolean referexOnlyRecords) {
 		this.referexOnlyRecords = referexOnlyRecords;
 	}
-	
+
 	public boolean isSaveToGoogleEnabled() {
 		return saveToGoogleEnabled;
 	}
@@ -653,7 +653,7 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
 	public void setSaveToGoogleEnabled(boolean saveToGoogleEnabled) {
 		this.saveToGoogleEnabled = saveToGoogleEnabled;
 	}
-	
+
 	public String getDownloadMedium() {
 		return downloadMedium;
 	}
@@ -661,6 +661,6 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
 	public void setDownloadMedium(String downloadMedium) {
 		this.downloadMedium = downloadMedium;
 	}
-    
-    
+
+
 }
