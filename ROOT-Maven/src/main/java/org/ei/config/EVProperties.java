@@ -69,7 +69,12 @@ public final class EVProperties {
 	 * @return
 	 */
 	public static String getRuntimeProperty(String key) {
-		return getInstance().runtimeProperties.getProperty(key);
+	    try {
+	        return getInstance().runtimeProperties.getProperty(key);
+	    } catch (Throwable t) {
+	        log4j.error("Unable to retrieve property by key: '" + key +"'");
+	    }
+	    return "";
 	}
 
     /**

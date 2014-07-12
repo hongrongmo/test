@@ -61,6 +61,9 @@ public final class RuntimeProperties extends Properties {
     /** The Constant SYSTEM_ENVIRONMENT_RUNLEVEL. */
     public static final String SYSTEM_ENVIRONMENT_RUNLEVEL = "com.elsevier.env";
 
+    /** The Constant SYSTEM_ENVIRONMENT_RUNLEVEL. */
+    public static final String SSO_CORE_REDIRECT_FLAG = "sso.core.redirect.flag";
+
     /** The Constant ROOT_LOG_LEVEL. */
     public static final String ROOT_LOG_LEVEL = "root.log.level";
 

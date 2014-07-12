@@ -27,9 +27,6 @@ import org.ei.service.ANEServiceConstants;
 import org.ei.service.cars.CARSConstants;
 import org.ei.service.cars.CARSStringConstants;
 import org.ei.service.cars.Impl.CARSResponse;
-import org.ei.service.properties.RuntimePropertiesService;
-import org.ei.service.properties.RuntimePropertiesServiceException;
-import org.ei.service.properties.RuntimePropertiesServiceImpl;
 import org.ei.session.SSOHelper;
 import org.ei.session.SessionManager;
 import org.ei.session.UserSession;
@@ -219,7 +216,7 @@ public class AuthInterceptor implements Interceptor {
      * @return
      * @throws RuntimePropertiesServiceException
      */
-    private boolean isSSORedirectRequired(HttpServletRequest request, UserSession userSession) throws RuntimePropertiesServiceException {
+    private boolean isSSORedirectRequired(HttpServletRequest request, UserSession userSession)  {
         if (request == null || userSession == null) {
             throw new IllegalArgumentException("Invalid parameters passed to isSSORedirectRequired!");
         }
@@ -247,8 +244,8 @@ public class AuthInterceptor implements Interceptor {
         }
 
         // Check to see if SSO is disabled in database runtime properties
-        RuntimePropertiesService runtimePropertiesService = new RuntimePropertiesServiceImpl();
-        if (!runtimePropertiesService.getSSOCoreRedirectFlag()) {
+        String ssoCoreRedirectFlag = EVProperties.getRuntimeProperty(RuntimeProperties.SSO_CORE_REDIRECT_FLAG);
+        if (StringUtils.isBlank(ssoCoreRedirectFlag) || !Boolean.valueOf(ssoCoreRedirectFlag)) {
             log4j.info("SSO Redirect NOT required -SSO disabled in database!");
             return false;
         }
