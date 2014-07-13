@@ -18,7 +18,7 @@
 	</appender>
 	
 	<appender name="CARSERRORRFA" class="org.apache.log4j.DailyRollingFileAppender">
-		<param name="File" value="${catalina.base}/logs/cserrors.log" />
+		<param name="File" value="${catalina.base}/logs/carserrors.log" />
 		<param name="DatePattern" value="'.'yyyy-MM-dd" />
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern" value="%d %-5p (%F:%L) - %m%n" />
