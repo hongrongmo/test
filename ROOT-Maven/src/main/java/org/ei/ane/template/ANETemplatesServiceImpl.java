@@ -22,16 +22,15 @@ public class ANETemplatesServiceImpl implements ANETemplatesService {
 
 		Cache cache = EVCache.getCarsTemplatesCache();
 
-		log4j.info(EVCache.NCE_CARS_TEMPLATE +" from EV cache >> "+cache.get(EVCache.NCE_CARS_TEMPLATE)+" and template update date is "+templateUpdateDate);
 		
 		if ((null != cache.get(EVCache.NCE_CARS_TEMPLATE))) {
 			if (!IsCARSTemplatedUpdatedAfterCaching(templateUpdateDate, cache)) {
 				return (Templates) getANETemplateMapFromCache(cache).get(nceName);
 			}
 		}
-		log4j.info("Template not available from the cache and trying to populate from CSAS.");
+		
 		nceCarsTemplates = populateCacheWithCarsTemplateAndTextZones();
-		log4j.info("Template refreshed or updated from CSAS.");
+		
 		return (Templates) nceCarsTemplates.get(nceName);
 	}
 
