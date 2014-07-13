@@ -28,6 +28,7 @@ import org.ei.exception.ServiceException;
 import org.ei.exception.SystemErrorCodes;
 import org.ei.service.cars.CARSConfigVariables;
 import org.ei.service.cars.CARSConstants;
+import org.ei.service.cars.CARSRequestProcessor;
 import org.ei.service.cars.CARSStringConstants;
 import org.ei.service.cars.RESTRequestParameters;
 import org.ei.service.cars.rest.request.CARSRequest;
@@ -60,10 +61,11 @@ public class RESTResourceBuilder {
      *
      * @param carsrequest
      * @param request
+     * @param carsRequestProcessor
      * @return
      * @throws ServiceException
      */
-    public static Resource build(CARSRequest carsrequest, HttpServletRequest request) throws ServiceException {
+    public static Resource build(CARSRequest carsrequest, HttpServletRequest request, CARSRequestProcessor carsRequestProcessor) throws ServiceException {
 
         Resource resource = null;
         StringBuffer  resourceLog = new StringBuffer();
@@ -79,9 +81,9 @@ public class RESTResourceBuilder {
                 CARSConfigVariables.getConstantAsString(CARSConfigVariables.CARS_END_POINT) +
                 carsrequest.getRequestURI());
 
-            resourceLog.append("Base Url : "+ BaseServiceConstants.getServicesBaseURL() +
+            resourceLog.append("Cars Base Url : "+ BaseServiceConstants.getServicesBaseURL() +
                 CARSConfigVariables.getConstantAsString(CARSConfigVariables.CARS_END_POINT) +
-                carsrequest.getRequestURI());
+                carsrequest.getRequestURI()+"\n");
             
             
             
@@ -93,10 +95,12 @@ public class RESTResourceBuilder {
                     CARSConfigVariables.getConstantAsString(CARSConfigVariables.X_ELS_AUTHENTICATION_VALUE)
                     );
 
-            
+            resourceLog.append("Header 1 : key="+CARSConfigVariables.getConstantAsString(CARSConfigVariables.X_ELS_AUTHENTICATION)+" , value="+CARSConfigVariables.getConstantAsString(CARSConfigVariables.X_ELS_AUTHENTICATION_VALUE)+"\n");
             
             resource.header(CARSStringConstants.ACCEPT_ENCODING.value(), CARSConstants.GZIP);
 
+            resourceLog.append("Header 2 : key="+CARSStringConstants.ACCEPT_ENCODING.value()+" , value="+CARSConstants.GZIP+"\n");
+            
             //
             // Add session affinity cookie if present
             //
@@ -106,7 +110,8 @@ public class RESTResourceBuilder {
                 resource.header(CARSStringConstants.SESSION_AFFINITY_KEY.value(), sessionAffinity);
             }
 
-            resourceLog.append(" | sessionAffinity :"+sessionAffinity+" | query param : ");
+            resourceLog.append("Header 3 : key="+CARSStringConstants.SESSION_AFFINITY_KEY.value()+" , value="+sessionAffinity+"\n");
+            resourceLog.append("Cookie : "+CARSStringConstants.SESSION_AFFINITY_KEY.value() + CARSStringConstants.EQUAL.value() + sessionAffinity + CARSStringConstants.SEMICOLON.value()+"\n");
             
             //
             // Process request params if present
@@ -122,7 +127,7 @@ public class RESTResourceBuilder {
                     // If special requset parameter, convert from MultiValuedMap
                     if (CARSStringConstants.REQUEST_PARAMS_HOLDER.value().equalsIgnoreCase(pair.getKey().getReqParam())) {
                         resource.queryParams(convertToMultiValuedMap(pair));
-                        resourceLog.append("&"+convertToMultiValuedMap(pair));
+                        resourceLog.append("requetParameters :"+convertToMultiValuedMap(pair)+"\n");
                     }
                     // Otherwise, just process the key/value pair
                     else {
@@ -137,15 +142,32 @@ public class RESTResourceBuilder {
                             log4j.error("Error occured while encoding" + pair.getKey().getReqParam());
                         }
                         resource.queryParam(pair.getKey().getReqParam(), value);
-                        resourceLog.append("&"+pair.getKey().getReqParam()+"="+ value);
+                        resourceLog.append("requetParameter :"+pair.getKey().getReqParam()+"="+ value+"\n");
                     }
                 }
             }
+            
+            carsRequestProcessor.setErrorLog(resourceLog.toString());
+            resourceLog = null;
+            
         } catch (Exception e) {
-            log4j.error("Unable to build Resource!  Exception: " + e.getClass() + ", message: " + e.getMessage());
+        	StringBuffer errorlog = new StringBuffer();
+        	errorlog.append("\n*******************************************CARS ERROR LOG START*******************************************************\n");
+        	errorlog.append("Exception while building the resource object : "+ e.getClass() + ", message: " + e.getMessage()+"\n");
+        	errorlog.append("Request details :"+resourceLog.toString()+"\n");
+        	resourceLog = null;
+        	errorlog.append("*******************************************CARS ERROR LOG END*********************************************************");
+        	try{
+        		Logger carsErrorLog4j = Logger.getLogger("CarsErrorLogger");
+        		carsErrorLog4j.info(errorlog.toString());
+        	}catch(Exception exp){
+        		log4j.warn("Could not log using cars error logger ! , prinitng exception via root logger.");
+        		log4j.warn(errorlog.toString());
+        	}
+        	errorlog = null;
+        	log4j.error("Unable to build Resource!  Exception: " + e.getClass() + ", message: " + e.getMessage());
             throw new ServiceException(SystemErrorCodes.REST_RESOURCE_ERROR, e);
         }
-        log4j.info(resourceLog.toString());
         return resource;
     }
 
@@ -155,14 +177,17 @@ public class RESTResourceBuilder {
      *
      * @param carsrequest
      * @param httprequest
+     * @param carsRequestProcessor
      * @return
      */
-    public static PostMethod buildPostMethod(CARSRequest carsrequest, HttpServletRequest httprequest) {
+    public static PostMethod buildPostMethod(CARSRequest carsrequest, HttpServletRequest httprequest, CARSRequestProcessor carsRequestProcessor) {
 
         PostMethod postMethod = null;
 
         Part[] parts = fetchParts(carsrequest, httprequest);
 
+        StringBuffer  resourceLog = new StringBuffer();
+        resourceLog.append("To build post method, isPostAsGet : "+carsrequest.isPostAsGet()+"\n");
         if (carsrequest.isPostAsGet()) {
             String querystring = null;
             try {
@@ -174,11 +199,19 @@ public class RESTResourceBuilder {
                 BaseServiceConstants.getServicesBaseURL() +
                 CARSConfigVariables.getConstantAsString(CARSConfigVariables.CARS_END_POINT) +
                 carsrequest.getRequestURI() + querystring);
+            resourceLog.append("Cars Url for post method : "+
+                    BaseServiceConstants.getServicesBaseURL() +
+                    CARSConfigVariables.getConstantAsString(CARSConfigVariables.CARS_END_POINT) +
+                    carsrequest.getRequestURI() + querystring+"\n");
         } else {
             postMethod = new PostMethod(
                 BaseServiceConstants.getServicesBaseURL() +
                 CARSConfigVariables.getConstantAsString(CARSConfigVariables.CARS_END_POINT) +
                 carsrequest.getRequestURI());
+            resourceLog.append("Cars Url for post method : "+
+                    BaseServiceConstants.getServicesBaseURL() +
+                    CARSConfigVariables.getConstantAsString(CARSConfigVariables.CARS_END_POINT) +
+                    carsrequest.getRequestURI()+"\n");
             postMethod.setRequestEntity(new MultipartRequestEntity(parts, postMethod.getParams()));
         }
 
@@ -186,7 +219,9 @@ public class RESTResourceBuilder {
                 CARSConfigVariables.getConstantAsString(CARSConfigVariables.X_ELS_AUTHENTICATION),
                 CARSConfigVariables.getConstantAsString(CARSConfigVariables.X_ELS_AUTHENTICATION_VALUE));
 
-
+        resourceLog.append("Header 1 : key="+CARSConfigVariables.getConstantAsString(CARSConfigVariables.X_ELS_AUTHENTICATION)+", value="+CARSConfigVariables.getConstantAsString(CARSConfigVariables.X_ELS_AUTHENTICATION_VALUE)+"\n");
+        carsRequestProcessor.setErrorLog(resourceLog.toString());
+        resourceLog = null;
         return postMethod;
     }
 
@@ -195,23 +230,28 @@ public class RESTResourceBuilder {
      *
      * @param carsrequest
      * @param httprequest
+     * @param carsRequestProcessor
      * @return
      */
-    public static PutMethod buildPutMethod(CARSRequest carsrequest, HttpServletRequest httprequest) {
-
+    public static PutMethod buildPutMethod(CARSRequest carsrequest, HttpServletRequest httprequest, CARSRequestProcessor carsRequestProcessor) { 
+    	StringBuffer  resourceLog = new StringBuffer();
+        
         PutMethod putMethod = new PutMethod(
             BaseServiceConstants.getServicesBaseURL() +
             CARSConfigVariables.getConstantAsString(CARSConfigVariables.CARS_END_POINT) +
             carsrequest.getRequestURI());
-
+        resourceLog.append("Cars Url for put method :"+ BaseServiceConstants.getServicesBaseURL() +
+                CARSConfigVariables.getConstantAsString(CARSConfigVariables.CARS_END_POINT) +
+                carsrequest.getRequestURI()+"\n");
         putMethod.setRequestHeader(
                 CARSConfigVariables.getConstantAsString(CARSConfigVariables.X_ELS_AUTHENTICATION),
                 CARSConfigVariables.getConstantAsString(CARSConfigVariables.X_ELS_AUTHENTICATION_VALUE));
 
-
+        resourceLog.append("Header 1 : key="+CARSConfigVariables.getConstantAsString(CARSConfigVariables.X_ELS_AUTHENTICATION)+", value="+CARSConfigVariables.getConstantAsString(CARSConfigVariables.X_ELS_AUTHENTICATION_VALUE)+"\n");
         Part[] parts = fetchParts(carsrequest, httprequest);
         putMethod.setRequestEntity(new MultipartRequestEntity(parts, putMethod.getParams()));
-
+        carsRequestProcessor.setErrorLog(resourceLog.toString());
+        resourceLog = null;
         return putMethod;
     }
 

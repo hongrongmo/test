@@ -82,7 +82,6 @@ public class CARSResponseHelper {
 	 */
 	private static Templates getTemplate(CARSResponse resp) throws ServiceException {
 
-		log4j.info("template name : "+resp.getTemplateName()+" and template update date : "+resp.getTemplateUpdateDate());
 		
 		if (StringUtils.isNotBlank(resp.getTemplateName())) {
 			ANETemplatesService templateService = new ANETemplatesServiceImpl();
