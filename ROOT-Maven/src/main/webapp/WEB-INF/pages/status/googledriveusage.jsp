@@ -4,7 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ taglib uri="http://java.sun.com/jstl/sql" prefix="sql" %>
 <%@ taglib uri="http://stripes.sourceforge.net/stripes.tld" prefix="stripes" %>
-    
+
 <stripes:layout-render name="/WEB-INF/pages/layout/standard.jsp" pageTitle="Engineering Village - Google Drive Usage">
     <stripes:layout-component name="csshead">
 	    <jsp:include page="include/customcss.jsp"></jsp:include>
@@ -13,8 +13,8 @@
 	    <style type="text/css">
 	        h2 {font-size: 14px; margin: 3px; padding: 0}
 	            #usage_table {border:1px solid black;}
-	            #usage_table_wrapper {width: 750px} 
-	            #usage_table_wrapper input {margin: 5px 0}  
+	            #usage_table_wrapper {width: 750px}
+	            #usage_table_wrapper input {margin: 5px 0}
 	    </style>
     </stripes:layout-component>
     <stripes:layout-component name="header">
@@ -25,20 +25,14 @@
 	    	<jsp:include page="include/tabs.jsp"/>
 	        <div class="marginL10">
 		    	<div style="margin-left:5px">
-			    	<stripes:errors>
-		                 <img style="margin-bottom:5px" src="/static/images/red_warning.gif"><b>&nbsp;&nbsp;<stripes:individual-error /></b>
-		            </stripes:errors>
-		            <c:if test="${not empty actionBean.context.messages}">
-					    <c:forEach var="message" items="${actionBean.context.messages}"><span style="font-weight:bold;color: #148C75;">${message.message}</span></c:forEach>
-					</c:if>
 			    	<h2>Save to Google Drive Usage<span style="font-size:20px"> [ Total Downloads : ${totalCount} ]</span></h2>
 			        <p>
 			            This page allows you to view usage of save to google drive functionality.</span>
 			        </p>
 			        <br/>
 			        <form name="usageForm" id="usageForm" method="GET" action="/status.url">
-			        
-			        	<div> 
+
+			        	<div>
 			        		<input type="radio" id="downloadformat" name="usageOption" value="downloadformat"  <c:if test="${actionBean.usageOption eq 'downloadformat'}">checked="checked"</c:if>/><label for="downloadformat">Download Format</label>
 			        		<input type="radio" id="ip" name="usageOption" value="ip"  <c:if test="${actionBean.usageOption eq 'ip'}">checked="checked"</c:if>/><label for="ip">IP</label>
 			        		<input type="radio" id="acctNo" name="usageOption" value="acctNo"  <c:if test="${actionBean.usageOption eq 'acctNo'}">checked="checked"</c:if>/><label for="acctNo">Account Number</label>
@@ -51,38 +45,38 @@
 		    	</div>
 		    	<br />
 		    	<c:choose>
-				    <c:when test="${not empty dateQueryinfo}"> 
+				    <c:when test="${not empty dateQueryinfo}">
 					   <div style="padding-left:5px;color:red">${dateQueryinfo}</div>
 				    </c:when>
 				    <c:otherwise>
-				    	
+
 				    </c:otherwise>
-			    </c:choose>  
+			    </c:choose>
 		    	<table  id="usage_table">
 				    <thead>
 				        <tr>
 				            <th>Index</th>
 				            <th>
 					    	<c:choose>
-							    <c:when test="${actionBean.usageOption eq 'downloadformat'}"> 
+							    <c:when test="${actionBean.usageOption eq 'downloadformat'}">
 					                Download Format
 						        </c:when>
-							    <c:when test="${actionBean.usageOption eq 'ip'}"> 
+							    <c:when test="${actionBean.usageOption eq 'ip'}">
 								    IP
 							    </c:when>
-							    <c:when test="${actionBean.usageOption eq 'acctNo'}"> 
+							    <c:when test="${actionBean.usageOption eq 'acctNo'}">
 								    Account Number
 							    </c:when>
 							    <c:otherwise>
 				        		</c:otherwise>
 			    			</c:choose>
-			    			</th> 
+			    			</th>
 			    			<th>Download Count</th>
 						</tr>
 					</thead>
 				    <tbody>
 					    <c:choose>
-						    <c:when test="${not empty usageData}"> 
+						    <c:when test="${not empty usageData}">
 							    <c:forEach var="entry" items="${usageData}">
 							        <tr>
 							            <td></td>
@@ -98,7 +92,7 @@
 						            <td></td>
 							    </tr>
 						    </c:otherwise>
-					    </c:choose>  
+					    </c:choose>
 				    </tbody>
 				    <tfoot>
 			            <tr>
@@ -108,22 +102,22 @@
 			        </tfoot>
 				</table>
 				<br />
-			</div>    
-	   	</div>    
+			</div>
+	   	</div>
     </stripes:layout-component>
-    
+
     <stripes:layout-component name="jsbottom">
    	    <script type="text/javascript" src="/static/js/jquery/jquery.dataTables-1.10.0.min.js"></script>
-	    
+
 	    <script type="text/javascript">
 	        $(document).ready(function() {
-	        	
+
 	        	$('#dateSearch').change( function() {
 	        		var isChecked = this.checked;
 
 	        	    if(isChecked) {
-	        	        $("#datepicker1").prop("disabled",false); 
-	        	        $("#datepicker2").prop("disabled",false); 
+	        	        $("#datepicker1").prop("disabled",false);
+	        	        $("#datepicker2").prop("disabled",false);
 	        	        $( "#datepicker1" ).datepicker({
 			        		 onSelect: function(selected) {
 			        			 $("#datepicker2").datepicker("option","minDate", selected);
@@ -138,14 +132,14 @@
 			        		 maxDate: new Date(),
 			        		 dateFormat: 'dd-mm-yy'
 			        	 });
-			        	
+
 	        	    } else {
-	        	    	$("#datepicker1").prop("disabled",true); 
+	        	    	$("#datepicker1").prop("disabled",true);
 	        	        $("#datepicker2").prop("disabled",true);
 	        	    }
 		        });
-	        		
-	        	 
+
+
 		    	 $('#usage_table').dataTable({
 		    		 "aaSorting": [[2,"desc"]],
 		             "aoColumns": [null, null, null],
@@ -166,7 +160,7 @@
 		     		},
 		     		"footerCallback": function ( row, data, start, end, display ) {
 		                var api = this.api(), data;
-		     
+
 		                // Remove the formatting to get integer data for summation
 		                var intVal = function ( i ) {
 		                    return typeof i === 'string' ?
@@ -174,7 +168,7 @@
 		                        typeof i === 'number' ?
 		                            i : 0;
 		                };
-		     
+
 // 		                // Total over all pages
 // 		                data = api.column( 2 ).data();
 // 		                total = data.length ?
@@ -182,7 +176,7 @@
 // 		                            return intVal(a) + intVal(b);
 // 		                    } ) :
 // 		                    0;
-		     
+
 		                // Total over this page
 		                data = api.column( 2, { page: 'current'} ).data();
 		                pageTotal = data.length ?
@@ -190,23 +184,23 @@
 		                            return intVal(a) + intVal(b);
 		                    } ) :
 		                    0;
-		     
+
 		                // Update footer
 		                $( api.column( 2 ).footer() ).html(
 		                    pageTotal
 		                );
 		            }
-		     		 
+
 		         });
-		    	 
+
 		    } );
-	        
-	        
-	        
+
+
+
 	       function doSubmitAction(){
 	    	   var usageOption = $('input[name="usageOption"]:checked').val();
 	    	   var dateRange = $('input[name="dateRange"]:checked').val();
-	    	   var actionUrl = '/status/driveusage.url?usageOption='+usageOption;	
+	    	   var actionUrl = '/status/driveusage.url?usageOption='+usageOption;
 	    	   if(dateRange != undefined){
 	    		   var date1 = $( "#datepicker1" ).val();
 	    		   var date2 = $( "#datepicker2" ).val();
@@ -214,14 +208,14 @@
 	    			   alert('Must enter start and end date.');
 	    			   return false;
 	    		   }else{
-	    			   actionUrl += '&startDate='+date1; 
-	    			   actionUrl += '&endDate='+date2; 
+	    			   actionUrl += '&startDate='+date1;
+	    			   actionUrl += '&endDate='+date2;
 	    		   }
 	    	   }
-	    	   document.getElementById('usageForm').action = actionUrl;	  
-	   		   document.getElementById('usageForm').submit();	
+	    	   document.getElementById('usageForm').action = actionUrl;
+	   		   document.getElementById('usageForm').submit();
 	   	   }
-	        
+
 	    </script>
 	</stripes:layout-component>
 </stripes:layout-render>

@@ -3,7 +3,6 @@ package org.ei.session;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
@@ -25,7 +24,6 @@ import org.ei.ane.entitlements.UserEntitlement.ENTITLEMENT_TYPE;
 import org.ei.ane.textzones.TextZonesConstants;
 import org.ei.ane.textzones.TextZonesService;
 import org.ei.ane.textzones.TextZonesServiceImpl;
-import org.ei.biz.security.SecurityAttribute;
 import org.ei.books.collections.ReferexCollection;
 import org.ei.bulletins.BulletinGUI;
 import org.ei.config.EVProperties;
@@ -35,7 +33,6 @@ import org.ei.controller.IPBlocker;
 import org.ei.domain.InvalidArgumentException;
 import org.ei.domain.personalization.EVWebUser;
 import org.ei.domain.personalization.IEVWebUser;
-import org.ei.domain.personalization.MergePersonalAccount;
 import org.ei.domain.personalization.PersonalAccount;
 import org.ei.domain.personalization.UserProfile;
 import org.ei.exception.InfrastructureException;
@@ -423,7 +420,7 @@ public class SessionManager {
             // Create brand new UserSession and write to database
             // session = this.request.getSession(true);
             // log4j.warn("******** Created new Tomcat session, id: " + session.getId());
-            usersession = buildNewUserSession(session);
+            usersession = buildNewUserSession();
         } else {
             usersession = (UserSession) session.getAttribute(session.getId());
         }
@@ -452,24 +449,13 @@ public class SessionManager {
      * @return
      * @throws SessionException
      */
-    public UserSession buildNewUserSession(HttpSession session) throws SessionException {
+    public UserSession buildNewUserSession() {
         log4j.info("Building new UserSession...");
 
         UserSession userSession = new UserSession();
         userSession.setUser(new EVWebUser());
-        // userSession.setSessionID(new SessionID(session.getId(), 1));
-        // Save it in the database and in local session
-        /*
-         * if(null == sessionBroker.getUserSession(new SessionID(session.getId(), 1))){ usersession = sessionBroker.createSession(new EVWebUser(),
-         * session.getId()); }else{ usersession= new UserSession(); sessionBroker.updateSession(usersession); }
-         */
-
         userSession.setProperties(new Properties());
         addRequestMetadata(userSession);
-        // session.setAttribute(userSession.getSessionID().getID(), userSession);
-
-        // Write a session cookie
-        // writeSessionCookie(userSession.getSessionID());
 
         return userSession;
     }
@@ -556,22 +542,25 @@ public class SessionManager {
             return null;
         }
         if (request.getParameter(SessionManager.REQUEST_PT) == null) {
-            HttpSession session = this.request.getSession(true);
-            usersession.setSessionID(new SessionID(session.getId(), 1));
-            // Increment version on session ID
-            SessionID sessionidObj = new SessionID(usersession.getSessionID().getID(), usersession.getSessionID().getVersionNumber() + (incrementversion ? 1 : 0));
-            usersession.setSessionID(sessionidObj);
-            // Write new EISESSION cookie to response
-            writeSessionCookie(sessionidObj);
-            // Update into local container session
-            session.setAttribute(usersession.getSessionID().getID(), usersession);
-            // Update database
-            // sessionBroker.updateSession(usersession);
+        	// Only create a new session if this is a valid customer!
+        	if (usersession.getUser().isCustomer()) {
+	            HttpSession session = this.request.getSession(true);
+	            usersession.setSessionID(new SessionID(session.getId(), 1));
+	            // Increment version on session ID
+	            SessionID sessionidObj = new SessionID(usersession.getSessionID().getID(), usersession.getSessionID().getVersionNumber() + (incrementversion ? 1 : 0));
+	            usersession.setSessionID(sessionidObj);
+	            // Write new EISESSION cookie to response
+	            writeSessionCookie(sessionidObj);
+	            // Update into local container session
+	            session.setAttribute(usersession.getSessionID().getID(), usersession);
+	            // Update database
+	            // sessionBroker.updateSession(usersession);
 
-            if (session.isNew()) {
-                log4j.info("New session created!  Incrementing session counter...");
-                IPBlocker.getInstance().increment(HttpRequestUtil.getIP(request), IPBlocker.COUNTER.SESSION);
-            }
+	            if (session.isNew()) {
+	                log4j.info("New session created!  Incrementing session counter...");
+	                IPBlocker.getInstance().increment(HttpRequestUtil.getIP(request), IPBlocker.COUNTER.SESSION);
+	            }
+        	}
         } else {
             log4j.warn("NO new session created due to SYSTEM_PT parameter!");
             try {

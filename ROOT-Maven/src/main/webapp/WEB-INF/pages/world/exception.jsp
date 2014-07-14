@@ -10,7 +10,7 @@
 	<link href="/static/css/ev_txt.css?v=${releaseversion}" media="all" type="text/css" rel="stylesheet"></link>
 	<link href="/static/css/ev_common_sciverse.css?v=${releaseversion}" media="all" type="text/css" rel="stylesheet"></link>
 
-	<script type="text/javascript" src="/static/js/jquery/jquery-1.8.0.min.js?v=${releaseversion}"></script>
+	<script type="text/javascript" src="/static/js/jquery/jquery-1.10.2.min.js?v=${releaseversion}"></script>
     <script type="text/javascript" src="/static/js/galibrary.js"></script>
 	<script type="text/javascript">
     // Initialize GA

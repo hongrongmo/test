@@ -22,13 +22,15 @@ public class ANETemplatesServiceImpl implements ANETemplatesService {
 
 		Cache cache = EVCache.getCarsTemplatesCache();
 
+		
 		if ((null != cache.get(EVCache.NCE_CARS_TEMPLATE))) {
 			if (!IsCARSTemplatedUpdatedAfterCaching(templateUpdateDate, cache)) {
 				return (Templates) getANETemplateMapFromCache(cache).get(nceName);
 			}
 		}
+		
 		nceCarsTemplates = populateCacheWithCarsTemplateAndTextZones();
-
+		
 		return (Templates) nceCarsTemplates.get(nceName);
 	}
 

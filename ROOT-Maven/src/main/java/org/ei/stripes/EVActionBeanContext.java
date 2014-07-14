@@ -51,7 +51,7 @@ public class EVActionBeanContext extends ActionBeanContext {
     public static String XML_CID = "openXML";
     public static String RSS_CID = "openRSS";
     public static String REDIR_PAGE_SESSION_EXPIRED = "endSession";
-    
+
 	private static Logger log4j = Logger.getLogger(EVActionBeanContext.class);
 	private static DateFormat fmt = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 	private String timestamp = fmt.format(new Date());
@@ -88,14 +88,18 @@ public class EVActionBeanContext extends ActionBeanContext {
 	}
 
 	/**
-	 * Convenience method to get UserSession  
-	 * @throws SessionException 
+	 * Convenience method to get UserSession
+	 * @throws SessionException
 	 */
 	UserSession usersession;
 	public void setUserSession(UserSession usersession) {
 		this.usersession = usersession;
 	}
 	public UserSession getUserSession() {
+		if (usersession == null) {
+			SessionManager sessionmanager = new SessionManager(this.getRequest(), this.getResponse());
+			return sessionmanager.buildNewUserSession();
+		}
 		return usersession;
 	}
 	public UserSession updateUserSession(UserSession usersession) throws SessionException {
@@ -125,7 +129,7 @@ public class EVActionBeanContext extends ActionBeanContext {
         	if(null != usersession.getSessionID()){
             String sessionID = (usersession.getSessionID()).toString();
             Cookie cookie = new Cookie("EISESSION", sessionID);
-        	
+
             // A negative value means that the cookie is not stored persistently
             // and will be deleted when the Web browser exits. A zero value
             // causes the cookie to be deleted.
@@ -141,7 +145,7 @@ public class EVActionBeanContext extends ActionBeanContext {
                 dpCookie.setPath("/");
                 response.addCookie(dpCookie);
             }
-            
+
             String encodedACWRequestParm = getEncodeACWRequestParameter();
             if (StringUtils.isNotBlank(encodedACWRequestParm)) {
                 Cookie acwCookie = new Cookie(CARSStringConstants.ACW.value(), encodedACWRequestParm);
@@ -149,13 +153,13 @@ public class EVActionBeanContext extends ActionBeanContext {
                 acwCookie.setPath("/");
                 acwCookie.setDomain(".engineeringvillage.com");
                 response.addCookie(acwCookie);
-                
+
             }
-            
+
         }
     }
-    
-    
+
+
 
     /**
      * Return the encoded ACW request parms
@@ -172,9 +176,9 @@ public class EVActionBeanContext extends ActionBeanContext {
         }
         return "";
     }
-    
+
 /**
- * Builds the ContentDescriptor object from 
+ * Builds the ContentDescriptor object from
  * @param usess
  * @param request
  * @return
@@ -200,9 +204,9 @@ public class EVActionBeanContext extends ActionBeanContext {
 		/*
 		 * Look for customized content.
 		 */
-		 log4j.info("Building ContentDescriptor object, customer ID = " 
-			+ u.getCustomerID() 
-			+ ", content ID = " 
+		 log4j.info("Building ContentDescriptor object, customer ID = "
+			+ u.getCustomerID()
+			+ ", content ID = "
 			+ (contentID == null ? "null" : contentID));
 		ContentDescriptor cd = null;
 		if (u.isCustomer()) {
@@ -214,10 +218,10 @@ public class EVActionBeanContext extends ActionBeanContext {
 
 		return cd;
 	}
-	
+
 	/**
 	 * Returns a DataRequest object representing the current request
-	 * 
+	 *
 	 * @param usess
 	 * @param request
 	 * @return
@@ -252,7 +256,7 @@ public class EVActionBeanContext extends ActionBeanContext {
 
 	/**
 	 * Retrieves the DataResponse for the current request.
-	 * 
+	 *
 	 * @param request Current HTTP request
 	 * @param dataCacheDir Data cache directory string
 	 * @param printer OutputPrinter object (used by DataResponseBroker for writing direct response)
@@ -261,39 +265,39 @@ public class EVActionBeanContext extends ActionBeanContext {
 	 * @throws Exception
 	 */
 	public DataResponse getDataResponse(
-			HttpServletRequest request, 
-			String dataCacheDir, 
-			OutputPrinter printer, 
+			HttpServletRequest request,
+			String dataCacheDir,
+			OutputPrinter printer,
 			DataRequest dataRequest) throws Exception {
-		
-		// Use the DataResponseBroker to retrieve the response 
+
+		// Use the DataResponseBroker to retrieve the response
 		DataResponse dataResponse = null;
 		DataResponseBroker resBroker = DataResponseBroker.getInstance(dataCacheDir);
 		dataResponse = resBroker.getDataResponse(printer, dataRequest);
 		return dataResponse;
 	}
-	
-	
+
+
 	public DataResponse getDataResponseForActionBean(
-			HttpServletRequest request, 
-			String dataCacheDir, 
-			OutputPrinter printer, 
+			HttpServletRequest request,
+			String dataCacheDir,
+			OutputPrinter printer,
 			DataRequest dataRequest, String xmlUrl) throws ServiceException, InfrastructureException  {
-		
-		// Use the DataResponseBroker to retrieve the response 
+
+		// Use the DataResponseBroker to retrieve the response
 		DataResponse dataResponse = null;
 		DataResponseBroker resBroker = DataResponseBroker.getInstance(dataCacheDir);
 		dataResponse = resBroker.getDataResponseForActionBean(printer, dataRequest, xmlUrl);
 		return dataResponse;
 	}
-	
-	
+
+
 	/**
 	 * Convenience method for determining if user is individually authenticated.
 	 * Same thing can be accomplished with:
-	 * 
+	 *
 	 * context.getUserSession().getUser().isIndividuallyAuthenticated();
-	 * 
+	 *
 	 * @return boolean true if user is individually authenticated, false
 	 *         otherwise.
 	 */
@@ -316,7 +320,7 @@ public class EVActionBeanContext extends ActionBeanContext {
 	/**
 	 * Get the current user id. NOTE that this will be null or empty when the
 	 * user is NOT logged in!
-	 * 
+	 *
 	 * @return Userid
 	 */
 	public String getUserid() {
@@ -331,7 +335,7 @@ public class EVActionBeanContext extends ActionBeanContext {
 			return null;
 		}
 	}
-	
+
 	/**
 	 * Return timestamp
 	 * @return
@@ -352,7 +356,7 @@ public class EVActionBeanContext extends ActionBeanContext {
     /**
      * Builds a new OutputPrinter object.  This is used to write a streamed
      * response instead of using a Stripes Action/JSP to service a request
-     * 
+     *
      * @param request
      * @param response
      * @param appendSession
@@ -360,9 +364,9 @@ public class EVActionBeanContext extends ActionBeanContext {
      * @throws Exception
      */
 	public OutputPrinter buildPrinter(HttpServletRequest request,HttpServletResponse response,boolean appendSession) throws Exception {
-		
+
 		OutputPrinter printer = new OutputPrinter(response,appendSession,getServerName(request));
-		
+
 		// Use the session ID from the cookie if available
         if(CookieHandler.getSessionID(request) == null)
         {
@@ -372,25 +376,25 @@ public class EVActionBeanContext extends ActionBeanContext {
         {
             printer.setAppendSession(false);
         }
-        
+
         // Get the entry token from the request if available
         String entryToken = request.getParameter("SYSTEM_ENTRY_TOKEN");
         if(entryToken != null)
         {
 			printer.setEntryToken(entryToken);
 		}
-        
+
         // Get the cache from the request
 		if(request.getAttribute("cache") != null)
 		{
 			printer.setCacheID((String)request.getAttribute("cache"));
 		}
-		
+
 		return printer;
 	}
 
 	/**
-	 * The DataRequest object representing the current request into EV.  
+	 * The DataRequest object representing the current request into EV.
 	 */
 	private DataRequest datarequest;
 	public DataRequest getDataRequest() {
@@ -399,16 +403,16 @@ public class EVActionBeanContext extends ActionBeanContext {
 	public void setDataRequest(DataRequest datarequest) {
 		this.datarequest = datarequest;
 	}
-	
+
 	/**
 	 * Builds the DataRequest object for the current request
 	 * @param usess
 	 * @param request
 	 * @return
-	 * @throws UnknownHostException 
+	 * @throws UnknownHostException
 	 * @throws Exception
 	 */
-    public DataRequest buildDataRequest(UserSession usess, HttpServletRequest request) throws UnknownHostException 
+    public DataRequest buildDataRequest(UserSession usess, HttpServletRequest request) throws UnknownHostException
     {
 
     	usess.getUser();
@@ -425,10 +429,10 @@ public class EVActionBeanContext extends ActionBeanContext {
 
         return new DataRequest(usess, requestParams);
     }
-    
+
 	/**
 	 * Return the server name including port (if not 80)
-	 * 
+	 *
 	 * @param request
 	 * @return
 	 */
@@ -441,11 +445,11 @@ public class EVActionBeanContext extends ActionBeanContext {
 		}
 		return serverName;
 	}
-	
-	
+
+
 	/**
 	 * Return the HelpUrl  from web.xml
-	 * 
+	 *
 	 * @return
 	 * @throws Exception
 	 */
@@ -455,7 +459,7 @@ public class EVActionBeanContext extends ActionBeanContext {
 	public HttpSession getExistingSession() {
 		return getRequest().getSession(false);
 	}
-	
-	
-	
+
+
+
 }
