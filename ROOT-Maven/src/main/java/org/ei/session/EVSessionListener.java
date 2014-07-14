@@ -73,16 +73,13 @@ public class EVSessionListener implements HttpSessionListener {
         try {
             con = m_broker.getConnection(DatabaseConfig.SESSION_POOL);
             for (String table : strTableArray) {
-                PreparedStatement pstmt1 = null;
                 try {
-                    pstmt1 = con.prepareStatement("DELETE FROM " + table + " WHERE SESSION_ID=?");
-                    pstmt1.setString(1, sessionid);
-                    int count = pstmt1.executeUpdate();
+                    pstmt = con.prepareStatement("DELETE FROM " + table + " WHERE SESSION_ID=?");
+                    pstmt.setString(1, sessionid);
+                    int count = pstmt.executeUpdate();
                     log4j.info("DELETE FROM " + table + " WHERE SESSION_ID=? " + sessionid + ", COUNT = " + count);
-                } finally {
-                    if (pstmt1 != null) {
-                        pstmt1.close();
-                    }
+                } catch (Throwable t) {
+                    log4j.error("Unable to execute:  'DELETE FROM " + table + " WHERE SESSION_ID=?", t);
                 }
             }
         } catch (Exception se) {
