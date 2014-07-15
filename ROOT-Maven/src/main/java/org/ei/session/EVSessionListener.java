@@ -80,6 +80,13 @@ public class EVSessionListener implements HttpSessionListener {
                     log4j.info("DELETE FROM " + table + " WHERE SESSION_ID=? " + sessionid + ", COUNT = " + count);
                 } catch (Throwable t) {
                     log4j.error("Unable to execute:  'DELETE FROM " + table + " WHERE SESSION_ID=?", t);
+                } finally {
+                    if (pstmt != null) {
+                        try {
+                            pstmt.close();
+                        } catch (Exception sqle) {
+                        }
+                    }
                 }
             }
         } catch (Exception se) {
