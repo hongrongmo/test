@@ -240,7 +240,7 @@ public class CaptchaAction extends EVActionBean {
 		HttpSession session = request.getSession(false);
 		if (session == null) {
 		    log4j.error("No session object available!");
-		    return SystemMessage.SYSTEM_ERROR_RESOLUTION;
+		    return null;
 		}
 		String ip = HttpRequestUtil.getIP(request);
 		String custID = usess.getUser().getCustomerID();
