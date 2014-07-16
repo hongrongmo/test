@@ -67,20 +67,20 @@ public class SessionBuilderInterceptor implements Interceptor {
 		String ipaddress = HttpRequestUtil.getIP(request);
 		log4j.info("[" + ipaddress + "] Starting intercept...");
 
+        // *****************************************************
+        // Ensure the application has been initialized
+        // *****************************************************
+        if (!EVInitializationListener.isInitialized()) {
+            log4j.warn("[" + ipaddress + "] Application is NOT initialized, going to maintenance page!");
+            return new ForwardResolution("/WEB-INF/pages/world/maintenance.jsp");
+        }
+
 		if (actionbean instanceof ISecuredAction) {
 			accesscontrol = ((ISecuredAction) actionbean).getAccessControl();
 			if (accesscontrol instanceof WorldAccessControl) {
 				return executioncontext.proceed();
 			}
 		}
-
-		// *****************************************************
-        // Ensure the application has been initialized
-        // *****************************************************
-	    if (!EVInitializationListener.isInitialized()) {
-	        log4j.warn("[" + ipaddress + "] Application is NOT initialized, going to maintenance page!");
-	        return new ForwardResolution("/WEB-INF/pages/world/maintenance.jsp");
-	    }
 
         // Add the release version number to the request for JSPs
         request.setAttribute("releaseversion", RuntimeProperties.getInstance().getProperty(RuntimeProperties.RELEASE_VERSION));
