@@ -30,6 +30,7 @@ import org.ei.config.EVProperties;
 import org.ei.config.RuntimeProperties;
 import org.ei.controller.CookieHandler;
 import org.ei.controller.IPBlocker;
+import org.ei.controller.IPBlocker.COUNTER;
 import org.ei.domain.InvalidArgumentException;
 import org.ei.domain.personalization.EVWebUser;
 import org.ei.domain.personalization.IEVWebUser;
@@ -194,6 +195,9 @@ public class SessionManager {
         //       session info on every request!
         if (user.isCustomer() || (carsresponse != null && carsresponse.isPathChoice())) {
             userSession = updateUserSession(userSession, true);
+        }else{
+        	String ipaddress = HttpRequestUtil.getIP(request);
+        	IPBlocker.getInstance().increment(ipaddress, COUNTER.AUTHFAIL);
         }
 
         return userSession;
@@ -223,7 +227,7 @@ public class SessionManager {
         try {
             return URLEncoder.encode(getBrowserSSOKey(context), CARSStringConstants.URL_ENCODE.value());
         } catch (UnsupportedEncodingException e) {
-            log4j.warn("Problem in decoding the SSO Key using " + CARSStringConstants.URL_ENCODE.value() + e.getMessage());
+            log4j.warn( "Problem in decoding the SSO Key using " + CARSStringConstants.URL_ENCODE.value() + e.getMessage());
         }
         return "";
     }

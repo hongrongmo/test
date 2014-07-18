@@ -4,11 +4,15 @@ import java.io.IOException;
 import java.net.InetAddress;
 import java.text.ParseException;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.TimeZone;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
@@ -19,6 +23,7 @@ import org.ei.exception.ServiceException;
 import org.ei.session.BlockedIPEvent;
 import org.ei.session.BlockedIPEvent.TimePeriod;
 import org.ei.session.BlockedIPStatus;
+import org.ei.stripes.util.HttpRequestUtil;
 
 public class IPBlocker {
     private final static Logger log4j = Logger.getLogger(IPBlocker.class);
@@ -26,17 +31,20 @@ public class IPBlocker {
     public static final String IPBLOCKER_BUCKET_INTERVAL_MINUTES_PROPERTY = "ipblocker.bucket.interval.minutes";
     public static final String IPBLOCKER_SESSION_LIMIT_PROPERTY = "ipblocker.session.limit";
     public static final String IPBLOCKER_REQUEST_LIMIT_PROPERTY = "ipblocker.request.limit";
+    public static final String IPBLOCKER_AUTHFAIL_LIMIT_PROPERTY = "ipblocker.authfail.limit";
+    public static final String IPBLOCKER_NONCUSTOMER_REQUEST_LIMIT_PROPERTY = "ipblocker.noncustomer.request.limit";
     public static final String IPBLOCKER_EMAIL_TO_PROPERTY = "ipblocker.email.to";
     public static final String IPBLOCKER_EMAIL_FROM_PROPERTY = "ipblocker.email.from";
-    public static final String IPBLOCKER_DELAY_MILLIS = "ipblocker.delay.millis";
-    public static final String IPBLOCKER_DELAY_ENABLED = "ipblocker.delay.enabled";
+    public static final String SESSION_RATE_LIMITOR_KEY = "ipblocker.session.rate.limitor";
+    public static final String SESSION_RATE_LIMITOR_RESET_SECONDS = "ipblocker.session.rate.limitor.reset.seconds";
+    public static final String SESSION_RATE_LIMITOR_MAX_REQUEST = "ipblocker.session.rate.limitor.max.request";
 
     // Singleton instance
     private static IPBlocker instance;
 
     // Available items to count
     public enum COUNTER {
-        SESSION, REQUEST
+        SESSION, REQUEST, AUTHFAIL, NONCUSTOMER_REQUEST 
     }
 
     // Member variables
@@ -48,8 +56,10 @@ public class IPBlocker {
     private static int bucketincrementtimemin = 15 * 60;
     private static long sessionlimit = 500;
     private static long requestlimit = 1500;
-    private static long delay = 0;
-    private static boolean delayenabled = false;
+    private static long nonCustRequestLimit = 1000;
+    private static long authFailLimit = 500;
+    private static long resetSecondsForSessionRate = 300;
+    private static long maxRequestperSessionRate = 500;
     private static String emailto;
     private static String sender;
 
@@ -88,10 +98,12 @@ public class IPBlocker {
             bucketincrementtimemin = Integer.parseInt(runtimeprops.getProperty(IPBLOCKER_BUCKET_INTERVAL_MINUTES_PROPERTY, "15"));
             sessionlimit = Long.parseLong(runtimeprops.getProperty(IPBLOCKER_SESSION_LIMIT_PROPERTY, "500"));
             requestlimit = Long.parseLong(runtimeprops.getProperty(IPBLOCKER_REQUEST_LIMIT_PROPERTY, "1500"));
+            nonCustRequestLimit = Long.parseLong(runtimeprops.getProperty(IPBLOCKER_NONCUSTOMER_REQUEST_LIMIT_PROPERTY, "1000"));
+            authFailLimit = Long.parseLong(runtimeprops.getProperty(IPBLOCKER_AUTHFAIL_LIMIT_PROPERTY, "500"));
+            resetSecondsForSessionRate = Long.parseLong(runtimeprops.getProperty(SESSION_RATE_LIMITOR_RESET_SECONDS, "300"));
+            maxRequestperSessionRate = Long.parseLong(runtimeprops.getProperty(SESSION_RATE_LIMITOR_MAX_REQUEST, "500"));
             emailto = runtimeprops.getProperty(IPBLOCKER_EMAIL_TO_PROPERTY);
             sender = runtimeprops.getProperty(IPBLOCKER_EMAIL_FROM_PROPERTY);
-            delay = Long.parseLong(runtimeprops.getProperty(IPBLOCKER_DELAY_MILLIS, "0"));
-            delayenabled = Boolean.parseBoolean(runtimeprops.getProperty(IPBLOCKER_DELAY_ENABLED, "false"));
         } catch (Throwable t) {
             log4j.error("Unable to refresh properties!", t);
         }
@@ -124,6 +136,31 @@ public class IPBlocker {
         log4j.info(this.blockMap.size() + " entries added to blocked IPs Map!");
 
     }
+    
+    /**
+     * Refresh blocked ips map.
+     */
+    private void refreshBlockedIpsMap(){
+    	log4j.info("Refreshing blocked IPs Map...");
+
+        try {
+            List<BlockedIPStatus> blockedIPs = BlockedIPStatus.getByStatus(BlockedIPStatus.STATUS_ANY);
+            if (blockedIPs != null && !blockedIPs.isEmpty()) {
+                for (BlockedIPStatus ipstatus : blockedIPs) {
+                    if (ipstatus.isBlocked()) {
+                        this.blockMap.put(ipstatus.getIP(), "y");
+                    } else if (BlockedIPStatus.STATUS_WHITELIST.equals(ipstatus.getStatus())) {
+                        this.whitelistMap.put(ipstatus.getIP(), "true");
+                    }
+                }
+            }
+        } catch (Throwable t) {
+            log4j.error("Unable to read blocked IPs from database...", t);
+            this.blockMap.clear();
+        }
+
+        log4j.info(this.blockMap.size() + " entries refreshed to blocked IPs Map!");
+    }
 
     /**
      * Determine if user is blocked by comparing IP to IPs from list.
@@ -155,14 +192,28 @@ public class IPBlocker {
         }
 
         try {
+        	
+        	
+        	if (isThresholdReached(ip, COUNTER.NONCUSTOMER_REQUEST)) {
+            	// Take one-time action for this abuse
+                String bucketname = getBucketName(ip, COUNTER.NONCUSTOMER_REQUEST);
+                String messagebucket = bucketname + "_MESSAGE";
+                if (memcached.get(messagebucket) == null) {
+                	memcached.add(messagebucket, bucketincrementtimemin * 60, new Boolean(true));
+                    BlockedIPEvent ipevent = new BlockedIPEvent(ip);
+                    ipevent.setEvent(COUNTER.NONCUSTOMER_REQUEST.name());
+                    ipevent.setBucket(bucketname);
+                    ipevent.setMessage("Auto Block Applied : Maximum number of non customer requests exceeded (" + nonCustRequestLimit + ") in " + bucketincrementtimemin
+                        + " minutes for IP address " + ipevent.getIP());
+                    BlockedIPStatus ipstatus = insertBlockedIPsTable(ipevent);
+                    notifyEmail(ipevent, ipstatus);
+                    refreshBlockedIpsMap();
+                    return ipstatus.isBlocked();
+                }
+            }
+        	
             // Check if bucket has signaled abuse
             if (isThresholdReached(ip, COUNTER.REQUEST)) {
-                // Delay request if enabled
-                if (delayenabled) {
-                    log4j.warn("Delaying request due to abuse detection, IP = " + ip);
-                    Thread.sleep(delay);
-                }
-
                 // Take one-time action for this abuse
                 String bucketname = getBucketName(ip, COUNTER.REQUEST);
                 String messagebucket = bucketname + "_MESSAGE";
@@ -177,13 +228,7 @@ public class IPBlocker {
                     notifyEmail(ipevent, ipstatus);
                     return ipstatus.isBlocked();
                 }
-            } else if (isThresholdReached(ip, COUNTER.SESSION)) {
-                // Delay request if enabled
-                if (delayenabled) {
-                    log4j.warn("Delaying request due to abuse detection, IP = " + ip);
-                    Thread.sleep(delay);
-                }
-
+            }else if (isThresholdReached(ip, COUNTER.SESSION)) {
                 // Take one-time action for this abuse
                 String bucketname = getBucketName(ip, COUNTER.SESSION);
                 String messagebucket = bucketname + "_MESSAGE";
@@ -198,9 +243,27 @@ public class IPBlocker {
                     notifyEmail(ipevent, ipstatus);
                     return ipstatus.isBlocked();
                 }
+            }else if (isThresholdReached(ip, COUNTER.AUTHFAIL)) {
+            	// Take one-time action for this abuse
+                String bucketname = getBucketName(ip, COUNTER.AUTHFAIL);
+                String messagebucket = bucketname + "_MESSAGE";
+                if (memcached.get(messagebucket) == null) {
+                	memcached.add(messagebucket, bucketincrementtimemin * 60, new Boolean(true));
+                    BlockedIPEvent ipevent = new BlockedIPEvent(ip);
+                    ipevent.setEvent(COUNTER.AUTHFAIL.name());
+                    ipevent.setBucket(bucketname);
+                    ipevent.setMessage("Maximum number of new authentication failure exceeded (" + authFailLimit + ") in " + bucketincrementtimemin
+                        + " minutes for IP address " + ipevent.getIP());
+                    BlockedIPStatus ipstatus = insertBlockedIPsTable(ipevent);
+                    notifyEmail(ipevent, ipstatus);
+                    return ipstatus.isBlocked();
+                }
             }
+            
+            
         } catch (Throwable t) {
             log4j.error("Unable to check session/request limits!", t);
+            
         }
 
         // Default return false!
@@ -251,6 +314,10 @@ public class IPBlocker {
                 return count > requestlimit;
             else if (counter.equals(COUNTER.SESSION))
                 return count > sessionlimit;
+            else if (counter.equals(COUNTER.AUTHFAIL))
+                return count > authFailLimit;   
+            else if (counter.equals(COUNTER.NONCUSTOMER_REQUEST))
+                return count > nonCustRequestLimit;    
             else
                 return false;
         } catch (Throwable t) {
@@ -284,10 +351,24 @@ public class IPBlocker {
         bucket = getBucketName(ip, COUNTER.REQUEST);
         count = memcached.incr(bucket, 0, 1, bucketincrementtimemin * 60);
         statusMap.put(bucket, Long.toString(count));
+        
+        bucket = getBucketName(ip, COUNTER.AUTHFAIL);
+        count = memcached.incr(bucket, 0, 1, bucketincrementtimemin * 60);
+        statusMap.put(bucket, Long.toString(count));
+        
+        bucket = getBucketName(ip, COUNTER.NONCUSTOMER_REQUEST);
+        count = memcached.incr(bucket, 0, 1, bucketincrementtimemin * 60);
+        statusMap.put(bucket, Long.toString(count));
 
         return statusMap;
     }
 
+    /**
+     * Clear bucket.
+     *
+     * @param ip the ip
+     * @param counter the counter
+     */
     public void clearBucket(String ip, COUNTER counter) {
         MemcachedUtil memcached = MemcachedUtil.getInstance();
         String bucket = getBucketName(ip, COUNTER.REQUEST);
@@ -353,7 +434,11 @@ public class IPBlocker {
             // Update the main ipstatus entry
             BlockedIPStatus ipstatus = BlockedIPStatus.load(ipevent.getIP());
             if (ipstatus == null) {
-                ipstatus = new BlockedIPStatus(ipevent.getIP());
+            	
+            	ipstatus = new BlockedIPStatus(ipevent.getIP());
+            }
+            if(ipevent.getEvent().equalsIgnoreCase(COUNTER.NONCUSTOMER_REQUEST.name())){
+            	ipstatus.setStatus(BlockedIPStatus.STATUS_BLOCKED);
             }
             ipstatus.addAccount(org.ei.domain.personalization.cars.Account.getAccountInfo(ipevent.getIP()));
             ipstatus.save();
@@ -441,4 +526,108 @@ public class IPBlocker {
     public long getReloadInterval() {
         return reloadInterval;
     }
+    
+    
+    /**
+     * Checks if is request per session rate exceeded.
+     *
+     * @param request the request
+     * @return true, if is request per session rate exceeded
+     */
+    public boolean isRequestPerSessionRateExceeded(HttpServletRequest request) {
+    	
+    
+        HttpSession session = request.getSession(false);
+        if (session == null)
+            return false;
+        
+        // Initialize if not present
+        SessionRate sessionrate = (SessionRate) session.getAttribute(SESSION_RATE_LIMITOR_KEY);
+        if (sessionrate == null) {
+            sessionrate = new SessionRate();
+            session.setAttribute(SESSION_RATE_LIMITOR_KEY, sessionrate);
+        } else {
+            sessionrate.incrementTotalRequest();
+        }
+        
+        long seconds = (new Date().getTime() - sessionrate.getFirstrequest()) / 1000;
+        
+        if(seconds>resetSecondsForSessionRate){
+        	sessionrate.reset(false);
+        }
+        
+        if(sessionrate.isBlockWithCaptcha()){
+        	session.setAttribute(SESSION_RATE_LIMITOR_KEY, sessionrate);
+        	return true;
+        }
+        
+        if(sessionrate.getTotalRequest()>maxRequestperSessionRate){
+        	if(!sessionrate.isBlockWithCaptcha()){
+        		 sessionrate.setBlockWithCaptcha(true);
+	    		 String ip = HttpRequestUtil.getIP(request);
+	    		 String message = "Customer SESSION has been blocked with CAPTCHA page due to high activity. IP(" + ip + "), total number of requests " + sessionrate.getTotalRequest() + "exceeded for the session with in " + resetSecondsForSessionRate+" seconds.";
+	             BlockedIPEvent ipevent = new BlockedIPEvent(ip);
+	             ipevent.setEvent(BlockedIPEvent.EVENT_REQUESTRATE_LIMIT);
+	             ipevent.setBucket(ip + "_" + session.getId() + "_REQUESTRATE");
+	             ipevent.setMessage(message);
+	             BlockedIPStatus ipstatus = IPBlocker.insertBlockedIPsTable(ipevent);
+	             notifyEmail(ipevent, ipstatus);
+        	}
+        	session.setAttribute(SESSION_RATE_LIMITOR_KEY, sessionrate);
+        	return true;
+        }
+        session.setAttribute(SESSION_RATE_LIMITOR_KEY, sessionrate);
+        return false;
+    }
+    
+    /**
+     * Inner class to track request rate.
+     *
+     * @author kamaramx
+     *
+     */
+    public static class SessionRate {
+        
+    	private int totalRequest = 1;
+        private long firstrequest = new Date().getTime();
+        private boolean blockWithCaptcha = false;
+
+       	public int getTotalRequest() {
+			return totalRequest;
+		}
+
+		public void setTotalRequest(int totalRequest) {
+			this.totalRequest = totalRequest;
+		}
+
+		public long getFirstrequest() {
+			return firstrequest;
+		}
+
+		public void setFirstrequest(long firstrequest) {
+			this.firstrequest = firstrequest;
+		}
+
+		public boolean isBlockWithCaptcha() {
+			return blockWithCaptcha;
+		}
+
+		public void setBlockWithCaptcha(boolean blockWithCaptcha) {
+			this.blockWithCaptcha = blockWithCaptcha;
+		}
+
+		public void reset(boolean resetCaptcha) {
+            firstrequest = new Date().getTime();
+            totalRequest = 1;
+            if(resetCaptcha){
+            	blockWithCaptcha = false;
+            }
+        }
+		
+		public int incrementTotalRequest() {
+            return ++totalRequest;
+        }
+
+    }
+    
 }

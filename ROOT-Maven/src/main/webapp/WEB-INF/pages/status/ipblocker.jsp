@@ -43,7 +43,6 @@
 		            This page allows you to add/remove/modify the IP's for blocking purpose. <span style="font-weight:bold">You may need to wait for maximum 10 minutes to get the changes applied to the system.</span>
 		        </p>
 
-		        <p>IP Blocker delay enabled = <%= RuntimeProperties.getInstance().getProperty(IPBlocker.IPBLOCKER_DELAY_ENABLED, "false") %></p>
 		        <br/>
 		        <stripes:form id="mainForm" action="/status.url" method="POST">
 		        	<stripes:text name="txtblockedip" id="txtblockedip"/>

@@ -26,6 +26,7 @@ import org.ei.controller.RateLimiter;
 import org.ei.session.SessionManager;
 import org.ei.session.SessionStatus;
 import org.ei.session.UserSession;
+import org.ei.stripes.action.CaptchaAction;
 import org.ei.stripes.action.EVActionBean;
 import org.ei.stripes.action.EVPathUrl;
 import org.ei.stripes.action.personalaccount.LogoutAction;
@@ -67,6 +68,35 @@ public class SessionBuilderInterceptor implements Interceptor {
 		String ipaddress = HttpRequestUtil.getIP(request);
 		log4j.info("[" + ipaddress + "] Starting intercept...");
 
+		
+		// *****************************************************
+		// Check for IP and Session Blocks
+		// *****************************************************
+		try {
+			IPBlocker ipBlocker = IPBlocker.getInstance();
+			if (ipBlocker.isBlocked(ipaddress)) {
+				request.setAttribute(REQUEST_ERROR_TITLE, "IP Address Blocked");
+				request.setAttribute(REQUEST_ERROR_TEXT, "Your IP address, '" + ipaddress + "' has been blocked from accessing Engineering Village.  Please contact your institution for more details.");
+				return new ErrorResolution(HttpServletResponse.SC_BAD_REQUEST);
+			}else if(ipBlocker.isRequestPerSessionRateExceeded(request)){
+				if (!(actionbean instanceof CaptchaAction)) {
+					return new ForwardResolution("/captcha/display.url");
+				}else{
+					log4j.info("Skipping to captcha handling");
+		            return executioncontext.proceed();
+				}
+			}
+		} catch (Exception e) {
+			EVExceptionHandler.logException("Unable to verify IP: ", e, request);
+			throw new RuntimeException("PreAuth failed during IPBlocker check!", e);
+		}
+		
+		// *****************************************************
+		// Update request counter into memcache
+		// *****************************************************
+		IPBlocker.getInstance().increment(ipaddress, COUNTER.REQUEST);
+		
+		
 		if (actionbean instanceof ISecuredAction) {
 			accesscontrol = ((ISecuredAction) actionbean).getAccessControl();
 			if (accesscontrol instanceof WorldAccessControl) {
@@ -96,21 +126,6 @@ public class SessionBuilderInterceptor implements Interceptor {
 			request.setAttribute(REQUEST_ERROR_TITLE, "Invalid User Agent");
 			request.setAttribute(REQUEST_ERROR_TEXT, "The User-Agent value, '" + uagent + "' is invalid.");
 			return new ErrorResolution(HttpServletResponse.SC_BAD_REQUEST);
-		}
-
-		// *****************************************************
-		// Check for IP blocks
-		// *****************************************************
-		try {
-			IPBlocker ipBlocker = IPBlocker.getInstance();
-			if (ipBlocker.isBlocked(ipaddress)) {
-				request.setAttribute(REQUEST_ERROR_TITLE, "IP Address Blocked");
-				request.setAttribute(REQUEST_ERROR_TEXT, "Your IP address, '" + ipaddress + "' has been blocked from accessing Engineering Village.  Please contact your institution for more details.");
-				return new ErrorResolution(HttpServletResponse.SC_BAD_REQUEST);
-			}
-		} catch (Exception e) {
-			EVExceptionHandler.logException("Unable to verify IP: ", e, request);
-			throw new RuntimeException("PreAuth failed during IPBlocker check!", e);
 		}
 
 		// *****************************************************
@@ -162,27 +177,7 @@ public class SessionBuilderInterceptor implements Interceptor {
 					+ request.getRemoteHost());
 		}
 
-		// *****************************************************
-		// Update request counter into memcache
-		// *****************************************************
-		IPBlocker.getInstance().increment(ipaddress, COUNTER.REQUEST);
-
-
-		// *****************************************************
-		// Check for blocks by rate of request
-		// *****************************************************
-		try {
-			RateLimiter ratelimiter = RateLimiter.getInstance();
-			if (ratelimiter.block(request)) {
-				request.setAttribute(REQUEST_ERROR_TITLE, "Account Access Disabled");
-				request.setAttribute(REQUEST_ERROR_TEXT, "Your account access has temporarily been suspended. Please contact your institution for more details.");
-				return new ErrorResolution(HttpServletResponse.SC_BAD_REQUEST);
-			}
-		} catch (Exception e) {
-			EVExceptionHandler.logException("Unable to check rate limiter: ", e, request);
-			throw new RuntimeException("PreAuth failed during Rate Limiter check!", e);
-		}
-
+		
 		// Continue on with request
 		return executioncontext.proceed();
 	}

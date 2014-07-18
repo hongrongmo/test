@@ -21,6 +21,8 @@ import org.ei.biz.security.IAccessControl;
 import org.ei.biz.security.NoAuthAccessControl;
 import org.ei.config.EVProperties;
 import org.ei.config.RuntimeProperties;
+import org.ei.controller.IPBlocker;
+import org.ei.controller.IPBlocker.COUNTER;
 import org.ei.domain.personalization.IEVWebUser;
 import org.ei.domain.personalization.UserPrefs;
 import org.ei.exception.SessionException;
@@ -33,6 +35,7 @@ import org.ei.session.SessionManager;
 import org.ei.session.UserBroker;
 import org.ei.session.UserSession;
 import org.ei.stripes.action.lindahall.LindaHallAuthAction;
+import org.ei.stripes.util.HttpRequestUtil;
 
 import com.elsevier.webservices.schemas.csas.constants.types.v7.AllowedRegistrationType;
 
@@ -90,7 +93,12 @@ public class LoginAction extends CARSActionBean {
         // regular IP range and does NOT have remote access!
         //
         if (CARSResponseStatus.STATUS_CODE.AUTHENTICATION_ERROR.equals(carsresponse.getResponseStatus().getStatuscode())) {
-            if (AllowedRegistrationType.NONE.toString().equals(usersession.getUser().getAllowedRegType())) {
+        	
+        	if(usersession.getUser().isCustomer()){
+        		String ipaddress = HttpRequestUtil.getIP(context.getRequest());
+            	IPBlocker.getInstance().increment(ipaddress, COUNTER.AUTHFAIL);
+        	}
+        	if (AllowedRegistrationType.NONE.toString().equals(usersession.getUser().getAllowedRegType())) {
                 // Process legacy credentials.  This is only needed while we are migrating users!
                 processLegacyInstitutionCredentials();
             }
