@@ -29,6 +29,8 @@ import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
 import org.ei.config.EVProperties;
 import org.ei.controller.HitCount;
+import org.ei.controller.IPBlocker;
+import org.ei.controller.IPBlocker.SessionRate;
 import org.ei.domain.ISBN;
 import org.ei.security.captcha.Config;
 import org.ei.security.captcha.ISkewImage;
@@ -50,7 +52,7 @@ public class CaptchaAction extends EVActionBean {
 	public static final String CAPTCHA_REQUEST_SECUREID = "captchaID";
 	public static final String CAPTCHA_SESSION_HITCOUNT = "captchaHitCount";
 	public static final String CAPTCHA_SESSION_SHOWN = "captchaShown";
-
+	
 	private static Pattern sp_pattern = Pattern.compile("\\s+");
 	private static Pattern wildcard_pattern = Pattern.compile("(\\*|\\?)");
 	private static Pattern number_pattern = Pattern.compile("\\d{6,}+");
@@ -62,45 +64,64 @@ public class CaptchaAction extends EVActionBean {
 	private String supportemail = "eicustomersupport@elsevier.com";	// TODO read this from config file...
 	private String userentry;
 	private String message;
-
+	
 	/**
 	 * Default handler - displays the captcha verification box
-	 *
+	 * 
 	 * @return Resolution
-	 * @throws Exception
+	 * @throws Exception 
 	 */
 	@DefaultHandler
 	@DontValidate
 	public Resolution display() throws Exception {
-		log4j.info("Displaying captcha image...");
-		setRoom(ROOM.search);
-
-		// Build random letters
+		
+		HttpServletRequest request = context.getRequest();
+		HttpSession session = request.getSession(false);
+		
+		boolean isGenericCaptchaBlock = false;
+		
+        if (session != null){
+        	SessionRate sessionrate = (SessionRate) session.getAttribute(IPBlocker.SESSION_RATE_LIMITOR_KEY);
+        	if(sessionrate != null){
+        		isGenericCaptchaBlock  = sessionrate.isBlockWithCaptcha();
+        	}
+        }
+        
+        log4j.info("Displaying captcha image...");
+        // Build random letters
 		imagetextenc = buildRandomLetters();
-
-	    if (redirectenc == null) {
-	    	// Encrypt the URL to return to upon successful Captcha verification
-	    	redirectenc = buildRedirectEnc();
-	    }
-
+        
+        if(isGenericCaptchaBlock){
+        	if (redirectenc == null) {
+        		redirectenc = buildGenericRedirectEnc();
+        	}
+        }else{
+    		setRoom(ROOM.search);
+    	    if (redirectenc == null) {
+    	    	// Encrypt the URL to return to upon successful Captcha verification
+    	    	redirectenc = buildRedirectEnc();
+    	    }
+        }
+        
+		
+		
+		
 		return new ForwardResolution("/WEB-INF/pages/customer/captcha.jsp");
-	}
-
+	}	
+	
 	/**
 	 * Captcha validator - checks the entered code and either returns the user
 	 * back to the captcha page (no match) or fowards to search request.
-	 *
+	 * 
 	 * @return Resolution
-	 * @throws Exception
+	 * @throws Exception 
 	 */
 	@HandlesEvent("verify")
 	@DontValidate
 	public Resolution verify() throws Exception {
 		log4j.info("Verifying captcha image...");
-
-		setRoom(ROOM.search);
-
-    	boolean failed = false;
+		
+		boolean failed = false;
 
     	if (userentry!=null && imagetextenc !=null) {
         	userentry = userentry.trim();
@@ -129,7 +150,24 @@ public class CaptchaAction extends EVActionBean {
     		return new ForwardResolution("/WEB-INF/pages/customer/captcha.jsp");
     	}
     	else {
-    		return new RedirectResolution(new String(Base64.decodeBase64(redirectenc)) + "&" + CAPTCHA_REQUEST_SECUREID + "=" + SecureID.getSecureID(60000L));
+    		if(new String(Base64.decodeBase64(redirectenc)).equalsIgnoreCase("/home.url")){
+    			
+    			HttpServletRequest request = context.getRequest();
+    			HttpSession session = request.getSession(false);
+    			
+    			if (session != null){
+    	        	SessionRate sessionrate = (SessionRate) session.getAttribute(IPBlocker.SESSION_RATE_LIMITOR_KEY);
+    	        	if(sessionrate != null){
+    	        		sessionrate.reset(true);
+    	        		session.setAttribute(IPBlocker.SESSION_RATE_LIMITOR_KEY, sessionrate);
+    	        	}
+    	        }
+    			return new RedirectResolution(new String(Base64.decodeBase64(redirectenc)) + "?" + CAPTCHA_REQUEST_SECUREID + "=" + SecureID.getSecureID(60000L));
+    		}else{
+    			setRoom(ROOM.search);
+    			return new RedirectResolution(new String(Base64.decodeBase64(redirectenc)) + "&" + CAPTCHA_REQUEST_SECUREID + "=" + SecureID.getSecureID(60000L));
+    		}
+    		
     	}
 
 
@@ -137,13 +175,13 @@ public class CaptchaAction extends EVActionBean {
 
 	/**
 	 * Captcha image - builds the image for the captcha
-	 *
+	 * 
 	 * @return Resolution
-	 * @throws ServletException
-	 * @throws IOException
-	 * @throws ClassNotFoundException
-	 * @throws IllegalAccessException
-	 * @throws InstantiationException
+	 * @throws ServletException 
+	 * @throws IOException 
+	 * @throws ClassNotFoundException 
+	 * @throws IllegalAccessException 
+	 * @throws InstantiationException 
 	 */
 	@HandlesEvent("image")
 	@DontValidate
@@ -165,19 +203,19 @@ public class CaptchaAction extends EVActionBean {
         ISkewImage skewImage = (ISkewImage) cl.loadClass("org.ei.security.captcha.SkewImageSimple").newInstance();
         BufferedImage bufferedImage = skewImage.skewImage(imagetextclear.substring(0, imagetextclear.indexOf(".")));
         ImageIO.write(bufferedImage, "jpeg", response.getOutputStream());
-
+		
         return null;
 	}
 
 	/**
 	 * Builds and encrypts the redirect URL for after captcha verification
-	 *
+	 * 
 	 * @throws UnsupportedEncodingException
 	 */
 	private String buildRedirectEnc() throws UnsupportedEncodingException {
 		HttpServletRequest request = context.getRequest();
 		StringBuffer redirect  = new StringBuffer("/search/submit.url?");
-
+		
 		Enumeration<String> e = request.getParameterNames();
     	while(e.hasMoreElements())
 		{
@@ -186,9 +224,9 @@ public class CaptchaAction extends EVActionBean {
 			if(name.equalsIgnoreCase("database"))
 			{
 				int dbvalue = 0;
-				String[] multiValue = request.getParameterValues(name);
+				String[] multiValue = request.getParameterValues(name);	    				
 				for(int i=0;i<multiValue.length; i++)
-				{
+				{	    					
 					dbvalue += Integer.parseInt(multiValue[i]);
 				}
 				value = Integer.toString(dbvalue);
@@ -196,15 +234,20 @@ public class CaptchaAction extends EVActionBean {
 			else
 			{
 				value = (String) request.getParameter(name);
-			}
+			}	    				    				    		
 			redirect.append(name + "=" + URLEncoder.encode(value, "UTF-8"));
 			if (e.hasMoreElements()) redirect.append("&");
 
 		}
     	return new String(Base64.encodeBase64(redirect.toString().getBytes()));
-
+	
 	}
-
+	
+	private String buildGenericRedirectEnc() {
+		StringBuffer redirect  = new StringBuffer("/home.url");
+		return new String(Base64.encodeBase64(redirect.toString().getBytes()));
+	}
+	
 	private String buildRandomLetters() throws Exception {
 		String randomLetters = new String("");
 	    for (int i = 0; i < Config.getPropertyInt(Config.MAX_NUMBER); i++) {
@@ -214,29 +257,29 @@ public class CaptchaAction extends EVActionBean {
 	    randomLetters = randomLetters.replaceAll("Q","Z");
 	    // Make Captcha from random letters + secure ID string
 	    String imagetextclear = randomLetters + "." + SecureID.getSecureID(120000L);
-
-	    // Encrypt it all
+	    
+	    // Encrypt it all 
 	    return new String(Base64.encodeBase64(_stringEncrypter.encrypt(imagetextclear).getBytes()));
 	}
-
+	
 	/**
 	 * This method looks into the current request and checks for a few things:
-	 * 1) Is this a search request
-	 * 2) Does the search contain a wildcarded accession number
+	 * 1) Is this a search request 
+	 * 2) Does the search contain a wildcarded accession number 
 	 * 3) OR the request may be the captcha ID coming back in
-	 *
+	 * 
 	 * If this is a wildcarded accession number search OR customer has exceeded the
-	 * allowed number of non-wildcarded accession number searches then forward to a
+	 * allowed number of non-wildcarded accession number searches then forward to a 
 	 * captcha page.
-	 *
+	 * 
 	 * @param request
 	 * @param usess
-	 *
+	 * 
 	 * @throws Exception
-	 *
+	 * 
 	 */
 	public static Resolution handleCaptcha(HttpServletRequest request, UserSession usess) throws Exception {
-
+		
 		HttpSession session = request.getSession(false);
 		if (session == null) {
 		    log4j.error("No session object available!");
@@ -244,18 +287,18 @@ public class CaptchaAction extends EVActionBean {
 		}
 		String ip = HttpRequestUtil.getIP(request);
 		String custID = usess.getUser().getCustomerID();
-
+		
 		// TODO - replace with Fence!
 		Map<String, String> custBypass = EVProperties.getInstance().getCustBypass();
 		Map<String, String> ipBypass = EVProperties.getInstance().getIpBypass();
-
+		
 		// Only do check if:
 		// 1) NOT bypassing based on customer ID or IP
 		// 2) NOT an openXML or openRSS request
 		if (!custBypass.containsKey(custID) && !ipBypass.containsKey(ip)
 			&& !EVActionBeanContext.XML_CID.equals(request.getParameter("CID"))
 			&& !EVActionBeanContext.RSS_CID.equals(request.getParameter("CID"))) {
-
+			
 			// If captchaID is present then it is coming from a successful
 			// captcha validation.
 			String captchaID = request.getParameter(CAPTCHA_REQUEST_SECUREID);
@@ -319,9 +362,9 @@ public class CaptchaAction extends EVActionBean {
 						/*
 						 * User is blocked so forward them to the Captcha page.
 						 */
-						log4j.warn("Captcha display for IP:" + ip +
+						log4j.warn("Captcha display for IP:" + ip + 
 								", searchWord1: " + search +
-								", accession pattern matches: " + numAccessionPatternMatches +
+								", accession pattern matches: " + numAccessionPatternMatches + 
 								", captcha now: " + captchaNow);
 						return new ForwardResolution("/captcha/display.url");
 					}
@@ -333,7 +376,7 @@ public class CaptchaAction extends EVActionBean {
 
 	/**
 	 * Utility method to convert word to ISBN value
-	 *
+	 * 
 	 * @param word
 	 * @return
 	 */
