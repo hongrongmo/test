@@ -506,7 +506,7 @@ public class ApplicationStatus extends EVActionBean {
         if (txtblockedip != null) {
             IPBlocker blocker = IPBlocker.getInstance();
             try {
-                Map<String, String> statusMap = blocker.retreiveCurrentStatus(txtblockedip);
+                Map<String, String> statusMap = blocker.retreiveCurrentStatus(txtblockedip,context.getRequest());
                 context.getRequest().setAttribute("ip", txtblockedip);
                 context.getRequest().setAttribute("statusMap", statusMap);
                 txtblockedip = null;
