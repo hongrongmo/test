@@ -81,7 +81,7 @@ public class CaptchaAction extends EVActionBean {
 		boolean isGenericCaptchaBlock = false;
 		
         if (session != null){
-        	SessionRate sessionrate = (SessionRate) session.getAttribute(IPBlocker.SESSION_RATE_LIMITOR_KEY);
+        	SessionRate sessionrate = (SessionRate) session.getAttribute(IPBlocker.IPBLOCKER_SESSION_RATE_LIMITOR_KEY);
         	if(sessionrate != null){
         		isGenericCaptchaBlock  = sessionrate.isBlockWithCaptcha();
         	}
@@ -156,10 +156,10 @@ public class CaptchaAction extends EVActionBean {
     			HttpSession session = request.getSession(false);
     			
     			if (session != null){
-    	        	SessionRate sessionrate = (SessionRate) session.getAttribute(IPBlocker.SESSION_RATE_LIMITOR_KEY);
+    	        	SessionRate sessionrate = (SessionRate) session.getAttribute(IPBlocker.IPBLOCKER_SESSION_RATE_LIMITOR_KEY);
     	        	if(sessionrate != null){
     	        		sessionrate.reset(true);
-    	        		session.setAttribute(IPBlocker.SESSION_RATE_LIMITOR_KEY, sessionrate);
+    	        		session.setAttribute(IPBlocker.IPBLOCKER_SESSION_RATE_LIMITOR_KEY, sessionrate);
     	        	}
     	        }
     			return new RedirectResolution(new String(Base64.decodeBase64(redirectenc)) + "?" + CAPTCHA_REQUEST_SECUREID + "=" + SecureID.getSecureID(60000L));

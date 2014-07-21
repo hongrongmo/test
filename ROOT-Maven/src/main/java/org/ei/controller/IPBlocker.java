@@ -35,9 +35,9 @@ public class IPBlocker {
     public static final String IPBLOCKER_NONCUSTOMER_REQUEST_LIMIT_PROPERTY = "ipblocker.noncustomer.request.limit";
     public static final String IPBLOCKER_EMAIL_TO_PROPERTY = "ipblocker.email.to";
     public static final String IPBLOCKER_EMAIL_FROM_PROPERTY = "ipblocker.email.from";
-    public static final String SESSION_RATE_LIMITOR_KEY = "ipblocker.session.rate.limitor";
-    public static final String SESSION_RATE_LIMITOR_RESET_SECONDS = "ipblocker.session.rate.limitor.reset.seconds";
-    public static final String SESSION_RATE_LIMITOR_MAX_REQUEST = "ipblocker.session.rate.limitor.max.request";
+    public static final String IPBLOCKER_SESSION_RATE_LIMITOR_KEY = "ipblocker.session.rate.limitor";
+    public static final String IPBLOCKER_AUTOBLOCK_ENABLED_PROPERTY = "ipblocker.autoblock.enabled";
+    public static final String IPBLOCKER_REQUEST_PER_SESSION_LIMIT_PROPERTY = "ipblocker.request.per.session";
 
     // Singleton instance
     private static IPBlocker instance;
@@ -53,13 +53,13 @@ public class IPBlocker {
     private long createTime = System.currentTimeMillis();
 
     private static long reloadInterval = 600000L; // 10 minutes
-    private static int bucketincrementtimemin = 15 * 60;
-    private static long sessionlimit = 500;
-    private static long requestlimit = 1500;
-    private static long nonCustRequestLimit = 1000;
-    private static long authFailLimit = 500;
-    private static long resetSecondsForSessionRate = 300;
-    private static long maxRequestperSessionRate = 500;
+    private static int bucketincrementtimemin = 5;
+    private static long sessionlimit = 150;
+    private static long requestlimit = 600;
+    private static long nonCustRequestLimit = 600;
+    private static long authFailLimit = 150;
+    private static long maxRequestperSessionRate = 300;
+    private static boolean autoBlockEnabled = false;
     private static String emailto;
     private static String sender;
 
@@ -95,15 +95,15 @@ public class IPBlocker {
     private static void refreshProperties() {
         try {
             RuntimeProperties runtimeprops = RuntimeProperties.getInstance();
-            bucketincrementtimemin = Integer.parseInt(runtimeprops.getProperty(IPBLOCKER_BUCKET_INTERVAL_MINUTES_PROPERTY, "15"));
-            sessionlimit = Long.parseLong(runtimeprops.getProperty(IPBLOCKER_SESSION_LIMIT_PROPERTY, "500"));
-            requestlimit = Long.parseLong(runtimeprops.getProperty(IPBLOCKER_REQUEST_LIMIT_PROPERTY, "1500"));
-            nonCustRequestLimit = Long.parseLong(runtimeprops.getProperty(IPBLOCKER_NONCUSTOMER_REQUEST_LIMIT_PROPERTY, "1000"));
-            authFailLimit = Long.parseLong(runtimeprops.getProperty(IPBLOCKER_AUTHFAIL_LIMIT_PROPERTY, "500"));
-            resetSecondsForSessionRate = Long.parseLong(runtimeprops.getProperty(SESSION_RATE_LIMITOR_RESET_SECONDS, "300"));
-            maxRequestperSessionRate = Long.parseLong(runtimeprops.getProperty(SESSION_RATE_LIMITOR_MAX_REQUEST, "500"));
+            bucketincrementtimemin = Integer.parseInt(runtimeprops.getProperty(IPBLOCKER_BUCKET_INTERVAL_MINUTES_PROPERTY, "5"));
+            sessionlimit = Long.parseLong(runtimeprops.getProperty(IPBLOCKER_SESSION_LIMIT_PROPERTY, "150"));
+            requestlimit = Long.parseLong(runtimeprops.getProperty(IPBLOCKER_REQUEST_LIMIT_PROPERTY, "600"));
+            nonCustRequestLimit = Long.parseLong(runtimeprops.getProperty(IPBLOCKER_NONCUSTOMER_REQUEST_LIMIT_PROPERTY, "600"));
+            authFailLimit = Long.parseLong(runtimeprops.getProperty(IPBLOCKER_AUTHFAIL_LIMIT_PROPERTY, "150"));
+            maxRequestperSessionRate = Long.parseLong(runtimeprops.getProperty(IPBLOCKER_REQUEST_PER_SESSION_LIMIT_PROPERTY, "300"));
             emailto = runtimeprops.getProperty(IPBLOCKER_EMAIL_TO_PROPERTY);
             sender = runtimeprops.getProperty(IPBLOCKER_EMAIL_FROM_PROPERTY);
+            autoBlockEnabled = Boolean.parseBoolean(runtimeprops.getProperty(IPBLOCKER_AUTOBLOCK_ENABLED_PROPERTY, "false"));
         } catch (Throwable t) {
             log4j.error("Unable to refresh properties!", t);
         }
@@ -203,11 +203,18 @@ public class IPBlocker {
                     BlockedIPEvent ipevent = new BlockedIPEvent(ip);
                     ipevent.setEvent(COUNTER.NONCUSTOMER_REQUEST.name());
                     ipevent.setBucket(bucketname);
-                    ipevent.setMessage("Auto Block Applied : Maximum number of non customer requests exceeded (" + nonCustRequestLimit + ") in " + bucketincrementtimemin
-                        + " minutes for IP address " + ipevent.getIP());
+                    if(autoBlockEnabled){
+                    	ipevent.setMessage("Auto Block Applied : Maximum number of non customer requests exceeded (" + nonCustRequestLimit + ") in " + bucketincrementtimemin
+                                + " minutes for IP address " + ipevent.getIP());
+                    }else{
+                    	ipevent.setMessage("Maximum number of non customer requests exceeded (" + nonCustRequestLimit + ") in " + bucketincrementtimemin
+                                + " minutes for IP address " + ipevent.getIP());
+                    }
+                    
                     BlockedIPStatus ipstatus = insertBlockedIPsTable(ipevent);
                     notifyEmail(ipevent, ipstatus);
-                    refreshBlockedIpsMap();
+                    
+                    if(autoBlockEnabled)refreshBlockedIpsMap();
                     return ipstatus.isBlocked();
                 }
             }
@@ -340,7 +347,7 @@ public class IPBlocker {
      * @throws IOException
      *             Signals that an I/O exception has occurred.
      */
-    public Map<String, String> retreiveCurrentStatus(String ip) {
+    public Map<String, String> retreiveCurrentStatus(String ip, HttpServletRequest request ) {
         MemcachedUtil memcached = MemcachedUtil.getInstance();
         Map<String, String> statusMap = new LinkedHashMap<String, String>();
 
@@ -359,7 +366,17 @@ public class IPBlocker {
         bucket = getBucketName(ip, COUNTER.NONCUSTOMER_REQUEST);
         count = memcached.incr(bucket, 0, 1, bucketincrementtimemin * 60);
         statusMap.put(bucket, Long.toString(count));
-
+        
+        // Initialize if not present
+        HttpSession session = request.getSession(false);
+        long sessionratecount = 0;
+        if(session != null){
+        	SessionRate sessionrate = (SessionRate) session.getAttribute(IPBLOCKER_SESSION_RATE_LIMITOR_KEY);
+        	if (sessionrate != null) {
+        		sessionratecount = sessionrate.getTotalRequest();
+            } 
+        }
+        statusMap.put("CUR_SESSION_TOTAL_REQUEST", Long.toString(sessionratecount));
         return statusMap;
     }
 
@@ -437,7 +454,7 @@ public class IPBlocker {
             	
             	ipstatus = new BlockedIPStatus(ipevent.getIP());
             }
-            if(ipevent.getEvent().equalsIgnoreCase(COUNTER.NONCUSTOMER_REQUEST.name())){
+            if(ipevent.getEvent().equalsIgnoreCase(COUNTER.NONCUSTOMER_REQUEST.name()) && autoBlockEnabled){
             	ipstatus.setStatus(BlockedIPStatus.STATUS_BLOCKED);
             }
             ipstatus.addAccount(org.ei.domain.personalization.cars.Account.getAccountInfo(ipevent.getIP()));
@@ -542,22 +559,22 @@ public class IPBlocker {
             return false;
         
         // Initialize if not present
-        SessionRate sessionrate = (SessionRate) session.getAttribute(SESSION_RATE_LIMITOR_KEY);
+        SessionRate sessionrate = (SessionRate) session.getAttribute(IPBLOCKER_SESSION_RATE_LIMITOR_KEY);
         if (sessionrate == null) {
             sessionrate = new SessionRate();
-            session.setAttribute(SESSION_RATE_LIMITOR_KEY, sessionrate);
+            session.setAttribute(IPBLOCKER_SESSION_RATE_LIMITOR_KEY, sessionrate);
         } else {
             sessionrate.incrementTotalRequest();
         }
         
         long seconds = (new Date().getTime() - sessionrate.getFirstrequest()) / 1000;
         
-        if(seconds>resetSecondsForSessionRate){
+        if(seconds>(bucketincrementtimemin*60)){
         	sessionrate.reset(false);
         }
         
         if(sessionrate.isBlockWithCaptcha()){
-        	session.setAttribute(SESSION_RATE_LIMITOR_KEY, sessionrate);
+        	session.setAttribute(IPBLOCKER_SESSION_RATE_LIMITOR_KEY, sessionrate);
         	return true;
         }
         
@@ -565,7 +582,7 @@ public class IPBlocker {
         	if(!sessionrate.isBlockWithCaptcha()){
         		 sessionrate.setBlockWithCaptcha(true);
 	    		 String ip = HttpRequestUtil.getIP(request);
-	    		 String message = "Customer SESSION has been blocked with CAPTCHA page due to high activity. IP(" + ip + "), total number of requests " + sessionrate.getTotalRequest() + "exceeded for the session with in " + resetSecondsForSessionRate+" seconds.";
+	    		 String message = "Customer SESSION has been blocked with CAPTCHA page due to high activity. IP(" + ip + "), total number of requests " + sessionrate.getTotalRequest() + " exceeded for the session with in " + (bucketincrementtimemin*60)+" seconds.";
 	             BlockedIPEvent ipevent = new BlockedIPEvent(ip);
 	             ipevent.setEvent(BlockedIPEvent.EVENT_REQUESTRATE_LIMIT);
 	             ipevent.setBucket(ip + "_" + session.getId() + "_REQUESTRATE");
@@ -573,10 +590,10 @@ public class IPBlocker {
 	             BlockedIPStatus ipstatus = IPBlocker.insertBlockedIPsTable(ipevent);
 	             notifyEmail(ipevent, ipstatus);
         	}
-        	session.setAttribute(SESSION_RATE_LIMITOR_KEY, sessionrate);
+        	session.setAttribute(IPBLOCKER_SESSION_RATE_LIMITOR_KEY, sessionrate);
         	return true;
         }
-        session.setAttribute(SESSION_RATE_LIMITOR_KEY, sessionrate);
+        session.setAttribute(IPBLOCKER_SESSION_RATE_LIMITOR_KEY, sessionrate);
         return false;
     }
     
