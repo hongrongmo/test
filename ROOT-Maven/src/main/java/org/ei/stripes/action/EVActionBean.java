@@ -57,6 +57,7 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
 	protected String backurl = "";
 	protected boolean personalization;
 	protected String modelXml;
+	protected String baseaddress = "";
 	// Page message
 	protected String message;
 	public String isActionBeanInstance;
@@ -628,4 +629,9 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
 
     	context.getRequest().setAttribute(WebAnalyticsEventProperties.WEB_EVENT_REQUEST_NAME, eventList);
     }
+
+    public String getBaseaddress(){
+    	return context.getRequest().getServerName();
+    }
+
 }

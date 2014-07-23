@@ -66,9 +66,7 @@ import com.icl.saxon.TransformerFactoryImpl;
 @UrlBinding("/delivery/download/{$event}.url")
 public class DownloadDeliveryAction extends AbstractDeliveryAction {
     private final static Logger log4j = Logger.getLogger(DownloadDeliveryAction.class);
-
     protected String              downloadformat;
-    protected String              baseaddress;
     protected StringBuffer        tmpfileName;
 
 
@@ -110,6 +108,7 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
 
 		boolean isSaveToDropboxEnabled = false;
         RuntimeProperties runtimeprops;
+
 		try {
 			runtimeprops = RuntimeProperties.getInstance();
 			isSaveToDropboxEnabled =  Boolean.parseBoolean(runtimeprops.getProperty("dropbox.save.enabled"));
@@ -169,7 +168,36 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
 
         return new ForwardResolution("/WEB-INF/pages/customer/delivery/dropbox.jsp");
     }
+	@DontValidate
+    @HandlesEvent("googledrive")
+    public Resolution googleDrive() throws InfrastructureException {
 
+		boolean isSaveToGoogleEnabled = false;
+        RuntimeProperties runtimeprops;
+		try {
+			runtimeprops = RuntimeProperties.getInstance();
+			isSaveToGoogleEnabled =  Boolean.parseBoolean(runtimeprops.getProperty("google.drive.enabled"));
+		} catch (IOException e) {
+			log4j.warn("Could not read the runtime property for 'google.drive.enabled', error occured! "+e.getMessage());
+			return SystemMessage.SYSTEM_ERROR_RESOLUTION;
+		} catch(Exception e) {
+			log4j.warn("Error occured! "+e.getMessage());
+			return SystemMessage.SYSTEM_ERROR_RESOLUTION;
+		}
+
+		if(!isSaveToGoogleEnabled){
+			log4j.warn("Save to Google Drive is not allowed!");
+			return SystemMessage.SYSTEM_ERROR_RESOLUTION;
+		}
+
+		UserSession userSession = context.getUserSession();
+		if(userSession != null){
+			userSession.setProperty("downloadformat", downloadformat);
+			//userSession.setProperty("dropBoxDownloadUrl", dropBoxDownloadUrl);
+			userSession.setProperty("displayformat", displayformat);
+		}
+        return new ForwardResolution("/WEB-INF/pages/customer/delivery/googledrive.jsp");
+    }
     @DontValidate
     @HandlesEvent("submit")
     public Resolution submit() throws Exception {
@@ -446,6 +474,7 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
                         handle = Integer.parseInt((String) handlearr[i]);
                         docidObj = new DocID(handle, docidarr[i].trim(), databaseConfig.getDatabase(docidarr[i].substring(0, 3)));
                         docidList.add(docidObj);
+
                     }
                 }
 
@@ -608,10 +637,6 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
 
     public void setDownloadformat(String downloadformat) {
         this.downloadformat = downloadformat;
-    }
-
-    public String getBaseaddress() {
-        return baseaddress;
     }
 
     public boolean isSaveToDropboxEnabled() {

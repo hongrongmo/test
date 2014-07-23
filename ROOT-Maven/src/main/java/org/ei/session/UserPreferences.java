@@ -10,7 +10,7 @@ import org.ei.biz.access.IUserPreferences;
 
 public class UserPreferences implements IUserPreferences, Serializable {
     /**
-	 * 
+	 *
 	 */
     private static final long serialVersionUID = -3941528220251382776L;
 
@@ -150,22 +150,26 @@ public class UserPreferences implements IUserPreferences, Serializable {
     public static final String[] TZ_DEFAULT_URLS = { "DEFAULT_URL_1", "DEFAULT_URL_2", "DEFAULT_URL_3", "DEFAULT_URL_4", "DEFAULT_URL_5" };
     public static final String[] TZ_IMAGE_URLS = { "IMAGE_URL_1", "IMAGE_URL_2", "IMAGE_URL_3", "IMAGE_URL_4", "IMAGE_URL_5" };
 
-   
+
     public static final String EVPREFS_SORT_REL = "relevance";
     public static final String EVPREFS_SORT_DATE_NEW = "date_dw";
     public static final String EVPREFS_SORT_DATE_OLD = "date_up";
     public static final String EVPREFS_SORT_DATE = "yr";
-    
+
     public static final String EVPREFS_DL_OUTPUT_CIT = "citation";
     public static final String EVPREFS_DL_OUTPUT_ABS = "abstract";
     public static final String EVPREFS_DL_OUTPUT_DET = "detailed";
     public static final String EVPREFS_DL_OUTPUT_DEF = "default";
-    
+    public static final String EVPREFS_DL_LOC_PC = "mypc";
+    public static final String EVPREFS_DL_LOC_GD = "googledrive";
+    public static final String EVPREFS_DL_LOC_DB = "dropbox";
+    public static final String EVPREFS_DL_LOC_REF = "refworks";
+
     public static final String FENCE_HIGHLIGHT_V1 = "HIGHLIGHT_V1";
     public static final String FENCE_HIGHLIGHT_V2 = "HIGHLIGHT_V2";
 
-    
-    
+
+
     // Shiboleth fence
     public static final String FENCE_INSTITUTIONAL_SHIB_LOGIN_LINK = "FENCE_INSTITUTIONAL_SHIB_LOGIN_LINK";
 
@@ -183,22 +187,22 @@ public class UserPreferences implements IUserPreferences, Serializable {
      */
     /*
      * public void init() { features = new Hashtable<String, String>();
-     * 
-     * 
+     *
+     *
      * //features.put(INSCPX_FEATURE, Boolean.toString(false)); features.put(FENCE_THESAURUS, Boolean.toString(false));
-     * 
+     *
      * features.put(FENCE_BULLETINS, Boolean.toString(false)); features.put(FENCE_ENCOMPASS_LIT_HTML, Boolean.toString(false));
      * features.put(FENCE_ENCOMPASS_PAT_HTML, Boolean.toString(false)); features.put(FENCE_ENCOMPASS_LIT_PDF, Boolean.toString(false));
      * features.put(FENCE_ENCOMPASS_PAT_PDF, Boolean.toString(false));
-     * 
+     *
      * features.put(FENCE_TAGSGROUPS, Boolean.toString(true)); features.put(FENCE_ASKANEXPERT, Boolean.toString(true)); features.put(FENCE_EASY_SEARCH,
      * Boolean.toString(true));
-     * 
+     *
      * features.put(FENCE_EMAIL_ALERTS_CC, Boolean.toString(false));
-     * 
+     *
      * features.put(FENCE_SORT_BY, Boolean.toString(true)); // true == Relevance sort features.put(AUTOSTEMMING, Boolean.toString(true)); // true ==
      * Autostemming ON
-     * 
+     *
      * // TODO initialize these correctly... features.put(TZ_START_PAGE, "quickSearch"); features.put(DEFAULT_DB, Long.toString(1)); }
      */
     public UserPreferences() {
@@ -301,15 +305,15 @@ public class UserPreferences implements IUserPreferences, Serializable {
     public boolean isCpxAutocomplete() {
         return getBoolean(FENCE_ALLOW_CPX_AUTOCOMPLETE);
     }
-    
+
     public boolean isFeatureHighlight(){
     	return getBoolean(FENCE_ENABLE_FEATURE_HIGHLIGHT);
     }
-    
+
     public boolean isModalDialog(){
     	return getBoolean(FENCE_ENABLE_MODAL_DIALOG);
     }
-    
+
     public boolean isModalDialog2(){
     	return getBoolean(FENCE_ENABLE_MODAL_DIALOG_2);
     }

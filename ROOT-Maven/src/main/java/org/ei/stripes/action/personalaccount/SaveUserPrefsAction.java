@@ -29,6 +29,7 @@ public class SaveUserPrefsAction extends EVActionBean implements ISecuredAction 
     private String sortOrder;
     private String dlOutput;
     private String dlFormat;
+    private String dlLocation;
     private String highlight;
     private boolean showPreview;
 
@@ -51,17 +52,19 @@ public class SaveUserPrefsAction extends EVActionBean implements ISecuredAction 
         try{
 	        if (user.isIndividuallyAuthenticated()) {
 		        UserPrefs userPrefs = user.getUserPrefs();
-		
+
 		        userPrefs.setUserid(user.getWebUserId());
 		        userPrefs.setResultsPerPage(this.resultsPerPage);
 		        userPrefs.setDlOutput(this.dlOutput);
 		        userPrefs.setDlFormat(this.dlFormat);
+		        userPrefs.setDlLocation(this.dlLocation);
 		        userPrefs.setSort(this.sortOrder);
 		        userPrefs.setShowPreview(this.showPreview);
+
 		        //userPrefs.setHighlight(this.highlight);
 		        userPrefs.save();
 		        user.setUserPrefs(userPrefs);
-		
+
 		        UserSession userSession = context.getUserSession();
 		        userSession.setRecordsPerPage(Integer.toString(userPrefs.getResultsPerPage()));
 		        context.updateUserSession(userSession);
@@ -77,7 +80,7 @@ public class SaveUserPrefsAction extends EVActionBean implements ISecuredAction 
         	return new StreamingResolution("text", "");
         }
         setRoom(ROOM.blank);
-        
+
 
         return new StreamingResolution("text", "");
     }
@@ -159,6 +162,14 @@ public class SaveUserPrefsAction extends EVActionBean implements ISecuredAction 
 
 	public void setHighlight(String highlight) {
 		this.highlight = highlight;
+	}
+
+	public String getDlLocation() {
+		return dlLocation;
+	}
+
+	public void setDlLocation(String dlLocation) {
+		this.dlLocation = dlLocation;
 	}
 
 }

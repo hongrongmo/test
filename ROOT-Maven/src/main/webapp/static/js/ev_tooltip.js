@@ -78,6 +78,8 @@ $(document).ready(function() {
 			    interactive:true,
 			    contentAsHTML:true,
 			    position:'bottom',
+			    fixedLocation:true,
+			    positionTracker:false,
 			    functionInit: function(origin, content) {
 
 			        // we'll make this function asynchronous and allow the tooltip to go ahead and show the loading notification while fetching our data
