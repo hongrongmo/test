@@ -36,7 +36,7 @@
 			<img height="40" alt="" width="198" border="0"
 				src="/captcha/image.url?imagetextenc=${actionBean.imagetextenc}"/>&nbsp;&nbsp;
 
-			<a	href="/captcha/display.url?redirectenc=${actionBean.imagetextenc}">
+			<a	href="/captcha/display.url?redirectenc=${actionBean.redirectenc}">
 			<img alt="Refresh" src="/static/images/refresh_captcha.gif" height="26" width="26" border="0"/>
 			</a>&nbsp;&nbsp;
 
