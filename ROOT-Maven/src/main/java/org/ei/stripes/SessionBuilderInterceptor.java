@@ -69,6 +69,11 @@ public class SessionBuilderInterceptor implements Interceptor {
 		log4j.info("[" + ipaddress + "] Starting intercept...");
 
 		
+		// Add the release version number to the request for JSPs
+        request.setAttribute("releaseversion", RuntimeProperties.getInstance().getProperty(RuntimeProperties.RELEASE_VERSION));
+        // Add the contact us link to the request for all JSPs
+        request.setAttribute("contactuslink", RuntimeProperties.getInstance().getProperty(RuntimeProperties.CONTACT_US_LINK));
+		
 		// *****************************************************
 		// Check for IP and Session Blocks
 		// *****************************************************
@@ -111,11 +116,6 @@ public class SessionBuilderInterceptor implements Interceptor {
 	        log4j.warn("[" + ipaddress + "] Application is NOT initialized, going to maintenance page!");
 	        return new ForwardResolution("/WEB-INF/pages/world/maintenance.jsp");
 	    }
-
-        // Add the release version number to the request for JSPs
-        request.setAttribute("releaseversion", RuntimeProperties.getInstance().getProperty(RuntimeProperties.RELEASE_VERSION));
-        // Add the contact us link to the request for all JSPs
-        request.setAttribute("contactuslink", RuntimeProperties.getInstance().getProperty(RuntimeProperties.CONTACT_US_LINK));
 
         // *****************************************************
 		// Check the User-Agent. If "PEAR", end request
