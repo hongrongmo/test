@@ -2,9 +2,11 @@ package org.ei.controller;
 
 import java.io.IOException;
 import java.net.InetAddress;
+import java.net.URLEncoder;
 import java.text.ParseException;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -55,10 +57,10 @@ public class IPBlocker {
     private static long reloadInterval = 600000L; // 10 minutes
     private static int bucketincrementtimemin = 5;
     private static long sessionlimit = 150;
-    private static long requestlimit = 600;
+    private static long requestlimit = 900;
     private static long nonCustRequestLimit = 600;
     private static long authFailLimit = 150;
-    private static long maxRequestperSessionRate = 300;
+    private static long maxRequestperSessionRate = 600;
     private static boolean autoBlockEnabled = false;
     private static String emailto;
     private static String sender;
@@ -97,10 +99,10 @@ public class IPBlocker {
             RuntimeProperties runtimeprops = RuntimeProperties.getInstance();
             bucketincrementtimemin = Integer.parseInt(runtimeprops.getProperty(IPBLOCKER_BUCKET_INTERVAL_MINUTES_PROPERTY, "5"));
             sessionlimit = Long.parseLong(runtimeprops.getProperty(IPBLOCKER_SESSION_LIMIT_PROPERTY, "150"));
-            requestlimit = Long.parseLong(runtimeprops.getProperty(IPBLOCKER_REQUEST_LIMIT_PROPERTY, "600"));
+            requestlimit = Long.parseLong(runtimeprops.getProperty(IPBLOCKER_REQUEST_LIMIT_PROPERTY, "900"));
             nonCustRequestLimit = Long.parseLong(runtimeprops.getProperty(IPBLOCKER_NONCUSTOMER_REQUEST_LIMIT_PROPERTY, "600"));
             authFailLimit = Long.parseLong(runtimeprops.getProperty(IPBLOCKER_AUTHFAIL_LIMIT_PROPERTY, "150"));
-            maxRequestperSessionRate = Long.parseLong(runtimeprops.getProperty(IPBLOCKER_REQUEST_PER_SESSION_LIMIT_PROPERTY, "300"));
+            maxRequestperSessionRate = Long.parseLong(runtimeprops.getProperty(IPBLOCKER_REQUEST_PER_SESSION_LIMIT_PROPERTY, "600"));
             emailto = runtimeprops.getProperty(IPBLOCKER_EMAIL_TO_PROPERTY);
             sender = runtimeprops.getProperty(IPBLOCKER_EMAIL_FROM_PROPERTY);
             autoBlockEnabled = Boolean.parseBoolean(runtimeprops.getProperty(IPBLOCKER_AUTOBLOCK_ENABLED_PROPERTY, "false"));
@@ -193,10 +195,10 @@ public class IPBlocker {
 
         try {
         	
-        	
+        	// Priority 1 check
+        	// Check the non customer request limit, this also auto block the user IP
         	if (isThresholdReached(ip, COUNTER.NONCUSTOMER_REQUEST)) {
-            	// Take one-time action for this abuse
-                String bucketname = getBucketName(ip, COUNTER.NONCUSTOMER_REQUEST);
+            	String bucketname = getBucketName(ip, COUNTER.NONCUSTOMER_REQUEST);
                 String messagebucket = bucketname + "_MESSAGE";
                 if (memcached.get(messagebucket) == null) {
                 	memcached.add(messagebucket, bucketincrementtimemin * 60, new Boolean(true));
@@ -214,6 +216,7 @@ public class IPBlocker {
                     BlockedIPStatus ipstatus = insertBlockedIPsTable(ipevent);
                     notifyEmail(ipevent, ipstatus);
                     
+                    // Refresh immediatly once the auto block is applied
                     if(autoBlockEnabled)refreshBlockedIpsMap();
                     return ipstatus.isBlocked();
                 }
@@ -454,6 +457,7 @@ public class IPBlocker {
             	
             	ipstatus = new BlockedIPStatus(ipevent.getIP());
             }
+            // Apply auto block only when the non customer request limit is exceeded and auto block flag is enabled 
             if(ipevent.getEvent().equalsIgnoreCase(COUNTER.NONCUSTOMER_REQUEST.name()) && autoBlockEnabled){
             	ipstatus.setStatus(BlockedIPStatus.STATUS_BLOCKED);
             }
@@ -554,6 +558,8 @@ public class IPBlocker {
     public boolean isRequestPerSessionRateExceeded(HttpServletRequest request) {
     	
     
+    	boolean isBlocked = false;
+    	
         HttpSession session = request.getSession(false);
         if (session == null)
             return false;
@@ -562,40 +568,96 @@ public class IPBlocker {
         SessionRate sessionrate = (SessionRate) session.getAttribute(IPBLOCKER_SESSION_RATE_LIMITOR_KEY);
         if (sessionrate == null) {
             sessionrate = new SessionRate();
-            session.setAttribute(IPBLOCKER_SESSION_RATE_LIMITOR_KEY, sessionrate);
-        } else {
+        }else {
             sessionrate.incrementTotalRequest();
         }
         
         long seconds = (new Date().getTime() - sessionrate.getFirstrequest()) / 1000;
         
+        //Reset the session rate object once the predefined reset time is reached, and don't reset the value of  'blockWithCaptcha'
         if(seconds>(bucketincrementtimemin*60)){
         	sessionrate.reset(false);
         }
         
+        //If the session is blocked already, only block the non ajax requests, because that leads to partial page rendering in many of our pages
         if(sessionrate.isBlockWithCaptcha()){
-        	session.setAttribute(IPBLOCKER_SESSION_RATE_LIMITOR_KEY, sessionrate);
-        	return true;
-        }
-        
-        if(sessionrate.getTotalRequest()>maxRequestperSessionRate){
-        	if(!sessionrate.isBlockWithCaptcha()){
-        		 sessionrate.setBlockWithCaptcha(true);
-	    		 String ip = HttpRequestUtil.getIP(request);
-	    		 String message = "Customer SESSION has been blocked with CAPTCHA page due to high activity. IP(" + ip + "), total number of requests " + sessionrate.getTotalRequest() + " exceeded for the session with in " + (bucketincrementtimemin*60)+" seconds.";
-	             BlockedIPEvent ipevent = new BlockedIPEvent(ip);
-	             ipevent.setEvent(BlockedIPEvent.EVENT_REQUESTRATE_LIMIT);
-	             ipevent.setBucket(ip + "_" + session.getId() + "_REQUESTRATE");
-	             ipevent.setMessage(message);
-	             BlockedIPStatus ipstatus = IPBlocker.insertBlockedIPsTable(ipevent);
-	             notifyEmail(ipevent, ipstatus);
-        	}
-        	session.setAttribute(IPBLOCKER_SESSION_RATE_LIMITOR_KEY, sessionrate);
-        	return true;
+        	isBlocked =  !isAjax(request);
+        	buildInComingUrl(request,sessionrate);
+        }else{
+        	//If the total request for the session exceeds the allowed limit, update the session object and notify the admin
+        	//again, this captcha block will applicable only for non ajax requests
+        	if(sessionrate.getTotalRequest()>maxRequestperSessionRate){
+            	if(!isAjax(request)){
+            		 sessionrate.setBlockWithCaptcha(true);
+    	    		 String ip = HttpRequestUtil.getIP(request);
+    	    		 String message = "Customer SESSION has been blocked with CAPTCHA page due to high activity. IP(" + ip + "), total number of requests " + sessionrate.getTotalRequest() + " exceeded for the session with in " + (bucketincrementtimemin*60)+" seconds.";
+    	             BlockedIPEvent ipevent = new BlockedIPEvent(ip);
+    	             ipevent.setEvent(BlockedIPEvent.EVENT_REQUESTRATE_LIMIT);
+    	             ipevent.setBucket(ip + "_" + session.getId() + "_REQUESTRATE");
+    	             ipevent.setMessage(message);
+    	             BlockedIPStatus ipstatus = IPBlocker.insertBlockedIPsTable(ipevent);
+    	             notifyEmail(ipevent, ipstatus);
+    	             isBlocked = true;
+    	             buildInComingUrl(request,sessionrate);
+            	}
+            }
         }
         session.setAttribute(IPBLOCKER_SESSION_RATE_LIMITOR_KEY, sessionrate);
-        return false;
+        return isBlocked;
     }
+    
+    /**
+     * Builds the in coming url.
+     *
+     * @param request the request
+     * @param sessionRate the session rate
+     */
+    private void buildInComingUrl(HttpServletRequest request, SessionRate sessionRate)  {
+		
+    	//Don't build the url if the current request is ajax or captcha related 
+    	if(isAjax(request) || 
+    			request.getRequestURI().contains("captcha/display.url") || 
+    			request.getRequestURI().contains("captcha/verify.url") || 
+    			request.getRequestURI().contains("captcha/image.url") || 
+    			request.getRequestURI().contains("system/endsession.url")){
+    		return ;
+    	}
+    	
+    	//To identify this is the url generated as part of captch block, adding the 'redirectFlow' parameter
+    	StringBuffer redirect  = new StringBuffer(request.getRequestURI()+"?redirectFlow=Generic&");
+    	
+    	try {
+    		Enumeration<String> e = request.getParameterNames();
+        	while(e.hasMoreElements())
+    		{
+    			String name = e.nextElement();
+    			String value = "";
+    			if(name.equalsIgnoreCase("database"))
+    			{
+    				int dbvalue = 0;
+    				String[] multiValue = request.getParameterValues(name);	    				
+    				for(int i=0;i<multiValue.length; i++)
+    				{	    					
+    					dbvalue += Integer.parseInt(multiValue[i]);
+    				}
+    				value = Integer.toString(dbvalue);
+    			}else{
+    				value = (String) request.getParameter(name);
+    			}	    				    				    		
+    			redirect.append(name + "=" + URLEncoder.encode(value, "UTF-8"));
+    			if (e.hasMoreElements()) redirect.append("&");
+    		}
+        	sessionRate.setIncomingUrl( redirect.toString());
+    	} catch (Exception exp) {
+			log4j.error("URL encoding is failed!, exception = "+exp.getMessage());
+			sessionRate.setIncomingUrl("/home.url?redirectFlow=Generic&");
+		}
+    }
+    
+    private static boolean isAjax(HttpServletRequest request) {
+	   return "XMLHttpRequest"
+	             .equals(request.getHeader("X-Requested-With"));
+	}
     
     /**
      * Inner class to track request rate.
@@ -608,8 +670,17 @@ public class IPBlocker {
     	private int totalRequest = 1;
         private long firstrequest = new Date().getTime();
         private boolean blockWithCaptcha = false;
+        private String incomingUrl = null;
 
-       	public int getTotalRequest() {
+       	public String getIncomingUrl() {
+			return incomingUrl;
+		}
+
+		public void setIncomingUrl(String incomingUrl) {
+			this.incomingUrl = incomingUrl;
+		}
+
+		public int getTotalRequest() {
 			return totalRequest;
 		}
 
@@ -636,6 +707,7 @@ public class IPBlocker {
 		public void reset(boolean resetCaptcha) {
             firstrequest = new Date().getTime();
             totalRequest = 1;
+            incomingUrl = null;
             if(resetCaptcha){
             	blockWithCaptcha = false;
             }
