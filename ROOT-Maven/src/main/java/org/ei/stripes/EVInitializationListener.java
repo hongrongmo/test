@@ -54,7 +54,8 @@ public class EVInitializationListener implements ServletContextListener {
                 "* THIS MUST BE INITIALIZED VIA TOMCAT STARTUP PARAM \n" +
                 "* (e.g. -D" + RuntimeProperties.SYSTEM_ENVIRONMENT_RUNLEVEL + "=<environment>)\n" +
                 "*********************************************************************\n\n");
-            throw new RuntimeException("Unable to initialize - property '" + RuntimeProperties.SYSTEM_ENVIRONMENT_RUNLEVEL + "' is not set!");
+            log4j.error("Unable to initialize - property '" + RuntimeProperties.SYSTEM_ENVIRONMENT_RUNLEVEL + "' is not set!");
+            return;
         }
 
 	        //intialize the EV Properties object

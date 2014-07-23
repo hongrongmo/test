@@ -6,14 +6,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import net.sourceforge.stripes.action.ErrorResolution;
 import net.sourceforge.stripes.action.ForwardResolution;
-import net.sourceforge.stripes.action.RedirectResolution;
 import net.sourceforge.stripes.action.Resolution;
 import net.sourceforge.stripes.controller.ExecutionContext;
 import net.sourceforge.stripes.controller.Interceptor;
 import net.sourceforge.stripes.controller.Intercepts;
 import net.sourceforge.stripes.controller.LifecycleStage;
 
-import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
 import org.ei.biz.security.IAccessControl;
 import org.ei.biz.security.ISecuredAction;
@@ -22,13 +20,10 @@ import org.ei.config.EVProperties;
 import org.ei.config.RuntimeProperties;
 import org.ei.controller.IPBlocker;
 import org.ei.controller.IPBlocker.COUNTER;
-import org.ei.controller.RateLimiter;
 import org.ei.session.SessionManager;
-import org.ei.session.SessionStatus;
 import org.ei.session.UserSession;
 import org.ei.stripes.action.CaptchaAction;
 import org.ei.stripes.action.EVActionBean;
-import org.ei.stripes.action.EVPathUrl;
 import org.ei.stripes.action.personalaccount.LogoutAction;
 import org.ei.stripes.exception.EVExceptionHandler;
 import org.ei.stripes.util.HttpRequestUtil;
@@ -68,12 +63,19 @@ public class SessionBuilderInterceptor implements Interceptor {
 		String ipaddress = HttpRequestUtil.getIP(request);
 		log4j.info("[" + ipaddress + "] Starting intercept...");
 
-		
+        // *****************************************************
+        // Ensure the application has been initialized
+        // *****************************************************
+        if (!EVInitializationListener.isInitialized()) {
+            log4j.warn("[" + ipaddress + "] Application is NOT initialized, going to maintenance page!");
+            return new ForwardResolution("/WEB-INF/pages/world/maintenance.jsp");
+        }
+
 		// Add the release version number to the request for JSPs
         request.setAttribute("releaseversion", RuntimeProperties.getInstance().getProperty(RuntimeProperties.RELEASE_VERSION));
         // Add the contact us link to the request for all JSPs
         request.setAttribute("contactuslink", RuntimeProperties.getInstance().getProperty(RuntimeProperties.CONTACT_US_LINK));
-		
+
 		// *****************************************************
 		// Check for IP and Session Blocks
 		// *****************************************************
@@ -95,27 +97,19 @@ public class SessionBuilderInterceptor implements Interceptor {
 			EVExceptionHandler.logException("Unable to verify IP: ", e, request);
 			throw new RuntimeException("PreAuth failed during IPBlocker check!", e);
 		}
-		
+
 		// *****************************************************
 		// Update request counter into memcache
 		// *****************************************************
 		IPBlocker.getInstance().increment(ipaddress, COUNTER.REQUEST);
-		
-		
+
+
 		if (actionbean instanceof ISecuredAction) {
 			accesscontrol = ((ISecuredAction) actionbean).getAccessControl();
 			if (accesscontrol instanceof WorldAccessControl) {
 				return executioncontext.proceed();
 			}
 		}
-
-		// *****************************************************
-        // Ensure the application has been initialized
-        // *****************************************************
-	    if (!EVInitializationListener.isInitialized()) {
-	        log4j.warn("[" + ipaddress + "] Application is NOT initialized, going to maintenance page!");
-	        return new ForwardResolution("/WEB-INF/pages/world/maintenance.jsp");
-	    }
 
         // *****************************************************
 		// Check the User-Agent. If "PEAR", end request
@@ -177,7 +171,7 @@ public class SessionBuilderInterceptor implements Interceptor {
 					+ request.getRemoteHost());
 		}
 
-		
+
 		// Continue on with request
 		return executioncontext.proceed();
 	}
