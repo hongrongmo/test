@@ -71,6 +71,13 @@ public class SessionBuilderInterceptor implements Interceptor {
             return new ForwardResolution("/WEB-INF/pages/world/maintenance.jsp");
         }
 
+		if (actionbean instanceof ISecuredAction) {
+			accesscontrol = ((ISecuredAction) actionbean).getAccessControl();
+			if (accesscontrol instanceof WorldAccessControl) {
+				return executioncontext.proceed();
+			}
+		}
+
 		// Add the release version number to the request for JSPs
         request.setAttribute("releaseversion", RuntimeProperties.getInstance().getProperty(RuntimeProperties.RELEASE_VERSION));
         // Add the contact us link to the request for all JSPs
