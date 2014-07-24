@@ -72,36 +72,50 @@ $(document).ready(function() {
 			+"&displayformat="+displayformat
 			+"&allselected=true";
 
-			$(this).tooltipster({
-			    content: 'Loading...',
-			    autoClose:false,
-			    interactive:true,
-			    contentAsHTML:true,
-			    position:'bottom',
-			    fixedLocation:true,
-			    positionTracker:false,
-			    functionInit: function(origin, content) {
+			if(typeof(Basket) == 'undefined' || (Basket.count > 0) ){
 
-			        // we'll make this function asynchronous and allow the tooltip to go ahead and show the loading notification while fetching our data
+				$(this).tooltipster({
+				    content: 'Loading...',
+				    autoClose:false,
+				    interactive:true,
+				    contentAsHTML:true,
+				    position:'bottom',
+				    fixedLocation:true,
+				    positionTracker:false,
+				    functionInit: function(origin, content) {
 
-			        //console.log("get data" + content);
+				        // we'll make this function asynchronous and allow the tooltip to go ahead and show the loading notification while fetching our data
 
-			            $.ajax({
-			                type: 'GET',
-			                url: downloadurl,
-			                success: function(data) {
-			                	//console.log(origin);
-			                    // update our tooltip content with our returned data and cache it
+				        //console.log("get data" + content);
 
-			                    $(origin).tooltipster('content', data);
+				            $.ajax({
+				                type: 'GET',
+				                url: downloadurl,
+				                success: function(data) {
+				                	//console.log(origin);
+				                    // update our tooltip content with our returned data and cache it
 
-			                }
-			            });
+				                    $(origin).tooltipster('content', data);
 
-			    }
-			});
-			$(this).tooltipster('show',null);
+				                }
+				            });
 
+				    }
+				});
+				$(this).tooltipster('show',null);
+			}else {
+				$(this).tooltipster({
+				    content: 'Please select records from the search results and try again',
+				    autoClose:true,
+				    interactive:false,
+				    contentAsHTML:true,
+				    position:'bottom',
+				    fixedLocation:true,
+				    positionTracker:false,
+				    functionAfter: function(origin){$(origin).tooltipster('destroy');}
+				});
+				$(this).tooltipster('show',null);
+			}
 			return false;
 		});
 	}
