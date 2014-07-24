@@ -1,3 +1,8 @@
+/*****
+Last modified 07/23/2014
+desc: limit affmulti2 to 4000, so total affmulti1 and affmulti2 8000
+author: Telebh
+ */
 package org.ei.data.inspec.loadtime;
 
 import java.io.*;
@@ -945,11 +950,20 @@ public class InspecXMLReader extends FilterReader
 		// AAFFMULTI1, AAFFMULTI2 ,EAFFMULTI1, EAFFMULTI2
 		StringBuffer affmulti1 = new StringBuffer();
 		StringBuffer affmulti2 = null;
+		StringBuffer affmulti2_max = null;
 		List auaff = e.getChildren("faff");
 
 
 	    for( int j=0 ; j < auaff.size() ; j++ )
 		{
+	    	 // H Limit to 8000 Length, so no record rejected for aaffmulti2
+	    	
+	    	if(affmulti1.length()>0 && affmulti1.length()>8000) 
+            {
+            	break;
+            }
+	    	
+	    	
 	        Element m = (Element)auaff.get(j);
 	        StringBuffer oneAffiliation = new StringBuffer();
 	        StringBuffer country = new StringBuffer();
@@ -1061,11 +1075,29 @@ public class InspecXMLReader extends FilterReader
 
 		}
 	    // db field overflow logic
-	    if (affmulti1.length() > 0 && affmulti1.length() > 3900)
+	   // if (affmulti1.length() > 0 && affmulti1.length() > 3900)   //origin
+	    if (affmulti1.length() > 0 && affmulti1.length() > 4000)
 	    {
-	    	affmulti2 = new StringBuffer(affmulti1.substring(3900));
+	    	/*affmulti2 = new StringBuffer(affmulti1.substring(3900));
 	    	affmulti1.delete(3900, affmulti1.length());
-	    	record.put(keyprfx+"AFFMULTI2",affmulti2);
+	    	record.put(keyprfx+"AFFMULTI2",affmulti2);*/ //origin
+	    	
+	    	affmulti2 = new StringBuffer(affmulti1.substring(4000));
+	    	affmulti1.delete(4000, affmulti1.length());
+	    	
+	    	if (affmulti2.length() > 0 && affmulti2.length() > 4000)
+	    	{
+	    		affmulti2.delete(4001, affmulti2.length());
+	    		affmulti2_max = new StringBuffer(affmulti2.substring(0, affmulti2.lastIndexOf(AUDELIMITER)));
+	    		
+	    		record.put(keyprfx+"AFFMULTI2",affmulti2_max); 
+	    	}
+	    	else
+	    	{
+	    		record.put(keyprfx+"AFFMULTI2",affmulti2); 
+	    	}
+	    	
+	    	
 	    }
 
 	    if (affmulti1.length() > 0)
