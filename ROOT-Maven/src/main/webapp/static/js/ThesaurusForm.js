@@ -186,6 +186,9 @@ $(".searchtype").click(function() {
 });
 
 
+var swapCodes = new Array(8211, 8212, 8216, 8217, 8220, 8221, 8226, 8230);
+var swapStrings = new Array("-", "--", "'", "'", "\"", "\"", "*", "...");
+
 /**
  * Submit the form
  * 
@@ -202,6 +205,12 @@ function submitThesForm(event, data) {
     	return;
     }
     
+    var textNodeValue = data.term;
+    for (var j = 0; j < swapCodes.length; j++) {
+        var swapper = new RegExp("\\u" + swapCodes[j].toString(16), "g");
+        textNodeValue = textNodeValue.replace(swapper, swapStrings[j]);
+    }
+    data.term = textNodeValue;
     /* Submit the search */
 	window.location.href = '#'+data.path+'snum=0&term='+data.term+'&database='+data.database+'&formSubmit=t';
 };

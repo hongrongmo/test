@@ -529,6 +529,9 @@ function updateUI(dbMask, sYear, strYear, eYear) {
 	}
 }
 
+var swapCodes = new Array(8211, 8212, 8216, 8217, 8220, 8221, 8226, 8230);
+var swapStrings = new Array("-", "--", "'", "'", "\"", "\"", "*", "...");
+
 /**********************************************************
  * Validate the search form (on submit)
  *
@@ -570,6 +573,13 @@ function searchValidation() {
 			window.alert("Enter at least one term to search in the database.");
 			return (false);
 		}
+		
+		var textNodeValue = searchword1;
+		for (var j = 0; j < swapCodes.length; j++) {
+	        var swapper = new RegExp("\\u" + swapCodes[j].toString(16), "g");
+	        textNodeValue = textNodeValue.replace(swapper, swapStrings[j]);
+	    }
+		document.quicksearch.searchWord1.value = textNodeValue;
 	}
 
 	if (document.quicksearch.yearselect
