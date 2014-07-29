@@ -12,7 +12,7 @@
 
     <stripes:layout-component name="csshead">
     <jsp:include page="include/customcss.jsp"></jsp:include>
-    <link type="text/css" rel="stylesheet" href="/static/css/custom-theme/jquery.dataTables.css"/>
+    <link type="text/css" rel="stylesheet" href="/static/css/custom-theme/jquery.dataTables-1.10.0.min.css"/>
     <style type="text/css">
         h2 {font-size: 14px; margin: 3px; padding: 0}
             #blockedips_table {width:740px;border:1px solid black;}
@@ -98,13 +98,13 @@
 
     <stripes:layout-component name="jsbottom">
     <c:if test="${not empty blockedIpsList}">
-    <script type="text/javascript" src="/static/js/jquery/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery/jquery.dataTables-1.10.0.min.js"></script>
     <script type="text/javascript">
 
     $(document).ready(function() {
     	 $('#blockedips_table').dataTable({
              "aaSorting": [[2,"desc"]],
-             "aoColumns": [null, {"bSortable":false}, null, null,null, {"bSortable":false}],
+             "aoColumns": [null, null, null, null,{"bSortable":false}, {"bSortable":false}],
              "bStateSave": false,
              "bPaginate": false,
              "bAutoWidth": false,
