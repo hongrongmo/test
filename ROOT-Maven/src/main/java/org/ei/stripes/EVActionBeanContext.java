@@ -15,6 +15,12 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import net.sourceforge.stripes.action.ActionBeanContext;
+import net.sourceforge.stripes.action.ForwardResolution;
+import net.sourceforge.stripes.action.Resolution;
+import net.sourceforge.stripes.controller.FlashScope;
+import net.sourceforge.stripes.exception.SourcePageNotFoundException;
+import net.sourceforge.stripes.validation.ValidationError;
+import net.sourceforge.stripes.validation.ValidationErrors;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.validator.GenericValidator;
@@ -37,6 +43,7 @@ import org.ei.service.cars.CARSStringConstants;
 import org.ei.service.cars.Impl.CARSResponse;
 import org.ei.session.SessionManager;
 import org.ei.session.UserSession;
+import org.ei.stripes.action.SystemMessage;
 
 /**
  * This class extends the Stripes ActionBeanContext class to provide
@@ -460,6 +467,26 @@ public class EVActionBeanContext extends ActionBeanContext {
 		return getRequest().getSession(false);
 	}
 
-
+    /* (non-Javadoc)
+     * @see net.sourceforge.stripes.action.ActionBeanContext#getSourcePageResolution()
+     */
+    @Override
+    public Resolution getSourcePageResolution() throws SourcePageNotFoundException {
+        //
+        // This method is being overridden to handle the following use case:
+        // 1) An Action has one or more validated fields that have FAILE validation
+        // 2) The validation failure happened OUTSIDE of a form submit so there is NO source page
+        // 3) User needs to be sent to error page
+        //
+        ValidationErrors errors = super.getValidationErrors();
+        if (errors != null && errors.size() > 0) {
+            if (super.getSourcePage() == null) {
+                FlashScope scope = FlashScope.getCurrent(this.getRequest(), true);
+                scope.put(ErrorMessageInterceptor.CTX_KEY, errors);
+                return SystemMessage.SYSTEM_ERROR_RESOLUTION;
+            }
+        }
+        return super.getSourcePageResolution();
+    }
 
 }

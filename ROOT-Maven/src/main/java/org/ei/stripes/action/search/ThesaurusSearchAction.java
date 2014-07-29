@@ -130,7 +130,6 @@ public class ThesaurusSearchAction extends SearchDisplayAction { // implements I
      * @throws SearchException
      */
     @HandlesEvent("submit")
-    @DontValidate
     public Resolution validate() throws InfrastructureException {
         return super.validate();
     }
@@ -144,7 +143,6 @@ public class ThesaurusSearchAction extends SearchDisplayAction { // implements I
      * @throws AccessException
      */
     @DefaultHandler
-    @DontValidate
     public Resolution thesHome() throws InfrastructureException, SessionException {
         HttpServletRequest request = context.getRequest();
         setRoom(ROOM.search);
