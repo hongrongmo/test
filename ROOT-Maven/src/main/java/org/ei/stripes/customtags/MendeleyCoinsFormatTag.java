@@ -8,6 +8,7 @@ import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.PageContext;
 import javax.servlet.jsp.tagext.SimpleTagSupport;
 
+import org.apache.commons.lang.StringEscapeUtils;
 import org.apache.commons.validator.GenericValidator;
 import org.ei.domain.DatabaseConfig;
 import org.ei.stripes.view.Affil;
@@ -63,47 +64,47 @@ public class MendeleyCoinsFormatTag extends SimpleTagSupport {
         } else {
             tagoutput.append("&amp;rft.genre=unknown");
         }
-        tagoutput.append("&amp;rft.date=" + result.getYr());
-        tagoutput.append("&amp;rft.atitle=" + result.getTitleNoHighlight().replace(" ", "+").replaceAll("</?inf>", "").replaceAll("\"", "&quot;"));
+        tagoutput.append("&amp;rft.date=" + removeHtmlTag(result.getYr()));
+        tagoutput.append("&amp;rft.atitle=" + removeHtmlTag(result.getTitle()).replace(" ", "+").replaceAll("</?inf>", "").replaceAll("\"", "&quot;"));
         if (!GenericValidator.isBlankOrNull(result.getDoi())) {
-            tagoutput.append("&amp;rft_id=" + URLEncoder.encode("info:doi/" + result.getDoi(), "utf-8"));
+            tagoutput.append("&amp;rft_id=" + URLEncoder.encode("info:doi/" + removeHtmlTag(result.getDoi()), "utf-8"));
         }
         if (!GenericValidator.isBlankOrNull(result.getAbstractrecord().getCoden())) {
-            tagoutput.append("&amp;rft.coden=" + result.getAbstractrecord().getCoden());
+            tagoutput.append("&amp;rft.coden=" + removeHtmlTag(result.getAbstractrecord().getCoden()));
         }
         if (!GenericValidator.isBlankOrNull(result.getSource())) {
-            tagoutput.append("&amp;rft.jtitle=" + result.getSource().replace(" ", "+"));
-            tagoutput.append("&amp;rft.title=" + result.getSource().replace(" ", "+"));
+            tagoutput.append("&amp;rft.jtitle=" + removeHtmlTag(result.getSource()).replace(" ", "+"));
+            tagoutput.append("&amp;rft.title=" + removeHtmlTag(result.getSource()).replace(" ", "+"));
         }
         if (!GenericValidator.isBlankOrNull(result.getIs())) {
-            tagoutput.append("&amp;rft.issue=" + result.getIs());
+            tagoutput.append("&amp;rft.issue=" + removeHtmlTag(result.getIs()));
         }
         if (!GenericValidator.isBlankOrNull(result.getVo())) {
-            tagoutput.append("&amp;rft.volume=" + result.getVo());
+            tagoutput.append("&amp;rft.volume=" + removeHtmlTag(result.getVo()));
         }
         if (!GenericValidator.isBlankOrNull(result.getArticlenumber())) {
-            tagoutput.append("&amp;rft.artnum=" + result.getArticlenumber());
+            tagoutput.append("&amp;rft.artnum=" + removeHtmlTag(result.getArticlenumber()));
         }
         if (!GenericValidator.isBlankOrNull(result.getPages())) {
-            tagoutput.append("&amp;rft.pages=" + result.getPages());
+            tagoutput.append("&amp;rft.pages=" + removeHtmlTag(result.getPages()));
         }
         if (!GenericValidator.isBlankOrNull(result.getAbstractrecord().getIssn())) {
-            tagoutput.append("&amp;rft.issn=" + result.getAbstractrecord().getIssn());
+            tagoutput.append("&amp;rft.issn=" + removeHtmlTag(result.getAbstractrecord().getIssn()));
         }
         if (!GenericValidator.isBlankOrNull(result.getIsbn13())) {
-            tagoutput.append("&amp;rft.isbn=" + result.getIsbn13());
+            tagoutput.append("&amp;rft.isbn=" + removeHtmlTag(result.getIsbn13()));
         } else if (!GenericValidator.isBlankOrNull(result.getIsbn())) {
-            tagoutput.append("&amp;rft.isbn=" + result.getIsbn());
+            tagoutput.append("&amp;rft.isbn=" + removeHtmlTag(result.getIsbn()));
         }
 
         if (result.getAuthors() != null) {
             for (Author author : result.getAuthors()) {
-                tagoutput.append("&amp;rft.au=" + author.getName());
+                tagoutput.append("&amp;rft.au=" + removeHtmlTag(author.getName()));
             }
         }
         if (result.getAffils() != null) {
             for (Affil affil : result.getAffils()) {
-                tagoutput.append("&amp;rft.aucorp=" + affil.getName());
+                tagoutput.append("&amp;rft.aucorp=" + removeHtmlTag(affil.getName()));
             }
         }
         tagoutput.append("\"></span>");
@@ -120,4 +121,11 @@ public class MendeleyCoinsFormatTag extends SimpleTagSupport {
         this.result = result;
     }
 
+    
+    private String removeHtmlTag(String htmlString){
+    	
+    	if(htmlString == null) return null;
+    	
+    	return StringEscapeUtils.escapeHtml(htmlString.replaceAll("\\<.*?>",""));
+    }
 }
