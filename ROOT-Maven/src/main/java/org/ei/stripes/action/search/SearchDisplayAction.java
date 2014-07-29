@@ -23,8 +23,10 @@ import net.sourceforge.stripes.action.ForwardResolution;
 import net.sourceforge.stripes.action.HandlesEvent;
 import net.sourceforge.stripes.action.RedirectResolution;
 import net.sourceforge.stripes.action.Resolution;
+import net.sourceforge.stripes.action.StrictBinding;
 import net.sourceforge.stripes.action.UrlBinding;
 import net.sourceforge.stripes.validation.LocalizableError;
+import net.sourceforge.stripes.validation.Validate;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.validator.GenericValidator;
@@ -78,6 +80,7 @@ import org.xml.sax.SAXException;
  *
  */
 @UrlBinding("/search/{$event}.url")
+@StrictBinding
 public class SearchDisplayAction extends BaseSearchAction { // implements
                                                             // IBizBean {
 
@@ -125,7 +128,6 @@ public class SearchDisplayAction extends BaseSearchAction { // implements
     protected String hisiderr;
     protected String searchHisErr;
 
-    private String searchtype;
     private String swReferrer = "";
     protected GoogleWebAnalyticsEvent webEvent = new GoogleWebAnalyticsEvent();
 
@@ -165,7 +167,6 @@ public class SearchDisplayAction extends BaseSearchAction { // implements
         // TODO change this!
         String[] cartridgearr = context.getUserSession().getUser().getCartridge();
         stringYear = SearchForm.getClientStartYears(context.getUserSession().getUser().getCartridgeString(), cartridgearr);
-
         //
         // First populate form from Fence values
         //
@@ -347,7 +348,6 @@ public class SearchDisplayAction extends BaseSearchAction { // implements
      * @throws SearchException
      */
     @HandlesEvent("submit")
-    @DontValidate
     public Resolution validate() throws InfrastructureException {
 
         HttpServletRequest request = context.getRequest();
@@ -467,7 +467,6 @@ public class SearchDisplayAction extends BaseSearchAction { // implements
      * @throws SearchException
      */
     @HandlesEvent("widgetSubmit")
-    @DontValidate
     public Resolution widgetSearchSubmit() throws InfrastructureException {
 
         HttpServletRequest request = context.getRequest();
@@ -632,7 +631,6 @@ public class SearchDisplayAction extends BaseSearchAction { // implements
      * @throws IOException
      */
     @HandlesEvent("quick")
-    @DontValidate
     public Resolution quicksearch() throws InfrastructureException {
         setRoom(ROOM.search);
 
@@ -681,7 +679,10 @@ public class SearchDisplayAction extends BaseSearchAction { // implements
 
         // Get year options
         startyearopts = SearchForm.getYears(db, startYear, stringYear, "startYear");
-        endyearopts = SearchForm.getYears(db, Integer.toString(SearchForm.calEndYear(db)), stringYear, "endYear");
+        if (GenericValidator.isBlankOrNull(this.endYear)) {
+            this.endYear = Integer.toString(SearchForm.calEndYear(db));
+        }
+        endyearopts = SearchForm.getYears(db, this.endYear, stringYear, "endYear");
 
         // TMH - change per Product management! Autostem fence applies ONLY to
         // quick search!
@@ -722,7 +723,10 @@ public class SearchDisplayAction extends BaseSearchAction { // implements
 
         // Get year options
         startyearopts = SearchForm.getYears(db, startYear, stringYear, "startYear");
-        endyearopts = SearchForm.getYears(db, Integer.toString(SearchForm.calEndYear(db)), stringYear, "endYear");
+        if (GenericValidator.isBlankOrNull(this.endYear)) {
+            this.endYear = Integer.toString(SearchForm.calEndYear(db));
+        }
+        endyearopts = SearchForm.getYears(db, this.endYear, stringYear, "endYear");
 
         // TMH - change per Product management! Autostem fence applies ONLY to
         // quick search!
@@ -957,14 +961,6 @@ public class SearchDisplayAction extends BaseSearchAction { // implements
     // GETTERS/SETTERS
     //
     //
-
-    public String getSearchtype() {
-        return searchtype;
-    }
-
-    public void setSearchtype(String searchtype) {
-        this.searchtype = searchtype;
-    }
 
     public String getHistorybackurl() throws UnsupportedEncodingException {
         String url = URLEncoder.encode("/search/" + context.getEventName() + ".url?" + "database=" + database

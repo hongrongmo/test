@@ -19,6 +19,7 @@ import net.sourceforge.stripes.action.RedirectResolution;
 import net.sourceforge.stripes.action.Resolution;
 import net.sourceforge.stripes.controller.LifecycleStage;
 import net.sourceforge.stripes.validation.LocalizableError;
+import net.sourceforge.stripes.validation.Validate;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.validator.GenericValidator;
@@ -43,6 +44,7 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
 	private final static Logger log4j = Logger
 			.getLogger(EVActionBean.class);
 
+    @Validate(trim=true,mask=".*")
 	protected String CID;
 
 	/*
@@ -50,6 +52,7 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
 	 */
 	protected String sessionid;
 	protected String displayLogin = "";
+    @Validate(mask="\\d*|compendex|inspec")
 	protected String database;
 	protected int usermask; 	// User Database mask (available DBs)
 	protected String source = "";

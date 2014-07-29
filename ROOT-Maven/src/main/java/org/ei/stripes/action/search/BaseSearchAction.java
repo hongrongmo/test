@@ -3,6 +3,8 @@ package org.ei.stripes.action.search;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.sourceforge.stripes.validation.Validate;
+
 import org.apache.commons.validator.GenericValidator;
 import org.ei.config.EVProperties;
 import org.ei.domain.DatabaseConfig;
@@ -16,76 +18,102 @@ import org.ei.stripes.action.EVActionBean;
  * contains fields for the search state:  start/end year, limiters,
  * etc.  Separating it here allows us to re-use across both the
  * Search display actions and the Search results actions.
- * 
+ *
  * @author harovetm
  *
  */
 public abstract class BaseSearchAction extends EVActionBean implements ISearchForm {
 
 	// Search ID (used when editing search)
+    @Validate(trim=true,mask=".*")
 	protected String searchid;
 
-	// "All" database checkbox
+    @Validate(trim=true,mask="Quick|Expert|Thesaurus|TagSearch")
+    protected String searchtype;
+
+    // "All" database checkbox
+    @Validate(trim=true,mask="true|false")
 	protected String alldb;
-	
+
     //This variable for  last four updates only
+	@Validate(mask="[1-4]")
     protected String updatesno="";
 
     //This variable for email alert week
+    @Validate(trim=true,mask="true|false")
     protected String emailalertweek;
 
 	// Selected values for above (edit search)
+    @Validate(trim=true,mask=".*")
     protected String doctype;
+    @Validate(trim=true,mask=".*")
     protected String disciplinetype;
+    @Validate(trim=true,mask=".*")
     protected String treatmentType;
+    @Validate(trim=true,mask=".*")
     protected String language;
 
     // These variable to hold search words and search options
+    @Validate(mask=".*")
     protected String searchWord1="";
+    @Validate(mask=".*")
     protected String searchWord2="";
+    @Validate(mask=".*")
     protected String searchWord3="";
+    @Validate(mask=".*")
     protected String searchWords[];
+    @Validate(trim=true,mask="AND|OR|NOT")
     protected String boolean1="";
+    @Validate(trim=true,mask="AND|OR|NOT")
     protected String boolean2="";
+    @Validate(trim=true,mask="AND|OR|NOT")
     protected String booleans[];
+    @Validate(trim=true,mask=".*")
     protected String section1="";
+    @Validate(trim=true,mask=".*")
     protected String section2="";
+    @Validate(trim=true,mask=".*")
     protected String section3="";
+    @Validate(trim=true,mask=".*")
     protected String sections[];
+    @Validate(trim=true,mask="true|false")
     protected String autostem="";
 
+    @Validate(trim=true,mask="relevance|yr")
     protected String sort="";
     protected String sortdir="";
 
     // eBooks only
     protected String allcol;
     protected String[] col;
-    
+
 
     protected String yearRange="";
     protected String yearselect="yearrange";
+    @Validate(trim=true,mask="\\d{4}")
     protected String startYear="";
     protected String folderid="";
     protected String folderName="";
     protected String folderSize="";
-    
+
     protected String useType = "";
-    
+
 	// This will become the default selected end year since it is ouput in //SESSION-DATA/END-YEAR
+    @Validate(trim=true,mask="\\d{4}")
     protected String endYear= String.valueOf(SearchForm.ENDYEAR);
     private List<String> pageCountOption= new ArrayList<String>();
     private String limitError;
     private String savedSeachesAndAlertsLimit;
     private boolean isnavchrt;
-    
+
    // Flag to indicate if search results are duplicate-eligible.
     protected boolean removeduplicates;
-    
-    
+
+
     	/**
 	 * This method removes non-hosted databases (USPTO and CRC)
 	 * and backfiles from mask value
-	 * 
+	 *
 	 * @param mask The user's DB mask
 	 * @return int value suitable for all checkbox
 	 */
@@ -103,10 +131,10 @@ public abstract class BaseSearchAction extends EVActionBean implements ISearchFo
 
 		return mask;
 	}
-	
+
     /**
      * Populate the search form from a Query object
-     * 
+     *
      * @param query
      */
     protected void populateSearchFormFields(Query query) {
@@ -139,15 +167,15 @@ public abstract class BaseSearchAction extends EVActionBean implements ISearchFo
         String qryAutoStem = query.getAutoStemming();
         if(!GenericValidator.isBlankOrNull(qryAutoStem)){
             if("on".equalsIgnoreCase(qryAutoStem)){
-                setAutostem("false");   
+                setAutostem("false");
             }else{
                 setAutostem("true");
             }
-            
+
         }else{
             setAutostem(qryAutoStem);
         }
-        
+
     }
 
 	//
@@ -155,7 +183,7 @@ public abstract class BaseSearchAction extends EVActionBean implements ISearchFo
 	// GETTERS/SETTERS
 	//
 	//
-	
+
 	public String getSearchid() {
 		return searchid;
 	}
@@ -163,6 +191,14 @@ public abstract class BaseSearchAction extends EVActionBean implements ISearchFo
 	public void setSearchid(String searchid) {
 		this.searchid = searchid;
 	}
+
+    public String getSearchtype() {
+        return searchtype;
+    }
+
+    public void setSearchtype(String searchtype) {
+        this.searchtype = searchtype;
+    }
 
 	public String getAlldb() {
 		return alldb;
@@ -401,7 +437,7 @@ public abstract class BaseSearchAction extends EVActionBean implements ISearchFo
 	public void setFolderid(String folderid) {
 		this.folderid = folderid;
 	}
-	
+
 
 	public String getFolderName() {
 		return folderName;
@@ -429,7 +465,7 @@ public abstract class BaseSearchAction extends EVActionBean implements ISearchFo
 	public String getLimitError() {
 		return limitError;
 	}
-	
+
 	public void setLimitError(String limitError) {
 		this.limitError = limitError;
 	}
@@ -452,7 +488,7 @@ public abstract class BaseSearchAction extends EVActionBean implements ISearchFo
     public void setRemoveduplicates(boolean removeduplicates) {
         this.removeduplicates = removeduplicates;
     }
-    
+
 	public String getUseType() {
 		return useType;
 	}
@@ -461,5 +497,5 @@ public abstract class BaseSearchAction extends EVActionBean implements ISearchFo
 		this.useType = useType;
 	}
 
-	
+
 }
