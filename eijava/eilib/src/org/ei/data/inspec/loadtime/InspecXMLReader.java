@@ -1,7 +1,9 @@
 /*****
-Last modified 07/23/2014
-desc: limit affmulti2 to 4000, so total affmulti1 and affmulti2 8000
-author: Telebh
+ * Last modified 07/29/2014 
+ * desc fix AB/TI/FLS extra spaces and FLS/CHI max length limit 4000
+ * Pre-Last modified 07/23/2014
+ * desc: limit affmulti2 to 4000, so total affmulti1 and affmulti2 8000
+ * author: Telebh
  */
 package org.ei.data.inspec.loadtime;
 
@@ -832,6 +834,16 @@ public class InspecXMLReader extends FilterReader
 				text= perl.substitute("s/>/&gt;/g",text);
 				text= perl.substitute("s/\n//g",text);
 				text= perl.substitute("s/\r//g",text);
+				
+				//Hanan, fix problem of <ti> when it has multiple sub-elements in separate files (i.e. 6176)
+				text=text.replaceAll("\\s{8}", "");  //added
+				//Hanan, 04/17/13- fix problem of two extra spaces before FLS terms of <ucindg> (i.e. 839816)
+				if(text.matches("  "))
+				{
+					text=text.replaceAll("\\s{2}", "");  //added
+				}
+				// end
+				
 
 				b.append(text);
 
@@ -841,7 +853,9 @@ public class InspecXMLReader extends FilterReader
   				if(inabstract)
   						entity.add(((EntityRef)o).getName());
 
-                  b.append("&").append(((EntityRef)o).getName()).append(";");
+  				//H, fix problem of <abs> when it has extra "8" spaces before <sup>/<sub> tag in newline
+  					b.append("&").append(((EntityRef)o).getName().trim()).append(";"); 
+                 
             }
             else if(o instanceof Element)
             {
@@ -862,7 +876,12 @@ public class InspecXMLReader extends FilterReader
             }
         }
 
-        return b;
+       // return b;   //original
+        
+      //H: fix extra space before <ti> 
+        StringBuffer b2=new StringBuffer(b.toString().trim());   
+        return b2;   // added
+        
     }
 
     private  StringBuffer getMixCData(List l, StringBuffer b)
@@ -1489,10 +1508,21 @@ public class InspecXMLReader extends FilterReader
 	private void getChemIndexingData(Element e)
 	{
 		StringBuffer chemindex = new StringBuffer();
+		StringBuffer chemindexmulti2 = null;
+		StringBuffer chemindexVal = null;
+		
+		
 		List lt = e.getChildren();
 
 		for(int i=0;i<lt.size();i++)
 		{
+			//H: fix CHI when exceeds db length
+			
+			if(chemindex!=null && chemindex.length()>4000)
+			{
+				break;
+			}
+			
 			Element t = (Element)lt.get(i);
 
 			List lt2 = t.getChildren();
@@ -1514,7 +1544,19 @@ public class InspecXMLReader extends FilterReader
 				chemindex = chemindex.append(AUDELIMITER);
 		}
 
-		record.put("CHI",chemindex);
+		//H: db field overflow logic
+				if (chemindex.length() > 0 && chemindex.length() > 4000)
+				{
+					chemindexmulti2 = new StringBuffer(chemindex.substring(0, 4000));
+					chemindexVal = new StringBuffer(chemindexmulti2.substring(0, chemindexmulti2.lastIndexOf(IDDELIMITER)));
+					record.put("CHI",chemindexVal);
+				}
+				
+				else
+				{
+					record.put("CHI",chemindex);
+				}
+				
 	}
 
 	private void getPub(Element e)
@@ -1653,10 +1695,20 @@ public class InspecXMLReader extends FilterReader
 	{
 		StringBuffer terms = new StringBuffer();
 		String elementname = e.getName().trim();
+		StringBuffer termsmulti2 = null;
+		StringBuffer termsVal = null;
+		
 		List lt = e.getChildren(type);
 
 		for(int i=0;i<lt.size();i++)
 		{
+			//H: truncate FLS when it exceed 4000 limit
+			
+			if(terms!=null && terms.length()>4000)
+			{
+				break;
+			}
+			
 			Element t = (Element)lt.get(i);
 			if(t.getName().equals("cc"))
 			{
@@ -1681,7 +1733,20 @@ public class InspecXMLReader extends FilterReader
 				terms.append(AUDELIMITER);
 			}
 		}
-		return terms.delete(terms.lastIndexOf(AUDELIMITER),terms.length());
+		
+			//H: db field overflow logic
+				if(terms.length() > 0 && terms.length() > 4000)
+				{
+					termsmulti2 = new StringBuffer(terms.substring(0, 4000));
+					termsVal =  new StringBuffer(termsmulti2.substring(0, termsmulti2.lastIndexOf(AUDELIMITER)));	
+					return termsVal;
+				}
+				else
+				{
+				
+					return terms.delete(terms.lastIndexOf(AUDELIMITER),terms.length());
+				}
+				
 	}
 
 }
