@@ -147,7 +147,7 @@
 		             "bPaginate": false,
 		             "bAutoWidth": false,
 		             "bFilter": true,
-		             "bInfo":true,
+		             "bInfo":false,
 		             "fnDrawCallback": function ( oSettings ) {
 		     			/* Need to redo the counters if filtered or sorted */
 		     			if ( oSettings.bSorted || oSettings.bFiltered )
