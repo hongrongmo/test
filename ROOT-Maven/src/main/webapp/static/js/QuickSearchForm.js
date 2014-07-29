@@ -1776,8 +1776,8 @@ function clearDropdown(selectedDbMask, searchform)
 
 }
 
-  var swapCodes = new Array(8211, 8212, 8216, 8217, 8220, 8221, 8226, 8230);
-  var swapStrings = new Array("-", "--", "'", "'", "\"", "\"", "*", "...");
+  var swapCodes = new Array(8211, 8212, 8216, 8217, 8220, 8221, 8226);
+  var swapStrings = new Array("-", "--", "'", "'", "\"", "\"", "*");
 
 /*********************************************************
  * Validate the search form before submit
