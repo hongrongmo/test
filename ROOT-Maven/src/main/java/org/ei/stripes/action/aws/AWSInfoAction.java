@@ -41,6 +41,7 @@ public class AWSInfoAction extends EVActionBean implements ISecuredAction {
     @DefaultHandler
     public Resolution getAWSInfo() throws IOException   {
         awsInfo = new AWSInfo();
+        context.getRequest().setAttribute("usersession", context.getUserSession());
         return new ForwardResolution("/WEB-INF/pages/status/aws/awsinfo.jsp");
     }
 
