@@ -187,7 +187,7 @@ $(".searchtype").click(function() {
 
 
 var swapCodes = new Array(8211, 8212, 8216, 8217, 8220, 8221, 8226);
-var swapStrings = new Array("-", "--", "'", "'", "\"", "\"", "*");
+var swapStrings = new Array("-", "-", "'", "'", "\"", "\"", "*");
 
 /**
  * Submit the form
