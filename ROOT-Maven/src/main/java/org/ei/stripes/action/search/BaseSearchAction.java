@@ -37,7 +37,7 @@ public abstract class BaseSearchAction extends EVActionBean implements ISearchFo
 
     //This variable for  last four updates only
 	@Validate(mask="[1-4]")
-    protected String updatesno="";
+    protected String updatesNo="";
 
     //This variable for email alert week
     @Validate(trim=true,mask="true|false")
@@ -89,6 +89,7 @@ public abstract class BaseSearchAction extends EVActionBean implements ISearchFo
 
 
     protected String yearRange="";
+    @Validate(trim=true,mask="yearrange|lastupdate")
     protected String yearselect="yearrange";
     @Validate(trim=true,mask="\\d{4}")
     protected String startYear="";
@@ -209,11 +210,11 @@ public abstract class BaseSearchAction extends EVActionBean implements ISearchFo
 	}
 
 	public String getUpdatesNo() {
-		return updatesno;
+		return updatesNo;
 	}
 
 	public void setUpdatesNo(String updatesNo) {
-		this.updatesno = updatesNo;
+		this.updatesNo = updatesNo;
 	}
 
 
