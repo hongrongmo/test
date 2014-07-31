@@ -529,8 +529,8 @@ function updateUI(dbMask, sYear, strYear, eYear) {
 	}
 }
 
-var swapCodes = new Array(8211, 8212, 8216, 8217, 8220, 8221, 8226);
-var swapStrings = new Array("-", "-", "'", "'", "\"", "\"", "*");
+var swapCodes = new Array(8211, 8212, 8216, 8217, 8220, 8221);
+var swapStrings = new Array("-", "-", "'", "'", "\"", "\"");
 
 /**********************************************************
  * Validate the search form (on submit)
