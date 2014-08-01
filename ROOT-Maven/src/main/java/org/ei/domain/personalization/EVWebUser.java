@@ -626,9 +626,7 @@ public class EVWebUser implements IEVWebUser,Serializable{
 
     @Override
     public boolean isCustomer() {
-        if (!GenericValidator.isBlankOrNull(this.webUserId)) return true;
-        else if (this.isPathChoiceExists || (this.pathChoiceInfo != null && this.pathChoiceInfo.size() > 0)) return true;
-        return false;
+        return !GenericValidator.isBlankOrNull(this.webUserId);
     }
 
     public boolean isDeptSelectionRequired() {
