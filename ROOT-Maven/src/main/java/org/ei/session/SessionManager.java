@@ -193,7 +193,7 @@ public class SessionManager {
         // NOTE: we do NOT update session otherwise because we need to avoid creating
         //       session info on every request!
         if (user.isCustomer() || (carsresponse != null && carsresponse.isPathChoice())) {
-            userSession = updateUserSession(userSession, true);
+            userSession = updateUserSession(userSession, true, true);
         }
 
         return userSession;
@@ -523,7 +523,7 @@ public class SessionManager {
      * @throws SessionException
      */
     public UserSession updateUserSession(UserSession usersession) throws SessionException {
-        return updateUserSession(usersession, false);
+        return updateUserSession(usersession, false, false);
     }
 
     /**
@@ -534,7 +534,7 @@ public class SessionManager {
      * @return
      * @throws SessionException
      */
-    public UserSession updateUserSession(UserSession usersession, boolean incrementversion) throws SessionException {
+    public UserSession updateUserSession(UserSession usersession, boolean incrementversion, boolean isPathChoiceExists) throws SessionException {
         log4j.info("Updating UserSession...");
 
         if (usersession == null) {
@@ -543,7 +543,7 @@ public class SessionManager {
         }
         if (request.getParameter(SessionManager.REQUEST_PT) == null) {
         	// Only create a new session if this is a valid customer!
-        	if (usersession.getUser().isCustomer()) {
+        	if (usersession.getUser().isCustomer() || isPathChoiceExists) {
 	            HttpSession session = this.request.getSession(true);
 	            usersession.setSessionID(new SessionID(session.getId(), 1));
 	            // Increment version on session ID
