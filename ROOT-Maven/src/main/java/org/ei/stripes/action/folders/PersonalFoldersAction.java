@@ -10,8 +10,10 @@ import net.sourceforge.stripes.action.ForwardResolution;
 import net.sourceforge.stripes.action.HandlesEvent;
 import net.sourceforge.stripes.action.RedirectResolution;
 import net.sourceforge.stripes.action.Resolution;
+import net.sourceforge.stripes.action.StrictBinding;
 import net.sourceforge.stripes.action.UrlBinding;
 
+import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
 import org.ei.biz.security.IAccessControl;
 import org.ei.biz.security.IndividualAuthRequiredAccessControl;
@@ -23,70 +25,71 @@ import org.ei.stripes.action.personalaccount.IPersonalLogin;
 
 /**
  * This is the base class for the personal folders.
- * 
+ *
  * @author bhanu
- * 
+ *
  */
 
 @UrlBinding("/personal/folders{$event}.url")
+@StrictBinding
 public class PersonalFoldersAction extends FolderActionBean implements IPersonalLogin {
-    
+
     private final static Logger log4j = Logger.getLogger(PersonalFoldersAction.class);
-    
+
     @Override
 	public IAccessControl getAccessControl() {
 		return new IndividualAuthRequiredAccessControl();
 	}
-    
+
     /**
      * Displays the view Folders page -
-     * 
+     *
      * @return Resolution
      */
     @DefaultHandler
-    @DontValidate
     public Resolution display() {
         log4j.info("Starting view Folders view...");
         setRoom(ROOM.mysettings);
         setPersonalization(false);
         return new ForwardResolution("/WEB-INF/pages/customer/folders/ViewPersonalFolders.jsp");
     }
-    
+
     /**
      * Handles cancel button from main display
-     * 
+     *
      * @return Resolution
      */
     @HandlesEvent("cancel")
-    @DontValidate
     public Resolution cancel() {
         log4j.info("Starting cancel...");
         return new RedirectResolution(CARSConstants.getLocalSettingsURI());
     }
-        
+
     /**
      * Handles cancel button from main display
-     * 
+     *
      * @return Resolution
      */
     @HandlesEvent("cancelrename")
-    @DontValidate
     public Resolution cancelrename() {
         log4j.info("Starting cancel from rename...");
         return new RedirectResolution(FOLDERS_DISPLAY_URL);
     }
-        
-    
+
+
     /**
      * Handles saving a new folder
-     * 
+     *
      * @return Resolution
-     * @throws SavedRecordsException 
+     * @throws SavedRecordsException
      */
     @HandlesEvent("add")
-    @DontValidate
     public Resolution add() throws SavedRecordsException {
         log4j.info("Starting add Folder ...");
+        if (GenericValidator.isBlankOrNull(this.foldername)) {
+            log4j.error("Folder name is empty!");
+            throw new SavedRecordsException("Folder name is invalid");
+        }
         SavedRecords sr = new SavedRecords(context.getUserSession().getUser().getUserInfo().getUserId());
         Folder newFolder = new Folder(this.foldername);
         if (!sr.addFolder(newFolder)) {
@@ -94,29 +97,31 @@ public class PersonalFoldersAction extends FolderActionBean implements IPersonal
         }
         return new RedirectResolution(FOLDERS_DISPLAY_URL);
     }
-    
+
     /**
      * Handles displaying the rename page
-     * 
+     *
      * @return Resolution
-     * @throws SavedRecordsException 
+     * @throws SavedRecordsException
      */
     @HandlesEvent("rename")
-    @DontValidate
     public Resolution rename() throws SavedRecordsException {
         return new ForwardResolution("/WEB-INF/pages/customer/folders/RenamePersonalFolder.jsp");
     }
-    
+
     /**
      * Handles renaming a folder
-     * 
+     *
      * @return Resolution
-     * @throws SavedRecordsException 
-     * @throws UnsupportedEncodingException 
+     * @throws SavedRecordsException
+     * @throws UnsupportedEncodingException
      */
     @HandlesEvent("update")
-    @DontValidate
     public Resolution update() throws SavedRecordsException, UnsupportedEncodingException {
+        if (GenericValidator.isBlankOrNull(this.foldername)) {
+            log4j.error("Folder name is empty!");
+            throw new SavedRecordsException("Folder name is invalid");
+        }
         SavedRecords sr = new SavedRecords(context.getUserSession().getUser().getUserInfo().getUserId());
         Folder folder = new Folder(folderid, foldername);
         if (!sr.renameFolder(folder, folder)) {
@@ -124,15 +129,14 @@ public class PersonalFoldersAction extends FolderActionBean implements IPersonal
         }
         return new RedirectResolution(FOLDERS_DISPLAY_URL);
     }
-    
+
     /**
      * Handles saving a new folder
-     * 
+     *
      * @return Resolution
-     * @throws SavedRecordsException 
+     * @throws SavedRecordsException
      */
     @HandlesEvent("delete")
-    @DontValidate
     public Resolution delete() throws SavedRecordsException {
         SavedRecords sr = new SavedRecords(context.getUserSession().getUser().getUserInfo().getUserId());
         String strFolderName = sr.getFolderName(folderid);
@@ -143,12 +147,12 @@ public class PersonalFoldersAction extends FolderActionBean implements IPersonal
         }
         return new RedirectResolution(FOLDERS_DISPLAY_URL);
     }
-    
+
     @Before(on = { "display", "rename" })
     protected void callRequestCommonCode() {
         super.callRequestCommonCode();
     }
-    
+
     /**
      * Returns a Resolution object for the login page
      */
@@ -156,12 +160,12 @@ public class PersonalFoldersAction extends FolderActionBean implements IPersonal
     public String getLoginNextUrl() {
         return FOLDERS_DISPLAY_URL;
     }
-    
+
     @Override
     public String getLoginCancelUrl() {
         return super.getBackurl();
     }
-    
+
     public String getFoldername() {
         return this.foldername;
     }
