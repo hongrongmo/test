@@ -292,14 +292,7 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
     }
 
     private Resolution redirectToUserStartPage(String startpage) {
-        HttpServletRequest request = context.getRequest();
-        String port = "";
-        if (!request.isSecure() && request.getServerPort() > 0 && request.getServerPort() != 80 && request.getServerPort() != 443) {
-        	port = ":" + Integer.toString(request.getServerPort());
-        } else if (!GenericValidator.isBlankOrNull(EVProperties.getRuntimeProperty(RuntimeProperties.HTTP_PORT))) {
-        	port = ":" + EVProperties.getRuntimeProperty(RuntimeProperties.HTTP_PORT);
-        }
-        String path = "http://" + HttpRequestUtil.getDomain(request) + port + getStartPage();
+        String path = getStartPage();
         log4j.info("Redirecting to path: " + path);
         return new RedirectResolution(path, false);
     }
