@@ -3,7 +3,7 @@
 <%-- HEADER --%>
 <div id="header" style="width:100%; min-width: 100%">
 	<div id="logoEV">
-        <stripesext:link protocol="http" href="/home.url" title="Home"><img src="/static/images/EV-logo.gif"/></stripesext:link>
+        <a href="/home.url" title="Home"><img src="/static/images/EV-logo.gif"/></a>
         <div style="float:right; padding: 7px">
        		<A href="javascript:window.print()"><IMG src="/static/images/Print.png" border="0"/></A>&#160;&#160;
 		</div>

@@ -3,7 +3,7 @@
 <%-- HEADER --%>
 <div id="header" style="width:100%; min-width: 100%">
 	<div id="logoEV">
-        <stripesext:link protocol="http" href="/home.url" title="Engineering Village - The information discovery platform of choice for the engineering community"><img alt="Engineering Village - The information discovery platform of choice for the engineering community" src="/static/images/EV-logo.gif"/></stripesext:link>
+        <a href="/home.url" title="Engineering Village - The information discovery platform of choice for the engineering community"><img alt="Engineering Village - The information discovery platform of choice for the engineering community" src="/static/images/EV-logo.gif"/></a>
 	</div>
 
 	<div id="headerLink">
