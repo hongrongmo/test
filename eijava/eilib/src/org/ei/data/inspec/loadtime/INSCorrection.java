@@ -1,6 +1,10 @@
 package org.ei.data.inspec.loadtime;
 
-import java.sql.Clob;
+/*
+ * Update by Hanan, Feb 2013
+ * this class for Inspec Correction and/or FAST extract using updatenumber
+ */
+
 import java.sql.*;
 import java.util.*;
 import org.apache.oro.text.perl.Perl5Util;
@@ -220,7 +224,7 @@ public class INSCorrection
 				}
 
 				InspecBaseTableDriver c = new InspecBaseTableDriver(updateNumber);
-				c.writeBaseTableFile(fileToBeLoaded);
+				c.writeBaseTableFile(fileToBeLoaded,"XML");
 				String dataFile=fileToBeLoaded+".out";
 				List dataFileList = new ArrayList();
 				int i=0;
@@ -293,11 +297,12 @@ public class INSCorrection
 				}
 				if(action.equalsIgnoreCase("update"))
 				{
+				
 					bdc.processLookupIndex(bdc.getLookupData("update",updateNumber),bdc.getLookupData("backup",updateNumber));
 				}
 				else if(action.equalsIgnoreCase("delete"))
 				{
-
+				
 					bdc.processLookupIndex(new HashMap(),bdc.getLookupData("backup",updateNumber));
 				}
 				else if(action.equalsIgnoreCase("ins"))
@@ -305,7 +310,14 @@ public class INSCorrection
 					bdc.processLookupIndex(bdc.getLookupData("ins",updateNumber),bdc.getLookupData("insBackup",updateNumber));
 				}
 			}
-			bdc.doFastExtract(updateNumber,database,action);
+			/*Hanan: this is only to generate Fast Extract Files of the
+			 records that marked as deleted in case the action is "delete"
+			
+			 since it is testing approach so may i do not need to generate extract files to fast
+			Note: when send extracted files to fast, only fast that do deletion,
+			but we still keep these marked records for delete in oracle table, not deleted at this point
+			*/
+			bdc.doFastExtract(updateNumber,database,action);   
 			bdc.getError(updateNumber,action);
 
 		}
@@ -337,27 +349,28 @@ public class INSCorrection
 			stmt = con.createStatement();
 			if(action.equalsIgnoreCase("update") || action.equalsIgnoreCase("ins") )
 			{
-				rs = stmt.executeQuery("select ex,update_number,action_date,message,source from INS_CORRECTION_ERROR where update_number="+updateNumber);
+				//rs = stmt.executeQuery("select ex,update_number,action_date,message,source from INS_CORRECTION_ERROR where update_number="+updateNumber);
+				
+				// Hanan:
+				
+				//rs = stmt.executeQuery("select count(*) count from INS_CORRECTION_ERROR where update_number="+updateNumber);
+				rs = stmt.executeQuery("select count(*),source,update_number count from INS_CORRECTION_ERROR where update_number="+updateNumber + "group by update_number,source");
+				
 				boolean errorFlag = false;
 				int i=0;
-				while (rs.next())
+				
+				if(rs.next())
 				{
-					i++;
-					if(!errorFlag)
+					int count=rs.getInt("count");
+					if((Integer.toString(count)!=null) && (count>0))
 					{
+						errorFlag = true;
 						System.out.println("*********** Error found while updating data *************");
+						System.out.println("total number of errors in INS_CORRECTION_ERROR table for updateNumber" +rs.getString("update_number").toString() + " is: " + count);
+						System.out.println("storedProcedure: " + rs.getString("source").toString());	
 					}
-					String accessNumber = rs.getString("ex");
-					String message = rs.getString("message");
-					String storedProcedure = rs.getString("source");
-					errorFlag=true;
-					System.out.println("---- Record "+i+" ----");
-					System.out.println("accessNumber: "+accessNumber);
-					System.out.println("updateNumber: "+updateNumber);
-					System.out.println("message: "+message);
-					System.out.println("storedProcedure: "+storedProcedure);
 				}
-
+				
 				if(!errorFlag)
 				{
 					System.out.println("*********** No Error found  *************");
@@ -416,13 +429,21 @@ public class INSCorrection
 				System.out.println("Running the query...");
 				writer.setOperation("add");
         		INSPECCombiner c = new INSPECCombiner(writer);
-				rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc from new_ins_master where  length(ipc)>1");
+				//rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc from new_ins_master where  length(ipc)>1");
+
+        		rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc from ins_master_orig where updatenumber='"+updateNumber+"'");
+        		
 				c.writeRecs(rs);
+				
+				System.out.println("DoFastExtract: ResultSet size now is :"+rs.getFetchSize());       		
+        		
 			}
 			else if(action.equalsIgnoreCase("delete") || action.equalsIgnoreCase("extractdelete"))
 			{
 				writer.setOperation("delete");
-				rs = stmt.executeQuery("select m_id from ins_master_orig where updateNumber='"+updateNumber+"' and anum in (select 'D'||anum from "+tempTable+")");
+				//rs = stmt.executeQuery("select m_id from ins_master_orig where updateNumber='"+updateNumber+"' and anum in (select 'D'||anum from "+tempTable+")");
+				//Hanan: since "anum" is NUMBER not varchar so cannot append 'D' to it, use updateflag instead
+				rs = stmt.executeQuery("select m_id from ins_master_orig where updateNumber='"+updateNumber+"' and anum in (select anum from "+tempTable+")");
 				creatDeleteFile(rs,dbname,updateNumber);
 				writer.zipBatch();
 			}
@@ -620,9 +641,15 @@ public class INSCorrection
 					System.in.read();
 					Thread.currentThread().sleep(1000);
 				}
-				pstmt = con.prepareCall("{ call delete_ins_master_table(?,?)}");
+				//H: print out parameters to trace error
+				System.out.println("delete_ins_master_table procedure parameter 1" + updateNumber);
+				System.out.println("delete_ins_master_table procedure parameter 2" + fileName);
+				System.out.println("delete_ins_master_table procedure parameter 3" + database);
+				
+				pstmt = con.prepareCall("{ call delete_ins_master_table(?,?,?)}");
 				pstmt.setInt(1,updateNumber);
 				pstmt.setString(2,fileName);
+				pstmt.setString(3,database);   // Hanan 05/08/13 wzout dbase raise exception
 				pstmt.executeUpdate();
 			}
 			else
@@ -663,7 +690,7 @@ public class INSCorrection
 		{
 			stmt = con.createStatement();
 			String sqlQuery = "select count(*) count from INS_CORRECTION_TEMP";
-			System.out.println("**Query**"+sqlQuery);
+			//System.out.println("**Query**"+sqlQuery);
 			rs = stmt.executeQuery(sqlQuery);
 			if(rs.next())
 			{
@@ -768,9 +795,18 @@ public class INSCorrection
 		}
 	}
 
+    /*
+     * insert AU/AFF marked for deletion into deleted_lookupindex
+     */
     private void saveDeletedData(String field,List data,String database)
     {
 		PreparedStatement stmt = null;
+		Statement count_stmt = null;
+		//H: to check lookupindex count
+		ResultSet rs=null;
+		int count=0;
+		
+		
 		try
 		{
 			if(data!=null)
@@ -784,12 +820,33 @@ public class INSCorrection
 						stmt.setString(1,field);
 						stmt.setString(2,term);
 						stmt.setString(3,database);
-						stmt.executeUpdate();
+						stmt.executeUpdate();  
 
 						con.commit();
+						
+						// H:
+						// check count in the lookup table
+							
+						String sqlQuery = "select count(*) count from deleted_lookupIndex";
+						System.out.println("**Query**"+sqlQuery);
+						count_stmt=con.createStatement();
+						rs = count_stmt.executeQuery(sqlQuery);
+						if(rs.next())
+						{
+							count = rs.getInt("count");
+							
+							System.out.println("***** LookupIndex count marked for deletion is :"+count);
+						}
+						//H: End
+						
+						
 						if(stmt != null)
 						{
 							stmt.close();
+						}
+						if(count_stmt != null)
+						{
+							count_stmt.close();
 						}
 					}
 				}
@@ -798,6 +855,10 @@ public class INSCorrection
 			if(stmt != null)
 			{
 				stmt.close();
+			}
+			if(count_stmt != null)
+			{
+				count_stmt.close();
 			}
 		}
 		catch(Exception e)
@@ -817,6 +878,17 @@ public class INSCorrection
 					e.printStackTrace();
 				}
 			}
+			if (count_stmt != null)
+			{
+				try
+				{
+					count_stmt.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
 		}
 	}
 
@@ -825,9 +897,11 @@ public class INSCorrection
 
 		database = this.database;
 
+		
 		HashMap outputMap = new HashMap();
 		HashMap deletedAuthorLookupIndex 			= getDeleteData(update,backup,"AUTHOR");
 		HashMap deletedAffiliationLookupIndex 		= getDeleteData(update,backup,"AFFILIATION");
+		
 		//HashMap deletedControlltermLookupIndex 	= getDeleteData(update,backup,"CONTROLLEDTERM");
 		//HashMap deletedPublisherNameLookupIndex 	= getDeleteData(update,backup,"PUBLISHERNAME");
 		//HashMap deletedSerialtitleLookupIndex 	= getDeleteData(update,backup,"SERIALTITLE");
@@ -838,6 +912,11 @@ public class INSCorrection
 		//saveDeletedData("ST",checkFast(deletedSerialtitleLookupIndex,"ST",database),database);
 	}
 
+    /*
+     * Check FAST Count for AU/AFF marked for deletion against update list count 
+     * when List Count >= FAST COUNT [delete]
+     * when List Count< FAST COUNT [ do not delete]
+     */
 	private List checkFast(HashMap inputMap, String searchField, String database) throws Exception
 	{
 
@@ -849,6 +928,12 @@ public class INSCorrection
 		int intDbMask = databaseConfig.getMask(dbName);
 
 		Iterator searchTerms = inputMap.keySet().iterator();
+		
+		
+		//H:
+		//System.out.println("CheckFast Method inputmap size is: "+inputMap.size());
+		
+		System.out.println("CheckFast for searchfield: " + searchField);
 
 		while (searchTerms.hasNext())
 		{
@@ -857,6 +942,8 @@ public class INSCorrection
 			{
 				SearchControl sc = new FastSearchControl();
 				term1 = (String) searchTerms.next();
+				
+				System.out.println("FastSearch: search control term: "+term1);
 
 				int oc = Integer.parseInt((String)inputMap.get(term1));
 				Query queryObject = new Query(databaseConfig, credentials);
@@ -872,11 +959,25 @@ public class INSCorrection
 				String sessionId = null;
 				int pagesize = 25;
 				SearchResult result = sc.openSearch(queryObject,sessionId,pagesize,false);
+				
+				//H: Fastsearch count
 				int c = result.getHitCount();
+				
+				System.out.println("SearchResult Fast getHitcount is: "+c);
+				
+				//processLookupIndex lookupindex count
 				String indexCount = (String)inputMap.get(term1);
+				
+				//H:
+				System.out.println("FAST SEARCH COUNT AGAINST UPDATELIST COUNT FOR KEY Search Term: "+term1+" is: " + Integer.toString(c) + " , " + indexCount);
+				
 				if(indexCount!=null && indexCount!="" && Integer.parseInt(indexCount) >= c)
 				{
 					outputList.add(term1);
+					
+					//H:
+					
+					//System.out.println(" fastCHeck. Fast Search Output list contents is :"+outputList.toString());
 				}
 
 			}
@@ -892,6 +993,10 @@ public class INSCorrection
 
 	}
 
+	/*
+	 * Find out lookups to be deleted and its count, 
+	 * Lookups that are in old and not in update list will be marked for deletion
+	 */
 	private HashMap getDeleteData(HashMap update,HashMap backup,String field)
 	{
 		List backupList = null;
@@ -899,9 +1004,13 @@ public class INSCorrection
 		HashMap deleteLookupIndex = new HashMap();
 		if(update !=null && backup != null)
 		{
-			backupList = (ArrayList)backup.get(field);
-			updateList = (ArrayList)update.get(field);
-
+			System.out.println("parameter Field Value is :"+field);
+			
+			backupList = (ArrayList)backup.get(field);   // original Data (old)
+			updateList = (ArrayList)update.get(field);   // New Data
+			
+			
+			
 			if(backupList!=null)
 			{
 				String dData = null;
@@ -909,20 +1018,24 @@ public class INSCorrection
 				for(int i=0;i<backupList.size();i++)
 				{
 					dData = (String)backupList.get(i);
+					
 					if(dData != null)
-					{
+					{	
 						if(updateList==null ||(updateList!=null && !updateList.contains(dData)))
 						{
 							if(deleteLookupIndex.containsKey(dData.toUpperCase()))
 							{
 								deleteLookupIndex.put(dData.toUpperCase(),Integer.toString(Integer.parseInt((String)deleteLookupIndex.get(dData.toUpperCase()))+1));
+
 							}
 							else
 							{
 								deleteLookupIndex.put(dData.toUpperCase(),"1");
+
 							}
 
 						}
+						
 					}
 				}
 			}
@@ -961,21 +1074,24 @@ public class INSCorrection
 			System.out.println("Running the query...");
 			if(action.equals("update")||action.equals("ins"))
 			{
-				rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc from ins_master_orig where seq_num is not null and updateNumber='"+updateNumber+"'");
+				//rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc from ins_master_orig where seq_num is not null and updateNumber='"+updateNumber+"'");
+				
+				rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc from "+tempTable);
 				//rs = stmt.executeQuery("select anum,AUS,AUS2,AFFILIATION,AFFILIATION_1,CONTROLLEDTERM,CHEMICALTERM,SOURCETITLE,PUBLISHERNAME,DATABASE,IPC FROM "+tempTable);
+	
 			}
 			else
 			{
+				//rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc from " + backupTable);
+				
 				rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc from " + backupTable);
 				//rs = stmt.executeQuery("select ACCESSNUMBER,AUTHOR,AUTHOR_1,AFFILIATION,AFFILIATION_1,CONTROLLEDTERM,CHEMICALTERM,SOURCETITLE,PUBLISHERNAME,DATABASE,IPC FROM "+backupTable);
+
 			}
 
 			System.out.println("Got records ...");
 			results = setRecs(rs);
-
-			//System.out.println("Wrote records.");
-
-
+			
 		}
 		catch(Exception e)
 		{
@@ -1013,33 +1129,50 @@ public class INSCorrection
 
 	}
 
-	public HashMap setRecs(ResultSet rs)
+	private HashMap setRecs(ResultSet rs)
 			throws Exception
 	{
 		int i = 0;
 		CombinedWriter writer = new CombinedXMLWriter(10000,10000,"ins","dev");
-		XmlCombiner xml = new XmlCombiner(writer);
+		//XmlCombiner xml = new XmlCombiner(writer);
 		HashMap recs = new HashMap();
 		List authorList = new ArrayList();
 		List affiliationList = new ArrayList();
 		List serialTitleList = new ArrayList();
 		List controltermList = new ArrayList();
 		List publishernameList = new ArrayList();
+		
+		List editorlist=new ArrayList();
+		
+		//H: add IPC list 
+		List ipc = new ArrayList();
+		
+		
+		
 		String database = null;
 		String accessNumber = null;
+		
+		System.out.println("start setRecs method with input resultset of size: "+rs.getFetchSize());
+		
+		
 		try
 		{
 			INSPECCombiner c = new INSPECCombiner(writer);
+		
 			while (rs.next())
 			{
 				++i;
 				EVCombinedRec rec = new EVCombinedRec();
 
 				accessNumber = rs.getString("anum");
+				
 
 				if(accessNumber !=null && accessNumber.length()>5)
 				{
 					rec.put(EVCombinedRec.ACCESSION_NUMBER, accessNumber);
+					
+					// H:
+					//System.out.println("Fast- AccessNumber: "+ rec.get(EVCombinedRec.ACCESSION_NUMBER));
 
 					if((rs.getString("aus") != null) || (rs.getString("aus2") != null))
 					{
@@ -1047,58 +1180,111 @@ public class INSCorrection
 						if(rs.getString("aus") != null)
 						{
 							aus.append(rs.getString("aus"));
+							
+							//H:
+							//System.out.println("Author Name is: "+aus);
 						}
 						if(rs.getString("aus2") != null)
 						{
 							aus.append(rs.getString("aus2"));
+							
+							//H:
+							//System.out.println("Author2 Name is: "+aus);
 						}
-						rec.put(EVCombinedRec.AUTHOR,c.prepareAuthor(aus.toString()));
+						
+						//recs.put(EVCombinedRec.AUTHOR,c.prepareAuthor(aus.toString()));
+						
+						//H:
+						//authorList.addAll(Arrays.asList(c.prepareAuthor(aus.toString())));   
+						authorList.addAll(Arrays.asList(c.prepareAuthor(aus.toString().toUpperCase())));
+						rec.put(EVCombinedRec.AUTHOR, aus.toString().toUpperCase());
+						
 					}
 					else if(rs.getString("eds") != null)
 					{
-						rec.put(EVCombinedRec.EDITOR, c.prepareAuthor(rs.getString("eds")));
+						//recs.put(EVCombinedRec.EDITOR, c.prepareAuthor(rs.getString("eds")));
+						
+						//H:
+						//editorlist.addAll(Arrays.asList(c.prepareAuthor(rs.getString("eds"))));   
+						editorlist.addAll(Arrays.asList(c.prepareAuthor(rs.getString("eds").toUpperCase())));
+						rec.put(EVCombinedRec.EDITOR, rs.getString("eds").toUpperCase());
+						
                 	}
 
 					if(rs.getString("aaff") != null)
 					{
 						StringBuffer aaff = new StringBuffer(rs.getString("aaff"));
-
+						
 						if(rs.getString("aaffmulti1") != null)
 						{
 							aaff = new StringBuffer(rs.getString("aaffmulti1"));
+							
 
 							if (rs.getString("aaffmulti2") != null)
 							{
 								aaff.append(rs.getString("aaffmulti2"));
+								
 							}
 						}
 
-						rec.put(EVCombinedRec.AUTHOR_AFFILIATION, c.prepareAuthor(aaff.toString()));
+						//recs.put(EVCombinedRec.AUTHOR_AFFILIATION, c.prepareAuthor(aaff.toString()));
+						
+						//H:
+						//affiliationList.addAll(Arrays.asList(c.prepareAuthor(aaff.toString()))); 
+						affiliationList.addAll(Arrays.asList(c.prepareAuthor(aaff.toString().toUpperCase())));
+						rec.put(EVCombinedRec.AUTHOR_AFFILIATION,aaff.toString().toUpperCase());
 					}
 
 					if(rs.getString("cvs") != null)
 					{
-					     rec.put(EVCombinedRec.CONTROLLED_TERMS, c.prepareMulti(rs.getString("cvs")));
+					     //recs.put(EVCombinedRec.CONTROLLED_TERMS, c.prepareMulti(rs.getString("cvs")));
+						
+						//H:
+					     //controltermList.addAll(Arrays.asList(c.prepareMulti(rs.getString("cvs"))));   
+						 controltermList.addAll(Arrays.asList(c.prepareMulti(rs.getString("cvs").toUpperCase())));
+						 rec.put(EVCombinedRec.CONTROLLED_TERMS, rs.getString("cvs").toString().toUpperCase());
+					    
                 	}
 
 					if(rs.getString("ppub") != null)
 					{
-					     rec.put(EVCombinedRec.PUBLISHER_NAME, rs.getString("ppub"));
+					    // recs.put(EVCombinedRec.PUBLISHER_NAME, rs.getString("ppub"));
+						
+						//H:
+					     //publishernameList.add(rs.getString("ppub"));   
+
+						publishernameList.add(rs.getString("ppub").toUpperCase());
+						rec.put(EVCombinedRec.PUBLISHER_NAME, rs.getString("ppub").toUpperCase());
                     }
 
                     if(rs.getString("chi") != null)
 					{
-					      rec.put(EVCombinedRec.CHEMICAL_INDEXING,c.prepareIndexterms(rs.getString("chi")));
+					      //recs.put(EVCombinedRec.CHEMICAL_INDEXING,c.prepareIndexterms(rs.getString("chi")));
+                    	
+                    	//H:
+                    	controltermList.addAll(Arrays.asList(c.prepareIndexterms(rs.getString("chi").toUpperCase())));
+					    rec.put(EVCombinedRec.CHEMICAL_INDEXING, rs.getString("chi").toUpperCase());
+					      
                 	}
 
 					if(rs.getString("pubti") != null)
 					{
-						rec.put(EVCombinedRec.SERIAL_TITLE, rs.getString("pubti"));
+						//recs.put(EVCombinedRec.SERIAL_TITLE, rs.getString("pubti"));
+						
+						//H:
+						//serialTitleList.add(rs.getString("pubti"));
+						serialTitleList.add(rs.getString("pubti").toUpperCase());
+						rec.put(EVCombinedRec.SERIAL_TITLE, rs.getString("pubti").toUpperCase());
 					}
 
 					if(rs.getString("pfjt") != null)
 					{
-						rec.put(EVCombinedRec.SERIAL_TITLE, rs.getString("pfjt"));
+						//recs.put(EVCombinedRec.SERIAL_TITLE, rs.getString("pfjt"));
+						
+						//H:
+						serialTitleList.add(rs.getString("pfjt").toUpperCase());
+						rec.put(EVCombinedRec.SERIAL_TITLE, rs.getString("pfjt").toUpperCase());
+						
 					}
 
 
@@ -1112,11 +1298,39 @@ public class INSCorrection
 					{
 						String ipcString = rs.getString("ipc");
 						ipcString = perl.substitute("s/\\//SLASH/g", ipcString);
-						rec.put(EVCombinedRec.INT_PATENT_CLASSIFICATION, ipcString);
+						//recs.put(EVCombinedRec.INT_PATENT_CLASSIFICATION, ipcString);
+						
+						//H:
+						ipc.add(ipcString);
 					}
 
 				}
+				
+				else
+				{
+					if(accessNumber==null)
+					{
+						System.out.println("Access Number is Empty!!!!");
+					}
+					if( accessNumber.length()<5)
+					{
+						System.out.println("Access Number is less than five digits!!!!");
+					}
+				
+				}
 			}
+			
+			//H:
+			recs.put("AUTHOR",authorList);
+			
+			recs.put("EDITOR", editorlist);
+			
+			recs.put("AFFILIATION",affiliationList);
+			recs.put("CONTROLLEDTERM",controltermList);
+			recs.put("PUBLISHERNAME",publishernameList);
+			recs.put("SERIALTITLE",serialTitleList);
+			recs.put("DATABASE",database);
+			recs.put(EVCombinedRec.INT_PATENT_CLASSIFICATION, ipc);
 
 			//recs.put("AUTHOR",authorList);
 			//recs.put("AFFILIATION",affiliationList);
@@ -1139,7 +1353,7 @@ public class INSCorrection
 	                                         String password)
 	            throws Exception
 	 {
-		 		//System.out.println("URL= "+connectionURL+" driver= "+driver+" username= "+username+" password= "+password);
+		 		System.out.println("URL= "+connectionURL+" driver= "+driver+" username= "+username+" password= "+password);
 	            Class.forName(driver);
 	            Connection con = DriverManager.getConnection(connectionURL,
 	                                              username,
