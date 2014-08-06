@@ -1100,6 +1100,8 @@ public class InspecXMLReader extends FilterReader
 	        {
 	        	temp = perl.substitute("s/\n//g",oneAffiliation.toString());
 				affmulti1.append(temp);
+				// H 08/06/2014 set flag to "P" for later corrections check
+	        	record.put("UPDATEFLAG",new StringBuffer("P"));
 				temp="";
 	        }
 	        else
