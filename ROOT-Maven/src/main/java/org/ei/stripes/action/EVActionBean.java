@@ -69,6 +69,7 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
 	private boolean showLoginBox = true;
 	private StopWatch requeststopwatch= null;
 
+    @Validate(mask="\\d*")
 	protected String errorCode = "";
 
 	/**
