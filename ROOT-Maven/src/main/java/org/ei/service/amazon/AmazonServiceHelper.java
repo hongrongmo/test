@@ -10,6 +10,7 @@ import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.simpleemail.AmazonSimpleEmailServiceClient;
+import com.amazonaws.services.sns.AmazonSNSAsyncClient;
 
 /**
  * Helper class to get Amazon Service references
@@ -22,6 +23,7 @@ public final class AmazonServiceHelper {
 	private AmazonDynamoDBClient dynamodbclient;
     private AmazonS3 s3service;
     private AmazonSimpleEmailServiceClient sesclient;
+    private AmazonSNSAsyncClient snsclient;
 
     private static int S3_CONN_TIMEOUT = 5 * 1000;     // 5 second timeout
     private static int S3_SOCK_TIMEOUT = 5 * 1000;     // 5 second timeout
@@ -48,6 +50,9 @@ public final class AmazonServiceHelper {
             log4j.info("Creating Amazon SES client...");
 	        instance.sesclient = new AmazonSimpleEmailServiceClient(new ClasspathPropertiesFileCredentialsProvider("/AwsCredentials.properties"));
             instance.sesclient.setRegion(usEast1);
+
+            log4j.info("Creating Amazon SNS client...");
+            instance.snsclient = new AmazonSNSAsyncClient(new ClasspathPropertiesFileCredentialsProvider("/AwsCredentials.properties"));
 	    }
 	    return instance;
 	}
@@ -62,6 +67,10 @@ public final class AmazonServiceHelper {
 
     public AmazonSimpleEmailServiceClient getAmazonSESClient() {
         return this.sesclient;
+    }
+
+    public AmazonSNSAsyncClient getAmazonSNSAsyncClient() {
+        return this.snsclient;
     }
 
 }
