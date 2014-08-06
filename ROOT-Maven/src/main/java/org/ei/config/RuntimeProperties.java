@@ -55,6 +55,11 @@ import org.ei.thesaurus.ThesaurusSearchControl;
 @SuppressWarnings("serial")
 public final class RuntimeProperties extends Properties {
 
+    public final static String RUNLEVEL_PROD = "prod";
+    public final static String RUNLEVEL_CERT = "cert";
+    public final static String RUNLEVEL_DEV = "dev";
+    public final static String RUNLEVEL_LOCAL = "local";
+
     /** The log4j. */
     private static Logger log4j = Logger.getLogger(RuntimeProperties.class);
 
@@ -449,6 +454,15 @@ public final class RuntimeProperties extends Properties {
 
     /** The Constant CONTACT_US_LINK. */
     public static final String CONTACT_US_LINK = "contact.us.link";
+
+    /** Max error threshold for exception handler. */
+    public static final String MAX_ERROR_THRESHHOLD = "max.error.threshhold";
+
+    /** Max error interval for exception handler*/
+    public static final String MAX_ERROR_INTERVAL = "max.error.interval";
+
+    /** The topic ARN for SNS */
+    public static final String SNS_TOPIC_AWSALERTS = "sns.topic.awsalerts";
 
     //SSL
     /** The Constant HTTP_PORT. */
