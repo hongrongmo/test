@@ -971,7 +971,10 @@ public class InspecXMLReader extends FilterReader
 		StringBuffer affmulti2 = null;
 		StringBuffer affmulti2_max = null;
 		List auaff = e.getChildren("faff");
-
+		
+		//H 08/06/2014 
+		String temp = null;
+		
 
 	    for( int j=0 ; j < auaff.size() ; j++ )
 		{
@@ -1090,8 +1093,20 @@ public class InspecXMLReader extends FilterReader
 	        {
 	        	affmulti1.append(AUDELIMITER);
 	        }
-	        affmulti1.append(oneAffiliation);
-
+	        //affmulti1.append(oneAffiliation);   //original
+			
+			//H 08/06/2014 fix issue of new line
+	        if(oneAffiliation!= null && oneAffiliation.toString().contains("\n"))
+	        {
+	        	temp = perl.substitute("s/\n//g",oneAffiliation.toString());
+				affmulti1.append(temp);
+				temp="";
+	        }
+	        else
+	        {
+	        	affmulti1.append(oneAffiliation); 
+	        }
+			
 		}
 	    // db field overflow logic
 	   // if (affmulti1.length() > 0 && affmulti1.length() > 3900)   //origin
