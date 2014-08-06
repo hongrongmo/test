@@ -58,7 +58,7 @@ public class BlockedIPEvent  {
         try {
             this.environment = RuntimeProperties.getInstance().getRunlevel();
         } catch (Throwable t) {
-            this.environment = "prod";
+            this.environment = RuntimeProperties.RUNLEVEL_PROD;
         }
     };
     public BlockedIPEvent(String IP) {
@@ -130,12 +130,12 @@ public class BlockedIPEvent  {
     @DynamoDBIgnore
     private static String getCurrentEnvironment() {
         // Set then environment from current runtime properties
-        String environment = "prod";
+        String environment = RuntimeProperties.RUNLEVEL_PROD;
         try {
             environment = RuntimeProperties.getInstance().getRunlevel();
         } catch (Throwable t) {
             log4j.error("Unable to retrieve RuntimeProperties.SYSTEM_ENVIRONMENT_RUNLEVEL", t);
-            environment = "prod";
+            environment = RuntimeProperties.RUNLEVEL_PROD;
         }
         return environment;
     }
