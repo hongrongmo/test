@@ -217,4 +217,4 @@
 	<div class="clear"></div>
 </div>
 </FORM>
-<form name="oneClickDLForm" id="oneClickDLForm" method="post" action="/delivery/download/submit.url"></form>
+

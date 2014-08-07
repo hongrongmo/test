@@ -31,7 +31,8 @@
 }
 .transText{
 	opacity:.05;
-	font-size:4px;
+	font-size:1px;
 	color:#E0E3EA;
 }
 #downloadli{height:15px;}
+span#downloadli #downloadlink {padding-right:14px;}

@@ -66,11 +66,18 @@ $(document).ready(function() {
 	if($("#downloadlink").length != 0){
 		$("#downloadlink").click(function(e){
 			e.preventDefault();
-			var form = $("#resultsform");
 			var displayformat='citation';
-			var downloadurl = "/delivery/download/display.url?database="+form.find("input[name='database']").val()
-			+"&displayformat="+displayformat
-			+"&allselected=true";
+
+
+			var downloadurl;
+			if(typeof($("#downloadlink").attr('href')) != 'undefined' && $("#downloadlink").attr('href').length > 0){
+				downloadurl = $("#downloadlink").attr('href');
+			}else{
+				var form = $("#resultsform");
+				downloadurl = "/delivery/download/display.url?database="+form.find("input[name='database']").val()
+				+"&displayformat="+displayformat
+				+"&allselected=true";
+			}
 
 			if(typeof(Basket) == 'undefined' || (Basket.count > 0) ){
 

@@ -11,15 +11,11 @@
 
 <style>
 	#oneClickMid, #oneClickContent, #oneClickBottom{
-		width:650px;
+		width:540px;
 	}
-	#oneClickLeft{
-		float:left;
-		width:215px;
-	}
-	#oneClickRight{
+	#oneClickRight, #oneClickLeft{
 		float:left	;
-		width:215px;
+		width:180px;
 		height:100%;
 
 	}
@@ -32,17 +28,28 @@
 		height:175px;
 		border-left: #808080 solid 1px;
 	}
-	#oneClickRight li{
+	#oneClickLeft ul{
+		list-style:none;
+		margin:0px;
+		padding:0px;
+	 	height:175px;
+
+	}
+	#oneClickRight li, #oneClickLeft li{
 		font-weight:bold;
 		clear: both;
 		height:25px;
 	}
-   #oneClickRight input, #oneClickRight label {
+   #oneClickRight input, #oneClickRight label,  #oneClickLeft label, #oneClickLeft input {
       float: left;
     }
-    #oneClickRight label {
+    #oneClickRight label{
       width: 105px;
     }
+	#oneClickLeft label  {
+      width: 150px;
+    }
+
 	#oneClickTitle{
 		color:#148C75;
 		font-size:14px;
@@ -57,22 +64,11 @@
 		padding-top: 8px;
 		padding-left: 28px;
 		font-weight: bold;
-		font-size: 14px;
 		color: #007ee5;
 	}
-	.outputLocation img{
+	#oneClickLeft label img{
 		width:18px;
 		padding-right:3px;
-	}
-	.outputLocation:hover{
-		border:#3ca690 2px dashed;
-		cursor:pointer;
-	}
-	.outputLocationSelected{
-		background-image:url(/static/images/check_icon_sm.png);
-		background-repeat:no-repeat;
-		background-position:left;'
-		border: solid 1px #3ca690;
 	}
 
 	.outputSelectedBorder{
@@ -116,6 +112,10 @@
 		padding-right: 4px;
 		border-radius:11px;
 	}
+	#oneClickMid input{
+		margin-top:1px
+	}
+	#oneClickContent hr{display:block;}
 </style>
 </head>
 <body>
@@ -131,36 +131,39 @@
 	<stripes:hidden name="database" id="database" />
 	<stripes:hidden name="baseaddress" id="baseaddress" />
 	<div id="oneClickContent">
-		<div id="oneClickTitle">Choose your default reference manager or file type</div>
+		<div id="oneClickTitle">Choose your session download options</div>
 		<hr/>
 		<div id="oneClickMid">
 			<div id="oneClickLeft">
-				<div class="grayText sectionHead">Choose where to save:</div>
-				<div class="outputLocation<c:if test="${dlLocation eq 'mypc'}"> outputLocationSelected</c:if>" id="outputMyPC"><img src="/static/images/Download.png" alt="Save to my PC Icon" />Save to My PC</div>
-				<div class="outputLocation<c:if test="${dlLocation eq 'refworks'}"> outputLocationSelected</c:if>" id="outputRefWorks"><img src="/static/images/refworks_icon.jpg" alt="Reforks Icon" />Save to RefWorks</div>
-				<div class="outputLocation<c:if test="${dlLocation eq 'googledrive'}"> outputLocationSelected</c:if>" id="outputGoogle"><img src="/static/images/drive_icon.png" alt="Google Drive Icon" />Save to Google Drive</div>
-				<div class="outputLocation<c:if test="${dlLocation eq 'dropbox'}"> outputLocationSelected</c:if>" id="outputDropbox"><img src="/static/images/dropbox_icon.png" alt="Dropbox Icon"/>Save to Dropbox</div>
+				<div class="grayText sectionHead">Choose where:</div>
+				<ul>
+				<li><input type="radio" class="outputLocation" id="outputMyPC"     name="outputLocation" value="mypc" <c:if test="${dlLocation eq 'mypc'}">checked="checked"</c:if>/><label	for="outputMyPC" title="Download the citation section"><img src="/static/images/Download.png" alt="Save to my PC Icon" />My PC</label></li>
+				<li><input type="radio" class="outputLocation" id="outputRefWorks" name="outputLocation" value="refworks"  <c:if test="${dlLocation eq 'refworks'}">checked="checked"</c:if>/><label for="outputRefWorks" title="Download the abstract section"><img src="/static/images/refworks_icon.jpg" alt="Reforks Icon" />RefWorks</label></li>
+				<li><input type="radio" class="outputLocation" id="outputGoogle"   name="outputLocation" value="googledrive"  <c:if test="${dlLocation eq 'googledrive'}">checked="checked"</c:if>/><label for="outputGoogle" title="Download the detailed record"><img src="/static/images/drive_icon.png" alt="Google Drive Icon" />Google Drive</label></li>
+				<li><input type="radio" class="outputLocation" id="rdDropbox"      name="outputLocation" value="dropbox"  <c:if test="${dlLocation eq 'dropbox'}">checked="checked"</c:if>/><label for="outputDropbox" title="Download the detailed record"><img src="/static/images/dropbox_icon.png" alt="Dropbox Icon"/>Dropbox</label></li>
+				</ul>
 			</div>
 			<div id="oneClickRight">
-			<div class="grayText sectionHead">Choose the Format to save:</div>
+			<div class="grayText sectionHead">Choose the format:</div>
 			<ul>
-				<li><input type="radio" class="typeEnabled" id="rdRis" name="downloadformat" value="ris" style="margin-top:1px" <c:if test="${dlFormat eq 'ris' or dlFormat eq 'refworks' or dlLocation eq 'refworks'}">checked="checked"</c:if>/><label	for="rdRis" title="RIS Format (EndNote, ProCite, Reference Manager)">RIS</label></li>
-				<li><input type="radio" class="typeEnabled" id="rdBib" name="downloadformat" value="bib" style="margin-top:1px" <c:if test="${dlFormat eq 'bib'}">checked="checked"</c:if>/><label for="rdBib" title="BibTex format">Bib Text</label></li>
-				<li><input type="radio" class="typeEnabled" id="rdAsc" name="downloadformat" value="ascii" style="margin-top:1px" <c:if test="${dlFormat eq 'ascii'}">checked="checked"</c:if>/><label for="rdAsc" title="Plain text format (ASCII)">ASCII</label></li>
-				<li><input type="radio" class="typeEnabled" id="rdCsv" name="downloadformat" value="csv" style="margin-top:1px" <c:if test="${dlFormat eq 'csv'}">checked="checked"</c:if>/><label for="rdCsv" title="(Comma Separated Value Format)">CSV </label></li>
-				<li><input type="radio" class="typeEnabled" id="rdExcel" name="downloadformat" value="excel" style="margin-top:1px" <c:if test="${dlFormat eq 'excel'}">checked="checked"</c:if>/><label for="rdExcel" title="Microsoft Excel">Microsoft Excel&reg;</label></li>
-				<li><input type="radio" class="typeEnabled" id="rdPdf" name="downloadformat" value="pdf" style="margin-top:1px" <c:if test="${dlFormat eq 'pdf'}">checked="checked"</c:if>/><label for="rdPdf" title="PDF">PDF</label></li>
-				<li><input type="radio" class="typeEnabled" id="rdRtf" name="downloadformat" value="rtf" style="margin-top:1px" <c:if test="${dlFormat eq 'rtf'}">checked="checked"</c:if>/><label for="rdRtf" title="(Rich Text Format, e.g. Word)">RTF</label></li>
+				<li><input type="radio" class="typeEnabled" id="rdRis" name="downloadformat" value="ris"  <c:if test="${dlFormat eq 'ris' or dlFormat eq 'refworks' or dlLocation eq 'refworks'}">checked="checked"</c:if>/><label	for="rdRis" title="RIS Format (EndNote, ProCite, Reference Manager)">RIS</label></li>
+				<li><input type="radio" class="typeEnabled" id="rdBib" name="downloadformat" value="bib"  <c:if test="${dlFormat eq 'bib'}">checked="checked"</c:if>/><label for="rdBib" title="BibTex format">Bib Text</label></li>
+				<li><input type="radio" class="typeEnabled" id="rdAsc" name="downloadformat" value="ascii"  <c:if test="${dlFormat eq 'ascii'}">checked="checked"</c:if>/><label for="rdAsc" title="Plain text format (ASCII)">ASCII</label></li>
+				<li><input type="radio" class="typeEnabled" id="rdCsv" name="downloadformat" value="csv"  <c:if test="${dlFormat eq 'csv'}">checked="checked"</c:if>/><label for="rdCsv" title="(Comma Separated Value Format)">CSV </label></li>
+				<li><input type="radio" class="typeEnabled" id="rdExcel" name="downloadformat" value="excel"  <c:if test="${dlFormat eq 'excel'}">checked="checked"</c:if>/><label for="rdExcel" title="Microsoft Excel">Microsoft Excel&reg;</label></li>
+				<li><input type="radio" class="typeEnabled" id="rdPdf" name="downloadformat" value="pdf"  <c:if test="${dlFormat eq 'pdf'}">checked="checked"</c:if>/><label for="rdPdf" title="PDF">PDF</label></li>
+				<li><input type="radio" class="typeEnabled" id="rdRtf" name="downloadformat" value="rtf"  <c:if test="${dlFormat eq 'rtf'}">checked="checked"</c:if>/><label for="rdRtf" title="(Rich Text Format, e.g. Word)">RTF</label></li>
 			</ul>
 
 
 			</div>
 			<div id="oneClickRight">
-				<div class="grayText sectionHead">Choose the information to save:</div>
+				<div class="grayText sectionHead">Choose the information:</div>
 				<ul>
-				<li><input type="radio" class="typeEnabled" id="rdCit" name="displayformat" value="citation" style="margin-top:1px" <c:if test="${dlOutput eq 'citation'}">checked="checked"</c:if>/><label	for="rdCit" title="Download the citation section">Citation</label></li>
-				<li><input type="radio" class="typeEnabled" id="rdAbs" name="displayformat" value="abstract" style="margin-top:1px" <c:if test="${dlOutput eq 'abstract'}">checked="checked"</c:if>/><label for="rdAbs" title="Download the abstract section">Abstract</label></li>
-				<li><input type="radio" class="typeEnabled" id="rdDet" name="displayformat" value="detailed" style="margin-top:1px" <c:if test="${dlOutput eq 'detailed'}">checked="checked"</c:if>/><label for="rdDet" title="Download the detailed record">Detailed record</label></li>
+				<li><input type="radio" class="typeEnabled" id="rdCit" name="displayformat" value="citation"  <c:if test="${dlOutput eq 'citation'}">checked="checked"</c:if>/><label	for="rdCit" title="Download the citation section">Citation</label></li>
+				<li><input type="radio" class="typeEnabled" id="rdAbs" name="displayformat" value="abstract"  <c:if test="${dlOutput eq 'abstract'}">checked="checked"</c:if>/><label for="rdAbs" title="Download the abstract section">Abstract</label></li>
+				<li><input type="radio" class="typeEnabled" id="rdDet" name="displayformat" value="detailed"  <c:if test="${dlOutput eq 'detailed'}">checked="checked"</c:if>/><label for="rdDet" title="Download the detailed record">Detailed record</label></li>
+				<!-- li><input type="radio" class="typeEnabled" id="rdDefault" name="displayformat" value="default"  <c:if test="${dlOutput eq 'default'}">checked="checked"</c:if>/><label for="rdDefault" title="Download the Default Format for this Page">Default</label></li -->
 				</ul>
 			</div>
 		</div>
@@ -169,9 +172,9 @@
 
 				<div class="grayText btmTextRight">Note: Your selected records <br/>(to a maximum of 500) will be  <br/>kept until your session ends.</div>
 				<div class="saveCancel">
-					<a href="#" style="padding-right:7px;" onclick="$('#downloadlink').tooltipster('destroy');">Cancel</a>
-					<input type="submit" value="Save" name="Save" id="savePrefsButton" />
 
+					<input type="submit" value="Save" name="Save" id="savePrefsButton" />
+					<a href="#" style="padding-right:7px;" onclick="$('#downloadlink').tooltipster('destroy');">Cancel</a>
 				</div>
 			</div>
 	</div>
@@ -203,16 +206,13 @@ $(document).ready(function() {
 			$("#savePrefsButton").show();
 	        $("#dropBoxLinkSpan").hide();
 		}
-		$(".outputLocationSelected").removeClass("outputLocationSelected");
-		$(this).addClass("outputLocationSelected");
 
 	});
 
 	//read the cookie
 	if($.cookie("ev_oneclickdl")){
 		var dlOptions = JSON.parse($.cookie("ev_oneclickdl"));
-		$(".outputLocationSelected").removeClass("outputLocationSelected");
-		$("#"+dlOptions.location).addClass("outputLocationSelected");
+		$('input[value="' + dlOptions.location + '"]').prop("checked", true);
 		$('input[value="'+dlOptions.displaytype+'"]').prop("checked", true);
 		$('input[value="'+dlOptions.format+'"]').prop("checked", true);
 	}
@@ -231,7 +231,7 @@ $(document).ready(function() {
 				var baseaddress = $("input[name='baseaddress']").val();
 				var displaytype = $('input[name="displayformat"]:checked').val();
 				var downloadformat = $('input[name="downloadformat"]:checked').val();
-				var downloadLocation = $('.outputLocationSelected').attr("id");
+				var downloadLocation = $('input[name="outputLocation"]:checked').val();
 				var docidlist = $("#docidlist").val();
 				var handlelist = $("#handlelist").val();
 				var folderid = $("#folderid").val();
@@ -251,10 +251,10 @@ $(document).ready(function() {
 						format:downloadformat,
 						displaytype:displaytype,
 						baseaddress:baseaddress
-				}
+				};
 				// Refworks?
 				var ret = true;
-				if (downloadLocation == "outputRefWorks") {
+				if (downloadLocation == "refworks") {
 					var refworksURL = "http://www.refworks.com/express/ExpressImport.asp?vendor=Engineering%20Village%202&filter=Desktop%20Biblio.%20Mgt.%20Software";
 					url = "http://" + baseaddress
 							+ "/delivery/download/refworks.url?downloadformat="
@@ -273,10 +273,10 @@ $(document).ready(function() {
 									"width=800,height=500,scrollbars=yes,menubar=yes,resizable=yes,directories=yes,location=yes,status=yes");
                     event.preventDefault();
                     ret = false;
-				}else if(downloadLocation == "outputDropbox"){
+				}else if(downloadLocation == "dropbox"){
 					submitDropboxDL();
 					ret = false;
-				}else if(downloadLocation == "outputGoogle"){
+				}else if(downloadLocation == "googledrive"){
 					submitGoogleDriveDL();
 					ret = false;
 				}

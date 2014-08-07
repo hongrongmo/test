@@ -10,31 +10,32 @@
 	<stripes:layout-component name="csshead">
 	<link href="/static/css/ev_results.css?v=${releaseversion}"" media="all" type="text/css" rel="stylesheet"></link>
 	<link href="/static/css/ev_tagsgroups.css?v=${releaseversion}" media="all" type="text/css" rel="stylesheet"></link>
+	<link href="/static/css/ev_oneclickdl.css?v=${releaseversion}" media="all" type="text/css" rel="stylesheet"></link>
 	</stripes:layout-component>
 
 	<stripes:layout-component name="contents">
 	<style type="text/css">.recordperpage {padding:5px 0 0 11px; float: left; text-align:left; }</style>
-	
-	<div id="resultsbox"> 
 
-	
+	<div id="resultsbox">
+
+
 	<%-- ******************************************************************************* --%>
 	<%-- Top line is for the query display and search options (save search, alert, etc.) --%>
 	<%-- ******************************************************************************* --%>
 	<div id="resultsoptions">
-	
+
 	<%-- ******************************************************************************* --%>
 	<%-- QUERY DISPLAY AND TOOLBAR                                                       --%>
 	<%-- ******************************************************************************* --%>
 	<jsp:include page="parts/tagsquerytoolbar.jsp"/>
 	</div>
-		
+
 <c:choose><c:when test="${actionBean.resultscount eq 0}">
 	<p style="margin: 0 7px 0 10px;"><img title="No results were found" src="/static/images/No_results_found.png">&nbsp;&nbsp;<b>No results were found.</b></p>
 	<br/>
 	<p style="margin: 0 7px 0 10px;">Use the search box above to run a new tag search, or go <a title="Tags &amp; Groups - View/Edit your tags and groups" href="/tagsgroups/display.url?CID=tagsLoginForm&amp;searchtype=TagSearch" class="">back to Tags &amp; Groups home</a>.
 </c:when><c:otherwise>
-	
+
 	<%-- ******************************************************************************* --%>
 	<%-- PAGE NAVIGATION                                                                 --%>
 	<%-- ******************************************************************************* --%>
@@ -70,8 +71,8 @@
 		<input type="hidden" name="scope" value="${actionBean.scope}">
 		<INPUT TYPE="HIDDEN" NAME="backIndex" VALUE="${actionBean.pagenav.currentindex}">
 		<INPUT TYPE="HIDDEN" NAME="basketCount" VALUE="${actionBean.basketCount}">
-		
-	
+
+
 		<%-- ******************************************************************************* --%>
 		<%-- RESULTS MANAGER include                                                         --%>
 		<%-- ******************************************************************************* --%>
@@ -82,9 +83,9 @@
 		</jsp:include>
 
 		<jsp:include page="parts/resultslist.jsp"/>
-		</div>				
+		</div>
 	</FORM>
-	</div><!--  end resultsarea -->	
+	</div><!--  end resultsarea -->
 
 	<div class="clear"></div>
 
@@ -96,20 +97,16 @@
 		<jsp:param name="position" value="bottom"/>
 	</jsp:include>
 </c:otherwise></c:choose>
-	
+
 	<div class="clear"></div>
 
-	</div> <!--  end resultsbox -->	
-	
+	</div> <!--  end resultsbox -->
+
 	<div class="clear"></div>
 
 	</stripes:layout-component>
 
 	<stripes:layout-component name="jsbottom_custom">
-	<SCRIPT LANGUAGE="Javascript" SRC="/static/js/jquery/jquery-1.10.2.min.js?v=${releaseversion}"></script>
-    <SCRIPT LANGUAGE="Javascript" SRC="/static/js/jquery/jquery-ui.min.js?v=${releaseversion}"></script>
-	
-
 	<SCRIPT LANGUAGE="Javascript" SRC="/static/js/URLEncode.js?v=${releaseversion}"></script>
 	<SCRIPT LANGUAGE="Javascript" SRC="/static/js/SelectedRecords.js?v=${releaseversion}"></script>
 	<SCRIPT LANGUAGE="Javascript" SRC="/static/js/SearchResults.js?v=${releaseversion}"></script>
@@ -117,18 +114,20 @@
 	<SCRIPT LANGUAGE="Javascript" SRC="/static/js/CitedBy.js?v=3"></script>
 	<script type="text/javascript" src="/static/js/TagsAjax.js?v=2"></script>
 	<SCRIPT LANGUAGE="Javascript" SRC="/static/js/Basket.js?v=2"></script>
-		
+	<SCRIPT LANGUAGE="Javascript" SRC="/static/js/oneclick.js?v=2"></script>
+
+
     <script type="text/javascript">
       var wadjust = 268;
       $(document).ready(function() {
         function resizeResults() {
               $("#resultsarea").width($("#resultsbox").width() - wadjust);
-        }       
+        }
         resizeResults();
         $(window).bind('resize', resizeResults);
       });
-    </script>     
+    </script>
 	</stripes:layout-component>
 
-	
+
 </stripes:layout-render>
