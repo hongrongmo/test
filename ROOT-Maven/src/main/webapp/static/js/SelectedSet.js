@@ -6,22 +6,22 @@ $(document).ready(function() {
 	/**
 	 * Handle the download link
 	 */
-	$("#downloadlink").click(function (e) {
-		e.preventDefault();
-		var form = $("#resultsform");
-		var downloadurl = "/delivery/download/display.url?database="+form.find("input[name='database']").val()+
-			"&displayformat="+form.find("input[name='selectoption']:checked").val()+
-			"&allselected=true";
-		
-		var new_window = window.open(downloadurl,'NewWindow','status=yes,resizable,scrollbars,width=600,height=600');
-		new_window.focus();
-		return false;
-	});
-	
+	//$("#downloadlink").click(function (e) {
+	//	e.preventDefault();
+	//	var form = $("#resultsform");
+	//	var downloadurl = "/delivery/download/display.url?database="+form.find("input[name='database']").val()+
+	//		"&displayformat="+form.find("input[name='selectoption']:checked").val()+
+	//		"&allselected=true";
+
+	//	var new_window = window.open(downloadurl,'NewWindow','status=yes,resizable,scrollbars,width=600,height=600');
+	//	new_window.focus();
+	//	return false;
+	//});
+
 	$(".pageSizeVal").change(function(e) {
 		e.preventDefault();
 		var form = $("#gotopage_top");
-		var reruncid = form.find("input[name='CID']").val(); 
+		var reruncid = form.find("input[name='CID']").val();
 		var databaseval= form.find("input[name='DATABASEID']").val();
 		var searchid= form.find("input[name='SEARCHID']").val();
 		var pagesizeval= $(this).find("option:selected").val();
@@ -30,9 +30,9 @@ $(document).ready(function() {
 		var searchresults= form.find("input[name='searchresults']").val();
 		var newsearch= form.find("input[name='newsearch']").val();
 		var backIndex= form.find("input[name='backIndex']").val();
-		
+
 		var url="/selected/citation.url";
-	
+
 		if(reruncid!=null && reruncid.indexOf("abstract")!=-1){
 			url = 	"/selected/abstract.url";
 		}else if(reruncid!=null && reruncid.indexOf("citation")!=-1){
@@ -40,13 +40,13 @@ $(document).ready(function() {
 		}else{
 			url = 	"/selected/detailed.url";
 		}
-		
+
 		url= url + "?CID="+reruncid+"&DATABASEID="+databaseval+"&SEARCHID="+searchid+
 		"&pageSizeVal="+pagesizeval+"&DATABASETYPE="+databasetype+"&SEARCHTYPE="+searchtype+"&searchresults="+searchresults+"&newsearch="+newsearch+"&backIndex"+backIndex;
-   
+
 		window.location.href = url;
 	});
-	
+
 	/**
 	 * Handle the print link
 	 */
@@ -74,7 +74,7 @@ $(document).ready(function() {
 		new_window.focus();
 		return false;
 	});
-	
+
 	// Handle the "Go" button from page navigation
 	$("form[name='gotopageform']").submit(function(event) {
 		var pagenumber = parseInt($('input[name="BASKETCOUNT"]', this.form).val());
@@ -85,27 +85,27 @@ $(document).ready(function() {
 			alert("Please enter a valid page number.");
 			return false;
 		}
-		
+
 		if (!($('input[name="BASKETCOUNT"]', this.form).val()).match(numericExpression)) {
 			event.preventDefault();
 			alert("Please enter a valid page number.");
 			return false;
 		}
 	});
-	
+
 	/**
 	 * Handle the view link
-	 * 
+	 *
 	 * There is a duplicate of this function in the js file 'SelectedSet.js' called  viewSelectedSetFormat()
 	 * The Only Difference is that the viewSelectedSetFormat() function takes one
 	 * extra parameter, basketcount, which preserves the current 'page' within the basket
-	 * 	 
+	 *
 	 */
 	$("#viewlink").click(function(e) {
 		e.preventDefault();
 		var form = $("#resultsform");
 		var viewurl = $(this).attr('href');
-		
+
 		// Set the CID according to the selectoption element
 		var displaytype = form.find("input[name='selectoption']:checked").val();
 		if ('citation' != displaytype) {
@@ -121,23 +121,23 @@ $(document).ready(function() {
 			});
 		}
 
-		
+
 		document.location = viewurl;
 		return false;
 	});
-	
+
 });
-	
+
 //
 // Clear selected records on new search function
 //
 $("#topchkClr").click(function() {
 	var img = new Image() ;
 
-	img.src = "/engresources/Basket.jsp?select=clearonnewsearch" + 
+	img.src = "/engresources/Basket.jsp?select=clearonnewsearch" +
 		"&sessionid="+document.resultsform.sessionid.value+
 		"&clearonvalue="+$(this).is(":checked")+
-		"&timestamp="+new Date().getTime();		
+		"&timestamp="+new Date().getTime();
 });
 
 function newWindow(url)

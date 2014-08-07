@@ -6,18 +6,17 @@ $(document).ready(function() {
 	/**
 	 * Handle the download link
 	 */
-	$("#downloadlink").click(function (e) {
-		e.preventDefault();
-		var form = $("#resultsform");
-		var downloadurl = "/delivery/download/display.url?database="+form.find("input[name='database']").val()+
-			"&folderid="+form.find("input[name='folderid']").val()+
-			"&displayformat="+form.find("input[name='selectoption']:checked").val();
-		
-		var new_window = window.open(downloadurl,'NewWindow','status=yes,resizable,scrollbars,width=600,height=600');
-		new_window.focus();
-		return false;
-	});
-	
+	//$("#downloadlink").click(function (e) {
+//		e.preventDefault();
+//		var form = $("#resultsform");
+//		var downloadurl = "/delivery/download/display.url?database="+form.find("input[name='database']").val()+
+//			"&folderid="+form.find("input[name='folderid']").val()+
+//			"&displayformat="+form.find("input[name='selectoption']:checked").val();
+//		var new_window = window.open(downloadurl,'NewWindow','status=yes,resizable,scrollbars,width=600,height=600');
+//		new_window.focus();
+//		return false;
+//	});
+
 	/**
 	 * Handle the print link
 	 */
@@ -32,7 +31,7 @@ $(document).ready(function() {
 		new_window.focus();
 		return false;
 	});
-	
+
 	// THIS FUNCTION BASICALLY CONSTRUCT ALL THE REQUIRED PARAMETERS FOR EMAIL.THE VALUES SO CONSTRUCTED ARE SENT TO
 	// EMAIL FORM.(emailSelectedRecords,emailSelectedFormatResults.jsp)
 	$("#emaillink").click(function(e) {
@@ -57,14 +56,14 @@ $(document).ready(function() {
 			alert("Please enter a valid page number.");
 			return false;
 		}
-		
+
 		if (!($('input[name="BASKETCOUNT"]', this.form).val()).match(numericExpression)) {
 			event.preventDefault();
 			alert("Please enter a valid page number.");
 			return false;
 		}
 	});
-	
+
 	/**
 	 * Handle the update folder link
 	 */
@@ -73,7 +72,7 @@ $(document).ready(function() {
 		var form = $("#resultsform");
 		// Set the CID according to the selectoption element
 		var displaytype = form.find("input[name='selectoption']:checked").val();
-		
+
 		if ('citation' == displaytype) {
 			displaytype ='viewCitationSavedRecords';
 		}else if ('abstract' == displaytype) {
@@ -81,19 +80,19 @@ $(document).ready(function() {
 		}else if ('detailed' == displaytype) {
 			displaytype ='viewDetailedSavedRecords';
 		}
-		
+
 		var viewurl = "/controller/servlet/Controller?CID="+displaytype+
 		"&EISESSION="+form.find("input[name='sessionid']").val()+
 		"&folderid="+form.find("input[name='folderid']").val()+
 		"&database="+form.find("input[name='database']").val()+
 		"&backurl="+form.find("input[name='backurl']").val();
-		
+
 		document.location = viewurl;
 		return false;
 	});
-	
+
 });
-	
+
 
 function newWindow(url)
 {

@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://jawr.net/tags" prefix="jwr" %>	
+<%@ taglib uri="http://jawr.net/tags" prefix="jwr" %>
 <%@ taglib uri="http://stripes.sourceforge.net/stripes.tld"	prefix="stripes"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
@@ -7,7 +7,7 @@
 <%@ taglib uri="/WEB-INF/tlds/datatags.tld" prefix="data" %>
 
 <stripes:layout-render name="/WEB-INF/pages/layout/standard.jsp">
-	
+
 	<stripes:layout-component name="csshead">
 	<%@ include file="/WEB-INF/pages/include/highlight.jsp" %>
 	<link href="/static/css/ev_abstract.css?v=${releaseversion}" media="all" type="text/css" rel="stylesheet"></link>
@@ -37,7 +37,7 @@
 			<c:otherwise>/search/expert.url</c:otherwise>
 		</c:choose>
 	</c:set>
-	
+
 	<c:set var="navigationurl">
 		<c:choose>
 			<c:when test="${actionBean.view eq 'abstract'}">/search/doc/abstract.url</c:when>
@@ -50,10 +50,10 @@
 	<div id="abstractbox">
 
 <%-- *********************************************************** --%>
-<%-- Top navbar - view search history, back to results and --%> 
-<%-- page navigation --%> 
-<%-- *********************************************************** --%> 
- 
+<%-- Top navbar - view search history, back to results and --%>
+<%-- page navigation --%>
+<%-- *********************************************************** --%>
+
         <c:choose>
         	<c:when test="${not empty actionBean.dedupResultCount && not(actionBean.dedupResultCount eq 'null') }">
         	 <c:set var="resultCount" value=" ${actionBean.dedupResultCount}"/>
@@ -62,7 +62,7 @@
         		 <c:set var="resultCount" value="${actionBean.resultscount}"/>
         	</c:otherwise>
         </c:choose>
- 
+
 		<div id="abstractnavbar" aria-label="Results options" role="navigation">
             <span><a class="newsearch" href="/home.url?database=${actionBean.database}" title="Run new search">New Search</a>|</span>
             <span><a class="history" href="${searchhistoryurl}?${actionBean.newsearchqs}#searchhistorybox" title="View search history">View search history</a>|</span>
@@ -81,37 +81,37 @@
 		</div>
 
 		<div class="hr" style="height:5px; margin:0 10px"><hr/></div>
-		
+
 		<table id="abstractwrapper" border="0" cellpadding="0" cellspacing="0">
 <%-- *********************************************************** --%>
-<%-- Abstract LH column - abstract!                              --%> 
-<%-- *********************************************************** --%> 
+<%-- Abstract LH column - abstract!                              --%>
+<%-- *********************************************************** --%>
 		<tr>
 		<td id="lhcolumn">
 <%-- *********************************************************** --%>
-<%-- Abstract tools - full text, blog, email/print/download, etc.--%> 
-<%-- *********************************************************** --%> 
+<%-- Abstract tools - full text, blog, email/print/download, etc.--%>
+<%-- *********************************************************** --%>
 		<div id="abstracttoolbar" aria-label="Record options" role="navigation">
 	<c:if test="${result.fulltext}">
 		<span><a class="fulltext" href="javascript:newwindow=window.open('/search/results/fulltext.url?docID=${result.doc.docid}','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable'); void('');" title="View full text (opens in a new window)"><img id="ftimg" class="fulltext" src="/static/images/full_text.png" title="View full text (opens in a new window)"></a>|</span>
 	</c:if>
 		<c:if test="${actionBean.bloglink}">
 			<span><a class="blog" id="bloglink" title="Create a link to share this record" href="/blog/open.url?mid=${result.doc.docid}&database=${result.doc.dbid}">Blog This</a>|</span>
-		</c:if>	
+		</c:if>
 			<span><a class="email" id="emaillink" title="Email this record" href="/delivery/email/display.url?database=${actionBean.database}&displayformat=${actionBean.view}&docidlist=${result.doc.docid}&handlelist=${result.doc.hitindex}">Email</a>|</span>
 			<span><a class="print" id="printlink" title="Print this record" href="/delivery/print/display.url?database=${actionBean.database}&displayformat=${actionBean.view}&docidlist=${result.doc.docid}&handlelist=${result.doc.hitindex}">Print</a>|</span>
-			<span><a class="download" id="downloadlink" title="Download this record" href="/delivery/download/display.url?database=${actionBean.database}&displayformat=${actionBean.view}&docidlist=${result.doc.docid}&handlelist=${result.doc.hitindex}">Download</a>|</span>
+			<span id="downloadli"><a id="oneclickDL" title="Download selections" style="display:none" href="/delivery/download/display.url?database=${actionBean.database}&displayformat=${actionBean.view}&docidlist=${result.doc.docid}&handlelist=${result.doc.hitindex}"></a><a id="downloadlink" title="Download this record" href="/delivery/download/display.url?database=${actionBean.database}&displayformat=${actionBean.view}&docidlist=${result.doc.docid}&handlelist=${result.doc.hitindex}">Download</a>|</span>
 			<span><a class="save" title="Save this record to a folder in Settings" href="/personal/folders/save/view.url?CID=viewSavedFolders&searchid=${actionBean.searchid}&EISESSION=${actionBean.sessionid}&count=1&source=selectedset&database=${actionBean.database}&format=${actionBean.view=='detailed'?'quickSearchDetailedFormat':'quickSearchAbstractFormat'}&DOCINDEX=${result.doc.hitindex}&backurl=CID%3D${actionBean.CID}%26SEARCHID%3D${actionBean.searchid}%26COUNT%3D1%26database%3D${actionBean.database}">Save to Folder</a></span>
 			<div class="clear"></div>
 		</div>
-		
+
 		<div class="hr" style="color: #9b9b9b; background-color: #9b9b9b; height: 1px; margin: 0 0 7px 0;"><hr></div>
 
-		
+
 <%-- *********************************************************** --%>
-<%-- Abstract display --%> 
-<%-- *********************************************************** --%> 
-		
+<%-- Abstract display --%>
+<%-- *********************************************************** --%>
+
 			<div id="tabs" aria-label="Record views" role="navigation">
 			<ul>
 			<c:if test="${result.doc.dbmask != 131072}">
@@ -126,18 +126,18 @@
 				</c:otherwise>
 				</c:choose>
 			</c:if>
-		
+
 			</ul>
-			
+
 			<div id="highlight" style="float:right;display:none"><input type="checkbox" id="ckhighlight" <c:if test="${actionBean.ckhighlighting}">checked="checked"</c:if>/><label for="ckhighlight"><b>Highlight search terms</b></label></div>
 			<div class="clear"></div>
-			
+
 			</div>
-			
-			
+
+
 			<div id="abstractarea" class="shadowbox" aria-label="Article" role="main">
-			<form  name="quicksearchresultsform" >	
-			<p class="topline">Record ${result.doc.hitindex} from ${result.doc.dbname}<c:if test="${not empty actionBean.displayquery}"> for: ${actionBean.displayquery}, 
+			<form  name="quicksearchresultsform" >
+			<p class="topline">Record ${result.doc.hitindex} from ${result.doc.dbname}<c:if test="${not empty actionBean.displayquery}"> for: ${actionBean.displayquery},
 <c:choose>
 	<c:when test="${not empty actionBean.emailalertweek}">Week ${actionBean.emailalertweek}</c:when>
 	<c:when test="${not empty actionBean.updatesNo}">Last ${actionBean.updatesNo} update(s)</c:when>
@@ -151,12 +151,12 @@
 
 	        <%-- Mendeley COinS item --%>
 	        <data:mendeleyformat result="${result}"/>
-			
+
 			<c:choose>
 			<c:when test="${actionBean.view eq 'detailed'}"><jsp:include page="parts/detailedformat.jsp"/></c:when>
 			<c:otherwise><jsp:include page="parts/abstractformat.jsp"/></c:otherwise>
 			</c:choose>
-			
+
 			<div id="deliverylinks">
 				<h2 id="deliveryheader">Full-text and Local Holdings Links</h2>
 				<div id="deliverybody">
@@ -165,7 +165,7 @@
 						<c:forEach items="${result.lhlinkObjects}" var="lhlink" varStatus="status">
 							<c:if test="${not empty lhlink.url}">
 								<c:if test="${status.count>1}"><span class="pipe">|</span></c:if>
-								<c:choose>                     
+								<c:choose>
 	                        		<c:when test="${not empty lhlink.imageUrl}">
 	                        			<c:choose>
 											<c:when test="${actionBean.view eq 'detailed'}">
@@ -189,14 +189,14 @@
 												<a CLASS="LgBlueLink" onclick="openLocalHoldingsLink(event,'Abstract Format',this);" href="/search/results/localholdinglinks.url?docId=${result.doc.docid}&url=${lhlink.url}&position=${lhlink.position}" target="new">${lhlink.label}</a>
 											</c:otherwise>
 										</c:choose>
-	                        			
+
 	                        		</c:otherwise>
 	                    		</c:choose>
 							</c:if>
 						</c:forEach>
-						</p> 
+						</p>
 					</c:if>
-				
+
                 <%--
 				<data:localHoldings  snvalue="${result.sn}" textzones="${actionBean.context.userSession.userTextZones}" source="abstract" status="true" docid="${result.doc.docid}"/>
                  --%>
@@ -217,26 +217,26 @@
 			</div>
 
 			<div class="clear"></div>
-			
+
 		</td>
 
 <%-- *********************************************************** --%>
-<%-- Abstract RH column - scopus tools, add a tag, etc.!         --%> 
-<%-- *********************************************************** --%> 
+<%-- Abstract RH column - scopus tools, add a tag, etc.!         --%>
+<%-- *********************************************************** --%>
 		<td id="rhcolumn" aria-label="Related content" role="complementary">
-		
-<%-- References box                                                 --%>    		
+
+<%-- References box                                                 --%>
 <jsp:include page="parts/references_box.jsp"></jsp:include>
 
-<%-- Scopus cited-by box                                                 --%>    		
+<%-- Scopus cited-by box                                                 --%>
 <jsp:include page="parts/citedby_box.jsp"></jsp:include>
 
-<%-- Tags & groups box                                                   --%>    		
+<%-- Tags & groups box                                                   --%>
 <jsp:include page="parts/tagbubble.jsp"></jsp:include>
-		
+
 		</td>
 		</tr>
-		
+
 		</table>
 
 		<div class="clear"></div>
@@ -251,7 +251,7 @@
 		<script src="/static/js/lindaHall.js?v=${releaseversion}" language="Javascript"></script>
 	</c:if>
 	<SCRIPT LANGUAGE="Javascript">
-	
+
 	var searchquery="${actionBean.encodeddisplayquery}";
 	var sessionid="${actionBean.sessionid}";
 	var searchid="${actionBean.searchid}";
@@ -259,7 +259,7 @@
 	var searchtype = "${param.searchtype}";
 	var database = "${actionBean.database}";
 	var databaseid = "${actionBean.compmask}";
-	var handle="${result.doc.hitindex}"; 
+	var handle="${result.doc.hitindex}";
 	var docid="${result.doc.docid}";
 	var view="${actionBean.view}";
 	$(document).ready(function() {
@@ -272,15 +272,15 @@
 				$("span.hit").removeClass("hit").addClass("nohit");
 				$.get("/session/highlight.url?CID=highlight&value=false");
 			}
-			
+
 		});
-		
+
 		// Adjust title element when <sup> present
 		var suptext = $("#detailed td");
 		suptext.each(function() {
 			if ($(this).find('sup').length > 0) $(this).css('position','relative').css('top','-5px');
 		});
-		
+
 		//
 		// Handle the print link
 		//
@@ -289,50 +289,48 @@
 			new_window = window.open($(this).attr('href'), 'NewWindow',
 					'status=yes,resizable,scrollbars,width=640,height=480');
 			new_window.focus();
-			
+
 			return false;
 		});
 
-		// 
+		//
 		// Handle the email link
 		//
 		$("#emaillink").click(function(e) {
 			e.preventDefault();
-			
+
 			new_window = window.open($(this).attr('href'), 'NewWindow',
 					'status=yes,resizable,scrollbars,width=640,height=480');
 			new_window.focus();
-			
+
 			return false;
 		});
-		
-		// 
+
+		//
 		// Handle the download link
 		//
-		$("#downloadlink").click(function(e) {
-			e.preventDefault();
-			
-			new_window = window.open($(this).attr('href'), 'NewWindow',
-					'status=yes,resizable,scrollbars,width=640,height=600');
-			new_window.focus();
-			
-			return false;
-		});
-		
-		// 
+		//$("#downloadlink").click(function(e) {
+		//	e.preventDefault();
+		//	new_window = window.open($(this).attr('href'), 'NewWindow',
+		//			'status=yes,resizable,scrollbars,width=640,height=600');
+		//	new_window.focus();
+		//	return false;
+		//});
+
+		//
 		// Handle the blog link
 		//
 		$("#bloglink").click(function(e) {
 			e.preventDefault();
-			
+
 			new_window = window.open($(this).attr('href'), 'NewWindow',
 					'status=yes,resizable,scrollbars,width=640,height=480');
 			new_window.focus();
-			
+
 			return false;
 		});
 });
-	
+
 
 	//Script for saved records format
 	function savedrecordsFormat(sessionid, searchtype, searchid, database,
@@ -380,5 +378,5 @@
 </SCRIPT>
 	</stripes:layout-component>
 
-	
+
 </stripes:layout-render>

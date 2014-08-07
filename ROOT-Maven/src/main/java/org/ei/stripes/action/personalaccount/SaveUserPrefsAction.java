@@ -84,6 +84,40 @@ public class SaveUserPrefsAction extends EVActionBean implements ISecuredAction 
 
         return new StreamingResolution("text", "");
     }
+    @HandlesEvent("savedlprefs")
+    @DontValidate
+    public Resolution saveDownloadPrefs(){
+    	 IEVWebUser user = getContext().getUserSession().getUser();
+         try{
+ 	        if (user.isIndividuallyAuthenticated()) {
+ 		        UserPrefs userPrefs = user.getUserPrefs();
+
+ 		        userPrefs.setUserid(user.getWebUserId());
+ 		        userPrefs.setDlOutput(this.dlOutput);
+ 		        userPrefs.setDlFormat(this.dlFormat);
+ 		        userPrefs.setDlLocation(this.dlLocation);
+ 		        userPrefs.save();
+ 		        user.setUserPrefs(userPrefs);
+
+ 		        UserSession userSession = context.getUserSession();
+ 		        userSession.setRecordsPerPage(Integer.toString(userPrefs.getResultsPerPage()));
+ 		        context.updateUserSession(userSession);
+ 	        }else{
+ 	        	log4j.info("User is Not individually authenticated!");
+ 	        	getContext().getResponse().setStatus(HttpStatus.SC_BAD_REQUEST);
+ 	        	return new StreamingResolution("text", "");
+ 	        }
+         }catch(Exception e){
+         	log4j.error("User Preferences could not be saved!");
+         	e.printStackTrace();
+         	getContext().getResponse().setStatus(HttpStatus.SC_BAD_REQUEST);
+         	return new StreamingResolution("text", "");
+         }
+         setRoom(ROOM.blank);
+
+
+         return new StreamingResolution("text", "");
+    }
 
     /**
      * default handler will just go to the editprefs.jsp
