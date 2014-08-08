@@ -27,6 +27,8 @@ import net.sourceforge.stripes.action.StrictBinding;
 import net.sourceforge.stripes.action.UrlBinding;
 import net.sourceforge.stripes.validation.LocalizableError;
 import net.sourceforge.stripes.validation.Validate;
+import net.sourceforge.stripes.validation.ValidationErrorHandler;
+import net.sourceforge.stripes.validation.ValidationErrors;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.validator.GenericValidator;
@@ -81,7 +83,7 @@ import org.xml.sax.SAXException;
  */
 @UrlBinding("/search/{$event}.url")
 @StrictBinding
-public class SearchDisplayAction extends BaseSearchAction { // implements
+public class SearchDisplayAction extends BaseSearchAction implements ValidationErrorHandler { // implements
                                                             // IBizBean {
 
     private final static Logger log4j = Logger.getLogger(SearchDisplayAction.class);
@@ -1125,6 +1127,24 @@ public class SearchDisplayAction extends BaseSearchAction { // implements
 
     public void setSwReferrer(String swReferrer) {
         this.swReferrer = swReferrer;
+    }
+
+    /* (non-Javadoc)
+     * @see net.sourceforge.stripes.validation.ValidationErrorHandler#handleValidationErrors(net.sourceforge.stripes.validation.ValidationErrors)
+     */
+    @Override
+    public Resolution handleValidationErrors(ValidationErrors errors) throws Exception {
+        if (errors != null) {
+            preprocess();
+            if ("Quick".equals(this.searchtype)) {
+                return quicksearch();
+            } else if ("Expert".equals(this.searchtype)) {
+                return expertsearch();
+            } else {
+                return quicksearch();
+            }
+        }
+        return null;
     }
 
 }

@@ -17,7 +17,9 @@ import net.sourceforge.stripes.action.HandlesEvent;
 import net.sourceforge.stripes.action.RedirectResolution;
 import net.sourceforge.stripes.action.Resolution;
 import net.sourceforge.stripes.action.UrlBinding;
+import net.sourceforge.stripes.validation.ValidationErrors;
 
+import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
 import org.ei.biz.access.AccessException;
 import org.ei.domain.DatabaseConfig;
@@ -218,6 +220,17 @@ public class ThesaurusSearchAction extends SearchDisplayAction { // implements I
 
         // Display!
         return new ForwardResolution("/WEB-INF/pages/customer/search/thesHome.jsp");
+    }
+
+    /* (non-Javadoc)
+     * @see net.sourceforge.stripes.validation.ValidationErrorHandler#handleValidationErrors(net.sourceforge.stripes.validation.ValidationErrors)
+     */
+    @Override
+    public Resolution handleValidationErrors(ValidationErrors errors) throws Exception {
+        if (errors != null) {
+            return thesHome();
+        }
+        return null;
     }
 
     //
