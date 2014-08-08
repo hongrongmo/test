@@ -79,7 +79,7 @@ $(document).ready(function() {
 				+"&allselected=true";
 			}
 
-			if(typeof(Basket) == 'undefined' || (Basket.count > 0) ){
+			if(((typeof(Basket) == 'undefined' || (Basket.count > 0)) || (typeof($(this).attr("href")) != 'undefined' &&  $(this).attr("href").length > 0))){
 
 				$(this).tooltipster({
 				    content: 'Loading...',
