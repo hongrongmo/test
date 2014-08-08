@@ -4,7 +4,7 @@ $(document).ready(function(){
 	if(typeof($("#oneclickDL").attr('href')) == 'undefined'){
 		$("#oneclickDL").click(
 				function(){
-					if(typeof(Basket) != 'undefined' || (Basket.count == 0) ){
+					if(typeof(Basket) != 'undefined' && (Basket.count == 0) ){
 						$(this).tooltipster({
 						    content: 'Please select records from the search results and try again',
 						    autoClose:true,

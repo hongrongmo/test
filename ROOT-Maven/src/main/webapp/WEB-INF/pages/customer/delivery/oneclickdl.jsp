@@ -131,7 +131,7 @@
 	<stripes:hidden name="database" id="database" />
 	<stripes:hidden name="baseaddress" id="baseaddress" />
 	<div id="oneClickContent">
-		<div id="oneClickTitle">Choose your session download options</div>
+		<div id="oneClickTitle">Choose your download settings for this session</div>
 		<hr/>
 		<div id="oneClickMid">
 			<div id="oneClickLeft">
