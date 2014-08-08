@@ -49,18 +49,40 @@ function changeOneClick(dlType){
 }
 function recordPageDownloadSubmit(dlLinkUrl){
 	//the params of the url and remove the ?
-	var params = dlLinkUrl.match(/\?.+/)[0];
-	params = params.substr(1,params.length);
+	dlLinkUrl = dlLinkUrl.match(/\?.+/)[0];
+	dlLinkUrl = dlLinkUrl.substr(1,dlLinkUrl.length);
+
+	var params = "";
+
+
 	var baseaddress = dlOptions.baseaddress;
 	var downloadLocation = dlOptions.location;
 	var downloadformat = dlOptions.format;
+	var displayformat = dlOptions.displaytype;
+
+	if(displayformat == 'default'){
+		//if it's set to default use the format that came in on the url
+		params = dlLinkUrl;
+	}else{
+		//otherwise ignore it and use the setting from the cookie but keep all other parameters
+		var vars = dlLinkUrl.split('&');
+		for (var i = 0; i < vars.length; i++) {
+	        var pair = vars[i].split('=');
+	        if (pair[0] != "displayformat") {
+	            params += "&" + pair[0] + "=" + pair[1];
+	        }
+	    }
+		params += "&displayformat=" + displayformat;
+
+	}
 
 	GALIBRARY.createWebEventWithLabel('Output', 'Download', downloadformat);
 	if (downloadLocation == "refworks") {
 		var refworksURL = "http://www.refworks.com/express/ExpressImport.asp?vendor=Engineering%20Village%202&filter=Desktop%20Biblio.%20Mgt.%20Software";
 		url = "http://" + baseaddress
 				+ "/delivery/download/refworks.url?downloadformat="
-				+ downloadformat + "&timestamp=" + milli
+				+ downloadformat
+				+ "&timestamp=" + milli
 				+"&"+ params;
 
 
@@ -71,21 +93,21 @@ function recordPageDownloadSubmit(dlLinkUrl){
         event.preventDefault();
 
 	}else if(downloadLocation == "dropbox"){
-		var downloadUrl = '/delivery/download/submit.url?downloadformat='+downloadformat+"&"+ params;
-		var dropBoxPageUrl = 'https://'+baseaddress+'/delivery/download/dropbox.url?downloadformat='+downloadformat+'&'+params+'&dropBoxDownloadUrl='+escape(downloadUrl);
+		var downloadUrl = '/delivery/download/submit.url?downloadformat='+downloadformat + "&"+ params;
+		var dropBoxPageUrl = 'https://'+baseaddress+'/delivery/download/dropbox.url?downloadformat='+downloadformat + '&'+params+'&dropBoxDownloadUrl='+escape(downloadUrl);
 		GALIBRARY.createWebEventWithLabel('Dropbox', 'Save Initiated', downloadformat);
 		var new_window1 = window.open(dropBoxPageUrl, 'DropBox', "height=350,width=820,resizable=yes,scrollbars=yes");
 		new_window1.focus();
 
 	}else if(downloadLocation == "googledrive"){
-		var googleDrivePageUrl = 'https://'+baseaddress+'/delivery/download/googledrive.url?downloadformat='+downloadformat+'&' + params;
+		var googleDrivePageUrl = 'https://'+baseaddress+'/delivery/download/googledrive.url?downloadformat='+downloadformat + '&' + params;
 
 		GALIBRARY.createWebEventWithLabel('Google Drive', 'Save Initiated', downloadformat);
 		var new_window1 = window.open(googleDrivePageUrl, 'Google Drive', "height=350,width=820,resizable=yes,scrollbars=yes");
 		new_window1.focus();
 		ret = false;
 	}else{
-		var downloadUrl = 'https://'+baseaddress+'/delivery/download/submit.url?downloadformat='+downloadformat+ '&' + params;
+		var downloadUrl = 'https://'+baseaddress+'/delivery/download/submit.url?downloadformat='+downloadformat + '&' + params;
 		$("#oneClickDLForm").attr("action",downloadUrl);
 		$("#oneClickDLForm").submit();
 		//window.location = downloadUrl;
@@ -111,6 +133,11 @@ function basketDownloadSubmit() {
 	if(typeof(folderid) != 'undefined'){
 		addParams += "&folderid=" + folderid;
 	}
+
+	if(displaytype == 'defualt'){
+		displaytype = 'citation';
+	}
+
 	var url = "";
 	GALIBRARY.createWebEventWithLabel('Output', 'Download', downloadformat);
 	// Refworks?
@@ -131,7 +158,7 @@ function basketDownloadSubmit() {
         event.preventDefault();
 
 	}else if(downloadLocation == "dropbox"){
-		var downloadUrl = '/delivery/download/submit.url?downloadformat='+downloadformat+'&displayformat='+displaytype + '&database=' + databaseid + "&sessionid=" + sessionid + addparams;
+		var downloadUrl = '/delivery/download/submit.url?downloadformat='+downloadformat+'&displayformat='+displaytype + '&database=' + databaseid + "&sessionid=" + sessionid + addParams;
 		var dropBoxPageUrl = 'https://'+baseaddress+'/delivery/download/dropbox.url?downloadformat='+downloadformat+'&displayformat='+displaytype+'&dropBoxDownloadUrl='+escape(downloadUrl);
 		GALIBRARY.createWebEventWithLabel('Dropbox', 'Save Initiated', downloadformat);
 		var new_window1 = window.open(dropBoxPageUrl, 'DropBox', "height=350,width=820,resizable=yes,scrollbars=yes");
@@ -158,7 +185,7 @@ function saveDownloadPrefs(dlOptions){
 	$(".saved").hide();
 	var url = "/customer/userprefs.url?savedlprefs=true&";
 	var params = "";
-		params += '?dlFormat=' + dlOptions.format + '&dlLocation=' + dlOptions.location + '&dlOutput=' + dlOptions.displaytype;
+		params += 'dlFormat=' + dlOptions.format + '&dlLocation=' + dlOptions.location + '&dlOutput=' + dlOptions.displaytype;
 
 	url += params;
 	GALIBRARY.createWebEventWithLabel('Preferences', 'Preferences Saved', params);
