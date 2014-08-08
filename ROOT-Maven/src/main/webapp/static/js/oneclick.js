@@ -2,7 +2,25 @@ var dlOptions;
 $(document).ready(function(){
 	checkForOneClick();
 	if(typeof($("#oneclickDL").attr('href')) == 'undefined'){
-		$("#oneclickDL").click(basketDownloadSubmit);
+		$("#oneclickDL").click(
+				function(){
+					if(typeof(Basket) != 'undefined' || (Basket.count == 0) ){
+						$(this).tooltipster({
+						    content: 'Please select records from the search results and try again',
+						    autoClose:true,
+						    interactive:false,
+						    contentAsHTML:true,
+						    position:'bottom',
+						    fixedLocation:true,
+						    positionTracker:false,
+						    delay:0,
+						    speed:0,
+						    functionAfter: function(origin){$(origin).tooltipster('destroy');}
+						});
+						$(this).tooltipster('show',null);
+						return false;
+					}else{basketDownloadSubmit();}
+				});
 	}else{
 		$("#oneclickDL").click( function(){return recordPageDownloadSubmit($(this).attr('href'));});
 	}
@@ -10,8 +28,12 @@ $(document).ready(function(){
 	$("body").append('<form name="oneClickDLForm" id="oneClickDLForm" method="post" action="/delivery/download/submit.url"></form>');
 });
 function checkForOneClick(){
+
 	if($.cookie("ev_oneclickdl")){
 		dlOptions = JSON.parse($.cookie("ev_oneclickdl"));
+		changeOneClick(dlOptions.location);
+	}else if(typeof(savedDLPrefs) != 'undefined'){
+		dlOptions = savedDLPrefs;
 		changeOneClick(dlOptions.location);
 	}
 
@@ -116,6 +138,9 @@ function recordPageDownloadSubmit(dlLinkUrl){
 }
 
 function basketDownloadSubmit() {
+
+
+
 	var baseaddress = dlOptions.baseaddress;
 	var displaytype = dlOptions.displaytype;
 	var downloadformat = dlOptions.format;

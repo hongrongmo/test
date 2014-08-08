@@ -135,6 +135,15 @@
 <div id="prefsNotSaved" style="display:none;text-align:left;"><img src="/static/images/No_results_found.png" style="padding-right:5px;width:20px;"/>Preferences Could Not Be Saved!</div>
 
   <script>
+  var savedDLPrefs;
+  <c:if test="${actionBean.context.userSession.user.individuallyAuthenticated}">
+  	savedDLPrefs = {
+  			location:'${actionBean.context.userSession.user.userPrefs.dlLocation}',
+  			format:'${actionBean.context.userSession.user.userPrefs.dlFormat}',
+  			displaytype:'${actionBean.context.userSession.user.userPrefs.dlOutput}',
+  			baseaddress:'${actionBean.baseaddress}'
+  	};
+  </c:if>
   $(function() {
 	  if($("#settingMenu").length > 0){
 		$("#settingMenu").menu({position:{my:'right+25 top+20'}, icons: { submenu: "ui-icon-triangle-1-s" }});
