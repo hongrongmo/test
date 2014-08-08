@@ -122,7 +122,7 @@
 <c:set value="${actionBean.context.userSession.user.userPrefs.dlFormat}" var="dlFormat"></c:set>
 <c:set value="${actionBean.context.userSession.user.userPrefs.dlOutput}" var="dlOutput"></c:set>
 <c:set value="${actionBean.context.userSession.user.userPrefs.dlLocation}" var="dlLocation"></c:set>
-<c:if test="${dlOutput eq 'default' }"><c:set value="${actionBean.displayformat}" var="dlOutput"></c:set></c:if>
+
 <stripes:form name="download" id="download" method="post" action="/delivery/download/submit.url">
 	<stripes:hidden name="sessionid" id="sessionid"/>
 	<stripes:hidden name="docidlist" id="docidlist" />
@@ -163,7 +163,7 @@
 				<li><input type="radio" class="typeEnabled" id="rdCit" name="displayformat" value="citation"  <c:if test="${dlOutput eq 'citation'}">checked="checked"</c:if>/><label	for="rdCit" title="Download the citation section">Citation</label></li>
 				<li><input type="radio" class="typeEnabled" id="rdAbs" name="displayformat" value="abstract"  <c:if test="${dlOutput eq 'abstract'}">checked="checked"</c:if>/><label for="rdAbs" title="Download the abstract section">Abstract</label></li>
 				<li><input type="radio" class="typeEnabled" id="rdDet" name="displayformat" value="detailed"  <c:if test="${dlOutput eq 'detailed'}">checked="checked"</c:if>/><label for="rdDet" title="Download the detailed record">Detailed record</label></li>
-				<!-- li><input type="radio" class="typeEnabled" id="rdDefault" name="displayformat" value="default"  <c:if test="${dlOutput eq 'default'}">checked="checked"</c:if>/><label for="rdDefault" title="Download the Default Format for this Page">Default</label></li -->
+				<li><input type="radio" class="typeEnabled" id="rdDefault" name="displayformat" value="default"  <c:if test="${dlOutput eq 'default'}">checked="checked"</c:if>/><label for="rdDefault" title="Download the Format for this Page">Current page view</label></li>
 				</ul>
 			</div>
 		</div>
@@ -230,6 +230,7 @@ $(document).ready(function() {
 
 				var baseaddress = $("input[name='baseaddress']").val();
 				var displaytype = $('input[name="displayformat"]:checked').val();
+				var actionDisplayType = '${actionBean.displayformat}';
 				var downloadformat = $('input[name="downloadformat"]:checked').val();
 				var downloadLocation = $('input[name="outputLocation"]:checked').val();
 				var docidlist = $("#docidlist").val();
@@ -252,6 +253,13 @@ $(document).ready(function() {
 						displaytype:displaytype,
 						baseaddress:baseaddress
 				};
+				$("#dlprefsSaved").fadeIn("slow");
+
+				if(displaytype == 'default'){
+					//need to figure out what page they are on to get this right.
+					displaytype = actionDisplayType;
+					$('input[value="' + actionDisplayType + '"]').prop("checked", true);
+				}
 				// Refworks?
 				var ret = true;
 				if (downloadLocation == "refworks") {

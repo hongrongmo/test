@@ -122,6 +122,16 @@
 
 </div>
 <div id="prefsSaved" style="display:none;text-align:left;"><img src="/static/images/ev_checkmark.png" style="padding-right:5px;width:20px;"/>Preferences Saved!</div>
+<c:choose>
+	<c:when test="${actionBean.context.userSession.user.individuallyAuthenticated}">
+	<div id="dlprefsSaved" style="display:none;text-align:left;"><img src="/static/images/ev_checkmark.png" style="padding-right:5px;width:20px;"/>Your download settings for this session have been saved. To keep these settings, change your preference in Settings.</div>
+	</c:when>
+	<c:otherwise>
+	<div id="dlprefsSaved" style="display:none;text-align:left;"><img src="/static/images/ev_checkmark.png" style="padding-right:5px;width:20px;"/>Your download settings for this session have been saved. To keep these settings, login or register and sav your preferences in Settings.</div>
+	</c:otherwise>
+</c:choose>
+
+
 <div id="prefsNotSaved" style="display:none;text-align:left;"><img src="/static/images/No_results_found.png" style="padding-right:5px;width:20px;"/>Preferences Could Not Be Saved!</div>
 
   <script>

@@ -138,7 +138,7 @@
 			<div class="settingSection">Download output</div>
 			<fieldset title="Download Output Settings">
 			<ul class="prefsRadios">
-				<li><label for="default_radio"><input type="radio" name="dlOutput" value="default" id="default_radio" <c:if test="${dlOutput eq 'default'}">checked="checked"</c:if>/>Default</label></li>
+				<li><label for="default_radio"><input type="radio" name="dlOutput" value="default" id="default_radio" <c:if test="${dlOutput eq 'default'}">checked="checked"</c:if>/>Current Page View</label></li>
 				<li><label for="citation_radio"><input type="radio" name="dlOutput" value="citation" id="citation_radio" <c:if test="${dlOutput eq 'citation'}">checked="checked"</c:if>/>Citation</label></li>
 				<li><label for="abstract_radio"><input type="radio" name="dlOutput" value="abstract" id="abstract_radio" <c:if test="${dlOutput eq 'abstract'}">checked="checked"</c:if>/>Abstract</label></li>
 				<li><label for="detailed_radio"><input type="radio" name="dlOutput" value="detailed" id="detailed_radio" <c:if test="${dlOutput eq 'detailed'}">checked="checked"</c:if>/>Detailed</label></li>
