@@ -470,7 +470,10 @@ public final class RuntimeProperties extends Properties {
 
     /** The Constant HTTPS_PORT. */
     public static final String HTTPS_PORT ="HTTPS_PORT";
-
+    
+    /** The Constant SYNC_TOKEN_LIST_SIZE. */
+    public static final String SYNC_TOKEN_LIST_SIZE ="SYNC_TOKEN_LIST_SIZE";
+    
     //
     // Static instance of the RuntimeProperties
     //

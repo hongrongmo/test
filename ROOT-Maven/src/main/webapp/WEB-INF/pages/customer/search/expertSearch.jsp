@@ -47,6 +47,7 @@
             <stripes:form onsubmit="return searchValidation();" method="POST" action="/search/submit.url" name="quicksearch" onreset="javascript:resetSearchForm('expertSearch')">
             <input type="hidden" name="CID" value="searchSubmit"/>
             <input type="hidden" name="resetDataBase" value="${actionBean.database}"/>
+            <input type="hidden" name="csrfSyncToken" value="${actionBean.csrfSyncToken}"/>
             <input type="hidden" name="searchtype" value="Expert"/>
 
             <%-- ******************************************************** --%>

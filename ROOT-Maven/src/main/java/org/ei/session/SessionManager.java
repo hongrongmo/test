@@ -555,15 +555,18 @@ public class SessionManager {
 	            usersession.setSessionID(sessionidObj);
 	            // Write new EISESSION cookie to response
 	            writeSessionCookie(sessionidObj);
+	            
+	            if (session.isNew()) {
+	            	handleCSRFSyncTokenUpdate(usersession);
+	                log4j.info("New session created!  Incrementing session counter...");
+	                IPBlocker.getInstance().increment(HttpRequestUtil.getIP(request), IPBlocker.COUNTER.SESSION);
+	            }
+	            
 	            // Update into local container session
 	            session.setAttribute(usersession.getSessionID().getID(), usersession);
 	            // Update database
 	            // sessionBroker.updateSession(usersession);
-
-	            if (session.isNew()) {
-	                log4j.info("New session created!  Incrementing session counter...");
-	                IPBlocker.getInstance().increment(HttpRequestUtil.getIP(request), IPBlocker.COUNTER.SESSION);
-	            }
+	           
         	}
         } else {
             log4j.warn("NO new session created due to SYSTEM_PT parameter!");
@@ -724,5 +727,11 @@ public class SessionManager {
         }
 
     }
+    
+    private void handleCSRFSyncTokenUpdate(UserSession userSession){
+    	UserPreferences userprefs = userSession.getUser().getUserPreferences();
+		if(userprefs == null || !userprefs.isPreventCSRFEnabled()) return;
+		userSession.getFifoQueue().clearAll();
+	}
 
 }

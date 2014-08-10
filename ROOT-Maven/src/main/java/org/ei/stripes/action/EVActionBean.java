@@ -31,6 +31,8 @@ import org.ei.config.EVProperties;
 import org.ei.config.RuntimeProperties;
 import org.ei.controller.logging.LogEntry;
 import org.ei.domain.personalization.IEVWebUser;
+import org.ei.exception.SessionException;
+import org.ei.session.UserPreferences;
 import org.ei.session.UserSession;
 import org.ei.stripes.EVActionBeanContext;
 import org.ei.stripes.util.HttpRequestUtil;
@@ -68,6 +70,8 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
 
 	private boolean showLoginBox = true;
 	private StopWatch requeststopwatch= null;
+	
+	private String csrfSyncToken = null;
 
     @Validate(mask="\\d*")
 	protected String errorCode = "";
@@ -576,6 +580,26 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
 	public void setErrorCode(String errorCode) {
 		this.errorCode = errorCode;
 	}
+	public String getCsrfSyncToken() throws SessionException {
+		
+		UserSession userSession = context.getUserSession();
+    	if(userSession == null){
+    		return null;
+    	}
+    	UserPreferences userprefs = userSession.getUser().getUserPreferences();
+		if(userprefs == null || !userprefs.isPreventCSRFEnabled()) return null;
+		boolean isSessionUpdateNeeded = false;
+		if(userSession.getFifoQueue().isEmpty()){
+			isSessionUpdateNeeded = true;
+		}
+		String newToken = userSession.getFifoQueue().getLastElement();
+    	if(isSessionUpdateNeeded)context.updateUserSession(userSession);
+		
+		return newToken;
+	}
+	public void setCsrfSyncToken(String csrfSyncToken) {
+		this.csrfSyncToken = csrfSyncToken;
+	}
 	/**
 	 * Create a Web Event to be recorded on page load and add it to the list in the request
 	 * @param cat - Category
@@ -625,4 +649,28 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
 
     	context.getRequest().setAttribute(WebAnalyticsEventProperties.WEB_EVENT_REQUEST_NAME, eventList);
     }
+    
+    protected boolean isCSRFPrevRequired(String token) throws SessionException{
+    	boolean preventIt = false;
+    	UserSession usersession = context.getUserSession();
+    	if(usersession != null || usersession.getUser() != null || usersession.getUser().getUserPreferences() != null){
+        	UserPreferences userprefs = usersession.getUser().getUserPreferences();
+   		 	if(userprefs.isPreventCSRFEnabled()){
+   		 		if(token == null || token.isEmpty()){
+   		 			preventIt = true;
+   		 		}else{
+   		 			if(usersession.getFifoQueue().isMatchFound(token)){
+   		 				usersession.getFifoQueue().createNewToken();
+   		 				context.updateUserSession(usersession);
+   		 				preventIt = false;
+   		 			}else{
+   		 				preventIt = true;
+   		 			}
+   		 		}
+   		 	}
+		 }
+    	return preventIt;
+    }
+    
+    
 }
