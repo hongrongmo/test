@@ -340,21 +340,31 @@ public class SearchDisplayAction extends BaseSearchAction implements ValidationE
         return idatabase;
     }
 
+    
     /**
      * Search submit
      *
      * @return Resolution
+     * @throws SessionException 
+     * @throws InfrastructureException 
+     * @throws Exception 
      * @throws ServletException
      * @throws HistoryException
      * @throws IOException
      * @throws SearchException
      */
     @HandlesEvent("submit")
-    public Resolution validate() throws InfrastructureException {
+    public Resolution validate() throws InfrastructureException, SessionException {
 
-        HttpServletRequest request = context.getRequest();
+    	HttpServletRequest request = context.getRequest();
         UserSession usersession = context.getUserSession();
         Query queryObject = null;
+        
+        if(isCSRFPrevRequired(request.getParameter("csrfSyncToken"))){
+ 			context.getValidationErrors().add("validationError", new LocalizableError("org.ei.stripes.action.search.SearchDisplayAction.csrfattackerror"));
+ 			return handleValidationErrors(context.getValidationErrors());
+ 		}
+   		 
 
         //
         // Stripes will remove any empty text values from the form submission
@@ -1133,7 +1143,7 @@ public class SearchDisplayAction extends BaseSearchAction implements ValidationE
      * @see net.sourceforge.stripes.validation.ValidationErrorHandler#handleValidationErrors(net.sourceforge.stripes.validation.ValidationErrors)
      */
     @Override
-    public Resolution handleValidationErrors(ValidationErrors errors) throws Exception {
+    public Resolution handleValidationErrors(ValidationErrors errors) throws InfrastructureException, SessionException  {
         if (errors != null) {
             preprocess();
             if ("Quick".equals(this.searchtype)) {
