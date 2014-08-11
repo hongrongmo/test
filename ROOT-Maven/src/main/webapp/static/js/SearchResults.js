@@ -608,22 +608,22 @@ $(document).ready(function() {
 	/**
 	 * Handle the download link
 	 */
-	$("#downloadlink").click(function (e) {
-		e.preventDefault();
-		var form = $("#resultsform");
-		var displayformat='citation';
-
-		var downloadurl = "/delivery/download/display.url?database="+form.find("input[name='database']").val()+
-			"&displayformat="+displayformat+
-			"&allselected=true";
-		if(_gaq){
-			GALIBRARY.createWebEventWithLabel('Delivery Options', 'Download','');
-		}
-		var new_window = window.open(downloadurl,'NewWindow','status=yes,resizable,scrollbars=no,width=600,height=600');
-		new_window.focus();
-
-		return false;
-	});
+//	$("#downloadlink").click(function (e) {
+//		e.preventDefault();
+//		var form = $("#resultsform");
+//		var displayformat='citation';
+//
+//		var downloadurl = "/delivery/download/display.url?database="+form.find("input[name='database']").val()+
+//			"&displayformat="+displayformat+
+//			"&allselected=true";
+//		if(_gaq){
+//			GALIBRARY.createWebEventWithLabel('Delivery Options', 'Download','');
+//		}
+//		var new_window = window.open(downloadurl,'NewWindow','status=yes,resizable,scrollbars=no,width=600,height=600');
+//		new_window.focus();
+//
+//		return false;
+//	});
 
 	/**
 	 * Handle the print link
@@ -890,14 +890,14 @@ function handleAbstractPreview(event) {
 	var linktext = jQuery.trim(link.text());
 	var previewtextval = jQuery.trim(previewtext.text());
 	var absLink = $("#abslink_" + num).attr("href");
-	var absTitle = $("#abslink_" + num).attr("title"); 
+	var absTitle = $("#abslink_" + num).attr("title");
 	var highlight = $(".hit").css("color");
 
 	if (previewtextval == "") {
 		var previewurl = link.attr("href");
 		var physicalquery = $("#physicalquery").text();
 		previewurl += "&query=" + physicalquery;
-		
+
 		if(highlightV2){
 			previewurl += "&partial=true";
 		}
