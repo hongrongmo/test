@@ -1776,6 +1776,8 @@ function clearDropdown(selectedDbMask, searchform)
 
 }
 
+  var swapCodes = new Array(8211, 8212, 8216, 8217, 8220, 8221);
+  var swapStrings = new Array("-", "-", "'", "'", "\"", "\"");
 
 /*********************************************************
  * Validate the search form before submit
@@ -1810,6 +1812,14 @@ function searchValidation()
     		if(allEmpty != false){
     			allEmpty = false;
     		}
+    		var textNodeValue = $( this ).val();
+            for (var j = 0; j < swapCodes.length; j++) {
+                var swapper = new RegExp("\\u" + swapCodes[j].toString(16), "g");
+                textNodeValue = textNodeValue.replace(swapper, swapStrings[j]);
+            }
+            
+            $( this ).val(textNodeValue);
+
     	}
     });
 
@@ -1872,7 +1882,6 @@ function searchValidation()
             return false;
         }
     }
-
 
     return true;
 }

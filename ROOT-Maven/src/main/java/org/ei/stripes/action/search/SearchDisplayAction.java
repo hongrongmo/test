@@ -23,8 +23,12 @@ import net.sourceforge.stripes.action.ForwardResolution;
 import net.sourceforge.stripes.action.HandlesEvent;
 import net.sourceforge.stripes.action.RedirectResolution;
 import net.sourceforge.stripes.action.Resolution;
+import net.sourceforge.stripes.action.StrictBinding;
 import net.sourceforge.stripes.action.UrlBinding;
 import net.sourceforge.stripes.validation.LocalizableError;
+import net.sourceforge.stripes.validation.Validate;
+import net.sourceforge.stripes.validation.ValidationErrorHandler;
+import net.sourceforge.stripes.validation.ValidationErrors;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.validator.GenericValidator;
@@ -78,7 +82,8 @@ import org.xml.sax.SAXException;
  *
  */
 @UrlBinding("/search/{$event}.url")
-public class SearchDisplayAction extends BaseSearchAction { // implements
+@StrictBinding
+public class SearchDisplayAction extends BaseSearchAction implements ValidationErrorHandler { // implements
                                                             // IBizBean {
 
     private final static Logger log4j = Logger.getLogger(SearchDisplayAction.class);
@@ -125,7 +130,6 @@ public class SearchDisplayAction extends BaseSearchAction { // implements
     protected String hisiderr;
     protected String searchHisErr;
 
-    private String searchtype;
     private String swReferrer = "";
     protected GoogleWebAnalyticsEvent webEvent = new GoogleWebAnalyticsEvent();
 
@@ -165,7 +169,6 @@ public class SearchDisplayAction extends BaseSearchAction { // implements
         // TODO change this!
         String[] cartridgearr = context.getUserSession().getUser().getCartridge();
         stringYear = SearchForm.getClientStartYears(context.getUserSession().getUser().getCartridgeString(), cartridgearr);
-
         //
         // First populate form from Fence values
         //
@@ -337,22 +340,31 @@ public class SearchDisplayAction extends BaseSearchAction { // implements
         return idatabase;
     }
 
+    
     /**
      * Search submit
      *
      * @return Resolution
+     * @throws SessionException 
+     * @throws InfrastructureException 
+     * @throws Exception 
      * @throws ServletException
      * @throws HistoryException
      * @throws IOException
      * @throws SearchException
      */
     @HandlesEvent("submit")
-    @DontValidate
-    public Resolution validate() throws InfrastructureException {
+    public Resolution validate() throws InfrastructureException, SessionException {
 
-        HttpServletRequest request = context.getRequest();
+    	HttpServletRequest request = context.getRequest();
         UserSession usersession = context.getUserSession();
         Query queryObject = null;
+        
+        if(isCSRFPrevRequired(request.getParameter("csrfSyncToken"))){
+ 			context.getValidationErrors().add("validationError", new LocalizableError("org.ei.stripes.action.search.SearchDisplayAction.csrfattackerror"));
+ 			return handleValidationErrors(context.getValidationErrors());
+ 		}
+   		 
 
         //
         // Stripes will remove any empty text values from the form submission
@@ -467,7 +479,6 @@ public class SearchDisplayAction extends BaseSearchAction { // implements
      * @throws SearchException
      */
     @HandlesEvent("widgetSubmit")
-    @DontValidate
     public Resolution widgetSearchSubmit() throws InfrastructureException {
 
         HttpServletRequest request = context.getRequest();
@@ -632,7 +643,6 @@ public class SearchDisplayAction extends BaseSearchAction { // implements
      * @throws IOException
      */
     @HandlesEvent("quick")
-    @DontValidate
     public Resolution quicksearch() throws InfrastructureException {
         setRoom(ROOM.search);
 
@@ -681,7 +691,10 @@ public class SearchDisplayAction extends BaseSearchAction { // implements
 
         // Get year options
         startyearopts = SearchForm.getYears(db, startYear, stringYear, "startYear");
-        endyearopts = SearchForm.getYears(db, Integer.toString(SearchForm.calEndYear(db)), stringYear, "endYear");
+        if (GenericValidator.isBlankOrNull(this.endYear)) {
+            this.endYear = Integer.toString(SearchForm.calEndYear(db));
+        }
+        endyearopts = SearchForm.getYears(db, this.endYear, stringYear, "endYear");
 
         // TMH - change per Product management! Autostem fence applies ONLY to
         // quick search!
@@ -722,7 +735,10 @@ public class SearchDisplayAction extends BaseSearchAction { // implements
 
         // Get year options
         startyearopts = SearchForm.getYears(db, startYear, stringYear, "startYear");
-        endyearopts = SearchForm.getYears(db, Integer.toString(SearchForm.calEndYear(db)), stringYear, "endYear");
+        if (GenericValidator.isBlankOrNull(this.endYear)) {
+            this.endYear = Integer.toString(SearchForm.calEndYear(db));
+        }
+        endyearopts = SearchForm.getYears(db, this.endYear, stringYear, "endYear");
 
         // TMH - change per Product management! Autostem fence applies ONLY to
         // quick search!
@@ -958,14 +974,6 @@ public class SearchDisplayAction extends BaseSearchAction { // implements
     //
     //
 
-    public String getSearchtype() {
-        return searchtype;
-    }
-
-    public void setSearchtype(String searchtype) {
-        this.searchtype = searchtype;
-    }
-
     public String getHistorybackurl() throws UnsupportedEncodingException {
         String url = URLEncoder.encode("/search/" + context.getEventName() + ".url?" + "database=" + database
             + (GenericValidator.isBlankOrNull(searchid) ? "" : "&searchid=" + searchid), "UTF-8");
@@ -1129,6 +1137,24 @@ public class SearchDisplayAction extends BaseSearchAction { // implements
 
     public void setSwReferrer(String swReferrer) {
         this.swReferrer = swReferrer;
+    }
+
+    /* (non-Javadoc)
+     * @see net.sourceforge.stripes.validation.ValidationErrorHandler#handleValidationErrors(net.sourceforge.stripes.validation.ValidationErrors)
+     */
+    @Override
+    public Resolution handleValidationErrors(ValidationErrors errors) throws InfrastructureException, SessionException  {
+        if (errors != null) {
+            preprocess();
+            if ("Quick".equals(this.searchtype)) {
+                return quicksearch();
+            } else if ("Expert".equals(this.searchtype)) {
+                return expertsearch();
+            } else {
+                return quicksearch();
+            }
+        }
+        return null;
     }
 
 }

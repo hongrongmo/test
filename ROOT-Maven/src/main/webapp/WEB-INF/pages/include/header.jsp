@@ -4,7 +4,7 @@
 <%-- HEADER --%>
 <div id="header">
 	<div id="logoEV" aria-label="Engineering Village" role="banner">
-		<stripesext:link protocol="http" href="/home.url" title="Engineering Village - The information discovery platform of choice for the engineering community" ><img alt="Engineering Village - The information discovery platform of choice for the engineering community" src="/static/images/EV-logo.gif"/></stripesext:link>
+		<a href="/home.url" title="Engineering Village - The information discovery platform of choice for the engineering community" ><img alt="Engineering Village - The information discovery platform of choice for the engineering community" src="/static/images/EV-logo.gif"/></a>
 	</div>
 
 
@@ -35,8 +35,8 @@
 <c:set var="userprefs" value="${actionBean.context.userSession.user.userPreferences}"/>
 
 <ul title="top level navigation" class="nav main" style="z-index:300;">
-	<li><stripesext:link title="Search Engineering Village" href="${searchlink}" class="${actionBean.roomSearch ? 'selected' : ''}" protocol="http">Search</stripesext:link></li>
-	<li><stripesext:link protocol="http" title="Selected Records - View your selected records"	href="/selected/citation.url?CID=citationSelectedSet&DATABASEID=${actionBean.database}&searchtype=TagSearch" class="${actionBean.roomSelectedRecords ? 'selected' : ''}">Selected records</stripesext:link></li>
+	<li><a title="Search Engineering Village" href="${searchlink}" class="${actionBean.roomSearch ? 'selected' : ''}">Search</a></li>
+	<li><a title="Selected Records - View your selected records"	href="/selected/citation.url?CID=citationSelectedSet&DATABASEID=${actionBean.database}&searchtype=TagSearch" class="${actionBean.roomSelectedRecords ? 'selected' : ''}">Selected records</a></li>
 
 	<c:choose>
 	<c:when test="${actionBean.context.userSession.user.individuallyAuthenticated}">
@@ -55,11 +55,11 @@
 		</li>
 	</c:when>
 	<c:otherwise>
-		<li<c:if test="${not userprefs.tag and not (userprefs.bulletin and userprefs.bulletinEnt)}"> class="last"</c:if>><stripesext:link protocol="http" title="Set your personal settings" href="/customer/settings.url?database=${actionBean.database}" class="${actionBean.roomMySettings ? 'selected' : ''}">Settings</stripesext:link></li>
+		<li<c:if test="${not userprefs.tag and not (userprefs.bulletin and userprefs.bulletinEnt)}"> class="last"</c:if>><a title="Set your personal settings" href="/customer/settings.url?database=${actionBean.database}" class="${actionBean.roomMySettings ? 'selected' : ''}">Settings</a></li>
 	</c:otherwise>
 	</c:choose>
-	<c:if test="${userprefs.tag}"><li<c:if test="${not (userprefs.bulletin and userprefs.bulletinEnt)}"> class="last"</c:if>><stripesext:link protocol="http" title="Tags & Groups - View/Edit your tags and groups" href="/tagsgroups/display.url?searchtype=TagSearch" class="${actionBean.roomTagsGroups ? 'selected' : ''}">Tags &amp; Groups</stripesext:link></li></c:if>
-	<c:if test="${userprefs.bulletin and userprefs.bulletinEnt}"><li class="last"><stripesext:link protocol="http" title="Bulletins - View EnCompass bulletins" href="/bulletins/display.url" class="${actionBean.roomBulletins ? 'selected' : ''}">Bulletins</stripesext:link></li></c:if>
+	<c:if test="${userprefs.tag}"><li<c:if test="${not (userprefs.bulletin and userprefs.bulletinEnt)}"> class="last"</c:if>><a title="Tags & Groups - View/Edit your tags and groups" href="/tagsgroups/display.url?searchtype=TagSearch" class="${actionBean.roomTagsGroups ? 'selected' : ''}">Tags &amp; Groups</a></li></c:if>
+	<c:if test="${userprefs.bulletin and userprefs.bulletinEnt}"><li class="last"><a title="Bulletins - View EnCompass bulletins" href="/bulletins/display.url" class="${actionBean.roomBulletins ? 'selected' : ''}">Bulletins</a></li></c:if>
 </ul>
 
 <ul class="nav misc" id="helpMenuUL" style="padding-top:0px;display:none;">
@@ -98,7 +98,7 @@
 		</ul>
 	</li>
 	<c:if test="${userprefs.reference}">
-		<li class="nodivider"><stripesext:link protocol="http" title="Ask an expert - Get help from an Engineer, Product Specialist, or Librarian" href="/askanexpert/display.url">Ask an expert</stripesext:link></li>
+		<li class="nodivider"><a title="Ask an expert - Get help from an Engineer, Product Specialist, or Librarian" href="/askanexpert/display.url">Ask an expert</a></li>
 
 	</c:if>
 	<c:choose>

@@ -21,6 +21,8 @@ import org.ei.biz.security.IAccessControl;
 import org.ei.biz.security.NoAuthAccessControl;
 import org.ei.config.EVProperties;
 import org.ei.config.RuntimeProperties;
+import org.ei.controller.IPBlocker;
+import org.ei.controller.IPBlocker.COUNTER;
 import org.ei.domain.personalization.IEVWebUser;
 import org.ei.domain.personalization.UserPrefs;
 import org.ei.exception.SessionException;
@@ -33,6 +35,7 @@ import org.ei.session.SessionManager;
 import org.ei.session.UserBroker;
 import org.ei.session.UserSession;
 import org.ei.stripes.action.lindahall.LindaHallAuthAction;
+import org.ei.stripes.util.HttpRequestUtil;
 
 import com.elsevier.webservices.schemas.csas.constants.types.v7.AllowedRegistrationType;
 
@@ -73,7 +76,7 @@ public class LoginAction extends CARSActionBean {
         UserSession usersession = context.getUserSession();
         SessionManager sessionmanager = new SessionManager(context.getRequest(), context.getResponse());
         CARSResponse carsresponse = null; //context.getCarsResponse();
-        
+
         // Call CARS with current authentication info.  Remember that this
         // can be ID/PW, self-manra, path choice, etc.
         try {
@@ -90,7 +93,13 @@ public class LoginAction extends CARSActionBean {
         // regular IP range and does NOT have remote access!
         //
         if (CARSResponseStatus.STATUS_CODE.AUTHENTICATION_ERROR.equals(carsresponse.getResponseStatus().getStatuscode())) {
-            if (AllowedRegistrationType.NONE.toString().equals(usersession.getUser().getAllowedRegType())) {
+        	log4j.warn("Authentication Error response from CARS");
+        	log4j.warn(carsresponse.toString());
+        	if(usersession.getUser().isCustomer()){
+        		String ipaddress = HttpRequestUtil.getIP(context.getRequest());
+            	IPBlocker.getInstance().increment(ipaddress, COUNTER.AUTHFAIL);
+        	}
+        	if (AllowedRegistrationType.NONE.toString().equals(usersession.getUser().getAllowedRegType())) {
                 // Process legacy credentials.  This is only needed while we are migrating users!
                 processLegacyInstitutionCredentials();
             }
@@ -122,6 +131,7 @@ public class LoginAction extends CARSActionBean {
         // Redirects can happen for 3rd party auth systems
         if(null != carsresponse.getPageType() && carsresponse.getPageType().equals(PageType.REDIRECT)) {
             log4j.info("Processing CARS redirect, shib URL: '" + carsresponse.getShibbolethURL() + ", redirect URL: '" + carsresponse.getRedirectURL() + "'");
+            log4j.info(carsresponse.toString());
             if (StringUtils.isNotBlank(carsresponse.getShibbolethURL())){
                 return new RedirectResolution(carsresponse.getShibbolethURL());
             } else if (StringUtils.isNotBlank(carsresponse.getRedirectURL())){
@@ -140,26 +150,46 @@ public class LoginAction extends CARSActionBean {
             // CARS returns plain CARS_LOGIN page when user attempts to login without remote access.
             // We must put user on FULL login page and add a message
             if (CARSResponseStatus.ERROR_TYPE.NO_ACTIVE_PATHS.equals(carsresponse.getResponseStatus().getErrortype())) {
+                log4j.warn("NO_ACTIVE_PATHS error has occurred!");
+                log4j.warn(carsresponse.toString());
                 context.getValidationErrors().addGlobalError(OUTSIDE_IP_ERROR);
             } else if (CARSResponseStatus.ERROR_TYPE.INVALID.equals(carsresponse.getResponseStatus().getErrortype())) {
+                log4j.warn("INVALID error type returned from CARS!");
+                log4j.warn(carsresponse.toString());
                 if ("TICURL_QUERY_STRING".equals(carsresponse.getResponseStatus().getErrorfieldname()) ||
                     "TICURL_MD5_HASH".equals(carsresponse.getResponseStatus().getErrorfieldname())) {
                     context.getValidationErrors().addGlobalError(TICURL_INVALID_ERROR);
                 } else {
                     context.getValidationErrors().addGlobalError(OTHER_ERROR);
+                    // Clear cookies for this case
+                    LogoutAction.clearCarsCookies(context.getResponse(), null);
                 }
             } else if (CARSResponseStatus.ERROR_TYPE.TICURL_INSTITUTION_NOT_FOUND.equals(carsresponse.getResponseStatus().getErrortype())) {
+                log4j.warn("TICURL_INSTITUTION_NOT_FOUND Error response from CARS");
+                log4j.warn(carsresponse.toString());
                 context.getValidationErrors().addGlobalError(TICURL_INVALID_ERROR);
             } else if (CARSResponseStatus.ERROR_TYPE.LOGIN_NO_MATCH.equals(carsresponse.getResponseStatus().getErrortype())) {
+                log4j.warn("LOGIN_NO_MATCH Error response from CARS");
+                log4j.warn(carsresponse.toString());
                 context.getValidationErrors().addGlobalError(INVALID_UNPW_ERROR);
             } else if (CARSResponseStatus.ERROR_TYPE.CRED_NO_MATCH.equals(carsresponse.getResponseStatus().getErrortype())) {
+                log4j.warn("INVALID_UNPW_ERROR Error response from CARS");
+                log4j.warn(carsresponse.toString());
                 context.getValidationErrors().addGlobalError(INVALID_UNPW_ERROR);
             } else if (CARSResponseStatus.ERROR_TYPE.LOGIN_NO_MATCH.equals(carsresponse.getResponseStatus().getErrortype())) {
+                log4j.warn("INVALID_UNPW_ERROR Error response from CARS");
+                log4j.warn(carsresponse.toString());
                 context.getValidationErrors().addGlobalError(INVALID_UNPW_ERROR);
             } else if (CARSResponseStatus.ERROR_TYPE.SHIB_INSTITUTION_NOT_FOUND.equals(carsresponse.getResponseStatus().getErrortype())) {
+                log4j.warn("SHIB_INSTITUTION_NOT_FOUND Error response from CARS");
+                log4j.warn(carsresponse.toString());
                 context.getValidationErrors().addGlobalError(SHIB_INSTITUTION_NOT_FOUND_ERROR);
             } else {
+                log4j.warn("Unknown Error response from CARS");
+                log4j.warn(carsresponse.toString());
                 context.getValidationErrors().addGlobalError(OTHER_ERROR);
+                // Clear cookies for this case
+                LogoutAction.clearCarsCookies(context.getResponse(), null);
             }
 
             HomeAction.createLoginFullCARSResponse(context);

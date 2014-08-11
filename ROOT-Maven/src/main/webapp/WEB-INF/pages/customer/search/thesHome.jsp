@@ -28,7 +28,7 @@
 	<div id="container">
 	<div id="searchformwrap">
 	<div id="searchformbox">
-
+<stripes:errors><div id="errormessage"><stripes:individual-error/></div></stripes:errors>
 <c:if test="${not empty actionBean.message}">
 <c:choose>
 <c:when test="${actionBean.message eq 'zero'}">
@@ -151,6 +151,7 @@
 		    <input type="hidden" name="database" value="${actionBean.database}"/>
 		    <input type="hidden" name="CID" value="thesSearchCitationFormat"/>
 		    <input type="hidden" name="searchWord1" value=""/>
+		    <input type="hidden" name="csrfSyncToken" value="${actionBean.csrfSyncToken}"/>
 		    <input type="hidden" name="thesterm" value=""/>
 			<input type="hidden" name="searchtype" value="Thesaurus"/>
 

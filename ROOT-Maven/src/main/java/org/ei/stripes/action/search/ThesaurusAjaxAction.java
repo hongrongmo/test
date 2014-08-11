@@ -8,7 +8,9 @@ import java.util.List;
 import java.util.Properties;
 
 import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
 
+import net.sourceforge.stripes.action.Before;
 import net.sourceforge.stripes.action.DontValidate;
 import net.sourceforge.stripes.action.ForwardResolution;
 import net.sourceforge.stripes.action.HandlesEvent;
@@ -22,6 +24,7 @@ import org.ei.domain.Database;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.InvalidArgumentException;
 import org.ei.exception.InfrastructureException;
+import org.ei.exception.SessionException;
 import org.ei.exception.SystemErrorCodes;
 import org.ei.stripes.action.EVActionBean;
 import org.ei.stripes.view.PageNavigation;
@@ -113,6 +116,14 @@ public class ThesaurusAjaxAction extends EVActionBean {
 			context.getRequest().getSession(false).setAttribute(THES_PATH_SESSION_ID, path);
 		}
 		return path;
+	}
+	
+	@Before(on = { "fullrec", "termsearch", "browse" })
+	protected void preprocess() throws InfrastructureException, SessionException {
+		HttpServletRequest request = context.getRequest();
+		if(isCSRFPrevRequired(request.getParameter("csrfSyncToken"))){
+		 // to do
+		}
 	}
 
 	/**

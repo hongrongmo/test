@@ -8,6 +8,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 
 import net.sourceforge.stripes.action.After;
+import net.sourceforge.stripes.action.ForwardResolution;
+import net.sourceforge.stripes.action.RedirectResolution;
+import net.sourceforge.stripes.action.Resolution;
 import net.sourceforge.stripes.controller.LifecycleStage;
 
 import org.apache.commons.validator.GenericValidator;
@@ -17,6 +20,7 @@ import org.ei.config.JSPPathProperties;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.Query;
 import org.ei.domain.Searches;
+import org.ei.exception.ErrorXml;
 import org.ei.exception.InfrastructureException;
 import org.ei.session.UserSession;
 import org.ei.stripes.action.EVPathUrl;
@@ -29,9 +33,9 @@ import org.ei.tags.TagBubble;
 
 /**
  * This is the base class for the search results abstract/detailed page handling.
- * 
+ *
  * @author harovetm
- * 
+ *
  */
 public abstract class SearchResultsFormatAction extends SearchResultsAction implements IBizBean {
 
@@ -70,21 +74,21 @@ public abstract class SearchResultsFormatAction extends SearchResultsAction impl
         this.pageType = pageType;
     }
 
-    public String getBacktoresultsLink() throws InfrastructureException  {
-        
+    public String getBacktoresultsLink() throws InfrastructureException {
+
         if (GenericValidator.isBlankOrNull(this.searchid)) {
             log4j.warn("No search ID present!");
             return EVPathUrl.EV_HOME.value();
         }
-        
+
         Query query = Searches.getSearch(this.searchid);
         if (query == null) {
             log4j.warn("No Query object found!");
             return EVPathUrl.EV_HOME.value();
         }
-        
+
         StringBuffer backtoresults = new StringBuffer("/search/results/");
-        if (GenericValidator.isBlankOrNull(this.searchtype) || "Quick".equals(searchtype) ||  "Book".equals(searchtype) || "Easy".equals(searchtype)) {
+        if (GenericValidator.isBlankOrNull(this.searchtype) || "Quick".equals(searchtype) || "Book".equals(searchtype) || "Easy".equals(searchtype)) {
             backtoresults.append("quick.url?");
         } else if ("Expert".equals(searchtype) || "Combined".equals(searchtype)) {
             backtoresults.append("expert.url?");
@@ -97,41 +101,40 @@ public abstract class SearchResultsFormatAction extends SearchResultsAction impl
         backtoresults.append("&database=" + query.getDataBase());
         return backtoresults.toString();
     }
-    
+
     /**
      * Return the XML adapter for quick search results display! (executed from org.ei.stripes.AuthInterceptor)
-     * 
+     *
      * @throws ServletException
      */
     public void processModelXml(InputStream instream) throws InfrastructureException {
         IBizXmlAdapter adapter = new GenericAdapter();
 
-            adapter.processXml(this, instream, getXSLPath());
+        adapter.processXml(this, instream, getXSLPath());
 
-            // Only show maps (beta) under the following conditions:
-            // * HAS COMPMASK == 8192 (geobase), 2097152 (georef) or 2105344 (both)
-            // * HAS a navigator called 'geonav'
-            // * NOT in a china build!
-            if (((this.compmask & DatabaseConfig.GEO_MASK) == DatabaseConfig.GEO_MASK || (this.compmask & DatabaseConfig.GRF_MASK) == DatabaseConfig.GRF_MASK)) {
-                showmap = true;
+        // Only show maps (beta) under the following conditions:
+        // * HAS COMPMASK == 8192 (geobase), 2097152 (georef) or 2105344 (both)
+        // * HAS a navigator called 'geonav'
+        // * NOT in a china build!
+        if (((this.compmask & DatabaseConfig.GEO_MASK) == DatabaseConfig.GEO_MASK || (this.compmask & DatabaseConfig.GRF_MASK) == DatabaseConfig.GRF_MASK)) {
+            showmap = true;
+        }
+
+        // Attempt to set the highlighting from the user's session
+        UserSession usersession = context.getUserSession();
+        if (usersession == null) {
+            log4j.warn("Unable to set highlighting preference - UserSession object not available!");
+        } else {
+            String hl = usersession.getProperty(UserSession.HIGHLIGHT_STATE);
+            // @see UpdaetUsersSession.java action class. The highlight session variable
+            // is ONLY put into session when it's OFF.
+            if (!GenericValidator.isBlankOrNull(hl)) {
+                ckhighlighting = false;
             }
+        }
 
-            // Attempt to set the highlighting from the user's session
-            UserSession usersession = context.getUserSession();
-            if (usersession == null) {
-                log4j.warn("Unable to set highlighting preference - UserSession object not available!");
-            } else {
-                String hl = usersession.getProperty(UserSession.HIGHLIGHT_STATE);
-                // @see UpdaetUsersSession.java action class. The highlight session variable
-                // is ONLY put into session when it's OFF.
-                if (!GenericValidator.isBlankOrNull(hl)) {
-                    ckhighlighting = false;
-                }
-            }
+        setTextzones(usersession.getUserTextZones());
 
-            setTextzones(usersession.getUserTextZones());
-
-      
     }
 
     public String getXMLPath() {
@@ -149,6 +152,28 @@ public abstract class SearchResultsFormatAction extends SearchResultsAction impl
         } else {
             return EVProperties.getJSPPath(JSPPathProperties.ABSTRACT_DETAILED_RECORD_PATH);
         }
+    }
+
+    /*
+     * (non-Javadoc)
+     *
+     * @see org.ei.stripes.action.results.SearchResultsAction#handleException(org.ei.exception.ErrorXml)
+     */
+    @Override
+    public Resolution handleException(ErrorXml errorXml) {
+
+        if ("quickSearch".equals(pageType)) {
+            return new RedirectResolution("/search/quick.url?CID=quickSearch&searchID=" + getSearchid() + "&database=" + getDatabase()
+                + "&error=validationError&errorCode=" + errorXml.getErrorCode());
+        } else if ("expertSearch".equals(pageType)) {
+            return new RedirectResolution("/search/expert.url?CID=quickSearch&searchID=" + getSearchid() + "&database=" + getDatabase()
+                + "&error=validationError&errorCode=" + errorXml.getErrorCode());
+        } else {
+            log4j.warn("Unable to handle ErrorXml object, code = " + errorXml.getErrorCode() + "; message = '" + errorXml.getErrorMessage() + "'");
+            context.getRequest().setAttribute("errorXml", errorXml);
+            return new ForwardResolution("/WEB-INF/pages/world/systemerror.jsp");
+        }
+
     }
 
     protected boolean isSearchTypeQuickSearch() {

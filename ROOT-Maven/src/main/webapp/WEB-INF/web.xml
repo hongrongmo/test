@@ -89,7 +89,7 @@
 		<init-param>
 			<param-name>Interceptor.Classes</param-name>
 			<param-value>
-                org.ei.stripes.SessionBuilderInterceptor,org.ei.stripes.LegacyRedirectInterceptor,org.ei.stripes.AuthInterceptor, org.ei.stripes.DataRequestInterceptor, org.ei.stripes.ErrorMessageInterceptor
+                org.ei.stripes.XssInterceptor,org.ei.stripes.SessionBuilderInterceptor,org.ei.stripes.LegacyRedirectInterceptor,org.ei.stripes.AuthInterceptor, org.ei.stripes.DataRequestInterceptor, org.ei.stripes.ErrorMessageInterceptor
             </param-value>
 		</init-param>
 
