@@ -194,7 +194,7 @@ public class SessionManager {
         // NOTE: we do NOT update session otherwise because we need to avoid creating
         //       session info on every request!
         if (user.isCustomer() || (carsresponse != null && carsresponse.isPathChoice())) {
-            userSession = updateUserSession(userSession, false);
+            userSession = updateUserSession(userSession, false, true);
         }else{
         	String ipaddress = HttpRequestUtil.getIP(request);
         	IPBlocker.getInstance().increment(ipaddress, COUNTER.AUTHFAIL);
