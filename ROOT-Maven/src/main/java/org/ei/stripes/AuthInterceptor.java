@@ -23,6 +23,8 @@ import org.ei.biz.security.WorldAccessControl;
 import org.ei.config.EVProperties;
 import org.ei.config.RuntimeProperties;
 import org.ei.controller.CookieHandler;
+import org.ei.controller.IPBlocker;
+import org.ei.controller.IPBlocker.COUNTER;
 import org.ei.service.ANEServiceConstants;
 import org.ei.service.cars.CARSConstants;
 import org.ei.service.cars.CARSStringConstants;
@@ -42,6 +44,7 @@ import org.ei.stripes.action.personalaccount.CARSActionBean;
 import org.ei.stripes.action.personalaccount.IPersonalLogin;
 import org.ei.stripes.action.personalaccount.LoginAction;
 import org.ei.stripes.exception.EVExceptionHandler;
+import org.ei.stripes.util.HttpRequestUtil;
 import org.ei.stripes.view.CustomizedLogo;
 
 @Intercepts(LifecycleStage.BindingAndValidation)
@@ -105,6 +108,12 @@ public class AuthInterceptor implements Interceptor {
                 log4j.error("No CARS response object returned!");
                 return SystemMessage.SYSTEM_ERROR_RESOLUTION;
             }
+        }
+        
+        
+        if(!userSession.getUser().isCustomer()){
+        	String ipaddress = HttpRequestUtil.getIP(request);
+        	IPBlocker.getInstance().increment(ipaddress, COUNTER.NONCUSTOMER_REQUEST);
         }
 
         // *****************************************************

@@ -86,7 +86,7 @@ bottom: -1px;
 			Chimica starts in 1970.</p>
 	</c:if>
 
-	<c:if test="${fn:contains(dbid,'all') or fn:contains(dbid,'cpx')}">
+	<c:if test="${fn:contains(dbid,'all') or fn:contains(dbid,'cpx') or fn:contains(dbid,'zbf')}">
 		<p class="databasename">Compendex</p>
 		<p class="databasedesc">Compendex is the most comprehensive
 			bibliographic database of scientific and technical engineering
@@ -159,7 +159,7 @@ bottom: -1px;
 			reports and theses.</p>
 	</c:if>
 
-	<c:if test="${fn:contains(dbid,'all') or fn:contains(dbid,'ins')}">
+	<c:if test="${fn:contains(dbid,'all') or fn:contains(dbid,'ins') or fn:contains(dbid,'ibs')}">
 		<p class="databasename">Inspec</p>
 		<p class="databasedesc">Inspec includes bibliographic citations
 			and indexed abstracts from publications in the fields of physics,

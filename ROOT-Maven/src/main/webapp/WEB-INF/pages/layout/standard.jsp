@@ -56,38 +56,6 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
 <c:set var="usersession" value="${actionBean.context.userSession}"/>
 <c:if test="${not empty usersession and not empty usersession.user}">
 
-<!--
-    User information: ${usersession.user.firstName}  ${usersession.user.lastName}
-    <c:if test="${null != actionBean.context.existingSession}">
-        Session ID: ${actionBean.context.existingSession.id}
-    </c:if>
-    =========================================================================================
-    Username: ${usersession.user.username}
-    Email: ${usersession.user.email}
-    Webuserid: ${usersession.user.webUserId}
-    Profile ID: ${usersession.user.profileId}
-
-    Access: ${usersession.user.userAccess}
-    Allowed Reg Type: ${usersession.user.allowedRegType}
-    Cred type: ${usersession.user.credType}
-    Anonymity: ${usersession.user.userAnonymity}
-
-    IP Address: ${usersession.user.ipAddress}
-    Start Page: ${usersession.user.startPage}
-    Default DB: ${usersession.user.defaultDB}
-    Customer ID: ${usersession.user.customerID}
-    Cartridge: ${usersession.user.cartridgeString}
-
-    ACCOUNT INFORMATION
-    =========================================================================================
-    Account Name: ${usersession.user.account.accountName}
-    Account Number: ${usersession.user.account.accountNumber}
-    Account ID: ${usersession.user.account.accountId}
-
-    Dept name: ${usersession.user.account.departmentName}
-    Dept ID: ${usersession.user.account.departmentId}
- -->
-
  </c:if>
 </stripes:layout-component>
 

@@ -11,12 +11,13 @@ import javax.servlet.http.HttpServletRequest;
 import net.sourceforge.stripes.action.After;
 import net.sourceforge.stripes.action.Before;
 import net.sourceforge.stripes.action.DefaultHandler;
-import net.sourceforge.stripes.action.DontValidate;
 import net.sourceforge.stripes.action.ForwardResolution;
 import net.sourceforge.stripes.action.HandlesEvent;
 import net.sourceforge.stripes.action.RedirectResolution;
 import net.sourceforge.stripes.action.Resolution;
 import net.sourceforge.stripes.action.UrlBinding;
+import net.sourceforge.stripes.validation.LocalizableError;
+import net.sourceforge.stripes.validation.ValidationErrors;
 
 import org.apache.log4j.Logger;
 import org.ei.biz.access.AccessException;
@@ -124,14 +125,21 @@ public class ThesaurusSearchAction extends SearchDisplayAction { // implements I
      *
      * @return Resolution
      * @throws InfrastructureException
+     * @throws SessionException 
      * @throws ServletException
      * @throws HistoryException
      * @throws IOException
      * @throws SearchException
      */
     @HandlesEvent("submit")
-    @DontValidate
-    public Resolution validate() throws InfrastructureException {
+    public Resolution validate() throws InfrastructureException, SessionException {
+    	
+    	HttpServletRequest request = context.getRequest();
+    	if(isCSRFPrevRequired(request.getParameter("csrfSyncToken"))){
+ 			context.getValidationErrors().add("validationError", new LocalizableError("org.ei.stripes.action.search.SearchDisplayAction.csrfattackerror"));
+ 			return handleValidationErrors(context.getValidationErrors());
+ 		}
+    	
         return super.validate();
     }
 
@@ -144,7 +152,6 @@ public class ThesaurusSearchAction extends SearchDisplayAction { // implements I
      * @throws AccessException
      */
     @DefaultHandler
-    @DontValidate
     public Resolution thesHome() throws InfrastructureException, SessionException {
         HttpServletRequest request = context.getRequest();
         setRoom(ROOM.search);
@@ -220,6 +227,17 @@ public class ThesaurusSearchAction extends SearchDisplayAction { // implements I
 
         // Display!
         return new ForwardResolution("/WEB-INF/pages/customer/search/thesHome.jsp");
+    }
+
+    /* (non-Javadoc)
+     * @see net.sourceforge.stripes.validation.ValidationErrorHandler#handleValidationErrors(net.sourceforge.stripes.validation.ValidationErrors)
+     */
+    @Override
+    public Resolution handleValidationErrors(ValidationErrors errors) throws InfrastructureException, SessionException {
+        if (errors != null) {
+            return thesHome();
+        }
+        return null;
     }
 
     //

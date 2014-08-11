@@ -449,6 +449,8 @@ $(document).ready(function() {
 	});
 
 
+	var swapCodes = new Array(8211, 8212, 8216, 8217, 8220, 8221);
+	var swapStrings = new Array("-", "-", "'", "'", "\"", "\"");
 
 	//
 	// Navigators submit
@@ -472,6 +474,15 @@ $(document).ready(function() {
 				}
 			}
 		}
+		
+		var textNodeValue = append.val();
+        for (var j = 0; j < swapCodes.length; j++) {
+            var swapper = new RegExp("\\u" + swapCodes[j].toString(16), "g");
+            textNodeValue = textNodeValue.replace(swapper, swapStrings[j]);
+        }
+        
+        append.val(textNodeValue);
+		
 		return true;
 	});
 
@@ -487,6 +498,15 @@ $(document).ready(function() {
 			alert("Please select at least one search refinement, or enter a term to run a new search.");
 			return false;
 		}
+		
+		var textNodeValue = append.val();
+        for (var j = 0; j < swapCodes.length; j++) {
+            var swapper = new RegExp("\\u" + swapCodes[j].toString(16), "g");
+            textNodeValue = textNodeValue.replace(swapper, swapStrings[j]);
+        }
+        
+        append.val(textNodeValue);
+		
 		return true;
 	});
 
@@ -935,3 +955,4 @@ function togglePreview(){
 		$(this).trigger("click");
 	});
 }
+

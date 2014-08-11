@@ -167,6 +167,8 @@ public class UserPreferences implements IUserPreferences, Serializable {
 
     public static final String FENCE_HIGHLIGHT_V1 = "HIGHLIGHT_V1";
     public static final String FENCE_HIGHLIGHT_V2 = "HIGHLIGHT_V2";
+    
+    public static final String FENCE_PREVENT_CSRF_ATTACK = "PREVENT_CSRF_ATTACK";
 
 
 
@@ -316,5 +318,10 @@ public class UserPreferences implements IUserPreferences, Serializable {
 
     public boolean isModalDialog2(){
     	return getBoolean(FENCE_ENABLE_MODAL_DIALOG_2);
+    }
+    
+    public boolean isPreventCSRFEnabled(){
+    	
+    	return getBoolean(FENCE_PREVENT_CSRF_ATTACK);
     }
 }

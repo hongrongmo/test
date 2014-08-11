@@ -29,7 +29,7 @@
     <div id="searchformwrap">
     <div id="searchformbox">
 
-        <stripes:errors field="validationError"><div id="errormessage"><stripes:individual-error/></div></stripes:errors>
+        <stripes:errors><div id="errormessage"><stripes:individual-error/></div></stripes:errors>
 
         <c:set var="searchtab" value="expertsearch" scope="request"></c:set>
         <jsp:include page="parts/searchtabs.jsp"></jsp:include>
@@ -47,6 +47,7 @@
             <stripes:form onsubmit="return searchValidation();" method="POST" action="/search/submit.url" name="quicksearch" onreset="javascript:resetSearchForm('expertSearch')">
             <input type="hidden" name="CID" value="searchSubmit"/>
             <input type="hidden" name="resetDataBase" value="${actionBean.database}"/>
+            <input type="hidden" name="csrfSyncToken" value="${actionBean.csrfSyncToken}"/>
             <input type="hidden" name="searchtype" value="Expert"/>
 
             <%-- ******************************************************** --%>
