@@ -235,7 +235,7 @@ function submitThesSearch(event, link, data) {
 	if ($("#firstslide").is(":hidden")) $("#firstslide").slideDown(600);
 
 	data = {"csrfSyncToken":$('input[name="csrfSyncToken"]').val()};
-	
+	$( "#errormessage" ).empty();
     $.ajax({
         cache: false,
         url: link,
@@ -291,8 +291,15 @@ function updateCSRFToken(){
 	var latestCSRFToken = $('#csrfTokenElement').text();
 	if(typeof latestCSRFToken != 'undefined' && latestCSRFToken != ''){
 		$('input[name="csrfSyncToken"]').val(latestCSRFToken);
+	}else{
+		var validationfailedelem = $('#validationnotpassed').text();
+		if(typeof validationfailedelem != 'undefined' && validationfailedelem != ''){
+			var d = new Date();
+			var n = d.getSeconds();
+			var h = date.getHours();
+			window.location.href = '/search/thesHome.url?database=1&errorCode=1000&tknno='+h+n+'#init';
+		}
 	}
-	
 }
 
 /*
