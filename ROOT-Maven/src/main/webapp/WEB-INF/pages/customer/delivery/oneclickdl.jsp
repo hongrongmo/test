@@ -47,7 +47,8 @@
       width: 105px;
     }
 	#oneClickLeft label  {
-      width: 150px;
+      width: 120px;
+      vertical-align:text-bottom;
     }
 
 	#oneClickTitle{
@@ -173,7 +174,7 @@
 				<div class="grayText btmTextRight">Note: Your selected records <br/>(to a maximum of 500) will be  <br/>kept until your session ends.</div>
 				<div class="saveCancel">
 
-					<input type="submit" value="Save" name="Save" id="savePrefsButton" />
+					<input type="button" value="Save" name="Save" id="savePrefsButton" />
 					<a href="#" style="padding-right:7px;" onclick="$('#downloadlink').tooltipster('destroy');">Cancel</a>
 				</div>
 			</div>
@@ -226,7 +227,7 @@ $(document).ready(function() {
 			<script language="javascript"  src="/static/js/savetodropbox.js?v=${releaseversion}"></script>
 		</c:if>
 		<script language="javascript" type="text/javascript">
-			$("#download").submit(function(event) {
+			$("#savePrefsButton").click(function(event) {
 
 				var baseaddress = $("input[name='baseaddress']").val();
 				var displaytype = $('input[name="displayformat"]:checked').val();
@@ -262,6 +263,7 @@ $(document).ready(function() {
 				}
 				// Refworks?
 				var ret = true;
+				changeOneClick(downloadLocation);
 				if (downloadLocation == "refworks") {
 					var refworksURL = "http://www.refworks.com/express/ExpressImport.asp?vendor=Engineering%20Village%202&filter=Desktop%20Biblio.%20Mgt.%20Software";
 					url = "http://" + baseaddress
@@ -274,9 +276,7 @@ $(document).ready(function() {
 						url += "&handlelist=" + handlelist;
                     if (folderid && folderid.length > 0)
                         url += "&folderid=" + folderid;
-
-					window.open(
-									refworksURL + "&url=" + escape(url),
+					window.open(refworksURL + "&url=" + escape(url),
 									"RefWorksMain",
 									"width=800,height=500,scrollbars=yes,menubar=yes,resizable=yes,directories=yes,location=yes,status=yes");
                     event.preventDefault();
@@ -287,11 +287,13 @@ $(document).ready(function() {
 				}else if(downloadLocation == "googledrive"){
 					submitGoogleDriveDL();
 					ret = false;
+				}else{
+					$("#download").submit();
+					ret = false;
 				}
 
-				$('#downloadlink').tooltipster('destroy');
 				$('#downloadlink').attr("title", "Click to change one click download preferences.");
-				changeOneClick(downloadLocation);
+				$('#downloadlink').tooltipster('destroy');
 				return ret;
 
 			});
