@@ -43,6 +43,7 @@ public class UserPrefs  {
     public static final String ATTRIBUTE_ENVIRONMENT = "Environment";
     public static final String ATTRIBUTE_DL_FORMAT = "DL_FORMAT";
     public static final String ATTRIBUTE_DL_OUTPUT = "DL_OUTPUT";
+    public static final String ATTRIBUTE_DL_LOCATION = "DL_LOCATION";
     public static final String ATTRIBUTE_RESULTS_PER_PAGE = "RESULTS_PER_PAGE";
     public static final String ATTRIBUTE_SHOW_PREVIEW = "SHOW_PREVIEW";
     public static final String ATTRIBUTE_SORT = "SORT";
@@ -55,6 +56,7 @@ public class UserPrefs  {
     private String environment;
     private String downloadformat;
     private String downloadoutput;
+    private String downloadLocation;
     private int resultsperpage;
     private boolean showpreview;
     private String sort;
@@ -88,6 +90,7 @@ public class UserPrefs  {
         this.showpreview = false;
         this.downloadoutput = UserPreferences.EVPREFS_DL_OUTPUT_DEF;
         this.downloadformat = AbstractDeliveryAction.DOWNLOAD_FORMAT_PDF;
+        this.downloadLocation = UserPreferences.EVPREFS_DL_LOC_PC;
         this.highlight = HIGHTLIGHT_COLOR;
     }
 
@@ -150,6 +153,15 @@ public class UserPrefs  {
 
     public void setDlOutput(String downloadoutput) {
         this.downloadoutput = downloadoutput;
+    }
+
+    @DynamoDBAttribute(attributeName = ATTRIBUTE_DL_LOCATION)
+    public String getDlLocation() {
+        return this.downloadLocation;
+    }
+
+    public void setDlLocation(String downloadLocation) {
+        this.downloadLocation = downloadLocation;
     }
 
     @DynamoDBAttribute(attributeName = ATTRIBUTE_RESULTS_PER_PAGE)

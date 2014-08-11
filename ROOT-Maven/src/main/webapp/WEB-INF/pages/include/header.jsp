@@ -122,9 +122,28 @@
 
 </div>
 <div id="prefsSaved" style="display:none;text-align:left;"><img src="/static/images/ev_checkmark.png" style="padding-right:5px;width:20px;"/>Preferences Saved!</div>
+<c:choose>
+	<c:when test="${actionBean.context.userSession.user.individuallyAuthenticated}">
+	<div id="dlprefsSaved" style="display:none;text-align:left;"><img src="/static/images/ev_checkmark.png" style="padding-right:5px;width:20px;"/>Your download settings for this session have been saved. To keep these settings, change your preference in Settings.</div>
+	</c:when>
+	<c:otherwise>
+	<div id="dlprefsSaved" style="display:none;text-align:left;"><img src="/static/images/ev_checkmark.png" style="padding-right:5px;width:20px;"/>Your download settings for this session have been saved. To keep these settings, login or register and sav your preferences in Settings.</div>
+	</c:otherwise>
+</c:choose>
+
+
 <div id="prefsNotSaved" style="display:none;text-align:left;"><img src="/static/images/No_results_found.png" style="padding-right:5px;width:20px;"/>Preferences Could Not Be Saved!</div>
 
   <script>
+  var savedDLPrefs;
+  <c:if test="${actionBean.context.userSession.user.individuallyAuthenticated}">
+  	savedDLPrefs = {
+  			location:'${actionBean.context.userSession.user.userPrefs.dlLocation}',
+  			format:'${actionBean.context.userSession.user.userPrefs.dlFormat}',
+  			displaytype:'${actionBean.context.userSession.user.userPrefs.dlOutput}',
+  			baseaddress:'${actionBean.baseaddress}'
+  	};
+  </c:if>
   $(function() {
 	  if($("#settingMenu").length > 0){
 		$("#settingMenu").menu({position:{my:'right+25 top+20'}, icons: { submenu: "ui-icon-triangle-1-s" }});
@@ -144,7 +163,7 @@
 
    $(".prefsOverlay").click(function(){
 	   	GALIBRARY.createWebEventWithLabel('Dialog Open', 'Edit Preferences', 'Settings Dropdown');
-		TINY.box.show({url:'/customer/userprefs.url',clickmaskclose:false,width:400,height:390,close:true,opacity:20,topsplit:3});
+		TINY.box.show({url:'/customer/userprefs.url',clickmaskclose:false,width:400,height:475,close:true,opacity:20,topsplit:3});
 
 	});
 

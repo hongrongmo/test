@@ -142,9 +142,6 @@
 	#learnmore{background-image:url(/static/images/searchwidget/ev_learnmore.png);}
 	#contactus{background-image:url(/static/images/searchwidget/ev_contactus.png);}
 
-
-
-
 	.searchcomponentfullwrap{
 		padding-top:5px;
 		padding-left:2px;

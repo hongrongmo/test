@@ -33,22 +33,22 @@
 	<!-- Parse the page results                                          -->
 	<!-- *************************************************************** -->
 	<xsl:template match="PAGE-RESULTS/PAGE-ENTRY">
-		
+
 		<xsl:variable name="sr" select="searchresult:new()"/>
 		<xsl:variable name="ISDUP"><xsl:value-of select="@DUP"/></xsl:variable>
 		<xsl:value-of select="searchresult:setDup($sr, boolean('true'=$ISDUP))" />
-		
+
 		<xsl:variable name="dupids"><xsl:value-of select="DUPIDS"/></xsl:variable>
 		<xsl:value-of select="searchresult:setDupids($sr, $dupids)" />
 		<xsl:variable name="DOCBSHITIDX">
             <xsl:value-of select="DOCUMENTBASKETHITINDEX"/>
         </xsl:variable>
         <xsl:value-of select="searchresult:setDocumentbaskethitindex($sr, $DOCBSHITIDX)" />
-		
+
 		<xsl:apply-templates select="EI-DOCUMENT">
 			<xsl:with-param name="sr" select="$sr"></xsl:with-param>
 		</xsl:apply-templates>
-		
+
 		<!-- Build local holding links -->
 		<xsl:if test="($LOCALHOLDINGS-CITATION='true' or /PAGE/LOCAL-HOLDINGS)">
 			<xsl:call-template name="LOCAL-HOLDINGS">
@@ -58,23 +58,23 @@
 			</xsl:call-template>
 		</xsl:if>
 	</xsl:template>
-	
+
 	<xsl:template match="PAGE-RESULTS/UPT-DOC/REF-DOCS/PAGE-ENTRY">
 		<xsl:variable name="sr" select="searchresult:new()"/>
 		<xsl:variable name="ISDUP"><xsl:value-of select="@DUP"/></xsl:variable>
 		<xsl:value-of select="searchresult:setDup($sr, boolean('true'=$ISDUP))" />
-		
+
 		<xsl:variable name="dupids"><xsl:value-of select="DUPIDS"/></xsl:variable>
 		<xsl:value-of select="searchresult:setDupids($sr, $dupids)" />
 		<xsl:variable name="DOCBSHITIDX">
             <xsl:value-of select="DOCUMENTBASKETHITINDEX"/>
         </xsl:variable>
         <xsl:value-of select="searchresult:setDocumentbaskethitindex($sr, $DOCBSHITIDX)" />
-		
+
 		<xsl:apply-templates select="EI-DOCUMENT">
 			<xsl:with-param name="sr" select="$sr"></xsl:with-param>
 		</xsl:apply-templates>
-		
+
 		<!-- Build local holding links -->
 		<xsl:if test="($LOCALHOLDINGS-CITATION='true' or /PAGE/LOCAL-HOLDINGS)">
 			<xsl:call-template name="LOCAL-HOLDINGS">
@@ -84,21 +84,21 @@
 			</xsl:call-template>
 		</xsl:if>
 	</xsl:template>
-	
+
 	<xsl:template match="PAGE-RESULTS/UPT-DOC/REF-DOCS/PAGE-ENTRY/NP-DOC">
 		<xsl:variable name="sr" select="searchresult:new()"/>
 		<xsl:value-of select="searchresult:setIndex($sr, INDEX)" />
         <xsl:value-of select="searchresult:setSource($sr, SOURCE)" />
-        
-        
+
+
         <!-- Create external links -->
 		<xsl:call-template name="BUILD-LINKS">
 			<xsl:with-param name="sr" select="$sr"></xsl:with-param>
 		</xsl:call-template>
-		
+
 		<xsl:value-of select="actionbean:addSearchResult($actionbean,$sr)" />
 	</xsl:template>
-	
+
 
 	<!-- *************************************************************** -->
 	<!-- Parse the main document info                                    -->
@@ -118,18 +118,18 @@
 		<!-- Set the title -->
 		<xsl:value-of select="searchresult:addLabel($sr,'TI',hlight:removeMarkup((TI|TT)/@label))" />
 		<xsl:value-of select="searchresult:setTitle($sr, hlight:addMarkup(TI|TT))" />
-		
-		
+
+
 		<!-- Set the doctype -->
 		<xsl:value-of select="searchresult:addLabel($sr,'DT',DT/@label)" />
 	   <xsl:value-of select="searchresult:setDoctype($sr,DT/text())"/>
-		
+
 		<!-- Set the source and no source values -->
 		<xsl:value-of select="searchresult:setSource($sr,hlight:addMarkup(SO))"/>
 		<xsl:value-of select="searchresult:setRil($sr, RIL)"/>
 		<xsl:value-of select="searchresult:setNosource($sr, boolean(NO_SO))" />
 		<xsl:value-of select="searchresult:setSourceabbrev($sr, SE)" />
-		
+
 		<xsl:value-of select="searchresult:setPf($sr, PF)" />
 		<xsl:value-of select="searchresult:setSp($sr, SP)" />
 		<xsl:value-of select="searchresult:setRsp($sr, RSP)" />
@@ -138,14 +138,14 @@
         <xsl:value-of select="searchresult:setVo($sr, (VO|VOM))" />
         <xsl:value-of select="searchresult:setSn($sr, (SN))" />
 		<xsl:value-of select="searchresult:setIs($sr, IS)" />
-		<xsl:value-of select="searchresult:setSd($sr, SD)" />
-		<xsl:value-of select="searchresult:setMt($sr, MT)" />
-		<xsl:value-of select="searchresult:setVt($sr, VT)" />
+		<xsl:value-of select="searchresult:setSd($sr, hlight:addMarkup(SD))" />
+		<xsl:value-of select="searchresult:setMt($sr, hlight:addMarkup(MT))" />
+		<xsl:value-of select="searchresult:setVt($sr, hlight:addMarkup(VT))" />
 		<xsl:value-of select="searchresult:setArn($sr, ARN)" />
 		<xsl:value-of select="searchresult:setPages($sr, PP)" />
 		<xsl:value-of select="searchresult:setPage($sr, p_PP)" />
 		<xsl:value-of select="searchresult:setPagespp($sr, PP_pp)" />
-		<xsl:value-of select="searchresult:setSd($sr, SD)" />
+		<xsl:value-of select="searchresult:setSd($sr, hlight:addMarkup(SD))" />
 		<xsl:value-of select="searchresult:setYr($sr, YR)" />
 		<xsl:value-of select="searchresult:setPd($sr, PD_YR)" />
 		<xsl:value-of select="searchresult:setVt($sr, NV)" />
@@ -164,7 +164,7 @@
 		<xsl:value-of select="searchresult:setPpd($sr,PPD)" />
 		<xsl:value-of select="searchresult:setLa($sr,LA)" />
 		<xsl:value-of select="searchresult:setNv($sr,NF)" />
-		<xsl:value-of select="searchresult:setAv($sr,AV)" />
+		<xsl:value-of select="searchresult:setAv($sr,hlight:addMarkup(AV))" />
 		<xsl:value-of select="searchresult:setSc($sr,SC)" />
 		<xsl:value-of select="searchresult:setCpr($sr, CPR)" />
 		<xsl:value-of select="searchresult:setCprt($sr, CPRT)" />
@@ -201,15 +201,15 @@
 		<xsl:value-of select="searchresult:setPr($sr, PR)" />
 		<xsl:value-of select="searchresult:setPapim($sr, PAPIM)" />
 		<!-- <xsl:value-of select="searchresult:setPim($sr, PIM|PI)" />-->
-	
+
         <!-- Set the title of translation -->
 		<xsl:value-of select="searchresult:addLabel($sr,'TT',TT/@label)" />
 		<xsl:value-of select="searchresult:setTt($sr, hlight:addMarkup(TT))" />
-	
-		
-		<!-- 
+
+
+		<!--
 			Set the fulltext link. This has 2 parts, 1) check the back office to
-			see if fulltext is enabled and 2) see if there is a fulltext link 
+			see if fulltext is enabled and 2) see if there is a fulltext link
 			present
 		-->
 		<xsl:variable name="ISFULLTEXT"
@@ -234,7 +234,7 @@
 		<xsl:call-template name="BUILD-LINKS">
 			<xsl:with-param name="sr" select="$sr"></xsl:with-param>
 		</xsl:call-template>
-		
+
 	    <!-- Add the abstract! -->
 	    <xsl:apply-templates>
 			<xsl:with-param name="sr" select="$sr"></xsl:with-param>
@@ -244,8 +244,8 @@
 		<!-- Add search result object to action bean!                           -->
 		<!-- ****************************************************************** -->
 		<xsl:value-of select="actionbean:addSearchResult($actionbean,$sr)" />
-		
-	</xsl:template>	
+
+	</xsl:template>
 
 	<!-- *************************************************************** -->
 	<!-- Parse the affiliation information                                    -->
@@ -259,7 +259,7 @@
 			<xsl:value-of select="searchresult:addAffil($sr,$affil)"/>
 		</xsl:for-each>
 	</xsl:template>
-	
+
 	<!-- *************************************************************** -->
 	<!-- Parse the author information                                    -->
 	<!-- *************************************************************** -->
@@ -279,7 +279,7 @@
 			<xsl:with-param name="AFS" select="../AFS"></xsl:with-param>
 		</xsl:apply-templates>
 	</xsl:template>
-	
+
 	<xsl:template match="AU|ED|IV">
 		<xsl:param name="sr"/>
 		<xsl:param name="AFS"/>
@@ -290,7 +290,7 @@
 		<xsl:value-of select="author:setId($author,@id)"/>
 		<xsl:value-of select="author:setName($author, $NAME)"/>
 		<xsl:value-of select="author:setEmail($author, ./EMAIL)"/>
-		
+
 		  <xsl:if test="name()='IV'">
             <xsl:if test="CO">
                	<xsl:variable name="CO">
@@ -301,7 +301,7 @@
                 <xsl:value-of select="author:setCo($author,$CO)"/>
             </xsl:if>
         </xsl:if>
-		
+
 		<!-- ****************************************************** -->
 		<!-- Create the author search link                          -->
 		<!-- ****************************************************** -->
@@ -372,8 +372,8 @@
 						<xsl:value-of select="author:setSearchlink($author,$href)"/>
 				</xsl:otherwise>
 			</xsl:choose>
-		   </xsl:if>            
-		
+		   </xsl:if>
+
 		<!-- ************** ADD the affiliation info **************** -->
 		<xsl:if test="$AFS">
 			<xsl:value-of select="searchresult:addLabel($sr,'AFS',$AFS/@label)" />
@@ -402,14 +402,14 @@
 			</xsl:when>
 			</xsl:choose>
 		</xsl:if>
-		
+
 		<xsl:choose>
 			<xsl:when test="name(.)='ED'"><xsl:value-of select="searchresult:addEditor($sr,$author)"/></xsl:when>
 			<xsl:when test="name(.)='IV'"><xsl:value-of select="searchresult:addInventors($sr,$author)"/></xsl:when>
 			<xsl:otherwise><xsl:value-of select="searchresult:addAuthor($sr,$author)"/></xsl:otherwise>
 		</xsl:choose>
-    	
-     	
+
+
  	</xsl:template>
 
 	<!-- ************************************************************** -->
@@ -454,11 +454,11 @@
 		</xsl:variable>
 		<xsl:variable name="BOOKS_OPEN_WINDOW_PARAMS">height=800,width=700,status=yes,resizable,scrollbars=1,menubar=no</xsl:variable>
         <xsl:variable name="SCOPE"><xsl:value-of select="//SCOPE"/></xsl:variable>
-        
+
         <xsl:value-of select="searchresult:setCidPrefix($sr, $CID-PREFIX)"/>
-        
-		<!-- 
-		ABSTRACT LINK 
+
+		<!--
+		ABSTRACT LINK
 		-->
 		<xsl:variable name="CID-LOCAL"><xsl:value-of select="//CID"/></xsl:variable>
 		<!--  TMH - fix problem with double quotes; for now just make single quotes, couldn't figure out how to escape to &quot; here.  :( -->
@@ -475,8 +475,8 @@
 		</xsl:variable>
 		<xsl:value-of select="searchresult:setAbstractlink($sr, $ABSTRACT-LINK)"/>
 
-		<!-- 
-		DETAILED LINK 
+		<!--
+		DETAILED LINK
 		-->
 		<xsl:variable name="DETAILED-LINK">
 		<xsl:choose>
@@ -487,15 +487,15 @@
 						&lt;a class="externallink" href="/search/doc/detailed.url?SEARCHID=<xsl:value-of select="$SEARCH-ID"/>&amp;pageType=<xsl:value-of select="$CID-PREFIX"/>&amp;CID=<xsl:value-of select="$CID-PREFIX" />DetailedFormat&amp;DOCINDEX=<xsl:value-of select="$INDEX"/>&amp;database=<xsl:value-of select="$SELECTED-DB"/>&amp;format=<xsl:value-of select="$CID-PREFIX"/>DetailedFormat<xsl:if test="$SCOPE">&amp;tagscope=<xsl:value-of select="$SCOPE"/></xsl:if>&amp;displayPagination=yes" title="Detailed for <xsl:value-of select="$TITLE-TRANSLATED"/>" aria-labelledby="resulttitle_<xsl:value-of select="$INDEX"/>" id="detaillink_<xsl:value-of select="$INDEX"/>"&gt;Detailed&lt;/a&gt;
 					</xsl:otherwise>
 				</xsl:choose>
-		
+
 		</xsl:variable>
 		<xsl:value-of select="searchresult:setDetailedlink($sr, $DETAILED-LINK)"/>
-		
-		<!-- 
-		BOOK DETAILS LINK 
+
+		<!--
+		BOOK DETAILS LINK
 		-->
 		<xsl:variable name="BOOKDETAILS-LINK">
-&lt;a title="Book Details" class="externallink" 
+&lt;a title="Book Details" class="externallink"
 		<xsl:if test="not(BPP = '0')">
 href="/search/book/bookdetailed.url?pageType=book&amp;SEARCHID=<xsl:value-of select="$SEARCH-ID"/>&amp;DOCINDEX=<xsl:value-of select="$INDEX"/>&amp;database=<xsl:value-of select="$SELECTED-DB"/>&amp;docid=<xsl:value-of select="$DOC-ID"/>&amp;format=<xsl:value-of select="$CID-PREFIX"/>DetailedFormat<xsl:value-of select="$PII"/>&amp;RESULTCOUNT=<xsl:value-of select="//RESULTS-COUNT"/>&amp;INTERNALSEARCH=no"
 		</xsl:if>
@@ -506,34 +506,34 @@ href="/search/book/bookdetailed.url?pageType=book&amp;SEARCHID=<xsl:value-of sel
 		</xsl:variable>
 		<xsl:value-of select="searchresult:setBookdetailslink($sr, $BOOKDETAILS-LINK)"/>
 
-		<!-- 
-		PAGE DETAILS LINK 
+		<!--
+		PAGE DETAILS LINK
 		-->
 		<xsl:if test="not(BPP = '0')">
 			<xsl:variable name="PAGEDETAILS-LINK">
-&lt;a title="Page Details" class="externallink" href="/search/book/detailed.url?pageType=page&amp;SEARCHID=<xsl:value-of select="$SEARCH-ID"/>&amp;DOCINDEX=<xsl:value-of select="$INDEX"/>&amp;database=<xsl:value-of select="$SELECTED-DB"/>&amp;format=<xsl:value-of select="$CID-PREFIX"/>DetailedFormat" title="Page Details"&gt;Page Details&lt;/a&gt;		
+&lt;a title="Page Details" class="externallink" href="/search/book/detailed.url?pageType=page&amp;SEARCHID=<xsl:value-of select="$SEARCH-ID"/>&amp;DOCINDEX=<xsl:value-of select="$INDEX"/>&amp;database=<xsl:value-of select="$SELECTED-DB"/>&amp;format=<xsl:value-of select="$CID-PREFIX"/>DetailedFormat" title="Page Details"&gt;Page Details&lt;/a&gt;
 			</xsl:variable>
 			<xsl:value-of select="searchresult:setPagedetailslink($sr, $PAGEDETAILS-LINK)"/>
 		</xsl:if>
-		
+
 		<xsl:variable name="CID"><xsl:value-of select="//CID"/></xsl:variable>
-		
+
 		<xsl:variable name="BUTTON-ALIGN-PARAM">
 		<xsl:choose>
 			<xsl:when test="$CID='pageDetailedFormat' or $CID='bookSummary'">top</xsl:when>
 			<xsl:otherwise>middle</xsl:otherwise>
 		</xsl:choose>
 		</xsl:variable>
-		
+
 		<xsl:variable name="BOOKSUMMARY-PII">
 		<xsl:choose>
 			<xsl:when test="$CID='pageDetailedFormat' or $CID='bookSummary'"><xsl:value-of select="//PII"/></xsl:when>
 			<xsl:otherwise><xsl:value-of select="PII"/></xsl:otherwise>
 		</xsl:choose>
 		</xsl:variable>
-        
-		<!-- 
-		READ PAGE LINK 
+
+		<!--
+		READ PAGE LINK
 		-->
 		<xsl:if test="not(BPP = '0') or $CID='bookSummary'">
 		<xsl:variable name="READPAGE-LINK">
@@ -546,7 +546,7 @@ href="/search/book/bookdetailed.url?pageType=book&amp;SEARCHID=<xsl:value-of sel
 
 		<xsl:if test="string(PII)  or ($CID='bookSummary' and $BOOKSUMMARY-PII!='' )">
 		<!--
-		READ CHAPTER LINK 
+		READ CHAPTER LINK
 		-->
 		<xsl:variable name="READCHAPTER-LINK">
 &lt;a target="_referex" title="Read a chapter from this book" href="<xsl:value-of select="book:getReadChapterLink(/PAGE/PAGE-RESULTS/PAGE-ENTRY/WOBLSERVER, BN13,$BOOKSUMMARY-PII, /PAGE/CUSTOMER-ID)"/>&amp;EISESSION=<xsl:value-of select="$SESSION-ID"/>"&gt;
@@ -555,13 +555,13 @@ href="/search/book/bookdetailed.url?pageType=book&amp;SEARCHID=<xsl:value-of sel
 		<xsl:value-of select="searchresult:setReadchapterlink($sr, $READCHAPTER-LINK)"/>
 		</xsl:if>
 		<!--
- 		READ BOOK LINK 
+ 		READ BOOK LINK
 		-->
 		<xsl:if test="string(BN13)">
 		<xsl:variable name="READBOOK-LINK">
 &lt;a target="_referex" title="Read this book" href="<xsl:value-of select="book:getReadBookLink(/PAGE/PAGE-RESULTS/PAGE-ENTRY/WOBLSERVER, BN13, /PAGE/CUSTOMER-ID)"/>&amp;EISESSION=<xsl:value-of select="$SESSION-ID"/>"&gt;
 &lt;img alt="Read this book" src="/static/images/read_book.png" style="border:0px; vertical-align:<xsl:value-of select="$BUTTON-ALIGN-PARAM"/>"/&gt;&lt;/a&gt;
-		</xsl:variable>   
+		</xsl:variable>
 		<xsl:value-of select="searchresult:setReadbooklink($sr, $READBOOK-LINK)"/>
 		</xsl:if>
 
@@ -595,8 +595,8 @@ href="/search/book/bookdetailed.url?pageType=book&amp;SEARCHID=<xsl:value-of sel
 		    <xsl:otherwise>searchWord1=<xsl:value-of select="$CITEDBY-PM"/><xsl:if test="$AUTHCD='EP'"><xsl:value-of select="$KIND"/></xsl:if><xsl:value-of select="java:encode(' WN PCI')"/>&amp;database=49152&amp;pcinav=0~<xsl:value-of select="$CITEDBY-PM"/>~<xsl:value-of select="java:encode('Patents that cite ')"/><xsl:value-of select="$CITEDBY-PM"/></xsl:otherwise>
 		  </xsl:choose>
 		</xsl:variable>
-    
-    
+
+
         <xsl:variable name="abstractrecord" select="searchresult:getAbstractrecord($sr)"/>
 		<xsl:if test="($REF-CNT) and not($REF-CNT ='0') and not($REF-CNT ='')">
             <xsl:value-of select="abstractrecord:setPatrefcount($abstractrecord,number($REF-CNT))"/>
@@ -605,7 +605,7 @@ href="/search/book/bookdetailed.url?pageType=book&amp;SEARCHID=<xsl:value-of sel
 			</xsl:variable>
 			<xsl:value-of select="abstractrecord:setPatentrefslink($abstractrecord, $PATENT-REFS-LINK)"/>
 		</xsl:if>
-            
+
 		<xsl:if test="($INS-REF-CNT) and not($INS-REF-CNT ='0') and not($INS-REF-CNT ='')">
             <xsl:value-of select="abstractrecord:setRefcount($abstractrecord,number($INS-REF-CNT))"/>
 			<xsl:variable name="INSPEC-REFS-LINK">
@@ -632,25 +632,25 @@ href="/search/book/bookdetailed.url?pageType=book&amp;SEARCHID=<xsl:value-of sel
 
 
 		<xsl:variable name="CPX-DOCID"><xsl:value-of select="CPX-DOCID" /></xsl:variable>
-		
+
 		<xsl:if test="count(CPX-DOCID)>0">
 			<xsl:variable name="COMPENDEX-LINK">
 			&lt;a class="externallink" href="/search/doc/detailed.url?SEARCHID=<xsl:value-of select="$SEARCH-ID"/>&amp;pageType=<xsl:value-of select="$CID-PREFIX"/>&amp;CID=<xsl:value-of select="$CID-PREFIX" />DetailedFormat&amp;DOCINDEX=<xsl:value-of select="INDEX"/>&amp;docid=<xsl:value-of select="$CPX-DOCID" />&amp;database=1&amp;format=<xsl:value-of select="$CID-PREFIX"/>DetailedFormat&amp;displayPagination=no" title="Compendex"&gt;Compendex&lt;/a&gt;
 			</xsl:variable>
 			<xsl:value-of select="searchresult:setCpxlink($sr, $COMPENDEX-LINK)"/>
 		</xsl:if>
-		
+
 		<xsl:variable name="INS-DOCID"><xsl:value-of select="INS-DOCID" /></xsl:variable>
-		
+
 		<xsl:if test="count(INS-DOCID)>0">
 			<xsl:variable name="INSPEC-LINK">
 			&lt;a class="externallink" href="/search/doc/detailed.url?SEARCHID=<xsl:value-of select="$SEARCH-ID"/>&amp;pageType=<xsl:value-of select="$CID-PREFIX"/>&amp;CID=<xsl:value-of select="$CID-PREFIX" />DetailedFormat&amp;DOCINDEX=<xsl:value-of select="INDEX"/>&amp;docid=<xsl:value-of select="$INS-DOCID" />&amp;database=2&amp;format=<xsl:value-of select="$CID-PREFIX"/>DetailedFormat&amp;displayPagination=no" title="Inspec"&gt;Inspec&lt;/a&gt;
 			</xsl:variable>
 			<xsl:value-of select="searchresult:setInspeclink($sr, $INSPEC-LINK)"/>
 		</xsl:if>
-		
+
 	</xsl:template>
-		
+
 	<xsl:template match="PIM">
 		<xsl:param name="sr"/>
 		<xsl:variable name="LABEL"><xsl:value-of select="@label" /></xsl:variable>
@@ -665,7 +665,7 @@ href="/search/book/bookdetailed.url?pageType=book&amp;SEARCHID=<xsl:value-of sel
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
-	
+
 	<xsl:template match="DT">
 		<xsl:param name="sr"/>
 		<xsl:variable name="LABEL"><xsl:value-of select="@label" /></xsl:variable>
@@ -680,5 +680,5 @@ href="/search/book/bookdetailed.url?pageType=book&amp;SEARCHID=<xsl:value-of sel
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
-	
+
 </xsl:stylesheet>

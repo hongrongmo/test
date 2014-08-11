@@ -111,7 +111,7 @@ public class EVActionBeanContext extends ActionBeanContext {
 	}
 	public UserSession updateUserSession(UserSession usersession) throws SessionException {
 		SessionManager sessionmanager = new SessionManager(getRequest(), getResponse());
-		return sessionmanager.updateUserSession(usersession, true, false);
+		return sessionmanager.updateUserSession(usersession, false, false);
 	}
 
     // The LogEntry object and getter

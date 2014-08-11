@@ -12,6 +12,7 @@
 	<stripes:layout-component name="csshead">
 	<link href="/static/css/ev_selected.css?v=${releaseversion}" media="all" type="text/css" rel="stylesheet"></link>
 	<link href="/static/css/ev_results.css?v=${releaseversion}"" media="all" type="text/css" rel="stylesheet"></link>
+	<link href="/static/css/ev_oneclickdl.css?v=${releaseversion}"" media="all" type="text/css" rel="stylesheet"></link>
 	<c:if test="${(actionBean.view eq 'detailed') or (actionBean.view eq 'abstract')}">
 		<link href="/static/css/ev_abstract.css?v=${releaseversion}" media="all" type="text/css" rel="stylesheet"></link>
 	</c:if>
@@ -120,12 +121,13 @@
 	<stripes:layout-component name="jsbottom_custom">
 	<%--
 	 --%>
-	<SCRIPT type="text/javascript" SRC="/static/js/ViewSavedFolders.js?v=2"></script>
+	<SCRIPT type="text/javascript" SRC="/static/js/ViewSavedFolders.js?v=${releaseversion}"></script>
 	<SCRIPT type="text/javascript" SRC="/static/js/URLEncode.js?v=${releaseversion}"></script>
 	<jwr:script src="/bundles/localholdinglinks.js"></jwr:script>
     <script type="text/javascript">
     GALIBRARY.createWebEventWithLabel('Folders', 'View Selected', 'Folder Name=${actionBean.folderName}; View=${actionBean.view}; ');
     </script>
+    <SCRIPT type="text/javascript" SRC="/static/js/oneclick.js?v=${releaseversion}"></script>
 	</stripes:layout-component>
 
 

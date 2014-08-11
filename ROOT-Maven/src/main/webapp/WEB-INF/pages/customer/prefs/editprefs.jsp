@@ -4,7 +4,7 @@
 <style type="text/css">
 	.settingsContents{
 	padding-top:15px;
-	height:315px;
+	height:400px;
 	}
 	.prefsRadios{
 	list-style: none;
@@ -33,6 +33,7 @@
 	border-right:2px solid #d7d7d7;
 	width:40%;
 	padding-right:16px;
+	height:380px
 	}
 	.settingsRight{
 		float:right;
@@ -122,14 +123,13 @@
 		<c:set value="${actionBean.currentuserprefs.dlFormat}" var="dlFormat"></c:set>
 		<fieldset title="Dounload Format Settings">
 			<ul class="prefsRadios">
-				<li><label for="ris_radio"><input type="radio" name="dlFormat" value="ris" id="ris_radio" <c:if test="${dlFormat eq 'ris'}">checked="checked"</c:if>/>RIS, EndNote, Reference Manager</label></li>
-				<li><label for="bib_radio"><input type="radio" name="dlFormat" value="bib" id="bib_radio" <c:if test="${dlFormat eq 'bib'}">checked="checked"</c:if>/>BibTex</label></li>
-				<li><label for="refworks_radio"><input type="radio" name="dlFormat" value="refworks" id="refworks_radio" <c:if test="${dlFormat eq 'refworks'}">checked="checked"</c:if>/>RefWorks direct</label></li>
-				<li><label for="ascii_radio"><input type="radio" name="dlFormat" value="ascii" id="ascii_radio" <c:if test="${dlFormat eq 'ascii'}">checked="checked"</c:if>/>Plain text (ASCII)</label></li>
-				<li><label for="csv_radio"><input type="radio" name="dlFormat" value="csv" id="csv_radio" <c:if test="${dlFormat eq 'csv'}">checked="checked"</c:if>/>Comma Separated Value Format</label></li>
-				<li><label for="excel_radio"><input type="radio" name="dlFormat" value="excel" id="excel_radio" <c:if test="${dlFormat eq 'excel'}">checked="checked"</c:if>/>Microsoft Excel&reg;</label></li>
-				<li><label for="pdf_radio"><input type="radio" name="dlFormat" value="pdf" id="pdf_radio" <c:if test="${dlFormat eq 'pdf'}">checked="checked"</c:if>/>PDF</label></li>
-				<li><label for="rtf_radio"><input type="radio" name="dlFormat" value="rtf" id="rtf_radio" <c:if test="${dlFormat eq 'rtf'}">checked="checked"</c:if>/>RTF</label></li>
+				<li><label for="ris_radio"><input class="formatRadio" type="radio" name="dlFormat" value="ris" id="ris_radio" <c:if test="${dlFormat eq 'ris' or dlFormat eq 'refworks'}">checked="checked"</c:if>/>RIS, EndNote, Reference Manager</label></li>
+				<li><label for="bib_radio"><input class="formatRadio" type="radio" name="dlFormat" value="bib" id="bib_radio" <c:if test="${dlFormat eq 'bib'}">checked="checked"</c:if>/>BibTex</label></li>
+				<li><label for="ascii_radio"><input class="formatRadio" type="radio" name="dlFormat" value="ascii" id="ascii_radio" <c:if test="${dlFormat eq 'ascii'}">checked="checked"</c:if>/>Plain text (ASCII)</label></li>
+				<li><label for="csv_radio"><input class="formatRadio" type="radio" name="dlFormat" value="csv" id="csv_radio" <c:if test="${dlFormat eq 'csv'}">checked="checked"</c:if>/>Comma Separated Value Format</label></li>
+				<li><label for="excel_radio"><input class="formatRadio" type="radio" name="dlFormat" value="excel" id="excel_radio" <c:if test="${dlFormat eq 'excel'}">checked="checked"</c:if>/>Microsoft Excel&reg;</label></li>
+				<li><label for="pdf_radio"><input class="formatRadio" type="radio" name="dlFormat" value="pdf" id="pdf_radio" <c:if test="${dlFormat eq 'pdf'}">checked="checked"</c:if>/>PDF</label></li>
+				<li><label for="rtf_radio"><input class="formatRadio" type="radio" name="dlFormat" value="rtf" id="rtf_radio" <c:if test="${dlFormat eq 'rtf'}">checked="checked"</c:if>/>RTF</label></li>
 
 			</ul>
 			</fieldset>
@@ -138,13 +138,23 @@
 			<div class="settingSection">Download output</div>
 			<fieldset title="Download Output Settings">
 			<ul class="prefsRadios">
-				<li><label for="default_radio"><input type="radio" name="dlOutput" value="default" id="default_radio" <c:if test="${dlOutput eq 'default'}">checked="checked"</c:if>/>Default</label></li>
+				<li><label for="default_radio"><input type="radio" name="dlOutput" value="default" id="default_radio" <c:if test="${dlOutput eq 'default'}">checked="checked"</c:if>/>Current Page View</label></li>
 				<li><label for="citation_radio"><input type="radio" name="dlOutput" value="citation" id="citation_radio" <c:if test="${dlOutput eq 'citation'}">checked="checked"</c:if>/>Citation</label></li>
 				<li><label for="abstract_radio"><input type="radio" name="dlOutput" value="abstract" id="abstract_radio" <c:if test="${dlOutput eq 'abstract'}">checked="checked"</c:if>/>Abstract</label></li>
 				<li><label for="detailed_radio"><input type="radio" name="dlOutput" value="detailed" id="detailed_radio" <c:if test="${dlOutput eq 'detailed'}">checked="checked"</c:if>/>Detailed</label></li>
 			</ul>
 			</fieldset>
-
+			<c:set value="${actionBean.currentuserprefs.dlLocation}" var="dlLocation"></c:set>
+			<hr/>
+			<div class="settingSection">Download location</div>
+			<fieldset title="Download location Settings">
+			<ul class="prefsRadios">
+				<li><label for="mypc_radio"><input class="locationRadio" type="radio" name="dlLocation" value="mypc" id="mypc_radio" <c:if test="${dlLocation eq 'mypc'}">checked="checked"</c:if>/>My PC</label></li>
+				<li><label for="refworks_radio"><input class="locationRadio" type="radio" name="dlLocation" value="refworks" id="refworks_radio" <c:if test="${dlLocation eq 'refworks'}">checked="checked"</c:if>/>Refworks</label></li>
+				<li><label for="googledrive_radio"><input class="locationRadio" type="radio" name="dlLocation" value="googledrive" id="googledrive_radio" <c:if test="${dlLocation eq 'googledrive'}">checked="checked"</c:if>/>Google Drive</label></li>
+				<li><label for="dropbox_radio"><input class="locationRadio" type="radio" name="dlLocation" value="dropbox" id="dropbox_radio" <c:if test="${dlLocation eq 'dropbox'}">checked="checked"</c:if>/>Dropbox</label></li>
+			</ul>
+			</fieldset>
 
 	</div>
 
@@ -152,3 +162,18 @@
 <div class="saveCancel"><input type="submit" value="Save" name="Save" id="savePrefsButton" /><a href="#" style="padding-right:7px;" onclick="TINY.box.hide();">Cancel</a></div>
 </form>
 </div>
+
+<script>
+$(".locationRadio").click(function(){
+	checkForRefworks(this);
+});
+function checkForRefworks(rad){
+	if($(rad).attr('id') == "refworks_radio"){
+		$("#ris_radio").prop("checked", true);
+		$(".formatRadio").prop("disabled", true);
+	}else{
+		$(".formatRadio").prop("disabled", false);
+	}
+}
+checkForRefworks($("input[name=dlLocation]:checked"));
+</script>
