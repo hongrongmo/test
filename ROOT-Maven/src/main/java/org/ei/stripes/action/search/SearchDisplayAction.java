@@ -361,7 +361,7 @@ public class SearchDisplayAction extends BaseSearchAction implements ValidationE
         Query queryObject = null;
         
         if(isCSRFPrevRequired(request.getParameter("csrfSyncToken"))){
- 			context.getValidationErrors().add("validationError", new LocalizableError("org.ei.stripes.action.search.SearchDisplayAction.csrfattackerror"));
+ 			context.getValidationErrors().add("validationError", new LocalizableError("org.ei.stripes.action.search.SearchResultsAction.unknownerror"));
  			return handleValidationErrors(context.getValidationErrors());
  		}
    		 

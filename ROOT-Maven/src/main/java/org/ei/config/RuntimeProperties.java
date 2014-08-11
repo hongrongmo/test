@@ -474,6 +474,10 @@ public final class RuntimeProperties extends Properties {
     /** The Constant SYNC_TOKEN_LIST_SIZE. */
     public static final String SYNC_TOKEN_LIST_SIZE ="SYNC_TOKEN_LIST_SIZE";
     
+    /** The Constant PREVENT_CSRF_ATTACK. */
+    public static final String PREVENT_CSRF_ATTACK ="PREVENT_CSRF_ATTACK";
+    
+    
     //
     // Static instance of the RuntimeProperties
     //
