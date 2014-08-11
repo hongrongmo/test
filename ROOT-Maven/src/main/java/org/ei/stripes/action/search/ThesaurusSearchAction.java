@@ -136,7 +136,7 @@ public class ThesaurusSearchAction extends SearchDisplayAction { // implements I
     	
     	HttpServletRequest request = context.getRequest();
     	if(isCSRFPrevRequired(request.getParameter("csrfSyncToken"))){
- 			context.getValidationErrors().add("validationError", new LocalizableError("org.ei.stripes.action.search.SearchDisplayAction.csrfattackerror"));
+ 			context.getValidationErrors().add("validationError", new LocalizableError("org.ei.stripes.action.search.SearchResultsAction.unknownerror"));
  			return handleValidationErrors(context.getValidationErrors());
  		}
     	

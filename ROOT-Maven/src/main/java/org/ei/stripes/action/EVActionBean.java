@@ -587,8 +587,8 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
     	if(userSession == null){
     		return null;
     	}
-    	UserPreferences userprefs = userSession.getUser().getUserPreferences();
-		if(userprefs == null || !userprefs.isPreventCSRFEnabled()) return null;
+    	boolean isCSRFPrevEnabled = Boolean.parseBoolean((EVProperties.getRuntimeProperty(RuntimeProperties.PREVENT_CSRF_ATTACK)));
+    	if(!isCSRFPrevEnabled) return null;
 		boolean isSessionUpdateNeeded = false;
 		if(userSession.getFifoQueue().isEmpty()){
 			isSessionUpdateNeeded = true;
@@ -654,22 +654,23 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
     protected boolean isCSRFPrevRequired(String token) throws SessionException{
     	boolean preventIt = false;
     	UserSession usersession = context.getUserSession();
-    	if(usersession != null || usersession.getUser() != null || usersession.getUser().getUserPreferences() != null){
-        	UserPreferences userprefs = usersession.getUser().getUserPreferences();
-   		 	if(userprefs.isPreventCSRFEnabled()){
-   		 		if(token == null || token.isEmpty()){
-   		 			preventIt = true;
-   		 		}else{
-   		 			if(usersession.getFifoQueue().isMatchFound(token)){
-   		 				usersession.getFifoQueue().createNewToken();
-   		 				context.updateUserSession(usersession);
-   		 				preventIt = false;
-   		 			}else{
-   		 				preventIt = true;
-   		 			}
-   		 		}
-   		 	}
-		 }
+    	
+    	if(usersession == null) return false;
+    	
+    	boolean isCSRFPrevEnabled = Boolean.parseBoolean((EVProperties.getRuntimeProperty(RuntimeProperties.PREVENT_CSRF_ATTACK)));
+    	if(isCSRFPrevEnabled){
+    		if(token == null || token.isEmpty()){
+	 			preventIt = true;
+	 		}else{
+	 			if(usersession.getFifoQueue().isMatchFound(token)){
+	 				usersession.getFifoQueue().createNewToken();
+	 				context.updateUserSession(usersession);
+	 				preventIt = false;
+	 			}else{
+	 				preventIt = true;
+	 			}
+	 		}
+    	}
     	return preventIt;
     }
     public String getBaseaddress(){

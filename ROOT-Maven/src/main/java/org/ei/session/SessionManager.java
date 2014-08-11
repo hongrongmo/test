@@ -729,9 +729,10 @@ public class SessionManager {
     }
     
     private void handleCSRFSyncTokenUpdate(UserSession userSession){
-    	UserPreferences userprefs = userSession.getUser().getUserPreferences();
-		if(userprefs == null || !userprefs.isPreventCSRFEnabled()) return;
-		userSession.getFifoQueue().clearAll();
+    	
+    	boolean isCSRFPrevEnabled = Boolean.parseBoolean((EVProperties.getRuntimeProperty(RuntimeProperties.PREVENT_CSRF_ATTACK)));
+    	if(!isCSRFPrevEnabled) return;
+    	userSession.getFifoQueue().clearAll();
 	}
 
 }
