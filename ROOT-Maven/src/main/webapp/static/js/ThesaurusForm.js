@@ -296,7 +296,7 @@ function updateCSRFToken(){
 		if(typeof validationfailedelem != 'undefined' && validationfailedelem != ''){
 			var d = new Date();
 			var n = d.getSeconds();
-			var h = date.getHours();
+			var h = d.getHours();
 			window.location.href = '/search/thesHome.url?database=1&errorCode=1000&tknno='+h+n+'#init';
 		}
 	}
