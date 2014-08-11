@@ -197,6 +197,7 @@ $(document).ready(function() {
 		if(output == "outputRefWorks"){
 			//disable output type selection and select RIS as default
 			$("#rdRis").prop("checked",true);
+			$("#rdCit").prop("checked", true);
 			$(".typeEnabled").prop("disabled", true);
 			$("li label").addClass("grayText");
 			$("#savePrefsButton").show();
