@@ -1,5 +1,8 @@
 package org.ei.stripes.action.personalaccount;
 
+import java.util.Arrays;
+import java.util.List;
+
 import net.sourceforge.stripes.action.DefaultHandler;
 import net.sourceforge.stripes.action.DontValidate;
 import net.sourceforge.stripes.action.ForwardResolution;
@@ -31,8 +34,9 @@ public class SaveUserPrefsAction extends EVActionBean implements ISecuredAction 
     private String dlFormat;
     private String dlLocation;
     private String highlight;
-    private boolean showPreview;
-
+    private String highlightBackground = "false";
+	private boolean showPreview;
+	private List<String> hightlght_colors = Arrays.asList("#ff8200","#2babe2","#158c75");
     @Override
     public IAccessControl getAccessControl() {
         return new NoAuthAccessControl();
@@ -60,8 +64,9 @@ public class SaveUserPrefsAction extends EVActionBean implements ISecuredAction 
 		        userPrefs.setDlLocation(this.dlLocation);
 		        userPrefs.setSort(this.sortOrder);
 		        userPrefs.setShowPreview(this.showPreview);
+		        userPrefs.setHighlightBackground(Boolean.getBoolean(this.highlightBackground));
+		        userPrefs.setHighlight(this.highlight);
 
-		        //userPrefs.setHighlight(this.highlight);
 		        userPrefs.save();
 		        user.setUserPrefs(userPrefs);
 
@@ -204,6 +209,13 @@ public class SaveUserPrefsAction extends EVActionBean implements ISecuredAction 
 
 	public void setDlLocation(String dlLocation) {
 		this.dlLocation = dlLocation;
+	}
+    public String getHighlightBackground() {
+		return highlightBackground;
+	}
+
+	public void setHighlightBackground(String highlightBackground) {
+		this.highlightBackground = highlightBackground;
 	}
 
 }

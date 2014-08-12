@@ -48,9 +48,12 @@ public class UserPrefs  {
     public static final String ATTRIBUTE_SHOW_PREVIEW = "SHOW_PREVIEW";
     public static final String ATTRIBUTE_SORT = "SORT";
     public static final String ATTRIBUTE_TIMESTAMP = "Timestamp";
-    public static final String HIGHTLIGHT_COLOR = "#148C75";
     public static final String ATTRIBUTE_HIGHLIGHT = "HIGHLIGHT_COLOR";
+    private static final String ATTRIBUTE_HIGHLIGHT_BG = "HIGHLIGHT_BG";
     private static final DynamoDBMapperConfig saveconfig = new DynamoDBMapperConfig(DynamoDBMapperConfig.SaveBehavior.CLOBBER);
+    public static final String HIGHTLIGHT_COLOR = "#ff8200";
+
+
 
     private String userid;
     private String environment;
@@ -61,7 +64,8 @@ public class UserPrefs  {
     private boolean showpreview;
     private String sort;
     private Date timestamp = new Date();
-    private String highlight = "#148C75";
+    private String highlight = HIGHTLIGHT_COLOR;
+    private boolean highlightBackground = false;
 
     private ArrayList<String> resultsPerPageOpt = new ArrayList<String>();
 
@@ -92,6 +96,7 @@ public class UserPrefs  {
         this.downloadformat = AbstractDeliveryAction.DOWNLOAD_FORMAT_PDF;
         this.downloadLocation = UserPreferences.EVPREFS_DL_LOC_PC;
         this.highlight = HIGHTLIGHT_COLOR;
+        this.highlightBackground = false;
     }
 
     /**
@@ -204,6 +209,17 @@ public class UserPrefs  {
         return timestamp;
     }
 
+    @DynamoDBAttribute(attributeName = ATTRIBUTE_HIGHLIGHT_BG)
+    public boolean getHighlightBackground() {
+		return highlightBackground;
+	}
+
+    public void setHighlightBackground(boolean highlightBackground) {
+		this.highlightBackground = highlightBackground;
+	}
+
+
+
     public void setTimestamp(Date timestamp) {
         this.timestamp = timestamp;
     }
@@ -214,6 +230,7 @@ public class UserPrefs  {
         if (this.timestamp == null) return "";
         else return dateFormatter.format(this.timestamp);
     }
+
 
     @DynamoDBIgnore
     private static String getCurrentEnvironment() {
@@ -309,5 +326,7 @@ public class UserPrefs  {
         DynamoDBMapper mapper = new DynamoDBMapper(dynamoDBClient);
         mapper.delete(this, saveconfig);
     }
+
+
 
 }

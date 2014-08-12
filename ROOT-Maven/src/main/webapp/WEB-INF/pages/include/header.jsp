@@ -127,7 +127,7 @@
 	<div id="dlprefsSaved" style="display:none;text-align:left;"><img src="/static/images/ev_checkmark.png" style="padding-right:5px;width:20px;"/>Your download settings for this session have been saved. To keep these settings, change your preference in Settings.</div>
 	</c:when>
 	<c:otherwise>
-	<div id="dlprefsSaved" style="display:none;text-align:left;"><img src="/static/images/ev_checkmark.png" style="padding-right:5px;width:20px;"/>Your download settings for this session have been saved. To keep these settings, login or register and sav your preferences in Settings.</div>
+	<div id="dlprefsSaved" style="display:none;text-align:left;"><img src="/static/images/ev_checkmark.png" style="padding-right:5px;width:20px;"/>Your download settings for this session have been saved. To keep these settings, login or register and save your preferences in Settings.</div>
 	</c:otherwise>
 </c:choose>
 
@@ -163,7 +163,7 @@
 
    $(".prefsOverlay").click(function(){
 	   	GALIBRARY.createWebEventWithLabel('Dialog Open', 'Edit Preferences', 'Settings Dropdown');
-		TINY.box.show({url:'/customer/userprefs.url',clickmaskclose:false,width:400,height:475,close:true,opacity:20,topsplit:3});
+		TINY.box.show({url:'/customer/userprefs.url',clickmaskclose:false,width:400,height:500,close:true,opacity:20,topsplit:3});
 
 	});
 
@@ -173,7 +173,7 @@
 		$(".saved").hide();
 		var url = "/customer/userprefs.url?save=true&";
 		var params = "";
-		var hlight = "#";
+		var hlight;
 		$("#userPreferencesForm input:checked").each(function (){
 
 				if(params != ""){params += "&";}
@@ -181,8 +181,11 @@
 
 
 		});
-		params += "&highlight=" + $("#hColor").val();
-		hlight += $("#hColor").val();
+		if(highlightV1){
+			hlight = $("#hlight_color").spectrum("get").toString();
+			params += "&highlight=" + escape(hlight);
+		}
+
 		url += params;
 		GALIBRARY.createWebEventWithLabel('Preferences', 'Preferences Saved', params);
 
@@ -191,7 +194,9 @@
 		}).success(function(data){
 			TINY.box.hide();
 			//change any highlight color on the fly
-			$(".hit").css("color", hlight);
+			if(highlightV1){
+				$(".hit").css("color", hlight);
+			}
 			$("#prefsNotSaved").hide();
 			$("#prefsSaved").fadeIn("slow");
 		}).error(function(data){

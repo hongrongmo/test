@@ -474,15 +474,15 @@ $(document).ready(function() {
 				}
 			}
 		}
-		
+
 		var textNodeValue = append.val();
         for (var j = 0; j < swapCodes.length; j++) {
             var swapper = new RegExp("\\u" + swapCodes[j].toString(16), "g");
             textNodeValue = textNodeValue.replace(swapper, swapStrings[j]);
         }
-        
+
         append.val(textNodeValue);
-		
+
 		return true;
 	});
 
@@ -498,15 +498,15 @@ $(document).ready(function() {
 			alert("Please select at least one search refinement, or enter a term to run a new search.");
 			return false;
 		}
-		
+
 		var textNodeValue = append.val();
         for (var j = 0; j < swapCodes.length; j++) {
             var swapper = new RegExp("\\u" + swapCodes[j].toString(16), "g");
             textNodeValue = textNodeValue.replace(swapper, swapStrings[j]);
         }
-        
+
         append.val(textNodeValue);
-		
+
 		return true;
 	});
 
@@ -898,9 +898,9 @@ function handleAbstractPreview(event) {
 		var physicalquery = $("#physicalquery").text();
 		previewurl += "&query=" + physicalquery;
 
-		if(highlightV2){
-			previewurl += "&partial=true";
-		}
+		//if(highlightV2){
+		//	previewurl += "&partial=true";
+		//}
 		link.html("Loading...");
 		$.ajax({
 			type : "GET",
@@ -919,11 +919,11 @@ function handleAbstractPreview(event) {
 				    link.html("<img id=\"previewimage\" src=\"/static/images/EV_hide.png\"/>Hide preview");
 				    var previewHtml = json.previewtext;
 				    if(json.countLeft > 0){
-				    	previewHtml += "&nbsp;&nbsp;<a href='"+absLink+"' title='"+absTitle+"'>("+ json.countLeft + " keywords remaining)</a>";
+				    	previewHtml += "&nbsp;&nbsp;<a href='"+absLink+"' title='"+absTitle+"'>("+ json.countLeft + " more search terms)</a>";
 				    }
 				    previewtext.html(previewHtml).slideDown("slow");
 				}
-				if((highlightV1 || highlightV2) && highlight && highlight.length > 0){
+				if((highlightV1) && highlight && highlight.length > 0){
 					$(".hit").css("color",highlight);
 				}
 			},

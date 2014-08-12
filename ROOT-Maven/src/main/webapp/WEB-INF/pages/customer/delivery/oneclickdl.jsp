@@ -11,15 +11,19 @@
 
 <style>
 	#oneClickMid, #oneClickContent, #oneClickBottom{
-		width:540px;
+		width:600px;
 	}
-	#oneClickRight, #oneClickLeft{
-		float:left	;
-		width:180px;
+	#oneClickRight{
+		float:left;
+		width:205px;
 		height:100%;
 
 	}
-
+	#oneClickLeft{
+		float:left;
+		width: 175px;
+		height:100%;
+	}
 	#oneClickRight ul{
 		list-style:none;
 		margin:0px;
@@ -44,7 +48,7 @@
       float: left;
     }
     #oneClickRight label{
-      width: 105px;
+      width: 84%;
     }
 	#oneClickLeft label  {
       width: 120px;
@@ -59,7 +63,7 @@
 	}
 	#oneClickMid{
 		pading-top:5px;
-		height:200px;
+		height:220px;
 	}
 	.outputLocation{
 		padding-top: 8px;
@@ -117,6 +121,10 @@
 		margin-top:1px
 	}
 	#oneClickContent hr{display:block;}
+    .smalltxt{
+    	font-size:10px;
+    	padding-left:10px;
+    }
 </style>
 </head>
 <body>
@@ -147,13 +155,13 @@
 			<div id="oneClickRight">
 			<div class="grayText sectionHead">Choose the format:</div>
 			<ul>
-				<li><input type="radio" class="typeEnabled" id="rdRis" name="downloadformat" value="ris"  <c:if test="${dlFormat eq 'ris' or dlFormat eq 'refworks' or dlLocation eq 'refworks'}">checked="checked"</c:if>/><label	for="rdRis" title="RIS Format (EndNote, ProCite, Reference Manager)">RIS</label></li>
-				<li><input type="radio" class="typeEnabled" id="rdBib" name="downloadformat" value="bib"  <c:if test="${dlFormat eq 'bib'}">checked="checked"</c:if>/><label for="rdBib" title="BibTex format">Bib Text</label></li>
-				<li><input type="radio" class="typeEnabled" id="rdAsc" name="downloadformat" value="ascii"  <c:if test="${dlFormat eq 'ascii'}">checked="checked"</c:if>/><label for="rdAsc" title="Plain text format (ASCII)">ASCII</label></li>
+				<li><input type="radio" class="typeEnabled" id="rdRis" name="downloadformat" value="ris"  <c:if test="${dlFormat eq 'ris' or dlFormat eq 'refworks' or dlLocation eq 'refworks'}">checked="checked"</c:if>/><label	for="rdRis" title="RIS Format (EndNote, ProCite, Reference Manager)">RIS<br/><span class="smalltxt">EndNote, Reference Manager</span></label></li>
+				<li><input type="radio" class="typeEnabled" id="rdBib" name="downloadformat" value="bib"  <c:if test="${dlFormat eq 'bib'}">checked="checked"</c:if>/><label for="rdBib" title="BibTeX format">BibTeX</label></li>
+				<li><input type="radio" class="typeEnabled" id="rdAsc" name="downloadformat" value="ascii"  <c:if test="${dlFormat eq 'ascii'}">checked="checked"</c:if>/><label for="rdAsc" title="Plain text format (ASCII)">Text<br/><span class="smalltxt">ASCII</span></label></li>
 				<li><input type="radio" class="typeEnabled" id="rdCsv" name="downloadformat" value="csv"  <c:if test="${dlFormat eq 'csv'}">checked="checked"</c:if>/><label for="rdCsv" title="(Comma Separated Value Format)">CSV </label></li>
-				<li><input type="radio" class="typeEnabled" id="rdExcel" name="downloadformat" value="excel"  <c:if test="${dlFormat eq 'excel'}">checked="checked"</c:if>/><label for="rdExcel" title="Microsoft Excel">Microsoft Excel&reg;</label></li>
+				<li><input type="radio" class="typeEnabled" id="rdExcel" name="downloadformat" value="excel"  <c:if test="${dlFormat eq 'excel'}">checked="checked"</c:if>/><label for="rdExcel" title="Microsoft Excel">Excel&reg;</label></li>
 				<li><input type="radio" class="typeEnabled" id="rdPdf" name="downloadformat" value="pdf"  <c:if test="${dlFormat eq 'pdf'}">checked="checked"</c:if>/><label for="rdPdf" title="PDF">PDF</label></li>
-				<li><input type="radio" class="typeEnabled" id="rdRtf" name="downloadformat" value="rtf"  <c:if test="${dlFormat eq 'rtf'}">checked="checked"</c:if>/><label for="rdRtf" title="(Rich Text Format, e.g. Word)">RTF</label></li>
+				<li><input type="radio" class="typeEnabled" id="rdRtf" name="downloadformat" value="rtf"  <c:if test="${dlFormat eq 'rtf'}">checked="checked"</c:if>/><label for="rdRtf" title="(Rich Text Format, e.g. Word)">RTF<br/><span class="smalltxt">Word&reg;</span></label></li>
 			</ul>
 
 
@@ -161,10 +169,10 @@
 			<div id="oneClickRight">
 				<div class="grayText sectionHead">Choose the information:</div>
 				<ul>
+				<li><input type="radio" class="typeEnabled" id="rdDefault" name="displayformat" value="default"  <c:if test="${dlOutput eq 'default'}">checked="checked"</c:if>/><label for="rdDefault" title="Download the Format for this Page">Current page view</label></li>
 				<li><input type="radio" class="typeEnabled" id="rdCit" name="displayformat" value="citation"  <c:if test="${dlOutput eq 'citation'}">checked="checked"</c:if>/><label	for="rdCit" title="Download the citation section">Citation</label></li>
 				<li><input type="radio" class="typeEnabled" id="rdAbs" name="displayformat" value="abstract"  <c:if test="${dlOutput eq 'abstract'}">checked="checked"</c:if>/><label for="rdAbs" title="Download the abstract section">Abstract</label></li>
 				<li><input type="radio" class="typeEnabled" id="rdDet" name="displayformat" value="detailed"  <c:if test="${dlOutput eq 'detailed'}">checked="checked"</c:if>/><label for="rdDet" title="Download the detailed record">Detailed record</label></li>
-				<li><input type="radio" class="typeEnabled" id="rdDefault" name="displayformat" value="default"  <c:if test="${dlOutput eq 'default'}">checked="checked"</c:if>/><label for="rdDefault" title="Download the Format for this Page">Current page view</label></li>
 				</ul>
 			</div>
 		</div>
