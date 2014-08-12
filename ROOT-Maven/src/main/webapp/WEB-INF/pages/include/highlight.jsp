@@ -3,44 +3,50 @@
 
 <script>
 var highlightV1 = false;
-var highlightV2 = false;
-</script>	
+
+</script>
 <c:choose>
-	<c:when test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1') or actionBean.context.userSession.user.getPreference('HIGHLIGHT_V2')}">
-	 <c:choose>
-	 	<c:when test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1')}">
+	<c:when test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1') && !actionBean.context.userSession.user.userPrefs.highlightBackground}">
+
 	 	<script>highlightV1 = true;</script>
 	 		<style>
 	 		.hit{
 					font-size:120%;
 					font-style:italic;
 					font-weight:bold;
-					color:#148C75;
-					
+					color:${actionBean.context.userSession.user.userPrefs.highlight};
+
+				}
+				span.bkhit {
+					font-weight: bold;
+					background-color: #FFFFAA;
 				}
 			</style>
-	 	</c:when>
-	 	<c:when test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V2')}">
-	 	<script>highlightV2 = true;</script>
+
+	</c:when>
+	<c:when test="${actionBean.context.userSession.user.userPrefs.highlightBackground}">
+
 	 		<style>
 	 		.hit{
 					font-size:120%;
 					font-style:italic;
 					font-weight:bold;
-					color:#FF9933;
-					
+					color:${actionBean.context.userSession.user.userPrefs.highlight};
+
+				}
+				span.hit {
+					font-weight: bold;
+					background-color: #FFFFAA;
 				}
 			</style>
-	 	</c:when>
-	 </c:choose>	
 	</c:when>
 	<c:when test="${fromResults != 'true'}">
 		<style>
 			 span.hit {
 				font-weight: bold;
 				background-color: #FFFFAA;
-			}		
+			}
 		</style>
 	</c:when>
-	
-</c:choose>	
+
+</c:choose>
