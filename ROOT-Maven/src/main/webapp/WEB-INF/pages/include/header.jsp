@@ -181,10 +181,11 @@
 
 
 		});
-		if(highlightV1){
+
+		<c:if test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1')}">
 			hlight = $("#hlight_color").spectrum("get").toString();
 			params += "&highlight=" + escape(hlight);
-		}
+		</c:if>
 
 		url += params;
 		GALIBRARY.createWebEventWithLabel('Preferences', 'Preferences Saved', params);
@@ -194,9 +195,9 @@
 		}).success(function(data){
 			TINY.box.hide();
 			//change any highlight color on the fly
-			if(highlightV1){
+			<c:if test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1')}">
 				$(".hit").css("color", hlight);
-			}
+			</c:if>
 			$("#prefsNotSaved").hide();
 			$("#prefsSaved").fadeIn("slow");
 		}).error(function(data){

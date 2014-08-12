@@ -128,8 +128,15 @@
 			</c:if>
 
 			</ul>
+			<c:choose>
+				<c:when test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1')}">
+					<div id="highlight" style="float:right;display:none"><input type="checkbox" id="ckbackhighlight" <c:if test="${actionBean.context.userSession.user.userPrefs.highlightBackground}">checked="checked"</c:if>/><label for="ckbackhighlight"><b>Background Highlighting</b></label></div>
+				</c:when>
+				<c:otherwise>
+					<div id="highlight" style="float:right;display:none"><input type="checkbox" id="ckhighlight" <c:if test="${actionBean.ckhighlighting}">checked="checked"</c:if>/><label for="ckhighlight"><b>Highlight search terms</b></label></div>
+				</c:otherwise>
+			</c:choose>
 
-			<div id="highlight" style="float:right;display:none"><input type="checkbox" id="ckhighlight" <c:if test="${actionBean.ckhighlighting}">checked="checked"</c:if>/><label for="ckhighlight"><b>Highlight search terms</b></label></div>
 			<div class="clear"></div>
 
 			</div>
@@ -274,7 +281,16 @@
 			}
 
 		});
+		$("#ckbackhighlight").click(function(e) {
+			if ($(this).is(':checked')) {
+				$("span.nohit").removeClass("nohit").addClass("hit");
+				$.get("/session/highlight.url?CID=highlight&value=true");
+			} else {
+				$("span.hit").removeClass("hit").addClass("nohit");
+				$.get("/session/highlight.url?CID=highlight&value=false");
+			}
 
+		});
 		// Adjust title element when <sup> present
 		var suptext = $("#detailed td");
 		suptext.each(function() {
