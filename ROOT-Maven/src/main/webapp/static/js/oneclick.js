@@ -58,7 +58,8 @@ function changeOneClick(dlType){
 	$("#downloadlink").html("<span class='transText'>Edit</span>");
 	$("#downloadlink").addClass("editDLSettings");
 	$("#downloadlink").css("margin-left","0px");
-	$("#downloadlink").css("title","Edit Download Settings");
+	$("#downloadlink").attr("title",'Click to change one click download preferences.');
+
 	//$("#downloadlink").css("width","18px");
 
 	$("#oneclickDL").html("");

@@ -91,6 +91,7 @@ $(document).ready(function() {
 				    positionTracker:false,
 				    delay:0,
 				    speed:0,
+				    debug:false,
 				    functionInit: function(origin, content) {
 
 				        // we'll make this function asynchronous and allow the tooltip to go ahead and show the loading notification while fetching our data
@@ -109,6 +110,9 @@ $(document).ready(function() {
 				                }
 				            });
 
+				    },
+				    functionAfter: function(origin){
+				    	$(origin).attr('title', 'Click to change one click download preferences.');
 				    }
 				});
 				$(this).tooltipster('show',null);
