@@ -19,7 +19,7 @@ import org.ei.session.UserSession;
 public class CARSRequestFactory {
 	private final static Logger log4j = Logger.getLogger(CARSRequestFactory.class);
 
-    
+
     /**
      * Build a new CARS request object from request type
      * @param requesttype
@@ -30,12 +30,12 @@ public class CARSRequestFactory {
      */
     public static CARSRequest buildCARSRequest(CARSRequestType requesttype, HttpServletRequest request, UserSession userSession) throws ServiceException {
         log4j.info("Building CARS request object, type = " + requesttype.value());
-        
+
 		// Ensure request is passed in
 		if (request == null) {
 			throw new IllegalArgumentException("HttpServletRequest object is required!");
 		}
-		
+
         // Build CARS request based in incoming request type
 		CARSRequest carsrequest = null;
         if (CARSRequestType.URLBASED == requesttype) {
@@ -51,6 +51,10 @@ public class CARSRequestFactory {
         } else if (CARSRequestType.PROFILEDISPLAY == requesttype) {
             carsrequest = new CARSRequestProfileDisplay(request, userSession);
         } else if (CARSRequestType.BULKAUTHENTICATE == requesttype) {
+            // TEMPORARY FIX!  CARS currently needs the authtoken cleared out on non-IP bulk
+            if (userSession.getUser() != null) {
+                userSession.getUser().setAuthToken(null);
+            }
             carsrequest = new CARSRequestBulkAuthenticate(request, userSession);
 		} else {
 			throw new IllegalArgumentException("Invalid request type!");
@@ -63,7 +67,7 @@ public class CARSRequestFactory {
     /**
      * Build a CARSRequset from the "next" URI.  This can be returned from CARS in
      * certain requests (forgot password, for example).
-     * 
+     *
      * @param nexturi
      * @return
      * @throws ServiceException
