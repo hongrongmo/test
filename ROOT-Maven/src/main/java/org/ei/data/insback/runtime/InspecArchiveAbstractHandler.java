@@ -7,15 +7,15 @@ import org.xml.sax.helpers.DefaultHandler;
 
 
 public class InspecArchiveAbstractHandler extends DefaultHandler implements LexicalHandler {
-    
-    
+
+
     private int          entryNum   = 0;
     private StringBuffer htmlbuf    = new StringBuffer();
-    
+
     private String       tframe;
     private String       tcolsep;
     private String       trowsep;
-    
+
     // Defines the column defaults for the table
     private Col[]        cols;
     private int          colsIndex  = 0;
@@ -23,9 +23,9 @@ public class InspecArchiveAbstractHandler extends DefaultHandler implements Lexi
     private StringBuffer linkBuf;
     private StringBuffer linknum;
     private boolean      entity     = true;
-    
+
     private int          state      = -1;
-    
+
     private int          TITLE_NODE = 1;
     private int          THEAD      = 2;
     private int          LINK_NODE  = 3;
@@ -33,25 +33,25 @@ public class InspecArchiveAbstractHandler extends DefaultHandler implements Lexi
     private boolean      skip       = false;
     private boolean      font       = false;
     private boolean      colgroup   = false;
-    
-    
+
+
     public InspecArchiveAbstractHandler(boolean tables) {
         this.tables = tables;
     }
-    
+
     public String getHtmlBuff() {
         return this.htmlbuf.toString();
     }
-    
+
     public void startElement(String uri, String local, String raw, Attributes attrs) {
         if (raw.equals("table")) {
-            
+
             if (!tables) {
                 skip = true;
             }
             this.ttitle = new StringBuffer();
-            
-            
+
+
             if (!skip) {
                 this.tframe = attrs.getValue("frame");
                 if (this.tframe == null) {
@@ -61,18 +61,18 @@ public class InspecArchiveAbstractHandler extends DefaultHandler implements Lexi
                 if (this.tcolsep == null) {
                     this.tcolsep = "no";
                 }
-                
+
                 this.trowsep = attrs.getValue("rowsep");
                 if (this.trowsep == null) {
                     this.trowsep = "no";
                 }
-                
+
             }
         } else if (raw.equals("title")) {
             this.state = TITLE_NODE;
         } else if (raw.equals("font")) {
             font = true;
-            
+
             if (!skip && this.state != LINK_NODE) {
                 htmlbuf.append("<font color=\"red\">");
             }
@@ -89,7 +89,7 @@ public class InspecArchiveAbstractHandler extends DefaultHandler implements Lexi
                     htmlbuf.append(" cellspacing=\"10\">");
                 }
             }
-            
+
         } else if (raw.equals("colspec")) {
             if (!skip) {
                 Col col = new Col();
@@ -102,7 +102,7 @@ public class InspecArchiveAbstractHandler extends DefaultHandler implements Lexi
                 col.align = align;
                 colsIndex++;
                 this.cols[colsIndex] = col;
-                
+
             }
         } else if (raw.equals("thead")) {
             if (!skip) {
@@ -135,22 +135,22 @@ public class InspecArchiveAbstractHandler extends DefaultHandler implements Lexi
                 htmlbuf.append(">");
             }
         } else if (raw.equals("uidlink")) {
-            
+
             font = false;
-            
+
             if (!skip) {
                 linknum = new StringBuffer();
                 int l = htmlbuf.length();
                 if (l > 0 && htmlbuf.charAt(l - 1) != ' ') {
                     htmlbuf.append(" ");
                 }
-                
+
                 if (tables) {
                     htmlbuf
                         .append("<a CLASS=\"SpLink\" href=\"/search/results/expert.url?CID=expertSearchCitationFormat&database=2&startYear=1884&endYear=2005&yearselect=yearrange&searchWord1=");
                 }
                 state = LINK_NODE;
-                
+
             }
         } else if (raw.equals("entry")) {
             if (!skip) {
@@ -160,13 +160,13 @@ public class InspecArchiveAbstractHandler extends DefaultHandler implements Lexi
                 String align = attrs.getValue("align");
                 String valign = attrs.getValue("valign");
                 String colspan = getColspan(nameest, nameend);
-                
+
                 if (state == THEAD) {
                     htmlbuf.append("<th");
                 } else {
                     htmlbuf.append("<td");
                 }
-                
+
                 if (morerows != null) {
                     int m = Integer.parseInt(morerows);
                     m = m + 1;
@@ -174,33 +174,33 @@ public class InspecArchiveAbstractHandler extends DefaultHandler implements Lexi
                     htmlbuf.append(Integer.toString(m));
                     htmlbuf.append("\"");
                 }
-                
-                
+
+
                 if (colspan != null) {
                     htmlbuf.append(" colspan=\"");
                     htmlbuf.append(colspan);
                     htmlbuf.append("\"");
                 }
-                
+
                 if (valign != null) {
                     htmlbuf.append(" valign=\"");
                     htmlbuf.append(valign);
                     htmlbuf.append("\"");
                 }
-                
+
                 /*
-                 * 
+                 *
                  * if(align == null && entryNum <= colsIndex) { Col col = cols[entryNum]; align = col.align; }
                  */
-                
+
                 if (align != null) {
                     htmlbuf.append(" align=\"");
                     htmlbuf.append(align);
                     htmlbuf.append("\"");
                 }
-                
-                
-                htmlbuf.append("><a CLASS=\"MedBlackText\">");
+
+
+                htmlbuf.append("><span CLASS=\"MedBlackText\">");
                 entryNum++;
             }
         } else if (raw.equalsIgnoreCase("I")) {
@@ -237,10 +237,10 @@ public class InspecArchiveAbstractHandler extends DefaultHandler implements Lexi
             }
         }
     }
-    
+
     private String getColspan(String colBegin, String colEnd) {
         if (colBegin == null || colEnd == null) { return null; }
-        
+
         int beginIndex = -1;
         int endIndex = -1;
         for (int i = 0; i <= colsIndex; i++) {
@@ -248,24 +248,24 @@ public class InspecArchiveAbstractHandler extends DefaultHandler implements Lexi
             if (col.name.equals(colBegin)) {
                 beginIndex = i;
             }
-            
+
             if (col.name.equals(colEnd)) {
                 endIndex = i;
             }
         }
-        
+
         int span = (endIndex - beginIndex) + 1;
         return Integer.toString(span);
-        
+
     }
-    
+
     class Col {
         public String name;
         public String align;
         public String width;
-        
+
     }
-    
+
     public void characters(char ch[], int start, int length) {
         String s = new String(ch, start, length);
         if (s.equals("&")) {
@@ -275,7 +275,7 @@ public class InspecArchiveAbstractHandler extends DefaultHandler implements Lexi
         } else if (s.equals(">")) {
             s = "gt";
         }
-        
+
         if (state == TITLE_NODE) {
             ttitle.append(s);
         } else if (state == LINK_NODE) {
@@ -288,12 +288,12 @@ public class InspecArchiveAbstractHandler extends DefaultHandler implements Lexi
             }
         }
     }
-    
+
     public void endElement(String uri, String local, String raw) {
         if (raw.equalsIgnoreCase("title")) {
-            
+
             if (this.ttitle.length() > 0 && !skip) {
-                
+
                 htmlbuf.append("</p><b>");
                 htmlbuf.append(this.ttitle.toString());
                 htmlbuf.append("</b><br/>");
@@ -302,16 +302,16 @@ public class InspecArchiveAbstractHandler extends DefaultHandler implements Lexi
                 htmlbuf.append(this.ttitle.toString());
                 htmlbuf.append("] ");
             }
-            
-            
+
+
             this.state = -1;
         } else if (raw.equalsIgnoreCase("table")) {
-            
+
             if (skip) {
                 if (this.ttitle.length() == 0) {
                     htmlbuf.append(" [TABLE] ");
                 }
-                
+
             }
             skip = false;
         } else if (raw.equals("tgroup")) {
@@ -338,7 +338,7 @@ public class InspecArchiveAbstractHandler extends DefaultHandler implements Lexi
             }
         } else if (raw.equalsIgnoreCase("I")) {
             if (!skip) {
-                
+
                 if (state == TITLE_NODE) {
                     ttitle.append("</I>");
                 } else {
@@ -347,13 +347,13 @@ public class InspecArchiveAbstractHandler extends DefaultHandler implements Lexi
             }
         } else if (raw.equalsIgnoreCase("sup")) {
             if (!skip) {
-                
+
                 if (state == TITLE_NODE) {
                     ttitle.append("</sup>");
                 } else {
                     htmlbuf.append("</sup>");
                 }
-                
+
             }
         } else if (raw.equalsIgnoreCase("sub")) {
             if (!skip) {
@@ -378,21 +378,21 @@ public class InspecArchiveAbstractHandler extends DefaultHandler implements Lexi
         } else if (raw.equals("uidlink")) {
             if (!skip) {
                 String ln = linknum.toString();
-                
+
                 if (tables) {
                     htmlbuf.append(ln);
                     htmlbuf.append("+WN+AN\">");
                 }
-                
+
                 if (font) {
                     htmlbuf.append("<b><font color=\"red\">");
                 }
-                
+
                 htmlbuf.append(ln);
                 if (font) {
                     htmlbuf.append("</font></b>");
                 }
-                
+
                 if (tables) {
                     htmlbuf.append("</a>");
                 }
@@ -400,9 +400,9 @@ public class InspecArchiveAbstractHandler extends DefaultHandler implements Lexi
             }
             font = false;
         }
-        
+
     }
-    
+
     public void addColGroup() {
         htmlbuf.append("<colgroup>");
         for (int i = 0; i <= colsIndex; i++) {
@@ -413,29 +413,29 @@ public class InspecArchiveAbstractHandler extends DefaultHandler implements Lexi
                 htmlbuf.append("\"");
             }
             htmlbuf.append("/>");
-            
+
         }
-        
+
         htmlbuf.append("</colgroup>");
         colgroup = true;
     }
-    
+
     public void skippedEntity(java.lang.String name) throws SAXException {
         System.out.println(name);
     }
-    
+
     public void comment(char[] ch, int start, int length) throws SAXException {
     }
-    
+
     public void endCDATA() throws SAXException {
     }
-    
+
     public void endDTD() throws SAXException {
     }
-    
+
     public void endEntity(String name) throws SAXException {
         if (!skip) {
-            
+
             if (state == TITLE_NODE) {
                 ttitle.append(";");
             } else {
@@ -443,13 +443,13 @@ public class InspecArchiveAbstractHandler extends DefaultHandler implements Lexi
             }
         }
     }
-    
+
     public void startCDATA() throws SAXException {
     }
-    
+
     public void startDTD(String name, String publicId, String systemId) throws SAXException {
     }
-    
+
     public void startEntity(String name) throws SAXException {
         if (!skip) {
             if (state == TITLE_NODE) {
