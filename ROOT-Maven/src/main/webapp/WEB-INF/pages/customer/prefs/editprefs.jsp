@@ -140,6 +140,18 @@
 	<div class="settingsRight">
 
 		<input type="hidden" name="save" value="true"/>
+			<c:set value="${actionBean.currentuserprefs.dlLocation}" var="dlLocation"></c:set>
+
+			<div class="settingSection">Download location</div>
+			<fieldset title="Download location Settings">
+			<ul class="prefsRadios">
+				<li><label for="mypc_radio"><input class="locationRadio" type="radio" name="dlLocation" value="mypc" id="mypc_radio" <c:if test="${dlLocation eq 'mypc'}">checked="checked"</c:if>/>My PC</label></li>
+				<li><label for="refworks_radio"><input class="locationRadio" type="radio" name="dlLocation" value="refworks" id="refworks_radio" <c:if test="${dlLocation eq 'refworks'}">checked="checked"</c:if>/>RefWorks</label></li>
+				<li><label for="googledrive_radio"><input class="locationRadio" type="radio" name="dlLocation" value="googledrive" id="googledrive_radio" <c:if test="${dlLocation eq 'googledrive'}">checked="checked"</c:if>/>Google Drive</label></li>
+				<li><label for="dropbox_radio"><input class="locationRadio" type="radio" name="dlLocation" value="dropbox" id="dropbox_radio" <c:if test="${dlLocation eq 'dropbox'}">checked="checked"</c:if>/>Dropbox</label></li>
+			</ul>
+			</fieldset>
+				<hr/>
 		<div class="settingSection">Download format</div>
 		<c:set value="${actionBean.currentuserprefs.dlFormat}" var="dlFormat"></c:set>
 		<fieldset title="Dounload Format Settings">
@@ -151,12 +163,11 @@
 				<li><label for="excel_radio"><input class="formatRadio" type="radio" name="dlFormat" value="excel" id="excel_radio" <c:if test="${dlFormat eq 'excel'}">checked="checked"</c:if>/>Excel&reg;</label></li>
 				<li><label for="pdf_radio"><input class="formatRadio" type="radio" name="dlFormat" value="pdf" id="pdf_radio" <c:if test="${dlFormat eq 'pdf'}">checked="checked"</c:if>/>PDF</label></li>
 				<li><label for="rtf_radio"><input class="formatRadio" type="radio" name="dlFormat" value="rtf" id="rtf_radio" <c:if test="${dlFormat eq 'rtf'}">checked="checked"</c:if>/>RTF<span class="smalltxt">(Word&reg;)</span></label></li>
-
 			</ul>
 			</fieldset>
 			<c:set value="${actionBean.currentuserprefs.dlOutput}" var="dlOutput"></c:set>
 			<hr/>
-			<div class="settingSection">Download Output</div>
+			<div class="settingSection">Download output</div>
 			<fieldset title="Download Output Settings">
 			<ul class="prefsRadios">
 				<li><label for="default_radio"><input type="radio" name="dlOutput" value="default" id="default_radio" <c:if test="${dlOutput eq 'default'}">checked="checked"</c:if>/>Current page view</label></li>
@@ -165,17 +176,7 @@
 				<li><label for="detailed_radio"><input type="radio" name="dlOutput" value="detailed" id="detailed_radio" <c:if test="${dlOutput eq 'detailed'}">checked="checked"</c:if>/>Detailed record</label></li>
 			</ul>
 			</fieldset>
-			<c:set value="${actionBean.currentuserprefs.dlLocation}" var="dlLocation"></c:set>
-			<hr/>
-			<div class="settingSection">Download location</div>
-			<fieldset title="Download location Settings">
-			<ul class="prefsRadios">
-				<li><label for="mypc_radio"><input class="locationRadio" type="radio" name="dlLocation" value="mypc" id="mypc_radio" <c:if test="${dlLocation eq 'mypc'}">checked="checked"</c:if>/>My PC</label></li>
-				<li><label for="refworks_radio"><input class="locationRadio" type="radio" name="dlLocation" value="refworks" id="refworks_radio" <c:if test="${dlLocation eq 'refworks'}">checked="checked"</c:if>/>RefWorks</label></li>
-				<li><label for="googledrive_radio"><input class="locationRadio" type="radio" name="dlLocation" value="googledrive" id="googledrive_radio" <c:if test="${dlLocation eq 'googledrive'}">checked="checked"</c:if>/>Google Drive</label></li>
-				<li><label for="dropbox_radio"><input class="locationRadio" type="radio" name="dlLocation" value="dropbox" id="dropbox_radio" <c:if test="${dlLocation eq 'dropbox'}">checked="checked"</c:if>/>Dropbox</label></li>
-			</ul>
-			</fieldset>
+
 
 	</div>
 
