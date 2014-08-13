@@ -144,7 +144,7 @@
 		<hr/>
 		<div id="oneClickMid">
 			<div id="oneClickLeft">
-				<div class="grayText sectionHead">Choose where:</div>
+				<div class="grayText sectionHead">Location:</div>
 				<ul>
 				<li><input type="radio" class="outputLocation" id="outputMyPC"     name="outputLocation" value="mypc" <c:if test="${dlLocation eq 'mypc'}">checked="checked"</c:if>/><label	for="outputMyPC" title="Download the citation section"><img src="/static/images/Download.png" alt="Save to my PC Icon" />My PC</label></li>
 				<li><input type="radio" class="outputLocation" id="outputRefWorks" name="outputLocation" value="refworks"  <c:if test="${dlLocation eq 'refworks'}">checked="checked"</c:if>/><label for="outputRefWorks" title="Download the abstract section"><img src="/static/images/refworks_icon.jpg" alt="Reforks Icon" />RefWorks</label></li>
@@ -153,7 +153,7 @@
 				</ul>
 			</div>
 			<div id="oneClickRight">
-			<div class="grayText sectionHead">Choose the format:</div>
+			<div class="grayText sectionHead">Format:</div>
 			<ul>
 				<li><input type="radio" class="typeEnabled" id="rdRis" name="downloadformat" value="ris"  <c:if test="${dlFormat eq 'ris' or dlFormat eq 'refworks' or dlLocation eq 'refworks'}">checked="checked"</c:if>/><label	for="rdRis" title="RIS Format (EndNote, ProCite, Reference Manager)">RIS<br/><span class="smalltxt">EndNote, Reference Manager</span></label></li>
 				<li><input type="radio" class="typeEnabled" id="rdBib" name="downloadformat" value="bib"  <c:if test="${dlFormat eq 'bib'}">checked="checked"</c:if>/><label for="rdBib" title="BibTeX format">BibTeX</label></li>
@@ -167,7 +167,7 @@
 
 			</div>
 			<div id="oneClickRight">
-				<div class="grayText sectionHead">Choose the information:</div>
+				<div class="grayText sectionHead">Output:</div>
 				<ul>
 				<li><input type="radio" class="typeEnabled" id="rdDefault" name="displayformat" value="default"  <c:if test="${dlOutput eq 'default'}">checked="checked"</c:if>/><label for="rdDefault" title="Download the Format for this Page">Current page view</label></li>
 				<li><input type="radio" class="typeEnabled" id="rdCit" name="displayformat" value="citation"  <c:if test="${dlOutput eq 'citation'}">checked="checked"</c:if>/><label	for="rdCit" title="Download the citation section">Citation</label></li>

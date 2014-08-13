@@ -174,18 +174,20 @@
 		var url = "/customer/userprefs.url?save=true&";
 		var params = "";
 		var hlight;
+		var back_highlight = false;
 		$("#userPreferencesForm input:checked").each(function (){
-
-				if(params != ""){params += "&";}
-				params += $(this).attr("name") + "=" + $(this).val();
-
-
+				if($(this).attr("name") != 'highlightBackground'){
+					if(params != ""){params += "&";}
+					//skip the highlight portion. We will do this later.
+					params += $(this).attr("name") + "=" + $(this).val();
+				}
 		});
-
-		<c:if test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1')}">
+		if(highlightV1){
 			hlight = $("#hlight_color").spectrum("get").toString();
+			back_highlight = $("#hlight_bg_chkbx").prop("checked");
 			params += "&highlight=" + escape(hlight);
-		</c:if>
+			params += "&highlightBackground=" + back_highlight;
+		}
 
 		url += params;
 		GALIBRARY.createWebEventWithLabel('Preferences', 'Preferences Saved', params);
@@ -195,9 +197,24 @@
 		}).success(function(data){
 			TINY.box.hide();
 			//change any highlight color on the fly
-			<c:if test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1')}">
-				$(".hit").css("color", hlight);
-			</c:if>
+			if(highlightV1){
+
+				if(back_highlight){
+					$(".hit").addClass("bghit");
+					$(".bghit").removeClass("hit");
+					$(".bghit").css("color", "#000000");
+					$.cookie('ev_highlight', '{"bg_highlight":'+true+', "color":"'+hlight+'"}',{path:'/'});
+				}else{
+					$(".bghit").addClass("hit");
+					$(".hit").removeClass("bghit");
+					$(".hit").css("color", hlight);
+					$.cookie('ev_highlight', '{"bg_highlight":'+false+', "color":"'+hlight+'"}',{path:'/'});
+				}
+
+				if($("#ckbackhighlight")){
+					$("#ckbackhighlight").prop("checked",back_highlight);
+				}
+			}
 			$("#prefsNotSaved").hide();
 			$("#prefsSaved").fadeIn("slow");
 		}).error(function(data){
