@@ -706,8 +706,25 @@ $(document).ready(function() {
 			$("#facet_cv").find(".facetentry_label").each(function(){
 			    if(qArray.indexOf($.trim($(this).text().toLowerCase()))>0){
 			        //console.log($(this).text());
-			        $(this).css('background-color', 'yellow');
-			        $(this).css('font-weight', 'bold');
+			    	if(highlightV1){
+			    		if($.cookie('ev_highlight')){
+
+							var hlOptions = JSON.parse($.cookie("ev_highlight"));
+							if(!hlOptions.bg_highlight){
+								$(this).addClass("hit");
+								$(this).removeClass("bghit");
+							}else{
+					    		$(this).addClass("bghit");
+					    		$(this).removeClass("hit");
+
+							}
+			    		}
+			    	}else{
+			    		$(this).css('background-color', 'yellow');
+				        $(this).css('font-weight', 'bold');
+			    	}
+
+
 			        $(this).attr("title", "Select term(s) to improve your results");
 			       // $(this).attr("alt", "this is an alt tag that is really really long");
 			        highlighted = true;
