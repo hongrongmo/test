@@ -82,7 +82,7 @@
     .settingsContents hr{display:block;}
     #highlightColorli div.sp-replacer{margin-right:5px;margin-bottom:5px;}
     .smalltxt{
-    	padding-left:5px;
+    	padding-left:3px;
     	font-size:10px;
     	color:#808080;
     }
@@ -150,7 +150,7 @@
 				<li><label for="csv_radio"><input class="formatRadio" type="radio" name="dlFormat" value="csv" id="csv_radio" <c:if test="${dlFormat eq 'csv'}">checked="checked"</c:if>/>CSV</label></li>
 				<li><label for="excel_radio"><input class="formatRadio" type="radio" name="dlFormat" value="excel" id="excel_radio" <c:if test="${dlFormat eq 'excel'}">checked="checked"</c:if>/>Excel&reg;</label></li>
 				<li><label for="pdf_radio"><input class="formatRadio" type="radio" name="dlFormat" value="pdf" id="pdf_radio" <c:if test="${dlFormat eq 'pdf'}">checked="checked"</c:if>/>PDF</label></li>
-				<li><label for="rtf_radio"><input class="formatRadio" type="radio" name="dlFormat" value="rtf" id="rtf_radio" <c:if test="${dlFormat eq 'rtf'}">checked="checked"</c:if>/>RTF <span class="smalltxt">(Word&reg;)</span></label></li>
+				<li><label for="rtf_radio"><input class="formatRadio" type="radio" name="dlFormat" value="rtf" id="rtf_radio" <c:if test="${dlFormat eq 'rtf'}">checked="checked"</c:if>/>RTF<span class="smalltxt">(Word&reg;)</span></label></li>
 
 			</ul>
 			</fieldset>
