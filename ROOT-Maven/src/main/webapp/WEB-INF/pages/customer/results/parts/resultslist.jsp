@@ -185,9 +185,7 @@
 				</c:if>
  --%>
 				</p>
-	            <p>
-	               <div id="previewtext_${result.doc.hitindex}" class="previewtext"></div>
-	            </p>
+               <div id="previewtext_${result.doc.hitindex}" class="previewtext"></div>
 
 				</div>
 

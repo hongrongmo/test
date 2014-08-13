@@ -728,13 +728,9 @@ $(document).ready(function() {
 			}
 		}
 	}
-	var wadjust = 268;
 
-	function resizeResults() {
-         $("#resultsarea").width($("#resultsbox").width() - wadjust);
-    }
-    resizeResults();
-    $(window).bind('resize', resizeResults);
+	$(window).bind('resize', resizeresults);
+    resizeresults();
 
 	if(show_all){
 		$(document).ready(function(){
@@ -743,6 +739,19 @@ $(document).ready(function() {
 	}
 });
 
+//Adjust results area with resize
+function resizeresults() {
+	var min_facetcol_width = 268;
+	var resultsbox_width = $("#resultsbox").width();
+
+	var resultsbox_minwidth = $("#resultsbox").css('min-width');
+    if (!resultsbox_minwidth || resultsbox_minwidth == 0) resultsbox_minwidth = 1015;
+    else resultsbox_minwidth = Number(resultsbox_minwidth.replace('px',''));
+
+    if (resultsbox_width >= resultsbox_minwidth) {
+		$("#resultsarea").width($("#resultsbox").width() - min_facetcol_width);
+	}
+}
 
 function navigatorsOnsubmit(eventcontrol)
 {
@@ -898,9 +907,6 @@ function handleAbstractPreview(event) {
 		var physicalquery = $("#physicalquery").text();
 		previewurl += "&query=" + physicalquery;
 
-		//if(highlightV2){
-		//	previewurl += "&partial=true";
-		//}
 		link.html("Loading...");
 		$.ajax({
 			type : "GET",
@@ -910,10 +916,9 @@ function handleAbstractPreview(event) {
 			success : function(data, status, xhr) {
 				var json = jQuery.parseJSON(data);
 
-				//alert("going to print1111----->"+json.previewtext);
 				if (json.previewtext == 'error') {
 					link.html("<img id=\"previewimage\" src=\"/static/images/EV_hide.png\"/>Hide preview");
-					previewtext.text("No preview available.").slideDown("slow");
+					previewtext.text("No preview available.").slideDown("slow", resizeresults);
 					return;
 				} else {
 				    link.html("<img id=\"previewimage\" src=\"/static/images/EV_hide.png\"/>Hide preview");
@@ -921,7 +926,7 @@ function handleAbstractPreview(event) {
 				    if(json.countLeft > 0){
 				    	previewHtml += "&nbsp;&nbsp;<a href='"+absLink+"' title='"+absTitle+"'>("+ json.countLeft + " more search terms)</a>";
 				    }
-				    previewtext.html(previewHtml).slideDown("slow");
+				    previewtext.html(previewHtml).slideDown("slow", resizeresults);
 				}
 				if((highlightV1) && highlight && highlight.length > 0){
 					$(".hit").css("color",highlight);
@@ -929,11 +934,11 @@ function handleAbstractPreview(event) {
 			},
 			error : function(data) {
 				link.html("<img id=\"previewimage\" src=\"/static/images/EV_hide.png\"/>Hide preview");
-				previewtext.text("No preview available.").slideDown("slow");
+				previewtext.text("No preview available.").slideDown("slow", resizeresults);
 			}
 		});
 	} else {
-		previewtext.slideToggle("slow");
+		previewtext.slideToggle("slow", resizeresults);
 	}
 
 	if( linktext == "Hide preview"){
