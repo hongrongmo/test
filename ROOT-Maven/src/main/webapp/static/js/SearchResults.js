@@ -706,8 +706,25 @@ $(document).ready(function() {
 			$("#facet_cv").find(".facetentry_label").each(function(){
 			    if(qArray.indexOf($.trim($(this).text().toLowerCase()))>0){
 			        //console.log($(this).text());
-			        $(this).css('background-color', 'yellow');
-			        $(this).css('font-weight', 'bold');
+			    	if(highlightV1){
+			    		if($.cookie('ev_highlight')){
+
+							var hlOptions = JSON.parse($.cookie("ev_highlight"));
+							if(!hlOptions.bg_highlight){
+								$(this).addClass("hit");
+								$(this).removeClass("bghit");
+							}else{
+					    		$(this).addClass("bghit");
+					    		$(this).removeClass("hit");
+
+							}
+			    		}
+			    	}else{
+			    		$(this).css('background-color', 'yellow');
+				        $(this).css('font-weight', 'bold');
+			    	}
+
+
 			        $(this).attr("title", "Select term(s) to improve your results");
 			       // $(this).attr("alt", "this is an alt tag that is really really long");
 			        highlighted = true;
@@ -900,12 +917,16 @@ function handleAbstractPreview(event) {
 	var previewtextval = jQuery.trim(previewtext.text());
 	var absLink = $("#abslink_" + num).attr("href");
 	var absTitle = $("#abslink_" + num).attr("title");
-	var highlight = $(".hit").css("color");
+
 
 	if (previewtextval == "") {
 		var previewurl = link.attr("href");
 		var physicalquery = $("#physicalquery").text();
 		previewurl += "&query=" + physicalquery;
+
+		if(highlightV1){
+			previewurl += "&partial=true";
+		}
 
 		link.html("Loading...");
 		$.ajax({
@@ -923,13 +944,19 @@ function handleAbstractPreview(event) {
 				} else {
 				    link.html("<img id=\"previewimage\" src=\"/static/images/EV_hide.png\"/>Hide preview");
 				    var previewHtml = json.previewtext;
+				    if(json.theRest.length > 0){
+				    	previewHtml += "<span id='theRest_"+ num +"' style='display:none;'>"+json.theRest+"</span>";
+				    }
 				    if(json.countLeft > 0){
-				    	previewHtml += "&nbsp;&nbsp;<a href='"+absLink+"' title='"+absTitle+"'>("+ json.countLeft + " more search terms)</a>";
+				    	previewHtml += "<a href='' title='Click to show full abstract inline' onclick='$(\"#theRest_"+ num +"\").toggle();$(this).hide();return false;'>...("+ json.countLeft + " more search terms)</a>";
+
+				    }else if(json.theRest.length > 0){
+				    	previewHtml += "<a href='' title='Click to show full abstract inline' onclick='$(\"#theRest_"+ num +"\").toggle();$(this).hide();return false;'>...see more</a>";
 				    }
 				    previewtext.html(previewHtml).slideDown("slow", resizeresults);
 				}
-				if((highlightV1) && highlight && highlight.length > 0){
-					$(".hit").css("color",highlight);
+				if((highlightV1)){
+					checkHighlightCookie();
 				}
 			},
 			error : function(data) {

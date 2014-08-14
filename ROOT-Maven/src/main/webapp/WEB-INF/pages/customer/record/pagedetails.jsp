@@ -16,7 +16,7 @@
 	</stripes:layout-component>
 
 	<stripes:layout-component name="contents">
-	
+
 	<c:set var="rerunsearchurl" scope="request">
 		<c:choose>
             <c:when test="${empty actionBean.searchtype or actionBean.searchtype eq 'Quick' or actionBean.searchtype eq 'Book'}">/search/results/quick.url</c:when>
@@ -38,23 +38,23 @@
 				<c:otherwise>/search/expert.url</c:otherwise>
 			</c:choose>
 		</c:set>
-		
+
 		<c:set var="navigationurl">
 			<c:choose>
 				<c:when test="${actionBean.view eq 'page'}">/search/book/detailed.url?pageType=page</c:when>
 				<c:otherwise>/search/book/bookdetailed.url?pageType=book</c:otherwise>
 			</c:choose>
 		</c:set>
-	
+
 	<c:set var="result" value="${actionBean.results[0]}" scope="request"/>
 	<span session-id="${actionBean.sessionid}" security="${result.citedby.md5}" an="${result.citedby.an}" doi="${result.citedby.doi}" page="${result.citedby.firstpage}" volume="${result.citedby.firstvolume}" issue="${result.citedby.firstissue}" issn="${result.citedby.issn}" style="display: none;" name="citedbyspan"></span>
 
 	<div id="abstractbox">
 
 <%-- *********************************************************** --%>
-<%-- Top navbar - view search history, back to results and --%> 
-<%-- page navigation --%> 
-<%-- *********************************************************** --%> 
+<%-- Top navbar - view search history, back to results and --%>
+<%-- page navigation --%>
+<%-- *********************************************************** --%>
 		<div id="abstractnavbar" style="margin-top:15px;margin-bottom:10px;"  aria-label="Results options" role="navigation">
             <span><a class="newsearch" href="/home.url?database=${actionBean.database}" title="Run new search">New Search</a>|</span>
 			<span><a class="history" href="${searchhistoryurl}?${actionBean.newsearchqs}#searchhistorybox" title="View search history">View search history</a>|</span>
@@ -76,16 +76,16 @@
 		</div>
 
 		<div class="hr" style="height:5px; margin:0 10px"><hr></div>
-		
+
 		<style type="text/css">
-		
+
 		</style>
-		
+
 
 		<table id="abstractwrapperpage" border="0" cellpadding="0" cellspacing="0">
 <%-- *********************************************************** --%>
-<%-- Abstract LH column - abstract!                              --%> 
-<%-- *********************************************************** --%> 
+<%-- Abstract LH column - abstract!                              --%>
+<%-- *********************************************************** --%>
 		<tr>
 		<td id="lhcolumn">
 		<c:choose>
@@ -97,8 +97,8 @@
 			</c:otherwise>
 		</c:choose>
 <%-- *********************************************************** --%>
-<%--  tools - full text, blog, email/print/download, etc.--%> 
-<%-- *********************************************************** --%> 
+<%--  tools - full text, blog, email/print/download, etc.--%>
+<%-- *********************************************************** --%>
 		<div id="abstracttoolbar" style="margin-bottom:7px;width:${abstractwidth}"  aria-label="Record options" role="navigation">
 	<c:if test="${result.fulltext}">
 		<span><a class="fulltext" href="javascript:newwindow=window.open('/search/results/fulltext.url?docID=${result.doc.docid}','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable'); void('');" title="View full text (opens in a new window)"><img id="ftimg" class="fulltext" src="/static/images/full_text.png" title="View full text (opens in a new window)"></a>|</span>
@@ -116,76 +116,81 @@
 			<span><a class="print" id="printlink" title="Print this record" href="/delivery/print/display.url?database=${actionBean.database}&displayformat=detailed&docidlist=${result.doc.docid}&handlelist=${result.doc.hitindex}">Print</a>|</span>
 			<span><a class="download" id="downloadlink" title="Download this record" href="/delivery/download/display.url?database=${actionBean.database}&displayformat=detailed&docidlist=${result.doc.docid}&handlelist=${result.doc.hitindex}">Download</a>|</span>
 			<span><a class="save" title="Save this record to a folder in Settings" href="/personal/folders/save/view.url?CID=viewSavedFolders&EISESSION=${actionBean.sessionid}&SEARCHID=${actionBean.searchid}&count=1&source=selectedset&database=${actionBean.database}&format=${actionBean.view=='page'?'expertSearchDetailedFormat':'expertSearchAbstractFormat'}&DOCINDEX=${result.doc.hitindex}&backurl=CID%3D${actionBean.CID}%26SEARCHID%3D${actionBean.searchid}%26COUNT%3D1%26database%3D${actionBean.database}">Save to Folder</a></span>
-   </c:if>		
+   </c:if>
 			<div class="clear"></div>
 		</div>
-		
+
 		<div class="hr" style="color: #9b9b9b; background-color: #9b9b9b; height: 1px; margin: 0 0 7px 0;"><hr></div>
 
-		
+
 <%-- *********************************************************** --%>
-<%-- Page/Book display --%> 
-<%-- *********************************************************** --%> 
- 
+<%-- Page/Book display --%>
+<%-- *********************************************************** --%>
+
 			<div id="tabs" aria-label="Record views" role="navigation">
 				<ul>
 				<c:choose>
 					<c:when test="${actionBean.view eq 'page'}">
 						<c:if test="${actionBean.internalsearch ne 'yes'}">
 								<li><a href="#" title="Page details view"  class="active">Page Details</a></li>
-						</c:if>			
-								<li><a href="/search/book/bookdetailed.url?pageType=book&amp;${actionBean.bookdetnavqs}" title="Book details view"<c:if test="${actionBean.view eq 'book'}"> class="active"</c:if>>Book Details</a></li>		
+						</c:if>
+								<li><a href="/search/book/bookdetailed.url?pageType=book&amp;${actionBean.bookdetnavqs}" title="Book details view"<c:if test="${actionBean.view eq 'book'}"> class="active"</c:if>>Book Details</a></li>
 					</c:when>
 					<c:otherwise>
 						<c:if test="${actionBean.internalsearch ne 'yes'}">
 								<li><a href="/search/book/detailed.url?pageType=page&amp;${actionBean.pagedetnavqs}" title="Page details view"<c:if test="${actionBean.view eq 'page'}"> class="active"</c:if>>Page Details</a></li>
-						</c:if>			
+						</c:if>
 								<li><a href="#" title="Book details view" class="active">Book Details</a></li>
 					</c:otherwise>
 				</c:choose>
-			
+
 				</ul>
 				<c:if test="${actionBean.view eq 'page'}">
-				<div id="highlight" style="float:right;display:none"><input type="checkbox" id="ckhighlight" <c:if test="${actionBean.ckhighlighting}">checked="checked"</c:if>/><b>Highlight search terms</b></div>
+				<c:when test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1')}">
+					<div id="highlight" style="float:right;display:none"><input type="checkbox" id="ckbackhighlight" style="margin-bottom:0px;vertical-align:text-bottom;" <c:if test="${actionBean.context.userSession.user.userPrefs.highlightBackground}">checked="checked"</c:if>/><label for="ckbackhighlight"><b>Background Highlighting</b></label></div>
+				</c:when>
+				<c:otherwise>
+					<div id="highlight" style="float:right;display:none"><input type="checkbox" id="ckhighlight" <c:if test="${actionBean.ckhighlighting}">checked="checked"</c:if>/><b>Highlight search terms</b></div>
+				</c:otherwise>c
 				</c:if>
 				<div class="clear"></div>
-			
+
 			</div>
-			
-			
+
+
 			<div id="abstractarea" class="shadowbox" style="width: 98%;"  aria-label="Article" role="main">
-			<form  name="quicksearchresultsform" >	
+			<form  name="quicksearchresultsform" >
 			<c:if test="${actionBean.view eq 'page'}">
-				<p class="topline">Record ${result.doc.hitindex} from ${actionBean.displaydb} for: ${actionBean.displayquery}, 
+				<p class="topline">Record ${result.doc.hitindex} from ${actionBean.displaydb} for: ${actionBean.displayquery},
 				<c:choose>
 					<c:when test="${not empty actionBean.emailalertweek}">Week ${actionBean.emailalertweek}</c:when>
 					<c:when test="${not empty actionBean.updatesNo}">Last ${actionBean.updatesNo} update(s)</c:when>
 					<c:when test="${'Combined' eq actionBean.searchtype}"></c:when>
 					<c:otherwise>${actionBean.startYear}-${actionBean.endYear}</c:otherwise>
 				</c:choose></p>
-			
+
 				<div class="hr" style="color: #9b9b9b; background-color: #9b9b9b; height: 1px; margin: 0 12px 7px 0;width:100%"><hr/></div>
 			</c:if>
-			
+
 			<c:choose>
 			<c:when test="${actionBean.view eq 'book'}"><jsp:include page="parts/bookformat.jsp"/></c:when>
 			<c:otherwise>
 			<p style="margin:0 0 5px 0">Check record to add to Selected Records</p>
 			<jsp:include page="parts/pageformat.jsp"/></c:otherwise>
 			</c:choose>
-			
-			
+
+
 			<div class="clear"></div>
 			</form>
 			</div>
 
 			<div class="clear"></div>
-			
+
 		</td>
 
 <%-- *********************************************************** --%>
-<%-- Abstract RH column - scopus tools, add a tag, etc.!         --%> 
-<%-- *********************************************************** --%> 
+<%-- Abstract RH column - scopus tools, add a tag, etc.!         --%>
+<%-- *********************************************************** --%>
 		<td id="rhcolumnpage"  aria-label="Related content" role="complementary">
 		<c:if test="${actionBean.view eq 'book'}">
 	 		<span> <form name="quicksearch" style="display:inline;" action="/search/results/quick.url" method="POST" onSubmit="return searchValidation();">
@@ -208,27 +213,27 @@
 						<div  class="sidebarbox" title="Keyword Cloud">
 							<div class="sidebartitle">Keyword Cloud <a href="${actionBean.helpUrl}#Ebook_keyword_cloud.htm#About" alt="Learn more about this keyword cloud" title="Learn more about this keyword cloud" class="helpurl"><img
 						src="/static/images/i.png" border="0" class="infoimg" align="top" alt=""/></a></div>
-							
+
 							<div style="padding: 7px;">Keywords that appear most frequently in this book</div>
-							
+
 							<div class="sidebardata">${actionBean.cloud}</div>
-							
+
 						</div>
 					</div>
 	 </c:if>
-		
-<%-- References box                                                 --%>    		
+
+<%-- References box                                                 --%>
 <jsp:include page="parts/references_box.jsp"></jsp:include>
 
-<%-- Scopus cited-by box                                                 --%>    		
+<%-- Scopus cited-by box                                                 --%>
 <jsp:include page="parts/citedby_box.jsp"></jsp:include>
 
-<%-- Tags & groups box                                                   --%>    		
+<%-- Tags & groups box                                                   --%>
 <jsp:include page="parts/tagbubble.jsp"></jsp:include>
-		
+
 		</td>
 		</tr>
-		
+
 		</table>
 
 		<div class="clear"></div>
@@ -246,7 +251,7 @@
 	<script src="/static/js/lindaHall.js?v=${releaseversion}" language="Javascript"></script>
 	</c:if>
 	<SCRIPT LANGUAGE="Javascript">
-	
+
 	var searchquery="${actionBean.encodeddisplayquery}";
 	var sessionid="${actionBean.sessionid}";
 	var searchid="${actionBean.searchid}";
@@ -254,7 +259,7 @@
 	var searchtype = "${actionBean.searchtype}";
 	var database = "${actionBean.database}";
 	var databaseid = "${actionBean.compmask}";
-	var handle="${result.doc.hitindex}"; 
+	var handle="${result.doc.hitindex}";
 	var docid="${result.doc.docid}";
 	var view="${actionBean.view}";
 	$(document).ready(function() {
@@ -267,69 +272,78 @@
 				$("span.hit").removeClass("hit").addClass("nohit");
 				$.get("/session/highlight.url?CID=highlight&value=false");
 			}
-			
+
 		});
-		
+		$("#ckbackhighlight").click(function(e) {
+			if ($(this).is(':checked')) {
+				$(".bghit").removeClass("bghit").addClass("hit");
+				$.cookie('ev_highlight', '{bg_highlight":'+false+'',{path:'/'});
+			} else {
+				$(".hit").removeClass("hit").addClass("bghit");
+				$.cookie('ev_highlight', '{bg_highlight":'+true+'',{path:'/'});
+			}
+
+		});
 		// Adjust title element when <sup> present
 		var suptext = $("#detailed td");
 		suptext.each(function() {
 			if ($(this).find('sup').length > 0) $(this).css('position','relative').css('top','-5px');
 		});
-		
+
 		//
 		// Handle the print link
 		//
 		$("#printlink").click(function(e) {
 			e.preventDefault();
-			
+
 			new_window = window.open($(this).attr('href'), 'NewWindow',
 					'status=yes,resizable,scrollbars,width=640,height=480');
 			new_window.focus();
-			
+
 			return false;
 		});
 
-		// 
+		//
 		// Handle the email link
 		//
 		$("#emaillink").click(function(e) {
 			e.preventDefault();
-			
+
 			new_window = window.open($(this).attr('href'), 'NewWindow',
 					'status=yes,resizable,scrollbars,width=640,height=480');
 			new_window.focus();
-			
+
 			return false;
 		});
-		
-		// 
+
+		//
 		// Handle the download link
 		//
 		$("#downloadlink").click(function(e) {
 			e.preventDefault();
-			
+
 			new_window = window.open($(this).attr('href'), 'NewWindow',
 					'status=yes,resizable,scrollbars,width=640,height=600');
 			new_window.focus();
-			
+
 			return false;
 		});
-		
-		// 
+
+		//
 		// Handle the blog link
 		//
 		$("#bloglink").click(function(e) {
-			
+
 			e.preventDefault();
-			
+
 			new_window = window.open($(this).attr('href'), 'NewWindow',
 					'status=yes,resizable,scrollbars,width=640,height=480');
 			new_window.focus();
-			
+
 			return false;
 		});
 });
-	
+
 
 	//Script for saved records format
 	function savedrecordsFormat(sessionid, searchtype, searchid, database,
@@ -374,9 +388,9 @@
 				'status=yes,resizable,scrollbars,width=600,height=400');
 		NewWindow.focus();
 	}
-	 
+
 	<c:if test="${actionBean.view eq 'book'}">
-//  Book specific code for loading pages from TOC links  
+//  Book specific code for loading pages from TOC links
             function loadFromToc(isbn,page)
             {
               isbn = "${result.isbn13}";
@@ -386,19 +400,19 @@
               {
                 newwwin.focus();
               }
-                      
+
               return;
             }
-            
+
             function searchFromCloud(isbn,tag)
             {
               document.location = "/search/results/quick.url?CID=quickSearchCitationFormat&yearselect=yearrange&database=131072&searchWord1={" + escape(tag) + "}&searchWord2=" + isbn + "&boolean1=AND&section1=KY&section2=BN";
               return;
             }
-       </c:if>     
-           
-</SCRIPT>        
+       </c:if>
+
+</SCRIPT>
 	</stripes:layout-component>
 
-	
+
 </stripes:layout-render>

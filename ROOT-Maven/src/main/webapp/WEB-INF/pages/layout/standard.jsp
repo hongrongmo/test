@@ -26,6 +26,16 @@
 	<jwr:script src="/bundles/tooltipster.js"></jwr:script>
 	<jwr:style src="/bundles/tooltipster.css"></jwr:style>
 </c:if>
+<script>
+var highlightV1 = false;
+</script>
+<c:if test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1')}">
+<script>
+	highlightV1 = true;
+
+</script>
+<script src='/static/js/jquery/spectrum.js'></script>
+</c:if>
 <stripes:layout-component name="csshead"/>
 
 

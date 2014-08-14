@@ -400,6 +400,14 @@ See http://bgrins.github.io/spectrum/themes/ for instructions.
     z-index: 0;
 }
 
+#highlight .sp-dd{
+	height: 11px;
+}
+#highlight .sp-preview{
+	width:14px;
+    height:14px;
+}
+
 .sp-palette {
     *width: 220px;
     max-width: 220px;
