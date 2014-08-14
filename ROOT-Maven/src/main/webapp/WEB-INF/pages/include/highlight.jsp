@@ -30,9 +30,9 @@
 				if(!hlOptions.bg_highlight){
 					if($("#ckbackhighlight")){
 						$("#ckbackhighlight").prop("checked", false);
-
 					}
 					$(".hit").css("color", hlOptions.color);
+					$("a span.hit").css("color", "inherit");
 				}else{
 					$(".hit").addClass("bghit");
 					$(".bghit").removeClass("hit");
@@ -44,19 +44,24 @@
  		}
 	 	</script>
 	 		<style>
-	 		.hit{
+	 		span.hit{
 					font-size:120%;
 					font-style:italic;
 					font-weight:bold;
 					color:${actionBean.context.userSession.user.userPrefs.highlight};
 
 				}
-				span.bghit, .bghit {
+
+				span.bghit, span.bghit {
 					font-weight: bold;
 					font-size:120%;
 					color:black;
 					background-color: #FFFFAA;
 				}
+
+			a span.hit{
+				color:inherit;
+			}
 			</style>
 
 	</c:when>
