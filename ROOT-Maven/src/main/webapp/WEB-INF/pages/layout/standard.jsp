@@ -28,10 +28,14 @@
 </c:if>
 <script>
 var highlightV1 = false;
-<c:if test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1')}">
-	highlightV1 = true;
-</c:if>
 </script>
+<c:if test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1')}">
+<script>
+	highlightV1 = true;
+
+</script>
+<script src='/static/js/jquery/spectrum.js'></script>
+</c:if>
 <stripes:layout-component name="csshead"/>
 
 

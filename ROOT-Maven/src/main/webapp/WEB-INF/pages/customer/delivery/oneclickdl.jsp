@@ -194,29 +194,9 @@
 <script>
 
 $(document).ready(function() {
+	checkForRefworks($('input[name="outputLocation"]:checked').val());
 	$(".outputLocation").click(function (){
-		var output = $(this).attr("id");
-		var defOutput = "";
-			//console.log(output);
-	       //gapi.savetodrive.render('savetodrive-div', {
-	          //  src: '//localhost.engineeringvillage.com/path/to/myfile.pdf',
-	           // filename: 'My Statement.pdf',
-	           // sitename: 'Engineering Village'
-	          //});
-		if(output == "outputRefWorks"){
-			//disable output type selection and select RIS as default
-			$("#rdRis").prop("checked",true);
-			$("#rdCit").prop("checked", true);
-			$(".typeEnabled").prop("disabled", true);
-			$("li label").addClass("grayText");
-			$("#savePrefsButton").show();
-	        $("#dropBoxLinkSpan").hide();
-		}else{
-			$(".typeEnabled").prop("disabled",false);
-			$("li label").removeClass("grayText");
-			$("#savePrefsButton").show();
-	        $("#dropBoxLinkSpan").hide();
-		}
+		checkForRefworks(this);
 
 	});
 
@@ -229,6 +209,30 @@ $(document).ready(function() {
 	}
 
 });
+function checkForRefworks(radio){
+	var output = $(radio).attr("id");
+	var defOutput = "";
+		//console.log(output);
+       //gapi.savetodrive.render('savetodrive-div', {
+          //  src: '//localhost.engineeringvillage.com/path/to/myfile.pdf',
+           // filename: 'My Statement.pdf',
+           // sitename: 'Engineering Village'
+          //});
+	if(output == "outputRefWorks"){
+		//disable output type selection and select RIS as default
+		$("#rdRis").prop("checked",true);
+		$("#rdCit").prop("checked", true);
+		$(".typeEnabled").prop("disabled", true);
+		$("li label").addClass("grayText");
+		$("#savePrefsButton").show();
+        $("#dropBoxLinkSpan").hide();
+	}else{
+		$(".typeEnabled").prop("disabled",false);
+		$("li label").removeClass("grayText");
+		$("#savePrefsButton").show();
+        $("#dropBoxLinkSpan").hide();
+	}
+}
 </script>
 		<c:if test="${actionBean.saveToGoogleEnabled}">
 			<script language="javascript"  src="/static/js/savetogoogle.js?v=${releaseversion}"></script>
@@ -268,6 +272,12 @@ $(document).ready(function() {
 
 				if(displaytype == 'default'){
 					//need to figure out what page they are on to get this right.
+					if(typeof($("input[name='selectoption']:checked").val()) != "undefined" && downloadLocation != "refworks"){
+						//we are on selected records get the option that is selected
+						actionDisplayType = $("input[name='selectoption']:checked").val();
+					}if(downloadLocation == "refworks"){
+						actionDisplayType = "citation";
+					}
 					displaytype = actionDisplayType;
 					$('input[value="' + actionDisplayType + '"]').prop("checked", true);
 				}
