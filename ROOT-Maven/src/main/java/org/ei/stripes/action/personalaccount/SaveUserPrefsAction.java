@@ -12,6 +12,7 @@ import net.sourceforge.stripes.action.StreamingResolution;
 import net.sourceforge.stripes.action.UrlBinding;
 
 import org.apache.commons.httpclient.HttpStatus;
+import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
 import org.ei.biz.security.IAccessControl;
 import org.ei.biz.security.ISecuredAction;
@@ -36,7 +37,7 @@ public class SaveUserPrefsAction extends EVActionBean implements ISecuredAction 
     private String highlight;
     private String highlightBackground = "false";
 	private boolean showPreview;
-	private List<String> hightlght_colors = Arrays.asList("#ff8200","#2babe2","#158c75");
+	private List<String> hightlght_colors = Arrays.asList("#ff8200","#2babe2","#158c75", "#000000");
     @Override
     public IAccessControl getAccessControl() {
         return new NoAuthAccessControl();
@@ -64,7 +65,11 @@ public class SaveUserPrefsAction extends EVActionBean implements ISecuredAction 
 		        userPrefs.setDlLocation(this.dlLocation);
 		        userPrefs.setSort(this.sortOrder);
 		        userPrefs.setShowPreview(this.showPreview);
-		        userPrefs.setHighlightBackground(Boolean.getBoolean(this.highlightBackground));
+		        userPrefs.setHighlightBackground(Boolean.valueOf(this.highlightBackground));
+
+		        if(GenericValidator.isBlankOrNull(highlight) || !hightlght_colors.contains(highlight)){
+		        	this.highlight = hightlght_colors.get(0);
+		        }
 		        userPrefs.setHighlight(this.highlight);
 
 		        userPrefs.save();

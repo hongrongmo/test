@@ -160,8 +160,13 @@ function basketDownloadSubmit() {
 		addParams += "&folderid=" + folderid;
 	}
 
-	if(displaytype == 'defualt'){
-		displaytype = 'citation';
+	if(displaytype == 'default'){
+		if(typeof($("input[name='selectoption']:checked").val()) != "undefined" && downloadLocation != "refworks"){
+			//we are on selected records get the option that is selected
+			displaytype = $("input[name='selectoption']:checked").val();
+		}else{
+			displaytype = 'citation';
+		}
 	}
 
 	var url = "";

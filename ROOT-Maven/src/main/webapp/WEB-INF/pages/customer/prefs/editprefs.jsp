@@ -82,8 +82,9 @@
     .settingsContents hr{display:block;}
     #highlightColorli div.sp-replacer{margin-right:5px;margin-bottom:5px;}
     .smalltxt{
+    	padding-left:3px;
     	font-size:10px;
-    	padding-left:10px;
+    	color:#808080;
     }
 </style>
 
@@ -130,8 +131,8 @@
 				<c:set value="${actionBean.currentuserprefs.highlightBackground}" var="highlightBackground"></c:set>
 				<fieldset title="Highlight Search Terms">
 				<ul class="prefsRadios">
-					<li id="highlightColorli"><label for="hlight_color"><input type="text" name="highlightColor"  id="hlight_color" />Text Color</label></li>
-					<li><label for="hlight_bg_chkbx"><input type="checkbox" name="highlightBackground"  id="hlight_bg_chkbx" <c:if test="${highlightBackground}">checked="checked"</c:if>/>Background Highlight</label></li>
+					<li id="highlightColorli"><label for="hlight_color" <c:if test="${highlightBackground}">style="color:gray;"</c:if>><input type="text" name="highlightColor"  id="hlight_color" />Text Color</label></li>
+					<li><input type="checkbox" name="highlightBackground"  id="hlight_bg_chkbx" <c:if test="${highlightBackground}">checked="checked"</c:if>/><label for="hlight_bg_chkbx" style="width:75%;padding-top:2px;">Background Highlight</label></li>
 				</ul>
 				</fieldset>
 			</c:if>
@@ -139,33 +140,8 @@
 	<div class="settingsRight">
 
 		<input type="hidden" name="save" value="true"/>
-		<div class="settingSection">Download format</div>
-		<c:set value="${actionBean.currentuserprefs.dlFormat}" var="dlFormat"></c:set>
-		<fieldset title="Dounload Format Settings">
-			<ul class="prefsRadios">
-				<li><label for="ris_radio"><input class="formatRadio" type="radio" name="dlFormat" value="ris" id="ris_radio" <c:if test="${dlFormat eq 'ris' or dlFormat eq 'refworks'}">checked="checked"</c:if>/>RIS<br/><span class="smalltxt">EndNote, Reference Manager</span></label></li>
-				<li><label for="bib_radio"><input class="formatRadio" type="radio" name="dlFormat" value="bib" id="bib_radio" <c:if test="${dlFormat eq 'bib'}">checked="checked"</c:if>/>BibTeX</label></li>
-				<li><label for="ascii_radio"><input class="formatRadio" type="radio" name="dlFormat" value="ascii" id="ascii_radio" <c:if test="${dlFormat eq 'ascii'}">checked="checked"</c:if>/>Text<br/><span class="smalltxt">ASCII</span></label></li>
-				<li><label for="csv_radio"><input class="formatRadio" type="radio" name="dlFormat" value="csv" id="csv_radio" <c:if test="${dlFormat eq 'csv'}">checked="checked"</c:if>/>CSV</label></li>
-				<li><label for="excel_radio"><input class="formatRadio" type="radio" name="dlFormat" value="excel" id="excel_radio" <c:if test="${dlFormat eq 'excel'}">checked="checked"</c:if>/>Excel&reg;</label></li>
-				<li><label for="pdf_radio"><input class="formatRadio" type="radio" name="dlFormat" value="pdf" id="pdf_radio" <c:if test="${dlFormat eq 'pdf'}">checked="checked"</c:if>/>PDF</label></li>
-				<li><label for="rtf_radio"><input class="formatRadio" type="radio" name="dlFormat" value="rtf" id="rtf_radio" <c:if test="${dlFormat eq 'rtf'}">checked="checked"</c:if>/>RTF<br/><span class="smalltxt">Word&reg;</span></label></li>
-
-			</ul>
-			</fieldset>
-			<c:set value="${actionBean.currentuserprefs.dlOutput}" var="dlOutput"></c:set>
-			<hr/>
-			<div class="settingSection">Download output</div>
-			<fieldset title="Download Output Settings">
-			<ul class="prefsRadios">
-				<li><label for="default_radio"><input type="radio" name="dlOutput" value="default" id="default_radio" <c:if test="${dlOutput eq 'default'}">checked="checked"</c:if>/>Current Page View</label></li>
-				<li><label for="citation_radio"><input type="radio" name="dlOutput" value="citation" id="citation_radio" <c:if test="${dlOutput eq 'citation'}">checked="checked"</c:if>/>Citation</label></li>
-				<li><label for="abstract_radio"><input type="radio" name="dlOutput" value="abstract" id="abstract_radio" <c:if test="${dlOutput eq 'abstract'}">checked="checked"</c:if>/>Abstract</label></li>
-				<li><label for="detailed_radio"><input type="radio" name="dlOutput" value="detailed" id="detailed_radio" <c:if test="${dlOutput eq 'detailed'}">checked="checked"</c:if>/>Detailed</label></li>
-			</ul>
-			</fieldset>
 			<c:set value="${actionBean.currentuserprefs.dlLocation}" var="dlLocation"></c:set>
-			<hr/>
+
 			<div class="settingSection">Download location</div>
 			<fieldset title="Download location Settings">
 			<ul class="prefsRadios">
@@ -175,6 +151,32 @@
 				<li><label for="dropbox_radio"><input class="locationRadio" type="radio" name="dlLocation" value="dropbox" id="dropbox_radio" <c:if test="${dlLocation eq 'dropbox'}">checked="checked"</c:if>/>Dropbox</label></li>
 			</ul>
 			</fieldset>
+				<hr/>
+		<div class="settingSection">Download format</div>
+		<c:set value="${actionBean.currentuserprefs.dlFormat}" var="dlFormat"></c:set>
+		<fieldset title="Dounload Format Settings">
+			<ul class="prefsRadios">
+				<li><label for="ris_radio"><input class="formatRadio" type="radio" name="dlFormat" value="ris" id="ris_radio" <c:if test="${dlFormat eq 'ris' or dlFormat eq 'refworks'}">checked="checked"</c:if>/>RIS<span class="smalltxt">(EndNote, Ref. Manager)</span></label></li>
+				<li><label for="bib_radio"><input class="formatRadio" type="radio" name="dlFormat" value="bib" id="bib_radio" <c:if test="${dlFormat eq 'bib'}">checked="checked"</c:if>/>BibTeX</label></li>
+				<li><label for="ascii_radio"><input class="formatRadio" type="radio" name="dlFormat" value="ascii" id="ascii_radio" <c:if test="${dlFormat eq 'ascii'}">checked="checked"</c:if>/>Text<span class="smalltxt">(ASCII)</span></label></li>
+				<li><label for="csv_radio"><input class="formatRadio" type="radio" name="dlFormat" value="csv" id="csv_radio" <c:if test="${dlFormat eq 'csv'}">checked="checked"</c:if>/>CSV</label></li>
+				<li><label for="excel_radio"><input class="formatRadio" type="radio" name="dlFormat" value="excel" id="excel_radio" <c:if test="${dlFormat eq 'excel'}">checked="checked"</c:if>/>Excel&reg;</label></li>
+				<li><label for="pdf_radio"><input class="formatRadio" type="radio" name="dlFormat" value="pdf" id="pdf_radio" <c:if test="${dlFormat eq 'pdf'}">checked="checked"</c:if>/>PDF</label></li>
+				<li><label for="rtf_radio"><input class="formatRadio" type="radio" name="dlFormat" value="rtf" id="rtf_radio" <c:if test="${dlFormat eq 'rtf'}">checked="checked"</c:if>/>RTF<span class="smalltxt">(Word&reg;)</span></label></li>
+			</ul>
+			</fieldset>
+			<c:set value="${actionBean.currentuserprefs.dlOutput}" var="dlOutput"></c:set>
+			<hr/>
+			<div class="settingSection">Download output</div>
+			<fieldset title="Download Output Settings">
+			<ul class="prefsRadios">
+				<li><label for="default_radio"><input  class="outputRadio" type="radio" name="dlOutput" value="default" id="default_radio" <c:if test="${dlOutput eq 'default'}">checked="checked"</c:if>/>Current page view</label></li>
+				<li><label for="citation_radio"><input class="outputRadio" type="radio" name="dlOutput" value="citation" id="citation_radio" <c:if test="${dlOutput eq 'citation'}">checked="checked"</c:if>/>Citation</label></li>
+				<li><label for="abstract_radio"><input class="outputRadio" type="radio" name="dlOutput" value="abstract" id="abstract_radio" <c:if test="${dlOutput eq 'abstract'}">checked="checked"</c:if>/>Abstract</label></li>
+				<li><label for="detailed_radio"><input class="outputRadio" type="radio" name="dlOutput" value="detailed" id="detailed_radio" <c:if test="${dlOutput eq 'detailed'}">checked="checked"</c:if>/>Detailed record</label></li>
+			</ul>
+			</fieldset>
+
 
 	</div>
 
@@ -190,22 +192,44 @@ $(".locationRadio").click(function(){
 function checkForRefworks(rad){
 	if($(rad).attr('id') == "refworks_radio"){
 		$("#ris_radio").prop("checked", true);
+		$("#citation_radio").prop("checked", true);
 		$(".formatRadio").prop("disabled", true);
+		$(".outputRadio").prop("disabled", true);
 	}else{
 		$(".formatRadio").prop("disabled", false);
+		$(".outputRadio").prop("disabled", false);
 	}
 }
+
 checkForRefworks($("input[name=dlLocation]:checked"));
+
 </script>
-<script src='/static/js/jquery/spectrum.js'></script>
+
 <script>
 $("#hlight_color").spectrum({
     showPaletteOnly: true,
+    <c:if test="${highlightBackground}">disabled:true,</c:if>
     showPalette:true,
-    color: '${highlightColor}',
+    color: '<c:choose><c:when test="${highlightBackground}">#000000</c:when><c:otherwise>${highlightColor}</c:otherwise></c:choose>',
     preferredFormat:'hex',
     palette: [
-        ['#ff8200','#2babe2','#158c75']
+        ['#ff8200','#2babe2','#158c75', "#000000"]
     ]
+});
+$("#hlight_bg_chkbx").click(function(e) {
+	var oldColor = "${highlightColor}";
+	if ($(this).prop('checked')) {
+		$("#hlight_color").spectrum("set", "#000000");
+		$("#hlight_color").spectrum("disable");
+		$("#hlight_color_lbl").css("color", "gray");
+
+
+	} else {
+		$("#hlight_color").spectrum("enable");
+		$("#hlight_color").spectrum("set", oldColor);
+		$("#hlight_color_lbl").css("color", "black");
+
+	}
+
 });
 </script>

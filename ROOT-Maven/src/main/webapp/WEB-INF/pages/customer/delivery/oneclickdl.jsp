@@ -11,7 +11,7 @@
 
 <style>
 	#oneClickMid, #oneClickContent, #oneClickBottom{
-		width:600px;
+		width:585px;
 	}
 	#oneClickRight{
 		float:left;
@@ -123,7 +123,8 @@
 	#oneClickContent hr{display:block;}
     .smalltxt{
     	font-size:10px;
-    	padding-left:10px;
+    	padding-left:3px;
+    	color:#808080;
     }
 </style>
 </head>
@@ -144,7 +145,7 @@
 		<hr/>
 		<div id="oneClickMid">
 			<div id="oneClickLeft">
-				<div class="grayText sectionHead">Choose where:</div>
+				<div class="grayText sectionHead">Location:</div>
 				<ul>
 				<li><input type="radio" class="outputLocation" id="outputMyPC"     name="outputLocation" value="mypc" <c:if test="${dlLocation eq 'mypc'}">checked="checked"</c:if>/><label	for="outputMyPC" title="Download the citation section"><img src="/static/images/Download.png" alt="Save to my PC Icon" />My PC</label></li>
 				<li><input type="radio" class="outputLocation" id="outputRefWorks" name="outputLocation" value="refworks"  <c:if test="${dlLocation eq 'refworks'}">checked="checked"</c:if>/><label for="outputRefWorks" title="Download the abstract section"><img src="/static/images/refworks_icon.jpg" alt="Reforks Icon" />RefWorks</label></li>
@@ -153,21 +154,21 @@
 				</ul>
 			</div>
 			<div id="oneClickRight">
-			<div class="grayText sectionHead">Choose the format:</div>
+			<div class="grayText sectionHead">Format:</div>
 			<ul>
-				<li><input type="radio" class="typeEnabled" id="rdRis" name="downloadformat" value="ris"  <c:if test="${dlFormat eq 'ris' or dlFormat eq 'refworks' or dlLocation eq 'refworks'}">checked="checked"</c:if>/><label	for="rdRis" title="RIS Format (EndNote, ProCite, Reference Manager)">RIS<br/><span class="smalltxt">EndNote, Reference Manager</span></label></li>
+				<li><input type="radio" class="typeEnabled" id="rdRis" name="downloadformat" value="ris"  <c:if test="${dlFormat eq 'ris' or dlFormat eq 'refworks' or dlLocation eq 'refworks'}">checked="checked"</c:if>/><label	for="rdRis" title="RIS Format (EndNote, ProCite, Reference Manager)">RIS<span class="smalltxt">(EndNote, Ref. Manager)</span></label></li>
 				<li><input type="radio" class="typeEnabled" id="rdBib" name="downloadformat" value="bib"  <c:if test="${dlFormat eq 'bib'}">checked="checked"</c:if>/><label for="rdBib" title="BibTeX format">BibTeX</label></li>
-				<li><input type="radio" class="typeEnabled" id="rdAsc" name="downloadformat" value="ascii"  <c:if test="${dlFormat eq 'ascii'}">checked="checked"</c:if>/><label for="rdAsc" title="Plain text format (ASCII)">Text<br/><span class="smalltxt">ASCII</span></label></li>
+				<li><input type="radio" class="typeEnabled" id="rdAsc" name="downloadformat" value="ascii"  <c:if test="${dlFormat eq 'ascii'}">checked="checked"</c:if>/><label for="rdAsc" title="Plain text format (ASCII)">Text<span class="smalltxt">(ASCII)</span></label></li>
 				<li><input type="radio" class="typeEnabled" id="rdCsv" name="downloadformat" value="csv"  <c:if test="${dlFormat eq 'csv'}">checked="checked"</c:if>/><label for="rdCsv" title="(Comma Separated Value Format)">CSV </label></li>
 				<li><input type="radio" class="typeEnabled" id="rdExcel" name="downloadformat" value="excel"  <c:if test="${dlFormat eq 'excel'}">checked="checked"</c:if>/><label for="rdExcel" title="Microsoft Excel">Excel&reg;</label></li>
 				<li><input type="radio" class="typeEnabled" id="rdPdf" name="downloadformat" value="pdf"  <c:if test="${dlFormat eq 'pdf'}">checked="checked"</c:if>/><label for="rdPdf" title="PDF">PDF</label></li>
-				<li><input type="radio" class="typeEnabled" id="rdRtf" name="downloadformat" value="rtf"  <c:if test="${dlFormat eq 'rtf'}">checked="checked"</c:if>/><label for="rdRtf" title="(Rich Text Format, e.g. Word)">RTF<br/><span class="smalltxt">Word&reg;</span></label></li>
+				<li><input type="radio" class="typeEnabled" id="rdRtf" name="downloadformat" value="rtf"  <c:if test="${dlFormat eq 'rtf'}">checked="checked"</c:if>/><label for="rdRtf" title="(Rich Text Format, e.g. Word)">RTF<span class="smalltxt">(Word&reg;)</span></label></li>
 			</ul>
 
 
 			</div>
 			<div id="oneClickRight">
-				<div class="grayText sectionHead">Choose the information:</div>
+				<div class="grayText sectionHead">Output:</div>
 				<ul>
 				<li><input type="radio" class="typeEnabled" id="rdDefault" name="displayformat" value="default"  <c:if test="${dlOutput eq 'default'}">checked="checked"</c:if>/><label for="rdDefault" title="Download the Format for this Page">Current page view</label></li>
 				<li><input type="radio" class="typeEnabled" id="rdCit" name="displayformat" value="citation"  <c:if test="${dlOutput eq 'citation'}">checked="checked"</c:if>/><label	for="rdCit" title="Download the citation section">Citation</label></li>
@@ -193,29 +194,9 @@
 <script>
 
 $(document).ready(function() {
+	checkForRefworks($('input[name="outputLocation"]:checked'));
 	$(".outputLocation").click(function (){
-		var output = $(this).attr("id");
-		var defOutput = "";
-			//console.log(output);
-	       //gapi.savetodrive.render('savetodrive-div', {
-	          //  src: '//localhost.engineeringvillage.com/path/to/myfile.pdf',
-	           // filename: 'My Statement.pdf',
-	           // sitename: 'Engineering Village'
-	          //});
-		if(output == "outputRefWorks"){
-			//disable output type selection and select RIS as default
-			$("#rdRis").prop("checked",true);
-			$("#rdCit").prop("checked", true);
-			$(".typeEnabled").prop("disabled", true);
-			$("li label").addClass("grayText");
-			$("#savePrefsButton").show();
-	        $("#dropBoxLinkSpan").hide();
-		}else{
-			$(".typeEnabled").prop("disabled",false);
-			$("li label").removeClass("grayText");
-			$("#savePrefsButton").show();
-	        $("#dropBoxLinkSpan").hide();
-		}
+		checkForRefworks(this);
 
 	});
 
@@ -228,6 +209,30 @@ $(document).ready(function() {
 	}
 
 });
+function checkForRefworks(radio){
+	var output = $(radio).attr("id");
+	var defOutput = "";
+		//console.log(output);
+       //gapi.savetodrive.render('savetodrive-div', {
+          //  src: '//localhost.engineeringvillage.com/path/to/myfile.pdf',
+           // filename: 'My Statement.pdf',
+           // sitename: 'Engineering Village'
+          //});
+	if(output == "outputRefWorks"){
+		//disable output type selection and select RIS as default
+		$("#rdRis").prop("checked",true);
+		$("#rdCit").prop("checked", true);
+		$(".typeEnabled").prop("disabled", true);
+		$(".typeEnabled").parent().find("label").addClass("grayText");
+		$("#savePrefsButton").show();
+        $("#dropBoxLinkSpan").hide();
+	}else{
+		$(".typeEnabled").prop("disabled",false);
+		$(".typeEnabled").parent().find("label").removeClass("grayText");
+		$("#savePrefsButton").show();
+        $("#dropBoxLinkSpan").hide();
+	}
+}
 </script>
 		<c:if test="${actionBean.saveToGoogleEnabled}">
 			<script language="javascript"  src="/static/js/savetogoogle.js?v=${releaseversion}"></script>
@@ -267,6 +272,12 @@ $(document).ready(function() {
 
 				if(displaytype == 'default'){
 					//need to figure out what page they are on to get this right.
+					if(typeof($("input[name='selectoption']:checked").val()) != "undefined" && downloadLocation != "refworks"){
+						//we are on selected records get the option that is selected
+						actionDisplayType = $("input[name='selectoption']:checked").val();
+					}if(downloadLocation == "refworks"){
+						actionDisplayType = "citation";
+					}
 					displaytype = actionDisplayType;
 					$('input[value="' + actionDisplayType + '"]').prop("checked", true);
 				}
