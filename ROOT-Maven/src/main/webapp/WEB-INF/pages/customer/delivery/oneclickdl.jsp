@@ -194,7 +194,7 @@
 <script>
 
 $(document).ready(function() {
-	checkForRefworks($('input[name="outputLocation"]:checked').val());
+	checkForRefworks($('input[name="outputLocation"]:checked'));
 	$(".outputLocation").click(function (){
 		checkForRefworks(this);
 
@@ -223,12 +223,12 @@ function checkForRefworks(radio){
 		$("#rdRis").prop("checked",true);
 		$("#rdCit").prop("checked", true);
 		$(".typeEnabled").prop("disabled", true);
-		$("li label").addClass("grayText");
+		$(".typeEnabled").parent().find("label").addClass("grayText");
 		$("#savePrefsButton").show();
         $("#dropBoxLinkSpan").hide();
 	}else{
 		$(".typeEnabled").prop("disabled",false);
-		$("li label").removeClass("grayText");
+		$(".typeEnabled").parent().find("label").removeClass("grayText");
 		$("#savePrefsButton").show();
         $("#dropBoxLinkSpan").hide();
 	}
