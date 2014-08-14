@@ -130,7 +130,7 @@
 			</ul>
 			<c:choose>
 				<c:when test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1')}">
-					<div id="highlight" style="float:right;"><input type="text" name="highlightColor"  id="hlight_color" /><label for="hlight_color" style="padding-left:3px;font-weight:bold;">Color Search Terms</label><input type="checkbox" id="ckbackhighlight" style="margin-bottom:0px;vertical-align:text-bottom;" <c:if test="${actionBean.context.userSession.user.userPrefs.highlightBackground}">checked="checked"</c:if>/><label for="ckbackhighlight"><b>Background Highlighting</b></label></div>
+					<div id="highlight" style="float:right;"><input type="text" name="highlightColorAbs"  id="hlight_color_abs" /><label id="hlight_color_abs_lbl" for="hlight_color_abs" style="padding-left:3px;font-weight:bold;">Color Search Terms</label><input type="checkbox" id="ckbackhighlight" style="margin-bottom:0px;vertical-align:text-bottom;" <c:if test="${actionBean.context.userSession.user.userPrefs.highlightBackground}">checked="checked"</c:if>/><label for="ckbackhighlight"><b>Background Highlighting</b></label></div>
 				</c:when>
 				<c:otherwise>
 					<div id="highlight" style="float:right;display:none"><input type="checkbox" id="ckhighlight" <c:if test="${actionBean.ckhighlighting}">checked="checked"</c:if>/><label for="ckhighlight"><b>Highlight search terms</b></label></div>
@@ -282,16 +282,22 @@
 
 		});
 		$("#ckbackhighlight").click(function(e) {
-			var color = $("#hlight_color").spectrum("get").toString();
+			var oldColor = JSON.parse($.cookie('ev_highlight')).color;
 			if ($(this).prop('checked')) {
 				$(".hit").removeClass("hit").addClass("bghit");
-				$(".bghit").css("color", "black")
-				$.cookie('ev_highlight', '{"bg_highlight":'+true+', "color":"'+color +'"}',{path:'/'});
+				$(".bghit").css("color", "black");
+				$("#hlight_color_abs").spectrum("set", "#000000");
+				$("#hlight_color_abs").spectrum("disable");
+				$("#hlight_color_abs_lbl").css("color", "gray");
+				$.cookie('ev_highlight', '{"bg_highlight":'+true+', "color":"'+oldColor +'"}',{path:'/'});
 
 			} else {
 				$(".bghit").removeClass("bghit").addClass("hit");
-				$(".hit").css("color", color);
-				$.cookie('ev_highlight', '{"bg_highlight":'+false+', "color":"'+color +'"}',{path:'/'});
+				$(".hit").css("color", oldColor);
+				$("#hlight_color_abs").spectrum("enable");
+				$("#hlight_color_abs").spectrum("set", oldColor);
+				$("#hlight_color_abs_lbl").css("color", "black");
+				$.cookie('ev_highlight', '{"bg_highlight":'+false+', "color":"'+oldColor +'"}',{path:'/'});
 			}
 
 		});
@@ -303,23 +309,29 @@
 				sessionColor = JSON.parse($.cookie("ev_highlight")).color;
 			}
 
-			$("#hlight_color").spectrum({
+			$("#hlight_color_abs").spectrum({
 			    showPaletteOnly: true,
 			    showPalette:true,
 			    color: sessionColor,
 			    preferredFormat:'hex',
 			    palette: [
-			        ['#ff8200','#2babe2','#158c75']
+			        ['#ff8200','#2babe2','#158c75', "#000000"]
 			    ]
 			});
-			$("#hlight_color").change(function(){
-				var newColor = $("#hlight_color").spectrum("get").toString();
+			$("#hlight_color_abs").change(function(){
+				var newColor = $("#hlight_color_abs").spectrum("get").toString();
 				var bgColor = $("#ckbackhighlight").prop("checked");
 				$.cookie('ev_highlight', '{"bg_highlight":'+bgColor+', "color":"'+newColor +'"}',{path:'/'});
 				if(!bgColor){
 					$(".hit").css("color",newColor);
 				}
+
 			});
+			if ( $("#ckbackhighlight").prop("checked")) {
+				$("#hlight_color_abs").spectrum("set", "#000000");
+				$("#hlight_color_abs").spectrum("disable");
+				$("#hlight_color_abs_lbl").css("color", "gray");
+			}
 		}
 
 		// Adjust title element when <sup> present

@@ -4,7 +4,6 @@
 
 <c:choose>
 	<c:when test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1')}">
-		<script src='/static/js/jquery/spectrum.js'></script>
 	 	<script>
 	 	<c:choose>
 		<c:when test="${actionBean.context.userSession.user.userPrefs.highlightBackground}">
@@ -31,6 +30,7 @@
 				if(!hlOptions.bg_highlight){
 					if($("#ckbackhighlight")){
 						$("#ckbackhighlight").prop("checked", false);
+
 					}
 					$(".hit").css("color", hlOptions.color);
 				}else{
@@ -42,7 +42,6 @@
 			}
 
  		}
-
 	 	</script>
 	 		<style>
 	 		.hit{

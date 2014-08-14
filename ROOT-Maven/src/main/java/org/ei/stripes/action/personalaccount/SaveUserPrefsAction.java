@@ -37,7 +37,7 @@ public class SaveUserPrefsAction extends EVActionBean implements ISecuredAction 
     private String highlight;
     private String highlightBackground = "false";
 	private boolean showPreview;
-	private List<String> hightlght_colors = Arrays.asList("#ff8200","#2babe2","#158c75");
+	private List<String> hightlght_colors = Arrays.asList("#ff8200","#2babe2","#158c75", "#000000");
     @Override
     public IAccessControl getAccessControl() {
         return new NoAuthAccessControl();

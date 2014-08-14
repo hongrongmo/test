@@ -185,6 +185,10 @@
 		if(highlightV1){
 			hlight = $("#hlight_color").spectrum("get").toString();
 			back_highlight = $("#hlight_bg_chkbx").prop("checked");
+			if(back_highlight){
+				hlight = JSON.parse($.cookie('ev_highlight')).color;
+			}
+
 			params += "&highlight=" + escape(hlight);
 			params += "&highlightBackground=" + back_highlight;
 		}
@@ -204,11 +208,22 @@
 					$(".bghit").removeClass("hit");
 					$(".bghit").css("color", "#000000");
 					$.cookie('ev_highlight', '{"bg_highlight":'+true+', "color":"'+hlight+'"}',{path:'/'});
+					if(typeof($("#hlight_color_abs")) != "undefined"){
+						$("#hlight_color_abs").spectrum("set", "#000000");
+						$("#hlight_color_abs").spectrum("disable");
+						$("#hlight_color_abs_lbl").css("color","gray");
+					}
 				}else{
 					$(".bghit").addClass("hit");
 					$(".hit").removeClass("bghit");
 					$(".hit").css("color", hlight);
 					$.cookie('ev_highlight', '{"bg_highlight":'+false+', "color":"'+hlight+'"}',{path:'/'});
+
+					if(typeof($("#hlight_color_abs")) != "undefined"){
+						$("#hlight_color_abs").spectrum("set", hlight);
+						$("#hlight_color_abs").spectrum("enable");
+						$("#hlight_color_abs_lbl").css("color","black");
+					}
 				}
 
 				if($("#ckbackhighlight")){
