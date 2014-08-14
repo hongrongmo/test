@@ -217,6 +217,7 @@
 					$(".bghit").addClass("hit");
 					$(".hit").removeClass("bghit");
 					$(".hit").css("color", hlight);
+					$("a span.hit").css("color", "inherit");
 					$.cookie('ev_highlight', '{"bg_highlight":'+false+', "color":"'+hlight+'"}',{path:'/'});
 
 					if(typeof($("#hlight_color_abs")) != "undefined"){
