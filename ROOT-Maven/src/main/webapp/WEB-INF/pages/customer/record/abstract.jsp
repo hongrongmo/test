@@ -294,6 +294,7 @@
 			} else {
 				$(".bghit").removeClass("bghit").addClass("hit");
 				$(".hit").css("color", oldColor);
+				$("a span.hit").css("color", "inherit");
 				$("#hlight_color_abs").spectrum("enable");
 				$("#hlight_color_abs").spectrum("set", oldColor);
 				$("#hlight_color_abs_lbl").css("color", "black");
@@ -324,6 +325,7 @@
 				$.cookie('ev_highlight', '{"bg_highlight":'+bgColor+', "color":"'+newColor +'"}',{path:'/'});
 				if(!bgColor){
 					$(".hit").css("color",newColor);
+					$("a span.hit").css("color", "inherit");
 				}
 
 			});
