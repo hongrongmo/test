@@ -204,7 +204,7 @@ function checkForRefworks(rad){
 checkForRefworks($("input[name=dlLocation]:checked"));
 
 </script>
-
+<c:if test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1')}">
 <script>
 $("#hlight_color").spectrum({
     showPaletteOnly: true,
@@ -233,3 +233,4 @@ $("#hlight_bg_chkbx").click(function(e) {
 
 });
 </script>
+</c:if>

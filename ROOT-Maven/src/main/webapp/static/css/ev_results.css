@@ -1,9 +1,9 @@
 /*
 * Styles for the search results page
 */
-#resultsbox {min-width: 997px;}
+#resultsbox {min-width: 1060px;}
 
-#resultsoptions { line-height: 1.4em; min-width: 997px;}
+#resultsoptions { line-height: 1.4em; min-width: 1060px;}
 
 #querydisplaywrap { background-color: #BBDAD2; margin:7px;}
 #querydisplay { background-color: #BBDAD2; padding: 0 7px; float: left; clear: both;}
@@ -124,7 +124,7 @@ float:left;
 .facet-sortable-placeholder { border: 1px dashed red; padding: 2px; visibility: visible; height: 20px}
 
 #resultswrapper {float: left; width:100%}
-#resultsarea {float: left; border: 1px solid #adaaad; min-width: 725px; width: 725px; margin: 0 7px 0 15px}
+#resultsarea {float: left; border: 1px solid #adaaad; min-width: 745px; width: 745px; margin: 0 7px 0 15px}
 #dudupresultsarea {float: left; border: 1px solid #adaaad; width: 1245px; margin: 0 7px 0 10px}
 #tagresultsarea {border: 1px solid #adaaad; min-width: 1024px; witdth: 100%; margin: 0 7px 0 10px}
 
@@ -133,7 +133,7 @@ float:left;
 #resultsmanager input {position: relative; top: 1px; margin: 0 2px 0 0; padding:0}
 #resultsmanager label {margin: 0; padding:0}
 
-#toolbar {float: left; margin: 3px; padding: 4px 7px; border-left: 1px solid #7A7A7A; height: 40px; width: 700px;}
+#toolbar {float: left; margin: 3px; padding: 4px 7px; border-left: 1px solid #7A7A7A; height: 40px; width: 575px;}
 #toolbar.patentrefs {height: 16px;}
 #toolbar .col {float:left; padding:3px 10px; margin: 0; border:none; background:none}
 #toolbar input[type="button"] {position: relative; top: -2px}
