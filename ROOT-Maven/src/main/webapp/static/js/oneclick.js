@@ -82,6 +82,7 @@ function recordPageDownloadSubmit(dlLinkUrl){
 	var downloadLocation = dlOptions.location;
 	var downloadformat = dlOptions.format;
 	var displayformat = dlOptions.displaytype;
+	var milli = (new Date()).getTime();
 
 	if(displayformat == 'default'){
 		//if it's set to default use the format that came in on the url
@@ -150,6 +151,7 @@ function basketDownloadSubmit() {
 	var sessionid = $("input[name='sessionid']").val();
 	var folderid = $("input[name='folderid']").val();
 	var addParams = '';
+	var milli = (new Date()).getTime();
 
 	if (downloadformat == undefined || downloadformat == "") {
 		alert("You must choose a download format.");
