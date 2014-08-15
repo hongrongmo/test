@@ -158,7 +158,7 @@ list-style-position:inside;
 	        <li class="featureTile">
 				 <div id="featureDetail1">
 				 	<div class="fdLeft">
-				 		<div class="fdTitle"><H1>Save to Google</H1></div>
+				 		<div class="fdTitle"><H1>Download Quicker</H1></div>
 				 		<div class="fdImage">  <jwr:image styleClass="featureImgDetail" src="/static/images/oneclickdl_big.png"></jwr:image></div>
 				 	</div>
 				 	<div class="fdRight">
@@ -171,12 +171,12 @@ list-style-position:inside;
 			 <li class="featureTile">
 				 <div id="featureDetail2">
 				 	<div class="fdLeft">
-				 		<div class="fdTitle"><H1>Mendeley Bookmarklet</H1></div>
-				 		<div class="fdImage">  <jwr:image styleClass="featureImgDetail" src="/static/images/savemendeley.png"></jwr:image></div>
+				 		<div class="fdTitle"><H1>Download to Dropbox</H1></div>
+				 		<div class="fdImage">  <jwr:image styleClass="featureImgDetail" src="/static/images/ev-and-dropbox.png"></jwr:image></div>
 				 	</div>
 				 	<div class="fdRight">
 				 		<div class="fdText">
-								Importing results into Mendeley is easy using Engineering Village. By clicking the Mendeley Bookmarklet link in the browser window, Engineering Village users can import results directly into their Mendeley account. You can download the Mendeley Bookmarklet at:  <a target="_blank" href="http://www.mendeley.com/import/" title="Mendeley Web Importer">http://www.mendeley.com/import/</a>
+								Download records directly to your Dropbox account. Easily access your files on-the-go.
 				 		</div>
 				 	</div>
 				 </div>
@@ -184,12 +184,12 @@ list-style-position:inside;
 			 <li class="featureTile">
 				 <div id="featureDetail3">
 				 	<div class="fdLeft">
-				 		<div class="fdTitle"><H1>My Preferences</H1></div>
+				 		<div class="fdTitle"><H1>Want to learn more?</H1></div>
 				 		<div class="fdImage">  <jwr:image styleClass="featureImgDetail" src="/static/images/myprefs.png"></jwr:image></div>
 				 	</div>
 				 	<div class="fdRight">
 				 		<div class="fdText">
-							Engineering Village users who login with their User Profile can set default options for basic search result and download preferences. These options include: Display results per page, Sorting, Show Preview, Download format and Download output.  Setting up a User Profile is easy and free, select <a href="/customer/profile/display.url?origin=loginBox&zone=main" title="Click here to register!">Register Now</a> to begin.
+							Want to learn more about Engineering Village? Check out our Training videos, or our Getting Started guide. If you would like to give us feedback or participate in a survey, check out the give feedback link.
 				 		</div>
 
 				 	</div>
