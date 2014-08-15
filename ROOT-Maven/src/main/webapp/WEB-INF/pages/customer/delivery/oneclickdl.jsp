@@ -194,7 +194,7 @@
 <script>
 
 $(document).ready(function() {
-	checkForRefworks($('input[name="outputLocation"]:checked'));
+
 	$(".outputLocation").click(function (){
 		checkForRefworks(this);
 
@@ -207,6 +207,7 @@ $(document).ready(function() {
 		$('input[value="'+dlOptions.displaytype+'"]').prop("checked", true);
 		$('input[value="'+dlOptions.format+'"]').prop("checked", true);
 	}
+	checkForRefworks($('input[name="outputLocation"]:checked'));
 
 });
 function checkForRefworks(radio){
