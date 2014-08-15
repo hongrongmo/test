@@ -159,11 +159,11 @@ list-style-position:inside;
 				 <div id="featureDetail1">
 				 	<div class="fdLeft">
 				 		<div class="fdTitle"><H1>Save to Google</H1></div>
-				 		<div class="fdImage">  <jwr:image styleClass="featureImgDetail" src="/static/images/googledrive.png"></jwr:image></div>
+				 		<div class="fdImage">  <jwr:image styleClass="featureImgDetail" src="/static/images/oneclickdl_big.png"></jwr:image></div>
 				 	</div>
 				 	<div class="fdRight">
 				 		<div class="fdText">
-								Importing results to Google Drive is easy on Engineering Village. From your Results page, select “Download”, choose the format of the record, and then select the Google Drive “Save” button. Save to Google Drive is especially convenient when you need access to Engineering Village records from anywhere outside of the Engineering Village product itself.
+								You can download records directly to your PC, or choose Google Drive, Dropbox, or RefWorks. Once you choose, we will remember that preference for your session.
 						</div>
 				 	</div>
 				 </div>
