@@ -20,7 +20,7 @@ import org.ei.gui.ListBoxOption;
 
 /**
  * @author KFokuo
- * 
+ *
  *         To change the template for this generated type comment go to Window&gt;Preferences&gt;Java&gt;Code Generation&gt;Code and Comments
  */
 public class BulletinGUI {
@@ -38,8 +38,8 @@ public class BulletinGUI {
         mappings.put("FRL", "Fuel Reformulation;fuel_reformation:fuel_reformulation");
         mappings.put("HE", "Health and Environment;health_environment");
         mappings.put("NG", "Natural Gas;natural_gas");
-        mappings.put("OCP", "Oilfield Chemicals;oilfield_chemicals");
-        mappings.put("OCL", "Oilfield Chemicals;oilfield_chemicals");
+        mappings.put("OCP", "Oil Field Chemicals;oilfield_chemicals");
+        mappings.put("OCL", "Oil Field Chemicals;oilfield_chemicals");
         mappings.put("PP", "Petroleum Processes;petroleum_processes");
         mappings.put("PRP", "Petroleum Refining and Petrochemicals ;petroleum_refining_petrochemicals");
         mappings.put("PSP", "Petroleum and Specialty Products;petroleum_speciality_products");

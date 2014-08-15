@@ -63,7 +63,7 @@
 	}
 	#oneClickMid{
 		pading-top:5px;
-		height:220px;
+		height:195px;
 	}
 	.outputLocation{
 		padding-top: 8px;
