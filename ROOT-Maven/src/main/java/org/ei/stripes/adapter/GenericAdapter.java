@@ -15,6 +15,8 @@ import javax.xml.transform.stream.StreamSource;
 import net.sourceforge.stripes.action.ActionBean;
 
 import org.apache.log4j.Logger;
+import org.ei.config.EVProperties;
+import org.ei.config.RuntimeProperties;
 import org.ei.exception.EVBaseException;
 import org.ei.exception.InfrastructureException;
 import org.ei.exception.SessionException;
@@ -69,7 +71,9 @@ public class GenericAdapter extends BizXmlAdapter {
         if(actionbean != null && actionbean.getContext() != null ){
         	EVActionBeanContext actionBeanContext = (EVActionBeanContext)actionbean.getContext();
         	String csrfSyncToken = "";
-        	if(actionBeanContext != null && actionBeanContext.getUserSession() != null){
+        	boolean isCSRFPrevEnabled = Boolean.parseBoolean((EVProperties.getRuntimeProperty(RuntimeProperties.PREVENT_CSRF_ATTACK)));
+        	
+        	if(isCSRFPrevEnabled && actionBeanContext != null && actionBeanContext.getUserSession() != null){
         		UserSession usersession = actionBeanContext.getUserSession();
         		boolean isSessionUpdateNeeded = false;
     			if(usersession.getFifoQueue().isEmpty())isSessionUpdateNeeded = true;
