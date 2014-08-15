@@ -37,6 +37,7 @@ import org.ei.session.UserSession;
 import org.ei.stripes.EVActionBeanContext;
 import org.ei.stripes.util.HttpRequestUtil;
 import org.ei.stripes.view.CustomizedLogo;
+import org.ei.util.SyncTokenFIFOQueue;
 import org.perf4j.StopWatch;
 import org.perf4j.log4j.Log4JStopWatch;
 
@@ -590,6 +591,9 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
     	boolean isCSRFPrevEnabled = Boolean.parseBoolean((EVProperties.getRuntimeProperty(RuntimeProperties.PREVENT_CSRF_ATTACK)));
     	if(!isCSRFPrevEnabled) return null;
 		boolean isSessionUpdateNeeded = false;
+		if(userSession.getFifoQueue() == null){
+			userSession.setFifoQueue(new SyncTokenFIFOQueue());
+		}
 		if(userSession.getFifoQueue().isEmpty()){
 			isSessionUpdateNeeded = true;
 		}

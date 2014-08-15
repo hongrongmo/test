@@ -108,7 +108,7 @@ public class UserSession implements Serializable
 	private transient Set<UserEntitlement> userEntitlements= new HashSet<UserEntitlement>();
     private transient CARSMetadata carsMetaData = new CARSMetadata();
     private transient IEVWebUser user;
-    private transient SyncTokenFIFOQueue fifoQueue = new SyncTokenFIFOQueue();
+    private SyncTokenFIFOQueue fifoQueue = new SyncTokenFIFOQueue();
 	
     
 	// ***************************************************************************
