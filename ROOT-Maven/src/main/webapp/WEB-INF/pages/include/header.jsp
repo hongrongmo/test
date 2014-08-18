@@ -208,7 +208,7 @@
 					$(".bghit").removeClass("hit");
 					$(".bghit").css("color", "#000000");
 					$.cookie('ev_highlight', '{"bg_highlight":'+true+', "color":"'+hlight+'"}',{path:'/'});
-					if(typeof($("#hlight_color_abs")) != "undefined"){
+					if($("#hlight_color_abs").length > 0){
 						$("#hlight_color_abs").spectrum("set", "#000000");
 						$("#hlight_color_abs").spectrum("disable");
 						$("#hlight_color_abs_lbl").css("color","gray");
@@ -217,9 +217,10 @@
 					$(".bghit").addClass("hit");
 					$(".hit").removeClass("bghit");
 					$(".hit").css("color", hlight);
+					$("a span.hit").css("color", "inherit");
 					$.cookie('ev_highlight', '{"bg_highlight":'+false+', "color":"'+hlight+'"}',{path:'/'});
 
-					if(typeof($("#hlight_color_abs")) != "undefined"){
+					if($("#hlight_color_abs").length > 0){
 						$("#hlight_color_abs").spectrum("set", hlight);
 						$("#hlight_color_abs").spectrum("enable");
 						$("#hlight_color_abs_lbl").css("color","black");
@@ -230,6 +231,17 @@
 					$("#ckbackhighlight").prop("checked",back_highlight);
 				}
 			}
+			if(!$.cookie("ev_oneclickdl") && $('#downloadlink').length > 0){
+				//if the user hasn't made changes to his session we need to update the current oneclick dl link
+				changeOneClick($("input[name='dlLocation']:checked").val());
+				dlOptions = {
+						location:$("input[name='dlLocation']:checked").val(),
+						format:$("input[name='dlFormat']:checked").val(),
+						displaytype:$("input[name='dlOutput']:checked").val(),
+						baseaddress:dlOptions.baseaddress
+				};
+			}
+
 			$("#prefsNotSaved").hide();
 			$("#prefsSaved").fadeIn("slow");
 		}).error(function(data){
