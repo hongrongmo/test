@@ -69,7 +69,7 @@ text-align:center;
 	text-align:center;
 }
 .featuretxt{
-padding-bottom:22px;
+padding-bottom:35px;
 padding-left:4px;
 padding-right:4px;
 
@@ -106,6 +106,9 @@ padding-right:4px;
 .featureBox:hover .featureTitle{
 	text-decoration:underline;
 }
+.featureTitle{
+	padding-bottom:0px;
+}
 #takeATour{padding-top:65px;}
 #takeATour a{
 	color:148C75;
@@ -129,21 +132,21 @@ list-style-position:inside;
      <div id="featureList" style="height:320px;padding-left:12px;">
          <div class="featureBoxSm floatL featureBox" id="feature1">
 
-         	<div class="featuretxt featureTitle"><H1>Save to Google Drive</H1></div>
-         	<div class="featuretxt featureImageSm"><jwr:image styleClass="featureImg" src="/static/images/googledrive_sm.png"></jwr:image></div>
-         	<div class="featuretxt">Download records directly to your Google Drive folder. Accessing Engineering Village records just became a lot easier and simpler.</div>
+         	<div class="featuretxt featureTitle"><H1>Download Quicker</H1></div>
+         	<div class="featuretxt featureImageSm"><jwr:image styleClass="featureImg" src="/static/images/oneclickdl.png"></jwr:image></div>
+         	<div class="featuretxt">You can download records directly to your PC, or choose Google Drive, Dropbox, or RefWorks. Once you choose, we will remember that preference for your session.</div>
          </div>
          <div class="featureBoxSm floatL featureBox" id="feature2">
 
-            <div class="featuretxt featureTitle"><H1>Mendeley Bookmarklet</H1></div>
-         	<div class="featuretxt featureImageSm"><jwr:image styleClass="featureImg" src="/static/images/savemendeley_sm.png"></jwr:image></div>
-         	<div class="featuretxt">Mendeley’s one-click web importer adds Engineering Village abstracts and citations to your Mendeley reference library.</div>
+            <div class="featuretxt featureTitle"><H1>Download to Dropbox</H1></div>
+         	<div class="featuretxt featureImageSm"><jwr:image styleClass="featureImg" src="/static/images/dropboxdl.png"></jwr:image></div>
+         	<div class="featuretxt">Download records directly to your Dropbox account. Easily access your files on-the-go</div>
          </div>
          <div class="featureBoxSm  floatL featureBox" id="feature3">
 
-            <div class="featuretxt featureTitle"><H1>My Preferences</H1></div>
-         	<div class="featuretxt featureImageSm"><jwr:image styleClass="featureImg"  src="/static/images/myprefs_sm.png"></jwr:image></div>
-         	<div class="featuretxt">Setting your preferences for search results and download is now available and easy to setup.</div>
+            <div class="featuretxt featureTitle"><H1>Want to learn more?</H1></div>
+         	<div class="featuretxt featureImageSm"><jwr:image styleClass="featureImg"  src="/static/images/learnmore.png"></jwr:image></div>
+         	<div class="featuretxt">Want to learn more about Engineering Village? Check out our Training videos, or our Getting Started guide. If you would like to give us feedback or participate in a survey, check out the give feedback link.</div>
          </div>
      </div>
 
@@ -155,12 +158,12 @@ list-style-position:inside;
 	        <li class="featureTile">
 				 <div id="featureDetail1">
 				 	<div class="fdLeft">
-				 		<div class="fdTitle"><H1>Save to Google</H1></div>
-				 		<div class="fdImage">  <jwr:image styleClass="featureImgDetail" src="/static/images/googledrive.png"></jwr:image></div>
+				 		<div class="fdTitle"><H1>Download Quicker</H1></div>
+				 		<div class="fdImage">  <jwr:image styleClass="featureImgDetail" src="/static/images/oneclickdl_big.png"></jwr:image></div>
 				 	</div>
 				 	<div class="fdRight">
 				 		<div class="fdText">
-								Importing results to Google Drive is easy on Engineering Village. From your Results page, select “Download”, choose the format of the record, and then select the Google Drive “Save” button. Save to Google Drive is especially convenient when you need access to Engineering Village records from anywhere outside of the Engineering Village product itself.
+								You can download records directly to your PC, or choose Google Drive, Dropbox, or RefWorks. Once you choose, we will remember that preference for your session.
 						</div>
 				 	</div>
 				 </div>
@@ -168,12 +171,12 @@ list-style-position:inside;
 			 <li class="featureTile">
 				 <div id="featureDetail2">
 				 	<div class="fdLeft">
-				 		<div class="fdTitle"><H1>Mendeley Bookmarklet</H1></div>
-				 		<div class="fdImage">  <jwr:image styleClass="featureImgDetail" src="/static/images/savemendeley.png"></jwr:image></div>
+				 		<div class="fdTitle"><H1>Download to Dropbox</H1></div>
+				 		<div class="fdImage">  <jwr:image styleClass="featureImgDetail" src="/static/images/ev-and-dropbox.png"></jwr:image></div>
 				 	</div>
 				 	<div class="fdRight">
 				 		<div class="fdText">
-								Importing results into Mendeley is easy using Engineering Village. By clicking the Mendeley Bookmarklet link in the browser window, Engineering Village users can import results directly into their Mendeley account. You can download the Mendeley Bookmarklet at:  <a target="_blank" href="http://www.mendeley.com/import/" title="Mendeley Web Importer">http://www.mendeley.com/import/</a>
+								Download records directly to your Dropbox account. Easily access your files on-the-go.
 				 		</div>
 				 	</div>
 				 </div>
@@ -181,12 +184,12 @@ list-style-position:inside;
 			 <li class="featureTile">
 				 <div id="featureDetail3">
 				 	<div class="fdLeft">
-				 		<div class="fdTitle"><H1>My Preferences</H1></div>
+				 		<div class="fdTitle"><H1>Want to learn more?</H1></div>
 				 		<div class="fdImage">  <jwr:image styleClass="featureImgDetail" src="/static/images/myprefs.png"></jwr:image></div>
 				 	</div>
 				 	<div class="fdRight">
 				 		<div class="fdText">
-							Engineering Village users who login with their User Profile can set default options for basic search result and download preferences. These options include: Display results per page, Sorting, Show Preview, Download format and Download output.  Setting up a User Profile is easy and free, select <a href="/customer/profile/display.url?origin=loginBox&zone=main" title="Click here to register!">Register Now</a> to begin.
+							Want to learn more about Engineering Village? Check out our Training videos, or our Getting Started guide. If you would like to give us feedback or participate in a survey, check out the give feedback link.
 				 		</div>
 
 				 	</div>
