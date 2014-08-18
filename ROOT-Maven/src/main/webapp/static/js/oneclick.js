@@ -127,7 +127,7 @@ function recordPageDownloadSubmit(dlLinkUrl){
 		var googleDrivePageUrl = 'https://'+baseaddress+'/delivery/download/googledrive.url?downloadformat='+downloadformat + '&' + params;
 
 		GALIBRARY.createWebEventWithLabel('Google Drive', 'Save Initiated', downloadformat);
-		var new_window1 = window.open(googleDrivePageUrl, 'Google Drive', "height=350,width=820,resizable=yes,scrollbars=yes");
+		var new_window1 = window.open(googleDrivePageUrl, 'GoogleDrive', "height=350,width=820,resizable=yes,scrollbars=yes");
 		new_window1.focus();
 		ret = false;
 	}else{
@@ -199,9 +199,8 @@ function basketDownloadSubmit() {
 
 	}else if(downloadLocation == "googledrive"){
 		var googleDrivePageUrl = 'https://'+baseaddress+'/delivery/download/googledrive.url?downloadformat='+downloadformat+'&displayformat='+displaytype + "&sessionid=" + sessionid + '&database=' + databaseid + addParams;
-
 		GALIBRARY.createWebEventWithLabel('Google Drive', 'Save Initiated', downloadformat);
-		var new_window1 = window.open(googleDrivePageUrl, 'Google Drive', "height=350,width=820,resizable=yes,scrollbars=yes");
+		var new_window1 = window.open(googleDrivePageUrl, 'GoogleDrive', "height=350,width=820,resizable=yes,scrollbars=yes");
 		new_window1.focus();
 		ret = false;
 	}else{
