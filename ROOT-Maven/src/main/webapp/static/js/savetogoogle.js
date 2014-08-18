@@ -125,6 +125,6 @@ function submitGoogleDriveDL(){
 
 
 	GALIBRARY.createWebEventWithLabel('Google Drive', 'Save Initiated', downloadformat);
-	var new_window1 = window.open(googleDrivePageUrl, 'Google Drive', "height=350,width=820,resizable=yes,scrollbars=yes");
+	var new_window1 = window.open(googleDrivePageUrl, 'GoogleDrive', "height=350,width=820,resizable=yes,scrollbars=yes");
 	new_window1.focus();
 }
