@@ -17,6 +17,7 @@ import net.sourceforge.stripes.action.RedirectResolution;
 import net.sourceforge.stripes.action.Resolution;
 import net.sourceforge.stripes.action.UrlBinding;
 import net.sourceforge.stripes.validation.LocalizableError;
+import net.sourceforge.stripes.validation.Validate;
 import net.sourceforge.stripes.validation.ValidationErrors;
 
 import org.apache.log4j.Logger;
@@ -70,6 +71,7 @@ public class ThesaurusSearchAction extends SearchDisplayAction { // implements I
     private String combine = "or";  // Default combine to "OR"
 
     // Message indicator
+    @Validate(trim=true,mask="zero")
     private String message;
 
     @Override
@@ -125,7 +127,7 @@ public class ThesaurusSearchAction extends SearchDisplayAction { // implements I
      *
      * @return Resolution
      * @throws InfrastructureException
-     * @throws SessionException 
+     * @throws SessionException
      * @throws ServletException
      * @throws HistoryException
      * @throws IOException
@@ -133,13 +135,13 @@ public class ThesaurusSearchAction extends SearchDisplayAction { // implements I
      */
     @HandlesEvent("submit")
     public Resolution validate() throws InfrastructureException, SessionException {
-    	
+
     	HttpServletRequest request = context.getRequest();
     	if(isCSRFPrevRequired(request.getParameter("csrfSyncToken"))){
  			context.getValidationErrors().add("validationError", new LocalizableError("org.ei.stripes.action.search.SearchResultsAction.unknownerror"));
  			return handleValidationErrors(context.getValidationErrors());
  		}
-    	
+
         return super.validate();
     }
 
