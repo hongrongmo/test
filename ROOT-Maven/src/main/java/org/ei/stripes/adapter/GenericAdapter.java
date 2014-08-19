@@ -4,6 +4,7 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
 import java.util.Scanner;
 
 import javax.xml.transform.Transformer;
@@ -27,6 +28,7 @@ public class GenericAdapter extends BizXmlAdapter {
      * Process XML from the model layer
      *
      * @throws InfrastructureException
+     * @throws
      * @throws EVBaseException
      */
 
@@ -47,11 +49,15 @@ public class GenericAdapter extends BizXmlAdapter {
         OutputStream transformout = new NullOutputStream();
         if (log4j.isDebugEnabled() || log4j.isInfoEnabled()) {
             log4j.info("Transforming in debug/info");
-            Scanner scanner = new Scanner(instream);
+            Scanner scanner = new Scanner(instream, "UTF-8");
             String modelxml = scanner.useDelimiter("\\A").next();
             scanner.close();
             // log4j.info("modelxml : "+modelxml);
-            instream = new ByteArrayInputStream(modelxml.getBytes());
+            try {
+                instream = new ByteArrayInputStream(modelxml.getBytes("UTF-8"));
+            } catch (UnsupportedEncodingException e) {
+                throw new InfrastructureException(SystemErrorCodes.SEARCH_QUERY_EXECUTION_FAILED, "Unable to decode string in UTF-8");
+            }
             broker.setCache(false);
         }
 
