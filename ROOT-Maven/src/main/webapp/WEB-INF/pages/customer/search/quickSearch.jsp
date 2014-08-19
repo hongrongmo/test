@@ -31,7 +31,7 @@
 	<div id="searchformwrap">
 	<div id="searchformbox">
 
-        <stripes:errors><div id="errormessage"><stripes:individual-error/></div></stripes:errors>
+        <stripes:errors globalErrorsOnly="true"><div id="errormessage"><stripes:individual-error/></div></stripes:errors>
 
 		<c:set var="searchtab" value="quicksearch" scope="request"></c:set>
 		<jsp:include page="parts/searchtabs.jsp"></jsp:include>
