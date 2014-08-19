@@ -99,7 +99,7 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
 <stripes:layout-component name="jsbottom_custom"/>
 
 </body>
-<script>var release = "5.15v2";</script>
+<script>var release = "5.2";</script>
 	<div style="display:none;" id="modalHTMLcontainer">
 	<div id="modalmsg">
 		<jsp:include page="/WEB-INF/pages/popups/marketingMessage.jsp" />
