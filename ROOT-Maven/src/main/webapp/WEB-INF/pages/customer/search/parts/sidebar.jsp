@@ -47,19 +47,19 @@
         <div class="padding5">
         <ul id="latestresourceslist">
         <c:if test="${not empty textzones['OPTION1']}">
-            <li>${textzones['OPTION1']}</li>
+            <li class="gettingStarted">${textzones['OPTION1']}</li>
         </c:if>
         <c:if test="${not empty textzones['OPTION2']}">
-            <li>${textzones['OPTION2']}</li>
+            <li class="trainingVids">${textzones['OPTION2']}</li>
         </c:if>
         <c:if test="${not empty textzones['OPTION3']}">
-            <li>${textzones['OPTION3']}</li>
+            <li class="whatsNew">${textzones['OPTION3']}</li>
         </c:if>
         <c:if test="${not empty textzones['OPTION4']}">
-            <li>${textzones['OPTION4']}</li>
+            <li class="giveFeedback">${textzones['OPTION4']}</li>
         </c:if>
         <c:if test="${not empty textzones['OPTION5']}">
-            <li>${textzones['OPTION5']}</li>
+            <li class="lr5">${textzones['OPTION5']}</li>
         </c:if>
         </ul>
         </div>
