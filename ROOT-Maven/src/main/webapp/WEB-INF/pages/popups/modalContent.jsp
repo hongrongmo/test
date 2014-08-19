@@ -163,7 +163,7 @@ list-style-position:inside;
 				 	</div>
 				 	<div class="fdRight">
 				 		<div class="fdText">
-								Engineering Village is continuing to improve downloading of search results.  On the search results page, click the Download icon at the top of the page.  Choose the location, format and record type for your file, then click Save.  We made the downloading process faster so you can spend more time enjoying your search results.
+								Engineering Village is continuing to improve downloading of search results.  On the search results page, click the Download icon at the top of the page.  Choose the location, format and record type for your file, then click Save.  We made the downloading process faster so you can spend more time finding relevant articles.
 						</div>
 				 	</div>
 				 </div>
@@ -189,7 +189,7 @@ list-style-position:inside;
 				 	</div>
 				 	<div class="fdRight">
 				 		<div class="fdText">
-							Leveraging the wealth of content and powerful features within Engineering Village is now easier than ever. Our <a href="http://trainingdesk.elsevier.com/products/Engineering-Village" target="_blank">TrainginDesk</a> provides short videos, while our <a href="http://www.elsevier.com/__data/assets/pdf_file/0010/176239/engineering_village_user_guide.pdf" target="_blank">Quick Reference Guide</a> provides how-to advice in order to help your efficiently find information on Engineering Village.
+							Leveraging the wealth of content and powerful features within Engineering Village is now easier than ever. Our <a href="http://trainingdesk.elsevier.com/products/Engineering-Village" target="_blank">TrainingDesk</a> provides short videos, while our <a href="http://www.elsevier.com/__data/assets/pdf_file/0010/176239/engineering_village_user_guide.pdf" target="_blank">Quick Reference Guide</a> provides how-to advice in order to help your efficiently find information on Engineering Village.
 				 		</div>
 
 				 	</div>
