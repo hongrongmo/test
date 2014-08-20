@@ -65,10 +65,11 @@ $(document).ready(function() {
 	}
 	if($("#downloadlink").length != 0){
 		$("#downloadlink").click(function(e){
+			if($(this).hasClass('tooltipstered')){
+				return false;
+			}
 			e.preventDefault();
 			var displayformat='citation';
-
-
 			var downloadurl;
 			if(typeof($("#downloadlink").attr('href')) != 'undefined' && $("#downloadlink").attr('href').length > 0){
 				downloadurl = $("#downloadlink").attr('href');
@@ -89,22 +90,21 @@ $(document).ready(function() {
 				    position:'bottom',
 				    fixedLocation:true,
 				    positionTracker:false,
+				    multiple:true,
+				    trigger:'click',
 				    delay:0,
 				    speed:0,
 				    debug:false,
-				    functionInit: function(origin, content) {
+				    functionBefore: function(origin, continueTooltip) {
 
 				        // we'll make this function asynchronous and allow the tooltip to go ahead and show the loading notification while fetching our data
-
+				    	$(origin).tooltipster('content', "Loading...");
 				        //console.log("get data" + content);
-
+				    	continueTooltip();
 				            $.ajax({
 				                type: 'GET',
 				                url: downloadurl,
 				                success: function(data) {
-				                	//console.log(origin);
-				                    // update our tooltip content with our returned data and cache it
-
 				                    $(origin).tooltipster('content', data);
 
 				                }
@@ -113,6 +113,7 @@ $(document).ready(function() {
 				    },
 				    functionAfter: function(origin){
 				    	$(origin).attr('title', 'Click to change one click download preferences.');
+
 				    }
 				});
 				$(this).tooltipster('show',null);

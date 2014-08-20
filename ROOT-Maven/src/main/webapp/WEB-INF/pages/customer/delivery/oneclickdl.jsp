@@ -314,7 +314,7 @@ function checkForRefworks(radio){
 				}
 
 				$('#downloadlink').attr("title", "Click to change one click download preferences.");
-				$('#downloadlink').tooltipster('destroy');
+				$('#downloadlink').tooltipster('hide');
 				return ret;
 
 			});
