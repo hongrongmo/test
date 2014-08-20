@@ -163,7 +163,7 @@ list-style-position:inside;
 				 	</div>
 				 	<div class="fdRight">
 				 		<div class="fdText">
-								Engineering Village continues to improve the downloading of search results, so we made the downloading process faster so you can spend more time finding relevant articles. On the search results page, click the Download icon at the top of the page.  Choose the location, format, and record type for your file, then click Save.
+								Engineering Village continues to improve the downloading of search results. We made the downloading process faster so you can spend more time finding relevant articles. On the search results page, click the Download icon at the top of the page.  Choose the location, format, and record type for your file, then click Save.
 						</div>
 				 	</div>
 				 </div>
