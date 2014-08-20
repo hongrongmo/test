@@ -22,10 +22,10 @@
 			<br />
 
 			<div>
-				<textarea id="blogta" name="link" cols="60" rows="6"><a href='http://${server}<stripes:url prependContext="true"
+				<textarea id="blogta" name="link" cols="60" rows="6"><a href='${server}<stripes:url  prependContext="false"
                         value="/blog/document.url?mid=${actionBean.mid}&database=${actionBean.database}"/>'>${title}</a>
                     <table border="0" cellspacing="0" cellpadding="0" width="99%">
-                    <tr><td valign="top"><img alt="Engineering Village" src="http://${server}/static/images/newev.gif" border="0"/></td></tr>
+                    <tr><td valign="top"><img alt="Engineering Village" src="${server}/static/images/newev.gif" border="0"/></td></tr>
                     </table></textarea>
 			</div>
 			<div>
