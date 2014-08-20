@@ -146,7 +146,7 @@ list-style-position:inside;
 
             <div class="featuretxt featureTitle"><H1>Want to learn more?</H1></div>
          	<div class="featuretxt featureImageSm"><jwr:image styleClass="featureImg"  src="/static/images/learnmore.png"></jwr:image></div>
-         	<div class="featuretxt">Want to learn more about Engineering Village? Check out our Training videos, or our Getting Started guide. If you would like to give us feedback or participate in a survey, check out the give feedback link.</div>
+         	<div class="featuretxt">Want to learn more about Engineering Village? Check out our Training videos; or use our Getting Started guide. If you would like to provide feedback or participate in a survey, click the give feedback link.</div>
          </div>
      </div>
 
@@ -163,7 +163,7 @@ list-style-position:inside;
 				 	</div>
 				 	<div class="fdRight">
 				 		<div class="fdText">
-								Engineering Village is continuing to improve downloading of search results.  On the search results page, click the Download icon at the top of the page.  Choose the location, format and record type for your file, then click Save.  We made the downloading process faster so you can spend more time finding relevant articles.
+								Engineering Village continues to improve the downloading of search results. We made the downloading process faster so you can spend more time finding relevant articles. On the search results page, click the Download icon at the top of the page.  Choose the location, format, and record type for your file, then click Save.
 						</div>
 				 	</div>
 				 </div>
@@ -176,7 +176,7 @@ list-style-position:inside;
 				 	</div>
 				 	<div class="fdRight">
 				 		<div class="fdText">
-								Engineering Village works with the tools you use!  Now you can download files into your existing Dropbox and access the files via your computer, phone and tablet.  To utilize the Dropbox storage feature within Engineering Village, click the Download icon at the top of the search results page, then choose Dropbox.  Your files will automatically download to your Dropbox file and be immediately accessible via the Cloud.
+								Engineering Village works with the tools you use!  Now you can download files into your Dropbox account and access the files via your computer, phone, and tablet.  To use Dropbox within Engineering Village, click the Download icon at the top of the search results page, then choose Dropbox.  Your files download automatically to Dropbox and are available for use immediately.
 				 		</div>
 				 	</div>
 				 </div>
@@ -189,7 +189,7 @@ list-style-position:inside;
 				 	</div>
 				 	<div class="fdRight">
 				 		<div class="fdText">
-							Leveraging the wealth of content and powerful features within Engineering Village is now easier than ever. Our <a href="http://trainingdesk.elsevier.com/products/Engineering-Village" target="_blank">TrainingDesk</a> provides short videos, while our <a href="http://www.elsevier.com/__data/assets/pdf_file/0010/176239/engineering_village_user_guide.pdf" target="_blank">Quick Reference Guide</a> provides how-to advice in order to help your efficiently find information on Engineering Village.
+							Leveraging the wealth of content and powerful features within Engineering Village is now easier than ever. Our <a href="http://trainingdesk.elsevier.com/products/Engineering-Village" target="_blank">TrainingDesk</a> provides short videos, while our <a href="http://www.elsevier.com/__data/assets/pdf_file/0010/176239/engineering_village_user_guide.pdf" target="_blank">Quick Reference Guide</a> provides how-to advice in order to help you find information efficiently on Engineering Village.
 				 		</div>
 
 				 	</div>

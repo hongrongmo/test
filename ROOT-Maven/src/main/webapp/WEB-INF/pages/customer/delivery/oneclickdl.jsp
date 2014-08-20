@@ -203,9 +203,9 @@ $(document).ready(function() {
 	//read the cookie
 	if($.cookie("ev_oneclickdl")){
 		var dlOptions = JSON.parse($.cookie("ev_oneclickdl"));
-		$('input[value="' + dlOptions.location + '"]').prop("checked", true);
-		$('input[value="'+dlOptions.displaytype+'"]').prop("checked", true);
-		$('input[value="'+dlOptions.format+'"]').prop("checked", true);
+		$('#oneClickContent input[value="' + dlOptions.location + '"]').prop("checked", true);
+		$('#oneClickContent input[value="'+dlOptions.displaytype+'"]').prop("checked", true);
+		$('#oneClickContent input[value="'+dlOptions.format+'"]').prop("checked", true);
 	}
 	checkForRefworks($('input[name="outputLocation"]:checked'));
 
@@ -280,7 +280,7 @@ function checkForRefworks(radio){
 						actionDisplayType = "citation";
 					}
 					displaytype = actionDisplayType;
-					$('input[value="' + actionDisplayType + '"]').prop("checked", true);
+					$('#oneClickContent input[value="' + actionDisplayType + '"]').prop("checked", true);
 				}
 				// Refworks?
 				var ret = true;
@@ -314,7 +314,7 @@ function checkForRefworks(radio){
 				}
 
 				$('#downloadlink').attr("title", "Click to change one click download preferences.");
-				$('#downloadlink').tooltipster('destroy');
+				$('#downloadlink').tooltipster('hide');
 				return ret;
 
 			});
