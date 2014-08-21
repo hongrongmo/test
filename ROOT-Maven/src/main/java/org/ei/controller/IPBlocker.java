@@ -1,6 +1,7 @@
 package org.ei.controller;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.net.InetAddress;
 import java.net.URLEncoder;
 import java.text.ParseException;
@@ -665,9 +666,11 @@ public class IPBlocker {
      * @author kamaramx
      *
      */
-    public static class SessionRate {
+    public static class SessionRate implements Serializable{
         
-    	private int totalRequest = 1;
+    	private static final long serialVersionUID = 6009901472688306504L;
+		
+		private int totalRequest = 1;
         private long firstrequest = new Date().getTime();
         private boolean blockWithCaptcha = false;
         private String incomingUrl = null;
