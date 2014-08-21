@@ -531,9 +531,6 @@ public class SavedRecords {
         boolean blnReturnFlag = false;
 
         try {
-            // Remove any duplicates first
-            removeSelected(aFolderEntryList, aFolder);
-
             int folderSize = getSizeOfFolder(aFolder);
             int maxFolderSize = aFolder.getMaxfolderSize();
             if (maxFolderSize == 0) {
@@ -544,6 +541,9 @@ public class SavedRecords {
 
             // check to make sure all files will fit
             if ((folderSize + listsize) <= maxFolderSize) {
+                // Remove any duplicates first
+                removeSelected(aFolderEntryList, aFolder);
+
                 conn = ConnectionBroker.getInstance().getConnection(DatabaseConfig.SESSION_POOL);
                 proc = conn.prepareCall("{ call SavedRecord_addSelectedRecord(?,?,?,?,?,?,?)}");
                 Iterator<FolderEntry> itor = aFolderEntryList.listIterator();
