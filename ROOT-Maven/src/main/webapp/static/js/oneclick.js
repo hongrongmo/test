@@ -66,8 +66,10 @@ function changeOneClick(dlType){
 	$("#oneclickDL").html(dlText);
 	$("#oneclickDL").show();
 
+
 	$("#downloadli").removeClass();
 	$("#downloadli").addClass(dlClass);
+
 
 }
 function recordPageDownloadSubmit(dlLinkUrl){
