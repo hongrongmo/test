@@ -253,6 +253,8 @@ function checkForRefworks(radio){
 				var handlelist = $("#handlelist").val();
 				var folderid = $("#folderid").val();
 				var milli = (new Date()).getTime();
+				
+				
 
 				if (downloadformat == undefined || downloadformat == "") {
 					alert("You must choose a download format.");

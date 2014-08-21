@@ -75,9 +75,16 @@ $(document).ready(function() {
 				downloadurl = $("#downloadlink").attr('href');
 			}else{
 				var form = $("#resultsform");
+				var folderid = form.find("input[name='folderid']").val();
+
+
 				downloadurl = "/delivery/download/display.url?database="+form.find("input[name='database']").val()
 				+"&displayformat="+displayformat
 				+"&allselected=true";
+
+				if(typeof(folderid) != 'undefined' && folderid.length > 0 ){
+					downloadurl += "&folderid=" +folderid;
+				}
 			}
 
 			if(((typeof(Basket) == 'undefined' || (Basket.count > 0)) || (typeof($(this).attr("href")) != 'undefined' &&  $(this).attr("href").length > 0))){
