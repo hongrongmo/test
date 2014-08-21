@@ -30,9 +30,9 @@ import org.ei.util.GUID;
  * creation, access and deletion and records added,deleted to the folder.We can view records in a folder.
  */
 
-public class SavedRecords {    
+public class SavedRecords {
     private final static Logger log4j = Logger.getLogger(SavedRecords.class);
-    
+
     private String userID;
     private Hashtable<String, FolderEntry> folderTable;
 
@@ -57,7 +57,7 @@ public class SavedRecords {
 
     /**
      * Build a folder given the folderid
-     * 
+     *
      * @param folderid
      * @return
      * @throws SavedRecordsException
@@ -114,7 +114,7 @@ public class SavedRecords {
 
     /**
      * Getting the number of records for this folder
-     * 
+     *
      * @param aFolder
      * @return
      * @throws SavedRecordsException
@@ -165,7 +165,7 @@ public class SavedRecords {
 
     /**
      * Returning the folderName for the folder for the given folderId
-     * 
+     *
      * @param folderId
      * @return
      * @throws SavedRecordsException
@@ -276,7 +276,7 @@ public class SavedRecords {
         if (aFolder == null) {
             throw new SavedRecordsException("Folder is null");
         }
-        
+
         Connection conn = null;
         CallableStatement proc = null;
         try {
@@ -531,6 +531,9 @@ public class SavedRecords {
         boolean blnReturnFlag = false;
 
         try {
+            // Remove any duplicates first
+            removeSelected(aFolderEntryList, aFolder);
+
             int folderSize = getSizeOfFolder(aFolder);
             int maxFolderSize = aFolder.getMaxfolderSize();
             if (maxFolderSize == 0) {
@@ -674,7 +677,7 @@ public class SavedRecords {
             conn = ConnectionBroker.getInstance().getConnection(DatabaseConfig.SESSION_POOL);
             stmt = conn.createStatement();
             StringBuffer selectBuffer = new StringBuffer();
-            selectBuffer.append("select COUNT(GUID)  from ").append(SAVED_RECORDS_SQLTABLENAME).append(" where FOLDER_ID='").append(aFolder.getFolderID())
+            selectBuffer.append("select COUNT(DISTINCT GUID)  from ").append(SAVED_RECORDS_SQLTABLENAME).append(" where FOLDER_ID='").append(aFolder.getFolderID())
                 .append("'");
             rs = stmt.executeQuery(selectBuffer.toString());
             if (rs.next() == true) {
