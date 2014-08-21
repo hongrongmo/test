@@ -95,7 +95,6 @@ public abstract class BaseSearchAction extends EVActionBean implements ISearchFo
     protected String startYear="";
     protected String folderid="";
     protected String folderName="";
-    protected String folderSize="";
 
     protected String useType = "";
 
@@ -453,14 +452,6 @@ public abstract class BaseSearchAction extends EVActionBean implements ISearchFo
 
 	public void addPageCountOption(String pageCountOption) {
 		getPageCountOption().add(pageCountOption);
-	}
-
-	public String getFolderSize() {
-		return folderSize;
-	}
-
-	public void setFolderSize(String folderSize) {
-		this.folderSize = folderSize;
 	}
 
 	public String getLimitError() {
