@@ -174,6 +174,45 @@ function showTooltip(selector, msg, direction, duration, autoShow){
 		setTimeout("hideTP('" + selector + "')",duration);
 	}
 }
+function showSurvey(feature){
+	var surveyUrl = "/widget/qsurvey.url?feature="+feature;
+	$("#ev_survey").tooltipster({
+	    content: 'Loading...',
+	    autoClose:false,
+	    interactive:true,
+	    contentAsHTML:true,
+	    position:'top',
+	    fixedLocation:true,
+	    positionTracker:false,
+	    multiple:true,
+	    delay:0,
+	    speed:0,
+	    debug:false,
+	    arrow:false,
+	    functionBefore: function(origin, continueTooltip) {
+
+	        // we'll make this function asynchronous and allow the tooltip to go ahead and show the loading notification while fetching our data
+	    	$(origin).tooltipster('content', "Loading...");
+	        //console.log("get data" + content);
+	    	continueTooltip();
+	            $.ajax({
+	                type: 'GET',
+	                url: surveyUrl,
+	                success: function(data) {
+	                    $(origin).tooltipster('content', data);
+
+	                }
+	            });
+
+	    },
+	    functionAfter: function(origin){
+	    	$(origin).tooltipster('content', "Thank You");
+
+	    }
+	});
+	$("#ev_survey").show();
+	$("#ev_survey").tooltipster('show',null);
+}
 //hid the popup and write a session cookie so it won't show again.
 function hideTP(selector){
 	$(selector).tooltipster("hide");

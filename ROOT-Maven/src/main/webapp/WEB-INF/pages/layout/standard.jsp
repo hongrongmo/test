@@ -38,11 +38,18 @@ var highlightV1 = false;
 </c:if>
 <stripes:layout-component name="csshead"/>
 
-
+<style>
+#ev_survey {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    display:none;
+}
+</style>
 
 </head>
 <body>
-
+<div id="ev_survey"></div>
 <stripes:layout-component name="ssourls">
 <c:if test="${actionBean.context.userSession.user.SSOURLInvoked}">
 <c:forEach var="urls" items="${actionBean.context.userSession.user.ssoURLs}">
