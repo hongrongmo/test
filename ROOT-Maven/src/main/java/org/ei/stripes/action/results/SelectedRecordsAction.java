@@ -819,7 +819,7 @@ public class SelectedRecordsAction extends BaseSearchAction implements IBizBean,
      */
 	public Resolution handleException(ErrorXml errorXml) {
 		context.getRequest().setAttribute("errorXml", errorXml);
-		return new ForwardResolution("/WEB-INF/pages/world/systemerror.jsp");
+		return new ForwardResolution("/system/error.url");
 	}
 
 

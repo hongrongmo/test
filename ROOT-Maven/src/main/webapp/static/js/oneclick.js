@@ -42,7 +42,7 @@ function changeOneClick(dlType){
 	var dlClass = "";
 	var dlText = "Save to ";
 	if(dlType == "refworks"){
-		dlText += " Refworks";
+		dlText += " RefWorks";
 		dlClass = "refworksdl";
 	}else if(dlType == "googledrive"){
 		dlText += " Google Drive";

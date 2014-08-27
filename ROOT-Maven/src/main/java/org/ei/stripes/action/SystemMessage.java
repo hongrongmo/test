@@ -26,6 +26,8 @@ import org.ei.biz.security.NoAuthAccessControl;
 import org.ei.controller.CookieHandler;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.personalization.IEVWebUser;
+import org.ei.exception.ErrorXml;
+import org.ei.exception.ExceptionWriter;
 import org.ei.session.AWSInfo;
 import org.ei.session.UserSession;
 import org.ei.stripes.exception.EVExceptionHandler;
@@ -67,7 +69,6 @@ public class SystemMessage extends EVActionBean {
     private boolean endsession;
     private boolean error;
     private String message;
-    private String exceptionMessage;
     private boolean daypass;
 
     /**
@@ -82,9 +83,14 @@ public class SystemMessage extends EVActionBean {
      * Process the error from the request
      */
     public void processErrorXml() {
-        String exception = this.context.getRequest().getParameter("exception");
+        String exception = (String) this.context.getRequest().getAttribute("exception");
         if (GenericValidator.isBlankOrNull(exception)) {
-            return;
+            ErrorXml errorXml= (ErrorXml) this.context.getRequest().getAttribute("errorXml");
+            if (errorXml == null) {
+                return;
+            }
+            exception = ExceptionWriter.toXml(errorXml);
+            this.context.getRequest().setAttribute("exception", exception);
         }
 
         // This is small XML - just parse in place (no adapter)
@@ -257,14 +263,6 @@ public class SystemMessage extends EVActionBean {
         message = buff.toString();
 
         return new ForwardResolution("/WEB-INF/pages/world/whoami.jsp");
-    }
-
-    public String getExceptionMessage() {
-        return exceptionMessage;
-    }
-
-    public void setExceptionMessage(String exceptionMessage) {
-        this.exceptionMessage = exceptionMessage;
     }
 
     //

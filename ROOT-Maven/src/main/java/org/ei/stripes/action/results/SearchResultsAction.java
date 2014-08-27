@@ -657,7 +657,7 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 		} else {
 			log4j.warn("Unable to handle ErrorXml object, code = " + errorXml.getErrorCode() + "; message = '" + errorXml.getErrorMessage() + "'");
 			context.getRequest().setAttribute("errorXml", errorXml);
-			return new ForwardResolution("/WEB-INF/pages/world/systemerror.jsp");
+			return new ForwardResolution("/system/error.url");
 		}
 
 		// return "";
