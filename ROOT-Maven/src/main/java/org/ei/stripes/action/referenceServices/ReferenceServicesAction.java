@@ -65,7 +65,7 @@ public class ReferenceServicesAction extends EVActionBean implements IBizBean {
 
 	/**
 	 * Process the Reference Services (Ask an expert) XML
-	 * @throws InfrastructureException 
+	 * @throws InfrastructureException
 	 */
 	@Override
 	public void processModelXml(InputStream instream) throws InfrastructureException  {
@@ -75,20 +75,20 @@ public class ReferenceServicesAction extends EVActionBean implements IBizBean {
 					.getResource("/transform/results/ReferenceServices.xsl")
 					.toExternalForm();
 			adapter.processXml(this, instream, stylesheet);
-	
+
 
 	}
 
 	/**
 	 * Default handler - displays the ask an expert page
-	 * 
+	 *
 	 * @return Resolution
 	 */
 	@HandlesEvent("display")
 	@DontValidate
 	public Resolution display() {
 		setRoom(ROOM.blank);
-		
+
 		// Set the librarian email appropriately
 		String refemail = context.getUserSession().getUserTextZones().get(UserPreferences.TZ_REFERENCE_SERVICES_LINK);
 		if (GenericValidator.isBlankOrNull(refemail) || GenericValidator.isEmail(refemail)) {
@@ -103,7 +103,7 @@ public class ReferenceServicesAction extends EVActionBean implements IBizBean {
 		}else if(refemail.contains("http")){
 			this.librarianEmail = refemail;
 		}
-		
+
 		return new ForwardResolution(
 				"/WEB-INF/pages/customer/askanexpert/referenceservices.jsp");
 	}
@@ -143,7 +143,7 @@ public class ReferenceServicesAction extends EVActionBean implements IBizBean {
      */
 	public Resolution handleException(ErrorXml errorXml) {
 		context.getRequest().setAttribute("errorXml", errorXml);
-		return new ForwardResolution("/WEB-INF/pages/world/systemerror.jsp");
+		return new ForwardResolution("/system/error.url");
 	}
-	
+
 }
