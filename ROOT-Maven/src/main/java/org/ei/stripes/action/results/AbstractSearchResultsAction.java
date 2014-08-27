@@ -26,13 +26,13 @@ import org.ei.stripes.view.SortOption;
 
 /**
  * This is an abstract class that represents a search results action. Any ActionBean that needs to create search results should extend this class.
- * 
+ *
  * @author harovetm
- * 
+ *
  */
 public abstract class AbstractSearchResultsAction extends BaseSearchAction {
 	private static final Logger log4j = Logger.getLogger(AbstractSearchResultsAction.class);
-	
+
     // Error key
     private String error;
 
@@ -97,8 +97,8 @@ public abstract class AbstractSearchResultsAction extends BaseSearchAction {
     protected String docindex;
     protected String citedbyflag;
 
-    
-    
+
+
     //
     // Dedup only fields
     //
@@ -120,9 +120,9 @@ public abstract class AbstractSearchResultsAction extends BaseSearchAction {
 	public Resolution handleException(ErrorXml errorXml) {
 		context.getRequest().setAttribute("errorXml", errorXml);
 		//return SystemMessage.SYSTEM_ERROR_RESOLUTION;
-		return new ForwardResolution("/WEB-INF/pages/world/systemerror.jsp");
+		return new ForwardResolution("/system/error.url");
 	}
-	
+
     //
     //
     // GETTERS/SETTERS
