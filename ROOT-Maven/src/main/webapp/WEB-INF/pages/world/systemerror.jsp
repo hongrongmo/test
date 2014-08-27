@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://stripes.sourceforge.net/stripes.tld"
-    prefix="stripes"%>
+<%@ taglib uri="http://stripes.sourceforge.net/stripes.tld" prefix="stripes"%>
 
 <stripes:layout-render name="/WEB-INF/pages/layout/standard.jsp">
 
@@ -36,6 +35,10 @@
     <br/>
     <p>You may <a title="Contact and support (opens in a new window)" href="${contactuslink}" class="evpopup" target="_blank">contact us</a> to report this problem, or you may begin a <a class="newsearch" title="Run a new search" href="/search/quick.url?CID=quickSearch">new search.</a></p>
     </div>
+
+        <!-- Error Message: <c:if test="${null != exception}">${exception}</c:if> -->
+        <!-- <stripes:errors></stripes:errors> -->
+
 </stripes:layout-component>
 
 </stripes:layout-render>

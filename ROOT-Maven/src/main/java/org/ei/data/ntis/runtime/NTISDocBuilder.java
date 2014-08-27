@@ -51,7 +51,7 @@ import org.ei.util.StringUtil;
  *
  */
 public class NTISDocBuilder implements DocumentBuilder {
-    public static String NTIS_TEXT_COPYRIGHT = "Compiled and Distributed by the NTIS, U.S. Department of Commerce.  It contains copyrighted material.  All rights reserved. 2013";
+    public static String NTIS_TEXT_COPYRIGHT = "Compiled and Distributed by the NTIS, U.S. Department of Commerce.  It contains copyrighted material.  All rights reserved. 2014";
     public static String NTIS_HTML_COPYRIGHT = NTIS_TEXT_COPYRIGHT;
     public static final Key NTIS_PRICES = new Key(Keys.CONTROLLED_TERMS, "NTIS price code");
     public static final Key NTIS_COUNTRY = new Key(Keys.COUNTRY, "Country of origin");

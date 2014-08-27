@@ -28,7 +28,7 @@ public abstract class AbstractDeliveryAction extends BaseSearchAction {
     public static final String DOWNLOAD_FORMAT_PDF = "pdf";
     public static final String DOWNLOAD_FORMAT_RTF = "rtf";
     public static final String DOWNLOAD_FORMAT_EXCEL = "excel";
-    
+
 
     private final static Logger log4j = Logger.getLogger(AbstractDeliveryAction.class);
 
@@ -48,7 +48,7 @@ public abstract class AbstractDeliveryAction extends BaseSearchAction {
 
     /**
      * Initialize the DocumentBasket
-     * 
+     *
      * @throws InfrastructureException
      */
     @After(stages = LifecycleStage.BindingAndValidation)
@@ -86,7 +86,7 @@ public abstract class AbstractDeliveryAction extends BaseSearchAction {
             this.count = this.docidlist.split(",").length;
         } else {
             try {
-                this.basket = new DocumentBasket(this.sessionid);
+                this.basket = new DocumentBasket(this.getSessionid());
                 this.count = basket.getBasketSize();
             } catch (InfrastructureException e) {
                 log4j.error("Unable to retrieve basket for ID: " + usersession.getSessionID().getID() + ", message: " + e.getMessage());

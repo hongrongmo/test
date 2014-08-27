@@ -169,8 +169,7 @@
                 style="padding-left: 0" aria-labelledby="viewlink" href="">Email</a> |</li>
             <li class="print"><a id="printlink" title="Print selections"  aria-labelledby="viewlink"
                 href="">Print</a> |</li>
-            <li class="download"><a id="downloadlink" aria-labelledby="viewlink"
-                title="Download selections" href="">Download</a>
+            <li class="download" id="downloadli"><a id="oneclickDL" title="Download selections" style="display:none"></a><a id="downloadlink" aria-labelledby="viewlink" title="Download selections" href="">Download</a>
             <c:if test="${param.displaytype ne 'viewfolders' || actionBean.removeduplicates}">  | </c:if> </li>
 
             <c:if test="${param.displaytype ne 'viewfolders'}">
@@ -218,3 +217,4 @@
 	<div class="clear"></div>
 </div>
 </FORM>
+

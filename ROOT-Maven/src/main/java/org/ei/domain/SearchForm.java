@@ -958,7 +958,7 @@ public class SearchForm {
 		return lang;
 	}
 
-	private static int calEndYear(int selectedDbMask) {
+	public static int calEndYear(int selectedDbMask) {
 		if (selectedDbMask == DatabaseConfig.CBF_MASK) {
 			return DatabaseConfig.CBF_ENDYEAR;
 		}

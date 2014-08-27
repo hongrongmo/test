@@ -23,8 +23,12 @@ import net.sourceforge.stripes.action.ForwardResolution;
 import net.sourceforge.stripes.action.HandlesEvent;
 import net.sourceforge.stripes.action.RedirectResolution;
 import net.sourceforge.stripes.action.Resolution;
+import net.sourceforge.stripes.action.StrictBinding;
 import net.sourceforge.stripes.action.UrlBinding;
 import net.sourceforge.stripes.validation.LocalizableError;
+import net.sourceforge.stripes.validation.Validate;
+import net.sourceforge.stripes.validation.ValidationErrorHandler;
+import net.sourceforge.stripes.validation.ValidationErrors;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.validator.GenericValidator;
@@ -78,7 +82,8 @@ import org.xml.sax.SAXException;
  *
  */
 @UrlBinding("/search/{$event}.url")
-public class SearchDisplayAction extends BaseSearchAction { // implements
+@StrictBinding
+public class SearchDisplayAction extends BaseSearchAction implements ValidationErrorHandler { // implements
                                                             // IBizBean {
 
     private final static Logger log4j = Logger.getLogger(SearchDisplayAction.class);
@@ -121,11 +126,13 @@ public class SearchDisplayAction extends BaseSearchAction { // implements
     protected List<String> moresourceslinks = null;
     MoreSearchSources moresearchsources = new MoreSearchSources();
 
+    @Validate(trim=true,mask="true|false")
     protected String dberr;
+    @Validate(trim=true,mask="hisidnotexists")
     protected String hisiderr;
+    @Validate(trim=true,mask="true|false")
     protected String searchHisErr;
 
-    private String searchtype;
     private String swReferrer = "";
     protected GoogleWebAnalyticsEvent webEvent = new GoogleWebAnalyticsEvent();
 
@@ -165,7 +172,6 @@ public class SearchDisplayAction extends BaseSearchAction { // implements
         // TODO change this!
         String[] cartridgearr = context.getUserSession().getUser().getCartridge();
         stringYear = SearchForm.getClientStartYears(context.getUserSession().getUser().getCartridgeString(), cartridgearr);
-
         //
         // First populate form from Fence values
         //
@@ -337,22 +343,31 @@ public class SearchDisplayAction extends BaseSearchAction { // implements
         return idatabase;
     }
 
+
     /**
      * Search submit
      *
      * @return Resolution
+     * @throws SessionException
+     * @throws InfrastructureException
+     * @throws Exception
      * @throws ServletException
      * @throws HistoryException
      * @throws IOException
      * @throws SearchException
      */
     @HandlesEvent("submit")
-    @DontValidate
-    public Resolution validate() throws InfrastructureException {
+    public Resolution validate() throws InfrastructureException, SessionException {
 
-        HttpServletRequest request = context.getRequest();
+    	HttpServletRequest request = context.getRequest();
         UserSession usersession = context.getUserSession();
         Query queryObject = null;
+
+        if(isCSRFPrevRequired(request.getParameter("csrfSyncToken"))){
+ 			context.getValidationErrors().add("validationError", new LocalizableError("org.ei.stripes.action.search.SearchResultsAction.unknownerror"));
+ 			return handleValidationErrors(context.getValidationErrors());
+ 		}
+
 
         //
         // Stripes will remove any empty text values from the form submission
@@ -467,7 +482,6 @@ public class SearchDisplayAction extends BaseSearchAction { // implements
      * @throws SearchException
      */
     @HandlesEvent("widgetSubmit")
-    @DontValidate
     public Resolution widgetSearchSubmit() throws InfrastructureException {
 
         HttpServletRequest request = context.getRequest();
@@ -632,56 +646,58 @@ public class SearchDisplayAction extends BaseSearchAction { // implements
      * @throws IOException
      */
     @HandlesEvent("quick")
-    @DontValidate
     public Resolution quicksearch() throws InfrastructureException {
         setRoom(ROOM.search);
 
         log4j.info("inside quick");
 
         // Set up to get form information
-        int database = initDatabase();
+        int db = initDatabase();
 
         // Get the database selection checkboxes
         DatabaseSelector dbselect = new DatabaseSelector();
         try {
-            databasecheckboxes = dbselect.getDatabaseCheckboxes(usermask, database);
+            databasecheckboxes = dbselect.getDatabaseCheckboxes(usermask, db);
         } catch (DatabaseConfigException e) {
             log4j.error("Unable to get checkboxes!!", e);
         }
 
         // Get the search-in options
-        section1opts = SearchForm.getOptions(section1, database, "section");
-        section2opts = SearchForm.getOptions(section2, database, "section");
-        section3opts = SearchForm.getOptions(section3, database, "section");
+        section1opts = SearchForm.getOptions(section1, db, "section");
+        section2opts = SearchForm.getOptions(section2, db, "section");
+        section3opts = SearchForm.getOptions(section3, db, "section");
 
         // Get the doc type options (LIMIT BY). This is only set for specific
         // database values!
         if ((usermask & DatabaseConfig.CPX_MASK) == DatabaseConfig.CPX_MASK || (usermask & DatabaseConfig.GEO_MASK) == DatabaseConfig.GEO_MASK
             || (usermask & DatabaseConfig.EUP_MASK) == DatabaseConfig.EUP_MASK || (usermask & DatabaseConfig.UPA_MASK) == DatabaseConfig.UPA_MASK
             || (usermask & DatabaseConfig.CBF_MASK) == DatabaseConfig.CBF_MASK || (usermask & DatabaseConfig.IBS_MASK) == DatabaseConfig.IBS_MASK) {
-            doctypeopts = SearchForm.getOptions(doctype, database, "doctype");
+            doctypeopts = SearchForm.getOptions(doctype, db, "doctype");
         }
 
         // Get the treatment type options (LIMIT BY). This is only set for
         // specific
         // database values!
         if ((usermask & DatabaseConfig.CPX_MASK) == DatabaseConfig.CPX_MASK || (usermask & DatabaseConfig.INS_MASK) == DatabaseConfig.INS_MASK) {
-            treatmenttypeopts = SearchForm.getOptions(treatmentType, database, "treattype");
+            treatmenttypeopts = SearchForm.getOptions(treatmentType, db, "treattype");
         }
 
         // Get the discipline type options (LIMIT BY). This is only set for
         // specific
         // database values!
         if ((usermask & DatabaseConfig.IBS_MASK) == DatabaseConfig.IBS_MASK || (usermask & DatabaseConfig.INS_MASK) == DatabaseConfig.INS_MASK) {
-            disciplinetypeopts = SearchForm.getOptions(disciplinetype, database, "discipline");
+            disciplinetypeopts = SearchForm.getOptions(disciplinetype, db, "discipline");
         }
 
         // Always output language options (LIMIT BY)
-        languageopts = SearchForm.getOptions(language, database, "language");
+        languageopts = SearchForm.getOptions(language, db, "language");
 
         // Get year options
-        startyearopts = SearchForm.getYears(database, startYear, stringYear, "startYear");
-        endyearopts = SearchForm.getYears(database, endYear, stringYear, "endYear");
+        startyearopts = SearchForm.getYears(db, startYear, stringYear, "startYear");
+        if (GenericValidator.isBlankOrNull(this.endYear)) {
+            this.endYear = Integer.toString(SearchForm.calEndYear(db));
+        }
+        endyearopts = SearchForm.getYears(db, this.endYear, stringYear, "endYear");
 
         // TMH - change per Product management! Autostem fence applies ONLY to
         // quick search!
@@ -712,17 +728,20 @@ public class SearchDisplayAction extends BaseSearchAction { // implements
         setRoom(ROOM.search);
 
         // Get the database selection checkboxes
-        int database = initDatabase();
+        int db = initDatabase();
         DatabaseSelector dbselect = new DatabaseSelector();
         try {
-            databasecheckboxes = dbselect.getDatabaseCheckboxes(usermask, database);
+            databasecheckboxes = dbselect.getDatabaseCheckboxes(usermask, db);
         } catch (DatabaseConfigException e) {
             log4j.error("Unable to get checkboxes!!", e);
         }
 
         // Get year options
-        startyearopts = SearchForm.getYears(database, startYear, stringYear, "startYear");
-        endyearopts = SearchForm.getYears(database, endYear, stringYear, "endYear");
+        startyearopts = SearchForm.getYears(db, startYear, stringYear, "startYear");
+        if (GenericValidator.isBlankOrNull(this.endYear)) {
+            this.endYear = Integer.toString(SearchForm.calEndYear(db));
+        }
+        endyearopts = SearchForm.getYears(db, this.endYear, stringYear, "endYear");
 
         // TMH - change per Product management! Autostem fence applies ONLY to
         // quick search!
@@ -958,14 +977,6 @@ public class SearchDisplayAction extends BaseSearchAction { // implements
     //
     //
 
-    public String getSearchtype() {
-        return searchtype;
-    }
-
-    public void setSearchtype(String searchtype) {
-        this.searchtype = searchtype;
-    }
-
     public String getHistorybackurl() throws UnsupportedEncodingException {
         String url = URLEncoder.encode("/search/" + context.getEventName() + ".url?" + "database=" + database
             + (GenericValidator.isBlankOrNull(searchid) ? "" : "&searchid=" + searchid), "UTF-8");
@@ -1129,6 +1140,24 @@ public class SearchDisplayAction extends BaseSearchAction { // implements
 
     public void setSwReferrer(String swReferrer) {
         this.swReferrer = swReferrer;
+    }
+
+    /* (non-Javadoc)
+     * @see net.sourceforge.stripes.validation.ValidationErrorHandler#handleValidationErrors(net.sourceforge.stripes.validation.ValidationErrors)
+     */
+    @Override
+    public Resolution handleValidationErrors(ValidationErrors errors) throws InfrastructureException, SessionException  {
+        if (errors != null) {
+            preprocess();
+            if ("Quick".equals(this.searchtype)) {
+                return quicksearch();
+            } else if ("Expert".equals(this.searchtype)) {
+                return expertsearch();
+            } else {
+                return quicksearch();
+            }
+        }
+        return null;
     }
 
 }

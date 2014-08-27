@@ -29,6 +29,8 @@ import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
 import org.ei.config.EVProperties;
 import org.ei.controller.HitCount;
+import org.ei.controller.IPBlocker;
+import org.ei.controller.IPBlocker.SessionRate;
 import org.ei.domain.ISBN;
 import org.ei.security.captcha.Config;
 import org.ei.security.captcha.ISkewImage;
@@ -72,18 +74,25 @@ public class CaptchaAction extends EVActionBean {
 	@DefaultHandler
 	@DontValidate
 	public Resolution display() throws Exception {
-		log4j.info("Displaying captcha image...");
-		setRoom(ROOM.search);
-
-		// Build random letters
-		imagetextenc = buildRandomLetters();
-
-	    if (redirectenc == null) {
-	    	// Encrypt the URL to return to upon successful Captcha verification
-	    	redirectenc = buildRedirectEnc();
-	    }
 		
-		return new ForwardResolution("/WEB-INF/pages/customer/captcha.jsp");
+		log4j.info("Displaying captcha image...");
+        // Build random letters
+		imagetextenc = buildRandomLetters();
+        
+		String genericRedirectURl  =  buildGenericRedirectEnc();
+		// Check whether this is a generic redirection
+		if(genericRedirectURl != null){
+        	if (redirectenc == null) {
+        		redirectenc = genericRedirectURl;
+        	}
+        }else{
+    		setRoom(ROOM.search);
+    	    if (redirectenc == null) {
+    	    	// Encrypt the URL to return to upon successful Captcha verification
+    	    	redirectenc = buildRedirectEnc();
+    	    }
+        }
+        return new ForwardResolution("/WEB-INF/pages/customer/captcha.jsp");
 	}	
 	
 	/**
@@ -98,9 +107,7 @@ public class CaptchaAction extends EVActionBean {
 	public Resolution verify() throws Exception {
 		log4j.info("Verifying captcha image...");
 		
-		setRoom(ROOM.search);
-
-    	boolean failed = false;
+		boolean failed = false;
 
     	if (userentry!=null && imagetextenc !=null) {
         	userentry = userentry.trim();
@@ -129,7 +136,31 @@ public class CaptchaAction extends EVActionBean {
     		return new ForwardResolution("/WEB-INF/pages/customer/captcha.jsp");
     	}
     	else {
-    		return new RedirectResolution(new String(Base64.decodeBase64(redirectenc)) + "&" + CAPTCHA_REQUEST_SECUREID + "=" + SecureID.getSecureID(60000L));
+    		// Check the "redirectFlow=Generic" in the url to differentiate the generic redirection and search page redirection 
+    		String redirectURL = new String(Base64.decodeBase64(redirectenc));
+    		if(redirectURL.contains("redirectFlow=Generic")){
+    			
+    			HttpServletRequest request = context.getRequest();
+    			HttpSession session = request.getSession(false);
+    			
+    			if (session != null){
+    	        	SessionRate sessionrate = (SessionRate) session.getAttribute(IPBlocker.IPBLOCKER_SESSION_RATE_LIMITOR_KEY);
+    	        	if(sessionrate != null){
+    	        		sessionrate.reset(true);
+    	        		session.setAttribute(IPBlocker.IPBLOCKER_SESSION_RATE_LIMITOR_KEY, sessionrate);
+    	        	}
+    	        }
+    			if(redirectURL.substring(redirectURL.length() - 1).equalsIgnoreCase("&")){
+    				return new RedirectResolution(redirectURL +  CAPTCHA_REQUEST_SECUREID + "=" + SecureID.getSecureID(60000L));
+    			}else{
+    				return new RedirectResolution(redirectURL + "&" + CAPTCHA_REQUEST_SECUREID + "=" + SecureID.getSecureID(60000L));
+    			}
+    			
+    		}else{
+    			setRoom(ROOM.search);
+    			return new RedirectResolution(redirectURL + "&" + CAPTCHA_REQUEST_SECUREID + "=" + SecureID.getSecureID(60000L));
+    		}
+    		
     	}
 
 
@@ -205,6 +236,26 @@ public class CaptchaAction extends EVActionBean {
 	
 	}
 	
+	
+	/**
+	 * Builds the generic redirect enc.
+	 *
+	 * @return the string
+	 */
+	private String buildGenericRedirectEnc() {
+		
+		// Return the url stored in the session object with Base 64 encoding
+		HttpServletRequest request = context.getRequest();
+		HttpSession session = request.getSession(false);
+		if (session != null){
+        	SessionRate sessionrate = (SessionRate) session.getAttribute(IPBlocker.IPBLOCKER_SESSION_RATE_LIMITOR_KEY);
+        	if(sessionrate != null && sessionrate.getIncomingUrl() != null){
+        		return new String(Base64.encodeBase64(sessionrate.getIncomingUrl().getBytes()));
+        	}
+        }
+		return null;
+	}
+	
 	private String buildRandomLetters() throws Exception {
 		String randomLetters = new String("");
 	    for (int i = 0; i < Config.getPropertyInt(Config.MAX_NUMBER); i++) {
@@ -238,6 +289,10 @@ public class CaptchaAction extends EVActionBean {
 	public static Resolution handleCaptcha(HttpServletRequest request, UserSession usess) throws Exception {
 		
 		HttpSession session = request.getSession(false);
+		if (session == null) {
+		    log4j.error("No session object available!");
+		    return null;
+		}
 		String ip = HttpRequestUtil.getIP(request);
 		String custID = usess.getUser().getCustomerID();
 		

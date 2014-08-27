@@ -18,6 +18,7 @@ import org.ei.config.EVProperties;
 import org.ei.config.RuntimeProperties;
 import org.ei.domain.personalization.EVWebUser;
 import org.ei.domain.personalization.IEVWebUser;
+import org.ei.util.SyncTokenFIFOQueue;
 
 /**
  * This class represents an EV user's session.  Note that it marks some items transient.  This is
@@ -107,8 +108,10 @@ public class UserSession implements Serializable
 	private transient Set<UserEntitlement> userEntitlements= new HashSet<UserEntitlement>();
     private transient CARSMetadata carsMetaData = new CARSMetadata();
     private transient IEVWebUser user;
+    private SyncTokenFIFOQueue fifoQueue = new SyncTokenFIFOQueue();
 	
-    // ***************************************************************************
+    
+	// ***************************************************************************
     // This is where all "real" session information should be stored!  Anything
     // required to be available when a session is restored from database should
     // go in here - results-per-page, navigator state, etc.
@@ -540,6 +543,14 @@ public class UserSession implements Serializable
 		}
 		
 		return enabled;
+	}
+	
+	public SyncTokenFIFOQueue getFifoQueue() {
+		return fifoQueue;
+	}
+
+	public void setFifoQueue(SyncTokenFIFOQueue fifoQueue) {
+		this.fifoQueue = fifoQueue;
 	}
 	
 	

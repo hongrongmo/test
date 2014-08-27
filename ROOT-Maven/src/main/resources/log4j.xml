@@ -16,6 +16,14 @@
 			<param name="ConversionPattern" value="%d %-5p (%F:%L) - %m%n" />
 		</layout>
 	</appender>
+	
+	<appender name="CARSERRORRFA" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="${catalina.base}/logs/carserrors.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p (%F:%L) - %m%n" />
+		</layout>
+	</appender>
 
 	<!-- Perf4J appenders -->
 	<!-- This AsyncCoalescingStatisticsAppender groups StopWatch log messages 
@@ -94,4 +102,8 @@
         <appender-ref ref="RFA" />
         <appender-ref ref="CA" />
 	</root>
+	<logger name="CarsErrorLogger" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="CARSERRORRFA" />
+	</logger>
 </log4j:configuration>

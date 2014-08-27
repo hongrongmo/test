@@ -2,7 +2,7 @@
 * Styles for the search abstract page
 */
 
-		
+
 div.hr { border: none; color: #D7D7D7; background: #D7D7D7; overflow:hidden}
 hr {display:none};
 
@@ -25,12 +25,14 @@ hr {display:none};
 #abstracttoolbar a.email:hover {background-image: url("/static/images/Email_On.png")}
 #abstracttoolbar a.print {padding-left: 20px;background: url("/static/images/Print.png") no-repeat scroll 0 50% transparent;}
 #abstracttoolbar a.print:hover {background-image: url("/static/images/Print_On.png")}
-#abstracttoolbar a.download {padding-left: 20px;background: url("/static/images/Download.png") no-repeat scroll 0 50% transparent;}
+#abstracttoolbar a.download{padding-left: 20px;background: url("/static/images/Download.png") no-repeat scroll 0 50% transparent;}
 #abstracttoolbar a.download:hover {background-image: url("/static/images/Download_On.png")}
 #abstracttoolbar a.blog {padding-left: 22px;background: url("/static/images/Blog.png") no-repeat scroll 0 50% transparent;}
 #abstracttoolbar a.blog:hover {background-image: url("/static/images/Blog_on.png")}
 #abstracttoolbar a.save {padding-left: 20px;background: url("/static/images/SavetoFolder.png") no-repeat scroll 0 50% transparent;}
 #abstracttoolbar a.save:hover {background-image: url("/static/images/SavetoFolder_On.png")}
+
+.downloadSpan {padding-left: 20px;background: url("/static/images/Download.png") no-repeat scroll 0 50% transparent;}
 
 #abstractwrapper {margin: 0 10px; min-width: 1020px; width: 100%}
 #abstractwrapperpage {margin: 0 10px; min-width:995px width: 100%}
@@ -53,14 +55,14 @@ hr {display:none};
 }
 /* #tabs ul li a.active {font-weight: bold; border-top: 3px solid #3273B5; padding-top: 5px; background-color: white} */
 #tabs ul li a.active {
-	font-weight: bold; 
-	color: #148C75; 
-	background-color: white; 
-	font-size: 16px; 
-	padding: 5px 10px 4px; 
+	font-weight: bold;
+	color: #148C75;
+	background-color: white;
+	font-size: 16px;
+	padding: 5px 10px 4px;
 	*padding: 5px 10px 3px;
     line-height: 30px;
-} 
+}
 
 #abstractarea {float: left; border: 1px solid #9b9b9b; margin: 0; padding:7px; width:99%;position:relative; top: -3px; _top:-5px}
 #abstractarea p.topline {margin:0 0 7px}
@@ -119,7 +121,7 @@ hr {display:none};
 	border: 1px solid #148C75;
 	margin-bottom:15px;
 }
-	
+
 #keycloud .sidebarlist {
 	padding: 0;
 	margin: 0;

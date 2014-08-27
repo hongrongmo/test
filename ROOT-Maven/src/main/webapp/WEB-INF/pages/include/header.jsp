@@ -4,31 +4,9 @@
 <%-- HEADER --%>
 <div id="header">
 	<div id="logoEV" aria-label="Engineering Village" role="banner">
-		<stripesext:link protocol="http" href="/home.url" title="Engineering Village - The information discovery platform of choice for the engineering community" ><img alt="Engineering Village - The information discovery platform of choice for the engineering community" src="/static/images/EV-logo.gif"/></stripesext:link>
-
-		</div>
-
-<%--  TMH removed on 5/18/2012
-	<div id="headerLink">
-		<div class="clearfix" id="suites">
-		<ul class="suites">
-			<li><a
-				title="Hub - SciVerse's integrated search"
-				href="http://www.hub.sciverse.com/"
-				target="_blank">Hub</a></li>
-			<li><a
-				title="ScienceDirect - The world's leading full-text scientific database"
-				href="http://www.sciencedirect.com"
-				target="_blank">ScienceDirect</a></li>
-			<li><a
-				title="Scopus - The largest abstract and citation database of research literature and quality web sources"
-				href="http://www.scopus.com"
-				target="_blank">Scopus</a></li>
-			<li><a class="last selected" title="Engineering Village">Engineering Village</a></li>
-		</ul>
-		</div>
+		<a href="/home.url" title="Engineering Village - The information discovery platform of choice for the engineering community" ><img alt="Engineering Village - The information discovery platform of choice for the engineering community" src="/static/images/EV-logo.gif"/></a>
 	</div>
- --%>
+
 
 	<c:choose>
 		<c:when	test="${not empty actionBean.context.userSession.carsMetaData.headerContent && actionBean.showLoginBox}">
@@ -57,8 +35,8 @@
 <c:set var="userprefs" value="${actionBean.context.userSession.user.userPreferences}"/>
 
 <ul title="top level navigation" class="nav main" style="z-index:300;">
-	<li><stripesext:link title="Search Engineering Village" href="${searchlink}" class="${actionBean.roomSearch ? 'selected' : ''}" protocol="http">Search</stripesext:link></li>
-	<li><stripesext:link protocol="http" title="Selected Records - View your selected records"	href="/selected/citation.url?CID=citationSelectedSet&DATABASETYPE=${actionBean.database}&searchtype=TagSearch" class="${actionBean.roomSelectedRecords ? 'selected' : ''}">Selected records</stripesext:link></li>
+	<li><a title="Search Engineering Village" href="${searchlink}" class="${actionBean.roomSearch ? 'selected' : ''}">Search</a></li>
+	<li><a title="Selected Records - View your selected records"	href="/selected/citation.url?CID=citationSelectedSet&DATABASEID=${actionBean.database}&searchtype=TagSearch" class="${actionBean.roomSelectedRecords ? 'selected' : ''}">Selected records</a></li>
 
 	<c:choose>
 	<c:when test="${actionBean.context.userSession.user.individuallyAuthenticated}">
@@ -77,11 +55,11 @@
 		</li>
 	</c:when>
 	<c:otherwise>
-		<li<c:if test="${not userprefs.tag and not (userprefs.bulletin and userprefs.bulletinEnt)}"> class="last"</c:if>><stripesext:link protocol="http" title="Set your personal settings" href="/customer/settings.url?database=${actionBean.database}" class="${actionBean.roomMySettings ? 'selected' : ''}">Settings</stripesext:link></li>
+		<li<c:if test="${not userprefs.tag and not (userprefs.bulletin and userprefs.bulletinEnt)}"> class="last"</c:if>><a title="Set your personal settings" href="/customer/settings.url?database=${actionBean.database}" class="${actionBean.roomMySettings ? 'selected' : ''}">Settings</a></li>
 	</c:otherwise>
 	</c:choose>
-	<c:if test="${userprefs.tag}"><li<c:if test="${not (userprefs.bulletin and userprefs.bulletinEnt)}"> class="last"</c:if>><stripesext:link protocol="http" title="Tags & Groups - View/Edit your tags and groups" href="/tagsgroups/display.url?searchtype=TagSearch" class="${actionBean.roomTagsGroups ? 'selected' : ''}">Tags &amp; Groups</stripesext:link></li></c:if>
-	<c:if test="${userprefs.bulletin and userprefs.bulletinEnt}"><li class="last"><stripesext:link protocol="http" title="Bulletins - View EnCompass bulletins" href="/bulletins/display.url" class="${actionBean.roomBulletins ? 'selected' : ''}">Bulletins</stripesext:link></li></c:if>
+	<c:if test="${userprefs.tag}"><li<c:if test="${not (userprefs.bulletin and userprefs.bulletinEnt)}"> class="last"</c:if>><a title="Tags & Groups - View/Edit your tags and groups" href="/tagsgroups/display.url?searchtype=TagSearch" class="${actionBean.roomTagsGroups ? 'selected' : ''}">Tags &amp; Groups</a></li></c:if>
+	<c:if test="${userprefs.bulletin and userprefs.bulletinEnt}"><li class="last"><a title="Bulletins - View EnCompass bulletins" href="/bulletins/display.url" class="${actionBean.roomBulletins ? 'selected' : ''}">Bulletins</a></li></c:if>
 </ul>
 
 <ul class="nav misc" id="helpMenuUL" style="padding-top:0px;display:none;">
@@ -120,7 +98,7 @@
 		</ul>
 	</li>
 	<c:if test="${userprefs.reference}">
-		<li class="nodivider"><stripesext:link protocol="http" title="Ask an expert - Get help from an Engineer, Product Specialist, or Librarian" href="/askanexpert/display.url">Ask an expert</stripesext:link></li>
+		<li class="nodivider"><a title="Ask an expert - Get help from an Engineer, Product Specialist, or Librarian" href="/askanexpert/display.url">Ask an expert</a></li>
 
 	</c:if>
 	<c:choose>
@@ -144,9 +122,28 @@
 
 </div>
 <div id="prefsSaved" style="display:none;text-align:left;"><img src="/static/images/ev_checkmark.png" style="padding-right:5px;width:20px;"/>Preferences Saved!</div>
+<c:choose>
+	<c:when test="${actionBean.context.userSession.user.individuallyAuthenticated}">
+	<div id="dlprefsSaved" style="display:none;text-align:left;"><img src="/static/images/ev_checkmark.png" style="padding-right:5px;width:20px;"/>Your download settings for this session have been saved. To keep these settings, change your preference in Settings.</div>
+	</c:when>
+	<c:otherwise>
+	<div id="dlprefsSaved" style="display:none;text-align:left;"><img src="/static/images/ev_checkmark.png" style="padding-right:5px;width:20px;"/>Your download settings for this session have been saved. To keep these settings, login or register and save your preferences in Settings.</div>
+	</c:otherwise>
+</c:choose>
+
+
 <div id="prefsNotSaved" style="display:none;text-align:left;"><img src="/static/images/No_results_found.png" style="padding-right:5px;width:20px;"/>Preferences Could Not Be Saved!</div>
 
   <script>
+  var savedDLPrefs;
+  <c:if test="${actionBean.context.userSession.user.individuallyAuthenticated}">
+  	savedDLPrefs = {
+  			location:'${actionBean.context.userSession.user.userPrefs.dlLocation}',
+  			format:'${actionBean.context.userSession.user.userPrefs.dlFormat}',
+  			displaytype:'${actionBean.context.userSession.user.userPrefs.dlOutput}',
+  			baseaddress:'${actionBean.baseaddress}'
+  	};
+  </c:if>
   $(function() {
 	  if($("#settingMenu").length > 0){
 		$("#settingMenu").menu({position:{my:'right+25 top+20'}, icons: { submenu: "ui-icon-triangle-1-s" }});
@@ -166,7 +163,7 @@
 
    $(".prefsOverlay").click(function(){
 	   	GALIBRARY.createWebEventWithLabel('Dialog Open', 'Edit Preferences', 'Settings Dropdown');
-		TINY.box.show({url:'/customer/userprefs.url',clickmaskclose:false,width:400,height:390,close:true,opacity:20,topsplit:3});
+		TINY.box.show({url:'/customer/userprefs.url',clickmaskclose:false,width:400,height:500,close:true,opacity:20,topsplit:3});
 
 	});
 
@@ -176,16 +173,26 @@
 		$(".saved").hide();
 		var url = "/customer/userprefs.url?save=true&";
 		var params = "";
-		var hlight = "#";
+		var hlight;
+		var back_highlight = false;
 		$("#userPreferencesForm input:checked").each(function (){
-
-				if(params != ""){params += "&";}
-				params += $(this).attr("name") + "=" + $(this).val();
-				
-				
+				if($(this).attr("name") != 'highlightBackground'){
+					if(params != ""){params += "&";}
+					//skip the highlight portion. We will do this later.
+					params += $(this).attr("name") + "=" + $(this).val();
+				}
 		});
-		params += "&highlight=" + $("#hColor").val();
-		hlight += $("#hColor").val();
+		if(highlightV1){
+			hlight = $("#hlight_color").spectrum("get").toString();
+			back_highlight = $("#hlight_bg_chkbx").prop("checked");
+			if(back_highlight){
+				hlight = JSON.parse($.cookie('ev_highlight')).color;
+			}
+
+			params += "&highlight=" + escape(hlight);
+			params += "&highlightBackground=" + back_highlight;
+		}
+
 		url += params;
 		GALIBRARY.createWebEventWithLabel('Preferences', 'Preferences Saved', params);
 
@@ -194,7 +201,47 @@
 		}).success(function(data){
 			TINY.box.hide();
 			//change any highlight color on the fly
-			$(".hit").css("color", hlight);			
+			if(highlightV1){
+
+				if(back_highlight){
+					$(".hit").addClass("bghit");
+					$(".bghit").removeClass("hit");
+					$(".bghit").css("color", "#000000");
+					$.cookie('ev_highlight', '{"bg_highlight":'+true+', "color":"'+hlight+'"}',{path:'/'});
+					if($("#hlight_color_abs").length > 0){
+						$("#hlight_color_abs").spectrum("set", "#000000");
+						$("#hlight_color_abs").spectrum("disable");
+						$("#hlight_color_abs_lbl").css("color","gray");
+					}
+				}else{
+					$(".bghit").addClass("hit");
+					$(".hit").removeClass("bghit");
+					$(".hit").css("color", hlight);
+					$("a span.hit").css("color", "inherit");
+					$.cookie('ev_highlight', '{"bg_highlight":'+false+', "color":"'+hlight+'"}',{path:'/'});
+
+					if($("#hlight_color_abs").length > 0){
+						$("#hlight_color_abs").spectrum("set", hlight);
+						$("#hlight_color_abs").spectrum("enable");
+						$("#hlight_color_abs_lbl").css("color","black");
+					}
+				}
+
+				if($("#ckbackhighlight")){
+					$("#ckbackhighlight").prop("checked",back_highlight);
+				}
+			}
+			if(!$.cookie("ev_oneclickdl") && $('#downloadlink').length > 0){
+				//if the user hasn't made changes to his session we need to update the current oneclick dl link
+				changeOneClick($("input[name='dlLocation']:checked").val());
+				dlOptions = {
+						location:$("input[name='dlLocation']:checked").val(),
+						format:$("input[name='dlFormat']:checked").val(),
+						displaytype:$("input[name='dlOutput']:checked").val(),
+						baseaddress:dlOptions.baseaddress
+				};
+			}
+
 			$("#prefsNotSaved").hide();
 			$("#prefsSaved").fadeIn("slow");
 		}).error(function(data){

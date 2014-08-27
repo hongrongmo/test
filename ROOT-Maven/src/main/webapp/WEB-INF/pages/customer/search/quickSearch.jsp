@@ -31,7 +31,7 @@
 	<div id="searchformwrap">
 	<div id="searchformbox">
 
-		<stripes:errors field="validationError"><div id="errormessage"><stripes:individual-error/></div></stripes:errors>
+        <stripes:errors field="validationError"><div id="errormessage"><stripes:individual-error/></div></stripes:errors>
 
 		<c:set var="searchtab" value="quicksearch" scope="request"></c:set>
 		<jsp:include page="parts/searchtabs.jsp"></jsp:include>
@@ -39,8 +39,8 @@
 		<div id="searchcontents" class="shadowbox" role="search" aria-labeledby="QuickSearch">
 			<div id="searchtipsbox">
 				<ul>
-					<li class="databases"><a href="/databases.jsp?dbid=<c:forEach items="${actionBean.databaseCheckboxes}" var="checkbox" varStatus="status"><c:if test="${status.count>1}">,</c:if>${checkbox.id}</c:forEach>" id="databaseTipsLink" title="Learn more about databases" target="_blank" class="evpopup">Databases</a></li>
-					<li><a href="/searchtips.jsp?topic=quick"  title="Search tips to help" id="searchTipsLink" class="notfirst evpopup" >Search tips</a></li>
+					<li class="databases"><a href="/databases.jsp?dbid=<c:forEach items="${actionBean.databaseCheckboxes}" var="checkbox" varStatus="status"><c:if test="${status.count>1}">,</c:if>${checkbox.id}</c:forEach>" id="databaseTipsLink" title="Learn more about databases" target="_blank" class="evdialog">Databases</a></li>
+					<li><a href="/searchtips.jsp?topic=quick"  title="Search tips to help" id="searchTipsLink" class="notfirst evdialog" >Search tips</a></li>
 				</ul>
 			</div>
 
@@ -48,6 +48,7 @@
 			<stripes:form onsubmit="return searchValidation();" method="POST" action="/search/submit.url" name="quicksearch">
 			<input type="hidden" name="CID" value="searchSubmit"/>
 			<input type="hidden" name="searchtype" value="Quick"/>
+			<input type="hidden" name="csrfSyncToken" value="${actionBean.csrfSyncToken}"/>
 			<input type="hidden" name="resetDataBase" value="${actionBean.database}"/>
 
 			<%-- ******************************************************** --%>

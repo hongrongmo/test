@@ -7,11 +7,11 @@ function openLocalHoldingsLink(e,orginPage,currentObject){
 	var newUrl = originalUrl.replace("localholdinglinks","localholdinglinksstreamurl");
 	$.get(
 			newUrl,
-		    function(data) { 
+		    function(data) {
 				window.open(data,'newwindow');
-				createWebEventWithLabel('Local Holding Link',orginPage,data);
+				if (GALIBRARY) GALIBRARY.createWebEventWithLabel('Local Holding Link',orginPage,data);
 			}
 		);
-	
+
 	return false;
-} 
+}

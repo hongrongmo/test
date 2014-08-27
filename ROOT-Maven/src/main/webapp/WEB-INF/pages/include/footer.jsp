@@ -8,8 +8,8 @@
 <ul class="col">
 	<li style="float: left; margin-right: 16px"><strong>About Ei</strong>
 	<ul>
-		<li><a target="_blank" href="http://www.ei.org/" title="Learn more about Ei (opens in a new window)">About Ei</a></li>
-		<li><a target="_blank" href="http://www.ei.org/evhistory" title="Learn the history of Ei (opens in a new window)">History of Ei</a></li>
+		<li><a target="_blank" href="http://www.elsevier.com/online-tools/engineering-village" title="Learn more about Ei (opens in a new window)">About Ei</a></li>
+		<li><a target="_blank" href="http://www.elsevier.com/online-tools/engineering-village/history" title="Learn the history of Ei (opens in a new window)">History of Ei</a></li>
 	</ul>
 	</li>
 	<li style="float: left">
@@ -20,10 +20,10 @@
 <ul class="col">
 	<li><strong>About Engineering Village</strong>
 	<ul>
-        <li><a target="_blank" href="http://www.ei.org/engineeringvillage" title="Learn more about Engineering Village (opens in a new window)">About Engineering Village</a></li>
-        <li><a target="_blank" href="http://www.ei.org/accessibility" title="Accessibility Statement (opens in a new window)">Accessibility Statement</a></li>
-		<li><a target="_blank" href="http://www.ei.org/products" title="See what content is available in Engineering Village (opens in a new window)">Content Available</a></li>
-		<li><a target="_blank" href="http://www.ei.org/who-we-help" title="Learn about EV users (opens in a new window)">Who uses EV?</a></li>
+        <li><a target="_blank" href="http://www.elsevier.com/online-tools/engineering-village/features" title="Learn more about Engineering Village (opens in a new window)">About Engineering Village</a></li>
+        <li><a target="_blank" href="https://www.elsevier.com/online-tools/engineering-village/accessibility-statement" title="Accessibility Statement (opens in a new window)">Accessibility Statement</a></li>
+		<li><a target="_blank" href="http://www.elsevier.com/online-tools/engineering-village/contentdatabase-overview" title="See what content is available in Engineering Village (opens in a new window)">Content Available</a></li>
+		<li><a target="_blank" href="http://www.elsevier.com/online-tools/engineering-village/who-uses-engineering-village" title="Learn about EV users (opens in a new window)">Who uses EV?</a></li>
 	</ul>
 	</li>
 </ul>

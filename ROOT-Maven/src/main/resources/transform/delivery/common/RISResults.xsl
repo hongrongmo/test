@@ -94,8 +94,11 @@
     <xsl:template match="S1">
       <xsl:text>SN  - </xsl:text><xsl:value-of select="normalize-space(.)" /><xsl:text>&#xD;&#xA;</xsl:text>
     </xsl:template>
-    <xsl:template match="AFF|AD">
+    <xsl:template match="AFF">
       <xsl:text>AD  - </xsl:text><xsl:for-each select="AF"><xsl:value-of select="strutil:stripHtml(.)" /><xsl:if test="position() != last()">; </xsl:if><xsl:text>&#xD;&#xA;</xsl:text></xsl:for-each>
+    </xsl:template>
+    <xsl:template match="AD">
+      <xsl:text>AD  - </xsl:text><xsl:value-of select="strutil:stripHtml(.)" /><xsl:text>&#xD;&#xA;</xsl:text>
     </xsl:template>
     <xsl:template match="N2">
       <xsl:text>N2  - </xsl:text><xsl:value-of select="strutil:stripHtml(.)"/><xsl:text>&#xD;&#xA;</xsl:text>

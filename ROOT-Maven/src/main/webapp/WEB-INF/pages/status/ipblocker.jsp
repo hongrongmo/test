@@ -12,7 +12,7 @@
 
     <stripes:layout-component name="csshead">
     <jsp:include page="include/customcss.jsp"></jsp:include>
-    <link type="text/css" rel="stylesheet" href="/static/css/custom-theme/jquery.dataTables.css"/>
+    <link type="text/css" rel="stylesheet" href="/static/css/custom-theme/jquery.dataTables-1.10.0.min.css"/>
     <style type="text/css">
         h2 {font-size: 14px; margin: 3px; padding: 0}
             #blockedips_table {width:740px;border:1px solid black;}
@@ -34,9 +34,6 @@
     	<jsp:include page="include/tabs.jsp"/>
         <div class="marginL10">
 	    	<div style="margin-left:5px">
-		    	<stripes:errors>
-	                 <img style="margin-bottom:5px" src="/static/images/red_warning.gif"><b>&nbsp;&nbsp;<stripes:individual-error /></b>
-	            </stripes:errors>
 	            <c:if test="${not empty actionBean.context.messages}">
 				    <c:forEach var="message" items="${actionBean.context.messages}"><span style="font-weight:bold;color: #148C75;">${message.message}</span></c:forEach>
 				</c:if>
@@ -46,7 +43,6 @@
 		            This page allows you to add/remove/modify the IP's for blocking purpose. <span style="font-weight:bold">You may need to wait for maximum 10 minutes to get the changes applied to the system.</span>
 		        </p>
 
-		        <p>IP Blocker delay enabled = <%= RuntimeProperties.getInstance().getProperty(IPBlocker.IPBLOCKER_DELAY_ENABLED, "false") %></p>
 		        <br/>
 		        <stripes:form id="mainForm" action="/status.url" method="POST">
 		        	<stripes:text name="txtblockedip" id="txtblockedip"/>
@@ -102,13 +98,13 @@
 
     <stripes:layout-component name="jsbottom">
     <c:if test="${not empty blockedIpsList}">
-    <script type="text/javascript" src="/static/js/jquery/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery/jquery.dataTables-1.10.0.min.js"></script>
     <script type="text/javascript">
 
     $(document).ready(function() {
     	 $('#blockedips_table').dataTable({
              "aaSorting": [[2,"desc"]],
-             "aoColumns": [null, {"bSortable":false}, null, null,null, {"bSortable":false}],
+             "aoColumns": [null, null, null, null,{"bSortable":false}, {"bSortable":false}],
              "bStateSave": false,
              "bPaginate": false,
              "bAutoWidth": false,

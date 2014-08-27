@@ -21,21 +21,15 @@ function loadScript(url, callback){
     }
     script.src = url;
     document.getElementsByTagName("head")[0].appendChild(script);
-    
+
 }
 
 function startLoadingDriveButton(){
-	constructDriveButton();	
-	$("input[name='downloadformat']").change(function(){
-		constructDriveButton();	
-	});	
-	$("#displayformat").change(function(){
-		constructDriveButton();	
-	});	
+	constructDriveButton();
 }
 
 function constructDriveButton(){
-		var downloadformat = $('input[name="downloadformat"]:checked').val();
+		var downloadformat = $('#downloadformat').val();
 		var displaytype = $("#displayformat").val();
 		if (downloadformat == undefined || downloadformat == "" || downloadformat == "refworks") {
 			if (downloadformat == "refworks") {
@@ -43,13 +37,13 @@ function constructDriveButton(){
 			}else{
 				$('#savetodrivemsg').html("Select a download format");
 			}
-			$('#savetodrivebuttoncontainer').empty();
-			$('#savetodrivebuttoncontainer').html('<a id="savetodrivebutton" onmouseover="tooltip_show();" onmouseout="tooltip_hide();" title="Save to Google Drive" href="#"><img src="/static/images/savetodriveoriginal.jpg"></a>');
+			$('#savetodrive-div').empty();
+			$('#savetodrive-div').html('<a id="savetodrivebutton" onmouseover="tooltip_show();" onmouseout="tooltip_hide();" title="Save to Google Drive" href="#"><img src="/static/images/savetodriveoriginal.jpg"></a>');
 		}else{
 			$('#savetodrivemsg').html("");
 			var fileName = creatFileName(downloadformat,displaytype);
-			$('#savetodrivebuttoncontainer').empty();
-			gapi.savetodrive.render('savetodrivebuttoncontainer', {
+			$('#savetodrive-div').empty();
+			gapi.savetodrive.render('savetodrive-div', {
 		            src: constructDownlodUrl(downloadformat,displaytype),
 		            filename: fileName,
 		            sitename: 'Engineering Village'
@@ -68,7 +62,7 @@ function constructDownlodUrl(downloadformat,displaytype){
 		downloadUrl += "&handlelist=" + handlelist;
     if (folderid && folderid.length > 0)
     	downloadUrl += "&folderid=" + folderid;
-    
+
     downloadUrl += "&downloadMedium=googledrive";
     return downloadUrl;
 }
@@ -99,7 +93,7 @@ function creatFileName(downloadformat,displaytype){
 		filename += '_.'+downloadformat;
 	}
 	return filename;
-}	
+}
 
 function tooltip_show(tooltipId,event){
     thistip = document.getElementById("savetodrivemsg");
@@ -110,4 +104,27 @@ function tooltip_show(tooltipId,event){
 function tooltip_hide(tooltipId){
 	thistip = document.getElementById("savetodrivemsg");
     thistip.style.visibility = 'hidden';
+}
+
+function submitGoogleDriveDL(){
+	var downloadformat = $('input[name="downloadformat"]:checked').val();
+	var displaytype = $('input[name="displayformat"]:checked').val();
+	var docidlist = $("#docidlist").val();
+	var handlelist = $("#handlelist").val();
+	var folderid = $("#folderid").val();
+	var baseaddress = $("input[name='baseaddress']").val();
+
+	var googleDrivePageUrl = 'https://'+baseaddress+'/delivery/download/googledrive.url?downloadformat='+downloadformat+'&displayformat='+displaytype;
+
+	if (docidlist && docidlist.length > 0)
+		googleDrivePageUrl += "&docidlist=" + docidlist;
+	if (handlelist && handlelist.length > 0)
+		googleDrivePageUrl += "&handlelist=" + handlelist;
+    if (folderid && folderid.length > 0)
+    	googleDrivePageUrl += "&folderid=" + folderid;
+
+
+	GALIBRARY.createWebEventWithLabel('Google Drive', 'Save Initiated', downloadformat);
+	var new_window1 = window.open(googleDrivePageUrl, 'GoogleDrive', "height=350,width=820,resizable=yes,scrollbars=yes");
+	new_window1.focus();
 }
