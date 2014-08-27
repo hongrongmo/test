@@ -42,6 +42,7 @@
 		<input type="hidden" value="${actionBean.dropBoxClientid}" id="dropBoxClientid" />
 		<input type="hidden" value="${actionBean.downloadformat}" id="downloadformat" />
 		<input type="hidden" value="${actionBean.displayformat}" id="displayformat" />
+		<input type="hidden" value="${actionBean.filenameprefix}" id="filenameprefix" />
 		
 		<div style="margin-top:10px;font-size:16px; height:150px" >
 			<div id="userInfo" style="display:none">
@@ -81,6 +82,7 @@
 		    <stripes:hidden name="dropBoxClientid" value="${actionBean.dropBoxClientid}" />
 		    <stripes:hidden name="downloadformat" value="${actionBean.downloadformat}" />
 		    <stripes:hidden name="displayformat" value="${actionBean.displayformat}" />
+		    <stripes:hidden name="filenameprefix" value="${actionBean.filenameprefix}" />
 		</stripes:form>
 	</stripes:layout-component>
 

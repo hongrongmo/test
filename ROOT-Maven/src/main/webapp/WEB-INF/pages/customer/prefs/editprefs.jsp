@@ -164,7 +164,7 @@
 				<li><label for="pdf_radio"><input class="formatRadio" type="radio" name="dlFormat" value="pdf" id="pdf_radio" <c:if test="${dlFormat eq 'pdf'}">checked="checked"</c:if>/>PDF</label></li>
 				<li><label for="rtf_radio"><input class="formatRadio" type="radio" name="dlFormat" value="rtf" id="rtf_radio" <c:if test="${dlFormat eq 'rtf'}">checked="checked"</c:if>/>RTF<span class="smalltxt">(Word&reg;)</span></label></li>
 			</ul>
-			</fieldset>
+	  		</fieldset>
 			<c:set value="${actionBean.currentuserprefs.dlOutput}" var="dlOutput"></c:set>
 			<hr/>
 			<div class="settingSection">Download output</div>
@@ -175,8 +175,13 @@
 				<li><label for="abstract_radio"><input class="outputRadio" type="radio" name="dlOutput" value="abstract" id="abstract_radio" <c:if test="${dlOutput eq 'abstract'}">checked="checked"</c:if>/>Abstract</label></li>
 				<li><label for="detailed_radio"><input class="outputRadio" type="radio" name="dlOutput" value="detailed" id="detailed_radio" <c:if test="${dlOutput eq 'detailed'}">checked="checked"</c:if>/>Detailed record</label></li>
 			</ul>
-			</fieldset>
-
+	    </fieldset>
+			<c:set value="${actionBean.currentuserprefs.dlFileNamePrefix}" var="dlFileNamePrefix"></c:set>
+			<hr/>
+			<div class="settingSection">File Name Prefix</div>
+			<fieldset title="File Name Prefix Settings">
+				<input type="text" value="${dlFileNamePrefix}" name="dlFileNamePrefix" id="dlFileNamePrefix" maxlength="30" />
+	    	</fieldset>
 
 	</div>
 

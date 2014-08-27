@@ -141,6 +141,7 @@
   			location:'${actionBean.context.userSession.user.userPrefs.dlLocation}',
   			format:'${actionBean.context.userSession.user.userPrefs.dlFormat}',
   			displaytype:'${actionBean.context.userSession.user.userPrefs.dlOutput}',
+  			filenameprefix:'${actionBean.context.userSession.user.userPrefs.dlFileNamePrefix}',
   			baseaddress:'${actionBean.baseaddress}'
   	};
   </c:if>
@@ -192,6 +193,19 @@
 			params += "&highlight=" + escape(hlight);
 			params += "&highlightBackground=" + back_highlight;
 		}
+		
+		
+		var fileNamePrefix = $.trim($('#dlFileNamePrefix').val());
+		if(fileNamePrefix.length < 3){
+			alert("File name prefix cannot be empty and should have minimum of 3 characters");
+			return false;
+		}
+		if(fileNamePrefix.length > 50){
+			alert("File name prefix cannot have more than 50 characters");
+			return false;
+		}
+		params += "&dlFileNamePrefix=" + fileNamePrefix;
+		
 
 		url += params;
 		GALIBRARY.createWebEventWithLabel('Preferences', 'Preferences Saved', params);
@@ -238,6 +252,7 @@
 						location:$("input[name='dlLocation']:checked").val(),
 						format:$("input[name='dlFormat']:checked").val(),
 						displaytype:$("input[name='dlOutput']:checked").val(),
+						filenameprefix:fileNamePrefix,
 						baseaddress:dlOptions.baseaddress
 				};
 			}
