@@ -86,6 +86,14 @@ function recordPageDownloadSubmit(dlLinkUrl){
 	var displayformat = dlOptions.displaytype;
 	var milli = (new Date()).getTime();
 
+	if(typeof(sessionid) != 'undefined' && sessionid.length > 0 ){
+
+			if(sessionid.indexOf("_") >= 0){
+				sessionid = sessionid.split("_")[1];
+			}
+			params = "&sessionid=" + sessionid;
+	}
+
 	if(displayformat == 'default'){
 		//if it's set to default use the format that came in on the url
 		params = dlLinkUrl;
@@ -116,6 +124,7 @@ function recordPageDownloadSubmit(dlLinkUrl){
 						refworksURL + "&url=" + escape(url),
 						"RefWorksMain",
 						"width=800,height=500,scrollbars=yes,menubar=yes,resizable=yes,directories=yes,location=yes,status=yes");
+
         event.preventDefault();
 
 	}else if(downloadLocation == "dropbox"){
@@ -172,7 +181,13 @@ function basketDownloadSubmit() {
 			displaytype = 'citation';
 		}
 	}
+	if(typeof(sessionid) != 'undefined' && sessionid.length > 0 ){
 
+		if(sessionid.indexOf("_") >= 0){
+			sessionid = sessionid.split("_")[1];
+		}
+
+	}
 	var url = "";
 	GALIBRARY.createWebEventWithLabel('Output', 'Download', downloadformat);
 	// Refworks?
@@ -186,10 +201,10 @@ function basketDownloadSubmit() {
 				+ '&database=' + databaseid
 				+ addParams;
 
-		window.open(
-						refworksURL + "&url=" + escape(url),
+		window.open(refworksURL + "&url=" + escape(url),
 						"RefWorksMain",
 						"width=800,height=500,scrollbars=yes,menubar=yes,resizable=yes,directories=yes,location=yes,status=yes");
+
         event.preventDefault();
 
 	}else if(downloadLocation == "dropbox"){
