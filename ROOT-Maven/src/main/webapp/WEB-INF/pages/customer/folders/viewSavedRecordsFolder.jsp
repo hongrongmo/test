@@ -12,6 +12,7 @@
 	<stripes:layout-component name="csshead">
 	<link href="/static/css/ev_selected.css?v=${releaseversion}" media="all" type="text/css" rel="stylesheet"></link>
 	<link href="/static/css/ev_results.css?v=${releaseversion}"" media="all" type="text/css" rel="stylesheet"></link>
+	<link href="/static/css/ev_oneclickdl.css?v=${releaseversion}"" media="all" type="text/css" rel="stylesheet"></link>
 	<c:if test="${(actionBean.view eq 'detailed') or (actionBean.view eq 'abstract')}">
 		<link href="/static/css/ev_abstract.css?v=${releaseversion}" media="all" type="text/css" rel="stylesheet"></link>
 	</c:if>
@@ -23,7 +24,7 @@
 	<div  style="  margin: 0px 7px 7px 0px ;width:97.5%  "></div>
     <div id="folderview">Folder Name :</div><div id="folderview1">&nbsp;&nbsp;${actionBean.folderName}</div>
 
-	<p style="margin-left:7px;margin-top:7px">There are <c:choose><c:when test="${empty actionBean.results}">no records</c:when><c:otherwise>${actionBean.folderSize} saved records</c:otherwise></c:choose> in this folder.</p>
+	<p style="margin-left:7px;margin-top:7px"><c:choose><c:when test="${empty actionBean.results}">There are no records in this folder.</c:when><c:when test="${actionBean.folderSize eq 1}">There is 1 record in this folder.</c:when><c:otherwise>There are ${actionBean.folderSize} saved records in this folder.</c:otherwise></c:choose></p>
 
 	<c:choose>
 	<c:when test="${empty actionBean.results}"><div class="hr" style="color: #D7D7D7; background-color: #D7D7D7; height: 2px; margin: 7px 7px 15px 7px ;width:97.5% "><hr/></div></c:when>
@@ -120,12 +121,13 @@
 	<stripes:layout-component name="jsbottom_custom">
 	<%--
 	 --%>
-	<SCRIPT type="text/javascript" SRC="/static/js/ViewSavedFolders.js?v=2"></script>
+	<SCRIPT type="text/javascript" SRC="/static/js/ViewSavedFolders.js?v=${releaseversion}"></script>
 	<SCRIPT type="text/javascript" SRC="/static/js/URLEncode.js?v=${releaseversion}"></script>
 	<jwr:script src="/bundles/localholdinglinks.js"></jwr:script>
     <script type="text/javascript">
     GALIBRARY.createWebEventWithLabel('Folders', 'View Selected', 'Folder Name=${actionBean.folderName}; View=${actionBean.view}; ');
     </script>
+    <SCRIPT type="text/javascript" SRC="/static/js/oneclick.js?v=${releaseversion}"></script>
 	</stripes:layout-component>
 
 

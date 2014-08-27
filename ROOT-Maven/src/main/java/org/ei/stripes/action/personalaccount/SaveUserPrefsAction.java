@@ -1,5 +1,8 @@
 package org.ei.stripes.action.personalaccount;
 
+import java.util.Arrays;
+import java.util.List;
+
 import net.sourceforge.stripes.action.DefaultHandler;
 import net.sourceforge.stripes.action.DontValidate;
 import net.sourceforge.stripes.action.ForwardResolution;
@@ -9,6 +12,7 @@ import net.sourceforge.stripes.action.StreamingResolution;
 import net.sourceforge.stripes.action.UrlBinding;
 
 import org.apache.commons.httpclient.HttpStatus;
+import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
 import org.ei.biz.security.IAccessControl;
 import org.ei.biz.security.ISecuredAction;
@@ -29,9 +33,11 @@ public class SaveUserPrefsAction extends EVActionBean implements ISecuredAction 
     private String sortOrder;
     private String dlOutput;
     private String dlFormat;
+    private String dlLocation;
     private String highlight;
-    private boolean showPreview;
-
+    private String highlightBackground = "false";
+	private boolean showPreview;
+	private List<String> hightlght_colors = Arrays.asList("#ff8200","#2babe2","#158c75", "#000000");
     @Override
     public IAccessControl getAccessControl() {
         return new NoAuthAccessControl();
@@ -51,17 +57,24 @@ public class SaveUserPrefsAction extends EVActionBean implements ISecuredAction 
         try{
 	        if (user.isIndividuallyAuthenticated()) {
 		        UserPrefs userPrefs = user.getUserPrefs();
-		
+
 		        userPrefs.setUserid(user.getWebUserId());
 		        userPrefs.setResultsPerPage(this.resultsPerPage);
 		        userPrefs.setDlOutput(this.dlOutput);
 		        userPrefs.setDlFormat(this.dlFormat);
+		        userPrefs.setDlLocation(this.dlLocation);
 		        userPrefs.setSort(this.sortOrder);
 		        userPrefs.setShowPreview(this.showPreview);
-		        //userPrefs.setHighlight(this.highlight);
+		        userPrefs.setHighlightBackground(Boolean.valueOf(this.highlightBackground));
+
+		        if(GenericValidator.isBlankOrNull(highlight) || !hightlght_colors.contains(highlight)){
+		        	this.highlight = hightlght_colors.get(0);
+		        }
+		        userPrefs.setHighlight(this.highlight);
+
 		        userPrefs.save();
 		        user.setUserPrefs(userPrefs);
-		
+
 		        UserSession userSession = context.getUserSession();
 		        userSession.setRecordsPerPage(Integer.toString(userPrefs.getResultsPerPage()));
 		        context.updateUserSession(userSession);
@@ -77,9 +90,43 @@ public class SaveUserPrefsAction extends EVActionBean implements ISecuredAction 
         	return new StreamingResolution("text", "");
         }
         setRoom(ROOM.blank);
-        
+
 
         return new StreamingResolution("text", "");
+    }
+    @HandlesEvent("savedlprefs")
+    @DontValidate
+    public Resolution saveDownloadPrefs(){
+    	 IEVWebUser user = getContext().getUserSession().getUser();
+         try{
+ 	        if (user.isIndividuallyAuthenticated()) {
+ 		        UserPrefs userPrefs = user.getUserPrefs();
+
+ 		        userPrefs.setUserid(user.getWebUserId());
+ 		        userPrefs.setDlOutput(this.dlOutput);
+ 		        userPrefs.setDlFormat(this.dlFormat);
+ 		        userPrefs.setDlLocation(this.dlLocation);
+ 		        userPrefs.save();
+ 		        user.setUserPrefs(userPrefs);
+
+ 		        UserSession userSession = context.getUserSession();
+ 		        userSession.setRecordsPerPage(Integer.toString(userPrefs.getResultsPerPage()));
+ 		        context.updateUserSession(userSession);
+ 	        }else{
+ 	        	log4j.info("User is Not individually authenticated!");
+ 	        	getContext().getResponse().setStatus(HttpStatus.SC_BAD_REQUEST);
+ 	        	return new StreamingResolution("text", "");
+ 	        }
+         }catch(Exception e){
+         	log4j.error("User Preferences could not be saved!");
+         	e.printStackTrace();
+         	getContext().getResponse().setStatus(HttpStatus.SC_BAD_REQUEST);
+         	return new StreamingResolution("text", "");
+         }
+         setRoom(ROOM.blank);
+
+
+         return new StreamingResolution("text", "");
     }
 
     /**
@@ -159,6 +206,21 @@ public class SaveUserPrefsAction extends EVActionBean implements ISecuredAction 
 
 	public void setHighlight(String highlight) {
 		this.highlight = highlight;
+	}
+
+	public String getDlLocation() {
+		return dlLocation;
+	}
+
+	public void setDlLocation(String dlLocation) {
+		this.dlLocation = dlLocation;
+	}
+    public String getHighlightBackground() {
+		return highlightBackground;
+	}
+
+	public void setHighlightBackground(String highlightBackground) {
+		this.highlightBackground = highlightBackground;
 	}
 
 }

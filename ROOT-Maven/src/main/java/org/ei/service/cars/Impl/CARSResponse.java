@@ -36,7 +36,7 @@ public class CARSResponse {
 	private Map<String,String> textZoneMap;
 	private boolean header = true;
 
-	
+
 	public boolean isSSOAuthResponse() {
 		return ssoAuthResponse;
 	}
@@ -100,7 +100,7 @@ public class CARSResponse {
 	public void setSessionAffinity(String sessionAffinity) {
 		this.sessionAffinity = sessionAffinity;
 	}
-	
+
 	public void setAthensURL(String athenURL) {
 		this.athensURL = athenURL;
 	}
@@ -154,7 +154,7 @@ public class CARSResponse {
 	}
 
 	public void setCarsCookie(String carsCookie) {
-		this.carsCookie = carsCookie;		
+		this.carsCookie = carsCookie;
 	}
 
     public String getPageContent() {
@@ -237,5 +237,47 @@ public class CARSResponse {
         this.pathChoice = pathChoice;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder("************ CARS response ************ \n");
+
+        builder.append("isCarsCalled:  " + this.isCarsCalled() + "\n");
+        builder.append("isFlowComplete:  " + this.isFlowComplete() + "\n");
+        builder.append("isForce:  " + this.isForce() + "\n");
+        builder.append("isHeader:  " + this.isHeader() + "\n");
+        builder.append("isPathChoice:  " + this.isPathChoice() + "\n");
+        builder.append("isSSOAuthResponse:  " + this.isSSOAuthResponse() + "\n");
+
+        builder.append("getAthensURL: " + this.getAthensURL()  + "\n");
+        builder.append("getCarsCookie: " + this.getCarsCookie()  + "\n");
+        builder.append("getEmailContent: " + this.getEmailContent()  + "\n");
+        builder.append("getNextRequestURI: " + this.getNextRequestURI()  + "\n");
+        builder.append("getPageContent: " + this.getPageContent()  + "\n");
+        builder.append("getPageTitle: " + this.getPageTitle()  + "\n");
+        builder.append("getProductId: " + this.getProductId()  + "\n");
+        builder.append("getRedirectURL: " + this.getRedirectURL()  + "\n");
+        builder.append("getSessionAffinity: " + this.getSessionAffinity()  + "\n");
+        builder.append("getShibbolethURL: " + this.getShibbolethURL()  + "\n");
+        builder.append("getSubject: " + this.getSubject()  + "\n");
+        builder.append("getTemplateName: " + this.getTemplateName() + "\n");
+        builder.append("getTemplateUpdateDate: " + this.getTemplateUpdateDate()  + "\n");
+        builder.append("getUserEmail: " + this.getUserEmail()  + "\n");
+        builder.append("getPageType: " + this.getPageType()  + "\n");
+        builder.append("getResponseStatus: " + this.getResponseStatus().toString()  + "\n");
+        builder.append("getSsoURL: " + this.getSsoURL()  + "\n");
+        builder.append("getTextZoneMap: " + this.getTextZoneMap()  + "\n");
+
+        if (this.getMimeList() != null) {
+            for (int i=0; i < this.getMimeList().size(); i++) {
+                builder.append("Mime list [" + i + "]: " + this.getMimeList().get(i) + "\n");
+            }
+        } else {
+            builder.append("Mime list is empty!");
+        }
+
+        builder.append("\n************ End CARS response ************ \n");
+
+        return builder.toString();
+    }
 }
 

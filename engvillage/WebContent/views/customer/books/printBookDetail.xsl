@@ -81,7 +81,7 @@
                         <TR>
                             <TD>
                                 <CENTER>
-                                    <A class="SmBlackText">&#169; 2013 Elsevier Inc. All rights reserved.</A>
+                                    <A class="SmBlackText">&#169; 2014 Elsevier Inc. All rights reserved.</A>
                                 </CENTER>
                             </TD>
                         </TR>

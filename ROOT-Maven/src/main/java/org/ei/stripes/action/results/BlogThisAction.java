@@ -24,6 +24,7 @@ import org.ei.domain.Keys;
 import org.ei.domain.MultiDatabaseDocBuilder;
 import org.ei.stripes.action.EVActionBean;
 import org.ei.stripes.action.SystemMessage;
+import org.ei.stripes.util.HttpRequestUtil;
 
 @UrlBinding("/blog/{$event}.url")
 public class BlogThisAction extends EVActionBean {
@@ -46,13 +47,7 @@ public class BlogThisAction extends EVActionBean {
 	@HandlesEvent("open")
 	public Resolution display() {
 		HttpServletRequest request = context.getRequest();
-		// Get the server name to format links
-		int serverPort = request.getServerPort();
-		String serverName = request.getServerName();
-		if (serverPort != 80) {
-			serverName = serverName + ":" + Integer.toString(serverPort);
-		}
-		request.setAttribute("server", serverName);
+		request.setAttribute("server", HttpRequestUtil.getServerBaseAddress(request));
 
 		// Build an entire EIDoc object just to get the title. Ugh...
 		try {

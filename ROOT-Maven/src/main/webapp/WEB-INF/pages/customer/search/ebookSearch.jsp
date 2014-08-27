@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://jawr.net/tags" prefix="jwr" %>	
+<%@ taglib uri="http://jawr.net/tags" prefix="jwr" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ taglib uri="http://stripes.sourceforge.net/stripes.tld" prefix="stripes" %>
-	
+
 <stripes:layout-render name="/WEB-INF/pages/layout/standard.jsp" pageTitle="Engineering Village - eBook Search">
 
 	<stripes:layout-component name="csshead">
@@ -20,9 +20,9 @@
 <![endif]-->
 	</stripes:layout-component>
 
-<%-- **************************************** --%>	
-<%-- CONTENTS                                 --%>	
-<%-- **************************************** --%>	
+<%-- **************************************** --%>
+<%-- CONTENTS                                 --%>
+<%-- **************************************** --%>
 	<stripes:layout-component name="contents">
 
 	<div id="container">
@@ -37,8 +37,8 @@
 		<div id="searchcontents" class="shadowbox" role="search" aria-labeledby="eBookSearch">
 			<div id="searchtipsbox">
 				<ul>
-					<li class="databases"><a href="/databases.jsp?dbid=pag" title="Learn more about databases" target="_blank" class="evpopup">Databases</a></li>
-					<li><a href="/searchtips.jsp?topic=ebook" title="Search tips to help" target="_blank" class="notfirst evpopup">Search tips</a></li>
+					<li class="databases"><a href="/databases.jsp?dbid=pag" title="Learn more about databases" target="_blank" class="evdialog">Databases</a></li>
+					<li><a href="/searchtips.jsp?topic=ebook" title="Search tips to help" target="_blank" class="notfirst evdialog">Search tips</a></li>
 				</ul>
 			</div>
 
@@ -62,38 +62,38 @@
 					<label class="SmBlackText" for="${actionBean.referexCheckboxes[0].abbrev}"><strong>${actionBean.referexCheckboxes[0].displayname}</strong></label>
 				</div>
 				</c:when>
-				
+
 				<c:otherwise>
 				<fieldset>
 				<div class="referexcheckall" style="float:none">
 					<input type="checkbox"<c:if test="${empty actionBean.selcols}"> checked="checked"</c:if> onclick="change('all');" value="ALL" id="chkAll" style="vertical-align: middle;" name="allcol">
 					<label class="SmBlackText" for="chkAll">All Referex Collections</label>
 				</div>
-				
+
 				<ul class="referexcheckgroup">
-				
-				<c:forEach items="${actionBean.referexCheckboxes}" var="checkbox"> 
+
+				<c:forEach items="${actionBean.referexCheckboxes}" var="checkbox">
 					<li>
 						${checkbox}
 					</li>
 				</c:forEach>
-				
+
 				</ul>
 				</fieldset>
 				</c:otherwise>
 				</c:choose>
 
 				<div class="clear"></div>
-	
+
 			</div>
-			
+
 
 			<%-- ******************************************************** --%>
 			<%-- ******************************************************** --%>
 			<%-- SEARCH TERMS                                             --%>
 			<%-- ******************************************************** --%>
 			<%-- ******************************************************** --%>
-			
+
 			<div class="searchcomponentfullwrap" style="padding-bottom:0">
 				<h2 class="searchcomponentlabel">SEARCH FOR</h2>
 				<div class="searchforline">
@@ -107,7 +107,7 @@
 					<a	href="${actionBean.helpUrl}#ebook_search_steps.htm" class="helpurl" alt="Learn more about searching for eBook" title="Learn more about searching for eBook"><jwr:img
 						src="/static/images/i.png" border="0" styleClass="infoimg" align="bottom" alt=""/></a>
 				</div>
-				
+
 				<div class="searchforconnector">
 				<label class="hidden" for="cbnt1">Combine Terms 1</label>
 					<stripes:select	size="1" name="boolean1" title="Combine Terms With 1" id="cbnt1">
@@ -124,8 +124,8 @@
 					<stripes:select	size="1" name="section2" id="sect2" title="Search Within Dropdown 2">
 	                    <stripes:options-collection collection="${actionBean.section2opts}" label="value" value="name"/>
 					</stripes:select>
-				</div>				
-				
+				</div>
+
 				<div class="searchforconnector">
 				<label class="hidden" for="cbnt2">Combine Terms 2</label>
 					<stripes:select	size="1" name="boolean2" title="Combine Terms With 2" id="cbnt2">
@@ -151,11 +151,11 @@
 					<div class="clear"></div>
 				</div>
 			</div>
- 			
+
 		</stripes:form>
-		
+
 			<div class="searchcomponentseparator" style="padding:0; *margin-bottom:0"><hr/></div>
-			
+
 			<%-- ******************************************************** --%>
 			<%-- ******************************************************** --%>
 			<%-- BROWSE                                                   --%>
@@ -188,17 +188,17 @@
 					</c:choose>
 					</c:forEach>
 				</ul>
-				
+
 				</div>
-				
+
 			</div>
-		
+
 			</div> <!-- END searchform -->
 		</div>	<!-- END searchcontents -->
 		<br class="clear"/>
 		</div> <!-- END searchformbox -->
 
-		<jsp:include page="parts/history.jsp"></jsp:include> 
+		<jsp:include page="parts/history.jsp"></jsp:include>
 
 		</div> <!-- END searchformwrap -->
 
@@ -211,13 +211,13 @@
 		<jsp:include page="parts/sidebar.jsp"></jsp:include>
 		</div>
 
-		</div>  <!-- END container --> 
+		</div>  <!-- END container -->
 
 		<div class="clear"></div>
 
-		
+
 	</stripes:layout-component>
-	
+
 	<stripes:layout-component name="jsbottom_custom">
 	<jwr:script src="/bundles/ebook.js"></jwr:script>
 	<script type="text/javascript">
@@ -237,8 +237,8 @@
 		});
 	});
 	</script>
-	
-	<jsp:include page="parts/search_common_js.jsp"></jsp:include>	
+
+	<jsp:include page="parts/search_common_js.jsp"></jsp:include>
 	</stripes:layout-component>
 
 

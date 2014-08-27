@@ -89,7 +89,7 @@
 		<init-param>
 			<param-name>Interceptor.Classes</param-name>
 			<param-value>
-                org.ei.stripes.SessionBuilderInterceptor,org.ei.stripes.LegacyRedirectInterceptor,org.ei.stripes.AuthInterceptor, org.ei.stripes.DataRequestInterceptor, org.ei.stripes.ErrorMessageInterceptor
+                org.ei.stripes.XssInterceptor,org.ei.stripes.SessionBuilderInterceptor,org.ei.stripes.LegacyRedirectInterceptor,org.ei.stripes.AuthInterceptor, org.ei.stripes.DataRequestInterceptor, org.ei.stripes.ErrorMessageInterceptor
             </param-value>
 		</init-param>
 
@@ -123,6 +123,7 @@
 		<url-pattern>/static/*</url-pattern>
 		<url-pattern>/engresources/*</url-pattern>
 		<url-pattern>*.html</url-pattern>
+        <url-pattern>*.txt</url-pattern>
 	</servlet-mapping>
 
 	<filter-mapping>

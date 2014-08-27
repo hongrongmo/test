@@ -82,6 +82,7 @@ public class CARSResponseHelper {
 	 */
 	private static Templates getTemplate(CARSResponse resp) throws ServiceException {
 
+		
 		if (StringUtils.isNotBlank(resp.getTemplateName())) {
 			ANETemplatesService templateService = new ANETemplatesServiceImpl();
 			try {

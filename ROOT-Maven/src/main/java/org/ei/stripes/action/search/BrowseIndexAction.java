@@ -14,6 +14,7 @@ import net.sourceforge.stripes.action.ForwardResolution;
 import net.sourceforge.stripes.action.Resolution;
 import net.sourceforge.stripes.action.StreamingResolution;
 import net.sourceforge.stripes.action.UrlBinding;
+import net.sourceforge.stripes.validation.Validate;
 
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
@@ -36,30 +37,34 @@ import org.jdom2.input.SAXBuilder;
 @UrlBinding("/search/browseindex.url")
 public class BrowseIndexAction extends EVActionBean {
     private final static Logger log4j = Logger.getLogger(BrowseIndexAction.class);
-    
-    private String searchword = "A";
-    private String lookup;
-    private int count = 1;
+
+    @Validate(trim=true,mask="Quick|Expert")
     private String searchtype;
+    @Validate(mask=".*")
+    private String searchword = "A";
+    @Validate(trim=true, mask="AUS|AF|CVS|LA|ST|DT|PN|TR|PC|DI|PID")
+    private String lookup;
+    @Validate(mask="\\d*")
+    private int count = 1;
+    @Validate(mask=".*")
     private String lookupSearchID;
-    
+
     private List<ListBoxOption> selectedIndex = new ArrayList<ListBoxOption>();
     private List<LookupIndex> lookupIndexList;
     private boolean dynamic;
 
     @DefaultHandler
-    @DontValidate
     public Resolution display() {
-        
+
         UserSession ussession = (UserSession) context.getUserSession();
         IEVWebUser user = ussession.getUser();
 
         String sessionId = ussession.getSessionID().toString();
         String sesID = ussession.getID();
-        
+
         int databaseMask = -1;
         databaseMask = Integer.parseInt(super.getDatabase());
-        
+
         if (GenericValidator.isBlankOrNull(this.lookupSearchID)) {
             try {
                 lookupSearchID = new GUID().toString();
@@ -72,11 +77,11 @@ public class BrowseIndexAction extends EVActionBean {
         if (GenericValidator.isBlankOrNull(this.searchword)) {
             this.searchword = "A";
         }
-        
+
         DatabaseConfig dconfig = DatabaseConfig.getInstance();
         LookupIndexes lookupIndexes = new LookupIndexes(ussession.getID(), 100, dconfig);
-        
-        // 
+
+        //
         // Add some info to Usage logging!
         //
         LogEntry logentry = context.getLogEntry();
@@ -88,8 +93,8 @@ public class BrowseIndexAction extends EVActionBean {
         logproperties.put("type", searchtype);
         logproperties.put("query_string", searchword);
         logproperties.put("db_name", new Integer(databaseMask).toString());
-        
-        // Too much legacy XML logic to convert to bean.  Just parse the 
+
+        // Too much legacy XML logic to convert to bean.  Just parse the
         // generated XML
         Writer xmlout = new StringWriter();
         try {
@@ -98,15 +103,15 @@ public class BrowseIndexAction extends EVActionBean {
             xmlout.write("<SEARCHWORD>" + searchword + "</SEARCHWORD>");
             xmlout.write("<LOOKUP-SEARCHID>" + lookupSearchID + "</LOOKUP-SEARCHID>");
             xmlout.write("<SELECTED-LOOKUP>" + lookup + "</SELECTED-LOOKUP>");
-            
+
             xmlout.write("<DATABASE>" + databaseMask + "</DATABASE>");
             xmlout.write("<SEARCH-TYPE>" + searchtype + "</SEARCH-TYPE>");
             xmlout.write("<PREV-PAGE-COUNT>" + (count - 1) + "</PREV-PAGE-COUNT>");
             xmlout.write("<CURR-PAGE-COUNT>" + count + "</CURR-PAGE-COUNT>");
             xmlout.write("<NEXT-PAGE-COUNT>" + (count + 1) + "</NEXT-PAGE-COUNT>");
-            
+
             int upgradeMask = dconfig.doUpgrade(databaseMask, user.getCartridge());
-            
+
             lookupIndexes.getXML(count,
                 lookupSearchID,
                 searchword,
@@ -114,11 +119,11 @@ public class BrowseIndexAction extends EVActionBean {
                 upgradeMask,
                 xmlout);
             xmlout.write("</PAGE>");
-            
+
             // Convert XML to list of LookupIndex objects!
             this.lookupIndexList = lookupIndexes.buildLookupIndexList(xmlout);
             this.dynamic = lookupIndexes.isDynamic(xmlout);
-            
+
             // Build selected index option list
             String xmllookupparms = LookUpParameters.lookupParametersToXML(sesID, database, this.searchtype);
             SAXBuilder builder = new SAXBuilder(false);
@@ -143,7 +148,7 @@ public class BrowseIndexAction extends EVActionBean {
             context.getResponse().setStatus(500);
             return new StreamingResolution("text/html", "Unable to process this request!");
         }
-        
+
         return new ForwardResolution("/WEB-INF/pages/customer/search/browseindex.jsp");
     }
 
@@ -172,7 +177,7 @@ public class BrowseIndexAction extends EVActionBean {
     //
     // GETTERS/SETTERS
     //
-    
+
     public String getSearchword() {
         return this.searchword;
     }

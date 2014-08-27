@@ -16,8 +16,8 @@ import com.elsevier.edit.common.pool.IPoolableFactory;
 import com.elsevier.edit.common.pool.ITSPool;
 import com.elsevier.edit.common.pool.PoolException;
 import com.elsevier.edit.common.pool.PoolFactory;
-import com.elsevier.wsdls.csas.service.v12.CSApplicationServicePortTypeV12;
-import com.elsevier.wsdls.csas.service.v12.CSApplicationServiceV12;
+import com.elsevier.wsdls.csas.service.v13.CSApplicationServicePortTypeV13;
+import com.elsevier.wsdls.csas.service.v13.CSApplicationServiceV13;
 
 /**
  * This class holds the proxy pool used for csws access. This class provides
@@ -77,20 +77,20 @@ final class ANEServiceProxy {
 		 */
 		public Object makeInstance() {
 
-			CSApplicationServicePortTypeV12 port = null;
+			CSApplicationServicePortTypeV13 port = null;
 			try {
-				CSApplicationServiceV12 service;
+				CSApplicationServiceV13 service;
 				String serviceWSDLPath = ANEServiceConstants.getCustomerServiceWSDLPath();
 				String wsdlVersionNumber = ANEServiceConstants.getWebserviceVersion();
 
 				if (StringUtils.isNotBlank(serviceWSDLPath)) {
-					service = new CSApplicationServiceV12(new URL(serviceWSDLPath), new QName("http://wsdls.elsevier.com/CSAS/service/v" + wsdlVersionNumber,
-							"CSApplicationService_V" + wsdlVersionNumber));
+					service = new CSApplicationServiceV13(new URL(serviceWSDLPath), new QName("http://wsdls.elsevier.com/CSAS/service/v" + wsdlVersionNumber,
+							"CSApplicationService_v" + wsdlVersionNumber));
 				} else {
-					service = new CSApplicationServiceV12();
+					service = new CSApplicationServiceV13();
 				}
 
-				port = service.getCSASV12();
+				port = service.getCSASV13();
 				((javax.xml.ws.BindingProvider) port).getRequestContext().put(javax.xml.ws.BindingProvider.ENDPOINT_ADDRESS_PROPERTY,
 						m_endPoint.toExternalForm());
 

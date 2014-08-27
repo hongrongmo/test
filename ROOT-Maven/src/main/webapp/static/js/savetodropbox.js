@@ -23,22 +23,21 @@ function validationForDropbox(){
 	return true;
 }
 
-$("#dropBoxLink").click(function (e) {
-	e.preventDefault();
+function submitDropboxDL(){
+
 	if(!validationForDropbox()){
 		return false;;
 	}
 	var downloadformat = $('input[name="downloadformat"]:checked').val();
-	GALIBRARY.createWebEventWithLabel('Dropbox', 'Save Initiated', downloadformat);
 	var baseaddress = $("input[name='baseaddress']").val();
-	var displaytype = $("#displayformat").val();
-
+	var displaytype = $("input[name='displayformat']:checked").val();
 	var downloadUrl = constructDbxDownlodUrl(downloadformat,displaytype);
 	var dropBoxPageUrl = 'https://'+baseaddress+'/delivery/download/dropbox.url?downloadformat='+downloadformat+'&displayformat='+displaytype+'&dropBoxDownloadUrl='+escape(downloadUrl);
+	GALIBRARY.createWebEventWithLabel('Dropbox', 'Save Initiated', downloadformat);
 	var new_window1 = window.open(dropBoxPageUrl, 'DropBox', "height=350,width=820,resizable=yes,scrollbars=yes");
 	new_window1.focus();
 	return false;
-});
+}
 
 function constructDbxDownlodUrl(downloadformat,displaytype){
 	var docidlist = $("#docidlist").val();

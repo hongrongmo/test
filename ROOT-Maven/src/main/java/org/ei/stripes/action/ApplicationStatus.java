@@ -19,19 +19,20 @@ import java.util.concurrent.TimeUnit;
 import javax.mail.MessagingException;
 import javax.mail.internet.AddressException;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import net.sourceforge.stripes.action.Before;
 import net.sourceforge.stripes.action.DefaultHandler;
 import net.sourceforge.stripes.action.DontValidate;
 import net.sourceforge.stripes.action.ForwardResolution;
 import net.sourceforge.stripes.action.HandlesEvent;
-import net.sourceforge.stripes.action.LocalizableMessage;
 import net.sourceforge.stripes.action.RedirectResolution;
 import net.sourceforge.stripes.action.Resolution;
 import net.sourceforge.stripes.action.SimpleMessage;
 import net.sourceforge.stripes.action.UrlBinding;
-import net.sourceforge.stripes.validation.LocalizableError;
 import net.sourceforge.stripes.validation.SimpleError;
 import net.sourceforge.stripes.validation.ValidationErrors;
 
@@ -47,16 +48,14 @@ import org.ei.biz.security.NoAuthAccessControl;
 import org.ei.config.EVProperties;
 import org.ei.config.RuntimeProperties;
 import org.ei.connectionpool.ConnectionBroker;
+import org.ei.controller.CookieHandler;
 import org.ei.controller.IPBlocker;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.FastClient;
-import org.ei.domain.personalization.MergePersonalAccount;
-import org.ei.domain.personalization.PersonalAccountException;
 import org.ei.domain.personalization.cars.Account;
 import org.ei.download.util.SaveToGoogleUsage;
 import org.ei.email.SESEmail;
 import org.ei.email.SESMessage;
-import org.ei.exception.InfrastructureException;
 import org.ei.service.amazon.s3.AmazonS3Service;
 import org.ei.service.amazon.s3.AmazonS3ServiceImpl;
 import org.ei.session.BaseCookie;
@@ -93,7 +92,7 @@ public class ApplicationStatus extends EVActionBean {
     private String cacheKey;
     private String cacheVal;
     private int cacheMins;
-    
+
     private String usageOption;
     private String startDate;
     private String endDate;
@@ -219,6 +218,42 @@ public class ApplicationStatus extends EVActionBean {
         return new ForwardResolution("/WEB-INF/pages/status/status.jsp");
     }
 
+    @HandlesEvent("/expiresession")
+    public Resolution expiresession() throws ServletException, IOException {
+        HttpServletRequest request = context.getRequest();
+        HttpSession session = request.getSession(false);
+        if (session != null)
+            session.invalidate();
+
+        context.getValidationErrors().addGlobalError(new SimpleError("Session has been cleared (invalidated)..."));
+        return new RedirectResolution("/status/home.url");
+    }
+
+    @HandlesEvent("/clearcookies")
+    public Resolution clearcookies() throws ServletException, IOException {
+        HttpServletRequest request = context.getRequest();
+        HttpServletResponse response = context.getResponse();
+
+        StringBuffer cleared = new StringBuffer("Cleared the following cookies: ");
+        Map<String, Cookie> cookiemap = CookieHandler.getCookieMap(context.getRequest());
+        int count = cookiemap.keySet().size();
+        for (String key : cookiemap.keySet()) {
+            Cookie clearme = CookieHandler.clearCookie(cookiemap.get(key));
+            response.addCookie(clearme);
+            cleared.append(clearme.getName());
+            if (--count > 0)
+                cleared.append(", ");
+        }
+
+        context.getValidationErrors().addGlobalError(new SimpleError(cleared.toString()));
+
+        HttpSession session = request.getSession(false);
+        if (session != null)
+            session.invalidate();
+
+        return new RedirectResolution("/status/home.url");
+    }
+
     /**
      * Service request for "environment" display
      *
@@ -232,8 +267,8 @@ public class ApplicationStatus extends EVActionBean {
     public Resolution sendmail() throws ServletException, IOException {
         try {
             SESMessage sesmessage = new SESMessage();
-			sesmessage.setDestination(emailto);
-            sesmessage.setMessage("Testing email", "<h1>Testing from application status page</h1>",true);
+            sesmessage.setDestination(emailto);
+            sesmessage.setMessage("Testing email", "<h1>Testing from application status page</h1>", true);
             sesmessage.setFrom(emailfrom);
             SESEmail.getInstance().send(sesmessage);
         } catch (Exception e) {
@@ -399,29 +434,29 @@ public class ApplicationStatus extends EVActionBean {
         BaseCookie.setCookie(context.getRequest(), context.getResponse(), "SIMULATEDIP", cookieValue, -1);
         return new RedirectResolution("/status/simulatedip.url");
     }
-    
-    @HandlesEvent("/driveusage") 
+
+    @HandlesEvent("/driveusage")
     public Resolution driveUsage() throws Exception {
-    	
-    	if(usageOption == null || usageOption.equalsIgnoreCase("")){
-    		usageOption = "downloadformat";
-    	}
-    	HttpServletRequest request = context.getRequest();
-    	Map<String,String> usageData = SaveToGoogleUsage.getUsageData(usageOption,startDate,endDate);
-    	
-    	if(startDate != null && endDate != null ){
-    		request.setAttribute("dateQueryinfo","Date filter applied from "+startDate +" to "+endDate);
-    	}
-    	
-    	if(usageData.get("totalCount") != null){
-    		request.setAttribute("totalCount",usageData.get("totalCount"));
-    		usageData.remove("totalCount");
-    	}else{
-    		request.setAttribute("totalCount",'0');
-    	}
-    	
-    	request.setAttribute("usageData", usageData);
-    	return new ForwardResolution("/WEB-INF/pages/status/googledriveusage.jsp");
+
+        if (usageOption == null || usageOption.equalsIgnoreCase("")) {
+            usageOption = "downloadformat";
+        }
+        HttpServletRequest request = context.getRequest();
+        Map<String, String> usageData = SaveToGoogleUsage.getUsageData(usageOption, startDate, endDate);
+
+        if (startDate != null && endDate != null) {
+            request.setAttribute("dateQueryinfo", "Date filter applied from " + startDate + " to " + endDate);
+        }
+
+        if (usageData.get("totalCount") != null) {
+            request.setAttribute("totalCount", usageData.get("totalCount"));
+            usageData.remove("totalCount");
+        } else {
+            request.setAttribute("totalCount", '0');
+        }
+
+        request.setAttribute("usageData", usageData);
+        return new ForwardResolution("/WEB-INF/pages/status/googledriveusage.jsp");
     }
 
     @HandlesEvent("blockedipsubmit")
@@ -471,7 +506,7 @@ public class ApplicationStatus extends EVActionBean {
         if (txtblockedip != null) {
             IPBlocker blocker = IPBlocker.getInstance();
             try {
-                Map<String, String> statusMap = blocker.retreiveCurrentStatus(txtblockedip);
+                Map<String, String> statusMap = blocker.retreiveCurrentStatus(txtblockedip,context.getRequest());
                 context.getRequest().setAttribute("ip", txtblockedip);
                 context.getRequest().setAttribute("statusMap", statusMap);
                 txtblockedip = null;
@@ -483,7 +518,6 @@ public class ApplicationStatus extends EVActionBean {
         }
         return new ForwardResolution("/WEB-INF/pages/status/counterstatus.jsp");
     }
-
 
     @HandlesEvent("iphistory")
     public Resolution iphistory() throws Exception {
@@ -941,29 +975,29 @@ public class ApplicationStatus extends EVActionBean {
     public void setEmailfrom(String emailfrom) {
         this.emailfrom = emailfrom;
     }
-    
+
     public String getUsageOption() {
-		return usageOption;
-	}
+        return usageOption;
+    }
 
-	public void setUsageOption(String usageOption) {
-		this.usageOption = usageOption;
-	}
-	
-	public String getStartDate() {
-		return startDate;
-	}
+    public void setUsageOption(String usageOption) {
+        this.usageOption = usageOption;
+    }
 
-	public void setStartDate(String startDate) {
-		this.startDate = startDate;
-	}
+    public String getStartDate() {
+        return startDate;
+    }
 
-	public String getEndDate() {
-		return endDate;
-	}
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
+    }
 
-	public void setEndDate(String endDate) {
-		this.endDate = endDate;
-	}
+    public String getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
+    }
 
 }

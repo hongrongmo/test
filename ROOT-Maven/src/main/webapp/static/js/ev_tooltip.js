@@ -1,24 +1,24 @@
 //{name:'cvTooltip', parent:".facet_cvHighlightFeature", direction:"right",msg:"Improve your search results by selecting term(s).<br/> <a href='http://www.google.com'>Learn more.</a>", autoShow:true, showImage:true},
 tips = [
 			{name:'ebookToolTip', parent:".ebookFeatureHighlight", direction:"right",msg:"As of April 2014, eBooks will only be available on <a href='http://www.sciencedirect.com' target='_blank'>ScienceDirect</a>.  <br/><a href='http://info.sciencedirect.com/referex' target='_blank'>Learn more</a>.", autoShow:true, showImage:true},
-			
-			
+
+
 	];
 $(document).ready(function() {
 	var popupTime = 4500;
 
-	
+
 	for(i in tips){
 		var tip = tips[i];
 		var selector = '.'+tip.name;
 		var msg = tip.msg;
-		
+
 		if(tip.showImage && $(tip.parent).length != 0){
 			var img = '<img src="/static/images/ev_asterisk.gif" style="vertical-align:top;" width="13px" class="'+tip.name+'"/>';
 			$(tip.parent).append(img);
-			
+
 		}
-		
+
 		if ( $.browser.msie && $.browser.version == 7) {
 			$(selector).tooltipster({interactive:true, arrow:false});
 			$(selector).tooltipster('reposition');
@@ -54,20 +54,98 @@ $(document).ready(function() {
 		                success: function(data) {
 		                	//console.log(origin);
 		                    // update our tooltip content with our returned data and cache it
-		                	
+
 		                    $(origin).tooltipster('content', data);
 		                }
 		            });
-		       
+
 		    }
 		});
-		
+
 	}
-	
+	if($("#downloadlink").length != 0){
+		$("#downloadlink").click(function(e){
+			if($(this).hasClass('tooltipstered')){
+				return false;
+			}
+			e.preventDefault();
+			var displayformat='citation';
+			var downloadurl;
+			if(typeof($("#downloadlink").attr('href')) != 'undefined' && $("#downloadlink").attr('href').length > 0){
+				downloadurl = $("#downloadlink").attr('href');
+			}else{
+				var form = $("#resultsform");
+				var folderid = form.find("input[name='folderid']").val();
+
+
+				downloadurl = "/delivery/download/display.url?database="+form.find("input[name='database']").val()
+				+"&displayformat="+displayformat
+				+"&allselected=true";
+
+				if(typeof(folderid) != 'undefined' && folderid.length > 0 ){
+					downloadurl += "&folderid=" +folderid;
+				}
+			}
+
+			if(((typeof(Basket) == 'undefined' || (Basket.count > 0)) || (typeof($(this).attr("href")) != 'undefined' &&  $(this).attr("href").length > 0))){
+
+				$(this).tooltipster({
+				    content: 'Loading...',
+				    autoClose:false,
+				    interactive:true,
+				    contentAsHTML:true,
+				    position:'bottom',
+				    fixedLocation:true,
+				    positionTracker:false,
+				    multiple:true,
+				    trigger:'click',
+				    delay:0,
+				    speed:0,
+				    debug:false,
+				    functionBefore: function(origin, continueTooltip) {
+
+				        // we'll make this function asynchronous and allow the tooltip to go ahead and show the loading notification while fetching our data
+				    	$(origin).tooltipster('content', "Loading...");
+				        //console.log("get data" + content);
+				    	continueTooltip();
+				            $.ajax({
+				                type: 'GET',
+				                url: downloadurl,
+				                success: function(data) {
+				                    $(origin).tooltipster('content', data);
+
+				                }
+				            });
+
+				    },
+				    functionAfter: function(origin){
+				    	$(origin).attr('title', 'Click to change one click download preferences.');
+
+				    }
+				});
+				$(this).tooltipster('show',null);
+			}else {
+				$(this).tooltipster({
+				    content: 'Please select records from the search results and try again',
+				    autoClose:true,
+				    interactive:false,
+				    contentAsHTML:true,
+				    position:'bottom',
+				    fixedLocation:true,
+				    positionTracker:false,
+				    delay:0,
+				    speed:0,
+				    functionAfter: function(origin){$(origin).tooltipster('destroy');}
+				});
+				$(this).tooltipster('show',null);
+			}
+			return false;
+		});
+	}
 	function getToolTipContent(origin, continueTooltip){
 		         // we'll make this function asynchronous and allow the tooltip to go ahead and show the loading notification while fetching our data
 		        continueTooltip();
-		        
+
 		        // next, we want to check if our data has already been cached
 		        if (origin.data('ajax') !== 'cached') {
 		            $.ajax({
@@ -79,9 +157,9 @@ $(document).ready(function() {
 		                }
 		            });
 		        }
-		    
+
 	}
-	
+
 });
 function showTooltip(selector, msg, direction, duration, autoShow){
 	if ( $.browser.msie && $.browser.version == 7) {

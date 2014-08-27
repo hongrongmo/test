@@ -42,8 +42,8 @@ import org.ei.domain.PageEntry;
 import org.ei.domain.PageEntryBuilder;
 import org.ei.domain.personalization.FolderPage;
 import org.ei.domain.personalization.SavedRecords;
-import org.ei.email.EIMessage;
-import org.ei.email.EMail;
+import org.ei.email.SESEmail;
+import org.ei.email.SESMessage;
 import org.ei.exception.InfrastructureException;
 import org.ei.session.UserSession;
 import org.ei.stripes.action.SystemMessage;
@@ -231,17 +231,7 @@ public class EmailDeliveryAction extends AbstractDeliveryAction {
 	 * @return
 	 */
 	private boolean sendMessage(String stylesheetprefix, Writer xmlWriter) {
-		EIMessage eimessage = new EIMessage();
-
 		try {
-
-			// Set message contents
-			//eimessage.addReplyToRecepients(Arrays.asList(from.split(",")));
-			eimessage.addTORecepients(Arrays.asList(to.split(",")));
-			eimessage.setSubject(subject);
-			eimessage.setSentDate(new java.util.Date(System.currentTimeMillis()));
-			eimessage.setSender(EIMessage.NOREPLY_SENDER);
-			eimessage.setFrom(EIMessage.NOREPLY_SENDER);
 			
 			// Transform xml in Writer via Stylesheet to create message body
 	        String stylesheet = this.getClass().getResource("/transform/delivery/download" + stylesheetprefix + "Ascii.xsl").toString();
@@ -253,11 +243,15 @@ public class EmailDeliveryAction extends AbstractDeliveryAction {
             transformer.transform(new StreamSource(new StringReader(xmlWriter.toString())),
                           new StreamResult(outWriter));
 			
-			eimessage.setMessageBody("This email was sent to you on behalf of " + from + " \n \n" +
-					message + 
-					outWriter.toString());
-		    EMail email=EMail.getInstance();
-		    email.sendMessage(eimessage);
+		    SESMessage sesmessage = new SESMessage();
+		    String toStr = to.replaceAll(";", ",");
+		    sesmessage.setDestination(Arrays.asList(toStr.split(",")));
+			sesmessage.setMessage(subject, "This email was sent to you on behalf of " + from + " \n \n" +
+					message + " \n \n" + 
+					outWriter.toString(), false);
+		    
+			sesmessage.setFrom(SESMessage.NOREPLY_SENDER);
+            SESEmail.getInstance().send(sesmessage);
 		    
 		} catch (Throwable t) {
         	log4j.error("Unable to build and send Email message, Exception: " + t.getClass().getName() + " (" + t.getMessage() + ")");
@@ -276,21 +270,13 @@ public class EmailDeliveryAction extends AbstractDeliveryAction {
 	 */
 	private boolean sendMessageFromBasket(String stylesheetprefix, String docformat) {
 		
-		EIMessage eimessage = new EIMessage();
 		String fileName = null;
 		PrintWriter tmpWriter = null;
 		StringWriter xmlWriter = null;
         
         try {
         	
-        	// Set message contents
-			//eimessage.addReplyToRecepients(Arrays.asList(from.split(",")));
-			String toStr = to.replaceAll(";", ",");
-			eimessage.addTORecepients(Arrays.asList(toStr.split(",")));
-			eimessage.setSubject(subject);
-			eimessage.setSentDate(new java.util.Date(System.currentTimeMillis()));
-			eimessage.setSender(EIMessage.NOREPLY_SENDER);
-			eimessage.setFrom(EIMessage.NOREPLY_SENDER);
+        	String toStr = to.replaceAll(";", ",");
         	
 			// Get the stylesheet and setup the transformer
             String stylesheet = this.getClass().getResource("/transform/delivery/download" + stylesheetprefix + "Ascii.xsl").toString();
@@ -304,12 +290,6 @@ public class EmailDeliveryAction extends AbstractDeliveryAction {
 	        fileName = "/tmp/"+(new GUID()).toString();
 			tmpWriter = new PrintWriter(new FileWriter(fileName));
 			
-			/*tmpWriter.println("Subject: "+subject);
-			tmpWriter.println("from: "+from);
-			tmpWriter.println("to: "+to.replaceAll(";", ","));
-			tmpWriter.println("reply-to: "+from);
-			tmpWriter.println("sender: "+EIMessage.NOREPLY_SENDER);
-			tmpWriter.println("");*/
 			tmpWriter.println("This email was sent to you on behalf of " + from);
 			tmpWriter.println("");
 			if(message != null && message.length() != 0)
@@ -355,10 +335,13 @@ public class EmailDeliveryAction extends AbstractDeliveryAction {
             try
             {
                 inStream = new FileInputStream(fileName);
-                EMail email=EMail.getInstance();
                 String StringFromInputStream = IOUtils.toString(inStream, "UTF-8");
-                eimessage.setMessageBody(StringFromInputStream);
-                email.sendMessage(eimessage);
+                SESMessage sesmessage = new SESMessage();
+    			sesmessage.setDestination(Arrays.asList(toStr.split(",")));
+    			sesmessage.setMessage(subject, StringFromInputStream, false);
+    			sesmessage.setFrom(SESMessage.NOREPLY_SENDER);
+                SESEmail.getInstance().send(sesmessage);
+                
             } catch (Throwable t) {
             	log4j.error("Unable to process file: " + fileName + ", Exception: " + t.getClass().getName() + " (" + t.getMessage() + ")");
             	return false;

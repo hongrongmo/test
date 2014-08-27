@@ -1,46 +1,79 @@
 <%@ taglib uri="http://stripes.sourceforge.net/stripes.tld"	prefix="stripes"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<script>
-var highlightV1 = false;
-var highlightV2 = false;
-</script>	
+
 <c:choose>
-	<c:when test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1') or actionBean.context.userSession.user.getPreference('HIGHLIGHT_V2')}">
-	 <c:choose>
-	 	<c:when test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1')}">
-	 	<script>highlightV1 = true;</script>
+	<c:when test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1')}">
+	 	<script>
+	 	<c:choose>
+		<c:when test="${actionBean.context.userSession.user.userPrefs.highlightBackground}">
+			$(document).ready(function(){
+				if(!checkHighlightCookie()){
+					$(".hit").addClass("bghit");
+					$(".bghit").removeClass("hit");
+				}
+
+			});
+ 		</c:when>
+ 		<c:otherwise>
+		$(document).ready(function(){
+			checkHighlightCookie();
+		});
+
+ 		</c:otherwise>
+ 		</c:choose>
+ 		function checkHighlightCookie(){
+ 			var found = false;
+			if($.cookie('ev_highlight')){
+				found = true;
+				var hlOptions = JSON.parse($.cookie("ev_highlight"));
+				if(!hlOptions.bg_highlight){
+					if($("#ckbackhighlight")){
+						$("#ckbackhighlight").prop("checked", false);
+					}
+					$(".hit").css("color", hlOptions.color);
+					$("a span.hit").css("color", "inherit");
+				}else{
+					$(".hit").addClass("bghit");
+					$(".bghit").removeClass("hit");
+					$("#ckbackhighlight").prop("checked", true);
+				}
+				return found;
+			}
+
+ 		}
+	 	</script>
 	 		<style>
-	 		.hit{
+	 		span.hit{
 					font-size:120%;
 					font-style:italic;
 					font-weight:bold;
-					color:#148C75;
-					
+					color:${actionBean.context.userSession.user.userPrefs.highlight};
+
 				}
-			</style>
-	 	</c:when>
-	 	<c:when test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V2')}">
-	 	<script>highlightV2 = true;</script>
-	 		<style>
-	 		.hit{
+
+				span.bghit, span.bghit {
+					font-weight: bold;
 					font-size:120%;
-					font-style:italic;
-					font-weight:bold;
-					color:#FF9933;
-					
+					color:black;
+					background-color: #FFFFAA;
 				}
+
+			a span.hit{
+				color:inherit;
+			}
 			</style>
-	 	</c:when>
-	 </c:choose>	
+
 	</c:when>
+
 	<c:when test="${fromResults != 'true'}">
 		<style>
 			 span.hit {
 				font-weight: bold;
 				background-color: #FFFFAA;
-			}		
+			}
 		</style>
 	</c:when>
-	
-</c:choose>	
+
+</c:choose>
+

@@ -13,11 +13,11 @@ import org.ei.service.CSWebService;
 import org.ei.service.CSWebServiceImpl;
 import org.ei.service.cars.CARSStringConstants;
 
-import com.elsevier.webservices.schemas.csas.constants.types.v6.AuthenticationStatusCodeType;
-import com.elsevier.webservices.schemas.csas.constants.types.v6.RefworksAuthTypeCodeType;
-import com.elsevier.webservices.schemas.csas.types.v12.AuthenticateUserRespPayloadType;
-import com.elsevier.webservices.schemas.csas.types.v12.AuthenticationResponseStatusType;
-import com.elsevier.webservices.schemas.csas.types.v12.PathChoiceInfoType;
+import com.elsevier.webservices.schemas.csas.constants.types.v7.AuthenticationStatusCodeType;
+import com.elsevier.webservices.schemas.csas.constants.types.v7.RefworksAuthTypeCodeType;
+import com.elsevier.webservices.schemas.csas.types.v13.AuthenticateUserRespPayloadType;
+import com.elsevier.webservices.schemas.csas.types.v13.AuthenticationResponseStatusType;
+import com.elsevier.webservices.schemas.csas.types.v13.PathChoiceInfoType;
 
 
 /**

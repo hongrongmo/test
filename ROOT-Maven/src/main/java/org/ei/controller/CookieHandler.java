@@ -22,14 +22,14 @@ import org.xml.sax.InputSource;
 import org.xml.sax.XMLReader;
 
 public class CookieHandler {
-    
+
     private static Map<String, Customer> departmentMap;
-    
+
     private static final Logger          log4j = Logger.getLogger(CookieHandler.class);
-    
+
     /**
      * Handle request for the department map contents
-     * 
+     *
      * @param request
      * @param response
      * @param ses
@@ -38,7 +38,7 @@ public class CookieHandler {
      */
     public static Resolution handleRequest(HttpServletRequest request, HttpServletResponse response, UserSession ses) throws Exception {
         log4j.info("Handling cookies for response...");
-        
+
         Map<String, Cookie> cookieMap = getCookieMap(request);
         /*
          * This block handles clientID cookies
@@ -46,17 +46,17 @@ public class CookieHandler {
         if (!cookieMap.containsKey("CLIENTID")) {
             addClientIDCookie(response);
         }
-        
+
         /*
          * This block handles secureID;
          */
         if (!cookieMap.containsKey("SECUREID")) {
             addSecureIDCookie(response);
         }
-        
+
         Map<String, Customer> dmap = getDepartmentMap(request);
         if (dmap != null) {
-            
+
         	String sessionID= null;
             String customerID = ses.getUser().getCustomerID();
             if(null != ses.getSessionID()){
@@ -79,11 +79,11 @@ public class CookieHandler {
         }
         return null;
     }
-    
+
     /**
      * This method is meant to be used to transfer legacy EV cookies from the "/controller/servlet" path to root path
      * "/".
-     * 
+     *
      * @param request
      * @param response
      */
@@ -105,10 +105,10 @@ public class CookieHandler {
             }
         }
     }
-    
+
     /**
      * Check for "DAYPASS" cookie
-     * 
+     *
      * @param request
      * @return
      */
@@ -117,13 +117,13 @@ public class CookieHandler {
         if (cookiemap.containsKey("DAYPASS")) return true;
         return false;
     }
-    
+
     /**
      * Get Session ID from cookie
-     * 
+     *
      * NOTE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Cookies for EV controller are scoped to /controller/servlet! Very important
      * that all URLs start with this!
-     * 
+     *
      * @param request
      * @return
      */
@@ -135,10 +135,10 @@ public class CookieHandler {
         }
         return null;
     }
-    
+
     /**
      * Get map of Cookie values for request
-     * 
+     *
      * @param request
      * @return
      */
@@ -151,10 +151,10 @@ public class CookieHandler {
                 map.put(cookie.getName(), cookie);
             }
         }
-        
+
         return map;
     }
-    
+
     public static String getACWCookie(HttpServletRequest request) {
         Map<String, String> map = new HashMap<String, String>();
         Cookie[] cookies = request.getCookies();
@@ -164,13 +164,13 @@ public class CookieHandler {
                 map.put(cookie.getName(), cookie.getValue());
             }
         }
-        
+
         return map.get(CARSStringConstants.ACW.value());
     }
-    
+
     /**
      * Parse the department map. Looked up as resource from WEB-INF directory.
-     * 
+     *
      * @param request
      * @return
      */
@@ -197,17 +197,17 @@ public class CookieHandler {
             return null;
         }
     }
-    
+
     /**
      * Reset the department - will cause the department-config.xml class to be read again!
      */
     private static synchronized void resetDepartment() {
         departmentMap = null;
     }
-    
+
     /**
      * Print the department form page. This is returned only to customers with entries in department-config.xml!
-     * 
+     *
      * @param request
      * @param response
      * @param sessionID
@@ -223,10 +223,10 @@ public class CookieHandler {
         request.setAttribute("cust", cust);
         request.setAttribute("sessionid", sessionID);
     }
-    
+
     /**
      * Add a DEPARTMENT cookie
-     * 
+     *
      * @param request
      * @param response
      */
@@ -240,10 +240,10 @@ public class CookieHandler {
             response.addCookie(depCookie);
         }
     }
-    
+
     /**
      * Clears the DEPARTMENT cookie
-     * 
+     *
      * @param response
      * @throws Exception
      */
@@ -251,12 +251,13 @@ public class CookieHandler {
         Cookie depCookie = new Cookie("DEPARTMENT", "");
         depCookie.setMaxAge(0);
         depCookie.setPath("/");
+        depCookie.setValue(null);
         response.addCookie(depCookie);
     }
-    
+
     /**
      * Adds the SECUREID cookie
-     * 
+     *
      * @param response
      * @throws Exception
      */
@@ -266,10 +267,10 @@ public class CookieHandler {
         secureIDCookie.setPath("/");
         response.addCookie(secureIDCookie);
     }
-    
+
     /**
      * Adds the CLIENTID cookie for usage
-     * 
+     *
      * @param response
      * @throws Exception
      */
@@ -278,10 +279,10 @@ public class CookieHandler {
         clientIDCookie.setMaxAge(63072000);
         response.addCookie(clientIDCookie);
     }
-    
+
     /**
      * Write the EISESSION cookie with option to clear it
-     * 
+     *
      * @param sessionID
      */
     public static Cookie clearCookie(String cookiename) {
@@ -289,18 +290,26 @@ public class CookieHandler {
         // Set Max Age to 0 to clear the cookie
         cookie.setMaxAge(0);
         cookie.setPath("/");
+        cookie.setValue("");
         return cookie;
     }
-    
-    
+
+    public static Cookie clearCookie(Cookie cookie) {
+        cookie.setPath("/");
+        cookie.setMaxAge(0);
+        cookie.setValue("");
+        return cookie;
+    }
+
     public static Cookie clearACWCookie(String cookiename) {
         Cookie cookie = new Cookie(cookiename, "");
         // Set Max Age to 0 to clear the cookie
         cookie.setMaxAge(0);
         cookie.setDomain(".engineeringvillage.com");
         cookie.setPath("/");
+        cookie.setValue("");
         return cookie;
     }
-    
-    
+
+
 }

@@ -11,6 +11,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+    <meta name="robots" content="index,nofollow" />
     <stripes:layout-component name="metahead"/>
     <title>${pageTitle}</title>
     <link type="image/x-icon" href="/static/images/engineering_village_favicon.gif" rel="SHORTCUT ICON"></link>
@@ -24,6 +25,16 @@
 <c:if test="${actionBean.context.userSession.user.userPreferences.featureHighlight}">
 	<jwr:script src="/bundles/tooltipster.js"></jwr:script>
 	<jwr:style src="/bundles/tooltipster.css"></jwr:style>
+</c:if>
+<script>
+var highlightV1 = false;
+</script>
+<c:if test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1')}">
+<script>
+	highlightV1 = true;
+
+</script>
+<script src='/static/js/jquery/spectrum.js'></script>
 </c:if>
 <stripes:layout-component name="csshead"/>
 
@@ -54,38 +65,6 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
 <stripes:layout-component name="usersessiondump">
 <c:set var="usersession" value="${actionBean.context.userSession}"/>
 <c:if test="${not empty usersession and not empty usersession.user}">
-
-<!--
-    User information: ${usersession.user.firstName}  ${usersession.user.lastName}
-    <c:if test="${null != actionBean.context.existingSession}">
-        Session ID: ${actionBean.context.existingSession.id}
-    </c:if>
-    =========================================================================================
-    Username: ${usersession.user.username}
-    Email: ${usersession.user.email}
-    Webuserid: ${usersession.user.webUserId}
-    Profile ID: ${usersession.user.profileId}
-
-    Access: ${usersession.user.userAccess}
-    Allowed Reg Type: ${usersession.user.allowedRegType}
-    Cred type: ${usersession.user.credType}
-    Anonymity: ${usersession.user.userAnonymity}
-
-    IP Address: ${usersession.user.ipAddress}
-    Start Page: ${usersession.user.startPage}
-    Default DB: ${usersession.user.defaultDB}
-    Customer ID: ${usersession.user.customerID}
-    Cartridge: ${usersession.user.cartridgeString}
-
-    ACCOUNT INFORMATION
-    =========================================================================================
-    Account Name: ${usersession.user.account.accountName}
-    Account Number: ${usersession.user.account.accountNumber}
-    Account ID: ${usersession.user.account.accountId}
-
-    Dept name: ${usersession.user.account.departmentName}
-    Dept ID: ${usersession.user.account.departmentId}
- -->
 
  </c:if>
 </stripes:layout-component>
@@ -120,7 +99,7 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
 <stripes:layout-component name="jsbottom_custom"/>
 
 </body>
-<script>var release = "5.15v2";</script>
+<script>var release = "5.2";</script>
 	<div style="display:none;" id="modalHTMLcontainer">
 	<div id="modalmsg">
 		<jsp:include page="/WEB-INF/pages/popups/marketingMessage.jsp" />
@@ -129,13 +108,13 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
 		<c:if test="${actionBean.context.userSession.user.userPreferences.modalDialog && !actionBean.context.userSession.user.userPreferences.modalDialog2}">
 			<script>
 				if((!$.cookie("ev_mm_dontshow") || release != $.cookie("ev_mm_dontshow")) && (!$.cookie("ev_mm_shown") || release != $.cookie("ev_mm_shown"))){
-			
+
 					GALIBRARY.createWebEventWithLabel(['_trackEvent', 'Dialog Open', 'What\'s New', 'Auto Show']);
 					TINY.box.show({html:document.getElementById("modalmsg"),clickmaskclose:false,width:900,height:500,close:true,opacity:20,topsplit:3,closejs:function(){closeX();}});
 					//tell GA that we showed it
-			
+
 				}
-			
+
 			</script>
 		</c:if>
 	</stripes:layout-component>
@@ -148,11 +127,11 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
 				</div>
 				<script>
 				if((!$.cookie("ev_rm_dontshow") || release != $.cookie("ev_rm_dontshow")) && (!$.cookie("ev_rm_shown") || release != $.cookie("ev_rm_shown"))){
-	
+
 					GALIBRARY.createWebEventWithLabel(['_trackEvent', 'Dialog Open', 'Referex', 'Auto Show']);
 					TINY.box.show({html:document.getElementById("modalrmmsg"),clickmaskclose:false,width:600,height:250,close:true,opacity:20,topsplit:3,closejs:function(){closeRMX();}});
 					//tell GA that we showed it
-	
+
 				}
 				</script>
 			</div>

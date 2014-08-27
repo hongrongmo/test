@@ -36,28 +36,28 @@ import org.xml.sax.SAXException;
 @UrlBinding("/ScopusServlet/ScopusEV")
 public class ScopusOutwardLinkAction extends EVActionBean implements IBizBean {
     private final static Logger log4j = Logger.getLogger(ScopusOutwardLinkAction.class);
-    
+
     private String accessionNumber;
-    
+
     @Override
     public void processModelXml(InputStream instream)  throws InfrastructureException {
         // Get the XML from the openXML JSP
         modelXml = new Scanner(instream).useDelimiter("\\A").next();
     }
-    
+
     @Override
     public String getXSLPath() {
         return "/transform/search/openXML.xsl";
     }
-    
+
     @Override
     public String getXMLPath() {
-        
+
         String qs = "?DATABASE=1&XQUERYX=%3Cquery%3E%3Cword+path%3D%22an%22%3E" + accessionNumber
             + "%3C%2Fword%3E%3C%2Fquery%3E&AUTOSTEM=on&STARTYEAR=1900&ENDYEAR=&SORT=re&xmlsearch=Submit+Query";
         return EVProperties.getJSPPath(JSPPathProperties.OPEN_XML_PATH) + qs;
     }
-    
+
     @DefaultHandler
     @DontValidate
     public Resolution handle() {
@@ -66,7 +66,7 @@ public class ScopusOutwardLinkAction extends EVActionBean implements IBizBean {
             log4j.error("XML was not generated!");
             return SystemMessage.SYSTEM_ERROR_RESOLUTION;
         }
-        
+
         // Transform to real Open XML
         //
         // Setup for the transformation
@@ -75,7 +75,7 @@ public class ScopusOutwardLinkAction extends EVActionBean implements IBizBean {
         InputStream instream = null;
         String stylesheet = null;
         try {
-            
+
             //
             // TRANSFORM! Use stylesheet to transform XML to bean (ThesaurusSearchAction)
             //
@@ -90,16 +90,16 @@ public class ScopusOutwardLinkAction extends EVActionBean implements IBizBean {
             transformer.transform(
                 new StreamSource(instream),
                 new StreamResult(transformout));
-            
+
             // Parse resulting OpenXML and construct abstract URL
             EVSaxParser parser = new EVSaxParser();
             String transformxml = transformout.toString();
             parser.parseDocument(new ByteArrayInputStream(transformxml.getBytes()));
             String abstractLink = parser.getAbstractLink();
             String resultCount = parser.getResultCount();
-            
+
             log4j.info("Result count for " + accessionNumber + " is " + resultCount);
-            
+
             if ("1".equals(resultCount)) {
                 return new RedirectResolution(abstractLink);
             } else if (!GenericValidator.isBlankOrNull(parser.getException())) {
@@ -108,16 +108,16 @@ public class ScopusOutwardLinkAction extends EVActionBean implements IBizBean {
             } else {
                 return SystemMessage.SYSTEM_ERROR_RESOLUTION;
             }
-            
+
         } catch (Exception e) {
             log4j.error("Unable to resolve outward link: " + e.getMessage());
             return SystemMessage.SYSTEM_ERROR_RESOLUTION;
         }
     }
-    
+
     /**
      * Inner class to handle parsing OpenXML response
-     * 
+     *
      * @author harovetm
      */
     public static class EVSaxParser extends org.xml.sax.helpers.DefaultHandler {
@@ -127,15 +127,15 @@ public class ScopusOutwardLinkAction extends EVActionBean implements IBizBean {
         private String exception;
 
         private String qName;
-        
+
         public EVSaxParser() {
             super();
         }
-        
+
         public void parseDocument(InputStream stream) {
-            
+
             SAXParserFactory spf = SAXParserFactory.newInstance();
-            
+
             try {
                 SAXParser sp = spf.newSAXParser();
                 sp.parse(stream, this);
@@ -147,7 +147,7 @@ public class ScopusOutwardLinkAction extends EVActionBean implements IBizBean {
                 e.printStackTrace();
             }
         }
-        
+
         public void characters(char[] ch, int start, int length) throws SAXException {
             tempVal = new String(ch, start, length);
             if (qName.equalsIgnoreCase("ABSTRACT-LINK")) {
@@ -160,17 +160,17 @@ public class ScopusOutwardLinkAction extends EVActionBean implements IBizBean {
                 exception = tempVal;
             }
         }
-        
+
         public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
-            
+
             this.qName = qName;
-            
+
         }
-        
+
         public String getAbstractLink() {
             return abstractLink;
         }
-        
+
         public String getResultCount() {
             return resultCount;
         }
@@ -180,11 +180,11 @@ public class ScopusOutwardLinkAction extends EVActionBean implements IBizBean {
         }
 
     }
-    
+
     public String getAccessionNumber() {
         return accessionNumber;
     }
-    
+
     public void setAccessionNumber(String accessionNumber) {
         this.accessionNumber = accessionNumber;
     }
@@ -196,7 +196,7 @@ public class ScopusOutwardLinkAction extends EVActionBean implements IBizBean {
      */
 	public Resolution handleException(ErrorXml errorXml) {
 		context.getRequest().setAttribute("errorXml", errorXml);
-		return new ForwardResolution("/WEB-INF/pages/world/systemerror.jsp");
+		return new ForwardResolution("/system/error.url");
 	}
-	
+
 }

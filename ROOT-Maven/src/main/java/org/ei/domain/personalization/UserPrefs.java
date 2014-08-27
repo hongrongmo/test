@@ -43,23 +43,29 @@ public class UserPrefs  {
     public static final String ATTRIBUTE_ENVIRONMENT = "Environment";
     public static final String ATTRIBUTE_DL_FORMAT = "DL_FORMAT";
     public static final String ATTRIBUTE_DL_OUTPUT = "DL_OUTPUT";
+    public static final String ATTRIBUTE_DL_LOCATION = "DL_LOCATION";
     public static final String ATTRIBUTE_RESULTS_PER_PAGE = "RESULTS_PER_PAGE";
     public static final String ATTRIBUTE_SHOW_PREVIEW = "SHOW_PREVIEW";
     public static final String ATTRIBUTE_SORT = "SORT";
     public static final String ATTRIBUTE_TIMESTAMP = "Timestamp";
-    public static final String HIGHTLIGHT_COLOR = "#148C75";
     public static final String ATTRIBUTE_HIGHLIGHT = "HIGHLIGHT_COLOR";
+    private static final String ATTRIBUTE_HIGHLIGHT_BG = "HIGHLIGHT_BG";
     private static final DynamoDBMapperConfig saveconfig = new DynamoDBMapperConfig(DynamoDBMapperConfig.SaveBehavior.CLOBBER);
+    public static final String HIGHTLIGHT_COLOR = "#ff8200";
+
+
 
     private String userid;
     private String environment;
     private String downloadformat;
     private String downloadoutput;
+    private String downloadLocation;
     private int resultsperpage;
     private boolean showpreview;
     private String sort;
     private Date timestamp = new Date();
-    private String highlight = "#148C75";
+    private String highlight = HIGHTLIGHT_COLOR;
+    private boolean highlightBackground = false;
 
     private ArrayList<String> resultsPerPageOpt = new ArrayList<String>();
 
@@ -69,7 +75,7 @@ public class UserPrefs  {
             this.environment = RuntimeProperties.getInstance().getRunlevel();
             setDefaults();
         } catch (Throwable t) {
-            this.environment = "prod";
+            this.environment = RuntimeProperties.RUNLEVEL_PROD;
         }
     }
 
@@ -88,7 +94,9 @@ public class UserPrefs  {
         this.showpreview = false;
         this.downloadoutput = UserPreferences.EVPREFS_DL_OUTPUT_DEF;
         this.downloadformat = AbstractDeliveryAction.DOWNLOAD_FORMAT_PDF;
+        this.downloadLocation = UserPreferences.EVPREFS_DL_LOC_PC;
         this.highlight = HIGHTLIGHT_COLOR;
+        this.highlightBackground = false;
     }
 
     /**
@@ -152,6 +160,15 @@ public class UserPrefs  {
         this.downloadoutput = downloadoutput;
     }
 
+    @DynamoDBAttribute(attributeName = ATTRIBUTE_DL_LOCATION)
+    public String getDlLocation() {
+        return this.downloadLocation;
+    }
+
+    public void setDlLocation(String downloadLocation) {
+        this.downloadLocation = downloadLocation;
+    }
+
     @DynamoDBAttribute(attributeName = ATTRIBUTE_RESULTS_PER_PAGE)
     public int getResultsPerPage() {
         return this.resultsperpage;
@@ -186,11 +203,22 @@ public class UserPrefs  {
 	public void setHighlight(String highlight) {
 		this.highlight = highlight;
 	}
-    
+
     @DynamoDBAttribute(attributeName = ATTRIBUTE_TIMESTAMP)
     public Date getTimestamp() {
         return timestamp;
     }
+
+    @DynamoDBAttribute(attributeName = ATTRIBUTE_HIGHLIGHT_BG)
+    public boolean getHighlightBackground() {
+		return highlightBackground;
+	}
+
+    public void setHighlightBackground(boolean highlightBackground) {
+		this.highlightBackground = highlightBackground;
+	}
+
+
 
     public void setTimestamp(Date timestamp) {
         this.timestamp = timestamp;
@@ -203,15 +231,16 @@ public class UserPrefs  {
         else return dateFormatter.format(this.timestamp);
     }
 
+
     @DynamoDBIgnore
     private static String getCurrentEnvironment() {
         // Set then environment from current runtime properties
-        String environment = "prod";
+        String environment = RuntimeProperties.RUNLEVEL_PROD;
         try {
             environment = RuntimeProperties.getInstance().getRunlevel();
         } catch (Throwable t) {
             log4j.error("Unable to retrieve RuntimeProperties.SYSTEM_ENVIRONMENT_RUNLEVEL", t);
-            environment = "prod";
+            environment = RuntimeProperties.RUNLEVEL_PROD;
         }
         return environment;
     }
@@ -297,5 +326,7 @@ public class UserPrefs  {
         DynamoDBMapper mapper = new DynamoDBMapper(dynamoDBClient);
         mapper.delete(this, saveconfig);
     }
+
+
 
 }

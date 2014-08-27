@@ -8,11 +8,14 @@ import java.util.List;
 import java.util.Properties;
 
 import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
 
+import net.sourceforge.stripes.action.Before;
 import net.sourceforge.stripes.action.DontValidate;
 import net.sourceforge.stripes.action.ForwardResolution;
 import net.sourceforge.stripes.action.HandlesEvent;
 import net.sourceforge.stripes.action.Resolution;
+import net.sourceforge.stripes.action.StreamingResolution;
 import net.sourceforge.stripes.action.UrlBinding;
 
 import org.apache.commons.validator.GenericValidator;
@@ -22,6 +25,7 @@ import org.ei.domain.Database;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.InvalidArgumentException;
 import org.ei.exception.InfrastructureException;
+import org.ei.exception.SessionException;
 import org.ei.exception.SystemErrorCodes;
 import org.ei.stripes.action.EVActionBean;
 import org.ei.stripes.view.PageNavigation;
@@ -114,7 +118,7 @@ public class ThesaurusAjaxAction extends EVActionBean {
 		}
 		return path;
 	}
-
+	
 	/**
 	 * Thesaurus search results display (AJAX)
 	 * 
@@ -127,6 +131,13 @@ public class ThesaurusAjaxAction extends EVActionBean {
 	@HandlesEvent("fullrec")
 	@DontValidate
 	public Resolution thesFullRec() throws Exception {
+		
+		
+		HttpServletRequest request = context.getRequest();
+		if(isCSRFPrevRequired(request.getParameter("csrfSyncToken"))){
+			return csrfFailedResponseResolution();
+		}
+		
 		if (GenericValidator.isBlankOrNull(term)) {
 			throw new InvalidArgumentException("'term' must be present in request!");
 		}
@@ -203,6 +214,7 @@ public class ThesaurusAjaxAction extends EVActionBean {
 	 * 
 	 * @return Resolution
 	 * @throws InfrastructureException
+	 * @throws SessionException 
 	 * @throws SAXException
 	 * @throws IOException
 	 * @throws ThesaurusException
@@ -214,7 +226,13 @@ public class ThesaurusAjaxAction extends EVActionBean {
 	 */
 	@HandlesEvent("termsearch")
 	@DontValidate
-	public Resolution thesTermSearch() throws InfrastructureException {
+	public Resolution thesTermSearch() throws InfrastructureException, SessionException {
+		
+		HttpServletRequest request = context.getRequest();
+		if(isCSRFPrevRequired(request.getParameter("csrfSyncToken"))){
+			return csrfFailedResponseResolution();
+		}
+		
 		if (GenericValidator.isBlankOrNull(term)) {
 			throw new InfrastructureException(SystemErrorCodes.INVALID_ARGUMENT_SET_ERROR, "'term' must be present in request!");
 		}
@@ -302,6 +320,7 @@ public class ThesaurusAjaxAction extends EVActionBean {
 	 * 
 	 * @return Resolution
 	 * @throws InfrastructureException
+	 * @throws SessionException 
 	 * @throws ThesaurusException
 	 * @throws InvalidArgumentException
 	 * @throws SAXException
@@ -312,7 +331,13 @@ public class ThesaurusAjaxAction extends EVActionBean {
 	 */
 	@HandlesEvent("browse")
 	@DontValidate
-	public Resolution thesBrowse() throws InfrastructureException {
+	public Resolution thesBrowse() throws InfrastructureException, SessionException {
+		
+		HttpServletRequest request = context.getRequest();
+		if(isCSRFPrevRequired(request.getParameter("csrfSyncToken"))){
+			return csrfFailedResponseResolution();
+		}
+		
 		if (GenericValidator.isBlankOrNull(term)) {
 			throw new InfrastructureException(SystemErrorCodes.INVALID_ARGUMENT_SET_ERROR, "'term' must be present in request!");
 		}
@@ -407,6 +432,11 @@ public class ThesaurusAjaxAction extends EVActionBean {
 		}
 
 		return new ForwardResolution("/WEB-INF/pages/customer/search/ajax/thesBrowse.jsp");
+	}
+	
+	private Resolution csrfFailedResponseResolution(){
+		String result = String.valueOf("<div style=\"display:none;\"><div id=\"validationnotpassed\">true</div></div>");
+        return new StreamingResolution("text/html", result);
 	}
 
 	//
