@@ -19,7 +19,7 @@ public class Entity {
 
     public static void main(String args[]) {
         try {
-            String test = "¿— b c d E ◊";
+            String test = "ÔøΩÔøΩ b c d E ÔøΩ";
             // System.out.println(Entity.replaceLatinChars(test));
             String line = null;
             String filename = "c:/tmp/entity.txt";
@@ -862,70 +862,102 @@ public class Entity {
         /**
          * ISO Latin to ascii mappings
          **/
-        isotable.setProperty("¿", "A");
-        isotable.setProperty("¬", "A");
-        isotable.setProperty("ƒ", "A");
-        isotable.setProperty("∆", "AE");
-        isotable.setProperty("»", "E");
-        isotable.setProperty(" ", "E");
-        isotable.setProperty("Ã", "I");
-        isotable.setProperty("Œ", "I");
-        isotable.setProperty("–", "D");
-        isotable.setProperty("“", "O");
-        isotable.setProperty("‘", "O");
-        isotable.setProperty("÷", "O");
-        isotable.setProperty("ÿ", "O");
-        isotable.setProperty("⁄", "U");
-        isotable.setProperty("‹", "U");
-        isotable.setProperty("ﬁ", "THORN");
-        isotable.setProperty("‡", "a");
-        isotable.setProperty("‚", "a");
-        isotable.setProperty("‰", "a");
-        isotable.setProperty("Ê", "ae");
-        isotable.setProperty("Ë", "e");
-        isotable.setProperty("Í", "e");
-        isotable.setProperty("Ï", "i");
-        isotable.setProperty("Ó", "i");
-        isotable.setProperty("", "eth");
-        isotable.setProperty("Ú", "o");
-        isotable.setProperty("Ù", "o");
-        isotable.setProperty("ˆ", "o");
-        isotable.setProperty("¯", "o");
-        isotable.setProperty("˙", "u");
-        isotable.setProperty("¸", "u");
-        isotable.setProperty("˛", "thorn");
-        isotable.setProperty("¡", "A");
-        isotable.setProperty("√", "A");
-        isotable.setProperty("≈", "A");
-        isotable.setProperty("«", "C");
-        isotable.setProperty("…", "E");
-        isotable.setProperty("À", "E");
-        isotable.setProperty("Õ", "I");
-        isotable.setProperty("œ", "I");
-        isotable.setProperty("—", "N");
-        isotable.setProperty("”", "O");
-        isotable.setProperty("’", "O");
-        isotable.setProperty("◊", "");
-        isotable.setProperty("Ÿ", "U");
-        isotable.setProperty("€", "U");
-        isotable.setProperty("›", "Y");
-        isotable.setProperty("ﬂ", "ss");
-        isotable.setProperty("·", "a");
-        isotable.setProperty("„", "a");
-        isotable.setProperty("Â", "a");
-        isotable.setProperty("Á", "c");
-        isotable.setProperty("È", "e");
-        isotable.setProperty("Î", "e");
-        isotable.setProperty("Ì", "i");
-        isotable.setProperty("Ô", "i");
-        isotable.setProperty("Ò", "n");
-        isotable.setProperty("Û", "o");
-        isotable.setProperty("ı", "o");
-        isotable.setProperty("˜", "");
-        isotable.setProperty("˘", "u");
-        isotable.setProperty("˚", "u");
-        isotable.setProperty("˝", "y");
-        isotable.setProperty("ˇ", "y");
+        isotable.setProperty("¬°", "!"); //  Inverted exclamation
+        //isotable.setProperty("¬¢", ""); //  Cent sign
+        //isotable.setProperty("¬£", ""); //  Pound sterling
+        //isotable.setProperty("¬§", ""); //  General currency sign
+        //isotable.setProperty("¬•", ""); //  Yen sign
+        isotable.setProperty("¬¶", "|"); //  Broken vertical bar
+        //isotable.setProperty("¬ß", ""); //  Section sign
+        //isotable.setProperty("¬®", ""); //  Umlaut (dieresis)
+        //isotable.setProperty("¬©", "&copy;"); //  Copyright
+        //isotable.setProperty("¬™", ""); //  Feminine ordinal
+        isotable.setProperty("¬´", "<<"); //  Left angle quote, guillemotleft
+        //isotable.setProperty("¬¨", ""); //  Not sign
+        isotable.setProperty("¬≠", "-"); //  Soft hyphen
+        //isotable.setProperty("¬Æ", "&reg;"); //  Registered trademark
+        //isotable.setProperty("¬Ø", ""); //  Macron accent
+        //isotable.setProperty("¬∞", ""); //  Degree sign
+        isotable.setProperty("¬±", "+/-"); //  Plus or minus
+        isotable.setProperty("¬≤", "^2"); //  Superscript two
+        isotable.setProperty("¬≥", "^3"); //  Superscript three
+        isotable.setProperty("¬¥", "'"); //  Acute accent
+        //isotable.setProperty("¬µ", ""); //  Micro sign
+        //isotable.setProperty("¬∂", ""); //  Paragraph sign
+        //isotable.setProperty("¬∑", ""); //  Middle dot
+        //isotable.setProperty("¬∏", ""); //  Cedilla
+        isotable.setProperty("¬π", "^1"); //  Superscript one
+        //isotable.setProperty("¬∫", ""); //  Masculine ordinal
+        isotable.setProperty("¬ª", ">>"); //  Right angle quote, guillemotright
+        isotable.setProperty("¬º", "1/4"); //  Fraction one-fourth
+        isotable.setProperty("¬Ω", "1/2"); //  Fraction one-half
+        isotable.setProperty("¬æ", "3/4"); //  Fraction three-fourths
+        isotable.setProperty("¬ø", "?"); //  Inverted question mark
+        isotable.setProperty("√Ä", "A"); //  Capital A, grave accent
+        isotable.setProperty("√Å", "A"); //  Capital A, acute accent
+        isotable.setProperty("√Ç", "A"); //  Capital A, circumflex accent
+        isotable.setProperty("√É", "A"); //  Capital A, tilde
+        isotable.setProperty("√Ñ", "A"); //  Capital A, dieresis or umlaut mark
+        isotable.setProperty("√Ö", "A"); //  Capital A, ring
+        isotable.setProperty("√Ü", "AE"); //  Capital AE dipthong (ligature)
+        isotable.setProperty("√á", "C"); //  Capital C, cedilla
+        isotable.setProperty("√à", "E"); //  Capital E, grave accent
+        isotable.setProperty("√â", "E"); //  Capital E, acute accent
+        isotable.setProperty("√ä", "E"); //  Capital E, circumflex accent
+        isotable.setProperty("√ã", "E"); //  Capital E, dieresis or umlaut mark
+        isotable.setProperty("√å", "I"); //  Capital I, grave accent
+        isotable.setProperty("√ç", "I"); //  Capital I, acute accent
+        isotable.setProperty("√é", "I"); //  Capital I, circumflex accent
+        isotable.setProperty("√è", "I"); //  Capital I, dieresis or umlaut mark
+        isotable.setProperty("√ê", "D"); //  Capital Eth, Icelandic
+        isotable.setProperty("√ë", "N"); //  Capital N, tilde
+        isotable.setProperty("√í", "O"); //  Capital O, grave accent
+        isotable.setProperty("√ì", "O"); //  Capital O, acute accent
+        isotable.setProperty("√î", "O"); //  Capital O, circumflex accent
+        isotable.setProperty("√ï", "O"); //  Capital O, tilde
+        isotable.setProperty("√ñ", "O"); //  Capital O, dieresis or umlaut mark
+        isotable.setProperty("√ó", "x"); //  Multiply sign
+        isotable.setProperty("√ò", "O"); //  Capital O, slash
+        isotable.setProperty("√ô", "U"); //  Capital U, grave accent
+        isotable.setProperty("√ö", "U"); //  Capital U, acute accent
+        isotable.setProperty("√õ", "U"); //  Capital U, circumflex accent
+        isotable.setProperty("√ú", "U"); //  Capital U, dieresis or umlaut mark
+        isotable.setProperty("√ù", "Y"); //  Capital Y, acute accent
+        isotable.setProperty("√û", "THORN"); //  Capital THORN, Icelandic
+        isotable.setProperty("√ü", "B"); //  Small sharp s, German (sz ligature)
+        isotable.setProperty("√†", "a"); //  Small a, grave accent
+        isotable.setProperty("√°", "a"); //  Small a, acute accent
+        isotable.setProperty("√¢", "a"); //  Small a, circumflex accent
+        isotable.setProperty("√£", "a"); //  Small a, tilde
+        isotable.setProperty("√§", "a"); //  Small a, dieresis or umlaut mark
+        isotable.setProperty("√•", "a"); //  Small a, ring
+        isotable.setProperty("√¶", "ae"); //  Small ae dipthong (ligature)
+        isotable.setProperty("√ß", "c"); //  Small c, cedilla
+        isotable.setProperty("√®", "d"); //  Small e, grave accent
+        isotable.setProperty("√©", "d"); //  Small e, acute accent
+        isotable.setProperty("√™", "d"); //  Small e, circumflex accent
+        isotable.setProperty("√´", "d"); //  Small e, dieresis or umlaut mark
+        isotable.setProperty("√¨", "i"); //  Small i, grave accent
+        isotable.setProperty("√≠", "i"); //  Small i, acute accent
+        isotable.setProperty("√Æ", "i"); //  Small i, circumflex accent
+        isotable.setProperty("√Ø", "i"); //  Small i, dieresis or umlaut mark
+        isotable.setProperty("√∞", "o"); //  Small eth, Icelandic
+        isotable.setProperty("√±", "n"); //  Small n, tilde
+        isotable.setProperty("√≤", "o"); //  Small o, grave accent
+        isotable.setProperty("√≥", "o"); //  Small o, acute accent
+        isotable.setProperty("√¥", "o"); //  Small o, circumflex accent
+        isotable.setProperty("√µ", "o"); //  Small o, tilde
+        isotable.setProperty("√∂", "o"); //  Small o, dieresis or umlaut mark
+        isotable.setProperty("√∑", "/"); //  Division sign
+        isotable.setProperty("√∏", "o"); //  Small o, slash
+        isotable.setProperty("√π", "u"); //  Small u, grave accent
+        isotable.setProperty("√∫", "u"); //  Small u, acute accent
+        isotable.setProperty("√ª", "u"); //  Small u, circumflex accent
+        isotable.setProperty("√º", "u"); //  Small u, dieresis or umlaut mark
+        isotable.setProperty("√Ω", "y"); //  Small y, acute accent
+        isotable.setProperty("√æ", "thorn"); //  Small thorn, Icelandic
+        isotable.setProperty("√ø", "y"); //  Small y, dieresis or umlaut mark
+
 
         // Patent UTF String
         utftable.setProperty("{acute over (a)}", "a");

@@ -51,10 +51,6 @@ public class CARSRequestFactory {
         } else if (CARSRequestType.PROFILEDISPLAY == requesttype) {
             carsrequest = new CARSRequestProfileDisplay(request, userSession);
         } else if (CARSRequestType.BULKAUTHENTICATE == requesttype) {
-            // TEMPORARY FIX!  CARS currently needs the authtoken cleared out on non-IP bulk
-            if (userSession.getUser() != null) {
-                userSession.getUser().setAuthToken(null);
-            }
             carsrequest = new CARSRequestBulkAuthenticate(request, userSession);
 		} else {
 			throw new IllegalArgumentException("Invalid request type!");

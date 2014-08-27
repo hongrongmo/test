@@ -559,8 +559,7 @@ public class SessionManager {
 	            writeSessionCookie(sessionidObj);
 	            
 	            if (session.isNew()) {
-	            	handleCSRFSyncTokenUpdate(usersession);
-	                log4j.info("New session created!  Incrementing session counter...");
+	            	log4j.info("New session created!  Incrementing session counter...");
 	                IPBlocker.getInstance().increment(HttpRequestUtil.getIP(request), IPBlocker.COUNTER.SESSION);
 	            }
 	            
@@ -729,12 +728,4 @@ public class SessionManager {
         }
 
     }
-    
-    private void handleCSRFSyncTokenUpdate(UserSession userSession){
-    	
-    	boolean isCSRFPrevEnabled = Boolean.parseBoolean((EVProperties.getRuntimeProperty(RuntimeProperties.PREVENT_CSRF_ATTACK)));
-    	if(!isCSRFPrevEnabled) return;
-    	userSession.getFifoQueue().clearAll();
-	}
-
 }

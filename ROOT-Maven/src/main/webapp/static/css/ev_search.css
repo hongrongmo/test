@@ -31,6 +31,11 @@
 #latestresources ul li {background: url(/static/images/ei_bullet.gif) no-repeat left; list-style-type: none; margin: 0 0 0 4px; vertical-align: middle;}
 #latestresources ul li a {padding-left: 20px }
 
+
+#latestresources ul li.trainingVids {background: url(/static/images/EV_video.png) no-repeat left;}
+#latestresources ul li.whatsNew {background: url(/static/images/EV_new_wh.png) no-repeat left;}
+#latestresources ul li.giveFeedback {background: url(/static/images/EV_feedback_wh.png) no-repeat left; }
+
 #searchformtabsbox {
 	position:relative;
 	margin:0;

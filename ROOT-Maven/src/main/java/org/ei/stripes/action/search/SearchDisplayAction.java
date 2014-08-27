@@ -126,8 +126,11 @@ public class SearchDisplayAction extends BaseSearchAction implements ValidationE
     protected List<String> moresourceslinks = null;
     MoreSearchSources moresearchsources = new MoreSearchSources();
 
+    @Validate(trim=true,mask="true|false")
     protected String dberr;
+    @Validate(trim=true,mask="hisidnotexists")
     protected String hisiderr;
+    @Validate(trim=true,mask="true|false")
     protected String searchHisErr;
 
     private String swReferrer = "";
@@ -340,14 +343,14 @@ public class SearchDisplayAction extends BaseSearchAction implements ValidationE
         return idatabase;
     }
 
-    
+
     /**
      * Search submit
      *
      * @return Resolution
-     * @throws SessionException 
-     * @throws InfrastructureException 
-     * @throws Exception 
+     * @throws SessionException
+     * @throws InfrastructureException
+     * @throws Exception
      * @throws ServletException
      * @throws HistoryException
      * @throws IOException
@@ -359,12 +362,12 @@ public class SearchDisplayAction extends BaseSearchAction implements ValidationE
     	HttpServletRequest request = context.getRequest();
         UserSession usersession = context.getUserSession();
         Query queryObject = null;
-        
+
         if(isCSRFPrevRequired(request.getParameter("csrfSyncToken"))){
  			context.getValidationErrors().add("validationError", new LocalizableError("org.ei.stripes.action.search.SearchResultsAction.unknownerror"));
  			return handleValidationErrors(context.getValidationErrors());
  		}
-   		 
+
 
         //
         // Stripes will remove any empty text values from the form submission
