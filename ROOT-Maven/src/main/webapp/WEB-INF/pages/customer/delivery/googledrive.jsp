@@ -43,6 +43,7 @@
 		<input type="hidden" value="${actionBean.docidlist}" id="docidlist" />
 		<input type="hidden" value="${actionBean.handlelist}" id="handlelist" />
 		<input type="hidden" value="${actionBean.folderid}" id="folderid" />
+		<input type="hidden" value="${actionBean.filenameprefix}" id="filenameprefix" />
 
 		<div style="margin-top:10px;font-size:16px; height:150px" >
 

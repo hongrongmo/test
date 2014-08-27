@@ -126,12 +126,18 @@
     	padding-left:3px;
     	color:#808080;
     }
+    
+    #fnpfx{
+    	padding-left: 2px;
+    }
+    
 </style>
 </head>
 <body>
 <c:set value="${actionBean.context.userSession.user.userPrefs.dlFormat}" var="dlFormat"></c:set>
 <c:set value="${actionBean.context.userSession.user.userPrefs.dlOutput}" var="dlOutput"></c:set>
 <c:set value="${actionBean.context.userSession.user.userPrefs.dlLocation}" var="dlLocation"></c:set>
+<c:set value="${actionBean.context.userSession.user.userPrefs.dlFileNamePrefix}" var="dlFileNamePrefix"></c:set>
 
 <stripes:form name="download" id="download" method="post" action="/delivery/download/submit.url">
 	<stripes:hidden name="sessionid" id="sessionid"/>
@@ -174,7 +180,15 @@
 				<li><input type="radio" class="typeEnabled" id="rdCit" name="displayformat" value="citation"  <c:if test="${dlOutput eq 'citation'}">checked="checked"</c:if>/><label	for="rdCit" title="Download the citation section">Citation</label></li>
 				<li><input type="radio" class="typeEnabled" id="rdAbs" name="displayformat" value="abstract"  <c:if test="${dlOutput eq 'abstract'}">checked="checked"</c:if>/><label for="rdAbs" title="Download the abstract section">Abstract</label></li>
 				<li><input type="radio" class="typeEnabled" id="rdDet" name="displayformat" value="detailed"  <c:if test="${dlOutput eq 'detailed'}">checked="checked"</c:if>/><label for="rdDet" title="Download the detailed record">Detailed record</label></li>
+				<li>
+					<hr style="width:100%" />
+					<div class="grayText" id="fnpfx">File name prefix:</div>
+					<div id="fileNamePrefixContainer"><input type="text" value="${dlFileNamePrefix}" name="filenameprefix" id="filenameprefix" maxlength="30" /></div>
+				</li>
+				
 				</ul>
+				
+				
 			</div>
 		</div>
 		<hr style="width: 100%;"/>
@@ -203,9 +217,10 @@ $(document).ready(function() {
 	//read the cookie
 	if($.cookie("ev_oneclickdl")){
 		var dlOptions = JSON.parse($.cookie("ev_oneclickdl"));
-		$('input[value="' + dlOptions.location + '"]').prop("checked", true);
-		$('input[value="'+dlOptions.displaytype+'"]').prop("checked", true);
-		$('input[value="'+dlOptions.format+'"]').prop("checked", true);
+		$('#oneClickContent input[value="' + dlOptions.location + '"]').prop("checked", true);
+		$('#oneClickContent input[value="'+dlOptions.displaytype+'"]').prop("checked", true);
+		$('#oneClickContent input[value="'+dlOptions.format+'"]').prop("checked", true);
+		$('#filenameprefix').val(dlOptions.filenameprefix);
 	}
 	checkForRefworks($('input[name="outputLocation"]:checked'));
 
@@ -253,21 +268,36 @@ function checkForRefworks(radio){
 				var handlelist = $("#handlelist").val();
 				var folderid = $("#folderid").val();
 				var milli = (new Date()).getTime();
-
+				
+				
+				
 				if (downloadformat == undefined || downloadformat == "") {
 					alert("You must choose a download format.");
+					event.preventDefault();
+					return (false);
+				}
+				
+				var filenameprefix = $.trim($('#filenameprefix').val());
+				if(filenameprefix.length < 3){
+					alert("File name prefix cannot be empty and should have minimum of 3 characters");
+					event.preventDefault();
+					return (false);
+				}
+				if(filenameprefix.length > 50){
+					alert("File name prefix cannot have more than 50 characters");
 					event.preventDefault();
 					return (false);
 				}
 
 				var url = "";
 				GALIBRARY.createWebEventWithLabel('Output', 'Download', downloadformat);
-				$.cookie('ev_oneclickdl', '{"location":"'+downloadLocation+'","format":"'+downloadformat+'","displaytype":"'+displaytype+'","baseaddress":"'+baseaddress+'"}',{path:'/'});
+				$.cookie('ev_oneclickdl', '{"location":"'+downloadLocation+'","format":"'+downloadformat+'","displaytype":"'+displaytype+'","baseaddress":"'+baseaddress+'","filenameprefix":"'+filenameprefix+'"}',{path:'/'});
 				dlOptions = {
 						location:downloadLocation,
 						format:downloadformat,
 						displaytype:displaytype,
-						baseaddress:baseaddress
+						baseaddress:baseaddress,
+						filenameprefix:filenameprefix
 				};
 				$("#dlprefsSaved").fadeIn("slow");
 
@@ -280,7 +310,7 @@ function checkForRefworks(radio){
 						actionDisplayType = "citation";
 					}
 					displaytype = actionDisplayType;
-					$('input[value="' + actionDisplayType + '"]').prop("checked", true);
+					$('#oneClickContent input[value="' + actionDisplayType + '"]').prop("checked", true);
 				}
 				// Refworks?
 				var ret = true;
@@ -314,7 +344,7 @@ function checkForRefworks(radio){
 				}
 
 				$('#downloadlink').attr("title", "Click to change one click download preferences.");
-				$('#downloadlink').tooltipster('destroy');
+				$('#downloadlink').tooltipster('hide');
 				return ret;
 
 			});

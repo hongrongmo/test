@@ -55,7 +55,7 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
 	 */
 	protected String sessionid;
 	protected String displayLogin = "";
-    @Validate(mask="\\d*|compendex|inspec")
+    @Validate(mask="\\d*|compendex|inspec|cpx|ins|nti|usp|crc|c84|pch|chm|cbn|elt|ept|ibf|geo|eup|upa|ref|pag|zbf|upt|ibs|grf")
 	protected String database;
 	protected int usermask; 	// User Database mask (available DBs)
 	protected String source = "";
@@ -72,7 +72,7 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
 
 	private boolean showLoginBox = true;
 	private StopWatch requeststopwatch= null;
-	
+
 	private String csrfSyncToken = null;
 
     @Validate(mask="\\d*")
@@ -583,7 +583,7 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
 		this.errorCode = errorCode;
 	}
 	public String getCsrfSyncToken() throws SessionException {
-		
+
 		UserSession userSession = context.getUserSession();
     	if(userSession == null){
     		return null;
@@ -599,7 +599,7 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
 		}
 		String newToken = userSession.getFifoQueue().getLastElement();
     	if(isSessionUpdateNeeded)context.updateUserSession(userSession);
-		
+
 		return newToken;
 	}
 	public void setCsrfSyncToken(String csrfSyncToken) {
@@ -658,9 +658,9 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
     protected boolean isCSRFPrevRequired(String token) throws SessionException{
     	boolean preventIt = false;
     	UserSession usersession = context.getUserSession();
-    	
+
     	if(usersession == null) return false;
-    	
+
     	boolean isCSRFPrevEnabled = Boolean.parseBoolean((EVProperties.getRuntimeProperty(RuntimeProperties.PREVENT_CSRF_ATTACK)));
     	if(isCSRFPrevEnabled){
     		if(token == null || token.isEmpty()){
