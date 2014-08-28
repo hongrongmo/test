@@ -12,6 +12,7 @@ import java.io.StringReader;
 import java.io.StringWriter;
 import java.io.Writer;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import javax.xml.transform.Result;
@@ -54,6 +55,7 @@ import org.ei.domain.personalization.FolderEntry;
 import org.ei.domain.personalization.FolderPage;
 import org.ei.domain.personalization.IEVWebUser;
 import org.ei.domain.personalization.SavedRecords;
+import org.ei.domain.personalization.UserPrefs;
 import org.ei.download.util.ExcelExportUtil;
 import org.ei.download.util.SaveToGoogleUsage;
 import org.ei.exception.InfrastructureException;
@@ -82,6 +84,8 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
     private String dropBoxClientid = "";
 
     private String downloadMedium = "";
+    
+	private String filenameprefix = "";
 
    	@DontValidate
     @HandlesEvent("display")
@@ -130,6 +134,7 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
 			userSession.setProperty("downloadformat", downloadformat);
 			userSession.setProperty("dropBoxDownloadUrl", dropBoxDownloadUrl);
 			userSession.setProperty("displayformat", displayformat);
+			userSession.setProperty("filenameprefix", filenameprefix);
 		}
         return new ForwardResolution("/WEB-INF/pages/customer/delivery/dropbox.jsp");
     }
@@ -164,6 +169,7 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
 			setDownloadformat(userSession.getProperty("downloadformat"));
 			setDropBoxDownloadUrl(userSession.getProperty("dropBoxDownloadUrl"));
 			setDisplayformat(userSession.getProperty("displayformat"));
+			setFilenameprefix(userSession.getProperty("filenameprefix"));
 		}
 
         return new ForwardResolution("/WEB-INF/pages/customer/delivery/dropbox.jsp");
@@ -568,34 +574,55 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
      */
     private void buildTmpFileName(String docformat) {
         if (tmpfileName == null) tmpfileName = new StringBuffer();
-
-        java.util.Calendar calCurrentDate = java.util.GregorianCalendar.getInstance();
-        tmpfileName.append(calCurrentDate.get(java.util.Calendar.DAY_OF_MONTH));
-        tmpfileName.append("-");
-        tmpfileName.append(calCurrentDate.get(java.util.Calendar.MONTH) + 1);
-        tmpfileName.append("-");
-        tmpfileName.append(calCurrentDate.get(java.util.Calendar.YEAR));
-        tmpfileName.append("-");
-        tmpfileName.append(System.currentTimeMillis());
+        
+        if(filenameprefix == null || filenameprefix.trim().isEmpty() || filenameprefix.trim().length()<3){
+        	filenameprefix = UserPrefs.DL_FILENAME_PFX;
+        }
+        tmpfileName.append(filenameprefix);
         tmpfileName.append("_");
-
-        tmpfileName.append(docformat);
+        if(docformat.equalsIgnoreCase(FullDoc.FULLDOC_FORMAT)){
+        	tmpfileName.append("detailed");
+        }else{
+        	tmpfileName.append(docformat);
+        }
+        
         tmpfileName.append("_");
         tmpfileName.append(downloadformat);
+        
+        Calendar now = Calendar.getInstance();
+        int year = now.get(Calendar.YEAR);
+        int month = now.get(Calendar.MONTH)+1; // Note: zero based!
+        int day = now.get(Calendar.DAY_OF_MONTH);
+        int hour = now.get(Calendar.HOUR_OF_DAY);
+        int minute = now.get(Calendar.MINUTE);
+        int second = now.get(Calendar.SECOND);
+        int millis = now.get(Calendar.MILLISECOND);
+        tmpfileName.append("_");
+        tmpfileName.append(month);
+        tmpfileName.append("-");
+        tmpfileName.append(day);
+        tmpfileName.append("-");
+        tmpfileName.append(year);
+        tmpfileName.append("_");
+        tmpfileName.append(hour);
+        tmpfileName.append(minute);
+        tmpfileName.append(second);
+        tmpfileName.append(millis);
+        
         if (DOWNLOAD_FORMAT_ASCII.equals(downloadformat)) {
-            tmpfileName.append("_.txt");
+            tmpfileName.append(".txt");
         } else if (DOWNLOAD_FORMAT_BIBTEXT.equals(downloadformat)) {
-            tmpfileName.append("_.bib");
+            tmpfileName.append(".bib");
         } else if (DOWNLOAD_FORMAT_CSV.equals(downloadformat)){
-        	tmpfileName.append("_.csv");
+        	tmpfileName.append(".csv");
         } else if (DOWNLOAD_FORMAT_PDF.equals(downloadformat)){
-        	tmpfileName.append("_.pdf");
+        	tmpfileName.append(".pdf");
         } else if (DOWNLOAD_FORMAT_RTF.equals(downloadformat)){
-        	tmpfileName.append("_.rtf");
+        	tmpfileName.append(".rtf");
         }else if (DOWNLOAD_FORMAT_EXCEL.equals(downloadformat)){
-        	tmpfileName.append("_.xlsx");
+        	tmpfileName.append(".xlsx");
         }else {
-            tmpfileName.append("_.ris");
+            tmpfileName.append(".ris");
         }
     }
 
@@ -687,5 +714,13 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
 		this.downloadMedium = downloadMedium;
 	}
 
+
+    public String getFilenameprefix() {
+		return filenameprefix;
+	}
+
+	public void setFilenameprefix(String filenameprefix) {
+		this.filenameprefix = filenameprefix;
+	}
 
 }

@@ -1,5 +1,6 @@
 package org.ei.util;
 
+import java.io.Serializable;
 import java.math.BigInteger;
 import java.security.SecureRandom;
 import java.util.LinkedList;
@@ -7,9 +8,14 @@ import java.util.LinkedList;
 import org.apache.log4j.Logger;
 import org.ei.config.RuntimeProperties;
 
-public class SyncTokenFIFOQueue {
+public class SyncTokenFIFOQueue implements Serializable{
 	
-	 private static Logger log4j = Logger.getLogger(SyncTokenFIFOQueue.class);
+	 /**
+	 * 
+	 */
+	private static final long serialVersionUID = -137127524009826269L;
+
+	private static Logger log4j = Logger.getLogger(SyncTokenFIFOQueue.class);
 	 
 	 /** The random.
 	  * 

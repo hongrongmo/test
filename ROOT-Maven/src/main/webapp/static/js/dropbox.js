@@ -134,29 +134,35 @@ function parseAppInfo(apiError, appInfo){
 function creatFileName(){
 	var downloadformat = $("#downloadformat").val();
 	var displayformat = $("#displayformat").val();
+	var filenameprefix = $("#filenameprefix").val();
+	
+	if(filenameprefix == null || filenameprefix.trim().length==0 || filenameprefix.trim().length<3){
+		filenameprefix = "Engineering_Village";
+	}
 	var filename = "";
-	var dt = new Date();
-	filename += dt.getDate();
-	filename += '-';
-	filename += (dt.getMonth() + 1 );
-	filename += '-';
-	filename += dt.getFullYear();
-	filename += '-';
-	filename += dt.getHours();
-	filename += '-';
-	filename += dt.getMinutes();
-	filename += '-';
-	filename += dt.getMilliseconds();
+	filename += filenameprefix;
 	filename += '_';
 	filename += displayformat;
 	filename += '_';
 	filename += downloadformat;
+	filename += '_';
+	var dt = new Date();
+	filename += (dt.getMonth() + 1 );
+	filename += '-';
+	filename += dt.getDate();
+	filename += '-';
+	filename += dt.getFullYear();
+	filename += '_';
+	filename += dt.getHours();
+	filename += dt.getMinutes();
+	filename += dt.getMilliseconds();
+	
 	if(downloadformat == 'ascii'){
-		filename += '_.txt';
+		filename += '.txt';
 	}else if(downloadformat == 'excel'){
-		filename += '_.xlsx';
+		filename += '.xlsx';
 	}else{
-		filename += '_.'+downloadformat;
+		filename += '.'+downloadformat;
 	}
 	return filename;
 }
