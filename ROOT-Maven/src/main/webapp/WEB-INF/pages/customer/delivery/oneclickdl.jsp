@@ -253,8 +253,8 @@ function checkForRefworks(radio){
 				var handlelist = $("#handlelist").val();
 				var folderid = $("#folderid").val();
 				var milli = (new Date()).getTime();
-				
-				
+
+
 
 				if (downloadformat == undefined || downloadformat == "") {
 					alert("You must choose a download format.");
@@ -302,6 +302,7 @@ function checkForRefworks(radio){
 					window.open(refworksURL + "&url=" + escape(url),
 									"RefWorksMain",
 									"width=800,height=500,scrollbars=yes,menubar=yes,resizable=yes,directories=yes,location=yes,status=yes");
+
                     event.preventDefault();
                     ret = false;
 				}else if(downloadLocation == "dropbox"){
