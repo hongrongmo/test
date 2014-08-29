@@ -182,8 +182,9 @@
 				<li><input type="radio" class="typeEnabled" id="rdDet" name="displayformat" value="detailed"  <c:if test="${dlOutput eq 'detailed'}">checked="checked"</c:if>/><label for="rdDet" title="Download the detailed record">Detailed record</label></li>
 				<li>
 					<hr style="width:100%" />
-					<div class="grayText" id="fnpfx">File name prefix:</div>
-					<div id="fileNamePrefixContainer"><input type="text" value="${dlFileNamePrefix}" name="filenameprefix" id="filenameprefix" maxlength="30" /></div>
+					<div class="grayText sectionHead" id="fnpfx">File name prefix:</div>
+					<div id="fileNamePrefixContainer" style="width:150px"><input type="text" style="width:150px" value="${dlFileNamePrefix}" name="filenameprefix" id="filenameprefix" maxlength="30" /></div>
+					<div style="text-align:right;padding-right:10px;width:150px"><span  style="font-size:10px">&nbsp;&nbsp;_Output_Format_Date/Time</span></div>
 				</li>
 				
 				</ul>
