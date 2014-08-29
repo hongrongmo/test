@@ -4,7 +4,7 @@
 <style type="text/css">
 	.settingsContents{
 	padding-top:15px;
-	height:430px;
+	height:450px;
 	}
 	.prefsRadios{
 	list-style: none;
@@ -67,6 +67,7 @@
     }
     .saveCancel{
     float:right;
+    margin-bottom:5px
     }
     .saved{
     	color:#3ca690;
@@ -180,7 +181,11 @@
 			<hr/>
 			<div class="settingSection">File Name Prefix</div>
 			<fieldset title="File Name Prefix Settings">
-				<input type="text" value="${dlFileNamePrefix}" name="dlFileNamePrefix" id="dlFileNamePrefix" maxlength="30" />
+				<div style="width:150px">
+					<div style="width:150px"><input style="width:150px"  type="text" value="${dlFileNamePrefix}" name="dlFileNamePrefix" id="dlFileNamePrefix" maxlength="30" /></div>
+					<div style="text-align:right;width:150px"><span style="font-size:10px;">&nbsp;&nbsp;_Output_Format_Date/Time</span></div>
+				</div>
+				
 	    	</fieldset>
 
 	</div>
