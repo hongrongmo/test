@@ -184,7 +184,7 @@
 					<hr style="width:100%" />
 					<div class="grayText sectionHead" id="fnpfx">File name prefix:</div>
 					<div id="fileNamePrefixContainer" style="width:150px"><input type="text" style="width:150px" value="${dlFileNamePrefix}" name="filenameprefix" id="filenameprefix" maxlength="30" /></div>
-					<div style="text-align:right;padding-right:10px;width:150px"><span  style="font-size:10px">&nbsp;&nbsp;_Output_Format_Date/Time</span></div>
+					<div style="text-align:right;padding-right:10px;width:150px" id="filenamesuffix"><span  style="font-size:10px">&nbsp;&nbsp;_Output_Format_Date/Time</span></div>
 				</li>
 				
 				</ul>
@@ -243,12 +243,24 @@ function checkForRefworks(radio){
 		$(".typeEnabled").parent().find("label").addClass("grayText");
 		$("#savePrefsButton").show();
         $("#dropBoxLinkSpan").hide();
+        handleFnPrefix();
+        $("#filenameprefix").prop("disabled", true);
+        $("#filenamesuffix").addClass("grayText");
 	}else{
 		$(".typeEnabled").prop("disabled",false);
 		$(".typeEnabled").parent().find("label").removeClass("grayText");
 		$("#savePrefsButton").show();
         $("#dropBoxLinkSpan").hide();
+        $("#filenameprefix").prop("disabled", false);
+        $("#filenamesuffix").removeClass("grayText");
+    }
+}
+function handleFnPrefix(){
+	var fileNamePrefix = $.trim($('#filenameprefix').val());
+	if(fileNamePrefix == null || fileNamePrefix.length > 50 || fileNamePrefix.length < 3){
+		$('#filenameprefix').val(dlOptions.filenameprefix);
 	}
+	
 }
 </script>
 		<c:if test="${actionBean.saveToGoogleEnabled}">
@@ -317,7 +329,7 @@ function checkForRefworks(radio){
 				var ret = true;
 				changeOneClick(downloadLocation);
 				if (downloadLocation == "refworks") {
-					var refworksURL = "http://www.refworks.com/express/ExpressImport.asp?vendor=Engineering%20Village%202&filter=Desktop%20Biblio.%20Mgt.%20Software";
+					var refworksURL = "https://refworks.scholarsportal.info/express/ExpressImport.asp?vendor=Engineering%20Village%202&filter=Desktop%20Biblio.%20Mgt.%20Software";
 					url = "http://" + baseaddress
 							+ "/delivery/download/refworks.url?downloadformat="
 							+ downloadformat + "&timestamp=" + milli

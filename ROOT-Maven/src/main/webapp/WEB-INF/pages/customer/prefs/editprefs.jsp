@@ -96,6 +96,7 @@
 
 	<div class="settingsLeft">
 			<input type="hidden" name="save" value="true"/>
+			
 			<div class="settingSection">Display Results</div>
 
 			<c:set value="${actionBean.currentuserprefs.resultsPerPage}" var="resultsPerPage"></c:set>
@@ -178,6 +179,7 @@
 			</ul>
 	    </fieldset>
 			<c:set value="${actionBean.currentuserprefs.dlFileNamePrefix}" var="dlFileNamePrefix"></c:set>
+			<input type="hidden" id="dlFileNamePrefixOrg" value="${dlFileNamePrefix}"/>
 			<hr/>
 			<div class="settingSection">File Name Prefix</div>
 			<fieldset title="File Name Prefix Settings">
@@ -205,10 +207,21 @@ function checkForRefworks(rad){
 		$("#citation_radio").prop("checked", true);
 		$(".formatRadio").prop("disabled", true);
 		$(".outputRadio").prop("disabled", true);
+		handleFileNamePrefix();
+		$("#dlFileNamePrefix").prop("disabled", true);
 	}else{
 		$(".formatRadio").prop("disabled", false);
 		$(".outputRadio").prop("disabled", false);
+		$("#dlFileNamePrefix").prop("disabled", false);
 	}
+}
+
+function handleFileNamePrefix(){
+	var fileNamePrefix = $.trim($('#dlFileNamePrefix').val());
+	if(fileNamePrefix == null || fileNamePrefix.length > 50 || fileNamePrefix.length < 3){
+		$('#dlFileNamePrefix').val($('#dlFileNamePrefixOrg').val());
+	}
+	
 }
 
 checkForRefworks($("input[name=dlLocation]:checked"));
