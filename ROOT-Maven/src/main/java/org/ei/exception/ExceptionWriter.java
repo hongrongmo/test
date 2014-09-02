@@ -17,7 +17,7 @@ import com.amazonaws.util.StringInputStream;
 
 public class ExceptionWriter {
 	private static final Logger log4j = Logger.getLogger(ExceptionWriter.class);
-	
+
 	/**
 	 * Unmarshall string to ErrorXml object
 	 * @param errorXml
@@ -38,7 +38,7 @@ public class ExceptionWriter {
 			return fail;
 		}
 	}
-	
+
 	/**
 	 * Unmarshall input stream to ErrorXml object
 	 * @param errorXml
@@ -47,7 +47,7 @@ public class ExceptionWriter {
 	public static ErrorXml toObject(InputStream errorXml) {
 		// Create new ErrorXml object with defaults
 		ErrorXml errorXmlObject = new ErrorXml();
-		
+
 		// Now try to convert incoming stream to ErrorXml
 		try {
 
@@ -87,4 +87,22 @@ public class ExceptionWriter {
 		}
 	}
 
+    public static String toXml(ErrorXml errorxml) {
+        // Output exception in xml format
+        JAXBContext jaxbContext;
+        try {
+            jaxbContext = JAXBContext.newInstance(ErrorXml.class);
+            Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+            jaxbMarshaller.setProperty(Marshaller.JAXB_FRAGMENT, true);
+            // output pretty printed
+            jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+
+            Writer out = new StringWriter();
+            jaxbMarshaller.marshal(errorxml, out);
+            return out.toString();
+        } catch (JAXBException jaxbexc) {
+            log4j.error("Unable to marshal XML from ErrorXml object!",jaxbexc);
+            return "";
+        }
+    }
 }

@@ -50,8 +50,10 @@ public class UserPrefs  {
     public static final String ATTRIBUTE_TIMESTAMP = "Timestamp";
     public static final String ATTRIBUTE_HIGHLIGHT = "HIGHLIGHT_COLOR";
     private static final String ATTRIBUTE_HIGHLIGHT_BG = "HIGHLIGHT_BG";
+    private static final String ATTRIBUTE_DL_FILENAME_PFX = "DL_FILENAME_PFX";
     private static final DynamoDBMapperConfig saveconfig = new DynamoDBMapperConfig(DynamoDBMapperConfig.SaveBehavior.CLOBBER);
     public static final String HIGHTLIGHT_COLOR = "#ff8200";
+    public static final String DL_FILENAME_PFX = "Engineering_Village";
 
 
 
@@ -60,7 +62,9 @@ public class UserPrefs  {
     private String downloadformat;
     private String downloadoutput;
     private String downloadLocation;
-    private int resultsperpage;
+    private String downloadFileNamePrefix;
+   
+	private int resultsperpage;
     private boolean showpreview;
     private String sort;
     private Date timestamp = new Date();
@@ -97,6 +101,7 @@ public class UserPrefs  {
         this.downloadLocation = UserPreferences.EVPREFS_DL_LOC_PC;
         this.highlight = HIGHTLIGHT_COLOR;
         this.highlightBackground = false;
+        this.downloadFileNamePrefix = DL_FILENAME_PFX;
     }
 
     /**
@@ -218,7 +223,14 @@ public class UserPrefs  {
 		this.highlightBackground = highlightBackground;
 	}
 
+    @DynamoDBAttribute(attributeName = ATTRIBUTE_DL_FILENAME_PFX)
+    public String getDlFileNamePrefix() {
+		return downloadFileNamePrefix;
+	}
 
+	public void setDlFileNamePrefix(String downloadFileNamePrefix) {
+		this.downloadFileNamePrefix = downloadFileNamePrefix;
+	}
 
     public void setTimestamp(Date timestamp) {
         this.timestamp = timestamp;
