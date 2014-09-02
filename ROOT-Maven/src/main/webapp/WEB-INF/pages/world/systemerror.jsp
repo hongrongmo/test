@@ -36,7 +36,7 @@
     <p>You may <a title="Contact and support (opens in a new window)" href="${contactuslink}" class="evpopup" target="_blank">contact us</a> to report this problem, or you may begin a <a class="newsearch" title="Run a new search" href="/search/quick.url?CID=quickSearch">new search.</a></p>
     </div>
 
-        <!--Error Message: <c:if test="${null != actionBean.exceptionMessage}">${actionBean.exceptionMessage}</c:if> -->
+        <!-- Error Message: <c:if test="${null != exception}">${exception}</c:if> -->
         <!-- <stripes:errors></stripes:errors> -->
 
 </stripes:layout-component>

@@ -23,12 +23,12 @@
     exclude-result-prefixes="html hlight xsl java book custoptions security searchresult searchresultdoc author affil citedby actionbean"
 >
 	<xsl:variable name="LOCALHOLDINGS-CITATION"><xsl:value-of select="//LOCALHOLDINGS-CITATION"/></xsl:variable>
-
 	<xsl:include href="LocalHolding.xsl"/>
-
+	<xsl:param name="csrfSyncToken" />
         <xsl:variable name="dquote">"</xsl:variable>
         <xsl:variable name="squote">'</xsl:variable>
 
+    
 	<!-- *************************************************************** -->
 	<!-- Parse the page results                                          -->
 	<!-- *************************************************************** -->
@@ -343,21 +343,21 @@
 		<xsl:if test="not(/PAGE/LINK ='false') and not(/SECTION-DELIM/LINK ='false')">
 			<xsl:choose>
 				<xsl:when test="($SEARCH-TYPE='Expert') or ($SEARCH-TYPE='Combined') or ($SEARCH-TYPE='Easy')">
-					<xsl:variable name="href"><xsl:value-of select="$HREF-PREFIX" />/search/results/expert.url?CID=expertSearchCitationFormat&amp;searchWord1={<xsl:value-of
+					<xsl:variable name="href"><xsl:value-of select="$HREF-PREFIX" />/search/submit.url?CID=expertSearchCitationFormat&amp;csrfSyncToken=<xsl:value-of select="$csrfSyncToken"/>&amp;searchWord1={<xsl:value-of
 						select="java:encode($NAME)" />}<xsl:value-of select="java:encode(' WN ')" /><xsl:value-of
 						select="$FIELD" />&amp;database=<xsl:value-of select="$ENCODED-DATABASE" />&amp;yearselect=yearrange&amp;searchtype=<xsl:value-of
 						select="$SEARCH-TYPE" />&amp;<xsl:value-of select="$DEFAULT-LINK-SORT" /></xsl:variable>
 						<xsl:value-of select="author:setSearchlink($author,$href)"/>
 				</xsl:when>
 				<xsl:when test="($SEARCH-TYPE='TagSearch')">
-					<xsl:variable name="href"><xsl:value-of select="$HREF-PREFIX" />/search/results/quick.url?CID=quickSearchCitationFormat&amp;searchWord1={<xsl:value-of
+					<xsl:variable name="href"><xsl:value-of select="$HREF-PREFIX" />/search/submit.url?CID=quickSearchCitationFormat&amp;csrfSyncToken=<xsl:value-of select="$csrfSyncToken"/>&amp;searchWord1={<xsl:value-of
 						select="java:encode($NAME)" />}&amp;section1=<xsl:value-of
-						select="$FIELD" />&amp;database=<xsl:value-of select="$THIS-DOCUMENT-DB" />&amp;yearselect=yearrange&amp;<xsl:value-of
+						select="$FIELD" />&amp;database=<xsl:value-of select="$THIS-DOCUMENT-DB" />&amp;yearselect=yearrange&amp;searchtype=Quick&amp;<xsl:value-of
 						select="$DEFAULT-LINK-SORT" /></xsl:variable>
 						<xsl:value-of select="author:setSearchlink($author,$href)"/>
 				</xsl:when>
 				<xsl:when test="($SEARCH-TYPE='Book')">
-					<xsl:variable name="href"><xsl:value-of select="$HREF-PREFIX" />/search/results/quick.url?CID=quickSearchCitationFormat&amp;searchWord1={<xsl:value-of
+					<xsl:variable name="href"><xsl:value-of select="$HREF-PREFIX" />/search/submit.url?CID=quickSearchCitationFormat&amp;csrfSyncToken=<xsl:value-of select="$csrfSyncToken"/>&amp;searchWord1={<xsl:value-of
 						select="java:encode($NAME)" />}&amp;section1=<xsl:value-of
 						select="$FIELD" />&amp;database=131072&amp;searchtype=<xsl:value-of
 						select="$SEARCH-TYPE" />&amp;yearselect=yearrange&amp;<xsl:value-of
@@ -365,7 +365,7 @@
 						<xsl:value-of select="author:setSearchlink($author,$href)"/>
 				</xsl:when>
 				<xsl:otherwise>
-					<xsl:variable name="href"><xsl:value-of select="$HREF-PREFIX" />/search/results/quick.url?CID=quickSearchCitationFormat&amp;searchWord1={<xsl:value-of
+					<xsl:variable name="href"><xsl:value-of select="$HREF-PREFIX" />/search/submit.url?CID=quickSearchCitationFormat&amp;csrfSyncToken=<xsl:value-of select="$csrfSyncToken"/>&amp;searchtype=Quick&amp;searchWord1={<xsl:value-of
 						select="java:encode($NAME)" />}&amp;section1=<xsl:value-of
 						select="$FIELD" />&amp;database=<xsl:value-of select="$ENCODED-DATABASE" />&amp;yearselect=yearrange&amp;<xsl:value-of
 						select="$DEFAULT-LINK-SORT" /></xsl:variable>

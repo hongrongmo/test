@@ -126,12 +126,18 @@
     	padding-left:3px;
     	color:#808080;
     }
+    
+    #fnpfx{
+    	padding-left: 2px;
+    }
+    
 </style>
 </head>
 <body>
 <c:set value="${actionBean.context.userSession.user.userPrefs.dlFormat}" var="dlFormat"></c:set>
 <c:set value="${actionBean.context.userSession.user.userPrefs.dlOutput}" var="dlOutput"></c:set>
 <c:set value="${actionBean.context.userSession.user.userPrefs.dlLocation}" var="dlLocation"></c:set>
+<c:set value="${actionBean.context.userSession.user.userPrefs.dlFileNamePrefix}" var="dlFileNamePrefix"></c:set>
 
 <stripes:form name="download" id="download" method="post" action="/delivery/download/submit.url">
 	<stripes:hidden name="sessionid" id="sessionid"/>
@@ -174,7 +180,16 @@
 				<li><input type="radio" class="typeEnabled" id="rdCit" name="displayformat" value="citation"  <c:if test="${dlOutput eq 'citation'}">checked="checked"</c:if>/><label	for="rdCit" title="Download the citation section">Citation</label></li>
 				<li><input type="radio" class="typeEnabled" id="rdAbs" name="displayformat" value="abstract"  <c:if test="${dlOutput eq 'abstract'}">checked="checked"</c:if>/><label for="rdAbs" title="Download the abstract section">Abstract</label></li>
 				<li><input type="radio" class="typeEnabled" id="rdDet" name="displayformat" value="detailed"  <c:if test="${dlOutput eq 'detailed'}">checked="checked"</c:if>/><label for="rdDet" title="Download the detailed record">Detailed record</label></li>
+				<li>
+					<hr style="width:100%" />
+					<div class="grayText sectionHead" id="fnpfx">File name prefix:</div>
+					<div id="fileNamePrefixContainer" style="width:150px"><input type="text" style="width:150px" value="${dlFileNamePrefix}" name="filenameprefix" id="filenameprefix" maxlength="30" /></div>
+					<div style="text-align:right;padding-right:10px;width:150px"><span  style="font-size:10px">&nbsp;&nbsp;_Output_Format_Date/Time</span></div>
+				</li>
+				
 				</ul>
+				
+				
 			</div>
 		</div>
 		<hr style="width: 100%;"/>
@@ -206,6 +221,7 @@ $(document).ready(function() {
 		$('#oneClickContent input[value="' + dlOptions.location + '"]').prop("checked", true);
 		$('#oneClickContent input[value="'+dlOptions.displaytype+'"]').prop("checked", true);
 		$('#oneClickContent input[value="'+dlOptions.format+'"]').prop("checked", true);
+		$('#filenameprefix').val(dlOptions.filenameprefix);
 	}
 	checkForRefworks($('input[name="outputLocation"]:checked'));
 
@@ -255,21 +271,34 @@ function checkForRefworks(radio){
 				var milli = (new Date()).getTime();
 				
 				
-
+				
 				if (downloadformat == undefined || downloadformat == "") {
 					alert("You must choose a download format.");
+					event.preventDefault();
+					return (false);
+				}
+				
+				var filenameprefix = $.trim($('#filenameprefix').val());
+				if(filenameprefix.length < 3){
+					alert("File name prefix cannot be empty and should have minimum of 3 characters");
+					event.preventDefault();
+					return (false);
+				}
+				if(filenameprefix.length > 50){
+					alert("File name prefix cannot have more than 50 characters");
 					event.preventDefault();
 					return (false);
 				}
 
 				var url = "";
 				GALIBRARY.createWebEventWithLabel('Output', 'Download', downloadformat);
-				$.cookie('ev_oneclickdl', '{"location":"'+downloadLocation+'","format":"'+downloadformat+'","displaytype":"'+displaytype+'","baseaddress":"'+baseaddress+'"}',{path:'/'});
+				$.cookie('ev_oneclickdl', '{"location":"'+downloadLocation+'","format":"'+downloadformat+'","displaytype":"'+displaytype+'","baseaddress":"'+baseaddress+'","filenameprefix":"'+filenameprefix+'"}',{path:'/'});
 				dlOptions = {
 						location:downloadLocation,
 						format:downloadformat,
 						displaytype:displaytype,
-						baseaddress:baseaddress
+						baseaddress:baseaddress,
+						filenameprefix:filenameprefix
 				};
 				$("#dlprefsSaved").fadeIn("slow");
 
@@ -302,6 +331,7 @@ function checkForRefworks(radio){
 					window.open(refworksURL + "&url=" + escape(url),
 									"RefWorksMain",
 									"width=800,height=500,scrollbars=yes,menubar=yes,resizable=yes,directories=yes,location=yes,status=yes");
+
                     event.preventDefault();
                     ret = false;
 				}else if(downloadLocation == "dropbox"){

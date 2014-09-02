@@ -31,15 +31,17 @@ function submitDropboxDL(){
 	var downloadformat = $('input[name="downloadformat"]:checked').val();
 	var baseaddress = $("input[name='baseaddress']").val();
 	var displaytype = $("input[name='displayformat']:checked").val();
-	var downloadUrl = constructDbxDownlodUrl(downloadformat,displaytype);
-	var dropBoxPageUrl = 'https://'+baseaddress+'/delivery/download/dropbox.url?downloadformat='+downloadformat+'&displayformat='+displaytype+'&dropBoxDownloadUrl='+escape(downloadUrl);
+	var filenameprefix = $.trim($('#filenameprefix').val());
+	var downloadUrl = constructDbxDownlodUrl(downloadformat,displaytype,filenameprefix);
+	
+	var dropBoxPageUrl = 'https://'+baseaddress+'/delivery/download/dropbox.url?downloadformat='+downloadformat+'&filenameprefix='+filenameprefix+'&displayformat='+displaytype+'&dropBoxDownloadUrl='+escape(downloadUrl);
 	GALIBRARY.createWebEventWithLabel('Dropbox', 'Save Initiated', downloadformat);
 	var new_window1 = window.open(dropBoxPageUrl, 'DropBox', "height=350,width=820,resizable=yes,scrollbars=yes");
 	new_window1.focus();
 	return false;
 }
 
-function constructDbxDownlodUrl(downloadformat,displaytype){
+function constructDbxDownlodUrl(downloadformat,displaytype,filenameprefix){
 	var docidlist = $("#docidlist").val();
 	var handlelist = $("#handlelist").val();
 	var folderid = $("#folderid").val();
@@ -50,6 +52,7 @@ function constructDbxDownlodUrl(downloadformat,displaytype){
 		downloadUrl += "&handlelist=" + handlelist;
     if (folderid && folderid.length > 0)
     	downloadUrl += "&folderid=" + folderid;
+    downloadUrl += "&filenameprefix=" + filenameprefix;
     return downloadUrl;
 }
 

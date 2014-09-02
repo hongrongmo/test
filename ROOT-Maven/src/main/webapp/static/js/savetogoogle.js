@@ -31,6 +31,7 @@ function startLoadingDriveButton(){
 function constructDriveButton(){
 		var downloadformat = $('#downloadformat').val();
 		var displaytype = $("#displayformat").val();
+		var filenameprefix = $("#filenameprefix").val();
 		if (downloadformat == undefined || downloadformat == "" || downloadformat == "refworks") {
 			if (downloadformat == "refworks") {
 				$('#savetodrivemsg').html("Refworks not supported");
@@ -41,21 +42,21 @@ function constructDriveButton(){
 			$('#savetodrive-div').html('<a id="savetodrivebutton" onmouseover="tooltip_show();" onmouseout="tooltip_hide();" title="Save to Google Drive" href="#"><img src="/static/images/savetodriveoriginal.jpg"></a>');
 		}else{
 			$('#savetodrivemsg').html("");
-			var fileName = creatFileName(downloadformat,displaytype);
+			var fileName = creatFileName(downloadformat,displaytype,filenameprefix);
 			$('#savetodrive-div').empty();
 			gapi.savetodrive.render('savetodrive-div', {
-		            src: constructDownlodUrl(downloadformat,displaytype),
+		            src: constructDownlodUrl(downloadformat,displaytype,filenameprefix),
 		            filename: fileName,
 		            sitename: 'Engineering Village'
 		          });
 		}
 }
 
-function constructDownlodUrl(downloadformat,displaytype){
+function constructDownlodUrl(downloadformat,displaytype,filenameprefix){
 	var docidlist = $("#docidlist").val();
 	var handlelist = $("#handlelist").val();
 	var folderid = $("#folderid").val();
-	var downloadUrl = '/delivery/download/submit.url?downloadformat='+downloadformat+'&displayformat='+displaytype;
+	var downloadUrl = '/delivery/download/submit.url?downloadformat='+downloadformat+'&displayformat='+displaytype+'&filenameprefix='+filenameprefix;
 	if (docidlist && docidlist.length > 0)
 		downloadUrl += "&docidlist=" + docidlist;
 	if (handlelist && handlelist.length > 0)
@@ -67,33 +68,38 @@ function constructDownlodUrl(downloadformat,displaytype){
     return downloadUrl;
 }
 
-function creatFileName(downloadformat,displaytype){
+function creatFileName(downloadformat,displaytype,filenameprefix){
+	if(filenameprefix == null || filenameprefix.trim().length==0 || filenameprefix.trim().length<3){
+		filenameprefix = "Engineering_Village";
+	}
 	var filename = "";
-	var dt = new Date();
-	filename += dt.getDate();
-	filename += '-';
-	filename += (dt.getMonth() + 1 );
-	filename += '-';
-	filename += dt.getFullYear();
-	filename += '-';
-	filename += dt.getHours();
-	filename += '-';
-	filename += dt.getMinutes();
-	filename += '-';
-	filename += dt.getMilliseconds();
+	filename += filenameprefix;
 	filename += '_';
 	filename += displaytype;
 	filename += '_';
 	filename += downloadformat;
+	filename += '_';
+	var dt = new Date();
+	filename += (dt.getMonth() + 1 );
+	filename += '-';
+	filename += dt.getDate();
+	filename += '-';
+	filename += dt.getFullYear();
+	filename += '_';
+	filename += dt.getHours();
+	filename += dt.getMinutes();
+	filename += dt.getMilliseconds();
+	
 	if(downloadformat == 'ascii'){
-		filename += '_.txt';
+		filename += '.txt';
 	}else if(downloadformat == 'excel'){
-		filename += '_.xlsx';
+		filename += '.xlsx';
 	}else{
-		filename += '_.'+downloadformat;
+		filename += '.'+downloadformat;
 	}
 	return filename;
 }
+
 
 function tooltip_show(tooltipId,event){
     thistip = document.getElementById("savetodrivemsg");
@@ -113,8 +119,9 @@ function submitGoogleDriveDL(){
 	var handlelist = $("#handlelist").val();
 	var folderid = $("#folderid").val();
 	var baseaddress = $("input[name='baseaddress']").val();
+	var filenameprefix = $("#filenameprefix").val();
 
-	var googleDrivePageUrl = 'https://'+baseaddress+'/delivery/download/googledrive.url?downloadformat='+downloadformat+'&displayformat='+displaytype;
+	var googleDrivePageUrl = 'https://'+baseaddress+'/delivery/download/googledrive.url?downloadformat='+downloadformat+'&displayformat='+displaytype+'&filenameprefix='+filenameprefix;
 
 	if (docidlist && docidlist.length > 0)
 		googleDrivePageUrl += "&docidlist=" + docidlist;
