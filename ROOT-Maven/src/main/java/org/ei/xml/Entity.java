@@ -338,8 +338,8 @@ public class Entity {
         etable.setProperty("&#096;", "");
         etable.setProperty("&Gscr;", "G");
         etable.setProperty("&gsim;", "");
-        etable.setProperty("&gt;", "");
-        etable.setProperty("&Gt;", "");
+        etable.setProperty("&gt;", ">");
+        etable.setProperty("&Gt;", ">");
         etable.setProperty("&harr;", "");
         etable.setProperty("&hArr;", "");
         etable.setProperty("&hellip;", "");
@@ -388,8 +388,8 @@ public class Entity {
         etable.setProperty("&lsim;", "");
         etable.setProperty("&lstrok;", "l");
         etable.setProperty("&Lstrok;", "L");
-        etable.setProperty("&lt;", "");
-        etable.setProperty("&Lt;", "");
+        etable.setProperty("&lt;", "<");
+        etable.setProperty("&Lt;", "<");
         etable.setProperty("&macr;", "");
         etable.setProperty("&male;", "");
         etable.setProperty("&mdash;", "");
@@ -859,6 +859,7 @@ public class Entity {
         etable.setProperty("&#x15e;", "S");// Cryllic 'S' (see isbn: 9780444522375)
         etable.setProperty("&#x131;", "i");// i with no dot (see isbn: 9780444522375)
 
+        etable.setProperty("&#x73;", "s");// Converted 's' from SafeHtmlUtil code TMH
         /**
          * ISO Latin to ascii mappings
          **/
