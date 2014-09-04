@@ -184,7 +184,7 @@
 			<div class="settingSection">File Name Prefix</div>
 			<fieldset title="File Name Prefix Settings">
 				<div style="width:150px">
-					<div style="width:150px"><input style="width:150px"  type="text" value="${dlFileNamePrefix}" name="dlFileNamePrefix" id="dlFileNamePrefix" maxlength="30" /></div>
+					<div style="width:150px"><input style="width:150px"  type="text" value="${dlFileNamePrefix}" name="dlFileNamePrefix" id="dlFileNamePrefix" onkeypress="return handleKeyPressForFileName(event)"  maxlength="50" /></div>
 					<div style="text-align:right;width:150px"><span style="font-size:10px;">&nbsp;&nbsp;_Output_Format_Date/Time</span></div>
 				</div>
 				
@@ -214,6 +214,14 @@ function checkForRefworks(rad){
 		$(".outputRadio").prop("disabled", false);
 		$("#dlFileNamePrefix").prop("disabled", false);
 	}
+}
+
+function handleKeyPressForFileName(event){
+	if (event.keyCode == 13) {
+		submitSavePrefsForm();
+		event.preventDefault();
+		return false;
+    }
 }
 
 function handleFileNamePrefix(){

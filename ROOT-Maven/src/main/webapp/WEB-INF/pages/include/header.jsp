@@ -170,6 +170,14 @@
 
   });
 
+  	function isValidInput(fileNamePrefix) {   
+	  var re = /^\w+$/;
+	  if (!re.test(fileNamePrefix)) {
+	      return false;
+	  }
+	  return true;
+	}
+  
 	function submitSavePrefsForm(){
 		$(".saved").hide();
 		var url = "/customer/userprefs.url?save=true&";
@@ -202,6 +210,11 @@
 		}
 		if(fileNamePrefix.length > 50){
 			alert("File name prefix cannot have more than 50 characters");
+			return false;
+		}
+		
+		if(!isValidInput(fileNamePrefix)){
+			alert("File name prefix can have only letters, numbers and the underscore character");
 			return false;
 		}
 		params += "&dlFileNamePrefix=" + fileNamePrefix;
