@@ -184,7 +184,7 @@
 					<hr style="width:100%" />
 					<input type="hidden" id="dlFileNamePrefixOrg" value="${dlFileNamePrefix}"/>
 					<div class="grayText sectionHead" id="fnpfx">File name prefix:</div>
-					<div id="fileNamePrefixContainer" style="width:150px"><input type="text" style="width:150px" value="${dlFileNamePrefix}" name="filenameprefix" id="filenameprefix" maxlength="30" /></div>
+					<div id="fileNamePrefixContainer" style="width:150px"><input type="text" style="width:150px" value="${dlFileNamePrefix}" name="filenameprefix" id="filenameprefix" maxlength="50" onkeypress="return handleKeyPress(event)"   /></div>
 					<div style="text-align:right;padding-right:10px;width:150px" id="filenamesuffix"><span  style="font-size:10px">&nbsp;&nbsp;_Output_Format_Date/Time</span></div>
 				</li>
 				
@@ -276,7 +276,20 @@ function handleFnPrefix(){
 		</c:if>
 		<script language="javascript" type="text/javascript">
 			$("#savePrefsButton").click(function(event) {
-
+				saveDownloadPrefs(event);
+			});
+			
+			function handleKeyPress(event){
+				if (event.keyCode == 13) {
+					saveDownloadPrefs(event);
+					event.preventDefault();
+					return false;
+		        }
+			}
+			
+			function saveDownloadPrefs(event){
+				
+				
 				var baseaddress = $("input[name='baseaddress']").val();
 				var displaytype = $('input[name="displayformat"]:checked').val();
 				var actionDisplayType = '${actionBean.displayformat}';
@@ -306,6 +319,11 @@ function handleFnPrefix(){
 					event.preventDefault();
 					return (false);
 				}
+				
+				if(!isValidInput(filenameprefix)){
+					alert("File name prefix can have only letters, numbers and the underscore character");
+					return false;
+				}
 
 				var url = "";
 				GALIBRARY.createWebEventWithLabel('Output', 'Download', downloadformat);
@@ -334,7 +352,7 @@ function handleFnPrefix(){
 				var ret = true;
 				changeOneClick(downloadLocation);
 				if (downloadLocation == "refworks") {
-					var refworksURL = "https://refworks.scholarsportal.info/express/ExpressImport.asp?vendor=Engineering%20Village%202&filter=Desktop%20Biblio.%20Mgt.%20Software";
+					var refworksURL = "http://www.refworks.com/express/ExpressImport.asp?vendor=Engineering%20Village%202&filter=Desktop%20Biblio.%20Mgt.%20Software";
 					url = "http://" + baseaddress
 							+ "/delivery/download/refworks.url?downloadformat="
 							+ downloadformat + "&timestamp=" + milli
@@ -365,9 +383,7 @@ function handleFnPrefix(){
 				$('#downloadlink').attr("title", "Click to change one click download preferences.");
 				$('#downloadlink').tooltipster('hide');
 				return ret;
-
-			});
-
+			}
 
 			</script>
 </html>
