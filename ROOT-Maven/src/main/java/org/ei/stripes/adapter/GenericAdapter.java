@@ -47,19 +47,6 @@ public class GenericAdapter extends BizXmlAdapter {
         // and show output from transform
         // Also set stylesheet caching to OFF
         OutputStream transformout = new NullOutputStream();
-        if (log4j.isDebugEnabled() || log4j.isInfoEnabled()) {
-            log4j.info("Transforming in debug/info");
-            Scanner scanner = new Scanner(instream, "UTF-8");
-            String modelxml = scanner.useDelimiter("\\A").next();
-            scanner.close();
-            // log4j.info("modelxml : "+modelxml);
-            try {
-                instream = new ByteArrayInputStream(modelxml.getBytes("UTF-8"));
-            } catch (UnsupportedEncodingException e) {
-                throw new InfrastructureException(SystemErrorCodes.SEARCH_QUERY_EXECUTION_FAILED, "Unable to decode string in UTF-8");
-            }
-            broker.setCache(false);
-        }
 
         try {
             transformer = broker.getTransformer(stylesheet);
@@ -70,7 +57,7 @@ public class GenericAdapter extends BizXmlAdapter {
         }
         transformer.setParameter("actionbean", actionbean);
         try {
-            transformer.transform(new StreamSource(instream), new StreamResult(transformout));
+            transformer.transform(new StreamSource(sanitizeInputStream(instream)), new StreamResult(transformout));
         } catch (TransformerException e) {
             try { instream.close(); } catch (IOException e1) {}
             try { transformout.close(); } catch (IOException e1) {}
