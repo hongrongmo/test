@@ -125,6 +125,8 @@
 <c:choose>
 	<c:when test="${actionBean.context.userSession.user.individuallyAuthenticated}">
 	<div id="dlprefsSaved" style="display:none;text-align:left;"><img src="/static/images/ev_checkmark.png" style="padding-right:5px;width:20px;"/>Your download settings for this session have been saved. To keep these settings, change your preference in Settings.</div>
+	<div id="dlprefsandsettingsSaved" style="display:none;text-align:left;"><img src="/static/images/ev_checkmark.png" style="padding-right:5px;width:20px;"/>Your download settings for this session have been saved, also the changes are saved into your preferences.</div>
+	<div id="dlprefsandsettingsnotSaved" style="display:none;text-align:left;"><img src="/static/images/No_results_found.png" style="padding-right:5px;width:20px;"/>Your download settings for this session have not been saved. Please refresh the page and try again.</div>
 	</c:when>
 	<c:otherwise>
 	<div id="dlprefsSaved" style="display:none;text-align:left;"><img src="/static/images/ev_checkmark.png" style="padding-right:5px;width:20px;"/>Your download settings for this session have been saved. To keep these settings, login or register and save your preferences in Settings.</div>
@@ -137,6 +139,7 @@
   <script>
   var savedDLPrefs;
   <c:if test="${actionBean.context.userSession.user.individuallyAuthenticated}">
+  	$.cookie('ev_oneclickdl',null,{path:'/'});
   	savedDLPrefs = {
   			location:'${actionBean.context.userSession.user.userPrefs.dlLocation}',
   			format:'${actionBean.context.userSession.user.userPrefs.dlFormat}',
@@ -145,6 +148,17 @@
   			baseaddress:'${actionBean.baseaddress}'
   	};
   </c:if>
+  <c:if test="${actionBean.context.userSession.user.individuallyAuthenticated eq 'false'}">
+   	$.cookie('ev_dldpref',null,{path:'/'});
+   	savedDLPrefs = {
+			location:'${actionBean.context.userSession.user.userPrefs.dlLocation}',
+			format:'${actionBean.context.userSession.user.userPrefs.dlFormat}',
+			displaytype:'${actionBean.context.userSession.user.userPrefs.dlOutput}',
+			filenameprefix:'${actionBean.context.userSession.user.userPrefs.dlFileNamePrefix}',
+			baseaddress:'${actionBean.baseaddress}'
+	};
+ </c:if>
+ 
   $(function() {
 	  if($("#settingMenu").length > 0){
 		$("#settingMenu").menu({position:{my:'right+25 top+20'}, icons: { submenu: "ui-icon-triangle-1-s" }});
@@ -258,8 +272,8 @@
 					$("#ckbackhighlight").prop("checked",back_highlight);
 				}
 			}
-			if(!$.cookie("ev_oneclickdl") && $('#downloadlink').length > 0){
-				//if the user hasn't made changes to his session we need to update the current oneclick dl link
+			
+			if($('#downloadlink').length > 0){
 				changeOneClick($("input[name='dlLocation']:checked").val());
 				dlOptions = {
 						location:$("input[name='dlLocation']:checked").val(),
@@ -268,13 +282,14 @@
 						filenameprefix:fileNamePrefix,
 						baseaddress:dlOptions.baseaddress
 				};
+				$.cookie('ev_dldpref', '{"location":"'+dlOptions.location+'","format":"'+dlOptions.format+'","displaytype":"'+dlOptions.displaytype+'","baseaddress":"'+dlOptions.baseaddress+'","filenameprefix":"'+dlOptions.filenameprefix+'"}',{path:'/'});
 			}
 
-			$("#prefsNotSaved").hide();
+			$("#prefsNotSaved,#dlprefsSaved,#dlprefsandsettingsSaved,#dlprefsandsettingsnotSaved").hide();
 			$("#prefsSaved").fadeIn("slow");
 		}).error(function(data){
 			TINY.box.hide();
-			$("#prefsSaved").hide();
+			$("#prefsSaved,#dlprefsSaved,#dlprefsandsettingsSaved,#dlprefsandsettingsnotSaved").hide();
 			$("#prefsNotSaved").fadeIn("slow");
 		});
 
