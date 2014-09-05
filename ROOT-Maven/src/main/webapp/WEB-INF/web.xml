@@ -183,10 +183,14 @@
 		<servlet-name>ImageServlet</servlet-name>
 		<url-pattern>*.gif</url-pattern>
 	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>ImageServlet</servlet-name>
-		<url-pattern>*.jpg</url-pattern>
-	</servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ImageServlet</servlet-name>
+        <url-pattern>*.jpg</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ImageServlet</servlet-name>
+        <url-pattern>*.ico</url-pattern>
+    </servlet-mapping>
 
 	<!-- JAWR Servlets -->
 
