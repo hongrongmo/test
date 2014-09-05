@@ -43,6 +43,7 @@ import org.ei.thesaurus.ThesaurusRecordID;
 import org.ei.thesaurus.ThesaurusSearchControl;
 import org.ei.thesaurus.ThesaurusSearchResult;
 import org.ei.thesaurus.ThesaurusStep;
+import org.ei.xml.Entity;
 import org.xml.sax.SAXException;
 
 @UrlBinding("/search/thes/{$event}.url")
@@ -86,7 +87,7 @@ public class ThesaurusAjaxAction extends EVActionBean {
 
 	/**
 	 * Retrieve database by name
-	 * 
+	 *
 	 * @param dbName
 	 * @return
 	 */
@@ -107,7 +108,7 @@ public class ThesaurusAjaxAction extends EVActionBean {
 
 	/**
 	 * Retrieve the ThesaurusPath object from session
-	 * 
+	 *
 	 * @return
 	 */
 	private ThesaurusPath getPathFromSession() {
@@ -118,10 +119,10 @@ public class ThesaurusAjaxAction extends EVActionBean {
 		}
 		return path;
 	}
-	
+
 	/**
 	 * Thesaurus search results display (AJAX)
-	 * 
+	 *
 	 * @return Resolution
 	 * @throws ServletException
 	 * @throws HistoryException
@@ -131,13 +132,13 @@ public class ThesaurusAjaxAction extends EVActionBean {
 	@HandlesEvent("fullrec")
 	@DontValidate
 	public Resolution thesFullRec() throws Exception {
-		
-		
+
+
 		HttpServletRequest request = context.getRequest();
 		if(isCSRFPrevRequired(request.getParameter("csrfSyncToken"))){
 			return csrfFailedResponseResolution();
 		}
-		
+
 		if (GenericValidator.isBlankOrNull(term)) {
 			throw new InvalidArgumentException("'term' must be present in request!");
 		}
@@ -170,7 +171,7 @@ public class ThesaurusAjaxAction extends EVActionBean {
 		steps = thespath.getSteps();
 
 		// Change quoted and wildcard term searches
-		term = term.trim().replaceAll("^[\"\']", "").replaceAll("[\"\']$", "").replaceAll("\\*$", "");
+		term = Entity.prepareString(term.trim().replaceAll("^[\"\']", "").replaceAll("[\"\']$", "").replaceAll("\\*$", ""));
 
 		//
 		// Build the results from exact term search
@@ -211,10 +212,10 @@ public class ThesaurusAjaxAction extends EVActionBean {
 	/**
 	 * Thesaurus term search display (AJAX). NOTE that this does NOT catch
 	 * exceptions. See the EVExceptionHandler class for exception handling
-	 * 
+	 *
 	 * @return Resolution
 	 * @throws InfrastructureException
-	 * @throws SessionException 
+	 * @throws SessionException
 	 * @throws SAXException
 	 * @throws IOException
 	 * @throws ThesaurusException
@@ -227,12 +228,12 @@ public class ThesaurusAjaxAction extends EVActionBean {
 	@HandlesEvent("termsearch")
 	@DontValidate
 	public Resolution thesTermSearch() throws InfrastructureException, SessionException {
-		
+
 		HttpServletRequest request = context.getRequest();
 		if(isCSRFPrevRequired(request.getParameter("csrfSyncToken"))){
 			return csrfFailedResponseResolution();
 		}
-		
+
 		if (GenericValidator.isBlankOrNull(term)) {
 			throw new InfrastructureException(SystemErrorCodes.INVALID_ARGUMENT_SET_ERROR, "'term' must be present in request!");
 		}
@@ -268,7 +269,7 @@ public class ThesaurusAjaxAction extends EVActionBean {
 			//
 			// Build and run thesaurus search
 			//
-			term = term.trim().replaceAll("^[\"\']", "").replaceAll("[\"\']$", "");
+			term = Entity.prepareString(term.trim().replaceAll("^[\"\']", "").replaceAll("[\"\']$", ""));
 			DatabaseConfig dConfig = DatabaseConfig.getInstance();
 			Database database = dConfig.getDatabase(getDbName(this.database));
 			ThesaurusQuery query = new ThesaurusQuery(database, term);
@@ -317,10 +318,10 @@ public class ThesaurusAjaxAction extends EVActionBean {
 
 	/**
 	 * Thesaurus browse display (AJAX)
-	 * 
+	 *
 	 * @return Resolution
 	 * @throws InfrastructureException
-	 * @throws SessionException 
+	 * @throws SessionException
 	 * @throws ThesaurusException
 	 * @throws InvalidArgumentException
 	 * @throws SAXException
@@ -332,12 +333,12 @@ public class ThesaurusAjaxAction extends EVActionBean {
 	@HandlesEvent("browse")
 	@DontValidate
 	public Resolution thesBrowse() throws InfrastructureException, SessionException {
-		
+
 		HttpServletRequest request = context.getRequest();
 		if(isCSRFPrevRequired(request.getParameter("csrfSyncToken"))){
 			return csrfFailedResponseResolution();
 		}
-		
+
 		if (GenericValidator.isBlankOrNull(term)) {
 			throw new InfrastructureException(SystemErrorCodes.INVALID_ARGUMENT_SET_ERROR, "'term' must be present in request!");
 		}
@@ -364,7 +365,7 @@ public class ThesaurusAjaxAction extends EVActionBean {
 			//
 			// Build the results
 			//
-			term = term.trim().replaceAll("^[\"\']", "").replaceAll("[\"\']$", "");
+			term = Entity.prepareString(term.trim().replaceAll("^[\"\']", "").replaceAll("[\"\']$", ""));
 			DatabaseConfig dConfig = DatabaseConfig.getInstance();
 			Database database = dConfig.getDatabase(getDbName(this.database));
 			ThesaurusRecordBroker broker = new ThesaurusRecordBroker(database);
@@ -433,7 +434,7 @@ public class ThesaurusAjaxAction extends EVActionBean {
 
 		return new ForwardResolution("/WEB-INF/pages/customer/search/ajax/thesBrowse.jsp");
 	}
-	
+
 	private Resolution csrfFailedResponseResolution(){
 		String result = String.valueOf("<div style=\"display:none;\"><div id=\"validationnotpassed\">true</div></div>");
         return new StreamingResolution("text/html", result);

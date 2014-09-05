@@ -14,8 +14,8 @@
     <meta name="robots" content="index,nofollow" />
     <stripes:layout-component name="metahead"/>
     <title>${pageTitle}</title>
-    <link type="image/x-icon" href="/static/images/engineering_village_favicon.gif" rel="SHORTCUT ICON"></link>
-
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+	<link rel="icon" href="/favicon.ico" type="image/x-icon"/>
 
 <stripes:layout-component name="cssheadstandard">
 <jwr:style src="/bundles/standard.css"></jwr:style>
