@@ -59,6 +59,7 @@ import org.ei.download.util.SaveToGoogleUsage;
 import org.ei.exception.InfrastructureException;
 import org.ei.session.UserSession;
 import org.ei.stripes.action.SystemMessage;
+import org.ei.stripes.adapter.BizXmlAdapter;
 import org.ei.stripes.util.HttpRequestUtil;
 
 import com.icl.saxon.TransformerFactoryImpl;
@@ -315,7 +316,7 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
             	TransformerFactory tFactory = new TransformerFactoryImpl();
             	Transformer transformer = tFactory.newTransformer(new StreamSource(fopStyleSheet));
             	Result res = new SAXResult(fop.getDefaultHandler());
-            	transformer.transform(new StreamSource(new StringReader(xmlWriter.toString())), res);
+            	transformer.transform(new StreamSource(new StringReader(xmlWriter.toString().replaceAll(BizXmlAdapter.xml10_illegal_xml_pattern, ""))), res);
 
             	byteArrayInputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
             	return new StreamingResolution("application/pdf", byteArrayInputStream).setFilename(tmpfileName.toString());
@@ -331,7 +332,7 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
             	TransformerFactory tFactory = new TransformerFactoryImpl();
             	Transformer transformer = tFactory.newTransformer(new StreamSource(fopStyleSheet));
             	Result res = new SAXResult(fop.getDefaultHandler());
-            	transformer.transform(new StreamSource(new StringReader(xmlWriter.toString())), res);
+            	transformer.transform(new StreamSource(new StringReader(xmlWriter.toString().replaceAll(BizXmlAdapter.xml10_illegal_xml_pattern, ""))), res);
 
             	byteArrayInputStream = new ByteArrayInputStream(byteArrayOutputStream.toByteArray());
             	return new StreamingResolution("application/rtf", byteArrayInputStream).setFilename(tmpfileName.toString());
@@ -360,7 +361,7 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
             TransformerFactory tFactory = new TransformerFactoryImpl();
             Templates templates = tFactory.newTemplates(new StreamSource(stylesheet));
             Transformer transformer = templates.newTransformer();
-            transformer.transform(new StreamSource(new StringReader(xmlWriter.toString())), new StreamResult(tmpWriter));
+            transformer.transform(new StreamSource(new StringReader(xmlWriter.toString().replaceAll(BizXmlAdapter.xml10_illegal_xml_pattern, ""))), new StreamResult(tmpWriter));
 
             tmpWriter.close();
 
