@@ -45,8 +45,7 @@
 	 	</script>
 	 		<style>
 	 		span.hit{
-					font-size:120%;
-					font-style:italic;
+					font-size:100%;
 					font-weight:bold;
 					color:${actionBean.context.userSession.user.userPrefs.highlight};
 
@@ -54,7 +53,7 @@
 
 				span.bghit, span.bghit {
 					font-weight: bold;
-					font-size:120%;
+					font-size:100%;
 					color:black;
 					background-color: #FFFFAA;
 				}
