@@ -182,9 +182,11 @@
 				<li><input type="radio" class="typeEnabled" id="rdDet" name="displayformat" value="detailed"  <c:if test="${dlOutput eq 'detailed'}">checked="checked"</c:if>/><label for="rdDet" title="Download the detailed record">Detailed record</label></li>
 				<li>
 					<hr style="width:100%" />
+					<input type="hidden" id="dlFileNamePrefixOrg" value="${dlFileNamePrefix}"/>
+					<input type="hidden" id="authStatus" value="${actionBean.context.userSession.user.individuallyAuthenticated}"/>
 					<div class="grayText sectionHead" id="fnpfx">File name prefix:</div>
-					<div id="fileNamePrefixContainer" style="width:150px"><input type="text" style="width:150px" value="${dlFileNamePrefix}" name="filenameprefix" id="filenameprefix" maxlength="30" /></div>
-					<div style="text-align:right;padding-right:10px;width:150px"><span  style="font-size:10px">&nbsp;&nbsp;_Output_Format_Date/Time</span></div>
+					<div id="fileNamePrefixContainer" style="width:150px"><input type="text" style="width:150px" value="${dlFileNamePrefix}" name="filenameprefix" id="filenameprefix" maxlength="50" onkeypress="return handleKeyPress(event)"   /></div>
+					<div style="text-align:right;padding-right:10px;width:150px" id="filenamesuffix"><span  style="font-size:10px">&nbsp;&nbsp;_Output_Format_Date/Time</span></div>
 				</li>
 				
 				</ul>
@@ -201,6 +203,21 @@
 					<input type="button" value="Save" name="Save" id="savePrefsButton" />
 					<a href="#" style="padding-right:7px;" onclick="$('#downloadlink').tooltipster('destroy');">Cancel</a>
 				</div>
+				<c:choose>
+				    <c:when test="${actionBean.context.userSession.user.individuallyAuthenticated}">
+				       <div style="float:right;width:160px;">
+						<div style="display: inline-block;vertical-align:top"><input type="checkbox" id="updateUserSettings" checked value="true"/></div>
+						<div style="display: inline-block;width:130px" ><label for="updateUserSettings" title="To save this as your preferred settings">Would you like to save this as your preferred settings?</label></div>
+					</div>
+				    </c:when>
+				    <c:otherwise>
+				        <div class="grayText" style="float:right;width:160px;">
+						<div style="display: inline-block;vertical-align:top"><input type="checkbox"  disabled id="updateUserSettings" /></div>
+						<div style="display: inline-block;width:130px" ><label for="updateUserSettings" title="To save this as your preferred settings">Login or Register to save these preferred settings</label></div>
+					</div>
+				    </c:otherwise>
+				</c:choose>
+				
 			</div>
 	</div>
 </stripes:form>
@@ -209,20 +226,34 @@
 <script>
 
 $(document).ready(function() {
-
+	<c:if test="${actionBean.context.userSession.user.individuallyAuthenticated eq 'false'}">
+		$('#updateUserSettings').prop("checked", false);
+		//read the cookie
+		if($.cookie("ev_oneclickdl") && $.cookie("ev_oneclickdl") != 'null'){
+			var dlOptions = JSON.parse($.cookie("ev_oneclickdl"));
+			$('#oneClickContent input[value="' + dlOptions.location + '"]').prop("checked", true);
+			$('#oneClickContent input[value="'+dlOptions.displaytype+'"]').prop("checked", true);
+			$('#oneClickContent input[value="'+dlOptions.format+'"]').prop("checked", true);
+			$('#filenameprefix').val(dlOptions.filenameprefix);
+		}
+	</c:if>
+	<c:if test="${actionBean.context.userSession.user.individuallyAuthenticated eq 'true'}">
+		$('#updateUserSettings').prop("checked", true);
+		//read the cookie
+		if($.cookie("ev_dldpref") && $.cookie("ev_dldpref") != 'null'){	
+			var dlOptions = JSON.parse($.cookie("ev_dldpref"));
+			$('#oneClickContent input[value="' + dlOptions.location + '"]').prop("checked", true);
+			$('#oneClickContent input[value="'+dlOptions.displaytype+'"]').prop("checked", true);
+			$('#oneClickContent input[value="'+dlOptions.format+'"]').prop("checked", true);
+			$('#filenameprefix').val(dlOptions.filenameprefix);
+		}
+	</c:if>
 	$(".outputLocation").click(function (){
 		checkForRefworks(this);
 
 	});
 
-	//read the cookie
-	if($.cookie("ev_oneclickdl")){
-		var dlOptions = JSON.parse($.cookie("ev_oneclickdl"));
-		$('#oneClickContent input[value="' + dlOptions.location + '"]').prop("checked", true);
-		$('#oneClickContent input[value="'+dlOptions.displaytype+'"]').prop("checked", true);
-		$('#oneClickContent input[value="'+dlOptions.format+'"]').prop("checked", true);
-		$('#filenameprefix').val(dlOptions.filenameprefix);
-	}
+	
 	checkForRefworks($('input[name="outputLocation"]:checked'));
 
 });
@@ -243,12 +274,28 @@ function checkForRefworks(radio){
 		$(".typeEnabled").parent().find("label").addClass("grayText");
 		$("#savePrefsButton").show();
         $("#dropBoxLinkSpan").hide();
+        handleFnPrefix();
+        $("#filenameprefix").prop("disabled", true);
+        $("#filenamesuffix").addClass("grayText");
 	}else{
 		$(".typeEnabled").prop("disabled",false);
 		$(".typeEnabled").parent().find("label").removeClass("grayText");
 		$("#savePrefsButton").show();
         $("#dropBoxLinkSpan").hide();
+        $("#filenameprefix").prop("disabled", false);
+        $("#filenamesuffix").removeClass("grayText");
+    }
+}
+function handleFnPrefix(){
+	var fileNamePrefix = $.trim($('#filenameprefix').val());
+	if(fileNamePrefix == null || fileNamePrefix.length > 50 || fileNamePrefix.length < 3){
+		if(dlOptions == undefined || dlOptions.filenameprefix == null || dlOptions.filenameprefix == undefined || dlOptions.filenameprefix ==''){
+			$('#filenameprefix').val($('#dlFileNamePrefixOrg').val());
+		}else{
+			$('#filenameprefix').val(dlOptions.filenameprefix);
+		}
 	}
+	
 }
 </script>
 		<c:if test="${actionBean.saveToGoogleEnabled}">
@@ -259,17 +306,23 @@ function checkForRefworks(radio){
 		</c:if>
 		<script language="javascript" type="text/javascript">
 			$("#savePrefsButton").click(function(event) {
-
+				saveDownloadPrefs(event);
+			});
+			
+			function handleKeyPress(event){
+				if (event.keyCode == 13) {
+					saveDownloadPrefs(event);
+					event.preventDefault();
+					return false;
+		        }
+			}
+			
+			function saveDownloadPrefs(event){
+				
 				var baseaddress = $("input[name='baseaddress']").val();
 				var displaytype = $('input[name="displayformat"]:checked').val();
-				var actionDisplayType = '${actionBean.displayformat}';
 				var downloadformat = $('input[name="downloadformat"]:checked').val();
 				var downloadLocation = $('input[name="outputLocation"]:checked').val();
-				var docidlist = $("#docidlist").val();
-				var handlelist = $("#handlelist").val();
-				var folderid = $("#folderid").val();
-				var milli = (new Date()).getTime();
-				
 				
 				
 				if (downloadformat == undefined || downloadformat == "") {
@@ -289,10 +342,70 @@ function checkForRefworks(radio){
 					event.preventDefault();
 					return (false);
 				}
+				
+				if(!isValidInput(filenameprefix)){
+					alert("File name prefix can have only letters, numbers and the underscore character");
+					return false;
+				}
 
-				var url = "";
+				
 				GALIBRARY.createWebEventWithLabel('Output', 'Download', downloadformat);
-				$.cookie('ev_oneclickdl', '{"location":"'+downloadLocation+'","format":"'+downloadformat+'","displaytype":"'+displaytype+'","baseaddress":"'+baseaddress+'","filenameprefix":"'+filenameprefix+'"}',{path:'/'});
+				var authStatus = $.trim($('#authStatus').val());
+				if( typeof authStatus != 'undefined' &&  authStatus === 'true'){
+					
+					var saveDldUrl = "/customer/userprefs.url?savedlprefs=true";
+					saveDldUrl += "&dlLocation="+downloadLocation;
+					saveDldUrl += "&dlFormat="+downloadformat;
+					saveDldUrl += "&dlOutput="+displaytype;
+					saveDldUrl += "&dlFileNamePrefix="+filenameprefix;
+					
+					var isPrefUpdateChosen = $('#updateUserSettings:checked').val();
+					
+					if(isPrefUpdateChosen === "true"){
+						$.ajax({
+							url:saveDldUrl
+						}).success(function(data){
+							proceedWithDownload(downloadLocation,downloadformat,displaytype,baseaddress,filenameprefix,true,isPrefUpdateChosen);
+						}).error(function(data){
+							$("#dlprefsSaved,#dlprefsandsettingsSaved,#prefsSaved,#prefsNotSaved").hide();
+							$("#dlprefsandsettingsnotSaved").fadeIn("slow");
+							$('#downloadlink').attr("title", "Click to change one click download preferences.");
+							$('#downloadlink').tooltipster('hide');
+						});
+						
+					}else{
+						proceedWithDownload(downloadLocation,downloadformat,displaytype,baseaddress,filenameprefix,true,isPrefUpdateChosen);
+					}
+				}else{
+					proceedWithDownload(downloadLocation,downloadformat,displaytype,baseaddress,filenameprefix,false,null);
+				}
+				event.preventDefault();
+				return false;
+			}
+			
+			function proceedWithDownload(downloadLocation,downloadformat,displaytype,baseaddress,filenameprefix,isLoggedInUser,isPrefUpdateChosen){
+				var milli = (new Date()).getTime();
+				var docidlist = $("#docidlist").val();
+				var handlelist = $("#handlelist").val();
+				var folderid = $("#folderid").val();
+				var actionDisplayType = '${actionBean.displayformat}';
+				
+				if(isLoggedInUser){
+					$.cookie('ev_dldpref', '{"location":"'+downloadLocation+'","format":"'+downloadformat+'","displaytype":"'+displaytype+'","baseaddress":"'+baseaddress+'","filenameprefix":"'+filenameprefix+'"}',{path:'/'});
+					if(isPrefUpdateChosen === 'true'){
+						$("#dlprefsandsettingsSaved").fadeIn("slow");
+						$("#dlprefsandsettingsnotSaved,#prefsSaved,#dlprefsSaved,#prefsNotSaved").hide();
+						
+					}else{
+						$("#dlprefsSaved").fadeIn("slow");	
+						$("#dlprefsandsettingsnotSaved,#prefsSaved,#dlprefsandsettingsSaved,#prefsNotSaved").hide();
+					}
+				}else{
+					$.cookie('ev_oneclickdl', '{"location":"'+downloadLocation+'","format":"'+downloadformat+'","displaytype":"'+displaytype+'","baseaddress":"'+baseaddress+'","filenameprefix":"'+filenameprefix+'"}',{path:'/'});
+					$("#dlprefsSaved").fadeIn("slow");
+					$("#prefsSaved,#prefsNotSaved").hide();
+				}
+				
 				dlOptions = {
 						location:downloadLocation,
 						format:downloadformat,
@@ -300,8 +413,7 @@ function checkForRefworks(radio){
 						baseaddress:baseaddress,
 						filenameprefix:filenameprefix
 				};
-				$("#dlprefsSaved").fadeIn("slow");
-
+				
 				if(displaytype == 'default'){
 					//need to figure out what page they are on to get this right.
 					if(typeof($("input[name='selectoption']:checked").val()) != "undefined" && downloadLocation != "refworks"){
@@ -313,9 +425,9 @@ function checkForRefworks(radio){
 					displaytype = actionDisplayType;
 					$('#oneClickContent input[value="' + actionDisplayType + '"]').prop("checked", true);
 				}
-				// Refworks?
-				var ret = true;
+				
 				changeOneClick(downloadLocation);
+				var url = "";
 				if (downloadLocation == "refworks") {
 					var refworksURL = "http://www.refworks.com/express/ExpressImport.asp?vendor=Engineering%20Village%202&filter=Desktop%20Biblio.%20Mgt.%20Software";
 					url = "http://" + baseaddress
@@ -332,25 +444,18 @@ function checkForRefworks(radio){
 									"RefWorksMain",
 									"width=800,height=500,scrollbars=yes,menubar=yes,resizable=yes,directories=yes,location=yes,status=yes");
 
-                    event.preventDefault();
-                    ret = false;
-				}else if(downloadLocation == "dropbox"){
+               }else if(downloadLocation == "dropbox"){
 					submitDropboxDL();
-					ret = false;
 				}else if(downloadLocation == "googledrive"){
 					submitGoogleDriveDL();
-					ret = false;
 				}else{
 					$("#download").submit();
-					ret = false;
 				}
-
+				
 				$('#downloadlink').attr("title", "Click to change one click download preferences.");
 				$('#downloadlink').tooltipster('hide');
-				return ret;
-
-			});
-
+				
+			}
 
 			</script>
 </html>

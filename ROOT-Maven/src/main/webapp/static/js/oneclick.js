@@ -29,8 +29,13 @@ $(document).ready(function(){
 });
 function checkForOneClick(){
 
-	if($.cookie("ev_oneclickdl")){
-		dlOptions = JSON.parse($.cookie("ev_oneclickdl"));
+	var authStatus = $.trim($('#authStatus').val());
+	var cookiename = "ev_oneclickdl";
+	if( typeof authStatus != 'undefined' &&  authStatus === 'true'){
+		cookiename= "ev_dldpref";
+	}
+	if($.cookie(cookiename) && $.cookie(cookiename) != 'null'){
+		dlOptions = JSON.parse($.cookie(cookiename));
 		changeOneClick(dlOptions.location);
 	}else if(typeof(savedDLPrefs) != 'undefined'){
 		dlOptions = savedDLPrefs;
