@@ -439,6 +439,9 @@
 
 </SCRIPT>
 	</stripes:layout-component>
-
+<stripes:layout-component name="survey">
+	<c:set var="surveyLocation" value="record" scope="request"/>
+	<%@ include file="/WEB-INF/pages/include/survey.jsp" %>
+</stripes:layout-component>
 
 </stripes:layout-render>

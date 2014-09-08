@@ -15,6 +15,7 @@
     <stripes:layout-component name="metahead"/>
     <title>${pageTitle}</title>
     <link type="image/x-icon" href="/static/images/engineering_village_favicon.gif" rel="SHORTCUT ICON"></link>
+    <link type="image/x-icon" href="/static/images/engineering_village_favicon.gif" rel="SHORTCUT ICON"></link>
 
 
 <stripes:layout-component name="cssheadstandard">
@@ -38,18 +39,11 @@ var highlightV1 = false;
 </c:if>
 <stripes:layout-component name="csshead"/>
 
-<style>
-#ev_survey {
-    position: fixed;
-    right: 20px;
-    top: 20px;
-    display:none;
-}
-</style>
+
 
 </head>
 <body>
-<div id="ev_survey"></div>
+
 <stripes:layout-component name="ssourls">
 <c:if test="${actionBean.context.userSession.user.SSOURLInvoked}">
 <c:forEach var="urls" items="${actionBean.context.userSession.user.ssoURLs}">
@@ -116,7 +110,7 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
 			<script>
 				if((!$.cookie("ev_mm_dontshow") || release != $.cookie("ev_mm_dontshow")) && (!$.cookie("ev_mm_shown") || release != $.cookie("ev_mm_shown"))){
 
-					GALIBRARY.createWebEventWithLabel(['_trackEvent', 'Dialog Open', 'What\'s New', 'Auto Show']);
+					GALIBRARY.createWebEventWithLabel('_trackEvent', 'Dialog Open', 'What\'s New', 'Auto Show');
 					TINY.box.show({html:document.getElementById("modalmsg"),clickmaskclose:false,width:900,height:500,close:true,opacity:20,topsplit:3,closejs:function(){closeX();}});
 					//tell GA that we showed it
 
@@ -135,7 +129,7 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
 				<script>
 				if((!$.cookie("ev_rm_dontshow") || release != $.cookie("ev_rm_dontshow")) && (!$.cookie("ev_rm_shown") || release != $.cookie("ev_rm_shown"))){
 
-					GALIBRARY.createWebEventWithLabel(['_trackEvent', 'Dialog Open', 'Referex', 'Auto Show']);
+					GALIBRARY.createWebEventWithLabel('_trackEvent', 'Dialog Open', 'Referex', 'Auto Show');
 					TINY.box.show({html:document.getElementById("modalrmmsg"),clickmaskclose:false,width:600,height:250,close:true,opacity:20,topsplit:3,closejs:function(){closeRMX();}});
 					//tell GA that we showed it
 
@@ -143,6 +137,8 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
 				</script>
 			</div>
 	</c:if>
+</stripes:layout-component>
+<stripes:layout-component name="survey">
 </stripes:layout-component>
 <stripes:layout-component name="carsoverride">
 <jwr:style src="/bundles/carsoverride.css"></jwr:style>

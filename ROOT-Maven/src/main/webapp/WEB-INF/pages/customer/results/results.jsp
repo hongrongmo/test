@@ -227,5 +227,8 @@
 </c:forEach>
 	</stripes:layout-component>
 
-
+<stripes:layout-component name="survey">
+	<c:set var="surveyLocation" value="results" scope="request"/>
+	<%@ include file="/WEB-INF/pages/include/survey.jsp" %>
+</stripes:layout-component>
 </stripes:layout-render>

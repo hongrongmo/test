@@ -145,7 +145,7 @@
   			baseaddress:'${actionBean.baseaddress}'
   	};
   </c:if>
-  $(function() {
+  $(document).ready(function() {
 	  if($("#settingMenu").length > 0){
 		$("#settingMenu").menu({position:{my:'right+25 top+20'}, icons: { submenu: "ui-icon-triangle-1-s" }});
 		$("#settingDropDown").show();
@@ -193,8 +193,8 @@
 			params += "&highlight=" + escape(hlight);
 			params += "&highlightBackground=" + back_highlight;
 		}
-		
-		
+
+
 		var fileNamePrefix = $.trim($('#dlFileNamePrefix').val());
 		if(fileNamePrefix.length < 3){
 			alert("File name prefix cannot be empty and should have minimum of 3 characters");
@@ -205,7 +205,7 @@
 			return false;
 		}
 		params += "&dlFileNamePrefix=" + fileNamePrefix;
-		
+
 
 		url += params;
 		GALIBRARY.createWebEventWithLabel('Preferences', 'Preferences Saved', params);
