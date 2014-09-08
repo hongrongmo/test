@@ -44,6 +44,7 @@ import org.ei.domain.XMLMultiWrapper;
 import org.ei.domain.XMLWrapper;
 import org.ei.domain.Year;
 import org.ei.util.StringUtil;
+import org.ei.data.bd.loadtime.BdParser;
 
 /**
  * This class is the implementation of DocumentBuilder Basically this class is responsible for building a List of EIDocs from a List of DocIds.The input is list
@@ -51,7 +52,7 @@ import org.ei.util.StringUtil;
  *
  */
 public class NTISDocBuilder implements DocumentBuilder {
-    public static String NTIS_TEXT_COPYRIGHT = "Compiled and Distributed by the NTIS, U.S. Department of Commerce.  It contains copyrighted material.  All rights reserved. 2014";
+    public static String NTIS_TEXT_COPYRIGHT = "Compiled and Distributed by the NTIS, U.S. Department of Commerce.  It contains copyrighted material.  All rights reserved. 2013";
     public static String NTIS_HTML_COPYRIGHT = NTIS_TEXT_COPYRIGHT;
     public static final Key NTIS_PRICES = new Key(Keys.CONTROLLED_TERMS, "NTIS price code");
     public static final Key NTIS_COUNTRY = new Key(Keys.COUNTRY, "Country of origin");
@@ -103,15 +104,15 @@ public class NTISDocBuilder implements DocumentBuilder {
     private Perl5Util perl = new Perl5Util();
 
     // fields to be displayed in citation format
-    private static String queryCitation = "select M_ID,TI,PA1,PA2,PA3,PA4,PA5,HN,SO,RD,XP,RN,AN,load_number,IC  from ntis_master where M_ID IN ";
-    private static String queryXMLCitation = "select M_ID,TI,PA1,PA2,PA3,PA4,PA5,HN,SO,RD,XP,RN,AN,load_number,IC,DES  from ntis_master where M_ID IN ";
+    private static String queryCitation = "select M_ID,TI,PA1,PA2,PA3,PA4,PA5,HN,SO,RD,XP,RN,AN,load_number,IC  from NTIS_MASTER where M_ID IN ";
+    private static String queryXMLCitation = "select M_ID,TI,PA1,PA2,PA3,PA4,PA5,HN,SO,RD,XP,RN,AN,load_number,IC,DES  from NTIS_MASTER where M_ID IN ";
     // fields to be displayed in abstract format
-    private static String queryAbstracts = "select M_ID,TI,PA1,PA2,PA3,PA4,PA5,HN,SO,RD,XP,RN,MAA1,MAN1,MAA2,MAN2,AN,IC,AB,DES  from ntis_master where  M_ID IN ";
+    private static String queryAbstracts = "select M_ID,TI,PA1,PA2,PA3,PA4,PA5,HN,SO,RD,XP,RN,MAA1,MAN1,MAA2,MAN2,AN,IC,AB,DES  from NTIS_MASTER where  M_ID IN ";
 
     // fields to be displayed in detailed format
-    private static String queryDetailed = "select M_ID,AN,TI,PA1,PA2,PA3,PA4,PA5,HN,AV,PR,SO,CAC,RD,XP,VI,SU,TA,AB,IC,TN,DES,IDE,CAT,RN,CT,PN,TNUM,MAA1,MAA2  from ntis_master where M_ID IN ";
+    private static String queryDetailed = "select M_ID,AN,TI,PA1,PA2,PA3,PA4,PA5,HN,AV,PR,SO,CAC,RD,XP,VI,SU,TA,AB,IC,TN,DES,IDE,CAT,RN,CT,PN,TNUM,MAA1,MAA2  from NTIS_MASTER where M_ID IN ";
 
-    private static String queryPreview = "select M_ID, AB from ntis_master where M_ID IN ";
+    private static String queryPreview = "select M_ID, AB from NTIS_MASTER where M_ID IN ";
 
     public DocumentBuilder newInstance(Database database) {
         return new NTISDocBuilder(database);
@@ -901,6 +902,8 @@ public class NTISDocBuilder implements DocumentBuilder {
                 // get contract number
                 if (rset.getString("CT") != null) {
                     String ct = NTISData.stripOutBracket(rset.getString("CT"));
+
+                    ct = formatOrderNumbers(ct);
                     ct = perl.substitute("s#contract(s*)##i", ct).trim();
 
                     if (!StringUtil.EMPTY_STRING.equals(ct.trim())) {
@@ -1043,6 +1046,7 @@ public class NTISDocBuilder implements DocumentBuilder {
                 // get contract number
                 if (rset.getString("CT") != null) {
                     String ct = NTISData.stripOutBracket(rset.getString("CT"));
+                    ct = formatOrderNumbers(ct);
                     if (!StringUtil.EMPTY_STRING.equals(ct)) {
                         lst_CT_PN_TNUM.add(ct);
                     }
@@ -1388,6 +1392,45 @@ public class NTISDocBuilder implements DocumentBuilder {
         }
         return list;
     }
+
+    private String formatOrderNumbers(String num1)
+    {
+		if (num1 == null || num1.length() == 0)
+		{
+			return num1;
+		}
+		else
+		{
+			num1 = num1.trim();
+		}
+
+		//Added for xml format data
+		if(num1.indexOf(BdParser.AUDELIMITER)>-1)
+		{
+			String[] num1Array = num1.split(BdParser.AUDELIMITER);
+			String num11="";
+			String num12="";
+
+			//added for XML format
+			for(int i=0;i<num1Array.length;i++)
+			{
+				String singleNum1 = num1Array[i];
+				if(singleNum1.indexOf("Contract")>-1)
+				{
+					num11= singleNum1;
+				}
+				else
+				{
+					num12 = num12+";"+singleNum1;
+				}
+			}
+			num1=num11+";"+num12;
+		}
+		num1 = num1.replace("{"," ");
+
+		return num1;
+    }
+
 
     @Override
     public Key[] getCitationKeys() {
