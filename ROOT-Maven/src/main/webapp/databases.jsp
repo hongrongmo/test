@@ -118,58 +118,48 @@ bottom: -1px;
 			precise search and discovery.</p>
 	</c:if>
 
-	<c:if test="${fn:contains(dbid,'all') or fn:contains(dbid,'eup')}">
-		<p class="databasename">EP Patents</p>
-		<p class="databasedesc">The EP Patents database includes European
-			patents grants and applications. EP Patents offers sophisticated
-			search and retrieval tools across patents registered with European
-			Patent Offices.</p>
-	</c:if>
+    <c:if test="${fn:contains(dbid,'all') or fn:contains(dbid,'eup')}">
+        <p class="databasename">EP Patents</p>
+        <p class="databasedesc">The EP Patents database includes European
+            patents grants and applications. EP Patents offers sophisticated
+            search and retrieval tools across patents registered with European
+            Patent Offices.</p>
+    </c:if>
 
-	<c:if test="${fn:contains(dbid,'all') or fn:contains(dbid,'upa')}">
-		<p class="databasename">US Patents</p>
-		<p class="databasedesc">US Patents provides access to a full-text
-			patent database, which currently contains over six million patents
-			recorded at the U.S. Patent and Trademark Office (USPTO). Records
-			cover the period from 1790 to the most recent weekly issue date.
-			Patents from 1790-1975 can be searched and retrieved by patent number
-			or current US classification code only.</p>
-	</c:if>
+    <c:if test="${fn:contains(dbid,'all') or fn:contains(dbid,'geo')}">
+        <p class="databasename">GEOBASE</p>
+        <p class="databasedesc">GEOBASE&#174 is a multidisciplinary
+            database of indexed research literature on the earth sciences,
+            including geology, human and physical geography, environmental
+            sciences, oceanography, geomechanics, alternative energy sources,
+            pollution, waste management and nature conservation. Covering
+            thousands of peer-reviewed journals, trade publications, book series
+            and conference proceedings, GEOBASE has the most international
+            coverage of any database in the field.</p>
+    </c:if>
 
-	<c:if test="${fn:contains(dbid,'all') or fn:contains(dbid,'geo')}">
-		<p class="databasename">GEOBASE</p>
-		<p class="databasedesc">GEOBASE&#174 is a multidisciplinary
-			database of indexed research literature on the earth sciences,
-			including geology, human and physical geography, environmental
-			sciences, oceanography, geomechanics, alternative energy sources,
-			pollution, waste management and nature conservation. Covering
-			thousands of peer-reviewed journals, trade publications, book series
-			and conference proceedings, GEOBASE has the most international
-			coverage of any database in the field.</p>
-	</c:if>
+    <c:if test="${fn:contains(dbid,'all') or fn:contains(dbid,'grf')}">
+        <p class="databasename">GeoRef</p>
+        <p class="databasedesc">The GeoRef database, established by the
+            American Geological Institute in 1966, provides access to the
+            geoscience literature of the world. GeoRef is the most comprehensive
+            database in the geosciences and continues to grow by more than 90,000
+            references a year. The database contains over 2.9 million references
+            to geoscience journal articles, books, maps, conference papers,
+            reports and theses.</p>
+    </c:if>
 
-	<c:if test="${fn:contains(dbid,'all') or fn:contains(dbid,'grf')}">
-		<p class="databasename">GeoRef</p>
-		<p class="databasedesc">The GeoRef database, established by the
-			American Geological Institute in 1966, provides access to the
-			geoscience literature of the world. GeoRef is the most comprehensive
-			database in the geosciences and continues to grow by more than 90,000
-			references a year. The database contains over 2.9 million references
-			to geoscience journal articles, books, maps, conference papers,
-			reports and theses.</p>
-	</c:if>
-
-	<c:if test="${fn:contains(dbid,'all') or fn:contains(dbid,'ins') or fn:contains(dbid,'ibs')}">
-		<p class="databasename">Inspec</p>
-		<p class="databasedesc">Inspec includes bibliographic citations
-			and indexed abstracts from publications in the fields of physics,
-			electrical and electronic engineering, communications, computer
-			science, control engineering, information technology, manufacturing
-			and mechanical engineering, operations research, material science,
-			oceanography, engineering mathematics, nuclear engineering,
-			environmental science, geophysics, nanotechnology, biomedical
-			technology and biophysics.</p>
-	</c:if>
+    <c:if test="${fn:contains(dbid,'all') or fn:contains(dbid,'ins') or fn:contains(dbid,'ibs')}">
+        <p class="databasename">Inspec</p>
+        <p class="databasedesc">Inspec includes bibliographic citations
+            and indexed abstracts from publications in the fields of physics,
+            electrical and electronic engineering, communications, computer
+            science, control engineering, information technology, manufacturing
+            and mechanical engineering, operations research, material science,
+            oceanography, engineering mathematics, nuclear engineering,
+            environmental science, geophysics, nanotechnology, biomedical
+            technology and biophysics.</p>
+    </c:if>
 
 	<c:if test="${fn:contains(dbid,'all') or fn:contains(dbid,'nti')}">
 		<p class="databasename">NTIS</p>
@@ -191,6 +181,17 @@ bottom: -1px;
 			foils and laminates; forestry and pulpwood, lignin and extractives,
 			non-wovens, and much more.</p>
 	</c:if>
+
+    <c:if test="${fn:contains(dbid,'all') or fn:contains(dbid,'upa')}">
+        <p class="databasename">US Patents</p>
+        <p class="databasedesc">US Patents provides access to a full-text
+            patent database, which currently contains over six million patents
+            recorded at the U.S. Patent and Trademark Office (USPTO). Records
+            cover the period from 1790 to the most recent weekly issue date.
+            Patents from 1790-1975 can be searched and retrieved by patent number
+            or current US classification code only.</p>
+    </c:if>
+
 <%--
 	<c:if test="${fn:contains(dbid,'all') or fn:contains(dbid,'pag')}">
 		<p class="databasename">Referex</p>

@@ -47,6 +47,7 @@ import org.ei.email.SESMessage;
 import org.ei.exception.InfrastructureException;
 import org.ei.session.UserSession;
 import org.ei.stripes.action.SystemMessage;
+import org.ei.stripes.adapter.BizXmlAdapter;
 import org.ei.util.GUID;
 
 import com.icl.saxon.TransformerFactoryImpl;
@@ -63,18 +64,18 @@ public class EmailDeliveryAction extends AbstractDeliveryAction {
 	private String subject;
 	private String message;
 	protected boolean confirm;
-	
+
 	@DontValidate
 	@HandlesEvent("display")
 	public Resolution display() throws InfrastructureException {
-		
+
 		return new ForwardResolution("/WEB-INF/pages/customer/delivery/email.jsp");
 	}
 
 	@Validate
 	@HandlesEvent("submit")
 	public Resolution submit() throws Exception {
-	    
+
 		// Ensure there are documents present
 		if (GenericValidator.isBlankOrNull(docidlist) &&
 			GenericValidator.isBlankOrNull(folderid) &&
@@ -82,7 +83,7 @@ public class EmailDeliveryAction extends AbstractDeliveryAction {
 			log4j.warn("No documents to email!");
 			return new ForwardResolution("/WEB-INF/pages/customer/delivery/email.jsp");
 		}
-		
+
 		UserSession usersession = context.getUserSession();
 		DatabaseConfig databaseConfig = DatabaseConfig.getInstance();
 		List<DocID> docidList = new ArrayList<DocID>();
@@ -108,7 +109,7 @@ public class EmailDeliveryAction extends AbstractDeliveryAction {
 		//
         Writer xmlWriter;
 		if (!GenericValidator.isBlankOrNull(docidlist)) {
-			
+
 			// ****************************************************************
 			// Get documents from docid list (request param)
 			// ****************************************************************
@@ -123,7 +124,7 @@ public class EmailDeliveryAction extends AbstractDeliveryAction {
 					log4j.warn("docids size does not equal handles size!");
 					return SystemMessage.SYSTEM_ERROR_RESOLUTION;
 				}
-	
+
 				// Add docids to list
 				DocID docidObj;
 				int handle;
@@ -167,17 +168,17 @@ public class EmailDeliveryAction extends AbstractDeliveryAction {
 				log4j.error("Unable to process Docid contents!");
 				return SystemMessage.SYSTEM_ERROR_RESOLUTION;
 			}
-			
+
 		} else if (!GenericValidator.isBlankOrNull(folderid)) {
-			
+
 			// ****************************************************************
 			// Get documents from folder id (request param)
 			// ****************************************************************
-			
+
 			// Limit for folder is 50 docs, so use StringWriter
 			xmlWriter = new StringWriter();
 			try {
-			    // Retrieve folder (this.folder should already be 
+			    // Retrieve folder (this.folder should already be
 				// set by init() method from parent class)
 			    SavedRecords savedRecords = new SavedRecords(usersession.getUser().getUserId());
 			    FolderPage folderpage = (FolderPage) savedRecords.viewRecordsInFolder(this.folderid, docformat);
@@ -206,7 +207,7 @@ public class EmailDeliveryAction extends AbstractDeliveryAction {
 				}
 			}
 		} else if (basket != null && basket.countPages() > 0) {
-			
+
 			// ****************************************************************
 			// Get documents from current basket
 			// ****************************************************************
@@ -214,70 +215,70 @@ public class EmailDeliveryAction extends AbstractDeliveryAction {
 			if (!confirm) {
 				return SystemMessage.SYSTEM_ERROR_RESOLUTION;
 			}
-			
+
 		} else {
 			log4j.warn("Unable to process email - no way to retrieve documents!");
 			return SystemMessage.SYSTEM_ERROR_RESOLUTION;
 		}
-				
+
 		return new ForwardResolution("/WEB-INF/pages/customer/delivery/email.jsp");
 	}
 
 	/**
-	 * Common method to send a message from XML input.  
-	 * 
+	 * Common method to send a message from XML input.
+	 *
 	 * @param stylesheetprefix
 	 * @param xmlWriter
 	 * @return
 	 */
 	private boolean sendMessage(String stylesheetprefix, Writer xmlWriter) {
 		try {
-			
+
 			// Transform xml in Writer via Stylesheet to create message body
 	        String stylesheet = this.getClass().getResource("/transform/delivery/download" + stylesheetprefix + "Ascii.xsl").toString();
             TransformerFactory tFactory = new TransformerFactoryImpl();
             Templates templates = tFactory.newTemplates(new StreamSource(stylesheet));
             Transformer transformer = templates.newTransformer();
-            
+
 	        StringWriter outWriter = new StringWriter();
-            transformer.transform(new StreamSource(new StringReader(xmlWriter.toString())),
+            transformer.transform(new StreamSource(new StringReader(xmlWriter.toString().replaceAll(BizXmlAdapter.xml10_illegal_xml_pattern, ""))),
                           new StreamResult(outWriter));
-			
+
 		    SESMessage sesmessage = new SESMessage();
 		    String toStr = to.replaceAll(";", ",");
 		    sesmessage.setDestination(Arrays.asList(toStr.split(",")));
 			sesmessage.setMessage(subject, "This email was sent to you on behalf of " + from + " \n \n" +
-					message + " \n \n" + 
+					message + " \n \n" +
 					outWriter.toString(), false);
-		    
+
 			sesmessage.setFrom(SESMessage.NOREPLY_SENDER);
             SESEmail.getInstance().send(sesmessage);
-		    
+
 		} catch (Throwable t) {
         	log4j.error("Unable to build and send Email message, Exception: " + t.getClass().getName() + " (" + t.getMessage() + ")");
 			return false;
 		}
-		return true;		
+		return true;
 	}
 
 	/**
-	 * Sending email from basket contents can get pretty big (up to 500 
-	 * documents) so we need to stream XML to a temp file and then 
+	 * Sending email from basket contents can get pretty big (up to 500
+	 * documents) so we need to stream XML to a temp file and then
 	 * transform to an email.
-	 * 
+	 *
 	 * @param stylesheetprefix
 	 * @return
 	 */
 	private boolean sendMessageFromBasket(String stylesheetprefix, String docformat) {
-		
+
 		String fileName = null;
 		PrintWriter tmpWriter = null;
 		StringWriter xmlWriter = null;
-        
+
         try {
-        	
+
         	String toStr = to.replaceAll(";", ",");
-        	
+
 			// Get the stylesheet and setup the transformer
             String stylesheet = this.getClass().getResource("/transform/delivery/download" + stylesheetprefix + "Ascii.xsl").toString();
             TransformerFactory tFactory = new TransformerFactoryImpl();
@@ -289,7 +290,7 @@ public class EmailDeliveryAction extends AbstractDeliveryAction {
 			// ************************************************************************
 	        fileName = "/tmp/"+(new GUID()).toString();
 			tmpWriter = new PrintWriter(new FileWriter(fileName));
-			
+
 			tmpWriter.println("This email was sent to you on behalf of " + from);
 			tmpWriter.println("");
 			if(message != null && message.length() != 0)
@@ -302,7 +303,7 @@ public class EmailDeliveryAction extends AbstractDeliveryAction {
             transformer = templates.newTransformer();
             transformer.transform(new StreamSource(new StringReader("<SECTION-DELIM><HEADER/></SECTION-DELIM>")),
                           new StreamResult(tmpWriter));
-            
+
             // Write out basket contents 1 page at a time (body)
             BasketPage basketPage = (BasketPage) basket.getBasketPage(docformat);
             for(int z = 1; z<=basket.countPages(); ++z)
@@ -318,7 +319,7 @@ public class EmailDeliveryAction extends AbstractDeliveryAction {
 
                 // Transform and write to tmp file!
                 transformer = templates.newTransformer();
-                transformer.transform(new StreamSource(new StringReader(xmlWriter.toString())),
+                transformer.transform(new StreamSource(new StringReader(xmlWriter.toString().replaceAll(BizXmlAdapter.xml10_illegal_xml_pattern, ""))),
                               new StreamResult(tmpWriter));
             }
             // Write out footer (body)
@@ -341,7 +342,7 @@ public class EmailDeliveryAction extends AbstractDeliveryAction {
     			sesmessage.setMessage(subject, StringFromInputStream, false);
     			sesmessage.setFrom(SESMessage.NOREPLY_SENDER);
                 SESEmail.getInstance().send(sesmessage);
-                
+
             } catch (Throwable t) {
             	log4j.error("Unable to process file: " + fileName + ", Exception: " + t.getClass().getName() + " (" + t.getMessage() + ")");
             	return false;
@@ -351,7 +352,7 @@ public class EmailDeliveryAction extends AbstractDeliveryAction {
                     inStream.close();
                 }
             }
-                	
+
 		} catch (Exception e) {
 			log4j.error("Unable to process Basket contents!");
 			return false;
@@ -377,7 +378,7 @@ public class EmailDeliveryAction extends AbstractDeliveryAction {
 
 		return true;
 	}
-	
+
 	//
 	//
 	// GETTERS/SETTERS

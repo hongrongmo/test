@@ -96,6 +96,7 @@
 
 	<div class="settingsLeft">
 			<input type="hidden" name="save" value="true"/>
+			
 			<div class="settingSection">Display Results</div>
 
 			<c:set value="${actionBean.currentuserprefs.resultsPerPage}" var="resultsPerPage"></c:set>
@@ -178,11 +179,12 @@
 			</ul>
 	    </fieldset>
 			<c:set value="${actionBean.currentuserprefs.dlFileNamePrefix}" var="dlFileNamePrefix"></c:set>
+			<input type="hidden" id="dlFileNamePrefixOrg" value="${dlFileNamePrefix}"/>
 			<hr/>
 			<div class="settingSection">File Name Prefix</div>
 			<fieldset title="File Name Prefix Settings">
 				<div style="width:150px">
-					<div style="width:150px"><input style="width:150px"  type="text" value="${dlFileNamePrefix}" name="dlFileNamePrefix" id="dlFileNamePrefix" maxlength="30" /></div>
+					<div style="width:150px"><input style="width:150px"  type="text" value="${dlFileNamePrefix}" name="dlFileNamePrefix" id="dlFileNamePrefix" onkeypress="return handleKeyPressForFileName(event)"  maxlength="50" /></div>
 					<div style="text-align:right;width:150px"><span style="font-size:10px;">&nbsp;&nbsp;_Output_Format_Date/Time</span></div>
 				</div>
 				
@@ -205,10 +207,29 @@ function checkForRefworks(rad){
 		$("#citation_radio").prop("checked", true);
 		$(".formatRadio").prop("disabled", true);
 		$(".outputRadio").prop("disabled", true);
+		handleFileNamePrefix();
+		$("#dlFileNamePrefix").prop("disabled", true);
 	}else{
 		$(".formatRadio").prop("disabled", false);
 		$(".outputRadio").prop("disabled", false);
+		$("#dlFileNamePrefix").prop("disabled", false);
 	}
+}
+
+function handleKeyPressForFileName(event){
+	if (event.keyCode == 13) {
+		submitSavePrefsForm();
+		event.preventDefault();
+		return false;
+    }
+}
+
+function handleFileNamePrefix(){
+	var fileNamePrefix = $.trim($('#dlFileNamePrefix').val());
+	if(fileNamePrefix == null || fileNamePrefix.length > 50 || fileNamePrefix.length < 3){
+		$('#dlFileNamePrefix').val($('#dlFileNamePrefixOrg').val());
+	}
+	
 }
 
 checkForRefworks($("input[name=dlLocation]:checked"));

@@ -73,6 +73,7 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
 	private boolean showLoginBox = true;
 	private StopWatch requeststopwatch= null;
 
+    @Validate(mask=".*")
 	private String csrfSyncToken = null;
 
     @Validate(mask="\\d*")

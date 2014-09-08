@@ -35,6 +35,7 @@ import org.ei.domain.personalization.FolderPage;
 import org.ei.domain.personalization.SavedRecords;
 import org.ei.exception.InfrastructureException;
 import org.ei.session.UserSession;
+import org.ei.stripes.adapter.BizXmlAdapter;
 
 import com.icl.saxon.TransformerFactoryImpl;
 
@@ -43,7 +44,7 @@ public class PrintDeliveryAction extends AbstractDeliveryAction {
 	private final static Logger log4j = Logger.getLogger(PrintDeliveryAction.class);
 
 	private String docformat;
-	
+
 	@DontValidate
 	@HandlesEvent("display")
 	public Resolution display() throws InfrastructureException {
@@ -54,13 +55,13 @@ public class PrintDeliveryAction extends AbstractDeliveryAction {
 		} else if ("abstract".equals(displayformat)) {
 			docformat = Abstract.ABSTRACT_FORMAT;
 		}
-		
+
 		return new ForwardResolution("/WEB-INF/pages/customer/delivery/print.jsp");
 	}
 
 	/**
 	 * Builds the XML for the download.
-	 * 
+	 *
 	 * @param docformat
 	 * @param xmlWriter
 	 * @return
@@ -69,10 +70,10 @@ public class PrintDeliveryAction extends AbstractDeliveryAction {
 		if (GenericValidator.isBlankOrNull(docformat)) {
 			throw new IllegalArgumentException("Document format has not been set!");
 		}
-        
+
 		UserSession usersession = context.getUserSession();
 		List<EIDocWrapper> docwrapperList = new ArrayList<EIDocWrapper>();
-		
+
         try {
 
 			// Build doc List based on request params
@@ -89,7 +90,7 @@ public class PrintDeliveryAction extends AbstractDeliveryAction {
 					log4j.warn("docids size does not equal handles size!");
 					return null;
 				}
-	
+
 				// Add docids to list
 				List<DocID> docidList = new ArrayList<DocID>();
 				DocID docidObj;
@@ -122,7 +123,7 @@ public class PrintDeliveryAction extends AbstractDeliveryAction {
 				// Get documents from folder id (request param)
 				// ****************************************************************
 
-				// Retrieve folder (this.folder should already be 
+				// Retrieve folder (this.folder should already be
 				// set by init() method from parent class)
 			    SavedRecords savedRecords = new SavedRecords(usersession.getUser().getUserId());
 			    FolderPage folderpage = (FolderPage) savedRecords.viewRecordsInFolder(this.folderid, docformat);
@@ -141,7 +142,7 @@ public class PrintDeliveryAction extends AbstractDeliveryAction {
 				    for (int i=0; i<basketPage.docCount(); i++) {
 				    	docwrapperList.add(new EIDocWrapper(basketPage.docAt(i).getEIDoc(), ++index));
 				    }
-				} 
+				}
 
 			} else {
 				log4j.warn("Unable to process download - no way to retrieve documents!");
@@ -149,14 +150,14 @@ public class PrintDeliveryAction extends AbstractDeliveryAction {
 			}
 
 			return docwrapperList;
-			
+
 		} catch (Throwable t) {
 			log4j.error("Unable to build docwrapper list, error = " + t.getClass().getName() + ", message = " + t.getMessage());
 			return null;
 		}
-		
+
 	}
-	
+
 
 	/**
 	 * Inner class to wrap EIDoc object for output on JSP
@@ -174,7 +175,7 @@ public class PrintDeliveryAction extends AbstractDeliveryAction {
 			this.eidoc = eidoc;
 			this.index = index;
 		}
-		
+
 		/**
 		 * Convert EIDoc to XML
 		 * @return
@@ -183,7 +184,7 @@ public class PrintDeliveryAction extends AbstractDeliveryAction {
 			if (eidoc == null) {
 				return "";
 			}
-			
+
 			// Build XML
 			Writer xmlWriter = null;
 			try {
@@ -208,7 +209,7 @@ public class PrintDeliveryAction extends AbstractDeliveryAction {
 				}
 			}
 		}
-		
+
 		/**
 		 * Transform current document XML to HTML
 		 * @return
@@ -231,7 +232,7 @@ public class PrintDeliveryAction extends AbstractDeliveryAction {
 				TransformerFactory tFactory = new TransformerFactoryImpl();
 				Templates templates = tFactory.newTemplates(new StreamSource(xslt));
 				Transformer transformer = templates.newTransformer();
-				transformer.transform(new StreamSource(new StringReader(this.getXml())),
+				transformer.transform(new StreamSource(new StringReader(this.getXml().replaceAll(BizXmlAdapter.xml10_illegal_xml_pattern, ""))),
 				          new StreamResult(htmlWriter));
 				String html = htmlWriter.toString();
 				return html;
@@ -248,7 +249,7 @@ public class PrintDeliveryAction extends AbstractDeliveryAction {
 					log4j.error("Unable to clean up! Error = " + t.getClass().getName() + ", message = " + t.getMessage());
 				}
 			}
-			
+
 		}
 	}
 }
