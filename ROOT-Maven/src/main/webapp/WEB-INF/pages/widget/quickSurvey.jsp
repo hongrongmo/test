@@ -9,41 +9,59 @@
 <head>
 <style>
 	.survey_rating{
-		padding-right:10px;
-		float:left;
-		cursor:pointer;
 	}
-	.survey_rating img{
-	width:50px;
+
+	#survey_message{
+		font-size:16px;
+		text-align:center;
 	}
 	#survey_container{
-		width:178px;
+		width:300px;
 	}
 
 </style>
 </head>
 <body>
 <div id="survey_container">
-	<div id="survey_message">Ask a question here?</div>
+	<div id="survey_message">Help us improve Engineering Village by completing a short survey on a new feature.</div>
 	<div id="survey_ratings">
-		<div class="survey_rating" id="survey_bad"><img src="/static/images/ev_sad.png"/></div>
-		<div class="survey_rating" id="survey_neutral"><img src="/static/images/ev_dontcare.png"/></div>
-		<div class="survey_rating" style="padding:0px;" id="survey_good"><img src="/static/images/ev_happy.png"/></div>
+	<br/>
+		<div style="text-align:center;width:100%;">
+		<a class="survey_rating" href="https://docs.google.com/forms/d/1iYQqn-AoGh5MTkjmPY4dsl7e2Oi4bkcSxJZ2ECnHDKY/viewform?usp=send_form" target="new" title="Search Term Highlighting feedback survey">Yes</a>
+		&nbsp;|&nbsp;<a class="survey_rating" href="#" title="Search Term Highlighting feedback survey">No</a>
+		</div>
 	</div>
 </div>
 </body>
 <script>
 	$(".survey_rating").click(function(){
 		//we need to submit this survey.
-		var feature = '${actionBean.feature}';
-		var rating = $(this).attr("id").split("_")[1];
-		var surveyurl = "/widget/qsurvey.url?rate=true&feature=" + feature + "&rating=" + rating;
-		$.ajax({
-			url:surveyurl
-		}).success(function(data){
-			$("#ev_survey").tooltipster("content", "Thank you!");
-			window.setTimeout(function(){$("#ev_survey").tooltipster('hide');}, 3000);
-		});
+		var ret = true;
+		var surveyCookie;
+
+		if($.cookie("ev_survey")){
+			surveyCookie = JSON.parse($.cookie("ev_survey"));
+		}else{
+			surveyCookie = {
+					pageTrack:2,
+					dontShow:false
+			};
+		}
+
+
+		if($(this).text() == 'No'){
+			ret = false;
+			GALIBRARY.createWebEventWithLabel('_trackEvent', 'Survey No', '${actionBean.feature}', document.location.pathname);
+		}else{
+			GALIBRARY.createWebEventWithLabel('_trackEvent', 'Survey Yes', '${actionBean.feature}', document.location.pathname);
+		}
+		$.cookie("ev_survey", '{"pageTrack":'+surveyCookie.pageTrack+',"dontShow":'+true+'}',{expires: 365, path:'/'});
+		$("#survey_ratings").hide();
+		$("#survey_message").html("Thank you!");
+		window.setTimeout(function(){$("#ev_survey").tooltipster('hide');}, 2000);
+
+		return ret;
+
 	});
 </script>
 </html>
