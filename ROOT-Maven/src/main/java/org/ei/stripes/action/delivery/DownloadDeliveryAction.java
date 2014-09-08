@@ -584,7 +584,11 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
         if(docformat.equalsIgnoreCase(FullDoc.FULLDOC_FORMAT)){
         	tmpfileName.append("detailed");
         }else{
-        	tmpfileName.append(docformat);
+        	if(DOWNLOAD_FORMAT_BIBTEXT.equals(downloadformat)){
+        		tmpfileName.append("BIB");
+        	}else{
+        		tmpfileName.append(docformat);
+        	}
         }
         
         tmpfileName.append("_");

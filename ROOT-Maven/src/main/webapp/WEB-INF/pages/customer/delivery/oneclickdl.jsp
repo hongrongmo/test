@@ -186,7 +186,7 @@
 					<input type="hidden" id="authStatus" value="${actionBean.context.userSession.user.individuallyAuthenticated}"/>
 					<div class="grayText sectionHead" id="fnpfx">File name prefix:</div>
 					<div id="fileNamePrefixContainer" style="width:150px"><input type="text" style="width:150px" value="${dlFileNamePrefix}" name="filenameprefix" id="filenameprefix" maxlength="50" onkeypress="return handleKeyPress(event)"   /></div>
-					<div style="text-align:right;padding-right:10px;width:150px" id="filenamesuffix"><span  style="font-size:10px">&nbsp;&nbsp;_Output_Format_Date/Time</span></div>
+					<div style="text-align:right;padding-right:10px;width:150px" id="filenamesuffix"><span id="filenameprefixlabel"  style="font-size:10px">&nbsp;&nbsp;_Output_Format_Date/Time</span></div>
 				</li>
 				
 				</ul>
@@ -212,8 +212,8 @@
 				    </c:when>
 				    <c:otherwise>
 				        <div class="grayText" style="float:right;width:160px;">
-						<div style="display: inline-block;vertical-align:top"><input type="checkbox"  disabled id="updateUserSettings" /></div>
-						<div style="display: inline-block;width:130px" ><label for="updateUserSettings" title="To save this as your preferred settings">Login or Register to save these preferred settings</label></div>
+						<div style="display: inline-block;vertical-align:top;display:none"><input type="checkbox"  disabled id="updateUserSettings" /></div>
+						<div style="display: inline-block;" ><label for="updateUserSettings" title="To save this as your preferred settings">Login or Register to save to My Preferences</label></div>
 					</div>
 				    </c:otherwise>
 				</c:choose>
@@ -250,11 +250,15 @@ $(document).ready(function() {
 	</c:if>
 	$(".outputLocation").click(function (){
 		checkForRefworks(this);
+		updatefilenameprefixlable();
 
 	});
 
-	
+	$("input[name='downloadformat'],input[name='displayformat']").click(function(){
+		updatefilenameprefixlable();
+	});
 	checkForRefworks($('input[name="outputLocation"]:checked'));
+	updatefilenameprefixlable();
 
 });
 function checkForRefworks(radio){
@@ -296,6 +300,32 @@ function handleFnPrefix(){
 		}
 	}
 	
+}
+function updatefilenameprefixlable(){
+	var formatval = $('input[name="downloadformat"]:checked').val();
+	var outputval = $('input[name="displayformat"]:checked').val();
+	var pageType = $("input[name='selectoption']:checked").val();
+	if(formatval ==  'ris'){
+		outputval = "RIS";
+	}else if(formatval ==  'bib'){
+		outputval = "BIB";
+	}
+	if(typeof  formatval === "undefined" || formatval === null || formatval === "") {
+		formatval = "Format";
+	}
+	
+	if(outputval == 'default'){
+		if(typeof(pageType) != "undefined"){
+			outputval = pageType;
+		}else{
+			outputval = '${actionBean.displayformat}';
+		}
+	}
+	
+	if(typeof  outputval === "undefined" || outputval === null || outputval === "") {
+		outputval = "Output";
+	}
+	$('#filenameprefixlabel').html('_'+outputval+'_'+formatval+'_Date/Time');
 }
 </script>
 		<c:if test="${actionBean.saveToGoogleEnabled}">
@@ -457,5 +487,7 @@ function handleFnPrefix(){
 				
 			}
 
+			
+			
 			</script>
 </html>

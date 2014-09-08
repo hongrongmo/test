@@ -150,14 +150,7 @@
   </c:if>
   <c:if test="${actionBean.context.userSession.user.individuallyAuthenticated eq 'false'}">
    	$.cookie('ev_dldpref',null,{path:'/'});
-   	savedDLPrefs = {
-			location:'${actionBean.context.userSession.user.userPrefs.dlLocation}',
-			format:'${actionBean.context.userSession.user.userPrefs.dlFormat}',
-			displaytype:'${actionBean.context.userSession.user.userPrefs.dlOutput}',
-			filenameprefix:'${actionBean.context.userSession.user.userPrefs.dlFileNamePrefix}',
-			baseaddress:'${actionBean.baseaddress}'
-	};
- </c:if>
+  </c:if>
  
   $(function() {	  if($("#settingMenu").length > 0){
 		$("#settingMenu").menu({position:{my:'right+25 top+20'}, icons: { submenu: "ui-icon-triangle-1-s" }});
