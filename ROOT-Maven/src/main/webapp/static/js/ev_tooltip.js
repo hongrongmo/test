@@ -174,6 +174,69 @@ function showTooltip(selector, msg, direction, duration, autoShow){
 		setTimeout("hideTP('" + selector + "')",duration);
 	}
 }
+function showSurvey(feature, location){
+	var surveyUrl = "/widget/qsurvey.url?feature="+feature;
+	var surveyCookie;
+	var fromRecord = false;
+
+	if(location == 'record'){
+		fromRecord = true;
+	}
+	if($.cookie("ev_survey")){
+		surveyCookie = JSON.parse($.cookie("ev_survey"));
+		surveyCookie.pageTrack++;
+		$.cookie("ev_survey", '{"pageTrack":'+surveyCookie.pageTrack+',"dontShow":'+surveyCookie.dontShow+',"fromRecord":'+fromRecord+'}',{expires: 365, path:'/'});
+	}else{
+		$.cookie("ev_survey", '{"pageTrack":'+1+',"dontShow":'+false+',"fromRecord":'+fromRecord+'}',{expires: 365, path:'/'});
+		surveyCookie = {
+				pageTrack:1,
+				dontShow:false,
+				fromRecord:fromRecord
+		};
+	}
+
+	if(!surveyCookie.dontShow && surveyCookie.pageTrack >= 3 && (!fromRecord || (fromRecord && surveyCookie.fromRecord))){
+
+		$("#ev_survey").tooltipster({
+		    content: 'Loading...',
+		    autoClose:false,
+		    interactive:true,
+		    contentAsHTML:true,
+		    position:'top',
+		    fixedLocation:true,
+		    positionTracker:false,
+		    multiple:true,
+		    delay:0,
+		    speed:0,
+		    debug:false,
+		    arrow:false,
+		    theme:'tooltipster-default surveyTheme',
+		    functionBefore: function(origin, continueTooltip) {
+
+		        // we'll make this function asynchronous and allow the tooltip to go ahead and show the loading notification while fetching our data
+		    	$(origin).tooltipster('content', "Loading...");
+		        //console.log("get data" + content);
+		    	continueTooltip();
+		            $.ajax({
+		                type: 'GET',
+		                url: surveyUrl,
+		                success: function(data) {
+		                    $(origin).tooltipster('content', data);
+		                	$(".surveyTheme").css("left", "30%");
+		                	$(".surveyTheme").css("top", "30%");
+		                }
+		            });
+
+		    },
+
+		});
+
+
+		$("#ev_survey").show();
+		$("#ev_survey").tooltipster('show',null);
+	}
+
+}
 //hid the popup and write a session cookie so it won't show again.
 function hideTP(selector){
 	$(selector).tooltipster("hide");
