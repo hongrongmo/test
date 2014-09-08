@@ -132,7 +132,7 @@
 	<div id="dlprefsSaved" style="display:none;text-align:left;"><img src="/static/images/ev_checkmark.png" style="padding-right:5px;width:20px;"/>Your download settings for this session have been saved. To keep these settings, login or register and save your preferences in Settings.</div>
 	</c:otherwise>
 </c:choose>
-
+<input type="hidden" id="authStatus" value="${actionBean.context.userSession.user.individuallyAuthenticated}"/>
 
 <div id="prefsNotSaved" style="display:none;text-align:left;"><img src="/static/images/No_results_found.png" style="padding-right:5px;width:20px;"/>Preferences Could Not Be Saved!</div>
 
