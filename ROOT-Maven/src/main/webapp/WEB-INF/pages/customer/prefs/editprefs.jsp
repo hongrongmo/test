@@ -185,7 +185,7 @@
 			<fieldset title="File Name Prefix Settings">
 				<div style="width:150px">
 					<div style="width:150px"><input style="width:150px"  type="text" value="${dlFileNamePrefix}" name="dlFileNamePrefix" id="dlFileNamePrefix" onkeypress="return handleKeyPressForFileName(event)"  maxlength="50" /></div>
-					<div style="text-align:right;width:150px"><span style="font-size:10px;">&nbsp;&nbsp;_Output_Format_Date/Time</span></div>
+					<div style="text-align:right;width:150px"><span style="font-size:10px;" id="filenamelabel">&nbsp;&nbsp;_Output_Format_Date/Time</span></div>
 				</div>
 				
 	    	</fieldset>
@@ -200,6 +200,10 @@
 <script>
 $(".locationRadio").click(function(){
 	checkForRefworks(this);
+	updatefilenamelable();
+});
+$(".formatRadio,.outputRadio").click(function(){
+	updatefilenamelable();
 });
 function checkForRefworks(rad){
 	if($(rad).attr('id') == "refworks_radio"){
@@ -214,6 +218,27 @@ function checkForRefworks(rad){
 		$(".outputRadio").prop("disabled", false);
 		$("#dlFileNamePrefix").prop("disabled", false);
 	}
+}
+
+function updatefilenamelable(){
+	var formatval = $(".formatRadio:checked").val();
+	var outputval = $(".outputRadio:checked").val();
+	if(formatval ==  'ris'){
+		outputval = "RIS";
+	}else if(formatval ==  'bib'){
+		outputval = "BIB";
+	}
+	
+	if(outputval ==  'default'){
+		outputval = "current_page_view";
+	}
+	if(typeof  formatval === "undefined" || formatval === null || formatval === "") {
+		formatval = "Format";
+	}
+	if(typeof  outputval === "undefined" || outputval === null || outputval === "") {
+		outputval = "Output";
+	}
+	$('#filenamelabel').html('_'+outputval+'_'+formatval+'_Date/Time');
 }
 
 function handleKeyPressForFileName(event){
@@ -233,6 +258,7 @@ function handleFileNamePrefix(){
 }
 
 checkForRefworks($("input[name=dlLocation]:checked"));
+updatefilenamelable();
 
 </script>
 <c:if test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1')}">

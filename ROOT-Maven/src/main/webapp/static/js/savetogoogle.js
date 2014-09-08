@@ -75,7 +75,14 @@ function creatFileName(downloadformat,displaytype,filenameprefix){
 	var filename = "";
 	filename += filenameprefix;
 	filename += '_';
-	filename += displaytype;
+	if(downloadformat == 'bib'){
+		filename += 'BIB';
+	}else if(downloadformat == 'ris'){
+		filename += 'RIS';
+	}else{
+	  filename += displaytype;
+	}
+	
 	filename += '_';
 	filename += downloadformat;
 	filename += '_';
