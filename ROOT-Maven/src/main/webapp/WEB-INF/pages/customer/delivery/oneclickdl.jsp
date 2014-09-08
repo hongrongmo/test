@@ -183,7 +183,6 @@
 				<li>
 					<hr style="width:100%" />
 					<input type="hidden" id="dlFileNamePrefixOrg" value="${dlFileNamePrefix}"/>
-					<input type="hidden" id="authStatus" value="${actionBean.context.userSession.user.individuallyAuthenticated}"/>
 					<div class="grayText sectionHead" id="fnpfx">File name prefix:</div>
 					<div id="fileNamePrefixContainer" style="width:150px"><input type="text" style="width:150px" value="${dlFileNamePrefix}" name="filenameprefix" id="filenameprefix" maxlength="50" onkeypress="return handleKeyPress(event)"   /></div>
 					<div style="text-align:right;padding-right:10px;width:150px" id="filenamesuffix"><span id="filenameprefixlabel"  style="font-size:10px">&nbsp;&nbsp;_Output_Format_Date/Time</span></div>
@@ -206,7 +205,7 @@
 				<c:choose>
 				    <c:when test="${actionBean.context.userSession.user.individuallyAuthenticated}">
 				       <div style="float:right;width:160px;">
-						<div style="display: inline-block;vertical-align:top"><input type="checkbox" id="updateUserSettings" checked value="true"/></div>
+						<div style="display: inline-block;vertical-align:top"><input type="checkbox" id="updateUserSettings" value="true"/></div>
 						<div style="display: inline-block;width:130px" ><label for="updateUserSettings" title="To save this as your preferred settings">Would you like to save this as your preferred settings?</label></div>
 					</div>
 				    </c:when>
@@ -227,7 +226,6 @@
 
 $(document).ready(function() {
 	<c:if test="${actionBean.context.userSession.user.individuallyAuthenticated eq 'false'}">
-		$('#updateUserSettings').prop("checked", false);
 		//read the cookie
 		if($.cookie("ev_oneclickdl") && $.cookie("ev_oneclickdl") != 'null'){
 			var dlOptions = JSON.parse($.cookie("ev_oneclickdl"));
@@ -238,7 +236,7 @@ $(document).ready(function() {
 		}
 	</c:if>
 	<c:if test="${actionBean.context.userSession.user.individuallyAuthenticated eq 'true'}">
-		$('#updateUserSettings').prop("checked", true);
+		$('#updateUserSettings').prop("checked", false);
 		//read the cookie
 		if($.cookie("ev_dldpref") && $.cookie("ev_dldpref") != 'null'){	
 			var dlOptions = JSON.parse($.cookie("ev_dldpref"));
