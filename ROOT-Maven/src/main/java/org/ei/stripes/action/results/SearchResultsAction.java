@@ -39,6 +39,7 @@ import org.ei.exception.InfrastructureException;
 import org.ei.exception.SearchException;
 import org.ei.exception.SessionException;
 import org.ei.exception.SystemErrorCodes;
+import org.ei.session.UserPreferences;
 import org.ei.session.UserSession;
 import org.ei.stripes.action.EVPathUrl;
 import org.ei.stripes.action.GoogleWebAnalyticsEvent;
