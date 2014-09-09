@@ -27,7 +27,7 @@ import org.ei.stripes.action.EVActionBean;
 import org.ei.stripes.action.personalaccount.LogoutAction;
 import org.ei.stripes.exception.EVExceptionHandler;
 import org.ei.stripes.util.HttpRequestUtil;
-import org.ei.util.RequestDumper;
+import org.ei.web.util.RequestDumper;
 
 /**
  * This class is a Stripes Interceptor that is supposed to

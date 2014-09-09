@@ -31,21 +31,21 @@ public abstract class BaseActionTest extends TestNG{
             // Create initial context
             // NOTE that this implementation depends
             System.setProperty(Context.INITIAL_CONTEXT_FACTORY,"org.apache.naming.java.javaURLContextFactory");
-            System.setProperty(Context.URL_PKG_PREFIXES, "org.apache.naming");            
+            System.setProperty(Context.URL_PKG_PREFIXES, "org.apache.naming");
             Context ic = new InitialContext();
 
             ic.createSubcontext("java:");
             ic.createSubcontext("java:comp");
             ic.createSubcontext("java:comp/env");
             ic.createSubcontext("java:comp/env/jdbc");
-           
+
             // Construct search DataSource
             OracleConnectionPoolDataSource ds = new OracleConnectionPoolDataSource();
             ds = new OracleConnectionPoolDataSource();
             ds.setURL("jdbc:oracle:thin:@138.12.85.144:1521:EI");
             ds.setUser("AP_EV_SEARCH");
             ds.setPassword("ei3it");
-            
+
             ic.bind("java:comp/env/jdbc/search", ds);
 
             // Construct session DataSource
@@ -53,7 +53,7 @@ public abstract class BaseActionTest extends TestNG{
             ds.setURL("jdbc:oracle:thin:@138.12.85.144:1521:EI");
             ds.setUser("AP_EV_SESSION");
             ds.setPassword("ei3it");
-            
+
             ic.bind("java:comp/env/jdbc/session", ds);
 
         } catch (NamingException e) {
@@ -61,10 +61,10 @@ public abstract class BaseActionTest extends TestNG{
         }
 
     }
-    
+
     @BeforeSuite
     public void beforeSuite() throws Exception {
-        
+
         // Add the Stripes Filter
         Map<String, String> filterParams = new HashMap<String, String>();
         filterParams.put("LocalePicker.Locales", "en_US:UTF-8");
@@ -73,18 +73,18 @@ public abstract class BaseActionTest extends TestNG{
         filterParams.put("ActionResolver.Packages", "org.ei.stripes.action");
         filterParams.put("ExceptionHandler.Class", "org.ei.stripes.exception.EVExceptionHandler");
         mockcontext.addFilter(StripesFilter.class, "StripesFilter", filterParams);
-        
-        
+
+
         // Add the Stripes Dispatcher
         mockcontext.setServlet(DispatcherServlet.class, "StripesDispatcher", null);
-        
+
         //intialize the EV Properties object
         EVProperties.getInstance();
         EVProperties.setStartup(System.currentTimeMillis());
         EVProperties.setRuntimeProperties(RuntimeProperties.getInstance());
-       
-        
+
+
     }
-    
-    
+
+
 }

@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.ei.domain.personalization.EVWebUser;
 import org.ei.domain.personalization.IEVWebUser;
-import org.ei.util.RequestDumper;
 import org.ei.util.StringUtil;
+import org.ei.web.util.RequestDumper;
 
 public class SessionService extends HttpServlet {
     private static final long serialVersionUID = 1L;
