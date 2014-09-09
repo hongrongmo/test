@@ -1,4 +1,4 @@
-package org.ei.util;
+package org.ei.web.util;
 
 import java.util.Enumeration;
 import java.util.Properties;

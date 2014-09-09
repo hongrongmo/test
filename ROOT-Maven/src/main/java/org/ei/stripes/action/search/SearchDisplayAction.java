@@ -42,7 +42,6 @@ import org.ei.domain.Database;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.DatabaseConfigException;
 import org.ei.domain.HelpLinksCache;
-import org.ei.domain.MoreSearchSources;
 import org.ei.domain.Query;
 import org.ei.domain.SearchForm;
 import org.ei.domain.SearchValidator;

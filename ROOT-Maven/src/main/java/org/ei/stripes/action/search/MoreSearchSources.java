@@ -1,4 +1,4 @@
-package org.ei.domain;
+package org.ei.stripes.action.search;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,6 +8,8 @@ import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
 
+import org.ei.domain.Database;
+import org.ei.domain.DatabaseConfig;
 import org.ei.session.UserPreferences;
 import org.ei.stripes.EVActionBeanContext;
 import org.ei.util.StringUtil;
