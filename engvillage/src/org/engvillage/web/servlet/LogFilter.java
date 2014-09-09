@@ -22,7 +22,7 @@ import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
 import org.ei.config.EVProperties;
 import org.ei.config.RuntimeProperties;
-import org.ei.util.RequestDumper;
+import org.ei.web.util.RequestDumper;
 
 public class LogFilter implements Filter {
 
