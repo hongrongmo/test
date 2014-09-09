@@ -206,7 +206,7 @@
 				    <c:when test="${actionBean.context.userSession.user.individuallyAuthenticated}">
 				       <div style="float:right;width:160px;">
 						<div style="display: inline-block;vertical-align:top"><input type="checkbox" id="updateUserSettings" value="true"/></div>
-						<div style="display: inline-block;width:130px" ><label for="updateUserSettings" title="To save this as your preferred settings">Would you like to save this as your preferred settings?</label></div>
+						<div style="display: inline-block;width:130px" ><label for="updateUserSettings" title="To save this as your preferred settings">Would you like to save this to My Preferences?</label></div>
 					</div>
 				    </c:when>
 				    <c:otherwise>
