@@ -232,7 +232,7 @@ $(document).ready(function() {
 			$('#oneClickContent input[value="' + dlOptions.location + '"]').prop("checked", true);
 			$('#oneClickContent input[value="'+dlOptions.displaytype+'"]').prop("checked", true);
 			$('#oneClickContent input[value="'+dlOptions.format+'"]').prop("checked", true);
-			$('#filenameprefix').val(dlOptions.filenameprefix);
+			$('#filenameprefix,#dlFileNamePrefixOrg').val(dlOptions.filenameprefix);
 		}
 	</c:if>
 	<c:if test="${actionBean.context.userSession.user.individuallyAuthenticated eq 'true'}">
@@ -243,7 +243,7 @@ $(document).ready(function() {
 			$('#oneClickContent input[value="' + dlOptions.location + '"]').prop("checked", true);
 			$('#oneClickContent input[value="'+dlOptions.displaytype+'"]').prop("checked", true);
 			$('#oneClickContent input[value="'+dlOptions.format+'"]').prop("checked", true);
-			$('#filenameprefix').val(dlOptions.filenameprefix);
+			$('#filenameprefix,#dlFileNamePrefixOrg').val(dlOptions.filenameprefix);
 		}
 	</c:if>
 	$(".outputLocation").click(function (){
@@ -290,8 +290,8 @@ function checkForRefworks(radio){
 }
 function handleFnPrefix(){
 	var fileNamePrefix = $.trim($('#filenameprefix').val());
-	if(fileNamePrefix == null || fileNamePrefix.length > 50 || fileNamePrefix.length < 3){
-		if(dlOptions == undefined || dlOptions.filenameprefix == null || dlOptions.filenameprefix == undefined || dlOptions.filenameprefix ==''){
+	if(fileNamePrefix == null || fileNamePrefix.length > 50 || fileNamePrefix.length < 3 || !isValidInput(fileNamePrefix)){
+		if(typeof dlOptions === 'undefined' || dlOptions.filenameprefix == null || typeof dlOptions.filenameprefix === 'undefined' || dlOptions.filenameprefix ==''){
 			$('#filenameprefix').val($('#dlFileNamePrefixOrg').val());
 		}else{
 			$('#filenameprefix').val(dlOptions.filenameprefix);
