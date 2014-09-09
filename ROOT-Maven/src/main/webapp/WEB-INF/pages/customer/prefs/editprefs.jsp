@@ -251,7 +251,7 @@ function handleKeyPressForFileName(event){
 
 function handleFileNamePrefix(){
 	var fileNamePrefix = $.trim($('#dlFileNamePrefix').val());
-	if(fileNamePrefix == null || fileNamePrefix.length > 50 || fileNamePrefix.length < 3){
+	if(fileNamePrefix == null || fileNamePrefix.length > 50 || fileNamePrefix.length < 3 || !isValidInput(fileNamePrefix)){
 		$('#dlFileNamePrefix').val($('#dlFileNamePrefixOrg').val());
 	}
 	
