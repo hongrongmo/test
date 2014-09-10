@@ -230,7 +230,8 @@
 		GALIBRARY.createWebEventWithLabel('Preferences', 'Preferences Saved', params);
 
 		$.ajax({
-			url:url
+			url:url,
+			cache: false
 		}).success(function(data){
 			TINY.box.hide();
 			//change any highlight color on the fly

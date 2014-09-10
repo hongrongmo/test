@@ -111,6 +111,7 @@ $(document).ready(function() {
 				            $.ajax({
 				                type: 'GET',
 				                url: downloadurl,
+				                cache: false,
 				                success: function(data) {
 				                    $(origin).tooltipster('content', data);
 
