@@ -165,6 +165,7 @@ public class GeoRefCorrection
 			if(args[4]!=null)
 			{
 				action = args[4];
+				System.out.println("ACTION= "+action);
 			}
 			else
 			{
@@ -347,7 +348,9 @@ public class GeoRefCorrection
 		}
 		else
 		{
-			GeorefReader c = new GeorefReader(infile,outputFile);
+			//System.out.println("It is not ZIP file");
+			GeorefReader c = new GeorefReader(infile,outputFile,action);
+
 			c.loadNumber = loadNumber;
 			Hashtable rec;
 			while ((rec = c.getRecord()) != null) {
@@ -874,7 +877,7 @@ public class GeoRefCorrection
 
 		List outputList = new ArrayList();
 		DatabaseConfig databaseConfig = DatabaseConfig.getInstance(DriverConfig.getDriverTable());
-		String[] credentials = new String[]{"CPX","PCH","CHM","GEO"};
+		String[] credentials = new String[]{"CPX","PCH","CHM","GEO","GRF","ELT","INS"};
 		String[] dbName = {database};
 
 		int intDbMask = databaseConfig.getMask(dbName);
@@ -993,7 +996,7 @@ public class GeoRefCorrection
 			String sqlString=null;
 			if(database.equals("ins"))
 			{
-				sqlString = "select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc from new_ins_master where load_number="+updateNumber;
+				sqlString = "select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc from new_ins_master where update_number="+updateNumber;
 				System.out.println("Processing "+sqlString);
 				rs = stmt.executeQuery(sqlString);
 				results = setInspecRecs(rs);
@@ -1001,7 +1004,7 @@ public class GeoRefCorrection
 			}
 			else if(database.equals("grf"))
 			{
-				sqlString = "select * from georef_master_orig where load_number="+updateNumber;
+				sqlString = "select * from georef_master_orig where updatenumber='"+updateNumber+"'";
 				System.out.println("Processing "+sqlString);
 				rs = stmt.executeQuery(sqlString);
 				results = setGRFRecs(rs);
@@ -1051,7 +1054,7 @@ public class GeoRefCorrection
 			{
 				if(action.equals("lookupIndex") && updateNumber != 0 && database != null)
 				{
-					sqlString = "select ACCESSNUMBER,AUTHOR,AUTHOR_1,AFFILIATION,AFFILIATION_1,CONTROLLEDTERM,CHEMICALTERM,SOURCETITLE,PUBLISHERNAME,DATABASE FROM BD_MASTER where loadNumber="+updateNumber+" and database='"+database+"'";
+					sqlString = "select ACCESSNUMBER,AUTHOR,AUTHOR_1,AFFILIATION,AFFILIATION_1,CONTROLLEDTERM,CHEMICALTERM,SOURCETITLE,PUBLISHERNAME,DATABASE FROM BD_MASTER where updateNumber="+updateNumber+" and database='"+database+"'";
 				}
 				else
 				{
