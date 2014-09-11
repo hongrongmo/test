@@ -135,6 +135,28 @@ public class BdCorrection
 			if(args[1]!=null)
 			{
 				tableToBeTruncated = args[1];
+				String[] tableName = null;
+				if(tableToBeTruncated.indexOf(",")>-1)
+				{
+					tableName = tableToBeTruncated.split(",",-1);
+				}
+				else
+				{
+					tableName = new String[1];
+					tableName[0] = tableToBeTruncated;
+				}
+				if(tableName.length>0)
+				{
+						tempTable=tableName[0];
+				}
+				if(tableName.length>1)
+				{
+						lookupTable=tableName[1];
+				}
+				if(tableName.length>2)
+				{
+						backupTable=tableName[2];
+				}
 			}
 
 			if(args[2]!=null)
@@ -292,6 +314,7 @@ public class BdCorrection
 			}
 			else if(action.equalsIgnoreCase("extractupdate")||action.equalsIgnoreCase("extractdelete"))
 			{
+
 				bdc.doFastExtract(updateNumber,database,action);
 				System.out.println(database+" "+updateNumber+" fast extract is done.");
 			}
@@ -411,6 +434,7 @@ public class BdCorrection
 			else if(action.equalsIgnoreCase("delete") || action.equalsIgnoreCase("extractdelete"))
 			{
 				writer.setOperation("delete");
+				//System.out.println("select m_id from bd_master_orig where database='"+dbname+"' and updateNumber='"+updateNumber+"' and accessnumber in (select 'D'||accessnumber from "+tempTable+")");
 				rs = stmt.executeQuery("select m_id from bd_master_orig where database='"+dbname+"' and updateNumber='"+updateNumber+"' and accessnumber in (select 'D'||accessnumber from "+tempTable+")");
 				creatDeleteFile(rs,dbname,updateNumber);
 				writer.zipBatch();
@@ -539,7 +563,7 @@ public class BdCorrection
 
 			if(test)
 			{
-				System.out.println("begin to execute stored procedure update_aip_backup_table");
+				System.out.println("begin to execute stored procedure update_bd_backup_table");
 				System.out.println("press enter to continue");
 				System.in.read();
 				Thread.currentThread().sleep(1000);
@@ -850,7 +874,7 @@ public class BdCorrection
 
 		List outputList = new ArrayList();
 		DatabaseConfig databaseConfig = DatabaseConfig.getInstance(DriverConfig.getDriverTable());
-		String[] credentials = new String[]{"CPX","PCH","CHM","GEO"};
+		String[] credentials = new String[]{"CPX","PCH","CHM","GEO","GRF","ELT","INS"};
 		String[] dbName = {database};
 
 		int intDbMask = databaseConfig.getMask(dbName);
