@@ -46,14 +46,18 @@ public class BdAuthor
         if(bdData != null && bdData.trim().length() > 0)
         {
             String [] auelements = bdData.split(BdParser.IDDELIMITER, -1);
+            //System.out.println("SIZE= "+elements.size());
             for (int i = 0; i < elements.size(); i++)
             {
+				//System.out.println("I= "+i);
                 String auField = (String) elements.get(i);
 
                 if(auField.equals("sec"))
                 {
+
                     if(auelements[i]!= null && !auelements[i].trim().equals(""))
                     {
+						//System.out.println("sec= "+auelements[i]);
                         this.setSec(auelements[i]);
                     }
 
@@ -62,6 +66,7 @@ public class BdAuthor
                 {
                     if(auelements[i]!= null && !auelements[i].trim().equals(""))
                     {
+						//System.out.println("surname= "+auelements[i]);
                         this.setSurname(auelements[i]);
                     }
 
@@ -70,6 +75,7 @@ public class BdAuthor
                 {
                     if(auelements[i]!= null && !auelements[i].trim().equals(""))
                     {
+						//System.out.println("givenName= "+auelements[i]);
                         this.setGivenName(auelements[i]);
                     }
 
@@ -78,6 +84,7 @@ public class BdAuthor
                 {
                     if(auelements[i]!= null && !auelements[i].trim().equals(""))
                     {
+						//System.out.println("indexedName= "+auelements[i]);
                         this.setIndexedName(auelements[i]);
                     }
                 }
@@ -85,6 +92,7 @@ public class BdAuthor
 				{
 					if(auelements[i]!= null && !auelements[i].trim().equals(""))
 					{
+						//System.out.println("affidStr= "+auelements[i]);
 						this.setAffidString(auelements[i]);
 					}
                 }
@@ -92,6 +100,7 @@ public class BdAuthor
 				{
 					if(auelements[i]!= null && !auelements[i].trim().equals(""))
 					{
+						//System.out.println("initials= "+auelements[i]);
 						this.setInitials(auelements[i]);
 					}
                 }
@@ -99,6 +108,7 @@ public class BdAuthor
 				{
 					if(auelements[i]!= null && !auelements[i].trim().equals(""))
 					{
+						//System.out.println("eAddress= "+auelements[i]);
 						this.setEaddress(auelements[i]);
 					}
                 }
