@@ -69,7 +69,7 @@ public class NTISXMLCombiner
 
         NTISCombiner c = new NTISCombiner(writer);
 
-		if(loadNumber > 200801)
+		if(loadNumber > 100001)
 		{
             c.writeCombinedByWeekNumber(url,
                     					driver,
