@@ -78,6 +78,25 @@ public class GeorefReader {
 		out = new BufferedWriter(new FileWriter(outfile));
 	}
 
+	public GeorefReader(String fileName, String outfile, String action) throws Exception {
+			SAXBuilder builder = new SAXBuilder();
+			builder.setExpandEntities(false);
+			this.doc = builder.build(fileName);
+			Element georefRoot = doc.getRootElement();
+			System.out.println("in GeorefReader");
+			if(action.equals("delete"))
+			{
+				this.articles = georefRoot.getChildren();
+				System.out.println("SIZE= "+this.articles.size());
+			}
+			else
+			{
+				this.articles = georefRoot.getChildren("Reference");
+			}
+			this.rec = articles.iterator();
+			out = new BufferedWriter(new FileWriter(outfile));
+	}
+
 	public GeorefReader(Reader r, String outfile) throws Exception {
 
 		//super(r);
@@ -106,6 +125,7 @@ public class GeorefReader {
 		if (rec.hasNext()) {
 			Element article = (Element) rec.next();
 			record = new Hashtable();
+			//System.out.println("NAME= "+article.getName());
 
 			// ISSN
 			if (article.getChild("A01") != null) {
@@ -378,6 +398,12 @@ public class GeorefReader {
 				record.put("Z01", new StringBuffer(article.getChild("Z01")
 						.getTextTrim()));
 				idNumber = new String(article.getChild("Z01").getTextTrim());
+				//System.out.println("CHILD--ID_NUMBER= "+idNumber);
+			}
+			else if(article.getName().equals("Z01")) {
+				record.put("Z01", new StringBuffer(article.getTextTrim()));
+				idNumber = new String(article.getTextTrim());
+				//System.out.println("NAME--ID_NUMBER= "+idNumber);
 			}
 
 			// CATEGORY CODE
