@@ -6,13 +6,13 @@
 <!--import statements of ei packages.-->
 
 <%@ page import="org.ei.config.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
 <%@ page import="org.ei.data.DataCleaner"%>
 <%@ page import="org.ei.domain.*"%>
 <%@ page import="org.ei.domain.navigators.*"%>
 <%@ page import="org.ei.parser.base.*"%>
 <%@ page import="org.ei.query.base.*"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.util.GUID"%>
 <%@ page import="org.ei.util.StringUtil"%>
@@ -23,9 +23,7 @@
 <%
     ControllerClient client = new ControllerClient(request, response);
     UserSession ussession = (UserSession) client.getUserSession();
-    String sessionId = ussession.getID();
-
-    IEVWebUser user = ussession.getUser();
+    String sessionId = ussession.getSessionid();
 
     Query queryObject = null;
     try

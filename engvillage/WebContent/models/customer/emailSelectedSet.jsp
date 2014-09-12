@@ -13,8 +13,8 @@
 <%--import statements of ei packages.--%>
 <%@ page import="org.ei.domain.*"%>
 <%@ page import="org.ei.config.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*" %>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession" %>
 <%@ page import="org.ei.email.*"%>
 <%@ page import="org.ei.util.*"%>
 
@@ -36,7 +36,6 @@
 <%
     //This variable is for holding sessionId
     String sessionId = null;
-    SessionID sessionIdObj = null;
 
     // Variable to hold the reference to displayFormat
     String displayFormat = "";
@@ -48,8 +47,7 @@
     ControllerClient client = new ControllerClient(request, response);
 
     UserSession ussession = (UserSession) client.getUserSession();
-    sessionIdObj = ussession.getSessionID();
-    sessionId = ussession.getID();
+    sessionId = ussession.getSessionid();
 
     basket = new DocumentBasket(sessionId);
     int numPages = basket.countPages();
@@ -76,7 +74,7 @@
 
     if(numPages==0)
     {
-        out.write("<PAGE><SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+        out.write("<PAGE><SESSION-ID>"+sessionId+"</SESSION-ID>");
         out.write("<ERROR-PAGE>true</ERROR-PAGE>");
         out.write("</PAGE>");
         out.flush();

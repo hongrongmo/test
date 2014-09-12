@@ -6,10 +6,10 @@ import java.util.StringTokenizer;
 
 import javax.mail.MessagingException;
 
+import org.ei.biz.email.SESEmail;
+import org.ei.biz.email.SESMessage;
 import org.ei.config.ConfigService;
 import org.ei.config.RuntimeProperties;
-import org.ei.email.SESEmail;
-import org.ei.email.SESMessage;
 import org.ei.exception.InfrastructureException;
 import org.ei.exception.ServiceException;
 import org.ei.exception.SystemErrorCodes;

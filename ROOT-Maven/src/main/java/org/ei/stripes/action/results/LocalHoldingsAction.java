@@ -12,9 +12,9 @@ import net.sourceforge.stripes.action.UrlBinding;
 
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
+import org.ei.biz.email.SESEmail;
+import org.ei.biz.email.SESMessage;
 import org.ei.config.EVProperties;
-import org.ei.email.SESEmail;
-import org.ei.email.SESMessage;
 import org.ei.exception.ServiceException;
 import org.ei.stripes.action.EVActionBean;
 

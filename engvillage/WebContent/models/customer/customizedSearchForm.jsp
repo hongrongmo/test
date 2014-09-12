@@ -3,6 +3,7 @@
  * @param java.lang.String.database
  */
 -->
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
 
@@ -11,8 +12,8 @@
 <%@ page  import=" java.net.URLEncoder"%>
 
 <!--import statements of ei packages.-->
-<%@ page  import="org.ei.controller.ControllerClient"%>
-<%@ page  import="org.ei.session.*"%>
+<%@ page  import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page  import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 
 <%@ page  import="org.ei.query.base.*"%>
@@ -21,31 +22,19 @@
 <%@ page  errorPage="/error/errorPage.jsp"%>
 
 <%
-	// This variable is used to hold ControllerClient instance
-  	ControllerClient client = new ControllerClient(request, response);
-
-    IEVWebUser user = null;
-
-	ClientCustomizer clientCustomizer = null;
-
-	String customizedStartPage = null;
-
 
 	/**
 	 *  Getting the UserSession object from the Controller client .
 	 *  Getting the session id from the usersession.
 	 *
 	 */
+    ControllerClient client = new ControllerClient(request, response);
 	UserSession ussession = (UserSession) client.getUserSession();
-	
-	user=ussession.getUser();
+    ClientCustomizer clientCustomizer = new ClientCustomizer(ussession);
 
-	if(user!=null) {
-		clientCustomizer=new ClientCustomizer(ussession);
-	}
- 
     String defaultDB;
 	String startPage;
+    String customizedStartPage = null;
 
 	if(clientCustomizer.getStartPage() != null)
 	{
@@ -70,10 +59,10 @@
   	}
 
   	customizedStartPage = "CID="+startPage + "&database="+defaultDB;
-  
+
   	StringBuffer buff=new StringBuffer();
   	buff.append("/controller/servlet/Controller?").append(customizedStartPage);
-	
+
 	client.setRedirectURL(buff.toString());
 	client.setRemoteControl();
 	return;

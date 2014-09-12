@@ -2,6 +2,7 @@
  * This page the follwing params as input and generates XML output.
  * @param java.lang.String
 --%>
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java" %>
 <%@ page session="false"%>
 <%@ page contentType="text/xml"%>
@@ -10,8 +11,8 @@
 <%@ page import="java.util.*"%>
 
 <%-- import statements of ei packages. --%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.domain.*"%>
 <%@ page import="org.ei.domain.personalization.GlobalLinks"%>
@@ -19,8 +20,6 @@
 
 <%@ page errorPage="/error/errorPage.jsp"%>
 <%
-
-	SessionID sessionIdObj = null;
 
 	// Variable to hold the Personalization userid
 	String pUserId = null;
@@ -47,14 +46,12 @@
 	UserSession ussession=(UserSession)client.getUserSession();
 
 	//client.updateUserSession(ussession);
-	sessionIdObj = ussession.getSessionID();
-	String sessionId = ussession.getID();
+	String sessionId = ussession.getSessionid();
 
-	pUserId = ussession.getUserIDFromSession();
+	pUserId = ussession.getUserid();
 	if((pUserId != null) && (pUserId.trim().length() != 0)){
 		personalization=true;
 	}
-     IEVWebUser user = ussession.getUser();
 	ClientCustomizer clientCustomizer=new ClientCustomizer(ussession);
 
 	if(clientCustomizer.getRefEmail() != null &&
@@ -91,12 +88,12 @@
 
 	client.setRemoteControl();
 
-	String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
+	String strGlobalLinksXML = GlobalLinks.toXML(ussession.getCartridge());
 
 
 
 	out.write("<PAGE>");
-	out.write("<SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+	out.write("<SESSION-ID>"+sessionId+"</SESSION-ID>");
 	out.write("<CUSTOMIZED-LOGO>"+customizedLogo+"</CUSTOMIZED-LOGO>");
 	out.write("<PERSONALIZATION-PRESENT>"+isPersonalizationPresent+"</PERSONALIZATION-PRESENT>");
 	out.write("<PERSONALIZATION>"+personalization+"</PERSONALIZATION>");

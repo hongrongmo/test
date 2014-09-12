@@ -19,9 +19,9 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
+import org.ei.biz.email.SESEmail;
+import org.ei.biz.email.SESMessage;
 import org.ei.config.RuntimeProperties;
-import org.ei.email.SESEmail;
-import org.ei.email.SESMessage;
 import org.ei.exception.ServiceException;
 import org.ei.session.BlockedIPEvent;
 import org.ei.session.BlockedIPEvent.TimePeriod;
@@ -47,7 +47,7 @@ public class IPBlocker {
 
     // Available items to count
     public enum COUNTER {
-        SESSION, REQUEST, AUTHFAIL, NONCUSTOMER_REQUEST 
+        SESSION, REQUEST, AUTHFAIL, NONCUSTOMER_REQUEST
     }
 
     // Member variables
@@ -139,7 +139,7 @@ public class IPBlocker {
         log4j.info(this.blockMap.size() + " entries added to blocked IPs Map!");
 
     }
-    
+
     /**
      * Refresh blocked ips map.
      */
@@ -195,7 +195,7 @@ public class IPBlocker {
         }
 
         try {
-        	
+
         	// Priority 1 check
         	// Check the non customer request limit, this also auto block the user IP
         	if (isThresholdReached(ip, COUNTER.NONCUSTOMER_REQUEST)) {
@@ -213,16 +213,16 @@ public class IPBlocker {
                     	ipevent.setMessage("Maximum number of non customer requests exceeded (" + nonCustRequestLimit + ") in " + bucketincrementtimemin
                                 + " minutes for IP address " + ipevent.getIP());
                     }
-                    
+
                     BlockedIPStatus ipstatus = insertBlockedIPsTable(ipevent);
                     notifyEmail(ipevent, ipstatus);
-                    
+
                     // Refresh immediatly once the auto block is applied
                     if(autoBlockEnabled)refreshBlockedIpsMap();
                     return ipstatus.isBlocked();
                 }
             }
-        	
+
             // Check if bucket has signaled abuse
             if (isThresholdReached(ip, COUNTER.REQUEST)) {
                 // Take one-time action for this abuse
@@ -270,11 +270,11 @@ public class IPBlocker {
                     return ipstatus.isBlocked();
                 }
             }
-            
-            
+
+
         } catch (Throwable t) {
             log4j.error("Unable to check session/request limits!", t);
-            
+
         }
 
         // Default return false!
@@ -326,9 +326,9 @@ public class IPBlocker {
             else if (counter.equals(COUNTER.SESSION))
                 return count > sessionlimit;
             else if (counter.equals(COUNTER.AUTHFAIL))
-                return count > authFailLimit;   
+                return count > authFailLimit;
             else if (counter.equals(COUNTER.NONCUSTOMER_REQUEST))
-                return count > nonCustRequestLimit;    
+                return count > nonCustRequestLimit;
             else
                 return false;
         } catch (Throwable t) {
@@ -362,15 +362,15 @@ public class IPBlocker {
         bucket = getBucketName(ip, COUNTER.REQUEST);
         count = memcached.incr(bucket, 0, 1, bucketincrementtimemin * 60);
         statusMap.put(bucket, Long.toString(count));
-        
+
         bucket = getBucketName(ip, COUNTER.AUTHFAIL);
         count = memcached.incr(bucket, 0, 1, bucketincrementtimemin * 60);
         statusMap.put(bucket, Long.toString(count));
-        
+
         bucket = getBucketName(ip, COUNTER.NONCUSTOMER_REQUEST);
         count = memcached.incr(bucket, 0, 1, bucketincrementtimemin * 60);
         statusMap.put(bucket, Long.toString(count));
-        
+
         // Initialize if not present
         HttpSession session = request.getSession(false);
         long sessionratecount = 0;
@@ -378,7 +378,7 @@ public class IPBlocker {
         	SessionRate sessionrate = (SessionRate) session.getAttribute(IPBLOCKER_SESSION_RATE_LIMITOR_KEY);
         	if (sessionrate != null) {
         		sessionratecount = sessionrate.getTotalRequest();
-            } 
+            }
         }
         statusMap.put("CUR_SESSION_TOTAL_REQUEST", Long.toString(sessionratecount));
         return statusMap;
@@ -455,14 +455,14 @@ public class IPBlocker {
             // Update the main ipstatus entry
             BlockedIPStatus ipstatus = BlockedIPStatus.load(ipevent.getIP());
             if (ipstatus == null) {
-            	
+
             	ipstatus = new BlockedIPStatus(ipevent.getIP());
             }
-            // Apply auto block only when the non customer request limit is exceeded and auto block flag is enabled 
+            // Apply auto block only when the non customer request limit is exceeded and auto block flag is enabled
             if(ipevent.getEvent().equalsIgnoreCase(COUNTER.NONCUSTOMER_REQUEST.name()) && autoBlockEnabled){
             	ipstatus.setStatus(BlockedIPStatus.STATUS_BLOCKED);
             }
-            ipstatus.addAccount(org.ei.domain.personalization.cars.Account.getAccountInfo(ipevent.getIP()));
+            ipstatus.addAccount(org.ei.biz.personalization.cars.Account.getAccountInfo(ipevent.getIP()));
             ipstatus.save();
 
             return ipstatus;
@@ -548,8 +548,8 @@ public class IPBlocker {
     public long getReloadInterval() {
         return reloadInterval;
     }
-    
-    
+
+
     /**
      * Checks if is request per session rate exceeded.
      *
@@ -557,14 +557,14 @@ public class IPBlocker {
      * @return true, if is request per session rate exceeded
      */
     public boolean isRequestPerSessionRateExceeded(HttpServletRequest request) {
-    	
-    
+
+
     	boolean isBlocked = false;
-    	
+
         HttpSession session = request.getSession(false);
         if (session == null)
             return false;
-        
+
         // Initialize if not present
         SessionRate sessionrate = (SessionRate) session.getAttribute(IPBLOCKER_SESSION_RATE_LIMITOR_KEY);
         if (sessionrate == null) {
@@ -572,14 +572,14 @@ public class IPBlocker {
         }else {
             sessionrate.incrementTotalRequest();
         }
-        
+
         long seconds = (new Date().getTime() - sessionrate.getFirstrequest()) / 1000;
-        
+
         //Reset the session rate object once the predefined reset time is reached, and don't reset the value of  'blockWithCaptcha'
         if(seconds>(bucketincrementtimemin*60)){
         	sessionrate.reset(false);
         }
-        
+
         //If the session is blocked already, only block the non ajax requests, because that leads to partial page rendering in many of our pages
         if(sessionrate.isBlockWithCaptcha()){
         	isBlocked =  !isAjax(request);
@@ -606,7 +606,7 @@ public class IPBlocker {
         session.setAttribute(IPBLOCKER_SESSION_RATE_LIMITOR_KEY, sessionrate);
         return isBlocked;
     }
-    
+
     /**
      * Builds the in coming url.
      *
@@ -614,19 +614,19 @@ public class IPBlocker {
      * @param sessionRate the session rate
      */
     private void buildInComingUrl(HttpServletRequest request, SessionRate sessionRate)  {
-		
-    	//Don't build the url if the current request is ajax or captcha related 
-    	if(isAjax(request) || 
-    			request.getRequestURI().contains("captcha/display.url") || 
-    			request.getRequestURI().contains("captcha/verify.url") || 
-    			request.getRequestURI().contains("captcha/image.url") || 
+
+    	//Don't build the url if the current request is ajax or captcha related
+    	if(isAjax(request) ||
+    			request.getRequestURI().contains("captcha/display.url") ||
+    			request.getRequestURI().contains("captcha/verify.url") ||
+    			request.getRequestURI().contains("captcha/image.url") ||
     			request.getRequestURI().contains("system/endsession.url")){
     		return ;
     	}
-    	
+
     	//To identify this is the url generated as part of captch block, adding the 'redirectFlow' parameter
     	StringBuffer redirect  = new StringBuffer(request.getRequestURI()+"?redirectFlow=Generic&");
-    	
+
     	try {
     		Enumeration<String> e = request.getParameterNames();
         	while(e.hasMoreElements())
@@ -636,15 +636,15 @@ public class IPBlocker {
     			if(name.equalsIgnoreCase("database"))
     			{
     				int dbvalue = 0;
-    				String[] multiValue = request.getParameterValues(name);	    				
+    				String[] multiValue = request.getParameterValues(name);
     				for(int i=0;i<multiValue.length; i++)
-    				{	    					
+    				{
     					dbvalue += Integer.parseInt(multiValue[i]);
     				}
     				value = Integer.toString(dbvalue);
     			}else{
     				value = (String) request.getParameter(name);
-    			}	    				    				    		
+    			}
     			redirect.append(name + "=" + URLEncoder.encode(value, "UTF-8"));
     			if (e.hasMoreElements()) redirect.append("&");
     		}
@@ -654,12 +654,12 @@ public class IPBlocker {
 			sessionRate.setIncomingUrl("/home.url?redirectFlow=Generic&");
 		}
     }
-    
+
     private static boolean isAjax(HttpServletRequest request) {
 	   return "XMLHttpRequest"
 	             .equals(request.getHeader("X-Requested-With"));
 	}
-    
+
     /**
      * Inner class to track request rate.
      *
@@ -667,9 +667,9 @@ public class IPBlocker {
      *
      */
     public static class SessionRate implements Serializable{
-        
+
     	private static final long serialVersionUID = 6009901472688306504L;
-		
+
 		private int totalRequest = 1;
         private long firstrequest = new Date().getTime();
         private boolean blockWithCaptcha = false;
@@ -715,11 +715,11 @@ public class IPBlocker {
             	blockWithCaptcha = false;
             }
         }
-		
+
 		public int incrementTotalRequest() {
             return ++totalRequest;
         }
 
     }
-    
+
 }

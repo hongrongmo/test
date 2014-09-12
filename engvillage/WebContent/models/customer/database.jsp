@@ -1,7 +1,14 @@
+<%@page import="java.util.Map"%>
+<%@page import="org.ei.util.StringUtil"%>
+<%@page import="org.ei.domain.Database"%>
+<%@page import="java.util.List"%>
+<%@page import="java.util.Arrays"%>
+<%@page import="org.ei.domain.DatabaseConfig"%>
+<%@page import="java.util.Hashtable"%>
 <%
     String database=null;
 
-    Map dataBaseNames = new Hashtable();
+    Map<String,String> dataBaseNames = new Hashtable<String,String>();
 
 
     // - - - -BIBLIOGRAPHIC DATABASES- - - -
@@ -106,7 +113,7 @@
 <%
 
 
-    String[] cars = user.getCartridge();
+    String[] cars = ussession.getCartridge();
     //System.out.println("Cartridge= "+user.getCartridgeString());
 
     List lstCarts = Arrays.asList(cars);

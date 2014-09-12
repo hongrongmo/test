@@ -5,6 +5,8 @@
  * @param java.lang.String.docids
  * @param java.lang.String.databaseid
 -->
+<%@page import="org.engvillage.config.RuntimeProperties"%>
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
 <%@ page buffer="20kb"%>
@@ -12,8 +14,8 @@
 <%@ page import="java.net.*"%>
 
 <!--import statements of ei packages.-->
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.domain.*"%>
@@ -47,7 +49,7 @@
      */
 	UserSession ussession=(UserSession)client.getUserSession();
 	//client.updateUserSession(ussession);
-	sessionId=ussession.getID();
+	sessionId=ussession.getSessionid();
 
 	// Varaible to hold the current User id
 	String userId = null;
@@ -63,12 +65,12 @@
         isPersonalizationPresent=clientCustomizer.checkPersonalization();
     }
 
-	sUserId=ussession.getUserIDFromSession();
+	sUserId=ussession.getUserid();
     if((sUserId != null) && (sUserId.length() != 0))
     {
         personalization=true;
     }
-	
+
 	//client.updateUserSession(ussession);
 	DocumentBasket basket=new DocumentBasket(sessionId);
 	int basketSize=0;
@@ -85,7 +87,7 @@
 
 	String backurl = request.getParameter("backurl");
 	String docid = request.getParameter("docid");
-	
+
 	if(request.getParameter("source") != null)
 	{
 		source = request.getParameter("source");
@@ -100,7 +102,7 @@
 		count = request.getParameter("count");
 	}
 
-	RuntimeProperties eiProps = ConfigService.getRuntimeProperties();
+	RuntimeProperties eiProps = RuntimeProperties.getInstance();
 	int maxFolderSize=0;
 	maxFolderSize = Integer.parseInt(eiProps.getProperty("MAXFOLDERSIZE"));
 
@@ -108,8 +110,8 @@
 	folderList=sr.viewListOfFolders();
 
 	xmlString.append("<PAGE>");
-    
-    if(backurl != null) 
+
+    if(backurl != null)
     {
 	    xmlString.append("<BACKURL>");
 	    xmlString.append(URLEncoder.encode(backurl));
@@ -117,11 +119,10 @@
 	}
 
     // NOV 2004
-    // jam added when pop-up login removed 
-     IEVWebUser user = ussession.getUser();
-    
+    // jam added when pop-up login removed
+
     xmlString.append("<HEADER/>");
-    xmlString.append(GlobalLinks.toXML(user.getCartridge()));
+    xmlString.append(GlobalLinks.toXML(ussession.getCartridge()));
     xmlString.append("<FOOTER/>");
 
 	xmlString.append("<DATABASE>").append(database).append("</DATABASE>");
@@ -152,7 +153,7 @@
     xmlString.append("<CUSTOMIZED-LOGO>").append(customizedLogo ).append("</CUSTOMIZED-LOGO>");
     xmlString.append("<PERSONALIZATION-PRESENT>").append(isPersonalizationPresent).append("</PERSONALIZATION-PRESENT>");
     xmlString.append("<PERSONALIZATION>").append(personalization).append("</PERSONALIZATION>");
-	
+
 	xmlString.append("</PAGE>");
 
 	out.write(xmlString.toString());

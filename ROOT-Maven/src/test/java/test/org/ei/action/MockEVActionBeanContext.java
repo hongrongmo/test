@@ -9,9 +9,9 @@ import java.util.Set;
 
 import org.apache.log4j.Logger;
 import org.ei.ane.entitlements.UserEntitlement;
+import org.ei.biz.personalization.EVWebUser;
+import org.ei.biz.personalization.IEVWebUser;
 import org.ei.controller.logging.LogEntry;
-import org.ei.domain.personalization.EVWebUser;
-import org.ei.domain.personalization.IEVWebUser;
 import org.ei.exception.SessionException;
 import org.ei.session.CartridgeBuilder;
 import org.ei.session.UserPreferences;

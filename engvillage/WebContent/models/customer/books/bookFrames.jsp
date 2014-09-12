@@ -6,8 +6,8 @@
 <%@ page import="java.io.*"%>
 <%@ page import="org.ei.service.*"%>
 <%@ page import="java.text.DecimalFormat"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.domain.*" %>
 <%@ page import="org.ei.config.*"%>
@@ -26,7 +26,7 @@
     public void jspInit()
     {
     	  try {
-      	  RuntimeProperties eiProps = ConfigService.getRuntimeProperties();
+      	  RuntimeProperties eiProps = RuntimeProperties.getInstance();
       	  wobl_url = eiProps.getProperty(RuntimeProperties.WHOLE_BOOK_DOWNLOAD_BASE_URL);
         } catch(Exception e) {
             e.printStackTrace();
@@ -117,8 +117,8 @@
 	ControllerClient client = new ControllerClient(request, response);
 	UserSession ussession = (UserSession) client.getUserSession();
 	IEVWebUser user = ussession.getUser();
-	String customerId = user.getCustomerID();
-	String sessionId = ussession.getID();
+	String customerId = ussession.getCustomerid();
+	String sessionId = ussession.getSessionid();
 	String strTicket = BookDocument.getReadPageTicket(isbn, customerId);
 
 	StringBuffer pdfurl = new StringBuffer();

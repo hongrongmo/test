@@ -9,9 +9,9 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 import org.apache.log4j.Logger;
+import org.ei.biz.personalization.EVWebUser;
+import org.ei.biz.personalization.IEVWebUser;
 import org.ei.connectionpool.ConnectionBroker;
-import org.ei.domain.personalization.EVWebUser;
-import org.ei.domain.personalization.IEVWebUser;
 import org.ei.exception.SessionException;
 import org.ei.exception.SystemErrorCodes;
 import org.ei.util.TimedObject;

@@ -1,3 +1,4 @@
+<%@page import="org.engvillage.config.RuntimeProperties"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
 
@@ -18,8 +19,8 @@
 
 <!--import statements of ei packages.-->
 <%@ page import="org.ei.domain.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.config.*"%>
 <%@ page import="org.ei.tags.*"%>
@@ -60,7 +61,7 @@
     {
         try
         {
-            RuntimeProperties runtimeProps = ConfigService.getRuntimeProperties();
+            RuntimeProperties runtimeProps = RuntimeProperties.getInstance();
             pagesize = Integer.parseInt(runtimeProps.getProperty("PAGESIZE"));
 
             databaseConfig = DatabaseConfig.getInstance();
@@ -74,12 +75,11 @@
 
 	client = new ControllerClient(request, response);
 	UserSession ussession=(UserSession)client.getUserSession();
-	sessionId = ussession.getID();
-	 IEVWebUser user = ussession.getUser();
-	String pUserId = ussession.getUserIDFromSession();
-	String customerId=user.getCustomerID().trim();
+	sessionId = ussession.getSessionid();
+	String pUserId = ussession.getUserid();
+	String customerId=ussession.getCustomerid().trim();
 
-	String[] credentials = user.getCartridge();
+	String[] credentials = ussession.getCartridge();
 
 	if(request.getParameter("database") != null)
 	{
@@ -288,7 +288,7 @@
 		}
 
 		redirectURL="/home.url?CID="+CID+"&searchid="+searchid+"&COUNT="+count+"&database="+database;
-		
+
 	}
 
 	client.setRedirectURL(redirectURL);

@@ -1,6 +1,6 @@
 package org.ei.biz.security;
 
-import org.ei.domain.personalization.IEVWebUser;
+import org.ei.biz.personalization.IEVWebUser;
 import org.ei.session.UserPreferences;
 
 /**

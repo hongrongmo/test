@@ -9,6 +9,7 @@ import net.sourceforge.stripes.action.StreamingResolution;
 import net.sourceforge.stripes.action.UrlBinding;
 
 import org.apache.commons.validator.GenericValidator;
+import org.ei.biz.personalization.IEVWebUser;
 import org.ei.domain.Database;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.DocID;
@@ -17,7 +18,6 @@ import org.ei.domain.LinkedTermDetail;
 import org.ei.domain.MultiDatabaseDocBuilder;
 import org.ei.domain.Query;
 import org.ei.domain.Searches;
-import org.ei.domain.personalization.IEVWebUser;
 import org.ei.exception.EVBaseException;
 import org.ei.parser.base.BooleanQuery;
 import org.ei.query.base.FastQueryWriter;

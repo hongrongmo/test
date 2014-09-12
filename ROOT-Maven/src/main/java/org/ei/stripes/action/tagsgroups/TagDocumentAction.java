@@ -18,10 +18,10 @@ import net.sourceforge.stripes.action.UrlBinding;
 
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
+import org.ei.biz.email.SESEmail;
+import org.ei.biz.email.SESMessage;
 import org.ei.biz.security.IAccessControl;
 import org.ei.biz.security.TagsGroupsIndivAccessControl;
-import org.ei.email.SESEmail;
-import org.ei.email.SESMessage;
 import org.ei.stripes.action.EVActionBean;
 import org.ei.stripes.action.EVPathUrl;
 import org.ei.stripes.action.SystemMessage;
@@ -40,7 +40,7 @@ public class TagDocumentAction extends EVActionBean implements IPersonalLogin {
 	private final static Logger log4j = Logger.getLogger(TagDocumentAction.class);
 
 	public static final String TAGDOC_URL = "/tagsgroups/doc.url";
-	
+
 	// Scope of the tag request. Can contain the following values:
 	// 1 - Public tags (default)
 	// 2 - Private tags
@@ -60,7 +60,7 @@ public class TagDocumentAction extends EVActionBean implements IPersonalLogin {
 	private String tagdoc;
 
 	/**
-	 * Override for the ISecuredAction interface.  This ActionBean requires 
+	 * Override for the ISecuredAction interface.  This ActionBean requires
 	 * individual authentication
 	 */
 	@Override
@@ -70,12 +70,12 @@ public class TagDocumentAction extends EVActionBean implements IPersonalLogin {
 
 	/**
 	 * Tags and groups add tag(s) for a document
-	 * 
+	 *
 	 * @return Resolution
 	 * @throws Exception
 	 */
 	@DefaultHandler
-	@HandlesEvent("addtag") 
+	@HandlesEvent("addtag")
 	@DontValidate
 	public Resolution addtag() {
 		log4j.info("Adding tag(s) '" + searchgrouptags + "' for doc ID: '" + tagdoc + "', scope=" + scope);
@@ -85,7 +85,7 @@ public class TagDocumentAction extends EVActionBean implements IPersonalLogin {
 			if (GenericValidator.isBlankOrNull(backurl)) {
 				backurl = EVPathUrl.EV_HOME.value();
 			}
-			
+
 			// Ensure params are present
 			if (GenericValidator.isBlankOrNull(searchgrouptags) ||
 				GenericValidator.isBlankOrNull(scope) ||
@@ -94,7 +94,7 @@ public class TagDocumentAction extends EVActionBean implements IPersonalLogin {
 				log4j.warn("Invalid arguments - tag, tagdoc & scope must be present!");
 				// TODO add error message for page?  There's javascript validation so I'm
 				// being lazy and not coding a message since you shouldn't be able to get here...
-				return new RedirectResolution(backurl); 
+				return new RedirectResolution(backurl);
 			}
 
 			// Ensure user is logged in...
@@ -106,7 +106,7 @@ public class TagDocumentAction extends EVActionBean implements IPersonalLogin {
 			}
 			String customerId = context.getUserSession().getUser().getCustomerID().trim();
 			String userid = context.getUserid();
-	
+
 			// Get the scope - PUBLIC, PRIVATE, etc.  If GROUP, it will be of format: "3:[groupid]"
 			int iscope = -1;
 			String groupID = null;
@@ -115,7 +115,7 @@ public class TagDocumentAction extends EVActionBean implements IPersonalLogin {
 			if (scopesplit.length > 1) {
 				groupID = scopesplit[1];
 			}
-	
+
 			// Add the tag(s) via the TagBroker
 			TagBroker broker = new TagBroker();
 			String[] split = searchgrouptags.split(",");
@@ -123,7 +123,7 @@ public class TagDocumentAction extends EVActionBean implements IPersonalLogin {
 				log4j.warn("No tags could be found!");
 				// TODO add error message for page?  There's javascript validation so I'm
 				// being lazy and not coding a message since you shouldn't be able to get here...
-				return new RedirectResolution(backurl); 
+				return new RedirectResolution(backurl);
 			}
 			for (String tag : split) {
 				// Ensure tag is not empty
@@ -136,7 +136,7 @@ public class TagDocumentAction extends EVActionBean implements IPersonalLogin {
 				if (tdocParts.length < 2) {
 					continue;
 				}
-				
+
 				// Build tag object
 				Tag otag = new Tag();
 				otag.setTag(tag);
@@ -160,16 +160,16 @@ public class TagDocumentAction extends EVActionBean implements IPersonalLogin {
 
 			// Return the tag link
 			return new RedirectResolution(URLDecoder.decode(backurl, "UTF-8"));
-		
+
 		} catch (Exception e) {
 			log4j.error("Unable to process request!",e);
-			return SystemMessage.SYSTEM_ERROR_RESOLUTION; 
+			return SystemMessage.SYSTEM_ERROR_RESOLUTION;
 		}
 	}
-	
+
 	/**
 	 * Tags and groups edit tag for a document
-	 * 
+	 *
 	 * @return Resolution
 	 * @throws Exception
 	 */
@@ -210,7 +210,7 @@ public class TagDocumentAction extends EVActionBean implements IPersonalLogin {
 
 	/**
 	 * Build and send an email to tag group members
-	 * 
+	 *
 	 * @param userid
 	 * @param groupID
 	 * @param multiTag
@@ -228,9 +228,9 @@ public class TagDocumentAction extends EVActionBean implements IPersonalLogin {
 
 		String subject = "Engineering Village Tag Group Notification";
 		StringBuffer message = new StringBuffer();
-		
+
 		message.append("This email was sent to you on behalf of " + from + ".<br/><br/>\n \n" );
-		
+
 		message.append("Note to all members of the Tag Group: ");
 		message.append(group.getTitle());
 		message.append("<br>\r\n");
@@ -268,7 +268,7 @@ public class TagDocumentAction extends EVActionBean implements IPersonalLogin {
 
 	/**
 	 * Get email list for group members
-	 * 
+	 *
 	 * @param members
 	 * @return
 	 */
@@ -283,7 +283,7 @@ public class TagDocumentAction extends EVActionBean implements IPersonalLogin {
 
 	/**
 	 * Get list of recently-used tags
-	 * 
+	 *
 	 * @param tags
 	 * @param appliedTags
 	 * @return
@@ -309,7 +309,7 @@ public class TagDocumentAction extends EVActionBean implements IPersonalLogin {
 
 	/**
 	 * Convenience method to check if tag is in a list.
-	 * 
+	 *
 	 * @param tagName
 	 * @param appliedTags
 	 * @return
@@ -327,27 +327,27 @@ public class TagDocumentAction extends EVActionBean implements IPersonalLogin {
     public String getLoginNextUrl() {
         // We have to get parms off of request since Stripes hasn't done
         // Binding and Validation yet!
-        HttpServletRequest request = context.getRequest();      
+        HttpServletRequest request = context.getRequest();
         tagdoc = request.getParameter("tagdoc");
         scope = request.getParameter("scope");
         searchgrouptags = request.getParameter("searchgrouptags");
 
         return TAGDOC_URL + "?" + context.getEventName() + "=true&scope="+scope+"&tagdoc="+tagdoc+"&searchgrouptags="+searchgrouptags;
     }
-    
+
     @Override
     public String getLoginCancelUrl() {
-        HttpServletRequest request = context.getRequest();      
+        HttpServletRequest request = context.getRequest();
         return request.getParameter("backurl");
     }
-    
+
 
 	//
 	//
 	// GETTERS/SETTERS
 	//
 	//
-	
+
 	public String getScope() {
 		return scope;
 	}

@@ -36,6 +36,7 @@ import org.apache.log4j.Logger;
 import org.ei.ane.entitlements.UserEntitlement;
 import org.ei.ane.entitlements.UserEntitlement.ENTITLEMENT_TYPE;
 import org.ei.biz.access.AccessException;
+import org.ei.biz.personalization.IEVWebUser;
 import org.ei.books.collections.ReferexCollection;
 import org.ei.controller.logging.LogEntry;
 import org.ei.domain.Database;
@@ -46,9 +47,10 @@ import org.ei.domain.Query;
 import org.ei.domain.SearchForm;
 import org.ei.domain.SearchValidator;
 import org.ei.domain.SearchValidator.SearchValidatorStatus;
+import org.ei.domain.SearchValidatorRequest;
 import org.ei.domain.Searches;
-import org.ei.domain.personalization.IEVWebUser;
 import org.ei.domain.personalization.SavedSearches;
+import org.ei.domain.personalization.SearchHistory;
 import org.ei.exception.InfrastructureException;
 import org.ei.exception.SearchException;
 import org.ei.exception.SessionException;
@@ -65,7 +67,6 @@ import org.ei.stripes.action.WebAnalyticsEventProperties;
 import org.ei.stripes.exception.EVExceptionHandler;
 import org.ei.stripes.util.DatabaseSelector;
 import org.ei.stripes.view.EbookSearchFormItem;
-import org.ei.stripes.view.SearchHistory;
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.input.SAXBuilder;
@@ -420,8 +421,16 @@ public class SearchDisplayAction extends BaseSearchAction implements ValidationE
         //
         // Use SearchValidator to validate incoming search
         //
+        SearchValidatorRequest validatorrequest = new SearchValidatorRequest();
+        validatorrequest.setCartridge(usersession.getCartridge());
+        validatorrequest.setDatabasemask(Integer.parseInt(database));
+        validatorrequest.setSearchform(this);
+        validatorrequest.setSearchtype(this.searchtype);
+        validatorrequest.setSessionid(usersession.getSessionid());
+        validatorrequest.setUserid(usersession.getUserid());
+
         SearchValidator searchvalidator = new SearchValidator();
-        SearchValidatorStatus status = searchvalidator.validate(searchtype, Integer.parseInt(database), usersession, this);
+        SearchValidatorStatus status = searchvalidator.validate(validatorrequest);
 
         if (status != SearchValidatorStatus.SUCCESS) {
             String searchformURL = EVPathUrl.EV_QUICK_SEARCH.value() + "?CID=quickSearch&database=" + database + "&showpatentshelp=" + showpatentshelp;
@@ -549,8 +558,16 @@ public class SearchDisplayAction extends BaseSearchAction implements ValidationE
         //
         // Use SearchValidator to validate incoming search
         //
+        SearchValidatorRequest validatorrequest = new SearchValidatorRequest();
+        validatorrequest.setCartridge(usersession.getCartridge());
+        validatorrequest.setDatabasemask(Integer.parseInt(database));
+        validatorrequest.setSearchform(this);
+        validatorrequest.setSearchtype(this.searchtype);
+        validatorrequest.setSessionid(usersession.getSessionid());
+        validatorrequest.setUserid(usersession.getUserid());
+
         SearchValidator searchvalidator = new SearchValidator();
-        SearchValidatorStatus status = searchvalidator.validate(searchtype, Integer.parseInt(database), usersession, this);
+        SearchValidatorStatus status = searchvalidator.validate(validatorrequest);
 
         if (status != SearchValidatorStatus.SUCCESS) {
             String searchformURL = EVPathUrl.EV_QUICK_SEARCH.value() + "?CID=quickSearch&database=" + database + "&showpatentshelp=" + showpatentshelp;

@@ -1,6 +1,6 @@
-<%@ page language="java" %><%@ page session="false" %><%@ page import="java.util.*"%><%@ page import="java.net.URLEncoder"%><%@ page import="org.ei.domain.*"%><%@ page import="org.ei.controller.ControllerClient"%><%@ page import="org.ei.session.*"%>
+<%@page import="org.engvillage.config.RuntimeProperties"%>
+<%@ page language="java" %><%@ page session="false" %><%@ page import="java.util.*"%><%@ page import="java.net.URLEncoder"%><%@ page import="org.ei.domain.*"%><%@ page import="org.engvillage.biz.controller.ControllerClient"%><%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%><%@ page import="org.ei.config.*"%><%@ page import="org.ei.query.base.*"%><%@ page import="org.ei.domain.Searches"%><%@ page import="org.ei.tags.*"%><%@ page import="org.ei.domain.personalization.GlobalLinks"%><%@ page import="org.ei.domain.personalization.SavedSearches"%><%@ page  errorPage="/error/errorPage.jsp"%><%
-	SessionID sessionIdObj = null;
 	ControllerClient client = null;
 %><%!
     int customizedEndYear = (Calendar.getInstance()).get(Calendar.YEAR);
@@ -12,7 +12,7 @@
     {
         try
         {
-            RuntimeProperties runtimeProps = ConfigService.getRuntimeProperties();
+            RuntimeProperties runtimeProps = RuntimeProperties.getInstance();
             pagesize = Integer.parseInt(runtimeProps.getProperty("PAGESIZE"));
             dedupSetSize = Integer.parseInt(runtimeProps.getProperty("DEDUPSETSIZE"));
 
@@ -27,9 +27,8 @@
 %><%
 	client = new ControllerClient(request, response);
 	UserSession ussession=(UserSession)client.getUserSession();
-	 IEVWebUser user = ussession.getUser();
-	String pUserId = ussession.getUserIDFromSession();
-	String customerId=user.getCustomerID().trim();
+	String pUserId = ussession.getUserid();
+	String customerId=ussession.getCustomerid().trim();
 	String docID = null;
 	if (request.getParameter("tagdoc") != null)
 	{

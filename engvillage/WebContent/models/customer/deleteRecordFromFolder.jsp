@@ -14,8 +14,8 @@
 <!--import statements of ei packages.-->
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.domain.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 
 <%@ page  errorPage="/error/errorPage.jsp"%>
@@ -38,21 +38,13 @@
 	String sessionid=null;
 
 	UserSession ussession=(UserSession)client.getUserSession();
-	sessionid = ussession.getID();
-	IEVWebUser user = ussession.getUser();
+	sessionid = ussession.getSessionid();
 
 	String userId = null;
 	String sUserId=null;
 	String backurl=null;
 
-	sUserId=ussession.getUserIDFromSession();
-
-	if( sUserId != null)
-	{
-		userId = sUserId;
-	}else{
-    	userId = user.getUserId();
-    }
+	userId=ussession.getUserid();
 
     if(request.getParameter("backurl") != null)
     {

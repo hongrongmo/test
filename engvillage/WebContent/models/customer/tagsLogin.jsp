@@ -9,6 +9,7 @@ and
 3. redirects to the appropriate page based on the displayform value
 if the authentication is successfull.
 -->
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
 <%@ page errorPage="/error/errorPage.jsp"%>
@@ -16,8 +17,8 @@ if the authentication is successfull.
 <%@ page import="java.net.*"%>
 <%@ page import="java.util.*"%>
 <%@ page import="org.ei.domain.personalization.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.domain.*"%>
 <%@ page import="org.ei.tags.*"%>
@@ -51,11 +52,9 @@ if the authentication is successfull.
 	//get the client session object from that get the session id.
 	client = new ControllerClient(request,response);
 	UserSession ussession=(UserSession)client.getUserSession();
-	String sSessionId = ussession.getID();
-	SessionID sessionIdObj = ussession.getSessionID();
-	 IEVWebUser user = ussession.getUser();
-	String customerId=user.getCustomerID().trim();
-	String strContractId = user.getContractID().trim();
+	String sSessionId = ussession.getSessionid();
+	String customerId=ussession.getCustomerid().trim();
+	String strContractId = ussession.getContractid().trim();
 
 	clientCustomizer=new ClientCustomizer(ussession);
 	if(clientCustomizer.isCustomized())
@@ -64,7 +63,7 @@ if the authentication is successfull.
 		isPersonalizationPresent=clientCustomizer.checkPersonalization();
 	}
 
-	pUserId = ussession.getUserIDFromSession();
+	pUserId = ussession.getUserid();
 	if((pUserId != null) && (pUserId.length() != 0))
 	{
 		personalization=true;
@@ -73,11 +72,11 @@ if the authentication is successfull.
 	database = clientCustomizer.getDefaultDB();
 	sb.append("<DBMASK>").append(database).append("</DBMASK>");
     sb.append("<HEADER/><GROUPS-NAVIGATION-BAR/>");
-    sb.append(GlobalLinks.toXML(user.getCartridge()));
+    sb.append(GlobalLinks.toXML(ussession.getCartridge()));
     sb.append("<FOOTER/>");
 
 
-    sb.append("<SESSION-ID>").append(sessionIdObj.toString()).append("</SESSION-ID>");
+    sb.append("<SESSION-ID>").append(sSessionId).append("</SESSION-ID>");
     sb.append("<CUSTOMIZED-LOGO>").append(customizedLogo ).append("</CUSTOMIZED-LOGO>");
     sb.append("<PERSONALIZATION-PRESENT>").append(isPersonalizationPresent).append("</PERSONALIZATION-PRESENT>");
     sb.append("<PERSONALIZATION>").append(personalization).append("</PERSONALIZATION>");
@@ -139,7 +138,7 @@ if the authentication is successfull.
 
 
    Scope sc = new Scope(pUserId,scopeParam);
-   
+
    sc.toXML(out);
 
    TagGroupBroker groupBroker = new TagGroupBroker();

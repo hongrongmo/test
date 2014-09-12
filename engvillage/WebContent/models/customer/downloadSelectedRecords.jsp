@@ -10,6 +10,7 @@
  * @param java.lang.String.docidlist
  * @param java.lang.String.handlelist
 --%>
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
 
@@ -18,8 +19,8 @@
 <%@ page  import=" java.net.*"%>
 <%-- import statements of ei packages.--%>
 <%@ page import="org.ei.domain.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page  errorPage="/error/errorPage.jsp"%>
 <%@ page buffer="20kb"%>
@@ -63,9 +64,8 @@
 	client = new ControllerClient(request, response);
 	UserSession ussession=(UserSession)client.getUserSession();
 
-	sessionId = ussession.getID();
+	sessionId = ussession.getSessionid();
 
-	 IEVWebUser user = ussession.getUser();
 	ClientCustomizer clientCustomizer=new ClientCustomizer(ussession);
 	isPersonalizationPresent=clientCustomizer.checkPersonalization();
 	customizedLogo=clientCustomizer.getLogo();
@@ -216,14 +216,14 @@
 	basketContentStringBuffer.append("<!--EH-->");
 	out.write(basketContentStringBuffer.toString());
 
-	
+
 	for(int i=0; i<page1.docCount();i++)
 	{
 		EIDoc doc = page1.docAt(i);
 		out.write("<!--BR--><PAGE-ENTRY>");
 		doc.toXML(out);
 		out.write("</PAGE-ENTRY><!--ER-->");
-	
+
 	}
 
 	out.write("<!--*-->");

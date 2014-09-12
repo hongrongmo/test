@@ -10,7 +10,7 @@
 int startYearOpt = 0;
 final int endYearOpt = org.ei.domain.SearchForm.ENDYEAR;
 int intMask = Integer.parseInt(database);
-int intUpgradeMask = (DatabaseConfig.getInstance()).doUpgrade(intMask, user.getCartridge());
+int intUpgradeMask = (DatabaseConfig.getInstance()).doUpgrade(intMask, ussession.getCartridge());
 boolean doUpgrade = (intUpgradeMask != intMask);
 //Page oPage=null;
 
@@ -526,10 +526,10 @@ else
         </OPTIONS>
     </UPDATES>
 <%
-    int userMaskMAX = (DatabaseConfig.getInstance()).getMask(user.getCartridge());
-    int userScrubbedMaskMAX = (DatabaseConfig.getInstance()).getScrubbedMask(user.getCartridge());
+    int userMaskMAX = (DatabaseConfig.getInstance()).getMask(ussession.getCartridge());
+    int userScrubbedMaskMAX = (DatabaseConfig.getInstance()).getScrubbedMask(ussession.getCartridge());
 
-    //System.out.println("USER_Cartridge= "+user.getCartridge());
+    //System.out.println("USER_Cartridge= "+ussession.getCartridge());
     //System.out.println("userMaskMAX= "+userMaskMAX);
     //System.out.println("userScrubbedMaskMAX= "+userScrubbedMaskMAX);
 
@@ -611,7 +611,7 @@ else
   if(reqCID != null && dbCode != null && (reqCID.startsWith("ebookSearch") || (dbCode.equals("131072") && reqCID.startsWith("errorQuickSearchResult"))))
   {
   //output browse collections
-      String[] creds = user.getCartridge();
+      String[] creds = ussession.getCartridge();
       Arrays.sort(creds);
       boolean perpetual =  (Arrays.binarySearch(creds, "BPE") >= 0);
       boolean col = true, colstar = true;

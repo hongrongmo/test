@@ -5,6 +5,8 @@
  * @param java.lang.String.SEARCHID
   * @param java.lang.String.SEARCHQUERY
  --%>
+<%@page import="org.engvillage.config.RuntimeProperties"%>
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java" %>
 <%@ page errorPage="/error/errorPage.jsp" %>
 <%@ page buffer="20kb"%>
@@ -14,15 +16,13 @@
 <%@ page import="org.ei.domain.*"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.config.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*" %>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession" %>
 <%@ page import="org.ei.config.*"%>
 <%
  	// Variable to hold the no.of documents in the document basket
 	int docBasketPageSize = 0 ;
 
-	// Varaible to hold the current session id OBJECT
-	SessionID SessionIDObj = null;
 	// variable to hold the Session ID w/o the prefix
 	// or could be called the Session Key
 	String strSessionKey = null;
@@ -31,10 +31,10 @@
 	String cid="citationBasket";
 	// Variable to hold the URL to which the control is redirected when there are no documents in the Document Basket
 	String urlString=null;
-	
+
 
 	String documentFormat=null;
-	
+
 	int pagesize = 0;
 	int numpages = 0;
 
@@ -64,7 +64,7 @@
 	{
 		try
 		{
-			RuntimeProperties runtimeProps= ConfigService.getRuntimeProperties();
+			RuntimeProperties runtimeProps= RuntimeProperties.getInstance();
 			pageSize = runtimeProps.getProperty("BASKETPAGESIZE");
 			docBasketPageSize=Integer.parseInt(pageSize.trim());
 		}
@@ -83,11 +83,8 @@
 
 	//client.updateUserSession(ussession);
 
-	strSessionKey = ussession.getID();
-	SessionIDObj = ussession.getSessionID();
-
-	IEVWebUser user = ussession.getUser();
-	String customerId=user.getCustomerID().trim();
+	strSessionKey = ussession.getSessionid();
+	String customerId=ussession.getCustomerid().trim();
 	clientCustomizer=new ClientCustomizer(ussession);
 	if(clientCustomizer.isCustomized())
 	{
@@ -137,7 +134,7 @@
 
 		out.write(basketContentStringBuffer.toString());
 
-		for(int z = 1; z<=numPages; z++) 
+		for(int z = 1; z<=numPages; z++)
 		{
 			basketPage = basket.pageAt(z, documentFormat);
 			basketPage.toXML(out);

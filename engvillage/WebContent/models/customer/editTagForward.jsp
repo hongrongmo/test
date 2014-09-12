@@ -11,9 +11,9 @@
 <!-- import statements of Java packages-->
 <%@ page import="java.util.*"%>
 <%@ page import="org.ei.tags.*"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
 <%@ page import="org.ei.email.*"%>
 <%@ page import="javax.mail.internet.*"%>
 
@@ -30,9 +30,9 @@ String docId=null;
 
 ControllerClient client = new ControllerClient(request, response);
 UserSession ussession=(UserSession)client.getUserSession();
-String sessionId=ussession.getID();
+String sessionId=ussession.getSessionid();
 SessionID sessionIdObj = ussession.getSessionID();
-String pUserId = ussession.getUserIDFromSession();
+String pUserId = ussession.getUserid();
 
 if(request.getParameter("publictags")!=null)
 {

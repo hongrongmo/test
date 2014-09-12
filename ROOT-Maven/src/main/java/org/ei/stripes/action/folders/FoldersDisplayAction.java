@@ -16,13 +16,13 @@ import org.apache.log4j.Logger;
 import org.ei.biz.security.IAccessControl;
 import org.ei.biz.security.IndividualAuthRequiredAccessControl;
 import org.ei.domain.DatabaseDisplayHelper;
+import org.ei.domain.SortOption;
 import org.ei.stripes.action.results.ICitationAction;
 import org.ei.stripes.action.search.BaseSearchAction;
 import org.ei.stripes.view.PageNavigation;
 import org.ei.stripes.view.ResultsNavigatorItem;
 import org.ei.stripes.view.SearchResult;
 import org.ei.stripes.view.SearchResultNavigator;
-import org.ei.stripes.view.SortOption;
 import org.ei.tags.TagBubble;
 
 /**

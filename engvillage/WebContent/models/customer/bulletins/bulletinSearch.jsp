@@ -1,8 +1,8 @@
 <%@ page language="java" %>
 <%@ page session="false"%>
 <%@ page import=" java.util.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.domain.*" %>
 <%@ page import="org.ei.bulletins.*" %>
@@ -21,7 +21,7 @@
   {
     	try
     	{
-      		eiProps = ConfigService.getRuntimeProperties();
+      		eiProps = RuntimeProperties.getInstance();
     	}
     	catch(Exception e)
     	{
@@ -54,8 +54,8 @@
     sesID = sessionId.toString();
     
     IEVWebUser user = ussession.getUser();
-    String cartridges[] = user.getCartridge();
-    String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
+    String cartridges[] = ussession.getCartridge();
+    String strGlobalLinksXML = GlobalLinks.toXML(ussession.getCartridge());
     //String appID = ussession.getProperty(UserSession.APPLICATION_KEY);
      
     SessionID sessionIdObj = ussession.getSessionID();
@@ -158,7 +158,7 @@
     //String resourcePath = eiProps.getProperty("resourcePath"+appID);
     //String resourcePath = eiProps.getProperty("resourcePath");
   	
-    //client.log("EISESSION", sessionIdObj.toString());
+    //client.log("EISESSION", sessionId);
     client.log("request", "recentBulletins");
     client.setRemoteControl();
      
@@ -179,7 +179,7 @@
     out.write("<PAT-PDF><![CDATA["+showPatPdf+"]]></PAT-PDF>");
     out.write("<SELECTED-DB><![CDATA["+selectedDB+"]]></SELECTED-DB>");
     //out.write("<RESOURCE-PATH>"+resourcePath+"</RESOURCE-PATH>");
-    out.write("<SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+    out.write("<SESSION-ID>"+sessionId+"</SESSION-ID>");
     out.write("<QTOP>");
     out.write("<QSTR><![CDATA[");
     out.write(query.toString());

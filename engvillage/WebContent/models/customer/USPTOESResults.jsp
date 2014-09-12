@@ -1,3 +1,5 @@
+<%@page import="org.engvillage.config.RuntimeProperties"%>
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
 
@@ -6,8 +8,8 @@
 <%@ page import="java.net.URLEncoder"%>
 <!--import statements of ei packages.-->
 
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.query.base.*"%>
 <%@ page import="org.ei.domain.*"%>
@@ -30,7 +32,6 @@
 
     // This variable for sessionId
     String sessionId = null;
-    SessionID sessionIdObj = null;
 
     /**
     *These variable for Searchterms
@@ -98,7 +99,7 @@
         try
         {
 
-            RuntimeProperties eiProps = ConfigService.getRuntimeProperties();
+            RuntimeProperties eiProps = RuntimeProperties.getInstance();
 
             // jam Y2K3
             customizedEndYear = Integer.parseInt(eiProps.getProperty("SYSTEM_ENDYEAR"));
@@ -117,18 +118,16 @@
     *  Getting the session id from the usersession.
     */
     UserSession ussession=(UserSession)client.getUserSession();
-    sessionId=ussession.getID();
-    sessionIdObj = ussession.getSessionID();
+    sessionId=ussession.getSessionid();
 
-    pUserId = ussession.getUserIDFromSession();
+    pUserId = ussession.getUserid();
     if((pUserId != null) && (pUserId.trim().length() != 0))
     {
         personalization=true;
     }
 
-     IEVWebUser user = ussession.getUser();
-    String[] credentials = user.getCartridge();
-    String customerId=user.getCustomerID().trim();
+    String[] credentials = ussession.getCartridge();
+    String customerId=ussession.getCustomerid().trim();
     clientCustomizer=new ClientCustomizer(ussession);
     if(clientCustomizer.isCustomized())
     {
@@ -303,7 +302,7 @@
     client.log("hits", "0");
     client.setRemoteControl();
 
-    String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
+    String strGlobalLinksXML = GlobalLinks.toXML(ussession.getCartridge());
 
     out.write("<PAGE>");
     // DBmask is needed in session history page for SESSION-TABLE template
@@ -313,7 +312,7 @@
     out.write("<NAVIGATION-BAR/>");
     out.write("<FOOTER/>");
     out.write("<SESSION-TABLE/>");
-    out.write("<SESSION-ID>"+sessionIdObj+"</SESSION-ID>");
+    out.write("<SESSION-ID>"+sessionId+"</SESSION-ID>");
     out.write("<SEARCH-ID>"+searchID+"</SEARCH-ID>");
     out.write("<CUSTOMER-ID>"+customerId+"</CUSTOMER-ID>");
     out.write("<CUSTOMIZED-LOGO>"+customizedLogo+"</CUSTOMIZED-LOGO>");

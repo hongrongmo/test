@@ -1,5 +1,5 @@
-<%@ page  import="org.ei.controller.ControllerClient"%>
-<%@ page  import="org.ei.session.*"%>
+<%@ page  import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page  import="org.engvillage.biz.controller.UserSession"%>
 <%@ page  import="org.ei.domain.*"%>
 <%@ page session="false" %>
 
@@ -21,7 +21,7 @@
 	client = new ControllerClient(request,response);
 	UserSession ussession=(UserSession)client.getUserSession();
 
-	sessionId = ussession.getID();
+	sessionId = ussession.getSessionid();
 	
 	DocumentBasket documentBasket = new DocumentBasket(sessionId);
 	documentBasket.updateClearOnNewSearch(("true").equalsIgnoreCase(clearOnValue));

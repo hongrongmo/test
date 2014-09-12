@@ -1,8 +1,8 @@
 <%@ page language="java" %>
 <%@ page session="false"%>
 <%@ page import=" java.util.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.domain.*" %>
 <%@ page import="org.ei.logging.*"%>
@@ -20,7 +20,7 @@
   	{
     	try
     	{
-      		eiProps = ConfigService.getRuntimeProperties();
+      		eiProps = RuntimeProperties.getInstance();
 
     	}
     	catch(Exception e)
@@ -40,8 +40,8 @@
     String sesID = sessionId.toString();
 
     IEVWebUser user = ussession.getUser();
-    String cartridges[] = user.getCartridge();
-    String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
+    String cartridges[] = ussession.getCartridge();
+    String strGlobalLinksXML = GlobalLinks.toXML(ussession.getCartridge());
     //String appID = ussession.getProperty(UserSession.APPLICATION_KEY);
     SessionID sessionIdObj = ussession.getSessionID();
 
@@ -151,7 +151,7 @@
 	client.log("dbname", db);
 	client.log("category",category);
 	client.log("year",yr);
-	client.log("custid", user.getCustomerID());
+	client.log("custid", ussession.getCustomerid());
 
 	client.setRemoteControl();
 
@@ -169,7 +169,7 @@
 	out.write("<LITCR><![CDATA["+litCartidges+"]]></LITCR>");
 	out.write("<SHOW-HTML><![CDATA["+showHtml+"]]></SHOW-HTML>");
 	out.write("<SHOW-PDF><![CDATA["+showPdf+"]]></SHOW-PDF>");
-	out.write("<SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+	out.write("<SESSION-ID>"+sessionId+"</SESSION-ID>");
 	navigator.toXML(out);
 	out.write("<QTOP>");
 	out.write("<QSTR><![CDATA[");

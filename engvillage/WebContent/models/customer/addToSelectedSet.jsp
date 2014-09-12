@@ -16,8 +16,8 @@
 <!--import statements of ei packages.-->
 
 <%@ page import="org.ei.domain.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*" %>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession" %>
 
 <%@ page errorPage="/error/errorPage.jsp"%>
 
@@ -60,7 +60,7 @@
 	client = new ControllerClient(request, response);
 	UserSession ussession=(UserSession)client.getUserSession();
 	//client.updateUserSession(ussession);
-	sessionid = ussession.getID();
+	sessionid = ussession.getSessionid();
 
 
     //Get all the parameters from the request

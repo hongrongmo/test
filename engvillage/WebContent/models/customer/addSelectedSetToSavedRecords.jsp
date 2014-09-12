@@ -7,17 +7,17 @@
  * @param java.lang.String.foldername
 
 -->
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
 
 <%@ page import="java.util.* "%>
 <%@ page import="java.net.URLEncoder "%>
 
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.components.feedback.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
 <%@ page import="org.ei.domain.*"%>
 <%@ page import="org.ei.domain.personalization.*"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 
 <%@ page errorPage="/error/errorPage.jsp" %>
@@ -40,7 +40,7 @@
 	List listOfFolderEntries=null;
 	//string for document format
 	String database=null;
-	
+
     boolean personalization = false;
     boolean isPersonalizationPresent=true;
 
@@ -62,15 +62,14 @@
 	ControllerClient client = new ControllerClient(request, response);
 
 	UserSession ussession=(UserSession)client.getUserSession();
-	SessionID sessionIdObj = ussession.getSessionID();
-	sessionId = ussession.getID();
+	sessionId = ussession.getSessionid();
 
 	// Varaible to hold the current User id
 
 	String userId = null;
 	String sUserId=null;
 
-	sUserId=ussession.getUserIDFromSession();
+	sUserId=ussession.getUserid();
 
     if((sUserId != null) && (sUserId.length() != 0))
     {
@@ -84,7 +83,7 @@
         customizedLogo=clientCustomizer.getLogo();
         isPersonalizationPresent=clientCustomizer.checkPersonalization();
     }
-	
+
 
 
 	if( sUserId != null)
@@ -119,18 +118,18 @@
 
 	// jam 9/30/2002
 	// Changed to use Add All
-	// Create FolderEntry objects and add to 
+	// Create FolderEntry objects and add to
 	// list of FolderEntries.
 
 	listOfFolderEntries = new ArrayList();
 
 	for(int j=0;j<count;j++)
-	{	
+	{
 		DocID docId=(DocID)docIDs.get(j);
 		FolderEntry fe = new FolderEntry(docId);
 		listOfFolderEntries.add(fe);
 	}
-	
+
 	if(listOfFolderEntries!=null)
 	{
 		addFlag=sr.addSelectedRecords(listOfFolderEntries,folder);
@@ -141,11 +140,9 @@
 	sbuffer.append("<PAGE>");
 
     // NOV 2004
-    // jam added when pop-up login removed 
-     IEVWebUser user = ussession.getUser();
-
+    // jam added when pop-up login removed
     sbuffer.append("<HEADER/>");
-    sbuffer.append(GlobalLinks.toXML(user.getCartridge()));
+    sbuffer.append(GlobalLinks.toXML(ussession.getCartridge()));
     sbuffer.append("<FOOTER/>");
 
     String backurl = request.getParameter("backurl");
@@ -163,7 +160,7 @@
 	sbuffer.append("<FOLDER-NAME>").append(folder.getFolderName()).append("</FOLDER-NAME>");
 	sbuffer.append("<FOLDER-ID>").append(folder.getFolderID()).append("</FOLDER-ID>");
 	sbuffer.append("<DATABASE-ID>").append(database).append("</DATABASE-ID>");
-	sbuffer.append("<SESSION-ID>").append(sessionIdObj.toString()).append("</SESSION-ID>");
+	sbuffer.append("<SESSION-ID>").append(sessionId).append("</SESSION-ID>");
 	sbuffer.append("</PAGE>");
 	out.write(sbuffer.toString());
 	out.println("<!--END-->");

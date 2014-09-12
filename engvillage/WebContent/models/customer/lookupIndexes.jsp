@@ -7,8 +7,8 @@
 <%@ page  import=" java.sql.*"%>
 
 <!--import statements of ei packages.-->
-<%@ page  import="org.ei.controller.ControllerClient"%>
-<%@ page  import="org.ei.session.*"%>
+<%@ page  import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page  import="org.engvillage.biz.controller.UserSession"%>
 <%@ page  import="org.ei.domain.*"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page  import="org.ei.config.*"%>
@@ -41,11 +41,7 @@
 
 
   UserSession ussession=(UserSession)client.getUserSession();
-  IEVWebUser user = ussession.getUser();
-
-
-  sessionId=ussession.getSessionID().toString();
-  sesID = ussession.getID();
+  sesID = ussession.getSessionid();
 
   if(request.getParameter("searchWord")!=null)
   {
@@ -134,7 +130,7 @@ int databaseMask = -1;
 
 
      int upgradeMask = dconfig.doUpgrade(databaseMask,
-                         user.getCartridge());
+                         ussession.getCartridge());
 
      lookupIndexes.getXML(index,
                   lookupSearchID,

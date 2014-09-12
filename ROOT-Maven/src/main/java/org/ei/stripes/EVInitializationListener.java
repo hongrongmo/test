@@ -24,7 +24,6 @@ import org.ei.domain.DriverConfig;
 import org.ei.domain.HelpLinksCache;
 import org.ei.exception.ServiceException;
 import org.ei.exception.SessionException;
-import org.ei.session.SessionCache;
 import org.ei.session.SessionManager;
 import org.ei.stripes.exception.EVExceptionHandler;
 
@@ -137,19 +136,6 @@ public class EVInitializationListener implements ServletContextListener {
             DatabaseConfig.getInstance(DriverConfig.getDriverTable());
         } catch (DatabaseConfigException e) {
             log4j.error("Unable to initialize DatabaseConfig: ", e);
-            return;
-        }
-
-        //
-        // Initialize the session cache - Deprecated???
-        //
-        try {
-            String authurl = EVProperties.getRuntimeProperty(RuntimeProperties.AUTH_URL);
-            String appname = EVProperties.getRuntimeProperty(RuntimeProperties.APP_NAME);
-            log4j.info("Initializing Session Cache object, AuthUrl = '" + authurl + "', appname = '" + appname + "'");
-            SessionCache.init(authurl, appname);
-        } catch (SessionException e) {
-            log4j.error("Unable to initialize SessionCache: ", e);
             return;
         }
 

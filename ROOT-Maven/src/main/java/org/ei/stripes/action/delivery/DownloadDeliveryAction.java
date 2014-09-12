@@ -38,6 +38,8 @@ import org.apache.fop.apps.FopFactory;
 import org.apache.fop.apps.MimeConstants;
 import org.apache.log4j.Logger;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.ei.biz.personalization.IEVWebUser;
+import org.ei.biz.personalization.UserPrefs;
 import org.ei.config.RuntimeProperties;
 import org.ei.domain.Abstract;
 import org.ei.domain.BasketEntry;
@@ -53,9 +55,7 @@ import org.ei.domain.PageEntry;
 import org.ei.domain.PageEntryBuilder;
 import org.ei.domain.personalization.FolderEntry;
 import org.ei.domain.personalization.FolderPage;
-import org.ei.domain.personalization.IEVWebUser;
 import org.ei.domain.personalization.SavedRecords;
-import org.ei.domain.personalization.UserPrefs;
 import org.ei.download.util.ExcelExportUtil;
 import org.ei.download.util.SaveToGoogleUsage;
 import org.ei.exception.InfrastructureException;
@@ -85,7 +85,7 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
     private String dropBoxClientid = "";
 
     private String downloadMedium = "";
-    
+
 	private String filenameprefix = "";
 
    	@DontValidate
@@ -117,9 +117,6 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
 		try {
 			runtimeprops = RuntimeProperties.getInstance();
 			isSaveToDropboxEnabled =  Boolean.parseBoolean(runtimeprops.getProperty("dropbox.save.enabled"));
-		} catch (IOException e) {
-			log4j.warn("Could not read the runtime property for 'dropbox.save.enabled', error occured! "+e.getMessage());
-			return SystemMessage.SYSTEM_ERROR_RESOLUTION;
 		} catch(Exception e) {
 			log4j.warn("Error occured! "+e.getMessage());
 			return SystemMessage.SYSTEM_ERROR_RESOLUTION;
@@ -150,9 +147,6 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
 			runtimeprops = RuntimeProperties.getInstance();
 			clientId =  runtimeprops.getProperty("dropbox.client.id");
 			isSaveToDropboxEnabled =  Boolean.parseBoolean(runtimeprops.getProperty("dropbox.save.enabled"));
-		} catch (IOException e) {
-			log4j.warn("Could not read the runtime property for 'dropbox.client.id' or 'dropbox.save.enabled', error occured! "+e.getMessage());
-			return SystemMessage.SYSTEM_ERROR_RESOLUTION;
 		} catch(Exception e) {
 			log4j.warn("Error occured! "+e.getMessage());
 			return SystemMessage.SYSTEM_ERROR_RESOLUTION;
@@ -184,9 +178,6 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
 		try {
 			runtimeprops = RuntimeProperties.getInstance();
 			isSaveToGoogleEnabled =  Boolean.parseBoolean(runtimeprops.getProperty("google.drive.enabled"));
-		} catch (IOException e) {
-			log4j.warn("Could not read the runtime property for 'google.drive.enabled', error occured! "+e.getMessage());
-			return SystemMessage.SYSTEM_ERROR_RESOLUTION;
 		} catch(Exception e) {
 			log4j.warn("Error occured! "+e.getMessage());
 			return SystemMessage.SYSTEM_ERROR_RESOLUTION;
@@ -575,7 +566,7 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
      */
     private void buildTmpFileName(String docformat) {
         if (tmpfileName == null) tmpfileName = new StringBuffer();
-        
+
         if(filenameprefix == null || filenameprefix.trim().isEmpty() || filenameprefix.trim().length()<3){
         	filenameprefix = UserPrefs.DL_FILENAME_PFX;
         }
@@ -590,10 +581,10 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
         		tmpfileName.append(docformat);
         	}
         }
-        
+
         tmpfileName.append("_");
         tmpfileName.append(downloadformat);
-        
+
         Calendar now = Calendar.getInstance();
         int year = now.get(Calendar.YEAR);
         int month = now.get(Calendar.MONTH)+1; // Note: zero based!
@@ -613,7 +604,7 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
         tmpfileName.append(minute);
         tmpfileName.append(second);
         tmpfileName.append(millis);
-        
+
         if (DOWNLOAD_FORMAT_ASCII.equals(downloadformat)) {
             tmpfileName.append(".txt");
         } else if (DOWNLOAD_FORMAT_BIBTEXT.equals(downloadformat)) {

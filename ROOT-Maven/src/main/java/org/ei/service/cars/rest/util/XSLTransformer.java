@@ -15,10 +15,10 @@ import javax.xml.transform.stream.StreamSource;
 import net.sf.ehcache.Cache;
 
 import org.apache.commons.lang.StringUtils;
+import org.ei.biz.personalization.IEVWebUser;
 import org.ei.cache.EVCache;
 import org.ei.config.EVProperties;
 import org.ei.config.RuntimeProperties;
-import org.ei.domain.personalization.IEVWebUser;
 import org.ei.service.cars.CARSConfigVariables;
 import org.ei.service.cars.CARSStringConstants;
 import org.ei.service.cars.CARSTemplateNames;

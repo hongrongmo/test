@@ -80,7 +80,6 @@ public class NewHeartbeatService extends HttpServlet
 
 		boolean checkResult = cEV.doSearch(server);
 		boolean checkFast = cEV.checkFast();
-		boolean checkSessionService = cEV.checkSessionService(authURL,appName,ipAddress,referrerURL,username,password);
 		boolean checkSearchDatabase = checkDataService(dataServiceURL);
 		out.println("<br/><br/>");
 		if(!checkFast){
@@ -92,16 +91,6 @@ public class NewHeartbeatService extends HttpServlet
 			out.println("<br/><b>FAST is UP!!</b>");
 		}
 
-
-		if(!checkSessionService){
-
-			out.println("<br/><b>session service is down!!</b>");
-
-		}
-		else
-		{
-			out.println("<br/><b>session service is UP!!</b>");
-		}
 
 		if(!checkSearchDatabase){
 
@@ -125,7 +114,7 @@ public class NewHeartbeatService extends HttpServlet
 
 		out.println("<br/><br/>");
 
-		if(checkResult && checkFast && checkSessionService && checkSearchDatabase)
+		if(checkResult && checkFast && checkSearchDatabase)
 		{
 			out.println("<br>Build: "      + Build.version());
 			out.println("<br>China: "      + Build.china());

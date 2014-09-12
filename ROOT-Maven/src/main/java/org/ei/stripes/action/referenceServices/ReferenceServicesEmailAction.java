@@ -12,10 +12,10 @@ import net.sourceforge.stripes.action.Resolution;
 import net.sourceforge.stripes.action.UrlBinding;
 
 import org.apache.commons.validator.GenericValidator;
+import org.ei.biz.email.SESEmail;
+import org.ei.biz.email.SESMessage;
 import org.ei.config.EVProperties;
 import org.ei.config.RuntimeProperties;
-import org.ei.email.SESEmail;
-import org.ei.email.SESMessage;
 import org.ei.session.UserPreferences;
 import org.ei.session.UserSession;
 import org.ei.stripes.action.EVActionBean;
@@ -43,10 +43,10 @@ public class ReferenceServicesEmailAction extends EVActionBean {
 	private boolean share_question;
 
 	private boolean success;
-	
+
 	/**
 	 * Default handler - displays the ask an expert email form
-	 * 
+	 *
 	 * @return Resolution
 	 */
 	@HandlesEvent("display")
@@ -60,7 +60,7 @@ public class ReferenceServicesEmailAction extends EVActionBean {
 
 	/**
 	 * Submits the email.
-	 * 
+	 *
 	 * @return Resolution
 	 */
 	@HandlesEvent("submit")
@@ -72,7 +72,7 @@ public class ReferenceServicesEmailAction extends EVActionBean {
 		if (GenericValidator.isBlankOrNull(refEmail) || !GenericValidator.isEmail(refEmail)) {
 		    refEmail = EVProperties.getRuntimeProperty(RuntimeProperties.LIBRARIAN_EMAIL);
 		}
-		
+
 		List<String> recipients = new ArrayList<String>();
 		if (ASK_AN_ENGINEER.equals(sectionid)) {
 			// ask an engineer email
@@ -83,12 +83,12 @@ public class ReferenceServicesEmailAction extends EVActionBean {
 			recipients.add(refEmail);
 		}
 
-		
+
 		SESMessage sesmessage = new SESMessage();
 		sesmessage.setFrom(SESMessage.DEFAULT_SENDER);
 		sesmessage.setDestination(recipients);
 		try {
-			
+
 			Writer messagebody = new StringWriter();
 			if (ASK_AN_ENGINEER.equals(sectionid)) {
 				messagebody.write(section);
@@ -135,11 +135,11 @@ public class ReferenceServicesEmailAction extends EVActionBean {
 						.write("This email was sent to you via Engineering Village Ask a Librarian feature.");
 			}
 			messagebody.write("\n");
-			
+
 			sesmessage.setMessage(section, messagebody.toString(), false);
 
 			SESEmail.getInstance().send(sesmessage);
-			
+
 			// Signals showing the confirmation page!
 			success = true;
 		} catch (Exception e) {

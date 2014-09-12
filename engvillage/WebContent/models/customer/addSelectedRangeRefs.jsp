@@ -3,8 +3,8 @@
 <%@ page import="java.util.*"%>
 <%@ page import="java.net.URLEncoder"%>
 <%@ page import="org.ei.domain.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.config.*"%>
 <%@ page import="org.ei.query.base.*"%>
@@ -23,9 +23,8 @@
 	int resultscount = -1;
 	client = new ControllerClient(request, response);
 	UserSession ussession=(UserSession)client.getUserSession();
-	String sessionId = ussession.getID();
-	 IEVWebUser user = ussession.getUser();
-	String[] credentials = user.getCartridge();
+	String sessionId = ussession.getSessionid();
+	String[] credentials = ussession.getCartridge();
 
 	if(request.getParameter("docid")!=null)
 	{
@@ -64,18 +63,18 @@
 		pager = new RefPager(refList,
                                       25,
                                       null,
-                                      sessionId);			
+                                      sessionId);
 
 	}
 	else
 	{
 		UPTRefDocBuilder refBuilder = new UPTRefDocBuilder(new UPTRefDatabase());
-		
+
 		pager = refBuilder.getRefPager(did,
 						25,
 						sessionId);
-		
-		
+
+
 	}
 
 	docIDList = pager.getPageIDs(startRange,

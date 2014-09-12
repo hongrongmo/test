@@ -3,7 +3,7 @@
 <%@ page import="org.ei.domain.*" %>
 <%@ page import="org.ei.domain.personalization.*" %>
 <%@ page import="org.ei.controller.*" %>
-<%@ page import="org.ei.session.*" %>
+<%@ page import="org.engvillage.biz.controller.UserSession" %>
 <%@ page import="org.ei.util.StringUtil"%>
 
 <%@ page import="java.util.*" %>
@@ -34,13 +34,13 @@
     IEVWebUser user = ussession.getUser();
 
 
-    String customerId = user.getCustomerID().trim();
+    String customerId = ussession.getCustomerid().trim();
 
-    String sessionID = ussession.getID();
+    String sessionID = ussession.getSessionid();
     SessionID sessionIdObj = ussession.getSessionID();
 
     ClientCustomizer clientCustomizer = new ClientCustomizer(ussession);
-    String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
+    String strGlobalLinksXML = GlobalLinks.toXML(ussession.getCartridge());
 
 
     String term = request.getParameter("term");
@@ -48,12 +48,12 @@
     String dbName = request.getParameter("database");
     String databaseID = null;
 
-    boolean hasCPX = UserCredentials.hasCredentials(1, databaseConfig.getMask(user.getCartridge()));
-    boolean hasINS = UserCredentials.hasCredentials(2, databaseConfig.getMask(user.getCartridge()));
-    boolean hasEPT = UserCredentials.hasCredentials(2048, databaseConfig.getMask(user.getCartridge()));
-    boolean hasELT = UserCredentials.hasCredentials(1024, databaseConfig.getMask(user.getCartridge()));
-    boolean hasGEO = UserCredentials.hasCredentials(8192, databaseConfig.getMask(user.getCartridge()));
-    boolean hasGRF = UserCredentials.hasCredentials(2097152, databaseConfig.getMask(user.getCartridge()));
+    boolean hasCPX = UserCredentials.hasCredentials(1, databaseConfig.getMask(ussession.getCartridge()));
+    boolean hasINS = UserCredentials.hasCredentials(2, databaseConfig.getMask(ussession.getCartridge()));
+    boolean hasEPT = UserCredentials.hasCredentials(2048, databaseConfig.getMask(ussession.getCartridge()));
+    boolean hasELT = UserCredentials.hasCredentials(1024, databaseConfig.getMask(ussession.getCartridge()));
+    boolean hasGEO = UserCredentials.hasCredentials(8192, databaseConfig.getMask(ussession.getCartridge()));
+    boolean hasGRF = UserCredentials.hasCredentials(2097152, databaseConfig.getMask(ussession.getCartridge()));
     if (!hasCPX && !hasINS && !hasGEO && !hasGRF && !hasEPT && !hasELT) {
     	// Send to error page - no Thes databases in credentials!
         client.setRedirectURL("/system/error.url");
@@ -61,7 +61,7 @@
         return;    	
     }
     
-    pUserId = ussession.getUserIDFromSession();
+    pUserId = ussession.getUserid();
     if((pUserId != null) && (pUserId.trim().length() != 0))
     {
         personalization=true;
@@ -156,7 +156,7 @@
     out.write("<HAS-ELT>"+hasELT+"</HAS-ELT>");
     out.write(strGlobalLinksXML);
     out.write("<FOOTER/>");
-    out.write("<SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+    out.write("<SESSION-ID>"+sessionId+"</SESSION-ID>");
     out.write("<CUSTOMIZED-LOGO>"+customizedLogo+"</CUSTOMIZED-LOGO>");
     out.write("<CUSTOMIZED-STARTYEAR>"+customizedStartYear+"</CUSTOMIZED-STARTYEAR>");
     out.write("<CUSTOMIZED-ENDYEAR>"+customizedEndYear+"</CUSTOMIZED-ENDYEAR>");
@@ -184,18 +184,18 @@
 	if(searchid != null)
 	{
 
-		String sessionId=ussession.getID();
+		String sessionId=ussession.getSessionid();
 
 //		recentXmlQueryString = Searches.getXMLSearch(searchid);
 //		Query tQuery = new Query(new FastQueryWriter(),
 //            					 DatabaseConfig.getInstance(),
-//            					 user.getCartridge(),
+//            					 ussession.getCartridge(),
 //            					 recentXmlQueryString);
 
         Query tQuery = Searches.getSearch(searchid);
         tQuery.setSearchQueryWriter(new FastQueryWriter());
         tQuery.setDatabaseConfig(DatabaseConfig.getInstance());
-        tQuery.setCredentials(user.getCartridge());
+        tQuery.setCredentials(ussession.getCartridge());
         recentXmlQueryString = tQuery.toXMLString();
 
 		// creating Thesaurus XML for output
@@ -253,7 +253,7 @@
 	// UI refresh project is including search history on search pages.  
     if((sessionIdObj != null) && (sessionIdObj.getID() != null) && (sessionIdObj.getID().trim().length() > 0)) {
     	Searches.getSessionXMLQuery(pUserId,sessionIdObj.getID(),out);
-        databaseConfig.sortableToXML(user.getCartridge(), out);
+        databaseConfig.sortableToXML(ussession.getCartridge(), out);
     }
 
     out.write("</DOC>");

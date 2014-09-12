@@ -14,6 +14,7 @@ import net.sourceforge.stripes.action.Resolution;
 import net.sourceforge.stripes.action.UrlBinding;
 
 import org.apache.log4j.Logger;
+import org.ei.biz.personalization.IEVWebUser;
 import org.ei.biz.security.IAccessControl;
 import org.ei.biz.security.IndividualAuthRequiredAccessControl;
 import org.ei.config.EVProperties;
@@ -22,7 +23,6 @@ import org.ei.domain.DocID;
 import org.ei.domain.DocumentBasket;
 import org.ei.domain.personalization.Folder;
 import org.ei.domain.personalization.FolderEntry;
-import org.ei.domain.personalization.IEVWebUser;
 import org.ei.domain.personalization.SavedRecords;
 import org.ei.stripes.action.EVPathUrl;
 import org.ei.stripes.action.SystemMessage;

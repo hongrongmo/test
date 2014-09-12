@@ -7,8 +7,8 @@
 <%@ page import="org.ei.query.base.*"%>
 <%@ page import="org.ei.parser.base.*"%>
 <%@ page import="org.ei.domain.navigators.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page errorPage="/error/errorPage.jsp"%>
 <%
@@ -16,9 +16,8 @@
 	ControllerClient client = new ControllerClient(request, response);
 	UserSession ussession = (UserSession) client.getUserSession();
 
-	String sessionid = ussession.getID();
-	IEVWebUser user = ussession.getUser();
-	String[] credentials = user.getCartridge();
+	String sessionid = ussession.getSessionid();
+	String[] credentials = ussession.getCartridge();
 
 	String searchid = null;
 	String nav = EiNavigator.DB;

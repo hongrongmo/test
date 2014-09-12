@@ -167,7 +167,7 @@ public class BlockedIPStatus {
 
 
     @DynamoDBIgnore
-    public void addAccount(org.ei.domain.personalization.cars.Account account) {
+    public void addAccount(org.ei.biz.personalization.cars.Account account) {
         if (account != null) {
             this.setAccountID(account.getAccountId());
             this.setAccountName(account.getAccountName());

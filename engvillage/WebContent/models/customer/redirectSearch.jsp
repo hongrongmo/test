@@ -11,8 +11,8 @@
 <%@ page  import=" java.net.*"%>
 
 <!--import statements of ei packages.-->
-<%@ page  import="org.ei.controller.ControllerClient"%>
-<%@ page  import="org.ei.session.*"%>
+<%@ page  import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page  import="org.engvillage.biz.controller.UserSession"%>
 <%@ page  import="org.ei.query.base.*"%>
 <%@ page  import="java.net.*"%>
 

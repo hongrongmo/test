@@ -14,19 +14,18 @@ import net.sourceforge.stripes.action.UrlBinding;
 
 import org.apache.log4j.Logger;
 import org.ei.biz.access.AccessException;
+import org.ei.biz.personalization.IEVWebUser;
+import org.ei.biz.personalization.UserProfile;
 import org.ei.biz.security.IAccessControl;
 import org.ei.biz.security.IndividualAuthRequiredAccessControl;
-import org.ei.domain.ClientCustomizerException;
 import org.ei.domain.Searches;
-import org.ei.domain.personalization.IEVWebUser;
 import org.ei.domain.personalization.SavedSearches;
-import org.ei.domain.personalization.UserProfile;
+import org.ei.domain.personalization.SavedSearchesAndAlerts;
+import org.ei.domain.personalization.SearchHistory;
 import org.ei.exception.InfrastructureException;
 import org.ei.session.UserPreferences;
 import org.ei.session.UserSession;
 import org.ei.stripes.action.personalaccount.IPersonalLogin;
-import org.ei.stripes.view.SavedSearchesAndAlerts;
-import org.ei.stripes.view.SearchHistory;
 
 @UrlBinding("/personal/savesearch/{$event}.url")
 public class SavedSearchesAndAlertsAction extends EVActionBean implements IPersonalLogin {
@@ -61,7 +60,7 @@ public class SavedSearchesAndAlertsAction extends EVActionBean implements IPerso
 
 	/**
 	 * Do all event validation here.
-	 * 
+	 *
 	 * @return
 	 */
 	@Before
@@ -76,7 +75,7 @@ public class SavedSearchesAndAlertsAction extends EVActionBean implements IPerso
 
 	/**
 	 * Displays the main viewSavedSearchesAndAlert page -
-	 * 
+	 *
 	 * @return Resolution
 	 * @throws InfrastructureException
 	 * @throws AccessException
@@ -102,7 +101,7 @@ public class SavedSearchesAndAlertsAction extends EVActionBean implements IPerso
 
 	/**
 	 * Handles deleting all searches from saved search/alert page.
-	 * 
+	 *
 	 * @return
 	 * @throws ClientCustomizerException
 	 * @throws InfrastructureException
@@ -133,7 +132,7 @@ public class SavedSearchesAndAlertsAction extends EVActionBean implements IPerso
 
 	/**
 	 * Handles adding an alert from the saved searches/alert page
-	 * 
+	 *
 	 * @return
 	 * @throws InfrastructureException
 	 * @throws AccessException
@@ -161,7 +160,7 @@ public class SavedSearchesAndAlertsAction extends EVActionBean implements IPerso
 
 	/**
 	 * Deletes all alerts
-	 * 
+	 *
 	 * @return
 	 * @throws InfrastructureException
 	 * @throws AccessException
@@ -191,7 +190,7 @@ public class SavedSearchesAndAlertsAction extends EVActionBean implements IPerso
 
 	/**
 	 * Reverts current alerts back to saved searches.
-	 * 
+	 *
 	 * @return
 	 * @throws InfrastructureException
 	 * @throws AccessException
@@ -219,7 +218,7 @@ public class SavedSearchesAndAlertsAction extends EVActionBean implements IPerso
 
 	/**
 	 * Delete all saved searches or alerts
-	 * 
+	 *
 	 * @return
 	 * @throws ClientCustomizerException
 	 * @throws InfrastructureException
@@ -246,7 +245,7 @@ public class SavedSearchesAndAlertsAction extends EVActionBean implements IPerso
 
 	/**
 	 * Common method to set the Email Alerts flags
-	 * 
+	 *
 	 * @param user
 	 * @throws AccessException
 	 */
@@ -259,7 +258,7 @@ public class SavedSearchesAndAlertsAction extends EVActionBean implements IPerso
 
 	/**
 	 * Common method to retrieve the user's saved searches and alerts
-	 * 
+	 *
 	 * @param userId
 	 * @throws InfrastructureException
 	 */

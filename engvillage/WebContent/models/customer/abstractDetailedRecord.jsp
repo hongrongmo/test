@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<%@page import="org.engvillage.biz.controller.UserSession"%>
+<%@page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@page import="org.engvillage.config.RuntimeProperties"%>
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page contentType="application/xml; charset=UTF-8"%>
 <%@page import="org.ei.exception.EVBaseException"%>
 <%@page import="org.apache.log4j.Logger"%>
@@ -8,8 +12,6 @@
 <%@ page import="java.io.FileWriter"%>
 <%@ page import="java.net.URLDecoder"%>
 <%@ page import="java.net.URLEncoder"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.domain.*" %>
 <%@ page import="org.ei.config.*"%>
@@ -33,13 +35,13 @@
 <%@ page buffer="20kb"%>
 <%
     Logger log4j = Logger.getLogger("abstractDetailedRecord.jsp");
+
     FastSearchControl sc = null;
     PageEntry entry =null;
     EIDoc curDoc =null;
     SearchResult result=null;
     String totalDocCount=null;
     String sessionId=null;
-    SessionID sessionIdObj = null;
 
     String pUserId = null;
     boolean personalization = false;
@@ -80,8 +82,8 @@
     {
         try
         {
+            RuntimeProperties runtimeProps = RuntimeProperties.getInstance();
             // Get the value of the number of documents to be displayed in a search results page form Runtime.properties file
-            RuntimeProperties runtimeProps = ConfigService.getRuntimeProperties();
             pagesize = Integer.parseInt(runtimeProps.getProperty("PAGESIZE"));
 
             databaseConfig = DatabaseConfig.getInstance();
@@ -94,6 +96,7 @@
     }
 %>
 <%
+    RuntimeProperties runtimeProps = RuntimeProperties.getInstance();
     ControllerClient client =  null;
     try
     {
@@ -108,20 +111,18 @@
     	}
 
         UserSession ussession=(UserSession)client.getUserSession();
-        sessionId=ussession.getID();
-        sessionIdObj = ussession.getSessionID();
-        serverName= ussession.getEnvBaseAddress();
+        sessionId=ussession.getSessionid();
+        serverName= ussession.getProperty(UserSession.ENV_BASEADDRESS);
 
-        pUserId = ussession.getUserIDFromSession();
+        pUserId = ussession.getUserid();
         if((pUserId != null) && (pUserId.trim().length() != 0))
         {
           personalization=true;
         }
 
-         IEVWebUser user = ussession.getUser();
-        String[] credentials = user.getCartridge();
-        String customerId=user.getCustomerID().trim();
-        localHolding=new LocalHolding(ussession);
+        String[] credentials = ussession.getCartridge();
+        String customerId=ussession.getCustomerid().trim();
+        localHolding=new LocalHolding(ussession.getProperty(UserSession.LOCAL_HOLDING_KEY),2);
 
         clientCustomizer=new ClientCustomizer(ussession);
         isFullTextPresent=clientCustomizer.checkFullText();
@@ -215,7 +216,7 @@
 
     	String backURLString = backurl.toString();
 
-        String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
+        String strGlobalLinksXML = GlobalLinks.toXML(ussession.getCartridge());
 
     	int recnum = -1;
     	int totalcount = -1;
@@ -240,7 +241,7 @@
             }
     		tQuery.setSearchQueryWriter(new FastQueryWriter());
     		tQuery.setDatabaseConfig(databaseConfig);
-    		tQuery.setCredentials(user.getCartridge());
+    		tQuery.setCredentials(ussession.getCartridge());
 
             if(sDocId!=null && !sDocId.equals("") && !sDocId.equals("null")){
 
@@ -569,7 +570,7 @@
         out.write("<CUSTOMIZED-LOGO>"+customizedLogo+"</CUSTOMIZED-LOGO>");
         out.write("<RESULTS-COUNT>"+totalDocCount+"</RESULTS-COUNT>");
         out.write("<DEDUP-RESULTS-COUNT>"+dedupResultCount+"</DEDUP-RESULTS-COUNT>");
-        out.write("<SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+        out.write("<SESSION-ID>"+sessionId+"</SESSION-ID>");
         out.write("<PERSONALIZATION>"+personalization+"</PERSONALIZATION>");
         out.write("<DATABASE-MASK>");
         out.write(database);

@@ -22,10 +22,9 @@
 
 <%--import statements of ei packages.--%>
 <%@ page import="org.ei.domain.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
-<%@ page import="org.ei.components.feedback.*"%>
 <%@ page import="org.ei.email.*"%>
 <%@ page import="org.ei.domain.Searches"%>
 
@@ -47,7 +46,6 @@
     Page page1 = null;
     // Variable to hold the reference to sessionId
     String sessionId  = null;
-    SessionID sessionIdObj = null;
     // Variable to hold the reference to searchid
     String searchid  = null;
     // Variable to hold the reference to displayFormat
@@ -72,8 +70,7 @@
     client = new ControllerClient(request, response);
     UserSession ussession=(UserSession)client.getUserSession();
 
-    sessionId = ussession.getID();
-    sessionIdObj = ussession.getSessionID();
+    sessionId = ussession.getSessionid();
     //Getting the searchid parameter from the request.
     if(request.getParameter("searchid") != null)
     {
