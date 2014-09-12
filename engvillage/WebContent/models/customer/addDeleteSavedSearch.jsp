@@ -1,3 +1,4 @@
+<%@page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page language="java"%>
 <%@ page session="false"%>
 
@@ -9,8 +10,7 @@
 <%@ page import="org.ei.domain.*"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.domain.Searches"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 
 <%@ page errorPage="/error/errorPage.jsp"%>
@@ -35,8 +35,8 @@
 
 	client = new ControllerClient(request, response);
 	UserSession ussession = (UserSession) client.getUserSession();
-	sessionID = ussession.getID();
-	userId = ussession.getUserIDFromSession();
+	sessionID = ussession.getSessionid();
+	userId = ussession.getUserid();
 
 	if (request.getParameter("database") != null) {
 		database = request.getParameter("database");

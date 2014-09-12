@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<%@page import="org.engvillage.config.RuntimeProperties"%>
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page contentType="application/xml; charset=UTF-8"%>
 <%@page import="org.apache.commons.validator.GenericValidator"%>
-<%@page import="org.ei.domain.navigators.state.ResultNavigatorStateHelper"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
 <%@ page errorPage="/error/errorPage.jsp"%>
@@ -14,8 +15,8 @@
 <%@ page import="java.util.*"%>
 <%@ page import="java.net.*"%>
 <!--import statements of ei packages.-->
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.query.base.*"%>
 <%@ page import="org.ei.parser.base.*"%>
@@ -38,7 +39,6 @@
     ControllerClient client = new ControllerClient(request, response);
     LocalHolding localHolding = null;
     String sessionId = null;
-    SessionID sessionIdObj = null;
     String pUserId = "";
     boolean personalization = false;
     int pagesize=0;
@@ -89,19 +89,17 @@
 
     UserSession ussession=(UserSession)client.getUserSession();
 
-    sessionId = ussession.getID();
-    sessionIdObj = ussession.getSessionID();
-    pUserId = ussession.getUserIDFromSession();
+    sessionId = ussession.getSessionid();
+    pUserId = ussession.getUserid();
 
     if((pUserId != null) && (pUserId.trim().length() != 0))
     {
         personalization=true;
     }
 
-     IEVWebUser user = ussession.getUser();
-    String[] credentials = user.getCartridge();
+    String[] credentials = ussession.getCartridge();
 
-    String customerId=user.getCustomerID().trim();
+    String customerId=ussession.getCustomerid().trim();
 
     long bTime = System.currentTimeMillis();
     clientCustomizer=new ClientCustomizer(ussession);
@@ -128,8 +126,8 @@
         dbName = request.getParameter("database");
         if(dbName.equals("3072") || dbName.equals("2048") || dbName.equals("1024"))
         {
-        	boolean hasEPT = UserCredentials.hasCredentials(2048, databaseConfig.getMask(user.getCartridge()));
-            boolean hasELT = UserCredentials.hasCredentials(1024, databaseConfig.getMask(user.getCartridge()));
+        	boolean hasEPT = UserSession.hasCredentials(2048, databaseConfig.getMask(ussession.getCartridge()));
+            boolean hasELT = UserSession.hasCredentials(1024, databaseConfig.getMask(ussession.getCartridge()));
             if(hasEPT && hasELT)
             {
             	dbName = "3072";
@@ -374,7 +372,7 @@
                 queryObject.setVisible(Query.ON);
                 queryObject.setSavedSearch(Query.OFF);
                 queryObject.setEmailAlert(Query.OFF);
-                queryObject.setSessionID(sessionIdObj.getID());
+                queryObject.setSessionID(sessionId);
                 updateCurrentQuery = true;
                 // set as initial search - default is false
                 initialSearch = true;
@@ -457,7 +455,7 @@
 
         nTotalDocs = Integer.parseInt(queryObject.getRecordCount());
 
-        String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
+        String strGlobalLinksXML = GlobalLinks.toXML(ussession.getCartridge());
 
         // creating Thesaurus XML for output
         BooleanQuery bq = queryObject.getParseTree();
@@ -578,7 +576,7 @@
                 out.write("<EMAILALERTS-PRESENT>"+isEmailAlertsPresent+"</EMAILALERTS-PRESENT>");
                 out.write("<CUSTOMER-ID>"+customerId+"</CUSTOMER-ID>");
                 out.write("<RESULTS-PER-PAGE>"+pagesize+"</RESULTS-PER-PAGE>");
-                out.write("<SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+                out.write("<SESSION-ID>"+sessionId+"</SESSION-ID>");
                 out.write("<CUSTOMIZED-LOGO>"+customizedLogo+"</CUSTOMIZED-LOGO>");
                 out.write("<PERSONALIZATION>"+personalization+"</PERSONALIZATION>");
                 out.write("<PERSON-USER-ID>"+pUserId+"</PERSON-USER-ID>");
@@ -593,7 +591,7 @@
                 // This lessens size of outgoing page XML
                 if(isCitLocalHoldingsPresent)
                 {
-                    localHolding = new LocalHolding(ussession,2);
+                    localHolding=new LocalHolding(ussession.getProperty(UserSession.LOCAL_HOLDING_KEY),2);
                     oPage.setlocalHolding(localHolding);
                 }
                 oPage.toXML(out);
@@ -699,7 +697,7 @@
                                 out.write("<NAVCHRT>"+isGraphDownloadPresent+"</NAVCHRT>");
                                 out.write("<LOCALHOLDINGS-CITATION>"+ isCitLocalHoldingsPresent+"</LOCALHOLDINGS-CITATION>");
                                 out.write("<EMAILALERTS-PRESENT>"+isEmailAlertsPresent+"</EMAILALERTS-PRESENT>");
-                                out.write("<SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+                                out.write("<SESSION-ID>"+sessionId+"</SESSION-ID>");
                                 out.write("<PERSONALIZATION>"+personalization+"</PERSONALIZATION>");
                                 out.write("<PERSON-USER-ID>"+pUserId+"</PERSON-USER-ID>");
                                 out.write("<SEARCH-ID>"+searchID+"</SEARCH-ID>");
@@ -765,7 +763,7 @@
     {
         try
         {
-            RuntimeProperties eiProps = ConfigService.getRuntimeProperties();
+            RuntimeProperties eiProps = RuntimeProperties.getInstance();
             pageSize = eiProps.getProperty("DISPLAYPAGESIZE");
             databaseConfig = DatabaseConfig.getInstance();
 

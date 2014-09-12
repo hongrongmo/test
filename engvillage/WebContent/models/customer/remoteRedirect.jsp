@@ -6,8 +6,8 @@
 <%@ page import="java.util.*"%>
 <%@ page import="java.net.*"%>
 <!-- import statements of ei packages.-->
-<%@ page import="org.ei.controller.ControllerClient" %>
-<%@ page import="org.ei.session.*" %>
+<%@ page import="org.engvillage.biz.controller.ControllerClient" %>
+<%@ page import="org.engvillage.biz.controller.UserSession" %>
 <%@ page import="org.ei.domain.*" %>
 <%@ page import="org.ei.domain.Searches"%>
 <%@ page import="org.ei.util.StringUtil" %>
@@ -21,7 +21,7 @@
      *  Getting the session id from the usersession.
      */
     UserSession ussession = (UserSession)client.getUserSession();
-    String sessionId = sessionId=ussession.getID();
+    String sessionId = sessionId=ussession.getSessionid();
     
     String queryID = request.getParameter("SEARCHID");
     Query query = Searches.getSearch(queryID);

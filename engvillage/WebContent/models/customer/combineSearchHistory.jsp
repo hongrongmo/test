@@ -1,3 +1,5 @@
+<%@page import="org.engvillage.config.RuntimeProperties"%>
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@page import="org.ei.exception.SearchException"%>
 <%@page import="org.ei.exception.InfrastructureException"%>
 <%@page import="org.ei.exception.SystemErrorCodes"%>
@@ -13,14 +15,14 @@
 <%@ page import="org.apache.oro.text.perl.Perl5Util"%>
 <!--import statements of ei packages.-->
 <%@ page import="org.ei.config.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
 <%@ page import="org.ei.domain.*"%>
 <%@ page import="org.ei.domain.navigators.*"%>
 <%@ page import="org.ei.domain.personalization.GlobalLinks"%>
 <%@ page import="org.ei.domain.personalization.SavedSearches"%>
 <%@ page import="org.ei.domain.Searches"%>
 <%@ page import="org.ei.query.base.*"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.util.*"%>
 
@@ -36,7 +38,6 @@
 	LocalHolding localHolding = null;
 
 	String sessionId = null;
-	SessionID sessionIdObj = null;
 	String pUserId = "";
 	boolean personalization = false;
 	int pagesize = 0;
@@ -116,7 +117,7 @@
 
 	public void jspInit() {
 		try {
-			RuntimeProperties eiProps = ConfigService.getRuntimeProperties();
+			RuntimeProperties eiProps = RuntimeProperties.getInstance();
 			pageSize = eiProps.getProperty("DISPLAYPAGESIZE");
 			databaseConfig = DatabaseConfig.getInstance();
 			dedupSetSize = eiProps.getProperty("DEDUPSETSIZE");
@@ -133,19 +134,14 @@
 	dedupsetsize1 = dedupsetsize + 1;
 
 	UserSession ussession = (UserSession) client.getUserSession();
-	sessionId = ussession.getID();
-	sessionIdObj = ussession.getSessionID();
-	pUserId = ussession.getUserIDFromSession();
+	sessionId = ussession.getSessionid();
+	pUserId = ussession.getUserid();
 	if ((pUserId != null) && (pUserId.trim().length() != 0)) {
 		personalization = true;
 	}
 
-	IEVWebUser user = ussession.getUser();
-
-	String customerId = user.getCustomerID().trim();
-
+	String customerId = ussession.getCustomerid().trim();
 	clientCustomizer = new ClientCustomizer(ussession);
-
 	isFullTextPresent = clientCustomizer.checkFullText("citationResults");
 	//isRssLinkPresent=clientCustomizer.checkRssLink("true");
 	isGraphDownloadPresent = clientCustomizer.checkGraphDownload();
@@ -246,11 +242,11 @@
 						queryString.append("(").append(aquery.getPhysicalQuery()).append(")");
 					}
 				} else {
-					
+
 					if(request.getParameter("searchTypeName") != null){
 						errorBackUrl = request.getParameter("searchTypeName");
 					}
-					
+
 					String urlString = "/controller/servlet/Controller?CID=" + errorBackUrl + "&database=" + defaultdb
 							+ "&hisiderr=hisidnotexists&history=t";
 					client.setRedirectURL(urlString);
@@ -282,7 +278,7 @@
 		dbMask = Integer.parseInt(dbName);
 	}
 
-	String[] credentials = user.getCartridge();
+	String[] credentials = ussession.getCartridge();
 
 	if (uniqueDatabase && (dbMask != 8 && dbMask != 16)) {
 		DocumentBasket documentBasket = new DocumentBasket(sessionId);
@@ -449,7 +445,7 @@
 				Searches.updateSearchDeDup(queryObject);
 			}
 
-			String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
+			String strGlobalLinksXML = GlobalLinks.toXML(ussession.getCartridge());
 
 			if (nTotalDocs > 0) {
 				if (currentPage == null) {
@@ -532,7 +528,7 @@
 					out.write("<EMAILALERTS-PRESENT>" + isEmailAlertsPresent + "</EMAILALERTS-PRESENT>");
 					out.write("<CUSTOMER-ID>" + customerId + "</CUSTOMER-ID>");
 					out.write("<RESULTS-PER-PAGE>" + pagesize + "</RESULTS-PER-PAGE>");
-					out.write("<SESSION-ID>" + sessionIdObj + "</SESSION-ID>");
+					out.write("<SESSION-ID>" + sessionId + "</SESSION-ID>");
 					out.write("<PERSONALIZATION>" + personalization + "</PERSONALIZATION>");
 					out.write("<PERSON-USER-ID>" + pUserId + "</PERSON-USER-ID>");
 					out.write("<SEARCH-ID>" + searchID + "</SEARCH-ID>");
@@ -550,7 +546,7 @@
 					// if isCitLocalHoldingsPresent!
 					// This lessens size of outgoing page XML
 					if (isCitLocalHoldingsPresent) {
-						localHolding = new LocalHolding(ussession, 2);
+				        localHolding=new LocalHolding(ussession.getProperty(UserSession.LOCAL_HOLDING_KEY),2);
 						oPage.setlocalHolding(localHolding);
 					}
 
@@ -643,7 +639,7 @@
 					out.write("<LOCALHOLDINGS-CITATION>" + isCitLocalHoldingsPresent + "</LOCALHOLDINGS-CITATION>");
 					out.write("<EMAILALERTS-PRESENT>" + isEmailAlertsPresent + "</EMAILALERTS-PRESENT>");
 					out.write("<CUSTOMER-ID>" + customerId + "</CUSTOMER-ID>");
-					out.write("<SESSION-ID>" + sessionIdObj + "</SESSION-ID>");
+					out.write("<SESSION-ID>" + sessionId + "</SESSION-ID>");
 					out.write("<PERSONALIZATION>" + personalization + "</PERSONALIZATION>");
 					out.write("<PERSON-USER-ID>" + pUserId + "</PERSON-USER-ID>");
 					out.write("<SEARCH-ID>" + searchID + "</SEARCH-ID>");
@@ -658,11 +654,11 @@
 	out.write("</PAGE>");
 					out.print("<!--END-->");
 
-				} 
+				}
 				else {
 					flag = true;
 				}
-			} 
+			}
 
 			//Forward the page when no of results are zero.
 			if (flag == true) {
@@ -686,7 +682,7 @@
 	        client.setRemoteControl();
 	        out.write(be.toXML());
 	        out.flush();
-	        
+
 	        return;
 	    } finally {
 			if (sc != null) {

@@ -3,6 +3,7 @@
    @param java.lang.String.database
 -->
 
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
 
@@ -13,8 +14,8 @@
 
 <!--import statements of ei packages.-->
 
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.query.base.*"%>
 <%@ page import="org.ei.domain.*"%>
@@ -67,15 +68,14 @@
 
         UserSession ussession=(UserSession)client.getUserSession();
         //client.updateUserSession(ussession);
-        sessionId=ussession.getID();
-        pUserId = ussession.getUserIDFromSession();
+        sessionId=ussession.getSessionid();
+        pUserId = ussession.getUserid();
         if((pUserId != null) && (pUserId.trim().length() != 0))
         {
             personalization=true;
         }
 
-         IEVWebUser user = ussession.getUser();
-        String customerId=user.getCustomerID().trim();
+        String customerId=ussession.getCustomerid().trim();
         clientCustomizer=new ClientCustomizer(ussession);
         if(clientCustomizer.isCustomized())
         {
@@ -84,7 +84,7 @@
         }
 
 
-        String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
+        String strGlobalLinksXML = GlobalLinks.toXML(ussession.getCartridge());
 
         out.write("<PAGE>");
         out.write("<HEADER/>");

@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 import org.ei.biz.access.IEVUser;
-import org.ei.domain.personalization.IEVWebUser;
+import org.ei.biz.personalization.IEVWebUser;
 
 
 /**

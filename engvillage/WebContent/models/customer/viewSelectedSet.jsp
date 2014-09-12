@@ -8,6 +8,8 @@
 * @param java.lang.String.BASKETCOUNT
 * @param java.lang.String.SEARCHQUERY
 -->
+<%@page import="org.engvillage.config.RuntimeProperties"%>
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
 <%@ page errorPage="/error/errorPage.jsp" %>
@@ -21,8 +23,8 @@
 <%@ page import="org.ei.domain.*"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.config.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*" %>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession" %>
 <%@ page import="org.ei.config.*"%>
 <%@ page import="org.ei.domain.personalization.GlobalLinks"%>
 <%@ page import="org.ei.domain.Searches"%>
@@ -35,8 +37,6 @@
     BasketPage basketPage = null;
     DocumentBasket basket = null;
     ControllerClient client = null;
-
-    SessionID sessionidObj = null;
 
     List docBasketDatabase = null;
 
@@ -59,7 +59,7 @@
     String customizedLogo="";
     String customizedStartYear = "";
     String customizedEndYear = "";
-    
+
     int databaseCount = 0;
     int pagesize =25;
     int docBasketPageSize = 0 ;
@@ -84,7 +84,7 @@
     {
         try
         {
-            RuntimeProperties runtimeProps= ConfigService.getRuntimeProperties();
+            RuntimeProperties runtimeProps= RuntimeProperties.getInstance();
             pageSize = runtimeProps.getProperty("BASKETPAGESIZE");
             docBasketPageSize=Integer.parseInt(pageSize.trim());
         }
@@ -98,40 +98,38 @@
 <%
     client = new ControllerClient(request,response);
     UserSession ussession=(UserSession)client.getUserSession();
-    String sessionid = ussession.getID();
-    localHolding=new LocalHolding(ussession);
+    String sessionid = ussession.getSessionid();
+    localHolding=new LocalHolding(ussession.getProperty(UserSession.LOCAL_HOLDING_KEY));
 
-    sessionidObj = ussession.getSessionID();
-    strSessionKey = ussession.getID();
+    strSessionKey = ussession.getSessionid();
 
-    pUserId = ussession.getUserIDFromSession();
+    pUserId = ussession.getUserid();
     if((pUserId != null) && (pUserId.trim().length() != 0))
     {
         personalization=true;
     }
-    IEVWebUser user = ussession.getUser();
-    String customerId=user.getCustomerID().trim();
-    String[] credentials = user.getCartridge();
+    String customerId=ussession.getCustomerid().trim();
+    String[] credentials = ussession.getCartridge();
     clientCustomizer=new ClientCustomizer(ussession);
-    
+
     if(request.getParameter("CID") != null)
     {
         cid=request.getParameter("CID").trim();
     }
-    
+
     if(clientCustomizer.isCustomized())
     {
         isPersonalizationPresent=clientCustomizer.checkPersonalization();
         isLHLPresent=clientCustomizer.checkDDS();
         isFullTextPresent=clientCustomizer.checkFullText("citationResults");
-        
+
         //There is no fence setting for abstract and detailed view
         if( (cid!=null) && ( (cid.equals("abstractSelectedSet")) || (cid.equals("detailedSelectedSet")) ) ){
         	isCitLocalHoldingsPresent = true;
         }else{
            	isCitLocalHoldingsPresent=clientCustomizer.checkLocalHolding("citationResults");
         }
-        
+
         isLocalHolidinsPresent=clientCustomizer.checkLocalHolding();
         isEmailAlertsPresent=clientCustomizer.checkEmailAlert();
         customizedLogo=clientCustomizer.getLogo();
@@ -141,7 +139,7 @@
 
     searchID  = request.getParameter("SEARCHID");
 
-    
+
 
     if(request.getParameter("SEARCHTYPE") != null)
     {
@@ -198,7 +196,7 @@
     }
 
     basket = new DocumentBasket(strSessionKey);
-    
+
     if (null != request.getParameter("pageSizeVal"))
     {
     	basket.pageSize = Integer.parseInt(request.getParameter("pageSizeVal"));
@@ -207,9 +205,9 @@
     		 basket.pageSize = Integer.parseInt(ussession.getRecordsPerPage());
     	 }
     }
-    
+
     pagesize= basket.pageSize;
-    
+
     basketSize = basket.getBasketSize();
     documentFormat=Citation.CITATION_FORMAT;
 
@@ -239,7 +237,7 @@
         navigator="NEXT";
     }
 
-String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
+String strGlobalLinksXML = GlobalLinks.toXML(ussession.getCartridge());
 /*
 	client.log("SEARCH_ID", searchID);
 	client.log("DOC_ID", " ");
@@ -287,7 +285,7 @@ String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
 	out.write("<DBMASK>");
 	out.write(databaseID);
 	out.write("</DBMASK>");
-	
+
 	if(searchType!= null)
 	out.write("<SEARCH-TYPE>"+searchType+"</SEARCH-TYPE>");
 	if(request.getParameter("backIndex") != null)
@@ -321,11 +319,11 @@ String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
 	out.write("<LOCALHOLDINGS-CITATION>"+ isCitLocalHoldingsPresent+"</LOCALHOLDINGS-CITATION>");
 	out.write("<EMAILALERTS-PRESENT>"+isEmailAlertsPresent+"</EMAILALERTS-PRESENT>");
 	out.write("<SESSION-ID>");
-	out.write(sessionidObj.toString());
+	out.write(sessionid);
 	out.write("</SESSION-ID>");
 	if(searchID!=null)
 	out.write("<SEARCH-ID>"+searchID+"</SEARCH-ID>");
-	
+
 	if(basketSize > 0)
     {
 		out.write("<BASKET-NAVIGATION>");

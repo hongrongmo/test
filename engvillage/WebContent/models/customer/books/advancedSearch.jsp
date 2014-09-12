@@ -2,7 +2,7 @@
 <%@ page import="org.ei.domain.*" %>
 <%@ page import="org.ei.domain.personalization.*" %>
 <%@ page import="org.ei.controller.*" %>
-<%@ page import="org.ei.session.*" %>
+<%@ page import="org.engvillage.biz.controller.UserSession" %>
 <%@ page import="org.ei.util.StringUtil"%>
 
 <%@ page import="java.util.*" %>
@@ -17,7 +17,7 @@
     IEVWebUser user = ussession.getUser();
     SessionID sessionIdObj = ussession.getSessionID();
     ClientCustomizer clientCustomizer = new ClientCustomizer(ussession);
-    String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
+    String strGlobalLinksXML = GlobalLinks.toXML(ussession.getCartridge());
     String sUserId = "";
     String pageSize = "10";
     String catCode = request.getParameter("catCode");
@@ -34,7 +34,7 @@
     if(catCode == null)
         catCode = "DEFAULT_VIEW";
 
-    sUserId = ussession.getUserIDFromSession();
+    sUserId = ussession.getUserid();
     customizedLogo = clientCustomizer.getLogo();
 
     if((sUserId != null) && (sUserId.trim().length() != 0))
@@ -60,7 +60,7 @@
 <PCO><%=pageSize%></PCO>
 <%=strGlobalLinksXML %>
 <DATABASE><%=db%></DATABASE>
-<SESSION-ID><%=sessionIdObj.toString()%></SESSION-ID>
+<SESSION-ID><%=sessionId%></SESSION-ID>
 
 <%@ include file="../database.jsp"%>
 

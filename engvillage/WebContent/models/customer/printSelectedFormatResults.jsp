@@ -9,6 +9,7 @@
  * @param java.lang.String.displayformat
   * @param java.lang.String.count
 -->
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
 
@@ -17,8 +18,8 @@
 <%@ page  import=" java.net.*"%>
 <!--import statements of ei packages.-->
 <%@ page import="org.ei.domain.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 
 <%@ page  errorPage="/error/errorPage.jsp"%>
@@ -59,9 +60,8 @@
 			client = new ControllerClient(request, response);
 			UserSession ussession=(UserSession)client.getUserSession();
 			//client.updateUserSession(ussession);
-			sessionId = ussession.getID();
+			sessionId = ussession.getSessionid();
 
-			 IEVWebUser user = ussession.getUser();
 			ClientCustomizer clientCustomizer=new ClientCustomizer(ussession);
 			isPersonalizationPresent=clientCustomizer.checkPersonalization();
 			customizedLogo=clientCustomizer.getLogo();

@@ -1,3 +1,4 @@
+<%@page import="org.engvillage.config.RuntimeProperties"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
 <%@ page import="java.util.*"%>
@@ -5,8 +6,8 @@
 <%@ page import="java.io.*"%>
 <%@ page import="org.ei.domain.navigators.*"%>
 <%@ page import="org.ei.domain.Searches"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.query.base.*"%>
 <%@ page import="org.ei.parser.base.*"%>
@@ -29,11 +30,10 @@
     String totalDocCount=null;
     SearchResult result=null;
     org.ei.domain.Query queryObject = null;
-    
+
     Page oPage=null;
     ControllerClient client = new ControllerClient(request, response);
     String sessionId = null;
-    SessionID sessionIdObj = null;
     String recentXmlQueryString=null;
     String searchID=null;
     int index=0;
@@ -63,7 +63,7 @@
     {
         try
         {
-            RuntimeProperties eiProps = ConfigService.getRuntimeProperties();
+            RuntimeProperties eiProps = RuntimeProperties.getInstance();
             pageSize = eiProps.getProperty("PAGESIZE");
             databaseConfig = DatabaseConfig.getInstance();
             customizedEndYear = Integer.parseInt(eiProps.getProperty("SYSTEM_ENDYEAR"));
@@ -76,7 +76,7 @@
 %>
 <%
   SearchControl sc=null;
-  
+
   try
   {
       if(request.getParameter("DATABASE")!=null)
@@ -93,7 +93,7 @@
           xmlDoc = xmlDoc.trim();
           xmlDoc = perl.substitute("s/>\\s+</></g", xmlDoc);
       }
-  
+
       if((request.getParameter("XQUERYX")==null) && ((request.getParameter("EISESSION")==null) || (request.getParameter("SEARCHID")==null)))
       {
           throw new Exception("Not enough data to do a search.");
@@ -109,17 +109,14 @@
               term1=xr.getQuery();
           }
       }
-  
+
       sc = new FastSearchControl();
       pagesize=Integer.parseInt(pageSize.trim());
       UserSession ussession=(UserSession)client.getUserSession();
-      sessionId=ussession.getID();
-      sessionIdObj = ussession.getSessionID();
-  
-       IEVWebUser user = ussession.getUser();
-  
+      sessionId=ussession.getSessionid();
+
       //Getting the COUNT parameter from the request
-  
+
       if(request.getParameter("PAGE")!=null)
       {
           currentPage=(String)request.getParameter("PAGE");
@@ -128,22 +125,22 @@
       {
           currentPage="1";
       }
-  
+
       int intDbMask = Integer.parseInt(dbName);
-      String[] credentials = user.getCartridge();
-  
-      if(credentials == null || !UserCredentials.hasCredentials(intDbMask, databaseConfig.getMask(credentials)))
+      String[] credentials = ussession.getCartridge();
+
+      if(credentials == null || !UserSession.hasCredentials(intDbMask, databaseConfig.getMask(credentials)))
       {
         throw new Exception("You do not have access to the databases requested.");
       }
-  
+
       boolean initialSearch = true;
-  
+
       if(request.getParameter("SEARCHID")!=null)
       {
         searchID = (String)request.getParameter("SEARCHID");
       }
-  
+
       if((searchID == null) || searchID.equals(StringUtil.EMPTY_STRING))
       {
       	  /***************initial search*****************************/
@@ -153,10 +150,10 @@
           searchID = new GUID().toString();
           queryObject.setID(searchID);
           queryObject.setSearchType(org.ei.domain.Query.TYPE_EXPERT);
-  
+
           sortBy = request.getParameter("SORT");
           sortDir = request.getParameter("SORTDIR");
-          queryObject.setSortOption(new Sort(sortBy,sortDir));       
+          queryObject.setSortOption(new Sort(sortBy,sortDir));
 
           // adding the initial search as a single refinement so it will appear as a breadcrumb
           // at the top of search results
@@ -169,7 +166,7 @@
           }
 
           queryObject.setSearchPhrase(term1,"","","","","","","");
-  
+
           autoStem = request.getParameter("AUTOSTEM");
           if(autoStem == null || "on".equalsIgnoreCase(autoStem))
           {
@@ -179,32 +176,32 @@
           {
             queryObject.setAutoStemming("off");
           }
-  
+
           bYear = request.getParameter("STARTYEAR");
           eYear = request.getParameter("ENDYEAR");
 
-          // bYear was set to default to 1990 if request parameter was null  
+          // bYear was set to default to 1990 if request parameter was null
           if ((bYear == null) || (eYear == null))
           {
             Map startEndYears = databaseConfig.getStartEndYears(credentials, intDbMask);
             bYear = (bYear == null) ? (String) startEndYears.get(DatabaseConfig.STARTYEAR) : bYear;
             eYear = (eYear == null) ? (String) startEndYears.get(DatabaseConfig.ENDYEAR) : eYear;
           }
-          
+
           queryObject.setStartYear(bYear);
           queryObject.setEndYear(eYear);
-  
+
           queryObject.setSearchQueryWriter(new FastQueryWriter());
           queryObject.compile();
-  
+
           result = sc.openSearch(queryObject,
                                  sessionId,
                                  pagesize,
                                  false);
-  
+
           //getting the results count for this query
           totalDocCount=Integer.toString(result.getHitCount());
-  
+
           if(totalDocCount!=null)
           {
               queryObject.setRecordCount(totalDocCount.trim());
@@ -226,31 +223,31 @@
                 									sessionId,
                 									pagesize,
                 									true);
-      		initialSearch = false;     
+      		initialSearch = false;
       }
-  
+
       totalDocCount = queryObject.getRecordCount();
       nTotalDocs = Integer.parseInt(totalDocCount);
-  
+
       /**
         * Checking for the total results is greater than zero.
         * then output the xml with results.
         */
-  
+
       if(nTotalDocs>0)
       {
           index = Integer.parseInt(currentPage.trim());
-  
+
           oPage = result.pageAt(index,Citation.XMLCITATION_FORMAT);
           format = "XMLCITATION";
-  
+
           String log_action = "document";
-  
+
           if (initialSearch)
           {
               log_action = "search";
           }
-  
+
           client.log("search_id", queryObject.getID());
           client.log("query_string", queryObject.getPhysicalQuery());
           client.log("sort_by", queryObject.getSortOption().getSortField());
@@ -268,11 +265,11 @@
           client.log("hits", totalDocCount);
           client.setRemoteControl();
           String currentTime=((Calendar.getInstance()).getTime()).toString();
-  
+
           //Writing out XML
           //FileWriter out1 = new FileWriter("/temp/test.xml");
           //build next page and prev page;
-          String serverName= ussession.getEnvBaseAddress();
+          String serverName= ussession.getProperty(UserSession.ENV_BASEADDRESS);
           XMLQueryNavigator bXml=new XMLQueryNavigator();
           bXml.setServerName(serverName);
           bXml.setCID("openXML");
@@ -310,7 +307,7 @@
           {
               out.write("<NEXT-PAGE><![CDATA["+nextPageURL+"]]></NEXT-PAGE>");
           }
-          out.write("<SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+          out.write("<SESSION-ID>"+sessionId+"</SESSION-ID>");
           out.write("<CURR-PAGE-ID>"+index+"</CURR-PAGE-ID>");
           queryObject.setDisplay(true);
           out.write(queryObject.toXMLString());
@@ -320,7 +317,7 @@
           out.write("</PAGE>");
           out.println("<!--END-->");
           out.flush();
-  
+
       }
       else//no record found
       {

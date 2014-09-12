@@ -5,9 +5,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import org.ei.biz.personalization.IEVWebUser;
 import org.ei.connectionpool.ConnectionBroker;
 import org.ei.connectionpool.ConnectionPoolException;
-import org.ei.domain.personalization.IEVWebUser;
 import org.ei.exception.SessionException;
 import org.ei.exception.SystemErrorCodes;
 

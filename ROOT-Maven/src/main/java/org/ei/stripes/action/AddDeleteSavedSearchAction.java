@@ -19,12 +19,12 @@ import org.apache.log4j.Logger;
 import org.ei.biz.security.IAccessControl;
 import org.ei.biz.security.IndividualAuthRequiredAccessControl;
 import org.ei.domain.Searches;
+import org.ei.domain.personalization.SavedSearchesAndAlerts;
+import org.ei.domain.personalization.SearchHistory;
 import org.ei.exception.InfrastructureException;
 import org.ei.exception.SystemErrorCodes;
 import org.ei.session.UserSession;
 import org.ei.stripes.action.personalaccount.IPersonalLogin;
-import org.ei.stripes.view.SavedSearchesAndAlerts;
-import org.ei.stripes.view.SearchHistory;
 
 
 @UrlBinding("/personal/savedsearch/adddelete.url")

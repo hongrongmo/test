@@ -1,7 +1,6 @@
+<%@page import="org.ei.config.ApplicationProperties"%>
 <%@page import="org.ei.exception.SystemErrorCodes"%>
 <%@page import="org.ei.exception.SessionException"%>
-<%@page import="org.ei.config.RuntimeProperties"%>
-<%@page import="org.ei.config.EVProperties"%>
 <%@ page language="java"%>
 <%@ page session="false"%>
 <%@ page import=" java.util.*"%>
@@ -10,11 +9,11 @@
 <%@ page import="org.ei.bulletins.*"%>
 <%@ page import="org.ei.util.*"%>
 <%@ page import="org.ei.logging.*"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.apache.commons.httpclient.*"%>
 <%@ page import="org.apache.commons.httpclient.methods.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
 
 <%@ page errorPage="/error/errorPage.jsp"%>
 <%!private SessionCache sCache = null;
@@ -23,24 +22,15 @@
     String logURL;
     String appName;
     ControllerClient client;
-
+    ApplicationProperties applicationproperties = ApplicationProperties.getInstance();
     public void jspInit() {
 
-        String authURL = EVProperties.getRuntimeProperty(RuntimeProperties.AUTH_URL);
         appName = "EnCompassLit";
-        bulletinFileLocation = EVProperties.getRuntimeProperty(RuntimeProperties.BULLETIN_FILE_LOCATION);
-        logURL = EVProperties.getRuntimeProperty(RuntimeProperties.LOG_URL);
-        try {
-            SessionCache.init(authURL, appName);
-        } catch (Throwable t) {
-            System.out.println("Unable to initialize SessionCache!  authURL = '" + authURL + ", appName='" + appName + "'");
-        }
+        String authURL = applicationproperties.getProperty(ApplicationProperties.AUTH_URL);
+        bulletinFileLocation = applicationproperties.getProperty(ApplicationProperties.BULLETIN_FILE_LOCATION);
+        logURL = applicationproperties.getProperty(ApplicationProperties.LOG_URL);
     }%>
 <%
-    sCache = SessionCache.getInstance();
-    if (sCache == null) {
-        throw new SessionException(SystemErrorCodes.UNKNOWN, "No SessionCache is available!");
-    }
     client = new ControllerClient(request, response);
     javax.servlet.http.Cookie[] cookies = request.getCookies();
     String sessionID = null;
@@ -71,18 +61,9 @@
     String password = null;
     String entryToken = request.getParameter("SYSTEM_ENTRY_TOKEN");
 
-    UserSession ussession = sCache.getUserSession(sesID, ipaddress, referrerURL, username, password, entryToken);
-
-    String status = ussession.getStatus();
-    if (status.equals(SessionStatus.NEW_HAD_EXPIRED)) {
-        ussession = sCache.getUserSession(null, ipaddress, referrerURL, username, password, entryToken);
-    }
-
-    String pUserId = ussession.getUserIDFromSession();
-
-    IEVWebUser user = ussession.getUser();
-
-    String cartridges[] = user.getCartridge();
+    UserSession ussession = client.getUserSession();
+    String pUserId = ussession.getUserid();
+    String cartridges[] = ussession.getCartridge();
     StringBuffer buffCartridges = new StringBuffer();
 
     for (int i = 0; i < cartridges.length; i++) {
@@ -112,7 +93,7 @@
     logProperties.put("dbname", bulletin.getDatabase());
     logProperties.put("category", bulletin.getCategory());
     logProperties.put("filename", bulletin.getFileName());
-    logProperties.put("custid", user.getCustomerID());
+    logProperties.put("custid", ussession.getCustomerid());
     logProperties.put("ctype", cType);
 
     bulletin.setContentType(cType);

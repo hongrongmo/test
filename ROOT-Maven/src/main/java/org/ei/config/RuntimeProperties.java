@@ -20,16 +20,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintStream;
 import java.io.PrintWriter;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-import java.util.Properties;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -41,7 +35,6 @@ import org.ei.domain.DatabaseConfigException;
 import org.ei.domain.DriverConfig;
 import org.ei.domain.FastSearchControl;
 import org.ei.exception.ServiceException;
-import org.ei.service.amazon.dynamodb.AmazonDynamoDBService;
 import org.ei.service.amazon.dynamodb.RuntimePropsDynamoDBServiceImpl;
 import org.ei.thesaurus.ThesaurusSearchControl;
 
@@ -53,7 +46,7 @@ import org.ei.thesaurus.ThesaurusSearchControl;
  **/
 
 @SuppressWarnings("serial")
-public final class RuntimeProperties extends Properties {
+public final class RuntimeProperties extends ApplicationProperties {
 
     public final static String RUNLEVEL_PROD = "prod";
     public final static String RUNLEVEL_CERT = "cert";
@@ -81,57 +74,11 @@ public final class RuntimeProperties extends Properties {
     /** The Constant RELEASE_VERSION. */
     public static final String RELEASE_VERSION = "release.version";
 
-    /** The Constant FAST_BASE_URL. */
-    public static final String FAST_BASE_URL = "fast.base.url";
-
-    /** The Constant THES_BASE_URL. */
-    public static final String THES_BASE_URL = "thesaurus.base.url";
-
-    /** The Constant FAST_LEM_BASE_URL. */
-    public static final String FAST_LEM_BASE_URL = "fast.lem.base.url";
-
-    /** The Constant FAST_DOCVIEW_BASE_URL. */
-    public static final String FAST_DOCVIEW_BASE_URL = "fast.docview.base.url";
-
-    /** The Constant REFEREX_TOC_BASE_PATH. */
-    @Deprecated
-    public static final String REFEREX_TOC_BASE_PATH = "referex.toc.base.path";
-
-    /** The Constant WHOLE_BOOK_DOWNLOAD_BASE_URL. */
-    public static final String WHOLE_BOOK_DOWNLOAD_BASE_URL = "whole.book.download.base.url";
-
-    /** The Constant CITED_BY_URL. */
-    public static final String CITED_BY_URL = "citedby.url";
-
     /** The Constant APP_NAME. */
     public static final String APP_NAME = "app.name";
 
-    /** The Constant APPEND_SESSION. */
-    public static final String APPEND_SESSION = "append.session";
-
-    /** The Constant DATA_URL. */
-    public static final String DATA_URL = "data.url";
-
-    /** The Constant LOG_URL. */
-    public static final String LOG_URL = "log.url";
-
-    /** The Constant AUTH_URL. */
-    public static final String AUTH_URL = "auth.url";
-
-    /** The Constant LOGSERVICE_LOG_PATH. */
-    public static final String LOGSERVICE_LOG_PATH = "logservice.log.path";
-
     /** The Constant AWS_METADATA_URL. */
     public static final String AWS_METADATA_URL = "aws.metadata.url";
-
-    /** The Constant USPTO_LUCENE_INDEX_DIR. */
-    public static final String USPTO_LUCENE_INDEX_DIR = "uspto.lucene.index.dir";
-
-    /** The Constant IPC_LUCENE_INDEX_DIR. */
-    public static final String IPC_LUCENE_INDEX_DIR = "ipc.lucene.index.dir";
-
-    /** The Constant ECLA_LUCENE_INDEX_DIR. */
-    public static final String ECLA_LUCENE_INDEX_DIR = "ecla.lucene.index.dir";
 
     /** The Constant MEMCACHE_SERVERS. */
     public static final String MEMCACHE_SERVERS = "memcache.servers";
@@ -166,48 +113,6 @@ public final class RuntimeProperties extends Properties {
 	/** The Constant S3_REFEREX_BUCKET_KEY. */
 	public static final String S3_REFEREX_BUCKET_KEY = "s3.referex.key";
 
-	/** The Constant REFEREX_MASK_FLAG. */
-	public static final String REFEREX_MASK_FLAG = "referex.mask.flag";
-
-	/** The Constant REFEREX_MASK_DATE. */
-	public static final String REFEREX_MASK_DATE = "referex.mask.date";
-
-    /** The Constant PAGESIZE. */
-    public static final String PAGESIZE = "PAGESIZE";
-
-    /** The Constant DISPLAY_PAGESIZE. */
-    public static final String DISPLAY_PAGESIZE = "DISPLAYPAGESIZE";
-
-    /** The Constant BASKET_PAGESIZE. */
-    public static final String BASKET_PAGESIZE = "BASKETPAGESIZE";
-
-    /** The Constant LOOKUP_PAGESIZE. */
-    public static final String LOOKUP_PAGESIZE = "LOOKUPPAGESIZE";
-
-    /** The Constant SEARCHHISTORY_SIZE. */
-    public static final String SEARCHHISTORY_SIZE = "SEARCHHISTORYSIZE";
-
-    /** The Constant EMAILALERT_SIZE. */
-    public static final String EMAILALERT_SIZE = "EMAILALERTSIZE";
-
-    /** The Constant EMAILALERT_DAY. */
-    public static final String EMAILALERT_DAY = "EMAILALERTDAY";
-
-    /** The Constant MAX_FOLDERSIZE. */
-    public static final String MAX_FOLDERSIZE = "MAXFOLDERSIZE";
-
-    /** The Constant MAX_BASKETSIZE. */
-    public static final String MAX_BASKETSIZE = "MAXBASKETSIZE";
-
-    /** The Constant SERVER_LOCATION. */
-    public static final String SERVER_LOCATION = "SERVERLOCATION";
-
-    /** The Constant DEDUPSET_SIZE. */
-    public static final String DEDUPSET_SIZE = "DEDUPSETSIZE";
-
-    /** The Constant SYSTEM_ENDYEAR. */
-    public static final String SYSTEM_ENDYEAR = "SYSTEM_ENDYEAR";
-
     /** The Constant PAGESIZE_OPTIONS. */
     public static final String PAGESIZE_OPTIONS = "PAGESIZEOPTIONS";
 
@@ -228,43 +133,6 @@ public final class RuntimeProperties extends Properties {
 
     /** The Constant CAR_RESPONSE_MODIFICATION_REQUIRED_TEMPALTE_IDS. */
     public static final String CAR_RESPONSE_MODIFICATION_REQUIRED_TEMPALTE_IDS= "CAR_RESPONSE_MODIFICATION_REQUIRED_TEMPALTE_IDS";
-
-
-    /** The Constant SMTP_HOST. */
-    public static final String SMTP_HOST = "mail.smtp.host";
-
-    /** The Constant SMTP_USERNAME. */
-    public static final String SMTP_USERNAME = "mail.smtp.username";
-
-    /** The Constant SMTP_PASSWORD. */
-    public static final String SMTP_PASSWORD = "mail.smtp.password";
-
-	/** The Constant DEBUG. */
-	public static final String DEBUG = "mail.smtp.debug";
-
-    /** The Constant SENDER. */
-    public static final String SENDER = "sender";
-
-    /** The Constant TO_RECEPIENTS. */
-    public static final String TO_RECEPIENTS = "TORecepients";
-
-    /** The Constant BCC_RECEPIENTS. */
-    public static final String BCC_RECEPIENTS = "BCCRecepients";
-
-    /** The Constant LHL_PRODUCTID. */
-    public static final String LHL_PRODUCTID = "lhl.product.id";
-
-    /** The Constant LHL_TO_RECIPIENTS. */
-    public static final String LHL_TO_RECIPIENTS = "lhl.to.recipients";
-
-    /** The Constant LHL_CC_RECIPIENTS. */
-    public static final String LHL_CC_RECIPIENTS = "lhl.cc.recipients";
-
-    /** The Constant LHL_FROM_RECIPIENTS. */
-    public static final String LHL_FROM_RECIPIENTS = "lhl.from.recipients";
-
-    /** The Constant LHL_EMAIL_SUBJECT. */
-    public static final String LHL_EMAIL_SUBJECT = "lhl.email.subject";
 
     /** The Constant HELP_URL. */
     public static final String HELP_URL = "HelpUrl";
@@ -470,14 +338,11 @@ public final class RuntimeProperties extends Properties {
 
     /** The Constant HTTPS_PORT. */
     public static final String HTTPS_PORT ="HTTPS_PORT";
-    
-    /** The Constant SYNC_TOKEN_LIST_SIZE. */
-    public static final String SYNC_TOKEN_LIST_SIZE ="SYNC_TOKEN_LIST_SIZE";
-    
+
     /** The Constant PREVENT_CSRF_ATTACK. */
     public static final String PREVENT_CSRF_ATTACK ="PREVENT_CSRF_ATTACK";
-    
-    
+
+
     //
     // Static instance of the RuntimeProperties
     //
@@ -487,15 +352,12 @@ public final class RuntimeProperties extends Properties {
     /** The runlevel. */
     private String runlevel = "";
 
-    /**
-     * Instantiates a new runtime properties.
-     */
-    private RuntimeProperties() {}
-
-
     /** The timer. */
     public  static Timer timer = null;
 
+    private RuntimeProperties() {
+        super();
+    };
 
     /**
      * Gets the single instance of RuntimeProperties.
@@ -503,12 +365,17 @@ public final class RuntimeProperties extends Properties {
      * @return single instance of RuntimeProperties
      * @throws IOException Signals that an I/O exception has occurred.
      */
-    public static synchronized RuntimeProperties getInstance() throws IOException {
+    public static synchronized RuntimeProperties getInstance() {
         if (instance == null) {
             instance = new RuntimeProperties();
             instance.runlevel = System.getProperty(SYSTEM_ENVIRONMENT_RUNLEVEL);
-            RuntimeProperties.refreshProperties(instance);
-            init();
+            try {
+                RuntimeProperties.refreshProperties(instance);
+                init();
+            } catch (IOException e) {
+                log4j.error("Unable to initialize RuntimeProperties!",e);
+                throw new RuntimeException(e);
+            }
         }
         return instance;
     }
@@ -622,26 +489,6 @@ public final class RuntimeProperties extends Properties {
     }
 
 
-
-    /**
-     * Check a runtime propterty that is in the date form 'yyyyMMddHHmmss'
-     * i.e. 04-01-2014 would be 20140401000000
-     *
-     * @param property the property
-     * @return true, if is it time
-     * @throws ParseException the parse exception
-     */
-    public boolean isItTime(String property) throws ParseException{
-		DateFormat df = new SimpleDateFormat("yyyyMMddHHmmss");
-		Date maskDate = df.parse(instance.getProperty(property));
-		Date currentTime = Calendar.getInstance().getTime();
-		log4j.info("**Current Time : " +currentTime.toString());
-		if(maskDate.after(currentTime)){
-			return false;
-		}
-		return true;
-
-    }
 
     /**
      * Gets the config service.

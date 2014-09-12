@@ -5,8 +5,8 @@ import java.util.List;
 
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
+import org.ei.biz.personalization.IEVWebUser;
 import org.ei.config.RuntimeProperties;
-import org.ei.domain.personalization.IEVWebUser;
 import org.ei.session.UserPreferences;
 import org.ei.session.UserSession;
 import org.ei.stripes.EVActionBeanContext;

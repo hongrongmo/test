@@ -4,7 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.lang.StringUtils;
-import org.ei.domain.personalization.EVWebUser;
+import org.ei.biz.personalization.EVWebUser;
 import org.ei.exception.ServiceException;
 import org.ei.service.cars.CARSAuthenticationConstants;
 import org.ei.service.cars.CARSConfigVariables;

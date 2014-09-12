@@ -1,6 +1,7 @@
 <!-- This file creates the xml for result coming from serach result page or from
      selected set page.
 -->
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
 
@@ -11,8 +12,8 @@
 <%@ page import="javax.mail.internet.*"%>
 
 <!--import statements of ei packages.-->
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.domain.*"%>
 <%@ page import="org.ei.domain.personalization.*"%>
@@ -43,7 +44,6 @@
     String guru = "";
     String sUserId = "";
     String userId = null;
-    SessionID sessionIdObj = null;
 
     boolean showShareCheckbox = true;
 
@@ -55,10 +55,9 @@
      *  Getting the session id from the usersession.
      */
     UserSession ussession = (UserSession)client.getUserSession();
-    sessionId = ussession.getID();
-    sessionIdObj = ussession.getSessionID();
+    sessionId = ussession.getSessionid();
 
-    sUserId = ussession.getUserIDFromSession();
+    sUserId = ussession.getUserid();
 
     ClientCustomizer clientCustomizer = new ClientCustomizer(ussession);
 
@@ -99,7 +98,7 @@
     action = request.getParameter("action");
 
     out.write("<PAGE>");
-    out.write("<SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+    out.write("<SESSION-ID>"+sessionId+"</SESSION-ID>");
     out.write("<SEARCH-ID>"+searchid+"</SEARCH-ID>");
     out.write("<DATABASE>"+database+"</DATABASE>");
     out.write("<SECTION>"+section+"</SECTION>");
@@ -229,7 +228,7 @@
       // if email is coming to default ei.org address, add user info
       if(LIBRARIAN_EMAIL.equals(refEmail))
       {
-        messagebody.write(ussession.getUser().toString());
+        messagebody.write(ussession.outputUserString());
       }
       else
       {

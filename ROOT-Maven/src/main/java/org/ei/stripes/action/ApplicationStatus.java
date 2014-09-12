@@ -43,6 +43,9 @@ import org.apache.commons.httpclient.methods.GetMethod;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
+import org.ei.biz.email.SESEmail;
+import org.ei.biz.email.SESMessage;
+import org.ei.biz.personalization.cars.Account;
 import org.ei.biz.security.IAccessControl;
 import org.ei.biz.security.NoAuthAccessControl;
 import org.ei.config.EVProperties;
@@ -52,17 +55,13 @@ import org.ei.controller.CookieHandler;
 import org.ei.controller.IPBlocker;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.FastClient;
-import org.ei.domain.personalization.cars.Account;
 import org.ei.download.util.SaveToGoogleUsage;
-import org.ei.email.SESEmail;
-import org.ei.email.SESMessage;
 import org.ei.service.amazon.s3.AmazonS3Service;
 import org.ei.service.amazon.s3.AmazonS3ServiceImpl;
 import org.ei.session.BaseCookie;
 import org.ei.session.BlockedIPEvent;
 import org.ei.session.BlockedIPEvent.TimePeriod;
 import org.ei.session.BlockedIPStatus;
-import org.ei.session.SessionCache;
 import org.ei.session.UserSession;
 import org.ei.stripes.util.HttpRequestUtil;
 import org.ei.system.ApplicationStatusVO;
@@ -86,8 +85,6 @@ public class ApplicationStatus extends EVActionBean {
 
     private String emailto;
     private String emailfrom = "ei-noreply@elsevier.com";
-
-    private SessionCache sCache;
 
     private String cacheKey;
     private String cacheVal;

@@ -15,7 +15,7 @@ import javax.xml.transform.Transformer;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
-import org.ei.domain.personalization.IEVWebUser;
+import org.ei.biz.personalization.IEVWebUser;
 import org.ei.session.SessionID;
 import org.ei.session.UserSession;
 import org.ei.util.SpinLockException;

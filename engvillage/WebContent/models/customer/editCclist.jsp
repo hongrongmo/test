@@ -2,6 +2,7 @@
  * This page the follwing params as input and generates XML output.
  * @param java.lang.String.databaseName
  -->
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
 <!-- import statements of Java packages-->
@@ -12,8 +13,8 @@
 <!--import statements of ei packages.-->
 <%@ page import="javax.servlet.jsp.*" %>
 <%@ page import="org.ei.connectionpool.*" %>
-<%@ page import="org.ei.controller.ControllerClient" %>
-<%@ page import="org.ei.session.*" %>
+<%@ page import="org.engvillage.biz.controller.ControllerClient" %>
+<%@ page import="org.engvillage.biz.controller.UserSession" %>
 <%@ page import="org.ei.domain.*" %>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.util.StringUtil" %>
@@ -25,11 +26,6 @@
    * This page contains SavedSearches records xml for that user.
    */
 
-	// This variable for sessionId
-	// jam 9/24/2002 - Changed from String to SessionID object
-	//String sessionId = null;
-  	SessionID sessionId=null;
-
 	// This variable for Database name
 	String dbName=null;
 	// This variable for userId
@@ -40,19 +36,18 @@
 	boolean isEmailAlertsPresent=true;
 	boolean isEmailccListPresent=false;
 	String customizedLogo="";
-	
+
 	// This variable is used to hold ControllerClient instance
 	ControllerClient client = new ControllerClient(request, response);
 	UserSession ussession=(UserSession)client.getUserSession();
 	//client.updateUserSession(ussession);
-	//sessionId=ussession.getID();
+	//sessionId=ussession.getSessionid();
 	// jam 9/24/2002 - Changed from String to SessionID object
-	sessionId = ussession.getSessionID();
+	String sessionId = ussession.getSessionid();
 
-	userId = ussession.getUserIDFromSession();
+	userId = ussession.getUserid();
 
-	 IEVWebUser user = ussession.getUser();
-	String customerId=user.getCustomerID().trim();
+	String customerId=ussession.getCustomerid().trim();
 	clientCustomizer=new ClientCustomizer(ussession);
 	if(clientCustomizer.isCustomized())
 	{
@@ -97,7 +92,7 @@
 		//FileWriter out1 = new FileWriter("/temp/test.xml");
 
 		//Writting out xml for that sessionId
-		String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
+		String strGlobalLinksXML = GlobalLinks.toXML(ussession.getCartridge());
 
 		out.write("<PAGE>");
 		out.write("<HEADER/>");

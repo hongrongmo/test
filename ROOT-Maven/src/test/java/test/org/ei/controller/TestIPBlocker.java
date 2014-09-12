@@ -13,12 +13,12 @@ import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.ei.biz.personalization.cars.Account;
 import org.ei.config.EVProperties;
 import org.ei.config.RuntimeProperties;
 import org.ei.controller.IPBlocker;
 import org.ei.controller.IPBlocker.COUNTER;
 import org.ei.controller.MemcachedUtil;
-import org.ei.domain.personalization.cars.Account;
 import org.ei.session.BlockedIPEvent;
 import org.ei.session.BlockedIPStatus;
 import org.junit.After;

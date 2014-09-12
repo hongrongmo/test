@@ -9,8 +9,8 @@ import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathFactory;
 
 import org.apache.log4j.Logger;
+import org.ei.biz.personalization.IEVWebUser;
 import org.ei.domain.personalization.GlobalLinks;
-import org.ei.domain.personalization.IEVWebUser;
 import org.ei.session.UserSession;
 import org.ei.stripes.EVActionBeanContext;
 import org.w3c.dom.Document;

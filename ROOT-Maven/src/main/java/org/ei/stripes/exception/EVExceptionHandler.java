@@ -17,9 +17,9 @@ import net.sourceforge.stripes.exception.StripesServletException;
 import org.apache.commons.validator.GenericValidator;
 import org.apache.jasper.JasperException;
 import org.apache.log4j.Logger;
+import org.ei.biz.personalization.IEVWebUser;
 import org.ei.config.EVProperties;
 import org.ei.config.RuntimeProperties;
-import org.ei.domain.personalization.IEVWebUser;
 import org.ei.exception.EVBaseException;
 import org.ei.service.amazon.AmazonServiceHelper;
 import org.ei.session.AWSInfo;
@@ -88,7 +88,7 @@ public class EVExceptionHandler extends DefaultExceptionHandler {
                     this.errorthreshold = Integer.parseInt(errorthreshold);
                 if (!GenericValidator.isBlankOrNull(errorinterval))
                     this.errorinterval = Long.parseLong(errorinterval) * 60 * 1000;
-            } catch (IOException e) {
+            } catch (Exception e) {
                 log4j.error("Unable to initialize max error properties");
                 // Defaults
                 this.snsalerttopic = "arn:aws:sns:us-east-1:230521890328:AWSAlerts-Prod";

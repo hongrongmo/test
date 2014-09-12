@@ -13,8 +13,8 @@ import javax.servlet.http.HttpSession;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.apache.wink.json4j.JSONArray;
+import org.ei.biz.personalization.EVWebUser;
 import org.ei.controller.MemcachedUtil;
-import org.ei.domain.personalization.EVWebUser;
 import org.ei.session.UserSession;
 
 /**

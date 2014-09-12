@@ -2,6 +2,7 @@
      selected set page.
 -->
 
+<%@page import="org.engvillage.config.RuntimeProperties"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
 
@@ -10,8 +11,8 @@
 <%@ page  import=" java.net.*"%>
 
 <!--import statements of ei packages.-->
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import ="org.ei.domain.*"%>
 <%@ page import ="org.ei.domain.personalization.*"%>
@@ -24,9 +25,12 @@
 
 
 <%
+
+	// This variable is used to hold ControllerClient instance
+	ControllerClient client = new ControllerClient(request, response);
+
     // This variable for sessionId
     String sessionId="";
-    SessionID sessionIdObj = null;
     // This variable for searchid
     String searchid="";
 
@@ -72,8 +76,6 @@
     List docBasketDatabase = null;
     int databaseCount = 0;
 
-    // This variable is used to hold ControllerClient instance
-     ControllerClient client = new ControllerClient(request, response);
 
 
   /**
@@ -81,12 +83,11 @@
    *  Getting the session id from the usersession.
    */
     UserSession ussession=(UserSession)client.getUserSession();
-    sessionId=ussession.getID();
-    sessionIdObj = ussession.getSessionID();
+    sessionId=ussession.getSessionid();
 
-    String baseAddress = ussession.getEnvBaseAddress();
+    String baseAddress = ussession.getProperty(UserSession.ENV_BASEADDRESS);
 
-    sUserId=ussession.getUserIDFromSession();
+    sUserId=ussession.getUserid();
     //client.updateUserSession(ussession);
 
     if( sUserId != null)
@@ -94,7 +95,7 @@
         userId = sUserId;
     }
 
-    RuntimeProperties runtimeProps = ConfigService.getRuntimeProperties();
+    RuntimeProperties runtimeProps = RuntimeProperties.getInstance();
     String pageSize = runtimeProps.getProperty("BASKETPAGESIZE");
     docBasketPageSize = Integer.parseInt(pageSize.trim());
 
@@ -126,7 +127,7 @@
             displaytype = request.getParameter("displayformat");
         }
 
-        xmlString = new StringBuffer("<PAGE><SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+        xmlString = new StringBuffer("<PAGE><SESSION-ID>"+sessionId+"</SESSION-ID>");
         xmlString.append("<SEARCH-ID>"+searchid+"</SEARCH-ID>");
         xmlString.append("<BASE-ADDRESS>");
         xmlString.append(baseAddress);
@@ -172,7 +173,7 @@
     }
 
 
-    xmlString = new StringBuffer("<PAGE><SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+    xmlString = new StringBuffer("<PAGE><SESSION-ID>"+sessionId+"</SESSION-ID>");
     xmlString.append("<BASE-ADDRESS>");
     xmlString.append(baseAddress);
     xmlString.append("</BASE-ADDRESS>");
@@ -237,7 +238,7 @@
         // we can write the actual db for this single record
         // instead of combined
         out.write("<PAGE>");
-        out.write("<SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+        out.write("<SESSION-ID>"+sessionId+"</SESSION-ID>");
         out.write("<SEARCH-ID>"+searchid+"</SEARCH-ID>");
         out.write("<BASE-ADDRESS>");
         out.write(baseAddress);
@@ -250,7 +251,7 @@
     }
     else if(basketCount!=0)
     {
-    xmlString = new StringBuffer("<PAGE><SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+    xmlString = new StringBuffer("<PAGE><SESSION-ID>"+sessionId+"</SESSION-ID>");
         xmlString.append("<BASE-ADDRESS>");
         xmlString.append(baseAddress);
         xmlString.append("</BASE-ADDRESS>");
@@ -282,7 +283,7 @@
   }
     else
     {
-    xmlString = new StringBuffer("<PAGE><SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+    xmlString = new StringBuffer("<PAGE><SESSION-ID>"+sessionId+"</SESSION-ID>");
     xmlString.append("<ERROR-PAGE>true</ERROR-PAGE>");
     xmlString.append("</PAGE>");
     out.write(xmlString.toString());

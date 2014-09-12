@@ -3,7 +3,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ taglib uri="http://stripes.sourceforge.net/stripes.tld" prefix="stripes" %>
-<%@ page import="org.ei.session.*"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 
 <stripes:layout-definition>
@@ -16,7 +15,7 @@
     <title>${pageTitle}</title>
  	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
 	<link rel="icon" href="/favicon.ico" type="image/x-icon"/>
- 
+
 
 <stripes:layout-component name="cssheadstandard">
 <jwr:style src="/bundles/standard.css"></jwr:style>

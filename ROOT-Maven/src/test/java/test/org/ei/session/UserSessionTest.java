@@ -5,7 +5,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Properties;
@@ -13,11 +12,10 @@ import java.util.Set;
 
 import org.apache.log4j.Logger;
 import org.ei.ane.entitlements.UserEntitlement;
-import org.ei.domain.personalization.EVWebUser;
-import org.ei.domain.personalization.cars.Account;
+import org.ei.biz.personalization.EVWebUser;
+import org.ei.biz.personalization.cars.Account;
 import org.ei.service.cars.security.authorization.UserAccessType;
 import org.ei.session.CARSMetadata;
-import org.ei.session.MergeUserInfo;
 import org.ei.session.UserSession;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -29,15 +27,15 @@ import com.elsevier.webservices.schemas.csas.constants.types.v7.RefworksAuthType
 
 public class UserSessionTest extends BaseActionTest {
     private static Logger log4j = Logger.getLogger(UserSessionTest.class);
-    
+
     private static EVWebUser sampleUser = new EVWebUser();
-    
-    
-    
+
+
+
     @BeforeClass
     private void init() {
     }
-    
+
     /**
      * Tests to ensure various configurations of the UserSession object can be serialized/deserialized
      */
@@ -57,16 +55,16 @@ public class UserSessionTest extends BaseActionTest {
         account.setAccountNumber("A123456");
         account.setDepartmentId("D123456");
         account.setDepartmentName("Sample Dept");
-        
+
         account.setRefworksAuthenticationType(RefworksAuthTypeCodeType.REFWORKS);
         sampleUser.setAccount(account);
-        
+
         sampleCARSMetadata.setHeaderContent(sampleHeader);
         sampleCARSMetadata.setCurrentPage(null);
         sampleCARSMetadata.setFlowComplete(true);
         sampleCARSMetadata.setiPAuthStatus("TEST");
         sampleCARSMetadata.setLastSuccessAccessTime((new Date()).toString());
-        
+
         sampleEntitlements.add(UserEntitlement.CPX_ENTITLEMENT);
         sampleEntitlements.add(UserEntitlement.C84_ENTITLEMENT);
         sampleEntitlements.add(UserEntitlement.INS_ENTITLEMENT);
@@ -86,7 +84,7 @@ public class UserSessionTest extends BaseActionTest {
         us.setCarsMetaData(sampleCARSMetadata);
         us.addUserEntitlements(sampleEntitlements);
         us.setProperties(sampleSessionProperties);
-        
+
         byte[] ser = null;
         try{
             ser = serialize(us);
@@ -94,15 +92,15 @@ public class UserSessionTest extends BaseActionTest {
             Assert.fail("Unable to serialize, case 1!", t);
             return;
         }
-        
+
         log4j.info("Size of UserSession object: " + ser.length);
-        
+
         try{
             UserSession uscopy = (UserSession) deserialize(ser);
             Assert.assertNull(uscopy.getCarsMetaData(), "CARSMetaData object should be null after deser!");
             Assert.assertTrue(uscopy.getUserEntitlements().isEmpty(), "UserEntitlements Set should be empty after deser!");
             Assert.assertTrue(uscopy.getUserTextZones().isEmpty(), "UserTextZones List should be null after deser!");
-            
+
             Assert.assertEquals(uscopy.getAuthtoken(), us.getAuthtoken());
             Assert.assertEquals(uscopy.getBackUrl(), us.getBackUrl());
             Assert.assertEquals(uscopy.getNextUrl(), us.getNextUrl());
@@ -117,27 +115,27 @@ public class UserSessionTest extends BaseActionTest {
             Assert.assertEquals(uscopy.getRecordsPerPage(), us.getRecordsPerPage());
             Assert.assertEquals(uscopy.getHighlightState(), us.getHighlightState());
             Assert.assertEquals(uscopy.getHighlightState(), us.getHighlightState());
-            
+
         } catch (Throwable t) {
             Assert.fail("Unable to deserialize, case 1!", t);
         }
-        
-        
+
+
     }
-    
+
     public static byte[] serialize(Object obj) throws IOException {
         ByteArrayOutputStream b = new ByteArrayOutputStream();
         ObjectOutputStream o = new ObjectOutputStream(b);
         o.writeObject(obj);
         return b.toByteArray();
     }
-    
+
     public static Object deserialize(byte[] bytes) throws IOException, ClassNotFoundException {
         ByteArrayInputStream b = new ByteArrayInputStream(bytes);
         ObjectInputStream o = new ObjectInputStream(b);
         return o.readObject();
     }
-    
+
     private final String sampleHeader =
         "<link xmlns:cars=\"http://cars-services.elsevier.com/cars/server\" xmlns:apps=\"http://apps-services.elsevier.com/apps/server\" xmlns:rb=\"http://RB-services.elsevier.com/resourceBundle/server\" rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"https://cdc315-acw.elsevier.com/SSOCore/css/cars/cars_common.css\"><script xmlns:cars=\"http://cars-services.elsevier.com/cars/server\" xmlns:apps=\"http://apps-services.elsevier.com/apps/server\" xmlns:rb=\"http://RB-services.elsevier.com/resourceBundle/server\" type=\"text/javascript\">\n"
             +
@@ -163,7 +161,7 @@ public class UserSessionTest extends BaseActionTest {
             +
             "           }\n"
             +
-            
+
             "   if(from == \"logoutbox\"){\n"
             +
             "       var outBox = document.getElementById('logoutBox').style;\n"
@@ -416,8 +414,8 @@ public class UserSessionTest extends BaseActionTest {
             "    #loginDiv table td{\n" +
             "        text-align:left !important;\n" +
             "    }\n" +
-            
+
             "</style>\\n" +
             "\n";
-    
+
 }

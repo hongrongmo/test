@@ -23,6 +23,7 @@ import org.ei.config.EVProperties;
 import org.ei.config.JSPPathProperties;
 import org.ei.config.RuntimeProperties;
 import org.ei.domain.DatabaseDisplayHelper;
+import org.ei.domain.SortOption;
 import org.ei.exception.ErrorXml;
 import org.ei.exception.InfrastructureException;
 import org.ei.exception.SessionException;
@@ -35,7 +36,6 @@ import org.ei.stripes.view.PageNavigation;
 import org.ei.stripes.view.ResultsNavigatorItem;
 import org.ei.stripes.view.SearchResult;
 import org.ei.stripes.view.SearchResultNavigator;
-import org.ei.stripes.view.SortOption;
 import org.ei.tags.TagBubble;
 
 /**

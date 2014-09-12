@@ -12,9 +12,9 @@ import net.sourceforge.stripes.action.Resolution;
 import net.sourceforge.stripes.action.UrlBinding;
 
 import org.apache.log4j.Logger;
+import org.ei.biz.personalization.IEVWebUser;
 import org.ei.biz.security.IAccessControl;
 import org.ei.biz.security.TagsGroupsIndivAccessControl;
-import org.ei.domain.personalization.IEVWebUser;
 import org.ei.stripes.action.personalaccount.IPersonalLogin;
 import org.ei.tags.TagBroker;
 import org.ei.tags.TagGroup;

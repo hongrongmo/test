@@ -1,3 +1,4 @@
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
 <!--
@@ -13,8 +14,8 @@
 <%@ page import="java.net.URLDecoder"%>
 <%@ page import="java.net.URLEncoder"%>
 <!--import statements of ei packages.-->
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.domain.*" %>
 <%@ page import="org.ei.config.*"%>
@@ -36,7 +37,6 @@
     DatabaseConfig databaseConfig = DatabaseConfig.getInstance();
 
     String sessionId=null;
-    SessionID sessionIdObj = null;
 
     String pUserId = null;
     boolean personalization = false;
@@ -59,17 +59,14 @@
 
     ControllerClient client = new ControllerClient(request, response);
     UserSession ussession=(UserSession)client.getUserSession();
-    sessionId=ussession.getID();
-    sessionIdObj = ussession.getSessionID();
-    pUserId = ussession.getUserIDFromSession();
+    sessionId=ussession.getSessionid();
+    pUserId = ussession.getUserid();
     if((pUserId != null) && (pUserId.trim().length() != 0))
     {
         personalization=true;
     }
 
-     IEVWebUser user = ussession.getUser();
-
-    String[] credentials = user.getCartridge();
+    String[] credentials = ussession.getCartridge();
     boolean hasCompendex = false;
     boolean hasInspec = false;
     for(int i=0; i<credentials.length; i++)
@@ -85,7 +82,7 @@
     }
 
 try{
-    String customerId=user.getCustomerID().trim();
+    String customerId=ussession.getCustomerid().trim();
 
     clientCustomizer=new ClientCustomizer(ussession);
     isFullTextPresent=clientCustomizer.checkFullText();
@@ -151,7 +148,7 @@ try{
     {
       tQuery.setSearchQueryWriter(new FastQueryWriter());
       tQuery.setDatabaseConfig(databaseConfig);
-      tQuery.setCredentials(user.getCartridge());
+      tQuery.setCredentials(ussession.getCartridge());
     }
 
 
@@ -238,7 +235,7 @@ try{
 
     List refDocs = refBuilder.buildNonPatentRefs(docid);
     int refCount = refDocs.size();
-    String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
+    String strGlobalLinksXML = GlobalLinks.toXML(ussession.getCartridge());
 
     out.write("<PAGE>");
     out.write("<HIDE-NAV/>");
@@ -289,7 +286,7 @@ try{
     out.write("<DATABASE>"+database+"</DATABASE>");
     out.write("<RESULTS-COUNT>1</RESULTS-COUNT>");
     out.write("<NP-COUNT>"+refCount+"</NP-COUNT>");
-    out.write("<SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+    out.write("<SESSION-ID>"+sessionId+"</SESSION-ID>");
     out.write("<PERSONALIZATION>"+personalization+"</PERSONALIZATION>");
     out.write("<SEARCH-ID>"+searchID+"</SEARCH-ID>");
     out.write("<PAGE-INDEX>"+resultsPage+"</PAGE-INDEX>");
@@ -346,7 +343,7 @@ try{
         client.setRemoteControl();
         out.write(be.toXML());
         out.flush();
-        
+
         return;
     }
 %><%!StringBuffer getsrURL(int recnum,

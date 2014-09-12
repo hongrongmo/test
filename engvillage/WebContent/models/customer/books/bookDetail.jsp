@@ -1,9 +1,9 @@
 <%@page import="org.apache.log4j.Logger"%>
 <%@ page language="java"%>
 <%@ page session="false"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
 <%@ page import="org.ei.domain.personalization.*"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.domain.*"%>
 <%@ page import="org.ei.config.*"%>
@@ -71,7 +71,7 @@
             databaseConfig = DatabaseConfig.getInstance();
 
             // Get the value of the number of documents to be displayed in a search results page form Runtime.properties file
-            RuntimeProperties runtimeProps = ConfigService.getRuntimeProperties();
+            RuntimeProperties runtimeProps = RuntimeProperties.getInstance();
             pagesize = Integer.parseInt(runtimeProps.getProperty("PAGESIZE"));
             wobl_url = runtimeProps.getProperty(RuntimeProperties.WHOLE_BOOK_DOWNLOAD_BASE_URL);
 
@@ -87,16 +87,16 @@
 		log4j.info("Starting...");
 		ControllerClient client = new ControllerClient(request, response);
 		UserSession ussession = (UserSession) client.getUserSession();
-		sessionId = ussession.getID();
+		sessionId = ussession.getSessionid();
 		sessionIdObj = ussession.getSessionID();
-		pUserId = ussession.getUserIDFromSession();
+		pUserId = ussession.getUserid();
 		if ((pUserId != null) && (pUserId.trim().length() != 0)) {
 			personalization = true;
 		}
 
 		IEVWebUser user = ussession.getUser();
-		String[] credentials = user.getCartridge();
-		String customerId = user.getCustomerID();
+		String[] credentials = ussession.getCartridge();
+		String customerId = ussession.getCustomerid();
 		String contractId = user.getContractID();
 
 		clientCustomizer = new ClientCustomizer(ussession);
@@ -139,7 +139,7 @@
 			if (tQuery != null) {
 				tQuery.setSearchQueryWriter(new FastQueryWriter());
 				tQuery.setDatabaseConfig(databaseConfig);
-				tQuery.setCredentials(user.getCartridge());
+				tQuery.setCredentials(ussession.getCartridge());
 
 				sc = new FastSearchControl();
 				result = sc.openSearch(tQuery, sessionId, pagesize, true);
@@ -188,7 +188,7 @@
 			if (tQuery != null) {
 				tQuery.setSearchQueryWriter(new FastQueryWriter());
 				tQuery.setDatabaseConfig(databaseConfig);
-				tQuery.setCredentials(user.getCartridge());
+				tQuery.setCredentials(ussession.getCartridge());
 
 				sc = new FastSearchControl();
 				result = sc.openSearch(tQuery, sessionId, pagesize, true);
@@ -240,7 +240,7 @@
 		 */
 		log(client, cid, isbn);
 
-		String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
+		String strGlobalLinksXML = GlobalLinks.toXML(ussession.getCartridge());
 		String strQuery = "";
 
 		out.write("<PAGE>");
@@ -413,7 +413,7 @@
 		out.write("<ABSTRACT-DETAILED-RESULTS-MANAGER/>");
 		out.write("<CUSTOMIZED-LOGO>" + customizedLogo + "</CUSTOMIZED-LOGO>");
 		out.write("<RESULTS-COUNT>" + totalDocCount + "</RESULTS-COUNT>");
-		out.write("<SESSION-ID>" + sessionIdObj.toString() + "</SESSION-ID>");
+		out.write("<SESSION-ID>" + sessionId + "</SESSION-ID>");
 		out.write("<PERSONALIZATION>" + personalization + "</PERSONALIZATION>");
 		out.write("<PERSONALIZATION-PRESENT>" + isPersonalizationPresent + "</PERSONALIZATION-PRESENT>");
 
@@ -432,7 +432,7 @@
 		out.write("<CUSTOMIZED-LOGO>" + customizedLogo + "</CUSTOMIZED-LOGO>");
 
 		out.write("<DATABASE>" + database + "</DATABASE>");
-		out.write("<SESSION-ID>" + sessionIdObj.toString() + "</SESSION-ID>");
+		out.write("<SESSION-ID>" + sessionId + "</SESSION-ID>");
 		out.write("<SEARCH-ID>" + searchID + "</SEARCH-ID>");
 
 		out.write("<CURR-PAGE>" + df.format(Long.parseLong(pdfpage)) + "</CURR-PAGE>");

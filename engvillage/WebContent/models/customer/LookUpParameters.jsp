@@ -6,9 +6,9 @@
 <%@ page contentType="text/xml"%>
 <%@ page session="false" %>
 
-<%@ page  import="org.ei.controller.ControllerClient"%>
+<%@ page  import="org.engvillage.biz.controller.ControllerClient"%>
 <%@ page  import="org.ei.domain.DatabaseConfig"%>
-<%@ page  import="org.ei.session.*"%>
+<%@ page  import="org.engvillage.biz.controller.UserSession"%>
 
 <%@ page errorPage="/error/errorPage.jsp"%>
 

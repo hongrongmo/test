@@ -4,8 +4,8 @@
 <%@ page import="java.net.*"%>
 <%@ page import="java.io.*"%>
 <%@ page import="org.ei.domain.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.query.base.*"%>
 <%@ page import="org.ei.parser.base.*"%>
@@ -25,7 +25,6 @@
 	ControllerClient client = new ControllerClient(request,
 						       response);
 	String sessionId = null;
-	SessionID sessionIdObj = null;
 	String searchID=null;
 	String format = StringUtil.EMPTY_STRING;
 	String term1 = null;
@@ -50,11 +49,9 @@ try
 	sc = new FastSearchControl();
 
     	UserSession ussession=(UserSession)client.getUserSession();
-    	sessionId=ussession.getID();
-    	sessionIdObj = ussession.getSessionID();
-    	 IEVWebUser user = ussession.getUser();
+    	sessionId=ussession.getSessionid();
     	int intDbMask = Integer.parseInt(dbName);
-    	String[] credentials = user.getCartridge();
+    	String[] credentials = ussession.getCartridge();
     	if(credentials == null)
     	{
     		credentials = new String[3];
@@ -114,7 +111,7 @@ try
 						    25,
 						    docIds,
 						    FullDoc.FULLDOC_FORMAT);
-		String serverName= ussession.getEnvBaseAddress();
+		String serverName= ussession.getProperty(UserSession.ENV_BASEADDRESS);
 		out.write("<!--BH--><HEADER>");
 		out.write("<SEARCH-ID>"+queryID+"</SEARCH-ID>");
 		out.write("</HEADER>");
@@ -129,7 +126,7 @@ try
 			for(int i=0;i<builtDocuments.size();i++)
 			{
 				EIDoc eidoc = (EIDoc)builtDocuments.get(i);
-				out.write("<!--BR-->");			
+				out.write("<!--BR-->");
 				out.write("<SERVER>"+serverName+"</SERVER>");
 				eidoc.toXML(out);
 				out.write("<!--ER-->");

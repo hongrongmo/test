@@ -1,6 +1,6 @@
-<%@ page language="java" %><%@ page session="false" %><%@ page import="java.util.*"%><%@ page import="java.net.URLEncoder"%><%@ page import="org.ei.domain.*"%><%@ page import="org.ei.controller.ControllerClient"%><%@ page import="org.ei.session.*"%>
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
+<%@ page language="java" %><%@ page session="false" %><%@ page import="java.util.*"%><%@ page import="java.net.URLEncoder"%><%@ page import="org.ei.domain.*"%><%@ page import="org.engvillage.biz.controller.ControllerClient"%><%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%><%@ page import="org.ei.config.*"%><%@ page import="org.ei.query.base.*"%><%@ page import="org.ei.domain.Searches"%><%@ page import="org.ei.tags.*"%><%@ page import="org.ei.domain.personalization.GlobalLinks"%><%@ page import="org.ei.domain.personalization.SavedSearches"%><%@ page  errorPage="/error/errorPage.jsp"%><%
-	SessionID sessionIdObj = null;
 	Database databaseObj = null;
 	ControllerClient client = null;
 	String database = null;
@@ -9,11 +9,9 @@
 	boolean personalization = false;
 	client = new ControllerClient(request, response);
 	UserSession ussession=(UserSession)client.getUserSession();
-	sessionIdObj = ussession.getSessionID();
-	 IEVWebUser user = ussession.getUser();
 
-	String customerId=user.getCustomerID().trim();
-	String pUserId = ussession.getUserIDFromSession();
+	String customerId=ussession.getCustomerid().trim();
+	String pUserId = ussession.getUserid();
 
 	ClientCustomizer clientCustomizer=new ClientCustomizer(ussession);
 
@@ -73,7 +71,7 @@
 							   pUserId,
 							   customerId,
 							   groupID);
-    String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
+    String strGlobalLinksXML = GlobalLinks.toXML(ussession.getCartridge());
 	out.write("<PAGE>");
 
 	if((pUserId != null) && (pUserId.trim().length() != 0))
@@ -99,7 +97,7 @@
 	out.write(scope);
 	out.write("</SCOPE>");
 
-	out.write("<SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+	out.write("<SESSION-ID>"+ussession.getSessionid()+"</SESSION-ID>");
 	out.write("<CUSTOMIZED-LOGO>"+customizedLogo+"</CUSTOMIZED-LOGO>");
 	out.write("<PERSONALIZATION-PRESENT>"+isPersonalizationPresent+"</PERSONALIZATION-PRESENT>");
 	out.write("<PERSONALIZATION>"+personalization+"</PERSONALIZATION>");

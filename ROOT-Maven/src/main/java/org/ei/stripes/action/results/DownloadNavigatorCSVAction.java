@@ -15,6 +15,7 @@ import net.sourceforge.stripes.action.UrlBinding;
 
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
+import org.ei.biz.personalization.IEVWebUser;
 import org.ei.data.DataCleaner;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.FastSearchControl;
@@ -25,7 +26,6 @@ import org.ei.domain.navigators.EiModifier;
 import org.ei.domain.navigators.EiNavigator;
 import org.ei.domain.navigators.Refinements;
 import org.ei.domain.navigators.ResultNavigator;
-import org.ei.domain.personalization.IEVWebUser;
 import org.ei.parser.base.BooleanQuery;
 import org.ei.parser.base.Field;
 import org.ei.query.base.FastQueryWriter;

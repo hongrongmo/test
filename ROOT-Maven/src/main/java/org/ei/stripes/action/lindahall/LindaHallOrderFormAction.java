@@ -26,12 +26,12 @@ import net.sourceforge.stripes.validation.ValidationErrors;
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
 import org.ei.backoffice.LindaHallBroker;
+import org.ei.biz.email.SESEmail;
+import org.ei.biz.email.SESMessage;
 import org.ei.config.EVProperties;
 import org.ei.config.RuntimeProperties;
 import org.ei.domain.ContactInfo;
 import org.ei.domain.LhlUserInfo;
-import org.ei.email.SESEmail;
-import org.ei.email.SESMessage;
 import org.ei.session.UserSession;
 import org.ei.util.StringUtil;
 

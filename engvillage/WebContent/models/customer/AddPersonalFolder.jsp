@@ -4,9 +4,10 @@
 	* @param java.lang.String.FolderName.
 	* @param java.lang.String.Database.
 -->
+<%@page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page  import=" org.ei.domain.personalization.*"%>
-<%@ page  import="org.ei.controller.ControllerClient"%>
-<%@ page  import="org.ei.session.*"%>
+<%@ page  import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page  import="org.engvillage.biz.controller.UserSession"%>
 <%@ page session="false" %>
 
 
@@ -44,8 +45,8 @@
 	// get the session id and user id from the session.
 	client = new ControllerClient(request,response);
 	UserSession ussession=(UserSession)client.getUserSession();
-	sSessionId = ussession.getID();
-	sUserId = ussession.getUserIDFromSession();
+	sSessionId = ussession.getSessionid();
+	sUserId = ussession.getUserid();
 	//client.updateUserSession(ussession);
 
 	// check for existance of user id.

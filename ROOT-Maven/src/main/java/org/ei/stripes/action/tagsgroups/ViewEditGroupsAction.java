@@ -18,11 +18,11 @@ import net.sourceforge.stripes.validation.Validate;
 
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
+import org.ei.biz.email.SESEmail;
+import org.ei.biz.email.SESMessage;
 import org.ei.biz.security.IAccessControl;
 import org.ei.biz.security.ISecuredAction;
 import org.ei.biz.security.TagsGroupsIndivAccessControl;
-import org.ei.email.SESEmail;
-import org.ei.email.SESMessage;
 import org.ei.stripes.action.personalaccount.IPersonalLogin;
 import org.ei.tags.Color;
 import org.ei.tags.Color.IColor;
@@ -64,7 +64,7 @@ public class ViewEditGroupsAction extends TagsGroupsAction implements IPersonalL
 
     /**
      * Tags and groups create group page
-     * 
+     *
      * @return Resolution
      * @throws Exception
      */
@@ -89,7 +89,7 @@ public class ViewEditGroupsAction extends TagsGroupsAction implements IPersonalL
 
     /**
      * Display the create group page
-     * 
+     *
      * @return Resolution
      * @throws Exception
      */
@@ -104,7 +104,7 @@ public class ViewEditGroupsAction extends TagsGroupsAction implements IPersonalL
 
     /**
      * Tags and groups view/edit groups page
-     * 
+     *
      * @return Resolution
      * @throws Exception
      */
@@ -143,7 +143,7 @@ public class ViewEditGroupsAction extends TagsGroupsAction implements IPersonalL
 
     /**
      * Display the edit group page
-     * 
+     *
      * @return Resolution
      * @throws Exception
      */
@@ -181,7 +181,7 @@ public class ViewEditGroupsAction extends TagsGroupsAction implements IPersonalL
 
     /**
      * Handles editing a groups
-     * 
+     *
      * @return Resolution
      * @throws Exception
      */
@@ -209,7 +209,7 @@ public class ViewEditGroupsAction extends TagsGroupsAction implements IPersonalL
 
     /**
      * Delete a group
-     * 
+     *
      * @return Resolution
      * @throws Exception
      */
@@ -233,7 +233,7 @@ public class ViewEditGroupsAction extends TagsGroupsAction implements IPersonalL
 
     /**
      * Cancels the current user's membership in a group
-     * 
+     *
      * @return Resolution
      * @throws Exception
      */
@@ -267,7 +267,7 @@ public class ViewEditGroupsAction extends TagsGroupsAction implements IPersonalL
 
     /**
      * Attempts to send an invitation to the new Group
-     * 
+     *
      * @param userid
      * @param inviteid
      */
@@ -306,7 +306,7 @@ public class ViewEditGroupsAction extends TagsGroupsAction implements IPersonalL
                     subjectBuf.append(inviter.getFullName());
                     String subject = subjectBuf.toString();
                     StringBuffer message = new StringBuffer();
-                    
+
                     message.append("This email was sent to you on behalf of " + from + ".<br/><br/>\n \n" );
                     message.append(inviter.getFullName());
                     message.append(" invites you to join the Engineering Village Tag Group: ");
@@ -323,12 +323,12 @@ public class ViewEditGroupsAction extends TagsGroupsAction implements IPersonalL
                     log4j.debug(message.toString());
 
                     String strmessage = message.toString();
-                    
+
                     SESMessage sesmessage = new SESMessage();
                     sesmessage.setMessage(subject, strmessage,true);
                     sesmessage.setFrom(SESMessage.DEFAULT_SENDER);
-                    
-                    
+
+
                     if (tolist.size() == 1) {
                     	sesmessage.setDestination(tolist);
                     } else
@@ -346,7 +346,7 @@ public class ViewEditGroupsAction extends TagsGroupsAction implements IPersonalL
 
     /**
      * Get a Member object from a TagGroup
-     * 
+     *
      * @param groups
      * @param groupID
      * @param userID

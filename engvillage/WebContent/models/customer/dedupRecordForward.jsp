@@ -1,5 +1,6 @@
-<%@ page language="java" %><%@ page session="false" %><%@ page import="org.ei.domain.*" %><%@ page import="org.ei.books.*" %><%@ page import="org.ei.domain.personalization.SavedSearches"%><%@ page import="org.ei.query.base.*"%><%@ page import="org.ei.config.*"%><%@ page import="java.util.*"%><%@ page import="org.ei.session.*"%>
-<%@ page import="org.ei.domain.personalization.*"%><%@ page import="org.ei.controller.ControllerClient"%><%@ page import="org.ei.parser.base.*"%><%@ page import="org.ei.email.*"%><%@ page import="javax.mail.internet.*"%><%
+<%@page import="org.engvillage.config.RuntimeProperties"%>
+<%@ page language="java" %><%@ page session="false" %><%@ page import="org.ei.domain.*" %><%@ page import="org.ei.books.*" %><%@ page import="org.ei.domain.personalization.SavedSearches"%><%@ page import="org.ei.query.base.*"%><%@ page import="org.ei.config.*"%><%@ page import="java.util.*"%><%@ page import="org.engvillage.biz.controller.UserSession"%>
+<%@ page import="org.ei.domain.personalization.*"%><%@ page import="org.engvillage.biz.controller.ControllerClient"%><%@ page import="org.ei.parser.base.*"%><%@ page import="org.ei.email.*"%><%@ page import="javax.mail.internet.*"%><%
 
   FastSearchControl sc = null;
 
@@ -17,8 +18,7 @@
       try
       {
         // Get the value of the number of documents to be displayed in a search results page form Runtime.properties file
-        RuntimeProperties runtimeProps = ConfigService.getRuntimeProperties();
-        pagesize = Integer.parseInt(runtimeProps.getProperty("PAGESIZE"));
+        pagesize = Integer.parseInt(RuntimeProperties.getInstance().getProperty("PAGESIZE"));
         databaseConfig = DatabaseConfig.getInstance();
       } catch(Exception e) {
         e.printStackTrace();
@@ -27,8 +27,7 @@
 %><%
   ControllerClient client = new ControllerClient(request, response);
   UserSession ussession=(UserSession)client.getUserSession();
-  String sessionId=ussession.getID();
-   IEVWebUser user = ussession.getUser();
+  String sessionId=ussession.getSessionid();
   currentRecord=request.getParameter("DOCINDEX");
   searchID=request.getParameter("SEARCHID");
 
@@ -48,7 +47,7 @@
 	}
 	tQuery.setSearchQueryWriter(new FastQueryWriter());
 	tQuery.setDatabaseConfig(databaseConfig);
-	tQuery.setCredentials(user.getCartridge());
+	tQuery.setCredentials(ussession.getCartridge());
 
 	/*
 	*   Handle the Hit Highlighting

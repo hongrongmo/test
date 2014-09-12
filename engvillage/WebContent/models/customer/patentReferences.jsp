@@ -1,5 +1,5 @@
-<%@page
-	import="org.ei.domain.navigators.state.ResultNavigatorStateHelper"%>
+<%@page import="org.engvillage.config.RuntimeProperties"%>
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java"%>
 <%@ page session="false"%>
 <!--
@@ -21,8 +21,8 @@
 
 <!--import statements of ei packages.-->
 
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.util.*"%>
 <%@ page import="org.ei.domain.*"%>
@@ -49,7 +49,6 @@
     int offset = 0;
     DatabaseConfig databaseConfig = DatabaseConfig.getInstance();
     String sessionId = null;
-    SessionID sessionIdObj = null;
 
     String pUserId = null;
     boolean personalization = false;
@@ -82,7 +81,7 @@
 	try {
         //FileWriter out1 = new FileWriter("c:/baja/Referener.xml");
         // Get the value of the number of documents to be displayed in a search results page form Runtime.properties file
-        RuntimeProperties runtimeProps = ConfigService.getRuntimeProperties();
+        RuntimeProperties runtimeProps = RuntimeProperties.getInstance();
         pageSize = Integer.parseInt(runtimeProps.getProperty("PAGESIZE"));
         String endYear = runtimeProps.getProperty("SYSTEM_ENDYEAR");
 
@@ -91,18 +90,16 @@
         }
 
         //Getting sessionid from controllerClient
-        
+
         UserSession ussession = (UserSession) client.getUserSession();
-        sessionId = ussession.getID();
-        sessionIdObj = ussession.getSessionID();
-        pUserId = ussession.getUserIDFromSession();
+        sessionId = ussession.getSessionid();
+        pUserId = ussession.getUserid();
         if ((pUserId != null) && (pUserId.trim().length() != 0)) {
             personalization = true;
         }
 
-        IEVWebUser user = ussession.getUser();
-        String[] credentials = user.getCartridge();
-        String customerId = user.getCustomerID().trim();
+        String[] credentials = ussession.getCartridge();
+        String customerId = ussession.getCustomerid().trim();
 
         clientCustomizer = new ClientCustomizer(ussession);
         isFullTextPresent = clientCustomizer.checkFullText();
@@ -267,7 +264,7 @@
             index = offset / pageSize + 1;
         }
 
-        String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
+        String strGlobalLinksXML = GlobalLinks.toXML(ussession.getCartridge());
 
         out.write("<PAGE>");
         out.write("<PAGE-INDEX>" + index + "</PAGE-INDEX>");
@@ -330,7 +327,7 @@
         out.write("<DATABASE>" + database + "</DATABASE>");
         out.write("<RESULTS-COUNT>" + pager.getSetSize() + "</RESULTS-COUNT>");
         out.write("<SEL-COUNT>" + pager.getSetSize() + "</SEL-COUNT>");
-        out.write("<SESSION-ID>" + sessionIdObj.toString() + "</SESSION-ID>");
+        out.write("<SESSION-ID>" + sessionId + "</SESSION-ID>");
         out.write("<PERSONALIZATION>" + personalization + "</PERSONALIZATION>");
         out.write("<NAVCHRT>" + isGraphDownloadPresent + "</NAVCHRT>");
         out.write("<SEARCH-ID>" + searchID + "</SEARCH-ID>");
@@ -405,7 +402,7 @@
         client.setRemoteControl();
         out.write(be.toXML());
         out.flush();
-        
+
         return;
     } finally {
         if (sc != null) {

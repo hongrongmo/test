@@ -4,10 +4,9 @@ import java.util.Map;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
-import org.ei.domain.personalization.EVWebUser;
-import org.ei.domain.personalization.IEVWebUser;
+import org.ei.biz.personalization.EVWebUser;
+import org.ei.biz.personalization.IEVWebUser;
 import org.ei.exception.ServiceException;
-import org.ei.exception.FatalDataException;
 
 /**
  * This class will parse and set Fences from A&E system into the User's
