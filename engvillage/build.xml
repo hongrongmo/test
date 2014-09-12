@@ -53,6 +53,8 @@ Use the "deploy" target to build and deploy new WAR file.
         <mkdir dir="${ENGVILLAGE_PATH}/WebContent/WEB-INF/lib" />
         <mkdir dir="${ENGVILLAGE_PATH}/tomcat-provided" />
 
+    	<get src="http://atheneum/content/repositories/elsevier-releases/org/ei/eilib/1.0/eilib-1.0.jar" dest="${ENGVILLAGE_PATH}/tomcat-provided/tomcat-juli-8.0.8.jar" usetimestamp="true" />
+
         <get src="http://atheneum/content/repositories/thirdparty/tomcat-provided/catalina-ant/7.0.23/catalina-ant-7.0.23.jar" dest="${ENGVILLAGE_PATH}/tomcat-provided/catalina-ant-7.0.23.jar" usetimestamp="true" />
         <get src="http://atheneum/content/repositories/thirdparty/tomcat-provided/tomcat-coyote/7.0.23/tomcat-coyote-7.0.23.jar" dest="${ENGVILLAGE_PATH}/tomcat-provided/tomcat-coyote-7.0.23.jar" usetimestamp="true" />
         <get src="http://atheneum/content/repositories/thirdparty/tomcat-provided/tomcat-util/7.0.23/tomcat-util-7.0.23.jar" dest="${ENGVILLAGE_PATH}/tomcat-provided/tomcat-util-7.0.23.jar" usetimestamp="true" />
@@ -109,20 +111,10 @@ Use the "deploy" target to build and deploy new WAR file.
         <get src="http://atheneum/content/repositories/central/xerces/xmlParserAPIs/2.6.2/xmlParserAPIs-2.6.2.jar" dest="${ENGVILLAGE_PATH}/WebContent/WEB-INF/lib/xmlParserAPIs-2.6.2.jar" usetimestamp="true" />
     </target>
 
-	<!-- ********************************************************************************** -->
-	<!-- Copy eilib from ROOT if NOT present locally                                       -->
-	<!-- ********************************************************************************** -->
-	<target name="eilib" unless="engvillage.eilib.check">
-        <mkdir dir="${ENGVILLAGE_PATH}/WebContent/WEB-INF/lib" />
-		<echo>[engvillage build] Copying eilib.jar...</echo>
-		<copy file="${EILIB_PATH}" tofile="${ENGVILLAGE_PATH}/WebContent/WEB-INF/lib/eilib.jar" failonerror="true"/>
-		<echo>[engvillage build] eilib.jar copied!</echo>
-	</target>
-
     <!-- ********************************************************************************** -->
     <!-- Compile source files                                                               -->
     <!-- ********************************************************************************** -->
-    <target name="compile" depends="cleanlib, resolveDependencies, eilib">
+    <target name="compile" depends="cleanlib, resolveDependencies">
         <fail unless="S3_ENV" message="********** The 'S3_ENV' property MUST be set! ********" />
         <echo message="[engvillage build] Compiling..."/>
 
