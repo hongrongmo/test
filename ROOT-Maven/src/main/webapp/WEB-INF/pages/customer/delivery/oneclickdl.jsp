@@ -313,11 +313,7 @@ function updatefilenameprefixlable(){
 	}
 	
 	if(outputval == 'default'){
-		if(typeof(pageType) != "undefined"){
-			outputval = pageType;
-		}else{
-			outputval = '${actionBean.displayformat}';
-		}
+		outputval = "current_page_view";
 	}
 	
 	if(typeof  outputval === "undefined" || outputval === null || outputval === "") {
@@ -391,7 +387,8 @@ function updatefilenameprefixlable(){
 					
 					if(isPrefUpdateChosen === "true"){
 						$.ajax({
-							url:saveDldUrl
+							url:saveDldUrl,
+							 cache: false
 						}).success(function(data){
 							proceedWithDownload(downloadLocation,downloadformat,displaytype,baseaddress,filenameprefix,true,isPrefUpdateChosen);
 						}).error(function(data){
