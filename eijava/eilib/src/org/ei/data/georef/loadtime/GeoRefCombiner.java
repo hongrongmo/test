@@ -24,6 +24,8 @@ import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 import org.xml.sax.XMLReader;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.text.DateFormat;
 
 public class GeoRefCombiner
   extends Combiner
@@ -38,6 +40,11 @@ public class GeoRefCombiner
   public static void main(String args[])
                           throws Exception
   {
+	  if(args.length<9)
+	  {
+		  System.out.println("not enough parameters, need 9 parameters to run");
+		  System.exit(1);
+	  }
     String driver = null;
     String url  = null;
     String username = null;
@@ -67,7 +74,7 @@ public class GeoRefCombiner
     writer.setOperation(operation);
 
     GeoRefCombiner c = new GeoRefCombiner(writer);
-    if(loadNumber > 200801)
+    if(loadNumber > 100000)
     {
       c.writeCombinedByWeekNumber(url,
                                   driver,
@@ -78,7 +85,9 @@ public class GeoRefCombiner
     // extract the whole thing
     else if(loadNumber == 0)
     {
-      for(int yearIndex = 1918; yearIndex <= 2012; yearIndex++)
+	  int endYear = Integer.parseInt(c.getYear());
+
+      for(int yearIndex = 1918; yearIndex <= endYear+1; yearIndex++)
       {
     	System.out.println("Processing year " + yearIndex + "...");
         // create  a new writer so we can see the loadNumber/yearNumber in the filename
@@ -99,6 +108,16 @@ public class GeoRefCombiner
                             loadNumber);
     }
   }
+
+  	private String getYear()
+	{
+		DateFormat dateFormat = new SimpleDateFormat("yyyy");
+		Date date = new Date();
+		System.out.println("Current Year= "+dateFormat.format(date));
+		return dateFormat.format(date);
+
+	}
+
 
   public GeoRefCombiner(CombinedWriter writer)
   {
@@ -139,13 +158,15 @@ public class GeoRefCombiner
     try
     {
       stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-      String sqlQuery = "select * from " + Combiner.TABLENAME + " where load_number ='" + weekNumber + "' AND load_number != 0 and load_number < 1000000";
+
+      String sqlQuery = "select * from " + Combiner.TABLENAME + " where load_number ='" + weekNumber + "' AND load_number != 0";
       //String sqlQuery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7fcd2061377551'";
       //String sqlQuery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7fcd2061377551' or m_id='grf_1ee3914119594abb20M7fc72061377551'";
       //String sqlQuery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7ff02061377551'";
       //String sqlQuery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M80002061377551'";
       rs = stmt.executeQuery(sqlQuery);
       int rsCount = getResultSetSize(rs);
+      System.out.println("processing load number "+weekNumber+", total record count is "+rsCount);
       if(rsCount > 0)
       {
 	      writeRecs(rs);
@@ -199,7 +220,7 @@ public class GeoRefCombiner
       199601, 199602, 199603, etc. through 199624. Prior to 1994, only the year (first four digits) is
       given in this field. */
 
-      String sqlquery = "SELECT * FROM " + Combiner.TABLENAME + " WHERE UPDATE_CODE IS NOT NULL AND SUBSTR(UPDATE_CODE,1,4) =  " + year;
+      String sqlquery = "SELECT * FROM " + Combiner.TABLENAME + " WHERE UPDATE_CODE IS NOT NULL AND SUBSTR(UPDATE_CODE,1,4) =  '" + year+"'";
       //String sqlquery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7fcd2061377551'";
       //String sqlquery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7fcd2061377551' or m_id='grf_1ee3914119594abb20M7fc72061377551'";
       //String sqlquery = "select * from " + Combiner.TABLENAME + " where m_id='grf_1ee3914119594abb20M7ff02061377551'";
@@ -207,6 +228,7 @@ public class GeoRefCombiner
       //String sqlquery = "select * from " + Combiner.TABLENAME + " where m_id='grf_e5855a1195a1d697f21ee2061377551'";
       rs = stmt.executeQuery(sqlquery);
       int rsCount = getResultSetSize(rs);
+      System.out.println("processing year "+year+", total record count is "+rsCount);
       if(rsCount > 0)
       {
 	      writeRecs(rs);
