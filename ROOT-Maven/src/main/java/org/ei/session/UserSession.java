@@ -15,8 +15,8 @@ import org.ei.ane.entitlements.UserEntitlement;
 import org.ei.ane.entitlements.UserEntitlement.ENTITLEMENT_TYPE;
 import org.ei.biz.personalization.EVWebUser;
 import org.ei.biz.personalization.IEVWebUser;
+import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
 import org.ei.domain.Sort;
 import org.ei.domain.personalization.IUserSessionInfo;
 import org.ei.util.StringUtil;
@@ -260,7 +260,7 @@ public class UserSession implements Serializable, IUserSessionInfo {
     public String getRecordsPerPage() {
         String pagesize = sessionProperties.getProperty(RECORDS_PER_PAGE);
         if (GenericValidator.isBlankOrNull(pagesize)) {
-            pagesize = EVProperties.getRuntimeProperty(RuntimeProperties.PAGESIZE);
+            pagesize = EVProperties.getProperty(ApplicationProperties.PAGESIZE);
             if (GenericValidator.isBlankOrNull(pagesize)) {
                 pagesize = "25";
             }

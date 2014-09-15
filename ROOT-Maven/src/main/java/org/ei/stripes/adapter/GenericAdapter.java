@@ -1,11 +1,8 @@
 package org.ei.stripes.adapter;
 
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.io.UnsupportedEncodingException;
-import java.util.Scanner;
 
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerConfigurationException;
@@ -17,8 +14,6 @@ import net.sourceforge.stripes.action.ActionBean;
 
 import org.apache.log4j.Logger;
 import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
-import org.ei.exception.EVBaseException;
 import org.ei.exception.InfrastructureException;
 import org.ei.exception.SessionException;
 import org.ei.exception.SystemErrorCodes;
@@ -64,8 +59,8 @@ public class GenericAdapter extends BizXmlAdapter {
         if(actionbean != null && actionbean.getContext() != null ){
         	EVActionBeanContext actionBeanContext = (EVActionBeanContext)actionbean.getContext();
         	String csrfSyncToken = "";
-        	boolean isCSRFPrevEnabled = Boolean.parseBoolean((EVProperties.getRuntimeProperty(RuntimeProperties.PREVENT_CSRF_ATTACK)));
-        	
+        	boolean isCSRFPrevEnabled = Boolean.parseBoolean((EVProperties.getProperty(EVProperties.PREVENT_CSRF_ATTACK)));
+
         	if(isCSRFPrevEnabled && actionBeanContext != null && actionBeanContext.getUserSession() != null){
         		UserSession usersession = actionBeanContext.getUserSession();
         		boolean isSessionUpdateNeeded = false;
@@ -81,7 +76,7 @@ public class GenericAdapter extends BizXmlAdapter {
         	}
         	transformer.setParameter("csrfSyncToken", csrfSyncToken);
         }
-        
+
         try {
             transformer.transform(new StreamSource(sanitizeInputStream(instream)), new StreamResult(transformout));
         } catch (TransformerException e) {

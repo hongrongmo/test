@@ -22,7 +22,6 @@ import org.apache.log4j.Logger;
 import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
 import org.ei.biz.personalization.IEVWebUser;
 import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
 import org.ei.exception.ServiceException;
 import org.ei.exception.SystemErrorCodes;
 import org.ei.service.ANEServiceConstants;
@@ -132,7 +131,7 @@ public abstract class CARSRequestBase implements CARSRequest {
 	 * @throws ServiceException
 	 */
 	public void appendRESTRequestParams() throws ServiceException {
-		boolean ssoDisabledFlag = Boolean.valueOf(EVProperties.getRuntimeProperty(RuntimeProperties.DISABLE_SSO_AUTH));
+		boolean ssoDisabledFlag = Boolean.valueOf(EVProperties.getProperty(EVProperties.DISABLE_SSO_AUTH));
 
 		//
 		// Ensure httprequest is present

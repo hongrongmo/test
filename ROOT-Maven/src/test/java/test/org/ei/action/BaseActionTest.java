@@ -13,8 +13,8 @@ import net.sourceforge.stripes.mock.MockServletContext;
 import oracle.jdbc.pool.OracleConnectionPoolDataSource;
 
 import org.apache.log4j.Logger;
+import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
 import org.testng.TestNG;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
@@ -81,7 +81,7 @@ public abstract class BaseActionTest extends TestNG{
         //intialize the EV Properties object
         EVProperties.getInstance();
         EVProperties.setStartup(System.currentTimeMillis());
-        EVProperties.setRuntimeProperties(RuntimeProperties.getInstance());
+        EVProperties.setApplicationProperties(EVProperties.getApplicationProperties());
 
 
     }

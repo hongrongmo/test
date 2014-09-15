@@ -27,9 +27,9 @@ import net.sourceforge.stripes.validation.LocalizableError;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
+import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
 import org.ei.config.JSPPathProperties;
-import org.ei.config.RuntimeProperties;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.DocumentBasket;
 import org.ei.domain.Query;
@@ -188,7 +188,7 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 		if(searchWidget){
 			addWebEvent(new GoogleWebAnalyticsEvent(WebAnalyticsEventProperties.CAT_SEARCH_WIDGET, getFoundin(),swReferrer));
 		}
-		if (StringUtils.isNotBlank(database) && (Integer.parseInt(database) & DatabaseConfig.PAG_MASK)== DatabaseConfig.PAG_MASK && (Integer.parseInt(database) != DatabaseConfig.PAG_MASK) && RuntimeProperties.getInstance().isItTime(RuntimeProperties.REFEREX_MASK_DATE)) {
+		if (StringUtils.isNotBlank(database) && (Integer.parseInt(database) & DatabaseConfig.PAG_MASK)== DatabaseConfig.PAG_MASK && (Integer.parseInt(database) != DatabaseConfig.PAG_MASK) && EVProperties.getApplicationProperties().isItTime(ApplicationProperties.REFEREX_MASK_DATE)) {
 				database = Integer.toString(Integer.parseInt(database)-DatabaseConfig.PAG_MASK);
 		}
 
@@ -218,7 +218,7 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 		}
 
 		// Get the values for the dropdown
-		String pageSizeOptions = EVProperties.getRuntimeProperty(RuntimeProperties.PAGESIZE_OPTIONS);
+		String pageSizeOptions = EVProperties.getProperty(ApplicationProperties.PAGESIZE_OPTIONS);
 		StringTokenizer st = new StringTokenizer(pageSizeOptions, ",");
 		if (null != st) {
 			while (st.hasMoreTokens()) {

@@ -22,7 +22,6 @@ import org.ei.biz.personalization.UserPrefs;
 import org.ei.biz.security.IAccessControl;
 import org.ei.biz.security.NoAuthAccessControl;
 import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
 import org.ei.controller.IPBlocker;
 import org.ei.controller.IPBlocker.COUNTER;
 import org.ei.exception.SessionException;
@@ -32,7 +31,6 @@ import org.ei.service.cars.PageType;
 import org.ei.service.cars.RESTRequestParameters;
 import org.ei.service.cars.Impl.CARSResponse;
 import org.ei.session.SessionManager;
-import org.ei.session.UserBroker;
 import org.ei.session.UserSession;
 import org.ei.stripes.action.lindahall.LindaHallAuthAction;
 import org.ei.stripes.util.HttpRequestUtil;
@@ -251,7 +249,7 @@ public class LoginAction extends CARSActionBean {
         HttpServletRequest request = context.getRequest();
         String username = request.getParameter(RESTRequestParameters.USER_NAME.getReqParam());
         String password = request.getParameter(RESTRequestParameters.PASSWORD.getReqParam());
-        String product = EVProperties.getRuntimeProperty(RuntimeProperties.APP_NAME);
+        String product = EVProperties.getProperty(EVProperties.APP_NAME);
         if (GenericValidator.isBlankOrNull(product) || GenericValidator.isBlankOrNull(username) || GenericValidator.isBlankOrNull(password)) {
             return;
         }

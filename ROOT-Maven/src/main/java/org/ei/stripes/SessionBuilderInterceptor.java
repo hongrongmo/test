@@ -16,8 +16,8 @@ import org.apache.log4j.Logger;
 import org.ei.biz.security.IAccessControl;
 import org.ei.biz.security.ISecuredAction;
 import org.ei.biz.security.WorldAccessControl;
+import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
 import org.ei.controller.IPBlocker;
 import org.ei.controller.IPBlocker.COUNTER;
 import org.ei.session.SessionManager;
@@ -79,9 +79,9 @@ public class SessionBuilderInterceptor implements Interceptor {
 		}
 
 		// Add the release version number to the request for JSPs
-        request.setAttribute("releaseversion", RuntimeProperties.getInstance().getProperty(RuntimeProperties.RELEASE_VERSION));
+        request.setAttribute("releaseversion", EVProperties.getApplicationProperties().getProperty(EVProperties.RELEASE_VERSION));
         // Add the contact us link to the request for all JSPs
-        request.setAttribute("contactuslink", RuntimeProperties.getInstance().getProperty(RuntimeProperties.CONTACT_US_LINK));
+        request.setAttribute("contactuslink", EVProperties.getApplicationProperties().getProperty(ApplicationProperties.CONTACT_US_LINK));
 
 		// *****************************************************
 		// Check for IP and Session Blocks

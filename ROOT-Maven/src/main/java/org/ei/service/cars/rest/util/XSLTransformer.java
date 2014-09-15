@@ -18,7 +18,6 @@ import org.apache.commons.lang.StringUtils;
 import org.ei.biz.personalization.IEVWebUser;
 import org.ei.cache.EVCache;
 import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
 import org.ei.service.cars.CARSConfigVariables;
 import org.ei.service.cars.CARSStringConstants;
 import org.ei.service.cars.CARSTemplateNames;
@@ -176,8 +175,8 @@ public class XSLTransformer {
         }
 
         if (CARSTemplateNames.CARS_INSTITUTION_CHOICE.toString().equals(templateId)) {
-            params.put(XMLTagConstants.APP_LEARN_MORE_URL.toString(), EVProperties.getRuntimeProperties().getHelpUrl() + "#"
-                + EVProperties.getRuntimeProperties().getProperty(RuntimeProperties.HELP_CONTEXT_CUSTOMER_INSTITUTIONCHOICE));
+            params.put(XMLTagConstants.APP_LEARN_MORE_URL.toString(), EVProperties.getApplicationProperties().getProperty(EVProperties.HELP_URL) + "#"
+                + EVProperties.getApplicationProperties().getProperty(EVProperties.HELP_CONTEXT_CUSTOMER_INSTITUTIONCHOICE));
         }
         if (CARSTemplateNames.CARS_LOGIN_FULL.toString().equals(templateId)) {
             params.put(XMLTagConstants.LOGIN_FULL_REG_TZ.toString(), CARSConfigVariables.getConstantAsString(CARSConfigVariables.LOGIN_FULL_TEXT));

@@ -9,7 +9,7 @@ import javax.servlet.http.HttpSession;
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
 import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
+import org.ei.config.ApplicationProperties;
 import org.ei.session.BlockedIPEvent;
 import org.ei.stripes.util.HttpRequestUtil;
 
@@ -46,51 +46,51 @@ public class RateLimiter {
      * @throws IOException
      */
     private RateLimiter() {
-        RuntimeProperties runtimeproperties = EVProperties.getRuntimeProperties();
+        ApplicationProperties runtimeproperties = EVProperties.getApplicationProperties();
 
         try {
-            this.enabled = Boolean.parseBoolean((String) runtimeproperties.getProperty(RuntimeProperties.RATELIMITER_ENABLED));
+            this.enabled = Boolean.parseBoolean((String) runtimeproperties.getProperty(EVProperties.RATELIMITER_ENABLED));
             log4j.info("RateLimiter enabled = " + this.enabled);
         } catch (Exception e) {
-            log4j.error("Unable to read '" + RuntimeProperties.RATELIMITER_ENABLED + "' from runtime properties!");
+            log4j.error("Unable to read '" + EVProperties.RATELIMITER_ENABLED + "' from runtime properties!");
         }
 
         try {
-            this.maxrate = Double.parseDouble((String) runtimeproperties.getProperty(RuntimeProperties.RATELIMITER_MAX_RATE));
+            this.maxrate = Double.parseDouble((String) runtimeproperties.getProperty(EVProperties.RATELIMITER_MAX_RATE));
             log4j.info("RateLimiter maxrate = " + this.maxrate);
         } catch (Exception e) {
-            log4j.error("Unable to read '" + RuntimeProperties.RATELIMITER_MAX_RATE + "' from runtime properties!");
+            log4j.error("Unable to read '" + EVProperties.RATELIMITER_MAX_RATE + "' from runtime properties!");
         }
 
         try {
-            this.minrequests = Integer.parseInt((String) runtimeproperties.getProperty(RuntimeProperties.RATELIMITER_MIN_REQUESTS));
+            this.minrequests = Integer.parseInt((String) runtimeproperties.getProperty(EVProperties.RATELIMITER_MIN_REQUESTS));
             log4j.info("RateLimiter minrequests = " + this.minrequests);
         } catch (Exception e) {
-            log4j.error("Unable to read '" + RuntimeProperties.RATELIMITER_MIN_REQUESTS + "' from runtime properties!");
+            log4j.error("Unable to read '" + EVProperties.RATELIMITER_MIN_REQUESTS + "' from runtime properties!");
         }
 
         try {
-            this.reset = Integer.parseInt((String) runtimeproperties.getProperty(RuntimeProperties.RATELIMITER_RESET));
+            this.reset = Integer.parseInt((String) runtimeproperties.getProperty(EVProperties.RATELIMITER_RESET));
             log4j.info("RateLimiter reset = " + this.reset);
         } catch (Exception e) {
-            log4j.error("Unable to read '" + RuntimeProperties.RATELIMITER_RESET + "' from runtime properties!");
+            log4j.error("Unable to read '" + EVProperties.RATELIMITER_RESET + "' from runtime properties!");
         }
 
         try {
-            this.emailto = runtimeproperties.getProperty(RuntimeProperties.RATELIMITER_EMAIL_TO);
+            this.emailto = runtimeproperties.getProperty(EVProperties.RATELIMITER_EMAIL_TO);
             if (GenericValidator.isBlankOrNull(this.emailto)) {
                 this.emailto = "harover@elsevier.com";
             }
             log4j.info("RateLimiter emailto = " + this.emailto);
         } catch (Exception e) {
-            log4j.error("Unable to read '" + RuntimeProperties.RATELIMITER_EMAIL_TO + "' from runtime properties!");
+            log4j.error("Unable to read '" + EVProperties.RATELIMITER_EMAIL_TO + "' from runtime properties!");
         }
 
         try {
-            this.sender = runtimeproperties.getProperty(RuntimeProperties.TO_RECEPIENTS);
+            this.sender = runtimeproperties.getProperty(ApplicationProperties.TO_RECEPIENTS);
             log4j.info("RateLimiter sender = " + this.sender);
         } catch (Exception e) {
-            log4j.error("Unable to read '" + RuntimeProperties.TO_RECEPIENTS + "' from runtime properties!");
+            log4j.error("Unable to read '" + ApplicationProperties.TO_RECEPIENTS + "' from runtime properties!");
         }
     }
 

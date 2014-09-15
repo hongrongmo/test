@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.validator.GenericValidator;
+import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
 import org.ei.logging.LogClient;
 import org.ei.util.GUID;
 
@@ -27,10 +27,10 @@ public class RedirectService extends HttpServlet {
 
     public void init() throws ServletException {
         // Retrieve config parameters
-        logServiceURL = EVProperties.getRuntimeProperty(RuntimeProperties.LOG_URL);
-        appName = EVProperties.getRuntimeProperty(RuntimeProperties.APP_NAME);
+        logServiceURL = EVProperties.getProperty(ApplicationProperties.LOG_URL);
+        appName = EVProperties.getProperty(EVProperties.APP_NAME);
         if (GenericValidator.isBlankOrNull(logServiceURL) || GenericValidator.isBlankOrNull(appName)) {
-            throw new ServletException("Properties for '" + RuntimeProperties.LOG_URL + "' or '" + RuntimeProperties.APP_NAME + "' have not been set!");
+            throw new ServletException("Properties for '" + ApplicationProperties.LOG_URL + "' or '" + EVProperties.APP_NAME + "' have not been set!");
         }
         defaultURL = "http://www.ei.org/";
         this.logClient = new LogClient("http://" + logServiceURL + "/logservice/servlet/LogServer");

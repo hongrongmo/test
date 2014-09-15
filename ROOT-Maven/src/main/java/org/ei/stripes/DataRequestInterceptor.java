@@ -14,8 +14,8 @@ import net.sourceforge.stripes.controller.LifecycleStage;
 
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
+import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
 import org.ei.controller.DataRequest;
 import org.ei.controller.DataResponse;
 import org.ei.controller.OutputPrinter;
@@ -61,7 +61,7 @@ public class DataRequestInterceptor implements Interceptor {
         // feed. Retrieve from the data (model) layer if so.
         // *****************************************************
         if (actionbean instanceof IBizBean) {
-            String dataCacheDir = EVProperties.getRuntimeProperty(RuntimeProperties.DATA_CACHE_DIR);
+            String dataCacheDir = EVProperties.getProperty(ApplicationProperties.DATA_CACHE_DIR);
 
             DataRequest dataRequest;
             try {
@@ -118,7 +118,7 @@ public class DataRequestInterceptor implements Interceptor {
     }
 
     private boolean getAppendSessionProperty() {
-        return Boolean.parseBoolean(EVProperties.getRuntimeProperty(RuntimeProperties.APPEND_SESSION));
+        return Boolean.parseBoolean(EVProperties.getProperty(ApplicationProperties.APPEND_SESSION));
     }
 
 }

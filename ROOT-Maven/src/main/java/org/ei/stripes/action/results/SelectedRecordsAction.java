@@ -19,9 +19,9 @@ import net.sourceforge.stripes.action.Resolution;
 import net.sourceforge.stripes.action.UrlBinding;
 
 import org.apache.log4j.Logger;
+import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
 import org.ei.config.JSPPathProperties;
-import org.ei.config.RuntimeProperties;
 import org.ei.domain.DatabaseDisplayHelper;
 import org.ei.domain.SortOption;
 import org.ei.exception.ErrorXml;
@@ -183,8 +183,8 @@ public class SelectedRecordsAction extends BaseSearchAction implements IBizBean,
 
         }
 
-        // String pageSizeOptions= context.getRuntimeProperties().getProperty("PAGESIZEOPTIONS");
-        String pageSizeOptions = EVProperties.getRuntimeProperty(RuntimeProperties.PAGESIZE_OPTIONS);
+        // String pageSizeOptions= context.getApplicationProperties().getProperty("PAGESIZEOPTIONS");
+        String pageSizeOptions = EVProperties.getProperty(ApplicationProperties.PAGESIZE_OPTIONS);
         StringTokenizer st = new StringTokenizer(pageSizeOptions, ",");
         if (null != st) {
             while (st.hasMoreTokens()) {

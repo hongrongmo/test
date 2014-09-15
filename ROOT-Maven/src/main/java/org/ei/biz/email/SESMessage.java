@@ -33,7 +33,7 @@ public class SESMessage {
     public static final String NOREPLY_SENDER = "ei-noreply@elsevier.com";
 
     public SESMessage() {
-        this.returnPath = EVProperties.getRuntimeProperties().getProperty("mail.smtp.noreply", "einoreply@elsevier.com");
+        this.returnPath = EVProperties.getApplicationProperties().getProperty("mail.smtp.noreply", "einoreply@elsevier.com");
     }
 
     // Simple constructor

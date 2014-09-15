@@ -13,18 +13,18 @@ import org.apache.commons.httpclient.HttpMethod;
 import org.apache.commons.httpclient.methods.PostMethod;
 import org.ei.biz.email.SESEmail;
 import org.ei.biz.email.SESMessage;
-import org.ei.config.RuntimeProperties;
+import org.ei.config.ApplicationProperties;
 import org.ei.connectionpool.ConnectionBroker;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.FastClient;
 
 public class CheckEV {
 
-	RuntimeProperties eiProps;
+	ApplicationProperties eiProps;
 
 	private String url = "/controller/servlet/Controller?CID=openXML&dbchkbx=1&DATABASE=1&XQUERYX=%3Cquery%3E%3CandQuery%3E%3Cword+path%3D%22db%22%3Ecpx%3C%2Fword%3E%3Cword%3Eworld%3C%2Fword%3E%3C%2FandQuery%3E%3C%2Fquery%3E&AUTOSTEM=on&STARTYEAR=1990&ENDYEAR=2009&SORT=re&xmlsearch=Submit+Query";
 	private String configFile;
-	private static RuntimeProperties props;
+	private static ApplicationProperties props;
 	private String server;
 	private String email;
 	private String fastURL;

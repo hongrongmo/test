@@ -156,7 +156,7 @@ public class LocalHoldingsAction extends EVActionBean {
             to = "library@lamrc.com";
         }
 
-        String sender = EVProperties.getRuntimeProperties().getProperty("SENDER_EMAIL_ADDRESS", "eicustomersupport@elsevier.com");
+        String sender = EVProperties.getApplicationProperties().getProperty("SENDER_EMAIL_ADDRESS", "eicustomersupport@elsevier.com");
         SESMessage sesmessage = new SESMessage(to, sender, "Engineering Village Full text request", message.toString(),false);
         sesmessage.setReplyTo(request.getParameter("emailaddress"));
         log4j.info("Sending local holding email to: '" + to + "'");

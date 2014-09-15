@@ -14,8 +14,8 @@ import net.sourceforge.stripes.action.UrlBinding;
 import org.apache.commons.validator.GenericValidator;
 import org.ei.biz.email.SESEmail;
 import org.ei.biz.email.SESMessage;
+import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
 import org.ei.session.UserPreferences;
 import org.ei.session.UserSession;
 import org.ei.stripes.action.EVActionBean;
@@ -70,15 +70,15 @@ public class ReferenceServicesEmailAction extends EVActionBean {
 		UserSession usersession = context.getUserSession();
 		String refEmail = usersession.getUserTextZones().get(UserPreferences.TZ_REFERENCE_SERVICES_LINK);
 		if (GenericValidator.isBlankOrNull(refEmail) || !GenericValidator.isEmail(refEmail)) {
-		    refEmail = EVProperties.getRuntimeProperty(RuntimeProperties.LIBRARIAN_EMAIL);
+		    refEmail = EVProperties.getProperty(ApplicationProperties.LIBRARIAN_EMAIL);
 		}
 
 		List<String> recipients = new ArrayList<String>();
 		if (ASK_AN_ENGINEER.equals(sectionid)) {
 			// ask an engineer email
-			recipients.add(EVProperties.getRuntimeProperty(RuntimeProperties.ENGINEER_EMAIL));
+			recipients.add(EVProperties.getProperty(ApplicationProperties.ENGINEER_EMAIL));
 		} else if (ASK_A_PRODUCTSPECIALIST.equals(sectionid)) {
-			recipients.add(EVProperties.getRuntimeProperty(RuntimeProperties.SPECIALIST_EMAIL));
+			recipients.add(EVProperties.getProperty(ApplicationProperties.SPECIALIST_EMAIL));
 		} else if (ASK_A_LIBRARIAN.equals(sectionid)) {
 			recipients.add(refEmail);
 		}
@@ -128,7 +128,7 @@ public class ReferenceServicesEmailAction extends EVActionBean {
 					.write("---------------------------------------------------");
 			messagebody.write("\n");
 			// if email is coming to default ei.org address, add user info
-			if (EVProperties.getRuntimeProperty(RuntimeProperties.LIBRARIAN_EMAIL).equals(refEmail)) {
+			if (EVProperties.getProperty(ApplicationProperties.LIBRARIAN_EMAIL).equals(refEmail)) {
 				messagebody.write(usersession.getUser().toString());
 			} else {
 				messagebody

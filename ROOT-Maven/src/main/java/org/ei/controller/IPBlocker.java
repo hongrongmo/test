@@ -21,7 +21,8 @@ import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
 import org.ei.biz.email.SESEmail;
 import org.ei.biz.email.SESMessage;
-import org.ei.config.RuntimeProperties;
+import org.ei.config.ApplicationProperties;
+import org.ei.config.EVProperties;
 import org.ei.exception.ServiceException;
 import org.ei.session.BlockedIPEvent;
 import org.ei.session.BlockedIPEvent.TimePeriod;
@@ -97,7 +98,7 @@ public class IPBlocker {
      */
     private static void refreshProperties() {
         try {
-            RuntimeProperties runtimeprops = RuntimeProperties.getInstance();
+            ApplicationProperties runtimeprops = EVProperties.getApplicationProperties();
             bucketincrementtimemin = Integer.parseInt(runtimeprops.getProperty(IPBLOCKER_BUCKET_INTERVAL_MINUTES_PROPERTY, "5"));
             sessionlimit = Long.parseLong(runtimeprops.getProperty(IPBLOCKER_SESSION_LIMIT_PROPERTY, "150"));
             requestlimit = Long.parseLong(runtimeprops.getProperty(IPBLOCKER_REQUEST_LIMIT_PROPERTY, "900"));
@@ -514,7 +515,7 @@ public class IPBlocker {
                 .append("You can take action by submitting the form at http://lngcentral.lexisnexis.com/depts/Edit/AppSupp/Forms/SecurityBreach.aspx (This URL requires Elsevier VPN access)"
                     + newline + newline);
 
-            message.append("You can view all abuse at http://" + RuntimeProperties.getInstance().getAppDomain() + "/status/ipblocker.url (This URL is IP protected!)" + newline
+            message.append("You can view all abuse at http://" + EVProperties.getInstance().getProperty(EVProperties.APP_DOMAIN) + "/status/ipblocker.url (This URL is IP protected!)" + newline
                 + newline);
 
             List<BlockedIPEvent> history = BlockedIPEvent.getByTimePeriod(ipevent.getIP(), TimePeriod.LASTYEAR);
