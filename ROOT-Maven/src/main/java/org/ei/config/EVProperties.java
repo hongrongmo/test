@@ -390,7 +390,7 @@ public final class EVProperties {
     public static synchronized EVProperties getInstance() {
         if (instance == null) {
             instance = new EVProperties();
-            instance.applicationProperties = new ApplicationProperties();
+            instance.applicationProperties = ApplicationProperties.getInstance();
             instance.applicationProperties.setProperty(ApplicationProperties.SYSTEM_ENVIRONMENT_RUNLEVEL, System.getProperty(ApplicationProperties.SYSTEM_ENVIRONMENT_RUNLEVEL));
             instance.applicationProperties.setRunlevel(System.getProperty(ApplicationProperties.SYSTEM_ENVIRONMENT_RUNLEVEL));
 
