@@ -84,8 +84,6 @@ function creatFileName(downloadformat,displaytype,filenameprefix){
 	}
 	
 	filename += '_';
-	filename += downloadformat;
-	filename += '_';
 	var dt = new Date();
 	filename += (dt.getMonth() + 1 );
 	filename += '-';

@@ -125,7 +125,7 @@
 <c:choose>
 	<c:when test="${actionBean.context.userSession.user.individuallyAuthenticated}">
 	<div id="dlprefsSaved" style="display:none;text-align:left;"><img src="/static/images/ev_checkmark.png" style="padding-right:5px;width:20px;"/>Your download settings for this session have been saved. To keep these settings, change your preference in Settings.</div>
-	<div id="dlprefsandsettingsSaved" style="display:none;text-align:left;"><img src="/static/images/ev_checkmark.png" style="padding-right:5px;width:20px;"/>Your download settings for this session have been saved, also the changes are saved into your preferences.</div>
+	<div id="dlprefsandsettingsSaved" style="display:none;text-align:left;"><img src="/static/images/ev_checkmark.png" style="padding-right:5px;width:20px;"/>Your download settings have been saved to My Preferences.</div>
 	<div id="dlprefsandsettingsnotSaved" style="display:none;text-align:left;"><img src="/static/images/No_results_found.png" style="padding-right:5px;width:20px;"/>Your download settings for this session have not been saved. Please refresh the page and try again.</div>
 	</c:when>
 	<c:otherwise>
@@ -184,6 +184,11 @@
 	  return true;
 	}
   
+  	function handlevalidationerror(msg){
+  		$("#valerrormsg").html(msg);
+		$("#valerrormsgcontainer").css("display","block");
+  	}
+  	
 	function submitSavePrefsForm(){
 		$(".saved").hide();
 		var url = "/customer/userprefs.url?save=true&";
@@ -211,16 +216,16 @@
 
 		var fileNamePrefix = $.trim($('#dlFileNamePrefix').val());
 		if(fileNamePrefix.length < 3){
-			alert("File name prefix cannot be empty and should have minimum of 3 characters");
+			handlevalidationerror("Prefix cannot be empty and should have minimum of 3 characters");
 			return false;
 		}
 		if(fileNamePrefix.length > 50){
-			alert("File name prefix cannot have more than 50 characters");
+			handlevalidationerror("Prefix cannot have more than 50 characters");
 			return false;
 		}
 		
 		if(!isValidInput(fileNamePrefix)){
-			alert("File name prefix can have only letters, numbers and the underscore character");
+			handlevalidationerror("Prefix can have only letters, numbers and underscore character");
 			return false;
 		}
 		params += "&dlFileNamePrefix=" + fileNamePrefix;

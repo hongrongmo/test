@@ -582,9 +582,6 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
         	}
         }
 
-        tmpfileName.append("_");
-        tmpfileName.append(downloadformat);
-
         Calendar now = Calendar.getInstance();
         int year = now.get(Calendar.YEAR);
         int month = now.get(Calendar.MONTH)+1; // Note: zero based!

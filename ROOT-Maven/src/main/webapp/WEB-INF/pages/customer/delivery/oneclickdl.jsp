@@ -149,6 +149,7 @@
 	<div id="oneClickContent">
 		<div id="oneClickTitle">Choose your download settings for this session</div>
 		<hr/>
+		<div id="valerrormsgcontainer" style="display:none"><img style="position:relative;top:-3px" src="/static/images/red_warning.gif"/><b>&nbsp;&nbsp;<span id="valerrormsg"></span></b></div>
 		<div id="oneClickMid">
 			<div id="oneClickLeft">
 				<div class="grayText sectionHead">Location:</div>
@@ -185,7 +186,7 @@
 					<input type="hidden" id="dlFileNamePrefixOrg" value="${dlFileNamePrefix}"/>
 					<div class="grayText sectionHead" id="fnpfx">File name prefix:</div>
 					<div id="fileNamePrefixContainer" style="width:150px"><input type="text" style="width:150px" value="${dlFileNamePrefix}" name="filenameprefix" id="filenameprefix" maxlength="50" onkeypress="return handleKeyPress(event)"   /></div>
-					<div style="text-align:right;padding-right:10px;width:150px" id="filenamesuffix"><span id="filenameprefixlabel"  style="font-size:10px">&nbsp;&nbsp;_Output_Format_Date/Time</span></div>
+					<div style="text-align:right;padding-right:10px;width:150px" id="filenamesuffix"><span id="filenameprefixlabel"  style="font-size:10px">&nbsp;&nbsp;_Output_Date/Time.format</span></div>
 				</li>
 				
 				</ul>
@@ -249,14 +250,19 @@ $(document).ready(function() {
 	$(".outputLocation").click(function (){
 		checkForRefworks(this);
 		updatefilenameprefixlable();
+		checkForRisandBib();
 
 	});
 
 	$("input[name='downloadformat'],input[name='displayformat']").click(function(){
 		updatefilenameprefixlable();
 	});
+	$("input[name='downloadformat']").click(function(){
+		checkForRisandBib();
+	});
 	checkForRefworks($('input[name="outputLocation"]:checked'));
 	updatefilenameprefixlable();
+	checkForRisandBib();
 
 });
 function checkForRefworks(radio){
@@ -297,29 +303,55 @@ function handleFnPrefix(){
 			$('#filenameprefix').val(dlOptions.filenameprefix);
 		}
 	}
+	$("#valerrormsgcontainer").css("display","none");
 	
 }
 function updatefilenameprefixlable(){
 	var formatval = $('input[name="downloadformat"]:checked').val();
 	var outputval = $('input[name="displayformat"]:checked').val();
-	var pageType = $("input[name='selectoption']:checked").val();
 	if(formatval ==  'ris'){
 		outputval = "RIS";
 	}else if(formatval ==  'bib'){
 		outputval = "BIB";
-	}
-	if(typeof  formatval === "undefined" || formatval === null || formatval === "") {
-		formatval = "Format";
 	}
 	
 	if(outputval == 'default'){
 		outputval = "current_page_view";
 	}
 	
+	if(formatval === "ascii"){
+		formatval = "txt";
+	}else if (formatval === "bib"){
+		formatval = "bib";
+	}else if(formatval === "csv"){
+		formatval = "csv";
+	}else if(formatval === "pdf"){
+		formatval = "pdf";
+	}else if(formatval === "rtf"){
+		formatval = "rtf";
+	}else if(formatval === "excel"){
+		formatval = "xlsx";
+	}else if(typeof  formatval === "undefined" || formatval === null || formatval === ""){
+		formatval = "format";
+	}else {
+		formatval = "ris";
+	}
+	
 	if(typeof  outputval === "undefined" || outputval === null || outputval === "") {
 		outputval = "Output";
 	}
-	$('#filenameprefixlabel').html('_'+outputval+'_'+formatval+'_Date/Time');
+	$('#filenameprefixlabel').html('_'+outputval+'_Date/Time.'+formatval);
+}
+function checkForRisandBib(){
+	var formatval = $('input[name="downloadformat"]:checked').val();
+	if(formatval ==  'ris' || formatval ==  'bib'){
+		$("#rdDefault").prop("checked", true);
+		$('input[name="displayformat"]').prop("disabled", true);
+		$('input[name="displayformat"]').parent().find("label").addClass("grayText");
+	}else{
+		$('input[name="displayformat"]').prop("disabled", false);
+		$('input[name="displayformat"]').parent().find("label").removeClass("grayText");
+	}
 }
 </script>
 		<c:if test="${actionBean.saveToGoogleEnabled}">
@@ -357,18 +389,18 @@ function updatefilenameprefixlable(){
 				
 				var filenameprefix = $.trim($('#filenameprefix').val());
 				if(filenameprefix.length < 3){
-					alert("File name prefix cannot be empty and should have minimum of 3 characters");
+					handlevalidationerror("Prefix cannot be empty and should have minimum of 3 characters");
 					event.preventDefault();
 					return (false);
 				}
 				if(filenameprefix.length > 50){
-					alert("File name prefix cannot have more than 50 characters");
+					handlevalidationerror("Prefix cannot have more than 50 characters");
 					event.preventDefault();
 					return (false);
 				}
 				
 				if(!isValidInput(filenameprefix)){
-					alert("File name prefix can have only letters, numbers and the underscore character");
+					handlevalidationerror("Prefix can have only letters, numbers and underscore character");
 					return false;
 				}
 
