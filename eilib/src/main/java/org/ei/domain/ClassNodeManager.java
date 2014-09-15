@@ -18,9 +18,13 @@ public class ClassNodeManager {
     private DiskMap ecla;
     int lookupFlag = 2;
 
+    private String usptodir;
+    private String ipcdir;
+    private String ecladir;
+
     private static ClassNodeManager instance;
 
-    public static synchronized ClassNodeManager getInstance() throws InfrastructureException {
+    public static synchronized ClassNodeManager getInstance() {
         if (instance == null) {
             instance = new ClassNodeManager();
         }
@@ -28,22 +32,62 @@ public class ClassNodeManager {
         return instance;
     }
 
+    private ClassNodeManager() {}
+
     public static synchronized boolean initialized() {
-        if (instance == null) {
-            return false;
+        return instance != null;
+    }
+
+    /**
+     * Initialize class - looks for properties defining various lucene index directories
+     *
+     * @param applicationproperties
+     */
+    public static void init(ApplicationProperties applicationproperties) {
+
+        ClassNodeManager instance = ClassNodeManager.getInstance();
+
+        // Init uspto dir
+        instance.usptodir = applicationproperties.getProperty(ApplicationProperties.USPTO_LUCENE_INDEX_DIR);
+        if (GenericValidator.isBlankOrNull(instance.usptodir)) {
+            throw new IllegalArgumentException("USPTO directory for lucene index is NOT defined!");
         }
 
-        return true;
+        // Init ipcdir dir
+        instance.ipcdir = applicationproperties.getProperty(ApplicationProperties.IPC_LUCENE_INDEX_DIR);
+        if (GenericValidator.isBlankOrNull(instance.ipcdir)) {
+            throw new IllegalArgumentException("IPC directory for lucene index is NOT defined!");
+        }
+
+        // Init ecladir dir
+        instance.ecladir = applicationproperties.getProperty(ApplicationProperties.ECLA_LUCENE_INDEX_DIR);
+        if (GenericValidator.isBlankOrNull(instance.ecladir)) {
+            throw new IllegalArgumentException("ECLA directory for lucene index is NOT defined!");
+        }
+
+        try {
+            instance.openUSPTO();
+            instance.openIPC();
+            instance.openECLA();
+        } catch (Exception e) {
+            throw new RuntimeException("Unable to create ClassNodeManager!", e);
+        }
+
     }
 
     public synchronized String seekECLA(String code) throws IOException {
+        if (!this.initialized()) {
+            throw new RuntimeException("ClassNodeManager is NOT initialized!");
+        }
         String s = ecla.get(code);
         s = Entity.replaceLatinChars(s);
         return s;
     }
 
     public String seekIPC(String code, int lookupflag) throws IOException, InfrastructureException {
-
+        if (!this.initialized()) {
+            throw new RuntimeException("ClassNodeManager is NOT initialized!");
+        }
         if (lookupflag == 1) {
             this.lookupFlag = 1;
         }
@@ -53,7 +97,9 @@ public class ClassNodeManager {
     }
 
     public synchronized String seekIPC(String code) throws IOException, InfrastructureException {
-
+        if (!this.initialized()) {
+            throw new RuntimeException("ClassNodeManager is NOT initialized!");
+        }
         String s = ipc.get(code);
         s = Entity.replaceLatinChars(s);
         // System.out.println("Code="+code+" name= "+s);
@@ -65,27 +111,33 @@ public class ClassNodeManager {
     }
 
     public synchronized String seekUS(String code) throws IOException {
+        if (!this.initialized()) {
+            throw new RuntimeException("ClassNodeManager is NOT initialized!");
+        }
         String s = uspto.get(code);
         return s;
     }
 
     public synchronized void close() {
+        if (!this.initialized()) {
+            throw new RuntimeException("ClassNodeManager is NOT initialized!");
+        }
         try {
-            uspto.close();
+            this.uspto.close();
             log4j.warn("Closed USPTO index...");
         } catch (Exception e) {
             log4j.error(e);
         }
 
         try {
-            ecla.close();
+            this.ecla.close();
             log4j.warn("Closed ECLA index...");
         } catch (Exception e) {
             log4j.error(e);
         }
 
         try {
-            ipc.close();
+            this.ipc.close();
             log4j.warn("Closed IPC index...");
         } catch (Exception e) {
             log4j.error(e);
@@ -93,52 +145,22 @@ public class ClassNodeManager {
 
     }
 
-    private ClassNodeManager() throws InfrastructureException {
-        openUSPTO();
-        openIPC();
-        openECLA();
+    private void openUSPTO() throws IOException {
+        log4j.warn("Opening USPTO index at: '" + this.usptodir + "'");
+        uspto = new DiskMap();
+        uspto.openRead(this.usptodir, false);
     }
 
-    private void openUSPTO() throws InfrastructureException {
-        try {
-            String usptodir = ApplicationProperties.getInstance().getProperty(ApplicationProperties.USPTO_LUCENE_INDEX_DIR);
-            if (GenericValidator.isBlankOrNull(usptodir)) {
-                throw new IllegalArgumentException("USPTO directory for lucene index is NOT defined!");
-            }
-            log4j.warn("Opening USPTO index at: '" + usptodir + "'");
-            uspto = new DiskMap();
-            uspto.openRead(usptodir, false);
-        } catch (IOException e) {
-            throw new InfrastructureException(SystemErrorCodes.CLASSNODEMANAGER_ERROR, e);
-        }
+    private void openIPC() throws IOException {
+        log4j.warn("Opening IPC index at: '" + this.ipcdir + "'");
+        ipc = new DiskMap();
+        ipc.openRead(this.ipcdir, false);
     }
 
-    private void openIPC() throws InfrastructureException {
-        try {
-            String ipcdir = ApplicationProperties.getInstance().getProperty(ApplicationProperties.IPC_LUCENE_INDEX_DIR);
-            if (GenericValidator.isBlankOrNull(ipcdir)) {
-                throw new IllegalArgumentException("IPC directory for lucene index is NOT defined!");
-            }
-            log4j.warn("Opening IPC index at: '" + ipcdir + "'");
-            ipc = new DiskMap();
-            ipc.openRead(ipcdir, false);
-        } catch (IOException e) {
-            throw new InfrastructureException(SystemErrorCodes.CLASSNODEMANAGER_ERROR, e);
-        }
-    }
-
-    private void openECLA() throws InfrastructureException {
-        try {
-            String ecladir = ApplicationProperties.getInstance().getProperty(ApplicationProperties.ECLA_LUCENE_INDEX_DIR);
-            if (GenericValidator.isBlankOrNull(ecladir)) {
-                throw new IllegalArgumentException("ECLA directory for lucene index is NOT defined!");
-            }
-            log4j.warn("Opening ECLA index at: '" + ecladir + "'");
-            ecla = new DiskMap();
-            ecla.openRead(ecladir, false);
-        } catch (IOException e) {
-            throw new InfrastructureException(SystemErrorCodes.CLASSNODEMANAGER_ERROR, e);
-        }
+    private void openECLA() throws IOException {
+        log4j.warn("Opening ECLA index at: '" + this.ecladir + "'");
+        ecla = new DiskMap();
+        ecla.openRead(this.ecladir, false);
 
     }
 }
