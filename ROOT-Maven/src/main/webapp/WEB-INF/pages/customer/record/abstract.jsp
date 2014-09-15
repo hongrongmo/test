@@ -282,7 +282,13 @@
 
 		});
 		$("#ckbackhighlight").click(function(e) {
-			var oldColor = JSON.parse($.cookie('ev_highlight')).color;
+			var oldColor;
+			if($.cookie('ev_highlight')){
+				oldColor = JSON.parse($.cookie('ev_highlight')).color;
+			}else{
+				oldColor = $("#hlight_color_abs").spectrum("get").toString();
+			}
+
 			if ($(this).prop('checked')) {
 				$(".hit").removeClass("hit").addClass("bghit");
 				$(".bghit").css("color", "black");
