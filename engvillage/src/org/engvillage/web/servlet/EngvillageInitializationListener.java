@@ -16,6 +16,7 @@ import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.ei.config.ApplicationProperties;
+import org.ei.domain.ClassNodeManager;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.DatabaseConfigException;
 import org.ei.domain.DriverConfig;
@@ -59,7 +60,7 @@ public class EngvillageInitializationListener implements ServletContextListener 
 		    log4j.info("Populating ApplicationProperties...");
 			populateApplicationProperties();
 
-			// Initialize log4j
+            // Initialize log4j
             log4j.info("Init log4j...");
 			initLog4j();
 

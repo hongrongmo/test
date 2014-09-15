@@ -18,6 +18,7 @@ import org.ei.config.JSPPathProperties;
 import org.ei.controller.MemcachedUtil;
 import org.ei.controller.content.ContentConfig;
 import org.ei.controller.logging.LogException;
+import org.ei.domain.ClassNodeManager;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.DatabaseConfigException;
 import org.ei.domain.DriverConfig;
@@ -69,7 +70,8 @@ public class EVInitializationListener implements ServletContextListener {
 			populateContentConfig();
             log4j.info("Populating HelpLinksList...");
 			populateHelpLinksList();
-
+			log4j.info("Initializing ClassNodeManager");
+			ClassNodeManager.init(EVProperties.getApplicationProperties());
             // Initialize log4j
             log4j.info("Init log4j...");
             initLog4j();
