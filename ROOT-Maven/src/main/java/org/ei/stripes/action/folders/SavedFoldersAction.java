@@ -163,7 +163,7 @@ public class SavedFoldersAction extends FolderActionBean implements IPersonalLog
     {
         super.callRequestCommonCode();
         try {
-            maxFolderSize = Integer.parseInt(EVProperties.getRuntimeProperty(RuntimeProperties.MAX_FOLDERSIZE));
+            maxFolderSize = Integer.parseInt(EVProperties.getProperty(RuntimeProperties.MAX_FOLDERSIZE));
         } catch (Exception e) {
             log4j.error("callRequestCommonCode - Unable to process the Request!", e);
         }

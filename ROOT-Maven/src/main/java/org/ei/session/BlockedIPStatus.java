@@ -8,7 +8,8 @@ import java.util.List;
 
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
-import org.ei.config.RuntimeProperties;
+import org.ei.config.ApplicationProperties;
+import org.ei.config.EVProperties;
 import org.ei.service.amazon.AmazonServiceHelper;
 
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
@@ -64,9 +65,9 @@ public class BlockedIPStatus {
 
     public BlockedIPStatus() {
         try {
-            this.environment = RuntimeProperties.getInstance().getRunlevel();
+            this.environment = EVProperties.getApplicationProperties().getRunlevel();
         } catch (Throwable t) {
-            this.environment = RuntimeProperties.RUNLEVEL_PROD;
+            this.environment = ApplicationProperties.RUNLEVEL_PROD;
         }
     };
 
@@ -180,12 +181,12 @@ public class BlockedIPStatus {
     @DynamoDBIgnore
     private static String getCurrentEnvironment() {
         // Set then environment from current runtime properties
-        String environment = RuntimeProperties.RUNLEVEL_PROD;
+        String environment = ApplicationProperties.RUNLEVEL_PROD;
         try {
-            environment = RuntimeProperties.getInstance().getRunlevel();
+            environment = EVProperties.getApplicationProperties().getRunlevel();
         } catch (Throwable t) {
-            log4j.error("Unable to retrieve RuntimeProperties.SYSTEM_ENVIRONMENT_RUNLEVEL", t);
-            environment = RuntimeProperties.RUNLEVEL_PROD;
+            log4j.error("Unable to retrieve ApplicationProperties.SYSTEM_ENVIRONMENT_RUNLEVEL", t);
+            environment = ApplicationProperties.RUNLEVEL_PROD;
         }
         return environment;
     }

@@ -14,17 +14,17 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.log4j.Logger;
 
 /**
- * This servlet is used in 2 ways:  
- * 1) From the engvillage app, the RuntimeProperties are used from the static accessor.
- * 2) From the controller app, both the RuntimeProperties and ContentConfig files are
+ * This servlet is used in 2 ways:
+ * 1) From the engvillage app, the ApplicationProperties are used from the static accessor.
+ * 2) From the controller app, both the ApplicationProperties and ContentConfig files are
  * accessed by HTTP connection
- * 
+ *
  * @author harovetm
  *
  */
 @SuppressWarnings("serial")
 public class ConfigService extends HttpServlet {
-	private static RuntimeProperties props;
+	private static ApplicationProperties props;
 
 	private static ServletContext context;
 
@@ -36,7 +36,7 @@ public class ConfigService extends HttpServlet {
 
 		try {
 			log4j.debug("Config service starting up. Configuring system...");
-			props = RuntimeProperties.getInstance();
+			props = EVProperties.getApplicationProperties();
 
 		} catch (Exception e) {
 			log("Init Error:", e);
@@ -44,7 +44,7 @@ public class ConfigService extends HttpServlet {
 		}
 	}
 
-	public static RuntimeProperties getRuntimeProperties() {
+	public static ApplicationProperties getApplicationProperties() {
 		return props;
 	}
 

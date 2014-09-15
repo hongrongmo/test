@@ -16,7 +16,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.httpclient.HttpStatus;
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
-import org.ei.config.RuntimeProperties;
+import org.ei.config.ApplicationProperties;
+import org.ei.config.EVProperties;
 
 public class HealthCheck extends HttpServlet {
 
@@ -32,16 +33,16 @@ public class HealthCheck extends HttpServlet {
 	 */
 	public void service(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
-		// Check 1: ensure RuntimeProperties instance available
-		RuntimeProperties rtp = RuntimeProperties.getInstance();
+		// Check 1: ensure ApplicationProperties instance available
+		ApplicationProperties rtp = EVProperties.getApplicationProperties();
 		if (rtp == null) {
-			log4j.error("RuntimeProperties object cannot be created!");
+			log4j.error("ApplicationProperties object cannot be created!");
 			response.sendError(HttpServletResponse.SC_SERVICE_UNAVAILABLE, "EV2 Instance Unavailable - Runtime Properties not set!");
 			return;
 		}
 
 		// Check 2: ensure engvillage (data service) is available
-		String dataurl = RuntimeProperties.getInstance().getDataUrl();
+		String dataurl = EVProperties.getProperty(ApplicationProperties.DATA_URL);
 		if (GenericValidator.isBlankOrNull(dataurl)) {
 			log4j.error("Data url (engvillage app) is empty!");
 			response.sendError(HttpServletResponse.SC_SERVICE_UNAVAILABLE, "EV2 Instance Unavailable - Data URL not set!");
@@ -58,7 +59,7 @@ public class HealthCheck extends HttpServlet {
 			connection.setRequestMethod("GET");
 			connection.setRequestProperty("Content-Type", "text/html");
 			connection.connect();
-			
+
 	        int status = connection.getResponseCode();
 	        if (status != HttpStatus.SC_OK) {
 				log4j.error("Data url response code was NOT 200:  " + status + "!");
@@ -76,7 +77,7 @@ public class HealthCheck extends HttpServlet {
 	            }
 	            rd.close();
 	            out.flush();
-	        } 
+	        }
 			response.setContentType("text/plain");
 			log4j.warn("Health check successful!");
 		} catch (Exception e) {

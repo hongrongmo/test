@@ -10,22 +10,22 @@ public class FastSearchServiceConstants extends BaseServiceConstants {
 	public static final String WEBSERVICE_VERSION="FAST_WEBSERVICE_VERSION";
 
     public static String getMaxNumberPoolConnections() {
-        return EVProperties.getRuntimeProperty(MAX_NUMBER_POOL_CONNECTION);
+        return EVProperties.getProperty(MAX_NUMBER_POOL_CONNECTION);
     }
 
     public static String getFastSearchWebServiceEndPoint() {
-        return getServicesBaseURL() + EVProperties.getRuntimeProperty(FAST_SEARCH_WEB_SERVICE_END_POINT);
+        return getServicesBaseURL() + EVProperties.getProperty(FAST_SEARCH_WEB_SERVICE_END_POINT);
     }
 
     public static String getFastSearchWSDLPath() {
-        return getServicesBaseURL() + EVProperties.getRuntimeProperty(FAST_SEARCH_WSDL_PATH);
+        return getServicesBaseURL() + EVProperties.getProperty(FAST_SEARCH_WSDL_PATH);
     }
 
     public static String getWebserviceLogLevel() {
-        return EVProperties.getRuntimeProperty(WEBSERVICE_LOG_LEVEL);
+        return EVProperties.getProperty(WEBSERVICE_LOG_LEVEL);
     }
 
     public static String getWebserviceVersion() {
-        return EVProperties.getRuntimeProperty(WEBSERVICE_VERSION);
+        return EVProperties.getProperty(WEBSERVICE_VERSION);
     }
 }

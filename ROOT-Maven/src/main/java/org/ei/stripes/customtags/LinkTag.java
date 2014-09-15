@@ -9,7 +9,7 @@ import javax.servlet.jsp.JspTagException;
 
 import org.apache.log4j.Logger;
 import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
+import org.ei.config.ApplicationProperties;
 import org.ei.stripes.util.HttpRequestUtil;
 
 /**
@@ -37,8 +37,8 @@ public class LinkTag extends net.sourceforge.stripes.tag.LinkTag {
 
 		// Otherwise, see if there is a runtime property set...
 		try {
-			int http_port = Integer.parseInt(EVProperties.getRuntimeProperty(RuntimeProperties.HTTP_PORT));
-			int https_port = Integer.parseInt(EVProperties.getRuntimeProperty(RuntimeProperties.HTTPS_PORT));
+			int http_port = Integer.parseInt(EVProperties.getProperty(ApplicationProperties.HTTP_PORT));
+			int https_port = Integer.parseInt(EVProperties.getProperty(ApplicationProperties.HTTPS_PORT));
 			String protocol = getProtocol();
 			if (protocol != null && "https".equals(protocol) && https_port > 0 && https_port != 443) {
 				return ":" + https_port;

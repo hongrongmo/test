@@ -39,6 +39,12 @@ public class ApplicationProperties extends Properties {
     // CONSTANTS for retrieving properties
     //
     //
+
+    public final static String RUNLEVEL_PROD = "prod";
+    public final static String RUNLEVEL_CERT = "cert";
+    public final static String RUNLEVEL_DEV = "dev";
+    public final static String RUNLEVEL_LOCAL = "local";
+
     /** The Constant SYSTEM_ENVIRONMENT_RUNLEVEL. */
     public static final String SYSTEM_ENVIRONMENT_RUNLEVEL = "com.elsevier.env";
 
@@ -76,6 +82,9 @@ public class ApplicationProperties extends Properties {
     /** The Constant DATA_URL. */
     public static final String DATA_URL = "data.url";
 
+    /** The Constant DATA_CACHE_DIR. */
+    public static final String DATA_CACHE_DIR = "data.cache.dir";
+
     /** The Constant LOG_URL. */
     public static final String LOG_URL = "log.url";
 
@@ -99,6 +108,12 @@ public class ApplicationProperties extends Properties {
 
     /** The Constant REFEREX_MASK_DATE. */
     public static final String REFEREX_MASK_DATE = "referex.mask.date";
+
+    /** The Constant CUSTOMER_IMAGES_URL_PATH. */
+    public static final String CUSTOMER_IMAGES_URL_PATH = "customer.images.url.path";
+
+    /** The Constant CUSTOMER_IMAGES_PREFIX. */
+    public static final String CUSTOMER_IMAGES_PREFIX = "customer.images.prefix";
 
     /** The Constant PAGESIZE. */
     public static final String PAGESIZE = "PAGESIZE";
@@ -142,9 +157,6 @@ public class ApplicationProperties extends Properties {
     /** The Constant SAVED_SERCHES_ALERTS_LIMIT. */
     public static final String SAVED_SERCHES_ALERTS_LIMIT = "SAVED_SERCHES_ALERTS_LIMIT";
 
-    /** The Constant SYNC_TOKEN_LIST_SIZE. */
-    public static final String SYNC_TOKEN_LIST_SIZE = "SYNC_TOKEN_LIST_SIZE";
-
     /** The Constant SMTP_HOST. */
     public static final String SMTP_HOST = "mail.smtp.host";
 
@@ -181,12 +193,23 @@ public class ApplicationProperties extends Properties {
     /** The Constant LHL_EMAIL_SUBJECT. */
     public static final String LHL_EMAIL_SUBJECT = "lhl.email.subject";
 
-    public static final List<String> PROPERTIES_TO_LOAD = Arrays.asList(new String[] { FAST_BASE_URL, THES_BASE_URL, FAST_LEM_BASE_URL, FAST_DOCVIEW_BASE_URL,
-        REFEREX_TOC_BASE_PATH, WHOLE_BOOK_DOWNLOAD_BASE_URL, CITED_BY_URL, APPEND_SESSION, DATA_URL, LOG_URL, AUTH_URL, LOGSERVICE_LOG_PATH,
-        USPTO_LUCENE_INDEX_DIR, IPC_LUCENE_INDEX_DIR, ECLA_LUCENE_INDEX_DIR, REFEREX_MASK_FLAG, REFEREX_MASK_DATE, PAGESIZE, DISPLAY_PAGESIZE, BASKET_PAGESIZE,
-        LOOKUP_PAGESIZE, SEARCHHISTORY_SIZE, EMAILALERT_SIZE, EMAILALERT_DAY, MAX_FOLDERSIZE, MAX_BASKETSIZE, SERVER_LOCATION, DEDUPSET_SIZE, SYSTEM_ENDYEAR,
-        PAGESIZE_OPTIONS, SAVED_SERCHES_ALERTS_LIMIT, SYNC_TOKEN_LIST_SIZE, SMTP_HOST, SMTP_USERNAME, SMTP_PASSWORD, DEBUG, SENDER, TO_RECEPIENTS,
-        BCC_RECEPIENTS, LHL_PRODUCTID, LHL_TO_RECIPIENTS, LHL_CC_RECIPIENTS, LHL_FROM_RECIPIENTS, LHL_EMAIL_SUBJECT });
+    /** The Constant LIBRARIAN_EMAIL. */
+    public static final String LIBRARIAN_EMAIL="LIBRARIAN_EMAIL";
+
+    /** The Constant SPECIALIST_EMAIL. */
+    public static final String SPECIALIST_EMAIL="SPECIALIST_EMAIL";
+
+    /** The Constant ENGINEER_EMAIL. */
+    public static final String ENGINEER_EMAIL="ENGINEER_EMAIL";
+
+    /** The Constant CONTACT_US_LINK. */
+    public static final String CONTACT_US_LINK = "contact.us.link";
+
+    /** The Constant HTTP_PORT. */
+    public static final String HTTP_PORT ="HTTP_PORT";
+
+    /** The Constant HTTPS_PORT. */
+    public static final String HTTPS_PORT ="HTTPS_PORT";
 
     /** The runlevel. */
     private String runlevel = "";
@@ -199,6 +222,10 @@ public class ApplicationProperties extends Properties {
      */
     public String getRunlevel() {
         return this.runlevel;
+    }
+
+    public void setRunlevel(String runlevel) {
+        this.runlevel = runlevel;
     }
 
     /** The instance. */

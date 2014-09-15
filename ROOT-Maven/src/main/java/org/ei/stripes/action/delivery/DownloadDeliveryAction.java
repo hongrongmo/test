@@ -5,7 +5,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
 import java.io.StringReader;
@@ -40,7 +39,8 @@ import org.apache.log4j.Logger;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.ei.biz.personalization.IEVWebUser;
 import org.ei.biz.personalization.UserPrefs;
-import org.ei.config.RuntimeProperties;
+import org.ei.config.ApplicationProperties;
+import org.ei.config.EVProperties;
 import org.ei.domain.Abstract;
 import org.ei.domain.BasketEntry;
 import org.ei.domain.BasketPage;
@@ -94,9 +94,9 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
         baseaddress = context.getRequest().getServerName();
         boolean isSaveToGoogleEnabled = false;
         boolean isSaveToDropboxEnabled = false;
-        RuntimeProperties runtimeprops;
+        ApplicationProperties runtimeprops;
 		try {
-			runtimeprops = RuntimeProperties.getInstance();
+			runtimeprops = EVProperties.getApplicationProperties();
 			isSaveToGoogleEnabled =  Boolean.parseBoolean(runtimeprops.getProperty("google.drive.enabled"));
 			isSaveToDropboxEnabled = Boolean.parseBoolean(runtimeprops.getProperty("dropbox.save.enabled"));
 		} catch (Exception e) {
@@ -112,10 +112,10 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
     public Resolution dropbox() throws InfrastructureException {
 
 		boolean isSaveToDropboxEnabled = false;
-        RuntimeProperties runtimeprops;
+        ApplicationProperties runtimeprops;
 
 		try {
-			runtimeprops = RuntimeProperties.getInstance();
+			runtimeprops = EVProperties.getApplicationProperties();
 			isSaveToDropboxEnabled =  Boolean.parseBoolean(runtimeprops.getProperty("dropbox.save.enabled"));
 		} catch(Exception e) {
 			log4j.warn("Error occured! "+e.getMessage());
@@ -142,9 +142,9 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
     public Resolution dropboxredirect() throws InfrastructureException {
 		String clientId = "";
 		boolean isSaveToDropboxEnabled = false;
-        RuntimeProperties runtimeprops;
+        ApplicationProperties runtimeprops;
 		try {
-			runtimeprops = RuntimeProperties.getInstance();
+			runtimeprops = EVProperties.getApplicationProperties();
 			clientId =  runtimeprops.getProperty("dropbox.client.id");
 			isSaveToDropboxEnabled =  Boolean.parseBoolean(runtimeprops.getProperty("dropbox.save.enabled"));
 		} catch(Exception e) {
@@ -174,9 +174,9 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
     public Resolution googleDrive() throws InfrastructureException {
 
 		boolean isSaveToGoogleEnabled = false;
-        RuntimeProperties runtimeprops;
+        ApplicationProperties runtimeprops;
 		try {
-			runtimeprops = RuntimeProperties.getInstance();
+			runtimeprops = EVProperties.getApplicationProperties();
 			isSaveToGoogleEnabled =  Boolean.parseBoolean(runtimeprops.getProperty("google.drive.enabled"));
 		} catch(Exception e) {
 			log4j.warn("Error occured! "+e.getMessage());

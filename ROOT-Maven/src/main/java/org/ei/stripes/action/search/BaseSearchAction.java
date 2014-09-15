@@ -462,7 +462,7 @@ public abstract class BaseSearchAction extends EVActionBean implements ISearchFo
 		this.limitError = limitError;
 	}
 	public String getSavedSeachesAndAlertsLimit() {
-		 return EVProperties.getRuntimeProperty("SAVED_SERCHES_ALERTS_LIMIT");
+		 return EVProperties.getProperty("SAVED_SERCHES_ALERTS_LIMIT");
 	}
 
 	public boolean isIsnavchrt() {

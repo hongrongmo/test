@@ -31,7 +31,6 @@ import org.ei.biz.personalization.UserProfile;
 import org.ei.books.collections.ReferexCollection;
 import org.ei.bulletins.BulletinGUI;
 import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
 import org.ei.controller.CookieHandler;
 import org.ei.controller.IPBlocker;
 import org.ei.controller.IPBlocker.COUNTER;
@@ -75,7 +74,7 @@ public class SessionManager {
      */
     public static void init() throws NumberFormatException {
         long sessiontimeout = 0;
-        sessiontimeout = Long.parseLong(EVProperties.getRuntimeProperty(RuntimeProperties.SESSION_TIMEOUT));
+        sessiontimeout = Long.parseLong(EVProperties.getProperty(EVProperties.SESSION_TIMEOUT));
 
         sessionBroker = SessionBroker.getInstance(sessiontimeout);
     }

@@ -15,7 +15,7 @@ import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.HttpMethod;
 import org.apache.commons.httpclient.methods.PostMethod;
 import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
+import org.ei.config.ApplicationProperties;
 
 
 @SuppressWarnings("serial")
@@ -38,10 +38,10 @@ public class NewHeartbeatService extends HttpServlet
 	{
 		ServletConfig config = getServletConfig();
 		this.startup = System.currentTimeMillis();
-		authURL = EVProperties.getRuntimeProperty(RuntimeProperties.AUTH_URL);
-		appName = EVProperties.getRuntimeProperty(RuntimeProperties.APP_NAME);
-		fastUrl = EVProperties.getRuntimeProperty(RuntimeProperties.FAST_BASE_URL);
-        dataServiceURL = "http://" + EVProperties.getRuntimeProperty(RuntimeProperties.DATA_URL) + "/engvillage/servlet/CheckDataService";
+		authURL = EVProperties.getProperty(ApplicationProperties.AUTH_URL);
+		appName = EVProperties.getProperty(EVProperties.APP_NAME);
+		fastUrl = EVProperties.getProperty(ApplicationProperties.FAST_BASE_URL);
+        dataServiceURL = "http://" + EVProperties.getProperty(ApplicationProperties.DATA_URL) + "/engvillage/servlet/CheckDataService";
         username = config.getInitParameter("username");
         password = config.getInitParameter("password");
         email = config.getInitParameter("email");

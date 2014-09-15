@@ -5,8 +5,8 @@ import java.util.List;
 import net.sourceforge.stripes.validation.Validate;
 
 import org.apache.log4j.Logger;
+import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
 import org.ei.domain.personalization.Folder;
 import org.ei.domain.personalization.FolderEntry;
 import org.ei.domain.personalization.SavedRecords;
@@ -87,7 +87,7 @@ public abstract class FolderActionBean extends EVActionBean {
                 log4j.debug("docindex--> " + docindex);
             }
 
-            maxFolderSize = Integer.parseInt(EVProperties.getRuntimeProperty(RuntimeProperties.MAX_FOLDERSIZE));
+            maxFolderSize = Integer.parseInt(EVProperties.getProperty(ApplicationProperties.MAX_FOLDERSIZE));
 
         } catch (Exception e) {
             log4j.error("Error during common code!", e);

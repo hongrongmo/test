@@ -22,31 +22,31 @@ public abstract class BaseServiceConstants {
     public static final String SITE_IDENTIFIER="SITE_IDENTIFIER";
 
     public static String getServicesBaseURL() {
-        return EVProperties.getRuntimeProperty(CSAS_BASE_URL);
+        return EVProperties.getProperty(CSAS_BASE_URL);
     }
 
     public static String getConsumerApp() {
-        return EVProperties.getRuntimeProperty(ANEServiceConstants.CONSUMER_APP);
+        return EVProperties.getProperty(ANEServiceConstants.CONSUMER_APP);
     }
 
     public static String getConsumerClient() {
-        return EVProperties.getRuntimeProperty(ANEServiceConstants.CONSUMER_CLIENT);
+        return EVProperties.getProperty(ANEServiceConstants.CONSUMER_CLIENT);
     }
 
     public static String getWebserviceLogLevel() {
-        return EVProperties.getRuntimeProperty(ANEServiceConstants.WEBSERVICE_LOG_LEVEL);
+        return EVProperties.getProperty(ANEServiceConstants.WEBSERVICE_LOG_LEVEL);
     }
 
     public static String getWebserviceVersion() {
-        return EVProperties.getRuntimeProperty(ANEServiceConstants.WEBSERVICE_VERSION);
+        return EVProperties.getProperty(ANEServiceConstants.WEBSERVICE_VERSION);
     }
 
     public static String getPlatformCode() {
-        return EVProperties.getRuntimeProperty(ANEServiceConstants.PLATFORM_CODE);
+        return EVProperties.getProperty(ANEServiceConstants.PLATFORM_CODE);
     }
 
     public static String getSiteIdentifier() {
-        return EVProperties.getRuntimeProperty(ANEServiceConstants.SITE_IDENTIFIER);
+        return EVProperties.getProperty(ANEServiceConstants.SITE_IDENTIFIER);
     }
 
 }

@@ -28,11 +28,10 @@ import org.ei.biz.personalization.IEVWebUser;
 import org.ei.biz.security.IAccessControl;
 import org.ei.biz.security.ISecuredAction;
 import org.ei.biz.security.NormalAuthRequiredAccessControl;
+import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
 import org.ei.controller.logging.LogEntry;
 import org.ei.exception.SessionException;
-import org.ei.session.UserPreferences;
 import org.ei.session.UserSession;
 import org.ei.stripes.EVActionBeanContext;
 import org.ei.stripes.util.HttpRequestUtil;
@@ -118,7 +117,7 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
     @After(stages = LifecycleStage.ActionBeanResolution)
     private void init() {
         if (this.getContext() != null) {
-            this.getContext().getRequest().setAttribute(RuntimeProperties.REQUEST_ATTRIBUTE, EVProperties.getRuntimeProperties());
+            this.getContext().getRequest().setAttribute(EVProperties.REQUEST_ATTRIBUTE, EVProperties.getApplicationProperties());
         }
     }
 
@@ -327,8 +326,8 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
         String port = "";
         if (!request.isSecure() && request.getServerPort() > 0 && request.getServerPort() != 80 && request.getServerPort() != 443) {
             port = ":" + Integer.toString(request.getServerPort());
-        } else if (!GenericValidator.isBlankOrNull(EVProperties.getRuntimeProperty(RuntimeProperties.HTTP_PORT))) {
-            port = ":" + EVProperties.getRuntimeProperty(RuntimeProperties.HTTP_PORT);
+        } else if (!GenericValidator.isBlankOrNull(EVProperties.getProperty(ApplicationProperties.HTTP_PORT))) {
+            port = ":" + EVProperties.getProperty(ApplicationProperties.HTTP_PORT);
         }
         String path = "http://" + HttpRequestUtil.getDomain(request) + port + url;
         log4j.info("Redirecting to path: " + path);
@@ -392,7 +391,7 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
     protected void startlog() {
         LogEntry logentry = this.context.getLogEntry();
         logentry.addHttpData(this.context.getRequest());
-        String appName = EVProperties.getRuntimeProperty(RuntimeProperties.APP_NAME);
+        String appName = EVProperties.getProperty(EVProperties.APP_NAME);
         logentry.setAppName(appName);
 
     }
@@ -421,7 +420,7 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
      * @return
      */
     public String getHelpUrl() {
-        return EVProperties.getRuntimeProperty(RuntimeProperties.HELP_URL);
+        return EVProperties.getProperty(EVProperties.HELP_URL);
     }
 
     // Context for the help link. Should be set in Event handlers
@@ -451,7 +450,7 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
             strRequestURI = strRequestURI.substring(0, strRequestURI.indexOf("."));
         }
         strRequestURI = "help.context" + strRequestURI.replaceAll("/", ".");
-        setHelpcontext(EVProperties.getRuntimeProperty(strRequestURI));
+        setHelpcontext(EVProperties.getProperty(strRequestURI));
         log4j.info("Help context set: " + helpcontext);
     }
 
@@ -625,7 +624,7 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
         if (userSession == null) {
             return null;
         }
-        boolean isCSRFPrevEnabled = Boolean.parseBoolean((EVProperties.getRuntimeProperty(RuntimeProperties.PREVENT_CSRF_ATTACK)));
+        boolean isCSRFPrevEnabled = Boolean.parseBoolean((EVProperties.getProperty(EVProperties.PREVENT_CSRF_ATTACK)));
         if (!isCSRFPrevEnabled)
             return null;
         boolean isSessionUpdateNeeded = false;
@@ -714,14 +713,14 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
             return false;
 
         try {
-            boolean isCSRFPrevEnabled = Boolean.parseBoolean((EVProperties.getRuntimeProperty(RuntimeProperties.PREVENT_CSRF_ATTACK)));
+            boolean isCSRFPrevEnabled = Boolean.parseBoolean((EVProperties.getProperty(EVProperties.PREVENT_CSRF_ATTACK)));
             if (isCSRFPrevEnabled) {
                 if (token == null || token.isEmpty()) {
                     preventIt = true;
                 } else {
                     if (usersession.getFifoQueue().isMatchFound(token)) {
                         usersession.getFifoQueue().createNewToken(
-                            Long.parseLong(RuntimeProperties.getInstance().getProperty(RuntimeProperties.SYNC_TOKEN_LIST_SIZE, "10")));
+                            Long.parseLong(EVProperties.getApplicationProperties().getProperty(EVProperties.SYNC_TOKEN_LIST_SIZE, "10")));
                         context.updateUserSession(usersession);
                         preventIt = false;
                     } else {

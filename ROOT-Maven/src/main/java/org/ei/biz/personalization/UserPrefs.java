@@ -11,8 +11,8 @@ import java.util.StringTokenizer;
 
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
+import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
 import org.ei.service.amazon.AmazonServiceHelper;
 import org.ei.session.UserPreferences;
 import org.ei.stripes.action.delivery.AbstractDeliveryAction;
@@ -76,10 +76,10 @@ public class UserPrefs  {
     public UserPrefs() {
         try {
             this.resultsPerPageOpt = getResultsPerPageOptions();
-            this.environment = RuntimeProperties.getInstance().getRunlevel();
+            this.environment = EVProperties.getApplicationProperties().getRunlevel();
             setDefaults();
         } catch (Throwable t) {
-            this.environment = RuntimeProperties.RUNLEVEL_PROD;
+            this.environment = ApplicationProperties.RUNLEVEL_PROD;
         }
     }
 
@@ -110,7 +110,7 @@ public class UserPrefs  {
      */
     @DynamoDBIgnore
     public static ArrayList<String> getResultsPerPageOptions(){
-        String pageSizeOptions = EVProperties.getRuntimeProperty(RuntimeProperties.PAGESIZE_OPTIONS);
+        String pageSizeOptions = EVProperties.getProperty(ApplicationProperties.PAGESIZE_OPTIONS);
         StringTokenizer st = new StringTokenizer(pageSizeOptions, ",");
         ArrayList<String> pageOptions = new ArrayList<String>();
         if (null != st) {
@@ -247,12 +247,12 @@ public class UserPrefs  {
     @DynamoDBIgnore
     private static String getCurrentEnvironment() {
         // Set then environment from current runtime properties
-        String environment = RuntimeProperties.RUNLEVEL_PROD;
+        String environment = ApplicationProperties.RUNLEVEL_PROD;
         try {
-            environment = RuntimeProperties.getInstance().getRunlevel();
+            environment = EVProperties.getApplicationProperties().getRunlevel();
         } catch (Throwable t) {
-            log4j.error("Unable to retrieve RuntimeProperties.SYSTEM_ENVIRONMENT_RUNLEVEL", t);
-            environment = RuntimeProperties.RUNLEVEL_PROD;
+            log4j.error("Unable to retrieve ApplicationProperties.SYSTEM_ENVIRONMENT_RUNLEVEL", t);
+            environment = ApplicationProperties.RUNLEVEL_PROD;
         }
         return environment;
     }
