@@ -715,6 +715,7 @@ $(document).ready(function() {
 							if(!hlOptions.bg_highlight){
 								$(this).addClass("hit");
 								$(this).removeClass("bghit");
+								$(this).css("color", hlOptions.color);
 							}else{
 					    		$(this).addClass("bghit");
 					    		$(this).removeClass("hit");
