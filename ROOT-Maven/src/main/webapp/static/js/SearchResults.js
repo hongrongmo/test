@@ -959,10 +959,10 @@ function handleAbstractPreview(event) {
 				    	previewHtml += "<span id='theRest_"+ num +"' style='display:none;'>"+json.theRest+"</span>";
 				    }
 				    if(typeof(json.countLeft)!= 'undefined' && json.countLeft > 0){
-				    	previewHtml += "<a href='' title='Click to show full abstract inline' onclick='$(\"#theRest_"+ num +"\").toggle();$(this).hide();return false;'>...("+ json.countLeft + " more search terms)</a>";
+				    	previewHtml += "<a href='' title='Click to show full abstract inline' onclick='$(\"#theRest_"+ num +"\").toggle();$(this).hide();return false;'>... ("+ json.countLeft + " more search terms)</a>";
 
 				    }else if(typeof(json.theRest)!= 'undefined' && json.theRest.length > 0){
-				    	previewHtml += "<a href='' title='Click to show full abstract inline' onclick='$(\"#theRest_"+ num +"\").toggle();$(this).hide();return false;'>...see more</a>";
+				    	previewHtml += "<a href='' title='Click to show full abstract inline' onclick='$(\"#theRest_"+ num +"\").toggle();$(this).hide();return false;'>... see more</a>";
 				    }
 				    previewtext.html(previewHtml).slideDown("slow", resizeresults);
 				}
