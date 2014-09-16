@@ -2,7 +2,7 @@
      selected set page.
 -->
 
-<%@page import="org.engvillage.config.RuntimeProperties"%>
+<%@page import="org.ei.config.ApplicationProperties"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
 
@@ -95,7 +95,7 @@
         userId = sUserId;
     }
 
-    RuntimeProperties runtimeProps = RuntimeProperties.getInstance();
+    ApplicationProperties runtimeProps = ApplicationProperties.getInstance();
     String pageSize = runtimeProps.getProperty("BASKETPAGESIZE");
     docBasketPageSize = Integer.parseInt(pageSize.trim());
 

@@ -71,9 +71,9 @@
             databaseConfig = DatabaseConfig.getInstance();
 
             // Get the value of the number of documents to be displayed in a search results page form Runtime.properties file
-            RuntimeProperties runtimeProps = RuntimeProperties.getInstance();
+            ApplicationProperties runtimeProps = ApplicationProperties.getInstance();
             pagesize = Integer.parseInt(runtimeProps.getProperty("PAGESIZE"));
-            wobl_url = runtimeProps.getProperty(RuntimeProperties.WHOLE_BOOK_DOWNLOAD_BASE_URL);
+            wobl_url = runtimeProps.getProperty(ApplicationProperties.WHOLE_BOOK_DOWNLOAD_BASE_URL);
 
             // jam Y2K3
         } catch(Exception e) {

@@ -1,4 +1,3 @@
-<%@page import="org.engvillage.config.RuntimeProperties"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
 
@@ -61,7 +60,7 @@
     {
         try
         {
-            RuntimeProperties runtimeProps = RuntimeProperties.getInstance();
+            ApplicationProperties runtimeProps = ApplicationProperties.getInstance();
             pagesize = Integer.parseInt(runtimeProps.getProperty("PAGESIZE"));
 
             databaseConfig = DatabaseConfig.getInstance();

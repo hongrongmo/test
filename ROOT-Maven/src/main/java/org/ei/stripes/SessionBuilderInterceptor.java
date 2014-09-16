@@ -79,7 +79,7 @@ public class SessionBuilderInterceptor implements Interceptor {
 		}
 
 		// Add the release version number to the request for JSPs
-        request.setAttribute("releaseversion", EVProperties.getApplicationProperties().getProperty(EVProperties.RELEASE_VERSION));
+        request.setAttribute("releaseversion", EVProperties.getApplicationProperties().getProperty(ApplicationProperties.RELEASE_VERSION));
         // Add the contact us link to the request for all JSPs
         request.setAttribute("contactuslink", EVProperties.getApplicationProperties().getProperty(ApplicationProperties.CONTACT_US_LINK));
 

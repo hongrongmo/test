@@ -19,9 +19,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.ei.config.ApplicationProperties;
 import org.ei.logging.LogClient;
 import org.ei.util.GUID;
-import org.engvillage.config.RuntimeProperties;
 
 /*
  * This class will inspect the referring URLS and look for MD5 hash
@@ -75,7 +75,7 @@ public final class FastDocViewFilter implements Filter {
         log.info("Starting up");
 
         this.filterConfig = aConfig;
-        String logServiceURL = RuntimeProperties.getInstance().getProperty(RuntimeProperties.LOG_URL);
+        String logServiceURL = ApplicationProperties.getInstance().getProperty(ApplicationProperties.LOG_URL);
         this.logClient = new LogClient(logServiceURL);
 
         log.info("Set logservice URL to " + logServiceURL);

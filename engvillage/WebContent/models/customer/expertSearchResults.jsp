@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<%@page import="org.engvillage.config.RuntimeProperties"%>
+<%@page import="org.ei.config.ApplicationProperties"%>
 <%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page contentType="application/xml; charset=UTF-8"%>
 <%@page import="org.apache.log4j.Logger"%>
@@ -153,7 +153,7 @@
 				sumDb += Integer.parseInt(dbs[i]);
 			}
 			//remove the referex db but continue the search
-            if(((sumDb & DatabaseConfig.PAG_MASK) == DatabaseConfig.PAG_MASK) && RuntimeProperties.getInstance().isItTime(RuntimeProperties.REFEREX_MASK_DATE)){
+            if(((sumDb & DatabaseConfig.PAG_MASK) == DatabaseConfig.PAG_MASK) && ApplicationProperties.getInstance().isItTime(ApplicationProperties.REFEREX_MASK_DATE)){
 	            if((sumDb & DatabaseConfig.PAG_MASK) == DatabaseConfig.PAG_MASK && sumDb != DatabaseConfig.PAG_MASK){
 	            	sumDb -= DatabaseConfig.PAG_MASK;
 	            }else if (sumDb == DatabaseConfig.PAG_MASK){
@@ -968,7 +968,7 @@
 
 	public void jspInit() {
 		try {
-			RuntimeProperties eiProps = RuntimeProperties.getInstance();
+			ApplicationProperties eiProps = ApplicationProperties.getInstance();
 			pageSize = eiProps.getProperty("DISPLAYPAGESIZE");
 			dedupSetSize = eiProps.getProperty("DEDUPSETSIZE");
 			databaseConfig = DatabaseConfig.getInstance();

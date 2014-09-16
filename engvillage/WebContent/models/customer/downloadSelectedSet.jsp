@@ -9,7 +9,7 @@
  * @param java.lang.String.BASKETCOUNT
  * @param java.lang.String.SEARCHQUERY
  -->
-<%@page import="org.engvillage.config.RuntimeProperties"%>
+<%@page import="org.ei.config.ApplicationProperties"%>
 <%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java" %>
 <%@ page session="false"%>
@@ -98,7 +98,7 @@
 	{
 		try
 		{
-			RuntimeProperties runtimeProps= RuntimeProperties.getInstance();
+			ApplicationProperties runtimeProps= ApplicationProperties.getInstance();
 			pageSize = runtimeProps.getProperty("BASKETPAGESIZE");
 			docBasketPageSize=Integer.parseInt(pageSize.trim());
 		}

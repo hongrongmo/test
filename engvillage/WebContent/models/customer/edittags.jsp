@@ -1,5 +1,5 @@
 <%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
-<%@page import="org.engvillage.config.RuntimeProperties"%>
+<%@page import="org.ei.config.ApplicationProperties"%>
 <%@ page language="java"%>
 <%@ page session="false"%>
 
@@ -81,7 +81,7 @@ addSelectedRange.jsp
     {
         try
         {
-            RuntimeProperties runtimeProps = RuntimeProperties.getInstance();
+            ApplicationProperties runtimeProps = ApplicationProperties.getInstance();
             pagesize = Integer.parseInt(runtimeProps.getProperty("PAGESIZE"));
             dedupSetSize = Integer.parseInt(runtimeProps.getProperty("DEDUPSETSIZE"));
 

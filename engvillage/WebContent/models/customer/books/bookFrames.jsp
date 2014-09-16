@@ -26,8 +26,8 @@
     public void jspInit()
     {
     	  try {
-      	  RuntimeProperties eiProps = RuntimeProperties.getInstance();
-      	  wobl_url = eiProps.getProperty(RuntimeProperties.WHOLE_BOOK_DOWNLOAD_BASE_URL);
+      	  ApplicationProperties eiProps = ApplicationProperties.getInstance();
+      	  wobl_url = eiProps.getProperty(ApplicationProperties.WHOLE_BOOK_DOWNLOAD_BASE_URL);
         } catch(Exception e) {
             e.printStackTrace();
         }

@@ -1,4 +1,4 @@
-<%@page import="org.engvillage.config.RuntimeProperties"%>
+<%@page import="org.ei.config.ApplicationProperties"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
 <%@ page import="java.util.*"%>
@@ -63,7 +63,7 @@
     {
         try
         {
-            RuntimeProperties eiProps = RuntimeProperties.getInstance();
+            ApplicationProperties eiProps = ApplicationProperties.getInstance();
             pageSize = eiProps.getProperty("PAGESIZE");
             databaseConfig = DatabaseConfig.getInstance();
             customizedEndYear = Integer.parseInt(eiProps.getProperty("SYSTEM_ENDYEAR"));

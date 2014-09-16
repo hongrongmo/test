@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<%@page import="org.engvillage.config.RuntimeProperties"%>
+<%@page import="org.ei.config.ApplicationProperties"%>
 <%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page contentType="application/xml; charset=UTF-8"%>
 <%@page import="org.apache.commons.validator.GenericValidator"%>
@@ -763,7 +763,7 @@
     {
         try
         {
-            RuntimeProperties eiProps = RuntimeProperties.getInstance();
+            ApplicationProperties eiProps = ApplicationProperties.getInstance();
             pageSize = eiProps.getProperty("DISPLAYPAGESIZE");
             databaseConfig = DatabaseConfig.getInstance();
 

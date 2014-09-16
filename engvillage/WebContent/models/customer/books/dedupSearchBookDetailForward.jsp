@@ -15,7 +15,7 @@
       try
       {
         // Get the value of the number of documents to be displayed in a search results page form Runtime.properties file
-        RuntimeProperties runtimeProps = RuntimeProperties.getInstance();
+        ApplicationProperties runtimeProps = ApplicationProperties.getInstance();
         pagesize = Integer.parseInt(runtimeProps.getProperty("PAGESIZE"));
         databaseConfig = DatabaseConfig.getInstance();
       } catch(Exception e) {
