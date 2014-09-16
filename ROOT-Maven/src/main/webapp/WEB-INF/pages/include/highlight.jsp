@@ -44,14 +44,14 @@
  		}
 	 	</script>
 	 		<style>
-	 		span.hit{
+	 		span.hit, td.hit{
 					font-size:100%;
 					font-weight:bold;
 					color:${actionBean.context.userSession.user.userPrefs.highlight};
 
 				}
 
-				span.bghit, span.bghit {
+				span.bghit, td.bghit {
 					font-weight: bold;
 					font-size:100%;
 					color:black;
