@@ -710,6 +710,8 @@ $(document).ready(function() {
 			    		if($.cookie('ev_highlight')){
 
 							var hlOptions = JSON.parse($.cookie("ev_highlight"));
+
+
 							if(!hlOptions.bg_highlight){
 								$(this).addClass("hit");
 								$(this).removeClass("bghit");
@@ -718,6 +720,15 @@ $(document).ready(function() {
 					    		$(this).removeClass("hit");
 
 							}
+			    		}else{
+			    			if($(".hit").length > 0){
+			    				$(this).addClass("hit");
+								$(this).removeClass("bghit");
+			    			}else{
+			    				$(this).addClass("bghit");
+					    		$(this).removeClass("hit");
+			    			}
+
 			    		}
 			    	}else{
 			    		$(this).css('background-color', 'yellow');
