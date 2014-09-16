@@ -1398,7 +1398,7 @@
 				<tr>
 					<!--<td>&nbsp;</td>-->
 					<td class="label"><h3>Database: </h3></td>
-					<td colspan="2">${result.doc.dbname}</td>
+					<td colspan="2"><span class="dbnameidentifier">${result.doc.dbname}</span></td>
 				</tr>
 </c:if>
 			
