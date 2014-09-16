@@ -484,6 +484,27 @@ function checkForRisandBib(){
 				}
 				
 				changeOneClick(downloadLocation);
+				
+				if(checkReferexOnlyFolder()){
+					$("#oneclickDL").tooltipster({
+					    content: 'Referex database results are not supported in the Excel&reg; download format.',
+					    autoClose:true,
+					    interactive:false,
+					    contentAsHTML:true,
+					    position:'bottom',
+					    fixedLocation:true,
+					    positionTracker:false,
+					    delay:0,
+					    speed:0,
+					    functionAfter: function(origin){$(origin).tooltipster('destroy');}
+					});
+					$("#oneclickDL").tooltipster('show',null);
+					$('#downloadlink').attr("title", "Click to change one click download preferences.");
+					$('#downloadlink').tooltipster('hide');
+					return false;
+				}
+				
+				
 				var url = "";
 				if (downloadLocation == "refworks") {
 					var refworksURL = "http://www.refworks.com/express/ExpressImport.asp?vendor=Engineering%20Village%202&filter=Desktop%20Biblio.%20Mgt.%20Software";
