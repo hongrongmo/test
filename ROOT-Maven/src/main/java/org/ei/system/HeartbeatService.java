@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
+import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
 import org.ei.session.EVSessionListener;
 
@@ -30,7 +31,7 @@ public class HeartbeatService extends HttpServlet {
     }
 
     public void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        String releaseversion = EVProperties.getProperty(EVProperties.RELEASE_VERSION);
+        String releaseversion = EVProperties.getProperty(ApplicationProperties.RELEASE_VERSION);
         if (GenericValidator.isBlankOrNull(releaseversion)) {
             releaseversion = "UNKNOWN!";
         }

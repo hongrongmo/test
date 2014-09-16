@@ -78,7 +78,7 @@ public class EVInitializationListener implements ServletContextListener {
 
             log4j.warn("*******************  EVInitializationListener has configured system.  " + EVProperties.NEWLINE +
                 "    Environment     = '" + EVProperties.getApplicationProperties().getRunlevel() + "'"+ EVProperties.NEWLINE +
-                "    Release version = '" + EVProperties.getProperty(EVProperties.RELEASE_VERSION) + "'"+ EVProperties.NEWLINE +
+                "    Release version = '" + EVProperties.getProperty(ApplicationProperties.RELEASE_VERSION) + "'"+ EVProperties.NEWLINE +
                 "    Log level       = '" + EVProperties.getProperty(ApplicationProperties.ROOT_LOG_LEVEL) + "'");
 
 		} catch (Exception e) {

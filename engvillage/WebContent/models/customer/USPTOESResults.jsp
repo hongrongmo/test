@@ -1,4 +1,4 @@
-<%@page import="org.engvillage.config.RuntimeProperties"%>
+<%@page import="org.ei.config.ApplicationProperties"%>
 <%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
@@ -99,7 +99,7 @@
         try
         {
 
-            RuntimeProperties eiProps = RuntimeProperties.getInstance();
+            ApplicationProperties eiProps = ApplicationProperties.getInstance();
 
             // jam Y2K3
             customizedEndYear = Integer.parseInt(eiProps.getProperty("SYSTEM_ENDYEAR"));

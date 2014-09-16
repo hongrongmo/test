@@ -1,4 +1,4 @@
-<%@page import="org.engvillage.config.RuntimeProperties"%>
+<%@page import="org.ei.config.ApplicationProperties"%>
 <%@ page language="java" %><%@ page session="false" %><%@ page import="org.ei.data.encompasslit.runtime.EltDocBuilder"%><%@ page import="java.util.*"%><%@ page import="java.net.URLEncoder"%><%@ page import="org.ei.domain.*"%><%@ page import="org.engvillage.biz.controller.ControllerClient"%><%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%><%@ page import="org.ei.config.*"%><%@ page import="org.ei.query.base.*"%><%@ page import="org.ei.domain.Searches"%><%@ page import="org.ei.tags.TagBroker"%><%@ page import="org.ei.tags.Tag"%><%@ page import="org.ei.domain.personalization.GlobalLinks"%><%@ page import="org.ei.domain.personalization.SavedSearches"%><%@ page  errorPage="/error/errorPage.jsp"%><%@ page import="org.ei.parser.base.*"%>
 <%!
@@ -6,7 +6,7 @@
 	String docId = null;
 	String terms = null;
 	Query queryObject = null;
-	RuntimeProperties eiProps = null;
+	ApplicationProperties eiProps = null;
     DatabaseConfig databaseConfig = null;
     int customizedEndYear = (Calendar.getInstance()).get(Calendar.YEAR);
 
@@ -15,7 +15,7 @@
   	{
     	try
     	{
-      		eiProps = RuntimeProperties.getInstance();
+      		eiProps = ApplicationProperties.getInstance();
       		databaseConfig = DatabaseConfig.getInstance();
       		customizedEndYear = Integer.parseInt(eiProps.getProperty("SYSTEM_ENDYEAR"));
     	}

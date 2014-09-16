@@ -11,7 +11,7 @@ import java.util.List;
 
 import junit.framework.TestCase;
 
-import org.ei.config.RuntimeProperties;
+import org.ei.config.ApplicationProperties;
 import org.ei.session.BlockedIPEvent;
 import org.ei.session.BlockedIPEvent.TimePeriod;
 import org.junit.After;
@@ -37,7 +37,7 @@ public class TestBlockedIPEvent extends TestCase {
 
     @Test
     public void testEventCRUD() throws IOException {
-        System.out.println("Testing CRUD events for environment: " + RuntimeProperties.getInstance().getRunlevel());
+        System.out.println("Testing CRUD events for environment: " + ApplicationProperties.getInstance().getRunlevel());
         BlockedIPEvent ipevent = new BlockedIPEvent();
         ipevent.setIP("testIP1");
         ipevent.setEnvironment("local");
@@ -68,7 +68,7 @@ public class TestBlockedIPEvent extends TestCase {
         timestamp.add(Calendar.YEAR, -1);
         timestamp.add(Calendar.DAY_OF_YEAR, -1);
 
-        System.out.println("Testing list of events for environment: " + RuntimeProperties.getInstance().getRunlevel());
+        System.out.println("Testing list of events for environment: " + ApplicationProperties.getInstance().getRunlevel());
         BlockedIPEvent ipevent = new BlockedIPEvent("testIP1");
 
         ipevent.setTimestamp(timestamp.getTime());

@@ -1,4 +1,4 @@
-<%@page import="org.engvillage.config.RuntimeProperties"%>
+<%@page import="org.ei.config.ApplicationProperties"%>
 <%@ page language="java" %><%@ page session="false" %><%@ page import="org.ei.domain.*" %><%@ page import="org.ei.books.*" %><%@ page import="org.ei.domain.personalization.SavedSearches"%><%@ page import="org.ei.query.base.*"%><%@ page import="org.ei.config.*"%><%@ page import="java.util.*"%><%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%><%@ page import="org.engvillage.biz.controller.ControllerClient"%><%@ page import="org.ei.parser.base.*"%><%@ page import="org.ei.email.*"%><%@ page import="javax.mail.internet.*"%><%
 
@@ -18,7 +18,7 @@
       try
       {
         // Get the value of the number of documents to be displayed in a search results page form Runtime.properties file
-        pagesize = Integer.parseInt(RuntimeProperties.getInstance().getProperty("PAGESIZE"));
+        pagesize = Integer.parseInt(ApplicationProperties.getInstance().getProperty("PAGESIZE"));
         databaseConfig = DatabaseConfig.getInstance();
       } catch(Exception e) {
         e.printStackTrace();

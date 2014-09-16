@@ -48,6 +48,9 @@ public class ApplicationProperties extends Properties {
     /** The Constant SYSTEM_ENVIRONMENT_RUNLEVEL. */
     public static final String SYSTEM_ENVIRONMENT_RUNLEVEL = "com.elsevier.env";
 
+    /** The Constant RELEASE_VERSION. */
+    public static final String RELEASE_VERSION = "release.version";
+
     /** The Constant ROOT_LOG_LEVEL. */
     public static final String ROOT_LOG_LEVEL = "root.log.level";
 
@@ -232,9 +235,9 @@ public class ApplicationProperties extends Properties {
     private static ApplicationProperties instance;
 
     /**
-     * Instantiates a new runtime properties.
+     * Private constructor
      */
-    protected ApplicationProperties() {
+    private ApplicationProperties() {
     }
 
     /**

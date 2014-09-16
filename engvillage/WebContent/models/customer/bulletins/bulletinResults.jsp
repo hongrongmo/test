@@ -1,3 +1,4 @@
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java" %>
 <%@ page session="false"%>
 <%@ page import=" java.util.*"%>
@@ -8,19 +9,18 @@
 <%@ page import="org.ei.logging.*"%>
 <%@ page import="org.ei.domain.personalization.*" %>
 <%@ page import="org.ei.config.*"%>
-<%@ page import="org.ei.bulletins.*"%>
 <%@ page import="java.net.*"%>
 <%@ page errorPage="/error/errorPage.jsp"%>
 <%!
 
 
-    RuntimeProperties eiProps = null;
+    ApplicationProperties eiProps = null;
 
   	public void jspInit()
   	{
     	try
     	{
-      		eiProps = RuntimeProperties.getInstance();
+      		eiProps = ApplicationProperties.getInstance();
 
     	}
     	catch(Exception e)
@@ -36,14 +36,11 @@
     UserSession ussession=(UserSession)client.getUserSession();
     ClientCustomizer clientCustomizer=new ClientCustomizer(ussession);
     boolean isPersonalizationPresent=clientCustomizer.checkPersonalization();
-    SessionID sessionId = ussession.getSessionID();
-    String sesID = sessionId.toString();
+    String sesID = ussession.getSessionid();
 
-    IEVWebUser user = ussession.getUser();
     String cartridges[] = ussession.getCartridge();
     String strGlobalLinksXML = GlobalLinks.toXML(ussession.getCartridge());
     //String appID = ussession.getProperty(UserSession.APPLICATION_KEY);
-    SessionID sessionIdObj = ussession.getSessionID();
 
     boolean showLitPdf = false;
     boolean showPatPdf = false;

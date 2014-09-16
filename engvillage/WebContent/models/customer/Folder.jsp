@@ -5,7 +5,7 @@
  * @param java.lang.String.docids
  * @param java.lang.String.databaseid
 -->
-<%@page import="org.engvillage.config.RuntimeProperties"%>
+<%@page import="org.ei.config.ApplicationProperties"%>
 <%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
@@ -102,7 +102,7 @@
 		count = request.getParameter("count");
 	}
 
-	RuntimeProperties eiProps = RuntimeProperties.getInstance();
+	ApplicationProperties eiProps = ApplicationProperties.getInstance();
 	int maxFolderSize=0;
 	maxFolderSize = Integer.parseInt(eiProps.getProperty("MAXFOLDERSIZE"));
 

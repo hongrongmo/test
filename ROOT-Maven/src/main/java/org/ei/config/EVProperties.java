@@ -41,9 +41,6 @@ import org.ei.thesaurus.ThesaurusSearchControl;
 public final class EVProperties {
     private static Logger log4j = Logger.getLogger(EVProperties.class);
 
-    /** The Constant RELEASE_VERSION. */
-    public static final String RELEASE_VERSION = "release.version";
-
     /** The Constant APP_NAME. */
     public static final String APP_NAME = "app.name";
 
@@ -417,7 +414,7 @@ public final class EVProperties {
     public static synchronized EVProperties getInstance(String propsFile) throws IOException {
         if (instance == null) {
             instance = new EVProperties();
-            instance.applicationProperties = new ApplicationProperties();
+            instance.applicationProperties = ApplicationProperties.getInstance();
             instance.applicationProperties.setProperty(ApplicationProperties.SYSTEM_ENVIRONMENT_RUNLEVEL, System.getProperty(ApplicationProperties.SYSTEM_ENVIRONMENT_RUNLEVEL));
             instance.applicationProperties.setRunlevel(System.getProperty(ApplicationProperties.SYSTEM_ENVIRONMENT_RUNLEVEL));
 
@@ -499,7 +496,7 @@ public final class EVProperties {
             // Try to load release version number from properties
             //
             try {
-                String rv = applicationProperties.getProperty(RELEASE_VERSION);
+                String rv = applicationProperties.getProperty(ApplicationProperties.RELEASE_VERSION);
                 if (GenericValidator.isBlankOrNull(rv)) {
                     log4j.warn("***************  RELEASE VERSION NOT FOUND!! ******************");
                 }

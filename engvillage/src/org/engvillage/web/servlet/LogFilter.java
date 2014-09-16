@@ -20,7 +20,7 @@ import javax.servlet.http.HttpSession;
 import org.apache.commons.lang.time.StopWatch;
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
-import org.engvillage.config.RuntimeProperties;
+import org.ei.config.ApplicationProperties;
 
 public class LogFilter implements Filter {
 
@@ -37,7 +37,7 @@ public class LogFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 
-        String printresponse = RuntimeProperties.getInstance().getProperty("engvillage.print.response");
+        String printresponse = ApplicationProperties.getInstance().getProperty("engvillage.print.response");
         String sessionid = null;
         String uri = "";
 

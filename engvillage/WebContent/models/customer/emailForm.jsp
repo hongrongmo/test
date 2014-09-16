@@ -1,7 +1,7 @@
 <!-- This file creates the xml for result coming from serach result page or from
      selected set page.
 -->
-<%@page import="org.engvillage.config.RuntimeProperties"%>
+<%@page import="org.ei.config.ApplicationProperties"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
 
@@ -92,7 +92,7 @@
     }
 
     String pageSize=null;
-    RuntimeProperties runtimeProps= RuntimeProperties.getInstance();
+    ApplicationProperties runtimeProps= ApplicationProperties.getInstance();
     pageSize = runtimeProps.getProperty("BASKETPAGESIZE");
     docBasketPageSize=Integer.parseInt(pageSize.trim());
 

@@ -1,4 +1,4 @@
-<%@page import="org.engvillage.config.RuntimeProperties"%>
+<%@page import="org.ei.config.ApplicationProperties"%>
 <%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java"%>
 <%@ page session="false"%>
@@ -81,7 +81,7 @@
 	try {
         //FileWriter out1 = new FileWriter("c:/baja/Referener.xml");
         // Get the value of the number of documents to be displayed in a search results page form Runtime.properties file
-        RuntimeProperties runtimeProps = RuntimeProperties.getInstance();
+        ApplicationProperties runtimeProps = ApplicationProperties.getInstance();
         pageSize = Integer.parseInt(runtimeProps.getProperty("PAGESIZE"));
         String endYear = runtimeProps.getProperty("SYSTEM_ENDYEAR");
 

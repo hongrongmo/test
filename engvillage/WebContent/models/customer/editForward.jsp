@@ -1,4 +1,4 @@
-<%@page import="org.engvillage.config.RuntimeProperties"%>
+<%@page import="org.ei.config.ApplicationProperties"%>
 <%@ page language="java" %><%@ page session="false" %><%@ page import="java.util.*"%><%@ page import="java.net.URLEncoder"%><%@ page import="org.ei.domain.*"%><%@ page import="org.engvillage.biz.controller.ControllerClient"%><%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%><%@ page import="org.ei.config.*"%><%@ page import="org.ei.query.base.*"%><%@ page import="org.ei.domain.Searches"%><%@ page import="org.ei.tags.*"%><%@ page import="org.ei.domain.personalization.GlobalLinks"%><%@ page import="org.ei.domain.personalization.SavedSearches"%><%@ page  errorPage="/error/errorPage.jsp"%><%
 	ControllerClient client = null;
@@ -12,7 +12,7 @@
     {
         try
         {
-            RuntimeProperties runtimeProps = RuntimeProperties.getInstance();
+            ApplicationProperties runtimeProps = ApplicationProperties.getInstance();
             pagesize = Integer.parseInt(runtimeProps.getProperty("PAGESIZE"));
             dedupSetSize = Integer.parseInt(runtimeProps.getProperty("DEDUPSETSIZE"));
 

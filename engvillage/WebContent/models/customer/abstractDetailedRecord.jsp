@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <%@page import="org.engvillage.biz.controller.UserSession"%>
 <%@page import="org.engvillage.biz.controller.ControllerClient"%>
-<%@page import="org.engvillage.config.RuntimeProperties"%>
 <%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page contentType="application/xml; charset=UTF-8"%>
 <%@page import="org.ei.exception.EVBaseException"%>
@@ -82,7 +81,7 @@
     {
         try
         {
-            RuntimeProperties runtimeProps = RuntimeProperties.getInstance();
+            ApplicationProperties runtimeProps = ApplicationProperties.getInstance();
             // Get the value of the number of documents to be displayed in a search results page form Runtime.properties file
             pagesize = Integer.parseInt(runtimeProps.getProperty("PAGESIZE"));
 
@@ -96,7 +95,7 @@
     }
 %>
 <%
-    RuntimeProperties runtimeProps = RuntimeProperties.getInstance();
+    ApplicationProperties runtimeProps = ApplicationProperties.getInstance();
     ControllerClient client =  null;
     try
     {

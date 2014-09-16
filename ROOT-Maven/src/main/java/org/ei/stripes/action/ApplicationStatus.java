@@ -186,7 +186,7 @@ public class ApplicationStatus extends EVActionBean {
         webappproperties.add(new ApplicationStatusVO.NameValuePair("Used memory", Long.toString((rt.totalMemory() - rt.freeMemory()) / 1024 / 1024) + " MB"));
         webappproperties.add(new ApplicationStatusVO.NameValuePair("Start time", formatter.format(starttime)));
         webappproperties.add(new ApplicationStatusVO.NameValuePair("Up time", getDurationBreakdown(uptime)));
-        webappproperties.add(new ApplicationStatusVO.NameValuePair("Release Version", EVProperties.getProperty(EVProperties.RELEASE_VERSION)));
+        webappproperties.add(new ApplicationStatusVO.NameValuePair("Release Version", EVProperties.getProperty(ApplicationProperties.RELEASE_VERSION)));
 
         boolean up = false;
         // Attempt to get search database connection

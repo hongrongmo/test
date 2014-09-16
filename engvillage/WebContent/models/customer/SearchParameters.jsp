@@ -3,7 +3,7 @@
     @param java.lang.String database
     @param java.lang.String CID
 --%>
-<%@page import="org.engvillage.config.RuntimeProperties"%>
+<%@page import="org.ei.config.ApplicationProperties"%>
 <%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page session="false"%>
 <%@ page contentType="text/xml"%>
@@ -60,12 +60,12 @@
 %>
 <%!
     // jspInit() method
-    RuntimeProperties eiProps=null;
+    ApplicationProperties eiProps=null;
     public void jspInit()
     {
         try
         {
-             eiProps = RuntimeProperties.getInstance();
+             eiProps = ApplicationProperties.getInstance();
         }
         catch(Exception e)
         {

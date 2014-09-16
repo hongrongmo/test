@@ -1,4 +1,4 @@
-<%@page import="org.engvillage.config.RuntimeProperties"%>
+<%@page import="org.ei.config.ApplicationProperties"%>
 <%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@page import="org.ei.exception.SearchException"%>
 <%@page import="org.ei.exception.InfrastructureException"%>
@@ -117,7 +117,7 @@
 
 	public void jspInit() {
 		try {
-			RuntimeProperties eiProps = RuntimeProperties.getInstance();
+			ApplicationProperties eiProps = ApplicationProperties.getInstance();
 			pageSize = eiProps.getProperty("DISPLAYPAGESIZE");
 			databaseConfig = DatabaseConfig.getInstance();
 			dedupSetSize = eiProps.getProperty("DEDUPSETSIZE");

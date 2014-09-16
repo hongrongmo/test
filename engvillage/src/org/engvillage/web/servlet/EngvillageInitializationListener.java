@@ -3,6 +3,7 @@ package org.engvillage.web.servlet;
 import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -15,13 +16,14 @@ import javax.servlet.ServletContextListener;
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.ei.books.LemQueryWriter;
 import org.ei.config.ApplicationProperties;
-import org.ei.domain.ClassNodeManager;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.DatabaseConfigException;
 import org.ei.domain.DriverConfig;
+import org.ei.domain.FastSearchControl;
 import org.ei.exception.ServiceException;
-import org.engvillage.config.RuntimeProperties;
+import org.ei.thesaurus.ThesaurusSearchControl;
 import org.engvillage.service.amazon.dynamodb.RuntimePropsDynamoDBServiceImpl;
 
 
@@ -64,6 +66,10 @@ public class EngvillageInitializationListener implements ServletContextListener 
             log4j.info("Init log4j...");
 			initLog4j();
 
+			// Initialize application
+			log4j.info("Init application");
+			initApplication();
+
 		} catch (Exception e) {
 		    log4j.error("Unable to initialize application items: ", e);
 		    return;
@@ -95,8 +101,60 @@ public class EngvillageInitializationListener implements ServletContextListener 
 	 * @throws IOException
 	 */
 	private void populateApplicationProperties() throws IOException {
+	    refreshProperties();
 		startApplicationPropertiesJob();
 	}
+
+    /**
+     * One-time initialization
+     */
+    public void initApplication() {
+            try {
+                ApplicationProperties applicationProperties = ApplicationProperties.getInstance();
+
+                //
+                // Init the DatabaseConfig
+                //
+                DatabaseConfig.getInstance(DriverConfig.getDriverTable());
+
+                //
+                // Init some static classes from property values
+                //
+                FastSearchControl.BASE_URL = applicationProperties.getProperty(ApplicationProperties.FAST_BASE_URL);
+                LemQueryWriter.BASE_URL = applicationProperties.getProperty(ApplicationProperties.FAST_LEM_BASE_URL);
+                ThesaurusSearchControl.BASE_URL = applicationProperties.getProperty(ApplicationProperties.THES_BASE_URL);
+
+                //
+                // Print for debug
+                //
+                if (log4j.isDebugEnabled()) {
+                    log4j.debug("*************** Runtime properties: ");
+                    for (Enumeration<?> e = applicationProperties.propertyNames(); e.hasMoreElements();) {
+                        String key = (String) e.nextElement();
+                        String val = applicationProperties.getProperty(key);
+                        log4j.debug("    " + key + "=" + val);
+                    }
+                }
+
+                //
+                // Try to load release version number from properties
+                //
+                try {
+                    String rv = applicationProperties.getProperty(ApplicationProperties.RELEASE_VERSION);
+                    if (GenericValidator.isBlankOrNull(rv)) {
+                        log4j.warn("***************  RELEASE VERSION NOT FOUND!! ******************");
+                    }
+                } catch (Exception e) {
+                    log4j.warn("***************  UNABLE TO RETRIEVE RELEASE VERSION!! ******************", e);
+                }
+
+            } catch (DatabaseConfigException e) {
+                throw new RuntimeException("Unable to configure DatabaseConfig object!",e);
+            }
+
+
+    }
+
 
 	/**
 	 * Use runtime properties to override initial log4j settings
@@ -148,10 +206,11 @@ public class EngvillageInitializationListener implements ServletContextListener 
      * @param runtimeProperties the runtime properties
      * @throws IOException Signals that an I/O exception has occurred.
      */
-    public static void  refreshProperties(ApplicationProperties applicationproperties) throws IOException {
+    public static void  refreshProperties() throws IOException {
         RuntimePropsDynamoDBServiceImpl amazonDynamoDBService = new RuntimePropsDynamoDBServiceImpl();
         InputStream is = null;
         Map<String, String> properties = new HashMap<String, String>();
+        ApplicationProperties applicationproperties = ApplicationProperties.getInstance();
         String runlevel = applicationproperties.getRunlevel();
         try {
             amazonDynamoDBService.setRunLevel(runlevel);
@@ -161,7 +220,7 @@ public class EngvillageInitializationListener implements ServletContextListener 
                 String key = it.next();
                 applicationproperties.setProperty(key, properties.get(key));
             }
-            is = RuntimeProperties.class.getResourceAsStream("/override.properties");
+            is = ApplicationProperties.class.getResourceAsStream("/override.properties");
             if (is != null) {
                 applicationproperties.load(new BufferedInputStream(is));
             }else{
@@ -198,7 +257,7 @@ public class EngvillageInitializationListener implements ServletContextListener 
              public void run() {
                 try{
                     ApplicationProperties applicationproperties = ApplicationProperties.getInstance();
-                    refreshProperties(applicationproperties);
+                    refreshProperties();
                 }catch(Exception e){
                     log4j.error("Application properties refresh job interrupted due to :!"+e.getMessage());
                 }

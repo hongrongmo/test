@@ -1,4 +1,4 @@
-<%@page import="org.engvillage.config.RuntimeProperties"%>
+<%@page import="org.ei.config.ApplicationProperties"%>
 <%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
@@ -66,7 +66,7 @@
     public void jspInit()
     {
 
-        RuntimeProperties eiProps = RuntimeProperties.getInstance();
+        ApplicationProperties eiProps = ApplicationProperties.getInstance();
         pageSize = eiProps.getProperty("PAGESIZE");
         pagesize=Integer.parseInt(pageSize.trim());
 

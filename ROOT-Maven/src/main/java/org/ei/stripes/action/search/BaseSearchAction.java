@@ -32,7 +32,7 @@ public abstract class BaseSearchAction extends EVActionBean implements ISearchFo
     protected String searchtype;
 
     // "All" database checkbox
-    @Validate(trim=true,mask="true|false")
+    @Validate(mask = "\\d*")
 	protected String alldb;
 
     //This variable for  last four updates only
