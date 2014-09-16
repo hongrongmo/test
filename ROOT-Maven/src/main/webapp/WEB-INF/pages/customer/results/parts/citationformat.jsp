@@ -64,7 +64,7 @@
 			
 				<c:if test="${'0' ne result.bpp}"><div class="clear"></div></c:if>
             		<p>
-					<b>Database:</b> ${result.doc.dbname} <c:if test="${not empty result.collection}"><b>Collection:</b> ${result.collection}</c:if>
+					<b>Database:</b> <span class="dbnameidentifier">${result.doc.dbname}</span> <c:if test="${not empty result.collection}"><b>Collection:</b> ${result.collection}</c:if>
 					</p>
                    <!-- missing FTTJ / STT -->
 					<%-- 

@@ -19,7 +19,24 @@ $(document).ready(function(){
 						});
 						$(this).tooltipster('show',null);
 						return false;
-					}else{basketDownloadSubmit();}
+					}else if(checkReferexOnlyFolder()){
+						$(this).tooltipster({
+						    content: 'Referex database results are not supported in the Excel&reg; download format.',
+						    autoClose:true,
+						    interactive:false,
+						    contentAsHTML:true,
+						    position:'bottom',
+						    fixedLocation:true,
+						    positionTracker:false,
+						    delay:0,
+						    speed:0,
+						    functionAfter: function(origin){$(origin).tooltipster('destroy');}
+						});
+						$(this).tooltipster('show',null);
+						return false;
+					}else{
+						basketDownloadSubmit();
+					}
 				});
 	}else{
 		$("#oneclickDL").click( function(){return recordPageDownloadSubmit($(this).attr('href'));});
@@ -27,6 +44,20 @@ $(document).ready(function(){
 
 	$("body").append('<form name="oneClickDLForm" id="oneClickDLForm" method="post" action="/delivery/download/submit.url"></form>');
 });
+
+function checkReferexOnlyFolder(){
+	
+	var downloadformat = dlOptions.format;
+	if(downloadformat === "excel" && $('title:contains(My Folders:)').length > 0 ){
+		
+		var dbarray = $(".dbnameidentifier:not(:contains(Referex))");
+		if(typeof(dbarray) != 'undefined' && dbarray != null && dbarray.length == 0 ){
+			return true;
+		}
+	}
+	return false;
+}
+
 function checkForOneClick(){
 
 	var authStatus = $.trim($('#authStatus').val());

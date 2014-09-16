@@ -215,7 +215,7 @@
 					<p class="treatments"><b>${result.labels['TRS']}: </b><c:forEach var="treatment" items="${result.abstractrecord.treatments}" varStatus="status"><c:if test="${status.count > 1}">&nbsp;-&nbsp;</c:if>${treatment}</c:forEach></p>
 	</c:if>
 				
-				<p class="database"><b>Database: </b>${result.doc.dbname}</p>
+				<p class="database"><b>Database: </b><span class="dbnameidentifier">${result.doc.dbname}</span></p>
 				<c:if test="${result.doc.dbmask == 2097152}">
 					<p>${result.cpr}</p>
 				</c:if>
