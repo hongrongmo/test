@@ -707,11 +707,10 @@ $(document).ready(function() {
 			    if(qArray.indexOf($.trim($(this).text().toLowerCase()))>0){
 			        //console.log($(this).text());
 			    	if(highlightV1){
+			    		//check for cookie, if no cookie we need to figure out what color is being used.
 			    		if($.cookie('ev_highlight')){
 
 							var hlOptions = JSON.parse($.cookie("ev_highlight"));
-
-
 							if(!hlOptions.bg_highlight){
 								$(this).addClass("hit");
 								$(this).removeClass("bghit");
@@ -719,7 +718,6 @@ $(document).ready(function() {
 							}else{
 					    		$(this).addClass("bghit");
 					    		$(this).removeClass("hit");
-
 							}
 			    		}else{
 			    			if($(".hit").length > 0){
