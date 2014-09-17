@@ -204,9 +204,6 @@ public class PAGDocBuilder implements DocumentBuilder {
      * @exception Exception
      */
     private List<EIDoc> loadDocument(String docformat, List<DocID> listOfDocIDs) throws DocumentBuilderException {
-    	if (fetcher == null) {
-    		throw new DocumentBuilderException(SystemErrorCodes.UNKNOWN_INFRASTRUCTURE_ERROR, "IBookPartFetcher object must be set!");
-    	}
         Perl5Util perl = new Perl5Util();
         Map<String, DocID> oidTable = getDocIDTable(listOfDocIDs);
 
