@@ -24,18 +24,17 @@ import org.ei.ane.entitlements.UserEntitlement.ENTITLEMENT_TYPE;
 import org.ei.ane.textzones.TextZonesConstants;
 import org.ei.ane.textzones.TextZonesService;
 import org.ei.ane.textzones.TextZonesServiceImpl;
+import org.ei.biz.personalization.EVWebUser;
+import org.ei.biz.personalization.IEVWebUser;
+import org.ei.biz.personalization.PersonalAccount;
+import org.ei.biz.personalization.UserProfile;
 import org.ei.books.collections.ReferexCollection;
 import org.ei.bulletins.BulletinGUI;
 import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
 import org.ei.controller.CookieHandler;
 import org.ei.controller.IPBlocker;
 import org.ei.controller.IPBlocker.COUNTER;
 import org.ei.domain.InvalidArgumentException;
-import org.ei.domain.personalization.EVWebUser;
-import org.ei.domain.personalization.IEVWebUser;
-import org.ei.domain.personalization.PersonalAccount;
-import org.ei.domain.personalization.UserProfile;
 import org.ei.exception.InfrastructureException;
 import org.ei.exception.ServiceException;
 import org.ei.exception.SessionException;
@@ -75,7 +74,7 @@ public class SessionManager {
      */
     public static void init() throws NumberFormatException {
         long sessiontimeout = 0;
-        sessiontimeout = Long.parseLong(EVProperties.getRuntimeProperty(RuntimeProperties.SESSION_TIMEOUT));
+        sessiontimeout = Long.parseLong(EVProperties.getProperty(EVProperties.SESSION_TIMEOUT));
 
         sessionBroker = SessionBroker.getInstance(sessiontimeout);
     }
@@ -559,7 +558,7 @@ public class SessionManager {
 	            writeSessionCookie(sessionidObj);
 
 	            if (session.isNew()) {
-	                log4j.info("New session created!  Incrementing session counter...");
+	            	log4j.info("New session created!  Incrementing session counter...");
 	                IPBlocker.getInstance().increment(HttpRequestUtil.getIP(request), IPBlocker.COUNTER.SESSION);
 	            }
 
@@ -728,5 +727,4 @@ public class SessionManager {
         }
 
     }
-
 }

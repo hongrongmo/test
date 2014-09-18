@@ -5,6 +5,8 @@
  * @param java.lang.String.cid
  * @param java.lang.String.databse
 --%>
+<%@page import="org.engvillage.biz.controller.UserSession"%>
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
 
@@ -15,8 +17,7 @@
 <%@ page import ="org.ei.domain.personalization.*"%>
 <%@ page import ="org.ei.config.*"%>
 <%@ page import ="org.ei.domain.*"%>
-<%@ page import ="org.ei.controller.ControllerClient"%>
-<%@ page import ="org.ei.session.*" %>
+<%@ page import ="org.engvillage.biz.controller.ControllerClient"%>
 <%@ page errorPage="/error/errorPage.jsp" %>
 <%--setting page buffer size to 20kb--%>
 <%@ page buffer="20kb"%>
@@ -38,7 +39,6 @@
 	String documentFormat=null;
 
 	//the sessionid
-	SessionID sessionIdObj = null;
 	String sessionid=null;
 	// Object reference to FolderPage object
 	FolderPage folderPage = null;
@@ -73,14 +73,12 @@
 
 	// Create a session object using the Controllerclient object
 	client = new ControllerClient(request,response);
-	UserSession ussession=(UserSession)client.getUserSession();
+	UserSession ussession = client.getUserSession();
 
-	sessionid = ussession.getID();
-	sessionIdObj = ussession.getSessionID();
-	 IEVWebUser user = ussession.getUser();
+	sessionid = ussession.getSessionid();
 
-	String customerId=user.getCustomerID().trim();
-	String contractId=user.getContractID().trim();
+	String customerId=ussession.getCustomerid().trim();
+	String contractId=ussession.getContractid().trim();
 
 	//localHolding=new LocalHolding(customerId,contractId);
 
@@ -98,7 +96,7 @@
 	String userId = null;
 	String sUserId=null;
 
-	sUserId=ussession.getUserIDFromSession();
+	sUserId=ussession.getUserid();
 	if((sUserId != null) && (sUserId.trim().length() != 0)){
 			personalization=true;
 	}
@@ -178,8 +176,7 @@
 	if(folderSize > 0)
 	{
 		// Create the basketPage object with the documents
-		folderPage = (FolderPage) savedRecords.viewRecordsInFolder(folder,
-									   documentFormat);
+		folderPage = (FolderPage) savedRecords.viewRecordsInFolder(folder.getFolderID(),documentFormat);
 	}
 
 

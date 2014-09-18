@@ -9,8 +9,8 @@ import java.util.Date;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
 import org.ei.exception.ServiceException;
 import org.ei.exception.SystemErrorCodes;
 import org.ei.service.amazon.AmazonServiceHelper;
@@ -59,7 +59,7 @@ public class AmazonS3ServiceImpl implements AmazonS3Service {
 		try {
 			AmazonS3 amazonS3Service = AmazonServiceHelper.getInstance().getAmazonS3Service();
 			bucketName = getS3CustomerImageBucketName();
-			prefix = getPropertyForEVProjectLayer(RuntimeProperties.CUSTOMER_IMAGES_PREFIX);
+			prefix = getPropertyForEVProjectLayer(ApplicationProperties.CUSTOMER_IMAGES_PREFIX);
 			ListObjectsRequest listObjectsRequest = new ListObjectsRequest().withBucketName(bucketName).withPrefix(prefix);
 			ObjectListing objectListing  = amazonS3Service.listObjects(listObjectsRequest);
 			for (S3ObjectSummary objectSummary : objectListing.getObjectSummaries()) {
@@ -156,43 +156,43 @@ public class AmazonS3ServiceImpl implements AmazonS3Service {
 	}
 
 	private String getS3BulletinBucketName() throws IOException {
-		if (null == EVProperties.getInstance() || null == EVProperties.getRuntimeProperties()) {
-			return getPropertyForEVProjectLayer(RuntimeProperties.S3_BULLETIN_BUCKET_NAME);
+		if (null == EVProperties.getInstance() || null == EVProperties.getApplicationProperties()) {
+			return getPropertyForEVProjectLayer(EVProperties.S3_BULLETIN_BUCKET_NAME);
 		}
-		return EVProperties.getRuntimeProperty(RuntimeProperties.S3_BULLETIN_BUCKET_NAME);
+		return EVProperties.getProperty(EVProperties.S3_BULLETIN_BUCKET_NAME);
 	}
 
 	private String getS3CustomerImageBucketName() throws IOException {
-		if (null == EVProperties.getInstance() || null == EVProperties.getRuntimeProperties()) {
-			return getPropertyForEVProjectLayer(RuntimeProperties.S3_CUSTOMERIMAGE_BUCKET_NAME);
+		if (null == EVProperties.getInstance() || null == EVProperties.getApplicationProperties()) {
+			return getPropertyForEVProjectLayer(EVProperties.S3_CUSTOMERIMAGE_BUCKET_NAME);
 		}
-		return EVProperties.getRuntimeProperty(RuntimeProperties.S3_CUSTOMERIMAGE_BUCKET_NAME);
+		return EVProperties.getProperty(EVProperties.S3_CUSTOMERIMAGE_BUCKET_NAME);
 	}
 
 	private String getS3DocViewBucketName() throws IOException {
-		if (null == EVProperties.getInstance() || null == EVProperties.getRuntimeProperties()) {
-			return getPropertyForEVProjectLayer(RuntimeProperties.S3_DOCVIEW_BUCKET_NAME);
+		if (null == EVProperties.getInstance() || null == EVProperties.getApplicationProperties()) {
+			return getPropertyForEVProjectLayer(EVProperties.S3_DOCVIEW_BUCKET_NAME);
 		}
-		return EVProperties.getRuntimeProperty(RuntimeProperties.S3_DOCVIEW_BUCKET_NAME);
+		return EVProperties.getProperty(EVProperties.S3_DOCVIEW_BUCKET_NAME);
 	}
 
 
 	private String getS3ReferexBucketName() throws IOException {
-		if (null == EVProperties.getInstance() || null == EVProperties.getRuntimeProperties()) {
-			return getPropertyForEVProjectLayer(RuntimeProperties.S3_REFEREX_BUCKET_NAME);
+		if (null == EVProperties.getInstance() || null == EVProperties.getApplicationProperties()) {
+			return getPropertyForEVProjectLayer(EVProperties.S3_REFEREX_BUCKET_NAME);
 		}
-		return EVProperties.getRuntimeProperty(RuntimeProperties.S3_REFEREX_BUCKET_NAME);
+		return EVProperties.getProperty(EVProperties.S3_REFEREX_BUCKET_NAME);
 	}
 	private String getS3ReferexKey() throws IOException {
-		if (null == EVProperties.getInstance() || null == EVProperties.getRuntimeProperties()) {
-			return getPropertyForEVProjectLayer(RuntimeProperties.S3_REFEREX_BUCKET_KEY);
+		if (null == EVProperties.getInstance() || null == EVProperties.getApplicationProperties()) {
+			return getPropertyForEVProjectLayer(EVProperties.S3_REFEREX_BUCKET_KEY);
 		}
-		return EVProperties.getRuntimeProperty(RuntimeProperties.S3_REFEREX_BUCKET_KEY);
+		return EVProperties.getProperty(EVProperties.S3_REFEREX_BUCKET_KEY);
 	}
 
 	private String getPropertyForEVProjectLayer(String key) throws IOException {
 
-		return RuntimeProperties.getInstance().getProperty(key);
+		return EVProperties.getInstance().getProperty(key);
 	}
 
 }

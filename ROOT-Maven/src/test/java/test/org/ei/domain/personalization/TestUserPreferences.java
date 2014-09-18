@@ -5,9 +5,9 @@ package test.org.ei.domain.personalization;
 
 import junit.framework.TestCase;
 
+import org.ei.biz.personalization.UserPrefs;
+import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
-import org.ei.domain.personalization.UserPrefs;
 import org.ei.stripes.action.delivery.AbstractDeliveryAction;
 import org.junit.Assert;
 import org.junit.Before;
@@ -34,8 +34,8 @@ public class TestUserPreferences extends TestCase {
         EVProperties.getInstance();
         EVProperties.setStartup(System.currentTimeMillis());
 
-        RuntimeProperties rtp = RuntimeProperties.getInstance();
-        EVProperties.setRuntimeProperties(rtp);
+        ApplicationProperties rtp = EVProperties.getApplicationProperties();
+        EVProperties.setApplicationProperties(rtp);
         setup = true;
     }
 

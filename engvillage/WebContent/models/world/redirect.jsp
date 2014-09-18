@@ -1,6 +1,6 @@
 <%@ page language="java" %>
 <%@ page session="false"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
 <%@ page errorPage="/error/errorPage.jsp"%>
 
 <%

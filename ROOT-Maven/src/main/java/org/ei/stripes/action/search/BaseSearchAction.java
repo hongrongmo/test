@@ -32,7 +32,7 @@ public abstract class BaseSearchAction extends EVActionBean implements ISearchFo
     protected String searchtype;
 
     // "All" database checkbox
-    @Validate(trim=true,mask="true|false")
+    @Validate(mask = "\\d*")
 	protected String alldb;
 
     //This variable for  last four updates only
@@ -462,7 +462,7 @@ public abstract class BaseSearchAction extends EVActionBean implements ISearchFo
 		this.limitError = limitError;
 	}
 	public String getSavedSeachesAndAlertsLimit() {
-		 return EVProperties.getRuntimeProperty("SAVED_SERCHES_ALERTS_LIMIT");
+		 return EVProperties.getProperty("SAVED_SERCHES_ALERTS_LIMIT");
 	}
 
 	public boolean isIsnavchrt() {

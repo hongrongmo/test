@@ -18,7 +18,6 @@ import org.ei.controller.content.ContentDescriptor;
 import org.ei.domain.DocumentBasket;
 import org.ei.exception.ServiceException;
 import org.ei.exception.SystemErrorCodes;
-import org.ei.session.SessionCache;
 import org.ei.session.UserSession;
 
 public class DataResponseCache {
@@ -150,16 +149,10 @@ public class DataResponseCache {
 			}
 
 			if (sessionUpdated) {
-
-				SessionCache sCache = SessionCache.getInstance();
-				nsession.loadFromProperties(sessionProps);
-
-				System.currentTimeMillis();
-				nsession = sCache.updateUserSession(nsession);
-				System.currentTimeMillis();
+				us.loadFromProperties(sessionProps);
 			} else {
-				nsession.setTouched(false);
-				nsession = dataRequest.getUserSession();
+                us = dataRequest.getUserSession();
+				us.setTouched(false);
 			}
 
 			/*

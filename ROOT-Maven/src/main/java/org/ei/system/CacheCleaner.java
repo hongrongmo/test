@@ -15,7 +15,7 @@ import org.ei.domain.Query;
 import org.ei.util.StringUtil;
 
 /**
- * 
+ *
  * Handles EmailAlert related tasks such as
  * <p>
  * a)This object gets distinct userIds and his email address where emailalerts is not null.
@@ -29,12 +29,10 @@ import org.ei.util.StringUtil;
  * <p>
  * d)This DocIds list is send to the EmailAlertResultsManager and then call Email.java to send mail.
  * </p>
- * 
+ *
  */
 
 public class CacheCleaner {
-
-    // private RuntimeProperties eiProps;
 
     private ConnectionBroker m_broker = null;
     private String m_strPoolname = StringUtil.EMPTY_STRING;
@@ -67,8 +65,6 @@ public class CacheCleaner {
 
             m_strPoolname = DatabaseConfig.SESSION_POOL;
 
-            // eiProps = new RuntimeProperties(m_strPropertiesFile);
-            // m_strPoolsFilename = eiProps.getProperty("POOLSFILENAME");
             m_broker = ConnectionBroker.getInstance(m_strPoolsFilename);
 
             mapTimePeriodsInMilliSecs.put(CacheCleaner.TWENTY_MINUTES, new Long(1200000));

@@ -17,8 +17,8 @@ import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.HttpStatus;
 import org.apache.commons.httpclient.MultiThreadedHttpConnectionManager;
 import org.apache.commons.httpclient.methods.GetMethod;
+import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
 import org.ei.logging.LogClient;
 import org.ei.security.utils.SecureID;
 import org.ei.util.GUID;
@@ -38,7 +38,7 @@ public class PatentPDF extends HttpServlet {
         client = new HttpClient(connectionManager);
         client.setConnectionTimeout(3000);
 
-        logServiceURL = "http://" + EVProperties.getRuntimeProperty(RuntimeProperties.LOG_URL) + "/logservice/servlet/LogServer";
+        logServiceURL = "http://" + EVProperties.getProperty(ApplicationProperties.LOG_URL) + "/logservice/servlet/LogServer";
     }
 
     public void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {

@@ -13,7 +13,8 @@ import java.util.Map;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
-import org.ei.config.RuntimeProperties;
+import org.ei.config.ApplicationProperties;
+import org.ei.config.EVProperties;
 
 public class AWSInfo {
     private static Logger log4j = Logger.getLogger(AWSInfo.class);
@@ -40,7 +41,7 @@ public class AWSInfo {
     public AWSInfo(List<String> keys) {
         try {
             awsvals = new HashMap<String, String>();
-            String runlevel = RuntimeProperties.getInstance().getRunlevel();
+            String runlevel = EVProperties.getApplicationProperties().getRunlevel();
             if (GenericValidator.isBlankOrNull(runlevel) || "local".equals(runlevel)) {
                 return;
             }
@@ -65,7 +66,7 @@ public class AWSInfo {
     public static String getAWSMetaData(String dataKey) {
 
         try {
-            String url = RuntimeProperties.getInstance().getAWSMetaDataUrl();
+            String url = EVProperties.getProperty(EVProperties.AWS_METADATA_URL);
             String value = "";
             String inputLine;
 
@@ -84,7 +85,7 @@ public class AWSInfo {
                 }
 
                 in.close();
-            } else if ("local".equals(RuntimeProperties.getInstance().getRunlevel())) {
+            } else if ("local".equals(EVProperties.getApplicationProperties().getRunlevel())) {
                 value = "local";
             }
             return value;

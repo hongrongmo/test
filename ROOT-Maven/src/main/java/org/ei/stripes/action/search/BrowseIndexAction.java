@@ -18,13 +18,13 @@ import net.sourceforge.stripes.validation.Validate;
 
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
+import org.ei.biz.personalization.IEVWebUser;
 import org.ei.controller.logging.LogEntry;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.LookupIndex;
 import org.ei.domain.LookupIndexException;
 import org.ei.domain.LookupIndexes;
 import org.ei.domain.lookup.LookUpParameters;
-import org.ei.domain.personalization.IEVWebUser;
 import org.ei.gui.ListBoxOption;
 import org.ei.session.UserSession;
 import org.ei.stripes.action.EVActionBean;

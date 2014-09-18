@@ -13,12 +13,12 @@ import net.sourceforge.stripes.action.UrlBinding;
 import org.apache.log4j.Logger;
 import org.ei.config.EVProperties;
 import org.ei.config.JSPPathProperties;
+import org.ei.domain.SelectOption;
 import org.ei.exception.EVBaseException;
 import org.ei.exception.InfrastructureException;
 import org.ei.stripes.adapter.GenericAdapter;
 import org.ei.stripes.adapter.IBizBean;
 import org.ei.stripes.adapter.IBizXmlAdapter;
-import org.ei.stripes.view.SelectOption;
 
 @UrlBinding("/search/results/dedupForm.url")
 public class DedupResultsAction extends SearchResultsAction implements IBizBean {

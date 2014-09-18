@@ -43,26 +43,25 @@ import org.apache.commons.httpclient.methods.GetMethod;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
+import org.ei.biz.email.SESEmail;
+import org.ei.biz.email.SESMessage;
+import org.ei.biz.personalization.cars.Account;
 import org.ei.biz.security.IAccessControl;
 import org.ei.biz.security.NoAuthAccessControl;
+import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
 import org.ei.connectionpool.ConnectionBroker;
 import org.ei.controller.CookieHandler;
 import org.ei.controller.IPBlocker;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.FastClient;
-import org.ei.domain.personalization.cars.Account;
 import org.ei.download.util.SaveToGoogleUsage;
-import org.ei.email.SESEmail;
-import org.ei.email.SESMessage;
 import org.ei.service.amazon.s3.AmazonS3Service;
 import org.ei.service.amazon.s3.AmazonS3ServiceImpl;
 import org.ei.session.BaseCookie;
 import org.ei.session.BlockedIPEvent;
 import org.ei.session.BlockedIPEvent.TimePeriod;
 import org.ei.session.BlockedIPStatus;
-import org.ei.session.SessionCache;
 import org.ei.session.UserSession;
 import org.ei.stripes.util.HttpRequestUtil;
 import org.ei.system.ApplicationStatusVO;
@@ -86,8 +85,6 @@ public class ApplicationStatus extends EVActionBean {
 
     private String emailto;
     private String emailfrom = "ei-noreply@elsevier.com";
-
-    private SessionCache sCache;
 
     private String cacheKey;
     private String cacheVal;
@@ -183,13 +180,13 @@ public class ApplicationStatus extends EVActionBean {
         SimpleDateFormat formatter = new SimpleDateFormat("EEE d MMM yy");
 
         Queue<ApplicationStatusVO.NameValuePair> webappproperties = viewbean.getWebappproperties();
-        webappproperties.add(new ApplicationStatusVO.NameValuePair("Environment", EVProperties.getRuntimeProperties().getRunlevel()));
+        webappproperties.add(new ApplicationStatusVO.NameValuePair("Environment", EVProperties.getApplicationProperties().getRunlevel()));
         webappproperties.add(new ApplicationStatusVO.NameValuePair("Total memory", Long.toString(rt.totalMemory() / 1024 / 1024) + " MB"));
         webappproperties.add(new ApplicationStatusVO.NameValuePair("Free memory", Long.toString(rt.freeMemory() / 1024 / 1024) + " MB"));
         webappproperties.add(new ApplicationStatusVO.NameValuePair("Used memory", Long.toString((rt.totalMemory() - rt.freeMemory()) / 1024 / 1024) + " MB"));
         webappproperties.add(new ApplicationStatusVO.NameValuePair("Start time", formatter.format(starttime)));
         webappproperties.add(new ApplicationStatusVO.NameValuePair("Up time", getDurationBreakdown(uptime)));
-        webappproperties.add(new ApplicationStatusVO.NameValuePair("Release Version", EVProperties.getRuntimeProperty(RuntimeProperties.RELEASE_VERSION)));
+        webappproperties.add(new ApplicationStatusVO.NameValuePair("Release Version", EVProperties.getProperty(ApplicationProperties.RELEASE_VERSION)));
 
         boolean up = false;
         // Attempt to get search database connection
@@ -208,7 +205,7 @@ public class ApplicationStatus extends EVActionBean {
             : "<span style='color:red'>Down</span>"));
 
         // Attempt to get Fast connection
-        // up = checkFast(EVProperties.getRuntimeProperties().getFastUrl());
+        // up = checkFast(EVProperties.getApplicationProperties().getFastUrl());
         webappproperties.add(new ApplicationStatusVO.NameValuePair("Fast Connection", up ? "<span style='color:green'>Up</span>"
             : "<span style='color:red'>Down</span>"));
 
@@ -290,7 +287,7 @@ public class ApplicationStatus extends EVActionBean {
     @HandlesEvent("/environment")
     public Resolution environment() {
         try {
-            RuntimeProperties rtp = EVProperties.getRuntimeProperties();
+            ApplicationProperties rtp = EVProperties.getApplicationProperties();
             Object[] keys = rtp.keySet().toArray();
             for (Object key : keys) {
                 this.viewbean.getRuntimeproperties().put((String) key, rtp.getProperty((String) key));
@@ -299,7 +296,7 @@ public class ApplicationStatus extends EVActionBean {
             Arrays.sort(keystrings);
             context.getRequest().setAttribute("sortedkeys", keystrings);
         } catch (Exception e) {
-            log4j.error("Unable to build RuntimeProperties from ControllerConfig (Stripes)", e);
+            log4j.error("Unable to build ApplicationProperties from ControllerConfig (Stripes)", e);
         }
 
         return new ForwardResolution("/WEB-INF/pages/status/environment.jsp");
@@ -308,7 +305,7 @@ public class ApplicationStatus extends EVActionBean {
     @HandlesEvent("/updateprop")
     public Resolution updateProperty() {
         if (StringUtils.isNotBlank(propKey) && StringUtils.isNotBlank(propValue)) {
-            EVProperties.getRuntimeProperties().setProperty(propKey, propValue);
+            EVProperties.getApplicationProperties().setProperty(propKey, propValue);
 
         }
         return environment();
@@ -341,8 +338,8 @@ public class ApplicationStatus extends EVActionBean {
         AmazonS3Service s3Srvc = new AmazonS3ServiceImpl();
         try {
             viewbean.setCustomerImages(s3Srvc.getCustomerImagesList());
-            RuntimeProperties runtimeprops = RuntimeProperties.getInstance();
-            String customerImagePath = runtimeprops.getProperty(RuntimeProperties.CUSTOMER_IMAGES_URL_PATH, "https://s3.amazonaws.com/ev-customer-images/");
+            ApplicationProperties runtimeprops = EVProperties.getApplicationProperties();
+            String customerImagePath = runtimeprops.getProperty(ApplicationProperties.CUSTOMER_IMAGES_URL_PATH, "https://s3.amazonaws.com/ev-customer-images/");
             viewbean.setCustomerImagePath(customerImagePath);
         } catch (Exception e) {
             log4j.error("Unable to retrieve customer images list from cloud", e);

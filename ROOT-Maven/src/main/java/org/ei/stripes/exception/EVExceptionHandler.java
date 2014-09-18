@@ -1,6 +1,5 @@
 package org.ei.stripes.exception;
 
-import java.io.IOException;
 import java.util.Date;
 import java.util.Enumeration;
 import java.util.HashMap;
@@ -17,9 +16,8 @@ import net.sourceforge.stripes.exception.StripesServletException;
 import org.apache.commons.validator.GenericValidator;
 import org.apache.jasper.JasperException;
 import org.apache.log4j.Logger;
+import org.ei.biz.personalization.IEVWebUser;
 import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
-import org.ei.domain.personalization.IEVWebUser;
 import org.ei.exception.EVBaseException;
 import org.ei.service.amazon.AmazonServiceHelper;
 import org.ei.session.AWSInfo;
@@ -81,14 +79,14 @@ public class EVExceptionHandler extends DefaultExceptionHandler {
             this.errorsent = false;
             this.errorcountbyexception.clear();
             try {
-                this.snsalerttopic = RuntimeProperties.getInstance().getProperty(RuntimeProperties.SNS_TOPIC_AWSALERTS);
-                String errorthreshold = RuntimeProperties.getInstance().getProperty(RuntimeProperties.MAX_ERROR_THRESHHOLD);
-                String errorinterval = RuntimeProperties.getInstance().getProperty(RuntimeProperties.MAX_ERROR_INTERVAL);
+                this.snsalerttopic = EVProperties.getProperty(EVProperties.SNS_TOPIC_AWSALERTS);
+                String errorthreshold = EVProperties.getProperty(EVProperties.MAX_ERROR_THRESHHOLD);
+                String errorinterval = EVProperties.getProperty(EVProperties.MAX_ERROR_INTERVAL);
                 if (!GenericValidator.isBlankOrNull(errorthreshold))
                     this.errorthreshold = Integer.parseInt(errorthreshold);
                 if (!GenericValidator.isBlankOrNull(errorinterval))
                     this.errorinterval = Long.parseLong(errorinterval) * 60 * 1000;
-            } catch (IOException e) {
+            } catch (Exception e) {
                 log4j.error("Unable to initialize max error properties");
                 // Defaults
                 this.snsalerttopic = "arn:aws:sns:us-east-1:230521890328:AWSAlerts-Prod";
@@ -207,7 +205,7 @@ public class EVExceptionHandler extends DefaultExceptionHandler {
         } else {
             request.setAttribute("exception", "No default message!");
         }
-        request.setAttribute("googleanalytics", EVProperties.getRuntimeProperty(RuntimeProperties.GOOGLE_ANALYTICS_ACCOUNT));
+        request.setAttribute("googleanalytics", EVProperties.getProperty(EVProperties.GOOGLE_ANALYTICS_ACCOUNT));
     }
 
     /**

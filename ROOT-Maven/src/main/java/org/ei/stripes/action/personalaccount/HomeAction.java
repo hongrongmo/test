@@ -13,11 +13,11 @@ import net.sourceforge.stripes.action.Resolution;
 import net.sourceforge.stripes.action.UrlBinding;
 
 import org.apache.log4j.Logger;
+import org.ei.biz.personalization.IEVWebUser;
 import org.ei.biz.security.IAccessControl;
 import org.ei.biz.security.NoAuthAccessControl;
 import org.ei.controller.CookieHandler;
 import org.ei.controller.Customer;
-import org.ei.domain.personalization.IEVWebUser;
 import org.ei.service.cars.CARSTemplateNames;
 import org.ei.service.cars.Impl.CARSResponse;
 import org.ei.session.UserSession;

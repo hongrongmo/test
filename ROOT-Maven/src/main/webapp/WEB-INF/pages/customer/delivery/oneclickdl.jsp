@@ -126,12 +126,18 @@
     	padding-left:3px;
     	color:#808080;
     }
+
+    #fnpfx{
+    	padding-left: 2px;
+    }
+
 </style>
 </head>
 <body>
 <c:set value="${actionBean.context.userSession.user.userPrefs.dlFormat}" var="dlFormat"></c:set>
 <c:set value="${actionBean.context.userSession.user.userPrefs.dlOutput}" var="dlOutput"></c:set>
 <c:set value="${actionBean.context.userSession.user.userPrefs.dlLocation}" var="dlLocation"></c:set>
+<c:set value="${actionBean.context.userSession.user.userPrefs.dlFileNamePrefix}" var="dlFileNamePrefix"></c:set>
 
 <stripes:form name="download" id="download" method="post" action="/delivery/download/submit.url">
 	<stripes:hidden name="sessionid" id="sessionid"/>
@@ -143,6 +149,7 @@
 	<div id="oneClickContent">
 		<div id="oneClickTitle">Choose your download settings for this session</div>
 		<hr/>
+		<div id="valerrormsgcontainer" style="display:none"><img style="position:relative;top:-3px" src="/static/images/red_warning.gif"/><b>&nbsp;&nbsp;<span id="valerrormsg"></span></b></div>
 		<div id="oneClickMid">
 			<div id="oneClickLeft">
 				<div class="grayText sectionHead">Location:</div>
@@ -150,7 +157,7 @@
 				<li><input type="radio" class="outputLocation" id="outputMyPC"     name="outputLocation" value="mypc" <c:if test="${dlLocation eq 'mypc'}">checked="checked"</c:if>/><label	for="outputMyPC" title="Download the citation section"><img src="/static/images/Download.png" alt="Save to my PC Icon" />My PC</label></li>
 				<li><input type="radio" class="outputLocation" id="outputRefWorks" name="outputLocation" value="refworks"  <c:if test="${dlLocation eq 'refworks'}">checked="checked"</c:if>/><label for="outputRefWorks" title="Download the abstract section"><img src="/static/images/refworks_icon.jpg" alt="Reforks Icon" />RefWorks</label></li>
 				<li><input type="radio" class="outputLocation" id="outputGoogle"   name="outputLocation" value="googledrive"  <c:if test="${dlLocation eq 'googledrive'}">checked="checked"</c:if>/><label for="outputGoogle" title="Download the detailed record"><img src="/static/images/drive_icon.png" alt="Google Drive Icon" />Google Drive</label></li>
-				<li><input type="radio" class="outputLocation" id="rdDropbox"      name="outputLocation" value="dropbox"  <c:if test="${dlLocation eq 'dropbox'}">checked="checked"</c:if>/><label for="outputDropbox" title="Download the detailed record"><img src="/static/images/dropbox_icon.png" alt="Dropbox Icon"/>Dropbox</label></li>
+				<li><input type="radio" class="outputLocation" id="outputDropbox"  name="outputLocation" value="dropbox"  <c:if test="${dlLocation eq 'dropbox'}">checked="checked"</c:if>/><label for="outputDropbox" title="Download the detailed record"><img src="/static/images/dropbox_icon.png" alt="Dropbox Icon"/>Dropbox</label></li>
 				</ul>
 			</div>
 			<div id="oneClickRight">
@@ -174,7 +181,17 @@
 				<li><input type="radio" class="typeEnabled" id="rdCit" name="displayformat" value="citation"  <c:if test="${dlOutput eq 'citation'}">checked="checked"</c:if>/><label	for="rdCit" title="Download the citation section">Citation</label></li>
 				<li><input type="radio" class="typeEnabled" id="rdAbs" name="displayformat" value="abstract"  <c:if test="${dlOutput eq 'abstract'}">checked="checked"</c:if>/><label for="rdAbs" title="Download the abstract section">Abstract</label></li>
 				<li><input type="radio" class="typeEnabled" id="rdDet" name="displayformat" value="detailed"  <c:if test="${dlOutput eq 'detailed'}">checked="checked"</c:if>/><label for="rdDet" title="Download the detailed record">Detailed record</label></li>
+				<li>
+					<hr style="width:100%" />
+					<input type="hidden" id="dlFileNamePrefixOrg" value="${dlFileNamePrefix}"/>
+					<div class="grayText sectionHead" id="fnpfx">File name prefix:</div>
+					<div id="fileNamePrefixContainer" style="width:150px"><input type="text" style="width:150px" value="${dlFileNamePrefix}" name="filenameprefix" id="filenameprefix" maxlength="50" onkeypress="return handleKeyPress(event)"   /></div>
+					<div style="text-align:right;padding-right:10px;width:150px" id="filenamesuffix"><span id="filenameprefixlabel"  style="font-size:10px">&nbsp;&nbsp;_Output_Date/Time.format</span></div>
+				</li>
+
 				</ul>
+
+
 			</div>
 		</div>
 		<hr style="width: 100%;"/>
@@ -186,6 +203,21 @@
 					<input type="button" value="Save" name="Save" id="savePrefsButton" />
 					<a href="#" style="padding-right:7px;" onclick="$('#downloadlink').tooltipster('destroy');">Cancel</a>
 				</div>
+				<c:choose>
+				    <c:when test="${actionBean.context.userSession.user.individuallyAuthenticated}">
+				       <div style="float:right;width:160px;">
+						<div style="display: inline-block;vertical-align:top"><input type="checkbox" id="updateUserSettings" value="true"/></div>
+						<div style="display: inline-block;width:130px" ><label for="updateUserSettings" title="To save this as your preferred settings">Save to My Preferences?</label></div>
+					</div>
+				    </c:when>
+				    <c:otherwise>
+				        <div class="grayText" style="float:right;width:160px;">
+						<div style="display: inline-block;vertical-align:top;display:none"><input type="checkbox"  disabled id="updateUserSettings" /></div>
+						<div style="display: inline-block;" ><label for="updateUserSettings" title="To save this as your preferred settings">Login or Register to save to My Preferences</label></div>
+					</div>
+				    </c:otherwise>
+				</c:choose>
+
 			</div>
 	</div>
 </stripes:form>
@@ -194,20 +226,43 @@
 <script>
 
 $(document).ready(function() {
-
+	<c:if test="${actionBean.context.userSession.user.individuallyAuthenticated eq 'false'}">
+		//read the cookie
+		if($.cookie("ev_oneclickdl") && $.cookie("ev_oneclickdl") != 'null'){
+			var dlOptions = JSON.parse($.cookie("ev_oneclickdl"));
+			$('#oneClickContent input[value="' + dlOptions.location + '"]').prop("checked", true);
+			$('#oneClickContent input[value="'+dlOptions.displaytype+'"]').prop("checked", true);
+			$('#oneClickContent input[value="'+dlOptions.format+'"]').prop("checked", true);
+			$('#filenameprefix,#dlFileNamePrefixOrg').val(dlOptions.filenameprefix);
+		}
+	</c:if>
+	<c:if test="${actionBean.context.userSession.user.individuallyAuthenticated eq 'true'}">
+		$('#updateUserSettings').prop("checked", false);
+		//read the cookie
+		if($.cookie("ev_dldpref") && $.cookie("ev_dldpref") != 'null'){
+			var dlOptions = JSON.parse($.cookie("ev_dldpref"));
+			$('#oneClickContent input[value="' + dlOptions.location + '"]').prop("checked", true);
+			$('#oneClickContent input[value="'+dlOptions.displaytype+'"]').prop("checked", true);
+			$('#oneClickContent input[value="'+dlOptions.format+'"]').prop("checked", true);
+			$('#filenameprefix,#dlFileNamePrefixOrg').val(dlOptions.filenameprefix);
+		}
+	</c:if>
 	$(".outputLocation").click(function (){
 		checkForRefworks(this);
+		updatefilenameprefixlable();
+		checkForRisandBib();
 
 	});
 
-	//read the cookie
-	if($.cookie("ev_oneclickdl")){
-		var dlOptions = JSON.parse($.cookie("ev_oneclickdl"));
-		$('#oneClickContent input[value="' + dlOptions.location + '"]').prop("checked", true);
-		$('#oneClickContent input[value="'+dlOptions.displaytype+'"]').prop("checked", true);
-		$('#oneClickContent input[value="'+dlOptions.format+'"]').prop("checked", true);
-	}
+	$("input[name='downloadformat'],input[name='displayformat']").click(function(){
+		updatefilenameprefixlable();
+	});
+	$("input[name='downloadformat']").click(function(){
+		checkForRisandBib();
+	});
 	checkForRefworks($('input[name="outputLocation"]:checked'));
+	updatefilenameprefixlable();
+	checkForRisandBib();
 
 });
 function checkForRefworks(radio){
@@ -227,11 +282,75 @@ function checkForRefworks(radio){
 		$(".typeEnabled").parent().find("label").addClass("grayText");
 		$("#savePrefsButton").show();
         $("#dropBoxLinkSpan").hide();
+        handleFnPrefix();
+        $("#filenameprefix").prop("disabled", true);
+        $("#filenamesuffix").addClass("grayText");
 	}else{
 		$(".typeEnabled").prop("disabled",false);
 		$(".typeEnabled").parent().find("label").removeClass("grayText");
 		$("#savePrefsButton").show();
         $("#dropBoxLinkSpan").hide();
+        $("#filenameprefix").prop("disabled", false);
+        $("#filenamesuffix").removeClass("grayText");
+    }
+}
+function handleFnPrefix(){
+	var fileNamePrefix = $.trim($('#filenameprefix').val());
+	if(fileNamePrefix == null || fileNamePrefix.length > 50 || fileNamePrefix.length < 3 || !isValidInput(fileNamePrefix)){
+		if(typeof dlOptions === 'undefined' || dlOptions.filenameprefix == null || typeof dlOptions.filenameprefix === 'undefined' || dlOptions.filenameprefix ==''){
+			$('#filenameprefix').val($('#dlFileNamePrefixOrg').val());
+		}else{
+			$('#filenameprefix').val(dlOptions.filenameprefix);
+		}
+	}
+	$("#valerrormsgcontainer").css("display","none");
+
+}
+function updatefilenameprefixlable(){
+	var formatval = $('input[name="downloadformat"]:checked').val();
+	var outputval = $('input[name="displayformat"]:checked').val();
+	if(formatval ==  'ris'){
+		outputval = "RIS";
+	}else if(formatval ==  'bib'){
+		outputval = "BIB";
+	}
+
+	if(outputval == 'default'){
+		outputval = "current_page_view";
+	}
+
+	if(formatval === "ascii"){
+		formatval = "txt";
+	}else if (formatval === "bib"){
+		formatval = "bib";
+	}else if(formatval === "csv"){
+		formatval = "csv";
+	}else if(formatval === "pdf"){
+		formatval = "pdf";
+	}else if(formatval === "rtf"){
+		formatval = "rtf";
+	}else if(formatval === "excel"){
+		formatval = "xlsx";
+	}else if(typeof  formatval === "undefined" || formatval === null || formatval === ""){
+		formatval = "format";
+	}else {
+		formatval = "ris";
+	}
+
+	if(typeof  outputval === "undefined" || outputval === null || outputval === "") {
+		outputval = "Output";
+	}
+	$('#filenameprefixlabel').html('_'+outputval+'_Date/Time.'+formatval);
+}
+function checkForRisandBib(){
+	var formatval = $('input[name="downloadformat"]:checked').val();
+	if(formatval ==  'ris' || formatval ==  'bib'){
+		$("#rdDefault").prop("checked", true);
+		$('input[name="displayformat"]').prop("disabled", true);
+		$('input[name="displayformat"]').parent().find("label").addClass("grayText");
+	}else{
+		$('input[name="displayformat"]').prop("disabled", false);
+		$('input[name="displayformat"]').parent().find("label").removeClass("grayText");
 	}
 }
 </script>
@@ -243,17 +362,23 @@ function checkForRefworks(radio){
 		</c:if>
 		<script language="javascript" type="text/javascript">
 			$("#savePrefsButton").click(function(event) {
+				saveDownloadPrefs(event);
+			});
+
+			function handleKeyPress(event){
+				if (event.keyCode == 13) {
+					saveDownloadPrefs(event);
+					event.preventDefault();
+					return false;
+		        }
+			}
+
+			function saveDownloadPrefs(event){
 
 				var baseaddress = $("input[name='baseaddress']").val();
 				var displaytype = $('input[name="displayformat"]:checked').val();
-				var actionDisplayType = '${actionBean.displayformat}';
 				var downloadformat = $('input[name="downloadformat"]:checked').val();
 				var downloadLocation = $('input[name="outputLocation"]:checked').val();
-				var docidlist = $("#docidlist").val();
-				var handlelist = $("#handlelist").val();
-				var folderid = $("#folderid").val();
-				var milli = (new Date()).getTime();
-
 
 
 				if (downloadformat == undefined || downloadformat == "") {
@@ -262,16 +387,89 @@ function checkForRefworks(radio){
 					return (false);
 				}
 
-				var url = "";
+				var filenameprefix = $.trim($('#filenameprefix').val());
+				if(filenameprefix.length < 3){
+					handlevalidationerror("Prefix cannot be empty and should have minimum of 3 characters");
+					event.preventDefault();
+					return (false);
+				}
+				if(filenameprefix.length > 50){
+					handlevalidationerror("Prefix cannot have more than 50 characters");
+					event.preventDefault();
+					return (false);
+				}
+
+				if(!isValidInput(filenameprefix)){
+					handlevalidationerror("Prefix can have only letters, numbers and underscore character");
+					return false;
+				}
+
+
 				GALIBRARY.createWebEventWithLabel('Output', 'Download', downloadformat);
-				$.cookie('ev_oneclickdl', '{"location":"'+downloadLocation+'","format":"'+downloadformat+'","displaytype":"'+displaytype+'","baseaddress":"'+baseaddress+'"}',{path:'/'});
+				var authStatus = $.trim($('#authStatus').val());
+				if( typeof authStatus != 'undefined' &&  authStatus === 'true'){
+
+					var saveDldUrl = "/customer/userprefs.url?savedlprefs=true";
+					saveDldUrl += "&dlLocation="+downloadLocation;
+					saveDldUrl += "&dlFormat="+downloadformat;
+					saveDldUrl += "&dlOutput="+displaytype;
+					saveDldUrl += "&dlFileNamePrefix="+filenameprefix;
+
+					var isPrefUpdateChosen = $('#updateUserSettings:checked').val();
+
+					if(isPrefUpdateChosen === "true"){
+						$.ajax({
+							url:saveDldUrl,
+							 cache: false
+						}).success(function(data){
+							proceedWithDownload(downloadLocation,downloadformat,displaytype,baseaddress,filenameprefix,true,isPrefUpdateChosen);
+						}).error(function(data){
+							$("#dlprefsSaved,#dlprefsandsettingsSaved,#prefsSaved,#prefsNotSaved").hide();
+							$("#dlprefsandsettingsnotSaved").fadeIn("slow");
+							$('#downloadlink').attr("title", "Click to change one click download preferences.");
+							$('#downloadlink').tooltipster('hide');
+						});
+
+					}else{
+						proceedWithDownload(downloadLocation,downloadformat,displaytype,baseaddress,filenameprefix,true,isPrefUpdateChosen);
+					}
+				}else{
+					proceedWithDownload(downloadLocation,downloadformat,displaytype,baseaddress,filenameprefix,false,null);
+				}
+				event.preventDefault();
+				return false;
+			}
+
+			function proceedWithDownload(downloadLocation,downloadformat,displaytype,baseaddress,filenameprefix,isLoggedInUser,isPrefUpdateChosen){
+				var milli = (new Date()).getTime();
+				var docidlist = $("#docidlist").val();
+				var handlelist = $("#handlelist").val();
+				var folderid = $("#folderid").val();
+				var actionDisplayType = '${actionBean.displayformat}';
+
+				if(isLoggedInUser){
+					$.cookie('ev_dldpref', '{"location":"'+downloadLocation+'","format":"'+downloadformat+'","displaytype":"'+displaytype+'","baseaddress":"'+baseaddress+'","filenameprefix":"'+filenameprefix+'"}',{path:'/'});
+					if(isPrefUpdateChosen === 'true'){
+						$("#dlprefsandsettingsSaved").fadeIn("slow");
+						$("#dlprefsandsettingsnotSaved,#prefsSaved,#dlprefsSaved,#prefsNotSaved").hide();
+
+					}else{
+						$("#dlprefsSaved").fadeIn("slow");
+						$("#dlprefsandsettingsnotSaved,#prefsSaved,#dlprefsandsettingsSaved,#prefsNotSaved").hide();
+					}
+				}else{
+					$.cookie('ev_oneclickdl', '{"location":"'+downloadLocation+'","format":"'+downloadformat+'","displaytype":"'+displaytype+'","baseaddress":"'+baseaddress+'","filenameprefix":"'+filenameprefix+'"}',{path:'/'});
+					$("#dlprefsSaved").fadeIn("slow");
+					$("#prefsSaved,#prefsNotSaved").hide();
+				}
+
 				dlOptions = {
 						location:downloadLocation,
 						format:downloadformat,
 						displaytype:displaytype,
-						baseaddress:baseaddress
+						baseaddress:baseaddress,
+						filenameprefix:filenameprefix
 				};
-				$("#dlprefsSaved").fadeIn("slow");
 
 				if(displaytype == 'default'){
 					//need to figure out what page they are on to get this right.
@@ -284,9 +482,30 @@ function checkForRefworks(radio){
 					displaytype = actionDisplayType;
 					$('#oneClickContent input[value="' + actionDisplayType + '"]').prop("checked", true);
 				}
-				// Refworks?
-				var ret = true;
+
 				changeOneClick(downloadLocation);
+
+				if(checkReferexOnlyFolder()){
+					$("#oneclickDL").tooltipster({
+					    content: 'Referex database results are not supported in the Excel&reg; download format.',
+					    autoClose:true,
+					    interactive:false,
+					    contentAsHTML:true,
+					    position:'bottom',
+					    fixedLocation:true,
+					    positionTracker:false,
+					    delay:0,
+					    speed:0,
+					    functionAfter: function(origin){$(origin).tooltipster('destroy');}
+					});
+					$("#oneclickDL").tooltipster('show',null);
+					$('#downloadlink').attr("title", "Click to change one click download preferences.");
+					$('#downloadlink').tooltipster('hide');
+					return false;
+				}
+
+
+				var url = "";
 				if (downloadLocation == "refworks") {
 					var refworksURL = "http://www.refworks.com/express/ExpressImport.asp?vendor=Engineering%20Village%202&filter=Desktop%20Biblio.%20Mgt.%20Software";
 					url = "http://" + baseaddress
@@ -303,24 +522,19 @@ function checkForRefworks(radio){
 									"RefWorksMain",
 									"width=800,height=500,scrollbars=yes,menubar=yes,resizable=yes,directories=yes,location=yes,status=yes");
 
-                    event.preventDefault();
-                    ret = false;
-				}else if(downloadLocation == "dropbox"){
+               }else if(downloadLocation == "dropbox"){
 					submitDropboxDL();
-					ret = false;
 				}else if(downloadLocation == "googledrive"){
 					submitGoogleDriveDL();
-					ret = false;
 				}else{
 					$("#download").submit();
-					ret = false;
 				}
 
 				$('#downloadlink').attr("title", "Click to change one click download preferences.");
 				$('#downloadlink').tooltipster('hide');
-				return ret;
 
-			});
+			}
+
 
 
 			</script>

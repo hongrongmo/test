@@ -11,11 +11,10 @@ import org.apache.log4j.Logger;
 import org.ei.biz.access.IUserAuthentication;
 import org.ei.biz.access.IUserInfo;
 import org.ei.biz.access.IUserPreferences;
+import org.ei.biz.personalization.PersonalAccount;
+import org.ei.biz.personalization.UserProfile;
 import org.ei.biz.security.UserAccessType;
 import org.ei.books.collections.ReferexCollection;
-import org.ei.domain.personalization.PersonalAccount;
-import org.ei.domain.personalization.PersonalAccountException;
-import org.ei.domain.personalization.UserProfile;
 import org.ei.exception.InfrastructureException;
 
 public class User {
@@ -27,7 +26,7 @@ public class User {
     public static String USERNAME_INDIV_AUTH_FAIL = "_UN_FAIL";
     public static String USERNAME_REFERRER_URL = "_REF";
     public static String USERNAME_IP_AUTH = "_IP";
-    
+
     private String customerID = "-";
 	private String userid = "-";
 	private String username = "-";
@@ -40,7 +39,7 @@ public class User {
 	private String ipAddress = "-";
 	private EntryToken entryToken;
 
-    /** holds information about a user's account.  See the Customer System 
+    /** holds information about a user's account.  See the Customer System
      * Web Service UserAccountInfo object*/
     private Account m_account;
     /** Holds the personal/contact information about a user. */
@@ -55,9 +54,9 @@ public class User {
     private IUserPreferences m_userPreferences= null;
 
 	protected final void initialize (String userid) {
-		
+
 	}
-	
+
 	public String toString() {
 		StringBuffer buf = new StringBuffer();
 		buf.append("C=" + customerID);
@@ -97,7 +96,7 @@ public class User {
 
 	/*
 	 * Constructs a User from the Output of toString()
-	 * 
+	 *
 	 * @see toString()
 	 */
 
@@ -181,14 +180,14 @@ public class User {
 			this.ipAddress = ipt.substring(ipt.indexOf("=") + 1, ipt.length());
 		}
 		*/
-		
-		
-		// 
+
+
+		//
 		// Build UserPreferences from cartridge
 		//
 		// this.m_userPreferences = new UserPreferences(this.cartridge);
-		
-		// 
+
+		//
 		// Build UserInfo from userid
 		//
 		if (!("-".equals(this.userid)) && !GenericValidator.isBlankOrNull(this.userid)) {
@@ -297,7 +296,7 @@ public class User {
 	public void setUserInfo(IUserInfo userinfo) {
 		this.m_contactInfo = userinfo;
 	}
-	
+
 	@Override
 	public UserAccessType getUserAccessType() {
 		//
@@ -306,12 +305,12 @@ public class User {
 		if (isIndividuallyAuthenticated()) {
 			this.m_accessType = UserAccessType.ACTIVREG;
 		} else if (USERNAME_IP_AUTH.equals(this.username)) {
-			this.m_accessType = UserAccessType.IPRANGE; 
+			this.m_accessType = UserAccessType.IPRANGE;
 		} else if (!(USERNAME_AUTH_FAIL.equals(this.username)) && !(USERNAME_INDIV_AUTH_FAIL.equals(this.username))){
 			this.m_accessType = UserAccessType.GUESTREG;
 		} else {
 			this.m_accessType = UserAccessType.GUEST;
-		} 
+		}
 		return m_accessType;
 	}
 
@@ -353,7 +352,7 @@ public class User {
 
 	@Override
 	public boolean isIndividuallyAuthenticated() {
-		// When user ID is not empty and not default value user is 
+		// When user ID is not empty and not default value user is
 		// individually authenticated
 		return !GenericValidator.isBlankOrNull(this.userid) && !("-".equals(this.userid));
 	}
@@ -367,7 +366,7 @@ public class User {
 	@Override
 	public SecurityAttribute[] getSecurityAttributes() {
         UserAccessType type = getUserAccessType();
-        
+
         if (type == null) {
             return new SecurityAttribute[0];
         }
@@ -383,7 +382,7 @@ public class User {
         }
 
         if (UserAccessType.SHIBBOLETHANON.equals(type)) {
-            attributes.add(SecurityAttribute.ANONYMOUS); 
+            attributes.add(SecurityAttribute.ANONYMOUS);
         }
         if (UserAccessType.SHIBBOLETHREG.equals(type)) {
             attributes.add(SecurityAttribute.SHIBBOLETH);
@@ -392,7 +391,7 @@ public class User {
             attributes.add(SecurityAttribute.GUEST);
         }
 
-        if (UserAccessType.BULKPEND.equals(type) || 
+        if (UserAccessType.BULKPEND.equals(type) ||
             UserAccessType.IPRANGE.equals(type) ||
             UserAccessType.ATHENSPEND.equals(type) ||
             UserAccessType.SHIBBOLETHANON.equals(type) ||
@@ -404,9 +403,9 @@ public class User {
         if (UserAccessType.isIndividualAuthType(type)) {
             attributes.add(SecurityAttribute.INDIVIDUAL);
         }
-        
-        if (attributes.size() > 0) {            
-            SecurityAttribute[] securityAttributes = 
+
+        if (attributes.size() > 0) {
+            SecurityAttribute[] securityAttributes =
                 new SecurityAttribute[attributes.size()];
             int attributeSize = attributes.size();
             for (int i = 0; i < attributeSize ; i ++) {

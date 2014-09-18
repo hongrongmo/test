@@ -282,7 +282,13 @@
 
 		});
 		$("#ckbackhighlight").click(function(e) {
-			var oldColor = JSON.parse($.cookie('ev_highlight')).color;
+			var oldColor;
+			if($.cookie('ev_highlight')){
+				oldColor = JSON.parse($.cookie('ev_highlight')).color;
+			}else{
+				oldColor = $("#hlight_color_abs").spectrum("get").toString();
+			}
+
 			if ($(this).prop('checked')) {
 				$(".hit").removeClass("hit").addClass("bghit");
 				$(".bghit").css("color", "black");
@@ -439,6 +445,9 @@
 
 </SCRIPT>
 	</stripes:layout-component>
-
+<stripes:layout-component name="survey">
+	<c:set var="surveyLocation" value="record" scope="request"/>
+	<%@ include file="/WEB-INF/pages/include/survey.jsp" %>
+</stripes:layout-component>
 
 </stripes:layout-render>

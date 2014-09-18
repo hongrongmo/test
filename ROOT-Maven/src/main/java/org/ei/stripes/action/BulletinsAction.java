@@ -15,6 +15,7 @@ import net.sourceforge.stripes.action.UrlBinding;
 
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
+import org.ei.biz.personalization.IEVWebUser;
 import org.ei.biz.security.BulletinsAccessControl;
 import org.ei.biz.security.IAccessControl;
 import org.ei.biz.security.ISecuredAction;
@@ -23,7 +24,6 @@ import org.ei.bulletins.BulletinGUI;
 import org.ei.bulletins.BulletinPage;
 import org.ei.bulletins.BulletinQuery;
 import org.ei.bulletins.BulletinResultNavigator;
-import org.ei.domain.personalization.IEVWebUser;
 import org.ei.service.amazon.s3.AmazonS3Service;
 import org.ei.service.amazon.s3.AmazonS3ServiceImpl;
 import org.ei.session.UserPreferences;

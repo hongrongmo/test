@@ -10,10 +10,10 @@ import org.apache.commons.lang.StringUtils;
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
 import org.ei.ane.entitlements.UserEntitlement;
+import org.ei.biz.personalization.IEVWebUser;
 import org.ei.books.collections.ReferexCollection;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.DatabaseConfigException;
-import org.ei.domain.personalization.IEVWebUser;
 import org.ei.exception.SessionException;
 import org.ei.exception.SystemErrorCodes;
 

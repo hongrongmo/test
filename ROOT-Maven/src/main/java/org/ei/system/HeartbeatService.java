@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
+import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
 import org.ei.session.EVSessionListener;
 
 public class HeartbeatService extends HttpServlet {
@@ -20,7 +20,7 @@ public class HeartbeatService extends HttpServlet {
     private static final Logger log4j = Logger.getLogger(HeartbeatService.class);
 
     /**
-     * 
+     *
      */
     private static final long serialVersionUID = 1L;
     private long startup;
@@ -31,7 +31,7 @@ public class HeartbeatService extends HttpServlet {
     }
 
     public void service(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        String releaseversion = RuntimeProperties.getInstance().getProperty(RuntimeProperties.RELEASE_VERSION);
+        String releaseversion = EVProperties.getProperty(ApplicationProperties.RELEASE_VERSION);
         if (GenericValidator.isBlankOrNull(releaseversion)) {
             releaseversion = "UNKNOWN!";
         }

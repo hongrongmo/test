@@ -14,11 +14,11 @@ import net.sourceforge.stripes.action.UrlBinding;
 import org.apache.commons.httpclient.HttpStatus;
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
+import org.ei.biz.personalization.IEVWebUser;
+import org.ei.biz.personalization.UserPrefs;
 import org.ei.biz.security.IAccessControl;
 import org.ei.biz.security.ISecuredAction;
 import org.ei.biz.security.NoAuthAccessControl;
-import org.ei.domain.personalization.IEVWebUser;
-import org.ei.domain.personalization.UserPrefs;
 import org.ei.exception.InfrastructureException;
 import org.ei.session.UserSession;
 import org.ei.stripes.action.EVActionBean;
@@ -37,6 +37,8 @@ public class SaveUserPrefsAction extends EVActionBean implements ISecuredAction 
     private String highlight;
     private String highlightBackground = "false";
 	private boolean showPreview;
+	private String dlFileNamePrefix;
+	
 	private List<String> hightlght_colors = Arrays.asList("#ff8200","#2babe2","#158c75", "#000000");
     @Override
     public IAccessControl getAccessControl() {
@@ -66,6 +68,7 @@ public class SaveUserPrefsAction extends EVActionBean implements ISecuredAction 
 		        userPrefs.setSort(this.sortOrder);
 		        userPrefs.setShowPreview(this.showPreview);
 		        userPrefs.setHighlightBackground(Boolean.valueOf(this.highlightBackground));
+		        userPrefs.setDlFileNamePrefix(this.dlFileNamePrefix);
 
 		        if(GenericValidator.isBlankOrNull(highlight) || !hightlght_colors.contains(highlight)){
 		        	this.highlight = hightlght_colors.get(0);
@@ -106,6 +109,7 @@ public class SaveUserPrefsAction extends EVActionBean implements ISecuredAction 
  		        userPrefs.setDlOutput(this.dlOutput);
  		        userPrefs.setDlFormat(this.dlFormat);
  		        userPrefs.setDlLocation(this.dlLocation);
+ 		        userPrefs.setDlFileNamePrefix(this.dlFileNamePrefix);
  		        userPrefs.save();
  		        user.setUserPrefs(userPrefs);
 
@@ -222,5 +226,15 @@ public class SaveUserPrefsAction extends EVActionBean implements ISecuredAction 
 	public void setHighlightBackground(String highlightBackground) {
 		this.highlightBackground = highlightBackground;
 	}
+	
+	public String getDlFileNamePrefix() {
+		return dlFileNamePrefix;
+	}
+
+	public void setDlFileNamePrefix(String dlFileNamePrefix) {
+		this.dlFileNamePrefix = dlFileNamePrefix;
+	}
+
+	
 
 }

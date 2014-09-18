@@ -13,12 +13,12 @@ import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.ei.biz.personalization.cars.Account;
+import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
 import org.ei.controller.IPBlocker;
 import org.ei.controller.IPBlocker.COUNTER;
 import org.ei.controller.MemcachedUtil;
-import org.ei.domain.personalization.cars.Account;
 import org.ei.session.BlockedIPEvent;
 import org.ei.session.BlockedIPStatus;
 import org.junit.After;
@@ -50,12 +50,12 @@ public class TestIPBlocker {
 
     private static void init() throws IOException {
         String memcacheservers = "localhost:11212,localhost:11213";
-        System.setProperty(RuntimeProperties.SYSTEM_ENVIRONMENT_RUNLEVEL, "local");
+        System.setProperty(ApplicationProperties.SYSTEM_ENVIRONMENT_RUNLEVEL, "local");
 
         EVProperties.getInstance();
         EVProperties.setStartup(System.currentTimeMillis());
 
-        RuntimeProperties rtp = RuntimeProperties.getInstance();
+        ApplicationProperties rtp = EVProperties.getApplicationProperties();
         rtp.setProperty("CONSUMER_APP", "ENGVIL");
         rtp.setProperty("CONSUMER_CLIENT", "ENGVIL");
         rtp.setProperty("WEBSERVICE_LOG_LEVEL", "Default");
@@ -64,8 +64,8 @@ public class TestIPBlocker {
         rtp.setProperty("X_ELS_AUTHENTICATION_VALUE", "ENGVIL");
         rtp.setProperty("SITE_IDENTIFIER", "engvil");
         rtp.setProperty("PLATFORM_CODE", "EV");
-        rtp.setProperty(RuntimeProperties.MEMCACHE_SERVERS, memcacheservers);
-        EVProperties.setRuntimeProperties(rtp);
+        rtp.setProperty(EVProperties.MEMCACHE_SERVERS, memcacheservers);
+        EVProperties.setApplicationProperties(rtp);
         Logger.getRootLogger().setLevel(Level.INFO);
         MemcachedUtil.initialize(memcacheservers);
     }
@@ -163,7 +163,7 @@ public class TestIPBlocker {
 
     @Test
     public void testRequestLimit() throws IOException {
-        setRuntimeProperties();
+        setApplicationProperties();
 
         // Add temporary IPs for test
         String iptoblock = "blockedip";
@@ -199,7 +199,7 @@ public class TestIPBlocker {
 
     @Test
     public void testIsBlocked() throws IOException {
-        setRuntimeProperties();
+        setApplicationProperties();
 
         // Add temporary IPs for test
         String iptoblock = "blockedip";
@@ -237,11 +237,11 @@ public class TestIPBlocker {
         if (ipstatus != null) ipstatus.delete(true);
     }
 
-    private void setRuntimeProperties() throws IOException {
-        RuntimeProperties.getInstance().setProperty(IPBlocker.IPBLOCKER_BUCKET_INTERVAL_MINUTES_PROPERTY, "5");
-        RuntimeProperties.getInstance().setProperty(IPBlocker.IPBLOCKER_SESSION_LIMIT_PROPERTY, "5");
-        RuntimeProperties.getInstance().setProperty(IPBlocker.IPBLOCKER_REQUEST_LIMIT_PROPERTY, "5");
-        RuntimeProperties.getInstance().setProperty(IPBlocker.IPBLOCKER_EMAIL_TO_PROPERTY, "harover@elsevier.com");
-        RuntimeProperties.getInstance().setProperty(IPBlocker.IPBLOCKER_EMAIL_FROM_PROPERTY, "harover@elsevier.com");
+    private void setApplicationProperties() throws IOException {
+        EVProperties.getApplicationProperties().setProperty(IPBlocker.IPBLOCKER_BUCKET_INTERVAL_MINUTES_PROPERTY, "5");
+        EVProperties.getApplicationProperties().setProperty(IPBlocker.IPBLOCKER_SESSION_LIMIT_PROPERTY, "5");
+        EVProperties.getApplicationProperties().setProperty(IPBlocker.IPBLOCKER_REQUEST_LIMIT_PROPERTY, "5");
+        EVProperties.getApplicationProperties().setProperty(IPBlocker.IPBLOCKER_EMAIL_TO_PROPERTY, "harover@elsevier.com");
+        EVProperties.getApplicationProperties().setProperty(IPBlocker.IPBLOCKER_EMAIL_FROM_PROPERTY, "harover@elsevier.com");
     }
 }

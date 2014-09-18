@@ -4,25 +4,28 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <%@ taglib uri="http://stripes.sourceforge.net/stripes.tld" prefix="stripes" %>
 
+
 <stripes:layout-render name="/WEB-INF/pages/layout/standard.jsp" pageTitle="Engineering Village - Search Widget Test Page">
 
     <stripes:layout-component name="csshead">
     <jsp:include page="include/customcss.jsp"></jsp:include>
+
     <style>
     	#container{
+    		height:350px;
     		height:600px;
     		text-align:center;
     	}
     	#left_panel{
     		padding-left:25px;
-    		width:400px;
+    		width:450px;
     		height:500px;
     		border-right:solid black 2px;
     	}
 
     	#right_panel{
-    		padding-left:25px;
-    		width:400px;
+    		padding-left:0px;
+    		width:250px;
     		height:500px;
     	}
 
@@ -30,7 +33,7 @@
     	#left_panel ul{
     		list-style:none;
     		float: right;
-			padding-right: 16px;
+			padding-right: 45px;
     	}
     	#left_panel li{
     		float:left;
@@ -43,7 +46,12 @@
     		font-weight:bold;
     		font-size:14px;
     	}
+    	.swoptions{
+    		height:60px;
+    	}
     </style>
+
+
     <script>
     	var sizes  = {
 				lg:{width:"298px",height:"270px"},
@@ -51,7 +59,9 @@
 				xsm:{width:"186px",height:"270px"}
 		};
     </script>
+
     </stripes:layout-component>
+
 
     <stripes:layout-component name="header">
         <jsp:include page="/WEB-INF/pages/include/headernull.jsp" />
@@ -59,16 +69,13 @@
 
     <stripes:layout-component name="ssourls"/>
 
-<%-- **************************************** --%>
-<%-- CONTENTS                                 --%>
-<%-- **************************************** --%>
     <stripes:layout-component name="contents">
     <div id="container">
-
 	    <jsp:include page="include/tabs.jsp"/>
-
 	    <div>
 	    	<div class="floatL" id="left_panel">
+	    		<h2>Configuration Options</h2>
+	    		<div class="swoptions">
 	    		<label for="db_options">Select Database(s):</label>
 	    		<select id="db_options">
 	    			<option value="1" selected>Compendex</option>
@@ -93,23 +100,36 @@
 		    			</li>
 		    		</ul>
 	    		</div>
+	    		</div>
+				<div class="previewdiv">
+					<div class="heading">Preview:</div>
+					<div id="widget_panel">
+						<iframe src="" id="ev_searchwidget" ></iframe>
+					</div>
+					<div>
+						<div class="heading">Code to use:</div>
+						<div id="widget_code"></div>
+					</div>
+					<div class="heading" style="padding-top:10px;">Dimensions:</div>
+					<div id="widget_dimensions"></div>
+
+				</div>
+
 	    	</div>
+			<div class="floatL" id="right_panel">
+ 				<div class="driveLinks">
+					<h2>Customer List</h2>
+					<a href="https://drive.google.com/open?id=1YIU5ISR5R1h-DMPu0AWZU0tk_STLn9YbO25Fqhiy0ak&authuser=0" target="new" title="Search Widget Customer List">Search Widget Customer List</a>
+					<h2>Search Widget FAQ</h2>
+					<a href="https://drive.google.com/open?id=1WKssGA73bzs3W0K7fGkUG98N41l7VIxv_zX06cUZ-4U&authuser=0" target="new" title="Search Widget Frequently Asked Questions">Search Widget FAQ</a>
+				</div>
 
+			</div>
 	    </div>
-		<div class="floatL" id="right_panel">
-				<div class="heading">Preview:</div>
-				<div id="widget_panel">
-					<iframe src="" id="ev_searchwidget" ></iframe>
-				</div>
-				<div>
-					<div class="heading">Code to use:</div>
-					<div id="widget_code"></div>
-				</div>
-				<div class="heading" style="padding-top:10px;">Dimensions:</div>
-				<div id="widget_dimensions"></div>
 
-		</div>
-    </div>
+
+
+</div>
 
 <script>
 function renderWidget(){
@@ -139,6 +159,5 @@ $(document).ready(function(){
 
 
 </script>
-    </stripes:layout-component>
-
+</stripes:layout-component>
 </stripes:layout-render>

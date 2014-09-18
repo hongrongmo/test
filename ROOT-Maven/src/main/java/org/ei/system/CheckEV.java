@@ -11,23 +11,20 @@ import java.util.List;
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.HttpMethod;
 import org.apache.commons.httpclient.methods.PostMethod;
-import org.ei.config.RuntimeProperties;
+import org.ei.biz.email.SESEmail;
+import org.ei.biz.email.SESMessage;
+import org.ei.config.ApplicationProperties;
 import org.ei.connectionpool.ConnectionBroker;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.FastClient;
-import org.ei.email.SESEmail;
-import org.ei.email.SESMessage;
-import org.ei.session.SessionCache;
-import org.ei.session.SessionID;
-import org.ei.session.UserSession;
 
 public class CheckEV {
-	
-	RuntimeProperties eiProps;
+
+	ApplicationProperties eiProps;
 
 	private String url = "/controller/servlet/Controller?CID=openXML&dbchkbx=1&DATABASE=1&XQUERYX=%3Cquery%3E%3CandQuery%3E%3Cword+path%3D%22db%22%3Ecpx%3C%2Fword%3E%3Cword%3Eworld%3C%2Fword%3E%3C%2FandQuery%3E%3C%2Fquery%3E&AUTOSTEM=on&STARTYEAR=1990&ENDYEAR=2009&SORT=re&xmlsearch=Submit+Query";
 	private String configFile;
-	private static RuntimeProperties props;
+	private static ApplicationProperties props;
 	private String server;
 	private String email;
 	private String fastURL;
@@ -44,7 +41,7 @@ public class CheckEV {
 	}
 
 	public void init() {
-		
+
 	}
 
 	public void setServer(String server) {
@@ -53,29 +50,6 @@ public class CheckEV {
 
 	public void setEmail(String email) {
 		this.email = email;
-	}
-
-	public boolean checkSessionService(String authURL, String appName,
-			String ipAddress, String referrerURL, String username,
-			String password) {
-		SessionCache sCache = null;
-		String entryToken = null;
-		UserSession us = null;
-		SessionID sesID = null;
-		try {
-			sCache = SessionCache.init(authURL, appName);
-			us = sCache.getUserSession(sesID, ipAddress, referrerURL, username,
-					password, entryToken);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
-		if (us == null) {
-			sendEmail("Session service is down");
-			return false;
-		} else {
-			return true;
-		}
 	}
 
 	public boolean checkSearchDatabase() {
@@ -215,7 +189,7 @@ public class CheckEV {
 
 	private void sendEmail(String msgString) {
 		try {
-			
+
 			SESMessage sesMessage = new SESMessage();
 			sesMessage.setMessage("Emergency: EV is Down", msgString, false);
 			sesMessage.setFrom("emergencyalert@elsevier.com");
@@ -223,7 +197,7 @@ public class CheckEV {
 			toList.add("h.mo@elsevier.com");
 			List<String> ccList = new ArrayList<String>();
 			String[] emailArray = null;
-			
+
 			if (email != null) {
 				if (email.indexOf("|") > -1) {
 					emailArray = email.split("|");
@@ -231,7 +205,7 @@ public class CheckEV {
 					emailArray = new String[1];
 					emailArray[0] = email;
 				}
-				
+
 				if(emailArray != null && emailArray.length>0){
 					for (int i = 0; i < emailArray.length; i++) {
 						if(emailArray[i] != null){
@@ -240,10 +214,10 @@ public class CheckEV {
 					}
 				}
 			}
-			
+
 			sesMessage.setDestination(toList,ccList);
 			SESEmail.getInstance().send(sesMessage);
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

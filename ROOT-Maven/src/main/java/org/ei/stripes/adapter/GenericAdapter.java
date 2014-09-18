@@ -1,11 +1,8 @@
 package org.ei.stripes.adapter;
 
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.io.UnsupportedEncodingException;
-import java.util.Scanner;
 
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerConfigurationException;
@@ -16,9 +13,12 @@ import javax.xml.transform.stream.StreamSource;
 import net.sourceforge.stripes.action.ActionBean;
 
 import org.apache.log4j.Logger;
-import org.ei.exception.EVBaseException;
+import org.ei.config.EVProperties;
 import org.ei.exception.InfrastructureException;
+import org.ei.exception.SessionException;
 import org.ei.exception.SystemErrorCodes;
+import org.ei.session.UserSession;
+import org.ei.stripes.EVActionBeanContext;
 import org.ei.xml.TransformerBroker;
 
 public class GenericAdapter extends BizXmlAdapter {
@@ -56,6 +56,27 @@ public class GenericAdapter extends BizXmlAdapter {
             throw new InfrastructureException(SystemErrorCodes.PARSE_ERROR, e);
         }
         transformer.setParameter("actionbean", actionbean);
+        if(actionbean != null && actionbean.getContext() != null ){
+        	EVActionBeanContext actionBeanContext = (EVActionBeanContext)actionbean.getContext();
+        	String csrfSyncToken = "";
+        	boolean isCSRFPrevEnabled = Boolean.parseBoolean((EVProperties.getProperty(EVProperties.PREVENT_CSRF_ATTACK)));
+
+        	if(isCSRFPrevEnabled && actionBeanContext != null && actionBeanContext.getUserSession() != null){
+        		UserSession usersession = actionBeanContext.getUserSession();
+        		boolean isSessionUpdateNeeded = false;
+    			if(usersession.getFifoQueue().isEmpty())isSessionUpdateNeeded = true;
+    			csrfSyncToken = usersession.getFifoQueue().getLastElement();
+    			if(isSessionUpdateNeeded) {
+        			try {
+						actionBeanContext.updateUserSession(usersession);
+					} catch (SessionException e) {
+						log4j.warn("Could not create or get the latest csrf token due to session exception!, exception = "+e.getMessage());
+					}
+        		}
+        	}
+        	transformer.setParameter("csrfSyncToken", csrfSyncToken);
+        }
+
         try {
             transformer.transform(new StreamSource(sanitizeInputStream(instream)), new StreamResult(transformout));
         } catch (TransformerException e) {

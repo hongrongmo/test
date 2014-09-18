@@ -4,11 +4,12 @@
 	and gets all the folder for the user and
 	generates xml for viewing the folders.
 -->
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
 <%@ page import=" org.ei.domain.personalization.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="java.util.List"%>
 <%@ page import="org.ei.domain.*"%>
@@ -24,7 +25,6 @@
 	String sUserId = null;
 	// declare variable to hold session id.
 	String sSessionId = null;
-	SessionID sessionIdObj = null;
 	// declare variable to hold user id.
 	String nUserId  = null;
 	// declare variable to hold no of folders.
@@ -44,29 +44,27 @@
 		database = request.getParameter("database");
 	}
 
-    sb = new StringBuffer("<PAGE>");	
+    sb = new StringBuffer("<PAGE>");
 	sb.append("<DATABASE>"+database+"</DATABASE>");
 
 	// get the client session object from that get session id and user id.
 	client = new ControllerClient(request,response);
 	UserSession ussession=(UserSession)client.getUserSession();
-	sSessionId = ussession.getID();
-	sessionIdObj = ussession.getSessionID();
-	sUserId = ussession.getUserIDFromSession();
-	
+	sSessionId = ussession.getSessionid();
+	sUserId = ussession.getUserid();
+
     if((sUserId != null) && (sUserId.length() != 0))
     {
         personalization=true;
     }
 
-	 IEVWebUser user = ussession.getUser();
 
-	String customerId=user.getCustomerID().trim();
+	String customerId=ussession.getCustomerid().trim();
 	clientCustomizer=new ClientCustomizer(ussession);
 	if(clientCustomizer.isCustomized())
 	{
 		customizedLogo=clientCustomizer.getLogo();
-        isPersonalizationPresent=clientCustomizer.checkPersonalization();		
+        isPersonalizationPresent=clientCustomizer.checkPersonalization();
 	}
 
 	// check for user id existance.
@@ -76,12 +74,12 @@
 	}
 
     // NOV 2004
-    // jam added when pop-up login removed 
+    // jam added when pop-up login removed
     sb.append("<HEADER/>");
-    sb.append(GlobalLinks.toXML(user.getCartridge()));
+    sb.append(GlobalLinks.toXML(ussession.getCartridge()));
     sb.append("<FOOTER/>");
 
-	sb.append("<SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+	sb.append("<SESSION-ID>"+sSessionId+"</SESSION-ID>");
 
 	// if the user exists get all the folders from the system and build xml.
 	if( nUserId != null)

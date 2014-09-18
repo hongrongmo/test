@@ -14,15 +14,15 @@ import net.sourceforge.stripes.action.Resolution;
 import net.sourceforge.stripes.action.UrlBinding;
 
 import org.apache.log4j.Logger;
+import org.ei.biz.personalization.IEVWebUser;
 import org.ei.biz.security.IAccessControl;
 import org.ei.biz.security.IndividualAuthRequiredAccessControl;
+import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
 import org.ei.domain.DocID;
 import org.ei.domain.DocumentBasket;
 import org.ei.domain.personalization.Folder;
 import org.ei.domain.personalization.FolderEntry;
-import org.ei.domain.personalization.IEVWebUser;
 import org.ei.domain.personalization.SavedRecords;
 import org.ei.stripes.action.EVPathUrl;
 import org.ei.stripes.action.SystemMessage;
@@ -30,16 +30,16 @@ import org.ei.stripes.action.personalaccount.IPersonalLogin;
 
 /**
  * This is the base class for the saved folders.
- * 
+ *
  * @author bhanu
- * 
+ *
  */
 
 @UrlBinding("/personal/folders/save/{$event}.url")
 public class SavedFoldersAction extends FolderActionBean implements IPersonalLogin {
-    
+
     private final static Logger log4j = Logger.getLogger(SavedFoldersAction.class);
-    
+
     /**
      * Override for the ISecuredAction interface. This ActionBean requires individual authentication
      */
@@ -47,17 +47,17 @@ public class SavedFoldersAction extends FolderActionBean implements IPersonalLog
     public IAccessControl getAccessControl() {
         return new IndividualAuthRequiredAccessControl();
     }
-    
+
     /**
      * Displays the save Folders page -
-     * 
+     *
      * @return Resolution
      */
     @HandlesEvent("view")
     @DefaultHandler
     @DontValidate
     public Resolution view() {
-        
+
         log4j.info("Starting view Folders view...");
         setRoom(ROOM.mysettings);
         setPersonalization(false);
@@ -76,42 +76,42 @@ public class SavedFoldersAction extends FolderActionBean implements IPersonalLog
                     hiddenCID = "saveRecordsToFolder";
                 }
             }
-            
+
             if (user.isIndividuallyAuthenticated()) {
                 setPersonalization(true);
                 SavedRecords sr = new SavedRecords(user.getUserId());
                 this.folderlist = sr.viewListOfFolders();
                 this.foldercount = sr.getFolderCount();
             }
-            
+
             return new ForwardResolution("/WEB-INF/pages/customer/folders/SaveToFolder.jsp");
-            
+
         } catch (Exception e) {
             log4j.error("View - Unable to process the Request!", e);
             return new ForwardResolution(SystemMessage.SYSTEM_ERROR_URL);
         }
     }
-    
+
     /**
      * Displays the add Folders page -
-     * 
+     *
      * @return Resolution
      */
     @HandlesEvent("add")
     @DontValidate
     public Resolution add() {
-        
+
         log4j.info("Starting add Folders view...");
         setRoom(ROOM.mysettings);
         setPersonalization(false);
         IEVWebUser user = context.getUserSession().getUser();
 
         try {
-            
+
             if (this.folderid != null && !this.folderid.equals("")) {
                 setFolderid(this.folderid.substring(0, this.folderid.trim().indexOf(",")));
             }
-            
+
             if (user.isIndividuallyAuthenticated()) {
                 SavedRecords sr = new SavedRecords(user.getUserId());
                 if ((this.foldername != null) && (this.foldername.length() != 0)) {
@@ -126,13 +126,13 @@ public class SavedFoldersAction extends FolderActionBean implements IPersonalLog
                     this.foldername = sr.getFolderName(this.folderid);
                     folder = new Folder(this.folderid, this.foldername);
                 }
-                
+
                 DocumentBasket basket = new DocumentBasket(this.getSessionid());
                 if (basket.getBasketSize() > 0) {
                     @SuppressWarnings("unchecked")
                     List<DocID> docIDs = basket.getAllDocIDs();
                     int count = docIDs.size();
-                    
+
                     // Create FolderEntry objects and add to list of FolderEntries.
                     listOfFolderEntries = new ArrayList<FolderEntry>();
                     for (int j = 0; j < count; j++) {
@@ -149,26 +149,26 @@ public class SavedFoldersAction extends FolderActionBean implements IPersonalLog
                     }
                 }
             }
-            
+
             return new ForwardResolution("/WEB-INF/pages/customer/folders/addSelectedSetToSavedRecords.jsp");
-            
+
         } catch (Exception e) {
             log4j.error("add - Unable to process the Request!", e);
             return SystemMessage.SYSTEM_ERROR_RESOLUTION;
         }
     }
-    
+
     @Before(on = { "view", "add" })
     protected void callRequestCommonCode()
     {
         super.callRequestCommonCode();
         try {
-            maxFolderSize = Integer.parseInt(EVProperties.getRuntimeProperty(RuntimeProperties.MAX_FOLDERSIZE));
+            maxFolderSize = Integer.parseInt(EVProperties.getProperty(ApplicationProperties.MAX_FOLDERSIZE));
         } catch (Exception e) {
             log4j.error("callRequestCommonCode - Unable to process the Request!", e);
         }
     }
-    
+
     /**
      * Returns a Resolution object for the login page
      */
@@ -181,11 +181,11 @@ public class SavedFoldersAction extends FolderActionBean implements IPersonalLog
 			return EVPathUrl.EV_HOME.value();
 		}
     }
-     
+
     @Override
     public String getLoginCancelUrl() {
         return super.getBackurl();
     }
-    
+
 
 }

@@ -12,6 +12,7 @@ import net.sourceforge.stripes.action.UrlBinding;
 
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
+import org.ei.biz.personalization.IEVWebUser;
 import org.ei.domain.BasketEntry;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.DocID;
@@ -22,7 +23,6 @@ import org.ei.domain.Query;
 import org.ei.domain.SearchControl;
 import org.ei.domain.SearchResult;
 import org.ei.domain.Searches;
-import org.ei.domain.personalization.IEVWebUser;
 import org.ei.exception.InfrastructureException;
 import org.ei.exception.SessionException;
 import org.ei.exception.SystemErrorCodes;

@@ -3,11 +3,13 @@
     @param java.lang.String database
     @param java.lang.String CID
 --%>
+<%@page import="org.ei.config.ApplicationProperties"%>
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page session="false"%>
 <%@ page contentType="text/xml"%>
 <%--import statements of ei packages.--%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.domain.*"%>
 <%@ page import="org.ei.config.*"%>
@@ -31,7 +33,6 @@
     ControllerClient client = new ControllerClient(request, response);
 
     // This variable holds sessionId
-    SessionID sessionId = null;
     String sesID = null;
 
     // Variable to hold the Personalization userid
@@ -46,8 +47,6 @@
     // This variable holds the url
     URL url = null;
 
-    IEVWebUser user=null;
-
     ClientCustomizer clientCustomizer = null;
     String customizedDB = null;
     String customizedEasyDb = null;
@@ -61,12 +60,12 @@
 %>
 <%!
     // jspInit() method
-    RuntimeProperties eiProps=null;
+    ApplicationProperties eiProps=null;
     public void jspInit()
     {
         try
         {
-             eiProps = ConfigService.getRuntimeProperties();
+             eiProps = ApplicationProperties.getInstance();
         }
         catch(Exception e)
         {
@@ -83,18 +82,15 @@
     */
 
     UserSession ussession=client.getUserSession();
-    sessionId = ussession.getSessionID();
-
-    sesID = sessionId.toString();
-    pUserId = ussession.getUserIDFromSession();
+    sesID = ussession.getSessionid();
+    pUserId = ussession.getUserid();
     if((pUserId != null) && (pUserId.trim().length() != 0))
     {
         personalization=true;
     }
 
-    user=ussession.getUser();
 
-    customerId=user.getCustomerID();
+    customerId=ussession.getCustomerid();
     clientCustomizer=new ClientCustomizer(ussession);
 
     if(clientCustomizer!=null && clientCustomizer.isCustomized())
@@ -109,7 +105,7 @@
     }
 %>
 <%
- 
+
     /**
     *These variable to hold search words and search options
     *
@@ -178,11 +174,11 @@
     * is executed by the application when the user clicks on the New Search button on the navigation bar
     *
     */
-      
+
     if(request.getParameter("error") != null){
     	error= request.getParameter("error");
     }
-    
+
     if((request.getParameter("searchid")!=null) && (request.getParameter("searchid").trim().length() > 0) && error == null)
     {
     	searchid = request.getParameter("searchid").trim();
@@ -388,7 +384,7 @@
     client.log("HIT_COUNT", "0");
     client.setRemoteControl();
 
-    String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
+    String strGlobalLinksXML = GlobalLinks.toXML(ussession.getCartridge());
 
 %>
 <QUICK-SEARCH>
@@ -453,16 +449,16 @@
 			<COMBINED-SEARCH/>
 			<PERSONALIZATION-PRESENT><%=isPersonalizationPresent%></PERSONALIZATION-PRESENT>
 			<CUSTOMIZED-LOGO><%=customizedLogo%></CUSTOMIZED-LOGO>
-			<CREDS><%= user.getCartridgeString() %></CREDS>
+			<CREDS><%= ussession.getCartridgeString() %></CREDS>
 		<%@ include file="database.jsp"%>
 		<%@ include file="queryForm.jsp"%>
 <%
-	// TMH 
-	// UI refresh project is including search history on search pages.  
-    if((sessionId != null) && (sessionId.getID() != null) && (sessionId.getID().trim().length() > 0)) {
-    	Searches.getSessionXMLQuery(pUserId,sessionId.getID(),out);
+	// TMH
+	// UI refresh project is including search history on search pages.
+    if(sesID != null && sesID.trim().length() > 0) {
+    	Searches.getSessionXMLQuery(pUserId,sesID,out);
         DatabaseConfig databaseConfig = DatabaseConfig.getInstance();
-        databaseConfig.sortableToXML(user.getCartridge(), out);
+        databaseConfig.sortableToXML(ussession.getCartridge(), out);
     }
 %>
 </QUICK-SEARCH>

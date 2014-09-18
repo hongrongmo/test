@@ -125,27 +125,34 @@
 <c:choose>
 	<c:when test="${actionBean.context.userSession.user.individuallyAuthenticated}">
 	<div id="dlprefsSaved" style="display:none;text-align:left;"><img src="/static/images/ev_checkmark.png" style="padding-right:5px;width:20px;"/>Your download settings for this session have been saved. To keep these settings, change your preference in Settings.</div>
+	<div id="dlprefsandsettingsSaved" style="display:none;text-align:left;"><img src="/static/images/ev_checkmark.png" style="padding-right:5px;width:20px;"/>Your download settings have been saved to My Preferences.</div>
+	<div id="dlprefsandsettingsnotSaved" style="display:none;text-align:left;"><img src="/static/images/No_results_found.png" style="padding-right:5px;width:20px;"/>Your download settings for this session have not been saved. Please refresh the page and try again.</div>
 	</c:when>
 	<c:otherwise>
 	<div id="dlprefsSaved" style="display:none;text-align:left;"><img src="/static/images/ev_checkmark.png" style="padding-right:5px;width:20px;"/>Your download settings for this session have been saved. To keep these settings, login or register and save your preferences in Settings.</div>
 	</c:otherwise>
 </c:choose>
-
+<input type="hidden" id="authStatus" value="${actionBean.context.userSession.user.individuallyAuthenticated}"/>
 
 <div id="prefsNotSaved" style="display:none;text-align:left;"><img src="/static/images/No_results_found.png" style="padding-right:5px;width:20px;"/>Preferences Could Not Be Saved!</div>
 
   <script>
   var savedDLPrefs;
   <c:if test="${actionBean.context.userSession.user.individuallyAuthenticated}">
+  	$.cookie('ev_oneclickdl',null,{path:'/'});
   	savedDLPrefs = {
   			location:'${actionBean.context.userSession.user.userPrefs.dlLocation}',
   			format:'${actionBean.context.userSession.user.userPrefs.dlFormat}',
   			displaytype:'${actionBean.context.userSession.user.userPrefs.dlOutput}',
+  			filenameprefix:'${actionBean.context.userSession.user.userPrefs.dlFileNamePrefix}',
   			baseaddress:'${actionBean.baseaddress}'
   	};
   </c:if>
-  $(function() {
-	  if($("#settingMenu").length > 0){
+  <c:if test="${actionBean.context.userSession.user.individuallyAuthenticated eq 'false'}">
+   	$.cookie('ev_dldpref',null,{path:'/'});
+  </c:if>
+ 
+  $(function() {	  if($("#settingMenu").length > 0){
 		$("#settingMenu").menu({position:{my:'right+25 top+20'}, icons: { submenu: "ui-icon-triangle-1-s" }});
 		$("#settingDropDown").show();
 		//showTooltip(".settingMenu","We have Added New Settings!", "top-left", 4500, true);
@@ -163,12 +170,25 @@
 
    $(".prefsOverlay").click(function(){
 	   	GALIBRARY.createWebEventWithLabel('Dialog Open', 'Edit Preferences', 'Settings Dropdown');
-		TINY.box.show({url:'/customer/userprefs.url',clickmaskclose:false,width:400,height:500,close:true,opacity:20,topsplit:3});
+		TINY.box.show({url:'/customer/userprefs.url',clickmaskclose:false,width:400,height:520,close:true,opacity:20,topsplit:3});
 
 	});
 
   });
 
+  	function isValidInput(fileNamePrefix) {   
+	  var re = /^\w+$/;
+	  if (!re.test(fileNamePrefix)) {
+	      return false;
+	  }
+	  return true;
+	}
+  
+  	function handlevalidationerror(msg){
+  		$("#valerrormsg").html(msg);
+		$("#valerrormsgcontainer").css("display","block");
+  	}
+  	
 	function submitSavePrefsForm(){
 		$(".saved").hide();
 		var url = "/customer/userprefs.url?save=true&";
@@ -193,11 +213,30 @@
 			params += "&highlightBackground=" + back_highlight;
 		}
 
+
+		var fileNamePrefix = $.trim($('#dlFileNamePrefix').val());
+		if(fileNamePrefix.length < 3){
+			handlevalidationerror("Prefix cannot be empty and should have minimum of 3 characters");
+			return false;
+		}
+		if(fileNamePrefix.length > 50){
+			handlevalidationerror("Prefix cannot have more than 50 characters");
+			return false;
+		}
+		
+		if(!isValidInput(fileNamePrefix)){
+			handlevalidationerror("Prefix can have only letters, numbers and underscore character");
+			return false;
+		}
+		params += "&dlFileNamePrefix=" + fileNamePrefix;
+
+
 		url += params;
 		GALIBRARY.createWebEventWithLabel('Preferences', 'Preferences Saved', params);
 
 		$.ajax({
-			url:url
+			url:url,
+			cache: false
 		}).success(function(data){
 			TINY.box.hide();
 			//change any highlight color on the fly
@@ -231,22 +270,24 @@
 					$("#ckbackhighlight").prop("checked",back_highlight);
 				}
 			}
-			if(!$.cookie("ev_oneclickdl") && $('#downloadlink').length > 0){
-				//if the user hasn't made changes to his session we need to update the current oneclick dl link
+			
+			if($('#downloadlink').length > 0){
 				changeOneClick($("input[name='dlLocation']:checked").val());
 				dlOptions = {
 						location:$("input[name='dlLocation']:checked").val(),
 						format:$("input[name='dlFormat']:checked").val(),
 						displaytype:$("input[name='dlOutput']:checked").val(),
+						filenameprefix:fileNamePrefix,
 						baseaddress:dlOptions.baseaddress
 				};
+				$.cookie('ev_dldpref', '{"location":"'+dlOptions.location+'","format":"'+dlOptions.format+'","displaytype":"'+dlOptions.displaytype+'","baseaddress":"'+dlOptions.baseaddress+'","filenameprefix":"'+dlOptions.filenameprefix+'"}',{path:'/'});
 			}
 
-			$("#prefsNotSaved").hide();
+			$("#prefsNotSaved,#dlprefsSaved,#dlprefsandsettingsSaved,#dlprefsandsettingsnotSaved").hide();
 			$("#prefsSaved").fadeIn("slow");
 		}).error(function(data){
 			TINY.box.hide();
-			$("#prefsSaved").hide();
+			$("#prefsSaved,#dlprefsSaved,#dlprefsandsettingsSaved,#dlprefsandsettingsnotSaved").hide();
 			$("#prefsNotSaved").fadeIn("slow");
 		});
 

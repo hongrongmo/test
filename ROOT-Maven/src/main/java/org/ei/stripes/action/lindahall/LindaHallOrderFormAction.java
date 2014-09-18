@@ -26,12 +26,12 @@ import net.sourceforge.stripes.validation.ValidationErrors;
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
 import org.ei.backoffice.LindaHallBroker;
+import org.ei.biz.email.SESEmail;
+import org.ei.biz.email.SESMessage;
+import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
 import org.ei.domain.ContactInfo;
 import org.ei.domain.LhlUserInfo;
-import org.ei.email.SESEmail;
-import org.ei.email.SESMessage;
 import org.ei.session.UserSession;
 import org.ei.util.StringUtil;
 
@@ -207,11 +207,11 @@ public class LindaHallOrderFormAction extends LindaHallAction implements Validat
         LhlUserInfo lhluserinfo = (LhlUserInfo) context.getRequest().getSession().getAttribute(LHL_SESSION_USERINFO);
         StringBuffer messageString;
 
-        RuntimeProperties runtimeProps = EVProperties.getRuntimeProperties();
-        String LHLTORecepients= runtimeProps.getProperty(RuntimeProperties.LHL_TO_RECIPIENTS);
-        String LHLCCRecepients= runtimeProps.getProperty(RuntimeProperties.LHL_CC_RECIPIENTS);
-        String LHLFROMRecepients= runtimeProps.getProperty(RuntimeProperties.LHL_FROM_RECIPIENTS);
-        String LHLEmailSubject= runtimeProps.getProperty(RuntimeProperties.LHL_EMAIL_SUBJECT);
+        ApplicationProperties runtimeProps = EVProperties.getApplicationProperties();
+        String LHLTORecepients= runtimeProps.getProperty(ApplicationProperties.LHL_TO_RECIPIENTS);
+        String LHLCCRecepients= runtimeProps.getProperty(ApplicationProperties.LHL_CC_RECIPIENTS);
+        String LHLFROMRecepients= runtimeProps.getProperty(ApplicationProperties.LHL_FROM_RECIPIENTS);
+        String LHLEmailSubject= runtimeProps.getProperty(ApplicationProperties.LHL_EMAIL_SUBJECT);
 
         UserSession usersession = context.getUserSession();
 

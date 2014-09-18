@@ -1,7 +1,5 @@
 package org.ei.stripes.action;
 
-import java.net.URLDecoder;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -16,8 +14,8 @@ import org.apache.commons.validator.GenericValidator;
 import org.ei.biz.security.IAccessControl;
 import org.ei.biz.security.NoAuthAccessControl;
 import org.ei.biz.security.NormalAuthRequiredAccessControl;
+import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
 import org.ei.controller.DataRequest;
 import org.ei.controller.DataResponse;
 import org.ei.controller.OutputPrinter;
@@ -33,15 +31,15 @@ import org.ei.stripes.exception.EVExceptionHandler;
 
 /**
  * This class handles legacy requests for EV.  Prior to the UI Refresh project
- * requests were handled in one large Controller class that did everything.  
+ * requests were handled in one large Controller class that did everything.
  * Now there are Interceptor classes to handle the request and this class
  * simply transforms XML from the engvillage app into HTML via stylesheet.
- * 
+ *
  * The goal is to eventually remove this class and have all requests handled
  * completely without XML transformations!
- * 
+ *
  * NOTE the mapping below!  All /servlet/Controller requests come here!!
- * 
+ *
  * @author harovetm
  *
  */
@@ -51,11 +49,11 @@ public class ControllerAction extends EVActionBean {
     private static final org.apache.log4j.Logger log4j = org.apache.log4j.Logger.getLogger(ControllerAction.class);
 
 	/**
-	 * Override for the ISecuredAction interface.  This ActionBean services 
+	 * Override for the ISecuredAction interface.  This ActionBean services
 	 * both "world" and "customer" access levels from the legacy mappings
-	 * in the ContentConfig.xml file.  This means we need to check the 
+	 * in the ContentConfig.xml file.  This means we need to check the
 	 * AUTHGROUP to see what IAccessControl should be returned.
-	 * 
+	 *
 	 * NOTE: none of the remaining world/cutomer URLs in the ContentConfig.xml
 	 * file require individual authentication otherwise this would NOT
 	 * work!
@@ -83,19 +81,19 @@ public class ControllerAction extends EVActionBean {
 	}
 
 	/**
-	 * Handles all requests to main controller on {/controller}/servlet/Controller.  
+	 * Handles all requests to main controller on {/controller}/servlet/Controller.
 	 * @see AuthInterceptor for all the pre-work that goes on every request.  By the
 	 * time the request gets here it SHOULD be a valid request!
-	 * 
+	 *
 	 * @return Resolution or null.  Usually the output will either be 1) null when
 	 * the request is handled by writing to the OutputPrinter object (legacy EV) or
-	 * 2) a ForwardResolution object that maps to a Stripes action to finish 
+	 * 2) a ForwardResolution object that maps to a Stripes action to finish
 	 * servicing the request
 	 */
 	@DefaultHandler
 	public Resolution handle() throws Exception {
 		log4j.info("Handling request in ControllerAction");
-		
+
 		if(GenericValidator.isBlankOrNull(CID)){
 			return HomeAction.HOME_RESOLUTION;
 		}
@@ -145,12 +143,12 @@ public class ControllerAction extends EVActionBean {
 
 		// *************************************************************
 		// Build the OutputPrinter object.  This will write to the
-		// response when NOT handled via ForwardResolution.  This is 
+		// response when NOT handled via ForwardResolution.  This is
 		// for legacy EV paths in the ContentConfig.xml file.
 		// *************************************************************
 		OutputPrinter printer;
 		try {
-			boolean appendSession = Boolean.parseBoolean(EVProperties.getRuntimeProperty(RuntimeProperties.APPEND_SESSION));
+			boolean appendSession = Boolean.parseBoolean(EVProperties.getProperty(ApplicationProperties.APPEND_SESSION));
 			printer = context.buildPrinter(request, response, appendSession);
 		} catch (Exception e) {
 			EVExceptionHandler.logException("Unable to create OutputPrinter", e, request);
@@ -158,7 +156,7 @@ public class ControllerAction extends EVActionBean {
 		}
 
 		Logger logger = Logger.getInstance();
-		String dataCacheDir = EVProperties.getRuntimeProperty(RuntimeProperties.DATA_CACHE_DIR);
+		String dataCacheDir = EVProperties.getProperty(ApplicationProperties.DATA_CACHE_DIR);
 
 		DataResponse dataResponse = null;
 		LogEntry logEntry = null;
@@ -182,14 +180,14 @@ public class ControllerAction extends EVActionBean {
 			// Deal with Exception from code above
 			// ******************************************************************
 			EVExceptionHandler.logException("Error has occurred processing request", e, request);
-	
+
 				// May get the "SHUTDOWN" message when connection can't be made to data (model) layer!
 				if(e.getMessage() != null && e.getMessage().equals("SHUTDOWN")){
 					printer.printFatalError();
 					log4j.warn("Shutting down");
 					System.exit(-1);
 				}
-	
+
 				// Already trying to get the exception page??
 				if(EVActionBeanContext.REDIR_PAGE_GENERAL_EXCEPTION.equals(dataRequest.getContentDescriptor().getContentID()))
 				{
@@ -210,7 +208,7 @@ public class ControllerAction extends EVActionBean {
 
 	/**
 	 * Finalize the request
-	 * 
+	 *
 	 * @param printer
 	 * @param logEntry
 	 * @param usersession

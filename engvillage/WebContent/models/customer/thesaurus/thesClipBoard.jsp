@@ -5,8 +5,8 @@
 	This page the follwing params as input and generates XML output.
 	@param java.lang.String.database
 -->
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.parser.base.*"%>
 <%@ page import="org.ei.query.base.*"%>
@@ -31,18 +31,18 @@
 	if(searchid != null)
 	{
 
-		String sessionId=ussession.getID();
+		String sessionId=ussession.getSessionid();
 
 //		recentXmlQueryString = Searches.getXMLSearch(searchid);
 //		Query tQuery = new Query(new FastQueryWriter(),
 //            					 DatabaseConfig.getInstance(),
-//            					 user.getCartridge(),
+//            					 ussession.getCartridge(),
 //            					 recentXmlQueryString);
 
         Query tQuery = Searches.getSearch(searchid);
         tQuery.setSearchQueryWriter(new FastQueryWriter());
         tQuery.setDatabaseConfig(DatabaseConfig.getInstance());
-        tQuery.setCredentials(user.getCartridge());
+        tQuery.setCredentials(ussession.getCartridge());
         recentXmlQueryString = tQuery.toXMLString();
 
 		// creating Thesaurus XML for output

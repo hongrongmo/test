@@ -4,9 +4,9 @@
 <%@ page errorPage="/error/errorPage.jsp"%>
 <%@ page import="java.io.*"%>
 <%@ page import="java.util.Arrays"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
 <%@ page import="org.ei.domain.*"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%
     try
@@ -14,20 +14,19 @@
       DatabaseConfig databaseConfig = DatabaseConfig.getInstance();
       ControllerClient client = new ControllerClient(request, response);
       UserSession ussession = (UserSession) client.getUserSession();
-      IEVWebUser user = ussession.getUser();
-      
-      String sessionId = ussession.getID();
-      String customerId = user.getCustomerID();
-      String contractId = user.getContractID();
-      String username  = user.getUsername();
-      String[] credentials = user.getCartridge();
+
+      String sessionId = ussession.getSessionid();
+      String customerId = ussession.getCustomerid();
+      String contractId = ussession.getContractid();
+      String username  = ussession.getUsername();
+      String[] credentials = ussession.getCartridge();
 
       out.write("<pre>");
       out.write("<br/>");
       out.write("You are logged in as custid: " + customerId + " (" + contractId + ")");
       out.write("<br/>");
       if(username != null) {
-        out.write("username: " + user.getUsername());
+        out.write("username: " + username);
       }
       out.write("<br/>");
       out.write("You credentials are: " + Arrays.asList(credentials));
@@ -43,7 +42,7 @@
       out.write("</pre>");
 
 		} catch (Exception e) {
-			
+
 		}
 
 %>

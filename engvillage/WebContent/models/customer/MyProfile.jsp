@@ -9,13 +9,14 @@ and
 3. redirects to the appropriate page based on the displayform value
 if the authentication is successfull.
 -->
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
 <%@ page errorPage="/error/errorPage.jsp"%>
 
 <%@ page import="org.ei.domain.personalization.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.domain.*"%>
 
@@ -188,11 +189,9 @@ if the authentication is successfull.
     //get the client session object from that get the session id.
     client = new ControllerClient(request,response);
     UserSession ussession=(UserSession)client.getUserSession();
-    String sSessionId = ussession.getID();
-    SessionID sessionIdObj = ussession.getSessionID();
-     IEVWebUser user = ussession.getUser();
+    String sSessionId = ussession.getSessionid();
 
-    pUserId = ussession.getUserIDFromSession();
+    pUserId = ussession.getUserid();
     if((pUserId != null) && (pUserId.length() != 0))
     {
         personalization=true;
@@ -201,11 +200,11 @@ if the authentication is successfull.
     // NOV 2004
     // jam added when pop-up login removed
     out.write("<HEADER/>");
-    out.write(GlobalLinks.toXML(user.getCartridge()));
+    out.write(GlobalLinks.toXML(ussession.getCartridge()));
     out.write("<FOOTER/>");
 
-    String customerId=user.getCustomerID().trim();
-    String strContractId = user.getContractID().trim();
+    String customerId=ussession.getCustomerid().trim();
+    String strContractId = ussession.getContractid().trim();
 
     clientCustomizer=new ClientCustomizer(ussession);
     if(clientCustomizer.isCustomized())
@@ -228,7 +227,7 @@ if the authentication is successfull.
 	}
 	out.write("</PAGE-NAV>");
     out.write("<SESSION-ID>");
-    out.write(sessionIdObj.toString());
+    out.write(ussession.getSessionid());
     out.write("</SESSION-ID>");
     out.write("<CUSTOMIZED-LOGO>");
     out.write(customizedLogo );

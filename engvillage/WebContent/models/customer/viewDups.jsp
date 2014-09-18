@@ -6,13 +6,12 @@
 <%@ page import="java.io.*"%>
 <%@ page import="java.util.*"%>
 <%@ page import="org.ei.domain.*"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
 
 <%
     String sessionId = null;
-    SessionID sessionIdObj = null;
 
 	String dups = null;
 	Page oPage = null;
@@ -21,7 +20,7 @@
 
     ControllerClient client = new ControllerClient(request, response);
     UserSession ussession = (UserSession)client.getUserSession();
-    sessionId = ussession.getID();
+    sessionId = ussession.getSessionid();
 
     try
     {

@@ -5,8 +5,9 @@ import java.util.List;
 
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
-import org.ei.config.RuntimeProperties;
-import org.ei.domain.personalization.IEVWebUser;
+import org.ei.biz.personalization.IEVWebUser;
+import org.ei.config.ApplicationProperties;
+import org.ei.config.EVProperties;
 import org.ei.session.UserPreferences;
 import org.ei.session.UserSession;
 import org.ei.stripes.EVActionBeanContext;
@@ -16,19 +17,19 @@ import org.ei.stripes.action.EVPathUrl;
  * The Class CustomizedLogo.
  */
 public class CustomizedLogo {
-    
+
 	/** The log4j. */
 	private static Logger log4j = Logger.getLogger(CustomizedLogo.class);
-	
+
 	/** The customer image path. */
 	private static String  customerImagePath = null;
-    
+
     /** The imgsrc. */
     private String imgsrc;
-	
+
 	/** The customerurl. */
 	private String customerurl;
-	
+
 	/**
 	 * Gets the imgsrc.
 	 *
@@ -38,17 +39,17 @@ public class CustomizedLogo {
 		if (imgsrc == null) return null;
 		else return imgsrc ;
 	}
-	
+
 	/**
 	 * Sets the imgsrc.
 	 *
 	 * @param imgsrc the new imgsrc
 	 */
 	public void setImgsrc(String imgsrc) {
-		
+
 		this.imgsrc = imgsrc;
 	}
-	
+
 	/**
 	 * Gets the customerurl.
 	 *
@@ -57,7 +58,7 @@ public class CustomizedLogo {
 	public String getCustomerurl() {
 		return customerurl;
 	}
-	
+
 	/**
 	 * Sets the customerurl.
 	 *
@@ -72,26 +73,26 @@ public class CustomizedLogo {
 	 *
 	 * @param context the context
 	 * @return the customized logo
-	 */ 
+	 */
 	public static CustomizedLogo build(EVActionBeanContext context) {
 		CustomizedLogo logo = null;
 		try {
 			UserSession usersession = context.getUserSession();
 			if (usersession == null || usersession.getUser() == null) return null;
-		
+
 			UserPreferences userprefs = context.getUserSession().getUser().getUserPreferences();
 			if(userprefs == null || !userprefs.isClientCustomLogo()) return null;
-			
+
 			IEVWebUser evWebUser = usersession.getUser();
 			if(evWebUser == null || evWebUser.getAccount() == null ) return null;
-			
+
 			String accountId = evWebUser.getAccount().getAccountId();
-			
+
 			if (!GenericValidator.isBlankOrNull(accountId)) {
 					logo = new CustomizedLogo();
 					if(customerImagePath == null){
-						RuntimeProperties runtimeprops = RuntimeProperties.getInstance();
-						customerImagePath = runtimeprops.getProperty(RuntimeProperties.CUSTOMER_IMAGES_URL_PATH,"https://s3.amazonaws.com/ev-customer-images/");
+						ApplicationProperties runtimeprops = EVProperties.getApplicationProperties();
+						customerImagePath = runtimeprops.getProperty(ApplicationProperties.CUSTOMER_IMAGES_URL_PATH,"https://s3.amazonaws.com/ev-customer-images/");
 					}
 					logo.setImgsrc(customerImagePath+accountId +".gif");
 					if(turkishAccountIds.contains(accountId)){
@@ -106,10 +107,10 @@ public class CustomizedLogo {
 		}
 		return logo;
 	}
-	
+
 	/** The turkish account ids. */
 	private static List<String> turkishAccountIds = new ArrayList<String>();
-	
+
 	static {
 		turkishAccountIds.add("38618");
 		turkishAccountIds.add("264741");
@@ -129,5 +130,5 @@ public class CustomizedLogo {
 		turkishAccountIds.add("38658");
 		turkishAccountIds.add("67394");
 	}
-	
+
 }

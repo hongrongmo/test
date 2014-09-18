@@ -80,6 +80,8 @@ function ajaxCitedByFunction()
       {
         sessionID = sessionID.substring(sessionID.indexOf("_")+1);
         queryString=queryString+"SID:"+sessionID+"|";
+      }else if(sessionID.length > 0) {
+    	queryString=queryString+"SID:"+sessionID+"|";
       }
     }
     if(i<arr.length-1)
@@ -88,7 +90,6 @@ function ajaxCitedByFunction()
     }
   }
   params = queryString;
-
   //
   // AJAX call to the citedby webservice
   //

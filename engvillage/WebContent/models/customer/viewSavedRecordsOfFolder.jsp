@@ -5,6 +5,7 @@
 * @param java.lang.String.cid
 * @param java.lang.String.databse
 --%>
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
 <%-- import statements of Java packages--%>
@@ -14,8 +15,8 @@
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.config.*"%>
 <%@ page import="org.ei.domain.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*" %>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession" %>
 <%@ page import="org.ei.domain.personalization.GlobalLinks"%>
 <%@ page import="org.ei.domain.Searches "%>
 
@@ -24,7 +25,6 @@
 <%@ page buffer="20kb"%>
 <%
     DatabaseConfig databaseConfig = DatabaseConfig.getInstance();
-    SessionID sessionIdObj = null;
     SavedRecords savedRecords = null;
     ControllerClient client = null;
     ClientCustomizer clientCustomizer=null;
@@ -59,10 +59,8 @@
     client = new ControllerClient(request,response);
     UserSession ussession = (UserSession)client.getUserSession();
 
-    sessionid = ussession.getID();
-    sessionIdObj = ussession.getSessionID();
-    IEVWebUser user = ussession.getUser();
-    String[] credentials = user.getCartridge();
+    sessionid = ussession.getSessionid();
+    String[] credentials = ussession.getCartridge();
 
     // should we add Searches.getMostRecentInSession() method?
     // to avoid returning entire list from folder?
@@ -91,23 +89,23 @@
         recentXMLQuery = "<SESSION-DATA><DATABASE-MASK>1</DATABASE-MASK><SEARCH-TYPE>NONE</SEARCH-TYPE></SESSION-DATA>";
     }
 
-    String customerId=user.getCustomerID().trim();
-    String contractId=user.getContractID().trim();
+    String customerId=ussession.getCustomerid().trim();
+    String contractId=ussession.getContractid().trim();
 
-    localHolding=new LocalHolding(ussession);
+    localHolding=new LocalHolding(ussession.getProperty(UserSession.LOCAL_HOLDING_KEY));
     clientCustomizer=new ClientCustomizer(ussession);
-    
+
     if(request.getParameter("CID") != null)
     {
         cid=request.getParameter("CID").trim();
     }
-    
+
     if(clientCustomizer.isCustomized())
     {
         isPersonalizationPresent=clientCustomizer.checkPersonalization();
         isLHLPresent=clientCustomizer.checkDDS();
         isFullTextPresent=clientCustomizer.checkFullText("citationResults");
-      	
+
         //There is no fence setting for abstract and detailed view
         if( (cid!=null) && ( (cid.equals("viewAbstractSavedRecords")) || (cid.equals("viewDetailedSavedRecords")) ) ){
         	isCitLocalHoldingsPresent = true;
@@ -122,17 +120,10 @@
     String userId = null;
     String sUserId=null;
 
-    sUserId=ussession.getUserIDFromSession();
+    sUserId=ussession.getUserid();
     if((sUserId != null) && (sUserId.trim().length() != 0))
     {
         personalization=true;
-    }
-
-    if( sUserId != null)
-    {
-        userId = sUserId;
-    }else{
-    	userId = user.getUserId();
     }
 
     // Retrieve all the request parameters
@@ -141,7 +132,7 @@
         redirect=request.getParameter("redirect").trim();
     }
 
-    
+
     if(request.getParameter("folderid") != null)
     {
 
@@ -152,36 +143,36 @@
     {
         database=request.getParameter("database").trim();
     }
-    
+
     if(request.getParameter("backurl") != null)
     {
     	backurl=request.getParameter("backurl").trim();
     }
-    
+
     if(request.getParameter("searchresults") != null)
     {
     	searchresults=request.getParameter("searchresults").trim();
     }else{
     	searchresults="searchresults";
     }
-    
+
     if(request.getParameter("newsearch") != null)
     {
     	newsearch=request.getParameter("newsearch").trim();
     }else{
     	newsearch="newsearch";
     }
-    
+
     if( request.getParameter("DOCINDEX") != null)
 	{
 		docindex=request.getParameter("DOCINDEX").trim();
-		
+
 	}
-    
+
     if( request.getParameter("format") != null)
    	{
     	format=request.getParameter("format").trim();
-   		
+
    	}
 
   /*
@@ -230,7 +221,7 @@
     }
 
 
-    String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
+    String strGlobalLinksXML = GlobalLinks.toXML(ussession.getCartridge());
 
     if( (folderSize>0) && (redirect==null))
     {
@@ -285,9 +276,9 @@
             .append("<FOOTER/>")
 
             .append("<SESSION-ID>")
-            .append(sessionIdObj.toString())
+            .append(sessionid)
             .append("</SESSION-ID>")
-            .append("<CID>"+cid+"</CID>") 
+            .append("<CID>"+cid+"</CID>")
             .append("<CUSTOMIZED-LOGO>"+customizedLogo+"</CUSTOMIZED-LOGO>")
             .append("<PERSONALIZATION-PRESENT>"+isPersonalizationPresent+"</PERSONALIZATION-PRESENT>")
             .append("<PERSONALIZATION>")
@@ -349,7 +340,7 @@
         .append(strGlobalLinksXML)
         .append("<FOOTER/>")
         .append("<SESSION-ID>")
-        .append(sessionIdObj.toString())
+        .append(sessionid)
         .append("</SESSION-ID>")
         .append("<CID>"+cid+"</CID>")
         .append("<CUSTOMIZED-LOGO>"+customizedLogo+"</CUSTOMIZED-LOGO>")

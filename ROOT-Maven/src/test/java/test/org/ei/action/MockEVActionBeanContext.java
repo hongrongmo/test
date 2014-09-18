@@ -9,9 +9,9 @@ import java.util.Set;
 
 import org.apache.log4j.Logger;
 import org.ei.ane.entitlements.UserEntitlement;
+import org.ei.biz.personalization.EVWebUser;
+import org.ei.biz.personalization.IEVWebUser;
 import org.ei.controller.logging.LogEntry;
-import org.ei.domain.personalization.EVWebUser;
-import org.ei.domain.personalization.IEVWebUser;
 import org.ei.exception.SessionException;
 import org.ei.session.CartridgeBuilder;
 import org.ei.session.UserPreferences;
@@ -32,29 +32,29 @@ public class MockEVActionBeanContext extends EVActionBeanContext {
     // Fences: [LHL, LHC, THS, REF, TAG, GAR, STMOff, SRTre, CHE, CIV, COM, ELE, MAT, SEC, PAG]
     // Text Zones: [CSY1884, ISY1896, NSY1899, USY1790, ESY1978, BSY1985, GSY1980, ASY1967, PSY1987, ZSY1884, HSY1970, MSY1963, LSY1962, FSY1896, XSY1785, expertSearch]
     private static UserEntitlement[] alldbs = new UserEntitlement[] {
-        UserEntitlement.CPX_ENTITLEMENT, UserEntitlement.CBF_ENTITLEMENT, UserEntitlement.CBN_ENTITLEMENT, UserEntitlement.CHM_ENTITLEMENT, 
-        UserEntitlement.ELT_ENTITLEMENT, UserEntitlement.EPT_ENTITLEMENT, UserEntitlement.EUP_ENTITLEMENT, UserEntitlement.UPA_ENTITLEMENT, 
-        UserEntitlement.GEO_ENTITLEMENT, UserEntitlement.GRF_ENTITLEMENT, UserEntitlement.INS_ENTITLEMENT, UserEntitlement.IBF_ENTITLEMENT, 
+        UserEntitlement.CPX_ENTITLEMENT, UserEntitlement.CBF_ENTITLEMENT, UserEntitlement.CBN_ENTITLEMENT, UserEntitlement.CHM_ENTITLEMENT,
+        UserEntitlement.ELT_ENTITLEMENT, UserEntitlement.EPT_ENTITLEMENT, UserEntitlement.EUP_ENTITLEMENT, UserEntitlement.UPA_ENTITLEMENT,
+        UserEntitlement.GEO_ENTITLEMENT, UserEntitlement.GRF_ENTITLEMENT, UserEntitlement.INS_ENTITLEMENT, UserEntitlement.IBF_ENTITLEMENT,
         UserEntitlement.NTI_ENTITLEMENT, UserEntitlement.PCH_ENTITLEMENT};
     private static String[] allfences = new String[] {
-        UserPreferences.FENCE_ASKANEXPERT, UserPreferences.FENCE_AUTOSTEMMING, UserPreferences.FENCE_BLOGTHIS_OFF, UserPreferences.FENCE_BULLETINS, 
-        UserPreferences.FENCE_EMAIL_ALERTS_CC, UserPreferences.FENCE_EBOOK, UserPreferences.FENCE_ENCOMPASS_LIT_HTML, UserPreferences.FENCE_ENCOMPASS_LIT_PDF, 
-        UserPreferences.FENCE_ENCOMPASS_PAT_HTML, UserPreferences.FENCE_ENCOMPASS_PAT_PDF, UserPreferences.FENCE_FULL_TEXT_LINKING_ABSTRACT_DETAILED, 
+        UserPreferences.FENCE_ASKANEXPERT, UserPreferences.FENCE_AUTOSTEMMING, UserPreferences.FENCE_BLOGTHIS_OFF, UserPreferences.FENCE_BULLETINS,
+        UserPreferences.FENCE_EMAIL_ALERTS_CC, UserPreferences.FENCE_EBOOK, UserPreferences.FENCE_ENCOMPASS_LIT_HTML, UserPreferences.FENCE_ENCOMPASS_LIT_PDF,
+        UserPreferences.FENCE_ENCOMPASS_PAT_HTML, UserPreferences.FENCE_ENCOMPASS_PAT_PDF, UserPreferences.FENCE_FULL_TEXT_LINKING_ABSTRACT_DETAILED,
         UserPreferences.FENCE_FULL_TEXT_LINKING_CITATION, UserPreferences.FENCE_NAV_GRAPHS_DOWNLOAD, UserPreferences.FENCE_THESAURUS};
     private static Map<String,String> alltextzones = new HashMap<String,String>();
-    
+
     private static UserSession usersession = new UserSession();
     static {
         restore();
     }
-    
+
     public static void restore() {
         Set<UserEntitlement> userEntitlementList = new HashSet<UserEntitlement>();
         userEntitlementList.addAll(Arrays.asList(alldbs));
-        
+
         alltextzones.clear();
         usersession.getUserEntitlements().clear();
-        
+
         alltextzones.put("INSPEC_SELECTED_START_YEAR", "1896");
         alltextzones.put("ENG_IND_BACKFILE_START", "1884");
         alltextzones.put("CUSTOMER_ID", "1001772");
@@ -85,10 +85,10 @@ public class MockEVActionBeanContext extends EVActionBeanContext {
         for (String fence : allfences) {
             user.setPreference(fence, true);
         }
-        
-        buildCartridge();        
+
+        buildCartridge();
     }
-    
+
     public static void buildCartridge() {
         List<String> cartridge;
         IEVWebUser user = usersession.getUser();
@@ -98,7 +98,7 @@ public class MockEVActionBeanContext extends EVActionBeanContext {
         } catch (SessionException e) {
             log4j.error("Unable to build user cartridge!",e);
         }
-        
+
     }
 
     @Override
@@ -112,15 +112,15 @@ public class MockEVActionBeanContext extends EVActionBeanContext {
     public UserSession getUserSession() {
         return usersession;
     }
-    
+
     public static UserSession getStaticUserSession() {
         return usersession;
     }
-    
+
     @Override
     public void setSessionCookie() {
         // When unit testing, do nothing here!encodedACWRequestParm
         return;
     }
-    
+
 }

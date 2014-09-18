@@ -3,7 +3,7 @@
 <%@ page import="java.io.*"%>
 <%@ page import="java.util.*"%>
 <%@ page import="org.ei.trial.*"%>
-<%@ page import ="org.ei.controller.ControllerClient"%>
+<%@ page import ="org.engvillage.biz.controller.ControllerClient"%>
 <%@ page errorPage="/error/errorPage.jsp"%>
 <%
 	String startMonth=request.getParameter("startMonth");

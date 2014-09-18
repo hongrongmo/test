@@ -13,8 +13,8 @@
 <!--import statements of ei packages.-->
 <%@  page import="org.ei.domain.*"%>
 <%@  page import="org.ei.config.*"%>
-<%@  page import="org.ei.controller.ControllerClient"%>
-<%@  page import="org.ei.session.*"%>
+<%@  page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@  page import="org.engvillage.biz.controller.UserSession"%>
 
 <%@ page errorPage="/error/errorPage.jsp"%>
 
@@ -72,7 +72,7 @@
 	client = new ControllerClient(request, response);
 	UserSession ussession = (UserSession) client.getUserSession();
 
-	sessionid = ussession.getID();
+	sessionid = ussession.getSessionid();
 
 	// Create the Document Basket object.
 	documentBasket = new DocumentBasket(sessionid);

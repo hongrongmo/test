@@ -1,6 +1,6 @@
 package org.ei.biz.security;
 
-import org.ei.domain.personalization.IEVWebUser;
+import org.ei.biz.personalization.IEVWebUser;
 
 /**
  * An access control specifies whether a given user can access a given resource. This interface defines all the methods common to any access control.

@@ -1,3 +1,4 @@
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java"%>
 <%@ page session="false"%>
 <!--
@@ -17,8 +18,8 @@
 
 <!--import statements of ei packages.-->
 
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.domain.*"%>
 <%@ page import="org.ei.config.*"%>
@@ -38,8 +39,6 @@
     PageEntry entry = null;
 
     DatabaseConfig databaseConfig = DatabaseConfig.getInstance();
-
-    SessionID sessionIdObj = null;
 
     String pUserId = null;
     boolean personalization = false;
@@ -69,15 +68,13 @@
         //Getting sessionid from controllerClient
         ControllerClient client = new ControllerClient(request, response);
         UserSession ussession = (UserSession) client.getUserSession();
-        sessionIdObj = ussession.getSessionID();
-        pUserId = ussession.getUserIDFromSession();
+        pUserId = ussession.getUserid();
         if ((pUserId != null) && (pUserId.trim().length() != 0)) {
             personalization = true;
         }
 
-        IEVWebUser user = ussession.getUser();
-        String[] credentials = user.getCartridge();
-        String customerId = user.getCustomerID().trim();
+        String[] credentials = ussession.getCartridge();
+        String customerId = ussession.getCustomerid().trim();
 
         clientCustomizer = new ClientCustomizer(ussession);
         isFullTextPresent = clientCustomizer.checkFullText();
@@ -191,7 +188,7 @@
          */
         client.setRemoteControl();
 
-        String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
+        String strGlobalLinksXML = GlobalLinks.toXML(ussession.getCartridge());
 
         //	FileWriter out1 = new FileWriter("c:/baja/ReferenerDetail.xml");
         out.write("<PAGE>");
@@ -244,7 +241,7 @@
         out.write("<LOCALHOLDINGS>" + isLocalHolidinsPresent + "</LOCALHOLDINGS>");
         out.write("<DATABASE>" + database + "</DATABASE>");
         out.write("<RESULTS-COUNT>1</RESULTS-COUNT>");
-        out.write("<SESSION-ID>" + sessionIdObj.toString() + "</SESSION-ID>");
+        out.write("<SESSION-ID>" + ussession.getSessionid() + "</SESSION-ID>");
         out.write("<PERSONALIZATION>" + personalization + "</PERSONALIZATION>");
         out.write("<SEARCH-ID>" + searchID + "</SEARCH-ID>");
         out.write("<PAGE-INDEX>1</PAGE-INDEX>");

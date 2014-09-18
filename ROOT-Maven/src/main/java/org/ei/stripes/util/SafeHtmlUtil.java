@@ -29,7 +29,8 @@ import java.util.regex.Pattern;
  */
 public class SafeHtmlUtil {
 
-    private static Pattern scriptPattern = Pattern.compile("script", Pattern.CASE_INSENSITIVE);
+    private static Pattern scriptOpenPattern = Pattern.compile("\\<script\\>", Pattern.CASE_INSENSITIVE);
+    private static Pattern scriptClosedPattern = Pattern.compile("\\<\\/script\\>", Pattern.CASE_INSENSITIVE);
 
     /**
      * Sanitize user inputs.
@@ -48,22 +49,9 @@ public class SafeHtmlUtil {
      * @return the encoded string
      */
     public static String HTMLEntityEncode(String input) {
-        String next = scriptPattern.matcher(input).replaceAll("&#x73;cript");
-
-        StringBuffer sb = new StringBuffer();
-        for (int i = 0; i < next.length(); ++i) {
-            char ch = next.charAt(i);
-
-            if (ch == '<') {
-                sb.append("&lt;");
-            } else if (ch == '>') {
-                sb.append("&gt;");
-            } else {
-                sb.append(ch);
-            }
-        }
-
-        return sb.toString();
+        input = scriptOpenPattern.matcher(input).replaceAll("&lt;script&gt;");
+        input = scriptClosedPattern.matcher(input).replaceAll("&lt;/script&gt;");
+        return input;
     }
 
     /**

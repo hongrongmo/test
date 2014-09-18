@@ -5,8 +5,8 @@
 <%@ page import="java.net.*"%>
 <%@ page import="java.io.*"%>
 <%@ page import="org.ei.domain.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.query.base.*"%>
 <%@ page import="org.ei.parser.base.*"%>
@@ -26,7 +26,6 @@
 	org.ei.domain.Query queryObject = null;
 	ControllerClient client = new ControllerClient(request, response);
 	String sessionId = null;
-	SessionID sessionIdObj = null;
 	String searchID = null;
 	String format = StringUtil.EMPTY_STRING;
 	String term1 = null;
@@ -70,11 +69,11 @@
 
 		/*
 		UserSession ussession = (UserSession) client.getUserSession();
-		sessionId = ussession.getID();
+		sessionId = ussession.getSessionid();
 		sessionIdObj = ussession.getSessionID();
 		IEVWebUser user = ussession.getUser();
 		int intDbMask = Integer.parseInt(dbName);
-		String[] credentials = user.getCartridge();
+		String[] credentials = ussession.getCartridge();
 		if (credentials == null) {
 			credentials = new String[3];
 			credentials[0] = "CPX";
@@ -83,7 +82,7 @@
 		}
 */
         int intDbMask = Integer.parseInt(dbName);
-		List<String> carlist = CartridgeBuilder.buildUserCartridgeForRSS(intDbMask);
+		List<String> carlist = UserSession.buildUserCartridgeForRSS(intDbMask);
 		String[] credentials = null;
 		if (carlist.size() <= 0) {
 		    credentials = new String[3];
@@ -144,7 +143,7 @@
         UserSession ussession = (UserSession) client.getUserSession();
 		if (docIds.size() > 0) {
 			Pagemaker pagemaker = new Pagemaker(sessionId, 25, docIds, Citation.XMLCITATION_FORMAT);
-			String serverName = ussession.getEnvBaseAddress();
+			String serverName = ussession.getProperty(UserSession.ENV_BASEADDRESS);
 			out.write("<!--BH--><HEADER>");
 			out.write("<SEARCH-ID>" + queryID + "</SEARCH-ID>");
 			out.write("</HEADER>");

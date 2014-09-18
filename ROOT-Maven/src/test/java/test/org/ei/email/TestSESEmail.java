@@ -5,10 +5,10 @@ package test.org.ei.email;
 
 import java.io.IOException;
 
+import org.ei.biz.email.SESEmail;
+import org.ei.biz.email.SESMessage;
+import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
-import org.ei.email.SESEmail;
-import org.ei.email.SESMessage;
 import org.ei.exception.ServiceException;
 import org.ei.exception.SystemErrorCodes;
 import org.junit.Assert;
@@ -33,9 +33,9 @@ public class TestSESEmail {
         EVProperties.getInstance();
         EVProperties.setStartup(System.currentTimeMillis());
 
-        RuntimeProperties rtp = RuntimeProperties.getInstance();
+        ApplicationProperties rtp = EVProperties.getApplicationProperties();
         rtp.setProperty("mail.smtp.noreply", "einoreply@elsevier.com");
-        EVProperties.setRuntimeProperties(rtp);
+        EVProperties.setApplicationProperties(rtp);
     }
 
     @Test

@@ -9,11 +9,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import org.ei.biz.personalization.IEVWebUser;
 import org.ei.connectionpool.ConnectionBroker;
 import org.ei.domain.ContactInfo;
 import org.ei.domain.LhlException;
 import org.ei.domain.LhlUserInfo;
-import org.ei.domain.personalization.IEVWebUser;
 import org.ei.session.UserBroker;
 import org.ei.util.StringUtil;
 

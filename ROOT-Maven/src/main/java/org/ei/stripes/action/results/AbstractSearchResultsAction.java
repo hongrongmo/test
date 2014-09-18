@@ -12,6 +12,7 @@ import net.sourceforge.stripes.action.Resolution;
 import org.apache.log4j.Logger;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.DatabaseDisplayHelper;
+import org.ei.domain.SortOption;
 import org.ei.exception.ErrorXml;
 import org.ei.session.UserPreferences;
 import org.ei.stripes.action.SystemMessage;
@@ -22,7 +23,6 @@ import org.ei.stripes.view.PatentrefSummary;
 import org.ei.stripes.view.ResultsNavigatorItem;
 import org.ei.stripes.view.SearchResult;
 import org.ei.stripes.view.SearchResultNavigator;
-import org.ei.stripes.view.SortOption;
 
 /**
  * This is an abstract class that represents a search results action. Any ActionBean that needs to create search results should extend this class.

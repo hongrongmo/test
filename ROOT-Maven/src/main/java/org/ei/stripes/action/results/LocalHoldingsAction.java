@@ -12,9 +12,9 @@ import net.sourceforge.stripes.action.UrlBinding;
 
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
+import org.ei.biz.email.SESEmail;
+import org.ei.biz.email.SESMessage;
 import org.ei.config.EVProperties;
-import org.ei.email.SESEmail;
-import org.ei.email.SESMessage;
 import org.ei.exception.ServiceException;
 import org.ei.stripes.action.EVActionBean;
 
@@ -156,7 +156,7 @@ public class LocalHoldingsAction extends EVActionBean {
             to = "library@lamrc.com";
         }
 
-        String sender = EVProperties.getRuntimeProperties().getProperty("SENDER_EMAIL_ADDRESS", "eicustomersupport@elsevier.com");
+        String sender = EVProperties.getApplicationProperties().getProperty("SENDER_EMAIL_ADDRESS", "eicustomersupport@elsevier.com");
         SESMessage sesmessage = new SESMessage(to, sender, "Engineering Village Full text request", message.toString(),false);
         sesmessage.setReplyTo(request.getParameter("emailaddress"));
         log4j.info("Sending local holding email to: '" + to + "'");

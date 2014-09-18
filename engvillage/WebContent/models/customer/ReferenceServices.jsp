@@ -2,6 +2,7 @@
  * This page the follwing params as input and generates XML output.
  * @param java.lang.String
 --%>
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java" %>
 <%@ page session="false"%>
 <%@ page contentType="text/xml"%>
@@ -11,16 +12,14 @@
 <%@ page import="java.net.URLEncoder"%>
 
 <%-- import statements of ei packages. --%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.domain.*"%>
 <%@ page import="org.ei.domain.personalization.GlobalLinks"%>
 
 <%@ page errorPage="/error/errorPage.jsp"%>
 <%
-
-	SessionID sessionIdObj = null;
 
 	// Variable to hold the Personalization userid
 	String pUserId = null;
@@ -45,14 +44,10 @@
 
 	UserSession ussession=(UserSession)client.getUserSession();
 
-	//client.updateUserSession(ussession);
-	sessionIdObj = ussession.getSessionID();
-
-	pUserId = ussession.getUserIDFromSession();
+	pUserId = ussession.getUserid();
 	if((pUserId != null) && (pUserId.trim().length() != 0)){
 		personalization=true;
 	}
-  IEVWebUser user = ussession.getUser();
 	ClientCustomizer clientCustomizer = new ClientCustomizer(ussession);
 
   if(database == null)
@@ -67,7 +62,7 @@
 	}
 
   /* set the mask to CPX, INS or both. Leave empty if neither */
-  String[] cars = user.getCartridge();
+  String[] cars = ussession.getCartridge();
   int userMask = (DatabaseConfig.getInstance()).getMask(cars);
   int refsvcsmask = 0;
   if((userMask & DatabaseConfig.CPX_MASK) == DatabaseConfig.CPX_MASK) {
@@ -87,10 +82,10 @@
 
 	client.setRemoteControl();
 
-	String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
+	String strGlobalLinksXML = GlobalLinks.toXML(ussession.getCartridge());
 %>
 <PAGE>
-<SESSION-ID><%=sessionIdObj.toString()%></SESSION-ID>
+<SESSION-ID><%=ussession.getSessionid()%></SESSION-ID>
 <CUSTOMIZED-LOGO><%=customizedLogo%></CUSTOMIZED-LOGO>
 <PERSONALIZATION-PRESENT><%=isPersonalizationPresent%></PERSONALIZATION-PRESENT>
 <PERSONALIZATION><%=personalization%></PERSONALIZATION>
@@ -153,13 +148,13 @@
 
         out.write("]]></GURU_SEARCHLINK>");
       }
-      
+
       if(guruInfo.containsKey(guru)){
     	  out.write("<GURU_INFO><![CDATA[");
     	  out.write((String) guruInfo.get(guru));
     	  out.write("]]></GURU_INFO>");
       }
-      
+
       else {
         log("no link for " + guru);
       }
@@ -225,7 +220,7 @@
     Map authorLinks = new HashMap();
     Map disciplines = new HashMap();
     Map guruInfo= new HashMap();
-    
+
     public void jspInit()
     {
       try
@@ -240,7 +235,7 @@
         authorLinks.put("Robert D. Borchelt","((((borchelt, r.) WN AU) OR ((borchelt, robert) WN AU)) OR ((borchelt, robert d.) WN AU))");
         authorLinks.put("Ronald A. Perez","((perez, ronald) WN AU)");
         authorLinks.put("Ryo Samuel Amano","((((Amano, Ryo Samuel ) WN AU) OR ((Amano, R) WN AU)) AND ((Amano, R. S.) WN AU))");
-        
+
         guruInfo.put("Gregory A. Sedrick", "UC Foundation assistant professor and director, Engineering Management, Industrial and Manufacturing Engineering Programs, University of Tennessee");
         guruInfo.put("Ryo Samuel Amano", "Fluid and thermodynamics professor, Department of Mechanical Engineering, University of Wisconsin-Milwaukee");
         guruInfo.put("Ronald A. Perez", "Interim Dean, College of Engineering & Applied Science University of Wisconsin-Milwaukee");
@@ -248,9 +243,9 @@
         guruInfo.put("Chi Hau Chen", "Signal processing professor, Electrical and Computer Engineering, University of Massachusetts");
         guruInfo.put("Robert D. Borchelt", "Technical advisor for assembly and automation in the Corporate Operations Analysis Group, Cummins Engine Company");
         guruInfo.put("Keith Sheppard", "Professor of Materials Science and Engineering, Stevens Institute of Technology");
-        guruInfo.put("Earl E. Swartzlander, Jr.", "Professor of Materials Science and Engineering, Stevens Institute of Technology");		
-    	
-        
+        guruInfo.put("Earl E. Swartzlander, Jr.", "Professor of Materials Science and Engineering, Stevens Institute of Technology");
+
+
         Map ausearches = null;
         Map kysearches = null;
 

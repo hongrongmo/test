@@ -5,7 +5,9 @@ import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.Enumeration;
+import java.util.List;
 import java.util.StringTokenizer;
 
 import javax.servlet.ServletException;
@@ -25,13 +27,14 @@ import net.sourceforge.stripes.validation.LocalizableError;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
+import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
 import org.ei.config.JSPPathProperties;
-import org.ei.config.RuntimeProperties;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.DocumentBasket;
 import org.ei.domain.Query;
 import org.ei.domain.Searches;
+import org.ei.domain.Sort;
 import org.ei.domain.navigators.state.ResultNavigatorStateHelper;
 import org.ei.exception.EVBaseException;
 import org.ei.exception.ErrorXml;
@@ -185,7 +188,7 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 		if(searchWidget){
 			addWebEvent(new GoogleWebAnalyticsEvent(WebAnalyticsEventProperties.CAT_SEARCH_WIDGET, getFoundin(),swReferrer));
 		}
-		if (StringUtils.isNotBlank(database) && (Integer.parseInt(database) & DatabaseConfig.PAG_MASK)== DatabaseConfig.PAG_MASK && (Integer.parseInt(database) != DatabaseConfig.PAG_MASK) && RuntimeProperties.getInstance().isItTime(RuntimeProperties.REFEREX_MASK_DATE)) {
+		if (StringUtils.isNotBlank(database) && (Integer.parseInt(database) & DatabaseConfig.PAG_MASK)== DatabaseConfig.PAG_MASK && (Integer.parseInt(database) != DatabaseConfig.PAG_MASK) && EVProperties.getApplicationProperties().isItTime(ApplicationProperties.REFEREX_MASK_DATE)) {
 				database = Integer.toString(Integer.parseInt(database)-DatabaseConfig.PAG_MASK);
 		}
 
@@ -194,7 +197,7 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 			Query qObj = new Query();
 			qObj = Searches.getSearch(getRequest().getParameter("SEARCHID"));
 			if (qObj != null) {
-				appendWebEventList(qObj.createQueryEventList());
+				appendWebEventList(createQueryEventList(qObj));
 			}
 
 		}
@@ -215,7 +218,7 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 		}
 
 		// Get the values for the dropdown
-		String pageSizeOptions = EVProperties.getRuntimeProperty(RuntimeProperties.PAGESIZE_OPTIONS);
+		String pageSizeOptions = EVProperties.getProperty(ApplicationProperties.PAGESIZE_OPTIONS);
 		StringTokenizer st = new StringTokenizer(pageSizeOptions, ",");
 		if (null != st) {
 			while (st.hasMoreTokens()) {
@@ -285,6 +288,77 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 		// setPrevSrchBasketCount(getUserPrevSrchBasketCount(searchid));
 
 	}
+
+	/**
+	 * Add Google Analytics web events to a list from a Query object
+	 * @param query
+	 * @return
+	 */
+	protected List<GoogleWebAnalyticsEvent> createQueryEventList(Query query) {
+	    if (query == null) {
+
+	    }
+        List<GoogleWebAnalyticsEvent> eventList = new ArrayList<GoogleWebAnalyticsEvent>();
+        GoogleWebAnalyticsEvent theEvent = null;
+
+        String sDocType = query.getDocumentType();
+        if (!GenericValidator.isBlankOrNull(sDocType) && !(sDocType.equals("NO-LIMIT"))) {
+            theEvent = new GoogleWebAnalyticsEvent();
+            theEvent.setCategory(WebAnalyticsEventProperties.CAT_LIMIT_TO);
+            theEvent.setAction(WebAnalyticsEventProperties.ACTION_DOC_TYPE);
+            theEvent.setLabel(sDocType);
+            eventList.add(theEvent);
+        }
+        String sTreatmentType = query.getTreatmentType();
+        if (!GenericValidator.isBlankOrNull(sTreatmentType) && !(sTreatmentType.equals("NO-LIMIT"))) {
+            theEvent = new GoogleWebAnalyticsEvent();
+            theEvent.setCategory(WebAnalyticsEventProperties.CAT_LIMIT_TO);
+            theEvent.setAction(WebAnalyticsEventProperties.ACTION_TREAT_TYPE);
+            theEvent.setLabel(sTreatmentType);
+            eventList.add(theEvent);
+        }
+        String sDisciplineType = query.getDisciplineType();
+        if (!GenericValidator.isBlankOrNull(sDisciplineType) && !(sDisciplineType.equals("NO-LIMIT"))) {
+            theEvent = new GoogleWebAnalyticsEvent();
+            theEvent.setCategory(WebAnalyticsEventProperties.CAT_LIMIT_TO);
+            theEvent.setAction(WebAnalyticsEventProperties.ACTION_DISC_TYPE);
+            theEvent.setLabel(sDisciplineType);
+            eventList.add(theEvent);
+
+        }
+        String sLanguage = query.getLanguage();
+        if (!GenericValidator.isBlankOrNull(sLanguage) && (!sLanguage.equals("NO-LIMIT"))) {
+            theEvent = new GoogleWebAnalyticsEvent();
+            theEvent.setCategory(WebAnalyticsEventProperties.CAT_LIMIT_TO);
+            theEvent.setAction(WebAnalyticsEventProperties.ACTION_LANG_TYPE);
+            theEvent.setLabel(sLanguage);
+            eventList.add(theEvent);
+
+        }
+        String sLastFourUpdates = query.getLastFourUpdates();
+        if (!GenericValidator.isBlankOrNull(sLastFourUpdates)) {
+            theEvent = new GoogleWebAnalyticsEvent();
+            theEvent.setCategory(WebAnalyticsEventProperties.CAT_LIMIT_TO);
+            theEvent.setAction(WebAnalyticsEventProperties.ACTION_UPDATES);
+            theEvent.setLabel(sLastFourUpdates);
+            eventList.add(theEvent);
+        }
+        if (Sort.PUB_YEAR_FIELD.equals(query.getSortOption().getSortField())) {
+            theEvent = new GoogleWebAnalyticsEvent();
+            theEvent.setCategory(WebAnalyticsEventProperties.CAT_SORT_BY);
+            theEvent.setAction(WebAnalyticsEventProperties.ACTION_PUB_YEAR);
+            eventList.add(theEvent);
+        }
+        String sAutoStemming = query.getAutoStemming();
+        if (!GenericValidator.isBlankOrNull(sAutoStemming) && sAutoStemming.equalsIgnoreCase(Query.OFF)) {
+            theEvent = new GoogleWebAnalyticsEvent();
+            theEvent.setCategory(WebAnalyticsEventProperties.CAT_SORT_BY);
+            theEvent.setAction(WebAnalyticsEventProperties.ACTION_AUTO_STEM_OFF);
+            eventList.add(theEvent);
+        }
+
+        return eventList;
+    }
 
 	/**
 	 * Quick search results handler

@@ -707,17 +707,27 @@ $(document).ready(function() {
 			    if(qArray.indexOf($.trim($(this).text().toLowerCase()))>0){
 			        //console.log($(this).text());
 			    	if(highlightV1){
+			    		//check for cookie, if no cookie we need to figure out what color is being used.
 			    		if($.cookie('ev_highlight')){
 
 							var hlOptions = JSON.parse($.cookie("ev_highlight"));
 							if(!hlOptions.bg_highlight){
 								$(this).addClass("hit");
 								$(this).removeClass("bghit");
+								$(this).css("color", hlOptions.color);
 							}else{
 					    		$(this).addClass("bghit");
 					    		$(this).removeClass("hit");
-
 							}
+			    		}else{
+			    			if($(".hit").length > 0){
+			    				$(this).addClass("hit");
+								$(this).removeClass("bghit");
+			    			}else{
+			    				$(this).addClass("bghit");
+					    		$(this).removeClass("hit");
+			    			}
+
 			    		}
 			    	}else{
 			    		$(this).css('background-color', 'yellow');
@@ -948,10 +958,10 @@ function handleAbstractPreview(event) {
 				    	previewHtml += "<span id='theRest_"+ num +"' style='display:none;'>"+json.theRest+"</span>";
 				    }
 				    if(typeof(json.countLeft)!= 'undefined' && json.countLeft > 0){
-				    	previewHtml += "<a href='' title='Click to show full abstract inline' onclick='$(\"#theRest_"+ num +"\").toggle();$(this).hide();return false;'>...("+ json.countLeft + " more search terms)</a>";
+				    	previewHtml += "<a href='' title='Click to show full abstract inline' onclick='$(\"#theRest_"+ num +"\").toggle();$(this).hide();return false;'>... ("+ json.countLeft + " more search terms)</a>";
 
 				    }else if(typeof(json.theRest)!= 'undefined' && json.theRest.length > 0){
-				    	previewHtml += "<a href='' title='Click to show full abstract inline' onclick='$(\"#theRest_"+ num +"\").toggle();$(this).hide();return false;'>...see more</a>";
+				    	previewHtml += "<a href='' title='Click to show full abstract inline' onclick='$(\"#theRest_"+ num +"\").toggle();$(this).hide();return false;'>... see more</a>";
 				    }
 				    previewtext.html(previewHtml).slideDown("slow", resizeresults);
 				}

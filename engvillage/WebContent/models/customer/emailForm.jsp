@@ -1,6 +1,7 @@
 <!-- This file creates the xml for result coming from serach result page or from
      selected set page.
 -->
+<%@page import="org.ei.config.ApplicationProperties"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
 
@@ -9,8 +10,8 @@
 <%@ page import="java.net.*"%>
 
 <!--import statements of ei packages.-->
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.domain.*"%>
 <%@ page import="org.ei.domain.personalization.*"%>
@@ -25,7 +26,6 @@
 <%
     // This variable for sessionId
     String sessionId="";
-    SessionID sessionIdObj = null;
     // This variable for searchid
     String searchid="";
     // This variable for database name
@@ -80,10 +80,9 @@
      *  Getting the session id from the usersession.
      */
     UserSession ussession=(UserSession)client.getUserSession();
-    sessionId=ussession.getID();
-    sessionIdObj = ussession.getSessionID();
+    sessionId=ussession.getSessionid();
 
-    sUserId=ussession.getUserIDFromSession();
+    sUserId=ussession.getUserid();
     //client.updateUserSession(ussession);
 
 
@@ -93,7 +92,7 @@
     }
 
     String pageSize=null;
-    RuntimeProperties runtimeProps= ConfigService.getRuntimeProperties();
+    ApplicationProperties runtimeProps= ApplicationProperties.getInstance();
     pageSize = runtimeProps.getProperty("BASKETPAGESIZE");
     docBasketPageSize=Integer.parseInt(pageSize.trim());
 
@@ -134,7 +133,7 @@
             database = request.getParameter("database");
         }
 
-        xmlString = new StringBuffer("<PAGE><SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+        xmlString = new StringBuffer("<PAGE><SESSION-ID>"+sessionId+"</SESSION-ID>");
         xmlString.append("<SEARCH-ID>"+searchid+"</SEARCH-ID>");
         xmlString.append("<DATABASE>"+database+"</DATABASE>");
         xmlString.append("<SEARCH-QUERY>");
@@ -228,7 +227,7 @@
         }
 
 
-        xmlString = new StringBuffer("<PAGE><SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+        xmlString = new StringBuffer("<PAGE><SESSION-ID>"+sessionId+"</SESSION-ID>");
 
          if(displayFormat.equals("citation"))
          {
@@ -288,7 +287,7 @@
 
         //Writing the XML
         out.write("<PAGE>");
-        out.write("<SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+        out.write("<SESSION-ID>"+sessionId+"</SESSION-ID>");
         out.write("<SEARCH-ID>"+searchid+"</SEARCH-ID>");
         out.write("<DATABASE>"+database+"</DATABASE>");
         out.write("<DISPLAY-FORMAT>"+displayFormat+"</DISPLAY-FORMAT>");
@@ -300,7 +299,7 @@
     else if(basketCount!=0)
     {
 
-        xmlString = new StringBuffer("<PAGE><SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+        xmlString = new StringBuffer("<PAGE><SESSION-ID>"+sessionId+"</SESSION-ID>");
         xmlString.append("<DATABASE>"+database+"</DATABASE>");
          if( (displayFormat.equals("citationSelectedSet")) || (displayFormat.equals("citation")) )
          {
@@ -367,7 +366,7 @@
     }
     else
     {
-        xmlString = new StringBuffer("<PAGE><SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+        xmlString = new StringBuffer("<PAGE><SESSION-ID>"+sessionId+"</SESSION-ID>");
         xmlString.append("<DATABASE>"+database+"</DATABASE>");
         xmlString.append("<ERROR-PAGE>true</ERROR-PAGE>");
         xmlString.append("</PAGE>");

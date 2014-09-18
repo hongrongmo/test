@@ -27,6 +27,13 @@ $.fn.resize = function(max_size) {
 // After the DOM is ready, resize the custom logo
 //
 $(document).ready(function() {
+
+	//move the survey tip to the bottom
+	if($("#ev_survey").length > 0){
+		//move to bottom
+		$("#ev_survey").css("top", $(window).height());
+	}
+
 	// Initialize the login opener.  It starts as display:none
 	// in case js is turned off.
 	$("#loginPlus").show();

@@ -7,6 +7,8 @@
  * @param java.lang.String.oracleQuery
 -->
 
+<%@page import="org.engvillage.biz.controller.UserSession"%>
+<%@page import="org.engvillage.biz.controller.ControllerClient"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
 
@@ -17,8 +19,6 @@
 <!--import statements of ei packages.-->
 
 <%@ page import="org.ei.domain.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 
 <%@ page  errorPage="/error/errorPage.jsp"%>
@@ -42,7 +42,7 @@
 
 	client = new ControllerClient(request, response);
 	UserSession ussession=(UserSession)client.getUserSession();
-	sessionid = ussession.getID();
+	sessionid = ussession.getSessionid();
 
 
 	if(request.getParameter("database") != null)

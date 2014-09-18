@@ -72,6 +72,8 @@ public class UserPreferences implements IUserPreferences, Serializable {
     public static final String FENCE_ENABLE_MODAL_DIALOG = "ENABLE_MODAL_DIALOG";
     public static final String FENCE_ENABLE_MODAL_DIALOG_2 = "ENABLE_MODAL_DIALOG_2";
 
+
+
     // Referex fences
     public static final String FENCE_REFEREX_PERPETUAL = "BPE";
     public static final String FENCE_REFEREX_CHE = "CHE";
@@ -167,7 +169,8 @@ public class UserPreferences implements IUserPreferences, Serializable {
 
     public static final String FENCE_HIGHLIGHT_V1 = "HIGHLIGHT_V1";
     public static final String FENCE_HIGHLIGHT_V2 = "HIGHLIGHT_V2";
-    
+    public static final String FENCE_FEATURE_SURVEY = "FEATURE_SURVEY";
+
     // Shiboleth fence
     public static final String FENCE_INSTITUTIONAL_SHIB_LOGIN_LINK = "FENCE_INSTITUTIONAL_SHIB_LOGIN_LINK";
 
@@ -315,5 +318,8 @@ public class UserPreferences implements IUserPreferences, Serializable {
     public boolean isModalDialog2(){
     	return getBoolean(FENCE_ENABLE_MODAL_DIALOG_2);
     }
-   
+
+    public boolean isFeatureSurvey(){
+    	return getBoolean(FENCE_FEATURE_SURVEY);
+    }
 }
