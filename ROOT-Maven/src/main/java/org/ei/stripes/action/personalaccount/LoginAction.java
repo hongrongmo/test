@@ -92,7 +92,7 @@ public class LoginAction extends CARSActionBean {
         //
         if (CARSResponseStatus.STATUS_CODE.AUTHENTICATION_ERROR.equals(carsresponse.getResponseStatus().getStatuscode())) {
         	log4j.warn("Authentication Error response from CARS");
-        	log4j.warn(carsresponse.toString());
+        	if (EVProperties.isLogCarsResponseErrors()) log4j.warn(carsresponse.toString());
         	if(usersession.getUser().isCustomer()){
         		String ipaddress = HttpRequestUtil.getIP(context.getRequest());
             	IPBlocker.getInstance().increment(ipaddress, COUNTER.AUTHFAIL);
@@ -149,11 +149,11 @@ public class LoginAction extends CARSActionBean {
             // We must put user on FULL login page and add a message
             if (CARSResponseStatus.ERROR_TYPE.NO_ACTIVE_PATHS.equals(carsresponse.getResponseStatus().getErrortype())) {
                 log4j.warn("NO_ACTIVE_PATHS error has occurred!");
-                log4j.warn(carsresponse.toString());
+                if (EVProperties.isLogCarsResponseErrors()) log4j.warn(carsresponse.toString());
                 context.getValidationErrors().addGlobalError(OUTSIDE_IP_ERROR);
             } else if (CARSResponseStatus.ERROR_TYPE.INVALID.equals(carsresponse.getResponseStatus().getErrortype())) {
                 log4j.warn("INVALID error type returned from CARS!");
-                log4j.warn(carsresponse.toString());
+                if (EVProperties.isLogCarsResponseErrors()) log4j.warn(carsresponse.toString());
                 if ("TICURL_QUERY_STRING".equals(carsresponse.getResponseStatus().getErrorfieldname()) ||
                     "TICURL_MD5_HASH".equals(carsresponse.getResponseStatus().getErrorfieldname())) {
                     context.getValidationErrors().addGlobalError(TICURL_INVALID_ERROR);
@@ -164,27 +164,27 @@ public class LoginAction extends CARSActionBean {
                 }
             } else if (CARSResponseStatus.ERROR_TYPE.TICURL_INSTITUTION_NOT_FOUND.equals(carsresponse.getResponseStatus().getErrortype())) {
                 log4j.warn("TICURL_INSTITUTION_NOT_FOUND Error response from CARS");
-                log4j.warn(carsresponse.toString());
+                if (EVProperties.isLogCarsResponseErrors()) log4j.warn(carsresponse.toString());
                 context.getValidationErrors().addGlobalError(TICURL_INVALID_ERROR);
             } else if (CARSResponseStatus.ERROR_TYPE.LOGIN_NO_MATCH.equals(carsresponse.getResponseStatus().getErrortype())) {
                 log4j.warn("LOGIN_NO_MATCH Error response from CARS");
-                log4j.warn(carsresponse.toString());
+                if (EVProperties.isLogCarsResponseErrors()) log4j.warn(carsresponse.toString());
                 context.getValidationErrors().addGlobalError(INVALID_UNPW_ERROR);
             } else if (CARSResponseStatus.ERROR_TYPE.CRED_NO_MATCH.equals(carsresponse.getResponseStatus().getErrortype())) {
                 log4j.warn("INVALID_UNPW_ERROR Error response from CARS");
-                log4j.warn(carsresponse.toString());
+                if (EVProperties.isLogCarsResponseErrors()) log4j.warn(carsresponse.toString());
                 context.getValidationErrors().addGlobalError(INVALID_UNPW_ERROR);
             } else if (CARSResponseStatus.ERROR_TYPE.LOGIN_NO_MATCH.equals(carsresponse.getResponseStatus().getErrortype())) {
                 log4j.warn("INVALID_UNPW_ERROR Error response from CARS");
-                log4j.warn(carsresponse.toString());
+                if (EVProperties.isLogCarsResponseErrors()) log4j.warn(carsresponse.toString());
                 context.getValidationErrors().addGlobalError(INVALID_UNPW_ERROR);
             } else if (CARSResponseStatus.ERROR_TYPE.SHIB_INSTITUTION_NOT_FOUND.equals(carsresponse.getResponseStatus().getErrortype())) {
                 log4j.warn("SHIB_INSTITUTION_NOT_FOUND Error response from CARS");
-                log4j.warn(carsresponse.toString());
+                if (EVProperties.isLogCarsResponseErrors()) log4j.warn(carsresponse.toString());
                 context.getValidationErrors().addGlobalError(SHIB_INSTITUTION_NOT_FOUND_ERROR);
             } else {
                 log4j.warn("Unknown Error response from CARS");
-                log4j.warn(carsresponse.toString());
+                if (EVProperties.isLogCarsResponseErrors()) log4j.warn(carsresponse.toString());
                 context.getValidationErrors().addGlobalError(OTHER_ERROR);
                 // Clear cookies for this case
                 LogoutAction.clearCarsCookies(context.getResponse(), null);
