@@ -12,8 +12,8 @@
 <%@ page import="javax.servlet.jsp.*" %>
 <!--import statements of ei packages.-->
 <%@ page import="org.ei.connectionpool.*" %>
-<%@ page import="org.ei.controller.ControllerClient" %>
-<%@ page import="org.ei.session.*" %>
+<%@ page import="org.engvillage.biz.controller.ControllerClient" %>
+<%@ page import="org.engvillage.biz.controller.UserSession" %>
 <%@ page import="org.ei.domain.*" %>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.domain.Searches"%>
@@ -42,8 +42,8 @@
 	ControllerClient client = new ControllerClient(request, response);
 	UserSession ussession=(UserSession)client.getUserSession();
 
-	sessionId = ussession.getID();
-	userId = ussession.getUserIDFromSession();
+	sessionId = ussession.getSessionid();
+	userId = ussession.getUserid();
 
     //getting parameters through request
 	if(request.getParameter("database")!=null)

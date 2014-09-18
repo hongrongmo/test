@@ -3,13 +3,13 @@
 <%@ page import="org.ei.domain.*" %>
 <%@ page import="org.ei.domain.personalization.*" %>
 <%@ page import="org.ei.controller.*" %>
-<%@ page import="org.ei.session.*" %>
+<%@ page import="org.engvillage.biz.controller.UserSession" %>
 <%@ page import="java.util.*" %>
 <%@ page import="java.net.*"%>
 <%@ page import="java.io.*" %>
 
 
-<%@ page import ="org.ei.controller.ControllerClient"%>
+<%@ page import ="org.engvillage.biz.controller.ControllerClient"%>
 <%@ page errorPage="/error/errorPage.jsp"%>
 <%
 
@@ -29,13 +29,13 @@
     IEVWebUser user = ussession.getUser();
 
 
-    String customerId = user.getCustomerID().trim();
+    String customerId = ussession.getCustomerid().trim();
 
-    String sessionID = ussession.getID();
+    String sessionID = ussession.getSessionid();
     SessionID sessionIdObj = ussession.getSessionID();
 
     ClientCustomizer clientCustomizer = new ClientCustomizer(ussession);
-    String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
+    String strGlobalLinksXML = GlobalLinks.toXML(ussession.getCartridge());
 
 
     String term = request.getParameter("term");
@@ -44,7 +44,7 @@
     String dbName = request.getParameter("database");
     String databaseID = null;
 
-    pUserId = ussession.getUserIDFromSession();
+    pUserId = ussession.getUserid();
     if((pUserId != null) && (pUserId.trim().length() != 0))
     {
         personalization=true;
@@ -178,15 +178,15 @@
         out.write("<HEADER/>");
         out.write("<THESAURUS-HEADER/>");
         out.write("<SEARCH-TYPE>Thesaurus</SEARCH-TYPE>");
-        out.write("<HAS-INSPEC>"+UserCredentials.hasCredentials(2, databaseConfig.getMask(user.getCartridge()))+"</HAS-INSPEC>");
-        out.write("<HAS-CPX>"+UserCredentials.hasCredentials(1, databaseConfig.getMask(user.getCartridge()))+"</HAS-CPX>");
-        out.write("<HAS-GEO>"+UserCredentials.hasCredentials(8192, databaseConfig.getMask(user.getCartridge()))+"</HAS-GEO>");
-        out.write("<HAS-GRF>"+UserCredentials.hasCredentials(2097152, databaseConfig.getMask(user.getCartridge()))+"</HAS-GRF>");
-        out.write("<HAS-EPT>"+UserCredentials.hasCredentials(2048, databaseConfig.getMask(user.getCartridge()))+"</HAS-EPT>");
-        out.write("<HAS-ELT>"+UserCredentials.hasCredentials(1024, databaseConfig.getMask(user.getCartridge()))+"</HAS-ELT>");
+        out.write("<HAS-INSPEC>"+UserCredentials.hasCredentials(2, databaseConfig.getMask(ussession.getCartridge()))+"</HAS-INSPEC>");
+        out.write("<HAS-CPX>"+UserCredentials.hasCredentials(1, databaseConfig.getMask(ussession.getCartridge()))+"</HAS-CPX>");
+        out.write("<HAS-GEO>"+UserCredentials.hasCredentials(8192, databaseConfig.getMask(ussession.getCartridge()))+"</HAS-GEO>");
+        out.write("<HAS-GRF>"+UserCredentials.hasCredentials(2097152, databaseConfig.getMask(ussession.getCartridge()))+"</HAS-GRF>");
+        out.write("<HAS-EPT>"+UserCredentials.hasCredentials(2048, databaseConfig.getMask(ussession.getCartridge()))+"</HAS-EPT>");
+        out.write("<HAS-ELT>"+UserCredentials.hasCredentials(1024, databaseConfig.getMask(ussession.getCartridge()))+"</HAS-ELT>");
         out.write(strGlobalLinksXML);
         out.write("<FOOTER/>");
-        out.write("<SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+        out.write("<SESSION-ID>"+sessionId+"</SESSION-ID>");
         out.write("<CUSTOMIZED-LOGO>"+customizedLogo+"</CUSTOMIZED-LOGO>");
         out.write("<CUSTOMIZED-STARTYEAR>"+customizedStartYear+"</CUSTOMIZED-STARTYEAR>");
         out.write("<CUSTOMIZED-ENDYEAR>"+customizedEndYear+"</CUSTOMIZED-ENDYEAR>");

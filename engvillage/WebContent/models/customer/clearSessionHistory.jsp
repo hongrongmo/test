@@ -12,8 +12,8 @@
 <!--import statements of ei packages -->
 
 <%@ page import="org.ei.connectionpool.*" %>
-<%@ page import="org.ei.controller.ControllerClient" %>
-<%@ page import="org.ei.session.*" %>
+<%@ page import="org.engvillage.biz.controller.ControllerClient" %>
+<%@ page import="org.engvillage.biz.controller.UserSession" %>
 <%@ page import="org.ei.domain.*" %>
 <%@ page import="org.ei.domain.Searches" %>
 
@@ -38,7 +38,7 @@
 	// Get the session id from the ControllerClient object
 	ControllerClient client = new ControllerClient(request, response);
 	UserSession ussession=(UserSession)client.getUserSession();
-	String sessionId=ussession.getID();
+	String sessionId=ussession.getSessionid();
 
     // Get the request object parameters
 

@@ -10,8 +10,8 @@ import java.util.List;
 import junit.framework.TestCase;
 
 import org.apache.log4j.Logger;
+import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
 import org.ei.session.BlockedIPStatus;
 import org.junit.Assert;
 import org.junit.Before;
@@ -45,7 +45,7 @@ public class TestBlockedIPStatus extends TestCase {
         EVProperties.getInstance();
         EVProperties.setStartup(System.currentTimeMillis());
 
-        RuntimeProperties rtp = RuntimeProperties.getInstance();
+        ApplicationProperties rtp = EVProperties.getApplicationProperties();
         rtp.setProperty("CONSUMER_APP", "ENGVIL");
         rtp.setProperty("CONSUMER_CLIENT", "ENGVIL");
         rtp.setProperty("WEBSERVICE_LOG_LEVEL", "Default");
@@ -54,12 +54,12 @@ public class TestBlockedIPStatus extends TestCase {
         rtp.setProperty("X_ELS_AUTHENTICATION_VALUE", "ENGVIL");
         rtp.setProperty("SITE_IDENTIFIER", "engvil");
         rtp.setProperty("PLATFORM_CODE", "EV");
-        EVProperties.setRuntimeProperties(rtp);
+        EVProperties.setApplicationProperties(rtp);
     }
 
     @Test
     public void testFilterStatus() throws IOException {
-        System.out.println("Testing status filtering for environment: " + RuntimeProperties.getInstance().getRunlevel());
+        System.out.println("Testing status filtering for environment: " + EVProperties.getApplicationProperties().getRunlevel());
 
         BlockedIPStatus ipstatus = new BlockedIPStatus();
         ipstatus.setIP("testIP1");
@@ -112,7 +112,7 @@ public class TestBlockedIPStatus extends TestCase {
 
     @Test
     public void testStatusCRUD() throws IOException {
-        System.out.println("Testing status CRUD for environment: " + RuntimeProperties.getInstance().getRunlevel());
+        System.out.println("Testing status CRUD for environment: " + EVProperties.getApplicationProperties().getRunlevel());
 
         BlockedIPStatus ipstatus = new BlockedIPStatus();
         ipstatus.setIP("testIP1");
@@ -144,7 +144,7 @@ public class TestBlockedIPStatus extends TestCase {
 
     @Test
     public void testStatusList() throws IOException {
-        System.out.println("Testing status list for environment: " + RuntimeProperties.getInstance().getRunlevel());
+        System.out.println("Testing status list for environment: " + EVProperties.getApplicationProperties().getRunlevel());
 
         int total = 0;
 

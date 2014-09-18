@@ -5,13 +5,13 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.io.Writer;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import javax.xml.transform.Result;
@@ -37,7 +37,10 @@ import org.apache.fop.apps.FopFactory;
 import org.apache.fop.apps.MimeConstants;
 import org.apache.log4j.Logger;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.ei.config.RuntimeProperties;
+import org.ei.biz.personalization.IEVWebUser;
+import org.ei.biz.personalization.UserPrefs;
+import org.ei.config.ApplicationProperties;
+import org.ei.config.EVProperties;
 import org.ei.domain.Abstract;
 import org.ei.domain.BasketEntry;
 import org.ei.domain.BasketPage;
@@ -52,7 +55,6 @@ import org.ei.domain.PageEntry;
 import org.ei.domain.PageEntryBuilder;
 import org.ei.domain.personalization.FolderEntry;
 import org.ei.domain.personalization.FolderPage;
-import org.ei.domain.personalization.IEVWebUser;
 import org.ei.domain.personalization.SavedRecords;
 import org.ei.download.util.ExcelExportUtil;
 import org.ei.download.util.SaveToGoogleUsage;
@@ -84,15 +86,17 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
 
     private String downloadMedium = "";
 
+	private String filenameprefix = "";
+
    	@DontValidate
     @HandlesEvent("display")
     public Resolution display() throws InfrastructureException {
         baseaddress = context.getRequest().getServerName();
         boolean isSaveToGoogleEnabled = false;
         boolean isSaveToDropboxEnabled = false;
-        RuntimeProperties runtimeprops;
+        ApplicationProperties runtimeprops;
 		try {
-			runtimeprops = RuntimeProperties.getInstance();
+			runtimeprops = EVProperties.getApplicationProperties();
 			isSaveToGoogleEnabled =  Boolean.parseBoolean(runtimeprops.getProperty("google.drive.enabled"));
 			isSaveToDropboxEnabled = Boolean.parseBoolean(runtimeprops.getProperty("dropbox.save.enabled"));
 		} catch (Exception e) {
@@ -108,14 +112,11 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
     public Resolution dropbox() throws InfrastructureException {
 
 		boolean isSaveToDropboxEnabled = false;
-        RuntimeProperties runtimeprops;
+        ApplicationProperties runtimeprops;
 
 		try {
-			runtimeprops = RuntimeProperties.getInstance();
+			runtimeprops = EVProperties.getApplicationProperties();
 			isSaveToDropboxEnabled =  Boolean.parseBoolean(runtimeprops.getProperty("dropbox.save.enabled"));
-		} catch (IOException e) {
-			log4j.warn("Could not read the runtime property for 'dropbox.save.enabled', error occured! "+e.getMessage());
-			return SystemMessage.SYSTEM_ERROR_RESOLUTION;
 		} catch(Exception e) {
 			log4j.warn("Error occured! "+e.getMessage());
 			return SystemMessage.SYSTEM_ERROR_RESOLUTION;
@@ -131,6 +132,7 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
 			userSession.setProperty("downloadformat", downloadformat);
 			userSession.setProperty("dropBoxDownloadUrl", dropBoxDownloadUrl);
 			userSession.setProperty("displayformat", displayformat);
+			userSession.setProperty("filenameprefix", filenameprefix);
 		}
         return new ForwardResolution("/WEB-INF/pages/customer/delivery/dropbox.jsp");
     }
@@ -140,14 +142,11 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
     public Resolution dropboxredirect() throws InfrastructureException {
 		String clientId = "";
 		boolean isSaveToDropboxEnabled = false;
-        RuntimeProperties runtimeprops;
+        ApplicationProperties runtimeprops;
 		try {
-			runtimeprops = RuntimeProperties.getInstance();
+			runtimeprops = EVProperties.getApplicationProperties();
 			clientId =  runtimeprops.getProperty("dropbox.client.id");
 			isSaveToDropboxEnabled =  Boolean.parseBoolean(runtimeprops.getProperty("dropbox.save.enabled"));
-		} catch (IOException e) {
-			log4j.warn("Could not read the runtime property for 'dropbox.client.id' or 'dropbox.save.enabled', error occured! "+e.getMessage());
-			return SystemMessage.SYSTEM_ERROR_RESOLUTION;
 		} catch(Exception e) {
 			log4j.warn("Error occured! "+e.getMessage());
 			return SystemMessage.SYSTEM_ERROR_RESOLUTION;
@@ -165,6 +164,7 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
 			setDownloadformat(userSession.getProperty("downloadformat"));
 			setDropBoxDownloadUrl(userSession.getProperty("dropBoxDownloadUrl"));
 			setDisplayformat(userSession.getProperty("displayformat"));
+			setFilenameprefix(userSession.getProperty("filenameprefix"));
 		}
 
         return new ForwardResolution("/WEB-INF/pages/customer/delivery/dropbox.jsp");
@@ -174,13 +174,10 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
     public Resolution googleDrive() throws InfrastructureException {
 
 		boolean isSaveToGoogleEnabled = false;
-        RuntimeProperties runtimeprops;
+        ApplicationProperties runtimeprops;
 		try {
-			runtimeprops = RuntimeProperties.getInstance();
+			runtimeprops = EVProperties.getApplicationProperties();
 			isSaveToGoogleEnabled =  Boolean.parseBoolean(runtimeprops.getProperty("google.drive.enabled"));
-		} catch (IOException e) {
-			log4j.warn("Could not read the runtime property for 'google.drive.enabled', error occured! "+e.getMessage());
-			return SystemMessage.SYSTEM_ERROR_RESOLUTION;
 		} catch(Exception e) {
 			log4j.warn("Error occured! "+e.getMessage());
 			return SystemMessage.SYSTEM_ERROR_RESOLUTION;
@@ -570,33 +567,55 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
     private void buildTmpFileName(String docformat) {
         if (tmpfileName == null) tmpfileName = new StringBuffer();
 
-        java.util.Calendar calCurrentDate = java.util.GregorianCalendar.getInstance();
-        tmpfileName.append(calCurrentDate.get(java.util.Calendar.DAY_OF_MONTH));
-        tmpfileName.append("-");
-        tmpfileName.append(calCurrentDate.get(java.util.Calendar.MONTH) + 1);
-        tmpfileName.append("-");
-        tmpfileName.append(calCurrentDate.get(java.util.Calendar.YEAR));
-        tmpfileName.append("-");
-        tmpfileName.append(System.currentTimeMillis());
+        if(filenameprefix == null || filenameprefix.trim().isEmpty() || filenameprefix.trim().length()<3){
+        	filenameprefix = UserPrefs.DL_FILENAME_PFX;
+        }
+        tmpfileName.append(filenameprefix);
         tmpfileName.append("_");
+        if(docformat.equalsIgnoreCase(FullDoc.FULLDOC_FORMAT)){
+        	tmpfileName.append("detailed");
+        }else{
+        	if(DOWNLOAD_FORMAT_BIBTEXT.equals(downloadformat)){
+        		tmpfileName.append("BIB");
+        	}else{
+        		tmpfileName.append(docformat);
+        	}
+        }
 
-        tmpfileName.append(docformat);
+        Calendar now = Calendar.getInstance();
+        int year = now.get(Calendar.YEAR);
+        int month = now.get(Calendar.MONTH)+1; // Note: zero based!
+        int day = now.get(Calendar.DAY_OF_MONTH);
+        int hour = now.get(Calendar.HOUR_OF_DAY);
+        int minute = now.get(Calendar.MINUTE);
+        int second = now.get(Calendar.SECOND);
+        int millis = now.get(Calendar.MILLISECOND);
         tmpfileName.append("_");
-        tmpfileName.append(downloadformat);
+        tmpfileName.append(month);
+        tmpfileName.append("-");
+        tmpfileName.append(day);
+        tmpfileName.append("-");
+        tmpfileName.append(year);
+        tmpfileName.append("_");
+        tmpfileName.append(hour);
+        tmpfileName.append(minute);
+        tmpfileName.append(second);
+        tmpfileName.append(millis);
+
         if (DOWNLOAD_FORMAT_ASCII.equals(downloadformat)) {
-            tmpfileName.append("_.txt");
+            tmpfileName.append(".txt");
         } else if (DOWNLOAD_FORMAT_BIBTEXT.equals(downloadformat)) {
-            tmpfileName.append("_.bib");
+            tmpfileName.append(".bib");
         } else if (DOWNLOAD_FORMAT_CSV.equals(downloadformat)){
-        	tmpfileName.append("_.csv");
+        	tmpfileName.append(".csv");
         } else if (DOWNLOAD_FORMAT_PDF.equals(downloadformat)){
-        	tmpfileName.append("_.pdf");
+        	tmpfileName.append(".pdf");
         } else if (DOWNLOAD_FORMAT_RTF.equals(downloadformat)){
-        	tmpfileName.append("_.rtf");
+        	tmpfileName.append(".rtf");
         }else if (DOWNLOAD_FORMAT_EXCEL.equals(downloadformat)){
-        	tmpfileName.append("_.xlsx");
+        	tmpfileName.append(".xlsx");
         }else {
-            tmpfileName.append("_.ris");
+            tmpfileName.append(".ris");
         }
     }
 
@@ -688,5 +707,13 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
 		this.downloadMedium = downloadMedium;
 	}
 
+
+    public String getFilenameprefix() {
+		return filenameprefix;
+	}
+
+	public void setFilenameprefix(String filenameprefix) {
+		this.filenameprefix = filenameprefix;
+	}
 
 }

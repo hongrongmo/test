@@ -1,8 +1,9 @@
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java" %>
 <%@ page session="false"%>
 <%@ page import=" java.util.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.domain.*" %>
 <%@ page import="org.ei.bulletins.*" %>
@@ -13,63 +14,61 @@
 <%!
 
 
-  RuntimeProperties eiProps = null;
+  ApplicationProperties eiProps = null;
   ClientCustomizer clientCustomizer=null;
   boolean isPersonalizationPresent=true;
-  	
+
   public void jspInit()
   {
     	try
     	{
-      		eiProps = ConfigService.getRuntimeProperties();
+      		eiProps = ApplicationProperties.getInstance();
     	}
     	catch(Exception e)
     	{
        		e.printStackTrace();
     	}
   }
-  
+
  %>
  <%
      /**
      *   This page contains the hardcoded xml.
      */
- 
+
      // This variable holds sessionId
      SessionID sessionId = null;
      String sesID = null;
- 
+
      // This variable holds the url
      URL url = null;
 %>
- 
-<%	
- 
+
+<%
+
     ControllerClient client = new ControllerClient(request, response);
     UserSession ussession=(UserSession)client.getUserSession();
-    
+
     clientCustomizer=new ClientCustomizer(ussession);
     isPersonalizationPresent=clientCustomizer.checkPersonalization();
-    sessionId = ussession.getSessionID();    
+    sessionId = ussession.getSessionid();
     sesID = sessionId.toString();
-    
-    IEVWebUser user = ussession.getUser();
-    String cartridges[] = user.getCartridge();
-    String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
+
+    String cartridges[] = ussession.getCartridge();
+    String strGlobalLinksXML = GlobalLinks.toXML(ussession.getCartridge());
     //String appID = ussession.getProperty(UserSession.APPLICATION_KEY);
-     
-    SessionID sessionIdObj = ussession.getSessionID();
+
     BulletinBuilder builder = new BulletinBuilder();
     BulletinPage btPage = builder.buildRecentBulletins();
-    
+
     boolean showLitPdf  = false;
     boolean showPatPdf  = false;
     boolean showLitHtml = false;
     boolean showPatHtml = false;
     boolean hasLIT      = false;
     boolean hasPAT      = false;
-	
-    for (int i = 0; i < cartridges.length; i++) 
+
+    for (int i = 0; i < cartridges.length; i++)
     {
 	if(cartridges[i].toUpperCase().indexOf("LIT_HTM") > -1)
 		showLitHtml = true;
@@ -82,15 +81,15 @@
 	if(cartridges[i].toUpperCase().indexOf("LIT_HTM") > -1 || cartridges[i].toUpperCase().indexOf("LIT_PDF") > -1)
 		hasLIT = true;
 	if(cartridges[i].toUpperCase().indexOf("PAT_HTM") > -1 || cartridges[i].toUpperCase().indexOf("PAT_PDF") > -1)
-		hasPAT = true;	
+		hasPAT = true;
     }
-	
+
     //if(appID == null)
     //{
     //	appID = "Def";
     //}
 
-    String queryString = request.getParameter("queryStr");	
+    String queryString = request.getParameter("queryStr");
     String selectedDB = request.getParameter("database");
 
     BulletinQuery query = new BulletinQuery();
@@ -101,14 +100,14 @@
     StringBuffer litCartridges = new StringBuffer();
     StringBuffer patCartridges = new StringBuffer();
     BulletinGUI gui = new BulletinGUI();
-    
-    
+
+
     if(queryString != null)
-    {    
-	query.setQuery(queryString);				          
-    }  
-    else 
-    {		
+    {
+	query.setQuery(queryString);
+    }
+    else
+    {
 	if(hasLIT)
 	{
 		query.setDatabase("1");
@@ -117,21 +116,21 @@
 	{
 		query.setDatabase("2");
 	}
-					
+
 	query.setCategory("");
-	query.setYr("");		
+	query.setYr("");
     }
-	
+
     database = query.getDatabase();
     boolean showPdf = false;
     boolean showHtml = false;
-	
-  	
+
+
     BulletinXMLVisitor xmlVisitor = new BulletinXMLVisitor(out,cartridges);
-  	
+
     for (int i = 0; i < cartridges.length; i++)
     {
-  	
+
         if(gui.validCartridge(database,cartridges[i]))
         {
         	sbCartridges.append(cartridges[i].toUpperCase());
@@ -144,24 +143,24 @@
         	if(i != cartridges.length - 1)
         	litCartridges.append(";");
         }
-        
+
         if(gui.isPATCartridge(cartridges[i]))
         {
         	patCartridges.append(cartridges[i].toUpperCase());
         	if(i != cartridges.length - 1)
         	patCartridges.append(";");
-        }       	
+        }
     }
-  	
-  	
-	
+
+
+
     //String resourcePath = eiProps.getProperty("resourcePath"+appID);
     //String resourcePath = eiProps.getProperty("resourcePath");
-  	
-    //client.log("EISESSION", sessionIdObj.toString());
+
+    //client.log("EISESSION", sessionId);
     client.log("request", "recentBulletins");
     client.setRemoteControl();
-     
+
     out.write("<PAGE>");
     out.write("<HEADER/>");
     out.write("<FOOTER/>");
@@ -179,19 +178,19 @@
     out.write("<PAT-PDF><![CDATA["+showPatPdf+"]]></PAT-PDF>");
     out.write("<SELECTED-DB><![CDATA["+selectedDB+"]]></SELECTED-DB>");
     //out.write("<RESOURCE-PATH>"+resourcePath+"</RESOURCE-PATH>");
-    out.write("<SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+    out.write("<SESSION-ID>"+sessionId+"</SESSION-ID>");
     out.write("<QTOP>");
     out.write("<QSTR><![CDATA[");
     out.write(query.toString());
     out.write("]]></QSTR>");
     out.write("</QTOP>");
-	
+
     if(btPage != null)
     {
 	out.write("<BULLETINS>");
 	btPage.accept(xmlVisitor);
 	out.write("</BULLETINS>");
-    }	
+    }
     out.write("</PAGE>");
 
 %>

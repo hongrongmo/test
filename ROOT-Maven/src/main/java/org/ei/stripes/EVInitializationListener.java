@@ -12,19 +12,18 @@ import org.apache.log4j.Logger;
 import org.ei.ane.fences.PlatformFencesServiceImpl;
 import org.ei.ane.template.ANETemplatesServiceImpl;
 import org.ei.cache.EVCache;
+import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
 import org.ei.config.JSPPathProperties;
-import org.ei.config.RuntimeProperties;
 import org.ei.controller.MemcachedUtil;
 import org.ei.controller.content.ContentConfig;
 import org.ei.controller.logging.LogException;
+import org.ei.domain.ClassNodeManager;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.DatabaseConfigException;
 import org.ei.domain.DriverConfig;
 import org.ei.domain.HelpLinksCache;
 import org.ei.exception.ServiceException;
-import org.ei.exception.SessionException;
-import org.ei.session.SessionCache;
 import org.ei.session.SessionManager;
 import org.ei.stripes.exception.EVExceptionHandler;
 
@@ -46,15 +45,15 @@ public class EVInitializationListener implements ServletContextListener {
 				log4j.info("Config service starting up. Configuring system...");
 
 		// Ensure the "runlevel" property is set
-        String runlevel = System.getProperty(RuntimeProperties.SYSTEM_ENVIRONMENT_RUNLEVEL);
+        String runlevel = System.getProperty(ApplicationProperties.SYSTEM_ENVIRONMENT_RUNLEVEL);
         if (GenericValidator.isBlankOrNull(runlevel)) {
             log4j.error(
                 "\n\n*********************************************************************\n" +
-                "* UNABLE TO RETRIEVE '" + RuntimeProperties.SYSTEM_ENVIRONMENT_RUNLEVEL + "' property!\n" +
+                "* UNABLE TO RETRIEVE '" + ApplicationProperties.SYSTEM_ENVIRONMENT_RUNLEVEL + "' property!\n" +
                 "* THIS MUST BE INITIALIZED VIA TOMCAT STARTUP PARAM \n" +
-                "* (e.g. -D" + RuntimeProperties.SYSTEM_ENVIRONMENT_RUNLEVEL + "=<environment>)\n" +
+                "* (e.g. -D" + ApplicationProperties.SYSTEM_ENVIRONMENT_RUNLEVEL + "=<environment>)\n" +
                 "*********************************************************************\n\n");
-            log4j.error("Unable to initialize - property '" + RuntimeProperties.SYSTEM_ENVIRONMENT_RUNLEVEL + "' is not set!");
+            log4j.error("Unable to initialize - property '" + ApplicationProperties.SYSTEM_ENVIRONMENT_RUNLEVEL + "' is not set!");
             return;
         }
 
@@ -65,23 +64,22 @@ public class EVInitializationListener implements ServletContextListener {
 		try {
 
 		    // Populate various application-specific items
-		    log4j.info("Populating RuntimeProperties...");
-			populateRuntimeProperties();
             log4j.info("Populating JspPathProperties...");
 			populateJspPathProperties();
             log4j.info("Populating ContentConfig...");
 			populateContentConfig();
             log4j.info("Populating HelpLinksList...");
 			populateHelpLinksList();
-
+			log4j.info("Initializing ClassNodeManager");
+			ClassNodeManager.init(EVProperties.getApplicationProperties());
             // Initialize log4j
             log4j.info("Init log4j...");
             initLog4j();
 
             log4j.warn("*******************  EVInitializationListener has configured system.  " + EVProperties.NEWLINE +
-                "    Environment     = '" + EVProperties.getRuntimeProperties().getRunlevel() + "'"+ EVProperties.NEWLINE +
-                "    Release version = '" + EVProperties.getRuntimeProperty(RuntimeProperties.RELEASE_VERSION) + "'"+ EVProperties.NEWLINE +
-                "    Log level       = '" + EVProperties.getRuntimeProperty(RuntimeProperties.ROOT_LOG_LEVEL) + "'");
+                "    Environment     = '" + EVProperties.getApplicationProperties().getRunlevel() + "'"+ EVProperties.NEWLINE +
+                "    Release version = '" + EVProperties.getProperty(ApplicationProperties.RELEASE_VERSION) + "'"+ EVProperties.NEWLINE +
+                "    Log level       = '" + EVProperties.getProperty(ApplicationProperties.ROOT_LOG_LEVEL) + "'");
 
 		} catch (Exception e) {
 		    log4j.error("Unable to initialize application items: ", e);
@@ -90,9 +88,9 @@ public class EVInitializationListener implements ServletContextListener {
 
 		try {
 			// Initialize the MemCache object
-			String memcacheservers = EVProperties.getRuntimeProperties().getProperty(RuntimeProperties.MEMCACHE_SERVERS);
+			String memcacheservers = EVProperties.getApplicationProperties().getProperty(EVProperties.MEMCACHE_SERVERS);
 			if (GenericValidator.isBlankOrNull(memcacheservers)) {
-				throw new RuntimeException("The '" + RuntimeProperties.MEMCACHE_SERVERS + "' runtime property must be set!");
+				throw new RuntimeException("The '" + EVProperties.MEMCACHE_SERVERS + "' application property must be set!");
 			}
             log4j.info("Initializing Memcached servers...");
             MemcachedUtil.initialize(memcacheservers);
@@ -141,23 +139,10 @@ public class EVInitializationListener implements ServletContextListener {
         }
 
         //
-        // Initialize the session cache - Deprecated???
-        //
-        try {
-            String authurl = EVProperties.getRuntimeProperty(RuntimeProperties.AUTH_URL);
-            String appname = EVProperties.getRuntimeProperty(RuntimeProperties.APP_NAME);
-            log4j.info("Initializing Session Cache object, AuthUrl = '" + authurl + "', appname = '" + appname + "'");
-            SessionCache.init(authurl, appname);
-        } catch (SessionException e) {
-            log4j.error("Unable to initialize SessionCache: ", e);
-            return;
-        }
-
-        //
         // Initialize the logging service (usage)
         //
         try {
-            String logurl = EVProperties.getRuntimeProperty(RuntimeProperties.LOG_URL);
+            String logurl = EVProperties.getProperty(ApplicationProperties.LOG_URL);
             log4j.info("Initializing Logger,  = '" + logurl + "'");
             org.ei.controller.logging.Logger.init(logurl);
         } catch (LogException e) {
@@ -206,16 +191,6 @@ public class EVInitializationListener implements ServletContextListener {
 	private void intializeCarsTemplatesCache() throws ServiceException {
 		ANETemplatesServiceImpl carsTemplateService= new ANETemplatesServiceImpl();
 		carsTemplateService.populateCacheWithCarsTemplateAndTextZones();
-	}
-
-	/**
-	 * Read all *.properties files to initialize application
-	 *
-	 * @throws IOException
-	 */
-	private void populateRuntimeProperties() throws IOException {
-		EVProperties.setRuntimeProperties(RuntimeProperties.getInstance());
-		RuntimeProperties.startRuntimePropertiesJob();
 	}
 
 	/**
@@ -328,7 +303,7 @@ public class EVInitializationListener implements ServletContextListener {
 
         // Attempt to get the console logging flag from properties file.  Add console
         // logger if true.
-        String rootlogtoconsole = EVProperties.getRuntimeProperty(RuntimeProperties.ROOT_LOG_TO_CONSOLE);
+        String rootlogtoconsole = EVProperties.getProperty(ApplicationProperties.ROOT_LOG_TO_CONSOLE);
         if (GenericValidator.isBlankOrNull(rootlogtoconsole) || !Boolean.parseBoolean(rootlogtoconsole)) {
             log4j.warn("********** Removing Console Logger per property setting **********");
             rootlogger.removeAppender("CA");
@@ -336,7 +311,7 @@ public class EVInitializationListener implements ServletContextListener {
 
         // Attempt to get the ROOT logging level from properties file.  Override
         // current log level if found.
-		String rootloglevel = EVProperties.getRuntimeProperty(RuntimeProperties.ROOT_LOG_LEVEL);
+		String rootloglevel = EVProperties.getProperty(ApplicationProperties.ROOT_LOG_LEVEL);
 		if (!GenericValidator.isBlankOrNull(rootloglevel)) {
 		    log4j.warn("********** Changing log level to: " + rootloglevel + " **********");
 		    rootlogger.setLevel(Level.toLevel(rootloglevel));
@@ -359,8 +334,8 @@ public class EVInitializationListener implements ServletContextListener {
 		org.ei.controller.logging.Logger logger = org.ei.controller.logging.Logger.getInstance();
 		if (logger != null) logger.shutdown();
 
-		if(RuntimeProperties.timer != null){
-			RuntimeProperties.timer.cancel();
+		if(EVProperties.timer != null){
+			EVProperties.timer.cancel();
 		}
 
 		// Shutdown memcached

@@ -13,7 +13,7 @@
     xmlns:book="java:org.ei.books.BookDocument"
     xmlns:xslcid="java:org.ei.domain.XSLCIDHelper"
     xmlns:custoptions="java:org.ei.fulldoc.FullTextOptions"
-    xmlns:sortoption="java:org.ei.stripes.view.SortOption"
+    xmlns:sortoption="java:org.ei.domain.SortOption"
     xmlns:abstractrecord="java:org.ei.stripes.view.AbstractRecord"
     xmlns:actionbean="java:org.ei.stripes.action.results.PageDetailViewAction"
     exclude-result-prefixes="java xsl DD srt bit xslcid custoptions book"

@@ -20,7 +20,6 @@ import net.sourceforge.stripes.action.UrlBinding;
 
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
-import org.ei.domain.ClientCustomizerException;
 import org.ei.domain.Database;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.InvalidArgumentException;
@@ -114,7 +113,7 @@ public class ThesaurusAjaxAction extends EVActionBean {
 	private ThesaurusPath getPathFromSession() {
 		ThesaurusPath path = (ThesaurusPath) context.getRequest().getSession(false).getAttribute(THES_PATH_SESSION_ID);
 		if (path == null) {
-			path = new ThesaurusPath();
+			path = new ThesaurusPath(THES_TERMSEARCH_URL + "?", THES_BROWSE_URL + "?", THES_FULLREC_URL + "?");
 			context.getRequest().getSession(false).setAttribute(THES_PATH_SESSION_ID, path);
 		}
 		return path;

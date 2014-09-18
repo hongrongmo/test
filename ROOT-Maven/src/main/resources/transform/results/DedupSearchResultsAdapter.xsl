@@ -14,7 +14,7 @@
     xmlns:navigatoritem="java:org.ei.stripes.view.ResultsNavigatorItem"
     xmlns:actionbean="java:org.ei.stripes.action.results.SearchResultsAction"
     xmlns:searchresult="java:org.ei.stripes.view.SearchResult"
-    xmlns:sortoption="java:org.ei.stripes.view.SortOption"
+    xmlns:sortoption="java:org.ei.domain.SortOption"
     xmlns:srt="java:org.ei.domain.Sort"
     xmlns:bit="java:org.ei.util.BitwiseOperators"
     xmlns:xslcid="java:org.ei.domain.XSLCIDHelper"

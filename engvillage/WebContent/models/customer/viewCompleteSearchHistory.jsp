@@ -2,6 +2,7 @@
  * This page the follwing params as input and generates XML output.
  * @param java.lang.String.sessionId
  --%>
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
 <!-- import statements of Java packages-->
@@ -10,8 +11,8 @@
 <!--import statements of ei packages.-->
 <%@ page import="javax.servlet.jsp.*" %>
 <%@ page import="org.ei.connectionpool.*" %>
-<%@ page import="org.ei.controller.ControllerClient" %>
-<%@ page import="org.ei.session.*" %>
+<%@ page import="org.engvillage.biz.controller.ControllerClient" %>
+<%@ page import="org.engvillage.biz.controller.UserSession" %>
 <%@ page import="org.ei.domain.*" %>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.domain.personalization.GlobalLinks" %>
@@ -23,7 +24,6 @@
 <%
 	// This variable for sessionId
 	String sessionId = null;
-	SessionID sessionIdObj = null;
 
 	// Variable to hold the Personalization userid
 	String pUserId = "";
@@ -50,16 +50,14 @@
 	ControllerClient client = new ControllerClient(request, response);
 	UserSession ussession=(UserSession)client.getUserSession();
 
-	sessionId=ussession.getID();
-	sessionIdObj = ussession.getSessionID();
-	pUserId = ussession.getUserIDFromSession();
+	sessionId=ussession.getSessionid();
+	pUserId = ussession.getUserid();
 	if((pUserId != null) && (pUserId.trim().length() != 0))
 	{
 		personalization=true;
 	}
 
-	IEVWebUser user = ussession.getUser();
-	String customerId=user.getCustomerID().trim();
+	String customerId=ussession.getCustomerid().trim();
 	clientCustomizer=new ClientCustomizer(ussession);
 	if(clientCustomizer.isCustomized())
 	{
@@ -150,7 +148,7 @@
 		}
 	}
 
-	String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
+	String strGlobalLinksXML = GlobalLinks.toXML(ussession.getCartridge());
 	//Writing out xml for that sessionId
 	out.write("<PAGE>");
 
@@ -188,7 +186,7 @@
 	out.write("<SESSION-TABLE/>");
 	out.write("<CID>"+CID+"</CID>");
 	out.write("<CUSTOMER-ID>"+customerId+"</CUSTOMER-ID>");
-	out.write("<SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+	out.write("<SESSION-ID>"+sessionId+"</SESSION-ID>");
 	out.write("<CUSTOMIZED-LOGO>"+customizedLogo+"</CUSTOMIZED-LOGO>");
 	out.write("<PERSONALIZATION-PRESENT>"+isPersonalizationPresent+"</PERSONALIZATION-PRESENT>");
 	out.write("<EMAILALERTS-PRESENT>"+isEmailAlertsPresent+"</EMAILALERTS-PRESENT>");
@@ -204,10 +202,10 @@
 	out.write("<ISHISTORY-EMPTY>"+searchHistoryEmpty+"</ISHISTORY-EMPTY>");
 	out.write("<CURR-PAGE-ID>"+currentPage+"</CURR-PAGE-ID>");
 
-	Searches.getSessionXMLQuery(pUserId,sessionIdObj.getID(),out);
+	Searches.getSessionXMLQuery(pUserId,sessionId,out);
 
     DatabaseConfig databaseConfig = DatabaseConfig.getInstance();
-    databaseConfig.sortableToXML(user.getCartridge(), out);
+    databaseConfig.sortableToXML(ussession.getCartridge(), out);
 
 	out.write("</PAGE>");
 

@@ -3,8 +3,8 @@
 <%@ page import=" java.util.*"%>
 <%@ page import=" java.net.*"%>
 <%@ page import="org.ei.domain.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page buffer="20kb"%>
 <%
@@ -24,8 +24,7 @@
 	// Create a session object using the controllerclient.java
 	client = new ControllerClient(request, response);
 	UserSession ussession=(UserSession)client.getUserSession();
-	sessionId = ussession.getID();
-	 IEVWebUser user = ussession.getUser();
+	sessionId = ussession.getSessionid();
 
 	if(request.getParameter("m_id") !=null)
 	{
@@ -61,14 +60,14 @@
 	basketContentStringBuffer.append("<PAGE><!--BH-->");
 	basketContentStringBuffer.append("<!--EH-->");
 	out.write(basketContentStringBuffer.toString());
-	
+
 	for(int i=0; i<page1.docCount();i++)
 	{
 		EIDoc doc = page1.docAt(i);
 		out.write("<!--BR--><PAGE-ENTRY>");
 		doc.toXML(out);
 		out.write("</PAGE-ENTRY><!--ER-->");
-	
+
 	}
 
 	out.write("<!--*-->");

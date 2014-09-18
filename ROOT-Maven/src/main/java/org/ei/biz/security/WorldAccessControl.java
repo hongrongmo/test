@@ -1,7 +1,7 @@
 package org.ei.biz.security;
 
 import org.ei.biz.access.IEVUser;
-import org.ei.domain.personalization.IEVWebUser;
+import org.ei.biz.personalization.IEVWebUser;
 
 /**
  * This AccessControl object requires no authentication at all.  It always

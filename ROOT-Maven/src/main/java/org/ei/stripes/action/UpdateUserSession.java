@@ -18,7 +18,7 @@ import org.ei.stripes.action.results.AnalyzeNavigatorAction;
  * This action class handles all requests to update the user's session
  * values.  This is for things like facet open/close state, highlighting
  * on/off, etc...
- * 
+ *
  * @author harovetm
  *
  */
@@ -32,40 +32,40 @@ public class UpdateUserSession extends EVActionBean {
 	private int open;
     private int order=999;
     private int more;
-	
+
 	// Generic boolean state variable.  Some user session options are simple
 	// true/false, on/off values
 	private boolean value;
-	
+
 	/**
 	 * Handles updating the facet/navigator display state
-	 * 
+	 *
 	 * @return Resolution
 	 */
 	@HandlesEvent("navstate")
 	@DontValidate
 	public Resolution navstate() throws EVBaseException{
-		
+
 		EVActionBeanContext context = getContext();
 
 		if (GenericValidator.isBlankOrNull(navid)) {
 			log4j.warn("Attempt to update navigator state with empty navigator ID!");
 			return null;
 		}
-		
+
 		// Attempt to get the user's session
 		UserSession usersession = context.getUserSession();
 		if (usersession == null) {
 			log4j.warn("UserSession object not available!");
 			return null;
 		}
-		
-		//  
+
+		//
 		// Update and return to controller
 		//
 		ResultNavigatorStateHelper navstatehelper = new ResultNavigatorStateHelper(usersession);
 	    navstatehelper.updateNavState(navid);
-        
+
 		//
 		// Update the user session
 		//
@@ -80,7 +80,7 @@ public class UpdateUserSession extends EVActionBean {
 
 	/**
 	 * Handles updating the facet/navigator display state
-	 * 
+	 *
 	 * @return Resolution
 	 */
 	@HandlesEvent("highlight")
@@ -92,14 +92,14 @@ public class UpdateUserSession extends EVActionBean {
 			log4j.warn("UserSession object not available!");
 			return null;
 		}
-		
+
 		// Default for highlighting is ON so we ONLY put into session when false!
 		if (value) {
 			usersession.removeProperty(UserSession.HIGHLIGHT_STATE);
 		} else {
 			usersession.setHighlightState("false");
 		}
-		
+
 		//
 		// Update the user session
 		//
@@ -110,7 +110,7 @@ public class UpdateUserSession extends EVActionBean {
 		}
 		return null;
 	}
-	
+
 	//
 	//
 	// GETTERS/SETTERS

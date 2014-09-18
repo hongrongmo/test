@@ -1,5 +1,7 @@
-<%@ page language="java" %>
-<%@ page session="false" %>
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
+<%@page import="org.ei.config.ApplicationProperties"%>
+<%@ page language="java"%>
+<%@ page session="false"%>
 
 <!--
 addSelectedRange.jsp
@@ -11,8 +13,8 @@ addSelectedRange.jsp
 
 <!--import statements of ei packages.-->
 <%@ page import="org.ei.domain.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.config.*"%>
 <%@ page import="org.ei.query.base.*"%>
@@ -20,16 +22,14 @@ addSelectedRange.jsp
 <%@ page import="org.ei.tags.TagBroker"%>
 <%@ page import="org.ei.tags.Tag"%>
 <%@ page import="org.ei.tags.TagBroker"%>
-<%@ page import="org.ei.tags.Tags"%>
 <%@ page import="org.ei.domain.personalization.GlobalLinks"%>
 <%@ page import="org.ei.domain.personalization.SavedSearches"%>
 
-<%@ page  errorPage="/error/errorPage.jsp"%>
+<%@ page errorPage="/error/errorPage.jsp"%>
 
 <%
 	FastSearchControl sc=null;
 	SearchResult result=null;
-	SessionID sessionIdObj = null;
 
 	DocumentBasket basket = null;
 	Database databaseObj = null;
@@ -43,7 +43,7 @@ addSelectedRange.jsp
 	String searchtype = null;
 	String tagSearchFlag = null;
 	//This variable for document type
-	String searchid=null;	
+	String searchid=null;
 	String tagname = null;
 	String scope = null;
 	int count = 0;
@@ -53,13 +53,13 @@ addSelectedRange.jsp
 	int scopeint = 0;
 	String groupID = null;
 	TagBroker tagBroker=null;
-	String defaultdbmask = null;	
-	String backurl = null;	
+	String defaultdbmask = null;
+	String backurl = null;
 	String customizedLogo="";
-	String refEmail = "";	
+	String refEmail = "";
         String dataFormat=null;
 	boolean  isPersonalizationPresent=true;
-	boolean personalization = false;	
+	boolean personalization = false;
 	List docIDList = null;
 	PageEntry entry =null;
         EIDoc curDoc =null;
@@ -81,7 +81,7 @@ addSelectedRange.jsp
     {
         try
         {
-            RuntimeProperties runtimeProps = ConfigService.getRuntimeProperties();
+            ApplicationProperties runtimeProps = ApplicationProperties.getInstance();
             pagesize = Integer.parseInt(runtimeProps.getProperty("PAGESIZE"));
             dedupSetSize = Integer.parseInt(runtimeProps.getProperty("DEDUPSETSIZE"));
 
@@ -98,16 +98,14 @@ addSelectedRange.jsp
 
 	client = new ControllerClient(request, response);
 	UserSession ussession=(UserSession)client.getUserSession();
-	sessionIdObj = ussession.getSessionID();
-	sessionId = ussession.getID();
-	 IEVWebUser user = ussession.getUser();
-	String[] credentials = user.getCartridge();
-	
-	String customerId=user.getCustomerID().trim();
-	String pUserId = ussession.getUserIDFromSession();
-	
+	sessionId = ussession.getSessionid();
+	String[] credentials = ussession.getCartridge();
+
+	String customerId=ussession.getCustomerid().trim();
+	String pUserId = ussession.getUserid();
+
 	ClientCustomizer clientCustomizer=new ClientCustomizer(ussession);
-	
+
 	if(clientCustomizer.getRefEmail() != null &&
         clientCustomizer.getRefEmail().length()>0)
     	{
@@ -121,7 +119,7 @@ addSelectedRange.jsp
 	if((pUserId != null) && (pUserId.trim().length() != 0))
 	{
 		personalization=true;
-	}	
+	}
 
 	if(request.getParameter("tagSearchFlag") != null)
 	{
@@ -134,20 +132,20 @@ addSelectedRange.jsp
 	if(request.getParameter("defaultdbmask") != null)
 	{
     		database = request.getParameter("defaultdbmask");
-	}	
+	}
 
         if(request.getParameter("backurl") != null)
 	{
     		backurl = request.getParameter("backurl");
-	} 
+	}
         if(request.getParameter("defaultdbmask")!=null)
         {
           defaultdbmask=request.getParameter("defaultdbmask").trim();
-        }	
+        }
 	if(request.getParameter("searchtype") != null)
 	{
 		searchtype = request.getParameter("searchtype");
-	}	
+	}
 	else if (request.getParameter("SEARCHTYPE") != null)
 	{
 		searchtype = request.getParameter("SEARCHTYPE");
@@ -164,30 +162,30 @@ addSelectedRange.jsp
         {
           format=request.getParameter("format").trim();
           //cid=format;
-        }    
+        }
         if(request.getParameter("docID")!=null)
 	{
 	  docid=request.getParameter("docID").trim();
-	          
-        }    
+
+        }
 	if(request.getParameter("groupID") != null)
 	{
 	  groupID = request.getParameter("groupID");
-	}    
+	}
 
 	if(request.getParameter("SCOPE") != null)
 	{
 	  scopeint = Integer.parseInt(request.getParameter("SCOPE"));
-	}    
-        
+	}
+
 	currentRecord=request.getParameter("DOCINDEX");
-	       
+
         if(currentRecord == null )
         {
           currentRecord = "1";
-        }		       
+        }
 	int index=Integer.parseInt(currentRecord);
-	
+
 	if(format!=null)
 	{
 	  if(format.endsWith("AbstractFormat"))
@@ -208,9 +206,9 @@ addSelectedRange.jsp
 	  format = Abstract.ABSTRACT_FORMAT;
 	  dataFormat = Abstract.ABSTRACT_FORMAT;
         }
-         
+
 	//entry = result.entryAt(index, dataFormat);
-	
+
 
 	String redirectURL = null;
 	String CID = "";
@@ -242,11 +240,11 @@ addSelectedRange.jsp
 	}
 
 	redirectURL="/home.url?CID="+CID+"&searchid="+searchid+"&COUNT=1&database="+database;
-	
+
         /**
         *   Log Functionality
         */
-        
+
 /*
         client.log("SEARCH_ID", searchid);
         client.log("QUERY_STRING", tQuery.getDisplayQuery());
@@ -261,12 +259,12 @@ addSelectedRange.jsp
         client.log("ACTION", "document");
         client.setRemoteControl();
 */
-        String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
- 	
+        String strGlobalLinksXML = GlobalLinks.toXML(ussession.getCartridge());
+
 	out.write("<PAGE>");
 	tagBroker = new TagBroker();
 
-	Tags tags = tagBroker.getTags(docid, pUserId, false);	
+	Tag[] tags = tagBroker.getTags(docid, pUserId, ussession.);
 	publictags = new ArrayList();
 	publictags = tags.getPublictagsList();
 	StringBuffer publictagnames = new StringBuffer();
@@ -281,7 +279,7 @@ addSelectedRange.jsp
 	     	publictagnames.append(",");
 	     }
 	}
-	
+
 	if (publictagnames != null) {
 		out.write("<PUBLIC-TAGS>"+publictagnames.toString()+"</PUBLIC-TAGS>");
 	}
@@ -299,11 +297,11 @@ addSelectedRange.jsp
 	     	privatetagnames.append(",");
 	     }
 	}
-	
+
 	if (privatetagnames != null) {
 		out.write("<PRIVATE-TAGS>"+privatetagnames.toString()+"</PRIVATE-TAGS>");
 	}
-	
+
 	grouptags = new ArrayList();
 	grouptags = tags.getGrouptagsList();
 	groupidslist = tags.getGroupIdsList();
@@ -312,7 +310,7 @@ addSelectedRange.jsp
 	out.write("<GROUP-TAGS>");
 
 	for(int j = 0; j < groupidslist.size(); j++)
-	{	
+	{
 		out.write("<GROUP-TAG");
 		out.write(" id=\"");
 		out.write(groupidslist.get(j).toString());
@@ -332,7 +330,7 @@ addSelectedRange.jsp
 				grouptagnames.append(",");
 			     }
 		    }
-		    
+
 		}
 		String tagsgroup=null;
 		 if(grouptagnames.lastIndexOf(",") == grouptagnames.length() - 1 ) {
@@ -342,12 +340,12 @@ addSelectedRange.jsp
 			 tagsgroup= grouptagnames.toString();
 		 }
 
-		out.write(tagsgroup);		
+		out.write(tagsgroup);
 		out.write("</GROUP-TAG>");
 	}
-	
+
 	out.write("</GROUP-TAGS>");
-	out.write("<SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+	out.write("<SESSION-ID>"+sessionId+"</SESSION-ID>");
 	out.write("<PERSONALIZATION-PRESENT>"+isPersonalizationPresent+"</PERSONALIZATION-PRESENT>");
 	out.write("<PERSONALIZATION>"+personalization+"</PERSONALIZATION>");
         out.write("<SELECTED-DB>"+database+"</SELECTED-DB>");
@@ -365,7 +363,7 @@ addSelectedRange.jsp
 	out.write("<SEARCH-TYPE>"+searchtype+"</SEARCH-TYPE>");
 	out.write("<FORMAT>"+format+"</FORMAT>");
 	out.write("<SEARCH-TYPE-TAG>"+searchtype+"</SEARCH-TYPE-TAG>");
-        out.write("<TAG-SEARCH-FLAG>" + tagSearchFlag  + "</TAG-SEARCH-FLAG>");	
+        out.write("<TAG-SEARCH-FLAG>" + tagSearchFlag  + "</TAG-SEARCH-FLAG>");
         out.write("<DEFAULT-DB-MASK>" + defaultdbmask  + "</DEFAULT-DB-MASK>");
         out.write("<SCOPE-REC>" + scopeint  + "</SCOPE-REC>");
         out.write("<GROUP-ID>" + groupID  + "</GROUP-ID>");
@@ -373,6 +371,6 @@ addSelectedRange.jsp
 	out.write("</PAGE>");
 	out.write("<!--END-->");
 	out.flush();
-	
+
 
 %>

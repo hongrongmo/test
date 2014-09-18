@@ -19,8 +19,8 @@
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.config.*"%>
 <%@ page import="org.ei.domain.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*" %>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession" %>
 <%@ page import="org.ei.email.*"%>
 <%@ page import="javax.mail.internet.*"%>
 
@@ -42,7 +42,6 @@
     String documentFormat = null;
 
     //the sessionid
-    SessionID sessionIdObj = null;
     String sessionid = null;
 
     // Object reference to FolderPage object
@@ -60,12 +59,10 @@
     ControllerClient client = new ControllerClient(request,response);
     UserSession ussession = (UserSession)client.getUserSession();
 
-    sessionid = ussession.getID();
-    sessionIdObj = ussession.getSessionID();
-    IEVWebUser user = ussession.getUser();
+    sessionid = ussession.getSessionid();
 
     // Varaible to hold the current User id
-    String userId = ussession.getUserIDFromSession();
+    String userId = ussession.getUserid();
 
     // Retrieve all the request parameters
     if(request.getParameter("redirect") != null)
@@ -124,7 +121,7 @@
     if(folderSize > 0)
     {
         // Create the basketPage object with the documents
-        folderPage = (FolderPage) savedRecords.viewRecordsInFolder(folder, documentFormat);
+        folderPage = (FolderPage) savedRecords.viewRecordsInFolder(folder.getFolderID(), documentFormat);
     }
 
     if( (folderSize>0) && (redirect==null))

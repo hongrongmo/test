@@ -678,28 +678,28 @@
 							<xsl:value-of select="java:encode(' WN ')" />
 							<xsl:value-of select="$SEARCH-FIELD" />
 						</xsl:variable>
-						href="/search/results/expert.url?CID=expertSearchCitationFormat&amp;searchWord1=({<xsl:value-of
+						href="/search/submit.url?CID=expertSearchCitationFormat&amp;searchWord1=({<xsl:value-of
 							select="$ENCODED-SEARCH-TERM" />}<xsl:value-of
 							select="$ENCODED-SEARCH-SECTION" />)&amp;database=<xsl:value-of
 							select="$ENCODED-DATABASE" /><xsl:value-of select="$START-YEAR-PARAM" /><xsl:value-of
 							select="$END-YEAR-PARAM" />&amp;yearselect=<xsl:value-of
-							select="$YEARRANGE" />&amp;searchtype=<xsl:value-of
+							select="$YEARRANGE" />&amp;csrfSyncToken=<xsl:value-of select="$csrfSyncToken"/>&amp;searchtype=<xsl:value-of
 							select="$SEARCH-TYPE" /><xsl:value-of select="$DEFAULT-LINK-SORT" />"
 					</xsl:when>
 					<xsl:when test="($SEARCH-TYPE='Book') or ($DATABASE='131072')">
 						<xsl:choose>
-							<xsl:when test="($FIELD='COL')">href="/search/results/quick.url?CID=quickSearchCitationFormat&amp;searchtype=Book&amp;col=<xsl:value-of
+							<xsl:when test="($FIELD='COL')">href="/search/submit.url?CID=quickSearchCitationFormat&amp;csrfSyncToken=<xsl:value-of select="$csrfSyncToken"/>&amp;searchtype=Book&amp;col=<xsl:value-of
 								select="$ENCODED-SEARCH-TERM" />&amp;database=131072<xsl:value-of
 								select="$START-YEAR-PARAM" /><xsl:value-of select="$END-YEAR-PARAM" />&amp;yearselect=<xsl:value-of
 								select="$YEARRANGE" /><xsl:value-of select="$DEFAULT-LINK-SORT" />"</xsl:when>
-							<xsl:otherwise>href="/search/results/quick.url?CID=quickSearchCitationFormat&amp;searchtype=Book&amp;searchWord1={<xsl:value-of
+							<xsl:otherwise>href="/search/submit.url?CID=quickSearchCitationFormat&amp;csrfSyncToken=<xsl:value-of select="$csrfSyncToken"/>&amp;searchtype=Book&amp;searchWord1={<xsl:value-of
 								select="$ENCODED-SEARCH-TERM" />}&amp;section1=<xsl:value-of select="$SEARCH-FIELD" />&amp;database=131072<xsl:value-of
 								select="$START-YEAR-PARAM" /><xsl:value-of select="$END-YEAR-PARAM" />&amp;yearselect=<xsl:value-of
 								select="$YEARRANGE" /><xsl:value-of select="$DEFAULT-LINK-SORT" />"</xsl:otherwise>
 						</xsl:choose>
 					</xsl:when>
 					<xsl:otherwise>
-						href="/search/results/quick.url?CID=quickSearchCitationFormat&amp;searchWord1={<xsl:value-of
+						href="/search/submit.url?CID=quickSearchCitationFormat&amp;csrfSyncToken=<xsl:value-of select="$csrfSyncToken"/>&amp;searchtype=Quick&amp;searchWord1={<xsl:value-of
 							select="$ENCODED-SEARCH-TERM" />}&amp;section1=<xsl:value-of
 							select="$SEARCH-FIELD" />&amp;database=<xsl:value-of
 							select="$ENCODED-DATABASE" /><xsl:value-of select="$START-YEAR-PARAM" /><xsl:value-of

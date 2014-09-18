@@ -1,9 +1,9 @@
 <%@ page language="java"%><%@ page session="false"%>
 <%@ page import="java.util.*"%>
 <%@ page import="org.ei.tags.*"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
 <%@ page import="org.ei.email.*"%>
 <%@ page import="javax.mail.internet.*"%>
 <%@ page import="org.ei.domain.*"%>
@@ -19,10 +19,8 @@
 
 	ControllerClient client = new ControllerClient(request, response);
 	UserSession ussession = (UserSession) client.getUserSession();
-	String sessionId = ussession.getID();
-	SessionID sessionIdObj = ussession.getSessionID();
-	String pUserId = ussession.getUserIDFromSession();
-	IEVWebUser user= ussession.getUser();
+	String sessionId = ussession.getSessionid();
+	String pUserId = ussession.getUserid();
 	// Get the request parameters
 	currentRecord = request.getParameter("DOCINDEX");
 	searchID = request.getParameter("SEARCHID");
@@ -39,8 +37,8 @@
 		tQuery = SavedSearches.getSearch(searchID);
 	}
 	tQuery.setSearchQueryWriter(new FastQueryWriter());
-	tQuery.setDatabaseConfig(databaseConfig);
-	tQuery.setCredentials(user.getCartridge());
+	tQuery.setDatabaseConfig(DatabaseConfig.getInstance());
+	tQuery.setCredentials(ussession.getCartridge());
 
 	/*
 	 *   Handle the Hit Highlighting

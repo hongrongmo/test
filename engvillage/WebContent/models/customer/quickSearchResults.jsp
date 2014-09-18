@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page contentType="application/xml; charset=UTF-8"%>
 <%@ page import="org.apache.log4j.Logger"%>
 <%@ page import="org.ei.exception.EVBaseException"%>
 <%@ page import="org.ei.exception.SystemErrorCodes"%>
 <%@ page import="org.ei.exception.SearchException"%>
-<%@ page import="org.ei.domain.personalization.IEVWebUser"%>
-<%@ page import="org.ei.domain.navigators.state.ResultNavigatorStateHelper"%>
 <%@ page language="java"%>
 <%@ page session="false"%>
 <%@ page errorPage="/error/errorPage.jsp"%>
@@ -14,7 +13,7 @@
 <%@ page import="java.net.*"%>
 <%@ page import="java.io.*"%>
 <%@ page import="org.ei.config.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
 <%@ page import="org.ei.books.*"%>
 <%@ page import="org.ei.domain.*"%>
 <%@ page import="org.ei.domain.navigators.*"%>
@@ -24,7 +23,7 @@
 <%@ page import="org.ei.parser.base.*"%>
 <%@ page import="org.ei.query.base.*"%>
 <%@ page import="org.ei.query.limiter.*"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.util.GUID"%>
 <%@ page import="org.ei.util.StringUtil"%>
@@ -42,7 +41,6 @@
     LocalHolding localHolding = null;
 
     String sessionId = null;
-    SessionID sessionIdObj = null;
     String pUserId = "";
     boolean personalization = false;
     String navigator=null;
@@ -114,16 +112,14 @@
     dedupsetsize=Integer.parseInt(dedupSetSize.trim());
     dedupsetsize1=dedupsetsize + 1;
     UserSession ussession=(UserSession)client.getUserSession();
-    sessionId=ussession.getID();
-    sessionIdObj = ussession.getSessionID();
-    pUserId = ussession.getUserIDFromSession();
+    sessionId=ussession.getSessionid();
+    pUserId = ussession.getUserid();
     if((pUserId != null) && (pUserId.trim().length() != 0))
     {
         personalization=true;
     }
 
-    IEVWebUser user = ussession.getUser();
-    String customerId=user.getCustomerID().trim();
+    String customerId=ussession.getCustomerid().trim();
 
     clientCustomizer=new ClientCustomizer(ussession);
     // moved localHolding object creation to if statement in outgoing XML section
@@ -175,7 +171,7 @@
             {
                 sumDb += Integer.parseInt(dbs[i]);
             }
-            if(((sumDb & DatabaseConfig.PAG_MASK) == DatabaseConfig.PAG_MASK) && RuntimeProperties.getInstance().isItTime(RuntimeProperties.REFEREX_MASK_DATE)){
+            if(((sumDb & DatabaseConfig.PAG_MASK) == DatabaseConfig.PAG_MASK) && ApplicationProperties.getInstance().isItTime(ApplicationProperties.REFEREX_MASK_DATE)){
 	            if(sumDb != DatabaseConfig.PAG_MASK){
 	            	sumDb -= DatabaseConfig.PAG_MASK;
 	            }else if (sumDb == DatabaseConfig.PAG_MASK){
@@ -216,14 +212,14 @@
     }
 
     int intDbMask = Integer.parseInt(dbName);
-    String[] credentials = user.getCartridge();
+    String[] credentials = ussession.getCartridge();
 
     boolean initialSearch = false;
     boolean clearBasket = false;
 
     DocumentBasket documentBasket = new DocumentBasket(sessionId);
 
-    	if(!UserCredentials.hasCredentials(intDbMask, databaseConfig.getMask(credentials)))
+    	if(!UserSession.hasCredentials(intDbMask, databaseConfig.getMask(credentials)))
         {
            throw new SearchException(SystemErrorCodes.NO_DATABASE_ENTITLEMENT, "You do not have access to the databases requested.");
         }
@@ -273,22 +269,15 @@
                 }
 
                 term1=request.getParameter("searchWord1");
-
                 field1=request.getParameter("section1");
-
                 term2=request.getParameter("searchWord2");
-
                 field2=request.getParameter("section2");
-
                 term3=request.getParameter("searchWord3");
-
                 field3=request.getParameter("section3");
-
                 bool1 = request.getParameter("boolean1");
-
                 bool2 = request.getParameter("boolean2");
 
-                queryObject.setSearchPhrase(request);
+                queryObject.setSearchPhrase(term1, field1, bool1, term2, field2, bool2, term3, field3);
 
                 limitDocument = request.getParameter("doctype");
                 queryObject.setDocumentType(limitDocument);
@@ -450,7 +439,7 @@
                 queryObject.setVisible(Query.ON);
                 queryObject.setSavedSearch(Query.OFF);
                 queryObject.setEmailAlert(Query.OFF);
-                queryObject.setSessionID(sessionIdObj.getID());
+                queryObject.setSessionID(sessionId);
 
                 // set search to show up in current session history
                 updateCurrentQuery = true;
@@ -500,10 +489,10 @@
                 rs.modifyState(request.getParameter("FIELD"));
                 Searches.updateSearchRefineState(queryObject);
             }
-            
+
             long beginQuery = System.currentTimeMillis();
         	HitHighlighter highlighter = new HitHighlighter(queryObject.getParseTree());
-        	sc.setHitHighlighter(highlighter);            
+        	sc.setHitHighlighter(highlighter);
             result = sc.openSearch(queryObject,
                                     sessionId,
                                     pagesize,
@@ -547,7 +536,7 @@
             Searches.updateSearchDeDup(queryObject);
         }
 
-        String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
+        String strGlobalLinksXML = GlobalLinks.toXML(ussession.getCartridge());
 
         /**
           * Checking for the total results is greater than zero.
@@ -659,7 +648,7 @@
                 out.write("<CUSTOMIZED-ENDYEAR>"+customizedEndYear+"</CUSTOMIZED-ENDYEAR>");
                 out.write("<CUSTOMER-ID>"+customerId+"</CUSTOMER-ID>");
                 out.write("<RESULTS-PER-PAGE>"+pagesize+"</RESULTS-PER-PAGE>");
-                out.write("<SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+                out.write("<SESSION-ID>"+sessionId+"</SESSION-ID>");
                 out.write("<PERSONALIZATION-PRESENT>"+isPersonalizationPresent+"</PERSONALIZATION-PRESENT>");
                 out.write("<FULLTEXT>"+isFullTextPresent+"</FULLTEXT>");
                 out.write("<RSSLINK>"+isRssLinkPresent+"</RSSLINK>");
@@ -689,7 +678,7 @@
                 // This lessens size of outgoing page XML
                 if(isCitLocalHoldingsPresent)
                 {
-                    localHolding = new LocalHolding(ussession,2);
+                    localHolding=new LocalHolding(ussession.getProperty(UserSession.LOCAL_HOLDING_KEY),2);
                     oPage.setlocalHolding(localHolding);
                 }
                 oPage.toXML(out);
@@ -804,7 +793,7 @@
     <CUSTOMIZED-LOGO><%=customizedLogo%></CUSTOMIZED-LOGO>
     <CUSTOMER-ID><%=customerId%></CUSTOMER-ID>
     <CUSTOMIZED-STARTYEAR><%=customizedStartYear%></CUSTOMIZED-STARTYEAR>
-    <SESSION-ID><%=sessionIdObj.toString()%></SESSION-ID>
+    <SESSION-ID><%=sessionId%></SESSION-ID>
     <PERSONALIZATION><%=personalization%></PERSONALIZATION>
     <PERSON-USER-ID><%=pUserId%></PERSON-USER-ID>
     <SEARCH-ID><%=searchID%></SEARCH-ID>
@@ -817,7 +806,7 @@
     <LOCALHOLDINGS-CITATION><%=isCitLocalHoldingsPresent%></LOCALHOLDINGS-CITATION>
     <EMAILALERTS-PRESENT><%=isEmailAlertsPresent%></EMAILALERTS-PRESENT>
     <DEFAULT-DB-MASK>><%=defaultdbmask%></DEFAULT-DB-MASK>
-    <CREDS><%=user.getCartridgeString()%></CREDS>
+    <CREDS><%=ussession.getCartridgeString()%></CREDS>
     <%=queryObject.toXMLString()%>
     <%@ include file="database.jsp"%>
     <%@ include file="queryForm.jsp"%>
@@ -858,7 +847,7 @@
     {
         try
         {
-            RuntimeProperties eiProps = ConfigService.getRuntimeProperties();
+            ApplicationProperties eiProps = ApplicationProperties.getInstance();
             pageSize = eiProps.getProperty("PAGESIZE");
             dedupSetSize = eiProps.getProperty("DEDUPSETSIZE");
             databaseConfig = DatabaseConfig.getInstance();

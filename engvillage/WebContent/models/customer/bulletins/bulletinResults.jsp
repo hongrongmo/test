@@ -1,26 +1,26 @@
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java" %>
 <%@ page session="false"%>
 <%@ page import=" java.util.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.domain.*" %>
 <%@ page import="org.ei.logging.*"%>
 <%@ page import="org.ei.domain.personalization.*" %>
 <%@ page import="org.ei.config.*"%>
-<%@ page import="org.ei.bulletins.*"%>
 <%@ page import="java.net.*"%>
 <%@ page errorPage="/error/errorPage.jsp"%>
 <%!
 
 
-    RuntimeProperties eiProps = null;
+    ApplicationProperties eiProps = null;
 
   	public void jspInit()
   	{
     	try
     	{
-      		eiProps = ConfigService.getRuntimeProperties();
+      		eiProps = ApplicationProperties.getInstance();
 
     	}
     	catch(Exception e)
@@ -36,14 +36,11 @@
     UserSession ussession=(UserSession)client.getUserSession();
     ClientCustomizer clientCustomizer=new ClientCustomizer(ussession);
     boolean isPersonalizationPresent=clientCustomizer.checkPersonalization();
-    SessionID sessionId = ussession.getSessionID();
-    String sesID = sessionId.toString();
+    String sesID = ussession.getSessionid();
 
-    IEVWebUser user = ussession.getUser();
-    String cartridges[] = user.getCartridge();
-    String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
+    String cartridges[] = ussession.getCartridge();
+    String strGlobalLinksXML = GlobalLinks.toXML(ussession.getCartridge());
     //String appID = ussession.getProperty(UserSession.APPLICATION_KEY);
-    SessionID sessionIdObj = ussession.getSessionID();
 
     boolean showLitPdf = false;
     boolean showPatPdf = false;
@@ -151,7 +148,7 @@
 	client.log("dbname", db);
 	client.log("category",category);
 	client.log("year",yr);
-	client.log("custid", user.getCustomerID());
+	client.log("custid", ussession.getCustomerid());
 
 	client.setRemoteControl();
 
@@ -169,7 +166,7 @@
 	out.write("<LITCR><![CDATA["+litCartidges+"]]></LITCR>");
 	out.write("<SHOW-HTML><![CDATA["+showHtml+"]]></SHOW-HTML>");
 	out.write("<SHOW-PDF><![CDATA["+showPdf+"]]></SHOW-PDF>");
-	out.write("<SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+	out.write("<SESSION-ID>"+sessionId+"</SESSION-ID>");
 	navigator.toXML(out);
 	out.write("<QTOP>");
 	out.write("<QSTR><![CDATA[");

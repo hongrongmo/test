@@ -36,7 +36,7 @@
 <%-- 	</stripes:form> --%>
     <c:choose><c:when test="${empty actionBean.viewbean.runtimeproperties}">No runtime properties found!</c:when>
     <c:otherwise>
-    <h2>Runtime Properties for '<%= EVProperties.getRuntimeProperties().getRunlevel() %>'</h2>
+    <h2>Runtime Properties for '<%=EVProperties.getApplicationProperties().getRunlevel()%>'</h2>
     <table align="left" cellpadding="0" cellspacing="0" border="0" id="userinfo_table">
     <tbody>
     <c:forEach var="key" items="${sortedkeys}">

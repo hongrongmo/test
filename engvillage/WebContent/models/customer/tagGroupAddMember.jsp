@@ -1,10 +1,11 @@
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
 <%@ page import="java.util.*"%>
 <%@ page import="java.net.URLEncoder"%>
 <%@ page import="org.ei.domain.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.config.*"%>
 <%@ page import="org.ei.query.base.*"%>
@@ -21,18 +22,17 @@
 <%@ page  errorPage="/error/errorPage.jsp"%>
 
 <%
-	SessionID sessionIdObj = null;
 	ControllerClient client = null;
 	String database = null;
 	String searchtype = null;
-	String searchid=null;	
+	String searchid=null;
 	String tagname = null;
 	String rangeValfrom = null;
 	String rangeValto = null;
 	String customizedLogo="";
-	String refEmail = "";	
+	String refEmail = "";
 	boolean  isPersonalizationPresent=true;
-	boolean personalization = false;	
+	boolean personalization = false;
 	String oldtag = null;
 	String newtag = null;
 	String groupid = null;
@@ -42,13 +42,11 @@
 
 	client = new ControllerClient(request, response);
 	UserSession ussession=(UserSession)client.getUserSession();
-	sessionIdObj = ussession.getSessionID();
-	 IEVWebUser user = ussession.getUser();
-	String[] credentials = user.getCartridge();
+	String[] credentials = ussession.getCartridge();
 	String edit = null;
-	String pUserId = ussession.getUserIDFromSession();	
+	String pUserId = ussession.getUserid();
 	ClientCustomizer clientCustomizer=new ClientCustomizer(ussession);
-	
+
 	if(clientCustomizer.getRefEmail() != null &&
     clientCustomizer.getRefEmail().length()>0)
     {
@@ -60,37 +58,37 @@
         isPersonalizationPresent=clientCustomizer.checkPersonalization();
         customizedLogo=clientCustomizer.getLogo();
     }
-	
+
 	if((pUserId != null) && (pUserId.trim().length() != 0))
 	{
 		personalization=true;
-	}	
-	
+	}
+
 	if(request.getParameter("database") != null)
 	{
     	database = request.getParameter("database");
 	}
-	
+
 	if(request.getParameter("edit") != null)
 	{
     	edit = request.getParameter("edit");
 	}
-	
+
 	if(request.getParameter("tagname") != null)
 	{
     	tagname = request.getParameter("tagname");
 	}
-	
-	
+
+
 	if(request.getParameter("searchtype") != null)
 	{
 		searchtype = request.getParameter("searchtype");
-	}	
+	}
 	else if (request.getParameter("SEARCHTYPE") != null)
 	{
 		searchtype = request.getParameter("SEARCHTYPE");
 	}
-	
+
 	if(request.getParameter("searchid") != null)
 	{
 		searchid = request.getParameter("searchid");
@@ -99,7 +97,7 @@
 	{
 		searchid = request.getParameter("searchid");
 	}
-	
+
 
 	if(request.getParameter("oldtag") != null)
 	{
@@ -109,31 +107,31 @@
 	{
 		newtag = request.getParameter("newtag");
 	}
-	
+
 	if(request.getParameter("groupid") != null)
 	{
 		groupid = request.getParameter("groupid");
 	}
-	
-	if (groupid != null)	
+
+	if (groupid != null)
 	{
 		cgedit = CgroupsBroker.selectCgroup(groupid);
-			
+
 	}
-	
-	String customerId1=user.getCustomerID().trim();
+
+	String customerId1=ussession.getCustomerid().trim();
 	Integer custid1 = new Integer(customerId1);
-	if (newtag != null && oldtag != null)	
+	if (newtag != null && oldtag != null)
 	{
 		Tag t = new Tag();
     	t.setTagName(oldtag);
     	t.setCustID(custid1.intValue());
     	t.setUserID(pUserId);
     	TagBroker.updateTag(t, newtag);
-	}	
+	}
 
   	Query query = Searches.getSearch(searchid);
-	String customerId=user.getCustomerID().trim();
+	String customerId=ussession.getCustomerid().trim();
 	Integer custid = new Integer(customerId);
 	Integer cid = new Integer(customerId);
 	List taglabels = TagBroker.selectUserTagsList(pUserId,cid.intValue());
@@ -144,10 +142,10 @@
 		{
     		Tag t = new Tag();
     		t.getTagName();
-		}		
+		}
 	}
 */
-	
+
 	String redirectURL = null;
 	String CID = "quickSearchCitationFormat";
 	redirectURL="/search/results/quick.url?CID="+CID+"&searchid="+searchid+"&COUNT=1&database="+database;
@@ -155,8 +153,8 @@
 	if ( tagname != null)
 	{
 		client.setRedirectURL(redirectURL);
-		client.setRemoteControl();	
-	}	
+		client.setRemoteControl();
+	}
 
 /*
         client.log("SEARCH_ID", searchid);
@@ -172,10 +170,10 @@
         client.log("ACTION", "document");
         client.setRemoteControl();
 */
-    String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
-       
+    String strGlobalLinksXML = GlobalLinks.toXML(ussession.getCartridge());
+
 	out.write("<PAGE>");
-	out.write("<SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+	out.write("<SESSION-ID>"+sessionId+"</SESSION-ID>");
 	out.write("<CUSTOMIZED-LOGO>"+customizedLogo+"</CUSTOMIZED-LOGO>");
 	out.write("<PERSONALIZATION-PRESENT>"+isPersonalizationPresent+"</PERSONALIZATION-PRESENT>");
 	out.write("<PERSONALIZATION>"+personalization+"</PERSONALIZATION>");
@@ -194,7 +192,7 @@
 	if(cgedit != null)
 	{
 		cgedit.toXML(out);
-	}	
+	}
 	else
 	{
 		out.write("<CGROUP>");
@@ -203,17 +201,17 @@
 		{
 			out.write("<COLOR><![CDATA[");
 			out.write((String)CollaborationGroup.COLORS.get(i));
-			out.write("]]></COLOR>");	
+			out.write("]]></COLOR>");
 		}
 		out.write("</COLORS>");
-		out.write("</CGROUP>");	
+		out.write("</CGROUP>");
 	}
-	
+
 	if (edit != null)
 	{
 		out.write("<EDIT>"+edit+"</EDIT>");
 	}
-	
+
 	out.write("<TAGS>");
 	for(int i = 0; i < taglabels.size() ; i++)
 	{
@@ -221,13 +219,13 @@
     	out.write("<TAG><![CDATA[");
     	out.write(t.getTagSearchValue());
     	out.write("]]></TAG>");
-	}		
+	}
 	out.write("</TAGS>");
-	
-	
+
+
 	out.write("</PAGE>");
 	out.write("<!--END-->");
 	out.flush();
-	
+
 
 %>

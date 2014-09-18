@@ -319,7 +319,7 @@ public enum CARSConfigVariables {
 	public static String getConstantAsString(CARSConfigVariables constantName) {
 		String returnVal = null;
 		if (null != constantName) {
-			returnVal = EVProperties.getRuntimeProperty(constantName.name());
+			returnVal = EVProperties.getProperty(constantName.name());
 		}
 		if (StringUtils.isBlank(returnVal)) {
 			returnVal = "";
@@ -337,7 +337,7 @@ public enum CARSConfigVariables {
 	public static int getConstantAsInt(CARSConfigVariables constantName) {
 		int returnVal = 0;
 		if (null != constantName) {
-			 returnVal = Integer.parseInt(EVProperties.getRuntimeProperty(constantName.name()));
+			 returnVal = Integer.parseInt(EVProperties.getProperty(constantName.name()));
 		}
 		
 		return returnVal;
@@ -353,7 +353,7 @@ public enum CARSConfigVariables {
 	public static boolean getConstantAsBoolean(CARSConfigVariables constantName) {
 		boolean returnVal = false;
 		if (null != constantName) {
-			returnVal = Boolean.parseBoolean(EVProperties.getRuntimeProperty(constantName.name()));
+			returnVal = Boolean.parseBoolean(EVProperties.getProperty(constantName.name()));
 		}
 		return returnVal;
 	}

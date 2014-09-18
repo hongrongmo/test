@@ -4,9 +4,9 @@
 <!-- import statements of Java packages-->
 
 <%@ page import=" java.util.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
 <%@ page import="org.ei.domain.personalization.*" %>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.domain.*" %>
 <%@ page import="org.ei.config.*"%>
@@ -35,7 +35,7 @@
     String isbn = request.getParameter("isbn");
     BookPartBuilder builder = new BookPartBuilder();
     BookPart part = builder.buildBookPart(isbn);
-    part.setCredentials(user.getCartridge());
+    part.setCredentials(ussession.getCartridge());
     Perl5Util perl = new Perl5Util();
 
 

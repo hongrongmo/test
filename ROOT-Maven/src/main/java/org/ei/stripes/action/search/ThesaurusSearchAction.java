@@ -22,10 +22,10 @@ import net.sourceforge.stripes.validation.ValidationErrors;
 
 import org.apache.log4j.Logger;
 import org.ei.biz.access.AccessException;
+import org.ei.biz.personalization.IEVWebUser;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.Query;
 import org.ei.domain.SearchForm;
-import org.ei.domain.personalization.IEVWebUser;
 import org.ei.exception.InfrastructureException;
 import org.ei.exception.SearchException;
 import org.ei.exception.SessionException;

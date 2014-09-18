@@ -7,12 +7,13 @@
 	and rename the old forname with the new one
 	and redirects to the view folders page.
 -->
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
 
 <%@ page import="org.ei.domain.personalization.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.domain.*"%>
 
@@ -30,8 +31,6 @@
 	// declare variable to hold session id.
 	String sSessionId = null;
 	// declare variable to hold user id.
-
-	SessionID sessionIdObj = null;
 
 	String nUserId  = null;
 	// declare variable to hold folder name.
@@ -63,10 +62,9 @@
 	//get the client session object and from that get the session id and user id.
 	client = new ControllerClient(request,response);
 	UserSession ussession=(UserSession)client.getUserSession();
-	sSessionId = ussession.getID();
-	sessionIdObj = ussession.getSessionID();
-	
-	sUserId = ussession.getUserIDFromSession();
+	sSessionId = ussession.getSessionid();
+
+	sUserId = ussession.getUserid();
 	//client.updateUserSession(ussession);
 
 	//check for user id existance.
@@ -76,9 +74,7 @@
 		personalization=true;
 	}
 
-	 IEVWebUser user = ussession.getUser();
-
-	String customerId=user.getCustomerID().trim();
+	String customerId=ussession.getCustomerid().trim();
 	clientCustomizer=new ClientCustomizer(ussession);
 	if(clientCustomizer.isCustomized())
 	{
@@ -104,11 +100,11 @@
     	//build the xml to display
     	sb.append("<PAGE>");
     	sb.append("<HEADER/>");
-    	sb.append(GlobalLinks.toXML(user.getCartridge()));
+    	sb.append(GlobalLinks.toXML(ussession.getCartridge()));
     	sb.append("<FOOTER/>");
-    
-    	sb.append("<SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
-    
+
+    	sb.append("<SESSION-ID>"+sSessionId+"</SESSION-ID>");
+
     	if( nUserId != null)
     	{
 			SavedRecords sr = new SavedRecords(nUserId);
@@ -130,7 +126,7 @@
     	sb.append("</FOLDER>");
     	sb.append("<CUSTOMIZED-LOGO>" + customizedLogo + "</CUSTOMIZED-LOGO>");
     	sb.append("<PERSONALIZATION-PRESENT>").append(isPersonalizationPresent).append("</PERSONALIZATION-PRESENT>");
-    	sb.append("<PERSONALIZATION>").append(personalization).append("</PERSONALIZATION>");			
+    	sb.append("<PERSONALIZATION>").append(personalization).append("</PERSONALIZATION>");
     	sb.append("</PAGE>");
     	out.println(sb.toString());
 	}

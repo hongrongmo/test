@@ -20,14 +20,14 @@ import javax.servlet.http.HttpSession;
 import org.apache.commons.lang.time.StopWatch;
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
-import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
-import org.ei.util.RequestDumper;
+import org.ei.config.ApplicationProperties;
 
 public class LogFilter implements Filter {
 
     private static Logger log4j = Logger.getLogger(LogFilter.class);
     private static Logger responselogger = Logger.getLogger("ResponseLogger");
+
+    public static String NEWLINE = "\n";
 
     @Override
     public void destroy() {
@@ -37,7 +37,7 @@ public class LogFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 
-        String printresponse = RuntimeProperties.getInstance().getProperty("engvillage.print.response");
+        String printresponse = ApplicationProperties.getInstance().getProperty("engvillage.print.response");
         String sessionid = null;
         String uri = "";
 
@@ -69,8 +69,8 @@ public class LogFilter implements Filter {
 
         } finally {
             st.stop();
-            log4j.warn("----------  /engvillage application request: " + EVProperties.NEWLINE
-                + prettyPrintRequest((HttpServletRequest) request, (HttpServletResponse) response, EVProperties.NEWLINE) + EVProperties.NEWLINE
+            log4j.warn("----------  /engvillage application request: " + NEWLINE
+                + prettyPrintRequest((HttpServletRequest) request, (HttpServletResponse) response, NEWLINE) + NEWLINE
                 + "    +    TIME:  " + st.toString());
             if (log4j.isInfoEnabled()) {
                 RequestDumper.dump((HttpServletRequest) request, "params,headers");

@@ -1,7 +1,7 @@
-<%@ page language="java" %><%@ page session="false" %><%@ page import="java.util.*"%><%@ page import="java.net.URLEncoder"%><%@ page import="org.ei.domain.*"%><%@ page import="org.ei.controller.ControllerClient"%><%@ page import="org.ei.session.*"%>
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
+<%@ page language="java" %><%@ page session="false" %><%@ page import="java.util.*"%><%@ page import="java.net.URLEncoder"%><%@ page import="org.ei.domain.*"%><%@ page import="org.engvillage.biz.controller.ControllerClient"%><%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%><%@ page import="org.ei.config.*"%><%@ page import="org.ei.query.base.*"%><%@ page import="org.ei.domain.Searches"%><%@ page import="org.ei.tags.*"%><%@ page import="org.ei.domain.personalization.GlobalLinks"%><%@ page import="org.ei.domain.personalization.SavedSearches"%><%@ page  errorPage="/error/errorPage.jsp"%><%
-	
-	SessionID sessionIdObj = null;
+
 	ControllerClient client = null;
 	String sessionId  = null;
 	String tagname = null;
@@ -14,11 +14,9 @@
 
 	client = new ControllerClient(request, response);
 	UserSession ussession=(UserSession)client.getUserSession();
-	sessionIdObj = ussession.getSessionID();
-	sessionId = ussession.getID();
-	 IEVWebUser user = ussession.getUser();
-	String[] credentials = user.getCartridge();
-	String pUserId = ussession.getUserIDFromSession();
+	sessionId = ussession.getSessionid();
+	String[] credentials = ussession.getCartridge();
+	String pUserId = ussession.getUserid();
 	ClientCustomizer clientCustomizer=new ClientCustomizer(ussession);
 	database = clientCustomizer.getDefaultDB();
 
@@ -35,7 +33,7 @@
 	{
     	tagname = request.getParameter("tagname");
 	}
-	
+
 	if(request.getParameter("groupid") != null)
 	{
 		groupid = request.getParameter("groupid");
@@ -57,10 +55,10 @@
         client.log("ACTION", "document");
         client.setRemoteControl();
 */
-    String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
+    String strGlobalLinksXML = GlobalLinks.toXML(ussession.getCartridge());
 
 	out.write("<PAGE>");
-	out.write("<SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+	out.write("<SESSION-ID>"+sessionId+"</SESSION-ID>");
 	out.write("<CUSTOMIZED-LOGO>"+customizedLogo+"</CUSTOMIZED-LOGO>");
 	out.write("<PERSONALIZATION-PRESENT>"+isPersonalizationPresent+"</PERSONALIZATION-PRESENT>");
 	out.write("<PERSONALIZATION>"+personalization+"</PERSONALIZATION>");

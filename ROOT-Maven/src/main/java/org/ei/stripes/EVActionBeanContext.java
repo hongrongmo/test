@@ -15,18 +15,17 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import net.sourceforge.stripes.action.ActionBeanContext;
-import net.sourceforge.stripes.action.ForwardResolution;
 import net.sourceforge.stripes.action.Resolution;
 import net.sourceforge.stripes.controller.FlashScope;
 import net.sourceforge.stripes.exception.SourcePageNotFoundException;
-import net.sourceforge.stripes.validation.ValidationError;
 import net.sourceforge.stripes.validation.ValidationErrors;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
+import org.ei.biz.personalization.IEVWebUser;
+import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
 import org.ei.controller.CookieHandler;
 import org.ei.controller.DataRequest;
 import org.ei.controller.DataResponse;
@@ -35,7 +34,6 @@ import org.ei.controller.OutputPrinter;
 import org.ei.controller.content.ContentConfig;
 import org.ei.controller.content.ContentDescriptor;
 import org.ei.controller.logging.LogEntry;
-import org.ei.domain.personalization.IEVWebUser;
 import org.ei.exception.InfrastructureException;
 import org.ei.exception.ServiceException;
 import org.ei.exception.SessionException;
@@ -86,11 +84,11 @@ public class EVActionBeanContext extends ActionBeanContext {
 	 * The RuntimeProperties object.  This should be initialized during request
 	 * processing by reading from ControllerConfig object
 	 */
-    private RuntimeProperties runtimeProperties;
-	public RuntimeProperties getRuntimeProperties() {
+    private ApplicationProperties runtimeProperties;
+	public ApplicationProperties getApplicationProperties() {
 		return runtimeProperties;
 	}
-	public void setRuntimeProperties(RuntimeProperties runtimeProperties) {
+	public void setApplicationProperties(ApplicationProperties runtimeProperties) {
 		this.runtimeProperties = runtimeProperties;
 	}
 
@@ -125,7 +123,7 @@ public class EVActionBeanContext extends ActionBeanContext {
 	 * @return
 	 */
 	public String getGoogleAnalyticsAccount() {
-		return EVProperties.getRuntimeProperty(RuntimeProperties.GOOGLE_ANALYTICS_ACCOUNT);
+		return EVProperties.getProperty(EVProperties.GOOGLE_ANALYTICS_ACCOUNT);
 	}
 
     public void setSessionCookie() {
@@ -461,7 +459,7 @@ public class EVActionBeanContext extends ActionBeanContext {
 	 * @throws Exception
 	 */
 	public String getHelpUrl() {
-		return EVProperties.getRuntimeProperty(RuntimeProperties.HELP_URL);
+		return EVProperties.getProperty(EVProperties.HELP_URL);
 	}
 	public HttpSession getExistingSession() {
 		return getRequest().getSession(false);

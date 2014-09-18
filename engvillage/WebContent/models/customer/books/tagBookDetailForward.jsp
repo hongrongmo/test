@@ -1,14 +1,14 @@
-<%@ page language="java" %><%@ page session="false" %><%@ page import="java.util.*"%><%@ page import="java.net.URLEncoder"%><%@ page import="org.ei.tags.*"%><%@ page import="org.ei.session.*"%>
-<%@ page import="org.ei.domain.personalization.*"%><%@ page import="org.ei.controller.ControllerClient"%><%@ page import="org.ei.email.*"%><%@ page import="org.ei.domain.*"%><%@ page errorPage="/error/errorPage.jsp"%><%@ page import="javax.mail.internet.*"%><%
+<%@ page language="java" %><%@ page session="false" %><%@ page import="java.util.*"%><%@ page import="java.net.URLEncoder"%><%@ page import="org.ei.tags.*"%><%@ page import="org.engvillage.biz.controller.UserSession"%>
+<%@ page import="org.ei.domain.personalization.*"%><%@ page import="org.engvillage.biz.controller.ControllerClient"%><%@ page import="org.ei.email.*"%><%@ page import="org.ei.domain.*"%><%@ page errorPage="/error/errorPage.jsp"%><%@ page import="javax.mail.internet.*"%><%
 
 	ControllerClient client = new ControllerClient(request, response);
 	UserSession ussession=(UserSession)client.getUserSession();
-	String sessionId=ussession.getID();
+	String sessionId=ussession.getSessionid();
 	SessionID sessionIdObj = ussession.getSessionID();
 	IEVWebUser user = ussession.getUser();
-	String[] credentials = user.getCartridge();
-	String customerId=user.getCustomerID();
-	String pUserId = ussession.getUserIDFromSession();
+	String[] credentials = ussession.getCartridge();
+	String customerId=ussession.getCustomerid();
+	String pUserId = ussession.getUserid();
 	String scopeParam = null;
 	int iscope = 1;
 	String groupID = null;

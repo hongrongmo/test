@@ -13,9 +13,9 @@ import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
 import org.ei.ane.template.ANETemplatesService;
 import org.ei.ane.template.ANETemplatesServiceImpl;
-import org.ei.domain.personalization.IEVWebUser;
-import org.ei.email.SESEmail;
-import org.ei.email.SESMessage;
+import org.ei.biz.email.SESEmail;
+import org.ei.biz.email.SESMessage;
+import org.ei.biz.personalization.IEVWebUser;
 import org.ei.exception.ServiceException;
 import org.ei.exception.SystemErrorCodes;
 import org.ei.service.cars.Impl.CARSResponse;
@@ -82,7 +82,7 @@ public class CARSResponseHelper {
 	 */
 	private static Templates getTemplate(CARSResponse resp) throws ServiceException {
 
-		
+
 		if (StringUtils.isNotBlank(resp.getTemplateName())) {
 			ANETemplatesService templateService = new ANETemplatesServiceImpl();
 			try {
@@ -222,13 +222,13 @@ public class CARSResponseHelper {
 			}
 
 			try {
-				
+
 				SESMessage sesmessage = new SESMessage();
 				sesmessage.setDestination(userEmail);
 	            sesmessage.setMessage(emailSubject, mailBodyContent,true);
 	            sesmessage.setFrom(sender);
 	            SESEmail.getInstance().send(sesmessage);
-				
+
 			} catch (Throwable t) {
 				log4j.error("Error occurred while sending email!", t);
 			}

@@ -4,9 +4,9 @@
 <%@ page import="java.io.*"%>
 <%@ page import="java.net.*"%>
 <%@ page import="java.util.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
 <%@ page import="org.ei.domain.personalization.*" %>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.domain.*" %>
 <%@ page import="org.ei.config.*"%>
@@ -23,7 +23,7 @@
 /*
 creds=BPE&creds=CHE&creds=CHE1&creds=CHE2&creds=CHE3&creds=ELE&creds=ELE1&creds=ELE2&creds=ELE3&creds=MAT&creds=MAT1&creds=MAT2&creds=MAT3&creds=CIV&creds=CIV3&creds=COM&creds=COM3&creds=SEC&creds=SEC3
 */
-    String[] creds = user.getCartridge();
+    String[] creds = ussession.getCartridge();
     if(request.getParameterValues("creds") != null) {
       creds = request.getParameterValues("creds");
     }

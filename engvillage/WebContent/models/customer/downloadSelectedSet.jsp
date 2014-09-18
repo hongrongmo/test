@@ -9,6 +9,8 @@
  * @param java.lang.String.BASKETCOUNT
  * @param java.lang.String.SEARCHQUERY
  -->
+<%@page import="org.ei.config.ApplicationProperties"%>
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java" %>
 <%@ page session="false"%>
 <%@ page errorPage="/error/errorPage.jsp" %>
@@ -21,8 +23,8 @@
 <%@ page import="org.ei.domain.*"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.config.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
-<%@ page import="org.ei.session.*" %>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.UserSession" %>
 <%@ page import="org.ei.config.*"%>
 <%
  	// Variable to hold the no.of documents in the document basket
@@ -96,7 +98,7 @@
 	{
 		try
 		{
-			RuntimeProperties runtimeProps= ConfigService.getRuntimeProperties();
+			ApplicationProperties runtimeProps= ApplicationProperties.getInstance();
 			pageSize = runtimeProps.getProperty("BASKETPAGESIZE");
 			docBasketPageSize=Integer.parseInt(pageSize.trim());
 		}
@@ -112,9 +114,8 @@
 	client = new ControllerClient(request,response);
 	UserSession ussession=(UserSession)client.getUserSession();
 	//client.updateUserSession(ussession);
-	sessionid = ussession.getID();
-	 IEVWebUser user = ussession.getUser();
-	String customerId=user.getCustomerID().trim();
+	sessionid = ussession.getSessionid();
+	String customerId=ussession.getCustomerid().trim();
 	clientCustomizer=new ClientCustomizer(ussession);
 	if(clientCustomizer.isCustomized())
 	{
@@ -169,15 +170,15 @@
 		strbFilename.append(documentFormat);
 		strbFilename.append("_");
 		strbFilename.append(strDownloadFormat);
-		if(strDownloadFormat.equalsIgnoreCase("ASCII")) 
+		if(strDownloadFormat.equalsIgnoreCase("ASCII"))
 		{
 			strbFilename.append("_.txt");
-		} 
-		else if (strDownloadFormat.equalsIgnoreCase("bib")) 
+		}
+		else if (strDownloadFormat.equalsIgnoreCase("bib"))
     {
 			strbFilename.append("_.bib");
-		} 
-		else 
+		}
+		else
     {
 			strbFilename.append("_.ris");
 		}
@@ -199,11 +200,11 @@
 			basketPage = basket.pageAt(z,documentFormat);
 
 			// if the download format is not ASCII
-			if(!strDownloadFormat.equalsIgnoreCase("ASCII")) 
+			if(!strDownloadFormat.equalsIgnoreCase("ASCII"))
 			{
 				int basketPageSize = basketPage.docCount();
 
-				for(int x = 0; x< basketPageSize; x++) 
+				for(int x = 0; x< basketPageSize; x++)
 				{
 						// walk basket selecting only records that match
 						// the db chosen for RIS
@@ -215,8 +216,8 @@
 							be.toXML(out);
 						}
 				} // for
-			} 
-			else 
+			}
+			else
 			{
 				basketPage.toXML(out);
 			} // if-else

@@ -10,11 +10,9 @@ import javax.xml.ws.Holder;
 import javax.xml.ws.handler.MessageContext;
 
 import org.apache.log4j.Logger;
-import org.ei.domain.personalization.cars.Account;
 import org.ei.exception.ServiceException;
 import org.ei.service.cars.CARSStringConstants;
 
-import com.elsevier.webservices.schemas.csas.constants.types.v7.AuthenticationStatusCodeType;
 import com.elsevier.webservices.schemas.csas.constants.types.v7.AuthenticationType;
 import com.elsevier.webservices.schemas.csas.types.v13.AuthenticateUserReqPayloadType;
 import com.elsevier.webservices.schemas.csas.types.v13.AuthenticateUserRespPayloadType;
@@ -49,7 +47,6 @@ import com.elsevier.webservices.schemas.csas.types.v13.NonCombEntValuesForSessio
 import com.elsevier.webservices.schemas.csas.types.v13.NonCombEntValuesForSitesRequestPayloadType;
 import com.elsevier.webservices.schemas.csas.types.v13.PasswordReminderReqPayloadType;
 import com.elsevier.webservices.schemas.csas.types.v13.PasswordReminderRespPayloadType;
-import com.elsevier.webservices.schemas.csas.types.v13.PathChoiceInfoType;
 import com.elsevier.webservices.schemas.csas.types.v13.TerminateUserSessionReqPayloadType;
 import com.elsevier.webservices.schemas.csas.types.v13.TerminateUserSessionResponseType;
 import com.elsevier.webservices.schemas.csas.types.v13.TerminateUserSessionType;

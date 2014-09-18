@@ -11,10 +11,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.ei.domain.personalization.EVWebUser;
-import org.ei.domain.personalization.IEVWebUser;
-import org.ei.util.RequestDumper;
+import org.ei.biz.personalization.EVWebUser;
+import org.ei.biz.personalization.IEVWebUser;
 import org.ei.util.StringUtil;
+import org.ei.web.util.RequestDumper;
 
 public class SessionService extends HttpServlet {
     private static final long serialVersionUID = 1L;

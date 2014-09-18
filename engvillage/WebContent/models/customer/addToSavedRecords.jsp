@@ -6,6 +6,7 @@
 
 -->
 
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
 
@@ -16,10 +17,10 @@
 <!--import statements of ei packages.-->
 
 <%@ page import="org.ei.domain.personalization.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
 <%@ page import="org.ei.domain.*"%>
 <%@ page import="org.ei.domain.DatabaseConfig"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import ="org.ei.config.*"%>
 <%@ page errorPage="/error/errorPage.jsp"%>
@@ -47,7 +48,6 @@
    	List listOfDocIds = null;
    	//Session id variable
    	String sessionId=null;
-   	SessionID sessionIdObj = null;
    	//used for return variable by the component
    	boolean addFlag=false;
    	String docFormat=null;
@@ -60,15 +60,14 @@
 	client = new ControllerClient(request, response);
 	UserSession ussession=(UserSession)client.getUserSession();
 
-	sessionId = ussession.getID();
-	sessionIdObj = ussession.getSessionID();
+	sessionId = ussession.getSessionid();
 
 	// Varaible to hold the current User id
 
 	String userId = null;
 	String sUserId=null;
 
-	sUserId=ussession.getUserIDFromSession();
+	sUserId=ussession.getUserid();
     if((sUserId != null) && (sUserId.length() != 0))
     {
         personalization=true;
@@ -170,13 +169,12 @@
 
 	StringBuffer sbuffer=new StringBuffer();
 	sbuffer.append("<PAGE>");
-    
+
     // NOV 2004
-    // jam added when pop-up login removed 
-     IEVWebUser user = ussession.getUser();
-    
+    // jam added when pop-up login removed
+
     sbuffer.append("<HEADER/>");
-    sbuffer.append(GlobalLinks.toXML(user.getCartridge()));
+    sbuffer.append(GlobalLinks.toXML(ussession.getCartridge()));
     sbuffer.append("<FOOTER/>");
 
     String backurl = request.getParameter("backurl");
@@ -194,7 +192,7 @@
 	sbuffer.append("<FOLDER-NAME>").append(folder.getFolderName()).append("</FOLDER-NAME>");
 	sbuffer.append("<FOLDER-ID>").append(folder.getFolderID()).append("</FOLDER-ID>");
 	sbuffer.append("<DATABASE-ID>").append(database).append("</DATABASE-ID>");
-	sbuffer.append("<SESSION-ID>").append(sessionIdObj.toString()).append("</SESSION-ID>");
+	sbuffer.append("<SESSION-ID>").append(sessionId).append("</SESSION-ID>");
 	sbuffer.append("</PAGE>");
 	out.write(sbuffer.toString());
 	out.println("<!--END-->");

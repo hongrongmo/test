@@ -8,8 +8,8 @@
 <%@ page session="false" %>
 
 <%@ page  import=" org.ei.domain.personalization.*"%>
-<%@ page  import="org.ei.controller.ControllerClient"%>
-<%@ page  import="org.ei.session.*"%>
+<%@ page  import="org.engvillage.biz.controller.ControllerClient"%>
+<%@ page  import="org.engvillage.biz.controller.UserSession"%>
 
 <%@ page errorPage="/error/errorPage.jsp"%>
 
@@ -46,21 +46,15 @@
 	// get the client session and from that session get the session id and user id.
 	client = new ControllerClient(request,response);
 	UserSession ussession=(UserSession)client.getUserSession();
-	sSessionId = ussession.getID();
-	SessionID sessionObj = ussession.getSessionID();
+	sSessionId = ussession.getSessionid();
 
-	sUserId = ussession.getUserIDFromSession();
+	sUserId = ussession.getUserid();
 	//client.updateUserSession(ussession);
 
-	// check for user id existance.
+	// delete folder from the system.
 	if( sUserId != null)
 	{
-		nUserId = sUserId;
-	}
-	// delete folder from the system.
-	if( nUserId != null)
-	{
-		SavedRecords sr = new SavedRecords(nUserId);
+		SavedRecords sr = new SavedRecords(sUserId);
 
 		// this is idiotic
 		// get the folder name, create a folder object
@@ -75,7 +69,7 @@
 	if(deleteFlag)
 	{
 		long milli = System.currentTimeMillis();
-		urlString = "/controller/servlet/Controller?EISESSION="+sessionObj.toString()+"&CID=viewPersonalFolders&database="+database+"&time="+milli;
+		urlString = "/controller/servlet/Controller?EISESSION="+ussession.getSessionid()+"&CID=viewPersonalFolders&database="+database+"&time="+milli;
 	}
 	//redirect to the view folders page.
 	if(urlString!=null)

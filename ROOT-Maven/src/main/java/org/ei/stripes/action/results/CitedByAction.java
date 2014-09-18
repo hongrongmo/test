@@ -1,12 +1,5 @@
 package org.ei.stripes.action.results;
 
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-
 import javax.servlet.ServletException;
 
 import net.sourceforge.stripes.action.DontValidate;
@@ -15,14 +8,11 @@ import net.sourceforge.stripes.action.Resolution;
 import net.sourceforge.stripes.action.StreamingResolution;
 import net.sourceforge.stripes.action.UrlBinding;
 
-import org.apache.commons.httpclient.HttpStatus;
 import org.apache.commons.lang.StringEscapeUtils;
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
 import org.apache.wink.json4j.JSONArray;
 import org.apache.wink.json4j.JSONObject;
-import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
 import org.ei.service.CitedByService;
 import org.ei.service.CitedByServiceImpl;
 import org.ei.stripes.action.EVActionBean;
@@ -35,20 +25,20 @@ public class CitedByAction extends EVActionBean {
 	private String citedby;
 	private String eid;
 	private String doi;
-	
+
 	/**
-	 * Handles Ajax request for Scopus citedby info (abstract page) 
+	 * Handles Ajax request for Scopus citedby info (abstract page)
 	 * @return
-	 * @throws ServletException 
+	 * @throws ServletException
 	 */
 	@HandlesEvent("abstract")
 	@DontValidate
 	public Resolution handleabstract() throws ServletException {
-		
+
 		log4j.info("Servicing citedby request (abstract page)");
 		JSONArray response = null;
-		try 
-		{			
+		try
+		{
 			CitedByService citedByService = new CitedByServiceImpl();
 			if (!GenericValidator.isBlankOrNull(citedby)) {
 				response = citedByService.getCitedByCount(citedby);
@@ -57,7 +47,7 @@ public class CitedByAction extends EVActionBean {
 			} else if(!GenericValidator.isBlankOrNull(doi)) {
 				response = citedByService.getCitedByDetail(eid, doi);
 			}
-			
+
 			if(response != null && !response.isEmpty()){
 				JSONObject obj = new JSONObject();
 	            obj.put("result", response);
@@ -71,7 +61,7 @@ public class CitedByAction extends EVActionBean {
 			log4j.error("************ Unable to create cited by data!.***************");
 			return new StreamingResolution("UTF-8", "{}");
 		}
-		
+
 	}
 
 	//
@@ -79,7 +69,7 @@ public class CitedByAction extends EVActionBean {
 	// GETTERS/SETTERS
 	//
 	//
-	
+
 	public String getCitedby() {
 		return citedby;
 	}

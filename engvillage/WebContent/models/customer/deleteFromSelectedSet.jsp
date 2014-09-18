@@ -1,12 +1,12 @@
 <%@page import="org.apache.commons.validator.GenericValidator"%>
 <%@ page language="java"%><%@ page session="false"%><%@ page import="java.util.*"%><%@ page import="java.net.*"%><%@ page import="org.ei.domain.*"%><%@ page
-	import="org.ei.controller.ControllerClient"%><%@ page import="org.ei.session.*"%>
+	import="org.engvillage.biz.controller.ControllerClient"%><%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%><%@ page import="org.ei.config.*"%><%@ page
 	errorPage="/error/errorPage.jsp"%>
 <%
 	ControllerClient client = new ControllerClient(request, response);
 	UserSession ussession = (UserSession) client.getUserSession();
-	String sessionid = ussession.getID();
+	String sessionid = ussession.getSessionid();
 	// this was failing since basketsize was missing on request - get from DoucmentBasket instead
 	//int basketCount=Integer.parseInt(request.getParameter("basketsize"));
 	int handle = Integer.parseInt(request.getParameter("handle"));

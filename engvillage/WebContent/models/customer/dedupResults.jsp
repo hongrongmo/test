@@ -1,3 +1,5 @@
+<%@page import="org.ei.config.ApplicationProperties"%>
+<%@page import="org.engvillage.biz.controller.ClientCustomizer"%>
 <%@ page language="java" %>
 <%@ page session="false" %>
 <%@ page errorPage="/error/errorPage.jsp"%>
@@ -7,14 +9,14 @@
 <%@ page import="java.net.*"%>
 <%@ page import="java.io.*"%>
 <%@ page import="org.ei.config.*"%>
-<%@ page import="org.ei.controller.ControllerClient"%>
+<%@ page import="org.engvillage.biz.controller.ControllerClient"%>
 <%@ page import="org.ei.domain.*"%>
 <%@ page import="org.ei.domain.navigators.*"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.domain.Searches"%>
 <%@ page import="org.ei.parser.base.*"%>
 <%@ page import="org.ei.query.base.*"%>
-<%@ page import="org.ei.session.*"%>
+<%@ page import="org.engvillage.biz.controller.UserSession"%>
 <%@ page import="org.ei.domain.personalization.*"%>
 <%@ page import="org.ei.util.GUID"%>
 <%@ page import="org.ei.util.StringUtil"%>
@@ -32,7 +34,6 @@
     LocalHolding localHolding = null;
 
     String sessionId = null;
-    SessionID sessionIdObj = null;
     String pUserId = "";
     boolean personalization = false;
     String navigator = null;
@@ -65,9 +66,9 @@
 
     int pagesize = 0;
     int dedupsetsize = 0;
-    
+
     int numPageToCache = 0;
-    
+
     // The dedup "7" variables
     String DupFlag = "true";
     String dedupOption = null;
@@ -87,7 +88,7 @@
     {
         try
         {
-            RuntimeProperties eiProps = ConfigService.getRuntimeProperties();
+            ApplicationProperties eiProps = ApplicationProperties.getInstance();
             pageSize = eiProps.getProperty("PAGESIZE");
             dedupSetSize = eiProps.getProperty("DEDUPSETSIZE");
             databaseConfig = DatabaseConfig.getInstance();
@@ -103,18 +104,16 @@
 
     pagesize=Integer.parseInt(pageSize.trim());
     dedupsetsize=Integer.parseInt(dedupSetSize.trim());
-    
+
     UserSession ussession=(UserSession)client.getUserSession();
-    sessionId=ussession.getID();
-    sessionIdObj = ussession.getSessionID();
-    pUserId = ussession.getUserIDFromSession();
+    sessionId=ussession.getSessionid();
+    pUserId = ussession.getUserid();
     if((pUserId != null) && (pUserId.trim().length() != 0))
     {
         personalization=true;
     }
 
-    IEVWebUser user = ussession.getUser();
-    String customerId=user.getCustomerID().trim();
+    String customerId=ussession.getCustomerid().trim();
 
     clientCustomizer=new ClientCustomizer(ussession);
     // moved localHolding object creation to if statement in outgoing XML section
@@ -126,7 +125,7 @@
 
     customizedLogo=clientCustomizer.getLogo();
     customizedStartYear = clientCustomizer.getSYear();
-    
+
     if (null != request.getParameter("pageSizeVal"))
     {
     	pagesize = Integer.parseInt(request.getParameter("pageSizeVal"));
@@ -138,7 +137,7 @@
 
     dbName = request.getParameter("database");
     navigator = request.getParameter("navigator");
-    
+
     if(request.getParameter("origin") != null)
     {
       origin = request.getParameter("origin");
@@ -159,7 +158,7 @@
     {
       dedupOption = "0";
     }
-    
+
     if(request.getParameter("dbpref") != null)
     {
       dedupDB = request.getParameter("dbpref");
@@ -180,7 +179,7 @@
     {
         currentPage = null;
     }
-    
+
     if(null ==currentPage)
     {
         currentPage = request.getParameter("PAGE");
@@ -193,10 +192,10 @@
         	currentPage = "1";
         }
     }
-    
+
 
     int intDbMask = Integer.parseInt(dbName);
-    String[] credentials = user.getCartridge();
+    String[] credentials = ussession.getCartridge();
 
     boolean initialSearch = false;
     boolean clearBasket = false;
@@ -206,9 +205,9 @@
     try
     {
       searchID = request.getParameter("SEARCHID");
-  
+
       queryObject = Searches.getSearch(searchID);
-  
+
       queryObject.setSearchQueryWriter(new FastQueryWriter());
       queryObject.setDatabaseConfig(databaseConfig);
       queryObject.setCredentials(credentials);
@@ -217,48 +216,48 @@
                     sessionId,
                     pagesize,
                     true);
-  
+
       if(personalization == true)
       {
       	queryObject.setUserID(pUserId);
       }
-      
+
       queryObject.setSessionID(sessionId);
-  
+
       nTotalDocs = Integer.parseInt(queryObject.getRecordCount());
-  
-      
+
+
       // Create DB object - use this to get all dedup db related values
-      // for consistency - 
+      // for consistency -
       Database dedupDBObj = databaseConfig.getDatabase(dedupDB);
-      
-      String strGlobalLinksXML = GlobalLinks.toXML(user.getCartridge());
+
+      String strGlobalLinksXML = GlobalLinks.toXML(ussession.getCartridge());
       index = Integer.parseInt(currentPage.trim());
-       
-  
-      FastDeduper deduper = sc.dedupSearch(1000, 
-      				   	  dedupOption, 
+
+
+      FastDeduper deduper = sc.dedupSearch(1000,
+      				   	  dedupOption,
       				   	  dedupDBObj.getID());
-      			
-      			
+
+
       DedupData wanted = deduper.getWanted();
-      List<DocID> wantedList = wanted.getDocIDs();      
+      List<DocID> wantedList = wanted.getDocIDs();
       int dedupSet = wantedList.size();
 
 
       DedupData unwanted = deduper.getUnwanted();
-  
+
       int dedupSubset = 0;
       int removedSubset = 0;
-  
-       
+
+
       if(origin.equalsIgnoreCase("summary"))
       {
         if(linkSet.equalsIgnoreCase("deduped"))
         {
           if(dbLink.length() > 0)
           {
-            wantedList = (List)wanted.getDocIDs(dbLink);        
+            wantedList = (List)wanted.getDocIDs(dbLink);
             dedupSubset = wantedList.size();
             criteria = "d:" + dbLink.substring(0, 1).toLowerCase();
           }
@@ -278,11 +277,11 @@
           }
          }
       }
-  
+
       DedupBroker dedupBroker = new DedupBroker();
       List pageDocIDList = dedupBroker.getPage(wantedList, index, pagesize);
       oPage = dedupBroker.buildPage(pageDocIDList, Citation.CITATION_FORMAT,sessionId);
-  
+
       if(origin.equalsIgnoreCase("history") || origin.equalsIgnoreCase("summary"))
       {
         updateCurrentQuery = false;
@@ -292,7 +291,7 @@
         criteria = dedupOption + ":" + dedupDBObj.getMask();
         queryObject.addDupSet(criteria);
       }
-  
+
       // Logging
       client.log("search_id", searchID);
       client.log("query_string", queryObject.getPhysicalQuery());
@@ -329,18 +328,18 @@
 
       client.setRemoteControl();
 
-      
+
       //Writing out XML
-  
+
       out.write("<PAGE>");
-  
+
       StringBuffer backurl = new StringBuffer();
       backurl.append("/search/results/dedup.url?CID=dedup").append("&");
       backurl.append("SEARCHID=").append(searchID).append("&");
       backurl.append("COUNT=").append(index).append("&");
       backurl.append("database=").append(dbName);
-  
-      // add the dedup 7 to the back URL 
+
+      // add the dedup 7 to the back URL
       backurl.append("&");
       backurl.append("DupFlag=").append(DupFlag).append("&");
       backurl.append("fieldpref=").append(dedupOption).append("&");
@@ -353,31 +352,31 @@
       out.write("<BACKURL>");
       out.write(URLEncoder.encode(backurl.toString()));
       out.write("</BACKURL>");
-  
+
       out.write("<HEADER/>");
       out.write("<DBMASK>");
       out.write(dbName);
       out.write("</DBMASK>");
       out.write("<SEARCH-TYPE>"+queryObject.getSearchType()+"</SEARCH-TYPE>");
-  
+
       out.write(strGlobalLinksXML);
-  
+
       out.write("<FOOTER/>");
       out.write("<SESSION-TABLE/>");
       out.write("<SEARCH/>");
       out.write("<DEDUP-NAVIGATION-BAR/>");
       out.write("<RESULTS-MANAGER/>");
-  
+
       out.write("<DEDUP>" + DupFlag + "</DEDUP>");
       out.write("<LINK-RESULT-COUNT>" + linkResultCount + "</LINK-RESULT-COUNT>");
-  
+
       out.write("<CLEAR-ON-VALUE>"+documentBasket.getClearOnNewSearch()+"</CLEAR-ON-VALUE>");
       out.write("<CUSTOMIZED-LOGO>"+customizedLogo+"</CUSTOMIZED-LOGO>");
       out.write("<CUSTOMIZED-STARTYEAR>"+customizedStartYear+"</CUSTOMIZED-STARTYEAR>");
       out.write("<CUSTOMIZED-ENDYEAR>"+customizedEndYear+"</CUSTOMIZED-ENDYEAR>");
       out.write("<CUSTOMER-ID>"+customerId+"</CUSTOMER-ID>");
       out.write("<RESULTS-PER-PAGE>"+pagesize+"</RESULTS-PER-PAGE>");
-      out.write("<SESSION-ID>"+sessionIdObj.toString()+"</SESSION-ID>");
+      out.write("<SESSION-ID>"+sessionId+"</SESSION-ID>");
       out.write("<PERSONALIZATION-PRESENT>"+isPersonalizationPresent+"</PERSONALIZATION-PRESENT>");
       out.write("<FULLTEXT>"+isFullTextPresent+"</FULLTEXT>");
       out.write("<RSSLINK>"+isRssLinkPresent+"</RSSLINK>");
@@ -393,9 +392,9 @@
       out.write("<DEDUPSETSIZE>" + dedupsetsize  + "</DEDUPSETSIZE>");
       out.write("<DBPREF>" + dedupDB + "</DBPREF>");
       out.write("<FIELDPREF>" + dedupOption + "</FIELDPREF>");
-  
+
       Map unwantedMap = unwanted.getDatabases();
-      
+
       out.write("<DEDUPSET-REMOVED-DUPS>");
       Iterator itt = unwantedMap.keySet().iterator();
 
@@ -418,16 +417,16 @@
         out.write("<REMOVED-DUPS DBNAME=\"" + db.getShortName() + "\" DB=\""+key+"\" COUNT=\""+((Map)unwantedMap.get(key)).size()+"\" />");
       }
       out.write("</DEDUPSET-REMOVED-DUPS>");
-  
+
       out.write("<DBLINK>" + dbLink + "</DBLINK>");
       out.write("<ORIGIN>" + origin + "</ORIGIN>");
       out.write("<LINKSET>" + linkSet + "</LINKSET>");
       out.write("<DEDUPSET>" + dedupSet + "</DEDUPSET>");
       out.write("<DEDUPSUBSET>" + dedupSubset + "</DEDUPSUBSET>");
       out.write("<REMOVED-SUBSET>" + removedSubset + "</REMOVED-SUBSET>");
-      
+
       Map wantedMap = wanted.getDatabases();
-      
+
       out.write("<DEDUPSET-COUNTER>");
       itt = wantedMap.keySet().iterator();
 
@@ -450,25 +449,25 @@
         out.write("<DB-COUNT DBNAME=\"" + db.getShortName() + "\" DB=\""+key+"\" COUNT=\""+((Map)wantedMap.get(key)).size()+"\" />");
       }
       out.write("</DEDUPSET-COUNTER>");
-  
+
       queryObject.setDisplay(true);
       out.write(queryObject.toXMLString());
-  
+
       // output databases based on credentials
       databaseConfig.toXML(credentials, out);
       if(isCitLocalHoldingsPresent)
       {
-        localHolding = new LocalHolding(ussession,2);
+          localHolding=new LocalHolding(ussession.getProperty(UserSession.LOCAL_HOLDING_KEY),2);
         oPage.setlocalHolding(localHolding);
       }
       oPage.toXML(out);
-  
+
       databaseConfig.sortableToXML(credentials, out);
-  
+
       out.write("</PAGE>");
       out.println("<!--END-->");
       out.flush();
-  
+
       if(updateCurrentQuery)
       {
         Searches.updateSearch(queryObject);
@@ -484,7 +483,7 @@
         client.setRemoteControl();
         out.write(be.toXML());
         out.flush();
-        
+
         return;
     }finally
     {

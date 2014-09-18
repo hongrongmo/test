@@ -6,7 +6,6 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.Writer;
 import java.util.List;
-import java.util.Scanner;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.Cookie;
@@ -15,7 +14,8 @@ import javax.xml.transform.Transformer;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
-import org.ei.domain.personalization.IEVWebUser;
+import org.apache.commons.validator.GenericValidator;
+import org.ei.domain.personalization.IUserSessionInfo;
 import org.ei.session.SessionID;
 import org.ei.session.UserSession;
 import org.ei.util.SpinLockException;
@@ -94,17 +94,18 @@ public class OutputPrinter {
         response.setHeader("Content-Disposition", "attachment; filename=" + strFilename + "");
     }
 
-    public void print(String styleSheetURL, InputStream xmlStream, UserSession session) throws Exception {
+    public void print(String styleSheetURL, InputStream xmlStream, IUserSessionInfo session) throws Exception {
     	String sessionID = null;
     	TransformerBroker tBroker = TransformerBroker.getInstance();
         Transformer transformer = tBroker.getTransformer(styleSheetURL);
         // cacheID is only used with RSS transactions.  If it's null then we are
         // NOT processing RSS so it's OK to get the customer ID
     	if(this.cacheID == null){
-    		sessionID = (session.getSessionID()).toString();
-	        IEVWebUser user = session.getUser();
-	        String customerID = user.getCustomerID();
-	        setSessionCookie(sessionID);
+    		sessionID = session.getSessionid();
+	        String customerID = session.getCustomerid();
+	        if (!GenericValidator.isBlankOrNull(sessionID)) {
+	            setSessionCookie(sessionID);
+	        }
 	        transformer.setParameter("CUST-ID", customerID);
     	}
 

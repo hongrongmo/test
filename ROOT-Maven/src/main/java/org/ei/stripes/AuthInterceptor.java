@@ -21,7 +21,6 @@ import org.ei.biz.security.IAccessControl;
 import org.ei.biz.security.ISecuredAction;
 import org.ei.biz.security.WorldAccessControl;
 import org.ei.config.EVProperties;
-import org.ei.config.RuntimeProperties;
 import org.ei.controller.CookieHandler;
 import org.ei.controller.IPBlocker;
 import org.ei.controller.IPBlocker.COUNTER;
@@ -109,8 +108,8 @@ public class AuthInterceptor implements Interceptor {
                 return SystemMessage.SYSTEM_ERROR_RESOLUTION;
             }
         }
-        
-        
+
+
         if(!userSession.getUser().isCustomer()){
         	String ipaddress = HttpRequestUtil.getIP(request);
         	IPBlocker.getInstance().increment(ipaddress, COUNTER.NONCUSTOMER_REQUEST);
@@ -223,7 +222,6 @@ public class AuthInterceptor implements Interceptor {
      * @param request
      * @param userSession
      * @return
-     * @throws RuntimePropertiesServiceException
      */
     private boolean isSSORedirectRequired(HttpServletRequest request, UserSession userSession)  {
         if (request == null || userSession == null) {
@@ -247,13 +245,13 @@ public class AuthInterceptor implements Interceptor {
         }
 
         // Check to see if SSO is disabled in properties
-        if (Boolean.valueOf(EVProperties.getRuntimeProperty(RuntimeProperties.DISABLE_SSO_AUTH))) {
-            log4j.info("SSO Redirect NOT required - DISABLE_SSO_AUTH set in RuntimeProperties!");
+        if (Boolean.valueOf(EVProperties.getProperty(EVProperties.DISABLE_SSO_AUTH))) {
+            log4j.info("SSO Redirect NOT required - DISABLE_SSO_AUTH set in EVProperties!");
             return false;
         }
 
         // Check to see if SSO is disabled in database runtime properties
-        String ssoCoreRedirectFlag = EVProperties.getRuntimeProperty(RuntimeProperties.SSO_CORE_REDIRECT_FLAG);
+        String ssoCoreRedirectFlag = EVProperties.getProperty(EVProperties.SSO_CORE_REDIRECT_FLAG);
         if (StringUtils.isBlank(ssoCoreRedirectFlag) || !Boolean.valueOf(ssoCoreRedirectFlag)) {
             log4j.info("SSO Redirect NOT required -SSO disabled in database!");
             return false;

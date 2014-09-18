@@ -1,8 +1,13 @@
 package org.ei.system;
 
 /** project specific imports*/
-import java.sql.*;
-import org.ei.config.RuntimeProperties;
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.ei.config.ApplicationProperties;
 import org.ei.connectionpool.ConnectionBroker;
 import org.ei.connectionpool.ConnectionPoolException;
 import org.ei.domain.DatabaseConfig;
@@ -22,7 +27,7 @@ import org.ei.util.StringUtil;
 
 public class UpdateSavedRecords {
 
-	private RuntimeProperties eiProps;
+	private ApplicationProperties eiProps;
 
 	private ConnectionBroker m_broker = null;
 	private String m_strPoolname = StringUtil.EMPTY_STRING;
@@ -50,7 +55,7 @@ public class UpdateSavedRecords {
 
 			m_strPoolname = DatabaseConfig.SESSION_POOL;
 
-			eiProps = RuntimeProperties.getInstance(m_strPropertiesFile);
+			eiProps = ApplicationProperties.getInstance(m_strPropertiesFile);
 			m_strPoolsFilename = eiProps.getProperty("POOLSFILENAME");
 			m_broker = ConnectionBroker.getInstance(m_strPoolsFilename);
 

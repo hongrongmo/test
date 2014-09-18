@@ -21,11 +21,11 @@ import net.sourceforge.stripes.action.UrlBinding;
 
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
+import org.ei.biz.personalization.IEVWebUser;
 import org.ei.biz.security.IAccessControl;
 import org.ei.biz.security.NoAuthAccessControl;
 import org.ei.controller.CookieHandler;
 import org.ei.domain.DatabaseConfig;
-import org.ei.domain.personalization.IEVWebUser;
 import org.ei.exception.ErrorXml;
 import org.ei.exception.ExceptionWriter;
 import org.ei.session.AWSInfo;
