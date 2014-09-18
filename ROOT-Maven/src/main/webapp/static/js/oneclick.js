@@ -58,6 +58,32 @@ function checkReferexOnlyFolder(){
 	return false;
 }
 
+function checkBasketExistInTheSession(){
+	var basketExists = true;
+	var baseaddress = "";
+	if(typeof(dlOptions) === undefined || dlOptions == null || dlOptions ===""){
+		baseaddress = window.location.hostname;
+	}else{
+		baseaddress = dlOptions.baseaddress;
+	}
+
+	$.ajax({
+		type: "GET",
+	    url:    '//'+baseaddress+'/delivery/download/checkSessionValid.url',
+	    async:   false,
+	    cache: false,
+	    complete: function(e, xhr, settings){
+	        if(e.status === 200){
+	        	basketExists = true;
+	        }else if(e.status === 204){
+	        	basketExists = false;
+	        }
+	    }
+   });  
+   return basketExists;
+}
+
+
 function checkForOneClick(){
 
 	var authStatus = $.trim($('#authStatus').val());
@@ -227,6 +253,26 @@ function basketDownloadSubmit() {
 			sessionid = sessionid.split("_")[1];
 		}
 
+	}
+	
+	if(typeof(folderid) === 'undefined' || folderid == ''){
+		if(!checkBasketExistInTheSession()){
+			$("#oneclickDL").tooltipster({
+			    content: 'Your session expired, please refresh the page and try again.',
+			    autoClose:true,
+			    interactive:false,
+			    contentAsHTML:true,
+			    position:'bottom',
+			    fixedLocation:true,
+			    positionTracker:false,
+			    delay:0,
+			    speed:0,
+			    functionAfter: function(origin){$(origin).tooltipster('destroy');}
+			});
+			$("#oneclickDL").tooltipster('show',null);
+			event.preventDefault();
+			return false;
+		}
 	}
 	var url = "";
 	GALIBRARY.createWebEventWithLabel('Output', 'Download', downloadformat);
