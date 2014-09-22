@@ -73,6 +73,7 @@ $(document).ready(function() {
 			var downloadurl;
 			if(typeof($("#downloadlink").attr('href')) != 'undefined' && $("#downloadlink").attr('href').length > 0){
 				downloadurl = $("#downloadlink").attr('href');
+				
 			}else{
 				var form = $("#resultsform");
 				var folderid = form.find("input[name='folderid']").val();
@@ -85,8 +86,26 @@ $(document).ready(function() {
 				if(typeof(folderid) != 'undefined' && folderid.length > 0 ){
 					downloadurl += "&folderid=" +folderid;
 				}
+				if((typeof(Basket) == 'undefined' || (Basket.count > 0)) && typeof(folderid) === 'undefined' && !checkBasketExistInTheSession()) {
+					
+					$(this).tooltipster({
+					    content: 'Your session expired, please refresh the page and try again.',
+					    autoClose:true,
+					    interactive:false,
+					    contentAsHTML:true,
+					    position:'bottom',
+					    fixedLocation:true,
+					    positionTracker:false,
+					    delay:0,
+					    speed:0,
+					    functionAfter: function(origin){$(origin).tooltipster('destroy');}
+					});
+					$(this).tooltipster('show',null);
+					return false;
+				}
 			}
-
+			
+			
 			if(((typeof(Basket) == 'undefined' || (Basket.count > 0)) || (typeof($(this).attr("href")) != 'undefined' &&  $(this).attr("href").length > 0))){
 
 				$(this).tooltipster({

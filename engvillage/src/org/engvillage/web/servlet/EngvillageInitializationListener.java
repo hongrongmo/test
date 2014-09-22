@@ -18,6 +18,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.ei.books.LemQueryWriter;
 import org.ei.config.ApplicationProperties;
+import org.ei.domain.ClassNodeManager;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.DatabaseConfigException;
 import org.ei.domain.DriverConfig;
@@ -26,54 +27,56 @@ import org.ei.exception.ServiceException;
 import org.ei.thesaurus.ThesaurusSearchControl;
 import org.engvillage.service.amazon.dynamodb.RuntimePropsDynamoDBServiceImpl;
 
-
 public class EngvillageInitializationListener implements ServletContextListener {
 
-	private static final Logger log4j = Logger.getLogger(EngvillageInitializationListener.class);
+    private static final Logger log4j = Logger.getLogger(EngvillageInitializationListener.class);
 
-	private static Boolean initialized = false;
-	public static boolean isInitialized() {
-	    return initialized;
-	}
+    private static Boolean initialized = false;
 
-	/**
-	 * This is called from the container when the web application starts up.
-	 */
-	@Override
-	public void contextInitialized(ServletContextEvent event) {
+    public static boolean isInitialized() {
+        return initialized;
+    }
 
-		log4j.info("Engvillage app starting up. Configuring system...");
+    /**
+     * This is called from the container when the web application starts up.
+     */
+    @Override
+    public void contextInitialized(ServletContextEvent event) {
 
-		// Ensure the "runlevel" property is set
+        log4j.info("Engvillage app starting up. Configuring system...");
+
+        // Ensure the "runlevel" property is set
         String runlevel = System.getProperty(ApplicationProperties.SYSTEM_ENVIRONMENT_RUNLEVEL);
         if (GenericValidator.isBlankOrNull(runlevel)) {
-            log4j.warn(
-                "\n\n*********************************************************************\n" +
-                "* UNABLE TO RETRIEVE '" + ApplicationProperties.SYSTEM_ENVIRONMENT_RUNLEVEL + "' property!\n" +
-                "* DEFAULTING TO 'live'. \n" +
-                "* (e.g. -D" + ApplicationProperties.SYSTEM_ENVIRONMENT_RUNLEVEL + "=<environment>)\n" +
-                "*********************************************************************\n\n");
+            log4j.warn("\n\n*********************************************************************\n" + "* UNABLE TO RETRIEVE '"
+                + ApplicationProperties.SYSTEM_ENVIRONMENT_RUNLEVEL + "' property!\n" + "* DEFAULTING TO 'live'. \n" + "* (e.g. -D"
+                + ApplicationProperties.SYSTEM_ENVIRONMENT_RUNLEVEL + "=<environment>)\n"
+                + "*********************************************************************\n\n");
             runlevel = "live";
         }
         ApplicationProperties.getInstance().setProperty(ApplicationProperties.SYSTEM_ENVIRONMENT_RUNLEVEL, runlevel);
 
-		try {
-		    // Populate various application-specific items
-		    log4j.info("Populating ApplicationProperties...");
-			populateApplicationProperties();
+        try {
+            // Populate various application-specific items
+            log4j.info("Populating ApplicationProperties...");
+            populateApplicationProperties();
 
             // Initialize log4j
             log4j.info("Init log4j...");
-			initLog4j();
+            initLog4j();
 
-			// Initialize application
-			log4j.info("Init application");
-			initApplication();
+            // Initialize application
+            log4j.info("Init application");
+            initApplication();
 
-		} catch (Exception e) {
-		    log4j.error("Unable to initialize application items: ", e);
-		    return;
-		}
+            // Initialize ClassNodeManager
+            log4j.info("Initializing ClassNodeManager");
+            ClassNodeManager.init(ApplicationProperties.getInstance());
+
+        } catch (Exception e) {
+            log4j.error("Unable to initialize application items: ", e);
+            return;
+        }
 
         //
         // Init the DatabaseConfig instance. Just calling the
@@ -90,84 +93,82 @@ public class EngvillageInitializationListener implements ServletContextListener 
         //
         // If we make it here, mark application as initialized!
         //
-        synchronized(initialized) {
+        synchronized (initialized) {
             initialized = true;
         }
-	}
+    }
 
-	/**
-	 * Read all *.properties files to initialize application
-	 *
-	 * @throws IOException
-	 */
-	private void populateApplicationProperties() throws IOException {
-	    refreshProperties();
-		startApplicationPropertiesJob();
-	}
+    /**
+     * Read all *.properties files to initialize application
+     *
+     * @throws IOException
+     */
+    private void populateApplicationProperties() throws IOException {
+        refreshProperties();
+        startApplicationPropertiesJob();
+    }
 
     /**
      * One-time initialization
      */
     public void initApplication() {
-            try {
-                ApplicationProperties applicationProperties = ApplicationProperties.getInstance();
+        try {
+            ApplicationProperties applicationProperties = ApplicationProperties.getInstance();
 
-                //
-                // Init the DatabaseConfig
-                //
-                DatabaseConfig.getInstance(DriverConfig.getDriverTable());
+            //
+            // Init the DatabaseConfig
+            //
+            DatabaseConfig.getInstance(DriverConfig.getDriverTable());
 
-                //
-                // Init some static classes from property values
-                //
-                FastSearchControl.BASE_URL = applicationProperties.getProperty(ApplicationProperties.FAST_BASE_URL);
-                LemQueryWriter.BASE_URL = applicationProperties.getProperty(ApplicationProperties.FAST_LEM_BASE_URL);
-                ThesaurusSearchControl.BASE_URL = applicationProperties.getProperty(ApplicationProperties.THES_BASE_URL);
+            //
+            // Init some static classes from property values
+            //
+            FastSearchControl.BASE_URL = applicationProperties.getProperty(ApplicationProperties.FAST_BASE_URL);
+            LemQueryWriter.BASE_URL = applicationProperties.getProperty(ApplicationProperties.FAST_LEM_BASE_URL);
+            ThesaurusSearchControl.BASE_URL = applicationProperties.getProperty(ApplicationProperties.THES_BASE_URL);
 
-                //
-                // Print for debug
-                //
-                if (log4j.isDebugEnabled()) {
-                    log4j.debug("*************** Runtime properties: ");
-                    for (Enumeration<?> e = applicationProperties.propertyNames(); e.hasMoreElements();) {
-                        String key = (String) e.nextElement();
-                        String val = applicationProperties.getProperty(key);
-                        log4j.debug("    " + key + "=" + val);
-                    }
+            //
+            // Print for debug
+            //
+            if (log4j.isDebugEnabled()) {
+                log4j.debug("*************** Runtime properties: ");
+                for (Enumeration<?> e = applicationProperties.propertyNames(); e.hasMoreElements();) {
+                    String key = (String) e.nextElement();
+                    String val = applicationProperties.getProperty(key);
+                    log4j.debug("    " + key + "=" + val);
                 }
-
-                //
-                // Try to load release version number from properties
-                //
-                try {
-                    String rv = applicationProperties.getProperty(ApplicationProperties.RELEASE_VERSION);
-                    if (GenericValidator.isBlankOrNull(rv)) {
-                        log4j.warn("***************  RELEASE VERSION NOT FOUND!! ******************");
-                    }
-                } catch (Exception e) {
-                    log4j.warn("***************  UNABLE TO RETRIEVE RELEASE VERSION!! ******************", e);
-                }
-
-            } catch (DatabaseConfigException e) {
-                throw new RuntimeException("Unable to configure DatabaseConfig object!",e);
             }
 
+            //
+            // Try to load release version number from properties
+            //
+            try {
+                String rv = applicationProperties.getProperty(ApplicationProperties.RELEASE_VERSION);
+                if (GenericValidator.isBlankOrNull(rv)) {
+                    log4j.warn("***************  RELEASE VERSION NOT FOUND!! ******************");
+                }
+            } catch (Exception e) {
+                log4j.warn("***************  UNABLE TO RETRIEVE RELEASE VERSION!! ******************", e);
+            }
+
+        } catch (DatabaseConfigException e) {
+            throw new RuntimeException("Unable to configure DatabaseConfig object!", e);
+        }
 
     }
 
-
-	/**
-	 * Use runtime properties to override initial log4j settings
-	 */
-	private void initLog4j() {
-	    Logger rootlogger = Logger.getRootLogger();
-	    if (rootlogger == null) {
+    /**
+     * Use runtime properties to override initial log4j settings
+     */
+    private void initLog4j() {
+        Logger rootlogger = Logger.getRootLogger();
+        if (rootlogger == null) {
             log4j.warn("********** Unable to retrieve Root logger! **********");
-	        return;
-	    }
+            return;
+        }
 
-	    ApplicationProperties runtimeproperties = ApplicationProperties.getInstance();
-        // Attempt to get the console logging flag from properties file.  Add console
+        ApplicationProperties runtimeproperties = ApplicationProperties.getInstance();
+        // Attempt to get the console logging flag from properties file. Add console
         // logger if true.
         String rootlogtoconsole = runtimeproperties.getProperty(ApplicationProperties.ROOT_LOG_TO_CONSOLE);
         if (GenericValidator.isBlankOrNull(rootlogtoconsole) || !Boolean.parseBoolean(rootlogtoconsole)) {
@@ -175,38 +176,40 @@ public class EngvillageInitializationListener implements ServletContextListener 
             rootlogger.removeAppender("CA");
         }
 
-        // Attempt to get the ROOT logging level from properties file.  Override
+        // Attempt to get the ROOT logging level from properties file. Override
         // current log level if found.
-		String rootloglevel = runtimeproperties.getProperty(ApplicationProperties.ROOT_LOG_LEVEL);
-		if (!GenericValidator.isBlankOrNull(rootloglevel)) {
-		    log4j.warn("********** Changing log level to: " + rootloglevel + " **********");
-		    rootlogger.setLevel(Level.toLevel(rootloglevel));
-		} else {
+        String rootloglevel = runtimeproperties.getProperty(ApplicationProperties.ROOT_LOG_LEVEL);
+        if (!GenericValidator.isBlankOrNull(rootloglevel)) {
+            log4j.warn("********** Changing log level to: " + rootloglevel + " **********");
+            rootlogger.setLevel(Level.toLevel(rootloglevel));
+        } else {
             log4j.warn("********** No Root log level override found in runtime properties! **********");
-		}
+        }
 
-	}
+    }
 
     /** The timer. */
-    public  static Timer timer = null;
+    public static Timer timer = null;
 
     /**
-	 * This is called from the container when the web application shuts down.
-	 */
-	@Override
-	public void contextDestroyed(ServletContextEvent event) {
-		if(timer != null){
-			timer.cancel();
-		}
-	}
+     * This is called from the container when the web application shuts down.
+     */
+    @Override
+    public void contextDestroyed(ServletContextEvent event) {
+        if (timer != null) {
+            timer.cancel();
+        }
+    }
 
     /**
      * Refresh properties.
      *
-     * @param runtimeProperties the runtime properties
-     * @throws IOException Signals that an I/O exception has occurred.
+     * @param runtimeProperties
+     *            the runtime properties
+     * @throws IOException
+     *             Signals that an I/O exception has occurred.
      */
-    public static void  refreshProperties() throws IOException {
+    public static void refreshProperties() throws IOException {
         RuntimePropsDynamoDBServiceImpl amazonDynamoDBService = new RuntimePropsDynamoDBServiceImpl();
         InputStream is = null;
         Map<String, String> properties = new HashMap<String, String>();
@@ -223,24 +226,23 @@ public class EngvillageInitializationListener implements ServletContextListener 
             is = ApplicationProperties.class.getResourceAsStream("/override.properties");
             if (is != null) {
                 applicationproperties.load(new BufferedInputStream(is));
-            }else{
+            } else {
                 log4j.error("Unable to load overiride.properties resource - please check it is available!");
             }
-            /*for (Enumeration<?> e = runtimeProperties.propertyNames(); e.hasMoreElements();) {
-                String key = (String) e.nextElement();
-                String val = runtimeProperties.getProperty(key);
-                log4j.info(key + "=" + val);
-            }*/
-            log4j.info("Runtime properties for the runlevel '"+runlevel+"' has been refreshed");
+            /*
+             * for (Enumeration<?> e = runtimeProperties.propertyNames(); e.hasMoreElements();) { String key = (String) e.nextElement(); String val =
+             * runtimeProperties.getProperty(key); log4j.info(key + "=" + val); }
+             */
+            log4j.info("Runtime properties for the runlevel '" + runlevel + "' has been refreshed");
         } catch (ServiceException e) {
-            log4j.error("Error occured while fetching properties from dynmo DB due to :"+e.getMessage());
-        }finally{
-            try{
+            log4j.error("Error occured while fetching properties from dynmo DB due to :" + e.getMessage());
+        } finally {
+            try {
                 if (is != null) {
-                     is.close();
-                     is = null;
-                 }
-            }catch(Throwable t){
+                    is.close();
+                    is = null;
+                }
+            } catch (Throwable t) {
                 log4j.error("Unable to close returnstream! Error = " + t.getClass().getName() + ", message = " + t.getMessage());
             }
         }
@@ -254,17 +256,17 @@ public class EngvillageInitializationListener implements ServletContextListener 
         timer = new Timer();
         TimerTask task = new TimerTask() {
             @Override
-             public void run() {
-                try{
+            public void run() {
+                try {
                     ApplicationProperties applicationproperties = ApplicationProperties.getInstance();
                     refreshProperties();
-                }catch(Exception e){
-                    log4j.error("Application properties refresh job interrupted due to :!"+e.getMessage());
+                } catch (Exception e) {
+                    log4j.error("Application properties refresh job interrupted due to :!" + e.getMessage());
                 }
             }
-      };
-      timer.schedule(task, 60000*5,60000*5);
-      log4j.info("Successfully initiated the runtime properties refresh job!");
+        };
+        timer.schedule(task, 60000 * 5, 60000 * 5);
+        log4j.info("Successfully initiated the runtime properties refresh job!");
 
     }
 
