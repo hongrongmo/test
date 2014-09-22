@@ -464,6 +464,7 @@ public class IPBlocker {
             	ipstatus.setStatus(BlockedIPStatus.STATUS_BLOCKED);
             }
             ipstatus.addAccount(org.ei.biz.personalization.cars.Account.getAccountInfo(ipevent.getIP()));
+            ipstatus.setTimestamp(new Date());
             ipstatus.save();
 
             return ipstatus;
