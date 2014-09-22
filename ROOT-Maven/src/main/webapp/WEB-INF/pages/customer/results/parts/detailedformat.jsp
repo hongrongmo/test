@@ -8,7 +8,7 @@
 <h2 id="detailedrecord" style="display:none">Detailed record</h2>
 
 			<div class="result<c:if test="${status.count % 2 eq 0}"> odd</c:if>">
-			
+
 			<c:choose>
 			<c:when test="${param.displaytype eq 'viewfolders'}">
 				<div style="float: left; line-height:1.9em; padding: 6px 1px 10px 5px ">
@@ -30,13 +30,13 @@
 					</a></span></div>
 			</c:otherwise>
 			</c:choose>
-			
+
 			<table border="0" id="detailed" style="padding-top:6px;">
 
-<c:forEach items="${result.detailedOrder}" var="segment" varStatus="segmentstatus">	
+<c:forEach items="${result.detailedOrder}" var="segment" varStatus="segmentstatus">
 <!--  KEY: ${segment.key}  -->
 <!--  LABEL: ${segment.label} -->
-<c:choose>		
+<c:choose>
 
 <c:when test="${'AN' eq segment.key and not empty result.accnum}"> <!--Accession Number  -->
 			<tr>
@@ -47,7 +47,7 @@
 						<p><img src="/static/images/btn_aip.gif" border="0"  title="Articles not published yet, but available online" alt="Articles not published yet, but available online"><span style="vertical-align:text-top"> Article in Press</span>&nbsp;<a href="${actionBean.helpUrl}#Art_in_Press.htm" alt="Information about Article in Press" title="Information about Article in Press" class="helpurl"><img src="/static/images/i.png" border="0" alt="Information about Article in Press"/></a></p></c:if>
 					</td>
 				</tr>
-</c:when>					
+</c:when>
 
 <c:when test="${'PM' eq segment.key and not empty result.pm}">
 				<tr>
@@ -71,7 +71,7 @@
 						<td colspan="2">${result.papx}</td>
 					</tr>
 	</c:if>
-	<c:if test="${'PAN' eq segment.key and not empty result.pan}"> 
+	<c:if test="${'PAN' eq segment.key and not empty result.pan}">
 						<tr>
 						<!--<td>&nbsp;</td>-->
 						<td class="label"><h3>Application number: </h3></td>
@@ -79,16 +79,16 @@
 					</tr>
 	</c:if>
 </c:when>
-<c:when test="${'PAPD' eq segment.key and not empty result.papd}"> 
-	
+<c:when test="${'PAPD' eq segment.key and not empty result.papd}">
+
 					<tr>
 						<!--<td>&nbsp;</td>-->
 						<td class="label"><h3>Application date: </h3></td>
 						<td colspan="2">${result.papd}</td>
 					</tr>
 </c:when>
-<c:when test="${'PAPCO' eq segment.key and not empty result.papco}"> 
-	
+<c:when test="${'PAPCO' eq segment.key and not empty result.papco}">
+
 					<tr>
 						<!--<td>&nbsp;</td>-->
 						<td class="label"><h3>Application country: </h3></td>
@@ -125,8 +125,8 @@
 					<td colspan="2" id="titletext"><b><data:highlighttag value="${result.tt}" on="${actionBean.ckhighlighting}"/></h3></td>
 				</tr>
 </c:when>
-	
-<c:when test="${'AUS' eq segment.key  and not empty result.authors}">			
+
+<c:when test="${'AUS' eq segment.key  and not empty result.authors}">
 				<tr>
 					<!--<td>&nbsp;</td>-->
 					<td class="label"><h3>${result.labels['AUS']}: </h3></td>
@@ -153,7 +153,7 @@
 </c:forEach>
 </span></td>
 				</tr>
-</c:when>	
+</c:when>
 <c:when test ="${'AFS' eq segment.key and not empty result.affils}">
 <c:forEach items="${result.affils}" var="affil" varStatus="afstatus">
 				<tr>
@@ -221,7 +221,7 @@
 				</tr>
 </c:when>
 
-<c:when test="${'PASM' eq segment.key and not empty result.assigneelinks}"> 
+<c:when test="${'PASM' eq segment.key and not empty result.assigneelinks}">
 				<tr>
 					<!--<td>&nbsp;</td>-->
 					<td class="label"><h3>${result.labels['PASM']}: </h3></td>
@@ -230,7 +230,7 @@
 </c:when>
 
 
-<c:when test="${'PEXM' eq segment.key and not empty result.primaryexaminer}"> 
+<c:when test="${'PEXM' eq segment.key and not empty result.primaryexaminer}">
 				<tr>
 					<!--<td>&nbsp;</td>-->
 					<td class="label"><h3>Primary examiner: </h3></td>
@@ -243,7 +243,7 @@
 					<td class="label"><h3>${result.labels['ATT']}: </h3></td>
 					<td colspan="2">${result.att}</td>
 				</tr>
-</c:when>		
+</c:when>
 <c:when test="${'AE' eq segment.key and not empty result.ae}"> <!-- Assistant examiner -->
 				<tr>
 					<!--<td>&nbsp;</td>-->
@@ -251,21 +251,21 @@
 					<td colspan="2">${result.ae}</td>
 				</tr>
 </c:when>
-<c:when test="${'EASM' eq segment.key and not empty result.patassigneelinks}"> 
+<c:when test="${'EASM' eq segment.key and not empty result.patassigneelinks}">
 					<tr>
 					<!--<td>&nbsp;</td>-->
 					<td class="label"><h3>Assignee: </h3></td>
 					<td colspan="2"><c:forEach items="${result.patassigneelinks}" var="link" varStatus="status"><c:if test="${status.count>1}">&nbsp;-&nbsp;</c:if>${link}</c:forEach></td>
 				</tr>
 </c:when>
-<c:when test="${'PAP' eq segment.key and not empty result.pap}"> 
+<c:when test="${'PAP' eq segment.key and not empty result.pap}">
 				<tr>
 					<!--<td>&nbsp;</td>-->
 					<td class="label"><h3>Patent number: </h3></td>
 					<td colspan="2">${result.pap}</td>
 				</tr>
 </c:when>
-<c:when test="${'PIDD' eq segment.key and not empty result.pidd}"> 
+<c:when test="${'PIDD' eq segment.key and not empty result.pidd}">
 				<tr>
 					<!--<td>&nbsp;</td>-->
 					<td class="label"><h3>Patent issue date: </h3></td>
@@ -375,7 +375,7 @@
 						<td colspan="2">${result.papx}</td>
 					</tr>
 	</c:if>
-	<c:if test="${'PAN' eq segment.key and not empty result.pan}"> 
+	<c:if test="${'PAN' eq segment.key and not empty result.pan}">
 						<tr>
 						<!--<td>&nbsp;</td>-->
 						<td class="label"><h3>Application number: </h3></td>
@@ -411,35 +411,35 @@
 					<td colspan="2">${result.papim}</td>
 				</tr>
 </c:when>
-<c:when test="${'PIM' eq segment.key and not empty result.pim}"> 
+<c:when test="${'PIM' eq segment.key and not empty result.pim}">
 				<tr>
 					<!--<td>&nbsp;</td>-->
 					<td class="label"><h3>Priority information: </h3></td>
 					<td colspan="2"><c:forEach items="${result.pim}" var="link" varStatus="status"><c:if test="${status.count>1}">&nbsp;-&nbsp;</c:if>${link}</c:forEach></td>
 				</tr>
 </c:when>
-<c:when test="${'VT' eq segment.key and not empty result.vt}"> 
+<c:when test="${'VT' eq segment.key and not empty result.vt}">
 				<tr>
 					<!--<td>&nbsp;</td>-->
 					<td class="label"><h3>Volume title: </h3></td>
 					<td colspan="2">${result.vt}</td>
 				</tr>
 </c:when>
-<c:when test="${'PINFO' eq segment.key and not empty result.pinfo}"> 
+<c:when test="${'PINFO' eq segment.key and not empty result.pinfo}">
 				<tr>
 					<!--<td>&nbsp;</td>-->
 					<td class="label"><h3>Patent information: </h3></td>
 					<td colspan="2">${result.pinfo}</td>
 				</tr>
 </c:when>
-<c:when test="${'PA' eq segment.key and not empty result.pa}"> 
+<c:when test="${'PA' eq segment.key and not empty result.pa}">
 				<tr>
 					<!--<td>&nbsp;</td>-->
 					<td class="label"><h3>Paper number: </h3></td>
 					<td colspan="2">${result.pa}</td>
 				</tr>
 </c:when>
-<c:when test="${'DERW' eq segment.key and not empty result.derwent}"> 
+<c:when test="${'DERW' eq segment.key and not empty result.derwent}">
 <!-- Int. Patent Classification -->
 				<tr>
 					<!--<td>&nbsp;</td>-->
@@ -574,7 +574,7 @@
 					<td class="label"><h3>Sponsor: </h3></td>
 					<td colspan="2"><data:highlighttag value="${result.sp}" on="${actionBean.ckhighlighting}"/></td>
 				</tr>
-</c:when> 
+</c:when>
 <c:when test="${'BPN' eq segment.key and not empty result.bpn}">
 				<tr>
 					<!--<td>&nbsp;</td>-->
@@ -1164,14 +1164,14 @@
 				</tr>
 </c:forEach>
 </c:when>
-		
+
 <c:when test="${'NDI' eq segment.key and not empty result.ndi}">  <!-- Numerical data indexing -->
 				<tr>
 					<!--<td>&nbsp;</td>-->
 					<td class="label"><h3>${result.labels['NDI']}: </h3></td>
 					<td colspan="2">${result.ndi}</td>
 				</tr>
-</c:when>		
+</c:when>
 <c:when test="${'TRS' eq segment.key and not empty result.abstractrecord.treatments}">
 			<%-- ************************************************************************* --%>
 			<%-- Treatments                                                                --%>
@@ -1192,7 +1192,7 @@
 				</tr>
 </c:when>
 
-<c:when test="${'LOCS' eq segment.key and not empty result.abstractrecord.termmap['LOCS']}">	
+<c:when test="${'LOCS' eq segment.key and not empty result.abstractrecord.termmap['LOCS']}">
 <!-- Coordinates / Locations-->
 				<tr>
 					<!--<td>&nbsp;</td>-->
@@ -1248,15 +1248,15 @@
    					<span href="" class="encompassOpenClose" isopen='false' id="atmOpenClose" termtype='atm' data='${result.atm}' docid='${result.doc.docid}' title="Display Indexing template">
    					<a class="open" border="0">Open all templates view</a><a class="close" border="0" style="display:none">Close all templates view</a>&nbsp;&nbsp;<a class="plusminus">+</a><a class="plusminus" style="display:none">-</a>
    					</span>
-					
+
 					<table style="margin:0px; padding:0px; border:0px black solid; width:100%" id="atm_table${result.doc.docid}">
 						<tbody id="atm_table_body${result.doc.docid}">
 						</tbody>
 					</table>
-				
+
 					</div></td>
 				</tr>
-			
+
 </c:when>
 <c:when test="${'MLT' eq segment.key and not empty result.mlt}"> <!-- Manually linked terms -->
 				<tr>
@@ -1297,16 +1297,16 @@
 				</tr>
 </c:when>
 
-<c:when test="${'RN_LABEL' eq segment.key and not empty result.rnlabel}"> 
+<c:when test="${'RN_LABEL' eq segment.key and not empty result.rnlabel}">
 				<tr>
 					<!--<td>&nbsp;</td>-->
 					<td class="label"><h3>Report number: </h3></td>
 					<td colspan="2">${result.rnlabel}</td>
 				</tr>
 </c:when>
-<c:when test="${'RN' eq segment.key and not empty result.rn}"> 
+<c:when test="${'RN' eq segment.key and not empty result.rn}">
 				<tr>
-					<td>&nbsp;</td>
+					<!--<td>&nbsp;</td>-->
 					<td class="label"><h3>Report number: </h3></td>
 					<td colspan="2">${result.rn}</td>
 				</tr>
@@ -1401,7 +1401,7 @@
 					<td colspan="2"><span class="dbnameidentifier">${result.doc.dbname}</span></td>
 				</tr>
 </c:if>
-			
+
 <c:if test="${not empty result.cpr}">
 				<tr>
 					<!--<td>&nbsp;</td>-->
@@ -1410,10 +1410,10 @@
 				</tr>
 </c:if>
 			</table>
-			
+
 			<c:if test="${(not empty result.lhlinkObjects) or (result.fulltext) or (actionBean.lindahall)}">
 				<div id="deliverylinks" style="margin-left:92.5px;width:90.5%">
-				
+
 					<h3 id="deliveryheader" style="padding: 3px 3px;<c:if test="${displaywhite % 2 eq 0}"> background-color: #FFFFFF;</c:if>">Full-text and Local Holdings Links</h3>
 					<div id="deliverybody">
 						<c:if test="${not empty result.lhlinkObjects}">
@@ -1421,7 +1421,7 @@
 							<c:forEach items="${result.lhlinkObjects}" var="lhlink" varStatus="status">
 								<c:if test="${not empty lhlink.url}">
 									<c:if test="${status.count>1}"><span class="pipe">|</span></c:if>
-									<c:choose>                     
+									<c:choose>
 		                        		<c:when test="${not empty lhlink.imageUrl}">
 		                        			<a CLASS="LgBlueLink" onclick="openLocalHoldingsLink(event,'Detailed Format',this);" href="/search/results/localholdinglinks.url?docId=${result.doc.docid}&url=${lhlink.url}&position=${lhlink.position}" target="new">
 		                        				<img src="${lhlink.imageUrl}" alt="${lhlink.label}" border="0" />
@@ -1433,24 +1433,24 @@
 		                    		</c:choose>
 								</c:if>
 							</c:forEach>
-							</p> 
+							</p>
 						</c:if>
-							
+
 						<c:if test="${result.fulltext}">
 							<c:if test="${not(fn:substring(result.doc.docid,0,3) eq 'ref')}">
 								<p>
 									<a href="javascript:newwindow=window.open('/search/results/fulltext.url?docID=${result.doc.docid}','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable'); void('');" title="Full-text"><img id="ftimg" class="fulltext" src="/static/images/full_text.png" alt="Full-text"></a>
 								</p>
-							</c:if>	
+							</c:if>
 						</c:if>
 			    		<c:if test="${result.doc.dbmask ne '131072' and actionBean.lindahall}">
 			    			<p><a title="Linda Hall Library document delivery service" href="javascript:lindaHall('${actionBean.sessionid}','${result.doc.docid}','${result.doc.dbid}')">Linda Hall Library document delivery service</a></p>
 		    			</c:if>
 					</div>
-					
+
 				</div>
 			</c:if>
-			
+
 			<c:if test="${'131072' eq result.doc.dbmask}">
 			<div style="margin-left:92.5px;width:90.5%;padding-bottom:10px;">
 					<c:if test="${not empty result.readpagelink}">${result.readpagelink}</c:if>
@@ -1459,5 +1459,5 @@
 					</div>
 			</c:if>
 	     </div>
-	     
+
 		</c:forEach>
