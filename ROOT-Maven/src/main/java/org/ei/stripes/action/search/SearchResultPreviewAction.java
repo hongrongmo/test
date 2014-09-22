@@ -190,7 +190,9 @@ public class SearchResultPreviewAction extends EVActionBean {
 			all = HitHighlightFinisher.addMarkup( doc.getElementDataMap().get(Keys.ABSTRACT).getElementData()[0].replaceAll("\"", "&quot;"));
 			tmp = createSnippet(all);
 			String left = "";
-			if(tmp.length() < all.length()){
+			if(GenericValidator.isBlankOrNull(tmp)){
+				tmp = all;
+			}else if(tmp.length() < all.length()){
 				// then there was a snippet and we don't just have the same string
 				left = all.substring(tmp.length());
 			}
