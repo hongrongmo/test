@@ -11,6 +11,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.Enumeration;
 import java.util.Map;
 import java.util.Queue;
@@ -583,6 +584,7 @@ public class ApplicationStatus extends EVActionBean {
                 BlockedIPStatus ipstatus = BlockedIPStatus.load(txtblockedip);
                 if (ipstatus != null) {
                     ipstatus.setStatus(enabled ? BlockedIPStatus.STATUS_BLOCKED : BlockedIPStatus.STATUS_UNBLOCKED);
+                    ipstatus.setTimestamp(new Date());
                     ipstatus.save();
                 }
                 txtblockedip = null;
