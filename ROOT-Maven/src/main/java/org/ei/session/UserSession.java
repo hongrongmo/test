@@ -223,12 +223,14 @@ public class UserSession implements Serializable, IUserSessionInfo {
     // Required from IUserSessionInfo interface
     @Override
     public String getUserid() {
-        return getUser().getUserInfo().getUserId();
+        if (getUser() == null || getUser().getUserInfo() == null) return "";
+        else return getUser().getUserInfo().getUserId();
     }
 
     @Override
     public String getSessionid() {
-        return this.sessionid.getID();
+        if (this.sessionid == null) return "";
+        else return this.sessionid.getID();
     }
 
     @Override
@@ -243,7 +245,8 @@ public class UserSession implements Serializable, IUserSessionInfo {
 
     @Override
     public String getCustomerid() {
-        return this.user.getCustomerID();
+        if (this.user == null) return "";
+        else return this.user.getCustomerID();
     }
 
     @Override
@@ -253,7 +256,8 @@ public class UserSession implements Serializable, IUserSessionInfo {
 
     @Override
     public String getDefaultdb() {
-        return this.user.getDefaultDB();
+        if (this.user == null) return "";
+        else return this.user.getDefaultDB();
     }
 
     @Override

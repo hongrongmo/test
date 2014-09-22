@@ -281,6 +281,9 @@ public final class EVProperties {
     /** The Constant CARS_REG_ID_ASSOCIATION_REGISTER_TZ. */
     public static final String CARS_REG_ID_ASSOCIATION_REGISTER_TZ="CARS_REG_ID_ASSOCIATION_REGISTER_TZ";
 
+    /** The Constant LOG_CARS_RESPONSE_ERRORS. */
+    public static final String LOG_CARS_RESPONSE_ERRORS="log.cars.response.errors";
+
     private static EVProperties instance;
 
 	public static String NEWLINE = "\n";
@@ -643,8 +646,19 @@ public final class EVProperties {
      *
      * @return the help url
      */
-    public String getHelpUrl() {
-        return applicationProperties.getProperty(HELP_URL);
+    public static String getHelpUrl() {
+        return EVProperties.getProperty(HELP_URL);
+    }
+
+    /**
+     * Return Log CARS response errors flag
+     *
+     * @return
+     */
+    public static Boolean isLogCarsResponseErrors() {
+        String logcarsresponseerrors = EVProperties.getProperty(LOG_CARS_RESPONSE_ERRORS);
+        if (logcarsresponseerrors != null) return Boolean.parseBoolean(logcarsresponseerrors);
+        else return false;
     }
 
     /**
