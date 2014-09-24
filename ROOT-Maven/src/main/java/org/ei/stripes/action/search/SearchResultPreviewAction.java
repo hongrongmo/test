@@ -224,6 +224,9 @@ public class SearchResultPreviewAction extends EVActionBean {
 				snip = all.substring(0, nextHit);
 			}else if(nextSpace > 0){
 				snip = all.substring(0, nextSpace);
+				if(snip.endsWith("<span")){
+					snip = all.substring(0, nextSpace - 5);
+				}
 			}else{
 				return all;
 			}
