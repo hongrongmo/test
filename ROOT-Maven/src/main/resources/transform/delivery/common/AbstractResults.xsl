@@ -17,7 +17,7 @@
 
 <xsl:output method="html" indent="no"/>
   <xsl:strip-space elements="html:* xsl:*" />
-
+  <xsl:param name="s3figurl" />	
   <xsl:template match="EI-DOCUMENT">
       <xsl:param name="ascii">false</xsl:param>
       <xsl:apply-templates select="BTI"/>
@@ -771,7 +771,8 @@
 
     <xsl:template match="IMAGE">
       <xsl:variable name="cap" select= "text()"/>
-      <td valign="top" align="middle"><span href="javascript:window.open('/fig/{@img}','newwind','width=650,height=600,scrollbars=yes,resizable,statusbar=yes');void('');"><img src="/fig/{@img}" alt="{$cap}" border="1" width="100" height="100"/></span>
+      <xsl:variable name="figureUrl"><xsl:value-of select="$s3figurl"/><xsl:value-of select="@img"/></xsl:variable>
+      <td valign="top" align="middle"><span href="javascript:window.open('{$figureUrl}','newwind','width=650,height=600,scrollbars=yes,resizable,statusbar=yes');void('');"><img src="{$figureUrl}" alt="{$cap}" border="1" width="100" height="100"/></span>
       <br/><span class="SmBlackText"><xsl:value-of select="$cap" disable-output-escaping="yes"/></span></td><td valign="top" width="15"></td>
     </xsl:template>
 

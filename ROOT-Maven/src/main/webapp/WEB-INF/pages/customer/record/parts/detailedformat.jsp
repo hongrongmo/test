@@ -1318,7 +1318,7 @@
 				<tr>
 					<td>&nbsp;</td>
 					<td class="label"><h3>Figures: </h3></td>
-					<td colspan="2"><c:forEach var="figure" items="${result.abstractrecord.figures}"><a href="javascript:window.open('/fig/${figure}','newwind','width=650,height=600,scrollbars=yes,resizable,statusbar=yes');void('');"><img src="/fig/${figure}" alt="" border="1" width="100" height="100"/></a></c:forEach></td>
+					<td colspan="2"><c:forEach var="figure" items="${result.abstractrecord.figures}"><a href="javascript:window.open('${actionBean.s3FigUrl}${figure}','newwind','width=650,height=600,scrollbars=yes,resizable,statusbar=yes');void('');"><img src="${actionBean.s3FigUrl}${figure}" alt="" border="1" width="100" height="100"/></a></c:forEach></td>
 				</tr>
 </c:when>
 
