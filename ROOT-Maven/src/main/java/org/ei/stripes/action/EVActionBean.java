@@ -66,8 +66,9 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
     public String isActionBeanInstance;
     protected boolean showpatentshelp;
     protected CustomizedLogo customlogo;
+    private String s3FigUrl = null;
 
-    private boolean showLoginBox = true;
+   	private boolean showLoginBox = true;
     private StopWatch requeststopwatch = null;
 
     @Validate(mask = ".*")
@@ -644,6 +645,13 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
     public void setCsrfSyncToken(String csrfSyncToken) {
         this.csrfSyncToken = csrfSyncToken;
     }
+    
+    public String getS3FigUrl() {
+    	 String s3figurl = (EVProperties.getProperty(EVProperties.S3_FIG_URL));
+         if (s3figurl == null)
+        	 s3figurl = "https://s3.amazonaws.com/ev-data/tmp/fig/";
+         return s3figurl;
+	}
 
     /**
      * Create a Web Event to be recorded on page load and add it to the list in the request

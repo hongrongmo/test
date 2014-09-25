@@ -283,6 +283,9 @@ public final class EVProperties {
 
     /** The Constant LOG_CARS_RESPONSE_ERRORS. */
     public static final String LOG_CARS_RESPONSE_ERRORS="log.cars.response.errors";
+    
+    /** The Constant S3_FIG_URL. */
+    public static final String S3_FIG_URL ="s3.fig.url";
 
     private static EVProperties instance;
 
