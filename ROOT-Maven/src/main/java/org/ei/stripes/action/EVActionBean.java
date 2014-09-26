@@ -732,6 +732,7 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
                         context.updateUserSession(usersession);
                         preventIt = false;
                     } else {
+                    	log4j.warn("CSRF token is not valid for this session. session id:"+ usersession.getSessionid()+" , incoming token: "+token+". Either this is a brand new session or session expired or maximum number of tries has been exceeded.");
                         preventIt = true;
                     }
                 }
