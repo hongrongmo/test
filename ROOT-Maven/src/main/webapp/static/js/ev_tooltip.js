@@ -77,8 +77,6 @@ $(document).ready(function() {
 			}else{
 				var form = $("#resultsform");
 				var folderid = form.find("input[name='folderid']").val();
-
-
 				downloadurl = "/delivery/download/display.url?database="+form.find("input[name='database']").val()
 				+"&displayformat="+displayformat
 				+"&allselected=true";
@@ -123,21 +121,63 @@ $(document).ready(function() {
 				    debug:false,
 				    functionBefore: function(origin, continueTooltip) {
 
-				        // we'll make this function asynchronous and allow the tooltip to go ahead and show the loading notification while fetching our data
-				    	$(origin).tooltipster('content', "Loading...");
-				        //console.log("get data" + content);
-				    	continueTooltip();
-				            $.ajax({
+				    	if(typeof($("#downloadlink").attr('href')) != 'undefined' && $("#downloadlink").attr('href').length > 0){
+				    		// we'll make this function asynchronous and allow the tooltip to go ahead and show the loading notification while fetching our data
+					    	$(origin).tooltipster('content', "Loading...");
+					        //console.log("get data" + content);
+					    	continueTooltip();
+				    		$.ajax({
 				                type: 'GET',
 				                url: downloadurl,
 				                cache: false,
-				                success: function(data) {
-				                    $(origin).tooltipster('content', data);
-
+				                complete: function(e, xhr, settings){
+				                	if(e.status === 200){
+				                		 $(origin).tooltipster('content', data);
+				        	        }else{
+				        	        	 $(origin).tooltipster('Your session expired, please refresh the page and try again.', data);
+				        	        }
 				                }
+				               
 				            });
-
-				    },
+				    	}else{
+				    		if((typeof(Basket) == 'undefined' || (Basket.count > 0)) && typeof(folderid) === 'undefined' && !checkBasketExistInTheSession()){
+				    			$('#downloadlink').tooltipster('destroy');
+				    			$('#downloadlink').tooltipster({
+								    content: 'Your session expired, please refresh the page and try again.',
+								    autoClose:true,
+								    interactive:false,
+								    contentAsHTML:true,
+								    position:'bottom',
+								    fixedLocation:true,
+								    positionTracker:false,
+								    delay:0,	
+								    speed:0,
+								    functionAfter: function(origin){$(origin).tooltipster('destroy');}
+								});
+				    			$('#downloadlink').tooltipster('show',null);
+				    			return false;
+				    		}else{
+				    			// we'll make this function asynchronous and allow the tooltip to go ahead and show the loading notification while fetching our data
+						    	$(origin).tooltipster('content', "Loading...");
+						        //console.log("get data" + content);
+						    	continueTooltip();
+				    			$.ajax({
+					                type: 'GET',
+					                url: downloadurl,
+					                cache: false,
+					                complete: function(e, xhr, settings){
+					                	if(e.status === 200){
+					                		 $(origin).tooltipster('content', e.responseText);
+					        	        }else{
+					        	        	 $(origin).tooltipster('Your session expired, please refresh the page and try again.', e.responseText);
+					        	        }
+					                }
+					            });
+				    		}
+				    	}
+				    	
+				    	
+				    	},
 				    functionAfter: function(origin){
 				    	$(origin).attr('title', 'Click to change one click download preferences.');
 
