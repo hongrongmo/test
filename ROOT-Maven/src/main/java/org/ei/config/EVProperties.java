@@ -53,6 +53,9 @@ public final class EVProperties {
     /** The Constant PREVENT_CSRF_ATTACK. */
     public static final String PREVENT_CSRF_ATTACK ="PREVENT_CSRF_ATTACK";
 
+    /** The Constant MAINTENANCE_MODE. */
+    public static final String MAINTENANCE_MODE ="maintenance.mode";
+
     /** The Constant MEMCACHE_SERVERS. */
     public static final String MEMCACHE_SERVERS = "memcache.servers";
 

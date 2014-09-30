@@ -12,6 +12,7 @@ import net.sourceforge.stripes.controller.Interceptor;
 import net.sourceforge.stripes.controller.Intercepts;
 import net.sourceforge.stripes.controller.LifecycleStage;
 
+import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
 import org.ei.biz.security.IAccessControl;
 import org.ei.biz.security.ISecuredAction;
@@ -62,6 +63,15 @@ public class SessionBuilderInterceptor implements Interceptor {
 
 		String ipaddress = HttpRequestUtil.getIP(request);
 		log4j.info("[" + ipaddress + "] Starting intercept...");
+
+        // *****************************************************
+        // Check for maintenance mode
+        // *****************************************************
+		String maintenancemode = EVProperties.getProperty(EVProperties.MAINTENANCE_MODE);
+        if (!GenericValidator.isBlankOrNull(maintenancemode) && Boolean.parseBoolean(maintenancemode)) {
+            log4j.warn("Application is in MAINTENANCE MODE!");
+            return new ForwardResolution("/WEB-INF/pages/world/maintenance.jsp");
+        }
 
         // *****************************************************
         // Ensure the application has been initialized
