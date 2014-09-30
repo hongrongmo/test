@@ -120,7 +120,7 @@ $(document).ready(function() {
 				    speed:0,
 				    debug:false,
 				    functionBefore: function(origin, continueTooltip) {
-
+				    	//Following code handles the scenario when default tool tip event is triggered, we need to check weather the user in basket page or some other pages
 				    	if(typeof($("#downloadlink").attr('href')) != 'undefined' && $("#downloadlink").attr('href').length > 0){
 				    		// we'll make this function asynchronous and allow the tooltip to go ahead and show the loading notification while fetching our data
 					    	$(origin).tooltipster('content', "Loading...");
@@ -134,27 +134,17 @@ $(document).ready(function() {
 				                	if(e.status === 200){
 				                		 $(origin).tooltipster('content', e.responseText);
 				        	        }else{
-				        	        	 $(origin).tooltipster('content','Your session expired, please refresh the page and try again.');
+				        	        	//Response is bad or redirection happened from the server side. so we need to ask user to refresh page
+				        	        	createSessionExpiryTooltip();
+						    			return false;
 				        	        }
 				                }
 				               
 				            });
 				    	}else{
 				    		if((typeof(Basket) == 'undefined' || (Basket.count > 0)) && typeof(folderid) === 'undefined' && !checkBasketExistInTheSession()){
-				    			$('#downloadlink').tooltipster('destroy');
-				    			$('#downloadlink').tooltipster({
-								    content: 'Your session expired, please refresh the page and try again.',
-								    autoClose:true,
-								    interactive:false,
-								    contentAsHTML:true,
-								    position:'bottom',
-								    fixedLocation:true,
-								    positionTracker:false,
-								    delay:0,	
-								    speed:0,
-								    functionAfter: function(origin){$(origin).tooltipster('destroy');}
-								});
-				    			$('#downloadlink').tooltipster('show',null);
+				    			//Session is expired or response is bad or redirection happened from the server side. so we need to ask user to refresh page
+				    			createSessionExpiryTooltip();
 				    			return false;
 				    		}else{
 				    			// we'll make this function asynchronous and allow the tooltip to go ahead and show the loading notification while fetching our data
@@ -165,11 +155,13 @@ $(document).ready(function() {
 					                type: 'GET',
 					                url: downloadurl,
 					                cache: false,
-					                complete: function(e, xhr, settings){
+					                complete: function(e, xhr, settingks){
 					                	if(e.status === 200){
 					                		 $(origin).tooltipster('content', e.responseText);
 					        	        }else{
-					        	        	 $(origin).tooltipster('content','Your session expired, please refresh the page and try again.');
+					        	        	//Response is bad or redirection happened from the server side. so we need to ask user to refresh page
+					        	        	createSessionExpiryTooltip();
+							    			return false;
 					        	        }
 					                }
 					            });
@@ -202,6 +194,25 @@ $(document).ready(function() {
 			return false;
 		});
 	}
+	
+	function createSessionExpiryTooltip(){
+		// we may have to catch the 302 response and redirect to the incoming url in the future. for now just showing the error message
+		$('#downloadlink').tooltipster('destroy');
+		$('#downloadlink').tooltipster({
+		    content: 'Your session expired, please refresh the page and try again.',
+		    autoClose:true,
+		    interactive:false,
+		    contentAsHTML:true,
+		    position:'bottom',
+		    fixedLocation:true,
+		    positionTracker:false,
+		    delay:0,	
+		    speed:0,
+		    functionAfter: function(origin){$(origin).tooltipster('destroy');}
+		});
+		$('#downloadlink').tooltipster('show',null);
+	}
+	
 	function getToolTipContent(origin, continueTooltip){
 		         // we'll make this function asynchronous and allow the tooltip to go ahead and show the loading notification while fetching our data
 		        continueTooltip();
