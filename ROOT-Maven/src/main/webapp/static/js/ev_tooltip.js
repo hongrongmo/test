@@ -73,7 +73,7 @@ $(document).ready(function() {
 			var downloadurl;
 			if(typeof($("#downloadlink").attr('href')) != 'undefined' && $("#downloadlink").attr('href').length > 0){
 				downloadurl = $("#downloadlink").attr('href');
-				
+
 			}else{
 				var form = $("#resultsform");
 				var folderid = form.find("input[name='folderid']").val();
@@ -87,7 +87,7 @@ $(document).ready(function() {
 					downloadurl += "&folderid=" +folderid;
 				}
 				if((typeof(Basket) == 'undefined' || (Basket.count > 0)) && typeof(folderid) === 'undefined' && !checkBasketExistInTheSession()) {
-					
+
 					$(this).tooltipster({
 					    content: 'Your session expired, please refresh the page and try again.',
 					    autoClose:true,
@@ -104,8 +104,8 @@ $(document).ready(function() {
 					return false;
 				}
 			}
-			
-			
+
+
 			if(((typeof(Basket) == 'undefined' || (Basket.count > 0)) || (typeof($(this).attr("href")) != 'undefined' &&  $(this).attr("href").length > 0))){
 
 				$(this).tooltipster({
@@ -127,15 +127,15 @@ $(document).ready(function() {
 				    	$(origin).tooltipster('content', "Loading...");
 				        //console.log("get data" + content);
 				    	continueTooltip();
-				            $.ajax({
-				                type: 'GET',
-				                url: downloadurl,
-				                cache: false,
-				                success: function(data) {
-				                    $(origin).tooltipster('content', data);
+			            $.ajax({
+			                type: 'GET',
+			                url: downloadurl,
+			                cache: false,
+			                success: function(data) {
+			                    $(origin).tooltipster('content', data);
 
-				                }
-				            });
+			                }
+			            });
 
 				    },
 				    functionAfter: function(origin){
@@ -257,6 +257,48 @@ function showSurvey(feature, location){
 	}
 
 }
+function showExitSurvey(){
+	var surveyCookie;
+	if($.cookie("ev_exitsurvey")){
+		surveyCookie = JSON.parse($.cookie("ev_exitsurvey"));
+
+		$.cookie("ev_exitsurvey", '{"dontShow":'+surveyCookie.dontShow+'}',{expires: 365, path:'/'});
+	}else{
+		$.cookie("ev_exitsurvey", '{"dontShow":'+false+'}',{expires: 365, path:'/'});
+		surveyCookie = {
+			dontShow:false,
+		};
+	}
+
+	if(!surveyCookie.dontShow){
+
+		$("#ev_survey").tooltipster({
+		    content:$("#exitSurvey").html(),
+		    contentAsHTML:true,
+		    autoClose:false,
+		    interactive:true,
+		    position:'top',
+		    fixedLocation:true,
+		    positionTracker:false,
+		    multiple:true,
+		    delay:0,
+		    speed:0,
+		    debug:false,
+		    arrow:false,
+		    theme:'tooltipster-default surveyTheme',
+		    functionReady: function(origin, continueTooltip) {
+		    	$(".surveyTheme").css("left", "30%");
+	           	$(".surveyTheme").css("top", "30%");
+		    }
+		});
+
+
+		$("#ev_survey").show();
+		$("#ev_survey").tooltipster('show',null);
+	}
+
+}
+
 //hid the popup and write a session cookie so it won't show again.
 function hideTP(selector){
 	$(selector).tooltipster("hide");
