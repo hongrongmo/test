@@ -8,7 +8,7 @@
 	.marketing_image{
 		text-align:center;
 	}
-	.message{
+	#marketing_message .message{
 		font-weight: normal;
 		font-size: 18px;
 		text-align: center;
@@ -16,9 +16,9 @@
 </style>
 </head>
 <body>
-<div>
+<div id="marketing_message">
 	<div class="message">
-		This <a href="http://www.elsevier.com/__data/assets/file/0003/218559/ev-tipsntricks.pdf" target="new" title="Click to open Tips & Tricks PDF">Tips & Tricks page</a> of supporting resources will help you get the most out of Engineering Village.<br/>Don't hesitate to share this knowledge!
+		Use the <a href="http://www.elsevier.com/__data/assets/file/0003/218559/ev-tipsntricks.pdf" target="new" title="Click to open Tips & Tricks PDF">Tips & Tricks page</a> to help you with using Engineering Village.
 	</div>
 	<div class="marketing_image">
 		<a href="http://www.elsevier.com/__data/assets/file/0003/218559/ev-tipsntricks.pdf" target="new" title="Click to open Tips & Tricks PDF"><img src="/static/images/evtips.jpg" alt="Engineering Village Tips & Tricks" title="Engineering Village Tips & Tricks" /></a>
