@@ -20,6 +20,7 @@ import net.sourceforge.stripes.action.UrlBinding;
 
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
+import org.ei.config.EVProperties;
 import org.ei.domain.Abstract;
 import org.ei.domain.BasketPage;
 import org.ei.domain.Citation;
@@ -232,6 +233,9 @@ public class PrintDeliveryAction extends AbstractDeliveryAction {
 				TransformerFactory tFactory = new TransformerFactoryImpl();
 				Templates templates = tFactory.newTemplates(new StreamSource(xslt));
 				Transformer transformer = templates.newTransformer();
+				String s3figurl = (EVProperties.getProperty(EVProperties.S3_FIG_URL));
+	        	if (s3figurl == null)s3figurl = "https://s3.amazonaws.com/ev-data/tmp/fig/";
+	        	transformer.setParameter("s3figurl", s3figurl);
 				transformer.transform(new StreamSource(new StringReader(this.getXml().replaceAll(BizXmlAdapter.xml10_illegal_xml_pattern, ""))),
 				          new StreamResult(htmlWriter));
 				String html = htmlWriter.toString();

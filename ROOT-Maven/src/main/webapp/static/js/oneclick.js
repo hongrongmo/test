@@ -73,9 +73,9 @@ function checkBasketExistInTheSession(){
 	    async:   false,
 	    cache: false,
 	    complete: function(e, xhr, settings){
-	        if(e.status === 200){
+	        if(e.status === 200 && e.responseText === "true"){
 	        	basketExists = true;
-	        }else if(e.status === 204){
+	        }else{
 	        	basketExists = false;
 	        }
 	    }
