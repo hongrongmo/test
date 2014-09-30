@@ -263,6 +263,9 @@ public class BdParser
 									itemid_idtype.equals("CHEM")))
 							{
 								String  itemid = itemidElement.getTextTrim();
+
+								//System.out.println("ACCESSNUMBER= "+itemid);
+
 								record.put("ACCESSNUMBER",itemid);
 								setAccessNumber(itemid);
 							}
@@ -494,7 +497,7 @@ public class BdParser
 												StringBuffer apiccterms = new StringBuffer();
 												if(classdescgroup != null)
 												{
-													System.out.println("ENTER classdescgroup");
+													//System.out.println("ENTER classdescgroup");
 													for (int j = 0; j < classdescgroup.size(); j++)
 													{
 														Element ell = (Element)classdescgroup.get(j);
