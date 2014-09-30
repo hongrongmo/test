@@ -276,4 +276,26 @@ public class HttpRequestUtil {
 
         return url.toString();
     }
+    
+    public static String getServerBaseAddress(HttpServletRequest request,boolean includeContextPath, boolean includeServletPath ) {
+
+        String scheme = request.getScheme();             // http
+        String serverName = request.getServerName();     // hostname.com
+        int serverPort = request.getServerPort();        // 80
+        String contextPath = request.getContextPath();   // /mywebapp
+        String servletPath = request.getServletPath();   // /servlet/MyServlet
+
+        // Reconstruct original requesting URL
+        StringBuffer url =  new StringBuffer();
+        url.append(scheme).append("://").append(serverName);
+
+        if ((serverPort != 80) && (serverPort != 443)) {
+            url.append(":").append(serverPort);
+        }
+        if(includeContextPath){
+        	url.append(contextPath);
+        	if(includeServletPath) url.append(servletPath);
+        }
+        return url.toString();
+    }
 }

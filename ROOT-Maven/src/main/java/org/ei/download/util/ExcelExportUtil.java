@@ -867,7 +867,11 @@ public class ExcelExportUtil {
 							String cellValue = getNodeValue(docElem, "AB");
 							if (cellValue == null
 									|| cellValue.equalsIgnoreCase("")) {
-								cellValue = getNodeValue(docElem, "AB2");
+								cellValue = getChildTextNodes(docElem, "AB2", "ABS", DOUBLE_SPACER);
+								if(cellValue != null){
+									cellValue = cellValue.replaceAll("<ABS>", "");
+									cellValue = cellValue.replaceAll("</ABS>", "");
+								}
 							}
 							cell.setCellValue(cellValue);
 						}
@@ -1355,7 +1359,11 @@ public class ExcelExportUtil {
 							String cellValue = getNodeValue(docElem, "AB");
 							if (cellValue == null
 									|| cellValue.equalsIgnoreCase("")) {
-								cellValue = getNodeValue(docElem, "AB2");
+								cellValue = getChildTextNodes(docElem, "AB2", "ABS", DOUBLE_SPACER);
+								if(cellValue != null){
+									cellValue = cellValue.replaceAll("<ABS>", "");
+									cellValue = cellValue.replaceAll("</ABS>", "");
+								}
 							}
 							cell.setCellValue(cellValue);
 						}
