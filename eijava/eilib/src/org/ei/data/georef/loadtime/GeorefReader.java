@@ -366,8 +366,9 @@ public class GeorefReader {
 			// UNIVERSITY OR OTHER EDUCATIONAL INSTITUTION
 			if (article.getChild("A41") != null) {
 				Element university = article.getChild("A41");
-				record.put("A41", new StringBuffer(university.getChild("A41_1")
-						.getTextTrim()));
+				if(university.getChild("A41_1")!=null){
+					record.put("A41", new StringBuffer(university.getChild("A41_1").getTextTrim()));
+				}
 			}
 
 			// TYPE OF DEGREE
