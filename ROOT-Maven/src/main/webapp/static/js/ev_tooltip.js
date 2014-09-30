@@ -132,9 +132,9 @@ $(document).ready(function() {
 				                cache: false,
 				                complete: function(e, xhr, settings){
 				                	if(e.status === 200){
-				                		 $(origin).tooltipster('content', data);
+				                		 $(origin).tooltipster('content', e.responseText);
 				        	        }else{
-				        	        	 $(origin).tooltipster('Your session expired, please refresh the page and try again.', data);
+				        	        	 $(origin).tooltipster('content','Your session expired, please refresh the page and try again.');
 				        	        }
 				                }
 				               
@@ -169,7 +169,7 @@ $(document).ready(function() {
 					                	if(e.status === 200){
 					                		 $(origin).tooltipster('content', e.responseText);
 					        	        }else{
-					        	        	 $(origin).tooltipster('Your session expired, please refresh the page and try again.', e.responseText);
+					        	        	 $(origin).tooltipster('content','Your session expired, please refresh the page and try again.');
 					        	        }
 					                }
 					            });
