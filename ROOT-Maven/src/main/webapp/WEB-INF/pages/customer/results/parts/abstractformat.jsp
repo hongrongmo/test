@@ -97,7 +97,7 @@
 	</c:if>
 	 <!-- missing IMG -->
 	 <c:if test="${not empty result.abstractrecord.figures}">
-							<p class="figures"><c:forEach var="figure" items="${result.abstractrecord.figures}"><a href="javascript:window.open('/fig/${figure}','newwind','width=650,height=600,scrollbars=yes,resizable,statusbar=yes');void('');"><img src="/fig/${figure}" alt="" border="1" width="100" height="100"/></a></c:forEach></p>
+							<p class="figures"><c:forEach var="figure" items="${result.abstractrecord.figures}"><a href="javascript:window.open('${actionBean.s3FigUrl}${figure}','newwind','width=650,height=600,scrollbars=yes,resizable,statusbar=yes');void('');"><img src="${actionBean.s3FigUrl}${figure}" alt="" border="1" width="100" height="100"/></a></c:forEach></p>
 				</c:if>
 	
 	 <%-- <c:if test="${not empty result.at}">
