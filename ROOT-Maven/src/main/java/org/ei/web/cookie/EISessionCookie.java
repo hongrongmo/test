@@ -7,6 +7,7 @@ import java.rmi.server.UID;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -28,8 +29,8 @@ public class EISessionCookie extends Cookie {
 
     public static final String EISESSION_COOKIE_NAME = "EISESSION";
     private static final String EISESSION_SECRET = "h$a5$jmp4BKluup1V7Sw^HSo1pwH62pe";
-    private static final long EXPIRES_IN = 30 * 60 * 1000;  // 30 minute expiration KEEP IN SYNC WITH JSESSION EXPIRATION!!
-    private static final SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd-hh:mm:ss");
+    private static final long EXPIRES_IN = TimeUnit.MINUTES.toMillis(30);  // 30 minute expiration KEEP IN SYNC WITH JSESSION EXPIRATION!!
+    private static final SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd-HH:mm:ss");
 
     private int version;
     private String sessionid = "";
