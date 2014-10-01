@@ -16,8 +16,9 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.commons.lang.ArrayUtils;
 import org.apache.commons.validator.GenericValidator;
-import org.ei.controller.CookieHandler;
 import org.ei.stripes.action.ApplicationStatus;
+import org.ei.web.cookie.CookieHandler;
+import org.ei.web.cookie.SimulatedIPCookie;
 
 public class HttpRequestUtil {
     private static org.apache.log4j.Logger log4j = org.apache.log4j.Logger.getLogger(HttpRequestUtil.class);
@@ -64,14 +65,11 @@ public class HttpRequestUtil {
         // but basically this allows us to simulate different IPs for testing
         // purposes
         Map<String, Cookie> cookiemap = CookieHandler.getCookieMap(request);
-        if (cookiemap != null && !cookiemap.isEmpty() && cookiemap.containsKey("SIMULATEDIP")) {
-            String simulatedip = cookiemap.get("SIMULATEDIP").getValue();
-            if (!GenericValidator.isBlankOrNull(simulatedip)) {
-            	simulatedip = ApplicationStatus.isValidSimIp(simulatedip);
-            	if(simulatedip != null){
-            	    log4j.info("Returning simulated ip: " + simulatedip);
-            		return simulatedip;
-            	}
+        if (cookiemap != null && !cookiemap.isEmpty() && cookiemap.containsKey(SimulatedIPCookie.SIMULATED_IP_COOKIE_NAME)) {
+            String simulatedip = new SimulatedIPCookie(cookiemap.get(SimulatedIPCookie.SIMULATED_IP_COOKIE_NAME)).getSimulatedIP();
+            if(simulatedip != null){
+                log4j.info("Returning simulated ip: " + simulatedip);
+                return simulatedip;
             }
         }
 

@@ -15,6 +15,7 @@ import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
 import org.ei.logging.LogClient;
 import org.ei.util.GUID;
+import org.ei.web.cookie.EISessionCookie;
 
 @SuppressWarnings("serial")
 public class RedirectService extends HttpServlet {
@@ -87,8 +88,8 @@ public class RedirectService extends HttpServlet {
                 this.logClient.setbegin_time(start);
                 this.logClient.setend_time(end);
                 this.logClient.setresponse_time(end - start);
-                if (ht.containsKey("EISESSION")) {
-                    this.logClient.setsid((String) ht.get("EISESSION"));
+                if (ht.containsKey(EISessionCookie.EISESSION_COOKIE_NAME)) {
+                    this.logClient.setsid((String) ht.get(EISessionCookie.EISESSION_COOKIE_NAME));
                 } else {
                     this.logClient.setsid("0");
                 }
