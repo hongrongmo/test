@@ -26,7 +26,6 @@ import org.apache.log4j.Logger;
 import org.ei.biz.personalization.IEVWebUser;
 import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
-import org.ei.controller.CookieHandler;
 import org.ei.controller.DataRequest;
 import org.ei.controller.DataResponse;
 import org.ei.controller.DataResponseBroker;
@@ -42,6 +41,8 @@ import org.ei.service.cars.Impl.CARSResponse;
 import org.ei.session.SessionManager;
 import org.ei.session.UserSession;
 import org.ei.stripes.action.SystemMessage;
+import org.ei.web.cookie.CookieHandler;
+import org.ei.web.cookie.EISessionCookie;
 
 /**
  * This class extends the Stripes ActionBeanContext class to provide
@@ -132,16 +133,7 @@ public class EVActionBeanContext extends ActionBeanContext {
         UserSession usersession = this.getUserSession();
         if (usersession != null) {
         	if(null != usersession.getSessionID()){
-            String sessionID = (usersession.getSessionID()).toString();
-            Cookie cookie = new Cookie("EISESSION", sessionID);
-
-            // A negative value means that the cookie is not stored persistently
-            // and will be deleted when the Web browser exits. A zero value
-            // causes the cookie to be deleted.
-            // http://java.sun.com/j2ee/sdk_1.2.1/techdocs/api/javax/servlet/http/Cookie.html#setMaxAge(int)
-            cookie.setMaxAge(-1);
-            cookie.setPath("/");
-            response.addCookie(cookie);
+        	    response.addCookie(new EISessionCookie(usersession.getSessionID()));
         	}
             String entryToken = request.getParameter("SYSTEM_ENTRY_TOKEN");
             if (entryToken != null) {

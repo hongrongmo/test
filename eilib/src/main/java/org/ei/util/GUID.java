@@ -23,8 +23,12 @@ public class GUID {
 			guid = uid.toString() + vmid;
 		}
 
-		guid = guid.replace(".", "").replace(":", "").replace("-", "M");
+		guid = normalize(guid);
 
+	}
+
+	public static String normalize(String uid) {
+	    return uid.replace(".", "").replace(":", "").replace("-", "M").replace("_", "");
 	}
 
 	public String toString() {

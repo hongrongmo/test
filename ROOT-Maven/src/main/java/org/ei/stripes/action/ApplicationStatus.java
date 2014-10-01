@@ -52,7 +52,6 @@ import org.ei.biz.security.NoAuthAccessControl;
 import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
 import org.ei.connectionpool.ConnectionBroker;
-import org.ei.controller.CookieHandler;
 import org.ei.controller.IPBlocker;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.FastClient;
@@ -67,6 +66,8 @@ import org.ei.session.UserSession;
 import org.ei.stripes.util.HttpRequestUtil;
 import org.ei.system.ApplicationStatusVO;
 import org.ei.system.EVSaxParser;
+import org.ei.web.cookie.CookieHandler;
+import org.ei.web.cookie.SimulatedIPCookie;
 
 @UrlBinding("/status{$event}.url")
 public class ApplicationStatus extends EVActionBean {
@@ -350,23 +351,6 @@ public class ApplicationStatus extends EVActionBean {
         return new ForwardResolution("/WEB-INF/pages/status/userinfo.jsp");
     }
 
-    @HandlesEvent("/simulatedip")
-    public Resolution simulatedip() {
-
-        String s = BaseCookie.getCookieValue(context.getRequest(), "SIMULATEDIP");
-
-        if (!GenericValidator.isBlankOrNull(s)) {
-
-            s = isValidSimIp(s);
-            if (s != null) {
-                this.txtsimulatedip = s;
-            } else {
-                this.txtsimulatedip = "";
-            }
-        }
-        return new ForwardResolution("/WEB-INF/pages/status/simulatedip.jsp");
-    }
-
     private long system_1hour = 60 * 60 * 1000;
     private long system_1day = system_1hour * 24;
     private long system_1week = system_1day * 7;
@@ -414,6 +398,12 @@ public class ApplicationStatus extends EVActionBean {
         return new ForwardResolution("/WEB-INF/pages/status/searchwidget.jsp");
     }
 
+    @HandlesEvent("/simulatedip")
+    public Resolution simulatedip() {
+        this.txtsimulatedip = new SimulatedIPCookie(CookieHandler.getCookie(context.getRequest(), SimulatedIPCookie.SIMULATED_IP_COOKIE_NAME)).getSimulatedIP();
+        return new ForwardResolution("/WEB-INF/pages/status/simulatedip.jsp");
+    }
+
     /**
      * Handles the submit button for the simulated IP
      *
@@ -421,15 +411,19 @@ public class ApplicationStatus extends EVActionBean {
      */
     @HandlesEvent("simulatedipsubmit")
     public Resolution simulatedipsubmit() {
+        CookieHandler.setCookie(context.getRequest(), context.getResponse(), new SimulatedIPCookie(this.txtsimulatedip));
+        return new RedirectResolution("/status/simulatedip.url");
+    }
+
+    /**
+     * Handles the clear button for the simulated IP
+     *
+     * @return
+     */
+    @HandlesEvent("simulatedipclear")
+    public Resolution simulatedipclear() {
         // Use the submitted value as the new IP
-        String cookieValue = txtsimulatedip;
-        try {
-            cookieValue += "_" + DigestUtils.md5Hex(txtsimulatedip + SIM_IP_SALT);
-        } catch (Exception e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        BaseCookie.setCookie(context.getRequest(), context.getResponse(), "SIMULATEDIP", cookieValue, -1);
+        CookieHandler.clearCookie(SimulatedIPCookie.SIMULATED_IP_COOKIE_NAME);
         return new RedirectResolution("/status/simulatedip.url");
     }
 
@@ -603,46 +597,6 @@ public class ApplicationStatus extends EVActionBean {
             }
         }
         return new RedirectResolution("/status/ipblocker.url").flash(this);
-    }
-
-    /**
-     * Check if the cookie value is a valid ip overrid generated from our system
-     *
-     * @param cookieValue
-     * @return if it is return the ip
-     */
-    public static String isValidSimIp(String cookieValue) {
-        if (GenericValidator.isBlankOrNull(cookieValue)) {
-            return null;
-        }
-        String ip = cookieValue.substring(0, cookieValue.indexOf("_"));
-        String md5 = cookieValue.substring(cookieValue.indexOf("_") + 1);
-        String check = "";
-        try {
-            check = DigestUtils.md5Hex(ip + SIM_IP_SALT);
-
-        } catch (Exception e) {
-
-            e.printStackTrace();
-        }
-
-        if (check.equals(md5)) {
-            return ip;
-        }
-
-        return null;
-    }
-
-    /**
-     * Handles the clear button for the simulated IP
-     *
-     * @return
-     */
-    @HandlesEvent("simulatedipclear")
-    public Resolution simulatedipclear() {
-        // Use the submitted value as the new IP
-        BaseCookie.deleteCookie(context.getRequest(), context.getResponse(), "SIMULATEDIP");
-        return new RedirectResolution("/status/simulatedip.url");
     }
 
     /**
