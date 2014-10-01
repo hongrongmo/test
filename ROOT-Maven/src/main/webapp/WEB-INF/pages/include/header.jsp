@@ -151,7 +151,7 @@
   <c:if test="${actionBean.context.userSession.user.individuallyAuthenticated eq 'false'}">
    	$.cookie('ev_dldpref',null,{path:'/'});
   </c:if>
- 
+
   $(function() {	  if($("#settingMenu").length > 0){
 		$("#settingMenu").menu({position:{my:'right+25 top+20'}, icons: { submenu: "ui-icon-triangle-1-s" }});
 		$("#settingDropDown").show();
@@ -164,7 +164,7 @@
 
     $(".whatsNewLink").click(function(){
     	GALIBRARY.createWebEventWithLabel('Dialog Open', 'What\'s New', 'Support Dropdown');
-    	TINY.box.show({html:document.getElementById("modalmsg"),clickmaskclose:false,width:900,height:500,close:true,opacity:20,topsplit:3,closejs:function(){closeX();}});
+    	TINY.box.show({html:document.getElementById("modalmsg"),clickmaskclose:false,width:900,height:450,close:true,opacity:20,topsplit:3,closejs:function(){closeX();}});
     	$("#menu-1").click(function(){return false;});
     });
 
@@ -176,19 +176,19 @@
 
   });
 
-  	function isValidInput(fileNamePrefix) {   
+  	function isValidInput(fileNamePrefix) {
 	  var re = /^\w+$/;
 	  if (!re.test(fileNamePrefix)) {
 	      return false;
 	  }
 	  return true;
 	}
-  
+
   	function handlevalidationerror(msg){
   		$("#valerrormsg").html(msg);
 		$("#valerrormsgcontainer").css("display","block");
   	}
-  	
+
 	function submitSavePrefsForm(){
 		$(".saved").hide();
 		var url = "/customer/userprefs.url?save=true&";
@@ -223,7 +223,7 @@
 			handlevalidationerror("Prefix cannot have more than 50 characters");
 			return false;
 		}
-		
+
 		if(!isValidInput(fileNamePrefix)){
 			handlevalidationerror("Prefix can have only letters, numbers and underscore character");
 			return false;
@@ -270,7 +270,7 @@
 					$("#ckbackhighlight").prop("checked",back_highlight);
 				}
 			}
-			
+
 			if($('#downloadlink').length > 0){
 				changeOneClick($("input[name='dlLocation']:checked").val());
 				dlOptions = {

@@ -17,29 +17,26 @@
 	<link rel="icon" href="/favicon.ico" type="image/x-icon"/>
 
 
-<stripes:layout-component name="cssheadstandard">
-<jwr:style src="/bundles/standard.css"></jwr:style>
-</stripes:layout-component>
-<jwr:script src="/bundles/standard.js" useRandomParam="true"></jwr:script>
+	<stripes:layout-component name="cssheadstandard">
+		<jwr:style src="/bundles/standard.css"></jwr:style>
+		</stripes:layout-component>
+		<jwr:script src="/bundles/standard.js" useRandomParam="true"></jwr:script>
 
-<c:if test="${actionBean.context.userSession.user.userPreferences.featureHighlight}">
-	<jwr:script src="/bundles/tooltipster.js"></jwr:script>
-	<jwr:style src="/bundles/tooltipster.css"></jwr:style>
-</c:if>
-<script>
-var highlightV1 = false;
-</script>
-<c:if test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1')}">
-<script>
-	highlightV1 = true;
+		<c:if test="${actionBean.context.userSession.user.userPreferences.featureHighlight}">
+			<jwr:script src="/bundles/tooltipster.js"></jwr:script>
+			<jwr:style src="/bundles/tooltipster.css"></jwr:style>
+		</c:if>
+		<script>
+		var highlightV1 = false;
+		</script>
+		<c:if test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1')}">
+		<script>
+			highlightV1 = true;
 
-</script>
-<script src='/static/js/jquery/spectrum.js'></script>
-</c:if>
-<stripes:layout-component name="csshead"/>
-
-
-
+		</script>
+		<script src='/static/js/jquery/spectrum.js'></script>
+		</c:if>
+	<stripes:layout-component name="csshead"/>
 </head>
 <body>
 
@@ -99,7 +96,7 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
 <stripes:layout-component name="jsbottom_custom"/>
 
 </body>
-<script>var release = "5.2";</script>
+<script>var release = "5.6";</script>
 	<div style="display:none;" id="modalHTMLcontainer">
 	<div id="modalmsg">
 		<jsp:include page="/WEB-INF/pages/popups/marketingMessage.jsp" />
@@ -110,7 +107,7 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
 				if((!$.cookie("ev_mm_dontshow") || release != $.cookie("ev_mm_dontshow")) && (!$.cookie("ev_mm_shown") || release != $.cookie("ev_mm_shown"))){
 
 					GALIBRARY.createWebEventWithLabel('_trackEvent', 'Dialog Open', 'What\'s New', 'Auto Show');
-					TINY.box.show({html:document.getElementById("modalmsg"),clickmaskclose:false,width:900,height:500,close:true,opacity:20,topsplit:3,closejs:function(){closeX();}});
+					TINY.box.show({html:document.getElementById("modalmsg"),clickmaskclose:false,width:900,height:450,close:true,opacity:20,topsplit:3,closejs:function(){closeX();}});
 					//tell GA that we showed it
 
 				}
@@ -120,24 +117,14 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
 	</stripes:layout-component>
 </div>
 <stripes:layout-component name="modal_dialog_2">
-	<c:if test="${actionBean.context.userSession.user.userPreferences.modalDialog2}">
-			<div style="display:none;" id="modalRMHTMLcontainer">
-				<div id="modalrmmsg">
-					<jsp:include page="/WEB-INF/pages/popups/referexMessage.jsp" />
-				</div>
-				<script>
-				if((!$.cookie("ev_rm_dontshow") || release != $.cookie("ev_rm_dontshow")) && (!$.cookie("ev_rm_shown") || release != $.cookie("ev_rm_shown"))){
 
-					GALIBRARY.createWebEventWithLabel('_trackEvent', 'Dialog Open', 'Referex', 'Auto Show');
-					TINY.box.show({html:document.getElementById("modalrmmsg"),clickmaskclose:false,width:600,height:250,close:true,opacity:20,topsplit:3,closejs:function(){closeRMX();}});
-					//tell GA that we showed it
-
-				}
-				</script>
-			</div>
-	</c:if>
 </stripes:layout-component>
 <stripes:layout-component name="survey">
+
+
+</stripes:layout-component>
+<stripes:layout-component name="exitSurvey">
+
 </stripes:layout-component>
 <stripes:layout-component name="carsoverride">
 <jwr:style src="/bundles/carsoverride.css"></jwr:style>
