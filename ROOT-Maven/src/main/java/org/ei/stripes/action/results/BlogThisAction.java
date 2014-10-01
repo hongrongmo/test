@@ -47,7 +47,7 @@ public class BlogThisAction extends EVActionBean {
 	@HandlesEvent("open")
 	public Resolution display() {
 		HttpServletRequest request = context.getRequest();
-		request.setAttribute("server", HttpRequestUtil.getServerBaseAddress(request));
+		request.setAttribute("server", HttpRequestUtil.getServerBaseAddress(request,true,false));
 
 		// Build an entire EIDoc object just to get the title. Ugh...
 		try {

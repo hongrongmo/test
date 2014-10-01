@@ -28,9 +28,9 @@ public abstract class FolderActionBean extends EVActionBean {
     // Rename request parms
     @Validate(trim=true,mask=".*")
     protected String folderid;
-    @Validate(trim=true,mask="[a-zA-Z0-9_]*",maxlength=32)
+    @Validate(trim=true,mask="[a-zA-Z0-9_\\s]*",maxlength=32)
     protected String foldername;
-    @Validate(trim=true,mask="[a-zA-Z0-9_]*",maxlength=32)
+    @Validate(trim=true,mask="[a-zA-Z0-9_\\s]*",maxlength=32)
     protected String oldfoldername;
     // Common request parms
     @Validate(trim=true,mask="\\d+",maxlength=32)
