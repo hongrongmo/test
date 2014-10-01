@@ -276,6 +276,7 @@ public class GeoRefCombiner
       int i = 1;
       while (rs.next())
       {
+		  try{
           String firstGUID = "";
           int numCoords = 1;
           int coordCount = 0;
@@ -666,7 +667,7 @@ public class GeoRefCombiner
 
 				catch(Exception e)
 				{
-				  System.out.println("MID = " + rs.getString("M_ID"));
+				  System.out.println("MID1 = " + rs.getString("M_ID"));
 				  e.printStackTrace();
 				}
 				i++;
@@ -674,6 +675,12 @@ public class GeoRefCombiner
 
 		recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
 		this.writer.writeRec(recArray);
+		}
+		catch(Exception e)
+		{
+		  System.out.println("MID2 = " + rs.getString("M_ID"));
+		  e.printStackTrace();
+		}
       } // while
     }
     catch(Exception e)
@@ -784,9 +791,9 @@ public class GeoRefCombiner
 		String coordString = cs.trim().replaceAll("([NEWS])","-$1");
 
 		String[] coords = coordString.split("-");
-		for(int i=1;i< 5;i++)
+		for(int i=1;i< coords.length;i++)
 		{
-			if(coords[i].length() < 7)
+			if(coords[i]!=null && coords[i].length() < 7)
 			{
 				int padCount = 8 - coords[i].length();
 				for(int p=0;p < padCount;p++)
