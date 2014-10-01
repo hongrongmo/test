@@ -5,8 +5,10 @@ package org.ei.web.cookie;
 
 import java.rmi.server.UID;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Map;
+import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 
 import javax.servlet.http.Cookie;
@@ -30,11 +32,12 @@ public class EISessionCookie extends Cookie {
     public static final String EISESSION_COOKIE_NAME = "EISESSION";
     private static final String EISESSION_SECRET = "h$a5$jmp4BKluup1V7Sw^HSo1pwH62pe";
     private static final long EXPIRES_IN = TimeUnit.MINUTES.toMillis(30);  // 30 minute expiration KEEP IN SYNC WITH JSESSION EXPIRATION!!
-    private static final SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd-HH:mm:ss");
+    private static final SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     private int version;
     private String sessionid = "";
-    private Date timestamp = new Date();
+    private Calendar timestamp = Calendar.getInstance(TimeZone.getTimeZone("America/New_York"));
+
 
     public EISessionCookie(HttpServletRequest request) {
         super(EISESSION_COOKIE_NAME, "");
@@ -82,11 +85,11 @@ public class EISessionCookie extends Cookie {
     }
 
     public void setTimestamp(Date timestamp) {
-        this.timestamp = timestamp;
+        this.timestamp.setTime(timestamp);
     }
 
     public boolean isExpired() {
-        return System.currentTimeMillis() - this.timestamp.getTime() > EXPIRES_IN;
+        return Calendar.getInstance(TimeZone.getTimeZone("America/New_York")).getTimeInMillis() - this.timestamp.getTimeInMillis() > EXPIRES_IN;
     }
 
     public int getVersion() {
@@ -99,9 +102,15 @@ public class EISessionCookie extends Cookie {
 
     @Override
     public String getValue() {
-        String tohash = Integer.toString(this.version) + "_" + this.sessionid + "_" + formatter.format(this.timestamp);
+        String tohash = Integer.toString(this.version) + "_" + this.sessionid + "_" + formatDate(this.timestamp);
         String hashed = DigestUtils.md5Hex(tohash + EISESSION_SECRET);
         return tohash + "_" + hashed;
+    }
+
+    private String formatDate(Calendar timestamp) {
+        if (timestamp == null) timestamp = Calendar.getInstance((TimeZone.getTimeZone("America/New_York")));
+        return timestamp.get(Calendar.YEAR) + "-" + (timestamp.get(Calendar.MONTH)+1) + "-" + timestamp.get(Calendar.DAY_OF_MONTH) + " " +
+            timestamp.get(Calendar.HOUR_OF_DAY) + ":" + timestamp.get(Calendar.MINUTE) + ":" + timestamp.get(Calendar.SECOND);
     }
 
     /**
@@ -138,7 +147,7 @@ public class EISessionCookie extends Cookie {
                 if (splitter.length > 1)
                     this.sessionid = splitter[1];
                 if (splitter.length > 2) {
-                    this.timestamp = formatter.parse(splitter[2]);
+                    this.timestamp.setTime(new Date(formatter.parse(splitter[2]).getTime()));
                     if (splitter.length > 3) {
                         check = splitter[3];
                     }
