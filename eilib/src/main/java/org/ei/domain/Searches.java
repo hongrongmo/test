@@ -105,13 +105,13 @@ public class Searches {
 			con = broker.getConnection(DatabaseConfig.SESSION_POOL);
 			int idx = 1;
 			log4j.info("Deleting any existing search; SESSION_ID=" + query.getSessionID() + ", SEARCH_ID=" + query.getID());
-			pstmt = con.prepareStatement("delete FROM SEARCHES WHERE SESSION_ID=? AND SEARCH_ID=?");
+			pstmt = con.prepareStatement("DELETE FROM SEARCHES WHERE SESSION_ID=? AND SEARCH_ID=?");
 			pstmt.setString(idx++, query.getSessionID());
 			pstmt.setString(idx++, query.getID());
 			pstmt.executeQuery();
 			con.commit();
 		} catch (Exception sqle) {
-			throw new InfrastructureException(SystemErrorCodes.SESSION_SEARCH_ERROR, sqle);
+			throw new InfrastructureException(SystemErrorCodes.SESSION_SEARCH_ERROR, "Search delete from database failed for Session ID: " + query.getSessionID() + ", Search ID::" + query.getID(), sqle);
 		} finally {
 			if (pstmt != null) {
 				try {
@@ -156,6 +156,7 @@ public class Searches {
 			con = broker.getConnection(DatabaseConfig.SESSION_POOL);
 			pstmt = con.prepareCall("{ call Searches_insertSearchRe(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
 			int intStmtIndex = 1;
+            log4j.info("Inserting search; SESSION_ID=" + query.getSessionID() + ", SEARCH_ID=" + query.getID());
 			pstmt.setString(intStmtIndex++, query.getID());
 			pstmt.setString(intStmtIndex++, query.getUserID());
 			pstmt.setString(intStmtIndex++, query.getSessionID());
@@ -212,7 +213,7 @@ public class Searches {
 			result = 1;
 		} catch (Exception sqle) {
 			// log.error("Exception",sqle);
-			throw new InfrastructureException(SystemErrorCodes.SESSION_SEARCH_ERROR, "Search insert into database failed for Search ID::" + query.getID(), sqle);
+			throw new InfrastructureException(SystemErrorCodes.SESSION_SEARCH_ERROR, "Search insert into database failed for Session ID: " + query.getSessionID() + ", Search ID::" + query.getID(), sqle);
 		} finally {
 			if (pstmt != null) {
 				try {
