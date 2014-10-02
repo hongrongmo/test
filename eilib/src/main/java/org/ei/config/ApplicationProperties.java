@@ -16,6 +16,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
 
+import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
 
 /**
@@ -215,8 +216,6 @@ public class ApplicationProperties extends Properties {
     public static final String HTTPS_PORT ="HTTPS_PORT";
 
     /** The runlevel. */
-    private String runlevel = "";
-
     /**
      * Returns the system runlevel.  This is usually set at application startup via
      * "-Drun.level=xxx" where xxx equals 'local', 'cert', 'cert2', 'prod' or 'prod2'
@@ -224,11 +223,15 @@ public class ApplicationProperties extends Properties {
      * @return the runlevel
      */
     public String getRunlevel() {
-        return this.runlevel;
+        String runlevel = this.getProperty(SYSTEM_ENVIRONMENT_RUNLEVEL);
+        if (GenericValidator.isBlankOrNull(runlevel)) {
+            log4j.warn(SYSTEM_ENVIRONMENT_RUNLEVEL + " property is not set!");
+        }
+        return runlevel;
     }
 
     public void setRunlevel(String runlevel) {
-        this.runlevel = runlevel;
+        this.setProperty(SYSTEM_ENVIRONMENT_RUNLEVEL, runlevel);
     }
 
     /** The instance. */

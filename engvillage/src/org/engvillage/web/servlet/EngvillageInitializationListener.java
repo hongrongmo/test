@@ -54,7 +54,7 @@ public class EngvillageInitializationListener implements ServletContextListener 
                 + "*********************************************************************\n\n");
             runlevel = "live";
         }
-        ApplicationProperties.getInstance().setProperty(ApplicationProperties.SYSTEM_ENVIRONMENT_RUNLEVEL, runlevel);
+        ApplicationProperties.getInstance().setRunlevel(runlevel);
 
         try {
             // Populate various application-specific items
