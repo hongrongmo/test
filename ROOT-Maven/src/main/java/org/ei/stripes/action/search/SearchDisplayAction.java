@@ -665,8 +665,6 @@ public class SearchDisplayAction extends BaseSearchAction implements ValidationE
     public Resolution quicksearch() throws InfrastructureException {
         setRoom(ROOM.search);
 
-        log4j.info("inside quick");
-
         // Set up to get form information
         int db = initDatabase();
 

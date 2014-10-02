@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.log4j.Logger;
 import org.ei.connectionpool.ConnectionBroker;
 import org.ei.connectionpool.ConnectionPoolException;
 import org.ei.domain.navigators.Refinements;
@@ -39,7 +40,7 @@ import org.ei.util.StringUtil;
  * jam _ removed todayDate and replaced with SYSDATE in SQL statements
  */
 public class Searches {
-	// protected static Log log = LogFactory.getLog(Searches.class);
+	private static Logger log4j = Logger.getLogger(Searches.class);
 	public static final int UNCOMPRESSED_LIMIT = 4000;
 	public static final String COMPRESSION_INDICATOR = new String(new char[] { 31 });
 
@@ -103,6 +104,7 @@ public class Searches {
 			broker = ConnectionBroker.getInstance();
 			con = broker.getConnection(DatabaseConfig.SESSION_POOL);
 			int idx = 1;
+			log4j.info("Deleting any existing search; SESSION_ID=" + query.getSessionID() + ", SEARCH_ID=" + query.getID());
 			pstmt = con.prepareStatement("delete FROM SEARCHES WHERE SESSION_ID=? AND SEARCH_ID=?");
 			pstmt.setString(idx++, query.getSessionID());
 			pstmt.setString(idx++, query.getID());
