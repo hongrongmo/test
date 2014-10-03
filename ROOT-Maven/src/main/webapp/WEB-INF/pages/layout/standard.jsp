@@ -132,5 +132,9 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
 
 </stripes:layout-component>
 
+<stripes:layout-component name="sessionexpiryhandler">
+	<script type="text/javascript" src="/static/js/sessionhandler.js?v=${releaseversion}"></script>
+</stripes:layout-component>
+
 </html>
 </stripes:layout-definition>

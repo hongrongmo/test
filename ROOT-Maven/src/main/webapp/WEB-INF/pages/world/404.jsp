@@ -33,5 +33,5 @@
 <stripes:layout-component name="footer">
 <jsp:include page="/WEB-INF/pages/include/copyright.jsp" />
 </stripes:layout-component> 
-
+<stripes:layout-component name="sessionexpiryhandler"></stripes:layout-component>
 </stripes:layout-render>

@@ -31,14 +31,20 @@ public class EISessionCookie extends Cookie {
 
     public static final String EISESSION_COOKIE_NAME = "EISESSION";
     private static final String EISESSION_SECRET = "h$a5$jmp4BKluup1V7Sw^HSo1pwH62pe";
-    private static final long EXPIRES_IN = TimeUnit.MINUTES.toMillis(30);  // 30 minute expiration KEEP IN SYNC WITH JSESSION EXPIRATION!!
+    private static final long EXPIRES_IN = TimeUnit.MINUTES.toMillis(30);  // 30 minute expiration KEEP IN SYNC WITH JSESSION EXPIRATION in WEB.XML!!
     private static final SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     private int version;
     private String sessionid = "";
     private Calendar timestamp = Calendar.getInstance(TimeZone.getTimeZone("America/New_York"));
 
-
+    
+    public EISessionCookie(){
+    	super(EISESSION_COOKIE_NAME, "");
+        this.setPath("/");
+        this.setMaxAge(-1);
+    }
+    
     public EISessionCookie(HttpServletRequest request) {
         super(EISESSION_COOKIE_NAME, "");
         this.setPath("/");
@@ -162,6 +168,39 @@ public class EISessionCookie extends Cookie {
                 reset();
             }
         }
+    }
+    
+    public boolean isSessionCookieValid(HttpServletRequest request) {
+    	boolean isValid = false;
+    	Cookie eisessioncookie = null;
+    	Map<String, Cookie> cookiemap = CookieHandler.getCookieMap(request);
+        if (cookiemap != null && cookiemap.containsKey(EISESSION_COOKIE_NAME)) {
+        	eisessioncookie =  cookiemap.get(EISESSION_COOKIE_NAME);
+        }
+        try{
+        	if(eisessioncookie != null && !GenericValidator.isBlankOrNull(eisessioncookie.getValue()) ){
+            	String value = eisessioncookie.getValue();
+            	String check = "";
+                String splitter[] = value.split("_");
+                if (splitter.length > 3) {
+                	 check = splitter[3];
+                	 if (check.equals(DigestUtils.md5Hex(splitter[0] + "_" + splitter[1] + "_" + splitter[2] + EISESSION_SECRET))) {
+                		 this.timestamp.setTime(new Date(formatter.parse(splitter[2]).getTime()));
+                		 isValid =  (Calendar.getInstance(TimeZone.getTimeZone("America/New_York")).getTimeInMillis() - this.timestamp.getTimeInMillis()) < EXPIRES_IN;
+                     }
+                }
+            }
+        }catch(Throwable t){
+        	log4j.error("Cannot check the session status due to the following error!", t);
+        }
+        if(!isValid){
+        	if(eisessioncookie != null && !GenericValidator.isBlankOrNull(eisessioncookie.getValue()) ){
+        		log4j.warn("Session status check : Failed(cookie "+eisessioncookie.getValue()+" is not valid or expired!)");
+        	}else{
+        		log4j.warn("Session status check : Failed(cookie is null or empty!)");
+        	}
+        }
+        return isValid;
     }
 
     private void reset() {
