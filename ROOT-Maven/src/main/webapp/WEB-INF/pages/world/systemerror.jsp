@@ -40,5 +40,5 @@
         <!-- <stripes:errors></stripes:errors> -->
 
 </stripes:layout-component>
-
+<stripes:layout-component name="sessionexpiryhandler"></stripes:layout-component>
 </stripes:layout-render>
