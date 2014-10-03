@@ -3,7 +3,6 @@
  */
 package org.ei.web.cookie;
 
-import java.rmi.server.UID;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
@@ -117,7 +116,7 @@ public class EISessionCookie extends Cookie {
      * @return
      */
     public static String buildNewSessionID() {
-        return GUID.normalize(new UID().toString()) + ":" + new AWSInfo().getEc2Id();
+        return new GUID().toString() + ":" + new AWSInfo().getEc2Id();
     }
 
     private void processCookie(Cookie eisessioncookie) {

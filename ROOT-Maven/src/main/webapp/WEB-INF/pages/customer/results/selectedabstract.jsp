@@ -12,15 +12,15 @@
 	</stripes:layout-component>
 
 	<stripes:layout-component name="contents">
-	
+
 	<c:set var="result" value="${actionBean.results[0]}"/>
-	
+
 	<div id="abstractbox">
 
 <%-- *********************************************************** --%>
-<%-- Top navbar - view search history, back to results and --%> 
-<%-- page navigation --%> 
-<%-- *********************************************************** --%> 
+<%-- Top navbar - view search history, back to results and --%>
+<%-- page navigation --%>
+<%-- *********************************************************** --%>
 		<div id="abstractnavbar">
 			<span><a class="history" href="/controller/servlet/Controller?CID=viewCompleteSearchHistory&database=${actionBean.database}" title="View search history">View search history</a>|</span>
 			<span><a class="backtoresults" href="/controller/servlet/Controller?${actionBean.resultsqs}" title="Go back to search results">Back to results</a>|</span>
@@ -33,10 +33,10 @@
 		</div>
 
 		<div style="color: rgb(215, 215, 215); background-color: rgb(215, 215, 215); height: 5px; margin: 0 10px;"></div>
-				
+
 <%-- *********************************************************** --%>
-<%-- Abstract tools - full text, blog, email/print/download, etc.--%> 
-<%-- *********************************************************** --%> 
+<%-- Abstract tools - full text, blog, email/print/download, etc.--%>
+<%-- *********************************************************** --%>
 		<div id="abstracttoolbar">
 	<c:if test="${result.fulltext}">
 		<span><a class="fulltext" href="javascript:newwindow=window.open('/search/results/fulltext.url?docID=${result.doc.docid}','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable'); void('');" title="View full text (opens in a new window)"><img id="ftimg" class="fulltext" src="/static/images/full_text.png" title="View full text (opens in a new window)"></a>|</span>
@@ -45,17 +45,17 @@
 			<span><a class="email" id="emaillink" title="Email this record" href="">Email</a>|</span>
 			<span><a class="print" id="printlink" title="Print this record" href="">Print</a>|</span>
 			<span><a class="download" id="downloadlink" title="Download this record" href="">Download</a>|</span>
-			<span><a class="save" title="Save this record to a folder" href="/login/customer.url?CID=personalLoginForm&EISESSION=${actionBean.sessionid}&searchid=${actionBean.searchid}count=1&searchtype=${actionBean.searchtype}&displaylogin=true&database=${actionBean.searchtype}&nexturl=CID%3DviewSavedFolders%26database%3D${actionBean.database}%26count%3D1%26searchid%3D${actionBean.searchid}%26source%3Dselectedset&backurl=CID%3D${actionBean.reruncid}%26searchid%3D${actionBean.searchid}%26COUNT%3D1%26database%3D${actionBean.database}">Save to Folder</a></span>
+			<span><a class="save" title="Save this record to a folder" href="/login/customer.url?CID=personalLoginForm&EISESSION=${actionBean.sessionid}&searchid=${actionBean.searchid}count=1&searchtype=${actionBean.searchtype}&displaylogin=true&database=${actionBean.searchtype}&nexturl=CID%3DviewSavedFolders%26database%3D${actionBean.database}%26count%3D1%26searchid%3D${actionBean.searchid}%26source%3Dselectedset&backurl=SAVETOFOLDER">Save to Folder</a></span>
 			<div class="clear"></div>
 		</div>
 		<div style="color: #9b9b9b; background-color: #9b9b9b; height: 1px; margin: 0 10px 20px 10px;"></div>
 
-		
+
 <%-- *********************************************************** --%>
-<%-- Abstract display --%> 
-<%-- *********************************************************** --%> 
+<%-- Abstract display --%>
+<%-- *********************************************************** --%>
 		<div id="abstractwrapper">
-		
+
 			<div id="tabs">
 			<ul>
 <c:choose><c:when test="${result.doc.dbmask != 131072}">
@@ -78,16 +78,16 @@
 <c:if test="${result.abstractrecord.citerefcount > 0}">
 			<li><a href="/controller/servlet/Controller?TODO" title="Show patents that reference this patent"<c:if test="${actionBean.activetab eq 'Cited-by'}"> class="active"</c:if>>Cited-by</a></li>
 </c:if>
-</c:otherwise></c:choose>		
+</c:otherwise></c:choose>
 			</ul>
-			
+
 			<div class="clear"></div>
-			
+
 			</div>
-			
-			
+
+
 			<div id="abstractarea">
-			<p class="topline">Record ${result.doc.hitindex} from ${actionBean.displaydb} for: ${actionBean.displayquery}, 
+			<p class="topline">Record ${result.doc.hitindex} from ${actionBean.displaydb} for: ${actionBean.displayquery},
 <c:choose>
 	<c:when test="${not empty actionBean.emailalertweek}">Week ${actionBean.emailalertweek}</c:when>
 	<c:when test="${not empty actionBean.updatesNo}">Last ${actionBean.updatesNo} update(s)</c:when>
@@ -98,12 +98,12 @@
 		<div style="color: #9b9b9b; background-color: #9b9b9b; height: 1px; margin: 0 10px 12px 0;"></div>
 
 			<p style="margin:0">Check record to add to Selected Records</p>
-			
+
 			<p class="title">
 				<span style="font-weight: normal;font-size: 14px">${result.doc.hitindex}. <input title="Select Record" id="cbresult_${result.doc.dbid}" type="checkbox" name="cbresult" handle="${result.doc.hitindex}" docid="${result.doc.docid}" dbid="${result.doc.dbid}"<c:if test="${result.selected}"> checked="checked"</c:if>/></span>
 				<label for="cbresult_${result.doc.dbid}">${result.title}</label>
 			</p>
-			
+
 			<p class="authors" style="margin-top: 3px">
 				<span class="authors">
 <c:forEach items="${result.authors}" var="author" varStatus="austatus">
@@ -112,9 +112,9 @@
 	<c:otherwise>${author.name}<c:if test="${(austatus.count > 1) and (austatus.count < fn:length(result.authors))}">; </c:if></c:otherwise>
 	</c:choose>
 </c:forEach>
-				</span> 
+				</span>
 			</p>
-			
+
 			<p class="result">
 				<c:if test="${result.source ne null}"><span><b>Source:</b> <i>${result.source}</i></span></c:if>
 				<c:choose>
@@ -173,15 +173,15 @@
 			</p>
 			</c:forEach>
 			</c:if>
-			
+
 			<p class="abstracttext sectionstart"><b>${result.abstractrecord.label}: </b></p>
 			<p>${result.abstractrecord.text}<c:if test="${result.abstractrecord.refcount > 0}"><br/>(${result.abstractrecord.refcount} refs)</c:if></p>
-			
+
 			<c:set var="mainheading" value="${result.abstractrecord.labelvalues['Main Heading']}"/>
 			<c:if test="${not empty mainheading}">
 			<p class="mainheading"><b>Main Heading: </b><c:forEach var="value" items="${mainheading}" varStatus="status"><c:if test="${status.count > 1}">&nbsp;-&nbsp;</c:if>${value}</c:forEach></p>
 			</c:if>
-			
+
 			<%-- ************************************************************************* --%>
 			<%-- Controlled terms: Companies, Chemicals and terms                          --%>
 			<%-- ************************************************************************* --%>
@@ -189,19 +189,19 @@
 			<c:set var="label" value="${entry.key.label}"/>
 			<p class="controlledterms"><b>${label}: </b><c:forEach var="term" items="${entry.value}" varStatus="status"><c:if test="${status.count > 1}">&nbsp;-&nbsp;</c:if>${term}</c:forEach></p>
 			</c:forEach>
-						
+
 			<%--
 			<c:if test="${not empty result.abstractrecord.controlledterms}">
 			<c:set var="companies" value="${result.abstractrecord.controlledterms['Companies']}"/>
 			<c:if test="${not empty companies}">
 			<p class="controlledterms"><b>Companies: </b><c:forEach var="term" items="${companies}" varStatus="status"><c:if test="${status.count > 1}">&nbsp;-&nbsp;</c:if>${term}</c:forEach></p>
 			</c:if>
-			
+
 			<c:set var="chemicals" value="${result.abstractrecord.controlledterms['Chemicals']}"/>
 			<c:if test="${not empty companies}">
 			<p class="controlledterms"><b>Chemicals: </b><c:forEach var="term" items="${chemicals}" varStatus="status"><c:if test="${status.count > 1}">&nbsp;-&nbsp;</c:if>${term}</c:forEach></p>
 			</c:if>
-			
+
 			<c:set var="controlledterms" value="${result.abstractrecord.controlledterms['Controlled terms']}"/>
 			<c:if test="${not empty controlledterms}">
 			<p class="controlledterms"><b>Controlled terms: </b><c:forEach var="term" items="${controlledterms}" varStatus="status"><c:if test="${status.count > 1}">&nbsp;-&nbsp;</c:if>${term}</c:forEach></p>
@@ -213,7 +213,7 @@
 			</c:if>
 			</c:if>
 			 --%>
-			 
+
 			<%-- ************************************************************************* --%>
 			<%-- Uncontrolled terms                                                        --%>
 			<%-- ************************************************************************* --%>
@@ -240,7 +240,7 @@
 			<c:if test="${not empty coordinates}">
 			<p class="coordinates"><b>Coordinates: </b><c:forEach var="value" items="${coordinates}" varStatus="status"><c:if test="${status.count > 1}">&nbsp;-&nbsp;</c:if>${value}</c:forEach></p>
 			</c:if>
-			
+
 			<p class="database"><b>Database: </b>${result.doc.dbname}</p>
 
 			<div id="deliverylinks">
@@ -261,7 +261,7 @@
 			</div>
 
 			<div class="clear"></div>
-			
+
 		</div>
 
 		<div class="clear"></div>
@@ -269,7 +269,7 @@
 	</div>
 
 	<br/>
-	
+
 	</stripes:layout-component>
 
 	<stripes:layout-component name="jsbottom_custom">
@@ -279,5 +279,5 @@
 	</c:if>
 	</stripes:layout-component>
 
-	
+
 </stripes:layout-render>
