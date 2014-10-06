@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.log4j.Logger;
 import org.apache.wink.json4j.JSONException;
 import org.apache.wink.json4j.JSONObject;
+import org.ei.config.EVProperties;
 import org.ei.web.cookie.EISessionCookie;
 
 /**
@@ -40,6 +41,7 @@ public class CheckSessionStatus extends HttpServlet {
 		 if(resourcetype.equalsIgnoreCase(CHECK_STATUS)){
 			 checkStatus(request,  response);
 		 }else if(resourcetype.equalsIgnoreCase(REDIRECT_SESSION_EXIPIRED_PAGE)){
+			 request.setAttribute("maintenanceMsg", getMaintenanceMsg());
 			 request.getRequestDispatcher("/WEB-INF/pages/world/sessionexpired.jsp").forward(request, response);
 		 }
 	}
@@ -62,4 +64,21 @@ public class CheckSessionStatus extends HttpServlet {
 		response.setContentType("application/json");
 		response.getWriter().write(JObject.toString());
 	}
+	
+	
+	 private String getMaintenanceMsg(){
+		 String msg = null;
+	    	boolean isEnabled = Boolean.parseBoolean((EVProperties.getProperty(EVProperties.DOWNTIME_MESSAGE_ENABLED)));
+	    	if(isEnabled){
+	    		String message = EVProperties.getProperty(EVProperties.DOWNTIME_MESSAGE_TEXT);
+	    		if(message != null){
+	    			msg = message;
+	    			String color = EVProperties.getProperty(EVProperties.DOWNTIME_MESSAGE_COLOR);
+	    			if(color != null){
+	    				msg="<span style=\"color:"+color+"\">"+msg+"</span>";
+	    			}
+	    		}
+	    	}
+	    	return msg;
+	    }
 }

@@ -5,6 +5,10 @@
 <div id="header">
 	<div id="logoEV" aria-label="Engineering Village" role="banner">
 		<a href="/home.url" title="Engineering Village - The information discovery platform of choice for the engineering community" ><img alt="Engineering Village - The information discovery platform of choice for the engineering community" src="/static/images/EV-logo.gif"/></a>
+		<c:if test="${not empty actionBean.maintenanceMsg}">
+    		<div style="position:absolute; left: 320px; top: 28px; font-weight: bold; font-size; 12px; width:44%">${actionBean.maintenanceMsg }</div>
+		</c:if>
+		
 	</div>
 
 
