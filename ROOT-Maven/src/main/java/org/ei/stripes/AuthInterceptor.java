@@ -21,7 +21,6 @@ import org.ei.biz.security.IAccessControl;
 import org.ei.biz.security.ISecuredAction;
 import org.ei.biz.security.WorldAccessControl;
 import org.ei.config.EVProperties;
-import org.ei.controller.CookieHandler;
 import org.ei.controller.IPBlocker;
 import org.ei.controller.IPBlocker.COUNTER;
 import org.ei.service.ANEServiceConstants;
@@ -45,6 +44,7 @@ import org.ei.stripes.action.personalaccount.LoginAction;
 import org.ei.stripes.exception.EVExceptionHandler;
 import org.ei.stripes.util.HttpRequestUtil;
 import org.ei.stripes.view.CustomizedLogo;
+import org.ei.web.cookie.CookieHandler;
 
 @Intercepts(LifecycleStage.BindingAndValidation)
 public class AuthInterceptor implements Interceptor {
@@ -258,8 +258,9 @@ public class AuthInterceptor implements Interceptor {
         }
 
         // Lastly, have we already checked?
-        if (StringUtils.isBlank(userSession.getBrowserSSOKey()) && StringUtils.isBlank(CookieHandler.getACWCookie(request))
-            && null == request.getParameter(CARSStringConstants.ACW.value())) {
+        if (StringUtils.isBlank(userSession.getBrowserSSOKey()) &&
+            StringUtils.isBlank(CookieHandler.getACWCookie(request).getValue()) &&
+            null == request.getParameter(CARSStringConstants.ACW.value())) {
             log4j.info("SSO Redirect IS required - No ACW cookie or parameter on URL!");
             return true;
         }

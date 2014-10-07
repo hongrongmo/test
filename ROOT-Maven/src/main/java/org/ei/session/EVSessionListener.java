@@ -3,12 +3,16 @@ package org.ei.session;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.Date;
+import java.util.Enumeration;
 
+import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 
 import org.apache.log4j.Logger;
 import org.ei.connectionpool.ConnectionBroker;
+import org.ei.controller.IPBlocker;
 import org.ei.domain.DatabaseConfig;
 
 /**
@@ -52,13 +56,18 @@ public class EVSessionListener implements HttpSessionListener {
             activeSessions--;
         }
 
-        // Clear the document basket
-        String sessionid = event.getSession().getId();
+        // Remove all entries in databases by session ID
+        HttpSession session = event.getSession();
         try {
-            log4j.info("Removing session-based data for session id: '" + sessionid + "'");
-            cleanSessionTables(sessionid);
+            log4j.info("Removing session-based data for session id: '" + session.getId() + "', created on '" + new Date(session.getCreationTime()).toString() + "'");
+            Enumeration<String> attributenames = event.getSession().getAttributeNames();
+            while (attributenames.hasMoreElements()) {
+                String attribute = attributenames.nextElement();
+                if (IPBlocker.IPBLOCKER_SESSION_RATE_LIMITOR_KEY.equals(attribute)) continue;
+                cleanSessionTables(attribute);
+            }
         } catch (Exception e) {
-            log4j.error("Unable to remove session items!  Session id: '" + sessionid + "'", e);
+            log4j.error("Unable to remove session items!  Session id: '" + session.getId() + "'", e);
         }
     }
 

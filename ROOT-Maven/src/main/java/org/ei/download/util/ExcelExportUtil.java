@@ -867,7 +867,7 @@ public class ExcelExportUtil {
 							String cellValue = getNodeValue(docElem, "AB");
 							if (cellValue == null
 									|| cellValue.equalsIgnoreCase("")) {
-								cellValue = getNodeValue(docElem, "AB2");
+								cellValue = getAbstractV2(docElem);
 							}
 							cell.setCellValue(cellValue);
 						}
@@ -1355,7 +1355,7 @@ public class ExcelExportUtil {
 							String cellValue = getNodeValue(docElem, "AB");
 							if (cellValue == null
 									|| cellValue.equalsIgnoreCase("")) {
-								cellValue = getNodeValue(docElem, "AB2");
+								cellValue = getAbstractV2(docElem);
 							}
 							cell.setCellValue(cellValue);
 						}
@@ -1651,6 +1651,37 @@ public class ExcelExportUtil {
 			}
 		}
 		if (returnStr != null && !returnStr.equalsIgnoreCase("")) {
+			returnStr = HtmlManipulator.replaceHtmlEntities(returnStr);
+		}
+		return returnStr;
+	}
+	
+	
+	/**
+	 * @param elem
+	 * @return
+	 */
+	private String getAbstractV2(Element elem) {
+		String returnStr = "";
+		NodeList nodes = (NodeList) elem.getElementsByTagName("AB2");
+		if (nodes != null && nodes.item(0) != null) {
+			Element parentElement = (Element) nodes.item(0);
+			NodeList childNodes = parentElement.getElementsByTagName("ABS");
+			if (childNodes != null) {
+				for (int b = 0; b < childNodes.getLength(); b++) {
+					Node childNode = childNodes.item(b);
+					if (childNode != null && childNode.getFirstChild() != null) {
+						returnStr += childNode.getFirstChild().getNodeValue();
+						
+					}
+					if (b < (childNodes.getLength() - 1)) {
+						returnStr += DOUBLE_SPACER;
+					}
+				}
+			}
+		}
+		if (returnStr != null && !returnStr.equalsIgnoreCase("")) {
+			returnStr = returnStr.replaceAll("<[^>]+>", "").replace("]>","").trim();
 			returnStr = HtmlManipulator.replaceHtmlEntities(returnStr);
 		}
 		return returnStr;

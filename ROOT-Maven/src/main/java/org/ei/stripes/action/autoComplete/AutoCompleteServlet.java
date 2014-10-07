@@ -11,11 +11,14 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.apache.commons.lang.StringUtils;
+import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
 import org.apache.wink.json4j.JSONArray;
 import org.ei.biz.personalization.EVWebUser;
 import org.ei.controller.MemcachedUtil;
 import org.ei.session.UserSession;
+import org.ei.web.cookie.CookieHandler;
+import org.ei.web.cookie.EISessionCookie;
 
 /**
  * Class to handle the AutoComplete suggestions. Stores any previously retrieved suggestions in MemCached.
@@ -62,16 +65,19 @@ public class AutoCompleteServlet extends HttpServlet {
      * @return
      */
     private boolean isUser(HttpServletRequest request) {
-        HttpSession userSession = request.getSession(false);
-        if (userSession == null) {
-            return false;
-        }
-        String id = userSession.getId();
-        if (StringUtils.isBlank(id)) {
+        // Get the EISESSION cookie
+        EISessionCookie eisessioncookie = CookieHandler.getEISessionCookie(request);
+        if (eisessioncookie == null || GenericValidator.isBlankOrNull(eisessioncookie.getSessionid())) {
+            log4j.warn("No valid EISESSION value could be found!");
             return false;
         }
 
-        UserSession evSession = (UserSession) userSession.getAttribute(id);
+        // Get the UserSession from HTTP session
+        HttpSession session = request.getSession(false);
+        if (session == null) {
+            return false;
+        }
+        UserSession evSession = (UserSession) session.getAttribute(eisessioncookie.getSessionid());
         if (evSession == null) {
             return false;
         }

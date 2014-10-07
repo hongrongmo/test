@@ -31,7 +31,6 @@ import org.ei.biz.personalization.UserProfile;
 import org.ei.books.collections.ReferexCollection;
 import org.ei.bulletins.BulletinGUI;
 import org.ei.config.EVProperties;
-import org.ei.controller.CookieHandler;
 import org.ei.controller.IPBlocker;
 import org.ei.controller.IPBlocker.COUNTER;
 import org.ei.domain.InvalidArgumentException;
@@ -49,12 +48,13 @@ import org.ei.service.cars.util.CARSCommonUtil;
 import org.ei.stripes.EVActionBeanContext;
 import org.ei.stripes.util.HttpRequestUtil;
 import org.ei.util.SyncTokenFIFOQueue;
+import org.ei.web.cookie.CookieHandler;
+import org.ei.web.cookie.EISessionCookie;
 
 public class SessionManager {
 
     private static Logger log4j = Logger.getLogger(SessionManager.class);
 
-    public static final String EISESSION_COOKIE_NAME = "EISESSION";
     public static final String JSESSIONID_COOKIE_NAME = "JSESSIONID";
     public static final String REQUEST_USE_SESSION_PARAM = "SYSTEM_USE_SESSION_PARAM";
     public static final String REQUEST_NEWSESSION = "SYSTEM_NEWSESSION";
@@ -350,7 +350,7 @@ public class SessionManager {
 
         // Attempt to get current sessionid string - first
         // look in EISESSION cookie
-        String sessionid = CookieHandler.getSessionID(request);
+        String sessionid = new EISessionCookie(this.request).getSessionIdWithVersion();
 
         // Now check incoming request parameter if indicated
         String useSessionParam = "";
@@ -358,7 +358,7 @@ public class SessionManager {
             useSessionParam = request.getParameter(REQUEST_USE_SESSION_PARAM);
         }
         if (GenericValidator.isBlankOrNull(sessionid) || "true".equals(useSessionParam)) {
-            sessionid = request.getParameter(EISESSION_COOKIE_NAME);
+            sessionid = request.getParameter(EISessionCookie.EISESSION_COOKIE_NAME);
         }
 
         // If sessionid string is not null and not "0", use it!
@@ -372,6 +372,10 @@ public class SessionManager {
             sessionidObj = null;
         }
 
+        // Create new session ID if empty
+        if (sessionidObj == null || GenericValidator.isBlankOrNull(sessionidObj.getID())) {
+            sessionidObj = new SessionID(EISessionCookie.buildNewSessionID(), 0);
+        }
         return sessionidObj;
     }
 
@@ -389,46 +393,25 @@ public class SessionManager {
         // Retrieve a SessionID object. This call will look in cookies
         // and on the request to see if the user has an existing session ID
         SessionID sessionidObj = buildSessionID();
-        String sessionStatus = SessionStatus.NEW;
 
         // Attempt to get the session but do NOT create one if it doesn't
         // exist! This is so we can tell if the old session expired...
         HttpSession session = this.request.getSession(false);
-
-        // Now if SessionID object is NOT null and the session ID string is
-        // valid then see if there is an existing session for the user
-        if (sessionidObj != null && StringUtils.isNotBlank(sessionidObj.getID())) {
-            // No session? Make a new one but since session ID is NOT null/empty
-            // this means there was a previous one so this one must have expired
-            if (session == null) {
-                sessionStatus = SessionStatus.NEW_HAD_EXPIRED;
-            }
-            // We have an existing session BUT if some other piece of code
-            // created the session first then there will be no object for
-            // the current session ID
-            else if (session.getAttribute(sessionidObj.getID()) == null) {
-                sessionStatus = SessionStatus.NEW_HAD_EXPIRED;
-            }
-            // None of the cases above hit so there is an existing session and
-            // it contains the user's info. So mark appropriately...
-            else {
-                sessionStatus = SessionStatus.OLD_FROM_CACHE;
-            }
-        }
-
-        //
-        // Still empty? Create brand new one!
-        //
         UserSession usersession = null;
-        if (sessionStatus.equals(SessionStatus.NEW_HAD_EXPIRED) || sessionStatus.equals(SessionStatus.NEW)) {
-            // Create brand new UserSession and write to database
-            // session = this.request.getSession(true);
-            // log4j.warn("******** Created new Tomcat session, id: " + session.getId());
+        if (session == null) {
             usersession = buildNewUserSession();
+            Cookie jsessioncookie = CookieHandler.getCookie(this.request, JSESSIONID_COOKIE_NAME);
+            if (jsessioncookie != null) usersession.setStatus(SessionStatus.NEW);
+            else usersession.setStatus(SessionStatus.NEW_HAD_EXPIRED);
         } else {
-            usersession = (UserSession) session.getAttribute(session.getId());
+            usersession = (UserSession) session.getAttribute(sessionidObj.getID());
+            if (usersession == null) {
+                usersession = buildNewUserSession();
+                usersession.setStatus(SessionStatus.NEW_HAD_EXPIRED);
+            } else {
+                usersession.setStatus(SessionStatus.OLD_FROM_CACHE);
+            }
         }
-        usersession.setStatus(sessionStatus);
 
         // Create a "dummy" user
         if (usersession.getUser() == null) {
@@ -439,11 +422,7 @@ public class SessionManager {
             usersession.setUser(user);
         }
 
-        // Always write latest copy to container session
-        /*
-         * if(null!= session){ session.setAttribute(usersession.getSessionID().getID(), usersession); }
-         */
-
+        usersession.setSessionID(sessionidObj);
         return usersession;
     }
 
@@ -550,9 +529,14 @@ public class SessionManager {
         	// Only create a new session if this is a valid customer!
         	if (usersession.getUser().isCustomer() || isPathChoiceExists) {
 	            HttpSession session = this.request.getSession(true);
-	            usersession.setSessionID(new SessionID(session.getId(), 1));
-	            // Increment version on session ID
-	            SessionID sessionidObj = new SessionID(usersession.getSessionID().getID(), usersession.getSessionID().getVersionNumber() + (incrementversion ? 1 : 0));
+	            SessionID sessionidObj = usersession.getSessionID();
+	            if (sessionidObj == null) {
+	                log4j.warn("Session ID was null - should be created earlier!");
+	                sessionidObj = new SessionID(EISessionCookie.buildNewSessionID(), 1);
+	            } else {
+	                // Increment version on session ID
+	                sessionidObj = new SessionID(usersession.getSessionID().getID(), usersession.getSessionID().getVersionNumber() + (incrementversion ? 1 : 0));
+	            }
 	            usersession.setSessionID(sessionidObj);
 	            // Write new EISESSION cookie to response
 	            writeSessionCookie(sessionidObj);
@@ -588,7 +572,7 @@ public class SessionManager {
      */
     public void writeSessionCookie(SessionID sessionidObj) {
         log4j.info("Writing EISESSION Cookie...");
-        Cookie cookie = new Cookie(EISESSION_COOKIE_NAME, sessionidObj.toString());
+        EISessionCookie cookie = new EISessionCookie(sessionidObj);
         // A negative value means that the cookie is not stored persistently
         // and will be deleted when the Web browser exits. A zero value
         // causes the cookie to be deleted.
