@@ -89,7 +89,7 @@
 	// Remove all folder entries from the SavedRecords object
 	savedRecords.removeAllInFolder(folder);
 
-	urlString = urlString+"?CID=viewCitationSavedRecords&database="+database+"&folderid="+folderId+"&backurl="+URLEncoder.encode(backurl);
+	urlString = urlString+"?CID=viewCitationSavedRecords&database="+database+"&folderid="+folderId;
 
 	if(urlString!=null)
 	{

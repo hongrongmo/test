@@ -24,6 +24,7 @@ import org.ei.domain.personalization.SearchHistory;
 import org.ei.exception.InfrastructureException;
 import org.ei.exception.SystemErrorCodes;
 import org.ei.session.UserSession;
+import org.ei.stripes.action.BackUrlAction.BackURLByFeature;
 import org.ei.stripes.action.personalaccount.IPersonalLogin;
 
 
@@ -50,9 +51,9 @@ public class AddDeleteSavedSearchAction extends EVActionBean implements
 
 	/**
 	 * Default handler to add to list of saved searches/alerts
-	 * 
+	 *
 	 * @return
-	 * @throws InfrastructureException 
+	 * @throws InfrastructureException
 	 * @throws HistoryException
 	 * @throws UnsupportedEncodingException
 	 */
@@ -96,7 +97,7 @@ public class AddDeleteSavedSearchAction extends EVActionBean implements
 				return new StreamingResolution("application/json","{\"status\":\"error\",\"message\":\"Unable to process request.\"}");
 			}
 		}
-		
+
 		// Process the request - mark or unmark
 		int limit = savedSearchesAndAlerts.getLimit();
 		if (isUNMarkRequest()) {
@@ -108,9 +109,9 @@ public class AddDeleteSavedSearchAction extends EVActionBean implements
 		} else {
 			try {
 				// Ensure we are below the limit
-				if (!(isSearchAlreadyExistsAsSavedSearch(savedSearchesAndAlerts, getSearchid()) && 
+				if (!(isSearchAlreadyExistsAsSavedSearch(savedSearchesAndAlerts, getSearchid()) &&
 					 isEmailAlertRequest())) {
-					
+
 					if (savedSearchesAndAlerts.getTotalCount() >= limit) {
 						log4j.warn("Attempt to add alert above limit (" + savedSearchesAndAlerts.getLimit() + ").");
 						if (!GenericValidator.isBlankOrNull(getBackurl())) {
@@ -124,7 +125,7 @@ public class AddDeleteSavedSearchAction extends EVActionBean implements
 							}
 						} else {
 							if (!ajax) {
-								return new RedirectResolution(SystemMessage.SYSTEM_ERROR_URL + "?message=" + 
+								return new RedirectResolution(SystemMessage.SYSTEM_ERROR_URL + "?message=" +
 										URLEncoder.encode("Unable to add your Saved Search or Alert.", "utf-8"));
 							} else {
 								return new StreamingResolution("application/json","{\"status\":\"limit\"}");
@@ -135,7 +136,7 @@ public class AddDeleteSavedSearchAction extends EVActionBean implements
 			} catch (UnsupportedEncodingException e) {
 				throw new InfrastructureException(SystemErrorCodes.SAVED_SEARCH_ERROR, e);
 			}
-			
+
 			// If we make it here, it's OK to add saved search/alert
 			if (isEmailAlertRequest()) {
 				Searches.addEmailAlertSearch(getSearchid(), userId);
@@ -146,13 +147,7 @@ public class AddDeleteSavedSearchAction extends EVActionBean implements
 
 		// Return appropriately
 		if (!ajax) {
-		    
-			if (!GenericValidator.isBlankOrNull(ussession.getBackUrl())) {
-			    String backURL = ussession.getBackUrl();
-			    ussession.setBackUrl(null);
-			    return (new RedirectResolution(backURL));
-			}
-            return new RedirectResolution(getBackurl(), false);
+		    return new RedirectResolution(BackUrlAction.getStoredURLByFeature(context.getRequest(), BackURLByFeature.SAVEDSEARCH, true), false);
 		} else {
 			return new StreamingResolution("application/json","{\"status\":\"success\"}");
 		}
@@ -186,7 +181,7 @@ public class AddDeleteSavedSearchAction extends EVActionBean implements
 
 	/**
 	 * See if search already exists in database
-	 * 
+	 *
 	 * @param savedSearchesAndAlerts
 	 * @param searchId
 	 * @return
@@ -199,10 +194,10 @@ public class AddDeleteSavedSearchAction extends EVActionBean implements
 				}
 			}
 		}
-		
+
 		 return false;
 	}
-	
+
 
 	/**
 	 * Returns a Resolution object for the login page
@@ -211,7 +206,7 @@ public class AddDeleteSavedSearchAction extends EVActionBean implements
 	public String getLoginNextUrl() {
 
 		// This method gets called BEFORE binding and validation happens
-		// in Stripes so we have to get the request parms 
+		// in Stripes so we have to get the request parms
 		HttpServletRequest request = context.getRequest();
 		backurl = request.getParameter("backurl");
 		database = request.getParameter("database");
@@ -221,8 +216,8 @@ public class AddDeleteSavedSearchAction extends EVActionBean implements
 		history = request.getParameter("history");
 
 		return "/personal/savedsearch/adddelete.url?database=" + database +
-					"&searchid=" + searchid + 
-					"&option=" + option + 
+					"&searchid=" + searchid +
+					"&option=" + option +
 					"&selectvalue=" + selectvalue;
 	}
 
@@ -230,13 +225,13 @@ public class AddDeleteSavedSearchAction extends EVActionBean implements
     public String getLoginCancelUrl() {
     	return getBackurl();
     }
-    
+
 	//
 	//
 	// GETTERS / SETTERS
 	//
 	//
-	
+
 	public String getSelectvalue() {
 		return selectvalue;
 	}
