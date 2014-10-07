@@ -195,6 +195,7 @@
 	<div id="sortby" class="col">
 	<br/>
 	<c:if test="${param.displaytype ne 'selectedrecords' and param.displaytype ne 'viewfolders' and param.displaytype ne 'tagresults' and (not(actionBean.dedup))}">
+	<div id="sortbyinnerdiv">
 		Sort by:
 		 <select name="sort" id="sort" title="Sort results by">
 				<c:forEach var="sortoption" items="${actionBean.sortoptions}">
@@ -206,8 +207,9 @@
 		<noscript>
 			<input type="button" class="button" value="Go" title="Go to Selected Order"></input>
 		</noscript>
-
+</div>
 	</c:if>
+	
     </div>
 
 
