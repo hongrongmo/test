@@ -16,12 +16,27 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.commons.lang.ArrayUtils;
 import org.apache.commons.validator.GenericValidator;
+import org.apache.http.HttpHeaders;
 import org.ei.stripes.action.ApplicationStatus;
+import org.ei.stripes.action.EVPathUrl;
 import org.ei.web.cookie.CookieHandler;
 import org.ei.web.cookie.SimulatedIPCookie;
 
 public class HttpRequestUtil {
     private static org.apache.log4j.Logger log4j = org.apache.log4j.Logger.getLogger(HttpRequestUtil.class);
+
+    /**
+     * Retrieve REFERER header from request.  Returns EV home page URL if no referer found!
+     * @param request
+     * @return
+     */
+    public static String getReferer(HttpServletRequest request) {
+        String referer = request.getHeader(HttpHeaders.REFERER);
+        if (GenericValidator.isBlankOrNull(referer)) {
+            referer = EVPathUrl.EV_HOME.value();
+        }
+        return referer;
+    }
 
     /**
      * This method returns the current IP for the user.
@@ -274,7 +289,7 @@ public class HttpRequestUtil {
 
         return url.toString();
     }
-    
+
     public static String getServerBaseAddress(HttpServletRequest request,boolean includeContextPath, boolean includeServletPath ) {
 
         String scheme = request.getScheme();             // http

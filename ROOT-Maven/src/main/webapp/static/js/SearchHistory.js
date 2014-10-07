@@ -17,7 +17,7 @@ $(function() {
 	// Save search/alert links
 	$(".savesearch").click(handleSaveSearch);
 	$(".emailalert").click(handleSaveSearch);
-	
+
 	// Hide certain elements if they are not clicked
 	$(document).click(function(e) {
 		/*
@@ -32,7 +32,7 @@ $(function() {
 		}
 	});
 
-	// Submit the combine search 
+	// Submit the combine search
 	$("#combineSearchForm").submit(function() {
 		return Validate(1);
 	});
@@ -42,24 +42,24 @@ $(function() {
 		e.preventDefault();
 		hideMenu($(this).parents('.combineselect_boss').attr('num'), true);
 	});
-	
+
 	// Select history item
 	$(".combineselect_action").click(handleCombine);
 	$(".combineselect_default").click(handleCombine);
 
-	// Show/hide history details links 
+	// Show/hide history details links
 	$(".historydetailslink").click(function(e) {
 		e.preventDefault();
 		var offset = $(this).offset();
 		var showing = $(this).siblings(".historydetails").is(':hidden');
 		$(".historydetails").hide();
-		$(this).siblings(".historydetails").css('left',offset.left+87).css('top',offset.top-25).toggle(showing); 
+		$(this).siblings(".historydetails").css('left',offset.left+87).css('top',offset.top-25).toggle(showing);
 	});
 	$(".historydetails .close").click(function(e) {
 		e.preventDefault();
 		$(".historydetails").hide();
 	});
-	
+
 	// Jump to history box when indicated
 	var jump = getParameterByName("history");
 	if (jump && jump.length > 0) {
@@ -83,13 +83,13 @@ $(function() {
 	txtcombine.keydown(function(e) {
 		resetCombine();
 	});
-	
+
 	// Clear all history items
 	$("#clearsearchhistory").click(function(e) {
 		e.preventDefault();
-		document.location = '/search/history/clear.url?nexturl='+$(this).attr('nexturl');
+		document.location = '/search/history/clear.url?backurl=SEARCHHISTORY';
 	});
-	
+
 });
 
 /**
@@ -113,7 +113,7 @@ function handleError(message) {
 	} else {
 		$("#errormessage").remove();
 	}
-		
+
 }
 
 /**
@@ -140,23 +140,23 @@ function hideMenu(num, toggle) {
  * Reset the combine text functionality from the checkbox state
  */
 function handleCombine(event) {
-	
+
 	$("#errormessage").remove();
 	// option is a jquery object representing either
 	// the link clicked or the checkbox selected
 	var combine = $("input[name='txtcombine']");
 
 	var option = $(this);
-	
+
 	var parent = option.parents(".combineselect_boss");
 	if (!parent || parent == undefined) return;
 	var num = parent.attr('num');
 	var menu = parent.find("ul.combineselect_menu");
 	var action = option.attr('action');
 	var ckbx = parent.find(".combineselect_default");
-	var restart = new RegExp("\\s*#"+num+"\\s*(AND|OR|NOT)*\\s*"); 
+	var restart = new RegExp("\\s*#"+num+"\\s*(AND|OR|NOT)*\\s*");
 	var reconnect = new RegExp("\\s*(AND|OR|NOT)\\s*#"+num+"\\s*");
-	
+
 	hideMenu(num);
 
 	if (action == 'start') {
@@ -188,7 +188,7 @@ function handleCombine(event) {
 
 		combine.val($.trim(combine.val()));
 		match = combine.val().match("#\\d");
-		
+
 		if (match == null) {
 			// Nothing left, set all to start
 			$("ul.combineselect_menu").empty();
@@ -203,7 +203,7 @@ function handleCombine(event) {
 				"<li class='combineselect_action' action='not'><span>Not</span></li>\n"
 			);
 			ckbx.attr('action','and');
-			
+
 			// update next item from combine box
 			num = match.input[1];
 			parent = $(".combineselect_boss[num='"+num+"']");
@@ -227,7 +227,7 @@ function handleCombine(event) {
 			event.stopPropagation();
 			return;
 		}
-		
+
 		// Append to textbox
 		var appendme = ' ' + action.toUpperCase() + ' #'+num + ' ';
 		if (combine.val().match(reconnect)) {
@@ -253,7 +253,7 @@ function handleSaveSearch(event) {
 	var savedSeachesAndAlertsLimit = $("#savedSeachesAndAlertsLimit").val();
 
 	var link = $(this);
-	
+
 	var type = link.attr('class');
 	var selectvalue = link.attr('selectvalue');
 	var num = link.attr('num');
@@ -273,11 +273,11 @@ function handleSaveSearch(event) {
 			alert("You may only create "
 					+ savedSeachesAndAlertsLimit
 					+ " total saved searches and alerts.\nPlease delete a search or alert to create a new one.");
-		} 
+		}
 	}
 
 	event.preventDefault();
-	
+
 	// AJAX call to add/delete saved search/alert
 	var saveurl = link.attr("href").replace(/selectvalue=\s*(unmark|mark)/,"selectvalue="+selectvalue)+"&ajax=true";
 	$.ajax({

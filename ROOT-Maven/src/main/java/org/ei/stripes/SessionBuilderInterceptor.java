@@ -23,6 +23,7 @@ import org.ei.controller.IPBlocker;
 import org.ei.controller.IPBlocker.COUNTER;
 import org.ei.session.SessionManager;
 import org.ei.session.UserSession;
+import org.ei.stripes.action.BackUrlAction;
 import org.ei.stripes.action.CaptchaAction;
 import org.ei.stripes.action.EVActionBean;
 import org.ei.stripes.action.personalaccount.LogoutAction;
@@ -188,6 +189,8 @@ public class SessionBuilderInterceptor implements Interceptor {
 					+ request.getRemoteHost());
 		}
 
+        // Scan request for "backurl"
+        BackUrlAction.scan(request);
 
 		// Continue on with request
 		return executioncontext.proceed();
