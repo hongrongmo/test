@@ -19,6 +19,7 @@ import org.ei.stripes.util.HttpRequestUtil;
 
 /**
  * @author harovetm
+ * Testing stupid Git
  *
  */
 @UrlBinding("/back/{$event}.url")
