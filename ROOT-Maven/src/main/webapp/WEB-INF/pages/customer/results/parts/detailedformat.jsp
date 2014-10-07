@@ -15,7 +15,7 @@
 					<span>${result.documentbaskethitindex}.&nbsp;</span>
 				</div>
 				<div style="float: left; line-height:1.6em; padding: 7px 0 10px 0; margin-right: 5px " >
-					<span><a href="/selected/deletefolder.url?CID=deleteFromSavedRecords&format=detailed&database=${actionBean.database}&docid=${result.doc.docid}&folderid=${actionBean.folderid}&backurl=${actionBean.backurl}" title="Remove record">
+					<span><a href="/selected/deletefolder.url?CID=deleteFromSavedRecords&format=detailed&database=${actionBean.database}&docid=${result.doc.docid}&folderid=${actionBean.folderid}" title="Remove record">
 					<img border="0" style="padding: 2.5px 0 2.5px 0; margin-top:0.75px" src="/static/images/Remove.png" alt="Remove Record"/>
 					</a></span></div>
 			 </c:when>

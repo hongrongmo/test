@@ -5,14 +5,14 @@
 	<c:set var="resultnum" value="${(actionBean.pagenav.currentpage - 1) * actionBean.pagenav.resultsperpage + status.count}" />
 	<c:set var="displaywhite" value="${status.count}" />
 			<div class="result<c:if test="${status.count % 2 eq 0}"> odd</c:if>">
-		   
+
 		   <c:choose>
 			<c:when test="${param.displaytype eq 'viewfolders'}">
 				<div style="float: left; line-height:1.9em; padding: 6px 1px 10px 5px ">
 					<span>${result.documentbaskethitindex}.&nbsp;</span>
 				</div>
 				<div style="float: left; line-height:1.6em; padding: 7px 0 10px 0; margin-right: 5px " >
-					<span><a href="/selected/deletefolder.url?CID=deleteFromSavedRecords&format=abstract&database=${actionBean.database}&docid=${result.doc.docid}&folderid=${actionBean.folderid}&backurl=${actionBean.backurl}" title="Remove record">
+					<span><a href="/selected/deletefolder.url?CID=deleteFromSavedRecords&format=abstract&database=${actionBean.database}&docid=${result.doc.docid}&folderid=${actionBean.folderid}" title="Remove record">
 					<img border="0" style="padding: 2.5px 0 2.5px 0; margin-top:0.75px" src="/static/images/Remove.png"/>
 					</a></span></div>
 			 </c:when>
@@ -27,7 +27,7 @@
 					</a></span></div>
 			</c:otherwise>
 			</c:choose>
-			
+
 			<table id="abstractlayout" style="padding-top:6px;">
 			<tbody>
 				<tr>
@@ -35,7 +35,7 @@
 					<td style="*padding-top:3px">
 						<p class="title"><data:highlighttag value="${result.title}" on="${actionBean.ckhighlighting}"/></p>
 						<div class="clear"></div>
-						
+
 						<p class="result" style="margin-top: 3px">
 						<c:if test="${not empty result.bti}"><b>${result.bti}</b></c:if>
 						<c:if test="${not empty result.btst}"><b>: ${result.btst}</b></c:if>
@@ -43,7 +43,7 @@
 						</p>
 						<p class="authors" style="margin-top: 3px">
 						<c:if test="${not empty result.authors}">
-							<c:if test="${result.doc.dbmask == 2048}"><b>Inventor(s): </b></c:if></c:if>			
+							<c:if test="${result.doc.dbmask == 2048}"><b>Inventor(s): </b></c:if></c:if>
 							<span class="authors">
 			<c:forEach items="${result.authors}" var="author" varStatus="austatus">
 				<c:choose>
@@ -52,7 +52,7 @@
 				</c:choose>
 			</c:forEach>
 			<c:if test="${not empty result.pf}">(<data:highlighttag value="${result.pf}" on="${actionBean.ckhighlighting}"/>);</c:if>
-							</span> 
+							</span>
 						</p>
 			<c:if test="${not empty result.editors}">
 			<p class="editors">
@@ -74,7 +74,7 @@
 				<c:if test="${'Article in Press' eq result.doctype}">
 				<p><img src="/static/images/btn_aip.gif" border="0"  title="Articles not published yet, but available online"><span style="vertical-align:text-top"> Article in Press</span>&nbsp;<a href="${actionBean.helpUrl}#Art_in_Press.htm" alt="Information about Article in Press" title="Information about Article in Press" class="helpurl"><img src="/static/images/i.png" border="0" alt=""/></a></p></c:if>
 				<div class="clear"></div>
-	
+
 				<c:if test ="${not empty result.affils}">
 				<p class="affils sectionstart"><b>Author affiliation<c:if test="${fn:length(result.affils) > 1}">s</c:if>:</b></p>
 				<c:forEach items="${result.affils}" var="affil" varStatus="afstatus">
@@ -83,7 +83,7 @@
 				</p>
 				</c:forEach>
 				</c:if>
-				
+
 	<c:if test="${not empty result.abstractrecord.text}">
 				<p class="abstracttext sectionstart"><b>${result.abstractrecord.label}: </b></p>
 				<p><data:highlighttag value="${result.abstractrecord.text}" on="${actionBean.ckhighlighting}" v2="${result.abstractrecord.v2}"/><c:if test="${result.abstractrecord.refcount > 0}">(${result.abstractrecord.refcount} refs)</c:if></p>
@@ -99,55 +99,55 @@
 	 <c:if test="${not empty result.abstractrecord.figures}">
 							<p class="figures"><c:forEach var="figure" items="${result.abstractrecord.figures}"><a href="javascript:window.open('${actionBean.s3FigUrl}${figure}','newwind','width=650,height=600,scrollbars=yes,resizable,statusbar=yes');void('');"><img src="${actionBean.s3FigUrl}${figure}" alt="" border="1" width="100" height="100"/></a></c:forEach></p>
 				</c:if>
-	
+
 	 <%-- <c:if test="${not empty result.at}">
 				<p><b>Abstract type: </b>${result.at}</p>
-	 </c:if> --%>  
+	 </c:if> --%>
 				<%-- ************************************************************************* --%>
 				<%-- KeyWords                            					                   --%>
 				<%-- ************************************************************************* --%>
 	 <c:if test="${not empty result.abstractrecord.termmap['BKYS']}">
 				<p><b>Keywords: </b><c:forEach var="term" items="${result.abstractrecord.termmap['BKYS']}" varStatus="status"><c:if test="${status.count > 1}">&nbsp;-&nbsp;</c:if><c:choose><c:when test="${not empty term.searchlink}"><data:highlighttag value="${term.searchlink}" on="${actionBean.ckhighlighting}"/></c:when><c:otherwise><data:highlighttag value="${term.value}" on="${actionBean.ckhighlighting}"/></c:otherwise></c:choose></c:forEach></p>
-	</c:if>   
+	</c:if>
 				<%-- ************************************************************************* --%>
 				<%-- Companies                                                                 --%>
 				<%-- ************************************************************************* --%>
-	
+
 	<c:if test="${not empty result.abstractrecord.termmap['CPO']}">
 					<p class="controlledterms"><b>${result.labels['CPO']}: </b><c:forEach var="term" items="${result.abstractrecord.termmap['CPO']}" varStatus="status"><c:if test="${status.count > 1}">&nbsp;-&nbsp;</c:if><c:choose><c:when test="${not empty term.searchlink}"><data:highlighttag value="${term.searchlink}" on="${actionBean.ckhighlighting}"/></c:when><c:otherwise><data:highlighttag value="${term.value}" on="${actionBean.ckhighlighting}"/></c:otherwise></c:choose></c:forEach></p>
 	</c:if>
-	
+
 				<%-- ************************************************************************* --%>
 				<%-- Chemicals                                                                 --%>
 				<%-- ************************************************************************* --%>
-	
+
 	<c:if test="${not empty result.abstractrecord.termmap['CMS']}">
 					<p class="controlledterms"><b>${result.labels['CMS']}: </b><c:forEach var="term" items="${result.abstractrecord.termmap['CMS']}" varStatus="status"><c:if test="${status.count > 1}">&nbsp;-&nbsp;</c:if><c:choose><c:when test="${not empty term.searchlink}"><data:highlighttag value="${term.searchlink}" on="${actionBean.ckhighlighting}"/></c:when><c:otherwise><data:highlighttag value="${term.value}" on="${actionBean.ckhighlighting}"/></c:otherwise></c:choose></c:forEach></p>
 	</c:if>
-	
+
 				<%-- ************************************************************************* --%>
 				<%-- Major terms                                                               --%>
 				<%-- ************************************************************************* --%>
 	<c:if test="${not empty result.abstractrecord.termmap['MJSM']}">
 					<p class="controlledterms"><b>${result.labels['MJSM']}: </b><c:forEach var="term" items="${result.abstractrecord.termmap['MJSM']}" varStatus="status"><c:if test="${status.count > 1}">&nbsp;-&nbsp;</c:if><c:choose><c:when test="${not empty term.searchlink}"><data:highlighttag value="${term.searchlink}" on="${actionBean.ckhighlighting}"/></c:when><c:otherwise><data:highlighttag value="${term.value}" on="${actionBean.ckhighlighting}"/></c:otherwise></c:choose></c:forEach></p>
 	</c:if>
-	
+
 				<%-- ************************************************************************* --%>
 				<%-- Main heading terms                                                        --%>
 				<%-- ************************************************************************* --%>
 	<c:if test="${not empty result.abstractrecord.termmap['MH']}">
 					<p class="mainheading"><b>${result.labels['MH']}: </b><c:forEach var="term" items="${result.abstractrecord.termmap['MH']}" varStatus="status"><c:if test="${status.count > 1}">&nbsp;-&nbsp;</c:if><c:choose><c:when test="${not empty term.searchlink}"><data:highlighttag value="${term.searchlink}" on="${actionBean.ckhighlighting}"/></c:when><c:otherwise><data:highlighttag value="${term.value}" on="${actionBean.ckhighlighting}"/></c:otherwise></c:choose></c:forEach></p>
 	</c:if>
-	 
+
 				<%-- ************************************************************************* --%>
 				<%-- Controlled vocabulary terms                                               --%>
 				<%-- ************************************************************************* --%>
 	<c:if test="${not empty result.abstractrecord.termmap['CVS']}">
 					<p class="controlledterms"><b>${result.labels['CVS']}: </b><c:forEach var="term" items="${result.abstractrecord.termmap['CVS']}" varStatus="status"><c:if test="${status.count > 1}">&nbsp;-&nbsp;</c:if><c:choose><c:when test="${not empty term.searchlink}"><data:highlighttag value="${term.searchlink}" on="${actionBean.ckhighlighting}"/></c:when><c:otherwise><data:highlighttag value="${term.value}" on="${actionBean.ckhighlighting}"/></c:otherwise></c:choose></c:forEach></p>
-	</c:if>  
-	  
+	</c:if>
+
 	  <!-- Missing CHS  --no code found -->
-	 
+
 				<%-- ************************************************************************* --%>
 				<%-- CAS Registry terms                                                        --%>
 				<%-- ************************************************************************* --%>
@@ -160,7 +160,7 @@
 	<c:if test="${not empty result.abstractrecord.termmap['FLS']}">
 					<p class="controlledterms"><b>${result.labels['FLS']}: </b><c:forEach var="term" items="${result.abstractrecord.termmap['FLS']}" varStatus="status"><c:if test="${status.count > 1}">&nbsp;-&nbsp;</c:if><c:choose><c:when test="${not empty term.searchlink}"><data:highlighttag value="${term.searchlink}" on="${actionBean.ckhighlighting}"/></c:when><c:otherwise><data:highlighttag value="${term.value}" on="${actionBean.ckhighlighting}"/></c:otherwise></c:choose></c:forEach></p>
 	</c:if>
-	
+
 				<%-- ************************************************************************* --%>
 				<%-- Classification codes   CLS                                                   --%>
 				<%-- ************************************************************************* --%>
@@ -169,30 +169,30 @@
 				<p class="classificationcode"><b>Classification Code: </b><c:forEach var="clcode" items="${clcodelist.value}" varStatus="status"><c:if test="${status.count > 1}">&nbsp;-&nbsp;</c:if>${clcode.linkedid}${clcode.title}</c:forEach></p>
 				</c:forEach>
 				</c:if>
-	
+
 				<%-- ************************************************************************* --%>
 				<%-- Regional terms                                                            --%>
 				<%-- ************************************************************************* --%>
 	<c:if test="${not empty result.abstractrecord.termmap['RGIS']}">
 					<p class="controlledterms"><b>${result.labels['RGIS']}: </b><c:forEach var="term" items="${result.abstractrecord.termmap['RGIS']}" varStatus="status"><c:if test="${status.count > 1}">&nbsp;-&nbsp;</c:if><c:choose><c:when test="${not empty term.searchlink}"><data:highlighttag value="${term.searchlink}" on="${actionBean.ckhighlighting}"/></c:when><c:otherwise><data:highlighttag value="${term.value}" on="${actionBean.ckhighlighting}"/></c:otherwise></c:choose></c:forEach></p>
 	</c:if>
-			
+
 				<%-- ************************************************************************* --%>
 				<%-- IPC Code terms                                                            --%>
 				<%-- ************************************************************************* --%>
 	<c:if test="${not empty result.abstractrecord.termmap['PIDM']}">
 					<p class="controlledterms"><b>${result.labels['PIDM']}: </b><c:forEach var="term" items="${result.abstractrecord.termmap['PIDM']}" varStatus="status"><c:if test="${status.count > 1}">&nbsp;-&nbsp;</c:if><c:choose><c:when test="${not empty term.searchlink}">${term.searchlink}</c:when><c:otherwise>${term.value}</c:otherwise></c:choose></c:forEach></p>
 	</c:if>
-	
+
 	<c:if test="${not empty result.abstractrecord.termmap['PIDEPM']}">
 					<p class="controlledterms"><b>${result.labels['PIDEPM']}: </b><c:forEach var="term" items="${result.abstractrecord.termmap['PIDEPM']}" varStatus="status"><c:if test="${status.count > 1}">&nbsp;-&nbsp;</c:if><c:choose><c:when test="${not empty term.searchlink}">${term.searchlink}</c:when><c:otherwise>${term.value}</c:otherwise></c:choose></c:forEach></p>
 	</c:if>
-	
-				
+
+
 	<c:if test="${not empty result.abstractrecord.termmap['PIDM8']}">
 					<p class="controlledterms"><b>${result.labels['PIDM8']}: </b><c:forEach var="term" items="${result.abstractrecord.termmap['PIDM8']}" varStatus="status"><c:if test="${status.count > 1}">&nbsp;-&nbsp;</c:if><c:choose><c:when test="${not empty term.searchlink}">${term.searchlink}</c:when><c:otherwise>${term.value}</c:otherwise></c:choose></c:forEach></p>
 	</c:if>
-	
+
 	<c:if test="${not empty result.abstractrecord.termmap['PUCM']}">
 					<p class="controlledterms"><b>${result.labels['PUCM']}: </b><c:forEach var="term" items="${result.abstractrecord.termmap['PUCM']}" varStatus="status"><c:if test="${status.count > 1}">&nbsp;-&nbsp;</c:if><c:choose><c:when test="${not empty term.searchlink}">${term.searchlink}</c:when><c:otherwise>${term.value}</c:otherwise></c:choose></c:forEach></p>
 	</c:if>
@@ -214,7 +214,7 @@
 	<c:if test="${not empty result.abstractrecord.treatments}">
 					<p class="treatments"><b>${result.labels['TRS']}: </b><c:forEach var="treatment" items="${result.abstractrecord.treatments}" varStatus="status"><c:if test="${status.count > 1}">&nbsp;-&nbsp;</c:if>${treatment}</c:forEach></p>
 	</c:if>
-				
+
 				<p class="database"><b>Database: </b><span class="dbnameidentifier">${result.doc.dbname}</span></p>
 				<c:if test="${result.doc.dbmask == 2097152}">
 					<p>${result.cpr}</p>
@@ -233,7 +233,7 @@
 							<c:forEach items="${result.lhlinkObjects}" var="lhlink" varStatus="status">
 								<c:if test="${not empty lhlink.url}">
 									<c:if test="${status.count>1}"><span class="pipe">|</span></c:if>
-									<c:choose>                     
+									<c:choose>
 		                        		<c:when test="${not empty lhlink.imageUrl}">
 		                        			<a CLASS="LgBlueLink" onclick="openLocalHoldingsLink(event,'Abstract Format',this);" href="/search/results/localholdinglinks.url?docId=${result.doc.docid}&url=${lhlink.url}&position=${lhlink.position}" target="new">
 		                        				<img src="${lhlink.imageUrl}" alt="${lhlink.label}" border="0" />
@@ -245,14 +245,14 @@
 		                    		</c:choose>
 								</c:if>
 							</c:forEach>
-							</p> 
+							</p>
 						</c:if>
 					<c:if test="${result.fulltext}">
 						<c:if test="${not(fn:substring(result.doc.docid,0,3) eq 'ref')}">
 							<p>
 								<a href="javascript:newwindow=window.open('/search/results/fulltext.url?docID=${result.doc.docid}','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable'); void('');" title="Full-text"><img id="ftimg" class="fulltext" src="/static/images/full_text.png" alt="Full-text"></a>
 							</p>
-						</c:if>	
+						</c:if>
 					</c:if>
 					<c:if test="${result.doc.dbmask ne '131072' and actionBean.lindahall}">
 	    			<p><a title="Linda Hall Library document delivery service" href="javascript:lindaHall('${actionBean.sessionid}','${result.doc.docid}','${result.doc.dbid}')">Linda Hall Library document delivery service</a></p>
@@ -271,6 +271,6 @@
 					<c:if test="${not empty result.readbooklink}"><c:if test="${not empty result.readpagelink or not empty result.readchapterlink}"><span class="pipe">|</span></c:if>${result.readbooklink}</c:if>
 					</div>
 			</c:if>
-            </div> 
+            </div>
             <div class="clear"></div>
 		</c:forEach>

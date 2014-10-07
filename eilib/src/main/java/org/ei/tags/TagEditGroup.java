@@ -7,7 +7,7 @@ import java.util.Iterator;
 public class TagEditGroup {
     private String userID;
     private String custID;
-    private String groupID;
+    private String groupID = "";
     private String scope;
     private String docID;
     private String inputName;

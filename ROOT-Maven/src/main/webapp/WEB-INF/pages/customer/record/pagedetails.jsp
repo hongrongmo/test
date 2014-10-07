@@ -115,7 +115,7 @@
 			<span><a class="email" id="emaillink" title="Email this record" href="/delivery/email/display.url?database=${actionBean.database}&displayformat=detailed&docidlist=${result.doc.docid}&handlelist=${result.doc.hitindex}">Email</a>|</span>
 			<span><a class="print" id="printlink" title="Print this record" href="/delivery/print/display.url?database=${actionBean.database}&displayformat=detailed&docidlist=${result.doc.docid}&handlelist=${result.doc.hitindex}">Print</a>|</span>
 			<span><a class="download" id="downloadlink" title="Download this record" href="/delivery/download/display.url?database=${actionBean.database}&displayformat=detailed&docidlist=${result.doc.docid}&handlelist=${result.doc.hitindex}">Download</a>|</span>
-			<span><a class="save" title="Save this record to a folder in Settings" href="/personal/folders/save/view.url?CID=viewSavedFolders&EISESSION=${actionBean.sessionid}&SEARCHID=${actionBean.searchid}&count=1&source=selectedset&database=${actionBean.database}&format=${actionBean.view=='page'?'expertSearchDetailedFormat':'expertSearchAbstractFormat'}&DOCINDEX=${result.doc.hitindex}&backurl=CID%3D${actionBean.CID}%26SEARCHID%3D${actionBean.searchid}%26COUNT%3D1%26database%3D${actionBean.database}">Save to Folder</a></span>
+			<span><a class="save" title="Save this record to a folder in Settings" href="/personal/folders/save/view.url?CID=viewSavedFolders&EISESSION=${actionBean.sessionid}&SEARCHID=${actionBean.searchid}&count=1&source=selectedset&database=${actionBean.database}&format=${actionBean.view=='page'?'expertSearchDetailedFormat':'expertSearchAbstractFormat'}&DOCINDEX=${result.doc.hitindex}&backurl=SAVETOFOLDER">Save to Folder</a></span>
    </c:if>
 			<div class="clear"></div>
 		</div>

@@ -16,7 +16,7 @@ public class Tag {
 	public static final String COLOR_INSTITUTION = "#A56500";
 
 	private String tID;
-	private String groupID = null;
+	private String groupID = "";
 	private TagGroup group = null;
 	private String groupTitle = null;
 	private String tag;
@@ -57,7 +57,7 @@ public class Tag {
 
 	/**
 	 * set method to set the fields for the tag.
-	 * 
+	 *
 	 * @param : int (tagid ).
 	 */
 
@@ -75,7 +75,7 @@ public class Tag {
 
 	/**
 	 * set method to set the groupid to the document.
-	 * 
+	 *
 	 * @param : int(group id).
 	 */
 	public void setGroupID(String groupid) {
@@ -84,7 +84,7 @@ public class Tag {
 
 	/**
 	 * set method to set the grouptitle to the document.
-	 * 
+	 *
 	 * @param : int(group id).
 	 */
 	public void setGroupTitle(String grouptitle) {
@@ -93,7 +93,7 @@ public class Tag {
 
 	/**
 	 * set method to set the tag of the document.
-	 * 
+	 *
 	 * @param : String(tag).
 	 */
 	public void setTag(String tag) {
@@ -103,7 +103,7 @@ public class Tag {
 
 	/**
 	 * set method to set the id of the document.
-	 * 
+	 *
 	 * @param : String(document id).
 	 */
 	public void setDocID(String docid) {
@@ -120,7 +120,7 @@ public class Tag {
 
 	/**
 	 * set method to set the timestamp of the document.
-	 * 
+	 *
 	 * @param : int(timestamp).
 	 */
 	public void setTimestamp(long timestamp) {
@@ -137,7 +137,7 @@ public class Tag {
 
 	/**
 	 * set method to set the visibility/access of the document.
-	 * 
+	 *
 	 * @param : String(visibility).
 	 */
 	public void setScope(int scope) {
@@ -166,7 +166,7 @@ public class Tag {
 
 	/**
 	 * set method to set the database in which the document contain.
-	 * 
+	 *
 	 * @param : int (database).
 	 */
 	public void setMask(int dmask) {
@@ -175,7 +175,7 @@ public class Tag {
 
 	/**
 	 * set method to set the userid of the tag created.
-	 * 
+	 *
 	 * @param : String(userid).
 	 */
 	public void setUserID(String userid) {
@@ -184,7 +184,7 @@ public class Tag {
 
 	/**
 	 * set method to set the custid of the tag created.
-	 * 
+	 *
 	 * @param : int(custid).
 	 */
 	public void setCustID(String custid) {
@@ -193,7 +193,7 @@ public class Tag {
 
 	/**
 	 * get method to get the fields for the tag.
-	 * 
+	 *
 	 * @param : int (tagid ).
 	 */
 	public String getTagID() {
@@ -202,7 +202,7 @@ public class Tag {
 
 	/**
 	 * get method to get the groupid to the document.
-	 * 
+	 *
 	 * @param : int(group id).
 	 */
 	public String getGroupID() {
@@ -211,7 +211,7 @@ public class Tag {
 
 	/**
 	 * get method to get the grouptitle to the document.
-	 * 
+	 *
 	 * @param : int(group id).
 	 */
 	public String getGroupTitle() {
@@ -220,7 +220,7 @@ public class Tag {
 
 	/**
 	 * get method to get the tag of the document.
-	 * 
+	 *
 	 * @param : String(tag).
 	 */
 	public String getTag() {
@@ -229,7 +229,7 @@ public class Tag {
 
 	/**
 	 * get method to get the tagSearchvalue of the document.
-	 * 
+	 *
 	 * @param : String(tagSearchvalue).
 	 */
 	public String getTagSearchValue() {
@@ -238,7 +238,7 @@ public class Tag {
 
 	/**
 	 * get method to get the docid of the document.
-	 * 
+	 *
 	 * @param : String(document id).
 	 */
 	public String getDocID() {
@@ -247,7 +247,7 @@ public class Tag {
 
 	/**
 	 * get method to get the visibility/access of the document.
-	 * 
+	 *
 	 * @param : String(visibility).
 	 */
 	public int getScope() {
@@ -256,7 +256,7 @@ public class Tag {
 
 	/**
 	 * get method to get the database in which the document contain.
-	 * 
+	 *
 	 * @param : int (database).
 	 */
 	public int getMask() {
@@ -265,7 +265,7 @@ public class Tag {
 
 	/**
 	 * get method to get the userid of the tag created.
-	 * 
+	 *
 	 * @param : String(userid).
 	 */
 	public String getUserID() {
@@ -274,7 +274,7 @@ public class Tag {
 
 	/**
 	 * get method to get the custid of the tag created.
-	 * 
+	 *
 	 * @param : int(custid).
 	 */
 	public String getCustID() {

@@ -42,14 +42,8 @@
 
 	String userId = null;
 	String sUserId=null;
-	String backurl=null;
 
 	userId=ussession.getUserid();
-
-    if(request.getParameter("backurl") != null)
-    {
-    	backurl=request.getParameter("backurl").trim();
-    }
 
 	if(request.getParameter("folderid") != null)
 	{
@@ -108,7 +102,7 @@
 
 	if(cid!=null)
 	{
-	  urlString = urlString+"?CID="+cid+"&database="+database+"&folderid="+folderId+"&backurl="+URLEncoder.encode(backurl);
+	  urlString = urlString+"?CID="+cid+"&database="+database+"&folderid="+folderId;
 	}
 
 	if(urlString!=null)
