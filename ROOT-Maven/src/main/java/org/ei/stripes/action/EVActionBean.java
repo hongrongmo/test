@@ -646,6 +646,22 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
         this.csrfSyncToken = csrfSyncToken;
     }
     
+    public String getMaintenanceMsg(){
+    	String msg = null;
+    	boolean isEnabled = Boolean.parseBoolean((EVProperties.getProperty(EVProperties.DOWNTIME_MESSAGE_ENABLED)));
+    	if(isEnabled){
+    		String message = EVProperties.getProperty(EVProperties.DOWNTIME_MESSAGE_TEXT);
+    		if(message != null){
+    			msg = message;
+    			String color = EVProperties.getProperty(EVProperties.DOWNTIME_MESSAGE_COLOR);
+    			if(color != null){
+    				msg="<span style=\"color:"+color+"\">"+msg+"</span>";
+    			}
+    		}
+    	}
+    	return msg;
+    }
+    
     public String getS3FigUrl() {
     	 String s3figurl = (EVProperties.getProperty(EVProperties.S3_FIG_URL));
          if (s3figurl == null)

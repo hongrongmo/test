@@ -16,13 +16,13 @@ import org.apache.log4j.Logger;
 import org.ei.biz.personalization.IEVWebUser;
 import org.ei.biz.security.IAccessControl;
 import org.ei.biz.security.NoAuthAccessControl;
-import org.ei.controller.CookieHandler;
 import org.ei.controller.Customer;
 import org.ei.service.cars.CARSTemplateNames;
 import org.ei.service.cars.Impl.CARSResponse;
 import org.ei.session.UserSession;
 import org.ei.stripes.action.EVPathUrl;
 import org.ei.stripes.action.SystemMessage;
+import org.ei.web.cookie.CookieHandler;
 
 @UrlBinding("/home.url")
 public class HomeAction extends CARSActionBean {

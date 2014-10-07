@@ -95,4 +95,5 @@ ${actionBean.message}
 
 </stripes:layout-component>
 <stripes:layout-component name="modal_dialog"></stripes:layout-component>
+<stripes:layout-component name="sessionexpiryhandler"></stripes:layout-component>
 </stripes:layout-render>

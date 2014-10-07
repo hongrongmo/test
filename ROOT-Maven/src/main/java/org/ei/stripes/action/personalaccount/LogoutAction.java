@@ -14,7 +14,6 @@ import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.ei.biz.security.IAccessControl;
 import org.ei.biz.security.NoAuthAccessControl;
-import org.ei.controller.CookieHandler;
 import org.ei.exception.ServiceException;
 import org.ei.service.cars.CARSRequestProcessor;
 import org.ei.service.cars.CARSRequestType;
@@ -25,6 +24,8 @@ import org.ei.service.cars.util.CARSCommonUtil;
 import org.ei.session.UserSession;
 import org.ei.stripes.action.EVPathUrl;
 import org.ei.stripes.exception.EVExceptionHandler;
+import org.ei.web.cookie.CookieHandler;
+import org.ei.web.cookie.EISessionCookie;
 
 /**
  * This class services the logout or terminate action. It clears out all cookies and calls CARS to terminate user session.
@@ -87,7 +88,7 @@ public class LogoutAction extends CARSActionBean {
     public static void clearClientCookies(HttpServletResponse response) {
         response.addCookie(CookieHandler.clearCookie("JSESSIONID"));
         response.addCookie(CookieHandler.clearCookie("SECUREID"));
-        response.addCookie(CookieHandler.clearCookie("EISESSION"));
+        response.addCookie(CookieHandler.clearCookie(EISessionCookie.EISESSION_COOKIE_NAME));
     }
 
     /**

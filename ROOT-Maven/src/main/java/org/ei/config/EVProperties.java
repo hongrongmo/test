@@ -38,6 +38,10 @@ import org.ei.thesaurus.ThesaurusSearchControl;
  * - Bypass objects: there are "bypass" options to allow direct access to EV from certain IP addresses and/or Customer IDs
  *
  */
+/**
+ * @author kamaramx
+ *
+ */
 public final class EVProperties {
     private static Logger log4j = Logger.getLogger(EVProperties.class);
 
@@ -52,6 +56,9 @@ public final class EVProperties {
 
     /** The Constant PREVENT_CSRF_ATTACK. */
     public static final String PREVENT_CSRF_ATTACK ="PREVENT_CSRF_ATTACK";
+
+    /** The Constant MAINTENANCE_MODE. */
+    public static final String MAINTENANCE_MODE ="maintenance.mode";
 
     /** The Constant MEMCACHE_SERVERS. */
     public static final String MEMCACHE_SERVERS = "memcache.servers";
@@ -286,6 +293,15 @@ public final class EVProperties {
     
     /** The Constant S3_FIG_URL. */
     public static final String S3_FIG_URL ="s3.fig.url";
+    
+    /** The Constant DOWNTIME_MESSAGE_ENABLED. */
+    public static final String DOWNTIME_MESSAGE_ENABLED ="downtime.message.enabled";
+    
+    /** The Constant DOWNTIME_MESSAGE_TEXT. */
+    public static final String DOWNTIME_MESSAGE_TEXT ="downtime.message.text";
+    
+    /** The Constant DOWNTIME_MESSAGE_COLOR. */
+    public static final String DOWNTIME_MESSAGE_COLOR ="downtime.message.color";
 
     private static EVProperties instance;
 

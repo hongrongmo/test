@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.log4j.Logger;
 import org.ei.connectionpool.ConnectionBroker;
 import org.ei.connectionpool.ConnectionPoolException;
 import org.ei.domain.navigators.Refinements;
@@ -21,7 +22,7 @@ import org.ei.query.limiter.ReferexLimiter;
 import org.ei.util.StringUtil;
 
 /**
- * 
+ *
  * Handles Saved Searches related tasks such as
  * <p>
  * a) Storing Query in saved_searches based on USER_ID .
@@ -33,13 +34,13 @@ import org.ei.util.StringUtil;
  * <p>
  * c) Clearing and updating Queries in saved_searches for a USER_ID,SEARCH_ID.
  * </p>
- * 
+ *
  */
 /*
  * jam _ removed todayDate and replaced with SYSDATE in SQL statements
  */
 public class Searches {
-	// protected static Log log = LogFactory.getLog(Searches.class);
+	private static Logger log4j = Logger.getLogger(Searches.class);
 	public static final int UNCOMPRESSED_LIMIT = 4000;
 	public static final String COMPRESSION_INDICATOR = new String(new char[] { 31 });
 
@@ -50,7 +51,7 @@ public class Searches {
 	 * @return java.lang.String This method gets QRY string string from
 	 *         SESSION_HISTORY table for the current sessionID. For each QRY
 	 *         string it checks,is it present in the saved_searches tabel.
-	 * 
+	 *
 	 */
 	public static void getUserSavedSearchesXML(String userid, Writer out) throws InfrastructureException {
 		SavedSearches.getUserSavedSearchesXML(userid, out);
@@ -103,12 +104,14 @@ public class Searches {
 			broker = ConnectionBroker.getInstance();
 			con = broker.getConnection(DatabaseConfig.SESSION_POOL);
 			int idx = 1;
-			pstmt = con.prepareStatement("delete FROM SEARCHES WHERE SESSION_ID=? AND SEARCH_ID=?");
+			log4j.info("Deleting any existing search; SESSION_ID=" + query.getSessionID() + ", SEARCH_ID=" + query.getID());
+			pstmt = con.prepareStatement("DELETE FROM SEARCHES WHERE SESSION_ID=? AND SEARCH_ID=?");
 			pstmt.setString(idx++, query.getSessionID());
 			pstmt.setString(idx++, query.getID());
 			pstmt.executeQuery();
+			con.commit();
 		} catch (Exception sqle) {
-			throw new InfrastructureException(SystemErrorCodes.SESSION_SEARCH_ERROR, sqle);
+			throw new InfrastructureException(SystemErrorCodes.SESSION_SEARCH_ERROR, "Search delete from database failed for Session ID: " + query.getSessionID() + ", Search ID::" + query.getID(), sqle);
 		} finally {
 			if (pstmt != null) {
 				try {
@@ -135,7 +138,7 @@ public class Searches {
 	 * @return void This method takes xmlString and Query object. From the query
 	 *         object it checks if EmailAlert is on or off. Depending on
 	 *         EmailAlert it stores search as max search_id for that userID.
-	 * 
+	 *
 	 */
 	// jam 10/16/2002
 	// bug 13.2 searches not being saved due to special characters...
@@ -153,6 +156,7 @@ public class Searches {
 			con = broker.getConnection(DatabaseConfig.SESSION_POOL);
 			pstmt = con.prepareCall("{ call Searches_insertSearchRe(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
 			int intStmtIndex = 1;
+            log4j.info("Inserting search; SESSION_ID=" + query.getSessionID() + ", SEARCH_ID=" + query.getID());
 			pstmt.setString(intStmtIndex++, query.getID());
 			pstmt.setString(intStmtIndex++, query.getUserID());
 			pstmt.setString(intStmtIndex++, query.getSessionID());
@@ -209,7 +213,7 @@ public class Searches {
 			result = 1;
 		} catch (Exception sqle) {
 			// log.error("Exception",sqle);
-			throw new InfrastructureException(SystemErrorCodes.SESSION_SEARCH_ERROR, "Search insert into database failed for Search ID::" + query.getID(), sqle);
+			throw new InfrastructureException(SystemErrorCodes.SESSION_SEARCH_ERROR, "Search insert into database failed for Session ID: " + query.getSessionID() + ", Search ID::" + query.getID(), sqle);
 		} finally {
 			if (pstmt != null) {
 				try {
@@ -322,7 +326,7 @@ public class Searches {
 	 *         and compare if it prasent in svaed searches. If so then get
 	 *         Search_id for that search and updates emailAlert for this used_id
 	 *         and Search_id.
-	 * 
+	 *
 	 */
 	public static int updateSearch(Query query) throws InfrastructureException {
 		// log.info("UPDATE !");
@@ -431,7 +435,7 @@ public class Searches {
 
 	/**
 	 * Remove all user saved searches
-	 * 
+	 *
 	 * @param userid
 	 * @param strSavedValue
 	 * @param strAlertValue
@@ -481,7 +485,7 @@ public class Searches {
 
 	/**
 	 * Remove all searches from the current session (history)
-	 * 
+	 *
 	 * @param sessionid
 	 * @return
 	 * @throws InfrastructureException
@@ -521,7 +525,7 @@ public class Searches {
 
 	/**
 	 * Remove a single search by ID from history
-	 * 
+	 *
 	 * @param searchid
 	 * @return
 	 * @throws InfrastructureException
@@ -564,7 +568,7 @@ public class Searches {
 
 	/**
 	 * Build a List of Query objects representing Search History items
-	 * 
+	 *
 	 * @param sessionid
 	 * @param out
 	 * @throws InfrastructureException
@@ -667,7 +671,7 @@ public class Searches {
 	 * @param java
 	 *            .lang.Object Query
 	 * @return void This method takes Query object as parameter.
-	 * 
+	 *
 	 */
 	public static int removeSearch(Query query) throws InfrastructureException {
 		return removeSearch(query.getID());
