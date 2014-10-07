@@ -140,7 +140,8 @@ float:left;
 #toolbar .col {float:left; padding:3px 10px; margin: 0; border:none; background:none}
 #toolbar input[type="button"] {position: relative; top: -2px}
 
-#sortby {float: right; margin: 10px 7px 2px 0; white-space: nowrap;}
+#sortby { white-space: nowrap;}
+#sortbyinnerdiv{margin-right: 10px;text-align: right;padding-top: 10px;}
 
 #toolbar ul {height: 10px}
 #toolbar ul li {margin: 0 0 0 7px; padding: 0}
