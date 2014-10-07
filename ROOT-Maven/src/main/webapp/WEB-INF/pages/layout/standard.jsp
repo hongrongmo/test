@@ -106,7 +106,7 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
 			<script>
 				if((!$.cookie("ev_mm_dontshow") || release != $.cookie("ev_mm_dontshow")) && (!$.cookie("ev_mm_shown") || release != $.cookie("ev_mm_shown"))){
 
-					GALIBRARY.createWebEventWithLabel('_trackEvent', 'Dialog Open', 'What\'s New', 'Auto Show');
+					GALIBRARY.createWebEventWithLabel('Dialog Open', 'What\'s New', 'Auto Show');
 					TINY.box.show({html:document.getElementById("modalmsg"),clickmaskclose:false,width:900,height:450,close:true,opacity:20,topsplit:3,closejs:function(){closeX();}});
 					//tell GA that we showed it
 
@@ -124,10 +124,11 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
 
 </stripes:layout-component>
 <stripes:layout-component name="exitSurvey">
-
+	<c:if test="${actionBean.context.userSession.user.userPreferences.exitSurvey}"></c:if>
+	<%@ include file="/WEB-INF/pages/include/exitSurvey.jsp" %>
 </stripes:layout-component>
 <stripes:layout-component name="carsoverride">
-<jwr:style src="/bundles/carsoverride.css"></jwr:style>
+	<jwr:style src="/bundles/carsoverride.css"></jwr:style>
 <style></style>
 
 </stripes:layout-component>

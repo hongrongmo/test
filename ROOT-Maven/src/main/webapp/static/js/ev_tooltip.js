@@ -139,7 +139,7 @@ $(document).ready(function() {
 						    			return false;
 				        	        }
 				                }
-				               
+
 				            });
 				    	}else{
 				    		if((typeof(Basket) == 'undefined' || (Basket.count > 0)) && typeof(folderid) === 'undefined' && !checkBasketExistInTheSession()){
@@ -167,8 +167,8 @@ $(document).ready(function() {
 					            });
 				    		}
 				    	}
-				    	
-				    	
+
+
 				    	},
 				    functionAfter: function(origin){
 				    	$(origin).attr('title', 'Click to change one click download preferences.');
@@ -194,7 +194,7 @@ $(document).ready(function() {
 			return false;
 		});
 	}
-	
+
 	function createSessionExpiryTooltip(){
 		// we may have to catch the 302 response and redirect to the incoming url in the future. for now just showing the error message
 		$('#downloadlink').tooltipster('destroy');
@@ -206,13 +206,13 @@ $(document).ready(function() {
 		    position:'bottom',
 		    fixedLocation:true,
 		    positionTracker:false,
-		    delay:0,	
+		    delay:0,
 		    speed:0,
 		    functionAfter: function(origin){$(origin).tooltipster('destroy');}
 		});
 		$('#downloadlink').tooltipster('show',null);
 	}
-	
+
 	function getToolTipContent(origin, continueTooltip){
 		         // we'll make this function asynchronous and allow the tooltip to go ahead and show the loading notification while fetching our data
 		        continueTooltip();
@@ -308,47 +308,7 @@ function showSurvey(feature, location){
 	}
 
 }
-function showExitSurvey(){
-	var surveyCookie;
-	if($.cookie("ev_exitsurvey")){
-		surveyCookie = JSON.parse($.cookie("ev_exitsurvey"));
 
-		$.cookie("ev_exitsurvey", '{"dontShow":'+surveyCookie.dontShow+'}',{expires: 365, path:'/'});
-	}else{
-		$.cookie("ev_exitsurvey", '{"dontShow":'+false+'}',{expires: 365, path:'/'});
-		surveyCookie = {
-			dontShow:false,
-		};
-	}
-
-	if(!surveyCookie.dontShow){
-
-		$("#ev_survey").tooltipster({
-		    content:$("#exitSurvey").html(),
-		    contentAsHTML:true,
-		    autoClose:false,
-		    interactive:true,
-		    position:'top',
-		    fixedLocation:true,
-		    positionTracker:false,
-		    multiple:true,
-		    delay:0,
-		    speed:0,
-		    debug:false,
-		    arrow:false,
-		    theme:'tooltipster-default surveyTheme',
-		    functionReady: function(origin, continueTooltip) {
-		    	$(".surveyTheme").css("left", "30%");
-	           	$(".surveyTheme").css("top", "30%");
-		    }
-		});
-
-
-		$("#ev_survey").show();
-		$("#ev_survey").tooltipster('show',null);
-	}
-
-}
 
 //hid the popup and write a session cookie so it won't show again.
 function hideTP(selector){
