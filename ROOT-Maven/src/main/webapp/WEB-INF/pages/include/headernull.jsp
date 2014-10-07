@@ -4,6 +4,12 @@
 <div id="header" style="width:100%; min-width: 100%">
 	<div id="logoEV">
         <a href="/home.url" title="Engineering Village - The information discovery platform of choice for the engineering community"><img alt="Engineering Village - The information discovery platform of choice for the engineering community" src="/static/images/EV-logo.gif"/></a>
+       	<c:if test="${not empty actionBean.maintenanceMsg}">
+    		<div style="position:absolute; left: 320px; top: 28px; font-weight: bold; font-size; 12px; width:44%">${actionBean.maintenanceMsg }</div>
+		</c:if>
+		<c:if test="${not empty maintenanceMsg}">
+    		<div style="position:absolute; left: 320px; top: 28px; font-weight: bold; font-size; 12px; width:44%;">${maintenanceMsg }</div>
+		</c:if>
 	</div>
 
 	<div id="headerLink">

@@ -351,6 +351,12 @@
 			<param-value>RequestTPS</param-value>
 		</init-param>
 	</servlet>
+	
+	<servlet>
+		<description>This servlet is used to retrieve the session status</description>
+		<servlet-name>CheckSessionStatus</servlet-name>
+		<servlet-class>org.ei.system.CheckSessionStatus</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>SearchExecutionTimes</servlet-name>
@@ -420,6 +426,15 @@
 		<url-pattern>/controller/servlet/Patent.pdf</url-pattern>
 	</servlet-mapping>
 
+	<servlet-mapping>
+		<servlet-name>CheckSessionStatus</servlet-name>
+		<url-pattern>/application/checksessionstatus</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- ******************************* -->
+	<!-- SESSION-TIMEOUT value should be synched with EISessionCookie.EXPIRES_IN value -->
+	<!-- ******************************* -->
 	<session-config>
 		<session-timeout>30</session-timeout>
 		<tracking-mode>COOKIE</tracking-mode>
