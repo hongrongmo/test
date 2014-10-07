@@ -93,5 +93,5 @@
     </script>
 
     </stripes:layout-component>
-    
+    <stripes:layout-component name="sessionexpiryhandler"></stripes:layout-component>
 </stripes:layout-render>
