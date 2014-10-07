@@ -991,13 +991,6 @@ public class SearchDisplayAction extends BaseSearchAction implements ValidationE
     //
     //
 
-    public String getHistorybackurl() throws UnsupportedEncodingException {
-        String url = URLEncoder.encode("/search/" + context.getEventName() + ".url?" + "database=" + database
-            + (GenericValidator.isBlankOrNull(searchid) ? "" : "&searchid=" + searchid), "UTF-8");
-        return url;
-
-    }
-
     public List<DatabaseSelector.DatabaseCheckbox> getDatabaseCheckboxes() {
         return databasecheckboxes;
     }

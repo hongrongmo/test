@@ -27,11 +27,11 @@ public class BackUrlAction extends EVActionBean {
 
     public static final String SESSION_FEATURE_EXTENSION = ".backurl";
 
-    @Validate(mask = "SAVETOFOLDER|RESULTS")
+    @Validate(mask = "SAVETOFOLDER|SELECTEDRECORDS|SAVEDSEARCH|SEARCHHISTORY")
     private String feature;
 
     public enum BackURLByFeature {
-        SAVETOFOLDER, RESULTS;
+        SAVETOFOLDER, SELECTEDRECORDS, SAVEDSEARCH, SEARCHHISTORY;
         public static BackURLByFeature value(String value) {
             try {
                 return BackURLByFeature.valueOf(value);
@@ -115,8 +115,10 @@ public class BackUrlAction extends EVActionBean {
 
         String referer = HttpRequestUtil.getReferer(request);
         switch (feature) {
-        case RESULTS:
+        case SELECTEDRECORDS:
+        case SAVEDSEARCH:
         case SAVETOFOLDER:
+        case SEARCHHISTORY:
             if (GenericValidator.isBlankOrNull(referer)) {
                 log4j.info("No referer available, NOT storing!");
                 return;
@@ -139,6 +141,74 @@ public class BackUrlAction extends EVActionBean {
             break;
 
         }
+    }
+
+    /**
+     * Retrieve "back" URL from session by feature
+     *
+     * @param request
+     * @param feature
+     * @return
+     */
+    public static String getStoredURLByFeature(HttpServletRequest request, BackURLByFeature feature) {
+        return getStoredURLByFeature(request, feature, false);
+    }
+
+    /**
+     * Retrieve "back" URL from session by feature
+     *
+     * @param request
+     * @param feature
+     * @return
+     */
+    public static String getStoredURLByFeature(HttpServletRequest request, BackURLByFeature feature, boolean remove) {
+        // Get the session but do NOT create one if it doesn't exist (shouldn't happen)
+        HttpSession session = request.getSession(false);
+        if (session == null) {
+            log4j.warn("No session object!");
+            return EVPathUrl.EV_HOME.value();
+        }
+
+        // See if the feature parm is available on request
+        if (feature == null || GenericValidator.isBlankOrNull(feature.name())) {
+            log4j.warn("No feature value set!");
+            return EVPathUrl.EV_HOME.value();
+        }
+
+        // Attempt to retrieve back URL from session
+        String backurl = (String) session.getAttribute(feature.name() + SESSION_FEATURE_EXTENSION);
+        if (GenericValidator.isBlankOrNull(backurl)) {
+            log4j.warn("No backurl value found in session!");
+            return EVPathUrl.EV_HOME.value();
+        }
+
+        if (remove) {
+            session.removeAttribute(feature.name() + SESSION_FEATURE_EXTENSION);
+        }
+        return backurl;
+    }
+
+    /**
+     * Remove "back" URL from session by feature
+     *
+     * @param request
+     * @param feature
+     */
+    public static void removeStoredURLByFeature(HttpServletRequest request, BackURLByFeature feature) {
+        // Get the session but do NOT create one if it doesn't exist (shouldn't happen)
+        HttpSession session = request.getSession(false);
+        if (session == null) {
+            log4j.warn("No session object!");
+            return;
+        }
+
+        // See if the feature parm is available on request
+        if (feature == null || GenericValidator.isBlankOrNull(feature.name())) {
+            log4j.warn("No feature value set!");
+            return;
+        }
+
+        session.removeAttribute(feature.name() + SESSION_FEATURE_EXTENSION);
     }
 
     /**

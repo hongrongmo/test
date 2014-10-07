@@ -45,7 +45,7 @@
 			<span><a class="email" id="emaillink" title="Email this record" href="">Email</a>|</span>
 			<span><a class="print" id="printlink" title="Print this record" href="">Print</a>|</span>
 			<span><a class="download" id="downloadlink" title="Download this record" href="">Download</a>|</span>
-			<span><a class="save" title="Save this record to a folder" href="/login/customer.url?CID=personalLoginForm&EISESSION=${actionBean.sessionid}&searchid=${actionBean.searchid}count=1&searchtype=${actionBean.searchtype}&displaylogin=true&database=${actionBean.searchtype}&nexturl=CID%3DviewSavedFolders%26database%3D${actionBean.database}%26count%3D1%26searchid%3D${actionBean.searchid}%26source%3Dselectedset&backurl=SAVETOFOLDER">Save to Folder</a></span>
+			<span><a class="save" title="Save this record to a folder" href="/login/customer.url?CID=personalLoginForm&EISESSION=${actionBean.sessionid}&searchid=${actionBean.searchid}count=1&searchtype=${actionBean.searchtype}&displaylogin=true&database=${actionBean.searchtype}&backurl=SAVETOFOLDER">Save to Folder</a></span>
 			<div class="clear"></div>
 		</div>
 		<div style="color: #9b9b9b; background-color: #9b9b9b; height: 1px; margin: 0 10px 20px 10px;"></div>
