@@ -4,7 +4,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
-	<title>Engineering Village - System Error</title>
+	<title>Engineering Village - Session Expired</title>
 	<link type="image/x-icon" href="/static/images/engineering_village_favicon.gif" rel="SHORTCUT ICON"></link>
 	<link href="/static/css/ev_txt.css?v=${releaseversion}" media="all" type="text/css" rel="stylesheet"></link>
 	<link href="/static/css/ev_common_sciverse.css?v=${releaseversion}" media="all" type="text/css" rel="stylesheet"></link>
@@ -18,7 +18,7 @@
 	<br/>
 	
 	
-	<h3>Your session is expired due to the inactivity. </h3><span>Please click <a href="/home.url" title="Your session is expired due to the inactivity.Please click here to start it again">here</a> to start it again.</span>
+	<h3>Your session has expired due to inactivity. </h3><span><a href="/home.url" title="Begin new session">Begin new session.</a></span>
 	
     <br/>
     <br/>
