@@ -154,6 +154,7 @@ padding-left: 5px;" class="helpurl" alt="Learn more about search history" title=
 									<c:set var="editurl"><c:choose><c:when test="${searchhistory.searchtype eq 'Thesaurus'}">/search/thesHome.url</c:when><c:when test="${searchhistory.searchtype eq 'Book'}">/search/ebook.url</c:when><c:when test="${searchhistory.searchtype eq 'Quick'}">/search/quick.url</c:when><c:otherwise>/search/expert.url</c:otherwise></c:choose></c:set>
                                     <a title="Edit query" aria-labelledby="id of the container of the query string" href="${editurl}?searchid=${searchhistory.queryid}&database=${searchhistory.databasemask}<c:if test="${searchhistory.searchtype eq 'Thesaurus'}">#init</c:if>">Edit</a>
                                     </li>
+                                    <%-- [TMH] changed backurl to constant --%>
 			                        <li class="${searchhistory.savedsearch ? 'savedsearch' : 'savesearch'}">
 			                            <a href="/personal/savedsearch/adddelete.url?history=true&option=SavedSearch&searchid=${searchhistory.queryid}&database=${searchhistory.databasemask}&backurl=SEARCHHISTORY&selectvalue=${searchhistory.savedsearch ? 'unmark' : 'mark'}"
 			                                class="savesearch" id="savesearch${searchhistory.serialnumber}" num="${searchhistory.serialnumber}"
