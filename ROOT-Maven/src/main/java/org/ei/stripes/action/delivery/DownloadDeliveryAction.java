@@ -31,7 +31,6 @@ import net.sourceforge.stripes.action.StreamingResolution;
 import net.sourceforge.stripes.action.UrlBinding;
 import net.sourceforge.stripes.controller.LifecycleStage;
 
-import org.apache.commons.httpclient.HttpStatus;
 import org.apache.commons.validator.GenericValidator;
 import org.apache.fop.apps.Fop;
 import org.apache.fop.apps.FopFactory;
@@ -107,21 +106,8 @@ public class DownloadDeliveryAction extends AbstractDeliveryAction {
         setSaveToDropboxEnabled(isSaveToDropboxEnabled);
         return new ForwardResolution("/WEB-INF/pages/customer/delivery/oneclickdl.jsp");
     }
-   	
-   	@DontValidate
-    @HandlesEvent("checkSessionValid")
-    public Resolution checkSessionValid() throws InfrastructureException {
-   	 if (basket == null || basket.countPages() == 0) {
-   		getContext().getResponse().setStatus(HttpStatus.SC_NO_CONTENT);
-    	return new StreamingResolution("text", ""); 
-        
-     }else{
-    	getContext().getResponse().setStatus(HttpStatus.SC_OK);
-    	return new StreamingResolution("text", "true");  
-     }
-    }
 
-	@DontValidate
+   	@DontValidate
     @HandlesEvent("dropbox")
     public Resolution dropbox() throws InfrastructureException {
 
