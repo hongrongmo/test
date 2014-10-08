@@ -91,8 +91,8 @@
 	</c:if>
 	$("#survey_yes").click(function(){
 		//set the onunload to watch for the user to leave EV and start the survey
-		GALIBRARY.createWebEventWithLabel('_trackEvent', 'Exit Survey Yes', document.location.pathname, '');
-		window.open("", "_blank","width=400,height=400");
+		GALIBRARY.createWebEventWithLabel('Exit Survey', 'Yes', document.location.pathname);
+		window.open(surveyLink, "_blank","");
 		surveyNo = false;
 		TINY.box.hide();
 
@@ -100,8 +100,9 @@
 
 	function closeSurveyPopup(){
 		if(surveyNo){
-			$.cookie("ev_exitsurvey", '{"dontShow":'+true+'}',{expires: 365, path:'/'});
+			GALIBRARY.createWebEventWithLabel('Exit Survey', 'No' ,document.location.pathname);
 		}
+		$.cookie("ev_exitsurvey", '{"dontShow":'+true+'}',{expires: 365, path:'/'});
 		return false;
 	}
 </script>
