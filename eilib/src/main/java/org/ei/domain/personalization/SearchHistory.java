@@ -88,24 +88,6 @@ public class SearchHistory {
         }
 	}
 
-	public String getEmailnexturl() throws UnsupportedEncodingException {
-		StringBuffer nexturl = new StringBuffer("CID=addDeleteSavedSearch");
-		nexturl.append("&selectvalue=mark");
-		nexturl.append("&option=EmailAlert");
-		nexturl.append("&searchid="+queryid);
-		nexturl.append("&database=" + databasemask);
-		return URLEncoder.encode(nexturl.toString(),"UTF-8");
-	}
-
-	public String getSavesearchnexturl() throws UnsupportedEncodingException {
-		StringBuffer nexturl = new StringBuffer("CID=addDeleteSavedSearch");
-		nexturl.append("&selectvalue=mark");
-		nexturl.append("&option=SavedSearch");
-		nexturl.append("&searchid="+queryid);
-		nexturl.append("&database=" + databasemask);
-		return URLEncoder.encode(nexturl.toString(),"UTF-8");
-	}
-
 	public String getDatabasedisplay() {
 		return DatabaseDisplayHelper.getDisplayName(databasemask);
 	}

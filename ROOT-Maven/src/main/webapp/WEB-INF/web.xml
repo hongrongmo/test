@@ -436,7 +436,7 @@
 	<!-- SESSION-TIMEOUT value should be synched with EISessionCookie.EXPIRES_IN value -->
 	<!-- ******************************* -->
 	<session-config>
-		<session-timeout>5</session-timeout>
+		<session-timeout>30</session-timeout>
 		<tracking-mode>COOKIE</tracking-mode>
 	</session-config>
 
