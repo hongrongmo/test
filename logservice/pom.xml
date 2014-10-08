@@ -79,7 +79,15 @@
 					<argLine>-javaagent:/export/home/u1engpub/.m2/repository/com/googlecode/jmockit/jmockit/1.5/jmockit-1.5.jar</argLine>
 				</configuration>
 			</plugin>
-
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 

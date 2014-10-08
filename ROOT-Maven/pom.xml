@@ -337,6 +337,7 @@
 		<finalName>ROOT</finalName>
 
 		<pluginManagement>
+
 			<plugins>
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
@@ -366,40 +367,6 @@
 		</pluginManagement>
 
 		<plugins>
-<!--
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.1</version>
-				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
-					<excludes>
-						<exclude>org/ei/data/books/tools/**</exclude>
-						<exclude>org/ei/data/books/tocs/**</exclude>
-					</excludes>
-				</configuration>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<version>2.4</version>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-						<configuration>
-							<forceCreation>true</forceCreation>
-							<finalName>eilib</finalName>
-							<classifier>client</classifier>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
- -->
 			<plugin>
 				<artifactId>maven-antrun-plugin</artifactId>
 				<version>1.7</version>
@@ -422,25 +389,35 @@
 			</plugin>
 
             <plugin>
-                <artifactId>maven-antrun-plugin</artifactId>
-                <version>1.7</version>
-                <executions>
-                    <execution>
-                        <id>ROOT-generate-sources</id>
-                        <phase>generate-sources</phase>
-                        <configuration>
-                            <tasks>
-                                <ant antfile="${basedir}/build.xml">
-                                    <target name="contentconfig" />
-                                </ant>
-                            </tasks>
-                        </configuration>
-                        <goals>
-                            <goal>run</goal>
-                        </goals>
-                    </execution>
-                </executions>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
             </plugin>
+
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<id>ROOT-generate-sources</id>
+						<phase>generate-sources</phase>
+						<configuration>
+							<tasks>
+								<ant antfile="${basedir}/build.xml">
+									<target name="contentconfig" />
+								</ant>
+							</tasks>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
