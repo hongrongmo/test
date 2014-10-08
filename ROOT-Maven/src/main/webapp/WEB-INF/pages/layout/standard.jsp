@@ -124,8 +124,9 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
 
 </stripes:layout-component>
 <stripes:layout-component name="exitSurvey">
-	<c:if test="${actionBean.context.userSession.user.userPreferences.exitSurvey}"></c:if>
+<c:if test="${actionBean.context.userSession.user.userPreferences.exitSurvey}">
 	<%@ include file="/WEB-INF/pages/include/exitSurvey.jsp" %>
+</c:if>
 </stripes:layout-component>
 <stripes:layout-component name="carsoverride">
 	<jwr:style src="/bundles/carsoverride.css"></jwr:style>
