@@ -45,10 +45,10 @@
 					<c:set var="namevalue"><c:choose><c:when test="${actionBean.savedsearchflag eq 'On'}">Remove Search</c:when><c:otherwise>Save Search</c:otherwise></c:choose></c:set>
 					<c:choose>
 					    <c:when test="${actionBean.savedsearchflag eq 'On'}">
-					    	<a id="savesearchlink" class="webeventlink"  category="Query Toolbar" action="Remove Search" style="margin:0;" href="/personal/savedsearch/adddelete.url?selectvalue=unmark&option=SavedSearch&searchid=${actionBean.searchid}&database=${actionBean.database}&backurl=${f:encode(backurl)}" title="${title}"><img class="savedsearch" src="/static/images/remove.jpg" title=""/> ${namevalue}</a>
+					    	<a id="savesearchlink" class="webeventlink"  category="Query Toolbar" action="Remove Search" style="margin:0;" href="/personal/savedsearch/adddelete.url?selectvalue=unmark&option=SavedSearch&searchid=${actionBean.searchid}&database=${actionBean.database}&backurl=SAVEDSEARCH" title="${title}"><img class="savedsearch" src="/static/images/remove.jpg" title=""/> ${namevalue}</a>
 					    </c:when>
 						<c:otherwise>
-                            <a id="removeearchlink" class="webeventlink"  category="Query Toolbar" action="Save Search" href="/personal/savedsearch/adddelete.url?selectvalue=mark&option=SavedSearch&searchid=${actionBean.searchid}&database=${actionBean.database}&backurl=${f:encode(backurl)}" title="${title}">${namevalue}</a>
+                            <a id="removeearchlink" class="webeventlink"  category="Query Toolbar" action="Save Search" href="/personal/savedsearch/adddelete.url?selectvalue=mark&option=SavedSearch&searchid=${actionBean.searchid}&database=${actionBean.database}&backurl=SAVEDSEARCH" title="${title}">${namevalue}</a>
 						</c:otherwise>
 					</c:choose>
 				</li>
@@ -60,10 +60,10 @@
 					<c:set var="namevalue"><c:choose><c:when test="${actionBean.createalertflag eq 'On'}">Remove Alert</c:when><c:otherwise>Create Alert</c:otherwise></c:choose></c:set>
 					<c:choose>
 					<c:when test="${actionBean.createalertflag eq 'On'}">
-				    	<a id="createalertlink" class="webeventlink"  category="Query Toolbar" action="Remove Alert" style="margin:0;" href="/personal/savedsearch/adddelete.url?selectvalue=unmark&option=EmailAlert&searchid=${actionBean.searchid}&database=${actionBean.database}&backurl=${f:encode(backurl)}" title="${title}"><img class="createdalert" src="/static/images/remove.jpg " title=""/>${namevalue}</a>
+				    	<a id="createalertlink" class="webeventlink"  category="Query Toolbar" action="Remove Alert" style="margin:0;" href="/personal/savedsearch/adddelete.url?selectvalue=unmark&option=EmailAlert&searchid=${actionBean.searchid}&database=${actionBean.database}&backurl=SAVEDSEARCH" title="${title}"><img class="createdalert" src="/static/images/remove.jpg " title=""/>${namevalue}</a>
 				    </c:when>
 					<c:otherwise>
-                        <a id="removealertlink" class="webeventlink"  category="Query Toolbar" action="Create Alert" href="/personal/savedsearch/adddelete.url?selectvalue=mark&option=EmailAlert&searchid=${actionBean.searchid}&database=${actionBean.database}&backurl=${f:encode(backurl)}" title="${title}">${namevalue}</a>
+                        <a id="removealertlink" class="webeventlink"  category="Query Toolbar" action="Create Alert" href="/personal/savedsearch/adddelete.url?selectvalue=mark&option=EmailAlert&searchid=${actionBean.searchid}&database=${actionBean.database}&backurl=SAVEDSEARCH" title="${title}">${namevalue}</a>
 					</c:otherwise>
 				</c:choose>
 				</li>

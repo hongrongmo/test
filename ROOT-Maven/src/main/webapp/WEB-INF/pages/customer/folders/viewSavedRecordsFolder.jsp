@@ -30,30 +30,9 @@
 	<c:when test="${empty actionBean.results}"><div class="hr" style="color: #D7D7D7; background-color: #D7D7D7; height: 2px; margin: 7px 7px 15px 7px ;width:97.5% "><hr/></div></c:when>
 	<c:otherwise><div class="hr" style="color: #D7D7D7; background-color: #D7D7D7; height: 2px; margin: 7px 7px 7px 7px ;width:97.5% "><hr/></div></c:otherwise>
 	</c:choose>
-	<c:set var="backeventurl" scope="request">
-		<c:choose>
-			<c:when test="${fn:contains(actionBean.backurl,'citationSelectedSet')}">/selected/citation.url?</c:when>
-			<c:when test="${fn:contains(actionBean.backurl,'viewPersonalFolders')}">/personal/folders.url?</c:when>
-			<c:when test="${fn:contains(actionBean.backurl,'quickSearchAbstractFormat')}">/search/doc/abstract.url?pageType=quickSearch&searchtype=Quick&</c:when>
-			<c:when test="${fn:contains(actionBean.backurl,'quickSearchDetailedFormat')}">/search/doc/detailed.url?pageType=quickSearch&searchtype=Quick&</c:when>
-			<c:when test="${fn:contains(actionBean.backurl,'expertSearchAbstractFormat')}">/search/doc/abstract.url?pageType=expertSearch&searchtype=Expert&</c:when>
-			<c:when test="${fn:contains(actionBean.backurl,'expertSearchDetailedFormat')}">/search/doc/detailed.url?pageType=expertSearch&searchtype=Expert&</c:when>
-			<c:when test="${fn:contains(actionBean.backurl,'pageDetailedFormat')}">/search/book/detailed.url?pageType=page&</c:when>
-			<c:when test="${fn:contains(actionBean.backurl,'tagSearchAbstractFormat')}">/search/doc/abstract.url?pageType=tagSearch&searchtype=TagSearch&</c:when>
-			<c:when test="${fn:contains(actionBean.backurl,'tagSearchDetailedFormat')}">/search/doc/detailed.url?pageType=tagSearch&searchtype=TagSearch&</c:when>
-			<c:otherwise>/search/results/quick.url?</c:otherwise>
-		</c:choose>
-	</c:set>
 
 	<div class="searchlinks" style="margin-top:0px;">
-    <c:choose>
-    <c:when test="${actionBean.docindex eq '0'}">
-		<a href="${backeventurl}${f:decode(actionBean.backurl)}&searchresults=${f:encode(actionBean.searchresults)}&newsearch=${actionBean.newsearch}" title="Return to previous page">Return to previous page</a>
-	</c:when>
-	<c:otherwise>
-		<a href="${backeventurl}${f:decode(actionBean.backurl)}&DOCINDEX=${actionBean.docindex}&format=${actionBean.format}" title="Return to previous page">Return to previous page</a>
-	</c:otherwise>
-	</c:choose>
+	           <a  href="/back/service.url?feature=SAVETOFOLDER">Return to previous page</a>
 	</div>
 
 	<div class="clear"></div>
@@ -82,7 +61,6 @@
 <INPUT TYPE="HIDDEN" NAME="BASKETCOUNT" VALUE="${actionBean.pagenav.currentpage}">
 <INPUT TYPE="HIDDEN" NAME="backIndex" VALUE="${actionBean.backindex}">
 <INPUT TYPE="HIDDEN" NAME="folderid" VALUE="${actionBean.folderid}">
-<INPUT TYPE="HIDDEN" NAME="backurl" VALUE="${actionBean.backurl}">
 <INPUT TYPE="HIDDEN" NAME="searchresults" VALUE="${actionBean.searchresults}">
 <INPUT TYPE="HIDDEN" NAME="newsearch" VALUE="${actionBean.newsearch}">
 <input type="hidden" name="DOCINDEX" value="${actionBean.docindex}">

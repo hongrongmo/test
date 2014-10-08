@@ -52,7 +52,7 @@
                     				</td>
                     				<td valign="top" width="10%" ><img src="/static/images/spacer.gif"/></td>
                     				<td valign="top" >
-                    					<a class="viewfolder" title="View folder"  href="/selected/citationfolder.url?CID=viewCitationSavedRecords&folderid=${folder.folderID}&backurl=${f:encode('CID=viewPersonalFolders')}">View Folder</a>
+                    					<a class="viewfolder" title="View folder"  href="/selected/citationfolder.url?CID=viewCitationSavedRecords&folderid=${folder.folderID}">View Folder</a>
                     				</td>
                     				<td valign="top" width="5%" ><img src="/static/images/spacer.gif"/></td>
                     				<td valign="top" >

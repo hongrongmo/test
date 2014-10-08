@@ -17,23 +17,23 @@
             <a id="historytoggle" class="historyminus" title="Hide search history">Hide</a>
         </div>
         <span>
-            <h2 style="float: left">Search history</h2> 
+            <h2 style="float: left">Search history</h2>
             <a href="${actionBean.helpUrl}#Search_History.htm" style="padding-top: 10px;
 padding-left: 5px;" class="helpurl" alt="Learn more about search history" title="Learn more about search history"><img src="/static/images/i.png" border="0" class="infoimg" align="bottom" alt=""/></a>
         </span>
     </div>
     <div class="clear"></div>
-    <div id="historyshow">    
+    <div id="historyshow">
         <c:choose>
             <c:when test="${empty actionBean.searchHistoryList}">
                 <div class="toolbar" style="height: 5px"></div>
-                
+
             </c:when>
             <c:otherwise>
                 <div class="toolbar" style="padding: 5px; line-height: 20px">
           <form id="combineSearchForm" action="/search/results/combine.url?CID=combineSearchHistory" method="post" name="combineSearch">
                    <input type="hidden" id="defaultdb" name="defaultdb" value="${actionBean.database}"/>
-                    <span style="float: right; margin-right: 7px"> 
+                    <span style="float: right; margin-right: 7px">
                         <h2 style="float: none; display: inline" class="searchcomponentlabel">SORT BY </h2>
                         <input type="radio" value="relevance" id="relChkbx" name="sort" checked="checked" title="Sort your search by Relevance">
                         <label class="SmBlackText" for="relChkbx">Relevance</label>
@@ -43,12 +43,12 @@ padding-left: 5px;" class="helpurl" alt="Learn more about search history" title=
                         </c:if>
                         <c:if test="${searchtab == 'expertsearch'}">
 							 <input type="hidden" id="searchTypeName" name="searchTypeName" value="expertSearch">
-                        </c:if> 
+                        </c:if>
                         <c:if test="${searchtab == 'thessearch'}">
 							 <input type="hidden" id="searchTypeName" name="searchTypeName" value="thesHome">
-                        </c:if>  
+                        </c:if>
                         <label class="SmBlackText" for="pubChkbx">Publication year</label>
-                    </span> 
+                    </span>
                     Combine Searches: <input type="text" size="28" name="txtcombine" title="Combine Search Textbox">
                     <input type="submit" value="Search" title="Submit Combined Search" />
           </form>
@@ -59,7 +59,7 @@ padding-left: 5px;" class="helpurl" alt="Learn more about search history" title=
     <input type="hidden" id="alertCount" name="alertCount" value="20">
     <input type="hidden" id="savedCount" name="savedCount" value="20">
     <input type="hidden" id="savedSeachesAndAlertsLimit" name="savedSeachesAndAlertsLimit" value="${actionBean.savedSeachesAndAlertsLimit}">
-    
+
         <table id="historytable" cellpadding="0" cellspacing="0" style="white-space: normal">
             <thead>
                 <tr>
@@ -101,11 +101,11 @@ padding-left: 5px;" class="helpurl" alt="Learn more about search history" title=
 									</div>
 									<span class="clear"></span>
                                 </td>
-                                
+
                                 <!-- Search -->
                                 <td style="padding-top: 5px">
-                                    
-                                    <div style="line-height: 20px; font-weight: bold;" title="${fn:replace(searchhistory.displayquery,'"','&quot;')}">                                    
+
+                                    <div style="line-height: 20px; font-weight: bold;" title="${fn:replace(searchhistory.displayquery,'"','&quot;')}">
                                     <c:choose>
                                       <c:when test="${fn:length(searchhistory.displayquery) le  120}">
                                         ${searchhistory.displayquery}
@@ -114,7 +114,7 @@ padding-left: 5px;" class="helpurl" alt="Learn more about search history" title=
                                       </c:otherwise>
                                     </c:choose>
                                     </div>
-                                    
+
                                     <ul class="querytools horizlist">
                                     <li class="details">
 		                                <a href="#" class="historydetailslink" title="Query details">Query details</a>
@@ -132,7 +132,7 @@ padding-left: 5px;" class="helpurl" alt="Learn more about search history" title=
 	                                       <div class="dedupbox">
 	                                            <c:forEach var="dedupSearch" items="${searchhistory.dedupCriterias}" varStatus="dupStatus">
 	                                            <div class="dedupitem">
-	                                            <div class="dedupdb">${dedupSearch.dbPrefDisplayName}&nbsp;:</div>    
+	                                            <div class="dedupdb">${dedupSearch.dbPrefDisplayName}&nbsp;:</div>
 	                                                <c:choose>
 	                                                    <c:when test="${dedupSearch.fieldPrefDisplayName eq 'No Field'}">
 	                                                      <c:set var="fieldPrefDisplayName" value="No Preference"/>
@@ -154,24 +154,25 @@ padding-left: 5px;" class="helpurl" alt="Learn more about search history" title=
 									<c:set var="editurl"><c:choose><c:when test="${searchhistory.searchtype eq 'Thesaurus'}">/search/thesHome.url</c:when><c:when test="${searchhistory.searchtype eq 'Book'}">/search/ebook.url</c:when><c:when test="${searchhistory.searchtype eq 'Quick'}">/search/quick.url</c:when><c:otherwise>/search/expert.url</c:otherwise></c:choose></c:set>
                                     <a title="Edit query" aria-labelledby="id of the container of the query string" href="${editurl}?searchid=${searchhistory.queryid}&database=${searchhistory.databasemask}<c:if test="${searchhistory.searchtype eq 'Thesaurus'}">#init</c:if>">Edit</a>
                                     </li>
+                                    <%-- [TMH] changed backurl to constant --%>
 			                        <li class="${searchhistory.savedsearch ? 'savedsearch' : 'savesearch'}">
-			                            <a href="/personal/savedsearch/adddelete.url?history=true&option=SavedSearch&searchid=${searchhistory.queryid}&database=${searchhistory.databasemask}&backurl=${actionBean.historybackurl}&selectvalue=${searchhistory.savedsearch ? 'unmark' : 'mark'}"
+			                            <a href="/personal/savedsearch/adddelete.url?history=true&option=SavedSearch&searchid=${searchhistory.queryid}&database=${searchhistory.databasemask}&backurl=SEARCHHISTORY&selectvalue=${searchhistory.savedsearch ? 'unmark' : 'mark'}"
 			                                class="savesearch" id="savesearch${searchhistory.serialnumber}" num="${searchhistory.serialnumber}"
-			                                loggedin="${actionBean.context.userLoggedIn}" selectvalue="${searchhistory.savedsearch ? 'unmark' : 'mark'}" 
+			                                loggedin="${actionBean.context.userLoggedIn}" selectvalue="${searchhistory.savedsearch ? 'unmark' : 'mark'}"
 			                                title="${searchhistory.savedsearch ? "Remove your saved search query" : "Save this search query"}">${searchhistory.savedsearch ? "Remove Search" : "Save Search"}</a>
 			                        </li>
 			                        <li class="${searchhistory.emailalert ? 'createdalert' : 'createalert'}">
-			                            <a href="/personal/savedsearch/adddelete.url?history=true&selectvalue=${searchhistory.emailalert ? 'unmark' : 'mark'}&option=EmailAlert&searchid=${searchhistory.queryid}&database=${searchhistory.databasemask}&backurl=${actionBean.historybackurl}"
+			                            <a href="/personal/savedsearch/adddelete.url?history=true&selectvalue=${searchhistory.emailalert ? 'unmark' : 'mark'}&option=EmailAlert&searchid=${searchhistory.queryid}&database=${searchhistory.databasemask}&backurl=SEARCHHISTORY"
 			                                class="emailalert" id="emailalert${searchhistory.serialnumber}" num="${searchhistory.serialnumber}"
-			                                loggedin="${actionBean.context.userLoggedIn}" selectvalue="${searchhistory.emailalert ? 'unmark' : 'mark'}" 
+			                                loggedin="${actionBean.context.userLoggedIn}" selectvalue="${searchhistory.emailalert ? 'unmark' : 'mark'}"
 			                                title="${searchhistory.emailalert ? "Remove alert for this search query" : "Add Email alert for this search query"}">${searchhistory.emailalert ? "Remove Alert" : "Create Alert"}</a>
 			                        </li>
                                     </ul>
-                                    
+
                                     <span class="clear"></span>
-                                    
+
                                 </td>
-                                
+
                                 <c:set var="hisrerunactionurl">
 									<c:choose>
 										<c:when test="${searchhistory.searchtype eq 'Thesaurus'}">/search/results/thes.url</c:when>
@@ -188,7 +189,7 @@ padding-left: 5px;" class="helpurl" alt="Learn more about search history" title=
                                 <td style="text-align:center">
                                 <c:choose><c:when test="${searchhistory.resultscount eq -1}">0</c:when><c:otherwise><a title="${searchhistory.displayquery}" href="${hisrerunactionurl}?CID=${searchhistory.searchCID}&SEARCHID=${searchhistory.queryid}&navigator=PREV&COUNT=1&database=${searchhistory.databasemask}"><fmt:formatNumber value="${searchhistory.resultscount}"/></a></c:otherwise></c:choose><br/>
                                 </td>
-                                
+
                                 <!-- Database(s) -->
                                 <td>
                                 <span title="${searchhistory.databasedisplay}">
@@ -201,15 +202,15 @@ padding-left: 5px;" class="helpurl" alt="Learn more about search history" title=
                                     </c:choose>
                                 </span>
                                 </td>
-                                
+
 			                    <td style="border-right: none;text-align:center;">
-			                    <a href="/search/history/clear.url?searchid=${searchhistory.queryid}&nexturl=${actionBean.historybackurl}" class="historydelete" title="Delete" aria-labelledby="id of the container of the query string"><img src="/static/images/Delete.png" alt="delete"/></a></li>
+			                    <a href="/search/history/clear.url?searchid=${searchhistory.queryid}&backurl=SEARCHHISTORY" class="historydelete" title="Delete" aria-labelledby="id of the container of the query string"><img src="/static/images/Delete.png" alt="delete"/></a></li>
 			                    </td>
                 </tr>
                 </c:forEach>
                 <tr>
                     <td colspan="2" style="border-right: none; line-height: 20px">
-                        <input type="button" name="clearsearchistory" id="clearsearchhistory" value="Delete Search History" title="Delete Search History" sessionid="${actionBean.sessionid}" nexturl="${actionBean.historybackurl}"/>
+                        <input type="button" name="clearsearchistory" id="clearsearchhistory" value="Delete Search History" title="Delete Search History" sessionid="${actionBean.sessionid}"/>
                   </td>
                   <td colspan="3" style="white-space:nowrap; text-align:right; border-right: none; line-height: 20px">
                         <a href="/personal/savesearch/display.url?database=${actionBean.database}" title="View Saved Searches">View Saved Searches</a>

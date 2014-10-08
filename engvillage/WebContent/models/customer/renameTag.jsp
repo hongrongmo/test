@@ -37,7 +37,7 @@
          *	No personal account so redirect to the login screen.
          */
         client
-            .setRedirectURL("/controller/servlet/Controller?CID=personalLoginForm&displaylogin=true&database=27&nexturl=CID%3DrenameTag&backurl=CID%3DrenameTag");
+            .setRedirectURL("/controller/servlet/Controller?CID=personalLoginForm&displaylogin=true&database=27");
         client.setRemoteControl();
         return;
     }

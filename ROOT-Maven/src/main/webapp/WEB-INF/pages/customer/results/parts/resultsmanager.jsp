@@ -42,7 +42,7 @@
 		<c:when test="${param.displaytype eq 'viewfolders'}">
 			<div id="pageselect" class="col" style="width: 70px;">
 				<a id="removealllink"
-					href="/selected/deleteallfolder.url?CID=deleteAllFromFolder&format=citation&folderid=${actionBean.folderid}&database=${actionBean.database}&backurl=${actionBean.backurl}"
+					href="/selected/deleteallfolder.url?CID=deleteAllFromFolder&format=citation&folderid=${actionBean.folderid}&database=${actionBean.database}"
 					title="Remove all selections"> <jwr:img border="0"
 					src="/static/images/Remove_All.png" alt="Remove all selections"/>
 				</a>
@@ -77,21 +77,21 @@
   					<c:if test="${empty actionBean.selectoption || 'citation' eq actionBean.selectoption}"> checked='checked'</c:if>
 			   title="Use citation format when emailing, printing, downloading, saving, or viewing"
 			   value="citation" checked="checked" type="radio"
-			   onclick="javascript:document.location='/selected/citationfolder.url?CID=viewCitationSavedRecords&EISESSION=${actionBean.sessionid}&database=${actionBean.database}&folderid=${actionBean.folderid}&backurl=${actionBean.backurl}'">
+			   onclick="javascript:document.location='/selected/citationfolder.url?CID=viewCitationSavedRecords&EISESSION=${actionBean.sessionid}&database=${actionBean.database}&folderid=${actionBean.folderid}'">
 			<label for="toprdCit">Citation</label>&nbsp;
 			<input id="toprdAbs"
 			   name="selectoption"
 			   <c:if test="${'abstract' eq actionBean.selectoption}"> checked='checked'</c:if>
 			   title="Use abstract format when emailing, printing, downloading, saving, or viewing"
 			   value="abstract" type="radio" type="radio"
-			   onclick="javascript:document.location='/selected/abstractfolder.url?CID=viewAbstractSavedRecords&EISESSION=${actionBean.sessionid}&database=${actionBean.database}&folderid=${actionBean.folderid}&backurl=${actionBean.backurl}'">
+			   onclick="javascript:document.location='/selected/abstractfolder.url?CID=viewAbstractSavedRecords&EISESSION=${actionBean.sessionid}&database=${actionBean.database}&folderid=${actionBean.folderid}'">
 			<label for="toprdAbs">Abstract</label>&nbsp;
 			<input id="toprdDet"
 			   name="selectoption"
 			   <c:if test="${'detailed' eq actionBean.selectoption}"> checked='checked'</c:if>
 			   title="Use detailed format when emailing, printing, downloading, saving, or viewing"
 			   value="detailed" type="radio" type="radio"
-			   onclick="javascript:document.location='/selected/detailedfolder.url?CID=viewDetailedSavedRecords&EISESSION=${actionBean.sessionid}&database=${actionBean.database}&folderid=${actionBean.folderid}&backurl=${actionBean.backurl}'">
+			   onclick="javascript:document.location='/selected/detailedfolder.url?CID=viewDetailedSavedRecords&EISESSION=${actionBean.sessionid}&database=${actionBean.database}&folderid=${actionBean.folderid}'">
 			<label for="toprdDet">Detailed record</label>
 		</ul>
 	</c:when>
@@ -175,15 +175,13 @@
             <c:if test="${param.displaytype ne 'viewfolders'}">
                 <li class="save"><a
                     title="Save selections to a folder in Settings" aria-labelledby="viewlink"
-                    href="/personal/folders/save/view.url?CID=viewSavedFolders&EISESSION=${actionBean.sessionid}&database=${actionBean.database}&count=${actionBean.pagenav.currentindex}&searchid=${actionBean.searchid}&source=selectedset&backurl=CID%3D<c:choose><c:when test="${param.displaytype eq 'selectedrecords'}">${actionBean.CID}</c:when><c:otherwise>${actionBean.reruncid}</c:otherwise></c:choose>%26SEARCHID%3D${actionBean.searchid}%26COUNT%3D${actionBean.pagenav.currentindex}%26database%3D${actionBean.database}&searchresults=${f:encode(searchresultslink)}&newsearch=${f:encode(newsearchlink)}">Save
-                        to Folder</a>
-                <c:if
-                        test="${param.displaytype ne '' && param.displaytype ne 'selectedrecords' && param.displaytype ne 'quickresults' || actionBean.removeduplicates}"> | </c:if></li>
-                <c:if
-                    test="${param.displaytype ne 'selectedrecords' and param.displaytype ne 'quickresults'} ">
+                    href="/personal/folders/save/view.url?CID=viewSavedFolders&EISESSION=${actionBean.sessionid}&database=${actionBean.database}&count=${actionBean.pagenav.currentindex}&searchid=${actionBean.searchid}&source=selectedset&backurl=SAVETOFOLDER&searchresults=${f:encode(searchresultslink)}&newsearch=${f:encode(newsearchlink)}">Save to Folder</a>
+                <c:if test="${param.displaytype ne '' && param.displaytype ne 'selectedrecords' && param.displaytype ne 'quickresults' || actionBean.removeduplicates}"> | </c:if>
+                </li>
+                <c:if test="${param.displaytype ne 'selectedrecords' and param.displaytype ne 'quickresults'} ">
                     <li class="view"><a id="viewlink" title="View selections" aria-labelledby="viewlink"
-                        href="/selected/citation.url?CID=citationSelectedSet&EISESSION=${actionBean.sessionid}&DATABASEID=${actionBean.database}&SEARCHTYPE=${actionBean.searchtype}&SEARCHID=${actionBean.searchid}&backIndex=${actionBean.pagenav.currentindex}&newsearch=${f:encode(newsearchlink)}&searchresults=${f:encode(searchresultslink)}">View
-                            Selections</a> <c:if test="${actionBean.removeduplicates}">  | </c:if></li>
+                        href="/selected/citation.url?CID=citationSelectedSet&EISESSION=${actionBean.sessionid}&DATABASEID=${actionBean.database}&SEARCHTYPE=${actionBean.searchtype}&SEARCHID=${actionBean.searchid}&backIndex=${actionBean.pagenav.currentindex}&newsearch=${f:encode(newsearchlink)}&searchresults=${f:encode(searchresultslink)}">View Selections</a> <c:if test="${actionBean.removeduplicates}">  | </c:if>
+                    </li>
                 </c:if>
             </c:if>
             <c:if test="${actionBean.removeduplicates}">
@@ -197,6 +195,7 @@
 	<div id="sortby" class="col">
 	<br/>
 	<c:if test="${param.displaytype ne 'selectedrecords' and param.displaytype ne 'viewfolders' and param.displaytype ne 'tagresults' and (not(actionBean.dedup))}">
+	<div id="sortbyinnerdiv">
 		Sort by:
 		 <select name="sort" id="sort" title="Sort results by">
 				<c:forEach var="sortoption" items="${actionBean.sortoptions}">
@@ -208,8 +207,9 @@
 		<noscript>
 			<input type="button" class="button" value="Go" title="Go to Selected Order"></input>
 		</noscript>
-
+</div>
 	</c:if>
+	
     </div>
 
 

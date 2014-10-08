@@ -48,7 +48,6 @@
     boolean isFullTextPresent=true;
     boolean isLocalHolidinsPresent=true;
     boolean isCitLocalHoldingsPresent=false;
-    String backurl=null;
     String searchresults=null;
     String newsearch=null;
     String docindex="0";
@@ -144,10 +143,6 @@
         database=request.getParameter("database").trim();
     }
 
-    if(request.getParameter("backurl") != null)
-    {
-    	backurl=request.getParameter("backurl").trim();
-    }
 
     if(request.getParameter("searchresults") != null)
     {
@@ -291,7 +286,6 @@
 //            .append("<CUSTOMIZED-STARTYEAR>"+customizedStartYear+"</CUSTOMIZED-STARTYEAR>")
 //            .append("<CUSTOMIZED-ENDYEAR>"+customizedEndYear+"</CUSTOMIZED-ENDYEAR>")
             .append(recentXMLQuery)
-            .append("<BACKURL>"+ URLEncoder.encode(backurl)+"</BACKURL>")
             .append("<NEWSEARCHURL>"+ URLEncoder.encode(newsearch)+"</NEWSEARCHURL>")
         	.append("<SEARCHRESULTSURL>"+ URLEncoder.encode(searchresults)+"</SEARCHRESULTSURL>")
         	.append("<DOCINDEX>"+ docindex+"</DOCINDEX>")
@@ -354,7 +348,6 @@
         .append("<LOCALHOLDINGS>"+isLocalHolidinsPresent+"</LOCALHOLDINGS>")
         .append("<LOCALHOLDINGS-CITATION>"+ isCitLocalHoldingsPresent+"</LOCALHOLDINGS-CITATION>")
         .append(recentXMLQuery)
-        .append("<BACKURL>"+ URLEncoder.encode(backurl)+"</BACKURL>")
         .append("<NEWSEARCHURL>"+ URLEncoder.encode(newsearch)+"</NEWSEARCHURL>")
         .append("<SEARCHRESULTSURL>"+ URLEncoder.encode(searchresults)+"</SEARCHRESULTSURL>")
         .append("<DOCINDEX>"+ docindex+"</DOCINDEX>")
