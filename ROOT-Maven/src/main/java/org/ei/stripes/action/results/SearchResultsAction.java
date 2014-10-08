@@ -30,6 +30,7 @@ import org.apache.log4j.Logger;
 import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
 import org.ei.config.JSPPathProperties;
+import org.ei.controller.logging.LogEntry;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.DocumentBasket;
 import org.ei.domain.Query;
@@ -182,16 +183,14 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 	 */
 	@Before
 	public void init() throws EVBaseException, NumberFormatException, IOException, ParseException {
-		// If 'pageSizeVal' is set use it as results-perpage
-		webEvent.setCategory(WebAnalyticsEventProperties.CAT_SEARCH_RESULT);
-		webEvent.setLabel(getFoundin());
-		if(searchWidget){
-			addWebEvent(new GoogleWebAnalyticsEvent(WebAnalyticsEventProperties.CAT_SEARCH_WIDGET, getFoundin(),swReferrer));
-		}
+
+		// Set the database value
 		if (StringUtils.isNotBlank(database) && (Integer.parseInt(database) & DatabaseConfig.PAG_MASK)== DatabaseConfig.PAG_MASK && (Integer.parseInt(database) != DatabaseConfig.PAG_MASK) && EVProperties.getApplicationProperties().isItTime(ApplicationProperties.REFEREX_MASK_DATE)) {
 				database = Integer.toString(Integer.parseInt(database)-DatabaseConfig.PAG_MASK);
 		}
 
+		// Set search ID if not present.  This is due to case-sensitivity on the request URL.  Legacy code
+		// sometimes uses "SEARCHID" and new code sometimes uses "searchid".
 		if (StringUtils.isBlank(getSearchid())) {
 			setSearchid(getRequest().getParameter("SEARCHID"));
 			Query qObj = new Query();
@@ -201,6 +200,8 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 			}
 
 		}
+
+		// Set the records-per-page
 		if (null != getRequest().getParameter("pageSizeVal")) {
 			UserSession usersession = context.getUserSession();
 			if (usersession == null) {
@@ -275,19 +276,38 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 			showmaxalertclear = context.getUserSession().getProperty(UserSession.SHOW_MAX_ALERTCLEAR);
 		}
 
-		/*
-		 * if(context.getUserSession().getProperty(UserSession.TRACK_SEARCHID)
-		 * != null){
-		 * tracksearchid=context.getUserSession().getProperty(UserSession
-		 * .TRACK_SEARCHID);
-		 *
-		 * }
-		 */
-
-		// seems like this code is not used so commenting for now (1/23/14)
-		// setPrevSrchBasketCount(getUserPrevSrchBasketCount(searchid));
-
 	}
+
+	/**
+	 * Create Google Analytics events to send to page
+	 */
+    @After(stages = LifecycleStage.EventHandling)
+    protected void doGoogleAnalytics() {
+        try {
+            // Add Google Analytics web events
+            webEvent.setCategory(WebAnalyticsEventProperties.CAT_SEARCH_RESULT);
+            webEvent.setLabel(getFoundin());
+            if(searchWidget){
+                addWebEvent(new GoogleWebAnalyticsEvent(WebAnalyticsEventProperties.CAT_SEARCH_WIDGET, getFoundin(),swReferrer));
+            }
+
+            String action = this.context.getLogEntry().getLogProperties().getProperty("action");
+            if ("search".equals(action)) {
+                if ("expert".equalsIgnoreCase(this.searchtype)) {
+                    addWebEvent(new GoogleWebAnalyticsEvent(WebAnalyticsEventProperties.CAT_SEARCH_SUBMIT, WebAnalyticsEventProperties.ACTION_EXPERT_SEARCH,
+                        getFoundin()));
+                } else if ("thesaurus".equalsIgnoreCase(this.searchtype)) {
+                    addWebEvent(new GoogleWebAnalyticsEvent(WebAnalyticsEventProperties.CAT_SEARCH_SUBMIT, WebAnalyticsEventProperties.ACTION_THES_SEARCH,
+                        getFoundin()));
+                } else {
+                    addWebEvent(new GoogleWebAnalyticsEvent(WebAnalyticsEventProperties.CAT_SEARCH_SUBMIT, WebAnalyticsEventProperties.ACTION_QUICK_SEARCH,
+                        getFoundin()));
+                }
+            }
+        } catch (Throwable t) {
+            log4j.warn("Unable to record Google Analytics!", t);
+        }
+    }
 
 	/**
 	 * Add Google Analytics web events to a list from a Query object
