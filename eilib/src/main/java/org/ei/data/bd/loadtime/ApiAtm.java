@@ -1,9 +1,10 @@
 package org.ei.data.bd.loadtime;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import org.jdom2.Element;
-import org.jdom2.Namespace;
+import org.jdom.Element;
+import org.jdom.Namespace;
 
 public class ApiAtm
 {
@@ -38,7 +39,7 @@ public class ApiAtm
 	{	
 		if(this.apiatmgroup != null)
 		{
-			List<Element> l = apiatmgroup.getChildren();			
+			List l = apiatmgroup.getChildren();			
 			Element apiatm = apiatmgroup.getChild("API-ATM",noNamespace);
 			if(apiatm != null)
 			{
@@ -69,7 +70,7 @@ public class ApiAtm
 					apiatmStr.append(" ");
 				}
 				//apiatm term
-				List<Element> apiatmlist = apiatm.getChildren("API-term",noNamespace);
+				List apiatmlist = apiatm.getChildren("API-term",noNamespace);
 				for(int j = 0; j < apiatmlist.size(); j++)
 				{
 					Element el = (Element)apiatmlist.get(j);
@@ -78,15 +79,15 @@ public class ApiAtm
 					apiatmStr.append(setNewLine(eachTerm, false));			
 					
 				}
-				List<Element> vgroups = apiatm.getChildren("ATM-Vgroup",noNamespace);				
+				List vgroups = apiatm.getChildren("ATM-Vgroup",noNamespace);				
 				apiatmStr.append(setGroups(vgroups));
-				List<Element> sgroups = apiatm.getChildren("ATM-Sgroup", noNamespace);
+				List sgroups = apiatm.getChildren("ATM-Sgroup", noNamespace);
 				apiatmStr.append(setGroups(sgroups));
 			}
 		}		
 	}
 	
-	public StringBuffer setGroups(List<Element> groupList)
+	public StringBuffer setGroups(List groupList)
 	{		
 		StringBuffer aGroups = new StringBuffer();
 		for(int i = 0; i < groupList.size(); i++)
@@ -101,7 +102,7 @@ public class ApiAtm
 	public String setGroup(Element atmgroup)
 	{
 		StringBuffer aGroupStrbuf = new StringBuffer();
-		List<Element> groupList = atmgroup.getChildren("API-term",noNamespace);
+		List groupList = atmgroup.getChildren("API-term",noNamespace);
 		
 		if( groupList.size() > 0)
 		{			
