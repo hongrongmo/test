@@ -1,10 +1,7 @@
 package org.ei.data.bd;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.TreeMap;
-
-import org.ei.data.bd.loadtime.BdParser;
+import java.util.*;
+import org.ei.data.bd.loadtime.*;
 
 public class BdCitationTitle
 {
@@ -13,9 +10,9 @@ public class BdCitationTitle
 	private String language;
 	private String title;
 	private String citationTitle;
-	private List<BdCitationTitle> citationTitleList = new ArrayList<BdCitationTitle>();;
-	private List<BdCitationTitle> translatedCitationTitleList = new ArrayList<BdCitationTitle>();
-	private TreeMap<Integer, BdCitationTitle> displayValueMap = new TreeMap<Integer, BdCitationTitle>();
+	private List citationTitleList = new ArrayList();;
+	private List translatedCitationTitleList = new ArrayList();
+	private TreeMap displayValueMap = new TreeMap();
 
 	public void setDisplayValue(String citTitle)
 	{
@@ -32,7 +29,7 @@ public class BdCitationTitle
 	    }
 	}
 
-	public TreeMap<Integer, BdCitationTitle> getDisplayValue()
+	public TreeMap getDisplayValue()
 	{
 	    return displayValueMap;
 	}
@@ -129,12 +126,12 @@ public class BdCitationTitle
 		}
 	}
 
-	public List<BdCitationTitle> getCitationTitle()
+	public List getCitationTitle()
 	{
 		return citationTitleList;
 	}
 
-	public List<BdCitationTitle> getTranslatedCitationTitle()
+	public List getTranslatedCitationTitle()
 	{
 		return translatedCitationTitleList;
 	}

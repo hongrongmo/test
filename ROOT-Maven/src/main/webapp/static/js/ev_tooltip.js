@@ -73,10 +73,11 @@ $(document).ready(function() {
 			var downloadurl;
 			if(typeof($("#downloadlink").attr('href')) != 'undefined' && $("#downloadlink").attr('href').length > 0){
 				downloadurl = $("#downloadlink").attr('href');
-
 			}else{
 				var form = $("#resultsform");
 				var folderid = form.find("input[name='folderid']").val();
+
+
 				downloadurl = "/delivery/download/display.url?database="+form.find("input[name='database']").val()
 				+"&displayformat="+displayformat
 				+"&allselected=true";
@@ -84,25 +85,7 @@ $(document).ready(function() {
 				if(typeof(folderid) != 'undefined' && folderid.length > 0 ){
 					downloadurl += "&folderid=" +folderid;
 				}
-				if((typeof(Basket) == 'undefined' || (Basket.count > 0)) && typeof(folderid) === 'undefined' && !checkBasketExistInTheSession()) {
-
-					$(this).tooltipster({
-					    content: 'Your session expired, please refresh the page and try again.',
-					    autoClose:true,
-					    interactive:false,
-					    contentAsHTML:true,
-					    position:'bottom',
-					    fixedLocation:true,
-					    positionTracker:false,
-					    delay:0,
-					    speed:0,
-					    functionAfter: function(origin){$(origin).tooltipster('destroy');}
-					});
-					$(this).tooltipster('show',null);
-					return false;
-				}
 			}
-
 
 			if(((typeof(Basket) == 'undefined' || (Basket.count > 0)) || (typeof($(this).attr("href")) != 'undefined' &&  $(this).attr("href").length > 0))){
 
@@ -120,56 +103,21 @@ $(document).ready(function() {
 				    speed:0,
 				    debug:false,
 				    functionBefore: function(origin, continueTooltip) {
-				    	//Following code handles the scenario when default tool tip event is triggered, we need to check weather the user in basket page or some other pages
-				    	if(typeof($("#downloadlink").attr('href')) != 'undefined' && $("#downloadlink").attr('href').length > 0){
-				    		// we'll make this function asynchronous and allow the tooltip to go ahead and show the loading notification while fetching our data
-					    	$(origin).tooltipster('content', "Loading...");
-					        //console.log("get data" + content);
-					    	continueTooltip();
-				    		$.ajax({
+				        // we'll make this function asynchronous and allow the tooltip to go ahead and show the loading notification while fetching our data
+				    	$(origin).tooltipster('content', "Loading...");
+				        //console.log("get data" + content);
+				    	continueTooltip();
+				            $.ajax({
 				                type: 'GET',
 				                url: downloadurl,
 				                cache: false,
-				                complete: function(e, xhr, settings){
-				                	if(e.status === 200){
-				                		 $(origin).tooltipster('content', e.responseText);
-				        	        }else{
-				        	        	//Response is bad or redirection happened from the server side. so we need to ask user to refresh page
-				        	        	createSessionExpiryTooltip();
-						    			return false;
-				        	        }
+				                success: function(data) {
+				                    $(origin).tooltipster('content', data);
+
 				                }
-				               
 				            });
-				    	}else{
-				    		if((typeof(Basket) == 'undefined' || (Basket.count > 0)) && typeof(folderid) === 'undefined' && !checkBasketExistInTheSession()){
-				    			//Session is expired or response is bad or redirection happened from the server side. so we need to ask user to refresh page
-				    			createSessionExpiryTooltip();
-				    			return false;
-				    		}else{
-				    			// we'll make this function asynchronous and allow the tooltip to go ahead and show the loading notification while fetching our data
-						    	$(origin).tooltipster('content', "Loading...");
-						        //console.log("get data" + content);
-						    	continueTooltip();
-				    			$.ajax({
-					                type: 'GET',
-					                url: downloadurl,
-					                cache: false,
-					                complete: function(e, xhr, settingks){
-					                	if(e.status === 200){
-					                		 $(origin).tooltipster('content', e.responseText);
-					        	        }else{
-					        	        	//Response is bad or redirection happened from the server side. so we need to ask user to refresh page
-					        	        	createSessionExpiryTooltip();
-							    			return false;
-					        	        }
-					                }
-					            });
-				    		}
-				    	}
-				    	
-				    	
-				    	},
+
+				    },
 				    functionAfter: function(origin){
 				    	$(origin).attr('title', 'Click to change one click download preferences.');
 
@@ -194,25 +142,6 @@ $(document).ready(function() {
 			return false;
 		});
 	}
-	
-	function createSessionExpiryTooltip(){
-		// we may have to catch the 302 response and redirect to the incoming url in the future. for now just showing the error message
-		$('#downloadlink').tooltipster('destroy');
-		$('#downloadlink').tooltipster({
-		    content: 'Your session expired, please refresh the page and try again.',
-		    autoClose:true,
-		    interactive:false,
-		    contentAsHTML:true,
-		    position:'bottom',
-		    fixedLocation:true,
-		    positionTracker:false,
-		    delay:0,	
-		    speed:0,
-		    functionAfter: function(origin){$(origin).tooltipster('destroy');}
-		});
-		$('#downloadlink').tooltipster('show',null);
-	}
-	
 	function getToolTipContent(origin, continueTooltip){
 		         // we'll make this function asynchronous and allow the tooltip to go ahead and show the loading notification while fetching our data
 		        continueTooltip();
@@ -308,47 +237,7 @@ function showSurvey(feature, location){
 	}
 
 }
-function showExitSurvey(){
-	var surveyCookie;
-	if($.cookie("ev_exitsurvey")){
-		surveyCookie = JSON.parse($.cookie("ev_exitsurvey"));
 
-		$.cookie("ev_exitsurvey", '{"dontShow":'+surveyCookie.dontShow+'}',{expires: 365, path:'/'});
-	}else{
-		$.cookie("ev_exitsurvey", '{"dontShow":'+false+'}',{expires: 365, path:'/'});
-		surveyCookie = {
-			dontShow:false,
-		};
-	}
-
-	if(!surveyCookie.dontShow){
-
-		$("#ev_survey").tooltipster({
-		    content:$("#exitSurvey").html(),
-		    contentAsHTML:true,
-		    autoClose:false,
-		    interactive:true,
-		    position:'top',
-		    fixedLocation:true,
-		    positionTracker:false,
-		    multiple:true,
-		    delay:0,
-		    speed:0,
-		    debug:false,
-		    arrow:false,
-		    theme:'tooltipster-default surveyTheme',
-		    functionReady: function(origin, continueTooltip) {
-		    	$(".surveyTheme").css("left", "30%");
-	           	$(".surveyTheme").css("top", "30%");
-		    }
-		});
-
-
-		$("#ev_survey").show();
-		$("#ev_survey").tooltipster('show',null);
-	}
-
-}
 
 //hid the popup and write a session cookie so it won't show again.
 function hideTP(selector){
