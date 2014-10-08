@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	// Trigger this method every minute to ping the server for session status
-	setInterval(checkSessionStatus,30*60*1000);
+	setInterval(checkSessionStatus,60*1000);
 });
 
 function checkSessionStatus(){
