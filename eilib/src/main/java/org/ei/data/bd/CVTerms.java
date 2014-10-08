@@ -1,9 +1,10 @@
 package org.ei.data.bd;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+
 
 import org.apache.oro.text.perl.Perl5Util;
+import org.ei.data.bd.loadtime.BdParser;
+import org.apache.oro.text.perl.*;
 
 
 public class CVTerms
@@ -11,17 +12,18 @@ public class CVTerms
 
    private Perl5Util perl = new Perl5Util();
    private String cvTerms = null;
-   private List<CVTerm> arrcvTerms = new ArrayList<CVTerm>();
+   List result = new  ArrayList();
+   private List arrcvTerms = new ArrayList();
 
 
-   private List<String> cvt = new ArrayList<String>();
-   private List<String> cvm = new ArrayList<String>();
-   private List<String> cva = new ArrayList<String>();
-   private List<String> cvn = new ArrayList<String>();
-   private List<String> cvp  = new ArrayList<String>();
-   private List<String> cvma = new ArrayList<String>();
-   private List<String> cvmn = new ArrayList<String>();
-   private List<String> cvmp = new ArrayList<String>();
+   private List cvt = new ArrayList();
+   private List cvm = new ArrayList();
+   private List cva = new ArrayList();
+   private List cvn = new ArrayList();
+   private List cvp  = new ArrayList();
+   private List cvma = new ArrayList();
+   private List cvmn = new ArrayList();
+   private List cvmp = new ArrayList();
 
    private String [] cvexpand = null;
    private String cvexpandstr = null;
@@ -54,7 +56,7 @@ public class CVTerms
 			cvelements = this.cvTerms.split(DELIM);
 		}
 
-		List<String> l = Arrays.asList(cvelements);
+		List l = Arrays.asList(cvelements);
 		if(l.size() > 0)
 		{
 			for(int i = 0; i < l.size(); i++)
@@ -115,12 +117,12 @@ public class CVTerms
 		parse(this.arrcvTerms);
 	}
 
-	public void parse(List<CVTerm> cvterms)
+	public void parse(List cvterms)
 	{
 		if(cvterms != null && cvterms.size() >0)
 		{
-			ArrayList<String> cvarr = new ArrayList<String>();
-			ArrayList<String> cvmarr = new ArrayList<String>();
+			ArrayList cvarr = new ArrayList();
+			ArrayList cvmarr = new ArrayList();
 			for (int i = 0; i < cvterms.size();i++)
 			{
 				CVTerm cvt = (CVTerm)cvterms.get(i);
@@ -241,63 +243,63 @@ public class CVTerms
 	}
 
 
-   public void setCvt(List<String> cvt) {
+   public void setCvt(List cvt) {
 		this.cvt = cvt;
 	}
 
-	public List<String> getCvm() {
+	public List getCvm() {
 		return cvm;
 	}
 
-	public void setCvm(List<String> cvm) {
+	public void setCvm(List cvm) {
 		this.cvm = cvm;
 	}
 
-	public List<String> getCva() {
+	public List getCva() {
 		return cva;
 	}
 
-	public void setCva(List<String> cva) {
+	public void setCva(List cva) {
 		this.cva = cva;
 	}
 
-	public List<String> getCvn() {
+	public List getCvn() {
 		return cvn;
 	}
 
-	public void setCvn(List<String> cvn) {
+	public void setCvn(List cvn) {
 		this.cvn = cvn;
 	}
 
-	public List<String> getCvp() {
+	public List getCvp() {
 		return cvp;
 	}
 
-	public void setCvp(List<String> cvp) {
+	public void setCvp(List cvp) {
 		this.cvp = cvp;
 	}
 
-	public List<String> getCvma() {
+	public List getCvma() {
 		return cvma;
 	}
 
-	public void setCvma(List<String> cvma) {
+	public void setCvma(List cvma) {
 		this.cvma = cvma;
 	}
 
-	public List<String> getCvmn() {
+	public List getCvmn() {
 		return cvmn;
 	}
 
-	public void setCvmn(List<String> cvmn) {
+	public void setCvmn(List cvmn) {
 		this.cvmn = cvmn;
 	}
 
-	public List<String> getCvmp() {
+	public List getCvmp() {
 		return cvmp;
 	}
 
-	public void setCvmp(List<String> cvmp) {
+	public void setCvmp(List cvmp) {
 		this.cvmp = cvmp;
 	}
 	public String[] getCvexpand() {
@@ -308,17 +310,17 @@ public class CVTerms
 		this.cvexpand = cvexpand;
 	}
 
-	public List<String> getCvt()
+	public List getCvt()
 	{
 		return cvt;
 	}
 
-	public List<CVTerm> getArrcvTerms()
+	public List getArrcvTerms()
 	{
 		return arrcvTerms;
 	}
 
-	public void setArrcvTerms(List<CVTerm> arrcvTerms)
+	public void setArrcvTerms(List arrcvTerms)
 	{
 		this.arrcvTerms = arrcvTerms;
 	}

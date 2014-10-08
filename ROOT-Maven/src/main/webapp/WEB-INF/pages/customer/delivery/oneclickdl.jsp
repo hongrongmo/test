@@ -487,11 +487,7 @@ function checkForRisandBib(){
 				
 				var tooltipmsg = "";
 				
-				if(docidlist == "" && handlelist == "" && folderid =="" && !checkBasketExistInTheSession()){
-					tooltipmsg = "Your session expired, please refresh the page and try again.";
-				}
-				
-				if(tooltipmsg ==  "" && checkReferexOnlyFolder()){
+				if(checkReferexOnlyFolder()){
 					tooltipmsg = "Referex database results are not supported in the Excel&reg; download format.";
 				}
 				if(tooltipmsg !=  ""){

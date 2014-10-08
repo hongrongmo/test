@@ -28,7 +28,7 @@
     <jsp:include page="/WEB-INF/pages/include/headernull.jsp" />
     </c:otherwise>
     </c:choose>
-	</stripes:layout-component> 
+	</stripes:layout-component>
 
 	<stripes:layout-component name="contents">
 
@@ -59,7 +59,7 @@
     <%-- ************************************************************************************** --%>
     <%-- Otherwise just show the transformed CARS template via the pageContent --%>
     <%-- ************************************************************************************** --%>
-    <c:otherwise>    
+    <c:otherwise>
     ${carsresponse.pageContent}
     </c:otherwise>
     </c:choose>
@@ -72,5 +72,6 @@
 </stripes:layout-component>
 <stripes:layout-component name="modal_dialog"></stripes:layout-component>
 <stripes:layout-component name="modal_dialog_2"></stripes:layout-component>
-	
+<stripes:layout-component name="exitSurvey"></stripes:layout-component>
+
 </stripes:layout-render>

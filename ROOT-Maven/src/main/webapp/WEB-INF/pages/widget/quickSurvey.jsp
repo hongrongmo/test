@@ -51,9 +51,9 @@
 
 		if($(this).text() == 'No'){
 			ret = false;
-			GALIBRARY.createWebEventWithLabel('_trackEvent', 'Survey No', '${actionBean.feature}', document.location.pathname);
+			GALIBRARY.createWebEventWithLabel('Survey No', '${actionBean.feature}', document.location.pathname);
 		}else{
-			GALIBRARY.createWebEventWithLabel('_trackEvent', 'Survey Yes', '${actionBean.feature}', document.location.pathname);
+			GALIBRARY.createWebEventWithLabel('Survey Yes', '${actionBean.feature}', document.location.pathname);
 		}
 		$.cookie("ev_survey", '{"pageTrack":'+surveyCookie.pageTrack+',"dontShow":'+true+'}',{expires: 365, path:'/'});
 		$("#survey_ratings").hide();
