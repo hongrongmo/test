@@ -410,11 +410,11 @@ public class EptCombiner extends Combiner {
         return line;
     }
 
-    private String[] prepareMulti(String multiString) throws Exception {
+    public String[] prepareMulti(String multiString) throws Exception {
         return prepareMulti(multiString, null);
     }
 
-    private String[] prepareMulti(String multiString, Constants constant) throws Exception {
+    public String[] prepareMulti(String multiString, Constants constant) throws Exception {
         if (multiString != null) {
 
             AuthorStream astream = new AuthorStream(new ByteArrayInputStream(multiString.getBytes()));
