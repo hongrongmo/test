@@ -1,21 +1,29 @@
 package org.ei.data.bd.loadtime;
 
-import java.io.*;
-import java.util.*;
-import org.jdom.*;
-import org.jdom.input.*;
-import org.jdom.output.*;
-import org.ei.util.GUID;
-import org.apache.oro.text.perl.*;
-import org.apache.oro.text.regex.*;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipFile;
-import java.util.zip.ZipInputStream;
-import org.ei.data.*;
-import org.ei.data.bd.*;
-import org.ei.data.encompasslit.loadtime.*;
+import java.io.PrintWriter;
+import java.io.Reader;
+import java.util.Enumeration;
+import java.util.HashSet;
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import org.apache.oro.text.perl.Perl5Util;
+import org.ei.data.DataLoadDictionary;
+import org.ei.data.bd.BdAffiliation;
+import org.ei.data.bd.BdAffiliations;
+import org.ei.data.bd.BdAuthor;
+import org.ei.data.bd.BdAuthors;
+import org.ei.util.GUID;
+import org.jdom2.Attribute;
+import org.jdom2.Document;
+import org.jdom2.Element;
+import org.jdom2.EntityRef;
+import org.jdom2.Namespace;
+import org.jdom2.Text;
+import org.jdom2.input.SAXBuilder;
 
 public class BdParser
 {
