@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
+import org.ei.config.EVProperties;
 import org.ei.session.AWSInfo;
 import org.ei.session.SessionID;
 import org.ei.util.GUID;
@@ -28,8 +29,9 @@ public class EISessionCookie extends Cookie {
     private static final long serialVersionUID = -8039633887817148201L;
 
     public static final String EISESSION_COOKIE_NAME = "EISESSION";
+    public static final String EISESSION_EXPIRES_PROPERTY = "eisession.expires.minutes";
+    public static final int EISESSION_EXPIRES_DEFAULT = 30;
     private static final String EISESSION_SECRET = "h$a5$jmp4BKluup1V7Sw^HSo1pwH62pe";
-    private static final long EXPIRES_IN = TimeUnit.MINUTES.toMillis(5);  // 30 minute expiration KEEP IN SYNC WITH JSESSION EXPIRATION!!
 
     private int version;
     private String sessionid = "";
@@ -41,7 +43,7 @@ public class EISessionCookie extends Cookie {
         this.setPath("/");
         this.setMaxAge(-1);
     }
-    
+
     public EISessionCookie(HttpServletRequest request) {
         super(EISESSION_COOKIE_NAME, "");
         this.setPath("/");
@@ -94,7 +96,7 @@ public class EISessionCookie extends Cookie {
     public boolean isExpired() {
         Date currenttime = new Date();
         log4j.info("Checking expires, current time: " + formatDate(currenttime) + ", timestamp: " + formatDate(this.timestamp));
-        return currenttime.getTime() - this.timestamp.getTime() > EXPIRES_IN;
+        return currenttime.getTime() - this.timestamp.getTime() > expiresInMillis();
     }
 
     public int getVersion() {
@@ -168,7 +170,7 @@ public class EISessionCookie extends Cookie {
             }
         }
     }
-    
+
     public boolean isSessionCookieValid(HttpServletRequest request) {
     	boolean isValid = false;
     	Cookie eisessioncookie = null;
@@ -186,7 +188,7 @@ public class EISessionCookie extends Cookie {
                 	 if (check.equals(DigestUtils.md5Hex(splitter[0] + "_" + splitter[1] + "_" + splitter[2] + EISESSION_SECRET))) {
                 		 this.formatter.setTimeZone(TimeZone.getTimeZone("America/New_York"));
                 		 this.timestamp = this.formatter.parse(splitter[2]);
-                		 isValid =  (new Date().getTime() - this.timestamp.getTime()) < EXPIRES_IN;
+                		 isValid =  (new Date().getTime() - this.timestamp.getTime()) < expiresInMillis();
                      }
                 }
             }
@@ -216,6 +218,24 @@ public class EISessionCookie extends Cookie {
         // http://java.sun.com/j2ee/sdk_1.2.1/techdocs/api/javax/servlet/http/Cookie.html#setMaxAge(int)
         this.setMaxAge(-1);
     }
-    
-    
+
+
+    public static int expiresInMinutes() {
+        try {
+            return(Integer.parseInt(EVProperties.getProperty(EISESSION_EXPIRES_PROPERTY)));
+        } catch (Throwable t) {
+            log4j.error("Unable to get expires from property '" + EISESSION_EXPIRES_PROPERTY + "'", t);
+            return EISESSION_EXPIRES_DEFAULT;
+        }
+    }
+
+    public static int expiresInMillis() {
+        try {
+            int expiresInMinutes = Integer.parseInt(EVProperties.getProperty(EISESSION_EXPIRES_PROPERTY));
+            return (int) TimeUnit.MINUTES.toMillis(expiresInMinutes);
+        } catch (Throwable t) {
+            log4j.error("Unable to get expires from property '" + EISESSION_EXPIRES_PROPERTY + "'", t);
+            return (int) TimeUnit.MINUTES.toMillis(EISESSION_EXPIRES_DEFAULT);
+        }
+    }
 }
