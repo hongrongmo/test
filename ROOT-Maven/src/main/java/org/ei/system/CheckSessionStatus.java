@@ -12,6 +12,7 @@ import org.apache.log4j.Logger;
 import org.apache.wink.json4j.JSONException;
 import org.apache.wink.json4j.JSONObject;
 import org.ei.config.EVProperties;
+import org.ei.stripes.action.personalaccount.LogoutAction;
 import org.ei.web.cookie.EISessionCookie;
 
 /**
@@ -22,10 +23,10 @@ public class CheckSessionStatus extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
     private static final Logger log4j = Logger.getLogger(CheckSessionStatus.class);
-    
+
     private static final String  CHECK_STATUS = "checkstatus";
     private static final String  REDIRECT_SESSION_EXIPIRED_PAGE = "redirect";
-    
+
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -41,12 +42,13 @@ public class CheckSessionStatus extends HttpServlet {
 		 if(resourcetype.equalsIgnoreCase(CHECK_STATUS)){
 			 checkStatus(request,  response);
 		 }else if(resourcetype.equalsIgnoreCase(REDIRECT_SESSION_EXIPIRED_PAGE)){
+		     LogoutAction.clearClientCookies(response);
 			 request.setAttribute("maintenanceMsg", getMaintenanceMsg());
 			 request.getRequestDispatcher("/WEB-INF/pages/world/sessionexpired.jsp").forward(request, response);
 		 }
 	}
-	
-	
+
+
 	/**
 	 * @param request
 	 * @param response
@@ -55,7 +57,7 @@ public class CheckSessionStatus extends HttpServlet {
 	private void checkStatus(HttpServletRequest request, HttpServletResponse response) throws IOException{
 		EISessionCookie eiSessionCookie = new EISessionCookie();
 		boolean isValid = eiSessionCookie.isSessionCookieValid(request);
-		JSONObject JObject = new JSONObject(); 
+		JSONObject JObject = new JSONObject();
 		try {
 			JObject.put("sessionValid", isValid);
 		} catch (JSONException e) {
@@ -64,8 +66,8 @@ public class CheckSessionStatus extends HttpServlet {
 		response.setContentType("application/json");
 		response.getWriter().write(JObject.toString());
 	}
-	
-	
+
+
 	 private String getMaintenanceMsg(){
 		 String msg = null;
 	    	boolean isEnabled = Boolean.parseBoolean((EVProperties.getProperty(EVProperties.DOWNTIME_MESSAGE_ENABLED)));

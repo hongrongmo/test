@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -529,6 +530,7 @@ public class SessionManager {
         	// Only create a new session if this is a valid customer!
         	if (usersession.getUser().isCustomer() || isPathChoiceExists) {
 	            HttpSession session = this.request.getSession(true);
+	            session.setMaxInactiveInterval((int) TimeUnit.MINUTES.toSeconds(EISessionCookie.expiresInMinutes()));
 	            SessionID sessionidObj = usersession.getSessionID();
 	            if (sessionidObj == null) {
 	                log4j.warn("Session ID was null - should be created earlier!");
