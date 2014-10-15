@@ -53,7 +53,7 @@
 </style>
 </head>
 <body>
-<div>
+<div aria-live="assertive">
 	<div class="title" style="padding-left:0px;"><img id="eilogo" class="mm_eilogo" width="35px" src="/static/images/ei_w.gif" title="Engineering Information: Home of Engineering Village" alt="Engineering Information: Home of Engineering Village"></img><span>Engineering Village</span></div>
 	<div class="msg">
 	<div id="survey_container">

@@ -6,8 +6,6 @@ tips = [
 	];
 $(document).ready(function() {
 	var popupTime = 4500;
-
-
 	for(i in tips){
 		var tip = tips[i];
 		var selector = '.'+tip.name;

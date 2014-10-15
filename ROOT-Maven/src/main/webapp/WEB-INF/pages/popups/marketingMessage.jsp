@@ -35,12 +35,12 @@
 </script>
 </head>
 <body>
-<div>
+<div aria-live="assertive">
 	<div class="title" style="padding-left:0px;"><img id="eilogo" class="mm_eilogo" width="35px" src="/static/images/ei_w.gif" title="Engineering Information: Home of Engineering Village" alt="Engineering Information: Home of Engineering Village"></img><span>Usage Tips & Tricks</span></div>
 	<div class="msg">
 			<jsp:include page="usagetips.jsp" />
 	</div>
 	<div style="float:left;padding-top:30px"><input type="checkbox" value="dontShowAgain" name="dontShowAgainCheckbox" id="dsCheckbox" onclick="writeDSCookie(this);" title="Don't Show Again Checkbox" /><label for="dsCheckbox">Don't Show Again</label></div>
-	<div style="float:right;padding-top:30px"><a id="backLink" href="#" style="display:none" onclick="resetMM();return false;" >Back</a><span class="bar" style="display:none;">&nbsp;|&nbsp;</span><a href="#" onclick="TINY.box.hide();" >Close</a></div>
+	<div style="float:right;padding-top:30px"><a id="backLink" href="#" style="display:none" onclick="resetMM();return false;" >Back</a><span class="bar" style="display:none;">&nbsp;|&nbsp;</span><a href="#" onclick="TINY.box.hide();" id="closeMessage" title="Close this message">Close</a></div>
 	<div class="clear"></div>
 </div>

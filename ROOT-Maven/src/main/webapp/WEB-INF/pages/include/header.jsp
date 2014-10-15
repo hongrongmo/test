@@ -2,13 +2,13 @@
 <%@ include file="/WEB-INF/pages/include/taglibs.jsp" %>
 
 <%-- HEADER --%>
-<div id="header">
+<div id="header" >
 	<div id="logoEV" aria-label="Engineering Village" role="banner">
 		<a href="/home.url" title="Engineering Village - The information discovery platform of choice for the engineering community" ><img alt="Engineering Village - The information discovery platform of choice for the engineering community" src="/static/images/EV-logo.gif"/></a>
 		<c:if test="${not empty actionBean.maintenanceMsg}">
     		<div style="position:absolute; left: 320px; top: 28px; font-weight: bold; font-size; 12px; width:44%">${actionBean.maintenanceMsg }</div>
 		</c:if>
-		
+
 	</div>
 
 
@@ -168,13 +168,14 @@
 
     $(".whatsNewLink").click(function(){
     	GALIBRARY.createWebEventWithLabel('Dialog Open', 'What\'s New', 'Support Dropdown');
-    	TINY.box.show({html:document.getElementById("modalmsg"),clickmaskclose:false,width:900,height:450,close:true,opacity:20,topsplit:3,closejs:function(){closeX();}});
+    	TINY.box.show({html:document.getElementById("modalmsg"),clickmaskclose:false,width:900,height:450,close:true,opacity:20,topsplit:3,closejs:function(){closeX();},openjs:function(){$("#closeMessage").focus();}});
     	$("#menu-1").click(function(){return false;});
+
     });
 
    $(".prefsOverlay").click(function(){
 	   	GALIBRARY.createWebEventWithLabel('Dialog Open', 'Edit Preferences', 'Settings Dropdown');
-		TINY.box.show({url:'/customer/userprefs.url',clickmaskclose:false,width:400,height:520,close:true,opacity:20,topsplit:3});
+		TINY.box.show({url:'/customer/userprefs.url',clickmaskclose:false,width:400,height:520,close:true,opacity:20,topsplit:3,openjs:function(){$("#closePrefsMessage").focus();}});
 
 	});
 

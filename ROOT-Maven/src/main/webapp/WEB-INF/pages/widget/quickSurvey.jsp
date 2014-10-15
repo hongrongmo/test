@@ -22,7 +22,7 @@
 </style>
 </head>
 <body>
-<div id="survey_container">
+<div id="survey_container" aria-live="assertive">
 	<div id="survey_message">Help us improve Engineering Village by completing a short survey on a new feature.</div>
 	<div id="survey_ratings">
 	<br/>
