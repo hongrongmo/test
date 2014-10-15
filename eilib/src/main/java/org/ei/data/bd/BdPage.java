@@ -1,85 +1,108 @@
 package org.ei.data.bd;
 
-import org.ei.data.bd.loadtime.BdParser;
+import java.util.*;
+import org.ei.data.bd.loadtime.*;
 
-public class BdPage {
-    private String pages;
-    private String firstPage;
-    private String lastPage;
-    private String inputPageString;
+public class BdPage
+{
+	private String pages;
+	private String firstPage;
+	private String lastPage;
+	private String inputPageString;
 
-    public BdPage() {
 
-    }
+	public BdPage()
+	{
 
-    public BdPage(String inputPageString) {
-        setPages(inputPageString);
-    }
+	}
 
-    public void setPageText(String pages) {
-        this.pages = pages;
-    }
+	public BdPage(String inputPageString)
+	{
+		setPages(inputPageString);
+	}
 
-    public void setFirstPage(String firstPage) {
-        this.firstPage = firstPage;
-    }
+	public void setPageText(String pages)
+	{
+		this.pages = pages;
+	}
 
-    public void setLastPage(String lastPage) {
-        this.lastPage = lastPage;
-    }
+	public void setFirstPage(String firstPage)
+	{
+		this.firstPage = firstPage;
+	}
 
-    public String getPageText() {
-        return pages;
-    }
+	public void setLastPage(String lastPage)
+	{
+		this.lastPage = lastPage;
+	}
 
-    public String getFirstPage() {
-        return firstPage;
-    }
+	public String getPageText()
+	{
+		return pages;
+	}
 
-    public String getLastPage() {
-        return lastPage;
-    }
+	public String getFirstPage()
+	{
+		return firstPage;
+	}
 
-    public void setPages(String inputPageString) {
-        this.inputPageString = inputPageString;
-    }
+	public String getLastPage()
+	{
+		return lastPage;
+	}
 
-    private BdPage parsePages() {
-        BdPage pages = new BdPage();
-        if (inputPageString != null) {
-            String[] pagesArray = inputPageString.split(BdParser.AUDELIMITER, -1);
+	public void setPages(String inputPageString)
+	{
+		this.inputPageString = inputPageString;
+	}
 
-            if (pagesArray != null && pagesArray.length > 2) {
-                pages.setPageText(pagesArray[0]);
-                pages.setFirstPage(pagesArray[1]);
-                pages.setLastPage(pagesArray[2]);
-            }
-        }
-        return pages;
-    }
+	private BdPage parsePages()
+	{
+		BdPage pages = new BdPage();
+		if(inputPageString != null)
+		{
+			String[] pagesArray = inputPageString.split(BdParser.AUDELIMITER,-1);
 
-    public BdPage getPages() {
-        return parsePages();
-    }
+			if(pagesArray!=null && pagesArray.length>2)
+			{
+				pages.setPageText(pagesArray[0]);
+				pages.setFirstPage(pagesArray[1]);
+				pages.setLastPage(pagesArray[2]);
+			}
+		}
+		return pages;
+	}
 
-    public String getStartPage() {
-        BdPage page = parsePages();
-        String firstPage = null;
-        if (page.getPageText() != null && page.getPageText().trim().length() > 0) {
-            firstPage = page.getPageText();
-            firstPage = firstPage.replace('&', ' ');
-            firstPage = firstPage.replace(',', ' ');
-            firstPage = firstPage.replace(';', ' ');
-            firstPage = firstPage.replaceAll("[<>-]", " ");
-            if (firstPage.indexOf(" ") > -1) {
-                firstPage = firstPage.substring(0, firstPage.indexOf(" "));
-            }
-        } else if (page.getFirstPage() != null && page.getFirstPage().trim().length() > 0) {
-            firstPage = page.getFirstPage();
-        } else if (page.getLastPage() != null && page.getLastPage().trim().length() > 0) {
-            firstPage = page.getLastPage();
-        }
-        return firstPage.trim();
-    }
+	public BdPage getPages()
+	{
+		return parsePages();
+	}
+
+	public String getStartPage()
+	{
+		BdPage page = parsePages();
+		String firstPage = null;
+		if(page.getPageText()!=null && page.getPageText().trim().length()>0)
+		{
+			firstPage = page.getPageText();
+			firstPage = firstPage.replace('&',' ');
+			firstPage = firstPage.replace(',',' ');
+			firstPage = firstPage.replace(';',' ');
+			firstPage = firstPage.replaceAll("[<>-]"," ");
+			if(firstPage.indexOf(" ")>-1)
+			{
+				firstPage = firstPage.substring(0,firstPage.indexOf(" "));
+			}
+		}
+		else if(page.getFirstPage()!=null && page.getFirstPage().trim().length()>0)
+		{
+			firstPage = page.getFirstPage();
+		}
+		else if(page.getLastPage()!=null && page.getLastPage().trim().length()>0)
+		{
+			firstPage = page.getLastPage();
+		}
+		return firstPage;
+	}
 
 }

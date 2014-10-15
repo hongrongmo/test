@@ -280,7 +280,7 @@ public class CBNBCombiner extends Combiner {
         }
     }
 
-    private String[] prepareMulti(String multiString) throws Exception {
+    public String[] prepareMulti(String multiString) throws Exception {
         return prepareMulti(multiString, null);
     }
 

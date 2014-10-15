@@ -1,78 +1,25 @@
 package org.ei.data.bd.runtime;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
-import java.sql.Clob;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Hashtable;
-import java.util.List;
-import java.util.Map;
-import java.util.StringTokenizer;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.sql.*;
 
-import org.apache.oro.text.perl.Perl5Util;
-import org.ei.connectionpool.ConnectionBroker;
-import org.ei.connectionpool.ConnectionPoolException;
-import org.ei.connectionpool.NoConnectionAvailableException;
-import org.ei.data.CITEDBY;
-import org.ei.data.Language;
-import org.ei.data.bd.BdAffiliation;
-import org.ei.data.bd.BdAffiliations;
-import org.ei.data.bd.BdAuthor;
-import org.ei.data.bd.BdAuthors;
-import org.ei.data.bd.BdCitationTitle;
-import org.ei.data.bd.BdCoden;
-import org.ei.data.bd.BdConfLocations;
-import org.ei.data.bd.BdCorrespAffiliation;
-import org.ei.data.bd.BdCorrespAffiliations;
-import org.ei.data.bd.BdDocumentType;
-import org.ei.data.bd.BdEditors;
-import org.ei.data.bd.BdIsbn;
-import org.ei.data.bd.BdPageCount;
-import org.ei.data.bd.CVTerms;
-import org.ei.data.bd.loadtime.BdParser;
-import org.ei.domain.Abstract;
-import org.ei.domain.Affiliation;
-import org.ei.domain.Affiliations;
-import org.ei.domain.Citation;
-import org.ei.domain.Classifications;
-import org.ei.domain.Contributor;
-import org.ei.domain.Contributors;
-import org.ei.domain.Database;
-import org.ei.domain.DatabaseConfig;
-import org.ei.domain.Detail;
-import org.ei.domain.DocID;
-import org.ei.domain.DocumentBuilder;
-import org.ei.domain.DocumentBuilderException;
-import org.ei.domain.EIDoc;
-import org.ei.domain.ElementData;
-import org.ei.domain.ElementDataMap;
-import org.ei.domain.FullDoc;
-import org.ei.domain.ISSN;
-import org.ei.domain.Issue;
-import org.ei.domain.Key;
-import org.ei.domain.KeyValuePair;
-import org.ei.domain.Keys;
-import org.ei.domain.PageRange;
-import org.ei.domain.RIS;
-import org.ei.domain.Volume;
-import org.ei.domain.XMLMultiWrapper;
-import org.ei.domain.XMLMultiWrapper2;
-import org.ei.domain.XMLWrapper;
-import org.ei.domain.Year;
+import org.ei.connectionpool.*;
+import org.ei.domain.*;
 import org.ei.util.StringUtil;
+import org.ei.data.*;
+import org.ei.data.bd.*;
+import org.ei.data.bd.loadtime.*;
+import org.ei.data.bd.CVTerms;
+import org.apache.oro.text.perl.*;
+import java.net.URLEncoder;
 
 public class BDDocBuilder implements DocumentBuilder {
     public static String CPX_TEXT_COPYRIGHT = Database.DEFAULT_ELSEVIER_TEXT_COPYRIGHT;
     public static String CPX_HTML_COPYRIGHT = Database.DEFAULT_ELSEVIER_HTML_COPYRIGHT;
     public static String PROVIDER_TEXT = "Ei";
-    private static Map<String, String> issnARFix = new HashMap<String, String>();
+    private static Map issnARFix = new HashMap();
     private static final Key ELT_CONTROLLED_TERMS = new Key(Keys.CONTROLLED_TERMS, "Controlled terms");
     private static final Key ELT_CLASS_CODES = new Key(Keys.CLASS_CODES_MULTI, "Class codes");
     private static final Key ELT_MAJOR_TERMS = new Key(Keys.MAJOR_TERMS, "Major terms");
@@ -80,17 +27,17 @@ public class BDDocBuilder implements DocumentBuilder {
     private static final Key CPX_CLASS_CODES = new Key(Keys.CLASS_CODES, "Ei classification codes");
     private static final Key CPX_MAIN_HEADING = new Key(Keys.MAIN_HEADING, "Ei main heading");
     private static final String LT_MSG = "Please click here to view all linked terms";
-    public static final Key[] CITATION_KEYS = { Keys.DOC_TYPE, Keys.CITEDBY, Keys.PI, Keys.ACCESSION_NUMBER, Keys.DOCID, Keys.TITLE, Keys.TITLE_TRANSLATION,
+    private static final Key[] CITATION_KEYS = { Keys.DOC_TYPE, Keys.CITEDBY, Keys.PI, Keys.ACCESSION_NUMBER, Keys.DOCID, Keys.TITLE, Keys.TITLE_TRANSLATION,
         Keys.EDITORS, Keys.AUTHORS, Keys.AUTHOR_AFFS, Keys.SOURCE, Keys.MONOGRAPH_TITLE, Keys.PAGE_RANGE, Keys.ARTICLE_NUMBER, Keys.VOLISSUE,
         Keys.PUBLICATION_YEAR, Keys.PUBLISHER, Keys.ISSUE_DATE, Keys.ISSN, Keys.LANGUAGE, Keys.NO_SO, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT, Keys.DOI,
         Keys.PATAPPNUM, Keys.PATNUM, Keys.PATASSIGN, Keys.PATENT_ISSUE_DATE };
-    public static final Key[] ABSTRACT_KEYS = { Keys.CITEDBY, Keys.PI, Keys.ACCESSION_NUMBER, Keys.DOCID, Keys.TITLE, Keys.TITLE_TRANSLATION, Keys.EDITORS,
+    private static final Key[] ABSTRACT_KEYS = { Keys.CITEDBY, Keys.PI, Keys.ACCESSION_NUMBER, Keys.DOCID, Keys.TITLE, Keys.TITLE_TRANSLATION, Keys.EDITORS,
         Keys.AUTHORS, Keys.EDITOR_AFFS, Keys.AUTHOR_AFFS, Keys.VOLISSUE, Keys.SOURCE, Keys.PUBLICATION_YEAR, Keys.ISSUE_DATE, Keys.MONOGRAPH_TITLE,
         Keys.PAGE_RANGE, Keys.ARTICLE_NUMBER, Keys.CONFERENCE_NAME, Keys.ISSN, Keys.ISBN, Keys.PUBLISHER, Keys.I_PUBLISHER, Keys.CONF_DATE, Keys.SPONSOR,
         Keys.PROVIDER, Keys.LANGUAGE, Keys.MAIN_HEADING, ELT_MAJOR_TERMS, CPX_CONTROLLED_TERMS, Keys.UNCONTROLLED_TERMS, Keys.GLOBAL_TAGS, Keys.PRIVATE_TAGS,
         Keys.ABSTRACT, Keys.NUMBER_OF_REFERENCES, Keys.NO_SO, Keys.COPYRIGHT, Keys.COPYRIGHT_TEXT, Keys.CLASS_CODES, Keys.CAS_REGISTRY_CODES, Keys.TREATMENTS,
         Keys.DOI, Keys.PATAPPNUM, Keys.PATNUM, Keys.PATASSIGN, Keys.REPORT_NUMBER_PAPER, Keys.PATENT_ISSUE_DATE, Keys.ISBN13, Keys.E_ISSN, Keys.DOC_TYPE };
-    public static final Key[] DETAILED_KEYS = { Keys.CITEDBY, Keys.PI, Keys.ACCESSION_NUMBER, Keys.PATAPPNUM, Keys.PRIORITY_INFORMATION, Keys.PATNUM,
+    private static final Key[] DETAILED_KEYS = { Keys.CITEDBY, Keys.PI, Keys.ACCESSION_NUMBER, Keys.PATAPPNUM, Keys.PRIORITY_INFORMATION, Keys.PATNUM,
         Keys.PATASSIGN, Keys.TITLE, Keys.TITLE_TRANSLATION, Keys.AUTHORS, Keys.AUTHOR_AFFS, Keys.CORRESPONDING_EMAIL, Keys.CORRESPONDING_AUTHORS,
         Keys.CORRESPONDING_AUTHORS_AFF, Keys.EDITORS, Keys.EDITOR_AFFS, Keys.SERIAL_TITLE, Keys.ABBRV_SERIAL_TITLE, Keys.VOLUME, Keys.ISSUE, Keys.SOURCE,
         Keys.MONOGRAPH_TITLE, Keys.VOLUME_TITLE, Keys.ISSUE_DATE, Keys.PUBLICATION_YEAR, Keys.REPORT_NUMBER_PAPER, Keys.PAPER_NUMBER, Keys.PAGE_RANGE,
@@ -109,7 +56,7 @@ public class BDDocBuilder implements DocumentBuilder {
         Keys.TITLE_TRANSLATION, Keys.LANGUAGE, Keys.PAGE_RANGE, Keys.PAPER_NUMBER, Keys.COPYRIGHT, Keys.ISSUE, Keys.ACCESSION_NUMBER, Keys.CONTROLLED_TERMS,
         Keys.PATENT_ISSUE_DATE };
     public static final String DELIMITER = ",";
-    static { // ISSNs with AR field problem
+    static {  // ISSNs with AR field problem
         issnARFix.put("00913286", "");
         issnARFix.put("10833668", "");
         issnARFix.put("10179909", "");
@@ -130,8 +77,6 @@ public class BDDocBuilder implements DocumentBuilder {
 
     private static String queryBD = "select * from bd_master where M_ID IN  ";
 
-    private static String previewQueryBD = "select M_ID, ABSTRACTDATA from bd_master where M_ID IN  ";
-
     public DocumentBuilder newInstance(Database database) {
         return new BDDocBuilder(database);
     }
@@ -147,22 +92,23 @@ public class BDDocBuilder implements DocumentBuilder {
      * This method takes a list of DocID objects and dataFormat and returns a List of EIDoc Objects based on a particular dataformat @ param listOfDocIDs @
      * param dataFormat @ return List --list of EIDoc's @ exception DocumentBuilderException
      */
-    public List<?> buildPage(List<DocID> listOfDocIDs, String dataFormat) throws DocumentBuilderException {
-        List<EIDoc> l = null;
-        if (Citation.CITATION_PREVIEW.equalsIgnoreCase(dataFormat)) {
-            l = loadPreviewData(listOfDocIDs);
-        } else {
+    public List buildPage(List listOfDocIDs, String dataFormat) throws DocumentBuilderException {
+        List l = null;
+        try {
             l = loadDocument(listOfDocIDs, dataFormat);
+
+        } catch (Exception e) {
+            throw new DocumentBuilderException(e);
         }
 
         return l;
     }
 
-    private List<EIDoc> loadDocument(List<DocID> listOfDocIDs, String dataFormat) throws DocumentBuilderException {
+    private List loadDocument(List listOfDocIDs, String dataFormat) throws Exception {
         Perl5Util perl = new Perl5Util();
-        Hashtable<String, DocID> oidTable = getDocIDTable(listOfDocIDs);
+        Hashtable oidTable = getDocIDTable(listOfDocIDs);
 
-        List<EIDoc> list = new ArrayList<EIDoc>();
+        List list = new ArrayList();
         int count = 0;
         Connection con = null;
         Statement stmt = null;
@@ -208,7 +154,7 @@ public class BDDocBuilder implements DocumentBuilder {
                     citedby.setKey(Keys.CITEDBY);
 
                     if (rset.getString("DOI") != null) {
-                        citedby.setDoi(URLEncoder.encode((rset.getString("DOI")).trim(), "UTF-8"));
+                        citedby.setDoi(URLEncoder.encode((rset.getString("DOI")).trim()));
                     }
 
                     if (rset.getString("PII") != null) {
@@ -248,8 +194,7 @@ public class BDDocBuilder implements DocumentBuilder {
                 if (rset.getString("CODEN") != null) {
                     buildField(Keys.CODEN, BdCoden.convert(rset.getString("CODEN")), ht);
                 }
-                // do not call build field, getIssn will return the
-                // ElementDataMap
+                // do not call build field, getIssn will return the ElementDataMap
                 formatRIS(getIssn(rset.getString("ISSN"), rset.getString("EISSN"), ht, dataFormat), dataFormat, Keys.ISSN, Keys.RIS_SN);
 
                 buildField(Keys.ABBRV_SERIAL_TITLE, rset.getString("SOURCETITLEABBREV"), ht);
@@ -376,13 +321,13 @@ public class BDDocBuilder implements DocumentBuilder {
                         formatRIS(buildField(Keys.MAIN_HEADING, getMainTerm(rset.getString("MAINHEADING")), ht), dataFormat, Keys.MAIN_HEADING, Keys.RIS_KW);
                     } else if (database.getMask() == 1024) {
                         buildField(Keys.CLASS_CODES_MULTI, new XMLMultiWrapper(ELT_CLASS_CODES, setElementData(rset.getString("CLASSIFICATIONDESC"))), ht);
-                        // formatRIS(buildField(Keys.MAIN_HEADING,rset.getString("MAINHEADING"),ht),
-                        // dataFormat,Keys.MAIN_HEADING, Keys.RIS_KW);
+                        // formatRIS(buildField(Keys.MAIN_HEADING,rset.getString("MAINHEADING"),ht), dataFormat,Keys.MAIN_HEADING, Keys.RIS_KW);
 
                     }
 
                     String apict = rset.getString("APICT");
                     String apict1 = rset.getString("APICT1");
+                    ArrayList mcv = new ArrayList();
 
                     CVTerms cvterms = null;
                     if (apict != null && !apict.trim().equals("")) {
@@ -503,14 +448,6 @@ public class BDDocBuilder implements DocumentBuilder {
                 count++;
 
             }
-        } catch (SQLException e) {
-            throw new DocumentBuilderException(e);
-        } catch (ConnectionPoolException e) {
-            throw new DocumentBuilderException(e);
-        } catch (NoConnectionAvailableException e) {
-            throw new DocumentBuilderException(e);
-        } catch (UnsupportedEncodingException e) {
-            throw new DocumentBuilderException(e);
         } finally {
 
             if (rset != null) {
@@ -542,69 +479,6 @@ public class BDDocBuilder implements DocumentBuilder {
 
     }
 
-    private List<EIDoc> loadPreviewData(List<DocID> listOfDocIDs) throws DocumentBuilderException {
-        // Perl5Util perl = new Perl5Util();
-        Hashtable<String, DocID> oidTable = getDocIDTable(listOfDocIDs);
-
-        List<EIDoc> list = new ArrayList<EIDoc>();
-        Connection con = null;
-        Statement stmt = null;
-        ResultSet rset = null;
-        ConnectionBroker broker = null;
-
-        try {
-            String INString = buildINString(listOfDocIDs);
-            broker = ConnectionBroker.getInstance();
-            con = broker.getConnection(DatabaseConfig.SEARCH_POOL);
-            stmt = con.createStatement();
-            rset = stmt.executeQuery(previewQueryBD + INString);
-            while (rset.next()) {
-                ElementDataMap ht = new ElementDataMap();
-                DocID did = (DocID) oidTable.get(rset.getString("M_ID"));
-                EIDoc eiDoc = new EIDoc(did, ht, Citation.CITATION_PREVIEW);
-
-                ht.put(Keys.DOCID, (DocID) oidTable.get(rset.getString("M_ID")));
-                ht.put(Keys.ABSTRACT, new XMLWrapper(Keys.ABSTRACT, getAbstract(rset)));
-                list.add(eiDoc);
-
-            }
-        } catch (ConnectionPoolException e) {
-            throw new DocumentBuilderException("database connection pool problem", e);
-        } catch (NoConnectionAvailableException e) {
-            throw new DocumentBuilderException("database connection pool avilable problem", e);
-        } catch (SQLException e) {
-            throw new DocumentBuilderException("database fetch problem", e);
-        } catch (Exception e) {
-            throw new DocumentBuilderException("database fetch problem", e);
-        } finally {
-
-            if (rset != null) {
-                try {
-                    rset.close();
-                } catch (Exception e1) {
-                    throw new DocumentBuilderException("database connection pool problem", e1);
-                }
-            }
-
-            if (stmt != null) {
-                try {
-                    stmt.close();
-                } catch (Exception sqle) {
-                    throw new DocumentBuilderException("database connection pool problem", sqle);
-                }
-            }
-
-            if (con != null) {
-                try {
-                    broker.replaceConnection(con, DatabaseConfig.SEARCH_POOL);
-                } catch (Exception cpe) {
-                    throw new DocumentBuilderException("database connection pool problem", cpe);
-                }
-            }
-        }
-        return list;
-    }
-
     public String replaceBar(String str) {
         String result = perl.substitute("s/\\|/<\\/br>/g", str);
         return result;
@@ -622,7 +496,7 @@ public class BDDocBuilder implements DocumentBuilder {
         template = perl.substitute("s/0//g", template);
         StringBuffer sbTemplate = new StringBuffer();
 
-        List<String> lstTokens = new ArrayList<String>();
+        List lstTokens = new ArrayList();
 
         perl.split(lstTokens, "/\\|/", template);
 
@@ -693,7 +567,6 @@ public class BDDocBuilder implements DocumentBuilder {
 
     // BdCoden.convert
 
-    @SuppressWarnings("unused")
     private String getEmail(String email) {
         if (email != null && email.indexOf(BdParser.IDDELIMITER) > -1) {
             email = email.substring(email.indexOf(BdParser.IDDELIMITER) + 1);
@@ -708,7 +581,7 @@ public class BDDocBuilder implements DocumentBuilder {
         return null;
     }
 
-    private String getLanguage(String languageString, String dataFormat) {
+    private String getLanguage(String languageString, String dataFormat) throws Exception {
 
         if (languageString != null) {
             if ((dataFormat.equals(Citation.CITATION_FORMAT) || dataFormat.equals(Abstract.ABSTRACT_FORMAT))
@@ -723,7 +596,7 @@ public class BDDocBuilder implements DocumentBuilder {
 
     }
 
-    private String getVolumeIssue(String volume, String issue)  {
+    private String getVolumeIssue(String volume, String issue) throws Exception {
         String strVolIss = StringUtil.EMPTY_STRING;
         ;
         if (volume != null) {
@@ -855,7 +728,7 @@ public class BDDocBuilder implements DocumentBuilder {
         return eiDoc;
     }
 
-    private ElementDataMap buildField(Key key, ElementData data, ElementDataMap ht)  {
+    private ElementDataMap buildField(Key key, ElementData data, ElementDataMap ht) throws Exception {
         if (data != null && data.getElementData() != null) {
             ht.put(key, data);
         }
@@ -863,14 +736,14 @@ public class BDDocBuilder implements DocumentBuilder {
         return ht;
     }
 
-    private ElementDataMap buildField(Key key, String data, ElementDataMap ht)  {
+    private ElementDataMap buildField(Key key, String data, ElementDataMap ht) throws Exception {
         if (data != null && (data.trim()).length() > 0) {
             ht.put(key, new XMLWrapper(key, data.trim()));
         }
         return ht;
     }
 
-    private ElementDataMap buildField(Key key, String[] data, ElementDataMap ht)  {
+    private ElementDataMap buildField(Key key, String[] data, ElementDataMap ht) throws Exception {
         if (data != null && data.length > 0) {
             ht.put(key, new XMLMultiWrapper(key, data));
         }
@@ -891,14 +764,14 @@ public class BDDocBuilder implements DocumentBuilder {
         return null;
     }
 
-    private String getPublisher(String name, String address, String dataFormat, ElementDataMap ht)  {
+    private String getPublisher(String name, String address, String dataFormat, ElementDataMap ht) throws Exception {
         String outputString = null;
         name = getFirstPublisher(name);
         StringBuffer addressBuffer = new StringBuffer();
         if (dataFormat.equals(FullDoc.FULLDOC_FORMAT) && address != null) {
             if (address.indexOf(BdParser.IDDELIMITER) > -1) {
                 BdConfLocations aff = new BdConfLocations(address);
-                List<BdAffiliation> aList = aff.getAffiliations();
+                List aList = aff.getAffiliations();
                 for (int i = 0; i < aList.size(); i++) {
                     BdAffiliation bdaff = (BdAffiliation) aList.get(i);
                     addressBuffer.append(bdaff.getDisplayValue());
@@ -921,7 +794,7 @@ public class BDDocBuilder implements DocumentBuilder {
             if (address != null) {
                 if (address.indexOf(BdParser.IDDELIMITER) > -1) {
                     BdConfLocations aff = new BdConfLocations(address);
-                    List<BdAffiliation> aList = aff.getAffiliations();
+                    List aList = aff.getAffiliations();
                     for (int i = 0; i < aList.size(); i++) {
                         BdAffiliation bdaff = (BdAffiliation) aList.get(i);
                         addressBuffer.append(bdaff.getDisplayValue());
@@ -940,12 +813,12 @@ public class BDDocBuilder implements DocumentBuilder {
         }
     }
 
-    private String getCitationTitle(String titleString)  {
+    private String getCitationTitle(String titleString) throws Exception {
         String title = null;
 
         if (titleString != null && titleString.length() > 0) {
             BdCitationTitle bdTitle = new BdCitationTitle(titleString);
-            List<BdCitationTitle> bdTitleList = bdTitle.getCitationTitle();
+            List bdTitleList = bdTitle.getCitationTitle();
             if (bdTitleList != null) {
                 for (int i = 0; i < bdTitleList.size(); i++) {
                     BdCitationTitle titleObject = (BdCitationTitle) bdTitleList.get(i);
@@ -962,7 +835,7 @@ public class BDDocBuilder implements DocumentBuilder {
         return title;
     }
 
-    private String getDocumentType(String ct, String confCode)  {
+    private String getDocumentType(String ct, String confCode) throws Exception {
         boolean confCodeFlag = false;
         if (confCode != null) {
             confCodeFlag = true;
@@ -1014,7 +887,7 @@ public class BDDocBuilder implements DocumentBuilder {
         return strPage.trim();
     }
 
-    private PageRange getPageRange(String dataFormat, String page, String articleNumber, String issn, String eissn, Perl5Util perl)  {
+    private PageRange getPageRange(String dataFormat, String page, String articleNumber, String issn, String eissn, Perl5Util perl) throws Exception {
         String strPage = null;
 
         if (page != null) {
@@ -1059,13 +932,11 @@ public class BDDocBuilder implements DocumentBuilder {
         return null;
     }
 
-    private ElementDataMap getIssn(String issn, String eissn, ElementDataMap ht, String dataFormat)  {
+    private ElementDataMap getIssn(String issn, String eissn, ElementDataMap ht, String dataFormat) throws Exception {
         if (dataFormat.equals(FullDoc.FULLDOC_FORMAT) || dataFormat.equals(Abstract.ABSTRACT_FORMAT)) {
             // if either exist include both ISSN and EISSN under separate keys
-            // Separate keys are used so both EISSN and ISSN display with
-            // separate labels
-            // and so both EISSN and ISSN are output toXML. Both keys are listed
-            // in DETAILED_KEYS
+            // Separate keys are used so both EISSN and ISSN display with separate labels
+            // and so both EISSN and ISSN are output toXML. Both keys are listed in DETAILED_KEYS
 
             if (issn != null) {
                 ht.put(Keys.ISSN, new ISSN(issn));
@@ -1076,8 +947,7 @@ public class BDDocBuilder implements DocumentBuilder {
         } else {
             // include the ISSN or EISSN under the ISSN key
             // since only the ISSN key is listed for all other formats
-            // the Key used in creating the ISSN object will determine the label
-            // used when output
+            // the Key used in creating the ISSN object will determine the label used when output
             if (issn != null) {
                 ht.put(Keys.ISSN, new ISSN(issn));
             } else if (eissn != null) {
@@ -1087,7 +957,7 @@ public class BDDocBuilder implements DocumentBuilder {
         return ht;
     }
 
-    private String getIsbn(String isbn, int type)  {
+    private String getIsbn(String isbn, int type) throws Exception {
         BdIsbn bdisbn = new BdIsbn(isbn);
         String isbnString = null;
         if (type == 10) {
@@ -1099,12 +969,12 @@ public class BDDocBuilder implements DocumentBuilder {
         return isbnString;
     }
 
-    private String getTranslatedCitationTitle(String titleString) {
+    private String getTranslatedCitationTitle(String titleString) throws Exception {
         String title = null;
 
         if (titleString != null && titleString.length() > 0) {
             BdCitationTitle bdTitle = new BdCitationTitle(titleString);
-            List<BdCitationTitle> bdTitleList = bdTitle.getTranslatedCitationTitle();
+            List bdTitleList = bdTitle.getTranslatedCitationTitle();
             if (bdTitleList != null) {
                 for (int i = 0; i < bdTitleList.size(); i++) {
                     BdCitationTitle titleObject = (BdCitationTitle) bdTitleList.get(i);
@@ -1122,7 +992,7 @@ public class BDDocBuilder implements DocumentBuilder {
         return title;
     }
 
-    private String getConferenceLocation(String confLocation) {
+    private String getConferenceLocation(String confLocation) throws Exception {
         if (confLocation != null) {
             BdConfLocations bdc = new BdConfLocations(confLocation);
             StringBuffer result = new StringBuffer();
@@ -1131,8 +1001,7 @@ public class BDDocBuilder implements DocumentBuilder {
                 String cf = cfl[i].trim();
                 // jam - This code appears to be uppercasing the first character
                 // and then appending the remaining characters
-                // previously it was causing a String index out of range
-                // exception
+                // previously it was causing a String index out of range exception
                 // Test here to make sure we have more than a single character
                 if ((cf != null) && (cf.length() > 1)) {
                     result.append(cf.substring(0, 1).toUpperCase());
@@ -1147,10 +1016,10 @@ public class BDDocBuilder implements DocumentBuilder {
         return null;
     }
 
-    private String getCorrespondingAuAff(String coAuAff) {
+    private String getCorrespondingAuAff(String coAuAff) throws Exception {
         if (coAuAff != null) {
             BdCorrespAffiliations aff = new BdCorrespAffiliations(coAuAff);
-            List<BdCorrespAffiliation> l = aff.getAffiliations();
+            ArrayList l = (ArrayList) aff.getAffiliations();
 
             if (l == null || l.size() == 0) {
                 return null;
@@ -1167,7 +1036,7 @@ public class BDDocBuilder implements DocumentBuilder {
         return null;
     }
 
-    private static Map<String, String> badCharacterMap = new HashMap<String, String>();
+    private static Map badCharacterMap = new HashMap();
     static {
         // &die is the same as an &uml
         badCharacterMap.put("a&die;", "&#228;");
@@ -1252,29 +1121,19 @@ public class BDDocBuilder implements DocumentBuilder {
                 String strMatch = m.group();
                 String strReplace = (String) badCharacterMap.get(strMatch);
                 if (strReplace == null) {
-                    // if there is no map, just replace with the intial
-                    // character
-                    // i.e. a,S,Z without the trailing entity so it will at
-                    // least look cleaner
+                    // if there is no map, just replace with the intial character
+                    // i.e. a,S,Z without the trailing entity so it will at least look cleaner
                     strReplace = m.group(1);
-                    // do not strip off trailing &, < or > ! i.e. A&amp; will
-                    // just remain A&amp;
-                    // if(m.group(2).equals("&amp;") ||
-                    // m.group(2).equals("&gt;") || m.group(2).equals("&lt;")) {
-
-                    // Hanan 04/26/2013 fix missing multiplication sign "x"
-                    // [&times;] in title
-                    if (m.group(2).equals("&amp;") || m.group(2).equals("&gt;") || m.group(2).equals("&lt;") || m.group(2).equals("&times;")) {
+                    // do not strip off trailing &, < or > ! i.e. A&amp; will just remain A&amp;
+                    if (m.group(2).equals("&amp;") || m.group(2).equals("&gt;") || m.group(2).equals("&lt;")) {
                         strReplace = m.group();
                     }
                 }
-                // The appendReplacement method appends everything up to the
-                // next match and the replacement for that match.
+                // The appendReplacement method appends everything up to the next match and the replacement for that match.
                 m.appendReplacement(sb, strReplace);
                 result = m.find();
             }
-            // The appendTail appends the strings at the end, after the last
-            // match.
+            // The appendTail appends the strings at the end, after the last match.
             m.appendTail(sb);
             strValue = sb.toString();
         }
@@ -1283,7 +1142,7 @@ public class BDDocBuilder implements DocumentBuilder {
 
     private Contributors getAuthors(Key key, String authorString, String authorString1, String dataFormat)
 
-     {
+    throws Exception {
         StringBuffer auString = new StringBuffer();
 
         if (authorString != null) {
@@ -1294,9 +1153,9 @@ public class BDDocBuilder implements DocumentBuilder {
         }
 
         if (auString.length() > 0) {
-            List<Contributor> authorNames = new ArrayList<Contributor>();
+            List authorNames = new ArrayList();
             BdAuthors authors = new BdAuthors(auString.toString());
-            List<BdAuthor> authorList = authors.getAuthors();
+            List authorList = authors.getAuthors();
             for (int i = 0; i < authorList.size(); i++) {
 
                 BdAuthor author = (BdAuthor) authorList.get(i);
@@ -1319,11 +1178,11 @@ public class BDDocBuilder implements DocumentBuilder {
         return null;
     }
 
-    private ElementData getEditors(Key key, String authorString, String editorsString, String confEditor)  {
+    private ElementData getEditors(Key key, String authorString, String editorsString, String confEditor) throws Exception {
         BdEditors editors = new BdEditors(editorsString);
 
-        List<BdAuthor> editorList = editors.getEditors();
-        List<Contributor> editorNames = new ArrayList<Contributor>();
+        List editorList = editors.getEditors();
+        List editorNames = new ArrayList();
         if (authorString == null && editorsString != null) {
             for (int i = 0; i < editorList.size(); i++) {
                 BdAuthor author = (BdAuthor) editorList.get(i);
@@ -1347,10 +1206,10 @@ public class BDDocBuilder implements DocumentBuilder {
         }
     }
 
-    private ElementData getCorAuthors(Key key, String authorString, String emailString)  {
+    private ElementData getCorAuthors(Key key, String authorString, String emailString) throws Exception {
         BdEditors editors = new BdEditors(authorString);
-        List<BdAuthor> editorList = editors.getEditors();
-        List<Contributor> editorNames = new ArrayList<Contributor>();
+        List editorList = editors.getEditors();
+        List editorNames = new ArrayList();
 
         for (int i = 0; i < editorList.size(); i++) {
             BdAuthor author = (BdAuthor) editorList.get(i);
@@ -1370,7 +1229,7 @@ public class BDDocBuilder implements DocumentBuilder {
 
     }
 
-    private ElementData getClassification(Key key, String classCode, Database database)  {
+    private ElementData getClassification(Key key, String classCode, Database database) throws Exception {
         if (classCode != null) {
             return new Classifications(key, setElementData(classCode), database);
         } else {
@@ -1378,7 +1237,7 @@ public class BDDocBuilder implements DocumentBuilder {
         }
     }
 
-    private Affiliations getAuthorsAffiliation(Key key, String affString, String affString1, String dataFormat)  {
+    private Affiliations getAuthorsAffiliation(Key key, String affString, String affString1, String dataFormat) throws Exception {
         StringBuffer affBuffer = new StringBuffer();
 
         if (affString != null) {
@@ -1388,36 +1247,29 @@ public class BDDocBuilder implements DocumentBuilder {
             affBuffer.append(affString1);
         }
         if (affBuffer.length() > 0) {
-            List<Affiliation> affList = new ArrayList<Affiliation>();
+            List affList = new ArrayList();
             BdAffiliations aff = new BdAffiliations(affBuffer.toString());
-            List<BdAffiliation> aList = aff.getAffiliations();
+            List aList = aff.getAffiliations();
             for (int i = 0; i < aList.size(); i++) {
                 BdAffiliation bdaff = (BdAffiliation) aList.get(i);
                 String strAffDisplay = cleanBadCharacters(bdaff.getDisplayValue());
 
                 if (i == 0 && dataFormat.equalsIgnoreCase(RIS.RIS_FORMAT)) {
-                    // affList.add(new Affiliation(key, strAffDisplay)); //original
-                    // return (new Affiliations(Keys.RIS_AD, affList)); //original
-                    affList.add(new Affiliation(key, strAffDisplay, bdaff.getIdDislpayValue()));
+                    affList.add(new Affiliation(key, strAffDisplay));
+                    return (new Affiliations(Keys.RIS_AD, affList));
                 } else if (dataFormat.equalsIgnoreCase(Citation.XMLCITATION_FORMAT) && i == 0) {
-                    // affList.add(new Affiliation(key, strAffDisplay)); //original
-                    // return (new Affiliations(Keys.AUTHOR_AFFS, affList)); //original
-                    affList.add(new Affiliation(key, strAffDisplay, bdaff.getIdDislpayValue()));
+                    affList.add(new Affiliation(key, strAffDisplay));
+                    return (new Affiliations(Keys.AUTHOR_AFFS, affList));
                 } else {
                     affList.add(new Affiliation(key, strAffDisplay, bdaff.getIdDislpayValue()));
                 }
             }
-            if (dataFormat.equalsIgnoreCase(RIS.RIS_FORMAT)) {
-                return (new Affiliations(Keys.RIS_AD, affList));
-            } else {
-                return (new Affiliations(Keys.AUTHOR_AFFS, affList));
-            }
+            return (new Affiliations(Keys.AUTHOR_AFFS, affList));
         }
         return null;
     }
 
-    @SuppressWarnings("unused")
-    private String hasAbstract(ResultSet rs) throws SQLException  {
+    private String hasAbstract(ResultSet rs) throws Exception {
         String abs = null;
         Clob clob = rs.getClob("AB");
         if (clob != null) {
@@ -1439,7 +1291,7 @@ public class BDDocBuilder implements DocumentBuilder {
      *
      * @return String
      */
-    private String buildINString(List<DocID> listOfDocIDs) {
+    private String buildINString(List listOfDocIDs) throws Exception {
         StringBuffer sQuery = new StringBuffer();
         sQuery.append("(");
         for (int k = listOfDocIDs.size(); k > 0; k--) {
@@ -1456,7 +1308,7 @@ public class BDDocBuilder implements DocumentBuilder {
     }
 
     /* TS if volume is null and str is not null print n */
-    private String replaceVolumeNullWithEmptyString(String str)  {
+    private String replaceVolumeNullWithEmptyString(String str) throws Exception {
         if (str == null || str.equals("QQ")) {
             str = "";
         }
@@ -1479,7 +1331,7 @@ public class BDDocBuilder implements DocumentBuilder {
         return str;
     }
 
-    private String getAbstract(ResultSet rs) throws SQLException  {
+    private String getAbstract(ResultSet rs) throws Exception {
         String abs = null;
         Clob clob = rs.getClob("ABSTRACTDATA");
         if (clob != null) {
@@ -1490,9 +1342,7 @@ public class BDDocBuilder implements DocumentBuilder {
 
     }
 
-    @SuppressWarnings("unused")
-    private static boolean hasARFix(String strISSN) // Checks ISSNs with AR
-                                                    // field problems
+    private static boolean hasARFix(String strISSN) // Checks ISSNs with AR field problems
     {
         if (issnARFix.containsKey(strISSN.replaceAll("-", ""))) {
             return true;
@@ -1501,7 +1351,7 @@ public class BDDocBuilder implements DocumentBuilder {
         }
     }
 
-    private static final Map<String, String> mapDoctypeToRIScode = new HashMap<String, String>();
+    private static final Map mapDoctypeToRIScode = new HashMap();
     {
         mapDoctypeToRIScode.put("Journal article (JA)", "JOUR");
         mapDoctypeToRIScode.put("Conference article (CA)", "CONF");
@@ -1531,7 +1381,7 @@ public class BDDocBuilder implements DocumentBuilder {
         return str;
     }
 
-    private static final Map<String, String> mapAbbrevToDoctype = new HashMap<String, String>();
+    private static final Map mapAbbrevToDoctype = new HashMap();
     {
         mapAbbrevToDoctype.put("JA", "Journal article (JA)");
         mapAbbrevToDoctype.put("CA", "Conference article (CA)");
@@ -1560,8 +1410,8 @@ public class BDDocBuilder implements DocumentBuilder {
         return str;
     }
 
-    private Hashtable<String, DocID> getDocIDTable(List<DocID> listOfDocIDs) {
-        Hashtable<String, DocID> h = new Hashtable<String, DocID>();
+    private Hashtable getDocIDTable(List listOfDocIDs) {
+        Hashtable h = new Hashtable();
 
         for (int i = 0; i < listOfDocIDs.size(); ++i) {
             DocID d = (DocID) listOfDocIDs.get(i);
@@ -1611,9 +1461,9 @@ public class BDDocBuilder implements DocumentBuilder {
         return str;
     }
 
-    public String[] setEltTermsElementData(String elementVal, ArrayList<String> mcv) {
+    public String[] setEltTermsElementData(String elementVal, ArrayList mcv) {
         String[] array = null;
-        ArrayList<String> cv = new ArrayList<String>();
+        ArrayList cv = new ArrayList();
 
         if (elementVal != null && elementVal.trim().length() > 0) {
             if (elementVal.indexOf(BdParser.IDDELIMITER) > -1) {
@@ -1649,7 +1499,7 @@ public class BDDocBuilder implements DocumentBuilder {
 
     public String[] setTreatments(String treatments, Database db) {
         String[] array = null;
-        ArrayList<String> result = new ArrayList<String>();
+        ArrayList result = new ArrayList();
         if (treatments != null && treatments.trim().length() > 0) {
             if (db != null && db.getDataDictionary() != null) {
                 array = treatments.split(BdParser.AUDELIMITER, -1);
@@ -1715,8 +1565,7 @@ public class BDDocBuilder implements DocumentBuilder {
             ElementData ed = map.get(ORIGINAL_KEY);
 
             if (ed != null) {
-                // jam - If doctype is null, treat the article as a Journal
-                // Article
+                // jam - If doctype is null, treat the article as a Journal Article
                 if ((docType == null) || docType.equals("Journal article (JA)")) {
                     ed.setKey(Keys.RIS_JO);
                     map.put(Keys.RIS_JO, ed);
@@ -1730,7 +1579,7 @@ public class BDDocBuilder implements DocumentBuilder {
     }
 
     private KeyValuePair[] setCVS(String cvs) {
-        List<KeyValuePair> list = new ArrayList<KeyValuePair>();
+        ArrayList list = new ArrayList();
         StringTokenizer st = new StringTokenizer(cvs, ";", false);
         String strToken = null;
 
@@ -1777,7 +1626,7 @@ public class BDDocBuilder implements DocumentBuilder {
 
     public String formatJournalSourcePub(String jspub) {
         if (jspub != null && jspub.indexOf(BdParser.IDDELIMITER) > -1) {
-            List<String> parms = new ArrayList<String>();
+            List parms = new ArrayList();
             perl.split(parms, "/" + BdParser.IDDELIMITER + "/", jspub);
             if (parms.size() > 1) {
                 jspub = (String) parms.get(0);
@@ -1790,7 +1639,7 @@ public class BDDocBuilder implements DocumentBuilder {
         StringBuffer sbSan = new StringBuffer();
         sVal = perl.substitute("s/;//g", sVal);
         if (sVal.indexOf(":") > -1) {
-            List<String> parms = new ArrayList<String>();
+            List parms = new ArrayList();
             perl.split(parms, "/:/", sVal);
             if (parms.size() == 2)
                 sVal = (String) parms.get(1);
@@ -1832,5 +1681,4 @@ public class BDDocBuilder implements DocumentBuilder {
     public Key[] getDetailedKeys() {
         return DETAILED_KEYS;
     }
-
 }

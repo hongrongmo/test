@@ -287,7 +287,7 @@ public class NTISCombiner extends Combiner {
         return s.replace(',', ';');
     }
 
-    private String formatCV(String cv) {
+    public String formatCV(String cv) {
         if (cv == null) {
             return null;
         }
@@ -300,7 +300,7 @@ public class NTISCombiner extends Combiner {
         return cv;
     }
 
-    private String formatFL(String fl) {
+    public String formatFL(String fl) {
         if (fl == null) {
             return null;
         }
@@ -372,7 +372,7 @@ public class NTISCombiner extends Combiner {
         }
     }
 
-    private String formatDelimiter(String fielddata) {
+    public String formatDelimiter(String fielddata) {
         if (fielddata == null) {
             return null;
         }
@@ -607,7 +607,7 @@ public class NTISCombiner extends Combiner {
         return notes;
     }
 
-    private String formatAffil(String af) {
+    public String formatAffil(String af) {
         if (af == null) {
             return null;
         }
@@ -821,7 +821,7 @@ public class NTISCombiner extends Combiner {
 
     }
 
-    private String[] prepareAuthor(String aString) throws Exception {
+    public String[] prepareAuthor(String aString) throws Exception {
         StringBuffer buf = new StringBuffer();
         AuthorStream astream = new AuthorStream(new ByteArrayInputStream(aString.getBytes()));
         String s = null;
@@ -851,7 +851,7 @@ public class NTISCombiner extends Combiner {
         return sVal;
     }
 
-    private String[] prepareMulti(String multiString) throws Exception {
+    public String[] prepareMulti(String multiString) throws Exception {
 
         AuthorStream astream = new AuthorStream(new ByteArrayInputStream(multiString.getBytes()));
         String s = null;

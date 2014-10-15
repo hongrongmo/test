@@ -121,14 +121,14 @@ public class BdPersonalName
 		this.personalName = personalName;
 	}
 
-	public List<BdPersonalName> getPersonalName()
+	public List getPersonalName()
 	{
 		return parsePersonalNameString();
 	}
 
-	private List<BdPersonalName> parsePersonalNameString()
+	private List parsePersonalNameString()
 	{
-		List<BdPersonalName> personalNameList = new ArrayList<BdPersonalName>();
+		List personalNameList = new ArrayList();
 		if(personalName != null && personalName.indexOf(BdParser.AUDELIMITER)>0)
 		{
 			StringTokenizer personalNameGroupToken = new StringTokenizer(personalName,BdParser.AUDELIMITER);
