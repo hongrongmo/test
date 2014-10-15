@@ -493,7 +493,7 @@ public class INSPECCombiner extends Combiner {
         }
     }
 
-    String[] prepareMulti(String multiString) throws Exception {
+    public String[] prepareMulti(String multiString) throws Exception {
         ArrayList<String> list = new ArrayList<String>();
         StringTokenizer st = new StringTokenizer(multiString, InspecXMLReader.AUDELIMITER);
         String s;
@@ -509,7 +509,7 @@ public class INSPECCombiner extends Combiner {
 
     }
 
-    String[] prepareAuthor(String aString) throws Exception {
+    public String[] prepareAuthor(String aString) throws Exception {
 
         ArrayList<String> list = new ArrayList<String>();
         StringTokenizer st = new StringTokenizer(aString, InspecXMLReader.AUDELIMITER);

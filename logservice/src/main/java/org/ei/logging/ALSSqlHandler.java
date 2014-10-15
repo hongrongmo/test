@@ -3,6 +3,7 @@ package org.ei.logging;
 import java.sql.Connection;
 import java.sql.Statement;
 
+import org.apache.log4j.Logger;
 import org.apache.oro.text.regex.MalformedPatternException;
 import org.apache.oro.text.regex.MatchResult;
 import org.apache.oro.text.regex.Pattern;
@@ -13,9 +14,11 @@ import org.apache.oro.text.regex.Perl5Matcher;
 
 public class ALSSqlHandler {
 
+    private static final Logger log4j = Logger.getLogger(ALSSqlHandler.class);
+
 	/**
 	 * Gets the statement attribute of the ALSSqlHandler object
-	 * 
+	 *
 	 * @param event
 	 *            Description of Parameter
 	 * @return The statement value
@@ -25,7 +28,6 @@ public class ALSSqlHandler {
 	 */
 	public void writeMessage(CLFMessage message, Connection con) throws Exception {
 		StringBuffer insert = new StringBuffer();
-		boolean debug = false;
 
 		// REGEX stuff
 		int limit, interps, i;
@@ -52,12 +54,12 @@ public class ALSSqlHandler {
 
 		if (matcher.contains(message.getCLFMessage(), pattern)) {
 			MatchResult result = matcher.getMatch();
-			if (debug) {
-				System.out.println("APPID   : " + result.group(1));
-				System.out.println("REQID   : " + result.group(2));
-				System.out.println("HTTPDATA: " + result.group(3) + " size=" + result.group(3).toString().length());
-				System.out.println("COOKIE  : " + result.group(4));
-				System.out.println("APPDATA : " + result.group(5) + " size=" + result.group(5).toString().length());
+			if (log4j.isInfoEnabled()) {
+				log4j.info("APPID   : " + result.group(1));
+				log4j.info("REQID   : " + result.group(2));
+				log4j.info("HTTPDATA: " + result.group(3) + " size=" + result.group(3).toString().length());
+				log4j.info("COOKIE  : " + result.group(4));
+				log4j.info("APPDATA : " + result.group(5) + " size=" + result.group(5).toString().length());
 			}
 
 			appID = result.group(1);
@@ -90,8 +92,8 @@ public class ALSSqlHandler {
 			insert = new StringBuffer();
 			insert.append("SELECT * FROM dual");
 		}
-		if (debug) {
-			System.out.println(insert.toString());
+        if (log4j.isInfoEnabled()) {
+			log4j.info(insert.toString());
 		}
 
 		String sql = insert.toString();

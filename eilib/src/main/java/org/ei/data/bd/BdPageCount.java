@@ -3,86 +3,107 @@ package org.ei.data.bd;
 import java.util.*;
 import org.ei.data.bd.loadtime.*;
 
-public class BdPageCount {
-    private String type;
-    private String value;
-    private String pageCountString;
+public class BdPageCount
+{
+	private String type;
+	private String value;
+	private String pageCountString;
 
-    public BdPageCount() {
-    }
+	public BdPageCount()
+	{
+	}
 
-    public BdPageCount(String pageCount) {
-        setPageCount(pageCount);
-    }
+	public BdPageCount(String pageCount)
+	{
+		setPageCount(pageCount);
+	}
 
-    public void setType(String type) {
-        this.type = type;
-    }
+	public void setType(String type)
+	{
+		this.type = type;
+	}
 
-    public void setValue(String value) {
-        this.value = value;
-    }
+	public void setValue(String value)
+	{
+		this.value = value;
+	}
 
-    public String getType() {
-        return type;
-    }
+	public String getType()
+	{
+		return type;
+	}
 
-    public String getValue() {
-        return value;
-    }
+	public String getValue()
+	{
+		return value;
+	}
 
-    public void setPageCount(String pageCountString) {
-        this.pageCountString = pageCountString;
-    }
+	public void setPageCount(String pageCountString)
+	{
+		this.pageCountString = pageCountString;
+	}
 
-    public List<BdPageCount> getPageCount() {
-        return parsePageCount();
-    }
+	public List getPageCount()
+	{
+		return parsePageCount();
+	}
 
-    private List<BdPageCount> parsePageCount() {
-        List<BdPageCount> pageCountList = new ArrayList<BdPageCount>();
-        if (pageCountString != null) {
-            StringTokenizer pageCountToken = new StringTokenizer(pageCountString, BdParser.AUDELIMITER);
+	private List parsePageCount()
+	{
+		List pageCountList = new ArrayList();
+		if(pageCountString != null)
+		{
+			StringTokenizer pageCountToken = new StringTokenizer(pageCountString,BdParser.AUDELIMITER);
 
-            while (pageCountToken.hasMoreTokens()) {
-                String pageCountGroupString = pageCountToken.nextToken();
-                String[] singlePageCountObject = null;
-                BdPageCount pageCount = new BdPageCount();
-                if (pageCountGroupString != null) {
-                    if (pageCountGroupString.indexOf(BdParser.IDDELIMITER) > 0) {
-                        singlePageCountObject = pageCountGroupString.split(BdParser.IDDELIMITER);
-                        if (singlePageCountObject != null && singlePageCountObject.length > 1) {
-                            pageCount.setType(singlePageCountObject[0]);
-                            pageCount.setValue(singlePageCountObject[1]);
-                        }
+			while(pageCountToken.hasMoreTokens())
+			{
+				String pageCountGroupString=pageCountToken.nextToken();
+				String[] singlePageCountObject = null;
+				BdPageCount pageCount = new BdPageCount();
+				if(pageCountGroupString != null)
+				{
+					if(pageCountGroupString.indexOf(BdParser.IDDELIMITER)>0)
+					{
+						singlePageCountObject = pageCountGroupString.split(BdParser.IDDELIMITER);
+						if(singlePageCountObject!=null && singlePageCountObject.length>1)
+						{
+							pageCount.setType(singlePageCountObject[0]);
+							pageCount.setValue(singlePageCountObject[1]);
+						}
 
-                    } else {
-                        pageCount.setValue(pageCountGroupString);
-                    }
-                    pageCountList.add(pageCount);
-                }
+					}
+					else
+					{
+						pageCount.setValue(pageCountGroupString);
+					}
+					pageCountList.add(pageCount);
+				}
 
-            }
-        }
-        return pageCountList;
-    }
+			}
+		}
+		return pageCountList;
+	}
 
-    public String getDisplayValue() {
-        List<BdPageCount> pageCount = parsePageCount();
-        StringBuffer sbuffer = new StringBuffer();
-        for (int i = 0; i < pageCount.size(); i++) {
-            if (sbuffer.length() > 0) {
-                sbuffer.append("; ");
-            }
-            BdPageCount page = (BdPageCount) pageCount.get(i);
+	public String getDisplayValue()
+	{
+		List pageCount = parsePageCount();
+		StringBuffer sbuffer = new StringBuffer();
+		for(int i=0; i<pageCount.size(); i++)
+		{
+			if(sbuffer.length()>0)
+			{
+				sbuffer.append("; ");
+			}
+			BdPageCount page = (BdPageCount)pageCount.get(i);
 
-            if (page.getValue() != null) {
-                sbuffer.append(page.getValue());
-            }
-        }
-        if (sbuffer.length() > 0)
-            return sbuffer.toString();
-        else
-            return null;
-    }
+			if(page.getValue() !=null )
+			{
+				sbuffer.append(page.getValue());
+			}
+		}
+		if(sbuffer.length()>0)
+			return sbuffer.toString();
+		else
+			return null;
+	}
 }

@@ -88,7 +88,7 @@ public class BarChart extends HttpServlet {
     public static final int LABEL_LENGTH_LIMIT = 30;
     private static final int CHART_WIDTH = 550;
     private static final int CHART_HEIGHT = 500;
-    private static final Color BAR_COLOR = new Color(20, 140, 117); 
+    private static final Color BAR_COLOR = new Color(20, 140, 117);
     private static final Font BAR_LABEL_FONT = new Font("Arial", Font.PLAIN, 9);
     private Image bkgndImage = null;
 
@@ -101,7 +101,7 @@ public class BarChart extends HttpServlet {
 	 **********************************************************************************************/
     public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
-            
+
             // Get chart data from navigator
             String navdata = request.getParameter("analyzedata");
             navdata = unZipText(navdata);
@@ -129,7 +129,7 @@ public class BarChart extends HttpServlet {
 
     /**
      * Build the dataset for the chart from EiNavigator
-     * 
+     *
      * @param anav
      * @return
      */
@@ -163,10 +163,10 @@ public class BarChart extends HttpServlet {
         }
         return dataset;
     }
-    
+
     /**
      * Build a JFreeChart Bar chart for navigator.
-     *  
+     *
      * @param anav
      * @param background
      * @return
@@ -183,7 +183,7 @@ public class BarChart extends HttpServlet {
             false                     // URLs?
             );
 
-        TextTitle source = new TextTitle("© " + Calendar.getInstance().get(Calendar.YEAR) + " Elsevier Inc.");
+        TextTitle source = new TextTitle("Â©" + Calendar.getInstance().get(Calendar.YEAR) + " Elsevier Inc.");
         source.setFont(new Font("SansSerif", Font.PLAIN, 10));
         source.setPosition(RectangleEdge.BOTTOM);
         source.setHorizontalAlignment(HorizontalAlignment.LEFT);
@@ -204,7 +204,7 @@ public class BarChart extends HttpServlet {
         plot.setBackgroundPaint(Color.white);
         plot.setRangeGridlinePaint(Color.black);
         plot.setRangeGridlinesVisible(true);
-        
+
         // disable bar outlines...
         BarRenderer renderer = (BarRenderer) plot.getRenderer();
         renderer.setDrawBarOutline(false);
@@ -223,13 +223,13 @@ public class BarChart extends HttpServlet {
 
         CategoryAxis domainAxis = plot.getDomainAxis();
         domainAxis.setCategoryLabelPositions(CategoryLabelPositions.UP_45);
-        
+
         return chart;
     }
-    
+
     /**
      * Text Unzip utility
-     * 
+     *
      * @param text
      * @return
      */

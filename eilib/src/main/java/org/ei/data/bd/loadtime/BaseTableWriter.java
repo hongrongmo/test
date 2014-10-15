@@ -1,96 +1,136 @@
 package org.ei.data.bd.loadtime;
 
+import java.io.FileInputStream;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Hashtable;
-import java.util.Iterator;
-import java.util.LinkedHashSet;
+import java.util.*;
+import org.apache.oro.text.perl.Perl5Util;
+import org.ei.data.bd.*;
 
-public class BaseTableWriter {
-    private String filename;
+public class BaseTableWriter
+{
+	private Perl5Util perl = new Perl5Util();
 
-    private PrintWriter out;
+	private String filename;
 
-    private boolean open = false;
+	private PrintWriter out;
 
-    private LinkedHashSet<BaseTableRecord> bdColumns = BaseTableRecord.getBdColumns();
-    public static final char FIELDDELIM = '\t';
-    private String accessNumber;
+	private boolean open = false;
 
-    public BaseTableWriter(String filename) {
-        this.filename = filename;
-    }
+	private LinkedHashSet bdColumns = BaseTableRecord.getBdColumns();
+	public static final char FIELDDELIM = '\t';
+	private String accessNumber;
 
-    public void begin() throws Exception {
+	public BaseTableWriter(String filename)
+	{
+		this.filename = filename;
+	}
 
-        out = new PrintWriter(new FileWriter(filename));
-        System.out.println("Output Filename " + filename);
-        open = true;
-    }
+	public void begin()
+			throws Exception
+	{
 
-    public void writeRec(Hashtable<?, ?> record) throws Exception {
+		out = new PrintWriter(new FileWriter(filename));
+		System.out.println("Output Filename "+filename);
+		open = true;
+	}
 
-        StringBuffer recordBuf = new StringBuffer();
-        Iterator<BaseTableRecord> bdData = bdColumns.iterator();
-        while (bdData.hasNext()) {
-            BaseTableRecord column = (BaseTableRecord) bdData.next();
-            String thisColumnName = (String) column.getName();
-            if (record == null) {
-                System.out.println("Record was null");
-            }
-            Integer columnLength = null;
-            String valueString = null;
-            if (record.get(thisColumnName) != null) {
-                columnLength = (Integer) column.getColumnLength();
-                valueString = checkColumnWidth(columnLength.intValue(), thisColumnName, (String) record.get(thisColumnName));
-                if (thisColumnName.equals("ACCESSNUMBER")) {
-                    setAccessionNumber(valueString);
-                }
-            }
+	public void writeRec(Hashtable record)
+			throws Exception
+	{
 
-            if (valueString != null) {
-                recordBuf.append(valueString);
-            }
+		StringBuffer recordBuf = new StringBuffer();
+		Iterator bdData = bdColumns.iterator();
+		while (bdData.hasNext())
+		{
+		    BaseTableRecord column = (BaseTableRecord)bdData.next();
+			String thisColumnName = (String)column.getName();
+			if(record == null)
+			{
+				System.out.println("Record was null");
+			}
+			Integer columnLength = null;
+			String valueString = null;
+			if(record.get(thisColumnName)!=null)
+			{
+				try
+				{
+			    columnLength =(Integer) column.getColumnLength();
+				valueString = checkColumnWidth(columnLength.intValue(),
+				        					   thisColumnName,
+				        					   (String)record.get(thisColumnName));
+				}
+				catch(Exception e)
+				{
+					System.out.println("Access Number= "+getAccessionNumber()+" COLUMN NAME= "+thisColumnName);
+					e.printStackTrace();
+				}
+				if(thisColumnName.equals("ACCESSNUMBER"))
+				{
+					setAccessionNumber(valueString);
+				}
+			}
 
-            recordBuf.append(FIELDDELIM);
-        }
 
-        out.println(recordBuf.toString().trim());
 
-    }
 
-    private String getAccessionNumber() {
-        return this.accessNumber;
-    }
+			if(valueString != null)
+			{
+				recordBuf.append(valueString);
+			}
 
-    private void setAccessionNumber(String accessNumber) {
-        this.accessNumber = accessNumber;
-    }
+			recordBuf.append(FIELDDELIM);
+		}
 
-    private String checkColumnWidth(int columnWidth, String columnName, String data) throws Exception {
-        int cutOffPosition = 0;
-        if (columnWidth > 0 && data != null) {
-            if (data.length() > columnWidth) {
-                System.out.println("Problem:  record " + getAccessionNumber() + "'s data for column " + columnName + " is too big. data length is "
-                    + data.length());
-                data = data.substring(0, columnWidth);
-                cutOffPosition = data.lastIndexOf(BdParser.AUDELIMITER);
-                if (cutOffPosition < data.lastIndexOf(BdParser.IDDELIMITER)) {
-                    cutOffPosition = data.lastIndexOf(BdParser.IDDELIMITER);
-                }
-                if (cutOffPosition > 0) {
-                    data = data.substring(0, cutOffPosition);
-                }
+		out.println(recordBuf.toString().trim());
 
-            }
-        }
-        return data;
-    }
+	}
 
-    public void end() throws Exception {
-        if (open) {
-            out.close();
-            open = false;
-        }
-    }
+	private String getAccessionNumber()
+	{
+		return this.accessNumber;
+	}
+
+	private void setAccessionNumber(String accessNumber)
+	{
+		this.accessNumber = accessNumber;
+	}
+
+	private String checkColumnWidth(int columnWidth,
+	        						String columnName,
+	        						String data) throws Exception
+	{
+		int cutOffPosition = 0;
+		if(columnWidth > 0  && data!= null)
+		{
+			if(data.length()>columnWidth)
+			{
+				System.out.println("Problem:  record "+getAccessionNumber()+"'s data for column "+columnName+" is too big. data length is "+data.length());
+				data = data.substring(0,columnWidth);
+				cutOffPosition = data.lastIndexOf(BdParser.AUDELIMITER);
+				if(cutOffPosition<data.lastIndexOf(BdParser.IDDELIMITER))
+				{
+					cutOffPosition = data.lastIndexOf(BdParser.IDDELIMITER);
+				}
+				if(cutOffPosition>0)
+				{
+					data = data.substring(0,cutOffPosition);
+				}
+
+			}
+		}
+		return data;
+	}
+
+
+	public void end()
+			throws Exception
+	{
+		if(open)
+		{
+			out.close();
+			open = false;
+		}
+	}
 }
