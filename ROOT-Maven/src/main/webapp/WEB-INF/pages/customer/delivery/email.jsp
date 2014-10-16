@@ -57,7 +57,6 @@
     <stripes:hidden name="docidlist" />
     <stripes:hidden name="handlelist" />
     <stripes:hidden name="folderid" />
-    <stripes:hidden name="database" />
     
 	<table border="0" width="100%" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
 		<tbody>
