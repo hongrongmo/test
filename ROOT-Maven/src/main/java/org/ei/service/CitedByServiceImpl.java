@@ -385,11 +385,11 @@ public class CitedByServiceImpl implements CitedByService {
 		
 		 String[] inputArray;
 		 
-		 if (citedBy.indexOf("_") < 0) {
+		 if (citedBy.indexOf("::") < 0) {
              inputArray = new String[1];
              inputArray[0] = citedBy;
          } else {
-             inputArray = citedBy.split("_", -1);
+             inputArray = citedBy.split("::", -1);
          }
 		 
 		 parseInput(inputArray);
