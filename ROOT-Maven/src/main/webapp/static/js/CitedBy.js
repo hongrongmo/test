@@ -86,7 +86,7 @@ function ajaxCitedByFunction()
     }
     if(i<arr.length-1)
     {
-      queryString=queryString+"_";
+      queryString=queryString+"::";
     }
   }
   params = queryString;
