@@ -508,8 +508,7 @@ public class CitedByServiceImpl implements CitedByService {
 			citedByCountList = Arrays.asList( mapper.readValue(citedbyJSON, CitedByCount[].class));
 			buildKeyMap(citedByCountList);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new InfrastructureException(SystemErrorCodes.UNKNOWN_INFRASTRUCTURE_ERROR,"Could not parse JSON to Java Object.");
 		}
 		return citedByCountList;
 	}
