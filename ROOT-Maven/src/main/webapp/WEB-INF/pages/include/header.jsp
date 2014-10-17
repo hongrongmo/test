@@ -168,14 +168,14 @@
 
     $(".whatsNewLink").click(function(){
     	GALIBRARY.createWebEventWithLabel('Dialog Open', 'What\'s New', 'Support Dropdown');
-    	TINY.box.show({html:document.getElementById("modalmsg"),clickmaskclose:false,width:900,height:450,close:true,opacity:20,topsplit:3,closejs:function(){closeX();},openjs:function(){$("#closeMessage").focus();}});
+    	TINY.box.show({html:document.getElementById("modalmsg"),clickmaskclose:false,width:900,height:450,close:true,opacity:20,topsplit:3,closejs:function(){closeX();},openjs:function(){$("#hidePopup").focus();}});
     	$("#menu-1").click(function(){return false;});
 
     });
 
    $(".prefsOverlay").click(function(){
 	   	GALIBRARY.createWebEventWithLabel('Dialog Open', 'Edit Preferences', 'Settings Dropdown');
-		TINY.box.show({url:'/customer/userprefs.url',clickmaskclose:false,width:400,height:520,close:true,opacity:20,topsplit:3,openjs:function(){$("#closePrefsMessage").focus();}});
+		TINY.box.show({url:'/customer/userprefs.url',clickmaskclose:false,width:400,height:520,close:true,opacity:20,topsplit:3,openjs:function(){$("#hidePopup").focus();}});
 
 	});
 
