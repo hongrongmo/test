@@ -53,12 +53,19 @@ public class CitedByServiceImpl implements CitedByService {
 
 	/** The Constant log4j. */
 	private static final Logger log4j = Logger.getLogger(CitedByServiceImpl.class);
+	
 
 	/** The Constant citedBySaltKey. */
 	private static final String citedBySaltKey = "Kyvs.FpdJvCAXVa:9TK13xB!a01ZV(iW";
+	
+	/** The count list. */
+	private List<CitedByCount> countList = new ArrayList<CitedByCount>();
+	
 
 	/** The key map. */
 	private Hashtable<String, String> keyMap = new Hashtable<String, String>();
+	
+	
 
 
 	/* (non-Javadoc)
@@ -72,11 +79,13 @@ public class CitedByServiceImpl implements CitedByService {
 				eid = java.net.URLDecoder.decode(eid, "UTF-8");
 				eid = eid.replaceAll("eid=", "");
 			}
+			
 
 			if (doi != null){
 				doi = java.net.URLDecoder.decode(doi, "UTF-8");
 				eid = eid.replaceAll("doi=", "");
 			}
+		
 
 			if (eid != null && eid.indexOf("::") > -1) {
                 String[] eidArray = eid.split("::", -1);
@@ -86,25 +95,31 @@ public class CitedByServiceImpl implements CitedByService {
 		} catch (UnsupportedEncodingException e) {
 			throw new InfrastructureException(SystemErrorCodes.UNKNOWN_INFRASTRUCTURE_ERROR,"Unsupported encoding exception occured!.");
 		}
+		
 
 		List<HashMap<String, String>>  resultList =   new ArrayList<HashMap<String, String>>();
 		JSONArray jsonArray = new JSONArray();
+		
 
 		String xQuery = buildXQueryForDocSearch(eid,doi);
 		List<SearchDocumentType> documentTypes = doFastSearch(xQuery);
    		resultList = parseDocumentSearch(documentTypes);
+   		
 
    		if(doi != null && doi.length()>0 && resultList.size()>0){
    			xQuery = buildXQueryForAuthorSearch(doi);
    			documentTypes = doFastSearch(xQuery);
    			resultList = parseAuthSearch(documentTypes, resultList);
    		}
+   		
 
    		for(HashMap<String, String> mapElem : resultList) {
    			jsonArray.add(mapElem);
    		}
    		return jsonArray;
 	}
+	
+	
 
 
 	/**
@@ -130,19 +145,24 @@ public class CitedByServiceImpl implements CitedByService {
 		   		reqFields[6] = "dbdocid";
 		   		reqFields[7] = "srctitle";
 		   		reqFields[8] = "authid";
+		   		
+		   		
 
 
 		   		OrderByAttributesType orderBy = new OrderByAttributesType();
 		   		orderBy.setPath("pubyr");
 		   		orderBy.setSortOrder(SortOrderType.DESCENDING);
+		   		
 
 		   		OrderByListType orderByList = new OrderByListType();
 		   		orderByList.getOrderByAttributes().add(orderBy);
+		   		
 
 		   		ReturnAttributesType  returnType = new ReturnAttributesType();
 		   		returnType.setStart(0);
 		   		returnType.setMaxResults(10);
 		   		requestType.setReturnAttributes(returnType);
+		   		
 
 		   		requestType.getReqFields().add(0, "pubyr");
 		   		requestType.getReqFields().add(1, "eid");
@@ -153,25 +173,33 @@ public class CitedByServiceImpl implements CitedByService {
 		   		requestType.getReqFields().add(6, "dbdocid");
 		   		requestType.getReqFields().add(7, "srctitle");
 		   		requestType.getReqFields().add(8, "authid");
+		   		
 
 		   		requestType.setXQueryX(xQuery.toString());
 		   		requestType.setOrderByList(orderByList);
+		   		
 
 		   		requestType.setCluster("SCOPUS");
+		   		
 
 		   		ViaParamsListType viaParamsListType=new ViaParamsListType();
 		   		viaParamsListType.getParamName().add(0,"scomode");
 		   		viaParamsListType.getParamName().add(1,"scimode");
 		   		viaParamsListType.getParamName().add(2,"mixer");
+		   		
 
 		   		viaParamsListType.getParamValue().add(0,"on");
 		   		viaParamsListType.getParamValue().add(1,"off");
 		   		viaParamsListType.getParamValue().add(2,"relevancy");
+		   		
 
 		   		requestType.setViaParamsList(viaParamsListType);
+		   		
+		   		
 
 
 		   		searchType.getSearchReqPayload().add(requestType);
+		   		
 
 		   		Holder<SearchResponseType> responseHolder = new Holder<SearchResponseType>();
 		   		RequestHeaderType reqHeader = FastSearchServiceHelper.getRequestHeaderHolder();
@@ -189,15 +217,18 @@ public class CitedByServiceImpl implements CitedByService {
 		   		}else{
 		   			log4j.warn("Fast search was not successful.");
 		   		}
+		   		
 
 		 }catch(Exception e){
 			 log4j.error("Error occured while doing fast search : "+e.getMessage());
+			 throw  new ServiceException(SystemErrorCodes.FSWS_SEARCH_FETCH_ERROR, "Error occured while doing fast search..."); 
 			 throw  new ServiceException(SystemErrorCodes.FSWS_SEARCH_FETCH_ERROR, "Error occured while doing fast search...");
 		 }finally{
 			 FastSearchServiceHelper.releasePort(port);
 		 }
 		return documentTypes;
 	}
+	 
 
 	/**
 	 * Builds the x query for doc search.
@@ -222,6 +253,7 @@ public class CitedByServiceImpl implements CitedByService {
    		xQuery.append("</ft:word></ft:query></ft:fullTextQuery>");
 		return xQuery.toString();
 	}
+	
 
 	/**
 	 * Builds the x query for author search.
@@ -236,6 +268,7 @@ public class CitedByServiceImpl implements CitedByService {
 		xQuery.append("</ft:word></ft:query></ft:fullTextQuery>");
 		return xQuery.toString();
 	}
+	
 
 	/**
 	 * Parses the document search.
@@ -244,12 +277,15 @@ public class CitedByServiceImpl implements CitedByService {
 	 * @return the list
 	 */
 	private List<HashMap<String, String>> parseDocumentSearch(List<SearchDocumentType> documentTypes){
+		
 
 		List<HashMap<String, String>>  resultList = new ArrayList<HashMap<String, String>>();
+		
 
 		if(documentTypes == null){
 			return resultList;
 		}
+		
 
 		for (SearchDocumentType documentType : documentTypes) {
 			HashMap<String, String> fieldMap = new HashMap<String, String>();
@@ -321,6 +357,7 @@ public class CitedByServiceImpl implements CitedByService {
 		}
 		return resultList;
 	}
+	
 
 	/**
 	 * Parses the auth search.
@@ -333,8 +370,10 @@ public class CitedByServiceImpl implements CitedByService {
 		if(documentTypes == null){
 			return resultList;
 		}
+		
 
 		HashMap<String, String> firstDoc = resultList.get(0);
+		
 
 		if(firstDoc != null){
 			for (SearchDocumentType documentType : documentTypes) {
@@ -368,19 +407,58 @@ public class CitedByServiceImpl implements CitedByService {
 		}
 		return resultList;
 	}
+	
 
 	/* (non-Javadoc)
 	 * @see org.ei.service.CitedByService#getCitedByCount(java.lang.String)
 	 */
 	public JSONArray getCitedByCount(String citedBy) throws ServiceException,InfrastructureException{
 		JSONArray citedByCountArray = new JSONArray();
+		if(citedBy == null || citedBy.trim().length()==0){
 		if(citedBy == null || citedBy.length() ==0){
 			return citedByCountArray;
 		}
+		try {
+			citedBy =  java.net.URLDecoder.decode(citedBy, "UTF-8");
+		} catch (UnsupportedEncodingException e) {
+			throw new InfrastructureException(SystemErrorCodes.UNKNOWN_INFRASTRUCTURE_ERROR,"Unsupported encoding exception occured!.");
+		}
+		
+		 String[] inputArray;
+		 
+		 if (citedBy.indexOf("_") < 0) {
+             inputArray = new String[1];
+             inputArray[0] = citedBy;
+         } else {
+             inputArray = citedBy.split("_", -1);
+         }
+		 
+		 parseInput(inputArray);
+		
+		 citedByCountArray = doXAbsMetadataSearch();
+		 
         citedByCountArray = doXAbsMetadataSearch(citedBy);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		return citedByCountArray;
 	}
+	
 
 	/**
 	 * Do x abs metadata search.
@@ -389,6 +467,7 @@ public class CitedByServiceImpl implements CitedByService {
 	 * @throws ServiceException the service exception
 	 * @throws InfrastructureException
 	 */
+	private JSONArray doXAbsMetadataSearch() throws ServiceException{
 	private JSONArray doXAbsMetadataSearch(String citedBy) throws ServiceException, InfrastructureException{
 		JSONArray citedByCountArray = new JSONArray();
 		AbstractsMetadataServicePortTypeV10 port = null;
@@ -397,6 +476,7 @@ public class CitedByServiceImpl implements CitedByService {
 		try{
 			 GetCitedByCountType getCitedByCountType = new GetCitedByCountType();
 			 GetLinkDataReqPayloadType getCitedByCountReqPayload = new GetLinkDataReqPayloadType();
+			 
 
 			 if (countList != null) {
 				for (int i = 0; i < countList.size(); i++) {
@@ -438,6 +518,7 @@ public class CitedByServiceImpl implements CitedByService {
 				getCitedByCountReqPayload.setResponseStyle(ResponseStyleType.WELL_DEFINED);
 				getCitedByCountReqPayload.setDataResponseStyle(DataResponseType.MESSAGE);
 				getCitedByCountType.setGetCitedByCountReqPayload(getCitedByCountReqPayload);
+				
 
 				Holder<GetCitedByCountResponseType> responseHolder = new Holder<GetCitedByCountResponseType>();
 				RequestHeaderType reqHeader = XAbstractMDServiceHelper.getRequestHeaderHolder();
@@ -447,6 +528,7 @@ public class CitedByServiceImpl implements CitedByService {
 				Holder<DataHandler> holder = new Holder<DataHandler>();
 				port.getCitedByCount(getCitedByCountType, reqHeader, responseHolder, holder,respHeaderHolder);
 				log4j.debug("X AB metadata count(cited by) fetched successfully using XABSMD service....");
+				
 
 				if(responseHolder.value != null && responseHolder.value.getStatus().getStatusCode() == MetaDataStatusCodeType.OK &&
 						responseHolder.value.getGetCitedByCountRspPayload() != null && responseHolder.value.getGetCitedByCountRspPayload().getCitedByCountList() != null){
@@ -476,15 +558,18 @@ public class CitedByServiceImpl implements CitedByService {
 				}else{
 					log4j.warn("X ABS METADATA service call was not successful.");
 				}
+			}		
 			}
 		}catch (Exception e) {
 			log4j.error("Error occured while doing x abs metadata search : "+e.getMessage());
+			 throw  new ServiceException(SystemErrorCodes.XABS_MD_FETCH_ERROR, "Error occured while doing x abs metadata search..."); 
 			 throw  new ServiceException(SystemErrorCodes.XABS_MD_FETCH_ERROR, "Error occured while doing x abs metadata search...");
 		}finally{
 			 XAbstractMDServiceHelper.releasePort(port);
 		}
 		return citedByCountArray;
 	}
+	
 
 	/**
 	 * Parses the input.
@@ -492,6 +577,21 @@ public class CitedByServiceImpl implements CitedByService {
 	 * @param inputArray the input array
 	 * @throws InfrastructureException
 	 */
+	private void parseInput(String[] inputArray) {
+
+		if (inputArray != null) {
+			for (int i = 0; i < inputArray.length; i++) {
+				String param = inputArray[i];
+
+				if (param != null) {
+					CitedByCount count = new CitedByCount();
+
+					String[] paramArray;
+					if (param.indexOf("|") < 0) {
+						paramArray = new String[1];
+						paramArray[0] = param;
+					} else {
+						paramArray = param.split("\\|", -1);
 	private List<CitedByCount> parseInput(String inputArray) throws InfrastructureException {
 		String citedbyJSON;
 		List<CitedByCount> citedByCountList = new ArrayList<CitedByCount>();
@@ -501,6 +601,14 @@ public class CitedByServiceImpl implements CitedByService {
 			throw new InfrastructureException(SystemErrorCodes.UNKNOWN_INFRASTRUCTURE_ERROR,"Unsupported encoding exception occured!.");
 		}
 
+					for (int j = 0; j < paramArray.length; j++) {
+
+						String singleParam = paramArray[j];
+						// System.out.println("singleParam1 "+j+"  "+singleParam);
+
+						if (singleParam.indexOf("AN:") > -1) {
+							// System.out.println("singleParam "+i+"  "+singleParam);
+							count.setAccessionNumber(singleParam.substring(singleParam.indexOf(":") + 1));
 		ObjectMapper mapper = new ObjectMapper();
 		try {
 			citedByCountList = Arrays.asList( mapper.readValue(citedbyJSON, CitedByCount[].class));
@@ -509,14 +617,90 @@ public class CitedByServiceImpl implements CitedByService {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
+						if (singleParam.indexOf("DOI:") > -1) {
+							//System.out.println("singleParam "+i+"  "+singleParam);
+							count.setDoi(singleParam.substring(singleParam.indexOf(":") + 1));
 		return citedByCountList;
 	}
 
+						if (singleParam.indexOf("PII:") > -1) {
+							// System.out.println("singleParam "+i+"  "+singleParam);
+							count.setPii(singleParam.substring(singleParam.indexOf(":") + 1));
+						}
+
+						if (singleParam.indexOf("PAGE:") > -1) {
+							// System.out.println("singleParam "+i+"  "+singleParam);
+							count.setFirstPageNumber(singleParam.substring(singleParam.indexOf(":") + 1));
+						}
+
+						if (singleParam.indexOf("VOLUME:") > -1) {
+							// System.out.println("singleParam "+i+"  "+singleParam);
+							count.setVol(singleParam.substring(singleParam.indexOf(":") + 1));
+						}
+
+						if (singleParam.indexOf("ISSUE:") > -1) {
+							// System.out.println("singleParam "+i+"  "+singleParam);
+							count.setIssue(singleParam.substring(singleParam.indexOf(":") + 1));
+						}
+
+						if (singleParam.indexOf("ISSN:") > -1) {
+							// System.out.println("singleParam "+i+"  "+singleParam);
+							count.setIssn(singleParam.substring(singleParam.indexOf(":") + 1));
+						}
+
+						if (singleParam.indexOf("firstAuthorSurname:") > -1) {
+							// System.out.println("singleParam "+i+"  "+singleParam);
+							count.setFirstAuthorSurname(singleParam.substring(singleParam.indexOf(":") + 1));
+						}
+
+						if (singleParam.indexOf("firstInitialFirstAuthor:") > -1) {
+							// System.out.println("singleParam "+i+"  "+singleParam);
+							count.setFirstInitialFirstAuthor(singleParam.substring(singleParam.indexOf(":") + 1));
+						}
+
+						if (singleParam.indexOf("yearOfPublication:") > -1) {
+							// System.out.println("singleParam "+i+"  "+singleParam);
+							count.setYearOfPublication(singleParam.substring(singleParam.indexOf(":") + 1));
+						}
+
+						if (singleParam.indexOf("firstPageNumber:") > -1) {
+							// System.out.println("singleParam "+i+"  "+singleParam);
+							count.setFirstPageNumber(singleParam.substring(singleParam.indexOf(":") + 1));
+						}
+
+						if (singleParam.indexOf("lastPageNumber:") > -1) {
+							// System.out.println("singleParam "+i+"  "+singleParam);
+							count.setLastPageNumber(singleParam.substring(singleParam.indexOf(":") + 1));
+						}
+
+						if (singleParam.indexOf("S:") > -1) {
+							// System.out.println("MD5 "+i+"  "+singleParam);
+							count.setMD5(singleParam.substring(singleParam.indexOf(":") + 1));
+						}
+
+						if (singleParam.indexOf("SID:") > -1) {
+							// System.out.println("singleParam "+i+"  "+singleParam);
+							count.setSessionID(singleParam.substring(singleParam.indexOf(":") + 1));
+						}
+
+						buildKeyMap(count);
+
+					}
+
+					countList.add(count);
+				}
+			}
+		}
+
+	}
+	
 	/**
 	 * Builds the key map.
 	 *
 	 * @param count the count
 	 */
+	private void buildKeyMap(CitedByCount count) {
 	private void buildKeyMap(List<CitedByCount> citedbyCountList) {
 		for(CitedByCount count : citedbyCountList){
 			if (count.getAccessionNumber() != null) {
@@ -536,6 +720,7 @@ public class CitedByServiceImpl implements CitedByService {
 
 			}
 		}
+	
 	}
 
 	/**
@@ -559,6 +744,7 @@ public class CitedByServiceImpl implements CitedByService {
 		return ivipKey;
 
 	}
+	
 
 	/**
 	 * Check m d5.
@@ -589,6 +775,8 @@ public class CitedByServiceImpl implements CitedByService {
 		}
 		return md5Flag;
 	}
+	
+	
 
 
 	/**
@@ -621,5 +809,6 @@ public class CitedByServiceImpl implements CitedByService {
 		return id;
 	}
 
+	
 
 }

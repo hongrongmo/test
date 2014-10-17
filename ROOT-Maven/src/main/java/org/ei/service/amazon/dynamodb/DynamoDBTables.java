@@ -10,7 +10,8 @@ public class DynamoDBTables {
 	public static final String COLUMN_RUNTIME_PROPERTIES_KEY = "key";
 	public static final String COLUMN_RUNTIME_PROPERTIES_CERT = "cert";
 	public static final String COLUMN_RUNTIME_PROPERTIES_DEV = "dev";
-	public static final String COLUMN_RUNTIME_PROPERTIES_RELEASE = "release";
+    public static final String COLUMN_RUNTIME_PROPERTIES_RELEASE = "release";
+    public static final String COLUMN_RUNTIME_PROPERTIES_PROD = "prod";
 	
 	
 	public static final String TABLE_USERPREFS = "userprefs";
