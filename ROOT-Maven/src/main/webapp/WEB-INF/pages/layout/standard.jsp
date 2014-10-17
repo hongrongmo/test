@@ -107,7 +107,7 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
 				if((!$.cookie("ev_mm_dontshow") || release != $.cookie("ev_mm_dontshow")) && (!$.cookie("ev_mm_shown") || release != $.cookie("ev_mm_shown"))){
 
 					GALIBRARY.createWebEventWithLabel('Dialog Open', 'What\'s New', 'Auto Show');
-					TINY.box.show({html:document.getElementById("modalmsg"),clickmaskclose:false,width:900,height:450,close:true,opacity:20,topsplit:3,closejs:function(){closeX();},openjs:function(){$("#closeMessage").focus();}});
+					TINY.box.show({html:document.getElementById("modalmsg"),clickmaskclose:false,width:900,height:450,close:true,opacity:20,topsplit:3,closejs:function(){closeX();},openjs:function(){$("#hidePopup").focus();}});
 
 					//tell GA that we showed it
 

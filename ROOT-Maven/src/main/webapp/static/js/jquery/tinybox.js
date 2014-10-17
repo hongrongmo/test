@@ -13,7 +13,7 @@ TINY.box=function(){
 				m=document.createElement('div'); m.className='tmask';
 				g=document.createElement('div'); g.className='tclose'; g.v=0;
 
-				//cl = $(g).append("<a href='#' onclick='TINY.box.hid()'>hide</a>");
+				cl = $(g).append("<a href='#' id='hidePopup' onclick='TINY.box.hide()' style='opacity: .05;font-size: 1px;color: #E0E3EA;' title='click to close popup'>hide</a>");
 				document.body.appendChild(m); document.body.appendChild(j); j.appendChild(p); p.appendChild(b);
 				if(v.clickmaskclose){
 					m.onclick=TINY.box.hide;
