@@ -1,5 +1,10 @@
 package org.ei.stripes.action.results;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import javax.servlet.ServletException;
 
 import net.sourceforge.stripes.action.DontValidate;
@@ -11,11 +16,19 @@ import net.sourceforge.stripes.action.UrlBinding;
 import org.apache.commons.lang.StringEscapeUtils;
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
+import org.apache.wink.json4j.JSON;
 import org.apache.wink.json4j.JSONArray;
+import org.apache.wink.json4j.JSONArtifact;
 import org.apache.wink.json4j.JSONObject;
+import org.apache.wink.json4j.JSONStringer;
 import org.ei.service.CitedByService;
 import org.ei.service.CitedByServiceImpl;
 import org.ei.stripes.action.EVActionBean;
+
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 
 @UrlBinding("/abstract/citedby.url")
@@ -93,4 +106,7 @@ public class CitedByAction extends EVActionBean {
 	public void setDoi(String doi) {
 		this.doi = doi;
 	}
+
+
+
 }
