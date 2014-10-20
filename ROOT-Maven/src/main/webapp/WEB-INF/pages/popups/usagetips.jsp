@@ -18,11 +18,11 @@
 <body>
 <div id="marketing_message">
 	<div class="message">
-		Take full advantage of Engineering Village by using the <a href="http://www.elsevier.com/__data/assets/file/0003/218559/ev-tipsntricks.pdf" target="new" title="Click to open Tips & Tricks PDF">Tips & Tricks page</a>
+		Take full advantage of Engineering Village by using the <a href="http://www.elsevier.com/__data/assets/file/0003/218559/ev-tipsntricks.pdf" target="new" title="Click to open Tips & Tricks PDF" onclick="GALIBRARY.createWebEventWithLabel('Education Promo', 'Click Link', '');">Tips & Tricks page</a>
 		and experience the leading information discovery tool trusted by engineers across the globe.
 	</div>
 	<div class="marketing_image">
-		<a href="http://www.elsevier.com/__data/assets/file/0003/218559/ev-tipsntricks.pdf" target="new" title="Click to open Tips & Tricks PDF"><img src="/static/images/evtips.jpg" alt="Engineering Village Tips & Tricks" title="Engineering Village Tips & Tricks" /></a>
+		<a href="http://www.elsevier.com/__data/assets/file/0003/218559/ev-tipsntricks.pdf" target="new" title="Click to open Tips & Tricks PDF" onclick="GALIBRARY.createWebEventWithLabel('Education Promo', 'Click Image', '');"><img src="/static/images/evtips.jpg" alt="Engineering Village Tips & Tricks" title="Engineering Village Tips & Tricks" /></a>
 	</div>
 </div>
 </body>
