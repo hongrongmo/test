@@ -36,6 +36,10 @@ public class CitedByCount {
 		_an = an;
 	}
 
+	public void setAn(String an) {
+		_an = an;
+	}
+
 	public String getAccessionNumber() {
 		return _an;
 	}
@@ -43,12 +47,17 @@ public class CitedByCount {
 	public void setSessionID(String sessionID) {
 		_sessionID = sessionID;
 	}
-
+	public void setSid(String sessionID) {
+		_sessionID = sessionID;
+	}
 	public String getSessionID() {
 		return _sessionID;
 	}
 
 	public void setMD5(String md5) {
+		_md5 = md5;
+	}
+	public void setSecurity(String md5) {
 		_md5 = md5;
 	}
 
@@ -148,6 +157,7 @@ public class CitedByCount {
 		this._vol = vol;
 	}
 
+
 	public String getVol() {
 		return _vol;
 	}
@@ -185,6 +195,10 @@ public class CitedByCount {
 	}
 
 	public void setFirstPageNumber(String firstPageNumber) {
+		this._firstPageNumber = firstPageNumber;
+	}
+
+	public void setPage(String firstPageNumber) {
 		this._firstPageNumber = firstPageNumber;
 	}
 
