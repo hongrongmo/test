@@ -86,13 +86,13 @@
 <script>
 	var surveyNo = true;
 	var surveyLink = "http://www.engineeringvillage.com";
-	<c:if test="${not empty textzones and (not empty textzones['EXIT_SURVEY_LINK'])}">
-		surveyLink = "${textzones['EXIT_SURVEY_LINK']}";
+	<c:if test="${not empty textzones and (not empty textzones['EV_EXIT_SURVEY_LINK'])}">
+		surveyLink = "${textzones['EV_EXIT_SURVEY_LINK']}";
 	</c:if>
 	$("#survey_yes").click(function(){
 		//set the onunload to watch for the user to leave EV and start the survey
 		GALIBRARY.createWebEventWithLabel('Exit Survey', 'Yes', document.location.pathname);
-		window.open(surveyLink, "_blank","");
+		window.open(surveyLink, "_new", "location=no,width=720,height=930");
 		surveyNo = false;
 		TINY.box.hide();
 
