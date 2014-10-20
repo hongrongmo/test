@@ -31,69 +31,82 @@ function ajaxCitedByFunction()
   if((arr == null) || (arr == undefined) || (arr.length == 0)) {
     return false;
   }
-  var queryString = "citedby=";
 
+  var queryArray = "";
   // Iterate over the elements to make one call with all data
   for(var i=0; i < arr.length; i++)
   {
-
+	var queryString = "";
     var tagObj = arr[i];
     if(tagObj.getAttribute("ISSN")!=null)
     {
-       queryString = queryString+"ISSN:"+tagObj.getAttribute("ISSN")+"|";
+       queryString = queryString+"\"issn\":\""+tagObj.getAttribute("ISSN")+"\"";
     }
 
     if(tagObj.getAttribute("DOI")!=null)
     {
-    	doi = tagObj.getAttribute("DOI");
-       queryString=queryString+"DOI:"+tagObj.getAttribute("DOI")+"|";
+       doi = tagObj.getAttribute("DOI");
+       if(queryString.length > 0){queryString += ",";}
+
+       queryString=queryString+"\"doi\":\""+tagObj.getAttribute("DOI")+"\"";
     }
 
     if(tagObj.getAttribute("PII")!=null)
     {
-       queryString=queryString+"PII:"+tagObj.getAttribute("PII")+"|";
+    	if(queryString.length > 0){queryString += ",";}
+    	queryString=queryString+"\"pii\":\""+tagObj.getAttribute("PII")+"\"";
     }
     if(tagObj.getAttribute("VOLUME")!=null)
     {
-       queryString=queryString+"VOLUME:"+tagObj.getAttribute("VOLUME")+"|";
+    	if(queryString.length > 0){queryString += ",";}
+       queryString=queryString+"\"vol\":\""+tagObj.getAttribute("VOLUME")+"\"";
     }
     if(tagObj.getAttribute("ISSUE")!=null)
     {
-       queryString=queryString+"ISSUE:"+tagObj.getAttribute("ISSUE")+"|";
+    	if(queryString.length > 0){queryString += ",";}
+    	queryString=queryString+"\"issue\":\""+tagObj.getAttribute("ISSUE")+"\"";
     }
     if(tagObj.getAttribute("PAGE")!=null)
     {
-       queryString=queryString+"PAGE:"+tagObj.getAttribute("PAGE")+"|";
+    	if(queryString.length > 0){queryString += ",";}
+    	queryString=queryString+"\"page\":\""+tagObj.getAttribute("PAGE")+"\"";
     }
     if(tagObj.getAttribute("AN")!=null)
     {
-       queryString=queryString+"AN:"+tagObj.getAttribute("AN")+"|";
+    	if(queryString.length > 0){queryString += ",";}
+    	queryString=queryString+"\"an\":\""+tagObj.getAttribute("AN")+"\"";
     }
     if(tagObj.getAttribute("SECURITY")!=null)
     {
-      queryString=queryString+"S:"+tagObj.getAttribute("SECURITY")+"|";
+    	if(queryString.length > 0){queryString += ",";}
+    	queryString=queryString+"\"security\":\""+tagObj.getAttribute("SECURITY")+"\"";
     }
     if(tagObj.getAttribute("SESSION-ID")!=null)
     {
       var sessionID = tagObj.getAttribute("SESSION-ID");
+      if(queryString.length > 0){queryString += ",";}
       if(sessionID.indexOf("_")>-1)
       {
         sessionID = sessionID.substring(sessionID.indexOf("_")+1);
-        queryString=queryString+"SID:"+sessionID+"|";
+        queryString=queryString+"\"sid\":\""+sessionID+"\"";
       }else if(sessionID.length > 0) {
-    	queryString=queryString+"SID:"+sessionID+"|";
+    	queryString=queryString+"\"sid\":\""+sessionID+"\"";
       }
     }
-    if(i<arr.length-1)
+    if(i<arr.length && i >= 1)
     {
-      queryString=queryString+"::";
+    	queryArray += ",{" + queryString + "}";
+    }else{
+    	queryArray = "{" + queryString + "}";
     }
   }
-  params = queryString;
+  queryArray = "[" + queryArray + "]";
+  //params = queryString;
   //
   // AJAX call to the citedby webservice
   //
-	  $.post("/abstract/citedby.url?CID=citedbyAbstract&abstract=t",{citedby:params}, function(data) {
+  console.log(queryArray);
+	  $.post("/abstract/citedby.url?CID=citedbyAbstract&abstract=t",{citedby:queryArray}, function(data) {
 	  if((data == null) || (data.result == null) || (data.result == undefined)) {
 		  return false;
 	  }

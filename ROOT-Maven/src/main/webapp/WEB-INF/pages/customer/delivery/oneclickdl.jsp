@@ -126,11 +126,11 @@
     	padding-left:3px;
     	color:#808080;
     }
-    
+
     #fnpfx{
     	padding-left: 2px;
     }
-    
+
 </style>
 </head>
 <body>
@@ -188,10 +188,10 @@
 					<div id="fileNamePrefixContainer" style="width:150px"><input type="text" style="width:150px" value="${dlFileNamePrefix}" name="filenameprefix" id="filenameprefix" maxlength="50" onkeypress="return handleKeyPress(event)"   /></div>
 					<div style="text-align:right;padding-right:10px;width:150px" id="filenamesuffix"><span id="filenameprefixlabel"  style="font-size:10px">&nbsp;&nbsp;_Output_Date/Time.format</span></div>
 				</li>
-				
+
 				</ul>
-				
-				
+
+
 			</div>
 		</div>
 		<hr style="width: 100%;"/>
@@ -217,7 +217,7 @@
 					</div>
 				    </c:otherwise>
 				</c:choose>
-				
+
 			</div>
 	</div>
 </stripes:form>
@@ -226,6 +226,7 @@
 <script>
 
 $(document).ready(function() {
+	$("#outputMyPC").focus();
 	<c:if test="${actionBean.context.userSession.user.individuallyAuthenticated eq 'false'}">
 		//read the cookie
 		if($.cookie("ev_oneclickdl") && $.cookie("ev_oneclickdl") != 'null'){
@@ -239,7 +240,7 @@ $(document).ready(function() {
 	<c:if test="${actionBean.context.userSession.user.individuallyAuthenticated eq 'true'}">
 		$('#updateUserSettings').prop("checked", false);
 		//read the cookie
-		if($.cookie("ev_dldpref") && $.cookie("ev_dldpref") != 'null'){	
+		if($.cookie("ev_dldpref") && $.cookie("ev_dldpref") != 'null'){
 			var dlOptions = JSON.parse($.cookie("ev_dldpref"));
 			$('#oneClickContent input[value="' + dlOptions.location + '"]').prop("checked", true);
 			$('#oneClickContent input[value="'+dlOptions.displaytype+'"]').prop("checked", true);
@@ -304,7 +305,7 @@ function handleFnPrefix(){
 		}
 	}
 	$("#valerrormsgcontainer").css("display","none");
-	
+
 }
 function updatefilenameprefixlable(){
 	var formatval = $('input[name="downloadformat"]:checked').val();
@@ -314,11 +315,11 @@ function updatefilenameprefixlable(){
 	}else if(formatval ==  'bib'){
 		outputval = "BIB";
 	}
-	
+
 	if(outputval == 'default'){
 		outputval = "current_page_view";
 	}
-	
+
 	if(formatval === "ascii"){
 		formatval = "txt";
 	}else if (formatval === "bib"){
@@ -336,7 +337,7 @@ function updatefilenameprefixlable(){
 	}else {
 		formatval = "ris";
 	}
-	
+
 	if(typeof  outputval === "undefined" || outputval === null || outputval === "") {
 		outputval = "Output";
 	}
@@ -364,7 +365,7 @@ function checkForRisandBib(){
 			$("#savePrefsButton").click(function(event) {
 				saveDownloadPrefs(event);
 			});
-			
+
 			function handleKeyPress(event){
 				if (event.keyCode == 13) {
 					saveDownloadPrefs(event);
@@ -372,21 +373,21 @@ function checkForRisandBib(){
 					return false;
 		        }
 			}
-			
+
 			function saveDownloadPrefs(event){
-				
+
 				var baseaddress = $("input[name='baseaddress']").val();
 				var displaytype = $('input[name="displayformat"]:checked').val();
 				var downloadformat = $('input[name="downloadformat"]:checked').val();
 				var downloadLocation = $('input[name="outputLocation"]:checked').val();
-				
-				
+
+
 				if (downloadformat == undefined || downloadformat == "") {
 					alert("You must choose a download format.");
 					event.preventDefault();
 					return (false);
 				}
-				
+
 				var filenameprefix = $.trim($('#filenameprefix').val());
 				if(filenameprefix.length < 3){
 					handlevalidationerror("Prefix cannot be empty and should have minimum of 3 characters");
@@ -398,25 +399,25 @@ function checkForRisandBib(){
 					event.preventDefault();
 					return (false);
 				}
-				
+
 				if(!isValidInput(filenameprefix)){
 					handlevalidationerror("Prefix can have only letters, numbers and underscore character");
 					return false;
 				}
 
-				
+
 				GALIBRARY.createWebEventWithLabel('Output', 'Download', downloadformat);
 				var authStatus = $.trim($('#authStatus').val());
 				if( typeof authStatus != 'undefined' &&  authStatus === 'true'){
-					
+
 					var saveDldUrl = "/customer/userprefs.url?savedlprefs=true";
 					saveDldUrl += "&dlLocation="+downloadLocation;
 					saveDldUrl += "&dlFormat="+downloadformat;
 					saveDldUrl += "&dlOutput="+displaytype;
 					saveDldUrl += "&dlFileNamePrefix="+filenameprefix;
-					
+
 					var isPrefUpdateChosen = $('#updateUserSettings:checked').val();
-					
+
 					if(isPrefUpdateChosen === "true"){
 						$.ajax({
 							url:saveDldUrl,
@@ -429,7 +430,7 @@ function checkForRisandBib(){
 							$('#downloadlink').attr("title", "Click to change one click download preferences.");
 							$('#downloadlink').tooltipster('hide');
 						});
-						
+
 					}else{
 						proceedWithDownload(downloadLocation,downloadformat,displaytype,baseaddress,filenameprefix,true,isPrefUpdateChosen);
 					}
@@ -439,22 +440,22 @@ function checkForRisandBib(){
 				event.preventDefault();
 				return false;
 			}
-			
+
 			function proceedWithDownload(downloadLocation,downloadformat,displaytype,baseaddress,filenameprefix,isLoggedInUser,isPrefUpdateChosen){
 				var milli = (new Date()).getTime();
 				var docidlist = $("#docidlist").val();
 				var handlelist = $("#handlelist").val();
 				var folderid = $("#folderid").val();
 				var actionDisplayType = '${actionBean.displayformat}';
-				
+
 				if(isLoggedInUser){
 					$.cookie('ev_dldpref', '{"location":"'+downloadLocation+'","format":"'+downloadformat+'","displaytype":"'+displaytype+'","baseaddress":"'+baseaddress+'","filenameprefix":"'+filenameprefix+'"}',{path:'/'});
 					if(isPrefUpdateChosen === 'true'){
 						$("#dlprefsandsettingsSaved").fadeIn("slow");
 						$("#dlprefsandsettingsnotSaved,#prefsSaved,#dlprefsSaved,#prefsNotSaved").hide();
-						
+
 					}else{
-						$("#dlprefsSaved").fadeIn("slow");	
+						$("#dlprefsSaved").fadeIn("slow");
 						$("#dlprefsandsettingsnotSaved,#prefsSaved,#dlprefsandsettingsSaved,#prefsNotSaved").hide();
 					}
 				}else{
@@ -462,7 +463,7 @@ function checkForRisandBib(){
 					$("#dlprefsSaved").fadeIn("slow");
 					$("#prefsSaved,#prefsNotSaved").hide();
 				}
-				
+
 				dlOptions = {
 						location:downloadLocation,
 						format:downloadformat,
@@ -470,7 +471,7 @@ function checkForRisandBib(){
 						baseaddress:baseaddress,
 						filenameprefix:filenameprefix
 				};
-				
+
 				if(displaytype == 'default'){
 					//need to figure out what page they are on to get this right.
 					if(typeof($("input[name='selectoption']:checked").val()) != "undefined" && downloadLocation != "refworks"){
@@ -482,11 +483,11 @@ function checkForRisandBib(){
 					displaytype = actionDisplayType;
 					$('#oneClickContent input[value="' + actionDisplayType + '"]').prop("checked", true);
 				}
-				
+
 				changeOneClick(downloadLocation);
-				
+
 				var tooltipmsg = "";
-				
+
 				if(checkReferexOnlyFolder()){
 					tooltipmsg = "Referex database results are not supported in the Excel&reg; download format.";
 				}
@@ -532,13 +533,13 @@ function checkForRisandBib(){
 				}else{
 					$("#download").submit();
 				}
-				
+
 				$('#downloadlink').attr("title", "Click to change one click download preferences.");
 				$('#downloadlink').tooltipster('hide');
-				
+
 			}
 
-			
-			
+
+
 			</script>
 </html>
