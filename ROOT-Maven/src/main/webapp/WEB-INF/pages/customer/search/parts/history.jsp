@@ -31,7 +31,7 @@ padding-left: 5px;" class="helpurl" alt="Learn more about search history" title=
             </c:when>
             <c:otherwise>
                 <div class="toolbar" style="padding: 5px; line-height: 20px">
-          <form id="combineSearchForm" action="/search/results/combine.url?CID=combineSearchHistory" method="post" name="combineSearch">
+          <form id="combineSearchForm" action="/search/results/combine.url?CID=combineSearchHistory" method="get" name="combineSearch">
                    <input type="hidden" id="defaultdb" name="defaultdb" value="${actionBean.database}"/>
                     <span style="float: right; margin-right: 7px">
                         <h2 style="float: none; display: inline" class="searchcomponentlabel">SORT BY </h2>
