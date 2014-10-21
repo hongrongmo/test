@@ -36,7 +36,7 @@
 </head>
 <body>
 <div aria-live="assertive">
-	<div class="title" style="padding-left:0px;"><img id="eilogo" class="mm_eilogo" width="35px" src="/static/images/ei_w.gif" title="Engineering Information: Home of Engineering Village" alt="Engineering Information: Home of Engineering Village"></img><span>Usage Tips & Tricks</span></div>
+	<div class="title" style="padding-left:0px;"><img id="eilogo" class="mm_eilogo" width="35px" src="/static/images/ei_w.gif" title="Engineering Information: Home of Engineering Village" alt="Engineering Information: Home of Engineering Village"></img><span>Usage Tips &amp; Tricks</span></div>
 	<div class="msg">
 			<jsp:include page="/WEB-INF/pages/popups/usagetips.jsp" />
 	</div>
