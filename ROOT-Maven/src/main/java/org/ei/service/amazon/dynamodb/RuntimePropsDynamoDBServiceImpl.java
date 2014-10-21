@@ -41,8 +41,10 @@ public class RuntimePropsDynamoDBServiceImpl implements AmazonDynamoDBService {
 				runLevelColumn = DynamoDBTables.COLUMN_RUNTIME_PROPERTIES_DEV;
 			}else if(runlevel.equalsIgnoreCase(DynamoDBTables.COLUMN_RUNTIME_PROPERTIES_LOCAL)){
 				runLevelColumn = DynamoDBTables.COLUMN_RUNTIME_PROPERTIES_LOCAL;
-			}else if(runlevel.equalsIgnoreCase(DynamoDBTables.COLUMN_RUNTIME_PROPERTIES_RELEASE)){
-				runLevelColumn = DynamoDBTables.COLUMN_RUNTIME_PROPERTIES_RELEASE;
+            }else if(runlevel.equalsIgnoreCase(DynamoDBTables.COLUMN_RUNTIME_PROPERTIES_RELEASE)){
+                runLevelColumn = DynamoDBTables.COLUMN_RUNTIME_PROPERTIES_RELEASE;
+            }else if(runlevel.equalsIgnoreCase(DynamoDBTables.COLUMN_RUNTIME_PROPERTIES_PROD)){
+                runLevelColumn = DynamoDBTables.COLUMN_RUNTIME_PROPERTIES_PROD;
 			}
 			if(runLevelColumn != null){
 				attributesToGet.add(runLevelColumn);
