@@ -94,13 +94,14 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
 
 
 <stripes:layout-component name="jsbottom_custom"/>
-
+	<div style="display:none;" id="modalHTMLcontainer">
+		<div id="modalmsg">
+			<jsp:include page="/WEB-INF/pages/popups/marketingMessage.jsp" />
+		</div>
+	</div>
 </body>
 <script>var release = "5.6";</script>
-	<div style="display:none;" id="modalHTMLcontainer">
-	<div id="modalmsg">
-		<jsp:include page="/WEB-INF/pages/popups/marketingMessage.jsp" />
-	</div>
+
 	<stripes:layout-component name="modal_dialog">
 		<c:if test="${actionBean.context.userSession.user.userPreferences.modalDialog && !actionBean.context.userSession.user.userPreferences.modalDialog2}">
 			<script>
@@ -116,7 +117,7 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
 			</script>
 		</c:if>
 	</stripes:layout-component>
-</div>
+
 <stripes:layout-component name="modal_dialog_2">
 
 </stripes:layout-component>
