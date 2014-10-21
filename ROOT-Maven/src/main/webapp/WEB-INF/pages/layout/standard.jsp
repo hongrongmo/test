@@ -93,12 +93,18 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
 </stripes:layout-component>
 
 
-<stripes:layout-component name="jsbottom_custom"/>
+	<stripes:layout-component name="jsbottom_custom"/>
 	<div style="display:none;" id="modalHTMLcontainer">
 		<div id="modalmsg">
 			<jsp:include page="/WEB-INF/pages/popups/marketingMessage.jsp" />
 		</div>
 	</div>
+
+	<stripes:layout-component name="exitSurvey">
+		<c:if test="${actionBean.context.userSession.user.userPreferences.exitSurvey}">
+			<%@ include file="/WEB-INF/pages/include/exitSurvey.jsp" %>
+		</c:if>
+	</stripes:layout-component>
 </body>
 <script>var release = "5.6";</script>
 
@@ -125,11 +131,7 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
 
 
 </stripes:layout-component>
-<stripes:layout-component name="exitSurvey">
-<c:if test="${actionBean.context.userSession.user.userPreferences.exitSurvey}">
-	<%@ include file="/WEB-INF/pages/include/exitSurvey.jsp" %>
-</c:if>
-</stripes:layout-component>
+
 <stripes:layout-component name="carsoverride">
 	<jwr:style src="/bundles/carsoverride.css"></jwr:style>
 <style></style>
