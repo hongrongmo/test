@@ -31,22 +31,14 @@ padding-left: 5px;" class="helpurl" alt="Learn more about search history" title=
             </c:when>
             <c:otherwise>
                 <div class="toolbar" style="padding: 5px; line-height: 20px">
-          <form id="combineSearchForm" action="/search/results/combine.url?CID=combineSearchHistory" method="post" name="combineSearch">
+          <form id="combineSearchForm" action="/search/history/combine.url" method="get" name="combine">
                    <input type="hidden" id="defaultdb" name="defaultdb" value="${actionBean.database}"/>
+                   <input type="hidden" id="backurl" name="backurl" value="SEARCHHISTORY"/>
                     <span style="float: right; margin-right: 7px">
                         <h2 style="float: none; display: inline" class="searchcomponentlabel">SORT BY </h2>
                         <input type="radio" value="relevance" id="relChkbx" name="sort" checked="checked" title="Sort your search by Relevance">
                         <label class="SmBlackText" for="relChkbx">Relevance</label>
                         <input type="radio" value="yr" name="sort" id="pubChkbx" title="Sort your search by Year in descending order">
-                        <c:if test="${searchtab == 'quicksearch'}">
-							 <input type="hidden" id="searchTypeName" name="searchTypeName" value="quickSearch">
-                        </c:if>
-                        <c:if test="${searchtab == 'expertsearch'}">
-							 <input type="hidden" id="searchTypeName" name="searchTypeName" value="expertSearch">
-                        </c:if>
-                        <c:if test="${searchtab == 'thessearch'}">
-							 <input type="hidden" id="searchTypeName" name="searchTypeName" value="thesHome">
-                        </c:if>
                         <label class="SmBlackText" for="pubChkbx">Publication year</label>
                     </span>
                     Combine Searches: <input type="text" size="28" name="txtcombine" title="Combine Search Textbox">

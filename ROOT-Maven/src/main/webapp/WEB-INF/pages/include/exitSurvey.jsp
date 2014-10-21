@@ -42,8 +42,8 @@
 	<div id="ev_survey"></div>
 	<script>
 		var surveyFreq = 30;
-		<c:if test="${not empty textzones and (not empty textzones['EXIT_SURVEY_LINK'])}">
-		surveyFreq = ${textzones['EXIT_SURVEY_FREQ']};
+		<c:if test="${not empty textzones and (not empty textzones['EV_EXIT_SURVEY_FREQ'])}">
+		surveyFreq = ${textzones['EV_EXIT_SURVEY_FREQ']};
 		</c:if>
 		$(document).ready(function(){
 			if(Math.floor(Math.random() * 100) < surveyFreq){
