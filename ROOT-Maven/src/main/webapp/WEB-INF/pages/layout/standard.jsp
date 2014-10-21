@@ -104,13 +104,13 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
 	<stripes:layout-component name="modal_dialog">
 		<c:if test="${actionBean.context.userSession.user.userPreferences.modalDialog && !actionBean.context.userSession.user.userPreferences.modalDialog2}">
 			<script>
-				if((!$.cookie("ev_mm_dontshow") || release != $.cookie("ev_mm_dontshow")) && (!$.cookie("ev_mm_shown") || release != $.cookie("ev_mm_shown"))){
-
-					GALIBRARY.createWebEventWithLabel('Dialog Open', 'What\'s New', 'Auto Show');
-					TINY.box.show({html:document.getElementById("modalmsg"),clickmaskclose:false,width:900,height:450,close:true,opacity:20,topsplit:3,closejs:function(){closeX();}});
-					//tell GA that we showed it
-
-				}
+				$(document).ready(function(){
+					if((!$.cookie("ev_mm_dontshow") || release != $.cookie("ev_mm_dontshow")) && (!$.cookie("ev_mm_shown") || release != $.cookie("ev_mm_shown"))){
+						GALIBRARY.createWebEventWithLabel('Dialog Open', 'What\'s New', 'Auto Show');
+						TINY.box.show({html:document.getElementById("modalmsg"),clickmaskclose:false,width:900,height:450,close:true,opacity:20,topsplit:3,closejs:function(){closeX();}});
+						//tell GA that we showed it
+					}
+				});
 
 			</script>
 		</c:if>

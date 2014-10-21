@@ -57,7 +57,7 @@
 	<div class="title" style="padding-left:0px;"><img id="eilogo" class="mm_eilogo" width="35px" src="/static/images/ei_w.gif" title="Engineering Information: Home of Engineering Village" alt="Engineering Information: Home of Engineering Village"></img><span>Engineering Village</span></div>
 	<div class="msg">
 	<div id="survey_container">
-		<div id="survey_header">WE WANT TO HEAR FROM YOU</div>
+		<div id="survey_header">WE WANT TO HEAR FROM YOU!</div>
 		<div id="survey_message">
 			<c:choose>
 				<c:when test="${not empty textzones and (not empty textzones['EXIT_SURVEY_MSG'])}">
@@ -72,7 +72,7 @@
 			<br/>
 
 			<div style="text-align:right;width:100%;">
-			<div class="smallgraytxt">A second window will open</div>
+			<div class="smallgraytxt">A second window will open.</div>
 			<input type="button" id="survey_yes"  title="Take Engineering Village Exit Survey" value="Yes, I will give feedback"/>
 			&nbsp;|&nbsp;<a id="survey_no" href="#" onClick="TINY.box.hide();" title="Decline Engineering Village Exit Survey">Cancel</a>
 			</div>
@@ -86,13 +86,13 @@
 <script>
 	var surveyNo = true;
 	var surveyLink = "http://www.engineeringvillage.com";
-	<c:if test="${not empty textzones and (not empty textzones['EXIT_SURVEY_LINK'])}">
-		surveyLink = "${textzones['EXIT_SURVEY_LINK']}";
+	<c:if test="${not empty textzones and (not empty textzones['EV_EXIT_SURVEY_LINK'])}">
+		surveyLink = "${textzones['EV_EXIT_SURVEY_LINK']}";
 	</c:if>
 	$("#survey_yes").click(function(){
 		//set the onunload to watch for the user to leave EV and start the survey
 		GALIBRARY.createWebEventWithLabel('Exit Survey', 'Yes', document.location.pathname);
-		window.open(surveyLink, "_blank","");
+		window.open(surveyLink, "_new", "location=no,width=720,height=930");
 		surveyNo = false;
 		TINY.box.hide();
 
