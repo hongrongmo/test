@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration debug="false"
+	xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<appender name="CA" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p (%F:%L) - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="RFA" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="${catalina.base}/logs/application.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p (%F:%L) - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="CARSERRORRFA" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="${catalina.base}/logs/carserrors.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p (%F:%L) - %m%n" />
+		</layout>
+	</appender>
+
+	<!-- ******************************************************************** -->
+	<!-- Root logger for EV.  Defaults to "WARN" but the application may      -->
+	<!-- change it based on runtime properties.                               -->
+	<!-- See EVInitializationListener for more details!                       -->
+	<!-- ******************************************************************** -->
+	<root>
+        <level value="WARN" />
+        <appender-ref ref="RFA" />
+        <appender-ref ref="CA" />
+	</root>
+	<logger name="CarsErrorLogger" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="CARSERRORRFA" />
+	</logger>
+</log4j:configuration>

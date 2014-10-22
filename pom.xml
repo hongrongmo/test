@@ -1,0 +1,32 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.ei.multi</groupId>
+    <artifactId>EV-parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0</version>
+    <name>Parent Project to build ROOT and logservice</name>
+
+		<distributionManagement>
+		<repository>
+			<id>nexus</id>
+			<name>nexus</name>
+			<url>http://atheneum/content/repositories/elsevier-releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus</id>
+			<name>nexus</name>
+			<url>http://atheneum/content/repositories/elsevier-snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+
+    <modules>
+        <module>ROOT-Maven</module>
+        <module>logservice</module>
+        <module>eilib</module>
+    </modules>
+</project>
