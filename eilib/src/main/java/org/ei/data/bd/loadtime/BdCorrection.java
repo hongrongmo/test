@@ -1,11 +1,9 @@
 package org.ei.data.bd.loadtime;
 
 import java.sql.Clob;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.text.*;
 import java.io.*;
+import java.text.*;
+
 import java.lang.Process;
 
 import java.sql.*;
