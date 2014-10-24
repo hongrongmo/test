@@ -45,9 +45,9 @@
 					        <tr>
 					            <th>IP</th>
 		                        <th>Status</th>
+		                        <th>Description</th>
 					            <th>Last Modified</th>
 		                        <th>Account Name</th>
-					            <th>Description</th>
 					            <th></th>
 					        </tr>
 					    </thead>
@@ -56,20 +56,20 @@
 							    <c:when test="${not empty blockedIpsList}">
 								    <c:forEach var="entry" items="${blockedIpsList}">
 								        <tr>
-								            <td style="width:200px">${entry.IP}</td>
+								            <td>${entry.IP}</td>
 								            <c:choose>
 								            	 <c:when test="${entry.blocked}">
-								            	 	<td style="width:200px" align="center"><a href="#" onClick="updateIp('${entry.IP}',false);">Blocked</a></td>
+								            	 	<td align="center"><a href="#" onClick="updateIp('${entry.IP}',false);">Blocked</a></td>
 								            	 </c:when>
 								            	 <c:otherwise>
-											        <td style="width:200px" align="center"><a href="#" onClick="updateIp('${entry.IP}',true);">Unblocked</a></td>
+											        <td align="center"><a href="#" onClick="updateIp('${entry.IP}',true);">Unblocked</a></td>
 											    </c:otherwise>
 											</c:choose>
-		                                    <td style="width:200px">${entry.timestamp}</td>
-		                                    <td style="width:400px">${entry.accountName}</td>
-								            <td style="width:150px">
+											<td style="width:150px">
 								            	<a href="#" onClick="getIPHistory('${entry.IP}',event);">Show History</a>
 								            </td>
+		                                    <td>${entry.timestamp}</td>
+		                                    <td>${entry.accountName}</td>
 								            <td align="center">
 								            	<a href="#" onClick="removeIp('${entry.IP}');">Remove</a>
 								            </td>
@@ -98,7 +98,7 @@
 		<script type="text/javascript">
 			$(document).ready(function() {
 		    	 $('#blockedips_table').dataTable({
-		             "aaSorting": [[2,"desc"]],
+		             "aaSorting": [[3,"desc"]],
 		             "aoColumns": [null, null, null, null,{"bSortable":false}, {"bSortable":false}],
 		             "bStateSave": false,
 		             "bPaginate": false,
