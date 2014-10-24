@@ -65,7 +65,7 @@
 											        <td align="center"><a href="#" onClick="updateIp('${entry.IP}',true);">Unblocked</a></td>
 											    </c:otherwise>
 											</c:choose>
-											<td style="width:150px">
+											<td style="width:150px" align="center">
 								            	<a href="#" onClick="getIPHistory('${entry.IP}',event);">Show History</a>
 								            </td>
 		                                    <td>${entry.timestamp}</td>
