@@ -31,7 +31,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  */
 @Configuration
 @Import({DataSourceConfig.class})
-@PropertySource("classpath:jdbc.properties")
+@PropertySource("classpath:application.properties")
 @EnableTransactionManagement
 @EnableMBeanExport
 public class JpaApplicationConfig {

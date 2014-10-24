@@ -28,7 +28,7 @@
 				<c:if test="${not empty message}">
 				   <span id="messagecontainer">${message}</span>
 				</c:if>
-				<h2>Engineering Village - Google Drive Usage<span style="font-size:20px"> [ Total Downloads : ${totalCount} ]</span></h2>
+				<h2>Engineering Village - Google Drive Usage<span style="font-size:18px;color:red"> ${environment}</span><span style="font-size:20px"> [ Total Downloads : ${totalCount} ]</span></h2>
 				<p>This page allows you to view usage of save to google drive functionality.</p>
 				<div id="ddcontainer" >
 					<input type="hidden" value="${usageOption}" id="usageOption" />

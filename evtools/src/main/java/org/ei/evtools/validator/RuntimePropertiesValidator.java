@@ -1,7 +1,7 @@
 package org.ei.evtools.validator;
 
-import org.ei.evtools.db.domain.RunTimeProperties;
 import org.ei.evtools.model.RuntimePropertiesForm;
+import org.ei.evtools.utils.EVToolsUtils;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
@@ -24,7 +24,7 @@ public class RuntimePropertiesValidator implements Validator {
 		if(isEmptyorNull(form.getRuntimepropkey()) || 
 			isEmptyorNull(form.getRuntimepropkeyvalue()) || 
 			isEmptyorNull(form.getRuntimepropenvlevel()) ||
-			!RunTimeProperties.getEnvRunLevels().contains(form.getRuntimepropenvlevel())){
+			!EVToolsUtils.isValidEnv(form.getRuntimepropenvlevel())){
 			errors.rejectValue("runtimepropkey", "Some validation Error occured!");
 		}
 	}
