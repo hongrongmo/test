@@ -1,24 +1,24 @@
-package org.ei.data.compendex.loadtime;
-
-import java.io.BufferedReader;import java.io.FileInputStream;import java.io.FileReader;import java.io.IOException;import java.io.InputStreamReader;import java.util.Hashtable;import java.util.zip.GZIPInputStream;import org.apache.oro.text.perl.Perl5Util;import org.ei.data.LoadNumber;import org.ei.util.GUID;
-
-
-
-public class CompendexBaseTableDriver
-{
-    private Perl5Util perl = new Perl5Util();
-    private static CompendexBaseTableWriter baseWriter;
+package org.ei.data.compendex.loadtime;
+
+import java.io.BufferedReader;import java.io.FileInputStream;import java.io.FileReader;import java.io.IOException;import java.io.InputStreamReader;import java.util.Hashtable;import java.util.zip.GZIPInputStream;import org.apache.oro.text.perl.Perl5Util;import org.ei.data.LoadNumber;import org.ei.util.GUID;
+
+
+
+public class CompendexBaseTableDriver
+{
+    private Perl5Util perl = new Perl5Util();
+    private static CompendexBaseTableWriter baseWriter;
     //private static CompendexBaseTableWriter sourceWriter;
 
-    private static boolean fix;
+    private static boolean fix;
     private static boolean toc;
 
-    private static int exitNumber;
-    private int counter = 0;
+    private static int exitNumber;
+    private int counter = 0;
     private int loadNumber;
-
+
     public static void main(String args[])
-        throws Exception
+        throws Exception
     {        int loadN=0;
         int sw=0;
         if(args[sw].trim().equals("-ln"))
@@ -85,7 +85,7 @@ public class CompendexBaseTableDriver
         c.writeBaseTableFile(infile,prpfile);
 
 
-    }
+    }
     public CompendexBaseTableDriver(int loadN)
     {
         this.loadNumber = loadN;
@@ -129,26 +129,26 @@ public class CompendexBaseTableDriver
                 in.close();
             }
         }
-    }
+    }
     private void writeRecs(BufferedReader in)
         throws Exception
-    {
+    {
         Hashtable record = null;
         String state = null;
         String line = null;
         String fieldName = null;
         while((line = in.readLine()) != null)
-        {
+        {
             if(exitNumber != 0 &&
                counter == exitNumber)
             {
                 break;
-            }
+            }
 
-
+
             char c = line.charAt(0);
             int i = (int)c;
-
+
             if(c == '*')
             {
                 state = "endRecord";
@@ -160,7 +160,7 @@ public class CompendexBaseTableDriver
             else
             {
                 state = "beginField";
-            }
+            }
             if(state.equals("beginField"))
             {
                 if(line.length() < 2)
@@ -170,19 +170,19 @@ public class CompendexBaseTableDriver
                 else
                 {
                     fieldName = line.substring(0,2);
-                    fieldName = fieldName.toUpperCase();
-                    String data = line.substring(2, line.length());
+                    fieldName = fieldName.toUpperCase();
+                    String data = line.substring(2, line.length());
                     if(record.containsKey(fieldName))
-                    {
+                    {
                         StringBuffer value = (StringBuffer)record.get(fieldName);
-                        record.put(fieldName, value.append(";"+data.trim()));
+                        record.put(fieldName, value.append(";"+data.trim()));
                     }
                     else
                     {
                         record.put(fieldName, new StringBuffer(data.trim()));
                     }
                 }
-            }
+            }
             if(state.equals("endRecord"))
             {
                 if(record != null && record.size() > 0)
@@ -205,14 +205,14 @@ public class CompendexBaseTableDriver
 
 
                 record = new Hashtable();
-            }
+            }
             if(state.equals("continueField"))
             {
                 StringBuffer value = (StringBuffer)record.get(fieldName);
                 String data = line.substring(2, line.length());
                 record.put(fieldName, value.append(" "+data.trim()));
             }
-        }
+        }
         if(record != null &&
            record.size() > 0)
         {
