@@ -1,21 +1,21 @@
-package org.ei.data.ntis.loadtime;
-
-
-import java.io.FileReader;import java.util.Hashtable;import org.ei.util.GUID;
-
-
-
-public class NTISBaseTableDriver
-{
-
-	private static NTISBaseTableWriter baseWriter;
-
-	private static int exitNumber;
-	private int counter = 0;
+package org.ei.data.ntis.loadtime;
+
+
+import java.io.FileReader;import java.util.Hashtable;import org.ei.util.GUID;
+
+
+
+public class NTISBaseTableDriver
+{
+
+	private static NTISBaseTableWriter baseWriter;
+
+	private static int exitNumber;
+	private int counter = 0;
 	private int loadNumber;
-
+
 	public static void main(String args[])
-		throws Exception
+		throws Exception
 	{
 		int loadN = Integer.parseInt(args[0]);
 		String infile = args[1];
@@ -30,7 +30,7 @@ public class NTISBaseTableDriver
 
 		NTISBaseTableDriver c = new NTISBaseTableDriver(loadN);
 		c.writeBaseTableFile(infile);
-	}
+	}
 	public NTISBaseTableDriver(int loadN)
 	{
 		this.loadNumber = loadN;
@@ -64,7 +64,7 @@ public class NTISBaseTableDriver
 				in.close();
 			}
 		}
-	}
+	}
 	private void writeRecs(NTISLogicalRecordReader in)
 		throws Exception
 	{
