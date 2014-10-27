@@ -198,7 +198,7 @@ public class INSCorrection
 
 			INSCorrection bdc = new INSCorrection();
 			con = bdc.getConnection(url,driver,username,password);
-			if(action!=null && !(action.equals("extractupdate")||action.equals("extractdelete")))
+			if(action!=null && !(action.equals("extractupdate")||action.equals("extractdelete")||action.equals("lookupindex")))
 			{
 				/**********delete all data from temp table *************/
 
@@ -317,7 +317,25 @@ public class INSCorrection
 			Note: when send extracted files to fast, only fast that do deletion,
 			but we still keep these marked records for delete in oracle table, not deleted at this point
 			*/
-			bdc.doFastExtract(updateNumber,database,action);
+
+			if(action.equalsIgnoreCase("lookupIndex"))
+			{
+				bdc.outputLookupIndex(bdc.getLookupData("lookupIndex",updateNumber),updateNumber);
+				System.out.println(database+" "+updateNumber+" lookup index is done.");
+			}
+			else if(action.equalsIgnoreCase("extractupdate")||action.equalsIgnoreCase("extractdelete"))
+			{
+
+				bdc.doFastExtract(updateNumber,database,action);
+				System.out.println(database+" "+updateNumber+" fast extract is done.");
+			}
+			else
+			{
+				System.out.println(database+" "+updateNumber+" correction is done.");
+				System.out.println("Please run this program again with parameter \"extractupdate\" or \"extractdelete\" to get fast extract file");
+			}
+
+			//bdc.doFastExtract(updateNumber,database,action);
 			bdc.getError(updateNumber,action);
 
 		}
@@ -339,6 +357,94 @@ public class INSCorrection
 
         System.exit(1);
     }
+
+    private void outputLookupIndex(HashMap lookupData, int updateNumber)
+	{
+		String filename = null;
+		String path = null;
+		if(lookupData.get("AUTHOR")!=null)
+		{
+			filename = "author-"+updateNumber+".ins";
+			path = "./ei/index_au";
+			writeToFile((ArrayList)lookupData.get("AUTHOR"),"AUTHOR",updateNumber,filename,path);
+		}
+
+		if(lookupData.get("AFFILIATION")!=null)
+		{
+			filename = "affiliation-"+updateNumber+".ins";
+			path = "./ei/index_af";
+			writeToFile((ArrayList)lookupData.get("AFFILIATION"),"AFFILIATION",updateNumber,filename,path);
+		}
+
+		if(lookupData.get("CONTROLLEDTERM")!=null)
+		{
+			filename = "controlterms-"+updateNumber+".ins";
+			path = "./ei/index_cv";
+			writeToFile((ArrayList)lookupData.get("CONTROLLEDTERM"),"CONTROLLEDTERM",updateNumber,filename,path);
+		}
+
+		if(lookupData.get("PUBLISHERNAME")!=null)
+		{
+			filename = "publishername-"+updateNumber+".ins";
+			path = "./ei/index_pn";
+			writeToFile((ArrayList)lookupData.get("PUBLISHERNAME"),"PUBLISHERNAME",updateNumber,filename,path);
+		}
+
+		if(lookupData.get("SERIALTITLE")!=null)
+		{
+			filename = "serialtitle-"+updateNumber+".ins";
+			path = "./ei/index_st";
+			writeToFile((ArrayList)lookupData.get("SERIALTITLE"),"SERIALTITLE",updateNumber,filename,path);
+		}
+
+		if(lookupData.get(EVCombinedRec.INT_PATENT_CLASSIFICATION)!=null)
+		{
+			filename = "ipc-"+updateNumber+".ins";
+			path = "./ei/index_ipc";
+			writeToFile((ArrayList)lookupData.get(EVCombinedRec.INT_PATENT_CLASSIFICATION),"IPC",updateNumber,filename,path);
+		}
+
+
+
+	}
+
+
+
+		private void writeToFile(List data, String field, int updateNumber, String filename, String path)
+		{
+
+			FileWriter out;
+
+			File file=new File(path);
+
+
+			try
+			{
+				if(!file.exists())
+				{
+					file.mkdir();
+				}
+
+
+
+				out = new FileWriter(path+"/"+filename);
+				System.out.println("field==> "+field);
+				if(data != null)
+				{
+					for(int i=0;i<data.size();i++)
+					{
+						out.write(data.get(i)+"\n");
+					}
+				}
+				out.close();
+			}
+			catch(Exception e)
+			{
+				e.printStackTrace();
+			}
+
+		}
+
 
     private void getError(int updateNumber,String action)
     {
@@ -1073,7 +1179,7 @@ public class INSCorrection
 		{
 			stmt = con.createStatement();
 			System.out.println("Running the query...");
-			if(action.equals("update")||action.equals("ins"))
+			if(action.equals("update")||action.equals("ins")||action.equals("lookupindex"))
 			{
 				//rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc from ins_master_orig where seq_num is not null and updateNumber='"+updateNumber+"'");
 

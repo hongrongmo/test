@@ -454,6 +454,7 @@ public class ResultNavigator
         anav = getNavigatorByName(EiNavigator.PID);
         if(anav != null)
         {
+
           // IPC Code and Companies
           if(m_cbnbOnly)
           {
@@ -467,7 +468,7 @@ public class ResultNavigator
           }
           // IPC data from the PK navigator should display if only EnCompassPAT is searched.
           //else if(mask == upa || mask == eup || mask == upa + eup || mask == upa + ept || mask == eup + ept || mask == upa + eup + ept)
-          else if((m_uspatents || m_eupatents || m_encompasspat) && !(m_compendex || m_inspec || m_ntis || m_georef || m_geobase || m_cbnb ||  m_books || m_encompasslit))
+          else if((m_uspatents || m_eupatents || m_encompasspat|| m_inspec ) && !(m_compendex  || m_ntis || m_georef || m_geobase || m_cbnb ||  m_books || m_encompasslit))
           {
             //PID (IPC Code, PID)
             anav.setDisplayname("IPC code");
@@ -747,6 +748,7 @@ public class ResultNavigator
             while(itrnavs.hasNext())
             {
                 String navname = (String) itrnavs.next();
+
                 EiNavigator navigator = getNavigatorByName(navname);
                 if(navigator != null)
                 {
@@ -806,6 +808,7 @@ public class ResultNavigator
             while(itrNavs.hasNext())
             {
                 String navigatorname = (String) itrNavs.next();
+
                 List mods = (List) navs.get(navigatorname);
                 if((mods != null) && EiNavigator.DB.equalsIgnoreCase(navigatorname))
                 {
@@ -854,7 +857,6 @@ public class ResultNavigator
                     while(itrmod.hasNext())
                     {
                         String[] mod = (String[]) itrmod.next();
-
                         String dbid = mod[0];
 
                         if(dbid != null)
@@ -908,7 +910,6 @@ public class ResultNavigator
                     for(int i=0;i < mods.size();i++)
                     {
                         String[] mod = (String[]) mods.get(i);
-
                         int modcount = 0;
                         try
                         {

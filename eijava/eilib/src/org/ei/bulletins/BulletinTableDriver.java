@@ -7,7 +7,8 @@
 package org.ei.bulletins;
 
 import java.io.*;
-
+import java.text.SimpleDateFormat;
+import java.text.DateFormat;
 import org.apache.oro.text.perl.Perl5Util;
 import java.util.*;
 
@@ -65,6 +66,24 @@ public class BulletinTableDriver
         }
     }
 
+    public BulletinTableDriver(int weekNum, String database, String action)
+	{
+			this.weekNumber=weekNum;
+	        try
+	        {
+	            //Calendar cal = Calendar.getInstance();
+	            //int month = cal.get(cal.MONTH) + 1;
+	            //out = new PrintWriter(new FileWriter("c:\\bulletins" + month + cal.get(cal.DAY_OF_MONTH) + cal.get(cal.YEAR) + ".out"));
+	            out = new PrintWriter(new FileWriter("bulletins_"+database+"_"+action+"_"+weekNum+".out"));
+	        }
+	        catch (IOException e)
+	        {
+	            // TODO Auto-generated catch block
+	            e.printStackTrace();
+	        }
+	}
+
+
     private void writeRecs(BufferedReader in, String file)
     {
 
@@ -89,20 +108,24 @@ public class BulletinTableDriver
                 parms.clear();
             }
             String db = (String) htFields.get("DATASET");
-            String pubDt = ((String) htFields.get("CREADATE")).trim();
-            String pubYr = "";
 
-            if (perl.match("/[0-9][0-9][0-9][0-9]/", pubDt))
-                pubYr = perl.getMatch().toString();
+            if(db != null)
+            {
+				String pubDt = ((String) htFields.get("CREADATE")).trim();
+				String pubYr = "";
 
-            if (db.equalsIgnoreCase("apilit") || db.equalsIgnoreCase("aplit"))
-                processLITRecord(htFields);
-            else if(db.equalsIgnoreCase("apipat"))
-                processPATRecord(htFields);
-            else
-            	{
-            	  System.err.println("Dataset not found!");
-			  	}
+				if (perl.match("/[0-9][0-9][0-9][0-9]/", pubDt))
+					pubYr = perl.getMatch().toString();
+
+				if (db.equalsIgnoreCase("apilit") || db.equalsIgnoreCase("aplit"))
+					processLITRecord(htFields);
+				else if(db.equalsIgnoreCase("apipat"))
+					processPATRecord(htFields);
+				else
+					{
+					  System.err.println("Dataset not found!");
+					}
+			}
 
         }
         catch (IOException e)
@@ -253,7 +276,7 @@ public class BulletinTableDriver
                     iWeekNum2 = Integer.parseInt(perl.getMatch().toString());
 
                 if (iWeekNum == iWeekNum2)
-                    writeBaseTableFile(directory + "\\" + dirArray[i]);
+                    writeBaseTableFile(directory + "/" + dirArray[i]);
 
             }
         }
@@ -267,15 +290,152 @@ public class BulletinTableDriver
     public static void main(String[] args)
     {
 
-
+		if(args.length<4)
+		{
+			System.out.println("not enough parameter");
+			System.out.println("Usage:  data_directory weekNumber database action");
+			System.exit(1);
+		}
         String directory = args[0];
 
         int weekNum = Integer.parseInt(args[1]);
-        BulletinTableDriver driver = new BulletinTableDriver(weekNum);
+        String database = args[2];
+        String action = args[3];
+        String date = "";
+        if(args.length>4)
+        {
+			date = args[4];
+		}
+        BulletinTableDriver driver = new BulletinTableDriver(weekNum,database,action);
+
         //directory = "C:\\elsevier\\docs\\release\\encompassweb\\bulletin\\label_files";
+        //since BD stop providing lable file, I have to create myself. 08/12/2014
+        driver.deleteLabelFile(directory);
+        driver.createLabelFile(directory,weekNum,database,action,date);
         driver.startLoad(directory, weekNum);
 
     }
+
+    private void deleteLabelFile(String directory)
+    {
+		try
+		{
+			File dir = new File(directory);
+			File[] toBeDeleted = dir.listFiles();
+
+			for (File f : toBeDeleted) {
+				if(f.getName().endsWith(".lbl"))
+				{
+			  		f.delete();
+		  		}
+			}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+
+    private void createLabelFile(String directory,int weekNum,String database,String action,String date)
+    {
+		Enumeration filenames = mappings.propertyNames();
+		FileWriter newFile=null;
+		try
+		{
+
+		 while (filenames.hasMoreElements())
+		 {
+      		String labelName =(String)filenames.nextElement();
+      		String fullName = mappings.getProperty(labelName);
+      		String filename = labelName.toLowerCase()+weekNum+".lbl";
+
+      		if((database.equals("lit") && action.equals("weekly")  && (filename.indexOf("autmot")>-1 || filename.indexOf("catyst")>-1 ||filename.indexOf("helenv")>-1 || filename.indexOf("petref")>-1 ||filename.indexOf("lptsub")>-1)) ||
+      		   (database.equals("lit") && action.equals("monthly") && (filename.indexOf("lfufrm")>-1 ||filename.indexOf("natgas")>-1 || filename.indexOf("litofc")>-1 || filename.indexOf("transt")>-1 || filename.indexOf("ltribo")>-1 )))
+
+      		{
+				if(action.equals("monthly") && weekNum>12){
+					System.out.println("*** Month number can not over 12 ***");
+					System.out.println("*** No Label file created        ***");
+					System.exit(1);
+				}
+				newFile = new FileWriter(directory+"/"+filename);
+				newFile.write("Dataset               : APILIT\n");
+				newFile.write("Markname              : APILIT\n");
+				newFile.write("Ordname               : LIT "+fullName.substring(0, 1).toUpperCase() + fullName.substring(1)+"\n");
+				newFile.write("Custcode              : EEI\n");
+				if(date!=null && date!="")
+				{
+					newFile.write("Creadate              : "+date+"\n");
+				}
+				else
+				{
+					newFile.write("Creadate              : "+getDate()+"\n");
+				}
+				newFile.write("Items processed       : CURRENTLY NOT AVAILABLE\n");
+				newFile.write("NrFiles               : 3\n");
+				newFile.write("File1                 : "+labelName+weekNum+".HTM\n");
+				newFile.write("File2                 : "+labelName+weekNum+".PDF\n");
+				newFile.write("File3                 : "+labelName+weekNum+".ZIP\n");
+				newFile.write("Labelnr               : "+labelName+weekNum);
+			}
+			else if((database.equals("pat") && action.equals("weekly") && (filename.indexOf("catzeo")>-1 || filename.indexOf("chmpro")>-1 || filename.indexOf("envtrn")>-1 || filename.indexOf("petprc")>-1 || filename.indexOf("petspe")>-1 || filename.indexOf("pptsub")>-1)) ||
+					(database.equals("pat") && action.equals("monthly") && (filename.indexOf("patofc")>-1 || filename.indexOf("pfufrm")>-1 || filename.indexOf("ptribo")>-1)))
+			{
+				if(action.equals("monthly") && weekNum>12){
+					System.out.println("*** Month number can not over 12 ***");
+					System.out.println("*** No Label file created        ***");
+					System.exit(1);
+				}
+				newFile = new FileWriter(directory+"/"+filename);
+				newFile.write("Dataset               : APIPAT\n");
+				newFile.write("Markname              : APIPAT\n");
+				newFile.write("Ordname               : PAT "+fullName.substring(0, 1).toUpperCase() + fullName.substring(1)+"\n");
+				newFile.write("Custcode              : EEI\n");
+				if(date!=null && date!="")
+				{
+					newFile.write("Creadate              : "+date+"\n");
+				}
+				else
+				{
+					newFile.write("Creadate              : "+getDate()+"\n");
+				}
+				newFile.write("Items processed       : CURRENTLY NOT AVAILABLE\n");
+				newFile.write("NrFiles               : 3\n");
+				newFile.write("File1                 : "+labelName+weekNum+".HTM\n");
+				newFile.write("File2                 : "+labelName+weekNum+".PDF\n");
+				newFile.write("File3                 : "+labelName+weekNum+".ZIP\n");
+				newFile.write("Labelnr               : "+labelName+weekNum);
+			}
+			if(newFile!=null)
+				newFile.close();
+
+		}
+	}
+	catch(Exception e)
+	{
+		e.printStackTrace();
+		try{
+			if(newFile!=null)
+			{
+				newFile.close();
+			}
+		}
+		catch(Exception ee)
+		{
+			ee.printStackTrace();
+		}
+	}
+	}
+
+	private String getDate()
+	{
+		DateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy");
+		Date date = new Date();
+		//System.out.println("DATE= "+dateFormat.format(date));
+		return dateFormat.format(date);
+
+	}
+
     class LabelFileFilter implements FilenameFilter
     {
         public boolean accept(File dir, String name)

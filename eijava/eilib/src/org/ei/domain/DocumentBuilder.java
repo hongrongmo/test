@@ -14,10 +14,10 @@ import java.util.List;
 public interface DocumentBuilder
 {
 
-	public List buildPage(List listOfDocID, 
-			      String dataFormat) 
+	public List buildPage(List listOfDocID,
+			      String dataFormat)
 		throws DocumentBuilderException;
-	
+
 	public DocumentBuilder newInstance(Database database);
 
 }

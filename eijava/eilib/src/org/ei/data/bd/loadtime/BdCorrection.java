@@ -586,6 +586,7 @@ public class BdCorrection
 
 			if(action != null && action.equalsIgnoreCase("update"))
 			{
+				System.out.println("updateNumber= "+updateNumber+" fileName= "+fileName+" database= "+database);
 				if(test)
 				{
 					System.out.println("begin to execute stored procedure update_bd_temp_table");
@@ -598,6 +599,7 @@ public class BdCorrection
 				pstmt.setString(2,fileName);
 				pstmt.setString(3,database);
 				pstmt.executeUpdate();
+
 
 				if(test)
 				{
@@ -658,6 +660,7 @@ public class BdCorrection
 				System.out.println("What do you want me to do? action "+action+" not known");
 				System.exit(1);
 			}
+			System.out.println("updateNumber= "+updateNumber+" fileName= "+fileName+" database= "+database);
 
 		}
 		catch(Exception e)

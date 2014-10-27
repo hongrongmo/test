@@ -19,14 +19,30 @@ public class DiskMap {
         //		writeMap.close();
 
         DiskMap readMap = new DiskMap();
+        String codeString = args[1];
         readMap.openRead(args[0],false);
-        String val = readMap.get("US20010000014A1");
+        String val = readMap.get(codeString);
         System.out.println(val);
         readMap.close();
     }
 
+    public Document document(int i) throws Exception
+    {
+		return this.reader.document(i);
+	}
+
+	public int maxDoc()
+	{
+		return this.reader.maxDoc();
+	}
+
+	public boolean isDeleted(int i)
+	{
+		return this.reader.isDeleted(i);
+	}
+
     public void openRead(String dir, boolean inMemory) throws Exception {
-    	
+
         if (!inMemory)
             this.reader = IndexReader.open(dir);
         else
@@ -36,6 +52,11 @@ public class DiskMap {
     public void openWrite(String dir) throws Exception {
         this.writer = new IndexWriter(dir, new StandardAnalyzer(), true);
     }
+
+    public void openWrite(String dir, boolean flag) throws Exception {
+		       this.writer = new IndexWriter(dir, new StandardAnalyzer(), flag);
+	}
+
 
     public void close() throws Exception {
         if (reader != null) {
@@ -58,6 +79,8 @@ public class DiskMap {
 
         return info;
     }
+
+
 
     public void optimize() throws Exception {
         this.writer.optimize();

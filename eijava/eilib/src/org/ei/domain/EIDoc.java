@@ -70,6 +70,7 @@ public class EIDoc implements Highlightable, XMLSerializable, LocalHoldingLinker
                     xml.toXML(out);
                 }
             }
+
         }
 
         out.write("</");
@@ -142,6 +143,16 @@ public class EIDoc implements Highlightable, XMLSerializable, LocalHoldingLinker
 
     }
 
+     public String getVolume() {
+		String value = null;
+		if (mapDocument.containsKey(Keys.VOLUME)) {
+			Volume volume = (Volume) mapDocument.get(Keys.VOLUME);
+			value = volume.getVolume();
+		}
+		return value;
+
+    }
+
     public String getIssueNo() {
         String value = null;
         if (mapDocument.containsKey(Keys.ISSUE)) {
@@ -151,6 +162,17 @@ public class EIDoc implements Highlightable, XMLSerializable, LocalHoldingLinker
 
         return value;
     }
+
+     public String getIssue() {
+		        String value = null;
+		        if (mapDocument.containsKey(Keys.ISSUE)) {
+		            Issue issue = (Issue) mapDocument.get(Keys.ISSUE);
+		            value = issue.getIssue();
+		        }
+
+		        return value;
+	    }
+
 
     public String getStartPage() {
         String value = null;
@@ -198,6 +220,7 @@ public class EIDoc implements Highlightable, XMLSerializable, LocalHoldingLinker
         catch(Exception e)
         {
             ft = LinkingStrategy.HAS_LINK_NO;
+            //e.printStackTrace();
         }
 
         return ft;
@@ -413,8 +436,14 @@ public class EIDoc implements Highlightable, XMLSerializable, LocalHoldingLinker
         else if (field.equals(LocalHoldingLinker.VOLUME)) {
             value = getVolumeNo();
         }
+        else if (field.equals(LocalHoldingLinker.VOLUME2)) {
+		            value = getVolume();
+        }
         else if (field.equals(LocalHoldingLinker.ISSUE)) {
             value = getIssueNo();
+        }
+        else if (field.equals(LocalHoldingLinker.ISSUE2)) {
+		            value = getIssue();
         }
         else if (field.equals(LocalHoldingLinker.SPAGE)) {
             value = getStartPage();

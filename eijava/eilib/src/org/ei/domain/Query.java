@@ -55,7 +55,7 @@ public class Query implements Comparable
 
     private static final String[] allFields = { "GEO","RGI", "PU", "PM", "PE", "VO", "SU", "SP", "DB", "AN", "RN", "AG", "AV", "CT", "CO", "NT", "PA", "PI", "WK", "YR", "ALL", "KY", "AF", "PN", "ST", "MH", "CL", "CN", "TI", "AB", "AU", "CC", "CV", "FL", "SN", "DT", "BN", "TR", "LA", "CF", "DI", "MI", "NI", "CI", "AI",  "OC","BI" , "PEC" , "PUC" , "PAC", "PK" , "PID" , "PCI","PRN","SIC","PEX","PAM","DOI","PFD","BKS","BKT","PD","CR","PC","IP", "IS", "EB", "CM", "GC", "RC", "RO", "SI", "VOM", "CP", "SC", "GD", "IC","CE", "DS", "DPID", "SD", "SO", "PPA",
     	//EnCompass fields
-    	"AJ", "PRD", "PRC", "AP", "AD", "AC", "EY", "PT",  "LT", "CVA", "CVP", "CVN", "CVM", "CVMN", "CVMA", "CVMP", "DG"};
+    	"AJ", "PRD", "PRC", "AP", "AD", "AC", "EY", "PT",  "LT", "CVA", "CVP", "CVN", "CVM", "CVMN", "CVMA", "CVMP", "DG" };
 
     private static Map quickSearchDiplayOptions = new HashMap();
 
@@ -104,6 +104,7 @@ public class Query implements Comparable
       quickSearchDiplayOptions.put("DT:({J_BZ} or {D_BZ} or {D_AR} or {D_CP} or {D_LE} or {D_NO} or {B_BZ} or {K_BZ} or {M_BZ} or {P_BZ} or {R_BZ})","Business article");
       quickSearchDiplayOptions.put("DT:(AB or {J_AB} or {R_AB} or {P_AB} or {B_AB} or {D_AB} or {K_AB} or {M_AB})", "Abstract");
       quickSearchDiplayOptions.put("DT:Other", "Other");
+      quickSearchDiplayOptions.put("DT:IP", "Article in Press");
 
       quickSearchDiplayOptions.put("TR:APP", "Applications");
       quickSearchDiplayOptions.put("TR:ECO", "Economic");

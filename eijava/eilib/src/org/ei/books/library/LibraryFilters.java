@@ -35,7 +35,7 @@ public class LibraryFilters
 			"Health, Toxicology and Mutagenesis", "Law",
 			"Nuclear Energy and Engineering", "Ocean Engineering",
 			"Organizational Behavior and Human Resource Management",
-			"Safety Research" };
+			"Safety Research","Chemical Engineering" };
 
 	public final String[] COM = { "Software", "Computer Science Applications",
 			"Information Systems", "Computational Theory and Mathematics",
@@ -56,8 +56,7 @@ public class LibraryFilters
 			"Social Psychology", "Statistics, Probability and Uncertainty",
 			"Theoretical Computer Science", "Algebra and Number Theory",
 			"Cognitive Neuroscience", "Computers in Earth Sciences",
-			"Decision Sciences (General)",
-			"Ecology, Evolution, Behavior and Systematics",
+			"Decision Sciences (General)","Ecology, Evolution, Behavior and Systematics",
 			"Safety, Risk, Reliability and Quality", "Strategy and Management" };
 
 	public final String[] SEC = { "Computer Networks and Communications",
@@ -91,7 +90,9 @@ public class LibraryFilters
 			"Manufacturing and Instrumentation", "Materials Science",
 			"Safety Research", "Biochemistry", "Biomedical Engineering",
 			"Control Engineering", "Control of Electrical Systems",
-			"Design Engineering", "Fuel Technology", "Materials Chemistry" };
+			"Design Engineering", "Fuel Technology", "Materials Chemistry",
+			"Building and Construction","Renewable Energy", "Sustainability and the Environment",
+			"Processing of Agricultural Products"};
 
 	public final String[] ELE = { "Communications and Signal Processing",
 			"Electromagnetics", "Microelectronics",
@@ -117,7 +118,8 @@ public class LibraryFilters
 			"Safety, Risk, Reliability and Quality",
 			"Computer Science Applications", "Audio Electronics",
 			"Computational Theory and Mathematics",
-			"Electrical Machines and Drives" };
+			"Electrical Machines and Drives", "Signal Processing and Communications",
+			"Internet and Web Technology","Materials Engineering","Coding and Information Theory"};
 
 	public final String[] MAT = { "Industrial and Manufacturing Engineering",
 			"Safety, Risk, Reliability and Quality", "Mechanics of Materials",
@@ -138,5 +140,8 @@ public class LibraryFilters
 			"Aircraft Design", "Ceramics and Composites",
 			"Surfaces and Interfaces", "Computer Aided Design",
 			"Industrial Health and Safety",
-			"Management of Technology and Innovation" };
+			"Management of Technology and Innovation","Ceramics",
+			"Energy (General)","Petrochemical Engineering",
+			"Engineering Design","Geotechnical Engineering",
+			"Renewable Energy"};
 }

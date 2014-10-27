@@ -1064,7 +1064,7 @@ public class UPTCombiner extends CombinerTimestamp {
             pn = "";
 
     	List lstVals = new ArrayList();
-    	if((country.indexOf(AUDELIMITER) > 1)&&(pn.indexOf(AUDELIMITER) > 1))
+    	if((country.indexOf(AUDELIMITER) > 1) || (pn.indexOf(AUDELIMITER) > 1))
         {
     		String[] valuesCountry = country.split(AUDELIMITER);
     		String[] valuesPn = pn.split(AUDELIMITER);
@@ -1080,6 +1080,9 @@ public class UPTCombiner extends CombinerTimestamp {
 				else{
 					resultCountry = valuesCountry[0];
 				}
+				if(resultCountry== null)
+				 	resultCountry="";
+
 				StringBuffer sbPnum = new StringBuffer();
 				sbPnum.append(resultCountry).append(valuesPn[x]);
 				lstVals.add(sbPnum.substring(0, sbPnum.length()));
@@ -1492,7 +1495,7 @@ public class UPTCombiner extends CombinerTimestamp {
         String password = args[3];
 
         int loadNumber = Integer.parseInt(args[4]);
-        long timestamp=0l;
+        long timestamp=0;
         int recsPerbatch = Integer.parseInt(args[5]);
         String operation = args[6];
         Combiner.TABLENAME = args[7];

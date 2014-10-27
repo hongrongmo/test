@@ -84,7 +84,6 @@ public abstract class CombinedBase
             sql = getSQLHook(searchword,
                              databases);
 
-
             rset=stmt.executeQuery(sql.toString());
 
             String dyn = "DYNAMIC";
@@ -110,7 +109,6 @@ public abstract class CombinedBase
 
             while ( (skipCount < skip) && rset.next())
             {
-                //System.out.println("Skipping...");
                 skipCount++;
             }
 
@@ -194,6 +192,7 @@ public abstract class CombinedBase
         }
         catch(Exception e)
         {
+			e.printStackTrace();
             throw new LookupIndexException(e);
         }
         finally

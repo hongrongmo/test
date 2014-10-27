@@ -12,6 +12,7 @@ import java.util.List;
 
 import org.ei.connectionpool.ConnectionBroker;
 import org.ei.connectionpool.ConnectionPoolException;
+import org.ei.data.inspec.runtime.InspecWrapper;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   /** This class builds PageEntryList from the List of Documents to display on the page .
@@ -62,8 +63,15 @@ public class PageEntryBuilder
 		int docLength= docList.size();
 		for(int i = 0; i < docLength ; i++ )
 		{
-
-			EIDoc eid = (EIDoc)docList.get(i);
+			EIDoc eid = null;
+			if(docList.get(i) instanceof InspecWrapper)
+			{
+				eid = ((InspecWrapper)docList.get(i)).eiDoc;
+			}
+			else
+			{
+				eid = (EIDoc)docList.get(i);
+			}
 			if(eid != null)
 			{
 				docTable.put(eid.getDocID(), eid);
@@ -73,7 +81,7 @@ public class PageEntryBuilder
         try
         {
             String query = buildSelectedQuery(docTable);
-//            System.out.println("SQL:"+query);
+            //System.out.println("SQL:"+query);
             DatabaseConfig  databaseConfig = DatabaseConfig.getInstance();
             broker = ConnectionBroker.getInstance();
             con = broker.getConnection(DatabaseConfig.SESSION_POOL);
@@ -95,7 +103,16 @@ public class PageEntryBuilder
             docLength = docList.size();
             for(int i = 0; i < docLength ; i++ )
             {
-                EIDoc eid1 = (EIDoc)docList.get(i);
+				EIDoc eid1 = null;
+				if(docList.get(i) instanceof InspecWrapper)
+				{
+					eid1 = ((InspecWrapper)docList.get(i)).eiDoc;
+				}
+				else
+				{
+					eid1 = (EIDoc)docList.get(i);
+				}
+
                 if(eid1 != null)
                 {
 

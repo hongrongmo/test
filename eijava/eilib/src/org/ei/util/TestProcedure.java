@@ -13,7 +13,7 @@ import org.ei.connectionpool.NoConnectionAvailableException;
 import org.ei.domain.DatabaseConfig;
 
 import org.ei.util.StringUtil;
-import org.ei.util.test.*;
+//import org.ei.util.test.*;
 
 public class TestProcedure {
 
@@ -61,9 +61,9 @@ public class TestProcedure {
     private boolean runTest()
         throws Exception
     {
-        new TestSession().run();
-        new TestUpdateDb().run();
-        new TestPA().run();
+       // new TestSession().run();
+      //  new TestUpdateDb().run();
+      //  new TestPA().run();
         return true;
     }
 

@@ -17,7 +17,7 @@ import java.util.regex.Pattern;
  * To change the template for this generated type comment go to
  * Window&gt;Preferences&gt;Java&gt;Code Generation&gt;Code and Comments
  */
-public abstract class PatentCodeModifier extends EiModifier 
+public abstract class PatentCodeModifier extends EiModifier
 {
     public PatentCodeModifier(int i, String slable, String svalue)
     {
@@ -30,23 +30,23 @@ public abstract class PatentCodeModifier extends EiModifier
         {
             Pattern slash = Pattern.compile("SLASH",Pattern.CASE_INSENSITIVE);
             Pattern period = Pattern.compile("PERIOD",Pattern.CASE_INSENSITIVE);
-        
+
             modstring = slash.matcher(modstring).replaceAll("\\/");
             modstring = period.matcher(modstring).replaceAll("\\.");
         }
         return modstring;
     }
 
-    
+
     public abstract String seekCode(ClassNodeManager cm) throws Exception;
-      
+
     /**
      * @return
      */
     public String getTitle()
     {
         String title = StringUtil.EMPTY_STRING ;
-        try 
+        try
         {
             ClassNodeManager cm = ClassNodeManager.getInstance();
 

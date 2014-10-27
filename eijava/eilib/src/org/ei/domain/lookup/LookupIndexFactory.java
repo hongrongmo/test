@@ -74,6 +74,11 @@ public class LookupIndexFactory
 			lis = new LookupPC(sessionID,
 							   1000000);
 		}
+		else if(searchfield!=null && searchfield.equals("PID"))
+		{
+			lis = new LookupIPC(sessionID,
+								1000000);
+		}
 
     	return lis;
   }

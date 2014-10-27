@@ -147,7 +147,6 @@ public class ConvertModifierTitle
 			}
 		}
 
-    //System.out.println(" navName:[" + navName + "] title:" + title + " code:" + code);
 		return title;
 	}
 
