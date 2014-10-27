@@ -60,6 +60,5 @@ public class Library extends LibraryComponent  {
 	}
     public void accept(Visitor visitor) {
         visitor.visit(this);
-	}
+    }
 }
-

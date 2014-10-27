@@ -5,6 +5,7 @@ import org.ei.xml.Entity;
 import org.ei.util.DiskMap;
 import org.ei.util.GetPIDDescription;
 
+
 public class ClassNodeManager {
     private DiskMap uspto;
     private DiskMap ipc;
