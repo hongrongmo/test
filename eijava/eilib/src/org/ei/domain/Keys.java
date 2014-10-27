@@ -1,5 +1,6 @@
 package org.ei.domain;
 
+import org.ei.domain.Key;
 import org.ei.domain.Keys;
 
 
@@ -355,5 +356,9 @@ public interface Keys
     public static final Key COVER_IMAGE = new Key("CVR","Cover Image");
     public static final Key PAGE_THUMBNAIL = new Key("THMB","Page Thumbnail");
     public static final Key PAGE_THUMBS = new Key("THMBS","Thumbnail Images");
+    
+  //INSPEC CITATION
+    public static final Key CITATION = new Key("CIT","Citation");
+    public static final Key CITATION_COUNT = new Key("CIT_COUNT","Citation count");
 
 }
