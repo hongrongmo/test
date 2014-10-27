@@ -41,6 +41,7 @@
     <include name="**/commons-cli-1.1.jar"/>
     <include name="**/log4j-1.2.11.jar"/>
     <include name="**/commons-validator.jar"/>
+    <include name="**/servlet.jar"/>
   </fileset>
 
   <path id="project.classpath">
