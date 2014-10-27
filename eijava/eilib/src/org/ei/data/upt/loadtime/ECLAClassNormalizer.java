@@ -38,12 +38,12 @@ public class ECLAClassNormalizer {
                         // otherwise we loop back around to try the new normalized code
                         normalcode = perl.substitute("s/0+([1-9A-Z]+)$/$1/i", code);
                     }
-                    else
-                    {
-                        System.out.print(" success: " + code);
-                    }
+                   // else
+                   // {
+                        //System.out.print(" success: " + code);
+                   // }
                 }
-                System.out.println(". ");
+                //System.out.println(". ");
             }
 
         }

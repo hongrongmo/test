@@ -177,6 +177,7 @@ public class FastClient
     else if(EiNavigator.PID.equals(navid)) {
       if((mask & (DatabaseConfig.EUP_MASK +
             DatabaseConfig.UPA_MASK+
+            DatabaseConfig.INS_MASK+
             DatabaseConfig.CBN_MASK +
             DatabaseConfig.GEO_MASK +
             DatabaseConfig.GRF_MASK +
@@ -214,7 +215,6 @@ public class FastClient
     // Create string of active navigators for use in doNavigators clause of buildSearchURL
     public String getNavigatorString()
     {
-        //System.out.println(" getNavigatorString() w/ mask = " + getNavigatorMask());
 
         String navstring = "";
         boolean navstrempty = true;
@@ -241,7 +241,6 @@ public class FastClient
             }
         }
 
-        //System.out.println(" getNavigatorString() result = " + navstring);
         return navstring;
     }
 
@@ -253,6 +252,7 @@ public class FastClient
     private String primarySort;
     private String primarySortDirection = "+";
     private String queryString;
+    private boolean doThesaurus = false;
     private boolean doNavigators = false;
     private boolean doCatCount = false;
     private int pageSize = 25;
@@ -286,11 +286,11 @@ public class FastClient
 
             //in = new BufferedReader(new FileReader("test.txt"));
             FastClient client = new FastClient();
-            client.setBaseURL("http://ei-test.bos3.fastsearch.net:15100");
+            client.setBaseURL("http://ei-main.nda.fastsearch.net:15100");
             client.setResultView("ei");
             client.setOffSet(0);
-            client.setPageSize(25);
-            client.setQueryString("ti:water");
+            client.setPageSize(50000);
+            client.setQueryString("(((((all:\"cerium alloy\")) OR ((cv:\"QQDelQQ cerium alloys QQDelQQ\"))) OR ((all:\"ce alloy\" OR all:\"ce alloys\")))) AND (yr:[1970;2015]) AND (((db:cpx OR db:c84)))");
             client.setDoCatCount(true);
             client.setDoNavigators(true);
             client.setPrimarySort("ausort");
@@ -298,10 +298,25 @@ public class FastClient
             client.search();
 
             List l = client.getDocIDs();
+            System.out.println("SIZE="+l.size());
+            StringBuffer sb=new StringBuffer();
             for(int i=0;i<l.size();i++)
             {
                 String[] docID = (String[])l.get(i);
+                if(i % 4500==0)
+                {
+					sb.append("'"+docID[0]+"',");
+					System.out.println(sb.toString());
+					sb=new StringBuffer();
+					//System.out.println("docID"+i+"\t"+docID[0]+"\t"+docID[1]+"\t"+docID[2]);
+				}
+				else
+				{
+					sb.append("'"+docID[0]+"',");
+				}
+
             }
+            System.out.println(sb.toString());
 
             Hashtable cl = client.getSubcats();
             Enumeration clusterKeys = cl.keys();
@@ -468,6 +483,11 @@ public class FastClient
         this.doNavigators = n;
     }
 
+    public void setDoThesaurus(boolean n)
+	{
+	    this.doThesaurus = n;
+    }
+
     public void setDoCatCount(boolean c)
     {
         this.doCatCount = c;
@@ -492,9 +512,10 @@ public class FastClient
         try
         {
             String URL = buildSearchURL();
+            //System.out.println("URL= "+URL);
             HttpClient client = new HttpClient();
             method = new GetMethod(URL);
-            //System.out.println(" FastClient URL " + URL);
+
             int statusCode = client.executeMethod(method);
             in = new BufferedReader(new InputStreamReader(method.getResponseBodyAsStream()));
             read(in);
@@ -541,7 +562,7 @@ public class FastClient
 		try
 		{
 			String URL = buildDedupSearchURL();
-			//System.out.println("Dedup URL:"+URL);
+
 			HttpClient client = new HttpClient();
 			method = new GetMethod(URL);
 			int statusCode = client.executeMethod(method);
@@ -679,8 +700,11 @@ public class FastClient
         StringBuffer buf = new StringBuffer(this.baseURL);
         buf.append("/cgi-bin/");
         buf.append(this.resultView);
-        buf.append("?type=adv&encoding=utf-8&rpf_clustering:enabled=false&rpf_clustering:root=*&rpf_clustering:overridehits=1&resultview=");
-        buf.append(this.resultView);
+        buf.append("?encoding=utf-8&rpf_clustering:enabled=false&rpf_clustering:root=*&rpf_clustering:overridehits=1&resultview=");
+        if(!doThesaurus)
+        {
+			buf.append("&type=adv");
+		}
         buf.append("&query=");
         buf.append(URLEncoder.encode(this.queryString,"UTF-8"));
         buf.append("&offset=");
@@ -714,7 +738,7 @@ public class FastClient
             buf.append("&rpf_navigation:navigators=");
 
             buf.append(URLEncoder.encode(getNavigatorString(),"UTF-8"));
-//          buf.append(URLEncoder.encode("clnav,cvnav,pnnav,dtnav,stnav,flnav,lanav,afnav,aunav"));
+
         }
 
         if(doCatCount)
@@ -722,7 +746,7 @@ public class FastClient
             buf.append("&catn=-1");
         }
 
-        //System.out.println(buf.toString());
+
         return buf.toString();
     }
 
@@ -730,12 +754,10 @@ public class FastClient
     {
 		if(queryString.indexOf("(all:") > -1 || queryString.indexOf(" all:") > -1)
 		{
-			//System.out.println("ALL fields rank.");
 			return "relevance";
 		}
 		else if(queryString.indexOf("(ky:") > -1 || queryString.indexOf(" ky:") > -1)
 		{
-			//System.out.println("KY fields rank.");
 			return "ky";
 		}
 		else
@@ -747,49 +769,44 @@ public class FastClient
     public void read(BufferedReader in)
         throws IOException
     {
-        String line = null;
-        while((line = in.readLine()) != null)
-        {
-//            if(line.indexOf("#CAT") == 0)
-//            {
-//                if(doCatCount)
-//                {
-//                    parseSubcats(line);
-//                }
-//            }
+		String line = null;
+		boolean isThesaurus = false;
 
-            if(line.indexOf("#ERC") == 0)
-            {
-                parseErrorCode(line);
-            }
-            else if(line.indexOf("#CNT") == 0)
-            {
-                parseCount(line);
-            }
-            else if(line.indexOf("#TIM") == 0)
-            {
-                parseSearchTime(line);
-            }
-            else if(line.indexOf("#eidocid") == 0)
-            {
- 				String dedupKey = in.readLine();
- 				String doi = in.readLine();
- 				String dmask = in.readLine();
- 				parseDocID(line,dedupKey,doi,dmask);
-            }
-            else if(line.indexOf("#tdocid") == 0)
-            {
-                parseTDocID(line);
-            }
-            else if(line.indexOf("#NAV NAME") == 0)
-            {
-                String navNames = skip(in, "#NAV NAMES");
-                String navCounts = skip(in, "#NAV CNTS");
-                parseNavigator(line,
-                               navNames,
-                               navCounts);
-            }
-        } // while
+		while((line = in.readLine()) != null)
+		{
+			if(line.indexOf("#ERC") == 0)
+			{
+				parseErrorCode(line);
+			}
+			else if(line.indexOf("#CNT") == 0)
+			{
+				parseCount(line);
+			}
+			else if(line.indexOf("#TIM") == 0)
+			{
+				parseSearchTime(line);
+			}
+			else if(line.indexOf("#eidocid") == 0 && line.trim().length()>8)
+			{
+				String dedupKey = in.readLine();
+				//String category = in.readLine();
+				String doi = in.readLine();
+				String dmask = in.readLine();
+				parseDocID(line,dedupKey,doi,dmask);
+			}
+			else if(line.indexOf("#tdocid") == 0 && line.trim().length()>7)
+			{
+				parseTDocID(line);
+			}
+			else if(line.indexOf("#NAV NAME") == 0)
+			{
+				String navNames = skip(in, "#NAV NAMES");
+				String navCounts = skip(in, "#NAV CNTS");
+				parseNavigator(line,
+							   navNames,
+							   navCounts);
+			}
+		} // while
 
         // Fake a Navigator!
         /*
@@ -804,29 +821,33 @@ public class FastClient
                                 String nameLine,
                                 String navCounts)
     {
-        String navName = parseNavName(navLine);
-        char[] c = new char[1];
-        c[0] = (char)30;
-        String delimiter = new String(c);
-        nameLine = strip(nameLine, "#NAV NAMES ");
-        navCounts = strip(navCounts, "#NAV CNTS ");
-        StringTokenizer nameTokens = new StringTokenizer(nameLine, delimiter);
-        StringTokenizer countTokens = new StringTokenizer(navCounts, delimiter);
-        ArrayList navData = new ArrayList();
-        int i = 0;
-        while(nameTokens.hasMoreTokens())
-        {
-            String[] dataElement = new String[2];
-            dataElement[0] = nameTokens.nextToken();
-            dataElement[1] = countTokens.nextToken();
 
-            if(dataElement[0] != null && !dataElement[0].equals("null"))
-            {
-            	navData.add(dataElement);
+		String navName = parseNavName(navLine);
+		char[] c = new char[1];
+		c[0] = (char)30;
+		String delimiter = new String(c);
+		nameLine = strip(nameLine, "#NAV NAMES ");
+
+		navCounts = strip(navCounts, "#NAV CNTS ");
+
+		StringTokenizer nameTokens = new StringTokenizer(nameLine, delimiter);
+		StringTokenizer countTokens = new StringTokenizer(navCounts, delimiter);
+
+		ArrayList navData = new ArrayList();
+		int i = 0;
+
+		while(nameTokens.hasMoreTokens())
+		{
+			String[] dataElement = new String[2];
+			dataElement[0] = nameTokens.nextToken();
+			dataElement[1] = countTokens.nextToken();
+			if(dataElement[0] != null && !dataElement[0].equals("null"))
+			{
+				navData.add(dataElement);
 			}
-        }
+		}
 
-        navigators.put(navName, navData);
+		navigators.put(navName, navData);
 
     }
 
@@ -909,11 +930,11 @@ public class FastClient
 
     protected void parseTDocID(String docIdLine)
     {
-        String[] id = new String[2];
-        StringTokenizer tokens1 = new StringTokenizer(docIdLine);
-        tokens1.nextToken();
-        id[0] = tokens1.nextToken().trim();
-        docIDs.add(id);
+		String[] id = new String[2];
+		StringTokenizer tokens1 = new StringTokenizer(docIdLine);
+		tokens1.nextToken();
+		id[0] = tokens1.nextToken().trim();
+		docIDs.add(id);
     }
 
 
@@ -924,31 +945,7 @@ public class FastClient
         String c = tokens.nextToken().trim();
         this.hitCount = Integer.parseInt(c);
     }
-/* Subcats are  now handled as a DB Navigator
-    protected void parseSubcats(String line)
-    {
 
-        StringTokenizer tokens = new StringTokenizer(line);
-        tokens.nextToken();
-        tokens.nextToken();
-        String data = tokens.nextToken();
-        StringTokenizer tokenPairs = new StringTokenizer(data, ",");
-        ArrayList navData = new ArrayList();
-        while(tokenPairs.hasMoreTokens())
-        {
-            String pair = tokenPairs.nextToken();
-            StringTokenizer tokenParts = new StringTokenizer(pair,":");
-            String database = tokenParts.nextToken();
-            String count = tokenParts.nextToken();
-            subcats.put(database, count);
-            String[] navel = new String[2];
-            navel[0] = database;
-            navel[1] = count;
-            navData.add(navel);
-        }
-        navigators.put("db", navData);
-    }
-*/
     private String strip(String in, String str)
     {
         return this.sutil.replace(in,

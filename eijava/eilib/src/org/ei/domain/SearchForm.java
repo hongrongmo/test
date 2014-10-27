@@ -7,7 +7,7 @@ import java.util.List;
 
 public class SearchForm {
 
-    public static final int ENDYEAR = 2011;
+    public static final int ENDYEAR = 2012;
 
 
     public static Map getDiscipline(int selecteddbMask) {
@@ -401,11 +401,19 @@ public class SearchForm {
         //PID
          if(selecteddbMask == DatabaseConfig.UPA_MASK ||
             selecteddbMask == DatabaseConfig.EUP_MASK ||
-            selecteddbMask == DatabaseConfig.UPA_MASK + DatabaseConfig.EUP_MASK ||
+            selecteddbMask == DatabaseConfig.INS_MASK ||
             selecteddbMask == DatabaseConfig.EPT_MASK ||
-            selecteddbMask == DatabaseConfig.EPT_MASK + DatabaseConfig.UPA_MASK + DatabaseConfig.EUP_MASK ||
+            selecteddbMask == DatabaseConfig.INS_MASK + DatabaseConfig.EUP_MASK ||
+            selecteddbMask == DatabaseConfig.INS_MASK + DatabaseConfig.UPA_MASK ||
+            selecteddbMask == DatabaseConfig.INS_MASK + DatabaseConfig.EPT_MASK ||
+            selecteddbMask == DatabaseConfig.UPA_MASK + DatabaseConfig.EUP_MASK ||
             selecteddbMask == DatabaseConfig.EPT_MASK + DatabaseConfig.UPA_MASK ||
-            selecteddbMask == DatabaseConfig.EPT_MASK + DatabaseConfig.EUP_MASK )
+            selecteddbMask == DatabaseConfig.EPT_MASK + DatabaseConfig.EUP_MASK ||
+            selecteddbMask == DatabaseConfig.UPA_MASK + DatabaseConfig.EUP_MASK + DatabaseConfig.INS_MASK ||
+            selecteddbMask == DatabaseConfig.EPT_MASK + DatabaseConfig.UPA_MASK + DatabaseConfig.EUP_MASK ||
+            selecteddbMask == DatabaseConfig.EPT_MASK + DatabaseConfig.UPA_MASK + DatabaseConfig.INS_MASK ||
+            selecteddbMask == DatabaseConfig.EPT_MASK + DatabaseConfig.EUP_MASK + DatabaseConfig.INS_MASK ||
+            selecteddbMask == DatabaseConfig.EPT_MASK + DatabaseConfig.UPA_MASK + DatabaseConfig.EUP_MASK + DatabaseConfig.INS_MASK)
         {
             sectiontype.put("PID","Int. patent classification");
         }
@@ -777,6 +785,7 @@ public class SearchForm {
       if(selecteddbMask == DatabaseConfig.CPX_MASK )
       {
           doctype.put("PA", "Patents (before 1970)");
+          doctype.put("IP", "Article in Press");
       }
       else if(selecteddbMask == DatabaseConfig.CBF_MASK ||
         selecteddbMask == DatabaseConfig.PCH_MASK ||
@@ -847,12 +856,6 @@ public class SearchForm {
       if(selecteddbMask == DatabaseConfig.GRF_MASK)
       {
           doctype.put("MP", "Map");
-      }
-
-	  //added for AIP
-      if(selecteddbMask == DatabaseConfig.CPX_MASK )
-	  {
-	     doctype.put("IP", "Article in Press");
       }
 
       return doctype;

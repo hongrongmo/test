@@ -1860,18 +1860,22 @@ public class BdParser
 
 					//System.out.println("CONFNAME " + confname);
 
-					if(confnumber!= null && confname != null)
-					{
-						record.put("CONFNAME",dictionary.mapEntity(getMixData(confnumber.getContent())+" "+getMixData(confname.getContent())));
-					}
-					else if(confname!= null)
+					//if(confnumber!= null && confname != null)
+					//{
+					//	record.put("CONFNAME",dictionary.mapEntity(getMixData(confnumber.getContent())+" "+getMixData(confname.getContent())));
+					//}
+					//else if(confname!= null)
+					/* based on Frank request, remove confnumber from conference name column 10/23/2014 */
+					if(confname!= null)
 					{
 						record.put("CONFNAME",dictionary.mapEntity(getMixData(confname.getContent())));
 					}
+					/*
 					else if(confnumber!= null)
 					{
 						record.put("CONFNAME",dictionary.mapEntity(getMixData(confnumber.getContent())));
 					}
+					*/
 
 					//confcatnumber
 
