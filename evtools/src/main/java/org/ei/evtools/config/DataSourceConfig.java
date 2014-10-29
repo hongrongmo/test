@@ -17,7 +17,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
  * 
  */
 @Configuration
-@PropertySource("classpath:jdbc.properties")
+@PropertySource("classpath:application.properties")
 public class DataSourceConfig {
 	
 	static Logger logger = Logger.getLogger(DataSourceConfig.class);
@@ -31,11 +31,14 @@ public class DataSourceConfig {
 		 DriverManagerDataSource dataSource;
 
 		 try {
+			 String key = environment.getProperty("ENVIRONMENT")+".jdbc.url";
+			 String jdbcURL = environment.getProperty(key);
+			 logger.info("jdbc url key='"+key+"', value='"+jdbcURL+"'");
 			 dataSource = new DriverManagerDataSource();
 			 dataSource.setDriverClassName(environment.getProperty("jdbc.driverClassName"));
 			 dataSource.setUsername(environment.getProperty("jdbc.username"));
 			 dataSource.setPassword(environment.getProperty("jdbc.password"));
-			 dataSource.setUrl(environment.getProperty("jdbc.url"));
+			 dataSource.setUrl(jdbcURL);
 			 logger.info("Data Source bean has been successfully created!");
 			
 			} catch (Exception e) {

@@ -10,6 +10,8 @@ import org.ei.evtools.exception.DatabaseAccessException;
 import org.ei.evtools.model.GoogleDriveUsageForm;
 import org.ei.evtools.utils.EVToolsUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -22,6 +24,7 @@ import org.springframework.web.servlet.ModelAndView;
  * 
  */
 @Controller
+@PropertySource("classpath:application.properties")
 public class GoogleDriveUsageController {
 	
 	
@@ -32,7 +35,8 @@ public class GoogleDriveUsageController {
 	@Autowired
 	GoogleDriveUsageService googleDriveUsageService; 
 	
-	
+	@Autowired
+	private Environment environment; 
 	
 	@RequestMapping(value="/app/googledriveusage")
 	public ModelAndView googledriveusage(@ModelAttribute("googledriveusageform") GoogleDriveUsageForm form) throws IOException, DatabaseAccessException{
@@ -40,6 +44,7 @@ public class GoogleDriveUsageController {
 		if(EVToolsUtils.isEmptyorNull(form.getUsageOption()) || !EVToolsUtils.isValidUsageOption(form.getUsageOption())){
 			form.setUsageOption("downloadformat");
 		}
+		
 		String usageOption = form.getUsageOption();
 		Date startDate = null; 
 		if(!EVToolsUtils.isEmptyorNull(form.getStartDate()) && EVToolsUtils.isValidDate(form.getStartDate()+" 00:00:00", dateFormat)){
@@ -58,6 +63,7 @@ public class GoogleDriveUsageController {
 		model.addObject("usageData", usageData);
 		model.addObject("usageOption", usageOption);
 		model.addObject("pagetype", "googledriveusage");
+		model.addObject("environment", environment.getProperty("ENVIRONMENT"));
 		
 		if(startDate != null && endDate != null){
 			model.addObject("dateQueryinfo", "Date filter applied from " + form.getStartDate() + " to " + form.getEndDate());
