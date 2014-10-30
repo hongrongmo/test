@@ -136,6 +136,9 @@ public class SessionManager {
         if (StringUtils.isNotBlank(getUserAuthToken(userSession))) {
             setUserTextZonesInUserSession(userSession);
         }
+        
+        // Attempt to set the legacy BO customer ID!
+        setUserCustomerIdInUserSession(userSession);
 
         // If there is a "userInfo" element present in CARS response
         // then parse the response for user information
@@ -144,7 +147,6 @@ public class SessionManager {
             setUserCartridgeInUserSession(userSession);
 
             setUserStartPageInEvWebUser(userSession);
-            setUserCustomerIdInUserSession(userSession);
             setLocalHoldingsInUserSession(userSession);
             setBulletinEntitlements(userSession);
 
@@ -625,20 +627,36 @@ public class SessionManager {
         return serverName;
     }
 
+    /**
+     * Set the Customer ID for logging service.  
+     * @param userSession
+     */
     private void setUserCustomerIdInUserSession(UserSession userSession) {
 
-        Map<String, String> textzones = userSession.getUserTextZones();
-        String strTzCustomerId = textzones.get(UserPreferences.TZ_CUSTOMER_ID);
+        try {
+            log4j.info("Attempting to load legacy BO customer ID from TZ...");
+            Map<String, String> textzones = userSession.getUserTextZones();
+            if (textzones == null || textzones.isEmpty()) {
+                log4j.warn("************** Text Zone is null or empty! **************");
+            }
+            String strTzCustomerId = textzones.get(UserPreferences.TZ_CUSTOMER_ID);
 
-        if (strTzCustomerId != null && !strTzCustomerId.isEmpty()) {
-            log4j.info("strTzCustomerId" + strTzCustomerId);
-            userSession.getUser().setCustomerID(strTzCustomerId);
-        } else {
-            log4j.warn("***************Fence CUSTOMER_ID (EV - Legacy Back Office Information - Customer ID) is empty for the Customer Number : "
-                + userSession.getUser().getCustomerID() + "*******************");
+            if (strTzCustomerId != null && !strTzCustomerId.isEmpty()) {
+                log4j.info("strTzCustomerId" + strTzCustomerId);
+                userSession.getUser().setCustomerID(strTzCustomerId);
+            } else {
+                log4j.warn("*************** Text Zone CUSTOMER_ID is empty for the Customer Number : "
+                    + userSession.getUser().getCustomerID() + " *******************");
+            }
+        } catch (Throwable t) {
+            log4j.error("************** Unable to set Customer ID from Text Zone! **************", t);
         }
     }
 
+    /**
+     * Set the local holdings links from Text Zone values
+     * @param userSession
+     */
     private void setLocalHoldingsInUserSession(UserSession userSession) {
 
         Map<String, String> textzones = userSession.getUserTextZones();

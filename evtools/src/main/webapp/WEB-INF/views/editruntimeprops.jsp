@@ -30,7 +30,7 @@
 	  				<h4><span>Environment level : </span>
 	  				<select name="envselect" id="envselect">
 	                	<c:forEach var="entry" items="${envrunlevels}">
-	                		<option value="${entry}" ${environment == entry ? 'selected' : ''}>${entry}</option>
+	                		<option value="${entry}" ${env == entry ? 'selected' : ''}>${entry}</option>
 	               		</c:forEach>
 	          		</select>
 	          		</h4>
@@ -41,7 +41,7 @@
 					        <tr>
 					            <th>Key</th>
 		                        <th>Default</th>
-					            <th>Environment(${environment})</th>
+					            <th>Environment(${env})</th>
 					            <th width="100px"></th>
 		                    </tr>
 					    </thead>
@@ -53,12 +53,12 @@
 								            <td>${entry.key}</td>
 								            <td><textarea style="width:100%;height:100%;max-width:100%;" disabled>${entry.dfault}</textarea></td>
 								            <td><textarea style="width:100%;height:100%;max-width:100%;" id="keyvalue${counter.count+1}">${entry.currentEnvValue}</textarea></td>
-								            <td><a href="#" onClick="saveKeyValue('${entry.key}','${environment}','keyvalue${counter.count+1}');">Save</a> | <a href="#" onClick="removeKeyValue('${entry.key}','${environment}');">Remove</a></td>
+								            <td><a href="#" onClick="saveKeyValue('${entry.key}','${env}','keyvalue${counter.count+1}');">Save</a> | <a href="#" onClick="removeKeyValue('${entry.key}','${env}');">Remove</a></td>
 								        </tr>
 								    </c:forEach>
 							    </c:when>
 							    <c:otherwise>
-							        <tr><td colspan="9">NO ENTRIES!</td></tr>
+							        
 							    </c:otherwise>
 						    </c:choose>
 					    </tbody>
@@ -92,7 +92,7 @@
            });
       	 
       	 $("#envselect").change(function(event) {
-           window.location.href = "editruntimeprops?environment="+$(this).val();
+           window.location.href = "editruntimeprops?env="+$(this).val();
         });
       	 // Adding custom caption to table
       	 $("div.toolbar").html("Please avoid using 'ENTER' key if you dont want a next line character included while updating the data.");
