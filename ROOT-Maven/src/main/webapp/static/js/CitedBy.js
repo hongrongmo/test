@@ -105,7 +105,7 @@ function ajaxCitedByFunction()
   //
   // AJAX call to the citedby webservice
   //
-  console.log(queryArray);
+  //console.log(queryArray);
 	  $.post("/abstract/citedby.url?CID=citedbyAbstract&abstract=t",{citedby:queryArray}, function(data) {
 	  if((data == null) || (data.result == null) || (data.result == undefined)) {
 		  return false;
