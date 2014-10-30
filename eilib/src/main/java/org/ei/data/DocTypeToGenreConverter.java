@@ -24,7 +24,7 @@ public class DocTypeToGenreConverter {
     public static final String REGEX_CHAPTER = ".*(\\(MC\\)|\\(RC\\)).*";
     public static final String REGEX_REVIEW = ".*(\\(MR\\)|\\(RR\\)).*";
     public static final String REGEX_DISSERTATION = ".*\\(DS\\).*";
-    public static final String REGEX_PREPRINT = ".*(Press Release|Article in Press).*";
+    public static final String REGEX_PREPRINT = ".*(Press Release|Article in Press|In Process).*";
     public static final String REGEX_BOOK = ".*Book.*";
 
     public static String normalize(String rawdt) {
