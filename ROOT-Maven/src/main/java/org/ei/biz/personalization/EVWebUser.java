@@ -188,12 +188,8 @@ public class EVWebUser implements IEVWebUser,Serializable{
         // must have an entitlement to it!
         if (userPreferencs.getBoolean(DatabaseConfig.CPX_PREF.toUpperCase()) && (entitlementsmask & DatabaseConfig.CPX_MASK) == DatabaseConfig.CPX_MASK) {
             idatabase |= DatabaseConfig.CPX_MASK;
-        } if (userPreferencs.getBoolean(DatabaseConfig.CBF_PREF.toUpperCase()) && (entitlementsmask & DatabaseConfig.CBF_MASK) == DatabaseConfig.CBF_MASK) {
-            idatabase |= DatabaseConfig.CBF_MASK;
         } if (userPreferencs.getBoolean(DatabaseConfig.INS_PREF.toUpperCase()) && (entitlementsmask & DatabaseConfig.INS_MASK) == DatabaseConfig.INS_MASK) {
             idatabase |= DatabaseConfig.INS_MASK;
-        } if (userPreferencs.getBoolean(DatabaseConfig.IBS_PREF.toUpperCase()) && (entitlementsmask & DatabaseConfig.IBF_MASK) == DatabaseConfig.IBF_MASK) {
-            idatabase |= DatabaseConfig.IBF_MASK;
         } if (userPreferencs.getBoolean(DatabaseConfig.NTI_PREF.toUpperCase()) && (entitlementsmask & DatabaseConfig.NTI_MASK) == DatabaseConfig.NTI_MASK) {
             idatabase |= DatabaseConfig.NTI_MASK;
         } if (userPreferencs.getBoolean(DatabaseConfig.PCH_PREF.toUpperCase()) && (entitlementsmask & DatabaseConfig.PCH_MASK) == DatabaseConfig.PCH_MASK) {
