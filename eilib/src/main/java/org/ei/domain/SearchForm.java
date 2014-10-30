@@ -924,6 +924,7 @@ public class SearchForm {
 		// jam - added MAP exclusively for GeoRef
 		if (selecteddbMask == DatabaseConfig.GRF_MASK) {
 			doctype.add(new ListBoxOption(selectedWord, "MP", "Map"));
+            doctype.add(new ListBoxOption(selectedWord, "IP", "In Process"));
 		}
 
 		return doctype;
