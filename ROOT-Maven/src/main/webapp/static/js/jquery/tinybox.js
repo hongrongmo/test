@@ -4,7 +4,7 @@ TINY.box=function(){
 	var j,m,b,g,v,p=0;
 	return{
 		show:function(o){
-			v={opacity:70,close:1,animate:1,fixed:1,mask:1,maskid:'',boxid:'',topsplit:2,url:0,post:0,height:0,width:0,html:0,iframe:0,clickmaskclose:true};
+			v={opacity:70,close:1,animate:1,fixed:1,mask:1,maskid:'',boxid:'',topsplit:2,url:0,post:0,height:0,width:0,html:0,iframe:0,clickmaskclose:true,ariaLabeledBy:''};
 			for(s in o){v[s]=o[s]}
 			if(!p){
 				j=document.createElement('div'); j.className='tbox';
@@ -12,6 +12,14 @@ TINY.box=function(){
 				b=document.createElement('div'); b.className='tcontent';
 				m=document.createElement('div'); m.className='tmask';
 				g=document.createElement('div'); g.className='tclose'; g.v=0;
+
+				$(j).attr("aria-role","dialogue");
+				$(j).attr("aria-live","assertive");
+
+				if(v.ariaLabeledBy.length > 0){
+
+					$(j).attr("aria-labelledby",v.ariaLabeledBy);
+				}
 
 				cl = $(g).append("<a href='#' id='hidePopup' onclick='TINY.box.hide()' style='opacity: .05;font-size: 1px;color: #E0E3EA;' title='click to close popup'>hide</a>");
 				document.body.appendChild(m); document.body.appendChild(j); j.appendChild(p); p.appendChild(b);
