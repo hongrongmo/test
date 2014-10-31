@@ -639,7 +639,6 @@ public class EptCombiner extends Combiner {
         Combiner.TABLENAME = args[7];
         String environment = args[8].toLowerCase();
         System.out.println("Table Name=" + args[7]);
-        System.out.println("Table Name=" + args[7]);
         System.out.println("LoadNumber=" + loadNumber);
         System.out.println("RecsPerBatch=" + recsPerbatch);
 

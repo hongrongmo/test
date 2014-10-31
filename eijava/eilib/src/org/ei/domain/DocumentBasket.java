@@ -2,7 +2,7 @@
  *
  * @author  Engineering Information
  * @author  John A. Moschetto
- * @version $Revision:   1.2  $, $Date:   Mar 05 2009 16:17:22  $
+ * @version $Revision:   1.3  $, $Date:   16 Apr 2013 11:41:56  $
  * @since       EngVillage2
  */
 package org.ei.domain;
@@ -21,8 +21,6 @@ import org.ei.connectionpool.ConnectionPoolException;
 
 public class DocumentBasket
 {
-
-
     private String sessionID;
     private Hashtable basketTable;
     private int basSize = -1;
@@ -399,17 +397,20 @@ public class DocumentBasket
 					did = "upt";
 				}
 
+				String docid = docID.getDocID();
 
-
-                proc.setString(1,sessionID);
-                proc.setString(2,query.getID());
-                proc.setInt(3,docID.getHitIndex());
-                proc.setString(4,docID.getDocID());
-                proc.setString(5,"NA");
-                proc.setString(6,did);
-                proc.setString(7,query.getDisplayQuery());
-                proc.setString(8,query.getRecordCount());
-                proc.executeUpdate();
+				if(docid.indexOf("ref_ins")<0)
+				{
+					proc.setString(1,sessionID);
+					proc.setString(2,query.getID());
+					proc.setInt(3,docID.getHitIndex());
+					proc.setString(4,docid);
+					proc.setString(5,"NA");
+					proc.setString(6,did);
+					proc.setString(7,query.getDisplayQuery());
+					proc.setString(8,query.getRecordCount());
+					proc.executeUpdate();
+				}
 
             }
             blnReturnFlag = true;

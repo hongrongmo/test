@@ -230,7 +230,6 @@ public class InspecBaseTableRecord
 									"OPPDATE",
 									"LOAD_NUMBER",
 									"IPC",
-									"UPDATEFLAG",     //H 08/06/2014 added, to flag records with aff that has newline issue, for later report vendor/corrections
 									"CIT"
 									};
 

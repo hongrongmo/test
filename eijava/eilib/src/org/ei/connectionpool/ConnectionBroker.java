@@ -23,7 +23,7 @@ public class ConnectionBroker
 	private boolean loadFailure = false;
 	private String config;
 	private static ConnectionBroker instance = null;
-	private static String configFileURI="D:/devtools/ei/jakarta-tomcat-3.2.2/webapps/chemvillage/pools.xml";
+	private static String configFileURI="./pools.xml";
 
 
 	public static void main(String args[])

@@ -9,6 +9,10 @@ public class PagingComponents
 		boolean done = false;
 		int originalPageIndex = getPageIndex(pageSize, docIndex);
 		int startPage = getStartPage(pageSize, docIndex);
+		if(resultCount>4000)
+		{
+			resultCount = 4000;
+		}
         if (startPage > 1)
 		{
 			buf.append("<option value=\"1\"/>First page</option>");
@@ -30,6 +34,7 @@ public class PagingComponents
 			if (endIndex > resultCount)
 			{
 				endIndex = resultCount;
+
 				done = true;
 
 			}

@@ -191,15 +191,13 @@ public class FastSearchControl
         try
         {
 
-
             DatabaseConfig dConfig = DatabaseConfig.getInstance();
-
             String fastSearchString = query.getSearchQuery();
             Sort sortOption = query.getSortOption();
 
             FastClient client = new FastClient();
             client.setBaseURL(BASE_URL);
-            client.setQueryString(fastSearchString);
+			client.setQueryString(fastSearchString);
             client.setOffSet(offset);
             client.setPageSize(pSize);
             client.setDoClustering(false);

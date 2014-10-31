@@ -9,7 +9,6 @@ package org.ei.domain.navigators;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ArrayList;
-
 import org.ei.util.StringUtil;
 
 /**
@@ -27,7 +26,8 @@ public class PIDNavigator extends PatentNavigator
 
     public EiModifier createPatentModifier(int i, String slable, String svalue)
     {
+
         return new PIDModifier(i, slable, svalue);
     }
-    
+
 }

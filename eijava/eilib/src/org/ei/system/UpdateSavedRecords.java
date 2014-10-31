@@ -50,7 +50,7 @@ public class UpdateSavedRecords {
 
 			m_strPoolname = DatabaseConfig.SESSION_POOL;
 
-			eiProps = new RuntimeProperties(m_strPropertiesFile);
+			eiProps = RuntimeProperties.getInstance(m_strPropertiesFile);
 			m_strPoolsFilename = eiProps.getProperty("POOLSFILENAME");
 			m_broker = ConnectionBroker.getInstance(m_strPoolsFilename);
 

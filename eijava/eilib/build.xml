@@ -4,7 +4,7 @@
   <property name="javadoc.home"   value="javadoc"/>
   <property name="classes.home"   value="classes"/>
 
-	<property name="env.CATALINA_HOME" value="C:\\apache-tomcat-7.0.29"/>
+	<property name="env.CATALINA_HOME" value="C:\\apache-tomcat-7.0.23"/>
 
   <fileset id="appserver-jars" dir="${env.CATALINA_HOME}/lib/">
     <include name="**/servlet.jar"/>
@@ -17,6 +17,9 @@
     <include name="**/commons-digester-1.7.jar"/>
     <include name="**/commons-httpclient.jar"/>
     <include name="**/commons-logging.jar"/>
+		<!-- add this commons-lang-2.4.jar for org.apache.commons.lang.StringUtils -->
+	<include name="**/commons-lang-2.4.jar"/>
+	<!-- add this commons-lang-2.4.jar for org.apache.commons.validator -->
     <include name="**/dsapi-dist.jar"/>
     <include name="**/iText-2.1.4.jar"/>
     <include name="**/tagsoup-1.2.1.jar"/>
@@ -41,6 +44,7 @@
     <include name="**/commons-cli-1.1.jar"/>
     <include name="**/log4j-1.2.11.jar"/>
     <include name="**/commons-validator.jar"/>
+    <include name="**/servlet.jar"/>
   </fileset>
 
   <path id="project.classpath">

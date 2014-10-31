@@ -67,12 +67,15 @@ public class ThesaurusSearchControl
             String fastSearchString = tquery.getSearchQuery();
             FastClient client = new FastClient();
             client.setBaseURL(BASE_URL);
+            fastSearchString = fastSearchString+" (meta.collection:thesaurus)";
+            fastSearchString = fastSearchString.replaceAll("AND"," ");
             client.setQueryString(fastSearchString);
             client.setOffSet(offset);
             client.setPageSize(pSize);
             client.setDoClustering(false);
-            client.setResultView("search");
+            client.setResultView("asearch");
             client.setDoNavigators(false);
+            client.setDoThesaurus(true);
             client.setDoCatCount(false);
             client.setPrimarySort("so");
             client.setPrimarySortDirection("+");
@@ -80,12 +83,12 @@ public class ThesaurusSearchControl
             int docCount = client.getHitCount();
             searchResult.setHitCount(docCount);
             List ds = client.getDocIDs();
+
             ThesaurusRecordID[] recIDs = new ThesaurusRecordID[pSize];
             int i = -1;
             for(int j=0;j<ds.size();j++)
             {
                 String[] fields = (String[])ds.get(j);
-
                 ThesaurusRecordID recID = new ThesaurusRecordID(stripDatabase(fields[0]),
                                                                 tquery.getDatabase());
                 ++i;

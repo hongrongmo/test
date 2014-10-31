@@ -3,11 +3,14 @@ package org.ei.domain;
 import java.util.*;
 import org.ei.xml.Entity;
 import org.ei.util.DiskMap;
+import org.ei.util.GetPIDDescription;
+
 
 public class ClassNodeManager {
     private DiskMap uspto;
     private DiskMap ipc;
     private DiskMap ecla;
+    int lookupFlag = 2;
 
     private static ClassNodeManager instance;
 
@@ -35,17 +38,27 @@ public class ClassNodeManager {
         return s;
     }
 
+    public  String seekIPC(String code,int lookupflag) throws Exception {
+
+		if(lookupflag==1)
+		{
+			this.lookupFlag=1;
+		}
+		String s = seekIPC(code);
+		this.lookupFlag = 2;
+		return s;
+	}
+
     public synchronized String seekIPC(String code) throws Exception {
-        if (code != null) {
-            //System.out.println("CODE:" + code);
-        }
-        else {
-            //System.out.println("ISNULL");
-        }
 
         String s = ipc.get(code);
         s = Entity.replaceLatinChars(s);
-
+		//System.out.println("Code="+code+" name= "+s);
+		if(s==null && this.lookupFlag==2)
+		{
+			GetPIDDescription pid = new GetPIDDescription();
+			s = pid.getDescriptionFromLookupIndex(code);
+		}
         return s;
     }
 

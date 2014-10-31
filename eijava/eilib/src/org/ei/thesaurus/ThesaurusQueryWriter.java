@@ -27,7 +27,7 @@ public class ThesaurusQueryWriter
 
         mappings = new Properties();
         mappings.setProperty("db", "db");
-        mappings.setProperty("all", "all");
+        mappings.setProperty("all", "thes");
     }
 
 
