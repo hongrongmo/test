@@ -50,6 +50,7 @@ public class SimulatedIPController {
 		ModelAndView model = new ModelAndView("simulatedip");
 		model.addObject("simulatedip", simulatedIP);
 		model.addObject("pagetype", "simulatedip");
+		model.addObject("domain", environment.getProperty("simulatedip.cookie.domain"));
 		logger.info("Request 'simulatedip' has been processed successfuly.");
 		return model;
 	}
