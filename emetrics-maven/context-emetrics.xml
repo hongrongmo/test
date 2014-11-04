@@ -3,7 +3,7 @@
     <Resource name="jdbc/AuthPool" auth="Container"
               type="javax.sql.DataSource" driverClassName="oracle.jdbc.OracleDriver" 
               username="@jdbc.username@" password="@jdbc.password@" url="@jdbc.url@" 
-              factory="org.apache.commons.dbcp.BasicDataSourceFactory"
+              factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
               defaultAutoCommit="false" 
               initialSize="5" maxActive="5" maxIdle="1" minIdle="1"/>
 
