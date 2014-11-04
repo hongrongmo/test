@@ -12,7 +12,7 @@
 		<link type="text/css" rel="stylesheet" href="${pageContext.servletContext.contextPath}/static/css/jquery.dataTables-1.10.0.min.css"/>
 		<script type="text/javascript" src="${pageContext.servletContext.contextPath}/static/js/jquery-1.10.2.min.js"></script>
 		<script type="text/javascript" src="${pageContext.servletContext.contextPath}/static/js/jquery.dataTables-1.10.0.min.js"></script>
-		<title>Edit Runtime Properties</title>
+		<title>EV Tools - Edit Runtime Properties</title>
 	</head>
 	<body>
 		<%@ include file="includes/header.jsp" %>

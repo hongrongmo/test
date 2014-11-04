@@ -30,7 +30,7 @@
 		              
 		        </p>
 		        <p>
-		        	<h4 style="color:blue">Adding cookie using this tool will have a impact on any urls having a domain as "${domain}". Ex: cert3.engineeringvillage.com</h4>
+		        	<h4 style="color:blue">Adding cookie using this tool will have a impact on any urls having a domain as "${domain}" with in the same browser.   Ex: cert3.engineeringvillage.com</h4>
 		        </p>
 		        <p>
 		            After submitting a new value you can clear the cookie with the Clear button.
