@@ -135,6 +135,20 @@
         </dependency>
     </dependencies>
 
+    <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <name>nexus</name>
+            <url>http://atheneum/content/repositories/elsevier-releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus</id>
+            <name>nexus</name>
+            <url>http://atheneum/content/repositories/elsevier-snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+
     <build>
         <finalName>emetrics</finalName>
         <plugins>
@@ -167,6 +181,14 @@
                 </executions>
             </plugin>
 
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <attachClasses>true</attachClasses>
+                    <packagingExcludes>WEB-INF/lib/emetrics*.jar</packagingExcludes>
+                </configuration>
+            </plugin>
         </plugins>
 
     </build>
