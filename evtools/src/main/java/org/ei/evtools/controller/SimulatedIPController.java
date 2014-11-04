@@ -61,7 +61,7 @@ public class SimulatedIPController {
        
 		String errorMessage = null;
 		if (EVToolsUtils.isValidIP(ip)) {
-			EVToolsUtils.setCookie(request, response, new SimulatedIPCookie("11.22.33.44"),environment.getProperty("simulatedip.cookie.domain"),"/");
+			EVToolsUtils.setCookie(request, response, new SimulatedIPCookie(ip),environment.getProperty("simulatedip.cookie.domain"),"/");
 		}else{
 			errorMessage = "Invalid IP address '"+ip+"' is provided!";
 		}
