@@ -6,11 +6,17 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 import java.util.TimeZone;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
@@ -102,7 +108,12 @@ public class EVToolsUtils {
      * @return
      */
     public static boolean isValidIP(String ipaddress) {
-        ipaddress = ipaddress.trim();
+        
+    	if(ipaddress == null){
+    		return false;
+    	}
+    	
+    	ipaddress = ipaddress.trim();
         if (!StringUtils.isNotBlank(ipaddress)) {
             return false;
         }
@@ -145,6 +156,55 @@ public class EVToolsUtils {
     	return false;
     }
     
+   
+    
+    public static void setCookie(HttpServletRequest request, HttpServletResponse response, Cookie cookie, String domain, String contextPath) {
+        
+    	if(contextPath != null){
+    		cookie.setPath(contextPath);
+    	}else{
+    		String contextRoot = request.getContextPath();
+            if (contextRoot != null && contextRoot.length() > 0) {
+                cookie.setPath(contextRoot);
+            } else {
+                cookie.setPath("/");
+            }
+    	}
+    	if(domain != null)cookie.setDomain(domain);
+        response.addCookie(cookie);
+    }
+    
+    public static Cookie clearCookie(String cookiename, String domain) {
+        Cookie cookie = new Cookie(cookiename, "");
+        // Set Max Age to 0 to clear the cookie
+        cookie.setMaxAge(0);
+        cookie.setPath("/");
+        cookie.setValue("");
+        cookie.setDomain(domain);
+        return cookie;
+    }
+    
+    public static Cookie getCookie(HttpServletRequest request, String name) {
+        return getCookieMap(request).get(name);
+    }
+    
+    public static Map<String, Cookie> getCookieMap(HttpServletRequest request) {
+        if (request == null) {
+            throw new IllegalArgumentException("Request object is not present!");
+        }
+        // Build Cookie map from incoming request
+        Map<String, Cookie> map = new HashMap<String, Cookie>();
+        Cookie[] cookies = request.getCookies();
+        if (cookies != null) {
+            for (int i = 0; i < cookies.length; ++i) {
+                Cookie cookie = cookies[i];
+                map.put(cookie.getName(), cookie);
+            }
+        }
+        return map;
+    }
+    
+   
    
     
 }
