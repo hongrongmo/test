@@ -48,10 +48,10 @@ public class EditRuntimePropertiesController {
 	public ModelAndView editruntimeprops(@RequestParam(value="env", required=false) String env,HttpServletResponse response) throws IOException, AWSAccessException{
 		
 		if( !EVToolsUtils.isValidEnv(env) ){
-			if(EVToolsUtils.isValidEnv(environment.getProperty("ENVIRONMENT"))){
-				env =  environment.getProperty("ENVIRONMENT");
+			if(EVToolsUtils.isValidEnv(environment.getProperty("editruntimeprops.default.envlevel"))){
+				env =  environment.getProperty("editruntimeprops.default.envlevel");
 			}else{
-				env =  EVToolsConstants.ATTRIBUTE_PROD;
+				env =  EVToolsConstants.ATTRIBUTE_CERT;
 			}
 			
 	    }
@@ -68,7 +68,8 @@ public class EditRuntimePropertiesController {
 	
 	@RequestMapping(value="/app/updateruntimeproperties", method=RequestMethod.POST)
     public String updateruntimeproperties(@ModelAttribute("evform") RuntimePropertiesForm form, BindingResult result,HttpServletRequest request,RedirectAttributes redirectAttributes) throws AWSAccessException{
-        RuntimePropertiesValidator runtimePropertiesValidator = new RuntimePropertiesValidator();
+       
+		RuntimePropertiesValidator runtimePropertiesValidator = new RuntimePropertiesValidator();
         runtimePropertiesValidator.validate(form, result);
        
         if (result.hasErrors()){
@@ -76,7 +77,7 @@ public class EditRuntimePropertiesController {
         	redirectAttributes.addFlashAttribute("error", "Your save operation is failed, please try again!");
         }else {
         	RunTimeProperties runTimeProperties = dynamoDBService.load(form.getRuntimepropkey());
-        	if(runTimeProperties != null){
+        	if(runTimeProperties != null && (!form.getRuntimepropenvlevel().equalsIgnoreCase(EVToolsConstants.ATTRIBUTE_PROD) || request.isUserInRole("ROLE_EDIT_ENV_PROD"))){
     			setUserDataToCurrentEnv(form.getRuntimepropkeyvalue(),runTimeProperties, form.getRuntimepropenvlevel());
     			dynamoDBService.save(runTimeProperties);
     			redirectAttributes.addFlashAttribute("message", "The key '" + form.getRuntimepropkey() + "' has been successfully updated for '"+form.getRuntimepropenvlevel()+"' environment.");
@@ -99,7 +100,7 @@ public class EditRuntimePropertiesController {
 			redirectAttributes.addFlashAttribute("error", "Your remove operation is failed, please try again!");
 		}else {
         	RunTimeProperties runTimeProperties = dynamoDBService.load(form.getRuntimepropkey());
-        	if(runTimeProperties != null){
+        	if(runTimeProperties != null && (!form.getRuntimepropenvlevel().equalsIgnoreCase(EVToolsConstants.ATTRIBUTE_PROD) || request.isUserInRole("ROLE_EDIT_ENV_PROD"))){
     			setUserDataToCurrentEnv(null,runTimeProperties, form.getRuntimepropenvlevel());
     			dynamoDBService.save(runTimeProperties);
     			redirectAttributes.addFlashAttribute("message", "The key '" + form.getRuntimepropkey() + "' has been successfully updated by removing '"+form.getRuntimepropenvlevel()+"' attribute.");

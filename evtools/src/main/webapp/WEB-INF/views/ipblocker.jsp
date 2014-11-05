@@ -16,6 +16,10 @@
 	</head>
 	<body>
 		<%@ include file="includes/header.jsp" %>
+		<c:set var="ipblockereditrole" value="${false}"/>
+            <sec:authorize access="hasRole('ROLE_EDIT_IPBLOCKER')">
+            	<c:set var="ipblockereditrole" value="${true}"/>
+            </sec:authorize>
 		<div class="maincontainer" id="container">
 			<%@ include file="includes/tabs.jsp" %>
 			<div class="innercontainer">
@@ -35,8 +39,16 @@
 				<div id="ddcontainer" >
 				
 					<form action="${pageContext.servletContext.contextPath}/app/addip" id="mainForm"  method="post">
-						<input type="text" name="ip" id="iptext" value=""  />
-						<button >Add</button>
+						<c:choose>
+		            		<c:when test="${ipblockereditrole eq true}">
+		            			<input type="text" name="ip" id="iptext" value=""  />
+								<button>Add</button>
+ 							</c:when>
+		            		<c:otherwise>
+						    	<input disabled type="text" name="ip" id="iptext" value=""  />
+								<button disabled >Add</button>
+						    </c:otherwise>
+		            	</c:choose>
 						<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 					</form>
 					
@@ -59,23 +71,46 @@
 								    <c:forEach var="entry" items="${blockedIpsList}">
 								        <tr>
 								            <td>${entry.IP}</td>
+								            
+								            
 								            <c:choose>
-								            	 <c:when test="${entry.blocked}">
-								            	 	<td align="center"><a href="#" onClick="updateIp('${entry.IP}',false);">Blocked</a></td>
-								            	 </c:when>
-								            	 <c:otherwise>
-											        <td align="center"><a href="#" onClick="updateIp('${entry.IP}',true);">Unblocked</a></td>
+							            		<c:when test="${ipblockereditrole eq true}">
+							            			<c:choose>
+										            	 <c:when test="${entry.blocked}">
+										            	 	<td align="center"><a href="#" onClick="updateIp('${entry.IP}',false);">Blocked</a></td>
+										            	 </c:when>
+										            	 <c:otherwise>
+													        <td align="center"><a href="#" onClick="updateIp('${entry.IP}',true);">Unblocked</a></td>
+													    </c:otherwise>
+													</c:choose>
+													<td style="width:100px" align="center">
+										            	<a href="#" onClick="getIPHistory('${entry.IP}',event);">Show History</a>
+										            </td>
+				                                    <td>${entry.timestamp}</td>
+				                                    <td>${entry.accountName}</td>
+										            <td align="center">
+										            	<a href="#" onClick="removeIp('${entry.IP}');">Remove</a>
+										            </td>
+					 							</c:when>
+							            		<c:otherwise>
+											    	<c:choose>
+										            	 <c:when test="${entry.blocked}">
+										            	 	<td align="center">Blocked</td>
+										            	 </c:when>
+										            	 <c:otherwise>
+													        <td align="center">Unblocked</td>
+													    </c:otherwise>
+													</c:choose>
+													<td style="width:100px" align="center">
+										            	<a href="#" onClick="getIPHistory('${entry.IP}',event);">Show History</a>
+										            </td>
+				                                    <td>${entry.timestamp}</td>
+				                                    <td>${entry.accountName}</td>
+										            <td align="center">
+										            	Remove
+										            </td>
 											    </c:otherwise>
-											</c:choose>
-											<td style="width:100px" align="center">
-								            	<a href="#" onClick="getIPHistory('${entry.IP}',event);">Show History</a>
-								            </td>
-		                                    <td>${entry.timestamp}</td>
-		                                    <td>${entry.accountName}</td>
-								            <td align="center">
-								            	<a href="#" onClick="removeIp('${entry.IP}');">Remove</a>
-								            </td>
-		
+							            	</c:choose>
 								        </tr>
 								    </c:forEach>
 							    </c:when>
