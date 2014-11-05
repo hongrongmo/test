@@ -1453,40 +1453,6 @@ public class INSCorrection
 
 		return recs;
 	}
-/*
-	private String[] addIpcIndex(String ss)  throws Exception
-	{
-		if(ss==null)
-		{
-			return null;
-		}
-		String[] sArray=prepareIpc(ss);
-		//PrintWriter indexWriter = (PrintWriter)hm.get(key);
-		StringTokenizer st = new StringTokenizer(ss, InspecXMLReader.AUDELIMITER);
-		String name="";
-		String code="";
-
-		while (st.hasMoreTokens())
-		{
-			String s = st.nextToken().trim();
-			if(s.length() > 0)
-			{
-				if(s.indexOf(InspecXMLReader.IDDELIMITER) > -1)
-				{
-					 int i = s.indexOf(InspecXMLReader.IDDELIMITER);
-					  code = s.substring(0,i);
-					  name = s.substring(i+1);
-					  //indexWriter.println(Entity.prepareString(code).toUpperCase().trim() + "\t" +Entity.prepareString(name).toUpperCase().trim() + "\t" + getDatabase() + "\t");
-				}
-
-			}
-
-		}
-
-
-		return sArray;
-	}
-	*/
 
 	 List prepareIpc(String aString)
 			throws Exception
