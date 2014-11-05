@@ -324,7 +324,7 @@ public class GeoRefCorrection
 			}
 			else if(action.equalsIgnoreCase("ip_delete"))
 			{
-				grfc.deleteInProcessData(updateNumber,database,action);
+				grfc.deleteInProcessData();
 				System.out.println(updateNumber+" "+database+" IN PROCESS deletion is done.");
 			}
 			else if(!action.equalsIgnoreCase("ip_add") && !action.equalsIgnoreCase("ip_delete"))
@@ -422,7 +422,7 @@ public class GeoRefCorrection
 	}
 
 
-    private void deleteInProcessData(int updateNumber,String database,String action)
+    private void deleteInProcessData()
 	{
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
@@ -433,17 +433,19 @@ public class GeoRefCorrection
 			{
 				con1 = getConnection(url,driver,username,password);
 			}
-			stmt = con1.prepareStatement("select load_number,count(*) count from georef_master_delete group by load_number");
+			stmt = con1.prepareStatement("select updatenumber,count(*) count from georef_master_delete group by updatenumber");
 			rs = stmt.executeQuery();
 			int count = 0;
-			int loadNumber = 0;
+			int updatenumber = 0;
 			while (rs.next())
 			{
-				loadNumber = rs.getInt("load_number");
+				updatenumber = rs.getInt("updatenumber");
 				count = rs.getInt("count");
-				log4j.info("**** Total "+count+" records will be deleted from georef_master table for load_number "+loadNumber+ "****");
-				deleteData();
+				log4j.info("**** Total "+count+" records will be deleted from georef_master table for updatenumber "+updatenumber+ "****");
 			}
+
+			deleteData();
+
 			if(count==0)
 			{
 				System.out.println("**** There is no record in georef_master_delete table ****");
@@ -504,25 +506,32 @@ public class GeoRefCorrection
 	{
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
+		String selectQuery = "select updatenumber from (select distinct updatenumber from georef_master_ip order by updatenumber desc) where rownum<3";
+		String updateQuery = "update georef_master_ip set updatenumber='"+updateNumber+"' where load_number='"+updateNumber+"'";
 		try
 		{
 			if(con==null)
 			{
 				con = getConnection(url,driver,username,password);
 			}
-			stmt = con.prepareStatement("select load_number from (select distinct load_number from georef_master_ip order by load_number desc) where rownum<3");
+
+			stmt = con.prepareStatement(updateQuery);
+			log4j.info("run "+updateQuery);
+		    stmt.executeUpdate();
+			stmt = con.prepareStatement(selectQuery);
+			log4j.info("run "+selectQuery);
 			rs = stmt.executeQuery();
 			String[] topTwoLoadnumber = new String[2];
 			int i=0;
 			while (rs.next())
 			{
-				topTwoLoadnumber[i]= rs.getString("load_number");
-				//log4j.info("Processing loadNumber "+rs.getString("load_number"));
+				topTwoLoadnumber[i]= rs.getString("updatenumber");
+				log4j.info("Processing loadNumber "+rs.getString("updatenumber"));
 				i++;
 
 			}
 			runUpdateFlag(updateNumber);
-			runIPprocess(topTwoLoadnumber);
+			runAddDelete(topTwoLoadnumber);
 			addToMasterTable();
 
 
@@ -545,10 +554,22 @@ public class GeoRefCorrection
 					en.printStackTrace();
 				}
 			}
+
+			if (rs != null)
+			{
+				try
+				{
+					rs.close();
+				}
+				catch (Exception en)
+				{
+					en.printStackTrace();
+				}
+			}
 		}
 	}
 
-	private void runUpdateFlag(int loadNumber)
+	private void runUpdateFlag(int updateNumber)
 	{
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
@@ -559,12 +580,13 @@ public class GeoRefCorrection
 			{
 				con1 = getConnection(url,driver,username,password);
 			}
-			stmt = con1.prepareStatement("update georef_master_ip set updateflag=document_type where load_number='"+loadNumber+"'");
-			log4j.info("update georef_master_ip set updateflag=document_type where load_number='"+loadNumber+"'");
+			stmt = con1.prepareStatement("update georef_master_ip set updateflag=document_type where updatenumber='"+updateNumber+"'");
+			log4j.info("update georef_master_ip set updateflag=document_type where updatenumber='"+updateNumber+"'");
 			stmt.executeUpdate();
-			stmt = con1.prepareStatement("update georef_master_ip set document_type='IP' where load_number='"+loadNumber+"'");
-			log4j.info("update georef_master_ip set document_type='IP' where load_number='"+loadNumber+"'");
+			stmt = con1.prepareStatement("update georef_master_ip set document_type='GI' where updatenumber='"+updateNumber+"'");
+			log4j.info("update georef_master_ip set document_type='GI' where updatenumber='"+updateNumber+"'");
 			stmt.executeUpdate();
+
 
 
 		}
@@ -765,31 +787,35 @@ public class GeoRefCorrection
 		}
 	}
 
-	private void runIPprocess(String[] load_Number)
+	private void runAddDelete(String[] updateNumber)
 	{
 		PreparedStatement stmt = null;
-		PreparedStatement stmt1 = null;
 		String addQuery=null;
 		String deleteQuery=null;
+		String updateQuery=null;
+		Connection con1 = null;
 		try
 		{
-			if(con==null)
+			if(con1==null)
 			{
-				con = getConnection(url,driver,username,password);
+				con1 = getConnection(url,driver,username,password);
 			}
-			if(load_Number.length==2 && load_Number[0]!=null && load_Number[1]!=null)
+			if(updateNumber.length==2 && updateNumber[0]!=null && updateNumber[1]!=null)
 			{
-			  addQuery = "insert into georef_master_add select * from georef_master_ip where load_number='"+load_Number[0]+"' and id_number in(select id_number from georef_master_ip where load_number='"+load_Number[0]+"' minus select id_number from georef_master_ip where load_number='"+load_Number[1]+"')";
-			  log4j.info("Run Query \"insert into georef_master_add select * from georef_master_ip where load_number='"+load_Number[0]+"' and id_number in(select id_number from georef_master_ip where load_number='"+load_Number[0]+"' minus select id_number from georef_master_ip where load_number='"+load_Number[1]+"'\" to create georef_master_add table" );
-			  deleteQuery = "insert into georef_master_delete select * from georef_master_ip where load_number='"+load_Number[1]+"' and id_number in(select id_number from georef_master_ip where load_number='"+load_Number[1]+"' minus select id_number from georef_master_ip where load_number='"+load_Number[0]+"' )";
-			  log4j.info("Run Query \"insert into georef_master_delete select * from georef_master_ip where load_number='"+load_Number[1]+"' and id_number in(select id_number from georef_master_ip where load_number='"+load_Number[1]+"' minus select id_number from georef_master_ip where load_number='"+load_Number[0]+"'\" to create georef_master_delete table" );
+			  addQuery = "insert into georef_master_add select * from georef_master_ip where updatenumber='"+updateNumber[0]+"' and id_number in(select id_number from georef_master_ip where updatenumber='"+updateNumber[0]+"' minus select id_number from georef_master_ip where updatenumber='"+updateNumber[1]+"')";
+			  log4j.info("Run Query \"insert into georef_master_add select * from georef_master_ip where updatenumber='"+updateNumber[0]+"' and id_number in(select id_number from georef_master_ip where updatenumber='"+updateNumber[0]+"' minus select id_number from georef_master_ip where updatenumber='"+updateNumber[1]+"'\" to create georef_master_add table" );
+			  deleteQuery = "insert into georef_master_delete select * from georef_master_ip where updatenumber='"+updateNumber[1]+"' and id_number in(select id_number from georef_master_ip where updatenumber='"+updateNumber[1]+"' minus select id_number from georef_master_ip where updatenumber='"+updateNumber[0]+"' )";
+			  log4j.info("Run Query \"insert into georef_master_delete select * from georef_master_ip where updatenumber='"+updateNumber[1]+"' and id_number in(select id_number from georef_master_ip where updatenumber='"+updateNumber[1]+"' minus select id_number from georef_master_ip where updatenumber='"+updateNumber[0]+"'\" to create georef_master_delete table" );
+			 // updateQuery = "update georef_master_ip set updatenumber='"+updateNumber[0]+"' where updatenumber='"+updateNumber[1]+"' and id_number not in (select id_number from georef_master_delete)";
 
-		      stmt = con.prepareStatement(addQuery);
+		      stmt = con1.prepareStatement(addQuery);
 		      stmt.executeUpdate();
-		      stmt1 = con.prepareStatement(deleteQuery);
-		      stmt1.executeUpdate();
+		      stmt = con1.prepareStatement(deleteQuery);
+		      stmt.executeUpdate();
+		      //stmt = con1.prepareStatement(updateQuery);
+		      //stmt.executeUpdate();
 		      //addData();
-			  runExtract(load_Number[0]);
+			  runExtract(updateNumber[0]);
 
 		    }
 		    else
@@ -803,7 +829,7 @@ public class GeoRefCorrection
 		}
 		catch(Exception e)
 		{
-			log4j.info("Exception on GeoRefCorrection.runIPprocess "+e.getMessage());
+			log4j.info("Exception on GeoRefCorrection.runAddDelete "+e.getMessage());
 			e.printStackTrace();
 		}
 		finally
@@ -820,17 +846,19 @@ public class GeoRefCorrection
 				}
 			}
 
-			if (stmt1 != null)
+			if (con1 != null)
 			{
 				try
 				{
-					stmt1.close();
+					con1.close();
 				}
 				catch (Exception en)
 				{
 					en.printStackTrace();
 				}
 			}
+
+
 		}
 
 
@@ -915,6 +943,7 @@ public class GeoRefCorrection
 			while (rs.next())
 			{
 				m_id= rs.getString("m_id");
+
 				if(checkRecord(m_id))
 				{
 					deleteRecord(m_id);
@@ -991,6 +1020,7 @@ public class GeoRefCorrection
 			}
 			if(accessnumber != null)
 			{
+				Thread.currentThread().sleep(500);
 				inFast = checkFast(accessnumber,"an","grf");
 				if(inFast<1)
 				{
@@ -1750,6 +1780,7 @@ public class GeoRefCorrection
 					if(term != null && field != null && database != null)
 					{
 						stmt = con.prepareStatement("insert into "+lookupTable+" (field,term,database) values(?,?,?)");
+						System.out.println("**LOOKUPINDEX   insert into "+lookupTable+" (field,term,database) values('"+field+"','"+term+"','"+database+"')");
 						stmt.setString(1,field);
 						stmt.setString(2,term);
 						stmt.setString(3,database);
@@ -1812,19 +1843,21 @@ public class GeoRefCorrection
 
 	}
 
-	private int checkFast(String term1, String searchField, String database) throws Exception
+	private int checkFast(String term1, String searchField, String database)
 	{
 
 		List outputList = new ArrayList();
-		DatabaseConfig databaseConfig = DatabaseConfig.getInstance(DriverConfig.getDriverTable());
+
 		String[] credentials = new String[]{"CPX","PCH","CHM","GEO","GRF","ELT","INS"};
 		String[] dbName = {database};
 		int c = 0;
 
-		int intDbMask = databaseConfig.getMask(dbName);
+
 
 		try
 		{
+			DatabaseConfig databaseConfig = DatabaseConfig.getInstance(DriverConfig.getDriverTable());
+			int intDbMask = databaseConfig.getMask(dbName);
 			if(term1 != null)
 			{
 				SearchControl sc = new FastSearchControl();
@@ -1991,7 +2024,8 @@ public class GeoRefCorrection
 			}
 			else if(database.equals("grf") && action.equals("ip_delete"))
 			{
-				sqlString = "select * from georef_master_delete where load_number='"+updateNumber+"'";
+				sqlString = "select * from georef_master_delete where updatenumber='"+updateNumber+"'";
+				log4j.info("run select * from georef_master_delete where updatenumber='"+updateNumber+"'");
 				System.out.println("Processing "+sqlString);
 				rs = stmt.executeQuery(sqlString);
 				results = setGRFRecs(rs);

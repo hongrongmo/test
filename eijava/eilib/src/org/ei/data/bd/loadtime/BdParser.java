@@ -29,6 +29,7 @@ public class BdParser
 	public static final String AUDELIMITER = new String(new char[] {30});
 	public static final String IDDELIMITER = new String(new char[] {31});
 	public static final String GROUPDELIMITER = new String(new char[] {29});
+	public static final String REFERENCEDELIMITER = new String(new char[] {28});
 	private static String weekNumber;
 	private PrintWriter out;
 	private SAXBuilder builder;
@@ -876,6 +877,12 @@ public class BdParser
 							{
 								record.put("REFCOUNT",(String)bibliography.getAttributeValue("refcount"));
 							}
+
+							List referencegroup = bibliography.getChildren("reference", noNamespace);
+
+							parseReferencegroup(referencegroup,record);
+
+
 						}
 
 						//weekNumber
@@ -977,6 +984,59 @@ public class BdParser
 			e.printStackTrace();
 		}
 		return record;
+	}
+
+	private void parseReferencegroup(List referenceGroup,Hashtable record) throws Exception
+	{
+		String referenceID = null;
+		StringBuffer referenTitle = new StringBuffer();
+		StringBuffer referenAuthor = new StringBuffer();
+		StringBuffer referenSourcetitle = new StringBuffer();
+		StringBuffer referenPublicationyear = new StringBuffer();
+		StringBuffer referenVolume = new StringBuffer();
+		StringBuffer referenIssue = new StringBuffer();
+		StringBuffer referenPages = new StringBuffer();
+		StringBuffer referenFullText = new StringBuffer();
+		StringBuffer referenText = new StringBuffer();
+		StringBuffer referenWebsite = new StringBuffer();
+		StringBuffer referenItemid = new StringBuffer();
+		StringBuffer referenItemcitationPII = new StringBuffer();
+		StringBuffer referenItemcitationDOI = new StringBuffer();
+		StringBuffer referenItemcitationCitation_title = new StringBuffer();
+		StringBuffer referenItemcitationAuthor = new StringBuffer();
+		StringBuffer referenItemcitationSourcetitle = new StringBuffer();
+		StringBuffer referenItemcitationSourcetitle_abbrev = new StringBuffer();
+		StringBuffer referenItemcitationIssn = new StringBuffer();
+		StringBuffer referenItemcitationIsbn = new StringBuffer();
+		StringBuffer referenItemcitationCoden = new StringBuffer();
+		StringBuffer referenItemcitationPart = new StringBuffer();
+		StringBuffer referenItemcitationpublicationyear = new StringBuffer();
+		StringBuffer referenItemcitationVolume = new StringBuffer();
+		StringBuffer referenItemcitationIssue = new StringBuffer();
+		StringBuffer referenItemcitationPage = new StringBuffer();
+		StringBuffer referenItemcitationArticle_number = new StringBuffer();
+		StringBuffer referenItemcitationWebsite = new StringBuffer();
+
+
+		if(referenceGroup != null && referenceGroup.size()>0)
+		{
+			for(int i=0;i<referenceGroup.size();i++)
+			{
+
+
+				Element reference = (Element)referenceGroup.get(i);
+
+				if(reference != null)
+				{
+					referenceID = reference.getAttributeValue("id");
+				}
+
+			}
+
+
+
+		}
+
 	}
 
 

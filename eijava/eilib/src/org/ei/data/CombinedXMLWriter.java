@@ -760,7 +760,7 @@ public class CombinedXMLWriter
 					 int i = s.indexOf(InspecXMLReader.IDDELIMITER);
 					  code = s.substring(0,i);
 					  name = s.substring(i+1);
-					  indexWriter.println(Entity.prepareString(code).toUpperCase().trim() + "\t" +Entity.prepareString(name).toUpperCase().trim() + "\t" + getDatabase() + "\t");
+					  indexWriter.println(Entity.prepareString(code).toUpperCase().trim() + "\t" +Entity.prepareString(name).toUpperCase().trim() + "\t" + getDatabase().substring(0,3)+"\t");
 				}
 
 			}
@@ -1089,6 +1089,13 @@ public class CombinedXMLWriter
         	  patentcountryPW.close();
         	  patentcountryPW = null;
           }
+
+          if(ipcPW != null)
+		  {
+			  ipcPW.close();
+			  ipcPW = null;
+          }
+
        }
 	}
 
