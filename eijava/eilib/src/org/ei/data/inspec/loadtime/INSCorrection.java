@@ -1051,6 +1051,7 @@ public class INSCorrection
 			String term1=null;
 			try
 			{
+				Thread.currentThread().sleep(250);
 				SearchControl sc = new FastSearchControl();
 				term1 = (String) searchTerms.next();
 
@@ -2554,6 +2555,7 @@ public class INSCorrection
 			String term1=null;
 			try
 			{
+				Thread.currentThread().sleep(250);
 				SearchControl sc = new FastSearchControl();
 				term1 = (String) searchTerms.next();
 
@@ -2973,4 +2975,3 @@ public class INSCorrection
      }
 
 }
->>>>>>> 1422f23a7f7594fa100402fecd598fda4cc2811d

@@ -1020,7 +1020,7 @@ public class GeoRefCorrection
 			}
 			if(accessnumber != null)
 			{
-				Thread.currentThread().sleep(500);
+				Thread.currentThread().sleep(250);
 				inFast = checkFast(accessnumber,"an","grf");
 				if(inFast<1)
 				{
@@ -1860,6 +1860,7 @@ public class GeoRefCorrection
 			int intDbMask = databaseConfig.getMask(dbName);
 			if(term1 != null)
 			{
+				Thread.currentThread().sleep(250);
 				SearchControl sc = new FastSearchControl();
 
 				//int oc = Integer.parseInt((String)inputMap.get(term1));
@@ -1909,6 +1910,7 @@ public class GeoRefCorrection
 			String term1=null;
 			try
 			{
+				Thread.currentThread().sleep(250);
 				SearchControl sc = new FastSearchControl();
 				term1 = (String) searchTerms.next();
 
