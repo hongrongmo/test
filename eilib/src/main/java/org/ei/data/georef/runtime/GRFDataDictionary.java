@@ -116,6 +116,7 @@ public class GRFDataDictionary implements DataDictionary {
         doctypes.put("C", "Conference document");
         doctypes.put("M", "Map");
         doctypes.put("T", "Thesis or dissertation");
+        doctypes.put("G", "In Process");
         
         bibliographiccodes = new Hashtable<String, String>();
         bibliographiccodes.put("A", "Analytic level");

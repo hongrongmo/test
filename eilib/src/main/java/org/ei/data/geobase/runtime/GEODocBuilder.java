@@ -2189,6 +2189,8 @@ public class GEODocBuilder implements DocumentBuilder {
                 str = "Erratum";
             } else if (str.equalsIgnoreCase("ip")) {
                 str = "Article in Press";
+            } else if (str.equalsIgnoreCase("gi")) {
+                str = "In Process";
             } else if (str.equalsIgnoreCase("le")) {
                 str = "Letter";
             } else if (str.equalsIgnoreCase("no")) {

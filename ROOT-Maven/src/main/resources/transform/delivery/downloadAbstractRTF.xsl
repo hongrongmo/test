@@ -553,8 +553,11 @@
         <fo:block><xsl:value-of select="." disable-output-escaping="yes"/><xsl:text> </xsl:text></fo:block>
     </xsl:template>
     <xsl:template match="DT">
-    	<xsl:if test="text()='Article in Press'">
-    	     <xsl:text>, </xsl:text><xsl:text> Article in Press</xsl:text>
+        <xsl:if test="text()='Article in Press'">
+             <xsl:text>, </xsl:text><xsl:text> Article in Press</xsl:text>
+        </xsl:if>
+        <xsl:if test="text()='In Process'">
+             <xsl:text>, </xsl:text><xsl:text> In Process</xsl:text>
         </xsl:if>
     </xsl:template>
     <xsl:template match="AV|SC">
