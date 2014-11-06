@@ -85,10 +85,6 @@ public class ApplicationStatus extends EVActionBean {
     private String emailto;
     private String emailfrom = "ei-noreply@elsevier.com";
 
-    private String cacheKey;
-    private String cacheVal;
-    private int cacheMins;
-
     private String propKey = "";
 
     private String propValue = "";
@@ -349,13 +345,6 @@ public class ApplicationStatus extends EVActionBean {
     private long system_1day = system_1hour * 24;
     private long system_1week = system_1day * 7;
 
-    @HandlesEvent("/ipblocker")
-    public Resolution showBlockedIps() throws Exception {
-        HttpServletRequest request = context.getRequest();
-        request.setAttribute("blockedIpsList", BlockedIPStatus.getByStatus(BlockedIPStatus.STATUS_ANY));
-        return new ForwardResolution("/WEB-INF/pages/status/ipblocker.jsp");
-    }
-
     @HandlesEvent("/ticurl")
     public Resolution ticurl() {
 
@@ -419,154 +408,6 @@ public class ApplicationStatus extends EVActionBean {
         // Use the submitted value as the new IP
         CookieHandler.clearCookie(SimulatedIPCookie.SIMULATED_IP_COOKIE_NAME);
         return new RedirectResolution("/status/simulatedip.url");
-    }
-
-    @HandlesEvent("blockedipsubmit")
-    public Resolution blockedipsubmit() throws Exception {
-        if (!HttpRequestUtil.isValidIP(txtblockedip)) {
-            ValidationErrors errors = new ValidationErrors();
-            errors.addGlobalError(new SimpleError("Invalid IP address!"));
-            getContext().setValidationErrors(errors);
-            return new RedirectResolution("/status/ipblocker.url").flash(this);
-        }
-
-        String blockedIp = txtblockedip;
-        if (txtblockedip != null) {
-            try {
-                BlockedIPStatus ipstatus = BlockedIPStatus.load(txtblockedip);
-                if (ipstatus != null) {
-                    ValidationErrors errors = new ValidationErrors();
-                    errors.addGlobalError(new SimpleError("The IP(" + txtblockedip + ") you are trying to add it is already part of blocked list."));
-                    getContext().setValidationErrors(errors);
-                } else {
-                    ipstatus = new BlockedIPStatus(txtblockedip);
-                    ipstatus.addAccount(Account.getAccountInfo(txtblockedip));
-                    ipstatus.save();
-                }
-                txtblockedip = null;
-                getContext().getMessages().add(new SimpleMessage("The IP " + blockedIp + " has been successfully added."));
-            } catch (Exception exception) {
-                if (exception.getMessage().indexOf("unique constraint") != -1) {
-                    ValidationErrors errors = new ValidationErrors();
-                    errors.addGlobalError(new SimpleError("The IP(" + txtblockedip + ") you are trying to add it is already part of blocked list."));
-                    getContext().setValidationErrors(errors);
-                }
-            }
-        }
-        return new RedirectResolution("/status/ipblocker.url").flash(this);
-    }
-
-    @HandlesEvent("ipcounterstatus")
-    public Resolution ipcounterstatus() throws Exception {
-        if (!HttpRequestUtil.isValidIP(txtblockedip)) {
-            ValidationErrors errors = new ValidationErrors();
-            errors.addGlobalError(new SimpleError("Invalid IP address!"));
-            getContext().setValidationErrors(errors);
-            return new RedirectResolution("/status/ipblocker.url").flash(this);
-        }
-
-        if (txtblockedip != null) {
-            IPBlocker blocker = IPBlocker.getInstance();
-            try {
-                Map<String, String> statusMap = blocker.retreiveCurrentStatus(txtblockedip,context.getRequest());
-                context.getRequest().setAttribute("ip", txtblockedip);
-                context.getRequest().setAttribute("statusMap", statusMap);
-                txtblockedip = null;
-            } catch (Exception exception) {
-                context.getRequest().setAttribute("ip", txtblockedip);
-                context.getRequest().setAttribute("error", "Error occured while fetching the data!");
-                return new ForwardResolution("/WEB-INF/pages/status/counterstatus.jsp");
-            }
-        }
-        return new ForwardResolution("/WEB-INF/pages/status/counterstatus.jsp");
-    }
-
-    @HandlesEvent("iphistory")
-    public Resolution iphistory() throws Exception {
-        if (!HttpRequestUtil.isValidIP(txtblockedip)) {
-            ValidationErrors errors = new ValidationErrors();
-            errors.addGlobalError(new SimpleError("Invalid IP address!"));
-            getContext().setValidationErrors(errors);
-            return new RedirectResolution("/status/ipblocker.url").flash(this);
-        }
-
-        if (txtblockedip != null) {
-            try {
-                context.getRequest().setAttribute("ip", txtblockedip);
-                context.getRequest().setAttribute("descHistList", BlockedIPEvent.getByTimePeriod(txtblockedip, TimePeriod.LASTYEAR));
-                txtblockedip = null;
-            } catch (Exception exception) {
-                context.getRequest().setAttribute("ip", txtblockedip);
-                context.getRequest().setAttribute("error", "Error occured while fetching the data!");
-                return new ForwardResolution("/WEB-INF/pages/status/deschistory.jsp");
-            }
-        }
-        return new ForwardResolution("/WEB-INF/pages/status/deschistory.jsp");
-    }
-
-    @HandlesEvent("deleteblockedip")
-    public Resolution deleteblockedip() throws Exception {
-        if (!HttpRequestUtil.isValidIP(txtblockedip)) {
-            ValidationErrors errors = new ValidationErrors();
-            errors.addGlobalError(new SimpleError("Invalid IP address!"));
-            getContext().setValidationErrors(errors);
-            return new RedirectResolution("/status/ipblocker.url").flash(this);
-        }
-
-        String blockedIp = txtblockedip;
-        if (txtblockedip != null) {
-            try {
-                BlockedIPStatus ipstatus = BlockedIPStatus.load(txtblockedip);
-                if (ipstatus != null) {
-                    ipstatus.delete();
-                }
-                txtblockedip = null;
-                getContext().getMessages().add(new SimpleMessage("The IP " + blockedIp + " has been successfully removed."));
-            } catch (Exception exception) {
-                if (exception.getMessage().indexOf("No rows deleted") != -1) {
-                    ValidationErrors errors = new ValidationErrors();
-                    errors.addGlobalError(new SimpleError("The IP(" + txtblockedip + ") you are trying delete is not part of blocked list."));
-                    getContext().setValidationErrors(errors);
-                }
-            }
-        }
-        return new RedirectResolution("/status/ipblocker.url").flash(this);
-    }
-
-    @HandlesEvent("updateblockedip")
-    public Resolution updateblockedip() throws Exception {
-        if (!HttpRequestUtil.isValidIP(txtblockedip)) {
-            ValidationErrors errors = new ValidationErrors();
-            errors.addGlobalError(new SimpleError("Invalid IP address!"));
-            getContext().setValidationErrors(errors);
-            return new RedirectResolution("/status/ipblocker.url").flash(this);
-        }
-
-        String blockedIp = txtblockedip;
-        if (txtblockedip != null) {
-            try {
-                BlockedIPStatus ipstatus = BlockedIPStatus.load(txtblockedip);
-                if (ipstatus != null) {
-                    ipstatus.setStatus(enabled ? BlockedIPStatus.STATUS_BLOCKED : BlockedIPStatus.STATUS_UNBLOCKED);
-                    ipstatus.setTimestamp(new Date());
-                    ipstatus.save();
-                }
-                txtblockedip = null;
-                if (enabled) {
-                    getContext().getMessages().add(new SimpleMessage("The IP " + blockedIp + " has been successfully blocked."));
-                } else {
-                    getContext().getMessages().add(new SimpleMessage("The IP " + blockedIp + " has been successfully unblocked."));
-                }
-
-            } catch (Exception exception) {
-                if (exception.getMessage().indexOf("No rows updated") != -1) {
-                    ValidationErrors errors = new ValidationErrors();
-                    errors.addGlobalError(new SimpleError("The IP(" + txtblockedip + ") you are trying update is not part of blocked list."));
-                    getContext().setValidationErrors(errors);
-                }
-            }
-        }
-        return new RedirectResolution("/status/ipblocker.url").flash(this);
     }
 
     /**
