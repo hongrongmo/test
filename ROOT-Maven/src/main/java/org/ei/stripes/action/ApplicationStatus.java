@@ -54,7 +54,6 @@ import org.ei.connectionpool.ConnectionBroker;
 import org.ei.controller.IPBlocker;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.FastClient;
-import org.ei.download.util.SaveToGoogleUsage;
 import org.ei.service.amazon.s3.AmazonS3Service;
 import org.ei.service.amazon.s3.AmazonS3ServiceImpl;
 import org.ei.session.BlockedIPEvent;
@@ -90,10 +89,6 @@ public class ApplicationStatus extends EVActionBean {
     private String cacheKey;
     private String cacheVal;
     private int cacheMins;
-
-    private String usageOption;
-    private String startDate;
-    private String endDate;
 
     private String propKey = "";
 
@@ -429,30 +424,6 @@ public class ApplicationStatus extends EVActionBean {
         // Use the submitted value as the new IP
         CookieHandler.clearCookie(SimulatedIPCookie.SIMULATED_IP_COOKIE_NAME);
         return new RedirectResolution("/status/simulatedip.url");
-    }
-
-    @HandlesEvent("/driveusage")
-    public Resolution driveUsage() throws Exception {
-
-        if (usageOption == null || usageOption.equalsIgnoreCase("")) {
-            usageOption = "downloadformat";
-        }
-        HttpServletRequest request = context.getRequest();
-        Map<String, String> usageData = SaveToGoogleUsage.getUsageData(usageOption, startDate, endDate);
-
-        if (startDate != null && endDate != null) {
-            request.setAttribute("dateQueryinfo", "Date filter applied from " + startDate + " to " + endDate);
-        }
-
-        if (usageData.get("totalCount") != null) {
-            request.setAttribute("totalCount", usageData.get("totalCount"));
-            usageData.remove("totalCount");
-        } else {
-            request.setAttribute("totalCount", '0');
-        }
-
-        request.setAttribute("usageData", usageData);
-        return new ForwardResolution("/WEB-INF/pages/status/googledriveusage.jsp");
     }
 
     @HandlesEvent("blockedipsubmit")
@@ -1048,30 +1019,6 @@ public class ApplicationStatus extends EVActionBean {
         this.emailfrom = emailfrom;
     }
 
-    public String getUsageOption() {
-        return usageOption;
-    }
-
-    public void setUsageOption(String usageOption) {
-        this.usageOption = usageOption;
-    }
-
-    public String getStartDate() {
-        return startDate;
-    }
-
-    public void setStartDate(String startDate) {
-        this.startDate = startDate;
-    }
-
-    public String getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(String endDate) {
-        this.endDate = endDate;
-    }
-    
     public String getRuntimepropkey() {
 		return runtimepropkey;
 	}
