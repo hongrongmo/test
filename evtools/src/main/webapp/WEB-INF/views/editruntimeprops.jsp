@@ -12,10 +12,14 @@
 		<link type="text/css" rel="stylesheet" href="${pageContext.servletContext.contextPath}/static/css/jquery.dataTables-1.10.0.min.css"/>
 		<script type="text/javascript" src="${pageContext.servletContext.contextPath}/static/js/jquery-1.10.2.min.js"></script>
 		<script type="text/javascript" src="${pageContext.servletContext.contextPath}/static/js/jquery.dataTables-1.10.0.min.js"></script>
-		<title>Edit Runtime Properties</title>
+		<title>EV Tools - Edit Runtime Properties</title>
 	</head>
 	<body>
 		<%@ include file="includes/header.jsp" %>
+		<c:set var="editEnvRole" value="${false}"/>
+            <sec:authorize access="hasRole('ROLE_EDIT_ENV_PROD')">
+            	<c:set var="editEnvRole" value="${true}"/>
+            </sec:authorize>
 		<div class="maincontainer">
 			<%@ include file="includes/tabs.jsp" %>
 			<div class="innercontainer">
@@ -54,8 +58,20 @@
 								        <tr>
 								            <td>${entry.key}</td>
 								            <td><textarea style="width:100%;height:100%;max-width:100%;" disabled>${entry.dfault}</textarea></td>
-								            <td><textarea style="width:100%;height:100%;max-width:100%;" id="keyvalue${counter.count+1}">${entry.currentEnvValue}</textarea></td>
-								            <td><a href="#" onClick="saveKeyValue('${entry.key}','${env}','keyvalue${counter.count+1}');">Save</a> | <a href="#" onClick="removeKeyValue('${entry.key}','${env}');">Remove</a></td>
+								            <c:choose>
+							            		<c:when test="${env eq 'prod' and editEnvRole eq true}">
+							            				<td><textarea style="width:100%;height:100%;max-width:100%;" id="keyvalue${counter.count+1}">${entry.currentEnvValue}</textarea></td>
+	     												<td><a href="#" onClick="saveKeyValue('${entry.key}','${env}','keyvalue${counter.count+1}');">Save</a> | <a href="#" onClick="removeKeyValue('${entry.key}','${env}');">Remove</a></td>
+	     										</c:when>
+							            		<c:when test="${env eq 'prod' and editEnvRole ne true}">
+							            			<td><textarea style="width:100%;height:100%;max-width:100%;" disabled id="keyvalue${counter.count+1}">${entry.currentEnvValue}</textarea></td>
+	     											<td>Save | Remove</td>
+							            		</c:when>
+											    <c:otherwise>
+											    	<td><textarea style="width:100%;height:100%;max-width:100%;" id="keyvalue${counter.count+1}">${entry.currentEnvValue}</textarea></td>
+											    	<td><a href="#" onClick="saveKeyValue('${entry.key}','${env}','keyvalue${counter.count+1}');">Save</a> | <a href="#" onClick="removeKeyValue('${entry.key}','${env}');">Remove</a></td>
+											    </c:otherwise>
+							            	</c:choose>
 								        </tr>
 								    </c:forEach>
 							    </c:when>

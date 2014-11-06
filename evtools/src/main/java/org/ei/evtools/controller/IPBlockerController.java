@@ -3,6 +3,8 @@ package org.ei.evtools.controller;
 import java.util.Date;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.apache.log4j.Logger;
 import org.ei.evtools.db.domain.BlockedIPEvent;
 import org.ei.evtools.db.domain.BlockedIPStatus;
@@ -60,7 +62,7 @@ public class IPBlockerController {
 	
 	@RequestMapping(value="/app/addip", method=RequestMethod.POST)
     public String addip(@RequestParam(value="ip", required=true) String ip, 
-    		RedirectAttributes redirectAttributes) throws AWSAccessException{
+    		RedirectAttributes redirectAttributes, HttpServletRequest request) throws AWSAccessException{
         String env = "";
 		String errorMessage = null;
 		if(EVToolsUtils.isValidEnv(environment.getProperty("ENVIRONMENT"))){
@@ -71,6 +73,11 @@ public class IPBlockerController {
 		if (errorMessage == null && !EVToolsUtils.isValidIP(ip)) {
 			errorMessage = "Invalid IP '"+ip+"' address is provided!";
 		}
+		
+		if (errorMessage == null && !request.isUserInRole("ROLE_EDIT_IPBLOCKER")){
+			errorMessage = "You are not authorized for this action";
+		}
+			
 		if(errorMessage == null){
 			BlockedIPStatus ipstatus = dynamoDBService.loadBlockedIPStatus(ip, env);
 			if(ipstatus != null){
@@ -91,7 +98,7 @@ public class IPBlockerController {
 	
 	 @RequestMapping(value="/app/updateip", method=RequestMethod.POST)
 	 public String updateip(@RequestParam(value="ip", required=true) String ip, @RequestParam(value="blocked", required=true) String blocked,
-	    		RedirectAttributes redirectAttributes)  throws AWSAccessException {
+	    		RedirectAttributes redirectAttributes, HttpServletRequest request)  throws AWSAccessException {
 		 	String env = "";
 			String errorMessage = null;
 			if(EVToolsUtils.isValidEnv(environment.getProperty("ENVIRONMENT"))){
@@ -106,6 +113,10 @@ public class IPBlockerController {
 			
 			if (errorMessage == null && !EVToolsUtils.isValidIPBlockerStatus(blocked)) {
 				errorMessage = "Invalid update for the IP '"+ip+"' is requested!";
+			}
+			
+			if (errorMessage == null && !request.isUserInRole("ROLE_EDIT_IPBLOCKER")){
+				errorMessage = "You are not authorized for this action";
 			}
 			
 			if(errorMessage == null){
@@ -129,8 +140,8 @@ public class IPBlockerController {
      }
 	 
 	 @RequestMapping(value="/app/removeip", method=RequestMethod.POST)
-	 public String updateip(@RequestParam(value="ip", required=true) String ip,
-	    		RedirectAttributes redirectAttributes)  throws AWSAccessException {
+	 public String removeip(@RequestParam(value="ip", required=true) String ip,
+	    		RedirectAttributes redirectAttributes, HttpServletRequest request)  throws AWSAccessException {
 		 	String env = "";
 			String errorMessage = null;
 			if(EVToolsUtils.isValidEnv(environment.getProperty("ENVIRONMENT"))){
@@ -141,6 +152,11 @@ public class IPBlockerController {
 			if (errorMessage == null && !EVToolsUtils.isValidIP(ip)) {
 				errorMessage = "Invalid IP '"+ip+"' address is provided!";
 			}
+			
+			if (errorMessage == null && !request.isUserInRole("ROLE_EDIT_IPBLOCKER")){
+				errorMessage = "You are not authorized for this action";
+			}
+			
 			if(errorMessage == null){
 				BlockedIPStatus ipstatus = dynamoDBService.loadBlockedIPStatus(ip, env);
 				if(ipstatus != null){
