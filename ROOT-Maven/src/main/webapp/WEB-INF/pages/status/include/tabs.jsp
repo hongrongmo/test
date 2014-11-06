@@ -15,7 +15,6 @@
             <li class='tab<c:if test="${actionBean.context.eventName eq '/simulatedip'}"> active</c:if>'><a href="/status/simulatedip.url"/>Simulated IP</a></li>
             <li class='tab<c:if test="${actionBean.context.eventName eq '/searchwidget'}"> active</c:if>'><a href="/status/searchwidget.url"/>Search Widget</a></li>
             <li class='tab<c:if test="${actionBean.context.eventName eq '/ipblocker'}"> active</c:if>'><a href="/status/ipblocker.url"/>IP Blocker</a></li>
-            <li class='tab<c:if test="${actionBean.context.eventName eq '/editenvprops'}"> active</c:if>'><a href="/status/editenvprops.url"/>Edit (Env)Properties</a></li>
             <!--
             <li class='tab<c:if test="${actionBean.context.eventName eq '/openxml'}"> active</c:if>'><a href="/status/openxml.url"/>Test OpenXML</a></li>
             <li class='tab<c:if test="${actionBean.context.eventName eq '/openrss'}"> active</c:if>'><a href="/status/openrss.url"/>Test OpenRSS</a></li>

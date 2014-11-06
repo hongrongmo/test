@@ -63,7 +63,6 @@ import org.ei.session.UserSession;
 import org.ei.stripes.util.HttpRequestUtil;
 import org.ei.system.ApplicationStatusVO;
 import org.ei.system.EVSaxParser;
-import org.ei.system.RuntimePropertiesEntity;
 import org.ei.web.cookie.CookieHandler;
 import org.ei.web.cookie.SimulatedIPCookie;
 
@@ -93,10 +92,6 @@ public class ApplicationStatus extends EVActionBean {
     private String propKey = "";
 
     private String propValue = "";
-    
-    private String runtimepropkey = "";
-    private String runtimepropkeyvalue = "";
-    private String runtimepropenvlevel = "";
     
 
     // Utility inner class for name/value pair entries
@@ -573,121 +568,6 @@ public class ApplicationStatus extends EVActionBean {
         }
         return new RedirectResolution("/status/ipblocker.url").flash(this);
     }
-    
-    /**
-     * @return
-     * @throws Exception
-     */
-    @HandlesEvent("/editenvprops")
-    public Resolution editenvprops() throws Exception {
-      String envrunlevel = context.getRequest().getParameter("env");
-      if( envrunlevel == null || !RuntimePropertiesEntity.getEnvRunLevels().contains(envrunlevel)){
-    	  envrunlevel =  RuntimePropertiesEntity.getCurrentEnvironment();
-      }
-      context.getRequest().setAttribute("envrunlevels", RuntimePropertiesEntity.getEnvRunLevels());
-      context.getRequest().setAttribute("envrunlevel", envrunlevel);
-      context.getRequest().setAttribute("envprops", RuntimePropertiesEntity.getDefaultAndCurrentEnvironmentProps(envrunlevel));
-      return new ForwardResolution("/WEB-INF/pages/status/editenvprops.jsp");
-    }
-    
-    
-    /**
-     * @return
-     * @throws Exception
-     */
-    @HandlesEvent("updateruntimeproperty")
-    public Resolution updateruntimeproperty() throws Exception {
-    	
-    	boolean isValidRequest = true;
-    	if(!getRequest().getMethod().equalsIgnoreCase("POST") || isEmptyorNull(runtimepropkey) || isEmptyorNull(runtimepropenvlevel) || isEmptyorNull(runtimepropkeyvalue)){
-    		isValidRequest = false;
-    	}
-    	if(isValidRequest && RuntimePropertiesEntity.getEnvRunLevels().contains(runtimepropenvlevel)){
-    		RuntimePropertiesEntity entity = RuntimePropertiesEntity.load(runtimepropkey);
-    		if(entity != null){
-    			isValidRequest = true;
-    			setUserDataToCurrentEnv(runtimepropkeyvalue,entity, runtimepropenvlevel);
-    			entity.save();
-    			getContext().getMessages().add(new SimpleMessage("The key '" + entity.getKey() + "' has been successfully updated for '"+runtimepropenvlevel+"' environment."));
-    		}else{
-    			isValidRequest = false;
-    		}
-    		 
-    	}else{
-    		isValidRequest = false;
-    	}
-    	if(!isValidRequest){
-    		ValidationErrors errors = new ValidationErrors();
-            errors.addGlobalError(new SimpleError("Error occured while processing your request, please try again."));
-            getContext().setValidationErrors(errors);
-        }
-    	return new RedirectResolution("/status/editenvprops.url").addParameter("env", runtimepropenvlevel).flash(this);
-    }
-    
-    /**
-     * @return
-     * @throws Exception
-     */
-    @HandlesEvent("removeruntimepropertyattribute")
-    public Resolution removeruntimepropertyattribute() throws Exception {
-    	
-    	boolean isValidRequest = true;
-    	if(!getRequest().getMethod().equalsIgnoreCase("POST") || isEmptyorNull(runtimepropkey) || isEmptyorNull(runtimepropenvlevel) ){
-    		isValidRequest = false;
-    	}
-    	if(isValidRequest  && RuntimePropertiesEntity.getEnvRunLevels().contains(runtimepropenvlevel)){
-    		RuntimePropertiesEntity entity = RuntimePropertiesEntity.load(runtimepropkey);
-    		if(entity != null){
-    			isValidRequest = true;
-    			// Passing 'null' as data since we want to delete the whole attribute itself
-    			// This will be handled by entity object 'saveconfig' configuration
-    			setUserDataToCurrentEnv(null,entity, runtimepropenvlevel);
-    			entity.save();
-    			getContext().getMessages().add(new SimpleMessage("The key '" + entity.getKey() + "' has been successfully updated by removing '"+runtimepropenvlevel+"' attribute."));
-    		}else{
-    			isValidRequest = false;
-    		}
-    		 
-    	}else{
-    		isValidRequest = false;
-    	}
-    	if(!isValidRequest){
-    		ValidationErrors errors = new ValidationErrors();
-            errors.addGlobalError(new SimpleError("Error occured while processing your request, please try again."));
-            getContext().setValidationErrors(errors);
-        }
-    	return new RedirectResolution("/status/editenvprops.url").addParameter("env", runtimepropenvlevel).flash(this);
-    }
-    
-    /**
-     * @param value
-     * @return
-     */
-    private boolean isEmptyorNull(String value){
-    	if(value == null || value.trim().equalsIgnoreCase("")) {
-    		return true;
-    	}
-    	return false;
-    }
-    
-    /**
-     * @param dataValue
-     * @param entity
-     * @param envlevel
-     */
-    private void setUserDataToCurrentEnv(String dataValue,RuntimePropertiesEntity entity, String envlevel){
-    	if(envlevel.equalsIgnoreCase(RuntimePropertiesEntity.ATTRIBUTE_CERT)){
-    		entity.setCert(dataValue);
-		}else if(envlevel.equalsIgnoreCase(RuntimePropertiesEntity.ATTRIBUTE_DEV)){
-			entity.setDev(dataValue);
-		}else if(envlevel.equalsIgnoreCase(RuntimePropertiesEntity.ATTRIBUTE_LOCAL)){
-			entity.setLocal(dataValue);
-		}else if(envlevel.equalsIgnoreCase(RuntimePropertiesEntity.ATTRIBUTE_PROD)){
-			entity.setProd(dataValue);
-		}else if(envlevel.equalsIgnoreCase(RuntimePropertiesEntity.ATTRIBUTE_RELEASE)){
-			entity.setRelease(dataValue);
-		}
-    }
 
     /**
      * Method to check IP address for authentication purposes. Use the client's IP address from the request to authenticate access to the status pages. Only
@@ -1019,28 +899,6 @@ public class ApplicationStatus extends EVActionBean {
         this.emailfrom = emailfrom;
     }
 
-    public String getRuntimepropkey() {
-		return runtimepropkey;
-	}
 
-	public void setRuntimepropkey(String runtimepropkey) {
-		this.runtimepropkey = runtimepropkey;
-	}
-
-	public String getRuntimepropkeyvalue() {
-		return runtimepropkeyvalue;
-	}
-
-	public void setRuntimepropkeyvalue(String runtimepropkeyvalue) {
-		this.runtimepropkeyvalue = runtimepropkeyvalue;
-	}
-
-	public String getRuntimepropenvlevel() {
-		return runtimepropenvlevel;
-	}
-
-	public void setRuntimepropenvlevel(String runtimepropenvlevel) {
-		this.runtimepropenvlevel = runtimepropenvlevel;
-	}
 
 }
