@@ -59,7 +59,7 @@ public class MendeleyCoinsFormatTag extends SimpleTagSupport {
             tagoutput.append("&amp;rft.genre=conference");
         } else if (doctype.contains("Conference proceeding")) {
             tagoutput.append("&amp;rft.genre=proceeding");
-        } else if (doctype.contains("Unpublished paper") || doctype.contains("Article in Press")) {
+        } else if (doctype.contains("Unpublished paper") || doctype.contains("Article in Press") || doctype.contains("In Process")) {
             tagoutput.append("&amp;rft.genre=preprint");
         } else {
             tagoutput.append("&amp;rft.genre=unknown");

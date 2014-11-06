@@ -301,8 +301,11 @@
       <xsl:text> </xsl:text><fo:inline font-weight="bold" >Figures:<xsl:text> </xsl:text></fo:inline><xsl:value-of select="." disable-output-escaping="yes"/>
     </xsl:template>
     <xsl:template match="DT">
-    	<xsl:if test="text()='Article in Press'">
-    	     <xsl:text> Article in Press</xsl:text>
+        <xsl:if test="text()='Article in Press'">
+             <xsl:text> Article in Press</xsl:text>
+        </xsl:if>
+        <xsl:if test="text()='In Process'">
+             <xsl:text> In Process</xsl:text>
         </xsl:if>
     </xsl:template>
     <xsl:template match="DBNAME">

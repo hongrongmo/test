@@ -50,6 +50,7 @@ Note: If you want to change the order, change it in dynamicHeader variable and i
         <xsl:if test="PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT//LA">EVLABELLanguageEVLABEL,</xsl:if>
         <xsl:if test="PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT//AV">EVLABELAvailabilityEVLABEL,</xsl:if>
         <xsl:if test="PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT//DT[text()='Article in Press']">EVLABELArticle In PressEVLABEL,</xsl:if>
+        <xsl:if test="PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT//DT[text()='In Process']">EVLABELIn ProcessEVLABEL,</xsl:if>
         <xsl:if test="PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT//COL">EVLABELCollectionEVLABEL,</xsl:if>
         <xsl:if test="PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT//DBNAME">EVLABELDatabaseEVLABEL,</xsl:if>
         <xsl:if test="(PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT//CPRT|PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT//CPR)">EVLABELCopyrightEVLABEL,</xsl:if>
@@ -329,6 +330,7 @@ Note: If you want to change the order, change it in dynamicHeader variable and i
 
 <xsl:template match="DT" priority="1">
    <xsl:if test="text()='Article in Press'"><xsl:text> Article in Press</xsl:text></xsl:if>
+   <xsl:if test="text()='In Process'"><xsl:text> In Process</xsl:text></xsl:if>
 </xsl:template>
 
 </xsl:stylesheet>

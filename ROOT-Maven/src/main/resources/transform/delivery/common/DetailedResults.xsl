@@ -53,19 +53,32 @@
 	        
 	        
 	        <xsl:choose>
-			<xsl:when test="$DOCTYPE='Article in Press'">
-			<td valign="top" align="left">
-			<table border='0' cellspacing="0" cellpadding="0">
-			<tr>
-			   <td align='left' valign='top'><span style="vertical-align:top" CLASS="MedBlackText"><xsl:value-of select="."/></span><img src="/static/images/s.gif" width='10' border="0"/>	         
-			   <span href="javascript:window.open('/engresources/aip_help.html','newwind','width=310,height=300,scrollbars=yes,resizable,statusbar=yes');void('');"><img src="/static/images/i3.gif" border="0" style="vertical-align:top" /></span></td>
-			</tr>
-			<tr>
-			   <td  colspan='2' align='left' valign='top' height='25'><img src="/static/images/btn_aip.gif" border="0" style="vertical-align:top" title="Articles not published yet, but available online"/><span CLASS="MedBlackText" style="vertical-align:text-top"><xsl:text> Article in Press</xsl:text></span></td>
-			</tr>
-			</table>
-			 </td>	
-			</xsl:when>  
+            <xsl:when test="$DOCTYPE='Article in Press'">
+            <td valign="top" align="left">
+            <table border='0' cellspacing="0" cellpadding="0">
+            <tr>
+               <td align='left' valign='top'><span style="vertical-align:top" CLASS="MedBlackText"><xsl:value-of select="."/></span><img src="/static/images/s.gif" width='10' border="0"/>          
+               <span href="javascript:window.open('/engresources/aip_help.html','newwind','width=310,height=300,scrollbars=yes,resizable,statusbar=yes');void('');"><img src="/static/images/i3.gif" border="0" style="vertical-align:top" /></span></td>
+            </tr>
+            <tr>
+               <td  colspan='2' align='left' valign='top' height='25'><img src="/static/images/btn_aip.gif" border="0" style="vertical-align:top" title="Articles not published yet, but available online"/><span CLASS="MedBlackText" style="vertical-align:text-top"><xsl:text> Article in Press</xsl:text></span></td>
+            </tr>
+            </table>
+             </td>  
+            </xsl:when>  
+            <xsl:when test="$DOCTYPE='In Process'">
+            <td valign="top" align="left">
+            <table border='0' cellspacing="0" cellpadding="0">
+            <tr>
+               <td align='left' valign='top'><span style="vertical-align:top" CLASS="MedBlackText"><xsl:value-of select="."/></span><img src="/static/images/s.gif" width='10' border="0"/>          
+               <span href="javascript:window.open('/engresources/aip_help.html','newwind','width=310,height=300,scrollbars=yes,resizable,statusbar=yes');void('');"><img src="/static/images/i3.gif" border="0" style="vertical-align:top" /></span></td>
+            </tr>
+            <tr>
+               <td  colspan='2' align='left' valign='top' height='25'><img src="/static/images/btn_aip.gif" border="0" style="vertical-align:top" title="Records still in the process of being indexed, but available online." alt="Records still in the process of being indexed, but available online."/><span CLASS="MedBlackText" style="vertical-align:text-top"><xsl:text> In Process</xsl:text></span></td>
+            </tr>
+            </table>
+             </td>  
+            </xsl:when>  
 			<xsl:otherwise>
 			   <td height='25' valign="top"><span CLASS="MedBlackText"><xsl:value-of select="."/></span><br/></td>	
 			</xsl:otherwise>
