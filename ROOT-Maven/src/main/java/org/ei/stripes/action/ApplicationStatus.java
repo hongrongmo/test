@@ -75,8 +75,7 @@ public class ApplicationStatus extends EVActionBean {
     private String authURL;
     private String appName;
     private String openxmlURL = "/controller/servlet/Controller?CID=openXML&dbchkbx=1&DATABASE=1&XQUERYX=%3Cquery%3E%3CandQuery%3E%3Cword+path%3D%22db%22%3Ecpx%3C%2Fword%3E%3Cword%3Eworld%3C%2Fword%3E%3C%2FandQuery%3E%3C%2Fquery%3E&AUTOSTEM=on&STARTYEAR=1990&ENDYEAR=2009&SORT=re&xmlsearch=Submit+Query";
-    private String txtsimulatedip;
-    private String txtblockedip;
+    
     private boolean enabled;
     private String unmergeEmail = "";
     public static final String SIM_IP_SALT = "saltyipsaregreat";
@@ -134,9 +133,6 @@ public class ApplicationStatus extends EVActionBean {
     @Before
     private Resolution validateIP() {
         HttpServletRequest request = context.getRequest();
-        if (GenericValidator.isBlankOrNull(txtsimulatedip)) {
-            txtsimulatedip = HttpRequestUtil.getIP(request);
-        }
         // Validate IP address
         if (!validateIP(request)) {
             log4j.warn("Invalid access via '" + request.getRemoteAddr() + "'");
@@ -381,36 +377,7 @@ public class ApplicationStatus extends EVActionBean {
         return new ForwardResolution("/WEB-INF/pages/status/searchwidget.jsp");
     }
 
-    @HandlesEvent("/simulatedip")
-    public Resolution simulatedip() {
-        this.txtsimulatedip = new SimulatedIPCookie(CookieHandler.getCookie(context.getRequest(), SimulatedIPCookie.SIMULATED_IP_COOKIE_NAME)).getSimulatedIP();
-        return new ForwardResolution("/WEB-INF/pages/status/simulatedip.jsp");
-    }
-
-    /**
-     * Handles the submit button for the simulated IP
-     *
-     * @return
-     */
-    @HandlesEvent("simulatedipsubmit")
-    public Resolution simulatedipsubmit() {
-        CookieHandler.setCookie(context.getRequest(), context.getResponse(), new SimulatedIPCookie(this.txtsimulatedip));
-        return new RedirectResolution("/status/simulatedip.url");
-    }
-
-    /**
-     * Handles the clear button for the simulated IP
-     *
-     * @return
-     */
-    @HandlesEvent("simulatedipclear")
-    public Resolution simulatedipclear() {
-        // Use the submitted value as the new IP
-        CookieHandler.clearCookie(SimulatedIPCookie.SIMULATED_IP_COOKIE_NAME);
-        return new RedirectResolution("/status/simulatedip.url");
-    }
-
-    /**
+     /**
      * Method to check IP address for authentication purposes. Use the client's IP address from the request to authenticate access to the status pages. Only
      * internal users are permitted to access these pages. The standard loop back address (127.0.0.1) is also considered invalid to allow negative testing.
      *
@@ -683,29 +650,13 @@ public class ApplicationStatus extends EVActionBean {
         return searchFlag;
 
     }
-
-    public String getTxtsimulatedip() {
-        return this.txtsimulatedip;
-    }
-
-    public void setTxtsimulatedip(String txtsimulatedip) {
-        this.txtsimulatedip = txtsimulatedip;
-    }
-
+    
     public boolean isEnabled() {
         return enabled;
     }
 
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;
-    }
-
-    public String getTxtblockedip() {
-        return txtblockedip;
-    }
-
-    public void setTxtblockedip(String txtblockedip) {
-        this.txtblockedip = txtblockedip;
     }
 
     public ApplicationStatusVO getViewbean() {
