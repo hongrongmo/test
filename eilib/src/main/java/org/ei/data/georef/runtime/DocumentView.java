@@ -525,7 +525,7 @@ public abstract class DocumentView {
                 if (dtArray.length == mapcodeArray.length) {
                     List<String> decoratedvalues = new ArrayList<String>();
                     for (int x = 0; x < dtArray.length; x++) {
-                        decoratedvalues.add(dtArray[x].concat(" (").concat(mapcodeArray[x]).concat(")"));
+                        decoratedvalues.add(dtArray[x] + (mapcodeArray[x].equals("") ? "" : " (".concat(mapcodeArray[x]).concat(")")));
                     }
                     strvalue = StringUtil.join(decoratedvalues, GRFDocBuilder.AUDELIMITER);
                 }
@@ -994,6 +994,8 @@ public abstract class DocumentView {
             mappings.put("CM", "CP");
             mappings.put("MM", "MP");
             mappings.put("TM", "DS");
+            // tmh adding "In Process" to lookup table but leaving "empty" so it doesn't show code!
+            mappings.put("GA", "");
             /*
              * // GeoRef Collective Level mappings.put("SC","MR"); mappings.put("BC","MR"); mappings.put("RC","RR");
              * mappings.put("CC","CP"); mappings.put("MC","MP"); mappings.put("TC","DS");
@@ -1042,6 +1044,7 @@ public abstract class DocumentView {
             Map<String, String> mappings = new HashMap<String, String>();
 
             mappings.put("JA", "JOUR");
+            mappings.put("GI", "JOUR");
             mappings.put("CA", "CONF");
             mappings.put("CP", "CONF");
             mappings.put("MC", "CHAP");
