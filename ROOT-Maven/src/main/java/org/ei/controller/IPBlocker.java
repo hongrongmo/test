@@ -9,7 +9,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Enumeration;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.TimeZone;
@@ -341,50 +340,7 @@ public class IPBlocker {
         }
     }
 
-    /**
-     * Retreive current status.
-     *
-     * @param ip
-     *            the ip
-     * @return the map
-     * @throws ParseException
-     *             the parse exception
-     * @throws IOException
-     *             Signals that an I/O exception has occurred.
-     */
-    public Map<String, String> retreiveCurrentStatus(String ip, HttpServletRequest request ) {
-        MemcachedUtil memcached = MemcachedUtil.getInstance();
-        Map<String, String> statusMap = new LinkedHashMap<String, String>();
-
-        String bucket = getBucketName(ip, COUNTER.SESSION);
-        long count = memcached.incr(bucket, 0, 1, bucketincrementtimemin * 60);
-        statusMap.put(bucket, Long.toString(count));
-
-        bucket = getBucketName(ip, COUNTER.REQUEST);
-        count = memcached.incr(bucket, 0, 1, bucketincrementtimemin * 60);
-        statusMap.put(bucket, Long.toString(count));
-
-        bucket = getBucketName(ip, COUNTER.AUTHFAIL);
-        count = memcached.incr(bucket, 0, 1, bucketincrementtimemin * 60);
-        statusMap.put(bucket, Long.toString(count));
-
-        bucket = getBucketName(ip, COUNTER.NONCUSTOMER_REQUEST);
-        count = memcached.incr(bucket, 0, 1, bucketincrementtimemin * 60);
-        statusMap.put(bucket, Long.toString(count));
-
-        // Initialize if not present
-        HttpSession session = request.getSession(false);
-        long sessionratecount = 0;
-        if(session != null){
-        	SessionRate sessionrate = (SessionRate) session.getAttribute(IPBLOCKER_SESSION_RATE_LIMITOR_KEY);
-        	if (sessionrate != null) {
-        		sessionratecount = sessionrate.getTotalRequest();
-            }
-        }
-        statusMap.put("CUR_SESSION_TOTAL_REQUEST", Long.toString(sessionratecount));
-        return statusMap;
-    }
-
+    
     /**
      * Clear bucket.
      *
