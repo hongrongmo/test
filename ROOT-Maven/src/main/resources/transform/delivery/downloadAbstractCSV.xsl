@@ -60,7 +60,8 @@ Note: If you want to change the order, change it in dynamicHeader variable and i
    		<xsl:if test="PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT//ML">EVLABELConference locationEVLABEL,</xsl:if>
    		<xsl:if test="PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT//CPUB">EVLABELCountry of publicationEVLABEL,</xsl:if>
    		<xsl:if test="PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT//FTTJ">EVLABELTranslation serial titleEVLABEL,</xsl:if>
-   		<xsl:if test="PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT//DT[text()='Article in Press']">EVLABELArticle In PressEVLABEL,</xsl:if>
+        <xsl:if test="PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT//DT[text()='Article in Press']">EVLABELArticle In PressEVLABEL,</xsl:if>
+        <xsl:if test="PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT//DT[text()='In Process']">EVLABELIn ProcessEVLABEL,</xsl:if>
    		<xsl:if test="PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT//AV">EVLABELAvailabilityEVLABEL,</xsl:if>
    		<xsl:if test="PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT//SC">EVLABELScopeEVLABEL,</xsl:if>
    		<xsl:if test="(PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT//AB | PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT//AB2 | PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT//BAB)">EVLABELAbstractEVLABEL,</xsl:if>
@@ -546,5 +547,6 @@ Note: If you want to change the order, change it in dynamicHeader variable and i
 </xsl:template>
 <xsl:template match="DT" priority="1">
    <xsl:if test="text()='Article in Press'"><xsl:text> Article in Press</xsl:text></xsl:if>
+   <xsl:if test="text()='In Process'"><xsl:text> In Process</xsl:text></xsl:if>
 </xsl:template>
 </xsl:stylesheet>

@@ -1,7 +1,6 @@
 package org.ei.evtools.db.domain;
 
-import java.util.ArrayList;
-import java.util.List;
+import org.ei.evtools.utils.EVToolsConstants;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
@@ -16,15 +15,7 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 @DynamoDBTable(tableName = "runtimeproperties")
 public class RunTimeProperties {
 
-	public static final String KEY = "key";
-	public static final String ATTRIBUTE_DEFAULT = "default";
-    public static final String ATTRIBUTE_LOCAL = "local";
-    public static final String ATTRIBUTE_CERT = "cert";
-    public static final String ATTRIBUTE_DEV = "dev";
-    public static final String ATTRIBUTE_PROD = "prod";
-    public static final String ATTRIBUTE_RELEASE = "release";
-    
-    private String key;
+	private String key;
     private String dfault;
     private String local;
     private String cert;
@@ -34,7 +25,7 @@ public class RunTimeProperties {
     
     private String currentEnv = "";
     
-    @DynamoDBHashKey(attributeName = KEY)
+    @DynamoDBHashKey(attributeName = EVToolsConstants.KEY)
     public String getKey() {
 		return key;
 	}
@@ -43,7 +34,7 @@ public class RunTimeProperties {
 		this.key = key;
 	}
 
-	@DynamoDBAttribute(attributeName = ATTRIBUTE_DEFAULT)
+	@DynamoDBAttribute(attributeName = EVToolsConstants.ATTRIBUTE_DEFAULT)
 	public String getDfault() {
 		return dfault;
 	}
@@ -52,7 +43,7 @@ public class RunTimeProperties {
 		this.dfault = dfault;
 	}
 
-	@DynamoDBAttribute(attributeName = ATTRIBUTE_LOCAL)
+	@DynamoDBAttribute(attributeName = EVToolsConstants.ATTRIBUTE_LOCAL)
 	public String getLocal() {
 		return local;
 	}
@@ -61,7 +52,7 @@ public class RunTimeProperties {
 		this.local = local;
 	}
 
-	@DynamoDBAttribute(attributeName = ATTRIBUTE_CERT)
+	@DynamoDBAttribute(attributeName = EVToolsConstants.ATTRIBUTE_CERT)
 	public String getCert() {
 		return cert;
 	}
@@ -70,7 +61,7 @@ public class RunTimeProperties {
 		this.cert = cert;
 	}
 
-	@DynamoDBAttribute(attributeName = ATTRIBUTE_DEV)
+	@DynamoDBAttribute(attributeName = EVToolsConstants.ATTRIBUTE_DEV)
 	public String getDev() {
 		return dev;
 	}
@@ -79,7 +70,7 @@ public class RunTimeProperties {
 		this.dev = dev;
 	}
 
-	@DynamoDBAttribute(attributeName = ATTRIBUTE_PROD)
+	@DynamoDBAttribute(attributeName = EVToolsConstants.ATTRIBUTE_PROD)
 	public String getProd() {
 		return prod;
 	}
@@ -88,7 +79,7 @@ public class RunTimeProperties {
 		this.prod = prod;
 	}
 
-	@DynamoDBAttribute(attributeName = ATTRIBUTE_RELEASE)
+	@DynamoDBAttribute(attributeName = EVToolsConstants.ATTRIBUTE_RELEASE)
 	public String getRelease() {
 		return release;
 	}
@@ -106,14 +97,5 @@ public class RunTimeProperties {
 		return this.currentEnv;
 	}
 	
-	@DynamoDBIgnore
-    public static List<String> getEnvRunLevels(){
-    	List<String> envrunlevellist = new ArrayList<String>();
-        envrunlevellist.add(ATTRIBUTE_CERT);
-        envrunlevellist.add(ATTRIBUTE_DEV);
-        envrunlevellist.add(ATTRIBUTE_LOCAL);
-        envrunlevellist.add(ATTRIBUTE_PROD);
-        envrunlevellist.add(ATTRIBUTE_RELEASE);
-        return envrunlevellist;
-    }
+	
 }

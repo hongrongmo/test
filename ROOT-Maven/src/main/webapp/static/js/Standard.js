@@ -100,6 +100,28 @@ $(document).ready(function() {
 		var helppop = window.open(url, windowName, strOptions);
 		if (helppop != null) helppop.focus();
 	});
+	$('.knovelLink').click(function(event) {
+		event.preventDefault();
+		var url = $(this).attr("href");
+		var title = $(this).attr("title");
+		GALIBRARY.createWebEvent("Knovel", title, url);
+		var strOptions = "location=no";
+		var w_left = (screen.width / 4);
+		var w_top = (screen.height / 4);
+		var w_width = 1024;
+		var w_height = 768;
+		strOptions += ",toolbar=no";
+		strOptions += ",menubar=no";
+		strOptions += ",status=no";
+		strOptions += ",scrollbars=yes";
+		strOptions += ",resizable=yes";
+		strOptions += ",left=" + w_left;
+		strOptions += ",top=" + w_top;
+		strOptions += ",width=" + w_width;
+		strOptions += ",height=" + w_height;
+		strOptions += ";";
+		window.open(url, "Knovel", strOptions);
+	});
 
 	function openTips(title, url, id){
 		var elem = "#" + id + "Dialog";

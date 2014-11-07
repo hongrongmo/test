@@ -168,19 +168,26 @@
 
     $(".whatsNewLink").click(function(){
     	GALIBRARY.createWebEventWithLabel('Dialog Open', 'What\'s New', 'Support Dropdown');
-    	TINY.box.show({html:document.getElementById("modalmsg"),clickmaskclose:false,width:900,height:450,close:true,opacity:20,topsplit:3,closejs:function(){closeX();},openjs:function(){$("#hidePopup").focus();}});
+
+    	TINY.box.show({html:document.getElementById("modalmsg"),ariaLabeledBy:"mmPopupTitle",clickmaskclose:false,width:900,height:450,close:true,opacity:20,topsplit:3,closejs:function(){closeX();},openjs:function(){$("#hidePopup").focus();$(document).keydown(setTabListener);}});
     	$("#menu-1").click(function(){return false;});
 
     });
 
    $(".prefsOverlay").click(function(){
 	   	GALIBRARY.createWebEventWithLabel('Dialog Open', 'Edit Preferences', 'Settings Dropdown');
-		TINY.box.show({url:'/customer/userprefs.url',clickmaskclose:false,width:400,height:520,close:true,opacity:20,topsplit:3,openjs:function(){$("#hidePopup").focus();}});
+		TINY.box.show({url:'/customer/userprefs.url',ariaLabeledBy:"myPrefTitle",clickmaskclose:false,width:400,height:520,close:true,opacity:20,topsplit:3,closejs:function(){$(document).unbind("keydown", setTabListenerPrefs);},openjs:function(){$("#hidePopup").focus();$(document).keydown(setTabListenerPrefs);}});
 
 	});
 
   });
+	function setTabListenerPrefs(e){
 
+		if(e.keyCode == 9 && document.activeElement.id == 'hidePopup'){
+			$($('#settingsPopup a, #settingsPopup input[type!="hidden"]')[0]).focus();
+			e.preventDefault();
+		}
+	}
   	function isValidInput(fileNamePrefix) {
 	  var re = /^\w+$/;
 	  if (!re.test(fileNamePrefix)) {

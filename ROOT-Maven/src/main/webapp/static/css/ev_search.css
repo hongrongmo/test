@@ -36,6 +36,17 @@
 #latestresources ul li.whatsNew {background: url(/static/images/EV_new_wh.png) no-repeat left;}
 #latestresources ul li.giveFeedback {background: url(/static/images/EV_feedback_wh.png) no-repeat left; }
 
+#knovelbox ul li {list-style-type: none; margin: 0 0 1px 0; padding: 3px;}
+#knovelbox ul li a {padding-left: 25px }
+#knovelbox h2 img{padding-right:5px;}
+#knovelbox ul li.knovelChem{background: url(/static/images/knovel_chem_icon.png) no-repeat left;}
+#knovelbox ul li.knovelElect{background: url(/static/images/knovel_electro_icon.png) no-repeat left;}
+#knovelbox ul li.knovelEng{background: url(/static/images/knovel_eng_icon.png) no-repeat left;}
+#knovelbox ul li.knovelMech{background: url(/static/images/knovel_mech_icon.png) no-repeat left;}
+#knovelbox ul li.knovelMetal{background: url(/static/images/knovel_metal_icon.png) no-repeat left;}
+#knovelbox ul li.knovelUnit{background: url(/static/images/knovel_unit_icon.png) no-repeat left;}
+
+
 #searchformtabsbox {
 	position:relative;
 	margin:0;
@@ -139,6 +150,21 @@ background: url("/static/images/divider_login.gif") no-repeat scroll 10% 60% tra
 	font-weight: bold;
 	padding: 0 3px;
 }
+#searchformsidebar .knoveltitle{
+	background-color: #148C75;
+	color: #fff;
+	font-size:14px;
+	font-weight: bold;
+	padding: 5px 3px;
+}
+.knoveltitle .smallTxt{
+font-size: 10px;
+font-style: italic;
+}
+.knoveltitle a{
+	color: #FFF;
+}
+.knoveltitle a:hover{color:#FFF;}
 #searchformsidebar .sidebartitle .helpurl {float:right}
 #searchformsidebar .sidebartitle img.i {position:relative; top: 5px; }
 #searchform {

@@ -6,14 +6,20 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<link rel="shortcut icon" href="${pageContext.servletContext.contextPath}/static/images/favicon.ico" type="image/x-icon"/>
+		<link rel="icon" href="${pageContext.servletContext.contextPath}/static/images/favicon.ico" type="image/x-icon"/>
 		<link type="text/css" rel="stylesheet" href="${pageContext.servletContext.contextPath}/static/css/main.css"/>
 		<link type="text/css" rel="stylesheet" href="${pageContext.servletContext.contextPath}/static/css/jquery.dataTables-1.10.0.min.css"/>
 		<script type="text/javascript" src="${pageContext.servletContext.contextPath}/static/js/jquery-1.10.2.min.js"></script>
 		<script type="text/javascript" src="${pageContext.servletContext.contextPath}/static/js/jquery.dataTables-1.10.0.min.js"></script>
-		<title>Edit Runtime Properties</title>
+		<title>EV Tools - Edit Runtime Properties</title>
 	</head>
 	<body>
 		<%@ include file="includes/header.jsp" %>
+		<c:set var="editEnvRole" value="${false}"/>
+            <sec:authorize access="hasRole('ROLE_EDIT_ENV_PROD')">
+            	<c:set var="editEnvRole" value="${true}"/>
+            </sec:authorize>
 		<div class="maincontainer">
 			<%@ include file="includes/tabs.jsp" %>
 			<div class="innercontainer">
@@ -30,7 +36,7 @@
 	  				<h4><span>Environment level : </span>
 	  				<select name="envselect" id="envselect">
 	                	<c:forEach var="entry" items="${envrunlevels}">
-	                		<option value="${entry}" ${environment == entry ? 'selected' : ''}>${entry}</option>
+	                		<option value="${entry}" ${env == entry ? 'selected' : ''}>${entry}</option>
 	               		</c:forEach>
 	          		</select>
 	          		</h4>
@@ -41,7 +47,7 @@
 					        <tr>
 					            <th>Key</th>
 		                        <th>Default</th>
-					            <th>Environment(${environment})</th>
+					            <th>Environment(${env})</th>
 					            <th width="100px"></th>
 		                    </tr>
 					    </thead>
@@ -52,13 +58,25 @@
 								        <tr>
 								            <td>${entry.key}</td>
 								            <td><textarea style="width:100%;height:100%;max-width:100%;" disabled>${entry.dfault}</textarea></td>
-								            <td><textarea style="width:100%;height:100%;max-width:100%;" id="keyvalue${counter.count+1}">${entry.currentEnvValue}</textarea></td>
-								            <td><a href="#" onClick="saveKeyValue('${entry.key}','${environment}','keyvalue${counter.count+1}');">Save</a> | <a href="#" onClick="removeKeyValue('${entry.key}','${environment}');">Remove</a></td>
+								            <c:choose>
+							            		<c:when test="${env eq 'prod' and editEnvRole eq true}">
+							            				<td><textarea style="width:100%;height:100%;max-width:100%;" id="keyvalue${counter.count+1}">${entry.currentEnvValue}</textarea></td>
+	     												<td><a href="#" onClick="saveKeyValue('${entry.key}','${env}','keyvalue${counter.count+1}');">Save</a> | <a href="#" onClick="removeKeyValue('${entry.key}','${env}');">Remove</a></td>
+	     										</c:when>
+							            		<c:when test="${env eq 'prod' and editEnvRole ne true}">
+							            			<td><textarea style="width:100%;height:100%;max-width:100%;" disabled id="keyvalue${counter.count+1}">${entry.currentEnvValue}</textarea></td>
+	     											<td>Save | Remove</td>
+							            		</c:when>
+											    <c:otherwise>
+											    	<td><textarea style="width:100%;height:100%;max-width:100%;" id="keyvalue${counter.count+1}">${entry.currentEnvValue}</textarea></td>
+											    	<td><a href="#" onClick="saveKeyValue('${entry.key}','${env}','keyvalue${counter.count+1}');">Save</a> | <a href="#" onClick="removeKeyValue('${entry.key}','${env}');">Remove</a></td>
+											    </c:otherwise>
+							            	</c:choose>
 								        </tr>
 								    </c:forEach>
 							    </c:when>
 							    <c:otherwise>
-							        <tr><td colspan="9">NO ENTRIES!</td></tr>
+							        
 							    </c:otherwise>
 						    </c:choose>
 					    </tbody>
@@ -92,7 +110,7 @@
            });
       	 
       	 $("#envselect").change(function(event) {
-           window.location.href = "editruntimeprops?environment="+$(this).val();
+           window.location.href = "editruntimeprops?env="+$(this).val();
         });
       	 // Adding custom caption to table
       	 $("div.toolbar").html("Please avoid using 'ENTER' key if you dont want a next line character included while updating the data.");

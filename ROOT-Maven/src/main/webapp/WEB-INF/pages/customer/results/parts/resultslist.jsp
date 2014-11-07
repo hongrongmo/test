@@ -66,7 +66,8 @@
 					<data:resultformat result="${result}" name="citationsourceline"/>
 					<c:if test="${'0' ne result.bpp}"><div class="clear"></div></c:if>
               </p>
-			  <c:if test="${not empty result.doctype && result.doctype eq 'Article in Press'}"><p><img src="/static/images/btn_aip.gif" border="0" style="vertical-align:bottom" title="Articles not published yet, but available online"/>&nbsp;${result.doctype}</p></c:if>
+              <c:if test="${not empty result.doctype && result.doctype eq 'Article in Press'}"><p><img src="/static/images/btn_aip.gif" border="0" style="vertical-align:bottom" alt="Articles not published yet, but available online" title="Articles not published yet, but available online"/>&nbsp;${result.doctype}</p></c:if>
+              <c:if test="${not empty result.doctype && result.doctype eq 'In Process'}"><p><img src="/static/images/btn_aip.gif" border="0" style="vertical-align:bottom" title="Records still in the process of being indexed, but available online." alt="Records still in the process of being indexed, but available online."/>&nbsp;${result.doctype}</p></c:if>
 			  <p>
 				<b>Database:</b> ${result.doc.dbname} <c:if test="${not empty result.collection}"><b>&nbsp;Collection:</b> ${result.collection}</c:if>
 			  </p>

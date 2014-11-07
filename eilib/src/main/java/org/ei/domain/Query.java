@@ -126,7 +126,8 @@ public class Query implements Comparable<Object>, Serializable {
 				"Business article");
 		quickSearchDiplayOptions.put("DT:(AB or {J_AB} or {R_AB} or {P_AB} or {B_AB} or {D_AB} or {K_AB} or {M_AB})", "Abstract");
 		quickSearchDiplayOptions.put("DT:Other", "Other");
-		quickSearchDiplayOptions.put("DT:IP", "Article in Press");
+        quickSearchDiplayOptions.put("DT:IP", "Article in Press");
+        quickSearchDiplayOptions.put("DT:GI", "In Process");
 
 		quickSearchDiplayOptions.put("TR:APP", "Applications");
 		quickSearchDiplayOptions.put("TR:ECO", "Economic");

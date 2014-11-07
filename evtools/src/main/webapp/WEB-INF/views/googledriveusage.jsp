@@ -8,6 +8,8 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<link type="text/css" rel="stylesheet" href="${pageContext.servletContext.contextPath}/static/css/main.css"/>
 	 	<link type="text/css" rel="stylesheet" href="${pageContext.servletContext.contextPath}/static/css/jquery.ui.thems.smoothness.css"/>
+	 	<link rel="shortcut icon" href="${pageContext.servletContext.contextPath}/static/images/favicon.ico" type="image/x-icon"/>
+		<link rel="icon" href="${pageContext.servletContext.contextPath}/static/images/favicon.ico" type="image/x-icon"/>
 		<link type="text/css" rel="stylesheet" href="${pageContext.servletContext.contextPath}/static/css/jquery.dataTables-1.10.0.min.css"/>
 		<script type="text/javascript" src="${pageContext.servletContext.contextPath}/static/js/jquery-1.10.2.min.js"></script>
 		<script type="text/javascript" src="${pageContext.servletContext.contextPath}/static/js/jquery-ui.js"></script>
@@ -28,7 +30,7 @@
 				<c:if test="${not empty message}">
 				   <span id="messagecontainer">${message}</span>
 				</c:if>
-				<h2>Engineering Village - Google Drive Usage<span style="font-size:20px"> [ Total Downloads : ${totalCount} ]</span></h2>
+				<h2>Engineering Village - Google Drive Usage<span style="font-size:18px;color:red"> ${environment}</span><span style="font-size:20px"> [ Total Downloads : ${totalCount} ]</span></h2>
 				<p>This page allows you to view usage of save to google drive functionality.</p>
 				<div id="ddcontainer" >
 					<input type="hidden" value="${usageOption}" id="usageOption" />
