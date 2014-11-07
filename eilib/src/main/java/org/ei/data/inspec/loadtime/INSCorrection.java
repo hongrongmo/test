@@ -410,40 +410,40 @@ public class INSCorrection
 
 
 
-        private void writeToFile(List data, String field, int updateNumber, String filename, String path)
+    private void writeToFile(List data, String field, int updateNumber, String filename, String path)
+    {
+
+        FileWriter out;
+
+        File file=new File(path);
+
+
+        try
         {
-
-            FileWriter out;
-
-            File file=new File(path);
-
-
-            try
+            if(!file.exists())
             {
-                if(!file.exists())
-                {
-                    file.mkdir();
-                }
-
-
-
-                out = new FileWriter(path+"/"+filename);
-                System.out.println("field==> "+field);
-                if(data != null)
-                {
-                    for(int i=0;i<data.size();i++)
-                    {
-                        out.write(data.get(i)+"\n");
-                    }
-                }
-                out.close();
-            }
-            catch(Exception e)
-            {
-                e.printStackTrace();
+                file.mkdir();
             }
 
+
+
+            out = new FileWriter(path+"/"+filename);
+            System.out.println("field==> "+field);
+            if(data != null)
+            {
+                for(int i=0;i<data.size();i++)
+                {
+                    out.write(data.get(i)+"\tins"+"\n");
+                }
+            }
+            out.close();
         }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+
+    }
 
 
     private void getError(int updateNumber,String action)
@@ -1183,7 +1183,7 @@ public class INSCorrection
             {
                 //rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc from ins_master_orig where seq_num is not null and updateNumber='"+updateNumber+"'");
 
-                rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc from "+tempTable);
+                rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate,sspdate, aaff, afc, su, pubti, pfjt, pajt, sfjt, sajt, ab, anum, aoi, aus, aus2, pyr, rnum, pnum, cpat, ciorg, iorg, pas, pcdn, scdn, cdate, cedate, pdoi, nrtype, chi, pvoliss, pvol, piss, pipn, cloc, cls, cvs, eaff, eds, fls, la, matid, ndi, pspdate, ppub, rtype, sbn, sorg, psn, ssn, tc, sspdate, ti, trs, trmc,aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc from ins_master_orig where updatenumber='"+updateNumber+"'");
                 //rs = stmt.executeQuery("select anum,AUS,AUS2,AFFILIATION,AFFILIATION_1,CONTROLLEDTERM,CHEMICALTERM,SOURCETITLE,PUBLISHERNAME,DATABASE,IPC FROM "+tempTable);
 
             }
@@ -1407,8 +1407,8 @@ public class INSCorrection
                         ipcString = perl.substitute("s/\\//SLASH/g", ipcString);
                         //recs.put(EVCombinedRec.INT_PATENT_CLASSIFICATION, ipcString);
 
-                        //H:
-                        ipc.add(ipcString);
+
+                        ipc.addAll(prepareIpc(ipcString));
                     }
 
                 }
@@ -1453,6 +1453,37 @@ public class INSCorrection
 
         return recs;
     }
+
+     List prepareIpc(String aString)
+            throws Exception
+    {
+
+        ArrayList list = new ArrayList();
+        StringTokenizer st = new StringTokenizer(aString, InspecXMLReader.AUDELIMITER);
+        String s;
+        String name;
+        String code;
+
+        while (st.hasMoreTokens())
+        {
+            s = st.nextToken().trim();
+            if(s.length() > 0)
+            {
+                if(s.indexOf(InspecXMLReader.IDDELIMITER) > -1)
+                {
+                     s = s.replace(InspecXMLReader.IDDELIMITER,"\t");
+                     s = s.toUpperCase().trim();
+                }
+
+                list.add(s);
+            }
+
+        }
+
+        return list;
+
+    }
+
 
      protected Connection getConnection(String connectionURL,
                                              String driver,
