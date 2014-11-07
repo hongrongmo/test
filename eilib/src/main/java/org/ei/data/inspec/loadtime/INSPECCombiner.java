@@ -136,8 +136,8 @@ public class INSPECCombiner
             }
             writeRecs(rs);
             System.out.println("Wrote records.");
-            this.writer.end();
             this.writer.flush();
+            this.writer.end();
         }
         finally
         {
@@ -1018,9 +1018,9 @@ public class INSPECCombiner
             rs = stmt.executeQuery(sqlQuery);
             writeRecs(rs);
             System.out.println("Wrote records.");
-
-            this.writer.end();
             this.writer.flush();
+            this.writer.end();
+
         }
         finally
         {
