@@ -6,35 +6,27 @@
  */
 package org.ei.data.upt.loadtime;
 
-import java.sql.Clob;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.Hashtable;
-import java.util.Iterator;
-import java.util.List;
-
 import org.apache.oro.text.perl.Perl5Util;
 import org.ei.data.CombinedWriter;
 import org.ei.data.CombinedXMLWriter;
-import org.ei.data.Combiner;
 import org.ei.data.CombinerTimestamp;
-import org.ei.data.Country;
+import org.ei.data.Combiner;
 import org.ei.data.EVCombinedRec;
-import org.ei.data.upt.runtime.UPTDatabase;
-import org.ei.domain.ClassNodeManager;
-import org.ei.domain.Database;
 import org.ei.util.GUID;
 import org.ei.xml.Entity;
+import org.ei.data.upt.runtime.*;
+import java.sql.*;
+import java.util.*;
+import org.ei.data.Country;
+import org.ei.domain.ClassNodeManager;
+import org.ei.domain.Database;
+
 
 /**
  * @author KFokuo
- * 
- *         To change the template for this generated type comment go to Window&gt;Preferences&gt;Java&gt;Code Generation&gt;Code and Comments
+ *
+ * To change the template for this generated type comment go to
+ * Window&gt;Preferences&gt;Java&gt;Code Generation&gt;Code and Comments
  */
 
 public class UPTCombiner extends CombinerTimestamp {
@@ -42,34 +34,38 @@ public class UPTCombiner extends CombinerTimestamp {
     Perl5Util perl = new Perl5Util();
     char DELIM = (char) 30;
     char NESTED_DELIM = (char) 31;
-    public static final String AUDELIMITER = new String(new char[] { 30 });
-    private static final String setURL = "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI";
-    private static final String setUserName = "ap_pro1";
-    private static final String setPassword = "ei3it";
+    public static final String AUDELIMITER    = new String(new char[] {30});
+    public static  String driver = "oracle.jdbc.driver.OracleDriver";
+    public static  String url = "jdbc:oracle:thin:@neptune.elsevier.com:1521:EI";
+    public static  String username = "ap_pro1";
+    public static  String password = "ei3it";
     public static ClassNodeManager nodeManager = null;
     public static String US_CY = "US";
     public static String EP_CY = "EP";
-    Hashtable<String, String> hashtable = new Hashtable<String, String>();
+    Hashtable hashtable = new Hashtable();
     private static final Database UPTDatabase = new UPTDatabase();
+
+    public UPTCombiner(String database,CombinedWriter writer) {
+        super(writer);
+    }
 
     public UPTCombiner(CombinedWriter writer) {
         super(writer);
         init();
 
     }
-
     public void init() {
 
         try {
             nodeManager = ClassNodeManager.getInstance();
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
             System.exit(0);
         }
 
     }
-
     public void writeCombinedByWeekHook(Connection con, int week) throws Exception {
 
         Statement stmt = null;
@@ -77,38 +73,45 @@ public class UPTCombiner extends CombinerTimestamp {
 
         try {
             stmt = con.createStatement();
-            System.out.println("Running the query...");
-            rs = stmt
-                .executeQuery("SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number,seq_num FROM "
-                    + Combiner.TABLENAME + " WHERE seq_num is not null and LOAD_NUMBER = " + week);
+
+            String query="SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number,seq_num FROM "+Combiner.TABLENAME+" WHERE  LOAD_NUMBER = " + week;
+            System.out.println("Running the query..."+query);
+            rs = stmt.executeQuery(query);
+
             System.out.println("Got records ...");
             writeRecs(rs, con);
             System.out.println("Wrote records.");
-            this.writer.end();
-            this.writer.flush();
 
-        } catch (Exception e) {
+            this.writer.flush();
+            this.writer.end();
+
+        }
+        catch (Exception e) {
             e.printStackTrace();
-        } finally {
+        }
+        finally {
 
             if (rs != null) {
                 try {
                     rs.close();
-                } catch (Exception e) {
+                }
+                catch (Exception e) {
                     e.printStackTrace();
                 }
             }
             if (stmt != null) {
                 try {
                     stmt.close();
-                } catch (Exception e) {
+                }
+                catch (Exception e) {
                     e.printStackTrace();
                 }
             }
             if (con != null) {
                 try {
                     con.close();
-                } catch (Exception e) {
+                }
+                catch (Exception e) {
                     e.printStackTrace();
                 }
             }
@@ -116,7 +119,6 @@ public class UPTCombiner extends CombinerTimestamp {
                 nodeManager.close();
         }
     }
-
     public void writeCombinedByTimestampHook(Connection con, long timestamp) throws Exception {
 
         Statement stmt = null;
@@ -125,39 +127,43 @@ public class UPTCombiner extends CombinerTimestamp {
         try {
 
             stmt = con.createStatement();
-            System.out.println("Running the query...");
+            String query="SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number,seq_num FROM "+Combiner.TABLENAME+" WHERE  update_number="+timestamp;
+            System.out.println("Running the query..."+query);
 
-            rs = stmt
-                .executeQuery("SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number,seq_num FROM "
-                    + Combiner.TABLENAME + " WHERE seq_num is not null and update_number=" + timestamp);
+            rs = stmt.executeQuery(query);
             System.out.println("Got records ...");
             writeRecs(rs, con);
             System.out.println("Wrote records.");
             this.writer.end();
             this.writer.flush();
 
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             e.printStackTrace();
-        } finally {
+        }
+        finally {
 
             if (rs != null) {
                 try {
                     rs.close();
-                } catch (Exception e) {
+                }
+                catch (Exception e) {
                     e.printStackTrace();
                 }
             }
             if (stmt != null) {
                 try {
                     stmt.close();
-                } catch (Exception e) {
+                }
+                catch (Exception e) {
                     e.printStackTrace();
                 }
             }
             if (con != null) {
                 try {
                     con.close();
-                } catch (Exception e) {
+                }
+                catch (Exception e) {
                     e.printStackTrace();
                 }
             }
@@ -165,7 +171,6 @@ public class UPTCombiner extends CombinerTimestamp {
                 nodeManager.close();
         }
     }
-
     public void writeCombinedByYearHook(Connection con, int year) throws Exception {
 
         Statement stmt = null;
@@ -174,47 +179,48 @@ public class UPTCombiner extends CombinerTimestamp {
         try {
 
             stmt = con.createStatement();
-            System.out.println("Running the query...");
-            rs = stmt
-                .executeQuery("SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number,seq_num FROM "
-                    + Combiner.TABLENAME + " WHERE seq_num is not null and PY = '" + year + "'");
-            // rs =
-            // stmt.executeQuery("SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number FROM "
-            // +Combiner.TABLENAME +
-            // " WHERE M_ID in ('upt_9f671b1194ed5ace833362061377553', 'upt_1bd0dd411759e6051dM78e82061377553', 'upt_1bd0dd411759e6051dM7fe42061377553', 'upt_1bd0dd411759e6051dM7c812061377553', 'upt_1bd0dd411759e6051dM7b7c2061377553', 'upt_1bd0dd411759e6051dM7e6c2061377553', 'upt_1bd0dd411759e6051dM79432061377553', 'upt_d70d7a11759deb7a8M77012061377553', 'upt_1bd0dd411759e6051dM7c1e2061377553', 'upt_b5f53a11759e3aa7cM7bd92061377553', 'upt_1bd0dd411759e6051dM790b2061377553', 'upt_1bd0dd411759e6051dM7f372061377553', 'upt_d70d7a11759deb7a8M74082061377553', 'upt_1bd0dd411759e6051dM77dc2061377553', 'upt_1bd0dd411759e6051dM7e082061377553', 'upt_1bd0dd411759e6051dM7e312061377553')");
+            String query="SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number,seq_num FROM " + Combiner.TABLENAME + " WHERE  PY = '" + year + "'";
+            System.out.println("Running the query..."+query);
+            rs = stmt.executeQuery(query);
+            //rs = stmt.executeQuery("SELECT isc,dun,dan,pd,inv_ctry,xpb_dt,inv_addr,asg_addr,fre_ti,ger_ti,ltn_ti,asg_ctry,la,cit_cnt,ref_cnt,ucl,usc,ucc,fd,kd,dt,ds,inv,asg,ti,ab,oab,pn,py,ac,kc,pi,ain,aid,aic,aik,ds,ecl,fec,ipc,ipc8,ipc8_2,fic,aty,pe,ae,icc,ecc,isc,esc,m_id,load_number FROM " +Combiner.TABLENAME + " WHERE M_ID in ('upt_9f671b1194ed5ace833362061377553', 'upt_1bd0dd411759e6051dM78e82061377553', 'upt_1bd0dd411759e6051dM7fe42061377553', 'upt_1bd0dd411759e6051dM7c812061377553', 'upt_1bd0dd411759e6051dM7b7c2061377553', 'upt_1bd0dd411759e6051dM7e6c2061377553', 'upt_1bd0dd411759e6051dM79432061377553', 'upt_d70d7a11759deb7a8M77012061377553', 'upt_1bd0dd411759e6051dM7c1e2061377553', 'upt_b5f53a11759e3aa7cM7bd92061377553', 'upt_1bd0dd411759e6051dM790b2061377553', 'upt_1bd0dd411759e6051dM7f372061377553', 'upt_d70d7a11759deb7a8M74082061377553', 'upt_1bd0dd411759e6051dM77dc2061377553', 'upt_1bd0dd411759e6051dM7e082061377553', 'upt_1bd0dd411759e6051dM7e312061377553')");
             System.out.println("Got records ...");
             writeRecs(rs, con);
             System.out.println("Wrote records.");
-            this.writer.end();
             this.writer.flush();
+            this.writer.end();
 
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             e.printStackTrace();
-        } finally {
+        }
+        finally {
 
             if (rs != null) {
                 try {
                     rs.close();
-                } catch (Exception e) {
+                }
+                catch (Exception e) {
                     e.printStackTrace();
                 }
             }
             if (stmt != null) {
                 try {
                     stmt.close();
-                } catch (Exception e) {
+                }
+                catch (Exception e) {
                     e.printStackTrace();
                 }
             }
             if (con != null) {
                 try {
                     con.close();
-                } catch (Exception e) {
+                }
+                catch (Exception e) {
                     e.printStackTrace();
                 }
             }
-            // if (nodeManager != null)
-            // nodeManager.close();
+            if (nodeManager != null)
+                nodeManager.close();
         }
     }
 
@@ -230,12 +236,14 @@ public class UPTCombiner extends CombinerTimestamp {
                 ++i;
 
                 mid = rs.getString("m_id");
-                // System.out.println("MID: " + mid);
+
                 EVCombinedRec rec = new EVCombinedRec();
 
                 /*
-                 * if (Combiner.EXITNUMBER != 0 && i > Combiner.EXITNUMBER) { break; }
-                 */
+                if (Combiner.EXITNUMBER != 0 && i > Combiner.EXITNUMBER) {
+                    break;
+                }
+                */
                 if (validYear(rs.getString("py"))) {
 
                     if (rs.getClob("ab") != null) {
@@ -288,8 +296,8 @@ public class UPTCombiner extends CombinerTimestamp {
 
                         if (rs.getString("asg") != null) {
 
-                            List<String> lstAsg = convertString2List(rs.getString("asg"));
-                            List<String> lstInv = convertString2List(rs.getString("inv"));
+                            List lstAsg = convertString2List(rs.getString("asg"));
+                            List lstInv = convertString2List(rs.getString("inv"));
 
                             if (authCode.equals(EP_CY) && lstInv.size() > 0 && lstAsg.size() > 0) {
                                 lstInv = AssigneeFilter.filterInventors(lstAsg, lstInv, false);
@@ -306,10 +314,10 @@ public class UPTCombiner extends CombinerTimestamp {
                             if (arrVals != null)
                                 rec.put(EVCombinedRec.AUTHOR, arrVals);
 
-                        } else {
+                        }
+                        else {
 
-                            rec.put(EVCombinedRec.AUTHOR,
-                                convert2Array(formatAuthor(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("inv")))))));
+                            rec.put(EVCombinedRec.AUTHOR, convert2Array(formatAuthor(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("inv")))))));
                         }
                     }
 
@@ -317,8 +325,8 @@ public class UPTCombiner extends CombinerTimestamp {
 
                         if (rs.getString("inv") != null) {
 
-                            List<String> lstAsg = convertString2List(rs.getString("asg"));
-                            List<String> lstInv = convertString2List(rs.getString("inv"));
+                            List lstAsg = convertString2List(rs.getString("asg"));
+                            List lstInv = convertString2List(rs.getString("inv"));
 
                             if (authCode.equals(US_CY) && lstInv.size() > 0 && lstAsg.size() > 0) {
                                 lstAsg = AssigneeFilter.filterInventors(lstInv, lstAsg, true);
@@ -335,15 +343,14 @@ public class UPTCombiner extends CombinerTimestamp {
 
                             if (arrVals != null)
                                 rec.put(EVCombinedRec.AUTHOR_AFFILIATION, arrVals);
-                        } else {
-                            rec.put(EVCombinedRec.AUTHOR_AFFILIATION,
-                                convert2Array(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("asg"))))));
+                        }
+                        else {
+                            rec.put(EVCombinedRec.AUTHOR_AFFILIATION, convert2Array(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("asg"))))));
                         }
                     }
 
                     if (rs.getString("fd") != null)
-                        rec.put(EVCombinedRec.PATENT_FILING_DATE,
-                            Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(formatDate(rs.getString("fd"))))));
+                        rec.put(EVCombinedRec.PATENT_FILING_DATE, Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(formatDate(rs.getString("fd"))))));
 
                     if (rs.getString("py") != null)
                         rec.put(EVCombinedRec.PUB_YEAR, Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("py")))));
@@ -355,39 +362,44 @@ public class UPTCombiner extends CombinerTimestamp {
                         boolean isApp = isApplication(kindCode);
 
                         if (isApp) {
-                            rec.put(EVCombinedRec.PATENTAPPDATE,
-                                formatDate(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("pd"))))));
+                            rec.put(EVCombinedRec.PATENTAPPDATE, formatDate(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("pd"))))));
                         }
                     }
 
-                    // String appCtry = Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("aic"))));
+                    //String appCtry = Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("aic"))));
+
 
                     /*
-                     * if (appCtry != null) rec.put(EVCombinedRec.APPLICATION_COUNTRY,
-                     * Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(appCtry))));
-                     */
+                    if (appCtry != null)
+                        rec.put(EVCombinedRec.APPLICATION_COUNTRY, Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(appCtry))));
+                    */
                     String app_country = null;
 
-                    if (rs.getString("aic") != null) {
+                    if(rs.getString("aic") != null)
+                    {
                         app_country = rs.getString("aic");
 
-                        List<String> app_countryList = new ArrayList<String>();
+                        List app_countryList = new ArrayList();
 
                         String[] values = null;
                         values = app_country.split(AUDELIMITER);
-                        for (int x = 0; x < values.length; x++) {
+                        for(int x = 0 ; x < values.length; x++)
+                        {
                             app_countryList.add(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(values[x]))));
                         }
 
-                        if (!app_countryList.isEmpty()) {
-                            rec.putIfNotNull(EVCombinedRec.APPLICATION_COUNTRY, (String[]) app_countryList.toArray(new String[] {}));
+                        if(!app_countryList.isEmpty())
+                        {
+                            rec.putIfNotNull(EVCombinedRec.APPLICATION_COUNTRY, (String[]) app_countryList.toArray(new String[]{}));
                         }
                     }
 
-                    if (rs.getString("ain") != null) {
-                        List<String> pubNums = formatPN(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ain")))), app_country);
 
-                        List<String> lstAppNums = new ArrayList<String>();
+
+                    if (rs.getString("ain") != null) {
+                        List pubNums = formatPN(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ain")))), app_country);
+
+                        List lstAppNums = new ArrayList();
 
                         if (rs.getString("dan") != null) {
                             lstAppNums.add(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("dan")))));
@@ -404,9 +416,10 @@ public class UPTCombiner extends CombinerTimestamp {
                         arrAppNums[0] = replaceNull(arrAppNums[0]);
 
                         rec.put(EVCombinedRec.APPLICATION_NUMBER, arrAppNums);
-                    } else {
+                    }
+                    else {
 
-                        List<String> lstAppNums = new ArrayList<String>();
+                        List lstAppNums = new ArrayList();
 
                         if (rs.getString("dan") != null) {
                             lstAppNums.add(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("dan")))));
@@ -431,21 +444,16 @@ public class UPTCombiner extends CombinerTimestamp {
 
                         if (rs.getString("xpb_dt") != null) {
                             if (!isApp) {
-                                rec.put(EVCombinedRec.PATENTAPPDATE,
-                                    Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(formatDate(rs.getString("xpb_dt"))))));
+                                rec.put(EVCombinedRec.PATENTAPPDATE, Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(formatDate(rs.getString("xpb_dt"))))));
                             }
                         }
                     }
 
                     if (rs.getString("pi") != null) {
-                        rec.put(EVCombinedRec.PRIORITY_NUMBER,
-                            getPriorityNumber(replaceNull(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("pi")))))));
-                        rec.put(EVCombinedRec.PRIORITY_DATE,
-                            getPriorityDate(replaceNull(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("pi")))))));
-                        rec.put(EVCombinedRec.PRIORITY_KIND,
-                            getPriorityKind(replaceNull(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("pi")))))));
-                        rec.put(EVCombinedRec.PRIORITY_COUNTRY,
-                            getPriorityCountry(replaceNull(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("pi")))))));
+                        rec.put(EVCombinedRec.PRIORITY_NUMBER, getPriorityNumber(replaceNull(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("pi")))))));
+                        rec.put(EVCombinedRec.PRIORITY_DATE, getPriorityDate(replaceNull(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("pi")))))));
+                        rec.put(EVCombinedRec.PRIORITY_KIND, getPriorityKind(replaceNull(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("pi")))))));
+                        rec.put(EVCombinedRec.PRIORITY_COUNTRY, getPriorityCountry(replaceNull(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("pi")))))));
                     }
 
                     rec.put(EVCombinedRec.DEDUPKEY, getDedupKey());
@@ -491,11 +499,10 @@ public class UPTCombiner extends CombinerTimestamp {
                         rec.put(EVCombinedRec.DATABASE, "eup");
 
                     if (rs.getString("ds") != null)
-                        rec.put(EVCombinedRec.DESIGNATED_STATES,
-                            removeDupDS(convert2Array(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ds")))))));
+                        rec.put(EVCombinedRec.DESIGNATED_STATES, removeDupDS(convert2Array(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ds")))))));
 
-                    List<String> lstEclaCodes = new ArrayList<String>();
-                    List<String> lstFecCodes = new ArrayList<String>();
+                    List lstEclaCodes = new ArrayList();
+                    List lstFecCodes = new ArrayList();
 
                     if (rs.getString("ecl") != null)
                         lstEclaCodes = convertString2List(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ecl")))));
@@ -512,28 +519,28 @@ public class UPTCombiner extends CombinerTimestamp {
                     rec.put(EVCombinedRec.ECLA_CODES, removeSpaces(eclaVals));
 
                     if (rs.getString("ecc") != null)
-                        rec.put(EVCombinedRec.ECLA_CLASSES,
-                            removeSpaces(convert2Array(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ecc")))))));
+                        rec.put(EVCombinedRec.ECLA_CLASSES, removeSpaces(convert2Array(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ecc")))))));
 
                     if (rs.getString("esc") != null)
-                        rec.put(EVCombinedRec.ECLA_SUB_CLASSES,
-                            removeSpaces(convert2Array(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("esc")))))));
+                        rec.put(EVCombinedRec.ECLA_SUB_CLASSES, removeSpaces(convert2Array(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("esc")))))));
 
-                    List<String> arrIpcCodes = new ArrayList<String>();
-                    List<String> arrFicCodes = new ArrayList<String>();
-                    List<String> arrIpc8Codes = new ArrayList<String>();
+                    List arrIpcCodes = new ArrayList();
+                    List arrFicCodes = new ArrayList();
+                    List arrIpc8Codes = new ArrayList();
 
                     if (rs.getString("ipc8") != null) {
 
                         StringBuffer sbrIPC8 = new StringBuffer(rs.getString("ipc8"));
 
                         if (rs.getString("ipc8_2") != null) {
-                            sbrIPC8.append(rs.getString("ipc8_2"));
+                           sbrIPC8.append(rs.getString("ipc8_2"));
                         }
 
-                        List<IPC8Classification> tmpIpc8Codes = IPC8Classification.build(sbrIPC8.toString());
-                        arrIpc8Codes = normalizeIpc8Codes(tmpIpc8Codes);
-                    } else {
+                        arrIpc8Codes = IPC8Classification.build(sbrIPC8.toString());
+                        arrIpc8Codes = normalizeIpc8Codes(arrIpc8Codes);
+                    }
+                    else
+                    {
 
                         if (rs.getString("ipc") != null) {
                             arrIpcCodes = convertString2List(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ipc")))));
@@ -557,16 +564,14 @@ public class UPTCombiner extends CombinerTimestamp {
                     rec.put(EVCombinedRec.INT_PATENT_CLASSIFICATION, removeSpaces(ipcValues));
 
                     if (rs.getString("icc") != null)
-                        rec.put(EVCombinedRec.INT_PATENT_CLASSES,
-                            removeSpaces(convert2Array(replaceNull(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("icc"))))))));
+                        rec.put(EVCombinedRec.INT_PATENT_CLASSES, removeSpaces(convert2Array(replaceNull(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("icc"))))))));
 
                     if (rs.getString("isc") != null)
-                        rec.put(EVCombinedRec.INT_PATENT_SUB_CLASSES,
-                            removeSpaces(convert2Array(replaceNull(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("isc"))))))));
+                        rec.put(EVCombinedRec.INT_PATENT_SUB_CLASSES, removeSpaces(convert2Array(replaceNull(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("isc"))))))));
 
-                    List<String> lstUspToCodes = new ArrayList<String>();
-                    List<String> lstUspToClassCodes = new ArrayList<String>();
-                    List<String> lstUspToSubCodes = new ArrayList<String>();
+                    List lstUspToCodes = new ArrayList();
+                    List lstUspToClassCodes = new ArrayList();
+                    List lstUspToSubCodes = new ArrayList();
 
                     if (rs.getString("ucl") != null)
                         lstUspToCodes = normalizeUSCodes(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ucl")))));
@@ -592,8 +597,8 @@ public class UPTCombiner extends CombinerTimestamp {
                     if (rs.getString("load_number") != null)
                         rec.put(EVCombinedRec.LOAD_NUMBER, rs.getString("load_number"));
 
-                    if (rs.getString("dt") != null && rs.getString("kc") != null)
-                        rec.put(EVCombinedRec.DOCTYPE, formatDocType(rs.getString("dt"), rs.getString("kc")));
+                    if (rs.getString("dt") != null && rs.getString("kc") !=null)
+                        rec.put(EVCombinedRec.DOCTYPE, formatDocType(rs.getString("dt"),rs.getString("kc")));
 
                     if (rs.getString("la") != null)
                         rec.put(EVCombinedRec.LANGUAGE, Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("la")))));
@@ -602,17 +607,16 @@ public class UPTCombiner extends CombinerTimestamp {
                         rec.put(EVCombinedRec.PCITED, rs.getString("cit_cnt"));
 
                     if (rs.getString("inv_ctry") != null) {
-                        rec.put(EVCombinedRec.COUNTRY,
-                            getCountry(convert2Array(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("inv_ctry")))))));
-                    } else {
+                        rec.put(EVCombinedRec.COUNTRY, getCountry(convert2Array(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("inv_ctry")))))));
+                    }
+                    else {
                         if (rs.getString("asg_ctry") != null) {
-                            rec.put(EVCombinedRec.COUNTRY,
-                                getCountry(convert2Array(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("asg_ctry")))))));
+                            rec.put(EVCombinedRec.COUNTRY, getCountry(convert2Array(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("asg_ctry")))))));
 
                         }
                     }
 
-                    List<String> titles = new ArrayList<String>();
+                    List titles = new ArrayList();
 
                     if (rs.getString("fre_ti") != null)
                         titles.add(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("fre_ti")))));
@@ -631,31 +635,34 @@ public class UPTCombiner extends CombinerTimestamp {
 
                     rec.put(EVCombinedRec.PCITEDINDEX, patentIds);
 
-                    List<String> usclNames = new ArrayList<String>();
-                    List<String> eclaNames = new ArrayList<String>();
-                    List<String> ipcNames = new ArrayList<String>();
+
+                    List usclNames = new ArrayList();
+                    List eclaNames = new ArrayList();
+                    List ipcNames = new ArrayList();
 
                     hashtable.clear();
 
                     if (rs.getString("ucl") != null)
                         usclNames = getUSCLClassName(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ucl")))));
+
                     if (rs.getString("ecl") != null)
                         eclaNames = getECLAClassName(removeSpaces(eclaVals));
+
                     if (rs.getString("ipc") != null || rs.getString("ipc8") != null)
                         ipcNames = getIPCClassName(removeSpaces(ipcValues));
 
-                    List<String> allNames = new ArrayList<String>();
+                    List allNames = new ArrayList();
 
-                    if (!hashtable.isEmpty()) {
-                        Enumeration<String> e = hashtable.elements();
-                        while (e.hasMoreElements()) {
-                            allNames.add(e.nextElement());
-                        }
+                    if(!hashtable.isEmpty()){
+                        Enumeration e = hashtable.elements();
+                         while( e.hasMoreElements() ){
+                             allNames.add(e.nextElement());
+                         }
                     }
 
-                    // allNames.addAll(usclNames);
-                    // allNames.addAll(eclaNames);
-                    // allNames.addAll(ipcNames);
+                    //allNames.addAll(usclNames);
+                    //allNames.addAll(eclaNames);
+                    //allNames.addAll(ipcNames);
 
                     String arrNames[] = null;
 
@@ -664,14 +671,26 @@ public class UPTCombiner extends CombinerTimestamp {
 
                     rec.put(EVCombinedRec.NOTES, arrNames);
 
+
                     writer.writeRec(rec);
 
                 }
             }
-        } catch (Exception ex) {
-            ex.printStackTrace();
+        }
+        catch (Exception ex) {
             System.out.println("MID=" + mid);
-        } finally {
+            ex.printStackTrace();
+
+        }
+        finally {
+             if (rs != null) {
+                try {
+                    rs.close();
+                }
+                catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
 
         }
     }
@@ -681,7 +700,8 @@ public class UPTCombiner extends CombinerTimestamp {
             String s = eclas[i];
             if (s == null) {
                 s = "";
-            } else {
+            }
+            else {
                 s = ECLAClassNormalizer.normalize(s);
             }
 
@@ -691,9 +711,9 @@ public class UPTCombiner extends CombinerTimestamp {
         return eclas;
     }
 
-    public List<String> normalizeIpcCodes(List<String> codes, String[] subs) {
+    public List normalizeIpcCodes(List codes, String[] subs) {
 
-        List<String> newCodes = new ArrayList<String>();
+        List newCodes = new ArrayList();
 
         for (int i = 0; i < codes.size(); i++) {
             String code = (String) codes.get(i);
@@ -704,19 +724,18 @@ public class UPTCombiner extends CombinerTimestamp {
         return newCodes;
     }
 
-    public List<String> normalizeIpc8Codes(List<IPC8Classification> codes) {
+    public List normalizeIpc8Codes(List codes) {
 
-        List<String> newCodes = new ArrayList<String>();
+        List newCodes = new ArrayList();
 
         for (int i = 0; i < codes.size(); i++) {
-            IPC8Classification ipc = (IPC8Classification) codes.get(i);
+            IPC8Classification ipc = (IPC8Classification)codes.get(i);
             String code = ipc.getCode();
             newCodes.add(code);
         }
 
         return newCodes;
     }
-
     public String replaceAmpersand(String sVal) {
 
         if (sVal == null)
@@ -728,11 +747,10 @@ public class UPTCombiner extends CombinerTimestamp {
 
         return sVal;
     }
+    public List getUSCLClassName(String codes) throws Exception {
 
-    public List<String> getUSCLClassName(String codes) throws Exception {
-
-        List<String> lstCodes = convertString2List(codes);
-        List<String> names = new ArrayList<String>();
+        List lstCodes = convertString2List(codes);
+        List names = new ArrayList();
         String[] arrNames = null;
 
         try {
@@ -749,33 +767,33 @@ public class UPTCombiner extends CombinerTimestamp {
 
                 String name = nodeManager.seekUS(code);
 
-                if (name != null) {
+                if(name != null){
                     name = perl.substitute("s/\\(\\:\\)/QQ/ig", name);
                     String key = perl.substitute("s/[^a-zA-Z]//g", name);
-                    if (name.indexOf("QQ") > 1) {
+                    if(name.indexOf("QQ") > 1){
                         String[] temp = name.split("QQ");
                         String[] tempKey = key.split("QQ");
-                        hashtable.put(tempKey[tempKey.length - 1].toLowerCase(), temp[temp.length - 1].toLowerCase());
+                        hashtable.put(tempKey[tempKey.length-1].toLowerCase(), temp[temp.length-1].toLowerCase());
                     }
                 }
             }
-            if (!hashtable.isEmpty()) {
-                Enumeration<String> e = hashtable.elements();
-                while (e.hasMoreElements()) {
-                    names.add(e.nextElement());
-                }
+            if(!hashtable.isEmpty()){
+                Enumeration e = hashtable.elements();
+                 while( e.hasMoreElements() ){
+                     names.add(e.nextElement());
+                 }
             }
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
             throw e;
         }
         return names;
     }
+    public List getECLAClassName(String[] lstCodes) throws Exception {
 
-    public List<String> getECLAClassName(String[] lstCodes) throws Exception {
-
-        List<String> names = new ArrayList<String>();
+        List names = new ArrayList();
         String[] arrNames = null;
 
         try {
@@ -790,35 +808,36 @@ public class UPTCombiner extends CombinerTimestamp {
 
                 String name = nodeManager.seekECLA(code);
 
-                if (name != null) {
+                if (name != null){
                     name = perl.substitute("s/\\(\\:\\)/QQ/ig", name);
                     String key = perl.substitute("s/[^a-zA-Z]//g", name);
-                    if (name.indexOf("QQ") > 1) {
+                    if(name.indexOf("QQ") > 1){
                         String[] temp = name.split("QQ");
                         String[] tempKey = key.split("QQ");
-                        hashtable.put(tempKey[tempKey.length - 1].toLowerCase(), temp[temp.length - 1].toLowerCase());
+                        hashtable.put(tempKey[tempKey.length-1].toLowerCase(), temp[temp.length-1].toLowerCase());
                     }
                 }
             }
-            if (!hashtable.isEmpty()) {
-                Enumeration<String> e = hashtable.elements();
-                while (e.hasMoreElements()) {
-                    names.add(e.nextElement());
-                }
+            if(!hashtable.isEmpty()){
+                Enumeration e = hashtable.elements();
+                 while( e.hasMoreElements() ){
+                     names.add(e.nextElement());
+                 }
             }
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
             throw e;
         }
 
+
         return names;
 
     }
+    public List getIPCClassName(String[] lstCodes) throws Exception {
 
-    public List<String> getIPCClassName(String[] lstCodes) throws Exception {
-
-        List<String> names = new ArrayList<String>();
+        List names = new ArrayList();
         String[] arrNames = null;
 
         try {
@@ -835,23 +854,24 @@ public class UPTCombiner extends CombinerTimestamp {
 
                 String name = nodeManager.seekIPC(code);
 
-                if (name != null) {
+                if (name != null){
                     name = perl.substitute("s/\\(\\:\\)/QQ/ig", name);
                     String key = perl.substitute("s/[^a-zA-Z]//g", name);
-                    if (name.indexOf("QQ") > 1) {
+                    if(name.indexOf("QQ") > 1){
                         String[] temp = name.split("QQ");
                         String[] tempKey = key.split("QQ");
-                        hashtable.put(tempKey[tempKey.length - 1].toLowerCase(), temp[temp.length - 1].toLowerCase());
+                        hashtable.put(tempKey[tempKey.length-1].toLowerCase(), temp[temp.length-1].toLowerCase());
                     }
                 }
             }
-            if (!hashtable.isEmpty()) {
-                Enumeration<String> e = hashtable.elements();
-                while (e.hasMoreElements()) {
-                    names.add(e.nextElement());
-                }
+            if(!hashtable.isEmpty()){
+                Enumeration e = hashtable.elements();
+                 while( e.hasMoreElements() ){
+                     names.add(e.nextElement());
+                 }
             }
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
             throw e;
@@ -860,13 +880,12 @@ public class UPTCombiner extends CombinerTimestamp {
         return names;
 
     }
-
     public String[] getReferences(Connection conn, String mid) {
 
         PreparedStatement stmt = null;
         ResultSet rset = null;
 
-        List<String> ids = new ArrayList<String>();
+        List ids = new ArrayList();
 
         String[] sIds = null;
 
@@ -886,15 +905,17 @@ public class UPTCombiner extends CombinerTimestamp {
 
                 if (pn != null && cit_cy != null && !pn.equalsIgnoreCase("QQ")) {
                     fullPn.append(cit_cy).append(pn);
-                    if (cit_cy.equalsIgnoreCase("ep") && rset.getString("cit_pk") != null)
+                    if(cit_cy.equalsIgnoreCase("ep")&&rset.getString("cit_pk")!=null)
                         fullPn.append(rset.getString("cit_pk"));
                     String pNum = fullPn.toString();
                     ids.add(pNum);
                 }
             }
-        } catch (Exception ex) {
+        }
+        catch (Exception ex) {
             ex.printStackTrace();
-        } finally {
+        }
+        finally {
             close(rset);
             close(stmt);
         }
@@ -905,14 +926,14 @@ public class UPTCombiner extends CombinerTimestamp {
         return sIds;
 
     }
-
     public void close(ResultSet rset) {
 
         if (rset != null) {
             try {
                 rset.close();
                 rset = null;
-            } catch (SQLException e1) {
+            }
+            catch (SQLException e1) {
                 e1.printStackTrace();
             }
         }
@@ -924,7 +945,8 @@ public class UPTCombiner extends CombinerTimestamp {
             try {
                 stmt.close();
                 stmt = null;
-            } catch (SQLException e1) {
+            }
+            catch (SQLException e1) {
                 e1.printStackTrace();
             }
         }
@@ -935,12 +957,12 @@ public class UPTCombiner extends CombinerTimestamp {
         if (con != null) {
             try {
                 con.close();
-            } catch (Exception ex) {
+            }
+            catch (Exception ex) {
                 ex.printStackTrace();
             }
         }
     }
-
     public boolean isApplication(String kindCode) {
 
         boolean isApplication = false;
@@ -948,18 +970,16 @@ public class UPTCombiner extends CombinerTimestamp {
         if (kindCode == null)
             return isApplication;
 
-        if (kindCode.equalsIgnoreCase("A1") || kindCode.equalsIgnoreCase("A2") || kindCode.equalsIgnoreCase("A3") || kindCode.equalsIgnoreCase("A4")
-            || kindCode.equalsIgnoreCase("A8") || kindCode.equalsIgnoreCase("A9") || kindCode.equalsIgnoreCase("P1")) {
+        if (kindCode.equalsIgnoreCase("A1") || kindCode.equalsIgnoreCase("A2") || kindCode.equalsIgnoreCase("A3") || kindCode.equalsIgnoreCase("A4") || kindCode.equalsIgnoreCase("A8") || kindCode.equalsIgnoreCase("A9") || kindCode.equalsIgnoreCase("P1")) {
             isApplication = true;
         }
 
         return isApplication;
 
     }
-
     public String[] removeDupDS(String vals[]) {
 
-        List<String> lstVals = new ArrayList<String>();
+        List lstVals = new ArrayList();
 
         for (int i = 0; i < vals.length; i++) {
             String sVal = vals[i];
@@ -973,10 +993,9 @@ public class UPTCombiner extends CombinerTimestamp {
         return sVals;
 
     }
-
     public String[] formatPN(String pn, String kindCode, String authCode) {
 
-        List<String> lstVals = new ArrayList<String>();
+        List lstVals = new ArrayList();
 
         StringBuffer sbPnum = new StringBuffer();
 
@@ -1021,7 +1040,9 @@ public class UPTCombiner extends CombinerTimestamp {
 
     public String[] formatPN(String pn) {
 
-        List<String> lstVals = new ArrayList<String>();
+        List lstVals = new ArrayList();
+
+        StringBuffer sbPnum = new StringBuffer();
 
         lstVals.add(pn);
 
@@ -1034,7 +1055,7 @@ public class UPTCombiner extends CombinerTimestamp {
         return sVals;
     }
 
-    public List<String> formatPN(String pn, String country) {
+    public List formatPN(String pn, String country) {
 
         if (country == null)
             country = "";
@@ -1042,20 +1063,26 @@ public class UPTCombiner extends CombinerTimestamp {
         if (pn == null)
             pn = "";
 
-        List<String> lstVals = new ArrayList<String>();
-        if ((country.indexOf(AUDELIMITER) > 1) && (pn.indexOf(AUDELIMITER) > 1)) {
+        List lstVals = new ArrayList();
+        if((country.indexOf(AUDELIMITER) > 1) || (pn.indexOf(AUDELIMITER) > 1))
+        {
             String[] valuesCountry = country.split(AUDELIMITER);
             String[] valuesPn = pn.split(AUDELIMITER);
-            for (int x = 0; x < valuesPn.length; x++) {
+            for(int x = 0 ; x < valuesPn.length; x++)
+            {
                 lstVals.add(valuesPn[x]);
                 String newPnum = trimZeros(valuesPn[x]);
                 lstVals.add(newPnum);
                 String resultCountry = null;
-                if (valuesCountry.length == valuesPn.length) {
+                if(valuesCountry.length ==  valuesPn.length){
                     resultCountry = valuesCountry[x];
-                } else {
+                }
+                else{
                     resultCountry = valuesCountry[0];
                 }
+                if(resultCountry== null)
+                    resultCountry="";
+
                 StringBuffer sbPnum = new StringBuffer();
                 sbPnum.append(resultCountry).append(valuesPn[x]);
                 lstVals.add(sbPnum.substring(0, sbPnum.length()));
@@ -1064,7 +1091,9 @@ public class UPTCombiner extends CombinerTimestamp {
                 lstVals.add(sbPnum.substring(0, sbPnum.length()));
 
             }
-        } else {
+        }
+        else
+        {
             StringBuffer sbPnum = new StringBuffer();
             lstVals.add(pn);
             String newPnum = trimZeros(pn);
@@ -1083,19 +1112,24 @@ public class UPTCombiner extends CombinerTimestamp {
 
         if (sVal == null) {
             return sVal;
-        } else {
-            return sVal.replaceFirst("^(D|PP|RE|T|H|X|RX|AI)?[0]+", "$1");
+        }
+        else {
+            return sVal.replaceFirst("^(D|PP|RE|T|H|X|RX|AI)?[0]+","$1");
         }
 
-        /*
-         * char[] schars = sVal.toCharArray(); int index = 0; for (; index < sVal.length(); index++) {
-         * 
-         * if (schars[index] != '0') { break; } }
-         * 
-         * return (index == 0) ? sVal : sVal.substring(index);
-         */
-    }
+       /*
+        char[] schars = sVal.toCharArray();
+        int index = 0;
+        for (; index < sVal.length(); index++) {
 
+            if (schars[index] != '0') {
+                break;
+            }
+        }
+
+        return (index == 0) ? sVal : sVal.substring(index);
+        */
+    }
     public String[] removeSpaces(String[] arrCodes) {
 
         for (int i = 0; i < arrCodes.length; i++) {
@@ -1116,7 +1150,6 @@ public class UPTCombiner extends CombinerTimestamp {
 
         return arrCodes;
     }
-
     public String formatDate(String s) {
 
         if (s == null)
@@ -1135,59 +1168,51 @@ public class UPTCombiner extends CombinerTimestamp {
         return sDate.toString();
 
     }
-
     public String[] getCountry(String[] countries) {
 
-        List<String> lstCtry = new ArrayList<String>();
-        Hashtable<String, String> hashCtry = new Hashtable<String, String>();
+        List lstCtry = new ArrayList();
+        Hashtable hashCtry = new Hashtable();
 
         for (int i = 0; i < countries.length; i++) {
-            hashCtry.put(countries[i], "");
+            hashCtry.put(countries[i],"");
         }
 
-        if (!hashCtry.isEmpty()) {
-            Enumeration<String> e = hashCtry.keys();
-            while (e.hasMoreElements()) {
-                String country = Country.formatCountry(e.nextElement().toString());
-                if (country != null)
-                    lstCtry.add(country);
-            }
+        if(!hashCtry.isEmpty()){
+            Enumeration e = hashCtry.keys();
+             while( e.hasMoreElements() ){
+                 String country = Country.formatCountry(e.nextElement().toString());
+                 if (country != null)
+                        lstCtry.add(country);
+             }
         }
 
         String[] arrVals = (String[]) lstCtry.toArray(new String[1]);
 
         return arrVals;
     }
+    public String[] formatDocType(String dt,String kc) throws Exception {
 
-    public String[] formatDocType(String dt, String kc) throws Exception {
-
-        List<String> values = new ArrayList<String>();
+        List values = new ArrayList();
 
         values.add(dt);
         values.add("PA");
-        if (dt.equalsIgnoreCase("ug") || dt.equalsIgnoreCase("ua")) {
-            switch (kc.toUpperCase().charAt(0)) {
-            case 'S':
-                values.add("DP");
-                break;
-            case 'P':
-                values.add("PP");
-                break;
-            case 'E':
-                values.add("RE");
-                break;
-            case 'H':
-                values.add("SR");
-                break;
-            // default: values.add("UT"); break;
+        if (dt.equalsIgnoreCase("ug")||dt.equalsIgnoreCase("ua"))
+        {
+            switch (kc.toUpperCase().charAt(0))
+            {
+              case  'S': values.add("DP"); break;
+              case  'P': values.add("PP"); break;
+              case  'E': values.add("RE"); break;
+              case  'H': values.add("SR"); break;
+              //default: values.add("UT"); break;
             }
         }
+
 
         String[] arrVals = (String[]) values.toArray(new String[1]);
 
         return arrVals;
     }
-
     public String formatAuthor(String s) {
 
         if (s == null)
@@ -1197,14 +1222,13 @@ public class UPTCombiner extends CombinerTimestamp {
 
         return s;
     }
-
-    public List<String> normalizeUSCodes(String sList) {
+    public List normalizeUSCodes(String sList) {
 
         if (sList == null)
-            return new ArrayList<String>();
+            return new ArrayList();
 
-        List<String> lstVals = new ArrayList<String>();
-        List<String> newVals = new ArrayList<String>();
+        List lstVals = new ArrayList();
+        List newVals = new ArrayList();
 
         perl.split(lstVals, "/" + DELIM + "/", sList);
 
@@ -1217,14 +1241,13 @@ public class UPTCombiner extends CombinerTimestamp {
 
         return newVals;
     }
-
-    public List<String> normalizeUSClass(String sList) {
+    public List normalizeUSClass(String sList) {
 
         if (sList == null)
-            return new ArrayList<String>();
+            return new ArrayList();
 
-        List<String> lstVals = new ArrayList<String>();
-        List<String> newVals = new ArrayList<String>();
+        List lstVals = new ArrayList();
+        List newVals = new ArrayList();
 
         perl.split(lstVals, "/" + DELIM + "/", sList);
 
@@ -1237,14 +1260,13 @@ public class UPTCombiner extends CombinerTimestamp {
 
         return newVals;
     }
-
-    public List<String> normalizeUSSubClass(String sList) {
+    public List normalizeUSSubClass(String sList) {
 
         if (sList == null)
-            return new ArrayList<String>();
+            return new ArrayList();
 
-        List<String> lstVals = new ArrayList<String>();
-        List<String> newVals = new ArrayList<String>();
+        List lstVals = new ArrayList();
+        List newVals = new ArrayList();
 
         perl.split(lstVals, "/" + DELIM + "/", sList);
 
@@ -1257,22 +1279,20 @@ public class UPTCombiner extends CombinerTimestamp {
 
         return newVals;
     }
-
-    public List<String> convertString2List(String sList) {
+    public List convertString2List(String sList) {
 
         if (sList == null)
-            return new ArrayList<String>();
+            return new ArrayList();
 
-        List<String> lstVals = new ArrayList<String>();
+        List lstVals = new ArrayList();
 
         perl.split(lstVals, "/" + DELIM + "/", sList);
 
         return lstVals;
     }
-
     public String[] convert2Array(String sVal) {
 
-        List<String> values = new ArrayList<String>();
+        List values = new ArrayList();
 
         perl.split(values, "/" + DELIM + "/", sVal);
 
@@ -1282,19 +1302,18 @@ public class UPTCombiner extends CombinerTimestamp {
 
         return arrVals;
     }
-
     public String[] formatAddrLoc(String invAddr, String invCtry) {
 
         if (invAddr == null)
             invAddr = "";
 
-        List<String> values = new ArrayList<String>();
+        List values = new ArrayList();
 
         perl.split(values, "/" + DELIM + "/", invAddr);
 
         StringBuffer addrBuff = new StringBuffer();
 
-        for (Iterator<String> iter = values.iterator(); iter.hasNext();) {
+        for (Iterator iter = values.iterator(); iter.hasNext();) {
             String addr = (String) iter.next();
             addr = Entity.prepareString(addr);
             addrBuff.append(addr).append(" ");
@@ -1327,15 +1346,15 @@ public class UPTCombiner extends CombinerTimestamp {
 
     public String[] getPriorityNumber(String priInfo) {
 
-        ArrayList<String> pFields = new ArrayList<String>();
+        ArrayList pFields = new ArrayList();
 
         if (priInfo != null && !priInfo.trim().equals("")) {
 
-            ArrayList<String> arrPriInfo = new ArrayList<String>();
+            ArrayList arrPriInfo = new ArrayList();
             perl.split(arrPriInfo, "/" + DELIM + "/", priInfo);
 
-            for (Iterator<String> iter = arrPriInfo.iterator(); iter.hasNext();) {
-                ArrayList<String> arrPriRecs = new ArrayList<String>();
+            for (Iterator iter = arrPriInfo.iterator(); iter.hasNext();) {
+                ArrayList arrPriRecs = new ArrayList();
                 String priRec = (String) iter.next();
                 perl.split(arrPriRecs, "/" + NESTED_DELIM + "/", priRec);
 
@@ -1360,18 +1379,17 @@ public class UPTCombiner extends CombinerTimestamp {
         return arrVals;
 
     }
-
     public String[] getPriorityCountry(String priInfo) {
 
-        ArrayList<String> arrPriCtry = new ArrayList<String>();
+        ArrayList arrPriCtry = new ArrayList();
 
         if (priInfo != null && !priInfo.equals("")) {
 
-            ArrayList<String> arrPriInfo = new ArrayList<String>();
+            ArrayList arrPriInfo = new ArrayList();
             perl.split(arrPriInfo, "/" + DELIM + "/", priInfo);
 
-            for (Iterator<String> iter = arrPriInfo.iterator(); iter.hasNext();) {
-                ArrayList<String> arrPriRecs = new ArrayList<String>();
+            for (Iterator iter = arrPriInfo.iterator(); iter.hasNext();) {
+                ArrayList arrPriRecs = new ArrayList();
                 String priRec = (String) iter.next();
                 perl.split(arrPriRecs, "/" + NESTED_DELIM + "/", priRec);
 
@@ -1385,18 +1403,17 @@ public class UPTCombiner extends CombinerTimestamp {
 
         return arrVals;
     }
-
     public String[] getPriorityDate(String priInfo) {
 
-        ArrayList<String> arrPriDt = new ArrayList<String>();
+        ArrayList arrPriDt = new ArrayList();
 
         if (priInfo != null && !priInfo.equals("")) {
 
-            ArrayList<String> arrPriInfo = new ArrayList<String>();
+            ArrayList arrPriInfo = new ArrayList();
             perl.split(arrPriInfo, "/" + DELIM + "/", priInfo);
 
-            for (Iterator<String> iter = arrPriInfo.iterator(); iter.hasNext();) {
-                ArrayList<String> arrPriRecs = new ArrayList<String>();
+            for (Iterator iter = arrPriInfo.iterator(); iter.hasNext();) {
+                ArrayList arrPriRecs = new ArrayList();
                 String priRec = (String) iter.next();
                 perl.split(arrPriRecs, "/" + NESTED_DELIM + "/", priRec);
 
@@ -1411,18 +1428,17 @@ public class UPTCombiner extends CombinerTimestamp {
 
         return arrVals;
     }
-
     public String[] getPriorityKind(String priInfo) {
 
-        ArrayList<String> arrPriKinds = new ArrayList<String>();
+        ArrayList arrPriKinds = new ArrayList();
 
         if (priInfo != null && !priInfo.equals("")) {
 
-            ArrayList<String> arrPriInfo = new ArrayList<String>();
+            ArrayList arrPriInfo = new ArrayList();
             perl.split(arrPriInfo, "/" + DELIM + "/", priInfo);
 
-            for (Iterator<String> iter = arrPriInfo.iterator(); iter.hasNext();) {
-                ArrayList<String> arrPriRecs = new ArrayList<String>();
+            for (Iterator iter = arrPriInfo.iterator(); iter.hasNext();) {
+                ArrayList arrPriRecs = new ArrayList();
                 String priRec = (String) iter.next();
                 perl.split(arrPriRecs, "/" + NESTED_DELIM + "/", priRec);
 
@@ -1443,7 +1459,6 @@ public class UPTCombiner extends CombinerTimestamp {
         return (new GUID()).toString();
 
     }
-
     private String getStringFromClob(Clob clob) throws Exception {
         String temp = "";
         if (clob != null) {
@@ -1454,7 +1469,6 @@ public class UPTCombiner extends CombinerTimestamp {
             temp = "";
         return temp;
     }
-
     public String replaceNull(String sVal) {
 
         if (sVal == null)
@@ -1462,7 +1476,6 @@ public class UPTCombiner extends CombinerTimestamp {
 
         return sVal;
     }
-
     private boolean validYear(String year) {
         if (year == null) {
             return false;
@@ -1480,14 +1493,15 @@ public class UPTCombiner extends CombinerTimestamp {
         String driver = args[1];
         String username = args[2];
         String password = args[3];
+
         int loadNumber = Integer.parseInt(args[4]);
-        long timestamp = 0l;
+        long timestamp=0;
         int recsPerbatch = Integer.parseInt(args[5]);
         String operation = args[6];
         Combiner.TABLENAME = args[7];
         String environment = args[8].toLowerCase();
-        if (args.length == 10)
-            timestamp = Long.parseLong(args[9]);
+        if(args.length==10)
+         timestamp = Long.parseLong(args[9]);
 
         System.out.println("Table Name=" + args[7]);
         System.out.println("LoadNumber=" + loadNumber);
@@ -1495,30 +1509,55 @@ public class UPTCombiner extends CombinerTimestamp {
         System.out.println("Exit At=" + Combiner.EXITNUMBER);
         String dbname = "upt";
         if (timestamp > 0)
-            dbname = dbname + "cit";
+            dbname=dbname+"cit";
 
         CombinedWriter writer = new CombinedXMLWriter(recsPerbatch, loadNumber, dbname);
         writer.setOperation(operation);
         UPTCombiner c = new UPTCombiner(writer);
+        c.url=url;
+        c.driver=driver;
+        c.username=username;
+        c.password=password;
         try {
-            if (timestamp == 0 && (loadNumber > 3000 || loadNumber < 1000)) {
+            if (timestamp==0 && (loadNumber > 3000 || loadNumber < 1000))
+            {
+                System.out.println("Processing loadnumber " + loadNumber + "...");
                 c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
-            } else if (timestamp > 0) {
+            }
+            else if(timestamp > 0)
+            {
+                System.out.println("Processing timestamp " + timestamp + "...");
                 c.writeCombinedByTimestamp(url, driver, username, password, timestamp);
-            } else if (loadNumber == 0 && timestamp < 0) {
-                // extract all by year
-                for (int yearIndex = 1998; yearIndex <= 2012; yearIndex++) {
+            }
+            else if(loadNumber == 0 && timestamp < 0)
+            {
+                //extract all by year
+                for(int yearIndex = 1998; yearIndex <= 2012; yearIndex++)
+                {
 
                     System.out.println("Processing year " + yearIndex + "...");
-                    // create a new writer so we can see the loadNumber/yearNumber in the filename
-                    c = new UPTCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex, UPTDatabase.getIndexName(), environment));
-                    c.writeCombinedByYear(url, driver, username, password, yearIndex);
+                      // create  a new writer so we can see the loadNumber/yearNumber in the filename
+                      c = new UPTCombiner(new CombinedXMLWriter(recsPerbatch, yearIndex,UPTDatabase.getIndexName(), environment));
+                      c.writeCombinedByYear(url,
+                                          driver,
+                                          username,
+                                          password,
+                                          yearIndex);
                 }
-            } else {
+            }
+            else
+            {
+                System.out.println("Processing combined year " + loadNumber + "...");
                 c.writeCombinedByYear(url, driver, username, password, loadNumber);
             }
-        } catch (Exception ex) {
+        }
+        catch (Exception ex) {
             ex.printStackTrace();
         }
+        finally
+        {
+            System.exit(1);
+        }
+        System.exit(1);
     }
 }

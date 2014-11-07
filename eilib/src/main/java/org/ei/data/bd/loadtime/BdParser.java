@@ -2,6 +2,9 @@ package org.ei.data.bd.loadtime;
 
 import java.io.*;
 import java.util.*;
+import org.jdom2.*;                  //// replace svn jdom with recent jdom2
+import org.jdom2.input.*;
+import org.jdom2.output.*;
 import org.ei.util.GUID;
 import org.apache.oro.text.perl.*;
 import org.apache.oro.text.regex.*;
@@ -13,11 +16,6 @@ import org.ei.data.bd.*;
 import org.ei.data.encompasslit.loadtime.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import org.jdom2.*;    // replace svn jdom with recent jdom2
-import org.jdom2.input.*;
-import org.jdom2.output.*;
-
-
 
 public class BdParser
 {
@@ -31,6 +29,7 @@ public class BdParser
     public static final String AUDELIMITER = new String(new char[] {30});
     public static final String IDDELIMITER = new String(new char[] {31});
     public static final String GROUPDELIMITER = new String(new char[] {29});
+    public static final String REFERENCEDELIMITER = new String(new char[] {28});
     private static String weekNumber;
     private PrintWriter out;
     private SAXBuilder builder;
@@ -878,6 +877,12 @@ public class BdParser
                             {
                                 record.put("REFCOUNT",(String)bibliography.getAttributeValue("refcount"));
                             }
+
+                            List referencegroup = bibliography.getChildren("reference", noNamespace);
+
+                            parseReferencegroup(referencegroup,record);
+
+
                         }
 
                         //weekNumber
@@ -979,6 +984,59 @@ public class BdParser
             e.printStackTrace();
         }
         return record;
+    }
+
+    private void parseReferencegroup(List referenceGroup,Hashtable record) throws Exception
+    {
+        String referenceID = null;
+        StringBuffer referenTitle = new StringBuffer();
+        StringBuffer referenAuthor = new StringBuffer();
+        StringBuffer referenSourcetitle = new StringBuffer();
+        StringBuffer referenPublicationyear = new StringBuffer();
+        StringBuffer referenVolume = new StringBuffer();
+        StringBuffer referenIssue = new StringBuffer();
+        StringBuffer referenPages = new StringBuffer();
+        StringBuffer referenFullText = new StringBuffer();
+        StringBuffer referenText = new StringBuffer();
+        StringBuffer referenWebsite = new StringBuffer();
+        StringBuffer referenItemid = new StringBuffer();
+        StringBuffer referenItemcitationPII = new StringBuffer();
+        StringBuffer referenItemcitationDOI = new StringBuffer();
+        StringBuffer referenItemcitationCitation_title = new StringBuffer();
+        StringBuffer referenItemcitationAuthor = new StringBuffer();
+        StringBuffer referenItemcitationSourcetitle = new StringBuffer();
+        StringBuffer referenItemcitationSourcetitle_abbrev = new StringBuffer();
+        StringBuffer referenItemcitationIssn = new StringBuffer();
+        StringBuffer referenItemcitationIsbn = new StringBuffer();
+        StringBuffer referenItemcitationCoden = new StringBuffer();
+        StringBuffer referenItemcitationPart = new StringBuffer();
+        StringBuffer referenItemcitationpublicationyear = new StringBuffer();
+        StringBuffer referenItemcitationVolume = new StringBuffer();
+        StringBuffer referenItemcitationIssue = new StringBuffer();
+        StringBuffer referenItemcitationPage = new StringBuffer();
+        StringBuffer referenItemcitationArticle_number = new StringBuffer();
+        StringBuffer referenItemcitationWebsite = new StringBuffer();
+
+
+        if(referenceGroup != null && referenceGroup.size()>0)
+        {
+            for(int i=0;i<referenceGroup.size();i++)
+            {
+
+
+                Element reference = (Element)referenceGroup.get(i);
+
+                if(reference != null)
+                {
+                    referenceID = reference.getAttributeValue("id");
+                }
+
+            }
+
+
+
+        }
+
     }
 
 
@@ -1862,18 +1920,22 @@ public class BdParser
 
                     //System.out.println("CONFNAME " + confname);
 
-                    if(confnumber!= null && confname != null)
-                    {
-                        record.put("CONFNAME",dictionary.mapEntity(getMixData(confnumber.getContent())+" "+getMixData(confname.getContent())));
-                    }
-                    else if(confname!= null)
+                    //if(confnumber!= null && confname != null)
+                    //{
+                    //  record.put("CONFNAME",dictionary.mapEntity(getMixData(confnumber.getContent())+" "+getMixData(confname.getContent())));
+                    //}
+                    //else if(confname!= null)
+                    /* based on Frank request, remove confnumber from conference name column 10/23/2014 */
+                    if(confname!= null)
                     {
                         record.put("CONFNAME",dictionary.mapEntity(getMixData(confname.getContent())));
                     }
+                    /*
                     else if(confnumber!= null)
                     {
                         record.put("CONFNAME",dictionary.mapEntity(getMixData(confnumber.getContent())));
                     }
+                    */
 
                     //confcatnumber
 
