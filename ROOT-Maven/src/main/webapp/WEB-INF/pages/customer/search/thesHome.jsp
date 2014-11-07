@@ -151,7 +151,6 @@
 		    <input type="hidden" name="database" value="${actionBean.database}"/>
 		    <input type="hidden" name="CID" value="thesSearchCitationFormat"/>
 		    <input type="hidden" name="searchWord1" value=""/>
-		    <input type="hidden" name="csrfSyncToken" value="${actionBean.csrfSyncToken}"/>
 		    <input type="hidden" name="thesterm" value=""/>
 			<input type="hidden" name="searchtype" value="Thesaurus"/>
 
