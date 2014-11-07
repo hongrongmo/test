@@ -42,7 +42,7 @@
 			<c:if test="${'Article in Press' eq result.doctype}">
 			<p><img src="/static/images/btn_aip.gif" border="0"  title="Articles not published yet, but available online"><span style="vertical-align:text-top"> Article in Press</span>&nbsp;<a href="${actionBean.helpUrl}#Art_in_Press.htm" title="Information about Article in Press" alt="Information about Article in Press" class="helpurl"><img src="/static/images/i.png" border="0" alt=""/></a></p></c:if>
             <c:if test="${'In Process' eq result.doctype}">
-            <p><img src="/static/images/btn_aip.gif" border="0"  title="Records still in the process of being indexed, but available online" alt="Records still in the process of being indexed, but available online"><span style="vertical-align:text-top"> In Process</span>&nbsp;<a href="${actionBean.helpUrl}#Art_in_Press.htm" alt="Information about Article in Press" title="Information about Article in Press" class="helpurl"><img src="/static/images/i.png" border="0" alt=""/></a></p></c:if>
+            <p><img src="/static/images/btn_aip.gif" border="0"  title="Records still in the process of being indexed, but available online" alt="Records still in the process of being indexed, but available online"><span style="vertical-align:text-top"> In Process</span>&nbsp;<a href="${actionBean.helpUrl}#GeoRefInProc.htm" alt="Information about In Process" title="Information about In Process" class="helpurl"><img src="/static/images/i.png" border="0" alt=""/></a></p></c:if>
 			<div class="clear"></div>
 
 			<c:if test ="${not empty result.affils}">

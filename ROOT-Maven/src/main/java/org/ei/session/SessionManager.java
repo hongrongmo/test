@@ -48,7 +48,6 @@ import org.ei.service.cars.rest.request.CARSRequest;
 import org.ei.service.cars.util.CARSCommonUtil;
 import org.ei.stripes.EVActionBeanContext;
 import org.ei.stripes.util.HttpRequestUtil;
-import org.ei.util.SyncTokenFIFOQueue;
 import org.ei.web.cookie.CookieHandler;
 import org.ei.web.cookie.EISessionCookie;
 
@@ -441,7 +440,6 @@ public class SessionManager {
         UserSession userSession = new UserSession();
         userSession.setUser(new EVWebUser());
         userSession.setProperties(new Properties());
-        userSession.setFifoQueue(new SyncTokenFIFOQueue());
         addRequestMetadata(userSession);
 
         return userSession;

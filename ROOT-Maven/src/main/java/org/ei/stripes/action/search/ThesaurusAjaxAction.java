@@ -133,11 +133,6 @@ public class ThesaurusAjaxAction extends EVActionBean {
 	public Resolution thesFullRec() throws Exception {
 
 
-		HttpServletRequest request = context.getRequest();
-		if(isCSRFPrevRequired(request.getParameter("csrfSyncToken"))){
-			return csrfFailedResponseResolution();
-		}
-
 		if (GenericValidator.isBlankOrNull(term)) {
 			throw new InvalidArgumentException("'term' must be present in request!");
 		}
@@ -227,11 +222,6 @@ public class ThesaurusAjaxAction extends EVActionBean {
 	@HandlesEvent("termsearch")
 	@DontValidate
 	public Resolution thesTermSearch() throws InfrastructureException, SessionException {
-
-		HttpServletRequest request = context.getRequest();
-		if(isCSRFPrevRequired(request.getParameter("csrfSyncToken"))){
-			return csrfFailedResponseResolution();
-		}
 
 		if (GenericValidator.isBlankOrNull(term)) {
 			throw new InfrastructureException(SystemErrorCodes.INVALID_ARGUMENT_SET_ERROR, "'term' must be present in request!");
@@ -333,11 +323,6 @@ public class ThesaurusAjaxAction extends EVActionBean {
 	@DontValidate
 	public Resolution thesBrowse() throws InfrastructureException, SessionException {
 
-		HttpServletRequest request = context.getRequest();
-		if(isCSRFPrevRequired(request.getParameter("csrfSyncToken"))){
-			return csrfFailedResponseResolution();
-		}
-
 		if (GenericValidator.isBlankOrNull(term)) {
 			throw new InfrastructureException(SystemErrorCodes.INVALID_ARGUMENT_SET_ERROR, "'term' must be present in request!");
 		}
@@ -432,11 +417,6 @@ public class ThesaurusAjaxAction extends EVActionBean {
 		}
 
 		return new ForwardResolution("/WEB-INF/pages/customer/search/ajax/thesBrowse.jsp");
-	}
-
-	private Resolution csrfFailedResponseResolution(){
-		String result = String.valueOf("<div style=\"display:none;\"><div id=\"validationnotpassed\">true</div></div>");
-        return new StreamingResolution("text/html", result);
 	}
 
 	//

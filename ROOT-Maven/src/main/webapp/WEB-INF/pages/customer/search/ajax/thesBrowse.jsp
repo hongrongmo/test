@@ -7,7 +7,6 @@
 .RedText  {color:#FF3300;}
 </style>
 <h3 class="searchcomponentlabel" style="float: none; margin-bottom: 3px; text-transform: uppercase">Browse</h3>
-<div style="display:none" id="csrfTokenElement">${actionBean.csrfSyncToken}</div>
 <%-- TERM PATH DISPLAY --%>
 <c:set var="laststep" scope="request">${fn:length(actionBean.steps)}</c:set>
 <c:set var="scon" value="${actionBean.steps[0].context}"/>

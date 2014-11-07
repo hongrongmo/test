@@ -31,12 +31,10 @@ import org.ei.biz.security.NormalAuthRequiredAccessControl;
 import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
 import org.ei.controller.logging.LogEntry;
-import org.ei.exception.SessionException;
 import org.ei.session.UserSession;
 import org.ei.stripes.EVActionBeanContext;
 import org.ei.stripes.util.HttpRequestUtil;
 import org.ei.stripes.view.CustomizedLogo;
-import org.ei.util.SyncTokenFIFOQueue;
 import org.perf4j.StopWatch;
 import org.perf4j.log4j.Log4JStopWatch;
 
@@ -70,9 +68,6 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
 
    	private boolean showLoginBox = true;
     private StopWatch requeststopwatch = null;
-
-    @Validate(mask = ".*")
-    private String csrfSyncToken = null;
 
     @Validate(mask = "-{0,1}\\d*")
     protected String errorCode = "";
@@ -619,33 +614,6 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
         this.errorCode = errorCode;
     }
 
-    public String getCsrfSyncToken() throws SessionException {
-
-        UserSession userSession = context.getUserSession();
-        if (userSession == null) {
-            return null;
-        }
-        boolean isCSRFPrevEnabled = Boolean.parseBoolean((EVProperties.getProperty(EVProperties.PREVENT_CSRF_ATTACK)));
-        if (!isCSRFPrevEnabled)
-            return null;
-        boolean isSessionUpdateNeeded = false;
-        if (userSession.getFifoQueue() == null) {
-            userSession.setFifoQueue(new SyncTokenFIFOQueue());
-        }
-        if (userSession.getFifoQueue().isEmpty()) {
-            isSessionUpdateNeeded = true;
-        }
-        String newToken = userSession.getFifoQueue().getLastElement();
-        if (isSessionUpdateNeeded)
-            context.updateUserSession(userSession);
-
-        return newToken;
-    }
-
-    public void setCsrfSyncToken(String csrfSyncToken) {
-        this.csrfSyncToken = csrfSyncToken;
-    }
-    
     public String getMaintenanceMsg(){
     	String msg = null;
     	boolean isEnabled = Boolean.parseBoolean((EVProperties.getProperty(EVProperties.DOWNTIME_MESSAGE_ENABLED)));
@@ -729,35 +697,7 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
         context.getRequest().setAttribute(WebAnalyticsEventProperties.WEB_EVENT_REQUEST_NAME, eventList);
     }
 
-    protected boolean isCSRFPrevRequired(String token) throws SessionException {
-        boolean preventIt = false;
-        UserSession usersession = context.getUserSession();
-
-        if (usersession == null)
-            return false;
-
-        try {
-            boolean isCSRFPrevEnabled = Boolean.parseBoolean((EVProperties.getProperty(EVProperties.PREVENT_CSRF_ATTACK)));
-            if (isCSRFPrevEnabled) {
-                if (token == null || token.isEmpty()) {
-                    preventIt = true;
-                } else {
-                    if (usersession.getFifoQueue().isMatchFound(token)) {
-                        usersession.getFifoQueue().createNewToken(
-                            Long.parseLong(EVProperties.getApplicationProperties().getProperty(EVProperties.SYNC_TOKEN_LIST_SIZE, "10")));
-                        context.updateUserSession(usersession);
-                        preventIt = false;
-                    } else {
-                    	log4j.warn("CSRF token is not valid for this session. session id:"+ usersession.getSessionid()+" , incoming token: "+token+". Either this is a brand new session or session expired or maximum number of tries has been exceeded.");
-                        preventIt = true;
-                    }
-                }
-            }
-        } catch (Exception e) {
-            log4j.warn("Unable to determine CSRF enabled status!", e);
-        }
-        return preventIt;
-    }
+    
 
     public String getBaseaddress() {
         return context.getRequest().getServerName();
