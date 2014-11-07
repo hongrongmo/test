@@ -234,8 +234,6 @@ function submitThesSearch(event, link, data) {
 	loading.show();
 	if ($("#firstslide").is(":hidden")) $("#firstslide").slideDown(600);
 
-	data = {"csrfSyncToken":$('input[name="csrfSyncToken"]').val()};
-	$( "#errormessage" ).empty();
     $.ajax({
         cache: false,
         url: link,
@@ -261,7 +259,6 @@ function submitThesSearch(event, link, data) {
       	        	// Re-init form elements (in case this is a page refresh)
 		        	initFromHash(location.hash);
 		        }
-	        	updateCSRFToken();
     		},
     	complete: function(data, status, xhr) {
 	    		$(".loading").hide();
@@ -282,24 +279,8 @@ function submitThesSearch(event, link, data) {
     	error: function() {
     	      $( "#thesresultswrap" ).empty().append( "<div id='termpath'><b>Unable to process this request<b></div><div class='clear'></div><div id='termresults'></div>" );
     	      initFromHash(window.location.hash);
-    	      updateCSRFToken();
     		}
     });
-}
-
-function updateCSRFToken(){
-	var latestCSRFToken = $('#csrfTokenElement').text();
-	if(typeof latestCSRFToken != 'undefined' && latestCSRFToken != ''){
-		$('input[name="csrfSyncToken"]').val(latestCSRFToken);
-	}else{
-		var validationfailedelem = $('#validationnotpassed').text();
-		if(typeof validationfailedelem != 'undefined' && validationfailedelem != ''){
-			var d = new Date();
-			var n = d.getSeconds();
-			var h = d.getHours();
-			window.location.href = '/search/thesHome.url?database=1&errorCode=1000&tknno='+h+n+'#init';
-		}
-	}
 }
 
 /*
