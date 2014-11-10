@@ -82,7 +82,7 @@
     </div>
  </c:if>
 	<div  class="sidebarbox" id="knovelbox">
-        <div class="knoveltitle"><div>Interactive Equations</div><div class="smallTxt">Provided by <a href="http://www.knovel.com" title="Knovel" target="new">Knovel &reg;</a></div></div>
+        <div class="knoveltitle"><div>Interactive Tools</div><div class="smallTxt">Provided by <a href="http://www.knovel.com" title="Knovel" target="new">Knovel &reg;</a></div></div>
 
         <div class="padding5" >
         <ul id="knovelsidebar">
@@ -95,7 +95,4 @@
         </ul>
         </div>
     </div>
-
-
-
 <div class="clear"></div>
