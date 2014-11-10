@@ -1,50 +1,48 @@
 package org.ei.data.georef.loadtime;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.util.HashSet;
-import java.util.Hashtable;
-import java.util.Iterator;
-import java.util.List;
+import java.io.*;
+import java.util.*;
+import org.jdom2.*;     //map svn jdom into recent jdom2
+import org.jdom2.input.*;
 
-import org.apache.oro.text.perl.Perl5Util;
+import org.apache.oro.text.perl.*;
 import org.ei.util.GUID;
-import org.jdom2.Attribute;
-import org.jdom2.Document;
-import org.jdom2.Element;
-import org.jdom2.EntityRef;
-import org.jdom2.Text;
-import org.jdom2.input.SAXBuilder;
 
 public class GeorefReader {
-    private Hashtable<String, CharSequence> record = null;
+    private Hashtable record = null;
 
-    private List<?> articles = null;
+    private List articles = null;
 
     private Document doc = null;
 
-    private Iterator<?> rec = null;
+    private Iterator rec = null;
 
     private Perl5Util perl = new Perl5Util();
 
     private boolean inabstract = false;
 
-    private HashSet<String> entity = null;
+    private HashSet entity = null;
 
     public String loadNumber = null;
 
-    private static String[] elementNames = new String[] { "M_ID", "ISSN", "EISSN", "A02", "A03", "A05", "A06", "A07", "A08", "A09", "A10", "A11", "A12", "A13",
-        "ALT_SPELL", "AUTH_AFF", "AUTH_ADD", "AUTH_AFF_CO", "AUTH_EMAIL", "A17", "A18", "A19", "A20", "A28", "A29", "A21", "A22", "A23", "A24", "A25_1",
-        "A25_2", "A26", "A27", "A30", "A31", "A32", "A39", "A41", "A42", "A43", "A45", "A46", "DOI", "COPYRIGHT", "Z01", "Z03", "Z04", "Z05", "Z15", "Z24",
-        "Z32", "Z33", "Z34", "Z35", "Z36", "Z37", "Z38", "Z39", "Z44", "INDEX_TERMS", "UNCONTROLLED_TERMS", "Z60", "Z61", "Z62", "Z63" };
+    private static String[] elementNames = new String[] { "M_ID", "ISSN",
+            "EISSN", "A02", "A03", "A05", "A06", "A07", "A08", "A09", "A10",
+            "A11", "A12", "A13", "ALT_SPELL", "AUTH_AFF", "AUTH_ADD",
+            "AUTH_AFF_CO", "AUTH_EMAIL", "A17", "A18", "A19", "A20", "A28",
+            "A29", "A21", "A22", "A23", "A24", "A25_1", "A25_2", "A26", "A27",
+            "A30", "A31", "A32", "A39", "A41", "A42", "A43", "A45", "A46",
+            "DOI", "COPYRIGHT", "Z01", "Z03", "Z04", "Z05", "Z15", "Z24",
+            "Z32", "Z33", "Z34", "Z35", "Z36", "Z37", "Z38", "Z39", "Z44",
+            "INDEX_TERMS", "UNCONTROLLED_TERMS", "Z60", "Z61", "Z62", "Z63" };
 
     private static int count = 0;
 
     /*
-     * If there is field delimiter that is 2 or more values for one field eg, A;B;C, use 'AUDELIMITER' between A, B and C If there is subfields in one value of
-     * the field use 'IDDELIMITER' , for eg. A:1;B:2;C:3 USE AUDELIMITER between A, B and C To separate fields use 'IDDELIMITER between A and 1, B and 2 and C
-     * and 3.
+     * If there is field delimiter that is 2 or more values for one field eg,
+     * A;B;C, use 'AUDELIMITER' between A, B and C If there is subfields in one
+     * value of the field use 'IDDELIMITER' , for eg. A:1;B:2;C:3 USE
+     * AUDELIMITER between A, B and C To separate fields use 'IDDELIMITER
+     * between A and 1, B and 2 and C and 3.
      */
     public static final String AUDELIMITER = new String(new char[] { 30 });
 
@@ -55,8 +53,9 @@ public class GeorefReader {
     public static void main(String[] args) throws Exception {
         File inFile = new File(args[0]);
         File outFile = new File(args[1]);
-        Hashtable<String, CharSequence> rec;
-        GeorefReader g = new GeorefReader(inFile.toURI().toURL().getPath(), outFile.toURI().toURL().getPath());
+        Hashtable rec;
+        GeorefReader g = new GeorefReader(inFile.toURI().toURL().getPath(),
+                outFile.toURI().toURL().getPath());
         g.loadNumber = args[2];
         while ((rec = g.getRecord()) != null) {
 
@@ -79,6 +78,38 @@ public class GeorefReader {
         out = new BufferedWriter(new FileWriter(outfile));
     }
 
+    public GeorefReader(String fileName, String outfile, String action) throws Exception {
+            SAXBuilder builder = new SAXBuilder();
+            builder.setExpandEntities(false);
+            this.doc = builder.build(fileName);
+            Element georefRoot = doc.getRootElement();
+            System.out.println("in GeorefReader");
+            if(action.equals("delete"))
+            {
+                this.articles = georefRoot.getChildren();
+                System.out.println("SIZE= "+this.articles.size());
+            }
+            else
+            {
+                this.articles = georefRoot.getChildren("Reference");
+            }
+            this.rec = articles.iterator();
+            out = new BufferedWriter(new FileWriter(outfile));
+    }
+
+    public GeorefReader(Reader r, String outfile) throws Exception {
+
+        //super(r);
+        SAXBuilder builder = new SAXBuilder();
+        builder.setExpandEntities(false);
+        this.doc = builder.build(r);
+        Element georefRoot = doc.getRootElement();
+        this.articles = georefRoot.getChildren("Reference");
+        this.rec=articles.iterator();
+        out = new BufferedWriter(new FileWriter(outfile));
+
+    }
+
     public void close() throws Exception {
         out.close();
     }
@@ -87,13 +118,14 @@ public class GeorefReader {
         return articles.size();
     }
 
-    public Hashtable<String, CharSequence> getRecord() throws Exception {
-        entity = new HashSet<String>();
+    public Hashtable getRecord() throws Exception {
+        entity = new HashSet();
         String idNumber = null;
 
         if (rec.hasNext()) {
             Element article = (Element) rec.next();
-            record = new Hashtable<String, CharSequence>();
+            record = new Hashtable();
+            //System.out.println("NAME= "+article.getName());
 
             // ISSN
             if (article.getChild("A01") != null) {
@@ -111,25 +143,29 @@ public class GeorefReader {
 
             // TITLE HTML???
             if (article.getChild("A03") != null) {
-                record.put("A03", new StringBuffer(article.getChild("A03").getTextTrim()));
+                record.put("A03", new StringBuffer(article.getChild("A03")
+                        .getTextTrim()));
 
             }
 
             // VOLUME IDENTIFICATION DATA (FIRST ORDER DESIGNATION)
             if (article.getChild("A05") != null) {
                 // record.put("A05",concatSubElements(article,"A05",2));
-                record.put("A05", new StringBuffer(article.getChild("A05").getTextTrim()));
+                record.put("A05", new StringBuffer(article.getChild("A05")
+                        .getTextTrim()));
             }
 
             // ISSUE IDENTIFICATION DATA (SECOND ORDER DESIGNATION)
             if (article.getChild("A06") != null) {
                 // record.put("A06",concatSubElements(article,"A06",2));
-                record.put("A06", new StringBuffer(article.getChild("A06").getTextTrim()));
+                record.put("A06", new StringBuffer(article.getChild("A06")
+                        .getTextTrim()));
             }
 
             // OTHER IDENTIFICATION OF SERIAL ISSUE
             if (article.getChild("A07") != null) {
-                record.put("A07", new StringBuffer(article.getChild("A07").getTextTrim()));
+                record.put("A07", new StringBuffer(article.getChild("A07")
+                        .getTextTrim()));
             }
 
             // TITLE
@@ -156,11 +192,14 @@ public class GeorefReader {
                 Element title = article.getChild("A11");
                 if (title.getChild("A11_3") != null) {
                     if (record.get("ALT_SPELL") != null) {
-                        String altSpell = concatSubElements(article, "A11", 3).toString();
-                        altSpell = record.get("ALT_SPELL") + AUDELIMITER + altSpell.toString();
+                        String altSpell = concatSubElements(article, "A11", 3)
+                                .toString();
+                        altSpell = record.get("ALT_SPELL") + AUDELIMITER
+                                + altSpell.toString();
                         record.put("ALT_SPELL", altSpell);
                     } else
-                        record.put("ALT_SPELL", concatSubElements(article, "A11", 3));
+                        record.put("ALT_SPELL", concatSubElements(article,
+                                "A11", 3));
                 }
 
             }
@@ -169,11 +208,14 @@ public class GeorefReader {
                 Element title = article.getChild("A12");
                 if (title.getChild("A12_3") != null) {
                     if (record.get("ALT_SPELL") != null) {
-                        String altSpell = concatSubElements(article, "A12", 3).toString();
-                        altSpell = record.get("ALT_SPELL") + AUDELIMITER + altSpell.toString();
+                        String altSpell = concatSubElements(article, "A12", 3)
+                                .toString();
+                        altSpell = record.get("ALT_SPELL") + AUDELIMITER
+                                + altSpell.toString();
                         record.put("ALT_SPELL", altSpell);
                     } else
-                        record.put("ALT_SPELL", concatSubElements(article, "A12", 3));
+                        record.put("ALT_SPELL", concatSubElements(article,
+                                "A12", 3));
                 }
             }
             if (article.getChild("A13") != null) {
@@ -182,11 +224,14 @@ public class GeorefReader {
                 Element title = article.getChild("A13");
                 if (title.getChild("A13_3") != null) {
                     if (record.get("ALT_SPELL") != null) {
-                        String altSpell = concatSubElements(article, "A13", 3).toString();
-                        altSpell = record.get("ALT_SPELL") + AUDELIMITER + altSpell.toString();
+                        String altSpell = concatSubElements(article, "A13", 3)
+                                .toString();
+                        altSpell = record.get("ALT_SPELL") + AUDELIMITER
+                                + altSpell.toString();
                         record.put("ALT_SPELL", altSpell);
                     } else
-                        record.put("ALT_SPELL", concatSubElements(article, "A13", 3));
+                        record.put("ALT_SPELL", concatSubElements(article,
+                                "A13", 3));
                 }
             }
 
@@ -206,7 +251,8 @@ public class GeorefReader {
                         affAdd.append(title.getChild("A14_2").getTextTrim());
                     }
                     if (title.getChild("A14_4") != null) {
-                        record.put("AUTH_AFF_CO", new StringBuffer(title.getChild("A14_4").getTextTrim()));
+                        record.put("AUTH_AFF_CO", new StringBuffer(title
+                                .getChild("A14_4").getTextTrim()));
                     }
 
                     record.put("AUTH_ADD", affAdd.toString());
@@ -242,7 +288,8 @@ public class GeorefReader {
             }
             // DATE OF PUBLICATION
             if (article.getChild("A21") != null) {
-                record.put("A21", new StringBuffer(article.getChild("A21").getTextTrim()));
+                record.put("A21", new StringBuffer(article.getChild("A21")
+                        .getTextTrim()));
 
             }
 
@@ -285,12 +332,14 @@ public class GeorefReader {
 
             // EDITION
             if (article.getChild("A27") != null) {
-                record.put("A27", new StringBuffer(article.getChild("A27").getTextTrim()));
+                record.put("A27", new StringBuffer(article.getChild("A27")
+                        .getTextTrim()));
             }
 
             // NAME OF MEETING
             if (article.getChild("A30") != null) {
-                record.put("A30", new StringBuffer(article.getChild("A30").getTextTrim()));
+                record.put("A30", new StringBuffer(article.getChild("A30")
+                        .getTextTrim()));
             }
 
             // LOCATION OF MEETING
@@ -304,7 +353,8 @@ public class GeorefReader {
             if (article.getChild("A32") != null) {
                 Element dateOfMeeting = article.getChild("A32");
                 if (dateOfMeeting.getChild("A32_1") != null) {
-                    record.put("A32", new StringBuffer(dateOfMeeting.getChild("A32_1").getTextTrim()));
+                    record.put("A32", new StringBuffer(dateOfMeeting.getChild(
+                            "A32_1").getTextTrim()));
                 }
             }
 
@@ -316,12 +366,15 @@ public class GeorefReader {
             // UNIVERSITY OR OTHER EDUCATIONAL INSTITUTION
             if (article.getChild("A41") != null) {
                 Element university = article.getChild("A41");
-                record.put("A41", new StringBuffer(university.getChild("A41_1").getTextTrim()));
+                if(university.getChild("A41_1")!=null){
+                    record.put("A41", new StringBuffer(university.getChild("A41_1").getTextTrim()));
+                }
             }
 
             // TYPE OF DEGREE
             if (article.getChild("A42") != null) {
-                record.put("A42", new StringBuffer(article.getChild("A42").getTextTrim()));
+                record.put("A42", new StringBuffer(article.getChild("A42")
+                        .getTextTrim()));
             }
 
             // AVAILABILITY OF DOCUMENT
@@ -331,18 +384,27 @@ public class GeorefReader {
 
             // NUMBER OF REFERENCES
             if (article.getChild("A45") != null) {
-                record.put("A45", new StringBuffer(article.getChild("A45").getTextTrim()));
+                record.put("A45", new StringBuffer(article.getChild("A45")
+                        .getTextTrim()));
             }
 
             // SUMMARY ONLY NOTE
             if (article.getChild("A46") != null) {
-                record.put("A46", new StringBuffer(article.getChild("A46").getTextTrim()));
+                record.put("A46", new StringBuffer(article.getChild("A46")
+                        .getTextTrim()));
             }
 
             // IDENTIFICATION NUMBER
             if (article.getChild("Z01") != null) {
-                record.put("Z01", new StringBuffer(article.getChild("Z01").getTextTrim()));
+                record.put("Z01", new StringBuffer(article.getChild("Z01")
+                        .getTextTrim()));
                 idNumber = new String(article.getChild("Z01").getTextTrim());
+                //System.out.println("CHILD--ID_NUMBER= "+idNumber);
+            }
+            else if(article.getName().equals("Z01")) {
+                record.put("Z01", new StringBuffer(article.getTextTrim()));
+                idNumber = new String(article.getTextTrim());
+                //System.out.println("NAME--ID_NUMBER= "+idNumber);
             }
 
             // CATEGORY CODE
@@ -352,27 +414,32 @@ public class GeorefReader {
 
             // DOCUMENT TYPE
             if (article.getChild("Z04") != null) {
-                record.put("Z04", new StringBuffer(article.getChild("Z04").getTextTrim()));
+                record.put("Z04", new StringBuffer(article.getChild("Z04")
+                        .getTextTrim()));
             }
 
             // BIOGRAPHIC LEVEL CODE
             if (article.getChild("Z05") != null) {
-                record.put("Z05", new StringBuffer(article.getChild("Z05").getTextTrim()));
+                record.put("Z05", new StringBuffer(article.getChild("Z05")
+                        .getTextTrim()));
             }
 
             // ABSTRACT
             if (article.getChild("Z15") != null) {
-                record.put("Z15", new StringBuffer(article.getChild("Z15").getTextTrim()));
+                record.put("Z15", new StringBuffer(article.getChild("Z15")
+                        .getTextTrim()));
             }
 
             // ANNOTATION
             if (article.getChild("Z24") != null) {
-                record.put("Z24", new StringBuffer(article.getChild("Z24").getTextTrim()));
+                record.put("Z24", new StringBuffer(article.getChild("Z24")
+                        .getTextTrim()));
             }
 
             // ILLUSTRATION
             if (article.getChild("Z32") != null) {
-                record.put("Z32", new StringBuffer(article.getChild("Z32").getTextTrim()));
+                record.put("Z32", new StringBuffer(article.getChild("Z32")
+                        .getTextTrim()));
             }
 
             // MAP SCALE
@@ -406,13 +473,15 @@ public class GeorefReader {
 
             // SOURCE NOTE
             if (article.getChild("Z38") != null) {
-                record.put("Z38", new StringBuffer(article.getChild("Z38").getTextTrim()));
+                record.put("Z38", new StringBuffer(article.getChild("Z38")
+                        .getTextTrim()));
             }
 
             // COUNTRY OF PUBLICATION
             if (article.getChild("Z39") != null) {
                 Element country = article.getChild("Z39");
-                record.put("Z39", new StringBuffer(country.getChild("Z39_1").getTextTrim()));
+                record.put("Z39", new StringBuffer(country.getChild("Z39_1")
+                        .getTextTrim()));
             }
 
             // REFERENCE SOURCE
@@ -423,8 +492,9 @@ public class GeorefReader {
 
             // UPDATE CODE
             if (article.getChild("Z44") != null) {
-                record.put("Z44", new StringBuffer(article.getChild("Z44").getTextTrim()));
-                // loadNumber = new String(article.getChild("Z44").getTextTrim());
+                record.put("Z44", new StringBuffer(article.getChild("Z44")
+                        .getTextTrim()));
+                //loadNumber = new String(article.getChild("Z44").getTextTrim());
             }
 
             // INDEX CODE
@@ -456,10 +526,12 @@ public class GeorefReader {
 
             // DIGITAL OBJECT IDENTIFIER
             if (article.getChild("DOI") != null) {
-                record.put("DOI", new StringBuffer(article.getChild("DOI").getTextTrim()));
+                record.put("DOI", new StringBuffer(article.getChild("DOI")
+                        .getTextTrim()));
             }
 
-            record.put("M_ID", new StringBuffer("grf_" + (new GUID()).toString()));
+            record.put("M_ID", new StringBuffer("grf_"
+                    + (new GUID()).toString()));
             String m_id = "grf_" + idNumber.replaceAll("-", "");
 
             for (int i = 0; i < elementNames.length; i++) {
@@ -488,8 +560,8 @@ public class GeorefReader {
         return null;
     }
 
-    private StringBuffer getMixData(List<?> l, StringBuffer b) {
-        Iterator<?> it = l.iterator();
+    private StringBuffer getMixData(List l, StringBuffer b) {
+        Iterator it = l.iterator();
 
         while (it.hasNext()) {
             Object o = it.next();
@@ -511,12 +583,13 @@ public class GeorefReader {
             } else if (o instanceof Element) {
                 Element e = (Element) o;
                 b.append("<").append(e.getName());
-                List<?> ats = e.getAttributes();
+                List ats = e.getAttributes();
                 if (!ats.isEmpty()) {
-                    Iterator<?> at = ats.iterator();
+                    Iterator at = ats.iterator();
                     while (at.hasNext()) {
                         Attribute a = (Attribute) at.next();
-                        b.append(" ").append(a.getName()).append("=\"").append(a.getValue()).append("\"");
+                        b.append(" ").append(a.getName()).append("=\"").append(
+                                a.getValue()).append("\"");
                     }
                 }
                 b.append(">");
@@ -530,14 +603,15 @@ public class GeorefReader {
 
     private StringBuffer getIndexTerms(Element e) {
         StringBuffer field = new StringBuffer();
-        List<?> lt = e.getChildren();
+        List lt = e.getChildren();
 
         for (int i = 0; i < lt.size(); i++) {
             Element t = (Element) lt.get(i);
 
             if (t.getName().equals("Z50")) {
-                if (t.getAttribute("att1").getValue().equals("1") || t.getAttribute("att1").getValue().equals("2")
-                    || t.getAttribute("att1").getValue().equals("3")) {
+                if (t.getAttribute("att1").getValue().equals("1")
+                        || t.getAttribute("att1").getValue().equals("2")
+                        || t.getAttribute("att1").getValue().equals("3")) {
                     if (t.getAttribute("att2") != null) {
                         field.append(t.getAttribute("att2").getValue());
                         if (t.getAttribute("att3") != null)
@@ -561,7 +635,7 @@ public class GeorefReader {
 
     private StringBuffer getUncontrolledTerms(Element e) {
         StringBuffer field = new StringBuffer();
-        List<?> lt = e.getChildren();
+        List lt = e.getChildren();
 
         for (int i = 0; i < lt.size(); i++) {
             Element t = (Element) lt.get(i);
@@ -584,7 +658,7 @@ public class GeorefReader {
 
     public StringBuffer getTitle(Element e, String elemName) {
         StringBuffer field = new StringBuffer();
-        List<?> lt = e.getChildren();
+        List lt = e.getChildren();
 
         for (int i = 0; i < lt.size(); i++) {
             Element t = (Element) lt.get(i);
@@ -619,7 +693,7 @@ public class GeorefReader {
 
     public StringBuffer getSecondAff(Element e, String elemName) {
         StringBuffer field = new StringBuffer();
-        List<?> lt = e.getChildren();
+        List lt = e.getChildren();
 
         for (int i = 0; i < lt.size(); i++) {
             Element t = (Element) lt.get(i);
@@ -662,7 +736,7 @@ public class GeorefReader {
 
     public StringBuffer getURL(Element e, String elemName) {
         StringBuffer field = new StringBuffer();
-        List<?> lt = e.getChildren();
+        List lt = e.getChildren();
 
         for (int i = 0; i < lt.size(); i++) {
             Element t = (Element) lt.get(i);
@@ -695,7 +769,7 @@ public class GeorefReader {
 
     private StringBuffer getISBNs(Element e) {
         StringBuffer field = new StringBuffer();
-        List<?> lt = e.getChildren();
+        List lt = e.getChildren();
 
         for (int i = 0; i < lt.size(); i++) {
             Element t = (Element) lt.get(i);
@@ -715,7 +789,7 @@ public class GeorefReader {
 
     private StringBuffer getReportNumbers(Element e) {
         StringBuffer field = new StringBuffer();
-        List<?> lt = e.getChildren();
+        List lt = e.getChildren();
 
         for (int i = 0; i < lt.size(); i++) {
             Element t = (Element) lt.get(i);
@@ -735,7 +809,7 @@ public class GeorefReader {
 
     public StringBuffer concatSubElements(Element e, String elemName, int subInt) {
         StringBuffer field = new StringBuffer();
-        List<?> lt = e.getChildren();
+        List lt = e.getChildren();
 
         for (int i = 0; i < lt.size(); i++) {
             Element t = (Element) lt.get(i);
@@ -765,7 +839,7 @@ public class GeorefReader {
         int subInt = 2;
 
         StringBuffer field = new StringBuffer();
-        List<?> lt = e.getChildren();
+        List lt = e.getChildren();
 
         for (int i = 0; i < lt.size(); i++) {
             Element t = (Element) lt.get(i);
@@ -774,7 +848,8 @@ public class GeorefReader {
                 String elemSubName = elemName + "_" + subInt;
                 String elemSubType = elemName + "_1";
 
-                if (t.getChild(elemSubName) != null && t.getChild(elemSubType).getText().equals(issnType)) {
+                if (t.getChild(elemSubName) != null
+                        && t.getChild(elemSubType).getText().equals(issnType)) {
                     getMixData(t.getChild(elemSubName).getContent(), field);
                     field.append(AUDELIMITER);
                 }
@@ -790,7 +865,7 @@ public class GeorefReader {
 
     private StringBuffer getRepeatable(Element e, String name) {
         StringBuffer field = new StringBuffer();
-        List<?> lt = e.getChildren();
+        List lt = e.getChildren();
 
         for (int i = 0; i < lt.size(); i++) {
             Element t = (Element) lt.get(i);
@@ -810,7 +885,7 @@ public class GeorefReader {
 
     public StringBuffer concatRepeatable(Element e, String elemName) {
         StringBuffer field = new StringBuffer();
-        List<?> lt = e.getChildren();
+        List lt = e.getChildren();
 
         for (int i = 0; i < lt.size(); i++) {
             Element t = (Element) lt.get(i);
@@ -831,7 +906,7 @@ public class GeorefReader {
 
     public StringBuffer concatPublisherAddress(Element e, String elemName) {
         StringBuffer field = new StringBuffer();
-        List<?> lt = e.getChildren();
+        List lt = e.getChildren();
 
         for (int i = 0; i < lt.size(); i++) {
             Element t = (Element) lt.get(i);
@@ -862,7 +937,7 @@ public class GeorefReader {
 
     public StringBuffer concatLocationAddress(Element e, String elemName) {
         StringBuffer field = new StringBuffer();
-        List<?> lt = e.getChildren();
+        List lt = e.getChildren();
 
         for (int i = 0; i < lt.size(); i++) {
             Element t = (Element) lt.get(i);
@@ -893,7 +968,7 @@ public class GeorefReader {
 
     public StringBuffer getCoordinates(Element e) {
         StringBuffer field = new StringBuffer();
-        List<?> lt = e.getChildren();
+        List lt = e.getChildren();
 
         for (int i = 0; i < lt.size(); i++) {
             Element t = (Element) lt.get(i);
@@ -919,7 +994,7 @@ public class GeorefReader {
 
     public StringBuffer getAuthorEmail(Element e) {
         StringBuffer field = new StringBuffer();
-        List<?> lt = e.getChildren();
+        List lt = e.getChildren();
 
         for (int i = 0; i < lt.size(); i++) {
             Element t = (Element) lt.get(i);
@@ -937,7 +1012,7 @@ public class GeorefReader {
 
     public StringBuffer concatCorporateBody(Element e, String elemName) {
         StringBuffer field = new StringBuffer();
-        List<?> lt = e.getChildren();
+        List lt = e.getChildren();
 
         for (int i = 0; i < lt.size(); i++) {
             Element t = (Element) lt.get(i);
@@ -980,7 +1055,7 @@ public class GeorefReader {
 
     public StringBuffer concatResearchProgram(Element e) {
         StringBuffer field = new StringBuffer();
-        List<?> lt = e.getChildren();
+        List lt = e.getChildren();
 
         for (int i = 0; i < lt.size(); i++) {
             Element t = (Element) lt.get(i);
