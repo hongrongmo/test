@@ -48,7 +48,14 @@ public class EVToolsUserDetailsService implements UserDetailsService{
 			throws UsernameNotFoundException {
 		
 		try {
-			List<UserAndRole> list = getUserAndRoleList(environment.getProperty("aws.s3.users.bucket.name"),environment.getProperty("aws.s3.users.key.name"));
+			
+			String bucketKey = null; 
+			if(environment.getProperty("ENVIRONMENT").equalsIgnoreCase("prod")){
+				bucketKey = environment.getProperty("aws.s3.users.key.prod.name");
+			}else{
+				bucketKey = environment.getProperty("aws.s3.users.key.nonprod.name");
+			}
+			List<UserAndRole> list = getUserAndRoleList(environment.getProperty("aws.s3.users.bucket.name"),bucketKey);
 			UserAndRole userAndRole = null;
 			for(UserAndRole user : list){
 				if(username.equalsIgnoreCase(user.getUsername())){
@@ -73,7 +80,15 @@ public class EVToolsUserDetailsService implements UserDetailsService{
 	public List<UserAndRole> loadAllUsers() throws AWSAccessException{
 		List<UserAndRole> list = new ArrayList<UserAndRole>();
 		try {
-			list = getUserAndRoleList(environment.getProperty("aws.s3.users.bucket.name"),environment.getProperty("aws.s3.users.key.name"));
+			
+			String bucketKey = null; 
+			if(environment.getProperty("ENVIRONMENT").equalsIgnoreCase("prod")){
+				bucketKey = environment.getProperty("aws.s3.users.key.prod.name");
+			}else{
+				bucketKey = environment.getProperty("aws.s3.users.key.nonprod.name");
+			}
+			
+			list = getUserAndRoleList(environment.getProperty("aws.s3.users.bucket.name"),bucketKey);
 		} catch (Exception e) {
 			logger.error("Error fetching user and role information from S3......exception="+e.getMessage());
 			throw new AWSAccessException("Error fetching user and role information from S3......exception="+e.getMessage(),e);
