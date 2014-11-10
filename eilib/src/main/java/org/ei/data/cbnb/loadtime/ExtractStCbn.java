@@ -8,45 +8,54 @@ import java.sql.ResultSet;
 import java.util.Hashtable;
 import java.util.Iterator;
 
-public class ExtractStCbn {
+public class ExtractStCbn
+{
 
-    public void extract(int load_number_begin, int load_number_end, Connection con) throws Exception {
-        PrintWriter writerSt = null;
-        Hashtable<String, String> stHash = new Hashtable<String, String>();
+    public void extract(int load_number_begin, int load_number_end, Connection con)
+        throws Exception
+    {
+        PrintWriter writerSt    = null;
+        Hashtable stHash        = new Hashtable();
 
-        PreparedStatement pstmt1 = null;
-        ResultSet rs1 = null;
+        PreparedStatement pstmt1    = null;
+        ResultSet rs1               = null;
 
-        long begin = System.currentTimeMillis();
+        long begin      = System.currentTimeMillis();
 
         String source_title = null;
-        String issn = null;
+        String issn         = null;
 
-        try {
+        try
+        {
 
-            writerSt = new PrintWriter(new FileWriter("cbn_st.lkp"));
+            writerSt    = new PrintWriter(new FileWriter("cbn_st.lkp"));
 
-            if (load_number_end == 0) {
-                pstmt1 = con.prepareStatement(" select fjl,isn from cbn_master where (fjl is not null) and load_number = " + load_number_begin);
-                System.out.println("\n\nQuery: " + " select fjl,isn from cbn_master where (fjl is not null) and load_number = " + load_number_begin);
-            } else {
-                pstmt1 = con.prepareStatement(" select fjl,isn from cbn_master where (fjl is not null) and load_number >= " + load_number_begin
-                    + " and load_number <= " + load_number_end);
-                System.out.println("\n\nQuery: " + " select fjl,isn from cbn_master where (fjl is not null) and load_number >= " + load_number_begin
-                    + " and load_number <= " + load_number_end);
+            if(load_number_end == 0)
+            {
+                pstmt1  = con.prepareStatement(" select fjl,isn from cbn_master where (fjl is not null) and load_number = "+load_number_begin);
+                System.out.println("\n\nQuery: "+" select fjl,isn from cbn_master where (fjl is not null) and load_number = "+load_number_begin);
+            }
+            else
+            {
+                pstmt1  = con.prepareStatement(" select fjl,isn from cbn_master where (fjl is not null) and load_number >= "+load_number_begin+" and load_number <= "+load_number_end);
+                System.out.println("\n\nQuery: "+" select fjl,isn from cbn_master where (fjl is not null) and load_number >= "+load_number_begin+" and load_number <= "+load_number_end);
             }
 
-            rs1 = pstmt1.executeQuery();
+            rs1     = pstmt1.executeQuery();
 
-            while (rs1.next()) {
-                source_title = rs1.getString("fjl");
-                issn = rs1.getString("isn");
+            while(rs1.next())
+            {
+                source_title    = rs1.getString("fjl");
+                issn            = rs1.getString("isn");
 
-                if (source_title != null) {
+                if(source_title != null)
+                {
                     source_title = source_title.trim().toUpperCase();
 
-                    if (!stHash.containsKey(source_title)) {
-                        if (issn == null) {
+                    if(!stHash.containsKey(source_title))
+                    {
+                        if(issn == null)
+                        {
                             issn = "";
                         }
                         stHash.put(source_title, issn);
@@ -54,36 +63,51 @@ public class ExtractStCbn {
                 }
             }
 
-            Iterator<String> itrTest = stHash.keySet().iterator();
+            Iterator itrTest = stHash.keySet().iterator();
 
-            for (int i = 0; itrTest.hasNext(); i++) {
-                source_title = (String) itrTest.next();
-                issn = (String) stHash.get(source_title);
+            for(int i = 0; itrTest.hasNext(); i++)
+            {
+                source_title    = (String)itrTest.next();
+                issn            = (String)stHash.get(source_title);
 
-                writerSt.println(issn.trim() + "\t" + source_title + "\tcbn");
+                writerSt.println(issn.trim()+"\t"+source_title+"\tcbn");
             }
 
             stHash.clear();
 
-        } finally {
-            if (rs1 != null) {
-                try {
+        }
+        finally
+        {
+            if(rs1 != null)
+            {
+                try
+                {
                     rs1.close();
-                } catch (Exception e) {
+                }
+                catch(Exception e)
+                {
                     e.printStackTrace();
                 }
             }
-            if (pstmt1 != null) {
-                try {
+            if(pstmt1 != null)
+            {
+                try
+                {
                     pstmt1.close();
-                } catch (Exception e) {
+                }
+                catch(Exception e)
+                {
                     e.printStackTrace();
                 }
             }
-            if (writerSt != null) {
-                try {
+            if(writerSt != null)
+            {
+                try
+                {
                     writerSt.close();
-                } catch (Exception e) {
+                }
+                catch(Exception e)
+                {
                     e.printStackTrace();
                 }
             }
@@ -92,3 +116,4 @@ public class ExtractStCbn {
     }
 
 }
+

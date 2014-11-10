@@ -8,74 +8,97 @@ import java.sql.ResultSet;
 import java.util.Hashtable;
 import java.util.Iterator;
 
-public class ExtractPubCbn {
+public class ExtractPubCbn
+{
 
-    public void extract(int load_number_begin, int load_number_end, Connection con) throws Exception {
-        PrintWriter writerPub = null;
-        Hashtable<String, String> pnHash = new Hashtable<String, String>();
+    public void extract(int load_number_begin, int load_number_end, Connection con)
+        throws Exception
+    {
+        PrintWriter writerPub   = null;
+        Hashtable pnHash        = new Hashtable();
 
-        PreparedStatement pstmt1 = null;
-        ResultSet rs1 = null;
+        PreparedStatement pstmt1    = null;
+        ResultSet rs1               = null;
 
-        long begin = System.currentTimeMillis();
+        long begin          = System.currentTimeMillis();
 
-        try {
+        try
+        {
 
-            writerPub = new PrintWriter(new FileWriter("cbn_pn.lkp"));
+            writerPub   = new PrintWriter(new FileWriter("cbn_pn.lkp"));
 
-            if (load_number_end == 0) {
-                pstmt1 = con.prepareStatement(" select pbr from cbn_master where (pbr is not null) and load_number = " + load_number_begin);
-                System.out.println("\n\nQuery: " + " select pbr from cbn_master where (pbr is not null) and load_number = " + load_number_begin);
-            } else {
-                pstmt1 = con.prepareStatement(" select pbr from cbn_master where (pbr is not null) and load_number >= " + load_number_begin
-                    + " and load_number <= " + load_number_end);
-                System.out.println("\n\nQuery: " + " select pbr from cbn_master where (pbr is not null) and load_number >= " + load_number_begin
-                    + " and load_number <= " + load_number_end);
+            if(load_number_end == 0)
+            {
+                pstmt1  = con.prepareStatement(" select pbr from cbn_master where (pbr is not null) and load_number = "+load_number_begin);
+                System.out.println("\n\nQuery: "+" select pbr from cbn_master where (pbr is not null) and load_number = "+load_number_begin);
+            }
+            else
+            {
+                pstmt1  = con.prepareStatement(" select pbr from cbn_master where (pbr is not null) and load_number >= "+load_number_begin+" and load_number <= "+load_number_end);
+                System.out.println("\n\nQuery: "+" select pbr from cbn_master where (pbr is not null) and load_number >= "+load_number_begin+" and load_number <= "+load_number_end);
             }
 
-            rs1 = pstmt1.executeQuery();
+            rs1     = pstmt1.executeQuery();
 
-            while (rs1.next()) {
-                String publisher_name = rs1.getString("pbr");
+            while(rs1.next())
+            {
+                String publisher_name   = rs1.getString("pbr");
 
-                if (publisher_name != null) {
+                if(publisher_name != null)
+                {
                     publisher_name = publisher_name.toUpperCase().trim();
 
-                    if (!pnHash.containsKey(publisher_name)) {
+                    if(!pnHash.containsKey(publisher_name))
+                    {
                         pnHash.put(publisher_name, publisher_name);
                     }
                 }
             }
 
-            Iterator<String> itrTest = pnHash.keySet().iterator();
+            Iterator itrTest = pnHash.keySet().iterator();
 
-            for (int i = 0; itrTest.hasNext(); i++) {
-                String publisher_name = (String) itrTest.next();
+            for(int i = 0; itrTest.hasNext(); i++)
+            {
+                String publisher_name   =  (String)itrTest.next();
 
-                writerPub.println(publisher_name + "\tcbn");
+                writerPub.println(publisher_name+"\tcbn");
             }
 
             pnHash.clear();
 
-        } finally {
-            if (rs1 != null) {
-                try {
+        }
+        finally
+        {
+            if(rs1 != null)
+            {
+                try
+                {
                     rs1.close();
-                } catch (Exception e) {
+                }
+                catch(Exception e)
+                {
                     e.printStackTrace();
                 }
             }
-            if (pstmt1 != null) {
-                try {
+            if(pstmt1 != null)
+            {
+                try
+                {
                     pstmt1.close();
-                } catch (Exception e) {
+                }
+                catch(Exception e)
+                {
                     e.printStackTrace();
                 }
             }
-            if (writerPub != null) {
-                try {
+            if(writerPub != null)
+            {
+                try
+                {
                     writerPub.close();
-                } catch (Exception e) {
+                }
+                catch(Exception e)
+                {
                     e.printStackTrace();
                 }
             }
@@ -84,3 +107,4 @@ public class ExtractPubCbn {
     }
 
 }
+
