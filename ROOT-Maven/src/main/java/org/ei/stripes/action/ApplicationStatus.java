@@ -54,7 +54,6 @@ import org.ei.connectionpool.ConnectionBroker;
 import org.ei.controller.IPBlocker;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.FastClient;
-import org.ei.download.util.SaveToGoogleUsage;
 import org.ei.service.amazon.s3.AmazonS3Service;
 import org.ei.service.amazon.s3.AmazonS3ServiceImpl;
 import org.ei.session.BlockedIPEvent;
@@ -64,7 +63,6 @@ import org.ei.session.UserSession;
 import org.ei.stripes.util.HttpRequestUtil;
 import org.ei.system.ApplicationStatusVO;
 import org.ei.system.EVSaxParser;
-import org.ei.system.RuntimePropertiesEntity;
 import org.ei.web.cookie.CookieHandler;
 import org.ei.web.cookie.SimulatedIPCookie;
 
@@ -77,8 +75,7 @@ public class ApplicationStatus extends EVActionBean {
     private String authURL;
     private String appName;
     private String openxmlURL = "/controller/servlet/Controller?CID=openXML&dbchkbx=1&DATABASE=1&XQUERYX=%3Cquery%3E%3CandQuery%3E%3Cword+path%3D%22db%22%3Ecpx%3C%2Fword%3E%3Cword%3Eworld%3C%2Fword%3E%3C%2FandQuery%3E%3C%2Fquery%3E&AUTOSTEM=on&STARTYEAR=1990&ENDYEAR=2009&SORT=re&xmlsearch=Submit+Query";
-    private String txtsimulatedip;
-    private String txtblockedip;
+    
     private boolean enabled;
     private String unmergeEmail = "";
     public static final String SIM_IP_SALT = "saltyipsaregreat";
@@ -87,21 +84,9 @@ public class ApplicationStatus extends EVActionBean {
     private String emailto;
     private String emailfrom = "ei-noreply@elsevier.com";
 
-    private String cacheKey;
-    private String cacheVal;
-    private int cacheMins;
-
-    private String usageOption;
-    private String startDate;
-    private String endDate;
-
     private String propKey = "";
 
     private String propValue = "";
-    
-    private String runtimepropkey = "";
-    private String runtimepropkeyvalue = "";
-    private String runtimepropenvlevel = "";
     
 
     // Utility inner class for name/value pair entries
@@ -148,9 +133,6 @@ public class ApplicationStatus extends EVActionBean {
     @Before
     private Resolution validateIP() {
         HttpServletRequest request = context.getRequest();
-        if (GenericValidator.isBlankOrNull(txtsimulatedip)) {
-            txtsimulatedip = HttpRequestUtil.getIP(request);
-        }
         // Validate IP address
         if (!validateIP(request)) {
             log4j.warn("Invalid access via '" + request.getRemoteAddr() + "'");
@@ -359,13 +341,6 @@ public class ApplicationStatus extends EVActionBean {
     private long system_1day = system_1hour * 24;
     private long system_1week = system_1day * 7;
 
-    @HandlesEvent("/ipblocker")
-    public Resolution showBlockedIps() throws Exception {
-        HttpServletRequest request = context.getRequest();
-        request.setAttribute("blockedIpsList", BlockedIPStatus.getByStatus(BlockedIPStatus.STATUS_ANY));
-        return new ForwardResolution("/WEB-INF/pages/status/ipblocker.jsp");
-    }
-
     @HandlesEvent("/ticurl")
     public Resolution ticurl() {
 
@@ -402,323 +377,7 @@ public class ApplicationStatus extends EVActionBean {
         return new ForwardResolution("/WEB-INF/pages/status/searchwidget.jsp");
     }
 
-    @HandlesEvent("/simulatedip")
-    public Resolution simulatedip() {
-        this.txtsimulatedip = new SimulatedIPCookie(CookieHandler.getCookie(context.getRequest(), SimulatedIPCookie.SIMULATED_IP_COOKIE_NAME)).getSimulatedIP();
-        return new ForwardResolution("/WEB-INF/pages/status/simulatedip.jsp");
-    }
-
-    /**
-     * Handles the submit button for the simulated IP
-     *
-     * @return
-     */
-    @HandlesEvent("simulatedipsubmit")
-    public Resolution simulatedipsubmit() {
-        CookieHandler.setCookie(context.getRequest(), context.getResponse(), new SimulatedIPCookie(this.txtsimulatedip));
-        return new RedirectResolution("/status/simulatedip.url");
-    }
-
-    /**
-     * Handles the clear button for the simulated IP
-     *
-     * @return
-     */
-    @HandlesEvent("simulatedipclear")
-    public Resolution simulatedipclear() {
-        // Use the submitted value as the new IP
-        CookieHandler.clearCookie(SimulatedIPCookie.SIMULATED_IP_COOKIE_NAME);
-        return new RedirectResolution("/status/simulatedip.url");
-    }
-
-    @HandlesEvent("/driveusage")
-    public Resolution driveUsage() throws Exception {
-
-        if (usageOption == null || usageOption.equalsIgnoreCase("")) {
-            usageOption = "downloadformat";
-        }
-        HttpServletRequest request = context.getRequest();
-        Map<String, String> usageData = SaveToGoogleUsage.getUsageData(usageOption, startDate, endDate);
-
-        if (startDate != null && endDate != null) {
-            request.setAttribute("dateQueryinfo", "Date filter applied from " + startDate + " to " + endDate);
-        }
-
-        if (usageData.get("totalCount") != null) {
-            request.setAttribute("totalCount", usageData.get("totalCount"));
-            usageData.remove("totalCount");
-        } else {
-            request.setAttribute("totalCount", '0');
-        }
-
-        request.setAttribute("usageData", usageData);
-        return new ForwardResolution("/WEB-INF/pages/status/googledriveusage.jsp");
-    }
-
-    @HandlesEvent("blockedipsubmit")
-    public Resolution blockedipsubmit() throws Exception {
-        if (!HttpRequestUtil.isValidIP(txtblockedip)) {
-            ValidationErrors errors = new ValidationErrors();
-            errors.addGlobalError(new SimpleError("Invalid IP address!"));
-            getContext().setValidationErrors(errors);
-            return new RedirectResolution("/status/ipblocker.url").flash(this);
-        }
-
-        String blockedIp = txtblockedip;
-        if (txtblockedip != null) {
-            try {
-                BlockedIPStatus ipstatus = BlockedIPStatus.load(txtblockedip);
-                if (ipstatus != null) {
-                    ValidationErrors errors = new ValidationErrors();
-                    errors.addGlobalError(new SimpleError("The IP(" + txtblockedip + ") you are trying to add it is already part of blocked list."));
-                    getContext().setValidationErrors(errors);
-                } else {
-                    ipstatus = new BlockedIPStatus(txtblockedip);
-                    ipstatus.addAccount(Account.getAccountInfo(txtblockedip));
-                    ipstatus.save();
-                }
-                txtblockedip = null;
-                getContext().getMessages().add(new SimpleMessage("The IP " + blockedIp + " has been successfully added."));
-            } catch (Exception exception) {
-                if (exception.getMessage().indexOf("unique constraint") != -1) {
-                    ValidationErrors errors = new ValidationErrors();
-                    errors.addGlobalError(new SimpleError("The IP(" + txtblockedip + ") you are trying to add it is already part of blocked list."));
-                    getContext().setValidationErrors(errors);
-                }
-            }
-        }
-        return new RedirectResolution("/status/ipblocker.url").flash(this);
-    }
-
-    @HandlesEvent("ipcounterstatus")
-    public Resolution ipcounterstatus() throws Exception {
-        if (!HttpRequestUtil.isValidIP(txtblockedip)) {
-            ValidationErrors errors = new ValidationErrors();
-            errors.addGlobalError(new SimpleError("Invalid IP address!"));
-            getContext().setValidationErrors(errors);
-            return new RedirectResolution("/status/ipblocker.url").flash(this);
-        }
-
-        if (txtblockedip != null) {
-            IPBlocker blocker = IPBlocker.getInstance();
-            try {
-                Map<String, String> statusMap = blocker.retreiveCurrentStatus(txtblockedip,context.getRequest());
-                context.getRequest().setAttribute("ip", txtblockedip);
-                context.getRequest().setAttribute("statusMap", statusMap);
-                txtblockedip = null;
-            } catch (Exception exception) {
-                context.getRequest().setAttribute("ip", txtblockedip);
-                context.getRequest().setAttribute("error", "Error occured while fetching the data!");
-                return new ForwardResolution("/WEB-INF/pages/status/counterstatus.jsp");
-            }
-        }
-        return new ForwardResolution("/WEB-INF/pages/status/counterstatus.jsp");
-    }
-
-    @HandlesEvent("iphistory")
-    public Resolution iphistory() throws Exception {
-        if (!HttpRequestUtil.isValidIP(txtblockedip)) {
-            ValidationErrors errors = new ValidationErrors();
-            errors.addGlobalError(new SimpleError("Invalid IP address!"));
-            getContext().setValidationErrors(errors);
-            return new RedirectResolution("/status/ipblocker.url").flash(this);
-        }
-
-        if (txtblockedip != null) {
-            try {
-                context.getRequest().setAttribute("ip", txtblockedip);
-                context.getRequest().setAttribute("descHistList", BlockedIPEvent.getByTimePeriod(txtblockedip, TimePeriod.LASTYEAR));
-                txtblockedip = null;
-            } catch (Exception exception) {
-                context.getRequest().setAttribute("ip", txtblockedip);
-                context.getRequest().setAttribute("error", "Error occured while fetching the data!");
-                return new ForwardResolution("/WEB-INF/pages/status/deschistory.jsp");
-            }
-        }
-        return new ForwardResolution("/WEB-INF/pages/status/deschistory.jsp");
-    }
-
-    @HandlesEvent("deleteblockedip")
-    public Resolution deleteblockedip() throws Exception {
-        if (!HttpRequestUtil.isValidIP(txtblockedip)) {
-            ValidationErrors errors = new ValidationErrors();
-            errors.addGlobalError(new SimpleError("Invalid IP address!"));
-            getContext().setValidationErrors(errors);
-            return new RedirectResolution("/status/ipblocker.url").flash(this);
-        }
-
-        String blockedIp = txtblockedip;
-        if (txtblockedip != null) {
-            try {
-                BlockedIPStatus ipstatus = BlockedIPStatus.load(txtblockedip);
-                if (ipstatus != null) {
-                    ipstatus.delete();
-                }
-                txtblockedip = null;
-                getContext().getMessages().add(new SimpleMessage("The IP " + blockedIp + " has been successfully removed."));
-            } catch (Exception exception) {
-                if (exception.getMessage().indexOf("No rows deleted") != -1) {
-                    ValidationErrors errors = new ValidationErrors();
-                    errors.addGlobalError(new SimpleError("The IP(" + txtblockedip + ") you are trying delete is not part of blocked list."));
-                    getContext().setValidationErrors(errors);
-                }
-            }
-        }
-        return new RedirectResolution("/status/ipblocker.url").flash(this);
-    }
-
-    @HandlesEvent("updateblockedip")
-    public Resolution updateblockedip() throws Exception {
-        if (!HttpRequestUtil.isValidIP(txtblockedip)) {
-            ValidationErrors errors = new ValidationErrors();
-            errors.addGlobalError(new SimpleError("Invalid IP address!"));
-            getContext().setValidationErrors(errors);
-            return new RedirectResolution("/status/ipblocker.url").flash(this);
-        }
-
-        String blockedIp = txtblockedip;
-        if (txtblockedip != null) {
-            try {
-                BlockedIPStatus ipstatus = BlockedIPStatus.load(txtblockedip);
-                if (ipstatus != null) {
-                    ipstatus.setStatus(enabled ? BlockedIPStatus.STATUS_BLOCKED : BlockedIPStatus.STATUS_UNBLOCKED);
-                    ipstatus.setTimestamp(new Date());
-                    ipstatus.save();
-                }
-                txtblockedip = null;
-                if (enabled) {
-                    getContext().getMessages().add(new SimpleMessage("The IP " + blockedIp + " has been successfully blocked."));
-                } else {
-                    getContext().getMessages().add(new SimpleMessage("The IP " + blockedIp + " has been successfully unblocked."));
-                }
-
-            } catch (Exception exception) {
-                if (exception.getMessage().indexOf("No rows updated") != -1) {
-                    ValidationErrors errors = new ValidationErrors();
-                    errors.addGlobalError(new SimpleError("The IP(" + txtblockedip + ") you are trying update is not part of blocked list."));
-                    getContext().setValidationErrors(errors);
-                }
-            }
-        }
-        return new RedirectResolution("/status/ipblocker.url").flash(this);
-    }
-    
-    /**
-     * @return
-     * @throws Exception
-     */
-    @HandlesEvent("/editenvprops")
-    public Resolution editenvprops() throws Exception {
-      String envrunlevel = context.getRequest().getParameter("env");
-      if( envrunlevel == null || !RuntimePropertiesEntity.getEnvRunLevels().contains(envrunlevel)){
-    	  envrunlevel =  RuntimePropertiesEntity.getCurrentEnvironment();
-      }
-      context.getRequest().setAttribute("envrunlevels", RuntimePropertiesEntity.getEnvRunLevels());
-      context.getRequest().setAttribute("envrunlevel", envrunlevel);
-      context.getRequest().setAttribute("envprops", RuntimePropertiesEntity.getDefaultAndCurrentEnvironmentProps(envrunlevel));
-      return new ForwardResolution("/WEB-INF/pages/status/editenvprops.jsp");
-    }
-    
-    
-    /**
-     * @return
-     * @throws Exception
-     */
-    @HandlesEvent("updateruntimeproperty")
-    public Resolution updateruntimeproperty() throws Exception {
-    	
-    	boolean isValidRequest = true;
-    	if(!getRequest().getMethod().equalsIgnoreCase("POST") || isEmptyorNull(runtimepropkey) || isEmptyorNull(runtimepropenvlevel) || isEmptyorNull(runtimepropkeyvalue)){
-    		isValidRequest = false;
-    	}
-    	if(isValidRequest && RuntimePropertiesEntity.getEnvRunLevels().contains(runtimepropenvlevel)){
-    		RuntimePropertiesEntity entity = RuntimePropertiesEntity.load(runtimepropkey);
-    		if(entity != null){
-    			isValidRequest = true;
-    			setUserDataToCurrentEnv(runtimepropkeyvalue,entity, runtimepropenvlevel);
-    			entity.save();
-    			getContext().getMessages().add(new SimpleMessage("The key '" + entity.getKey() + "' has been successfully updated for '"+runtimepropenvlevel+"' environment."));
-    		}else{
-    			isValidRequest = false;
-    		}
-    		 
-    	}else{
-    		isValidRequest = false;
-    	}
-    	if(!isValidRequest){
-    		ValidationErrors errors = new ValidationErrors();
-            errors.addGlobalError(new SimpleError("Error occured while processing your request, please try again."));
-            getContext().setValidationErrors(errors);
-        }
-    	return new RedirectResolution("/status/editenvprops.url").addParameter("env", runtimepropenvlevel).flash(this);
-    }
-    
-    /**
-     * @return
-     * @throws Exception
-     */
-    @HandlesEvent("removeruntimepropertyattribute")
-    public Resolution removeruntimepropertyattribute() throws Exception {
-    	
-    	boolean isValidRequest = true;
-    	if(!getRequest().getMethod().equalsIgnoreCase("POST") || isEmptyorNull(runtimepropkey) || isEmptyorNull(runtimepropenvlevel) ){
-    		isValidRequest = false;
-    	}
-    	if(isValidRequest  && RuntimePropertiesEntity.getEnvRunLevels().contains(runtimepropenvlevel)){
-    		RuntimePropertiesEntity entity = RuntimePropertiesEntity.load(runtimepropkey);
-    		if(entity != null){
-    			isValidRequest = true;
-    			// Passing 'null' as data since we want to delete the whole attribute itself
-    			// This will be handled by entity object 'saveconfig' configuration
-    			setUserDataToCurrentEnv(null,entity, runtimepropenvlevel);
-    			entity.save();
-    			getContext().getMessages().add(new SimpleMessage("The key '" + entity.getKey() + "' has been successfully updated by removing '"+runtimepropenvlevel+"' attribute."));
-    		}else{
-    			isValidRequest = false;
-    		}
-    		 
-    	}else{
-    		isValidRequest = false;
-    	}
-    	if(!isValidRequest){
-    		ValidationErrors errors = new ValidationErrors();
-            errors.addGlobalError(new SimpleError("Error occured while processing your request, please try again."));
-            getContext().setValidationErrors(errors);
-        }
-    	return new RedirectResolution("/status/editenvprops.url").addParameter("env", runtimepropenvlevel).flash(this);
-    }
-    
-    /**
-     * @param value
-     * @return
-     */
-    private boolean isEmptyorNull(String value){
-    	if(value == null || value.trim().equalsIgnoreCase("")) {
-    		return true;
-    	}
-    	return false;
-    }
-    
-    /**
-     * @param dataValue
-     * @param entity
-     * @param envlevel
-     */
-    private void setUserDataToCurrentEnv(String dataValue,RuntimePropertiesEntity entity, String envlevel){
-    	if(envlevel.equalsIgnoreCase(RuntimePropertiesEntity.ATTRIBUTE_CERT)){
-    		entity.setCert(dataValue);
-		}else if(envlevel.equalsIgnoreCase(RuntimePropertiesEntity.ATTRIBUTE_DEV)){
-			entity.setDev(dataValue);
-		}else if(envlevel.equalsIgnoreCase(RuntimePropertiesEntity.ATTRIBUTE_LOCAL)){
-			entity.setLocal(dataValue);
-		}else if(envlevel.equalsIgnoreCase(RuntimePropertiesEntity.ATTRIBUTE_PROD)){
-			entity.setProd(dataValue);
-		}else if(envlevel.equalsIgnoreCase(RuntimePropertiesEntity.ATTRIBUTE_RELEASE)){
-			entity.setRelease(dataValue);
-		}
-    }
-
-    /**
+     /**
      * Method to check IP address for authentication purposes. Use the client's IP address from the request to authenticate access to the status pages. Only
      * internal users are permitted to access these pages. The standard loop back address (127.0.0.1) is also considered invalid to allow negative testing.
      *
@@ -991,29 +650,13 @@ public class ApplicationStatus extends EVActionBean {
         return searchFlag;
 
     }
-
-    public String getTxtsimulatedip() {
-        return this.txtsimulatedip;
-    }
-
-    public void setTxtsimulatedip(String txtsimulatedip) {
-        this.txtsimulatedip = txtsimulatedip;
-    }
-
+    
     public boolean isEnabled() {
         return enabled;
     }
 
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;
-    }
-
-    public String getTxtblockedip() {
-        return txtblockedip;
-    }
-
-    public void setTxtblockedip(String txtblockedip) {
-        this.txtblockedip = txtblockedip;
     }
 
     public ApplicationStatusVO getViewbean() {
@@ -1048,52 +691,6 @@ public class ApplicationStatus extends EVActionBean {
         this.emailfrom = emailfrom;
     }
 
-    public String getUsageOption() {
-        return usageOption;
-    }
 
-    public void setUsageOption(String usageOption) {
-        this.usageOption = usageOption;
-    }
-
-    public String getStartDate() {
-        return startDate;
-    }
-
-    public void setStartDate(String startDate) {
-        this.startDate = startDate;
-    }
-
-    public String getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(String endDate) {
-        this.endDate = endDate;
-    }
-    
-    public String getRuntimepropkey() {
-		return runtimepropkey;
-	}
-
-	public void setRuntimepropkey(String runtimepropkey) {
-		this.runtimepropkey = runtimepropkey;
-	}
-
-	public String getRuntimepropkeyvalue() {
-		return runtimepropkeyvalue;
-	}
-
-	public void setRuntimepropkeyvalue(String runtimepropkeyvalue) {
-		this.runtimepropkeyvalue = runtimepropkeyvalue;
-	}
-
-	public String getRuntimepropenvlevel() {
-		return runtimepropenvlevel;
-	}
-
-	public void setRuntimepropenvlevel(String runtimepropenvlevel) {
-		this.runtimepropenvlevel = runtimepropenvlevel;
-	}
 
 }
