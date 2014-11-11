@@ -99,7 +99,12 @@ public class SearchHistoryAction extends BaseSearchAction {
                             }
                         } else {
                             log4j.error("Invalid search number indicated!");
-                            return new RedirectResolution(BackUrlAction.getStoredURLByFeature(context.getRequest(), BackURLByFeature.SEARCHHISTORY));
+                            String url = BackUrlAction.getStoredURLByFeature(context.getRequest(), BackURLByFeature.SEARCHHISTORY);
+                            if (url.contains("?"))
+                                url += "&hisiderr=hisidnotexists";
+                            else
+                                url += "?hisiderr=hisidnotexists";
+                            return new RedirectResolution(url);
                         }
 
                     }
