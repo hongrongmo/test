@@ -69,6 +69,7 @@ public class CitationView extends DocumentView {
                                                          put(Keys.ACCESSION_NUMBER, "");
                                                          put(Keys.DOI, "");
                                                          put(Keys.DOC_TYPE, "");
+                                                         put(Keys.CITEDBY, "");
                                                      }
                                                  };
 
