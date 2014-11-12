@@ -11,6 +11,7 @@ import net.sourceforge.stripes.action.HandlesEvent;
 import net.sourceforge.stripes.action.RedirectResolution;
 import net.sourceforge.stripes.action.Resolution;
 import net.sourceforge.stripes.action.UrlBinding;
+import net.sourceforge.stripes.validation.LocalizableError;
 import net.sourceforge.stripes.validation.Validate;
 
 import org.apache.commons.lang.StringUtils;
@@ -99,7 +100,12 @@ public class SearchHistoryAction extends BaseSearchAction {
                             }
                         } else {
                             log4j.error("Invalid search number indicated!");
-                            return new RedirectResolution(BackUrlAction.getStoredURLByFeature(context.getRequest(), BackURLByFeature.SEARCHHISTORY));
+                            String url = BackUrlAction.getStoredURLByFeature(context.getRequest(), BackURLByFeature.SEARCHHISTORY);
+                            if (url.contains("?"))
+                                url += "&hisiderr=hisidnotexists";
+                            else
+                                url += "?hisiderr=hisidnotexists";
+                            return new RedirectResolution(url);
                         }
 
                     }
