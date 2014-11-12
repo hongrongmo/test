@@ -82,20 +82,17 @@
     </div>
  </c:if>
 	<div  class="sidebarbox" id="knovelbox">
-        <div class="knoveltitle"><div>Interactive Equations</div><div class="smallTxt">Provided by <a href="http://www.knovel.com" title="Knovel" target="new">Knovel &reg;</a></div></div>
+        <div class="knoveltitle" title="Interactive Tools"><div>Interactive Tools</div><div class="smallTxt" title="Provided by Knovel">Provided by <a href="http://www.knovel.com" title="Knovel" target="new">Knovel &reg;</a></div></div>
 
         <div class="padding5" >
         <ul id="knovelsidebar">
-			<li class="knovelChem"><a href="http://tools.knovel.com/ie/#browse/213" class="knovelLink" title="Chemistry and Chemical Equations">Chemistry &amp; Chemical</a></li>
-			<li class="knovelElect"><a href="http://tools.knovel.com/ie/#browse/206" class="knovelLink" title="Electronics and Semiconductors Equations">Electronics</a></li>
-			<li class="knovelEng"><a href="http://tools.knovel.com/ie/#browse/211" class="knovelLink" title="General Engineering Equations">General Engineering</a></li>
-			<li class="knovelMech"><a href="http://tools.knovel.com/ie/#browse/219" class="knovelLink" title="Mechanics and Mechanical Equations">Mechanics &amp; Mechanical</a></li>
-			<li class="knovelMetal"><a href="http://tools.knovel.com/ie/#browse/207" class="knovelLink" title="Metals and Metalurgy Equations">Metals &amp; Metallurgy</a></li>
+			<li class="knovelChem"><a href="http://tools.knovel.com/ie/?kpromoter=engineeringvillage-chemistry#browse/213" class="knovelLink" title="Chemistry and Chemical Equations">Chemistry &amp; Chemical</a></li>
+			<li class="knovelElect"><a href="http://tools.knovel.com/ie/?kpromoter=engineeringvillage-electronics#browse/206" class="knovelLink" title="Electronics and Semiconductors Equations">Electronics</a></li>
+			<li class="knovelEng"><a href="http://tools.knovel.com/ie/?kpromoter=engineeringvillage-engineering#browse/211" class="knovelLink" title="General Engineering Equations">General Engineering</a></li>
+			<li class="knovelMech"><a href="http://tools.knovel.com/ie/?kpromoter=engineeringvillage-mechanics#browse/219" class="knovelLink" title="Mechanics and Mechanical Equations">Mechanics &amp; Mechanical</a></li>
+			<li class="knovelMetal"><a href="http://tools.knovel.com/ie/?kpromoter=engineeringvillage-metals#browse/207" class="knovelLink" title="Metals and Metalurgy Equations">Metals &amp; Metallurgy</a></li>
 			<li class="knovelUnit"><a href="http://tools.knovel.com/uc" class="knovelLink" title="Unit Converter">Unit Converter</a></li>
         </ul>
         </div>
     </div>
-
-
-
 <div class="clear"></div>

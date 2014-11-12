@@ -120,6 +120,7 @@ public class DetailedView extends DocumentView {
                                             put(Keys.COPYRIGHT, "");
                                             put(Keys.COPYRIGHT_TEXT, "");
                                             put(Keys.PROVIDER, "");
+                                            put(Keys.CITEDBY, "");
                                         }
                                     };
 
