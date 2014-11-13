@@ -94,12 +94,13 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
 
 
 	<stripes:layout-component name="jsbottom_custom"/>
-	<div style="display:none;" id="modalHTMLcontainer">
-		<div id="modalmsg">
-			<jsp:include page="/WEB-INF/pages/popups/marketingMessage.jsp" />
+	<stripes:layout-component name="modal_dialog_msg">
+		<div style="display:none;" id="modalHTMLcontainer">
+			<div id="modalmsg">
+				<jsp:include page="/WEB-INF/pages/popups/marketingMessage.jsp" />
+			</div>
 		</div>
-	</div>
-
+	</stripes:layout-component>
 	<stripes:layout-component name="exitSurvey">
 		<c:if test="${actionBean.context.userSession.user.userPreferences.exitSurvey}">
 			<%@ include file="/WEB-INF/pages/include/exitSurvey.jsp" %>
