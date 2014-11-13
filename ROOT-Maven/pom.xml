@@ -11,7 +11,7 @@
 		<dependency>
 			<groupId>org.ei</groupId>
 			<artifactId>eilib</artifactId>
-			<version>2.0.1</version>
+			<version>1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>tomcat-provided</groupId>
@@ -90,11 +90,6 @@
 			<version>1.7.8.1</version>
 		</dependency>
 		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-			<version>2.3.3</version>
-		</dependency>
-		<dependency>
 			<groupId>joda-time</groupId>
 			<artifactId>joda-time</artifactId>
 			<version>2.3</version>
@@ -156,10 +151,10 @@
 			<version>2.8.4</version>
 		</dependency>
 		<dependency>
-			<groupId>oracle</groupId>
-			<artifactId>ojdbc14</artifactId>
-			<version>10.2.0.3.0</version>
-		</dependency>
+  <groupId>oracle-provided</groupId>
+  <artifactId>ojdbc6</artifactId>
+  <version>lin64-11.2.0.3</version>
+</dependency>
 		<dependency>
 			<groupId>javax.activation</groupId>
 			<artifactId>activation</artifactId>

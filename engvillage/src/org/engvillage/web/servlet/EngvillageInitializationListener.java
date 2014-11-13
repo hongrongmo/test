@@ -223,7 +223,12 @@ public class EngvillageInitializationListener implements ServletContextListener 
                 String key = it.next();
                 applicationproperties.setProperty(key, properties.get(key));
             }
-            is = ApplicationProperties.class.getResourceAsStream("/override.properties");
+            if(!GenericValidator.isBlankOrNull(System.getProperty("os.name")) && System.getProperty("os.name").toLowerCase().indexOf("mac") >= 0) {
+            	log4j.info("*********USING MAC PROPERTY OVERRIDES*************");
+            	is = ApplicationProperties.class.getResourceAsStream("/override.properties.mac");
+            }else{
+            	is = ApplicationProperties.class.getResourceAsStream("/override.properties");
+            }
             if (is != null) {
                 applicationproperties.load(new BufferedInputStream(is));
             } else {
