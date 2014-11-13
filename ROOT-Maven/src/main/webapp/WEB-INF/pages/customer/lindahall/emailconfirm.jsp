@@ -37,6 +37,8 @@
     </div>
 
 	</stripes:layout-component>
+	<stripes:layout-component name="modal_dialog_msg"/>
+	<stripes:layout-component name="modal_dialog"/>
 
 	<stripes:layout-component name="footer">
 
