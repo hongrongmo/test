@@ -182,7 +182,7 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 	 *
 	 */
 	@Before
-	public Resolution init() throws EVBaseException, NumberFormatException, IOException, ParseException {
+	public void init() throws EVBaseException, NumberFormatException, IOException, ParseException {
 		// Set the database value
 		if (StringUtils.isNotBlank(database) && (Integer.parseInt(database) & DatabaseConfig.PAG_MASK)== DatabaseConfig.PAG_MASK && (Integer.parseInt(database) != DatabaseConfig.PAG_MASK) && EVProperties.getApplicationProperties().isItTime(ApplicationProperties.REFEREX_MASK_DATE)) {
 				database = Integer.toString(Integer.parseInt(database)-DatabaseConfig.PAG_MASK);
@@ -273,8 +273,6 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 		if (context.getUserSession().getProperty(UserSession.SHOW_MAX_ALERTCLEAR) != null) {
 			showmaxalertclear = context.getUserSession().getProperty(UserSession.SHOW_MAX_ALERTCLEAR);
 		}
-
-		return null;
 	}
 
 	/**
