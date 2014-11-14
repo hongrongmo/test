@@ -114,7 +114,8 @@
     <stripes:layout-component name="jsbottom_custom">
     <SCRIPT LANGUAGE="Javascript" SRC="/static/js/LindaHallOrder.js?v=${releaseversion}"/>
     </stripes:layout-component>
-    
+    <stripes:layout-component name="modal_dialog_msg"/>
+	<stripes:layout-component name="modal_dialog"/>
 	<stripes:layout-component name="footer">
 
     <div class="hr" style="margin:20px 0 7px 0; color:#d7d7d7; background-color:#d7d7d7; height: 2px;"><hr/></div>
