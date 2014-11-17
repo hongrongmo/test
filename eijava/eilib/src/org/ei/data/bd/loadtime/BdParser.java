@@ -89,6 +89,7 @@ public class BdParser
 		this.rec=articles.iterator();
 
 	}
+	
 
 	public void setOutputWriter(PrintWriter out)
 	{
