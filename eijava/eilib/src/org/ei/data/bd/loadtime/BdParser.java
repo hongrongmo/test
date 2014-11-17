@@ -989,34 +989,37 @@ public class BdParser
 	private void parseReferencegroup(List referenceGroup,Hashtable record) throws Exception
 	{
 		String referenceID = null;
-		StringBuffer referenTitle = new StringBuffer();
-		StringBuffer referenAuthor = new StringBuffer();
-		StringBuffer referenSourcetitle = new StringBuffer();
-		StringBuffer referenPublicationyear = new StringBuffer();
-		StringBuffer referenVolume = new StringBuffer();
-		StringBuffer referenIssue = new StringBuffer();
-		StringBuffer referenPages = new StringBuffer();
-		StringBuffer referenFullText = new StringBuffer();
-		StringBuffer referenText = new StringBuffer();
-		StringBuffer referenWebsite = new StringBuffer();
-		StringBuffer referenItemid = new StringBuffer();
-		StringBuffer referenItemcitationPII = new StringBuffer();
-		StringBuffer referenItemcitationDOI = new StringBuffer();
-		StringBuffer referenItemcitationCitation_title = new StringBuffer();
-		StringBuffer referenItemcitationAuthor = new StringBuffer();
-		StringBuffer referenItemcitationSourcetitle = new StringBuffer();
-		StringBuffer referenItemcitationSourcetitle_abbrev = new StringBuffer();
-		StringBuffer referenItemcitationIssn = new StringBuffer();
-		StringBuffer referenItemcitationIsbn = new StringBuffer();
-		StringBuffer referenItemcitationCoden = new StringBuffer();
-		StringBuffer referenItemcitationPart = new StringBuffer();
-		StringBuffer referenItemcitationpublicationyear = new StringBuffer();
-		StringBuffer referenItemcitationVolume = new StringBuffer();
-		StringBuffer referenItemcitationIssue = new StringBuffer();
-		StringBuffer referenItemcitationPage = new StringBuffer();
-		StringBuffer referenItemcitationArticle_number = new StringBuffer();
-		StringBuffer referenItemcitationWebsite = new StringBuffer();
+		StringBuffer referenceTitle = new StringBuffer();
+		StringBuffer referenceAuthor = new StringBuffer();
+		StringBuffer referenceSourcetitle = new StringBuffer();
+		StringBuffer referencePublicationyear = new StringBuffer();
+		StringBuffer referenceVolume = new StringBuffer();
+		StringBuffer referenceIssue = new StringBuffer();
+		StringBuffer referencePages = new StringBuffer();
+		StringBuffer referenceFullText = new StringBuffer();
+		StringBuffer referenceText = new StringBuffer();
+		StringBuffer referenceWebsite = new StringBuffer();
+		StringBuffer referenceItemid = new StringBuffer();
+		StringBuffer referenceItemcitationPII = new StringBuffer();
+		StringBuffer referenceItemcitationDOI = new StringBuffer();
+		StringBuffer referenceItemcitationCitation_title = new StringBuffer();
+		StringBuffer referenceItemcitationAuthor = new StringBuffer();
+		StringBuffer referenceItemcitationSourcetitle = new StringBuffer();
+		StringBuffer referenceItemcitationSourcetitle_abbrev = new StringBuffer();
+		StringBuffer referenceItemcitationISSN = new StringBuffer();
+		StringBuffer referenceItemcitationISBN = new StringBuffer();
+		StringBuffer referenceItemcitationCoden = new StringBuffer();
+		StringBuffer referenceItemcitationPart = new StringBuffer();
+		StringBuffer referenceItemcitationPublicationyear = new StringBuffer();
+		StringBuffer referenceItemcitationVolume = new StringBuffer();
+		StringBuffer referenceItemcitationIssue = new StringBuffer();
+		StringBuffer referenceItemcitationPage = new StringBuffer();
+		StringBuffer referenceItemcitationArticleNumber = new StringBuffer();
+		StringBuffer referenceItemcitationWebsite = new StringBuffer();
+		StringBuffer referenceItemcitationEAddress = new StringBuffer();
+		StringBuffer referenceItemcitationRefText = new StringBuffer();
 
+		/*
 
 		if(referenceGroup != null && referenceGroup.size()>0)
 		{
@@ -1029,15 +1032,533 @@ public class BdParser
 				if(reference != null)
 				{
 					referenceID = reference.getAttributeValue("id");
+					Element refInfo = (Element) reference.getChild("ref-info",noNamespace);
+					Element refTitle = (Element) refInfo.getChild("ref-title",noNamespace);
+
+					List refTitletextList = (List) refTitle.getChildren("ref-titletext",noNamespace);
+					for(int j=0;j<refTitletextList.size();j++)
+					{
+						Element refTitletextElement = (Element)refTitletextList.get(j);
+						String  refTitletext = refTitletextElement.getTextTrim();
+						referenceTitle.append(refTitletext);
+						if(j<refTitletextList.size()-1)
+						{
+							referenceTitle.append(", ");
+						}
+					}
+
+					List refAuthorsList = (List) refInfo.getChildren("ref-authors",noNamespace);
+					BdAuthors ausmap = new BdAuthors();
+					BdAffiliations affmap = new BdAffiliations();
+					this.affid = 0;
+					for (int j=0 ; j < refAuthorsList.size() ; j++)
+					{
+						setAuthorAndAffs( ausmap,
+										  affmap,
+										  (Element) refAuthorsList.get(j));
+					}
+
+					referenceAuthor.append(auToStringBuffer(ausmap));
+
+					//ref-sourcetitle
+					Element refSourceTitle = (Element) refInfo.getChild("ref-sourcetitle",noNamespace);
+					String  refSourceTitleText = refSourceTitle.getTextTrim();
+					referenceSourcetitle.append(refSourceTitleText);
+
+					//ref-publicationyear
+					Element refPublicationyear = (Element) refInfo.getChild("ref-publicationyear",noNamespace);
+					if(refPublicationyear != null)
+					{
+						String publicationyear = getPublicationYear(refPublicationyear);
+						referencePublicationyear.append(publicationyear);
+					}
+
+					//ref-volisspag
+					Element volisspag = (Element)source.getChild("volisspag",noNamespace);
+					if(refVolisspag != null)
+					{
+						//VOLUME, ISSUE,
+
+						Element voliss = (Element) refVolisspag.getChild("voliss",noNamespace);
+						if(voliss != null)
+						{
+							String volume = voliss.getAttributeValue("volume");
+							String issue  = voliss.getAttributeValue("issue");
+
+							if (volume != null)
+							{
+								System.out.println("volume:"+volume);
+								referenceVolume.append(volume);
+							}
+							if(issue != null)
+							{
+								System.out.println("issue::"+issue);
+								referenceIssue.append(issue);
+							}
+						}
+
+						//PAGERANGE PAGE
+						String pages = getPages(refVolisspag);
+						referencePages.append(pages);
+					}
+					System.out.println("PAGE:"+referencePages.toString());
+
+					Element refWebsite = (Element) refInfo.getChild("ref-website",noNamespace);
+					Element websitename = (Element) refWebsite.getChild("websitename",noNamespace);
+					if(websitename!=null)
+					{
+						String websitenameText = websitename.getTextTrim();
+						referenceWebsite.append(websitenameText);
+					}
+
+					Element eaddress = (Element) refWebsite.getChild("e-address",ceNamespace);
+					if(eaddress!=null)
+					{
+
+						{
+							String eaType = eaddress.getAttributeValue("type");
+							if(eaType == null)
+							{
+								eaType = "email";
+							}
+							String eaddresstext = eaddress.getText();
+							if(eaddresstext != null)
+							{
+								pElectronicABuffer.append(eaType+IDDELIMITER+eaddresstext);
+							}
+						}
+					}
+
+					//ref-text
+					Element refText = (Element) refInfo.getChild("ref-text",noNamespace);
+					if(refText!=null)
+					{
+						String  refTextValue = refText.getTextTrim();
+						referenceText.append(refTextValue);
+					}
+
+					//refd-itemidlist
+					Element refdItemidlist = (Element) refInfo.getChild("refd-itemidlist",noNamespace);
+					List itemidList = refdItemidlist.getChildren("itemid",noNamespace);
+					if(itemidList!=null)
+					{
+						String itemid = getItemID(itemidList);
+						referenceItemid.append(itemid);
+					}
+
+
+					//ref-fulltext
+					Element refFullText = (Element) reference.getChild("ref-fulltext",noNamespace);
+					if(refFulltext!=null)
+					{
+						String  refFullTextValue = refFullText.getTextTrim();
+						referenceText.append(refFullTextValue);
+					}
+
+					//refd-itemcitation
+					Element refdItemcitation = (Element) reference.getChild("refd-itemcitation",noNamespace);
+					if(refdItemcitation!=null)
+					{
+						//REFERENCE CITATION PII
+						if(refdItemcitation.getChild("pii",ceNamespace)!=null)
+						{
+							Element pii = (Element)refdItemcitation.getChild("pii",ceNamespace);
+							referenceItemcitationPII.append(pii.getTextTrim());
+						}
+
+						//REFERENCE CITATION DOI
+						if(refdItemcitation.getChild("doi",ceNamespace)!=null)
+						{
+							Element doi = (Element)refdItemcitation.getChild("doi",ceNamespace);
+							referenceItemcitationPII.append(doi.getTextTrim());
+						}
+
+						//REFERENCE CITATION CITATIONTITLE
+						if(refdItemcitation.getChild("citation-title",ceNamespace)!=null)
+						{
+							Element citationTitles = (Element)refdItemcitation.getChild("citation-title",ceNamespace);
+							String citation = getCitationTitle(citationTitles);
+							referenceItemcitationCitation_title.append(citation);
+
+						}
+
+						//REFERENCE CITATION AUTHOR
+						if(refdItemcitation.getChild("author-group",noNamespace)!=null)
+						{
+							List authorgroup = head.getChildren("author-group",noNamespace);
+							BdAuthors ausmap = new BdAuthors();
+							BdAffiliations affmap = new BdAffiliations();
+
+							for (int e=0 ; e < authorgroup.size() ; e++)
+							{
+								setAuthorAndAffs( ausmap,
+													affmap,
+													(Element) authorgroup.get(e));
+							}
+
+							referenceItemcitationAuthor.append(auToStringBuffer(ausmap));
+
+
+						}
+
+						//REFERENCE CITATION SOURCETITLE
+						if(refdItemcitation.getChild("sourcetitle",noNamespace)!=null)
+						{
+							Element sourcetitle = (Element)refdItemcitation.getChild("sourcetitle",noNamespace);
+							referenceItemcitationSourcetitle.append(sourcetitle.getTextTrim());
+						}
+
+						//REFERENCE CITATION SOURCETITLE ABBREV
+						if(refdItemcitation.getChild("sourcetitle-abbrev",noNamespace)!=null)
+						{
+							Element sourcetitleAbbrev = (Element)refdItemcitation.getChild("sourcetitle-abbrev",noNamespace);
+							referenceItemcitationSourcetitle_abbrev.append(sourcetitleAbbrev.getTextTrim());
+						}
+
+						//REFERENCE CITATION ISSN
+						List issnList =  refdItemcitation.getChildren("issn",noNamespace);
+
+						if(issnList != null)
+						{
+							String issn = getISSN(issnList);
+							referenceItemcitationISSN.append(issn);
+
+						}
+
+						//REFERENCE CITATION ISBN
+						List isbnList = refdItemcitation.refdItemcitation("isbn",noNamespace);
+						if(isbnList != null)
+						{
+							String isbn = getISBN(isbnList);
+							referenceItemcitationISBN.append(isbn);
+						}
+
+						//REFERENCE CITATION CODENCODE
+						Element codencode = (Element) refdItemcitation.getChild("codencode",noNamespace);
+						if (codencode != null)
+						{
+							//System.out.println("codencode::"+codencode.getTextTrim());
+							referenceItemcitationCoden.append(codencode.getTextTrim());
+						}
+
+						//REFERENCE CITATION PART
+						Element part = (Element) refdItemcitation.getChild("part",noNamespace);
+						if (part != null)
+						{
+							//System.out.println("part::"+part.getTextTrim());
+							referenceItemcitationPart.append(part.getTextTrim());
+						}
+
+						//REFERENCE CITATION PUBLICATIONYEAR
+						Element refcitationPublicationyear = (Element) refdItemcitation.getChild("publicationyear",noNamespace);
+						if(refcitationPublicationyear != null)
+						{
+							String citationPublicationyear = getPublicationYear(refcitationPublicationyear);
+							referenceItemcitationPublicationyear.append(citationPublicationyear);
+						}
+
+						//REFERENCE CITATION VOLISSPAGG
+						Element citation_volisspag = (Element)refdItemcitation.getChild("volisspag",noNamespace);
+						if(citation_volisspag != null)
+						{
+							//VOLUME, ISSUE,
+							Element citation_voliss = (Element) citation_volisspag.getChild("voliss",noNamespace);
+							if(citation_voliss != null)
+							{
+								String citation_volume = citation_voliss.getAttributeValue("volume");
+								String citation_issue  = citation_voliss.getAttributeValue("issue");
+
+								if (citation_volume != null)
+								{
+									System.out.println("citation_volume:"+citation_volume);
+									referenceItemcitationVolume.append(citation_volume);
+								}
+								if(citation_issue != null)
+								{
+									System.out.println("citation_issue::"+citation_issue);
+									referenceItemcitationIssue.append(citation_issue);
+								}
+							}
+
+							//PAGERANGE PAGE
+							String citation_pages = getPages(citation_volisspag);
+							referenceItemcitationPage.append(citation_pages);
+						}
+
+						//REFERENCE CITATION ARTICLE NUMBER
+						Element articlenumber = (Element) refdItemcitation.getChild("article-number",noNamespace);
+						if (articlenumber != null)
+						{
+							//System.out.println("articlenumber::"+articlenumber.getTextTrim());
+							referenceItemcitationArticleNumber.append(articlenumber.getTextTrim());
+						}
+
+						//REFERENCE CITATION WEBSITE
+						Element citationWebsite = (Element) refdItemcitation.getChild("website",noNamespace);
+						if(citationWebsite!=null)
+						{
+							Element citationWebsitename = (Element) citationWebsite.getChild("websitename",noNamespace);
+							if(citationWebsitename!=null)
+							{
+								referenceItemcitationWebsite.append(citationWebsitename.getTextTrim());
+							}
+
+							Element citationEAddress = (Element) citationWebsitename.getChild("e-address",ceNamespace);
+							if(citationEAddress!=null)
+							{
+								String citationEAddressType = citationEAddress.getAttributeValue("type");
+								if(citationEAddressType == null)
+								{
+									citationEAddressType = "email";
+								}
+								String citationEAddresstext = citationEAddress.getTextTrim();
+								if(citationEAddresstext != null)
+								{
+									referenceItemcitationEAddress.append(citationEAddressType+IDDELIMITER+citationEAddresstext);
+								}
+							}
+						}
+
+						//REFERENCE CITATION REF-TEXT
+						Element citationRefText = (Element) refdItemcitation.getChild("ref-text",noNamespace);
+						if(citationRefText!=null)
+						{
+							referenceItemcitationRefText.append(citationRefText.getTextTrim());
+						}
+
+
+
+					}//refd-itemcitation
+
 				}
 
 			}
 
+		}
+		*/
 
+	}
+
+	private String getPublicationYear(Element publicationyear) throws Exception
+	{
+		StringBuffer publicationyearBuffer = new StringBuffer();
+		String publicationYearFirst = publicationyear.getAttributeValue("first");
+		String publicationYearLast = publicationyear.getAttributeValue("last");
+		if(publicationYearFirst!=null && publicationYearLast !=null)
+		{
+			publicationyearBuffer.append(publicationYearFirst+"-"+publicationYearLast);
+		}
+		else if(publicationYearFirst!=null)
+		{
+			publicationyearBuffer.append(publicationYearFirst);
+		}
+		else if(publicationYearLast!=null)
+		{
+			publicationyearBuffer.append(publicationYearLast);
+		}
+
+		return publicationyearBuffer.toString();
+	}
+
+	private String getItemID(List itemidList) throws Exception
+	{
+		StringBuffer referenceItemid = new StringBuffer();
+		for(int j=0;j<itemidList.size();j++)
+		{
+			Element itemidElement = (Element)itemidList.get(j);
+			String  itemid_idtype = itemidElement.getAttributeValue("idtype");
+
+			if(itemid_idtype != null &&
+					 (itemid_idtype.equals("CPX")||
+					itemid_idtype.equals("GEO")||
+					itemid_idtype.equals("API")||
+					itemid_idtype.equals("APILIT")||
+					itemid_idtype.equals("CHEM")))
+			{
+				String  itemid = itemidElement.getTextTrim();
+				referenceItemid.append("ACCESSNUMBER:"+itemid);
+
+			}
+			else if (itemid_idtype != null && itemid_idtype.equals("PUI"))
+			{
+				String  pui = itemidElement.getTextTrim();
+				referenceItemid.append("PUI:"+pui);
+			}
+			else if (itemid_idtype != null && itemid_idtype.equals("SEC"))
+			{
+				String  pui = itemidElement.getTextTrim();
+				referenceItemid.append("SEC:"+pui);
+			}
+			referenceItemid.append(IDDELIMITER);
+		}
+		return referenceItemid.toString();
+	}
+
+	private String getPages(Element refVolisspag) throws Exception
+	{
+		Element pages = (Element) refVolisspag.getChild("pages",noNamespace);
+		Element pagerange = (Element) refVolisspag.getChild("pagerange",noNamespace);
+		Element pagecount = (Element) refVolisspag.getChild("pagecount",noNamespace);
+		StringBuffer referencePages = new StringBuffer();
+
+		if(pages != null)
+		{
+			referencePages.append("PAGE:"+pages.getTextTrim());
+			referencePages.append(IDDELIMITER);
+		}
+		else if(pagerange != null)
+		{
+			String firstPage = pagerange.getAttributeValue("first");
+			String lastPage = pagerange.getAttributeValue("last");
+			referencePages.append("PAGERANGE:");
+			if(firstPage != null)
+			{
+				referencePages.append(firstPage);
+			}
+			referencePages.append(IDDELIMITER);
+			if(lastPage != null)
+			{
+				referencePages.append(lastPage);
+			}
+		}
+		else if(pagecount != null)
+		{
+				String pagecountValue = pagecount.getTextTrim();
+				String pagecountType  = pagecount.getAttributeValue("type");
+				referencePages.append("PAGECOUNT:");
+				if(pagecountType != null && pagecountValue != null)
+				{
+					referencePages.append(pagecountType+IDDELIMITER+pagecountValue);
+				}
+				else if(pagecountValue!=null)
+				{
+					referencePages.append(pagecountValue);
+					referencePages.append(IDDELIMITER);
+				}
 
 		}
 
+		return referencePages.toString();
 	}
+
+	private String getCitationTitle(Element citationTitle) throws Exception
+	{
+		StringBuffer cittext = new StringBuffer();
+		if(citationTitle != null)
+		{
+			List cittextlst = citationTitle.getChildren("titletext",noNamespace);
+
+			if(cittextlst != null)
+			{
+
+
+				for (int i = 0; i < cittextlst.size(); i++)
+				{
+					Element cittextelm = (Element)cittextlst.get(i);
+					cittext.append(i);
+					cittext.append(IDDELIMITER);
+					if(cittextelm.getContent()!=null)
+					{
+						cittext.append(dictionary.mapEntity(getMixData(cittextelm.getContent())));
+					}
+					cittext.append(IDDELIMITER);
+					if(cittextelm.getAttribute("original")!=null)
+					{
+						cittext.append(cittextelm.getAttributeValue("original"));
+					}
+					cittext.append(IDDELIMITER);
+					if(cittextelm.getAttribute("lang",xmlNamespace)!=null)
+					{
+						cittext.append(cittextelm.getAttributeValue("lang",xmlNamespace));
+					}
+					if(i<cittextlst.size()-1)
+					{
+						cittext.append(AUDELIMITER);
+					}
+				}
+				String citation = cittext.toString();
+				if(this.databaseName.equalsIgnoreCase("elt"))
+				{
+					citation = citation.replaceAll("<inf>", "<sub>");
+					citation = citation.replaceAll("</inf>", "</sub>");
+
+				}
+
+
+			}
+		}
+		return cittext.toString();
+	}
+
+	private String getISSN(List issnList) throws Exception
+	{
+		String issnValue = null;
+		String issnType  = null;
+		Element issn = null;
+		StringBuffer issnBuffer = new StringBuffer();
+		for(int e=0;e<issnList.size();e++)
+		{
+			issn = (Element)issnList.get(e);
+			issnValue = issn.getTextTrim();
+			issnType = (String)issn.getAttributeValue("type");
+			if(issnType!=null && issnValue!= null)
+			{
+				issnBuffer.append(issnType+":"+issnValue);
+			}
+			if(e<issnList.size()-1)
+			{
+				issnBuffer.append(IDDELIMITER);
+			}
+		}
+
+		return issnBuffer.toString();
+	}
+
+	private String getISBN(List isbnList) throws Exception
+	{
+
+		String  isbnValue = null;
+		String  isbnType  = null;
+		String  isbnLength = null;
+		String  isbnVolume = null;
+		Element isbn = null;
+		StringBuffer isbnBuffer = new StringBuffer();
+		for(int i=0;i<isbnList.size();i++)
+		{
+			isbn = (Element)isbnList.get(i);
+			isbnValue = isbn.getTextTrim();
+			isbnType  = isbn.getAttributeValue("type");
+			isbnLength= isbn.getAttributeValue("length");
+			isbnVolume= isbn.getAttributeValue("level");
+			if(isbnType!=null)
+			{
+				isbnBuffer.append(isbnType);
+			}
+			isbnBuffer.append(IDDELIMITER);
+			if(isbnLength!=null)
+			{
+				isbnBuffer.append(isbnLength);
+			}
+			isbnBuffer.append(IDDELIMITER);
+			if(isbnVolume!=null)
+			{
+				isbnBuffer.append(isbnVolume);
+			}
+			isbnBuffer.append(IDDELIMITER);
+			if(isbnValue!=null)
+			{
+				isbnBuffer.append(isbnValue);
+			}
+			if(i<isbnList.size()-1)
+			{
+				isbnBuffer.append(AUDELIMITER);
+			}
+		}
+
+		return isbnBuffer.toString();
+	}
+
+
 
 
 
@@ -2710,6 +3231,105 @@ public class BdParser
 			return firstAffGroup;
 		}
 		return null;
+	}
+
+	private String auToStringBuffer(BdAuthors auslist)
+	{
+			StringBuffer bufauthor = new StringBuffer();
+			StringBuffer returnbuf = new StringBuffer();
+			if (auslist != null && auslist.getCpxaus() != null)
+			{
+				Iterator itr = auslist.getCpxaus().keySet().iterator();
+				while(itr.hasNext())
+				{
+					BdAuthor aAuthor =(BdAuthor) itr.next();
+					if ( aAuthor.getSec() != null)
+					{
+						bufauthor.append(aAuthor.getSec());
+					}
+					bufauthor.append(IDDELIMITER);
+					if(aAuthor.getAuid() != null)
+					{
+						bufauthor.append(aAuthor.getAuid());
+					}
+					bufauthor.append(IDDELIMITER);
+					if(aAuthor.getAffidStr() != null)
+					{
+						bufauthor.append(aAuthor.getAffidStr());
+					}
+					bufauthor.append(IDDELIMITER);
+					if(aAuthor.getIndexedName() != null)
+					{
+						bufauthor.append(aAuthor.getIndexedName());
+					}
+					bufauthor.append(IDDELIMITER);
+					if(aAuthor.getInitials() != null)
+					{
+						bufauthor.append(aAuthor.getInitials());
+					}
+					bufauthor.append(IDDELIMITER);
+					if(aAuthor.getSurname() != null)
+					{
+						bufauthor.append(aAuthor.getSurname());
+					}
+					bufauthor.append(IDDELIMITER);
+					if(aAuthor.getDegrees() != null)
+					{
+						bufauthor.append(aAuthor.getDegrees());
+					}
+					bufauthor.append(IDDELIMITER);
+					if(aAuthor.getGivenName() != null)
+					{
+						bufauthor.append(aAuthor.getGivenName());
+					}
+					bufauthor.append(IDDELIMITER);
+					if(aAuthor.getSuffix() != null)
+					{
+						bufauthor.append(aAuthor.getSuffix());
+					}
+					bufauthor.append(IDDELIMITER);
+					if(aAuthor.getNametext() != null)
+					{
+						bufauthor.append(aAuthor.getNametext());
+					}
+					bufauthor.append(IDDELIMITER);
+					if(aAuthor.getPrefnameInitials() != null)
+					{
+						bufauthor.append(aAuthor.getPrefnameInitials());
+					}
+					bufauthor.append(IDDELIMITER);
+					if(aAuthor.getPrefnameIndexedname() != null)
+					{
+						bufauthor.append(aAuthor.getPrefnameIndexedname());
+					}
+					bufauthor.append(IDDELIMITER);
+					if(aAuthor.getPrefnameDegrees() != null)
+					{
+						bufauthor.append(aAuthor.getPrefnameDegrees());
+					}
+					bufauthor.append(IDDELIMITER);
+					if(aAuthor.getPrefnameSurname() != null)
+					{
+						bufauthor.append(aAuthor.getPrefnameSurname());
+					}
+					bufauthor.append(IDDELIMITER);
+					if(aAuthor.getPrefnameGivenname() != null)
+					{
+						bufauthor.append(aAuthor.getPrefnameGivenname());
+					}
+					bufauthor.append(IDDELIMITER);
+					if(aAuthor.getEaddress() != null)
+					{
+						bufauthor.append(aAuthor.getEaddress());
+					}
+					bufauthor.append(IDDELIMITER);
+					bufauthor.append(AUDELIMITER);
+				}
+			}
+
+
+			return bufauthor.toString();
+
 	}
 
 
