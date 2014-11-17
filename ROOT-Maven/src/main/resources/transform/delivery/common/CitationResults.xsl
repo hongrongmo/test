@@ -116,7 +116,7 @@
       <xsl:if test="$ascii='true'">
         <xsl:text>&#xD;&#xA;</xsl:text>
       </xsl:if>
-      <xsl:apply-templates select="DT"/>
+      <xsl:apply-templates select="DT"/><xsl:if test="$ascii='true'"><xsl:text>&#xD;&#xA;</xsl:text></xsl:if>
       <xsl:apply-templates select="DOC/DB/DBNAME"/>
      
       <xsl:apply-templates select="COL"/>
@@ -382,8 +382,11 @@
     </xsl:template>
     
     <xsl:template match="DT">    
-    	<xsl:if test="text()='Article in Press'">
-    	      <span CLASS="MedBlackText"><br/><img src="/static/images/btn_aip.gif" border="0" style="vertical-align:bottom" title="Articles not published yet, but available online"/><xsl:text> Article in Press</xsl:text></span>
+        <xsl:if test="text()='Article in Press'">
+              <span CLASS="MedBlackText"><br/><img src="/static/images/btn_aip.gif" border="0" style="vertical-align:bottom" title="Articles not published yet, but available online" alt="Articles not published yet, but available online"/> <xsl:text>Article in Press</xsl:text></span>
+        </xsl:if> 
+        <xsl:if test="text()='In Process'">
+              <span CLASS="MedBlackText"><br/><img src="/static/images/btn_aip.gif" border="0" style="vertical-align:bottom" title="Records still in the process of being indexed, but available online." alt="Records still in the process of being indexed, but available online."/><xsl:text> In Process</xsl:text></span>
         </xsl:if> 
     </xsl:template>
 

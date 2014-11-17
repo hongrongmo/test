@@ -13,7 +13,6 @@
 </style>
 
 <h3 class="searchcomponentlabel" style="float: none; margin-bottom: 3px; text-transform: uppercase">Exact Term</h3>
-<div style="display:none" id="csrfTokenElement">${actionBean.csrfSyncToken}</div>
 <%-- TERM PATH DISPLAY --%>
 <c:set var="laststep">${fn:length(actionBean.steps)}</c:set>
 <c:set var="scon" value="${actionBean.steps[0].context}"/>

@@ -1,7 +1,7 @@
 var dlOptions;
 $(document).ready(function(){
 	checkForOneClick();
-	if(typeof($("#oneclickDL").attr('href')) == 'undefined'){
+	if(typeof($("#oneclickDL").attr('href')) == 'undefined' || $("#oneclickDL").attr('href') == "#"){
 		$("#oneclickDL").click(
 				function(){
 					if(typeof(Basket) != 'undefined' && (Basket.count == 0) ){

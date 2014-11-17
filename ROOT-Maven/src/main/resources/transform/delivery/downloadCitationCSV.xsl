@@ -50,6 +50,7 @@ Note: If you want to change the order, change it in dynamicHeader variable and i
         <xsl:if test="PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT//LA">EVLABELLanguageEVLABEL,</xsl:if>
         <xsl:if test="PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT//AV">EVLABELAvailabilityEVLABEL,</xsl:if>
         <xsl:if test="PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT//DT[text()='Article in Press']">EVLABELArticle In PressEVLABEL,</xsl:if>
+        <xsl:if test="PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT//DT[text()='In Process']">EVLABELIn ProcessEVLABEL,</xsl:if>
         <xsl:if test="PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT//COL">EVLABELCollectionEVLABEL,</xsl:if>
         <xsl:if test="PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT//DBNAME">EVLABELDatabaseEVLABEL,</xsl:if>
         <xsl:if test="(PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT//CPRT|PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT//CPR)">EVLABELCopyrightEVLABEL,</xsl:if>
@@ -278,7 +279,13 @@ Note: If you want to change the order, change it in dynamicHeader variable and i
         </xsl:if>
         <xsl:if test="contains($headerString, 'EVLABELArticle In PressEVLABEL')">
           <xsl:choose>
-            <xsl:when test="DT">"<xsl:apply-templates select="DT" />",</xsl:when>
+            <xsl:when test="DT">"<xsl:apply-templates select="DT"><xsl:with-param name="typeDT" select="'aip'"/></xsl:apply-templates>",</xsl:when>
+            <xsl:otherwise>"",</xsl:otherwise>
+          </xsl:choose>
+        </xsl:if>
+        <xsl:if test="contains($headerString, 'EVLABELIn ProcessEVLABEL')">
+          <xsl:choose>
+            <xsl:when test="DT">"<xsl:apply-templates select="DT"><xsl:with-param name="typeDT" select="'ip'"/></xsl:apply-templates>",</xsl:when>
             <xsl:otherwise>"",</xsl:otherwise>
           </xsl:choose>
         </xsl:if>
@@ -328,7 +335,12 @@ Note: If you want to change the order, change it in dynamicHeader variable and i
 </xsl:template>
 
 <xsl:template match="DT" priority="1">
-   <xsl:if test="text()='Article in Press'"><xsl:text> Article in Press</xsl:text></xsl:if>
+	<xsl:param name="typeDT" />
+	<xsl:choose>
+      <xsl:when test="$typeDT='aip' and text()='Article in Press'"><xsl:text> Article in Press </xsl:text></xsl:when>
+      <xsl:when test="$typeDT='ip' and text()='In Process'"><xsl:text> In Process</xsl:text></xsl:when>
+      <xsl:otherwise><xsl:text></xsl:text></xsl:otherwise>
+    </xsl:choose>
 </xsl:template>
 
 </xsl:stylesheet>

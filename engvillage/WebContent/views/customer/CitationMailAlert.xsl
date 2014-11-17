@@ -41,38 +41,38 @@
 
             <xsl:template match="PAGE">
 
-	            <center>
+                <center>
 
-	            <!-- Start of table for search results -->
+                <!-- Start of table for search results -->
 
-	            <table border="0" width="99%" cellspacing="0" cellpadding="0">
-	                <tr>
-	                    <td valign="top" colspan="5" align="left"><A CLASS="MedBlackText"><b>Engineering Village Email Alert</b></A></td>
-	                </tr>
-	                            <tr>
-	                                    <td valign="top" colspan="5" align="left"><A CLASS="MedBlackText">Please do not reply to this email address. Please send all responses and questions to eicustomersupport@elsevier.com.</A></td>
-	                            </tr>
-	                <xsl:if test="($RESULTS-COUNT &gt; 0)">
-	                <tr>
-	                    <td valign="top" colspan="5" height="5">&#160;</td>
-	                </tr>
-	                    <tr>
-	                        <td valign="top" colspan="5" align="left"><A CLASS="MedBlackText">Click on the links below to execute search or view a record in Engineering Village.</A></td>
-	                    </tr>
-	                    <tr>
-	                        <td valign="top" colspan="5" align="left"><A CLASS="MedBlackText"><b>NOTE:</b> The links below will only work if your computer's IP address is recognized by Engineering Village.</A></td>
-	                    </tr>
-	                </xsl:if>
-	                <tr>
-	                    <td valign="top" colspan="5" height="5">&#160;</td>
-	                </tr>
-	                <tr>
-	                    <td valign="top" colspan="5" align="left">
-	                        <A CLASS="SmBlackText"><xsl:value-of select="$RESULTS-COUNT"/> new records found in <xsl:value-of select="DD:getDisplayName($RESULTS-DATABASE-MASK)"/> for: </A>
-	                        <A CLASS="LgBlueLink">
-	                        <xsl:if test="($RESULTS-COUNT &gt; 0)">
-	                            <xsl:attribute name="href">http://<xsl:value-of select="/PAGE/SERVER-LOCATION"/>/controller/servlet/Controller?CID=<xsl:value-of select="$SEARCH-CID"/>&amp;<xsl:value-of select="$HREF-QUERY"/>&amp;<xsl:value-of select="$SYSTEM_PASSTHROUGH"/></xsl:attribute>
-	                        </xsl:if>
+                <table border="0" width="99%" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td valign="top" colspan="5" align="left"><A CLASS="MedBlackText"><b>Engineering Village E-mail Alert</b></A></td>
+                    </tr>
+                                <tr>
+                                        <td valign="top" colspan="5" align="left"><A CLASS="MedBlackText">Please do not reply to this email address. Please select this</A><A href="http://help.elsevier.com/app/ask_ev/p/9639"> link </A><A CLASS="MedBlackText">to ask questions.</A></td>
+                                </tr>
+                    <xsl:if test="($RESULTS-COUNT &gt; 0)">
+                    <tr>
+                        <td valign="top" colspan="5" height="5">&#160;</td>
+                    </tr>
+                        <tr>
+                            <td valign="top" colspan="5" align="left"><A CLASS="MedBlackText">Click on the links below to execute search or view a record in Engineering Village.</A></td>
+                        </tr>
+                        <tr>
+                            <td valign="top" colspan="5" align="left"><A CLASS="MedBlackText"><b>NOTE:</b> The links below will only work if your computer's IP address is recognized by Engineering Village.</A></td>
+                        </tr>
+                    </xsl:if>
+                    <tr>
+                        <td valign="top" colspan="5" height="5">&#160;</td>
+                    </tr>
+                    <tr>
+                        <td valign="top" colspan="5" align="left">
+                            <A CLASS="SmBlackText"><xsl:value-of select="$RESULTS-COUNT"/> new records found in <xsl:value-of select="DD:getDisplayName($RESULTS-DATABASE-MASK)"/> for: </A>
+                 <A CLASS="LgBlueLink">
+                            <xsl:if test="($RESULTS-COUNT &gt; 0)">
+                                <xsl:attribute name="href">http://<xsl:value-of select="/PAGE/SERVER-LOCATION"/>/controller/servlet/Controller?CID=<xsl:value-of select="$SEARCH-CID"/>&amp;<xsl:value-of select="$HREF-QUERY"/>&amp;<xsl:value-of select="$SYSTEM_PASSTHROUGH"/></xsl:attribute>
+                            </xsl:if>
                       <xsl:value-of select="$DISPLAY-QUERY"/>, Week <xsl:value-of select="$EMAILALERT"/>
                       </A>
                   </td>
@@ -118,7 +118,7 @@
                   <td valign="top"  colspan="5" align="left"><HR /></td>
               </tr>
               <tr>
-                  <td valign="top" colspan="5" align="left"><A CLASS="SmBlackText">You have received this message because you or someone else has created an Email Alert in Engineering Village for this email address. To view this search or cancel this alert, click on "Saved Searches" on the Engineering Village home page</A>(<A href="http://www.engineeringvillage.com/">http://www.engineeringvillage.com</A>)<A CLASS="SmBlackText"> and login to your Personal Account.</A></td>
+                  <td valign="top" colspan="5" align="left"><A CLASS="SmBlackText">You have received this message because you or someone else has created an E-mail Alert in Engineering Village for this e-mail address. To view this search or cancel this alert, click on "Saved Searches" on the Engineering Village home page</A>(<A href="http://www.engineeringvillage.com/">http://www.engineeringvillage.com</A>)<A CLASS="SmBlackText"> and login to your Personal Account.</A></td>
               </tr>
               <tr>
                   <td valign="top" colspan="5" height="5">&#160;</td>
@@ -214,7 +214,7 @@
             </xsl:variable>
 
             <A CLASS="LgBlueLink" HREF="{$HREF-PREFIX}/controller/servlet/Controller?{$ABSTRACT-LINK-CID}&amp;{$HREF-QUERY}&amp;{$SYSTEM_PASSTHROUGH}&amp;DOCINDEX={$INDEX}&amp;PAGEINDEX={$CURRENT-PAGE}&amp;format={$ABSTRACT-CID}">Abstract</A>&#160;
-            <A CLASS="MedBlackText">-</A>&#160;
+            <A CLASS="MedBlackText">|</A>&#160;
             <A CLASS="LgBlueLink" HREF="{$HREF-PREFIX}/controller/servlet/Controller?{$DETAILED-LINK-CID}&amp;{$HREF-QUERY}&amp;{$SYSTEM_PASSTHROUGH}&amp;DOCINDEX={$INDEX}&amp;PAGEINDEX={$CURRENT-PAGE}&amp;format={$DETAILED-CID}">Detailed</A>
           </td>
         </tr>
