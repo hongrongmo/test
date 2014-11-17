@@ -39,7 +39,7 @@
 <c:set var="userprefs" value="${actionBean.context.userSession.user.userPreferences}"/>
 
 <ul title="top level navigation" class="nav main" style="z-index:300;">
-	<li><a title="Search Engineering Village" href="${searchlink}" class="${actionBean.roomSearch ? 'selected' : ''}">Search</a></li>
+	<li><a title="Search Engineering Village" href="${searchlink}" class="${actionBean.roomSearch ? 'selected' : ''}" id="searchnavlink">Search</a></li>
 	<li><a title="Selected Records - View your selected records"	href="/selected/citation.url?CID=citationSelectedSet&DATABASEID=${actionBean.database}&searchtype=TagSearch" class="${actionBean.roomSelectedRecords ? 'selected' : ''}">Selected records</a></li>
 
 	<c:choose>
