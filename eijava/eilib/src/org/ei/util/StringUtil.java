@@ -18,7 +18,8 @@ import java.util.zip.GZIPInputStream;
 import java.util.zip.GZIPOutputStream;
 import org.ei.xml.Entity;
 
-import sun.misc.BASE64Encoder;
+//import sun.misc.BASE64Encoder;
+import org.apache.commons.codec.binary.Base64;
 
 public class StringUtil {
 
@@ -177,12 +178,15 @@ public class StringUtil {
     }
 
     public String computeUniqueHash(String hashThis) throws StringUtilException {
-        BASE64Encoder en = new BASE64Encoder();
+
+		Base64 en = new Base64();
+        //BASE64Encoder en = new BASE64Encoder();
         String theHash = null;
         try {
             byte[] p = hashThis.getBytes();
             MessageDigest md = MessageDigest.getInstance("MD5");
-            theHash = en.encode(md.digest(p));
+            //theHash = en.encode(md.digest(p));
+            theHash = en.encodeBase64String(md.digest(p));
 
         }
         catch (Exception e) {
