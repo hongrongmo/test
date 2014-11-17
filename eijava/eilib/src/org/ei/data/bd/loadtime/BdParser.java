@@ -91,7 +91,7 @@ public class BdParser
 		this.rec=articles.iterator();
 
 	}
-	
+
 
 	public void setOutputWriter(PrintWriter out)
 	{
@@ -1021,8 +1021,9 @@ public class BdParser
 		StringBuffer referenceItemcitationWebsite = new StringBuffer();
 		StringBuffer referenceItemcitationEAddress = new StringBuffer();
 		StringBuffer referenceItemcitationRefText = new StringBuffer();
+		StringBuffer pElectronicABuffer = new StringBuffer();
 
-		/*
+
 
 		if(referenceGroup != null && referenceGroup.size()>0)
 		{
@@ -1077,7 +1078,7 @@ public class BdParser
 					}
 
 					//ref-volisspag
-					Element volisspag = (Element)source.getChild("volisspag",noNamespace);
+					Element refVolisspag = (Element)refInfo.getChild("volisspag",noNamespace);
 					if(refVolisspag != null)
 					{
 						//VOLUME, ISSUE,
@@ -1152,7 +1153,7 @@ public class BdParser
 
 					//ref-fulltext
 					Element refFullText = (Element) reference.getChild("ref-fulltext",noNamespace);
-					if(refFulltext!=null)
+					if(refFullText!=null)
 					{
 						String  refFullTextValue = refFullText.getTextTrim();
 						referenceText.append(refFullTextValue);
@@ -1188,18 +1189,18 @@ public class BdParser
 						//REFERENCE CITATION AUTHOR
 						if(refdItemcitation.getChild("author-group",noNamespace)!=null)
 						{
-							List authorgroup = head.getChildren("author-group",noNamespace);
-							BdAuthors ausmap = new BdAuthors();
-							BdAffiliations affmap = new BdAffiliations();
+							List refAuthorgroup = refdItemcitation.getChildren("author-group",noNamespace);
+							BdAuthors refAusmap = new BdAuthors();
+							BdAffiliations refAffmap = new BdAffiliations();
 
-							for (int e=0 ; e < authorgroup.size() ; e++)
+							for (int e=0 ; e < refAuthorgroup.size() ; e++)
 							{
-								setAuthorAndAffs( ausmap,
-													affmap,
-													(Element) authorgroup.get(e));
+								setAuthorAndAffs( refAusmap,
+													refAffmap,
+													(Element) refAuthorgroup.get(e));
 							}
 
-							referenceItemcitationAuthor.append(auToStringBuffer(ausmap));
+							referenceItemcitationAuthor.append(auToStringBuffer(refAusmap));
 
 
 						}
@@ -1229,11 +1230,11 @@ public class BdParser
 						}
 
 						//REFERENCE CITATION ISBN
-						List isbnList = refdItemcitation.refdItemcitation("isbn",noNamespace);
-						if(isbnList != null)
+						List refIsbnList = refdItemcitation.getChildren("isbn",noNamespace);
+						if(refIsbnList != null)
 						{
-							String isbn = getISBN(isbnList);
-							referenceItemcitationISBN.append(isbn);
+							String refIsbn = getISBN(refIsbnList);
+							referenceItemcitationISBN.append(refIsbn);
 						}
 
 						//REFERENCE CITATION CODENCODE
@@ -1338,7 +1339,7 @@ public class BdParser
 			}
 
 		}
-		*/
+
 
 	}
 
