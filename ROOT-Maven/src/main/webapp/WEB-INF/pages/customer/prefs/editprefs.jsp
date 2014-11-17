@@ -2,19 +2,19 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://stripes.sourceforge.net/stripes.tld" prefix="stripes"%>
 <style type="text/css">
-	
+
 	.settingsContents{
 	padding-top:5px;
 	height:463px;
 	}
-	
-	
+
+
 	.prefsRadios{
 	list-style: none;
 	margin: 0px;
 	padding: 0px;
 	vertical-align: middle;
-	
+
 	}
 	.settingHeading{
 		color:#3ca690;
@@ -91,17 +91,18 @@
     	font-size:10px;
     	color:#808080;
     }
+    .title h1{color:#FFFFFF;}
 </style>
 
-<div id="settingsPopup">
-<div class="title" style="padding-left:0px;"><img id="eilogo" class="mm_eilogo" width="35px" src="/static/images/ei_w.gif" title="Engineering Information: Home of Engineering Village" alt="Engineering Information: Home of Engineering Village"></img>&nbsp;&nbsp;My Preferences</div>
+<div id="settingsPopup" >
+<div class="title" style="padding-left:0px;"><h1 id="myPrefTitle"><img id="eilogo" class="mm_eilogo" width="35px" src="/static/images/ei_w.gif" title="Engineering Information: Home of Engineering Village" ></img>&nbsp;&nbsp;My Preferences</h1></div>
 <form  method="post" name="preferencesForm" id="userPreferencesForm"  onsubmit="submitSavePrefsForm();return false;">
 <div class="settingsContents" id="settingsContents" >
 	<div id="valerrormsgcontainer" style="display:none"><img style="position:relative;top:-3px" src="/static/images/red_warning.gif"/><b>&nbsp;&nbsp;<span id="valerrormsg"></span></b></div>
-	
+
 	<div class="settingsLeft">
 			<input type="hidden" name="save" value="true"/>
-			
+
 			<div class="settingSection">Display Results</div>
 
 			<c:set value="${actionBean.currentuserprefs.resultsPerPage}" var="resultsPerPage"></c:set>
@@ -192,13 +193,13 @@
 					<div style="width:150px"><input style="width:150px"  type="text" value="${dlFileNamePrefix}" name="dlFileNamePrefix" id="dlFileNamePrefix" onkeypress="return handleKeyPressForFileName(event)"  maxlength="50" /></div>
 					<div style="text-align:right;width:150px"><span style="font-size:10px;" id="filenamelabel">&nbsp;&nbsp;_Output_Date/Time.format</span></div>
 				</div>
-				
+
 	    	</fieldset>
 
 	</div>
 
 </div>
-<div class="saveCancel"><input type="submit" value="Save" name="Save" id="savePrefsButton" /><a href="#" style="padding-right:7px;" onclick="TINY.box.hide();">Cancel</a></div>
+<div class="saveCancel"><input type="submit" value="Save" name="Save" id="savePrefsButton" /><a href="#" class="closePopup" style="padding-right:7px;" onclick="TINY.box.hide();" id="closePrefsMessage" title="Close Preferences Window">Cancel</a></div>
 </form>
 </div>
 

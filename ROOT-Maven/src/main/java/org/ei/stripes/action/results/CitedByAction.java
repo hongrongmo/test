@@ -93,4 +93,7 @@ public class CitedByAction extends EVActionBean {
 	public void setDoi(String doi) {
 		this.doi = doi;
 	}
+
+
+
 }

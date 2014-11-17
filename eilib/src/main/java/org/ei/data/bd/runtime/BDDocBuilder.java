@@ -203,7 +203,8 @@ public class BDDocBuilder implements DocumentBuilder {
 
                 // added for CITEDBY
 
-                if (rset.getString("DATABASE") != null && (rset.getString("DATABASE")).equalsIgnoreCase("cpx")) {
+                if (rset.getString("DATABASE") != null && 
+                    (rset.getString("DATABASE")).equalsIgnoreCase(DatabaseConfig.CPX_PREF) || (rset.getString("DATABASE")).equalsIgnoreCase(DatabaseConfig.GEO_PREF)) {
                     CITEDBY citedby = new CITEDBY();
                     citedby.setKey(Keys.CITEDBY);
 

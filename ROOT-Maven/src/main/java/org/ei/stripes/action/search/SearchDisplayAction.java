@@ -363,12 +363,6 @@ public class SearchDisplayAction extends BaseSearchAction implements ValidationE
         UserSession usersession = context.getUserSession();
         Query queryObject = null;
 
-        if(isCSRFPrevRequired(request.getParameter("csrfSyncToken"))){
- 			context.getValidationErrors().add("validationError", new LocalizableError("org.ei.stripes.action.search.SearchResultsAction.unknownerror"));
- 			return handleValidationErrors(context.getValidationErrors());
- 		}
-
-
         //
         // Stripes will remove any empty text values from the form submission
         // but we do NOT want this behavior!! Get them directly from the

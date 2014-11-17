@@ -491,17 +491,28 @@ public class ExcelExportUtil {
 							cell.setCellValue(cellValue);
 							
 						}
-						if (label.equalsIgnoreCase("Article in Press")) {
-							Cell cell = row.createCell(colNum++);
-							String cellValue = getNodeValue(docElem, "DT");
-							if (cellValue != null
-									&& cellValue
-											.equalsIgnoreCase("Article in Press")) {
-								cell.setCellValue("Article in Press");
-							} else {
-								cell.setCellValue("");
-							}
-						}
+                        if (label.equalsIgnoreCase("Article in Press")) {
+                            Cell cell = row.createCell(colNum++);
+                            String cellValue = getNodeValue(docElem, "DT");
+                            if (cellValue != null
+                                    && cellValue
+                                            .equalsIgnoreCase("Article in Press")) {
+                                cell.setCellValue("Article in Press");
+                            } else {
+                                cell.setCellValue("");
+                            }
+                        }
+                        if (label.equalsIgnoreCase("In Process")) {
+                            Cell cell = row.createCell(colNum++);
+                            String cellValue = getNodeValue(docElem, "DT");
+                            if (cellValue != null
+                                    && cellValue
+                                            .equalsIgnoreCase("In Process")) {
+                                cell.setCellValue("In Process");
+                            } else {
+                                cell.setCellValue("");
+                            }
+                        }
 						if (label.equalsIgnoreCase("Database")) {
 							Cell cell = row.createCell(colNum++);
 							cell.setCellValue(getNodeValue(docElem, "DBNAME"));
@@ -836,17 +847,28 @@ public class ExcelExportUtil {
 							Cell cell = row.createCell(colNum++);
 							cell.setCellValue(getNodeValue(docElem, "FTTJ"));
 						}
-						if (label.equalsIgnoreCase("Article in Press")) {
-							Cell cell = row.createCell(colNum++);
-							String cellValue = getNodeValue(docElem, "DT");
-							if (cellValue != null
-									&& cellValue
-											.equalsIgnoreCase("Article in Press")) {
-								cell.setCellValue("Article in Press");
-							} else {
-								cell.setCellValue("");
-							}
-						}
+                        if (label.equalsIgnoreCase("Article in Press")) {
+                            Cell cell = row.createCell(colNum++);
+                            String cellValue = getNodeValue(docElem, "DT");
+                            if (cellValue != null
+                                    && cellValue
+                                            .equalsIgnoreCase("Article in Press")) {
+                                cell.setCellValue("Article in Press");
+                            } else {
+                                cell.setCellValue("");
+                            }
+                        }
+                        if (label.equalsIgnoreCase("In Process")) {
+                            Cell cell = row.createCell(colNum++);
+                            String cellValue = getNodeValue(docElem, "DT");
+                            if (cellValue != null
+                                    && cellValue
+                                            .equalsIgnoreCase("In Process")) {
+                                cell.setCellValue("In Process");
+                            } else {
+                                cell.setCellValue("");
+                            }
+                        }
 						if (label.equalsIgnoreCase("Availability")) {
 							Cell cell = row.createCell(colNum++);
 							String cellValue = getNodeValue(docElem, "AV");
@@ -2057,10 +2079,14 @@ public class ExcelExportUtil {
 					.put("Availability",
 							xpathCommon
 									.compile("PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT[not(./DOC/DB/DBMASK='131072')]/AV"));
-			ExcelExportUtil.citationColAndXPathMapping
-					.put("Article In Press",
-							xpathCommon
-									.compile("PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT[not(./DOC/DB/DBMASK='131072')]/DT[text()='Article in Press']"));
+            ExcelExportUtil.citationColAndXPathMapping
+            .put("Article In Press",
+                    xpathCommon
+                            .compile("PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT[not(./DOC/DB/DBMASK='131072')]/DT[text()='Article in Press']"));
+            ExcelExportUtil.citationColAndXPathMapping
+            .put("In Process",
+                    xpathCommon
+                            .compile("PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT[not(./DOC/DB/DBMASK='131072')]/DT[text()='In Process']"));
 			ExcelExportUtil.citationColAndXPathMapping
 					.put("Database",
 							xpathCommon
@@ -2245,10 +2271,14 @@ public class ExcelExportUtil {
 					.put("Translation serial title",
 							xpathCommon
 									.compile("PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT[not(./DOC/DB/DBMASK='131072')]/FTTJ"));
-			ExcelExportUtil.abstractColAndXPathMapping
-					.put("Article In Press",
-							xpathCommon
-									.compile("PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT[not(./DOC/DB/DBMASK='131072')]/DT[text()='Article in Press']"));
+            ExcelExportUtil.abstractColAndXPathMapping
+            .put("Article In Press",
+                    xpathCommon
+                            .compile("PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT[not(./DOC/DB/DBMASK='131072')]/DT[text()='Article in Press']"));
+            ExcelExportUtil.abstractColAndXPathMapping
+            .put("In Process",
+                    xpathCommon
+                            .compile("PAGE/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT[not(./DOC/DB/DBMASK='131072')]/DT[text()='In Process']"));
 			ExcelExportUtil.abstractColAndXPathMapping
 					.put("Availability",
 							xpathCommon

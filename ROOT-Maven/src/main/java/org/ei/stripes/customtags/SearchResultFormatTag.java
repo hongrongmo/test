@@ -383,13 +383,14 @@ public class SearchResultFormatTag extends SimpleTagSupport {
             List<String> dt = result.getDt();   
             if (dt != null && dt.size() > 0) {
                 for (int i=0; i<dt.size(); i++) {
-                     if (dt.get(i).equals("Article in Press")){
-                		body.append("<span><br/><img src=\"/static/images/btn_aip.gif\" border=\"0\" style=\"vertical-align:bottom\" title=\"Articles not published yet, but available online\"/>Article in Press</span>");
-                    	break;
-                    } else if (dt.get(i).equals("In Process")){
-                         body.append("<span><br/><img src=\"/static/images/btn_aip.gif\" border=\"0\" style=\"vertical-align:bottom\" title=\"Articles not published yet, but available online\"/>In Process</span>");
-                         break;
-                     }
+                    if (dt.get(i).equals("Article in Press")){
+                        body.append("<span><br/><img src=\"/static/images/btn_aip.gif\" border=\"0\" style=\"vertical-align:bottom\" title=\"Articles not published yet, but available online\" alt=\"Articles not published yet, but available online\"/> Article in Press</span>");
+                        break;
+                    }
+                    else if (dt.get(i).equals("In Process")){
+                        body.append("<span><br/><img src=\"/static/images/btn_aip.gif\" border=\"0\" style=\"vertical-align:bottom\" title=\"Records still in the process of being indexed, but available online.\" alt=\"Records still in the process of being indexed, but available online.\"/> In Process</span>");
+                        break;
+                    }
                 }
             }
         

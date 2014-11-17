@@ -6,8 +6,11 @@ tips = [
 	];
 $(document).ready(function() {
 	var popupTime = 4500;
-
-
+	$(document).keyup(function(e){
+		if(e.keyCode == 27 && $(".tooltipstered").length > 0){
+			$(".tooltipstered").each(function(){$(this).tooltipster("destroy");})
+		}
+	})
 	for(i in tips){
 		var tip = tips[i];
 		var selector = '.'+tip.name;

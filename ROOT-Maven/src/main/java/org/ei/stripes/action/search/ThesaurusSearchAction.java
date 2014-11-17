@@ -136,13 +136,7 @@ public class ThesaurusSearchAction extends SearchDisplayAction { // implements I
     @HandlesEvent("submit")
     public Resolution validate() throws InfrastructureException, SessionException {
 
-    	HttpServletRequest request = context.getRequest();
-    	if(isCSRFPrevRequired(request.getParameter("csrfSyncToken"))){
- 			context.getValidationErrors().add("validationError", new LocalizableError("org.ei.stripes.action.search.SearchResultsAction.unknownerror"));
- 			return handleValidationErrors(context.getValidationErrors());
- 		}
-
-        return super.validate();
+    	return super.validate();
     }
 
     /**

@@ -93,29 +93,47 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
 </stripes:layout-component>
 
 
-<stripes:layout-component name="jsbottom_custom"/>
+	<stripes:layout-component name="jsbottom_custom"/>
+	<stripes:layout-component name="modal_dialog_msg">
+		<div style="display:none;" id="modalHTMLcontainer">
+			<div id="modalmsg">
+				<jsp:include page="/WEB-INF/pages/popups/marketingMessage.jsp" />
+			</div>
+		</div>
+	</stripes:layout-component>
 
+	<stripes:layout-component name="exitSurvey">
+		<c:if test="${actionBean.context.userSession.user.userPreferences.exitSurvey}">
+			<%@ include file="/WEB-INF/pages/include/exitSurvey.jsp" %>
+		</c:if>
+	</stripes:layout-component>
 </body>
 <script>var release = "5.6";</script>
-	<div style="display:none;" id="modalHTMLcontainer">
-	<div id="modalmsg">
-		<jsp:include page="/WEB-INF/pages/popups/marketingMessage.jsp" />
-	</div>
+
 	<stripes:layout-component name="modal_dialog">
 		<c:if test="${actionBean.context.userSession.user.userPreferences.modalDialog && !actionBean.context.userSession.user.userPreferences.modalDialog2}">
 			<script>
 				$(document).ready(function(){
 					if((!$.cookie("ev_mm_dontshow") || release != $.cookie("ev_mm_dontshow")) && (!$.cookie("ev_mm_shown") || release != $.cookie("ev_mm_shown"))){
-						GALIBRARY.createWebEventWithLabel('Dialog Open', 'What\'s New', 'Auto Show');
-						TINY.box.show({html:document.getElementById("modalmsg"),clickmaskclose:false,width:900,height:450,close:true,opacity:20,topsplit:3,closejs:function(){closeX();}});
-						//tell GA that we showed it
-					}
-				});
 
+						GALIBRARY.createWebEventWithLabel('Dialog Open', 'What\'s New', 'Auto Show');
+						$(document).keydown(function(e){if(e.keyCode == 9 && document.activeElement.id == 'hidePopup'){$($('#marketing_message a, #marketing_message input')[0]).focus()}})
+						TINY.box.show({html:document.getElementById("modalmsg"),ariaLabeledBy:"mmPopupTitle",clickmaskclose:false,width:900,height:450,close:true,opacity:20,topsplit:3,closejs:function(){closeX();},openjs:function(){$("#hidePopup").focus();$(document).keydown(setTabListener);}});
+	   					//tell GA that we showed it
+					}
+
+				});
+				function setTabListener(e){
+
+					if(e.keyCode == 9 && document.activeElement.id == 'hidePopup'){
+						$($('#marketing_message a, #marketing_message input[type!="hidden"]')[0]).focus();
+						e.preventDefault();
+					}
+				}
 			</script>
 		</c:if>
 	</stripes:layout-component>
-</div>
+
 <stripes:layout-component name="modal_dialog_2">
 
 </stripes:layout-component>
@@ -123,11 +141,7 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
 
 
 </stripes:layout-component>
-<stripes:layout-component name="exitSurvey">
-<c:if test="${actionBean.context.userSession.user.userPreferences.exitSurvey}">
-	<%@ include file="/WEB-INF/pages/include/exitSurvey.jsp" %>
-</c:if>
-</stripes:layout-component>
+
 <stripes:layout-component name="carsoverride">
 	<jwr:style src="/bundles/carsoverride.css"></jwr:style>
 <style></style>
