@@ -70,6 +70,7 @@
 <stripes:layout-component name="carsoverride">
 <jwr:style src="/bundles/carsoverride.css"></jwr:style>
 </stripes:layout-component>
+<stripes:layout-component name="modal_dialog_msg"/>
 <stripes:layout-component name="modal_dialog"></stripes:layout-component>
 <stripes:layout-component name="modal_dialog_2"></stripes:layout-component>
 <stripes:layout-component name="exitSurvey"></stripes:layout-component>
