@@ -16,6 +16,7 @@ import org.ei.security.utils.Encrypter;
 import org.ei.security.utils.SecureID;
 
 
+
 public class CaptchaServlet extends HttpServlet {
 
     private static Encrypter _stringEncrypter = new Encrypter();
