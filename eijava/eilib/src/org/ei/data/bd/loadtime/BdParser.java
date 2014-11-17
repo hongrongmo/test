@@ -17,6 +17,8 @@ import org.ei.data.encompasslit.loadtime.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
+
 public class BdParser
 {
 	private List articles = null;
