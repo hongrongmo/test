@@ -24,7 +24,7 @@ NOTE:  Caller is expected to insert the "active" page:
 <div id="searchformtabsbox">
 	<ul id="searchformtabs"  aria-label="Search forms" role="navigation">
 		<li<c:if test="${searchtab != 'quicksearch'}"> class="inactive"</c:if>>${searchtab eq 'quicksearch' ? '<h1 class="link">' : ''}<a href="/search/quick.url?CID=quicksearch" 
-			   class="tablink<c:if test="${searchtab == 'quicksearch'}"> here</c:if>" title="Quick Search">Quick Search</a>${searchtab eq 'quicksearch' ? '</h1>' : ''}</li>
+			  id="searchtablink" class="tablink<c:if test="${searchtab == 'quicksearch'}"> here</c:if>" title="Quick Search">Quick Search</a>${searchtab eq 'quicksearch' ? '</h1>' : ''}</li>
 		<li<c:if test="${searchtab != 'expertsearch'}"> class="inactive"</c:if>>${searchtab eq 'expertsearch' ? '<h1 class="link">' : ''}<a href="/search/expert.url?CID=expertsearch" 
 			   class="tablink<c:if test="${searchtab == 'expertsearch'}"> here</c:if>" title="Expert Search">Expert Search</a>${searchtab eq 'expertsearch' ? '</h1>' : ''}</li>
 <c:if test="${userprefs.thesaurus and actionBean.thesaurusEnabled}">
