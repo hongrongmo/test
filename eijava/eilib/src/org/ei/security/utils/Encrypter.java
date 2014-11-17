@@ -16,7 +16,7 @@ import javax.crypto.BadPaddingException;
 import javax.crypto.IllegalBlockSizeException;
 import java.io.UnsupportedEncodingException;
 import java.io.IOException;
-
+import org.apache.commons.codec.binary.Base64;
 import org.ei.security.captcha.Config;
 
 public class Encrypter {
@@ -109,7 +109,7 @@ public class Encrypter {
             byte[] enc = _ecipher.doFinal(utf8);
 
             // Encode bytes to base64 to get a string
-            return new sun.misc.BASE64Encoder().encode(enc);
+            return new Base64().encodeBase64String(enc);
         } catch (BadPaddingException e) {
         } catch (IllegalBlockSizeException e) {
         } catch (UnsupportedEncodingException e) {
@@ -131,7 +131,7 @@ public class Encrypter {
         try {
 
             // Decode base64 to get bytes
-            byte[] dec = new sun.misc.BASE64Decoder().decodeBuffer(str);
+            byte[] dec = new Base64().decodeBase64(str);
 
             // Decrypt
             byte[] utf8 = _dcipher.doFinal(dec);
@@ -142,7 +142,7 @@ public class Encrypter {
         } catch (BadPaddingException e) {
         } catch (IllegalBlockSizeException e) {
         } catch (UnsupportedEncodingException e) {
-        } catch (IOException e) {
+        } catch (Exception e) {
         }
         return null;
     }
