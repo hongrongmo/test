@@ -7,8 +7,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import com.sun.image.codec.jpeg.JPEGCodec;
-import com.sun.image.codec.jpeg.JPEGImageEncoder;
+import javax.imageio.ImageIO;
+//import com.sun.image.codec.jpeg.JPEGCodec;
+//import com.sun.image.codec.jpeg.JPEGImageEncoder;
 import java.net.URLEncoder;
 import org.ei.util.Base64Coder;
 import org.ei.security.utils.Encrypter;
@@ -34,16 +35,16 @@ public class CaptchaServlet extends HttpServlet {
         	String imageidEnc;
         	String imageidClear;
 
-        	/*        	
+        	/*
         	 * The requestType parameter can be only be null on the forward call,
         	 * the forwarded request parameters are appended and stored in a base64
-        	 * encoding.  
+        	 * encoding.
         	 */
         	if(request.getParameter("requestType") == null)
         	{
         		displayHTML = true;
         		StringBuffer redirectParam  = new StringBuffer("?");
-        		
+
 	        	for(Enumeration e = request.getParameterNames(); e.hasMoreElements();)
 	    		{
 	    			String name = (String) e.nextElement();
@@ -51,9 +52,9 @@ public class CaptchaServlet extends HttpServlet {
 	    			if(name.equalsIgnoreCase("database"))
 	    			{
 	    				int dbvalue = 0;
-	    				String[] multiValue = request.getParameterValues(name);	    				
+	    				String[] multiValue = request.getParameterValues(name);
 	    				for(int i=0;i<multiValue.length; i++)
-	    				{	    					
+	    				{
 	    					dbvalue += Integer.parseInt(multiValue[i]);
 	    				}
 	    				value = Integer.toString(dbvalue);
@@ -61,7 +62,7 @@ public class CaptchaServlet extends HttpServlet {
 	    			else
 	    			{
 	    				value = (String) request.getParameter(name);
-	    			}	    				    				    		
+	    			}
 	    			redirectParam.append(name + "=" + URLEncoder.encode(value, "UTF-8") + "&");
 
 	    		}
@@ -74,7 +75,7 @@ public class CaptchaServlet extends HttpServlet {
         	}
 
         	/*
-        	 * Create the server name and port.        	
+        	 * Create the server name and port.
         	 */
         	String serverName = "http://" + request.getServerName();
     		int serverPort = request.getServerPort();
@@ -205,10 +206,10 @@ public class CaptchaServlet extends HttpServlet {
         		out.write("</body></html>");
         	}
         	/*
-        	 * This portion of the code returns the image based on the 
+        	 * This portion of the code returns the image based on the
         	 * random characters generated in the html requestType. The
         	 * generated characters are kept in an encrypted form as a
-        	 * hidden variable on the html page.  
+        	 * hidden variable on the html page.
         	 */
         	else if(request.getParameter("requestType").equals("image"))
         	{
@@ -228,20 +229,21 @@ public class CaptchaServlet extends HttpServlet {
                 String [] sprocessorClasses = SKEW_PROCESSOR_CLASS.split(":");
                 ISkewImage skewImage = (ISkewImage) cl.loadClass("org.ei.security.captcha.SkewImageSimple").newInstance();
                 BufferedImage bufferedImage = skewImage.skewImage(imageidClear.substring(0, imageidClear.indexOf(".")));
-                JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(response.getOutputStream());
-                encoder.encode(bufferedImage);
+                //JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(response.getOutputStream());
+                //encoder.encode(bufferedImage);
+                ImageIO.write(bufferedImage, "jpeg", response.getOutputStream());
         	}
         	/*
         	 * This portion of the code validates the user input, requestType
         	 * is equal to validate in this portion of the code. The users input
-        	 * is compared with the random letters in the encrypted hidden value.  
-        	 * The secureid is also validated for the correct TTL.  If a validation 
-        	 * error is found the error object is set and the servlet is called 
+        	 * is compared with the random letters in the encrypted hidden value.
+        	 * The secureid is also validated for the correct TTL.  If a validation
+        	 * error is found the error object is set and the servlet is called
         	 * with requestType of html and errObject failed.  A failure will cause
-        	 * the process to start from the beginning. If the validation is successful 
-        	 * the original request parameters are decoded and the user is redirected 
-        	 * back the controller.     
-        	 *   
+        	 * the process to start from the beginning. If the validation is successful
+        	 * the original request parameters are decoded and the user is redirected
+        	 * back the controller.
+        	 *
         	 */
     	    else
     	    {
