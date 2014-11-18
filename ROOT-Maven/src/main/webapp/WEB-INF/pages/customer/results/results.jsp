@@ -11,7 +11,10 @@
 	<jwr:style src="/bundles/results.css"></jwr:style>
 
 	</stripes:layout-component>
-
+<stripes:layout-component name="SkipToNavigation">
+	<a class="skiptonavlink" href="#cbresult1">Navigate to First Result</a>
+	<a class="skiptonavlink" href="#limittobtn">Navigate to Refine Results</a>
+</stripes:layout-component>
 	<stripes:layout-component name="contents">
 
 	<c:set var="rerunactionurl" scope="request">

@@ -95,7 +95,7 @@
 </style>
 
 <div id="settingsPopup" >
-<div class="title" style="padding-left:0px;"><h1 id="myPrefTitle" aria-rol="alert"><img id="eilogo" class="mm_eilogo" width="35px" src="/static/images/ei_w.gif" title="Engineering Information: Home of Engineering Village" ></img>&nbsp;&nbsp;My Preferences</h1></div>
+<div class="title" style="padding-left:0px;"><h1 id="myPrefTitle" aria-role="alert"><img id="eilogo" class="mm_eilogo" width="35px" src="/static/images/ei_w.gif" title="Engineering Information: Home of Engineering Village" ></img>&nbsp;&nbsp;My Preferences</h1></div>
 <form  method="post" name="preferencesForm" id="userPreferencesForm"  onsubmit="submitSavePrefsForm();return false;">
 <div class="settingsContents" id="settingsContents" >
 	<div id="valerrormsgcontainer" style="display:none"><img style="position:relative;top:-3px" src="/static/images/red_warning.gif"/><b>&nbsp;&nbsp;<span id="valerrormsg"></span></b></div>
