@@ -183,7 +183,6 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 	 */
 	@Before
 	public void init() throws EVBaseException, NumberFormatException, IOException, ParseException {
-
 		// Set the database value
 		if (StringUtils.isNotBlank(database) && (Integer.parseInt(database) & DatabaseConfig.PAG_MASK)== DatabaseConfig.PAG_MASK && (Integer.parseInt(database) != DatabaseConfig.PAG_MASK) && EVProperties.getApplicationProperties().isItTime(ApplicationProperties.REFEREX_MASK_DATE)) {
 				database = Integer.toString(Integer.parseInt(database)-DatabaseConfig.PAG_MASK);
@@ -191,17 +190,16 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 
 		// Set search ID if not present.  This is due to case-sensitivity on the request URL.  Legacy code
 		// sometimes uses "SEARCHID" and new code sometimes uses "searchid".
+		Query qObj = new Query();
 		if (StringUtils.isBlank(getSearchid())) {
 			setSearchid(getRequest().getParameter("SEARCHID"));
-			Query qObj = new Query();
 			qObj = Searches.getSearch(getRequest().getParameter("SEARCHID"));
 			if (qObj != null) {
 				appendWebEventList(createQueryEventList(qObj));
 			}
-
 		}
 
-		// Set the records-per-page
+        // Set the records-per-page
 		if (null != getRequest().getParameter("pageSizeVal")) {
 			UserSession usersession = context.getUserSession();
 			if (usersession == null) {
@@ -275,7 +273,6 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 		if (context.getUserSession().getProperty(UserSession.SHOW_MAX_ALERTCLEAR) != null) {
 			showmaxalertclear = context.getUserSession().getProperty(UserSession.SHOW_MAX_ALERTCLEAR);
 		}
-
 	}
 
 	/**
@@ -390,6 +387,10 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 	@HandlesEvent("quick")
 	@DontValidate
 	public Resolution quick() throws EVBaseException {
+        // Check for RERUN request param.
+        Resolution redir = redirectOnRerun();
+        if (redir != null) return redir;
+
 		setRoom(ROOM.search);
 		setBasketCount(getUserBasketCount());
 
@@ -423,7 +424,11 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 	@HandlesEvent("expert")
 	@DontValidate
 	public Resolution expert() throws EVBaseException {
-		setRoom(ROOM.search);
+        // Check for RERUN request param.
+        Resolution redir = redirectOnRerun();
+        if (redir != null) return redir;
+
+        setRoom(ROOM.search);
 		setBasketCount(getUserBasketCount());
 		webEvent.setAction(WebAnalyticsEventProperties.ACTION_EXPERT_SEARCH_RES);
 		//
@@ -454,7 +459,11 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 	@HandlesEvent("thes")
 	@DontValidate
 	public Resolution thes() throws EVBaseException {
-		setRoom(ROOM.search);
+        // Check for RERUN request param.
+	    Resolution redir = redirectOnRerun();
+	    if (redir != null) return redir;
+
+        setRoom(ROOM.search);
 		setBasketCount(getUserBasketCount());
 		webEvent.setAction(WebAnalyticsEventProperties.ACTION_THES_SEARCH_RES);
 		//
@@ -605,6 +614,25 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 		return new ForwardResolution("/WEB-INF/pages/customer/results/otherrefresults.jsp");
 	}
 
+	/**
+	 * When the "RERUN" parameter is present, user is doing a navigator action.  Redirect
+	 * the request so they aren't left on a form POST!
+	 * 
+	 * @return RedirectResolution 
+	 */
+	protected Resolution redirectOnRerun() {
+        if (!GenericValidator.isBlankOrNull(context.getRequest().getParameter("RERUN")) &&
+            !GenericValidator.isBlankOrNull(getSearchtype()) &&
+            !GenericValidator.isBlankOrNull(getSearchid())) {
+            return new RedirectResolution(
+                "/search/results/" + getSearchtype().toLowerCase() + ".url" +
+                "?SEARCHID=" + getSearchid() + 
+                "&CID=" + getSearchtype().toLowerCase() + "SearchCitationFormat" +
+                "&database=" + getDatabase());
+        }
+        return null;
+	}
+	
 	protected int getUserBasketCount() throws InfrastructureException {
 		DocumentBasket basket;
 		if (null != getContext().getUserSession().getID()) {
