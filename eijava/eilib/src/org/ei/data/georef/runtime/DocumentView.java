@@ -898,14 +898,17 @@ public abstract class DocumentView {
       {
         String decoratedvalue = null;
         String strvalue = field.getValue();
+       
         if(strvalue != null)
         {
           String strtranslated = dataDictionary.translateValue(strvalue,getLookupTable());
+
           if(strtranslated != null)
           {
             decoratedvalue = strtranslated;
           }
         }
+        
         return decoratedvalue;
       }
       public abstract Map getLookupTable();
@@ -967,6 +970,7 @@ public abstract class DocumentView {
       {
         List decoratedvalues = new ArrayList();
         String strvalue = field.getValue();
+       
 
         if(strvalue != null)
         {
@@ -977,7 +981,9 @@ public abstract class DocumentView {
           }
           for(int i = 0; i < codes.length; i++)
           {
+			
             String strtranslated = dataDictionary.translateValue(codes[i],getLookupTable());
+           
             if(strtranslated != null)
             {
               decoratedvalues.add(strtranslated);
