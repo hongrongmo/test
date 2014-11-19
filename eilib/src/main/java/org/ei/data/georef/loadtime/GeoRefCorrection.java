@@ -806,16 +806,15 @@ public class GeoRefCorrection
 			  log4j.info("Run Query \"insert into georef_master_add select * from georef_master_ip where updatenumber='"+updateNumber[0]+"' and id_number in(select id_number from georef_master_ip where updatenumber='"+updateNumber[0]+"' minus select id_number from georef_master_ip where updatenumber='"+updateNumber[1]+"'\" to create georef_master_add table" );
 			  deleteQuery = "insert into georef_master_delete select * from georef_master_ip where updatenumber='"+updateNumber[1]+"' and id_number in(select id_number from georef_master_ip where updatenumber='"+updateNumber[1]+"' minus select id_number from georef_master_ip where updatenumber='"+updateNumber[0]+"' )";
 			  log4j.info("Run Query \"insert into georef_master_delete select * from georef_master_ip where updatenumber='"+updateNumber[1]+"' and id_number in(select id_number from georef_master_ip where updatenumber='"+updateNumber[1]+"' minus select id_number from georef_master_ip where updatenumber='"+updateNumber[0]+"'\" to create georef_master_delete table" );
-			 // updateQuery = "update georef_master_ip set updatenumber='"+updateNumber[0]+"' where updatenumber='"+updateNumber[1]+"' and id_number not in (select id_number from georef_master_delete)";
+			  updateQuery = "update georef_master_add set PERSON_MONOGRAPH=replace(PERSON_MONOGRAPH,'?',' '),PERSON_ANALYTIC=replace(PERSON_ANALYTIC,'?',' '),PERSON_COLLECTION=replace(PERSON_COLLECTION,'?',' ')  where PERSON_MONOGRAPH like'%?%' or PERSON_ANALYTIC like'%?%' or PERSON_COLLECTION  like'%?%;'";
 
 		      stmt = con1.prepareStatement(addQuery);
 		      stmt.executeUpdate();
 		      stmt = con1.prepareStatement(deleteQuery);
 		      stmt.executeUpdate();
-		      //stmt = con1.prepareStatement(updateQuery);
-		      //stmt.executeUpdate();
-		      //addData();
-			  runExtract(updateNumber[0]);
+		      stmt = con1.prepareStatement(updateQuery);
+		      stmt.executeUpdate();
+			  //runExtract(updateNumber[0]);
 
 		    }
 		    else
