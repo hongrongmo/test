@@ -44,6 +44,10 @@ import org.ei.domain.personalization.SavedSearches;
 import org.ei.query.base.FastQueryWriter;
 import org.ei.util.StringUtil;
 
+/**
+ * @author kamaramx
+ *
+ */
 public class AlertEmail {
 	
 	protected static Log log = LogFactory.getLog(AlertEmail.class);
@@ -65,6 +69,9 @@ public class AlertEmail {
     private List<String> m_skipEmptyList = new ArrayList<String>();
     
     
+    /**
+     * @throws IOException
+     */
     public AlertEmail() throws IOException {
     	Properties properties = new Properties();
     	URL url = this.getClass().getResource("/emailalert.properties");
@@ -73,9 +80,53 @@ public class AlertEmail {
     	eiProps = ApplicationProperties.getInstance();
     }
 
+	/**
+	 * @param args
+	 * @throws IOException
+	 */
+	public static void main(String[] args) throws IOException {
+		
+		 try{
+			 log.info("*********************************************************************************************************");
+			 log.info("********************************Welcome to EV Alert Emails application tool******************************");
+			 log.info("*********************************************************************************************************");
+			 BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
+			 log.info("");
+			 String cleanup = "";
+			 log.info("Would you like to clean up the existing email transactions for a particular year week?(ex:'yes' or 'no') :");
+			 cleanup = bufferRead.readLine();
+			 while(cleanup == null || (!cleanup.equalsIgnoreCase("yes") && !cleanup.equalsIgnoreCase("no"))){
+				 log.info("Entered value is invalid, you must enter 'yes' or 'no' :");
+				 cleanup = bufferRead.readLine();
+			 }
+			 if(cleanup.equalsIgnoreCase("yes")){
+				 cleanUpTheEmailTransction();
+			 }else{
+				 String sendemail = "";
+				 log.info("Would you like to start the email transaction for a particular year week?(ex:'yes' or 'no') :");
+				 sendemail = bufferRead.readLine();
+				 while(sendemail == null || (!sendemail.equalsIgnoreCase("yes") && !sendemail.equalsIgnoreCase("no"))){
+					 log.info("Entered value is invalid, you must enter 'yes' or 'no' :");
+					 sendemail = bufferRead.readLine();
+				 }
+				 if(sendemail.equalsIgnoreCase("yes")){
+					 initiateEmailTransaction();
+				 }else{
+					 log.info("Thank You!");
+				 }
+			 }
+			 
+		 }catch(Exception e){
+			 e.printStackTrace();
+			 log.error("Error Occurred!", e);
+		 }
+	 }
+	
+	/**
+	 * 
+	 */
 	private void init(){
 		try {
-			
 			configureDatabaseConnection();
 			String sAlertSize = eiProps.getProperty("EMAILALERTSIZE");
             serverLocation = eiProps.getProperty("SERVERLOCATION");
@@ -94,6 +145,9 @@ public class AlertEmail {
         }
 	}
 	
+	/**
+	 * 
+	 */
 	public static void cleanUpTheEmailTransction(){
 		try{
 			 BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
@@ -144,6 +198,9 @@ public class AlertEmail {
 		}
 	}
 	
+	/**
+	 * 
+	 */
 	public static void initiateEmailTransaction(){
 		try{
 			
@@ -319,50 +376,11 @@ public class AlertEmail {
 				 log.info("Thank You!");
 				 System.exit(0);
 			 }
-			 
 		 }catch(Exception e){
 			e.printStackTrace();
 			log.error("Error occured!", e);
 		 }
 	}
-	
-	public static void main(String[] args) throws IOException {
-		
-		 try{
-			 log.info("*********************************************************************************************************");
-			 log.info("********************************Welcome to EV Alert Emails application tool******************************");
-			 log.info("*********************************************************************************************************");
-			 BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
-			 log.info("");
-			 String cleanup = "";
-			 log.info("Would you like to clean up the existing email transactions for a particular year week?(ex:'yes' or 'no') :");
-			 cleanup = bufferRead.readLine();
-			 while(cleanup == null || (!cleanup.equalsIgnoreCase("yes") && !cleanup.equalsIgnoreCase("no"))){
-				 log.info("Entered value is invalid, you must enter 'yes' or 'no' :");
-				 cleanup = bufferRead.readLine();
-			 }
-			 if(cleanup.equalsIgnoreCase("yes")){
-				 cleanUpTheEmailTransction();
-			 }else{
-				 String sendemail = "";
-				 log.info("Would you like to start the email transaction for a particular year week?(ex:'yes' or 'no') :");
-				 sendemail = bufferRead.readLine();
-				 while(sendemail == null || (!sendemail.equalsIgnoreCase("yes") && !sendemail.equalsIgnoreCase("no"))){
-					 log.info("Entered value is invalid, you must enter 'yes' or 'no' :");
-					 sendemail = bufferRead.readLine();
-				 }
-				 if(sendemail.equalsIgnoreCase("yes")){
-					 initiateEmailTransaction();
-				 }else{
-					 log.info("Thank You!");
-				 }
-			 }
-			 
-		 }catch(Exception e){
-			 e.printStackTrace();
-			 log.error("Error Occurred!", e);
-		 }
-	 }
 	
 	/**
      * @ return java.util.Hashtable hashtable Steps it does a. gets distinct userids where he his vaing email alerts. b. At the same time getting the email
@@ -378,7 +396,7 @@ public class AlertEmail {
         try {
             con = m_broker.getConnection(m_strPoolname);
             stmt = con.createStatement();
-
+            log.info("******************Retriveing the user ids list...********************");
             rset = stmt.executeQuery("SELECT DISTINCT USER_PROFILE_CONTRACT.USER_PROFILE_ID, USER_PROFILE_CONTRACT.EMAIL, USER_PROFILE_CONTRACT.CUSTOMER_ID "
                 + " FROM USER_PROFILE_CONTRACT, SEARCHES_SAVED WHERE " + " USER_PROFILE_CONTRACT.USER_PROFILE_ID=SEARCHES_SAVED.USER_ID "
                 + " AND SEARCHES_SAVED.EMAIL_ALERT ='On'");
@@ -470,6 +488,10 @@ public class AlertEmail {
         return oPage;
     }
 
+    /**
+     * @param yearweek
+     * @throws Exception
+     */
     private void cleanEmailTransactiontable(String yearweek) throws Exception {
     	Connection con = null;
         PreparedStatement pstmt = null;
@@ -511,6 +533,10 @@ public class AlertEmail {
         }
     }
     
+    /**
+     * @return
+     * @throws Exception
+     */
     private int countTotalEmails() throws Exception {
 
         Connection con = null;
@@ -522,7 +548,7 @@ public class AlertEmail {
         try {
             
             con = m_broker.getConnection(m_strPoolname);
-
+            log.info("******************Calculating the total number of emails...********************");
             if (this.isThisTestEmailer()) {
             	String strFilter = eiProps.getProperty("TESTEMAILFILTER");
             	log.info("strFilter = [" + strFilter + "]");
@@ -566,6 +592,10 @@ public class AlertEmail {
         return intCount;
     }
     
+    /**
+     * @param savedsearchid
+     * @return
+     */
     public String getCcList(String savedsearchid) {
         Connection con = null;
         PreparedStatement pstmt = null;
@@ -608,6 +638,14 @@ public class AlertEmail {
         return cclist;
     }
     
+    /**
+     * @param strUserId
+     * @param strUserEmail
+     * @param strQueryId
+     * @param sesMessage
+     * @return
+     * @throws Exception
+     */
     private boolean emailTransaction(String strUserId, String strUserEmail, String strQueryId, SESMessage sesMessage) throws Exception {
         Connection con = null;
         ResultSet rset = null;
@@ -688,6 +726,14 @@ public class AlertEmail {
         return blnSuccess;
     }
     
+    /**
+     * @param strUserId
+     * @param strUserEmail
+     * @param strQueryId
+     * @param sesMessage
+     * @return
+     * @throws Exception
+     */
     private boolean testEmailTransaction(String strUserId, String strUserEmail, String strQueryId, SESMessage sesMessage) throws Exception {
 
         Connection con = null;
@@ -741,6 +787,9 @@ public class AlertEmail {
 
     }
 
+    /**
+     * 
+     */
     private void sendMails() {
     	List<?> queryObjectList = null;
         List<?> userData = null;
@@ -755,6 +804,10 @@ public class AlertEmail {
 
         int intTotal = 0;
         int intSuccess = 0;
+        List<String> skippedemails = new ArrayList<String>();
+        List<String> erroremails = new ArrayList<String>();
+        List<String> alreadysentemails = new ArrayList<String>();
+        
         try {
         	 log.info("******************Starting the process...********************");
         	 DatabaseConfig databaseconfig = DatabaseConfig.getInstance(DriverConfig.getDriverTable());
@@ -762,7 +815,6 @@ public class AlertEmail {
 
              log.info("------------------------------------------------------------");
 
-             log.info("******************Calculating the total number of emails...********************");
              intTotal = countTotalEmails();
              log.info("Count of Email Alerts to be sent = " + intTotal);
              log.info("");
@@ -770,9 +822,9 @@ public class AlertEmail {
             	 log.info("Process completed, sent zero emails.");
                  return;
              }
-             log.info("******************Retriveing the user ids list...********************");
              Hashtable<String, String> userIdList = getUserIds();
              Iterator<String> itrUsers = userIdList.keySet().iterator();
+             
              while (itrUsers.hasNext()) {
             	userid = (String) itrUsers.next();
                 userData = new ArrayList<Object>();
@@ -799,6 +851,7 @@ public class AlertEmail {
                          // pre-test with null message
                          boolean blnAlreadySent = !emailTransaction(userid, emailAddress, queryObject.getID(), null);
                          if (blnAlreadySent == true) {
+                        	 alreadysentemails.add("USERID="+userid+"/CUSTOMERID="+customerid+"/QUERYID="+queryObject.getID());
                              continue;
                          } else {
                              log.info("Processing Query: Id = " + queryObject.getID());
@@ -812,6 +865,7 @@ public class AlertEmail {
 
                          if ((oPage == null) && (m_skipEmptyList.contains(customerid))) {
                              log.info("! Skipping alert with zero results.");
+                             skippedemails.add("USERID="+userid+"/CUSTOMERID="+customerid+"/QUERYID="+queryObject.getID());
                              continue;
                          }
 
@@ -890,20 +944,56 @@ public class AlertEmail {
                          log.info("Email sent status "+((blnSent) ? "Success." : "Failed"));
                          intSuccess = intSuccess + ((blnSent) ? 1 : 0);
                 	 } catch (Exception e) {
+                		 String queryId=null;
+                		 if(queryObject != null){
+                			 queryId = queryObject.getID();
+                		 }
+                		 erroremails.add("USERID="+userid+"/CUSTOMERID="+customerid+"/QUERYID="+queryId);
                          log.error("sendMails Exception. ", e);
                      }
                 	
-                	 log.info("");
                 }
              }
+             log.info("*******************************************All email transaction process has been completed successfully!*****************************************");
         }catch (Exception e) {
         	 log.error("Exception. ", e);
+        	 log.info("*******************************************Email transaction process has been failed/interrupted!*************************************************");
         } finally {
-            log.info("Count of Email Alerts sent = " + intSuccess + " out of " + intTotal);
+        	showFinalStatus(intTotal, intSuccess, alreadysentemails, skippedemails, erroremails);
         }
     }
     
+    /**
+     * @param total
+     * @param success
+     * @param alreadysentemails
+     * @param skippedemails
+     * @param erroremails
+     */
+    private static void showFinalStatus(int total, int success, List<String> alreadysentemails, List<String> skippedemails, List<String> erroremails){
+    	log.info("-------------------------------------------------------------------------------------------------------------------------------------------------------");
+    	log.info("Count of Email Alerts sent = " + success + " out of " + total);
+    	log.info("-------------------------------------------------------------------------------------------------------------------------------------------------------");
+        log.info("Count of Email Alerts already sent by previous transactions = " + alreadysentemails.size());
+        for(String emailstatus : alreadysentemails){
+        	log.info(emailstatus);
+        }
+        log.info("-------------------------------------------------------------------------------------------------------------------------------------------------------");
+        log.info("Count of Email Alerts skipped due to the zero results skippable configuration = " + skippedemails.size());
+        for(String emailstatus : skippedemails){
+        	log.info(emailstatus);
+        }
+        log.info("-------------------------------------------------------------------------------------------------------------------------------------------------------");
+        log.info("Count of Email Alerts not sent due to error = " + erroremails.size());
+        for(String emailstatus : erroremails){
+        	log.info(emailstatus);
+        }
+        log.info("-------------------------------------------------------------------------------------------------------------------------------------------------------");
+    }
 
+    /**
+     * @throws Exception
+     */
     private void configureDatabaseConnection() throws Exception {
         // setup the jndi context and the datasource
         try {
@@ -939,6 +1029,10 @@ public class AlertEmail {
     }
     
     
+    /**
+     * @param yearWeek
+     * @return
+     */
     public static boolean validateYearWeek(String yearWeek){
     	boolean returnVal = true;
     	if (yearWeek == null || StringUtil.EMPTY_STRING.equals(yearWeek) || yearWeek.length() != 6) {
