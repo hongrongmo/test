@@ -91,7 +91,7 @@
 			<li class="knovelEng"><a href="http://tools.knovel.com/ie/?kpromoter=engineeringvillage-engineering#browse/211" class="knovelLink" title="General Engineering Equations">General Engineering</a></li>
 			<li class="knovelMech"><a href="http://tools.knovel.com/ie/?kpromoter=engineeringvillage-mechanics#browse/219" class="knovelLink" title="Mechanics and Mechanical Equations">Mechanics &amp; Mechanical</a></li>
 			<li class="knovelMetal"><a href="http://tools.knovel.com/ie/?kpromoter=engineeringvillage-metals#browse/207" class="knovelLink" title="Metals and Metalurgy Equations">Metals &amp; Metallurgy</a></li>
-			<li class="knovelUnit"><a href="http://tools.knovel.com/uc" class="knovelLink" title="Unit Converter">Unit Converter</a></li>
+			<li class="knovelUnit"><a href="http://tools.knovel.com/uc?kpromoter=engineeringvillage-unitconverter" class="knovelLink" title="Unit Converter">Unit Converter</a></li>
         </ul>
         </div>
     </div>
