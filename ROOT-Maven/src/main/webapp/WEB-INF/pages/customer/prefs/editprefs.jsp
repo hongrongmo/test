@@ -119,7 +119,7 @@
 			<fieldset title="Sorting Settings">
 			<ul class="prefsRadios">
 				<li><input type="radio" name="sortOrder" value="relevance" id="relevance_radio" <c:if test="${sort eq 'relevance'}">checked="checked"</c:if>/><label for="relevance_radio">Relevance</label></li>
-				<li><input type="radio" name="sortOrder" value="yr" id="datenew_radio" <c:if test="${sort eq 'yr'}">checked="checked"</c:if>/><label for="datenew_radio">Date New</label></li>
+				<li><input type="radio" name="sortOrder" value="yr" id="datenew_radio" <c:if test="${sort eq 'yr'}">checked="checked"</c:if>/><label for="datenew_radio">Date (Newest)</label></li>
 			</ul>
 			</fieldset>
 			<hr/>
