@@ -110,6 +110,8 @@
     </stripes:form>
     
     </stripes:layout-component>
+    <stripes:layout-component name="modal_dialog_msg"/>
+	<stripes:layout-component name="modal_dialog"/>
     
     <stripes:layout-component name="jsbottom_custom">
     <SCRIPT LANGUAGE="Javascript" SRC="/static/js/LindaHallOrder.js?v=${releaseversion}"/>
