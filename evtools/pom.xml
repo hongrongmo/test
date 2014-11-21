@@ -27,6 +27,15 @@
                     <target>${jdk.version}</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                    <attachClasses>true</attachClasses>
+                    <packagingExcludes>WEB-INF/lib/evtools*.jar</packagingExcludes>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
