@@ -814,7 +814,7 @@ public class GeoRefCorrection
 		      stmt.executeUpdate();
 		      stmt = con1.prepareStatement(updateQuery);
 		      stmt.executeUpdate();
-			  //runExtract(updateNumber[0]);
+			  runExtract(updateNumber[0]);
 
 		    }
 		    else

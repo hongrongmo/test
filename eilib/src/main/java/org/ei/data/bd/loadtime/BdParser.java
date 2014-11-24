@@ -1022,7 +1022,7 @@ public class BdParser
 		StringBuffer referenceItemcitationWebsite = new StringBuffer();
 		StringBuffer referenceItemcitationEAddress = new StringBuffer();
 		StringBuffer referenceItemcitationRefText = new StringBuffer();
-		StringBuffer pElectronicABuffer = new StringBuffer();
+		StringBuffer pElectronicA = new StringBuffer();
 
 
 
@@ -1037,6 +1037,70 @@ public class BdParser
 				if(reference != null)
 				{
 					referenceID = reference.getAttributeValue("id");
+					if(i>0)
+					{
+						referenceTitle.append(REFERENCEDELIMITER);
+						referenceAuthor.append(REFERENCEDELIMITER);
+						referenceSourcetitle.append(REFERENCEDELIMITER);
+						referencePublicationyear.append(REFERENCEDELIMITER);
+						referenceVolume.append(REFERENCEDELIMITER);
+						referenceIssue.append(REFERENCEDELIMITER);
+						referencePages.append(REFERENCEDELIMITER);
+						referenceFullText.append(REFERENCEDELIMITER);
+						referenceText.append(REFERENCEDELIMITER);
+						referenceWebsite.append(REFERENCEDELIMITER);
+						referenceItemid.append(REFERENCEDELIMITER);
+						referenceItemcitationPII.append(REFERENCEDELIMITER);
+						referenceItemcitationDOI.append(REFERENCEDELIMITER);
+						referenceItemcitationCitation_title.append(REFERENCEDELIMITER);
+						referenceItemcitationAuthor.append(REFERENCEDELIMITER);
+						referenceItemcitationSourcetitle.append(REFERENCEDELIMITER);
+						referenceItemcitationSourcetitle_abbrev.append(REFERENCEDELIMITER);
+						referenceItemcitationISSN.append(REFERENCEDELIMITER);
+						referenceItemcitationISBN.append(REFERENCEDELIMITER);
+						referenceItemcitationCoden.append(REFERENCEDELIMITER);
+						referenceItemcitationPart.append(REFERENCEDELIMITER);
+						referenceItemcitationPublicationyear.append(REFERENCEDELIMITER);
+						referenceItemcitationVolume.append(REFERENCEDELIMITER);
+						referenceItemcitationIssue.append(REFERENCEDELIMITER);
+						referenceItemcitationPage.append(REFERENCEDELIMITER);
+						referenceItemcitationArticleNumber.append(REFERENCEDELIMITER);
+						referenceItemcitationWebsite.append(REFERENCEDELIMITER);
+						referenceItemcitationEAddress.append(REFERENCEDELIMITER);
+						referenceItemcitationRefText.append(REFERENCEDELIMITER);
+						pElectronicA.append(REFERENCEDELIMITER);
+					}
+					referenceTitle.append(referenceID+GROUPDELIMITER);
+					referenceAuthor.append(referenceID+GROUPDELIMITER);
+					referenceSourcetitle.append(referenceID+GROUPDELIMITER);
+					referencePublicationyear.append(referenceID+GROUPDELIMITER);
+					referenceVolume.append(referenceID+GROUPDELIMITER);
+					referenceIssue.append(referenceID+GROUPDELIMITER);
+					referencePages.append(referenceID+GROUPDELIMITER);
+					referenceFullText.append(referenceID+GROUPDELIMITER);
+					referenceText.append(referenceID+GROUPDELIMITER);
+					referenceWebsite.append(referenceID+GROUPDELIMITER);
+					referenceItemid.append(referenceID+GROUPDELIMITER);
+					referenceItemcitationPII.append(referenceID+GROUPDELIMITER);
+					referenceItemcitationDOI.append(referenceID+GROUPDELIMITER);
+					referenceItemcitationCitation_title.append(referenceID+GROUPDELIMITER);
+					referenceItemcitationAuthor.append(referenceID+GROUPDELIMITER);
+					referenceItemcitationSourcetitle.append(referenceID+GROUPDELIMITER);
+					referenceItemcitationSourcetitle_abbrev.append(referenceID+GROUPDELIMITER);
+					referenceItemcitationISSN.append(referenceID+GROUPDELIMITER);
+					referenceItemcitationISBN.append(referenceID+GROUPDELIMITER);
+					referenceItemcitationCoden.append(referenceID+GROUPDELIMITER);
+					referenceItemcitationPart.append(referenceID+GROUPDELIMITER);
+					referenceItemcitationPublicationyear.append(referenceID+GROUPDELIMITER);
+					referenceItemcitationVolume.append(referenceID+GROUPDELIMITER);
+					referenceItemcitationIssue.append(referenceID+GROUPDELIMITER);
+					referenceItemcitationPage.append(referenceID+GROUPDELIMITER);
+					referenceItemcitationArticleNumber.append(referenceID+GROUPDELIMITER);
+					referenceItemcitationWebsite.append(referenceID+GROUPDELIMITER);
+					referenceItemcitationEAddress.append(referenceID+GROUPDELIMITER);
+					referenceItemcitationRefText.append(referenceID+GROUPDELIMITER);
+					pElectronicA.append(referenceID+GROUPDELIMITER);
+
 					Element refInfo = (Element) reference.getChild("ref-info",noNamespace);
 					Element refTitle = (Element) refInfo.getChild("ref-title",noNamespace);
 
@@ -1129,7 +1193,7 @@ public class BdParser
 							String eaddresstext = eaddress.getText();
 							if(eaddresstext != null)
 							{
-								pElectronicABuffer.append(eaType+IDDELIMITER+eaddresstext);
+								pElectronicA.append(eaType+IDDELIMITER+eaddresstext);
 							}
 						}
 					}
@@ -1340,6 +1404,37 @@ public class BdParser
 			}
 
 		}
+
+		record.put("REFERENCETITLE",referenceTitle.toString());
+		record.put("REFERENCEAUTHOR",referenceAuthor.toString());
+		record.put("REFERENCESOURCETITLE",referenceSourcetitle.toString());
+		record.put("REFERENCEPUBLICATIONYEAR",referencePublicationyear.toString());
+		record.put("REFERENCEVOLUME",referenceVolume.toString());
+		record.put("REFERENCEISSUE",referenceIssue.toString());
+		record.put("REFERENCEPAGES",referencePages.toString());
+		record.put("REFERENCEFULLTEXT",referenceFullText.toString());
+		record.put("REFERENCETEXT",referenceText.toString());
+		record.put("REFERENCEWEBSITE",referenceWebsite.toString());
+		record.put("REFERENCEITEMID",referenceItemid.toString());
+		record.put("REFERENCEITEMCITATIONPII",referenceItemcitationPII.toString());
+		record.put("REFERENCEITEMCITATIONDOI",referenceItemcitationDOI.toString());
+		record.put("REFERENCEITEMCITATIONTITLE",referenceItemcitationCitation_title.toString());
+		record.put("REFERENCEITEMCITATIONAUTHOR",referenceItemcitationAuthor.toString());
+		record.put("REFERENCEITEMCITATIONSOURCETITLE",referenceItemcitationSourcetitle.toString());
+		record.put("REFERENCEITEMCITATIONSOURCETITLEABBREV",referenceItemcitationSourcetitle_abbrev.toString());
+		record.put("REFERENCEITEMCITATIONISSN",referenceItemcitationISSN.toString());
+		record.put("REFERENCEITEMCITATIONISBN",referenceItemcitationISBN.toString());
+		record.put("REFERENCEITEMCITATIONCODEN",referenceItemcitationCoden.toString());
+		record.put("REFERENCEITEMCITATIONPART",referenceItemcitationPart.toString());
+		record.put("REFERENCEITEMCITATIONPUBLICATIONYEAR",referenceItemcitationPublicationyear.toString());
+		record.put("REFERENCEITEMCITATIONVOLUME",referenceItemcitationVolume.toString());
+		record.put("REFERENCEITEMCITATIONISSUE",referenceItemcitationIssue.toString());
+		record.put("REFERENCEITEMCITATIONPAGE",referenceItemcitationPage.toString());
+		record.put("REFERENCEITEMCITATIONARTICLENUMBER",referenceItemcitationArticleNumber.toString());
+		record.put("REFERENCEITEMCITATIONWEBSITE",referenceItemcitationWebsite.toString());
+		record.put("REFERENCEITEMCITATIONEADDRESS",referenceItemcitationEAddress.toString());
+		record.put("REFERENCEITEMCITATIONREFTEXT",referenceItemcitationRefText.toString());
+		record.put("REFERENCEEMAIL",pElectronicA.toString());
 
 
 	}
