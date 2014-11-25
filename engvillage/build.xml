@@ -14,7 +14,6 @@ Use the "deploy" target to build and deploy new WAR file.
     <property name="S3_ENV" value="local"/>
     <property name="ENGVILLAGE_PATH" value="../engvillage"/>
     <property name="ROOT_PATH" value="../ROOT-Maven"/>
-    <property name="EILIB_PATH" value="../ROOT-Maven/target/eilib-client.jar"/>
 	<property name="engvilage.war.path" location="${ENGVILLAGE_PATH}/engvillage.war"/>
 
 	<!-- local directories -->
@@ -34,7 +33,6 @@ Use the "deploy" target to build and deploy new WAR file.
 		<echo>
             JAVA_HOME = ${env.JAVA_HOME}
             S3_ENV = ${S3_ENV}
-            EILIB_PATH = ${EILIB_PATH}
         </echo>
 	</target>
 
