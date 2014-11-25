@@ -39,7 +39,7 @@ padding-left: 5px;" class="helpurl" alt="Learn more about search history" title=
                         <input type="radio" value="relevance" id="relChkbx" name="sort" checked="checked" title="Sort your search by Relevance">
                         <label class="SmBlackText" for="relChkbx">Relevance</label>
                         <input type="radio" value="yr" name="sort" id="pubChkbx" title="Sort your search by Year in descending order">
-                        <label class="SmBlackText" for="pubChkbx">Publication year</label>
+                        <label class="SmBlackText" for="pubChkbx">Date (Newest)</label>
                     </span>
                     Combine Searches: <input type="text" size="28" name="txtcombine" title="Combine Search Textbox">
                     <input type="submit" value="Search" title="Submit Combined Search" />
