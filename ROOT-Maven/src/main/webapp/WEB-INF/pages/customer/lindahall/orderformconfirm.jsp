@@ -4,7 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/xml" prefix="x"%>
 <%@ taglib uri="http://stripes.sourceforge.net/stripes.tld" prefix="stripes" %>
     
-<stripes:layout-render name="/WEB-INF/pages/layout/standard.jsp" pageTitle="Linda Hall Library Document Request">
+<stripes:layout-render name="/WEB-INF/pages/layout/standard.jsp" pageTitle="Linda Hall Library Document Request Confirmation">
 
     <stripes:layout-component name="header">
     <jsp:include page="/WEB-INF/pages/include/headernull.jsp" />
@@ -41,7 +41,7 @@
     <stripes:hidden name="deliveryEmail" />
             
 	<div class="marginL10">
-		<h2>Linda Hall Library Document Request</h2>
+		<h2>Linda Hall Library Document Request Confirmation</h2>
 
         <ul class="errors" id="jserrors">
         <stripes:errors>
