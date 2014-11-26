@@ -2,6 +2,8 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	version="1.0">
 
+    <xsl:template match="IS-SELECTED"></xsl:template>
+
 	<xsl:template match="/PAGE-RESULTS/PAGE-ENTRY/EI-DOCUMENT">
 		<xsl:apply-templates select="TI" />
 		<xsl:apply-templates select="AUS" />
@@ -68,7 +70,6 @@
 		</span>
 
 		<xsl:apply-templates select="DOC/DB/DBNAME" />
-
 	</xsl:template>
 
 	<xsl:template match="TI">
@@ -398,7 +399,7 @@
 			<xsl:text> </xsl:text>
 		</xsl:if>
 	</xsl:template>
-
+	    
 	<xsl:template name="LINK">
 		<xsl:param name="TERM" />
 		<xsl:param name="FIELD" />
