@@ -91,7 +91,7 @@
     	font-size:10px;
     	color:#808080;
     }
-    .title h1{color:#FFFFFF;}
+    .title h1{color:#FFFFFF;margin-top:0px;margin-bottom:0px;}
 </style>
 
 <div id="settingsPopup" >

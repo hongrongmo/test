@@ -989,6 +989,9 @@ public class AlertEmail {
         	log.info(emailstatus);
         }
         log.info("-------------------------------------------------------------------------------------------------------------------------------------------------------");
+        log.info("Note: What if total count mismatches, which means we have omitted the duplicate saved searches during the email processing.");
+        log.info("Try searching the text 'duplicate Saved Search!' from the log files for the further analysis.");
+        log.info("-------------------------------------------------------------------------------------------------------------------------------------------------------");
     }
 
     /**
