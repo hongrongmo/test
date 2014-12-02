@@ -162,7 +162,6 @@ CitedByManager = {
 				$("#citedby_box").show();
 			}else{
 				if($("#authordetail_results p.authordetail").length > 0){
-					$("#authordetail_separator").show();
 					$("#citedby_box").show();
 				}
 			}
