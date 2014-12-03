@@ -146,7 +146,7 @@ label {margin-right: 5px}
 #suites ul.suites li a.selected {font-weight:bold;}
 #suites ul.suites li a.last {background:none;}
 
-#login {position:absolute; top:7px; right:3px; z-index:355; background:#fff; }
+#login {position:absolute; top:7px; right:3px; z-index:350; background:#fff; }
 #loginBox a {color:#0156AA;font-size: 12px;}
 #login ul li a {padding:0px 8px 0px 8px; color:#0156AA; text-decoration: none}
 #login ul li {list-style:none;  padding-right:5px; float:left; font-size:12px; background:url(/static/images/divider_login.gif) no-repeat 100% 50%;}
@@ -663,4 +663,10 @@ margin-top: 5px;
 padding-top: 4px;
 padding-bottom: 4px;
 padding-right:10px;
+}
+#feedbackBtn {
+float: right;
+padding-right: 228px;
+top: -7px;
+position: relative;
 }
