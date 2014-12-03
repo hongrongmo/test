@@ -319,6 +319,13 @@ public abstract class DocumentView {
             if (rset.getString("ISSN") != null) {
                 citedby.setIssn((rset.getString("ISSN")).trim());
             }
+            
+            if (rset.getString("ISBN") != null) {
+            	String[] multivalues = rset.getString("ISBN").split(GRFDocBuilder.AUDELIMITER);
+            	if(multivalues != null && multivalues.length>0){
+            		citedby.setIsbn((multivalues[0]).trim());
+            	}
+            }
 
             String pages  = getPages(); 
             

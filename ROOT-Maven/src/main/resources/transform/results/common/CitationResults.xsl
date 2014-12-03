@@ -422,13 +422,15 @@
 
 		<xsl:value-of select="citedby:setMd5($citedby, security:getCitedbyMD5($SESSION-ID,@AN))" />
 		<xsl:value-of select="citedby:setIssn($citedby, @ISSN)" />
+		<xsl:value-of select="citedby:setIsbn($citedby, @ISBN)" />
+		<xsl:value-of select="citedby:setIsbn13($citedby, @ISBN13)" />
 		<xsl:value-of select="citedby:setFirstissue($citedby, @firstIssue)" />
 		<xsl:value-of select="citedby:setFirstvolume($citedby, @firstVolume)" />
 		<xsl:value-of select="citedby:setFirstpage($citedby, @firstPage)" />
 		<xsl:value-of select="citedby:setDoi($citedby, @DOI)" />
 		<xsl:value-of select="citedby:setPii($citedby, @PII)" />
 		<xsl:value-of select="citedby:setAn($citedby, @AN)" />
-
+		
 		<xsl:value-of select="searchresult:setCitedby($sr, $citedby)" />
 	</xsl:template>
 

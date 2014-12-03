@@ -12,6 +12,8 @@ import org.ei.domain.Key;
 public class CITEDBY implements ElementData
 {
 	String localIssn;
+	String localIsbn;
+	String localIsbn13;
 	String localVolume;
 	String localIssue;
 	String localPage;
@@ -95,6 +97,16 @@ public class CITEDBY implements ElementData
 			{
 				out.write(buildISSN());
 			}
+			
+			if(getIsbn()!=null)
+			{
+				out.write(buildISBN());
+			}
+			
+			if(getIsbn13()!=null)
+			{
+				out.write(buildISBN13());
+			}
 
 			if(getVolume()!=null)
 			{
@@ -174,6 +186,40 @@ public class CITEDBY implements ElementData
 	    	tempISSN.append(" ISSN=").append("\"").append(getISSN().trim()).append("\"");
 		}
 	    return tempISSN.toString();
+	}
+	
+	/** This method returns ISSN part of IVIP
+	  * ISSN format is abcd-xyz which is processed
+	  * by this method Removes "-" and returns abcdxyz.
+	  * @return tempStr
+	  */
+	private String buildISBN()
+	{
+
+	    StringBuffer tempISBN=new StringBuffer();
+
+		if(getIsbn()!=null)
+		{
+	    	tempISBN.append(" ISBN=").append("\"").append(getIsbn().trim()).append("\"");
+		}
+	    return tempISBN.toString();
+	}
+	
+	/** This method returns ISSN part of IVIP
+	  * ISSN format is abcd-xyz which is processed
+	  * by this method Removes "-" and returns abcdxyz.
+	  * @return tempStr
+	  */
+	private String buildISBN13()
+	{
+
+	    StringBuffer tempISBN13=new StringBuffer();
+
+		if(getIsbn13()!=null)
+		{
+			tempISBN13.append(" ISBN13=").append("\"").append(getIsbn13().trim()).append("\"");
+		}
+	    return tempISBN13.toString();
 	}
 
 	/** This method returns First Volume part of IVIP
@@ -348,6 +394,21 @@ public class CITEDBY implements ElementData
 	public void  setFirstAuthorSurname(String firstAuthorSurname)
 	{
 		this.localFirstAuthorSurname = firstAuthorSurname;
+	}
+	public String getIsbn() {
+		return localIsbn;
+	}
+
+	public void setIsbn(String localIsbn) {
+		this.localIsbn = localIsbn;
+	}
+
+	public String getIsbn13() {
+		return localIsbn13;
+	}
+
+	public void setIsbn13(String localIsbn13) {
+		this.localIsbn13 = localIsbn13;
 	}
 
 
