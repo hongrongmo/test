@@ -17,6 +17,7 @@ public class CitedByCount {
 	List<?> _topicList;
 	String _issn;
 	String _isbn;
+	String _isbn13;
 	String _eissn;
 	String _vol;
 	String _issue;
@@ -236,5 +237,13 @@ public class CitedByCount {
 
 	public String getPii() {
 		return _pii;
+	}
+	
+	public String getIsbn13() {
+		return _isbn13;
+	}
+
+	public void setIsbn13(String isbn13) {
+		this._isbn13 = isbn13;
 	}
 }

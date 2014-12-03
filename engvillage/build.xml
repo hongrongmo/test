@@ -51,7 +51,7 @@ Use the "deploy" target to build and deploy new WAR file.
         <mkdir dir="${ENGVILLAGE_PATH}/WebContent/WEB-INF/lib" />
         <mkdir dir="${ENGVILLAGE_PATH}/tomcat-provided" />
 
-    	<get src="http://atheneum/content/repositories/elsevier-releases/org/ei/eilib/2.0.1/eilib-2.0.1.jar" dest="${ENGVILLAGE_PATH}/WebContent/WEB-INF/lib/eilib-2.0.1.jar" usetimestamp="true" />
+    	<get src="http://atheneum/content/repositories/elsevier-releases/org/ei/eilib/2.0.2/eilib-2.0.2.jar" dest="${ENGVILLAGE_PATH}/WebContent/WEB-INF/lib/eilib-2.0.2.jar" usetimestamp="true" />
 
         <get src="http://atheneum/content/repositories/thirdparty/tomcat-provided/catalina-ant/7.0.23/catalina-ant-7.0.23.jar" dest="${ENGVILLAGE_PATH}/tomcat-provided/catalina-ant-7.0.23.jar" usetimestamp="true" />
         <get src="http://atheneum/content/repositories/thirdparty/tomcat-provided/tomcat-coyote/7.0.23/tomcat-coyote-7.0.23.jar" dest="${ENGVILLAGE_PATH}/tomcat-provided/tomcat-coyote-7.0.23.jar" usetimestamp="true" />

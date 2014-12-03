@@ -27,7 +27,7 @@
         <data:mendeleyformat result="${result}"/>
 
 			<c:set var="resultnum" value="${(actionBean.pagenav.currentpage - 1) * actionBean.pagenav.resultsperpage + status.count}" />
-			<span session-id="${actionBean.sessionid}" security="${result.citedby.md5}" an="${result.accnum}" doi="${result.citedby.doi}" page="${result.citedby.firstpage}" volume="${result.citedby.firstvolume}" issue="${result.citedby.firstissue}" issn="${result.citedby.issn}" style="display: none;" name="citedbyspan"></span>
+			<span session-id="${actionBean.sessionid}" security="${result.citedby.md5}" an="${result.accnum}" doi="${result.citedby.doi}" page="${result.citedby.firstpage}" volume="${result.citedby.firstvolume}" issue="${result.citedby.firstissue}" issn="${result.citedby.issn}"  isbn="${result.citedby.isbn}" isbn13="${result.citedby.isbn13}"  style="display: none;" name="citedbyspan"></span>
 			<div class="result<c:if test="${status.count % 2 eq 0}"> odd</c:if>">
 
 				<div id="divresultnum"><c:choose>
