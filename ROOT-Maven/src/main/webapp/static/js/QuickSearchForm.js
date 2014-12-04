@@ -824,6 +824,12 @@ function generateDoctypes(selecteddbMask) {
 	if (selecteddbMask == CPX) {
 		doctypes[index++] = new Field("IP", "Article in Press");
 	}
+	// added for AIP
+	if(selecteddbMask == GRF)
+	{
+	doctypes[index++] = new Field("IP", "In Process");
+	}
+
 
 	return doctypes;
 

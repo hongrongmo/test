@@ -18,7 +18,7 @@
 						
 			<p class="bottom"><span><a title="Learn more (opens in a new window)" href="javascript:newwindow=window.open('http://info.scopus.com','newwindow','width=500,height=500,toolbar=no,location=no,scrollbars,resizable');%20void('');">Learn more about Scopus</a></span></p>
 			
-			<SCRIPT LANGUAGE="Javascript" SRC="/static/js/CitedBy.js?v=3"></script>
+			<SCRIPT LANGUAGE="Javascript" SRC="/static/js/CitedBy.js?v=4"></script>
 			
 		</div> 
 
