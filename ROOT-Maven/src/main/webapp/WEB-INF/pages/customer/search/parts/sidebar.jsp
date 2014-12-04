@@ -83,7 +83,7 @@
  </c:if>
 	<div  class="sidebarbox" id="knovelbox">
         <div class="knoveltitle" title="Interactive Tools">
-        <div>Interactive Equations <a title="Learn more about" class="helpurl" style="padding:5px;padding-left:22px;" onclick="helpurlClick(this);return false;"class="helpurl" href="${actionBean.helpUrl}#knovel.htm"><img class="i" src="/static/images/i.png" alt="" border="0"/></a><br/>and Tools&nbsp;<span class="smallTxt">Powered by <a href="http://www.knovel.com" title="Knovel" target="new">Knovel &reg;</a></span></div>
+        <div>Interactive Equations <a title="Learn more about" class="helpurl" style="padding:5px;padding-left:15px;" onclick="helpurlClick(this);return false;"class="helpurl" href="${actionBean.helpUrl}#knovel.htm"><img class="i" src="/static/images/i.png" alt="" border="0"/></a><br/>and Tools&nbsp;<span class="smallTxt">Powered by <a href="http://www.knovel.com" title="Knovel" target="new">Knovel &reg;</a></span></div>
         </div>
 
         <div class="padding5" >
