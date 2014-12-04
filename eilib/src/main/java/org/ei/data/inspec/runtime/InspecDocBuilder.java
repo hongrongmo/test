@@ -588,6 +588,29 @@ public class InspecDocBuilder implements DocumentBuilder {
                     citedby.setDoi(URLEncoder.encode((rset.getString("PDOI")).trim()));
                 }
 
+                if (rset.getString("PSN") != null) {
+                    citedby.setIssn((rset.getString("PSN")).trim());
+                }
+                
+                if (rset.getString("SBN") != null) {
+                    citedby.setIsbn((rset.getString("SBN")).trim());
+                }
+
+                if (rset.getString("PIPN") != null) {
+                    citedby.setPage((rset.getString("PIPN")).trim());
+                }
+
+                if (rset.getString("ANUM") != null) {
+                    citedby.setAccessionNumber((rset.getString("ANUM")).trim());
+                }
+
+                // System.out.println("**ABSTRACT** REFERENCE-COUNT= "+rset.getString("XREFNO")+" CITATION= "+getCitationCount(rset.getClob("CITATION")));
+                if (rset.getString("XREFNO") != null && getCitationCount(rset.getClob("CITATION")) > 0) {
+
+                    // ht.put(Keys.REFCNT, new XMLWrapper(Keys.REFCNT, rset.getString("XREFNO")));
+                }
+
+                
                 if (rset.getString("PVOLISS") != null) {
 
                     String volumeIssue = rset.getString("PVOLISS");
@@ -607,25 +630,6 @@ public class InspecDocBuilder implements DocumentBuilder {
                             citedby.setIssue(volumeIssue.trim());
                         }
                     }
-
-                    if (rset.getString("PSN") != null) {
-                        citedby.setIssn((rset.getString("PSN")).trim());
-                    }
-
-                    if (rset.getString("PIPN") != null) {
-                        citedby.setPage((rset.getString("PIPN")).trim());
-                    }
-
-                    if (rset.getString("ANUM") != null) {
-                        citedby.setAccessionNumber((rset.getString("ANUM")).trim());
-                    }
-
-                    // System.out.println("**ABSTRACT** REFERENCE-COUNT= "+rset.getString("XREFNO")+" CITATION= "+getCitationCount(rset.getClob("CITATION")));
-                    if (rset.getString("XREFNO") != null && getCitationCount(rset.getClob("CITATION")) > 0) {
-
-                        // ht.put(Keys.REFCNT, new XMLWrapper(Keys.REFCNT, rset.getString("XREFNO")));
-                    }
-
                 }
 
                 ht.put(Keys.CITEDBY, citedby);
@@ -1058,6 +1062,27 @@ public class InspecDocBuilder implements DocumentBuilder {
                 if (rset.getString("PDOI") != null) {
                     citedby.setDoi(URLEncoder.encode((rset.getString("PDOI")).trim()));
                 }
+                
+                if (rset.getString("PSN") != null) {
+                    citedby.setIssn((rset.getString("PSN")).trim());
+                }
+                
+                if (rset.getString("SBN") != null) {
+                    citedby.setIsbn((rset.getString("SBN")).trim());
+                }
+
+                if (rset.getString("PIPN") != null) {
+                    citedby.setPage((rset.getString("PIPN")).trim());
+                }
+
+                if (rset.getString("ANUM") != null) {
+                    citedby.setAccessionNumber(rset.getString("ANUM"));
+                }
+
+                if (rset.getString("XREFNO") != null && getCitationCount(rset.getClob("CITATION")) > 0) {
+
+                    // ht.put(Keys.REFCNT, new XMLWrapper(Keys.REFCNT, rset.getString("XREFNO")));
+                }
 
                 if (rset.getString("PVOLISS") != null) {
 
@@ -1077,23 +1102,6 @@ public class InspecDocBuilder implements DocumentBuilder {
                             volumeIssue = perl.substitute("s/no\\./n /i", volumeIssue);
                             citedby.setIssue(volumeIssue.trim());
                         }
-                    }
-
-                    if (rset.getString("PSN") != null) {
-                        citedby.setIssn((rset.getString("PSN")).trim());
-                    }
-
-                    if (rset.getString("PIPN") != null) {
-                        citedby.setPage((rset.getString("PIPN")).trim());
-                    }
-
-                    if (rset.getString("ANUM") != null) {
-                        citedby.setAccessionNumber(rset.getString("ANUM"));
-                    }
-
-                    if (rset.getString("XREFNO") != null && getCitationCount(rset.getClob("CITATION")) > 0) {
-
-                        // ht.put(Keys.REFCNT, new XMLWrapper(Keys.REFCNT, rset.getString("XREFNO")));
                     }
                 }
 
@@ -1788,6 +1796,22 @@ public class InspecDocBuilder implements DocumentBuilder {
                 if (rset.getString("PDOI") != null) {
                     citedby.setDoi(URLEncoder.encode((rset.getString("PDOI")).trim()));
                 }
+                
+                if (rset.getString("PSN") != null) {
+                    citedby.setIssn((rset.getString("PSN")).trim());
+                }
+                
+                if (rset.getString("SBN") != null) {
+                    citedby.setIsbn((rset.getString("SBN")).trim());
+                }
+
+                if (rset.getString("PIPN") != null) {
+                    citedby.setPage((rset.getString("PIPN")).trim());
+                }
+
+                if (rset.getString("ANUM") != null) {
+                    citedby.setAccessionNumber(rset.getString("ANUM"));
+                }
 
                 if (rset.getString("PVOLISS") != null) {
 
@@ -1807,18 +1831,6 @@ public class InspecDocBuilder implements DocumentBuilder {
                             volumeIssue = perl.substitute("s/no\\./n /i", volumeIssue);
                             citedby.setIssue(volumeIssue.trim());
                         }
-                    }
-
-                    if (rset.getString("PSN") != null) {
-                        citedby.setIssn((rset.getString("PSN")).trim());
-                    }
-
-                    if (rset.getString("PIPN") != null) {
-                        citedby.setPage((rset.getString("PIPN")).trim());
-                    }
-
-                    if (rset.getString("ANUM") != null) {
-                        citedby.setAccessionNumber(rset.getString("ANUM"));
                     }
                 }
 
@@ -2160,6 +2172,22 @@ public class InspecDocBuilder implements DocumentBuilder {
                 if (rset.getString("PDOI") != null) {
                     citedby.setDoi(URLEncoder.encode((rset.getString("PDOI")).trim()));
                 }
+                
+                if (rset.getString("PSN") != null) {
+                    citedby.setIssn((rset.getString("PSN")).trim());
+                }
+                
+                if (rset.getString("SBN") != null) {
+                    citedby.setIsbn((rset.getString("SBN")).trim());
+                }
+
+                if (rset.getString("PIPN") != null) {
+                    citedby.setPage((rset.getString("PIPN")).trim());
+                }
+
+                if (rset.getString("ANUM") != null) {
+                    citedby.setAccessionNumber(rset.getString("ANUM"));
+                }
 
                 if (rset.getString("PVOLISS") != null) {
 
@@ -2181,17 +2209,7 @@ public class InspecDocBuilder implements DocumentBuilder {
                         }
                     }
 
-                    if (rset.getString("PSN") != null) {
-                        citedby.setIssn((rset.getString("PSN")).trim());
-                    }
-
-                    if (rset.getString("PIPN") != null) {
-                        citedby.setPage((rset.getString("PIPN")).trim());
-                    }
-
-                    if (rset.getString("ANUM") != null) {
-                        citedby.setAccessionNumber(rset.getString("ANUM"));
-                    }
+                   
                 }
 
                 ht.put(Keys.CITEDBY, citedby);
@@ -2543,6 +2561,22 @@ public class InspecDocBuilder implements DocumentBuilder {
                     citedby.setDoi(URLEncoder.encode((rset.getString("PDOI")).trim()));
                 }
 
+                if (rset.getString("PSN") != null) {
+                    citedby.setIssn((rset.getString("PSN")).trim());
+                }
+                
+                if (rset.getString("SBN") != null) {
+                    citedby.setIsbn((rset.getString("SBN")).trim());
+                }
+
+                if (rset.getString("PIPN") != null) {
+                    citedby.setPage((rset.getString("PIPN")).trim());
+                }
+
+                if (rset.getString("ANUM") != null) {
+                    citedby.setAccessionNumber(rset.getString("ANUM"));
+                }
+                
                 if (rset.getString("PVOLISS") != null) {
 
                     String volumeIssue = rset.getString("PVOLISS");
@@ -2561,18 +2595,6 @@ public class InspecDocBuilder implements DocumentBuilder {
                             volumeIssue = perl.substitute("s/no\\./n /i", volumeIssue);
                             citedby.setIssue(volumeIssue.trim());
                         }
-                    }
-
-                    if (rset.getString("PSN") != null) {
-                        citedby.setIssn((rset.getString("PSN")).trim());
-                    }
-
-                    if (rset.getString("PIPN") != null) {
-                        citedby.setPage((rset.getString("PIPN")).trim());
-                    }
-
-                    if (rset.getString("ANUM") != null) {
-                        citedby.setAccessionNumber(rset.getString("ANUM"));
                     }
                 }
 

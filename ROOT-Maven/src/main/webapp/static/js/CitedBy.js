@@ -177,6 +177,17 @@ CitedByManager = {
 			    {
 			       queryString = queryString+"\"issn\":\""+tagObj.getAttribute("ISSN")+"\"";
 			    }
+			    if(tagObj.getAttribute("ISBN")!=null)
+			    {
+			    	if(queryString.length > 0){queryString += ",";}
+			    	queryString=queryString+"\"isbn\":\""+tagObj.getAttribute("ISBN")+"\"";
+			    }
+			    
+			    if(tagObj.getAttribute("ISBN13")!=null)
+			    {
+			    	if(queryString.length > 0){queryString += ",";}
+			    	queryString=queryString+"\"isbn13\":\""+tagObj.getAttribute("ISBN13")+"\"";
+			    }
 	
 			    if(tagObj.getAttribute("DOI")!=null)
 			    {

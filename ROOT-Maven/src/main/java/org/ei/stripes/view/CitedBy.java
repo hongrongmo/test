@@ -7,6 +7,8 @@ import org.apache.commons.httpclient.URIException;
 public class CitedBy {
 	private String md5; 	// MD5
 	private String issn;	// ISSN
+	private String isbn;
+	private String isbn13;
 	private String firstissue;	
 	private String firstvolume; 
 	private String firstpage;	
@@ -65,5 +67,17 @@ public class CitedBy {
 	public void setAn(String an) {
 		this.an = an;
 	}	
+	public String getIsbn() {
+		return isbn;
+	}
+	public void setIsbn(String isbn) {
+		this.isbn = isbn;
+	}
+	public String getIsbn13() {
+		return isbn13;
+	}
+	public void setIsbn13(String isbn13) {
+		this.isbn13 = isbn13;
+	}
 
 }
