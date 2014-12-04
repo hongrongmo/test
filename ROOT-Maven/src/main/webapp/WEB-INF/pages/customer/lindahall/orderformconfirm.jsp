@@ -4,7 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/xml" prefix="x"%>
 <%@ taglib uri="http://stripes.sourceforge.net/stripes.tld" prefix="stripes" %>
     
-<stripes:layout-render name="/WEB-INF/pages/layout/standard.jsp" pageTitle="Linda Hall Library Document Request">
+<stripes:layout-render name="/WEB-INF/pages/layout/standard.jsp" pageTitle="Linda Hall Library Document Request Confirmation">
 
     <stripes:layout-component name="header">
     <jsp:include page="/WEB-INF/pages/include/headernull.jsp" />
@@ -41,7 +41,7 @@
     <stripes:hidden name="deliveryEmail" />
             
 	<div class="marginL10">
-		<h2>Linda Hall Library Document Request</h2>
+		<h2>Linda Hall Library Document Request Confirmation</h2>
 
         <ul class="errors" id="jserrors">
         <stripes:errors>
@@ -116,7 +116,8 @@
     <stripes:layout-component name="jsbottom_custom">
     <SCRIPT LANGUAGE="Javascript" SRC="/static/js/LindaHallOrder.js?v=${releaseversion}"/>
     </stripes:layout-component>
-    
+    <stripes:layout-component name="modal_dialog_msg"/>
+	<stripes:layout-component name="modal_dialog"/>
 	<stripes:layout-component name="footer">
 
     <div class="hr" style="margin:20px 0 7px 0; color:#d7d7d7; background-color:#d7d7d7; height: 2px;"><hr/></div>

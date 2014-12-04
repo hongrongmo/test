@@ -14,6 +14,7 @@ import javax.xml.ws.Holder;
 import org.apache.commons.lang.StringEscapeUtils;
 import org.apache.log4j.Logger;
 import org.apache.wink.json4j.JSONArray;
+import org.apache.wink.json4j.JSONObject;
 import org.ei.exception.InfrastructureException;
 import org.ei.exception.ServiceException;
 import org.ei.exception.SystemErrorCodes;
@@ -46,8 +47,10 @@ import com.elsevier.webservices.wsdls.metadata.abstracts.service.v10.AbstractsMe
 import com.elsevier.webservices.wsdls.search.fast.service.v4.FastSearchServicePortTypeV4;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+
 /**
- * The Class CitedByServiceImpl.
+ * @author kamaramx
+ *
  */
 public class CitedByServiceImpl implements CitedByService {
 
@@ -93,12 +96,6 @@ public class CitedByServiceImpl implements CitedByService {
 		String xQuery = buildXQueryForDocSearch(eid,doi);
 		List<SearchDocumentType> documentTypes = doFastSearch(xQuery);
    		resultList = parseDocumentSearch(documentTypes);
-
-   		if(doi != null && doi.length()>0 && resultList.size()>0){
-   			xQuery = buildXQueryForAuthorSearch(doi);
-   			documentTypes = doFastSearch(xQuery);
-   			resultList = parseAuthSearch(documentTypes, resultList);
-   		}
 
    		for(HashMap<String, String> mapElem : resultList) {
    			jsonArray.add(mapElem);
@@ -322,22 +319,14 @@ public class CitedByServiceImpl implements CitedByService {
 		return resultList;
 	}
 
+
 	/**
-	 * Parses the auth search.
-	 *
-	 * @param documentTypes the document types
-	 * @param resultList the result list
-	 * @return the list
+	 * @param documentTypes
+	 * @return
 	 */
-	private List<HashMap<String, String>> parseAuthSearch(List<SearchDocumentType> documentTypes,List<HashMap<String, String>>  resultList){
-		if(documentTypes == null){
-			return resultList;
-		}
-
-		HashMap<String, String> firstDoc = resultList.get(0);
-
-		if(firstDoc != null){
-			for (SearchDocumentType documentType : documentTypes) {
+	private HashMap<String, String> parseAuthSearchDetails(List<SearchDocumentType> documentTypes){
+		HashMap<String, String> authorsMap = new HashMap<String, String>();
+		for (SearchDocumentType documentType : documentTypes) {
 				for (SummaryType summaryType : documentType.getSummary()) {
 					String value = summaryType.getValue();
 					String field = summaryType.getField();
@@ -348,11 +337,8 @@ public class CitedByServiceImpl implements CitedByService {
 							value = value.replaceAll("\\|",", ");
 							value = StringEscapeUtils.escapeXml(value);
 						}
-
-						firstDoc.put("PROFILE_AUTHOR",value);
-
+						authorsMap.put("PROFILE_AUTHOR",value);
 					}
-
 					if(field.equals("authid"))
 					{
 						if(value!=null)
@@ -360,13 +346,46 @@ public class CitedByServiceImpl implements CitedByService {
 							value = value.replaceAll(" \\| ",", ");
 							value = (StringEscapeUtils.escapeXml(value)).trim();
 						}
-						firstDoc.put("PROFILE_AUTHORID",value);
-
+						authorsMap.put("PROFILE_AUTHORID",value);
 					}
 				}
+		}
+		return authorsMap;
+	}
+	
+
+	/**
+	 * @param citedBy
+	 * @return
+	 * @throws ServiceException
+	 * @throws InfrastructureException
+	 */
+	public JSONObject getAuthorDetails(String citedBy) throws ServiceException,InfrastructureException{
+		
+		JSONObject jsonObject = null;
+		
+		if(citedBy == null || citedBy.length() ==0){
+			return jsonObject;
+		}
+		String doiVal = null;
+		List<CitedByCount> countList = parseInput(citedBy);
+		if (countList != null) {
+			CitedByCount count = (CitedByCount) countList.get(0);
+			if(count != null && checkMD5(count)){
+				doiVal = count.getDoi();
 			}
 		}
-		return resultList;
+		if(doiVal != null && !doiVal.trim().equalsIgnoreCase("")){
+			String xQuery = buildXQueryForAuthorSearch(doiVal);
+			List<SearchDocumentType> documentTypes = doFastSearch(xQuery);
+			if(documentTypes != null && documentTypes.size()>0){
+				HashMap<String, String> hashMap = parseAuthSearchDetails(documentTypes);
+				if(hashMap != null && hashMap.size()>0){
+					jsonObject = new JSONObject(hashMap);
+				}
+ 			}
+		}
+		return jsonObject;
 	}
 
 	/* (non-Javadoc)
@@ -377,8 +396,7 @@ public class CitedByServiceImpl implements CitedByService {
 		if(citedBy == null || citedBy.length() ==0){
 			return citedByCountArray;
 		}
-
-
+		
 		 citedByCountArray = doXAbsMetadataSearch(citedBy);
 
 		return citedByCountArray;
