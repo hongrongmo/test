@@ -235,7 +235,12 @@ public class BDDocBuilder implements DocumentBuilder {
                     if (rset.getString("ACCESSNUMBER") != null) {
                         citedby.setAccessionNumber(rset.getString("ACCESSNUMBER"));
                     }
-
+                    
+                    if (rset.getString("ISBN") != null) {
+                        citedby.setIsbn(getIsbn(rset.getString("ISBN"), 10));
+                        citedby.setIsbn13(getIsbn(rset.getString("ISBN"), 13));
+                    }
+                    
                     buildField(Keys.CITEDBY, citedby, ht);
                 }
 
