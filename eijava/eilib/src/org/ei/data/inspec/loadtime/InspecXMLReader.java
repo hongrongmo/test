@@ -1279,6 +1279,7 @@ public class InspecXMLReader extends FilterReader
 		{
 			if(e.getChild("stdno")!=null)
 				record.put("RNUM",getMixData(e.getChild("stdno").getContent(),new StringBuffer()));
+			if(e.getChild("version")!=null)
 				record.put("VRN",getMixData(e.getChild("version").getContent(),new StringBuffer()));
 		}
 
