@@ -517,46 +517,58 @@ public class NewDataTesting
 	private void getMIDFromFast()
 	{
 
-
+		Statement stmt = null;
+		ResultSet rs = null;
+		Connection con = null;
 		try
 		{
+			con = getConnection(this.URL,this.driver,this.username,this.password);
+			String sqlQuery = "select id_number,m_id from georef_master_delete";
+			stmt = con.createStatement();
 
-
-			//in = new BufferedReader(new FileReader("test.txt"));
-			FastClient client = new FastClient();
-			client.setBaseURL("http://ei-main.nda.fastsearch.net:15100");
-			client.setResultView("ei");
-			client.setOffSet(0);
-			client.setPageSize(50000);
-			client.setQueryString("(((((all:\"cerium alloy\")) OR ((cv:\"QQDelQQ cerium alloys QQDelQQ\"))) OR ((all:\"ce alloy\" OR all:\"ce alloys\")))) AND (yr:[1970;2015]) AND (((db:cpx OR db:c84)))");
-			client.setDoCatCount(true);
-			client.setDoNavigators(true);
-			client.setPrimarySort("ausort");
-			client.setPrimarySortDirection("+");
-			client.search();
-
-			List l = client.getDocIDs();
-			System.out.println("SIZE="+l.size());
-			StringBuffer sb=new StringBuffer();
-			for(int i=0;i<l.size();i++)
+			System.out.println("QUERY= "+sqlQuery);
+			rs = stmt.executeQuery(sqlQuery);
+			int k = 0;
+			while (rs.next())
 			{
-				String[] docID = (String[])l.get(i);
-				if(i % 1000==0)
-				{
-					sb.append("'"+docID[0]+"',");
-					getAccessnumber(sb.toString());
-					System.out.println(sb.toString());
-					sb=new StringBuffer();
-					//System.out.println("docID"+i+"\t"+docID[0]+"\t"+docID[1]+"\t"+docID[2]);
-				}
-				else
-				{
-					sb.append("'"+docID[0]+"',");
-				}
+				Thread.currentThread().sleep(250);
+				String accessnumber = rs.getString("id_number");
+				String m_id = rs.getString("m_id");
 
+
+				//in = new BufferedReader(new FileReader("test.txt"));
+				FastClient client = new FastClient();
+				client.setBaseURL("http://ei-main.nda.fastsearch.net:15100");
+				client.setResultView("ei");
+				client.setOffSet(0);
+				client.setPageSize(50000);
+				//client.setQueryString("(((((all:\"cerium alloy\")) OR ((cv:\"QQDelQQ cerium alloys QQDelQQ\"))) OR ((all:\"ce alloy\" OR all:\"ce alloys\")))) AND (yr:[1970;2015]) AND (((db:cpx OR db:c84)))");
+				client.setQueryString("(AN:\""+accessnumber+"\") and db:grf");
+				client.setDoCatCount(true);
+				client.setDoNavigators(true);
+				client.setPrimarySort("ausort");
+				client.setPrimarySortDirection("+");
+				client.search();
+
+				List l = client.getDocIDs();
+				//System.out.println("SIZE="+l.size());
+				StringBuffer sb=new StringBuffer();
+				for(int i=0;i<l.size();i++)
+				{
+					String[] docID = (String[])l.get(i);
+
+					if(!m_id.equals(docID[0]))
+					{
+						System.out.println("m_id="+m_id+" docID="+docID[0]+" id_number="+accessnumber);
+					}
+					else
+					{
+						System.out.println("id_number "+accessnumber+" has the same m_id");
+					}
+				}
 			}
-			getAccessnumber(sb.toString());
-			System.out.println(sb.toString());
+			//getAccessnumber(sb.toString());
+			//System.out.println(sb.toString());
 
 
 		}
