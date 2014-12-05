@@ -140,6 +140,36 @@ public class BaseTableRecord
 	public static final BaseTableRecord APIAT = new BaseTableRecord("APIAT", new Integer(4000), "elt");
 	public static final BaseTableRecord SEQ_NUM = new BaseTableRecord("SEQ_NUM", new Integer(4000), "elt");
 
+	public static final BaseTableRecord REFERENCETITLE= new BaseTableRecord("REFERENCETITLE", new Integer(500000), "cpx");
+	public static final BaseTableRecord REFERENCEAUTHOR= new BaseTableRecord("REFERENCEAUTHOR", new Integer(500000), "cpx");
+	public static final BaseTableRecord REFERENCESOURCETITLE= new BaseTableRecord("REFERENCESOURCETITLE", new Integer(500000), "cpx");
+	public static final BaseTableRecord REFERENCEPUBLICATIONYEAR= new BaseTableRecord("REFERENCEPUBLICATIONYEAR", new Integer(500000), "cpx");
+	public static final BaseTableRecord REFERENCEVOLUME= new BaseTableRecord("REFERENCEVOLUME", new Integer(500000), "cpx");
+	public static final BaseTableRecord REFERENCEISSUE= new BaseTableRecord("REFERENCEISSUE", new Integer(500000), "cpx");
+	public static final BaseTableRecord REFERENCEPAGES= new BaseTableRecord("REFERENCEPAGES", new Integer(500000), "cpx");
+	public static final BaseTableRecord REFERENCEFULLTEXT= new BaseTableRecord("REFERENCEFULLTEXT", new Integer(500000), "cpx");
+	public static final BaseTableRecord REFERENCETEXT= new BaseTableRecord("REFERENCETEXT", new Integer(500000), "cpx");
+	public static final BaseTableRecord REFERENCEWEBSITE= new BaseTableRecord("REFERENCEWEBSITE", new Integer(500000), "cpx");
+	public static final BaseTableRecord REFERENCEITEMID= new BaseTableRecord("REFERENCEITEMID", new Integer(500000), "cpx");
+	public static final BaseTableRecord REFERENCEITEMCITATIONPII= new BaseTableRecord("REFERENCEITEMCITATIONPII", new Integer(500000), "cpx");
+	public static final BaseTableRecord REFERENCEITEMCITATIONDOI= new BaseTableRecord("REFERENCEITEMCITATIONDOI", new Integer(500000), "cpx");
+	public static final BaseTableRecord REFERENCEITEMCITATIONCITATIONTITLE = new BaseTableRecord("REFERENCEITEMCITATIONCITATIONTITLE", new Integer(500000), "cpx");
+	public static final BaseTableRecord REFERENCEITEMCITATIONAUTHOR= new BaseTableRecord("REFERENCEITEMCITATIONAUTHOR", new Integer(500000), "cpx");
+	public static final BaseTableRecord REFERENCEITEMCITATIONSOURCETITLE= new BaseTableRecord("REFERENCEITEMCITATIONSOURCETITLE", new Integer(500000), "cpx");
+	public static final BaseTableRecord REFERENCEITEMCITATIONSOURCETITLEABBREV= new BaseTableRecord("REFERENCEITEMCITATIONSOURCETITLE_ABBREV", new Integer(500000), "cpx");
+	public static final BaseTableRecord REFERENCEITEMCITATIONISSN= new BaseTableRecord("REFERENCEITEMCITATIONISSN", new Integer(500000), "cpx");
+	public static final BaseTableRecord REFERENCEITEMCITATIONISBN= new BaseTableRecord("REFERENCEITEMCITATIONISBN", new Integer(500000), "cpx");
+	public static final BaseTableRecord REFERENCEITEMCITATIONCODEN= new BaseTableRecord("REFAERENCEITEMCITATIONCODEN", new Integer(500000), "cpx");
+	public static final BaseTableRecord REFERENCEITEMCITATIONPART= new BaseTableRecord("REFERENCEITEMCITATIONPART", new Integer(500000), "cpx");
+	public static final BaseTableRecord REFERENCEITEMCITATIONPUBLICATIONYEAR= new BaseTableRecord("REFERENCEITEMCITATIONPUBLICATIONYEAR", new Integer(500000), "cpx");
+	public static final BaseTableRecord REFERENCEITEMCITATIONVOLUME= new BaseTableRecord("REFERENCEITEMCITATIONVOLUME", new Integer(500000), "cpx");
+	public static final BaseTableRecord REFERENCEITEMCITATIONISSUE= new BaseTableRecord("REFERENCEITEMCITATIONISSUE", new Integer(500000), "cpx");
+	public static final BaseTableRecord REFERENCEITEMCITATIONPAGE= new BaseTableRecord("REFERENCEITEMCITATIONPAGE", new Integer(500000), "cpx");
+	public static final BaseTableRecord REFERENCEITEMCITATIONARTICLENUMBER= new BaseTableRecord("REFERENCEITEMCITATIONARTICLENUMBER", new Integer(500000), "cpx");
+	public static final BaseTableRecord REFERENCEITEMCITATIONWEBSITE= new BaseTableRecord("REFERENCEITEMCITATIONWEBSITE", new Integer(500000), "cpx");
+	public static final BaseTableRecord REFERENCEITEMCITATIONEADDRESS= new BaseTableRecord("REFERENCEITEMCITATIONEADDRESS", new Integer(500000), "cpx");
+	public static final BaseTableRecord REFERENCEITEMCITATIONREFTEXT= new BaseTableRecord("REFERENCEITEMCITATIONREFTEXT", new Integer(500000), "cpx");
+
 
 	static
 	{
@@ -236,7 +266,7 @@ public class BaseTableRecord
 	    bdTableColumns.add(SECPUBDATE);
 	    bdTableColumns.add(FIG);
 	    bdTableColumns.add(SECVOLUME);
-	    bdTableColumns.add(SECISSUE);	    
+	    bdTableColumns.add(SECISSUE);
 	    bdTableColumns.add(APILT);
 	    bdTableColumns.add(APILT1);
 	    bdTableColumns.add(APILTM);
@@ -246,7 +276,63 @@ public class BaseTableRecord
 	    bdTableColumns.add(APIATM);
 	    bdTableColumns.add(APIAT);
 	    bdTableColumns.add(SEQ_NUM);
-	    
+
+		//ADDED FOR REFERENCE
+		bdTableColumns.add(REFERENCETITLE);
+		bdTableColumns.add(REFERENCEAUTHOR);
+		bdTableColumns.add(REFERENCESOURCETITLE);
+		bdTableColumns.add(REFERENCEPUBLICATIONYEAR);
+		bdTableColumns.add(REFERENCEVOLUME);
+		bdTableColumns.add(REFERENCEISSUE);
+		bdTableColumns.add(REFERENCEPAGES);
+		bdTableColumns.add(REFERENCEFULLTEXT);
+		bdTableColumns.add(REFERENCETEXT);
+		bdTableColumns.add(REFERENCEWEBSITE);
+		bdTableColumns.add(REFERENCEITEMID);
+		bdTableColumns.add(REFERENCEITEMCITATIONPII);
+		bdTableColumns.add(REFERENCEITEMCITATIONDOI);
+		bdTableColumns.add(REFERENCEITEMCITATIONCITATIONTITLE);
+		bdTableColumns.add(REFERENCEITEMCITATIONAUTHOR);
+		bdTableColumns.add(REFERENCEITEMCITATIONSOURCETITLE);
+		bdTableColumns.add(REFERENCEITEMCITATIONSOURCETITLEABBREV);
+		bdTableColumns.add(REFERENCEITEMCITATIONISSN);
+		bdTableColumns.add(REFERENCEITEMCITATIONISBN);
+		bdTableColumns.add(REFERENCEITEMCITATIONCODEN);
+		bdTableColumns.add(REFERENCEITEMCITATIONPART);
+		bdTableColumns.add(REFERENCEITEMCITATIONPUBLICATIONYEAR);
+		bdTableColumns.add(REFERENCEITEMCITATIONVOLUME);
+		bdTableColumns.add(REFERENCEITEMCITATIONISSUE);
+		bdTableColumns.add(REFERENCEITEMCITATIONPAGE);
+		bdTableColumns.add(REFERENCEITEMCITATIONARTICLENUMBER);
+		bdTableColumns.add(REFERENCEITEMCITATIONWEBSITE);
+		bdTableColumns.add(REFERENCEITEMCITATIONEADDRESS);
+	    bdTableColumns.add(REFERENCEITEMCITATIONREFTEXT);
+
 
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

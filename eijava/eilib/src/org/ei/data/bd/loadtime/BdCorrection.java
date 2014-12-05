@@ -883,6 +883,7 @@ public class BdCorrection
 		int intDbMask = databaseConfig.getMask(dbName);
 
 		Iterator searchTerms = inputMap.keySet().iterator();
+		System.out.println("total Fast search size for "+ searchField+" is "+  inputMap.size());
 
 		while (searchTerms.hasNext())
 		{
@@ -919,6 +920,7 @@ public class BdCorrection
 				System.out.println("term1= "+term1);
 				e.printStackTrace();
 			}
+			Thread.currentThread().sleep(100);
 
 		}
 

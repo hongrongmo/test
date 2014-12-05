@@ -78,6 +78,7 @@ public class BaseTableWriter
 			if(valueString != null)
 			{
 				recordBuf.append(valueString);
+				//recordBuf.append(thisColumnName+":"+valueString);
 			}
 
 			recordBuf.append(FIELDDELIM);

@@ -1414,7 +1414,7 @@ public class BDDocBuilder
     return strValue;
   }
 
-	private Contributors getAuthors(Key key,
+	public Contributors getAuthors(Key key,
 		        					String authorString,
 		        					String authorString1,
 		        					String dataFormat)
