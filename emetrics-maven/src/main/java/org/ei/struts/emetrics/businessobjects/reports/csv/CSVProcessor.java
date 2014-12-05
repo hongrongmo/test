@@ -68,7 +68,7 @@ public class CSVProcessor {
 
     protected List handleQuery(ResultsSet resultsSet, Map pStmntValues, ResultProcessor processor) throws IOException {
 
-        List results = new ArrayList();
+        List<DynaBean> results = new ArrayList<DynaBean>();
         BufferedReader in = null;
 
         try {
@@ -153,7 +153,7 @@ public class CSVProcessor {
             boolean sumYTD = false;
             int thisYear = Calendar.getInstance().get(Calendar.YEAR);
 
-            Collection resultcolumns = resultsSet.getResults();
+            Collection<Result> resultcolumns = resultsSet.getResults();
 
             // read column values
             while ((record = in.readLine()) != null) {
@@ -250,9 +250,9 @@ public class CSVProcessor {
                 results.add(sumBean);
 
                 // walk all columns
-                Iterator iter = resultcolumns.iterator();
+                Iterator<Result> iter = resultcolumns.iterator();
                 while (iter.hasNext()) {
-                    Result rescol = (Result) iter.next();
+                    Result rescol = iter.next();
                     String colname = rescol.getColumn();
 
                     try {
