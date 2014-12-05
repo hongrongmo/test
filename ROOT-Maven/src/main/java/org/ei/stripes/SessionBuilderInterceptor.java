@@ -180,7 +180,7 @@ public class SessionBuilderInterceptor implements Interceptor {
 		// *****************************************************
 		// Print out request information
 		// *****************************************************
-		log4j.warn("********* Servicing request **********" + EVProperties.NEWLINE + HttpRequestUtil.prettyPrintRequest(request, EVProperties.NEWLINE));
+		log4j.warn("********* Servicing request **********" + sessionmanager.prettyPrintRequest(usersession, EVProperties.NEWLINE));
 		if (log4j.isInfoEnabled()) {
 			RequestDumper.dump(request, "params,headers");
 			log4j.info("client IP for this request is==================================="
