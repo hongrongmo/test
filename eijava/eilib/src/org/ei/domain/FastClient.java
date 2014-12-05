@@ -12,6 +12,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.StringTokenizer;
 
+import java.net.*;
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.HttpMethod;
 import org.apache.commons.httpclient.methods.GetMethod;
@@ -503,6 +504,7 @@ public class FastClient
         this.offSet = o;
     }
 
+	/*
     public void search()
         throws SearchException
     {
@@ -522,6 +524,7 @@ public class FastClient
         }
         catch(Exception e)
         {
+			e.printStackTrace();
             throw new SearchException(new Exception("<DISPLAY>A network error has occurred, your request cannot be completed.</DISPLAY>"));
         }
         finally
@@ -550,6 +553,44 @@ public class FastClient
                 }
             }
         }
+    }
+
+	*/
+
+	 public void search()
+	        throws SearchException
+	    {
+	        BufferedReader in = null;
+			URL urlConnection =null;
+
+	        try
+	        {
+	            String url = buildSearchURL();
+	            urlConnection = new URL(url);
+	            in = new BufferedReader(new InputStreamReader(urlConnection.openStream()));
+	            read(in);
+	        }
+	        catch(Exception e)
+	        {
+				e.printStackTrace();
+	            throw new SearchException(new Exception("<DISPLAY>A network error has occurred, your request cannot be completed.</DISPLAY>"));
+	        }
+	        finally
+	        {
+
+	            if(in != null)
+	            {
+	                try
+	                {
+	                    in.close();
+	                }
+	                catch(Exception e1)
+	                {
+	                    e1.printStackTrace();
+	                }
+	            }
+
+	        }
     }
 
 	public FastDeduper dedupSearch(String fieldPref,
