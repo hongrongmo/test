@@ -302,6 +302,12 @@ public final class EVProperties {
     
     /** The Constant DOWNTIME_MESSAGE_COLOR. */
     public static final String DOWNTIME_MESSAGE_COLOR ="downtime.message.color";
+    
+    /** The Constant IE7_WARN_MSG_ENABLED. */
+    public static final String IE7_WARN_MSG_ENABLED ="ie7.warn.msg.enabled";
+    
+    /** The Constant IE7_WARN_MSG_TEXT. */
+    public static final String IE7_WARN_MSG_TEXT ="ie7.warn.msg.text";
 
     private static EVProperties instance;
 

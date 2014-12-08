@@ -628,6 +628,25 @@ label.hidden{
 	height:1px;
 	overflow:hidden;
 }
+
+#ie7msg{
+padding-left: 5px;
+background-color: #F2F5A9;
+color: black;
+border: 1px solid #F5DA81;
+width: 97%;
+border-radius: 3px;
+margin-left: 13px;
+font-size: 13px;
+box-shadow: 2px 2px 5px #aaa;
+fill-opacity: 1;
+margin-bottom: 5px;
+margin-top: 5px;
+padding-top: 4px;
+padding-bottom: 5px;
+padding-right:10px;
+}
+
 #prefsSaved, #dlprefsSaved, #dlprefsandsettingsSaved{
 padding-left: 10px;
 background-color: rgb(187, 218, 210);

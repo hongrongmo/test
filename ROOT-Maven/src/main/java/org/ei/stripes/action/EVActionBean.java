@@ -65,7 +65,7 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
     protected boolean showpatentshelp;
     protected CustomizedLogo customlogo;
     private String s3FigUrl = null;
-
+    
    	private boolean showLoginBox = true;
     private StopWatch requeststopwatch = null;
 
@@ -626,6 +626,15 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
     				msg="<span style=\"color:"+color+"\">"+msg+"</span>";
     			}
     		}
+    	}
+    	return msg;
+    }
+    
+    public String getIE7Msg(){
+    	String msg = null;
+    	boolean isEnabled = Boolean.parseBoolean((EVProperties.getProperty(EVProperties.IE7_WARN_MSG_ENABLED)));
+    	if(isEnabled){
+    		msg = EVProperties.getProperty(EVProperties.IE7_WARN_MSG_TEXT);
     	}
     	return msg;
     }
