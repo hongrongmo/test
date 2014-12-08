@@ -32,7 +32,6 @@ function onloadfunction(){
 	     var ieversion=new Number(RegExp.$1);
 	     if (ieversion<8)
 	     {
-	    	 alert(document.getElementById('ie7msg'));
 	       if(document.getElementById('ie7msg') != 'undefined' &&  document.getElementById('ie7msg') != null ){
 	    	   document.getElementById('ie7msg').style.display = 'block';
 	       }
