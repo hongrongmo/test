@@ -90,6 +90,19 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
       function flipLogin(button, from) {
       	return false;
       }
+    
+      $(document).ready(function(){
+    	  if (/MSIE (\d+\.\d+);/.test(navigator.userAgent))
+    	  { 
+    	     var ieversion=new Number(RegExp.$1);
+    	     if (ieversion<8)
+    	     {
+    	       if($('#ie7msg').length>0){
+    	    	   $('#ie7msg').css( "display","block" );
+    	       }
+    	     }
+    	  }
+      });
 
     </script>
 
