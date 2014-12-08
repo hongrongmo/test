@@ -38,7 +38,7 @@
 		</c:if>
 	<stripes:layout-component name="csshead"/>
 </head>
-<body>
+<body onload="onloadfunction();">
 	<a class="skiptonavlink" href="#searchnavlink">Navigate to top Navigation "Search"</a>
 <stripes:layout-component name="SkipToNavigation">
 <!-- Override in jsp to use custom skip to links links -->
@@ -91,18 +91,19 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
       	return false;
       }
     
-      $(document).ready(function(){
+      function onloadfunction(){
+    		
     	  if (/MSIE (\d+\.\d+);/.test(navigator.userAgent))
     	  { 
     	     var ieversion=new Number(RegExp.$1);
     	     if (ieversion<8)
     	     {
-    	       if($('#ie7msg').length>0){
-    	    	   $('#ie7msg').css( "display","block" );
+    	       if(document.getElementById('ie7msg') != 'undefined' &&  document.getElementById('ie7msg') != null ){
+    	    	   document.getElementById('ie7msg').style.display = 'block';
     	       }
     	     }
     	  }
-      });
+    }
 
     </script>
 
