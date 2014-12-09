@@ -42,7 +42,7 @@ public class SearchHistoryAction extends BaseSearchAction {
     @Validate(mask = "[a-zA-Z\\-1-9]*")
     String searchid;
 
-    @Validate(mask = "[1-9#A-Za-z\\s]*")
+    @Validate(mask = "[1-9#A-Za-z\\s\\*]*")
     String txtcombine;
 
     private Query queryObject = new Query();
