@@ -16,11 +16,7 @@
         ${actionBean.context.userSession.carsMetaData.headerContent}
         <script type="text/javascript">
         $("#loginBox").hide();
-        var rpadding = "0px";
-        <c:if test="${(userprefs.clientCustomLogo) || (not empty actionBean.customlogo)}">
-        	rpadding = "30px";
-        </c:if>
-        $("#login ul").prepend('<li style="background:none;padding-right:'+rpadding+'"><a target="new" href="https://docs.google.com/forms/d/1Fw5dUHQosH7-uHkQ7nnJQ6BzvxpxpJYyx-peUXfpy3E/viewform" title="Give feedback on Engineering Village"><img src="/static/images/feedback.png"/></a></li>');
+        $("#login ul").prepend('<li style="background:none;"><a target="new"  href="https://docs.google.com/forms/d/1Fw5dUHQosH7-uHkQ7nnJQ6BzvxpxpJYyx-peUXfpy3E/viewform" title="Give feedback on Engineering Village"><img style="height:22px;"  src="/static/images/feedback.png"/></a></li>');
         </script>
 				
         </c:when>
