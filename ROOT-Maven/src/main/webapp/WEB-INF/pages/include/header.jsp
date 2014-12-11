@@ -125,8 +125,10 @@
 </ul>
 
 </div>
-
 </div>
+<c:if test="${not empty actionBean.IE7Msg}">
+  	<div id="ie7msg" style="text-align:left;display:none"><img src="/static/images/red_warning.gif" style="padding-right:5px;width:20px;margin-top:-3px; float:left"/><span id="ie7messageholder">${actionBean.IE7Msg}</span></div>
+</c:if>
 <div id="prefsSaved" style="display:none;text-align:left;"><img src="/static/images/ev_checkmark.png" style="padding-right:5px;width:20px;"/>Preferences Saved!</div>
 <c:choose>
 	<c:when test="${actionBean.context.userSession.user.individuallyAuthenticated}">
@@ -159,7 +161,7 @@
   </c:if>
 
   $(function() {	  if($("#settingMenu").length > 0){
-		$("#settingMenu").menu({position:{my:'right+25 top+20'}, icons: { submenu: "ui-icon-triangle-1-s" }});
+	  $("#settingMenu").menu({position:{my:'right+25 top+20'}, icons: { submenu: "ui-icon-triangle-1-s" }});
 		$("#settingDropDown").show();
 		//showTooltip(".settingMenu","We have Added New Settings!", "top-left", 4500, true);
 	  }
