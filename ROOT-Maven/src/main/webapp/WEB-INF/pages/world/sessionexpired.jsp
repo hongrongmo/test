@@ -9,7 +9,7 @@
 	<link href="/static/css/ev_txt.css?v=${releaseversion}" media="all" type="text/css" rel="stylesheet"></link>
 	<link href="/static/css/ev_common_sciverse.css?v=${releaseversion}" media="all" type="text/css" rel="stylesheet"></link>
 	</head>
-<body>
+<body onload="onloadfunction();">
 
 <jsp:include page="/WEB-INF/pages/include/headernull.jsp" />
 <div id="container" class="marginL15">
@@ -24,6 +24,22 @@
     <br/>
     <br/>
 </div>
+<script>
+function onloadfunction(){
+	
+	  if (/MSIE (\d+\.\d+);/.test(navigator.userAgent))
+	  { 
+	     var ieversion=new Number(RegExp.$1);
+	     if (ieversion<8)
+	     {
+	       if(document.getElementById('ie7msg') != 'undefined' &&  document.getElementById('ie7msg') != null ){
+	    	   document.getElementById('ie7msg').style.display = 'block';
+	       }
+	     }
+	  }
+}
+
+</script>
 
 <jsp:include page="/WEB-INF/pages/include/footer.jsp" />
 <jsp:include page="/WEB-INF/pages/include/copyright.jsp" />
