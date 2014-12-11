@@ -1,5 +1,7 @@
 package org.ei.data.georef.runtime;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.sql.Clob;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -11,6 +13,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.oro.text.perl.Perl5Util;
+import org.ei.data.CITEDBY;
 import org.ei.data.DataCleaner;
 import org.ei.domain.Affiliation;
 import org.ei.domain.Affiliations;
@@ -281,6 +284,8 @@ public abstract class DocumentView {
 
         addDocumentValue(Keys.CATEGORY, new CategoryDecorator(createColumnValueField("CATEGORY_CODE")));
 
+        addCitedBy(rset);
+        
         EIDoc eiDoc = new EIDoc(did, ht, getFormat());
         eiDoc.exportLabels(exportLabels());
         eiDoc.setLoadNumber(rset.getInt("LOAD_NUMBER"));
@@ -288,6 +293,53 @@ public abstract class DocumentView {
 
         return eiDoc;
     }
+    
+    private void addCitedBy(ResultSet rset) throws SQLException{
+    	
+    	if(isIncluded(Keys.CITEDBY)){
+    		CITEDBY citedby = new CITEDBY();
+            citedby.setKey(Keys.CITEDBY);
+
+            if (rset.getString("DOI") != null) {
+                try {
+    				citedby.setDoi(URLEncoder.encode((rset.getString("DOI")).trim(), "UTF-8"));
+    			} catch (UnsupportedEncodingException e) {
+    				// TODO Auto-generated catch block
+    				e.printStackTrace();
+    			}
+            }
+            if (rset.getString("VOLUME_ID") != null) {
+                citedby.setVolume((rset.getString("VOLUME_ID")).trim());
+            }
+
+            if (rset.getString("ISSUE_ID") != null) {
+                citedby.setIssue((rset.getString("ISSUE_ID")).trim());
+            }
+
+            if (rset.getString("ISSN") != null) {
+                citedby.setIssn((rset.getString("ISSN")).trim());
+            }
+            
+            if (rset.getString("ISBN") != null) {
+            	String[] multivalues = rset.getString("ISBN").split(GRFDocBuilder.AUDELIMITER);
+            	if(multivalues != null && multivalues.length>0){
+            		citedby.setIsbn((multivalues[0]).trim());
+            	}
+            }
+
+            String pages  = getPages(); 
+            
+            if ( pages != null) {
+            	citedby.setPage(pages.trim());
+            }
+
+            if (rset.getString("ID_NUMBER") != null) {
+                citedby.setAccessionNumber(rset.getString("ID_NUMBER"));
+            }
+            putElementData(Keys.CITEDBY, citedby);
+    	}
+    }
+    
 
     public String toString() {
         return getFormat() + "\n == \n" + getQuery();

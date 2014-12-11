@@ -111,7 +111,7 @@
 	<SCRIPT LANGUAGE="Javascript" SRC="/static/js/SelectedRecords.js?v=${releaseversion}"></script>
 	<SCRIPT LANGUAGE="Javascript" SRC="/static/js/SearchResults.js?v=${releaseversion}"></script>
 	<SCRIPT LANGUAGE="Javascript" SRC="/static/js/QuickResults.js?v=${releaseversion}"></script>
-	<SCRIPT LANGUAGE="Javascript" SRC="/static/js/CitedBy.js?v=3"></script>
+	<SCRIPT LANGUAGE="Javascript" SRC="/static/js/CitedBy.js?v=4"></script>
 	<script type="text/javascript" src="/static/js/TagsAjax.js?v=2"></script>
 	<SCRIPT LANGUAGE="Javascript" SRC="/static/js/Basket.js?v=2"></script>
 	<SCRIPT LANGUAGE="Javascript" SRC="/static/js/oneclick.js?v=2"></script>

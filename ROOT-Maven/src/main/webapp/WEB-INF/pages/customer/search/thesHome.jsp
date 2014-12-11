@@ -19,7 +19,10 @@
 	</style>
 <![endif]-->
 	</stripes:layout-component>
-
+<stripes:layout-component name="SkipToNavigation">
+	<a class="skiptonavlink" href="#searchtablink">Navigate to Quick Search Tab</a>
+	<a class="skiptonavlink" href="#srchWrd1">Navigate to Thesaurus Search Form</a>
+</stripes:layout-component>
 <%-- **************************************** --%>
 <%-- CONTENTS                                 --%>
 <%-- **************************************** --%>
@@ -281,7 +284,7 @@
 					  </span>
 					  <span>
                         <input type="radio" name="sort" id="chkyr" value="yr" title="Sort your search by Year in descending order" <c:if test="${actionBean.sort == 'yr'}"> checked="checked"</c:if>/>
-                        <label for="chkyr">Publication year</label>
+                        <label for="chkyr">Date (Newest)</label>
                       </span>
                       </fieldset>
 					</li>

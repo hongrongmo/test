@@ -11,6 +11,7 @@ import net.sourceforge.stripes.action.HandlesEvent;
 import net.sourceforge.stripes.action.RedirectResolution;
 import net.sourceforge.stripes.action.Resolution;
 import net.sourceforge.stripes.action.UrlBinding;
+import net.sourceforge.stripes.validation.LocalizableError;
 import net.sourceforge.stripes.validation.Validate;
 
 import org.apache.commons.lang.StringUtils;
@@ -41,7 +42,7 @@ public class SearchHistoryAction extends BaseSearchAction {
     @Validate(mask = "[a-zA-Z\\-1-9]*")
     String searchid;
 
-    @Validate(mask = "[1-9#A-Za-z\\s]*")
+    @Validate(mask = "[1-9#A-Za-z\\s\\*]*")
     String txtcombine;
 
     private Query queryObject = new Query();

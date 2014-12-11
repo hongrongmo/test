@@ -80,6 +80,11 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 	private GoogleWebAnalyticsEvent webEvent = new GoogleWebAnalyticsEvent();
 	private boolean searchWidget = false;
 	private String swReferrer = "";
+	
+	private String location = "";
+	private String emailweek = "";
+	private String format = "";
+
 
 	/**
 	 * Return the XML adapter for quick search results display! (executed from
@@ -198,7 +203,7 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 				appendWebEventList(createQueryEventList(qObj));
 			}
 		}
-
+		
         // Set the records-per-page
 		if (null != getRequest().getParameter("pageSizeVal")) {
 			UserSession usersession = context.getUserSession();
@@ -301,6 +306,10 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
                         getFoundin()));
                 }
             }
+    		//if this is from an email alert lets track it
+    		if(StringUtils.isNotBlank(emailweek) && "alert".equals(location.toLowerCase())){
+    			createWebEvent("Email Alert", emailweek, format);
+    		}
         } catch (Throwable t) {
             log4j.warn("Unable to record Google Analytics!", t);
         }
@@ -821,6 +830,30 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 
 	public void setSwReferrer(String swReferrer) {
 		this.swReferrer = swReferrer;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+	public String getEmailweek() {
+		return emailweek;
+	}
+
+	public void setEmailweek(String emailweek) {
+		this.emailweek = emailweek;
+	}
+
+	public String getFormat() {
+		return format;
+	}
+
+	public void setFormat(String format) {
+		this.format = format;
 	}
 
 }

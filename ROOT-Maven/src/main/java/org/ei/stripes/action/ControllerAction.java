@@ -1,24 +1,31 @@
 package org.ei.stripes.action;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import net.sourceforge.stripes.action.After;
 import net.sourceforge.stripes.action.DefaultHandler;
 import net.sourceforge.stripes.action.ForwardResolution;
 import net.sourceforge.stripes.action.RedirectResolution;
 import net.sourceforge.stripes.action.Resolution;
 import net.sourceforge.stripes.action.StreamingResolution;
 import net.sourceforge.stripes.action.UrlBinding;
+import net.sourceforge.stripes.controller.LifecycleStage;
 
 import org.apache.commons.validator.GenericValidator;
 import org.ei.biz.security.IAccessControl;
 import org.ei.biz.security.NoAuthAccessControl;
 import org.ei.biz.security.NormalAuthRequiredAccessControl;
+import org.ei.biz.security.WorldAccessControl;
 import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
 import org.ei.controller.DataRequest;
 import org.ei.controller.DataResponse;
 import org.ei.controller.OutputPrinter;
+import org.ei.controller.content.ContentConfig;
 import org.ei.controller.content.ContentDescriptor;
 import org.ei.controller.logging.LogEntry;
 import org.ei.controller.logging.Logger;
@@ -28,6 +35,7 @@ import org.ei.stripes.AuthInterceptor;
 import org.ei.stripes.EVActionBeanContext;
 import org.ei.stripes.action.personalaccount.HomeAction;
 import org.ei.stripes.exception.EVExceptionHandler;
+import org.ei.stripes.util.HttpRequestUtil;
 
 /**
  * This class handles legacy requests for EV.  Prior to the UI Refresh project
@@ -48,6 +56,49 @@ public class ControllerAction extends EVActionBean {
 
     private static final org.apache.log4j.Logger log4j = org.apache.log4j.Logger.getLogger(ControllerAction.class);
 
+    /**
+     * 
+     * @return
+     */
+    @After(stages=LifecycleStage.BindingAndValidation)
+    private Resolution legacyRedirect() {
+        HttpServletRequest request = context.getRequest();
+        ContentConfig contentconfig = EVProperties.getContentConfig();
+
+        // Use the CID from the request to determine if this is legacy request
+        if (contentconfig == null) {
+            throw new RuntimeException("No ContentConfig object could be found - check app initialization!");
+        } else if (GenericValidator.isBlankOrNull(this.CID)) {
+            log4j.warn("ControllerAction was invoked but no CID found!  Request was '" + request.getRequestURI() + (request.getQueryString() == null ? "" : "?"+request.getQueryString()) + "'");
+            return HomeAction.HOME_RESOLUTION;
+        }
+
+        // Only redirect when incoming URL is /controller/servlet/Controller which only
+        // maps to ControllerAction
+        log4j.info("Incoming CID for legacy check: " + this.CID);
+        if (contentconfig.containsKey("legacy_" + this.CID)) {
+            // Create redirect URL with query string
+            String redirURL = contentconfig.getContentDescriptor("legacy_" + this.CID).getDisplayURL();
+            String urlAfterHash = null;
+            if (redirURL.contains("#init")) {
+                urlAfterHash =  redirURL.substring(redirURL.indexOf("#init"),  redirURL.length());
+                redirURL = redirURL.substring(0, redirURL.indexOf("#init"));
+            }
+            
+            if (redirURL.contains("?")) {
+                redirURL += "&" + request.getQueryString();
+            } else {
+                redirURL += "?" + request.getQueryString();
+            }
+            if(urlAfterHash!=null)redirURL+=urlAfterHash;
+            
+            log4j.info("[" + HttpRequestUtil.getIP(request) + "] Redirecting from legacy URL to: '" + redirURL + "'");
+            return new RedirectResolution(redirURL);
+        }
+        
+        return null;
+    }
+    
 	/**
 	 * Override for the ISecuredAction interface.  This ActionBean services
 	 * both "world" and "customer" access levels from the legacy mappings
@@ -69,9 +120,14 @@ public class ControllerAction extends EVActionBean {
 			// or CUSTOMER request.  Missing CID will revert to auth
 			// required.
 			cd = context.buildContentDescriptor(usess, request);
-	        if (cd != null && ContentDescriptor.AUTHGROUP_WORLD_NAME.equals(cd.getAuthGroup())) {
-	        	return new NoAuthAccessControl();
+			if (cd == null) {
+			    // Return "world" access to skip all authentication since this will be going to home page anyway
+			    return new WorldAccessControl();
+			} else if (ContentDescriptor.AUTHGROUP_WORLD_NAME.equals(cd.getAuthGroup())) {
+			    // ContentConfig file indicates this is "world" access
+	        	return new WorldAccessControl();
 	        } else {
+	            // Require normal auth access
 	        	return new NormalAuthRequiredAccessControl();
 	        }
 		} catch (Exception e) {

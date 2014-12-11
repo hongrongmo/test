@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://stripes.sourceforge.net/stripes.tld" prefix="stripes"%>
 
-<link href="/static/css/popups.css?v=${releaseversion}" media="all" type="text/css" rel="stylesheet"></link>
+
 <style>
 #slider-code { height: 410px; overflow:hidden; }
 #slider-code .viewport { float: left; width: 830px; height: 410px; overflow: hidden; position: relative; }

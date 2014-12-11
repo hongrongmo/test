@@ -22,12 +22,12 @@
 		font-size:14px;
 		padding-top:15px;
 	}
-	.settingSection{
-	color:#3ca690;
-	font-style:italic;
-	font-weight:bold;
-	padding-top:7px;
-
+	.settingSection h2{
+		color:#3ca690;
+		font-style:italic;
+		font-weight:bold;
+		padding-top:7px;
+		font-size:12px;
 	}
 	.prefsRadios input{
 		vertical-align:bottom;
@@ -91,11 +91,11 @@
     	font-size:10px;
     	color:#808080;
     }
-    .title h1{color:#FFFFFF;}
+    .title h1{color:#FFFFFF;margin-top:0px;margin-bottom:0px;}
 </style>
 
 <div id="settingsPopup" >
-<div class="title" style="padding-left:0px;"><h1 id="myPrefTitle"><img id="eilogo" class="mm_eilogo" width="35px" src="/static/images/ei_w.gif" title="Engineering Information: Home of Engineering Village" ></img>&nbsp;&nbsp;My Preferences</h1></div>
+<div class="title" style="padding-left:0px;"><h1 id="myPrefTitle" aria-role="alert"><img id="eilogo" class="mm_eilogo" width="35px" src="/static/images/ei_w.gif" title="Engineering Information: Home of Engineering Village" ></img>&nbsp;&nbsp;My Preferences</h1></div>
 <form  method="post" name="preferencesForm" id="userPreferencesForm"  onsubmit="submitSavePrefsForm();return false;">
 <div class="settingsContents" id="settingsContents" >
 	<div id="valerrormsgcontainer" style="display:none"><img style="position:relative;top:-3px" src="/static/images/red_warning.gif"/><b>&nbsp;&nbsp;<span id="valerrormsg"></span></b></div>
@@ -103,7 +103,7 @@
 	<div class="settingsLeft">
 			<input type="hidden" name="save" value="true"/>
 
-			<div class="settingSection">Display Results</div>
+			<div class="settingSection"><h2>Display Results</h2></div>
 
 			<c:set value="${actionBean.currentuserprefs.resultsPerPage}" var="resultsPerPage"></c:set>
 			<fieldset title="Results Per Page Settings">
@@ -114,16 +114,16 @@
 				</ul>
 			</fieldset>
 			<hr/>
-			<div class="settingSection">Sorting Default</div>
+			<div class="settingSection"><h2>Sorting Default</h2></div>
 			<c:set value="${actionBean.currentuserprefs.sort}" var="sort"></c:set>
 			<fieldset title="Sorting Settings">
 			<ul class="prefsRadios">
 				<li><input type="radio" name="sortOrder" value="relevance" id="relevance_radio" <c:if test="${sort eq 'relevance'}">checked="checked"</c:if>/><label for="relevance_radio">Relevance</label></li>
-				<li><input type="radio" name="sortOrder" value="yr" id="datenew_radio" <c:if test="${sort eq 'yr'}">checked="checked"</c:if>/><label for="datenew_radio">Date New</label></li>
+				<li><input type="radio" name="sortOrder" value="yr" id="datenew_radio" <c:if test="${sort eq 'yr'}">checked="checked"</c:if>/><label for="datenew_radio">Date (Newest)</label></li>
 			</ul>
 			</fieldset>
 			<hr/>
-			<div class="settingSection">Show Preview</div>
+			<div class="settingSection"><h2>Show Preview</h2></div>
 			<c:set value="${actionBean.currentuserprefs.showPreview}" var="showPreview"></c:set>
 			<fieldset title="Show Preview">
 			<ul class="prefsRadios">
@@ -134,7 +134,7 @@
 			</fieldset>
 			<c:if test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1')}">
 				<hr/>
-				<div class="settingSection">Search Terms</div>
+				<div class="settingSection"><h2>Search Terms</h2></div>
 				<c:set value="${actionBean.currentuserprefs.highlight}" var="highlightColor"></c:set>
 				<c:set value="${actionBean.currentuserprefs.highlightBackground}" var="highlightBackground"></c:set>
 				<fieldset title="Highlight Search Terms">
@@ -150,7 +150,7 @@
 		<input type="hidden" name="save" value="true"/>
 			<c:set value="${actionBean.currentuserprefs.dlLocation}" var="dlLocation"></c:set>
 
-			<div class="settingSection">Download location</div>
+			<div class="settingSection"><h2>Download location</h2></div>
 			<fieldset title="Download location Settings">
 			<ul class="prefsRadios">
 				<li><input class="locationRadio" type="radio" name="dlLocation" value="mypc" id="mypc_radio" <c:if test="${dlLocation eq 'mypc'}">checked="checked"</c:if>/><label for="mypc_radio">My PC</label></li>
@@ -160,7 +160,7 @@
 			</ul>
 			</fieldset>
 				<hr/>
-		<div class="settingSection">Download format</div>
+		<div class="settingSection"><h2>Download format</h2></div>
 		<c:set value="${actionBean.currentuserprefs.dlFormat}" var="dlFormat"></c:set>
 		<fieldset title="Dounload Format Settings">
 			<ul class="prefsRadios">
@@ -175,7 +175,7 @@
 	  		</fieldset>
 			<c:set value="${actionBean.currentuserprefs.dlOutput}" var="dlOutput"></c:set>
 			<hr/>
-			<div class="settingSection">Download output</div>
+			<div class="settingSection"><h2>Download output</h2></div>
 			<fieldset title="Download Output Settings">
 			<ul class="prefsRadios">
 				<li><input  class="outputRadio" type="radio" name="dlOutput" value="default" id="default_radio" <c:if test="${dlOutput eq 'default'}">checked="checked"</c:if>/><label for="default_radio">Current page view</label></li>
@@ -187,7 +187,7 @@
 			<c:set value="${actionBean.currentuserprefs.dlFileNamePrefix}" var="dlFileNamePrefix"></c:set>
 			<input type="hidden" id="dlFileNamePrefixOrg" value="${dlFileNamePrefix}"/>
 			<hr/>
-			<div class="settingSection">File Name Prefix</div>
+			<div class="settingSection"><h2>File Name Prefix</h2></div>
 			<fieldset title="File Name Prefix Settings">
 				<div style="width:150px">
 					<div style="width:150px"><input style="width:150px"  type="text" value="${dlFileNamePrefix}" name="dlFileNamePrefix" id="dlFileNamePrefix" onkeypress="return handleKeyPressForFileName(event)"  maxlength="50" /></div>
@@ -209,7 +209,7 @@ $(".locationRadio").click(function(){
 	updatefilenamelable();
 	checkForRisandBib();
 });
-$(".formatRadio,.outputRadio").click(function(){
+$(".formatRadio,.outputRadio").click(function(){h
 	updatefilenamelable();
 });
 
