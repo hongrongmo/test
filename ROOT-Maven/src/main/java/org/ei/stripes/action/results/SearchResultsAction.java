@@ -560,13 +560,13 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 				try {
 					sr.setAbstractlink("<a class=\"externallink\" href=\"/search/doc/abstract.url?patentrefabstract=true&pageType="
 							+ this.searchtype.toLowerCase() + "Search&searchtype=" + this.searchtype + "&SEARCHID=" + this.searchid + "&DOCINDEX="
-							+ sr.getDoc().getHitindex() + "&database=" + sr.getDoc().getDbid() + "&format=" + this.searchtype.toLowerCase() + "&searchnav="
+							+ sr.getDoc().getHitindex() + "&database=" + sr.getDoc().getDbmask() + "&format=" + this.searchtype.toLowerCase() + "&searchnav="
 							+ URLEncoder.encode(context.getRequest().getQueryString(), "UTF-8") + "SearchAbstractFormat&displayPagination=yes&docid="
 							+ sr.getDoc().getDocid() + "\">Abstract</a>");
 
 					sr.setDetailedlink("<a class=\"externallink\" href=\"/search/doc/detailed.url?patentrefdetailed=true&pageType="
 							+ this.searchtype.toLowerCase() + "Search&searchtype=" + this.searchtype + "&SEARCHID=" + this.searchid + "&DOCINDEX="
-							+ sr.getDoc().getHitindex() + "&database=" + sr.getDoc().getDbid() + "&format=" + this.searchtype.toLowerCase() + "&searchnav="
+							+ sr.getDoc().getHitindex() + "&database=" + sr.getDoc().getDbmask() + "&format=" + this.searchtype.toLowerCase() + "&searchnav="
 							+ URLEncoder.encode(context.getRequest().getQueryString(), "UTF-8") + "SearchAbstractFormat&displayPagination=yes&docid="
 							+ sr.getDoc().getDocid() + "\">Detailed</a>");
 				} catch (UnsupportedEncodingException e) {
