@@ -57,7 +57,7 @@ public interface ResultsSet {
      * Find and return all {@link Results}s associated with this resultSet.
      * If there are none, a zero-length array is returned.
      */
-    public abstract Collection getResults();
+    public abstract Collection<Result> getResults();
 
 
     // --------------------------------------------------------- Public Methods

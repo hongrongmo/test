@@ -41,11 +41,11 @@
 			<artifactId>commons-validator</artifactId>
 			<version>1.4.0</version>
 		</dependency>
-		<dependency>
-			<groupId>oracle</groupId>
-			<artifactId>ojdbc14</artifactId>
-			<version>10.2.0.3.0</version>
-		</dependency>
+<dependency>
+  <groupId>oracle-provided</groupId>
+  <artifactId>ojdbc6</artifactId>
+  <version>lin64-11.2.0.3</version>
+</dependency>
 	</dependencies>
 
 	<distributionManagement>
@@ -90,5 +90,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>

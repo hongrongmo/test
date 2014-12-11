@@ -15,6 +15,10 @@
 	<link href="/static/css/ev_ie6.css?v=${releaseversion}" media="all" type="text/css" rel="stylesheet"></link>
 	<![endif]-->
 	</stripes:layout-component>
+	<stripes:layout-component name="SkipToNavigation">
+		<a class="skiptonavlink" href="#abstractTabLink"">Navigate to Abstract Tab</a>
+		<a class="skiptonavlink" href="#cbresult_${actionBean.results[0].doc.docid}">Navigate to record</a>
+	</stripes:layout-component>
 
 	<stripes:layout-component name="contents">
 	<c:set var="rerunsearchurl" scope="request">
@@ -46,7 +50,7 @@
 	</c:set>
 
 	<c:set var="result" value="${actionBean.results[0]}" scope="request"/>
-	<span session-id="${actionBean.sessionid}" security="${result.citedby.md5}" an="${result.citedby.an}" doi="${result.citedby.doi}" page="${result.citedby.firstpage}" volume="${result.citedby.firstvolume}" issue="${result.citedby.firstissue}" issn="${result.citedby.issn}" style="display: none;" name="citedbyspan"></span>
+	<span session-id="${actionBean.sessionid}" security="${result.citedby.md5}" an="${result.citedby.an}" doi="${result.citedby.doi}" page="${result.citedby.firstpage}" volume="${result.citedby.firstvolume}" issue="${result.citedby.firstissue}" issn="${result.citedby.issn}" isbn="${result.citedby.isbn}" isbn13="${result.citedby.isbn13}" style="display: none;" name="citedbyspan"></span>
 	<div id="abstractbox">
 
 <%-- *********************************************************** --%>
@@ -117,11 +121,11 @@
 			<c:if test="${result.doc.dbmask != 131072}">
 				<c:choose>
 				<c:when test="${actionBean.view eq 'abstract'}">
-							<li><h1 class="link"><a href="#" title="Abstract view" class="active">Abstract</a></h1></li>
+							<li><h1 class="link"><a href="#" title="Abstract view" class="active" id="abstractTabLink">Abstract</a></h1></li>
 							<li><h1 class="link" style="font-weight: normal"><a href="/search/doc/detailed.url?pageType=${actionBean.pageType}&amp;${actionBean.detnavqs}&amp;dedupResultCount=${actionBean.dedupResultCount}" title="Detailed view"<c:if test="${actionBean.view eq 'detailed'}"> class="active"</c:if>>Detailed</a></h1></li>
 				</c:when>
 				<c:otherwise>
-							<li><h1 class="link" style="font-weight: normal"><a href="/search/doc/abstract.url?pageType=${actionBean.pageType}&amp;${actionBean.absnavqs}&amp;dedupResultCount=${actionBean.dedupResultCount}" title="Abstract view"<c:if test="${actionBean.view eq 'abstract'}"> class="active"</c:if>>Abstract</a></h1></li>
+							<li><h1 class="link" style="font-weight: normal"><a id="abstractTabLink" href="/search/doc/abstract.url?pageType=${actionBean.pageType}&amp;${actionBean.absnavqs}&amp;dedupResultCount=${actionBean.dedupResultCount}" title="Abstract view"<c:if test="${actionBean.view eq 'abstract'}"> class="active"</c:if>>Abstract</a></h1></li>
 							<li><h1 class="link"><a href="#" title="Detailed view" class="active">Detailed</a></h1></li>
 				</c:otherwise>
 				</c:choose>

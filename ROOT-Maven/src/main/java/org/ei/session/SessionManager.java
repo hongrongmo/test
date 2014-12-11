@@ -148,21 +148,6 @@ public class SessionManager {
             setUserStartPageInEvWebUser(userSession);
             setLocalHoldingsInUserSession(userSession);
             setBulletinEntitlements(userSession);
-
-            try {
-                StringBuffer out = new StringBuffer();
-                out.append("********* User authenticated (" + ipauth + ") **********");
-                out.append(EVProperties.NEWLINE + "    +    User:       " + userSession.getUser().getWebUserId() + " - " + userSession.getUser().getFirstName() + " " + userSession.getUser().getLastName() + ", " + userSession.getUser().getEmail());
-                out.append(EVProperties.NEWLINE + "    +    Cartridge:  " + userSession.getUser().getCartridgeString());
-                out.append(EVProperties.NEWLINE + "    +    CustomerID: " + userSession.getUser().getCustomerID());
-                out.append(EVProperties.NEWLINE + "    +    IP address: " + HttpRequestUtil.getIP(evcontext.getRequest()));
-                if (userSession.getUser().getAccount() != null) {
-                    out.append(EVProperties.NEWLINE + "    +    Account:    " + userSession.getUser().getAccount().getAccountNumber() + " - " + userSession.getUser().getAccount().getAccountName() + "/" + userSession.getUser().getAccount().getDepartmentName());
-                }
-                log4j.warn(out.toString());
-            } catch (Throwable t) {
-                log4j.error("Unable to print authentication info: " + t);
-            }
         }
 
 
@@ -202,9 +187,61 @@ public class SessionManager {
         	IPBlocker.getInstance().increment(ipaddress, COUNTER.AUTHFAIL);
         }
 
+        try {
+            StringBuffer out = new StringBuffer();
+            out.append("********* User authenticated (" + ipauth + ") **********");
+            out.append(this.prettyPrintAuthenticationInfo(userSession, EVProperties.NEWLINE));
+            log4j.warn(out.toString());
+        } catch (Throwable t) {
+            log4j.error("Unable to print authentication info: " + t);
+        }
+
         return userSession;
     }
 
+    /**
+     * Pretty print information from user request
+     * @param userSession
+     * @param newline
+     * @return
+     */
+    public String prettyPrintRequest(UserSession userSession, String newline) {
+        StringBuffer out = new StringBuffer();
+        out.append(HttpRequestUtil.prettyPrintRequest(this.request, newline));
+        out.append(    newline + "    +    SessionID (User):  " + userSession.getSessionid()); 
+        if (userSession.getUser().getAccount() != null) {
+            out.append(newline + "    +    Account:           " + userSession.getUser().getAccount().getAccountNumber() + " || " + userSession.getUser().getAccount().getAccountName() + " || " + userSession.getUser().getAccount().getDepartmentName());
+        } else {
+            out.append(newline + "    +    Account:           NO ACCOUNT INFORMATION!");
+        }
+        return out.toString();
+    }
+    
+    /**
+     * Pretty print information from user authentication
+     * @param userSession
+     * @param newline
+     * @return
+     */
+    public String prettyPrintAuthenticationInfo(UserSession userSession, String newline) {
+        StringBuffer out = new StringBuffer();
+        out.append(HttpRequestUtil.prettyPrintRequest(this.request, newline));
+        out.append(    newline + "    +    SessionID (User):  " + userSession.getSessionid()); 
+        if (userSession.getUser() != null) {
+            out.append(newline + "    +    User:              " + userSession.getUser().getWebUserId() + " - " + userSession.getUser().getFirstName() + " " + userSession.getUser().getLastName() + ", " + userSession.getUser().getEmail());
+            out.append(newline + "    +    Cartridge:         " + userSession.getUser().getCartridgeString());
+            out.append(newline + "    +    CustomerID:        " + userSession.getUser().getCustomerID());
+        } else {
+            out.append(newline + "    +    User:              NO USER INFORMATION!");
+        }
+        if (userSession.getUser().getAccount() != null) {
+            out.append(newline + "    +    Account:           " + userSession.getUser().getAccount().getAccountNumber() + " - " + userSession.getUser().getAccount().getAccountName() + "/" + userSession.getUser().getAccount().getDepartmentName());
+        } else {
+            out.append(newline + "    +    Account:           NO ACCOUNT INFORMATION!");
+        }
+        return out.toString();
+    }
+    
     private void writeSSOCookieSinceValueChangedAfterLogin(EVActionBeanContext context) {
         if(SSOHelper.isStateChanged(context.getRequest(), getBrowserSSOKey(context))){
             Cookie[] cookies = context.getRequest().getCookies();

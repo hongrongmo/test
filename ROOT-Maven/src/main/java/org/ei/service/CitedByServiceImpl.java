@@ -12,8 +12,10 @@ import javax.activation.DataHandler;
 import javax.xml.ws.Holder;
 
 import org.apache.commons.lang.StringEscapeUtils;
+import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.apache.wink.json4j.JSONArray;
+import org.apache.wink.json4j.JSONObject;
 import org.ei.exception.InfrastructureException;
 import org.ei.exception.ServiceException;
 import org.ei.exception.SystemErrorCodes;
@@ -46,8 +48,10 @@ import com.elsevier.webservices.wsdls.metadata.abstracts.service.v10.AbstractsMe
 import com.elsevier.webservices.wsdls.search.fast.service.v4.FastSearchServicePortTypeV4;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+
 /**
- * The Class CitedByServiceImpl.
+ * @author kamaramx
+ *
  */
 public class CitedByServiceImpl implements CitedByService {
 
@@ -93,12 +97,6 @@ public class CitedByServiceImpl implements CitedByService {
 		String xQuery = buildXQueryForDocSearch(eid,doi);
 		List<SearchDocumentType> documentTypes = doFastSearch(xQuery);
    		resultList = parseDocumentSearch(documentTypes);
-
-   		if(doi != null && doi.length()>0 && resultList.size()>0){
-   			xQuery = buildXQueryForAuthorSearch(doi);
-   			documentTypes = doFastSearch(xQuery);
-   			resultList = parseAuthSearch(documentTypes, resultList);
-   		}
 
    		for(HashMap<String, String> mapElem : resultList) {
    			jsonArray.add(mapElem);
@@ -229,11 +227,55 @@ public class CitedByServiceImpl implements CitedByService {
 	 * @param doi the doi
 	 * @return the string
 	 */
-	private String buildXQueryForAuthorSearch(String doi){
+	private String buildXQueryForAuthorSearchUsingDOI(String doi){
 		StringBuffer xQuery = new StringBuffer();
 		xQuery.append("<ft:fullTextQuery xmlns:ft=\"http://www.elsevier.com/2003/01/xqueryxFT-schema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.elsevier.com/2003/01/xqueryxFT-schema eql.xsd\"><ft:query><ft:word path=\"doi\">");
 		xQuery.append(doi);
 		xQuery.append("</ft:word></ft:query></ft:fullTextQuery>");
+		return xQuery.toString();
+	}
+	
+	
+	private String buildXQueryForAuthorSearchUsingISSNandISBN(String issn, String isbn, String isbn13, String volumn, String issue, String firstpage, String lastpage ){
+		StringBuffer xQuery = new StringBuffer();
+		xQuery.append("<ft:fullTextQuery xmlns:ft=\"http://www.elsevier.com/2003/01/xqueryxFT-schema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.elsevier.com/2003/01/xqueryxFT-schema eql.xsd\"><ft:query>");
+		xQuery.append("<ft:andQuery>");
+		if(issn != null && !issn.trim().equalsIgnoreCase("")){
+			xQuery.append("<ft:word path=\"issn\">");
+			xQuery.append(issn);
+			xQuery.append("</ft:word>");
+		}else if(isbn13 != null && !isbn13.trim().equalsIgnoreCase("")){
+			xQuery.append("<ft:word path=\"isbn\">");
+			xQuery.append(isbn13);
+			xQuery.append("</ft:word>");
+		}else if(isbn != null && !isbn.trim().equalsIgnoreCase("")){
+			xQuery.append("<ft:word path=\"isbn\">");
+			xQuery.append(isbn);
+			xQuery.append("</ft:word>");
+		}
+		if(volumn != null && !volumn.trim().equalsIgnoreCase("")){
+			xQuery.append("<ft:word path=\"vol\">");
+			xQuery.append(volumn);
+			xQuery.append("</ft:word>");
+		}
+		if(issue != null && !issue.trim().equalsIgnoreCase("")){
+			xQuery.append("<ft:word path=\"issue\">");
+			xQuery.append(issue);
+			xQuery.append("</ft:word>");
+		}
+		if(firstpage != null && !firstpage.trim().equalsIgnoreCase("")){
+			xQuery.append("<ft:word path=\"pgfirst\">");
+			xQuery.append(firstpage);
+			xQuery.append("</ft:word>");
+		}
+		// There is a error in last page incoming data, so far this is not used for document search
+		/*if(lastpage != null && !lastpage.trim().equalsIgnoreCase("")){
+			xQuery.append("<ft:word path=\"pglast\">");
+			xQuery.append(lastpage);
+			xQuery.append("</ft:word>");
+		}*/
+		xQuery.append("</ft:andQuery>");
+		xQuery.append("</ft:query></ft:fullTextQuery>");
 		return xQuery.toString();
 	}
 
@@ -322,51 +364,94 @@ public class CitedByServiceImpl implements CitedByService {
 		return resultList;
 	}
 
+
 	/**
-	 * Parses the auth search.
-	 *
-	 * @param documentTypes the document types
-	 * @param resultList the result list
-	 * @return the list
+	 * @param documentTypes
+	 * @return
 	 */
-	private List<HashMap<String, String>> parseAuthSearch(List<SearchDocumentType> documentTypes,List<HashMap<String, String>>  resultList){
-		if(documentTypes == null){
-			return resultList;
+	private HashMap<String, String> parseAuthSearchDetails(List<SearchDocumentType> documentTypes){
+		HashMap<String, String> authorsMap = new HashMap<String, String>();
+		SearchDocumentType documentType = documentTypes.get(0);
+		for (SummaryType summaryType : documentType.getSummary()) {
+			String value = summaryType.getValue();
+			String field = summaryType.getField();
+			if(field.equals("auth"))
+			{
+				if(value!=null)
+				{
+					value = value.replaceAll("\\|",", ");
+					value = StringEscapeUtils.escapeXml(value);
+				}
+				authorsMap.put("PROFILE_AUTHOR",value);
+			}
+			if(field.equals("authid"))
+			{
+				if(value!=null)
+				{
+					value = value.replaceAll(" \\| ",", ");
+					value = (StringEscapeUtils.escapeXml(value)).trim();
+				}
+				authorsMap.put("PROFILE_AUTHORID",value);
+			}
 		}
+		return authorsMap;
+	}
+	
 
-		HashMap<String, String> firstDoc = resultList.get(0);
-
-		if(firstDoc != null){
-			for (SearchDocumentType documentType : documentTypes) {
-				for (SummaryType summaryType : documentType.getSummary()) {
-					String value = summaryType.getValue();
-					String field = summaryType.getField();
-					if(field.equals("auth"))
-					{
-						if(value!=null)
-						{
-							value = value.replaceAll("\\|",", ");
-							value = StringEscapeUtils.escapeXml(value);
-						}
-
-						firstDoc.put("PROFILE_AUTHOR",value);
-
-					}
-
-					if(field.equals("authid"))
-					{
-						if(value!=null)
-						{
-							value = value.replaceAll(" \\| ",", ");
-							value = (StringEscapeUtils.escapeXml(value)).trim();
-						}
-						firstDoc.put("PROFILE_AUTHORID",value);
-
-					}
+	/**
+	 * @param citedBy
+	 * @return
+	 * @throws ServiceException
+	 * @throws InfrastructureException
+	 */
+	public JSONObject getAuthorDetails(String citedBy) throws ServiceException,InfrastructureException{
+		
+		JSONObject jsonObject = null;
+		
+		if(citedBy == null || citedBy.length() ==0){
+			return jsonObject;
+		}
+		String doiVal = null;
+		String volumn = null; 
+		String issue = null;
+		String issn = null;
+		String isbn = null;
+		String isbn13 = null;
+		String firstpage = null;
+		String lastpage = null;
+		List<CitedByCount> countList = parseInput(citedBy);
+		if (countList != null) {
+			CitedByCount count = (CitedByCount) countList.get(0);
+			if(count != null && checkMD5(count)){
+				doiVal = count.getDoi();
+				volumn = count.getVol();
+				issn = count.getIssn();
+				isbn = count.getIsbn();
+				isbn13 = count.getIsbn13();
+				issue = count.getIssue();
+				firstpage = count.getFirstPageNumber();
+				lastpage = count.getLastPageNumber();
+			}
+		}
+		String xQuery = null;
+		if(doiVal != null && !doiVal.trim().equalsIgnoreCase("")){
+			xQuery = buildXQueryForAuthorSearchUsingDOI(doiVal);
+		}else if((issn != null && !issn.trim().equalsIgnoreCase("")) || (isbn != null && !isbn.trim().equalsIgnoreCase("")) || (isbn13 != null && !isbn13.trim().equalsIgnoreCase(""))){
+			xQuery = buildXQueryForAuthorSearchUsingISSNandISBN(issn, isbn, isbn13, volumn, issue, firstpage, lastpage);
+		}
+		if(xQuery != null){
+			List<SearchDocumentType> documentTypes = doFastSearch(xQuery);
+			if(documentTypes != null && documentTypes.size()>0){
+				if(documentTypes.size() > 1){
+					log4j.warn("The author details search has more than one results, search criteria: doi="+doiVal+", issn="+issn+", isbn="+isbn+", isbn13="+isbn13+", vol="+volumn+" ,issue="+issue+", firstpage="+firstpage);
+				}
+				HashMap<String, String> hashMap = parseAuthSearchDetails(documentTypes);
+				if(hashMap != null && hashMap.size()>0){
+					jsonObject = new JSONObject(hashMap);
 				}
 			}
 		}
-		return resultList;
+		return jsonObject;
 	}
 
 	/* (non-Javadoc)
@@ -377,8 +462,7 @@ public class CitedByServiceImpl implements CitedByService {
 		if(citedBy == null || citedBy.length() ==0){
 			return citedByCountArray;
 		}
-
-
+		
 		 citedByCountArray = doXAbsMetadataSearch(citedBy);
 
 		return citedByCountArray;
@@ -405,30 +489,35 @@ public class CitedByServiceImpl implements CitedByService {
 					InputKeyType input = new InputKeyType();
 					CitedByCount count = (CitedByCount) countList.get(i);
 					if (checkMD5(count)) {
-						if (count.getDoi() != null && count.getDoi().length() > 0) {
+						if (StringUtils.isNotBlank(count.getDoi())) {
 							String doiString = count.getDoi();
 							input.setDoi(doiString.trim());
-						} else if (count.getPii() != null && count.getPii().length() > 0) {
+						} else if (StringUtils.isNotBlank(count.getPii())) {
 							String piiString = count.getPii();
 							input.setPii(piiString);
 						} else {
-							if (count.getIssn() != null && count.getIssn().length() > 0) {
+							if (StringUtils.isNotBlank(count.getIssn())) {
 								String issnString = count.getIssn();
 								input.setIssn(issnString);
+							}else if(StringUtils.isNotBlank(count.getIsbn13())){
+								input.setIsbn(count.getIsbn13());
+							}else if(StringUtils.isNotBlank(count.getIsbn())){
+								input.setIsbn(count.getIsbn());
 							}
 
-							if (count.getVol() != null && count.getVol().length() > 0) {
+							if (StringUtils.isNotBlank(count.getVol())) {
 								String volumeString = count.getVol();
 								input.setVol(volumeString);
 							}
 
-							if (count.getIssue() != null && count.getIssue().length() > 0) {
+							
+							
+							if (StringUtils.isNotBlank(count.getIssue())) {
 								String issueString = count.getIssue();
 								input.setIssue(issueString);
 							}
 
-							if (count.getFirstPageNumber() != null
-									&& count.getFirstPageNumber().length() > 0) {
+							if (StringUtils.isNotBlank(count.getFirstPageNumber())) {
 								String pageString = count.getFirstPageNumber();
 								input.setFirstPageNumber(pageString);
 							}
@@ -521,44 +610,32 @@ public class CitedByServiceImpl implements CitedByService {
 	private void buildKeyMap(List<CitedByCount> citedbyCountList) {
 		for(CitedByCount count : citedbyCountList){
 			if (count.getAccessionNumber() != null) {
-				if (count.getDoi() != null) {
-					keyMap.put(count.getDoi(), count.getAccessionNumber());
-				}
-
-				if (count.getPii() != null) {
-					keyMap.put(count.getPii(), count.getAccessionNumber());
-				}
-
-				if (count.getIssn() != null && count.getFirstPageNumber() != null
-						&& count.getIssue() != null && count.getVol() != null) {
-					String ivipKey = buildIvipKey(count.getIssn(), count.getFirstPageNumber(), count.getIssue(), count.getVol());
+				if (StringUtils.isNotBlank(count.getDoi())) {
+					keyMap.put("key_doi"+count.getDoi(), count.getAccessionNumber());
+				}else if(StringUtils.isNotBlank(count.getPii())) {
+					keyMap.put("key_pii"+count.getPii(), count.getAccessionNumber());
+				}else if (StringUtils.isNotBlank(count.getIssn()) || StringUtils.isNotBlank(count.getIsbn13()) || StringUtils.isNotBlank(count.getIsbn())){
+					String ivipKey = "key";
+					if(StringUtils.isNotBlank(count.getIssn())){
+						ivipKey += "_issn"+count.getIssn();
+					}else if(StringUtils.isNotBlank(count.getIsbn13())){
+						ivipKey += "_isbn"+count.getIsbn13();
+					}else if(StringUtils.isNotBlank(count.getIsbn())){
+						ivipKey += "_isbn"+count.getIsbn();
+					}
+					if(StringUtils.isNotBlank(count.getVol())){
+						ivipKey += "_vol"+count.getVol();
+					}
+					if(StringUtils.isNotBlank(count.getIssue())){
+						ivipKey += "_issue"+count.getIssue();
+					}
+					if(StringUtils.isNotBlank(count.getFirstPageNumber())){
+						ivipKey += "_firstpgnumber"+count.getFirstPageNumber();
+					}
 					keyMap.put(ivipKey, count.getAccessionNumber());
 				}
-
 			}
 		}
-	}
-
-	/**
-	 * Builds the ivip key.
-	 *
-	 * @param issn the issn
-	 * @param page the page
-	 * @param issue the issue
-	 * @param volume the volume
-	 * @return the string
-	 */
-	private String buildIvipKey(String issn, String page, String issue,
-			String volume) {
-		String ivipKey = null;
-		if (issn != null && issn.indexOf("-") > -1) {
-			issn = issn.replaceAll("-", "");
-		}
-
-		ivipKey = issn + "_" + page + "_" + issue + "_" + volume;
-
-		return ivipKey;
-
 	}
 
 	/**
@@ -601,24 +678,40 @@ public class CitedByServiceImpl implements CitedByService {
 	private String getID(InputKeyType inputKey) {
 		String id = null;
 		if (inputKey.getDoi() != null) {
-			String doi = inputKey.getDoi();
+			String doi = "key_doi"+inputKey.getDoi();
 			if (keyMap.containsKey(doi)) {
 				id = (String) keyMap.get(doi);
 			}
 
 		} else if (inputKey.getPii() != null) {
-			String pii = inputKey.getPii();
+			String pii = "key_pii"+inputKey.getPii();
 			if (keyMap.containsKey(pii)) {
 				id = (String) keyMap.get(pii);
 			}
-		} else if (inputKey.getIssn() != null && inputKey.getVol() != null
-				&& inputKey.getIssue() != null && inputKey.getFirstPageNumber() != null) {
-			String ivip = buildIvipKey(inputKey.getIssn(), inputKey
-					.getFirstPageNumber(),inputKey.getIssue(),inputKey.getVol());
-			if (keyMap.containsKey(ivip)) {
-				id = (String) keyMap.get(ivip);
+		}else if (inputKey.getIssn() != null || inputKey.getIsbn() != null ){
+			String ivipKey = "key";
+			if(inputKey.getIssn() != null){
+				ivipKey += "_issn"+inputKey.getIssn();
+			}else if(inputKey.getIsbn() != null){
+				ivipKey += "_isbn"+inputKey.getIsbn();
+			}
+			if(inputKey.getVol() != null){
+				ivipKey += "_vol"+inputKey.getVol();
+			}
+			if(inputKey.getIssue() != null){
+				ivipKey += "_issue"+inputKey.getIssue();
+			}
+			if(inputKey.getFirstPageNumber() != null){
+				ivipKey += "_firstpgnumber"+inputKey.getFirstPageNumber();
+			}
+			if (keyMap.containsKey(ivipKey)) {
+				id = (String) keyMap.get(ivipKey);
 			}
 		}
+		if(id == null){
+			log4j.warn("The record has 'id' generated as null: doi="+inputKey.getDoi()+", issn="+inputKey.getIssn()+", isbn="+inputKey.getIsbn()+", vol="+inputKey.getVol()+" ,issue="+inputKey.getIssue()+", firstpage="+inputKey.getFirstPageNumber());
+		}
+		
 		return id;
 	}
 

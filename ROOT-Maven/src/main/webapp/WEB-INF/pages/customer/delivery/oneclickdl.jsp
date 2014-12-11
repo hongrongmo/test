@@ -133,7 +133,7 @@
 
 </style>
 </head>
-<body>
+<body >
 <c:set value="${actionBean.context.userSession.user.userPrefs.dlFormat}" var="dlFormat"></c:set>
 <c:set value="${actionBean.context.userSession.user.userPrefs.dlOutput}" var="dlOutput"></c:set>
 <c:set value="${actionBean.context.userSession.user.userPrefs.dlLocation}" var="dlLocation"></c:set>
@@ -146,21 +146,24 @@
 	<stripes:hidden name="folderid" id="folderid" />
 	<stripes:hidden name="database" id="database" />
 	<stripes:hidden name="baseaddress" id="baseaddress" />
-	<div id="oneClickContent">
+	<div id="oneClickContent" aria-live="assertive">
 		<div id="oneClickTitle">Choose your download settings for this session</div>
 		<hr/>
 		<div id="valerrormsgcontainer" style="display:none"><img style="position:relative;top:-3px" src="/static/images/red_warning.gif"/><b>&nbsp;&nbsp;<span id="valerrormsg"></span></b></div>
 		<div id="oneClickMid">
 			<div id="oneClickLeft">
+			<fieldset title="Location to save downloads">
 				<div class="grayText sectionHead">Location:</div>
 				<ul>
-				<li><input type="radio" class="outputLocation" id="outputMyPC"     name="outputLocation" value="mypc" <c:if test="${dlLocation eq 'mypc'}">checked="checked"</c:if>/><label	for="outputMyPC" title="Download the citation section"><img src="/static/images/Download.png" alt="Save to my PC Icon" />My PC</label></li>
-				<li><input type="radio" class="outputLocation" id="outputRefWorks" name="outputLocation" value="refworks"  <c:if test="${dlLocation eq 'refworks'}">checked="checked"</c:if>/><label for="outputRefWorks" title="Download the abstract section"><img src="/static/images/refworks_icon.jpg" alt="Reforks Icon" />RefWorks</label></li>
-				<li><input type="radio" class="outputLocation" id="outputGoogle"   name="outputLocation" value="googledrive"  <c:if test="${dlLocation eq 'googledrive'}">checked="checked"</c:if>/><label for="outputGoogle" title="Download the detailed record"><img src="/static/images/drive_icon.png" alt="Google Drive Icon" />Google Drive</label></li>
-				<li><input type="radio" class="outputLocation" id="outputDropbox"      name="outputLocation" value="dropbox"  <c:if test="${dlLocation eq 'dropbox'}">checked="checked"</c:if>/><label for="outputDropbox" title="Download the detailed record"><img src="/static/images/dropbox_icon.png" alt="Dropbox Icon"/>Dropbox</label></li>
+				<li><input type="radio" class="outputLocation" id="outputMyPC"     name="outputLocation" value="mypc" <c:if test="${dlLocation eq 'mypc'}">checked="checked"</c:if>/><label	for="outputMyPC" title="Download the citation section"><img src="/static/images/Download.png" alt="" />My PC</label></li>
+				<li><input type="radio" class="outputLocation" id="outputRefWorks" name="outputLocation" value="refworks"  <c:if test="${dlLocation eq 'refworks'}">checked="checked"</c:if>/><label for="outputRefWorks" title="Download the abstract section"><img src="/static/images/refworks_icon.jpg" alt="" />RefWorks</label></li>
+				<li><input type="radio" class="outputLocation" id="outputGoogle"   name="outputLocation" value="googledrive"  <c:if test="${dlLocation eq 'googledrive'}">checked="checked"</c:if>/><label for="outputGoogle" title="Download the detailed record"><img src="/static/images/drive_icon.png" alt="" />Google Drive</label></li>
+				<li><input type="radio" class="outputLocation" id="outputDropbox"      name="outputLocation" value="dropbox"  <c:if test="${dlLocation eq 'dropbox'}">checked="checked"</c:if>/><label for="outputDropbox" title="Download the detailed record"><img src="/static/images/dropbox_icon.png" alt=""/>Dropbox</label></li>
 				</ul>
+			</fieldset>
 			</div>
 			<div id="oneClickRight">
+			<fieldset title="Format to save downloads">
 			<div class="grayText sectionHead">Format:</div>
 			<ul>
 				<li><input type="radio" class="typeEnabled" id="rdRis" name="downloadformat" value="ris"  <c:if test="${dlFormat eq 'ris' or dlFormat eq 'refworks' or dlLocation eq 'refworks'}">checked="checked"</c:if>/><label	for="rdRis" title="RIS Format (EndNote, ProCite, Reference Manager)">RIS<span class="smalltxt">(EndNote, Ref. Manager)</span></label></li>
@@ -171,10 +174,11 @@
 				<li><input type="radio" class="typeEnabled" id="rdPdf" name="downloadformat" value="pdf"  <c:if test="${dlFormat eq 'pdf'}">checked="checked"</c:if>/><label for="rdPdf" title="PDF">PDF</label></li>
 				<li><input type="radio" class="typeEnabled" id="rdRtf" name="downloadformat" value="rtf"  <c:if test="${dlFormat eq 'rtf'}">checked="checked"</c:if>/><label for="rdRtf" title="(Rich Text Format, e.g. Word)">RTF<span class="smalltxt">(Word&reg;)</span></label></li>
 			</ul>
-
+			</fieldset>
 
 			</div>
 			<div id="oneClickRight">
+			<fieldset title="What ouput to download">
 				<div class="grayText sectionHead">Output:</div>
 				<ul>
 				<li><input type="radio" class="typeEnabled" id="rdDefault" name="displayformat" value="default"  <c:if test="${dlOutput eq 'default'}">checked="checked"</c:if>/><label for="rdDefault" title="Download the Format for this Page">Current page view</label></li>
@@ -190,6 +194,7 @@
 				</li>
 
 				</ul>
+			</fieldset>
 
 
 			</div>
@@ -199,7 +204,7 @@
 
 				<div class="grayText btmTextRight">Note: Your selected records <br/>(to a maximum of 500) will be  <br/>kept until your session ends.</div>
 				<div class="saveCancel">
-
+					<span style="display:none">Save download preferences for this session and download selected items</span>
 					<input type="button" value="Save" name="Save" id="savePrefsButton" />
 					<a href="#" style="padding-right:7px;" onclick="$('#downloadlink').tooltipster('destroy');">Cancel</a>
 				</div>

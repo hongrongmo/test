@@ -32,7 +32,7 @@
 				</c:otherwise></c:choose><span><b>${param.display eq 'patent'?'Find similar patents':'Refine results'}</b></span>
 			</h2>
 			<p class="buttons" style="*padding-bottom:3px">
-				<span id="limitto"><input type="submit" value="Limit to" title="Limit search results by your selections" /></span>
+				<span id="limitto"><input type="submit" value="Limit to" title="Limit search results by your selections" id="limittobtn"/></span>
 				<c:if test="${param.display ne 'patent'}"><input type="submit" value="Exclude" name="exclude" value="Exclude" title="Exclude your selections from your search results" /></c:if>
 			</p>
 		</div>

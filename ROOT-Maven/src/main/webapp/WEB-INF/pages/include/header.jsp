@@ -6,17 +6,19 @@
 	<div id="logoEV" aria-label="Engineering Village" role="banner">
 		<a href="/home.url" title="Engineering Village - The information discovery platform of choice for the engineering community" ><img alt="Engineering Village - The information discovery platform of choice for the engineering community" src="/static/images/EV-logo.gif"/></a>
 		<c:if test="${not empty actionBean.maintenanceMsg}">
-    		<div style="position:absolute; left: 320px; top: 28px; font-weight: bold; font-size; 12px; width:44%">${actionBean.maintenanceMsg }</div>
+    		<div style="position:absolute; left: 320px; top: 28px; font-weight: bold; font-size; 12px; width:35%">${actionBean.maintenanceMsg }</div>
 		</c:if>
-
 	</div>
-
+	
 
 	<c:choose>
 		<c:when	test="${not empty actionBean.context.userSession.carsMetaData.headerContent && actionBean.showLoginBox}">
         ${actionBean.context.userSession.carsMetaData.headerContent}
-        <script type="text/javascript">$("#loginBox").hide();</script>
-
+        <script type="text/javascript">
+        $("#loginBox").hide();
+        $("#login ul").prepend('<li style="background:none;"><a target="new"  href="https://docs.google.com/forms/d/1Fw5dUHQosH7-uHkQ7nnJQ6BzvxpxpJYyx-peUXfpy3E/viewform" title="Give feedback on Engineering Village"><img style="height:22px;"  src="/static/images/feedback.png"/></a></li>');
+        </script>
+				
         </c:when>
 		<c:otherwise>
 		</c:otherwise>
@@ -39,7 +41,7 @@
 <c:set var="userprefs" value="${actionBean.context.userSession.user.userPreferences}"/>
 
 <ul title="top level navigation" class="nav main" style="z-index:300;">
-	<li><a title="Search Engineering Village" href="${searchlink}" class="${actionBean.roomSearch ? 'selected' : ''}">Search</a></li>
+	<li><a title="Search Engineering Village" href="${searchlink}" class="${actionBean.roomSearch ? 'selected' : ''}" id="searchnavlink">Search</a></li>
 	<li><a title="Selected Records - View your selected records"	href="/selected/citation.url?CID=citationSelectedSet&DATABASEID=${actionBean.database}&searchtype=TagSearch" class="${actionBean.roomSelectedRecords ? 'selected' : ''}">Selected records</a></li>
 
 	<c:choose>
