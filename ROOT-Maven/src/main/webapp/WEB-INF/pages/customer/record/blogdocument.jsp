@@ -27,7 +27,7 @@
     <stripes:layout-component name="contents">
 
     <c:set var="result" value="${actionBean.results[0]}" scope="request"/>
-    <span session-id="${actionBean.sessionid}" security="${result.citedby.md5}" an="${result.citedby.an}" doi="${result.citedby.doi}" page="${result.citedby.firstpage}" volume="${result.citedby.firstvolume}" issue="${result.citedby.firstissue}" issn="${result.citedby.issn}" style="display: none;" name="citedbyspan"></span>
+    <span session-id="${actionBean.sessionid}" security="${result.citedby.md5}" an="${result.citedby.an}" doi="${result.citedby.doi}" page="${result.citedby.firstpage}" volume="${result.citedby.firstvolume}" issue="${result.citedby.firstissue}" issn="${result.citedby.issn}" isbn="${result.citedby.isbn}" isbn13="${result.citedby.isbn13}"  style="display: none;" name="citedbyspan"></span>
 
     <div id="abstractbox">
 
