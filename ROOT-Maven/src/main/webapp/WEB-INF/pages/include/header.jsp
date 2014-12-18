@@ -6,17 +6,23 @@
 	<div id="logoEV" aria-label="Engineering Village" role="banner">
 		<a href="/home.url" title="Engineering Village - The information discovery platform of choice for the engineering community" ><img alt="Engineering Village - The information discovery platform of choice for the engineering community" src="/static/images/EV-logo.gif"/></a>
 		<c:if test="${not empty actionBean.maintenanceMsg}">
-    		<div style="position:absolute; left: 320px; top: 28px; font-weight: bold; font-size; 12px; width:44%">${actionBean.maintenanceMsg }</div>
+    		<div style="position:absolute; left: 320px; top: 28px; font-weight: bold; font-size; 12px; width:35%">${actionBean.maintenanceMsg }</div>
 		</c:if>
-
 	</div>
-
+	
 
 	<c:choose>
 		<c:when	test="${not empty actionBean.context.userSession.carsMetaData.headerContent && actionBean.showLoginBox}">
         ${actionBean.context.userSession.carsMetaData.headerContent}
-        <script type="text/javascript">$("#loginBox").hide();</script>
-
+        <script type="text/javascript">
+        $("#loginBox").hide();
+        var rpadding = "0px";
+        <c:if test="${(userprefs.clientCustomLogo) || (not empty actionBean.customlogo)}">
+        	rpadding = "30px";
+        </c:if>
+        $("#login ul").prepend('<li style="background:none;padding-right:'+rpadding+'"><a target="new" href="https://docs.google.com/forms/d/1Fw5dUHQosH7-uHkQ7nnJQ6BzvxpxpJYyx-peUXfpy3E/viewform" title="Give feedback on Engineering Village"><img src="/static/images/feedback.png"/></a></li>');
+        </script>
+				
         </c:when>
 		<c:otherwise>
 		</c:otherwise>
