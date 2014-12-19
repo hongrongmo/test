@@ -1028,6 +1028,7 @@ public class GeoRefCorrection
 				else
 				{
 					System.out.println("****record "+m_id+" is still in Fast****");
+
 				}
 			}
 			else

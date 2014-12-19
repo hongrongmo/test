@@ -228,7 +228,7 @@ public class FastClient {
 
             // in = new BufferedReader(new FileReader("test.txt"));
             FastClient client = new FastClient();
-            client.setBaseURL("http://ei-test.bos3.fastsearch.net:15100");
+            client.setBaseURL("http://ei-main.nda.fastsearch.net:15100");
             client.setResultView("ei");
             client.setOffSet(0);
             client.setPageSize(25);
