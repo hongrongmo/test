@@ -1287,7 +1287,7 @@ public class BDDocBuilder implements DocumentBuilder {
         return strValue;
     }
 
-    private Contributors getAuthors(Key key, String authorString, String authorString1, String dataFormat)
+    public Contributors getAuthors(Key key, String authorString, String authorString1, String dataFormat)
 
      {
         StringBuffer auString = new StringBuffer();
