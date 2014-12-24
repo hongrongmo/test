@@ -71,6 +71,10 @@ public class GeobaseToGeorefMap {
                     // System.out.println("Loading... " + terms[0] + ", " + terms[1]);
                 }
             } 
+           else
+           {
+              System.out.println("Reader is null");
+           }
         } catch (FileNotFoundException e) {
             System.out.println("File Not found.  Look for geodata subdirectory.");
         } catch (IOException e) {
