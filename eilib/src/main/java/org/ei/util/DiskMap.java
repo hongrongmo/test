@@ -25,12 +25,36 @@ public class DiskMap {
         // writeMap.close();
 
         DiskMap readMap = new DiskMap();
+        //12/24/2014 from eijava
+        String codeString = args[1];
+        //
         readMap.openRead(args[0], false);
-        String val = readMap.get("US20010000014A1");
+        //String val = readMap.get("US20010000014A1");
+        //12/24/2014 from eijava
+        String val = readMap.get(codeString);
+        //
         log4j.info(val);
         readMap.close();
     }
 
+    //12/24/2014 from eijava
+    public Document document(int i) throws Exception
+    {
+        return this.reader.document(i);
+    }
+
+    public int maxDoc()
+    {
+        return this.reader.maxDoc();
+    }
+
+    public boolean isDeleted(int i)
+    {
+        return this.reader.isDeleted(i);
+    }
+    
+    //
+    
     public void openRead(String dir, boolean inMemory) throws IOException  {
         log4j.info("dir" + dir);
         if (!inMemory) {
