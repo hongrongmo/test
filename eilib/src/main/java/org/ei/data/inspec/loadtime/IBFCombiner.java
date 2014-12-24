@@ -125,8 +125,11 @@ public class IBFCombiner extends Combiner {
     }
 
     private void writeRecs(ResultSet rs) throws Exception {
+    	int i = 0;
         while (rs.next()) {
             EVCombinedRec rec = new EVCombinedRec();
+            ++i;
+            
             rec.put(EVCombinedRec.DOCID, rs.getString("M_ID"));
             rec.put(EVCombinedRec.DATABASE, "ibf");
             rec.put(EVCombinedRec.LOAD_NUMBER, rs.getString("LOAD_NUMBER"));
