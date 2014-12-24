@@ -44,6 +44,8 @@ public class INSCorrection
     static String lookupTable="deleted_lookupIndex";
     static String backupTable="ins_temp_backup";
     static String sqlldrFileName="InspecSqlLoaderFile.sh";
+    
+    String [] ipccode = null;
 
     public static void main(String args[])
         throws Exception
@@ -1019,12 +1021,16 @@ public class INSCorrection
         HashMap deletedControlltermLookupIndex      = getDeleteData(update,backup,"CONTROLLEDTERM");
         HashMap deletedPublisherNameLookupIndex     = getDeleteData(update,backup,"PUBLISHERNAME");
         HashMap deletedSerialtitleLookupIndex       = getDeleteData(update,backup,"SERIALTITLE");
+        //H:11/19/2014 check IPC too
+        HashMap deletedIpcLookupIndex       		= getDeleteData(update,backup,"IPC");
 
         saveDeletedData("AU",checkFast(deletedAuthorLookupIndex,"AU",database),database);
         saveDeletedData("AF",checkFast(deletedAffiliationLookupIndex,"AF",database),database);
         saveDeletedData("CV",checkFast(deletedControlltermLookupIndex,"CV",database),database);
         saveDeletedData("PN",checkFast(deletedPublisherNameLookupIndex,"PN",database),database);
         saveDeletedData("ST",checkFast(deletedSerialtitleLookupIndex,"ST",database),database);
+        //H:11/19/2014 check IPC too
+        saveDeletedData("IPC",checkFast(deletedIpcLookupIndex,"PID",database),database);
     }
 
     /*
@@ -1044,15 +1050,16 @@ public class INSCorrection
 
         Iterator searchTerms = inputMap.keySet().iterator();
 
-
         while (searchTerms.hasNext())
         {
             String term1=null;
+            //H : 11/19/2014 to hold index of IPCCode only
+            int i =0;
+
             try
             {
                 SearchControl sc = new FastSearchControl();
                 term1 = (String) searchTerms.next();
-
                 //System.out.println("FastSearch: search control term: "+term1);
 
                 int oc = Integer.parseInt((String)inputMap.get(term1));
@@ -1063,6 +1070,15 @@ public class INSCorrection
                 queryObject.setID(searchID);
                 queryObject.setSearchType(Query.TYPE_QUICK);
 
+              //H:11/19/2014 check IPC too
+                if(searchField.equalsIgnoreCase("PID"))
+                {
+                	if(term1.indexOf("\t") > -1){
+                	i = term1.indexOf("\t");
+                	term1 = term1.substring(0, i);
+                	}
+                }
+                
                 queryObject.setSearchPhrase("{"+term1+"}",searchField,"","","","","","");
                 queryObject.setSearchQueryWriter(new FastQueryWriter());
                 queryObject.compile();
@@ -1274,7 +1290,9 @@ public class INSCorrection
                 accessNumber = rs.getString("anum");
 
 
-                if(accessNumber !=null && accessNumber.length()>5)
+               // if(accessNumber !=null && accessNumber.length()>5)
+                //H: 11/19/2014 no limit for anum length, during INS reload ANUM started from 1
+                if(accessNumber !=null)
                 {
                     rec.put(EVCombinedRec.ACCESSION_NUMBER, accessNumber);
 
@@ -1368,8 +1386,8 @@ public class INSCorrection
                     {
                           //recs.put(EVCombinedRec.CHEMICAL_INDEXING,c.prepareIndexterms(rs.getString("chi")));
 
-                        //H:
-                        controltermList.addAll(Arrays.asList(c.prepareIndexterms(rs.getString("chi").toUpperCase())));
+                        //H: 11/19/2014 CHI is diff than CVS
+                        //controltermList.addAll(Arrays.asList(c.prepareIndexterms(rs.getString("chi").toUpperCase())));
                         rec.put(EVCombinedRec.CHEMICAL_INDEXING, rs.getString("chi").toUpperCase());
 
                     }
@@ -1437,7 +1455,9 @@ public class INSCorrection
             recs.put("PUBLISHERNAME",publishernameList);
             recs.put("SERIALTITLE",serialTitleList);
             recs.put("DATABASE",database);
-            recs.put(EVCombinedRec.INT_PATENT_CLASSIFICATION, ipc);
+            //H 11/19/2014 to check fast for IPC 
+            recs.put("IPC", ipc);
+            //recs.put(EVCombinedRec.INT_PATENT_CLASSIFICATION, ipc);
 
             //recs.put("AUTHOR",authorList);
             //recs.put("AFFILIATION",affiliationList);
