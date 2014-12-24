@@ -10,10 +10,15 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import org.apache.oro.text.regex.*;          //HH 12/24/2014 from eijava
 import org.apache.oro.text.perl.Perl5Util;
 import org.ei.data.AuthorStream;
 import org.ei.data.bd.loadtime.BdParser;
 import org.ei.util.StringUtil;
+
+import org.jdom2.Element;   //HH 12/24/2014 from eijava, replace jdom by jdom2
+
+
 
 public class ExtractPaperChem
 {
