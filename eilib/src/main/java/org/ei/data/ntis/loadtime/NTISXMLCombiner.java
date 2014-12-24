@@ -23,7 +23,7 @@ import org.ei.data.XMLWriterCommon;
 import org.ei.data.EVCombinedRec;
 import org.ei.util.GUID;
 
-public class NTISCombiner
+public class NTISXMLCombiner
 	extends Combiner
 {
 
@@ -69,7 +69,7 @@ public class NTISCombiner
 
         NTISCombiner c = new NTISCombiner(writer);
 
-		if(loadNumber > 100000)
+		if(loadNumber > 100001)
 		{
             c.writeCombinedByWeekNumber(url,
                     					driver,
@@ -105,7 +105,7 @@ public class NTISCombiner
         System.out.println("++end of loadnumber " + loadNumber);
     }
 
-    public NTISCombiner(CombinedWriter writer)
+    public NTISXMLCombiner(CombinedWriter writer)
     {
         super(writer);
     }
@@ -174,11 +174,11 @@ public class NTISCombiner
             ++i;
 
             String aut = NTISAuthor.formatAuthors(rs.getString("PA1"),
-                    							  rs.getString("PA2"),
-                    							  rs.getString("PA3"),
-                    							  rs.getString("PA4"),
-                    							  rs.getString("PA5"),
-                    							  rs.getString("HN"));
+                    								 rs.getString("PA2"),
+                    								 rs.getString("PA3"),
+                    								 rs.getString("PA4"),
+                    								 rs.getString("PA5"),
+                    								 rs.getString("HN"));
 
             if (aut != null)
             {
@@ -299,28 +299,7 @@ public class NTISCombiner
         {
             return null;
         }
-        //Added for xml format data
-		if(num1.indexOf(NTISParser.AUDELIMITER)>-1)
-		{
-			String[] num1Array = num1.split(NTISParser.AUDELIMITER);
-			String num11="";
-			String num12="";
 
-			//added for XML format
-			for(int i=0;i<num1Array.length;i++)
-			{
-				String singleNum1 = num1Array[i];
-				if(singleNum1.indexOf("Contract")>-1)
-				{
-					num11= singleNum1;
-				}
-				else
-				{
-					num12 = num12+";"+singleNum1;
-				}
-			}
-			num1=num11+";"+num12;
-		}
         num1 = num1.replace('{', ' ');
         num2 = num2.replace('{', ' ');
         return num1 + ";" + num2;

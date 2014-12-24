@@ -55,9 +55,6 @@ public class NTISAuthor
 
 		if(authors.length() > 0)
 		{
-
-
-
 			return formatAdditionalAuthors(authors.toString(),
 								     	   HN);
 		}
@@ -69,6 +66,8 @@ public class NTISAuthor
 	public static String formatAdditionalAuthors(String firstGroup,
 												 String additionalHN)
 	{
+		System.out.println("firstGroup= "+firstGroup);
+		System.out.println("additionalHN= "+additionalHN);
 		if(additionalHN == null ||
 		   additionalHN.trim().length() == 0)
 		{
@@ -121,6 +120,7 @@ public class NTISAuthor
 
 	public static String formatFirstAuthor(String pa1)
 	{
+		System.out.println("formatFirstAuthor_input= "+pa1);
 		if(pa1 == null)
 		{
 			return null;
@@ -128,32 +128,46 @@ public class NTISAuthor
 
 		Perl5Util perl = new Perl5Util();
 		StringBuffer buf = new StringBuffer();
-		StringTokenizer tokens = new StringTokenizer(pa1, "{");
-		if(tokens.hasMoreTokens())
+		String[] authorArray = pa1.split(NTISParser.AUDELIMITER);
+		for(int i=0;i<authorArray.length;i++)
 		{
-			String initials = tokens.nextToken().trim();
+			String singlePa = authorArray[i];
+			StringTokenizer tokens = new StringTokenizer(singlePa, "{");
 			if(tokens.hasMoreTokens())
 			{
-				String lastname = tokens.nextToken().trim();
-				initials = perl.substitute("s#^by##i", initials);
-				lastname = perl.substitute("s# and##i", lastname);
-				lastname = perl.substitute("s#,##i", lastname);
-				lastname = perl.substitute("s#\\.$##i", lastname);
-				if(lastname.length() > 0)
+				String initials = tokens.nextToken().trim();
+				if(tokens.hasMoreTokens())
 				{
-					buf.append(lastname.trim());
-					if(initials.length() > 0)
+					String lastname = tokens.nextToken().trim();
+					initials = perl.substitute("s#^by##i", initials);
+					lastname = perl.substitute("s# and##i", lastname);
+					lastname = perl.substitute("s#,##i", lastname);
+					lastname = perl.substitute("s#\\.$##i", lastname);
+					if(lastname.length() > 0)
 					{
-						buf.append(", ");
-						buf.append(initials.trim());
+						buf.append(lastname.trim());
+						if(initials.length() > 0)
+						{
+							buf.append(", ");
+							buf.append(initials.trim());
+						}
+						if(i>authorArray.length-1)
+						{
+							buf.append("; ");
+						}
 					}
-
-					return buf.toString();
+					//System.out.println("formatFirstAuthor_output= "+buf.toString());
 				}
 			}
 		}
-
-		return null;
+		if(buf.length()>0)
+		{
+			return buf.toString();
+		}
+		else
+		{
+			return null;
+		}
 	}
 
 
@@ -164,33 +178,54 @@ public class NTISAuthor
 		{
 			return null;
 		}
+
+		//System.out.println("formatAuthor_input= "+pa);
 		Perl5Util perl = new Perl5Util();
 		StringBuffer buf = new StringBuffer();
-		StringTokenizer tokens = new StringTokenizer(pa, "{");
-		if(tokens.hasMoreTokens())
+		String[] authorArray = pa.split(NTISParser.AUDELIMITER);
+		for(int i=0;i<authorArray.length;i++)
 		{
-
-			String initials = tokens.nextToken().trim();
+			String singlePa = authorArray[i];
+			StringTokenizer tokens = new StringTokenizer(singlePa, "{");
 			if(tokens.hasMoreTokens())
 			{
-				String lastname = tokens.nextToken().trim();
-				lastname = perl.substitute("s/(\\.|\\,)?(\\s)*(and)?$//", lastname);
 
-				if(lastname.length() > 0)
+				String initials = tokens.nextToken().trim();
+				if(tokens.hasMoreTokens())
 				{
-					buf.append(lastname);
-					if(initials.length() > 0)
-					{
-						buf.append(", ");
-						buf.append(initials);
-					}
+					String lastname = tokens.nextToken().trim();
+					lastname = perl.substitute("s/(\\.|\\,)?(\\s)*(and)?$//", lastname);
 
-					return buf.toString();
+					if(lastname.length() > 0)
+					{
+						buf.append(lastname);
+						if(initials.length() > 0)
+						{
+							buf.append(", ");
+							buf.append(initials);
+						}
+
+
+					}
 				}
+			}
+			if(i>authorArray.length-1)
+			{
+				buf.append("; ");
 			}
 		}
 
-		return null;
+		//System.out.println("formatAuthor_output= "+buf.toString());
+
+		if(buf.length()>0)
+		{
+			return buf.toString();
+		}
+		else
+		{
+			return null;
+		}
+
 	}
 
 
