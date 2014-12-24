@@ -3013,7 +3013,7 @@ public class PatentXmlReader
 					case 171 :sb.append("&laquo;");break; 	//left-pointing double angle
 					case 172 :sb.append("&not;");break; 	//not sign
 					case 173 :sb.append("&shy;");break; 	//soft hyphen
-					case 174 :sb.append("&reg");break; 		//registered sign
+					case 174 :sb.append("&reg;");break; 		//registered sign
 					case 175 :sb.append("&macr;");break; 	//macron
 					case 176 :sb.append("&deg;");break; 	//degree sign
 					case 177 :sb.append("&plusmn;");break; 	//plus-minus sign
@@ -3022,7 +3022,7 @@ public class PatentXmlReader
 					case 180 :sb.append("&acute;");break; 	//acute accent
 					case 181 :sb.append("&micro;");break; 	//micro sign
 					case 182 :sb.append("&para;");break; 	//pilcrow sign
-					case 183 :sb.append("&middot");break; 	//middle dot
+					case 183 :sb.append("&middot;");break; 	//middle dot
 					case 184 :sb.append("&cedi1;");break; 	//cedilla
 					case 185 :sb.append("&supl;");break; 	//superscript one
 					case 186 :sb.append("&ordm;");break; 	//masculine ordinal indicator
@@ -3156,23 +3156,23 @@ public class PatentXmlReader
 					case 8211 :sb.append("&ndash;");break; 	//En dash
 					case 8212 :sb.append("&mdash;");break; 	//Em dash
 					case 8216 :sb.append("&lsquo;");break; 	//left single quotation
-					case 8217 :sb.append("&rsquo");break; 	//right single quotation
-					case 8218 :sb.append("&sbquo");break; 	//single low 9 quation mark
+					case 8217 :sb.append("&rsquo;");break; 	//right single quotation
+					case 8218 :sb.append("&sbquo;");break; 	//single low 9 quation mark
 					case 8220 :sb.append("&ldquo;");break; 	//left double quotation
 					case 8221 :sb.append("&rdquo;");break; 	//right double quotation
 					case 8222 :sb.append("&bdquo;");break; 	//Double low-9 quotation mark
 					case 8224 :sb.append("&dagger;");break; //Dagger
 					case 8225 :sb.append("&Dagger;");break; //Double Dagger
-					case 8226 :sb.append("&bull");break; 	//Bullet, black small circle
-					case 8230 :sb.append("&hellip");break; 	//Horizontal ellipsis
+					case 8226 :sb.append("&bull;");break; 	//Bullet, black small circle
+					case 8230 :sb.append("&hellip;");break; 	//Horizontal ellipsis
 					case 8240 :sb.append("&permil;");break; //per mille sign
 					case 8242 :sb.append("&prime;");break; 	//prime, minutes,feet
 					case 8243 :sb.append("&Prime;");break; 	//double prime,
 					case 8249 :sb.append("&Isaquo;");break; //single left-pointing angle quotation mark
 					case 8250 :sb.append("&rsaquo;");break; //single right-pointing angle quotation mark
 					case 8254 :sb.append("&oline;");break;  //Overline, spacing overscore
-					case 8260 :sb.append("&frasl");break; 	//Fraction slash
-					case 8364 :sb.append("&euro");break; 	//Euro sign
+					case 8260 :sb.append("&frasl;");break; 	//Fraction slash
+					case 8364 :sb.append("&euro;");break; 	//Euro sign
 					case 8465 :sb.append("&image;");break;  //blackletter capital I
 					case 8472 :sb.append("&weierp;");break; //script capital P, power set, Weierstrass p
 					case 8476 :sb.append("&real;");break; 	//Blackletter capital R, real part symbol,
@@ -3190,7 +3190,7 @@ public class PatentXmlReader
 					case 8659 :sb.append("&dArr;");break;   //Downward double arrow
 					case 8660 :sb.append("&hArr;");break;  	//left-right double
 					case 8704 :sb.append("&forall;");break; //for all
-					case 8706 :sb.append("&part");break; 	//Partial differential
+					case 8706 :sb.append("&part;");break; 	//Partial differential
 					case 8707 :sb.append("&exist;");break;  //there exist
 					case 8709 :sb.append("&empty;");break; 	//empty set
 					case 8711 :sb.append("&nabla;");break; 	//Nabla, backward difference
@@ -3199,7 +3199,7 @@ public class PatentXmlReader
 					case 8715 :sb.append("&ni;");break;   	//Contains as member
 					case 8719 :sb.append("&prod;");break;  	//n_ary product, product sign
 					case 8721 :sb.append("&sum;");break; 	//n-ary sumation
-					case 8722 :sb.append("&minus");break; 	//Minus sign
+					case 8722 :sb.append("&minus;");break; 	//Minus sign
 					case 8727 :sb.append("&lowast;");break; //Asterisk operation
 					case 8730 :sb.append("&radic;");break; 	//Square root, radical sign
 					case 8733 :sb.append("&prop;");break; 	//proportional to
@@ -3216,7 +3216,7 @@ public class PatentXmlReader
 					case 8776 :sb.append("&asyum;");break;  //almost equal to, asymptotic to
 					case 8800 :sb.append("&ne;");break;  	//not equal
 					case 8801 :sb.append("&equiv;");break; 	//identical to
-					case 8804 :sb.append("&le");break; 		//less - than or equal to
+					case 8804 :sb.append("&le;");break; 		//less - than or equal to
 					case 8805 :sb.append("&ge;");break; 	//greater than or equal to
 					case 8834 :sb.append("&sub;");break; 	//subset of
 					case 8835 :sb.append("&sup;");break; 	//superset of
@@ -3233,7 +3233,7 @@ public class PatentXmlReader
 					case 8971 :sb.append("&rfloor;");break; //right floor
 					case 9001 :sb.append("&lang;");break;  	//left pointing angle bracket, bra
 					case 9002 :sb.append("&rang;");break; 	//right pointing angle bracket, ket
-					case 9674 :sb.append("&loz");break; 	//lozenge
+					case 9674 :sb.append("&loz;");break; 	//lozenge
 					case 9824 :sb.append("&spades;");break; //black spade suit
 					case 9827 :sb.append("&clubs;");break; 	//black club suit, shamrock
 					case 9829 :sb.append("&hearts;");break; //black heart suit, valentine
