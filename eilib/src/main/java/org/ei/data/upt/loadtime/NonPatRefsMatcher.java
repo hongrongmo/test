@@ -142,5 +142,42 @@ public class NonPatRefsMatcher {
 
         return fastQuery.toString();
     }
+    
+    //HH 12/22/2014 from eijava part
+    private void close(Statement stmt)
+    {
+        try {
+            if (stmt != null) {
+                stmt.close();
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    private void close(ResultSet rs) {
+
+        try {
+            if (rs != null) {
+                rs.close();
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void close(Connection conn) {
+
+        try {
+            if (conn != null) {
+                conn.close();
+            }
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
 }
