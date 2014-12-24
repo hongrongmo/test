@@ -2,9 +2,9 @@ package org.ei.data.ntis.loadtime;
 
 import java.io.*;
 import java.util.*;
-import org.jdom2.*;     //map jdom from svn to jdom2
-import org.jdom2.input.*;
-import org.jdom2.output.*;
+import org.jdom2.*;               //HH: 12/24/2014 replace jdom by new jdom2
+import org.jdom2.input.*;		  // replace jdom by new jdom2
+import org.jdom2.output.*;        // replace jdom by new jdom2
 import org.ei.util.GUID;
 import org.apache.oro.text.perl.*;
 import org.apache.oro.text.regex.*;
