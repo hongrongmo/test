@@ -117,8 +117,11 @@ public class CBNBBaseTableWriter
 
                 if(i > 0)
                 {
-                    recordBuf.append("  ");   
-                  
+                    //recordBuf.append("  ");
+                    
+                    //12/31/2014 add tab as in eijava not spaces
+                    recordBuf.append("\t");
+                   
                 }
 
 
