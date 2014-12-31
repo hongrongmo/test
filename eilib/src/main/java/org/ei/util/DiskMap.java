@@ -69,6 +69,12 @@ public class DiskMap {
         this.writer = new IndexWriter(dir, new StandardAnalyzer(), true);
     }
 
+    // 12/31/2014 from eijava
+    
+    public void openWrite(String dir, boolean flag) throws Exception {
+        this.writer = new IndexWriter(dir, new StandardAnalyzer(), flag);
+}
+    
     public void close() throws IOException  {
         if (reader != null) {
             reader.close();
