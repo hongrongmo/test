@@ -26,7 +26,9 @@ public class CBNBRecordFixer
         {
             if(i>0)
             {
-                buf.append("    ");
+                //buf.append("    ");
+                //12/31/2014 from eijava to add tab delimiter not spaces in out file 
+                buf.append("\t");
             }
 
             String fs = (String)al.get(i);
