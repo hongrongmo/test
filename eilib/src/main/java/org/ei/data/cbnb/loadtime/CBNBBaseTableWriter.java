@@ -110,17 +110,15 @@ public class CBNBBaseTableWriter
                 if(value != null)
                 {
                     valueS = value.toString();
-                   // valueS = perl.substitute("s/\\t/     /g", valueS);
+                    valueS = perl.substitute("s/\\t/     /g", valueS);
 
                 }
 
 
                 if(i > 0)
                 {
-                    //recordBuf.append("  ");   // original
-                    
-                    //HH 12/31/2014 add tab to be same as weekly prod 
-                    recordBuf.append("\t");
+                    recordBuf.append("  ");   
+                  
                 }
 
 
