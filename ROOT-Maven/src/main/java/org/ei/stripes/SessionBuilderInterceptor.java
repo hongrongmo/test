@@ -82,13 +82,6 @@ public class SessionBuilderInterceptor implements Interceptor {
             return new ForwardResolution("/WEB-INF/pages/world/maintenance.jsp");
         }
 
-		if (actionbean instanceof ISecuredAction) {
-			accesscontrol = ((ISecuredAction) actionbean).getAccessControl();
-			if (accesscontrol instanceof WorldAccessControl) {
-				return executioncontext.proceed();
-			}
-		}
-
 		// Add the release version number to the request for JSPs
         request.setAttribute("releaseversion", EVProperties.getApplicationProperties().getProperty(ApplicationProperties.RELEASE_VERSION));
         // Add the contact us link to the request for all JSPs
@@ -121,13 +114,6 @@ public class SessionBuilderInterceptor implements Interceptor {
 		// *****************************************************
 		IPBlocker.getInstance().increment(ipaddress, COUNTER.REQUEST);
 
-
-		if (actionbean instanceof ISecuredAction) {
-			accesscontrol = ((ISecuredAction) actionbean).getAccessControl();
-			if (accesscontrol instanceof WorldAccessControl) {
-				return executioncontext.proceed();
-			}
-		}
 
         // *****************************************************
 		// Check the User-Agent. If "PEAR", end request
@@ -180,7 +166,7 @@ public class SessionBuilderInterceptor implements Interceptor {
 		// *****************************************************
 		// Print out request information
 		// *****************************************************
-		log4j.warn("********* Servicing request **********" + EVProperties.NEWLINE + HttpRequestUtil.prettyPrintRequest(request, EVProperties.NEWLINE));
+		log4j.warn("********* Servicing request **********" + sessionmanager.prettyPrintRequest(usersession, EVProperties.NEWLINE));
 		if (log4j.isInfoEnabled()) {
 			RequestDumper.dump(request, "params,headers");
 			log4j.info("client IP for this request is==================================="
