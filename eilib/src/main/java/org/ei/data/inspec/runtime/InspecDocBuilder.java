@@ -67,8 +67,8 @@ import org.ei.domain.Year;
 import org.ei.util.StringUtil;
 
 public class InspecDocBuilder implements DocumentBuilder {
-    public static String INS_TEXT_COPYRIGHT = "Copyright 2014, IEE";
-    public static String INS_HTML_COPYRIGHT = "Copyright 2014, IEE";
+    public static String INS_TEXT_COPYRIGHT = "Copyright 2015, IEE";
+    public static String INS_HTML_COPYRIGHT = "Copyright 2015, IEE";
     public static String PROVIDER_TEXT = "Inspec";
     public static String TRANS_SEE_DETAILED = "For translation info., see Detailed Record / Links";
     private static final Key INS_CONTROLLED_TERMS = new Key(Keys.CONTROLLED_TERMS, "Inspec controlled terms");
