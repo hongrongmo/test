@@ -665,6 +665,14 @@ $(document).ready(function() {
 		return false;
 	});
 
+	
+	$(".viewChart").click(function(){
+		if(_gaq){
+
+			GALIBRARY.createWebEventWithLabel('Refine Results', 'View Chart',$(this).attr("field"));
+		}		
+		
+	});
 	// Handle the "Go" button from page navigation
 	$("form[name='gotopageform']").submit(function(event) {
 		var pagenumber = parseInt($('input[name="PAGE"]', this).val());
