@@ -80,7 +80,7 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
 
 <script type="text/javascript">
     // Initialize GA
-    var pageevents = [<c:forEach items="${webAnalyticsEvent}" var="webEvent" varStatus="status">{category:'${webEvent.category}', action: '${webEvent.action}', label: '${webEvent.label}'}<c:if test='${!status.last}'>,</c:if></c:forEach>];
+    var pageevents = [<c:forEach items="${webAnalyticsEvent}" var="webEvent" varStatus="status">{category:'<c:out value="${webEvent.category}"/>', action: '<c:out value="${webEvent.action}"/>', label: '<c:out value="${webEvent.label}"/>'}<c:if test='${!status.last}'>,</c:if></c:forEach>];
     GALIBRARY.init(
         ["${actionBean.context.googleAnalyticsAccount}", "${usersession.user.account.accountName}", "${usersession.user.individuallyAuthenticated}"],
         pageevents);
