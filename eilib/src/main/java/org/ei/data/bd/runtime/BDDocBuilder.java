@@ -183,7 +183,7 @@ public class BDDocBuilder implements DocumentBuilder {
                 buildField(Keys.DOCID, (DocID) oidTable.get(rset.getString("M_ID")), ht);
                 formatRIS(buildField(Keys.ACCESSION_NUMBER, rset.getString("ACCESSNUMBER"), ht), dataFormat, Keys.ACCESSION_NUMBER, Keys.RIS_AN);
                 formatRIS(buildField(Keys.DOI, rset.getString("DOI"), ht), dataFormat, Keys.DOI, Keys.RIS_DO);
-                buildField(Keys.COPYRIGHT, CPX_HTML_COPYRIGHT, ht);
+                buildField(Keys.COPYRIGHT, CPX_HTML_COPYRIGHT, ht);              
                 formatRIS(buildField(Keys.COPYRIGHT_TEXT, CPX_TEXT_COPYRIGHT, ht), dataFormat, Keys.COPYRIGHT_TEXT, Keys.RIS_N1);
 
                 Key issuedateKey = Keys.ISSUE_DATE;
