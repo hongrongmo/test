@@ -1,6 +1,7 @@
 package org.ei.data.inspec.runtime;
 
 import java.io.ByteArrayInputStream;
+
 import java.io.IOException;
 import java.net.URLEncoder;
 import java.sql.Clob;
@@ -22,6 +23,7 @@ import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.Calendar;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.oro.text.perl.Perl5Util;
@@ -67,8 +69,9 @@ import org.ei.domain.Year;
 import org.ei.util.StringUtil;
 
 public class InspecDocBuilder implements DocumentBuilder {
-    public static String INS_TEXT_COPYRIGHT = "Copyright 2014, IEE";
-    public static String INS_HTML_COPYRIGHT = "Copyright 2014, IEE";
+	static int year = Calendar.getInstance().get(Calendar.YEAR);
+    public static String INS_TEXT_COPYRIGHT = "Copyright "+year+", IEE";
+    public static String INS_HTML_COPYRIGHT = "Copyright "+year+", IEE";
     public static String PROVIDER_TEXT = "Inspec";
     public static String TRANS_SEE_DETAILED = "For translation info., see Detailed Record / Links";
     private static final Key INS_CONTROLLED_TERMS = new Key(Keys.CONTROLLED_TERMS, "Inspec controlled terms");

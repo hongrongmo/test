@@ -16,6 +16,7 @@ public class InspecDataDictionary
     private Hashtable<String, String> classCodes;
     private Hashtable<String, String> treatmentCodes;
 
+    
     public String getClassCodeTitle(String classCode)
     {
         //HH 01/14/2015
@@ -25,7 +26,7 @@ public class InspecDataDictionary
             if (classCode != null)
             {
                 classCodeTitle = (String)classCodes.get(classCode.toUpperCase());
-                //return (String)classCodes.get(classCode.toUpperCase());
+               
             }
         }
         catch(Exception e)
