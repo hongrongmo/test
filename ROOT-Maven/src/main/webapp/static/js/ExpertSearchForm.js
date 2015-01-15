@@ -575,6 +575,7 @@ function searchValidation() {
 		}
 		
 		var textNodeValue = searchword1;
+		textNodeValue = textNodeValue.replace(/(\r\n|\n|\r)/gm,"");
 		for (var j = 0; j < swapCodes.length; j++) {
 	        var swapper = new RegExp("\\u" + swapCodes[j].toString(16), "g");
 	        textNodeValue = textNodeValue.replace(swapper, swapStrings[j]);
