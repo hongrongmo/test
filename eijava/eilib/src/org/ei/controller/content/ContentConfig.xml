@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE CONTENTCONFIG SYSTEM "ContentConfig.dtd">
+
+<CONTENTCONFIG>
+	<AUTHGROUP NAME="world">
+		<CONTENTDESCRIPTOR ASYNC="YES">
+			<ID>2343433443</ID>
+			<DATASOURCEURL>http://www.goto.com/test.jsp?and=3&amp;test=yes </DATASOURCEURL>
+			<DISPLAYURL>http://www.goto.com/display.xsl</DISPLAYURL>
+			<MIMETYPE>text/html</MIMETYPE>
+			<ASYNCURL>http://www.goto.com/async</ASYNCURL>
+		</CONTENTDESCRIPTOR>
+	</AUTHGROUP>
+	<AUTHGROUP NAME="customer">
+		<CONTENTDESCRIPTOR ASYNC="YES">
+			<ID>23434334434345</ID>
+			<DATASOURCEURL>http://www.goto.com/data.jsp</DATASOURCEURL>
+			<DISPLAYURL>http://www.goto.com/display.xsl</DISPLAYURL>
+			<MIMETYPE>text/html</MIMETYPE>
+			<ASYNCURL>http://www.goto.com/async</ASYNCURL>
+		</CONTENTDESCRIPTOR>
+		<CONTENTDESCRIPTOR ASYNC="NO">
+			<ID>23434334434345jj</ID>
+			<DATASOURCEURL>http://www.goto.com/data.jsp</DATASOURCEURL>
+			<DISPLAYURL>http://www.goto.com/display.xsl</DISPLAYURL>
+			<MIMETYPE>text/html</MIMETYPE>
+		</CONTENTDESCRIPTOR>
+	</AUTHGROUP>
+	<AUTHGROUP NAME="intel">
+		<CONTENTDESCRIPTOR ASYNC="YES">
+			<ID>2434334434345</ID>
+			<DATASOURCEURL>http://www.goto.com/data.jsp</DATASOURCEURL>
+			<DISPLAYURL>http://www.goto.com/display.xsl</DISPLAYURL>
+			<MIMETYPE>text/html</MIMETYPE>
+			<ASYNCURL>http://www.goto.com/async</ASYNCURL>
+		</CONTENTDESCRIPTOR>
+		<CONTENTDESCRIPTOR ASYNC="YES">
+			<ID>2ff3434334434345jj</ID>
+			<DATASOURCEURL>http://www.goto.com/data.jsp</DATASOURCEURL>
+			<DISPLAYURL>http://www.goto.com/display.xsl</DISPLAYURL>
+			<MIMETYPE>text/html</MIMETYPE>
+			<ASYNCURL>http://www.goto.com/async</ASYNCURL>
+		</CONTENTDESCRIPTOR>
+	</AUTHGROUP>	
+</CONTENTCONFIG>
