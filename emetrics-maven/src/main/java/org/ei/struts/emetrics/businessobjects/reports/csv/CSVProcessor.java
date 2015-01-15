@@ -76,7 +76,7 @@ public class CSVProcessor {
             IRange range = (IRange) pStmntValues.get("range");
 
             // Get the results from the file
-            String key = (String) pStmntValues.get("filename");
+            String key = ((String) pStmntValues.get("path")).concat((String) pStmntValues.get("filename"));
             AmazonS3Service s3service = AmazonS3Service.getInstance();
             ObjectMetadata metadata = s3service.getMetadata(key);
             if (metadata == null || metadata.getContentLength() == 0) {
