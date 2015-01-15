@@ -14,7 +14,7 @@ public class NTISLinkingStrategy implements LinkingStrategy
     	LinkInfo linkInfo = new LinkInfo();
     	String accnum = eid.getAccNumber();
     	StringBuffer buf = new StringBuffer();
-        buf.append("http://www.ntis.gov/Search/Home/titleDetail?abbr=");
+    	buf.append("http://www.ntis.gov/Search/Home/titleDetail?abbr=");
     	buf.append(accnum);
     	linkInfo.url = buf.toString();
         return linkInfo;
