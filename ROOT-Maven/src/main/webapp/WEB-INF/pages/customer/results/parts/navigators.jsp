@@ -74,7 +74,7 @@
 				<h3 class="facettitle facetshowhide <c:if test="${navigator.field == 'cv'}">facet_cvHighlightFeature</c:if>" field="${navigator.field}" title="${navopen ? 'Close' : 'Open'}"><b>${navigator.label}</b>&nbsp;&nbsp; </h3>
 				<div class="facetheader_links">
 				<c:if test="${actionBean.isnavchrt}">
-					<a title="View chart" class="viewChart" field="${navigator.label}" href=""
+					<a title="View chart" href=""
 						onclick="window.open('/search/results/analyzenav.url?searchid=${actionBean.searchid}&database=${actionBean.database}&field=${navigator.field}','newwindow','width=600,height=630,toolbar=no,location=no,scrollbars,resizable');return false"><jwr:img
 						src="/static/images/Graph.png" styleId="graph" border="0" alt="View Chart"/></a>
 					<a title="Download data"

@@ -169,8 +169,8 @@ public final class ReportAction extends FrameworkBaseAction {
 						.concat(System.getProperty("file.separator")));
 		h.put("filename", report.getFilename());
         */
-		h.put("path", custid.equals("0") ? "totals/" : custid + "/");
-		h.put("filename", report.getFilename());
+		h.put("path", "");
+		h.put("filename", (custid.equals("0") ? "totals" : custid).concat("/").concat(report.getFilename()));
 		
 		// if this is a consotrium and we do not want only the parent's data
 		if (!members.isEmpty() && !user.getParentonly()) {
@@ -191,14 +191,11 @@ public final class ReportAction extends FrameworkBaseAction {
 			range = new MemberRange(members);
 			rptform.setMembers(((MemberRange) range).getMembers());
 			if (!rptform.getMember().equalsIgnoreCase(Constants.ALL)) {
-			    /*
 				h.put("path",
 						servlet.getInitParameter("reportdata")
 								.concat(System.getProperty("file.separator"))
 								.concat(rptform.getMember())
 								.concat(System.getProperty("file.separator")));
-								*/
-			    h.put("path", rptform.getMember().concat("/"));
 				h.put("filename", report.getFilename());
 			}
 		} else if ((report.getReportId() == Constants.CUSTOMER_DATABASE_COMBO)

@@ -16,7 +16,11 @@
         ${actionBean.context.userSession.carsMetaData.headerContent}
         <script type="text/javascript">
         $("#loginBox").hide();
-        $("#login ul").prepend('<li style="background:none;"><a target="new"  href="https://docs.google.com/forms/d/1Fw5dUHQosH7-uHkQ7nnJQ6BzvxpxpJYyx-peUXfpy3E/viewform" title="Give feedback on Engineering Village"><img style="height:22px;"  src="/static/images/feedback.png"/></a></li>');
+        var rpadding = "0px";
+        <c:if test="${(userprefs.clientCustomLogo) || (not empty actionBean.customlogo)}">
+        	rpadding = "30px";
+        </c:if>
+        $("#login ul").prepend('<li style="background:none;padding-right:'+rpadding+'"><a target="new" href="https://docs.google.com/forms/d/1Fw5dUHQosH7-uHkQ7nnJQ6BzvxpxpJYyx-peUXfpy3E/viewform" title="Give feedback on Engineering Village"><img src="/static/images/feedback.png"/></a></li>');
         </script>
 				
         </c:when>
@@ -125,10 +129,8 @@
 </ul>
 
 </div>
+
 </div>
-<c:if test="${not empty actionBean.IE7Msg}">
-  	<div id="ie7msg" style="text-align:left;display:none"><img src="/static/images/red_warning.gif" style="padding-right:5px;width:20px;margin-top:-3px; float:left"/><span id="ie7messageholder">${actionBean.IE7Msg}</span></div>
-</c:if>
 <div id="prefsSaved" style="display:none;text-align:left;"><img src="/static/images/ev_checkmark.png" style="padding-right:5px;width:20px;"/>Preferences Saved!</div>
 <c:choose>
 	<c:when test="${actionBean.context.userSession.user.individuallyAuthenticated}">
@@ -161,7 +163,7 @@
   </c:if>
 
   $(function() {	  if($("#settingMenu").length > 0){
-	  $("#settingMenu").menu({position:{my:'right+25 top+20'}, icons: { submenu: "ui-icon-triangle-1-s" }});
+		$("#settingMenu").menu({position:{my:'right+25 top+20'}, icons: { submenu: "ui-icon-triangle-1-s" }});
 		$("#settingDropDown").show();
 		//showTooltip(".settingMenu","We have Added New Settings!", "top-left", 4500, true);
 	  }

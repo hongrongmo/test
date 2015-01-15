@@ -219,7 +219,7 @@ public class HttpRequestUtil {
     public static String prettyPrintRequest(HttpServletRequest request, String newline) {
 
     	// Add request URI with parameters
-    	StringBuffer sb = new StringBuffer(newline + "    +    URI:               " + request.getRequestURI());
+    	StringBuffer sb = new StringBuffer("    +    URI:        " + request.getRequestURI());
     	if (request.getParameterNames() != null) {
             Enumeration<String> en = request.getParameterNames();
 
@@ -241,14 +241,15 @@ public class HttpRequestUtil {
             }
 
     	}
+    	sb.append(newline);
 
     	// Add IP, Session ID and User-Agent
-    	sb.append(    newline + "    +    IP:                " + getIP(request));
+    	sb.append("    +    IP:         " + getIP(request) + newline);
     	HttpSession session = request.getSession(false);
     	if (session != null) {
-    		sb.append(newline + "    +    SessionID (Tcat):  " + session.getId() + " (" + session.isNew() + ")");
+    		sb.append("    +    SessionID:  " + session.getId() + " (" + session.isNew() + ")" + newline);
     	}
-    	sb.append(    newline + "    +    User-Agent:        " + request.getHeader("User-Agent"));
+    	sb.append("    +    User-Agent: " + request.getHeader("User-Agent") + newline);
 
     	return sb.toString();
     }
