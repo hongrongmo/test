@@ -13,7 +13,7 @@ import org.ei.thesaurus.*;
 public class InspecDataDictionary
     implements DataDictionary
 {
-    private Hashtable<String, String> classCodes;
+    private static Hashtable<String, String> classCodes;
     private Hashtable<String, String> treatmentCodes;
 
     

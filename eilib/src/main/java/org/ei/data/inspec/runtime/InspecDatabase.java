@@ -63,7 +63,6 @@ public class InspecDatabase extends Database {
   //HH 01/16/2014
     private DataDictionary dataDictionary = InspecDataDictionary.getInstance();
     
-
     private Database backfile = new org.ei.data.insback.runtime.InsBackDatabase();
 
     protected String getBaseTableHook() {
