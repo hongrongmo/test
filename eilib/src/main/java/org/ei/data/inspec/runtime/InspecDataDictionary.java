@@ -17,6 +17,30 @@ public class InspecDataDictionary
     private Hashtable<String, String> treatmentCodes;
 
     
+    //HH 01/16/2015
+    private static InspecDataDictionary instance = null; 
+    public static InspecDataDictionary getInstance()
+    {
+    	if(instance == null)
+    	{
+    		synchronized (InspecDataDictionary.class)
+    		{
+    			instance = new InspecDataDictionary();
+    			try
+    			{
+    				classCodes = instance.loadClassCodes();
+    			}
+    			
+    			catch(Exception e)
+    			{
+    				e.printStackTrace();
+    			}
+    		}
+    	}
+    	return instance;
+    }
+    
+    
     public String getClassCodeTitle(String classCode)
     {
         //HH 01/14/2015
@@ -50,12 +74,6 @@ public class InspecDataDictionary
     public InspecDataDictionary() 
     {
        
-       //HH 01/14/2015
-      try
-      {
-          classCodes = ClassCodes();
-
-       
        treatmentCodes = new Hashtable<String, String>();
 
        treatmentCodes.put("A","Applications (APP)");
@@ -70,12 +88,6 @@ public class InspecDataDictionary
        treatmentCodes.put("R","Product review (PRO)");
        treatmentCodes.put("P","Practical (PRA)");
        treatmentCodes.put("T","Theoretical or Mathematical (THR)");
-      }
-      
-      catch (Exception e)
-      {
-          e.printStackTrace();
-      }    
 
     }
 
@@ -96,7 +108,7 @@ public class InspecDataDictionary
      * Desc: retrieve Ins Class codes & title dynamically from DB table instead of statically specified in Prog
      */
     
-    public Hashtable<String, String> ClassCodes ()
+    public Hashtable<String, String> loadClassCodes ()
                         throws ThesaurusException
     {
         Hashtable<String,String> classCodesList = new Hashtable<String,String>();
@@ -117,23 +129,19 @@ public class InspecDataDictionary
             
             rs = stmt.executeQuery(buf.toString());
             
-            int j = 0;
-            
             while (rs.next())
             {
                 if((rs.getString("CLASS_CODE") !=null) && (rs.getString("CLASS_TITLE") !=null))
                 {
                     classCodesList.put(rs.getString("CLASS_CODE"),rs.getString("CLASS_TITLE"));
                 }
-                
-                j++;
+
             }
             
-            //System.out.println("ClassCodes Size is : " + j);
         }
         catch(Exception ex)
         {
-            //ex.printStackTrace();
+            
             throw new ThesaurusException(ex);
         }
         
