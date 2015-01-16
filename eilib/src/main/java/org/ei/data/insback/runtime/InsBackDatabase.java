@@ -20,7 +20,6 @@ public class InsBackDatabase extends Database {
 	//HH 01/16/2015
 	private DataDictionary dataDictionary =  org.ei.data.inspec.runtime.InspecDataDictionary.getInstance();
 		
-
 	public int getStartYear(boolean hasBackFile) {
 		return 1896;
 	}
