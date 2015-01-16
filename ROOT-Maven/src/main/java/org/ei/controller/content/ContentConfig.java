@@ -90,7 +90,7 @@ public final class ContentConfig {
 
 		ContentDescriptor cd = null;
 
-		if ((cd = configTable.get(customerID + "_" + contentID)) != null) {
+		if (customerID != null && (cd = configTable.get(customerID + "_" + contentID)) != null) {
 			return cd;
 		} else if ((cd = configTable.get("customer_" + contentID)) != null) {
 			return cd;
