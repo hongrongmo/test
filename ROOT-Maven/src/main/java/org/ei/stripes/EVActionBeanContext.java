@@ -205,11 +205,8 @@ public class EVActionBeanContext extends ActionBeanContext {
 			+ u.getCustomerID()
 			+ ", content ID = "
 			+ (contentID == null ? "null" : contentID));
-		ContentDescriptor cd = null;
-		if (u.isCustomer()) {
-			String customerID = u.getCustomerID();
-			cd = contentConfig.getContentDescriptor(customerID, contentID);
-		} else {
+		ContentDescriptor cd = contentConfig.getContentDescriptor(u.getCustomerID(), contentID);
+		if (cd == null) {
 			cd = contentConfig.getContentDescriptor("world_"+contentID);
 		}
 
