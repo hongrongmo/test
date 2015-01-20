@@ -1048,6 +1048,9 @@ public abstract class DocumentView {
             mappings.put("TM", "DS");
             // tmh adding "In Process" to lookup table but leaving "empty" so it doesn't show code!
             mappings.put("GA", "");
+            mappings.put("GM", "");
+            mappings.put("GC", "");
+            mappings.put("GS", "");
             /*
              * // GeoRef Collective Level mappings.put("SC","MR"); mappings.put("BC","MR"); mappings.put("RC","RR");
              * mappings.put("CC","CP"); mappings.put("MC","MP"); mappings.put("TC","DS");
