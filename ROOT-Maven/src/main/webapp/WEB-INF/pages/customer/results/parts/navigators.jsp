@@ -206,15 +206,16 @@
 	</form>
 	</div>
 </c:if>
-
-<div id="knovelcol" >
-	<div class="knovelsearch shadowbox" ><img src="/static/images/knovel_k_logo.png" />
-	<input type="button" id="knovelSearchSubmit" value="Knovel Search" title="Run your this search at Knovel"/>
-	<a	href="${actionBean.helpUrl}#knovel_search.htm" class="helpurl"  title="Learn more about Knovel" style="float:right;padding-top:2px;" >
-		<jwr:img src="/static/images/i.png" border="0" styleClass="infoimg" alt="Learn more about Knovel" align="bottom"/>
-	</a>
+<c:if test="${ actionBean.context.userSession.user.userPreferences.knovelSearchButton}">
+	<div id="knovelcol" >
+		<div class="knovelsearch shadowbox" ><img src="/static/images/knovel_k_logo.png" />
+		<input type="button" id="knovelSearchSubmit" value="Knovel Search" title="Run this search in Knovel"/>
+		<a	href="${actionBean.helpUrl}#knovel_search.htm" class="helpurl"  title="Learn more about Knovel" style="float:right;padding-top:2px;" >
+			<jwr:img src="/static/images/i.png" border="0" styleClass="infoimg" alt="Learn more about Knovel" align="bottom"/>
+		</a>
+		</div>
 	</div>
-</div>
+</c:if>
 </div>
 
 
