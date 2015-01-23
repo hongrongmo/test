@@ -39,11 +39,14 @@
 	<stripes:layout-component name="csshead"/>
 </head>
 <body onload="onloadfunction();">
-	<a class="skiptonavlink" href="#searchnavlink">Navigate to top Navigation "Search"</a>
+<div class="skipnav">
+<a class="skiptonavlink" href="#searchnavlink" title="Skip to top Navigation 'Search'">Skip to top Navigation "Search"</a>
 <stripes:layout-component name="SkipToNavigation">
 <!-- Override in jsp to use custom skip to links links -->
 </stripes:layout-component>
+</div>
 <stripes:layout-component name="ssourls">
+
 <c:if test="${actionBean.context.userSession.user.SSOURLInvoked}">
 <c:forEach var="urls" items="${actionBean.context.userSession.user.ssoURLs}">
     <iframe class="displayNone" src='<c:out value="${urls}"/>'></iframe>
