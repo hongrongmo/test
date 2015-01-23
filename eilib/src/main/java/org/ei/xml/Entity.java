@@ -338,8 +338,11 @@ public class Entity {
         etable.setProperty("&#096;", "");
         etable.setProperty("&Gscr;", "G");
         etable.setProperty("&gsim;", "");
-        etable.setProperty("&gt;", ">");
-        etable.setProperty("&Gt;", ">");
+//        etable.setProperty("&gt;", ">");
+//        etable.setProperty("&Gt;", ">");
+        etable.setProperty("&gt;", "");    //HH 01/18/2014 from eijava
+        etable.setProperty("&Gt;", "");    //HH 01/18/2014 from eijava
+        
         etable.setProperty("&harr;", "");
         etable.setProperty("&hArr;", "");
         etable.setProperty("&hellip;", "");
@@ -388,8 +391,11 @@ public class Entity {
         etable.setProperty("&lsim;", "");
         etable.setProperty("&lstrok;", "l");
         etable.setProperty("&Lstrok;", "L");
-        etable.setProperty("&lt;", "<");
-        etable.setProperty("&Lt;", "<");
+//        etable.setProperty("&lt;", "<");
+//        etable.setProperty("&Lt;", "<");
+        etable.setProperty("&lt;", "");   //HH 01/18/2015 from eijava
+        etable.setProperty("&Lt;", "");   //HH 01/18/2015 from eijava
+        
         etable.setProperty("&macr;", "");
         etable.setProperty("&male;", "");
         etable.setProperty("&mdash;", "");
