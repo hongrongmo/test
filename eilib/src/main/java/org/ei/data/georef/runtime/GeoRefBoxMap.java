@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -42,8 +44,11 @@ public class GeoRefBoxMap {
         georefMapCoordinates = new HashMap<String, String>();
 
         BufferedReader rdr = null;
+        //HH
+        InputStream in = this.getClass().getClassLoader().getResourceAsStream("org/ei/data/georef/runtime/GeoRefCoodinates.txt");
         try {
-            rdr = new BufferedReader(new FileReader("GeoRefCoodinates.txt"));
+           // rdr = new BufferedReader(new FileReader("GeoRefCoodinates.txt"));   //original
+        	rdr = new BufferedReader(new InputStreamReader(in));
             if (rdr != null) {
                 while (rdr.ready()) {
                     String aline = rdr.readLine();
