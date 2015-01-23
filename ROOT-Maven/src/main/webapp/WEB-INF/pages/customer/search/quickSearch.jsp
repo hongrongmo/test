@@ -233,9 +233,10 @@
 	$(document).ready(function() {
 		var db = ${actionBean.database};
 		// Focus on first search field
-		if(typeof(document.quicksearch.searchWord1) != 'undefined') {
+		//removed because of skip to navigation
+/* 		if(typeof(document.quicksearch.searchWord1) != 'undefined') {
 			$('#srchWrd1').focus();
-		}
+		} */
 		flipImage(db);
 
 		// Add extra search fields if present on request
