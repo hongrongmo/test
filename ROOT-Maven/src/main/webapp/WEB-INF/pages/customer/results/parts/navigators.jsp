@@ -211,7 +211,7 @@
 		<div class="knovelsearch shadowbox" >
 		<div style="float:left;">
 		<img src="/static/images/knovel_k_logo.png" style="vertical-align:top;padding-top:2px;" height="20px;"/>
-		<input type="button" id="knovelSearchSubmit" value="Knovel Search" title="Run this search in Knovel"/>
+		<input type="button" id="knovelSearchSubmit" value="Knovel Search" title="Run this search in Knovel" style="margin-left:2px;"/>
 		</div>
 		<a	href="${actionBean.helpUrl}#knovel_search.htm" class="helpurl"  title="Learn more about Knovel" style="float:right;padding-top:4px;" >
 			<jwr:img src="/static/images/i.png" border="0" styleClass="infoimg" alt="Learn more about Knovel" align="bottom"/>
