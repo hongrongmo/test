@@ -62,7 +62,10 @@ $(document).ready(function() {
 			}
 		}
 	});
-
+	//skip to show links code
+	$(".skipnav a").focus(function(){$(".skipnav a").addClass("show");$(".skipnav").css("height", "auto");});
+	$(".skipnav a").last().blur(function(){$(".skipnav a").removeClass("show");$(".skipnav").css("height", "0px");});
+	
 	// Bind the login submit to validate login
 	$("#personallogin").submit(function() {
 		// TODO: validate login!
