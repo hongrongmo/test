@@ -419,7 +419,7 @@ public void writeRecs(ResultSet rs)
 
 				// DT
 				
-				System.out.println(runtimeDocview.createColumnValueField("DOCUMENT_TYPE"));
+				//System.out.println(runtimeDocview.createColumnValueField("DOCUMENT_TYPE"));   //seems to be HM testing
 				String dtStrings = runtimeDocview.new DocumentTypeDecorator(runtimeDocview.createColumnValueField("DOCUMENT_TYPE")).getValue();
 				
 				if(dtStrings != null)
@@ -827,7 +827,11 @@ private class LocalEntityResolver implements EntityResolver {
 //      try {
           String dtdfile = new File(systemId).getName();
           //System.out.println("<!--" + dtdfile + " == " + systemId + "-->");
-          InputStream in = this.getClass().getClassLoader().getResourceAsStream("org/ei/data/" + dtdfile);
+          //InputStream in = this.getClass().getClassLoader().getResourceAsStream("org/ei/data/" + dtdfile);   //original
+          
+          //HH 01/18/2015
+          InputStream in = this.getClass().getClassLoader().getResourceAsStream("org/ei/data/georef/loadtime/" + dtdfile);
+          
           if(in != null)
           {
             is = new InputStreamReader(in);
