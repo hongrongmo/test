@@ -16,8 +16,8 @@
 	<![endif]-->
 	</stripes:layout-component>
 	<stripes:layout-component name="SkipToNavigation">
-		<a class="skiptonavlink" href="#abstractTabLink"">Navigate to Abstract Tab</a>
-		<a class="skiptonavlink" href="#cbresult_${actionBean.results[0].doc.docid}">Navigate to record</a>
+		<a class="skiptonavlink" href="#abstractTabLink" title="Skip to Abstract Tab">Skip to Abstract Tab</a>
+		<a class="skiptonavlink" href="#cbresult_${actionBean.results[0].doc.docid}" title="Skip to record">Skip to record</a>
 	</stripes:layout-component>
 
 	<stripes:layout-component name="contents">
