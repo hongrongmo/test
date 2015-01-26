@@ -171,6 +171,8 @@ public class UserPreferences implements IUserPreferences, Serializable {
     public static final String FENCE_HIGHLIGHT_V2 = "HIGHLIGHT_V2";
     public static final String FENCE_FEATURE_SURVEY = "FEATURE_SURVEY";
     public static final String FENCE_EXIT_SURVEY = "EXIT_SURVEY";
+    
+    public static final String FENCE_KNOVEL_SEARCH_BTN = "KNOVEL_SEARCH_BTN";
 
     // Shiboleth fence
     public static final String FENCE_INSTITUTIONAL_SHIB_LOGIN_LINK = "FENCE_INSTITUTIONAL_SHIB_LOGIN_LINK";
@@ -324,5 +326,8 @@ public class UserPreferences implements IUserPreferences, Serializable {
     }
     public boolean isFeatureSurvey(){
     	return getBoolean(FENCE_FEATURE_SURVEY);
+    }
+    public boolean isKnovelSearchButton(){
+    	return getBoolean(FENCE_KNOVEL_SEARCH_BTN);
     }
 }

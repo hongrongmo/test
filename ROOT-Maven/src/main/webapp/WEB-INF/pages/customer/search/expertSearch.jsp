@@ -24,8 +24,8 @@
 <%-- CONTENTS                                 --%>
 <%-- **************************************** --%>
 <stripes:layout-component name="SkipToNavigation">
-	<a class="skiptonavlink" href="#searchtablink">Navigate to Quick Search Tab</a>
-	<a class="skiptonavlink" href="#srchWrd1">Navigate to Expert Search Form</a>
+	<a class="skiptonavlink" href="#searchtablink" title="Skip to Quick Search Tab">Skip to Quick Search Tab</a><br/>
+	<a class="skiptonavlink" href="#srchWrd1" title="Skip to Expert Search Form">Skip to Expert Search Form</a><br/>
 </stripes:layout-component>
     <stripes:layout-component name="contents">
 

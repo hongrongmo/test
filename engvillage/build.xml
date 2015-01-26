@@ -14,7 +14,7 @@ Use the "deploy" target to build and deploy new WAR file.
     <property name="S3_ENV" value="local"/>
     <property name="ENGVILLAGE_PATH" value="../engvillage"/>
     <property name="ROOT_PATH" value="../ROOT-Maven"/>
-	<property name="engvilage.war.path" location="${ENGVILLAGE_PATH}/engvillage.war"/>
+	<property name="engvilage.war.path" location="${ROOT_PATH}/target/engvillage.war"/>
 
 	<!-- local directories -->
 	<property name="compile.debug" value="true" />

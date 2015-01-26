@@ -20,6 +20,7 @@ import net.sourceforge.stripes.validation.LocalizableError;
 import net.sourceforge.stripes.validation.Validate;
 import net.sourceforge.stripes.validation.ValidationErrors;
 
+import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
 import org.ei.biz.access.AccessException;
 import org.ei.biz.personalization.IEVWebUser;
@@ -220,6 +221,9 @@ public class ThesaurusSearchAction extends SearchDisplayAction { // implements I
         // Get year options
         startyearopts = SearchForm.getYears(db, startYear, stringYear, "startYear");
         endyearopts = SearchForm.getYears(db, Integer.toString(SearchForm.calEndYear(db)), stringYear, "endYear");
+        if (GenericValidator.isBlankOrNull(endYear)) {
+            endYear = Integer.toString(SearchForm.calEndYear(db));
+        }
 
         // Display!
         return new ForwardResolution("/WEB-INF/pages/customer/search/thesHome.jsp");
