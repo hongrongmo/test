@@ -746,18 +746,6 @@
             <DISPLAYURL>http://@contentConfigHost@/engvillage/views/world/openRSSP.xsl</DISPLAYURL>
             <MIMETYPE>text/xml</MIMETYPE>
         </CONTENTDESCRIPTOR>
-        <CONTENTDESCRIPTOR BULKMODE="YES">
-            <ID>openATOM</ID>
-            <DATASOURCEURL>http://@contentConfigHost@//engvillage/models/world/atom.jsp</DATASOURCEURL>
-            <DISPLAYURL>http://@contentConfigHost@//engvillage/views/world/openATOM.xsl</DISPLAYURL>
-            <MIMETYPE>text/xml</MIMETYPE>
-        </CONTENTDESCRIPTOR>
-        <CONTENTDESCRIPTOR BULKMODE="NO">
-            <ID>openXML</ID>
-            <DATASOURCEURL>http://@contentConfigHost@/engvillage/models/world/openXML.jsp</DATASOURCEURL>
-            <DISPLAYURL>http://@contentConfigHost@/engvillage/views/world/openXML.xsl</DISPLAYURL>
-            <MIMETYPE>text/xml</MIMETYPE>
-        </CONTENTDESCRIPTOR>
         <CONTENTDESCRIPTOR BULKMODE="NO">
           <ID>tokenExpired</ID>
           <DATASOURCEURL>http://@contentConfigHost@/engvillage/models/world/tokenExpired.jsp</DATASOURCEURL>
@@ -822,6 +810,18 @@
     <!-- CIDs defined here should only be accessed by authenticated customers           -->
     <!-- ****************************************************************************** -->
     <AUTHGROUP NAME="customer">
+        <CONTENTDESCRIPTOR BULKMODE="YES">
+            <ID>openATOM</ID>
+            <DATASOURCEURL>http://@contentConfigHost@//engvillage/models/world/atom.jsp</DATASOURCEURL>
+            <DISPLAYURL>http://@contentConfigHost@//engvillage/views/world/openATOM.xsl</DISPLAYURL>
+            <MIMETYPE>text/xml</MIMETYPE>
+        </CONTENTDESCRIPTOR>
+        <CONTENTDESCRIPTOR BULKMODE="NO">
+            <ID>openXML</ID>
+            <DATASOURCEURL>http://@contentConfigHost@/engvillage/models/world/openXML.jsp</DATASOURCEURL>
+            <DISPLAYURL>http://@contentConfigHost@/engvillage/views/world/openXML.xsl</DISPLAYURL>
+            <MIMETYPE>text/xml</MIMETYPE>
+        </CONTENTDESCRIPTOR>
 
         <CONTENTDESCRIPTOR BULKMODE="NO">
             <ID>viewDups</ID>

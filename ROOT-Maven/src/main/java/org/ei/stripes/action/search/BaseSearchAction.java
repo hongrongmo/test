@@ -93,14 +93,14 @@ public abstract class BaseSearchAction extends EVActionBean implements ISearchFo
     protected String yearselect="yearrange";
     @Validate(trim=true,mask="\\d{4}")
     protected String startYear="";
+    @Validate(trim=true,mask="\\d{4}")
+    protected String endYear;
+    
     protected String folderid="";
     protected String folderName="";
 
     protected String useType = "";
 
-	// This will become the default selected end year since it is ouput in //SESSION-DATA/END-YEAR
-    @Validate(trim=true,mask="\\d{4}")
-    protected String endYear= String.valueOf(SearchForm.ENDYEAR);
     private List<String> pageCountOption= new ArrayList<String>();
     private String limitError;
     private String savedSeachesAndAlertsLimit;
