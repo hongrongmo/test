@@ -91,7 +91,8 @@ public class GetPIDDescription {
 		//ConnectionBroker broker=null;
 		String sql = "select description from CMB_IPC_LOOKUP WHERE replace(ipccode,'SLASH','')='"+code+"'";
 		int rows = 0;
-
+		
+		//HH 01/21/2015 update to be as  eijava, otherwise give pat extract issue
 
 		try
 		{
