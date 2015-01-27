@@ -158,6 +158,29 @@
 					<target>1.7</target>
 				</configuration>
 			</plugin>
+			<!--  HH 01/18/2015 -->
+			<plugin>
+    		<groupId>org.apache.maven.plugins</groupId>
+    		<artifactId>maven-antrun-plugin</artifactId>
+    		<version>1.1</version>
+   			 <executions>
+       		 <execution>
+            <phase>test</phase>
+            <goals>
+                <goal>run</goal>
+            </goals>
+            <configuration>
+                <tasks>
+                    <echo>Using env.test.properties</echo>
+                    <copy file="src/main/java/org/ei/data/georef/loadtime/GeobaseToGeorefTerms.txt" tofile="${basedir}/target/classes/org/ei/data/georef/loadtime/GeobaseToGeorefTerms.txt"/>
+                    <copy file="src/main/java/org/ei/data/georef/runtime/GeoRefCoodinates.txt" tofile="${basedir}/target/classes/org/ei/data/georef/runtime/GeoRefCoodinates.txt"/>
+                    <copy file="src/main/java/org/ei/data/georef/loadtime/EVROWSET.dtd" tofile="${basedir}/target/classes/org/ei/data/georef/loadtime/EVROWSET.dtd"/>
+                    </tasks>
+                </configuration>
+            </execution>
+        </executions>
+    </plugin>
+    <!-- END -->
 		</plugins>
 	</build>
 </project>
