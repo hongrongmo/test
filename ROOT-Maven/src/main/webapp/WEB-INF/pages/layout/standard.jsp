@@ -40,7 +40,7 @@
 </head>
 <body onload="onloadfunction();">
 <div class="skipnav">
-<a class="skiptonavlink" href="#searchnavlink" title="Skip to top Navigation 'Search'">Skip to top Navigation "Search"</a><br/>
+<a class="skiptonavlink" href="#searchnavlink" onclick="$('#searchnavlink').focus();return false;" title="Skip to top Navigation 'Search'">Skip to top Navigation "Search"</a><br/>
 <stripes:layout-component name="SkipToNavigation">
 <!-- Override in jsp to use custom skip to links links -->
 </stripes:layout-component>
