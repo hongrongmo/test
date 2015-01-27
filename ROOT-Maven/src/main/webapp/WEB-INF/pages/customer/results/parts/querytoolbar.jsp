@@ -18,6 +18,7 @@
 
 			<span id="querytext">
 			<span id="physicalquery" style="display:none">${actionBean.physicalquery }</span>
+			<span id="displayquery" style="display:none">${actionBean.displayquery }</span>
 			<c:choose>
 			<c:when test="${empty actionBean.refinequery}"><a title="" href="${rerunactionurl}?CID=${actionBean.reruncid}&RERUN=${actionBean.searchid}&database=${actionBean.database}&STEP=1">${actionBean.displayquery}</a></c:when>
 			<c:otherwise>

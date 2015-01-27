@@ -755,7 +755,20 @@ $(document).ready(function() {
 			}
 		}
 	}
-
+	$("#knovelSearchSubmit").click(function(){
+		//run the knovel search
+		var query = $("#displayquery").text();
+		var url ="http://app.knovel.com/web/search.v?kpromoter=engineeringvillage-search&q=";
+		var windowName = "Knovel Search";
+		var strOptions;
+		
+		url += escape(query);
+		
+		var knovelpop = window.open(url, windowName, strOptions);
+		
+		if (knovelpop != null) knovelpop.focus();
+		GALIBRARY.createWebEventWithLabel('Knovel', 'Search Button',query );
+	});
 	$(window).bind('resize', resizeresults);
     resizeresults();
 

@@ -20,8 +20,8 @@
 <![endif]-->
 	</stripes:layout-component>
 <stripes:layout-component name="SkipToNavigation">
-	<a class="skiptonavlink" href="#searchtablink">Navigate to Quick Search Tab</a>
-	<a class="skiptonavlink" href="#srchWrd1">Navigate to Thesaurus Search Form</a>
+	<a class="skiptonavlink" href="#searchtablink" onclick="$('#searchtablink').focus();return false;"title="Skip to Quick Search Tab">Skip to Quick Search Tab</a><br/>
+	<a class="skiptonavlink" href="#txtTrm" onclick="$('#txtTrm').focus();return false;" title="Skip to Thesaurus Search Form">Skip to Thesaurus Search Form</a><br/>
 </stripes:layout-component>
 <%-- **************************************** --%>
 <%-- CONTENTS                                 --%>
