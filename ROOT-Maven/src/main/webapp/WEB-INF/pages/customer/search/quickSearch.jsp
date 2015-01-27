@@ -21,8 +21,8 @@
 <![endif]-->
 	</stripes:layout-component>
 <stripes:layout-component name="SkipToNavigation">
-	<a class="skiptonavlink" href="#searchtablink" title="Skip to Quick Search Tab">Skip to Quick Search Tab</a><br/>
-	<a class="skiptonavlink" href="#srchWrd1" title="Skip to Quick Search Form">Skip to Quick Search Form</a><br/>
+	<a class="skiptonavlink" href="#searchtablink" onclick="$('#searchtablink').focus();return false;"title="Skip to Quick Search Tab">Skip to Quick Search Tab</a><br/>
+	<a class="skiptonavlink" href="#srchWrd1" onclick="$('#srchWrd1').focus();return false;" title="Skip to Quick Search Form">Skip to Quick Search Form</a><br/>
 </stripes:layout-component>
 
 <%-- **************************************** --%>
