@@ -43,7 +43,8 @@ public class IbsDatabase extends Database {
         return Arrays.asList(new SortField[] { SortField.RELEVANCE, SortField.AUTHOR, SortField.YEAR, SortField.SOURCE, SortField.PUBLISHER });
     }
     
-    private DataDictionary dataDictionary = new org.ei.data.inspec.runtime.InspecDataDictionary();
+  //HH 01/16/2015
+    private DataDictionary dataDictionary =  org.ei.data.inspec.runtime.InspecDataDictionary.getInstance();
     
     public int getStartYear(boolean hasBackFile) {
         return 1896;

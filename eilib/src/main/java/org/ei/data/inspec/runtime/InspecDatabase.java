@@ -60,8 +60,9 @@ public class InspecDatabase extends Database {
 
     private LinkingStrategy InspecLinkingStrategy = new CPXLinkingStrategy();
 
-    private DataDictionary dataDictionary = new InspecDataDictionary();
-
+  //HH 01/16/2014
+    private DataDictionary dataDictionary = InspecDataDictionary.getInstance();
+    
     private Database backfile = new org.ei.data.insback.runtime.InsBackDatabase();
 
     protected String getBaseTableHook() {
