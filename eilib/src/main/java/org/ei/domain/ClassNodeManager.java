@@ -32,7 +32,16 @@ public class ClassNodeManager {
         return instance;
     }
 
-    private ClassNodeManager() {}
+    private ClassNodeManager() {
+    	
+    	 try {
+             openUSPTO();
+             openIPC();
+             openECLA();
+         } catch (Exception e) {
+             throw new RuntimeException("Unable to create ClassNodeManager!", e);
+         }
+    }
 
     public static synchronized boolean initialized() {
         return instance != null;
@@ -45,7 +54,7 @@ public class ClassNodeManager {
      */
     public static void init(ApplicationProperties applicationproperties) {
 
-        ClassNodeManager instance = ClassNodeManager.getInstance();
+        //ClassNodeManager instance = ClassNodeManager.getInstance();
 
         // Init uspto dir
         instance.usptodir = applicationproperties.getProperty(ApplicationProperties.USPTO_LUCENE_INDEX_DIR);
@@ -64,14 +73,16 @@ public class ClassNodeManager {
         if (GenericValidator.isBlankOrNull(instance.ecladir)) {
             throw new IllegalArgumentException("ECLA directory for lucene index is NOT defined!");
         }
+        
+        ClassNodeManager instance = ClassNodeManager.getInstance();
 
-        try {
+       /* try {
             instance.openUSPTO();
             instance.openIPC();
             instance.openECLA();
         } catch (Exception e) {
             throw new RuntimeException("Unable to create ClassNodeManager!", e);
-        }
+        }*/
 
     }
 
@@ -148,19 +159,22 @@ public class ClassNodeManager {
     private void openUSPTO() throws IOException {
         log4j.warn("Opening USPTO index at: '" + this.usptodir + "'");
         uspto = new DiskMap();
-        uspto.openRead(this.usptodir, false);
+        //uspto.openRead(this.usptodir, false);
+        uspto.openRead("uspto", false);
     }
 
     private void openIPC() throws IOException {
         log4j.warn("Opening IPC index at: '" + this.ipcdir + "'");
         ipc = new DiskMap();
-        ipc.openRead(this.ipcdir, false);
+       //ipc.openRead(this.ipcdir, false);
+        ipc.openRead("ipc", false);
     }
 
     private void openECLA() throws IOException {
         log4j.warn("Opening ECLA index at: '" + this.ecladir + "'");
         ecla = new DiskMap();
-        ecla.openRead(this.ecladir, false);
+        //ecla.openRead(this.ecladir, false);
+        ecla.openRead("ecla", false);
 
     }
 }
