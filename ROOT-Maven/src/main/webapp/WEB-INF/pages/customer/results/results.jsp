@@ -12,8 +12,8 @@
 
 	</stripes:layout-component>
 <stripes:layout-component name="SkipToNavigation">
-	<a class="skiptonavlink" href="#cbresult1">Navigate to First Result</a>
-	<a class="skiptonavlink" href="#limittobtn">Navigate to Refine Results</a>
+	<a class="skiptonavlink" href="#cbresult1" onclick="$('#cbresult1').focus();return false;" title="Skip to First Result">Skip to First Result</a><br/>
+	<a class="skiptonavlink" href="#limittobtn" onclick="$('#limittobtn').focus();return false;" title="Skip to Refine Results">Skip to Refine Results</a><br/>
 </stripes:layout-component>
 	<stripes:layout-component name="contents">
 

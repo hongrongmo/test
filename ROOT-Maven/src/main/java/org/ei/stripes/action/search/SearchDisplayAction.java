@@ -702,10 +702,10 @@ public class SearchDisplayAction extends BaseSearchAction implements ValidationE
 
         // Get year options
         startyearopts = SearchForm.getYears(db, startYear, stringYear, "startYear");
-        if (GenericValidator.isBlankOrNull(this.endYear)) {
-            this.endYear = Integer.toString(SearchForm.calEndYear(db));
+        if (GenericValidator.isBlankOrNull(endYear)) {
+            endYear = Integer.toString(SearchForm.calEndYear(db));
         }
-        endyearopts = SearchForm.getYears(db, this.endYear, stringYear, "endYear");
+        endyearopts = SearchForm.getYears(db, endYear, stringYear, "endYear");
 
         // TMH - change per Product management! Autostem fence applies ONLY to
         // quick search!
