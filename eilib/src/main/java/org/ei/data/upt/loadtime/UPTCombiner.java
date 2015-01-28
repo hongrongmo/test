@@ -7,6 +7,7 @@
 package org.ei.data.upt.loadtime;
 
 import org.apache.oro.text.perl.Perl5Util;
+import org.ei.config.ApplicationProperties;
 import org.ei.data.CombinedWriter;
 import org.ei.data.CombinedXMLWriter;
 import org.ei.data.CombinerTimestamp;
@@ -15,8 +16,10 @@ import org.ei.data.EVCombinedRec;
 import org.ei.util.GUID;
 import org.ei.xml.Entity;
 import org.ei.data.upt.runtime.*;
+
 import java.sql.*;
 import java.util.*;
+
 import org.ei.data.Country;
 import org.ei.domain.ClassNodeManager;
 import org.ei.domain.Database;
@@ -44,6 +47,10 @@ public class UPTCombiner extends CombinerTimestamp {
     public static String EP_CY = "EP";
     Hashtable hashtable = new Hashtable();
     private static final Database UPTDatabase = new UPTDatabase();
+    
+    //HH 01/28/2015 to use same ClassNodemanager without change 
+    static ApplicationProperties applicationProperties;
+    
 
     public UPTCombiner(String database,CombinedWriter writer) {
         super(writer);
@@ -51,9 +58,20 @@ public class UPTCombiner extends CombinerTimestamp {
 
     public UPTCombiner(CombinedWriter writer) {
         super(writer);
+        InitApplicatiopnProperties();			//HH 01/28/2015 to use same ClassNodemanager without change 
         init();
 
     }
+    //HH 01/28/2015 to use same ClassNodemanager without change 
+    public static void InitApplicatiopnProperties()
+    {
+    	applicationProperties = ApplicationProperties.getInstance();
+    	applicationProperties.setProperty(ApplicationProperties.USPTO_LUCENE_INDEX_DIR, "uspto");
+    	applicationProperties.setProperty(ApplicationProperties.IPC_LUCENE_INDEX_DIR,"ipc");
+    	applicationProperties.setProperty(ApplicationProperties.ECLA_LUCENE_INDEX_DIR,"ecla");
+    	ClassNodeManager.init(applicationProperties);
+    }
+    
     public void init() {
 
         try {
@@ -766,7 +784,7 @@ public class UPTCombiner extends CombinerTimestamp {
                 code = USPTOClassNormalizer.normalize(code);
 
                 String name = nodeManager.seekUS(code);
-
+                
                 if(name != null){
                     name = perl.substitute("s/\\(\\:\\)/QQ/ig", name);
                     String key = perl.substitute("s/[^a-zA-Z]//g", name);
