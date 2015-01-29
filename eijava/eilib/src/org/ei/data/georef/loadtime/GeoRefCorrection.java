@@ -200,7 +200,7 @@ public class GeoRefCorrection
 
 			GeoRefCorrection grfc = new GeoRefCorrection();
 			con = grfc.getConnection(url,driver,username,password);
-			if(action!=null && !(action.equals("extractupdate")||action.equals("extractdelete") ||action.equals("lookupIndex") ||action.equals("ip_delete")))
+			if(action!=null && !(action.equals("extractupdate")||action.equals("extractdelete") ||action.equals("lookupIndex") ||action.equals("ip_delete") ||action.equals("ip_extract")))
 			{
 				/**********delete all data from temp table *************/
 
@@ -327,11 +327,17 @@ public class GeoRefCorrection
 				grfc.deleteInProcessData();
 				System.out.println(updateNumber+" "+database+" IN PROCESS deletion is done.");
 			}
+			else if(action.equalsIgnoreCase("ip_extract") )
+			{
+					grfc.runExtract(Integer.toString(updateNumber));
+					System.out.println(updateNumber+" "+database+" IN PROCESS extract is done.");
+			}
 			else if(!action.equalsIgnoreCase("ip_add") && !action.equalsIgnoreCase("ip_delete"))
 			{
 				System.out.println(database+" "+updateNumber+" correction is done.");
 				System.out.println("Please run this program again with parameter \"extractupdate\" or \"extractdelete\" to get fast extract file");
 			}
+
 
 		}
 		finally
@@ -793,6 +799,7 @@ public class GeoRefCorrection
 		String addQuery=null;
 		String deleteQuery=null;
 		String updateQuery=null;
+		String updateQuery1=null;
 		Connection con1 = null;
 		try
 		{
@@ -807,12 +814,15 @@ public class GeoRefCorrection
 			  deleteQuery = "insert into georef_master_delete select * from georef_master_ip where updatenumber='"+updateNumber[1]+"' and id_number in(select id_number from georef_master_ip where updatenumber='"+updateNumber[1]+"' minus select id_number from georef_master_ip where updatenumber='"+updateNumber[0]+"' )";
 			  log4j.info("Run Query \"insert into georef_master_delete select * from georef_master_ip where updatenumber='"+updateNumber[1]+"' and id_number in(select id_number from georef_master_ip where updatenumber='"+updateNumber[1]+"' minus select id_number from georef_master_ip where updatenumber='"+updateNumber[0]+"'\" to create georef_master_delete table" );
 			  updateQuery = "update georef_master_add set PERSON_MONOGRAPH=replace(PERSON_MONOGRAPH,'?',' '),PERSON_ANALYTIC=replace(PERSON_ANALYTIC,'?',' '),PERSON_COLLECTION=replace(PERSON_COLLECTION,'?',' ')  where PERSON_MONOGRAPH like'%?%' or PERSON_ANALYTIC like'%?%' or PERSON_COLLECTION  like'%?%;'";
-
+			  updateQuery1 ="update georef_master_delete set m_id=(select m_id from georef_master_orig where id_number=georef_master_delete.id_number) where exists(select m_id from georef_master_orig where id_number=georef_master_delete.id_number)";
+			  log4j.info("Run Query update georef_master_delete set m_id=(select m_id from georef_master_orig where id_number=georef_master_delete.id_number) where exists(select m_id from georef_master_orig where id_number=georef_master_delete.id_number)" );
 		      stmt = con1.prepareStatement(addQuery);
 		      stmt.executeUpdate();
 		      stmt = con1.prepareStatement(deleteQuery);
 		      stmt.executeUpdate();
 		      stmt = con1.prepareStatement(updateQuery);
+		      stmt.executeUpdate();
+			  stmt = con1.prepareStatement(updateQuery1);
 		      stmt.executeUpdate();
 			  runExtract(updateNumber[0]);
 
