@@ -3,6 +3,7 @@ package org.ei.domain;
 import java.io.IOException;
 
 import org.apache.commons.validator.GenericValidator;
+import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 import org.ei.config.ApplicationProperties;
 import org.ei.exception.InfrastructureException;
@@ -44,7 +45,9 @@ public class ClassNodeManager {
      * @param applicationproperties
      */
     public static void init(ApplicationProperties applicationproperties) {
-
+    	//HH 01/28/2015 to fix log4j appender issue for Pat
+    	BasicConfigurator.configure();
+    	
         ClassNodeManager instance = ClassNodeManager.getInstance();
 
         // Init uspto dir
