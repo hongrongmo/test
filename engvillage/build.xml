@@ -14,7 +14,7 @@ Use the "deploy" target to build and deploy new WAR file.
     <property name="S3_ENV" value="local"/>
     <property name="ENGVILLAGE_PATH" value="../engvillage"/>
     <property name="ROOT_PATH" value="../ROOT-Maven"/>
-	<property name="engvilage.war.path" location="${ENGVILLAGE_PATH}/engvillage.war"/>
+	<property name="engvilage.war.path" location="${ROOT_PATH}/target/engvillage.war"/>
 
 	<!-- local directories -->
 	<property name="compile.debug" value="true" />
@@ -51,7 +51,7 @@ Use the "deploy" target to build and deploy new WAR file.
         <mkdir dir="${ENGVILLAGE_PATH}/WebContent/WEB-INF/lib" />
         <mkdir dir="${ENGVILLAGE_PATH}/tomcat-provided" />
 
-    	<get src="http://atheneum/content/repositories/elsevier-releases/org/ei/eilib/2.0.2/eilib-2.0.2.jar" dest="${ENGVILLAGE_PATH}/WebContent/WEB-INF/lib/eilib-2.0.2.jar" usetimestamp="true" />
+    	<get src="http://atheneum/content/repositories/elsevier-releases/org/ei/eilib/2.1.0/eilib-2.1.0.jar" dest="${ENGVILLAGE_PATH}/WebContent/WEB-INF/lib/eilib-2.1.0.jar" usetimestamp="true" />
 
         <get src="http://atheneum/content/repositories/thirdparty/tomcat-provided/catalina-ant/7.0.23/catalina-ant-7.0.23.jar" dest="${ENGVILLAGE_PATH}/tomcat-provided/catalina-ant-7.0.23.jar" usetimestamp="true" />
         <get src="http://atheneum/content/repositories/thirdparty/tomcat-provided/tomcat-coyote/7.0.23/tomcat-coyote-7.0.23.jar" dest="${ENGVILLAGE_PATH}/tomcat-provided/tomcat-coyote-7.0.23.jar" usetimestamp="true" />

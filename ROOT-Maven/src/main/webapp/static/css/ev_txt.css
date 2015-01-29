@@ -206,4 +206,27 @@ a.noDecoration img {
 .lhl_table .lhl_table_input {width: 10px; vertical-align: top;}
 .lhl_table input {margin: 0; padding:0}
 .lhl_table .lhl_bottom_padder {line-height: 3px; height: 3px; font-size: 2px}
-a.skiptonavlink{display:none;}
+.skipnav{
+text-align: left;
+height:0px;
+}
+.skipnav a{
+background-color: #fff;
+height: 1px;
+left: -10000px;
+overflow: hidden;
+position: absolute;
+width: 1px;		
+}
+
+.skipnav a.show{
+color: blue;
+height: auto;
+left: auto;
+overflow: auto;
+position: relative;
+width: auto;
+padding-left:4px;
+line-height:20px;
+height:20px;		
+}

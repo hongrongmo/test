@@ -21,8 +21,8 @@
 <![endif]-->
 	</stripes:layout-component>
 <stripes:layout-component name="SkipToNavigation">
-	<a class="skiptonavlink" href="#searchtablink">Navigate to Quick Search Tab</a>
-	<a class="skiptonavlink" href="#srchWrd1">Navigate to Quick Search Form</a>
+	<a class="skiptonavlink" href="#searchtablink" onclick="$('#searchtablink').focus();return false;"title="Skip to Quick Search Tab">Skip to Quick Search Tab</a><br/>
+	<a class="skiptonavlink" href="#srchWrd1" onclick="$('#srchWrd1').focus();return false;" title="Skip to Quick Search Form">Skip to Quick Search Form</a><br/>
 </stripes:layout-component>
 
 <%-- **************************************** --%>
@@ -233,9 +233,10 @@
 	$(document).ready(function() {
 		var db = ${actionBean.database};
 		// Focus on first search field
-		if(typeof(document.quicksearch.searchWord1) != 'undefined') {
+		//removed because of skip to navigation
+/* 		if(typeof(document.quicksearch.searchWord1) != 'undefined') {
 			$('#srchWrd1').focus();
-		}
+		} */
 		flipImage(db);
 
 		// Add extra search fields if present on request
