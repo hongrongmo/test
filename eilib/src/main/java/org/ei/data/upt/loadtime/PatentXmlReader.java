@@ -37,7 +37,7 @@ public class PatentXmlReader
 	private InventorComp INVENTORS_COMP = new InventorComp();
 	public static final char IDDELIMITER = (char)31;
 	public static final char DELIM = '\t';
-	char AUDELIMITER = (char) 30;
+	public static final char AUDELIMITER = (char) 30;
 
 	/*
 	 * If there is field delimiter that is 2 or more values for one field eg, A;B;C,
