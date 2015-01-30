@@ -3156,8 +3156,8 @@ public class PatentXmlReader
 					case 8211 :sb.append("&ndash;");break; 	//En dash
 					case 8212 :sb.append("&mdash;");break; 	//Em dash
 					case 8216 :sb.append("&lsquo;");break; 	//left single quotation
-					case 8217 :sb.append("&rsquo");break; 	//right single quotation
-					case 8218 :sb.append("&sbquo");break; 	//single low 9 quation mark
+					case 8217 :sb.append("&rsquo;");break; 	//right single quotation
+					case 8218 :sb.append("&sbquo;");break; 	//single low 9 quation mark
 					case 8220 :sb.append("&ldquo;");break; 	//left double quotation
 					case 8221 :sb.append("&rdquo;");break; 	//right double quotation
 					case 8222 :sb.append("&bdquo;");break; 	//Double low-9 quotation mark
@@ -3180,8 +3180,8 @@ public class PatentXmlReader
 					case 8501 :sb.append("&alefsym;");break;//Alef symbol, first transfinite cardinal
 					case 8592 :sb.append("&larr;");break; 	//Leftward arrow
 					case 8593 :sb.append("&uarr;");break;   //Upward arrow
-					case 8594 :sb.append("&rarr;");break; 	//Righteard arrow
-					case 8595 :sb.append("&darr;");break; 	//Downward arrow
+					case 8594 :sb.append("&rarr");break; 	//Righteard arrow
+					case 8595 :sb.append("&darr");break; 	//Downward arrow
 					case 8596 :sb.append("&harr;");break;   //left right arrow
 					case 8629 :sb.append("&crarr;");break;  //downward arrow with corner leftward, carriage return
 					case 8656 :sb.append("&lArr;");break; 	//leftward double arrow
