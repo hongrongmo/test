@@ -400,8 +400,14 @@ public class BdParser
 							Element abstracts = head.getChild("abstracts",noNamespace);
 							if(abstracts!= null && abstracts.getChild("abstract",noNamespace)!=null)
 							{
+								String abstractCopyRight=null;
 								Element abstractData = abstracts.getChild("abstract",noNamespace);
-
+								if(	abstractData.getChild("publishercopyright",noNamespace)!=null)
+								{
+								 	abstractCopyRight= dictionary.mapEntity(abstractData.getChildTextTrim("publishercopyright",noNamespace));
+									//System.out.println("COPYRIGHT="+ abstractCopyRight);
+								}
+								
 								// abstract data
 
 								if(abstractData.getAttributeValue("original") != null)
@@ -426,6 +432,11 @@ public class BdParser
 										abstractString = abstractString.replaceAll("</inf>", "</sub>");
 
 										//System.out.println("\nreplacing inf ::"+abstractString);
+									}
+									
+									if(abstractCopyRight!=null)
+									{
+										abstractString = abstractString+" "+abstractCopyRight;
 									}
 
 									record.put("ABSTRACTDATA", abstractString);
