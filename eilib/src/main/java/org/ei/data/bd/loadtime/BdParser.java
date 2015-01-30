@@ -2,9 +2,9 @@ package org.ei.data.bd.loadtime;
 
 import java.io.*;
 import java.util.*;
-import org.jdom2.*;                  //// replace svn jdom with recent jdom2
-import org.jdom2.input.*;
-import org.jdom2.output.*;
+import org.jdom.*;
+import org.jdom.input.*;
+import org.jdom.output.*;
 import org.ei.util.GUID;
 import org.apache.oro.text.perl.*;
 import org.apache.oro.text.regex.*;
@@ -16,7 +16,6 @@ import org.ei.data.bd.*;
 import org.ei.data.encompasslit.loadtime.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 
 
 
@@ -400,7 +399,13 @@ public class BdParser
 							Element abstracts = head.getChild("abstracts",noNamespace);
 							if(abstracts!= null && abstracts.getChild("abstract",noNamespace)!=null)
 							{
+								String abstractCopyRight=null;
 								Element abstractData = abstracts.getChild("abstract",noNamespace);
+								if(	abstractData.getChild("publishercopyright",noNamespace)!=null)
+								{
+								 	abstractCopyRight= dictionary.mapEntity(abstractData.getChildTextTrim("publishercopyright",noNamespace));
+									//System.out.println("COPYRIGHT="+ abstractCopyRight);
+								}
 
 								// abstract data
 
@@ -426,6 +431,11 @@ public class BdParser
 										abstractString = abstractString.replaceAll("</inf>", "</sub>");
 
 										//System.out.println("\nreplacing inf ::"+abstractString);
+									}
+
+									if(abstractCopyRight!=null)
+									{
+										abstractString = abstractString+" "+abstractCopyRight;
 									}
 
 									record.put("ABSTRACTDATA", abstractString);
