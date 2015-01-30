@@ -1,31 +1,17 @@
 package org.ei.data.upt.loadtime;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.io.Reader;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.io.*;
+import java.util.*;
+import org.jdom.*;
+import org.jdom.input.*;
+import org.jdom.output.*;
+import java.sql.*;
+import org.apache.oro.text.perl.*;
+import org.apache.oro.text.regex.*;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
-
-import org.apache.oro.text.perl.Perl5Util;
+import java.util.zip.ZipInputStream;
 import org.ei.util.GUID;
-import org.jdom2.Attribute;
-import org.jdom2.Document;
-import org.jdom2.Element;
-import org.jdom2.EntityRef;
-import org.jdom2.Text;
-import org.jdom2.input.SAXBuilder;
 
 public class PatentXmlReader
 {
@@ -37,7 +23,7 @@ public class PatentXmlReader
 	private InventorComp INVENTORS_COMP = new InventorComp();
 	public static final char IDDELIMITER = (char)31;
 	public static final char DELIM = '\t';
-	char AUDELIMITER = (char) 30;
+	public static final char AUDELIMITER = (char) 30;
 
 	/*
 	 * If there is field delimiter that is 2 or more values for one field eg, A;B;C,
@@ -539,7 +525,13 @@ public class PatentXmlReader
 
 			if(related_documents!=null && related_documents.get("COUNTRY")!= null)
 			{
-				out.print((String)related_documents.get("COUNTRY"));
+				String aicString =	(String)related_documents.get("COUNTRY");
+				if(aicString.length()>3999)
+				{
+					aicString = aicString.substring(0,aicString.lastIndexOf(AUDELIMITER,3999));
+					System.out.println("AIC Field too long for record "+ac+" "+patentNumber);
+				}
+				out.print(aicString);
 			}
 			out.print(DELIM);
 
@@ -836,7 +828,14 @@ public class PatentXmlReader
 			// INV_ADDR
 				if(address.length()>0)
 				{
-					out.print(substituteChars(address.toString()));
+					String addressString = address.toString();
+					if(addressString.length()>3999)
+					{
+						addressString = addressString.substring(0,addressString.lastIndexOf(AUDELIMITER,3999));
+						System.out.println("INV_ADDR Field too long for record "+ac+" "+patentNumber);
+
+					}
+					out.print(substituteChars(addressString));
 				}
 				out.print(DELIM);
 
