@@ -1,3 +1,4 @@
+<%@page import="org.ei.config.EVProperties"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ page import="java.text.NumberFormat"%>
@@ -42,7 +43,8 @@
 		out.write("<br>    OS: " + System.getProperty("os.name") + ", " + System.getProperty("os.version"));
 		out.write("<br>    VM: " + System.getProperty("java.vendor") + ", " + System.getProperty("java.version"));
 		out.write("<br>    VM: " + System.getProperty("java.vm.name") + ", " + System.getProperty("java.vm.vendor") + ", " + System.getProperty("java.vm.version"));
-		out.write("<br>  JAVA: " + System.getProperty("java.specification.name") + ", " + System.getProperty("java.specification.vendor") + ", " + System.getProperty("java.specification.version"));
+        out.write("<br>  JAVA: " + System.getProperty("java.specification.name") + ", " + System.getProperty("java.specification.vendor") + ", " + System.getProperty("java.specification.version"));
+        out.write("<br>   VER: " + EVProperties.getProperty("release.version"));
 		out.write("<br>");
 		out.write("</PRE>");
 
