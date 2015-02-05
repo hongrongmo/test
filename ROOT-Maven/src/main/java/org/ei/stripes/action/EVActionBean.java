@@ -31,6 +31,7 @@ import org.ei.biz.security.NormalAuthRequiredAccessControl;
 import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
 import org.ei.controller.logging.LogEntry;
+import org.ei.exception.SystemErrorCodes;
 import org.ei.session.UserSession;
 import org.ei.stripes.EVActionBeanContext;
 import org.ei.stripes.util.HttpRequestUtil;
@@ -70,7 +71,7 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
     private StopWatch requeststopwatch = null;
 
     @Validate(mask = "-{0,1}\\d*")
-    protected String errorCode = "";
+    protected int errorCode = SystemErrorCodes.INIT;
 
     /**
      * Override for the ISecuredAction interface. By default all ActionBeans require either Individual or Guest auth access. Action Beans with different
@@ -177,8 +178,12 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
     private ROOM room = ROOM.blank;
 
     public static enum ROOM {
-        blank, search, selectedrecords, mysettings, tagsgroups, bulletins;
+        blank, welcome, search, selectedrecords, mysettings, tagsgroups, bulletins;
     };
+
+    public boolean isRoomHome() {
+        return this.room == ROOM.welcome;
+    }
 
     public boolean isRoomSearch() {
         return this.room == ROOM.search;
@@ -606,11 +611,11 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
         this.showLoginBox = showLoginBox;
     }
 
-    public String getErrorCode() {
+    public int getErrorCode() {
         return errorCode;
     }
 
-    public void setErrorCode(String errorCode) {
+    public void setErrorCode(int errorCode) {
         this.errorCode = errorCode;
     }
 
