@@ -334,6 +334,7 @@
 	<jwr:script src="/bundles/thes.js"></jwr:script>
 	<script>var flipImage;</script>
 	<jsp:include page="parts/search_common_js.jsp"></jsp:include>
+
 	</stripes:layout-component>
 
 
