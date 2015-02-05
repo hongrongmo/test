@@ -11,6 +11,7 @@ import java.util.Properties;
 import java.util.Set;
 
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -126,6 +127,8 @@ public class SearchDisplayAction extends BaseSearchAction implements ValidationE
 
     private String swReferrer = "";
     protected GoogleWebAnalyticsEvent webEvent = new GoogleWebAnalyticsEvent();
+    
+    protected static final String SAVE_DB_COOKIE = "ev_saveddbs";
 
     /**
      * Preprocess to setup some values @
@@ -155,10 +158,30 @@ public class SearchDisplayAction extends BaseSearchAction implements ValidationE
         // Get the user's database entitlements as a mask
         usermask = user.getUsermask();
 
-        // Get the user's default database as a mask
         if (GenericValidator.isBlankOrNull(database)) {
-            database = Integer.toString(userSession.getUser().getDefaultDB(usermask));
+        	// Get the user's default database as a mask
+        	database = Integer.toString(userSession.getUser().getDefaultDB(usermask));
+        	//check to see if they have a saved preference in a cookie.
+            if(context.getUserSession().getUser().getUserPreferences().isSaveDbSelection()){
+            	Cookie[] cookies = request.getCookies();
+
+            	if (cookies != null) {
+            	 for (Cookie cookie : cookies) {
+            	   if (cookie.getName().equals(SAVE_DB_COOKIE)) {
+            	     //do something
+            	     database = cookie.getValue();
+            	     break;
+            	    }
+            	  }
+            	}
+            	
+            	
+            }
+           
+            
         }
+       
+
 
         // TODO change this!
         String[] cartridgearr = context.getUserSession().getUser().getCartridge();

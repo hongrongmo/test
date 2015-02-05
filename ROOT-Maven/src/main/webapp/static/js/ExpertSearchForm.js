@@ -57,8 +57,17 @@ $(document).ready(function() {
 		} else {
 	        $("input[name='alldb']").removeAttr('checked');
 	    }
-
-        selectedDbMask = calculateMask(document.quicksearch.database);
+		selectedDbMask = calculateMask(document.quicksearch.database);
+		
+		if($("#saveDBIcon") && $("#saveDBIcon").length > 0){
+			//database state has changed.. offer to save it
+			if(selectedDbMask != dbSave.mask){
+				enableSaveDB();
+			}else{
+				disableSaveDB();
+			}
+		}
+       
 		startYear = document.quicksearch.startYear[document.quicksearch.startYear.selectedIndex].value;
 		endYear = calEndYear(selectedDbMask);
 		stringYear = document.quicksearch.stringYear.value;
@@ -102,13 +111,16 @@ $(document).ready(function() {
 	});
 });
 
+
 /***************************************************************
  * Calculate the current mask from database checkboxes
  */
 function calculateMask(control)
 {
     var selectedDbMask = 0;
-
+    
+    if(!control){control = document.quicksearch.database;}
+    
     // CALCULATE SELECTED DB MASK
    if(document.quicksearch.alldb != null  &&
     			document.quicksearch.alldb.checked == true)

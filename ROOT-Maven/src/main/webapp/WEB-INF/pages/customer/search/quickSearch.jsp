@@ -397,5 +397,9 @@
 
 
 	<jsp:include page="parts/search_common_js.jsp"></jsp:include>
+	<c:if test="${actionBean.context.userSession.user.userPreferences.saveDbSelection }">
+		<script type="text/javascript" src="/static/js/SaveDB.js?v=${releaseversion}"></script>
+	</c:if>
 	</stripes:layout-component>
+
 </stripes:layout-render>
