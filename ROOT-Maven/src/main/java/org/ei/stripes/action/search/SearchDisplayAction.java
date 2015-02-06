@@ -3,8 +3,6 @@ package org.ei.stripes.action.search;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.StringWriter;
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -27,7 +25,6 @@ import net.sourceforge.stripes.action.Resolution;
 import net.sourceforge.stripes.action.StrictBinding;
 import net.sourceforge.stripes.action.UrlBinding;
 import net.sourceforge.stripes.validation.LocalizableError;
-import net.sourceforge.stripes.validation.Validate;
 import net.sourceforge.stripes.validation.ValidationErrorHandler;
 import net.sourceforge.stripes.validation.ValidationErrors;
 
@@ -62,6 +59,7 @@ import org.ei.session.SessionID;
 import org.ei.session.UserCredentials;
 import org.ei.session.UserPreferences;
 import org.ei.session.UserSession;
+import org.ei.stripes.action.ControllerRequestHelper;
 import org.ei.stripes.action.EVPathUrl;
 import org.ei.stripes.action.GoogleWebAnalyticsEvent;
 import org.ei.stripes.action.WebAnalyticsEventProperties;
@@ -126,13 +124,6 @@ public class SearchDisplayAction extends BaseSearchAction implements ValidationE
     protected int alertcount;
     protected List<String> moresourceslinks = null;
     MoreSearchSources moresearchsources = new MoreSearchSources();
-
-    @Validate(trim=true,mask="true|false")
-    protected String dberr;
-    @Validate(trim=true,mask="hisidnotexists")
-    protected String hisiderr;
-    @Validate(trim=true,mask="true|false")
-    protected String searchHisErr;
 
     private String swReferrer = "";
     protected GoogleWebAnalyticsEvent webEvent = new GoogleWebAnalyticsEvent();
@@ -242,12 +233,11 @@ public class SearchDisplayAction extends BaseSearchAction implements ValidationE
         if (query != null) {
             populateSearchFormFields(query);
             session.removeAttribute("errorquery");
-            context.getValidationErrors().add("validationError",
-                new LocalizableError("org.ei.stripes.action.search.BaseSearchAction.syntaxerror", context.getHelpUrl()));
-
         }
 
-        setSearchHistoryErrors();
+        // Process the request to create error messages from error codes
+    	ControllerRequestHelper.processErrorCode(this);
+    	
         // reset results per page.
         userSession.setRecordsPerPage(Integer.toString(userSession.getUser().getUserPrefs().getResultsPerPage()));
         context.updateUserSession(userSession);
@@ -458,6 +448,8 @@ public class SearchDisplayAction extends BaseSearchAction implements ValidationE
             } else if (Query.TYPE_THESAURUS.equals(searchtype)) {
                 searchformURL = EVPathUrl.EV_THES_SEARCH.value() + "?CID=thesHome&database=" + database + "&showpatentshelp=" + showpatentshelp + "#init";
             }
+            searchformURL += "&errorCode=" + SystemErrorCodes.SEARCH_QUERY_COMPILATION_FAILED;
+            
             // Add query object to session to re-populate search form
             queryObject = searchvalidator.getQueryObject();
             // Add the Query object to session to be used by the
@@ -896,36 +888,6 @@ public class SearchDisplayAction extends BaseSearchAction implements ValidationE
     }
 
     /**
-     * Look for Search History errors on request and output appropriate message
-     */
-    protected void setSearchHistoryErrors() {
-
-        if (null != getDberr()) {
-            context.getValidationErrors().add("searchHistoryError",
-                new LocalizableError("org.ei.stripes.action.search.SearchResultsAction.dbMismatchSearchHistoryError"));
-        }
-        if (null != getHisiderr()) {
-            context.getValidationErrors().add("searchHistoryError",
-                new LocalizableError("org.ei.stripes.action.search.SearchResultsAction.HisIdNotExistsError", getSearchHistoryList().size()));
-        }
-        if (null != getSearchHisErr()) {
-            context.getValidationErrors().add("searchHistoryError", new LocalizableError("org.ei.stripes.action.search.SearchResultsAction.seachHistError"));
-        }
-        String errorCode = getErrorCode();
-        if (!GenericValidator.isBlankOrNull(errorCode)) {
-            if (errorCode.equalsIgnoreCase(Integer.toString(SystemErrorCodes.EBOOK_REMOVED))) {
-                context.getValidationErrors().add("validationError", new LocalizableError("org.ei.stripes.action.search.SearchDisplayAction.ebookremoval"));
-            } else if (errorCode.equalsIgnoreCase(Integer.toString(SystemErrorCodes.SEARCH_NOT_FOUND))) {
-                context.getValidationErrors().add("validationError", new LocalizableError("org.ei.stripes.action.search.SearchResultsAction.SearchNotFound"));
-            } else if (errorCode.equalsIgnoreCase(Integer.toString(SystemErrorCodes.SAVED_SEARCH_NOT_FOUND))) {
-                context.getValidationErrors().add("validationError", new LocalizableError("org.ei.stripes.action.search.SearchResultsAction.SavedSearchNotFound"));
-            } else {
-                context.getValidationErrors().add("validationError", new LocalizableError("org.ei.stripes.action.search.SearchResultsAction.unknownerror"));
-            }
-        }
-    }
-
-    /**
      * Generic check to see if Thesaurus entitlements are enabled
      *
      * @return
@@ -1132,30 +1094,6 @@ public class SearchDisplayAction extends BaseSearchAction implements ValidationE
 
     public void setMoresourceslinks(List<String> moresourceslinks) {
         this.moresourceslinks = moresourceslinks;
-    }
-
-    public String getDberr() {
-        return dberr;
-    }
-
-    public void setDberr(String dberr) {
-        this.dberr = dberr;
-    }
-
-    public String getHisiderr() {
-        return hisiderr;
-    }
-
-    public void setHisiderr(String hisiderr) {
-        this.hisiderr = hisiderr;
-    }
-
-    public String getSearchHisErr() {
-        return searchHisErr;
-    }
-
-    public void setSearchHisErr(String searchHisErr) {
-        this.searchHisErr = searchHisErr;
     }
 
     public String getSwReferrer() {

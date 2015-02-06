@@ -180,12 +180,12 @@
 	                        		<c:when test="${not empty lhlink.imageUrl}">
 	                        			<c:choose>
 											<c:when test="${actionBean.view eq 'detailed'}">
-												<a CLASS="LgBlueLink" onclick="openLocalHoldingsLink(event,'Detailed Format',this);" href="/search/results/localholdinglinks.url?docId=${result.doc.docid}&url=${lhlink.url}&position=${lhlink.position}" target="new">
+												<a CLASS="LgBlueLink" title="Right-click to open in new tab" onclick="openLocalHoldingsLink(event,'Detailed Format',this);" href="/search/results/localholdinglinks.url?docId=${result.doc.docid}&url=${lhlink.url}&position=${lhlink.position}" target="new">
 			                        				<img src="${lhlink.imageUrl}" alt="${lhlink.label}" border="0" />
 			                        			</a>
 											</c:when>
 											<c:otherwise>
-												<a CLASS="LgBlueLink" onclick="openLocalHoldingsLink(event,'Abstract Format',this);" href="/search/results/localholdinglinks.url?docId=${result.doc.docid}&url=${lhlink.url}&position=${lhlink.position}" target="new">
+												<a CLASS="LgBlueLink" title="Right-click to open in new tab" onclick="openLocalHoldingsLink(event,'Abstract Format',this);" href="/search/results/localholdinglinks.url?docId=${result.doc.docid}&url=${lhlink.url}&position=${lhlink.position}" target="new">
 			                        				<img src="${lhlink.imageUrl}" alt="${lhlink.label}" border="0" />
 			                        			</a>
 											</c:otherwise>
@@ -194,10 +194,10 @@
 	                        		<c:otherwise>
 	                        			<c:choose>
 											<c:when test="${actionBean.view eq 'detailed'}">
-												<a CLASS="LgBlueLink" onclick="openLocalHoldingsLink(event,'Detailed Format',this);" href="/search/results/localholdinglinks.url?docId=${result.doc.docid}&url=${lhlink.url}&position=${lhlink.position}" target="new">${lhlink.label}</a>
+												<a CLASS="LgBlueLink" title="Right-click to open in new tab" onclick="openLocalHoldingsLink(event,'Detailed Format',this);" href="/search/results/localholdinglinks.url?docId=${result.doc.docid}&url=${lhlink.url}&position=${lhlink.position}" target="new">${lhlink.label}</a>
 											</c:when>
 											<c:otherwise>
-												<a CLASS="LgBlueLink" onclick="openLocalHoldingsLink(event,'Abstract Format',this);" href="/search/results/localholdinglinks.url?docId=${result.doc.docid}&url=${lhlink.url}&position=${lhlink.position}" target="new">${lhlink.label}</a>
+												<a CLASS="LgBlueLink" title="Right-click to open in new tab" onclick="openLocalHoldingsLink(event,'Abstract Format',this);" href="/search/results/localholdinglinks.url?docId=${result.doc.docid}&url=${lhlink.url}&position=${lhlink.position}" target="new">${lhlink.label}</a>
 											</c:otherwise>
 										</c:choose>
 

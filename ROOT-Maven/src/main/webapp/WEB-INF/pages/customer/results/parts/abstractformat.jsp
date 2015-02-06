@@ -237,12 +237,12 @@
 									<c:if test="${status.count>1}"><span class="pipe">|</span></c:if>
 									<c:choose>
 		                        		<c:when test="${not empty lhlink.imageUrl}">
-		                        			<a CLASS="LgBlueLink" onclick="openLocalHoldingsLink(event,'Abstract Format',this);" href="/search/results/localholdinglinks.url?docId=${result.doc.docid}&url=${lhlink.url}&position=${lhlink.position}" target="new">
+		                        			<a CLASS="LgBlueLink" title="Right-click to open in new tab" onclick="openLocalHoldingsLink(event,'Abstract Format',this);" href="/search/results/localholdinglinks.url?docId=${result.doc.docid}&url=${lhlink.url}&position=${lhlink.position}" target="new">
 		                        				<img src="${lhlink.imageUrl}" alt="${lhlink.label}" border="0" />
 		                        			</a>
 										</c:when>
 		                        		<c:otherwise>
-		                        			<a CLASS="LgBlueLink" onclick="openLocalHoldingsLink(event,'Abstract Format',this);" href="/search/results/localholdinglinks.url?docId=${result.doc.docid}&url=${lhlink.url}&position=${lhlink.position}" target="new">${lhlink.label}</a>
+		                        			<a CLASS="LgBlueLink" title="Right-click to open in new tab" onclick="openLocalHoldingsLink(event,'Abstract Format',this);" href="/search/results/localholdinglinks.url?docId=${result.doc.docid}&url=${lhlink.url}&position=${lhlink.position}" target="new">${lhlink.label}</a>
 		                        		</c:otherwise>
 		                    		</c:choose>
 								</c:if>
