@@ -772,12 +772,12 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 
 		if (isEventCombine()) {
 			String referer = context.getRequest().getHeader("Referer");
-			referer = referer.replaceAll("[&\\?]history=t", "").replaceAll("[&\\?]dberr=true", "").replaceAll("[&\\?]searchHisErr=true", "");
+			referer = referer.replaceAll("[&\\?]history=t", "").replaceAll("[&\\?]errorCode=[0-9]*", "");
 			String qs = "history=t";
 			if (errorXml.getErrorCode() == SystemErrorCodes.COMBINE_HISTORY_UNIQUE_DATABASE_ERROR) {
-				qs += "&dberr=true";
+				qs += "&errorCode=" + SystemErrorCodes.COMBINE_HISTORY_UNIQUE_DATABASE_ERROR;
 			} else {
-				qs += "&searchHisErr=true";
+				qs += "&errorCode=" + SystemErrorCodes.SEARCH_HISTORY_ERROR;
 			}
 			if (GenericValidator.isBlankOrNull(referer)) {
 				log4j.warn("Error has occurred but Referer request header is not set!  Returning to quick search page...");

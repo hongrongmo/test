@@ -248,7 +248,7 @@
 					}
 
 					String urlString = "/controller/servlet/Controller?CID=" + errorBackUrl + "&database=" + defaultdb
-							+ "&hisiderr=hisidnotexists&history=t";
+							+ "&history=t&errorCode=" + SystemErrorCodes.SEARCH_HISTORY_NOIDEXISTS;
 					client.setRedirectURL(urlString);
 					client.setRemoteControl();
 					return;
