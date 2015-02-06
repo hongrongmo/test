@@ -472,7 +472,7 @@ public class IPBlocker {
                 .append("You can take action by submitting the form at http://lngcentral.lexisnexis.com/depts/Edit/AppSupp/Forms/SecurityBreach.aspx (This URL requires Elsevier VPN access)"
                     + newline + newline);
 
-            message.append("You can view all abuse at http://" + EVProperties.getInstance().getProperty(EVProperties.APP_DOMAIN) + "/status/ipblocker.url (This URL is IP protected!)" + newline
+            message.append("You can view all abuse at http://evtools.engineeringvillage.com/status/ipblocker.url (This URL is username/password protected!)" + newline
                 + newline);
 
             List<BlockedIPEvent> history = BlockedIPEvent.getByTimePeriod(ipevent.getIP(), TimePeriod.LASTYEAR);
