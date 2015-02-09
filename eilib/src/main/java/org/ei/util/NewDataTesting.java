@@ -126,9 +126,9 @@ public class NewDataTesting
 		{
 			test.getWeeklyCount(updateNumber);
 		}
-		else  if(action.equals("getAccessnumber"))
+		else  if(action.equals("checkmid"))
 		{
-			test.getMIDFromFast();
+			test.getMIDFromFast(updateNumber);
 		}
 		else
 		{
@@ -514,7 +514,7 @@ public class NewDataTesting
 		return 0;
 	}
 
-	private void getMIDFromFast()
+	private void getMIDFromFast(String load_number)
 	{
 
 		Statement stmt = null;
@@ -523,7 +523,7 @@ public class NewDataTesting
 		try
 		{
 			con = getConnection(this.URL,this.driver,this.username,this.password);
-			String sqlQuery = "select id_number,m_id from georef_master_delete";
+			String sqlQuery = "select id_number,m_id from georef_master where load_number='"+load_number+"' and document_type='GI'";
 			stmt = con.createStatement();
 
 			System.out.println("QUERY= "+sqlQuery);
@@ -531,7 +531,7 @@ public class NewDataTesting
 			int k = 0;
 			while (rs.next())
 			{
-				Thread.currentThread().sleep(250);
+				//Thread.currentThread().sleep(250);
 				String accessnumber = rs.getString("id_number");
 				String m_id = rs.getString("m_id");
 
@@ -543,7 +543,7 @@ public class NewDataTesting
 				client.setOffSet(0);
 				client.setPageSize(50000);
 				//client.setQueryString("(((((all:\"cerium alloy\")) OR ((cv:\"QQDelQQ cerium alloys QQDelQQ\"))) OR ((all:\"ce alloy\" OR all:\"ce alloys\")))) AND (yr:[1970;2015]) AND (((db:cpx OR db:c84)))");
-				client.setQueryString("(AN:\""+accessnumber+"\") and db:grf");
+				client.setQueryString("(ALL:\""+m_id+"\") and db:grf and dt:gi and wk:"+load_number);
 				client.setDoCatCount(true);
 				client.setDoNavigators(true);
 				client.setPrimarySort("ausort");
@@ -551,8 +551,14 @@ public class NewDataTesting
 				client.search();
 
 				List l = client.getDocIDs();
-				//System.out.println("SIZE="+l.size());
+				int count =client.getHitCount();
+				if(count<1)
+				{
+				  System.out.println("MID= "+m_id);
+			    }
+
 				StringBuffer sb=new StringBuffer();
+				/*
 				for(int i=0;i<l.size();i++)
 				{
 					String[] docID = (String[])l.get(i);
@@ -566,6 +572,7 @@ public class NewDataTesting
 						System.out.println("id_number "+accessnumber+" has the same m_id");
 					}
 				}
+				*/
 			}
 			//getAccessnumber(sb.toString());
 			//System.out.println(sb.toString());

@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;
-import java.net.URLEncoder;
+import java.net.*;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Hashtable;
@@ -392,10 +392,48 @@ public class FastClient {
         this.offSet = o;
     }
 
+	public void search()
+		        throws SearchException
+		    {
+		        BufferedReader in = null;
+				URL urlConnection =null;
+
+		        try
+		        {
+		            String url = buildSearchURL();
+		            urlConnection = new URL(url);
+		            in = new BufferedReader(new InputStreamReader(urlConnection.openStream()));
+		            read(in);
+		        }
+		        catch(Exception e)
+		        {
+					e.printStackTrace();
+		            throw new SearchException(SystemErrorCodes.FAST_HTTP_CONNECTION_RELEASE_FAILED, e.getMessage(), e);
+		        }
+		        finally
+		        {
+
+		            if(in != null)
+		            {
+		                try
+		                {
+		                    in.close();
+		                }
+		                catch(Exception e1)
+		                {
+		                    e1.printStackTrace();
+		                }
+		            }
+
+		        }
+    }
+
+	/*
+
     public void search() throws SearchException {
         BufferedReader in = null;
         HttpMethod method = null;
-        log4j.info("fast call to get the data");
+        //log4j.info("fast call to get the data");
        // try {
             String URL = buildSearchURL();
             HttpClient client = new HttpClient();
@@ -427,6 +465,7 @@ public class FastClient {
             }
         }
     }
+	*/
 
     public FastDeduper dedupSearch(String fieldPref, String databasePref) throws SearchException {
         BufferedReader in = null;
@@ -572,7 +611,7 @@ public class FastClient {
         if (doNavigators) {
             buf.append("&rpf_navigation:enabled=1");
             buf.append("&rpf_navigation:navigators=");
-            
+
             String navigatorString = getNavigatorString();
             try {
 				buf.append(URLEncoder.encode(navigatorString, "UTF-8"));
@@ -744,8 +783,8 @@ public class FastClient {
     private String strip(String in, String str) {
         return this.sutil.replace(in, str, "", StringUtil.REPLACE_FIRST, StringUtil.MATCH_CASE_INSENSITIVE);
     }
-    
-    
 
-	
+
+
+
 }
