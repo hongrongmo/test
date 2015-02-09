@@ -43,6 +43,8 @@ public class CPXThesaurusXML2 {
 	public static final String comma = ",";
 	public static final String GEOGRAPHIC_TYPE = "GT";
 	public static String database="CPX";
+	public static final String CDE = "CDE";
+	public static final String CSS = "CSS";
 	public static String infile=null;
 
 	public static void main(String args[]){
@@ -216,6 +218,15 @@ public class CPXThesaurusXML2 {
 								concept.setGeographicType(cNode.getTextContent().trim());
 				  			}
 
+							// added for cpx classification
+							if(nodeName.equalsIgnoreCase(CSS)){
+								concept.setCSS(cNode.getTextContent().trim());
+							}
+							if(nodeName.equalsIgnoreCase(CDE)){
+								concept.setCDE(cNode.getTextContent().trim());
+				  			}
+
+
 				  		}
 				  }
 				  	concepts.add(concept);
@@ -230,7 +241,7 @@ public class CPXThesaurusXML2 {
 		return concepts;
 	}
 
-	private String checkString(String string){
+	String checkString(String string){
 		String outString="";
 		if(string==null){
 			outString = tab;
