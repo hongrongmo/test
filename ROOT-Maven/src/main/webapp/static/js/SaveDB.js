@@ -1,5 +1,5 @@
 var dbSave = {
-		mask:1,
+		mask:0,
 		tooltipShown:false
 };
 $(document).ready(function(){
