@@ -418,22 +418,22 @@ public void writeRecs(ResultSet rs)
 				}
 
 				// DT
-				
+
 				//System.out.println(runtimeDocview.createColumnValueField("DOCUMENT_TYPE"));   //seems to be HM testing
 				String dtStrings = runtimeDocview.new DocumentTypeDecorator(runtimeDocview.createColumnValueField("DOCUMENT_TYPE")).getValue();
-				
+
 				if(dtStrings != null)
 				{
 				  // Get EV system DOC_TYPE codes for indexing and append them to (or use in favor of ?) the GeoRef values
 				  String mappingcode = runtimeDocview.createColumnValueField("DOCUMENT_TYPE").getValue().concat(AUDELIMITER).concat(runtimeDocview.createColumnValueField("BIBLIOGRAPHIC_LEVEL_CODE").getValue());
-				 
+
 				  if(mappingcode != null)
 				  {
 					// DocumentTypeMappingDecorator takes <DOCTYPE>AUDELIMITER<BIBCODE> String as field argument
 					mappingcode = runtimeDocview.new DocumentTypeMappingDecorator(mappingcode).getValue();
 					// DO NOT CONCAY GEOPREF DOCTYPES OR ELSE THEY WILL SHOW UP IN NAVIGATOR TOO
 					dtStrings = mappingcode; // dtStrings.concat(AUDELIMITER).concat(mappingcode);
-					
+
 				  }
 
 				  rec.putIfNotNull(EVCombinedRec.DOCTYPE, dtStrings.split(AUDELIMITER));
@@ -502,26 +502,29 @@ public void writeRecs(ResultSet rs)
 						  geoterms.add(termcoordinates[0]);
 					  }
 					  coords = parseCoordinates(termcoordinates[1]);
-					  if(coords != null &&  coords[4].indexOf("-") == -1 && coords[3].indexOf("-") != -1)
-				      {
-						//secondBoxCoords = parseCoordinates(termcoordinates[1]);
-						//System.out.println(secondBoxCoords[1] + "," + secondBoxCoords[2] + "," + secondBoxCoords[3] + "," + secondBoxCoords[4]);
-			            coords[3] = "180";
-			            //recSecondBox = new EVCombinedRec();
-		              }
-
-					  if(j == currentCoord)
+					  if(coords != null &&  coords.length>4)
 					  {
-						//System.out.println(coords[1] + "," + coords[2] + "," + coords[3] + "," + coords[4]);
-						rec.put(EVCombinedRec.LAT_SE, coords[1]);
-						rec.put(EVCombinedRec.LAT_NW, coords[2]);
-						rec.put(EVCombinedRec.LNG_SE, coords[3]);
-						rec.put(EVCombinedRec.LNG_NW, coords[4]);
-						rec.put(EVCombinedRec.LAT_NE, coords[2]);
-						rec.put(EVCombinedRec.LNG_NE, coords[3]);
-						rec.put(EVCombinedRec.LAT_SW, coords[1]);
-						rec.put(EVCombinedRec.LNG_SW, coords[4]);
-					  }
+						  if(coords[4].indexOf("-") == -1 && coords[3].indexOf("-") != -1)
+						  {
+							//secondBoxCoords = parseCoordinates(termcoordinates[1]);
+							//System.out.println(secondBoxCoords[1] + "," + secondBoxCoords[2] + "," + secondBoxCoords[3] + "," + secondBoxCoords[4]);
+							coords[3] = "180";
+							//recSecondBox = new EVCombinedRec();
+						  }
+
+						  if(j == currentCoord)
+						  {
+							//System.out.println(coords[1] + "," + coords[2] + "," + coords[3] + "," + coords[4]);
+							rec.put(EVCombinedRec.LAT_SE, coords[1]);
+							rec.put(EVCombinedRec.LAT_NW, coords[2]);
+							rec.put(EVCombinedRec.LNG_SE, coords[3]);
+							rec.put(EVCombinedRec.LNG_NW, coords[4]);
+							rec.put(EVCombinedRec.LAT_NE, coords[2]);
+							rec.put(EVCombinedRec.LNG_NE, coords[3]);
+							rec.put(EVCombinedRec.LAT_SW, coords[1]);
+							rec.put(EVCombinedRec.LNG_SW, coords[4]);
+						  }
+				  		}
 					}
 				  }
 				  if(!geoterms.isEmpty())
@@ -828,10 +831,10 @@ private class LocalEntityResolver implements EntityResolver {
           String dtdfile = new File(systemId).getName();
           //System.out.println("<!--" + dtdfile + " == " + systemId + "-->");
           //InputStream in = this.getClass().getClassLoader().getResourceAsStream("org/ei/data/" + dtdfile);   //original
-          
+
           //HH 01/18/2015
           InputStream in = this.getClass().getClassLoader().getResourceAsStream("org/ei/data/georef/loadtime/" + dtdfile);
-          
+
           if(in != null)
           {
             is = new InputStreamReader(in);
