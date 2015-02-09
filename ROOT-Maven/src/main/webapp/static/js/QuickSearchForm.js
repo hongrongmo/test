@@ -64,7 +64,7 @@ $(document)
 										}
 										if($("#saveDBIcon") && $("#saveDBIcon").length > 0){
 											//database state has changed.. offer to save it
-											if(selectedDbMask != dbSave.mask){
+											if(selectedDbMask != dbSave.mask && selectedDbMask > 0){
 												enableSaveDB();
 											}else{
 												disableSaveDB();
