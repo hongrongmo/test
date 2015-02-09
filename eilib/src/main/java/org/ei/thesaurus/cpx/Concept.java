@@ -26,7 +26,7 @@ public class Concept {
 	private StringBuffer narrowerTerms=new StringBuffer();
 	private StringBuffer broaderTerms=new StringBuffer();
 	private StringBuffer relatedTerms=new StringBuffer();
-	private StringBuffer classCodes=new StringBuffer();   
+	private StringBuffer classCodes=new StringBuffer();
 	private StringBuffer priorTerms=new StringBuffer();
 	private StringBuffer topTerms=new StringBuffer();
 	private String textContent="";
@@ -37,7 +37,11 @@ public class Concept {
 	private String string="";
 	private String coordinates="";
 
-    
+	//CPX Classification
+	private String cde="";
+	private String css="";
+
+
     // HH 01/09/2015  INS Thes CLassification
 	private String classCodessingle ="";
     private String classStatus="C";
@@ -47,8 +51,28 @@ public class Concept {
     private String clasSeeAlsoRef="";
     private String clasSeeRef="";
     private StringBuffer classHistoryScopeNotes=new StringBuffer();
-    
-	
+
+
+	public void setCDE(String cde)
+	{
+		this.cde = cde;
+	}
+
+	public String getCDE()
+	{
+		return cde.toString();
+	}
+
+	public void setCSS(String css)
+	{
+		this.css = css;
+	}
+
+	public String getCSS()
+	{
+		return this.css;
+	}
+
 	public void setCoordinates(String coordinatesTerm)
 	{
 		this.coordinates = coordinatesTerm;
@@ -400,50 +424,50 @@ public class Concept {
 	{
 		return this.textContent;
 	}
-	
-	
+
+
 	// HH 01/09/2015 add setters & getters for INspec Thes Classification
-	
+
 	/****** setters ****************/
-	
+
 	public void setSingleClassCodes(String classCode)
     {
        this.classCodessingle = classCode;
     }
-	
-	
+
+
 	public void setClassStatus(String classstatus)
     {
         this.classStatus = classstatus;
     }
-	
+
 	public void setClassLevel(String classLevel)
     {
         this.classLevel = classLevel;
     }
-	
+
 	public void setClassTitle(String title)
     {
         this.classTitle = title;
     }
-	
+
 	public void setClassScopeNotes(String classscopenotes)
     {
         this.clasScopeNotes = classscopenotes;
     }
-	
+
 	public void setClassSeeAlsoRef(String seeAlsoRef)
     {
             this.clasSeeAlsoRef = seeAlsoRef;
     }
-	
-	
+
+
 	public void setClassSeeRef(String seeRef)
     {
             this.clasSeeRef = seeRef;
     }
-	
-	
+
+
 	public void setClassHistoryScopeNotes(String classhistoryscopenotes)
     {
         if(classHistoryScopeNotes.length()>0)
@@ -452,45 +476,45 @@ public class Concept {
         }
         classHistoryScopeNotes.append(classhistoryscopenotes);
     }
-	
-	
+
+
 	/********************* Getters *************************/
-	
+
 	public String getClassStatus()
     {
         return this.classStatus;
     }
-	
+
 	public String getSingleClassCodes()
 	{
 	    return this.classCodessingle;
 	}
-	
+
 	public String getClassLevel()
     {
         return this.classLevel;
     }
-	
+
 	public String getClassTitle()
 	{
 	    return this.classTitle;
 	}
-	
+
 	public String getClassScopeNotes()
 	{
 	    return this.clasScopeNotes;
 	}
-	
+
 	public String getClassSeeAlsoRef()
 	{
 	    return this.clasSeeAlsoRef;
 	}
-	
+
 	public String getClassSeeRef()
 	{
 	    return this.clasSeeRef;
 	}
-	
+
 	public String getClassHistoryScopeNotes()
 	{
 	    return this.classHistoryScopeNotes.toString();
