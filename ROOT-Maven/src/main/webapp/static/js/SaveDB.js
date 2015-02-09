@@ -1,5 +1,5 @@
 var dbSave = {
-		mask:1,
+		mask:0,
 		tooltipShown:false
 };
 $(document).ready(function(){
@@ -10,8 +10,7 @@ $(document).ready(function(){
 			return false;
 		}
 		$.cookie("ev_saveddbs", dbSave.mask,{expires:365, path:'/'});
-		$("#saveDBIcon").attr("src","/static/images/SaveSearch_off.png");
-		$("#saveDBIcon").attr("title","");
+		disableSaveDB();
 		showDBTooltip("Database preference saved!");
 	});
 	
@@ -33,7 +32,7 @@ function enableSaveDB(){
 }
 function disableSaveDB(){
 	$("#saveDBIcon").attr("src","/static/images/SaveSearch_off.png");
-	$("#saveDBIcon").attr("title","");
+	$("#saveDBIcon").attr("title","Select database(s) to save as default");
 	$("#saveDBIcon").css("cursor","default");
 }
 
