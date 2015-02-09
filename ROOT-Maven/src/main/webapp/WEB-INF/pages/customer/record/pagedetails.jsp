@@ -146,7 +146,7 @@
 
 				</ul>
 				<c:if test="${actionBean.view eq 'page'}">
-				<c:when test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1')}">
+				<c:when test="${actionBean.context.userSession.user.highlightingEnabled}">
 					<div id="highlight" style="float:right;display:none"><input type="checkbox" id="ckbackhighlight" style="margin-bottom:0px;vertical-align:text-bottom;" <c:if test="${actionBean.context.userSession.user.userPrefs.highlightBackground}">checked="checked"</c:if>/><label for="ckbackhighlight"><b>Background Highlighting</b></label></div>
 				</c:when>
 				<c:otherwise>
