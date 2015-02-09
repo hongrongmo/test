@@ -13,7 +13,7 @@
 		<input type="hidden" name="lastRefineStep" value="${fn:length(actionBean.refinequery)}" id="lastRefineStep" />
 		<input type="hidden" name="sortClick" value="false" id="sortClick" />
 
-		<stripes:errors field="validationError"><div style="width:240px;"><stripes:individual-error/></div></stripes:errors>
+		<stripes:errors field="errorcode"><div style="width:240px;"><stripes:individual-error/></div></stripes:errors>
 		<div class="shadowbox">
 		<div id="facet_refine">
 			<h2 class="heading" style="margin: 0; padding-top: 5px">

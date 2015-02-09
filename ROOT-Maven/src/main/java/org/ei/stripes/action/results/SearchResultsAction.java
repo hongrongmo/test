@@ -30,7 +30,6 @@ import org.apache.log4j.Logger;
 import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
 import org.ei.config.JSPPathProperties;
-import org.ei.controller.logging.LogEntry;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.DocumentBasket;
 import org.ei.domain.Query;
@@ -44,6 +43,7 @@ import org.ei.exception.SearchException;
 import org.ei.exception.SessionException;
 import org.ei.exception.SystemErrorCodes;
 import org.ei.session.UserSession;
+import org.ei.stripes.action.ControllerRequestHelper;
 import org.ei.stripes.action.EVPathUrl;
 import org.ei.stripes.action.GoogleWebAnalyticsEvent;
 import org.ei.stripes.action.WebAnalyticsEventProperties;
@@ -262,6 +262,9 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 			}
 		}
 
+        // Process the request to create error messages from error codes
+    	ControllerRequestHelper.processErrorCode(this);
+    	
 		if (getLimitError() != null) {
 			context.getValidationErrors().add("limitError",
 					new LocalizableError("org.ei.stripes.action.search.SearchResultsAction.limitError", getSavedSeachesAndAlertsLimit()));
@@ -740,33 +743,37 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 	@Override
 	public Resolution handleException(ErrorXml errorXml) {
 		if (isEventExpert()) {
-
-			boolean top = !GenericValidator.isBlankOrNull(getTopappend());
-			if(errorXml.getErrorCode() == SystemErrorCodes.EBOOK_REMOVED){
-				return new RedirectResolution("/search/expert.url?CID=expertSearch&database=" + getDatabase() + "&searchid=" + getSearchid() + "&error=validationError&errorCode="+errorXml.getErrorCode());
-			}
-			if (getReruncid() != null) {
-				if (getLastRefineStep() != null && getLastRefineStep().equalsIgnoreCase("0")) {
-					return new RedirectResolution("/search/results/quick.url?CID=quickSearchCitationFormat" + "&SEARCHID=" + getReruncid() + "&database=" + getDatabase() + "&error="
-							+ (top ? "top" : "btm") + "&appendstr=" + URLEncoder.encode(getAppendstr()));
-				} else {
-					return new RedirectResolution("/search/results/expert.url?CID=expertSearchCitationFormat" + "&SEARCHID=" + getReruncid() + "&database=" + getDatabase() + "&STEP="
-							+ getLastRefineStep() + "&error=" + (top ? "top" : "btm") + "&appendstr=" + URLEncoder.encode(getAppendstr()));
-				}
-
+			StringBuffer redirect = new StringBuffer();
+			if(errorXml.getErrorCode() == SystemErrorCodes.EBOOK_REMOVED) {
+				redirect.append("/search/expert.url?CID=expertSearch&database=" + getDatabase() + "&searchid=" + getSearchid() + "&errorCode="+errorXml.getErrorCode());
 			} else {
-				return new RedirectResolution("/search/expert.url?CID=expertSearch&database=" + getDatabase() + "&searchid=" + getSearchid() + "&error=validationError&errorCode="+errorXml.getErrorCode());
+				if (!GenericValidator.isBlankOrNull(getRequest().getParameter("RERUN"))) {
+					if (getLastRefineStep() != null && getLastRefineStep().equalsIgnoreCase("0")) {
+						redirect.append("/search/results/quick.url?CID=quickSearchCitationFormat&SEARCHID=" + getRequest().getParameter("RERUN"));
+						redirect.append("&database=" + getDatabase());
+						redirect.append("&errorCode=" + errorXml.getErrorCode());
+						if (!GenericValidator.isBlankOrNull(getAppendstr())) redirect.append("&appendstr=" + URLEncoder.encode(getAppendstr()));
+					} else {
+						redirect.append("/search/results/expert.url?CID=expertSearchCitationFormat&SEARCHID=" + getRequest().getParameter("RERUN"));
+						redirect.append("&database=" + getDatabase());
+						redirect.append("&STEP="+ getLastRefineStep());
+						redirect.append("&errorCode=" + errorXml.getErrorCode());
+						if (!GenericValidator.isBlankOrNull(getAppendstr())) redirect.append("&appendstr=" + URLEncoder.encode(getAppendstr()));
+					}
+				} else {
+					redirect.append("/search/expert.url?CID=expertSearch&database=" + getDatabase() + "&searchid=" + getSearchid() + "&errorCode="+errorXml.getErrorCode());
+				}
 			}
+			
+			return new RedirectResolution(redirect.toString());
 		}
 		if (isEventQuick()) {
-
 			if ("Book".equals(searchtype)) {
-				return new RedirectResolution("/search/ebook.url?CID=ebookSearch&searchID=" + getSearchid() + "&database=" + getDatabase() + "&error=validationError&errorCode="+errorXml.getErrorCode());
+				return new RedirectResolution("/search/ebook.url?CID=ebookSearch&searchID=" + getSearchid() + "&database=" + getDatabase() + "&errorCode="+errorXml.getErrorCode());
 			}else if(errorXml.getErrorCode() == SystemErrorCodes.EBOOK_REMOVED){
-
-				return new RedirectResolution("/search/quick.url?CID=quickSearch&searchID=" + getSearchid() + "&database=" + getDatabase() + "&error=validationError&errorCode="+errorXml.getErrorCode());
+				return new RedirectResolution("/search/quick.url?CID=quickSearch&searchID=" + getSearchid() + "&database=" + getDatabase() + "&eerrorCode="+errorXml.getErrorCode());
 			}else {
-				return new RedirectResolution("/search/quick.url?CID=quickSearch&searchID=" + getSearchid() + "&database=" + getDatabase() + "&error=validationError&errorCode="+errorXml.getErrorCode());
+				return new RedirectResolution("/search/quick.url?CID=quickSearch&searchID=" + getSearchid() + "&database=" + getDatabase() + "&errorCode="+errorXml.getErrorCode());
 			}
 		}
 

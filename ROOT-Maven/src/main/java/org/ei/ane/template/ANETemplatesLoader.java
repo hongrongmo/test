@@ -79,7 +79,7 @@ public class ANETemplatesLoader {
 			for (NCEValuesByType valuesByType : nceValuesByTypes) {
 				Map<String, Object> nceDataByName = new HashMap<String, Object>();
 				for (NCEIdNameValueType nameValueType : valuesByType.getNceIdNameValueType()) {
-					if ((NCE_CARS_TEMPLATE).equalsIgnoreCase(valuesByType.getNceTypeName())) {
+					if ((NCE_CARS_TEMPLATE).equalsIgnoreCase(valuesByType.getNceTypeName()) && !"CARS_HTT".equals(nameValueType.getNceName())) {
 
 						try {
 							tFactory = TransformerFactory.newInstance();
