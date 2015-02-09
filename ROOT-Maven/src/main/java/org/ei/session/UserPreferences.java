@@ -169,6 +169,7 @@ public class UserPreferences implements IUserPreferences, Serializable {
 
     public static final String FENCE_HIGHLIGHT_V1 = "HIGHLIGHT_V1";
     public static final String FENCE_HIGHLIGHT_V2 = "HIGHLIGHT_V2";
+    public static final String FENCE_HIGHLIGHT_REG_ONLY = "HIGHLIGHT_REG_ONLY";
     public static final String FENCE_FEATURE_SURVEY = "FEATURE_SURVEY";
     public static final String FENCE_EXIT_SURVEY = "EXIT_SURVEY";
     
@@ -334,4 +335,5 @@ public class UserPreferences implements IUserPreferences, Serializable {
     public boolean isSaveDbSelection(){
     	return getBoolean(FENCE_SAVE_DB_SELECTION);
     }
+
 }

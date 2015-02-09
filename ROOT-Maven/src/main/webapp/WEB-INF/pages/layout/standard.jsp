@@ -29,7 +29,7 @@
 		<script>
 		var highlightV1 = false;
 		</script>
-		<c:if test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1')}">
+		<c:if test="${actionBean.context.userSession.user.highlightingEnabled}">
 		<script>
 			highlightV1 = true;
 

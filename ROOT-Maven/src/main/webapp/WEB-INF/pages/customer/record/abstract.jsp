@@ -133,7 +133,7 @@
 
 			</ul>
 			<c:choose>
-				<c:when test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1')}">
+				<c:when test="${actionBean.context.userSession.user.highlightingEnabled}">
 					<div id="highlight" style="float:right;"><input type="text" name="highlightColorAbs"  id="hlight_color_abs" /><label id="hlight_color_abs_lbl" for="hlight_color_abs" style="padding-left:3px;font-weight:bold;">Color Search Terms</label><input type="checkbox" id="ckbackhighlight" style="margin-bottom:0px;vertical-align:text-bottom;" <c:if test="${actionBean.context.userSession.user.userPrefs.highlightBackground}">checked="checked"</c:if>/><label for="ckbackhighlight"><b>Background Highlighting</b></label></div>
 				</c:when>
 				<c:otherwise>

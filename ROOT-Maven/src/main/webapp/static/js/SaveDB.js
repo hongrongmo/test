@@ -1,6 +1,7 @@
 var dbSave = {
 		mask:0,
-		tooltipShown:false
+		tooltipShown:false,
+		orgDefault:0
 };
 $(document).ready(function(){
 	$("#saveDBIcon").click(function(){
@@ -20,6 +21,8 @@ $(document).ready(function(){
 			enableSaveDB();
 		}
 		dbSave.mask = mask;
+	}else{
+		mask.orgDefault = calculateMask();
 	}
 	
 });
