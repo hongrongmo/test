@@ -53,6 +53,7 @@ public class ControllerRequestHelper {
 			validationerrors.add(DEFAULT_ERROR_FIELD, new LocalizableError("org.ei.stripes.action.search.SearchResultsAction.SavedSearchNotFound"));
 			break;
 		case SystemErrorCodes.SEARCH_QUERY_COMPILATION_FAILED:
+		case SystemErrorCodes.PARSE_ERROR:
 			validationerrors.add(DEFAULT_ERROR_FIELD, new LocalizableError("org.ei.stripes.action.search.BaseSearchAction.syntaxerror", context.getHelpUrl()));
 			break;
 		case SystemErrorCodes.SEARCH_HISTORY_ERROR:
