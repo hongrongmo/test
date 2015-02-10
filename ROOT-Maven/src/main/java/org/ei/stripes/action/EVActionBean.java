@@ -82,6 +82,14 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
         return new NormalAuthRequiredAccessControl();
     }
 
+    /**
+     * Return the rulevel (usually passed as -Dcom.elsevier.env=xxxx)
+     * @return
+     */
+    public String getRunlevel() {
+    	return System.getProperty(ApplicationProperties.SYSTEM_ENVIRONMENT_RUNLEVEL);
+    }
+    
     protected List<String> comments;   // Comments from biz (JSP) layer
 
     public void setComments(List<String> comments) {
@@ -130,7 +138,7 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
         // have it do nothing!
         context.setSessionCookie();
         if (this.requeststopwatch != null) {
-            this.requeststopwatch.stop("request");
+            this.requeststopwatch.stop("request." + this.getClass().getSimpleName() + "." + this.getContext().getEventName());
         }
         // If SYSTEM_PT is present, delete session!
         /*
