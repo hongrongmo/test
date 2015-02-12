@@ -22,7 +22,7 @@ $(document).ready(function(){
 		}
 		dbSave.mask = mask;
 	}else{
-		mask.orgDefault = calculateMask();
+		dbSave.orgDefault = calculateMask();
 	}
 	
 });
@@ -35,8 +35,8 @@ function enableSaveDB(){
 }
 function disableSaveDB(){
 	$("#saveDBIcon").attr("src","/static/images/SaveSearch_off.png");
-	$("#saveDBIcon").attr("title","Select database(s) to save as default");
-	$("#saveDBIcon").css("cursor","default");
+	$("#saveDBIcon").attr("title","Select your database preference to save as default");
+	$("#saveDBIcon").css("cursor","pointer");
 }
 
 function showDBTooltip(otherMsg){
@@ -46,8 +46,9 @@ function showDBTooltip(otherMsg){
 		//show tooltip to let them know how to save db selections
 		var msg = "Select to save database<br/> preference as default.";
 		var selector = ".saveDatabases";
-		var duration = 4000;
+		var duration = 3000;
 		var direction = "bottom";
+		var funcCallAfter = "enableSaveDB()";
 		//showTooltip(".saveDatabases", msg, "bottom", 4000,true,false);
 		
 		if ( $.browser.msie && $.browser.version == 7) {
@@ -59,11 +60,12 @@ function showDBTooltip(otherMsg){
 		if(otherMsg != null && otherMsg.length > 0)
 		{
 			msg = otherMsg;
+			funcCallAfter = "disableSaveDB()"
 		}else{dbSave.tooltipShown = true;}
 		
 		$(selector).tooltipster('update',msg);
 		$(selector).tooltipster("show");
-		setTimeout("$('" + selector + "').tooltipster('destroy');$('" + selector + "').attr('title','Select your database preference to save as default')",duration);
+		setTimeout("$('" + selector + "').tooltipster('destroy');"+funcCallAfter +";",duration);
 		
 	}
 }
