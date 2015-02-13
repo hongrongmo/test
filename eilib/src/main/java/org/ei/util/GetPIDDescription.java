@@ -8,7 +8,6 @@ import org.ei.data.upt.loadtime.IPCClassNormalizer;
 import org.ei.exception.InfrastructureException;
 import org.ei.exception.SystemErrorCodes;
 import org.ei.connectionpool.*;
-import org.ei.data.upt.loadtime.UPTCombiner;
 
 import java.io.IOException;
 import java.sql.*;
@@ -43,10 +42,7 @@ public class GetPIDDescription {
         } catch (IOException e) {
             log4j.error(e);
             throw new InfrastructureException(SystemErrorCodes.PID_DESCRIPTION_ERROR, e);
-        } catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+        }
 
         return description;
     }
@@ -74,93 +70,64 @@ public class GetPIDDescription {
         } catch (IOException e) {
             log4j.error(e);
             throw new InfrastructureException(SystemErrorCodes.PID_DESCRIPTION_ERROR, e);
-        } catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+        }
 
         return dp;
     }
 
-    public String getDescriptionFromLookupIndex(String code)
-	{
-		Connection con=null;
-		Statement stmt=null;
-		ResultSet rset=null;
-		String description=null;
-		//ConnectionBroker broker=null;
-		String sql = "select description from CMB_IPC_LOOKUP WHERE replace(ipccode,'SLASH','')='"+code+"'";
-		int rows = 0;
-		
-		//HH 01/21/2015 update to be as  eijava, otherwise give pat extract issue
+    public String getDescriptionFromLookupIndex(String code) throws InfrastructureException {
+        Connection con = null;
+        Statement stmt = null;
+        ResultSet rset = null;
+        String description = null;
+        ConnectionBroker broker = null;
+        String sql = "select description from CMB_IPC_LOOKUP WHERE replace(ipccode,'SLASH','')='" + code + "'";
+        int rows = 0;
 
-		try
-		{
-			//broker=ConnectionBroker.getInstance();
-			//con=broker.getConnection(DatabaseConfig.SEARCH_POOL);
-			con = getConnection(UPTCombiner.url,UPTCombiner.driver,UPTCombiner.username,UPTCombiner.password);
-			stmt = con.createStatement();
-			rset=stmt.executeQuery(sql);
-        	while(rset.next())
-			{
-				description = rset.getString("description");
-			}
+        try {
+            broker = ConnectionBroker.getInstance();
+            con = broker.getConnection(DatabaseConfig.SEARCH_POOL);
+            stmt = con.createStatement();
+            rset = stmt.executeQuery(sql);
+            while (rset.next()) {
+                description = rset.getString("description");
+            }
 
-		}
-		catch(Exception e)
-		{
-			System.out.println("there is a problem on this code "+code);
-			e.printStackTrace();
-		}
-		finally
-		{
-			if(rset != null)
-			{
-				try
-				{
-					rset.close();
-				}
-				catch(Exception se)
-				{
-				}
-			}
+        } catch (ConnectionPoolException e) {
+            log4j.error(e);
+            throw new InfrastructureException(SystemErrorCodes.PID_DESCRIPTION_ERROR, e);
+        } catch (NoConnectionAvailableException e) {
+            log4j.error(e);
+            throw new InfrastructureException(SystemErrorCodes.PID_DESCRIPTION_ERROR, e);
+        } catch (SQLException e) {
+            log4j.error(e);
+            throw new InfrastructureException(SystemErrorCodes.PID_DESCRIPTION_ERROR, e);
+        } finally {
+            if (rset != null) {
+                try {
+                    rset.close();
+                } catch (Exception se) {
+                    log4j.error(se);
+                }
+            }
 
-			if(stmt != null)
-			{
-				try
-				{
-					stmt.close();
-				}
-				catch(Exception se)
-				{
-				}
-			}
+            if (stmt != null) {
+                try {
+                    stmt.close();
+                } catch (Exception se) {
+                    log4j.error(se);
+                }
+            }
 
-			if(con != null)
-			{
-				try
-				{
-					//broker.replaceConnection(con, DatabaseConfig.SEARCH_POOL);
-					con.close();
-				}
-				catch(Exception e1)
-                {}
-			}
+            if (con != null) {
+                try {
+                    broker.replaceConnection(con, DatabaseConfig.SEARCH_POOL);
+                } catch (Exception e1) {
+                    log4j.error(e1);
+                }
+            }
         }
 
         return description;
-	}
-
-	 public Connection getConnection(String connectionURL,
-	                                         String driver,
-	                                         String username,
-	                                         String password)
-	            throws Exception
-		{
-			Class.forName(driver);
-			Connection con = DriverManager.getConnection(connectionURL,
-											  username,
-											  password);
-			return con;
-        }
+    }
 }
