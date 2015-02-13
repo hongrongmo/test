@@ -407,7 +407,7 @@ public class BdParser
 								 	abstractCopyRight= dictionary.mapEntity(abstractData.getChildTextTrim("publishercopyright",noNamespace));
 									//System.out.println("COPYRIGHT="+ abstractCopyRight);
 								}
-								
+
 								// abstract data
 
 								if(abstractData.getAttributeValue("original") != null)
@@ -433,7 +433,7 @@ public class BdParser
 
 										//System.out.println("\nreplacing inf ::"+abstractString);
 									}
-									
+
 									if(abstractCopyRight!=null)
 									{
 										abstractString = abstractString+" "+abstractCopyRight;
@@ -998,7 +998,9 @@ public class BdParser
 
 	private void parseReferencegroup(List referenceGroup,Hashtable record) throws Exception
 	{
+
 		String referenceID = null;
+		/*
 		StringBuffer referenceTitle = new StringBuffer();
 		StringBuffer referenceAuthor = new StringBuffer();
 		StringBuffer referenceSourcetitle = new StringBuffer();
@@ -1029,6 +1031,37 @@ public class BdParser
 		StringBuffer referenceItemcitationEAddress = new StringBuffer();
 		StringBuffer referenceItemcitationRefText = new StringBuffer();
 		StringBuffer pElectronicA = new StringBuffer();
+		 */
+		Hashtable referenceTitle = new Hashtable();
+		Hashtable referenceAuthor = new Hashtable();
+		Hashtable referenceSourcetitle = new Hashtable();
+		Hashtable referencePublicationyear = new Hashtable();
+		Hashtable referenceVolume = new Hashtable();
+		Hashtable referenceIssue = new Hashtable();
+		Hashtable referencePages = new Hashtable();
+		Hashtable referenceFullText = new Hashtable();
+		Hashtable referenceText = new Hashtable();
+		Hashtable referenceWebsite = new Hashtable();
+		Hashtable referenceItemid = new Hashtable();
+		Hashtable referenceItemcitationPII = new Hashtable();
+		Hashtable referenceItemcitationDOI = new Hashtable();
+		Hashtable referenceItemcitationCitationTitle = new Hashtable();
+		Hashtable referenceItemcitationAuthor = new Hashtable();
+		Hashtable referenceItemcitationSourcetitle = new Hashtable();
+		Hashtable referenceItemcitationSourcetitle_abbrev = new Hashtable();
+		Hashtable referenceItemcitationISSN = new Hashtable();
+		Hashtable referenceItemcitationISBN = new Hashtable();
+		Hashtable referenceItemcitationCoden = new Hashtable();
+		Hashtable referenceItemcitationPart = new Hashtable();
+		Hashtable referenceItemcitationPublicationyear = new Hashtable();
+		Hashtable referenceItemcitationVolume = new Hashtable();
+		Hashtable referenceItemcitationIssue = new Hashtable();
+		Hashtable referenceItemcitationPage = new Hashtable();
+		Hashtable referenceItemcitationArticleNumber = new Hashtable();
+		Hashtable referenceItemcitationWebsite = new Hashtable();
+		Hashtable referenceItemcitationEAddress = new Hashtable();
+		Hashtable referenceItemcitationRefText = new Hashtable();
+
 
 		if(referenceGroup != null && referenceGroup.size()>0)
 		{
@@ -1039,93 +1072,34 @@ public class BdParser
 				if(reference != null)
 				{
 					referenceID = reference.getAttributeValue("id");
-					/*
-					if(i>0)
-					{
-						referenceTitle.append(REFERENCEDELIMITER);
-						referenceAuthor.append(REFERENCEDELIMITER);
-						referenceSourcetitle.append(REFERENCEDELIMITER);
-						referencePublicationyear.append(REFERENCEDELIMITER);
-						referenceVolume.append(REFERENCEDELIMITER);
-						referenceIssue.append(REFERENCEDELIMITER);
-						referencePages.append(REFERENCEDELIMITER);
-						referenceFullText.append(REFERENCEDELIMITER);
-						referenceText.append(REFERENCEDELIMITER);
-						referenceWebsite.append(REFERENCEDELIMITER);
-						referenceItemid.append(REFERENCEDELIMITER);
-						referenceItemcitationPII.append(REFERENCEDELIMITER);
-						referenceItemcitationDOI.append(REFERENCEDELIMITER);
-						referenceItemcitationCitation_title.append(REFERENCEDELIMITER);
-						referenceItemcitationAuthor.append(REFERENCEDELIMITER);
-						referenceItemcitationSourcetitle.append(REFERENCEDELIMITER);
-						referenceItemcitationSourcetitle_abbrev.append(REFERENCEDELIMITER);
-						referenceItemcitationISSN.append(REFERENCEDELIMITER);
-						referenceItemcitationISBN.append(REFERENCEDELIMITER);
-						referenceItemcitationCoden.append(REFERENCEDELIMITER);
-						referenceItemcitationPart.append(REFERENCEDELIMITER);
-						referenceItemcitationPublicationyear.append(REFERENCEDELIMITER);
-						referenceItemcitationVolume.append(REFERENCEDELIMITER);
-						referenceItemcitationIssue.append(REFERENCEDELIMITER);
-						referenceItemcitationPage.append(REFERENCEDELIMITER);
-						referenceItemcitationArticleNumber.append(REFERENCEDELIMITER);
-						referenceItemcitationWebsite.append(REFERENCEDELIMITER);
-						referenceItemcitationEAddress.append(REFERENCEDELIMITER);
-						referenceItemcitationRefText.append(REFERENCEDELIMITER);
-						pElectronicA.append(REFERENCEDELIMITER);
-					}
-					referenceTitle.append(referenceID+GROUPDELIMITER);
-					referenceAuthor.append(referenceID+GROUPDELIMITER);
-					referenceSourcetitle.append(referenceID+GROUPDELIMITER);
-					referencePublicationyear.append(referenceID+GROUPDELIMITER);
-					referenceVolume.append(referenceID+GROUPDELIMITER);
-					referenceIssue.append(referenceID+GROUPDELIMITER);
-					referencePages.append(referenceID+GROUPDELIMITER);
-					referenceFullText.append(referenceID+GROUPDELIMITER);
-					referenceText.append(referenceID+GROUPDELIMITER);
-					referenceWebsite.append(referenceID+GROUPDELIMITER);
-					referenceItemid.append(referenceID+GROUPDELIMITER);
-					referenceItemcitationPII.append(referenceID+GROUPDELIMITER);
-					referenceItemcitationDOI.append(referenceID+GROUPDELIMITER);
-					referenceItemcitationCitation_title.append(referenceID+GROUPDELIMITER);
-					referenceItemcitationAuthor.append(referenceID+GROUPDELIMITER);
-					referenceItemcitationSourcetitle.append(referenceID+GROUPDELIMITER);
-					referenceItemcitationSourcetitle_abbrev.append(referenceID+GROUPDELIMITER);
-					referenceItemcitationISSN.append(referenceID+GROUPDELIMITER);
-					referenceItemcitationISBN.append(referenceID+GROUPDELIMITER);
-					referenceItemcitationCoden.append(referenceID+GROUPDELIMITER);
-					referenceItemcitationPart.append(referenceID+GROUPDELIMITER);
-					referenceItemcitationPublicationyear.append(referenceID+GROUPDELIMITER);
-					referenceItemcitationVolume.append(referenceID+GROUPDELIMITER);
-					referenceItemcitationIssue.append(referenceID+GROUPDELIMITER);
-					referenceItemcitationPage.append(referenceID+GROUPDELIMITER);
-					referenceItemcitationArticleNumber.append(referenceID+GROUPDELIMITER);
-					referenceItemcitationWebsite.append(referenceID+GROUPDELIMITER);
-					referenceItemcitationEAddress.append(referenceID+GROUPDELIMITER);
-					referenceItemcitationRefText.append(referenceID+GROUPDELIMITER);
-					pElectronicA.append(referenceID+GROUPDELIMITER);
-					*/
 
 					Element refInfo = (Element) reference.getChild("ref-info",noNamespace);
 					Element refTitle = (Element) refInfo.getChild("ref-title",noNamespace);
 					if(refTitle!=null)
 					{
-						if(referenceTitle.length()>0)
-						{
-							referenceTitle.append(REFERENCEDELIMITER);
-						}
-						referenceTitle.append(referenceID+GROUPDELIMITER);
+
 						List refTitletextList = (List) refTitle.getChildren("ref-titletext",noNamespace);
+						StringBuffer referenceTitleBuffer = new StringBuffer();
 						for(int j=0;j<refTitletextList.size();j++)
 						{
 							Element refTitletextElement = (Element)refTitletextList.get(j);
-							String  refTitletext = refTitletextElement.getTextTrim();
-							referenceTitle.append(refTitletext);
-							if(j<refTitletextList.size()-1)
+							if(refTitletextElement!=null)
 							{
-								referenceTitle.append(", ");
+								String  refTitletext = refTitletextElement.getTextTrim();
+								if(	refTitletext!=null)
+								{
+									referenceTitleBuffer.append(refTitletext);
+								}
+								if(j<refTitletextList.size()-1)
+								{
+									referenceTitleBuffer.append(", ");
+								}
 							}
 						}
+						referenceTitle.put(referenceID,	referenceTitleBuffer.toString());
 					}
+
+
 
 					List refAuthorsList = (List) refInfo.getChildren("ref-authors",noNamespace);
 					BdAuthors ausmap = new BdAuthors();
@@ -1133,11 +1107,6 @@ public class BdParser
 					this.affid = 0;
 					if(refAuthorsList!=null && refAuthorsList.size()>0)
 					{
-						if(referenceAuthor.length()>0)
-						{
-							referenceAuthor.append(REFERENCEDELIMITER);
-						}
-						referenceAuthor.append(referenceID+GROUPDELIMITER);
 
 						for (int j=0 ; j < refAuthorsList.size() ; j++)
 						{
@@ -1146,33 +1115,25 @@ public class BdParser
 											  (Element) refAuthorsList.get(j));
 						}
 
-						referenceAuthor.append(auToStringBuffer(ausmap));
+						referenceAuthor.put(referenceID,  auToStringBuffer(ausmap));
 					}
+
+
 
 					//ref-sourcetitle
 					Element refSourceTitle = (Element) refInfo.getChild("ref-sourcetitle",noNamespace);
 					if(	refSourceTitle !=null)
 					{
-						if(referenceSourcetitle.length()>0)
-						{
-							referenceSourcetitle.append(REFERENCEDELIMITER);
-						}
-						referenceSourcetitle.append(referenceID+GROUPDELIMITER);
 						String  refSourceTitleText = refSourceTitle.getTextTrim();
-						referenceSourcetitle.append(refSourceTitleText);
+						referenceSourcetitle.put(referenceID,refSourceTitleText);
 					}
 
 					//ref-publicationyear
 					Element refPublicationyear = (Element) refInfo.getChild("ref-publicationyear",noNamespace);
 					if(refPublicationyear != null)
 					{
-						if(referencePublicationyear.length()>0)
-						{
-							referencePublicationyear.append(REFERENCEDELIMITER);
-						}
-						referencePublicationyear.append(referenceID+GROUPDELIMITER);
 						String publicationyear = getPublicationYear(refPublicationyear);
-						referencePublicationyear.append(publicationyear);
+						referencePublicationyear.put(referenceID,publicationyear);
 					}
 
 					//ref-volisspag
@@ -1189,34 +1150,22 @@ public class BdParser
 
 							if (volume != null)
 							{
-								if(referenceVolume.length()>0)
-								{
-									referenceVolume.append(REFERENCEDELIMITER);
-								}
-								referenceVolume.append(referenceID+GROUPDELIMITER);
 
-								referenceVolume.append(volume);
+								referenceVolume.put(referenceID,volume);
 							}
 							if(issue != null)
 							{
-								if(referenceIssue.length()>0)
-								{
-									referenceIssue.append(REFERENCEDELIMITER);
-								}
-								referenceIssue.append(referenceID+GROUPDELIMITER);
-
-								referenceIssue.append(issue);
+								referenceIssue.put(referenceID,issue);
 							}
 						}
 
 						//PAGERANGE PAGE
 						String pages = getPages(refVolisspag);
-						if(referencePages.length()>0)
+						if(pages!=null && pages.length()>0)
 						{
-							referencePages.append(REFERENCEDELIMITER);
+							referencePages.put(referenceID,pages);
 						}
-						referencePages.append(referenceID+GROUPDELIMITER);
-						referencePages.append(pages);
+
 					}
 
 
@@ -1224,27 +1173,24 @@ public class BdParser
 					Element refWebsite = (Element) refInfo.getChild("ref-website",noNamespace);
 					if(refWebsite!=null)
 					{
-						if(referenceWebsite.length()>0)
-						{
-							referenceWebsite.append(REFERENCEDELIMITER);
-						}
-						referenceWebsite.append(referenceID+GROUPDELIMITER);
 						Element websitename = (Element) refWebsite.getChild("websitename",noNamespace);
+						StringBuffer  referenceWebsiteBuffer = new StringBuffer();
 						if(websitename!=null)
 						{
 							String websitenameText = websitename.getTextTrim();
-							referenceWebsite.append(websitenameText);
+							referenceWebsiteBuffer.append(websitenameText);
 						}
-						referenceWebsite.append(IDDELIMITER);
+						referenceWebsiteBuffer.append(IDDELIMITER);
 						Element eaddress = (Element) refWebsite.getChild("e-address",ceNamespace);
 						if(eaddress!=null)
 						{
 							String eaddresstext = eaddress.getText();
 							if(eaddresstext != null)
 							{
-								referenceWebsite.append(eaddresstext);
+								referenceWebsiteBuffer.append(eaddresstext);
 							}
 						}
+						referenceWebsite.put(referenceID,referenceWebsiteBuffer.toString());
 					}
 
 					//ref-text
@@ -1252,13 +1198,8 @@ public class BdParser
 					if(refText!=null)
 					{
 
-						if(referenceText.length()>0)
-						{
-							referenceText.append(REFERENCEDELIMITER);
-						}
-						referenceText.append(referenceID+GROUPDELIMITER);
 						String  refTextValue = refText.getTextTrim();
-						referenceText.append(refTextValue);
+						referenceText.put(referenceID,refTextValue);
 					}
 
 					//refd-itemidlist
@@ -1268,13 +1209,8 @@ public class BdParser
 						List itemidList = refdItemidlist.getChildren("itemid",noNamespace);
 						if(itemidList!=null)
 						{
-							if(referenceItemid.length()>0)
-							{
-								referenceItemid.append(REFERENCEDELIMITER);
-							}
-							referenceItemid.append(referenceID+GROUPDELIMITER);
 							String itemid = getItemID(itemidList);
-							referenceItemid.append(itemid);
+							referenceItemid.put(referenceID,itemid);
 						}
 					}
 
@@ -1284,12 +1220,7 @@ public class BdParser
 					if(refFullText!=null)
 					{
 						String  refFullTextValue = refFullText.getTextTrim();
-						if(referenceText.length()>0)
-						{
-							referenceText.append(REFERENCEDELIMITER);
-						}
-						referenceText.append(referenceID+GROUPDELIMITER);
-						referenceText.append(refFullTextValue);
+						referenceText.put(referenceID,refFullTextValue);
 					}
 
 					//refd-itemcitation
@@ -1299,38 +1230,23 @@ public class BdParser
 						//REFERENCE CITATION PII
 						if(refdItemcitation.getChild("pii",ceNamespace)!=null)
 						{
-							if(referenceItemcitationPII.length()>0)
-							{
-								referenceItemcitationPII.append(REFERENCEDELIMITER);
-							}
-							referenceItemcitationPII.append(referenceID+GROUPDELIMITER);
 							Element pii = (Element)refdItemcitation.getChild("pii",ceNamespace);
-							referenceItemcitationPII.append(pii.getTextTrim());
+							referenceItemcitationPII.put(referenceID,pii.getTextTrim());
 						}
 
 						//REFERENCE CITATION DOI
 						if(refdItemcitation.getChild("doi",ceNamespace)!=null)
 						{
-							if(referenceItemcitationDOI.length()>0)
-							{
-								referenceItemcitationDOI.append(REFERENCEDELIMITER);
-							}
-							referenceItemcitationDOI.append(referenceID+GROUPDELIMITER);
 							Element doi = (Element)refdItemcitation.getChild("doi",ceNamespace);
-							referenceItemcitationDOI.append(doi.getTextTrim());
+							referenceItemcitationDOI.put(referenceID,doi.getTextTrim());
 						}
 
 						//REFERENCE CITATION CITATIONTITLE
 						if(refdItemcitation.getChild("citation-title",ceNamespace)!=null)
 						{
-							if(referenceItemcitationCitationTitle.length()>0)
-							{
-								referenceItemcitationCitationTitle.append(REFERENCEDELIMITER);
-							}
-							referenceItemcitationCitationTitle.append(referenceID+GROUPDELIMITER);
 							Element citationTitles = (Element)refdItemcitation.getChild("citation-title",ceNamespace);
 							String citation = getCitationTitle(citationTitles);
-							referenceItemcitationCitationTitle.append(citation);
+							referenceItemcitationCitationTitle.put(referenceID,citation);
 
 						}
 
@@ -1347,12 +1263,8 @@ public class BdParser
 													refAffmap,
 													(Element) refAuthorgroup.get(e));
 							}
-							if(referenceItemcitationAuthor.length()>0)
-							{
-								referenceItemcitationAuthor.append(REFERENCEDELIMITER);
-							}
-							referenceItemcitationAuthor.append(referenceID+GROUPDELIMITER);
-							referenceItemcitationAuthor.append(auToStringBuffer(refAusmap));
+
+							referenceItemcitationAuthor.put(referenceID,auToStringBuffer(refAusmap));
 
 						}
 
@@ -1360,24 +1272,14 @@ public class BdParser
 						if(refdItemcitation.getChild("sourcetitle",noNamespace)!=null)
 						{
 							Element sourcetitle = (Element)refdItemcitation.getChild("sourcetitle",noNamespace);
-							if(referenceItemcitationSourcetitle.length()>0)
-							{
-								referenceItemcitationSourcetitle.append(REFERENCEDELIMITER);
-							}
-							referenceItemcitationSourcetitle.append(referenceID+GROUPDELIMITER);
-							referenceItemcitationSourcetitle.append(sourcetitle.getTextTrim());
+							referenceItemcitationSourcetitle.put(referenceID,sourcetitle.getTextTrim());
 						}
 
 						//REFERENCE CITATION SOURCETITLE ABBREV
 						if(refdItemcitation.getChild("sourcetitle-abbrev",noNamespace)!=null)
 						{
 							Element sourcetitleAbbrev = (Element)refdItemcitation.getChild("sourcetitle-abbrev",noNamespace);
-							if(referenceItemcitationSourcetitle_abbrev.length()>0)
-							{
-								referenceItemcitationSourcetitle_abbrev.append(REFERENCEDELIMITER);
-							}
-							referenceItemcitationSourcetitle_abbrev.append(referenceID+GROUPDELIMITER);
-							referenceItemcitationSourcetitle_abbrev.append(sourcetitleAbbrev.getTextTrim());
+							referenceItemcitationSourcetitle_abbrev.put(referenceID,sourcetitleAbbrev.getTextTrim());
 						}
 
 						//REFERENCE CITATION ISSN
@@ -1386,12 +1288,7 @@ public class BdParser
 						if(issnList != null)
 						{
 							String issn = getISSN(issnList);
-							if(referenceItemcitationISSN.length()>0)
-							{
-								referenceItemcitationISSN.append(REFERENCEDELIMITER);
-							}
-							referenceItemcitationISSN.append(referenceID+GROUPDELIMITER);
-							referenceItemcitationISSN.append(issn);
+							referenceItemcitationISSN.put(referenceID,issn);
 
 						}
 
@@ -1400,12 +1297,7 @@ public class BdParser
 						if(refIsbnList != null)
 						{
 							String refIsbn = getISBN(refIsbnList);
-							if(referenceItemcitationISBN.length()>0)
-							{
-								referenceItemcitationISBN.append(REFERENCEDELIMITER);
-							}
-							referenceItemcitationISBN.append(referenceID+GROUPDELIMITER);
-							referenceItemcitationISBN.append(refIsbn);
+							referenceItemcitationISBN.put(referenceID,refIsbn);
 						}
 
 						//REFERENCE CITATION CODENCODE
@@ -1413,12 +1305,7 @@ public class BdParser
 						if (codencode != null)
 						{
 							//System.out.println("codencode::"+codencode.getTextTrim());
-							if(referenceItemcitationCoden.length()>0)
-							{
-								referenceItemcitationCoden.append(REFERENCEDELIMITER);
-							}
-							referenceItemcitationCoden.append(referenceID+GROUPDELIMITER);
-							referenceItemcitationCoden.append(codencode.getTextTrim());
+							referenceItemcitationCoden.put(referenceID,codencode.getTextTrim());
 						}
 
 						//REFERENCE CITATION PART
@@ -1426,12 +1313,7 @@ public class BdParser
 						if (part != null)
 						{
 							//System.out.println("part::"+part.getTextTrim());
-							if(referenceItemcitationPart.length()>0)
-							{
-								referenceItemcitationPart.append(REFERENCEDELIMITER);
-							}
-							referenceItemcitationPart.append(referenceID+GROUPDELIMITER);
-							referenceItemcitationPart.append(part.getTextTrim());
+							referenceItemcitationPart.put(referenceID,part.getTextTrim());
 						}
 
 						//REFERENCE CITATION PUBLICATIONYEAR
@@ -1439,12 +1321,7 @@ public class BdParser
 						if(refcitationPublicationyear != null)
 						{
 							String citationPublicationyear = getPublicationYear(refcitationPublicationyear);
-							if(referenceItemcitationPublicationyear.length()>0)
-							{
-								referenceItemcitationPublicationyear.append(REFERENCEDELIMITER);
-							}
-							referenceItemcitationPublicationyear.append(referenceID+GROUPDELIMITER);
-							referenceItemcitationPublicationyear.append(citationPublicationyear);
+							referenceItemcitationPublicationyear.put(referenceID,citationPublicationyear);
 						}
 
 						//REFERENCE CITATION VOLISSPAGG
@@ -1461,33 +1338,18 @@ public class BdParser
 								if (citation_volume != null)
 								{
 									//System.out.println("citation_volume:"+citation_volume);
-									if(referenceItemcitationVolume.length()>0)
-									{
-										referenceItemcitationVolume.append(REFERENCEDELIMITER);
-									}
-									referenceItemcitationVolume.append(referenceID+GROUPDELIMITER);
-									referenceItemcitationVolume.append(citation_volume);
+									referenceItemcitationVolume.put(referenceID,citation_volume);
 								}
 								if(citation_issue != null)
 								{
 									//System.out.println("citation_issue::"+citation_issue);
-									if(referenceItemcitationIssue.length()>0)
-									{
-										referenceItemcitationIssue.append(REFERENCEDELIMITER);
-									}
-									referenceItemcitationIssue.append(referenceID+GROUPDELIMITER);
-									referenceItemcitationIssue.append(citation_issue);
+									referenceItemcitationIssue.put(referenceID,citation_issue);
 								}
 							}
 
 							//PAGERANGE PAGE
 							String citation_pages = getPages(citation_volisspag);
-							if(referenceItemcitationPage.length()>0)
-							{
-								referenceItemcitationPage.append(REFERENCEDELIMITER);
-							}
-							referenceItemcitationPage.append(referenceID+GROUPDELIMITER);
-							referenceItemcitationPage.append(citation_pages);
+							referenceItemcitationPage.put(referenceID,citation_pages);
 						}
 
 						//REFERENCE CITATION ARTICLE NUMBER
@@ -1495,12 +1357,7 @@ public class BdParser
 						if (articlenumber != null)
 						{
 							//System.out.println("articlenumber::"+articlenumber.getTextTrim());
-							if(referenceItemcitationArticleNumber.length()>0)
-							{
-								referenceItemcitationArticleNumber.append(REFERENCEDELIMITER);
-							}
-							referenceItemcitationArticleNumber.append(referenceID+GROUPDELIMITER);
-							referenceItemcitationArticleNumber.append(articlenumber.getTextTrim());
+							referenceItemcitationArticleNumber.put(referenceID,articlenumber.getTextTrim());
 						}
 
 						//REFERENCE CITATION WEBSITE
@@ -1510,12 +1367,7 @@ public class BdParser
 							Element citationWebsitename = (Element) citationWebsite.getChild("websitename",noNamespace);
 							if(citationWebsitename!=null)
 							{
-								if(referenceItemcitationWebsite.length()>0)
-								{
-									referenceItemcitationWebsite.append(REFERENCEDELIMITER);
-								}
-								referenceItemcitationWebsite.append(referenceID+GROUPDELIMITER);
-								referenceItemcitationWebsite.append(citationWebsitename.getTextTrim());
+								referenceItemcitationWebsite.put(referenceID,citationWebsitename.getTextTrim());
 							}
 
 							Element citationEAddress = (Element) citationWebsitename.getChild("e-address",ceNamespace);
@@ -1529,12 +1381,7 @@ public class BdParser
 								String citationEAddresstext = citationEAddress.getTextTrim();
 								if(citationEAddresstext != null)
 								{
-									if(referenceItemcitationEAddress.length()>0)
-									{
-										referenceItemcitationEAddress.append(REFERENCEDELIMITER);
-									}
-									referenceItemcitationEAddress.append(referenceID+GROUPDELIMITER);
-									referenceItemcitationEAddress.append(citationEAddressType+IDDELIMITER+citationEAddresstext);
+									referenceItemcitationEAddress.put(referenceID,citationEAddressType+IDDELIMITER+citationEAddresstext);
 								}
 							}
 						}
@@ -1543,12 +1390,7 @@ public class BdParser
 						Element citationRefText = (Element) refdItemcitation.getChild("ref-text",noNamespace);
 						if(citationRefText!=null)
 						{
-							if(referenceItemcitationRefText.length()>0)
-							{
-								referenceItemcitationRefText.append(REFERENCEDELIMITER);
-							}
-							referenceItemcitationRefText.append(referenceID+GROUPDELIMITER);
-							referenceItemcitationRefText.append(citationRefText.getTextTrim());
+							referenceItemcitationRefText.put(referenceID,citationRefText.getTextTrim());
 						}
 
 					}//refd-itemcitation
@@ -1559,95 +1401,95 @@ public class BdParser
 
 		}
 
-		record.put("REFERENCETITLE",referenceTitle.toString());
+		Hashtable reference = new Hashtable();
+		reference.put("REFERENCETITLE",referenceTitle);
 		//System.out.println("REFERENCETITLE:"+referenceTitle.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
 
-		record.put("REFERENCEAUTHOR",referenceAuthor.toString());
+		reference.put("REFERENCEAUTHOR",referenceAuthor);
 		//System.out.println("REFERENCEAUTHOR:"+referenceAuthor.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
 
-		record.put("REFERENCESOURCETITLE",referenceSourcetitle.toString());
+		reference.put("REFERENCESOURCETITLE",referenceSourcetitle);
 		//System.out.println("REFERENCESOURCETITLE:"+referenceSourcetitle.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
 
-		record.put("REFERENCEPUBLICATIONYEAR",referencePublicationyear.toString());
+		reference.put("REFERENCEPUBLICATIONYEAR",referencePublicationyear);
 		//System.out.println("REFERENCEPUBLICATIONYEAR:"+referencePublicationyear.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
 
-		record.put("REFERENCEVOLUME",referenceVolume.toString());
-		//System.out.println("REFERENCEVOLUME:"+referenceVolume.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+		reference.put("REFERENCEVOLUME",referenceVolume);
+		//System.out.println("REFERENCEVOLUME:"+referenceVolume.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
 
-		record.put("REFERENCEISSUE",referenceIssue.toString());
-		//System.out.println("REFERENCEISSUE:"+referenceIssue.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+		reference.put("REFERENCEISSUE",referenceIssue);
+		//System.out.println("REFERENCEISSUE:"+referenceIssue.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
 
-		record.put("REFERENCEPAGES",referencePages.toString());
-		//System.out.println("REFERENCEPAGES:"+referencePages.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+		reference.put("REFERENCEPAGES",referencePages);
+		//System.out.println("REFERENCEPAGES:"+referencePages.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
 
-		record.put("REFERENCEFULLTEXT",referenceFullText.toString());
-		//System.out.println("REFERENCEFULLTEXT:"+referenceFullText.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+		reference.put("REFERENCEFULLTEXT",referenceFullText);
+		//System.out.println("REFERENCEFULLTEXT:"+referenceFullText.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
 
-		record.put("REFERENCETEXT",referenceText.toString());
-		//System.out.println("REFERENCETEXT:"+referenceText.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+		reference.put("REFERENCETEXT",referenceText);
+		//System.out.println("REFERENCETEXT:"+referenceText.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
 
-		record.put("REFERENCEWEBSITE",referenceWebsite.toString());
-		//System.out.println("REFERENCEWEBSITE:"+referenceWebsite.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+		reference.put("REFERENCEWEBSITE",referenceWebsite);
+		//System.out.println("REFERENCEWEBSITE:"+referenceWebsite.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
 
-		record.put("REFERENCEITEMID",referenceItemid.toString());
-		//System.out.println("REFERENCEITEMID:"+referenceItemid.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+		reference.put("REFERENCEITEMID",referenceItemid);
+		//System.out.println("REFERENCEITEMID:"+referenceItemid.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
 
-		record.put("REFERENCEITEMCITATIONPII",referenceItemcitationPII.toString());
-		//System.out.println("REFERENCEITEMCITATIONPII:"+referenceItemcitationPII.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+		reference.put("REFERENCEITEMCITATIONPII",referenceItemcitationPII);
+		//System.out.println("REFERENCEITEMCITATIONPII:"+referenceItemcitationPII.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
 
-		record.put("REFERENCEITEMCITATIONDOI",referenceItemcitationDOI.toString());
-		//System.out.println("REFERENCEITEMCITATIONDOI:"+referenceItemcitationDOI.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+		reference.put("REFERENCEITEMCITATIONDOI",referenceItemcitationDOI);
+		//System.out.println("REFERENCEITEMCITATIONDOI:"+referenceItemcitationDOI.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
 
-		record.put("REFERENCEITEMCITATIONTITLE",referenceItemcitationCitationTitle.toString());
-		//System.out.println("REFERENCEITEMCITATIONTITLE:"+referenceItemcitationCitationTitle.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+		reference.put("REFERENCEITEMCITATIONCITATIONTITLE",referenceItemcitationCitationTitle);
+		//System.out.println("REFERENCEITEMCITATIONTITLE:"+referenceItemcitationCitationTitle.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
 
-		record.put("REFERENCEITEMCITATIONAUTHOR",referenceItemcitationAuthor.toString());
-		//System.out.println("REFERENCEITEMCITATIONAUTHOR:"+referenceItemcitationAuthor.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+		reference.put("REFERENCEITEMCITATIONAUTHOR",referenceItemcitationAuthor);
+		//System.out.println("REFERENCEITEMCITATIONAUTHOR:"+referenceItemcitationAuthor.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
 
-		record.put("REFERENCEITEMCITATIONSOURCETITLE",referenceItemcitationSourcetitle.toString());
-		//System.out.println("REFERENCEITEMCITATIONSOURCETITLE:"+referenceItemcitationSourcetitle.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+		reference.put("REFERENCEITEMCITATIONSOURCETITLE",referenceItemcitationSourcetitle);
+		//System.out.println("REFERENCEITEMCITATIONSOURCETITLE:"+referenceItemcitationSourcetitle.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
 
-		record.put("REFERENCEITEMCITATIONSOURCETITLEABBREV",referenceItemcitationSourcetitle_abbrev.toString());
-		//System.out.println("REFERENCEITEMCITATIONSOURCETITLEABBREV:"+referenceItemcitationSourcetitle_abbrev.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+		reference.put("REFERENCEITEMCITATIONSOURCETITLEABBREV",referenceItemcitationSourcetitle_abbrev);
+		//System.out.println("REFERENCEITEMCITATIONSOURCETITLEABBREV:"+referenceItemcitationSourcetitle_abbrev.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
 
-		record.put("REFERENCEITEMCITATIONISSN",referenceItemcitationISSN.toString());
-		//System.out.println("REFERENCEITEMCITATIONISSN:"+referenceItemcitationISSN.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+		reference.put("REFERENCEITEMCITATIONISSN",referenceItemcitationISSN);
+		//System.out.println("REFERENCEITEMCITATIONISSN:"+referenceItemcitationISSN.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
 
-		record.put("REFERENCEITEMCITATIONISBN",referenceItemcitationISBN.toString());
-		//System.out.println("REFERENCEITEMCITATIONISBN:"+referenceItemcitationISBN.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+		reference.put("REFERENCEITEMCITATIONISBN",referenceItemcitationISBN);
+		//System.out.println("REFERENCEITEMCITATIONISBN:"+referenceItemcitationISBN.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
 
-		record.put("REFERENCEITEMCITATIONCODEN",referenceItemcitationCoden.toString());
-		//System.out.println("REFERENCEITEMCITATIONCODEN:"+referenceItemcitationCoden.toString());
+		reference.put("REFERENCEITEMCITATIONCODEN",referenceItemcitationCoden);
+		//System.out.println("REFERENCEITEMCITATIONCODEN:"+referenceItemcitationCoden);
 
-		record.put("REFERENCEITEMCITATIONPART",referenceItemcitationPart.toString());
-		//System.out.println("REFERENCEITEMCITATIONPART:"+referenceItemcitationPart.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+		reference.put("REFERENCEITEMCITATIONPART",referenceItemcitationPart);
+		//System.out.println("REFERENCEITEMCITATIONPART:"+referenceItemcitationPart.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
 
-		record.put("REFERENCEITEMCITATIONPUBLICATIONYEAR",referenceItemcitationPublicationyear.toString());
-		//System.out.println("REFERENCEITEMCITATIONPUBLICATIONYEAR:"+referenceItemcitationPublicationyear.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+		reference.put("REFERENCEITEMCITATIONPUBLICATIONYEAR",referenceItemcitationPublicationyear);
+		//System.out.println("REFERENCEITEMCITATIONPUBLICATIONYEAR:"+referenceItemcitationPublicationyear.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
 
-		record.put("REFERENCEITEMCITATIONVOLUME",referenceItemcitationVolume.toString());
-		//System.out.println("REFERENCEITEMCITATIONVOLUME:"+referenceItemcitationVolume.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+		reference.put("REFERENCEITEMCITATIONVOLUME",referenceItemcitationVolume);
+		//System.out.println("REFERENCEITEMCITATIONVOLUME:"+referenceItemcitationVolume.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
 
-		record.put("REFERENCEITEMCITATIONISSUE",referenceItemcitationIssue.toString());
-		//System.out.println("REFERENCEITEMCITATIONISSUE:"+referenceItemcitationIssue.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+		reference.put("REFERENCEITEMCITATIONISSUE",referenceItemcitationIssue);
+		//System.out.println("REFERENCEITEMCITATIONISSUE:"+referenceItemcitationIssue.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
 
-		record.put("REFERENCEITEMCITATIONPAGE",referenceItemcitationPage.toString());
-		//System.out.println("REFERENCEITEMCITATIONPAGE:"+referenceItemcitationPage.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+		reference.put("REFERENCEITEMCITATIONPAGE",referenceItemcitationPage);
+		//System.out.println("REFERENCEITEMCITATIONPAGE:"+referenceItemcitationPage.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
 
-		record.put("REFERENCEITEMCITATIONARTICLENUMBER",referenceItemcitationArticleNumber.toString());
-		//System.out.println("REFERENCEITEMCITATIONARTICLENUMBER:"+referenceItemcitationArticleNumber.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+		reference.put("REFERENCEITEMCITATIONARTICLENUMBER",referenceItemcitationArticleNumber);
+		//System.out.println("REFERENCEITEMCITATIONARTICLENUMBER:"+referenceItemcitationArticleNumber.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
 
-		record.put("REFERENCEITEMCITATIONWEBSITE",referenceItemcitationWebsite.toString());
-		//System.out.println("REFERENCEITEMCITATIONWEBSITE:"+referenceItemcitationWebsite.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+		reference.put("REFERENCEITEMCITATIONWEBSITE",referenceItemcitationWebsite);
+		//System.out.println("REFERENCEITEMCITATIONWEBSITE:"+referenceItemcitationWebsite.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
 
-		record.put("REFERENCEITEMCITATIONEADDRESS",referenceItemcitationEAddress.toString());
-		//System.out.println("REFERENCEITEMCITATIONEADDRESS:"+referenceItemcitationEAddress.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+		reference.put("REFERENCEITEMCITATIONEADDRESS",referenceItemcitationEAddress);
+		//System.out.println("REFERENCEITEMCITATIONEADDRESS:"+referenceItemcitationEAddress.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
 
-		record.put("REFERENCEITEMCITATIONREFTEXT",referenceItemcitationRefText.toString());
-		//System.out.println("REFERENCEITEMCITATIONREFTEXT:"+referenceItemcitationRefText.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+		reference.put("REFERENCEITEMCITATIONREFTEXT",referenceItemcitationRefText);
+		//System.out.println("REFERENCEITEMCITATIONREFTEXT:"+referenceItemcitationRefText.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
 
-		record.put("REFERENCEEMAIL",pElectronicA.toString());
-		//System.out.println("REFERENCEEMAIL:"+pElectronicA.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+		record.put("REFERENCE", reference);
 	}
 
 	private String getPublicationYear(Element publicationyear) throws Exception
