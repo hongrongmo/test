@@ -7,8 +7,7 @@
 <c:set var="carsresponse" value="${actionBean.context.carsResponse}"/>
 <c:set var="user" value="${actionBean.context.userSession.user}"/>
 <c:set var="pathchoice" value="${carsresponse.templateName eq 'CARS_PATH_CHOICE'}"/>
-<stripes:layout-render name="/WEB-INF/pages/layout/standard.jsp"
-    pageTitle="Engineering Village - Login">
+<stripes:layout-render name="/WEB-INF/pages/layout/standard.jsp" pageTitle="Engineering Village - Login">
 
     <stripes:layout-component name="csshead">
     <link href="/static/css/ev_personalaccount.css?v=${releaseversion}" media="all" type="text/css" rel="stylesheet"></link>
@@ -16,6 +15,31 @@
         #stripes-messages ul{list-style:none;padding:0px;}
         p.cars_register {display:none}
     </style>
+	</stripes:layout-component>
+    
+    <stripes:layout-component name="customjs">
+        <c:if test="${actionBean.runlevel eq 'prod' or actionBean.runlevel eq 'release'}">
+        <!-- Google Tag Manager -->
+        <noscript>
+            <iframe src="//www.googletagmanager.com/ns.html?id=GTM-PRWZ3F" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+        </noscript>
+        <script>
+            (function(w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    'gtm.start' : new Date().getTime(),
+                    event : 'gtm.js'
+                });
+                var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l='
+                        + l
+                        : '';
+                j.async = true;
+                j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-PRWZ3F');
+        </script>
+        <!-- End Google Tag Manager -->
+        </c:if>
     </stripes:layout-component>
     
     <stripes:layout-component name="header">
