@@ -111,14 +111,17 @@ public class BaseTableWriter
 				recordBuf.append(valueString);
 				//recordBuf.append(thisColumnName+":"+valueString);
 			}
+			if(thisColumnName.length()<9 || !("REF".equals(thisColumnName.substring(0,3))))
+			{
+				recordBuf.append(FIELDDELIM);
+			}
 
-			recordBuf.append(FIELDDELIM);
 		}
 		if(isReference)
 		{
 		   recordBuf.append("YES");
-	   }
-	   recordBuf.append(FIELDDELIM);
+	    }
+	    recordBuf.append(FIELDDELIM);
 
 		out.println(recordBuf.toString().trim());
 
