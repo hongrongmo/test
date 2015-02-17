@@ -696,7 +696,7 @@ public class UPTCombiner extends CombinerTimestamp {
                     List ipcNames = new ArrayList();
 
                     hashtable.clear();
-					/*
+
                     if (rs.getString("ucl") != null)
                         usclNames = getUSCLClassName(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ucl")))));
 
@@ -705,7 +705,7 @@ public class UPTCombiner extends CombinerTimestamp {
 
                     if (rs.getString("ipc") != null || rs.getString("ipc8") != null)
                         ipcNames = getIPCClassName(removeSpaces(ipcValues));
-					*/
+
                     List allNames = new ArrayList();
 
                     if(!hashtable.isEmpty()){
