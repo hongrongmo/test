@@ -9,7 +9,10 @@ public class WebAnalyticsEventProperties {
     public static final String CAT_SEARCH_SUBMIT = "Search Submit";
 	public static final String CAT_LIMIT_TO = "Limit To";
 	public static final String CAT_SORT_BY = "Sort By";
+	public static final String CAT_HOME = "Home";
 
+	public static final String ACTION_WELCOME = "Welcome";
+	
 	public static final String ACTION_QUICK_SEARCH = "Quick Search";
 	public static final String ACTION_EXPERT_SEARCH = "Expert Search";
 	public static final String ACTION_THES_SEARCH = "Thesauraus Search";

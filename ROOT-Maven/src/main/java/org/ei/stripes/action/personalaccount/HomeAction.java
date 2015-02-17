@@ -22,6 +22,7 @@ import org.ei.service.cars.Impl.CARSResponse;
 import org.ei.session.UserSession;
 import org.ei.stripes.action.EVPathUrl;
 import org.ei.stripes.action.SystemMessage;
+import org.ei.stripes.action.WebAnalyticsEventProperties;
 import org.ei.web.cookie.CookieHandler;
 
 @UrlBinding("/home.url")
@@ -85,6 +86,8 @@ public class HomeAction extends CARSActionBean {
         } else {
             // Request the LOGIN_FULL template from CARS and display
             createLoginFullCARSResponse(context);
+            // Add a GA event for welcome page
+        	createWebEvent(WebAnalyticsEventProperties.CAT_HOME,WebAnalyticsEventProperties.ACTION_WELCOME,"");
             this.carsresponsepage = "/WEB-INF/pages/world/welcome.jsp";
             return super.getResolution();
         }
