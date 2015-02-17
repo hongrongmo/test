@@ -16,6 +16,7 @@ import org.ei.data.EVCombinedRec;
 import org.ei.util.GUID;
 import org.ei.xml.Entity;
 import org.ei.data.upt.runtime.*;
+import org.ei.util.DiskMap;
 
 import java.sql.*;
 import java.util.*;
@@ -47,10 +48,12 @@ public class UPTCombiner extends CombinerTimestamp {
     public static String EP_CY = "EP";
     Hashtable hashtable = new Hashtable();
     private static final Database UPTDatabase = new UPTDatabase();
-    
-    //HH 01/28/2015 to use same ClassNodemanager without change 
+	private String ipcdir;
+	DiskMap ipc;
+
+    //HH 01/28/2015 to use same ClassNodemanager without change
     static ApplicationProperties applicationProperties;
-    
+
 
     public UPTCombiner(String database,CombinedWriter writer) {
         super(writer);
@@ -58,11 +61,11 @@ public class UPTCombiner extends CombinerTimestamp {
 
     public UPTCombiner(CombinedWriter writer) {
         super(writer);
-        InitApplicatiopnProperties();			//HH 01/28/2015 to use same ClassNodemanager without change 
+        InitApplicatiopnProperties();			//HH 01/28/2015 to use same ClassNodemanager without change
         init();
 
     }
-    //HH 01/28/2015 to use same ClassNodemanager without change 
+    //HH 01/28/2015 to use same ClassNodemanager without change
     public static void InitApplicatiopnProperties()
     {
     	applicationProperties = ApplicationProperties.getInstance();
@@ -71,11 +74,18 @@ public class UPTCombiner extends CombinerTimestamp {
     	applicationProperties.setProperty(ApplicationProperties.ECLA_LUCENE_INDEX_DIR,"ecla");
     	ClassNodeManager.init(applicationProperties);
     }
-    
+
     public void init() {
 
         try {
             nodeManager = ClassNodeManager.getInstance();
+			ipc = new DiskMap();
+			this.ipcdir = applicationProperties.getProperty(ApplicationProperties.IPC_LUCENE_INDEX_DIR);
+			if (this.ipcdir == null) {
+					     throw new Exception("IPC directory for lucene index is NOT defined!");
+        	}
+			System.out.println("Opening IPC index at: '" + this.ipcdir + "'");
+	    	ipc.openRead(this.ipcdir, false);
         }
         catch (Exception e) {
             // TODO Auto-generated catch block
@@ -133,6 +143,15 @@ public class UPTCombiner extends CombinerTimestamp {
                     e.printStackTrace();
                 }
             }
+			if(this.ipc!=null)
+			{
+				try{
+					this.ipc.close();
+				}
+				 catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
             if (nodeManager != null)
                 nodeManager.close();
         }
@@ -185,6 +204,15 @@ public class UPTCombiner extends CombinerTimestamp {
                     e.printStackTrace();
                 }
             }
+			if(this.ipc!=null)
+			{
+				try{
+					this.ipc.close();
+				}
+				 catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
             if (nodeManager != null)
                 nodeManager.close();
         }
@@ -237,6 +265,15 @@ public class UPTCombiner extends CombinerTimestamp {
                     e.printStackTrace();
                 }
             }
+			if(this.ipc!=null)
+			{
+				try{
+					this.ipc.close();
+				}
+				 catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
             if (nodeManager != null)
                 nodeManager.close();
         }
@@ -659,7 +696,7 @@ public class UPTCombiner extends CombinerTimestamp {
                     List ipcNames = new ArrayList();
 
                     hashtable.clear();
-
+					/*
                     if (rs.getString("ucl") != null)
                         usclNames = getUSCLClassName(Entity.replaceUTFString(Entity.prepareString(replaceAmpersand(rs.getString("ucl")))));
 
@@ -668,7 +705,7 @@ public class UPTCombiner extends CombinerTimestamp {
 
                     if (rs.getString("ipc") != null || rs.getString("ipc8") != null)
                         ipcNames = getIPCClassName(removeSpaces(ipcValues));
-
+					*/
                     List allNames = new ArrayList();
 
                     if(!hashtable.isEmpty()){
@@ -784,7 +821,7 @@ public class UPTCombiner extends CombinerTimestamp {
                 code = USPTOClassNormalizer.normalize(code);
 
                 String name = nodeManager.seekUS(code);
-                
+
                 if(name != null){
                     name = perl.substitute("s/\\(\\:\\)/QQ/ig", name);
                     String key = perl.substitute("s/[^a-zA-Z]//g", name);
@@ -853,6 +890,70 @@ public class UPTCombiner extends CombinerTimestamp {
         return names;
 
     }
+
+
+
+	public synchronized String seekIPC(String code) throws Exception
+	{
+		String s = ipc.get(code);
+		s = Entity.replaceLatinChars(s);
+		// System.out.println("Code="+code+" name= "+s);
+		if (s == null) {
+			s = getDescriptionFromLookupIndex(code);
+		}
+		return s;
+    }
+
+	public String getDescriptionFromLookupIndex(String code) throws Exception
+	{
+	        Connection conn = null;
+	        Statement stmt = null;
+	        ResultSet rset = null;
+	        String description = null;
+	        String sql = "select description from CMB_IPC_LOOKUP WHERE replace(ipccode,'SLASH','')='" + code + "'";
+	        int rows = 0;
+
+	        try {
+
+	            conn = getConnection(url, driver, username, password);
+	            stmt = conn.createStatement();
+	            rset = stmt.executeQuery(sql);
+	            while (rset.next()) {
+	                description = rset.getString("description");
+	            }
+
+	        } catch (Exception e) {
+	            e.printStackTrace();
+	            throw new Exception(e);
+	        } finally {
+	            if (rset != null) {
+	                try {
+	                    rset.close();
+	                } catch (Exception se) {
+	                    se.printStackTrace();
+	                }
+	            }
+
+	            if (stmt != null) {
+	                try {
+	                    stmt.close();
+	                } catch (Exception se) {
+	                    se.printStackTrace();
+	                }
+	            }
+
+	            if (conn != null) {
+	                try {
+	                    conn.close();
+	                } catch (Exception e1) {
+	                     e1.printStackTrace();
+	                }
+	            }
+	        }
+
+	        return description;
+    }
+
     public List getIPCClassName(String[] lstCodes) throws Exception {
 
         List names = new ArrayList();
@@ -870,7 +971,7 @@ public class UPTCombiner extends CombinerTimestamp {
 
                 code = IPCClassNormalizer.normalize(code);
 
-                String name = nodeManager.seekIPC(code);
+                String name = seekIPC(code);
 
                 if (name != null){
                     name = perl.substitute("s/\\(\\:\\)/QQ/ig", name);
@@ -1568,6 +1669,10 @@ public class UPTCombiner extends CombinerTimestamp {
                 System.out.println("Processing combined year " + loadNumber + "...");
                 c.writeCombinedByYear(url, driver, username, password, loadNumber);
             }
+
+
+
+
         }
         catch (Exception ex) {
             ex.printStackTrace();
