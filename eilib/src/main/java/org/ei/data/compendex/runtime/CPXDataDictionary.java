@@ -709,6 +709,7 @@ public class CPXDataDictionary implements DataDictionary {
         classCodes.put("753.1", "Ultrasonic Waves");
         classCodes.put("753.2", "Ultrasonic Devices");
         classCodes.put("753.3", "Ultrasonic Applications");
+		classCodes.put("760", "nanotechnology and related areas");//added on 02/09/2015
         classCodes.put("761", "Nanotechnology");
         classCodes.put("762", "Magnetoelectronics (Spintronics)");
         classCodes.put("800", "CHEMICAL ENGINEERING, GENERAL");
@@ -918,8 +919,11 @@ public class CPXDataDictionary implements DataDictionary {
         classCodes.put("944.6", "Temperature Measurements");
         classCodes.put("944.7", "Radiation Measuring Instruments");
         classCodes.put("944.8", "Radiation Measurements");
+		classCodes.put("950", "materials science and related areas");//added on 02/09/2015
         classCodes.put("951", "Materials Science");
+		classCodes.put("960", "systems science and related areas");	  //added on 02/09/2015
         classCodes.put("961", "Systems Science");
+		classCodes.put("970", "social sciences and related areas");//added on 02/09/2015
         classCodes.put("971", "Social Sciences");
 
         treatmentCodes = new Hashtable<String, String>();
