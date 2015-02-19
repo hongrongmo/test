@@ -69,8 +69,6 @@ import org.ei.stripes.view.EbookSearchFormItem;
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.input.SAXBuilder;
-import org.perf4j.StopWatch;
-import org.perf4j.log4j.Log4JStopWatch;
 import org.xml.sax.SAXException;
 
 /**
@@ -246,20 +244,6 @@ public class SearchDisplayAction extends BaseSearchAction implements ValidationE
         // Common to all search forms - set the More Search Sources contents
         moresourceslinks = moresearchsources.getMoreSearchSources(user.getCartridge(), sessionid, context);
 
-    }
-
-    private StopWatch beanstopwatch = null;
-
-    @Before(on = "submit")
-    private void startPerformance() {
-        this.beanstopwatch = new Log4JStopWatch();
-    }
-
-    @After(on = "submit")
-    private void stopPerformance() {
-        if (this.beanstopwatch != null && this.context.getEventName() != null) {
-            this.beanstopwatch.stop("SEARCH_SUBMIT");
-        }
     }
 
     /**

@@ -2,41 +2,155 @@
 <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
 
 <log4j:configuration debug="false"
-	xmlns:log4j="http://jakarta.apache.org/log4j/">
-	<appender name="CA" class="org.apache.log4j.ConsoleAppender">
-		<layout class="org.apache.log4j.PatternLayout">
-			<param name="ConversionPattern" value="%d %-5p (%F:%L) - %m%n" />
-		</layout>
-	</appender>
+    xmlns:log4j="http://jakarta.apache.org/log4j/">
+    <appender name="CA" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %-5p (%F:%L) - %m%n" />
+        </layout>
+    </appender>
 
-	<appender name="RFA" class="org.apache.log4j.DailyRollingFileAppender">
-		<param name="File" value="${catalina.base}/logs/application.log" />
-		<param name="DatePattern" value="'.'yyyy-MM-dd" />
-		<layout class="org.apache.log4j.PatternLayout">
-			<param name="ConversionPattern" value="%d %-5p (%F:%L) - %m%n" />
-		</layout>
-	</appender>
+    <appender name="RFA" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="${catalina.base}/logs/application.log" />
+        <param name="DatePattern" value="'.'yyyy-MM-dd" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %-5p (%F:%L) - %m%n" />
+        </layout>
+    </appender>
 
-	<appender name="CARSERRORRFA" class="org.apache.log4j.DailyRollingFileAppender">
-		<param name="File" value="${catalina.base}/logs/carserrors.log" />
-		<param name="DatePattern" value="'.'yyyy-MM-dd" />
-		<layout class="org.apache.log4j.PatternLayout">
-			<param name="ConversionPattern" value="%d %-5p (%F:%L) - %m%n" />
-		</layout>
-	</appender>
+    <appender name="CARSERRORRFA" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="${catalina.base}/logs/carserrors.log" />
+        <param name="DatePattern" value="'.'yyyy-MM-dd" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d %-5p (%F:%L) - %m%n" />
+        </layout>
+    </appender>
 
-	<!-- ******************************************************************** -->
-	<!-- Root logger for EV.  Defaults to "WARN" but the application may      -->
-	<!-- change it based on runtime properties.                               -->
-	<!-- See EVInitializationListener for more details!                       -->
-	<!-- ******************************************************************** -->
-	<root>
+    <logger name="CarsErrorLogger" additivity="false">
+        <level value="INFO" />
+        <appender-ref ref="CARSERRORRFA" />
+    </logger>
+
+    <!-- Perf4J appenders -->
+    <!--
+      This AsyncCoalescingStatisticsAppender groups StopWatch log messages
+      into GroupedTimingStatistics messages which it sends on the
+      file appender defined below
+    -->
+    <appender name="CoalescingStatistics"
+              class="org.perf4j.log4j.AsyncCoalescingStatisticsAppender">
+        <!--
+          The TimeSlice option is used to determine the time window for which
+          all received StopWatch logs are aggregated to create a single
+          GroupedTimingStatistics log. Here we set it to 10 seconds, overriding
+          the default of 30000 ms
+        -->
+        <param name="TimeSlice" value="10000"/>
+        <appender-ref ref="perfStatsFileAppender"/>
+        <!--
+          Note how the GraphingStatisticsAppenders have been attached to the
+          CoalescingStatistics here.
+        -->
+        <appender-ref ref="graphSearchDisplayExecutionTimes"/>
+        <appender-ref ref="graphSearchResultsDisplayExecutionTimes"/>
+        <appender-ref ref="graphInterceptorExecutionTimes"/>
+        <appender-ref ref="graphCARSExecutionTimes"/>
+    </appender>
+
+    <!-- This file appender is used to output aggregated performance statistics -->
+    <appender name="perfStatsFileAppender" class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="${catalina.base}/logs/perfStats.log"/>
+        <param name="MaxBackupIndex" value="1"/>
+        <param name="MaxFileSize" value="100MB" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%m%n"/>
+        </layout>
+    </appender>
+
+    <!--
+      Mean execution times for Interceptors
+    -->
+    <appender name="graphInterceptorExecutionTimes"
+              class="org.perf4j.log4j.GraphingStatisticsAppender">
+        <!-- Possible GraphTypes are Mean, Min, Max, StdDev, Count and TPS -->
+        <param name="GraphType" value="Mean"/>
+        <param name="DataPointsPerGraph" value="180"/>
+        <!-- The tags of the timed execution blocks to graph are specified here -->
+        <param name="TagNamesToGraph" value="Interceptor.SessionBuilder, Interceptor.Auth, Interceptor.DataRequest, Interceptor.LegacyRedirect, Interceptor.ErrorMessage"/>
+        <appender-ref ref="graphsFileAppender"/>
+    </appender>
+
+    <!--
+      Mean execution times for CARS requests
+    -->
+    <appender name="graphCARSExecutionTimes"
+              class="org.perf4j.log4j.GraphingStatisticsAppender">
+        <!-- Possible GraphTypes are Mean, Min, Max, StdDev, Count and TPS -->
+        <param name="GraphType" value="Mean"/>
+        <param name="DataPointsPerGraph" value="180"/>
+        <!-- The tags of the timed execution blocks to graph are specified here -->
+        <param name="TagNamesToGraph" value="CARSResponseFull.URLBASED,CARSResponseFull.TERMINATE,CARSResponseFull.AUTHENTICATE,CARSResponseFull.IPAUTHENTICATE,CARSResponseFull.LOGINFULL,CARSResponseFull.PROFILEDISPLAY,CARSResponseFull.BULKAUTHENTICATE,CARSResponseFull.REGISTER"/>
+        <appender-ref ref="graphsFileAppender"/>
+    </appender>
+
+    <!--
+      Mean execution times for search forms and submit
+    -->
+    <appender name="graphSearchDisplayExecutionTimes"
+              class="org.perf4j.log4j.GraphingStatisticsAppender">
+        <!-- Possible GraphTypes are Mean, Min, Max, StdDev, Count and TPS -->
+        <param name="GraphType" value="Mean"/>
+        <param name="DataPointsPerGraph" value="180"/>
+        <!-- The tags of the timed execution blocks to graph are specified here -->
+        <param name="TagNamesToGraph" value="request.SearchDisplayAction.quick, request.SearchDisplayAction.expert, request.ThesaurusSearchAction.thesHome, request.ThesaurusSearchAction.submit, request.SearchDisplayAction.submit, request.SearchDisplayAction.widgetSubmit"/>
+        <appender-ref ref="graphsFileAppender"/>
+    </appender>
+
+    <!--
+      Mean execution times for search results
+    -->
+    <appender name="graphSearchResultsDisplayExecutionTimes"
+              class="org.perf4j.log4j.GraphingStatisticsAppender">
+        <!-- Possible GraphTypes are Mean, Min, Max, StdDev, Count and TPS -->
+        <param name="GraphType" value="Mean"/>
+        <!-- The tags of the timed execution blocks to graph are specified here -->
+        <param name="TagNamesToGraph" value="request.SearchResultsAction.quick, request.SearchResultsAction.expert, request.SearchResultsAction.thes, request.SearchResultsAction.dedup, request.SearchResultsAction.combine"/>
+        <appender-ref ref="graphsFileAppender"/>
+    </appender>
+
+    <!--
+      This file appender is used to output the graph URLs generated
+      by the GraphingStatisticsAppenders
+    -->
+    <appender name="graphsFileAppender" class="org.apache.log4j.RollingFileAppender">
+        <param name="MaxBackupIndex" value="1"/>
+        <param name="File" value="${catalina.base}/logs/perfGraphs.log"/>
+        <param name="MaxFileSize" value="100MB" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%m%n"/>
+        </layout>
+    </appender>
+
+    <!-- Loggers -->
+    <!--
+      The Perf4J logger. Note that org.perf4j.TimingLogger is the value of the
+      org.perf4j.StopWatch.DEFAULT_LOGGER_NAME constant. Also, note that
+      additivity is set to false, which is usually what is desired - this means
+      that timing statements will only be sent to this logger and NOT to
+      upstream loggers.
+    -->
+    <logger name="org.perf4j.TimingLogger" additivity="false">
+        <level value="INFO"/>
+        <appender-ref ref="CoalescingStatistics"/>
+    </logger>
+    
+    <!-- ******************************************************************** -->
+    <!-- Root logger for EV.  Defaults to "WARN" but the application may      -->
+    <!-- change it based on runtime properties.                               -->
+    <!-- See EVInitializationListener for more details!                       -->
+    <!-- ******************************************************************** -->
+    <root>
         <level value="WARN" />
         <appender-ref ref="RFA" />
         <appender-ref ref="CA" />
-	</root>
-	<logger name="CarsErrorLogger" additivity="false">
-		<level value="INFO" />
-		<appender-ref ref="CARSERRORRFA" />
-	</logger>
+    </root>
 </log4j:configuration>
