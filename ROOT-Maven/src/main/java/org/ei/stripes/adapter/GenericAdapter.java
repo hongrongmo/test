@@ -1,10 +1,8 @@
 package org.ei.stripes.adapter;
 
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.util.Scanner;
 
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerConfigurationException;
@@ -45,16 +43,7 @@ public class GenericAdapter extends BizXmlAdapter {
         // and show output from transform
         // Also set stylesheet caching to OFF
         OutputStream transformout = new NullOutputStream();
-        if (log4j.isDebugEnabled() || log4j.isInfoEnabled()) {
-            log4j.info("Transforming in debug/info");
-            Scanner scanner = new Scanner(instream);
-            String modelxml = scanner.useDelimiter("\\A").next();
-            System.out.println("old xml----------->"+ modelxml );
-            scanner.close();
-            // log4j.info("modelxml : "+modelxml);
-            instream = new ByteArrayInputStream(modelxml.getBytes());
-            broker.setCache(false);
-        }
+
         try {
             transformer = broker.getTransformer(stylesheet);
         } catch (TransformerConfigurationException e) {
