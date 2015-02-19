@@ -53,8 +53,6 @@ import org.ei.stripes.adapter.IBizXmlAdapter;
 import org.ei.stripes.view.SearchResult;
 import org.ei.stripes.view.SearchResultNavigator;
 import org.ei.tags.TagBubble;
-import org.perf4j.StopWatch;
-import org.perf4j.log4j.Log4JStopWatch;
 
 /**
  * This is the base class for the search results handling.
@@ -146,19 +144,10 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 		 */
 	}
 
-	private StopWatch beanstopwatch = null;
-
-	@Before(stages = LifecycleStage.HandlerResolution)
-	private void startPerformance() {
-		this.beanstopwatch = new Log4JStopWatch();
-	}
 
 	@After(stages = LifecycleStage.EventHandling)
 	private void stopPerformance() {
 		addWebEvent(webEvent);
-		if (this.beanstopwatch != null && this.context.getEventName() != null) {
-			this.beanstopwatch.stop(this.context.getEventName().toUpperCase() + "_SEARCH_RESULTS");
-		}
 	}
 
 	@After(stages = LifecycleStage.RequestComplete)

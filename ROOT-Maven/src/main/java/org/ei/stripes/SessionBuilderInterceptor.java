@@ -15,8 +15,6 @@ import net.sourceforge.stripes.controller.LifecycleStage;
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
 import org.ei.biz.security.IAccessControl;
-import org.ei.biz.security.ISecuredAction;
-import org.ei.biz.security.WorldAccessControl;
 import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
 import org.ei.controller.IPBlocker;
@@ -30,6 +28,7 @@ import org.ei.stripes.action.personalaccount.LogoutAction;
 import org.ei.stripes.exception.EVExceptionHandler;
 import org.ei.stripes.util.HttpRequestUtil;
 import org.ei.web.util.RequestDumper;
+import org.perf4j.log4j.Log4JStopWatch;
 
 /**
  * This class is a Stripes Interceptor that is supposed to
@@ -55,6 +54,7 @@ public class SessionBuilderInterceptor implements Interceptor {
 	@Override
 	public Resolution intercept(ExecutionContext executioncontext) throws Exception {
 
+		Log4JStopWatch stopwatch = new Log4JStopWatch("Interceptor.SessionBuilder");
 
 		EVActionBeanContext context = (EVActionBeanContext) executioncontext.getActionBeanContext();
 		HttpServletRequest request = context.getRequest();
@@ -87,6 +87,7 @@ public class SessionBuilderInterceptor implements Interceptor {
         // Add the contact us link to the request for all JSPs
         request.setAttribute("contactuslink", EVProperties.getApplicationProperties().getProperty(ApplicationProperties.CONTACT_US_LINK));
 
+		stopwatch.setMessage("Section1").lap(stopwatch.getTag());
 		// *****************************************************
 		// Check for IP and Session Blocks
 		// *****************************************************
@@ -137,6 +138,8 @@ public class SessionBuilderInterceptor implements Interceptor {
             return ((LogoutAction)actionbean).process();
         }
 
+		stopwatch.setMessage("Section2").lap(stopwatch.getTag());
+
 		// ****************************************************
 		// Now attempt to build a session!
 		// ****************************************************
@@ -175,8 +178,12 @@ public class SessionBuilderInterceptor implements Interceptor {
 					+ request.getRemoteHost());
 		}
 
+		stopwatch.setMessage("Section3").lap(stopwatch.getTag());
+
         // Scan request for "backurl"
         BackUrlAction.scan(request);
+
+		stopwatch.stop();
 
 		// Continue on with request
 		return executioncontext.proceed();
