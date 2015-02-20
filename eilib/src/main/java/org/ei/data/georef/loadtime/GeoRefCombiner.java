@@ -419,11 +419,16 @@ public void writeRecs(ResultSet rs)
 
 				// DT
 
-				//System.out.println(runtimeDocview.createColumnValueField("DOCUMENT_TYPE"));   //seems to be HM testing
+
 				String dtStrings = runtimeDocview.new DocumentTypeDecorator(runtimeDocview.createColumnValueField("DOCUMENT_TYPE")).getValue();
 
-				if(dtStrings != null)
+				if(dtStrings != null && dtStrings.equals("In Process"))
 				{
+					rec.putIfNotNull(EVCombinedRec.DOCTYPE, "GI");
+				}
+				else if(dtStrings != null)
+				{
+
 				  // Get EV system DOC_TYPE codes for indexing and append them to (or use in favor of ?) the GeoRef values
 				  String mappingcode = runtimeDocview.createColumnValueField("DOCUMENT_TYPE").getValue().concat(AUDELIMITER).concat(runtimeDocview.createColumnValueField("BIBLIOGRAPHIC_LEVEL_CODE").getValue());
 
@@ -433,11 +438,10 @@ public void writeRecs(ResultSet rs)
 					mappingcode = runtimeDocview.new DocumentTypeMappingDecorator(mappingcode).getValue();
 					// DO NOT CONCAY GEOPREF DOCTYPES OR ELSE THEY WILL SHOW UP IN NAVIGATOR TOO
 					dtStrings = mappingcode; // dtStrings.concat(AUDELIMITER).concat(mappingcode);
-
 				  }
-
 				  rec.putIfNotNull(EVCombinedRec.DOCTYPE, dtStrings.split(AUDELIMITER));
 				}
+
 
 
 				// AB
