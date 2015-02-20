@@ -542,8 +542,8 @@ public class NewDataTesting
 				client.setResultView("ei");
 				client.setOffSet(0);
 				client.setPageSize(50000);
-				//client.setQueryString("(((((all:\"cerium alloy\")) OR ((cv:\"QQDelQQ cerium alloys QQDelQQ\"))) OR ((all:\"ce alloy\" OR all:\"ce alloys\")))) AND (yr:[1970;2015]) AND (((db:cpx OR db:c84)))");
-				client.setQueryString("(ALL:\""+m_id+"\") and db:grf and dt:gi and wk:"+load_number);
+				client.setQueryString("(ALL:\""+m_id+"\") and (wk:"+load_number+") AND (yr:[1785;2015]) AND (((db:grf)))");
+				//client.setQueryString("(ALL:\""+m_id+"\") and db:grf and dt:gi and wk:"+load_number);
 				client.setDoCatCount(true);
 				client.setDoNavigators(true);
 				client.setPrimarySort("ausort");
@@ -552,6 +552,7 @@ public class NewDataTesting
 
 				List l = client.getDocIDs();
 				int count =client.getHitCount();
+
 				if(count<1)
 				{
 				  System.out.println("MID= "+m_id);
@@ -573,6 +574,7 @@ public class NewDataTesting
 					}
 				}
 				*/
+
 			}
 			//getAccessnumber(sb.toString());
 			//System.out.println(sb.toString());
