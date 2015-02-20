@@ -136,9 +136,12 @@ function renderWidget(){
 
 	$("#widget_code").hide();
 	$("#widget_dimensions").hide();
-
+	var databaseStr = "";
+	if($("#db_options").val() != "0"){
+		databaseStr = "&database=" + $("#db_options").val();
+	}
 	var size = $("input[name='sizes']:checked").val();
-	$("#ev_searchwidget").attr("src","${actionBean.context.request.scheme}://${actionBean.baseaddress}/widget/search.url?database=" + $("#db_options").val() + "&size=" + size);
+	$("#ev_searchwidget").attr("src","${actionBean.context.request.scheme}://${actionBean.baseaddress}/widget/search.url?size=" + size + databaseStr);
 	$("#ev_searchwidget").css("width",sizes[size].width);
 	$("#ev_searchwidget").css("height",sizes[size].height);
 	$("#ev_searchwidget").css("border","none");
