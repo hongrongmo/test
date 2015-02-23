@@ -8,8 +8,10 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import net.sourceforge.stripes.action.ErrorResolution;
 import net.sourceforge.stripes.action.ForwardResolution;
 import net.sourceforge.stripes.action.Resolution;
+import net.sourceforge.stripes.exception.ActionBeanNotFoundException;
 import net.sourceforge.stripes.exception.DefaultExceptionHandler;
 import net.sourceforge.stripes.exception.StripesServletException;
 
@@ -209,6 +211,35 @@ public class EVExceptionHandler extends DefaultExceptionHandler {
     }
 
     /**
+     * Handle ActionBeanNotFound exception.  This happens when a URL matches a pattern for an ActionBean but no handler could be found
+     * @param exc
+     * @param request
+     * @param response
+     * @return
+     */
+    public Resolution handleActionBeanNotFound(ActionBeanNotFoundException exc, HttpServletRequest request, HttpServletResponse response) {
+        response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+        request.setAttribute("message", "This request could not be completed.");
+        log4j.warn("Error processing request: " + request.getRequestURI());
+        return new ForwardResolution("/WEB-INF/pages/world/exception.jsp");
+    }
+    
+    /**
+     * Handle StripesServletExceptions
+     *
+     * @param exc
+     * @param request
+     * @param response
+     * @return
+     */
+    public Resolution handleStripesServletException(StripesServletException exc, HttpServletRequest request, HttpServletResponse response) {
+        response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+        request.setAttribute("message", "This request could not be completed.");
+        log4j.warn("Error processing request: " + request.getRequestURI());
+        return new ForwardResolution("/WEB-INF/pages/world/exception.jsp");
+    }
+
+    /**
      * Handle BasicExceptions
      *
      * @param exc
@@ -229,32 +260,6 @@ public class EVExceptionHandler extends DefaultExceptionHandler {
             request.setAttribute("usersession", actionbean.getContext().getUserSession());
             actionbean.createWebEvent(GA_EXCEPTION_CATEGORY, exc.getClass().getSimpleName(), "Error Code: " + Integer.toString(exc.getErrorCode())
                 + ", Instance ID: " + new AWSInfo().getEc2Id() + ", Message: " + exc.getMessage());
-        }
-
-        // Send SNS message if needed
-        casErrorCount(exc);
-
-        return new ForwardResolution("/WEB-INF/pages/world/exception.jsp");
-    }
-
-    /**
-     * Handle StripesServletExceptions
-     *
-     * @param exc
-     * @param request
-     * @param response
-     * @return
-     */
-    public Resolution handleStripesServletException(StripesServletException exc, HttpServletRequest request, HttpServletResponse response) {
-        logException(null, exc, request);
-        init(exc, request);
-        response.setStatus(500);
-
-        // Add a google analytics event
-        EVActionBean actionbean = (EVActionBean) request.getAttribute("actionBean");
-        if (actionbean != null) {
-            request.setAttribute("usersession", actionbean.getContext().getUserSession());
-            actionbean.createWebEvent(GA_EXCEPTION_CATEGORY, exc.getClass().getSimpleName(), exc.getMessage() + "; Instance ID: " + new AWSInfo().getEc2Id());
         }
 
         // Send SNS message if needed

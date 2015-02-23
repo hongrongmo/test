@@ -20,8 +20,8 @@
 <![endif]-->
 	</stripes:layout-component>
 <stripes:layout-component name="SkipToNavigation">
-	<a class="skiptonavlink" href="#searchtablink">Navigate to Quick Search Tab</a>
-	<a class="skiptonavlink" href="#srchWrd1">Navigate to Thesaurus Search Form</a>
+	<a class="skiptonavlink" href="#searchtablink" onclick="$('#searchtablink').focus();return false;"title="Skip to Quick Search Tab">Skip to Quick Search Tab</a><br/>
+	<a class="skiptonavlink" href="#txtTrm" onclick="$('#txtTrm').focus();return false;" title="Skip to Thesaurus Search Form">Skip to Thesaurus Search Form</a><br/>
 </stripes:layout-component>
 <%-- **************************************** --%>
 <%-- CONTENTS                                 --%>
@@ -31,7 +31,7 @@
 	<div id="container">
 	<div id="searchformwrap">
 	<div id="searchformbox">
-        <stripes:errors field="validationError"><div id="errormessage"><stripes:individual-error/></div></stripes:errors>
+        <stripes:errors field="errorcode"><div id="errormessage"><stripes:individual-error/></div></stripes:errors>
 <c:if test="${not empty actionBean.message}">
 <c:choose>
 <c:when test="${actionBean.message eq 'zero'}">
@@ -334,6 +334,7 @@
 	<jwr:script src="/bundles/thes.js"></jwr:script>
 	<script>var flipImage;</script>
 	<jsp:include page="parts/search_common_js.jsp"></jsp:include>
+
 	</stripes:layout-component>
 
 

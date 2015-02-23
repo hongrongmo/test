@@ -1,6 +1,7 @@
 package org.ei.domain;
 
 import java.io.IOException;
+
 import java.io.Writer;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -9,6 +10,7 @@ import java.util.Arrays;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
+import java.util.Calendar;
 
 import org.ei.connectionpool.ConnectionBroker;
 import org.ei.domain.sort.SortField;
@@ -17,9 +19,11 @@ import org.ei.exception.SystemErrorCodes;
 import org.ei.fulldoc.LinkingStrategy;
 
 public abstract class Database implements Comparable<Object> {
-	public static String DEFAULT_ELSEVIER_TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright 2014 Elsevier Inc.";
-	public static String DEFAULT_ELSEVIER_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2014 Elsevier Inc.";
-
+	static int year = Calendar.getInstance().get(Calendar.YEAR);
+	public static String DEFAULT_ELSEVIER_TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright "+year+" Elsevier Inc.";
+	public static String DEFAULT_ELSEVIER_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; "+year+" Elsevier Inc.";
+	//public static String DEFAULT_ELSEVIER_TEXT_COPYRIGHT = "Compilation and indexing terms, Copyright 2015 Elsevier Inc.";
+	//public static String DEFAULT_ELSEVIER_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2015 Elsevier Inc.";
 	public List<SortField> getSortableFields() {
 		return Arrays.asList(new SortField[] { SortField.RELEVANCE, SortField.AUTHOR, SortField.YEAR });
 	}

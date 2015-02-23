@@ -57,8 +57,17 @@ $(document).ready(function() {
 		} else {
 	        $("input[name='alldb']").removeAttr('checked');
 	    }
-
-        selectedDbMask = calculateMask(document.quicksearch.database);
+		selectedDbMask = calculateMask(document.quicksearch.database);
+		
+		if($("#saveDBIcon") && $("#saveDBIcon").length > 0 ){
+			//database state has changed.. offer to save it
+			if(selectedDbMask != dbSave.mask && selectedDbMask > 0){
+				enableSaveDB();
+			}else{
+				disableSaveDB();
+			}
+		}
+       
 		startYear = document.quicksearch.startYear[document.quicksearch.startYear.selectedIndex].value;
 		endYear = calEndYear(selectedDbMask);
 		stringYear = document.quicksearch.stringYear.value;
@@ -102,13 +111,16 @@ $(document).ready(function() {
 	});
 });
 
+
 /***************************************************************
  * Calculate the current mask from database checkboxes
  */
 function calculateMask(control)
 {
     var selectedDbMask = 0;
-
+    
+    if(!control){control = document.quicksearch.database;}
+    
     // CALCULATE SELECTED DB MASK
    if(document.quicksearch.alldb != null  &&
     			document.quicksearch.alldb.checked == true)
@@ -575,6 +587,8 @@ function searchValidation() {
 		}
 		
 		var textNodeValue = searchword1;
+		//add for remove newline character by hmo-1/15/2015 
+		textNodeValue = textNodeValue.replace(/(\r\n|\n|\r)/gm," ");
 		for (var j = 0; j < swapCodes.length; j++) {
 	        var swapper = new RegExp("\\u" + swapCodes[j].toString(16), "g");
 	        textNodeValue = textNodeValue.replace(swapper, swapStrings[j]);

@@ -15,7 +15,7 @@
 	</style>
 	<div id="ev_survey"></div>
 	<script>
-	<c:if test="${actionBean.context.userSession.user.userPreferences.featureSurvey && actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1')}">
+	<c:if test="${actionBean.context.userSession.user.userPreferences.featureSurvey && actionBean.context.userSession.user.highlightingEnabled}">
 
 		<c:choose>
 			<c:when test="${surveyLocation == 'results'}">

@@ -665,6 +665,14 @@ $(document).ready(function() {
 		return false;
 	});
 
+	
+	$(".viewChart").click(function(){
+		if(_gaq){
+
+			GALIBRARY.createWebEventWithLabel('Refine Results', 'View Chart',$(this).attr("field"));
+		}		
+		
+	});
 	// Handle the "Go" button from page navigation
 	$("form[name='gotopageform']").submit(function(event) {
 		var pagenumber = parseInt($('input[name="PAGE"]', this).val());
@@ -755,7 +763,20 @@ $(document).ready(function() {
 			}
 		}
 	}
-
+	$("#knovelSearchSubmit").click(function(){
+		//run the knovel search
+		var query = $("#displayquery").text();
+		var url ="http://app.knovel.com/web/search.v?kpromoter=engineeringvillage-search&q=";
+		var windowName = "Knovel Search";
+		var strOptions;
+		
+		url += escape(query);
+		
+		var knovelpop = window.open(url, windowName, strOptions);
+		
+		if (knovelpop != null) knovelpop.focus();
+		GALIBRARY.createWebEventWithLabel('Knovel', 'Search Button',query );
+	});
 	$(window).bind('resize', resizeresults);
     resizeresults();
 

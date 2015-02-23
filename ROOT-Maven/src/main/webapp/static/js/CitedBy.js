@@ -105,6 +105,8 @@ CitedByManager = {
 				authorlink.text(authors[i]);
 				authorlink.click(function(e) {
 					e.preventDefault();
+					//add some ga tracking
+					GALIBRARY.createWebEventWithLabel('External Link','Author Details', escape($(this).attr('href')));
 					window.open($(this).attr('href'),
 							'newwindow',
 							'width=800,height=600,toolbar=no,location=no,scrollbars,resizable');

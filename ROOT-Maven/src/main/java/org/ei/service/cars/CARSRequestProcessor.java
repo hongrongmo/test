@@ -40,6 +40,7 @@ import org.ei.session.CARSMetadata;
 import org.ei.session.UserSession;
 import org.ei.stripes.exception.EVExceptionHandler;
 import org.ei.util.StringUtil;
+import org.perf4j.log4j.Log4JStopWatch;
 
 public class CARSRequestProcessor {
 	private final static Logger log4j = Logger.getLogger(CARSRequestProcessor.class);
@@ -50,8 +51,6 @@ public class CARSRequestProcessor {
 	 */
 
 	private String errorLog = "";
-	
-	
 
 	/**
 	 * Process an incoming CARS request and formulate a response
@@ -65,6 +64,8 @@ public class CARSRequestProcessor {
 	 */
 	public CARSResponse process(CARSRequest carsrequest, HttpServletRequest httprequest, HttpServletResponse httpresponse, UserSession usersession)
 			throws ServiceException {
+
+		Log4JStopWatch fullresponse = new Log4JStopWatch("CARSResponseFull." + carsrequest.getRequestType());
 
 		// Response object
 		CARSResponse carsresponse = null;
@@ -85,7 +86,9 @@ public class CARSRequestProcessor {
 		//
 		// Create the response
 		//
+		Log4JStopWatch stopwatch = new Log4JStopWatch("CARSResponseFull.buildResponse()");
 		carsresponse = buildResponse(carsrequest, httprequest);
+		stopwatch.stop();
 
 		List<String> mimelist = carsresponse.getMimeList();
 		if (mimelist == null || mimelist.size() == 0) {
@@ -98,6 +101,7 @@ public class CARSRequestProcessor {
 		// Iterate over mime list to add more info into CARSResponse. NOTE that
 		// this logic assumes the mime list comes in pairs!
 		//
+		stopwatch = new Log4JStopWatch("CARSResponseFull.processMimeList()");
 		for (int i = 0; i < mimelist.size(); i += 2) {
 
 			// Get 1st mime and see if current request is TERMINATE (only has
@@ -200,6 +204,10 @@ public class CARSRequestProcessor {
 			}
 
 		}
+
+		stopwatch.stop();
+		fullresponse.stop();
+
 		return carsresponse;
 	}
 
@@ -264,15 +272,15 @@ public class CARSRequestProcessor {
 		List<String> respList = null;
 
 		errorLog = "";
-		
+
 		//
 		// Build Resource object for REST call
 		//
-		Resource resource = RESTResourceBuilder.build(carsRequest, httprequest,this);
+		Resource resource = RESTResourceBuilder.build(carsRequest, httprequest, this);
 		if (resource == null) {
 			throw new ServiceException(SystemErrorCodes.CARS_RESPONSE_PROCESSING_ERROR, "Unable to build REST client Resource object!");
 		}
-		
+
 		HttpClient httpClient = new HttpClient();
 		InputStream respStream = null;
 		try {
@@ -282,11 +290,11 @@ public class CARSRequestProcessor {
 			switch (carsRequest.getHTTPMethod()) {
 			case POST:
 				errorLog = "";
-				PostMethod postMethod = RESTResourceBuilder.buildPostMethod(carsRequest, httprequest,this);
+				PostMethod postMethod = RESTResourceBuilder.buildPostMethod(carsRequest, httprequest, this);
 				postMethod.setRequestHeader(CARSStringConstants.ACCEPT_ENCODING.value(), CARSConstants.GZIP);
-				Part [] partsForPostMethod = RESTResourceBuilder.fetchParts(carsRequest, httprequest);
+				Part[] partsForPostMethod = RESTResourceBuilder.fetchParts(carsRequest, httprequest);
 				postMethod.setRequestEntity(new MultipartRequestEntity(partsForPostMethod, postMethod.getParams()));
-				errorLog = errorLog+"Header 2: key="+CARSStringConstants.ACCEPT_ENCODING.value()+", value="+ CARSConstants.GZIP+"\n";
+				errorLog = errorLog + "Header 2: key=" + CARSStringConstants.ACCEPT_ENCODING.value() + ", value=" + CARSConstants.GZIP + "\n";
 				httpClient.executeMethod(postMethod);
 
 				if (postMethod != null && postMethod.getResponseHeader("Content-Encoding").getValue().indexOf("gzip") != -1) {
@@ -295,7 +303,7 @@ public class CARSRequestProcessor {
 					respStream = postMethod.getResponseBodyAsStream();
 				}
 				respList = fetchMIMERespList(respStream);
-				
+
 				break;
 			case PUT:
 				// Currently the change password request can NOT handle
@@ -306,7 +314,7 @@ public class CARSRequestProcessor {
 					resource.accept(CARSStringConstants.MULTIPART_MIXED.value());
 					ClientResponse clientresponse = resource.put(null);
 					if (clientresponse == null) {
-						logCarsErrors(errorLog,"Empty ClientResponse from CARS!",null,carsRequest,httprequest);
+						logCarsErrors(errorLog, "Empty ClientResponse from CARS!", null, carsRequest, httprequest);
 						throw new ServiceException(SystemErrorCodes.CARS_RESPONSE_PROCESSING_ERROR, "Empty ClientResponse from CARS!");
 					} else if (clientresponse.getStatusCode() != 200) {
 						logCarsErrors(errorLog,"ClientResponse status code: " + clientresponse.getStatusCode() + ", message: "
@@ -320,11 +328,11 @@ public class CARSRequestProcessor {
 					}
 				} else {
 					errorLog = "";
-					PutMethod putMethod = RESTResourceBuilder.buildPutMethod(carsRequest, httprequest,this);
+					PutMethod putMethod = RESTResourceBuilder.buildPutMethod(carsRequest, httprequest, this);
 					putMethod.setRequestHeader(CARSStringConstants.ACCEPT_ENCODING.value(), CARSConstants.GZIP);
-					Part [] partsForPutMethod = RESTResourceBuilder.fetchParts(carsRequest, httprequest);
+					Part[] partsForPutMethod = RESTResourceBuilder.fetchParts(carsRequest, httprequest);
 					putMethod.setRequestEntity(new MultipartRequestEntity(partsForPutMethod, putMethod.getParams()));
-					errorLog = errorLog+"Header 2: key="+CARSStringConstants.ACCEPT_ENCODING.value()+", value="+ CARSConstants.GZIP+"\n";
+					errorLog = errorLog + "Header 2: key=" + CARSStringConstants.ACCEPT_ENCODING.value() + ", value=" + CARSConstants.GZIP + "\n";
 					httpClient.executeMethod(putMethod);
 
 					if (putMethod != null && putMethod.getResponseHeader("Content-Encoding").getValue().indexOf("gzip") != -1) {
@@ -347,7 +355,7 @@ public class CARSRequestProcessor {
 				resource.accept(CARSStringConstants.MULTIPART_MIXED.value());
 				ClientResponse clientresponse = resource.get();
 				if (clientresponse == null) {
-					logCarsErrors(errorLog,"Empty ClientResponse from CARS!",null,carsRequest,httprequest);
+					logCarsErrors(errorLog, "Empty ClientResponse from CARS!", null, carsRequest, httprequest);
 					throw new ServiceException(SystemErrorCodes.CARS_RESPONSE_PROCESSING_ERROR, "Empty ClientResponse from CARS!");
 				} else if (clientresponse.getStatusCode() != 200) {
 					logCarsErrors(errorLog,"ClientResponse status code: " + clientresponse.getStatusCode() + ", message: "
@@ -367,7 +375,7 @@ public class CARSRequestProcessor {
 				}
 				break;
 			}
-			
+
 		} catch (Exception e) {
 			logCarsErrors(errorLog,"Unable to build Response!  Exception: " + e.getClass() + ", message: " + e.getMessage(),respList,carsRequest,httprequest);
 			EVExceptionHandler.logException("Unable to build Response!  Exception: " + e.getClass() + ", message: " + e.getMessage(), e, null, log4j);
@@ -585,75 +593,70 @@ public class CARSRequestProcessor {
 		}
 		return jSessionId;
 	}
-	
-	private void logCarsErrors(String resourceStr, String errorMessage, List<String> respList, CARSRequest carsRequest, HttpServletRequest httprequest){
-		
+
+	private void logCarsErrors(String resourceStr, String errorMessage, List<String> respList, CARSRequest carsRequest, HttpServletRequest httprequest) {
+
 		StringBuffer errorlog = new StringBuffer();
 		errorlog.append("\n***************************************************CARS ERROR LOG START***********************************************************\n");
-		errorlog.append("Exception Message : "+ errorMessage+"\n");
-		errorlog.append("Request details :"+resourceStr+"\n");
-		
-		if(carsRequest.getHTTPMethod().equals(HttpMethod.POST) || carsRequest.getHTTPMethod().equals(HttpMethod.PUT)){
+		errorlog.append("Exception Message : " + errorMessage + "\n");
+		errorlog.append("Request details :" + resourceStr + "\n");
+
+		if (carsRequest.getHTTPMethod().equals(HttpMethod.POST) || carsRequest.getHTTPMethod().equals(HttpMethod.PUT)) {
 			if (null != carsRequest.getRestRequestParams()) {
-	            for (Entry<RESTRequestParameters, Object> pair : carsRequest.getRestRequestParams().entrySet()) {
-	                if (null != pair && null != pair.getKey()) {
-	                    if (CARSStringConstants.REQUEST_PARAMS_HOLDER.value().equalsIgnoreCase(pair.getKey().getReqParam())) {
-	                        for (Entry<Object, Object> paramValue :((Map<Object, Object>) pair.getValue()).entrySet()) {
-	                            String[] arrayValue = (String[]) paramValue.getValue();
-	                            for (String value : arrayValue) {
-	                            	errorlog.append("Parts : key="+paramValue.getKey().toString()+", value="+value+"\n");
-	                            }
-	                        }
-	                    }
-	                    if(pair.getValue()!=null){
-	                    	errorlog.append("Parts : key="+pair.getKey().getReqParam()+", value="+ pair.getValue().toString()+"\n");
-	                        
-	                    }
-	                }
-	            }
-	            //add all the file upload content  from the request
-	            if (httprequest.getAttribute(CARSStringConstants.FILE_PARAMS.value()) != null) {
-	                Map<String, Object> fileParamsMap = (Map<String, Object>) httprequest.getAttribute(CARSStringConstants.FILE_PARAMS.value());
-	                for (Entry<String, Object> params : fileParamsMap.entrySet()) {
-	                    String key = params.getKey();
-	                    if(key.equals(CARSStringConstants.PROFILE_IMAGE.value())){
-	                        key=CARSStringConstants.PROFILE_PHOTO.value();
-	                    }
-	                    if (params.getValue() != null) {
-	                    	errorlog.append("Parts : key="+key+", value="+ params.getValue()+"\n");
-	                    }
-	                }
-	            }
+				for (Entry<RESTRequestParameters, Object> pair : carsRequest.getRestRequestParams().entrySet()) {
+					if (null != pair && null != pair.getKey()) {
+						if (CARSStringConstants.REQUEST_PARAMS_HOLDER.value().equalsIgnoreCase(pair.getKey().getReqParam())) {
+							for (Entry<Object, Object> paramValue : ((Map<Object, Object>) pair.getValue()).entrySet()) {
+								String[] arrayValue = (String[]) paramValue.getValue();
+								for (String value : arrayValue) {
+									errorlog.append("Parts : key=" + paramValue.getKey().toString() + ", value=" + value + "\n");
+								}
+							}
+						}
+						if (pair.getValue() != null) {
+							errorlog.append("Parts : key=" + pair.getKey().getReqParam() + ", value=" + pair.getValue().toString() + "\n");
+
+						}
+					}
+				}
+				// add all the file upload content from the request
+				if (httprequest.getAttribute(CARSStringConstants.FILE_PARAMS.value()) != null) {
+					Map<String, Object> fileParamsMap = (Map<String, Object>) httprequest.getAttribute(CARSStringConstants.FILE_PARAMS.value());
+					for (Entry<String, Object> params : fileParamsMap.entrySet()) {
+						String key = params.getKey();
+						if (key.equals(CARSStringConstants.PROFILE_IMAGE.value())) {
+							key = CARSStringConstants.PROFILE_PHOTO.value();
+						}
+						if (params.getValue() != null) {
+							errorlog.append("Parts : key=" + key + ", value=" + params.getValue() + "\n");
+						}
+					}
+				}
 			}
 		}
-		
-		if(respList == null){
-			errorlog.append("Response List :"+respList+"\n");
-    	}else if(respList.size()==0){
-    		errorlog.append("Response List size:"+respList.size()+"\n");
-    	}else{	
-    		errorlog.append("Response List :"+"\n");
-    		for(String resp : respList){
-    			errorlog.append(resp+"\n");
-        	}
-    	}
-		
-		
-           
-       
-	    errorlog.append("***************************************************CARS ERROR LOG END***********************************************************");
-		try{
+
+		if (respList == null) {
+			errorlog.append("Response List :" + respList + "\n");
+		} else if (respList.size() == 0) {
+			errorlog.append("Response List size:" + respList.size() + "\n");
+		} else {
+			errorlog.append("Response List :" + "\n");
+			for (String resp : respList) {
+				errorlog.append(resp + "\n");
+			}
+		}
+
+		errorlog.append("***************************************************CARS ERROR LOG END***********************************************************");
+		try {
 			Logger carsErrorLog4j = Logger.getLogger("CarsErrorLogger");
 			carsErrorLog4j.info(errorlog.toString());
-	    }catch(Exception e){
+		} catch (Exception e) {
 			log4j.warn("Writing cars error into carslogger is failed, writing the error in root logger.");
 			log4j.warn(errorlog.toString());
 		}
 		errorlog = null;
 	}
-	
-	
-	
+
 	public String getErrorLog() {
 		return errorLog;
 	}

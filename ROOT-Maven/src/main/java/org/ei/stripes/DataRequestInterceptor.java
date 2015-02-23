@@ -28,6 +28,7 @@ import org.ei.stripes.action.results.SearchResultsAction;
 import org.ei.stripes.adapter.IBizBean;
 import org.ei.stripes.exception.EVExceptionHandler;
 import org.ei.stripes.util.HttpRequestUtil;
+import org.perf4j.log4j.Log4JStopWatch;
 
 /**
  * This class is a Stripes Interceptor that is supposed to determine if the current Action requires XML from the engvillage application.
@@ -44,7 +45,9 @@ public class DataRequestInterceptor implements Interceptor {
 
     @Override
     public Resolution intercept(ExecutionContext executioncontext) throws Exception {
-        EVActionBeanContext context = (EVActionBeanContext) executioncontext.getActionBeanContext();
+		Log4JStopWatch stopwatch = new Log4JStopWatch("Interceptor.DataRequest");
+
+		EVActionBeanContext context = (EVActionBeanContext) executioncontext.getActionBeanContext();
         EVActionBean actionbean = (EVActionBean) executioncontext.getActionBean();
         HttpServletRequest request = context.getRequest();
         HttpServletResponse response = context.getResponse();
@@ -112,6 +115,8 @@ public class DataRequestInterceptor implements Interceptor {
         if (actionbean instanceof SearchResultsAction) {
             actionbean.isActionBeanInstance = "true";
         }
+
+        stopwatch.stop();
 
         // Continue on with request
         return executioncontext.proceed();

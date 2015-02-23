@@ -28,3 +28,9 @@
 		</ul>
 	</div>
 </div>
+<c:if test="${not empty actionBean.IE7Msg}">
+  	<div id="ie7msg" style="text-align:left;display:none"><img src="/static/images/red_warning.gif" style="padding-right:5px;width:20px;margin-top:-3px; float:left"/><span id="ie7messageholder">${actionBean.IE7Msg}</span></div>
+</c:if>
+<c:if test="${not empty IE7Msg}">
+  	<div id="ie7msg" style="text-align:left;display:none"><img src="/static/images/red_warning.gif" style="padding-right:5px;width:20px;margin-top:-3px; float:left"/><span id="ie7messageholder">${IE7Msg}</span></div>
+</c:if>

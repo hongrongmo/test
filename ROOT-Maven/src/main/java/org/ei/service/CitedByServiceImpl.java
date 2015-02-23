@@ -61,8 +61,9 @@ public class CitedByServiceImpl implements CitedByService {
 	/** The Constant citedBySaltKey. */
 	private static final String citedBySaltKey = "Kyvs.FpdJvCAXVa:9TK13xB!a01ZV(iW";
 
+	
 	/** The key map. */
-	private Hashtable<String, String> keyMap = new Hashtable<String, String>();
+	private Hashtable<String, List<String>> newKeyMap = new Hashtable<String, List<String>>();
 
 
 	/* (non-Javadoc)
@@ -545,20 +546,24 @@ public class CitedByServiceImpl implements CitedByService {
 					if(citedByCounts != null){
 						for(CitedByCountType  citedByCount : citedByCounts){
 							if(citedByCount != null && citedByCount.getInputKey() != null){
-								String id = getID(citedByCount.getInputKey());
+								List<String> ids = getIDs(citedByCount.getInputKey());
 								List<CitedByCountItemType> citedByCountItemTypes = citedByCount.getLinkData();
-								if(citedByCountItemTypes != null){
+								if(citedByCountItemTypes != null && ids != null && !ids.isEmpty()){
 									for(CitedByCountItemType  citedByCountItem : citedByCountItemTypes){
-										if(citedByCountItem != null && id != null) {
-											HashMap<String, String> linkMap = new HashMap<String, String>();
-											linkMap.put("ID", id);
-											linkMap.put("SID", (citedByCountItem.getScopusID()).toString());
-											linkMap.put("EID", (citedByCountItem.getEid()).toString());
-											linkMap.put("COUNT", (citedByCountItem.getCitedByCount()).toString());
-											citedByCountArray.add(linkMap);
+										if(citedByCountItem != null) {
+											for(String id : ids){
+												HashMap<String, String> linkMap = new HashMap<String, String>();
+												linkMap.put("ID", id);
+												linkMap.put("SID", (citedByCountItem.getScopusID()).toString());
+												linkMap.put("EID", (citedByCountItem.getEid()).toString());
+												linkMap.put("COUNT", (citedByCountItem.getCitedByCount()).toString());
+												citedByCountArray.add(linkMap);
+											}
 										}
+										
 									}
 								}
+								
 							}
 						}
 					}
@@ -595,25 +600,35 @@ public class CitedByServiceImpl implements CitedByService {
 		ObjectMapper mapper = new ObjectMapper();
 		try {
 			citedByCountList = Arrays.asList( mapper.readValue(citedbyJSON, CitedByCount[].class));
-			buildKeyMap(citedByCountList);
+			//buildKeyMap(citedByCountList);
+			buildNewKeyMap(citedByCountList);
 		} catch (IOException e) {
 			throw new InfrastructureException(SystemErrorCodes.UNKNOWN_INFRASTRUCTURE_ERROR,"Could not parse JSON to Java Object.");
 		}
 		return citedByCountList;
 	}
-
+	
+	private void createId(String key, String accnum){
+		List<String> idList = newKeyMap.get(key);
+		if(idList == null){
+			idList = new ArrayList<String>();
+		}
+		idList.add(accnum);
+		newKeyMap.put(key, idList);
+	}
+	
 	/**
-	 * Builds the key map.
-	 *
-	 * @param count the count
+	 * @param citedbyCountList
 	 */
-	private void buildKeyMap(List<CitedByCount> citedbyCountList) {
+	private void buildNewKeyMap(List<CitedByCount> citedbyCountList) {
 		for(CitedByCount count : citedbyCountList){
 			if (count.getAccessionNumber() != null) {
 				if (StringUtils.isNotBlank(count.getDoi())) {
-					keyMap.put("key_doi"+count.getDoi(), count.getAccessionNumber());
+					createId("key_doi"+count.getDoi(), count.getAccessionNumber());
+					
 				}else if(StringUtils.isNotBlank(count.getPii())) {
-					keyMap.put("key_pii"+count.getPii(), count.getAccessionNumber());
+					createId("key_pii"+count.getPii(), count.getAccessionNumber());
+					
 				}else if (StringUtils.isNotBlank(count.getIssn()) || StringUtils.isNotBlank(count.getIsbn13()) || StringUtils.isNotBlank(count.getIsbn())){
 					String ivipKey = "key";
 					if(StringUtils.isNotBlank(count.getIssn())){
@@ -632,11 +647,12 @@ public class CitedByServiceImpl implements CitedByService {
 					if(StringUtils.isNotBlank(count.getFirstPageNumber())){
 						ivipKey += "_firstpgnumber"+count.getFirstPageNumber();
 					}
-					keyMap.put(ivipKey, count.getAccessionNumber());
+					createId(ivipKey, count.getAccessionNumber());
 				}
 			}
 		}
 	}
+
 
 	/**
 	 * Check m d5.
@@ -669,24 +685,23 @@ public class CitedByServiceImpl implements CitedByService {
 	}
 
 
+	
 	/**
-	 * Gets the id.
-	 *
-	 * @param inputKey the input key
-	 * @return the id
+	 * @param inputKey
+	 * @return
 	 */
-	private String getID(InputKeyType inputKey) {
-		String id = null;
+	private List<String> getIDs(InputKeyType inputKey) {
+		List<String> ids = null;
 		if (inputKey.getDoi() != null) {
 			String doi = "key_doi"+inputKey.getDoi();
-			if (keyMap.containsKey(doi)) {
-				id = (String) keyMap.get(doi);
+			if (newKeyMap.containsKey(doi)) {
+				ids = newKeyMap.get(doi);
 			}
 
 		} else if (inputKey.getPii() != null) {
 			String pii = "key_pii"+inputKey.getPii();
-			if (keyMap.containsKey(pii)) {
-				id = (String) keyMap.get(pii);
+			if (newKeyMap.containsKey(pii)) {
+				ids = newKeyMap.get(pii);
 			}
 		}else if (inputKey.getIssn() != null || inputKey.getIsbn() != null ){
 			String ivipKey = "key";
@@ -704,15 +719,14 @@ public class CitedByServiceImpl implements CitedByService {
 			if(inputKey.getFirstPageNumber() != null){
 				ivipKey += "_firstpgnumber"+inputKey.getFirstPageNumber();
 			}
-			if (keyMap.containsKey(ivipKey)) {
-				id = (String) keyMap.get(ivipKey);
+			if (newKeyMap.containsKey(ivipKey)) {
+				ids =  newKeyMap.get(ivipKey);
 			}
 		}
-		if(id == null){
-			log4j.warn("The record has 'id' generated as null: doi="+inputKey.getDoi()+", issn="+inputKey.getIssn()+", isbn="+inputKey.getIsbn()+", vol="+inputKey.getVol()+" ,issue="+inputKey.getIssue()+", firstpage="+inputKey.getFirstPageNumber());
+		if(ids == null){
+			log4j.warn("The record has 'id' generated as null or list empty: doi="+inputKey.getDoi()+", issn="+inputKey.getIssn()+", isbn="+inputKey.getIsbn()+", vol="+inputKey.getVol()+" ,issue="+inputKey.getIssue()+", firstpage="+inputKey.getFirstPageNumber());
 		}
-		
-		return id;
+		return ids;
 	}
 
 
