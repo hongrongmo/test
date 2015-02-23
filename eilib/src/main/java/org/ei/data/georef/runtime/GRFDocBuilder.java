@@ -5,6 +5,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.Hashtable;
 import java.util.Iterator;
@@ -31,13 +32,15 @@ import org.ei.domain.XMLWrapper;
 import org.ei.util.StringUtil;
 
 public class GRFDocBuilder implements DocumentBuilder {
+	
+	public static int year = Calendar.getInstance().get(Calendar.YEAR);
     public static final int MINIMUM_ABSTRACT_LENGTH = 100;
 
     public static final String AUDELIMITER = new String(new char[] { 30 });
     public static final String IDDELIMITER = new String(new char[] { 31 });
     public static final String GROUPDELIMITER = new String(new char[] { 02 });
-    public static String GRF_TEXT_COPYRIGHT = "GeoRef, Copyright 2014, American Geological Institute.";
-    public static String GRF_HTML_COPYRIGHT = "GeoRef, Copyright &copy; 2014, American Geological Institute.";
+    public static String GRF_TEXT_COPYRIGHT = "GeoRef, Copyright "+year+", American Geological Institute.";
+    public static String GRF_HTML_COPYRIGHT = "GeoRef, Copyright &copy; "+year+", American Geological Institute.";
     public static String PROVIDER_TEXT = "American Geological Institute";
 
     private static String queryPreview = "SELECT M_ID, ABSTRACT FROM GEOREF_MASTER WHERE M_ID IN ";

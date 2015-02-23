@@ -3,7 +3,7 @@
 
 
 <c:choose>
-	<c:when test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1')}">
+	<c:when test="${actionBean.context.userSession.user.highlightingEnabled  }">
 	 	<script>
 	 	<c:choose>
 		<c:when test="${actionBean.context.userSession.user.userPrefs.highlightBackground}">

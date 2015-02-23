@@ -31,6 +31,7 @@ import org.ei.biz.security.NormalAuthRequiredAccessControl;
 import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
 import org.ei.controller.logging.LogEntry;
+import org.ei.exception.SystemErrorCodes;
 import org.ei.session.UserSession;
 import org.ei.stripes.EVActionBeanContext;
 import org.ei.stripes.util.HttpRequestUtil;
@@ -65,12 +66,12 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
     protected boolean showpatentshelp;
     protected CustomizedLogo customlogo;
     private String s3FigUrl = null;
-
+    
    	private boolean showLoginBox = true;
     private StopWatch requeststopwatch = null;
 
     @Validate(mask = "-{0,1}\\d*")
-    protected String errorCode = "";
+    protected int errorCode = SystemErrorCodes.INIT;
 
     /**
      * Override for the ISecuredAction interface. By default all ActionBeans require either Individual or Guest auth access. Action Beans with different
@@ -81,6 +82,14 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
         return new NormalAuthRequiredAccessControl();
     }
 
+    /**
+     * Return the rulevel (usually passed as -Dcom.elsevier.env=xxxx)
+     * @return
+     */
+    public String getRunlevel() {
+    	return System.getProperty(ApplicationProperties.SYSTEM_ENVIRONMENT_RUNLEVEL);
+    }
+    
     protected List<String> comments;   // Comments from biz (JSP) layer
 
     public void setComments(List<String> comments) {
@@ -129,7 +138,7 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
         // have it do nothing!
         context.setSessionCookie();
         if (this.requeststopwatch != null) {
-            this.requeststopwatch.stop("request");
+            this.requeststopwatch.stop("request." + this.getClass().getSimpleName() + "." + this.getContext().getEventName());
         }
         // If SYSTEM_PT is present, delete session!
         /*
@@ -177,8 +186,12 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
     private ROOM room = ROOM.blank;
 
     public static enum ROOM {
-        blank, search, selectedrecords, mysettings, tagsgroups, bulletins;
+        blank, welcome, search, selectedrecords, mysettings, tagsgroups, bulletins;
     };
+
+    public boolean isRoomHome() {
+        return this.room == ROOM.welcome;
+    }
 
     public boolean isRoomSearch() {
         return this.room == ROOM.search;
@@ -606,11 +619,11 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
         this.showLoginBox = showLoginBox;
     }
 
-    public String getErrorCode() {
+    public int getErrorCode() {
         return errorCode;
     }
 
-    public void setErrorCode(String errorCode) {
+    public void setErrorCode(int errorCode) {
         this.errorCode = errorCode;
     }
 
@@ -626,6 +639,15 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
     				msg="<span style=\"color:"+color+"\">"+msg+"</span>";
     			}
     		}
+    	}
+    	return msg;
+    }
+    
+    public String getIE7Msg(){
+    	String msg = null;
+    	boolean isEnabled = Boolean.parseBoolean((EVProperties.getProperty(EVProperties.IE7_WARN_MSG_ENABLED)));
+    	if(isEnabled){
+    		msg = EVProperties.getProperty(EVProperties.IE7_WARN_MSG_TEXT);
     	}
     	return msg;
     }

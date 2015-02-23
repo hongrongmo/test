@@ -1027,5 +1027,20 @@ public class EVWebUser implements IEVWebUser, Serializable {
     public void setUserPrefs(UserPrefs userPrefs) {
         this.userPrefs = userPrefs;
     }
-
+    public boolean isHighlightingEnabled(){
+    	UserPreferences userPreferencs = this.getUserPreferences();
+    	if (userPreferencs == null) {
+            log4j.warn("No user preferences!");
+            return false;
+        }
+    	boolean highlightOn = userPreferencs.getBoolean(UserPreferences.FENCE_HIGHLIGHT_V1);
+    	boolean highlightRegOnly = userPreferencs.getBoolean(UserPreferences.FENCE_HIGHLIGHT_REG_ONLY);
+    	
+    	if(highlightOn){
+    		if(!highlightRegOnly || (highlightRegOnly && this.isIndividuallyAuthenticated())){
+    			return true;
+    		}
+    	}
+    	return false;
+    }
 }

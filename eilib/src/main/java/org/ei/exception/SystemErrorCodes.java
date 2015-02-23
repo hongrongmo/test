@@ -5,6 +5,7 @@ public class SystemErrorCodes {
 	//
 	// Unmapped error codes
 	//
+	public static final int INIT = 0;
 	public static final int UNKNOWN = -1;
 	public static final int ERROR_XML_CONVERSION_FAILED = -2;
 	public static final int CANNOT_PROCESS_XML_ERROR = -3;
@@ -21,6 +22,8 @@ public class SystemErrorCodes {
     public static final int COMBINE_HISTORY_UNIQUE_DATABASE_ERROR = 1015;
     public static final int SEARCH_NOT_FOUND = 1016;
     public static final int SAVED_SEARCH_NOT_FOUND = 1017;
+    public static final int SEARCH_HISTORY_ERROR = 1018;
+    public static final int SEARCH_HISTORY_NOIDEXISTS = 1019;
 
 	public static final int BASE_URL_EMPTY = 1020;
 	public static final int RESULT_VIEW_EMPTY = 1021;

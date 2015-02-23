@@ -19,7 +19,7 @@
 
 	<stripes:layout-component name="cssheadstandard">
 		<jwr:style src="/bundles/standard.css"></jwr:style>
-		</stripes:layout-component>
+	</stripes:layout-component>
 		<jwr:script src="/bundles/standard.js" useRandomParam="true"></jwr:script>
 
 		<c:if test="${actionBean.context.userSession.user.userPreferences.featureHighlight}">
@@ -29,21 +29,48 @@
 		<script>
 		var highlightV1 = false;
 		</script>
-		<c:if test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1')}">
+		<c:if test="${actionBean.context.userSession.user.highlightingEnabled}">
 		<script>
 			highlightV1 = true;
 
 		</script>
 		<script src='/static/js/jquery/spectrum.js'></script>
 		</c:if>
-	<stripes:layout-component name="csshead"/>
+    <stripes:layout-component name="csshead"/>  
+    <stripes:layout-component name="customjs">
+        <c:if test="${actionBean.runlevel eq 'prod' or actionBean.runlevel eq 'release'}">
+        <!-- Google Tag Manager -->
+        <noscript>
+            <iframe src="//www.googletagmanager.com/ns.html?id=GTM-KT364J" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+        </noscript>
+        <script>
+            (function(w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    'gtm.start' : new Date().getTime(),
+                    event : 'gtm.js'
+                });
+                var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l='
+                        + l
+                        : '';
+                j.async = true;
+                j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-KT364J');
+        </script>
+        <!-- End Google Tag Manager -->
+        </c:if>
+    </stripes:layout-component>
 </head>
-<body>
-	<a class="skiptonavlink" href="#searchnavlink">Navigate to top Navigation "Search"</a>
+<body onload="onloadfunction();">
+<div class="skipnav">
+<a class="skiptonavlink" href="#searchnavlink" onclick="$('#searchnavlink').focus();return false;" title="Skip to top Navigation 'Search'">Skip to top Navigation "Search"</a><br/>
 <stripes:layout-component name="SkipToNavigation">
 <!-- Override in jsp to use custom skip to links links -->
 </stripes:layout-component>
+</div>
 <stripes:layout-component name="ssourls">
+
 <c:if test="${actionBean.context.userSession.user.SSOURLInvoked}">
 <c:forEach var="urls" items="${actionBean.context.userSession.user.ssoURLs}">
     <iframe class="displayNone" src='<c:out value="${urls}"/>'></iframe>
@@ -80,7 +107,7 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
 
 <script type="text/javascript">
     // Initialize GA
-    var pageevents = [<c:forEach items="${webAnalyticsEvent}" var="webEvent" varStatus="status">{category:'${webEvent.category}', action: '${webEvent.action}', label: '${webEvent.label}'}<c:if test='${!status.last}'>,</c:if></c:forEach>];
+    var pageevents = [<c:forEach items="${webAnalyticsEvent}" var="webEvent" varStatus="status">{category:'<c:out value="${webEvent.category}"/>', action: '<c:out value="${webEvent.action}"/>', label: '<c:out value="${webEvent.label}"/>'}<c:if test='${!status.last}'>,</c:if></c:forEach>];
     GALIBRARY.init(
         ["${actionBean.context.googleAnalyticsAccount}", "${usersession.user.account.accountName}", "${usersession.user.individuallyAuthenticated}"],
         pageevents);
@@ -90,6 +117,20 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
       function flipLogin(button, from) {
       	return false;
       }
+    
+      function onloadfunction(){
+    		
+    	  if (/MSIE (\d+\.\d+);/.test(navigator.userAgent))
+    	  { 
+    	     var ieversion=new Number(RegExp.$1);
+    	     if (ieversion<8)
+    	     {
+    	       if(document.getElementById('ie7msg') != 'undefined' &&  document.getElementById('ie7msg') != null ){
+    	    	   document.getElementById('ie7msg').style.display = 'block';
+    	       }
+    	     }
+    	  }
+    }
 
     </script>
 

@@ -15,6 +15,7 @@ import org.ei.controller.content.ContentConfig;
 import org.ei.stripes.action.ControllerAction;
 import org.ei.stripes.action.EVActionBean;
 import org.ei.stripes.util.HttpRequestUtil;
+import org.perf4j.log4j.Log4JStopWatch;
 
 /**
  * This class is a Stripes Interceptor that is supposed to look at the incoming URL and determine whether or not it's a legacy URL that should be re-directed to
@@ -33,7 +34,9 @@ public class LegacyRedirectInterceptor implements Interceptor {
 
     @Override
     public Resolution intercept(ExecutionContext executioncontext) throws Exception {
-        HttpServletRequest request = executioncontext.getActionBeanContext().getRequest();
+		Log4JStopWatch stopwatch = new Log4JStopWatch("Interceptor.LegacyRedirect");
+
+		HttpServletRequest request = executioncontext.getActionBeanContext().getRequest();
         log4j.info("[" + HttpRequestUtil.getIP(request) + "] Entered LegacyRedirectInterceptor");
         String CID = request.getParameter("CID");
         log4j.info("Incoming CID for legacy check: " + CID);
@@ -74,6 +77,8 @@ public class LegacyRedirectInterceptor implements Interceptor {
             }
         }
 
+        stopwatch.stop();
+        
         // Continue on with request
         return executioncontext.proceed();
     }

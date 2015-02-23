@@ -13,7 +13,7 @@
 		<input type="hidden" name="lastRefineStep" value="${fn:length(actionBean.refinequery)}" id="lastRefineStep" />
 		<input type="hidden" name="sortClick" value="false" id="sortClick" />
 
-		<stripes:errors field="validationError"><div style="width:240px;"><stripes:individual-error/></div></stripes:errors>
+		<stripes:errors field="errorcode"><div style="width:240px;"><stripes:individual-error/></div></stripes:errors>
 		<div class="shadowbox">
 		<div id="facet_refine">
 			<h2 class="heading" style="margin: 0; padding-top: 5px">
@@ -74,7 +74,7 @@
 				<h3 class="facettitle facetshowhide <c:if test="${navigator.field == 'cv'}">facet_cvHighlightFeature</c:if>" field="${navigator.field}" title="${navopen ? 'Close' : 'Open'}"><b>${navigator.label}</b>&nbsp;&nbsp; </h3>
 				<div class="facetheader_links">
 				<c:if test="${actionBean.isnavchrt}">
-					<a title="View chart" href=""
+					<a title="View chart" class="viewChart" field="${navigator.label}" href=""
 						onclick="window.open('/search/results/analyzenav.url?searchid=${actionBean.searchid}&database=${actionBean.database}&field=${navigator.field}','newwindow','width=600,height=630,toolbar=no,location=no,scrollbars,resizable');return false"><jwr:img
 						src="/static/images/Graph.png" styleId="graph" border="0" alt="View Chart"/></a>
 					<a title="Download data"
@@ -204,6 +204,19 @@
 			<input type="submit" value="Search" title="Run new search with selected facets"></input>
 		</p>
 	</form>
+	</div>
+</c:if>
+<c:if test="${ actionBean.context.userSession.user.userPreferences.knovelSearchButton}">
+	<div id="knovelcol" >
+		<div class="knovelsearch shadowbox" >
+		<div style="float:left;">
+		<img src="/static/images/knovel_k_logo.png" style="vertical-align:top;padding-top:2px;" height="20px;"/>
+		<input type="button" id="knovelSearchSubmit" value="Knovel Search" title="Run this search in Knovel" style="margin-left:2px;"/>
+		</div>
+		<a	href="${actionBean.helpUrl}#knovel_search.htm" class="helpurl"  title="Learn more about Knovel" style="float:right;padding-top:4px;" >
+			<jwr:img src="/static/images/i.png" border="0" styleClass="infoimg" alt="Learn more about Knovel" align="bottom"/>
+		</a>
+		</div>
 	</div>
 </c:if>
 </div>

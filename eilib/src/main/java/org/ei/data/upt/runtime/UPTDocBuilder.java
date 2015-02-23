@@ -1,6 +1,7 @@
 package org.ei.data.upt.runtime;
 
 import java.io.ByteArrayInputStream;
+
 import java.io.IOException;
 import java.sql.Clob;
 import java.sql.Connection;
@@ -15,6 +16,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
+import java.util.Calendar;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.oro.text.perl.Perl5Util;
@@ -56,8 +58,9 @@ import org.ei.exception.InfrastructureException;
 import org.ei.util.StringUtil;
 
 public class UPTDocBuilder implements DocumentBuilder, Keys {
-    public static String UPT_TEXT_COPYRIGHT = "Compilation and indexing terms, 2014 LexisNexis Univentio B.V.";
-    public static String UPT_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; 2014 LexisNexis Univentio B.V.";
+	public static int year = Calendar.getInstance().get(Calendar.YEAR);
+    public static String UPT_TEXT_COPYRIGHT = "Compilation and indexing terms, "+year+" LexisNexis Univentio B.V.";
+    public static String UPT_HTML_COPYRIGHT = "Compilation and indexing terms, &copy; "+year+" LexisNexis Univentio B.V.";
 
     public static String PROVIDER = "Ei";
     public static final Key[] CITATION_KEYS = { Keys.DOCID, Keys.DOC_TYPE, Keys.KIND_DESCRIPTION, Keys.PATENT_NUMBER, Keys.TITLE, Keys.PUBLICATION_YEAR,

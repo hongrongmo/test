@@ -45,6 +45,7 @@ import org.ei.stripes.exception.EVExceptionHandler;
 import org.ei.stripes.util.HttpRequestUtil;
 import org.ei.stripes.view.CustomizedLogo;
 import org.ei.web.cookie.CookieHandler;
+import org.perf4j.log4j.Log4JStopWatch;
 
 @Intercepts(LifecycleStage.BindingAndValidation)
 public class AuthInterceptor implements Interceptor {
@@ -53,7 +54,9 @@ public class AuthInterceptor implements Interceptor {
 
     @Override
     public Resolution intercept(ExecutionContext context) throws Exception {
-        EVActionBeanContext evcontext = (EVActionBeanContext) context.getActionBeanContext();
+		Log4JStopWatch stopwatch = new Log4JStopWatch("Interceptor.Auth");
+
+		EVActionBeanContext evcontext = (EVActionBeanContext) context.getActionBeanContext();
         EVActionBean actionbean = (EVActionBean) context.getActionBean();
         HttpServletRequest request = evcontext.getRequest();
         HttpServletResponse response = evcontext.getResponse();
@@ -213,6 +216,8 @@ public class AuthInterceptor implements Interceptor {
             // Not already in redirect, try to redirect to it
             throw e;
 
+        } finally {
+            stopwatch.stop();
         }
     }
 

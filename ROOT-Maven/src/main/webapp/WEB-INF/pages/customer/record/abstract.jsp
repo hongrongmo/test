@@ -16,8 +16,8 @@
 	<![endif]-->
 	</stripes:layout-component>
 	<stripes:layout-component name="SkipToNavigation">
-		<a class="skiptonavlink" href="#abstractTabLink"">Navigate to Abstract Tab</a>
-		<a class="skiptonavlink" href="#cbresult_${actionBean.results[0].doc.docid}">Navigate to record</a>
+		<a class="skiptonavlink" href="#abstractTabLink" onclick="$('#abstractTabLink').focus();return false;" title="Skip to Abstract Tab">Skip to Abstract Tab</a><br/>
+		<a class="skiptonavlink" href="#cbresult_${actionBean.results[0].doc.docid}" onclick="$('#cbresult_${actionBean.results[0].doc.docid}').focus();return false;" title="Skip to record">Skip to record</a><br/>
 	</stripes:layout-component>
 
 	<stripes:layout-component name="contents">
@@ -133,7 +133,7 @@
 
 			</ul>
 			<c:choose>
-				<c:when test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1')}">
+				<c:when test="${actionBean.context.userSession.user.highlightingEnabled}">
 					<div id="highlight" style="float:right;"><input type="text" name="highlightColorAbs"  id="hlight_color_abs" /><label id="hlight_color_abs_lbl" for="hlight_color_abs" style="padding-left:3px;font-weight:bold;">Color Search Terms</label><input type="checkbox" id="ckbackhighlight" style="margin-bottom:0px;vertical-align:text-bottom;" <c:if test="${actionBean.context.userSession.user.userPrefs.highlightBackground}">checked="checked"</c:if>/><label for="ckbackhighlight"><b>Background Highlighting</b></label></div>
 				</c:when>
 				<c:otherwise>
@@ -180,12 +180,12 @@
 	                        		<c:when test="${not empty lhlink.imageUrl}">
 	                        			<c:choose>
 											<c:when test="${actionBean.view eq 'detailed'}">
-												<a CLASS="LgBlueLink" onclick="openLocalHoldingsLink(event,'Detailed Format',this);" href="/search/results/localholdinglinks.url?docId=${result.doc.docid}&url=${lhlink.url}&position=${lhlink.position}" target="new">
+												<a CLASS="LgBlueLink" title="Right-click to open in new tab" onclick="openLocalHoldingsLink(event,'Detailed Format',this);" href="/search/results/localholdinglinks.url?docId=${result.doc.docid}&url=${lhlink.url}&position=${lhlink.position}" target="new">
 			                        				<img src="${lhlink.imageUrl}" alt="${lhlink.label}" border="0" />
 			                        			</a>
 											</c:when>
 											<c:otherwise>
-												<a CLASS="LgBlueLink" onclick="openLocalHoldingsLink(event,'Abstract Format',this);" href="/search/results/localholdinglinks.url?docId=${result.doc.docid}&url=${lhlink.url}&position=${lhlink.position}" target="new">
+												<a CLASS="LgBlueLink" title="Right-click to open in new tab" onclick="openLocalHoldingsLink(event,'Abstract Format',this);" href="/search/results/localholdinglinks.url?docId=${result.doc.docid}&url=${lhlink.url}&position=${lhlink.position}" target="new">
 			                        				<img src="${lhlink.imageUrl}" alt="${lhlink.label}" border="0" />
 			                        			</a>
 											</c:otherwise>
@@ -194,10 +194,10 @@
 	                        		<c:otherwise>
 	                        			<c:choose>
 											<c:when test="${actionBean.view eq 'detailed'}">
-												<a CLASS="LgBlueLink" onclick="openLocalHoldingsLink(event,'Detailed Format',this);" href="/search/results/localholdinglinks.url?docId=${result.doc.docid}&url=${lhlink.url}&position=${lhlink.position}" target="new">${lhlink.label}</a>
+												<a CLASS="LgBlueLink" title="Right-click to open in new tab" onclick="openLocalHoldingsLink(event,'Detailed Format',this);" href="/search/results/localholdinglinks.url?docId=${result.doc.docid}&url=${lhlink.url}&position=${lhlink.position}" target="new">${lhlink.label}</a>
 											</c:when>
 											<c:otherwise>
-												<a CLASS="LgBlueLink" onclick="openLocalHoldingsLink(event,'Abstract Format',this);" href="/search/results/localholdinglinks.url?docId=${result.doc.docid}&url=${lhlink.url}&position=${lhlink.position}" target="new">${lhlink.label}</a>
+												<a CLASS="LgBlueLink" title="Right-click to open in new tab" onclick="openLocalHoldingsLink(event,'Abstract Format',this);" href="/search/results/localholdinglinks.url?docId=${result.doc.docid}&url=${lhlink.url}&position=${lhlink.position}" target="new">${lhlink.label}</a>
 											</c:otherwise>
 										</c:choose>
 
