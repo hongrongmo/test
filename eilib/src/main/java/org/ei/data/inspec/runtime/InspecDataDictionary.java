@@ -1,6 +1,7 @@
 package org.ei.data.inspec.runtime;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Hashtable;
@@ -123,8 +124,18 @@ public class InspecDataDictionary
         
         try
         {
-            broker = ConnectionBroker.getInstance();
-            con = broker.getConnection(DatabaseConfig.SEARCH_POOL);
+        	//HH 02/23/2015 get db conn from local conn strings for dataloading process
+        	if(DatabaseConfig.DbCorrFlag==1)
+        	{
+        		System.out.println("DB conn is local");
+        		con = getConnection("jdbc:oracle:thin:@eia.cmdvszxph9cf.us-east-1.rds.amazonaws.com:1521:eia",
+        			"oracle.jdbc.driver.OracleDriver","ap_ev_search","ei3it");    //original 
+        	}
+        	else
+        	{
+        		broker = ConnectionBroker.getInstance();
+        		con = broker.getConnection(DatabaseConfig.SEARCH_POOL);
+        	}
             stmt = con.createStatement();
             
             rs = stmt.executeQuery(buf.toString());
@@ -174,7 +185,14 @@ public class InspecDataDictionary
         
             if (con != null) {
                 try {
-                    broker.replaceConnection(con, DatabaseConfig.SEARCH_POOL);
+                	if(DatabaseConfig.DbCorrFlag==1)
+                	{
+                		con.close();
+                	}
+                	else
+                	{
+                		broker.replaceConnection(con, DatabaseConfig.SEARCH_POOL);
+                	}
                 } catch (Exception cpe) {
                     cpe.printStackTrace();
                 }
@@ -182,4 +200,16 @@ public class InspecDataDictionary
         }
         return classCodesList;
     } 
+    
+//HH 02/02/2015 TEMP to use local getconnection instead of broker, to fix GRF correction issue & any other correction process
+    
+    public Connection getConnection(String connectionURL,String driver,String username,String password) throws Exception
+    {
+    	Class.forName(driver);
+    	Connection con = DriverManager.getConnection(connectionURL,
+			  username,
+			  password);
+    	return con;
+    }
+    
 }
