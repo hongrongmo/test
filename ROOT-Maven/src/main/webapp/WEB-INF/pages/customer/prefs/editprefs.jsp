@@ -209,7 +209,7 @@ $(".locationRadio").click(function(){
 	updatefilenamelable();
 	checkForRisandBib();
 });
-$(".formatRadio,.outputRadio").click(function(){h
+$(".formatRadio,.outputRadio").click(function(){
 	updatefilenamelable();
 });
 
