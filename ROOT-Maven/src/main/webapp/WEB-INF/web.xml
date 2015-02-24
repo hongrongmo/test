@@ -238,26 +238,6 @@
 		<load-on-startup>2</load-on-startup>
 	</servlet>
 
-    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-    <!-- Perf4j graphing servlet -->
-    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-    <servlet>
-        <servlet-name>perf4j</servlet-name>
-        <servlet-class>org.perf4j.log4j.servlet.GraphingServlet</servlet-class>
-        <!-- The graphNames parameter determines which graphs to expose. The param-value 
-            should be a comma-separated list of the appender NAMES as defined in the 
-            log4j.xml file. -->
-        <init-param>
-            <param-name>graphNames</param-name>
-            <param-value>graphInterceptorExecutionTimes,graphCARSExecutionTimes,graphSearchDisplayExecutionTimes,graphSearchResultsDisplayExecutionTimes</param-value>
-        </init-param>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>perf4j</servlet-name>
-        <url-pattern>/perf4j</url-pattern>
-    </servlet-mapping>
-
 	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 	<!-- Start of EV-related servlets -->
 	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->

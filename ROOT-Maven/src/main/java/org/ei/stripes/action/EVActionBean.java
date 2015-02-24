@@ -32,12 +32,11 @@ import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
 import org.ei.controller.logging.LogEntry;
 import org.ei.exception.SystemErrorCodes;
+import org.ei.service.amazon.cloudwatch.CloudWatchStopwatch;
 import org.ei.session.UserSession;
 import org.ei.stripes.EVActionBeanContext;
 import org.ei.stripes.util.HttpRequestUtil;
 import org.ei.stripes.view.CustomizedLogo;
-import org.perf4j.StopWatch;
-import org.perf4j.log4j.Log4JStopWatch;
 
 public abstract class EVActionBean implements ActionBean, ISecuredAction {
 
@@ -68,7 +67,8 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
     private String s3FigUrl = null;
     
    	private boolean showLoginBox = true;
-    private StopWatch requeststopwatch = null;
+    private CloudWatchStopwatch requeststopwatch = null;
+    private CloudWatchStopwatch actionstopwatch = null;
 
     @Validate(mask = "-{0,1}\\d*")
     protected int errorCode = SystemErrorCodes.INIT;
@@ -116,7 +116,8 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
     @Before(stages = LifecycleStage.HandlerResolution)
     private void setTimestamp() {
         starttime = new Date();
-        this.requeststopwatch = new Log4JStopWatch();
+        this.actionstopwatch = new CloudWatchStopwatch();
+        this.actionstopwatch.addDimension("IP", HttpRequestUtil.getIP(this.getRequest()));
     }
 
     @After(stages = LifecycleStage.ActionBeanResolution)
@@ -124,6 +125,8 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
         if (this.getContext() != null) {
             this.getContext().getRequest().setAttribute(EVProperties.REQUEST_ATTRIBUTE, EVProperties.getApplicationProperties());
         }
+        this.requeststopwatch = new CloudWatchStopwatch("REQUEST");
+        this.requeststopwatch.addDimension("IP", HttpRequestUtil.getIP(this.getRequest()));
     }
 
     /**
@@ -137,8 +140,10 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
         // Use method from context object. This is for unit testing - override this method
         // have it do nothing!
         context.setSessionCookie();
-        if (this.requeststopwatch != null) {
-            this.requeststopwatch.stop("request." + this.getClass().getSimpleName() + "." + this.getContext().getEventName());
+        if (this.actionstopwatch != null) {
+            this.actionstopwatch.addDimension("Class", this.getClass().getSimpleName());
+            this.actionstopwatch.addDimension("Event", this.getContext().getEventName());
+            this.actionstopwatch.stop("ACTION");
         }
         // If SYSTEM_PT is present, delete session!
         /*
@@ -403,7 +408,16 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
         String appName = EVProperties.getProperty(EVProperties.APP_NAME);
         logentry.setAppName(appName);
 
+        // Set the help context - used on most Help URLs
+        String strRequestURI = context.getRequest().getRequestURI().toLowerCase();
+        if (strRequestURI.contains(".url")) {
+            strRequestURI = strRequestURI.substring(0, strRequestURI.indexOf("."));
+        }
+        strRequestURI = "help.context" + strRequestURI.replaceAll("/", ".");
+        setHelpcontext(EVProperties.getProperty(strRequestURI));
+        log4j.info("Help context set: " + helpcontext);
     }
+    
 
     @After(stages = LifecycleStage.RequestComplete)
     protected void finalizelog() {
@@ -420,6 +434,10 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
                 logentry.setResponseTime(System.currentTimeMillis());
                 logentry.enqueue();
             }
+        }
+        
+        if (this.requeststopwatch != null) {
+        	this.requeststopwatch.stop();
         }
     }
 
@@ -450,17 +468,6 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
      */
     public void setHelpcontext(String helpcontext) {
         this.helpcontext = helpcontext;
-    }
-
-    @Before(stages = LifecycleStage.BindingAndValidation)
-    public void setHelpcontext() {
-        String strRequestURI = context.getRequest().getRequestURI().toLowerCase();
-        if (strRequestURI.contains(".url")) {
-            strRequestURI = strRequestURI.substring(0, strRequestURI.indexOf("."));
-        }
-        strRequestURI = "help.context" + strRequestURI.replaceAll("/", ".");
-        setHelpcontext(EVProperties.getProperty(strRequestURI));
-        log4j.info("Help context set: " + helpcontext);
     }
 
     /**

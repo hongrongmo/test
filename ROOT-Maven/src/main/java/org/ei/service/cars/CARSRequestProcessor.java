@@ -65,7 +65,7 @@ public class CARSRequestProcessor {
 	public CARSResponse process(CARSRequest carsrequest, HttpServletRequest httprequest, HttpServletResponse httpresponse, UserSession usersession)
 			throws ServiceException {
 
-		Log4JStopWatch fullresponse = new Log4JStopWatch("CARSResponseFull." + carsrequest.getRequestType());
+		Log4JStopWatch stopwatch = new Log4JStopWatch("CARS." + carsrequest.getRequestType());
 
 		// Response object
 		CARSResponse carsresponse = null;
@@ -86,7 +86,6 @@ public class CARSRequestProcessor {
 		//
 		// Create the response
 		//
-		Log4JStopWatch stopwatch = new Log4JStopWatch("CARSResponseFull.buildResponse()");
 		carsresponse = buildResponse(carsrequest, httprequest);
 		stopwatch.stop();
 
@@ -101,7 +100,6 @@ public class CARSRequestProcessor {
 		// Iterate over mime list to add more info into CARSResponse. NOTE that
 		// this logic assumes the mime list comes in pairs!
 		//
-		stopwatch = new Log4JStopWatch("CARSResponseFull.processMimeList()");
 		for (int i = 0; i < mimelist.size(); i += 2) {
 
 			// Get 1st mime and see if current request is TERMINATE (only has
@@ -206,8 +204,6 @@ public class CARSRequestProcessor {
 		}
 
 		stopwatch.stop();
-		fullresponse.stop();
-
 		return carsresponse;
 	}
 
