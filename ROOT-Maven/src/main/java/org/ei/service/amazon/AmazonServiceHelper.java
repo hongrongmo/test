@@ -1,5 +1,7 @@
 package org.ei.service.amazon;
 
+import java.util.concurrent.TimeUnit;
+
 import org.apache.log4j.Logger;
 
 import com.amazonaws.ClientConfiguration;
@@ -82,4 +84,25 @@ public final class AmazonServiceHelper {
         return this.cloudwatchclient;
     }
 
+    public void shutdown() {
+    	// Shutdown SNS client
+    	try {
+    	if (this.snsclient != null) {
+    		this.snsclient.getExecutorService().shutdown();
+    		this.snsclient.getExecutorService().awaitTermination(10, TimeUnit.SECONDS);
+    	}
+    	} catch (InterruptedException e) {
+    		log4j.error("Unable to shutdown SNS client", e);
+    	}
+
+    	// Shutdown cloudwatch client
+    	try {
+    	if (this.cloudwatchclient != null) {
+    		this.cloudwatchclient.getExecutorService().shutdown();
+    		this.cloudwatchclient.getExecutorService().awaitTermination(10, TimeUnit.SECONDS);
+    	}
+    	} catch (InterruptedException e) {
+    		log4j.error("Unable to shutdown CloudWatch client", e);
+    	}
+}
 }
