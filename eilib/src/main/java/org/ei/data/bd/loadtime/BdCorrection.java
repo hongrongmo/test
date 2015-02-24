@@ -1,5 +1,6 @@
 package org.ei.data.bd.loadtime;
 
+import java.sql.Clob;
 import java.sql.*;
 import java.util.*;
 
