@@ -62,6 +62,9 @@ public final class DatabaseConfig {
 
 	public static final int CBF_ENDYEAR = 1969;
 	public static final int IBS_ENDYEAR = 1969;
+	
+	//HH 02/23/2015 DataCOrr Flag for DB connection other than connetionBroker
+	public static int DbCorrFlag = 0;
 
 	protected static Log log = LogFactory.getLog(DatabaseConfig.class);
 	private static Hashtable<String, String> dtName = new Hashtable<String, String>();

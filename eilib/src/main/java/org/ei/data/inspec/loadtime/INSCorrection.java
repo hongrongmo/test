@@ -7,6 +7,7 @@ package org.ei.data.inspec.loadtime;
 
 import java.sql.*;
 import java.util.*;
+
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
 import org.ei.data.*;
@@ -15,10 +16,12 @@ import org.ei.data.bd.loadtime.*;
 import org.ei.domain.*;
 import org.ei.query.base.*;
 import org.ei.connectionpool.*;
+
 import java.text.*;
 import java.io.*;
 import java.lang.Process;
 import java.util.regex.*;
+
 import org.ei.util.GUID;
 
 public class INSCorrection
@@ -1040,7 +1043,9 @@ public class INSCorrection
      */
     private List checkFast(HashMap inputMap, String searchField, String database) throws Exception
     {
-
+    	//HH 02/23/2015 set DataBaseConf.DbCorrFlag for local db connection othertan connectionBroker
+    	DatabaseConfig.DbCorrFlag = 1;
+    	
         List outputList = new ArrayList();
         DatabaseConfig databaseConfig = DatabaseConfig.getInstance(DriverConfig.getDriverTable());
         String[] credentials = new String[]{"CPX","PCH","CHM","GEO","GRF","ELT","INS"};
@@ -1112,6 +1117,9 @@ public class INSCorrection
 
         }
 
+      //HH 02/23/2015 Reset DataBaseConf.DbCorrFlag back to default
+      DatabaseConfig.DbCorrFlag = 0;
+      		
         return outputList;
 
     }
