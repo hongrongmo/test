@@ -65,7 +65,7 @@ public class CloudWatchMetricWriter {
 				putmetricdataRequest.setNamespace(this.namespace);
 
 				// Fire and forget!
-				AmazonServiceHelper.getInstance().getAmazonCloudWatchAsyncClient().putMetricData(putmetricdataRequest);
+				AmazonServiceHelper.getInstance().getAmazonCloudWatchAsyncClient().putMetricDataAsync(putmetricdataRequest);
 
 			}
 		}
