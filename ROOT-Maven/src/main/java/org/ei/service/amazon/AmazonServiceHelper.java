@@ -6,6 +6,7 @@ import com.amazonaws.ClientConfiguration;
 import com.amazonaws.auth.ClasspathPropertiesFileCredentialsProvider;
 import com.amazonaws.regions.Region;
 import com.amazonaws.regions.Regions;
+import com.amazonaws.services.cloudwatch.AmazonCloudWatchAsyncClient;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3Client;
@@ -24,6 +25,7 @@ public final class AmazonServiceHelper {
     private AmazonS3 s3service;
     private AmazonSimpleEmailServiceClient sesclient;
     private AmazonSNSAsyncClient snsclient;
+    private AmazonCloudWatchAsyncClient cloudwatchclient;
 
     private static int S3_CONN_TIMEOUT = 5 * 1000;     // 5 second timeout
     private static int S3_SOCK_TIMEOUT = 5 * 1000;     // 5 second timeout
@@ -53,6 +55,9 @@ public final class AmazonServiceHelper {
 
             log4j.info("Creating Amazon SNS client...");
             instance.snsclient = new AmazonSNSAsyncClient(new ClasspathPropertiesFileCredentialsProvider("/AwsCredentials.properties"));
+
+            log4j.info("Creating Amazon CloudWatch client...");
+            instance.cloudwatchclient = new AmazonCloudWatchAsyncClient(new ClasspathPropertiesFileCredentialsProvider("/AwsCredentials.properties"));
 	    }
 	    return instance;
 	}
@@ -71,6 +76,10 @@ public final class AmazonServiceHelper {
 
     public AmazonSNSAsyncClient getAmazonSNSAsyncClient() {
         return this.snsclient;
+    }
+
+    public AmazonCloudWatchAsyncClient getAmazonCloudWatchAsyncClient() {
+        return this.cloudwatchclient;
     }
 
 }
