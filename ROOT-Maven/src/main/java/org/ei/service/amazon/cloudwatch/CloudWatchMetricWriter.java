@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.SortedMap;
 
 import org.apache.commons.lang.StringUtils;
+import org.apache.log4j.Logger;
 import org.ei.config.ApplicationProperties;
 import org.ei.service.amazon.AmazonServiceHelper;
 import org.perf4j.GroupedTimingStatistics;
@@ -20,6 +21,8 @@ import com.amazonaws.services.cloudwatch.model.StandardUnit;
  * @author HaroveTM Writes metrics to CloudWatch
  */
 public class CloudWatchMetricWriter {
+	private static final Logger log4j = Logger.getLogger(CloudWatchMetricWriter.class);
+	
 	String namespace = "EV-WEB-METRICS-"
 			+ (StringUtils.isBlank(System.getProperty(ApplicationProperties.SYSTEM_ENVIRONMENT_RUNLEVEL)) ? "NOENVSET" : System.getProperty(ApplicationProperties.SYSTEM_ENVIRONMENT_RUNLEVEL).toUpperCase());
 
@@ -37,6 +40,7 @@ public class CloudWatchMetricWriter {
 	 * @param groupedTimingStatistics
 	 */
 	public void putMetrics(GroupedTimingStatistics groupedTimingStatistics) {
+		log4j.info("Outputting Grouped Timing Statitistics...");
 		if (groupedTimingStatistics == null) {
 			throw new RuntimeException("GroupedTimingStatistics are null!");
 		}
