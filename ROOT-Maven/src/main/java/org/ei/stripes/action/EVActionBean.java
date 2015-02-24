@@ -122,7 +122,7 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
         if (this.getContext() != null) {
             this.getContext().getRequest().setAttribute(EVProperties.REQUEST_ATTRIBUTE, EVProperties.getApplicationProperties());
         }
-        this.requeststopwatch = new Log4JStopWatch("REQUEST."+this.getClass().getSimpleName()+this.getContext().getEventName());
+        this.requeststopwatch = new Log4JStopWatch("REQUEST."+this.getClass().getSimpleName());
     }
 
     /**
@@ -407,6 +407,11 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
         strRequestURI = "help.context" + strRequestURI.replaceAll("/", ".");
         setHelpcontext(EVProperties.getProperty(strRequestURI));
         log4j.info("Help context set: " + helpcontext);
+        
+        // Add event to stopwatch
+        if (this.requeststopwatch != null) {
+        	this.requeststopwatch.lap(this.requeststopwatch.getTag() + "." + this.getContext().getEventName());
+        }
     }
     
 
