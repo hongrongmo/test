@@ -87,7 +87,6 @@ public class SessionBuilderInterceptor implements Interceptor {
         // Add the contact us link to the request for all JSPs
         request.setAttribute("contactuslink", EVProperties.getApplicationProperties().getProperty(ApplicationProperties.CONTACT_US_LINK));
 
-		stopwatch.setMessage("Section1").lap(stopwatch.getTag());
 		// *****************************************************
 		// Check for IP and Session Blocks
 		// *****************************************************
@@ -138,8 +137,6 @@ public class SessionBuilderInterceptor implements Interceptor {
             return ((LogoutAction)actionbean).process();
         }
 
-		stopwatch.setMessage("Section2").lap(stopwatch.getTag());
-
 		// ****************************************************
 		// Now attempt to build a session!
 		// ****************************************************
@@ -177,8 +174,6 @@ public class SessionBuilderInterceptor implements Interceptor {
 					+ "=======Host======="
 					+ request.getRemoteHost());
 		}
-
-		stopwatch.setMessage("Section3").lap(stopwatch.getTag());
 
         // Scan request for "backurl"
         BackUrlAction.scan(request);

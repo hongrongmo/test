@@ -24,6 +24,7 @@ import org.ei.domain.DatabaseConfigException;
 import org.ei.domain.DriverConfig;
 import org.ei.domain.HelpLinksCache;
 import org.ei.exception.ServiceException;
+import org.ei.service.amazon.AmazonServiceHelper;
 import org.ei.session.SessionManager;
 import org.ei.stripes.exception.EVExceptionHandler;
 
@@ -344,6 +345,9 @@ public class EVInitializationListener implements ServletContextListener {
         } catch (Throwable t) {
             log4j.error("Unable to shutdown memcached client", t);
         }
+        
+        // Shutdown AWS services
+        AmazonServiceHelper.getInstance().shutdown();
 	}
 
 }

@@ -45,90 +45,16 @@
           the default of 30000 ms
         -->
         <param name="TimeSlice" value="10000"/>
-        <appender-ref ref="perfStatsFileAppender"/>
-        <!--
-          Note how the GraphingStatisticsAppenders have been attached to the
-          CoalescingStatistics here.
-        -->
-        <appender-ref ref="graphSearchDisplayExecutionTimes"/>
-        <appender-ref ref="graphSearchResultsDisplayExecutionTimes"/>
-        <appender-ref ref="graphInterceptorExecutionTimes"/>
-        <appender-ref ref="graphCARSExecutionTimes"/>
-    </appender>
-
-    <!-- This file appender is used to output aggregated performance statistics -->
-    <appender name="perfStatsFileAppender" class="org.apache.log4j.RollingFileAppender">
-        <param name="File" value="${catalina.base}/logs/perfStats.log"/>
-        <param name="MaxBackupIndex" value="1"/>
-        <param name="MaxFileSize" value="100MB" />
-        <layout class="org.apache.log4j.PatternLayout">
-            <param name="ConversionPattern" value="%m%n"/>
-        </layout>
+        <param name="CreateRollupStatistics" value="true"/>
+        <appender-ref ref="cloudwatchStatisticsAppender"/>
     </appender>
 
     <!--
-      Mean execution times for Interceptors
+      Appender to write to AWS CloudWatch
     -->
-    <appender name="graphInterceptorExecutionTimes"
-              class="org.perf4j.log4j.GraphingStatisticsAppender">
-        <!-- Possible GraphTypes are Mean, Min, Max, StdDev, Count and TPS -->
-        <param name="GraphType" value="Mean"/>
-        <param name="DataPointsPerGraph" value="180"/>
-        <!-- The tags of the timed execution blocks to graph are specified here -->
-        <param name="TagNamesToGraph" value="Interceptor.SessionBuilder, Interceptor.Auth, Interceptor.DataRequest, Interceptor.LegacyRedirect, Interceptor.ErrorMessage"/>
-        <appender-ref ref="graphsFileAppender"/>
+    <appender name="cloudwatchStatisticsAppender" class="org.ei.service.amazon.cloudwatch.CloudWatchAppender">
     </appender>
 
-    <!--
-      Mean execution times for CARS requests
-    -->
-    <appender name="graphCARSExecutionTimes"
-              class="org.perf4j.log4j.GraphingStatisticsAppender">
-        <!-- Possible GraphTypes are Mean, Min, Max, StdDev, Count and TPS -->
-        <param name="GraphType" value="Mean"/>
-        <param name="DataPointsPerGraph" value="180"/>
-        <!-- The tags of the timed execution blocks to graph are specified here -->
-        <param name="TagNamesToGraph" value="CARSResponseFull.URLBASED,CARSResponseFull.TERMINATE,CARSResponseFull.AUTHENTICATE,CARSResponseFull.IPAUTHENTICATE,CARSResponseFull.LOGINFULL,CARSResponseFull.PROFILEDISPLAY,CARSResponseFull.BULKAUTHENTICATE,CARSResponseFull.REGISTER"/>
-        <appender-ref ref="graphsFileAppender"/>
-    </appender>
-
-    <!--
-      Mean execution times for search forms and submit
-    -->
-    <appender name="graphSearchDisplayExecutionTimes"
-              class="org.perf4j.log4j.GraphingStatisticsAppender">
-        <!-- Possible GraphTypes are Mean, Min, Max, StdDev, Count and TPS -->
-        <param name="GraphType" value="Mean"/>
-        <param name="DataPointsPerGraph" value="180"/>
-        <!-- The tags of the timed execution blocks to graph are specified here -->
-        <param name="TagNamesToGraph" value="request.SearchDisplayAction.quick, request.SearchDisplayAction.expert, request.ThesaurusSearchAction.thesHome, request.ThesaurusSearchAction.submit, request.SearchDisplayAction.submit, request.SearchDisplayAction.widgetSubmit"/>
-        <appender-ref ref="graphsFileAppender"/>
-    </appender>
-
-    <!--
-      Mean execution times for search results
-    -->
-    <appender name="graphSearchResultsDisplayExecutionTimes"
-              class="org.perf4j.log4j.GraphingStatisticsAppender">
-        <!-- Possible GraphTypes are Mean, Min, Max, StdDev, Count and TPS -->
-        <param name="GraphType" value="Mean"/>
-        <!-- The tags of the timed execution blocks to graph are specified here -->
-        <param name="TagNamesToGraph" value="request.SearchResultsAction.quick, request.SearchResultsAction.expert, request.SearchResultsAction.thes, request.SearchResultsAction.dedup, request.SearchResultsAction.combine"/>
-        <appender-ref ref="graphsFileAppender"/>
-    </appender>
-
-    <!--
-      This file appender is used to output the graph URLs generated
-      by the GraphingStatisticsAppenders
-    -->
-    <appender name="graphsFileAppender" class="org.apache.log4j.RollingFileAppender">
-        <param name="MaxBackupIndex" value="1"/>
-        <param name="File" value="${catalina.base}/logs/perfGraphs.log"/>
-        <param name="MaxFileSize" value="100MB" />
-        <layout class="org.apache.log4j.PatternLayout">
-            <param name="ConversionPattern" value="%m%n"/>
-        </layout>
-    </appender>
 
     <!-- Loggers -->
     <!--

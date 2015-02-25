@@ -36,7 +36,6 @@ import org.ei.session.UserSession;
 import org.ei.stripes.EVActionBeanContext;
 import org.ei.stripes.util.HttpRequestUtil;
 import org.ei.stripes.view.CustomizedLogo;
-import org.perf4j.StopWatch;
 import org.perf4j.log4j.Log4JStopWatch;
 
 public abstract class EVActionBean implements ActionBean, ISecuredAction {
@@ -68,7 +67,7 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
     private String s3FigUrl = null;
     
    	private boolean showLoginBox = true;
-    private StopWatch requeststopwatch = null;
+    private Log4JStopWatch requeststopwatch = null;
 
     @Validate(mask = "-{0,1}\\d*")
     protected int errorCode = SystemErrorCodes.INIT;
@@ -113,17 +112,13 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
         return starttime.getTime();
     }
 
-    @Before(stages = LifecycleStage.HandlerResolution)
-    private void setTimestamp() {
-        starttime = new Date();
-        this.requeststopwatch = new Log4JStopWatch();
-    }
-
     @After(stages = LifecycleStage.ActionBeanResolution)
-    private void init() {
+    private void parentAfterActionBeanResolution() {
+        starttime = new Date();
         if (this.getContext() != null) {
             this.getContext().getRequest().setAttribute(EVProperties.REQUEST_ATTRIBUTE, EVProperties.getApplicationProperties());
         }
+        this.requeststopwatch = new Log4JStopWatch("REQUEST."+this.getClass().getSimpleName());
     }
 
     /**
@@ -133,13 +128,10 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
      * updated then the version number will have changed. This signals other JVMs that their SessionCache object is out-of-date and needs to be updated.
      */
     @After(stages = LifecycleStage.EventHandling)
-    public void setSessionCookie() {
+    public void parentAfterEventHandling() {
         // Use method from context object. This is for unit testing - override this method
         // have it do nothing!
         context.setSessionCookie();
-        if (this.requeststopwatch != null) {
-            this.requeststopwatch.stop("request." + this.getClass().getSimpleName() + "." + this.getContext().getEventName());
-        }
         // If SYSTEM_PT is present, delete session!
         /*
          * HttpServletRequest request = context.getRequest(); if (request != null &&
@@ -147,6 +139,56 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
          * EVSessionListener.cleanSessionTables(context.getUserSession().getSessionID().getID()); } catch (Exception e) {
          * log4j.error("Unable to clean up 'fake' SYSTEM_PT session", e); } }
          */
+    }
+
+    /**
+     * The next 2 methods work together to produce Usage logging. The startlog() method will set the current time for the start and finalizelog() will set then
+     * ending time and enqueue to the Logger.
+     *
+     */
+    @After(stages = LifecycleStage.BindingAndValidation)
+    protected void parentAfterBindingAndValidation() {
+        LogEntry logentry = this.context.getLogEntry();
+        logentry.addHttpData(this.context.getRequest());
+        String appName = EVProperties.getProperty(EVProperties.APP_NAME);
+        logentry.setAppName(appName);
+
+        // Set the help context - used on most Help URLs
+        String strRequestURI = context.getRequest().getRequestURI().toLowerCase();
+        if (strRequestURI.contains(".url")) {
+            strRequestURI = strRequestURI.substring(0, strRequestURI.indexOf("."));
+        }
+        strRequestURI = "help.context" + strRequestURI.replaceAll("/", ".");
+        setHelpcontext(EVProperties.getProperty(strRequestURI));
+        log4j.info("Help context set: " + helpcontext);
+        
+        // Add event to stopwatch
+        if (this.requeststopwatch != null) {
+        	this.requeststopwatch.lap(this.requeststopwatch.getTag() + "." + this.getContext().getEventName());
+        }
+    }
+    
+
+    @After(stages = LifecycleStage.RequestComplete)
+    protected void parentRequestComplete() {
+        LogEntry logentry = this.context.getLogEntry();
+        UserSession usersession = this.context.getUserSession();
+        // Ensure usersession is not null! This can happen on redirects from
+        // legacy URLs to new URLs. No need to log those!
+        if (logentry != null && usersession != null) {
+            // TMH - 09/16/13 only log usage when there is a valid customer. Un-authenticated
+            // requests were filling up usage DB table with info
+            IEVWebUser user = usersession.getUser();
+            if (user != null && user.isCustomer()) {
+                logentry.addUserSession(this.context.getUserSession());
+                logentry.setResponseTime(System.currentTimeMillis());
+                logentry.enqueue();
+            }
+        }
+        
+        if (this.requeststopwatch != null) {
+        	this.requeststopwatch.stop();
+        }
     }
 
     /**
@@ -392,38 +434,6 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
     }
 
     /**
-     * The next 2 methods work together to produce Usage logging. The startlog() method will set the current time for the start and finalizelog() will set then
-     * ending time and enqueue to the Logger.
-     *
-     */
-    @After(stages = LifecycleStage.BindingAndValidation)
-    protected void startlog() {
-        LogEntry logentry = this.context.getLogEntry();
-        logentry.addHttpData(this.context.getRequest());
-        String appName = EVProperties.getProperty(EVProperties.APP_NAME);
-        logentry.setAppName(appName);
-
-    }
-
-    @After(stages = LifecycleStage.RequestComplete)
-    protected void finalizelog() {
-        LogEntry logentry = this.context.getLogEntry();
-        UserSession usersession = this.context.getUserSession();
-        // Ensure usersession is not null! This can happen on redirects from
-        // legacy URLs to new URLs. No need to log those!
-        if (logentry != null && usersession != null) {
-            // TMH - 09/16/13 only log usage when there is a valid customer. Un-authenticated
-            // requests were filling up usage DB table with info
-            IEVWebUser user = usersession.getUser();
-            if (user != null && user.isCustomer()) {
-                logentry.addUserSession(this.context.getUserSession());
-                logentry.setResponseTime(System.currentTimeMillis());
-                logentry.enqueue();
-            }
-        }
-    }
-
-    /**
      * Return the base help URL
      *
      * @return
@@ -450,17 +460,6 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
      */
     public void setHelpcontext(String helpcontext) {
         this.helpcontext = helpcontext;
-    }
-
-    @Before(stages = LifecycleStage.BindingAndValidation)
-    public void setHelpcontext() {
-        String strRequestURI = context.getRequest().getRequestURI().toLowerCase();
-        if (strRequestURI.contains(".url")) {
-            strRequestURI = strRequestURI.substring(0, strRequestURI.indexOf("."));
-        }
-        strRequestURI = "help.context" + strRequestURI.replaceAll("/", ".");
-        setHelpcontext(EVProperties.getProperty(strRequestURI));
-        log4j.info("Help context set: " + helpcontext);
     }
 
     /**
