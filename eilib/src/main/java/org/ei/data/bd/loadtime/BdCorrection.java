@@ -48,6 +48,7 @@ public class BdCorrection
     static String tempTable="bd_correction_temp";
     static String lookupTable="deleted_lookupIndex";
     static String backupTable="bd_temp_backup";
+	static String referenceTable="bd_reference_temp";
     static String sqlldrFileName="correctionFileLoader.sh";
     public static final String AUDELIMITER = new String(new char[] {30});
     public static final String IDDELIMITER = new String(new char[] {31});
@@ -156,6 +157,10 @@ public class BdCorrection
                 if(tableName.length>2)
                 {
                         backupTable=tableName[2];
+                }
+				if(tableName.length>3)
+				{
+				        referenceTable=tableName[3];
                 }
             }
 
@@ -586,7 +591,7 @@ public class BdCorrection
 
             if(action != null && action.equalsIgnoreCase("update"))
             {
-                System.out.println("updateNumber= "+updateNumber+" fileName= "+fileName+" database= "+database);
+                //System.out.println("updateNumber= "+updateNumber+" fileName= "+fileName+" database= "+database);
                 if(test)
                 {
                     System.out.println("begin to execute stored procedure update_bd_temp_table");
@@ -612,6 +617,19 @@ public class BdCorrection
                 pstmt.setInt(1,updateNumber);
                 pstmt.setString(2,database);
                 pstmt.executeUpdate();
+
+				if(test)
+				{
+					System.out.println("begin to execute stored procedure update_bd_reference_table");
+					System.out.println("press enter to continue");
+					System.in.read();
+					Thread.currentThread().sleep(1000);
+				}
+				pstmt = con.prepareCall("{ call update_bd_reference_table(?,?)}");
+				pstmt.setInt(1,updateNumber);
+				pstmt.setString(2,database);
+                pstmt.executeUpdate();
+
             }
             else if(action != null && action.equalsIgnoreCase("aip"))
             {
@@ -639,6 +657,18 @@ public class BdCorrection
                 pstmt.setInt(1,updateNumber);
                 pstmt.setString(2,database);
                 pstmt.executeUpdate();
+
+				if(test)
+				{
+					System.out.println("begin to execute stored procedure update_bd_reference_table");
+					System.out.println("press enter to continue");
+					System.in.read();
+					Thread.currentThread().sleep(1000);
+				}
+				pstmt = con.prepareCall("{ call update_bd_reference_table(?,?)}");
+				pstmt.setInt(1,updateNumber);
+				pstmt.setString(2,database);
+                pstmt.executeUpdate();
             }
             else if(action != null && action.equalsIgnoreCase("delete"))
             {
@@ -653,6 +683,18 @@ public class BdCorrection
                 pstmt.setInt(1,updateNumber);
                 pstmt.setString(2,fileName);
                 pstmt.setString(3,database);
+                pstmt.executeUpdate();
+
+				if(test)
+				{
+					System.out.println("begin to execute stored procedure delete_bd_reference_table");
+					System.out.println("press enter to continue");
+					System.in.read();
+					Thread.currentThread().sleep(1000);
+				}
+				pstmt = con.prepareCall("{ call delete_bd_reference_table(?,?)}");
+				pstmt.setInt(1,updateNumber);
+				pstmt.setString(2,database);
                 pstmt.executeUpdate();
             }
             else
@@ -772,6 +814,12 @@ public class BdCorrection
                 {
                     this.backupTable=tableName[i];
                     System.out.println("truncate backup table "+this.backupTable);
+                }
+
+				if(i==3)
+				{
+					this.referenceTable=tableName[i];
+					System.out.println("truncate reference table "+this.referenceTable);
                 }
 
                 stmt.executeUpdate("truncate table "+tableName[i]);
