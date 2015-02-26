@@ -189,8 +189,8 @@ public class FastSearchControl implements SearchControl {
 			client.setPrimarySortDirection(getSortDirection(sortOption));
 		}
 
-		// try {
-		log4j.info("Calling Fast search, URL='" + BASE_URL + "', query='" + fastSearchString + "', offset='" + offset + "'");
+		//comment out for dataloading
+		//log4j.info("Calling Fast search, URL='" + BASE_URL + "', query='" + fastSearchString + "', offset='" + offset + "'");
 		client.search();
 		/*
 		 * } catch (SearchQueryCompilationException e) {
