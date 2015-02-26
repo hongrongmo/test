@@ -38,7 +38,7 @@ public class BaseTableWriter
 		out = new PrintWriter(new FileWriter(filename));
 		referenceOut = new PrintWriter(new FileWriter("Reference_"+filename));
 		System.out.println("Output Filename "+filename);
-		System.out.println("Reference Output Filename "+filename);
+		System.out.println("Reference Output Filename Reference_"+filename);
 		open = true;
 	}
 
