@@ -14,7 +14,6 @@ import javax.servlet.http.HttpServletRequest;
 import net.sourceforge.stripes.action.ActionBean;
 import net.sourceforge.stripes.action.ActionBeanContext;
 import net.sourceforge.stripes.action.After;
-import net.sourceforge.stripes.action.Before;
 import net.sourceforge.stripes.action.RedirectResolution;
 import net.sourceforge.stripes.action.Resolution;
 import net.sourceforge.stripes.controller.LifecycleStage;
@@ -32,10 +31,12 @@ import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
 import org.ei.controller.logging.LogEntry;
 import org.ei.exception.SystemErrorCodes;
+import org.ei.session.AWSInfo;
 import org.ei.session.UserSession;
 import org.ei.stripes.EVActionBeanContext;
 import org.ei.stripes.util.HttpRequestUtil;
 import org.ei.stripes.view.CustomizedLogo;
+import org.ei.web.analytics.GoogleWebAnalyticsEvent;
 import org.perf4j.log4j.Log4JStopWatch;
 
 public abstract class EVActionBean implements ActionBean, ISecuredAction {
@@ -676,8 +677,8 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
         webEvent.setCategory(cat);
         webEvent.setAction(action);
         webEvent.setLabel(label);
-        addWebEvent(webEvent);
-
+        //addWebEvent(webEvent);
+        webEvent.recordRemoteEvent(context);
         return webEvent;
 
     }
@@ -688,37 +689,16 @@ public abstract class EVActionBean implements ActionBean, ISecuredAction {
      * @param webEvent
      */
     protected void addWebEvent(GoogleWebAnalyticsEvent webEvent) {
-        ArrayList<GoogleWebAnalyticsEvent> eventList = (ArrayList<GoogleWebAnalyticsEvent>) context.getRequest().getAttribute(
-            WebAnalyticsEventProperties.WEB_EVENT_REQUEST_NAME);
-
-        if (eventList == null) {
-            eventList = new ArrayList<GoogleWebAnalyticsEvent>();
-        }
-
-        eventList.add(webEvent);
-
-        context.getRequest().setAttribute(WebAnalyticsEventProperties.WEB_EVENT_REQUEST_NAME, eventList);
+       webEvent.recordRemoteEvent(context);
     }
-
-    /**
-     * append a list of events to the current event list.
-     *
-     * @param webEvents
-     */
-    protected void appendWebEventList(List<GoogleWebAnalyticsEvent> webEvents) {
-        List<GoogleWebAnalyticsEvent> eventList = (List<GoogleWebAnalyticsEvent>) context.getRequest().getAttribute(
-            WebAnalyticsEventProperties.WEB_EVENT_REQUEST_NAME);
-
-        if (eventList == null) {
-            eventList = new ArrayList<GoogleWebAnalyticsEvent>();
-        }
-
-        eventList.addAll(webEvents);
-
-        context.getRequest().setAttribute(WebAnalyticsEventProperties.WEB_EVENT_REQUEST_NAME, eventList);
+ 
+    public String getInstanceid(){
+    	String awsInfo = new AWSInfo().getEc2Id();
+    	if(GenericValidator.isBlankOrNull(awsInfo)){
+    		return "local";
+    	}
+    	return awsInfo;
     }
-
-    
 
     public String getBaseaddress() {
         return context.getRequest().getServerName();

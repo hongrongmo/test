@@ -5,9 +5,7 @@ import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.text.ParseException;
-import java.util.ArrayList;
 import java.util.Enumeration;
-import java.util.List;
 import java.util.StringTokenizer;
 
 import javax.servlet.ServletException;
@@ -45,7 +43,6 @@ import org.ei.exception.SystemErrorCodes;
 import org.ei.session.UserSession;
 import org.ei.stripes.action.ControllerRequestHelper;
 import org.ei.stripes.action.EVPathUrl;
-import org.ei.stripes.action.GoogleWebAnalyticsEvent;
 import org.ei.stripes.action.WebAnalyticsEventProperties;
 import org.ei.stripes.adapter.GenericAdapter;
 import org.ei.stripes.adapter.IBizBean;
@@ -53,6 +50,8 @@ import org.ei.stripes.adapter.IBizXmlAdapter;
 import org.ei.stripes.view.SearchResult;
 import org.ei.stripes.view.SearchResultNavigator;
 import org.ei.tags.TagBubble;
+import org.ei.web.analytics.GoogleWebAnalyticsEvent;
+
 
 /**
  * This is the base class for the search results handling.
@@ -147,7 +146,7 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 
 	@After(stages = LifecycleStage.EventHandling)
 	private void stopPerformance() {
-		addWebEvent(webEvent);
+		webEvent.recordRemoteEvent(context);
 	}
 
 	@After(stages = LifecycleStage.RequestComplete)
@@ -189,7 +188,7 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 			setSearchid(getRequest().getParameter("SEARCHID"));
 			qObj = Searches.getSearch(getRequest().getParameter("SEARCHID"));
 			if (qObj != null) {
-				appendWebEventList(createQueryEventList(qObj));
+				createQueryEventList(qObj);
 			}
 		}
 		
@@ -312,11 +311,11 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 	 * @param query
 	 * @return
 	 */
-	protected List<GoogleWebAnalyticsEvent> createQueryEventList(Query query) {
+	protected void createQueryEventList(Query query) {
 	    if (query == null) {
 
 	    }
-        List<GoogleWebAnalyticsEvent> eventList = new ArrayList<GoogleWebAnalyticsEvent>();
+        
         GoogleWebAnalyticsEvent theEvent = null;
 
         String sDocType = query.getDocumentType();
@@ -325,7 +324,7 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
             theEvent.setCategory(WebAnalyticsEventProperties.CAT_LIMIT_TO);
             theEvent.setAction(WebAnalyticsEventProperties.ACTION_DOC_TYPE);
             theEvent.setLabel(sDocType);
-            eventList.add(theEvent);
+            theEvent.recordRemoteEvent(context);
         }
         String sTreatmentType = query.getTreatmentType();
         if (!GenericValidator.isBlankOrNull(sTreatmentType) && !(sTreatmentType.equals("NO-LIMIT"))) {
@@ -333,7 +332,7 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
             theEvent.setCategory(WebAnalyticsEventProperties.CAT_LIMIT_TO);
             theEvent.setAction(WebAnalyticsEventProperties.ACTION_TREAT_TYPE);
             theEvent.setLabel(sTreatmentType);
-            eventList.add(theEvent);
+            theEvent.recordRemoteEvent(context);
         }
         String sDisciplineType = query.getDisciplineType();
         if (!GenericValidator.isBlankOrNull(sDisciplineType) && !(sDisciplineType.equals("NO-LIMIT"))) {
@@ -341,7 +340,7 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
             theEvent.setCategory(WebAnalyticsEventProperties.CAT_LIMIT_TO);
             theEvent.setAction(WebAnalyticsEventProperties.ACTION_DISC_TYPE);
             theEvent.setLabel(sDisciplineType);
-            eventList.add(theEvent);
+            theEvent.recordRemoteEvent(context);
 
         }
         String sLanguage = query.getLanguage();
@@ -350,7 +349,7 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
             theEvent.setCategory(WebAnalyticsEventProperties.CAT_LIMIT_TO);
             theEvent.setAction(WebAnalyticsEventProperties.ACTION_LANG_TYPE);
             theEvent.setLabel(sLanguage);
-            eventList.add(theEvent);
+            theEvent.recordRemoteEvent(context);
 
         }
         String sLastFourUpdates = query.getLastFourUpdates();
@@ -359,23 +358,22 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
             theEvent.setCategory(WebAnalyticsEventProperties.CAT_LIMIT_TO);
             theEvent.setAction(WebAnalyticsEventProperties.ACTION_UPDATES);
             theEvent.setLabel(sLastFourUpdates);
-            eventList.add(theEvent);
+            theEvent.recordRemoteEvent(context);
         }
         if (Sort.PUB_YEAR_FIELD.equals(query.getSortOption().getSortField())) {
             theEvent = new GoogleWebAnalyticsEvent();
             theEvent.setCategory(WebAnalyticsEventProperties.CAT_SORT_BY);
             theEvent.setAction(WebAnalyticsEventProperties.ACTION_PUB_YEAR);
-            eventList.add(theEvent);
+            theEvent.recordRemoteEvent(context);
         }
         String sAutoStemming = query.getAutoStemming();
         if (!GenericValidator.isBlankOrNull(sAutoStemming) && sAutoStemming.equalsIgnoreCase(Query.OFF)) {
             theEvent = new GoogleWebAnalyticsEvent();
             theEvent.setCategory(WebAnalyticsEventProperties.CAT_SORT_BY);
             theEvent.setAction(WebAnalyticsEventProperties.ACTION_AUTO_STEM_OFF);
-            eventList.add(theEvent);
+            theEvent.recordRemoteEvent(context);
         }
 
-        return eventList;
     }
 
 	/**
@@ -394,7 +392,7 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 
 		setRoom(ROOM.search);
 		setBasketCount(getUserBasketCount());
-
+		webEvent.setCategory(WebAnalyticsEventProperties.CAT_SEARCH_RESULT);
 		webEvent.setAction(WebAnalyticsEventProperties.ACTION_QUICK_SEARCH_RES);
 		//
 		// If "error" is present, an error has been added from the
@@ -431,6 +429,7 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 
         setRoom(ROOM.search);
 		setBasketCount(getUserBasketCount());
+		webEvent.setCategory(WebAnalyticsEventProperties.CAT_SEARCH_RESULT);
 		webEvent.setAction(WebAnalyticsEventProperties.ACTION_EXPERT_SEARCH_RES);
 		//
 		// If "error" is present, an error has been added from the

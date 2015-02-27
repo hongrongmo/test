@@ -10,6 +10,8 @@ public class WebAnalyticsEventProperties {
 	public static final String CAT_LIMIT_TO = "Limit To";
 	public static final String CAT_SORT_BY = "Sort By";
 	public static final String CAT_HOME = "Home";
+	public static final String CAT_LOGIN = "Login";
+	public static final String CAT_LOGOUT = "Logout";
 
 	public static final String ACTION_WELCOME = "Welcome";
 	
@@ -35,7 +37,9 @@ public class WebAnalyticsEventProperties {
 	public static final String ACTION_PUB_YEAR = "Publication Year";
 	public static final String ACTION_AUTO_STEM_OFF = "Autostemming Off";
 	public static final String ACTION_SEARCH_WIDGET = "Search Widget";
-
+	public static final String ACTION_LOGIN_USRPWD = "Username Password";
+	public static final String ACTION_LOGIN_PATHCHOICE = "Path Choice";
+	public static final String ACTION_LOGIN_URLBASED = "URL Based";
 
 
 	public static final String ACTION_ABS_RECORD = "Abstract Record Page";

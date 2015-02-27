@@ -24,9 +24,11 @@ import org.ei.session.UserSession;
 import org.ei.stripes.action.BackUrlAction;
 import org.ei.stripes.action.CaptchaAction;
 import org.ei.stripes.action.EVActionBean;
+import org.ei.stripes.action.WebAnalyticsEventProperties;
 import org.ei.stripes.action.personalaccount.LogoutAction;
 import org.ei.stripes.exception.EVExceptionHandler;
 import org.ei.stripes.util.HttpRequestUtil;
+import org.ei.web.analytics.GoogleWebAnalyticsEvent;
 import org.ei.web.util.RequestDumper;
 import org.perf4j.log4j.Log4JStopWatch;
 
@@ -133,9 +135,7 @@ public class SessionBuilderInterceptor implements Interceptor {
 
 		if (actionbean == null) {
 			throw new RuntimeException("No ActionBean is attached to request!");
-		} else if (actionbean instanceof LogoutAction) {
-            return ((LogoutAction)actionbean).process();
-        }
+		}
 
 		// ****************************************************
 		// Now attempt to build a session!
@@ -144,7 +144,9 @@ public class SessionBuilderInterceptor implements Interceptor {
 		UserSession usersession = sessionmanager.getUserSession();
 
         context.setUserSession(usersession);
-
+        if (actionbean instanceof LogoutAction) {
+            return ((LogoutAction)actionbean).process();
+        }
 		// See if the session has expired
 //		if (usersession.getStatus().equals(SessionStatus.NEW_HAD_EXPIRED)) {
 //            String path = request.getRequestURI();
