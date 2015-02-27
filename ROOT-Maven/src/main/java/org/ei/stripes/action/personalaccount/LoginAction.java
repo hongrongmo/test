@@ -32,8 +32,10 @@ import org.ei.service.cars.RESTRequestParameters;
 import org.ei.service.cars.Impl.CARSResponse;
 import org.ei.session.SessionManager;
 import org.ei.session.UserSession;
+import org.ei.stripes.action.WebAnalyticsEventProperties;
 import org.ei.stripes.action.lindahall.LindaHallAuthAction;
 import org.ei.stripes.util.HttpRequestUtil;
+import org.ei.web.analytics.GoogleWebAnalyticsEvent;
 
 import com.elsevier.webservices.schemas.csas.constants.types.v7.AllowedRegistrationType;
 
@@ -74,17 +76,22 @@ public class LoginAction extends CARSActionBean {
         UserSession usersession = context.getUserSession();
         SessionManager sessionmanager = new SessionManager(context.getRequest(), context.getResponse());
         CARSResponse carsresponse = null; //context.getCarsResponse();
-
+        GoogleWebAnalyticsEvent loginEvent = null; 
+        String auth_type = context.getRequest().getParameter("auth_type");
+        if(GenericValidator.isBlankOrNull(auth_type)){
+        	auth_type = "NO AUTH TYPE";
+        }
         // Call CARS with current authentication info.  Remember that this
         // can be ID/PW, self-manra, path choice, etc.
         try {
             log4j.info("Authenticating user...");
+
             usersession = sessionmanager.authenticateUser(context);
             carsresponse = context.getCarsResponse();
         } catch (Exception e) {
             throw new ServletException("Unable to authenticate user!", e);
         }
-
+        
         //
         // If there is an authentication error and the type is NO_ACTIVE_PATHS
         // This is a special case that happens when a user is OUTSIDE of their
@@ -110,6 +117,8 @@ public class LoginAction extends CARSActionBean {
             if (!GenericValidator.isBlankOrNull(carsresponse.getRedirectURL())) {
                 context.getUserSession().setNextUrl(carsresponse.getRedirectURL());
             }
+        	loginEvent = new GoogleWebAnalyticsEvent(WebAnalyticsEventProperties.CAT_LOGIN,auth_type,WebAnalyticsEventProperties.ACTION_LOGIN_PATHCHOICE);
+        	loginEvent.recordRemoteEvent(context);
             // Just process this request if it's path choice.  Man how I hate this screen!!!
             return super.getResolution();
         }
@@ -124,6 +133,9 @@ public class LoginAction extends CARSActionBean {
             }
             usersession.getUser().setUserPrefs(userprefs);
             context.updateUserSession(usersession);
+           	loginEvent = new GoogleWebAnalyticsEvent(WebAnalyticsEventProperties.CAT_LOGIN,auth_type,usersession.getUser().getAccount().getAccountName());
+           	loginEvent.recordRemoteEvent(context);
+            
         }
 
         // Redirects can happen for 3rd party auth systems

@@ -61,11 +61,11 @@ import org.ei.session.UserPreferences;
 import org.ei.session.UserSession;
 import org.ei.stripes.action.ControllerRequestHelper;
 import org.ei.stripes.action.EVPathUrl;
-import org.ei.stripes.action.GoogleWebAnalyticsEvent;
 import org.ei.stripes.action.WebAnalyticsEventProperties;
 import org.ei.stripes.exception.EVExceptionHandler;
 import org.ei.stripes.util.DatabaseSelector;
 import org.ei.stripes.view.EbookSearchFormItem;
+import org.ei.web.analytics.GoogleWebAnalyticsEvent;
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.input.SAXBuilder;
@@ -240,7 +240,7 @@ public class SearchDisplayAction extends BaseSearchAction implements ValidationE
         userSession.setRecordsPerPage(Integer.toString(userSession.getUser().getUserPrefs().getResultsPerPage()));
         context.updateUserSession(userSession);
         // set the web analytics event on the request for the jsp to injest.
-        addWebEvent(webEvent);
+        webEvent.recordRemoteEvent(context);
         // Common to all search forms - set the More Search Sources contents
         moresourceslinks = moresearchsources.getMoreSearchSources(user.getCartridge(), sessionid, context);
 

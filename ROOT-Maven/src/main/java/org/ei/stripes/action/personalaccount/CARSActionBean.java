@@ -28,7 +28,9 @@ import org.ei.session.UserSession;
 import org.ei.stripes.EVActionBeanContext;
 import org.ei.stripes.action.EVActionBean;
 import org.ei.stripes.action.SystemMessage;
+import org.ei.stripes.action.WebAnalyticsEventProperties;
 import org.ei.stripes.exception.EVExceptionHandler;
+import org.ei.web.analytics.GoogleWebAnalyticsEvent;
 
 @UrlBinding("/customer/{$event}.url")
 public class CARSActionBean extends EVActionBean {
@@ -67,10 +69,18 @@ public class CARSActionBean extends EVActionBean {
         CARSResponse carsresponse = null;
         try {
             CARSRequest carsReq = null;
-                carsReq = CARSRequestFactory.buildCARSRequest(this.requesttype, request, userSession);
+            carsReq = CARSRequestFactory.buildCARSRequest(this.requesttype, request, userSession);
+            
             carsrequestprocessor = new CARSRequestProcessor();
             carsresponse = carsrequestprocessor.process(carsReq, request, response, userSession);
             context.setCarsResponse(carsresponse);
+            if(carsReq != null && carsReq.getRequestURI().indexOf("authenticate") >= 0
+            							&& CARSRequestType.URLBASED == this.requesttype){
+            	//if this is an authenticate method and doesn't map to the login action then we should log it
+            	//this would be used for things like self manra requests
+            	GoogleWebAnalyticsEvent webEvent = new GoogleWebAnalyticsEvent(WebAnalyticsEventProperties.CAT_LOGIN, WebAnalyticsEventProperties.ACTION_LOGIN_URLBASED,carsReq.getRequestURI());
+            	webEvent.recordRemoteEvent(context);
+            }
             /*
             if (!CARSResponseStatus.OK.equals(carsresponse.getResponseStatus())) {
                 return SystemMessage.SYSTEM_ERROR_RESOLUTION;
