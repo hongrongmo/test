@@ -5,9 +5,7 @@ import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.text.ParseException;
-import java.util.ArrayList;
 import java.util.Enumeration;
-import java.util.List;
 import java.util.StringTokenizer;
 
 import javax.servlet.ServletException;
@@ -30,7 +28,6 @@ import org.apache.log4j.Logger;
 import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
 import org.ei.config.JSPPathProperties;
-import org.ei.controller.logging.LogEntry;
 import org.ei.domain.DatabaseConfig;
 import org.ei.domain.DocumentBasket;
 import org.ei.domain.Query;
@@ -44,8 +41,8 @@ import org.ei.exception.SearchException;
 import org.ei.exception.SessionException;
 import org.ei.exception.SystemErrorCodes;
 import org.ei.session.UserSession;
+import org.ei.stripes.action.ControllerRequestHelper;
 import org.ei.stripes.action.EVPathUrl;
-import org.ei.stripes.action.GoogleWebAnalyticsEvent;
 import org.ei.stripes.action.WebAnalyticsEventProperties;
 import org.ei.stripes.adapter.GenericAdapter;
 import org.ei.stripes.adapter.IBizBean;
@@ -53,8 +50,8 @@ import org.ei.stripes.adapter.IBizXmlAdapter;
 import org.ei.stripes.view.SearchResult;
 import org.ei.stripes.view.SearchResultNavigator;
 import org.ei.tags.TagBubble;
-import org.perf4j.StopWatch;
-import org.perf4j.log4j.Log4JStopWatch;
+import org.ei.web.analytics.GoogleWebAnalyticsEvent;
+
 
 /**
  * This is the base class for the search results handling.
@@ -146,19 +143,10 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 		 */
 	}
 
-	private StopWatch beanstopwatch = null;
-
-	@Before(stages = LifecycleStage.HandlerResolution)
-	private void startPerformance() {
-		this.beanstopwatch = new Log4JStopWatch();
-	}
 
 	@After(stages = LifecycleStage.EventHandling)
 	private void stopPerformance() {
-		addWebEvent(webEvent);
-		if (this.beanstopwatch != null && this.context.getEventName() != null) {
-			this.beanstopwatch.stop(this.context.getEventName().toUpperCase() + "_SEARCH_RESULTS");
-		}
+		webEvent.recordRemoteEvent(context);
 	}
 
 	@After(stages = LifecycleStage.RequestComplete)
@@ -200,7 +188,7 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 			setSearchid(getRequest().getParameter("SEARCHID"));
 			qObj = Searches.getSearch(getRequest().getParameter("SEARCHID"));
 			if (qObj != null) {
-				appendWebEventList(createQueryEventList(qObj));
+				createQueryEventList(qObj);
 			}
 		}
 		
@@ -262,6 +250,9 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 			}
 		}
 
+        // Process the request to create error messages from error codes
+    	ControllerRequestHelper.processErrorCode(this);
+    	
 		if (getLimitError() != null) {
 			context.getValidationErrors().add("limitError",
 					new LocalizableError("org.ei.stripes.action.search.SearchResultsAction.limitError", getSavedSeachesAndAlertsLimit()));
@@ -320,11 +311,11 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 	 * @param query
 	 * @return
 	 */
-	protected List<GoogleWebAnalyticsEvent> createQueryEventList(Query query) {
+	protected void createQueryEventList(Query query) {
 	    if (query == null) {
 
 	    }
-        List<GoogleWebAnalyticsEvent> eventList = new ArrayList<GoogleWebAnalyticsEvent>();
+        
         GoogleWebAnalyticsEvent theEvent = null;
 
         String sDocType = query.getDocumentType();
@@ -333,7 +324,7 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
             theEvent.setCategory(WebAnalyticsEventProperties.CAT_LIMIT_TO);
             theEvent.setAction(WebAnalyticsEventProperties.ACTION_DOC_TYPE);
             theEvent.setLabel(sDocType);
-            eventList.add(theEvent);
+            theEvent.recordRemoteEvent(context);
         }
         String sTreatmentType = query.getTreatmentType();
         if (!GenericValidator.isBlankOrNull(sTreatmentType) && !(sTreatmentType.equals("NO-LIMIT"))) {
@@ -341,7 +332,7 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
             theEvent.setCategory(WebAnalyticsEventProperties.CAT_LIMIT_TO);
             theEvent.setAction(WebAnalyticsEventProperties.ACTION_TREAT_TYPE);
             theEvent.setLabel(sTreatmentType);
-            eventList.add(theEvent);
+            theEvent.recordRemoteEvent(context);
         }
         String sDisciplineType = query.getDisciplineType();
         if (!GenericValidator.isBlankOrNull(sDisciplineType) && !(sDisciplineType.equals("NO-LIMIT"))) {
@@ -349,7 +340,7 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
             theEvent.setCategory(WebAnalyticsEventProperties.CAT_LIMIT_TO);
             theEvent.setAction(WebAnalyticsEventProperties.ACTION_DISC_TYPE);
             theEvent.setLabel(sDisciplineType);
-            eventList.add(theEvent);
+            theEvent.recordRemoteEvent(context);
 
         }
         String sLanguage = query.getLanguage();
@@ -358,7 +349,7 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
             theEvent.setCategory(WebAnalyticsEventProperties.CAT_LIMIT_TO);
             theEvent.setAction(WebAnalyticsEventProperties.ACTION_LANG_TYPE);
             theEvent.setLabel(sLanguage);
-            eventList.add(theEvent);
+            theEvent.recordRemoteEvent(context);
 
         }
         String sLastFourUpdates = query.getLastFourUpdates();
@@ -367,23 +358,22 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
             theEvent.setCategory(WebAnalyticsEventProperties.CAT_LIMIT_TO);
             theEvent.setAction(WebAnalyticsEventProperties.ACTION_UPDATES);
             theEvent.setLabel(sLastFourUpdates);
-            eventList.add(theEvent);
+            theEvent.recordRemoteEvent(context);
         }
         if (Sort.PUB_YEAR_FIELD.equals(query.getSortOption().getSortField())) {
             theEvent = new GoogleWebAnalyticsEvent();
             theEvent.setCategory(WebAnalyticsEventProperties.CAT_SORT_BY);
             theEvent.setAction(WebAnalyticsEventProperties.ACTION_PUB_YEAR);
-            eventList.add(theEvent);
+            theEvent.recordRemoteEvent(context);
         }
         String sAutoStemming = query.getAutoStemming();
         if (!GenericValidator.isBlankOrNull(sAutoStemming) && sAutoStemming.equalsIgnoreCase(Query.OFF)) {
             theEvent = new GoogleWebAnalyticsEvent();
             theEvent.setCategory(WebAnalyticsEventProperties.CAT_SORT_BY);
             theEvent.setAction(WebAnalyticsEventProperties.ACTION_AUTO_STEM_OFF);
-            eventList.add(theEvent);
+            theEvent.recordRemoteEvent(context);
         }
 
-        return eventList;
     }
 
 	/**
@@ -402,7 +392,7 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 
 		setRoom(ROOM.search);
 		setBasketCount(getUserBasketCount());
-
+		webEvent.setCategory(WebAnalyticsEventProperties.CAT_SEARCH_RESULT);
 		webEvent.setAction(WebAnalyticsEventProperties.ACTION_QUICK_SEARCH_RES);
 		//
 		// If "error" is present, an error has been added from the
@@ -439,6 +429,7 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 
         setRoom(ROOM.search);
 		setBasketCount(getUserBasketCount());
+		webEvent.setCategory(WebAnalyticsEventProperties.CAT_SEARCH_RESULT);
 		webEvent.setAction(WebAnalyticsEventProperties.ACTION_EXPERT_SEARCH_RES);
 		//
 		// If "error" is present, an error has been added from the
@@ -740,44 +731,48 @@ public class SearchResultsAction extends AbstractSearchResultsAction implements 
 	@Override
 	public Resolution handleException(ErrorXml errorXml) {
 		if (isEventExpert()) {
-
-			boolean top = !GenericValidator.isBlankOrNull(getTopappend());
-			if(errorXml.getErrorCode() == SystemErrorCodes.EBOOK_REMOVED){
-				return new RedirectResolution("/search/expert.url?CID=expertSearch&database=" + getDatabase() + "&searchid=" + getSearchid() + "&error=validationError&errorCode="+errorXml.getErrorCode());
-			}
-			if (getReruncid() != null) {
-				if (getLastRefineStep() != null && getLastRefineStep().equalsIgnoreCase("0")) {
-					return new RedirectResolution("/search/results/quick.url?CID=quickSearchCitationFormat" + "&SEARCHID=" + getReruncid() + "&database=" + getDatabase() + "&error="
-							+ (top ? "top" : "btm") + "&appendstr=" + URLEncoder.encode(getAppendstr()));
-				} else {
-					return new RedirectResolution("/search/results/expert.url?CID=expertSearchCitationFormat" + "&SEARCHID=" + getReruncid() + "&database=" + getDatabase() + "&STEP="
-							+ getLastRefineStep() + "&error=" + (top ? "top" : "btm") + "&appendstr=" + URLEncoder.encode(getAppendstr()));
-				}
-
+			StringBuffer redirect = new StringBuffer();
+			if(errorXml.getErrorCode() == SystemErrorCodes.EBOOK_REMOVED) {
+				redirect.append("/search/expert.url?CID=expertSearch&database=" + getDatabase() + "&searchid=" + getSearchid() + "&errorCode="+errorXml.getErrorCode());
 			} else {
-				return new RedirectResolution("/search/expert.url?CID=expertSearch&database=" + getDatabase() + "&searchid=" + getSearchid() + "&error=validationError&errorCode="+errorXml.getErrorCode());
+				if (!GenericValidator.isBlankOrNull(getRequest().getParameter("RERUN"))) {
+					if (getLastRefineStep() != null && getLastRefineStep().equalsIgnoreCase("0")) {
+						redirect.append("/search/results/quick.url?CID=quickSearchCitationFormat&SEARCHID=" + getRequest().getParameter("RERUN"));
+						redirect.append("&database=" + getDatabase());
+						redirect.append("&errorCode=" + errorXml.getErrorCode());
+						if (!GenericValidator.isBlankOrNull(getAppendstr())) redirect.append("&appendstr=" + URLEncoder.encode(getAppendstr()));
+					} else {
+						redirect.append("/search/results/expert.url?CID=expertSearchCitationFormat&SEARCHID=" + getRequest().getParameter("RERUN"));
+						redirect.append("&database=" + getDatabase());
+						redirect.append("&STEP="+ getLastRefineStep());
+						redirect.append("&errorCode=" + errorXml.getErrorCode());
+						if (!GenericValidator.isBlankOrNull(getAppendstr())) redirect.append("&appendstr=" + URLEncoder.encode(getAppendstr()));
+					}
+				} else {
+					redirect.append("/search/expert.url?CID=expertSearch&database=" + getDatabase() + "&searchid=" + getSearchid() + "&errorCode="+errorXml.getErrorCode());
+				}
 			}
+			
+			return new RedirectResolution(redirect.toString());
 		}
 		if (isEventQuick()) {
-
 			if ("Book".equals(searchtype)) {
-				return new RedirectResolution("/search/ebook.url?CID=ebookSearch&searchID=" + getSearchid() + "&database=" + getDatabase() + "&error=validationError&errorCode="+errorXml.getErrorCode());
+				return new RedirectResolution("/search/ebook.url?CID=ebookSearch&searchID=" + getSearchid() + "&database=" + getDatabase() + "&errorCode="+errorXml.getErrorCode());
 			}else if(errorXml.getErrorCode() == SystemErrorCodes.EBOOK_REMOVED){
-
-				return new RedirectResolution("/search/quick.url?CID=quickSearch&searchID=" + getSearchid() + "&database=" + getDatabase() + "&error=validationError&errorCode="+errorXml.getErrorCode());
+				return new RedirectResolution("/search/quick.url?CID=quickSearch&searchID=" + getSearchid() + "&database=" + getDatabase() + "&eerrorCode="+errorXml.getErrorCode());
 			}else {
-				return new RedirectResolution("/search/quick.url?CID=quickSearch&searchID=" + getSearchid() + "&database=" + getDatabase() + "&error=validationError&errorCode="+errorXml.getErrorCode());
+				return new RedirectResolution("/search/quick.url?CID=quickSearch&searchID=" + getSearchid() + "&database=" + getDatabase() + "&errorCode="+errorXml.getErrorCode());
 			}
 		}
 
 		if (isEventCombine()) {
 			String referer = context.getRequest().getHeader("Referer");
-			referer = referer.replaceAll("[&\\?]history=t", "").replaceAll("[&\\?]dberr=true", "").replaceAll("[&\\?]searchHisErr=true", "");
+			referer = referer.replaceAll("[&\\?]history=t", "").replaceAll("[&\\?]errorCode=[0-9]*", "");
 			String qs = "history=t";
 			if (errorXml.getErrorCode() == SystemErrorCodes.COMBINE_HISTORY_UNIQUE_DATABASE_ERROR) {
-				qs += "&dberr=true";
+				qs += "&errorCode=" + SystemErrorCodes.COMBINE_HISTORY_UNIQUE_DATABASE_ERROR;
 			} else {
-				qs += "&searchHisErr=true";
+				qs += "&errorCode=" + SystemErrorCodes.SEARCH_HISTORY_ERROR;
 			}
 			if (GenericValidator.isBlankOrNull(referer)) {
 				log4j.warn("Error has occurred but Referer request header is not set!  Returning to quick search page...");

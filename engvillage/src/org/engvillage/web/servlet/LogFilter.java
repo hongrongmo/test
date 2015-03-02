@@ -59,9 +59,9 @@ public class LogFilter implements Filter {
                 String text = newResponse.toString();
                 if (text != null) {
                     if (Boolean.parseBoolean(printresponse) && !(uri.contains("/engvillage/models/world/healthcheck.jsp"))) {
-                        responselogger.warn("********************* Printing response from engvillage " + (sessionid == null ? "" : "for session ID: " + sessionid + " ") + "*******************************");
-                        responselogger.warn(text);
-                        responselogger.warn("********************* End printing response from engvillage ********************************");
+                        responselogger.info("********************* Printing response from engvillage " + (sessionid == null ? "" : "for session ID: " + sessionid + " ") + "*******************************");
+                        responselogger.info(text);
+                        responselogger.info("********************* End printing response from engvillage ********************************");
                     }
                     response.getWriter().write(text);
                 }

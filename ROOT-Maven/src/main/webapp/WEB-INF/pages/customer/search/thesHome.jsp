@@ -31,7 +31,7 @@
 	<div id="container">
 	<div id="searchformwrap">
 	<div id="searchformbox">
-        <stripes:errors field="validationError"><div id="errormessage"><stripes:individual-error/></div></stripes:errors>
+        <stripes:errors field="errorcode"><div id="errormessage"><stripes:individual-error/></div></stripes:errors>
 <c:if test="${not empty actionBean.message}">
 <c:choose>
 <c:when test="${actionBean.message eq 'zero'}">
@@ -334,6 +334,7 @@
 	<jwr:script src="/bundles/thes.js"></jwr:script>
 	<script>var flipImage;</script>
 	<jsp:include page="parts/search_common_js.jsp"></jsp:include>
+
 	</stripes:layout-component>
 
 

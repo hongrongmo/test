@@ -131,6 +131,8 @@ public final class EVProperties {
 
     /** The Constant GOOGLE_ANALYTICS_ACCOUNT. */
     public static final String GOOGLE_ANALYTICS_ACCOUNT = "google.analytics.account";
+    /** The Constant GOOGLE_ANALYTICS_ACCOUNT. */
+    public static final String GA_DIRECT_URL = "GA_DIRECT_URL";
 
     /** The Constant HELP_URL. */
     public static final String HELP_URL = "HelpUrl";

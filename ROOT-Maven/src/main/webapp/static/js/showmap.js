@@ -102,7 +102,7 @@ function togglemap() {
 		// Populate the map with markers!
 		//
 		if(_gaq){
-			_gaq.push("_trackEvent", "Query Toolbar", "Show Map","");
+			GALIBRARY.createWebEvent("Query Toolbar", "Show Map","");
 		}
 		populatemap();
 	} else {

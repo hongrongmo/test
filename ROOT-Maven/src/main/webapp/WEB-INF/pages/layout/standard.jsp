@@ -19,7 +19,7 @@
 
 	<stripes:layout-component name="cssheadstandard">
 		<jwr:style src="/bundles/standard.css"></jwr:style>
-		</stripes:layout-component>
+	</stripes:layout-component>
 		<jwr:script src="/bundles/standard.js" useRandomParam="true"></jwr:script>
 
 		<c:if test="${actionBean.context.userSession.user.userPreferences.featureHighlight}">
@@ -29,14 +29,38 @@
 		<script>
 		var highlightV1 = false;
 		</script>
-		<c:if test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1')}">
+		<c:if test="${actionBean.context.userSession.user.highlightingEnabled}">
 		<script>
 			highlightV1 = true;
 
 		</script>
 		<script src='/static/js/jquery/spectrum.js'></script>
 		</c:if>
-	<stripes:layout-component name="csshead"/>
+    <stripes:layout-component name="csshead"/>  
+    <stripes:layout-component name="customjs">
+        <c:if test="${actionBean.runlevel eq 'prod' or actionBean.runlevel eq 'release'}">
+        <!-- Google Tag Manager -->
+        <noscript>
+            <iframe src="//www.googletagmanager.com/ns.html?id=GTM-KT364J" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+        </noscript>
+        <script>
+            (function(w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    'gtm.start' : new Date().getTime(),
+                    event : 'gtm.js'
+                });
+                var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l='
+                        + l
+                        : '';
+                j.async = true;
+                j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-KT364J');
+        </script>
+        <!-- End Google Tag Manager -->
+        </c:if>
+    </stripes:layout-component>
 </head>
 <body onload="onloadfunction();">
 <div class="skipnav">
@@ -83,10 +107,8 @@ ${actionBean.context.userSession.user.setSSOURLInvoked(false)}
 
 <script type="text/javascript">
     // Initialize GA
-    var pageevents = [<c:forEach items="${webAnalyticsEvent}" var="webEvent" varStatus="status">{category:'<c:out value="${webEvent.category}"/>', action: '<c:out value="${webEvent.action}"/>', label: '<c:out value="${webEvent.label}"/>'}<c:if test='${!status.last}'>,</c:if></c:forEach>];
     GALIBRARY.init(
-        ["${actionBean.context.googleAnalyticsAccount}", "${usersession.user.account.accountName}", "${usersession.user.individuallyAuthenticated}"],
-        pageevents);
+        ["${actionBean.context.googleAnalyticsAccount}", "${usersession.user.account.accountName}", "${usersession.user.individuallyAuthenticated}", "${usersession.sessionid}", "${usersession.user.account.accountId}"]);
 
 
     //custom fliplogin to override cars!! ugh

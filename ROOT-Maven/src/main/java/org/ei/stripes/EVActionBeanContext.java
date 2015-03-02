@@ -475,5 +475,6 @@ public class EVActionBeanContext extends ActionBeanContext {
         }
         return super.getSourcePageResolution();
     }
+    
 
 }

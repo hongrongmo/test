@@ -23,7 +23,9 @@ import org.ei.service.cars.rest.request.CARSRequest;
 import org.ei.service.cars.util.CARSCommonUtil;
 import org.ei.session.UserSession;
 import org.ei.stripes.action.EVPathUrl;
+import org.ei.stripes.action.WebAnalyticsEventProperties;
 import org.ei.stripes.exception.EVExceptionHandler;
+import org.ei.web.analytics.GoogleWebAnalyticsEvent;
 import org.ei.web.cookie.CookieHandler;
 import org.ei.web.cookie.EISessionCookie;
 
@@ -57,7 +59,10 @@ public class LogoutAction extends CARSActionBean {
 
         HttpServletResponse response = context.getResponse();
         setRoom(ROOM.blank);
-
+        GoogleWebAnalyticsEvent logoutEvent = new GoogleWebAnalyticsEvent(WebAnalyticsEventProperties.CAT_LOGOUT, 
+        											WebAnalyticsEventProperties.CAT_LOGOUT, "End Session");
+        logoutEvent.setEndSession(true);
+        logoutEvent.recordRemoteEvent(context);
         // Terminate the CARS session
         CARSResponse carsResponse = terminateSession(context.getRequest(), context.getResponse(), context.getUserSession());
 

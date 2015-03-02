@@ -109,20 +109,6 @@ public class ThesaurusSearchAction extends SearchDisplayAction { // implements I
         super.populateSearchFormFields(query);
     }
 
-    private StopWatch beanstopwatch = null;
-
-    @Before(on = "submit")
-    private void startPerformance() {
-        this.beanstopwatch = new Log4JStopWatch();
-    }
-
-    @After(on = "submit")
-    private void stopPerformance() {
-        if (this.beanstopwatch != null && this.context.getEventName() != null) {
-            this.beanstopwatch.stop("SEARCH_SUBMIT");
-        }
-    }
-
     /**
      * Search submit - calls parent class validate method
      *

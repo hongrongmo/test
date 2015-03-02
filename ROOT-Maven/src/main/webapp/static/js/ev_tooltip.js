@@ -1,7 +1,7 @@
 //{name:'cvTooltip', parent:".facet_cvHighlightFeature", direction:"right",msg:"Improve your search results by selecting term(s).<br/> <a href='http://www.google.com'>Learn more.</a>", autoShow:true, showImage:true},
 tips = [
-			{name:'ebookToolTip', parent:".ebookFeatureHighlight", direction:"right",msg:"As of April 2014, eBooks will only be available on <a href='http://www.sciencedirect.com' target='_blank'>ScienceDirect</a>.  <br/><a href='http://info.sciencedirect.com/referex' target='_blank'>Learn more</a>.", autoShow:true, showImage:true},
-
+			
+			
 
 	];
 $(document).ready(function() {
@@ -15,6 +15,7 @@ $(document).ready(function() {
 		var tip = tips[i];
 		var selector = '.'+tip.name;
 		var msg = tip.msg;
+		var isHtml = tip.contentAsHTML;
 
 		if(tip.showImage && $(tip.parent).length != 0){
 			var img = '<img src="/static/images/ev_asterisk.gif" style="vertical-align:top;" width="13px" class="'+tip.name+'"/>';
@@ -23,10 +24,10 @@ $(document).ready(function() {
 		}
 
 		if ( $.browser.msie && $.browser.version == 7) {
-			$(selector).tooltipster({interactive:true, arrow:false});
+			$(selector).tooltipster({interactive:true, arrow:false, contentAsHTML:isHtml});
 			$(selector).tooltipster('reposition');
 		}else{
-			$(selector).tooltipster({interactive:true, position:tip.direction});
+			$(selector).tooltipster({interactive:true, position:tip.direction, contentAsHTML:isHtml});
 		}
 		$(selector).tooltipster('update',tip.msg);
 		if(tip.autoShow && !$.cookie(tip.name) && $(tip.parent).length != 0){
