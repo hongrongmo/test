@@ -1,4 +1,12 @@
-package org.ei.data.paper.loadtime;import java.io.BufferedReader;import java.io.FileReader;import java.util.Hashtable;import java.util.Properties;import org.apache.oro.text.perl.Perl5Util;import org.ei.util.GUID;
+package org.ei.data.paper.loadtime;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.Hashtable;
+import java.util.Properties;
+
+import org.apache.oro.text.perl.Perl5Util;
+import org.ei.util.GUID;
 public class PaperChemBaseTableDriver
 {
     private Perl5Util perl = new Perl5Util();
