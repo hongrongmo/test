@@ -132,7 +132,7 @@
 
 			</ul>
 			</fieldset>
-			<c:if test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1')}">
+			<c:if test="${actionBean.context.userSession.user.highlightingEnabled}">
 				<hr/>
 				<div class="settingSection"><h2>Search Terms</h2></div>
 				<c:set value="${actionBean.currentuserprefs.highlight}" var="highlightColor"></c:set>
@@ -209,7 +209,7 @@ $(".locationRadio").click(function(){
 	updatefilenamelable();
 	checkForRisandBib();
 });
-$(".formatRadio,.outputRadio").click(function(){h
+$(".formatRadio,.outputRadio").click(function(){
 	updatefilenamelable();
 });
 
@@ -301,7 +301,7 @@ updatefilenamelable();
 checkForRisandBib();
 
 </script>
-<c:if test="${actionBean.context.userSession.user.getPreference('HIGHLIGHT_V1')}">
+<c:if test="${actionBean.context.userSession.user.highlightingEnabled}">
 <script>
 $("#hlight_color").spectrum({
     showPaletteOnly: true,

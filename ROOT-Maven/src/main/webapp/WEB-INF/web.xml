@@ -316,64 +316,12 @@
 		<load-on-startup>10</load-on-startup>
 	</servlet>
 
-	<servlet>
-		<servlet-name>SearchExecutionTimes</servlet-name>
-		<servlet-class>org.perf4j.log4j.servlet.GraphingServlet</servlet-class>
-		<init-param>
-			<param-name>graphNames</param-name>
-			<param-value>SearchExecutionTimes</param-value>
-		</init-param>
-	</servlet>
-
-	<servlet>
-		<servlet-name>SearchResultsExecutionTimes</servlet-name>
-		<servlet-class>org.perf4j.log4j.servlet.GraphingServlet</servlet-class>
-		<init-param>
-			<param-name>graphNames</param-name>
-			<param-value>SearchResultsExecutionTimes</param-value>
-		</init-param>
-	</servlet>
-
-	<servlet>
-		<servlet-name>SearchResultsCounts</servlet-name>
-		<servlet-class>org.perf4j.log4j.servlet.GraphingServlet</servlet-class>
-		<init-param>
-			<param-name>graphNames</param-name>
-			<param-value>SearchResultsCounts</param-value>
-		</init-param>
-	</servlet>
-
-	<servlet>
-		<servlet-name>RequestTPS</servlet-name>
-		<servlet-class>org.perf4j.log4j.servlet.GraphingServlet</servlet-class>
-		<init-param>
-			<param-name>graphNames</param-name>
-			<param-value>RequestTPS</param-value>
-		</init-param>
-	</servlet>
 
 	<servlet>
 		<description>This servlet is used to retrieve the session status</description>
 		<servlet-name>CheckSessionStatus</servlet-name>
 		<servlet-class>org.ei.system.CheckSessionStatus</servlet-class>
 	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>SearchExecutionTimes</servlet-name>
-		<url-pattern>/searchexecutiontimes</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>SearchResultsExecutionTimes</servlet-name>
-		<url-pattern>/searchresultsexecutiontimes</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>SearchResultsCounts</servlet-name>
-		<url-pattern>/searchresultscounts</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>RequestTPS</servlet-name>
-		<url-pattern>/requesttps</url-pattern>
-	</servlet-mapping>
 
 	<!-- ******************************* -->
 	<!-- SERVLET MAPPINGS -->

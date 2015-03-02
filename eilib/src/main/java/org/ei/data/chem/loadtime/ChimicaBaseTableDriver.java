@@ -1,17 +1,17 @@
-package org.ei.data.chem.loadtime;
+package org.ei.data.chem.loadtime;
 
-import java.io.BufferedReader;import java.io.FileReader;import java.util.Hashtable;import java.util.Properties;import org.apache.oro.text.perl.Perl5Util;import org.ei.util.GUID;
-public class ChimicaBaseTableDriver
-{
-    private Perl5Util perl = new Perl5Util();
-    private static ChimicaBaseTableWriter baseWriter;
-
-    private static int exitNumber;
-    private int counter = 0;
+import java.io.BufferedReader;import java.io.FileReader;import java.util.Hashtable;import java.util.Properties;import org.apache.oro.text.perl.Perl5Util;import org.ei.util.GUID;
+public class ChimicaBaseTableDriver
+{
+    private Perl5Util perl = new Perl5Util();
+    private static ChimicaBaseTableWriter baseWriter;
+
+    private static int exitNumber;
+    private int counter = 0;
     private int loadNumber;
-
+
     public static void main(String args[])
-        throws Exception
+        throws Exception
     {
         int loadN = Integer.parseInt(args[0]);
         String infile = args[1];
@@ -26,7 +26,7 @@ public class ChimicaBaseTableDriver
 
         ChimicaBaseTableDriver c = new ChimicaBaseTableDriver(loadN);
         c.writeBaseTableFile(infile);
-    }
+    }
     public ChimicaBaseTableDriver(int loadN)
     {
         this.loadNumber = loadN;
@@ -52,26 +52,26 @@ public class ChimicaBaseTableDriver
                 in.close();
             }
         }
-    }
+    }
     private void writeRecs(BufferedReader in)
         throws Exception
-    {
+    {
         Hashtable record = null;
         String state = null;
         String line = null;
         String fieldName = null;
         while((line = in.readLine()) != null)
-        {
+        {
             if(exitNumber != 0 &&
                counter == exitNumber)
             {
                 break;
-            }
+            }
 
-
+
             char c = line.charAt(0);
             int i = (int)c;
-
+
             if(c == '*')
             {
                 state = "endRecord";
@@ -83,7 +83,7 @@ public class ChimicaBaseTableDriver
             else
             {
                 state = "beginField";
-            }
+            }
             if(state.equals("beginField"))
             {
                 if(line.length() < 2)
@@ -93,19 +93,19 @@ public class ChimicaBaseTableDriver
                 else
                 {
                     fieldName = line.substring(0,2);
-                    fieldName = fieldName.toUpperCase();
-                    String data = line.substring(2, line.length());
+                    fieldName = fieldName.toUpperCase();
+                    String data = line.substring(2, line.length());
                     if(record.containsKey(fieldName))
-                    {
+                    {
                         StringBuffer value = (StringBuffer)record.get(fieldName);
-                        record.put(fieldName, value.append(";"+data.trim()));
+                        record.put(fieldName, value.append(";"+data.trim()));
                     }
                     else
                     {
                         record.put(fieldName, new StringBuffer(data.trim()));
                     }
                 }
-            }
+            }
             if(state.equals("endRecord"))
             {
                 if(record != null)
@@ -117,14 +117,14 @@ public class ChimicaBaseTableDriver
                 }
 
                 record = new Properties();
-            }
+            }
             if(state.equals("continueField"))
             {
                 StringBuffer value = (StringBuffer)record.get(fieldName);
                 String data = line.substring(2, line.length());
                 record.put(fieldName, value.append(" "+data.trim()));
             }
-        }
+        }
         if(record != null &&
            record.size() > 0)
         {

@@ -34,7 +34,7 @@ $(document).ready(function() {
 		} 
 		if(_gaq){
 			
-			_gaq.push(["_trackEvent","Tags and Groups", "Add Tag",searchgrouptags.val()]);
+			GALIBRARY.createWebEventWithLabel("Tags and Groups", "Add Tag",searchgrouptags.val());
 		}
 		var tagsplit = searchgrouptags.val().split(",");
 		$.each(tagsplit, function(idx, value) {

@@ -1,7 +1,5 @@
 package org.ei.stripes;
 
-import java.util.List;
-
 import net.sourceforge.stripes.action.RedirectResolution;
 import net.sourceforge.stripes.action.Resolution;
 import net.sourceforge.stripes.controller.ExecutionContext;
@@ -9,8 +7,9 @@ import net.sourceforge.stripes.controller.FlashScope;
 import net.sourceforge.stripes.controller.Interceptor;
 import net.sourceforge.stripes.controller.Intercepts;
 import net.sourceforge.stripes.controller.LifecycleStage;
-import net.sourceforge.stripes.validation.ValidationError;
 import net.sourceforge.stripes.validation.ValidationErrors;
+
+import org.perf4j.log4j.Log4JStopWatch;
 
 /**
  * This intercepter is used to propagate Global Errors when redirecting Stripes doesn't allow this and you can only pass errors as messages. This will allow you
@@ -31,6 +30,7 @@ public class ErrorMessageInterceptor implements Interceptor {
 
     @Override
     public Resolution intercept(ExecutionContext ctx) throws Exception {
+		Log4JStopWatch stopwatch = new Log4JStopWatch("Interceptor.ErrorMessage");
 
         ValidationErrors errors = (ValidationErrors) ctx.getActionBeanContext().getRequest().getAttribute(CTX_KEY);
         if (errors != null) {
@@ -46,6 +46,8 @@ public class ErrorMessageInterceptor implements Interceptor {
             scope.put(CTX_KEY, errors);
         }
 
+        stopwatch.stop();
+        
         return resolution;
     }
 }

@@ -169,10 +169,13 @@ public class UserPreferences implements IUserPreferences, Serializable {
 
     public static final String FENCE_HIGHLIGHT_V1 = "HIGHLIGHT_V1";
     public static final String FENCE_HIGHLIGHT_V2 = "HIGHLIGHT_V2";
+    public static final String FENCE_HIGHLIGHT_REG_ONLY = "HIGHLIGHT_REG_ONLY";
     public static final String FENCE_FEATURE_SURVEY = "FEATURE_SURVEY";
     public static final String FENCE_EXIT_SURVEY = "EXIT_SURVEY";
     
     public static final String FENCE_KNOVEL_SEARCH_BTN = "KNOVEL_SEARCH_BTN";
+    
+    public static final String FENCE_SAVE_DB_SELECTION = "ALLOW_SAVE_DB_SELECTION";
 
     // Shiboleth fence
     public static final String FENCE_INSTITUTIONAL_SHIB_LOGIN_LINK = "FENCE_INSTITUTIONAL_SHIB_LOGIN_LINK";
@@ -317,7 +320,6 @@ public class UserPreferences implements IUserPreferences, Serializable {
     public boolean isModalDialog(){
     	return getBoolean(FENCE_ENABLE_MODAL_DIALOG);
     }
-
     public boolean isModalDialog2(){
     	return getBoolean(FENCE_ENABLE_MODAL_DIALOG_2);
     }
@@ -330,4 +332,8 @@ public class UserPreferences implements IUserPreferences, Serializable {
     public boolean isKnovelSearchButton(){
     	return getBoolean(FENCE_KNOVEL_SEARCH_BTN);
     }
+    public boolean isSaveDbSelection(){
+    	return getBoolean(FENCE_SAVE_DB_SELECTION);
+    }
+
 }

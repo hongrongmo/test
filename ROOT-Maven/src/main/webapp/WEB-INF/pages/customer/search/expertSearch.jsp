@@ -33,7 +33,7 @@
     <div id="searchformwrap">
     <div id="searchformbox">
 
-        <stripes:errors field="validationError"><div id="errormessage"><stripes:individual-error/></div></stripes:errors>
+        <stripes:errors field="errorcode"><div id="errormessage"><stripes:individual-error/></div></stripes:errors>
 
         <c:set var="searchtab" value="expertsearch" scope="request"></c:set>
         <jsp:include page="parts/searchtabs.jsp"></jsp:include>
@@ -569,7 +569,9 @@
     </script>
 
     <jsp:include page="parts/search_common_js.jsp"></jsp:include>
-
+	<c:if test="${actionBean.context.userSession.user.userPreferences.saveDbSelection }">
+		<script type="text/javascript" src="/static/js/SaveDB.js?v=${releaseversion}"></script>
+	</c:if>
 
     </stripes:layout-component>
 

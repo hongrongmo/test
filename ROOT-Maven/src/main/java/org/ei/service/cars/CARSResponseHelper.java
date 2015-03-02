@@ -48,6 +48,7 @@ public class CARSResponseHelper {
 
 		Templates templates = getTemplate(response);
 		if (null == templates) {
+			log4j.error("Unable to build template from response: " + response.toString() + System.lineSeparator() + "   Mime: " + templateMime);
 			throw new ServiceException(SystemErrorCodes.CARS_RESPONSE_PROCESSING_ERROR, "Unable to transform CARS response - No template in response!");
 		}
 

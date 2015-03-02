@@ -5,7 +5,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 
 			<div id="databasechkboxes" class="searchcomponentfullwrap">
-				<h2 class="searchcomponentlabel">DATABASE</h2>
+				<h2 class="searchcomponentlabel" >DATABASE 
+				<c:if test="${actionBean.context.userSession.user.userPreferences.saveDbSelection }">
+					<img class="saveDatabases" title="Select your database preference to save as default" id="saveDBIcon" style="cursor:pointer;vertical-align:bottom;" src="/static/images/SaveSearch_off.png"/>
+					
+				</c:if>
+				</h2> 
 				<fieldset name="Database Checkboxes" >
 				<c:choose>
 				<c:when test="${fn:length(actionBean.databaseCheckboxes) == 1}">

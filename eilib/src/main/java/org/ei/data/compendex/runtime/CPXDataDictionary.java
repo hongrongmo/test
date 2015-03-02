@@ -928,7 +928,7 @@ public class CPXDataDictionary implements DataDictionary {
 
         treatmentCodes = new Hashtable<String, String>();
 
-        treatmentCodes.put("A", "Applications (APP)");
+        treatmentCodes.put("A", "Applications (APP)"); 
         treatmentCodes.put("B", "Biographical (BIO)");
         treatmentCodes.put("E", "Economic (ECO)");
         treatmentCodes.put("X", "Experimental (EXP)");

@@ -15,8 +15,6 @@ import net.sourceforge.stripes.controller.LifecycleStage;
 import org.apache.commons.validator.GenericValidator;
 import org.apache.log4j.Logger;
 import org.ei.biz.security.IAccessControl;
-import org.ei.biz.security.ISecuredAction;
-import org.ei.biz.security.WorldAccessControl;
 import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
 import org.ei.controller.IPBlocker;
@@ -26,10 +24,13 @@ import org.ei.session.UserSession;
 import org.ei.stripes.action.BackUrlAction;
 import org.ei.stripes.action.CaptchaAction;
 import org.ei.stripes.action.EVActionBean;
+import org.ei.stripes.action.WebAnalyticsEventProperties;
 import org.ei.stripes.action.personalaccount.LogoutAction;
 import org.ei.stripes.exception.EVExceptionHandler;
 import org.ei.stripes.util.HttpRequestUtil;
+import org.ei.web.analytics.GoogleWebAnalyticsEvent;
 import org.ei.web.util.RequestDumper;
+import org.perf4j.log4j.Log4JStopWatch;
 
 /**
  * This class is a Stripes Interceptor that is supposed to
@@ -55,6 +56,7 @@ public class SessionBuilderInterceptor implements Interceptor {
 	@Override
 	public Resolution intercept(ExecutionContext executioncontext) throws Exception {
 
+		Log4JStopWatch stopwatch = new Log4JStopWatch("Interceptor.SessionBuilder");
 
 		EVActionBeanContext context = (EVActionBeanContext) executioncontext.getActionBeanContext();
 		HttpServletRequest request = context.getRequest();
@@ -147,9 +149,7 @@ public class SessionBuilderInterceptor implements Interceptor {
 
 		if (actionbean == null) {
 			throw new RuntimeException("No ActionBean is attached to request!");
-		} else if (actionbean instanceof LogoutAction) {
-            return ((LogoutAction)actionbean).process();
-        }
+		}
 
 		// ****************************************************
 		// Now attempt to build a session!
@@ -158,7 +158,9 @@ public class SessionBuilderInterceptor implements Interceptor {
 		UserSession usersession = sessionmanager.getUserSession();
 
         context.setUserSession(usersession);
-
+        if (actionbean instanceof LogoutAction) {
+            return ((LogoutAction)actionbean).process();
+        }
 		// See if the session has expired
 //		if (usersession.getStatus().equals(SessionStatus.NEW_HAD_EXPIRED)) {
 //            String path = request.getRequestURI();
@@ -191,6 +193,8 @@ public class SessionBuilderInterceptor implements Interceptor {
 
         // Scan request for "backurl"
         BackUrlAction.scan(request);
+
+		stopwatch.stop();
 
 		// Continue on with request
 		return executioncontext.proceed();

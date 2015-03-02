@@ -32,7 +32,7 @@
 				<input type="hidden" name="sort" value="${actionBean.sort}"></input>
 				<input type="hidden" name="sortdir" value="${actionBean.sortdir}"></input>
 				<input type="hidden" value="/search/results/dedup.url" name="rerunactionurl"/>
-
+                <input type="hidden" name="pagecount" value="${actionBean.pagenav.pagecount}"></input>
 
 
 			 <c:set var="maxSearchresult" value="${(actionBean.pagenav.currentpage - 1) * actionBean.pagenav.resultsperpage + actionBean.resultsperpage}" />

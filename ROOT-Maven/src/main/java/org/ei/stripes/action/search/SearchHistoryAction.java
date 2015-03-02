@@ -11,7 +11,6 @@ import net.sourceforge.stripes.action.HandlesEvent;
 import net.sourceforge.stripes.action.RedirectResolution;
 import net.sourceforge.stripes.action.Resolution;
 import net.sourceforge.stripes.action.UrlBinding;
-import net.sourceforge.stripes.validation.LocalizableError;
 import net.sourceforge.stripes.validation.Validate;
 
 import org.apache.commons.lang.StringUtils;
@@ -30,7 +29,6 @@ import org.ei.exception.SystemErrorCodes;
 import org.ei.session.UserSession;
 import org.ei.stripes.action.BackUrlAction;
 import org.ei.stripes.action.BackUrlAction.BackURLByFeature;
-import org.ei.stripes.action.EVPathUrl;
 import org.ei.stripes.action.SystemMessage;
 
 @UrlBinding("/search/history/{$event}.url")
@@ -101,10 +99,7 @@ public class SearchHistoryAction extends BaseSearchAction {
                         } else {
                             log4j.error("Invalid search number indicated!");
                             String url = BackUrlAction.getStoredURLByFeature(context.getRequest(), BackURLByFeature.SEARCHHISTORY);
-                            if (url.contains("?"))
-                                url += "&hisiderr=hisidnotexists";
-                            else
-                                url += "?hisiderr=hisidnotexists";
+                            url += (url.contains("?") ? "&" : "?") + "errorCode=" + SystemErrorCodes.SEARCH_HISTORY_NOIDEXISTS;
                             return new RedirectResolution(url);
                         }
 
@@ -134,10 +129,7 @@ public class SearchHistoryAction extends BaseSearchAction {
                         dbMask = Integer.parseInt(dbName);
                         if (!(dbName.equals((String) databaseList.get(i))) || dbMask == DatabaseConfig.CRC_MASK || dbMask == DatabaseConfig.USPTO_MASK) {
                             String url = BackUrlAction.getStoredURLByFeature(context.getRequest(), BackURLByFeature.SEARCHHISTORY);
-                            if (url.contains("?"))
-                                url += "&dberr=true";
-                            else
-                                url += "?dberr=true";
+                            url += (url.contains("?") ? "&" : "?") + "errorCode=" + SystemErrorCodes.COMBINE_HISTORY_UNIQUE_DATABASE_ERROR;
                             return new RedirectResolution(url);
                         }
                     }
@@ -168,9 +160,9 @@ public class SearchHistoryAction extends BaseSearchAction {
             if (status != SearchValidatorStatus.SUCCESS) {
                 String url = BackUrlAction.getStoredURLByFeature(context.getRequest(), BackURLByFeature.SEARCHHISTORY);
                 if (url.contains("?"))
-                    url += "&searchHisErr=true";
+                    url += "&errorCode=" + SystemErrorCodes.SEARCH_HISTORY_ERROR;
                 else
-                    url += "?searchHisErr=true";
+                    url += "?errorCode=" + SystemErrorCodes.SEARCH_HISTORY_ERROR;
                 return (new RedirectResolution(url));
             }
 

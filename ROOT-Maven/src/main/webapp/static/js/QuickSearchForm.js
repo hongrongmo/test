@@ -50,6 +50,7 @@ $(document)
 							.click(
 									function(event) {
 										var chkbox = $(this);
+										
 										// Clear checkboxes appropriately - clicking 'alldb'
 										// clears all others, clicking any other clears 'alldb'
 										if (chkbox.attr('name') == 'alldb') {
@@ -61,7 +62,14 @@ $(document)
 													.removeAttr('checked');
 											selectedDbMask = calculateMask();
 										}
-
+										if($("#saveDBIcon") && $("#saveDBIcon").length > 0){
+											//database state has changed.. offer to save it
+											if(selectedDbMask != dbSave.mask && selectedDbMask > 0){
+												enableSaveDB();
+											}else{
+												disableSaveDB();
+											}
+										}
 										// Set some values into global variables.
 										if (document.quicksearch.section1.value != 'NO-LIMIT') {
 											sec1Value = document.quicksearch.section1.value;
@@ -824,12 +832,6 @@ function generateDoctypes(selecteddbMask) {
 	if (selecteddbMask == CPX) {
 		doctypes[index++] = new Field("IP", "Article in Press");
 	}
-	// added for AIP
-	if(selecteddbMask == GRF)
-	{
-	doctypes[index++] = new Field("IP", "In Process");
-	}
-
 
 	return doctypes;
 

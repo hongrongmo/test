@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.log4j.Logger;
 import org.apache.wink.json4j.JSONException;
 import org.apache.wink.json4j.JSONObject;
+import org.ei.config.ApplicationProperties;
 import org.ei.config.EVProperties;
 import org.ei.stripes.action.personalaccount.LogoutAction;
 import org.ei.web.cookie.EISessionCookie;
@@ -44,6 +45,8 @@ public class CheckSessionStatus extends HttpServlet {
 		 }else if(resourcetype.equalsIgnoreCase(REDIRECT_SESSION_EXIPIRED_PAGE)){
 		     LogoutAction.clearClientCookies(response);
 			 request.setAttribute("maintenanceMsg", getMaintenanceMsg());
+			 request.setAttribute("IE7Msg", getIE7Msg());
+	         request.setAttribute("contactuslink", EVProperties.getApplicationProperties().getProperty(ApplicationProperties.CONTACT_US_LINK));
 			 request.getRequestDispatcher("/WEB-INF/pages/world/sessionexpired.jsp").forward(request, response);
 		 }
 	}
@@ -80,6 +83,15 @@ public class CheckSessionStatus extends HttpServlet {
 	    				msg="<span style=\"color:"+color+"\">"+msg+"</span>";
 	    			}
 	    		}
+	    	}
+	    	return msg;
+	    }
+	 
+	 private String getIE7Msg(){
+	    	String msg = null;
+	    	boolean isEnabled = Boolean.parseBoolean((EVProperties.getProperty(EVProperties.IE7_WARN_MSG_ENABLED)));
+	    	if(isEnabled){
+	    		msg = EVProperties.getProperty(EVProperties.IE7_WARN_MSG_TEXT);
 	    	}
 	    	return msg;
 	    }
