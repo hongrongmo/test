@@ -1042,10 +1042,7 @@ public class INSCorrection
      * when List Count< FAST COUNT [ do not delete]
      */
     private List checkFast(HashMap inputMap, String searchField, String database) throws Exception
-    {
-    	//HH 02/23/2015 set DataBaseConf.DbCorrFlag for local db connection othertan connectionBroker
-    	DatabaseConfig.DbCorrFlag = 1;
-    	
+    {    	
         List outputList = new ArrayList();
         DatabaseConfig databaseConfig = DatabaseConfig.getInstance(DriverConfig.getDriverTable());
         String[] credentials = new String[]{"CPX","PCH","CHM","GEO","GRF","ELT","INS"};
@@ -1116,9 +1113,6 @@ public class INSCorrection
             }
 
         }
-
-      //HH 02/23/2015 Reset DataBaseConf.DbCorrFlag back to default
-      DatabaseConfig.DbCorrFlag = 0;
       		
         return outputList;
 
