@@ -422,6 +422,29 @@ public class DataLoadDictionary
     		}
     		return sb.toString();
     	}
+    	
+       	public static String mapThesEntity(String xml)
+    		{
+    			int len = xml.length();
+    			StringBuffer sb = new StringBuffer();
+    			char c;
+
+    			for (int i = 0; i < len; i++)
+    			{
+    				c = xml.charAt(i);
+    				if((int) c >= 32 && (int) c <= 127)
+    				{
+    					sb.append(c);
+    				}
+    				else if(((int) c >= 128 || (int) c < 32))
+    				{
+
+    						sb.append("&#"+(int)c+";");
+    				}
+    			}
+    			return sb.toString();
+        	}
+
 
 
 }
