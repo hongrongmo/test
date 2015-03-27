@@ -11,21 +11,7 @@
   <name>dataloading-core</name>
   <url>http://maven.apache.org</url>
 
- <!--  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
- 
 
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-</project>
--->
 <dependencies>
 		<dependency>
 			<groupId>com.amazonaws</groupId>
@@ -149,6 +135,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
 
+<!--  HH 03/27/2015 comment temp till test in Jenkins 
 	<distributionManagement>
 		<repository>
 			<id>nexus</id>
@@ -162,6 +149,7 @@
 		</snapshotRepository>
 	</distributionManagement>
 
+ -->
 	<build>
 		<finalName>dataload</finalName>
 		<plugins>
