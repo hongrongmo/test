@@ -12,6 +12,7 @@ import java.util.regex.Pattern;
 import java.io.*;
 
 import org.apache.oro.text.perl.Perl5Util;
+import org.ei.domain.Database;
 
 /*
  * Author: HT
@@ -108,7 +109,7 @@ public class DataloadCheck {
 			if(args[8]!=null)
 			{
 				operation = args[8];
-				record.put("OPERATION",operation);
+				//record.put("OPERATION",operation);
 			}
 			 
 		}
@@ -125,7 +126,7 @@ public class DataloadCheck {
 		ReadLogFile();
 
 		//Print Info
-		writeRec();
+		//writeRec();
 	}
 		
 
@@ -204,6 +205,13 @@ public class DataloadCheck {
 						record.put("FASTEXTRACTFILENAME", line.substring(0, line.indexOf("is a valid zip file with")).trim());
 						//record.put("FASTEXTRACTCOUNT",line.substring(line.indexOf(":") +1, line.length()).trim());	 
 						record.put("FASTEXTRACTCOUNT",fast_count.substring(0, fast_count.indexOf(" records")));
+					}
+					
+					//Operation
+					
+					if(!(record.containsKey("OPERATION")))
+					{
+						record.put("OPERATION",operation);
 					}
 
 					//sqlldr log file Info
@@ -296,12 +304,125 @@ public class DataloadCheck {
 						line = dis.readLine();
 						record.put("SQLLDRLOG", line.substring(line.indexOf("/data"), line.length()));						
 					}
+					
+					if(!(record.containsKey("OPERATION")))
+					{
+						record.put("OPERATION",operation);
+					}
+
 
 				}
 				
 				//ERROR TABLE COUNT
 				notInBDMasterCount = getErrorTableCount(tableName);
 				record.put("ErrorTableCount", Integer.toString(notInBDMasterCount));
+			}
+			
+			
+			
+			else if(database!=null && database.equalsIgnoreCase("grf") && (operation !=null && operation.equalsIgnoreCase("update")))
+			{
+				while (dis.available() !=0)
+				{
+					String line = dis.readLine();
+					
+					//Source FileName
+					if(line.contains("Datafile is:"))
+					{
+						if(!(record.containsKey("SOURCEFILENAME")))
+						{
+							record.put("SOURCEFILENAME", line.substring(line.indexOf(":")+1,line.indexOf("and")).trim());
+						}
+
+						//Operation
+
+						if(line.contains("action is:"))
+						{
+							if(!(record.containsKey("OPERATION")))
+							{
+								record.put("OPERATION", line.substring(line.lastIndexOf(":")+1,line.length()).trim());
+							}
+
+						}
+
+					}
+					
+					//Source File Count
+					if(line.contains("Total counts of"))
+					{
+						if(!(record.containsKey("SOURCEFILECOUNT")))
+						{
+							record.put("SOURCEFILECOUNT", line.substring(line.indexOf(':')+1,line.length()).trim());
+						}
+					}
+					
+					
+					 
+					//UpdateNumber
+					if(line.contains("UPDATENUMBER:"))
+					{
+						if(!(record.containsKey("UPDATENUMBER")))
+						{
+							record.put("UPDATENUMBER", line.substring(line.indexOf(":")+1,line.length()).trim());
+						}
+					}
+					
+					//TEMP TABLE COUNT
+					if(line.contains("records was loaded into the temp table"))
+					{ 
+						if(!(record.containsKey("TEMPTABLECOUNT")))
+						{
+							record.put("TEMPTABLECOUNT", line.substring(0,line.indexOf("records")).trim());
+						}
+						
+					}
+					
+					//Fast Extract File Name, Fast Extract Count
+					if(line.contains("Checking extract files for correction update number"))
+					{	
+						if(!(record.containsKey("FASTEXTRACTFILENAME")) && !(record.containsKey("FASTEXTRACTCOUNT")))
+						{
+							line = dis.readLine();
+
+							fast_count = line.substring(line.indexOf(":") +1, line.length()).trim();
+
+							record.put("FASTEXTRACTFILENAME", line.substring(0, line.indexOf("is a valid zip file with")).trim());	
+							record.put("FASTEXTRACTCOUNT",fast_count.substring(0, fast_count.indexOf(" records")));
+						}
+					}
+					
+					//sqlldr log file Info
+					if(line.contains("Check Export result") )
+					{	
+						if(!(record.containsKey("SQLLDRLOG")))
+						{
+							line = dis.readLine();
+							record.put("SQLLDRLOG", line.substring(line.indexOf("/data"), line.length()));	
+						}
+					}
+
+
+				}
+				//Master TABLE COUNT & diff 
+				/*HH 04/06/2015 i added a sql stmt to easily get the total GRF_Master count (update/delete) - to be used after WK: 201516
+				 * get from DB for now, till data becomes available in log file 
+				 */
+				if(!(record.containsKey("MASTERTABLECOUNT")))
+				{
+					
+					Count = Integer.toString(getMasterTableCount("ck_counts"));
+					record.put("MASTERTABLECOUNT", Count);
+
+					
+					//Src_Master_diff count
+					if(record.get("SOURCEFILECOUNT")!=null)
+					{
+						src_master_diff = Integer.parseInt(record.get("SOURCEFILECOUNT")) - Integer.parseInt(Count);
+						record.put("SRC_MASTER_DIFF", Integer.toString(src_master_diff));
+					}
+				}
+	
+				
 			}
 			else
 			{
@@ -367,6 +488,66 @@ public class DataloadCheck {
 		return count;
 	}
 	
+	
+	private static int getMasterTableCount(String tableName)
+	{
+		int count = 0;
+		String query = null;
+		
+		try
+		{
+			
+			if(record.containsKey("UPDATENUMBER") && record.containsKey("OPERATION"))
+			{
+				query= "select master_count from "+ tableName +" WHERE DB='" + database + "' and updatenumber=" + Integer.parseInt(record.get("UPDATENUMBER"))
+						+ " and action='"+record.get("OPERATION") + "'";
+
+				con = getConnection(connectionURL,driver,username,password);
+				stmt = con.createStatement();
+				rs = stmt.executeQuery(query);
+
+				if(rs.next())
+				{
+					count = rs.getInt(1);
+
+				}
+			}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+
+		finally
+		{
+			if (rs != null)
+			{
+				try
+				{
+					rs.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+			if (stmt != null)
+			{
+				try
+				{
+					stmt.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+		}
+		return count;
+	}
+
+	
+	
 	private static Connection getConnection(String connectionURL,String driver, String username, String password)
 	throws Exception
 	{
@@ -402,8 +583,6 @@ private static void writeRec () throws Exception
 	}
 
 	PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(file.getName(),true)));
-	
-	
 
 	/*for(Iterator<String> itr = keySet.iterator();itr.hasNext();)
 	{
