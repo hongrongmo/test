@@ -126,7 +126,7 @@ public class DataloadCheck {
 		ReadLogFile();
 
 		//Print Info
-		//writeRec();
+		writeRec();
 	}
 		
 
