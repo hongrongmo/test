@@ -1,29 +1,17 @@
 package org.ei.dataloading;
 
-/*
- * Date: 05/06/2015
- * Desc: get accessnumber list for list of M_ID returned from fast for certain query, this functionality is used more often
- * for our fast investigation (i.e M_id in fast and not in DB and vice versa)
- * Parameters: query & # of records  to fetch from fast & so from DB 
- * Author: HT
- */
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
-import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.Enumeration;
-import java.util.Hashtable;
 import java.util.List;
 
 import org.ei.domain.FastClient;
 
-public class FetchMidAnFromFast {
-
+public class FetchMidFromFast {
 	static String query = "";
     private static Connection con;
     static ResultSet rs = null;
@@ -111,21 +99,8 @@ public class FetchMidAnFromFast {
             List<String[]> l = client.getDocIDs();
             for (int i = 0; i < l.size(); i++) {
                 String[] docID = (String[]) l.get(i);
-               
-                query = "select accessnumber from bd_master where m_id= '" + docID[0]+"'";
-                rs = stmt.executeQuery(query);
-                
-                if(rs!=null)
-                {
-                	while(rs.next())
-                	{
-                		if(rs.getString("accessnumber") !=null)
-                		{
-                			out.write(rs.getString("accessnumber"));
+                			out.write(docID[0]);
                 			out.write("\r\n");
-                		}
-                	}
-                }
                 
             }
 
@@ -159,4 +134,5 @@ public class FetchMidAnFromFast {
 		Connection con = DriverManager.getConnection(connectionURL, username, password);
 		return con;
 	}
+
 }
