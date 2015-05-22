@@ -6,9 +6,6 @@ import java.util.ArrayList;
 
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
-import org.ei.common.CountryFormatter;
-import org.ei.common.Constants;
-import org.ei.common.CVSTermBuilder;
 import org.ei.common.*;
 import org.ei.util.GUID;
 import org.ei.dataloading.*;
@@ -84,6 +81,57 @@ public class CBNBCombiner extends Combiner
     {
         super(writer);
     }
+    
+    public void writeCombinedByTableHook(Connection con)
+    		throws Exception
+    		{
+    			Statement stmt = null;
+    			ResultSet rs = null;
+    			try
+    			{
+    			
+    				stmt = con.createStatement();
+    				System.out.println("Running the query...");
+    				String sqlQuery = "select * from " + Combiner.TABLENAME +" where database='" + Combiner.CURRENTDB + "'";
+    				System.out.println(sqlQuery);
+    				rs = stmt.executeQuery(sqlQuery);
+    				
+    				System.out.println("Got records ...from table::"+Combiner.TABLENAME);
+    				writeRecs(rs);
+    				System.out.println("Wrote records.");
+    				this.writer.end();
+    				this.writer.flush();
+    			
+    			}
+    			finally
+    			{
+    			
+    				if (rs != null)
+    				{
+    					try
+    					{
+    						rs.close();
+    					}
+    					catch (Exception e)
+    					{
+    						e.printStackTrace();
+    					}
+    				}
+    				
+    				if (stmt != null)
+    				{
+    					try
+    					{
+    						stmt.close();
+    					}
+    					catch (Exception e)
+    					{
+    						e.printStackTrace();
+    					}
+    				}
+    			}
+    		}
+
 
     public void writeCombinedByYearHook(Connection con, int year) throws Exception
     {
