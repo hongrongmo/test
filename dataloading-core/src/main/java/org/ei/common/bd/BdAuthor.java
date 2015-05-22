@@ -52,6 +52,13 @@ public class BdAuthor {
                 }
                 // System.out.println("auField= "+auField+" I= "+i+" auelements "+auelements.length+" elements= "+elements.size()+" value= "+auelements[i]);
 
+                if (auField.equals("auid")) {
+                    if (auelements[i] != null && !auelements[i].trim().equals("")) {
+                        this.setAuid(auelements[i]);
+                    }
+
+                }
+                
                 if (auField.equals("sec")) {
                     if (auelements[i] != null && !auelements[i].trim().equals("")) {
                         this.setSec(auelements[i]);

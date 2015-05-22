@@ -79,6 +79,9 @@ public class BdAuthors
 			{
 				BdAuthor nextau = (BdAuthor) auenum.next();
 				searchValue.add(nextau.getSearchValue());
+				if(nextau.getAuid()!=null){
+					searchValue.add(nextau.getAuid());
+				}
 			}
 
 		}
