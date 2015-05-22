@@ -45,9 +45,8 @@ public class ClassNodeManager {
      * @param applicationproperties
      */
     public static void init(ApplicationProperties applicationproperties) {
-    	//HH 01/28/2015 to fix log4j appender issue for Pat extract
+    	//HH 01/28/2015 to fix log4j appender issue for Pat
     	BasicConfigurator.configure();
-    	//
     	
         ClassNodeManager instance = ClassNodeManager.getInstance();
 

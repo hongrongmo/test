@@ -19,7 +19,7 @@ public class Entity {
 
     public static void main(String args[]) {
         try {
-            String test = "�� b c d E �";
+            String test = "?? b c d E ?";
             // System.out.println(Entity.replaceLatinChars(test));
             String line = null;
             String filename = "c:/tmp/entity.txt";
@@ -227,9 +227,9 @@ public class Entity {
     }
 
     static {
-        etable.setProperty("&Aacute;", "a");
+        etable.setProperty("&Aacute;", "A");
         etable.setProperty("&aacute;", "a");
-        etable.setProperty("&Acirc;", "a");
+        etable.setProperty("&Acirc;", "A");
         etable.setProperty("&acirc;", "a");
         etable.setProperty("&acute;", "");
         etable.setProperty("&AElig;", "AE");
@@ -246,7 +246,7 @@ public class Entity {
         etable.setProperty("&ap;", "");
         etable.setProperty("&Aring;", "A");
         etable.setProperty("&aring;", "a");
-        etable.setProperty("&Ascr;", "a");
+        etable.setProperty("&Ascr;", "A");
         etable.setProperty("&Atilde;", "A");
         etable.setProperty("&atilde;", "a");
         etable.setProperty("&Auml;", "A");
@@ -256,7 +256,7 @@ public class Entity {
         etable.setProperty("&beta;", "");
         etable.setProperty("&Bfr;", "B");
         etable.setProperty("&breve;", "");
-        etable.setProperty("&Bscr;", "b");
+        etable.setProperty("&Bscr;", "B");
         etable.setProperty("&bumpe;", "");
         etable.setProperty("&cap;", "");
         etable.setProperty("&capped;", "");
@@ -272,7 +272,7 @@ public class Entity {
         etable.setProperty("&Conint;", "");
         etable.setProperty("&Copf;", "");
         etable.setProperty("&copy;", "");
-        etable.setProperty("&Cscr;", "c");
+        etable.setProperty("&Cscr;", "C");
         etable.setProperty("&cup;", "U");
         etable.setProperty("&dagger;", "");
         etable.setProperty("&Dagger;", "");
@@ -342,7 +342,7 @@ public class Entity {
 //        etable.setProperty("&Gt;", ">");
         etable.setProperty("&gt;", "");    //HH 01/18/2014 from eijava
         etable.setProperty("&Gt;", "");    //HH 01/18/2014 from eijava
-        
+
         etable.setProperty("&harr;", "");
         etable.setProperty("&hArr;", "");
         etable.setProperty("&hellip;", "");
@@ -395,7 +395,7 @@ public class Entity {
 //        etable.setProperty("&Lt;", "<");
         etable.setProperty("&lt;", "");   //HH 01/18/2015 from eijava
         etable.setProperty("&Lt;", "");   //HH 01/18/2015 from eijava
-        
+
         etable.setProperty("&macr;", "");
         etable.setProperty("&male;", "");
         etable.setProperty("&mdash;", "");
@@ -431,7 +431,7 @@ public class Entity {
         etable.setProperty("&nvdash;", "");
         etable.setProperty("&nwarr;", "");
         etable.setProperty("&Oacute;", "O");
-        etable.setProperty("&oacute;", "a");
+        etable.setProperty("&oacute;", "o");
         etable.setProperty("&oarr;", "");
         etable.setProperty("&Ocirc;", "O");
         etable.setProperty("&ocirc;", "o");
@@ -439,7 +439,8 @@ public class Entity {
         etable.setProperty("&oelig;", "oe");
         etable.setProperty("&OElig;", "OE");
         etable.setProperty("&Ofr;", "O");
-        etable.setProperty("&ogr;", "O");
+		etable.setProperty("&Ogr;", "O");
+        etable.setProperty("&ogr;", "o");
         etable.setProperty("&omicron;", "O");
         etable.setProperty("&Ograve;", "O");
         etable.setProperty("&ograve;", "o");
