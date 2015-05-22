@@ -321,10 +321,17 @@ public class BaseTableDriver
                 {
                     if(sBuffer!=null && sBuffer.length()>0)
                     {
-                        sBuffer.insert(0,startRootElement);
-                        sBuffer.append(endRootElement);
-                        r.parseRecord(new StringReader(sBuffer.toString()));
-                        sBuffer = new StringBuffer();
+                    	try{
+	                        sBuffer.insert(0,startRootElement);
+	                        sBuffer.append(endRootElement);
+	                        r.parseRecord(new StringReader(sBuffer.toString()));
+                    	}
+                    	catch(Exception e)
+                    	{
+                    		System.out.println(sBuffer.toString());
+                    		e.printStackTrace();
+                    	}
+	                        sBuffer = new StringBuffer();
                     }
 
                     if(r.getRecordTable()!=null)

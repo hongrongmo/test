@@ -634,6 +634,7 @@ public class BdCorrection
 					System.in.read();
 					Thread.currentThread().sleep(1000);
 				}
+				
 				pstmt = con.prepareCall("{ call update_bd_reference_table(?,?)}");
 				pstmt.setInt(1,updateNumber);
 				pstmt.setString(2,database);
@@ -674,7 +675,7 @@ public class BdCorrection
 					System.in.read();
 					Thread.currentThread().sleep(1000);
 				}
-				pstmt = con.prepareCall("{ call update_bd_reference_table(?,?)}");
+				pstmt = con.prepareCall("{ call update_aip_reference_table(?,?)}");
 				pstmt.setInt(1,updateNumber);
 				pstmt.setString(2,database);
                 pstmt.executeUpdate();

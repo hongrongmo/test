@@ -24,6 +24,9 @@ public class BaseTableWriter
 	private Hashtable bdColumnsSize = new Hashtable();
 	public static final char FIELDDELIM = '\t';
 	private String accessNumber;
+	private String pui;
+	private String loadnumber;
+	private String updatenumber;
 	private String mid;
 	private int refCount;
 
@@ -37,9 +40,21 @@ public class BaseTableWriter
 	{
 
 		out = new PrintWriter(new FileWriter(filename));
-		referenceOut = new PrintWriter(new FileWriter("Reference_"+filename));
+		String path="";
+		String name="";
+		int pathSeperator = filename.lastIndexOf("/");
+		System.out.println("pathSeperator "+pathSeperator);
+		if(pathSeperator>=0)
+		{
+			path=filename.substring(0,pathSeperator+1);			
+		}
+		name=filename.substring(pathSeperator+1);
+		System.out.println("PATH "+path);
+		System.out.println("NAME "+name);
+		
+		referenceOut = new PrintWriter(new FileWriter(path+"Reference_"+name));
 		System.out.println("Output Filename "+filename);
-		System.out.println("Reference Output Filename Reference_"+filename);
+		System.out.println("Reference Output Filename "+path+"Reference_"+name);
 		open = true;
 	}
 
@@ -50,8 +65,14 @@ public class BaseTableWriter
 		StringBuffer recordBuf = new StringBuffer();
 		Iterator bdData = bdColumns.iterator();
 		boolean  isReference = false;
+		setAccessionNumber("");
+		setPui("");
+		setMID("");
+		setRefcount("");
+		setLoadnumber("");
+		setUpdatenumber("");
 		while (bdData.hasNext())
-		{
+		{		
 		    BaseTableRecord column = (BaseTableRecord)bdData.next();
 			String thisColumnName = (String)column.getName();
 			if(record == null)
@@ -64,10 +85,8 @@ public class BaseTableWriter
 			bdColumnsSize.put(thisColumnName,columnLength);
 			if(record.get(thisColumnName)!=null)
 			{
-
 				try
 				{
-
 						if(!thisColumnName.equals("REFERENCE"))
 						{
 							valueString = checkColumnWidth(columnLength.intValue(),
@@ -76,6 +95,11 @@ public class BaseTableWriter
 							if(thisColumnName.equals("ACCESSNUMBER"))
 							{
 								setAccessionNumber(valueString);
+							}
+							
+							if(thisColumnName.equals("PUI"))
+							{
+								setPui(valueString);
 							}
 
 							if(thisColumnName.equals("M_ID"))
@@ -87,13 +111,23 @@ public class BaseTableWriter
 							{
 								setRefcount(valueString);
 							}
+							
+							if(thisColumnName.equals("LOADNUMBER"))
+							{
+								setLoadnumber(valueString);
+							}
+							
+							if(thisColumnName.equals("UPDATENUMBER"))
+							{
+								setUpdatenumber(valueString);
+							}
 
 						}
 						else
 						{
 							isReference = true;
 							Hashtable reference =  (Hashtable)record.get("REFERENCE");
-							outputReference(reference,getAccessionNumber(),getMID(),getRefcount());
+							outputReference(reference,getAccessionNumber(),getMID(),getRefcount(), getPui(),getLoadnumber(),getUpdatenumber());
 						}
 					}
 					catch(Exception e)
@@ -129,7 +163,7 @@ public class BaseTableWriter
 
 	}
 
-	private void outputReference(Hashtable reference,String accessNumber,String mid, int refcount) throws Exception
+	private void outputReference(Hashtable reference,String accessNumber,String mid, int refcount, String pui, String loadnumber, String updatenumber) throws Exception
 	{
 	   if(reference != null)
 	   {
@@ -401,6 +435,24 @@ public class BaseTableWriter
 					  									(String)REFERENCEITEMCITATIONCODEN.get(referenceID)));
 				  }
 				  recordBuf.append(FIELDDELIM);
+				  
+				  if(pui != null)
+				  {
+					  recordBuf.append(pui);
+				  }
+				  recordBuf.append(FIELDDELIM);
+				  
+				  if(loadnumber!=null)
+				  {
+					  recordBuf.append(loadnumber);
+				  }
+				  recordBuf.append(FIELDDELIM);
+				  
+				  if(updatenumber!=null)
+				  {
+					  recordBuf.append(loadnumber);
+				  }
+				  recordBuf.append(FIELDDELIM);
 				  referenceOut.println(recordBuf.toString().trim());
 
 			 }
@@ -451,6 +503,36 @@ public class BaseTableWriter
 	private void setAccessionNumber(String accessNumber)
 	{
 		this.accessNumber = accessNumber;
+	}
+	
+	private String getPui()
+	{
+		return this.pui;
+	}
+
+	private void setPui(String pui)
+	{
+		this.pui = pui;
+	}
+	
+	private String getLoadnumber()
+	{
+		return this.loadnumber;
+	}
+
+	private void setLoadnumber(String loadnumber)
+	{
+		this.loadnumber = loadnumber;
+	}
+	
+	private String getUpdatenumber()
+	{
+		return this.updatenumber;
+	}
+
+	private void setUpdatenumber(String updatenumber)
+	{
+		this.updatenumber = updatenumber;
 	}
 
 	private String checkColumnWidth(int columnWidth,

@@ -103,13 +103,17 @@ public class XmlCombiner
         writer.setOperation(operation);
 
         XmlCombiner c = new XmlCombiner(writer);
-        if (timestamp==0 && (loadNumber > 3000 || loadNumber < 1000) && (loadNumber != 0))
+        if (timestamp==0 && (loadNumber > 3000 || loadNumber < 1000) && (loadNumber >1))
         {
            c.writeCombinedByWeekNumber(url, driver, username, password, loadNumber);
         }
         else if(timestamp > 0)
         {
            c.writeCombinedByTimestamp(url, driver, username, password, timestamp);
+        }
+        else if(loadNumber == 1)
+        {
+        	c.writeCombinedByTable(url, driver, username, password);
         }
         else if(loadNumber == 0)
         {
@@ -207,6 +211,57 @@ public class XmlCombiner
             }
         }
     }
+    
+public void writeCombinedByTableHook(Connection con)
+throws Exception
+{
+	Statement stmt = null;
+	ResultSet rs = null;
+	try
+	{
+	
+		stmt = con.createStatement();
+		System.out.println("Running the query...");
+		String sqlQuery = "select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER, substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,APICT, APICT1,APILT, APILT1,CLASSIFICATIONDESC,APIAMS,SEQ_NUM from " + Combiner.TABLENAME +" where database='" + Combiner.CURRENTDB + "'";
+		System.out.println(sqlQuery);
+		rs = stmt.executeQuery(sqlQuery);
+		
+		System.out.println("Got records ...from table::"+Combiner.TABLENAME);
+		writeRecs(rs);
+		System.out.println("Wrote records.");
+		this.writer.end();
+		this.writer.flush();
+	
+	}
+	finally
+	{
+	
+		if (rs != null)
+		{
+			try
+			{
+				rs.close();
+			}
+			catch (Exception e)
+			{
+				e.printStackTrace();
+			}
+		}
+		
+		if (stmt != null)
+		{
+			try
+			{
+				stmt.close();
+			}
+			catch (Exception e)
+			{
+				e.printStackTrace();
+			}
+		}
+	}
+}
+
 
     public void writeRecs(ResultSet rs)
         throws Exception

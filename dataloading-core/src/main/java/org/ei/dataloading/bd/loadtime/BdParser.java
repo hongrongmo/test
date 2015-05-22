@@ -33,7 +33,7 @@ public class BdParser
 	private PrintWriter out;
 	private SAXBuilder builder;
 	private String accessNumber;
-	//private String action;
+	private String pui;
 	private String databaseName = "cpx";
 	private DataLoadDictionary dictionary = new DataLoadDictionary();
 
@@ -140,6 +140,16 @@ public class BdParser
 	{
 		return this.accessNumber;
 	}
+	
+	public void setPui(String pui)
+	{
+		this.accessNumber = accessNumber;
+	}
+
+	public String getPui()
+	{
+		return this.pui;
+	}
 
 	public void parseRecord(Reader r) throws Exception
 	{
@@ -175,6 +185,9 @@ public class BdParser
 		String midstr= null;
 		try
 		{
+			//reset accessnumber and PUI for every record
+			setAccessNumber("");
+			setPui("");
 			if(cpxRoot != null)
 			{
 				String namespaceURI = cpxRoot.getNamespace().getURI();
@@ -273,6 +286,7 @@ public class BdParser
 							else if (itemid_idtype != null && itemid_idtype.equals("PUI"))
 							{
 								String  pui = itemidElement.getTextTrim();
+								setPui(pui);
 								record.put("PUI",pui);
 							}
 							else if (itemid_idtype != null && itemid_idtype.equals("SEC"))
@@ -3253,7 +3267,7 @@ public class BdParser
 		        aus.setSec(secstr);
 		    }
 
-		    Attribute auid = author.getAttribute("auid");
+		    Attribute auid = author.getAttribute("orcid");
 		    if(auid != null)
 		    {
 		        String auidstr = (String) auid.getValue();
@@ -3537,8 +3551,17 @@ public class BdParser
 				}
 			}
 
-
-			return bufauthor.toString();
+			if(bufauthor.length() < 3995 )
+			{
+				return bufauthor.toString();
+			}
+			else
+			{
+				int endFirstAuGroupMarker = bufauthor.lastIndexOf(Constants.AUDELIMITER, 3995)+1;
+				String firstAuGroup = bufauthor.substring(0, endFirstAuGroupMarker);
+				return firstAuGroup;
+			}
+			
 
 	}
 
