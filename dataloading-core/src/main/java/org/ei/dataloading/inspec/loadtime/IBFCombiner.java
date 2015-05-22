@@ -7,7 +7,6 @@ import java.util.*;
 
 import org.apache.oro.text.perl.*;
 import org.apache.oro.text.regex.*;
-
 import org.ei.util.GUID;
 import org.ei.dataloading.*;
 import org.ei.xml.*;
@@ -123,6 +122,57 @@ public class IBFCombiner
             }
         }
     }
+    
+    public void writeCombinedByTableHook(Connection con)
+    		throws Exception
+    		{
+    			Statement stmt = null;
+    			ResultSet rs = null;
+    			try
+    			{
+    			
+    				stmt = con.createStatement();
+    				System.out.println("Running the query...");
+    				String sqlQuery = "select * from " + Combiner.TABLENAME +" where database='" + Combiner.CURRENTDB + "'";
+    				System.out.println(sqlQuery);
+    				rs = stmt.executeQuery(sqlQuery);
+    				
+    				System.out.println("Got records ...from table::"+Combiner.TABLENAME);
+    				writeRecs(rs);
+    				System.out.println("Wrote records.");
+    				this.writer.end();
+    				this.writer.flush();
+    			
+    			}
+    			finally
+    			{
+    			
+    				if (rs != null)
+    				{
+    					try
+    					{
+    						rs.close();
+    					}
+    					catch (Exception e)
+    					{
+    						e.printStackTrace();
+    					}
+    				}
+    				
+    				if (stmt != null)
+    				{
+    					try
+    					{
+    						stmt.close();
+    					}
+    					catch (Exception e)
+    					{
+    						e.printStackTrace();
+    					}
+    				}
+    			}
+    		}
+
 
     public void writeCombinedByWeekHook(Connection con,
                                         int loadN)

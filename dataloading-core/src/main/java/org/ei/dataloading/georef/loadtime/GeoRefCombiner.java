@@ -13,19 +13,19 @@ import java.util.regex.*;
 import org.ei.domain.*;
 import org.ei.util.StringUtil;
 import org.ei.util.GUID;
-
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
-
 import org.xml.sax.EntityResolver;
 import org.xml.sax.ErrorHandler;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 import org.xml.sax.XMLReader;
+
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.text.DateFormat;
+
 import org.ei.dataloading.*;
 import org.ei.common.*;
 import org.ei.common.georef.*;
@@ -151,6 +151,57 @@ public static int getResultSetSize(ResultSet resultSet)
 
 	    return size;
 }
+
+public void writeCombinedByTableHook(Connection con)
+throws Exception
+{
+	Statement stmt = null;
+	ResultSet rs = null;
+	try
+	{
+
+		stmt = con.createStatement();
+		System.out.println("Running the query...");
+		String sqlQuery = "select * from " + Combiner.TABLENAME +" where database='" + Combiner.CURRENTDB + "'";
+		System.out.println(sqlQuery);
+		rs = stmt.executeQuery(sqlQuery);
+
+		System.out.println("Got records ...from table::"+Combiner.TABLENAME);
+		writeRecs(rs);
+		System.out.println("Wrote records.");
+		this.writer.end();
+		this.writer.flush();
+
+	}
+	finally
+	{
+
+		if (rs != null)
+		{
+			try
+			{
+				rs.close();
+			}
+			catch (Exception e)
+			{
+				e.printStackTrace();
+			}
+		}
+
+		if (stmt != null)
+		{
+			try
+			{
+				stmt.close();
+			}
+			catch (Exception e)
+			{
+				e.printStackTrace();
+			}
+		}
+	}
+}
+
 
 public void writeCombinedByWeekHook(Connection con,
                                     int weekNumber)
@@ -841,7 +892,7 @@ private class LocalEntityResolver implements EntityResolver {
           //InputStream in = this.getClass().getClassLoader().getResourceAsStream("org/ei/data/" + dtdfile);   //original
 
           //HH 01/18/2015
-          InputStream in = this.getClass().getClassLoader().getResourceAsStream("org/ei/dataloading/georef/loadtime/" + dtdfile);
+          InputStream in = this.getClass().getClassLoader().getResourceAsStream("org/ei/data/georef/loadtime/" + dtdfile);
 
           if(in != null)
           {

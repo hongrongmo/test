@@ -76,8 +76,42 @@ public abstract class Combiner
             }
         }
 
+        public void writeCombinedByTable(	String connectionURL,
+                							String driver,
+                							String username,
+                							String password) throws Exception
+        {
+        	 Connection con = null;
+
+             try
+             {
+                 con = getConnection(connectionURL,
+                                     driver,
+                                     username,
+                                     password);
 
 
+
+                 writeCombinedByTableHook(con);
+             }
+             finally
+             {
+
+                 if(con != null)
+                 {
+                     try
+                     {
+                         con.close();
+                     }
+                     catch(Exception e)
+                     {
+                         e.printStackTrace();
+                     }
+                 }
+             }
+        
+        }
+    	public abstract void writeCombinedByTableHook(Connection con) throws Exception;
 
         public abstract void writeCombinedByYearHook(Connection con,
                                                      int year)
