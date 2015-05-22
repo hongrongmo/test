@@ -37,7 +37,7 @@ import org.ei.common.bd.BdIsbn;
 import org.ei.common.bd.BdPageCount;
 import org.ei.common.bd.CVTerms;
 import org.ei.common.Constants;
-//import org.ei.data.bd.loadtime.BdParser;
+import org.ei.xml.Entity;
 import org.ei.domain.Abstract;
 import org.ei.domain.Affiliation;
 import org.ei.domain.Affiliations;
@@ -1250,43 +1250,55 @@ public class BDDocBuilder implements DocumentBuilder {
 
     private String cleanBadCharacters(String strValue) {
 
-        if (strValue != null) {
-            Matcher m = accentregex.matcher(strValue);
-            StringBuffer sb = new StringBuffer();
-            boolean result = m.find();
+       if(strValue != null)
+       {
+           Matcher m = accentregex.matcher(strValue);
+           StringBuffer sb = new StringBuffer();
+           boolean result = m.find();
 
-            while (result) {
-                String strMatch = m.group();
-                String strReplace = (String) badCharacterMap.get(strMatch);
-                if (strReplace == null) {
-                    // if there is no map, just replace with the intial
-                    // character
-                    // i.e. a,S,Z without the trailing entity so it will at
-                    // least look cleaner
-                    strReplace = m.group(1);
-                    // do not strip off trailing &, < or > ! i.e. A&amp; will
-                    // just remain A&amp;
-                    // if(m.group(2).equals("&amp;") ||
-                    // m.group(2).equals("&gt;") || m.group(2).equals("&lt;")) {
+           while(result)
+           {
+             String strMatch = m.group();
+             String strReplace = (String) badCharacterMap.get(strMatch);
+             if(strReplace == null)
+             {
+   			Pattern accentregex1 = Pattern.compile("(&\\w+;)");
+   			Matcher m1 = accentregex1.matcher(strMatch);
+   			boolean result1 = m1.find();
+   			while(result1)
+   			{
+             		String strMatch1 = m1.group();
+   				//System.out.println("MATCH1= " +Entity.prepareString(strMatch1));
+   				if(Entity.prepareString(strMatch1)!=null && Entity.prepareString(strMatch1).length()>0)
+   				{
+   				  //good entity, do nothing
+   				   strReplace  =strMatch;
+   				}
+   				else
+   			    {
+   					//bad Entity
+   					// if there is no map, just replace with the intial character
+   					// i.e. a,S,Z without the trailing entity so it will at least look cleaner
+   					strReplace = m.group(1);
+   					// do not strip off trailing &, < or > !  i.e. A&amp; will just remain A&amp;
+   					if(m.group(2).equals("&amp;") || m.group(2).equals("&gt;") || m.group(2).equals("&lt;")) {
+   					  strReplace = m.group();
+   					}
+   				}
+   				result1 = m1.find();
+   			}
+             }
+              // The appendReplacement method appends everything up to the next match and the replacement for that match.
+             m.appendReplacement(sb, strReplace);
+             result = m.find();
+           }
+           // The appendTail appends the strings at the end, after the last match.
+           m.appendTail(sb);
+           strValue = sb.toString();
+       }
 
-                    // Hanan 04/26/2013 fix missing multiplication sign "x"
-                    // [&times;] in title
-                    if (m.group(2).equals("&amp;") || m.group(2).equals("&gt;") || m.group(2).equals("&lt;") || m.group(2).equals("&times;")) {
-                        strReplace = m.group();
-                    }
-                }
-                // The appendReplacement method appends everything up to the
-                // next match and the replacement for that match.
-                m.appendReplacement(sb, strReplace);
-                result = m.find();
-            }
-            // The appendTail appends the strings at the end, after the last
-            // match.
-            m.appendTail(sb);
-            strValue = sb.toString();
-        }
-        return strValue;
-    }
+       return strValue;
+  }
 
     public Contributors getAuthors(Key key, String authorString, String authorString1, String dataFormat)
 
