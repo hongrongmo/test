@@ -256,7 +256,7 @@ public class DataloadCheck {
 					}
 
 					//sqlldr log file Name from original log file
-					if(line.contains("/corrections/logs") && line.contains("out.log"))
+					if(line.contains("/corrections/logs") && line.contains("out.log") && !(line.contains("Reference_")))
 					{
 						record.put("SQLLDRLOG", line.trim());
 					}
@@ -513,6 +513,7 @@ public class DataloadCheck {
 				StringBuffer errorMessage = new StringBuffer();
 				int loadedRecordCount = 0;
 				int rejectedRecordCount = 0;
+				StringBuffer sqlErrorMessage=new StringBuffer();
 				
 				System.out.println("Operation is " +  operation);
 				while (dis.available() !=0)
@@ -560,13 +561,18 @@ public class DataloadCheck {
 					//ERROR Messages
 					if(line.contains("Rejected -"))
 					{
-						line = dis.readLine();
-						if(line !=null && line.contains("ORA-0"))
+						if(database.equalsIgnoreCase("ins"))
 						{
-							errorMessageList.add(line);
+							sqlErrorMessage.append(line.substring(line.indexOf(":")+1, line.length()).trim());
+						}
+						line = dis.readLine();
+						
+						if(line !=null)
+						{
+							sqlErrorMessage.append(" ");
+							sqlErrorMessage.append(line);
+							errorMessageList.add(sqlErrorMessage.toString());
 							i++;
-							
-							
 						}
 						
 					}
@@ -650,8 +656,8 @@ public class DataloadCheck {
 					}
 				
 				
-				//Rejected Records Count from sqlldr file
-				record.put("SRC_TEMP_DIFF", Integer.toString(rejectedRecordCount));
+				//Rejected Records Count from sqlldr file, temp count for new data load is 0
+				record.put("SRC_TEMP_DIFF", (Integer.toString((rejectedRecordCount + loadedRecordCount)-0)));
 					
 					
 				//Master TABLE COUNT 
@@ -924,14 +930,12 @@ public class DataloadCheck {
 
 				}
 				
-				// Total number of rejected records from sqlldr
+				/*// Total number of rejected records from sqlldr
 				if(line.contains("Rows not loaded due to data errors") || line.contains("Row not loaded due to data errors"))
 				{
 					//ERROR TABLE COUNT
 					record.put("SRC_TEMP_DIFF", (line.substring(0, line.indexOf("Row")).trim()));
-					
-					
-				}
+				}*/
 				
 
 			}
