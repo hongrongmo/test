@@ -377,9 +377,17 @@ public class DataloadCheck {
 			
 			
 			
-			else if(database!=null && database.equalsIgnoreCase("grf") && (operation !=null && operation.equalsIgnoreCase("update")))
+			else if(database!=null && (database.equalsIgnoreCase("grf") || database.equalsIgnoreCase("elt"))  && (operation !=null && operation.equalsIgnoreCase("update")))
 			{
-				tableName = "GEOREF_CORRECTION_ERROR";
+				if(database.equalsIgnoreCase("grf"))
+				{
+					tableName = "GEOREF_CORRECTION_ERROR";
+				}
+				
+				else if (database.equalsIgnoreCase("elt"))
+				{
+					tableName = "BD_CORRECTION_ERROR";
+				}
 				while (dis.available() !=0)
 				{
 					line = dis.readLine();
@@ -510,10 +518,12 @@ public class DataloadCheck {
 				tableName = "BD_MASTER";
 				int i = 0;
 				ArrayList<String> errorMessageList = new ArrayList<String>();
+				ArrayList<String> uniqueErrorMessageList = new ArrayList<String>();
 				StringBuffer errorMessage = new StringBuffer();
 				int loadedRecordCount = 0;
 				int rejectedRecordCount = 0;
 				StringBuffer sqlErrorMessage=new StringBuffer();
+				String error="";
 				
 				System.out.println("Operation is " +  operation);
 				while (dis.available() !=0)
@@ -567,11 +577,12 @@ public class DataloadCheck {
 						}
 						line = dis.readLine();
 						
-						if(line !=null)
+						if(line !=null && line.contains("ORA-0"))
 						{
-							sqlErrorMessage.append(" ");
-							sqlErrorMessage.append(line);
-							errorMessageList.add(sqlErrorMessage.toString());
+							//sqlErrorMessage.append(" ");
+							//sqlErrorMessage.append(line);
+							//errorMessageList.add(sqlErrorMessage.toString());
+							errorMessageList.add(line.substring(line.lastIndexOf(":")+1, line.length()).trim());
 							i++;
 						}
 						
@@ -624,7 +635,7 @@ public class DataloadCheck {
 				
 			
 				// Get distinct Error message from errorMessageList to load to log table
-				if(errorMessageList != null && errorMessageList.size() >0)
+				/*if(errorMessageList != null && errorMessageList.size() >0)
 				{
 					for(int j=0; j<errorMessageList.size();j++)
 					{
@@ -635,7 +646,7 @@ public class DataloadCheck {
 						
 						else if (j >=0)
 						{
-							if(!(errorMessageList.get(j).equalsIgnoreCase(errorMessage.toString())))
+							if(!(errorMessageList.get(j).equalsIgnoreCase(errorMessageList.get(j).toString())))
 							{
 								errorMessage.append(",");
 								errorMessage.append(errorMessageList.get(j));
@@ -645,7 +656,43 @@ public class DataloadCheck {
 					
 					record.put("ERRORMESSAGE", errorMessage.toString());
 					System.out.println("Errormessage is :" + errorMessage.toString());
-				}
+				}*/
+				
+				
+				if(errorMessageList != null && errorMessageList.size() >0)
+				{
+					for(int j=0; j<errorMessageList.size();j++)
+					{
+						
+						if (j >0)
+						{
+							if(!(uniqueErrorMessageList.contains(errorMessageList.get(j).toString())))
+							{
+								uniqueErrorMessageList.add(errorMessageList.get(j));
+							}
+						}
+						else if (j==0)
+						{
+							uniqueErrorMessageList.add(errorMessageList.get(0));							
+						}
+					}
+				
+					
+					// Get Unique Error Message 
+					
+					for(int k=0; k<uniqueErrorMessageList.size();k++)
+					{
+						if(errorMessage.length()>0)
+						{
+							errorMessage.append(",");
+						}
+						errorMessage.append(uniqueErrorMessageList.get(k));
+					}
+
+				record.put("ERRORMESSAGE", errorMessage.toString());
+				System.out.println("Errormessage is :" + errorMessage.toString());
+			
+			}
 				
 				
 				//TEMP TABLE COUNT, add "0" to avoid having "null"
@@ -974,7 +1021,7 @@ public class DataloadCheck {
 			}
 		}
 
-		System.out.println("Sqlldr Error Message: " + errorMessage);
+		//System.out.println("Sqlldr Error Message: " + errorMessage);
 		
 		if(!record.containsKey("ERRORMESSAGE"))
 		{
