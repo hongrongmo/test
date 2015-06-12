@@ -584,37 +584,45 @@ public class DataloadCheck {
 					{
 							if(database.equalsIgnoreCase("cbn"))
 							{
-								record.put("SOURCEFILENAME", line.substring(line.indexOf("/")+1,line.indexOf("txt")+3).trim());
+								//record.put("SOURCEFILENAME", line.substring(line.indexOf("/")+1,line.indexOf("txt")+3).trim());
 								sourceFilenameList.add(line.substring(line.indexOf("/")+1,line.indexOf("txt")+3).trim());
 							}
 							else if (database.equalsIgnoreCase("ept"))
 							{
-								record.put("SOURCEFILENAME", line.substring(line.indexOf("/")+1,line.indexOf("pat")+3).trim());
-								sourceFilenameList.add(line.substring(line.indexOf("/")+1,line.indexOf("pat")+3).trim());
+								//record.put("SOURCEFILENAME", line.substring(line.indexOf("/")+1,line.indexOf("pat")+3).trim());
+								if(!(line.contains("/")))
+								{
+									sourceFilenameList.add(line.substring(line.indexOf(":")+1,line.indexOf("pat")+3).trim());
+								}
+								else
+								{
+									sourceFilenameList.add(line.substring(line.indexOf("/")+1,line.indexOf("pat")+3).trim());
+								}
+								
 							}
 							else if(database.equalsIgnoreCase("ins"))
 							{
-								record.put("SOURCEFILENAME", line.substring(line.indexOf("/")+1,line.indexOf("zip")+3).trim());
+								//record.put("SOURCEFILENAME", line.substring(line.indexOf("/")+1,line.indexOf("zip")+3).trim());
 								sourceFilenameList.add(line.substring(line.indexOf("/")+1,line.indexOf("zip")+3).trim());
 							}
 							else if(database.equalsIgnoreCase("nti"))
 							{
-								record.put("SOURCEFILENAME", line.substring(line.indexOf("/")+1,line.indexOf("xml")+3).trim());
+								//record.put("SOURCEFILENAME", line.substring(line.indexOf("/")+1,line.indexOf("xml")+3).trim());
 								sourceFilenameList.add(line.substring(line.indexOf("/")+1,line.indexOf("xml")+3).trim());
 							}
 							else if(database.equalsIgnoreCase("upt"))
 							{
-								record.put("SOURCEFILENAME", line.substring(line.indexOf("/")+1,line.length()).trim());
+								//record.put("SOURCEFILENAME", line.substring(line.indexOf("/")+1,line.length()).trim());
 								sourceFilenameList.add(line.substring(line.indexOf("/")+1,line.length()).trim());
 							}
 							else if (database.equalsIgnoreCase("grf") && operation.equalsIgnoreCase("ip"))
 							{
-								record.put("SOURCEFILENAME", line.substring(line.indexOf(":")+1,line.indexOf("out")-1).trim());
+								//record.put("SOURCEFILENAME", line.substring(line.indexOf(":")+1,line.indexOf("out")-1).trim());
 								sourceFilenameList.add(line.substring(line.indexOf(":")+1,line.indexOf("out")-1).trim());
 							}
 							else
 							{
-								record.put("SOURCEFILENAME", line.substring(line.indexOf(":")+1,line.indexOf("xml")+3).trim());
+								//record.put("SOURCEFILENAME", line.substring(line.indexOf(":")+1,line.indexOf("xml")+3).trim());
 								sourceFilenameList.add(line.substring(line.indexOf(":")+1,line.indexOf("xml")+3).trim());
 							}
 					}
@@ -622,7 +630,8 @@ public class DataloadCheck {
 					//SqlLdr ERROR Messages
 					if(line.contains("Rejected -"))
 					{
-						if(database.equalsIgnoreCase("ins"))
+						//if(database.equalsIgnoreCase("ins"))
+						if(line.contains("column"))
 						{
 							errorMessage = line.substring(line.indexOf(":")+1, line.length()).trim();
 							
@@ -1040,7 +1049,8 @@ public class DataloadCheck {
 			}
 		}
 
-		
+		sqlErrorMessageList.add(sqlldrErrorMessage.toString());
+		sqlErrorMessageCountList.add(sqlldrErrorMessageCount.toString());
 		
 		System.out.println("Sqlldr Error Message: " + sqlldrErrorMessage);
 		System.out.println("Sqlldr Error Count: " + sqlldrErrorMessageCount);
