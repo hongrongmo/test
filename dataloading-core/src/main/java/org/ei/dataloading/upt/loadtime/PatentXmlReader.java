@@ -509,9 +509,9 @@ public class PatentXmlReader
 			if(related_documents!=null && related_documents.get("DOCNUMBER") != null)
 			{
 				String ainString = (String)related_documents.get("DOCNUMBER");
-				if(ainString.length()>3999)
+				if(ainString.length()>499)
 				{
-					ainString = ainString.substring(0,ainString.lastIndexOf(AUDELIMITER,3999));
+					ainString = ainString.substring(0,ainString.lastIndexOf(AUDELIMITER,999));
 					System.out.println("AIN Field too long for record "+ac+" "+patentNumber);
 				}
 
