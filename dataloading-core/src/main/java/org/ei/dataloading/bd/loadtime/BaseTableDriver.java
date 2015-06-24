@@ -12,8 +12,9 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 import java.util.Hashtable;
 import java.util.Enumeration;
+import java.util.List;
 //import org.ei.data.LoadNumber;
-//import org.ei.data.bd.*;
+//import org.ei.dataloading.bd.*;
 import java.sql.*;
 
 public class BaseTableDriver
@@ -148,6 +149,25 @@ public class BaseTableDriver
                 System.out.println("this application only handle xml and zip file");
             }
 
+            List nullAccessNumberRecordList = baseWriter.getNullAccessNumberRecord();
+            if(nullAccessNumberRecordList.size()>0)
+            {
+            	System.out.println("there are "+baseWriter.getNullAccessNumberRecord().size()+" records with null accessnumber");
+            	System.out.println("the PUI for these records are");
+            	for(int i=0;i<nullAccessNumberRecordList.size();i++)
+            	{
+            		String pui = (String)nullAccessNumberRecordList.get(i);
+            		System.out.print(pui);
+            		if(i<nullAccessNumberRecordList.size()-1)
+            		{
+            			System.out.print(",");
+            		}
+            		else
+            		{
+            			System.out.print(".\n");
+            		}
+            	}
+            }
             baseWriter.end();
 
         }
