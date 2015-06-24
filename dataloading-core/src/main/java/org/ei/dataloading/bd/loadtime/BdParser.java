@@ -193,7 +193,7 @@ public class BdParser
 				String namespaceURI = cpxRoot.getNamespace().getURI();
 				if(namespaceURI!=null && namespaceURI.length()>0)
 				{
-					noNamespace = Namespace.getNamespace("","http://www.elsevier.com/xml/ani/ani");;
+					noNamespace = Namespace.getNamespace("","http://www.elsevier.com/xml/ani/ani");
 				}
 				Element item = cpxRoot.getChild("item",noNamespace);
 
@@ -2377,6 +2377,30 @@ public class BdParser
 					{
 						record.put("PUBLICATIONDATE",dateString);
 					}
+			}
+			
+			//SOURCE WEBSITE
+			Element website = (Element) source.getChild("website",noNamespace);
+			if(website!=null)
+			{
+				Element websitename = (Element) website.getChild("websitename",noNamespace);
+				StringBuffer  sourceWebsiteBuffer = new StringBuffer();
+				if(websitename!=null)
+				{
+					String websitenameText = websitename.getTextTrim();
+					sourceWebsiteBuffer.append(websitenameText);
+				}
+				sourceWebsiteBuffer.append(Constants.IDDELIMITER);
+				Element eaddress = (Element) website.getChild("e-address",ceNamespace);
+				if(eaddress!=null)
+				{
+					String eaddresstext = eaddress.getText();
+					if(eaddresstext != null)
+					{
+						sourceWebsiteBuffer.append(eaddresstext);
+					}
+				}
+				record.put("SOURCEWEBSITE",sourceWebsiteBuffer.toString());
 			}
 
 			//CONTRIBUTORGROUP
