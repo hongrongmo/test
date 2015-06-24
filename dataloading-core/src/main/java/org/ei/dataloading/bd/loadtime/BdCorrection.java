@@ -278,9 +278,11 @@ public class BdCorrection
                 int t = p.waitFor();
 
                 int tempTableCount = bdc.getTempTableCount();
+                int tempReferenceTableCount = bdc.getTempReferenceTableCount();
+                System.out.println(tempTableCount+" records was loaded into the temp table");
+                System.out.println(tempReferenceTableCount+" records was loaded into the reference table");
                 if(tempTableCount>0)
-                {
-                    System.out.println(tempTableCount+" records was loaded into the temp table");
+                {                 
                     if(test)
                     {
                         System.out.println("begin to update tables");
@@ -635,10 +637,13 @@ public class BdCorrection
 					Thread.currentThread().sleep(1000);
 				}
 				
-				pstmt = con.prepareCall("{ call update_bd_reference_table(?,?)}");
-				pstmt.setInt(1,updateNumber);
-				pstmt.setString(2,database);
-                pstmt.executeUpdate();
+				if(database.equals("cpx"))
+				{
+					pstmt = con.prepareCall("{ call update_bd_reference_table(?,?)}");
+					pstmt.setInt(1,updateNumber);
+					pstmt.setString(2,database);
+	                pstmt.executeUpdate();
+				}
 
             }
             else if(action != null && action.equalsIgnoreCase("aip"))
@@ -675,10 +680,13 @@ public class BdCorrection
 					System.in.read();
 					Thread.currentThread().sleep(1000);
 				}
-				pstmt = con.prepareCall("{ call update_aip_reference_table(?,?)}");
-				pstmt.setInt(1,updateNumber);
-				pstmt.setString(2,database);
-                pstmt.executeUpdate();
+				if(database.equals("cpx"))
+				{
+					pstmt = con.prepareCall("{ call update_aip_reference_table(?,?)}");
+					pstmt.setInt(1,updateNumber);
+					pstmt.setString(2,database);
+	                pstmt.executeUpdate();
+				}
             }
             else if(action != null && action.equalsIgnoreCase("delete"))
             {
@@ -785,6 +793,57 @@ public class BdCorrection
 
         return count;
     }
+    
+    private int getTempReferenceTableCount()
+    {
+        Statement stmt = null;
+        String[] tableName = null;
+        int count = 0;
+        ResultSet rs = null;
+
+        try
+        {
+            stmt = con.createStatement();
+
+            rs = stmt.executeQuery("select count(*) count from "+referenceTable+"");
+            if(rs.next())
+            {
+                count = rs.getInt("count");
+            }
+
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        finally
+        {
+            if (rs != null)
+            {
+                try
+                {
+                    rs.close();
+                }
+                catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
+            }
+            if (stmt != null)
+            {
+                try
+                {
+                    stmt.close();
+                }
+                catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+        return count;
+    }
 
 
     private void cleanUp(String tableToBeTruncate)
@@ -826,13 +885,20 @@ public class BdCorrection
                     System.out.println("truncate backup table "+this.backupTable);
                 }
 
-				if(i==3)
+				if(i==3 && database.equals("cpx"))
 				{
 					this.referenceTable=tableName[i];
 					System.out.println("truncate reference table "+this.referenceTable);
                 }
-
-                stmt.executeUpdate("truncate table "+tableName[i]);
+				
+				if(database.equals("cpx"))
+				{
+					stmt.executeUpdate("truncate table "+tableName[i]);
+				}
+				else
+				{
+					System.out.println("no reference except cpx");
+				}
             }
 
         }
