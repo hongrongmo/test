@@ -362,7 +362,11 @@ public class DataloadCheck {
 					if(line.contains("Total counts of combined file is"))
 					{
 						srcFileCount = Integer.parseInt(line.substring(line.indexOf(':')+1,line.length()).trim());
-						sourcefileCountList.add(srcFileCount);
+						if(!(sourcefileCountList.contains(srcFileCount)))
+						{
+							sourcefileCountList.add(srcFileCount);
+						}
+						
 					}
 					
 					//TEMP TABLE COUNT
@@ -370,12 +374,15 @@ public class DataloadCheck {
 					{ 
 						tempTableCount = Integer.parseInt(line.substring(0,line.indexOf("records")).trim());
 						
-						tempTableCountList.add(tempTableCount);
-						
-						// SRC_TEMP_DIFF
-						
-						src_temp_diff = srcFileCount - tempTableCount;
-						srcTempDiffCountList.add(src_temp_diff);
+						if(!(tempTableCountList.contains(tempTableCount)))
+						{
+							tempTableCountList.add(tempTableCount);
+							
+							// SRC_TEMP_DIFF
+							
+							src_temp_diff = srcFileCount - tempTableCount;
+							srcTempDiffCountList.add(src_temp_diff);
+						}
 						
 					}
 					
