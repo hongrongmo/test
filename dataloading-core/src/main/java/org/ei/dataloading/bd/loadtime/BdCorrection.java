@@ -62,11 +62,14 @@ public class BdCorrection
     public static final String AUDELIMITER = new String(new char[] {30});
     public static final String IDDELIMITER = new String(new char[] {31});
     public static final String GROUPDELIMITER = new String(new char[] {02});
+    private static long startTime = System.currentTimeMillis();
+    private static long endTime = System.currentTimeMillis();
+    private static long midTime = System.currentTimeMillis();
 
     public static void main(String args[])
         throws Exception
     {
-        long startTime = System.currentTimeMillis();
+        
         String fileToBeLoaded   = null;
         String input;
         String tableToBeTruncated = "bd_correction_temp,deleted_lookupIndex,bd_temp_backup";
@@ -221,7 +224,10 @@ public class BdCorrection
             System.exit(1);
         }
 
-
+        midTime = System.currentTimeMillis();
+        endTime = System.currentTimeMillis();
+        System.out.println("Time for finish reading input parameter"+(endTime-startTime)/1000.0+" seconds");
+        System.out.println("total Time used"+(endTime-startTime)/1000.0+" seconds");
         try
         {
 
@@ -243,7 +249,11 @@ public class BdCorrection
 
                 bdc.cleanUp(tableToBeTruncated);
 
-
+                midTime = endTime;
+                endTime = System.currentTimeMillis();
+                System.out.println("time for truncate table "+(endTime-midTime)/1000.0+" seconds");
+                System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+                
                 /************** load data into temp table ****************/
 
                 if(test)
@@ -281,6 +291,12 @@ public class BdCorrection
                 int tempReferenceTableCount = bdc.getTempReferenceTableCount();
                 System.out.println(tempTableCount+" records was loaded into the temp table");
                 System.out.println(tempReferenceTableCount+" records was loaded into the reference table");
+                
+                midTime = endTime;
+                endTime = System.currentTimeMillis();
+                System.out.println("time for loading temp table "+(endTime-midTime)/1000.0+" seconds");
+                System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+                
                 if(tempTableCount>0)
                 {                 
                     if(test)
@@ -298,6 +314,11 @@ public class BdCorrection
                     System.exit(1);
                 }
 
+                midTime = endTime;
+                endTime = System.currentTimeMillis();
+                System.out.println("time for run correction table "+(endTime-midTime)/1000.0+" seconds");
+                System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+                
                 if(test)
                 {
                     System.out.println("finished updating tables");
@@ -320,6 +341,11 @@ public class BdCorrection
                 {
                     bdc.processLookupIndex(bdc.getLookupData("aip"),bdc.getLookupData("aipBackup"));
                 }
+                
+                midTime = endTime;
+                endTime = System.currentTimeMillis();
+                System.out.println("time for run lookupIndex table "+(endTime-midTime)/1000.0+" seconds");
+                System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
 
             }
 
@@ -327,12 +353,20 @@ public class BdCorrection
             {
                 bdc.outputLookupIndex(bdc.getLookupData("lookupIndex"),updateNumber);
                 System.out.println(database+" "+updateNumber+" lookup index is done.");
+                midTime = endTime;
+                endTime = System.currentTimeMillis();
+                System.out.println("time for run lookup index along "+(endTime-midTime)/1000.0+" seconds");
+                System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
             }
             else if(action.equalsIgnoreCase("extractupdate")||action.equalsIgnoreCase("extractdelete"))
             {
 
                 bdc.doFastExtract(updateNumber,database,action);
                 System.out.println(database+" "+updateNumber+" fast extract is done.");
+                midTime = endTime;
+                endTime = System.currentTimeMillis();
+                System.out.println("time for run fast extract along "+(endTime-midTime)/1000.0+" seconds");
+                System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
             }
             else
             {
@@ -572,6 +606,7 @@ public class BdCorrection
 
     private void runCorrection(String fileName,int updateNumber,String database,String action)
     {
+    	long midTime = System.currentTimeMillis();
         CallableStatement pstmt = null;
         boolean blnResult = false;
         try
@@ -583,6 +618,7 @@ public class BdCorrection
                 System.out.println("press enter to continue");
                 System.in.read();
                 Thread.currentThread().sleep(1000);
+                
             }
 
             if(action != null && action.equalsIgnoreCase("aip"))
@@ -600,6 +636,11 @@ public class BdCorrection
                 pstmt.executeUpdate();
             }
 
+            midTime = endTime;
+            endTime = System.currentTimeMillis();
+            System.out.println("time for update_bd_backup_table "+(endTime-midTime)/1000.0+" seconds");
+            System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+            
             if(action != null && action.equalsIgnoreCase("update"))
             {
                 //System.out.println("updateNumber= "+updateNumber+" fileName= "+fileName+" database= "+database);
@@ -616,7 +657,11 @@ public class BdCorrection
                 pstmt.setString(3,database);
                 pstmt.executeUpdate();
 
-
+                midTime = endTime;
+                endTime = System.currentTimeMillis();
+                System.out.println("time for update_bd_temp_table "+(endTime-midTime)/1000.0+" seconds");
+                System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+                
                 if(test)
                 {
                     System.out.println("begin to execute stored procedure update_bd_master_table");
@@ -628,6 +673,11 @@ public class BdCorrection
                 pstmt.setInt(1,updateNumber);
                 pstmt.setString(2,database);
                 pstmt.executeUpdate();
+                
+                midTime = endTime;
+                endTime = System.currentTimeMillis();
+                System.out.println("time for update_bd_master_table "+(endTime-midTime)/1000.0+" seconds");
+                System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
 
 				if(test)
 				{
@@ -644,6 +694,11 @@ public class BdCorrection
 					pstmt.setString(2,database);
 	                pstmt.executeUpdate();
 				}
+				
+				 midTime = endTime;
+	             endTime = System.currentTimeMillis();
+	             System.out.println("time for update_bd_reference_table "+(endTime-midTime)/1000.0+" seconds");
+	             System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
 
             }
             else if(action != null && action.equalsIgnoreCase("aip"))
@@ -660,6 +715,11 @@ public class BdCorrection
                 pstmt.setString(2,fileName);
                 pstmt.setString(3,database);
                 pstmt.executeUpdate();
+                
+                midTime = endTime;
+	            endTime = System.currentTimeMillis();
+	            System.out.println("time for update_aip_temp_table "+(endTime-midTime)/1000.0+" seconds");
+	            System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
 
                 if(test)
                 {
@@ -673,6 +733,11 @@ public class BdCorrection
                 pstmt.setString(2,database);
                 pstmt.executeUpdate();
 
+                midTime = endTime;
+                endTime = System.currentTimeMillis();
+                System.out.println("time for update_aip_master_table "+(endTime-midTime)/1000.0+" seconds");
+                System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+                
 				if(test)
 				{
 					System.out.println("begin to execute stored procedure update_bd_reference_table");
@@ -687,6 +752,11 @@ public class BdCorrection
 					pstmt.setString(2,database);
 	                pstmt.executeUpdate();
 				}
+				
+				midTime = endTime;
+                endTime = System.currentTimeMillis();
+                System.out.println("time for update_aip_reference_table "+(endTime-midTime)/1000.0+" seconds");
+                System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
             }
             else if(action != null && action.equalsIgnoreCase("delete"))
             {
@@ -702,6 +772,11 @@ public class BdCorrection
                 pstmt.setString(2,fileName);
                 pstmt.setString(3,database);
                 pstmt.executeUpdate();
+                
+                midTime = endTime;
+                endTime = System.currentTimeMillis();
+                System.out.println("time for delete_bd_master_table "+(endTime-midTime)/1000.0+" seconds");
+                System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
 
 				if(test)
 				{
@@ -714,6 +789,11 @@ public class BdCorrection
 				pstmt.setInt(1,updateNumber);
 				pstmt.setString(2,database);
                 pstmt.executeUpdate();
+                
+                midTime = endTime;
+                endTime = System.currentTimeMillis();
+                System.out.println("time for delete_bd_reference_table "+(endTime-midTime)/1000.0+" seconds");
+                System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
             }
             else
             {
