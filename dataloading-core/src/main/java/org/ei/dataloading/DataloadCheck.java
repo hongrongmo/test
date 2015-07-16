@@ -42,15 +42,36 @@ public class DataloadCheck {
 	
 	private static Perl5Util perl = new Perl5Util();
 	
-	public static final String[] logTableFields= {"DATABASE","OPERATION","LOADNUMBER","UPDATENUMBER","SOURCEFILENAME","SOURCEFILECOUNT","CONVERTEDFILECOUNT","TEMPTABLECOUNT","SQLLDRLOG","MASTERTABLECOUNT","SRC_MASTER_DIFF","SRC_TEMP_DIFF","FASTEXTRACTFILENAME","FASTEXTRACTCOUNT", "ACCESSNUMBER" , "ERRORMESSAGE" , "DB_EXCEPTION_COUNT"};
+	public static final String[] logTableFields= {"DATABASE","OPERATION","LOADNUMBER","UPDATENUMBER","SOURCEFILENAME","SOURCEFILECOUNT","CONVERTEDFILECOUNT","TEMPTABLECOUNT","SQLLDRLOG","MASTERTABLECOUNT","SRC_MASTER_DIFF","SRC_TEMP_DIFF","FASTEXTRACTFILENAME","FASTEXTRACTCOUNT", "MASTER_FAST_DIFF" , "ACCESSNUMBER" , "ERRORMESSAGE" , "ERRORMESSAGECOUNT" , "DB_EXCEPTION_COUNT"};
 
 	static String fast_count;
+	static int src_temp_diff = 0;
 	static int src_master_diff = 0;
 	static int cpxDbExceptionCount = 0;
 	static int grfDbExceptionCount = 0;
 	
 	static StringBuffer accessnumbers = new StringBuffer();
 	static String errorMessage = null;
+	
+	static StringBuffer sqlldrErrorMessage = new StringBuffer(); 
+	static StringBuffer sqlldrErrorMessageCount = new StringBuffer(); 
+	
+	
+	static ArrayList<String> sourceFilenameList = new ArrayList<String>();
+	static ArrayList<Integer> sourcefileCountList = new ArrayList<Integer>();
+	static ArrayList<Integer> tempTableCountList = new ArrayList<Integer>();
+	static ArrayList<Integer> srcTempDiffCountList = new ArrayList<Integer>();
+	static ArrayList<Integer> masterTableCountList = new ArrayList<Integer>();
+	static ArrayList<Integer> srcMasterDiffCountList = new ArrayList<Integer>();
+	static ArrayList<String> fastExtractFileNameList = new ArrayList<String>();
+	static ArrayList<Integer> fastExtractCountList = new ArrayList<Integer>();
+	static ArrayList<String> sqlldrInfoList = new ArrayList<String>();
+	static ArrayList<String> sqlldrFileNameList = new ArrayList<String>();
+	static ArrayList<Integer> errorTableCountList = new ArrayList<Integer>();
+	static ArrayList<String> sqlErrorMessageList = new ArrayList<String>();
+	static ArrayList<String> sqlErrorMessageCountList = new ArrayList<String>();
+	
+	static ArrayList<Hashtable<String, String>> records = new ArrayList<Hashtable<String,String>>();
 	
 	
 	public static void main(String[] args) throws Exception{
@@ -61,7 +82,6 @@ public class DataloadCheck {
 			if(args[0]!=null)
 			{
 				database = args[0];
-				record.put("DATABASE",database);
 			}
 			
 			if(args[1]!=null)
@@ -72,7 +92,6 @@ public class DataloadCheck {
 			if(args[2]!=null)
 			{
 				loadNumber = Integer.parseInt(args[2]);
-				record.put("LOADNUMBER",Integer.toString(loadNumber));
 			}
 			
 			if(args[3]!=null && args[3].length()>0)
@@ -82,9 +101,8 @@ public class DataloadCheck {
                 if (matcher.find())
                 {
                     updateNumber = Integer.parseInt(args[3]);
-                    record.put("UPDATENUMBER", Integer.toString(updateNumber));
                     
-                    System.out.println("Updatenumber is : " + record.get("UPDATENUMBER"));
+                    System.out.println("Updatenumber is : " + updateNumber);
                     
                 }
                 else
@@ -119,7 +137,6 @@ public class DataloadCheck {
 			if(args[8]!=null)
 			{
 				operation = args[8];
-				//record.put("OPERATION",operation);
 				
 				//look for slqldr file only when operation is update/delete
 				if (operation !=null && !(operation.equalsIgnoreCase("new")) && !(operation.equalsIgnoreCase("ip")))
@@ -153,9 +170,11 @@ public class DataloadCheck {
 		record.put("CONVERTEDFILECOUNT", "");
 		
 		ReadLogFile();
-
+		
+		//printList();
+		getRecords();
 		//Print Info
-		writeRec();
+		writeRecs();
 	}
 		
 
@@ -182,6 +201,11 @@ public class DataloadCheck {
 			if(database!=null && database.equalsIgnoreCase("cpx") && (operation!=null && (operation.equalsIgnoreCase("update")|| operation.equalsIgnoreCase("delete"))))
 			{
 				tableName = "BD_CORRECTION_ERROR";
+				int srcFileCount = 0;
+				int tempTableCount = 0;
+				
+				String updNumCount="";
+				
 				//INFO from Log file
 				while (dis.available() !=0)
 				{
@@ -191,90 +215,120 @@ public class DataloadCheck {
 					if(line.contains("No errors detected in compressed data of"))
 					{
 						StringBuffer str = new StringBuffer("No errors detected in compressed data of");
-						record.put("SOURCEFILENAME", line.substring(str.length(),line.length()).trim());
+						if(!(sourceFilenameList.contains(line.substring(str.length(),line.length()).trim())))
+						{
+							sourceFilenameList.add(line.substring(str.length(),line.length()).trim());
+						}
+						
 					}
 
 					//Source File Count
 					if(line.contains("Total counts for this file is"))
 					{
-						record.put("SOURCEFILECOUNT", dis.readLine().trim());
+						srcFileCount = Integer.parseInt(dis.readLine().trim());
+						sourcefileCountList.add(srcFileCount);
+						
 					}
 
 					//TEMP TABLE COUNT
 					if(line.contains("records was loaded into the temp table"))
 					{ 
-						record.put("TEMPTABLECOUNT", line.substring(0,line.indexOf("records")).trim());
+						tempTableCount = Integer.parseInt(line.substring(0,line.indexOf("records")).trim());
+						tempTableCountList.add(tempTableCount);
+						
+						// SRC Temp Diff Count 
+						
+						src_temp_diff = srcFileCount - tempTableCount;
+						srcTempDiffCountList.add(src_temp_diff);
+						
 					}
 
 					//UpdateNumber , and updated/deleted Master Table Count
-					if(line.contains("UPDATENUMB   COUNT(*)"))
+					
+					if(line.contains("new") && line.contains("select updatenumber, count(*) from BD_MASTER_ORIG where updatenumber")
+							&& line.contains("group by updatenumber"))
 					{
-						dis.readLine();
-						String updNumCount = dis.readLine();
+						for(int i=0;i<4;i++)
+						{
+							updNumCount = dis.readLine();
+						}
+						
 						updNumCount = perl.substitute("s/\t/;/g",updNumCount);
-						if(updNumCount!=null && updNumCount.length()>0 && firstmatch==0)
+						updatenum = updNumCount.substring(0,updNumCount.indexOf(';')).trim();
+						Count = Integer.parseInt(updNumCount.substring(updNumCount.indexOf(';')+1,updNumCount.length()).trim());
+						
+						//Src_Master_diff count
+						
+						 /*if more than one file master count is for first file, second master count is count of both files,
+						 so to get 2nd file count , subtract second master count - first file count 
+						 */
+						
+						if (masterTableCountList !=null && masterTableCountList.size()>0)
 						{
-							System.out.println("updNumCount: " +updNumCount);
-							updatenum = updNumCount.substring(0,updNumCount.indexOf(';')).trim();
-							Count = Integer.parseInt(updNumCount.substring(updNumCount.indexOf(';')+1,updNumCount.length()).trim());
-							firstmatch = 1;
+							for(int i=0;i<masterTableCountList.size();i++)
+							{
+								Count = Count -  masterTableCountList.get(i);
+							}
 							
-							//Src_Master_diff count & diff
-							src_master_diff = Integer.parseInt(record.get("SOURCEFILECOUNT")) -Count;
-							record.put("SRC_MASTER_DIFF", Integer.toString(src_master_diff));
-						}
-						else
-						{
-							System.out.println("Why updNumCount does not have data?????");
-						}
-						//record.put("UPDATENUMBER", updatenum);  since updatenumber is sent as param, so use it instead of getting from log file
-						record.put("MASTERTABLECOUNT", Integer.toString(Count));
+						}	
+						
+						masterTableCountList.add(Count);
+						
+						//SRC_Master_Diff Count 
+						
+						src_master_diff = srcFileCount -Count;
+						srcMasterDiffCountList.add(src_master_diff);
+						
 					}
+
 
 					//Fast Extract File Name, Fast Extract Count
 					if(line.contains("fast/batch") && line.contains("is a valid zip"))
 					{
 						fast_count = line.substring(line.indexOf(":") +1, line.length()).trim();
-						record.put("FASTEXTRACTFILENAME", line.substring(0, line.indexOf("is a valid zip file with")).trim());
-						//record.put("FASTEXTRACTCOUNT",line.substring(line.indexOf(":") +1, line.length()).trim());	
+
+						fastExtractFileNameList.add(line.substring(0, line.indexOf("is a valid zip file with")).trim());
+							
 						if(fast_count.contains("records"))
 						{
-							record.put("FASTEXTRACTCOUNT",fast_count.substring(0, fast_count.indexOf(" records")));
+							fastExtractCountList.add(Integer.parseInt(fast_count.substring(0, fast_count.indexOf(" records"))));
 						}
 						else 
 						{
-							record.put("FASTEXTRACTCOUNT",fast_count.trim());
+							fastExtractCountList.add(Integer.parseInt(fast_count.trim()));
 						}
 						
 					}
 					
-					//Operation
-					
-					if(!(record.containsKey("OPERATION")))
-					{
-						record.put("OPERATION",operation);
-					}
 
-					//sqlldr log file Name from original log file
-					if(line.contains("/corrections/logs") && line.contains("out.log"))
+					//SQLLDR Log Info From Main Log File (.txt)
+					if(line.contains("/corrections/logs") && line.contains("out.log") && !(line.contains("Reference_")))
 					{
-						record.put("SQLLDRLOG", line.trim());
+						sqlldrInfoList.add(line.trim());
 					}
-
 				}
 				
-				//DB EXCEPTION COUNT
+				//DB EXCEPTION COUNT FROM ERROR TABLE 
 				
 				cpxDbExceptionCount = getErrorTableCount(tableName);
-				record.put("DB_EXCEPTION_COUNT", Integer.toString(cpxDbExceptionCount));
-				
+				errorTableCountList.add(cpxDbExceptionCount);
 				
 				// Accessnumber(s) rejected or having other issue & error message from bd_correction_error
 				//getErrorTableMessage (tableName);
 				
 				
-				//Sqlldr ErrorMessage INFO from sqlldr Log file
-				getSqlldrErrorMessage (sqlldrlogFileName);
+				//SQLLDR ErrorMessage INFO from Sqlldr Log File
+				System.out.println("sqlldrfilename is " +  sqlldrlogFileName);
+				
+				if(sqlldrlogFileName.contains(";"))
+				{
+					sqlldrFileNameFormat(sqlldrlogFileName);
+				}
+				else
+				{
+					sqlldrFileNameList.add(sqlldrlogFileName);
+					getSqlldrErrorMessage(sqlldrlogFileName);
+				}
 			
 			}
 			
@@ -285,6 +339,9 @@ public class DataloadCheck {
 				username = "ba_s300";
 				password = "ei7it";
 				
+				int srcFileCount = 0;
+				int tempTableCount = 0;
+				
 				while (dis.available() !=0)
 				{
 					line = dis.readLine();
@@ -293,45 +350,64 @@ public class DataloadCheck {
 					if(line.contains("No errors detected in compressed data of") && !(line.contains("upload_to_fast")))
 					{
 						StringBuffer str = new StringBuffer("No errors detected in compressed data of");
-						record.put("SOURCEFILENAME", line.substring(str.length(),line.length()).trim());
+						if(!(sourceFilenameList.contains(line.substring(str.length(),line.length()).trim())))
+						{
+							sourceFilenameList.add(line.substring(str.length(),line.length()).trim());
+						}
+						
 						
 					}
 					
 					//Source File Count
 					if(line.contains("Total counts of combined file is"))
 					{
-						record.put("SOURCEFILECOUNT", line.substring(line.indexOf(':')+1,line.length()).trim());
+						srcFileCount = Integer.parseInt(line.substring(line.indexOf(':')+1,line.length()).trim());
+						if(!(sourcefileCountList.contains(srcFileCount)))
+						{
+							sourcefileCountList.add(srcFileCount);
+						}
+						
 					}
 					
 					//TEMP TABLE COUNT
 					if(line.contains("records was loaded into the temp table"))
 					{ 
-						record.put("TEMPTABLECOUNT", line.substring(0,line.indexOf("records")).trim());
+						tempTableCount = Integer.parseInt(line.substring(0,line.indexOf("records")).trim());
+						
+						if(!(tempTableCountList.contains(tempTableCount)))
+						{
+							tempTableCountList.add(tempTableCount);
+							
+							// SRC_TEMP_DIFF
+							
+							src_temp_diff = srcFileCount - tempTableCount;
+							srcTempDiffCountList.add(src_temp_diff);
+						}
+						
 					}
 					
 					
+					
 					//Master TABLE COUNT & diff
-					if(line.contains("ba_s300@EID> ba_s300@EID> ba_s300@EID>") && (dis.readLine().contains("COUNT(*)")))
+					if((line.contains("ba_s300@EID> ba_s300@EID> ba_s300@EID>") || line.contains("ba_s300@EIA> ba_s300@EIA> ba_s300@EIA>")) 
+							&& (dis.readLine().contains("COUNT(*)")))
 					{
 						dis.readLine();
 						Count = Integer.parseInt(dis.readLine().trim());
-						record.put("MASTERTABLECOUNT", Integer.toString(Count));
-						
+
+						masterTableCountList.add(Count);
+
 						//Src_Master_diff count
-						if(record.get("SOURCEFILECOUNT")!=null)
-						{
-							src_master_diff = Integer.parseInt(record.get("SOURCEFILECOUNT")) - Count;
-							record.put("SRC_MASTER_DIFF", Integer.toString(src_master_diff));
-	
-						}
+						src_master_diff = srcFileCount - Count;
+						srcMasterDiffCountList.add(src_master_diff);
+
 					}
 					
 					//UpdateNumber 
 					if(line.contains("updateNumber="))
 					{
-						updatenum = line.substring(line.indexOf('=')+1, line.indexOf("fileName=")).trim();
-						record.put("UPDATENUMBER", updatenum);
-
+						updatenum = line.substring(line.indexOf('=')+1, line.indexOf("fileName=")).trim();						
+						updateNumber = Integer.parseInt(updatenum);
 					}
 					
 					
@@ -342,8 +418,8 @@ public class DataloadCheck {
 						
 						fast_count = line.substring(line.indexOf(":") +1, line.length()).trim();
 						
-						record.put("FASTEXTRACTFILENAME", line.substring(0, line.indexOf("is a valid zip file with")).trim());	 
-						record.put("FASTEXTRACTCOUNT",fast_count.substring(0, fast_count.indexOf(" records")));
+						fastExtractFileNameList.add(line.substring(0, line.indexOf("is a valid zip file with")).trim());
+						fastExtractCountList.add(Integer.parseInt(fast_count.substring(0, fast_count.indexOf(" records"))));
 						firstmatch = 1;
 					}
 					
@@ -351,20 +427,19 @@ public class DataloadCheck {
 					if(line.contains("Check Export result") )
 					{						
 						line = dis.readLine();
-						record.put("SQLLDRLOG", line.substring(line.indexOf("/data"), line.length()));						
+						if(line !=null && line.contains("log"))
+						{
+							sqlldrInfoList.add(line.substring(line.indexOf("/data"), line.length()));
+						}
 					}
 					
-					if(!(record.containsKey("OPERATION")))
-					{
-						record.put("OPERATION",operation);
-					}
-
-
 				}
 				
 				//DB EXCEPTION COUNT
 				cpxDbExceptionCount = getErrorTableCount(tableName);
-				record.put("DB_EXCEPTION_COUNT", Integer.toString(cpxDbExceptionCount));
+				
+				
+				errorTableCountList.add(cpxDbExceptionCount);
 				
 				
 				// Accessnumber(s) rejected or having other issue & error message 
@@ -372,14 +447,28 @@ public class DataloadCheck {
 				
 				
 				//Sqlldr ErrorMessage INFO from sqlldr Log file
-				getSqlldrErrorMessage (sqlldrlogFileName);
+				sqlldrFileNameList.add(sqlldrlogFileName);
+				getSqlldrErrorMessage(sqlldrlogFileName);
 			}
 			
 			
 			
-			else if(database!=null && database.equalsIgnoreCase("grf") && (operation !=null && operation.equalsIgnoreCase("update")))
+			else if(database!=null && (database.equalsIgnoreCase("grf") || database.equalsIgnoreCase("elt")) && 
+					(operation !=null && operation.equalsIgnoreCase("update")))
 			{
-				tableName = "GEOREF_CORRECTION_ERROR";
+				if(database.equalsIgnoreCase("grf"))
+				{
+					tableName = "GEOREF_CORRECTION_ERROR";
+				}
+				else if (database.equalsIgnoreCase("elt"))
+				{
+					tableName = "BD_CORRECTION_ERROR";
+				}
+				
+				int srcFileCount = 0;
+				int tempTableCount = 0;
+				
+				
 				while (dis.available() !=0)
 				{
 					line = dis.readLine();
@@ -387,20 +476,10 @@ public class DataloadCheck {
 					//Source FileName
 					if(line.contains("Datafile is:"))
 					{
-						if(!(record.containsKey("SOURCEFILENAME")))
+						if(!(sourceFilenameList.contains(line.substring(line.indexOf(":")+1,line.indexOf("and")).trim())))
 						{
-							record.put("SOURCEFILENAME", line.substring(line.indexOf(":")+1,line.indexOf("and")).trim());
-						}
-
-						//Operation
-
-						if(line.contains("action is:"))
-						{
-							if(!(record.containsKey("OPERATION")))
-							{
-								record.put("OPERATION", line.substring(line.lastIndexOf(":")+1,line.length()).trim());
-							}
-
+							//record.put("SOURCEFILENAME", line.substring(line.indexOf(":")+1,line.indexOf("and")).trim());
+							sourceFilenameList.add(line.substring(line.indexOf(":")+1,line.indexOf("and")).trim());
 						}
 
 					}
@@ -408,97 +487,80 @@ public class DataloadCheck {
 					//Source File Count
 					if(line.contains("Total counts of"))
 					{
-						if(!(record.containsKey("SOURCEFILECOUNT")))
-						{
-							record.put("SOURCEFILECOUNT", line.substring(line.indexOf(':')+1,line.length()).trim());
-						}
+							srcFileCount = Integer.parseInt(line.substring(line.indexOf(':')+1,line.length()).trim());
+							sourcefileCountList.add(srcFileCount);
 					}
 					
-					
-					 
-					//UpdateNumber
-					if(line.contains("UPDATENUMBER:"))
-					{
-						if(!(record.containsKey("UPDATENUMBER")))
-						{
-							record.put("UPDATENUMBER", line.substring(line.indexOf(":")+1,line.length()).trim());
-						}
-					}
 					
 					//TEMP TABLE COUNT
 					if(line.contains("records was loaded into the temp table"))
 					{ 
-						if(!(record.containsKey("TEMPTABLECOUNT")))
-						{
-							record.put("TEMPTABLECOUNT", line.substring(0,line.indexOf("records")).trim());
-						}
-						
+							tempTableCount = Integer.parseInt(line.substring(0,line.indexOf("records")).trim());
+							tempTableCountList.add(tempTableCount);
 					}
 					
 					//Fast Extract File Name, Fast Extract Count
 					if(line.contains("Checking extract files for correction update number"))
 					{	
-						if(!(record.containsKey("FASTEXTRACTFILENAME")) && !(record.containsKey("FASTEXTRACTCOUNT")))
+						if(fastExtractFileNameList.size()==0)
 						{
 							line = dis.readLine();
 							
 							if(line.contains("fast/batch") && line.contains("record"))
 							{
 								fast_count = line.substring(line.indexOf(":") +1, line.length()).trim();
-
-								record.put("FASTEXTRACTFILENAME", line.substring(0, line.indexOf("is a valid zip file with")).trim());	
-								record.put("FASTEXTRACTCOUNT",fast_count.substring(0, fast_count.indexOf(" record")));
+								
+								fastExtractFileNameList.add(line.substring(0, line.indexOf("is a valid zip file with")).trim());
+								fastExtractCountList.add(Integer.parseInt(fast_count.substring(0, fast_count.indexOf(" record"))));
 							}
-
-							
 						}
 					}
 					
 					//sqlldr log file Info
 					if(line.contains("Check Export result") )
 					{	
-						if(!(record.containsKey("SQLLDRLOG")))
+						if(sqlldrInfoList.size()==0)
 						{
 							line = dis.readLine();
-							record.put("SQLLDRLOG", line.substring(line.indexOf("/data"), line.length()));	
+							sqlldrInfoList.add(line.substring(line.indexOf("/data"), line.length()));
 						}
 					}
 
 
 				}
+				
+				//SRC_Temp_DIFF
+				
+				src_temp_diff = srcFileCount - tempTableCount;
+				srcTempDiffCountList.add(src_temp_diff);
+				
 				//Master TABLE COUNT & diff with src file count
 				/*HH 04/06/2015 i added a sql stmt to easily get the total GRF_Master count (update/delete) - to be used after WK: 201516
 				 * get from DB for now, till data becomes available in log file 
 				 */
-				if(!(record.containsKey("MASTERTABLECOUNT")))
+				if(masterTableCountList.size()==0)
 				{
-					
 					Count = getMasterTableCount("ck_counts");
-					record.put("MASTERTABLECOUNT", Integer.toString(Count));
-
+					masterTableCountList.add(Count);
 					
-					//Src_Master_diff count
-					if(record.get("SOURCEFILECOUNT")!=null)
-					{
-						src_master_diff = Integer.parseInt(record.get("SOURCEFILECOUNT")) - Count;
-						record.put("SRC_MASTER_DIFF", Integer.toString(src_master_diff));
-					}
+					//Src_Master_diff count					
+						src_master_diff = srcFileCount - Count;
+						srcMasterDiffCountList.add(src_master_diff);
 				}
 				
 				//DB EXCEPTION COUNT
 				grfDbExceptionCount = getErrorTableCount(tableName);
-				record.put("DB_EXCEPTION_COUNT", Integer.toString(grfDbExceptionCount));
+				errorTableCountList.add(grfDbExceptionCount);
 				
 				
 				// Accessnumber(s) rejected or having other issue & error message 
 				//getErrorTableMessage (tableName);
 				
 				//Sqlldr ErrorMessage INFO from sqlldr Log file
-				getSqlldrErrorMessage (sqlldrlogFileName);
-				
-	
-				
+				sqlldrFileNameList.add(sqlldrlogFileName);
+				getSqlldrErrorMessage(sqlldrlogFileName);
 			}
+			
 			
 			else if ((database!=null) && (database.equalsIgnoreCase("cpx") || database.equalsIgnoreCase("aip") || database.equalsIgnoreCase("chm")
 					|| database.equalsIgnoreCase("pch") || database.equalsIgnoreCase("elt") || database.equalsIgnoreCase("geo")
@@ -509,10 +571,14 @@ public class DataloadCheck {
 			{
 				tableName = "BD_MASTER";
 				int i = 0;
-				ArrayList<String> errorMessageList = new ArrayList<String>();
-				StringBuffer errorMessage = new StringBuffer();
+				//ArrayList<String> errorMessageList = new ArrayList<String>();
+				HashMap<String,Integer> errorMessageList = new HashMap<String,Integer>();
+				String errorMessage = "";
 				int loadedRecordCount = 0;
 				int rejectedRecordCount = 0;
+				StringBuffer sqlErrorMessage=new StringBuffer();
+				
+				
 				
 				System.out.println("Operation is " +  operation);
 				while (dis.available() !=0)
@@ -523,53 +589,89 @@ public class DataloadCheck {
 					
 					if(line.contains("Data File:"))
 					{
-						if(!(record.containsKey("SOURCEFILENAME")))
-						{
 							if(database.equalsIgnoreCase("cbn"))
 							{
-								record.put("SOURCEFILENAME", line.substring(line.indexOf("/")+1,line.indexOf("txt")+3).trim());
+								//record.put("SOURCEFILENAME", line.substring(line.indexOf("/")+1,line.indexOf("txt")+3).trim());
+								sourceFilenameList.add(line.substring(line.indexOf("/")+1,line.indexOf("txt")+3).trim());
 							}
 							else if (database.equalsIgnoreCase("ept"))
 							{
-								record.put("SOURCEFILENAME", line.substring(line.indexOf("/")+1,line.indexOf("pat")+3).trim());
+								//record.put("SOURCEFILENAME", line.substring(line.indexOf("/")+1,line.indexOf("pat")+3).trim());
+								if(!(line.contains("/")))
+								{
+									sourceFilenameList.add(line.substring(line.indexOf(":")+1,line.indexOf("pat")+3).trim());
+								}
+								else
+								{
+									sourceFilenameList.add(line.substring(line.indexOf("/")+1,line.indexOf("pat")+3).trim());
+								}
+								
 							}
 							else if(database.equalsIgnoreCase("ins"))
 							{
-								record.put("SOURCEFILENAME", line.substring(line.indexOf("/")+1,line.indexOf("zip")+3).trim());
+								//record.put("SOURCEFILENAME", line.substring(line.indexOf("/")+1,line.indexOf("zip")+3).trim());
+								sourceFilenameList.add(line.substring(line.indexOf("/")+1,line.indexOf("zip")+3).trim());
 							}
 							else if(database.equalsIgnoreCase("nti"))
 							{
-								record.put("SOURCEFILENAME", line.substring(line.indexOf("/")+1,line.indexOf("xml")+3).trim());
+								//record.put("SOURCEFILENAME", line.substring(line.indexOf("/")+1,line.indexOf("xml")+3).trim());
+								sourceFilenameList.add(line.substring(line.indexOf("/")+1,line.indexOf("xml")+3).trim());
 							}
 							else if(database.equalsIgnoreCase("upt"))
 							{
-								record.put("SOURCEFILENAME", line.substring(line.indexOf("/")+1,line.length()).trim());
+								//record.put("SOURCEFILENAME", line.substring(line.indexOf("/")+1,line.length()).trim());
+								sourceFilenameList.add(line.substring(line.indexOf("/")+1,line.length()).trim());
 							}
 							else if (database.equalsIgnoreCase("grf") && operation.equalsIgnoreCase("ip"))
 							{
-								record.put("SOURCEFILENAME", line.substring(line.indexOf(":")+1,line.indexOf("out")-1).trim());
+								//record.put("SOURCEFILENAME", line.substring(line.indexOf(":")+1,line.indexOf("out")-1).trim());
+								sourceFilenameList.add(line.substring(line.indexOf(":")+1,line.indexOf("out")-1).trim());
 							}
 							else
 							{
-								record.put("SOURCEFILENAME", line.substring(line.indexOf(":")+1,line.indexOf("xml")+3).trim());
+								//record.put("SOURCEFILENAME", line.substring(line.indexOf(":")+1,line.indexOf("xml")+3).trim());
+								sourceFilenameList.add(line.substring(line.indexOf(":")+1,line.indexOf("xml")+3).trim());
 							}
-							
-						}
 					}
 					
-					//ERROR Messages
+					//SqlLdr ERROR Messages
 					if(line.contains("Rejected -"))
 					{
-						line = dis.readLine();
-						if(line !=null && line.contains("ORA-0"))
+						//if(database.equalsIgnoreCase("ins"))
+						if(line.contains("column"))
 						{
-							errorMessageList.add(line);
-							i++;
+							errorMessage = line.substring(line.indexOf(":")+1, line.length()).trim();
 							
-							
+							line = dis.readLine();
+
+							if(line !=null)
+							{
+								errorMessage = errorMessage + " " + line;
+							}
+
 						}
-						
+						else
+						{
+							line = dis.readLine();
+
+							if(line !=null && line.contains("ORA-0"))
+							{
+								errorMessage = line.substring(line.indexOf(":")+1, line.length()).trim();
+							}
+
+						}
+						if(errorMessage!=null && errorMessageList.containsKey(errorMessage.toString()))
+						{
+							errorMessageList.put(errorMessage.toString(), errorMessageList.get(errorMessage.toString())+1);
+						}
+						else
+						{
+							errorMessageList.put(errorMessage.toString(),1);
+						}
+
 					}
+
+
 					
 					// Total number of successfully Loaded records
 					if(line.contains("Rows successfully loaded") || line.contains("Row successfully loaded"))
@@ -611,72 +713,65 @@ public class DataloadCheck {
 				if(loadedRecordCount >=0 && rejectedRecordCount >=0)
 				{
 					
-						record.put("SOURCEFILECOUNT", Integer.toString(loadedRecordCount + rejectedRecordCount));
-					System.out.println("SRC File Count " + record.get("SOURCEFILECOUNT"));
+					//record.put("SOURCEFILECOUNT", Integer.toString(loadedRecordCount + rejectedRecordCount));
+					System.out.println("SRC File Count " + (loadedRecordCount + rejectedRecordCount));
+					sourcefileCountList.add(loadedRecordCount + rejectedRecordCount);
 				}
 				
 				
 			
-				// Get distinct Error message from errorMessageList to load to log table
-				if(errorMessageList != null && errorMessageList.size() >0)
+				// Get distinct Error message, count from errorMessageList to load to log table
+				
+				if(errorMessageList.size()>0)
 				{
-					for(int j=0; j<errorMessageList.size();j++)
+					for (String key : errorMessageList.keySet())
 					{
-						if(j ==0)
+						if(sqlldrErrorMessage.length()>0)
 						{
-							errorMessage.append(errorMessageList.get(j));
+							sqlldrErrorMessage.append(" / ");
 						}
 						
-						else if (j >=0)
+						if(sqlldrErrorMessageCount.length()>0)
 						{
-							if(!(errorMessageList.get(j).equalsIgnoreCase(errorMessage.toString())))
-							{
-								errorMessage.append(",");
-								errorMessage.append(errorMessageList.get(j));
-							}
+							sqlldrErrorMessageCount.append(" / ");
 						}
+						sqlldrErrorMessage.append(key);
+						sqlldrErrorMessageCount.append(errorMessageList.get(key));
 					}
 					
-					record.put("ERRORMESSAGE", errorMessage.toString());
-					System.out.println("Errormessage is :" + errorMessage.toString());
+					sqlErrorMessageList.add(sqlldrErrorMessage.toString());
+					sqlErrorMessageCountList.add(sqlldrErrorMessageCount.toString());
 				}
+				
+				
+				System.out.println("Sqlldr Error Message: " + sqlldrErrorMessage);
+				System.out.println("Sqlldr Error Message Count: " + sqlldrErrorMessageCount);
 				
 				
 				//TEMP TABLE COUNT, add "0" to avoid having "null"
 				
-					if(!(record.containsKey("TEMPTABLECOUNT")))
-					{
-						record.put("TEMPTABLECOUNT", "0");
-					}
+				tempTableCountList.add(0);
 				
 				
-				//Rejected Records Count from sqlldr file
-				record.put("SRC_TEMP_DIFF", Integer.toString(rejectedRecordCount));
+				//SRC_TEMP_DIFF, Rejected Records Count from sqlldr file, temp count for new data load is 0
+				srcTempDiffCountList.add((rejectedRecordCount + loadedRecordCount)-0);
 					
 					
 				//Master TABLE COUNT 
-				record.put("MASTERTABLECOUNT", Integer.toString(loadedRecordCount));
 				System.out.println("Total Count in Master table is : " + loadedRecordCount);
+				masterTableCountList.add(loadedRecordCount);
 				
 				
-				//Master TABLE COUNT & SRC File Count diff
-				src_master_diff = Integer.parseInt(record.get("SOURCEFILECOUNT")) - loadedRecordCount;
-				record.put("SRC_MASTER_DIFF", Integer.toString(src_master_diff));
-				
+				//SRC_Master_DIFF 
+				src_master_diff = (loadedRecordCount + rejectedRecordCount) - loadedRecordCount;
+				srcMasterDiffCountList.add(src_master_diff);
 				System.out.println("Src_master count diff is : " + src_master_diff);
 				
 				
 				//sqlldr log file Info
 				if(fileName !=null)
 				{	
-					record.put("SQLLDRLOG", fileName);
-				}
-				
-				//Operation
-				
-				if(!(record.containsKey("OPERATION")))
-				{
-					record.put("OPERATION",operation);
+					sqlldrInfoList.add(fileName);
 				}
 				
 				//Fast Extract File Name, Fast Extract Count
@@ -760,17 +855,18 @@ public class DataloadCheck {
 		try
 		{
 			
-			if(record.containsKey("UPDATENUMBER") && record.containsKey("OPERATION"))
+			//if(record.containsKey("UPDATENUMBER") && record.containsKey("OPERATION"))
+			if(operation != null)
 			{
-				query = "select master_count from "+ tableName +" WHERE DB='" + database + "' and updatenumber=" + Integer.parseInt(record.get("UPDATENUMBER"))
-						+ " and action='"+record.get("OPERATION") + "'";
+				query = "select master_count from "+ tableName +" WHERE DB='" + database + "' and updatenumber=" + updateNumber
+						+ " and action='"+ operation + "'";
 			
 			
 				con = getConnection(connectionURL,driver,username,password);
 				stmt = con.createStatement();
 				rs = stmt.executeQuery(query);
 
-				if(rs.next())
+				while(rs.next())
 				{
 					count = rs.getInt(1);
 
@@ -890,8 +986,7 @@ public class DataloadCheck {
 // get the error message from sqlldr file 	
 	private static void getSqlldrErrorMessage (String sqlldrFileName)
 	{
-		ArrayList<String> sqlldrErrorMessageList = new ArrayList<String>();
-		StringBuffer errorMessage = new StringBuffer(); 
+		HashMap<String, Integer> sqlldrErrorMessageList = new HashMap<String,Integer>();
 		
 
 		try
@@ -918,24 +1013,17 @@ public class DataloadCheck {
 					line = sqlldrdis.readLine();
 					if(line !=null && line.contains("ORA-0"))
 					{
-						sqlldrErrorMessageList.add(line);
-
+						if(sqlldrErrorMessageList.containsKey(line))
+						{
+							sqlldrErrorMessageList.put(line, sqlldrErrorMessageList.get(line)+1);
+						}
+						else
+						{
+							sqlldrErrorMessageList.put(line, 1);
+						}
 					}
-
 				}
-				
-				// Total number of rejected records from sqlldr
-				if(line.contains("Rows not loaded due to data errors") || line.contains("Row not loaded due to data errors"))
-				{
-					//ERROR TABLE COUNT
-					record.put("SRC_TEMP_DIFF", (line.substring(0, line.indexOf("Row")).trim()));
-					
-					
-				}
-				
-
 			}
-
 		}
 		catch(FileNotFoundException ex)
 		{
@@ -949,33 +1037,31 @@ public class DataloadCheck {
 		}
 
 
-		// Get distinct Error message from errorMessageList to load to log table
+		// Get distinct Error message from errorMessageList, and corresponding Count  to load to log table 
 		if(sqlldrErrorMessageList != null && sqlldrErrorMessageList.size() >0)
 		{
-			for(int j=0; j<sqlldrErrorMessageList.size();j++)
+			for(String key: sqlldrErrorMessageList.keySet() )
 			{
-				if(j ==0)
+				if(sqlldrErrorMessage.length()>0)
 				{
-					errorMessage.append(sqlldrErrorMessageList.get(j));
+					sqlldrErrorMessage.append(" / ");
 				}
-
-				else if (j >=0)
+				
+				if(sqlldrErrorMessageCount.length()>0)
 				{
-					if(!(sqlldrErrorMessageList.get(j).equalsIgnoreCase(errorMessage.toString())))
-					{
-						errorMessage.append(",");
-						errorMessage.append(sqlldrErrorMessageList.get(j));
-					}
+					sqlldrErrorMessageCount.append(" / ");
 				}
+				sqlldrErrorMessage.append(key);
+				sqlldrErrorMessageCount.append(sqlldrErrorMessageList.get(key));
 			}
 		}
 
-		System.out.println("Sqlldr Error Message: " + errorMessage);
+		sqlErrorMessageList.add(sqlldrErrorMessage.toString());
+		sqlErrorMessageCountList.add(sqlldrErrorMessageCount.toString());
 		
-		if(!record.containsKey("ERRORMESSAGE"))
-		{
-			record.put("ERRORMESSAGE", errorMessage.toString());
-		}
+		System.out.println("Sqlldr Error Message: " + sqlldrErrorMessage);
+		System.out.println("Sqlldr Error Count: " + sqlldrErrorMessageCount);
+		
 			
 	}
 		
@@ -1005,6 +1091,12 @@ public class DataloadCheck {
 					line = fastExtractLogDis.readLine();
 
 
+					// "nti" extracted to fast as "ntis", so need to map 
+					
+					if(dataset !=null && dataset.equalsIgnoreCase("nti"))
+					{
+						dataset = "ntis";
+					}
 					//Fast Extract File
 					if(line.contains("zip is a valid zip file with:") && line.contains("/EIDATA/") && line.contains(dataset+"/fast/batch"))
 					{
@@ -1035,9 +1127,11 @@ public class DataloadCheck {
 					}
 					
 			}
+
 				
-				record.put("FASTEXTRACTFILENAME", fastExtractFileName.toString());	 
-				record.put("FASTEXTRACTCOUNT",Integer.toString(totalFastExtractCount));
+				fastExtractFileNameList.add(fastExtractFileName.toString());
+				fastExtractCountList.add(totalFastExtractCount);
+				
 				
 		}
 			catch(FileNotFoundException ex)
@@ -1053,7 +1147,156 @@ public class DataloadCheck {
 			
 		}
 			
+
+private static void getRecords()
+{
+	Hashtable<String, String> record;
 	
+	if(sourceFilenameList !=null && sourceFilenameList.size()>0)
+	{
+		for (int i=0; i<sourceFilenameList.size();i++)
+		{
+			record =  new Hashtable<String,String>();
+
+			//DataBase
+			record.put("DATABASE",database);
+			
+			//LoadNumber
+			record.put("LOADNUMBER",Integer.toString(loadNumber));
+			
+			//UpdateNumber
+			 record.put("UPDATENUMBER", Integer.toString(updateNumber));
+			
+			//Temp till conv program generate converted file count, converted file count
+				record.put("CONVERTEDFILECOUNT", "");
+				
+			//Operation
+			record.put("OPERATION",operation);
+				
+				
+			//Source FileName
+			if(sourceFilenameList.size() >0)
+			{
+				record.put("SOURCEFILENAME", sourceFilenameList.get(i));
+			}	
+				
+			//Source File Count
+			if(sourcefileCountList.size() >0)
+			{
+				record.put("SOURCEFILECOUNT", sourcefileCountList.get(i).toString());
+			}
+				
+			//TEMP TABLE COUNT	
+			if(tempTableCountList.size() >0)
+			{
+				record.put("TEMPTABLECOUNT", tempTableCountList.get(i).toString());
+			}
+
+			// SRC TEMP Diff Count
+			if(srcTempDiffCountList.size() >0)
+			{
+				record.put("SRC_TEMP_DIFF", srcTempDiffCountList.get(i).toString());
+			}
+						
+			// Master Table Count
+			if(masterTableCountList.size() >0)
+			{
+				record.put("MASTERTABLECOUNT", masterTableCountList.get(i).toString());
+			}
+				
+			// SRC Mater Diff Count	
+			if(srcMasterDiffCountList.size() >0)
+			{
+				record.put("SRC_MASTER_DIFF", srcMasterDiffCountList.get(i).toString());
+			}
+				
+			//Fast Extract File Name, it is only once
+			if(fastExtractFileNameList.size() >0)
+			{
+				record.put("FASTEXTRACTFILENAME", fastExtractFileNameList.get(0));
+			}
+					
+			//Fast Extract Count
+			if(fastExtractCountList.size() >0)
+			{
+				record.put("FASTEXTRACTCOUNT",fastExtractCountList.get(0).toString());
+				
+				//Master_Fast DIFF 
+				if(masterTableCountList.size() >0 && masterTableCountList.get(i) != null)
+				{
+					record.put("MASTER_FAST_DIFF", Integer.toString(masterTableCountList.get(i) -  fastExtractCountList.get(0)));
+				}
+				
+			}
+	
+			// Sqlldr Info 
+			if(sqlldrInfoList.size() >0)
+			{
+				record.put("SQLLDRLOG", sqlldrInfoList.get(i));
+			}
+
+			//Sqlldr Log File Error Message & Count
+			if( sqlErrorMessageList.size()>0 && sqlErrorMessageCountList.size() >0)
+			{			
+				record.put("ERRORMESSAGE", sqlErrorMessageList.get(i));
+				record.put("ERRORMESSAGECOUNT", sqlErrorMessageCountList.get(i));
+				
+			}
+			
+			
+			
+			
+			//Error Table Exception Count, only once 
+			if(errorTableCountList.size() >0)
+			{
+				record.put("DB_EXCEPTION_COUNT",errorTableCountList.get(0).toString());
+			}
+		
+			records.add(record);
+				
+		}
+	}
+
+}
+
+// when there is more than one file for same operation (i.e. toc update) when it has more than one file
+private static void sqlldrFileNameFormat(String sqlldrFileName)
+{
+	int sqlldrFileCount = 0;
+	if(sqlldrFileName !=null && sqlldrFileName.contains(";"))
+	{
+		StringTokenizer sqlldrFileTokenizer = new StringTokenizer(sqlldrFileName, ";");
+		String sqlldrFilePath = null;
+		String sqlldrFile = null;
+
+		while(sqlldrFileTokenizer.hasMoreTokens())
+		{
+			sqlldrFile = sqlldrFileTokenizer.nextToken().toString().trim();
+			if(sqlldrFileCount==0)
+			{
+				System.out.println("sqlldr FIle : " + sqlldrFile);
+				if(sqlldrFile !=null && sqlldrFile.length()>0)
+				{
+					sqlldrFilePath = sqlldrFile.substring(0, sqlldrFile.lastIndexOf("/")+1);
+
+					System.out.println("sqlldr FIle Path : " + sqlldrFilePath);
+				}
+			}
+
+			// append path to second file in case second file does not include the whole path
+			/*else if (sqlldrFileCount>0 && sqlldrFilePath !=null)
+			{
+				sqlldrFile =  sqlldrFilePath + sqlldrFile;
+			}*/
+			sqlldrFileCount++;
+		}
+		sqlldrFileNameList.add(sqlldrFile);
+		getSqlldrErrorMessage(sqlldrFile);
+
+	}
+}
+
+
 	private static Connection getConnection(String connectionURL,String driver, String username, String password)
 	throws Exception
 	{
@@ -1064,64 +1307,72 @@ public class DataloadCheck {
 		return con;
 	}
 	
-private static void writeRec () throws Exception
-{
-	String key;
-	String value;
-	Set<String> keySet = record.keySet();
-	
-	StringBuffer recordBuf = new  StringBuffer();
-	
-	try
+	private static void writeRecs () throws Exception
 	{
-		
-	if(record == null)
-	{
-		System.out.println("record is null");
-		System.exit(0);
-	}
-	
-	File file = new File(loadNumber+".log.out");
-	if (!file.exists()) 
-	{
-		//file.createNewFile();
-		System.out.println("Out FIle name is : " + file.getName());
-	}
+		String key;
+		String value;
+		Set<String> keySet = record.keySet();
 
-	PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(file.getName(),true)));
+		StringBuffer recordBuf = new  StringBuffer();
 
-	/*for(Iterator<String> itr = keySet.iterator();itr.hasNext();)
-	{
-		key = itr.next();
-		System.out.println(key + ":" + record.get(key));
-	}*/
-	
-	
-	for (int j =0; j<logTableFields.length;++j)
-	{
-		String bf = logTableFields[j];
-		String val = record.get(bf);
-		
-		if(j > 0)
+		Hashtable<String, String> rec = null;
+
+		try
 		{
-			out.print("	");
+
+			if(records == null)
+			{
+				System.out.println("records is null");
+				System.exit(0);
+			}
+
+			File file = new File(loadNumber+".log.out");
+			if (!file.exists()) 
+			{
+				//file.createNewFile();
+				System.out.println("Out FIle name is : " + file.getName());
+			}
+
+			PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(file.getName(),true)));
+
+			if(sourceFilenameList !=null && sourceFilenameList.size()>0)
+			{
+				for(int i = 0 ;i<sourceFilenameList.size();i++)
+				{
+					rec = records.get(i);
+
+					if(rec !=null)
+					{
+						for (int j =0; j<logTableFields.length;++j)
+						{
+							String bf = logTableFields[j];
+							//String val = record.get(bf);
+							String val = rec.get(bf);
+
+							if(j > 0)
+							{
+								out.print("	");
+							}
+							if(val!=null)
+							{
+								out.print(val);
+							}
+						}
+
+						out.println("");
+						
+					}
+				}
+			}
+			
+			out.flush();
+			out.close();
 		}
-		if(val!=null)
+		catch(Exception e)
 		{
-			out.print(val);
+			e.printStackTrace();
 		}
+
 	}
-	
-	out.println("");
-	out.flush();
-	out.close();
-	
-	}
-	catch(Exception e)
-	{
-		e.printStackTrace();
-	}
-	
-}
 
 }
