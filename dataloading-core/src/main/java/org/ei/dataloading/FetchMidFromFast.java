@@ -62,6 +62,7 @@ public class FetchMidFromFast {
         		fastUrl = args[5];
         	}
 
+        	
         }
 
         System.out.println("Fetch accessnumber of query " + fastQuery + " for Rec Count " +  pageRecCount);
