@@ -78,6 +78,52 @@ public class EncompassAtomicBaseTableWriter {
 			{
 				sVal = trimExtraLength(sVal);
 			}
+			
+			if(fieldName.equals("DS") && sVal.length()>3999)
+			{
+				sVal = trimExtraLength(sVal);
+			}
+			
+			if(fieldName.equals("ALC") && sVal.length()>3999)
+			{
+				sVal = trimExtraLength(sVal);
+			}
+			
+			if(fieldName.equals("APC") && sVal.length()>3999)
+			{
+				sVal = trimExtraLength(sVal);
+			}
+			
+			if(fieldName.equals("AMS") && sVal.length()>3999)
+			{
+				sVal = trimExtraLength(sVal);
+			}
+			
+			if(fieldName.equals("AT") && sVal.length()>3999)
+			{
+				sVal = trimExtraLength(sVal);
+			}
+			
+			if(fieldName.equals("UT") && sVal.length()>3999)
+			{
+				sVal = trimExtraLength(sVal);
+			}
+			
+			
+			if(fieldName.equals("CS") && sVal.length()>1024)
+			{
+				sVal = trimExtraLength(sVal,1024);
+			}
+			
+			if(fieldName.equals("IN") && sVal.length()>1024)
+			{
+				sVal = trimExtraLength(sVal,1024);
+			}
+			
+			if(fieldName.equals("LL") && sVal.length()>512)
+			{
+				sVal = trimExtraLength(sVal,512);
+			}
 
 			if (sVal != null) {
 				recordBuf.append(sVal);
@@ -114,6 +160,22 @@ public class EncompassAtomicBaseTableWriter {
 	{
 
 		input = input.substring(0,3990);
+		int cutOffPosition = input.lastIndexOf(";");
+
+
+		if(cutOffPosition>0)
+		{
+			input = input.substring(0,cutOffPosition);
+		}
+
+		return input;
+
+	}
+	
+	private String trimExtraLength(String input,int length)
+	{
+
+		input = input.substring(0,length);
 		int cutOffPosition = input.lastIndexOf(";");
 
 

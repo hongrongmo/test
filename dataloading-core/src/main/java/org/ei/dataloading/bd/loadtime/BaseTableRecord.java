@@ -139,7 +139,8 @@ public class BaseTableRecord
 	public static final BaseTableRecord APIATM = new BaseTableRecord("APIATM", new Integer(4000), "elt");
 	public static final BaseTableRecord APIAT = new BaseTableRecord("APIAT", new Integer(4000), "elt");
 	public static final BaseTableRecord SEQ_NUM = new BaseTableRecord("SEQ_NUM", new Integer(4000), "elt");
-
+	public static final BaseTableRecord SOURCEWEBSITE = new BaseTableRecord("SOURCEWEBSITE", new Integer(1000), "cpx");
+	
 	public static final BaseTableRecord REFERENCE= new BaseTableRecord("REFERENCE", new Integer(500000), "cpx");
 	public static final BaseTableRecord REFERENCETITLE= new BaseTableRecord("REFERENCETITLE", new Integer(4000), "cpx");
 	public static final BaseTableRecord REFERENCEAUTHOR= new BaseTableRecord("REFERENCEAUTHOR", new Integer(4000), "cpx");
@@ -170,6 +171,7 @@ public class BaseTableRecord
 	public static final BaseTableRecord REFERENCEITEMCITATIONWEBSITE= new BaseTableRecord("REFERENCEITEMCITATIONWEBSITE", new Integer(2000), "cpx");
 	public static final BaseTableRecord REFERENCEITEMCITATIONEADDRESS= new BaseTableRecord("REFERENCEITEMCITATIONEADDRESS", new Integer(1000), "cpx");
 	public static final BaseTableRecord REFERENCEITEMCITATIONREFTEXT= new BaseTableRecord("REFERENCEITEMCITATIONREFTEXT", new Integer(4000), "cpx");
+	
 
 
 	static
@@ -277,6 +279,7 @@ public class BaseTableRecord
 	    bdTableColumns.add(APIATM);
 	    bdTableColumns.add(APIAT);
 	    bdTableColumns.add(SEQ_NUM);
+	    bdTableColumns.add(SOURCEWEBSITE);
 
 		//ADDED FOR REFERENCE
 

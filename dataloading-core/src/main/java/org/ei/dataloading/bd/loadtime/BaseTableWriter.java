@@ -29,6 +29,7 @@ public class BaseTableWriter
 	private String updatenumber;
 	private String mid;
 	private int refCount;
+	private List nullAccessumberRecord=new ArrayList();
 
 	public BaseTableWriter(String filename)
 	{
@@ -157,8 +158,14 @@ public class BaseTableWriter
 		   recordBuf.append("YES");
 	    }
 	    recordBuf.append(FIELDDELIM);
-
-		out.println(recordBuf.toString().trim());
+	    if(getAccessionNumber()!=null && getAccessionNumber().length()>0)
+	    {
+	    	out.println(recordBuf.toString().trim());
+	    }
+	    else
+	    {
+	    	nullAccessumberRecord.add(getPui());
+	    }
 
 
 	}
@@ -453,7 +460,10 @@ public class BaseTableWriter
 					  recordBuf.append(loadnumber);
 				  }
 				  recordBuf.append(FIELDDELIM);
-				  referenceOut.println(recordBuf.toString().trim());
+				  if(accessNumber!=null && accessNumber.length()>0)
+				  {
+					  referenceOut.println(recordBuf.toString().trim());
+				  }
 
 			 }
 
@@ -525,6 +535,11 @@ public class BaseTableWriter
 		this.loadnumber = loadnumber;
 	}
 	
+	public List getNullAccessNumberRecord()
+	{
+		return this.nullAccessumberRecord;
+	}
+	
 	private String getUpdatenumber()
 	{
 		return this.updatenumber;
@@ -534,12 +549,25 @@ public class BaseTableWriter
 	{
 		this.updatenumber = updatenumber;
 	}
+	
+	private String removeUnwantCharacter(String input)
+	{
+		String output=input;
+		if(input!= null && input.indexOf('\t')>0)
+		{
+			output=perl.substitute("s/\\t/ /g", input);
+			System.out.println("***************remove tab character from record accessnumber= "+getAccessionNumber());
+		}
+		return output;
+	}
 
 	private String checkColumnWidth(int columnWidth,
 	        						String columnName,
 	        						String data) throws Exception
 	{
 		int cutOffPosition = 0;
+		data = removeUnwantCharacter(data);
+		
 		if(columnWidth > 0  && data!= null)
 		{
 			if(data.length()>columnWidth)

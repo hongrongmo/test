@@ -108,7 +108,7 @@ public class NTISBaseTableDriver
 
 
 				List l = r.readRecord(in);
-				//System.out.println("recordSize= "+l.size());
+				System.out.println("total record counts= "+l.size());
 
 
 				if(l != null)
@@ -221,7 +221,7 @@ public class NTISBaseTableDriver
 	    		r.setDatabaseName(databaseName);
 	    		//r.setAction(action);
 	    		boolean start = false;
-	    		while((line=xmlReader.readLine())!=null)
+	    		while((line=xmlReader.readLine())!=null && !line.trim().equals("</Records>"))
 	    		{
 	    			if(start)
 	    			{
