@@ -53,6 +53,13 @@ public class DataloadCheck {
 	static StringBuffer accessnumbers = new StringBuffer();
 	static String errorMessage = null;
 	
+	
+	//List of other errors & their count that in log file (i.e. records not converted due to having "null" accessnumber,... (for S300)
+	static Map<String,Integer> otherErrors = new HashMap<String, Integer>();
+	static String recordsIdentifier = null;
+	
+	
+	
 	static StringBuffer sqlldrErrorMessage = new StringBuffer(); 
 	static StringBuffer sqlldrErrorMessageCount = new StringBuffer(); 
 	
@@ -70,6 +77,7 @@ public class DataloadCheck {
 	static ArrayList<Integer> errorTableCountList = new ArrayList<Integer>();
 	static ArrayList<String> sqlErrorMessageList = new ArrayList<String>();
 	static ArrayList<String> sqlErrorMessageCountList = new ArrayList<String>();
+	static ArrayList<String> otherErrorsAccessnumberPuiList = new ArrayList<>();
 	
 	static ArrayList<Hashtable<String, String>> records = new ArrayList<Hashtable<String,String>>();
 	
@@ -342,6 +350,8 @@ public class DataloadCheck {
 				int srcFileCount = 0;
 				int tempTableCount = 0;
 				
+				
+				
 				while (dis.available() !=0)
 				{
 					line = dis.readLine();
@@ -416,20 +426,57 @@ public class DataloadCheck {
 					{	
 						line = dis.readLine();
 						
-						fast_count = line.substring(line.indexOf(":") +1, line.length()).trim();
+						if(line.length() >0)
+						{
+							fast_count = line.substring(line.indexOf(":") +1, line.length()).trim();
+							
+							fastExtractFileNameList.add(line.substring(0, line.indexOf("is a valid zip file with")).trim());
+							fastExtractCountList.add(Integer.parseInt(fast_count.substring(0, fast_count.indexOf(" records"))));
+							firstmatch = 1;
+						}
 						
-						fastExtractFileNameList.add(line.substring(0, line.indexOf("is a valid zip file with")).trim());
-						fastExtractCountList.add(Integer.parseInt(fast_count.substring(0, fast_count.indexOf(" records"))));
-						firstmatch = 1;
 					}
 					
 					//sqlldr log file Info
 					if(line.contains("Check Export result") )
 					{						
 						line = dis.readLine();
+						
+						// if log file name the first one
 						if(line !=null && line.contains("log"))
 						{
 							sqlldrInfoList.add(line.substring(line.indexOf("/data"), line.length()));
+						}
+						
+						else if (line !=null)
+						{
+							line = dis.readLine();
+							
+							if(line !=null && line.contains("log"))
+							{
+								sqlldrInfoList.add(line.substring(line.indexOf("/data"), line.length()));
+							}
+						}
+						// sometimes the log file is the second one not, the 
+					}
+					
+					// Other Errors to append to sqlldr errormessage, count
+					
+					if(line !=null && line.contains("records with null accessnumber"))
+					{
+						int count = Integer.parseInt(line.substring(line.indexOf("are")+3, line.indexOf("records")).trim());
+						otherErrors.put("records with null accessnumber", count);
+						
+						// get idenitifier of these records
+						line = dis.readLine();
+						if(line.length() >0 && line.contains("the PUI for these records are"))
+						{
+							line = dis.readLine();
+							if(line.length() >0)
+							{
+								recordsIdentifier = line.trim();
+							}
+							
 						}
 					}
 					
@@ -444,6 +491,12 @@ public class DataloadCheck {
 				
 				// Accessnumber(s) rejected or having other issue & error message 
 				//getErrorTableMessage (tableName);
+				if(recordsIdentifier !=null && recordsIdentifier.length() >0)
+				{
+					otherErrorsAccessnumberPuiList.add(recordsIdentifier);
+				}
+				
+				
 				
 				
 				//Sqlldr ErrorMessage INFO from sqlldr Log file
@@ -592,7 +645,15 @@ public class DataloadCheck {
 							if(database.equalsIgnoreCase("cbn"))
 							{
 								//record.put("SOURCEFILENAME", line.substring(line.indexOf("/")+1,line.indexOf("txt")+3).trim());
-								sourceFilenameList.add(line.substring(line.indexOf("/")+1,line.indexOf("txt")+3).trim());
+								
+								if(line.contains(".txt"))
+								{
+									sourceFilenameList.add(line.substring(line.indexOf("/")+1,line.indexOf("txt")+3).trim());
+								}
+								else if (line.contains("zip"))
+								{
+									sourceFilenameList.add(line.substring(line.indexOf("/")+1,line.indexOf("zip")+3).trim());
+								}
 							}
 							else if (database.equalsIgnoreCase("ept"))
 							{
@@ -1024,6 +1085,16 @@ public class DataloadCheck {
 					}
 				}
 			}
+			
+			// add other errors as well to same field
+			
+			if(otherErrors != null && otherErrors.size() >0)
+			{
+				for(String key: otherErrors.keySet())
+				{
+					sqlldrErrorMessageList.put(key, otherErrors.get(key));
+				}
+			}
 		}
 		catch(FileNotFoundException ex)
 		{
@@ -1244,6 +1315,12 @@ private static void getRecords()
 			}
 			
 			
+			// OtherErrors Identifier (AN/PUI) in txt log file 
+			if(otherErrorsAccessnumberPuiList.size() >0)
+			{
+				record.put("ACCESSNUMBER", otherErrorsAccessnumberPuiList.get(i));
+			}
+			
 			
 			
 			//Error Table Exception Count, only once 
@@ -1252,6 +1329,8 @@ private static void getRecords()
 				record.put("DB_EXCEPTION_COUNT",errorTableCountList.get(0).toString());
 			}
 		
+			
+			
 			records.add(record);
 				
 		}
