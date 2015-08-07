@@ -13,6 +13,7 @@ import java.util.zip.ZipFile;
 import java.util.Hashtable;
 import java.util.Enumeration;
 import java.util.List;
+import java.util.ArrayList;
 //import org.ei.data.LoadNumber;
 //import org.ei.dataloading.bd.*;
 import java.sql.*;
@@ -31,6 +32,7 @@ public class BaseTableDriver
     private static String driver = "oracle.jdbc.driver.OracleDriver";
     private static String username = "ba_loading";
     private static String password = "ny5av";
+    private static List<String> blockedIssnList;
 
     public static void main(String args[])
         throws Exception
@@ -80,6 +82,7 @@ public class BaseTableDriver
             }
 
             con = c.getConnection(url,driver,username,password);
+            blockedIssnList = c.getBlockedIssnList(con);
             c.writeBaseTableFile(infile,con);
         }
         catch(Exception e)
@@ -101,6 +104,61 @@ public class BaseTableDriver
             }
             System.out.println("total process time "+(System.currentTimeMillis()-startTime)/1000.0+" seconds");
         }
+    }
+    
+    private List getBlockedIssnList(Connection con)
+    {
+    	Statement stmt = null;
+        ResultSet rs = null;
+        List<String> issnList = new ArrayList<>();
+        try
+        {
+            stmt = con.createStatement();
+
+            rs = stmt.executeQuery("select sn from blocked_issn");
+            while (rs.next())
+            {
+                String issn = rs.getString("sn");
+                if(issn != null)
+                {
+                	issnList.add(issn);
+                }
+            }
+
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        finally
+        {
+
+            if (rs != null)
+            {
+                try
+                {
+                    rs.close();
+                }
+                catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
+            }
+
+            if (stmt != null)
+            {
+                try
+                {
+                    stmt.close();
+                }
+                catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return issnList;
+       
     }
 
     public BaseTableDriver(int loadN,String databaseName)
@@ -354,10 +412,63 @@ public class BaseTableDriver
 	                        sBuffer = new StringBuffer();
                     }
 
+                  //pre frank request, block certain issns just for cpx and pch 8/3/2015
                     if(r.getRecordTable()!=null)
                     {
+                    	Hashtable ht=r.getRecordTable();
+                    	//System.out.println("ACCESSNUMBER:"+ht.get("ACCESSNUMBER"));
+                    	if((ht.get("DATABASE")!=null && (((String)ht.get("DATABASE")).equals("cpx") || ((String)ht.get("DATABASE")).equals("pch"))))
+                		{
+                    		boolean issnFlag=false;
+	                    	for(int i=0;i<blockedIssnList.size();i++)
+	                    	{
+	                    		  String blockedIssn = blockedIssnList.get(i);
+	                    		  
+	                    		  if(blockedIssn.indexOf("EISSN")>-1)
+	                    		  {
+	                    			  blockedIssn = blockedIssn.substring(blockedIssn.indexOf(":")+1);
+	                    			  if(ht.get("EISSN")!=null)
+	                    			  {
+		                    			  String eissn = (String)ht.get("EISSN");
+		                    			  eissn=eissn.replaceAll("-", "");
+		                    			  if (eissn.equals(blockedIssn))
+				                		   {			       
+				                			   System.out.println("block record "+ht.get("ACCESSNUMBER")+" for eissn="+blockedIssn+" from BaseTableDriver");
+				                			   issnFlag=true;
+				                			   break;
+				                		   }
+	                    			  }
+	                    		  }
+	                    		  else if(blockedIssn.indexOf("ISSN")>-1)
+	                    		  {
+	                    			  blockedIssn = blockedIssn.substring(blockedIssn.indexOf(":")+1);
+	                    			  if (ht.get("ISSN")!=null)
+	                    			  {
+	                    				  String issn = (String)ht.get("ISSN");
+	                    				  issn=issn.replaceAll("-", "");
+				                		  if (issn.equals(blockedIssn))
+				                		  {			                			   
+				                			   System.out.println("block record "+ht.get("ACCESSNUMBER")+" for issn="+blockedIssn+" from BaseTableDriver");
+				                			   issnFlag=true;
+				                			   break;
+				                		  }
+	                    			  }
+	                    		  }	
+	                    		  else
+	                    		  {
+	                    			  System.out.println("incorrect issn format, check blocked_issn table");
+	                    		  }
+	                    	  }
+	                    	  
+	                    	  if(issnFlag==true)
+	                    	  {
+	                    		  continue;
+	                    	  }
+                		}
+                    	
                         return r.getRecordTable();
                     }
+                   
                 }
             }
 
