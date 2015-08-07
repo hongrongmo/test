@@ -17,9 +17,6 @@ import org.ei.dataloading.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
-
-
 public class BdParser
 {
 	private List articles = null;
@@ -88,7 +85,6 @@ public class BdParser
 		this.rec=articles.iterator();
 
 	}
-
 
 	public void setOutputWriter(PrintWriter out)
 	{
@@ -1005,6 +1001,7 @@ public class BdParser
 		{
 			e.printStackTrace();
 		}
+
 		return record;
 	}
 
