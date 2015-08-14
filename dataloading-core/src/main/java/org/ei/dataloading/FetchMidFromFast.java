@@ -20,7 +20,7 @@ public class FetchMidFromFast {
     static String driver = "oracle.jdbc.driver.OracleDriver";
     static String username = "db_xml";
     static String password = "ny5av";
-    static String fastUrl = "http://ei-main-p1.nda.fastsearch.net:15100";
+    static String fastUrl = "http://ei-main.nda.fastsearch.net:15100";
 
     static String fastQuery="";
     static int pageRecCount = 25;
@@ -62,6 +62,7 @@ public class FetchMidFromFast {
         		fastUrl = args[5];
         	}
 
+        	
         }
 
         System.out.println("Fetch accessnumber of query " + fastQuery + " for Rec Count " +  pageRecCount);
@@ -88,12 +89,11 @@ public class FetchMidFromFast {
             client.setQueryString(fastQuery);
             client.setDoCatCount(true);
             client.setDoNavigators(true);
-            client.setPrimarySort("ausort");
+            //client.setPrimarySort("ausort");  //original
+            client.setPrimarySort("rank");
             client.setPrimarySortDirection("+");
             client.search();
 
-            con = getConnection(url,driver,username,password);
-            stmt = con.createStatement();
             
             
             List<String[]> l = client.getDocIDs();

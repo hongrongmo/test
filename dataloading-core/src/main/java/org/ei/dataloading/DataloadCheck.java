@@ -50,8 +50,19 @@ public class DataloadCheck {
 	static int cpxDbExceptionCount = 0;
 	static int grfDbExceptionCount = 0;
 	
+	// for blocked issn/e-issn
+	static StringBuffer issnAN = new StringBuffer();
+	static StringBuffer eissnAN = new StringBuffer();
+	
 	static StringBuffer accessnumbers = new StringBuffer();
 	static String errorMessage = null;
+	
+	
+	//List of other errors & their count that in log file (i.e. records not converted due to having "null" accessnumber,... (for S300)
+	static Map<String,Integer> otherErrors = new HashMap<String, Integer>();
+	static String recordsIdentifier = null;
+	
+	
 	
 	static StringBuffer sqlldrErrorMessage = new StringBuffer(); 
 	static StringBuffer sqlldrErrorMessageCount = new StringBuffer(); 
@@ -70,6 +81,13 @@ public class DataloadCheck {
 	static ArrayList<Integer> errorTableCountList = new ArrayList<Integer>();
 	static ArrayList<String> sqlErrorMessageList = new ArrayList<String>();
 	static ArrayList<String> sqlErrorMessageCountList = new ArrayList<String>();
+	static ArrayList<String> otherErrorsAccessnumberPuiList = new ArrayList<>();
+	
+	
+	static ArrayList<String> RejectedANList = new ArrayList<String>();
+	static StringBuffer strAN = new StringBuffer();
+	
+	
 	
 	static ArrayList<Hashtable<String, String>> records = new ArrayList<Hashtable<String,String>>();
 	
@@ -306,7 +324,90 @@ public class DataloadCheck {
 					{
 						sqlldrInfoList.add(line.trim());
 					}
-				}
+					
+					
+					// Other Errors to append to sqlldr errormessage, count
+					
+					if(line !=null && line.contains("records with null accessnumber"))
+					{
+						int count = Integer.parseInt(line.substring(line.indexOf("are")+3, line.indexOf("records")).trim());
+						otherErrors.put("records with null accessnumber", count);
+						
+						// get idenitifier of these records
+						line = dis.readLine();
+						if(line.length() >0 && line.contains("the PUI for these records are"))
+						{
+							line = dis.readLine();
+							if(line.length() >0)
+							{
+								recordsIdentifier = line.trim();
+							}
+							
+						}
+					}
+					
+					
+					// check records blocked for issn/e-issn block to append to sqlldr errormessage as well
+					
+					if(line !=null && line.contains("block record") && line.contains("for issn"))
+					{
+						// 1. get count of blocked issn
+						if(otherErrors.containsKey("Records blocked for ISSN"))
+						{
+							otherErrors.put("Records blocked for ISSN", otherErrors.get("Records blocked for ISSN") + 1) ;
+						}
+						else
+						{
+							otherErrors.put("Records blocked for ISSN", 1);
+							
+						}
+						
+						// 2. get AN List of blocked issn records
+						if(issnAN.length() >0)
+						{
+							issnAN.append(",");
+						}
+						if(line.substring(line.indexOf("record")+6, line.indexOf("for")).trim().length() >0)
+						{
+							issnAN.append(line.substring(line.indexOf("record")+6, line.indexOf("for")).trim());
+						}
+						
+					}
+					
+					if(line !=null && line.contains("block record") && line.contains("for eissn"))
+					{
+						// 1. get count of blocked issn
+						if(otherErrors.containsKey("Records blocked for E-ISSN"))
+						{
+							otherErrors.put("Records blocked for E-ISSN", otherErrors.get("Records blocked for E-ISSN") + 1) ;
+						}
+						else
+						{
+							otherErrors.put("Records blocked for E-ISSN", 1);
+							
+						}
+						
+						// 2. get AN List of blocked issn records
+						if(eissnAN.length() >0)
+						{
+							eissnAN.append(",");
+						}
+						if(line.substring(line.indexOf("record")+6, line.indexOf("for")).trim().length() >0)
+						{
+							eissnAN.append(line.substring(line.indexOf("record")+6, line.indexOf("for")).trim());
+						}
+						
+					}
+					
+				
+				}    // end of loop
+			
+			System.out.println("Records Blocked for ISSN Count: " + otherErrors.get("Records blocked for ISSN"));
+			System.out.println("AN of blocked ISSN is : " + issnAN);
+			
+			System.out.println("Records Blocked for E-ISSN Count: " + otherErrors.get("Records blocked for E-ISSN"));
+			System.out.println("AN of blocked E-ISSN is : " + eissnAN);
+			
 				
 				//DB EXCEPTION COUNT FROM ERROR TABLE 
 				
@@ -341,6 +442,8 @@ public class DataloadCheck {
 				
 				int srcFileCount = 0;
 				int tempTableCount = 0;
+				
+				
 				
 				while (dis.available() !=0)
 				{
@@ -389,7 +492,7 @@ public class DataloadCheck {
 					
 					
 					//Master TABLE COUNT & diff
-					if((line.contains("ba_s300@EID> ba_s300@EID> ba_s300@EID>") || line.contains("ba_s300@EIA> ba_s300@EIA> ba_s300@EIA>")) 
+					if(line !=null && (line.contains("ba_s300@EID> ba_s300@EID> ba_s300@EID>") || line.contains("ba_s300@EIA> ba_s300@EIA> ba_s300@EIA>")) 
 							&& (dis.readLine().contains("COUNT(*)")))
 					{
 						dis.readLine();
@@ -416,24 +519,123 @@ public class DataloadCheck {
 					{	
 						line = dis.readLine();
 						
-						fast_count = line.substring(line.indexOf(":") +1, line.length()).trim();
+						if(line.length() >0)
+						{
+							fast_count = line.substring(line.indexOf(":") +1, line.length()).trim();
+							
+							fastExtractFileNameList.add(line.substring(0, line.indexOf("is a valid zip file with")).trim());
+							fastExtractCountList.add(Integer.parseInt(fast_count.substring(0, fast_count.indexOf(" records"))));
+							firstmatch = 1;
+						}
 						
-						fastExtractFileNameList.add(line.substring(0, line.indexOf("is a valid zip file with")).trim());
-						fastExtractCountList.add(Integer.parseInt(fast_count.substring(0, fast_count.indexOf(" records"))));
-						firstmatch = 1;
 					}
 					
 					//sqlldr log file Info
 					if(line.contains("Check Export result") )
 					{						
 						line = dis.readLine();
+						
+						// if log file name the first one
 						if(line !=null && line.contains("log"))
 						{
 							sqlldrInfoList.add(line.substring(line.indexOf("/data"), line.length()));
 						}
+						
+						else if (line !=null)
+						{
+							line = dis.readLine();
+							
+							if(line !=null && line.contains("log"))
+							{
+								sqlldrInfoList.add(line.substring(line.indexOf("/data"), line.length()));
+							}
+						}
+						// sometimes the log file is the second one not, the second 
 					}
 					
-				}
+					// Other Errors to append to sqlldr errormessage, count
+					
+					if(line !=null && line.contains("records with null accessnumber"))
+					{
+						int count = Integer.parseInt(line.substring(line.indexOf("are")+3, line.indexOf("records")).trim());
+						otherErrors.put("records with null accessnumber", count);
+						
+						// get idenitifier of these records
+						line = dis.readLine();
+						if(line.length() >0 && line.contains("the PUI for these records are"))
+						{
+							line = dis.readLine();
+							if(line.length() >0)
+							{
+								recordsIdentifier = line.trim();
+							}
+							
+						}
+					}
+					
+					// check records blocked for issn/e-issn block to append to sqlldr errormessage as well
+					
+					if(line !=null && line.contains("block record") && line.contains("for issn"))
+					{
+						// 1. get count of blocked issn
+						if(otherErrors.containsKey("Records blocked for ISSN"))
+						{
+							otherErrors.put("Records blocked for ISSN", otherErrors.get("Records blocked for ISSN") + 1) ;
+						}
+						else
+						{
+							otherErrors.put("Records blocked for ISSN", 1);
+							
+						}
+						
+						// 2. get AN List of blocked issn records
+						if(issnAN.length() >0)
+						{
+							issnAN.append(",");
+						}
+						if(line.substring(line.indexOf("record")+6, line.indexOf("for")).trim().length() >0)
+						{
+							issnAN.append(line.substring(line.indexOf("record")+6, line.indexOf("for")).trim());
+						}
+						
+					}
+					
+					if(line !=null && line.contains("block record") && line.contains("for eissn"))
+					{
+						// 1. get count of blocked issn
+						if(otherErrors.containsKey("Records blocked for E-ISSN"))
+						{
+							otherErrors.put("Records blocked for E-ISSN", otherErrors.get("Records blocked for E-ISSN") + 1) ;
+						}
+						else
+						{
+							otherErrors.put("Records blocked for E-ISSN", 1);
+							
+						}
+						
+						// 2. get AN List of blocked issn records
+						if(eissnAN.length() >0)
+						{
+							eissnAN.append(",");
+						}
+						if(line.substring(line.indexOf("record")+6, line.indexOf("for")).trim().length() >0)
+						{
+							eissnAN.append(line.substring(line.indexOf("record")+6, line.indexOf("for")).trim());
+						}
+						
+					}
+					
+					
+					
+				}    // end of loop
+				
+				System.out.println("Records Blocked for ISSN Count: " + otherErrors.get("Records blocked for ISSN"));
+				System.out.println("AN of blocked ISSN is : " + issnAN);
+				
+				System.out.println("Records Blocked for E-ISSN Count: " + otherErrors.get("Records blocked for E-ISSN"));
+				System.out.println("AN of blocked E-ISSN is : " + eissnAN);
+				
+				
 				
 				//DB EXCEPTION COUNT
 				cpxDbExceptionCount = getErrorTableCount(tableName);
@@ -444,6 +646,11 @@ public class DataloadCheck {
 				
 				// Accessnumber(s) rejected or having other issue & error message 
 				//getErrorTableMessage (tableName);
+				
+				combinRejectedRecordsID();
+				
+				System.out.println("errorAN List is: " + otherErrorsAccessnumberPuiList.get(0));
+				
 				
 				
 				//Sqlldr ErrorMessage INFO from sqlldr Log file
@@ -592,7 +799,15 @@ public class DataloadCheck {
 							if(database.equalsIgnoreCase("cbn"))
 							{
 								//record.put("SOURCEFILENAME", line.substring(line.indexOf("/")+1,line.indexOf("txt")+3).trim());
-								sourceFilenameList.add(line.substring(line.indexOf("/")+1,line.indexOf("txt")+3).trim());
+								
+								if(line.contains(".txt"))
+								{
+									sourceFilenameList.add(line.substring(line.indexOf("/")+1,line.indexOf("txt")+3).trim());
+								}
+								else if (line.contains("zip"))
+								{
+									sourceFilenameList.add(line.substring(line.indexOf("/")+1,line.indexOf("zip")+3).trim());
+								}
 							}
 							else if (database.equalsIgnoreCase("ept"))
 							{
@@ -986,7 +1201,8 @@ public class DataloadCheck {
 // get the error message from sqlldr file 	
 	private static void getSqlldrErrorMessage (String sqlldrFileName)
 	{
-		HashMap<String, Integer> sqlldrErrorMessageList = new HashMap<String,Integer>();
+		/*HashMap<String, Integer> sqlldrErrorMessageList = new HashMap<String,Integer>();*/
+		LinkedHashMap<String, Integer> sqlldrErrorMessageList = new LinkedHashMap<String,Integer>();
 		
 
 		try
@@ -1022,6 +1238,16 @@ public class DataloadCheck {
 							sqlldrErrorMessageList.put(line, 1);
 						}
 					}
+				}
+			}
+			
+			// add other errors as well to same field
+			
+			if(otherErrors != null && otherErrors.size() >0)
+			{
+				for(String key: otherErrors.keySet())
+				{
+					sqlldrErrorMessageList.put(key, otherErrors.get(key));
 				}
 			}
 		}
@@ -1065,6 +1291,45 @@ public class DataloadCheck {
 			
 	}
 		
+
+	// combin PUI/AN list for rejected/blocked records during converting phase
+	
+	private static void combinRejectedRecordsID()
+	{
+		if(recordsIdentifier !=null && recordsIdentifier.length() >0)
+		{
+			RejectedANList.add(recordsIdentifier);	
+		}
+		// add blocked issn/e-issn AN list
+		if(issnAN !=null && issnAN.length() >0)
+		{
+			RejectedANList.add(issnAN.toString());
+		}
+		if(eissnAN !=null && eissnAN.length() >0)
+		{
+			RejectedANList.add(eissnAN.toString());
+		}
+		
+		
+		// combine all pui/AN 
+		if (RejectedANList.size() >0)
+		{
+			
+			for(int i=0;i<RejectedANList.size();i++)
+			{
+				if(strAN.length() >0)
+				{
+					strAN.append(" / ");
+				}
+				strAN.append(RejectedANList.get(i));
+				
+			}
+		}
+		
+		// all rejected PUI/AN
+		otherErrorsAccessnumberPuiList.add(strAN.toString());
+	}
+	
 	
 	// get the error message from sqlldr file 	
 		private static void readFastExtractLog (String fastExtractLogFileName, String dataset)
@@ -1244,6 +1509,12 @@ private static void getRecords()
 			}
 			
 			
+			// OtherErrors Identifier (AN/PUI) in txt log file 
+			if(otherErrorsAccessnumberPuiList.size() >0)
+			{
+				record.put("ACCESSNUMBER", otherErrorsAccessnumberPuiList.get(i));
+			}
+			
 			
 			
 			//Error Table Exception Count, only once 
@@ -1252,6 +1523,8 @@ private static void getRecords()
 				record.put("DB_EXCEPTION_COUNT",errorTableCountList.get(0).toString());
 			}
 		
+			
+			
 			records.add(record);
 				
 		}
