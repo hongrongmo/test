@@ -16,7 +16,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.zip.ZipEntry;
-import java.util.zip.ZipFile;
+/*import java.util.zip.ZipFile;*/    //original
+import org.apache.commons.compress.archivers.zip.*;   //HH 08/04/2015 to fix issue of Patent zip file's headers 
 
 import org.apache.oro.text.perl.Perl5Util;
 import org.ei.util.GUID;
@@ -153,11 +154,13 @@ public class PatentXmlReader
 			File current_file = new File(path);
 			System.out.println("filename= "+current_file.getName());
 			ZipFile zipFile = new ZipFile(path);
-			Enumeration entries = zipFile.entries();
+			/*Enumeration entries = zipFile.entries();*/   // original
+			Enumeration entries = zipFile.getEntries();    
 			while (entries.hasMoreElements())
 			{
 				BufferedReader xmlReader = null;
-				ZipEntry entry = (ZipEntry)entries.nextElement();
+				/*ZipEntry entry = (ZipEntry)entries.nextElement();*/   //original
+				ZipArchiveEntry entry = (ZipArchiveEntry)entries.nextElement();
 				try
 				{
 					xmlReader = new BufferedReader(new InputStreamReader(zipFile.getInputStream(entry), "UTF-8"));
@@ -3260,3 +3263,4 @@ public class PatentXmlReader
 		return sb.toString();
 	}
 }
+
