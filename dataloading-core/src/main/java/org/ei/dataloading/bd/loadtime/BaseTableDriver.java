@@ -82,7 +82,7 @@ public class BaseTableDriver
             }
 
             con = c.getConnection(url,driver,username,password);
-            blockedIssnList = c.getBlockedIssnList(con);
+            c.setBlockedIssnList(con);
             c.writeBaseTableFile(infile,con);
         }
         catch(Exception e)
@@ -106,7 +106,7 @@ public class BaseTableDriver
         }
     }
     
-    private List getBlockedIssnList(Connection con)
+    public void setBlockedIssnList(Connection con)
     {
     	Statement stmt = null;
         ResultSet rs = null;
@@ -157,7 +157,7 @@ public class BaseTableDriver
                 }
             }
         }
-        return issnList;
+        this.blockedIssnList=issnList;
        
     }
 
@@ -305,10 +305,12 @@ public class BaseTableDriver
         try
         {
             RecordReader r = new RecordReader(loadNumber,databaseName);
-
+            
             while(xmlReader!=null)
             {
+            	
                 Hashtable h = r.readRecord(xmlReader);
+            
                 if (h != null)
                 {
                     if(action.equals("aip"))
@@ -375,6 +377,7 @@ public class BaseTableDriver
             r.setDatabaseName(databaseName);
             //r.setAction(action);
             boolean start = false;
+           
             while((line=xmlReader.readLine())!=null)
             {
                 if(start)
@@ -420,12 +423,14 @@ public class BaseTableDriver
                     	if((ht.get("DATABASE")!=null && (((String)ht.get("DATABASE")).equals("cpx") || ((String)ht.get("DATABASE")).equals("pch"))))
                 		{
                     		boolean issnFlag=false;
+                    		
 	                    	for(int i=0;i<blockedIssnList.size();i++)
 	                    	{
 	                    		  String blockedIssn = blockedIssnList.get(i);
 	                    		  
 	                    		  if(blockedIssn.indexOf("EISSN")>-1)
 	                    		  {
+	                    			 
 	                    			  blockedIssn = blockedIssn.substring(blockedIssn.indexOf(":")+1);
 	                    			  if(ht.get("EISSN")!=null)
 	                    			  {
@@ -443,7 +448,7 @@ public class BaseTableDriver
 	                    		  {
 	                    			  blockedIssn = blockedIssn.substring(blockedIssn.indexOf(":")+1);
 	                    			  if (ht.get("ISSN")!=null)
-	                    			  {
+	                    			  {	                   
 	                    				  String issn = (String)ht.get("ISSN");
 	                    				  issn=issn.replaceAll("-", "");
 				                		  if (issn.equals(blockedIssn))
@@ -470,10 +475,13 @@ public class BaseTableDriver
                     }
                    
                 }
+               
             }
+            
 
             return null;
         }
+       
     }
 
      protected Connection getConnection(String connectionURL,
