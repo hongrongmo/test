@@ -79,9 +79,12 @@ public class BdAuthors
 			{
 				BdAuthor nextau = (BdAuthor) auenum.next();
 				searchValue.add(nextau.getSearchValue());
+				//pre Frank request, block orcid appear in author navigator
+				/*
 				if(nextau.getAuid()!=null){
 					searchValue.add(nextau.getAuid());
 				}
+				*/
 			}
 
 		}

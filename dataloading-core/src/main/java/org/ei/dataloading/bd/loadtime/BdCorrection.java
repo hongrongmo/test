@@ -1,6 +1,5 @@
 package org.ei.dataloading.bd.loadtime;
 
-import java.sql.Clob;
 import java.sql.*;
 import java.util.*;
 
@@ -19,7 +18,6 @@ import org.ei.dataloading.cbnb.loadtime.*;
 import org.ei.common.*;
 import org.ei.common.bd.*;
 import org.ei.common.ntis.*;
-
 //import org.ei.data.inspec.loadtime.*;
 import org.ei.domain.*;
 import org.ei.query.base.*;
@@ -65,6 +63,7 @@ public class BdCorrection
     private static long startTime = System.currentTimeMillis();
     private static long endTime = System.currentTimeMillis();
     private static long midTime = System.currentTimeMillis();
+    private static List<String> blockedIssnList;
 
     public static void main(String args[])
         throws Exception
@@ -265,6 +264,7 @@ public class BdCorrection
                 }
 
                 BaseTableDriver c = new BaseTableDriver(updateNumber,database);
+                c.setBlockedIssnList(con);
                 c.writeBaseTableFile(fileToBeLoaded,con);
                 String dataFile=fileToBeLoaded+"."+updateNumber+".out";
                 File f = new File(dataFile);

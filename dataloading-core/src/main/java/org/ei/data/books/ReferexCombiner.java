@@ -505,7 +505,7 @@ public class ReferexCombiner {
         }
     }// inner class BookRecord
 
-    private static final String[] badArray = { "contents", "index", "index to", "what’s on the cd-rom", "commands", "copyright", "title page",
+    private static final String[] badArray = { "contents", "index", "index to", "whats on the cd-rom", "commands", "copyright", "title page",
         "half title page", "back cover", "front cover", "table of contents", "limited disclaimer and warranty", "subject index", "front matter", "frontmatter",
         "cover", "backmatter", "back matter" };
 
