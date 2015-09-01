@@ -37,6 +37,7 @@ public class DataloadCheck {
 	static String tableName;
 	static String sqlldrlogFileName;
 	static String fastExtractLogFileName;
+	static String bdConvertLogFile;
 	
 	static Hashtable <String,String> record = null;
 	
@@ -53,6 +54,8 @@ public class DataloadCheck {
 	// for blocked issn/e-issn
 	static StringBuffer issnAN = new StringBuffer();
 	static StringBuffer eissnAN = new StringBuffer();
+	static int blockedBdRecordsCount = 0;
+	
 	
 	static StringBuffer accessnumbers = new StringBuffer();
 	static String errorMessage = null;
@@ -172,12 +175,23 @@ public class DataloadCheck {
 					{
 						fastExtractLogFileName = args[9];
 					}
+					
 				}
 			}
 			
-			 
+			if(args.length >10)
+			{
+				// new dataloading converting log file for bd
+				if(args[10] !=null)
+				{
+					if(database !=null && (database.equalsIgnoreCase("cpx") || database.equalsIgnoreCase("aip") || database.equalsIgnoreCase("pch")
+							|| database.equalsIgnoreCase("chm") || database.equalsIgnoreCase("elt") || database.equalsIgnoreCase("geo")))
+					{
+						bdConvertLogFile = args[10];
+					}
+				}
+			} 
 		}
-		
 		else
 		{
 			System.out.println("not enough parameters");
@@ -779,7 +793,7 @@ public class DataloadCheck {
 				tableName = "BD_MASTER";
 				int i = 0;
 				//ArrayList<String> errorMessageList = new ArrayList<String>();
-				HashMap<String,Integer> errorMessageList = new HashMap<String,Integer>();
+				LinkedHashMap<String,Integer> errorMessageList = new LinkedHashMap<String,Integer>();
 				String errorMessage = "";
 				int loadedRecordCount = 0;
 				int rejectedRecordCount = 0;
@@ -924,18 +938,36 @@ public class DataloadCheck {
 					
 				}
 				
+				if(database.equalsIgnoreCase("cpx") || database.equalsIgnoreCase("aip") || database.equalsIgnoreCase("pch")
+						|| database.equalsIgnoreCase("chm") || database.equalsIgnoreCase("elt") || database.equalsIgnoreCase("geo"))
+				{
+					readBdConvertLog();
+				}
+				distinctSqlAndOtherErrorMessages(errorMessageList);
+				
+				
 				//Source File Count
 				if(loadedRecordCount >=0 && rejectedRecordCount >=0)
 				{
+					int srcFileCount = 0;
+					if(otherErrors !=null && otherErrors.size() >0)
+					{
+						for(String Key: otherErrors.keySet())
+						{
+							blockedBdRecordsCount += otherErrors.get(Key);
+						}
+					}
+					srcFileCount=(loadedRecordCount + rejectedRecordCount + blockedBdRecordsCount);
 					
 					//record.put("SOURCEFILECOUNT", Integer.toString(loadedRecordCount + rejectedRecordCount));
-					System.out.println("SRC File Count " + (loadedRecordCount + rejectedRecordCount));
-					sourcefileCountList.add(loadedRecordCount + rejectedRecordCount);
+					System.out.println("SRC File Count " + srcFileCount);
+					sourcefileCountList.add(srcFileCount);
 				}
 				
 				
+				
 			
-				// Get distinct Error message, count from errorMessageList to load to log table
+				/*// Get distinct Error message, count from errorMessageList to load to log table
 				
 				if(errorMessageList.size()>0)
 				{
@@ -960,7 +992,7 @@ public class DataloadCheck {
 				
 				
 				System.out.println("Sqlldr Error Message: " + sqlldrErrorMessage);
-				System.out.println("Sqlldr Error Message Count: " + sqlldrErrorMessageCount);
+				System.out.println("Sqlldr Error Message Count: " + sqlldrErrorMessageCount);*/
 				
 				
 				//TEMP TABLE COUNT, add "0" to avoid having "null"
@@ -969,7 +1001,7 @@ public class DataloadCheck {
 				
 				
 				//SRC_TEMP_DIFF, Rejected Records Count from sqlldr file, temp count for new data load is 0
-				srcTempDiffCountList.add((rejectedRecordCount + loadedRecordCount)-0);
+				srcTempDiffCountList.add((rejectedRecordCount + loadedRecordCount + blockedBdRecordsCount)-0);
 					
 					
 				//Master TABLE COUNT 
@@ -978,7 +1010,7 @@ public class DataloadCheck {
 				
 				
 				//SRC_Master_DIFF 
-				src_master_diff = (loadedRecordCount + rejectedRecordCount) - loadedRecordCount;
+				src_master_diff = (loadedRecordCount + rejectedRecordCount + blockedBdRecordsCount) - loadedRecordCount;
 				srcMasterDiffCountList.add(src_master_diff);
 				System.out.println("Src_master count diff is : " + src_master_diff);
 				
@@ -1241,7 +1273,7 @@ public class DataloadCheck {
 				}
 			}
 			
-			// add other errors as well to same field
+		/*	// add other errors as well to same field
 			
 			if(otherErrors != null && otherErrors.size() >0)
 			{
@@ -1249,7 +1281,7 @@ public class DataloadCheck {
 				{
 					sqlldrErrorMessageList.put(key, otherErrors.get(key));
 				}
-			}
+			}*/
 		}
 		catch(FileNotFoundException ex)
 		{
@@ -1262,8 +1294,9 @@ public class DataloadCheck {
 			e.printStackTrace();
 		}
 
+		distinctSqlAndOtherErrorMessages(sqlldrErrorMessageList);
 
-		// Get distinct Error message from errorMessageList, and corresponding Count  to load to log table 
+		/*// Get distinct Error message from errorMessageList, and corresponding Count  to load to log table 
 		if(sqlldrErrorMessageList != null && sqlldrErrorMessageList.size() >0)
 		{
 			for(String key: sqlldrErrorMessageList.keySet() )
@@ -1286,7 +1319,7 @@ public class DataloadCheck {
 		sqlErrorMessageCountList.add(sqlldrErrorMessageCount.toString());
 		
 		System.out.println("Sqlldr Error Message: " + sqlldrErrorMessage);
-		System.out.println("Sqlldr Error Count: " + sqlldrErrorMessageCount);
+		System.out.println("Sqlldr Error Count: " + sqlldrErrorMessageCount);*/
 		
 			
 	}
@@ -1325,6 +1358,11 @@ public class DataloadCheck {
 				
 			}
 		}
+		
+		
+		System.out.println("Records Blocked during converting: " + strAN.toString());
+		
+		
 		
 		// all rejected PUI/AN
 		otherErrorsAccessnumberPuiList.add(strAN.toString());
@@ -1413,6 +1451,163 @@ public class DataloadCheck {
 		}
 			
 
+		// read BD Converting log file that was officially started from week [201534] to check records blocked for ISSN/E-ISSN
+public static void readBdConvertLog()
+	{
+		if(bdConvertLogFile !=null)
+		{
+			try
+			{
+				File bdConvertFile = new File(bdConvertLogFile);
+				if(!bdConvertFile.exists())
+				{
+					System.out.println("BD Converting Log File Not found");
+					System.exit(1);
+				}
+				FileInputStream bdConvertfis = new FileInputStream(bdConvertFile);
+				BufferedInputStream bdConvertbis = new BufferedInputStream(bdConvertfis);
+				DataInputStream bdConvertdis = new DataInputStream(bdConvertbis);
+
+				String line = null;
+				while (bdConvertdis.available() !=0)
+				{
+					line = bdConvertdis.readLine();
+					
+					// Other Errors to append to sqlldr errormessage, count
+					
+					if(line !=null && line.contains("records with null accessnumber"))
+					{
+						int count = Integer.parseInt(line.substring(line.indexOf("are")+3, line.indexOf("records")).trim());
+						otherErrors.put("records with null accessnumber", count);
+						
+						// get idenitifier of these records
+						line = bdConvertdis.readLine();
+						if(line.length() >0 && line.contains("the PUI for these records are"))
+						{
+							line = bdConvertdis.readLine();
+							if(line !=null && line.length() >0)
+							{
+								recordsIdentifier = line.trim();
+							}
+							
+						}
+					}
+					
+					
+					// check records blocked for issn/e-issn block to append to sqlldr errormessage as well
+					
+					if(line !=null && line.contains("block record") && line.contains("for issn"))
+					{
+						// 1. get count of blocked issn
+						if(otherErrors.containsKey("Records blocked for ISSN"))
+						{
+							otherErrors.put("Records blocked for ISSN", otherErrors.get("Records blocked for ISSN") + 1) ;
+						}
+						else
+						{
+							otherErrors.put("Records blocked for ISSN", 1);
+							
+						}
+						
+						// 2. get AN List of blocked issn records
+						if(issnAN.length() >0)
+						{
+							issnAN.append(",");
+						}
+						if(line.substring(line.indexOf("record")+6, line.indexOf("for")).trim().length() >0)
+						{
+							issnAN.append(line.substring(line.indexOf("record")+6, line.indexOf("for")).trim());
+						}
+						
+					}
+					
+					if(line !=null && line.contains("block record") && line.contains("for eissn"))
+					{
+						// 1. get count of blocked issn
+						if(otherErrors.containsKey("Records blocked for E-ISSN"))
+						{
+							otherErrors.put("Records blocked for E-ISSN", otherErrors.get("Records blocked for E-ISSN") + 1) ;
+						}
+						else
+						{
+							otherErrors.put("Records blocked for E-ISSN", 1);
+							
+						}
+						
+						// 2. get AN List of blocked issn records
+						if(eissnAN.length() >0)
+						{
+							eissnAN.append(",");
+						}
+						if(line.substring(line.indexOf("record")+6, line.indexOf("for")).trim().length() >0)
+						{
+							eissnAN.append(line.substring(line.indexOf("record")+6, line.indexOf("for")).trim());
+						}
+						
+					}
+					
+				}
+				
+				combinRejectedRecordsID();
+				
+				bdConvertdis.close();
+			}
+			catch(FileNotFoundException ex)
+			{
+				ex.getCause();
+				ex.printStackTrace();
+			}
+
+			catch(Exception e)
+			{
+				e.printStackTrace();
+			}
+
+		}
+		
+}
+		
+
+
+public static void distinctSqlAndOtherErrorMessages(LinkedHashMap<String, Integer> sqlAndOtherErrors)
+{
+	// add other errors as well to same field
+	
+				if(otherErrors != null && otherErrors.size() >0)
+				{
+					for(String key: otherErrors.keySet())
+					{
+						sqlAndOtherErrors.put(key, otherErrors.get(key));
+					}
+				}
+	
+				
+				// Get distinct Error message from errorMessageList, and corresponding Count  to load to log table 
+				if(sqlAndOtherErrors != null && sqlAndOtherErrors.size() >0)
+				{
+					for(String key: sqlAndOtherErrors.keySet() )
+					{
+						if(sqlldrErrorMessage.length()>0)
+						{
+							sqlldrErrorMessage.append(" / ");
+						}
+						
+						if(sqlldrErrorMessageCount.length()>0)
+						{
+							sqlldrErrorMessageCount.append(" / ");
+						}
+						sqlldrErrorMessage.append(key);
+						sqlldrErrorMessageCount.append(sqlAndOtherErrors.get(key));
+					}
+				}
+
+				sqlErrorMessageList.add(sqlldrErrorMessage.toString());
+				sqlErrorMessageCountList.add(sqlldrErrorMessageCount.toString());
+				
+				System.out.println("Sqlldr Error Message: " + sqlldrErrorMessage);
+				System.out.println("Sqlldr Error Count: " + sqlldrErrorMessageCount);
+				
+}
 private static void getRecords()
 {
 	Hashtable<String, String> record;
