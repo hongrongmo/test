@@ -100,8 +100,8 @@ public class FetchMidFromFast {
             List<String[]> l = client.getDocIDs();
             for (int i = 0; i < l.size(); i++) {
                 String[] docID = (String[]) l.get(i);
-                			out.write(docID[0]);
-                			out.write("\r\n");
+                			out.write(docID[0]+"\n");
+                			//out.write("\r");
                 
             }
 
