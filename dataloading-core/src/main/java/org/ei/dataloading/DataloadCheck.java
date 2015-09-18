@@ -280,15 +280,30 @@ public class DataloadCheck {
 					if(line.contains("new") && line.contains("select updatenumber, count(*) from BD_MASTER_ORIG where updatenumber")
 							&& line.contains("group by updatenumber"))
 					{
-						for(int i=0;i<4;i++)
+						
+						// in case there are "no rows selected" result of the query
+						for(int i=0;i<2;i++)
 						{
 							updNumCount = dis.readLine();
+							
+							if(updNumCount !=null && updNumCount.contains("UPDATENUMB"))
+							{
+								for(int j=0;j<2;j++)
+								{
+									updNumCount = dis.readLine();
+								}
+								
+								
+								if(updNumCount !=null)
+								{
+									updNumCount = perl.substitute("s/\t/;/g",updNumCount);
+									updatenum = updNumCount.substring(0,updNumCount.indexOf(';')).trim();
+									Count = Integer.parseInt(updNumCount.substring(updNumCount.indexOf(';')+1,updNumCount.length()).trim());
+								}
+								
+							}
 						}
-						
-						updNumCount = perl.substitute("s/\t/;/g",updNumCount);
-						updatenum = updNumCount.substring(0,updNumCount.indexOf(';')).trim();
-						Count = Integer.parseInt(updNumCount.substring(updNumCount.indexOf(';')+1,updNumCount.length()).trim());
-						
+
 						//Src_Master_diff count
 						
 						 /*if more than one file master count is for first file, second master count is count of both files,
