@@ -74,7 +74,7 @@ public class DataloadCheck {
 	
 	static ArrayList<String> sourceFilenameList = new ArrayList<String>();
 	static ArrayList<Integer> sourcefileCountList = new ArrayList<Integer>();
-	static ArrayList<Integer> convertedfileCountList = new ArrayList<Integer>();
+	static HashMap<String,Integer> convertedfileCountList = new HashMap<String,Integer>();
 	static ArrayList<Integer> tempTableCountList = new ArrayList<Integer>();
 	static ArrayList<Integer> srcTempDiffCountList = new ArrayList<Integer>();
 	static ArrayList<Integer> masterTableCountList = new ArrayList<Integer>();
@@ -139,7 +139,7 @@ public class DataloadCheck {
 			{
 				convertedCount = args[4];
 				
-				System.out.println("Converted Out FIle Count: " + convertedCount);
+				//System.out.println("Converted Out FIle Count: " + convertedCount);
 				formateConvertedFileCount(convertedCount);
 			}
 			
@@ -363,6 +363,8 @@ public class DataloadCheck {
 					{
 						sqlldrInfoList.add(line.trim());
 					}
+					Collections.sort(sqlldrInfoList);   // Sort List
+					
 					
 					
 					// Other Errors to append to sqlldr errormessage, count
@@ -1640,15 +1642,16 @@ public static void distinctSqlAndOtherErrorMessages(LinkedHashMap<String, Intege
 static void formateConvertedFileCount(String convertedCount)
 {
 	String outFile_And_Count;
-	String outFileName;
+	String outFileName="";
 	Integer outFileCount=0;
 	if(convertedCount !=null)
 	{
 		if (!(convertedCount.contains(";")))
 		{
-			outFileCount = Integer.parseInt(convertedCount.substring(convertedCount.indexOf(":") +1, convertedCount.length()));
+			//outFileCount = Integer.parseInt(convertedCount.substring(convertedCount.indexOf(":") +1, convertedCount.length()));
 			
-			convertedfileCountList.add(Integer.parseInt(convertedCount));
+			convertedfileCountList.put("0", Integer.parseInt(convertedCount));
+			//convertedfileCountList.add(Integer.parseInt(convertedCount));
 		}
 		else if (convertedCount.contains(";"))
 		{
@@ -1660,10 +1663,11 @@ static void formateConvertedFileCount(String convertedCount)
 				if(outFile_And_Count !=null && outFile_And_Count.contains(":"))
 				{
 					outFileName = outFile_And_Count.substring(0,outFile_And_Count.indexOf(":") +1);
+					outFileName = outFileName.substring(0,outFileName.indexOf("."));
 					outFileCount = Integer.parseInt(outFile_And_Count.substring(outFile_And_Count.indexOf(":") +1, outFile_And_Count.length()));
 				}
-				
-				convertedfileCountList.add(outFileCount);
+				convertedfileCountList.put(outFileName, outFileCount);
+				//convertedfileCountList.add(outFileCount);
 			}
 		}
 	}
@@ -1712,7 +1716,19 @@ private static void getRecords()
 			//Converted File Count
 			if(convertedfileCountList.size() >0)
 			{
-				record.put("CONVERTEDFILECOUNT", convertedfileCountList.get(i).toString());
+				String srcFileName="";
+				int convertedFileCount = 0;
+				if(convertedfileCountList.size() ==1)
+				{
+					record.put("CONVERTEDFILECOUNT", convertedfileCountList.get("0").toString());
+				}
+				
+				else
+				{
+					srcFileName = record.get("SOURCEFILENAME").substring(0, record.get("SOURCEFILENAME").indexOf("."));
+					convertedFileCount = convertedfileCountList.get(srcFileName);
+					record.put("CONVERTEDFILECOUNT", Integer.toString(convertedFileCount));
+				}
 			}
 			//TEMP TABLE COUNT	
 			if(tempTableCountList.size() >0)
@@ -1779,7 +1795,11 @@ private static void getRecords()
 			// OtherErrors Identifier (AN/PUI) in txt log file 
 			if(otherErrorsAccessnumberPuiList.size() >0)
 			{
-				record.put("ACCESSNUMBER", otherErrorsAccessnumberPuiList.get(i));
+
+				if(i < otherErrorsAccessnumberPuiList.size())
+				{
+					record.put("ACCESSNUMBER", otherErrorsAccessnumberPuiList.get(i));
+				}
 			}
 			
 			
