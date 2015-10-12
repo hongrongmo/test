@@ -38,6 +38,7 @@ public class DataloadCheck {
 	static String sqlldrlogFileName;
 	static String fastExtractLogFileName;
 	static String bdConvertLogFile;
+	static String convertedCount;
 	
 	static Hashtable <String,String> record = null;
 	
@@ -73,6 +74,7 @@ public class DataloadCheck {
 	
 	static ArrayList<String> sourceFilenameList = new ArrayList<String>();
 	static ArrayList<Integer> sourcefileCountList = new ArrayList<Integer>();
+	static ArrayList<Integer> convertedfileCountList = new ArrayList<Integer>();
 	static ArrayList<Integer> tempTableCountList = new ArrayList<Integer>();
 	static ArrayList<Integer> srcTempDiffCountList = new ArrayList<Integer>();
 	static ArrayList<Integer> masterTableCountList = new ArrayList<Integer>();
@@ -133,61 +135,69 @@ public class DataloadCheck {
                 }
             }
 			
-		if (args.length >4)
-		{
-			if(args[4]!=null)
+			if(args[4] !=null)
 			{
-				connectionURL = args[4];
+				convertedCount = args[4];
+				
+				System.out.println("Converted Out FIle Count: " + convertedCount);
+				formateConvertedFileCount(convertedCount);
 			}
 			
+		if (args.length >5)
+		{
 			if(args[5]!=null)
 			{
-				driver = args[5];
+				connectionURL = args[5];
 			}
 			
 			if(args[6]!=null)
 			{
-				username =  args[6];
+				driver = args[6];
 			}
 			
 			if(args[7]!=null)
 			{
-				password =  args[7];
+				username =  args[7];
 			}
 			
 			if(args[8]!=null)
 			{
-				operation = args[8];
+				password =  args[8];
+			}
+			
+			if(args[9]!=null)
+			{
+				operation = args[9];
 				
 				//look for slqldr file only when operation is update/delete
 				if (operation !=null && !(operation.equalsIgnoreCase("new")) && !(operation.equalsIgnoreCase("ip")))
 				{
-					if(args[9]!=null)
+					if(args[10]!=null)
 					{
-						sqlldrlogFileName = args[9];
+						sqlldrlogFileName = args[10];
 					}
 				}
 				
 				//look for fast extract log file only when operation is new
 				if (operation !=null && operation.equalsIgnoreCase("new"))
 				{
-					if(args[9]!=null)
+					if(args[10]!=null)
 					{
-						fastExtractLogFileName = args[9];
+						fastExtractLogFileName = args[10];
 					}
 					
 				}
 			}
 			
-			if(args.length >10)
+			if(args.length >11)
 			{
 				// new dataloading converting log file for bd
-				if(args[10] !=null)
+				if(args[11] !=null)
 				{
 					if(database !=null && (database.equalsIgnoreCase("cpx") || database.equalsIgnoreCase("aip") || database.equalsIgnoreCase("pch")
 							|| database.equalsIgnoreCase("chm") || database.equalsIgnoreCase("elt") || database.equalsIgnoreCase("geo")))
 					{
-						bdConvertLogFile = args[10];
+						bdConvertLogFile = args[11];
 					}
 				}
 			} 
@@ -444,7 +454,8 @@ public class DataloadCheck {
 				errorTableCountList.add(cpxDbExceptionCount);
 				
 				// Accessnumber(s) rejected or having other issue & error message from bd_correction_error
-				//getErrorTableMessage (tableName);
+				//getErrorTableMessage (tableName);				
+				combinRejectedRecordsID();
 				
 				
 				//SQLLDR ErrorMessage INFO from Sqlldr Log File
@@ -597,6 +608,8 @@ public class DataloadCheck {
 							if(line.length() >0)
 							{
 								recordsIdentifier = line.trim();
+								
+								System.out.println("Records rejected due to Missing Accessnumber: " + recordsIdentifier);
 							}
 							
 						}
@@ -1623,6 +1636,41 @@ public static void distinctSqlAndOtherErrorMessages(LinkedHashMap<String, Intege
 				System.out.println("Sqlldr Error Count: " + sqlldrErrorMessageCount);
 				
 }
+
+static void formateConvertedFileCount(String convertedCount)
+{
+	String outFile_And_Count;
+	String outFileName;
+	Integer outFileCount=0;
+	if(convertedCount !=null)
+	{
+		if (!(convertedCount.contains(";")))
+		{
+			outFileCount = Integer.parseInt(convertedCount.substring(convertedCount.indexOf(":") +1, convertedCount.length()));
+			
+			convertedfileCountList.add(Integer.parseInt(convertedCount));
+		}
+		else if (convertedCount.contains(";"))
+		{
+			convertedCount = convertedCount.substring(0, convertedCount.lastIndexOf(";"));
+			StringTokenizer stToken = new StringTokenizer(convertedCount, ";");
+			while(stToken.hasMoreTokens())
+			{
+				outFile_And_Count = stToken.nextToken();
+				if(outFile_And_Count !=null && outFile_And_Count.contains(":"))
+				{
+					outFileName = outFile_And_Count.substring(0,outFile_And_Count.indexOf(":") +1);
+					outFileCount = Integer.parseInt(outFile_And_Count.substring(outFile_And_Count.indexOf(":") +1, outFile_And_Count.length()));
+				}
+				
+				convertedfileCountList.add(outFileCount);
+			}
+		}
+	}
+	
+}
+
+
 private static void getRecords()
 {
 	Hashtable<String, String> record;
@@ -1660,7 +1708,12 @@ private static void getRecords()
 			{
 				record.put("SOURCEFILECOUNT", sourcefileCountList.get(i).toString());
 			}
-				
+			
+			//Converted File Count
+			if(convertedfileCountList.size() >0)
+			{
+				record.put("CONVERTEDFILECOUNT", convertedfileCountList.get(i).toString());
+			}
 			//TEMP TABLE COUNT	
 			if(tempTableCountList.size() >0)
 			{
@@ -1712,9 +1765,13 @@ private static void getRecords()
 
 			//Sqlldr Log File Error Message & Count
 			if( sqlErrorMessageList.size()>0 && sqlErrorMessageCountList.size() >0)
-			{			
-				record.put("ERRORMESSAGE", sqlErrorMessageList.get(i));
-				record.put("ERRORMESSAGECOUNT", sqlErrorMessageCountList.get(i));
+			{	
+				if(i < sqlErrorMessageList.size())
+				{
+					record.put("ERRORMESSAGE", sqlErrorMessageList.get(i));
+					record.put("ERRORMESSAGECOUNT", sqlErrorMessageCountList.get(i));
+					
+				}
 				
 			}
 			
