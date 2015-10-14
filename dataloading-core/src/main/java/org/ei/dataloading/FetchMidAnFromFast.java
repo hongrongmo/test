@@ -32,7 +32,7 @@ public class FetchMidAnFromFast {
     static String driver = "oracle.jdbc.driver.OracleDriver";
     static String username = "db_xml";
     static String password = "ny5av";
-    static String fastUrl = "http://ei-main-p1.nda.fastsearch.net:15100";
+    static String fastUrl = "http://evprod14.cloudapp.net:15100";
 
     static String fastQuery="";
     static int pageRecCount = 25;

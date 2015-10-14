@@ -37,6 +37,8 @@ public class DataloadCheck {
 	static String tableName;
 	static String sqlldrlogFileName;
 	static String fastExtractLogFileName;
+	static String bdConvertLogFile;
+	static String convertedCount;
 	
 	static Hashtable <String,String> record = null;
 	
@@ -53,6 +55,8 @@ public class DataloadCheck {
 	// for blocked issn/e-issn
 	static StringBuffer issnAN = new StringBuffer();
 	static StringBuffer eissnAN = new StringBuffer();
+	static int blockedBdRecordsCount = 0;
+	
 	
 	static StringBuffer accessnumbers = new StringBuffer();
 	static String errorMessage = null;
@@ -70,6 +74,7 @@ public class DataloadCheck {
 	
 	static ArrayList<String> sourceFilenameList = new ArrayList<String>();
 	static ArrayList<Integer> sourcefileCountList = new ArrayList<Integer>();
+	static HashMap<String,Integer> convertedfileCountList = new HashMap<String,Integer>();
 	static ArrayList<Integer> tempTableCountList = new ArrayList<Integer>();
 	static ArrayList<Integer> srcTempDiffCountList = new ArrayList<Integer>();
 	static ArrayList<Integer> masterTableCountList = new ArrayList<Integer>();
@@ -130,54 +135,73 @@ public class DataloadCheck {
                 }
             }
 			
-		if (args.length >4)
-		{
-			if(args[4]!=null)
+			if(args[4] !=null)
 			{
-				connectionURL = args[4];
+				convertedCount = args[4];
+				
+				//System.out.println("Converted Out FIle Count: " + convertedCount);
+				formateConvertedFileCount(convertedCount);
 			}
 			
+		if (args.length >5)
+		{
 			if(args[5]!=null)
 			{
-				driver = args[5];
+				connectionURL = args[5];
 			}
 			
 			if(args[6]!=null)
 			{
-				username =  args[6];
+				driver = args[6];
 			}
 			
 			if(args[7]!=null)
 			{
-				password =  args[7];
+				username =  args[7];
 			}
 			
 			if(args[8]!=null)
 			{
-				operation = args[8];
+				password =  args[8];
+			}
+			
+			if(args[9]!=null)
+			{
+				operation = args[9];
 				
 				//look for slqldr file only when operation is update/delete
 				if (operation !=null && !(operation.equalsIgnoreCase("new")) && !(operation.equalsIgnoreCase("ip")))
 				{
-					if(args[9]!=null)
+					if(args[10]!=null)
 					{
-						sqlldrlogFileName = args[9];
+						sqlldrlogFileName = args[10];
 					}
 				}
 				
 				//look for fast extract log file only when operation is new
 				if (operation !=null && operation.equalsIgnoreCase("new"))
 				{
-					if(args[9]!=null)
+					if(args[10]!=null)
 					{
-						fastExtractLogFileName = args[9];
+						fastExtractLogFileName = args[10];
 					}
+					
 				}
 			}
 			
-			 
+			if(args.length >11)
+			{
+				// new dataloading converting log file for bd
+				if(args[11] !=null)
+				{
+					if(database !=null && (database.equalsIgnoreCase("cpx") || database.equalsIgnoreCase("aip") || database.equalsIgnoreCase("pch")
+							|| database.equalsIgnoreCase("chm") || database.equalsIgnoreCase("elt") || database.equalsIgnoreCase("geo")))
+					{
+						bdConvertLogFile = args[11];
+					}
+				}
+			} 
 		}
-		
 		else
 		{
 			System.out.println("not enough parameters");
@@ -266,15 +290,30 @@ public class DataloadCheck {
 					if(line.contains("new") && line.contains("select updatenumber, count(*) from BD_MASTER_ORIG where updatenumber")
 							&& line.contains("group by updatenumber"))
 					{
-						for(int i=0;i<4;i++)
+						
+						// in case there are "no rows selected" result of the query
+						for(int i=0;i<2;i++)
 						{
 							updNumCount = dis.readLine();
+							
+							if(updNumCount !=null && updNumCount.contains("UPDATENUMB"))
+							{
+								for(int j=0;j<2;j++)
+								{
+									updNumCount = dis.readLine();
+								}
+								
+								
+								if(updNumCount !=null)
+								{
+									updNumCount = perl.substitute("s/\t/;/g",updNumCount);
+									updatenum = updNumCount.substring(0,updNumCount.indexOf(';')).trim();
+									Count = Integer.parseInt(updNumCount.substring(updNumCount.indexOf(';')+1,updNumCount.length()).trim());
+								}
+								
+							}
 						}
-						
-						updNumCount = perl.substitute("s/\t/;/g",updNumCount);
-						updatenum = updNumCount.substring(0,updNumCount.indexOf(';')).trim();
-						Count = Integer.parseInt(updNumCount.substring(updNumCount.indexOf(';')+1,updNumCount.length()).trim());
-						
+
 						//Src_Master_diff count
 						
 						 /*if more than one file master count is for first file, second master count is count of both files,
@@ -324,6 +363,8 @@ public class DataloadCheck {
 					{
 						sqlldrInfoList.add(line.trim());
 					}
+					Collections.sort(sqlldrInfoList);   // Sort List
+					
 					
 					
 					// Other Errors to append to sqlldr errormessage, count
@@ -415,7 +456,8 @@ public class DataloadCheck {
 				errorTableCountList.add(cpxDbExceptionCount);
 				
 				// Accessnumber(s) rejected or having other issue & error message from bd_correction_error
-				//getErrorTableMessage (tableName);
+				//getErrorTableMessage (tableName);				
+				combinRejectedRecordsID();
 				
 				
 				//SQLLDR ErrorMessage INFO from Sqlldr Log File
@@ -568,6 +610,8 @@ public class DataloadCheck {
 							if(line.length() >0)
 							{
 								recordsIdentifier = line.trim();
+								
+								System.out.println("Records rejected due to Missing Accessnumber: " + recordsIdentifier);
 							}
 							
 						}
@@ -779,7 +823,7 @@ public class DataloadCheck {
 				tableName = "BD_MASTER";
 				int i = 0;
 				//ArrayList<String> errorMessageList = new ArrayList<String>();
-				HashMap<String,Integer> errorMessageList = new HashMap<String,Integer>();
+				LinkedHashMap<String,Integer> errorMessageList = new LinkedHashMap<String,Integer>();
 				String errorMessage = "";
 				int loadedRecordCount = 0;
 				int rejectedRecordCount = 0;
@@ -924,18 +968,36 @@ public class DataloadCheck {
 					
 				}
 				
+				if(database.equalsIgnoreCase("cpx") || database.equalsIgnoreCase("aip") || database.equalsIgnoreCase("pch")
+						|| database.equalsIgnoreCase("chm") || database.equalsIgnoreCase("elt") || database.equalsIgnoreCase("geo"))
+				{
+					readBdConvertLog();
+				}
+				distinctSqlAndOtherErrorMessages(errorMessageList);
+				
+				
 				//Source File Count
 				if(loadedRecordCount >=0 && rejectedRecordCount >=0)
 				{
+					int srcFileCount = 0;
+					if(otherErrors !=null && otherErrors.size() >0)
+					{
+						for(String Key: otherErrors.keySet())
+						{
+							blockedBdRecordsCount += otherErrors.get(Key);
+						}
+					}
+					srcFileCount=(loadedRecordCount + rejectedRecordCount + blockedBdRecordsCount);
 					
 					//record.put("SOURCEFILECOUNT", Integer.toString(loadedRecordCount + rejectedRecordCount));
-					System.out.println("SRC File Count " + (loadedRecordCount + rejectedRecordCount));
-					sourcefileCountList.add(loadedRecordCount + rejectedRecordCount);
+					System.out.println("SRC File Count " + srcFileCount);
+					sourcefileCountList.add(srcFileCount);
 				}
 				
 				
+				
 			
-				// Get distinct Error message, count from errorMessageList to load to log table
+				/*// Get distinct Error message, count from errorMessageList to load to log table
 				
 				if(errorMessageList.size()>0)
 				{
@@ -960,7 +1022,7 @@ public class DataloadCheck {
 				
 				
 				System.out.println("Sqlldr Error Message: " + sqlldrErrorMessage);
-				System.out.println("Sqlldr Error Message Count: " + sqlldrErrorMessageCount);
+				System.out.println("Sqlldr Error Message Count: " + sqlldrErrorMessageCount);*/
 				
 				
 				//TEMP TABLE COUNT, add "0" to avoid having "null"
@@ -969,7 +1031,7 @@ public class DataloadCheck {
 				
 				
 				//SRC_TEMP_DIFF, Rejected Records Count from sqlldr file, temp count for new data load is 0
-				srcTempDiffCountList.add((rejectedRecordCount + loadedRecordCount)-0);
+				srcTempDiffCountList.add((rejectedRecordCount + loadedRecordCount + blockedBdRecordsCount)-0);
 					
 					
 				//Master TABLE COUNT 
@@ -978,7 +1040,7 @@ public class DataloadCheck {
 				
 				
 				//SRC_Master_DIFF 
-				src_master_diff = (loadedRecordCount + rejectedRecordCount) - loadedRecordCount;
+				src_master_diff = (loadedRecordCount + rejectedRecordCount + blockedBdRecordsCount) - loadedRecordCount;
 				srcMasterDiffCountList.add(src_master_diff);
 				System.out.println("Src_master count diff is : " + src_master_diff);
 				
@@ -1241,7 +1303,7 @@ public class DataloadCheck {
 				}
 			}
 			
-			// add other errors as well to same field
+		/*	// add other errors as well to same field
 			
 			if(otherErrors != null && otherErrors.size() >0)
 			{
@@ -1249,7 +1311,7 @@ public class DataloadCheck {
 				{
 					sqlldrErrorMessageList.put(key, otherErrors.get(key));
 				}
-			}
+			}*/
 		}
 		catch(FileNotFoundException ex)
 		{
@@ -1262,8 +1324,9 @@ public class DataloadCheck {
 			e.printStackTrace();
 		}
 
+		distinctSqlAndOtherErrorMessages(sqlldrErrorMessageList);
 
-		// Get distinct Error message from errorMessageList, and corresponding Count  to load to log table 
+		/*// Get distinct Error message from errorMessageList, and corresponding Count  to load to log table 
 		if(sqlldrErrorMessageList != null && sqlldrErrorMessageList.size() >0)
 		{
 			for(String key: sqlldrErrorMessageList.keySet() )
@@ -1286,7 +1349,7 @@ public class DataloadCheck {
 		sqlErrorMessageCountList.add(sqlldrErrorMessageCount.toString());
 		
 		System.out.println("Sqlldr Error Message: " + sqlldrErrorMessage);
-		System.out.println("Sqlldr Error Count: " + sqlldrErrorMessageCount);
+		System.out.println("Sqlldr Error Count: " + sqlldrErrorMessageCount);*/
 		
 			
 	}
@@ -1325,6 +1388,11 @@ public class DataloadCheck {
 				
 			}
 		}
+		
+		
+		System.out.println("Records Blocked during converting: " + strAN.toString());
+		
+		
 		
 		// all rejected PUI/AN
 		otherErrorsAccessnumberPuiList.add(strAN.toString());
@@ -1413,6 +1481,200 @@ public class DataloadCheck {
 		}
 			
 
+		// read BD Converting log file that was officially started from week [201534] to check records blocked for ISSN/E-ISSN
+public static void readBdConvertLog()
+	{
+		if(bdConvertLogFile !=null)
+		{
+			try
+			{
+				File bdConvertFile = new File(bdConvertLogFile);
+				if(!bdConvertFile.exists())
+				{
+					System.out.println("BD Converting Log File Not found");
+					System.exit(1);
+				}
+				FileInputStream bdConvertfis = new FileInputStream(bdConvertFile);
+				BufferedInputStream bdConvertbis = new BufferedInputStream(bdConvertfis);
+				DataInputStream bdConvertdis = new DataInputStream(bdConvertbis);
+
+				String line = null;
+				while (bdConvertdis.available() !=0)
+				{
+					line = bdConvertdis.readLine();
+					
+					// Other Errors to append to sqlldr errormessage, count
+					
+					if(line !=null && line.contains("records with null accessnumber"))
+					{
+						int count = Integer.parseInt(line.substring(line.indexOf("are")+3, line.indexOf("records")).trim());
+						otherErrors.put("records with null accessnumber", count);
+						
+						// get idenitifier of these records
+						line = bdConvertdis.readLine();
+						if(line.length() >0 && line.contains("the PUI for these records are"))
+						{
+							line = bdConvertdis.readLine();
+							if(line !=null && line.length() >0)
+							{
+								recordsIdentifier = line.trim();
+							}
+							
+						}
+					}
+					
+					
+					// check records blocked for issn/e-issn block to append to sqlldr errormessage as well
+					
+					if(line !=null && line.contains("block record") && line.contains("for issn"))
+					{
+						// 1. get count of blocked issn
+						if(otherErrors.containsKey("Records blocked for ISSN"))
+						{
+							otherErrors.put("Records blocked for ISSN", otherErrors.get("Records blocked for ISSN") + 1) ;
+						}
+						else
+						{
+							otherErrors.put("Records blocked for ISSN", 1);
+							
+						}
+						
+						// 2. get AN List of blocked issn records
+						if(issnAN.length() >0)
+						{
+							issnAN.append(",");
+						}
+						if(line.substring(line.indexOf("record")+6, line.indexOf("for")).trim().length() >0)
+						{
+							issnAN.append(line.substring(line.indexOf("record")+6, line.indexOf("for")).trim());
+						}
+						
+					}
+					
+					if(line !=null && line.contains("block record") && line.contains("for eissn"))
+					{
+						// 1. get count of blocked issn
+						if(otherErrors.containsKey("Records blocked for E-ISSN"))
+						{
+							otherErrors.put("Records blocked for E-ISSN", otherErrors.get("Records blocked for E-ISSN") + 1) ;
+						}
+						else
+						{
+							otherErrors.put("Records blocked for E-ISSN", 1);
+							
+						}
+						
+						// 2. get AN List of blocked issn records
+						if(eissnAN.length() >0)
+						{
+							eissnAN.append(",");
+						}
+						if(line.substring(line.indexOf("record")+6, line.indexOf("for")).trim().length() >0)
+						{
+							eissnAN.append(line.substring(line.indexOf("record")+6, line.indexOf("for")).trim());
+						}
+						
+					}
+					
+				}
+				
+				combinRejectedRecordsID();
+				
+				bdConvertdis.close();
+			}
+			catch(FileNotFoundException ex)
+			{
+				ex.getCause();
+				ex.printStackTrace();
+			}
+
+			catch(Exception e)
+			{
+				e.printStackTrace();
+			}
+
+		}
+		
+}
+		
+
+
+public static void distinctSqlAndOtherErrorMessages(LinkedHashMap<String, Integer> sqlAndOtherErrors)
+{
+	// add other errors as well to same field
+	
+				if(otherErrors != null && otherErrors.size() >0)
+				{
+					for(String key: otherErrors.keySet())
+					{
+						sqlAndOtherErrors.put(key, otherErrors.get(key));
+					}
+				}
+	
+				
+				// Get distinct Error message from errorMessageList, and corresponding Count  to load to log table 
+				if(sqlAndOtherErrors != null && sqlAndOtherErrors.size() >0)
+				{
+					for(String key: sqlAndOtherErrors.keySet() )
+					{
+						if(sqlldrErrorMessage.length()>0)
+						{
+							sqlldrErrorMessage.append(" / ");
+						}
+						
+						if(sqlldrErrorMessageCount.length()>0)
+						{
+							sqlldrErrorMessageCount.append(" / ");
+						}
+						sqlldrErrorMessage.append(key);
+						sqlldrErrorMessageCount.append(sqlAndOtherErrors.get(key));
+					}
+				}
+
+				sqlErrorMessageList.add(sqlldrErrorMessage.toString());
+				sqlErrorMessageCountList.add(sqlldrErrorMessageCount.toString());
+				
+				System.out.println("Sqlldr Error Message: " + sqlldrErrorMessage);
+				System.out.println("Sqlldr Error Count: " + sqlldrErrorMessageCount);
+				
+}
+
+static void formateConvertedFileCount(String convertedCount)
+{
+	String outFile_And_Count;
+	String outFileName="";
+	Integer outFileCount=0;
+	if(convertedCount !=null)
+	{
+		if (!(convertedCount.contains(";")))
+		{
+			//outFileCount = Integer.parseInt(convertedCount.substring(convertedCount.indexOf(":") +1, convertedCount.length()));
+			
+			convertedfileCountList.put("0", Integer.parseInt(convertedCount));
+			//convertedfileCountList.add(Integer.parseInt(convertedCount));
+		}
+		else if (convertedCount.contains(";"))
+		{
+			convertedCount = convertedCount.substring(0, convertedCount.lastIndexOf(";"));
+			StringTokenizer stToken = new StringTokenizer(convertedCount, ";");
+			while(stToken.hasMoreTokens())
+			{
+				outFile_And_Count = stToken.nextToken();
+				if(outFile_And_Count !=null && outFile_And_Count.contains(":"))
+				{
+					outFileName = outFile_And_Count.substring(0,outFile_And_Count.indexOf(":") +1);
+					outFileName = outFileName.substring(0,outFileName.indexOf("."));
+					outFileCount = Integer.parseInt(outFile_And_Count.substring(outFile_And_Count.indexOf(":") +1, outFile_And_Count.length()));
+				}
+				convertedfileCountList.put(outFileName, outFileCount);
+				//convertedfileCountList.add(outFileCount);
+			}
+		}
+	}
+	
+}
+
+
 private static void getRecords()
 {
 	Hashtable<String, String> record;
@@ -1450,7 +1712,24 @@ private static void getRecords()
 			{
 				record.put("SOURCEFILECOUNT", sourcefileCountList.get(i).toString());
 			}
+			
+			//Converted File Count
+			if(convertedfileCountList.size() >0)
+			{
+				String srcFileName="";
+				int convertedFileCount = 0;
+				if(convertedfileCountList.size() ==1)
+				{
+					record.put("CONVERTEDFILECOUNT", convertedfileCountList.get("0").toString());
+				}
 				
+				else
+				{
+					srcFileName = record.get("SOURCEFILENAME").substring(0, record.get("SOURCEFILENAME").indexOf("."));
+					convertedFileCount = convertedfileCountList.get(srcFileName);
+					record.put("CONVERTEDFILECOUNT", Integer.toString(convertedFileCount));
+				}
+			}
 			//TEMP TABLE COUNT	
 			if(tempTableCountList.size() >0)
 			{
@@ -1502,9 +1781,13 @@ private static void getRecords()
 
 			//Sqlldr Log File Error Message & Count
 			if( sqlErrorMessageList.size()>0 && sqlErrorMessageCountList.size() >0)
-			{			
-				record.put("ERRORMESSAGE", sqlErrorMessageList.get(i));
-				record.put("ERRORMESSAGECOUNT", sqlErrorMessageCountList.get(i));
+			{	
+				if(i < sqlErrorMessageList.size())
+				{
+					record.put("ERRORMESSAGE", sqlErrorMessageList.get(i));
+					record.put("ERRORMESSAGECOUNT", sqlErrorMessageCountList.get(i));
+					
+				}
 				
 			}
 			
@@ -1512,7 +1795,11 @@ private static void getRecords()
 			// OtherErrors Identifier (AN/PUI) in txt log file 
 			if(otherErrorsAccessnumberPuiList.size() >0)
 			{
-				record.put("ACCESSNUMBER", otherErrorsAccessnumberPuiList.get(i));
+
+				if(i < otherErrorsAccessnumberPuiList.size())
+				{
+					record.put("ACCESSNUMBER", otherErrorsAccessnumberPuiList.get(i));
+				}
 			}
 			
 			
