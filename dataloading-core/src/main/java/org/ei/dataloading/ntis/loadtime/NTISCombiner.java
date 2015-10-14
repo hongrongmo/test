@@ -77,10 +77,10 @@ public class NTISCombiner
                     					password,
                     					loadNumber);
 		}
-    	// extract the whole thing
+    	// extract the whole thing by year
     	else if(loadNumber == 0)
     	{
-      		for(int yearIndex = 1964; yearIndex <= 2012; yearIndex++)
+      		for(int yearIndex = 1964; yearIndex <= 2018; yearIndex++)
       		{
     			System.out.println("Processing year " + yearIndex + "...");
       	  		// create  a new writer so we can see the loadNumber/yearNumber in the filename
@@ -92,7 +92,17 @@ public class NTISCombiner
                             		yearIndex);
       		}
     	}
-    	else
+    	else if(loadNumber == 1)
+    	{
+    		System.out.println("Processing the entire NTIS_MASTER table ");
+        	c.writeCombinedByYear(url,
+                            	  driver,
+                            	  username,
+                            	  password,
+                            	  1);
+      		
+    	}
+    	else 
     	{
       		c.writeCombinedByYear(url,
                             	driver,
@@ -173,7 +183,15 @@ public class NTISCombiner
 
             stmt = con.createStatement();
             System.out.println("Running the query...");
-            String q = "select LOAD_NUMBER,M_ID,AN,TI,TN,PN,AB,IC,SU,DES,IDE,SO,PA1,PA2,PA2,PA3,PA4,PA5,RD,RN,CAT,VI,XP,AV,MAA1,MAA2,CT,PR,HN,seq_num from " + Combiner.TABLENAME + " where substr(load_number,1,4) ='" + year + "'";
+            String q ="";
+            if(year==1)
+            {
+            	q = "select * from " + Combiner.TABLENAME;
+            }
+            else
+            {
+            	q = "select LOAD_NUMBER,M_ID,AN,TI,TN,PN,AB,IC,SU,DES,IDE,SO,PA1,PA2,PA2,PA3,PA4,PA5,RD,RN,CAT,VI,XP,AV,MAA1,MAA2,CT,PR,HN,seq_num from " + Combiner.TABLENAME + " where substr(load_number,1,4) ='" + year + "'";
+            }
             rs = stmt.executeQuery(q);
             System.out.println("Got records ...");
             writeRecs(rs);
@@ -210,6 +228,56 @@ public class NTISCombiner
             }
         }
     }
+    
+    public void writeCombinedByWholeTable(Connection con,
+			int year)
+	throws Exception
+	{
+	
+	Statement stmt = null;
+	ResultSet rs = null;
+		try
+		{
+		
+			stmt = con.createStatement();
+			System.out.println("Running the query...");
+			String q = "select LOAD_NUMBER,M_ID,AN,TI,TN,PN,AB,IC,SU,DES,IDE,SO,PA1,PA2,PA2,PA3,PA4,PA5,RD,RN,CAT,VI,XP,AV,MAA1,MAA2,CT,PR,HN,seq_num from " + Combiner.TABLENAME;
+			rs = stmt.executeQuery(q);
+			System.out.println("Got records ...");
+			writeRecs(rs);
+			System.out.println("Wrote records.");
+			this.writer.end();
+			this.writer.flush();
+		
+		}
+		finally
+		{
+		
+			if (rs != null)
+			{
+				try
+				{
+					rs.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+			
+			if (stmt != null)
+			{
+				try
+				{
+					stmt.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+		}
+	}
 
     private void writeRecs(ResultSet rs)
     	throws Exception
@@ -221,7 +289,7 @@ public class NTISCombiner
 
             EVCombinedRec rec = new EVCombinedRec();
             ++i;
-
+            
             String aut = NTISAuthor.formatAuthors(rs.getString("PA1"),
                     							  rs.getString("PA2"),
                     							  rs.getString("PA3"),

@@ -21,7 +21,7 @@ public class URLPlucker {
 
    // private static String NOT_IN     = ";\"ï¿½<>()\\[\\]\\{\\}\\s\\x7F-\\xFF";
     //12/31/2014 from eijava
-    private static String NOT_IN     = ";\"’<>()\\[\\]\\{\\}\\s\\x7F-\\xFF";
+    private static String NOT_IN     = ";\"<>()\\[\\]\\{\\}\\s\\x7F-\\xFF";
     private static String NOT_END    = "!.,?";
     private static String ANYWHERE   = "[^" + NOT_IN + NOT_END + "]";
     private static String EMBEDDED   = "[" + NOT_END + "]";

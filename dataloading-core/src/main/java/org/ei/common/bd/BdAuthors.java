@@ -10,6 +10,7 @@ public class BdAuthors
     private LinkedHashMap bdAuthorsMap ;
     private static ArrayList elements = null;
     private static ArrayList auElements = new ArrayList();
+    private List auid = new ArrayList();
 
     static
     {
@@ -72,6 +73,7 @@ public class BdAuthors
 	{
 
 		ArrayList searchValue = new ArrayList();
+		ArrayList auidValue = new ArrayList();
 		if (bdAuthorsMap != null && bdAuthorsMap.size() > 0)
 		{
 			Iterator auenum = bdAuthorsMap.keySet().iterator();
@@ -80,16 +82,30 @@ public class BdAuthors
 				BdAuthor nextau = (BdAuthor) auenum.next();
 				searchValue.add(nextau.getSearchValue());
 				//pre Frank request, block orcid appear in author navigator
-				/*
+				//setup a new field in fast extract file
 				if(nextau.getAuid()!=null){
-					searchValue.add(nextau.getAuid());
+					auidValue.add(nextau.getAuid());
 				}
-				*/
+				
+			}
+			if(auidValue.size()>0)
+			{
+				setAuID(auidValue);
 			}
 
 		}
 
 		return (String[]) searchValue.toArray(new String[1]);
+	}
+	
+	public List getAuID()
+	{
+		return this.auid;
+	}
+	
+	public void setAuID(List auidValue)
+	{
+		this.auid = auidValue;
 	}
 
 	public List getAuthors()

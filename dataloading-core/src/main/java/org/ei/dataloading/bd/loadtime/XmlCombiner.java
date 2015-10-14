@@ -22,7 +22,6 @@ import org.ei.dataloading.georef.*;
 import org.ei.dataloading.georef.loadtime.*;
 import org.ei.common.bd.*;
 import org.ei.common.*;
-
 import org.ei.util.GUID;
 import org.ei.util.StringUtil;
 
@@ -39,6 +38,7 @@ public class XmlCombiner
     private static String currentDb;
 
     private static HashMap issnARFix = new HashMap();
+    private List auid;
 
     static
     {  //ISSNs with AR field problem
@@ -316,6 +316,8 @@ throws Exception
                             authorString=authorString+rs.getString("AUTHOR_1");
                         }
                         rec.put(EVCombinedRec.AUTHOR, prepareBdAuthor(authorString));
+                        
+                        rec.put(EVCombinedRec.AUTHORID, getAuID());
                         String affiliation = null;
                         if (rs.getString("AFFILIATION") != null)
                         {
@@ -927,6 +929,16 @@ throws Exception
         return c.replaceAll("\\.","DQD");
 
     }
+    
+    private void setAuID(List auid)
+    {
+    	this.auid=auid;
+    }
+    
+    public String[] getAuID()
+    {    	
+    	return  (String[]) this.auid.toArray(new String[1]);
+    }
 
 
     public String[] prepareBdAuthor(String bdAuthor)
@@ -934,7 +946,9 @@ throws Exception
         if(bdAuthor != null && !bdAuthor.trim().equals(""))
         {
             BdAuthors aus = new BdAuthors(bdAuthor);
-            return aus.getSearchValue();
+            String[] ausArray = aus.getSearchValue();         
+            setAuID(aus.getAuID());
+            return ausArray;
         }
         return null;
     }
