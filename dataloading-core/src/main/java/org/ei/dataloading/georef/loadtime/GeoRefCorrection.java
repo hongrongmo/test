@@ -1393,7 +1393,14 @@ public class GeoRefCorrection
 				System.out.println("Running the query...");
 				writer.setOperation("add");
         		GeoRefCombiner c = new GeoRefCombiner(writer);
-				rs = stmt.executeQuery("select * from georef_master_orig where updateNumber='"+updateNumber+"'");
+        		if(updateNumber==1)
+        		{
+        			rs = stmt.executeQuery("select * from georef_master_orig");
+        		}
+        		else
+        		{
+        			rs = stmt.executeQuery("select * from georef_master_orig where updateNumber='"+updateNumber+"'");
+        		}
 				c.writeRecs(rs);
 			}
 			else if(action.equalsIgnoreCase("delete") || action.equalsIgnoreCase("extractdelete"))

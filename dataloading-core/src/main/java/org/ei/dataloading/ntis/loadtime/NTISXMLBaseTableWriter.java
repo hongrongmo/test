@@ -295,8 +295,13 @@ public class NTISXMLBaseTableWriter
 							String singlePa1 = pa1Array[i];
 							if(singlePa1!=null)
 							{
-								if(singlePa1.indexOf(",")>-1)
+								if(singlePa1.indexOf(".,")>-1)
 								{
+									singlePa1=singlePa1.substring(0,singlePa1.indexOf(".,")+1)+" {"+(singlePa1.substring(singlePa1.indexOf(".,")+2)).trim();
+								}
+								else if(singlePa1.indexOf(",")>-1)
+								{
+									//singlePa1=singlePa1.substring(0,singlePa1.indexOf(","))+" {"+singlePa1.substring(singlePa1.indexOf(",")+1);
 									singlePa1=singlePa1.substring(singlePa1.indexOf(",")+1)+" {"+singlePa1.substring(0,singlePa1.indexOf(","));
 								}
 							}

@@ -143,7 +143,11 @@ public class EVCombinedRec {
 	public static final String AFFILIATIONID = "141";
 	public static final String DATESORT = "142";
 	public static final String PARENT_ID = "143";
-
+	public static final String TABLE_OF_CONTENT = "144";
+	public static final String CPCCLASS = "145";
+	public static final String NUMERICALINDEXHIGH = "146";
+	public static final String NUMERICALINDEXLOW = "147";
+	public static final String NUMERICALINDEXUNIT = "148";
 
 	private Hashtable h = new Hashtable();
 

@@ -17,7 +17,6 @@ public class NTISAuthor
 		StringBuffer authors = new StringBuffer();
 		Perl5Util perl = new Perl5Util();
 
-
 		String pa1f = formatFirstAuthor(pa1);
 		if(pa1f != null)
 		{
@@ -66,8 +65,8 @@ public class NTISAuthor
 	public static String formatAdditionalAuthors(String firstGroup,
 												 String additionalHN)
 	{
-		System.out.println("firstGroup= "+firstGroup);
-		System.out.println("additionalHN= "+additionalHN);
+		//System.out.println("firstGroup= "+firstGroup);
+		//System.out.println("additionalHN= "+additionalHN);
 		if(additionalHN == null ||
 		   additionalHN.trim().length() == 0)
 		{
@@ -120,7 +119,7 @@ public class NTISAuthor
 
 	public static String formatFirstAuthor(String pa1)
 	{
-		System.out.println("formatFirstAuthor_input= "+pa1);
+		//System.out.println("formatFirstAuthor_input= "+pa1);
 		if(pa1 == null)
 		{
 			return null;
@@ -183,6 +182,7 @@ public class NTISAuthor
 		Perl5Util perl = new Perl5Util();
 		StringBuffer buf = new StringBuffer();
 		String[] authorArray = pa.split(Constants.AUDELIMITER);
+		
 		for(int i=0;i<authorArray.length;i++)
 		{
 			String singlePa = authorArray[i];
@@ -191,9 +191,11 @@ public class NTISAuthor
 			{
 
 				String initials = tokens.nextToken().trim();
+				//System.out.println("INITIALS="+initials);
 				if(tokens.hasMoreTokens())
 				{
 					String lastname = tokens.nextToken().trim();
+					//System.out.println("LAST NAME="+lastname);
 					lastname = perl.substitute("s/(\\.|\\,)?(\\s)*(and)?$//", lastname);
 
 					if(lastname.length() > 0)
@@ -209,7 +211,7 @@ public class NTISAuthor
 					}
 				}
 			}
-			if(i>authorArray.length-1)
+			if(i<authorArray.length-1)
 			{
 				buf.append("; ");
 			}
