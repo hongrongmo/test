@@ -935,7 +935,7 @@ public class KnovelCorrection {
 	private void deleteRecord(String m_id)
 	{
 		PreparedStatement stmt = null;
-		String sqlQuery1 = "delete from georef_master where m_id='"+m_id+"'";
+		String sqlQuery1 = "delete from knovel_master where m_id='"+m_id+"'";
 		String sqlQuery2 = "delete from saved_records where guid='"+m_id+"'";
 		
 		Connection con1 = null;

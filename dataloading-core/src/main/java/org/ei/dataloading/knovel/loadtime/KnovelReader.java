@@ -59,7 +59,7 @@ public class KnovelReader
 		filename = args[1];
 		String database = args[2];
 		
-		String url = "jdbc:oracle:thin:@206.137.75.53:1521:EIDB1";
+		String url = "jdbc:oracle:thin:@eid.cmdvszxph9cf.us-east-1.rds.amazonaws.com:1521:eid";
 		String username = "db_knovel";
 		String password = "ei3it";
 

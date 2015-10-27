@@ -11,6 +11,7 @@ import java.sql.PreparedStatement;
 import java.util.*;
 import java.net.*;
 import java.util.regex.*;
+
 import org.ei.domain.*;
 import org.ei.query.base.*;
 import org.apache.oro.text.perl.Perl5Util;
@@ -130,11 +131,45 @@ public class NewDataTesting
 		{
 			test.getMIDFromFast(updateNumber);
 		}
+		else  if(action.equals("cpc"))
+		{
+			test.getCPCDescription(updateNumber);
+		}
 		else
 		{
 			test.getData(database);
 		}
 
+	}
+	
+	private void getCPCDescription(String filename)
+	{
+		try{
+
+			BufferedReader in = new BufferedReader(new FileReader(new File(filename)));
+			String line=null;
+			DiskMap readMap = new DiskMap();
+			readMap.openRead("ecla", false);
+			while((line=in.readLine())!=null)
+			{
+				//System.out.println("LINE1 = "+line);
+				if(line.length()>4)
+				{				
+					line = line.substring(0,4)+" "+line.substring(4).trim();					
+				}
+				//System.out.println("LINE2 = "+line);
+			    String val = readMap.get(line);
+			    if(val==null || val.length()<1) 
+			    {
+			    	System.out.println("CODE= "+line);
+			    }				
+			}
+			readMap.close();
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
 	}
 
 	private void getWeeklyCount(String weekNumber)

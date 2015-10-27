@@ -33,7 +33,7 @@ public class DiskMap {
         //12/24/2014 from eijava
         String val = readMap.get(codeString);
         //
-        log4j.info(val);
+        System.out.println(val);
         readMap.close();
     }
 
