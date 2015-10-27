@@ -704,7 +704,7 @@ public class DataloadCheck {
 			
 			
 			
-			else if(database!=null && (database.equalsIgnoreCase("grf") || database.equalsIgnoreCase("elt")) && 
+			else if(database!=null && (database.equalsIgnoreCase("grf") || database.equalsIgnoreCase("elt") || database.equalsIgnoreCase("ins")) && 
 					(operation !=null && operation.equalsIgnoreCase("update")))
 			{
 				if(database.equalsIgnoreCase("grf"))
@@ -714,6 +714,10 @@ public class DataloadCheck {
 				else if (database.equalsIgnoreCase("elt"))
 				{
 					tableName = "BD_CORRECTION_ERROR";
+				}
+				else if(database.equalsIgnoreCase("ins"))
+				{
+					tableName = "INS_CORRECTION_ERROR";
 				}
 				
 				int srcFileCount = 0;
