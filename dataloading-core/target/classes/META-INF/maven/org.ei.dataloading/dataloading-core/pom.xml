@@ -11,21 +11,7 @@
   <name>dataloading-core</name>
   <url>http://maven.apache.org</url>
 
- <!--  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
- 
 
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-</project>
--->
 <dependencies>
 		<dependency>
 			<groupId>com.amazonaws</groupId>
@@ -142,6 +128,12 @@
 			<artifactId>xercesImpl</artifactId>
 			<version>2.9.1</version>
 		</dependency>
+		<!-- HH: for Patent zip file header issue  08/04/2015-->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-compress</artifactId>
+			<version>1.9</version>
+		</dependency>
 	</dependencies>
 
 	<properties>
@@ -149,21 +141,8 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
 
-	<distributionManagement>
-		<repository>
-			<id>nexus</id>
-			<name>nexus</name>
-			<url>http://atheneum/content/repositories/elsevier-releases</url>
-		</repository>
-		<snapshotRepository>
-			<id>nexus</id>
-			<name>nexus</name>
-			<url>http://atheneum/content/repositories/elsevier-snapshots</url>
-		</snapshotRepository>
-	</distributionManagement>
-
 	<build>
-		<finalName>dataload</finalName>
+		<finalName>eilib</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
