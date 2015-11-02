@@ -1284,6 +1284,8 @@ public class DataloadCheck {
 			DataInputStream sqlldrdis = new DataInputStream(sqlldrbis);
 
 			String line = null;
+			StringBuffer sqlldrError = new StringBuffer();
+			
 			while (sqlldrdis.available() !=0)
 			{
 				line = sqlldrdis.readLine();
@@ -1292,19 +1294,28 @@ public class DataloadCheck {
 				//ERROR Messages
 				if(line.contains("Rejected -"))
 				{
-					line = sqlldrdis.readLine();
-					if(line !=null && line.contains("ORA-0"))
+					if(database !=null && database.equalsIgnoreCase("ins") && line.contains("column"))
 					{
-						if(sqlldrErrorMessageList.containsKey(line))
+						sqlldrError.append(line.substring(line.indexOf("-") +1).trim());
+					}
+					line = sqlldrdis.readLine();
+					if((line !=null && line.contains("ORA-0")) || line !=null)
+					{
+						sqlldrError.append(line);
+						if(sqlldrErrorMessageList.containsKey(sqlldrError.toString()))
 						{
-							sqlldrErrorMessageList.put(line, sqlldrErrorMessageList.get(line)+1);
+							sqlldrErrorMessageList.put(sqlldrError.toString(), sqlldrErrorMessageList.get(sqlldrError.toString())+1);
 						}
 						else
 						{
-							sqlldrErrorMessageList.put(line, 1);
+							sqlldrErrorMessageList.put(sqlldrError.toString(), 1);
 						}
 					}
+				
 				}
+				
+				// reset STringBuffer for next Iteration Error
+				sqlldrError.delete(0, sqlldrError.toString().length());
 			}
 			
 		/*	// add other errors as well to same field
