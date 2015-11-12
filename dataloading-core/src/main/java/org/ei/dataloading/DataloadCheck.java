@@ -18,6 +18,7 @@ import org.apache.oro.text.perl.Perl5Util;
  * Author: HT
  * Date: 03/27/2015
  * Desc: get the weekly data loaded INFO (i.e. load#, count, #rejected,#filename,....) for preparing a dataloading report
+ * NOTE: that is the version working fine before processing New CPX/AIP(s200) as S300 COrrection.
  */
 public class DataloadCheck {
 
