@@ -43,7 +43,7 @@ public class DataLoadingErrorCheck {
     static String username="ap_correction";
     static String password="ei3it";
     static String fileName=null;
-    static String source_DataFileName=null;
+    static String sourceFileName=null;
     static String operation = null;
     static String database;
     static String doctype;
@@ -139,7 +139,7 @@ public class DataLoadingErrorCheck {
     	{
     		if(args[9] !=null)
     		{
-    			source_DataFileName = args[9];
+    			sourceFileName = args[9];
     			
     			//System.out.println("Source Data File is : " + source_DataFileName);
     		}
@@ -246,7 +246,17 @@ public class DataLoadingErrorCheck {
 						|| database.equalsIgnoreCase("pch") || database.equalsIgnoreCase("chm")
 						|| database.equalsIgnoreCase("elt") || database.equalsIgnoreCase("geo")))
     	{
-    		query = "select count(*) count from "+ masterTableMapping() + " where updatenumber='"+updateNumber+"' and database='"+database +"'";
+    		// since new cpx and aip are now loaded as S300 correction, so to get each individual file count
+    		if(doctype.equalsIgnoreCase("cpxnew"))
+    		{
+    			query = "select count(*) count from "+ masterTableMapping() + " where loadnumber='"+updateNumber+"' and database='"+database +"'"
+    					+ " and updateresource like '" + sourceFileName + "%'";
+    		}
+    		else
+    		{
+    			query = "select count(*) count from "+ masterTableMapping() + " where updatenumber='"+updateNumber+"' and database='"+database +"'";
+    		}
+    			
     	}
     	
     	else if(operation !=null && (operation.equalsIgnoreCase("update") || operation.equalsIgnoreCase("delete")))

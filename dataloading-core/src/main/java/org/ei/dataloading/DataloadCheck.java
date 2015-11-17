@@ -171,7 +171,8 @@ public class DataloadCheck {
 				operation = args[9];
 				
 				//look for slqldr file only when operation is update/delete
-				if (operation !=null && !(operation.equalsIgnoreCase("new")) && !(operation.equalsIgnoreCase("ip")))
+				if (operation !=null && ((!(operation.equalsIgnoreCase("new"))) || (database !=null && database.equalsIgnoreCase("cpx"))) 
+						&& !(operation.equalsIgnoreCase("ip")))
 				{
 					if(args[10]!=null)
 					{
@@ -182,9 +183,20 @@ public class DataloadCheck {
 				//look for fast extract log file only when operation is new
 				if (operation !=null && operation.equalsIgnoreCase("new"))
 				{
-					if(args[10]!=null)
+					if(database !=null && database.equalsIgnoreCase("cpx"))
 					{
-						fastExtractLogFileName = args[10];
+						if(args[11] !=null)
+						{
+							fastExtractLogFileName = args[11];
+						}
+						
+					}
+					else
+					{
+						if(args[10]!=null)
+						{
+							fastExtractLogFileName = args[10];
+						}
 					}
 					
 				}
@@ -195,7 +207,7 @@ public class DataloadCheck {
 				// new dataloading converting log file for bd
 				if(args[11] !=null)
 				{
-					if(database !=null && (database.equalsIgnoreCase("cpx") || database.equalsIgnoreCase("aip") || database.equalsIgnoreCase("pch")
+					if(database !=null && (database.equalsIgnoreCase("aip") || database.equalsIgnoreCase("pch")
 							|| database.equalsIgnoreCase("chm") || database.equalsIgnoreCase("elt") || database.equalsIgnoreCase("geo")))
 					{
 						bdConvertLogFile = args[11];
@@ -704,6 +716,195 @@ public class DataloadCheck {
 			}
 			
 			
+			else if (database!=null && database.equalsIgnoreCase("cpx") && (operation !=null && operation.equalsIgnoreCase("new")))
+			{
+				
+				tableName = "";
+				username = "ba_s300";
+				password = "ei7it";
+				
+				int srcFileCount = 0;
+				int tempTableCount = 0;
+				
+				
+				
+				while (dis.available() !=0)
+				{
+					line = dis.readLine();
+					
+					//Source FileName
+					if(line.contains("DataFile: "))
+					{
+						String srcFileName = line.substring(line.indexOf(":")+1, line.length()).trim();
+						if(!(sourceFilenameList.contains(srcFileName)))
+						{
+							sourceFilenameList.add(srcFileName);
+						}
+						
+						
+					}
+					
+					//Source File Count
+					if(line.contains("Total counts of file is:"))
+					{
+						srcFileCount = Integer.parseInt(line.substring(line.indexOf(':')+1,line.length()).trim());
+						if(!(sourcefileCountList.contains(srcFileCount)))
+						{
+							sourcefileCountList.add(srcFileCount);
+						}
+						
+					}
+					
+					//TEMP TABLE COUNT
+					if(line.contains("records was loaded into the temp table"))
+					{ 
+						tempTableCount = Integer.parseInt(line.substring(0,line.indexOf("records")).trim());
+						
+						if(!(tempTableCountList.contains(tempTableCount)))
+						{
+							tempTableCountList.add(tempTableCount);
+							
+							// SRC_TEMP_DIFF
+							
+							src_temp_diff = srcFileCount - tempTableCount;
+							srcTempDiffCountList.add(src_temp_diff);
+						}
+						
+					}
+					
+				
+					//sqlldr log file Info
+					if(line.contains("Check sqlldr log files and display summary information") )
+					{						
+						line = dis.readLine();
+						
+						// if log file name the first one
+						if(line !=null && line.contains("Normal status:"))
+						{
+							sqlldrInfoList.add(line);
+						}
+					}
+					
+					// Other Errors to append to sqlldr errormessage, count
+					
+					if(line !=null && line.contains("records with null accessnumber"))
+					{
+						int count = Integer.parseInt(line.substring(line.indexOf("are")+3, line.indexOf("records")).trim());
+						otherErrors.put("records with null accessnumber", count);
+						
+						// get idenitifier of these records
+						line = dis.readLine();
+						if(line.length() >0 && line.contains("the PUI for these records are"))
+						{
+							line = dis.readLine();
+							if(line.length() >0)
+							{
+								recordsIdentifier = line.trim();
+								
+								System.out.println("Records rejected due to Missing Accessnumber: " + recordsIdentifier);
+							}
+							
+						}
+					}
+					
+					// check records blocked for issn/e-issn block to append to sqlldr errormessage as well
+					
+					if(line !=null && line.contains("block record") && line.contains("for issn"))
+					{
+						// 1. get count of blocked issn
+						if(otherErrors.containsKey("Records blocked for ISSN"))
+						{
+							otherErrors.put("Records blocked for ISSN", otherErrors.get("Records blocked for ISSN") + 1) ;
+						}
+						else
+						{
+							otherErrors.put("Records blocked for ISSN", 1);
+							
+						}
+						
+						// 2. get AN List of blocked issn records
+						if(issnAN.length() >0)
+						{
+							issnAN.append(",");
+						}
+						if(line.substring(line.indexOf("record")+6, line.indexOf("for")).trim().length() >0)
+						{
+							issnAN.append(line.substring(line.indexOf("record")+6, line.indexOf("for")).trim());
+						}
+						
+					}
+					
+					if(line !=null && line.contains("block record") && line.contains("for eissn"))
+					{
+						// 1. get count of blocked issn
+						if(otherErrors.containsKey("Records blocked for E-ISSN"))
+						{
+							otherErrors.put("Records blocked for E-ISSN", otherErrors.get("Records blocked for E-ISSN") + 1) ;
+						}
+						else
+						{
+							otherErrors.put("Records blocked for E-ISSN", 1);
+							
+						}
+						
+						// 2. get AN List of blocked issn records
+						if(eissnAN.length() >0)
+						{
+							eissnAN.append(",");
+						}
+						if(line.substring(line.indexOf("record")+6, line.indexOf("for")).trim().length() >0)
+						{
+							eissnAN.append(line.substring(line.indexOf("record")+6, line.indexOf("for")).trim());
+						}
+						
+					}
+					
+					
+					
+				}    // end of loop
+				
+				System.out.println("Records Blocked for ISSN Count: " + otherErrors.get("Records blocked for ISSN"));
+				System.out.println("AN of blocked ISSN is : " + issnAN);
+				
+				System.out.println("Records Blocked for E-ISSN Count: " + otherErrors.get("Records blocked for E-ISSN"));
+				System.out.println("AN of blocked E-ISSN is : " + eissnAN);
+				
+				
+				//Master TABLE COUNT & diff
+				tableName = "bd_master_orig";
+				Count = getMasterTableCount(tableName);
+				masterTableCountList.add(Count);
+
+				//Src_Master_diff count
+				src_master_diff = srcFileCount - Count;
+				srcMasterDiffCountList.add(src_master_diff);
+				
+				//DB EXCEPTION COUNT
+				tableName="BD_AIP_ERROR";
+				cpxDbExceptionCount = getErrorTableCount(tableName);
+				errorTableCountList.add(cpxDbExceptionCount);
+				
+				
+				//Fast Extract File Name, Fast Extract Count
+				readFastExtractLog(fastExtractLogFileName,database);
+				
+				
+				// Accessnumber(s) rejected or having other issue & error message 
+				//getErrorTableMessage (tableName);
+				
+				combinRejectedRecordsID();
+				
+				System.out.println("errorAN List is: " + otherErrorsAccessnumberPuiList.get(0));
+				
+								
+				//Sqlldr ErrorMessage INFO from sqlldr Log file
+				sqlldrFileNameList.add(sqlldrlogFileName);
+				getSqlldrErrorMessage(sqlldrlogFileName);
+				
+				
+			}
+			
+			
 			
 			else if(database!=null && (database.equalsIgnoreCase("grf") || database.equalsIgnoreCase("elt") || database.equalsIgnoreCase("ins")) && 
 					(operation !=null && operation.equalsIgnoreCase("update")))
@@ -818,12 +1019,21 @@ public class DataloadCheck {
 			}
 			
 			
-			else if ((database!=null) && (database.equalsIgnoreCase("cpx") || database.equalsIgnoreCase("aip") || database.equalsIgnoreCase("chm")
+			/*else if ((database!=null) && (database.equalsIgnoreCase("cpx") || database.equalsIgnoreCase("aip") || database.equalsIgnoreCase("chm")
+					|| database.equalsIgnoreCase("pch") || database.equalsIgnoreCase("elt") || database.equalsIgnoreCase("geo")
+					|| database.equalsIgnoreCase("nti") || database.equalsIgnoreCase("cbn") || database.equalsIgnoreCase("ept")
+					|| database.equalsIgnoreCase("grf") || database.equalsIgnoreCase("ins") || database.equalsIgnoreCase("upt")
+					) 
+					&& (operation !=null && (operation.equalsIgnoreCase("new") || operation.equalsIgnoreCase("ip"))))*/   //[Original before run new cpx as corr]
+			
+			
+			else if ((database!=null) && (database.equalsIgnoreCase("chm")
 					|| database.equalsIgnoreCase("pch") || database.equalsIgnoreCase("elt") || database.equalsIgnoreCase("geo")
 					|| database.equalsIgnoreCase("nti") || database.equalsIgnoreCase("cbn") || database.equalsIgnoreCase("ept")
 					|| database.equalsIgnoreCase("grf") || database.equalsIgnoreCase("ins") || database.equalsIgnoreCase("upt")
 					) 
 					&& (operation !=null && (operation.equalsIgnoreCase("new") || operation.equalsIgnoreCase("ip"))))
+				
 			{
 				tableName = "BD_MASTER";
 				int i = 0;
@@ -973,8 +1183,13 @@ public class DataloadCheck {
 					
 				}
 				
-				if(database.equalsIgnoreCase("cpx") || database.equalsIgnoreCase("aip") || database.equalsIgnoreCase("pch")
+				/*if(database.equalsIgnoreCase("cpx") || database.equalsIgnoreCase("aip") || database.equalsIgnoreCase("pch")
+						|| database.equalsIgnoreCase("chm") || database.equalsIgnoreCase("elt") || database.equalsIgnoreCase("geo"))*/ 
+				//[original before run new cpx as corr]
+				
+				if(database.equalsIgnoreCase("pch")
 						|| database.equalsIgnoreCase("chm") || database.equalsIgnoreCase("elt") || database.equalsIgnoreCase("geo"))
+					
 				{
 					readBdConvertLog();
 				}
@@ -1138,12 +1353,18 @@ public class DataloadCheck {
 		{
 			
 			//if(record.containsKey("UPDATENUMBER") && record.containsKey("OPERATION"))
-			if(operation != null)
+			if(operation != null && operation.equalsIgnoreCase("update") && (database.equalsIgnoreCase("grf") || database.equalsIgnoreCase("elt")))
 			{
 				query = "select master_count from "+ tableName +" WHERE DB='" + database + "' and updatenumber=" + updateNumber
 						+ " and action='"+ operation + "'";
 			
-			
+			}
+			else if (operation != null && operation.equalsIgnoreCase("new") && (database.equalsIgnoreCase("cpx") || database.equalsIgnoreCase("aip")))
+			{
+				query = "select count(*) from "+ tableName + " where loadnumber=" + loadNumber + " and updatecodestamp like 'AIPNEW%' "+
+						"and updateresource like '" + fileName + "%'";
+			}
+				
 				con = getConnection(connectionURL,driver,username,password);
 				stmt = con.createStatement();
 				rs = stmt.executeQuery(query);
@@ -1154,7 +1375,6 @@ public class DataloadCheck {
 
 				}
 			}
-		}
 		
 		catch(Exception e)
 		{
@@ -1453,6 +1673,10 @@ public class DataloadCheck {
 						{
 							
 							fastExtractFileName.append(",");
+						}
+						if(database.equalsIgnoreCase("cpx"))
+						{
+							line = fastExtractLogDis.readLine();   // there are two lines for cpx fast extract
 						}
 						fastExtractFileName.append(line.substring(0, line.indexOf("zip")+3).trim());
 						
@@ -1950,5 +2174,4 @@ private static void sqlldrFileNameFormat(String sqlldrFileName)
 		}
 
 	}
-
 }
