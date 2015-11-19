@@ -25,6 +25,9 @@ import org.ei.common.*;
 import org.ei.util.GUID;
 import org.ei.util.StringUtil;
 
+import java.text.*;
+//import java.math.*;
+
 public class XmlCombiner
     extends CombinerTimestamp
 {
@@ -177,7 +180,7 @@ public class XmlCombiner
                 rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER,PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,APICT, APICT1,APILT, APILT1,CLASSIFICATIONDESC,APIAMS,SEQ_NUM from " + Combiner.TABLENAME + " where  PUBLICATIONYEAR='" + year + "' AND loadnumber != 0 and loadnumber < 100000000 and database='" + Combiner.CURRENTDB + "'");
             }
             System.out.println("Got records ...from table::"+Combiner.TABLENAME);
-            writeRecs(rs);
+            writeRecs(rs,con);
             System.out.println("Wrote records.");
             this.writer.end();
             this.writer.flush();
@@ -227,7 +230,7 @@ throws Exception
 		rs = stmt.executeQuery(sqlQuery);
 		
 		System.out.println("Got records ...from table::"+Combiner.TABLENAME);
-		writeRecs(rs);
+		writeRecs(rs,con);
 		System.out.println("Wrote records.");
 		this.writer.end();
 		this.writer.flush();
@@ -263,7 +266,7 @@ throws Exception
 }
 
 
-    public void writeRecs(ResultSet rs)
+    public void writeRecs(ResultSet rs, Connection con)
         throws Exception
     {
         int i = 0;
@@ -273,6 +276,7 @@ throws Exception
         boolean isChimica = false;
         boolean isCpx = false;
         String accessNumber = "";
+        String pui = "";
 
         while (rs.next())
         {
@@ -681,6 +685,8 @@ throws Exception
 
                     if(rs.getString("PUI") != null)
                     {
+                    	pui = rs.getString("PUI");
+                    	//System.out.println("PUI="+pui);
                         rec.put(EVCombinedRec.PUI,rs.getString("PUI"));
                     }
 
@@ -852,8 +858,13 @@ throws Exception
                     {
                         rec.put(EVCombinedRec.MAIN_TERM, prepareMulti(rs.getString("apiams")));
                     }
-
-
+                    
+                   
+                    if(pui!=null && pui.length()>0)
+                    {
+                    	populateNumericalIndex(pui,rec,con);
+                    }
+                    
                     try
                     {
                       if(!isGeoBase || (isGeoBase && rec.get(EVCombinedRec.LAT_SE) != null))
@@ -905,7 +916,7 @@ throws Exception
                 }
 
             }
-
+           
             recArray = (EVCombinedRec[])recVector.toArray(new EVCombinedRec[0]);
             this.writer.writeRec(recArray);
           }
@@ -917,7 +928,106 @@ throws Exception
         }
     }
 
-
+    private void populateNumericalIndex(String pui,EVCombinedRec rec,Connection con) throws Exception
+    {
+    	Statement stmt = null;
+    	ResultSet rs = null;
+    	StringBuffer niBuffer = new StringBuffer();
+    	NumberFormat formatter = new DecimalFormat();
+    	try
+    	{
+    		if(pui!=null && pui.length()>0)
+    		{
+	    		stmt = con.createStatement();
+	    		//System.out.println("Running the Numerical query...");
+	    		String sqlQuery = "select * from BD_MASTER_NUMERICAL where PUI='"+pui+"'";
+	    		//System.out.println(sqlQuery);
+	    		rs = stmt.executeQuery(sqlQuery);
+	    		//System.out.println("Got records ...from table BD_MASTER_NUMERICAL");
+	    		while (rs.next())
+	    	    {	    	         	    	         
+	    	          if(rs.getString("MAXIMUM") != null)
+	    	          {
+		    	          if(rs.getString("UNIT") != null)
+		    	          {
+		    	        	  niBuffer.append(rs.getString("UNIT"));
+		    	          }
+		    	          /*
+		    	           * temperary change it to String from double for text search
+		    	          double maximum = 	rs.getDouble("MAXIMUM");
+		    	          formatter = new DecimalFormat("0.#####E0");
+		    	          niBuffer.append(" "+formatter.format(maximum).toString());
+		    	          */
+		    	          String maximum = 	rs.getString("MAXIMUM");		    	       
+		    	          niBuffer.append(" "+maximum);
+		    	          if(rs.getString("SYMBOL") != null)
+		    	          {
+		    	        	  niBuffer.append(" "+rs.getString("SYMBOL"));
+		    	          }
+		    	          		    	         
+		    	          niBuffer.append(Constants.AUDELIMITER);		    	          
+	    	          }
+	    	          
+	    	          if(rs.getString("MINIMUM") != null)
+	    	          {
+	    	        	  if(rs.getString("UNIT") != null)
+		    	          {
+		    	        	  niBuffer.append(rs.getString("UNIT"));
+		    	          }
+	    	        	
+	    	        	  /*
+	    	        	   * temperary change it to String from double for text search
+	    	        	  double minimum = 	rs.getDouble("MINIMUM");
+		    	          formatter = new DecimalFormat("0.#####E0");
+		    	          niBuffer.append(" "+formatter.format(minimum).toString());
+		    	          */
+	    	        	  
+	    	        	  String minimum = 	rs.getString("MINIMUM");
+		    	          niBuffer.append(" "+minimum);
+	    	        	  if(rs.getString("SYMBOL") != null)
+		    	          {
+		    	        	  niBuffer.append(" "+rs.getString("SYMBOL"));
+		    	          }
+	    	        	  	    	        	 
+	    	        	  niBuffer.append(Constants.AUDELIMITER);		    	          
+	    	          }
+	    	          
+	    	    }	 
+	    		//System.out.println("Wrote records.");
+    		}
+    		if(niBuffer.length()>0)
+    		{
+    			rec.put(EVCombinedRec.NUMERICAL_INDEXING, prepareMulti(niBuffer.toString()));
+    		}
+    	}
+    	finally
+    	{
+    	
+    		if (rs != null)
+    		{
+    			try
+    			{
+    				rs.close();
+    			}
+    			catch (Exception e)
+    			{
+    				e.printStackTrace();
+    			}
+    		}
+    		
+    		if (stmt != null)
+    		{
+    			try
+    			{
+    				stmt.close();
+    			}
+    			catch (Exception e)
+    			{
+    				e.printStackTrace();
+    			}
+    		}
+    	}
+    }
 
     private String formatClassCodes(String c)
     {
@@ -1437,7 +1547,7 @@ throws Exception
 
                 stmt = con.createStatement();
                 rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER,PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,CLASSIFICATIONDESC,APIAMS,SEQ_NUM from " + Combiner.TABLENAME + " where loadnumber != 0 and loadnumber < 100000000 and database='" + Combiner.CURRENTDB + "'");
-                writeRecs(rs);
+                writeRecs(rs,con);
                 this.writer.end();
                 this.writer.flush();
 
@@ -1537,7 +1647,7 @@ throws Exception
             String sqlString = "select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER,substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,APICT, APICT1,APILT, APILT1,CLASSIFICATIONDESC,APIAMS,SEQ_NUM from " + Combiner.TABLENAME + " where  LOADNUMBER='" + weekNumber + "' AND loadnumber != 0 and loadnumber < 100000000 and database='" + Combiner.CURRENTDB + "'";
             //String sqlString = "select * from bd_master where accessnumber='20143218020259'";
             rs = stmt.executeQuery(sqlString);
-            writeRecs(rs);
+            writeRecs(rs,con);
             this.writer.end();
             this.writer.flush();
 

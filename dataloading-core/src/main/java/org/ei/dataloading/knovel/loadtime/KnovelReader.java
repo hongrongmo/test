@@ -1008,7 +1008,7 @@ public class KnovelReader
 				String rel = link.getAttributeValue("rel");
 				//System.out.println("TOCREL="+rel);
 				String title = link.getAttributeValue("title");
-				//System.out.println("TOCTITLE="+title);
+				System.out.println("TOCTITLE="+title);
 				String sourceFileName = link.getAttributeValue("sourceFileName",knovelNamespace);
 				//System.out.println("TOCSOURCEFILENAME="+sourceFileName);
 				String pageRange = link.getAttributeValue("sourceFilePageRange",knovelNamespace);

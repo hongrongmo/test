@@ -149,22 +149,24 @@ public class NewDataTesting
 			BufferedReader in = new BufferedReader(new FileReader(new File(filename)));
 			String line=null;
 			DiskMap readMap = new DiskMap();
-			readMap.openRead("ecla", false);
+			
 			while((line=in.readLine())!=null)
 			{
 				//System.out.println("LINE1 = "+line);
+				readMap.openRead("ecla", false);
 				if(line.length()>4)
 				{				
-					line = line.substring(0,4)+" "+line.substring(4).trim();					
+					line = line.substring(0,4).trim()+line.substring(4).trim();					
 				}
-				//System.out.println("LINE2 = "+line);
+				//System.out.println("LINE2 ="+line);
 			    String val = readMap.get(line);
-			    if(val==null || val.length()<1) 
+			    if(val==null || val.equals("null") || val.length()<5) 
 			    {
 			    	System.out.println("CODE= "+line);
-			    }				
+			    }	
+			    readMap.close();
 			}
-			readMap.close();
+			
 		}
 		catch (Exception e)
 		{
