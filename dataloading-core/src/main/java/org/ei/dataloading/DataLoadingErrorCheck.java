@@ -44,6 +44,7 @@ public class DataLoadingErrorCheck {
     static String password="ei3it";
     static String fileName=null;
     static String sourceFileName=null;
+    static String flag=null;   // to manage issue of sending alert twice (main new cpx script, and its child one), so only child send SNS if error/non error happened  
     static String operation = null;
     static String database;
     static String doctype;
@@ -144,6 +145,11 @@ public class DataLoadingErrorCheck {
     			//System.out.println("Source Data File is : " + source_DataFileName);
     		}
     		
+    		if(args[10] !=null)
+    		{
+    			flag = args[10];
+    		}
+    		
     	}
     	
     	// Since conversion happen once, so call it once
@@ -154,10 +160,10 @@ public class DataLoadingErrorCheck {
     	
     	
         dl.checkCountDiff();
-
-    	dl.alertSNS();
-    	
-    	
+        
+        dl.alertSNS();
+        
+            	
     }
     
     
@@ -249,8 +255,8 @@ public class DataLoadingErrorCheck {
     		// since new cpx and aip are now loaded as S300 correction, so to get each individual file count
     		if(doctype.equalsIgnoreCase("cpxnew"))
     		{
-    			query = "select count(*) count from "+ masterTableMapping() + " where loadnumber='"+updateNumber+"' and database='"+database +"'"
-    					+ " and updateresource like '" + sourceFileName + "%'";
+    			query = "select count(*) count from "+ masterTableMapping() + " where updatenumber='"+updateNumber+"' and database='"+database +"'"
+    					+ " and updateresource like '%" + sourceFileName + "%'";
     		}
     		else
     		{
@@ -468,13 +474,14 @@ public class DataLoadingErrorCheck {
     		{
     			if(operation !=null && operation.equalsIgnoreCase("new"))
         		{
-        			errors.append(new Date().toString() + "::- " + operation + " " + database + " [" + doctype + "]  process on [" + dbRDS + "] for week [" + loadNumber + "] of Total SRC Count: " + srcCount + " "
+        			errors.append(new Date().toString() + "::- " + operation + " " + database + " [" + doctype + "]  process on [" + dbRDS + "] for week [" + loadNumber + "] and File: [" + sourceFileName 
+        					+ " of Total SRC Count: " + srcCount 
         					+ " and Converted Count: " + convertedCount + " converted with issues:-");
         		}
         		else if (operation !=null && (operation.equalsIgnoreCase("update")|| operation.equalsIgnoreCase("delete")))
         		{
         			errors.append(new Date().toString() + "::- " + database + " [" + doctype + "]  process on [" + dbRDS + "] for week [" + updateNumber + 
-            				"] of Total SRC Count: " + srcCount + " and Converted Count: " + convertedCount
+            				"] and File: [" + sourceFileName + " of Total SRC Count: " + srcCount + " and Converted Count: " + convertedCount
             						+ " and Temp table Count: " + tempCount + " and Master Count: " + masterCount + " processed with issues:-");
             		
         		}
@@ -487,12 +494,12 @@ public class DataLoadingErrorCheck {
     			if(operation !=null && operation.equalsIgnoreCase("new"))
         		{
         			errors.append(new Date().toString() + "::- " + operation + " " + database + " [" + doctype + "]  process on [" + dbRDS + "] for week [" + loadNumber + 
-        					"] of Total SRC Count: " + srcCount + " converted with issues:-");
+        					"] and File: [" + sourceFileName + " of Total SRC Count: " + srcCount + " converted with issues:-");
         		}
         		else if (operation !=null && (operation.equalsIgnoreCase("update")|| operation.equalsIgnoreCase("delete")))
         		{
         			errors.append(new Date().toString() + "::- " + database + " [" + doctype + "]  process on [" + dbRDS + "] for week [" + updateNumber + 
-            				"] of Total SRC Count: " + srcCount + " and Temp table Count: " + tempCount + 
+            				"] and File: [" + sourceFileName + " of Total SRC Count: " + srcCount + " and Temp table Count: " + tempCount + 
             				" and Master Count: " + masterCount + " processed with issues:-");
             		
         		}
@@ -520,14 +527,14 @@ public class DataLoadingErrorCheck {
     		if(dbRDS !=null && dbRDS.equalsIgnoreCase("eid"))
     		{
     			errors.append(new Date().toString() + "::- " + database + " [" + doctype + "]  process on [" + dbRDS + "] for week [" + updateNumber + 
-        				"] of Total SRC Count: " + srcCount + " and Converted Count: " + convertedCount +
+        				"] and File: [" + sourceFileName + " of Total SRC Count: " + srcCount + " and Converted Count: " + convertedCount +
         				" and Temp table Count: " + tempCount + " and Master Count: " + masterCount + " is complete with no issues");
         		
     		}
     		else
     		{
     			errors.append(new Date().toString() + "::- " + database + " [" + doctype + "]  process on [" + dbRDS + "] for week [" + updateNumber + 
-        				"] of Total SRC Count: " + srcCount + " and Temp table Count: " + tempCount + 
+        				"] and File: [" + sourceFileName + " of Total SRC Count: " + srcCount + " and Temp table Count: " + tempCount + 
         				" and Master Count: " + masterCount + " is complete with no issues");
     		}
     		
@@ -538,13 +545,13 @@ public class DataLoadingErrorCheck {
     		if(dbRDS !=null && dbRDS.equalsIgnoreCase("eid"))
     		{
     			errors.append(new Date().toString() + "::- " + operation + " " + database + " [" + doctype + "]  process on [" + dbRDS + "] "
-    					+ "for week [" + loadNumber + "] of Total SRC Count: " + srcCount + 
+    					+ "for week [" + loadNumber + "] and File: [" + sourceFileName + " of Total SRC Count: " + srcCount + 
         				" and Converted Count: " + convertedCount +  " converted with no issues");
     		}
     		else
     		{
     			errors.append(new Date().toString() + "::- " + operation + " " + database + " [" + doctype + "]  process on [" + dbRDS + "] "
-    					+ "for week [" + loadNumber + "] of Total SRC Count: " + srcCount + 
+    					+ "for week [" + loadNumber + "] and File: [" + sourceFileName + " of Total SRC Count: " + srcCount + 
         				" converted with no issues");
     		}
     		
@@ -553,7 +560,10 @@ public class DataLoadingErrorCheck {
     	
     	CheckReturnValueForShell();
     	
-    	sendAwsSNS(errors.toString());
+    	if(flag !=null && flag.equalsIgnoreCase("1"))
+        {
+    		sendAwsSNS(errors.toString());
+        }
     }
     
     
@@ -573,7 +583,6 @@ public class DataLoadingErrorCheck {
     	PublishResult publishResult = snsClient.publish(publishRequest);
     	
     	// print MessageId of message published to SNS topic
-    	
     	//System.out.println("MessageId - " + publishResult.getMessageId());
     	
     }
@@ -641,7 +650,7 @@ public class DataLoadingErrorCheck {
     	
     	if(operation !=null && database !=null && (operation.equalsIgnoreCase("update") || operation.equalsIgnoreCase("delete")))
     	{
-    		if(database.equalsIgnoreCase("cpx") && doctype!=null && doctype.equalsIgnoreCase("s300"))
+    		if(database.equalsIgnoreCase("cpx") && doctype!=null && (doctype.equalsIgnoreCase("s300") || doctype.equalsIgnoreCase("cpxnew")))
     		{
     			tableName = "BD_AIP_TEMP";
     		}
