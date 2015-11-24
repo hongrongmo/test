@@ -63,6 +63,10 @@ public class DataloadCheck {
 	static String errorMessage = null;
 	
 	
+	
+	static String srcFileName = "";
+	
+	
 	//List of other errors & their count that in log file (i.e. records not converted due to having "null" accessnumber,... (for S300)
 	static Map<String,Integer> otherErrors = new HashMap<String, Integer>();
 	static String recordsIdentifier = null;
@@ -171,7 +175,8 @@ public class DataloadCheck {
 				operation = args[9];
 				
 				//look for slqldr file only when operation is update/delete
-				if (operation !=null && ((!(operation.equalsIgnoreCase("new"))) || (database !=null && database.equalsIgnoreCase("cpx"))) 
+				if (operation !=null && ((!(operation.equalsIgnoreCase("new"))) || (database !=null && (database.equalsIgnoreCase("cpx") ||
+						database.equalsIgnoreCase("aip")))) 
 						&& !(operation.equalsIgnoreCase("ip")))
 				{
 					if(args[10]!=null)
@@ -207,7 +212,7 @@ public class DataloadCheck {
 				// new dataloading converting log file for bd
 				if(args[11] !=null)
 				{
-					if(database !=null && (database.equalsIgnoreCase("aip") || database.equalsIgnoreCase("pch")
+					if(database !=null && (database.equalsIgnoreCase("pch")
 							|| database.equalsIgnoreCase("chm") || database.equalsIgnoreCase("elt") || database.equalsIgnoreCase("geo")))
 					{
 						bdConvertLogFile = args[11];
@@ -716,7 +721,7 @@ public class DataloadCheck {
 			}
 			
 			
-			else if (database!=null && database.equalsIgnoreCase("cpx") && (operation !=null && operation.equalsIgnoreCase("new")))
+			else if (database!=null && (database.equalsIgnoreCase("cpx") || database.equalsIgnoreCase("aip")) && (operation !=null && operation.equalsIgnoreCase("new")))
 			{
 				
 				tableName = "";
@@ -735,7 +740,7 @@ public class DataloadCheck {
 					//Source FileName
 					if(line.contains("DataFile: "))
 					{
-						String srcFileName = line.substring(line.indexOf(":")+1, line.length()).trim();
+						srcFileName = line.substring(line.indexOf(":")+1, line.length()).trim();
 						if(!(sourceFilenameList.contains(srcFileName)))
 						{
 							sourceFilenameList.add(srcFileName);
@@ -1362,7 +1367,8 @@ public class DataloadCheck {
 			else if (operation != null && operation.equalsIgnoreCase("new") && (database.equalsIgnoreCase("cpx") || database.equalsIgnoreCase("aip")))
 			{
 				query = "select count(*) from "+ tableName + " where loadnumber=" + loadNumber + " and updatecodestamp like 'AIPNEW%' "+
-						"and updateresource like '" + fileName + "%'";
+						"and updateresource like '/data/loading/bd/" + database +"/" + loadNumber + "/" + srcFileName + "%'";
+				
 			}
 				
 				con = getConnection(connectionURL,driver,username,password);
@@ -1956,7 +1962,6 @@ private static void getRecords()
 			//Converted File Count
 			if(convertedfileCountList.size() >0)
 			{
-				String srcFileName="";
 				int convertedFileCount = 0;
 				if(convertedfileCountList.size() ==1)
 				{
