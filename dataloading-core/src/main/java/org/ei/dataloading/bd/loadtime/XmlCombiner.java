@@ -1091,7 +1091,7 @@ throws Exception
 			    	          		rec.put(niKey,maximum);
 			    	          }
 			    	          niBuffer.append(maximum+Constants.AUDELIMITER);			    	          		    	         			    	        
-			    	     }	    	          
+		    	          }	    	          
 	    	          }
 	    	          
 	    	          if(rs.getString("MINIMUM") != null)
@@ -1134,7 +1134,8 @@ throws Exception
 	    	          	}
 	    	          }
 	    	          
-	    	    }	 
+	    	       }	
+	    	  }
 	    		//System.out.println("Wrote records.");
     		}
     

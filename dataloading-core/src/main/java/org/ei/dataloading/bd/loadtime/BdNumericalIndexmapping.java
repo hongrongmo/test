@@ -1,10 +1,11 @@
 package org.ei.dataloading.bd.loadtime;
 
-import java.util.Properties;
+import java.util.*;
 
-public class BdNumericalIndexMapping
+public class BdNumericalIndexmapping
 {
-	private static Map nimapping = new Map();
+	public static Map nimapping = new HashMap();
+	/*
 	nimapping.put("amount_of_substance_minimum","AMOUNT_OF_SUBSTANCE_MINIMUM");
 	nimapping.put("amount_of_substance_maximum","AMOUNT_OF_SUBSTANCE_MAXIMUM");
 	nimapping.put("amount_of_substance_text","AMOUNT_OF_SUBSTANCE_TEXT");
@@ -24,7 +25,7 @@ public class BdNumericalIndexMapping
 	nimapping.put("voltage_minimum","VOLTAGE_MINIMUM");
 	nimapping.put("voltage_maximum","VOLTAGE_MAXIMUM");
 	nimapping.put("voltage_text","VOLTAGE_TEXT");
-	
+	*/
 	public static String get(String input)
 	{
 		return nimapping.get(input);
