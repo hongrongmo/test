@@ -859,11 +859,13 @@ throws Exception
                         rec.put(EVCombinedRec.MAIN_TERM, prepareMulti(rs.getString("apiams")));
                     }
                     
-                   
+                   //*
+                   // * use for numerical index
                     if(pui!=null && pui.length()>0)
                     {
                     	populateNumericalIndex(pui,rec,con);
                     }
+                   // */
                     
                     try
                     {
@@ -928,6 +930,7 @@ throws Exception
         }
     }
 
+    /*
     private void populateNumericalIndex(String pui,EVCombinedRec rec,Connection con) throws Exception
     {
     	Statement stmt = null;
@@ -952,12 +955,12 @@ throws Exception
 		    	          {
 		    	        	  niBuffer.append(rs.getString("UNIT"));
 		    	          }
-		    	          /*
-		    	           * temperary change it to String from double for text search
-		    	          double maximum = 	rs.getDouble("MAXIMUM");
-		    	          formatter = new DecimalFormat("0.#####E0");
-		    	          niBuffer.append(" "+formatter.format(maximum).toString());
-		    	          */
+		    	          //
+		    	          // temperary change it to String from double for text search
+		    	          // double maximum = 	rs.getDouble("MAXIMUM");
+		    	          // formatter = new DecimalFormat("0.#####E0");
+		    	          // niBuffer.append(" "+formatter.format(maximum).toString());
+		    	          //
 		    	          String maximum = 	rs.getString("MAXIMUM");		    	       
 		    	          niBuffer.append(" "+maximum);
 		    	          if(rs.getString("SYMBOL") != null)
@@ -975,12 +978,12 @@ throws Exception
 		    	        	  niBuffer.append(rs.getString("UNIT"));
 		    	          }
 	    	        	
-	    	        	  /*
-	    	        	   * temperary change it to String from double for text search
-	    	        	  double minimum = 	rs.getDouble("MINIMUM");
-		    	          formatter = new DecimalFormat("0.#####E0");
-		    	          niBuffer.append(" "+formatter.format(minimum).toString());
-		    	          */
+	    	        	  //
+	    	        	  // temperary change it to String from double for text search
+	    	        	  // double minimum = 	rs.getDouble("MINIMUM");
+		    	          // formatter = new DecimalFormat("0.#####E0");
+		    	          // niBuffer.append(" "+formatter.format(minimum).toString());
+		    	          //
 	    	        	  
 	    	        	  String minimum = 	rs.getString("MINIMUM");
 		    	          niBuffer.append(" "+minimum);
@@ -1028,7 +1031,144 @@ throws Exception
     		}
     	}
     }
-
+*/
+    
+    //*
+    // ********  use this method for full numericalIndex	***********
+    // *  
+    private void populateNumericalIndex(String pui,EVCombinedRec rec,Connection con) throws Exception
+    {
+    	Statement stmt = null;
+    	ResultSet rs = null;
+    	
+    	NumberFormat formatter = new DecimalFormat();
+    	
+    	try
+    	{
+    		if(pui!=null && pui.length()>0)
+    		{
+	    		stmt = con.createStatement();
+	    		//System.out.println("Running the Numerical query...");
+	    		String sqlQuery = "select * from BD_MASTER_NUMERICAL where PUI='"+pui+"' order by unit";
+	    		//System.out.println(sqlQuery);
+	    		rs = stmt.executeQuery(sqlQuery);
+	    		//System.out.println("Got records ...from table BD_MASTER_NUMERICAL");
+	    		while (rs.next())
+	    	    {	
+	    	        String unit = null;
+    				String maximum = null;
+    				String minimum = null;
+    				StringBuffer niBuffer = new StringBuffer();
+    				if(rs.getString("UNIT") != null)
+					{
+						unit = rs.getString("UNIT").toLowerCase();
+					}
+					else
+					{
+						System.out.println("no unit found for pui "+pui);
+						return;
+					}
+					
+	    	        if(rs.getString("MAXIMUM") != null)
+	    	        {
+		    	          maximum = rs.getString("MAXIMUM");	
+		    	          if(BdNumericalIndexMapping.get(unit+"_maximum")!=null)
+		    	          {
+		    	          	  String niKey = BdNumericalIndexMapping.get(unit+"_maximum");
+		    	          	  String oldMaximum = rec.get(niKey);
+		    	          	  if(oldMaximum!=null)
+		    	          	  {
+			    	          	  if(maximum != null && oldMaximum != null)
+			    	          	  {
+			    	          	  	if(Double.parseDouble(maximum)>Double.parseDouble(oldMaximum))
+			    	          	  	{
+			    	          	  		rec.put(niKey,maximum);
+			    	          	  	}
+			    	          	  }
+			    	          }
+			    	          else
+			    	          {
+			    	          		rec.put(niKey,maximum);
+			    	          }
+			    	          niBuffer.append(maximum+Constants.AUDELIMITER);			    	          		    	         			    	        
+			    	     }	    	          
+	    	          }
+	    	          
+	    	          if(rs.getString("MINIMUM") != null)
+	    	          {
+	    	        	  minimum = rs.getString("MINIMUM");	
+		    	          if(BdNumericalIndexMapping.get(unit+"_minimum")!=null)
+		    	          {
+		    	          	  String niKey = BdNumericalIndexMapping.get(unit+"_minimum");
+		    	          	  String oldMinimum = rec.get(niKey);
+		    	          	  if(oldMinimum!=null)
+		    	          	  {
+			    	          	  if(minimum != null && oldMinimum != null)
+			    	          	  {
+			    	          	  	if(Double.parseDouble(minimum)<Double.parseDouble(oldMinimum))
+			    	          	  	{
+			    	          	  		rec.put(niKey,minimum);
+			    	          	  	}
+			    	          	  }
+			    	          }
+			    	          else
+			    	          {
+			    	          	rec.put(niKey,minimum);
+			    	          }
+		    	          	  if(!minimum.equals(maximum))
+		    	          	  {
+		    	          		  niBuffer.append(minimum+Constants.AUDELIMITER);
+		    	          	  }
+	    	          }
+	    	          if(BdNumericalIndexMapping.get(unit+"_text")!=null)
+	    	          {
+	    	          	String niKey = BdNumericalIndexMapping.get(unit+"_text");
+	    	          	String oldText = rec.get(niKey);
+	    	          	if(oldText!=null)
+	    	          	{
+	    	          		rec.put(niKey,oldText+niBuffer.toString());
+	    	          	}
+	    	          	else
+	    	          	{
+	    	          		rec.put(niKey,niBuffer.toString());
+	    	          	}
+	    	          }
+	    	          
+	    	    }	 
+	    		//System.out.println("Wrote records.");
+    		}
+    
+    	}
+    	finally
+    	{
+    	
+    		if (rs != null)
+    		{
+    			try
+    			{
+    				rs.close();
+    			}
+    			catch (Exception e)
+    			{
+    				e.printStackTrace();
+    			}
+    		}
+    		
+    		if (stmt != null)
+    		{
+    			try
+    			{
+    				stmt.close();
+    			}
+    			catch (Exception e)
+    			{
+    				e.printStackTrace();
+    			}
+    		}
+    	}
+    }
+    // */
+    
     private String formatClassCodes(String c)
     {
         if (c == null)

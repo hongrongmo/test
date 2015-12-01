@@ -620,7 +620,7 @@ public class BdCorrection
                 
             }
 
-            if(action != null && action.equalsIgnoreCase("aip"))
+            if(action != null && action.equalsIgnoreCase("aip") && database.equalsIgnoreCase("cpx"))
             {
                 pstmt = con.prepareCall("{ call update_aip_backup_table(?,?)}");
                 pstmt.setInt(1,updateNumber);
@@ -777,22 +777,25 @@ public class BdCorrection
                 System.out.println("time for delete_bd_master_table "+(endTime-midTime)/1000.0+" seconds");
                 System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
 
-				if(test)
-				{
-					System.out.println("begin to execute stored procedure delete_bd_reference_table");
-					System.out.println("press enter to continue");
-					System.in.read();
-					Thread.currentThread().sleep(1000);
-				}
-				pstmt = con.prepareCall("{ call delete_bd_reference_table(?,?)}");
-				pstmt.setInt(1,updateNumber);
-				pstmt.setString(2,database);
-                pstmt.executeUpdate();
-                
-                midTime = endTime;
-                endTime = System.currentTimeMillis();
-                System.out.println("time for delete_bd_reference_table "+(endTime-midTime)/1000.0+" seconds");
-                System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+                if(database.equalsIgnoreCase("cpx"))
+                {
+					if(test)
+					{
+						System.out.println("begin to execute stored procedure delete_bd_reference_table");
+						System.out.println("press enter to continue");
+						System.in.read();
+						Thread.currentThread().sleep(1000);
+					}
+					pstmt = con.prepareCall("{ call delete_bd_reference_table(?,?)}");
+					pstmt.setInt(1,updateNumber);
+					pstmt.setString(2,database);
+	                pstmt.executeUpdate();
+	                
+	                midTime = endTime;
+	                endTime = System.currentTimeMillis();
+	                System.out.println("time for delete_bd_reference_table "+(endTime-midTime)/1000.0+" seconds");
+	                System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+                }
             }
             else
             {
@@ -949,27 +952,32 @@ public class BdCorrection
                 if(i==0)
                 {
                     this.tempTable=tableName[i];
+                    stmt.executeUpdate("truncate table "+tableName[i]);
                     System.out.println("truncate temp table "+this.tempTable);
                 }
 
                 if(i==1)
                 {
                     this.lookupTable=tableName[i];
+                    stmt.executeUpdate("truncate table "+tableName[i]);
                     System.out.println("truncate lookup table "+this.lookupTable);
                 }
 
                 if(i==2)
                 {
                     this.backupTable=tableName[i];
+                    stmt.executeUpdate("truncate table "+tableName[i]);
                     System.out.println("truncate backup table "+this.backupTable);
                 }
 
 				if(i==3 && database.equals("cpx"))
 				{
 					this.referenceTable=tableName[i];
+					stmt.executeUpdate("truncate table "+tableName[i]);
 					System.out.println("truncate reference table "+this.referenceTable);
                 }
 				
+				/*
 				if(database.equals("cpx"))
 				{
 					stmt.executeUpdate("truncate table "+tableName[i]);
@@ -978,6 +986,7 @@ public class BdCorrection
 				{
 					System.out.println("no reference except cpx");
 				}
+				*/
             }
 
         }
@@ -1874,7 +1883,16 @@ public class BdCorrection
             throws Exception
     {
         int i = 0;
-        CombinedWriter writer = new CombinedXMLWriter(10000,10000,"cpx","dev");
+        CombinedWriter writer = null;
+        if(this.database!=null)
+        {
+        	writer = new CombinedXMLWriter(10000,10000,this.database,"dev");
+        }
+        else
+        {
+        	System.out.println("missing database");
+        	return null;
+        }
         XmlCombiner xml = new XmlCombiner(writer);
         HashMap recs = new HashMap();
         List authorList = new ArrayList();

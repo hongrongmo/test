@@ -13,9 +13,11 @@ import org.apache.oro.text.perl.Perl5Util;
 import org.ei.query.base.PorterStemmer;
 import org.ei.xml.Entity;
 import org.ei.common.DataCleaner;
+
 import java.util.Date;
 import java.util.zip.*;
 import java.text.*;
+
 import org.ei.common.*;
 
 
@@ -480,9 +482,13 @@ public class CombinedXMLWriter
         out.println("       <CPCCLASS><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CPCCLASS)))) + "]]></CPCCLASS>");
         out.println("       <TABLEOFCONTENT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.TABLE_OF_CONTENT)))) + "]]></TABLEOFCONTENT>");
         
+        
+        
         out.println("       <NUMERICALINDEXUNIT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.NUMERICALINDEXUNIT)))) + "]]></NUMERICALINDEXUNIT>");
         out.println("       <NUMERICALINDEXHIGH><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.NUMERICALINDEXHIGH)))) + "]]></NUMERICALINDEXHIGH>");
         out.println("       <NUMERICALINDEXLOW><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.NUMERICALINDEXLOW)))) + "]]></NUMERICALINDEXLOW>");
+        
+        //added for numericalIndex
         /*
         out.println("       <AMOUNTOFSUBSTANCE_MINIMUM>" + rec.getString(EVCombinedRec.AMOUNT_OF_SUBSTANCE_MINIMUM) + "</AMOUNTOFSUBSTANCE_MINIMUM>");
         out.println("       <AMOUNTOFSUBSTANCE_MAXIMUM>" + rec.getString(EVCombinedRec.AMOUNT_OF_SUBSTANCE_MAXIMUM) + "</AMOUNTOFSUBSTANCE_MAXIMUM>");
@@ -999,7 +1005,8 @@ public class CombinedXMLWriter
 
         if (s!=null && s.length()>0)
         {
-            s = perl.substitute("s/\"|\\[|\\]|\\(|\\)|\\{|\\}|\\?/ /g"  ,s);
+        	//replace comma with space pre Frank request 11/25/2015
+            s = perl.substitute("s/\"|\\[|\\]|\\(|\\)|\\{|\\}|\\?|\\,/ /g"  ,s);
         }
 
         return s;
@@ -1381,4 +1388,16 @@ public class CombinedXMLWriter
         SimpleDateFormat sdtf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS");
         return "[" + sdtf.format(new Date(timeStamp)) + " - LOAD :" + this.numberID  + " - BATCH:"  + batchidFormat  + " ]";
     }
+    
+    public static void main(String args[]) throws Exception
+    {
+    	CombinedXMLWriter c = new CombinedXMLWriter(1,1,"cpx");
+    	String testString = "check[comma";
+    	System.out.println("before= "+testString+" after="+c.cleanup(testString));
+    	System.out.println("before= check,comma after="+c.cleanup("check,comma"));
+    	System.out.println("before= check}comma after="+c.cleanup("check}comma"));
+    	
+    }
+    
+            
 }
