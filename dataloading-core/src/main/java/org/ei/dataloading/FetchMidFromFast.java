@@ -1,5 +1,10 @@
 package org.ei.dataloading;
 
+/**
+ * Sample of Query to pass
+ * Query: "(st:""Proquest Dissertation And Theses Database"" AND db:""cpx"")"
+ * NumOfCount: 3000
+ */
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileWriter;
@@ -63,7 +68,6 @@ public class FetchMidFromFast {
         		fastUrl = args[5];
         	}
 
-        	
         }
 
         System.out.println("Fetch accessnumber of query " + fastQuery + " for Rec Count " +  pageRecCount);
