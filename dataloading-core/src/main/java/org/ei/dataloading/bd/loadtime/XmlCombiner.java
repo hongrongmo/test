@@ -5,19 +5,21 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Vector;
 
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
-//import org.ei.dataloading.QualifierFacet;
+import org.ei.dataloading.bd.loadtime.BdNumericalIndexMapping;
 //import org.ei.dataloading.CombinerTimestamp;
 //import org.ei.dataloading.CombinedWriter;
 //import org.ei.dataloading.EVCombinedRec;
 //import org.ei.dataloading.Combiner;
 //import org.ei.dataloading.CombinedXMLWriter;
 import org.ei.dataloading.*;
+//import org.ei.dataloading.bd.loadtime.*;
 import org.ei.dataloading.georef.*;
 import org.ei.dataloading.georef.loadtime.*;
 import org.ei.common.bd.*;
@@ -864,6 +866,10 @@ throws Exception
                     if(pui!=null && pui.length()>0)
                     {
                     	populateNumericalIndex(pui,rec,con);
+                    	System.out.println("ELECTRIC="+rec.get("ELECTRIC_CURRENT_MAXIMUM"));
+                    	System.out.println("CAPACITANCE="+rec.get("CAPACITANCE_MAXIMUM"));
+                    	System.out.println("FREQUENCY="+rec.get("FREQUENCY_MAXIMUM"));
+                    	System.out.println("VOLTAGE="+rec.get("VOLTAGE_MAXIMUM"));
                     }
                    // */
                     
@@ -912,7 +918,6 @@ throws Exception
                     }
                     catch(Exception e)
                     {
-
                       e.printStackTrace();
                     }
                 }
@@ -1040,7 +1045,7 @@ throws Exception
     {
     	Statement stmt = null;
     	ResultSet rs = null;
-    	
+    	BdNumericalIndexMapping bdni = new BdNumericalIndexMapping();
     	NumberFormat formatter = new DecimalFormat();
     	
     	try
@@ -1068,13 +1073,15 @@ throws Exception
 						System.out.println("no unit found for pui "+pui);
 						return;
 					}
-					
+					System.out.println("PUI="+pui+" UNIT="+unit);
 	    	        if(rs.getString("MAXIMUM") != null)
 	    	        {
 		    	          maximum = rs.getString("MAXIMUM");	
-		    	          if(BdNumericalIndexMapping.get(unit+"_maximum")!=null)
+		    	          System.out.println("PUI="+pui+" MAXIMUM="+maximum);
+		    	          if(bdni.get(unit+"_maximum")!=null)
 		    	          {
-		    	          	  String niKey = BdNumericalIndexMapping.get(unit+"_maximum");
+		    	          	  String niKey = bdni.get(unit+"_maximum");
+		    	          	  //System.out.println(niKey+" MAXIMUM KEY");
 		    	          	  String oldMaximum = rec.get(niKey);
 		    	          	  if(oldMaximum!=null)
 		    	          	  {
@@ -1083,23 +1090,27 @@ throws Exception
 			    	          	  	if(Double.parseDouble(maximum)>Double.parseDouble(oldMaximum))
 			    	          	  	{
 			    	          	  		rec.put(niKey,maximum);
+			    	          	  		//System.out.println("Keymaximum1="+niKey+" MAXIMUM="+maximum);
 			    	          	  	}
 			    	          	  }
 			    	          }
 			    	          else
 			    	          {
 			    	          		rec.put(niKey,maximum);
+			    	          		//System.out.println("Keymaximum2="+niKey+" MAXIMUM="+maximum);
 			    	          }
-			    	          niBuffer.append(maximum+Constants.AUDELIMITER);			    	          		    	         			    	        
+			    	          niBuffer.append(maximum+Constants.AUDELIMITER);	
+		    	          	//niBuffer.append(maximum+"|");	
 		    	          }	    	          
 	    	          }
 	    	          
 	    	          if(rs.getString("MINIMUM") != null)
 	    	          {
 	    	        	  minimum = rs.getString("MINIMUM");	
-		    	          if(BdNumericalIndexMapping.get(unit+"_minimum")!=null)
+		    	          if(bdni.get(unit+"_minimum")!=null)
 		    	          {
-		    	          	  String niKey = BdNumericalIndexMapping.get(unit+"_minimum");
+		    	          	  String niKey = bdni.get(unit+"_minimum");
+		    	          	  //System.out.println(niKey+" MINIMUM KEY");
 		    	          	  String oldMinimum = rec.get(niKey);
 		    	          	  if(oldMinimum!=null)
 		    	          	  {
@@ -1108,30 +1119,38 @@ throws Exception
 			    	          	  	if(Double.parseDouble(minimum)<Double.parseDouble(oldMinimum))
 			    	          	  	{
 			    	          	  		rec.put(niKey,minimum);
+			    	          	  		//System.out.println("Keyminimum1="+niKey+" MUNIMUM="+minimum);
 			    	          	  	}
 			    	          	  }
 			    	          }
 			    	          else
 			    	          {
 			    	          	rec.put(niKey,minimum);
+			    	          	//System.out.println("Keyminimum2="+niKey+" MUNIMUM="+minimum);
 			    	          }
 		    	          	  if(!minimum.equals(maximum))
 		    	          	  {
 		    	          		  niBuffer.append(minimum+Constants.AUDELIMITER);
+		    	          		  //niBuffer.append(minimum+"|");	
+		    	          		  //System.out.println("Keyminimum3="+niKey+" MUNIMUM="+minimum);
 		    	          	  }
 	    	          }
-	    	          if(BdNumericalIndexMapping.get(unit+"_text")!=null)
+	    	          if(bdni.get(unit+"_text")!=null)
 	    	          {
-	    	          	String niKey = BdNumericalIndexMapping.get(unit+"_text");
-	    	          	String oldText = rec.get(niKey);
-	    	          	if(oldText!=null)
+	    	          	String niKey = bdni.get(unit+"_text");
+	    	          	String[] oldText = rec.getStrings(niKey);
+	    	          	if(oldText!=null && oldText.length>0)
 	    	          	{
-	    	          		rec.put(niKey,oldText+niBuffer.toString());
+	    	          		String[] temp = prepareMulti(niBuffer.toString());
+	    	          		rec.put(niKey,concat(oldText,temp));
+	    	          		System.out.println("KeyText1="+niKey+" TEXT="+Arrays.toString(concat(oldText,temp)));
 	    	          	}
 	    	          	else
 	    	          	{
-	    	          		rec.put(niKey,niBuffer.toString());
+	    	          		rec.put(niKey,prepareMulti(niBuffer.toString()));
+	    	          		System.out.println("KeyText2="+niKey+" TEXT="+niBuffer.toString().replace(Constants.AUDELIMITER, " | "));
 	    	          	}
+	    	          	
 	    	          }
 	    	          
 	    	       }	
@@ -1169,6 +1188,15 @@ throws Exception
     	}
     }
     // */
+    public String[] concat(String[] a, String[] b) 
+    {
+    	   int aLen = a.length;
+    	   int bLen = b.length;
+    	   String[] c= new String[aLen+bLen];
+    	   System.arraycopy(a, 0, c, 0, aLen);
+    	   System.arraycopy(b, 0, c, aLen, bLen);
+    	   return c;
+    }
     
     private String formatClassCodes(String c)
     {
@@ -1295,6 +1323,7 @@ throws Exception
             throws Exception
     {
         String[] multiStringArray = multiString.split(Constants.AUDELIMITER,-1);
+        System.out.println("SIZE= "+multiStringArray.length+"  "+multiString);
         return multiStringArray;
 
     }
