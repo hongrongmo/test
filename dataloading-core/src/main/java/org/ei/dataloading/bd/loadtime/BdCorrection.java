@@ -484,9 +484,26 @@ public class BdCorrection
             {
                 writer.setOperation("delete");
                 //System.out.println("select m_id from bd_master_orig where database='"+dbname+"' and updateNumber='"+updateNumber+"' and accessnumber in (select 'D'||accessnumber from "+tempTable+")");
-                rs = stmt.executeQuery("select m_id from bd_master_orig where database='"+dbname+"' and updateNumber='"+updateNumber+"' and accessnumber in (select 'D'||accessnumber from "+tempTable+")");
-                creatDeleteFile(rs,dbname,updateNumber);
-                writer.zipBatch();
+                String countString = "select count(*) count from bd_master_orig where database='"+dbname+"' and updateNumber='"+updateNumber+"' and accessnumber in (select 'D'||accessnumber from "+tempTable+")";
+                rs = stmt.executeQuery(countString);
+                int deleteSize=0;
+                while (rs.next())
+                {
+                    if(rs.getInt("count") >0)
+                    {
+                        deleteSize = rs.getInt("count");
+                    }
+                }
+                if(deleteSize>0)
+                {
+	                rs = stmt.executeQuery("select m_id from bd_master_orig where database='"+dbname+"' and updateNumber='"+updateNumber+"' and accessnumber in (select 'D'||accessnumber from "+tempTable+")");
+	                creatDeleteFile(rs,dbname,updateNumber);
+	                writer.zipBatch();
+                }
+                else
+                {
+                	System.out.println("the records needed to delete is not in the database");
+                }
             }
             writer.end();
             writer.flush();
