@@ -149,7 +149,7 @@ public class EVCombinedRec {
 	public static final String NUMERICALINDEXHIGH = "146";
 	public static final String NUMERICALINDEXLOW = "147";
 	public static final String NUMERICALINDEXUNIT = "148";
-	/*  
+	//*  
 	public static final String AMOUNT_OF_SUBSTANCE_MINIMUM = "146"; 
 	public static final String AMOUNT_OF_SUBSTANCE_MAXIMUM = "147";
 	public static final String AMOUNT_OF_SUBSTANCE_TEXT = "148";
@@ -222,7 +222,7 @@ public class EVCombinedRec {
 	public static final String CAPACITANCE_MAXIMUM = "198";
 	public static final String CAPACITANCE_TEXT = "199"; 
 	//capacitance
-	public static final String PERMITTIVITY_MINIMUM = 200"; 
+	public static final String PERMITTIVITY_MINIMUM = "200"; 
 	public static final String PERMITTIVITY_MAXIMUM = "201";
 	public static final String PERMITTIVITY_TEXT = "202"; 
 	//permittivity
@@ -342,72 +342,72 @@ public class EVCombinedRec {
 	public static final String TORQUE_MAXIMUM = "288";
 	public static final String TORQUE_TEXT = "289";
 	//torque
-	public static final String PRESSURE_MINIMUM = "290"; 
-	public static final String PRESSURE_MAXIMUM = "291";
-	public static final String PRESSURE_TEXT = "292";
+	//public static final String PRESSURE_MINIMUM = "290"; 
+	//public static final String PRESSURE_MAXIMUM = "291";
+	//public static final String PRESSURE_TEXT = "292";
 	//pressure
-	public static final String AREA_MINIMUM = "293"; 
-	public static final String AREA_MAXIMUM = "294";
-	public static final String AREA_TEXT = "295";
+	public static final String AREA_MINIMUM = "290"; 
+	public static final String AREA_MAXIMUM = "291";
+	public static final String AREA_TEXT = "292";
 	//area
-	public static final String VOLUME_MINIMUM = "296"; 
-	public static final String VOLUME_MAXIMUM = "297";
-	public static final String VOLUME_TEXT = "298";
+	public static final String VOLUME_MINIMUM = "293"; 
+	public static final String VOLUME_MAXIMUM = "294";
+	public static final String VOLUME_TEXT = "295";
 	//volume 
-	public static final String VELOCITY_MINIMUM = "299"; 
-	public static final String VELOCITY_MAXIMUM = "300";
-	public static final String VELOCITY_TEXT = "301";       
+	public static final String VELOCITY_MINIMUM = "296"; 
+	public static final String VELOCITY_MAXIMUM = "297";
+	public static final String VELOCITY_TEXT = "298";       
 	//velocity
-	public static final String ACCELERATION_MINIMUM = "302"; 
-	public static final String ACCELERATION_MAXIMUM = "303";
-	public static final String ACCELERATION_TEXT = "304";   
+	public static final String ACCELERATION_MINIMUM = "299"; 
+	public static final String ACCELERATION_MAXIMUM = "300";
+	public static final String ACCELERATION_TEXT = "301";   
 	//acceleration
-	public static final String ANGULAR_VELOCITY_MINIMUM = "305"; 
-	public static final String ANGULAR_VELOCITY_MAXIMUM = "306";
-	public static final String ANGULAR_VELOCITY_TEXT = "307";    
+	public static final String ANGULAR_VELOCITY_MINIMUM = "302"; 
+	public static final String ANGULAR_VELOCITY_MAXIMUM = "303";
+	public static final String ANGULAR_VELOCITY_TEXT = "304";    
 	//angular velocity
-	public static final String ROTATIONAL_SPEED_MINIMUM = "308"; 
-	public static final String ROTATIONAL_SPEED_MAXIMUM = "309";
-	public static final String ROTATIONAL_SPEED_TEXT = "310";   
+	public static final String ROTATIONAL_SPEED_MINIMUM = "305"; 
+	public static final String ROTATIONAL_SPEED_MAXIMUM = "306";
+	public static final String ROTATIONAL_SPEED_TEXT = "307";   
 	//rotational speed 
-	public static final String AGE_MINIMUM = "311"; 
-	public static final String AGE_MAXIMUM = "312";
-	public static final String AGE_TEXT = "313"; 
+	public static final String AGE_MINIMUM = "308"; 
+	public static final String AGE_MAXIMUM = "309";
+	public static final String AGE_TEXT = "310"; 
 	//age
-	public static final String MOLAR_MASS_MINIMUM = "314"; 
-	public static final String MOLAR_MASS_MAXIMUM = "315";
-	public static final String MOLAR_MASS_TEXT = "316"; 
+	public static final String MOLAR_MASS_MINIMUM = "311"; 
+	public static final String MOLAR_MASS_MAXIMUM = "312";
+	public static final String MOLAR_MASS_TEXT = "313"; 
 	//molar mass
-	public static final String MOLALITY_OF_SUBSTANCE_MINIMUM = "317"; 
-	public static final String MOLALITY_OF_SUBSTANCE_MAXIMUM = "318";
-	public static final String MOLALITY_OF_SUBSTANCE_TEXT = "319"; 
+	public static final String MOLALITY_OF_SUBSTANCE_MINIMUM = "314"; 
+	public static final String MOLALITY_OF_SUBSTANCE_MAXIMUM = "315";
+	public static final String MOLALITY_OF_SUBSTANCE_TEXT = "316"; 
 	//molality of substance
-	public static final String PH_VALUE_MINIMUM = "320"; 
-	public static final String PH_VALUE_MAXIMUM = "321";
-	public static final String PH_VALUE_TEXT = "322"; 
+	public static final String PH_VALUE_MINIMUM = "317"; 
+	public static final String PH_VALUE_MAXIMUM = "318";
+	public static final String PH_VALUE_TEXT = "319"; 
 	//pH value
-	public static final String RADIOACTIVITY_MINIMUM = "323"; 
-	public static final String RADIOACTIVITY_MAXIMUM = "324";
-	public static final String RADIOACTIVITY_TEXT = "325"; 
+	public static final String RADIOACTIVITY_MINIMUM = "320"; 
+	public static final String RADIOACTIVITY_MAXIMUM = "321";
+	public static final String RADIOACTIVITY_TEXT = "322"; 
 	//radioactivity 
-	public static final String ABSORBED_DOSE_MINIMUM = "326"; 
-	public static final String ABSORBED_DOSE_MAXIMUM = "327";
-	public static final String ABSORBED_DOSE_TEXT = "328"; 
+	public static final String ABSORBED_DOSE_MINIMUM = "323"; 
+	public static final String ABSORBED_DOSE_MAXIMUM = "324";
+	public static final String ABSORBED_DOSE_TEXT = "325"; 
 	//absorbed dose 
-	public static final String DOSE_EQUIVALENT_MINIMUM = "329"; 
-	public static final String DOSE_EQUIVALENT_MAXIMUM = "330";
-	public static final String DOSE_EQUIVALENT_TEXT = "331";
+	public static final String DOSE_EQUIVALENT_MINIMUM = "326"; 
+	public static final String DOSE_EQUIVALENT_MAXIMUM = "327";
+	public static final String DOSE_EQUIVALENT_TEXT = "328";
 	//dose equivalent
-	public static final String RADIATION_EXPOSURE_MINIMUM = "332"; 
-	public static final String RADIATION_EXPOSURE_MAXIMUM = "333";
-	public static final String RADIATION_EXPOSURE_TEXT = "334";
+	public static final String RADIATION_EXPOSURE_MINIMUM = "329"; 
+	public static final String RADIATION_EXPOSURE_MAXIMUM = "330";
+	public static final String RADIATION_EXPOSURE_TEXT = "331";
 	//radiation exposure
-	public static final String CATALYTIC_ACTIVITY_MINIMUM = "335"; 
-	public static final String CATALYTIC_ACTIVITY_MAXIMUM = "336";
-	public static final String CATALYTIC_ACTIVITY_TEXT = "337";
-	catalytic activity
+	public static final String CATALYTIC_ACTIVITY_MINIMUM = "332"; 
+	public static final String CATALYTIC_ACTIVITY_MAXIMUM = "333";
+	public static final String CATALYTIC_ACTIVITY_TEXT = "334";
+	//catalytic activity
 
-	 */
+	 //*/
 
 	private Hashtable h = new Hashtable();
 
