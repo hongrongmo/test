@@ -1,7 +1,6 @@
 package org.ei.dataloading.knovel.loadtime;
 
 import java.sql.Clob;
-
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -301,18 +300,18 @@ import org.ei.util.StringUtil;
 	                    }
 	                    
 	                    //AUTHOR
-	                    if(rs.getString("AUTHOR") != null)
+	                    if(rs.getString("AUTHOR") != null && rs.getString("AUTHOR").trim().length()>0)
 	                    {
 	                        String authorString = rs.getString("AUTHOR");	             	                       
-	                        rec.put(EVCombinedRec.AUTHOR, authorString);
+	                        rec.put(EVCombinedRec.AUTHOR, prepareAuthor(authorString));
 	                    }
 	                    
 	                    //AFFILIATION
                         String affiliation = null;
-                        if (rs.getString("AFFILIATION") != null)
+                        if (rs.getString("AFFILIATION") != null && rs.getString("AFFILIATION").trim().length()>0)
                         {
                             affiliation = rs.getString("AFFILIATION");                            
-                            rec.put(EVCombinedRec.AUTHOR_AFFILIATION, affiliation);
+                            rec.put(EVCombinedRec.AUTHOR_AFFILIATION, prepareAuthor(affiliation));
                         }	                   
 	                  
 	                    //PUBLISHER
@@ -400,6 +399,16 @@ import org.ei.util.StringUtil;
 	            e.printStackTrace();
 	         }
 	        }
+	    }
+	    
+	    public String[] prepareAuthor(String bdAuthor)
+	    {
+	        if(bdAuthor != null && !bdAuthor.trim().equals(""))
+	        {	     
+	            String[] ausArray = bdAuthor.split(Constants.AUDELIMITER, -1);    
+	            return ausArray;
+	        }
+	        return null;
 	    }
 
 	    private String getStringFromClob(Clob clob) throws Exception
