@@ -22,6 +22,7 @@ import org.ei.common.upt.*;
 import java.sql.*;
 import java.util.*;
 
+import org.ei.common.Constants;
 import org.ei.common.Country;
 import org.ei.domain.ClassNodeManager;
 import org.ei.domain.Database;
@@ -767,22 +768,25 @@ public class UPTCombiner extends CombinerTimestamp {
                          }
                     }
 
-                    List arrCpcCodes = new ArrayList();
+                    //List arrCpcCodes = new ArrayList();
+                    String[] cpcValues = null;
                     if (rs.getString("CLASSIFICATION_CPC") != null) {
 
                         String sbrCPC = rs.getString("CLASSIFICATION_CPC");
-              
-                        arrCpcCodes = IPC8Classification.build(sbrCPC);
-                        arrCpcCodes = normalizeIpc8Codes(arrCpcCodes);
+                        cpcValues = sbrCPC.split(Constants.IDDELIMITER);
+                        //arrCpcCodes = IPC8Classification.build(sbrCPC);
+                        //arrCpcCodes = normalizeIpc8Codes(arrCpcCodes);
                     }
                    
                     //arrCpcCodes.addAll(arrCpcCodes);
                    
-                    String[] cpcValues = (String[]) arrCpcCodes.toArray(new String[1]);
+                    //String[] cpcValues = (String[]) arrCpcCodes.toArray(new String[1]);
                     //System.out.println("CPC1="+cpcValues[0]);
-                    cpcValues[0] = replaceNull(cpcValues[0]);
-
-                    rec.put(EVCombinedRec.CPCCLASS, removeSpaces(cpcValues));
+                    //cpcValues[0] = replaceNull(cpcValues[0]);
+                    if(cpcValues!=null)
+                    {
+                    	rec.put(EVCombinedRec.CPCCLASS, removeSpaces(cpcValues));
+                    }
                     //System.out.println("SIZE="+cpcValues.length);
                     String arrNames[] = null;
 

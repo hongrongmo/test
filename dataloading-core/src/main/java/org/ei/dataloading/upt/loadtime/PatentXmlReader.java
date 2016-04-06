@@ -1379,8 +1379,13 @@ public class PatentXmlReader
 			
 			out.print(DELIM);
 			
-			//******* Following items are new from VTW 1/7/2016 **********//
+			//*************************************************************************//
+			//*************                                           *****************//
+			//************* Following items are new from VTW 1/7/2016 *****************//
+			//*************                                           *****************//
+			//*************************************************************************//
 			
+			///*
 			//CLASSIFICATION_CPC
 			
 			if(singleRecord.get("CLASSIFICATION_CPC")!=null)
@@ -1392,10 +1397,56 @@ public class PatentXmlReader
 				for(int i=0;i<classification_cpc_list.size();i++)
 				{
 					HashMap cpcMap = (HashMap)classification_cpc_list.get(i);
-					if(cpcMap != null && cpcMap.get("TEXT")!=null)
+					StringBuffer singleCpcBuffer = new StringBuffer();
+					if(cpcMap!=null)
 					{
-						cpcBuffer.append((String)cpcMap.get("TEXT"));
+						String cpcSection = (String)cpcMap.get("SECTION");
+						String cpcClass = (String)cpcMap.get("CLASS");
+						String cpcSubclass = (String)cpcMap.get("SUBCLASS");
+						String cpcMaingroup = (String)cpcMap.get("MAIN_GROUP");
+						String cpcSubgroup = (String)cpcMap.get("SUBGROUP");
+						String cpcText = (String)cpcMap.get("TEXT");
+						
+						if(cpcSection!=null)
+						{
+							singleCpcBuffer.append(cpcSection);
+						}
+						
+						if(cpcClass!=null)
+						{
+							singleCpcBuffer.append(cpcClass);
+						}
+						
+						if(cpcSubclass!=null)
+						{
+							singleCpcBuffer.append(cpcSubclass);
+						}
+						
+						if(cpcMaingroup!=null)
+						{
+							singleCpcBuffer.append(cpcMaingroup);
+						}
+						
+						if(cpcSubgroup!=null)
+						{
+							singleCpcBuffer.append("/"+cpcSubgroup);
+						}
+						
+						if(singleCpcBuffer.length()<1 && cpcText!=null)
+						{
+							singleCpcBuffer.append(cpcText);							
+						}
+												
 					}
+					if(singleCpcBuffer.length()>0)
+					{
+						cpcBuffer.append(singleCpcBuffer);
+						if(i<classification_cpc_list.size()-1)
+						{
+							cpcBuffer.append(Constants.IDDELIMITER);
+						}
+					}
+					
 				}
 
 
@@ -1479,7 +1530,8 @@ public class PatentXmlReader
 			if(singleRecord.get("MODIFIED_DATE_OF_PUBLIC")!=null)
 			{
 				out.print((String)singleRecord.get("MODIFIED_DATE_OF_PUBLIC"));
-			}						
+			}	
+			//*/ -- end of VTW project					
 			
 			out.print("\n");
 		}
