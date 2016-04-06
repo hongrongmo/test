@@ -21,6 +21,7 @@ import org.ei.common.Constants;
 public class BdAuthor {
 
     private String auid;
+    private String authorId;
     private String sec;
     private String initials;
     private String indexedName;
@@ -194,10 +195,25 @@ public class BdAuthor {
         }
         return null;
     }
+    
+    /**
+     * @return Returns the auid.
+     */
+    public String getAuthorId() {
+        return authorId;
+    }
+    
+    /**
+     * @param authorId
+     * The authorId to set.
+     */
+    public void setAuthorId(String authorId) {
+        this.authorId = authorId;
+    }
 
     /**
-     * @param auid
-     *            The auid to set.
+     * @param authorId
+     * The authorId to set.
      */
     public void setAuid(String auid) {
         this.auid = auid;

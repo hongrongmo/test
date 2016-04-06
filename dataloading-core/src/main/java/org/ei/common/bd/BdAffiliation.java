@@ -26,10 +26,11 @@ public class BdAffiliation
     private String affState;
     private String affPostalCode;
     private String affText;
-    private int affid;
+    private String affid;
     private String affOrganizationStr;
     private String affVenue;
-
+    private int affIndexId;
+    private String affDepartmentId;
 
     public BdAffiliation()
     {
@@ -38,9 +39,9 @@ public class BdAffiliation
 
     public String getIdDislpayValue()
     {
-        if(affid != 0)
+        if(affIndexId != 0)
         {
-            return String.valueOf(affid);
+            return String.valueOf(affIndexId);
         }
         return null;
     }
@@ -96,6 +97,20 @@ public class BdAffiliation
 					if(aSize > i && affelements[i]!= null && !affelements[i].trim().equals(""))
 					{
 						this.setAffid(Integer.parseInt(affelements[i]));
+					}
+                }
+                else if(affField.equals("affiliationId"))
+				{
+					if(aSize > i && affelements[i]!= null && !affelements[i].trim().equals(""))
+					{
+						this.setAffiliationId(affelements[i]);
+					}
+                }
+                else if(affField.equals("affDepartmentId"))
+				{
+					if(aSize > i && affelements[i]!= null && !affelements[i].trim().equals(""))
+					{
+						this.setAffDepartmentId(affelements[i]);
 					}
                 }
 
@@ -329,19 +344,52 @@ public class BdAffiliation
         this.affCity = affCity;
     }
     /**
-     * @return Returns the affid.
+     * @return Returns the affIndexId.
      */
     public int getAffid()
     {
-        return affid;
+        return affIndexId;
     }
     /**
-     * @param affid The affid to set.
+     * @param affIndexId The affIndexId to set.
      */
-    public void setAffid(int affid)
+    public void setAffid(int affIndexId)
+    {
+        this.affIndexId = affIndexId;
+    }
+    
+    /**
+     * @return Returns the affid.
+     */
+    public String getAffiliationId()
+    {
+        return affid;
+    }
+    
+    /**
+     * @param affIndexId The affid to set.
+     */
+    public void setAffiliationId(String affid)
     {
         this.affid = affid;
     }
+    
+    /**
+     * @return Returns the affid.
+     */
+    public String getAffDepartmentId()
+    {
+        return affDepartmentId;
+    }
+    
+    /**
+     * @param affIndexId The affIndexId to set.
+     */
+    public void setAffDepartmentId(String affDepartmentId)
+    {
+        this.affDepartmentId = affDepartmentId;
+    }
+    
     /**
      * @return Returns the affCountry.
      */
@@ -349,6 +397,7 @@ public class BdAffiliation
     {
         return affCountry;
     }
+    
     /**
      * @param affCountry The affCountry to set.
      */
@@ -356,6 +405,7 @@ public class BdAffiliation
     {
         this.affCountry = affCountry;
     }
+    
     /**
      * @return Returns the affText.
      */
@@ -363,6 +413,7 @@ public class BdAffiliation
     {
         return affText;
     }
+    
     /**
      * @param affText The affText to set.
      */
@@ -370,6 +421,7 @@ public class BdAffiliation
     {
         this.affText = affText;
     }
+    
     /**
      * @return Returns the affVenue.
      */

@@ -6,8 +6,8 @@
  */
 package org.ei.common.bd;
 import java.util.*;
-import org.ei.common.Constants;
 
+import org.ei.common.Constants;
 import org.ei.common.CountryFormatter;
 /**
  * @author solovyevat
@@ -25,9 +25,11 @@ public class BdCorrespAffiliation
     private String affState;
     private String affPostalCode;
     private String affText;
-    private int affid;
+    private String affid;
     private String affOrganizationStr;
     private String affVenue;
+    private int affIndexId;
+    private String affDepartmentId;
 
 
 	private static ArrayList cMixedElements = new ArrayList();
@@ -47,9 +49,9 @@ public class BdCorrespAffiliation
 
     public String getIdDislpayValue()
     {
-        if(affid != 0)
+        if(affIndexId != 0)
         {
-            return String.valueOf(affid);
+            return String.valueOf(affIndexId);
         }
         return null;
     }
@@ -127,13 +129,27 @@ public class BdCorrespAffiliation
 	                        this.setAffCityGroup(affelements[i]);
 	                    }
 	                }
-                     else  if(affField.equals("affCountry"))
+                    else  if(affField.equals("affCountry"))
                     {
                         if(aSize > i && affelements[i]!= null && !affelements[i].trim().equals(""))
                         {
                             this.setAffCountry(affelements[i]);
                         }
-                     }
+                    }
+                    else if(affField.equals("affiliationId"))
+     				{
+     					if(aSize > i && affelements[i]!= null && !affelements[i].trim().equals(""))
+     					{
+     						this.setAffiliationId(affelements[i]);
+     					}
+                    }
+                    else if(affField.equals("affDepartmentId"))
+     				{
+     					if(aSize > i && affelements[i]!= null && !affelements[i].trim().equals(""))
+     					{
+     						this.setAffDepartmentId(affelements[i]);
+     					}
+                    }
                 }
 
 	        }
@@ -365,20 +381,67 @@ public class BdCorrespAffiliation
     {
         this.affCity = affCity;
     }
-    /**
-     * @return Returns the affid.
-     */
+    
+    /*
+    
     public int getAffid()
     {
         return affid;
     }
-    /**
-     * @param affid The affid to set.
-     */
+   
     public void setAffid(int affid)
     {
         this.affid = affid;
     }
+    */
+    
+    /**
+     * @return Returns the affIndexId.
+     */
+    public int getAffid()
+    {
+        return affIndexId;
+    }
+    /**
+     * @param affIndexId The affIndexId to set.
+     */
+    public void setAffid(int affIndexId)
+    {
+        this.affIndexId = affIndexId;
+    }
+    
+    /**
+     * @return Returns the affid.
+     */
+    public String getAffiliationId()
+    {
+        return affid;
+    }
+    
+    /**
+     * @param affIndexId The affid to set.
+     */
+    public void setAffiliationId(String affid)
+    {
+        this.affid = affid;
+    }
+    
+    /**
+     * @return Returns the affDepartmentId.
+     */
+    public String getAffDepartmentId()
+    {
+        return affDepartmentId;
+    }
+    
+    /**
+     * @param affIndexId The affIndexId to set.
+     */
+    public void setAffDepartmentId(String affDepartmentId)
+    {
+        this.affDepartmentId = affDepartmentId;
+    }
+    
     /**
      * @return Returns the affCountry.
      */

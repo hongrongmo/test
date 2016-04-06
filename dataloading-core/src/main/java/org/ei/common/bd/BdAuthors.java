@@ -79,13 +79,45 @@ public class BdAuthors
 			Iterator auenum = bdAuthorsMap.keySet().iterator();
 			while (auenum.hasNext())
 			{
-				BdAuthor nextau = (BdAuthor) auenum.next();
-				searchValue.add(nextau.getSearchValue());
+				String aid = null;
+				String orcid = null;
+				BdAuthor nextau = (BdAuthor) auenum.next();				
 				//pre Frank request, block orcid appear in author navigator
 				//setup a new field in fast extract file
 				if(nextau.getAuid()!=null){
-					auidValue.add(nextau.getAuid());
+					// modified to get both authorid and orcid on CAFE data project 3/2/2016
+					String authorid = nextau.getAuid();
+					String[] authorids = null;
+					
+					if(authorid.indexOf(",")>-1)
+					{
+						authorids = authorid.split(",");
+						orcid = authorids[0];
+						aid = authorids[1];
+						
+					}
+					else
+					{
+						authorids = new String[1];
+						authorids[0] = authorid;
+						orcid = authorid;
+						aid = null;
+					}
+					
+					for(int i=0;i<authorids.length;i++)
+					{
+						auidValue.add(authorids[i]);
+					}
 				}
+				if(aid!=null)
+				{
+					searchValue.add(aid+Constants.GROUPDELIMITER+nextau.getSearchValue());
+				}
+				else
+				{
+					searchValue.add(nextau.getSearchValue());
+				}
+				
 				
 			}
 			if(auidValue.size()>0)

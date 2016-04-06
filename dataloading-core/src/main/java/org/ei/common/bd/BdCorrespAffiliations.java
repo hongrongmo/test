@@ -1,15 +1,18 @@
 package org.ei.common.bd;
 import java.util.*;
+
 import org.ei.common.Constants;
 
 public class BdCorrespAffiliations
 {
 
     private TreeMap affmap; // treeMap is used to exlude redundant affiliaitons
-       private int affid;
-       private LinkedHashMap bdAffiliationsMap ;
-       private static ArrayList elements = null;
-       private static ArrayList caffElements = new ArrayList();
+    private int affid;
+    private LinkedHashMap bdAffiliationsMap ;
+    private static ArrayList elements = null;
+    private static ArrayList caffElements = new ArrayList();
+    private List affiliationIds;
+    private List departmentIds;
 
 
        static
@@ -59,7 +62,8 @@ public class BdCorrespAffiliations
 
            return this.bdAffiliationsMap;
        }
-
+       
+/* old method used before CAFE data @20160319
    	public String[] getSearchValue()
    	{
    		ArrayList affSearch = new ArrayList();
@@ -74,6 +78,47 @@ public class BdCorrespAffiliations
    		}
    		return (String[]) affSearch.toArray(new String[1]);
    	}
+ */  	
+   	public String[] getSearchValue()
+	{
+		ArrayList affSearch = new ArrayList();
+		ArrayList affId = new ArrayList();
+		ArrayList affDepartmentid = new ArrayList();
+		if (bdAffiliationsMap != null && bdAffiliationsMap.size() > 0)
+		{
+			Iterator affenum = bdAffiliationsMap.keySet().iterator();
+			while (affenum.hasNext())
+			{
+				BdCorrespAffiliation nextaff= (BdCorrespAffiliation) affenum.next();
+				affId.add(nextaff.getAffiliationId());
+				affDepartmentid.add(nextaff.getAffDepartmentId());
+				affSearch.add(nextaff.getSearchValue());
+			}
+		}
+		setAffiliationId(affId);
+		setDepartmentId(affDepartmentid);
+		return (String[]) affSearch.toArray(new String[1]);
+	}
+   	
+   	private void setAffiliationId(List affiliationIds)
+	{
+		this.affiliationIds = affiliationIds;
+	}
+	
+	public String[] getAffiliationId()
+	{
+		return (String[]) this.affiliationIds.toArray(new String[1]);
+	}
+	
+	private void setDepartmentId(List departmentIds)
+	{
+		this.departmentIds = departmentIds;
+	}
+	
+	public String[] getDepartmentId()
+	{
+		return (String[]) this.departmentIds.toArray(new String[1]);
+	}
 
    	public List getAffiliations()
    	{

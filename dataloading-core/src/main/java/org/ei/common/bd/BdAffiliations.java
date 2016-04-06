@@ -12,6 +12,8 @@ public class BdAffiliations
     private LinkedHashMap bdAffiliationsMap ;
     private static ArrayList elements = null;
     private static ArrayList affElements = new ArrayList();
+    private List affiliationIds;
+    private List departmentIds;
 
     static
     {
@@ -24,6 +26,8 @@ public class BdAffiliations
          affElements.add("affState");
          affElements.add("affPostalCode");
          affElements.add("affText");
+         affElements.add("affiliationId");
+         affElements.add("affDepartmentId");
     }
 
     public BdAffiliations( String bdAffiliations, ArrayList aElements )
@@ -66,16 +70,52 @@ public class BdAffiliations
 	public String[] getSearchValue()
 	{
 		ArrayList affSearch = new ArrayList();
+		ArrayList affId = new ArrayList();
+		ArrayList affDepartmentid = new ArrayList();
 		if (bdAffiliationsMap != null && bdAffiliationsMap.size() > 0)
 		{
 			Iterator affenum = bdAffiliationsMap.keySet().iterator();
 			while (affenum.hasNext())
 			{
 				BdAffiliation nextaff= (BdAffiliation) affenum.next();
-				affSearch.add(nextaff.getSearchValue());
+				String afid = nextaff.getAffiliationId();
+				if(afid!=null)
+				{
+					affId.add(afid);
+					affSearch.add(afid+Constants.GROUPDELIMITER+nextaff.getSearchValue());
+					//System.out.println("AFF"+afid+" ** "+nextaff.getSearchValue());
+				}
+				else
+				{
+					affSearch.add(nextaff.getSearchValue());
+				}
+				affDepartmentid.add(nextaff.getAffDepartmentId());
+				
 			}
 		}
+		setAffiliationId(affId);
+		setDepartmentId(affDepartmentid);
 		return (String[]) affSearch.toArray(new String[1]);
+	}
+	
+	private void setAffiliationId(List affiliationIds)
+	{
+		this.affiliationIds = affiliationIds;
+	}
+	
+	public String[] getAffiliationId()
+	{
+		return (String[]) this.affiliationIds.toArray(new String[1]);
+	}
+	
+	private void setDepartmentId(List departmentIds)
+	{
+		this.departmentIds = departmentIds;
+	}
+	
+	public String[] getDepartmentId()
+	{
+		return (String[]) this.departmentIds.toArray(new String[1]);
 	}
 
 	public List getAffiliations()
