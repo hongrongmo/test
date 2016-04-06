@@ -429,6 +429,12 @@ public abstract class DocumentView {
         return list;
     }
 
+    public String getTitleOFCOLLECTION() {
+        DocumentField afield = new TitleDecorator(createColumnValueField("TITLE_OF_COLLECTION"));
+        String strvalue = afield.getValue();
+        return strvalue;
+    }
+    
     public String getTitle() {
         DocumentField afield = new TitleDecorator(createColumnValueField("TITLE_OF_ANALYTIC"));
         String strvalue = afield.getValue();
