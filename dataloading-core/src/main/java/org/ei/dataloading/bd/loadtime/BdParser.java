@@ -2,18 +2,22 @@ package org.ei.dataloading.bd.loadtime;
 
 import java.io.*;
 import java.util.*;
+
 import org.jdom2.*;                  //// replace svn jdom with recent jdom2
 import org.jdom2.input.*;
 import org.jdom2.output.*;
 import org.ei.util.GUID;
 import org.apache.oro.text.perl.*;
 import org.apache.oro.text.regex.*;
+
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 import java.util.zip.ZipInputStream;
+
 import org.ei.common.Constants;
 import org.ei.common.bd.*;
 import org.ei.dataloading.*;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -39,6 +43,7 @@ public class BdParser
 	private Namespace noNamespace=Namespace.getNamespace("","");
 	private Namespace aniNamespace;
 	private Namespace xmlNamespace=Namespace.getNamespace("xml","http://www.w3.org/XML/1998/namespace");
+	private Namespace xoeNamespace=Namespace.getNamespace("xoe","http://www.elsevier.com/xml/xoe/dtd");
 	private int affid = 0;
 	private static Hashtable contributorRole = new Hashtable();
 	{
@@ -106,17 +111,6 @@ public class BdParser
 		return this.weekNumber;
 	}
 
-/*
-	public void setAction(String action)
-	{
-		this.action = action;
-	}
-
-	public String getAction()
-	{
-		return this.action;
-	}
-*/
 	public void setDatabaseName(String databaseName)
 	{
 		this.databaseName = databaseName;
@@ -191,12 +185,20 @@ public class BdParser
 				{
 					noNamespace = Namespace.getNamespace("","http://www.elsevier.com/xml/ani/ani");
 				}
+				
+				
 				Element item = cpxRoot.getChild("item",noNamespace);
 
 				if(item!= null)
 				{
 
-
+					String eid = item.getChildText("document-id",xoeNamespace);	
+					if(eid!=null)
+					{
+						record.put("EID",eid);
+					}
+					//System.out.println("EID1="+eid);
+					
 					String mid = getDatabaseName().toLowerCase()+"_"+(new GUID()).toString();
 					record.put("M_ID",mid);
 
@@ -242,7 +244,14 @@ public class BdParser
 
 						if(copyright != null)
 						{
-							record.put("COPYRIGHT",copyright.getTextTrim());
+							String right = copyright.getTextTrim();
+							//System.out.println("COPYRIGHT "+right);
+							if(right==null)
+							{
+								right = copyright.getAttributeValue("type");
+								System.out.println("COPYRIGHT_TYPE is not null "+right);
+							}
+							record.put("COPYRIGHT",right);
 							//System.out.println("COPYRIGHT"+copyright.getTextTrim());
 						}
 
@@ -322,11 +331,6 @@ public class BdParser
 									if(type != null)
 									{
 										String cititype=type.getValue();
-
-										//if(cititype!=null && cititype.equals("ip"))
-										//{
-										//	cititype="aip";
-										//}
 										record.put("CITTYPE",cititype);
 									}
 								}
@@ -1008,7 +1012,7 @@ public class BdParser
 	private void parseReferencegroup(List referenceGroup,Hashtable record) throws Exception
 	{
 
-		String referenceID = null;
+		int referenceID = 0;
 
 		Hashtable referenceTitle = new Hashtable();
 		Hashtable referenceAuthor = new Hashtable();
@@ -1022,9 +1026,12 @@ public class BdParser
 		Hashtable referenceWebsite = new Hashtable();
 		Hashtable referenceItemid = new Hashtable();
 		Hashtable referenceItemcitationPII = new Hashtable();
+		Hashtable referenceItemcitationEID = new Hashtable();
 		Hashtable referenceItemcitationDOI = new Hashtable();
+		Hashtable referenceItemcitationID = new Hashtable();
 		Hashtable referenceItemcitationCitationTitle = new Hashtable();
 		Hashtable referenceItemcitationAuthor = new Hashtable();
+		Hashtable referenceItemcitationAffiliation = new Hashtable();
 		Hashtable referenceItemcitationSourcetitle = new Hashtable();
 		Hashtable referenceItemcitationSourcetitle_abbrev = new Hashtable();
 		Hashtable referenceItemcitationISSN = new Hashtable();
@@ -1049,13 +1056,19 @@ public class BdParser
 
 				if(reference != null)
 				{
-					referenceID = reference.getAttributeValue("id");
+					if(reference.getAttributeValue("id")!=null)
+					{
+						referenceID = Integer.parseInt(reference.getAttributeValue("id"));
+					}
+					else
+					{									
+						referenceID = referenceID+1;						
+					}
 
 					Element refInfo = (Element) reference.getChild("ref-info",noNamespace);
 					Element refTitle = (Element) refInfo.getChild("ref-title",noNamespace);
 					if(refTitle!=null)
 					{
-
 						List refTitletextList = (List) refTitle.getChildren("ref-titletext",noNamespace);
 						StringBuffer referenceTitleBuffer = new StringBuffer();
 						for(int j=0;j<refTitletextList.size();j++)
@@ -1075,6 +1088,7 @@ public class BdParser
 							}
 						}
 						referenceTitle.put(referenceID,	referenceTitleBuffer.toString());
+						//System.out.println("referenceTitle="+referenceTitleBuffer.toString());
 					}
 
 
@@ -1178,6 +1192,7 @@ public class BdParser
 
 						String  refTextValue = refText.getTextTrim();
 						referenceText.put(referenceID,refTextValue);
+						//System.out.println("refTextValue::"+refTextValue);
 					}
 
 					//refd-itemidlist
@@ -1188,6 +1203,7 @@ public class BdParser
 						if(itemidList!=null)
 						{
 							String itemid = getItemID(itemidList);
+							//System.out.println("ITEM_CPX_ID::"+itemid);
 							referenceItemid.put(referenceID,itemid);
 						}
 					}
@@ -1199,17 +1215,36 @@ public class BdParser
 					{
 						String  refFullTextValue = refFullText.getTextTrim();
 						referenceText.put(referenceID,refFullTextValue);
+						//System.out.println("ref-fulltext::"+refFullTextValue);
 					}
 
 					//refd-itemcitation
 					Element refdItemcitation = (Element) reference.getChild("refd-itemcitation",noNamespace);
 					if(refdItemcitation!=null)
 					{
+						//REFERENCE CITATION EID
+						if(refdItemcitation.getChildText("eid",noNamespace)!=null)
+						{
+							String refdItemcitationEID = refdItemcitation.getChildText("eid",noNamespace);
+							referenceItemcitationEID.put(referenceID, refdItemcitationEID);
+							//System.out.println("referenceItemcitationEID "+refdItemcitationEID);
+						}
+						
+						//REFERENCE CITATION ID
+						List itemidList = refdItemcitation.getChildren("itemid",noNamespace);
+						if(itemidList!=null)
+						{
+							String itemid = getItemID(itemidList);
+							//System.out.println("CITATIONITEM_CPX_ID="+itemid);
+							referenceItemcitationID.put(referenceID,itemid);
+						}						
+						
 						//REFERENCE CITATION PII
 						if(refdItemcitation.getChild("pii",ceNamespace)!=null)
 						{
 							Element pii = (Element)refdItemcitation.getChild("pii",ceNamespace);
 							referenceItemcitationPII.put(referenceID,pii.getTextTrim());
+							//System.out.println("referenceItemcitation PII "+pii.getTextTrim());
 						}
 
 						//REFERENCE CITATION DOI
@@ -1217,6 +1252,7 @@ public class BdParser
 						{
 							Element doi = (Element)refdItemcitation.getChild("doi",ceNamespace);
 							referenceItemcitationDOI.put(referenceID,doi.getTextTrim());
+							//System.out.println("referenceItemcitation doi "+doi.getTextTrim());
 						}
 
 						//REFERENCE CITATION CITATIONTITLE
@@ -1225,6 +1261,7 @@ public class BdParser
 							Element citationTitles = (Element)refdItemcitation.getChild("citation-title",ceNamespace);
 							String citation = getCitationTitle(citationTitles);
 							referenceItemcitationCitationTitle.put(referenceID,citation);
+							//System.out.println("referenceItemcitation CITATIONTITLE "+citation);
 
 						}
 
@@ -1243,6 +1280,10 @@ public class BdParser
 							}
 
 							referenceItemcitationAuthor.put(referenceID,auToStringBuffer(refAusmap));
+							StringBuffer secondgroup = new StringBuffer();
+							referenceItemcitationAffiliation.put(referenceID,auffToStringBuffer(refAffmap,secondgroup));
+							//System.out.println("referenceItemcitation AUTHOR "+auToStringBuffer(refAusmap));
+							//System.out.println("referenceItemcitation AFFILIATION "+auffToStringBuffer(refAffmap,secondgroup));
 
 						}
 
@@ -1251,6 +1292,7 @@ public class BdParser
 						{
 							Element sourcetitle = (Element)refdItemcitation.getChild("sourcetitle",noNamespace);
 							referenceItemcitationSourcetitle.put(referenceID,sourcetitle.getTextTrim());
+							//System.out.println("REFERENCE CITATION SOURCETITLE "+sourcetitle.getTextTrim());
 						}
 
 						//REFERENCE CITATION SOURCETITLE ABBREV
@@ -1258,6 +1300,7 @@ public class BdParser
 						{
 							Element sourcetitleAbbrev = (Element)refdItemcitation.getChild("sourcetitle-abbrev",noNamespace);
 							referenceItemcitationSourcetitle_abbrev.put(referenceID,sourcetitleAbbrev.getTextTrim());
+							//System.out.println("REFERENCE CITATION SOURCETITLE ABBREV "+sourcetitleAbbrev.getTextTrim());
 						}
 
 						//REFERENCE CITATION ISSN
@@ -1267,7 +1310,7 @@ public class BdParser
 						{
 							String issn = getISSN(issnList);
 							referenceItemcitationISSN.put(referenceID,issn);
-
+							//System.out.println("REFERENCE CITATION ISSN "+issn);
 						}
 
 						//REFERENCE CITATION ISBN
@@ -1276,6 +1319,7 @@ public class BdParser
 						{
 							String refIsbn = getISBN(refIsbnList);
 							referenceItemcitationISBN.put(referenceID,refIsbn);
+							//System.out.println("REFERENCE CITATION ISBN "+refIsbn);
 						}
 
 						//REFERENCE CITATION CODENCODE
@@ -1300,6 +1344,7 @@ public class BdParser
 						{
 							String citationPublicationyear = getPublicationYear(refcitationPublicationyear);
 							referenceItemcitationPublicationyear.put(referenceID,citationPublicationyear);
+							//System.out.println("REFERENCE CITATION PUBLICATIONYEAR::"+citationPublicationyear);
 						}
 
 						//REFERENCE CITATION VOLISSPAGG
@@ -1328,6 +1373,7 @@ public class BdParser
 							//PAGERANGE PAGE
 							String citation_pages = getPages(citation_volisspag);
 							referenceItemcitationPage.put(referenceID,citation_pages);
+							//System.out.println("PAGERANGE PAGE::"+citation_pages);
 						}
 
 						//REFERENCE CITATION ARTICLE NUMBER
@@ -1343,13 +1389,28 @@ public class BdParser
 						if(citationWebsite!=null)
 						{
 							Element citationWebsitename = (Element) citationWebsite.getChild("websitename",noNamespace);
+							Element citationEAddress = (Element) citationWebsite.getChild("e-address",ceNamespace);
 							if(citationWebsitename!=null)
 							{
 								referenceItemcitationWebsite.put(referenceID,citationWebsitename.getTextTrim());
+							
+								citationEAddress = (Element) citationWebsitename.getChild("e-address",ceNamespace);
+								if(citationEAddress!=null)
+								{
+									String citationEAddressType = citationEAddress.getAttributeValue("type");
+									if(citationEAddressType == null)
+									{
+										citationEAddressType = "email";
+									}
+									String citationEAddresstext = citationEAddress.getTextTrim();
+									if(citationEAddresstext != null)
+									{
+										referenceItemcitationEAddress.put(referenceID,citationEAddressType+Constants.IDDELIMITER+citationEAddresstext);
+										//System.out.println("REFERENCE CITATION WEBSITE="+citationEAddressType+" | "+citationEAddresstext);
+									}
+								}
 							}
-
-							Element citationEAddress = (Element) citationWebsitename.getChild("e-address",ceNamespace);
-							if(citationEAddress!=null)
+							else if(citationEAddress!=null)
 							{
 								String citationEAddressType = citationEAddress.getAttributeValue("type");
 								if(citationEAddressType == null)
@@ -1360,15 +1421,19 @@ public class BdParser
 								if(citationEAddresstext != null)
 								{
 									referenceItemcitationEAddress.put(referenceID,citationEAddressType+Constants.IDDELIMITER+citationEAddresstext);
+									//System.out.println("REFERENCE CITATION WEBSITE="+citationEAddressType+" | "+citationEAddresstext);
 								}
 							}
+								
 						}
+						
 
 						//REFERENCE CITATION REF-TEXT
 						Element citationRefText = (Element) refdItemcitation.getChild("ref-text",noNamespace);
 						if(citationRefText!=null)
 						{
 							referenceItemcitationRefText.put(referenceID,citationRefText.getTextTrim());
+							//System.out.println("REFERENCE CITATION REF-TEXT::"+citationRefText.getTextTrim());
 						}
 
 					}//refd-itemcitation
@@ -1383,176 +1448,195 @@ public class BdParser
 		if(referenceTitle != null && referenceTitle.size()>0)
 		{
 			reference.put("REFERENCETITLE",referenceTitle);
-			//System.out.println("REFERENCETITLE:"+referenceTitle.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+			//System.out.println("REFERENCETITLE:"+referenceTitle.toString());
 		}
 
 		if(referenceAuthor!= null && referenceAuthor.size()>0)
 		{
 			reference.put("REFERENCEAUTHOR",referenceAuthor);
-			//System.out.println("REFERENCEAUTHOR:"+referenceAuthor.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+			//System.out.println("REFERENCEAUTHOR:"+referenceAuthor.toString());
 		}
 
 		if(referenceSourcetitle!=null && referenceSourcetitle.size()>0)
 		{
 			reference.put("REFERENCESOURCETITLE",referenceSourcetitle);
-			//System.out.println("REFERENCESOURCETITLE:"+referenceSourcetitle.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+			//System.out.println("REFERENCESOURCETITLE:"+referenceSourcetitle.toString());
 		}
 
 		if(referencePublicationyear!=null && referencePublicationyear.size()>0)
 		{
 			reference.put("REFERENCEPUBLICATIONYEAR",referencePublicationyear);
-			//System.out.println("REFERENCEPUBLICATIONYEAR:"+referencePublicationyear.toString().replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+			//System.out.println("REFERENCEPUBLICATIONYEAR:"+referencePublicationyear);
 		}
 
 		if(referenceVolume!=null && referenceVolume.size()>0)
 		{
 			reference.put("REFERENCEVOLUME",referenceVolume);
-			//System.out.println("REFERENCEVOLUME:"+referenceVolume.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+			//System.out.println("REFERENCEVOLUME:"+referenceVolume);
 		}
 
 		if(referenceIssue!=null && referenceIssue.size()>0)
 		{
 			reference.put("REFERENCEISSUE",referenceIssue);
-			//System.out.println("REFERENCEISSUE:"+referenceIssue.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+			//System.out.println("REFERENCEISSUE:"+referenceIssue);
 		}
 
 		if(referencePages!=null && referencePages.size()>0)
 		{
 			reference.put("REFERENCEPAGES",referencePages);
-			//System.out.println("REFERENCEPAGES:"+referencePages.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+			//System.out.println("REFERENCEPAGES:"+referencePages);
 		}
 
 		if(referenceFullText!=null && referenceFullText.size()>0)
 		{
 			reference.put("REFERENCEFULLTEXT",referenceFullText);
-			//System.out.println("REFERENCEFULLTEXT:"+referenceFullText.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+			//System.out.println("REFERENCEFULLTEXT:"+referenceFullText);
 		}
 
 		if(referenceText!=null && referenceText.size()>0)
 		{
 			reference.put("REFERENCETEXT",referenceText);
-			//System.out.println("REFERENCETEXT:"+referenceText.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+			//System.out.println("REFERENCETEXT:"+referenceText);
 		}
 
 		if(referenceWebsite!=null && referenceWebsite.size()>0)
 		{
 			reference.put("REFERENCEWEBSITE",referenceWebsite);
-			//System.out.println("REFERENCEWEBSITE:"+referenceWebsite.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+			//System.out.println("REFERENCEWEBSITE:"+referenceWebsite);
 		}
 
 		if(referenceItemid!=null && referenceItemid.size()>0)
 		{
 			reference.put("REFERENCEITEMID",referenceItemid);
-			//System.out.println("REFERENCEITEMID:"+referenceItemid.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+			//System.out.println("REFERENCEITEMID::"+referenceItemid);
 		}
 
 		if(referenceItemcitationPII!=null && referenceItemcitationPII.size()>0)
 		{
 			reference.put("REFERENCEITEMCITATIONPII",referenceItemcitationPII);
-			//System.out.println("REFERENCEITEMCITATIONPII:"+referenceItemcitationPII.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+			//System.out.println("REFERENCEITEMCITATIONPII::"+referenceItemcitationPII);
 		}
 
 		if(referenceItemcitationDOI!=null && referenceItemcitationDOI.size()>0)
 		{
 			reference.put("REFERENCEITEMCITATIONDOI",referenceItemcitationDOI);
-			//System.out.println("REFERENCEITEMCITATIONDOI:"+referenceItemcitationDOI.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+			//System.out.println("REFERENCEITEMCITATIONDOI::"+referenceItemcitationDOI);
 		}
 
 		if(referenceItemcitationCitationTitle!=null && referenceItemcitationCitationTitle.size()>0)
 		{
 			reference.put("REFERENCEITEMCITATIONCITATIONTITLE",referenceItemcitationCitationTitle);
-			//System.out.println("REFERENCEITEMCITATIONTITLE:"+referenceItemcitationCitationTitle.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+			//System.out.println("REFERENCEITEMCITATIONTITLE::"+referenceItemcitationCitationTitle);
 		}
 
 		if(referenceItemcitationAuthor!=null && referenceItemcitationAuthor.size()>0)
 		{
 			reference.put("REFERENCEITEMCITATIONAUTHOR",referenceItemcitationAuthor);
-			//System.out.println("REFERENCEITEMCITATIONAUTHOR:"+referenceItemcitationAuthor.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+			//System.out.println("REFERENCEITEMCITATIONAUTHOR::"+referenceItemcitationAuthor);
 		}
+		
+		if(referenceItemcitationAffiliation!=null && referenceItemcitationAffiliation.size()>0)
+		{
+			reference.put("REFITEMCITATIONAFFILIATION",referenceItemcitationAffiliation);
+			//System.out.println("***REFERENCEITEMCITATIONAFFILIATION::"+referenceItemcitationAffiliation);
+		}		
 
 		if(referenceItemcitationSourcetitle!=null && referenceItemcitationSourcetitle.size()>0)
 		{
-			reference.put("REFERENCEITEMCITATIONSOURCETITLE",referenceItemcitationSourcetitle);
-			//System.out.println("REFERENCEITEMCITATIONSOURCETITLE:"+referenceItemcitationSourcetitle.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+			reference.put("REFITEMCITATIONSOURCETITLE",referenceItemcitationSourcetitle);
+			//System.out.println("REFERENCEITEMCITATIONSOURCETITLE::"+referenceItemcitationSourcetitle);
 		}
 
 		if(referenceItemcitationSourcetitle_abbrev!=null && referenceItemcitationSourcetitle_abbrev.size()>0)
 		{
 			reference.put("REFERENCEITEMCITATIONSOURCETITLEABBREV",referenceItemcitationSourcetitle_abbrev);
-			//System.out.println("REFERENCEITEMCITATIONSOURCETITLEABBREV:"+referenceItemcitationSourcetitle_abbrev.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+			//System.out.println("REFERENCEITEMCITATIONSOURCETITLEABBREV::"+referenceItemcitationSourcetitle_abbrev);
 		}
 
 		if(referenceItemcitationISSN!=null && referenceItemcitationISSN.size()>0)
 		{
 			reference.put("REFERENCEITEMCITATIONISSN",referenceItemcitationISSN);
-			//System.out.println("REFERENCEITEMCITATIONISSN:"+referenceItemcitationISSN.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+			//System.out.println("REFERENCEITEMCITATIONISSN::"+referenceItemcitationISSN);
 		}
 
 		if(referenceItemcitationISBN!=null && referenceItemcitationISBN.size()>0)
 		{
 			reference.put("REFERENCEITEMCITATIONISBN",referenceItemcitationISBN);
-			//System.out.println("REFERENCEITEMCITATIONISBN:"+referenceItemcitationISBN.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+			//System.out.println("REFERENCEITEMCITATIONISBN::"+referenceItemcitationISBN);
 		}
 
 		if(referenceItemcitationCoden!=null && referenceItemcitationCoden.size()>0)
 		{
 			reference.put("REFERENCEITEMCITATIONCODEN",referenceItemcitationCoden);
-			//System.out.println("REFERENCEITEMCITATIONCODEN:"+referenceItemcitationCoden);
+			//System.out.println("REFERENCEITEMCITATIONCODEN::"+referenceItemcitationCoden);
 		}
 
 		if(referenceItemcitationPart!=null && referenceItemcitationPart.size()>0)
 		{
 			reference.put("REFERENCEITEMCITATIONPART",referenceItemcitationPart);
-			//System.out.println("REFERENCEITEMCITATIONPART:"+referenceItemcitationPart.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+			//System.out.println("REFERENCEITEMCITATIONPART::"+referenceItemcitationPart);
 		}
 
 		if(referenceItemcitationPublicationyear!=null && referenceItemcitationPublicationyear.size()>0)
 		{
-			reference.put("REFERENCEITEMCITATIONPUBLICATIONYEAR",referenceItemcitationPublicationyear);
-			//System.out.println("REFERENCEITEMCITATIONPUBLICATIONYEAR:"+referenceItemcitationPublicationyear.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+			reference.put("REFITEMCITATIONPUBLICATIONYEAR",referenceItemcitationPublicationyear);
+			//System.out.println("REFERENCEITEMCITATIONPUBLICATIONYEAR::"+referenceItemcitationPublicationyear);
 		}
 
 		if(referenceItemcitationVolume!=null && referenceItemcitationVolume.size()>0)
 		{
 			reference.put("REFERENCEITEMCITATIONVOLUME",referenceItemcitationVolume);
-			//System.out.println("REFERENCEITEMCITATIONVOLUME:"+referenceItemcitationVolume.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+			//System.out.println("REFERENCEITEMCITATIONVOLUME::"+referenceItemcitationVolume);
 		}
 
 		if(referenceItemcitationIssue!=null && referenceItemcitationIssue.size()>0)
 		{
 			reference.put("REFERENCEITEMCITATIONISSUE",referenceItemcitationIssue);
-			//System.out.println("REFERENCEITEMCITATIONISSUE:"+referenceItemcitationIssue.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+			//System.out.println("REFERENCEITEMCITATIONISSUE::"+referenceItemcitationIssue);
 		}
 
 		if(referenceItemcitationPage!=null && referenceItemcitationPage.size()>0)
 		{
 			reference.put("REFERENCEITEMCITATIONPAGE",referenceItemcitationPage);
-			//System.out.println("REFERENCEITEMCITATIONPAGE:"+referenceItemcitationPage.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+			//System.out.println("REFERENCEITEMCITATIONPAGE::"+referenceItemcitationPage);
 		}
 
 		if(referenceItemcitationArticleNumber!=null && referenceItemcitationArticleNumber.size()>0)
 		{
-			reference.put("REFERENCEITEMCITATIONARTICLENUMBER",referenceItemcitationArticleNumber);
-			//System.out.println("REFERENCEITEMCITATIONARTICLENUMBER:"+referenceItemcitationArticleNumber.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+			reference.put("REFITEMCITATIONARTICLENUMBER",referenceItemcitationArticleNumber);
+			//System.out.println("REFERENCEITEMCITATIONARTICLENUMBER::"+referenceItemcitationArticleNumber);
 		}
 
 		if(referenceItemcitationWebsite!=null && referenceItemcitationWebsite.size()>0)
 		{
 			reference.put("REFERENCEITEMCITATIONWEBSITE",referenceItemcitationWebsite);
-			//System.out.println("REFERENCEITEMCITATIONWEBSITE:"+referenceItemcitationWebsite.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+			//System.out.println("REFERENCEITEMCITATIONWEBSITE::"+referenceItemcitationWebsite);
 		}
 
 		if(referenceItemcitationEAddress!=null && referenceItemcitationEAddress.size()>0)
 		{
 			reference.put("REFERENCEITEMCITATIONEADDRESS",referenceItemcitationEAddress);
-			//System.out.println("REFERENCEITEMCITATIONEADDRESS:"+referenceItemcitationEAddress.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+			//System.out.println("***REFERENCEITEMCITATIONEADDRESS::"+referenceItemcitationEAddress);
 		}
 
 		if(referenceItemcitationRefText!=null && referenceItemcitationRefText.size()>0)
 		{
 			reference.put("REFERENCEITEMCITATIONREFTEXT",referenceItemcitationRefText);
-			//System.out.println("REFERENCEITEMCITATIONREFTEXT:"+referenceItemcitationRefText.replaceAll(REFERENCEDELIMITER,"|").replaceAll(GROUPDELIMITER,"**").replaceAll(IDDELIMITER,"--"));
+			//System.out.println("REFERENCEITEMCITATIONREFTEXT::"+referenceItemcitationRefText);
 		}
+		
+		if(referenceItemcitationEID!=null && referenceItemcitationEID.size()>0)
+		{
+			reference.put("REFERENCEITEMCITATIONEID",referenceItemcitationEID);
+		}
+		
+		
+		if(referenceItemcitationID!=null && referenceItemcitationID.size()>0)
+		{
+			reference.put("REFERENCEITEMCITATIONID",referenceItemcitationID);
+		}
+		
+		
 
 		if(reference.size()>0)
 		{
@@ -1584,6 +1668,11 @@ public class BdParser
 	private String getItemID(List itemidList) throws Exception
 	{
 		StringBuffer referenceItemid = new StringBuffer();
+		String cpxID = null;
+		String geoID = null;
+		String chemID = null;
+		String apiID = null;
+		String apilitID = null;
 		for(int j=0;j<itemidList.size();j++)
 		{
 			Element itemidElement = (Element)itemidList.get(j);
@@ -1597,7 +1686,26 @@ public class BdParser
 					itemid_idtype.equals("CHEM")))
 			{
 				String  itemid = itemidElement.getTextTrim();
-				referenceItemid.append("ACCESSNUMBER:"+itemid);
+				if(itemid_idtype.equals("CPX"))
+				{
+					cpxID = itemid;
+				}
+				else if(itemid_idtype.equals("GEO"))
+				{
+					geoID = itemid;
+				}
+				else if(itemid_idtype.equals("CHEM"))
+				{
+					chemID = itemid;
+				}
+				else if(itemid_idtype.equals("API"))
+				{
+					apiID = itemid;
+				}
+				else if(itemid_idtype.equals("APILIT"))
+				{
+					apilitID = itemid;
+				}
 
 			}
 			else if (itemid_idtype != null && itemid_idtype.equals("PUI"))
@@ -1612,6 +1720,27 @@ public class BdParser
 			}
 			referenceItemid.append(Constants.IDDELIMITER);
 		}
+		if(cpxID!=null)
+		{
+			referenceItemid.append("ACCESSNUMBER:"+cpxID);
+		}
+		else if(geoID!=null)
+		{
+			referenceItemid.append("ACCESSNUMBER:"+geoID);
+		}
+		else if(chemID!=null)
+		{
+			referenceItemid.append("ACCESSNUMBER:"+chemID);
+		}
+		else if(apiID!=null)
+		{
+			referenceItemid.append("ACCESSNUMBER:"+apiID);
+		}
+		else if(apilitID!=null)
+		{
+			referenceItemid.append("ACCESSNUMBER:"+apilitID);
+		}
+		referenceItemid.append(Constants.IDDELIMITER);
 		return referenceItemid.toString();
 	}
 
@@ -1636,7 +1765,12 @@ public class BdParser
 			{
 				referencePages.append(firstPage);
 			}
-			referencePages.append("-");
+			
+			if(firstPage!=null & lastPage!=null)
+			{
+				referencePages.append("-");
+			}
+			
 			if(lastPage != null)
 			{
 				referencePages.append(lastPage);
@@ -1722,10 +1856,17 @@ public class BdParser
 			issn = (Element)issnList.get(e);
 			issnValue = issn.getTextTrim();
 			issnType = (String)issn.getAttributeValue("type");
+			
+			if(issnType==null)
+			{
+				issnType="print";
+			}
+			
 			if(issnType!=null && issnValue!= null)
 			{
 				issnBuffer.append(issnType+":"+issnValue);
 			}
+			
 			if(e<issnList.size()-1)
 			{
 				issnBuffer.append(Constants.IDDELIMITER);
@@ -2387,6 +2528,12 @@ public class BdParser
 					String websitenameText = websitename.getTextTrim();
 					sourceWebsiteBuffer.append(websitenameText);
 				}
+				else if(website.getTextTrim()!=null && website.getTextTrim().length()>0)
+				{
+					String websitenameText = website.getTextTrim();
+					sourceWebsiteBuffer.append(websitenameText);
+					//System.out.println("website_body has content "+websitenameText);
+				}
 				sourceWebsiteBuffer.append(Constants.IDDELIMITER);
 				Element eaddress = (Element) website.getChild("e-address",ceNamespace);
 				if(eaddress!=null)
@@ -2881,6 +3028,7 @@ public class BdParser
 
 			affBuffer.append(Constants.IDDELIMITER);
 			// Text
+			String afString = affiliation.getTextTrim();
 			Element afElem =(Element) affiliation.getChild("text",ceNamespace);
 			Element venue = (Element)affiliation.getChild("venue",noNamespace);
 
@@ -2893,6 +3041,16 @@ public class BdParser
 			if(afElem!=null)
 			{
 			    affBuffer.append(dictionary.mapEntity(getMixData(afElem.getContent())));
+			}
+			
+			if(afString!=null && afString.trim().length()>0)
+			{
+				if(afElem!=null)
+				{
+					affBuffer.append("; ");
+				}
+				affBuffer.append(afString);
+				System.out.println("AFF BODY is not empty, It has "+afString);
 			}
 			affBuffer.append(Constants.IDDELIMITER);
 
@@ -2945,11 +3103,11 @@ public class BdParser
 
 				if(state != null)
 				{
-					cityGroupBuffer.append(state+" ");
+					cityGroupBuffer.append(dictionary.mapEntity(state)+" ");
 				}
 				if(postalCode != null)
 				{
-					cityGroupBuffer.append(postalCode);
+					cityGroupBuffer.append(dictionary.mapEntity(postalCode));
 				}
 			}
 
@@ -2962,8 +3120,23 @@ public class BdParser
 
 			if(affiliation.getAttributeValue("country")!=null)
 			{
-				affBuffer.append(affiliation.getAttributeValue("country"));
+				affBuffer.append(dictionary.mapEntity(affiliation.getAttributeValue("country")));
 			}
+			
+			///*use for CAFE data
+			
+			if(affiliation.getAttributeValue("afid") != null)
+			{
+				affBuffer.append(affiliation.getAttributeValue("afid"));
+			}
+			affBuffer.append(Constants.IDDELIMITER);
+			if(affiliation.getAttributeValue("dptid") != null)
+			{
+				affBuffer.append(affiliation.getAttributeValue("dptid"));
+			}
+			affBuffer.append(Constants.IDDELIMITER);
+			//*/
+			
 			affBuffer.append((Constants.AUDELIMITER));
 		}
 		return affBuffer.toString();
@@ -3031,7 +3204,7 @@ public class BdParser
 				StringBuffer cityGroupBuffer = new StringBuffer();
 				if(affiliation.getChild("city-group",noNamespace)!=null)
 				{
-					cityGroupBuffer.append(affiliation.getChildTextTrim("city-group",noNamespace));
+					cityGroupBuffer.append(dictionary.mapEntity(affiliation.getChildTextTrim("city-group",noNamespace)));
 				}
 				else
 				{
@@ -3050,11 +3223,11 @@ public class BdParser
 
 					if(state != null)
 					{
-						cityGroupBuffer.append(state+" ");
+						cityGroupBuffer.append(dictionary.mapEntity(state)+" ");
 					}
 					if(postalCode != null)
 					{
-						cityGroupBuffer.append(postalCode);
+						cityGroupBuffer.append(dictionary.mapEntity(postalCode));
 					}
 				}
 
@@ -3067,8 +3240,24 @@ public class BdParser
 
 				if(affiliation.getAttributeValue("country")!=null)
 				{
-					affBuffer.append(affiliation.getAttributeValue("country"));
+					affBuffer.append(dictionary.mapEntity(affiliation.getAttributeValue("country")));
 				}
+				
+				///* USE for CAFE data
+				affBuffer.append(Constants.IDDELIMITER);
+				if(affiliation.getAttributeValue("afid") != null)
+				{
+					affBuffer.append(affiliation.getAttributeValue("afid"));
+				}
+				affBuffer.append(Constants.IDDELIMITER);
+				if(affiliation.getAttributeValue("dptid") != null)
+				{
+					affBuffer.append(affiliation.getAttributeValue("dptid"));
+				}
+				
+				//*/
+				
+				
 
 			}
 		}
@@ -3224,7 +3413,7 @@ public class BdParser
 			Element state = (Element) affiliation.getChild("state",noNamespace);
 			if(state != null)
 			{
-				aff.setAffState(state.getText());
+				aff.setAffState(dictionary.mapEntity(state.getText()));
 			}
 
 			List postalcode = affiliation.getChildren("postal-code",noNamespace);
@@ -3243,12 +3432,25 @@ public class BdParser
 			            {
 			                zipbuf.append(", ");
 			            }
+			            //System.out.println("ZIP1="+zipbuf.toString());
+			        }
+			        
+			        String zipvalue=elmpostalcode.getTextTrim();
+			        if(zipvalue!=null)
+			        {			        	
+			        	zipbuf.append(zipvalue);
+			        	 if(i < postalcode.size()-1)
+				         {
+				                zipbuf.append(", ");
+				         }
+			        	 //System.out.println("ZIP2="+zipbuf.toString());
 			        }
 			    }
 			}
 			if(zipbuf.length() > 0)
 			{
-			    aff.setAffPostalCode(zipbuf.toString());
+				
+			    aff.setAffPostalCode(dictionary.mapEntity(zipbuf.toString()));
 			}
 
 			Element text = (Element) affiliation.getChild("text",ceNamespace);
@@ -3264,8 +3466,20 @@ public class BdParser
 				Element oe = (Element) organization.get(i);
 				aff.addAffOrganization(dictionary.mapEntity(getMixData(oe.getContent())));
 			}
+			
 			this.affid = this.affid+1;
 			aff.setAffid(this.affid);
+			
+			if(affiliation.getAttributeValue("afid")!=null)
+			{
+				aff.setAffiliationId(affiliation.getAttributeValue("afid"));
+			}
+			
+			if(affiliation.getAttributeValue("dptid")!=null)
+			{
+				aff.setAffDepartmentId(affiliation.getAttributeValue("dptid"));
+			}
+			
 			affs.addAff(aff);
 		}
 
@@ -3289,12 +3503,32 @@ public class BdParser
 		    }
 
 		    Attribute auid = author.getAttribute("orcid");
-		    if(auid != null)
+		    Attribute authorid = author.getAttribute("auid");
+		    StringBuffer authoridBuffer = new StringBuffer();
+		    if(auid != null || authorid!=null)
 		    {
-		        String auidstr = (String) auid.getValue();
-		        aus.setAuid(auidstr);
+		    	if(auid != null)
+		    	{
+		    		String auidstr = (String) auid.getValue();
+		    		authoridBuffer.append(auidstr);
+		    	}
+		    	
+		    	//authoridBuffer.append(",");
+		    	
+		    	if(authorid!=null)
+		    	{
+		    		String authoridstr = (String)authorid.getValue();
+		    		authoridBuffer.append(","+authoridstr);
+		    	}
+		        
+		        
 		    }
-
+		    
+		    if(authoridBuffer.length()>0)
+		    {
+		    	aus.setAuid(authoridBuffer.toString());
+		    	//System.out.println("AUTHORID="+authoridBuffer.toString());
+		    }
 
 		    Element indexedName = author.getChild("indexed-name",ceNamespace );
 		    if(indexedName != null)
@@ -3449,6 +3683,20 @@ public class BdParser
 
 				}
 				bufaffiliations.append(Constants.IDDELIMITER);
+				
+				///*use for CAFE data
+				
+				if(aAffiliation.getAffiliationId() != null)
+				{
+					bufaffiliations.append(aAffiliation.getAffiliationId());
+				}
+				bufaffiliations.append(Constants.IDDELIMITER);
+				if(aAffiliation.getAffDepartmentId() != null)
+				{
+					bufaffiliations.append(aAffiliation.getAffDepartmentId());
+				}
+				bufaffiliations.append(Constants.IDDELIMITER);
+				//*/
 				bufaffiliations.append((Constants.AUDELIMITER));
 
 			}
@@ -3568,6 +3816,12 @@ public class BdParser
 						bufauthor.append(aAuthor.getEaddress());
 					}
 					bufauthor.append(Constants.IDDELIMITER);
+					if(aAuthor.getAuthorId() != null)
+					{
+						bufauthor.append(aAuthor.getAuthorId());
+					}
+					bufauthor.append(Constants.IDDELIMITER);
+					
 					bufauthor.append((Constants.AUDELIMITER));
 				}
 			}

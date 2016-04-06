@@ -140,6 +140,7 @@ public class BaseTableRecord
 	public static final BaseTableRecord APIAT = new BaseTableRecord("APIAT", new Integer(4000), "elt");
 	public static final BaseTableRecord SEQ_NUM = new BaseTableRecord("SEQ_NUM", new Integer(4000), "elt");
 	public static final BaseTableRecord SOURCEWEBSITE = new BaseTableRecord("SOURCEWEBSITE", new Integer(1000), "cpx");
+	public static final BaseTableRecord EID = new BaseTableRecord("EID", new Integer(32), "cpx");
 	
 	public static final BaseTableRecord REFERENCE= new BaseTableRecord("REFERENCE", new Integer(500000), "cpx");
 	public static final BaseTableRecord REFERENCETITLE= new BaseTableRecord("REFERENCETITLE", new Integer(4000), "cpx");
@@ -161,7 +162,7 @@ public class BaseTableRecord
 	public static final BaseTableRecord REFCITATIONSOURCETITLEABBREV= new BaseTableRecord("REFCITATIONSOURCETITLEABBREV", new Integer(4000), "cpx");
 	public static final BaseTableRecord REFERENCEITEMCITATIONISSN= new BaseTableRecord("REFERENCEITEMCITATIONISSN", new Integer(1000), "cpx");
 	public static final BaseTableRecord REFERENCEITEMCITATIONISBN= new BaseTableRecord("REFERENCEITEMCITATIONISBN", new Integer(1000), "cpx");
-	public static final BaseTableRecord REFERENCEITEMCITATIONCODEN= new BaseTableRecord("REFAERENCEITEMCITATIONCODEN", new Integer(500000), "cpx");
+	public static final BaseTableRecord REFERENCEITEMCITATIONCODEN= new BaseTableRecord("REFERENCEITEMCITATIONCODEN", new Integer(10), "cpx");
 	public static final BaseTableRecord REFERENCEITEMCITATIONPART= new BaseTableRecord("REFERENCEITEMCITATIONPART", new Integer(128), "cpx");
 	public static final BaseTableRecord REFERENCEITEMCITATIONPUBLICATIONYEAR= new BaseTableRecord("REFERENCEITEMCITATIONPUBLICATIONYEAR", new Integer(9), "cpx");
 	public static final BaseTableRecord REFERENCEITEMCITATIONVOLUME= new BaseTableRecord("REFERENCEITEMCITATIONVOLUME", new Integer(128), "cpx");
@@ -171,6 +172,7 @@ public class BaseTableRecord
 	public static final BaseTableRecord REFERENCEITEMCITATIONWEBSITE= new BaseTableRecord("REFERENCEITEMCITATIONWEBSITE", new Integer(2000), "cpx");
 	public static final BaseTableRecord REFERENCEITEMCITATIONEADDRESS= new BaseTableRecord("REFERENCEITEMCITATIONEADDRESS", new Integer(1000), "cpx");
 	public static final BaseTableRecord REFERENCEITEMCITATIONREFTEXT= new BaseTableRecord("REFERENCEITEMCITATIONREFTEXT", new Integer(4000), "cpx");
+	public static final BaseTableRecord REFITEMCITATIONAFFILIATION= new BaseTableRecord("REFITEMCITATIONAFFILIATION", new Integer(4000), "cpx");
 	
 
 
@@ -280,6 +282,7 @@ public class BaseTableRecord
 	    bdTableColumns.add(APIAT);
 	    bdTableColumns.add(SEQ_NUM);
 	    bdTableColumns.add(SOURCEWEBSITE);
+	    bdTableColumns.add(EID);
 
 		//ADDED FOR REFERENCE
 
@@ -297,7 +300,7 @@ public class BaseTableRecord
 		bdTableColumns.add(REFERENCEITEMCITATIONPII);
 		bdTableColumns.add(REFERENCEITEMCITATIONDOI);
 		bdTableColumns.add(REFERENCEITEMCITATIONTITLE);
-		bdTableColumns.add(REFERENCEITEMCITATIONAUTHOR);
+		bdTableColumns.add(REFERENCEITEMCITATIONAUTHOR);		
 		bdTableColumns.add(REFITEMCITATIONSOURCETITLE);
 		bdTableColumns.add(REFCITATIONSOURCETITLEABBREV);
 		bdTableColumns.add(REFERENCEITEMCITATIONISSN);
@@ -312,6 +315,7 @@ public class BaseTableRecord
 		bdTableColumns.add(REFERENCEITEMCITATIONWEBSITE);
 		bdTableColumns.add(REFERENCEITEMCITATIONEADDRESS);
 	    bdTableColumns.add(REFERENCEITEMCITATIONREFTEXT);
+	    bdTableColumns.add(REFITEMCITATIONAFFILIATION);
 		bdTableColumns.add(REFERENCE);
 
 

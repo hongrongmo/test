@@ -104,8 +104,8 @@ public class BdNumericalIndexingReader {
                 c = new BdNumericalIndexingReader(loadN,databaseName);
             }
             outfile = new FileWriter(infile+"."+loadN+"_numerical.out");
-            con = c.getConnection(url,driver,username,password);
-            c.writeBaseTableFile(infile,con);
+            //con = c.getConnection(url,driver,username,password);
+            c.writeBaseTableFile(infile);
         }
         catch(Exception e)
         {
@@ -113,19 +113,7 @@ public class BdNumericalIndexingReader {
         }
         finally
         {
-            if (con != null)
-            {
-                try
-                {
-                    con.close();
-                }
-                catch (Exception e)
-                {
-                    e.printStackTrace();
-                }
-            }
-            
-            if(outfile != null)
+        	if(outfile != null)
             {
             	 try
                  {
@@ -136,13 +124,12 @@ public class BdNumericalIndexingReader {
                      e.printStackTrace();
                  }
             }
-            
-       
+                  
             System.out.println("total process time "+(System.currentTimeMillis()-startTime)/1000.0+" seconds");
         }
     }
 	
-	private void writeRecs(InputSource xmlReader, Connection con) throws Exception
+	private void writeRecs(InputSource xmlReader) throws Exception
     {
 		try 
 		{	
@@ -184,7 +171,7 @@ public class BdNumericalIndexingReader {
 				
 				if(pui != null)
 				{
-					mid = getMID(con,pui);
+					mid = getMID(pui);
 					if(mid==null)
 						mid="";
 				}
@@ -322,7 +309,7 @@ public class BdNumericalIndexingReader {
 
 	}
 	
-	public void writeBaseTableFile(String infile, Connection con) throws Exception
+	public void writeBaseTableFile(String infile) throws Exception
     {
 		InputSource in = null;
         this.infile = infile;
@@ -337,15 +324,19 @@ public class BdNumericalIndexingReader {
                 while (entries.hasMoreElements())
                 {
                     ZipEntry entry = (ZipEntry)entries.nextElement();
-                    in = new InputSource(new InputStreamReader(zipFile.getInputStream(entry), "UTF-8"));
-                    writeRecs(in,con);
+                    String name = entry.getName();                  
+                    if(name.indexOf("CPXNI")>-1)
+                    {
+                    	in = new InputSource(new InputStreamReader(zipFile.getInputStream(entry), "UTF-8"));
+                    	writeRecs(in);
+                    }
                 }
             }
             else if(infile.toLowerCase().endsWith(".xml"))
             {
                 System.out.println("IS XML FILE");
                 in = new InputSource(new FileReader(infile));
-                writeRecs(in,con);
+                writeRecs(in);
             }
             else
             {
@@ -361,36 +352,81 @@ public class BdNumericalIndexingReader {
        
     }
 	
-	private String getMID(Connection con,String pui) throws Exception
+	private String getMID(String pui)
 	{
 		Statement stmt = null;
         ResultSet rs = null;
         String mid= null;
         String sqlQuery = null;
-        if(pui!=null)
-        {
-            stmt = con.createStatement();
-            sqlQuery = "select m_id from bd_master_orig where pui='"+pui+"'";
-			//System.out.println("Running the query...");
-			rs = stmt.executeQuery(sqlQuery);
-			while (rs.next())
-			{
-			    if(rs.getString("M_ID") != null)
-			    {
-			        mid=rs.getString("M_ID");
-			    }
-			    else
-			    {
-			    	mid="";
-			    }
-			}
-            
-        }
-        else
-        {
-        	return "";
-        }
+        Connection con = null;
+        try{
+	        if(pui!=null)
+	        {
+	        	con = getConnection(this.url,this.driver,this.username,this.password);
+	            stmt = con.createStatement();
+	            sqlQuery = "select m_id from bd_master_orig where database='cpx' and pui='"+pui+"'";
+				//System.out.println("Running the query...");
+				rs = stmt.executeQuery(sqlQuery);
+				while (rs.next())
+				{
+				    if(rs.getString("M_ID") != null)
+				    {
+				        mid=rs.getString("M_ID");
+				    }
+				    else
+				    {
+				    	mid="";
+				    }
+				}
+	            
+	        }
+	        else
+	        {
+	        	return "";
+	        }
         
+	       
+		}
+        catch(Exception e)
+        {
+        	e.printStackTrace();
+        }
+		finally
+	    {
+	          if (con != null)
+	          {
+	              try
+	              {
+	                  con.close();
+	              }
+	              catch (Exception e)
+	              {
+	                  e.printStackTrace();
+	              }
+	          }
+	          if (rs != null)
+	          {
+	              try
+	              {
+	                  rs.close();
+	              }
+	              catch (Exception e)
+	              {
+	                  e.printStackTrace();
+	              }
+	          }
+	          if (stmt != null)
+	          {
+	              try
+	              {
+	            	  stmt.close();
+	              }
+	              catch (Exception e)
+	              {
+	                  e.printStackTrace();
+	              }
+	          }
+	    }
         return mid;
 	}
 	

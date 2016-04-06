@@ -139,25 +139,33 @@ public class BaseTableWriter
 
 			}
 
-
-
-
-			if(valueString != null)
+			if(valueString != null && !thisColumnName.equals("EID"))
 			{
 				recordBuf.append(valueString);
 				//recordBuf.append(thisColumnName+":"+valueString);
 			}
 			if(thisColumnName.length()<9 || !("REF".equals(thisColumnName.substring(0,3))))
 			{
-				recordBuf.append(FIELDDELIM);
+				if(!("EID".equals(thisColumnName)))
+				{
+					recordBuf.append(FIELDDELIM);
+				}
 			}
-
 		}
 		if(isReference)
 		{
 		   recordBuf.append("YES");
 	    }
 	    recordBuf.append(FIELDDELIM);
+	    
+	    ///* use for CAFE data
+	    if(record.get("EID")!=null)
+		{
+		   recordBuf.append((String)record.get("EID"));
+	    }
+	    recordBuf.append(FIELDDELIM);
+	    //*/
+	    
 	    if(getAccessionNumber()!=null && getAccessionNumber().length()>0)
 	    {
 	    	out.println(recordBuf.toString().trim());
@@ -186,6 +194,7 @@ public class BaseTableWriter
 			 Hashtable REFERENCETEXT = (Hashtable)reference.get("REFERENCETEXT");
 			 Hashtable REFERENCEWEBSITE = (Hashtable)reference.get("REFERENCEWEBSITE");
 			 Hashtable REFERENCEITEMID = (Hashtable)reference.get("REFERENCEITEMID");
+			 Hashtable REFERENCEITEMCITATIONEID = (Hashtable)reference.get("REFERENCEITEMCITATIONEID");
 			 Hashtable REFERENCEITEMCITATIONPII = (Hashtable)reference.get("REFERENCEITEMCITATIONPII");
 			 Hashtable REFERENCEITEMCITATIONDOI = (Hashtable)reference.get("REFERENCEITEMCITATIONDOI");
 			 Hashtable REFERENCEITEMCITATIONAUTHOR = (Hashtable)reference.get("REFERENCEITEMCITATIONAUTHOR");
@@ -201,18 +210,23 @@ public class BaseTableWriter
 			 Hashtable REFERENCEITEMCITATIONWEBSITE = (Hashtable)reference.get("REFERENCEITEMCITATIONWEBSITE");
 			 Hashtable REFERENCEITEMCITATIONEADDRESS = (Hashtable)reference.get("REFERENCEITEMCITATIONEADDRESS");
 			 Hashtable REFERENCEITEMCITATIONREFTEXT = (Hashtable)reference.get("REFERENCEITEMCITATIONREFTEXT");
-			 Hashtable REFERENCEITEMCITATIONCITATIONTITLE =(Hashtable)reference.get("REFERENCEITEMCITATIONCITATIONTITLE");
+			 Hashtable REFERENCEITEMCITATIONCITATIONTITLE =(Hashtable)reference.get("REFERENCEITEMCITATIONCITATIONTITLE");			 
+			 //Hashtable REFERENCEITEMCITATIONSOURCETITLE =(Hashtable)reference.get("REFERENCEITEMCITATIONSOURCETITLE");
 			 Hashtable REFERENCEITEMCITATIONSOURCETITLEABBREV =(Hashtable)reference.get("REFERENCEITEMCITATIONSOURCETITLEABBREV");
 			 Hashtable REFERENCEITEMCITATIONCODEN = (Hashtable)reference.get("REFERENCEITEMCITATIONCODEN");
+			 Hashtable REFERENCEITEMCITATIONID = (Hashtable)reference.get("REFERENCEITEMCITATIONID");
+			 Hashtable REFITEMCITATIONAFFILIATION = (Hashtable)reference.get("REFITEMCITATIONAFFILIATION");
 
 			 StringBuffer recordBuf = null;
-			 String referenceID = "0";
+			 //String referenceID = "0";
+			 int referenceID = 0;
 			 int size = 0;
 
 			 for(int i=0;i<	refcount;i++)
 			 {
 				  recordBuf = new StringBuffer();
-				  referenceID = Integer.toString(i+1);
+				  //referenceID = Integer.toString(i+1);
+				  referenceID = i+1;
 				  recordBuf.append(mid);
 				  recordBuf.append(FIELDDELIM);
 				  if(accessNumber!=null)
@@ -221,9 +235,11 @@ public class BaseTableWriter
 				  }
 				  recordBuf.append(FIELDDELIM);
 				  recordBuf.append(referenceID);
+				  //System.out.println("referenceID="+referenceID);
 				  recordBuf.append(FIELDDELIM);
 				  if(REFERENCETITLE!=null && REFERENCETITLE.get(referenceID)!=null)
 				  {
+					  //System.out.println("REFERENCETITLE="+(String)REFERENCETITLE.get(referenceID));
 					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFERENCETITLE")).intValue(),
 					  									"REFERENCETITLE",
 					  									(String)REFERENCETITLE.get(referenceID)));
@@ -232,6 +248,7 @@ public class BaseTableWriter
 
 				  if(REFERENCEAUTHOR != null && REFERENCEAUTHOR.get(referenceID)!=null)
 				  {
+					  //System.out.println("REFERENCEAUTHOR="+(String)REFERENCEAUTHOR.get(referenceID));
 					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFERENCEAUTHOR")).intValue(),
 					  									"REFERENCEAUTHOR",
 					  									(String)REFERENCEAUTHOR.get(referenceID)));
@@ -239,6 +256,7 @@ public class BaseTableWriter
 				  recordBuf.append(FIELDDELIM);
 				  if(REFERENCESOURCETITLE != null && REFERENCESOURCETITLE.get(referenceID)!=null)
 				  {
+					  //System.out.println("REFERENCESOURCETITLE="+(String)REFERENCESOURCETITLE.get(referenceID));
 					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFERENCESOURCETITLE")).intValue(),
 														"REFERENCESOURCETITLE",
 														(String)REFERENCESOURCETITLE.get(referenceID)));
@@ -248,6 +266,7 @@ public class BaseTableWriter
 				  if(REFERENCEPUBLICATIONYEAR != null && REFERENCEPUBLICATIONYEAR.get(referenceID)!=null)
 				  {
 					  String value =  (String)REFERENCEPUBLICATIONYEAR.get(referenceID);
+					  //System.out.println("REFERENCEPUBLICATIONYEAR="+(String)REFERENCEPUBLICATIONYEAR.get(referenceID));
 					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFERENCEPUBLICATIONYEAR")).intValue(),
 					  									"REFERENCEPUBLICATIONYEAR",
 					  									(String)REFERENCEPUBLICATIONYEAR.get(referenceID)));
@@ -256,6 +275,7 @@ public class BaseTableWriter
 
 				  if(REFERENCEVOLUME !=null && REFERENCEVOLUME.get(referenceID)!=null)
 				  {
+					  //System.out.println("REFERENCEVOLUME="+(String)REFERENCEVOLUME.get(referenceID));
 					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFERENCEVOLUME")).intValue(),
 					  									"REFERENCEVOLUME",
 					  									(String)REFERENCEVOLUME.get(referenceID)));
@@ -264,6 +284,7 @@ public class BaseTableWriter
 
 				  if(REFERENCEISSUE !=null && REFERENCEISSUE.get(referenceID)!=null)
 				  {
+					  //System.out.println("REFERENCEISSUE="+(String)REFERENCEISSUE.get(referenceID));
 					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFERENCEISSUE")).intValue(),
 					  									"REFERENCEISSUE",
 					  									(String)REFERENCEISSUE.get(referenceID)));
@@ -272,6 +293,7 @@ public class BaseTableWriter
 
 				  if(REFERENCEPAGES != null && REFERENCEPAGES.get(referenceID)!=null)
 				  {
+					  //System.out.println("REFERENCEPAGES="+(String)REFERENCEPAGES.get(referenceID));
 					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFERENCEPAGES")).intValue(),
 					  									"REFERENCEPAGES",
 					  									(String)REFERENCEPAGES.get(referenceID)));
@@ -280,6 +302,7 @@ public class BaseTableWriter
 
 				  if(REFERENCEFULLTEXT != null && REFERENCEFULLTEXT.get(referenceID)!=null)
 				  {
+					  //System.out.println("REFERENCEFULLTEXT="+(String)REFERENCEFULLTEXT.get(referenceID));
 					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFERENCEFULLTEXT")).intValue(),
 					  									"REFERENCEFULLTEXT",
 					  									(String)REFERENCEFULLTEXT.get(referenceID)));
@@ -288,6 +311,7 @@ public class BaseTableWriter
 
 				  if(REFERENCETEXT != null && REFERENCETEXT.get(referenceID)!=null)
 				  {
+					  //System.out.println("REFERENCETEXT="+(String)REFERENCETEXT.get(referenceID));
 					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFERENCETEXT")).intValue(),
 					  									"REFERENCETEXT",
 					  									(String)REFERENCETEXT.get(referenceID)));
@@ -296,6 +320,7 @@ public class BaseTableWriter
 
 				  if(REFERENCEWEBSITE != null && REFERENCEWEBSITE.get(referenceID)!=null)
 				  {
+					  //System.out.println("REFERENCEWEBSITE="+(String)REFERENCEWEBSITE.get(referenceID));
 					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFERENCEWEBSITE")).intValue(),
 					  									"REFERENCEWEBSITE",
 					  									(String)REFERENCEWEBSITE.get(referenceID)));
@@ -304,6 +329,7 @@ public class BaseTableWriter
 
 				  if(REFERENCEITEMID != null && REFERENCEITEMID.get(referenceID)!=null)
 				  {
+					  //System.out.println("REFERENCEITEMID="+(String)REFERENCEITEMID.get(referenceID));
 					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFERENCEITEMID")).intValue(),
 					  									"REFERENCEITEMID",
 					  									(String)REFERENCEITEMID.get(referenceID)));
@@ -312,6 +338,7 @@ public class BaseTableWriter
 
 				  if(REFERENCEITEMCITATIONPII != null && REFERENCEITEMCITATIONPII.get(referenceID)!=null)
 				  {
+					  //System.out.println("REFERENCEITEMCITATIONPII="+(String)REFERENCEITEMCITATIONPII.get(referenceID));
 					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFERENCEITEMCITATIONPII")).intValue(),
 					  									"REFERENCEITEMCITATIONPII",
 					  									(String)REFERENCEITEMCITATIONPII.get(referenceID)));
@@ -320,6 +347,7 @@ public class BaseTableWriter
 
 				  if(REFERENCEITEMCITATIONDOI != null && REFERENCEITEMCITATIONDOI.get(referenceID)!=null)
 				  {
+					 //System.out.println("REFERENCEITEMCITATIONDOI="+(String)REFERENCEITEMCITATIONDOI.get(referenceID));
 					 recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFERENCEITEMCITATIONDOI")).intValue(),
 					 									"REFERENCEITEMCITATIONDOI",
 					 									(String)REFERENCEITEMCITATIONDOI.get(referenceID)));
@@ -328,6 +356,7 @@ public class BaseTableWriter
 
 				  if(REFERENCEITEMCITATIONAUTHOR != null && REFERENCEITEMCITATIONAUTHOR.get(referenceID)!=null)
 				  {
+					  //System.out.println("REFERENCEITEMCITATIONAUTHOR="+(String)REFERENCEITEMCITATIONAUTHOR.get(referenceID));
 					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFERENCEITEMCITATIONAUTHOR")).intValue(),
 					  									"REFERENCEITEMCITATIONAUTHOR",
 					  									(String)REFERENCEITEMCITATIONAUTHOR.get(referenceID)));
@@ -336,6 +365,7 @@ public class BaseTableWriter
 
 				  if(REFITEMCITATIONSOURCETITLE != null && REFITEMCITATIONSOURCETITLE.get(referenceID)!=null)
 				  {
+					  //System.out.println("***REFITEMCITATIONSOURCETITLE="+(String)REFITEMCITATIONSOURCETITLE.get(referenceID));
 					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFITEMCITATIONSOURCETITLE")).intValue(),
 					  									"REFITEMCITATIONSOURCETITLE",
 					  									(String)REFITEMCITATIONSOURCETITLE.get(referenceID)));
@@ -344,6 +374,7 @@ public class BaseTableWriter
 
 				  if(REFERENCEITEMCITATIONISSN != null && REFERENCEITEMCITATIONISSN.get(referenceID)!=null)
 				  {
+					  //System.out.println("REFERENCEITEMCITATIONISSN="+(String)REFERENCEITEMCITATIONISSN.get(referenceID));
 					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFERENCEITEMCITATIONISSN")).intValue(),
 					  									"REFERENCEITEMCITATIONISSN",
 					  									(String)REFERENCEITEMCITATIONISSN.get(referenceID)));
@@ -351,6 +382,7 @@ public class BaseTableWriter
 				  recordBuf.append(FIELDDELIM);
 				  if(REFERENCEITEMCITATIONISBN !=null && REFERENCEITEMCITATIONISBN.get(referenceID)!=null)
 				  {
+					  //System.out.println("REFERENCEITEMCITATIONISBN="+(String)REFERENCEITEMCITATIONISBN.get(referenceID));
 					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFERENCEITEMCITATIONISBN")).intValue(),
 					  									"REFERENCEITEMCITATIONISBN",
 					  									(String)REFERENCEITEMCITATIONISBN.get(referenceID)));
@@ -358,20 +390,24 @@ public class BaseTableWriter
 				  recordBuf.append(FIELDDELIM);
 				  if(REFERENCEITEMCITATIONPART != null && REFERENCEITEMCITATIONPART.get(referenceID)!=null)
 				  {
+					  //System.out.println("REFERENCEITEMCITATIONPART="+(String)REFERENCEITEMCITATIONPART.get(referenceID));
 					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFERENCEITEMCITATIONPART")).intValue(),
 					  									"REFERENCEITEMCITATIONPART",
 					  									(String)REFERENCEITEMCITATIONPART.get(referenceID)));
 				  }
 				  recordBuf.append(FIELDDELIM);
 				  if(REFITEMCITATIONPUBLICATIONYEAR != null && REFITEMCITATIONPUBLICATIONYEAR.get(referenceID)!=null)
-				  {
-					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFITEMCITATIONPUBLICATIONYEAR")).intValue(),
-					  									"REFITEMCITATIONPUBLICATIONYEAR",
+				  {  
+					  
+					  //System.out.println("REFITEMCITATIONPUBLICATIONYEAR="+(String)REFITEMCITATIONPUBLICATIONYEAR.get(referenceID));
+					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFERENCEITEMCITATIONPUBLICATIONYEAR")).intValue(),
+					  									"REFERENCEITEMCITATIONPUBLICATIONYEAR",
 					  									(String)REFITEMCITATIONPUBLICATIONYEAR.get(referenceID)));
 				  }
 				  recordBuf.append(FIELDDELIM);
 				  if(REFERENCEITEMCITATIONVOLUME != null && REFERENCEITEMCITATIONVOLUME.get(referenceID)!=null)
 				  {
+					  //System.out.println("REFERENCEITEMCITATIONVOLUME="+(String)REFERENCEITEMCITATIONVOLUME.get(referenceID));
 					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFERENCEITEMCITATIONVOLUME")).intValue(),
 					  									"REFERENCEITEMCITATIONVOLUME",
 					  									(String)REFERENCEITEMCITATIONVOLUME.get(referenceID)));
@@ -379,6 +415,7 @@ public class BaseTableWriter
 				  recordBuf.append(FIELDDELIM);
 				  if(REFERENCEITEMCITATIONISSUE != null && REFERENCEITEMCITATIONISSUE.get(referenceID)!=null)
 				  {
+					  //System.out.println("REFERENCEITEMCITATIONISSUE="+(String)REFERENCEITEMCITATIONISSUE.get(referenceID));
 					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFERENCEITEMCITATIONISSUE")).intValue(),
 					  									"REFERENCEITEMCITATIONISSUE",
 					  									(String)REFERENCEITEMCITATIONISSUE.get(referenceID)));
@@ -386,6 +423,7 @@ public class BaseTableWriter
 				  recordBuf.append(FIELDDELIM);
 				  if(REFERENCEITEMCITATIONPAGE != null && REFERENCEITEMCITATIONPAGE.get(referenceID)!=null)
 				  {
+					  //System.out.println("REFERENCEITEMCITATIONPAGE="+(String)REFERENCEITEMCITATIONPAGE.get(referenceID));
 					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFERENCEITEMCITATIONPAGE")).intValue(),
 					  									"REFERENCEITEMCITATIONPAGE",
 					  									(String)REFERENCEITEMCITATIONPAGE.get(referenceID)));
@@ -393,6 +431,7 @@ public class BaseTableWriter
 				  recordBuf.append(FIELDDELIM);
 				  if(REFITEMCITATIONARTICLENUMBER != null && REFITEMCITATIONARTICLENUMBER.get(referenceID)!=null)
 				  {
+					  //System.out.println("REFITEMCITATIONARTICLENUMBER="+(String)REFITEMCITATIONARTICLENUMBER.get(referenceID));
 					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFITEMCITATIONARTICLENUMBER")).intValue(),
 					  									"REFITEMCITATIONARTICLENUMBER",
 					  									(String)REFITEMCITATIONARTICLENUMBER.get(referenceID)));
@@ -400,6 +439,7 @@ public class BaseTableWriter
 				  recordBuf.append(FIELDDELIM);
 				  if(REFERENCEITEMCITATIONWEBSITE != null && REFERENCEITEMCITATIONWEBSITE.get(referenceID)!=null)
 				  {
+					  //System.out.println("REFERENCEITEMCITATIONWEBSITE="+(String)REFERENCEITEMCITATIONWEBSITE.get(referenceID));
 					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFERENCEITEMCITATIONWEBSITE")).intValue(),
 					  									"REFERENCEITEMCITATIONWEBSITE",
 					  									(String)REFERENCEITEMCITATIONWEBSITE.get(referenceID)));
@@ -407,6 +447,7 @@ public class BaseTableWriter
 				  recordBuf.append(FIELDDELIM);
 				  if(REFERENCEITEMCITATIONEADDRESS != null && REFERENCEITEMCITATIONEADDRESS.get(referenceID)!=null)
 				  {
+					  //System.out.println("***REFERENCEITEMCITATIONEADDRESS="+(String)REFERENCEITEMCITATIONEADDRESS.get(referenceID));
 					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFERENCEITEMCITATIONEADDRESS")).intValue(),
 					  									"REFERENCEITEMCITATIONEADDRESS",
 					  									(String)REFERENCEITEMCITATIONEADDRESS.get(referenceID)));
@@ -414,6 +455,7 @@ public class BaseTableWriter
 				  recordBuf.append(FIELDDELIM);
 				  if(REFERENCEITEMCITATIONREFTEXT != null && REFERENCEITEMCITATIONREFTEXT.get(referenceID)!=null)
 				  {
+					  //System.out.println("REFERENCEITEMCITATIONREFTEXT="+(String)REFERENCEITEMCITATIONREFTEXT.get(referenceID));
 					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFERENCEITEMCITATIONREFTEXT")).intValue(),
 					  									"REFERENCEITEMCITATIONREFTEXT",
 					  									(String)REFERENCEITEMCITATIONREFTEXT.get(referenceID)));
@@ -423,48 +465,91 @@ public class BaseTableWriter
 
 				  if(REFERENCEITEMCITATIONCITATIONTITLE != null && REFERENCEITEMCITATIONCITATIONTITLE.get(referenceID)!=null)
 				  {
+					  //System.out.println("***REFERENCEITEMCITATIONCITATIONTITLE="+(String)REFERENCEITEMCITATIONCITATIONTITLE.get(referenceID));
 					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFERENCEITEMCITATIONCITATIONTITLE")).intValue(),
 					  									"REFERENCEITEMCITATIONCITATIONTITLE",
 					  									(String)REFERENCEITEMCITATIONCITATIONTITLE.get(referenceID)));
 				  }
 				  recordBuf.append(FIELDDELIM);
+			   
 				  if(REFERENCEITEMCITATIONSOURCETITLEABBREV != null && REFERENCEITEMCITATIONSOURCETITLEABBREV.get(referenceID)!=null)
 				  {
-					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFERENCEITEMCITATIONSOURCETITLEABBREV")).intValue(),
-					  									"REFERENCEITEMCITATIONSOURCETITLEABBREV",
+					 //System.out.println("REFERENCEITEMCITATIONSOURCETITLEABBREV="+(String)REFERENCEITEMCITATIONSOURCETITLEABBREV.get(referenceID));
+					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFCITATIONSOURCETITLEABBREV")).intValue(),
+					  									"REFCITATIONSOURCETITLEABBREV",
 					  									(String)REFERENCEITEMCITATIONSOURCETITLEABBREV.get(referenceID)));
-				  }
+				  }			  
+				  
 				  recordBuf.append(FIELDDELIM);
+				  
 				  if(REFERENCEITEMCITATIONCODEN != null && REFERENCEITEMCITATIONCODEN.get(referenceID)!=null)
 				  {
+					  //System.out.println("REFERENCEITEMCITATIONCODEN="+(String)REFERENCEITEMCITATIONCODEN.get(referenceID));
 					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFERENCEITEMCITATIONCODEN")).intValue(),
 					  									"REFERENCEITEMCITATIONCODEN",
 					  									(String)REFERENCEITEMCITATIONCODEN.get(referenceID)));
 				  }
+				  
 				  recordBuf.append(FIELDDELIM);
 				  
 				  if(pui != null)
 				  {
-					  recordBuf.append(pui);
+					  recordBuf.append(pui.trim());
 				  }
+				  
 				  recordBuf.append(FIELDDELIM);
 				  
 				  if(loadnumber!=null)
 				  {
 					  recordBuf.append(loadnumber);
 				  }
+				  
 				  recordBuf.append(FIELDDELIM);
 				  
 				  if(updatenumber!=null)
 				  {
 					  recordBuf.append(loadnumber);
 				  }
+				  
 				  recordBuf.append(FIELDDELIM);
+				 
+				  
+				  // following fields are for CAFE Data
+				  
+				  if(REFERENCEITEMCITATIONEID != null && REFERENCEITEMCITATIONEID.get(referenceID)!=null)
+				  {
+					  //System.out.println("REFERENCEITEMCITATIONEID= "+REFERENCEITEMCITATIONEID.get(referenceID));
+					  recordBuf.append((String)REFERENCEITEMCITATIONEID.get(referenceID));
+				  }
+				  				  
+				  recordBuf.append(FIELDDELIM);
+ 				  
+				  if(REFERENCEITEMCITATIONID != null && REFERENCEITEMCITATIONID.get(referenceID)!=null)
+				  {
+					  //System.out.println("CITATIONID= "+REFERENCEITEMCITATIONID.get(referenceID));
+					  recordBuf.append((String)REFERENCEITEMCITATIONID.get(referenceID));
+				  }
+				  
+				  recordBuf.append(FIELDDELIM);	
+				  
+				  if(REFITEMCITATIONAFFILIATION != null && REFITEMCITATIONAFFILIATION.get(referenceID)!=null)
+				  {
+					  //System.out.println("---REFERENCEITEMCITATIONAFFILIATION="+(String)REFITEMCITATIONAFFILIATION.get(referenceID));
+					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFITEMCITATIONAFFILIATION")).intValue(),
+					  									"REFITEMCITATIONAFFILIATION",
+					  									(String)REFITEMCITATIONAFFILIATION.get(referenceID)));
+					  //System.out.println("---RECORD= "+recordBuf.toString());
+				  }
+				  
 				  if(accessNumber!=null && accessNumber.length()>0)
 				  {
 					  referenceOut.println(recordBuf.toString().trim());
 				  }
-
+				  
+				  
+				  
+				
+				  //System.out.println("*****************************************************************************");
 			 }
 
 	   }
@@ -556,7 +641,7 @@ public class BaseTableWriter
 		if(input!= null && input.indexOf('\t')>0)
 		{
 			output=perl.substitute("s/\\t/ /g", input);
-			System.out.println("***************remove tab character from record accessnumber= "+getAccessionNumber());
+			//System.out.println("***************remove tab character from record accessnumber= "+getAccessionNumber());
 		}
 		return output;
 	}

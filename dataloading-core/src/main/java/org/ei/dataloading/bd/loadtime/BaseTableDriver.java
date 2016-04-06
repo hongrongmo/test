@@ -25,7 +25,7 @@ public class BaseTableDriver
     private int loadNumber;
     private String databaseName;
     private String action;
-    private static String startRootElement ="<?xml version=\"1.0\" standalone=\"no\"?><!DOCTYPE bibdataset SYSTEM \"ani512.dtd\"><bibdataset xmlns:ce=\"http://www.elsevier.com/xml/common/dtd\" xmlns:ait=\"http://www.elsevier.com/xml/ait/dtd\">";
+    private static String startRootElement ="<?xml version=\"1.0\" standalone=\"no\"?><!DOCTYPE bibdataset SYSTEM \"ani512.dtd\"><bibdataset xmlns:ce=\"http://www.elsevier.com/xml/common/dtd\" xmlns:xoe=\"http://www.elsevier.com/xml/xoe/dtd\" xmlns:ait=\"http://www.elsevier.com/xml/ait/dtd\">";
     private static String endRootElement   ="</bibdataset>";
     private static Connection con;
     private static String infile;
@@ -34,6 +34,24 @@ public class BaseTableDriver
     private static String username = "ba_loading";
     private static String password = "ny5av";
     private static List<String> blockedIssnList;
+    //HH 02/2016 for Cafe Processing
+    BufferedReader bfReader = null;
+    boolean cafe = false;
+
+    //HH 02/2016 for Cafe COnverting
+    public void writeBaseTableFile(String infile, Connection con, BufferedReader reader, boolean cafe)
+    {
+		  try
+		  {
+		    this.bfReader = reader;
+		    this.cafe = cafe;
+		    writeBaseTableFile(infile, con);
+		  }
+		  catch (Exception e)
+		  {
+		    e.printStackTrace();
+		  }
+    }
 
     public static void main(String args[])
         throws Exception
@@ -202,13 +220,21 @@ public class BaseTableDriver
                 System.out.println("IS XML FILE");
                 in = new BufferedReader(new FileReader(infile));
                 writeRecs(in,con);
+            }        
+            else if (this.cafe)   //HH 02/2016 for Cafe
+            {
+              System.out.println("IS CAFE FILE");
+              in = this.bfReader;
+              writeRecs(in, con);
             }
             else
             {
                 System.out.println("this application only handle xml and zip file");
             }
 
-            List nullAccessNumberRecordList = baseWriter.getNullAccessNumberRecord();
+            /* remove these to avoid clog log file
+             * 
+            List nullAccessNumberRecordList = baseWriter.getNullAccessNumberRecord();          
             if(nullAccessNumberRecordList.size()>0)
             {
             	System.out.println("there are "+baseWriter.getNullAccessNumberRecord().size()+" records with null accessnumber");
@@ -216,7 +242,7 @@ public class BaseTableDriver
             	for(int i=0;i<nullAccessNumberRecordList.size();i++)
             	{
             		String pui = (String)nullAccessNumberRecordList.get(i);
-            		System.out.print(pui);
+            		//System.out.print(pui);
             		if(i<nullAccessNumberRecordList.size()-1)
             		{
             			System.out.print(",");
@@ -227,6 +253,7 @@ public class BaseTableDriver
             		}
             	}
             }
+            */
             baseWriter.end();
 
         }
@@ -372,6 +399,7 @@ public class BaseTableDriver
         Hashtable readRecord(BufferedReader xmlReader) throws Exception
         {
             String line = null;
+            String document_eid = null;
             r = new BdParser();
             StringBuffer sBuffer = new StringBuffer();
             r.setWeekNumber(Integer.toString(loadNumber));
@@ -381,6 +409,11 @@ public class BaseTableDriver
            
             while((line=xmlReader.readLine())!=null)
             {
+            	
+            	if(line.indexOf("<xoe:document-id>")>-1)
+            	{
+            		document_eid = line;                     	
+            	}
                 if(start)
                 {
                     sBuffer.append(line);
@@ -391,12 +424,16 @@ public class BaseTableDriver
                     start = true;
                     sBuffer = new StringBuffer();
                     sBuffer.append(line);
+                    if(document_eid!=null)
+                    {
+                    	sBuffer.append(document_eid);                   	
+                    }
                 }
 
                 if(line.indexOf("</item>")>-1)
                 {
-                    start = false;
-
+                    start = false; 
+                    document_eid = null;
                 }
 
                 if(!start)
@@ -406,6 +443,7 @@ public class BaseTableDriver
                     	try{
 	                        sBuffer.insert(0,startRootElement);
 	                        sBuffer.append(endRootElement);
+	                        //System.out.println(sBuffer.toString());
 	                        r.parseRecord(new StringReader(sBuffer.toString()));
                     	}
                     	catch(Exception e)
@@ -425,51 +463,54 @@ public class BaseTableDriver
                 		{
                     		boolean issnFlag=false;
                     		
-	                    	for(int i=0;i<blockedIssnList.size();i++)
-	                    	{
-	                    		  String blockedIssn = blockedIssnList.get(i);
-	                    		  
-	                    		  if(blockedIssn.indexOf("EISSN")>-1)
-	                    		  {
-	                    			 
-	                    			  blockedIssn = blockedIssn.substring(blockedIssn.indexOf(":")+1);
-	                    			  if(ht.get("EISSN")!=null)
-	                    			  {
-		                    			  String eissn = (String)ht.get("EISSN");
-		                    			  eissn=eissn.replaceAll("-", "");
-		                    			  if (eissn.equals(blockedIssn))
-				                		   {			       
-				                			   System.out.println("block record "+ht.get("ACCESSNUMBER")+" for eissn="+blockedIssn+" from BaseTableDriver");
-				                			   issnFlag=true;
-				                			   break;
-				                		   }
-	                    			  }
-	                    		  }
-	                    		  else if(blockedIssn.indexOf("ISSN")>-1)
-	                    		  {
-	                    			  blockedIssn = blockedIssn.substring(blockedIssn.indexOf(":")+1);
-	                    			  if (ht.get("ISSN")!=null)
-	                    			  {	                   
-	                    				  String issn = (String)ht.get("ISSN");
-	                    				  issn=issn.replaceAll("-", "");
-				                		  if (issn.equals(blockedIssn))
-				                		  {			                			   
-				                			   System.out.println("block record "+ht.get("ACCESSNUMBER")+" for issn="+blockedIssn+" from BaseTableDriver");
-				                			   issnFlag=true;
-				                			   break;
-				                		  }
-	                    			  }
-	                    		  }	
-	                    		  else
-	                    		  {
-	                    			  System.out.println("incorrect issn format, check blocked_issn table");
-	                    		  }
-	                    	  }
-	                    	  
-	                    	  if(issnFlag==true)
-	                    	  {
-	                    		  continue;
-	                    	  }
+                    		if(blockedIssnList!=null)
+                    		{
+		                    	for(int i=0;i<blockedIssnList.size();i++)
+		                    	{
+		                    		  String blockedIssn = blockedIssnList.get(i);
+		                    		  
+		                    		  if(blockedIssn.indexOf("EISSN")>-1)
+		                    		  {
+		                    			 
+		                    			  blockedIssn = blockedIssn.substring(blockedIssn.indexOf(":")+1);
+		                    			  if(ht.get("EISSN")!=null)
+		                    			  {
+			                    			  String eissn = (String)ht.get("EISSN");
+			                    			  eissn=eissn.replaceAll("-", "");
+			                    			  if (eissn.equals(blockedIssn))
+					                		   {			       
+					                			   System.out.println("block record "+ht.get("ACCESSNUMBER")+" for eissn="+blockedIssn+" from BaseTableDriver");
+					                			   issnFlag=true;
+					                			   break;
+					                		   }
+		                    			  }
+		                    		  }
+		                    		  else if(blockedIssn.indexOf("ISSN")>-1)
+		                    		  {
+		                    			  blockedIssn = blockedIssn.substring(blockedIssn.indexOf(":")+1);
+		                    			  if (ht.get("ISSN")!=null)
+		                    			  {	                   
+		                    				  String issn = (String)ht.get("ISSN");
+		                    				  issn=issn.replaceAll("-", "");
+					                		  if (issn.equals(blockedIssn))
+					                		  {			                			   
+					                			   System.out.println("block record "+ht.get("ACCESSNUMBER")+" for issn="+blockedIssn+" from BaseTableDriver");
+					                			   issnFlag=true;
+					                			   break;
+					                		  }
+		                    			  }
+		                    		  }	
+		                    		  else
+		                    		  {
+		                    			  System.out.println("incorrect issn format, check blocked_issn table");
+		                    		  }
+		                    	  }
+                    		}
+                    		
+	                    	if(issnFlag==true)
+							{
+	                    		continue;
+							}
                 		}
                     	
                         return r.getRecordTable();

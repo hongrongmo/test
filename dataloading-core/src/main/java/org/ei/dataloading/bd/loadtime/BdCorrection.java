@@ -263,7 +263,10 @@ public class BdCorrection
                 }
 
                 BaseTableDriver c = new BaseTableDriver(updateNumber,database);
-                c.setBlockedIssnList(con);
+                if(!action.equalsIgnoreCase("delete"))
+                {
+                	c.setBlockedIssnList(con);
+                }
                 c.writeBaseTableFile(fileToBeLoaded,con);
                 String dataFile=fileToBeLoaded+"."+updateNumber+".out";
                 File f = new File(dataFile);
@@ -333,7 +336,6 @@ public class BdCorrection
                 }
                 else if(action.equalsIgnoreCase("delete"))
                 {
-
                     bdc.processLookupIndex(new HashMap(),bdc.getLookupData("backup"));
                 }
                 else if(action.equalsIgnoreCase("aip"))
