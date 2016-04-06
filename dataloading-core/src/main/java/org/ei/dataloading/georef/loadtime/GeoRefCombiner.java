@@ -699,7 +699,46 @@ public void writeRecs(ResultSet rs)
 				rec.putIfNotNull(EVCombinedRec.DOI, rs.getString("DOI"));
 
 				rec.put(EVCombinedRec.PUB_SORT, Integer.toString(i));
+				
+				//added on 3/16/2016
+				if(rs.getString("TITLE_OF_COLLECTION")!=null)
+				{
+					//String test = "";
+					rec.putIfNotNull(EVCombinedRec.TITLE_OF_COLLECTION, runtimeDocview.getTitleOFCOLLECTION() );
+				}
+				
+				if(rs.getString("UNIVERSITY")!=null)
+				{
+					rec.putIfNotNull(EVCombinedRec.UNIVERSITY, rs.getString("UNIVERSITY"));
+				}
+				
+				if(rs.getString("TYPE_OF_DEGREE")!=null)
+				{
+					rec.putIfNotNull(EVCombinedRec.TYPE_OF_DEGREE, rs.getString("TYPE_OF_DEGREE"));
+				}
+				
+				if(rs.getString("ANNOTATION")!=null)
+				{
+					rec.putIfNotNull(EVCombinedRec.ANNOTATION, rs.getString("ANNOTATION").split(AUDELIMITER));
+				}
+				
+				if(rs.getString("MAP_SCALE")!=null)
+				{
+					rec.putIfNotNull(EVCombinedRec.MAP_SCALE, rs.getString("MAP_SCALE").split(AUDELIMITER));
+				}
+				
+				if(rs.getString("MAP_TYPE")!=null)
+				{
+					rec.putIfNotNull(EVCombinedRec.MAP_TYPE, rs.getString("MAP_TYPE").split(AUDELIMITER));
+				}
+				
+				if(rs.getString("SOURCE_NOTE")!=null)
+				{
+					rec.putIfNotNull(EVCombinedRec.SOURCE_NOTE, rs.getString("SOURCE_NOTE"));
+				}
 
+				//end of added
+				
 				try
 				{
 				  recVector.add(rec);
@@ -732,7 +771,6 @@ public void writeRecs(ResultSet rs)
 				  }
 
 				}
-
 				catch(Exception e)
 				{
 				  System.out.println("MID1 = " + rs.getString("M_ID"));
