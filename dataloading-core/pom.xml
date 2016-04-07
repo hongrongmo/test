@@ -134,6 +134,37 @@
 			<artifactId>commons-compress</artifactId>
 			<version>1.9</version>
 		</dependency>
+		<!-- HH: for Amazon SQS for CAFE' Feed 01/15/2016 -->
+		<dependency>
+  			<groupId>com.amazonaws</groupId>
+ 			 <artifactId>amazon-sqs-java-messaging-lib</artifactId>
+ 			 <version>1.0.0</version>
+ 			 <type>jar</type>
+		</dependency>
+		<!-- HH: 02/18/2016 for Amazon Lambda -->
+		<!-- <dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk-lambda</artifactId>
+			<version>1.10.21</version>
+		</dependency>
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-lambda-java-core</artifactId>
+			<version>1.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-lambda-java-events</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+ 			<artifactId>aws-lambda-java-log4j</artifactId>
+  			<version>1.0.0</version>
+  		 </dependency>
+  		  -->
+		
 	</dependencies>
 
 	<properties>
