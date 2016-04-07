@@ -432,7 +432,7 @@ public class BaseTableWriter
 				  if(REFITEMCITATIONARTICLENUMBER != null && REFITEMCITATIONARTICLENUMBER.get(referenceID)!=null)
 				  {
 					  //System.out.println("REFITEMCITATIONARTICLENUMBER="+(String)REFITEMCITATIONARTICLENUMBER.get(referenceID));
-					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFITEMCITATIONARTICLENUMBER")).intValue(),
+					  recordBuf.append(checkColumnWidth(((Integer)bdColumnsSize.get("REFERENCEITEMCITATIONARTICLENUMBER")).intValue(),
 					  									"REFITEMCITATIONARTICLENUMBER",
 					  									(String)REFITEMCITATIONARTICLENUMBER.get(referenceID)));
 				  }
