@@ -51,6 +51,10 @@ public class KnovelReader
 	static String loadNumber;
 	static String filename;
 	static String xmlFileName;
+	
+	//HH 03/18/2016 for S3
+	GetKnovelFilesFromS3 knovelS3 = null;
+	static String bucketName = "datafabrication-reports";
 
 	 public static void main(String[] args)
 	        throws Exception
@@ -68,6 +72,7 @@ public class KnovelReader
 			url=args[3];
 			username = args[4];
 			password = args[5];
+			bucketName = args[6];  //HH 03/18/2016 for S3
 		}
 
 		KnovelReader r = new KnovelReader();
@@ -80,6 +85,14 @@ public class KnovelReader
 				filename = filename.substring(filename.lastIndexOf("/")+1);
 			}
 			r.init(database,filename);
+			//r.readGroupFile(r.path, filename);
+			
+			//HH 03/18/2016 for S3
+			if(bucketName !=null && bucketName.length() >0)
+			{
+				r.readGroupFilefromS3(r.path, filename);
+			}
+			else
 			r.readGroupFile(r.path, filename);
 			
 		}
@@ -103,6 +116,16 @@ public class KnovelReader
 		this.loadNumber = updateNumber;
 		init(database,filename);
 	}
+	
+	//HH 03/22/2016 for knovel correction by getting files from S3 bucket
+	
+		public KnovelReader(String updateNumber,String database,String filename, String bucketName)
+		{
+			this.loadNumber = updateNumber;
+			this.bucketName = bucketName;
+			init(database,filename);
+		}
+		
 	 
 	public void readGroupFile(String path, String filename) throws Exception
 	{
@@ -144,7 +167,75 @@ public class KnovelReader
 		}
 
 	}
-	 
+	
+	//HH 03/18/2016 read files from S3 bucket
+
+	public void readGroupFilefromS3(String path, String filename) throws Exception
+	{
+		String subpath ="";
+		this.path = path;
+
+		HashMap fileMap = getFilesFromGroupFileInS3(filename);
+		Iterator<String> fileIterator = fileMap.keySet().iterator(); 
+
+		while(fileIterator.hasNext())
+		{
+			String name = (String)fileIterator.next();
+			String lastModify = (String)fileMap.get(name);
+
+			try
+			{
+				//File inputFiles = null;
+				InputStream inputFiles = null;
+				if(path !=null && path.length()>0)
+				{					
+					name = path+"/"+name;
+					this.path = name.substring(0,name.lastIndexOf("/"));				
+				}
+				else if(name !=null && name.contains("/"))
+				{
+					this.path = name.substring(0,name.lastIndexOf("/"));
+				}
+
+				//inputFiles = new File(name);
+				//Thread.sleep(5000);   // sleep for 5 seconds
+				knovelS3.getFileContentFromS3(name);
+
+				//if(inputFiles.exists())
+				if(knovelS3.objectData !=null)
+				{
+					//fileReader(inputFiles,lastModify);
+					fileReaderFromS3(knovelS3.objectData,name,lastModify);
+				}
+				else
+				{					
+					System.out.println("File "+name+" has no content");												
+				}
+			}
+			catch(Exception e)
+			{
+				e.printStackTrace();
+			}
+
+			finally
+			{
+				if(knovelS3.objectData !=null)
+				{
+					try
+					{
+						knovelS3.objectData.close();
+					}
+					catch(IOException ioex)
+					{
+						ioex.printStackTrace();
+					}
+				}
+			} 
+		}
+
+
+	}
+		 
 	private HashMap getFilesFromGroupFile(String name)
 	{
 		HashMap groupMap = new HashMap();
@@ -181,6 +272,47 @@ public class KnovelReader
 		return groupMap;		
 	}
 	
+	//HH 03/18/2016
+	private HashMap getFilesFromGroupFileInS3(String name)
+	{
+		HashMap groupMap = new HashMap();
+		try
+		{
+			// download file from S3 bucket
+			knovelS3 = new GetKnovelFilesFromS3(bucketName);
+			knovelS3.downloadGroupFileFromS3(name.substring(name.lastIndexOf("/")+1, name.length()).trim());
+
+			System.out.println("GROUPFILENAME="+name);
+			File inputFiles = new File(name);		
+
+			SAXBuilder builder = new SAXBuilder();
+
+			Document doc = builder.build(inputFiles);
+			Element root = doc.getRootElement();
+
+			List urls = root.getChildren("url",groupNamespace);
+
+			for(int i=0;i<urls.size();i++)
+			{
+
+				Element url = (Element)urls.get(i);
+				String loc = url.getChildText("loc",groupNamespace);
+				if(loc!=null)
+				{					
+					loc = loc.replaceAll("/federation/","");
+				}
+				String lastmod = url.getChildText("lastmod",groupNamespace);
+				Timestamp lastupdate = convertStringToTimestamp(lastmod);
+				groupMap.put(loc,lastupdate.toString());
+			}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return groupMap;		
+	}
+
 	public static Timestamp convertStringToTimestamp(String str_date) {
 	    try {
 	      SimpleDateFormat formatter;
@@ -222,7 +354,34 @@ public class KnovelReader
 			}
 	}
 
-	
+	//HH 03/18/2016 read each file content from S3 Bucket
+
+	private void fileReaderFromS3(InputStream s3FileContent,String fileName, String lastModify)
+	{			
+		BufferedReader xmlReader = null;		
+		try
+		{
+			xmlReader = new BufferedReader(new InputStreamReader(s3FileContent));
+			knovelXmlParser(xmlReader,fileName,lastModify);
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			try
+			{
+				xmlReader.close();
+			}
+			catch(Exception e)
+			{
+				e.printStackTrace();
+			}
+		}
+	}
+
+		
 	private void close()
 	{
 		System.out.println("Close..............");
@@ -980,6 +1139,13 @@ public class KnovelReader
 			}
 			else if(rel !=null && rel.equals("fulltoc"))
 			{
+				//getFullTextToc(href,record);
+				if(bucketName !=null && bucketName.length() >0)
+				{
+					//HH 03/21/2016 get fulltoc from S3 bucket
+					getFullTextTocFromS3(href,record);
+				}
+				else
 				getFullTextToc(href,record);
 			}		
 		}	
@@ -1108,5 +1274,66 @@ public class KnovelReader
             }
         }
 	}
+	
+	//HH 03/21/2016 get fulltextTOC from S3 bucket
+
+	private void getFullTextTocFromS3(String href,HashMap record) throws Exception
+	{
+		BufferedReader in = null;
+		String filename = href;
+		Document fullDocToc=null;
+		StringBuffer tocBuffer = new StringBuffer();
+		try
+		{
+
+			if(filename!=null)
+			{
+				if(this.path!=null && this.path.length()>0)
+				{
+					knovelS3.getFileContentFromS3(this.path+"/"+filename);
+					in = new BufferedReader(new InputStreamReader(knovelS3.objectData));
+				}
+				else
+				{
+					knovelS3.getFileContentFromS3(filename);
+					in = new BufferedReader(new InputStreamReader(knovelS3.objectData));
+				}
+				//System.out.println("FULLTEXTFILENAME="+this.path+"/"+filename);
+				SAXBuilder builder = new SAXBuilder();
+				builder.setExpandEntities(false);
+				fullDocToc = builder.build(in);
+				Element root = fullDocToc.getRootElement();
+				//Element entry = root.getChild("entry");
+				getTOC(root,tocBuffer);
+
+			}
+			else
+			{
+				System.out.println("fulltexttoc file "+filename+" is not available");
+			}
+		}        
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			//System.out.println("FULLTEXTTOC= "+ tocBuffer.toString());
+			if(tocBuffer.length()>0)
+			{
+				//System.out.println("FULLTEXTTOC"+tocBuffer.toString());
+				record.put("FULLTEXTTOC",tocBuffer.toString());
+			}
+			try
+			{
+				in.close();
+			}
+			catch(Exception e)
+			{
+				e.printStackTrace();
+			}
+		}
+	}
+
 }
 
