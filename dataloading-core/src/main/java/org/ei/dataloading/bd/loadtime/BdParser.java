@@ -68,6 +68,7 @@ public class BdParser
 		descriptorsTypeTable.put("MED","CHEMICALTERM");
 		descriptorsTypeTable.put("CTC","TREATMENTCODE");
 		descriptorsTypeTable.put("CFL","UNCONTROLLEDTERM");
+		descriptorsTypeTable.put("CLU","UNCONTROLLEDTERM");
 	}
 
 	public BdParser()
@@ -2287,6 +2288,10 @@ public class BdParser
 					issnType = (String)issn.getAttributeValue("type");
 					if(issnValue!= null)
 					{
+						if(issnType==null)
+						{
+							issnType="print";
+						}
 						if(issnType!=null && issnType.equalsIgnoreCase("print"))
 						{
 							record.put("ISSN",issnValue);
