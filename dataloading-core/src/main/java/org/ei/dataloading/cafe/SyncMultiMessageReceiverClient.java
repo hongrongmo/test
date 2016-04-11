@@ -278,8 +278,6 @@ public class SyncMultiMessageReceiverClient {
 				ArrayList<Message> messages = (ArrayList<Message>)receiveMessageResult.getMessages();
 				System.out.println("MessagesList size: " + messages.size());
 				
-				String msgString = "{ \"bucket\" : \"sc-ani-xml-prod\", \"entries\" : [{ \"key\" : \"84924669754\", \"issn\" : \"13646613\", \"epoch\" : \"1459848208962\", \"xocs-timestamp\" : \"2016-04-05T08:45:33.093056Z\", \"pui\" : \"605036838\", \"eid\" : \"2-s2.0-84924669754\", \"load-unit-id\" : \"swd_uC43700445278.dat\", \"version\" : \"2016-04-05T08:15:52.000052+01:00\", \"pii\" : \"S1364661314002770\", \"modification\" : \"CONTENT\", \"prefix\" : \"2-s2.0\", \"document-type\" : \"core\", \"action\" : \"u\", \"sort-year\" : \"2015\", \"dbcollcodes\" : \"CABS|CPX|EMBASE|MEDL|Scopusbase\", \"doi\" : \"10.1016/j.tics.2014.12.010\" } ] }";
-
 				
 				if(messages.size() >0)
 				{
@@ -294,8 +292,7 @@ public class SyncMultiMessageReceiverClient {
 							msgReciptHandle = message.getReceiptHandle();  // for deleting the message 
 
 							//parse SQS Message Fields& determine whether it is "ANI" message
-							//if(obj.ParseSQSMessage(message.getBody()))   //for Prod
-							if(obj.ParseSQSMessage(msgString))    //for testing
+							if(obj.ParseSQSMessage(message.getBody()))   //for Prod
 							{
 								// change message visibility timeout
 								msgVisibilityReq = new ChangeMessageVisibilityRequest(myQueueUrl, msgReciptHandle, MESSAGE_VISIBILITY_TIME_OUT_SECONDS);
@@ -304,6 +301,10 @@ public class SyncMultiMessageReceiverClient {
 								
 								action = obj.getMessageField("action");
 								msgEpoch = Long.parseLong(obj.getMessageField("epoch"));
+								
+								
+								// give time for each of the Converted CPX content be written in out file
+								//Thread.currentThread().sleep(100);
 
 
 								//check if S3 File, contains CPX record, and SQS action is add/update (msgEpoch > objEpoch)/delete, then convert it
@@ -347,7 +348,6 @@ public class SyncMultiMessageReceiverClient {
 							// delete the message
 							deleteMessage(msgReciptHandle);
 						}
-
 
 					}
 				}

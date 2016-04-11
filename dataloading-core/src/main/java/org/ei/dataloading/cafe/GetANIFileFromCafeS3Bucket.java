@@ -36,6 +36,7 @@ public class GetANIFileFromCafeS3Bucket {
 	String key = "";
 	boolean cafe = true;
 	String action = "normal";
+	String snsAction="";  // Action in SQS' SNS Metadata
 	String s3FileLoc = "";  //in format of Bucket/Key for later tracing loaded files
 	
 	
@@ -212,9 +213,14 @@ public class GetANIFileFromCafeS3Bucket {
 				object = s3Client.getObject(new GetObjectRequest (bucketName, key));
 				objectData = object.getObjectContent();
 			/*}*/
-			parseS3File (objectData, updateNumber,
+			/*parseS3File (objectData, updateNumber,
 					database, connectionURL, driver,
-					username, password,sqlldrFileName);
+					username, password,sqlldrFileName);*/
+				
+				parseS3File (updateNumber,
+						database, connectionURL, driver,
+						username, password,sqlldrFileName);
+				
 			
 		}
 		
@@ -622,12 +628,15 @@ public class GetANIFileFromCafeS3Bucket {
 	
 	
 	
-	public void parseS3File (InputStream s3FileContent, int updateNumber,
+	/*public void parseS3File (InputStream s3FileContent, int updateNumber,
 							String database, String connectionURL, String driver,
-							String username, String password, String sqlldrFileName) throws IOException
+							String username, String password, String sqlldrFileName) throws IOException*/
+	public void parseS3File (int updateNumber,
+			String database, String connectionURL, String driver,
+			String username, String password, String sqlldrFileName) throws IOException
 	{
 
-		reader = new BufferedReader(new InputStreamReader(s3FileContent));
+		reader = new BufferedReader(new InputStreamReader(objectData));
 		reader = new BufferedReader(new InputStreamReader(new ByteArrayInputStream(reader.readLine().replaceAll("><", ">\n<").getBytes())));
 		
 		s3FileLoc = this.bucketName+"/"+this.key;
