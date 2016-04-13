@@ -3,6 +3,7 @@ package org.ei.dataloading.cafe;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -12,6 +13,7 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.util.HashMap;
 
+import org.apache.commons.io.IOUtils;
 import org.ei.dataloading.bd.loadtime.BaseTableDriver;
 
 import com.amazonaws.AmazonClientException;
@@ -30,19 +32,23 @@ import com.amazonaws.services.s3.model.S3ObjectSummary;
 import com.amazonaws.services.s3.transfer.Download;
 import com.amazonaws.services.s3.transfer.TransferManager;
 
+
 public class GetANIFileFromCafeS3Bucket {
 
 	String bucketName = "";
 	String key = "";
 	boolean cafe = true;
 	String action = "normal";
-	String snsAction="";  // Action in SQS' SNS Metadata
+	String msgAction="";  // Action in SQS' SNS Metadata
+	long msgEpoch;
 	String s3FileLoc = "";  //in format of Bucket/Key for later tracing loaded files
 	
 	
 	BufferedReader reader = null;
 	
 	BufferedReader S3Filecontents = null;
+	private InputStream s3FileContentCopy = null;
+	private InputStream s3FileContentCopy2 = null;
 	
 	String singleLine = null;
 	String itemInfoStart = "";
@@ -52,6 +58,7 @@ public class GetANIFileFromCafeS3Bucket {
 	String epoch = "";
 	String eid = "";
 	
+	byte[] bytes= null;
 	private InputStream objectData;
 	S3Object object;
 	AmazonS3 s3Client = null;
@@ -190,7 +197,7 @@ public class GetANIFileFromCafeS3Bucket {
 
 	
 	public void getFile(String bucketName, String key, int updatenumber
-							,String database, String connectionURL, String driver,
+							,String database, String msgAction, long msgEpoch, String connectionURL, String driver,
 							String username, String password,String sqlldrFileName) {
 
 		this.bucketName = bucketName;
@@ -198,6 +205,8 @@ public class GetANIFileFromCafeS3Bucket {
 		
 		this.updateNumber = updatenumber;
 		this.database=database;
+		this.msgAction = msgAction;
+		this.msgEpoch = msgEpoch;
 		
 		this.connectionURL =  connectionURL;  // for localhost 
 		this.driver = driver;
@@ -208,20 +217,38 @@ public class GetANIFileFromCafeS3Bucket {
 		try
 		{
 			
-			/*if(object == null)
-			{*/
+			
 				object = s3Client.getObject(new GetObjectRequest (bucketName, key));
 				objectData = object.getObjectContent();
-			/*}*/
-			/*parseS3File (objectData, updateNumber,
-					database, connectionURL, driver,
-					username, password,sqlldrFileName);*/
-				
-				parseS3File (updateNumber,
-						database, connectionURL, driver,
-						username, password,sqlldrFileName);
-				
 			
+				if(object !=null)
+				{
+					// Check if Message's Epoch is greater than Object's/Key's Epoch Metadata
+					if(msgAction.length() >0 && msgAction.equalsIgnoreCase("u"))
+					{
+						bytes= IOUtils.toByteArray(objectData);
+						s3FileContentCopy = new ByteArrayInputStream(bytes);
+						s3FileContentCopy2 = new ByteArrayInputStream(bytes);
+						
+						fileContentMetadata(bucketName,key);
+						
+						if(CheckMsgObjectEpoch())
+						{
+							parseS3File (s3FileContentCopy2,updateNumber,
+									database, connectionURL, driver,
+									username, password,sqlldrFileName);
+						}
+					}
+					
+					else if(msgAction.length() >0 && msgAction.equalsIgnoreCase("a") || msgAction.equalsIgnoreCase("d"))
+					{
+						parseS3File (objectData,updateNumber,
+								database, connectionURL, driver,
+								username, password,sqlldrFileName);
+					}
+						
+				}
+
 		}
 		
 		catch(IOException ex)
@@ -229,9 +256,70 @@ public class GetANIFileFromCafeS3Bucket {
 			ex.printStackTrace();
 		}
 		
+		catch(AmazonServiceException ase)
+		{
+			System.out.println("Caught an AmazonServiceException, which " +"means your request made it " +
+					"to Amazon S3, but was rejected with an error response" +
+					" for some reason.");
+			System.out.println("Error Message:    " + ase.getMessage());
+			System.out.println("HTTP Status Code: " + ase.getStatusCode());
+			System.out.println("AWS Error Code:   " + ase.getErrorCode());
+			System.out.println("Error Type:       " + ase.getErrorType());
+			System.out.println("Request ID:       " + ase.getRequestId());
+		}
+		catch(AmazonClientException ace)
+		{
+			System.out.println("Caught an AmazonClientException, which " +
+					"means the client encountered " +
+					"an internal error while trying to " +
+					"communicate with S3, " +
+					"such as not being able to access the network.");
+			System.out.println("Error Message: " + ace.getMessage());
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
 
 		finally
 		{
+			if(reader !=null)
+			{
+				try
+				{
+					reader.close();
+				}
+				catch(IOException e)
+				{
+					e.printStackTrace();
+				}
+			}
+			if(bytes !=null)
+			{
+					bytes=null;
+			}
+			if(s3FileContentCopy !=null)
+			{
+				try
+				{
+					s3FileContentCopy.close();
+				}
+				catch(IOException e1)
+				{
+					e1.printStackTrace();
+				}
+			}
+			
+			if(s3FileContentCopy2 !=null)
+			{
+				try
+				{
+					s3FileContentCopy2.close();
+				}
+				catch(IOException e2)
+				{
+					e2.printStackTrace();
+				}
+			}
 			if(objectData !=null)
 			{
 				try
@@ -494,21 +582,24 @@ public class GetANIFileFromCafeS3Bucket {
 	}
 
 	
-	public void fileContentMetadata(String bucketName, String key , AmazonS3 s3Cleint) throws AmazonClientException,AmazonServiceException, InterruptedException
+	//public void fileContentMetadata(String bucketName, String key , AmazonS3 s3Cleint) throws AmazonClientException,AmazonServiceException, InterruptedException
+	public void fileContentMetadata(String bucketName, String key) throws AmazonClientException,AmazonServiceException, InterruptedException
 	{
 		String substr="";
 
 		try
 		{
-			if(object ==null)
+			/*if(object ==null)
 			{
 				object = s3Client.getObject(new GetObjectRequest (bucketName, key));
-				objectData = object.getObjectContent();
+				objectData = object.getObjectContent();*/
 
-				if(object !=null)
+				//if(object !=null)
+				if(s3FileContentCopy !=null)
 				{
 					// get get the Object's some major Metdata from s3FIleContents for later check (i.e. EID, epoch,..)
-					S3Filecontents = new BufferedReader(new InputStreamReader(objectData));
+					//S3Filecontents = new BufferedReader(new InputStreamReader(objectData));
+					S3Filecontents = new BufferedReader(new InputStreamReader(s3FileContentCopy));
 					while ((singleLine = S3Filecontents.readLine()) !=null)
 					{
 						//get the Object's epoch Metadata
@@ -536,7 +627,7 @@ public class GetANIFileFromCafeS3Bucket {
 				{
 					System.out.println("Key: " + key + " Not exist in specified bucket: " +  bucketName);
 				}
-			}
+			//}
 	}
 
 	catch(IOException ex)
@@ -564,23 +655,38 @@ public class GetANIFileFromCafeS3Bucket {
 		System.out.println("Error Message: " + ace.getMessage());
 	}
 
-	finally
+	/*finally
 	{
-		if(objectData !=null)
+		if(s3FileContentCopy !=null)
 		{
 			try
 			{
-				objectData.close();
+				s3FileContentCopy.close();
 			}
 			catch(IOException ioex)
 			{
 				ioex.printStackTrace();
 			}
 		}
-	}
+	}*/
 
 
 }
+	
+	private boolean CheckMsgObjectEpoch()
+	{
+		boolean updatable = false;
+
+		//if the action is “update”, the user only processes the message if “epoch” in the incoming message is later than “epoch” from the object’s UserMetadata 
+		long objEpoch = Long.parseLong(CafeRecordMetaData.getValue("EPOCH"));
+
+		if (this.msgEpoch > objEpoch) 
+		{
+			updatable = true;
+		}	
+
+		return updatable;
+	}
 	
 	
 	public void parseS3File (InputStream s3FileContent) throws IOException
@@ -628,15 +734,12 @@ public class GetANIFileFromCafeS3Bucket {
 	
 	
 	
-	/*public void parseS3File (InputStream s3FileContent, int updateNumber,
+	public void parseS3File (InputStream s3FileContent, int updateNumber,
 							String database, String connectionURL, String driver,
-							String username, String password, String sqlldrFileName) throws IOException*/
-	public void parseS3File (int updateNumber,
-			String database, String connectionURL, String driver,
-			String username, String password, String sqlldrFileName) throws IOException
+							String username, String password, String sqlldrFileName) throws IOException
 	{
 
-		reader = new BufferedReader(new InputStreamReader(objectData));
+		reader = new BufferedReader(new InputStreamReader(s3FileContent));
 		reader = new BufferedReader(new InputStreamReader(new ByteArrayInputStream(reader.readLine().replaceAll("><", ">\n<").getBytes())));
 		
 		s3FileLoc = this.bucketName+"/"+this.key;
