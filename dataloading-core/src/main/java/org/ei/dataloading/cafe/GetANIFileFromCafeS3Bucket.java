@@ -87,6 +87,23 @@ public class GetANIFileFromCafeS3Bucket {
 		this.key = key;
 	}
 	
+	public GetANIFileFromCafeS3Bucket (AmazonS3 s3Client,int updatenumber,String database,String url,String driver,String username,String password,String sqlldrFileName)
+	{
+		
+		this.s3Client = s3Client;
+		
+		this.updateNumber = updatenumber;
+		this.database=database;
+		
+		this.connectionURL =  url;  // for localhost 
+		this.driver = driver;
+		this.username = username;
+		this.password = password;
+		this.sqlldrFileName = sqlldrFileName;
+		
+	}
+	
+	
 	public GetANIFileFromCafeS3Bucket (AmazonS3 s3Client)
 	{
 		
@@ -196,23 +213,16 @@ public class GetANIFileFromCafeS3Bucket {
 	}
 
 	
-	public void getFile(String bucketName, String key, int updatenumber
-							,String database, String msgAction, long msgEpoch, String connectionURL, String driver,
-							String username, String password,String sqlldrFileName) {
+	public void getFile(String bucketName, String key, String msgAction, long msgEpoch) {
+		
 
 		this.bucketName = bucketName;
 		this.key = key;
 		
-		this.updateNumber = updatenumber;
-		this.database=database;
+		
 		this.msgAction = msgAction;
 		this.msgEpoch = msgEpoch;
 		
-		this.connectionURL =  connectionURL;  // for localhost 
-		this.driver = driver;
-		this.username = username;
-		this.password = password;
-		this.sqlldrFileName = sqlldrFileName;
 		
 		try
 		{

@@ -153,9 +153,10 @@ public class SyncMultiMessageReceiverClient {
 
 			// create object of GetANIFileFromCafeS3Bucket to convert the CPX record
 			s3Client = config.getAmazonS3Cleint();
-			objectFromS3 = GetANIFileFromCafeS3Bucket.getInstance(s3Client);
+			//objectFromS3 = GetANIFileFromCafeS3Bucket.getInstance(s3Client);
+			objectFromS3 = new GetANIFileFromCafeS3Bucket(s3Client,updateNumber,database,url,driver,username,password, sqlldrFileName);
 
-
+			
 			// Setup logging for the example
 			SQSExistenceCheck.setupLogging();
 
@@ -321,8 +322,11 @@ public class SyncMultiMessageReceiverClient {
 									//get the s3file content & convert using our cpx converting prog
 									//objectFromS3.getFile(obj.getMessageField("bucket"), obj.getMessageField("key"));  //was working fine, for static url/schema,..
 
-									objectFromS3.getFile(obj.getMessageField("bucket"), obj.getMessageField("key"),
-											updateNumber,database,action,msgEpoch,url,driver,username,password, sqlldrFileName);
+									/*objectFromS3.getFile(obj.getMessageField("bucket"), obj.getMessageField("key"),
+											updateNumber,database,action,msgEpoch,url,driver,username,password, sqlldrFileName);*/
+									
+									objectFromS3.getFile(obj.getMessageField("bucket"), obj.getMessageField("key"),action,msgEpoch);
+									
 								}
 								// Acknowledge the message if asked
 								//if (acknowledge) ((javax.jms.Message)message).acknowledge();
