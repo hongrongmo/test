@@ -159,9 +159,10 @@ public class EVCombinedRec {
 	public static final String ELECTRIC_CURRENT_TEXT = "151";
 	//electric current
 	//public static final String LUMINOUS_INTENSITY_MINIMUM = "152"; 
-	public static final String LUMINOUS_INTENSITY_RANGES = "153";
-	public static final String LUMINOUS_INTENSITY_TEXT = "154";
-	//luminous intensity
+	public static final String LUMINOUS_EFFICIENCY_RANGES = "153";
+	public static final String LUMINOUS_EFFICIENCY_TEXT = "154";
+	//luminous efficiency
+	
 	//public static final String MASS_MINIMUM = "155"; 
 	public static final String MASS_RANGES = "156";
 	public static final String MASS_TEXT = "157";
@@ -222,10 +223,12 @@ public class EVCombinedRec {
 	public static final String CAPACITANCE_RANGES = "198";
 	public static final String CAPACITANCE_TEXT = "199"; 
 	//capacitance
+	
 	//public static final String PERMITTIVITY_MINIMUM = "200"; 
-	public static final String PERMITTIVITY_RANGES = "201";
-	public static final String PERMITTIVITY_TEXT = "202"; 
-	//permittivity
+	public static final String DECIBEL_ISOTROPIC_RANGES = "201";
+	public static final String DECIBEL_ISOTROPIC_TEXT = "202"; 	
+	//Decibel isotropic
+	
 	//public static final String FREQUENCY_MINIMUM = "203"; 
 	public static final String FREQUENCY_RANGES = "204";
 	public static final String FREQUENCY_TEXT = "205"; 
@@ -238,14 +241,17 @@ public class EVCombinedRec {
 	public static final String APPARENT_POWER_RANGES = "210";
 	public static final String APPARENT_POWER_TEXT = "211"; 
 	//apparent power 
+	
 	//public static final String REACTIVE_POWER_MINIMUM = "212"; 
-	public static final String REACTIVE_POWER_RANGES = "213";
-	public static final String REACTIVE_POWER_TEXT = "214"; 
-	//reactive power
+	public static final String DECIBEL_MILLIWATTS_RANGES = "213";
+	public static final String DECIBEL_MILLIWATTS_TEXT = "214"; 
+	//Decibel milliwatts
+	
 	//public static final String HEAT_FLUX_DENSITY_MINIMUM = "215"; 
-	public static final String HEAT_FLUX_DENSITY_RANGES = "216";
-	public static final String HEAT_FLUX_DENSITY_TEXT = "217";  
-	//heat flux density
+	public static final String EQUIVALENT_DOSE_RANGES = "216";
+	public static final String EQUIVALENT_DOSE_TEXT = "217";  
+	//Equivalent Dose
+	
 	//public static final String PERCENTAGE_MINIMUM = "218"; 
 	public static final String PERCENTAGE_RANGES = "219";
 	public static final String PERCENTAGE_TEXT = "220"; 
@@ -254,22 +260,26 @@ public class EVCombinedRec {
 	public static final String MAGNETIC_FLUX_DENSITY_RANGES = "222";
 	public static final String MAGNETIC_FLUX_DENSITY_TEXT = "223";
 	//magnetic flux density
+	
 	//public static final String MAGNETIC_FLUX_MINIMUM = "224"; 
-	public static final String MAGNETIC_FLUX_RANGES = "225";
-	public static final String MAGNETIC_FLUX_TEXT = "226";
-	//magnetic flux
+	public static final String MOLAR_CONCENTRATION_RANGES = "225";
+	public static final String MOLAR_CONCENTRATION_TEXT = "226";
+	//Molar concentration
+	
 	//public static final String INDUCTANCE_MINIMUM = "227"; 
 	public static final String INDUCTANCE_RANGES = "228";
 	public static final String INDUCTANCE_TEXT = "229";
 	//inductance
 	//public static final String PERMEABILITY_MINIMUM = "230"; 
-	public static final String PERMEABILITY_RANGES = "231";
-	public static final String PERMEABILITY_TEXT = "232";
-	//permeability
+	public static final String LUMINOUS_EFFICACY_RANGES = "231";
+	public static final String LUMINOUS_EFFICACY_TEXT = "232";
+	//luminous efficacy
+	
 	//public static final String ELECTRIC_CHARGE_MINIMUM = "233"; 
-	public static final String ELECTRIC_CHARGE_RANGES = "234";
-	public static final String ELECTRIC_CHARGE_TEXT = "235";
-	//electric charge
+	public static final String SPECIFIC_ENERGY_RANGES = "234";
+	public static final String SPECIFIC_ENERGY_TEXT = "235";
+	//Specific Energy
+	
 	//public static final String VOLUME_CHARGE_DENSITY_MINIMUM = "236"; 
 	public static final String VOLUME_CHARGE_DENSITY_RANGES = "237";
 	public static final String VOLUME_CHARGE_DENSITY_TEXT = "238";
@@ -278,10 +288,12 @@ public class EVCombinedRec {
 	public static final String SURFACE_CHARGE_DENSITY_RANGES = "240";
 	public static final String SURFACE_CHARGE_DENSITY_TEXT = "241";
 	//surface charge density
+	
 	//public static final String LINEAR_CHARGE_DENSITY_MINIMUM = "242"; 
-	public static final String LINEAR_CHARGE_DENSITY_RANGES = "243";
-	public static final String LINEAR_CHARGE_DENSITY_TEXT = "244";
-	//linear charge density
+	public static final String LINEAR_DENSITY_RANGES = "243";
+	public static final String LINEAR_DENSITY_TEXT = "244";
+	//Linear Density
+	
 	//public static final String DECIBEL_MINIMUM = "245"; 
 	public static final String DECIBEL_RANGES = "246";
 	public static final String DECIBEL_TEXT = "247";
@@ -299,9 +311,10 @@ public class EVCombinedRec {
 	public static final String BIT_RATE_TEXT = "256";
 	//bit rate
 	//public static final String PICTURE_ELEMENT_MINIMUM = "257"; 
-	public static final String PICTURE_ELEMENT_RANGES = "258";
-	public static final String PICTURE_ELEMENT_TEXT = "259";
-	//picture element
+	public static final String SPECIFIC_SURFACE_AREA_RANGES = "258";
+	public static final String SPECIFIC_SURFACE_AREA_TEXT = "259";
+	//Specific Surface area
+	
 	//public static final String MASS_DENSITY_MINIMUM = "260"; 
 	public static final String MASS_DENSITY_RANGES = "261";
 	public static final String MASS_DENSITY_TEXT = "262";
@@ -311,28 +324,32 @@ public class EVCombinedRec {
 	public static final String MASS_FLOW_RATE_TEXT = "265";
 	//mass flow rate
 	//public static final String VOLUMETRIC_FLOW_RATE_MINIMUM = "266"; 
-	public static final String VOLUMETRIC_FLOW_RATE_RANGES = "267";
-	public static final String VOLUMETRIC_FLOW_RATE_TEXT = "268"; 
-	//volumetric flow rate
+	public static final String SPECIFIC_VOLUME_RANGES = "267";
+	public static final String SPECIFIC_VOLUME_TEXT = "268"; 
+	//Specific Volume
+	
 	//public static final String UNIT_OF_INFORMATION_MINIMUM = "269"; 
-	public static final String UNIT_OF_INFORMATION_RANGES = "270";
-	public static final String UNIT_OF_INFORMATION_TEXT = "271";  
-	//unit of information 
+	public static final String SURFACE_TENSION_RANGES = "270";
+	public static final String SURFACE_TENSION_TEXT = "271";  
+	//Surface Tension
+	
 	//public static final String ANGLE_MINIMUM = "272"; 
-	public static final String ANGLE_RANGES = "273";
-	public static final String ANGLE_TEXT = "274";  
-	//angle
+	public static final String SURFACE_DENSITY_RANGES = "273";
+	public static final String SURFACE_DENSITY_TEXT = "274";  
+	//Surface Density
+	
 	//public static final String SOLID_ANGLE_MINIMUM = "275"; 
-	public static final String SOLID_ANGLE_RANGES = "276";
-	public static final String SOLID_ANGLE_TEXT = "277";  
-	//solid angle
+	//public static final String SOLID_ANGLE_RANGES = "276";
+	//public static final String SOLID_ANGLE_TEXT = "277";  
+	//magnetic flux density
+	
 	//public static final String PRESSURE_MINIMUM = "278"; 
 	public static final String PRESSURE_RANGES = "279";
 	public static final String PRESSURE_TEXT = "280"; 
 	//pressure
 	//public static final String DYNAMIC_VISCOSITY_MINIMUM = "281"; 
-	public static final String DYNAMIC_VISCOSITY_RANGES = "282";
-	public static final String DYNAMIC_VISCOSITY_TEXT = "283"; 
+	//public static final String DYNAMIC_VISCOSITY_RANGES = "282";
+	//public static final String DYNAMIC_VISCOSITY_TEXT = "283"; 
 	//dynamic viscosity
 	//public static final String FORCE_MINIMUM = "284"; 
 	public static final String FORCE_RANGES = "285";
@@ -389,8 +406,8 @@ public class EVCombinedRec {
 	//molality of substance
 	
 	//public static final String PH_VALUE_MINIMUM = "317"; 
-	public static final String PH_VALUE_RANGES = "318";
-	public static final String PH_VALUE_TEXT = "319"; 
+	//public static final String PH_VALUE_RANGES = "318";
+	//public static final String PH_VALUE_TEXT = "319"; 
 	//pH value
 	
 	//public static final String RADIOACTIVITY_MINIMUM = "320"; 
@@ -404,8 +421,8 @@ public class EVCombinedRec {
 	//absorbed dose 
 	
 	//public static final String DOSE_EQUIVALENT_MINIMUM = "326"; 
-	public static final String DOSE_EQUIVALENT_RANGES = "327";
-	public static final String DOSE_EQUIVALENT_TEXT = "328";
+	//public static final String DOSE_EQUIVALENT_RANGES = "327";
+	//public static final String DOSE_EQUIVALENT_TEXT = "328";
 	//dose equivalent
 	
 	//public static final String RADIATION_EXPOSURE_MINIMUM = "329"; 
@@ -414,13 +431,13 @@ public class EVCombinedRec {
 	//radiation exposure
 	
 	//public static final String CATALYTIC_ACTIVITY_MINIMUM = "332"; 
-	public static final String CATALYTIC_ACTIVITY_RANGES = "333";
-	public static final String CATALYTIC_ACTIVITY_TEXT = "334";
+	//public static final String CATALYTIC_ACTIVITY_RANGES = "333";
+	//public static final String CATALYTIC_ACTIVITY_TEXT = "334";
 	//catalytic activity
 	
 	//public static final String ELECTRON_VOLT_MINIMUM = "335"; 
-	public static final String ELECTRON_VOLT_RANGES = "336";
-	public static final String ELECTRON_VOLT_TEXT = "337";
+	//public static final String ELECTRON_VOLT_RANGES = "336";
+	//public static final String ELECTRON_VOLT_TEXT = "337";
 	//electron_volt
 	
 	//public static final String LUMINANCE_MINIMUM = "338"; 
