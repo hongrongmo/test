@@ -526,7 +526,7 @@ public class BaseTableDriver
        
     }
 
-     protected Connection getConnection(String connectionURL,
+     public Connection getConnection(String connectionURL,
                                                  String driver,
                                                  String username,
                                                  String password)
