@@ -57,8 +57,8 @@ public final class AmazonS3Service {
 				 // read credentials from File
 				// instance.s3service = new AmazonS3Client(new PropertiesCredentials(new File("credentials.properties")),clientConfig);  // works well
 				 
-				 instance.s3service = new AmazonS3Client(new PropertiesCredentials(new File("AwsCredentials.properties")),clientConfig);  //for Local testing
-				//instance.s3service = new AmazonS3Client(new InstanceProfileCredentialsProvider(),clientConfig);   //for dataloading EC2
+				 //instance.s3service = new AmazonS3Client(new PropertiesCredentials(new File("AwsCredentials.properties")),clientConfig);  //for Local testing
+				instance.s3service = new AmazonS3Client(new InstanceProfileCredentialsProvider(),clientConfig);   //for dataloading EC2
 				 
 				 
 				 //read credentials from ENvironment variables

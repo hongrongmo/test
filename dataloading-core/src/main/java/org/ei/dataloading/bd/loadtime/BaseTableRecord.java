@@ -103,6 +103,7 @@ public class BaseTableRecord
    	public static final BaseTableRecord CITATIONTITLEORIG= new BaseTableRecord("CITATIONTITLEORIG", new Integer(5), "cpx");
 	public static final BaseTableRecord CITATIONLANGUAGE= new BaseTableRecord("CITATIONLANGUAGE", new Integer(20), "cpx");
 	public static final BaseTableRecord DATABASE= new BaseTableRecord("DATABASE", new Integer(3), "cpx");
+	public static final BaseTableRecord UPDATERESOURCE= new BaseTableRecord("UPDATERESOURCE", new Integer(4000), "cpx");   //HH 04/05/2016 for Cafe
 	public static final BaseTableRecord AUTHORKEYWORD= new BaseTableRecord("AUTHORKEYWORD", new Integer(4000), "pch");
 	public static final BaseTableRecord REFCOUNT= new BaseTableRecord("REFCOUNT", new Integer(4), "cpx");
 	public static final BaseTableRecord CASREGISTRYNUMBER= new BaseTableRecord("CASREGISTRYNUMBER", new Integer(4000), "chm");
@@ -252,6 +253,7 @@ public class BaseTableRecord
 		bdTableColumns.add(TRADENAME);
 		bdTableColumns.add(MANUFACTURER);
 	    bdTableColumns.add(DATABASE);
+	    bdTableColumns.add(UPDATERESOURCE);	  //HH 04/05/2016 for cafe
 		bdTableColumns.add(MEDIA);
 		bdTableColumns.add(CSESS);
 		bdTableColumns.add(PATNO);

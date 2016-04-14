@@ -37,22 +37,9 @@ public class BaseTableDriver
     //HH 02/2016 for Cafe Processing
     BufferedReader bfReader = null;
     boolean cafe = false;
+    public String s3FileLoc = "";
 
-    //HH 02/2016 for Cafe COnverting
-    public void writeBaseTableFile(String infile, Connection con, BufferedReader reader, boolean cafe)
-    {
-		  try
-		  {
-		    this.bfReader = reader;
-		    this.cafe = cafe;
-		    writeBaseTableFile(infile, con);
-		  }
-		  catch (Exception e)
-		  {
-		    e.printStackTrace();
-		  }
-    }
-
+   
     public static void main(String args[])
         throws Exception
 
@@ -193,6 +180,33 @@ public class BaseTableDriver
         this.databaseName = databaseName;
         this.action = action;
     }
+    
+    //HH 04/05/2016 for Cafe converting
+    public BaseTableDriver(int loadN,String databaseName, String action, String fileLocation)
+    {
+        this.loadNumber = loadN;
+        this.databaseName = databaseName;
+        this.action = "normal";
+        this.s3FileLoc = fileLocation;
+    }
+    
+    
+    //HH 02/2016 for Cafe COnverting
+    public void writeBaseTableFile(String infile, Connection con, BufferedReader reader, boolean cafe)
+    {
+      try
+      {
+        this.bfReader = reader;
+        this.cafe = cafe;
+        writeBaseTableFile(infile, con);
+      }
+      catch (Exception e)
+      {
+        e.printStackTrace();
+      }
+    }
+    
+    
 
     public void writeBaseTableFile(String infile, Connection con)
         throws Exception
@@ -330,10 +344,21 @@ public class BaseTableDriver
     private void writeRecs(BufferedReader xmlReader, Connection con) throws Exception
     {
         FileWriter out = new FileWriter(this.infile+"_not_loaded_record.txt");
+        RecordReader r;   //HH 04/05/2016 for cafe
         try
         {
-            RecordReader r = new RecordReader(loadNumber,databaseName);
+            //RecordReader r = new RecordReader(loadNumber,databaseName);
             
+        	//HH 04/05/2016 for Cafe S3_file_location
+        	if(s3FileLoc !=null && s3FileLoc.length() >0)
+        	{
+        		 r = new RecordReader(loadNumber,databaseName,s3FileLoc);
+        	}
+        	else
+        	{
+        		r = new RecordReader(loadNumber,databaseName);
+        	}
+        	
             while(xmlReader!=null)
             {
             	
@@ -390,12 +415,24 @@ public class BaseTableDriver
         int loadNumber;
         String databaseName;
         //String action;
+        
+      //HH 04/05/2016 for Cafe
+        String s3FileLoc = "";
 
         RecordReader(int loadNumber,String databaseName)
         {
             this.loadNumber = loadNumber;
             this.databaseName = databaseName;
         }
+        
+        //HH 04/05/2016 fro Cafe S3_File_Loc
+        RecordReader(int loadNumber,String databaseName, String fileLocation)
+        {
+            this.loadNumber = loadNumber;
+            this.databaseName = databaseName;
+            this.s3FileLoc = fileLocation;
+        }
+        
         Hashtable readRecord(BufferedReader xmlReader) throws Exception
         {
             String line = null;
@@ -405,6 +442,7 @@ public class BaseTableDriver
             r.setWeekNumber(Integer.toString(loadNumber));
             r.setDatabaseName(databaseName);
             //r.setAction(action);
+            r.setCafeS3Loc(s3FileLoc);   //HH 04/05/2016
             boolean start = false;
            
             while((line=xmlReader.readLine())!=null)
@@ -526,6 +564,11 @@ public class BaseTableDriver
        
     }
 
+<<<<<<< HEAD
+=======
+    //HH 02/2016 for Cafe
+    // original was protected
+>>>>>>> 40ceba815638c7fdf7e06735030edab854c7a3ba
      public Connection getConnection(String connectionURL,
                                                  String driver,
                                                  String username,

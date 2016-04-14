@@ -38,16 +38,16 @@ public class SyncMultiMessageReceiverClient {
 	public SyncMultiMessageReceiverClient(){}
 
 	static int numberOfRuns = 0;
-	
-	
+
+
 	static String url="jdbc:oracle:thin:@localhost:1521:eid";
-    static String driver="oracle.jdbc.driver.OracleDriver";
-    static String username="ap_correction1";
-    static String password="ei3it";
-    static String database;
-    static int updateNumber=0;
-    static String sqlldrFileName = null;
-    
+	static String driver="oracle.jdbc.driver.OracleDriver";
+	static String username="ap_correction1";
+	static String password="ei3it";
+	static String database;
+	static int updateNumber=0;
+	static String sqlldrFileName = null;
+
 
 	// Visibility time-out for the queue. It must match to the one set for the queue for this example to work.
 	private static final long TIME_OUT_SECONDS = 30;
@@ -62,12 +62,12 @@ public class SyncMultiMessageReceiverClient {
 	private static AmazonS3 s3Client = null; 
 	private DeleteMessageRequest deleteRequest = null;
 	private ReceiveMessageResult receiveMessageResult = null;
-	
+
 	private ReceiveAmazonSQSMessage obj = null;
 
 	private String action = null;
 	private long msgEpoch;
-	
+
 
 	//Configuration&Settings
 	SQSConnection connection = null;
@@ -87,51 +87,51 @@ public class SyncMultiMessageReceiverClient {
 		{
 			if(args[0] !=null)
 				numberOfRuns = Integer.parseInt(args[0]);
-			
+
 			if(args.length >2)
 			{
-				  if(args[1]!=null && args[1].length()>0)
-		            {
-		                Pattern pattern = Pattern.compile("^\\d*$");
-		                Matcher matcher = pattern.matcher(args[1]);
-		                if (matcher.find())
-		                {
-		                    updateNumber = Integer.parseInt(args[1]);
-		                }
-		                else
-		                {
-		                    System.out.println("did not find updateNumber or updateNumber has wrong format");
-		                    System.exit(1);
-		                }
-		            }
-				  
-				  if(args[2] !=null)
-				  {
-					  database = args[2];
-				  }
-				  if(args[3] !=null)
-				  {
-					  url = args[3];
-				  }
-				  if(args[4] !=null)
-				  {
-					  driver = args[4];
-				  }
-				  if(args[5] !=null)
-				  {
-					  username = args[5];
-				  }
-				  if(args[6] !=null)
-				  {
-					  password = args[6];
-				  }
+				if(args[1]!=null && args[1].length()>0)
+				{
+					Pattern pattern = Pattern.compile("^\\d*$");
+					Matcher matcher = pattern.matcher(args[1]);
+					if (matcher.find())
+					{
+						updateNumber = Integer.parseInt(args[1]);
+					}
+					else
+					{
+						System.out.println("did not find updateNumber or updateNumber has wrong format");
+						System.exit(1);
+					}
+				}
+
+				if(args[2] !=null)
+				{
+					database = args[2];
+				}
+				if(args[3] !=null)
+				{
+					url = args[3];
+				}
+				if(args[4] !=null)
+				{
+					driver = args[4];
+				}
+				if(args[5] !=null)
+				{
+					username = args[5];
+				}
+				if(args[6] !=null)
+				{
+					password = args[6];
+				}
 			}
-			
+
 			if(args.length >7)
 			{
 				if(args[7] !=null)
 					sqlldrFileName = args[7];
-				
+
 			}
 		}
 		// create Class instance 
@@ -153,9 +153,10 @@ public class SyncMultiMessageReceiverClient {
 
 			// create object of GetANIFileFromCafeS3Bucket to convert the CPX record
 			s3Client = config.getAmazonS3Cleint();
-			objectFromS3 = GetANIFileFromCafeS3Bucket.getInstance(s3Client);
+			//objectFromS3 = GetANIFileFromCafeS3Bucket.getInstance(s3Client);
+			objectFromS3 = new GetANIFileFromCafeS3Bucket(s3Client,updateNumber,database,url,driver,username,password, sqlldrFileName);
 
-
+			
 			// Setup logging for the example
 			SQSExistenceCheck.setupLogging();
 
@@ -167,12 +168,12 @@ public class SyncMultiMessageReceiverClient {
 
 			// Create the connection
 			connection = connectionFactory.createConnection();
-			
+
 			queueName = config.getQueueName();
 			// Create the queue if needed
 			SQSExistenceCheck.ensureQueueExists(connection, queueName);
 
-						
+
 			// AMazonSQS queue
 			System.out.println("===========================================");
 			System.out.println("Getting Started with Amazon SQS");
@@ -191,7 +192,7 @@ public class SyncMultiMessageReceiverClient {
 			System.out.println();
 			// END of AmazonSQS queue		
 
-			
+
 			// Create the session  with client acknowledge mode
 			Session session = connection.createSession(false, SQSSession.UNORDERED_ACKNOWLEDGE);
 
@@ -254,10 +255,10 @@ public class SyncMultiMessageReceiverClient {
 		obj = new ReceiveAmazonSQSMessage(); 
 		ChangeMessageVisibilityRequest msgVisibilityReq;
 		String msgReciptHandle = null;
-		
+
 		ReceiveMessageRequest request = new ReceiveMessageRequest(myQueueUrl)
-										.withVisibilityTimeout(MESSAGE_VISIBILITY_TIME_OUT_SECONDS)
-										.withWaitTimeSeconds(10).withMaxNumberOfMessages(NUM_OF_MESSAGES_TO_FETCH);
+		.withVisibilityTimeout(MESSAGE_VISIBILITY_TIME_OUT_SECONDS)
+		.withWaitTimeSeconds(10).withMaxNumberOfMessages(NUM_OF_MESSAGES_TO_FETCH);
 
 
 		try
@@ -271,16 +272,14 @@ public class SyncMultiMessageReceiverClient {
 						new ReceiveMessageRequest(myQueueUrl)
 						.withVisibilityTimeout(MESSAGE_VISIBILITY_TIME_OUT_SECONDS)
 						.withWaitTimeSeconds(10).withMaxNumberOfMessages(NUM_OF_MESSAGES_TO_FETCH));*/
-				
+
 				receiveMessageResult = sqs.receiveMessage(request);
-				
-				
+
+
 				ArrayList<Message> messages = (ArrayList<Message>)receiveMessageResult.getMessages();
 				System.out.println("MessagesList size: " + messages.size());
-				
-				String msgString = "{ \"bucket\" : \"sc-ani-xml-prod\", \"entries\" : [{ \"key\" : \"84924669754\", \"issn\" : \"13646613\", \"epoch\" : \"1459848208962\", \"xocs-timestamp\" : \"2016-04-05T08:45:33.093056Z\", \"pui\" : \"605036838\", \"eid\" : \"2-s2.0-84924669754\", \"load-unit-id\" : \"swd_uC43700445278.dat\", \"version\" : \"2016-04-05T08:15:52.000052+01:00\", \"pii\" : \"S1364661314002770\", \"modification\" : \"CONTENT\", \"prefix\" : \"2-s2.0\", \"document-type\" : \"core\", \"action\" : \"u\", \"sort-year\" : \"2015\", \"dbcollcodes\" : \"CABS|CPX|EMBASE|MEDL|Scopusbase\", \"doi\" : \"10.1016/j.tics.2014.12.010\" } ] }";
 
-				
+
 				if(messages.size() >0)
 				{
 					//for(int i=1; i<=NUM_OF_MESSAGES_TO_FETCH;i++)
@@ -290,20 +289,23 @@ public class SyncMultiMessageReceiverClient {
 							System.out.println("Queue is empty!");
 							break;
 						} else {
-							
+
 							msgReciptHandle = message.getReceiptHandle();  // for deleting the message 
 
 							//parse SQS Message Fields& determine whether it is "ANI" message
-							//if(obj.ParseSQSMessage(message.getBody()))   //for Prod
-							if(obj.ParseSQSMessage(msgString))    //for testing
+							if(obj.ParseSQSMessage(message.getBody()))   //for Prod
 							{
 								// change message visibility timeout
 								msgVisibilityReq = new ChangeMessageVisibilityRequest(myQueueUrl, msgReciptHandle, MESSAGE_VISIBILITY_TIME_OUT_SECONDS);
 								System.out.println("Message Visibility Timeout is: " + msgVisibilityReq.getVisibilityTimeout());
-								
-								
+
+
 								action = obj.getMessageField("action");
 								msgEpoch = Long.parseLong(obj.getMessageField("epoch"));
+
+
+								// give time for each of the Converted CPX content be written in out file
+								//Thread.currentThread().sleep(100);
 
 
 								//check if S3 File, contains CPX record, and SQS action is add/update (msgEpoch > objEpoch)/delete, then convert it
@@ -314,31 +316,17 @@ public class SyncMultiMessageReceiverClient {
 								 * Since 03/30/2016 Mike reported "adding dbcollection codes to Scopus Abstract CAFÉ SNS messages"
 								 * so Now, can Determine whether the record is CPX or from SNS Message itself without going to file contents
 								 */
-								
-								if(checkCpxDBCollection())
-								{
-									if(action !=null)
-									{
-										//if(action.equalsIgnoreCase("a") || (action.equalsIgnoreCase("u") && CheckMsgObjectEpoch()) || action.equalsIgnoreCase("d"))
-										if(action.equalsIgnoreCase("a") || action.equalsIgnoreCase("d"))
-										{
-											//get the s3file content & convert using our cpx converting prog
-											//objectFromS3.getFile(obj.getMessageField("bucket"), obj.getMessageField("key"));  //was working fine, for static url/schema,..
 
-											objectFromS3.getFile(obj.getMessageField("bucket"), obj.getMessageField("key"),
-													updateNumber,database,url,driver,username,password, sqlldrFileName);
-										}
-										else if (action.equalsIgnoreCase("u"))
-										{
-											objectFromS3.fileContentMetadata(obj.getMessageField("bucket"),obj.getMessageField("key"),s3Client);
-											if(CheckMsgObjectEpoch())
-											{
-												objectFromS3.getFile(obj.getMessageField("bucket"), obj.getMessageField("key"),
-														updateNumber,database,url,driver,username,password, sqlldrFileName);
-											}
-											
-										}
-									}
+								if(action !=null)
+								{
+									//get the s3file content & convert using our cpx converting prog
+									//objectFromS3.getFile(obj.getMessageField("bucket"), obj.getMessageField("key"));  //was working fine, for static url/schema,..
+
+									/*objectFromS3.getFile(obj.getMessageField("bucket"), obj.getMessageField("key"),
+											updateNumber,database,action,msgEpoch,url,driver,username,password, sqlldrFileName);*/
+									
+									objectFromS3.getFile(obj.getMessageField("bucket"), obj.getMessageField("key"),action,msgEpoch);
+									
 								}
 								// Acknowledge the message if asked
 								//if (acknowledge) ((javax.jms.Message)message).acknowledge();
@@ -348,17 +336,16 @@ public class SyncMultiMessageReceiverClient {
 							deleteMessage(msgReciptHandle);
 						}
 
-
 					}
 				}
-				
+
 				else
 				{
 					System.out.println("No Messages were recived at Iteration #: " + j + " Wait for for few seconds, Skip to Next iteration");
 					// Wait for for few seconds before next run
 					System.out.println("Waiting for visibility timeout...");
 					Thread.sleep(TimeUnit.SECONDS.toMillis(TIME_OUT_SECONDS));
-					
+
 				}
 			}
 		}
@@ -385,61 +372,22 @@ public class SyncMultiMessageReceiverClient {
 			sqs.deleteMessage(deleteRequest);
 		}
 	}
-	
-	private boolean CheckMsgObjectEpoch()
+
+	// moved to GetANIFileFromCafeS3Bucket
+	/*	private boolean CheckMsgObjectEpoch()
 	{
 		boolean updatable = false;
-		
+
 		//if the action is “update”, the user only processes the message if “epoch” in the incoming message is later than “epoch” from the object’s UserMetadata 
 		long objEpoch = Long.parseLong(CafeRecordMetaData.getValue("EPOCH"));
-		
+
 		if (msgEpoch > objEpoch) 
 		{
 			updatable = true;
 		}	
-			
+
 		return updatable;
-	}
-	
-	//03/30/2016 check dbcollection code from SNS message to determin whether it is CPX record
-	
-	private boolean checkCpxDBCollection()
-	{
-		boolean cpxCollection = false;
-		String dbcollcodes = obj.getMessageField("dbcollcodes");
-		String dbcode = null;
-		
-		
-		if(dbcollcodes !=null && dbcollcodes.length() >0)
-		{
-			if(dbcollcodes.contains("|"))
-			{
-				StringTokenizer dbcodes = new StringTokenizer(dbcollcodes, "|");
-				while(dbcodes.hasMoreTokens())
-				{
-					dbcode=dbcodes.nextToken().trim();
-					
-					if(dbcode != null && dbcode.length() >0 && dbcode.equalsIgnoreCase("CPX"))
-					{
-						cpxCollection =true;
-						System.out.println("CPX file");
-						return cpxCollection;
-					}
-				}
-			}
-			
-			else if (dbcollcodes.equalsIgnoreCase("CPX"))
-			{
-				cpxCollection =true;
-				System.out.println("CPX file");
-			}
-			else
-			{
-				System.out.println("Skip this Key as it belongs to db collection: " +  dbcollcodes);
-			}
-		}
-		
-		return cpxCollection;
-	}
+	}*/
+
 
 }

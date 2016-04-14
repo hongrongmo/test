@@ -76,8 +76,8 @@ public class SQSConfiguration {
 
 			try 
 			{
-				setCredentialsProvider(new EnvironmentVariableCredentialsProvider());   //for local testing
-				//setInstanceCredentialsProvider(new InstanceProfileCredentialsProvider());   //for dataload EC2
+				//setCredentialsProvider(new EnvironmentVariableCredentialsProvider());   //for local testing
+				setInstanceCredentialsProvider(new InstanceProfileCredentialsProvider());   //for dataload EC2
 				setAmazonS3Cleint(AmazonS3Service.getInstance().getAmazonS3Service());
 				
 			} 

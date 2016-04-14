@@ -36,6 +36,7 @@ public class BdParser
 	private String accessNumber;
 	private String pui;
 	private String databaseName = "cpx";
+	private String s3FileLoc = "";   //HH 04/05/2016 for Cafe
 	private DataLoadDictionary dictionary = new DataLoadDictionary();
 
     private Namespace aitNamespace=Namespace.getNamespace("ait","http://www.elsevier.com/xml/ait/dtd");
@@ -141,6 +142,18 @@ public class BdParser
 	{
 		return this.pui;
 	}
+	
+	//HH 04/05/2016 for Cafe
+	public void setCafeS3Loc(String s3FileLocation)
+	{
+		this.s3FileLoc =  s3FileLocation;
+	}
+
+	public String getCafeS3Loc()
+	{
+		return this.s3FileLoc;
+	}
+
 
 	public void parseRecord(Reader r) throws Exception
 	{
@@ -917,6 +930,9 @@ public class BdParser
 
 						// only for elt database conversion
 						record.put("DATABASE",databaseName.trim());
+						
+						//HH 04/05/2016 for Cafe
+						record.put("UPDATERESOURCE", s3FileLoc);
 					}
 
 					if(item.getChild("loadnumber", noNamespace) != null)

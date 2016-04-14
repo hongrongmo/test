@@ -36,6 +36,7 @@ import com.amazonaws.services.sqs.model.Message;
 
 
 
+
 import org.apache.oro.text.perl.*;
 import org.apache.oro.text.regex.*;
 /*
@@ -52,7 +53,8 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 	static ReceiveAmazonSQSMessage sqsMessage = null;
 	javax.jms.Message receivedMessage = null;
 	
-	boolean ANIRecord = false;
+	boolean ANIRecord;
+	boolean cpxdbCollection;
 	
 	private Perl5Util perl = new Perl5Util();
 	
@@ -164,7 +166,8 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 
 	public boolean ParseSQSMessage(String message)
 	{
-		
+		ANIRecord = false;
+		cpxdbCollection = false;
 		// clean out messageFieldKeys for each message to be clean for the current one (only hold current message fields).
 		
 				if(messageFieldKeys.size() >0)
@@ -186,13 +189,11 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 				}
 			}
 			
-			//if bucket not "ANI" for abstract, do not print
+			//if bucket not "ANI" for abstract, and dbcollcodes NOT contains "CPX" do not print
 			
 			bucketName = getMessageField("bucket");
-			//documentType = getMessageField("document-type").trim();
-			
-			//if(bucketName.length() >0 && bucketName.contains("ani") && documentType.length() >0 && !(documentType.equalsIgnoreCase("dummy")))
-			if(bucketName.length() >0 && bucketName.contains("ani"))
+			cpxdbCollection = checkCpxDBCollection();
+			if(bucketName.length() >0 && bucketName.contains("ani") && cpxdbCollection)
 			{
 				for(String key : messageFieldKeys.keySet())
 				{
@@ -203,11 +204,15 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 			}
 			else
 			{
-				System.out.println("NOT ANI SQS MSG " + messageFieldKeys.get("bucket"));
+				if(cpxdbCollection)
+				{
+					System.out.println("NOT ANI SQS MSG " + messageFieldKeys.get("bucket"));
+				}
+				
 			}
 					
 			
-			return ANIRecord;
+			return ANIRecord && cpxdbCollection;
 		
 	}
 	
@@ -218,46 +223,7 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 		String key_Value = "";
 		String substr = "";
 
-		/* OLD way that split based on ":", seemed to be working fine, but for some messages (i.e. contains "doi" : "10.1061/(ASCE)0733-9399(1985)111:10(1277)") 
-			raised exception, so i have to change logic of splitting SQS message to be based on "," instead of ":"
-			
-		*/
-		/*StringTokenizer token = new StringTokenizer(fieldKeys, ":");
-		while(token.hasMoreTokens())
-		{
-			if(token !=null)
-			{
-				key = formateString(token.nextToken());
-				
-				if(key !=null)
-				{
-					if(key.equalsIgnoreCase("entries"))
-					{
-						key = formateString(token.nextToken(":"));
-					}
-					if(key.equalsIgnoreCase("version") || key.equalsIgnoreCase("xocs-timestamp"))
-					{
-						value = formateString(token.nextToken(";"));
-						value = value.substring(value.indexOf(":"), value.length());
-					}
-					else
-					{
-						value = formateString(token.nextToken(":"));
-					}
 
-
-					if(! (key.equalsIgnoreCase("entries")))
-					{
-						messageFieldKeys.put(key, value);
-					}
-				}
-				
-			}
-		}*/
-		
-		
-		
-		
 		StringTokenizer token = new StringTokenizer(fieldKeys, ",");
 		while(token.hasMoreTokens())
 		{
@@ -281,15 +247,54 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 						
 						messageFieldKeys.put(key, value);
 					
-				}  //inner while
+				}  
 				
-			}  //if
-		}  //outer while
-		
-		
-		
-		
+			}  
+		}  
+
 	}
+	
+	//03/30/2016 check dbcollection code from SNS message to determin whether it is CPX record
+	
+	private boolean checkCpxDBCollection()
+	{
+		boolean cpxCollection = false;
+		String dbcollcodes = getMessageField("dbcollcodes");
+		String dbcode = null;
+		
+		
+		if(dbcollcodes !=null && dbcollcodes.length() >0)
+		{
+			if(dbcollcodes.contains("|"))
+			{
+				StringTokenizer dbcodes = new StringTokenizer(dbcollcodes, "|");
+				while(dbcodes.hasMoreTokens())
+				{
+					dbcode=dbcodes.nextToken().trim();
+					
+					if(dbcode != null && dbcode.length() >0 && dbcode.equalsIgnoreCase("CPX"))
+					{
+						cpxCollection =true;
+						System.out.println("CPX file");
+						return cpxCollection;
+					}
+				}
+			}
+			
+			else if (dbcollcodes.equalsIgnoreCase("CPX"))
+			{
+				cpxCollection =true;
+				System.out.println("CPX file");
+			}
+			else
+			{
+				System.out.println("Skip this Key as it belongs to db collection: " +  dbcollcodes);
+			}
+		}
+		
+		return cpxCollection;
+	}
+
 	@Override
 	public void onMessage(javax.jms.Message arg0) {
 		try {

@@ -42,6 +42,9 @@ public class KnovelCorrection {
 	private static String filename = "";
 	private static String path="";
 	
+	//HH 03/22/2016 bucketname
+	private static String bucketName="";
+		
 	public static void main(String args[])
 	        throws Exception
 	    {
@@ -113,6 +116,16 @@ public class KnovelCorrection {
 	                System.exit(1);
 	            }
 	        }
+	        //HH 03/22/2016 to read Knovel files from S3 bucket
+	        if(args.length>11)
+	        {
+	        	if(args[11] !=null)
+	        	{
+	        		bucketName = args[11];
+	        		System.out.println("get Knkovel files from S3 bucket: " + bucketName);
+	        	}
+	        }
+
 
 	        if(args.length>6)
 	        {
@@ -226,10 +239,22 @@ public class KnovelCorrection {
 	                    System.in.read();
 	                    Thread.currentThread().sleep(1000);
 	                }
-
-	                KnovelReader c = new KnovelReader(String.valueOf(updateNumber),database,filename);
-	                //c.init(database+"_"+filename);
-	                c.readGroupFile(path,filename);
+	                
+	              //HH 03/22/2016 for knovel read from S3
+	                //read from filesystem
+	                if(bucketName==null || bucketName.length()==0)
+	                {
+	                	KnovelReader c = new KnovelReader(String.valueOf(updateNumber),database,filename);
+	                	//c.init(database+"_"+filename);
+	                	c.readGroupFile(path,filename);
+	                }
+	                //read from s3 bucket
+	                else if (bucketName !=null && bucketName.length() >0)
+	                {
+	                	KnovelReader c = new KnovelReader(String.valueOf(updateNumber),database,filename,bucketName);
+	                	//c.init(database+"_"+filename);
+	                	c.readGroupFilefromS3(path,filename);
+	                }
 	                //String dataFile="out/"+filename+"."+updateNumber+".out";
 	                String outFile = filename.replace(".xml","");
 	                String deleteFile = "out/"+database+"_"+outFile+"_Delete_"+updateNumber+".out";
