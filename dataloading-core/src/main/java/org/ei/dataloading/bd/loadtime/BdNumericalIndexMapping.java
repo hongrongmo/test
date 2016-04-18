@@ -24,8 +24,8 @@ public class BdNumericalIndexMapping
 		//luminous intensity
 		//nimapping.put("luminous_intensity_minimum",EVCombinedRec.LUMINOUS_INTENSITY_MINIMUM); 
 		//nimapping.put("luminous_intensity_maximum",EVCombinedRec.LUMINOUS_INTENSITY_MAXIMUM);
-		nimapping.put("luminous_intensity_text",EVCombinedRec.LUMINOUS_INTENSITY_TEXT);
-		nimapping.put("luminous_intensity_ranges",EVCombinedRec.LUMINOUS_INTENSITY_RANGES);
+		//nimapping.put("luminous_intensity_text",EVCombinedRec.LUMINOUS_INTENSITY_TEXT);
+		//nimapping.put("luminous_intensity_ranges",EVCombinedRec.LUMINOUS_INTENSITY_RANGES);
 		
 		//mass
 		//nimapping.put("mass_minimum",EVCombinedRec.MASS_MINIMUM); 
@@ -120,8 +120,8 @@ public class BdNumericalIndexMapping
 		//permittivity
 		//nimapping.put("permittivity_minimum",EVCombinedRec.PERMITTIVITY_MINIMUM); 
 		//nimapping.put("permittivity_maximum",EVCombinedRec.PERMITTIVITY_MAXIMUM);
-		nimapping.put("permittivity_text",EVCombinedRec.PERMITTIVITY_TEXT); 
-		nimapping.put("permittivity_ranges",EVCombinedRec.PERMITTIVITY_RANGES); 
+		//nimapping.put("permittivity_text",EVCombinedRec.PERMITTIVITY_TEXT); 
+		//nimapping.put("permittivity_ranges",EVCombinedRec.PERMITTIVITY_RANGES); 
 		
 		//frequency
 		//nimapping.put("frequency_minimum",EVCombinedRec.FREQUENCY_MINIMUM);
@@ -144,14 +144,14 @@ public class BdNumericalIndexMapping
 		//reactive power
 		//nimapping.put("reactive_power_minimum",EVCombinedRec.REACTIVE_POWER_MINIMUM); 
 		//nimapping.put("reactive_power_maximum",EVCombinedRec.REACTIVE_POWER_MAXIMUM);
-		nimapping.put("reactive_power_text",EVCombinedRec.REACTIVE_POWER_TEXT); 
-		nimapping.put("reactive_power_ranges",EVCombinedRec.REACTIVE_POWER_RANGES); 
+		//nimapping.put("reactive_power_text",EVCombinedRec.REACTIVE_POWER_TEXT); 
+		//nimapping.put("reactive_power_ranges",EVCombinedRec.REACTIVE_POWER_RANGES); 
 		
 		//heat flux density
 		//nimapping.put("heat_flux_density_minimum",EVCombinedRec.HEAT_FLUX_DENSITY_MINIMUM); 
 		//nimapping.put("heat_flux_density_Maximum",EVCombinedRec.HEAT_FLUX_DENSITY_MAXIMUM);
-		nimapping.put("heat_flux_density_text",EVCombinedRec.HEAT_FLUX_DENSITY_TEXT); 
-		nimapping.put("heat_flux_density_ranges",EVCombinedRec.HEAT_FLUX_DENSITY_RANGES); 
+		//nimapping.put("heat_flux_density_text",EVCombinedRec.HEAT_FLUX_DENSITY_TEXT); 
+		//nimapping.put("heat_flux_density_ranges",EVCombinedRec.HEAT_FLUX_DENSITY_RANGES); 
 		
 		//percentage
 		//nimapping.put("percentage_minimum",EVCombinedRec.PERCENTAGE_MINIMUM); 
@@ -168,8 +168,8 @@ public class BdNumericalIndexMapping
 		//magnetic flux
 		//nimapping.put("magnetic_flux_minimum",EVCombinedRec.MAGNETIC_FLUX_MINIMUM); 
 		//nimapping.put("magnetic_flux__maximum",EVCombinedRec.MAGNETIC_FLUX_MAXIMUM);
-		nimapping.put("magnetic_flux_text",EVCombinedRec.MAGNETIC_FLUX_TEXT);
-		nimapping.put("magnetic_flux_ranges",EVCombinedRec.MAGNETIC_FLUX_RANGES);
+		//nimapping.put("magnetic_flux_text",EVCombinedRec.MAGNETIC_FLUX_TEXT);
+		//nimapping.put("magnetic_flux_ranges",EVCombinedRec.MAGNETIC_FLUX_RANGES);
 		
 		//inductance
 		//nimapping.put("inductance_minimum",EVCombinedRec.INDUCTANCE_MINIMUM); 
@@ -180,14 +180,14 @@ public class BdNumericalIndexMapping
 		//permeability
 		//nimapping.put("permeability_minimum",EVCombinedRec.PERMEABILITY_MINIMUM); 
 		//nimapping.put("permeability_maximum",EVCombinedRec.PERMEABILITY_MAXIMUM);
-		nimapping.put("permeability_text",EVCombinedRec.PERMEABILITY_TEXT);
-		nimapping.put("permeability_ranges",EVCombinedRec.PERMEABILITY_RANGES);
+		//nimapping.put("permeability_text",EVCombinedRec.PERMEABILITY_TEXT);
+		//nimapping.put("permeability_ranges",EVCombinedRec.PERMEABILITY_RANGES);
 		
 		//electric charge
 		//nimapping.put("electric_charge_minimum",EVCombinedRec.ELECTRIC_CHARGE_MINIMUM); 
 		//nimapping.put("electric_charge_maximum",EVCombinedRec.ELECTRIC_CHARGE_MAXIMUM);
-		nimapping.put("electric_charge_text",EVCombinedRec.ELECTRIC_CHARGE_TEXT);
-		nimapping.put("electric_charge_ranges",EVCombinedRec.ELECTRIC_CHARGE_RANGES);
+		//nimapping.put("electric_charge_text",EVCombinedRec.ELECTRIC_CHARGE_TEXT);
+		//nimapping.put("electric_charge_ranges",EVCombinedRec.ELECTRIC_CHARGE_RANGES);
 		
 		//volume charge density
 		//nimapping.put("volume_charge_density_minimum",EVCombinedRec.VOLUME_CHARGE_DENSITY_MINIMUM); 
@@ -204,8 +204,8 @@ public class BdNumericalIndexMapping
 		//linear charge density
 		//nimapping.put("linear_charge_density_minimum",EVCombinedRec.LINEAR_CHARGE_DENSITY_MINIMUM); 
 		//nimapping.put("linear_charge_density_maximum",EVCombinedRec.LINEAR_CHARGE_DENSITY_MAXIMUM);
-		nimapping.put("linear_charge_density_text",EVCombinedRec.LINEAR_CHARGE_DENSITY_TEXT);
-		nimapping.put("linear_charge_density_ranges",EVCombinedRec.LINEAR_CHARGE_DENSITY_RANGES);
+		//nimapping.put("linear_charge_density_text",EVCombinedRec.LINEAR_CHARGE_DENSITY_TEXT);
+		//nimapping.put("linear_charge_density_ranges",EVCombinedRec.LINEAR_CHARGE_DENSITY_RANGES);
 		
 		//decibel
 		//nimapping.put("decibel_minimum",EVCombinedRec.DECIBEL_MINIMUM); 
@@ -234,8 +234,8 @@ public class BdNumericalIndexMapping
 		//picture element
 		//nimapping.put("picture_element_minimum",EVCombinedRec.PICTURE_ELEMENT_MINIMUM); 
 		//nimapping.put("picture_element_maximum",EVCombinedRec.PICTURE_ELEMENT_MAXIMUM);
-		nimapping.put("picture_element_text",EVCombinedRec.PICTURE_ELEMENT_TEXT);
-		nimapping.put("picture_element_ranges",EVCombinedRec.PICTURE_ELEMENT_RANGES);
+		//nimapping.put("picture_element_text",EVCombinedRec.PICTURE_ELEMENT_TEXT);
+		//nimapping.put("picture_element_ranges",EVCombinedRec.PICTURE_ELEMENT_RANGES);
 		
 		//mass density
 		//nimapping.put("mass_density_minimum",EVCombinedRec.MASS_DENSITY_MINIMUM); 
@@ -252,26 +252,26 @@ public class BdNumericalIndexMapping
 		//volumetric flow rate
 		//nimapping.put("volumetric_flow_rate_minimum",EVCombinedRec.VOLUMETRIC_FLOW_RATE_MINIMUM); 
 		//nimapping.put("volumetric_flow_rate_maximum",EVCombinedRec.VOLUMETRIC_FLOW_RATE_MAXIMUM);
-		nimapping.put("volumetric_flow_rate_text",EVCombinedRec.VOLUMETRIC_FLOW_RATE_TEXT); 
-		nimapping.put("volumetric_flow_rate_ranges",EVCombinedRec.VOLUMETRIC_FLOW_RATE_RANGES);
+		//nimapping.put("volumetric_flow_rate_text",EVCombinedRec.VOLUMETRIC_FLOW_RATE_TEXT); 
+		//nimapping.put("volumetric_flow_rate_ranges",EVCombinedRec.VOLUMETRIC_FLOW_RATE_RANGES);
 		
 		//unit of information
 		//nimapping.put("unit_of_information_minimum",EVCombinedRec.UNIT_OF_INFORMATION_MINIMUM); 
 		//nimapping.put("unit_of_information_maximum",EVCombinedRec.UNIT_OF_INFORMATION_MAXIMUM);
-		nimapping.put("unit_of_information_text",EVCombinedRec.UNIT_OF_INFORMATION_TEXT);  
-		nimapping.put("unit_of_information_ranges",EVCombinedRec.UNIT_OF_INFORMATION_RANGES); 
+		//nimapping.put("unit_of_information_text",EVCombinedRec.UNIT_OF_INFORMATION_TEXT);  
+		//nimapping.put("unit_of_information_ranges",EVCombinedRec.UNIT_OF_INFORMATION_RANGES); 
 		
 		//angle
 		//nimapping.put("angle_minimum",EVCombinedRec.ANGLE_MINIMUM); 
 		//nimapping.put("angle_maximum",EVCombinedRec.ANGLE_MAXIMUM);
-		nimapping.put("angle_text",EVCombinedRec.ANGLE_TEXT);  
-		nimapping.put("angle_ranges",EVCombinedRec.ANGLE_RANGES);  
+		//nimapping.put("angle_text",EVCombinedRec.ANGLE_TEXT);  
+		//nimapping.put("angle_ranges",EVCombinedRec.ANGLE_RANGES);  
 		
 		//solid angle
 		//nimapping.put("solid_angle_minimum",EVCombinedRec.SOLID_ANGLE_MINIMUM); 
 		//nimapping.put("solid_angle_maximum",EVCombinedRec.SOLID_ANGLE_MAXIMUM);
-		nimapping.put("solid_angle_text",EVCombinedRec.SOLID_ANGLE_TEXT);  
-		nimapping.put("solid_angle_ranges",EVCombinedRec.SOLID_ANGLE_RANGES);  
+		//nimapping.put("solid_angle_text",EVCombinedRec.SOLID_ANGLE_TEXT);  
+		//nimapping.put("solid_angle_ranges",EVCombinedRec.SOLID_ANGLE_RANGES);  
 		
 		//pressure
 		//nimapping.put("pressure_minimum",EVCombinedRec.PRESSURE_MINIMUM); 
@@ -282,8 +282,8 @@ public class BdNumericalIndexMapping
 		//dynamic viscosity
 		//nimapping.put("dynamic_viscosity_minimum",EVCombinedRec.DYNAMIC_VISCOSITY_MINIMUM); 
 		//nimapping.put("dynamic_viscosity_maximum",EVCombinedRec.DYNAMIC_VISCOSITY_MAXIMUM);
-		nimapping.put("dynamic_viscosity_text",EVCombinedRec.DYNAMIC_VISCOSITY_TEXT); 
-		nimapping.put("dynamic_viscosity_ranges",EVCombinedRec.DYNAMIC_VISCOSITY_RANGES); 
+		//nimapping.put("dynamic_viscosity_text",EVCombinedRec.DYNAMIC_VISCOSITY_TEXT); 
+		//nimapping.put("dynamic_viscosity_ranges",EVCombinedRec.DYNAMIC_VISCOSITY_RANGES); 
 		
 		//force
 		//nimapping.put("force_minimum",EVCombinedRec.FORCE_MINIMUM); 
@@ -354,8 +354,8 @@ public class BdNumericalIndexMapping
 		//pH value
 		//nimapping.put("ph_value_minimum",EVCombinedRec.PH_VALUE_MINIMUM); 
 		//nimapping.put("ph_value_maximum",EVCombinedRec.PH_VALUE_MAXIMUM);
-		nimapping.put("ph_value_text",EVCombinedRec.PH_VALUE_TEXT); 
-		nimapping.put("ph_value_ranges",EVCombinedRec.PH_VALUE_RANGES); 
+		//nimapping.put("ph_value_text",EVCombinedRec.PH_VALUE_TEXT); 
+		//nimapping.put("ph_value_ranges",EVCombinedRec.PH_VALUE_RANGES); 
 
 		//radioactivity 
 		//nimapping.put("radioactivity_minimum",EVCombinedRec.RADIOACTIVITY_MINIMUM); 
@@ -372,8 +372,8 @@ public class BdNumericalIndexMapping
 		//dose equivalent		
 		//nimapping.put("dose_equivalent_minimum",EVCombinedRec.DOSE_EQUIVALENT_MINIMUM); 
 		//nimapping.put("dose_equivalent_maximum",EVCombinedRec.DOSE_EQUIVALENT_MAXIMUM);
-		nimapping.put("dose_equivalent_text",EVCombinedRec.DOSE_EQUIVALENT_TEXT);
-		nimapping.put("dose_equivalent_ranges",EVCombinedRec.DOSE_EQUIVALENT_RANGES);
+		//nimapping.put("dose_equivalent_text",EVCombinedRec.DOSE_EQUIVALENT_TEXT);
+		//nimapping.put("dose_equivalent_ranges",EVCombinedRec.DOSE_EQUIVALENT_RANGES);
 		
 		//radiation exposure		
 		//nimapping.put("radiation_exposure_minimum",EVCombinedRec.RADIATION_EXPOSURE_MINIMUM); 
@@ -384,14 +384,14 @@ public class BdNumericalIndexMapping
 		//catalytic activity
 		//nimapping.put("catalytic_activity_minimum",EVCombinedRec.CATALYTIC_ACTIVITY_MINIMUM); 
 		//nimapping.put("catalytic_activity_maximum",EVCombinedRec.CATALYTIC_ACTIVITY_MAXIMUM);
-		nimapping.put("catalytic_activity_text",EVCombinedRec.CATALYTIC_ACTIVITY_TEXT);
-		nimapping.put("catalytic_activity_ranges",EVCombinedRec.CATALYTIC_ACTIVITY_RANGES);
+		//nimapping.put("catalytic_activity_text",EVCombinedRec.CATALYTIC_ACTIVITY_TEXT);
+		//nimapping.put("catalytic_activity_ranges",EVCombinedRec.CATALYTIC_ACTIVITY_RANGES);
 		
 		//Electron_Volt
 		//nimapping.put("electron_volt_minimum",EVCombinedRec.ELECTRON_VOLT_MINIMUM); 
 		//nimapping.put("electron_volt_maximum",EVCombinedRec.ELECTRON_VOLT_MAXIMUM);
-		nimapping.put("electron_volt_text",EVCombinedRec.ELECTRON_VOLT_TEXT);
-		nimapping.put("electron_volt_ranges",EVCombinedRec.ELECTRON_VOLT_RANGES);
+		//nimapping.put("electron_volt_text",EVCombinedRec.ELECTRON_VOLT_TEXT);
+		//nimapping.put("electron_volt_ranges",EVCombinedRec.ELECTRON_VOLT_RANGES);
 		 
 		//Luminance
 		//nimapping.put("luminance_minimum",EVCombinedRec.LUMINANCE_MINIMUM); 
@@ -428,7 +428,57 @@ public class BdNumericalIndexMapping
 		//nimapping.put("surface_power_density_maximum",EVCombinedRec.SURFACE_POWER_DENSITY_MAXIMUM);
 		nimapping.put("surface_power_density_text",EVCombinedRec.SURFACE_POWER_DENSITY_TEXT);
 		nimapping.put("surface_power_density_ranges",EVCombinedRec.SURFACE_POWER_DENSITY_RANGES);
-				
+		
+		//added on 4/11/2016
+		//Decibel isotropic
+		nimapping.put("decibel_isotropic_text",EVCombinedRec.DECIBEL_ISOTROPIC_TEXT);
+		nimapping.put("decibel_isotropic_ranges",EVCombinedRec.DECIBEL_ISOTROPIC_RANGES);
+		
+		//decibel_milliwatts
+		nimapping.put("decibel_milliwatts_text",EVCombinedRec.DECIBEL_MILLIWATTS_TEXT);
+		nimapping.put("decibel_milliwatts_ranges",EVCombinedRec.DECIBEL_MILLIWATTS_RANGES);	
+		
+		//Equivalent Dose
+		nimapping.put("equivalent_dose_text",EVCombinedRec.EQUIVALENT_DOSE_TEXT);
+		nimapping.put("equivalent_dose_ranges",EVCombinedRec.EQUIVALENT_DOSE_RANGES);	
+		
+		//Molar concentration
+		nimapping.put("molar_concentration_text",EVCombinedRec.MOLAR_CONCENTRATION_TEXT);
+		nimapping.put("molar_concentration_ranges",EVCombinedRec.MOLAR_CONCENTRATION_RANGES);	
+		
+		//Linear Density
+		nimapping.put("linear_density_text",EVCombinedRec.LINEAR_DENSITY_TEXT);
+		nimapping.put("linear_density_ranges",EVCombinedRec.LINEAR_DENSITY_RANGES);
+		
+		//luminous efficiency
+		nimapping.put("luminous_efficiency_text",EVCombinedRec.LUMINOUS_EFFICIENCY_TEXT);
+		nimapping.put("luminous_efficiency_ranges",EVCombinedRec.LUMINOUS_EFFICIENCY_RANGES);
+		
+		//luminous efficacy
+		nimapping.put("luminous_efficacy_text",EVCombinedRec.LUMINOUS_EFFICACY_TEXT);
+		nimapping.put("luminous_efficacy_ranges",EVCombinedRec.LUMINOUS_EFFICACY_RANGES);
+		
+		//Specific Energy
+		nimapping.put("specific_energy_text",EVCombinedRec.SPECIFIC_ENERGY_TEXT);
+		nimapping.put("specific_energy_ranges",EVCombinedRec.SPECIFIC_ENERGY_RANGES);
+		
+		//Specific Surface area
+		nimapping.put("specific_surface_area_text",EVCombinedRec.SPECIFIC_SURFACE_AREA_TEXT);
+		nimapping.put("specific_surface_area_ranges",EVCombinedRec.SPECIFIC_SURFACE_AREA_RANGES);
+		
+		//Specific Volume
+		nimapping.put("specific_volume_text",EVCombinedRec.SPECIFIC_VOLUME_TEXT);
+		nimapping.put("specific_volume_area_ranges",EVCombinedRec.SPECIFIC_VOLUME_RANGES);
+		
+		//Surface Tension
+		nimapping.put("surface_tension_text",EVCombinedRec.SURFACE_TENSION_TEXT);
+		nimapping.put("surface_tension_ranges",EVCombinedRec.SURFACE_TENSION_RANGES);
+		
+		//Surface Density
+		nimapping.put("surface_density_text",EVCombinedRec.SURFACE_DENSITY_TEXT);
+		nimapping.put("surface_density_ranges",EVCombinedRec.SURFACE_DENSITY_RANGES);
+		
+		
 		
 		
 		

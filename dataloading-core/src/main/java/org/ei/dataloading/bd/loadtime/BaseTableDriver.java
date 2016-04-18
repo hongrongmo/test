@@ -564,8 +564,10 @@ public class BaseTableDriver
        
     }
 
+
     //HH 02/2016 for Cafe
     // original was protected
+
      public Connection getConnection(String connectionURL,
                                                  String driver,
                                                  String username,
