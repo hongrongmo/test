@@ -51,7 +51,7 @@ public class SyncMultiMessageReceiverClient {
 
 	// Visibility time-out for the queue. It must match to the one set for the queue for this example to work.
 	private static final long TIME_OUT_SECONDS = 30;
-	private static final int MESSAGE_VISIBILITY_TIME_OUT_SECONDS = 600;
+	private static final int MESSAGE_VISIBILITY_TIME_OUT_SECONDS = 1200;
 	private static final int NUM_OF_MESSAGES_TO_FETCH = 10;
 
 
