@@ -27,14 +27,22 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
+import com.amazon.sqs.javamessaging.SQSConnection;
+import com.amazon.sqs.javamessaging.SQSConnectionFactory;
+import com.amazon.sqs.javamessaging.SQSSession;
 import com.amazonaws.AmazonClientException;
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.auth.AWSCredentialsProvider;
 import com.amazonaws.auth.EnvironmentVariableCredentialsProvider;
+import com.amazonaws.auth.InstanceProfileCredentialsProvider;
+import com.amazonaws.auth.PropertiesCredentials;
 import com.amazonaws.regions.Region;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.s3.AmazonS3;
+import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.s3.model.ListObjectsRequest;
 import com.amazonaws.services.s3.model.ObjectListing;
 import com.amazonaws.services.s3.model.S3ObjectSummary;
@@ -49,6 +57,10 @@ import com.amazonaws.services.sqs.model.ReceiveMessageResult;
 
 import java.util.*;
 
+import javax.jms.JMSException;
+import javax.jms.MessageConsumer;
+import javax.jms.Session;
+
 public class archiveEVCafeRefeed {
 
 
@@ -56,15 +68,16 @@ public class archiveEVCafeRefeed {
 	DateFormat dateFormat;
 	DateFormat sentTimestampdateFormat;
 
-	 private String url="jdbc:oracle:thin:@localhost:1521:eid";
-	 private String driver="oracle.jdbc.driver.OracleDriver";
-	 private String username="ap_correction1";
-	 private String password="ei3it";
-	 private String sqlldrFileName = null;
-	 private String action = null;
+	private static int updateNumber = 0;
+	private static String url="jdbc:oracle:thin:@localhost:1521:eid";
+	private String driver="oracle.jdbc.driver.OracleDriver";
+	private String username="ap_correction1";
+	private String password="ei3it";
+	private static String sqlldrFileName = null;
+	private String action = null;
 	private long msgEpoch;
-	
-	
+
+
 
 	static int numberOfRuns=0;
 
@@ -80,8 +93,9 @@ public class archiveEVCafeRefeed {
 	private static GetANIFileFromCafeS3Bucket objectFromS3 = null;
 	private static AmazonS3 s3Client = null; 
 	private ReceiveAmazonSQSMessage obj = null;
-	
-	
+
+	private static SQSConnection connection = null;
+
 	private static Set<String> messageIds= new HashSet<String>();
 	private static HashMap<String, String> queueArgs = new HashMap<String,String>();
 
@@ -95,16 +109,45 @@ public class archiveEVCafeRefeed {
 		archiveEVCafeRefeed archiveEVCafeRefeed = new archiveEVCafeRefeed();
 		if(args[0] !=null)
 			numberOfRuns = Integer.parseInt(args[0]);
+		if(args[1]!=null && args[1].length()>0)
+		{
+			Pattern pattern = Pattern.compile("^\\d*$");
+			Matcher matcher = pattern.matcher(args[1]);
+			if (matcher.find())
+			{
+				updateNumber = Integer.parseInt(args[1]);
+			}
+			else
+			{
+				System.out.println("did not find updateNumber or updateNumber has wrong format");
+				System.exit(1);
+			}
+		}
+
+		if(args[2] !=null)
+		{
+			url=args[2];
+		}
+		if(args.length>3)
+		{
+			if(args[3] !=null)
+			{
+				sqlldrFileName = args[3];
+			}
+		}
 
 
+		// works only on my local machine	
 		/*
 		 * The ProfileCredentialsProvider will return your [default]
 		 * credential profile by reading from the credentials file located at
 		 * (~/.aws/credentials).
 		 */
-		AWSCredentialsProvider credentials = null;
+		/*AWSCredentialsProvider credentials = null;
 		try {
-			credentials = new EnvironmentVariableCredentialsProvider();
+			//credentials = new EnvironmentVariableCredentialsProvider();   //for localhost
+			//credentials = new InstanceProfileCredentialsProvider();		// for dataloading ec2
+
 		} catch (Exception e) {
 			throw new AmazonClientException(
 					"Cannot load the credentials from the credential profiles file. " +
@@ -112,6 +155,10 @@ public class archiveEVCafeRefeed {
 							"location (~/.aws/credentials), and is in valid format.",
 							e);
 		}
+
+
+
+
 
 
 		sqs = new AmazonSQSClient(credentials);
@@ -134,12 +181,41 @@ public class archiveEVCafeRefeed {
 			}
 			System.out.println();
 
+		 */
+
+
+		try
+		{
 			archiveEVCafeRefeed.begin();
 			archiveEVCafeRefeed.receiveMessage();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+
+		finally
+		{
+			archiveEVCafeRefeed.end();
 
 
+			if(connection !=null)
+			{
+				try
+				{
+					// Close the connection. This will close the session automatically
+					connection.close();
+					System.out.println("Connection closed.");
+				}
+				catch(Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
 
-		} catch (AmazonServiceException ase) {
+		}
+
+		/*} catch (AmazonServiceException ase) {
 			System.out.println("Caught an AmazonServiceException, which means your request made it " +
 					"to Amazon SQS, but was rejected with an error response for some reason.");
 			System.out.println("Error Message:    " + ase.getMessage());
@@ -152,11 +228,8 @@ public class archiveEVCafeRefeed {
 					"a serious internal problem while trying to communicate with SQS, such as not " +
 					"being able to access the network.");
 			System.out.println("Error Message: " + ace.getMessage());
-		}
-		finally
-		{
-			archiveEVCafeRefeed.end();
-		}
+		}*/
+
 	}
 
 	public void receiveMessage()
@@ -278,8 +351,8 @@ public class archiveEVCafeRefeed {
 	{
 		queueArgs.put("--queue", "EVCafeRefeed");
 		queueArgs.put("--region","us-east-1");
-		
-		
+
+
 		dateFormat = new SimpleDateFormat("yyyy_MM_dd_HH-mm-ss");
 		Date date = new Date();
 
@@ -293,14 +366,55 @@ public class archiveEVCafeRefeed {
 		System.out.println("Output Filename "+filename);
 
 		// Create the configuration for the example
-		SQSConfiguration config = SQSConfiguration.parseConfig("SyncMessageReceiverClientAcknowledge", queueArgs);
+		SQSConfiguration config = SQSConfiguration.parseConfig("archiveEVCafeRefeed", queueArgs);
 
 		// create object of GetANIFileFromCafeS3Bucket to convert the CPX record
 		s3Client = config.getAmazonS3Cleint();
 		//objectFromS3 = GetANIFileFromCafeS3Bucket.getInstance(s3Client);
-		objectFromS3 = new GetANIFileFromCafeS3Bucket(s3Client,201617,"cpx",url,driver,username,password, sqlldrFileName);
+		objectFromS3 = new GetANIFileFromCafeS3Bucket(s3Client,updateNumber,"cpx",url,driver,username,password, sqlldrFileName);
 
 
+		// Create the connection factory based on the config
+		SQSConnectionFactory connectionFactory =SQSConnectionFactory.builder()
+				.withRegion(config.getRegion())
+				.withAWSCredentialsProvider(config.getCredentialsProvider())
+				.build();
+
+		// Create the connection
+		try {
+			connection = connectionFactory.createConnection();
+
+			// AMazonSQS queue
+			System.out.println("===========================================");
+			System.out.println("Getting Started with Amazon SQS");
+			System.out.println("===========================================\n");
+
+			//clone JMSwrapped amazonSQSClient to AMazonSQS queue
+			sqs = connection.getWrappedAmazonSQSClient().getAmazonSQSClient();
+			// get current queue
+			myQueueUrl = sqs.getQueueUrl(queueName).getQueueUrl();
+
+			// List queues
+			System.out.println("Listing all queues in your account.\n");
+			for (String queueUrl : sqs.listQueues().getQueueUrls()) {
+				System.out.println("  QueueUrl: " + queueUrl);
+			}
+			System.out.println();
+			// END of AmazonSQS queue		
+
+
+			// Create the session  with client acknowledge mode
+			Session session = connection.createSession(false, SQSSession.UNORDERED_ACKNOWLEDGE);
+
+			// Create the consumer 
+			//MessageConsumer consumer = session.createConsumer(session.createQueue(queueName));
+
+			// Open the connection
+
+			connection.start();
+		} catch (JMSException e) {
+			e.printStackTrace();
+		}
 
 	}
 
@@ -318,6 +432,8 @@ public class archiveEVCafeRefeed {
 				ex.printStackTrace();
 			}
 		}
+
+
 	}
 
 }
