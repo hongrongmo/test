@@ -18,6 +18,7 @@ package org.ei.dataloading.cafe;
 	Message attributes.
 	MD5 digest of the message attributes.
  */
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -61,12 +62,22 @@ import javax.jms.JMSException;
 import javax.jms.MessageConsumer;
 import javax.jms.Session;
 
+import org.ei.dataloading.bd.loadtime.BaseTableDriver;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
+
 public class archiveEVCafeRefeed {
 
 
+
+	// Visibility time-out for the queue. It must match to the one set for the queue for this example to work.
 	private static final long TIME_OUT_SECONDS = 30;
+	private static final int MESSAGE_VISIBILITY_TIME_OUT_SECONDS = 300;
+	private static final int NUM_OF_MESSAGES_TO_FETCH = 10;
+
+
 	DateFormat dateFormat;
-	DateFormat sentTimestampdateFormat;
+	DateFormat msgSentDateFormat;
 
 	private static int updateNumber = 0;
 	private static String url="jdbc:oracle:thin:@localhost:1521:eid";
@@ -74,29 +85,34 @@ public class archiveEVCafeRefeed {
 	private String username="ap_correction1";
 	private String password="ei3it";
 	private static String sqlldrFileName = null;
-	private String action = null;
-	private long msgEpoch;
 
 
+	private String filename;
 
 	static int numberOfRuns=0;
 
 	private static AmazonSQS sqs;
 	private static String myQueueUrl;
+	private static String queueName;
 
 	private PrintWriter out;
-	private static Map<String,String> msgAttributes = new HashMap<String,String>();
+	public static final char FIELDDELIM = '\t';
+	StringBuffer recordBuf = null;
 
-	static String messageBody;
-	final static String queueName = "EVCafeRefeed";
+	
+	
 
-	private static GetANIFileFromCafeS3Bucket objectFromS3 = null;
-	private static AmazonS3 s3Client = null; 
-	private ReceiveAmazonSQSMessage obj = null;
+	private String messageBody;
+	private ReceiveMessageResult receiveMessageResult = null;
+	private DeleteMessageRequest deleteRequest = null;
+	private ReceiveAmazonSQSMessage obj = null;   // for parsing/checking Message Metadata
+	private Map<String,String> msgAttributes= new HashMap<String,String>();
+
+
 
 	private static SQSConnection connection = null;
 
-	private static Set<String> messageIds= new HashSet<String>();
+
 	private static HashMap<String, String> queueArgs = new HashMap<String,String>();
 
 
@@ -108,143 +124,45 @@ public class archiveEVCafeRefeed {
 
 		archiveEVCafeRefeed archiveEVCafeRefeed = new archiveEVCafeRefeed();
 		if(args[0] !=null)
+		{
 			numberOfRuns = Integer.parseInt(args[0]);
-		if(args[1]!=null && args[1].length()>0)
+		}
+		if(args[1] !=null)
 		{
-			Pattern pattern = Pattern.compile("^\\d*$");
-			Matcher matcher = pattern.matcher(args[1]);
-			if (matcher.find())
+			queueName = args[1];
+		}
+		if(args.length >2)
+		{
+			if(args[2] !=null)
 			{
-				updateNumber = Integer.parseInt(args[1]);
-			}
-			else
-			{
-				System.out.println("did not find updateNumber or updateNumber has wrong format");
-				System.exit(1);
+				sqlldrFileName = args[2];
 			}
 		}
+		
 
-		if(args[2] !=null)
-		{
-			url=args[2];
-		}
-		if(args.length>3)
-		{
-			if(args[3] !=null)
-			{
-				sqlldrFileName = args[3];
-			}
-		}
-
-
-		// works only on my local machine	
-		/*
-		 * The ProfileCredentialsProvider will return your [default]
-		 * credential profile by reading from the credentials file located at
-		 * (~/.aws/credentials).
-		 */
-		/*AWSCredentialsProvider credentials = null;
-		try {
-			//credentials = new EnvironmentVariableCredentialsProvider();   //for localhost
-			//credentials = new InstanceProfileCredentialsProvider();		// for dataloading ec2
-
-		} catch (Exception e) {
-			throw new AmazonClientException(
-					"Cannot load the credentials from the credential profiles file. " +
-							"Please make sure that your credentials file is at the correct " +
-							"location (~/.aws/credentials), and is in valid format.",
-							e);
-		}
-
-
-
-
-
-
-		sqs = new AmazonSQSClient(credentials);
-		Region usWest2 = Region.getRegion(Regions.US_EAST_1);
-		sqs.setRegion(usWest2);
-
-		System.out.println("===========================================");
-		System.out.println("Getting Started with Amazon SQS");
-		System.out.println("===========================================\n");
-
-		try {
-			// get current queue
-			CreateQueueRequest createQueueRequest = new CreateQueueRequest(queueName);
-			myQueueUrl = sqs.createQueue(createQueueRequest).getQueueUrl();
-
-			// List queues
-			System.out.println("Listing all queues in your account.\n");
-			for (String queueUrl : sqs.listQueues().getQueueUrls()) {
-				System.out.println("  QueueUrl: " + queueUrl);
-			}
-			System.out.println();
-
-		 */
-
-
-		try
-		{
 			archiveEVCafeRefeed.begin();
-			archiveEVCafeRefeed.receiveMessage();
-		}
-		catch(Exception e)
-		{
-			e.printStackTrace();
-		}
-
-		finally
-		{
+			archiveEVCafeRefeed.SQSCreationAndSetting();
 			archiveEVCafeRefeed.end();
-
-
-			if(connection !=null)
-			{
-				try
-				{
-					// Close the connection. This will close the session automatically
-					connection.close();
-					System.out.println("Connection closed.");
-				}
-				catch(Exception e)
-				{
-					e.printStackTrace();
-				}
-			}
-
-		}
-
-		/*} catch (AmazonServiceException ase) {
-			System.out.println("Caught an AmazonServiceException, which means your request made it " +
-					"to Amazon SQS, but was rejected with an error response for some reason.");
-			System.out.println("Error Message:    " + ase.getMessage());
-			System.out.println("HTTP Status Code: " + ase.getStatusCode());
-			System.out.println("AWS Error Code:   " + ase.getErrorCode());
-			System.out.println("Error Type:       " + ase.getErrorType());
-			System.out.println("Request ID:       " + ase.getRequestId());
-		} catch (AmazonClientException ace) {
-			System.out.println("Caught an AmazonClientException, which means the client encountered " +
-					"a serious internal problem while trying to communicate with SQS, such as not " +
-					"being able to access the network.");
-			System.out.println("Error Message: " + ace.getMessage());
-		}*/
-
+			archiveEVCafeRefeed.loadToDB();
+			
+		
 	}
 
-	public void receiveMessage()
+	private void receiveMessage(MessageConsumer consumer, boolean acknowledge) throws InterruptedException 
 	{
-		// Receive messages
-		System.out.println("Receiving messages from "+queueName+".\n");
-		ReceiveMessageRequest receiveMessageRequest;
-
-		sentTimestampdateFormat = new SimpleDateFormat("yyyy_MM_dd");
-		Date date;
-
-		obj = new ReceiveAmazonSQSMessage(); 
 		ChangeMessageVisibilityRequest msgVisibilityReq;
 		String msgReciptHandle = null;
 
+		obj = new ReceiveAmazonSQSMessage();
+		msgSentDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		
+		ReceiveMessageRequest receiveMessageRequest = new ReceiveMessageRequest(myQueueUrl)
+		.withVisibilityTimeout(MESSAGE_VISIBILITY_TIME_OUT_SECONDS)
+		.withWaitTimeSeconds(10).withMaxNumberOfMessages(NUM_OF_MESSAGES_TO_FETCH)
+		.withAttributeNames("SentTimestamp");
+
+		// Receive messages
+		System.out.println("Receiving messages from "+queueName+".\n");
 
 		try
 		{
@@ -252,77 +170,93 @@ public class archiveEVCafeRefeed {
 			//while(true)
 			for(int i = 0; i<numberOfRuns;i++)
 			{				
-				receiveMessageRequest = new ReceiveMessageRequest(myQueueUrl)
-				.withWaitTimeSeconds(10).withMaxNumberOfMessages(10)
-				.withAttributeNames("All");
 
-				ArrayList<Message> messages = (ArrayList<Message>)sqs.receiveMessage(receiveMessageRequest).getMessages();
+				receiveMessageResult = sqs.receiveMessage(receiveMessageRequest);
 
-				//msgAttributes = receiveMessageRequest.getAttributeNames();
+
+				ArrayList<Message> messages = (ArrayList<Message>)receiveMessageResult.getMessages();
+				System.out.println("MessagesList size: " + messages.size());
+
 
 				if(messages.size() >0)
 				{
 					for(Message message:messages)
 					{
-						if (message == null) {
+						if (message == null) 
+						{
 							System.out.println("Queue is empty!");
 							break;
-						} else {
+						} 
+						else 
+						{
+							msgReciptHandle = message.getReceiptHandle();  // for deleting the message 
 							messageBody = message.getBody();
-							//System.out.println("SQS Message: " +  messageBody);
-
 							msgAttributes = message.getAttributes();
-
-							if(!(messageIds.contains(message.getMessageId())))
+							
+							 recordBuf = new StringBuffer();
+							
+							
+							// change message visibility timeout
+							msgVisibilityReq = new ChangeMessageVisibilityRequest(myQueueUrl, msgReciptHandle, MESSAGE_VISIBILITY_TIME_OUT_SECONDS);
+							
+							System.out.println("SQS Message: " +  messageBody);
+							
+							//parse SQS Message Fields& determine whether it is "ANI" message & belongs to dbcollcodes *|CPX|*
+							if(obj.ParseSQSMessage(messageBody))   
 							{
-								out.println(messageBody);
-								messageIds.add(message.getMessageId());
-
-								// Convert Key if it is for dbcollcodes "CPX"
-								//parse SQS Message Fields& determine whether it is "ANI" message
-								if(obj.ParseSQSMessage(message.getBody()))   //for Prod
+								
+								//Bucket Name
+								if(obj.getMessageField("bucket") !=null)
 								{
-									// change message visibility timeout
-									msgVisibilityReq = new ChangeMessageVisibilityRequest(myQueueUrl, msgReciptHandle, 1200);
-									System.out.println("Message Visibility Timeout is: " + msgVisibilityReq.getVisibilityTimeout());
-
-
-									action = obj.getMessageField("action");
-									msgEpoch = Long.parseLong(obj.getMessageField("epoch"));
-
-
-									if(action !=null)
-									{
-
-										objectFromS3.getFile(obj.getMessageField("bucket"), obj.getMessageField("key"),action,msgEpoch);
-
-									}
-
+									recordBuf.append(obj.getMessageField("bucket"));
 								}
-
-							}
-
-							else
-							{
-								System.out.println("Message was previously received and archived");
-							}
-
-
-
-							//receiveMessageRequest Attributes
-
-							for(String key: msgAttributes.keySet())
-							{
-								// convert SentTimestamp from default Epoch format into date time format
-								if(key.equalsIgnoreCase("SentTimestamp"))
+								recordBuf.append(FIELDDELIM);
+								
+								//Key
+								if(obj.getMessageField("key") !=null)
 								{
-									date = new Date(Long.parseLong(msgAttributes.get(key)));
-
-									String SentTimestamp = sentTimestampdateFormat.format(date);
-									System.out.println("formated sentTimeStamp: " + SentTimestamp);
+									recordBuf.append(obj.getMessageField("key"));
 								}
-								System.out.println(key +"#"+ msgAttributes.get(key));
+								recordBuf.append(FIELDDELIM);
+								
+								//epoch
+								if(obj.getMessageField("epoch") !=null)
+								{
+									recordBuf.append(obj.getMessageField("epoch"));
+								}
+								recordBuf.append(FIELDDELIM);
+								
+								//pui
+								if(obj.getMessageField("pui") !=null)
+								{
+									recordBuf.append(obj.getMessageField("pui"));
+								}
+								recordBuf.append(FIELDDELIM);
+								
+
+								//action
+								if(obj.getMessageField("action") !=null)
+								{
+									recordBuf.append(obj.getMessageField("action"));
+								}
+								recordBuf.append(FIELDDELIM);
+								
+								//Body
+								recordBuf.append(messageBody);
+								recordBuf.append(FIELDDELIM);
+	
+								
+								if(msgAttributes !=null && ! (msgAttributes.isEmpty()))
+								{	
+									recordBuf.append(msgSentDateFormat.format(new Date(Long.parseLong(msgAttributes.get("SentTimestamp")))).toString());
+									
+								}
+								// write the message to out file
+								out.println(recordBuf.toString().trim());
 							}
+							
+							// delete the message
+							deleteMessage(msgReciptHandle);
 						}
 					}
 				}
@@ -343,20 +277,23 @@ public class archiveEVCafeRefeed {
 		}
 
 	}
-	public void writeMessage()
+	
+	private void deleteMessage(String messageHandle)
 	{
-
+		if(messageHandle !=null && messageHandle.length() >0)
+		{
+			System.out.println("Deleting a message: " + messageHandle);
+			deleteRequest = new DeleteMessageRequest(myQueueUrl, messageHandle);
+			sqs.deleteMessage(deleteRequest);
+		}
 	}
+	
 	public void begin()
 	{
-		queueArgs.put("--queue", "EVCafeRefeed");
-		queueArgs.put("--region","us-east-1");
-
-
 		dateFormat = new SimpleDateFormat("yyyy_MM_dd_HH-mm-ss");
 		Date date = new Date();
 
-		String filename = queueName+"-"+dateFormat.format(date)+".txt";
+		filename = queueName+"-"+dateFormat.format(date)+".txt";
 		try {
 			out = new PrintWriter(new FileWriter(filename));
 		} catch (IOException e) {
@@ -365,24 +302,55 @@ public class archiveEVCafeRefeed {
 
 		System.out.println("Output Filename "+filename);
 
-		// Create the configuration for the example
-		SQSConfiguration config = SQSConfiguration.parseConfig("archiveEVCafeRefeed", queueArgs);
+	}
 
-		// create object of GetANIFileFromCafeS3Bucket to convert the CPX record
-		s3Client = config.getAmazonS3Cleint();
-		//objectFromS3 = GetANIFileFromCafeS3Bucket.getInstance(s3Client);
-		objectFromS3 = new GetANIFileFromCafeS3Bucket(s3Client,updateNumber,"cpx",url,driver,username,password, sqlldrFileName);
+	public void end()
+	{
+		if(out !=null)
+		{
+			try
+			{
+				out.flush();
+				out.close();
+			}
+			catch(Exception ex)
+			{
+				ex.printStackTrace();
+			}
+		}
 
 
-		// Create the connection factory based on the config
-		SQSConnectionFactory connectionFactory =SQSConnectionFactory.builder()
-				.withRegion(config.getRegion())
-				.withAWSCredentialsProvider(config.getCredentialsProvider())
-				.build();
+	}
 
-		// Create the connection
+
+	public void SQSCreationAndSetting() throws JMSException, InterruptedException
+	{
+
+		queueArgs.put("--queue", queueName);
+		queueArgs.put("--region","us-east-1");
+
 		try {
+
+			// Create the configuration for the example
+			SQSConfiguration config = SQSConfiguration.parseConfig("archiveEVCafeRefeed", queueArgs);
+
+
+			// Check if Queue Exist
+			SQSExistenceCheck.setupLogging();
+
+			// Create the connection factory based on the config
+			SQSConnectionFactory connectionFactory =SQSConnectionFactory.builder()
+					.withRegion(config.getRegion())
+					.withAWSCredentialsProvider(config.getCredentialsProvider())
+					.build();
+
+			// Create the connection
 			connection = connectionFactory.createConnection();
+
+			queueName = config.getQueueName();
+			// Create the queue if needed
+			SQSExistenceCheck.ensureQueueExists(connection, queueName);
+
 
 			// AMazonSQS queue
 			System.out.println("===========================================");
@@ -407,33 +375,82 @@ public class archiveEVCafeRefeed {
 			Session session = connection.createSession(false, SQSSession.UNORDERED_ACKNOWLEDGE);
 
 			// Create the consumer 
-			//MessageConsumer consumer = session.createConsumer(session.createQueue(queueName));
+			MessageConsumer consumer = session.createConsumer(session.createQueue(queueName));
 
 			// Open the connection
-
 			connection.start();
-		} catch (JMSException e) {
+
+			// Receive a message parse it
+			receiveMessage(consumer, true);
+
+
+		}
+
+		catch (AmazonServiceException ase) {
+			System.out.println("Caught an AmazonServiceException, which means your request made it " +
+					"to Amazon SQS, but was rejected with an error response for some reason.");
+			System.out.println("Error Message:    " + ase.getMessage());
+			System.out.println("HTTP Status Code: " + ase.getStatusCode());
+			System.out.println("AWS Error Code:   " + ase.getErrorCode());
+			System.out.println("Error Type:       " + ase.getErrorType());
+			System.out.println("Request ID:       " + ase.getRequestId());
+		} catch (AmazonClientException ace) {
+			System.out.println("Caught an AmazonClientException, which means the client encountered " +
+					"a serious internal problem while trying to communicate with SQS, such as not " +
+					"being able to access the network.");
+			System.out.println("Error Message: " + ace.getMessage());
+		}
+		finally
+		{
+			if(connection !=null)
+			{
+				try
+				{
+					// Close the connection. This will close the session automatically
+					connection.close();
+					System.out.println("Connection closed.");
+				}
+				catch(Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+		}
+
+	}
+	
+	public void loadToDB()
+	{
+		try {
+			 
+            File f = new File(filename);
+            if(!f.exists())
+            {
+                System.out.println("datafile: "+filename+" does not exists");
+                System.exit(1);
+            }
+            
+           
+                System.out.println("sql loader file "+filename+" created;");
+                System.out.println("about to load data file "+filename);
+                System.out.println("press enter to continue");
+                //System.in.read();
+                Thread.currentThread().sleep(1000);
+            
+            Runtime r = Runtime.getRuntime();
+
+            Process p = r.exec("./"+sqlldrFileName+" "+filename);
+            int t = p.waitFor();
+            
+            
+            
+			} 
+		catch (Exception e) {
+			
 			e.printStackTrace();
 		}
-
+		
 	}
 
-	public void end()
-	{
-		if(out !=null)
-		{
-			try
-			{
-				out.flush();
-				out.close();
-			}
-			catch(Exception ex)
-			{
-				ex.printStackTrace();
-			}
-		}
-
-
-	}
 
 }
