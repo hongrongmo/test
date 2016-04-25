@@ -708,10 +708,11 @@ public class GetANIFileFromCafeS3Bucket {
 			 BaseTableDriver c = new BaseTableDriver(loadNumber,database,action,s3FileLoc);
 			 con = c.getConnection(connectionURL, driver, username, password);
 			 //HH 04/21/2016 similar as correction, check block ISSN/EISSN only for Add/Update
-			 if(msgAction !=null && !(msgAction.equalsIgnoreCase("d")))
+			 //HH 04/25/2016 as per Frank request, temporarirly disable ISSN/E-ISSN for Cafe Initial Refeed
+			/* if(msgAction !=null && !(msgAction.equalsIgnoreCase("d")))
 			 {
 	             c.setBlockedIssnList(con);
-			 }
+			 }*/
              c.writeBaseTableFile(key,con,reader,cafe);
              String dataFile=key+"."+loadNumber+".out";
              File f = new File(dataFile);
