@@ -489,6 +489,19 @@ public class EVCombinedRec {
 	
 	public static final String GRANTID = "366";
 	public static final String GRANTAGENCY = "367";
+	
+	//added for future use
+	
+	public static final String EV_SPARE1 = "368";
+	public static final String EV_SPARE2 = "369";
+	public static final String EV_SPARE3 = "370";
+	public static final String EV_SPARE4 = "371";
+	public static final String EV_SPARE5 = "372";
+	public static final String EV_SPARE6 = "373";
+	public static final String EV_SPARE7 = "374";
+	public static final String EV_SPARE8 = "375";
+	public static final String EV_SPARE9 = "376";
+	public static final String EV_SPARE10 = "377";
 
 	 //*/
 
