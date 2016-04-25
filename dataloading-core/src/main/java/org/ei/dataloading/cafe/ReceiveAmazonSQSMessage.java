@@ -195,10 +195,10 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 			cpxdbCollection = checkCpxDBCollection();
 			if(bucketName.length() >0 && bucketName.contains("ani") && cpxdbCollection)
 			{
-				for(String key : messageFieldKeys.keySet())
+				/*for(String key : messageFieldKeys.keySet())
 				{
 					System.out.println(key + " # " + messageFieldKeys.get(key));
-				}
+				}*/
 				ANIRecord = true;
 				
 			}
