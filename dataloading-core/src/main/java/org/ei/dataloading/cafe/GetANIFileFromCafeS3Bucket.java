@@ -47,8 +47,7 @@ public class GetANIFileFromCafeS3Bucket {
 	BufferedReader reader = null;
 	
 	BufferedReader S3Filecontents = null;
-	private InputStream s3FileContentCopy = null;
-	private InputStream s3FileContentCopy2 = null;
+
 	
 	String singleLine = null;
 	String itemInfoStart = "";
@@ -63,7 +62,7 @@ public class GetANIFileFromCafeS3Bucket {
 	S3Object object;
 	AmazonS3 s3Client = null;
 	
-	int updateNumber = 0;
+	int loadNumber = 0;
 	String database="cpx";
 	Connection con = null;
 	String connectionURL = "jdbc:oracle:thin:@localhost:1521:eid";  // for localhost 
@@ -72,7 +71,7 @@ public class GetANIFileFromCafeS3Bucket {
 	String password = "ei3it";
 	String sqlldrFileName ="";
 	
-	
+
 	
 	HashMap<String, String> objectMetadata = new HashMap<String,String>();
 	
@@ -87,12 +86,12 @@ public class GetANIFileFromCafeS3Bucket {
 		this.key = key;
 	}
 	
-	public GetANIFileFromCafeS3Bucket (AmazonS3 s3Client,int updatenumber,String database,String url,String driver,String username,String password,String sqlldrFileName)
+	public GetANIFileFromCafeS3Bucket (AmazonS3 s3Client,int loadnumber,String database,String url,String driver,String username,String password,String sqlldrFileName)
 	{
 		
 		this.s3Client = s3Client;
 		
-		this.updateNumber = updatenumber;
+		this.loadNumber = loadnumber;
 		this.database=database;
 		
 		this.connectionURL =  url;  // for localhost 
@@ -213,50 +212,29 @@ public class GetANIFileFromCafeS3Bucket {
 	}
 
 	
-	public void getFile(String bucketName, String key, String msgAction, long msgEpoch) {
+	public void getFile(String bucketName, String key, String msgAction) {
 		
 
 		this.bucketName = bucketName;
 		this.key = key;
-		
-		
 		this.msgAction = msgAction;
-		this.msgEpoch = msgEpoch;
-		
-		
+
+	
 		try
 		{
-			
-			
 				object = s3Client.getObject(new GetObjectRequest (bucketName, key));
 				objectData = object.getObjectContent();
-			
-				if(object !=null)
-				{
-					// Check if Message's Epoch is greater than Object's/Key's Epoch Metadata
-					if(msgAction.length() >0 && msgAction.equalsIgnoreCase("u"))
-					{
-						bytes= IOUtils.toByteArray(objectData);
-						s3FileContentCopy = new ByteArrayInputStream(bytes);
-						s3FileContentCopy2 = new ByteArrayInputStream(bytes);
-						
-						fileContentMetadata(bucketName,key);
-						
-						if(CheckMsgObjectEpoch())
-						{
-							parseS3File (s3FileContentCopy2,updateNumber,
-									database, connectionURL, driver,
-									username, password,sqlldrFileName);
-						}
-					}
+				
 					
-					else if(msgAction.length() >0 && msgAction.equalsIgnoreCase("a") || msgAction.equalsIgnoreCase("d"))
-					{
-						parseS3File (objectData,updateNumber,
+				if(object !=null && objectData !=null)
+				{
+
+						/*parseS3File (objectData,updateNumber,
 								database, connectionURL, driver,
 								username, password,sqlldrFileName);
-					}
-						
+						*/
+						parseS3File ();
+					
 				}
 
 		}
@@ -285,10 +263,7 @@ public class GetANIFileFromCafeS3Bucket {
 					"communicate with S3, " +
 					"such as not being able to access the network.");
 			System.out.println("Error Message: " + ace.getMessage());
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-
+		} 
 
 		finally
 		{
@@ -303,33 +278,8 @@ public class GetANIFileFromCafeS3Bucket {
 					e.printStackTrace();
 				}
 			}
-			if(bytes !=null)
-			{
-					bytes=null;
-			}
-			if(s3FileContentCopy !=null)
-			{
-				try
-				{
-					s3FileContentCopy.close();
-				}
-				catch(IOException e1)
-				{
-					e1.printStackTrace();
-				}
-			}
 			
-			if(s3FileContentCopy2 !=null)
-			{
-				try
-				{
-					s3FileContentCopy2.close();
-				}
-				catch(IOException e2)
-				{
-					e2.printStackTrace();
-				}
-			}
+			
 			if(objectData !=null)
 			{
 				try
@@ -605,11 +555,11 @@ public class GetANIFileFromCafeS3Bucket {
 				objectData = object.getObjectContent();*/
 
 				//if(object !=null)
-				if(s3FileContentCopy !=null)
+				if(objectData !=null)
 				{
 					// get get the Object's some major Metdata from s3FIleContents for later check (i.e. EID, epoch,..)
 					//S3Filecontents = new BufferedReader(new InputStreamReader(objectData));
-					S3Filecontents = new BufferedReader(new InputStreamReader(s3FileContentCopy));
+					S3Filecontents = new BufferedReader(new InputStreamReader(objectData));
 					while ((singleLine = S3Filecontents.readLine()) !=null)
 					{
 						//get the Object's epoch Metadata
@@ -730,9 +680,6 @@ public class GetANIFileFromCafeS3Bucket {
              }
              
              
-				/*BaseTableDriver c = new BaseTableDriver(updateNumber,database);
-				con = c.getConnection(connectionURL, driver, username, password);
-				c.writeRecs(reader, con);*/
 			} 
 		catch (Exception e) {
 			
@@ -744,23 +691,29 @@ public class GetANIFileFromCafeS3Bucket {
 	
 	
 	
-	public void parseS3File (InputStream s3FileContent, int updateNumber,
+	/*public void parseS3File (InputStream s3FileContent, int updateNumber,
 							String database, String connectionURL, String driver,
-							String username, String password, String sqlldrFileName) throws IOException
+							String username, String password, String sqlldrFileName) throws IOException*/
+	public void parseS3File () throws IOException
 	{
 
-		reader = new BufferedReader(new InputStreamReader(s3FileContent));
+		reader = new BufferedReader(new InputStreamReader(objectData));
 		reader = new BufferedReader(new InputStreamReader(new ByteArrayInputStream(reader.readLine().replaceAll("><", ">\n<").getBytes())));
 		
 		s3FileLoc = this.bucketName+"/"+this.key;
 		System.out.println("Key S3 Location: " + s3FileLoc);
 		
+		
 		try {
-			 BaseTableDriver c = new BaseTableDriver(updateNumber,database,action,s3FileLoc);
+			 BaseTableDriver c = new BaseTableDriver(loadNumber,database,action,s3FileLoc);
 			 con = c.getConnection(connectionURL, driver, username, password);
-             c.setBlockedIssnList(con);
+			 //HH 04/21/2016 similar as correction, check block ISSN/EISSN only for Add/Update
+			 if(msgAction !=null && !(msgAction.equalsIgnoreCase("d")))
+			 {
+	             c.setBlockedIssnList(con);
+			 }
              c.writeBaseTableFile(key,con,reader,cafe);
-             String dataFile=key+"."+updateNumber+".out";
+             String dataFile=key+"."+loadNumber+".out";
              File f = new File(dataFile);
              if(!f.exists())
              {
@@ -769,7 +722,8 @@ public class GetANIFileFromCafeS3Bucket {
              }
              
             
-                 System.out.println("sql loader file "+dataFile+" created;");
+             // only for testing
+               /*  System.out.println("sql loader file "+dataFile+" created;");
                  System.out.println("about to load data file "+dataFile);
                  System.out.println("press enter to continue");
                  //System.in.read();
@@ -778,10 +732,9 @@ public class GetANIFileFromCafeS3Bucket {
              Runtime r = Runtime.getRuntime();
 
              Process p = r.exec("./"+sqlldrFileName+" "+dataFile);
-             int t = p.waitFor();
+             int t = p.waitFor();*/
              
-             
-             
+            
 			} 
 		catch (Exception e) {
 			

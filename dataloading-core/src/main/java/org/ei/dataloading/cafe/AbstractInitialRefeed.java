@@ -35,6 +35,8 @@ public class AbstractInitialRefeed {
 	//static String action;
 	static int loadNumber=0;
 	static String sqlldrFileName="cafeANIFileLoader.sh";
+	static int id_start;
+	static int id_end;
 	
 	private GetANIFileFromCafeS3Bucket objectFromS3;
 	private AmazonS3 s3Client;
@@ -43,15 +45,15 @@ public class AbstractInitialRefeed {
 	public static void main(String[] args)
 	{
 
-		if(args.length >5)
+		if(args.length >7)
 		{
-			if(args[5]!=null)
+			if(args[7]!=null)
 			{
-				sqlldrFileName = args[5];
+				sqlldrFileName = args[7];
 				System.out.println("using sqlloaderfile "+sqlldrFileName);
 			}
 		}
-		if(args.length >4)
+		if(args.length >6)
 		{
 			if(args[0]!=null && args[0].length()>0)
 			{
@@ -84,7 +86,19 @@ public class AbstractInitialRefeed {
 			{
 				password = args[4];
 				System.out.println("password= "+password);
-			}      	
+			}   
+			
+			if(args[5] !=null)
+			{
+				id_start = Integer.parseInt(args[5]);
+			}
+			
+			if(args[6] !=null)
+			{
+				id_end = Integer.parseInt(args[6]);
+			}
+			
+			System.out.println("Start Converting from ID:  " +  id_start + " to ID: " + id_end);
 		}
 		
 
@@ -163,7 +177,7 @@ public class AbstractInitialRefeed {
 		try
 		{
 			stmt = con.createStatement();
-			String sqlString = "select * from CAFE_INVENTORY";
+			String sqlString = "select * from CAFE_INVENTORY where ID >=" +  id_start + " and ID<=" +  id_end;
 			
 			rs = stmt.executeQuery(sqlString);
 			convertRecs(rs);

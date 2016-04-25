@@ -325,7 +325,7 @@ public class SyncMultiMessageReceiverClient {
 									/*objectFromS3.getFile(obj.getMessageField("bucket"), obj.getMessageField("key"),
 											updateNumber,database,action,msgEpoch,url,driver,username,password, sqlldrFileName);*/
 									
-									objectFromS3.getFile(obj.getMessageField("bucket"), obj.getMessageField("key"),action,msgEpoch);
+									objectFromS3.getFile(obj.getMessageField("bucket"), obj.getMessageField("key"),action);
 									
 								}
 								// Acknowledge the message if asked
