@@ -56,7 +56,6 @@ public class SQSConfiguration {
 				if( key.equals( "--queue" ) ) 
 				{
 					setQueueName(args.get(key));
-					System.out.println("Queue Name to process: " + getQueueName());
 				} 
 				else if( key.equals( "--region" ) ) 
 				{

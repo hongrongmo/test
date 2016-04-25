@@ -173,15 +173,13 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 				if(messageFieldKeys.size() >0)
 				{
 					messageFieldKeys.clear();
-					
-					System.out.println("messageFieldKeys was cleared out, now the size " + messageFieldKeys.size());
 				}
 				
 		//case received Message as TextMessage & Parse Fields
 		
 			if(message !=null && message.length() >0)
 			{
-				//System.out.println("SQS Message: " +  message);   //temp comment, as it is in archiveEVCafeRefeed.java
+				System.out.println("SQS Message: " +  message);
 				StringTokenizer tokens = new StringTokenizer(message, ",");
 				while(tokens.hasMoreTokens())
 				{
@@ -197,21 +195,21 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 			cpxdbCollection = checkCpxDBCollection();
 			if(bucketName.length() >0 && bucketName.contains("ani") && cpxdbCollection)
 			{
-				/*for(String key : messageFieldKeys.keySet())
+				for(String key : messageFieldKeys.keySet())
 				{
 					System.out.println(key + " # " + messageFieldKeys.get(key));
-				}*/    //HH 04/19/2016 for local debugging
+				}
 				ANIRecord = true;
 				
 			}
-			/*else
+			else
 			{
 				if(cpxdbCollection)
 				{
 					System.out.println("NOT ANI SQS MSG " + messageFieldKeys.get("bucket"));
 				}
 				
-			}*/   //HH 04/19/2016 for local debugging
+			}
 					
 			
 			return ANIRecord && cpxdbCollection;

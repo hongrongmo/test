@@ -45,6 +45,7 @@ public class BdParser
 	private Namespace aniNamespace;
 	private Namespace xmlNamespace=Namespace.getNamespace("xml","http://www.w3.org/XML/1998/namespace");
 	private Namespace xoeNamespace=Namespace.getNamespace("xoe","http://www.elsevier.com/xml/xoe/dtd");
+	private Namespace xocsNamespace=Namespace.getNamespace("xocs","http://www.elsevier.com/xml/xocs/dtd");
 	private int affid = 0;
 	private static Hashtable contributorRole = new Hashtable();
 	{
@@ -59,17 +60,17 @@ public class BdParser
 	}
 
 	private static Hashtable descriptorsTypeTable = new Hashtable();
-	{
-		descriptorsTypeTable.put("CMH","MAINHEADING");
-		descriptorsTypeTable.put("SPC","SPECIESTERM");
-		descriptorsTypeTable.put("RGI","REGIONALTERM");
-		descriptorsTypeTable.put("CCV","CONTROLLEDTERM");
-		descriptorsTypeTable.put("PCV","CONTROLLEDTERM");
-		descriptorsTypeTable.put("GDE","CONTROLLEDTERM");
-		descriptorsTypeTable.put("MED","CHEMICALTERM");
+	{   
+		descriptorsTypeTable.put("CMH","MAINHEADING"); //CPX
+		descriptorsTypeTable.put("SPC","SPECIESTERM"); //GEO
+		descriptorsTypeTable.put("RGI","REGIONALTERM");//GEO
+		descriptorsTypeTable.put("CCV","CONTROLLEDTERM");//CPX
+		descriptorsTypeTable.put("PCV","CONTROLLEDTERM");//PCH
+		descriptorsTypeTable.put("GDE","CONTROLLEDTERM");//GEO
+		descriptorsTypeTable.put("MED","CHEMICALTERM");//CHM
 		descriptorsTypeTable.put("CTC","TREATMENTCODE");
-		descriptorsTypeTable.put("CFL","UNCONTROLLEDTERM");
-		descriptorsTypeTable.put("CLU","UNCONTROLLEDTERM");
+		descriptorsTypeTable.put("CFL","UNCONTROLLEDTERM");//CPX
+		descriptorsTypeTable.put("CLU","UNCONTROLLEDTERM");//CPX
 	}
 
 	public BdParser()
@@ -194,11 +195,13 @@ public class BdParser
 			setPui("");
 			if(cpxRoot != null)
 			{
+				
 				String namespaceURI = cpxRoot.getNamespace().getURI();
 				if(namespaceURI!=null && namespaceURI.length()>0)
 				{
 					noNamespace = Namespace.getNamespace("","http://www.elsevier.com/xml/ani/ani");
 				}
+				
 				
 				
 				Element item = cpxRoot.getChild("item",noNamespace);
@@ -212,8 +215,15 @@ public class BdParser
 						record.put("EID",eid);
 					}
 					//System.out.println("EID1="+eid);
-					
-					String mid = getDatabaseName().toLowerCase()+"_"+(new GUID()).toString();
+					Element indexeddate = item.getChild("indexeddate",xocsNamespace);
+					if(indexeddate !=null)
+					{
+						String epoch = indexeddate.getAttributeValue("epoch");
+						record.put("EPOCH",epoch);
+					}
+					//System.out.println("indexeddate"+indexeddate);
+					String database = getDatabaseName().toLowerCase();
+					String mid = database+"_"+(new GUID()).toString();
 					record.put("M_ID",mid);
 
 				    //PUBDATE
@@ -288,8 +298,8 @@ public class BdParser
 							Element itemidElement = (Element)itemidList.get(i);
 							String  itemid_idtype = itemidElement.getAttributeValue("idtype");
 
-							if(itemid_idtype != null &&
-									 (itemid_idtype.equals("CPX")||
+							if(itemid_idtype != null &&	
+									(itemid_idtype.equals("CPX")||
 									itemid_idtype.equals("GEO")||
 									itemid_idtype.equals("API")||
 									itemid_idtype.equals("APILIT")||
@@ -298,9 +308,13 @@ public class BdParser
 								String  itemid = itemidElement.getTextTrim();
 
 								//System.out.println("ACCESSNUMBER= "+itemid);
-
-								record.put("ACCESSNUMBER",itemid);
-								setAccessNumber(itemid);
+								if((!database.equals("cpx") && !itemid_idtype.equals("CPX")) || (database.equals("cpx") && itemid_idtype.equals("CPX")))
+								{
+									record.put("ACCESSNUMBER",itemid);
+									setAccessNumber(itemid);
+									System.out.println("DATABSE="+database+" ACCESSNUMBER= "+itemid);
+								}
+								
 							}
 							else if (itemid_idtype != null && itemid_idtype.equals("PUI"))
 							{
@@ -4020,7 +4034,17 @@ public class BdParser
 						}
 						else
 						{
-							record.put(descriptorsTypeTable.get(descriptorsKey),mhBuffer.toString());
+							if(descriptorsType.equals("CCV") || descriptorsType.equals("PCV") || descriptorsType.equals("GDE"))
+							{
+								if((descriptorsType.equals("CCV") && getDatabaseName().equals("cpx")) || (descriptorsType.equals("PCV") && getDatabaseName().equals("pch")) || (descriptorsType.equals("GDE") && getDatabaseName().equals("geo")))
+								{
+									record.put(descriptorsTypeTable.get(descriptorsKey),mhBuffer.toString());
+								}
+							}
+							else
+							{
+								record.put(descriptorsTypeTable.get(descriptorsKey),mhBuffer.toString());
+							}
 						}
 
 						//System.out.println(descriptorsKey+" "+descriptorsTypeTable.get(descriptorsKey)+" "+mhBuffer.toString());
@@ -4044,8 +4068,8 @@ public class BdParser
 				String classificationType = classifications.getAttributeValue("type");
 				StringBuffer clBuffer = new StringBuffer();
 				if(classificationType != null &&
-						(classificationType.equals("CPXCLASS")||
-								classificationType.equals("GEOCLASS")))
+						(classificationType.equals("CPXCLASS") && getDatabaseName().equals("cpx")) || 
+								(classificationType.equals("GEOCLASS") && getDatabaseName().equals("geo")))
 				{
 					List classificationList = classifications.getChildren("classification",noNamespace);
 					for(int j=0;j<classificationList.size();j++)
