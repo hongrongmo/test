@@ -138,12 +138,13 @@ public class BaseTableWriter
 					}
 
 			}
-
+			
 			if(valueString != null && !thisColumnName.equals("EID"))
 			{
 				recordBuf.append(valueString);
 				//recordBuf.append(thisColumnName+":"+valueString);
 			}
+			
 			if(thisColumnName.length()<9 || !("REF".equals(thisColumnName.substring(0,3))))
 			{
 				if(!("EID".equals(thisColumnName)))
@@ -151,6 +152,7 @@ public class BaseTableWriter
 					recordBuf.append(FIELDDELIM);
 				}
 			}
+			
 		}
 		if(isReference)
 		{
@@ -164,6 +166,13 @@ public class BaseTableWriter
 		   recordBuf.append((String)record.get("EID"));
 	    }
 	    recordBuf.append(FIELDDELIM);
+	    
+	    //if(record.get("EPOCH")!=null)
+		//{
+		//   recordBuf.append((String)record.get("EPOCH"));
+		   
+	    //}
+	    //recordBuf.append(FIELDDELIM);
 	    //*/
 	    
 	    if(getAccessionNumber()!=null && getAccessionNumber().length()>0)
