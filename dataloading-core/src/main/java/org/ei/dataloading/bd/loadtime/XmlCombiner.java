@@ -885,13 +885,37 @@ throws Exception
                     }
                     
                     
-                   //*
-                   // * use for numerical index
+                   
+                    // use for numerical index
                     if(pui!=null && pui.length()>0)
                     {
                     	populateNumericalIndex(pui,rec,con);                 
                     }
-                   // */
+                   
+                    //add some test data for spare fields
+                    /*
+                    if (rs.getString("AFFILIATION") != null)
+                    {
+                    	String affiliation = rs.getString("AFFILIATION");
+                        if(rs.getString("AFFILIATION_1")!=null)
+                        {
+                            affiliation = affiliation+rs.getString("AFFILIATION_1");
+                        }
+                        BdAffiliations aff = new BdAffiliations(affiliation);
+                        aff.getSearchValue();
+                        rec.put(EVCombinedRec.EV_SPARE1,  st);
+                        rec.put(EVCombinedRec.EV_SPARE2,  aff.getLocationsSearchValue());
+                        rec.put(EVCombinedRec.EV_SPARE3,  aff.getCountriesSearchValue());
+                        rec.put(EVCombinedRec.EV_SPARE4,  aff.getAffiliationId());
+                        rec.put(EVCombinedRec.EV_SPARE5,  aff.getDepartmentId());
+                        rec.put(EVCombinedRec.EV_SPARE6,  st);
+                        rec.put(EVCombinedRec.EV_SPARE7,  aff.getLocationsSearchValue());
+                        rec.put(EVCombinedRec.EV_SPARE8,  aff.getCountriesSearchValue());
+                        rec.put(EVCombinedRec.EV_SPARE9,  aff.getAffiliationId());
+                        rec.put(EVCombinedRec.EV_SPARE10,  aff.getDepartmentId());
+                        
+                    }
+                    */
                     
                     try
                     {
