@@ -25,7 +25,7 @@ public class BaseTableDriver
     private int loadNumber;
     private String databaseName;
     private String action;
-    private static String startRootElement ="<?xml version=\"1.0\" standalone=\"no\"?><!DOCTYPE bibdataset SYSTEM \"ani512.dtd\"><bibdataset xmlns:ce=\"http://www.elsevier.com/xml/common/dtd\" xmlns:xoe=\"http://www.elsevier.com/xml/xoe/dtd\" xmlns:ait=\"http://www.elsevier.com/xml/ait/dtd\">";
+    private static String startRootElement ="<?xml version=\"1.0\" standalone=\"no\"?><!DOCTYPE bibdataset SYSTEM \"ani512.dtd\"><bibdataset xmlns:ce=\"http://www.elsevier.com/xml/common/dtd\" xmlns:xocs=\"http://www.elsevier.com/xml/xocs/dtd\" xmlns:xoe=\"http://www.elsevier.com/xml/xoe/dtd\" xmlns:ait=\"http://www.elsevier.com/xml/ait/dtd\">";
     private static String endRootElement   ="</bibdataset>";
     private static Connection con;
     private static String infile;
@@ -437,6 +437,7 @@ public class BaseTableDriver
         {
             String line = null;
             String document_eid = null;
+            String document_indexeddate = null;
             r = new BdParser();
             StringBuffer sBuffer = new StringBuffer();
             r.setWeekNumber(Integer.toString(loadNumber));
@@ -452,6 +453,13 @@ public class BaseTableDriver
             	{
             		document_eid = line;                     	
             	}
+            	
+            	if(line.indexOf("<xocs:indexeddate")>-1)
+            	{
+            		//document_indexeddate = line.substring(0,line.indexOf("</xocs:indexeddate>"));
+            		document_indexeddate = line;
+            		//System.out.println("document_indexeddate=="+document_indexeddate);
+            	}
                 if(start)
                 {
                     sBuffer.append(line);
@@ -465,6 +473,10 @@ public class BaseTableDriver
                     if(document_eid!=null)
                     {
                     	sBuffer.append(document_eid);                   	
+                    }
+                    if(document_indexeddate!=null)
+                    {
+                    	sBuffer.append(document_indexeddate);   
                     }
                 }
 
