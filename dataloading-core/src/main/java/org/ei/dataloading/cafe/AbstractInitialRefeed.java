@@ -1,13 +1,16 @@
 package org.ei.dataloading.cafe;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Vector;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 
 
 
@@ -41,6 +44,10 @@ public class AbstractInitialRefeed {
 	private GetANIFileFromCafeS3Bucket objectFromS3;
 	private AmazonS3 s3Client;
 
+	
+	//HH 04/28/2016 to contains contents of multiple Cafe Keys
+	public static Vector<InputStream> v;  
+	
 	
 	public static void main(String[] args)
 	{
@@ -232,7 +239,8 @@ public class AbstractInitialRefeed {
 		String key = null;
 		String action = null;   //SQS Msg Action
 		
-		
+		v = new Vector<InputStream>((id_end + id_start)-1);
+		System.out.println("Combine Source File Contents for: " + ((id_end + id_start)-1));
 		try 
 		{
 			while (rs.next())
@@ -254,10 +262,16 @@ public class AbstractInitialRefeed {
 				if(bucket !=null && key !=null)
 				{
 					System.out.println("Converting... " +  bucket+"/"+key + " for action: " +  action);
-					objectFromS3.getFile(bucket, key,action);
+					//objectFromS3.getFile(bucket, key,action);  // for each single Cafe Key/File
+					objectFromS3.getFileContent(bucket, key,action);    // for multiple cafe Key/File (combined together)
 				}
 				
 			}
+			
+			//HH 04/28/2016
+			//Combine Key's Contents and convert the bulk
+			
+			objectFromS3.chainInputstreams(id_start,id_end);
 		} 
 		
 		// for resultSet
