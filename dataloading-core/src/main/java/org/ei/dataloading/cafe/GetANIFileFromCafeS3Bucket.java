@@ -78,6 +78,9 @@ public class GetANIFileFromCafeS3Bucket {
 	String sqlldrFileName ="";
 	String filename="";
 
+	StringBuffer strb = new StringBuffer();   //04/29/2016 to combine multiple key's content before converting
+
+	Runtime rt;
 
 
 	HashMap<String, String> objectMetadata = new HashMap<String,String>();
@@ -316,17 +319,25 @@ public class GetANIFileFromCafeS3Bucket {
 			object = s3Client.getObject(new GetObjectRequest (bucketName, key));
 			objectData = object.getObjectContent();
 
+			BufferedReader rd = new BufferedReader(new InputStreamReader(objectData));
+			String str="";
+
 
 			if(object !=null && objectData !=null)
 			{
 
-				/*parseS3File (objectData,updateNumber,
-								database, connectionURL, driver,
-								username, password,sqlldrFileName);
-				 */
-				AbstractInitialRefeed.v.add(objectData);
-				//parseS3File ();
+				try 
+				{
+					while((str=rd.readLine()) !=null)
+					{
+						strb.append(str);
+					}
+				} 
+				catch (IOException e) {
 
+					e.printStackTrace();
+				}
+				
 			}
 
 		}
@@ -368,74 +379,10 @@ public class GetANIFileFromCafeS3Bucket {
 	}
 
 
-	public void chainInputstreams(int start, int end)
-	{
-		this.id_start = start;
-		this.id_end = end;
-		try
-		{
-			if(AbstractInitialRefeed.v!=null && AbstractInitialRefeed.v.size() >0)
-			{
-				Enumeration <InputStream>e = AbstractInitialRefeed.v.elements();
-				SequenceInputStream sis = new SequenceInputStream(e);
-				InputStreamReader isr = new InputStreamReader(sis);
-				reader = new BufferedReader(isr);
-
-				reader = new BufferedReader(new InputStreamReader(new ByteArrayInputStream(reader.readLine().replaceAll("><", ">\n<").getBytes())));
-
-				// check free memory space
-				Runtime rt = Runtime.getRuntime();
-				System.err.println(String.format("Memory CHeck After Chain source contents: Free: %d bytes, Total: %d bytes, Max: %d bytes",
-				rt.freeMemory(), rt.totalMemory(), rt.maxMemory()));
-				
-				
-				parseS3Files();
-
-			}
-		}
-		catch(IOException ex)
-		{
-			ex.printStackTrace();
-		}
-		catch(Exception e)
-		{
-			e.printStackTrace();
-		}
-
-		finally
-		{
-			if(reader !=null)
-			{
-				try
-				{
-					reader.close();
-				}
-				catch(IOException e)
-				{
-					e.printStackTrace();
-				}
-			}
-
-
-			if(objectData !=null)
-			{
-				try
-				{
-					objectData.close();
-				}
-				catch(IOException ioex)
-				{
-					ioex.printStackTrace();
-				}
-			}
-		}
-	}
-
-
-
 
 	public void saveContentToFile (InputStream s3FileContent) throws IOException
 	{
+
 		reader = new BufferedReader(new InputStreamReader(s3FileContent));
 		reader = new BufferedReader(new InputStreamReader(new ByteArrayInputStream(reader.readLine().replaceAll("><", ">\n<").getBytes())));
 		int updateNumber = 20160301;
@@ -888,45 +835,54 @@ public class GetANIFileFromCafeS3Bucket {
 
 	// HH 04/28/2016
 	//Parse combined Key's content's
-	public void parseS3Files () throws IOException
+	public void parseS3Files (int start, int end) throws IOException
 	{
+		this.id_start = start;
+		this.id_end = end;
+
+
+		InputStream in = new ByteArrayInputStream(strb.toString().getBytes());
+
+		reader = new BufferedReader(new InputStreamReader(in));
+		reader = new BufferedReader(new InputStreamReader(new ByteArrayInputStream(reader.readLine().replaceAll("><", ">\n<").getBytes())));
+
+
 
 		//s3FileLoc = this.bucketName+"/"+this.key;  // Temp comment out till find a way to add s3 file location for each single key in combinedcontents
-		
+
 		//HH 04/28/2016 for combined contents
 		s3FileLoc = this.bucketName;
 		System.out.println("Key S3 Location for last Key: " + s3FileLoc);
-
-		Runtime rt;
 
 		// check free memory space
 		rt = Runtime.getRuntime();
 		System.err.println(String.format("Memory CHeck Before Converting: Free: %d bytes, Total: %d bytes, Max: %d bytes",
 		rt.freeMemory(), rt.totalMemory(), rt.maxMemory()));
 
+
 		try {
 			if(id_start >0 && id_end>0)
 			{
-				filename = "cafe_inventory_"+Integer.toString(id_start) +"_to_" + Integer.toString(id_end);
-				BaseTableDriver c = new BaseTableDriver(loadNumber,database,action,s3FileLoc);
-				con = c.getConnection(connectionURL, driver, username, password);
-				c.writeBaseTableFile(filename,con,reader,cafe);
-				String dataFile=filename+"."+loadNumber+".out";
-				File f = new File(dataFile);
-				if(!f.exists())
-				{
-					System.out.println("datafile: "+dataFile+" does not exists");
-					System.exit(1);
-				}
+			filename = "cafe_inventory_"+Integer.toString(id_start) +"_to_" + Integer.toString(id_end);
+			BaseTableDriver c = new BaseTableDriver(loadNumber,database,action,s3FileLoc);
+			con = c.getConnection(connectionURL, driver, username, password);
+			c.writeBaseTableFile(filename,con,reader,cafe);
+			String dataFile=filename+"."+loadNumber+".out";
+			File f = new File(dataFile);
+			if(!f.exists())
+			{
+				System.out.println("datafile: "+dataFile+" does not exists");
+				System.exit(1);
+			}
 
 			}
-			
+
 			// check free memory space
 			rt = Runtime.getRuntime();
 			System.err.println(String.format("Memory CHeck After Converting is complete: Free: %d bytes, Total: %d bytes, Max: %d bytes",
 			rt.freeMemory(), rt.totalMemory(), rt.maxMemory()));
-			
-			
+
+
 
 		} 
 		catch (Exception e) {
