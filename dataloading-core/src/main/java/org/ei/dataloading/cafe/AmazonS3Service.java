@@ -24,8 +24,8 @@ public final class AmazonS3Service {
 
 	private AmazonS3 s3service;
 	
-	private static int S3_CONN_TIMEOUT = 60 * 1000;  //1 minute timeout
-	private static int S3_SOCK_TIMEOUT = 60 * 1000;  // 1 minute timeout
+	private static int S3_CONN_TIMEOUT = 18000 * 1000;  //1 minute timeout
+	private static int S3_SOCK_TIMEOUT = 18000 * 1000;  // 1 minute timeout
 			
 	private static ClientConfiguration clientConfig;
 	
