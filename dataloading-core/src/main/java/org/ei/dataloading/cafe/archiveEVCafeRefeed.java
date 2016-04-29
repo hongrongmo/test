@@ -78,6 +78,7 @@ public class archiveEVCafeRefeed {
 
 	DateFormat dateFormat;
 	DateFormat msgSentDateFormat;
+	
 
 	private static int updateNumber = 0;
 	private static String url="jdbc:oracle:thin:@localhost:1521:eid";
@@ -98,6 +99,7 @@ public class archiveEVCafeRefeed {
 	private PrintWriter out;
 	public static final char FIELDDELIM = '\t';
 	StringBuffer recordBuf = null;
+	String document_type = "";
 
 	
 	
@@ -154,7 +156,7 @@ public class archiveEVCafeRefeed {
 		String msgReciptHandle = null;
 
 		obj = new ReceiveAmazonSQSMessage();
-		msgSentDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		msgSentDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
 		
 		ReceiveMessageRequest receiveMessageRequest = new ReceiveMessageRequest(myQueueUrl)
 		.withVisibilityTimeout(MESSAGE_VISIBILITY_TIME_OUT_SECONDS)
@@ -199,18 +201,12 @@ public class archiveEVCafeRefeed {
 							// change message visibility timeout
 							msgVisibilityReq = new ChangeMessageVisibilityRequest(myQueueUrl, msgReciptHandle, MESSAGE_VISIBILITY_TIME_OUT_SECONDS);
 							
-							System.out.println("SQS Message: " +  messageBody);
+							//System.out.println("SQS Message: " +  messageBody);
 							
 							//parse SQS Message Fields& determine whether it is "ANI" message & belongs to dbcollcodes *|CPX|*
 							if(obj.ParseSQSMessage(messageBody))   
 							{
-								
-								//Bucket Name
-								if(obj.getMessageField("bucket") !=null)
-								{
-									recordBuf.append(obj.getMessageField("bucket"));
-								}
-								recordBuf.append(FIELDDELIM);
+								document_type = "ani";
 								
 								//Key
 								if(obj.getMessageField("key") !=null)
@@ -233,7 +229,6 @@ public class archiveEVCafeRefeed {
 								}
 								recordBuf.append(FIELDDELIM);
 								
-
 								//action
 								if(obj.getMessageField("action") !=null)
 								{
@@ -241,16 +236,39 @@ public class archiveEVCafeRefeed {
 								}
 								recordBuf.append(FIELDDELIM);
 								
+								//Bucket Name
+								if(obj.getMessageField("bucket") !=null)
+								{
+									recordBuf.append(obj.getMessageField("bucket"));
+								}
+								recordBuf.append(FIELDDELIM);
+								
+								
+								//Document_type
+								
+								if(!(document_type.isEmpty()))
+								{
+									recordBuf.append(document_type);
+								}
+								recordBuf.append(FIELDDELIM);
+								
+								
+								//Archive_Date, Date when message was read from SQS & archived
+								recordBuf.append(msgSentDateFormat.format(new Date()));
+								recordBuf.append(FIELDDELIM);
+								
 								//Body
 								recordBuf.append(messageBody);
 								recordBuf.append(FIELDDELIM);
 	
 								
+								//Sent (the time when the message was sent to the queue )
 								if(msgAttributes !=null && ! (msgAttributes.isEmpty()))
 								{	
 									recordBuf.append(msgSentDateFormat.format(new Date(Long.parseLong(msgAttributes.get("SentTimestamp")))).toString());
-									
 								}
+								
+								
 								// write the message to out file
 								out.println(recordBuf.toString().trim());
 							}
@@ -290,10 +308,10 @@ public class archiveEVCafeRefeed {
 	
 	public void begin()
 	{
-		dateFormat = new SimpleDateFormat("yyyy_MM_dd_HH-mm-ss");
+		dateFormat = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");		 
 		Date date = new Date();
 
-		filename = queueName+"-"+dateFormat.format(date)+".txt";
+		filename = queueName+"_after_initial-"+dateFormat.format(date)+".txt";
 		try {
 			out = new PrintWriter(new FileWriter(filename));
 		} catch (IOException e) {
