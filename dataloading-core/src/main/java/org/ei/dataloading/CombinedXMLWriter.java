@@ -717,7 +717,7 @@ public class CombinedXMLWriter
         out.println("       <ABSORBEDDOSE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ABSORBED_DOSE_TEXT)))) + "]]></ABSORBEDDOSE_TEXT>");								//NABT
         
         //out.println("       <DOSEEQUIVALENT_MINIMUM>" + notNull(rec.getString(EVCombinedRec.DOSE_EQUIVALENT_MINIMUM)) + "</DOSEEQUIVALENT_MINIMUM>");																//NDOM
-        //out.println("       <DOSEEQUIVALENT_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.DOSE_EQUIVALENT_RANGES)) + "]]></DOSEEQUIVALENT_RANGES>");														//NDOR
+        //out.println("       <DOSEEQUIVALENT_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.DOSE_EQUIVALENT_RANGES)) + "]]></DOSEEQUIVALENT_RANGES>");													//NDOR
         //out.println("       <DOSEEQUIVALENT_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.DOSE_EQUIVALENT_TEXT)))) + "]]></DOSEEQUIVALENT_TEXT>");						//NDOT
         
         //out.println("       <RADIATIONEXPOSURE_MINIMUM>" + notNull(rec.getString(EVCombinedRec.RADIATION_EXPOSURE_MINIMUM)) + "</RADIATIONEXPOSURE_MINIMUM>");													//NREM

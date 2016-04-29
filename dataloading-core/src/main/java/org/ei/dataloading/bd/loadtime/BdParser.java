@@ -308,11 +308,11 @@ public class BdParser
 								String  itemid = itemidElement.getTextTrim();
 
 								//System.out.println("ACCESSNUMBER= "+itemid);
-								if((!database.equals("cpx") && !itemid_idtype.equals("CPX")) || (database.equals("cpx") && itemid_idtype.equals("CPX")))
+								if((!database.equals("cpx") && !itemid_idtype.equals("CPX")) || ((database.equals("cpx") || database.equals("pch")) && itemid_idtype.equals("CPX")))
 								{
 									record.put("ACCESSNUMBER",itemid);
 									setAccessNumber(itemid);
-									System.out.println("DATABSE="+database+" ACCESSNUMBER= "+itemid);
+									//System.out.println("DATABSE="+database+" ACCESSNUMBER= "+itemid);
 								}
 								
 							}
