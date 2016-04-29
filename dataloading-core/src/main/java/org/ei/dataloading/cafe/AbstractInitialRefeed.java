@@ -15,6 +15,7 @@ import java.util.regex.Pattern;
 
 
 
+
 import com.amazonaws.AmazonClientException;
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.services.s3.AmazonS3;
@@ -241,6 +242,13 @@ public class AbstractInitialRefeed {
 		
 		//v = new Vector<InputStream>((id_end + id_start)-1);
 		v = new Vector<InputStream>();
+		
+		
+		// check free memory space
+		Runtime rt = Runtime.getRuntime();
+		System.err.println(String.format("Memory CHeck before Chain source contents: Free: %d bytes, Total: %d bytes, Max: %d bytes",
+		rt.freeMemory(), rt.totalMemory(), rt.maxMemory()));
+		
 		
 		try 
 		{

@@ -369,6 +369,12 @@ public class GetANIFileFromCafeS3Bucket {
 
 				reader = new BufferedReader(new InputStreamReader(new ByteArrayInputStream(reader.readLine().replaceAll("><", ">\n<").getBytes())));
 
+				// check free memory space
+				Runtime rt = Runtime.getRuntime();
+				System.err.println(String.format("Memory CHeck After Chain source contents: Free: %d bytes, Total: %d bytes, Max: %d bytes",
+				rt.freeMemory(), rt.totalMemory(), rt.maxMemory()));
+				
+				
 				parseS3Files();
 
 			}
@@ -877,6 +883,12 @@ public class GetANIFileFromCafeS3Bucket {
 		s3FileLoc = this.bucketName;
 		System.out.println("Key S3 Location for last Key: " + s3FileLoc);
 
+		Runtime rt;
+
+		// check free memory space
+		rt = Runtime.getRuntime();
+		System.err.println(String.format("Memory CHeck Before Converting: Free: %d bytes, Total: %d bytes, Max: %d bytes",
+		rt.freeMemory(), rt.totalMemory(), rt.maxMemory()));
 
 		try {
 			if(id_start >0 && id_end>0)
@@ -894,6 +906,12 @@ public class GetANIFileFromCafeS3Bucket {
 				}
 
 			}
+			
+			// check free memory space
+			rt = Runtime.getRuntime();
+			System.err.println(String.format("Memory CHeck After Converting is complete: Free: %d bytes, Total: %d bytes, Max: %d bytes",
+			rt.freeMemory(), rt.totalMemory(), rt.maxMemory()));
+			
 			
 
 		} 
