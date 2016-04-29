@@ -350,7 +350,21 @@ public class GetANIFileFromCafeS3Bucket {
 					"communicate with S3, " +
 					"such as not being able to access the network.");
 			System.out.println("Error Message: " + ace.getMessage());
-		} 
+		}
+		finally
+		{
+			try
+			{
+				if(object !=null)
+				{
+					object.close();
+				}
+			}
+			catch(Exception e)
+			{
+				e.printStackTrace();
+			}
+		}
 	}
 
 
