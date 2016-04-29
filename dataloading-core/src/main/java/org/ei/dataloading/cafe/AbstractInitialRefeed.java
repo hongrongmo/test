@@ -239,8 +239,9 @@ public class AbstractInitialRefeed {
 		String key = null;
 		String action = null;   //SQS Msg Action
 		
-		v = new Vector<InputStream>((id_end + id_start)-1);
-		System.out.println("Combine Source File Contents for: " + ((id_end + id_start)-1));
+		//v = new Vector<InputStream>((id_end + id_start)-1);
+		v = new Vector<InputStream>();
+		
 		try 
 		{
 			while (rs.next())
@@ -270,7 +271,7 @@ public class AbstractInitialRefeed {
 			
 			//HH 04/28/2016
 			//Combine Key's Contents and convert the bulk
-			
+			System.out.println("Total Combined Key's Source File Contents: " + v.size());
 			objectFromS3.chainInputstreams(id_start,id_end);
 		} 
 		
