@@ -256,9 +256,7 @@ public class BaseTableDriver
               //HH 04/30/2016 sending copy of Bufferedreader from GetANIFromS3Bucket 
               /*in = this.bfReader;
               writeRecs(in, con);*/
-              writeRecs(GetANIFileFromCafeS3Bucket.getBufferedReader(), con);
-              
-              
+              writeRecs(GetANIFileFromCafeS3Bucket.getBufferedReader(), con); 
             }
             else
             {

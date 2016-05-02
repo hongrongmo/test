@@ -906,8 +906,6 @@ public class GetANIFileFromCafeS3Bucket {
 				e.printStackTrace();
 			}
 		}
-
-
 	}
 	
 	
