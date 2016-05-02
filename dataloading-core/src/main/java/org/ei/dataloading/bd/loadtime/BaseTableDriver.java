@@ -2,7 +2,6 @@ package org.ei.dataloading.bd.loadtime;
 
 
 import java.io.BufferedReader;
-
 import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -18,6 +17,8 @@ import java.util.ArrayList;
 //import org.ei.data.LoadNumber;
 //import org.ei.dataloading.bd.*;
 import java.sql.*;
+
+import org.ei.dataloading.cafe.GetANIFileFromCafeS3Bucket;
 
 public class BaseTableDriver
 {
@@ -207,6 +208,20 @@ public class BaseTableDriver
     }
     
     
+    //HH 04/30/2016 for cafe Converting, send reference to GetANIFileFromCafeS3Bucket to access bufferedreader itself instead of copy it
+    public void writeBaseTableFile(String infile, Connection con, boolean cafe)
+    {
+      try
+      {
+        this.cafe = cafe;
+        writeBaseTableFile(infile, con);
+      }
+      catch (Exception e)
+      {
+        e.printStackTrace();
+      }
+    }
+    
 
     public void writeBaseTableFile(String infile, Connection con)
         throws Exception
@@ -238,8 +253,12 @@ public class BaseTableDriver
             else if (this.cafe)   //HH 02/2016 for Cafe
             {
               System.out.println("IS CAFE FILE");
-              in = this.bfReader;
-              writeRecs(in, con);
+              //HH 04/30/2016 sending copy of Bufferedreader from GetANIFromS3Bucket 
+              /*in = this.bfReader;
+              writeRecs(in, con);*/
+              writeRecs(GetANIFileFromCafeS3Bucket.getBufferedReader(), con);
+              
+              
             }
             else
             {

@@ -50,7 +50,7 @@ public class GetANIFileFromCafeS3Bucket {
 	int id_start = 0;
 	int id_end = 0;
 
-	BufferedReader reader = null;
+	static BufferedReader reader = null;
 
 	BufferedReader S3Filecontents = null;
 
@@ -147,6 +147,7 @@ public class GetANIFileFromCafeS3Bucket {
 		}
 
 	}
+	
 
 	public void getFile(String bucketName, String key) throws AmazonClientException,AmazonServiceException, InterruptedException{
 
@@ -839,14 +840,14 @@ public class GetANIFileFromCafeS3Bucket {
 	{
 		this.id_start = start;
 		this.id_end = end;
-
-
+		
 		InputStream in = new ByteArrayInputStream(strb.toString().getBytes());
 
 		reader = new BufferedReader(new InputStreamReader(in));
 		reader = new BufferedReader(new InputStreamReader(new ByteArrayInputStream(reader.readLine().replaceAll("><", ">\n<").getBytes())));
 
-
+		// clear stringbuffer
+		strb.setLength(0);
 
 		//s3FileLoc = this.bucketName+"/"+this.key;  // Temp comment out till find a way to add s3 file location for each single key in combinedcontents
 
@@ -866,7 +867,8 @@ public class GetANIFileFromCafeS3Bucket {
 			filename = "cafe_inventory_"+Integer.toString(id_start) +"_to_" + Integer.toString(id_end);
 			BaseTableDriver c = new BaseTableDriver(loadNumber,database,action,s3FileLoc);
 			con = c.getConnection(connectionURL, driver, username, password);
-			c.writeBaseTableFile(filename,con,reader,cafe);
+			//c.writeBaseTableFile(filename,con,reader,cafe);
+			c.writeBaseTableFile(filename,con,cafe);
 			String dataFile=filename+"."+loadNumber+".out";
 			File f = new File(dataFile);
 			if(!f.exists())
@@ -889,8 +891,30 @@ public class GetANIFileFromCafeS3Bucket {
 
 			e.printStackTrace();
 		}
+		
+		finally
+		{
+			try
+			{
+				if(reader !=null)
+				{
+					reader.close();
+				}
+			}
+			catch(Exception e)
+			{
+				e.printStackTrace();
+			}
+		}
 
 
 	}
-
+	
+	
+	public static BufferedReader getBufferedReader()
+	{
+		return reader;
+	}
+	
+	
 }
