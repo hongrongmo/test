@@ -914,5 +914,4 @@ public class GetANIFileFromCafeS3Bucket {
 		return reader;
 	}
 	
-	
 }
