@@ -15,6 +15,8 @@ import java.util.regex.Pattern;
 
 
 
+
+
 import com.amazonaws.AmazonClientException;
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.services.s3.AmazonS3;
@@ -44,9 +46,6 @@ public class AbstractInitialRefeed {
 	private GetANIFileFromCafeS3Bucket objectFromS3;
 	private AmazonS3 s3Client;
 
-	
-	//HH 04/28/2016 to contains contents of multiple Cafe Keys
-	public static Vector<InputStream> v;  
 	
 	
 	public static void main(String[] args)
@@ -239,8 +238,12 @@ public class AbstractInitialRefeed {
 		String key = null;
 		String action = null;   //SQS Msg Action
 		
-		//v = new Vector<InputStream>((id_end + id_start)-1);
-		v = new Vector<InputStream>();
+		
+		// check free memory space
+		Runtime rt = Runtime.getRuntime();
+		System.err.println(String.format("Memory CHeck before Chain source contents: Free: %d bytes, Total: %d bytes, Max: %d bytes",
+		rt.freeMemory(), rt.totalMemory(), rt.maxMemory()));
+		
 		
 		try 
 		{
@@ -262,7 +265,7 @@ public class AbstractInitialRefeed {
 				//get the s3file content & convert using our cpx converting prog
 				if(bucket !=null && key !=null)
 				{
-					System.out.println("Converting... " +  bucket+"/"+key + " for action: " +  action);
+					System.out.println("Get file... " +  bucket+"/"+key + " for action: " +  action);
 					//objectFromS3.getFile(bucket, key,action);  // for each single Cafe Key/File
 					objectFromS3.getFileContent(bucket, key,action);    // for multiple cafe Key/File (combined together)
 				}
@@ -271,8 +274,15 @@ public class AbstractInitialRefeed {
 			
 			//HH 04/28/2016
 			//Combine Key's Contents and convert the bulk
-			System.out.println("Total Combined Key's Source File Contents: " + v.size());
-			objectFromS3.chainInputstreams(id_start,id_end);
+			//objectFromS3.chainInputstreams(id_start,id_end);
+			
+			// check free memory space
+			rt = Runtime.getRuntime();
+			System.err.println(String.format("Memory CHeck After Chain source contents: Free: %d bytes, Total: %d bytes, Max: %d bytes",
+			rt.freeMemory(), rt.totalMemory(), rt.maxMemory()));
+
+			
+			objectFromS3.parseS3Files(id_start,id_end);
 		} 
 		
 		// for resultSet
@@ -280,6 +290,10 @@ public class AbstractInitialRefeed {
 		{
 			System.out.println("Error Occurred reading from ResultSet: " + e.getMessage());
 			e.printStackTrace();
+		}
+		catch(IOException ex)
+		{
+			ex.printStackTrace();
 		}
 		
 	}

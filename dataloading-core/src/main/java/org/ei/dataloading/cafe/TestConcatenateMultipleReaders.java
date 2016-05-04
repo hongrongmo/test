@@ -52,6 +52,13 @@ public class TestConcatenateMultipleReaders {
 	public static void main(String[] args) {
 
 		TestConcatenateMultipleReaders obj = new TestConcatenateMultipleReaders();
+		
+		// check free memory space
+		Runtime rt = Runtime.getRuntime();
+		System.err.println(String.format("Free: %d bytes, Total: %d bytes, Max: %d bytes",
+		  rt.freeMemory(), rt.totalMemory(), rt.maxMemory()));
+		
+		
 		obj.getFileFromS3Bucket();
 		//obj.chainInputstreams();
 
@@ -141,7 +148,12 @@ public class TestConcatenateMultipleReaders {
 				reader = new BufferedReader(isr);
 
 				reader = new BufferedReader(new InputStreamReader(new ByteArrayInputStream(reader.readLine().replaceAll("><", ">\n<").getBytes())));
-				String str="";
+				
+				// check free memory space
+				Runtime rt = Runtime.getRuntime();
+				System.err.println(String.format("Free: %d bytes, Total: %d bytes, Max: %d bytes",
+				  rt.freeMemory(), rt.totalMemory(), rt.maxMemory()));
+				
 				/*while((str=reader.readLine()) !=null)
 				{
 					System.out.println(str);
