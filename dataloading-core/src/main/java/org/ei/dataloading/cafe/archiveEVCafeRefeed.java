@@ -460,9 +460,7 @@ public class archiveEVCafeRefeed {
 
             Process p = r.exec("./"+sqlldrFileName+" "+filename);
             int t = p.waitFor();
-            
-            
-            
+
 			} 
 		catch (Exception e) {
 			
