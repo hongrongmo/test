@@ -156,7 +156,8 @@ public class archiveEVCafeRefeed {
 		String msgReciptHandle = null;
 
 		obj = new ReceiveAmazonSQSMessage();
-		msgSentDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+		//msgSentDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss"); // complained in in sqlldr
+		msgSentDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		
 		ReceiveMessageRequest receiveMessageRequest = new ReceiveMessageRequest(myQueueUrl)
 		.withVisibilityTimeout(MESSAGE_VISIBILITY_TIME_OUT_SECONDS)

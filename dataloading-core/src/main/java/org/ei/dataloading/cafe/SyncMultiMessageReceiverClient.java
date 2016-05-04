@@ -1,5 +1,6 @@
 package org.ei.dataloading.cafe;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.StringTokenizer;
@@ -154,8 +155,16 @@ public class SyncMultiMessageReceiverClient {
 			// create object of GetANIFileFromCafeS3Bucket to convert the CPX record
 			s3Client = config.getAmazonS3Cleint();
 			//objectFromS3 = GetANIFileFromCafeS3Bucket.getInstance(s3Client);
-			objectFromS3 = new GetANIFileFromCafeS3Bucket(s3Client,updateNumber,database,url,driver,username,password, sqlldrFileName);
+			//objectFromS3 = new GetANIFileFromCafeS3Bucket(s3Client,updateNumber,database,url,driver,username,password, sqlldrFileName); // good one to use
+			
+			File s3dir = new File("s3dir");
+			if(! (s3dir.exists()))
+			{
+				s3dir.mkdir();
+			}
 
+			objectFromS3 = new GetANIFileFromCafeS3Bucket(s3Client,updateNumber,database,url,driver,username,password, sqlldrFileName);
+			
 			
 			// Setup logging for the example
 			SQSExistenceCheck.setupLogging();

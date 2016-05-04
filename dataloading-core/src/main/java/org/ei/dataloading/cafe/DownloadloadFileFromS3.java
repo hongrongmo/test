@@ -41,11 +41,7 @@ public class DownloadloadFileFromS3 {
 		this.key = key;
 	}
 	public static void getFileFromS3(String s3BucketName, String fileKey) throws AmazonClientException,AmazonServiceException, InterruptedException
-	{
-		
-		
-		
-		
+	{	
 		
 		try
 		{

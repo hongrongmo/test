@@ -50,6 +50,12 @@ public class GetANIFileFromCafeS3Bucket {
 	int id_start = 0;
 	int id_end = 0;
 
+	//HH 05/02/2016 to download Cafe Keys from S3 bucket to filesystem
+	File s3Dir = null;
+	File file = null;
+	PrintWriter out = null;
+	
+	
 	static BufferedReader reader = null;
 
 	BufferedReader S3Filecontents = null;
@@ -78,6 +84,9 @@ public class GetANIFileFromCafeS3Bucket {
 	String sqlldrFileName ="";
 	String filename="";
 
+	
+	
+	
 	StringBuffer strb = new StringBuffer();   //04/29/2016 to combine multiple key's content before converting
 
 	Runtime rt;
@@ -111,6 +120,23 @@ public class GetANIFileFromCafeS3Bucket {
 		this.sqlldrFileName = sqlldrFileName;
 
 	}
+	
+	//05/02/2016 to download Cafe files from S3 bucket
+	public GetANIFileFromCafeS3Bucket (AmazonS3 s3Client,String database,String url,String driver,String username,String password, File s3dir)
+	{
+
+		this.s3Client = s3Client;
+
+		this.database=database;
+
+		this.connectionURL =  url;  // for localhost 
+		this.driver = driver;
+		this.username = username;
+		this.password = password;
+		this.s3Dir = s3dir;
+
+	}
+	
 
 
 	public GetANIFileFromCafeS3Bucket (AmazonS3 s3Client)
@@ -168,12 +194,17 @@ public class GetANIFileFromCafeS3Bucket {
 			/*GetANIFileFromCafeS3Bucket objectFromS3 = getInstance(bucketName,key);
 			objectFromS3.parseS3File (objectData);  // parse based on content of s3*/	
 
+			
 			object = s3Client.getObject(new GetObjectRequest (bucketName, key));
-
 			objectData = object.getObjectContent();
-			parseS3File(objectData);
-
-
+			//parseS3File(objectData);  // for single file testing
+			
+			if(objectData !=null)
+			{
+				saveContentToFile();
+			}
+			
+		
 			//objectData.close();
 
 		}
@@ -188,6 +219,8 @@ public class GetANIFileFromCafeS3Bucket {
 			System.out.println("Caught an AmazonServiceException, which " +"means your request made it " +
 					"to Amazon S3, but was rejected with an error response" +
 					" for some reason.");
+			
+			System.out.println("Cafe file" +  bucketName+"/"+key + "not Exist in S3");
 			System.out.println("Error Message:    " + ase.getMessage());
 			System.out.println("HTTP Status Code: " + ase.getStatusCode());
 			System.out.println("AWS Error Code:   " + ase.getErrorCode());
@@ -218,6 +251,20 @@ public class GetANIFileFromCafeS3Bucket {
 					ioex.printStackTrace();
 				}
 			}
+			
+			
+			try
+			{
+				if(object !=null)
+				{
+					object.close();
+				}
+			}
+			catch(Exception e)
+			{
+				e.printStackTrace();
+			}
+			
 		}
 
 	}
@@ -435,6 +482,77 @@ public class GetANIFileFromCafeS3Bucket {
 
 
 	}
+	
+	
+	//HH 05/02/2016 as per NYC meeting, download each 20k from S3 bucket, zip them for Converting process
+	
+	public void saveContentToFile () throws IOException
+	{
+		try
+		{
+		reader = new BufferedReader(new InputStreamReader(objectData));
+		reader = new BufferedReader(new InputStreamReader(new ByteArrayInputStream(reader.readLine().replaceAll("><", ">\n<").getBytes())));
+		
+		file = new File(s3Dir.getName()+"/"+key+".xml");
+		if (!file.exists()) 
+		{
+			System.out.println("Downloaded: "+file.getName());
+			
+		}
+		else
+		{
+			System.out.println("file:" +  file.getName() + "already exist");
+		}
+
+		String line = null;
+		out = new PrintWriter(new BufferedWriter(new FileWriter(file.getAbsolutePath(),true)));
+		while ((line = reader.readLine()) !=null)
+		{
+			out.println(line);
+
+		}
+		
+		}
+		catch (IOException e) {
+
+			e.printStackTrace();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+
+		finally
+		{
+			try
+			{
+				if(reader !=null)
+				{
+					reader.close();
+				}
+			}
+			catch(Exception e)
+			{
+				e.printStackTrace();
+			}
+			
+			
+			try
+			{
+				if(out !=null)
+				{
+					out.flush();
+					out.close();
+				}
+			}
+			catch(Exception ex)
+			{
+				ex.printStackTrace();
+			}
+		}
+
+	}
+
 
 	/** works well for the AmazonSqs.java that i first used to run whole scenario of read msg from queue, parse its content, decide wether it is CPX record, then convert the file
 	// this was basically called from java class "AmazonSqs.java"
