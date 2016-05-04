@@ -2495,22 +2495,29 @@ public class BdParser
 			{
 				String aipPubYear=null;
 				Element history = null;
-				if(bibrecord!=null && bibrecord.getChild("history",noNamespace)!=null)
+				if(bibrecord!=null)
 				{
-					Element dateCreated = (bibrecord.getChild("history",noNamespace)).getChild("date-created",noNamespace);
-					if(dateCreated!=null && dateCreated.getAttributeValue("year")!=null)
+					Element itemInfo = bibrecord.getChild("item-info",noNamespace);
+					
+					if(itemInfo!=null && itemInfo.getChild("history",noNamespace)!=null)
 					{
-						aipPubYear = dateCreated.getAttributeValue("year");
-						record.put("PUBLICATIONYEAR",aipPubYear);
+						Element dateCreated = (itemInfo.getChild("history",noNamespace)).getChild("date-created",noNamespace);
+						if(dateCreated!=null && dateCreated.getAttributeValue("year")!=null)
+						{
+							aipPubYear = dateCreated.getAttributeValue("year");
+							record.put("PUBLICATIONYEAR",aipPubYear);
+						}
 					}
 				}
-
+				//disable for cafe data
+				/*
 				if(aipPubYear==null)
 				{
 					java.util.Calendar calCurrentDate =  java.util.GregorianCalendar.getInstance();
 					int year = calCurrentDate.get(java.util.Calendar.YEAR);
 					record.put("PUBLICATIONYEAR",Integer.toString(year));
 				}
+				*/
 			}
 
 			//PUBLICATIONDATE
