@@ -55,6 +55,7 @@ public class KnovelReader
 	//HH 03/18/2016 for S3
 	GetKnovelFilesFromS3 knovelS3 = null;
 	static String bucketName = "datafabrication-reports";
+	static String key="";
 
 	 public static void main(String[] args)
 	        throws Exception
@@ -73,6 +74,7 @@ public class KnovelReader
 			username = args[4];
 			password = args[5];
 			bucketName = args[6];  //HH 03/18/2016 for S3
+			key = args[7];			//HH 05/06/2016 for S3
 		}
 
 		KnovelReader r = new KnovelReader();
@@ -119,10 +121,11 @@ public class KnovelReader
 	
 	//HH 03/22/2016 for knovel correction by getting files from S3 bucket
 	
-		public KnovelReader(String updateNumber,String database,String filename, String bucketName)
+		public KnovelReader(String updateNumber,String database,String filename, String bucketName, String key)
 		{
 			this.loadNumber = updateNumber;
 			this.bucketName = bucketName;
+			this.key = key;
 			init(database,filename);
 		}
 		
@@ -279,7 +282,7 @@ public class KnovelReader
 		try
 		{
 			// download file from S3 bucket
-			knovelS3 = new GetKnovelFilesFromS3(bucketName);
+			knovelS3 = new GetKnovelFilesFromS3(bucketName,key);
 			knovelS3.downloadGroupFileFromS3(name.substring(name.lastIndexOf("/")+1, name.length()).trim());
 
 			System.out.println("GROUPFILENAME="+name);
