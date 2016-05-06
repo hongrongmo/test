@@ -326,7 +326,7 @@ import org.ei.util.StringUtil;
                         	String parentID = rs.getString("PARENTID");
                         	parentID = parentID.substring(parentID.lastIndexOf(":")+1);
                         	//System.out.println("parentID="+parentID);
-	                        rec.put(EVCombinedRec.PARENT_ID, parentID);
+	                        rec.put(EVCombinedRec.ISSN, parentID);
 	                    }
                         
 	                    //JOURNAL_NAME
