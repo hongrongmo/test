@@ -44,6 +44,7 @@ public class KnovelCorrection {
 	
 	//HH 03/22/2016 bucketname
 	private static String bucketName="";
+	private static String key="";
 		
 	public static void main(String args[])
 	        throws Exception
@@ -125,7 +126,15 @@ public class KnovelCorrection {
 	        		System.out.println("get Knkovel files from S3 bucket: " + bucketName);
 	        	}
 	        }
+	        //HH 05/06/2016 to get the s3 bucket Location/path (excluding filename itself and bucket name) i.e. /archive/knovel/
 
+	        if(args.length >12)
+	        {
+	        	if(args[12] !=null)
+	        	{
+	        		key = args[12];
+	        	}
+	        }
 
 	        if(args.length>6)
 	        {
@@ -251,7 +260,7 @@ public class KnovelCorrection {
 	                //read from s3 bucket
 	                else if (bucketName !=null && bucketName.length() >0)
 	                {
-	                	KnovelReader c = new KnovelReader(String.valueOf(updateNumber),database,filename,bucketName);
+	                	KnovelReader c = new KnovelReader(String.valueOf(updateNumber),database,filename,bucketName,key);
 	                	//c.init(database+"_"+filename);
 	                	c.readGroupFilefromS3(path,filename);
 	                }

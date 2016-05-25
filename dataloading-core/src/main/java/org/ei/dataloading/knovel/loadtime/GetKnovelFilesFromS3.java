@@ -38,9 +38,10 @@ public class GetKnovelFilesFromS3 {
 		
 	}
 
-	public GetKnovelFilesFromS3 (String bucket) 
+	public GetKnovelFilesFromS3 (String bucket, String key) 
 	{
 		this.bucketName = bucket;
+		this.key = key;
 		System.out.println("BucketName is: " +  this.bucketName);
 	}
 	
@@ -63,7 +64,7 @@ public class GetKnovelFilesFromS3 {
 
 	public void downloadGroupFileFromS3 (String fileName) throws AmazonClientException,AmazonServiceException, InterruptedException
 	{
-		key="archive/KNOVEL/";
+		//key="archive/KNOVEL/";
 		try
 		{
 			System.out.println("downloading Group Knovel file: "+fileName+" from S3 bucket " + this.bucketName + ": ");
@@ -127,7 +128,7 @@ public class GetKnovelFilesFromS3 {
 
 	public void getFileContentFromS3 (String fileName) throws AmazonClientException,AmazonServiceException, InterruptedException
 	{
-		key="archive/KNOVEL/";
+		//key="archive/KNOVEL/";
 		try
 		{	
 			if(s3Client == null)
