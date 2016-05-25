@@ -103,7 +103,6 @@ public class BaseTableRecord
    	public static final BaseTableRecord CITATIONTITLEORIG= new BaseTableRecord("CITATIONTITLEORIG", new Integer(5), "cpx");
 	public static final BaseTableRecord CITATIONLANGUAGE= new BaseTableRecord("CITATIONLANGUAGE", new Integer(20), "cpx");
 	public static final BaseTableRecord DATABASE= new BaseTableRecord("DATABASE", new Integer(3), "cpx");
-	public static final BaseTableRecord UPDATERESOURCE= new BaseTableRecord("UPDATERESOURCE", new Integer(4000), "cpx");   //HH 04/05/2016 for Cafe
 	public static final BaseTableRecord AUTHORKEYWORD= new BaseTableRecord("AUTHORKEYWORD", new Integer(4000), "pch");
 	public static final BaseTableRecord REFCOUNT= new BaseTableRecord("REFCOUNT", new Integer(4), "cpx");
 	public static final BaseTableRecord CASREGISTRYNUMBER= new BaseTableRecord("CASREGISTRYNUMBER", new Integer(4000), "chm");
@@ -141,7 +140,9 @@ public class BaseTableRecord
 	public static final BaseTableRecord APIAT = new BaseTableRecord("APIAT", new Integer(4000), "elt");
 	public static final BaseTableRecord SEQ_NUM = new BaseTableRecord("SEQ_NUM", new Integer(4000), "elt");
 	public static final BaseTableRecord SOURCEWEBSITE = new BaseTableRecord("SOURCEWEBSITE", new Integer(1000), "cpx");
+	public static final BaseTableRecord GRANTLIST = new BaseTableRecord("GRANTLIST", new Integer(4000), "cpx");
 	public static final BaseTableRecord EID = new BaseTableRecord("EID", new Integer(32), "cpx");
+	public static final BaseTableRecord UPDATERESOURCE= new BaseTableRecord("UPDATERESOURCE", new Integer(4000), "cpx");   //HH 04/05/2016 for Cafe
 	
 	public static final BaseTableRecord REFERENCE= new BaseTableRecord("REFERENCE", new Integer(500000), "cpx");
 	public static final BaseTableRecord REFERENCETITLE= new BaseTableRecord("REFERENCETITLE", new Integer(4000), "cpx");
@@ -253,7 +254,6 @@ public class BaseTableRecord
 		bdTableColumns.add(TRADENAME);
 		bdTableColumns.add(MANUFACTURER);
 	    bdTableColumns.add(DATABASE);
-	    bdTableColumns.add(UPDATERESOURCE);	  //HH 04/05/2016 for cafe
 		bdTableColumns.add(MEDIA);
 		bdTableColumns.add(CSESS);
 		bdTableColumns.add(PATNO);
@@ -284,7 +284,9 @@ public class BaseTableRecord
 	    bdTableColumns.add(APIAT);
 	    bdTableColumns.add(SEQ_NUM);
 	    bdTableColumns.add(SOURCEWEBSITE);
+	    bdTableColumns.add(GRANTLIST);
 	    bdTableColumns.add(EID);
+	    bdTableColumns.add(UPDATERESOURCE);	  //HH 04/05/2016 for cafe
 
 		//ADDED FOR REFERENCE
 
