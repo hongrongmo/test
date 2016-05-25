@@ -275,7 +275,7 @@ public class BdParser
 								right = copyright.getAttributeValue("type");
 								System.out.println("COPYRIGHT_TYPE is not null "+right);
 							}
-							record.put("COPYRIGHT",right);
+							record.put("COPYRIGHT",dictionary.mapEntity(right));
 							//System.out.println("COPYRIGHT"+copyright.getTextTrim());
 						}
 
@@ -562,11 +562,15 @@ public class BdParser
 															for (int i = 0; i < apicc.size(); i++)
 															{
 																Element el = (Element)apicc.get(i);
-																apiccterms.append((String)el.getTextTrim());
+																if(el!=null)
+																{
+																	apiccterms.append(dictionary.mapEntity((String)el.getTextTrim()));
+																}
 																if(i<(apicc.size()-1) )
 																{
 																	apiccterms.append(Constants.AUDELIMITER);
 																}
+																
 															}
 														}
 														if(j<(classdescgroup.size()-1) )
@@ -615,12 +619,14 @@ public class BdParser
 													String term = (String)el.getTextTrim();
 													if ( pref != null && pref.length() > 0)
 													{
-														termbuf.append(pref).append("-");
+														termbuf.append(dictionary.mapEntity(pref)).append("-");
+													}if(term!=null)
+													{
+														termbuf.append(dictionary.mapEntity(term));
 													}
-													termbuf.append(term);
 													if ( postf != null && postf.length() > 0)
 													{
-														termbuf.append("-").append(postf);
+														termbuf.append("-").append(dictionary.mapEntity(postf));
 													}
 													if(apict.length() < 3000)
 													{
@@ -681,12 +687,15 @@ public class BdParser
 																String term = (String)el.getTextTrim();
 																if ( pref != null && pref.length() > 0)
 																{
-																	termbuf.append(pref).append("-");
+																	termbuf.append(dictionary.mapEntity(pref)).append("-");
 																}
-																termbuf.append(term);
+																if(term!=null)
+																{
+																	termbuf.append(dictionary.mapEntity(term));
+																}
 																if ( postf != null && postf.length() > 0)
 																{
-																	termbuf.append("-").append(postf);
+																	termbuf.append("-").append(dictionary.mapEntity(postf));
 																}
 																if(apiterms.length() < 3000)
 																{
@@ -731,7 +740,7 @@ public class BdParser
 											if(apiams.getChild("API-term",noNamespace)!= null)
 											{
 												Element ams = apiams.getChild("API-term",noNamespace);
-												apiamsbuf.append(ams.getTextTrim());
+												apiamsbuf.append(dictionary.mapEntity(ams.getTextTrim()));
 											}
 											record.put("APIAMS",apiamsbuf.toString());
 										}
@@ -749,7 +758,10 @@ public class BdParser
 												for (int i = 0; i < l.size(); i++)
 												{
 													Element el = (Element)l.get(i);
-													apiapcbuf.append(el.getTextTrim());
+													if(el != null)
+													{
+														apiapcbuf.append(dictionary.mapEntity(el.getTextTrim()));
+													}
 													apiapcbuf.append(Constants.IDDELIMITER);
 												}
 
@@ -789,7 +801,7 @@ public class BdParser
 
 													}
 													apicrnbuf.append(Constants.AUDELIMITER);
-													apicrnbuf.append(el.getTextTrim());
+													apicrnbuf.append(dictionary.mapEntity(el.getTextTrim()));
 													apicrnbuf.append(Constants.IDDELIMITER);
 												}
 											}
@@ -918,6 +930,41 @@ public class BdParser
 							//CORRESPONDENCE
 							Element correspondence = (Element) head.getChild("correspondence",noNamespace);
 							parseCorrespondenceElement(correspondence,record);
+							
+							//GRANTLIST
+							Element grantlist = (Element) head.getChild("grantlist",noNamespace);
+							StringBuffer grantBuffer = new StringBuffer();
+							
+							if(grantlist!=null)
+							{
+								List grantgroup = grantlist.getChildren("grant",noNamespace);
+								for (int i = 0; i < grantgroup.size(); i++)
+								{
+									Element grant =(Element) grantgroup.get(i);
+									if(grant.getChildText("grant-id",noNamespace)!=null)
+									{
+										grantBuffer.append(grant.getChildText("grant-id",noNamespace));
+									}
+									grantBuffer.append(Constants.IDDELIMITER);
+									
+									if(grant.getChildText("grant-acronym",noNamespace)!=null)
+									{
+										grantBuffer.append(dictionary.mapEntity(grant.getChildText("grant-acronym",noNamespace)));
+									}
+									grantBuffer.append(Constants.IDDELIMITER);
+									
+									if(grant.getChildText("grant-agency",noNamespace)!=null)
+									{
+										grantBuffer.append(dictionary.mapEntity(grant.getChildText("grant-agency",noNamespace)));
+									}
+									if(i<grantgroup.size()-1)
+									{
+										grantBuffer.append(Constants.AUDELIMITER);
+									}
+									
+								}
+								record.put("GRANTLIST",grantBuffer.toString());
+							}
 
 
 						}
@@ -1110,7 +1157,7 @@ public class BdParser
 								String  refTitletext = refTitletextElement.getTextTrim();
 								if(	refTitletext!=null)
 								{
-									referenceTitleBuffer.append(refTitletext);
+									referenceTitleBuffer.append(dictionary.mapEntity(refTitletext));
 								}
 								if(j<refTitletextList.size()-1)
 								{
@@ -1148,7 +1195,7 @@ public class BdParser
 					if(	refSourceTitle !=null)
 					{
 						String  refSourceTitleText = refSourceTitle.getTextTrim();
-						referenceSourcetitle.put(referenceID,refSourceTitleText);
+						referenceSourcetitle.put(referenceID,dictionary.mapEntity(refSourceTitleText));
 					}
 
 					//ref-publicationyear
@@ -1222,7 +1269,7 @@ public class BdParser
 					{
 
 						String  refTextValue = refText.getTextTrim();
-						referenceText.put(referenceID,refTextValue);
+						referenceText.put(referenceID,dictionary.mapEntity(refTextValue));
 						//System.out.println("refTextValue::"+refTextValue);
 					}
 
@@ -1245,7 +1292,7 @@ public class BdParser
 					if(refFullText!=null)
 					{
 						String  refFullTextValue = refFullText.getTextTrim();
-						referenceText.put(referenceID,refFullTextValue);
+						referenceText.put(referenceID,dictionary.mapEntity(refFullTextValue));
 						//System.out.println("ref-fulltext::"+refFullTextValue);
 					}
 
@@ -1322,7 +1369,7 @@ public class BdParser
 						if(refdItemcitation.getChild("sourcetitle",noNamespace)!=null)
 						{
 							Element sourcetitle = (Element)refdItemcitation.getChild("sourcetitle",noNamespace);
-							referenceItemcitationSourcetitle.put(referenceID,sourcetitle.getTextTrim());
+							referenceItemcitationSourcetitle.put(referenceID,dictionary.mapEntity(sourcetitle.getTextTrim()));
 							//System.out.println("REFERENCE CITATION SOURCETITLE "+sourcetitle.getTextTrim());
 						}
 
@@ -1330,7 +1377,7 @@ public class BdParser
 						if(refdItemcitation.getChild("sourcetitle-abbrev",noNamespace)!=null)
 						{
 							Element sourcetitleAbbrev = (Element)refdItemcitation.getChild("sourcetitle-abbrev",noNamespace);
-							referenceItemcitationSourcetitle_abbrev.put(referenceID,sourcetitleAbbrev.getTextTrim());
+							referenceItemcitationSourcetitle_abbrev.put(referenceID,dictionary.mapEntity(sourcetitleAbbrev.getTextTrim()));
 							//System.out.println("REFERENCE CITATION SOURCETITLE ABBREV "+sourcetitleAbbrev.getTextTrim());
 						}
 
@@ -1463,7 +1510,7 @@ public class BdParser
 						Element citationRefText = (Element) refdItemcitation.getChild("ref-text",noNamespace);
 						if(citationRefText!=null)
 						{
-							referenceItemcitationRefText.put(referenceID,citationRefText.getTextTrim());
+							referenceItemcitationRefText.put(referenceID,dictionary.mapEntity(citationRefText.getTextTrim()));
 							//System.out.println("REFERENCE CITATION REF-TEXT::"+citationRefText.getTextTrim());
 						}
 
@@ -1989,7 +2036,7 @@ public class BdParser
 
 							if(	tradename != null && tradename.length()>0)
 							{
-								tradenamegroupBuffer.append(tradename);
+								tradenamegroupBuffer.append(dictionary.mapEntity(tradename));
 							}
 
 							tradenamegroupBuffer.append(Constants.IDDELIMITER);
@@ -2037,7 +2084,7 @@ public class BdParser
 							String country = manufacturerElement.getAttributeValue("country");
 							if(country!=null)
 							{
-								manufacturergroupBuffer.append(country);
+								manufacturergroupBuffer.append(dictionary.mapEntity(country));
 							}
 
 							manufacturergroupBuffer.append(Constants.GROUPDELIMITER);
@@ -2046,7 +2093,7 @@ public class BdParser
 
 							if(	manufacturer != null && manufacturer.length()>0)
 							{
-								manufacturergroupBuffer.append(manufacturer);
+								manufacturergroupBuffer.append(dictionary.mapEntity(manufacturer));
 							}
 
 							manufacturergroupBuffer.append(Constants.IDDELIMITER);
@@ -2082,7 +2129,10 @@ public class BdParser
 					{
 						List sequencenumberList = sequencebank.getChildren("sequence-number",noNamespace);
 						String sequencebankName = sequencebank.getAttributeValue("name");
-						sequencebanksBuffer.append(sequencebankName);
+						if(sequencebankName!=null)
+						{
+							sequencebanksBuffer.append(dictionary.mapEntity(sequencebankName));
+						}
 
 						sequencebanksBuffer.append(Constants.IDDELIMITER);
 
@@ -2141,7 +2191,7 @@ public class BdParser
 
 							if(	chemical_name != null)
 							{
-								chemicalgroupBuffer.append(chemical_name);
+								chemicalgroupBuffer.append(dictionary.mapEntity(chemical_name));
 							}
 
 							chemicalgroupBuffer.append(Constants.GROUPDELIMITER);
@@ -2235,7 +2285,7 @@ public class BdParser
 
 			if(sourceCountry != null)
 			{
-				record.put("SOURCECOUNTRY", sourceCountry);
+				record.put("SOURCECOUNTRY", dictionary.mapEntity(sourceCountry));
 				//System.out.println("Country type::"+sourceCountry.getValue());
 			}
 
@@ -2510,14 +2560,14 @@ public class BdParser
 					}
 				}
 				//disable for cafe data
-				/*
+				
 				if(aipPubYear==null)
 				{
 					java.util.Calendar calCurrentDate =  java.util.GregorianCalendar.getInstance();
 					int year = calCurrentDate.get(java.util.Calendar.YEAR);
 					record.put("PUBLICATIONYEAR",Integer.toString(year));
 				}
-				*/
+				
 			}
 
 			//PUBLICATIONDATE
@@ -2531,14 +2581,14 @@ public class BdParser
 				String publicationdateDateText = publicationdate.getChildTextTrim("date-text",noNamespace);
 				if(publicationdateDateText!=null)
 				{
-					record.put("PUBLICATIONDATE",publicationdateDateText);
+					record.put("PUBLICATIONDATE",dictionary.mapEntity(publicationdateDateText));
 				}
 				else
 				{
 					dateString = getDateString(publicationdateYear,publicationdateMonth,publicationdateDay);
 					if(dateString != null)
 					{
-						record.put("PUBLICATIONDATE",dateString);
+						record.put("PUBLICATIONDATE",dictionary.mapEntity(dateString));
 					}
 				}
 			}//added for AIP
@@ -2555,7 +2605,7 @@ public class BdParser
 					}
 					if(dateString != null)
 					{
-						record.put("PUBLICATIONDATE",dateString);
+						record.put("PUBLICATIONDATE",dictionary.mapEntity(dateString));
 					}
 			}
 			
@@ -2793,7 +2843,7 @@ public class BdParser
 					{
 						pnBuffer.append((Constants.AUDELIMITER));
 					}
-					pnBuffer.append(publisherName);
+					pnBuffer.append(dictionary.mapEntity(publisherName));
 				}
 
 				String publisheraddress = publisher.getChildTextTrim("publisheraddress",noNamespace);
@@ -2803,7 +2853,7 @@ public class BdParser
 					{
 						paBuffer.append((Constants.AUDELIMITER));
 					}
-					paBuffer.append(publisheraddress);
+					paBuffer.append(dictionary.mapEntity(publisheraddress));
 				}
 				else if(publisher.getChild("affiliation",noNamespace)!=null)
 				{
@@ -2987,7 +3037,7 @@ public class BdParser
 								confsponsorsBuffer.append(confsponsor.getTextTrim());
 							}
 						}
-						record.put("CONFSPONSORS",confsponsorsBuffer.toString());
+						record.put("CONFSPONSORS",dictionary.mapEntity(confsponsorsBuffer.toString()));
 					}
 				}
 
@@ -3033,7 +3083,7 @@ public class BdParser
 				if(editor != null)
 				{
 					//System.out.println("editor "+editor);
-					record.put("CONFERENCEEDITOR",editor);
+					record.put("CONFERENCEEDITOR",dictionary.mapEntity(editor));
 				}
 			}
 
@@ -3041,14 +3091,14 @@ public class BdParser
 			if(editororganization != null)
 			{
 				//System.out.println("editororganization "+editororganization);
-				record.put("CONFERENCEORGANIZATION",editororganization);
+				record.put("CONFERENCEORGANIZATION",dictionary.mapEntity(editororganization));
 			}
 
 			String editoraddress = confeditors.getChildTextTrim("editoraddress",noNamespace);
 			if(editoraddress != null)
 			{
 				//System.out.println("editoraddress "+editoraddress);
-				record.put("CONFERENCEEDITORADDRESS",editoraddress);
+				record.put("CONFERENCEEDITORADDRESS",dictionary.mapEntity(editoraddress));
 			}
 
 		}
@@ -3076,7 +3126,7 @@ public class BdParser
 
 			if(venue!= null)
 			{
-				affBuffer.append(venue.getTextTrim());
+				affBuffer.append(dictionary.mapEntity(venue.getTextTrim()));
 			}
 			affBuffer.append(Constants.IDDELIMITER);
 
@@ -3136,7 +3186,7 @@ public class BdParser
 
 				if(city != null)
 				{
-					cityGroupBuffer.append(city);
+					cityGroupBuffer.append(dictionary.mapEntity(city));
 					if(state != null || postalCode != null)
 					{
 						cityGroupBuffer.append(", ");
@@ -3204,7 +3254,7 @@ public class BdParser
 
 			if(venue!= null)
 			{
-				affBuffer.append(venue.getTextTrim());
+				affBuffer.append(dictionary.mapEntity(venue.getTextTrim()));
 			}
 			affBuffer.append(Constants.IDDELIMITER);
 
@@ -3256,7 +3306,7 @@ public class BdParser
 
 					if(city != null)
 					{
-						cityGroupBuffer.append(city);
+						cityGroupBuffer.append(dictionary.mapEntity(city));
 						if(state != null || postalCode != null)
 						{
 							cityGroupBuffer.append(", ");
@@ -3333,7 +3383,7 @@ public class BdParser
 			editorBuffer.append(Constants.IDDELIMITER);
 			if(editor.getChildTextTrim("initials",ceNamespace)!=null)
 			{
-				editorBuffer.append(editor.getChildTextTrim("initials",ceNamespace));
+				editorBuffer.append(dictionary.mapEntity(editor.getChildTextTrim("initials",ceNamespace)));
 			}
 			editorBuffer.append(Constants.IDDELIMITER);
 			if(editor.getChild("indexed-name",ceNamespace)!=null)
@@ -3480,7 +3530,7 @@ public class BdParser
 			        String zipvalue=elmpostalcode.getTextTrim();
 			        if(zipvalue!=null)
 			        {			        	
-			        	zipbuf.append(zipvalue);
+			        	zipbuf.append(dictionary.mapEntity(zipvalue));
 			        	 if(i < postalcode.size()-1)
 				         {
 				                zipbuf.append(", ");
@@ -3492,7 +3542,7 @@ public class BdParser
 			if(zipbuf.length() > 0)
 			{
 				
-			    aff.setAffPostalCode(dictionary.mapEntity(zipbuf.toString()));
+			    aff.setAffPostalCode(dictionary.mapEntity(dictionary.mapEntity(zipbuf.toString())));
 			}
 
 			Element text = (Element) affiliation.getChild("text",ceNamespace);
@@ -3581,13 +3631,13 @@ public class BdParser
 		    Element initials = author.getChild("initials",ceNamespace );
 		    if(initials != null)
 		    {
-			    aus.setInitials(initials.getText());
+			    aus.setInitials(dictionary.mapEntity(initials.getText()));
 		    }
 
 		    Element degrees = author.getChild("degrees", ceNamespace);
 		    if(degrees != null)
 		    {
-		        aus.setDegrees(degrees.getText());
+		        aus.setDegrees(dictionary.mapEntity(degrees.getText()));
 
 		    }
 
@@ -3606,7 +3656,7 @@ public class BdParser
 		    Element suffix = author.getChild("suffix",ceNamespace);
 		    if(suffix != null)
 		    {
-		        aus.setSuffix(suffix.getText());
+		        aus.setSuffix(dictionary.mapEntity(suffix.getText()));
 		    }
 
 		    Element nametext= author.getChild("nametext", ceNamespace);
@@ -3637,7 +3687,7 @@ public class BdParser
 		       Element prefferedNameDegrees = prefferedName.getChild("degree", ceNamespace);
 		       if(prefferedNameDegrees != null)
 		       {
-		           aus.setPrefnameDegrees(prefferedNameDegrees.getText());
+		           aus.setPrefnameDegrees(dictionary.mapEntity(prefferedNameDegrees.getText()));
 		       }
 
 		       Element prefferedNameSurname = prefferedName.getChild("surname", ceNamespace);
