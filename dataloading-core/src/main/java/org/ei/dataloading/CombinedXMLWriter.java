@@ -843,7 +843,19 @@ public class CombinedXMLWriter
         out.println("       <GRANTID><![CDATA[" + notNull(multiFormat(rec.getStrings(EVCombinedRec.GRANTID))) + "]]></GRANTID>");																					//GID
         
         //SOURCE_NOTE
-        out.println("       <GRANTAGENCY><![CDATA[" + notNull(rec.getString(EVCombinedRec.GRANTAGENCY)) + "]]></GRANTAGENCY>");																						//GAG
+        out.println("       <GRANTAGENCY><![CDATA[" + notNull(multiFormat(rec.getStrings(EVCombinedRec.GRANTAGENCY))) + "]]></GRANTAGENCY>");		//GAG
+        
+        //SPARE FIELDS
+        out.println("       <EV_SPARE1><![CDATA[]]></EV_SPARE1>");	
+        out.println("       <EV_SPARE2><![CDATA[]]></EV_SPARE2>");
+        out.println("       <EV_SPARE3><![CDATA[]]></EV_SPARE3>");
+        out.println("       <EV_SPARE4><![CDATA[]]></EV_SPARE4>");
+        out.println("       <EV_SPARE5><![CDATA[]]></EV_SPARE5>");
+        out.println("       <EV_SPARE6><![CDATA[]]></EV_SPARE6>");
+        out.println("       <EV_SPARE7><![CDATA[]]></EV_SPARE7>");
+        out.println("       <EV_SPARE8><![CDATA[]]></EV_SPARE8>");
+        out.println("       <EV_SPARE9><![CDATA[]]></EV_SPARE9>");
+        out.println("       <EV_SPARE10><![CDATA[]]></EV_SPARE10>");
         
         out.println("   </ROW>");
         ++curRecNum;
