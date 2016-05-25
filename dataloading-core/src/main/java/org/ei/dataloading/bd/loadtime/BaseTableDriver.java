@@ -2,6 +2,7 @@ package org.ei.dataloading.bd.loadtime;
 
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -361,7 +362,13 @@ public class BaseTableDriver
 
     private void writeRecs(BufferedReader xmlReader, Connection con) throws Exception
     {
-        FileWriter out = new FileWriter(this.infile+"_not_loaded_record.txt");
+    	File outFile = new File(this.infile+"_not_loaded_record.txt");
+    	if(outFile.exists())
+    	{
+    		outFile.setReadable(true);
+    		outFile.setWritable(true);
+    	}
+        FileWriter out = new FileWriter(outFile);
         RecordReader r;   //HH 04/05/2016 for cafe
         try
         {
