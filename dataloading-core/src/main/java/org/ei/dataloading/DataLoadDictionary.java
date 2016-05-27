@@ -16,6 +16,10 @@ public class DataLoadDictionary
 {
     	public static String mapEntity(String xml)
     	{
+    		if(xml == null)
+    		{
+    			return null;
+    		}
     		int len = xml.length();
     		StringBuffer sb = new StringBuffer();
     		char c;
@@ -98,7 +102,7 @@ public class DataLoadDictionary
     					case 191 :sb.append("&iquest;");break; 	//Invert question mark
     					case 192 :sb.append("&Agrave;");break; 	//Capital A grave
     					case 193 :sb.append("&Aacute;");break; 	//Capital A acute
-    					case 194 :sb.append("&Acire;");break; 	//Capital A circumflex
+    					case 194 :sb.append("&Acirc;");break; 	//Capital A circumflex
     					case 195 :sb.append("&Atilde;");break; 	//Capital A tilde
     					case 196 :sb.append("&Auml;");break; 	//Capital A diaeresis
     					case 197 :sb.append("&Aring;");break; 	//Capital A ring above
@@ -106,24 +110,31 @@ public class DataLoadDictionary
     					case 199 :sb.append("&Ccedil;");break; 	//Capital C cedilla
     					case 200 :sb.append("&Egrave;");break; 	//Capital E grave;
     					case 201 :sb.append("&Eacute;");break; 	//Capital E acute
-    					case 202 :sb.append("&Ecire;");break; 	//Capital E circumflex
+    					case 202 :sb.append("&Ecirc;");break; 	//Capital E circumflex
     					case 203 :sb.append("&Euml;");break; 	//Capital E diaeresis
     					case 204 :sb.append("&Igrave;");break; 	//Capital I acute
     					case 205 :sb.append("&Iacute;");break; 	//Capital E diaeresis
-    					case 206 :sb.append("&Icire;");break; 	//Capital I circumflex
+    					case 206 :sb.append("&Icirc;");break; 	//Capital I circumflex
     					case 207 :sb.append("&Iuml;");break; 	//Capital I diaeresis
     					case 208 :sb.append("&ETH;");break; 	//Capital Eth, Edh, crossed D
     					case 209 :sb.append("&Ntilde;");break; 	//Capital Ntilde
     					case 210 :sb.append("&Ograve;");break; 	//Capital O grave
     					case 211 :sb.append("&Oacute;");break; 	//Capital O acute
-    					case 212 :sb.append("&Ocire;");break; 	//Capital O circumflex
+    					case 212 :sb.append("&Ocirc;");break; 	//Capital O circumflex
     					case 213 :sb.append("&Otilde;");break; 	//Capital O tilde
     					case 214 :sb.append("&Ouml;");break; 	//Capital O diaeresis
     					case 215 :sb.append("&times;");break; 	//Multiplication sign
     					case 216 :sb.append("&Oslash;");break; 	//latin O with stroke
-    					case 223 :sb.append("&szlig;");break; 	//latin sharp S
+    					case 217 :sb.append("&Ugrave;");break; 	//Capital u with grave accent    					
+    					case 218 :sb.append("&Uacute;");break; 	//Capital u with acute accent
+    					case 219 :sb.append("&Ucirc;");break; 	//Capital u with circumflex accent
+    					case 220 :sb.append("&Uuml;");break; 	//Capital u with umlaut    					
+    					case 221 :sb.append("&Yacute;");break; 	//Capital y with acute accent    					
+    					case 222 :sb.append("&THORN;");break; 	//Capital thorn (Icelandic)    		   					
+    					case 223 :sb.append("&szlig;");break; 	//Lowercase sharp s (German)
+    					case 224 :sb.append("&agrave;");break; 	//Lowercase a with grave accent
     					case 225 :sb.append("&aacute;");break; 	//a acute
-    					case 226 :sb.append("&acire;");break; 	//a circumflex
+    					case 226 :sb.append("&acirc;");break; 	//a circumflex
     					case 227 :sb.append("&atilde;");break; 	//a tilde
     					case 228 :sb.append("&auml;");break; 	//a diaeresis
     					case 229 :sb.append("&aring;");break; 	//a a ring above
@@ -131,28 +142,29 @@ public class DataLoadDictionary
     					case 231 :sb.append("&ccedil;");break; 	//a c cedilla
     					case 232 :sb.append("&egrave;");break; 	//a e grave
     					case 233 :sb.append("&eacute;");break; 	//a e acute
-    					case 234 :sb.append("&ecire;");break; 	//a circumflex
+    					case 234 :sb.append("&ecirc;");break; 	//a circumflex
     					case 235 :sb.append("&euml;");break; 	//a e diaeresis
     					case 236 :sb.append("&igrave;");break; 	//a i grave
     					case 237 :sb.append("&iacute;");break; 	//a i acute
-    					case 238 :sb.append("&icire;");break; 	//a circumflex
+    					case 238 :sb.append("&icirc;");break; 	//a circumflex
     					case 239 :sb.append("&iuml;");break; 	//a diaeresis
     					case 240 :sb.append("&eth;");break; 	//a eth
     					case 241 :sb.append("&ntilde;");break; 	//a n tilde
     					case 242 :sb.append("&ograve;");break; 	//a o grave
     					case 243 :sb.append("&oacute;");break; 	//a o acute
-    					case 244 :sb.append("&ocire;");break; 	//o circumflex
+    					case 244 :sb.append("&ocirc;");break; 	//o circumflex
     					case 245 :sb.append("&otilde;");break; 	//a tilde
     					case 246 :sb.append("&ouml;");break; 	//o diaeresis
     					case 247 :sb.append("&divide;");break; 	//division sign
     					case 248 :sb.append("&oslash;");break; 	//o stroke
     					case 249 :sb.append("&ugrave;");break; 	//u grave
     					case 250 :sb.append("&uacute;");break; 	//u acute
-    					case 251 :sb.append("&ucire;");break; 	//o circumflex
+    					case 251 :sb.append("&ucirc;");break; 	//o circumflex
     					case 252 :sb.append("&uuml;");break; 	//u diaeresis
     					case 253 :sb.append("&yacute;");break; 	//y acute
     					case 254 :sb.append("&thorn;");break; 	//thorn
     					case 255 :sb.append("&uyuml;");break; 	//y diaeresis
+    					
     					case 321 :sb.append("&Lstrok;");break; 	//latin L with stroke
     					case 322 :sb.append("&lstrok;");break; 	//latin l with stroke
     					case 338 :sb.append("&OElig;");break; 	//Capital ligaturen OE
@@ -222,9 +234,120 @@ public class DataLoadDictionary
     					case 967 :sb.append("&chi;");break; 	//chi
     					case 968 :sb.append("&psi;");break; 	//psi
     					case 969 :sb.append("&omega;");break; 	//Omega
+    					case 976 :sb.append("&#x03D0");break;//GREEK BETA SYMBOL 
     					case 977 :sb.append("&thetasym;");break;//theta symbol
     					case 978 :sb.append("&upsih;");break; 	//greek upsilon with hook symbol
+    					case 979 :sb.append("&#x03D3");break; 	//GREEK UPSILON WITH ACUTE AND HOOK SYMBOL
+    					case 980 :sb.append("&#x03D4");break; 	//GREEK UPSILON WITH DIAERESIS AND HOOK SYMBOL
+    					case 981 :sb.append("&straightphi;");break; 	//GREEK PHI SYMBOL (cursive)
     					case 982 :sb.append("&piv;");break; 	//greek pi symbol
+    					case 983 :sb.append("&#x03D7");break; //GREEK KAI SYMBOL
+    					case 986 :sb.append("&#x03DA");break; //GREEK LETTER STIGMA Ϛ
+    					case 987 :sb.append("&#x03DB");break; //GREEK SMALL LETTER STIGMA ϛ
+    					case 988 :sb.append("&Gammad;");break; //GREEK LETTER DIGAMMA (F) Ϝ
+    					case 989 :sb.append("&gammad;");break; //GREEK SMALL LETTER DIGAMMA (f) ϝ
+    					
+    					case 990 :sb.append("&#x03DE");break; //GGREEK LETTER KOPPA Ϟ
+    					case 991 :sb.append("&#x03DF");break; //GREEK SMALL LETTER KOPPA ϟ
+    					case 992 :sb.append("&#x03E0");break; //GREEK LETTER SAMPI Ϡ
+    					case 993 :sb.append("&#x03E1");break; //GREEK SMALL LETTER SAMPI ϡ
+    					
+    					//New Cyrillic (Russian) Alphabetic Entities in HTML 5
+    					
+    					case 1025 :sb.append("&IOcy;");break; 	//Cyrillic capital IO, like capital E umlaut
+    					case 1026 :sb.append("&DJcy;");break; 	//Cyrillic capital letter DJ
+    					case 1027 :sb.append("&GJcy;");break; 	//Cyrillic capital letter GJ
+    					case 1028 :sb.append("&Jukcy;");break; 	//Cyrillic capital letter Juk
+    					case 1029 :sb.append("&DScy;");break; 	//Cyrillic capital letter DS
+    					case 1030 :sb.append("&Iukcy;");break; 	//Cyrillic Byelorussion I
+    					case 1031 :sb.append("&YIcy;");break; 	//Cyrillic capital letter YI
+    					case 1032 :sb.append("&Jsercy;");break; //Cyrillic capital letter Jser
+    					case 1033 :sb.append("&LJcy;");break; 	//Cyrillic capital letter LJ
+    					case 1034 :sb.append("&NJcy;");break; 	//Cyrillic capital letter NJ
+    					case 1035 :sb.append("&TSHcy;");break; 	//Cyrillic capital letter TSH
+    					case 1036 :sb.append("&KJcy;");break; 	//Cyrillic capital letter KJ
+    					case 1038 :sb.append("&Ubrcy;");break; 	//Cyrillic U capital letter breve
+    					case 1039 :sb.append("&DZcy;");break; 	//Cyrillic capital letter DZ
+    					case 1040 :sb.append("&Acy;");break; 	//Cyrillic capital letter A
+    					case 1041 :sb.append("&Bcy;");break; 	//Cyrillic capital letter BE
+    					case 1042 :sb.append("&Vcy;");break; 	//Cyrillic capital letter VE
+    					case 1043 :sb.append("&Gcy;");break; 	//Cyrillic capital letter GHE
+    					case 1044 :sb.append("&Dcy;");break; 	//Cyrillic capital letter DE
+    					case 1045 :sb.append("&IEcy;");break; 	//Cyrillic capital letter EE
+    					case 1046 :sb.append("&ZHcy;");break; 	//Cyrillic capital letter ZHE
+    					case 1047 :sb.append("&Zcy;");break; 	//Cyrillic capital letter ZE
+    					case 1048 :sb.append("&Icy;");break; 	//Cyrillic capital letter I
+    					case 1049 :sb.append("&Jcy;");break; 	//Cyrillic capital short I
+    					case 1050 :sb.append("&Kcy;");break; 	//Cyrillic capital letter KA
+    					case 1051 :sb.append("&Lcy;");break; 	//Cyrillic capital letter EL
+    					case 1052 :sb.append("&Mcy;");break; 	//Cyrillic capital letter M
+    					case 1053 :sb.append("&Ncy;");break; 	//Cyrillic capital letter EN
+    					case 1054 :sb.append("&Ocy;");break; 	//Cyrillic capital letter O
+    					case 1055 :sb.append("&Pcy;");break; 	//Cyrillic capital letter PE
+    					case 1056 :sb.append("&Rcy;");break; 	//Cyrillic capital letter ER
+    					case 1057 :sb.append("&Scy;");break; 	//Cyrillic capital letter ES
+    					case 1058 :sb.append("&Tcy;");break; 	//Cyrillic capital letter TE
+    					case 1059 :sb.append("&Ucy;");break; 	//Cyrillic capital letter U
+    					case 1060 :sb.append("&Fcy;");break; 	//Cyrillic capital letter EF
+    					case 1061 :sb.append("&KHcy;");break; 	//Cyrillic capital letter HA
+    					case 1062 :sb.append("&TScy;");break; 	//Cyrillic capital letter TSE
+    					case 1063 :sb.append("&CHcy;");break; 	//Cyrillic capital letter CHE
+    					case 1064 :sb.append("&SHcy;");break; 	//Cyrillic capital letter SHA
+    					case 1065 :sb.append("&SHCHcy;");break; //Cyrillic capital letter SHCHA
+    					case 1066 :sb.append("&HARDcy;");break; //Cyrillic capital hard sign
+    					case 1067 :sb.append("&Ycy;");break; 	//Cyrillic capital letter YERU
+    					case 1068 :sb.append("&SOFTcy;");break; //Cyrillic capital soft sign
+    					case 1069 :sb.append("&Ecy;");break; 	//Cyrillic capital letter E
+    					case 1070 :sb.append("&YUcy;");break; 	//Cyrillic capital letter YU
+    					case 1071 :sb.append("&YAcy;");break; 	//Cyrillic capital letter YA
+    					case 1072 :sb.append("&acy;");break; 	//Cyrillic small letter a
+    					case 1073 :sb.append("&bcy;");break; 	//Cyrillic small letter be
+    					case 1074 :sb.append("&vcy;");break; 	//Cyrillic small letter ve
+    					case 1075 :sb.append("&gcy;");break; 	//Cyrillic small letter ghe
+    					case 1076 :sb.append("&dcy;");break; 	//Cyrillic small letter de
+    					case 1077 :sb.append("&iecy;");break; 	//Cyrillic small letter ie
+    					case 1078 :sb.append("&zhcy;");break; 	//Cyrillic small letter zhe
+    					case 1079 :sb.append("&zcy;");break; 	//Cyrillic small letter ze
+    					case 1080 :sb.append("&icy;");break; 	//Cyrillic small letter i
+    					case 1081 :sb.append("&jcy;");break; 	//Cyrillic small short i
+    					case 1082 :sb.append("&kcy;");break; 	//Cyrillic small letter ka
+    					case 1083 :sb.append("&lcy;");break; 	//Cyrillic small letter el
+    					case 1084 :sb.append("&mcy;");break; 	//Cyrillic small letter em
+    					case 1085 :sb.append("&ncy;");break; 	//Cyrillic small letter en
+    					case 1086 :sb.append("&ocy;");break; 	//Cyrillic small letter o
+    					case 1087 :sb.append("&pcy;");break; 	//Cyrillic small letter pe
+    					case 1088 :sb.append("&rcy;");break; 	//Cyrillic small letter er
+    					case 1089 :sb.append("&scy;");break; 	//Cyrillic small letter es
+    					case 1090 :sb.append("&tcy;");break; 	//Cyrillic small letter te
+    					case 1091 :sb.append("&ucy;");break; 	//Cyrillic small letter u
+    					case 1092 :sb.append("&fcy;");break; 	//Cyrillic small letter ef
+    					case 1093 :sb.append("&khcy;");break; 	//Cyrillic small letter ha
+    					case 1094 :sb.append("&tscy;");break; 	//Cyrillic small letter tse
+    					case 1095 :sb.append("&chcy;");break; 	//Cyrillic small letter che
+    					case 1096 :sb.append("&shcy;");break; 	//Cyrillic small letter sha
+    					case 1097 :sb.append("&shchcy;");break; //Cyrillic small letter shcha
+    					case 1098 :sb.append("&hardcy;");break; //Cyrillic small hard sign
+    					case 1099 :sb.append("&ycy;");break; 	//Cyrillic small letter yeru
+    					case 1100 :sb.append("&softcy;");break; //Cyrillic small soft sign
+    					case 1101 :sb.append("&ecy;");break; 	//Cyrillic small letter e
+    					case 1102 :sb.append("&yucy;");break; 	//Cyrillic small letter yu
+    					case 1103 :sb.append("&yacy;");break; 	//Cyrillic small letter ya
+    					case 1105 :sb.append("&iocy;");break; 	//Cyrillic small letter io, like small e umlaut
+    					case 1106 :sb.append("&djcy;");break; 	//Cyrillic small letter dj
+    					case 1107 :sb.append("&gjcy;");break; 	//Cyrillic small letter gj
+    					case 1108 :sb.append("&jukcy;");break; 	//Cyrillic small letter juk
+    					case 1109 :sb.append("&dscy;");break; 	//Cyrillic small letter ds
+    					case 1110 :sb.append("&iukcy;");break; 	//Cyrillic small letter Byelorussion i
+    					case 1111 :sb.append("&yicy;");break; 	//Cyrillic small letter yi
+    					case 1112 :sb.append("&jsercy;");break; //Cyrillic small letter jser
+    					case 1113 :sb.append("&ljcy;");break; 	//Cyrillic small letter lj
+    					case 1114 :sb.append("&njcy;");break; 	//Cyrillic small letter nj
+    					case 1115 :sb.append("&tshcy;");break; 	//Cyrillic small letter tsh
+    					case 1116 :sb.append("&kjcy;");break; 	//Cyrillic small letter kj
+    					case 1118 :sb.append("&ubrcy;");break; 	//Cyrillic small letter u breve
+    					case 1119 :sb.append("&dzcy;");break; 	//Cyrillic small letter dz
+    					
+    					
     					case 1488 :sb.append("&aleph;");break; 	//hebrew aleph
     					case 8194 :sb.append("&ensp;");break; 	//en space
     					case 8195 :sb.append("&emsp;");break; 	//em space
@@ -416,6 +539,7 @@ public class DataLoadDictionary
     					case 12297 :sb.append("&rang;");break;	//right angle bracket
 
     					default:sb.append("");
+    					//System.out.println("UNKNOW-CHARACTERS="+(int)c);
     					break;
     				}
     			}

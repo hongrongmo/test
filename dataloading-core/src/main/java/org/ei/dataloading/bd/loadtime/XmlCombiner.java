@@ -167,11 +167,11 @@ public class XmlCombiner
             System.out.println("Running the query...");
             if(Combiner.CURRENTDB.equalsIgnoreCase("chm")&&(year==9999))
             {
-                rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER, substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,APICT, APICT1,APILT, APILT1,CLASSIFICATIONDESC,APIAMS, SEQ_NUM from " + Combiner.TABLENAME + " where  PUBLICATIONYEAR in ('1940','1981-1982','1982-1983','1983-1984','1984-1985','1987-1988','1988-1989','1989-1989','1989-1990','1990-1991','1991-1991','1993-1994','1994-1995','1995-1996','1996-1997','1997-1998','1999-2000','2000-2001','2001-1993','2001-2002','2002-2003','2003-2004','2004-2005','2005-2006','2006-2007,'2007-2008','2008-2009','2009-2010', '2010-2011', '2011-2012') AND loadnumber != 0 and loadnumber < 100000000 and database='" + Combiner.CURRENTDB + "'");
+                rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER, substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,APICT, APICT1,APILT, APILT1,CLASSIFICATIONDESC,APIAMS, SEQ_NUM,GRANTLIST from " + Combiner.TABLENAME + " where  PUBLICATIONYEAR in ('1940','1981-1982','1982-1983','1983-1984','1984-1985','1987-1988','1988-1989','1989-1989','1989-1990','1990-1991','1991-1991','1993-1994','1994-1995','1995-1996','1996-1997','1997-1998','1999-2000','2000-2001','2001-1993','2001-2002','2002-2003','2003-2004','2004-2005','2005-2006','2006-2007,'2007-2008','2008-2009','2009-2010', '2010-2011', '2011-2012') AND loadnumber != 0 and loadnumber < 100000000 and database='" + Combiner.CURRENTDB + "'");
             }
             else if(Combiner.CURRENTDB.equalsIgnoreCase("geo")&&(year==9999))
             {
-                rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER, substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,APICT, APICT1,APILT, APILT1,CLASSIFICATIONDESC,APIAMS,SEQ_NUM from " + Combiner.TABLENAME + " where  PUBLICATIONYEAR in ('1944-1995','1952-1985','1960-1976','1973-1982','1974-1975','1974-1978','1975-1976','1975-1978','1976-1977','1976-1981','1976-1987','1977-1978','1977-1979','1977-1980','1978-1979','1978-1980','1979-1980','1979-1981','1979-1982','1979-1983','1979-1994','1980-1981','1980-1982','1980-1983','1980-1984','1981-1982','1981-1983','1981-1984','1981-1985','1981-1986','1981-1992','1982-1983','1982-1984','1982-1985','1982-1986','1982-1987','1982-1988','1982-1989','1982-1999','1983-1984','1983-1985','1983-1986','1983-1987','1983-1988','1983-1989','1984-1985','1984-1986','1984-1987','1984-1988','1984-1989','1985-1986','1985-1987','1985-1988','1985-1989','1985-1990','1986-1987','1986-1988','1986-1989','1987-1988','1987-1989','1987-1990','1987-1991','1988-1988','1988-1989','1988-1990','1988-1991','1989-1990','1989-1991','1989-1992','1989-1993','1990-1991','1990-1992','1990-1993','1991-1992','1991-1993','1991-1994','1992-1992','1992-1993','1992-1994','1992-1995','1993-1994','1993-1995','1994-1995','1994-1996','1995-1996','1995-1997','1996-1997','1997-1998','1997-1999','1998-1999','1999-2000','2000-2001','2000-2002','2001-2002','2002-2003','2003-2004','2004-2005','2005-2006','2005-2007','2006-2007','2007-2008','2008-2009', '2009-2010', '2010-2011', '2011-2012') AND loadnumber != 0 and loadnumber < 100000000 and database='" + Combiner.CURRENTDB + "'");
+                rs = stmt.executeQuery("select CHEMICALTERM,SPECIESTERM,REGIONALTERM,DATABASE,CITATIONLANGUAGE,CITATIONTITLE,CITTYPE,ABSTRACTDATA,PII,PUI,COPYRIGHT,M_ID,accessnumber,datesort,author,author_1,AFFILIATION,AFFILIATION_1,CORRESPONDENCEAFFILIATION,CODEN,ISSUE,CLASSIFICATIONCODE,CONTROLLEDTERM,UNCONTROLLEDTERM,MAINHEADING,TREATMENTCODE,LOADNUMBER,SOURCETYPE,SOURCECOUNTRY,SOURCEID,SOURCETITLE,SOURCETITLEABBREV,ISSUETITLE,ISSN,EISSN,ISBN,VOLUME,PAGE,PAGECOUNT,ARTICLENUMBER, substr(PUBLICATIONYEAR,1,4) as PUBLICATIONYEAR,PUBLICATIONDATE,EDITORS,PUBLISHERNAME,PUBLISHERADDRESS,PUBLISHERELECTRONICADDRESS,REPORTNUMBER,CONFNAME, CONFCATNUMBER,CONFCODE,CONFLOCATION,CONFDATE,CONFSPONSORS,CONFERENCEPARTNUMBER, CONFERENCEPAGERANGE, CONFERENCEPAGECOUNT, CONFERENCEEDITOR, CONFERENCEORGANIZATION,CONFERENCEEDITORADDRESS,TRANSLATEDSOURCETITLE,VOLUMETITLE,DOI,ASSIG,CASREGISTRYNUMBER,APICT, APICT1,APILT, APILT1,CLASSIFICATIONDESC,APIAMS,SEQ_NUM,GRANTLIST from " + Combiner.TABLENAME + " where  PUBLICATIONYEAR in ('1944-1995','1952-1985','1960-1976','1973-1982','1974-1975','1974-1978','1975-1976','1975-1978','1976-1977','1976-1981','1976-1987','1977-1978','1977-1979','1977-1980','1978-1979','1978-1980','1979-1980','1979-1981','1979-1982','1979-1983','1979-1994','1980-1981','1980-1982','1980-1983','1980-1984','1981-1982','1981-1983','1981-1984','1981-1985','1981-1986','1981-1992','1982-1983','1982-1984','1982-1985','1982-1986','1982-1987','1982-1988','1982-1989','1982-1999','1983-1984','1983-1985','1983-1986','1983-1987','1983-1988','1983-1989','1984-1985','1984-1986','1984-1987','1984-1988','1984-1989','1985-1986','1985-1987','1985-1988','1985-1989','1985-1990','1986-1987','1986-1988','1986-1989','1987-1988','1987-1989','1987-1990','1987-1991','1988-1988','1988-1989','1988-1990','1988-1991','1989-1990','1989-1991','1989-1992','1989-1993','1990-1991','1990-1992','1990-1993','1991-1992','1991-1993','1991-1994','1992-1992','1992-1993','1992-1994','1992-1995','1993-1994','1993-1995','1994-1995','1994-1996','1995-1996','1995-1997','1996-1997','1997-1998','1997-1999','1998-1999','1999-2000','2000-2001','2000-2002','2001-2002','2002-2003','2003-2004','2004-2005','2005-2006','2005-2007','2006-2007','2007-2008','2008-2009', '2009-2010', '2010-2011', '2011-2012') AND loadnumber != 0 and loadnumber < 100000000 and database='" + Combiner.CURRENTDB + "'");
             }
             else if(Combiner.CURRENTDB.equalsIgnoreCase("cpx")&&(year==9999))
             {
@@ -870,7 +870,15 @@ throws Exception
                         rec.put(EVCombinedRec.MAIN_TERM, prepareMulti(rs.getString("apiams")));
                     }
                     
-                    //due to bd_master table structure change, we have to handle the missed collumn exception
+                    if(rs.getString("GRANTLIST") != null)
+                    {
+                        rec.put(EVCombinedRec.GRANTID, prepareMulti(getGrantID(rs.getString("GRANTLIST"))));
+                        rec.put(EVCombinedRec.GRANTAGENCY, prepareMulti(getGrantAgency(rs.getString("GRANTLIST"))));
+                    }
+                    
+                    
+                    
+                    //due to bd_master table structure change, we have to handle the missed column exception
                     try
                     {
                     	if(rs.getString("eid") != null)
@@ -956,6 +964,87 @@ throws Exception
     }
 
     
+    
+    private String getGrantID(String grant)
+    {
+    	StringBuffer grantidBuffer = new StringBuffer();
+    	
+    	if(grant != null)
+    	{
+    		String[] grantA = grant.split(Constants.AUDELIMITER);
+    		for(int i=0;i<grantA.length;i++)
+    		{
+    			if(grantA[i]!=null)
+    			{
+    				String[] grantS = grantA[i].split(Constants.IDDELIMITER);
+    				if(grantS.length==3)
+    				{
+   				
+    					if(grantS[0]!=null)
+    					{
+    						grantidBuffer.append(grantS[0]);
+    						grantidBuffer.append(Constants.AUDELIMITER);
+    					}
+    					
+    					
+    					if(grantS[1]!=null)
+    					{
+    						grantidBuffer.append(grantS[1]);
+    						grantidBuffer.append(Constants.AUDELIMITER);
+    					}
+    					
+    				}
+    				else
+        			{
+        				System.out.println("GrantList has wrong format");
+        			}
+    			}
+    			
+    			
+    		}
+    	}
+    	
+    	return grantidBuffer.toString();
+    }
+    
+    private String getGrantAgency(String grant)
+    {
+    	
+    	StringBuffer grantAgencyBuffer = new StringBuffer();
+    	
+    	if(grant != null)
+    	{
+    		String[] grantA = grant.split(Constants.AUDELIMITER);
+    		for(int i=0;i<grantA.length;i++)
+    		{
+    			if(grantA[i]!=null)
+    			{
+    				String[] grantS = grantA[i].split(Constants.IDDELIMITER);
+    				if(grantS.length==3)
+    				{
+   				
+    					if(grantS[2]!=null)
+    					{
+    						//System.out.println(i+" "+grantAgencyBuffer.toString());
+    						grantAgencyBuffer.append(grantS[2]);
+    						grantAgencyBuffer.append(Constants.AUDELIMITER); 
+    					}
+    					  					
+    				}
+    				else
+        			{
+        				System.out.println("GrantList has wrong format");
+        			}
+    			}
+    			
+    			
+    		}
+    	}
+    	
+    	return grantAgencyBuffer.toString();
+    	
+    }
+    
     //*
     // ********  use this method for full numericalIndex	***********
     // *  
@@ -1016,70 +1105,7 @@ throws Exception
 									rec.put(niKey," | "+ranges+" | ");									
 								}
 		    	          }
-		    	          //System.out.println("PUI="+pui+" MAXIMUM="+maximum);
-		    	          /*
-		    	          if(bdni.get(unit+"_maximum")!=null)
-		    	          {
-		    	          	  String niKey = bdni.get(unit+"_maximum");
-		    	          	  //System.out.println(niKey+" MAXIMUM KEY");
-		    	          	  String oldMaximum = rec.get(niKey);
-		    	          	  if(oldMaximum!=null)
-		    	          	  {
-			    	          	  if(maximum != null && oldMaximum != null)
-			    	          	  {
-			    	          	  	if(Double.parseDouble(maximum)>Double.parseDouble(oldMaximum))
-			    	          	  	{
-			    	          	  		rec.put(niKey,maximum);
-			    	          	  		//System.out.println("Keymaximum1="+niKey+" MAXIMUM="+maximum);
-			    	          	  	}
-			    	          	  }
-			    	          }
-			    	          else
-			    	          {
-			    	          		rec.put(niKey,maximum);
-			    	          		//System.out.println("Keymaximum2="+niKey+" MAXIMUM="+maximum);
-			    	          }
-			    	          niBuffer.append(maximum+Constants.AUDELIMITER);	
-		    	          	  //niBuffer.append(maximum+"|");	
-		    	          }	
-		    	             	          
-	    	          }
-	    	          
-	    	          if(rs.getString("MINIMUM") != null)
-	    	          {
-	    	        	  minimum = rs.getString("MINIMUM");	
-	    	        	  
-		    	          if(bdni.get(unit+"_minimum")!=null)
-		    	          {
-		    	          	  String niKey = bdni.get(unit+"_minimum");
-		    	          	  //System.out.println(niKey+" MINIMUM KEY");
-		    	          	  String oldMinimum = rec.get(niKey);
-		    	          	  if(oldMinimum!=null)
-		    	          	  {
-			    	          	  if(minimum != null && oldMinimum != null)
-			    	          	  {
-			    	          	  	if(Double.parseDouble(minimum)<Double.parseDouble(oldMinimum))
-			    	          	  	{
-			    	          	  		rec.put(niKey,minimum);
-			    	          	  		//System.out.println("Keyminimum1="+niKey+" MUNIMUM="+minimum);
-			    	          	  	}
-			    	          	  }
-			    	          }
-			    	          else
-			    	          {
-			    	          	rec.put(niKey,minimum);
-			    	          	//System.out.println("Keyminimum2="+niKey+" MUNIMUM="+minimum);
-			    	          }
-			    	          
-			    	         
-		    	          	  if(!minimum.equals(maximum))
-		    	          	  {
-		    	          		  niBuffer.append(minimum+Constants.AUDELIMITER);
-		    	          		  //niBuffer.append(minimum+"|");	
-		    	          		  //System.out.println("Keyminimum3="+niKey+" MUNIMUM="+minimum);
-		    	          	  }
-		    	          //}
-		    	          */
+		    	         
 		    	          
 		    	          niKey = bdni.get(unit+"_text");
 		    	          if(niKey!=null)

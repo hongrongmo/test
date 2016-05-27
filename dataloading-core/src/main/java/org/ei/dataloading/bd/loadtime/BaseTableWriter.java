@@ -139,14 +139,14 @@ public class BaseTableWriter
 
 			}
 
-			if(valueString != null && !thisColumnName.equals("EID"))
+			if(valueString != null && !thisColumnName.equals("EID") &&!thisColumnName.equals("UPDATERESOURCE"))
 			{
 				recordBuf.append(valueString);
 				//recordBuf.append(thisColumnName+":"+valueString);
 			}
 			if(thisColumnName.length()<9 || !("REF".equals(thisColumnName.substring(0,3))))
 			{
-				if(!("EID".equals(thisColumnName)))
+				if(!("EID".equals(thisColumnName)) && !("UPDATERESOURCE".equals(thisColumnName)))
 				{
 					recordBuf.append(FIELDDELIM);
 				}
@@ -162,6 +162,12 @@ public class BaseTableWriter
 	    if(record.get("EID")!=null)
 		{
 		   recordBuf.append((String)record.get("EID"));
+	    }
+	    recordBuf.append(FIELDDELIM);
+	    
+	    if(record.get("UPDATERESOURCE")!=null)
+		{
+		   recordBuf.append((String)record.get("UPDATERESOURCE"));
 	    }
 	    recordBuf.append(FIELDDELIM);
 	    //*/
