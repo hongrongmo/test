@@ -152,6 +152,8 @@ public class archiveEVCafeRefeed {
 
 	private void receiveMessage(MessageConsumer consumer, boolean acknowledge) throws InterruptedException 
 	{
+		String bucketName = "";
+		
 		ChangeMessageVisibilityRequest msgVisibilityReq;
 		String msgReciptHandle = null;
 
@@ -207,7 +209,19 @@ public class archiveEVCafeRefeed {
 							//parse SQS Message Fields& determine whether it is "ANI" message & belongs to dbcollcodes *|CPX|*
 							if(obj.ParseSQSMessage(messageBody))   
 							{
-								document_type = "ani";
+								bucketName = obj.getMessageField("bucket");
+								if(!(bucketName.isEmpty()) && bucketName.contains("ani"))
+								{
+									document_type = "ani";
+								}
+								else if (!(bucketName.isEmpty()) && bucketName.contains("apr"))
+								{
+									document_type = "apr";
+								}
+								else if (!(bucketName.isEmpty()) && bucketName.contains("ipr"))
+								{
+									document_type = "ipr";
+								}
 								
 								//Key
 								if(obj.getMessageField("key") !=null)

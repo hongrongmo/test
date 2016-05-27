@@ -175,10 +175,13 @@ public class GetANIFileFromCafeS3Bucket {
 	}
 	
 
-	public void getFile(String bucketName, String key) throws AmazonClientException,AmazonServiceException, InterruptedException{
+	public String getFile(String bucketName, String key) throws AmazonClientException,AmazonServiceException, InterruptedException{
 
 		this.bucketName = bucketName;
 		this.key = key;
+		
+		//HH 05/24/2016 to write only keys that were downloaded successfully (exist in S3)
+		String errorCode = null;
 		try
 		{
 			//temp comment for now, as i moved them to DBCollectionCheck
@@ -203,8 +206,7 @@ public class GetANIFileFromCafeS3Bucket {
 			{
 				saveContentToFile();
 			}
-			
-		
+					
 			//objectData.close();
 
 		}
@@ -226,6 +228,8 @@ public class GetANIFileFromCafeS3Bucket {
 			System.out.println("AWS Error Code:   " + ase.getErrorCode());
 			System.out.println("Error Type:       " + ase.getErrorType());
 			System.out.println("Request ID:       " + ase.getRequestId());
+			
+			errorCode = ase.getErrorCode();
 		}
 		catch(AmazonClientException ace)
 		{
@@ -235,6 +239,7 @@ public class GetANIFileFromCafeS3Bucket {
 					"communicate with S3, " +
 					"such as not being able to access the network.");
 			System.out.println("Error Message: " + ace.getMessage());
+			errorCode = ace.getMessage();
 		}
 
 
@@ -252,7 +257,6 @@ public class GetANIFileFromCafeS3Bucket {
 				}
 			}
 			
-			
 			try
 			{
 				if(object !=null)
@@ -264,9 +268,10 @@ public class GetANIFileFromCafeS3Bucket {
 			{
 				e.printStackTrace();
 			}
-			
+
 		}
 
+		return errorCode;
 	}
 
 
