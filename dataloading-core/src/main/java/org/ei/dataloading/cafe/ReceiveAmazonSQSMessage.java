@@ -56,6 +56,10 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 	boolean ANIRecord;
 	boolean cpxdbCollection;
 	
+	boolean APRRecord;
+	boolean IPRRecord;
+	
+	
 	private Perl5Util perl = new Perl5Util();
 	
 	String bucketName = "";
@@ -168,6 +172,11 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 	{
 		ANIRecord = false;
 		cpxdbCollection = false;
+		
+		//HH 05/23/2016 for AU/AFF profile
+		APRRecord = false;
+		IPRRecord = false;
+		
 		// clean out messageFieldKeys for each message to be clean for the current one (only hold current message fields).
 		
 				if(messageFieldKeys.size() >0)
@@ -201,18 +210,36 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 				}*/
 				ANIRecord = true;
 				
-			}
-			else
-			{
-				if(cpxdbCollection)
-				{
-					System.out.println("NOT ANI SQS MSG " + messageFieldKeys.get("bucket"));
-				}
+				return ANIRecord && cpxdbCollection;
 				
 			}
+			// 05/23/2016: modify for Author/Affiliation profile
+			else if(cpxdbCollection)
+			{
+					System.out.println("NOT ANI SQS MSG " + messageFieldKeys.get("bucket"));
+					return ANIRecord && cpxdbCollection;
+			}
+			else if(ANIRecord)
+			{
+				System.out.println("NOT CPX ANI SQS MSG " + messageFieldKeys.get("dbcollcodes"));
+				return ANIRecord && cpxdbCollection;
+			}
+			else if(bucketName.length() >0 && bucketName.contains("apr"))
+			{
+				System.out.println("Author Profile SQS MSG " + messageFieldKeys.get("bucket"));
+				APRRecord = true;
+				return APRRecord;
+				
+			}
+			else if(bucketName.length() >0 && bucketName.contains("ipr"))
+			{
+				System.out.println("Institution Profile SQS MSG " + messageFieldKeys.get("bucket"));
+				IPRRecord = true;
+				return IPRRecord;
+			}
 					
+			return false;
 			
-			return ANIRecord && cpxdbCollection;
 		
 	}
 	

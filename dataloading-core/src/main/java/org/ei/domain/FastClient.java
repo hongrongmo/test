@@ -653,6 +653,9 @@ public class FastClient {
                 String dedupKey = in.readLine();
                 // String category = in.readLine();
                 String doi = in.readLine();
+                //HH 05/27/2016 Fast returns '#category' in new ENV (DR), so ignore it if it is present
+                if(doi.startsWith("#category"))
+                	doi = in.readLine();
                 String dmask = in.readLine();
                 parseDocID(line, dedupKey, doi, dmask);
             } else if (line.indexOf("#tdocid") == 0 && line.trim().length() > 7) {
