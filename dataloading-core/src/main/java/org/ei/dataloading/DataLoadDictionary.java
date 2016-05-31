@@ -38,7 +38,7 @@ public class DataLoadDictionary
     				{
     					case 30 :sb.append(c);break;
     					case 31 :sb.append(c);break;
-    					case 92 :sb.append("&#92;");break;
+    					case 96 :sb.append("&#96;");break;    					
     					case 128 :sb.append("&Ccedil;");break;
     					case 129 :sb.append("&uuml;");break;
     					case 130 :sb.append("&eacute;");break;
@@ -349,6 +349,13 @@ public class DataLoadDictionary
     					
     					
     					case 1488 :sb.append("&aleph;");break; 	//hebrew aleph
+    					case 2155 :sb.append("&#2155;");break; 	//Fraction one fifth
+    					case 2156 :sb.append("&#2156;");break; 	//Fraction two fifths
+    					case 2157 :sb.append("&#2157;");break; 	//Fraction three fifths
+    					case 2158 :sb.append("&2158;");break; 	//Fraction four fifths
+    					case 2159 :sb.append("&2159;");break; 	//Fraction one sixth
+    					//case 1488 :sb.append("&aleph;");break; 	//hebrew aleph
+    					
     					case 8194 :sb.append("&ensp;");break; 	//en space
     					case 8195 :sb.append("&emsp;");break; 	//em space
     					case 8201 :sb.append("&thinsp;");break; //thin space
@@ -380,6 +387,7 @@ public class DataLoadDictionary
     					case 8261 :sb.append("&Hdbl;");break; 	//double-struck capital H
     					case 8263 :sb.append("&plankv;");break; //planck constant over two pi
     					case 8364 :sb.append("&euro;");break; 	//Euro sign
+    					
     					case 8465 :sb.append("&image;");break;  //blackletter capital I
     					case 8466 :sb.append("&Lscr;");break;   //script capital L
     					case 8467 :sb.append("&ell;");break; 	//script small l
@@ -397,7 +405,14 @@ public class DataLoadDictionary
     					case 8496 :sb.append("&Escr;");break; 	//script capital E
     					case 8497 :sb.append("&Fscr;");break; 	//script capital F
     					case 8499 :sb.append("&Mscr;");break; 	//script capital M
+    					
     					case 8501 :sb.append("&alefsym;");break;//Alef symbol, first transfinite cardinal
+    					case 8538 :sb.append("&#8538;");break;//Fraction five sixths
+    					case 8539 :sb.append("&#8539;");break;//Fraction one eighth
+    					case 8540 :sb.append("&#8540;");break;//Fraction three eighths
+    					case 8541 :sb.append("&#8541;");break;//Fraction five eighths
+    					case 8542 :sb.append("&#8542;");break;//Fraction seven eighths
+    					
     					case 8592 :sb.append("&larr;");break; 	//Leftward arrow
     					case 8593 :sb.append("&uarr;");break;   //Upward arrow
     					case 8594 :sb.append("&rarr;");break; 	//Righteard arrow
@@ -406,25 +421,99 @@ public class DataLoadDictionary
     					case 8597 :sb.append("&varr;");break; 	//up down arrow
     					case 8598 :sb.append("&nwarr;");break;  //north west arrow
     					case 8599 :sb.append("&nearr;");break; 	//north east arrow
+    					
     					case 8600 :sb.append("&searr;");break; 	//south east arrow
     					case 8601 :sb.append("&swarr;");break; 	//south west arrow
+    					case 8602 :sb.append("&#8602;");break; 	//Leftwards arrow with stroke
+    					case 8603 :sb.append("&#8603;");break; 	//Rightwards arrow with stroke
+    					case 8604 :sb.append("&#8604;");break; 	//Leftwards wave arrow
+    					case 8605 :sb.append("&#8605;");break; 	//Rightwards wave arrow		
     					case 8606 :sb.append("&Larr;");break; 	//leftwards two headed arrow
+    					case 8607 :sb.append("&#8607;");break; 	//Upwards two headed arrow
     					case 8608 :sb.append("&Rarr;");break; 	//rightwards two headed arrow
+    					case 8609 :sb.append("&#8609;");break; 	//Downwards two headed arrow
+    					
+    					case 8610 :sb.append("&#8610;");break; 	//Leftwards arrow with tail
+    					case 8611 :sb.append("&#8611;");break; 	//Rightwards arrow with tail
+    					case 8612 :sb.append("&#8612;");break; 	//Leftwards arrow from bar
+    					case 8613 :sb.append("&#8613;");break; 	//Upwards arrow from bar
+    					case 8614 :sb.append("&#8614;");break; 	//Rightwards arrow from bar
+    					case 8615 :sb.append("&#8615;");break; 	//Downwards arrow from bar
+    					case 8616 :sb.append("&#8616;");break; 	//Up down arrow with base
+    					case 8617 :sb.append("&#8617;");break; 	//Leftwards arrow with hook
+    					case 8618 :sb.append("&#8618;");break; 	//Rightwards arrow with hook
+    					case 8619 :sb.append("&#8619;");break; 	//Leftwards arrow with loop
+    					
+    					case 8620 :sb.append("&#8620;");break; 	//Rightwards arrow with loop
+    					case 8621 :sb.append("&#8621;");break; 	//Left right wave arrow
+    					case 8622 :sb.append("&#8622;");break; 	//Left right arrow with stroke
+    					case 8623 :sb.append("&#8623;");break; 	//Downwards zigzag arrow
+    					case 8624 :sb.append("&#8624;");break; 	//Upwards arrow with tip leftwards
+    					case 8625 :sb.append("&#8625;");break; 	//Upwards arrow with tip rightwards
+    					case 8626 :sb.append("&#8626;");break; 	//Downwards arrow with tip leftwards
+    					case 8627 :sb.append("&#8627;");break; 	//Downwards arrow with tip rightwards
+    					case 8628 :sb.append("&#8628;");break; 	//Rightwards arrow with corner downwards  					    					
     					case 8629 :sb.append("&crarr;");break;  //downward arrow with corner leftward, carriage return
+    					
+    					case 8630 :sb.append("&#8630");break; 	//Anticlockwise top semicircle arrow
+    					case 8631 :sb.append("&#8631");break; 	//Clockwise top semicircle arrow
+    					case 8632 :sb.append("&#8632");break; 	//North west arrow to long bar
+    					case 8633 :sb.append("&#8633");break; 	//Leftwards arrow to bar over rightwards arrow to bar
+    					case 8634 :sb.append("&#8634");break; 	//Anticlockwise open circle arrow
+    					case 8635 :sb.append("&#8635");break; 	//Clockwise open circle arrow
     					case 8636 :sb.append("&lharu;");break; 	//leftwards harpoon with barb upwards
     					case 8637 :sb.append("&lhard;");break; 	//leftwards harpoon with barb downwards
+    					case 8638 :sb.append("&#8638");break; 	//Upwards harpoon with barb rightwards
+    					case 8639 :sb.append("&#8639");break; 	//Upwards harpoon with barb leftwards
+    					
     					case 8640 :sb.append("&rharu;");break; 	//rightwards harpoon with barb upwars
     					case 8641 :sb.append("&rhard;");break;  //rightwards harpoon with barb downwards
+    					case 8642 :sb.append("&#8642;");break;  //Downwards harpoon with barb rightwards
+    					case 8643 :sb.append("&#8643;");break;  //Downwards harpoon with barb leftwards
     					case 8644 :sb.append("&rlarr2;");break; //right over left arrow N.B. rlarr in ES grid
+    					case 8645 :sb.append("&#8645;");break;  //Upwards arrow leftwards of downwards arrow
     					case 8646 :sb.append("&lrarr2;");break; //left over right arrow N.B. lrarr in ES grid
+    					case 8647 :sb.append("&#8647;");break;  //Leftwards paired arrows
+    					case 8648 :sb.append("&#8648;");break;  //Upwards paired arrows
+    					case 8649 :sb.append("&#8649;");break;  //Rightwards paired arrows
+    					
+    					case 8650 :sb.append("&#8650;");break;  //Downwards paired arrows
     					case 8651 :sb.append("&lrhar2;");break; //left over right harpoon N.B. lrhar in ES grid
     					case 8652 :sb.append("&rlhar2;");break;  //right over left harpoon N.B. rlhar in ES grid
+    					case 8653 :sb.append("&#8653;");break;  //Leftwards double arrow with stroke
+    					case 8654 :sb.append("&#8654;");break;  //Left right double arrow with stroke
+    					case 8655 :sb.append("&#8655;");break;  //Rightwards double arrow with stroke    					
     					case 8656 :sb.append("&lArr;");break; 	//leftward double arrow
     					case 8657 :sb.append("&uArr;");break; 	//upward double arrow
     					case 8658 :sb.append("&rArr;");break;	//rightward double arrow
     					case 8659 :sb.append("&dArr;");break;   //Downward double arrow
+    					
     					case 8660 :sb.append("&hArr;");break;  	//left-right double
+    					case 8661 :sb.append("&#8661;");break;  //Up down double arrow
+    					case 8662 :sb.append("&#8662;");break;  //North west double arrow
+    					case 8663 :sb.append("&#8663;");break;  //North east double arrow
+    					case 8664 :sb.append("&#8664;");break;  //South east double arrow
+    					case 8665 :sb.append("&#8665;");break;  //South west double arrow
+    					case 8666 :sb.append("&#8666;");break;  //Leftwards triple arrow
+    					case 8667 :sb.append("&#8667;");break;  //Rightwards triple arrow
+    					case 8668 :sb.append("&#8668;");break;  //Leftwards squiggle arrow
+    					case 8669 :sb.append("&#8669;");break;  //Rightwards squiggle arrow
+    					
+    					case 8670 :sb.append("&#8670;");break;  //Upwards arrow with double stroke
+    					case 8671 :sb.append("&#8671;");break;  //Downwards arrow with double stroke
+    					case 8672 :sb.append("&#8672;");break;  //Leftwards dashed arrow
+    					case 8673 :sb.append("&#8673;");break;  //Upwards dashed arrow
+    					case 8674 :sb.append("&#8674;");break;  //Rightwards dashed arrow
+    					case 8675 :sb.append("&#8675;");break;  //Downwards dashed arrow
+    					case 8676 :sb.append("&#8676;");break;  //Leftwards arrow to bar
+    					case 8677 :sb.append("&#8677;");break;  //Rightwards arrow to bar
+    					case 8678 :sb.append("&#8678;");break;  //Leftwards white arrow
+    					case 8679 :sb.append("&#8679;");break;  //Upwards white arrow
+    					case 8680 :sb.append("&#8680;");break;  //Rightwards white arrow
+    					case 8681 :sb.append("&#8681;");break;  //Downwards white arrow
+    					
     					case 8704 :sb.append("&forall;");break; //for all
+    					
     					case 8706 :sb.append("&part;");break; 	//Partial differential
     					case 8707 :sb.append("&exist;");break;  //there exist
     					case 8708 :sb.append("&nexist;");break;  //there does not exist
@@ -439,6 +528,9 @@ public class DataLoadDictionary
     					case 8721 :sb.append("&sum;");break; 	//n-ary sumation
     					case 8722 :sb.append("&minus;");break; 	//Minus sign
     					case 8723 :sb.append("&mnplus;");break; //minus-or-plus sign
+    					case 8724 :sb.append("&#8724;");break; //Dot plus
+    					case 8725 :sb.append("&#8725;");break; //Division slash
+    					case 8726 :sb.append("&#8726;");break; //Set minus				
     					case 8727 :sb.append("&lowast;");break; //Asterisk operation
     					case 8730 :sb.append("&radic;");break; 	//Square root, radical sign
     					case 8733 :sb.append("&prop;");break; 	//proportional to
@@ -498,6 +590,7 @@ public class DataLoadDictionary
     					case 8867 :sb.append("&dashv;");break;	//left tack
     					case 8868 :sb.append("&top;");break;	//down tack
     					case 8869 :sb.append("&perp;");break; 	//up tack, orthogonal to, perpendicular
+    					case 8870 :sb.append("&#8870;");break; 	//Logical OR, or vee
     					case 8884 :sb.append("&ltrie;");break;	//normal subgroup of or equal to
     					case 8885 :sb.append("&rtrie;");break; 	//cantains as normal subgroup or equal to
     					case 8901 :sb.append("&sdot;");break;	//dot operator
@@ -511,10 +604,12 @@ public class DataLoadDictionary
     					case 8969 :sb.append("&rceil;");break; 	//Right ceiling
     					case 8970 :sb.append("&lfloor;");break;	//left floor, APL downstile
     					case 8971 :sb.append("&rfloor;");break; //right floor
+    					case 8974 :sb.append("&#8974;");break;  //Lozenge
     					case 9001 :sb.append("&lang;");break;  	//left pointing angle bracket, bra
     					case 9002 :sb.append("&rang;");break; 	//right pointing angle bracket, ket
     					case 9632 :sb.append("&squf;");break; 	//black square
     					case 9633 :sb.append("&squ;");break;	//white square
+    					case 9642 :sb.append("&#9642;");break;	//white square
     					case 9650 :sb.append("&utrif;");break;  //black up-pointing triangle
     					case 9651 :sb.append("&utri;");break;  	//white up-pointing triangle
     					case 9654 :sb.append("&rtrif;");break; 	//black right-pointing triangle
@@ -525,21 +620,26 @@ public class DataLoadDictionary
     					case 9665 :sb.append("&ltri;");break; 	//white left-pointing triangle
     					case 9670 :sb.append("&diams;");break;  //black diamond
     					case 9671 :sb.append("&diam;");break; 	//white diamond
+    					case 9673 :sb.append("&#9673;");break; 	//Fisheye
     					case 9674 :sb.append("&loz;");break; 	//lozenge
     					case 9675 :sb.append("&cir;");break; 	//white circle
+    					case 9678 :sb.append("&#9678;");break; //female sign
     					case 9792 :sb.append("&female;");break; //female sign
     					case 9794 :sb.append("&male;");break; 	//male sign
     					case 9824 :sb.append("&spades;");break; //black spade suit
     					case 9827 :sb.append("&clubs;");break; 	//black club suit, shamrock
     					case 9829 :sb.append("&hearts;");break; //black heart suit, valentine
     					case 9830 :sb.append("&diams;");break;	//Black diamond suit
+    					case 10077 :sb.append("&#10077;");break; //much less than (double) (EW=Bkl)
+    					case 10078 :sb.append("&#10078;");break; 	//much greater than (double) (EW=Bml)
+    					
     					case 10913 :sb.append("&LessLess;");break; //much less than (double) (EW=Bkl)
     					case 10914 :sb.append("&GreaterGreater;");break; 	//much greater than (double) (EW=Bml)
     					case 12296 :sb.append("&lang;");break; //left angle bracket
     					case 12297 :sb.append("&rang;");break;	//right angle bracket
-
-    					default:sb.append("");
-    					//System.out.println("UNKNOW-CHARACTERS="+(int)c);
+    					//updated on 5/26/2016
+    					default:sb.append("&#"+(int)c+";");
+    					//System.out.println("UNKNOW-CHARACTERS="+"(&#"+(int)c+";)");
     					break;
     				}
     			}
