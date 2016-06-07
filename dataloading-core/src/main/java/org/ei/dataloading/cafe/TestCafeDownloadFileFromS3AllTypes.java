@@ -181,8 +181,7 @@ public class TestCafeDownloadFileFromS3AllTypes {
 
 				System.out.println("Output Filename "+filename);
 
-			//
-			
+
 
 		} 
 		catch(IOException ex)
