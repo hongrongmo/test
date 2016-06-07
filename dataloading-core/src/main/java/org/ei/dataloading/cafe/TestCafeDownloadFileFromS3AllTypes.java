@@ -481,11 +481,11 @@ public class TestCafeDownloadFileFromS3AllTypes {
 							System.out.println("Get file... " +  bucket+"/"+key + " for action: " +  rs2.getString("action"));
 							errorCode = objectFromS3.getFile(bucket, key);
 							//write Keys info for later load to cafe_inventory 
-							if(errorCode == null)
-							{
+							//if(errorCode == null)
+							//{
 								// write the message to out file
 								out.println(strBuf.toString().trim());
-							}	
+							//}	
 						}
 					}
 					else
@@ -494,11 +494,11 @@ public class TestCafeDownloadFileFromS3AllTypes {
 						System.out.println("Get file... " +  bucket+"/"+key + " for action: " +  rs2.getString("action"));
 						errorCode = objectFromS3.getFile(bucket, key);
 						//write Keys info for later load to cafe_inventory 
-						if(errorCode == null)
-						{
+						//if(errorCode == null)
+						//{
 							// write the message to out file
 							out.println(strBuf.toString().trim());
-						}	
+						//}	
 						
 					}
 	
@@ -622,45 +622,50 @@ public class TestCafeDownloadFileFromS3AllTypes {
 		{
 			zipsDir.mkdir();
 		}
-		
-		
+
+
 		File downDir = new File(currDir + "/"+this.S3dir.getName());
-		
+
 		String[] xmlFiles = downDir.list();
 		File[] xmlFilesToDelete = downDir.listFiles();
 		byte[] buf = new byte[1024];
-		
-		String zipFileName = zipsDir + "/" + this.S3dir.getName() + "_" + this.zipFileID + ".zip";
-		ZipOutputStream outZip = new ZipOutputStream(new FileOutputStream(zipFileName));
-		
-		for(int i=0; i<xmlFiles.length; i++)
+
+
+		// create zip files if any files were downloaded, otherwise no zip file should be created
+		if(xmlFiles.length >0)
 		{
-			// limit each single zip file to hold recsPerZipfile, otherwise split to multiple zip files
-			if(curRecNum >= recsPerZipFile)
+			String zipFileName = zipsDir + "/" + this.S3dir.getName() + "_" + this.zipFileID + ".zip";
+			ZipOutputStream outZip = new ZipOutputStream(new FileOutputStream(zipFileName));
+
+			for(int i=0; i<xmlFiles.length; i++)
 			{
-				curRecNum = 0;
-				outZip.close();
-				
-				this.zipFileID++;
-				zipFileName = zipsDir + "/" + this.S3dir.getName() + "_" + this.zipFileID + ".zip";
-				outZip = new ZipOutputStream(new FileOutputStream(zipFileName));	
+				// limit each single zip file to hold recsPerZipfile, otherwise split to multiple zip files
+				if(curRecNum >= recsPerZipFile)
+				{
+					curRecNum = 0;
+					outZip.close();
+
+					this.zipFileID++;
+					zipFileName = zipsDir + "/" + this.S3dir.getName() + "_" + this.zipFileID + ".zip";
+					outZip = new ZipOutputStream(new FileOutputStream(zipFileName));	
+				}
+				FileInputStream in = new FileInputStream(downDir + "/" + xmlFiles[i]);
+				outZip.putNextEntry(new ZipEntry(xmlFiles[i]));
+
+				int length;
+				while((length = in.read(buf)) >0)
+				{
+					outZip.write(buf,0,length);
+				}
+				outZip.closeEntry();
+				in.close();
+				xmlFilesToDelete[i].delete();  // delete original xml file to save space
+
+				++curRecNum;
 			}
-			FileInputStream in = new FileInputStream(downDir + "/" + xmlFiles[i]);
-			outZip.putNextEntry(new ZipEntry(xmlFiles[i]));
-			
-			int length;
-			while((length = in.read(buf)) >0)
-			{
-				outZip.write(buf,0,length);
-			}
-			outZip.closeEntry();
-			in.close();
-			xmlFilesToDelete[i].delete();  // delete original xml file to save space
-			
-			++curRecNum;
+			outZip.close();
+			downDir.delete();
 		}
-		outZip.close();
-		downDir.delete();
 	}
 	
 	protected Connection getConnection(String connectionURL,
