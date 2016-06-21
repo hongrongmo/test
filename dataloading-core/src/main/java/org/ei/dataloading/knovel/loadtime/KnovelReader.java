@@ -1,8 +1,13 @@
 package org.ei.dataloading.knovel.loadtime;
 
 import java.io.*;
+
 import java.util.*;
 import java.net.URLDecoder;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -51,10 +56,12 @@ public class KnovelReader
 	static String loadNumber;
 	static String filename;
 	static String xmlFileName;
+	private static List<String> excludedSubjectList;
 	
 	//HH 03/18/2016 for S3
 	GetKnovelFilesFromS3 knovelS3 = null;
-	static String bucketName = "datafabrication-reports";
+	//static String bucketName = "datafabrication-reports";
+	static String bucketName;
 	static String key="";
 
 	 public static void main(String[] args)
@@ -65,22 +72,25 @@ public class KnovelReader
 		String database = args[2];
 		
 		String url = "jdbc:oracle:thin:@eid.cmdvszxph9cf.us-east-1.rds.amazonaws.com:1521:eid";
-		String username = "db_knovel";
+		String username = "ap_correction1";
 		String password = "ei3it";
-
+		String driver = "oracle.jdbc.driver.OracleDriver";
 		if(args.length>6)
 		{
 			url=args[3];
 			username = args[4];
 			password = args[5];
-			bucketName = args[6];  //HH 03/18/2016 for S3
+			bucketName = args[6];  //HH 03/18/2016 for S3			
 			key = args[7];			//HH 05/06/2016 for S3
+			System.out.println("bucketName="+bucketName+" key="+key);
 		}
 
 		KnovelReader r = new KnovelReader();
 
 		try
-		{			
+		{ 
+			Connection con = r.getConnection(url,driver,username,password);
+            r.setExcludedSubjectList(con);
 			if(filename.indexOf("/")>-1)
 			{			
 				r.path = filename.substring(0,filename.lastIndexOf("/"));
@@ -91,11 +101,13 @@ public class KnovelReader
 			
 			//HH 03/18/2016 for S3
 			if(bucketName !=null && bucketName.length() >0)
-			{
+			{				
 				r.readGroupFilefromS3(r.path, filename);
 			}
 			else
-			r.readGroupFile(r.path, filename);
+			{				
+				r.readGroupFile(r.path, filename);
+			}
 			
 		}
 		catch(Exception e1)
@@ -132,10 +144,21 @@ public class KnovelReader
 	 
 	public void readGroupFile(String path, String filename) throws Exception
 	{
+		HashMap fileMap = new HashMap();
 		String subpath ="";
-		this.path = path;
-		
-		HashMap fileMap = getFilesFromGroupFile(path+"/"+filename);
+		if(path!=null && path.length()>0)
+		{
+			this.path = path;
+		}
+				
+		if(this.path!=null && this.path.length()>0)
+		{
+			fileMap = getFilesFromGroupFile(this.path+"/"+filename);
+		}
+		else
+		{
+			fileMap = getFilesFromGroupFile(filename);
+		}
 		Iterator<String> fileIterator = fileMap.keySet().iterator(); 
 		
 		while(fileIterator.hasNext())
@@ -151,11 +174,15 @@ public class KnovelReader
 						name = path+"/"+name;
 						this.path = name.substring(0,name.lastIndexOf("/"));				
 				}
+				else
+				{
+					this.path = name.substring(0,name.lastIndexOf("/"));
+				}
 				
 				inputFiles = new File(name);
 				
 				if(inputFiles.exists())
-				{
+				{					
 					fileReader(inputFiles,lastModify);
 				}
 				else
@@ -177,8 +204,9 @@ public class KnovelReader
 	{
 		String subpath ="";
 		this.path = path;
-
+		//System.out.println("in readGroupFilefromS3="+path+":"+filename);
 		HashMap fileMap = getFilesFromGroupFileInS3(filename);
+		//System.out.println("SIZE="+fileMap.size());
 		Iterator<String> fileIterator = fileMap.keySet().iterator(); 
 
 		while(fileIterator.hasNext())
@@ -283,9 +311,9 @@ public class KnovelReader
 		{
 			// download file from S3 bucket
 			knovelS3 = new GetKnovelFilesFromS3(bucketName,key);
-			knovelS3.downloadGroupFileFromS3(name.substring(name.lastIndexOf("/")+1, name.length()).trim());
+			knovelS3.downloadGroupFileFromS3(name.substring(name.lastIndexOf("/")+1, name.length()).trim());	
 
-			System.out.println("GROUPFILENAME="+name);
+			System.out.println("GROUPFILENAME="+name);			
 			File inputFiles = new File(name);		
 
 			SAXBuilder builder = new SAXBuilder();
@@ -426,6 +454,7 @@ public class KnovelReader
 		builder.setExpandEntities(false);
 		this.doc = builder.build(r);
 		Element root = doc.getRootElement();
+	
 		if(root.getName().equals("entry"))
 		{
 			output_record = getRecord(root,filename);	
@@ -524,7 +553,7 @@ public class KnovelReader
 			outputBuffer.append(DELIM);
 			
 			// DATABASE
-			outputBuffer.append("kno");
+			outputBuffer.append("knc");
 			outputBuffer.append(DELIM);
 
 			// FULLTEXT_LINK
@@ -790,7 +819,7 @@ public class KnovelReader
 				}
 				record = new HashMap();
 
-				record.put("MID","kno_" + new GUID().toString());
+				record.put("MID","knc_" + new GUID().toString());
 				if(rec.getChildren("link") != null)
 				{
 					List links = rec.getChildren("link",noNamespace);
@@ -895,7 +924,8 @@ public class KnovelReader
 					record.put("ABSTRACT", DataLoadDictionary.mapEntity(rec.getChildText("abstract",dctermsNamespace).replaceAll("\n","<br/>").replaceAll("\t"," ")));
 				}
 				
-				if(rec.getChildren("subject",dcNamespace) != null)
+				
+				if(rec.getChild("subject",dcNamespace) != null)
 				{
 					List subjects = rec.getChildren("subject",dcNamespace);
 					getSubjects(subjects,record);
@@ -1010,11 +1040,17 @@ public class KnovelReader
 				String[] subjectArray = subjectText.split("/");
 				for(int j=0;j<subjectArray.length;j++)
 				{
-					String singleSubject = subjectArray[j];
+					//only use the first term
+					//String singleSubject = subjectArray[j];
+					String singleSubject = subjectArray[0];
 					if(!subjectSet.contains(singleSubject))
 					{
-						subjectSet.add(singleSubject);
+						if(!this.excludedSubjectList.contains(singleSubject))
+						{
+							subjectSet.add(singleSubject);	
+						}
 					}
+					break;
 				}
 				
 			}
@@ -1028,7 +1064,6 @@ public class KnovelReader
 				subjectbuffer.append(AUDELIMITER);
 			}
 		}
-		
 		record.put("SUBJECT",subjectbuffer.toString());
 	}
 		
@@ -1177,7 +1212,7 @@ public class KnovelReader
 				String rel = link.getAttributeValue("rel");
 				//System.out.println("TOCREL="+rel);
 				String title = link.getAttributeValue("title");
-				System.out.println("TOCTITLE="+title);
+				//System.out.println("TOCTITLE="+title);
 				String sourceFileName = link.getAttributeValue("sourceFileName",knovelNamespace);
 				//System.out.println("TOCSOURCEFILENAME="+sourceFileName);
 				String pageRange = link.getAttributeValue("sourceFilePageRange",knovelNamespace);
@@ -1233,6 +1268,7 @@ public class KnovelReader
            
             if(filename!=null)
             {
+            	
             	if(this.path!=null && this.path.length()>0)
             	{
             		in = new BufferedReader(new FileReader(this.path+"/"+filename));
@@ -1241,7 +1277,7 @@ public class KnovelReader
             	{
             		in = new BufferedReader(new FileReader(filename));
             	}
-                //System.out.println("FULLTEXTFILENAME="+this.path+"/"+filename);
+                
                 SAXBuilder builder = new SAXBuilder();
         		builder.setExpandEntities(false);
         		fullDocToc = builder.build(in);
@@ -1336,6 +1372,76 @@ public class KnovelReader
 				e.printStackTrace();
 			}
 		}
+	}
+	
+	 public void setExcludedSubjectList(Connection con)
+	 {
+	    	Statement stmt = null;
+	        ResultSet rs = null;
+	        List<String> subjectList = new ArrayList<>();
+	        try
+	        {
+	            stmt = con.createStatement();
+
+	            rs = stmt.executeQuery("select subject from SUBJECT_EXCLUDED");
+	            while (rs.next())
+	            {
+	                String subject = rs.getString("subject");
+	                if(subject != null)
+	                {
+	                	subject = subject.toLowerCase().replace(" ", "-");
+	                	//System.out.println("SUBJECT="+subject);
+	                	subjectList.add(subject);
+	                }
+	            }
+
+	        }
+	        catch(Exception e)
+	        {
+	            e.printStackTrace();
+	        }
+	        finally
+	        {
+
+	            if (rs != null)
+	            {
+	                try
+	                {
+	                    rs.close();
+	                }
+	                catch (Exception e)
+	                {
+	                    e.printStackTrace();
+	                }
+	            }
+
+	            if (stmt != null)
+	            {
+	                try
+	                {
+	                    stmt.close();
+	                }
+	                catch (Exception e)
+	                {
+	                    e.printStackTrace();
+	                }
+	            }
+	        }
+	        this.excludedSubjectList=subjectList;
+	       
+	    }
+	 
+	 public Connection getConnection(String connectionURL,
+             String driver,
+             String username,
+             String password)
+	throws Exception
+	{
+		Class.forName(driver);
+		Connection con = DriverManager.getConnection(connectionURL,
+													username,
+													password);
+		return con;
 	}
 
 }
