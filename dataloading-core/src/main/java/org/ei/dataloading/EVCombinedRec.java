@@ -406,9 +406,9 @@ public class EVCombinedRec {
 	//molality of substance
 	
 	//public static final String PH_VALUE_MINIMUM = "317"; 
-	//public static final String PH_VALUE_RANGES = "318";
-	//public static final String PH_VALUE_TEXT = "319"; 
-	//pH value
+	public static final String MOLALITY_RANGES = "318";
+	public static final String MOLALITY_TEXT = "319"; 
+	//MOLALITY value
 	
 	//public static final String RADIOACTIVITY_MINIMUM = "320"; 
 	public static final String RADIOACTIVITY_RANGES = "321";
@@ -436,8 +436,8 @@ public class EVCombinedRec {
 	//catalytic activity
 	
 	//public static final String ELECTRON_VOLT_MINIMUM = "335"; 
-	//public static final String ELECTRON_VOLT_RANGES = "336";
-	//public static final String ELECTRON_VOLT_TEXT = "337";
+	public static final String ELECTRON_VOLT_RANGES = "336";
+	public static final String ELECTRON_VOLT_TEXT = "337";
 	//electron_volt
 	
 	//public static final String LUMINANCE_MINIMUM = "338"; 
