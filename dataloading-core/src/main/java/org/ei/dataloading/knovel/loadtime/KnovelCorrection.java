@@ -254,6 +254,7 @@ public class KnovelCorrection {
 	                if(bucketName==null || bucketName.length()==0)
 	                {
 	                	KnovelReader c = new KnovelReader(String.valueOf(updateNumber),database,filename);
+	                	c.setExcludedSubjectList(con);
 	                	//c.init(database+"_"+filename);
 	                	c.readGroupFile(path,filename);
 	                }
@@ -262,6 +263,7 @@ public class KnovelCorrection {
 	                {
 	                	KnovelReader c = new KnovelReader(String.valueOf(updateNumber),database,filename,bucketName,key);
 	                	//c.init(database+"_"+filename);
+	                	c.setExcludedSubjectList(con);
 	                	c.readGroupFilefromS3(path,filename);
 	                }
 	                //String dataFile="out/"+filename+"."+updateNumber+".out";
@@ -737,25 +739,27 @@ public class KnovelCorrection {
 					KnovelCombiner c = new KnovelCombiner(writer);	
 					if(updateNumber==1)
 					{
-						if(dbname.equalsIgnoreCase("knc"))
+						if(dbname.equalsIgnoreCase("knc") || dbname.equalsIgnoreCase("kna"))
 						{
 							rs = stmt.executeQuery("select ACCESSNUMBER,DOC_TYPE,DOI,PII,OAI,ISBN,EISBN,LANGUAGE,TITLE,AUTHOR,AFFILIATION,M_ID,PUBLISHER,DOC_FORMAT,substr(PUBLISH_DATE,1,4) PUBLISH_DATE,PARENTID,JOURNAL_NAME,JOURNAL_SUBNAME,VOLUME,ISSUE,ABSTRACT,SUBJECT,TABLE_OF_CONTENT,LOADNUMBER,COPYRIGHT,DATABASE from knovel_master");							
 						}
-						else if(dbname.equalsIgnoreCase("kna"))
-						{
-							rs = stmt.executeQuery("select ACCESSNUMBER,DOC_TYPE,DOI,PII,OAI,ISBN,EISBN,LANGUAGE,TITLE,AUTHOR,AFFILIATION,M_ID,PUBLISHER,DOC_FORMAT,substr(PUBLISH_DATE,1,4) PUBLISH_DATE,PARENTID,JOURNAL_NAME,JOURNAL_SUBNAME,VOLUME,ISSUE,ABSTRACT,SUBJECT,TABLE_OF_CONTENT,LOADNUMBER,COPYRIGHT,DATABASE from knovel_master_a");
-						}
+						//removed for use the same table knovel_master
+						//else if(dbname.equalsIgnoreCase("kna"))
+						//{
+						//	rs = stmt.executeQuery("select ACCESSNUMBER,DOC_TYPE,DOI,PII,OAI,ISBN,EISBN,LANGUAGE,TITLE,AUTHOR,AFFILIATION,M_ID,PUBLISHER,DOC_FORMAT,substr(PUBLISH_DATE,1,4) PUBLISH_DATE,PARENTID,JOURNAL_NAME,JOURNAL_SUBNAME,VOLUME,ISSUE,ABSTRACT,SUBJECT,TABLE_OF_CONTENT,LOADNUMBER,COPYRIGHT,DATABASE from knovel_master_a");
+						//}
 					}
 					else
 					{
-						if(dbname.equalsIgnoreCase("knc"))
+						if(dbname.equalsIgnoreCase("knc") ||dbname.equalsIgnoreCase("kna"))
 						{
 							rs = stmt.executeQuery("select ACCESSNUMBER,DOC_TYPE,DOI,PII,OAI,ISBN,EISBN,LANGUAGE,TITLE,AUTHOR,AFFILIATION,M_ID,PUBLISHER,DOC_FORMAT,substr(PUBLISH_DATE,1,4) PUBLISH_DATE,PARENTID,JOURNAL_NAME,JOURNAL_SUBNAME,VOLUME,ISSUE,ABSTRACT,SUBJECT,TABLE_OF_CONTENT,LOADNUMBER,COPYRIGHT,DATABASE from knovel_master  where updateNumber='"+updateNumber+"'");
 						}
-						else if(dbname.equalsIgnoreCase("kna"))
-						{
-							rs = stmt.executeQuery("select ACCESSNUMBER,DOC_TYPE,DOI,PII,OAI,ISBN,EISBN,LANGUAGE,TITLE,AUTHOR,AFFILIATION,M_ID,PUBLISHER,DOC_FORMAT,substr(PUBLISH_DATE,1,4) PUBLISH_DATE,PARENTID,JOURNAL_NAME,JOURNAL_SUBNAME,VOLUME,ISSUE,ABSTRACT,SUBJECT,TABLE_OF_CONTENT,LOADNUMBER,COPYRIGHT,DATABASE from knovel_master_a  where updateNumber='"+updateNumber+"'");
-						}						
+						//removed for use the same table knovel_master
+						//else if(dbname.equalsIgnoreCase("kna"))
+						//{
+						//	rs = stmt.executeQuery("select ACCESSNUMBER,DOC_TYPE,DOI,PII,OAI,ISBN,EISBN,LANGUAGE,TITLE,AUTHOR,AFFILIATION,M_ID,PUBLISHER,DOC_FORMAT,substr(PUBLISH_DATE,1,4) PUBLISH_DATE,PARENTID,JOURNAL_NAME,JOURNAL_SUBNAME,VOLUME,ISSUE,ABSTRACT,SUBJECT,TABLE_OF_CONTENT,LOADNUMBER,COPYRIGHT,DATABASE from knovel_master_a  where updateNumber='"+updateNumber+"'");
+						//}						
 					}
 					c.writeRecs(rs);
 				}
