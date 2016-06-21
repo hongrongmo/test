@@ -7,6 +7,7 @@ import java.io.FileWriter;
 import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -39,6 +40,9 @@ public class TestCafeDownloadFileFromS3AllTypes {
 	static String doc_type;
 	static String archive_date;
 	static int recsPerZipFile;
+	static String tableToBeTruncated = "cafe_inventory_temp";
+	static String sqlldrFileName = "cafeInventoryFileLoader.sh";
+	
 	int curRecNum = 0;
 	int zipFileID = 1;
 	
@@ -114,6 +118,17 @@ public class TestCafeDownloadFileFromS3AllTypes {
 				recsPerZipFile = Integer.parseInt(args[6]);
 				System.out.println("Number of Keys per ZipFile: " + recsPerZipFile);
 			}
+			
+			if(args[7] !=null)
+			{
+				tableToBeTruncated = args[7];
+			}
+			
+			if(args[8] !=null)
+			{
+				sqlldrFileName = args[8];
+				System.out.println("using sqlloaderfile " + sqlldrFileName);
+			}
 		}
 		
 
@@ -132,8 +147,16 @@ public class TestCafeDownloadFileFromS3AllTypes {
 			downloadFile.getSnsArch_FilesInfo();
 			downloadFile.end();
 			
+			
 			// zip downloaded cafe keys/files
 			downloadFile.zipDownloads();
+			
+			// update cafe_inventory table
+			downloadFile.updateCafeInventory();
+			
+			// close connection
+			downloadFile.flush();
+			
 			
 		} 
 		catch (Exception e) 
@@ -159,7 +182,7 @@ public class TestCafeDownloadFileFromS3AllTypes {
 
 			//05/02/2016 create dir to download s3 files into xml for later zip and convert
 
-			S3dir=new File(doc_type+"_s3Files_"+epoch);
+			S3dir=new File(doc_type+"_s3Files_"+epoch+"_"+archive_date);
 			if(!S3dir.exists())
 			{
 				S3dir.mkdir();
@@ -172,7 +195,7 @@ public class TestCafeDownloadFileFromS3AllTypes {
 			 * with sns_archive.epoch > cafe_inventory.epoch
 			 * this file is later used to update cafe_archive table
 			 */
-				String filename = doc_type + "_cafe_inventory_" + epoch +".out";
+				String filename = doc_type + "_cafe_inventory_" + epoch + "_" + archive_date + ".out";
 				try {
 					out = new PrintWriter(new FileWriter(filename));
 				} catch (IOException e) {
@@ -181,10 +204,7 @@ public class TestCafeDownloadFileFromS3AllTypes {
 
 				System.out.println("Output Filename "+filename);
 
-		
-			
-			//
-			
+
 
 		} 
 		catch(IOException ex)
@@ -228,7 +248,7 @@ public class TestCafeDownloadFileFromS3AllTypes {
 			stmt = con.createStatement();
 							
 			String cafeInventory_list = "select key,epoch from CAFE_INVENTORY where key in "+
-										"(select key from sns_archive where doc_type='" + doc_type + "' and TO_CHAR(archive_date, 'DD-MON-RR')='" + archive_date + "')";
+										"(select key from sns_archive where doc_type='" + doc_type + "' and TO_CHAR(archive_date, 'DD-MON-RR')='" + archive_date + "') and doc_type='" + doc_type + "'";
 			
 			rs = stmt.executeQuery(cafeInventory_list);
 			
@@ -321,24 +341,14 @@ public class TestCafeDownloadFileFromS3AllTypes {
 					e.printStackTrace();
 				}
 			}
-				if(con != null)
-				{
-					try
-					{
-						con.close();
-					}
-					catch(Exception e)
-					{
-						e.printStackTrace();
-					}
-				}
+				
 		}
 
 	}
 
 
 	
-	public void end()
+	private void end()
 	{
 		if(out !=null)
 		{
@@ -352,7 +362,25 @@ public class TestCafeDownloadFileFromS3AllTypes {
 				ex.printStackTrace();
 			}
 		}
+		
 	}
+	
+	private void flush()
+	{
+		if(con != null)
+		{
+			try
+			{
+				con.close();
+			}
+			catch(Exception e)
+			{
+				e.printStackTrace();
+			}
+		}
+		
+	}
+	
 	
 	public void process_CafeInventory(ResultSet rs)
 	{
@@ -383,6 +411,7 @@ public class TestCafeDownloadFileFromS3AllTypes {
 			}
 			
 			System.out.println("Total Cafe_inventory matching keys to snsArchive: " + cafeInventory_List.size());
+			System.out.println("*********************");
 			
 		} 
 		
@@ -481,11 +510,11 @@ public class TestCafeDownloadFileFromS3AllTypes {
 							System.out.println("Get file... " +  bucket+"/"+key + " for action: " +  rs2.getString("action"));
 							errorCode = objectFromS3.getFile(bucket, key);
 							//write Keys info for later load to cafe_inventory 
-							if(errorCode == null)
-							{
+							//if(errorCode == null)
+							//{
 								// write the message to out file
 								out.println(strBuf.toString().trim());
-							}	
+							//}	
 						}
 					}
 					else
@@ -494,11 +523,11 @@ public class TestCafeDownloadFileFromS3AllTypes {
 						System.out.println("Get file... " +  bucket+"/"+key + " for action: " +  rs2.getString("action"));
 						errorCode = objectFromS3.getFile(bucket, key);
 						//write Keys info for later load to cafe_inventory 
-						if(errorCode == null)
-						{
+						//if(errorCode == null)
+						//{
 							// write the message to out file
 							out.println(strBuf.toString().trim());
-						}	
+						//}	
 						
 					}
 	
@@ -622,46 +651,205 @@ public class TestCafeDownloadFileFromS3AllTypes {
 		{
 			zipsDir.mkdir();
 		}
-		
-		
+
+
 		File downDir = new File(currDir + "/"+this.S3dir.getName());
-		
+
 		String[] xmlFiles = downDir.list();
 		File[] xmlFilesToDelete = downDir.listFiles();
 		byte[] buf = new byte[1024];
-		
-		String zipFileName = zipsDir + "/" + this.S3dir.getName() + "_" + this.zipFileID + ".zip";
-		ZipOutputStream outZip = new ZipOutputStream(new FileOutputStream(zipFileName));
-		
-		for(int i=0; i<xmlFiles.length; i++)
+
+
+		// create zip files if any files were downloaded, otherwise no zip file should be created
+		if(xmlFiles.length >0)
 		{
-			// limit each single zip file to hold recsPerZipfile, otherwise split to multiple zip files
-			if(curRecNum >= recsPerZipFile)
+			String zipFileName = zipsDir + "/" + this.S3dir.getName() + "_" + this.zipFileID + ".zip";
+			ZipOutputStream outZip = new ZipOutputStream(new FileOutputStream(zipFileName));
+
+			for(int i=0; i<xmlFiles.length; i++)
 			{
-				curRecNum = 0;
-				outZip.close();
-				
-				this.zipFileID++;
-				zipFileName = zipsDir + "/" + this.S3dir.getName() + "_" + this.zipFileID + ".zip";
-				outZip = new ZipOutputStream(new FileOutputStream(zipFileName));	
+				// limit each single zip file to hold recsPerZipfile, otherwise split to multiple zip files
+				if(curRecNum >= recsPerZipFile)
+				{
+					curRecNum = 0;
+					outZip.close();
+
+					this.zipFileID++;
+					zipFileName = zipsDir + "/" + this.S3dir.getName() + "_" + this.zipFileID + ".zip";
+					outZip = new ZipOutputStream(new FileOutputStream(zipFileName));	
+				}
+				FileInputStream in = new FileInputStream(downDir + "/" + xmlFiles[i]);
+				outZip.putNextEntry(new ZipEntry(xmlFiles[i]));
+
+				int length;
+				while((length = in.read(buf)) >0)
+				{
+					outZip.write(buf,0,length);
+				}
+				outZip.closeEntry();
+				in.close();
+				xmlFilesToDelete[i].delete();  // delete original xml file to save space
+
+				++curRecNum;
 			}
-			FileInputStream in = new FileInputStream(downDir + "/" + xmlFiles[i]);
-			outZip.putNextEntry(new ZipEntry(xmlFiles[i]));
-			
-			int length;
-			while((length = in.read(buf)) >0)
-			{
-				outZip.write(buf,0,length);
-			}
-			outZip.closeEntry();
-			in.close();
-			xmlFilesToDelete[i].delete();  // delete original xml file to save space
-			
-			++curRecNum;
+			outZip.close();
+			downDir.delete();
 		}
-		outZip.close();
-		downDir.delete();
 	}
+	
+	public void updateCafeInventory()
+	{
+		// update cafe_invetory table by replacing matching keys, with their most recent epoch, or add new keys info
+		String dataFile = doc_type + "_cafe_inventory_" + epoch + "_" + archive_date + ".out";
+		CallableStatement stmt = null;
+
+		try
+		{
+			File cafeInventoryOutFile = new File(dataFile);
+			if(!(cafeInventoryOutFile.exists()))
+			{
+				System.out.println("Cafe Inventory Output File: " + dataFile + " not exist");
+			}
+			else
+			{
+				/**********delete all data from temp table *************/
+
+				System.out.println("about to truncate table "+tableToBeTruncated);
+				cleanUp();
+
+				/************** load data into temp table ****************/
+				System.out.println("about to load data file "+dataFile);
+
+				Runtime r = Runtime.getRuntime();
+				Process p = r.exec("./"+ sqlldrFileName + " " + dataFile);
+				int t = p.waitFor();
+
+				//the value 0 indicates normal termination.
+				System.out.println("Sqlldr process complete with exit status: " + t);
+
+				int tempTableCount = getTempTableCount();
+				System.out.println(tempTableCount+" records was loaded into the temp table");
+
+				if(tempTableCount >0)
+				{
+					System.out.println("begin to execute stored procedure update_cafe_inventory_master_table");
+
+					 stmt = con.prepareCall("{ call update_inventory_master_table(?)}");
+					 stmt.setString(1,doc_type);
+		             stmt.executeUpdate();
+
+				}
+				else
+				{
+					System.out.println("no record was loaded into the temp table");
+				}
+
+
+			}
+
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			if(stmt !=null)
+			{
+				try
+				{
+					stmt.close();
+				}
+				catch(Exception e)
+				{
+					e.printStackTrace();
+				}
+				
+			}
+		}
+
+	}
+
+	private void cleanUp()
+	{
+		Statement stmt = null;
+		
+		try
+		{
+			stmt = con.createStatement();
+			stmt.executeUpdate("truncate table " + tableToBeTruncated);
+			System.out.println("truncate temp table " + tableToBeTruncated);
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			if(stmt !=null)
+			{
+				try
+				{
+					stmt.close();
+				}
+				catch(Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+	
+	
+	private int getTempTableCount()
+	{
+		Statement stmt = null;
+		ResultSet rs = null;
+		int count = 0;
+
+		try
+		{
+			stmt = con.createStatement();
+
+			rs = stmt.executeQuery("select count(*) count from " + tableToBeTruncated + "");
+			if(rs.next())
+			{
+				count = rs.getInt("count");
+			}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			if(rs !=null)
+			{
+				try
+				{
+					rs.close();
+				}
+				catch(Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+			if(stmt !=null)
+			{
+				try
+				{
+					stmt.close();
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+		}
+		
+		return count;
+
+}
 	
 	protected Connection getConnection(String connectionURL,
 			String driver,

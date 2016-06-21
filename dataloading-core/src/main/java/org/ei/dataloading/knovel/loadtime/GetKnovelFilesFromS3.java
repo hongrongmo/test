@@ -43,6 +43,7 @@ public class GetKnovelFilesFromS3 {
 		this.bucketName = bucket;
 		this.key = key;
 		System.out.println("BucketName is: " +  this.bucketName);
+		System.out.println("Key is: " +  this.key);
 	}
 	
 	public static GetKnovelFilesFromS3 getInstance()
@@ -68,6 +69,7 @@ public class GetKnovelFilesFromS3 {
 		try
 		{
 			System.out.println("downloading Group Knovel file: "+fileName+" from S3 bucket " + this.bucketName + ": ");
+			System.out.println("download group file: " +  key+fileName);
 
 			AmazonS3 s3Client = new AmazonS3Client(new PropertiesCredentials(new File("AwsCredentials.properties")));  // for local testing
 			

@@ -157,6 +157,10 @@ public class SQSConfiguration {
 	{
 		return s3Client;
 	}
+	
+	//HH: Test
+	
+	//Test: test2
 }
 
 
