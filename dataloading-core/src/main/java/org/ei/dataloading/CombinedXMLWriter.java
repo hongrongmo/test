@@ -487,276 +487,203 @@ public class CombinedXMLWriter
         //************************************************ added for numericalIndex ******************************************************//
         
         
-        //out.println("       <AMOUNTOFSUBSTANCE_MINIMUM>" + notNull(rec.getString(EVCombinedRec.AMOUNT_OF_SUBSTANCE_MINIMUM)) + "</AMOUNTOFSUBSTANCE_MINIMUM>"); 													//NASM
+        //amount of substance
         out.println("       <AMOUNTOFSUBSTANCE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.AMOUNT_OF_SUBSTANCE_RANGES)) + "]]></AMOUNTOFSUBSTANCE_RANGES>"); 											//NASR
         out.println("       <AMOUNTOFSUBSTANCE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.AMOUNT_OF_SUBSTANCE_TEXT)))) + "]]></AMOUNTOFSUBSTANCE_TEXT>");				//NAST
         
-        //out.println("       <ELECTRICCURRENT_MINIMUM>" + notNull(rec.getString(EVCombinedRec.ELECTRIC_CURRENT_MINIMUM)) + "</ELECTRICCURRENT_MINIMUM>");															//NECM
+        //electric current
         out.println("       <ELECTRICCURRENT_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.ELECTRIC_CURRENT_RANGES)) + "]]></ELECTRICCURRENT_RANGES>");													//NECR
         out.println("       <ELECTRICCURRENT_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ELECTRIC_CURRENT_TEXT)))) + "]]></ELECTRICCURRENT_TEXT>");						//NECT
         
-        
-        //out.println("       <MASS_MINIMUM>" + notNull(rec.getString(EVCombinedRec.MASS_MINIMUM)) + "</MASS_MINIMUM>");																							//NMAM
+        //mass
         out.println("       <MASS_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.MASS_RANGES)) + "]]></MASS_RANGES>");																						//NMAR
         out.println("       <MASS_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MASS_TEXT)))) + "]]></MASS_TEXT>");														//NMAT
         
-        //out.println("       <TEMPERATURE_MINIMUM>" + notNull(rec.getString(EVCombinedRec.TEMPERATURE_MINIMUM)) + "</TEMPERATURE_MINIMUM>");																		//NTEM
+        //temperature
         out.println("       <TEMPERATURE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.TEMPERATURE_RANGES)) + "]]></TEMPERATURE_RANGES>");																//NTER
         out.println("       <TEMPERATURE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.TEMPERATURE_TEXT)))) + "]]></TEMPERATURE_TEXT>");									//NTET
         
-        //out.println("       <TIME_MINIMUM>" + notNull(rec.getString(EVCombinedRec.TIME_MINIMUM)) + "</TIME_MINIMUM>");																							//NTIM
+        //time
         out.println("       <TIME_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.TIME_RANGES)) + "]]></TIME_RANGES>");																						//NTIR
         out.println("       <TIME_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.TIME_TEXT)))) + "]]></TIME_TEXT>");														//NTIT
         
-        //out.println("       <SIZE_MINIMUM>" + notNull(rec.getString(EVCombinedRec.SIZE_MINIMUM)) + "</SIZE_MINIMUM>");																							//NSIM
+        //size
         out.println("       <SIZE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.SIZE_RANGES)) + "]]></SIZE_RANGES>");																						//NSIR
         out.println("       <SIZE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SIZE_TEXT)))) + "]]></SIZE_TEXT>");														//NSIT
         
-        //out.println("       <ELECTRICALCONDUCTANCE_MINIMUM>" + notNull(rec.getString(EVCombinedRec.ELECTRICAL_CONDUCTANCE_MINIMUM)) + "</ELECTRICALCONDUCTANCE_MINIMUM>");										//NEDM
+        //electrical conductance
         out.println("       <ELECTRICALCONDUCTANCE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.ELECTRICAL_CONDUCTANCE_RANGES)) + "]]></ELECTRICALCONDUCTANCE_RANGES>");									//NEDR
         out.println("       <ELECTRICALCONDUCTANCE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ELECTRICAL_CONDUCTANCE_TEXT)))) + "]]></ELECTRICALCONDUCTANCE_TEXT>");	//NEDT
         
-        //out.println("       <ELECTRICALCONDUCTIVITY_MINIMUM>" + notNull(rec.getString(EVCombinedRec.ELECTRICAL_CONDUCTIVITY_MINIMUM)) + "</ELECTRICALCONDUCTIVITY_MINIMUM>");										//NETM
+        //electrical conductivity
         out.println("       <ELECTRICALCONDUCTIVITY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.ELECTRICAL_CONDUCTIVITY_RANGES)) + "]]></ELECTRICALCONDUCTIVITY_RANGES>");								//NETR
         out.println("       <ELECTRICALCONDUCTIVITY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ELECTRICAL_CONDUCTIVITY_TEXT)))) + "]]></ELECTRICALCONDUCTIVITY_TEXT>");//NETT
         
-        //out.println("       <VOLTAGE_MINIMUM>" + notNull(rec.getString(EVCombinedRec.VOLTAGE_MINIMUM)) + "</VOLTAGE_MINIMUM>");																					//NVOM
+        //voltage
         out.println("       <VOLTAGE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.VOLTAGE_RANGES)) + "]]></VOLTAGE_RANGES>");																			//NVOR
         out.println("       <VOLTAGE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.VOLTAGE_TEXT)))) + "]]></VOLTAGE_TEXT>");												//NVOT
         
-        //out.println("       <ELECTRICFIELDSTRENGTH_MINIMUM>" + notNull(rec.getString(EVCombinedRec.ELECTRIC_FIELD_STRENGTH_MINIMUM)) + "</ELECTRICFIELDSTRENGTH_MINIMUM>");										//NEFM
+        //electric field strength
         out.println("       <ELECTRICFIELDSTRENGTH_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.ELECTRIC_FIELD_STRENGTH_RANGES)) + "]]></ELECTRICFIELDSTRENGTH_RANGES>");								//NEFR
         out.println("       <ELECTRICFIELDSTRENGTH_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ELECTRIC_FIELD_STRENGTH_TEXT)))) + "]]></ELECTRICFIELDSTRENGTH_TEXT>");	//NEFT
         
-        //out.println("       <CURRENTDENSITY_MINIMUM>" + notNull(rec.getString(EVCombinedRec.CURRENT_DENSITY_MINIMUM)) + "</CURRENTDENSITY_MINIMUM>");																//NCDM
+        //current density
         out.println("       <CURRENTDENSITY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.CURRENT_DENSITY_RANGES)) + "]]></CURRENTDENSITY_RANGES>");														//NCDR
         out.println("       <CURRENTDENSITY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CURRENT_DENSITY_TEXT)))) + "]]></CURRENTDENSITY_TEXT>");						//NCDT
         
-        //out.println("       <ENERGY_MINIMUM>" + notNull(rec.getString(EVCombinedRec.ENERGY_MINIMUM)) + "</ENERGY_MINIMUM>");																						//NENM
+        //energy
         out.println("       <ENERGY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.ENERGY_RANGES)) + "]]></ENERGY_RANGES>");																				//NENR
         out.println("       <ENERGY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ENERGY_TEXT)))) + "]]></ENERGY_TEXT>");													//NENT
         
-        //out.println("       <ELECTRICALRESISTANCE_MINIMUM>" + notNull(rec.getString(EVCombinedRec.ELECTRICAL_RESISTANCE_MINIMUM)) + "</ELECTRICALRESISTANCE_MINIMUM>");											//NERM
+        //electrical resistance
         out.println("       <ELECTRICALRESISTANCE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.ELECTRICAL_RESISTANCE_RANGES)) + "]]></ELECTRICALRESISTANCE_RANGES>");									//NERR
         out.println("       <ELECTRICALRESISTANCE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ELECTRICAL_RESISTANCE_TEXT)))) + "]]></ELECTRICALRESISTANCE_TEXT>");		//NERT
         
-        //out.println("       <ELECTRICALRESISTIVITY_MINIMUM>" + notNull(rec.getString(EVCombinedRec.ELECTRICAL_RESISTIVITY_MINIMUM)) + "</ELECTRICALRESISTIVITY_MINIMUM>");										//NESM
+        //electrical resistivity
         out.println("       <ELECTRICALRESISTIVITY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.ELECTRICAL_RESISTIVITY_RANGES)) + "]]></ELECTRICALRESISTIVITY_RANGES>");									//NESR
         out.println("       <ELECTRICALRESISTIVITY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ELECTRICAL_RESISTIVITY_TEXT)))) + "]]></ELECTRICALRESISTIVITY_TEXT>");	//NEST
         
-        //out.println("       <ELECTRONVOLTENERGY_MINIMUM>" + notNull(rec.getString(EVCombinedRec.ELECTRON_VOLT_ENERGY_MINIMUM)) + "</ELECTRONVOLTENERGY_MINIMUM>");												//NEVM
-        out.println("       <ELECTRONVOLTENERGY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.ELECTRON_VOLT_ENERGY_RANGES)) + "]]></ELECTRONVOLTENERGY_RANGES>");											//NEVR
-        out.println("       <ELECTRONVOLTENERGY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ELECTRON_VOLT_ENERGY_TEXT)))) + "]]></ELECTRONVOLTENERGY_TEXT>");			//NEVT	
+        //electron volt energy
+        out.println("       <ELECTRONVOLTENERGY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.ELECTRON_VOLT_RANGES)) + "]]></ELECTRONVOLTENERGY_RANGES>");											//NEVR
+        out.println("       <ELECTRONVOLTENERGY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ELECTRON_VOLT_TEXT)))) + "]]></ELECTRONVOLTENERGY_TEXT>");			//NEVT	
         
-        //out.println("       <CAPACITANCE_MINIMUM>" + notNull(rec.getString(EVCombinedRec.CAPACITANCE_MINIMUM)) + "</CAPACITANCE_MINIMUM>");																		//NCAM
+        //capacitance
         out.println("       <CAPACITANCE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.CAPACITANCE_RANGES)) + "]]></CAPACITANCE_RANGES>");																//NCAR
         out.println("       <CAPACITANCE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CAPACITANCE_TEXT)))) + "]]></CAPACITANCE_TEXT>");									//NCAT
         
-        //out.println("       <FREQUENCY_MINIMUM>" + notNull(rec.getString(EVCombinedRec.FREQUENCY_MINIMUM)) + "</FREQUENCY_MINIMUM>");																				//NFRM
+        //frequency	
         out.println("       <FREQUENCY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.FREQUENCY_RANGES)) + "]]></FREQUENCY_RANGES>");																		//NFRR
         out.println("       <FREQUENCY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.FREQUENCY_TEXT)))) + "]]></FREQUENCY_TEXT>");										//NFRT
         
-        //out.println("       <POWER_MINIMUM>" + notNull(rec.getString(EVCombinedRec.POWER_MINIMUM)) + "</POWER_MINIMUM>");																							//NPOM
+        //power
         out.println("       <POWER_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.POWER_RANGES)) + "]]></POWER_RANGES>");																					//NPOR
         out.println("       <POWER_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.POWER_TEXT)))) + "]]></POWER_TEXT>");													//NPOT
         
-        //out.println("       <APPARENTPOWER_MINIMUM>" + notNull(rec.getString(EVCombinedRec.APPARENT_POWER_MINIMUM)) + "</APPARENTPOWER_MINIMUM>");																//NAPM
+        //apparent power 
         out.println("       <APPARENTPOWER_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.APPARENT_POWER_RANGES)) + "]]></APPARENTPOWER_RANGES>");															//NAPR
         out.println("       <APPARENTPOWER_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.APPARENT_POWER_TEXT)))) + "]]></APPARENTPOWER_TEXT>");							//NAPT							
         
-        //out.println("       <HEATFLUXDENSITY_MINIMUM>" + notNull(rec.getString(EVCombinedRec.HEAT_FLUX_DENSITY_MINIMUM)) + "</HEATFLUXDENSITY_MINIMUM>");															//NHFM
-        //out.println("       <HEATFLUXDENSITY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.HEAT_FLUX_DENSITY_RANGES)) + "]]></HEATFLUXDENSITY_RANGES>");													//NHFR
-        //out.println("       <HEATFLUXDENSITY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.HEAT_FLUX_DENSITY_TEXT)))) + "]]></HEATFLUXDENSITY_TEXT>");					//NHFT
-        
-        //out.println("       <PERCENTAGE_MINIMUM>" + notNull(rec.getString(EVCombinedRec.PERCENTAGE_MINIMUM)) + "</PERCENTAGE_MINIMUM>");																			//NPCM
+        //percentage
         out.println("       <PERCENTAGE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.PERCENTAGE_RANGES)) + "]]></PERCENTAGE_RANGES>");																	//NPCR
         out.println("       <PERCENTAGE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PERCENTAGE_TEXT)))) + "]]></PERCENTAGE_TEXT>");										//NPCT
         
-        //out.println("       <MAGNETICFLUXDENSITY_MINIMUM>" + notNull(rec.getString(EVCombinedRec.MAGNETIC_FLUX_DENSITY_MINIMUM)) + "</MAGNETICFLUXDENSITY_MINIMUM>");												//NMDM
+        //magnetic flux density
         out.println("       <MAGNETICFLUXDENSITY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.MAGNETIC_FLUX_DENSITY_RANGES)) + "]]></MAGNETICFLUXDENSITY_RANGES>");										//NMDR
         out.println("       <MAGNETICFLUXDENSITY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MAGNETIC_FLUX_DENSITY_TEXT)))) + "]]></MAGNETICFLUXDENSITY_TEXT>");		//NMDT
         
-        //out.println("       <MAGNETICFLUX_MINIMUM>" + notNull(rec.getString(EVCombinedRec.MAGNETIC_FLUX_MINIMUM)) + "</MAGNETICFLUX_MINIMUM>");																	//NMFM
-        //out.println("       <MAGNETICFLUX_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.MAGNETIC_FLUX_RANGES)) + "]]></MAGNETICFLUX_RANGES>");															//NMFR
-        //out.println("       <MAGNETICFLUX_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MAGNETIC_FLUX_TEXT)))) + "]]></MAGNETICFLUX_TEXT>");								//NMFT
-        
-        //out.println("       <INDUCTANCE_MINIMUM>" + notNull(rec.getString(EVCombinedRec.INDUCTANCE_MINIMUM)) + "</INDUCTANCE_MINIMUM>");																			//NINM
+        //inductance
         out.println("       <INDUCTANCE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.INDUCTANCE_RANGES)) + "]]></INDUCTANCE_RANGES>");																	//NINR
         out.println("       <INDUCTANCE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.INDUCTANCE_TEXT)))) + "]]></INDUCTANCE_TEXT>");										//NINT
         
-        //out.println("       <PERMEABILITY_MINIMUM>" + notNull(rec.getString(EVCombinedRec.PERMEABILITY_MINIMUM)) + "</PERMEABILITY_MINIMUM>");																	//NPAM							
-        //out.println("       <PERMEABILITY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.PERMEABILITY_RANGES)) + "]]></PERMEABILITY_RANGES>");																//NPAR
-        //out.println("       <PERMEABILITY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PERMEABILITY_TEXT)))) + "]]></PERMEABILITY_TEXT>");								//NPAT
-        
-        //out.println("       <ELECTRICCHARGE_MINIMUM>" + notNull(rec.getString(EVCombinedRec.ELECTRIC_CHARGE_MINIMUM)) + "</ELECTRICCHARGE_MINIMUM>");																//NEAM
-        //out.println("       <ELECTRICCHARGE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.ELECTRIC_CHARGE_RANGES)) + "]]></ELECTRICCHARGE_RANGES>");														//NEAR
-        //out.println("       <ELECTRICCHARGE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ELECTRIC_CHARGE_TEXT)))) + "]]></ELECTRICCHARGE_TEXT>");						//NEAT
-        
-        //out.println("       <VOLUMECHARGEDENSITY_MINIMUM>" + notNull(rec.getString(EVCombinedRec.VOLUME_CHARGE_DENSITY_MINIMUM)) + "</VOLUMECHARGEDENSITY_MINIMUM>");												//NVCM
+        //volume charge density
         out.println("       <VOLUMECHARGEDENSITY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.VOLUME_CHARGE_DENSITY_RANGES)) + "]]></VOLUMECHARGEDENSITY_RANGES>");										//NVCR
         out.println("       <VOLUMECHARGEDENSITY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.VOLUME_CHARGE_DENSITY_TEXT)))) + "]]></VOLUMECHARGEDENSITY_TEXT>");		//NVCT
         
-        //out.println("       <SURFACECHARGEDENSITY_MINIMUM>" + notNull(rec.getString(EVCombinedRec.SURFACE_CHARGE_DENSITY_MINIMUM)) + "</SURFACECHARGEDENSITY_MINIMUM>");											//NSCM
+        //surface charge density
         out.println("       <SURFACECHARGEDENSITY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.SURFACE_CHARGE_DENSITY_RANGES)) + "]]></SURFACECHARGEDENSITY_RANGES>");									//NSCR
         out.println("       <SURFACECHARGEDENSITY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SURFACE_CHARGE_DENSITY_TEXT)))) + "]]></SURFACECHARGEDENSITY_TEXT>");		//NSCT
         
-        //out.println("       <LINEARCHARGEDENSITY_MINIMUM>" + notNull(rec.getString(EVCombinedRec.LINEAR_CHARGE_DENSITY_MINIMUM)) + "</LINEARCHARGEDENSITY_MINIMUM>");												//NLCM
-        //out.println("       <LINEARCHARGEDENSITY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.LINEAR_CHARGE_DENSITY_RANGES)) + "]]></LINEARCHARGEDENSITY_RANGES>");										//NLCR
-        //out.println("       <LINEARCHARGEDENSITY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.LINEAR_CHARGE_DENSITY_TEXT)))) + "]]></LINEARCHARGEDENSITY_TEXT>");		//NLCT
-        
-        //out.println("       <DECIBEL_MINIMUM>" + notNull(rec.getString(EVCombinedRec.DECIBEL_MINIMUM)) + "</DECIBEL_MINIMUM>");																					//NDEM
+        //decibel
         out.println("       <DECIBEL_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.DECIBEL_RANGES)) + "]]></DECIBEL_RANGES>");																			//NDER
         out.println("       <DECIBEL_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.DECIBEL_TEXT)))) + "]]></DECIBEL_TEXT>");												//NDET
         
-        //out.println("       <LUMINOUSFLUX_MINIMUM>" + notNull(rec.getString(EVCombinedRec.LUMINOUS_FLUX_MINIMUM)) + "</LUMINOUSFLUX_MINIMUM>");																	//NLFM
+        //luminous flux
         out.println("       <LUMINOUSFLUX_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.LUMINOUS_FLUX_RANGES)) + "]]></LUMINOUSFLUX_RANGES>");															//NLFR
         out.println("       <LUMINOUSFLUX_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.LUMINOUS_FLUX_TEXT)))) + "]]></LUMINOUSFLUX_TEXT>");								//NLFT
         
-        //out.println("       <ILLUMINANCE_MINIMUM>" + notNull(rec.getString(EVCombinedRec.ILLUMINANCE_MINIMUM)) + "</ILLUMINANCE_MINIMUM>");																		//NILM
+        //illuminance
         out.println("       <ILLUMINANCE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.ILLUMINANCE_RANGES)) + "]]></ILLUMINANCE_RANGES>");																//NILR
         out.println("       <ILLUMINANCE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ILLUMINANCE_TEXT)))) + "]]></ILLUMINANCE_TEXT>");									//NILT
         
-        //out.println("       <BITRATE_MINIMUM>" + notNull(rec.getString(EVCombinedRec.BIT_RATE_MINIMUM)) + "</BITRATE_MINIMUM>");																					//NBIM
+        //bit rate
         out.println("       <BITRATE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.BIT_RATE_RANGES)) + "]]></BITRATE_RANGES>");																			//NBIR
         out.println("       <BITRATE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.BIT_RATE_TEXT)))) + "]]></BITRATE_TEXT>");												//NBIT
         
-        //out.println("       <PICTUREELEMENT_MINIMUM>" + notNull(rec.getString(EVCombinedRec.PICTURE_ELEMENT_MINIMUM)) + "</PICTUREELEMENT_MINIMUM>");																//NPIM
-        //out.println("       <PICTUREELEMENT_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.PICTURE_ELEMENT_RANGES)) + "]]></PICTUREELEMENT_RANGES>");														//NPIR
-        //out.println("       <PICTUREELEMENT_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PICTURE_ELEMENT_TEXT)))) + "]]></PICTUREELEMENT_TEXT>");						//MPIT
-        
-        //out.println("       <MASSDENSITY_MINIMUM>" + notNull(rec.getString(EVCombinedRec.MASS_DENSITY_MINIMUM)) + "</MASSDENSITY_MINIMUM>");																		//NMSM
+        //mass density
         out.println("       <MASSDENSITY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.MASS_DENSITY_RANGES)) + "]]></MASSDENSITY_RANGES>");																//NMSR
         out.println("       <MASSDENSITY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MASS_DENSITY_TEXT)))) + "]]></MASSDENSITY_TEXT>");									//NMST
         
-        //out.println("       <MASSFLOWRATE_MINIMUM>" + rec.getString(EVCombinedRec.MASS_FLOW_RATE_MINIMUM) + "</MASSFLOWRATE_MINIMUM>");																			//NMRM
+        //mass flow rate
         out.println("       <MASSFLOWRATE_RANGES><![CDATA[" + rec.getString(EVCombinedRec.MASS_FLOW_RATE_RANGES) + "]]></MASSFLOWRATE_RANGES>");																	//NMRR
         out.println("       <MASSFLOWRATE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MASS_FLOW_RATE_TEXT)))) + "]]></MASSFLOWRATE_TEXT>");								//NMRT
         
-        //out.println("       <VOLUMETRICFLOWRATE_MINIMUM>" + notNull(rec.getString(EVCombinedRec.VOLUMETRIC_FLOW_RATE_MINIMUM)) + "</VOLUMETRICFLOWRATE_MINIMUM>");												//NVFM
-        //out.println("       <VOLUMETRICFLOWRATE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.VOLUMETRIC_FLOW_RATE_RANGES)) + "]]></VOLUMETRICFLOWRATE_RANGES>");											//NVFR
-        //out.println("       <VOLUMETRICFLOWRATE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.VOLUMETRIC_FLOW_RATE_TEXT)))) + "]]></VOLUMETRICFLOWRATE_TEXT>");			//NVFT
-        
-        //out.println("       <UNITOFINFORMATION_MINIMUM>" + notNull(rec.getString(EVCombinedRec.UNIT_OF_INFORMATION_MINIMUM)) + "</UNITOFINFORMATION_MINIMUM>");													//NUIM
-        //out.println("       <UNITOFINFORMATION_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.UNIT_OF_INFORMATION_RANGES)) + "]]></UNITOFINFORMATION_RANGES>");											//NUIR
-        //out.println("       <UNITOFINFORMATION_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.UNIT_OF_INFORMATION_TEXT)))) + "]]></UNITOFINFORMATION_TEXT>");				//NUIT
-        
-        //out.println("       <ANGLE_MINIMUM>" + notNull(rec.getString(EVCombinedRec.ANGLE_MINIMUM)) + "</ANGLE_MINIMUM>");																							//NANM
-        //out.println("       <ANGLE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.ANGLE_RANGES)) + "]]></ANGLE_RANGES>");																					//NANR
-        //out.println("       <ANGLE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ANGLE_TEXT)))) + "]]></ANGLE_TEXT>");													//NANT
-        
-        //out.println("       <SOLIDANGLE_MINIMUM>" + notNull(rec.getString(EVCombinedRec.SOLID_ANGLE_MINIMUM)) + "</SOLIDANGLE_MINIMUM>");																			//NSOM
-        //out.println("       <SOLIDANGLE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.SOLID_ANGLE_RANGES)) + "]]></SOLIDANGLE_RANGES>");																	//NSOR
-        //out.println("       <SOLIDANGLE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SOLID_ANGLE_TEXT)))) + "]]></SOLIDANGLE_TEXT>");									//NSOT
-        
-        //out.println("       <PRESSURE_MINIMUM>" + notNull(rec.getString(EVCombinedRec.PRESSURE_MINIMUM)) + "</PRESSURE_MINIMUM>");																				//NPSM
-        out.println("       <PRESSURE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.PRESSURE_RANGES)) + "]]></PRESSURE_RANGES>");																			//NPSR
-        out.println("       <PRESSURE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PRESSURE_TEXT)))) + "]]></PRESSURE_TEXT>");											//NPST
-        
-        //out.println("       <DYNAMICVISCOSITY_MINIMUM>" + notNull(rec.getString(EVCombinedRec.DYNAMIC_VISCOSITY_MINIMUM)) + "</DYNAMICVISCOSITY_MINIMUM>");														//NDVM
-        //out.println("       <DYNAMICVISCOSITY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.DYNAMIC_VISCOSITY_RANGES)) + "]]></DYNAMICVISCOSITY_RANGES>");												//NDVR
-        //out.println("       <DYNAMICVISCOSITY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.DYNAMIC_VISCOSITY_TEXT)))) + "]]></DYNAMICVISCOSITY_TEXT>");					//NDVT
-        
-        //out.println("       <FORCE_MINIMUM>" + notNull(rec.getString(EVCombinedRec.FORCE_MINIMUM)) + "</FORCE_MINIMUM>");																							//NFOM
+        //force
         out.println("       <FORCE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.FORCE_RANGES)) + "]]></FORCE_RANGES>");																					//NFOR
         out.println("       <FORCE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.FORCE_TEXT)))) + "]]></FORCE_TEXT>");													//NFOT
         
-        //out.println("       <TORQUE_MINIMUM>" + notNull(rec.getString(EVCombinedRec.TORQUE_MINIMUM)) + "</TORQUE_MINIMUM>");																						//NTOM
+        //torque
         out.println("       <TORQUE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.TORQUE_RANGES)) + "]]></TORQUE_RANGES>");																				//NTOR
         out.println("       <TORQUE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.TORQUE_TEXT)))) + "]]></TORQUE_TEXT>");													//NTOT
         
-        //out.println("       <PRESSURE_MINIMUM>" + notNull(rec.getString(EVCombinedRec.PRESSURE_MINIMUM)) + "</PRESSURE_MINIMUM>");																				//NPRM
+        //pressure
         out.println("       <PRESSURE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.PRESSURE_RANGES)) + "]]></PRESSURE_RANGES>");																			//NPRR
         out.println("       <PRESSURE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PRESSURE_TEXT)))) + "]]></PRESSURE_TEXT>");											//NPRT
         
-        //out.println("       <AREA_MINIMUM>" + notNull(rec.getString(EVCombinedRec.AREA_MINIMUM)) + "</AREA_MINIMUM>");																							//NARM
+        //area
         out.println("       <AREA_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.AREA_RANGES)) + "]]></AREA_RANGES>");																						//NARR
         out.println("       <AREA_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.AREA_TEXT)))) + "]]></AREA_TEXT>");														//NART
         
-        //out.println("       <VOLUME_MINIMUM>" + notNull(rec.getString(EVCombinedRec.VOLUME_MINIMUM)) + "</VOLUME_MINIMUM>");																						//NVLM
+        //volume
         out.println("       <VOLUME_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.VOLUME_RANGES)) + "]]></VOLUME_RANGES>");																				//NVLR
         out.println("       <VOLUME_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.VOLUME_TEXT)))) + "]]></VOLUME_TEXT>");													//NVLT
         
-        //out.println("       <VELOCITY_MINIMUM>" + notNull(rec.getString(EVCombinedRec.VELOCITY_MINIMUM)) + "</VELOCITY_MINIMUM>");																				//NVEM
+        //velocity
         out.println("       <VELOCITY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.VELOCITY_RANGES)) + "]]></VELOCITY_RANGES>");																			//NVER
         out.println("       <VELOCITY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.VELOCITY_TEXT)))) + "]]></VELOCITY_TEXT>");											//NVET
         
-        //out.println("       <ACCELERATION_MINIMUM>" + notNull(rec.getString(EVCombinedRec.ACCELERATION_MINIMUM)) + "</ACCELERATION_MINIMUM>");																	//NACM
+        //acceleration
         out.println("       <ACCELERATION_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.ACCELERATION_RANGES)) + "]]></ACCELERATION_RANGES>");																//NACR
         out.println("       <ACCELERATION_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ACCELERATION_TEXT)))) + "]]></ACCELERATION_TEXT>");								//NACT
         
-        //out.println("       <ANGULARVELOCITY_MINIMUM>" + notNull(rec.getString(EVCombinedRec.ANGULAR_VELOCITY_MINIMUM)) + "</ANGULARVELOCITY_MINIMUM>");															//NAVM
+        //angular velocity
         out.println("       <ANGULARVELOCITY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.ANGULAR_VELOCITY_RANGES)) + "]]></ANGULARVELOCITY_RANGES>");													//NAVR
         out.println("       <ANGULARVELOCITY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ANGULAR_VELOCITY_TEXT)))) + "]]></ANGULARVELOCITY_TEXT>");						//NAVT
         
-        //out.println("       <ROTATIONALSPEED_MINIMUM>" + notNull(rec.getString(EVCombinedRec.ROTATIONAL_SPEED_MINIMUM)) + "</ROTATIONALSPEED_MINIMUM>");															//NRSM
+        //rotational speed 	
         out.println("       <ROTATIONALSPEED_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.ROTATIONAL_SPEED_RANGES)) + "]]></ROTATIONALSPEED_RANGES>");													//NRSR
         out.println("       <ROTATIONALSPEED_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ROTATIONAL_SPEED_TEXT)))) + "]]></ROTATIONALSPEED_TEXT>");						//NRST
         
-        //out.println("       <AGE_MINIMUM>" + notNull(rec.getString(EVCombinedRec.AGE_MINIMUM)) + "</AGE_MINIMUM>");																								//NAGM
+        //age mass
         out.println("       <AGE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.AGE_RANGES)) + "]]></AGE_RANGES>");																						//NAGR
         out.println("       <AGE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.AGE_TEXT)))) + "]]></AGE_TEXT>");															//NAGT
-        
-        //out.println("       <MOLARMASS_MINIMUM>" + notNull(rec.getString(EVCombinedRec.MOLAR_MASS_MINIMUM)) + "</MOLARMASS_MINIMUM>");																			//NMMM
+       
+        //molar mass
         out.println("       <MOLARMASS_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.MOLAR_MASS_RANGES)) + "]]></MOLARMASS_RANGES>");																		//NMMR
         out.println("       <MOLARMASS_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MOLAR_MASS_TEXT)))) + "]]></MOLARMASS_TEXT>");										//NMMT
         
-        //out.println("       <MOLALITYOFSUBSTANCE_MINIMUM>" + notNull(rec.getString(EVCombinedRec.MOLALITY_OF_SUBSTANCE_MINIMUM)) + "</MOLALITYOFSUBSTANCE_MINIMUM>");												//NMOM
+        //molality
         out.println("       <MOLALITYOFSUBSTANCE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.MOLALITY_OF_SUBSTANCE_RANGES)) + "]]></MOLALITYOFSUBSTANCE_RANGES>");										//NMOR
         out.println("       <MOLALITYOFSUBSTANCE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MOLALITY_OF_SUBSTANCE_TEXT)))) + "]]></MOLALITYOFSUBSTANCE_TEXT>");		//NMOT
         
-        //out.println("       <PHVALUE_MINIMUM>" + notNull(rec.getString(EVCombinedRec.PH_VALUE_MINIMUM)) + "</PHVALUE_MINIMUM>");																					//NPHM
-        //out.println("       <PHVALUE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.PH_VALUE_RANGES)) + "]]></PHVALUE_RANGES>");																			//NPHR
-        //out.println("       <PHVALUE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.PH_VALUE_TEXT)))) + "]]></PHVALUE_TEXT>");												//NPHT
-        
-        //out.println("       <RADIOACTIVITY_MINIMUM>" + notNull(rec.getString(EVCombinedRec.RADIOACTIVITY_MINIMUM)) + "</RADIOACTIVITY_MINIMUM>");																	//NRAM
+        //radioactivity
         out.println("       <RADIOACTIVITY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.RADIOACTIVITY_RANGES)) + "]]></RADIOACTIVITY_RANGES>");															//NRAR
         out.println("       <RADIOACTIVITY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.RADIOACTIVITY_TEXT)))) + "]]></RADIOACTIVITY_TEXT>");							//NRAT
         
-       // out.println("       <ABSORBEDDOSE_MINIMUM>" + notNull(rec.getString(EVCombinedRec.ABSORBED_DOSE_MINIMUM)) + "</ABSORBEDDOSE_MINIMUM>");																	//NABM
+        //absorbed dose
         out.println("       <ABSORBEDDOSE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.ABSORBED_DOSE_RANGES)) + "]]></ABSORBEDDOSE_RANGES>");															//NABR
         out.println("       <ABSORBEDDOSE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ABSORBED_DOSE_TEXT)))) + "]]></ABSORBEDDOSE_TEXT>");								//NABT
         
-        //out.println("       <DOSEEQUIVALENT_MINIMUM>" + notNull(rec.getString(EVCombinedRec.DOSE_EQUIVALENT_MINIMUM)) + "</DOSEEQUIVALENT_MINIMUM>");																//NDOM
-        //out.println("       <DOSEEQUIVALENT_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.DOSE_EQUIVALENT_RANGES)) + "]]></DOSEEQUIVALENT_RANGES>");													//NDOR
-        //out.println("       <DOSEEQUIVALENT_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.DOSE_EQUIVALENT_TEXT)))) + "]]></DOSEEQUIVALENT_TEXT>");						//NDOT
-        
-        //out.println("       <RADIATIONEXPOSURE_MINIMUM>" + notNull(rec.getString(EVCombinedRec.RADIATION_EXPOSURE_MINIMUM)) + "</RADIATIONEXPOSURE_MINIMUM>");													//NREM
+        //radiation exposur
         out.println("       <RADIATIONEXPOSURE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.RADIATION_EXPOSURE_RANGES)) + "]]></RADIATIONEXPOSURE_RANGES>");												//NRER
         out.println("       <RADIATIONEXPOSURE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.RADIATION_EXPOSURE_TEXT)))) + "]]></RADIATIONEXPOSURE_TEXT>");				//NRET
         
-        //out.println("       <CATALYTICACTIVITY_MINIMUM>" + notNull(rec.getString(EVCombinedRec.CATALYTIC_ACTIVITY_MINIMUM)) + "</CATALYTICACTIVITY_MINIMUM>");													//NCCM
-        //out.println("       <CATALYTICACTIVITY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.CATALYTIC_ACTIVITY_RANGES)) + "]]></CATALYTICACTIVITY_RANGES>");												//NCCR
-        //out.println("       <CATALYTICACTIVITY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.CATALYTIC_ACTIVITY_TEXT)))) + "]]></CATALYTICACTIVITY_TEXT>");				//NCCT
-        
-        //out.println("       <ELECTRONVOLT_MINIMUM>" + notNull(rec.getString(EVCombinedRec.ELECTRON_VOLT_MINIMUM)) + "</ELECTRONVOLT_MINIMUM>");																	//NELM
-        //out.println("       <ELECTRONVOLT_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.ELECTRON_VOLT_RANGES)) + "]]></ELECTRONVOLT_RANGES>");															//NELR
-        //out.println("       <ELECTRONVOLT_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.ELECTRON_VOLT_TEXT)))) + "]]></ELECTRONVOLT_TEXT>");								//NELT
-        
-        //out.println("       <LUMINANCE_MINIMUM>" + notNull(rec.getString(EVCombinedRec.LUMINANCE_MINIMUM)) + "</LUMINANCE_MINIMUM>");																				//NLUM
+        //Luminance
         out.println("       <LUMINANCE_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.LUMINANCE_RANGES)) + "]]></LUMINANCE_RANGES>");																		//NLUR
         out.println("       <LUMINANCE_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.LUMINANCE_TEXT)))) + "]]></LUMINANCE_TEXT>");										//NLUT
         
-        //out.println("       <LUMINANCEEFFICACY_MINIMUM>" + notNull(rec.getString(EVCombinedRec.LUMINANCE_EFFICACY_MINIMUM)) + "</LUMINANCEEFFICACY_MINIMUM>");													//NLEM
-        //out.println("       <LUMINANCEEFFICACY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.LUMINANCE_EFFICACY_RANGES)) + "]]></LUMINANCEEFFICACY_RANGES>");											//NLER
-        //out.println("       <LUMINANCEEFFICACY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.LUMINANCE_EFFICACY_TEXT)))) + "]]></LUMINANCEEFFICACY_TEXT>");				//NLET
-        
-        //out.println("       <LUMINANCEEFFICIENCY_MINIMUM>" + notNull(rec.getString(EVCombinedRec.LUMINANCE_EFFICIENCY_MINIMUM)) + "</LUMINANCEEFFICIENCY_MINIMUM>");												//NLMM
-        //out.println("       <LUMINANCEEFFICIENCY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.LUMINANCE_EFFICIENCY_RANGES)) + "]]></LUMINANCEEFFICIENCY_RANGES>");										//NLMR
-        //out.println("       <LUMINANCEEFFICIENCY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.LUMINANCE_EFFICIENCY_TEXT)))) + "]]></LUMINANCEEFFICIENCY_TEXT>");			//NLMT
-        
-        //out.println("       <MAGNETICFIELDSTRENGTH_MINIMUM>" + notNull(rec.getString(EVCombinedRec.MAGNETIC_FIELD_STRENGTH_MINIMUM)) + "</MAGNETICFIELDSTRENGTH_MINIMUM>");										//NFSM
+        //Magnetic field strengt
         out.println("       <MAGNETICFIELDSTRENGTH_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.MAGNETIC_FIELD_STRENGTH_RANGES)) + "]]></MAGNETICFIELDSTRENGTH_RANGES>");								//NFSR
         out.println("       <MAGNETICFIELDSTRENGTH_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.MAGNETIC_FIELD_STRENGTH_TEXT)))) + "]]></MAGNETICFIELDSTRENGTH_TEXT>");	//NFST
         
-        //out.println("       <SPECTRALEFFICIENCY_MINIMUM>" + notNull(rec.getString(EVCombinedRec.SPECTRAL_EFFICIENCY_MINIMUM)) + "</SPECTRALEFFICIENCY_MINIMUM>");													//NSEM
+        //Spectral_Efficiency
         out.println("       <SPECTRALEFFICIENCY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.SPECTRAL_EFFICIENCY_RANGES)) + "]]></SPECTRALEFFICIENCY_RANGES>");											//NSER
         out.println("       <SPECTRALEFFICIENCY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SPECTRAL_EFFICIENCY_TEXT)))) + "]]></SPECTRALEFFICIENCY_TEXT>");			//NSET
         
-        //out.println("       <SURFACEPOWERDENSITY_MINIMUM>" + notNull(rec.getString(EVCombinedRec.SURFACE_POWER_DENSITY_MINIMUM)) + "</SURFACEPOWERDENSITY_MINIMUM>");												//NSPM
+        //Surface_Power_Density
         out.println("       <SURFACEPOWERDENSITY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.SURFACE_POWER_DENSITY_RANGES)) + "]]></SURFACEPOWERDENSITY_RANGES>");										//NSPR
         out.println("       <SURFACEPOWERDENSITY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.SURFACE_POWER_DENSITY_TEXT)))) + "]]></SURFACEPOWERDENSITY_TEXT>");		//NSPT
-               
-        //out.println("       <THERMALCONDUCTIVITY_MINIMUM>" + notNull(rec.getString(EVCombinedRec.THERMAL_CONDUCTIVITY_MINIMUM)) + "</THERMALCONDUCTIVITY_MINIMUM>");												//NTCM
+        
+        //thermal conductivity
         out.println("       <THERMALCONDUCTIVITY_RANGES><![CDATA[" + notNull(rec.getString(EVCombinedRec.THERMAL_CONDUCTIVITY_RANGES)) + "]]></THERMALCONDUCTIVITY_RANGES>");										//NTCR
         out.println("       <THERMALCONDUCTIVITY_TEXT><![CDATA[" + notNull(Entity.prepareString(multiFormat(rec.getStrings(EVCombinedRec.THERMAL_CONDUCTIVITY_TEXT)))) + "]]></THERMALCONDUCTIVITY_TEXT>");			//NTCT
         
@@ -839,10 +766,10 @@ public class CombinedXMLWriter
         //SOURCE_NOTE
         out.println("       <SOURCENOTE><![CDATA[" + notNull(rec.getString(EVCombinedRec.SOURCE_NOTE)) + " QstemQ " + notNull(getStems(Entity.prepareString(rec.getString(EVCombinedRec.SOURCE_NOTE))))+ "]]></SOURCENOTE>");																						//SNO
         
-        //MAP_TYPE
+        //GRANTID
         out.println("       <GRANTID><![CDATA[" + notNull(multiFormat(rec.getStrings(EVCombinedRec.GRANTID))) + "]]></GRANTID>");																					//GID
         
-        //SOURCE_NOTE
+        //GRANTAGENCY
         out.println("       <GRANTAGENCY><![CDATA[" + notNull(multiFormat(rec.getStrings(EVCombinedRec.GRANTAGENCY))) + "]]></GRANTAGENCY>");		//GAG
         
         //SPARE FIELDS
