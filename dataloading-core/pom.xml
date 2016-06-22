@@ -170,7 +170,13 @@
       		<version>1.10.19</version>
       		<scope>test</scope>
    		 </dependency>
-
+   		 
+   		<!--  added for elasticsearch 06/06/2016--> 
+		<dependency>
+    		<groupId>org.elasticsearch</groupId>
+    		<artifactId>elasticsearch</artifactId>
+    		<version>0.20.5</version>
+		</dependency>
   
 		
 		<!-- HH: 02/18/2016 for Amazon Lambda -->
