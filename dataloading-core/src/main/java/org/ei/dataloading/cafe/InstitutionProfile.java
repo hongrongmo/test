@@ -17,6 +17,9 @@ import java.util.Enumeration;
 import java.util.List;
 import java.util.ArrayList;
 import java.sql.*;
+import java.io.OutputStreamWriter;
+import java.io.FileOutputStream;
+import java.io.BufferedWriter;
 
 import org.ei.common.Constants;
 import org.ei.dataloading.DataLoadDictionary;
@@ -59,11 +62,13 @@ public class InstitutionProfile
 			
 		infile = args[0];
 		int loadN = Integer.parseInt(args[1]);
-		FileWriter outFile = null;
+		//FileWriter outFile = null;
+		BufferedWriter outFile = null;
 		try
         {         
 			InstitutionProfile c = new InstitutionProfile();  
-			outFile = new FileWriter(infile+".out");
+			//outFile = new FileWriter(infile+".out");
+			outFile = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(infile+".out"),"UTF-8"));
 			c.loadNumber = loadN;
             c.readFile(infile,outFile);
         }
@@ -87,7 +92,14 @@ public class InstitutionProfile
 		builder.setExpandEntities(false);
 	}
 	
-	private void readFile(String filename, FileWriter out) throws Exception
+	public InstitutionProfile(int loadnumber)
+	{
+		builder = new SAXBuilder();
+		builder.setExpandEntities(false);
+		this.loadNumber = loadnumber;
+	}
+	
+	void readFile(String filename, BufferedWriter out) throws Exception
 	{
 		
 		BufferedReader in = null;
@@ -95,28 +107,24 @@ public class InstitutionProfile
 		try
 		{
 		   
-		    if(infile.toLowerCase().endsWith(".zip"))
+		    if(filename.toLowerCase().endsWith(".zip"))
 		    {
 		        System.out.println("IS ZIP FILE");
-		        ZipFile zipFile = new ZipFile(infile);
+		        ZipFile zipFile = new ZipFile(filename);
 		        Enumeration entries = zipFile.entries();
 		        int i=0;
 		        while (entries.hasMoreElements())
 		        {
 		            ZipEntry entry = (ZipEntry)entries.nextElement();
-		            in = new BufferedReader(new InputStreamReader(zipFile.getInputStream(entry), "UTF-8"));
-		            if(in !=null)
-		            {
-		            	System.out.println(i);
-		            }
+		            in = new BufferedReader(new InputStreamReader(zipFile.getInputStream(entry), "UTF-8"));		            
 		            writeRecs(in,out);
 		            i++;
 		        }
 		    }
-		    else if(infile.toLowerCase().endsWith(".xml"))
+		    else if(filename.toLowerCase().endsWith(".xml"))
 		    {
 		        System.out.println("IS XML FILE");
-		        in = new BufferedReader(new FileReader(infile));
+		        in = new BufferedReader(new FileReader(filename));
 		        writeRecs(in,out);
 		    }        
 		    else
@@ -153,7 +161,7 @@ public class InstitutionProfile
 			    
 	}
 	
-	private void writeRecs(BufferedReader xmlReader, FileWriter out) throws Exception
+	private void writeRecs(BufferedReader xmlReader, BufferedWriter out) throws Exception
     {     
         try
         {
@@ -197,14 +205,14 @@ public class InstitutionProfile
 					{
 						String eid = meta.getChildText("eid",xocsNamespace);
 						record.put("EID",eid);
-						System.out.println("EID= "+eid);
+						//System.out.println("EID= "+eid);
 					}
 					
 					if(meta.getChild("timestamp",xocsNamespace)!=null)
 					{
 						String timestamp = meta.getChildText("timestamp",xocsNamespace);
 						record.put("TIMESTAMP",timestamp);
-						System.out.println("timestamp= "+timestamp);
+						//System.out.println("timestamp= "+timestamp);
 					}
 					
 					if(meta.getChild("indexeddate",xocsNamespace)!=null)
@@ -214,11 +222,11 @@ public class InstitutionProfile
 						{
 							String epoch = indexed.getAttributeValue("epoch",noNamespace);
 							record.put("EPOCH",epoch);
-							System.out.println("epoch= "+epoch);
+							//System.out.println("epoch= "+epoch);
 						}
 						String indexeddate = meta.getChildText("indexeddate",xocsNamespace);				
 						record.put("INDEXEDDATE", indexeddate);
-						System.out.println("indexeddate= "+indexeddate);					
+						//System.out.println("indexeddate= "+indexeddate);					
 					}										
 				}
 				
@@ -230,12 +238,12 @@ public class InstitutionProfile
 					{
 						String affiliationID = institutionProfile.getAttributeValue("affiliation-id",noNamespace);
 						record.put("AFFID",affiliationID);
-						System.out.println("affiliationID= "+affiliationID);
+						//System.out.println("affiliationID= "+affiliationID);
 						if(institutionProfile.getChild("status",noNamespace)!=null)
 						{
 							String status = institutionProfile.getChildText("status",noNamespace);
 							record.put("STATUS", status);
-							System.out.println("status= "+status);
+							//System.out.println("status= "+status);
 						}
 						
 						if(institutionProfile.getChild("date-created",noNamespace)!=null)
@@ -250,7 +258,7 @@ public class InstitutionProfile
 								timestamp = year+"-"+month+"-"+day;
 							}
 							record.put("DATECREATED", timestamp);
-							System.out.println("date-created= "+timestamp);
+							//System.out.println("date-created= "+timestamp);
 						}
 						
 						if(institutionProfile.getChild("date-revised",noNamespace)!=null)
@@ -265,46 +273,48 @@ public class InstitutionProfile
 								timestamp = year+"-"+month+"-"+day;
 							}
 							record.put("DATEREVISED",timestamp);
-							System.out.println("date-revised= "+timestamp);
+							//System.out.println("date-revised= "+timestamp);
 						}
 						
 						if(institutionProfile.getChild("preferred-name",noNamespace)!=null)
 						{
 							String preferredName = institutionProfile.getChildText("preferred-name",noNamespace);
 							record.put("PREFEREDNAME", dictionary.mapEntity(preferredName));
-							System.out.println("preferred-name= "+preferredName);
+							//record.put("PREFEREDNAME", preferredName);
+							//System.out.println("preferred-name= "+preferredName);
+							//System.out.println("preferred-name= "+dictionary.mapEntity(preferredName));
 						}
 						
 						if(institutionProfile.getChild("sort-name",noNamespace)!=null)
 						{
 							String sortName = institutionProfile.getChildText("sort-name",noNamespace);
 							record.put("SORTNAME", dictionary.mapEntity(sortName));
-							System.out.println("sort-name= "+sortName);
+							//System.out.println("sort-name= "+sortName);
 						}
 						
 						if(institutionProfile.getChild("name-variant",noNamespace)!=null)
 						{
 							String nameVariant = institutionProfile.getChildText("name-variant",noNamespace);
 							record.put("NAMEVARIANT", dictionary.mapEntity(nameVariant));
-							System.out.println("name-variant= "+nameVariant);
+							//System.out.println("name-variant= "+nameVariant);
 						}
 						
 						if(institutionProfile.getChild("address",noNamespace)!=null)
 						{
 							Element address = institutionProfile.getChild("address",noNamespace);
 							String countryAtt = address.getAttributeValue("country",noNamespace);
-							System.out.println("countryAtt= "+countryAtt);
+							//System.out.println("countryAtt= "+countryAtt);
 							String country = address.getChildText("country");
-							System.out.println("country= "+country);
+							//System.out.println("country= "+country);
 							String addressPart = address.getChildText("address-part",noNamespace);
-							System.out.println("addressPart= "+addressPart);
+							//System.out.println("addressPart= "+addressPart);
 							
 							String city = address.getChildText("city",noNamespace);		
-							System.out.println("city= "+city);
+							//System.out.println("city= "+city);
 							String state = address.getChildText("state",noNamespace);		
-							System.out.println("state= "+state);
+							//System.out.println("state= "+state);
 							String postalCode = address.getChildText("postal-code",noNamespace);
-							System.out.println("postalCode= "+postalCode);
+							//System.out.println("postalCode= "+postalCode);
 							if(addressPart!=null)
 							{
 								record.put("ADDRESSPART", dictionary.mapEntity(addressPart));
@@ -351,25 +361,27 @@ public class InstitutionProfile
 								{
 								    String orgId = certaintyScore.getChildText("org-id");
 								    certaintyScoresBuffer.append(orgId);
-								    System.out.println("orgId= "+orgId);
+								    
 								}
 								certaintyScoresBuffer.append(Constants.IDDELIMITER);
 								if(certaintyScore.getChild("score") != null )
 								{
 								    String score = certaintyScore.getChildText("score");
 								    certaintyScoresBuffer.append(score);
-								    System.out.println("orgId= "+score);
+								   
 								}
 								certaintyScoresBuffer.append(Constants.AUDELIMITER);
 							}
 							record.put("CERTAINTYSCORES",certaintyScoresBuffer.toString());
 						
-						}
-						else
+						}	
+						
+						if(institutionProfile.getChild("quality",noNamespace)!=null)
 						{
-							System.out.println("certaintyScores is null");
+							String quality = institutionProfile.getChildText("quality",noNamespace);
+							record.put("QUALITY", quality);
 						}
-																	
+						
 					}
 					else
 					{
@@ -384,13 +396,13 @@ public class InstitutionProfile
 				
 			}
 			
-			System.out.println("ROOTELEMENT "+cpxRoot.getName());
+			//System.out.println("ROOTELEMENT "+cpxRoot.getName());
 		}
 		return record;
 		
 	}
 	
-	public void writeRec(Hashtable record, FileWriter out) throws Exception
+	public void writeRec(Hashtable record, BufferedWriter out) throws Exception
 	{
 
 		StringBuffer recordBuf = new StringBuffer();
@@ -503,6 +515,13 @@ public class InstitutionProfile
 				recordBuf.append((String)record.get("CERTAINTYSCORES"));
 			}
 			recordBuf.append(FIELDDELIM);
+			
+			if(record.get("QUALITY")!=null)
+			{
+				recordBuf.append((String)record.get("QUALITY"));				
+			}
+			recordBuf.append(FIELDDELIM);
+			
 			recordBuf.append(loadNumber);
 		}
 		out.write(recordBuf.toString()+"\n");
