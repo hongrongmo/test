@@ -6,6 +6,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.HashMap;
 
 import org.ei.dataloading.cafe.AmazonS3Service;
 import org.ei.dataloading.cafe.GetANIFileFromCafeS3Bucket;
@@ -71,9 +73,9 @@ public class GetKnovelFilesFromS3 {
 			System.out.println("downloading Group Knovel file: "+fileName+" from S3 bucket " + this.bucketName + ": ");
 			System.out.println("download group file: " +  key+fileName);
 
-			AmazonS3 s3Client = new AmazonS3Client(new PropertiesCredentials(new File("AwsCredentials.properties")));  // for local testing
+			//AmazonS3 s3Client = new AmazonS3Client(new PropertiesCredentials(new File("AwsCredentials.properties")));  // for local testing
 			
-			//AmazonS3 s3Client = new AmazonS3Client(new InstanceProfileCredentialsProvider());   // for ec2 testing
+			AmazonS3 s3Client = new AmazonS3Client(new InstanceProfileCredentialsProvider());   // for ec2 testing
 			S3Object object = s3Client.getObject(new GetObjectRequest(bucketName, key+fileName));
 
 
@@ -99,12 +101,7 @@ public class GetKnovelFilesFromS3 {
 			//after download is complete, call shutdownNow to release resources
 			tm.shutdownNow();
 
-		}
-
-		catch(IOException ex)
-		{
-			ex.printStackTrace();
-		}
+		}	
 		catch(AmazonServiceException ase)
 		{
 			System.out.println("Caught an AmazonServiceException, which " +"means your request made it " +
@@ -124,6 +121,10 @@ public class GetKnovelFilesFromS3 {
 					"communicate with S3, " +
 					"such as not being able to access the network.");
 			System.out.println("Error Message: " + ace.getMessage());
+		}
+		catch(Exception ex)
+		{
+			ex.printStackTrace();
 		}
 		
 	}
@@ -176,15 +177,40 @@ public class GetKnovelFilesFromS3 {
 	{
 		System.out.println("in GetKnovelFilesFromS3");
 		String filename = args[0];
-		
-		GetKnovelFilesFromS3 obj = new GetKnovelFilesFromS3();
+		String bucketName="ev-data";
+		String key = "archive/KNOVEL/";
+		GetKnovelFilesFromS3 obj = new GetKnovelFilesFromS3(bucketName,key);
 		
 		try 
 		{
-			obj.bucketName = "datafabrication-reports";
-			obj.downloadGroupFileFromS3(filename);
+			//obj.bucketName = "datafabrication-reports";
+			//obj.bucketName = "ev-data";
+			//obj.key = "archive/KNOVEL/";
+			KnovelReader r = new KnovelReader();
+			HashMap fileMap = r.getFilesFromGroupFile(filename);
+			Iterator<String> fileIterator = fileMap.keySet().iterator(); 
+			
+			while(fileIterator.hasNext())
+			{
+				String name = (String)fileIterator.next();
+				String lastModify = (String)fileMap.get(name);
+				System.out.println("FILENAME="+name);
+				obj.downloadGroupFileFromS3(name);
+				if(name.indexOf("book-cid")>0)
+				{
+					String fulltocName = name.replace("atom", "fulltoc");
+					System.out.println("FILENAME="+fulltocName);
+					obj.downloadGroupFileFromS3(fulltocName);					
+				}
+					
+				//obj.getFileContentFromS3(name);
+			}
 		} 
 		catch (AmazonClientException | InterruptedException e) 
+		{	
+			e.printStackTrace();
+		}
+		catch(Exception e)
 		{	
 			e.printStackTrace();
 		}
