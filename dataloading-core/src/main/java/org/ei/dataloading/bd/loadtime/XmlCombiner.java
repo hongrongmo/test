@@ -469,7 +469,7 @@ throws Exception
                                  }
                              }
                          }
-                         if(!navigatorterms.isEmpty())
+                         if(navigatorterms !=null && !navigatorterms.isEmpty())
                          {
                             rec.putIfNotNull(EVCombinedRec.INT_PATENT_CLASSIFICATION, (String[])navigatorterms.toArray(new String[]{}));
                          }
