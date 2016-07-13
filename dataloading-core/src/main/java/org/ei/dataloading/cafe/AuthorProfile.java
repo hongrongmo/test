@@ -60,7 +60,8 @@ public class AuthorProfile
 		infile = args[0];	
 		String loadnumber = args[1];
 		
-		FileWriter outFile = null;
+		FileWriter outFile_au = null;
+		FileWriter outFile_af = null;
 		try
         {         
 			
@@ -76,8 +77,9 @@ public class AuthorProfile
             	System.exit(1);
             }
             AuthorProfile c = new AuthorProfile(loadNumber);  
-			outFile = new FileWriter(infile+".out");
-            c.readFile(infile,outFile);
+            outFile_au = new FileWriter(infile+"_au_"+loadnumber+".out");
+            outFile_af = new FileWriter(infile+"_af_"+loadnumber+".out");
+            c.readFile(infile,outFile_au,outFile_af);
         }
         catch(Exception e)
         {
@@ -85,9 +87,9 @@ public class AuthorProfile
         }
         finally
         { 
-        	if(outFile != null)
+        	if(outFile_au != null)
  		    {
-        		outFile.close();
+        		outFile_au.close();
  		    }
             System.out.println("total process time "+(System.currentTimeMillis()-startTime)/1000.0+" seconds");
         }
@@ -100,7 +102,7 @@ public class AuthorProfile
 		this.loadNumber=loadnumber;
 	}
 	
-	private void readFile(String filename, FileWriter out) throws Exception
+	void readFile(String filename, FileWriter out, FileWriter out_aff) throws Exception
 	{
 		
 	BufferedReader in = null;
@@ -108,10 +110,10 @@ public class AuthorProfile
 		try
 		{
 		   
-		    if(infile.toLowerCase().endsWith(".zip"))
+		    if(filename.toLowerCase().endsWith(".zip"))
 		    {
 		        System.out.println("IS ZIP FILE");
-		        ZipFile zipFile = new ZipFile(infile);
+		        ZipFile zipFile = new ZipFile(filename);
 		        Enumeration entries = zipFile.entries();
 		        int i=0;
 		        while (entries.hasMoreElements())
@@ -120,17 +122,17 @@ public class AuthorProfile
 		            in = new BufferedReader(new InputStreamReader(zipFile.getInputStream(entry), "UTF-8"));
 		            if(in !=null)
 		            {
-		            	writeRecs(in,out);
+		            	writeRecs(in,out,out_aff);
 		            }
 		            
 		            i++;
 		        }
 		    }
-		    else if(infile.toLowerCase().endsWith(".xml"))
+		    else if(filename.toLowerCase().endsWith(".xml"))
 		    {
 		        System.out.println("IS XML FILE");
-		        in = new BufferedReader(new FileReader(infile));
-		        writeRecs(in,out);
+		        in = new BufferedReader(new FileReader(filename));
+		        writeRecs(in,out,out_aff);
 		    }        
 		    else
 		    {
@@ -153,7 +155,7 @@ public class AuthorProfile
 			    
 	}
 	
-	private void writeRecs(BufferedReader xmlReader, FileWriter out) throws Exception
+	private void writeRecs(BufferedReader xmlReader, FileWriter out, FileWriter out_aff) throws Exception
     {
    
         try
@@ -161,7 +163,7 @@ public class AuthorProfile
 	
             if (xmlReader!=null)
             {           	
-                Hashtable h = parser(xmlReader);
+                Hashtable h = parser(xmlReader,out_aff);
             
                 if (h != null)
                 {                  
@@ -170,6 +172,7 @@ public class AuthorProfile
                
             }
             out.flush();
+            out_aff.flush();
         }
         catch(Exception e)
         {
@@ -177,7 +180,7 @@ public class AuthorProfile
         }   
     }
 	
-	private Hashtable parser(Reader r)throws Exception
+	private Hashtable parser(Reader r, FileWriter out_aff)throws Exception
 	{
 		
 		Hashtable record = new Hashtable();
@@ -347,6 +350,25 @@ public class AuthorProfile
 							}
 							record.put("NAMEVARIANT", nameBuffer.toString());
 							//System.out.println("name-variant= "+nameBuffer.toString());
+						}
+						
+						if(authorProfile.getChild("e-address",noNamespace)!=null)
+						{
+							Element e_address = authorProfile.getChild("e-address",noNamespace);
+							String eaddress = e_address.getTextTrim();
+							String type=e_address.getAttributeValue("type");
+							StringBuffer eaddressBuffer = new StringBuffer();
+							if(type!=null)
+							{
+								eaddressBuffer.append(type);
+							}
+							
+							eaddressBuffer.append(Constants.IDDELIMITER);
+							if(eaddress!=null)
+							{
+								eaddressBuffer.append(eaddress);
+							}
+							record.put("E_ADDRESS", eaddressBuffer.toString());		
 						}
 						
 						if(authorProfile.getChild("classificationgroup",noNamespace)!=null)
@@ -528,15 +550,32 @@ public class AuthorProfile
 							{
 								String currentAffiliationID = affiliation.getAttributeValue("affiliation-id");
 								String parentAffiliationID  = affiliation.getAttributeValue("parent");
-								if(currentAffiliationID!=null)
+								if(affiliation.getChild("ip-doc",noNamespace)!=null)
 								{
-									record.put("CURRENTAFFILIATIONID",currentAffiliationID);
-								}
+									List ip_docs = affiliation.getChildren("ip-doc",noNamespace);
+									for(int i=0;i<ip_docs.size();i++)
+									{
+										Element ip_doc =(Element) ip_docs.get(i);
+										String id = ip_doc.getAttributeValue("id");
+										String type = ip_doc.getAttributeValue("type");
+										String relationship = ip_doc.getAttributeValue("relationship");
+										
+										if(id.equals(currentAffiliationID))
+										{
+											record.put("CURRENTAFFILIATIONID",id);
+											record.put("CURRENTAFFILIATIONTYPE",type);
+											record.put("CURRENTAFFILIATIONRELATIONSHIP",relationship);
+										}
+										else if(id.equals(parentAffiliationID))
+										{
+											record.put("PARENTAFFILIATIONID",id);
+											record.put("PARENTAFFILIATIONTYPE",type);
+											record.put("PARENTAFFILIATIONRELATIONSHIP",relationship);
+										}										 										
+									}
+									outputAffiliation(ip_docs, out_aff);
+								}								
 								
-								if(parentAffiliationID!=null)
-								{
-									record.put("PARENTAFFILIATIONID",parentAffiliationID);
-								}
 							}
 						}
 						
@@ -552,17 +591,50 @@ public class AuthorProfile
 								Element historyAffiliation =(Element) affiliations.get(g);
 								String historyAffiliationID = historyAffiliation.getAttributeValue("affiliation-id");
 								String parentHistoryAffiliationID  = historyAffiliation.getAttributeValue("parent");
-								if(historyAffiliationID!=null)
+								if(historyAffiliation.getChild("ip-doc",noNamespace)!=null)
 								{
-									historyAffiliationsBuffer.append("affid:"+historyAffiliationID);
-								}
-								
-								historyAffiliationsBuffer.append(Constants.IDDELIMITER);
-								
-								if(parentHistoryAffiliationID!=null)
-								{
-									historyAffiliationsBuffer.append("parentid:"+parentHistoryAffiliationID);
-								}
+									List ip_docs = historyAffiliation.getChildren("ip-doc",noNamespace);
+									for(int i=0;i<ip_docs.size();i++)
+									{
+										Element ip_doc =(Element) ip_docs.get(i);
+										String id = ip_doc.getAttributeValue("id");
+										//System.out.println("ID="+id);
+										String type = ip_doc.getAttributeValue("type");
+										//System.out.println("type="+type);
+										String relationship = ip_doc.getAttributeValue("relationship");
+										//System.out.println("relationship="+relationship);
+										if(id.equals(historyAffiliationID))
+										{
+											historyAffiliationsBuffer.append("aff:"+historyAffiliationID+";");
+											if(type!=null)
+											{
+												historyAffiliationsBuffer.append(type);
+											}
+											historyAffiliationsBuffer.append(";");
+											if(relationship!=null)
+											{
+												historyAffiliationsBuffer.append(relationship);
+											}
+											
+										}
+										else if(id.equals(parentHistoryAffiliationID))
+										{
+											historyAffiliationsBuffer.append("parent:"+parentHistoryAffiliationID+";");
+											if(type!=null)
+											{
+												historyAffiliationsBuffer.append(type);
+											}
+											historyAffiliationsBuffer.append(";");
+											if(relationship!=null)
+											{
+												historyAffiliationsBuffer.append(relationship);
+											}
+										}	
+										historyAffiliationsBuffer.append(Constants.IDDELIMITER);
+									}
+									outputAffiliation(ip_docs, out_aff);
+								}								
+															
 								
 								if(g< affiliations.size()-1)
 								{
@@ -594,6 +666,109 @@ public class AuthorProfile
 		}
 		return record;
 		
+	}
+	
+	private void outputAffiliation(List ip_docs, FileWriter out) throws Exception
+	{
+		for(int i=0;i<ip_docs.size();i++)
+		{
+			StringBuffer affBuffer = new StringBuffer();
+			Element ip_doc =(Element) ip_docs.get(i);
+			if(ip_doc.getAttributeValue("id")!=null)
+			{
+				affBuffer.append(ip_doc.getAttributeValue("id"));
+			}
+			affBuffer.append(FIELDDELIM);
+			if(ip_doc.getChildText("afnameid")!=null)
+			{
+				affBuffer.append(dictionary.mapEntity(ip_doc.getChildText("afnameid")));
+			}
+			affBuffer.append(FIELDDELIM);
+			
+			if(ip_doc.getChildText("afdispname")!=null)
+			{
+				affBuffer.append(dictionary.mapEntity(ip_doc.getChildText("afdispname")));
+			}
+			affBuffer.append(FIELDDELIM);
+			if(ip_doc.getChildText("preferred-name")!=null)
+			{
+				affBuffer.append(dictionary.mapEntity(ip_doc.getChildText("preferred-name")));
+			}
+			affBuffer.append(FIELDDELIM);
+			if(ip_doc.getChild("name-variant")!=null)
+			{
+				List name_variants=ip_doc.getChildren("name-variant");
+				for(int j=0;j<name_variants.size();j++)
+				{					
+					Element name_variant =(Element) name_variants.get(j);
+					if(name_variant!=null && name_variant.getTextTrim().length()>0)
+					{
+						affBuffer.append(dictionary.mapEntity(name_variant.getTextTrim()));
+						if(j<name_variants.size()-1)
+						{
+							affBuffer.append(Constants.IDDELIMITER);
+						}
+					}
+				}
+				
+			}
+			affBuffer.append(FIELDDELIM);
+			
+			
+			
+			Element address=ip_doc.getChild("address");
+			String country = null;
+			String city_group = null;
+			if(address!=null)
+			{
+				country = address.getAttributeValue("country");
+				city_group = address.getChildText("city-group");
+			}
+			
+			if(address != null && city_group!=null)
+			{
+				affBuffer.append(dictionary.mapEntity(city_group));
+			}
+			affBuffer.append(FIELDDELIM);
+			
+			if(address != null && address.getChildText("address-part")!=null)
+			{
+				affBuffer.append(dictionary.mapEntity(address.getChildText("address-part")));
+			}
+			affBuffer.append(FIELDDELIM);
+
+			if(address != null && address.getChildText("city")!=null)
+			{
+				affBuffer.append(dictionary.mapEntity(address.getChildText("city")));
+			}
+			
+			affBuffer.append(FIELDDELIM);
+			if(address != null && address.getChildText("state")!=null)
+			{
+			
+				affBuffer.append(dictionary.mapEntity(address.getChildText("state")));
+			}
+			
+			affBuffer.append(FIELDDELIM);
+			if(address != null && address.getChildText("postal-code")!=null)
+			{
+			
+				affBuffer.append(dictionary.mapEntity(address.getChildText("postal-code")));
+			}
+			
+			affBuffer.append(FIELDDELIM);
+			if(address != null && address.getChildText("country")!=null)
+			{
+				affBuffer.append(dictionary.mapEntity(address.getChildText("country")));
+			}
+			else if(address != null && country!=null)
+			{
+				affBuffer.append(country);
+			}
+			affBuffer.append(FIELDDELIM);
+			affBuffer.append(loadNumber);
+			out.write(affBuffer.toString()+"\n");
+		}
 	}
 	
 	public void writeRec(Hashtable record, FileWriter out) throws Exception
@@ -721,15 +896,46 @@ public class AuthorProfile
 			}
 			recordBuf.append(FIELDDELIM);
 			
+			if(record.get("CURRENTAFFILIATIONTYPE")!=null)
+			{
+				recordBuf.append((String)record.get("CURRENTAFFILIATIONTYPE"));
+			}
+			recordBuf.append(FIELDDELIM);
+			
+			if(record.get("CURRENTAFFILIATIONRELATIONSHIP")!=null)
+			{
+				recordBuf.append((String)record.get("CURRENTAFFILIATIONRELATIONSHIP"));
+			}
+			recordBuf.append(FIELDDELIM);
+			
+			
 			if(record.get("PARENTAFFILIATIONID")!=null)
 			{
 				recordBuf.append((String)record.get("PARENTAFFILIATIONID"));
 			}
 			recordBuf.append(FIELDDELIM);
 			
+			if(record.get("PARENTAFFILIATIONTYPE")!=null)
+			{
+				recordBuf.append((String)record.get("PARENTAFFILIATIONTYPE"));
+			}
+			recordBuf.append(FIELDDELIM);
+			
+			if(record.get("PARENTAFFILIATIONRELATIONSHIP")!=null)
+			{
+				recordBuf.append((String)record.get("PARENTAFFILIATIONRELATIONSHIP"));
+			}
+			recordBuf.append(FIELDDELIM);
+			
 			if(record.get("HISTORYAFFILIATIONID")!=null)
 			{
 				recordBuf.append((String)record.get("HISTORYAFFILIATIONID"));				
+			}			
+			recordBuf.append(FIELDDELIM);
+			
+			if(record.get("E_ADDRESS")!=null)
+			{
+				recordBuf.append((String)record.get("E_ADDRESS"));
 			}
 			
 			recordBuf.append(FIELDDELIM);
