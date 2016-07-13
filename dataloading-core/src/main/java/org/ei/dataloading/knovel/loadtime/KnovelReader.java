@@ -1,7 +1,6 @@
 package org.ei.dataloading.knovel.loadtime;
 
 import java.io.*;
-
 import java.util.*;
 import java.net.URLDecoder;
 import java.sql.Connection;
@@ -267,12 +266,12 @@ public class KnovelReader
 
 	}
 		 
-	private HashMap getFilesFromGroupFile(String name)
+	public HashMap getFilesFromGroupFile(String name)
 	{
 		HashMap groupMap = new HashMap();
 		try
 		{
-			System.out.println("GROUPFILENAME="+name);
+			//System.out.println("GROUPFILENAME="+name);
 			File inputFiles = new File(name);		
 			
 			SAXBuilder builder = new SAXBuilder();
@@ -310,10 +309,12 @@ public class KnovelReader
 		try
 		{
 			// download file from S3 bucket
+			//System.out.println("bucketName="+bucketName+" key="+key);
 			knovelS3 = new GetKnovelFilesFromS3(bucketName,key);
+			//System.out.println("GROUPFILENAME="+name.substring(name.lastIndexOf("/")+1, name.length()));
 			knovelS3.downloadGroupFileFromS3(name.substring(name.lastIndexOf("/")+1, name.length()).trim());	
 
-			System.out.println("GROUPFILENAME="+name);			
+						
 			File inputFiles = new File(name);		
 
 			SAXBuilder builder = new SAXBuilder();
@@ -1047,6 +1048,7 @@ public class KnovelReader
 					{
 						if(!this.excludedSubjectList.contains(singleSubject))
 						{
+							//System.out.println(singleSubject);
 							subjectSet.add(singleSubject);	
 						}
 					}
