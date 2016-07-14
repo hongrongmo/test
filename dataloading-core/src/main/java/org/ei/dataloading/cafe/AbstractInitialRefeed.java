@@ -15,19 +15,6 @@ import java.util.Vector;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 import org.ei.dataloading.bd.loadtime.BaseTableDriver;
 
 import com.amazonaws.AmazonClientException;

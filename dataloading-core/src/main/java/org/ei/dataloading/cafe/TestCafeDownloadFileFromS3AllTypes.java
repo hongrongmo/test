@@ -104,7 +104,7 @@ public class TestCafeDownloadFileFromS3AllTypes {
 				}
 				else
 				{
-					System.out.println("Invalid Date Format, please re-enter as 'DD-MMM-YY'");
+					System.out.println("Invalid Date Format, please re-enter as 'MMM-DD-YY'");
 					System.exit(1);
 				}
 			}
@@ -248,7 +248,7 @@ public class TestCafeDownloadFileFromS3AllTypes {
 			stmt = con.createStatement();
 							
 			String cafeInventory_list = "select key,epoch from CAFE_INVENTORY where key in "+
-										"(select key from sns_archive where doc_type='" + doc_type + "' and TO_CHAR(archive_date, 'DD-MON-RR')='" + archive_date + "') and doc_type='" + doc_type + "'";
+										"(select key from sns_archive where doc_type='" + doc_type + "' and TO_CHAR(archive_date, 'MON-DD-RR')='" + archive_date + "') and doc_type='" + doc_type + "'";
 			
 			rs = stmt.executeQuery(cafeInventory_list);
 			
@@ -302,7 +302,7 @@ public class TestCafeDownloadFileFromS3AllTypes {
 													   "GROUP BY key) x "+
 													   "JOIN sns_archive t ON x.key =t.key "+
 													   "AND x.epoch = t.epoch "+
-													   "where doc_type='" + doc_type + "' and TO_CHAR(archive_date, 'DD-MON-RR')='" + archive_date + "' "+
+													   "where doc_type='" + doc_type + "' and TO_CHAR(archive_date, 'MON-DD-RR')='" + archive_date + "' "+
 													   "order by x.key";
 				
 		
@@ -616,7 +616,7 @@ public class TestCafeDownloadFileFromS3AllTypes {
 	static boolean isValidDate(String input) 
 	{
 		
-		SimpleDateFormat format = new SimpleDateFormat("dd-MMM-yy");
+		SimpleDateFormat format = new SimpleDateFormat("MMM-dd-yy");
 	     try {
 	          format.parse(input);
 	          return true;
