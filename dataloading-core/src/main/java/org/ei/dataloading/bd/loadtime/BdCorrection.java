@@ -6,6 +6,7 @@ import java.util.*;
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
 import org.ei.common.CVSTermBuilder;
+import org.ei.common.Constants;
 import org.ei.dataloading.CombinedXMLWriter;
 //import org.ei.data.encompasslit.loadtime.*;
 import org.ei.common.upt.AssigneeFilter;
@@ -28,6 +29,7 @@ import java.text.*;
 import java.io.*;
 import java.lang.Process;
 import java.util.regex.*;
+
 import org.ei.util.GUID;
 import org.ei.xml.Entity;
 
@@ -58,7 +60,7 @@ public class BdCorrection
     static String sqlldrFileName="correctionFileLoader.sh";
     public static final String AUDELIMITER = new String(new char[] {30});
     public static final String IDDELIMITER = new String(new char[] {31});
-    public static final String GROUPDELIMITER = new String(new char[] {02});
+    public static final String GROUPDELIMITER = new String(new char[] {29});
     private static long startTime = System.currentTimeMillis();
     private static long endTime = System.currentTimeMillis();
     private static long midTime = System.currentTimeMillis();
@@ -397,39 +399,65 @@ public class BdCorrection
 
     private void outputLookupIndex(HashMap lookupData, int updateNumber)
     {
-
+    	String pui = null;
+    	if(lookupData.get("PUI")!=null)
+        {
+             pui = (String)lookupData.get("PUI");
+        }
+    	
         if(lookupData.get("AUTHOR")!=null)
         {
-            writeToFile((ArrayList)lookupData.get("AUTHOR"),"AUTHOR",updateNumber);
+            writeToFile((ArrayList)lookupData.get("AUTHOR"),"AUTHOR",updateNumber,pui);
         }
 
         if(lookupData.get("AFFILIATION")!=null)
         {
-            writeToFile((ArrayList)lookupData.get("AFFILIATION"),"AFFILIATION",updateNumber);
+            writeToFile((ArrayList)lookupData.get("AFFILIATION"),"AFFILIATION",updateNumber,pui);
         }
 
         if(lookupData.get("CONTROLLEDTERM")!=null)
         {
-            writeToFile((ArrayList)lookupData.get("CONTROLLEDTERM"),"CONTROLLEDTERM",updateNumber);
+            writeToFile((ArrayList)lookupData.get("CONTROLLEDTERM"),"CONTROLLEDTERM",updateNumber,pui);
         }
 
         if(lookupData.get("PUBLISHERNAME")!=null)
         {
-            writeToFile((ArrayList)lookupData.get("PUBLISHERNAME"),"PUBLISHERNAME",updateNumber);
+            writeToFile((ArrayList)lookupData.get("PUBLISHERNAME"),"PUBLISHERNAME",updateNumber,pui);
         }
 
         if(lookupData.get("SERIALTITLE")!=null)
         {
-            writeToFile((ArrayList)lookupData.get("SERIALTITLE"),"SERIALTITLE",updateNumber);
+            writeToFile((ArrayList)lookupData.get("SERIALTITLE"),"SERIALTITLE",updateNumber,pui);
         }
 
     }
 
 
 
-    private void writeToFile(List data, String field, int updateNumber)
+    private void writeToFile(List data, String field, int updateNumber,String pui)
     {
-        String fileName = "./lookupindex/"+database+"/"+database+"-"+field+"-"+updateNumber+".txt";
+    	String fileName = "lookupIndexfile.txt";
+    	if("AUTHOR".equals(field))
+    	{
+    		fileName = "./ei/index_au/"+field.toLowerCase()+"-"+updateNumber+"."+database;
+    	}
+    	else if("AFFILIATION".equals(field))
+    	{
+    		fileName = "./ei/index_af/"+field.toLowerCase()+"-"+updateNumber+"."+database;
+    	}
+    	else if("CONTROLLEDTERM".equals(field))
+    	{
+    		fileName = "./ei/index_cv/"+field.toLowerCase()+"-"+updateNumber+"."+database;
+    	}
+    	else if("PUBLISHERNAME".equals(field))
+    	{
+    		fileName = "./ei/index_pn/"+field.toLowerCase()+"-"+updateNumber+"."+database;
+    	}
+    	else if("SERIALTITLE".equals(field))
+    	{
+    		fileName = "./ei/index_st/"+field.toLowerCase()+"-"+updateNumber+"."+database;
+    	}	
+         		
         FileWriter out;
 
         File file=new File("lookupindex/"+database);
@@ -441,16 +469,36 @@ public class BdCorrection
             {
                 file.mkdir();
             }
-
+            String aid = "";
+            String oo = null;
 
 
             out = new FileWriter(fileName);
             System.out.println("field==> "+field);
             if(data != null)
             {
+                       	
                 for(int i=0;i<data.size();i++)
                 {
-                    out.write(data.get(i)+"\n");
+                	String ss = (String)data.get(i);
+                	if(ss!=null && ss.indexOf(Constants.GROUPDELIMITER)>-1)
+                	{
+                		int dd = ss.indexOf(Constants.GROUPDELIMITER);
+                		aid = ss.substring(0,dd);
+                		oo = ss.substring(dd+1);
+                		
+                	}
+                	else
+                	{
+                		oo = ss;
+                		
+                	}
+                    //out.write(data.get(i)+"\n");
+                    if(oo!=null && database!=null)
+                    {
+                    	out.write(Entity.prepareString(oo).toUpperCase().trim() + "\t" + database + "\t" + aid+"\t"+pui+"\n");
+                    }
+                   
                 }
             }
             out.close();
@@ -1305,7 +1353,7 @@ public class BdCorrection
                 }
                 else if(action.equals("lookupIndex") && updateNumber != 0 && database != null)
                 {
-                    sqlString = "select ACCESSNUMBER,AUTHOR,AUTHOR_1,AFFILIATION,AFFILIATION_1,CONTROLLEDTERM,CHEMICALTERM,SOURCETITLE,PUBLISHERNAME,DATABASE FROM BD_MASTER_ORIG where loadNumber="+updateNumber+" and database='"+database+"'";
+                    sqlString = "select ACCESSNUMBER,PUI,AUTHOR,AUTHOR_1,AFFILIATION,AFFILIATION_1,CONTROLLEDTERM,CHEMICALTERM,SOURCETITLE,PUBLISHERNAME,DATABASE FROM BD_MASTER_ORIG where updateNumber="+updateNumber+" and database='"+database+"'";
                 }
                 else
                 {
@@ -1931,6 +1979,7 @@ public class BdCorrection
         List publishernameList = new ArrayList();
         String database = null;
         String accessNumber = null;
+        String pui = null;
         try
         {
             while (rs.next())
@@ -1939,11 +1988,11 @@ public class BdCorrection
                 EVCombinedRec rec = new EVCombinedRec();
 
                 accessNumber = rs.getString("ACCESSNUMBER");
-
+                pui = rs.getString("PUI");
                 if(accessNumber !=null && accessNumber.length()>5 && !(accessNumber.substring(0,6).equals("200138")))
                 {
                     rec.put(EVCombinedRec.ACCESSION_NUMBER, accessNumber);
-
+                    rec.put(EVCombinedRec.PUI, pui);
                     if(rs.getString("AUTHOR") != null)
                     {
                         String authorString = rs.getString("AUTHOR");
