@@ -21,9 +21,9 @@ import org.ei.dataloading.CombinerTimestamp;
  * 
  * @author TELEBH
  * @date: 06/21/2016
- * @description: Author Affiliation ElasticSearch index file
+ * @description: Institution ElasticSearch index file
  * Only CPX AU/AF profiles to be indexed in ES 
- * by comparing author-id/affiliation-id with ANI metadata tables.
+ * by comparing affiliation-id with ANI metadata tables.
  */
 public class InstitutionCombiner{
 
@@ -39,7 +39,7 @@ public class InstitutionCombiner{
 	static String password = "ei3it";
 	static int loadNumber = 0;
 	static String tableName = "institute_profile";
-	static String metadataTableName = "hh_cmb_af_lookup";
+	static String metadataTableName = "hh_af_metadata";
 	static String operation = "new";
 
 	// get CurrentData and Time for ESIndexTime
@@ -293,7 +293,7 @@ public class InstitutionCombiner{
 					//LOADNUMBER
 					if(rs.getString("LOADNUMBER") !=null)
 					{
-						rec.put(AuAfCombinedRec.LOAD_NUMBER, rs.getString("LOADNUMBER"));
+						rec.put(AuAfCombinedRec.LOAD_NUMBER, Integer.toString(rs.getInt("LOADNUMBER")));
 					}
 
 					//EID
