@@ -1,4 +1,4 @@
-package org.ei.dataloading.cafe;
+package org.ei.dataloading.cafe.test;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
@@ -12,6 +12,7 @@ import java.util.Enumeration;
 import java.util.Vector;
 
 import org.ei.dataloading.bd.loadtime.BaseTableDriver;
+import org.ei.dataloading.cafe.AmazonS3Service;
 
 import com.amazonaws.AmazonClientException;
 import com.amazonaws.AmazonServiceException;
