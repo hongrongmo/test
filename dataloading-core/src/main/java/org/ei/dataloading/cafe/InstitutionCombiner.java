@@ -400,7 +400,7 @@ public class InstitutionCombiner{
 					}
 				}
 
-				writer.writeRec(rec);
+				writer.writeAfRec(rec);
 				
 				count ++;
 
