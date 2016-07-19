@@ -249,7 +249,7 @@ public class CombinedAuAfJSON {
 	private String prepareMultiValue(String str)
 	{
 		StringBuffer multiValue = new StringBuffer();
-		if(!(str.isEmpty()))
+		if(!(notNull(str).isEmpty()))
 		{
 			String[] values = str.split(Constants.IDDELIMITER);
 			for(int i=0;i<values.length;i++)

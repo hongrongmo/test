@@ -60,7 +60,7 @@ public class AuthorCombiner {
 	
 	//Author Affiliation
 	static AuAffiliation auaf;
-	LinkedHashSet<String> affiliation_historyIds_List = new LinkedHashSet<String>();
+	LinkedHashSet<String> affiliation_historyIds_List;
 	
 	AuAfCombinedRec rec;
 	
@@ -285,7 +285,7 @@ public class AuthorCombiner {
 	public void writeRecs(ResultSet rs, Connection con) throws Exception
 	{
 		int count = 0;
-		String current_affid= "";
+		String currentdept_affid= null;
 		String email="";
 		while (rs.next())
 		{
@@ -428,7 +428,15 @@ public class AuthorCombiner {
 					//CURRENT_AFFILIATION_ID
 					if(rs.getString("CURRENT_AFF_ID") !=null)
 					{
-						current_affid = rs.getString("CURRENT_AFF_ID");
+						if(rs.getString("CURRENT_AFF_TYPE") !=null && rs.getString("CURRENT_AFF_TYPE").equalsIgnoreCase("parent"))
+						{
+							auaf.setAffiliationId(rs.getString("CURRENT_AFF_ID"));
+						}
+						else
+						{
+							currentdept_affid = rs.getString("CURRENT_AFF_ID");
+						}
+						
 					}
 					//CURRENT_PARENT_AFFILIATION_ID
 					if(rs.getString("PARENT_AFF_TYPE") !=null && rs.getString("PARENT_AFF_ID") !=null)
@@ -436,11 +444,16 @@ public class AuthorCombiner {
 						if(rs.getString("PARENT_AFF_TYPE").trim().equalsIgnoreCase("parent"))
 						{
 							auaf.setAffiliationId(rs.getString("PARENT_AFF_ID"));
-							
-							//Current PARENT AFFILIATION INFO
-							prepareCurrentAffiliation(rs.getString("PARENT_AFF_ID"), current_affid, con);
 						}
 					}
+
+					//Current PARENT AFFILIATION INFO
+					if(!(auaf.getAffiliationId().isEmpty()))
+					{
+						prepareCurrentAffiliation(auaf.getAffiliationId(), currentdept_affid, con);
+					}
+					
+					
 					
 				//Historical PARENT AFFILIATION INFO
 					String history_affiliationIds = getStringFromClob(rs.getClob("HISTORY_AFFILIATIONID"));
@@ -449,10 +462,6 @@ public class AuthorCombiner {
 						prepareHistoryAffiliationIds(history_affiliationIds);
 						if(affiliation_historyIds_List.size() >0)
 						{
-							//cafe duplicate current affiliation in affiliation history, so in this case ignore the one in history
-							if(affiliation_historyIds_List.contains(auaf.getAffiliationId()))
-								affiliation_historyIds_List.remove(auaf.getAffiliationId());
-							
 							prepareHistoryAffiliation(con);
 						}
 					}
@@ -563,15 +572,15 @@ public class AuthorCombiner {
 				{
 					singleVarainat = singleName_Variant.split(Constants.IDDELIMITER);
 					
-						if(singleVarainat[0] != null)
+						if(singleVarainat.length>0 && singleVarainat[0] != null)
 						{
 							variantNameInit.append(singleVarainat[0]);
 						}
-						if(singleVarainat[2] != null)
+						if(singleVarainat.length>2 && singleVarainat[2] != null)
 						{
 							variantNameLast.append(singleVarainat[2]);
 						}
-						if(singleVarainat[3] !=null)
+						if(singleVarainat.length>3 && singleVarainat[3] !=null)
 						{
 							variantNameFirst.append(singleVarainat[3]);
 						}
@@ -634,16 +643,16 @@ public class AuthorCombiner {
 				{
 					singleJournal = author_Journal.split(Constants.IDDELIMITER);
 
-					if(singleJournal[1] !=null)
+					if(singleJournal.length>1 && singleJournal[1] !=null)
 					{
 						sourceTitles.append(singleJournal[1]);
 					}
-					else if(singleJournal[2] !=null )
+					if(singleJournal.length>2 && singleJournal[2] !=null )
 					{
 						sourceTitles.append(singleJournal[2]);
 					}
 					
-					if(singleJournal[3] !=null)
+					if(singleJournal.length>3 && singleJournal[3] !=null)
 					{
 						issn.append(singleJournal[3]);
 					}
@@ -751,26 +760,29 @@ public class AuthorCombiner {
 			//Current DepartmentID ONLY FOR DISPLAY			
 
 			//dept id
-			query = "select AFDISPNAME,CITY,COUNTRY from AUTHOR_AFF where AFFID='" + current_deptId + "'";
-			rsDept = stmt.executeQuery(query);
-			
-			auaf.setCurrentDeptAffiliation_Id(current_deptId);
-			while(rsDept.next())
+			if(current_deptId !=null)
 			{
-				if(rsDept.getString("AFDISPNAME") !=null)
+				query = "select AFDISPNAME,CITY,COUNTRY from AUTHOR_AFF where AFFID='" + current_deptId + "'";
+				rsDept = stmt.executeQuery(query);
+				
+				auaf.setCurrentDeptAffiliation_Id(current_deptId);
+				while(rsDept.next())
 				{
-					auaf.setCurrentDeptAffiliation_DisplayName(rsDept.getString("AFDISPNAME"));
-				}
-				if(rsDept.getString("CITY") !=null)
-				{
-					auaf.setCurrentDeptAffiliation_City(rsDept.getString("CITY"));
-				}
-				if(rsDept.getString("COUNTRY") !=null)
-				{
-					auaf.setCurrentDeptAffiliation_Country(rsDept.getString("COUNTRY"));
+					if(rsDept.getString("AFDISPNAME") !=null)
+					{
+						auaf.setCurrentDeptAffiliation_DisplayName(rsDept.getString("AFDISPNAME"));
+					}
+					if(rsDept.getString("CITY") !=null)
+					{
+						auaf.setCurrentDeptAffiliation_City(rsDept.getString("CITY"));
+					}
+					if(rsDept.getString("COUNTRY") !=null)
+					{
+						auaf.setCurrentDeptAffiliation_Country(rsDept.getString("COUNTRY"));
+					}
 				}
 			}
-			
+
 		}
 		catch(SQLException ex)
 		{
@@ -819,7 +831,8 @@ public class AuthorCombiner {
 	
 	
 	private void prepareHistoryAffiliationIds(String afhistids)
-	{		
+	{	
+		affiliation_historyIds_List= new LinkedHashSet<String>();
 		String[] affiliation_historyIds = afhistids.split(Constants.AUDELIMITER);
 		String[] singleAffiliation_history = null;
 		String[] singleAffiliation = null;
@@ -843,6 +856,11 @@ public class AuthorCombiner {
 				}
 			}
 		}
+		
+		//cafe duplicate current affiliation in affiliation history, so in this case ignore the one in history
+		if(affiliation_historyIds_List.contains(auaf.getAffiliationId()))
+			affiliation_historyIds_List.remove(auaf.getAffiliationId());
+		
 	}
 	
 	//Historical Affiliations
@@ -865,8 +883,9 @@ public class AuthorCombiner {
 		try
 		{
 			stmt = con.createStatement();
-			rs = stmt.executeQuery("select * from AUTHOR_AFF where AFFID in ("+ parent_histaffids + ")");
-			
+			String query = "select * from AUTHOR_AFF where AFFID in ("+ parent_histaffids + ")";
+			rs = stmt.executeQuery(query);
+
 			while(rs.next())
 			{
 				
