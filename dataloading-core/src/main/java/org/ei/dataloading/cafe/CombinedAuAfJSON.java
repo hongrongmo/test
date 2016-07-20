@@ -134,28 +134,28 @@ public class CombinedAuAfJSON {
 		out.println("{");
 		out.println("\t\"docproperties\":");
 		out.println("\t{");
-		out.println("\t\t\"doc_type\": " + "\"" + rec.getString(AuAfCombinedRec.DOC_TYPE) + "\",");
-		out.println("\t\t\"status\": " + "\"" + rec.getString(AuAfCombinedRec.STATUS) + "\",");
-		out.println("\t\t\"loaddate\": " + "\"" + rec.getString(AuAfCombinedRec.LOADDATE) + "\",");
-		out.println("\t\t\"itemtransactionid\": " + "\"" + rec.getString(AuAfCombinedRec.ITEMTRANSACTIONID) + "\",");
-		out.println("\t\t\"indexeddate\": " + "\"" + rec.getString(AuAfCombinedRec.INDEXEDDATE) + "\",");
-		out.println("\t\t\"esindextime\": " + "\"" + rec.getString(AuAfCombinedRec.ESINDEXTIME) + "\",");
-		out.println("\t\t\"loadnumber\": " + "\"" + rec.getString(AuAfCombinedRec.LOAD_NUMBER) + "\"");
+		out.println("\t\t\"doc_type\": " + "\"" + notNull(rec.getString(AuAfCombinedRec.DOC_TYPE)) + "\",");
+		out.println("\t\t\"status\": " + "\"" + notNull(rec.getString(AuAfCombinedRec.STATUS)) + "\",");
+		out.println("\t\t\"loaddate\": " + "\"" + notNull(rec.getString(AuAfCombinedRec.LOADDATE)) + "\",");
+		out.println("\t\t\"itemtransactionid\": " + "\"" + notNull(rec.getString(AuAfCombinedRec.ITEMTRANSACTIONID)) + "\",");
+		out.println("\t\t\"indexeddate\": " + "\"" + notNull(rec.getString(AuAfCombinedRec.INDEXEDDATE)) + "\",");
+		out.println("\t\t\"esindextime\": " + "\"" + notNull(rec.getString(AuAfCombinedRec.ESINDEXTIME)) + "\",");
+		out.println("\t\t\"loadnumber\": " + "\"" + notNull(rec.getString(AuAfCombinedRec.LOAD_NUMBER)) + "\"");
 		out.println("\t},");
 		             	 
 		out.println("\t\"audoc\": ");
 		out.println("\t{");             	
-		out.println("\t\t\"docid\": " + "\"" + rec.getString(AuAfCombinedRec.DOCID) + "\",") ;
-		out.println("\t\t\"eid\": " + "\"" + rec.getString(AuAfCombinedRec.EID) + "\",");
-		out.println("\t\t\"auid\": "+ "\"" + rec.getString(AuAfCombinedRec.AUID) + "\",");
-		out.println("\t\t\"orcid\": "+ "\"" + rec.getString(AuAfCombinedRec.ORCID) + "\",");
+		out.println("\t\t\"docid\": " + "\"" + notNull(rec.getString(AuAfCombinedRec.DOCID)) + "\",") ;
+		out.println("\t\t\"eid\": " + "\"" + notNull(rec.getString(AuAfCombinedRec.EID)) + "\",");
+		out.println("\t\t\"auid\": "+ "\"" + notNull(rec.getString(AuAfCombinedRec.AUID)) + "\",");
+		out.println("\t\t\"orcid\": "+ "\"" + notNull(rec.getString(AuAfCombinedRec.ORCID)) + "\",");
 		out.println("\t\t\"author_name\": ");
 		out.println("\t\t\t{");
 		out.println("\t\t\t\t\"variant_name\": ");
 		out.println("\t\t\t\t{");
-		out.println("\t\t\t\t\t\"variant_first\": " + "[ " + prepareMultiValue(rec.getString(AuAfCombinedRec.VARIANT_FIRST)) + " ],");
-		out.println("\t\t\t\t\t\"variant_ini\": " + "[ " + prepareMultiValue(rec.getString(AuAfCombinedRec.VARIANT_INI)) + " ],");
-		out.println("\t\t\t\t\t\"variant_last\": " + "[ " + prepareMultiValue(rec.getString(AuAfCombinedRec.VARIANT_LAST)) + " ]");
+		out.println("\t\t\t\t\t\"variant_first\": " + "[ " + prepareMultiValue(notNull(rec.getString(AuAfCombinedRec.VARIANT_FIRST))) + " ],");
+		out.println("\t\t\t\t\t\"variant_ini\": " + "[ " + prepareMultiValue(notNull(rec.getString(AuAfCombinedRec.VARIANT_INI))) + " ],");
+		out.println("\t\t\t\t\t\"variant_last\": " + "[ " + prepareMultiValue(notNull(rec.getString(AuAfCombinedRec.VARIANT_LAST))) + " ]");
 		out.println("\t\t\t\t},");
 		
 		
@@ -170,16 +170,16 @@ public class CombinedAuAfJSON {
 		
 		out.println("\t\t\"subjabbr\": ");
 		out.println("\t\t[");
-		out.println("\t\t\t" + prepareSubjabbr_Value(rec.getString(AuAfCombinedRec.CLASSIFICATION_SUBJABBR)));
+		out.println("\t\t\t" + prepareSubjabbr_Value(notNull(rec.getString(AuAfCombinedRec.CLASSIFICATION_SUBJABBR))));
 		out.println("\t\t],");
 		
-		out.println("\t\t\"subjclus\": [ " + prepareMultiValue(rec.getString(AuAfCombinedRec.SUBJECT_CLUSTER)) + " ],");
+		out.println("\t\t\"subjclus\": [ " + prepareMultiValue(notNull(rec.getString(AuAfCombinedRec.SUBJECT_CLUSTER))) + " ],");
 		out.println("\t\t\"pubrangefirst\": " + "\"" + notNull(rec.getString(AuAfCombinedRec.PUBLICATION_RANGE_FIRST)) + "\",");
 		out.println("\t\t\"pubrangelast\": " + "\"" + notNull(rec.getString(AuAfCombinedRec.PUBLICATION_RANGE_LAST)) + "\",");
 		
-		out.println("\t\t\"srctitle\": [ " + prepareMultiValue(rec.getString(AuAfCombinedRec.SOURCE_TITLE)) + " ],");
+		out.println("\t\t\"srctitle\": [ " + prepareMultiValue(notNull(rec.getString(AuAfCombinedRec.SOURCE_TITLE))) + " ],");
 		
-		out.println("\t\t\"issn\": [ " + prepareMultiValue(rec.getString(AuAfCombinedRec.ISSN)) + " ],");
+		out.println("\t\t\"issn\": [ " + prepareMultiValue(notNull(rec.getString(AuAfCombinedRec.ISSN))) + " ],");
 		
 		out.println("\t\t\"email\": " + "\"" + notNull(rec.getString(AuAfCombinedRec.EMAIL_ADDRESS)) + "\",");
 		
@@ -196,24 +196,24 @@ public class CombinedAuAfJSON {
 		
 		out.println("\t\t\t\"history\": ");
 		out.println("\t\t\t{");
-		out.println("\t\t\t\t\"afhistid\": [ " + prepareMultiValue(rec.getString(AuAfCombinedRec.AFFILIATION_HISTORY_ID)) + " ],");
-		out.println("\t\t\t\t\"history_display_name\": [ " + prepareMultiValue(rec.getString(AuAfCombinedRec.HISTORY_DISPLAY_NAME)) + " ],");
-		out.println("\t\t\t\t\"history_city\": [ " + prepareMultiValue(rec.getString(AuAfCombinedRec.HISTORY_CITY)) + " ],");
-		out.println("\t\t\t\t\"history_country\": [ " + prepareMultiValue(rec.getString(AuAfCombinedRec.HISTORY_COUNTRY)) + " ]");
+		out.println("\t\t\t\t\"afhistid\": [ " + prepareMultiValue(notNull(rec.getString(AuAfCombinedRec.AFFILIATION_HISTORY_ID))) + " ],");
+		out.println("\t\t\t\t\"history_display_name\": [ " + prepareMultiValue(notNull(rec.getString(AuAfCombinedRec.HISTORY_DISPLAY_NAME))) + " ],");
+		out.println("\t\t\t\t\"history_city\": [ " + prepareMultiValue(notNull(rec.getString(AuAfCombinedRec.HISTORY_CITY))) + " ],");
+		out.println("\t\t\t\t\"history_country\": [ " + prepareMultiValue(notNull(rec.getString(AuAfCombinedRec.HISTORY_COUNTRY))) + " ]");
 		out.println("\t\t\t},");
 		
-		out.println("\t\t\t\"parafid\": " + "[ " + prepareMultiValue(rec.getString(AuAfCombinedRec.PARENT_AFFILIATION_ID)) + " ],");
+		out.println("\t\t\t\"parafid\": " + "[ " + prepareMultiValue(notNull(rec.getString(AuAfCombinedRec.PARENT_AFFILIATION_ID))) + " ],");
 		
 		
 		out.println("\t\t\t\"affiliation_name\": ");
 		out.println("\t\t\t{");
-		out.println("\t\t\t\t\"affilprefname\": [ " + prepareMultiValue(rec.getString(AuAfCombinedRec.AFFILIATION_PREFERRED_NAME)) + " ],");
-		out.println("\t\t\t\t\"affilnamevar\": [ " + prepareMultiValue(rec.getString(AuAfCombinedRec.AFFILIATION_VARIANT_NAME)) + " ]");
+		out.println("\t\t\t\t\"affilprefname\": [ " + prepareMultiValue(notNull(rec.getString(AuAfCombinedRec.AFFILIATION_PREFERRED_NAME))) + " ],");
+		out.println("\t\t\t\t\"affilnamevar\": [ " + prepareMultiValue(notNull(rec.getString(AuAfCombinedRec.AFFILIATION_VARIANT_NAME))) + " ]");
 		out.println("\t\t\t},");
 		
-		out.println("\t\t\t\"city\": " + "[ " + prepareMultiValue(rec.getString(AuAfCombinedRec.CITY)) + " ],");
-		out.println("\t\t\t\"country\": " + "[ " + prepareMultiValue(rec.getString(AuAfCombinedRec.COUNTRY)) + " ],");
-		out.println("\t\t\t\"nameid\": " + "[ " + prepareMultiValue(rec.getString(AuAfCombinedRec.NAME_ID)) + " ],");
+		out.println("\t\t\t\"city\": " + "[ " + prepareMultiValue(notNull(rec.getString(AuAfCombinedRec.CITY))) + " ],");
+		out.println("\t\t\t\"country\": " + "[ " + prepareMultiValue(notNull(rec.getString(AuAfCombinedRec.COUNTRY))) + " ],");
+		out.println("\t\t\t\"nameid\": " + "[ " + prepareMultiValue(notNull(rec.getString(AuAfCombinedRec.NAME_ID))) + " ],");
 		
 		
 		out.println("\t\t\t\"deptid\": " + "\"" + notNull(rec.getString(AuAfCombinedRec.CURRENT_DEPT_AFFILIATION_ID)) + "\",");
@@ -249,7 +249,7 @@ public class CombinedAuAfJSON {
 	private String prepareMultiValue(String str)
 	{
 		StringBuffer multiValue = new StringBuffer();
-		if(!(notNull(str).isEmpty()))
+		if(str !=null && !(str.isEmpty()))
 		{
 			String[] values = str.split(Constants.IDDELIMITER);
 			for(int i=0;i<values.length;i++)
