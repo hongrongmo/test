@@ -647,7 +647,7 @@ public class AuthorCombiner {
 					{
 						sourceTitles.append(singleJournal[1]);
 					}
-					if(singleJournal.length>2 && singleJournal[2] !=null )
+					else if(singleJournal.length>2 && singleJournal[2] !=null )
 					{
 						sourceTitles.append(singleJournal[2]);
 					}
