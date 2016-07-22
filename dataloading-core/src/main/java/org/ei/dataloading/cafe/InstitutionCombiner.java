@@ -130,7 +130,7 @@ public class InstitutionCombiner{
 			}
 			
 			//upload ES files to S3 buckt for ES index with Lambda Function
-			UploadAuAfESToS3.UploadFileToS3(esDir,"evcafe", action);
+			UploadAuAfESToS3.UploadFileToS3(esDir,"evcafe");
 			
 		}
 		catch(Exception e)
