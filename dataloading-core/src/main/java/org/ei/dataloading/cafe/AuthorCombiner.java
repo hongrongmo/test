@@ -45,7 +45,7 @@ public class AuthorCombiner {
 	static int loadNumber = 0;
 	static String tableName = "author_profile";
 	static String metadataTableName = "hh_au_metadata";
-	static String operation = "new";
+	static String action = "new";
 
 	// get CurrentData and Time for ESIndexTime
 	DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
@@ -61,6 +61,8 @@ public class AuthorCombiner {
 	//Author Affiliation
 	static AuAffiliation auaf;
 	LinkedHashSet<String> affiliation_historyIds_List;
+	
+	LinkedHashSet<String> Author_ID_ToDelete_List;
 	
 	AuAfCombinedRec rec;
 	
@@ -112,7 +114,7 @@ public class AuthorCombiner {
 			}
 			if(args[8] !=null)
 			{
-				operation = args[8];
+				action = args[8];
 			}
 
 		}
@@ -126,6 +128,8 @@ public class AuthorCombiner {
 		{
 			writer = new CombinedAuAfJSON(doc_type,loadNumber);
 			writer.init();
+			
+			String esDir = writer.getEsDirName();
 
 
 			AuthorCombiner c = new AuthorCombiner();
@@ -140,6 +144,10 @@ public class AuthorCombiner {
 			{
 				c.writeCombinedByWeekNumber(con);
 			}
+			
+			//upload ES files to S3 buckt for ES index with Lambda Function
+			UploadAuAfESToS3.UploadFileToS3(esDir,"evcafe", action);
+			
 		}
 		catch(Exception e)
 		{
@@ -158,7 +166,7 @@ public class AuthorCombiner {
 		{
 			stmt = con.createStatement();
 			System.out.println("Running the query...");
-			String query = "select * from " +  tableName + " where authorid in (select authorid from " + metadataTableName + " where dbase='cpx')";
+			String query = "select * from " +  tableName + " where authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx')";
 			System.out.println("query");
 
 			rs = stmt.executeQuery(query);
@@ -221,14 +229,18 @@ public class AuthorCombiner {
 		{
 			stmt = con.createStatement();
 			System.out.println("Running the query...");
-			if(!(operation.isEmpty()) && operation.equalsIgnoreCase("new"))
+			if(!(action.isEmpty()) && action.equalsIgnoreCase("new"))
 			{
-				query = "select * from " +  tableName + " where loadnumber=" + loadNumber + " and authorid in (select AUTHORID from " + metadataTableName + " where dbase='cpx')";
+				query = "select * from " +  tableName + " where loadnumber=" + loadNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx')";
 			}
-			else if(!(operation.isEmpty()) && operation.equalsIgnoreCase("update"))
+			else if(!(action.isEmpty()) && action.equalsIgnoreCase("update"))
 			{
 				updateNumber=loadNumber;
-				query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHORID from " + metadataTableName + " where dbase='cpx')";
+				query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx')";
+			}
+			else if(!(action.isEmpty()) && action.equalsIgnoreCase("delete"))
+			{
+				// need to check with Hongrong
 			}
 			
 			System.out.println(query);

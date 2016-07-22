@@ -40,7 +40,7 @@ public class InstitutionCombiner{
 	static int loadNumber = 0;
 	static String tableName = "institute_profile";
 	static String metadataTableName = "hh_af_metadata";
-	static String operation = "new";
+	static String action = "new";
 
 	// get CurrentData and Time for ESIndexTime
 	DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
@@ -97,7 +97,7 @@ public class InstitutionCombiner{
 			}
 			if(args[8] !=null)
 			{
-				operation = args[8];
+				action = args[8];
 			}
 
 		}
@@ -111,7 +111,8 @@ public class InstitutionCombiner{
 		{
 			writer = new CombinedAuAfJSON(doc_type,loadNumber);
 			writer.init();
-
+			
+			String esDir = writer.getEsDirName();
 
 			InstitutionCombiner c = new InstitutionCombiner();
 			Connection con = c.getConnection(url,driver,username,password);
@@ -127,6 +128,10 @@ public class InstitutionCombiner{
 			{
 				c.writeCombinedByWeekNumber(con);
 			}
+			
+			//upload ES files to S3 buckt for ES index with Lambda Function
+			UploadAuAfESToS3.UploadFileToS3(esDir,"evcafe", action);
+			
 		}
 		catch(Exception e)
 		{
@@ -145,7 +150,7 @@ public class InstitutionCombiner{
 		{
 			stmt = con.createStatement();
 			System.out.println("Running the query...");
-			String query = "select * from " +  tableName + " where affid in (select AFFILIATION_ID from " + metadataTableName + " where dbase='cpx')";
+			String query = "select * from " +  tableName + " where affid in (select INSTITUTE_ID from " + metadataTableName + " where dbase='cpx')";
 			System.out.println("query");
 
 			rs = stmt.executeQuery(query);
@@ -208,16 +213,20 @@ public class InstitutionCombiner{
 		{
 			stmt = con.createStatement();
 			System.out.println("Running the query...");
-			if(!(operation.isEmpty()) && operation.equalsIgnoreCase("new"))
+			if(!(action.isEmpty()) && action.equalsIgnoreCase("new"))
 			{
-				query = "select * from " +  tableName + " where loadnumber=" + loadNumber + " and affid in (select AFFILIATION_ID from " + metadataTableName + " where dbase='cpx')";
+				query = "select * from " +  tableName + " where loadnumber=" + loadNumber + " and affid in (select INSTITUTE_ID from " + metadataTableName + " where dbase='cpx')";
 			}
-			else if(!(operation.isEmpty()) && operation.equalsIgnoreCase("update"))
+			else if(!(action.isEmpty()) && action.equalsIgnoreCase("update"))
 			{
 				updateNumber=loadNumber;
-				query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and affid in (select AFFILIATION_ID from " + metadataTableName + " where dbase='cpx')";
+				query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and affid in (select INSTITUTE_ID from " + metadataTableName + " where dbase='cpx')";
 			}
 			
+			else if(!(action.isEmpty()) && action.equalsIgnoreCase("delete"))
+			{
+				// need to check with Hongrong
+			}
 			System.out.println(query);
 
 			rs = stmt.executeQuery(query);

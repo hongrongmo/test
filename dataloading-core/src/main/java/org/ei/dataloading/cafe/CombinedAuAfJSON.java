@@ -82,6 +82,10 @@ public class CombinedAuAfJSON {
 		}
 	}
 
+	public String getEsDirName()
+	{
+		return this.ESdir.getAbsolutePath();
+	}
 	// Institution Profile
 	public void writeAfRec(AuAfCombinedRec rec) throws Exception
 	{
