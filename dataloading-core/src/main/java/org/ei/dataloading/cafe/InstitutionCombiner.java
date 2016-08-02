@@ -52,7 +52,7 @@ public class InstitutionCombiner{
 	static CombinedAuAfJSON writer;
 	Perl5Util perl = new Perl5Util();
 
-	static UploadAuAfESToS3 s3upload;
+	static AuAfESIndex s3upload;
 
 	public static void main(String args[])
 	{
@@ -116,7 +116,7 @@ public class InstitutionCombiner{
 			writer = new CombinedAuAfJSON(doc_type,loadNumber);
 			writer.init(1);
 			
-			s3upload = new UploadAuAfESToS3(doc_type);
+			s3upload = new AuAfESIndex(doc_type);
 			
 			String esDir = writer.getEsDirName();
 

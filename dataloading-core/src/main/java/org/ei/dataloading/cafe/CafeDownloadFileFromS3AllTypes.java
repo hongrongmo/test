@@ -930,7 +930,7 @@ public class CafeDownloadFileFromS3AllTypes {
 						if(keys_MID_to_be_deleted.size() >0)
 						{
 							//delete from ES
-							UploadAuAfESToS3 esIndexObj = new UploadAuAfESToS3(doc_type);
+							AuAfESIndex esIndexObj = new AuAfESIndex(doc_type);
 							esIndexObj.EsBulkDelete(keys_MID_to_be_deleted);
 
 							//delete from DB
@@ -954,7 +954,7 @@ public class CafeDownloadFileFromS3AllTypes {
 			if(keys_MID_to_be_deleted.size() >0)
 			{
 				//delete from ES
-				UploadAuAfESToS3 esIndexObj = new UploadAuAfESToS3(doc_type);
+				AuAfESIndex esIndexObj = new AuAfESIndex(doc_type);
 				esIndexObj.EsBulkDelete(keys_MID_to_be_deleted);
 
 				//delete from DB

@@ -73,7 +73,7 @@ public class AuthorCombiner {
 	
 	AuAfCombinedRec rec;
 	String esDir;
-	static UploadAuAfESToS3 s3upload;
+	static AuAfESIndex s3upload;
 	
 	
 	Connection con = null;
@@ -139,7 +139,7 @@ public class AuthorCombiner {
 		{
 			writer = new CombinedAuAfJSON(doc_type,loadNumber);
 			writer.init(ESdirSeq_ID);
-			s3upload = new UploadAuAfESToS3(doc_type);
+			s3upload = new AuAfESIndex(doc_type);
 			
 
 			AuthorCombiner c = new AuthorCombiner();
@@ -314,7 +314,7 @@ public class AuthorCombiner {
 				System.out.println("Got records... from table: " + tableName);
 				getDeletionList(rs);
 				
-				UploadAuAfESToS3.DeleteFilesFromS3(auId_deletion_list, "evcafe");
+				AuAfESIndex.DeleteFilesFromS3(auId_deletion_list, "evcafe");
 				
 			}
 			
