@@ -178,9 +178,30 @@
     		<version>0.20.5</version>
 		</dependency>
   
+			<!-- HH 07/26/2016 for Amazon ES JEST HTTP REST Client -->
+		<dependency>
+  			<groupId>io.searchbox</groupId>
+  			<artifactId>jest</artifactId>
+  			<version>2.0.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.4.1</version>
+		</dependency>
+				
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.5.6</version>
+		</dependency>
+
+		<!-- END HH 07/26/2016 -->
+		
 		
 		<!-- HH: 02/18/2016 for Amazon Lambda -->
-		<!-- <dependency>
+		 <dependency>
 			<groupId>com.amazonaws</groupId>
 			<artifactId>aws-java-sdk-lambda</artifactId>
 			<version>1.10.21</version>
@@ -201,7 +222,7 @@
  			<artifactId>aws-lambda-java-log4j</artifactId>
   			<version>1.0.0</version>
   		 </dependency>
-  		  -->
+  		  
 		
 	</dependencies>
 
@@ -245,6 +266,26 @@
         </executions>
     </plugin>
     <!-- END -->
+    
+    <!-- HH 07/28/2016 for Lambda Package creating -->
+    <!-- <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>2.3</version>
+        <configuration>
+          <createDependencyReducedPom>false</createDependencyReducedPom>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin> -->
+      <!-- END -->
+      
 		</plugins>
 	</build>
 </project>
