@@ -653,7 +653,7 @@ public class AuthorProfileCorrection
 			while (rs.next())
 			{
 				authorid= rs.getString("authorid");
-
+				
 				if(checkRecord(authorid,con1))
 				{
 					deleteRecord(authorid,con1);
