@@ -1,6 +1,7 @@
 package org.ei.util;
 
 import java.sql.Connection;
+
 import java.sql.DriverManager;
 import java.io.*;
 import java.sql.Clob;
@@ -14,8 +15,22 @@ import java.util.regex.*;
 
 import org.ei.domain.*;
 import org.ei.query.base.*;
+import org.elasticsearch.action.get.GetResponse;
+import org.elasticsearch.client.Client;
+import org.elasticsearch.node.Node;
+import org.elasticsearch.client.transport.TransportClient;
+import org.elasticsearch.common.transport.InetSocketTransportAddress;
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
+
+import io.searchbox.client.JestClient;
+import io.searchbox.client.JestClientFactory;
+import io.searchbox.client.config.HttpClientConfig;
+import io.searchbox.core.Index;
+import io.searchbox.core.Search;
+import io.searchbox.core.SearchResult;
+import io.searchbox.core.SearchResult.Hit; 
+
 
 public class NewDataTesting
 {
@@ -135,12 +150,136 @@ public class NewDataTesting
 		{
 			test.getCPCDescription(updateNumber);
 		}
+		else  if(action.equals("testElasticSearch"))
+		{
+			test.testElasticSearch();
+		}
 		else
 		{
 			test.getData(database);
 		}
 
 	}
+	
+	private void testElasticSearch() throws Exception
+	{
+		// Construct a new Jest Client via factory
+				JestClientFactory factory = new JestClientFactory();
+				factory.setHttpClientConfig(new HttpClientConfig
+						.Builder("http://search-evcafeauaf-v6tfjfyfj26rtoneh233lzzqtq.us-east-1.es.amazonaws.com:80")
+						.multiThreaded(true)
+						.build()
+						);
+				
+				JestClient client = factory.getObject();
+				
+				String esDocument = "{\n\"docproperties\":\n"+
+						"{\n"+
+				"\"doc_type\": \"apr\",\n"+
+				"\"status\": \"update\",\n"+
+				"\"loaddate\": \"20160601\",\n"+
+				"\"itemtransactionid\": \"2015-09-01T04:32:52.537345Z\",\n"+
+				"\"indexeddate\": \"1441081972\",\n"+
+				"\"esindextime\": \"2016-07-19T17:52:43.404Z\",\n"+
+				"\"loadnumber\": \"401600\"\n"+
+			"},\n"+
+			"\"audoc\":\n"+ 
+			"{\n"+
+				"\"docid\": \"aut_M22aaa18f155dfa29a2bM7f9b10178163171\",\n"+
+				"\"eid\": \"9-s2.0-56798528800\",\n"+
+				"\"auid\": \"56798528800\",\n"+
+				"\"orcid\": \"null\",\n"+
+				"\"author_name\":\n"+ 
+					"{\n"+
+						"\"variant_name\":\n"+ 
+						"{\n"+
+							"\"variant_first\": [  ],\n"+
+							"\"variant_ini\": [  ],\n"+
+							"\"variant_last\": [  ]\n"+
+						"},\n"+
+						"\"preferred_name\":\n"+ 
+						"{\n"+
+							"\"preferred_first\": \"Iv&aacute;n J.\",\n"+
+							"\"preferred_ini\": \"I.J.\",\n"+
+							"\"preferred_last\": \"Bazany-Rodr&iacute;guez\"\n"+
+						"}\n"+
+					"},\n"+
+				"\"subjabbr\":\n"+ 
+				"[\n"+
+					"{ \"frequency\": \"3\" , \"code\": \"PHYS\" },\n"+
+					"{ \"frequency\": \"5\" , \"code\": \"MATE\" },\n"+
+					"{ \"frequency\": \"1\" , \"code\": \"CHEM\" },\n"+
+					"{ \"frequency\": \"1\" , \"code\": \"ENGI\" }\n"+
+				"],\n"+
+				"\"subjclus\": [ \"PHYS\" , \"MATE\" , \"CHEM\" , \"ENGI\" ],\n"+
+				"\"pubrangefirst\": \"2015\",\n"+
+				"\"pubrangelast\": \"2016\",\n"+
+				"\"srctitle\": [ \"Acta Crystallographica Section E: Crystallographic Communications\" , \"Sensors and Actuators, B: Chemical\" ],\n"+
+				"\"issn\": [ \"20569890\" , \"09254005\" ],\n"+
+				"\"email\": \"\",\n"+
+				"\"author_affiliations\":\n"+ 
+				"{\n"+
+					"\"current\":\n"+ 
+					"{\n"+
+						"\"afid\": \"60032442\",\n"+
+						"\"display_name\": \"Universidad Nacional Autonoma de Mexico\",\n"+
+						"\"display_city\": \"Mexico City\",\n"+
+						"\"display_country\": \"Mexico\",\n"+
+						"\"sortname\": \"National Autonomous University of Mexico\"\n"+
+					"},\n"+
+					"\"history\":\n"+ 
+					"{\n"+
+						"\"afhistid\": [  ],\n"+
+						"\"history_display_name\": [  ],\n"+
+						"\"history_city\": [  ],\n"+
+						"\"history_country\": [  ]\n"+
+					"},\n"+
+					"\"parafid\": [ \"60032442\" ],\n"+
+					"\"affiliation_name\":\n"+ 
+					"{\n"+
+						"\"affilprefname\": [ \"Universidad Nacional Autonoma de Mexico\" ],\n"+
+						"\"affilnamevar\": [ \"UNAM\" , \"Universidad Nacional Aut&oacute;noma de M&eacute;xico\" ]\n"+
+					"},\n"+
+					"\"city\": [ \"Mexico City\" ],\n"+
+					"\"country\": [ \"Mexico\" ],\n"+
+					"\"nameid\": [ \"Universidad Nacional Autonoma de Mexico#60032442\" ],\n"+
+					"\"deptid\": \"104652099\",\n"+
+					"\"dept_display_name\": \"Universidad Nacional Autonoma de Mexico, Institute of Chemistry\",\n"+
+					"\"dept_city\": \"Mexico City\",\n"+
+					"\"dept_country\": \"Mexico\"\n"+
+				"}\n"+
+			"}\n"+
+		"}";
+
+				
+				Index index = new Index.Builder(esDocument).index("cafe").type("author").id("aut_M22aaa18f155dfa29a2bM7f9b10178163171").build();
+				client.execute(index);
+			
+	}
+	
+	 protected void exampleSearch(JestClient client) throws Exception { 
+	        String query = "{\n" 
+	                + "    \"query\": {\n" 
+	                + "        \"filtered\" : {\n" 
+	                + "            \"query\" : {\n" 
+	                + "                \"query_string\" : {\n" 
+	                + "                    \"query\" : \"java\"\n" 
+	                + "                }\n" 
+	                + "            }" 
+	                + "        }\n" 
+	                + "    }\n" 
+	                + "}"; 
+	        Search.Builder searchBuilder = new Search.Builder(query).addIndex("jug").addType("talk"); 
+	        io.searchbox.core.SearchResult result = client.execute(searchBuilder.build()); 
+	        /*
+	        List<Hit<Talk, Void>> hits = result.getHits(Talk.class); 
+	        log.info("Retrieved result " + result.getJsonString()); 
+	        for (Hit<Talk, Void> hit: hits) { 
+	            Talk talk = hit.source; 
+	            log.info(talk.getTitle()); 
+	        }
+	        */ 
+	    } 
 	
 	private void getCPCDescription(String filename)
 	{
@@ -302,7 +441,7 @@ public class NewDataTesting
 
 				String sessionId = null;
 				int pagesize = 25;
-				SearchResult result = sc.openSearch(queryObject,sessionId,pagesize,false);
+				org.ei.domain.SearchResult result = sc.openSearch(queryObject,sessionId,pagesize,false);
 				int c = result.getHitCount();
 				if(c > 0)
 					return Integer.toString(c);
@@ -535,7 +674,7 @@ public class NewDataTesting
 
 			String sessionId = null;
 			int pagesize = 25;
-			SearchResult result = sc.openSearch(queryObject,sessionId,pagesize,false);
+			org.ei.domain.SearchResult result = sc.openSearch(queryObject,sessionId,pagesize,false);
 			int c = result.getHitCount();
 			if(c > 0)
 				return c;
@@ -695,7 +834,7 @@ public class NewDataTesting
 
 				String sessionId = null;
 				int pagesize = 25;
-				SearchResult result = sc.openSearch(queryObject,sessionId,pagesize,false);
+				org.ei.domain.SearchResult result = sc.openSearch(queryObject,sessionId,pagesize,false);
 				int c = result.getHitCount();
 				System.out.println(term1+"\t"+c);
 				/*
@@ -750,7 +889,7 @@ public class NewDataTesting
 
 			String sessionId = null;
 			int pagesize = 25;
-			SearchResult result = sc.openSearch(queryObject,sessionId,pagesize,false);
+			org.ei.domain.SearchResult result = sc.openSearch(queryObject,sessionId,pagesize,false);
 			int c = result.getHitCount();
 			if(c > 0)
 				return Integer.toString(c);
