@@ -57,7 +57,11 @@ public class BdCorrection
     static String lookupTable="deleted_lookupIndex";
     static String backupTable="bd_temp_backup";
 	static String referenceTable="bd_reference_temp";
+	static String authorLookupTempTable ="cafe_au_lookup";
+	static String affiliationLookupTempTable = "cafe_af_lookup";
     static String sqlldrFileName="correctionFileLoader.sh";
+    static String authorLookupIndexSqlldrFileName = "cafe_au_lookupindex.sh";
+    static String AffLookupIndexSqlldrFileName = "cafe_af_lookupindex.sh";
     public static final String AUDELIMITER = new String(new char[] {30});
     public static final String IDDELIMITER = new String(new char[] {31});
     public static final String GROUPDELIMITER = new String(new char[] {29});
@@ -104,7 +108,13 @@ public class BdCorrection
             System.out.println("IO error trying to read your input!");
             System.exit(1);
         }
-
+        if(args.length>12)
+        {
+        	authorLookupIndexSqlldrFileName = args[11];
+        	AffLookupIndexSqlldrFileName = args[12];           
+        }
+        
+        System.out.println("using SqlldrFile "+AffLookupIndexSqlldrFileName+" and "+authorLookupIndexSqlldrFileName+" to load lookupindex file into database");
 
         if(args.length>10)
         {
@@ -354,7 +364,33 @@ public class BdCorrection
 
             if(action.equalsIgnoreCase("lookupIndex"))
             {
+            	bdc.cleanUp(tableToBeTruncated);
                 bdc.outputLookupIndex(bdc.getLookupData("lookupIndex"),updateNumber);
+                String authorLookupIndexFile="ei/index_au/author-"+updateNumber+"."+database;
+                String affiliationLookupIndexFile="ei/index_af/affiliation-"+updateNumber+"."+database;
+                if(test)
+                {
+                	
+                    System.out.println("sql loader file "+authorLookupIndexFile+" created;");
+                    System.out.println("about to load lookup index data file "+authorLookupIndexFile);
+                    System.out.println("press enter to continue");
+                    System.in.read();
+                    Thread.currentThread().sleep(1000);
+                }
+                bdc.loadLookupIndexFile(authorLookupIndexSqlldrFileName,authorLookupIndexFile);
+                bdc.loadLookupIndexFile(AffLookupIndexSqlldrFileName,affiliationLookupIndexFile);
+                System.out.println("AUTHORINDEXFILE="+authorLookupIndexFile+" AFFINDEXFILE="+affiliationLookupIndexFile);
+                if(test)
+                {
+                	
+                    System.out.println("sql loader file "+affiliationLookupIndexFile+" created;");
+                    System.out.println("about to load lookup index data file "+affiliationLookupIndexFile);
+                    System.out.println("press enter to continue");
+                    System.in.read();
+                    Thread.currentThread().sleep(1000);
+                }
+               
+                bdc.updateAuthorAffiliationProfile(con);
                 System.out.println(database+" "+updateNumber+" lookup index is done.");
                 midTime = endTime;
                 endTime = System.currentTimeMillis();
@@ -396,6 +432,176 @@ public class BdCorrection
 
         System.exit(1);
     }
+    
+    private void updateAuthorAffiliationProfile(Connection con1) throws Exception
+    {
+    	  Statement stmt = null;
+          ResultSet rs = null;
+          PreparedStatement pstmt=null;
+          try
+          {
+        	  //set as cpx record 
+	          stmt = con.createStatement();                         
+	          stmt.executeUpdate("update author_profile set database='cpx' where authorid in (select author_id from cafe_au_lookup_temp)");
+	          
+	          //do update when the author id is in the cafe_au_lookup
+	          rs = stmt.executeQuery("select * from cafe_au_lookup_temp where author_id in(select author_id from cafe_au_lookup)");
+			  String sql = "update cafe_au_lookup set display_name=?,au_index_name=?,id=?,dbase=? where author_id=?";
+			  con.setAutoCommit(false);
+			  pstmt = con.prepareStatement(sql);
+			  int batchSize = 1000;
+			  int count = 0;
+			  
+			  while (rs.next())
+	          {				 
+				  pstmt.setString(1,rs.getString("display_name"));
+				  pstmt.setString(2,rs.getString("au_index_name"));
+				  pstmt.setString(3,rs.getString("id"));
+				  pstmt.setString(4,rs.getString("dbase"));				
+				  pstmt.setString(5,rs.getString("author_id"));
+				  pstmt.addBatch();
+				  if(++count % batchSize == 0) 
+				  {
+					  pstmt.executeBatch();
+				  }
+	          }
+			  pstmt.executeBatch();
+			  con.commit();
+			  con.setAutoCommit(true);
+			  //insert as new if author id is not in the cafe_au_lookup table.
+			  stmt.executeUpdate("insert into cafe_au_lookup select * from cafe_au_lookup_temp where author_id not in(select author_id from cafe_au_lookup)");
+			  
+			  //update affiliation profile
+			  stmt.executeUpdate("update institute_profile set database='cpx' where affid in (select INSTITUTE_ID from cafe_af_lookup_temp)");
+	          
+	          //do update when the affiliation id is in the cafe_af_lookup
+	          rs = stmt.executeQuery("select * from cafe_af_lookup_temp where institute_id in(select institute_id from cafe_af_lookup)");
+			  sql = "update cafe_af_lookup set institute_name=?,id=?,dbase=? where institute_id=?";
+			  con.setAutoCommit(false);
+			  pstmt = con.prepareStatement(sql);			  
+			  count = 0;
+			  
+			  while (rs.next())
+	          {
+				  
+				  pstmt.setString(1,rs.getString("institute_name"));
+				  pstmt.setString(2,rs.getString("id"));
+				  pstmt.setString(3,rs.getString("dbase"));				
+				  pstmt.setString(4,rs.getString("institute_id"));
+				  pstmt.addBatch();
+				  if(++count % batchSize == 0) 
+				  {
+					  pstmt.executeBatch();
+				  }
+	          }
+			  pstmt.executeBatch();
+			  con.commit();
+			  con.setAutoCommit(true);
+			 
+			  //insert as new if author id is not in the cafe_au_lookup table.
+			  stmt.executeUpdate("insert into cafe_af_lookup select * from cafe_af_lookup_temp where institute_id not in(select institute_id from cafe_af_lookup)");
+			  
+			  /*
+			  //find the record which is not in author_profile table
+			  rs = stmt.executeQuery("select * from cafe_au_lookup_temp where author_id not in (select author_id from author_profile)");
+			  Hashtable authorID = new Hashtable();
+			  StringBuffer puiQuery = new StringBuffer();
+			  while (rs.next())
+	          {
+				  String aid = rs.getString("author_id");
+				  String pui = rs.getString("pui");
+				  authorID.put(aid, pui);
+				  puiQuery.append("'"+pui+"',");
+	          }
+			  if(puiQuery.length()>0)
+			  {
+				  puiQuery.substring(0,puiQuery.length()-1);
+			  
+				  //getAuthor object from cafe_master table
+				  rs = stmt.executeQuery("select author,author_1,affiliation,affiliation_1 from cafe_master where pui in ("+puiQuery+")");
+				  List authorList  = new ArrayList();
+				  while (rs.next())
+				  {
+					 String author = rs.getString("author");
+					 String author_1 = rs.getString("author_1");
+					 String affiliation = rs.getString("affiliation");
+					 String affiliation_1 = rs.getString("affiliation_1");
+					 if(author!=null && author_1!=null)
+					 {
+						 author = author+author_1;
+					 }
+					 if(affiliation!=null && affiliation_1!=null)
+					 {
+						 affiliation = affiliation+affiliation_1;
+					 }
+					 if(author!=null)
+					 {		             
+						 List authors = (new BdAuthors(author)).getAuthors();
+						 BdAuthor authorl = null;
+						 for(int i=0;i<authors.size();i++)
+						 {
+							 authorl = (BdAuthor)authors.get(i);
+							 String id = authorl.getAuid();
+							 if(authorID.containsKey(id))
+							 {
+								 if (affiliation != null) 
+								 {
+									List affs = (new BdAffiliations(affiliation)).getAffiliations();
+									for(int j=0;j<affs.size();j++)
+									{
+										BdAffiliation aff = (BdAffiliation)affs.get(j);
+									}
+								 }
+							 }
+							
+						 }
+					 }
+					 
+					
+
+		                   
+				  }
+			  }
+			  */
+			  
+          }
+          catch(Exception e)
+          {
+        	  e.printStackTrace();
+          }            
+          finally
+          {
+              if(pstmt != null)
+              {
+                  try
+                  {
+                      pstmt.close();
+                  }
+                  catch(Exception se)
+                  {
+                  }
+              }
+              if(stmt != null)
+              {
+                  try
+                  {
+                      stmt.close();
+                  }
+                  catch(Exception se)
+                  {
+                  }
+              }
+          }          
+    }
+    
+    private void loadLookupIndexFile(String sqlldrFileName, String dataFileName) throws Exception
+    {
+    	
+         Runtime r = Runtime.getRuntime();
+
+         Process p = r.exec("./"+sqlldrFileName+" "+dataFileName);
+         int t = p.waitFor();
+    }
 
     private void outputLookupIndex(HashMap lookupData, int updateNumber)
     {
@@ -406,22 +612,22 @@ public class BdCorrection
         }
     	
         if(lookupData.get("AUTHOR")!=null)
-        {
+        {       	
             writeToFile((ArrayList)lookupData.get("AUTHOR"),"AUTHOR",updateNumber,pui);
         }
 
         if(lookupData.get("AFFILIATION")!=null)
-        {
+        {        	
             writeToFile((ArrayList)lookupData.get("AFFILIATION"),"AFFILIATION",updateNumber,pui);
         }
 
         if(lookupData.get("CONTROLLEDTERM")!=null)
-        {
+        {       
             writeToFile((ArrayList)lookupData.get("CONTROLLEDTERM"),"CONTROLLEDTERM",updateNumber,pui);
         }
 
         if(lookupData.get("PUBLISHERNAME")!=null)
-        {
+        {        	
             writeToFile((ArrayList)lookupData.get("PUBLISHERNAME"),"PUBLISHERNAME",updateNumber,pui);
         }
 
@@ -490,13 +696,12 @@ public class BdCorrection
                 	}
                 	else
                 	{
-                		oo = ss;
-                		
+                		oo = ss;               		
                 	}
-                    //out.write(data.get(i)+"\n");
-                    if(oo!=null && database!=null)
+                    
+                    if(oo!=null && !oo.equals("null") && database!=null)
                     {
-                    	out.write(Entity.prepareString(oo).toUpperCase().trim() + "\t" + database + "\t" + aid+"\t"+pui+"\n");
+                    	out.write(Entity.prepareString(oo).toUpperCase().trim() + "\t" + database + "\t" + aid+"\n");
                     }
                    
                 }
@@ -1054,16 +1259,19 @@ public class BdCorrection
 					System.out.println("truncate reference table "+this.referenceTable);
                 }
 				
-				/*
-				if(database.equals("cpx"))
+				if(i==4 && database.equals("cpx"))
 				{
+					this.authorLookupTempTable=tableName[i];
 					stmt.executeUpdate("truncate table "+tableName[i]);
-				}
-				else
+					System.out.println("truncate author lookup table "+this.authorLookupTempTable);
+                }
+				
+				if(i==5 && database.equals("cpx"))
 				{
-					System.out.println("no reference except cpx");
-				}
-				*/
+					this.affiliationLookupTempTable=tableName[i];
+					stmt.executeUpdate("truncate table "+tableName[i]);
+					System.out.println("truncate affiliation lookup table "+this.affiliationLookupTempTable);
+                }
             }
 
         }
@@ -1349,15 +1557,15 @@ public class BdCorrection
             {
                 if(action.equals("update")||action.equals("aip"))
                 {
-                    sqlString = "select ACCESSNUMBER,AUTHOR,AUTHOR_1,AFFILIATION,AFFILIATION_1,CONTROLLEDTERM,CHEMICALTERM,SOURCETITLE,PUBLISHERNAME,DATABASE FROM "+tempTable;
+                    sqlString = "select ACCESSNUMBER,AUTHOR,AUTHOR_1,AFFILIATION,AFFILIATION_1,CONTROLLEDTERM,CHEMICALTERM,SOURCETITLE,PUBLISHERNAME,DATABASE,PUI FROM "+tempTable;
                 }
                 else if(action.equals("lookupIndex") && updateNumber != 0 && database != null)
                 {
-                    sqlString = "select ACCESSNUMBER,PUI,AUTHOR,AUTHOR_1,AFFILIATION,AFFILIATION_1,CONTROLLEDTERM,CHEMICALTERM,SOURCETITLE,PUBLISHERNAME,DATABASE FROM BD_MASTER_ORIG where updateNumber="+updateNumber+" and database='"+database+"'";
+                    sqlString = "select ACCESSNUMBER,PUI,AUTHOR,AUTHOR_1,AFFILIATION,AFFILIATION_1,CONTROLLEDTERM,CHEMICALTERM,SOURCETITLE,PUBLISHERNAME,DATABASE,PUI FROM BD_MASTER_ORIG where updateNumber="+updateNumber+" and database='"+database+"'";
                 }
                 else
                 {
-                    sqlString = "select ACCESSNUMBER,AUTHOR,AUTHOR_1,AFFILIATION,AFFILIATION_1,CONTROLLEDTERM,CHEMICALTERM,SOURCETITLE,PUBLISHERNAME,DATABASE FROM "+backupTable;
+                    sqlString = "select ACCESSNUMBER,AUTHOR,AUTHOR_1,AFFILIATION,AFFILIATION_1,CONTROLLEDTERM,CHEMICALTERM,SOURCETITLE,PUBLISHERNAME,DATABASE,PUI FROM "+backupTable;
                 }
 
                 System.out.println("Processing "+sqlString);
@@ -1985,14 +2193,15 @@ public class BdCorrection
             while (rs.next())
             {
                 ++i;
-                EVCombinedRec rec = new EVCombinedRec();
+                //EVCombinedRec rec = new EVCombinedRec();
 
                 accessNumber = rs.getString("ACCESSNUMBER");
                 pui = rs.getString("PUI");
+                //System.out.println("PUI="+pui);
                 if(accessNumber !=null && accessNumber.length()>5 && !(accessNumber.substring(0,6).equals("200138")))
                 {
-                    rec.put(EVCombinedRec.ACCESSION_NUMBER, accessNumber);
-                    rec.put(EVCombinedRec.PUI, pui);
+                    recs.put("ACCESSION_NUMBER", accessNumber);
+                    recs.put("PUI", pui);
                     if(rs.getString("AUTHOR") != null)
                     {
                         String authorString = rs.getString("AUTHOR");
