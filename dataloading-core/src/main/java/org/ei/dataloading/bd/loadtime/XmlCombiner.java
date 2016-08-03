@@ -897,7 +897,7 @@ throws Exception
                     
                    //*
                    // * use for numerical index
-                    if(pui!=null && pui.length()>0)
+                    if(pui!=null && pui.length()>0 && isCpx)
                     {
                     	populateNumericalIndex(pui,rec,con);                 
                     }
