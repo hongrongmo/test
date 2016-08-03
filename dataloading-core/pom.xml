@@ -177,7 +177,16 @@
     		<artifactId>elasticsearch</artifactId>
     		<version>0.20.5</version>
 		</dependency>
-  
+  		<dependency>
+			<groupId>io.searchbox</groupId>
+			<artifactId>jest</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.4.1</version>
+		</dependency>
 		
 		<!-- HH: 02/18/2016 for Amazon Lambda -->
 		<!-- <dependency>
