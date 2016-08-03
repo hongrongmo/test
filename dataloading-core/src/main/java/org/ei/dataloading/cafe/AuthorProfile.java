@@ -203,6 +203,12 @@ public class AuthorProfile
 						//System.out.println("EID= "+eid);
 					}
 					
+					if(meta.getChild("orcid",xocsNamespace)!=null)
+					{
+						String orcid = meta.getChildText("orcid",xocsNamespace);
+						record.put("ORCID",orcid);						
+					}
+					
 					if(meta.getChild("timestamp",xocsNamespace)!=null)
 					{
 						String timestamp = meta.getChildText("timestamp",xocsNamespace);
@@ -695,6 +701,16 @@ public class AuthorProfile
 				affBuffer.append(dictionary.mapEntity(ip_doc.getChildText("preferred-name")));
 			}
 			affBuffer.append(FIELDDELIM);
+			if(ip_doc.getChildText("parent-preferred-name")!=null)
+			{
+				affBuffer.append(dictionary.mapEntity(ip_doc.getChildText("parent-preferred-name")));
+			}
+			affBuffer.append(FIELDDELIM);
+			if(ip_doc.getChildText("sort-name")!=null)
+			{
+				affBuffer.append(dictionary.mapEntity(ip_doc.getChildText("sort-name")));
+			}
+			affBuffer.append(FIELDDELIM);
 			if(ip_doc.getChild("name-variant")!=null)
 			{
 				List name_variants=ip_doc.getChildren("name-variant");
@@ -936,6 +952,13 @@ public class AuthorProfile
 			if(record.get("E_ADDRESS")!=null)
 			{
 				recordBuf.append((String)record.get("E_ADDRESS"));
+			}
+			
+			recordBuf.append(FIELDDELIM);
+			
+			if(record.get("ORCID")!=null)
+			{			
+				recordBuf.append((String)record.get("ORCID"));
 			}
 			
 			recordBuf.append(FIELDDELIM);
