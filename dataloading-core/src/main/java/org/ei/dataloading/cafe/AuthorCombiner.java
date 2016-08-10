@@ -49,6 +49,7 @@ public class AuthorCombiner {
 	static String metadataTableName = "hh_au_metadata";
 	static String action = "new";
 	int updateNumber;
+	static int recsPerEsbulk;
 	
 	static int ESdirSeq_ID = 1;
 	
@@ -74,13 +75,19 @@ public class AuthorCombiner {
 	AuAfCombinedRec rec;
 	String esDir;
 	static AuAfESIndex s3upload;
+	static AusAffESIndex esIndex;
 	
 	
 	Connection con = null;
 	
+	private static long startTime = System.currentTimeMillis();
+	private static long endTime = System.currentTimeMillis();
+	private static long midTime = System.currentTimeMillis();
+	
+	
 	public static void main(String args[])
 	{
-		if(args.length >8)
+		if(args.length >9)
 		{
 			if(args[0] !=null)
 			{
@@ -127,6 +134,19 @@ public class AuthorCombiner {
 			{
 				action = args[8];
 			}
+			if(args[9] !=null)
+			{
+				try
+				{
+					recsPerEsbulk = Integer.parseInt(args[9]);
+					
+					System.out.println("ES Documents per Bulk: " + recsPerEsbulk);
+				}
+				catch(NumberFormatException ex)
+				{
+					recsPerEsbulk = 10;
+				}
+			}
 
 		}
 		else
@@ -139,13 +159,22 @@ public class AuthorCombiner {
 		{
 			writer = new CombinedAuAfJSON(doc_type,loadNumber);
 			writer.init(ESdirSeq_ID);
-			s3upload = new AuAfESIndex(doc_type);
+			//s3upload = new AuAfESIndex(doc_type);  for ES index using Jest
+			
+			esIndex = new AusAffESIndex(recsPerEsbulk);
 			
 
 			AuthorCombiner c = new AuthorCombiner();
 			c.con = c.getConnection(url,driver,username,password);
 		
 			c.esDir = writer.getEsDirName();
+			
+			midTime = System.currentTimeMillis();
+			endTime = System.currentTimeMillis();
+			System.out.println("Time for finish reading input parameter & ES initialization "+(endTime-startTime)/1000.0+" seconds");
+			System.out.println("total Time used "+(endTime-startTime)/1000.0+" seconds");
+
+			
 						
 			if(loadNumber ==1)
 			{
@@ -185,8 +214,27 @@ public class AuthorCombiner {
 				rs = stmt.executeQuery(query);
 
 				System.out.println("Got records... from table: " + tableName);
+				
+				midTime = endTime;
+				endTime = System.currentTimeMillis();
+				System.out.println("time for get records from table "+(endTime-midTime)/1000.0+" seconds");
+				System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+				
+				
 				writeRecs(rs,con);
+				
+				esIndex.ProcessBulk();
+				esIndex.end();
+				
+				
 				System.out.println("Wrote records.");
+				
+				midTime = endTime;
+				endTime = System.currentTimeMillis();
+				System.out.println("time for get records from table "+(endTime-midTime)/1000.0+" seconds");
+				System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+				
+				
 
 			}
 			else if(!(action.isEmpty()) && action.equalsIgnoreCase("delete"))
@@ -262,24 +310,39 @@ public class AuthorCombiner {
 				query = "select * from " +  tableName + " where loadnumber=" + loadNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx')";
 				
 				System.out.println(query);
-
 				rs = stmt.executeQuery(query);
 
 				System.out.println("Got records... from table: " + tableName);
+				
+				midTime = endTime;
+				endTime = System.currentTimeMillis();
+				System.out.println("time for get records from table "+(endTime-midTime)/1000.0+" seconds");
+				System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+				
+				
 				writeRecs(rs,con);
+				
+				esIndex.ProcessBulk();
+				esIndex.end();
+				
+				
 				System.out.println("Wrote records.");
+				
+				midTime = endTime;
+				endTime = System.currentTimeMillis();
+				System.out.println("time for run ES extract & index "+(endTime-midTime)/1000.0+" seconds");
+				System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+				
+				
 			}
 			else if(!(action.isEmpty()) && action.equalsIgnoreCase("update"))
 			{
 				updateNumber=loadNumber;
 				query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx')";
 				
-				//for testing ES & Lambda
-				//query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and m_id='aut_M22aaa18f155dfa29a2bM7d0110178163171' and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx')";
-				//query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and rownum<1001";
-				/*query = "select * from " + tableName + " where updatenumber=" + updateNumber + " and M_ID in " + 
-				"('aut_M22aaa18f155dfa29a2bM734010178163171', 'aut_M22aaa18f155dfa29a2bM70d410178163171', 'aut_M22aaa18f155dfa29a2bM696e10178163171', 'aut_M22aaa18f155dfa29a2bM613e10178163171')";			
-				*/
+				// for testing
+				
+				//query = "select * from " +  tableName + " where m_id='aut_M22aaa18f155dfa29a2bM5efd10178163171'";
 				
 				
 				System.out.println(query);
@@ -287,17 +350,29 @@ public class AuthorCombiner {
 				rs = stmt.executeQuery(query);
 
 				System.out.println("Got records... from table: " + tableName);
-				writeRecs(rs,con);
-				System.out.println("Wrote records.");
 				
+				midTime = endTime;
+				endTime = System.currentTimeMillis();
+				System.out.println("time for get records from table "+(endTime-midTime)/1000.0+" seconds");
+				System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+				
+				
+				writeRecs(rs,con);
 				//s3upload.end();
 				
 				//upload ES files to S3 buckt for ES index with Lambda Function
 				//UploadAuAfESToS3.UploadFileToS3(esDir,"evcafe");
 				
-					
-
+				esIndex.ProcessBulk();
+				esIndex.end();
 				
+				System.out.println("Wrote records.");
+				
+				midTime = endTime;
+				endTime = System.currentTimeMillis();
+				System.out.println("time for run ES extract & index "+(endTime-midTime)/1000.0+" seconds");
+				System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+		
 			}
 			
 			else if(!(action.isEmpty()) && action.equalsIgnoreCase("delete"))
@@ -613,7 +688,7 @@ public class AuthorCombiner {
 					rec.put(AuAfCombinedRec.CURRENT_DEPT_AFFILIATION_ID, auaf.getCurrentDeptAffiliation_Id());
 					
 					//CURRENT DEPT AFFILIATION DISPLAY_NAME
-					rec.put(AuAfCombinedRec.CURRENT_DEPT_AFFILIATION_DISPLAY_NAME, auaf.getCurrentDeptAffiliation_DisplayName());
+					rec.put(AuAfCombinedRec.CURRENT_DEPT_AFFILIATION_DISPLAY_NAME, DataLoadDictionary.mapUnicodeEntity(auaf.getCurrentDeptAffiliation_DisplayName()));
 					
 					//CURRENT DEPT AFFILIATION CITY
 					rec.put(AuAfCombinedRec.CURRENT_DEPT_AFFILIATIOIN_CITY, auaf.getCurrentDeptAffiliation_City());
@@ -951,7 +1026,11 @@ public class AuthorCombiner {
 						
 						if(singleAffiliation[1] !=null && singleAffiliation[1].equalsIgnoreCase("parent"))
 						{
-							affiliation_historyIds_List.add(singleAffiliation[0].substring(singleAffiliation[0].indexOf(":")+1, singleAffiliation[0].length()));
+							if(!(affiliation_historyIds_List.contains(singleAffiliation[0].substring(singleAffiliation[0].indexOf(":")+1, singleAffiliation[0].length()))))
+							{
+								affiliation_historyIds_List.add(singleAffiliation[0].substring(singleAffiliation[0].indexOf(":")+1, singleAffiliation[0].length()));
+							}
+							
 						}
 					}
 				}
