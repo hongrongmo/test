@@ -192,7 +192,7 @@ public class AusAffESIndex {
 
 		// end
 		es.end();
-
+		
 
 	}
 
