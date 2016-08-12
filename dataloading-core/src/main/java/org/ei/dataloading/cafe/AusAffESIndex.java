@@ -199,7 +199,6 @@ public class AusAffESIndex {
 	public class MyHttpResponseHandler<T> implements HttpResponseHandler<AmazonWebServiceResponse<T>> 
 	{
 
-
 		public AmazonWebServiceResponse<T> handle(com.amazonaws.http.HttpResponse response) throws Exception 
 		{
 
