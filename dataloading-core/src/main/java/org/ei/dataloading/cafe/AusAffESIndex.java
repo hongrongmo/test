@@ -196,11 +196,12 @@ public class AusAffESIndex {
 
 	}
 
-	public class MyHttpResponseHandler<T> implements HttpResponseHandler<AmazonWebServiceResponse<T>> {
+	public class MyHttpResponseHandler<T> implements HttpResponseHandler<AmazonWebServiceResponse<T>> 
+	{
 
 
-		public AmazonWebServiceResponse<T> handle(
-				com.amazonaws.http.HttpResponse response) throws Exception {
+		public AmazonWebServiceResponse<T> handle(com.amazonaws.http.HttpResponse response) throws Exception 
+		{
 
 			InputStream responseStream = response.getContent();
 
@@ -221,11 +222,11 @@ public class AusAffESIndex {
 		}
 	}
 
-	public class MyErrorHandler implements HttpResponseHandler<AmazonServiceException> {
+	public class MyErrorHandler implements HttpResponseHandler<AmazonServiceException> 
+	{
 
-
-		public AmazonServiceException handle(
-				com.amazonaws.http.HttpResponse response) throws Exception {
+		public AmazonServiceException handle(com.amazonaws.http.HttpResponse response) throws Exception 
+		{
 			System.out.println("Request exception handler!");
 
 			AmazonServiceException ase = new AmazonServiceException("What is wrong!.");

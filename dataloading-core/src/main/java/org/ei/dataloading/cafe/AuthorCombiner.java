@@ -573,7 +573,12 @@ public class AuthorCombiner {
 						if(journals !=null)
 						{
 							prepareSourceTitle(journals);
-						}	
+						}
+						// as per XFAB transformation instructions doc
+						else
+						{
+							rec.put(AuAfCombinedRec.SOURCE_TITLE, "undefined");
+						}
 
 					if(rs.getString("E_ADDRESS") !=null)
 					{
