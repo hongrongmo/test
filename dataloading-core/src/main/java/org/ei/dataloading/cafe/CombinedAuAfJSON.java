@@ -7,9 +7,12 @@ import java.io.PrintWriter;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 import org.ei.common.Constants;
+import org.ei.dataloading.CombinedXMLWriter;
 import org.ei.dataloading.DataLoadDictionary;
 import org.ei.domain.DataDictionary;
 import org.ei.xml.Entity;
@@ -108,7 +111,7 @@ public class CombinedAuAfJSON {
 		this.docid = rec.getString(AuAfCombinedRec.DOCID);
 		// take off Entity.prepareString, as we need to extract AU/AF content to ES exact same as in DB, then EV web need to use same mapping to do search
 		
-		
+		// if having special characters in ES it need to search for exact special character, so 
 		JsonObject esDocument = factory.createObjectBuilder()
 				.add("docproperties", factory.createObjectBuilder()
 						.add("doc_type", notNull(rec.getString(AuAfCombinedRec.DOC_TYPE)))
@@ -118,6 +121,7 @@ public class CombinedAuAfJSON {
 						.add("indexeddate",notNull(rec.getString(AuAfCombinedRec.INDEXEDDATE)))
 						.add("esindextime", replaceDot(notNull(rec.getString(AuAfCombinedRec.ESINDEXTIME))))
 						.add("loadnumber",notNull(rec.getString(AuAfCombinedRec.LOAD_NUMBER)))
+						)
 						.add("afdoc",factory.createObjectBuilder()
 								.add("doc_id",notNull(rec.getString(AuAfCombinedRec.DOCID)))
 								.add("eid",notNull(rec.getString(AuAfCombinedRec.EID)))
@@ -135,7 +139,6 @@ public class CombinedAuAfJSON {
 										.add("quality",notNull(rec.getString(AuAfCombinedRec.QUALITY)))
 										.add("certscore",prepareCertainityScores(notNull(rec.getString(AuAfCombinedRec.CERTAINITY_SCORES))))
 								)
-						)
 				.build();
 				
 				
@@ -186,6 +189,7 @@ public class CombinedAuAfJSON {
 														.add("pubrangefirst", notNull(rec.getString(AuAfCombinedRec.PUBLICATION_RANGE_FIRST)))
 														.add("pubrangelast", notNull(rec.getString(AuAfCombinedRec.PUBLICATION_RANGE_LAST)))
 														.add("srctitle", prepareMultiValues(notNull(rec.getString(AuAfCombinedRec.SOURCE_TITLE))))
+														//.add("srctitle", normalize(notNull(rec.getString(AuAfCombinedRec.SOURCE_TITLE)))) // when get srctitle from JOURNAL Col
 														.add("issn",prepareMultiValues(notNull(rec.getString(AuAfCombinedRec.ISSN))))
 														.add("email",notNull(rec.getString(AuAfCombinedRec.EMAIL_ADDRESS)))
 														.add("author_affiliations", factory.createObjectBuilder()
@@ -396,6 +400,34 @@ public class CombinedAuAfJSON {
 		}
 		return certainity_score_pairs.build();
 
+	}
+	
+	private JsonArray normalize(String str)
+	{
+		JsonArrayBuilder normallizedStrBuilder = factory.createArrayBuilder();
+		Set <String> uniqueSrc_titles = new HashSet<String>(); 
+		
+		String normalized_scrctitle = "";
+		
+		if(str !=null && !(str.isEmpty()))
+		{
+			String[] values = str.split(Constants.IDDELIMITER);
+			for(int i=0;i<values.length;i++)
+			{
+				normalized_scrctitle = CombinedXMLWriter.cafeGetStems(Entity.prepareString(values[i]));
+				if(!(uniqueSrc_titles.contains(normalized_scrctitle)))
+				{
+					uniqueSrc_titles.add(normalized_scrctitle);
+				}
+			}
+		}	
+		
+		for(String srctitle: uniqueSrc_titles)
+		{
+			normallizedStrBuilder.add(srctitle);
+		}
+	
+		return normallizedStrBuilder.build();
 	}
 	
 }
