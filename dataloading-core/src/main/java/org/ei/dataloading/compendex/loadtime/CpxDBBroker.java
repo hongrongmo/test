@@ -17,7 +17,8 @@ import java.util.Enumeration;
 import java.util.Hashtable;
 import java.util.Properties;
 
-import oracle.jdbc.driver.OracleResultSet;
+//import oracle.jdbc.driver.OracleResultSet;  // works for ojdbc14.jar (for 11g RDS)
+
 import oracle.sql.CLOB;
 
 public class CpxDBBroker {
@@ -203,13 +204,15 @@ public class CpxDBBroker {
                     }
 
                     if (field.equals("AB")) {
-                        CLOB ab = ((OracleResultSet) rec).getCLOB(field);
+                       //CLOB ab = ((OracleResultSet) rec).getCLOB(field);  //HH: 08/09/2016 works for ojdbc14 (11g RDS)
+                    	 CLOB ab = (CLOB) ((ResultSet) rec).getClob(field);  //HH: 08/09/2016 added to work for ojdbc6 (12c RDS)
 
                         if (ab == null || !(ab.getSubString(1, (int) ab.length()).equals(correctionValue))) {
                             if (correctionValue.length() > 0) {
                                 strLog.append("Old:" + field + "|" + ab.getSubString(1, (int) ab.length()) + "\n");
                                 ab = getCLOB(correctionValue, conn);
-                                ((OracleResultSet) rec).updateCLOB(field, ab);
+                                //((OracleResultSet) rec).updateCLOB(field, ab);   //HH: 08/09/2016 works for ojdbc14 (11g RDS)
+                                ((ResultSet) rec).updateClob(field, ab);	  //HH: 08/09/2016 added to work for ojdbc6 (12c RDS)
                                 strLog.append("New:" + field + "|" + correctionValue + "\n");
                                 updated = true;
                                 updatedFields.append(field + ",");
@@ -293,7 +296,8 @@ public class CpxDBBroker {
             }
             if (field != null) {
                 if (field.equals("AB")) {
-                    CLOB ab = ((OracleResultSet) rec).getCLOB(field);
+                    //CLOB ab = ((OracleResultSet) rec).getCLOB(field);   //HH: 08/09/2016 works for ojdbc14 (11g RDS)
+                    CLOB ab = (CLOB) ((ResultSet) rec).getClob(field);	//HH: 08/09/2016 added to work for ojdbc6 (12c RDS)
 
                     if (ab == null || !(ab.getSubString(1, (int) ab.length()).equals(abStr))) {
                         updated = true;
