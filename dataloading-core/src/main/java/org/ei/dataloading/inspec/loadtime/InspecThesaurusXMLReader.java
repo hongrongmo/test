@@ -17,6 +17,10 @@ import java.util.Comparator;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.List;
+import java.util.function.Function;
+import java.util.function.ToDoubleFunction;
+import java.util.function.ToIntFunction;
+import java.util.function.ToLongFunction;
 
 import org.apache.oro.text.perl.Perl5Util;
 import org.ei.xml.Entity;
@@ -253,6 +257,98 @@ public class InspecThesaurusXMLReader extends FilterReader {
             String term2 = (String) t2.get(SEARCH_TERM);
             return term1.compareTo(term2);
         }
+
+		@Override
+		public Comparator<Object> reversed() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public Comparator<Object> thenComparing(Comparator<? super Object> other) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public <U> Comparator<Object> thenComparing(
+				Function<? super Object, ? extends U> keyExtractor,
+				Comparator<? super U> keyComparator) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public <U extends Comparable<? super U>> Comparator<Object> thenComparing(
+				Function<? super Object, ? extends U> keyExtractor) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public Comparator<Object> thenComparingInt(
+				ToIntFunction<? super Object> keyExtractor) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public Comparator<Object> thenComparingLong(
+				ToLongFunction<? super Object> keyExtractor) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public Comparator<Object> thenComparingDouble(
+				ToDoubleFunction<? super Object> keyExtractor) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		public <T extends Comparable<? super T>> Comparator<T> reverseOrder() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		public <T extends Comparable<? super T>> Comparator<T> naturalOrder() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		public <T> Comparator<T> nullsFirst(
+				Comparator<? super T> comparator) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		public <T> Comparator<T> nullsLast(
+				Comparator<? super T> comparator) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		public <T, U> Comparator<T> comparing(
+				Function<? super T, ? extends U> keyExtractor,
+				Comparator<? super U> keyComparator) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		public <T, U extends Comparable<? super U>> Comparator<T> comparing(
+				Function<? super T, ? extends U> keyExtractor) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		public <T> Comparator<T> comparingInt(
+				ToIntFunction<? super T> keyExtractor) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		public <T> Comparator<T> comparingLong(
+				ToLongFunction<? super T> keyExtractor) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		public <T> Comparator<T> comparingDouble(
+				ToDoubleFunction<? super T> keyExtractor) {
+			// TODO Auto-generated method stub
+			return null;
+		}
     }
 
     private StringBuffer getMixData(List<?> l, StringBuffer b) {
