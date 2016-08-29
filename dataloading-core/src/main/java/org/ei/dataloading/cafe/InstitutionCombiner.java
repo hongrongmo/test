@@ -463,25 +463,25 @@ public class InstitutionCombiner{
 					//PREFEREDNAME
 					if(rs.getString("PREFERED_NAME") !=null)
 					{
-						rec.put(AuAfCombinedRec.AFFILIATION_PREFERRED_NAME, DataLoadDictionary.mapUnicodeEntity(rs.getString("PREFERED_NAME")));
+						rec.put(AuAfCombinedRec.AFFILIATION_PREFERRED_NAME, DataLoadDictionary.mapEntity(rs.getString("PREFERED_NAME")));
 					}
 
 					//SORTNAME
 					if(rs.getString("SORT_NAME") !=null)
 					{
-						rec.put(AuAfCombinedRec.AFFILIATION_SORT_NAME, DataLoadDictionary.mapUnicodeEntity(rs.getString("SORT_NAME")));
+						rec.put(AuAfCombinedRec.AFFILIATION_SORT_NAME, DataLoadDictionary.mapEntity(rs.getString("SORT_NAME")));
 					}
 
 					//NAMEVARIANT
 					if(rs.getString("NAME_VARIANT") !=null)
 					{
-						rec.put(AuAfCombinedRec.AFFILIATION_VARIANT_NAME, DataLoadDictionary.mapUnicodeEntity(rs.getString("NAME_VARIANT")));
+						rec.put(AuAfCombinedRec.AFFILIATION_VARIANT_NAME, DataLoadDictionary.mapEntity(rs.getString("NAME_VARIANT")));
 					}
 
 					//ADDRESSPART
 					if(rs.getString("ADDRESS_PART") !=null)
 					{
-						rec.put(AuAfCombinedRec.ADDRESS, DataLoadDictionary.mapUnicodeEntity(rs.getString("ADDRESS_PART")));
+						rec.put(AuAfCombinedRec.ADDRESS, DataLoadDictionary.mapEntity(rs.getString("ADDRESS_PART")));
 					}
 
 					//CITY
@@ -500,7 +500,7 @@ public class InstitutionCombiner{
 					if(rs.getString("POSTAL_CODE") !=null)
 					{
 						//System.out.println("RS postcode: " + rs.getString("POSTALCODE"));
-						rec.put(AuAfCombinedRec.ZIP, DataLoadDictionary.mapUnicodeEntity(rs.getString("POSTAL_CODE")));
+						rec.put(AuAfCombinedRec.ZIP, DataLoadDictionary.mapEntity(rs.getString("POSTAL_CODE")));
 						//System.out.println("AuAfCombinedRec Postcode: " + rec.getString(AuAfCombinedRec.POST_CODE));
 					}
 

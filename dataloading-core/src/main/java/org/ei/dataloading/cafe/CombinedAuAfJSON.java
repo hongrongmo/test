@@ -137,7 +137,7 @@ public class CombinedAuAfJSON {
 										.add("zip",notNull(rec.getString(AuAfCombinedRec.ZIP)))
 										.add("country",notNull(rec.getString(AuAfCombinedRec.COUNTRY)))
 										.add("quality",notNull(rec.getString(AuAfCombinedRec.QUALITY)))
-										.add("certscore",prepareCertainityScores(notNull(rec.getString(AuAfCombinedRec.CERTAINITY_SCORES))))
+										.add("certscore",prepareComposit_field(notNull(rec.getString(AuAfCombinedRec.CERTAINITY_SCORES))))
 								)
 				.build();
 				
@@ -184,7 +184,7 @@ public class CombinedAuAfJSON {
 														.add("preferred_last", notNull(rec.getString(AuAfCombinedRec.PREFERRED_LAST)))
 														)
 													)
-														.add("subjabbr", prepareSubjabbr_Values(notNull(rec.getString(AuAfCombinedRec.CLASSIFICATION_SUBJABBR))))
+														.add("subjabbr", prepareComposit_field(notNull(rec.getString(AuAfCombinedRec.CLASSIFICATION_SUBJABBR))))
 														.add("subjclus", prepareMultiValues(notNull(rec.getString(AuAfCombinedRec.SUBJECT_CLUSTER))))
 														.add("pubrangefirst", notNull(rec.getString(AuAfCombinedRec.PUBLICATION_RANGE_FIRST)))
 														.add("pubrangelast", notNull(rec.getString(AuAfCombinedRec.PUBLICATION_RANGE_LAST)))
@@ -294,7 +294,7 @@ public class CombinedAuAfJSON {
 	
 	private  JsonArray prepareMultiValues(String str)
 	{
-		JsonArrayBuilder builder = Json.createArrayBuilder();
+		JsonArrayBuilder builder = factory.createArrayBuilder();
 		if(str !=null && !(str.isEmpty()))
 		{
 			String[] values = str.split(Constants.IDDELIMITER);
@@ -306,101 +306,28 @@ public class CombinedAuAfJSON {
 		return builder.build();
 	}
 	
-	private String prepareSubjabbr_Value(String subjabbr)
+	
+	private JsonArray prepareComposit_field(String compositField)
 	{
-		StringBuffer frequency_code_pairs = new StringBuffer();
-		String[] single_subjabbr;
+		String[] single_pair;
 		
-		if(!(subjabbr.isEmpty()))
+		JsonArrayBuilder pairs = factory.createArrayBuilder();
+				
+		if(!(compositField.isEmpty()))
 		{
-			String[] subjabbrs = subjabbr.split(Constants.AUDELIMITER);
-			for(int i=0;i<subjabbrs.length;i++)
+			String[] composit_pairs = compositField.split(Constants.AUDELIMITER);
+			for(int i=0;i<composit_pairs.length;i++)
 			{
-				single_subjabbr = subjabbrs[i].split(Constants.IDDELIMITER);
-				frequency_code_pairs.append("{ \"frequency\": \"" + single_subjabbr[0] + "\" , \"code\": \"" + single_subjabbr[1] + "\" }");
-				if(i<subjabbrs.length-1)
-				{
-					//frequency_code_pairs.append(",\n\t\t\t");
-					frequency_code_pairs.append(",");
-				}
+				single_pair = composit_pairs[i].split(Constants.IDDELIMITER);
+				
+				pairs.add(single_pair[0] + " " + single_pair[1]);
+							
 			}
 		}
-		return frequency_code_pairs.toString();
+		return pairs.build();
 
 	}
 	
-	private JsonArray prepareSubjabbr_Values(String subjabbr)
-	{
-		String[] single_subjabbr;
-		
-		JsonArrayBuilder frequency_code_pairs = factory.createArrayBuilder();
-				
-		if(!(subjabbr.isEmpty()))
-		{
-			String[] subjabbrs = subjabbr.split(Constants.AUDELIMITER);
-			for(int i=0;i<subjabbrs.length;i++)
-			{
-				single_subjabbr = subjabbrs[i].split(Constants.IDDELIMITER);
-				
-				frequency_code_pairs
-						.add(factory.createObjectBuilder()
-								.add("frequency", single_subjabbr[0])
-								.add("code", single_subjabbr[1])
-								);
-				
-			}
-		}
-		return frequency_code_pairs.build();
-
-	}
-	
-	
-	private String prepareCertainity_Scores(String certainity_scores)
-	{
-		StringBuffer frequency_code_pairs = new StringBuffer();
-		String[] single_subjabbr;
-		
-		if(!(certainity_scores.isEmpty()))
-		{
-			String[] subjabbrs = certainity_scores.split(Constants.AUDELIMITER);
-			for(int i=0;i<subjabbrs.length;i++)
-			{
-				single_subjabbr = subjabbrs[i].split(Constants.IDDELIMITER);
-				frequency_code_pairs.append("{ \"org-id\": \"" + single_subjabbr[0] + "\" , \"score\": \"" + single_subjabbr[1] + "\" }");
-				if(i<subjabbrs.length-1)
-				{
-					//frequency_code_pairs.append(",\n\t\t\t");
-					frequency_code_pairs.append(",");
-				}
-			}
-		}
-		return frequency_code_pairs.toString();
-
-	}
-	
-	
-	private JsonArray prepareCertainityScores(String certainity_scores)
-	{		
-		String[] single_score;
-		JsonArrayBuilder certainity_score_pairs = factory.createArrayBuilder();
-		
-		if(!(certainity_scores.isEmpty()))
-		{
-			String[] scores = certainity_scores.split(Constants.AUDELIMITER);
-			for(int i=0;i<scores.length;i++)
-			{
-				single_score = scores[i].split(Constants.IDDELIMITER);
-				
-				certainity_score_pairs
-				.add(factory.createObjectBuilder()
-						.add("org-id", single_score[0])
-						.add("score", single_score[1])
-						);
-			}
-		}
-		return certainity_score_pairs.build();
-
-	}
 	
 	private JsonArray normalize(String str)
 	{

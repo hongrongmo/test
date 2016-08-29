@@ -39,7 +39,9 @@ public class AusAffESIndex {
 
 	private final String SERVICE_NAME = "es";
 	private final String REGION = "us-east-1";
-	private final String HOST = "search-evcafe-prod-h7xqbezrvqkb5ult6o4sn6nsae.us-east-1.es.amazonaws.com";
+	private final String HOST = "search-evcafe-prod-h7xqbezrvqkb5ult6o4sn6nsae.us-east-1.es.amazonaws.com";  // for dataloading Ec2
+	//private final String HOST = "search-evcafeauaf-v6tfjfyfj26rtoneh233lzzqtq.us-east-1.es.amazonaws.com";
+	//private final String HOST = "localhost:8060";    // evauaf cluster using tunnel, localhost
 	private final String ENDPOINT_ROOT = "http://" + HOST;
 	private final String PATH = "/cafe/_bulk";
 	private final String ENDPOINT = ENDPOINT_ROOT + PATH;
@@ -120,8 +122,8 @@ public class AusAffESIndex {
 
 		// Get credentials using IAM ROLE in EC2, but DefaultAWSCredentials on localhost
 		// NOTE: *Never* hard-code credentials in source code
-		//AWSCredentialsProvider credsProvider = new DefaultAWSCredentialsProviderChain();   // localhost
-		AWSCredentialsProvider credsProvider = new InstanceProfileCredentialsProvider();
+		AWSCredentialsProvider credsProvider = new DefaultAWSCredentialsProviderChain();   // localhost
+		//AWSCredentialsProvider credsProvider = new InstanceProfileCredentialsProvider();   // dataloading Ec2
 		AWSCredentials credentials = credsProvider.getCredentials();
 
 		// Sign request with supplied credentials
@@ -160,10 +162,10 @@ public class AusAffESIndex {
 		Request<?> request = generateRequest();
 
 		// Perform Signature Version 4 signing
-		performSigningSteps(request);
+		//performSigningSteps(request);    // used when having iam role for ES accesspolicy, but not in use for IP range access policy
 
 		// Send the request to the server
-		sendRequest(request);
+		sendRequest(request);   
 		
 		// Shutdown client
 		end();
