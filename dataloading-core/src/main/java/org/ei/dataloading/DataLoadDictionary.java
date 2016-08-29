@@ -639,13 +639,15 @@ public class DataLoadDictionary
     					case 12297 :sb.append("&rang;");break;	//right angle bracket
     					
     					//HH 07/27/2016 for Cafe AU/AF ES profile
-    					case 34 : sb.append("&#x00022;");break;   // unicode double quotes
+    					case 34: sb.append("&#x00022;");break;   // unicode double quotes
     					case 44: sb.append("&#x0002C;");break;	  // unicode comma
     					case 58: sb.append("&#x0003A;");break;	  // unicode colon
-    					case 91: sb.append("&#x0005B");break;	  // unicode left square bracket
-    					case 93: sb.append("&#x0005D");break;	  // unicode right square bracket
-    					case 123: sb.append("&#x0007B");break;	  // unicode left curly bracket
-    					case 125: sb.append("&#x0007D");break;	  // unicode right curly bracket
+    					case 91: sb.append("&#x0005B;");break;	  // unicode left square bracket
+    					case 93: sb.append("&#x0005D;");break;	  // unicode right square bracket
+    					case 123: sb.append("&#x0007B;");break;	  // unicode left curly bracket
+    					case 125: sb.append("&#x0007D;");break;	  // unicode right curly bracket
+    					case 92: sb.append("&#x0005C;");break;	  //reverse solidus or backslash
+    					case 39: sb.append("&#x00027;");break;	  //apostroph
     					//HH END
     					
     					
@@ -689,10 +691,10 @@ public class DataLoadDictionary
     					case 34: sb.append("&#x00022;");break;   // unicode double quotes
     					case 44: sb.append("&#x0002C;");break;	  // unicode comma
     					case 58: sb.append("&#x0003A;");break;	  // unicode colon
-    					case 91: sb.append("&#x0005B");break;	  // unicode left square bracket
-    					case 93: sb.append("&#x0005D");break;	  // unicode right square bracket
-    					case 123: sb.append("&#x0007B");break;	  // unicode left curly bracket
-    					case 125: sb.append("&#x0007D");break;	  // unicode right curly bracket
+    					case 91: sb.append("&#x0005B;");break;	  // unicode left square bracket
+    					case 93: sb.append("&#x0005D;");break;	  // unicode right square bracket
+    					case 123: sb.append("&#x0007B;");break;	  // unicode left curly bracket
+    					case 125: sb.append("&#x0007D;");break;	  // unicode right curly bracket
     					//HH END
     					
     					
