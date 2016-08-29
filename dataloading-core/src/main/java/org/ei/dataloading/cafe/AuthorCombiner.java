@@ -1293,18 +1293,19 @@ public class AuthorCombiner {
 	}
 	
 	
-	private String normalize(String str)
+	/*private String normalize(String str)
 	{
 		String normalized_str = "";
 		
 		if(str !=null && !(str.isEmpty()))
 		{
-			normalized_str = CombinedXMLWriter.cafeGetStems(Entity.prepareString(str));
+			normalized_str = CombinedXMLWriter.cafeGetStems(Entity.prepareString(str));  //HH 08/29/2016 toke off this func i created in CombinedXMLWriter away, as i didn ot use it
+																						// in case i need to re-use it then i need to add it back, it is almost same as getStems just added two entries
 				
 		}	
 		
 	return normalized_str;
-	}
+	}*/
 	
 	
 	

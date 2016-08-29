@@ -329,6 +329,9 @@ public class CombinedAuAfJSON {
 	}
 	
 	
+	/*HH 08/29/2016 toke off this func i created in CombinedXMLWriter away, as i didn ot use it
+	in case i need to re-use it then i need to add it back, it is almost same as getStems just added two entries 
+
 	private JsonArray normalize(String str)
 	{
 		JsonArrayBuilder normallizedStrBuilder = factory.createArrayBuilder();
@@ -355,6 +358,6 @@ public class CombinedAuAfJSON {
 		}
 	
 		return normallizedStrBuilder.build();
-	}
+	}*/
 	
 }
