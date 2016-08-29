@@ -965,8 +965,65 @@ public class Entity {
         isotable.setProperty("ý", "y"); //  Small y, acute accent
         isotable.setProperty("þ", "thorn"); //  Small thorn, Icelandic
         isotable.setProperty("ÿ", "y"); //  Small y, dieresis or umlaut mark
-
-
+        //HH: 08/18/2016  added for Cafe srctitle normalization
+        isotable.setProperty("Ą", "A");		//Capital A with Ogonek
+        isotable.setProperty("Ă", "A");		//Capital A with Breve
+        isotable.setProperty("ą", "a");		//Small a with Ogonek
+        isotable.setProperty("ă", "a");		//Small a with Breve
+        isotable.setProperty("ć", "c");		//Small c with Acute
+        isotable.setProperty("ĉ", "c");		//Small c with Circumflex
+        isotable.setProperty("č", "c");		//Small c with Caron
+        isotable.setProperty("Č","C");		//Capital C with Caron
+        isotable.setProperty("Ć","C");		//Capital C with Acute
+        isotable.setProperty("Ĉ","C");		// Capital C with Circumflex
+        isotable.setProperty("ď", "d");		//Small d with Caron
+        isotable.setProperty("Ď", "D");		//Capital D with Caron
+        isotable.setProperty("đ","d");		// Small d
+        isotable.setProperty("ð", "d");		//Small d
+        isotable.setProperty("Ě", "E");		//Capital E with Caron
+        isotable.setProperty("Ę","E");		//Capital E with Ogonek
+        isotable.setProperty("ě", "e");		//Small e with Caron
+        isotable.setProperty("ę","e");		//Small e with Ogonek
+        isotable.setProperty("ĺ", "l");		//Small l with Acute
+        isotable.setProperty("ł", "l");		//Small l with 
+        isotable.setProperty("Ł","L");		//Capital L with
+        isotable.setProperty("Ľ","L");		//Capital L with
+        isotable.setProperty("Ĺ","L");		//Capital L with
+        isotable.setProperty("ň", "n");		//Small n with Caron
+        isotable.setProperty("ń", "n");		//Small n with
+        isotable.setProperty("Ň","N");		//Capital N with Caron
+        isotable.setProperty("Ń", "N");		//Capital N with
+        isotable.setProperty("ő" ,"o");		//Small o with double Acute
+        isotable.setProperty("Ő", "O");		//Capital O with double Acute
+        isotable.setProperty("ř", "r");		//Small r with Caron
+        isotable.setProperty("ŕ","r");		//Small r with Acute
+        isotable.setProperty("Ř","R");		//Cappital R with Caron
+        isotable.setProperty("Ŕ","R");		//Capital R with Acute
+        isotable.setProperty("ş","s");		//Small s with Comma Below
+        isotable.setProperty("ś","s");		//Small s with Acute
+        isotable.setProperty("š","s");		//Small s with Caron
+        isotable.setProperty("Ş","S");		//Capital S with Comma Below
+        isotable.setProperty("Ś", "S");		//Capital S with Acute
+        isotable.setProperty("Š", "S");		//Capital S with Caron
+        isotable.setProperty("ť","t");		//Small t with Acute
+        isotable.setProperty("ţ","t");		//Small t with Comma Below
+        isotable.setProperty("Ť","T");		//Capital T with Caron
+        isotable.setProperty("Ț", "T");		//Capital T with Comma Below
+        isotable.setProperty("ů", "u");		//Small u with Ring ABove
+        isotable.setProperty("ű","u");		//Small u with Double Acute
+        isotable.setProperty("Ů", "U");		//Capital U with Ring Above
+        isotable.setProperty("Ű","U");		//Capital U with Doube Acute
+        isotable.setProperty("ż","z");		//Small z with Dot Above
+        isotable.setProperty("ž", "z");		//Small z with Acron
+        isotable.setProperty("ź", "z");		//Small z with Acute
+        isotable.setProperty("Ż", "Z");		//Capital Z with Dot Above
+        isotable.setProperty("Ž", "Z");		//Capital Z with Acron
+        isotable.setProperty("Ź", "Z");		//Capital Z with Acute
+        
+        
+        
+        
+        
         // Patent UTF String
         utftable.setProperty("{acute over (a)}", "a");
         utftable.setProperty("{acute over (b)}", "b");
