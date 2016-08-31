@@ -17,6 +17,7 @@ import org.apache.oro.text.regex.MatchResult;
 import org.ei.dataloading.CombinedWriter;
 import org.ei.dataloading.Combiner;
 import org.ei.dataloading.CombinerTimestamp;
+import org.ei.dataloading.DataLoadDictionary;
 
 /**
  * 
@@ -42,21 +43,31 @@ public class InstitutionCombiner{
 	static String tableName = "institute_profile";
 	static String metadataTableName = "hh_af_metadata";
 	static String action = "new";
+	static int recsPerEsbulk;
 
 	// get CurrentData and Time for ESIndexTime
 	DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
 	String date;
-	
+
 	LinkedHashSet<String> affId_deletion_list;
 
 	static CombinedAuAfJSON writer;
 	Perl5Util perl = new Perl5Util();
 
 	static AuAfESIndex s3upload;
+	static AusAffESIndex esIndex;
+
+	Connection con = null;
+	
+	
+	private static long startTime = System.currentTimeMillis();
+	private static long endTime = System.currentTimeMillis();
+	private static long midTime = System.currentTimeMillis();
+
 
 	public static void main(String args[])
 	{
-		if(args.length >8)
+		if(args.length >9)
 		{
 			if(args[0] !=null)
 			{
@@ -103,6 +114,19 @@ public class InstitutionCombiner{
 			{
 				action = args[8];
 			}
+			if(args[9] !=null)
+			{
+				try
+				{
+					recsPerEsbulk = Integer.parseInt(args[9]);
+					
+					System.out.println("ES Documents per Bulk: " + recsPerEsbulk);
+				}
+				catch(NumberFormatException ex)
+				{
+					recsPerEsbulk = 10;
+				}
+			}
 
 		}
 		else
@@ -115,27 +139,29 @@ public class InstitutionCombiner{
 		{
 			writer = new CombinedAuAfJSON(doc_type,loadNumber);
 			writer.init(1);
-			
-			s3upload = new AuAfESIndex(doc_type);
-			
-			String esDir = writer.getEsDirName();
+
+			//s3upload = new AuAfESIndex(doc_type);
+			esIndex = new AusAffESIndex(recsPerEsbulk);
 
 			InstitutionCombiner c = new InstitutionCombiner();
-			Connection con = c.getConnection(url,driver,username,password);
+			c.con = c.getConnection(url,driver,username,password);
+
+			midTime = System.currentTimeMillis();
+			endTime = System.currentTimeMillis();
+			System.out.println("Time for finish reading input parameter & ES initialization "+(endTime-startTime)/1000.0+" seconds");
+			System.out.println("total Time used "+(endTime-startTime)/1000.0+" seconds");
 
 
-			
-						
 			if(loadNumber ==1)
 			{
-				c.writeCombinedByTable(con);
+				c.writeCombinedByTable();
 			}
 			else
 			{
-				c.writeCombinedByWeekNumber(con);
+				c.writeCombinedByWeekNumber();
 			}
-			
-			
+
+
 		}
 		catch(Exception e)
 		{
@@ -146,7 +172,7 @@ public class InstitutionCombiner{
 
 	// extract whole table for au/af
 
-	public void writeCombinedByTable(Connection con) throws Exception
+	public void writeCombinedByTable() throws Exception
 	{
 		Statement stmt = null;
 		ResultSet rs = null;
@@ -160,8 +186,25 @@ public class InstitutionCombiner{
 			rs = stmt.executeQuery(query);
 
 			System.out.println("Got records... from table: " + tableName);
+			
+			midTime = endTime;
+			endTime = System.currentTimeMillis();
+			System.out.println("time for get records from table "+(endTime-midTime)/1000.0+" seconds");
+			System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+			
+			
 			writeRecs(rs,con);
+			
+			esIndex.ProcessBulk();
+			esIndex.end();
+			
 			System.out.println("Wrote records.");
+			
+			midTime = endTime;
+			endTime = System.currentTimeMillis();
+			System.out.println("time for run ES extract & index "+(endTime-midTime)/1000.0+" seconds");
+			System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+			
 		}
 
 		finally
@@ -205,14 +248,14 @@ public class InstitutionCombiner{
 	}
 
 
-	public void writeCombinedByWeekNumber(Connection con) throws Exception
+	public void writeCombinedByWeekNumber() throws Exception
 	{
 		Statement stmt = null;
 		ResultSet rs = null;
-		
+
 		String query=null;
 		int updateNumber;
-		
+
 		try
 		{
 			stmt = con.createStatement();
@@ -220,39 +263,74 @@ public class InstitutionCombiner{
 			if(!(action.isEmpty()) && action.equalsIgnoreCase("new"))
 			{
 				query = "select * from " +  tableName + " where loadnumber=" + loadNumber + " and affid in (select INSTITUTE_ID from " + metadataTableName + " where dbase='cpx')";
-				
+
 				System.out.println(query);
 
 				rs = stmt.executeQuery(query);
 
 				System.out.println("Got records... from table: " + tableName);
+
+				midTime = endTime;
+				endTime = System.currentTimeMillis();
+				System.out.println("time for get records from table "+(endTime-midTime)/1000.0+" seconds");
+				System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+
 				writeRecs(rs,con);
+				
+				esIndex.ProcessBulk();
+				esIndex.end();
+				
+				
 				System.out.println("Wrote records.");
+				
+				midTime = endTime;
+				endTime = System.currentTimeMillis();
+				System.out.println("time for run ES extract & index "+(endTime-midTime)/1000.0+" seconds");
+				System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+				
 			}
 			else if(!(action.isEmpty()) && action.equalsIgnoreCase("update"))
 			{
 				updateNumber=loadNumber;
 				query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and affid in (select INSTITUTE_ID from " + metadataTableName + " where dbase='cpx')";
-				
+
 				//for testing
 				//query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and affid in (select INSTITUTE_ID from " + metadataTableName + " where dbase='cpx') and rownum<2";
-				
+
 				System.out.println(query);
 
 				rs = stmt.executeQuery(query);
 
 				System.out.println("Got records... from table: " + tableName);
+
+				midTime = endTime;
+				endTime = System.currentTimeMillis();
+				System.out.println("time for get records from table "+(endTime-midTime)/1000.0+" seconds");
+				System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+
+
 				writeRecs(rs,con);
+				
+				esIndex.ProcessBulk();
+				esIndex.end();
+				
+				
 				System.out.println("Wrote records.");
+
+				midTime = endTime;
+				endTime = System.currentTimeMillis();
+				System.out.println("time for run ES extract & index "+(endTime-midTime)/1000.0+" seconds");
+				System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+
 			}
-			
+
 			else if(!(action.isEmpty()) && action.equalsIgnoreCase("delete"))
 			{
 				// need to check with Hongrong
-				
+
 				updateNumber=loadNumber;
 				query = "select M_ID from " +  tableName + " where updatenumber=" + updateNumber;
-				
+
 				System.out.println(query);
 
 				rs = stmt.executeQuery(query);
@@ -260,8 +338,10 @@ public class InstitutionCombiner{
 				System.out.println("Got records... from table: " + tableName);
 				getDeletionList(rs);
 				
+				//deletion part moved to CafeDownloadFileFromS3AllTypes
+
 			}
-			
+
 		}
 
 		finally
@@ -315,10 +395,10 @@ public class InstitutionCombiner{
 			{
 
 				AuAfCombinedRec rec = new AuAfCombinedRec();
-				
-				 date= dateFormat.format(new Date());
-				
-					
+
+				date= dateFormat.format(new Date());
+
+
 
 				if(doc_type !=null && doc_type.equalsIgnoreCase("ipr"))
 				{
@@ -357,19 +437,19 @@ public class InstitutionCombiner{
 						//rec.put(AuAfCombinedRec.TIMESTAMP, timeStampFormat(rs.getString("TIMESTAMP")));
 						rec.put(AuAfCombinedRec.LOADDATE, rs.getString("TIMESTAMP"));
 					}
-					
+
 					//INDEXDATE in DB, in ES called "ITEMTRANSACTIONID"
 					if(rs.getString("INDEXED_DATE") !=null)
 					{
 						rec.put(AuAfCombinedRec.ITEMTRANSACTIONID, rs.getString("INDEXED_DATE"));
 					}
-					
+
 					// EPOCH in DB, in ES called "INDEXEDDATE"
 					if(rs.getString("EPOCH") !=null)
 					{
 						rec.put(AuAfCombinedRec.INDEXEDDATE, rs.getString("EPOCH"));
 					}
-					
+
 					// ES Index Data (Current DateTime)
 					rec.put(AuAfCombinedRec.ESINDEXTIME, date);
 
@@ -383,25 +463,25 @@ public class InstitutionCombiner{
 					//PREFEREDNAME
 					if(rs.getString("PREFERED_NAME") !=null)
 					{
-						rec.put(AuAfCombinedRec.AFFILIATION_PREFERRED_NAME, rs.getString("PREFERED_NAME"));
+						rec.put(AuAfCombinedRec.AFFILIATION_PREFERRED_NAME, DataLoadDictionary.mapEntity(rs.getString("PREFERED_NAME")));
 					}
 
 					//SORTNAME
 					if(rs.getString("SORT_NAME") !=null)
 					{
-						rec.put(AuAfCombinedRec.AFFILIATION_SORT_NAME, rs.getString("SORT_NAME"));
+						rec.put(AuAfCombinedRec.AFFILIATION_SORT_NAME, DataLoadDictionary.mapEntity(rs.getString("SORT_NAME")));
 					}
 
 					//NAMEVARIANT
 					if(rs.getString("NAME_VARIANT") !=null)
 					{
-						rec.put(AuAfCombinedRec.AFFILIATION_VARIANT_NAME, rs.getString("NAME_VARIANT"));
+						rec.put(AuAfCombinedRec.AFFILIATION_VARIANT_NAME, DataLoadDictionary.mapEntity(rs.getString("NAME_VARIANT")));
 					}
 
 					//ADDRESSPART
 					if(rs.getString("ADDRESS_PART") !=null)
 					{
-						rec.put(AuAfCombinedRec.ADDRESS, rs.getString("ADDRESS_PART"));
+						rec.put(AuAfCombinedRec.ADDRESS, DataLoadDictionary.mapEntity(rs.getString("ADDRESS_PART")));
 					}
 
 					//CITY
@@ -420,7 +500,7 @@ public class InstitutionCombiner{
 					if(rs.getString("POSTAL_CODE") !=null)
 					{
 						//System.out.println("RS postcode: " + rs.getString("POSTALCODE"));
-						rec.put(AuAfCombinedRec.ZIP, rs.getString("POSTAL_CODE"));
+						rec.put(AuAfCombinedRec.ZIP, DataLoadDictionary.mapEntity(rs.getString("POSTAL_CODE")));
 						//System.out.println("AuAfCombinedRec Postcode: " + rec.getString(AuAfCombinedRec.POST_CODE));
 					}
 
@@ -429,16 +509,22 @@ public class InstitutionCombiner{
 					{
 						rec.put(AuAfCombinedRec.COUNTRY, rs.getString("COUNTRY"));
 					}
-					
+
 					//QUALITY
 					if(rs.getString("QUALITY") !=null)
 					{
 						rec.put(AuAfCombinedRec.QUALITY, rs.getString("QUALITY"));
 					}
+
+					//CERTAINITY_SCORES
+					if(rs.getString("CERTAINTY_SCORES") !=null)
+					{
+						rec.put(AuAfCombinedRec.CERTAINITY_SCORES, rs.getString("CERTAINTY_SCORES"));
+					}
 				}
 
 				writer.writeAfRec(rec);
-				
+
 				count ++;
 
 			}
@@ -448,11 +534,11 @@ public class InstitutionCombiner{
 				e.printStackTrace();
 			}
 		}
-		
+
 		System.out.println("Total records count: " +  count);
 	}
-	
-	
+
+
 	private void getDeletionList(ResultSet rs)
 	{
 		affId_deletion_list = new LinkedHashSet<String>();
@@ -471,8 +557,8 @@ public class InstitutionCombiner{
 
 		System.out.println("Total Aff records to be deleted from S3 & ES: " + affId_deletion_list.size());
 	}
-	
-	
+
+
 
 	public String timeStampFormat(String timestamp)
 	{
@@ -521,7 +607,7 @@ public class InstitutionCombiner{
 			else
 				System.out.println("Invalide Timestamp: " + timestamp);
 			break;
-			
+
 		case 5:
 
 			if(timestamp.matches("\\d{4}\\d{1}"))
@@ -534,7 +620,7 @@ public class InstitutionCombiner{
 				System.out.println("Invalide Timestamp: " + timestamp);
 			break;
 		}
-		
+
 		return time_stamp.toString();
 	}
 	private Connection getConnection(String connectionURL,

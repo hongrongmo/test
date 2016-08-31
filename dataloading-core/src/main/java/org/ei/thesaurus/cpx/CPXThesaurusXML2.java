@@ -1,5 +1,9 @@
 package org.ei.thesaurus.cpx;
 
+/**
+ * Note: HH 08/19/2016 for for unknown reason when added a jar to pom.xml, 
+ * it raised compilation error for all "cNode" below, to fix the issue i had to cast all of the "cNode" to "Concept"
+ */
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -161,69 +165,69 @@ public class CPXThesaurusXML2 {
 				  			String nodeName = cNode.getNodeName().trim();
 				  			if(nodeName.equalsIgnoreCase(DESCRIPTOR)){
 								concept.setStatus("C");
-				  				concept.setMainTermDisplay(cNode.getTextContent().trim());
+				  				concept.setMainTermDisplay(((Concept) cNode).getTextContent().trim());
 				  			}
 				  			if(nodeName.equalsIgnoreCase(NON_DESCRIPTOR)){
 
 				  				concept.setStatus("L");
-				  				concept.setMainTermDisplay(cNode.getTextContent().trim());
+				  				concept.setMainTermDisplay(((Concept) cNode).getTextContent().trim());
 				  			}
 				  			if(nodeName.equalsIgnoreCase(STATUS)){
-				  				concept.setStatus(cNode.getTextContent().trim());
+				  				concept.setStatus(((Concept) cNode).getTextContent().trim());
 				  			}
 				  			if(nodeName.equalsIgnoreCase(HISTORY_SCOPE_NOTES)){
-				  				concept.setHistoryScopeNotes(cNode.getTextContent().trim());
+				  				concept.setHistoryScopeNotes(((Concept) cNode).getTextContent().trim());
 				  			}
 				  			if(nodeName.equalsIgnoreCase(USE_TERMS_AND)){
-								concept.setUseAndTerms(cNode.getTextContent().trim());
+								concept.setUseAndTerms(((Concept) cNode).getTextContent().trim());
 							}
 							if(nodeName.equalsIgnoreCase(USE_TERMS_OR)){
-								concept.setUseOrTerms(cNode.getTextContent().trim());
+								concept.setUseOrTerms(((Concept) cNode).getTextContent().trim());
 				  			}
 				  			if(nodeName.equalsIgnoreCase(USE_TERMS)){
-				  				concept.setUseTerms(cNode.getTextContent().trim());
+				  				concept.setUseTerms(((Concept) cNode).getTextContent().trim());
 				  			}
 
 				  			if(nodeName.equalsIgnoreCase(DATE_OF_INTRO)){
-				  				concept.setDateOfIntro(cNode.getTextContent().trim());
+				  				concept.setDateOfIntro(((Concept) cNode).getTextContent().trim());
 				  			}
 				  			if(nodeName.equalsIgnoreCase(SCOPE_NOTES)){
-				  				concept.setScopeNotes(cNode.getTextContent().trim());
+				  				concept.setScopeNotes(((Concept) cNode).getTextContent().trim());
 				  			}
 				  			if(nodeName.equalsIgnoreCase(LEADIN_TERMS)){
-				  				concept.setLeadinTerm(cNode.getTextContent().trim());
+				  				concept.setLeadinTerm(((Concept) cNode).getTextContent().trim());
 				  			}
 				  			if(nodeName.equalsIgnoreCase(NARROWER_TERMS)){
 								//System.out.println("NODE-TYPE "+cNode.getNodeType()+" NODE-NAME "+cNode.getNodeName()+" NODE-VALUE "+(cNode).getTextContent());
-				  				concept.setNarrowerTerms(cNode.getTextContent().trim());
+				  				concept.setNarrowerTerms(((Concept) cNode).getTextContent().trim());
 				  			}
 				  			if(nodeName.equalsIgnoreCase(BROADER_TERMS)){
 								//System.out.println("NODE-TYPE "+cNode.getNodeType()+" NODE-NAME "+cNode.getNodeName()+" NODE-VALUE "+(cNode).getTextContent());
-				  				concept.setBroaderTerms(cNode.getTextContent().trim());
+				  				concept.setBroaderTerms(((Concept) cNode).getTextContent().trim());
 				  			}
 				  			if(nodeName.equalsIgnoreCase(RELATED_TERMS)){
 								//System.out.println("NODE-TYPE "+cNode.getNodeType()+" NODE-NAME "+cNode.getNodeName()+" NODE-VALUE "+(cNode).getTextContent());
-				  				concept.setRelatedTerms(cNode.getTextContent().trim());
+				  				concept.setRelatedTerms(((Concept) cNode).getTextContent().trim());
 				  			}
 				  			if(nodeName.equalsIgnoreCase(OCC)){
-				  				concept.setClassCodes(cNode.getTextContent().trim());
+				  				concept.setClassCodes(((Concept) cNode).getTextContent().trim());
 				  			}
 				  			if(nodeName.equalsIgnoreCase(MCC)){
-				  				concept.setClassCodes(cNode.getTextContent().trim());
+				  				concept.setClassCodes(((Concept) cNode).getTextContent().trim());
 				  			}
 				  			if(nodeName.equalsIgnoreCase(PRIOR_TERMS)){
-				  				concept.setPriorTerms(cNode.getTextContent().trim());
+				  				concept.setPriorTerms(((Concept) cNode).getTextContent().trim());
 				  			}
 				  			if(nodeName.equalsIgnoreCase(GEOGRAPHIC_TYPE)){
-								concept.setGeographicType(cNode.getTextContent().trim());
+								concept.setGeographicType(((Concept) cNode).getTextContent().trim());
 				  			}
 
 							// added for cpx classification
 							if(nodeName.equalsIgnoreCase(CSS)){
-								concept.setCSS(cNode.getTextContent().trim());
+								concept.setCSS(((Concept) cNode).getTextContent().trim());
 							}
 							if(nodeName.equalsIgnoreCase(CDE)){
-								concept.setCDE(cNode.getTextContent().trim());
+								concept.setCDE(((Concept) cNode).getTextContent().trim());
 				  			}
 
 

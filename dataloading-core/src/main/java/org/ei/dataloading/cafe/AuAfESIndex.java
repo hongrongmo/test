@@ -47,6 +47,8 @@ import com.amazonaws.services.s3.transfer.TransferManager;
 import com.amazonaws.services.s3.transfer.Upload;
 import com.google.gson.GsonBuilder;
 
+import com.amazonaws.AmazonWebServiceClient;
+
 
 /**
  * 
@@ -87,13 +89,22 @@ public class AuAfESIndex {
 
 			// Construct a new Jest Client via factory
 			factory = new JestClientFactory();
-			factory.setHttpClientConfig(new HttpClientConfig
+			/*factory.setHttpClientConfig(new HttpClientConfig
 					.Builder("http://search-evcafeauaf-v6tfjfyfj26rtoneh233lzzqtq.us-east-1.es.amazonaws.com:80")
+			.defaultCredentials("f.huang@elsevier.com", "Awsqwe!26")
+			.connTimeout(10000)
+			.multiThreaded(true)
+			.build()
+					);*/
+
+			factory.setHttpClientConfig(new HttpClientConfig
+					.Builder("search-evcafe-prod-h7xqbezrvqkb5ult6o4sn6nsae.us-east-1.es.amazonaws.com:80")
+			.defaultCredentials("f.huang@elsevier.com", "Awsqwe!26")
 			.connTimeout(10000)
 			.multiThreaded(true)
 			.build()
 					);
-
+			
 			System.out.println("doc type: " + doc_type);
 
 			if(doc_type.equalsIgnoreCase("ipr"))
@@ -396,12 +407,15 @@ public class AuAfESIndex {
 	}
 
 
-	public void EsBulkDelete(List<String>docIds) throws IOException
+	public boolean EsBulkDelete(List<String>docIds) throws IOException
 	{	
-		jclient = (JestHttpClient) factory.getObject();
+		
 
+		boolean status = false;
+		
 		try
 		{
+			jclient = (JestHttpClient) factory.getObject();
 			for(int i=0;i<docIds.size();i++)
 			{
 				build.addAction(new Delete.Builder(docIds.get(i)).build());
@@ -413,6 +427,7 @@ public class AuAfESIndex {
 			{
 				System.out.println("all " + docIds.size() + " documents have been removed from ES");
 				System.out.println(rs.getJsonString());
+				status = true;
 			}
 			else
 			{
@@ -428,7 +443,8 @@ public class AuAfESIndex {
 			System.out.println("Error Occurred during Doc Deletion from ES: " + e.getMessage());
 			e.printStackTrace();
 		}
-
+		
+		return status;
 	}
 
 
@@ -439,6 +455,11 @@ public class AuAfESIndex {
 			jclient.shutdownClient();
 		}
 
+	}
+	
+	public void AwsSdkES()
+	{
+		
 	}
 
 

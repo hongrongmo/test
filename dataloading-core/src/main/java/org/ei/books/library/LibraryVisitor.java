@@ -11,6 +11,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.TreeSet;
+import java.util.function.Function;
+import java.util.function.ToDoubleFunction;
+import java.util.function.ToIntFunction;
+import java.util.function.ToLongFunction;
 
 import org.ei.books.collections.ReferexCollection;
 
@@ -333,6 +337,7 @@ public class LibraryVisitor implements Visitor {
     public TreeSet<Map.Entry<String, Integer>> getColTreeSet() {
 
         TreeSet<Map.Entry<String, Integer>> tset = new TreeSet<Map.Entry<String, Integer>>(new Comparator<Object>() {
+        	@Override
             public int compare(Object o1, Object o2) {
                 int returnVal = -1;
                 Map.Entry<String, Integer> e1 = (Map.Entry<String, Integer>) o1;
@@ -348,6 +353,114 @@ public class LibraryVisitor implements Visitor {
 
                 return returnVal;
             }
+
+        	// HH 08/29/2016 added to fix compilation error for "Comparator<Object>()" above
+			@Override
+			public Comparator<Object> reversed() {
+				// TODO Auto-generated method stub
+				return null;
+			}
+
+			@Override
+			public Comparator<Object> thenComparing(
+					Comparator<? super Object> other) {
+				// TODO Auto-generated method stub
+				return null;
+			}
+
+			@Override
+			public <U> Comparator<Object> thenComparing(
+					Function<? super Object, ? extends U> keyExtractor,
+					Comparator<? super U> keyComparator) {
+				// TODO Auto-generated method stub
+				return null;
+			}
+
+			@Override
+			public <U extends Comparable<? super U>> Comparator<Object> thenComparing(
+					Function<? super Object, ? extends U> keyExtractor) {
+				// TODO Auto-generated method stub
+				return null;
+			}
+
+			@Override
+			public Comparator<Object> thenComparingInt(
+					ToIntFunction<? super Object> keyExtractor) {
+				// TODO Auto-generated method stub
+				return null;
+			}
+
+			@Override
+			public Comparator<Object> thenComparingLong(
+					ToLongFunction<? super Object> keyExtractor) {
+				// TODO Auto-generated method stub
+				return null;
+			}
+
+			@Override
+			public Comparator<Object> thenComparingDouble(
+					ToDoubleFunction<? super Object> keyExtractor) {
+				// TODO Auto-generated method stub
+				return null;
+			}
+
+			public <T extends Comparable<? super T>> Comparator<T> reverseOrder() {
+				// TODO Auto-generated method stub
+				return null;
+			}
+
+			public <T extends Comparable<? super T>> Comparator<T> naturalOrder() {
+				// TODO Auto-generated method stub
+				return null;
+			}
+
+			
+			public <T> Comparator<T> nullsFirst(
+					Comparator<? super T> comparator) {
+				// TODO Auto-generated method stub
+				return null;
+			}
+
+	
+			public <T> Comparator<T> nullsLast(
+					Comparator<? super T> comparator) {
+				// TODO Auto-generated method stub
+				return null;
+			}
+
+			
+			public <T, U> Comparator<T> comparing(
+					Function<? super T, ? extends U> keyExtractor,
+					Comparator<? super U> keyComparator) {
+				// TODO Auto-generated method stub
+				return null;
+			}
+
+			public <T, U extends Comparable<? super U>> Comparator<T> comparing(
+					Function<? super T, ? extends U> keyExtractor) {
+				// TODO Auto-generated method stub
+				return null;
+			}
+
+			public <T> Comparator<T> comparingInt(
+					ToIntFunction<? super T> keyExtractor) {
+				// TODO Auto-generated method stub
+				return null;
+			}
+
+			public  <T> Comparator<T> comparingLong(
+					ToLongFunction<? super T> keyExtractor) {
+				// TODO Auto-generated method stub
+				return null;
+			}
+
+			public  <T> Comparator<T> comparingDouble(
+					ToDoubleFunction<? super T> keyExtractor) {
+				// TODO Auto-generated method stub
+				return null;
+			}
+			//HH End
+            
         });
 
         tset.addAll(colCountMap.entrySet());

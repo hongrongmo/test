@@ -1,7 +1,6 @@
 package org.ei.dataloading.upt.loadtime;
 
 import java.io.BufferedReader;
-
 import java.io.File;
 import java.io.FileWriter;
 import java.io.InputStreamReader;
@@ -16,10 +15,15 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
+import java.util.function.ToDoubleFunction;
+import java.util.function.ToIntFunction;
+import java.util.function.ToLongFunction;
 import java.util.zip.ZipEntry;
+
+
 /*import java.util.zip.ZipFile;*/    //original
 import org.apache.commons.compress.archivers.zip.*;   //HH 08/04/2015 to fix issue of Patent zip file's headers 
-
 import org.apache.oro.text.perl.Perl5Util;
 import org.ei.util.GUID;
 import org.jdom2.Attribute;
@@ -28,7 +32,6 @@ import org.jdom2.Element;
 import org.jdom2.EntityRef;
 import org.jdom2.Text;
 import org.jdom2.input.SAXBuilder;
-
 import org.ei.common.Constants;
 
 public class PatentXmlReader
@@ -212,6 +215,93 @@ public class PatentXmlReader
 			{
 				return 0;
 			}
+		}
+
+		@Override
+		public Comparator reversed() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public Comparator thenComparing(Comparator other) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public Comparator thenComparing(Function keyExtractor,
+				Comparator keyComparator) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public Comparator thenComparing(Function keyExtractor) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public Comparator thenComparingInt(ToIntFunction keyExtractor) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public Comparator thenComparingLong(ToLongFunction keyExtractor) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public Comparator thenComparingDouble(ToDoubleFunction keyExtractor) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		public <T extends Comparable<? super T>> Comparator<T> reverseOrder() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		public <T extends Comparable<? super T>> Comparator<T> naturalOrder() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		public <T> Comparator<T> nullsFirst(
+				Comparator<? super T> comparator) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		public <T> Comparator<T> nullsLast(
+				Comparator<? super T> comparator) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		public <T, U> Comparator<T> comparing(
+				Function<? super T, ? extends U> keyExtractor,
+				Comparator<? super U> keyComparator) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		public <T, U extends Comparable<? super U>> Comparator<T> comparing(
+				Function<? super T, ? extends U> keyExtractor) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		public <T> Comparator<T> comparingInt(
+				ToIntFunction<? super T> keyExtractor) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		public <T> Comparator<T> comparingLong(
+				ToLongFunction<? super T> keyExtractor) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		public <T> Comparator<T> comparingDouble(
+				ToDoubleFunction<? super T> keyExtractor) {
+			// TODO Auto-generated method stub
+			return null;
 		}
 	}
 
@@ -1565,6 +1655,93 @@ public class PatentXmlReader
 			{
 				return 0;
 			}
+		}
+
+		@Override
+		public Comparator reversed() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public Comparator thenComparing(Comparator other) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public Comparator thenComparing(Function keyExtractor,
+				Comparator keyComparator) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public Comparator thenComparing(Function keyExtractor) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public Comparator thenComparingInt(ToIntFunction keyExtractor) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public Comparator thenComparingLong(ToLongFunction keyExtractor) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public Comparator thenComparingDouble(ToDoubleFunction keyExtractor) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		public <T extends Comparable<? super T>> Comparator<T> reverseOrder() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		public <T extends Comparable<? super T>> Comparator<T> naturalOrder() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		public <T> Comparator<T> nullsFirst(
+				Comparator<? super T> comparator) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		public <T> Comparator<T> nullsLast(
+				Comparator<? super T> comparator) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		public <T, U> Comparator<T> comparing(
+				Function<? super T, ? extends U> keyExtractor,
+				Comparator<? super U> keyComparator) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		public <T, U extends Comparable<? super U>> Comparator<T> comparing(
+				Function<? super T, ? extends U> keyExtractor) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		public <T> Comparator<T> comparingInt(
+				ToIntFunction<? super T> keyExtractor) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		public <T> Comparator<T> comparingLong(
+				ToLongFunction<? super T> keyExtractor) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		public <T> Comparator<T> comparingDouble(
+				ToDoubleFunction<? super T> keyExtractor) {
+			// TODO Auto-generated method stub
+			return null;
 		}
 	}
 

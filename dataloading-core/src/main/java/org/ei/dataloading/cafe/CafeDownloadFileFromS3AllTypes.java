@@ -71,6 +71,7 @@ public class CafeDownloadFileFromS3AllTypes {
 	//08/01/2016 combine Keys List for action "d" for direct deletion from ES & DB without dowbload from S3 bucket
 	private List<String> keys_to_be_deleted = new ArrayList<String>();
 	private List<String> keys_MID_to_be_deleted = new ArrayList<String>();
+	
 
 	public static final char FIELDDELIM = '\t';
 
@@ -896,6 +897,9 @@ public class CafeDownloadFileFromS3AllTypes {
 		String profileTable = "";
 		String columnName = "";
 		int curRec = 0; 
+		int status = 0;
+		
+		String type;
 
 		System.out.println("Total Keys to be deleted: " + keys_to_be_deleted.size());
 
@@ -903,12 +907,16 @@ public class CafeDownloadFileFromS3AllTypes {
 		{
 			profileTable = "institute_profile";
 			columnName = "AFFID";
+			
+			type = "affiliation";
 
 		}
 		else if (doc_type.equalsIgnoreCase("apr"))
 		{
 			profileTable = "author_profile";
 			columnName = "AUTHORID";
+			
+			type = "author";
 
 		}
 		else
@@ -930,11 +938,20 @@ public class CafeDownloadFileFromS3AllTypes {
 						if(keys_MID_to_be_deleted.size() >0)
 						{
 							//delete from ES
-							AuAfESIndex esIndexObj = new AuAfESIndex(doc_type);
-							esIndexObj.EsBulkDelete(keys_MID_to_be_deleted);
+							//AuAfESIndex esIndexObj = new AuAfESIndex(doc_type);
+							AusAffESIndex esIndexObj = new AusAffESIndex();
+							status = esIndexObj.createBulkDelete(type, keys_MID_to_be_deleted);
 
 							//delete from DB
-							DbBulkDelete(profileTable);  // temp comment during testing, NEED TO UNCOMMENT WHEN MOVE TO PROD
+							if(status!=0 && (status == 200 || status == 201 || status == 404))
+							{
+								DbBulkDelete(profileTable);  // temp comment during testing, NEED TO UNCOMMENT WHEN MOVE TO PROD
+							}
+							else
+							{
+								System.out.println("Error Occurred during ES Deletion, so no DB deletion");
+							}
+							
 						}
 
 					curRec = 0;
@@ -954,11 +971,21 @@ public class CafeDownloadFileFromS3AllTypes {
 			if(keys_MID_to_be_deleted.size() >0)
 			{
 				//delete from ES
-				AuAfESIndex esIndexObj = new AuAfESIndex(doc_type);
-				esIndexObj.EsBulkDelete(keys_MID_to_be_deleted);
+				//AuAfESIndex esIndexObj = new AuAfESIndex(doc_type);
+				AusAffESIndex esIndexObj = new AusAffESIndex();
+				status = esIndexObj.createBulkDelete(type, keys_MID_to_be_deleted);
+				
 
 				//delete from DB
-				DbBulkDelete(profileTable);  // temp comment during testing, NEED TO UNCOMMENT WHEN MOVE TO PROD
+				if(status!=0 && (status == 200 || status == 201 || status == 404))
+				{
+					DbBulkDelete(profileTable);  // temp comment during testing, NEED TO UNCOMMENT WHEN MOVE TO PROD
+				}
+				else
+				{
+					System.out.println("Error Occurred during ES Deletion, so no DB deletion");
+				}
+				
 			}
 			
 
@@ -1013,6 +1040,8 @@ public class CafeDownloadFileFromS3AllTypes {
 					keys_MID_to_be_deleted.add(rs.getString("M_ID"));
 				}
 			}
+			
+			System.out.println("Only :" +  keys_MID_to_be_deleted.size() + " out of " + keys_to_be_deleted.size() + " exist in DB");
 
 
 		}

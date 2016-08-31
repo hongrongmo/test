@@ -16,13 +16,22 @@
 		<dependency>
 			<groupId>com.amazonaws</groupId>
 			<artifactId>aws-java-sdk</artifactId>
-			<version>1.7.8.1</version>
+			<!-- <version>1.7.8.1</version> -->  <!-- OLD for ES related HTTPClient  -->
+			<version>1.11.23</version>
 		</dependency>
-		<dependency>
+		<!-- HH 08/09/2016 worked for RDS 11g, no longer valid to 12c -->
+		<!-- <dependency>
 			<groupId>oracle</groupId>
 			<artifactId>ojdbc14</artifactId>
 			<version>10.2.0.3.0</version>
+		</dependency> -->
+		<!-- HH 08/09/2016: Added for 12c RDS -->
+		<dependency>
+    		<groupId>com.oracle</groupId>
+   	 		<artifactId>ojdbc6</artifactId>
+    		<version>11.2.0.3</version>
 		</dependency>
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -177,8 +186,13 @@
     		<artifactId>elasticsearch</artifactId>
     		<version>0.20.5</version>
 		</dependency>
-
   
+		 <dependency>
+    		<groupId>vc.inreach.aws</groupId>
+    		<artifactId>aws-signing-request-interceptor</artifactId>
+    		<version>0.0.13</version>
+		</dependency>
+
 			<!-- HH 07/26/2016 for Amazon ES JEST HTTP REST Client -->
 		<dependency>
   			<groupId>io.searchbox</groupId>
@@ -202,6 +216,18 @@
 
 		<!-- END HH 07/26/2016 -->
 		
+		<!-- HH 08/09/2016 for JsonBuilder -->
+		
+		<dependency>
+    		<groupId>javax.json</groupId>
+   			 <artifactId>javax.json-api</artifactId>
+    		<version>1.0</version>
+		</dependency>
+		<dependency>
+    		<groupId>org.glassfish</groupId>
+    		<artifactId>javax.json</artifactId>
+    		<version>1.0.4</version>
+		</dependency>
 		
 		<!-- HH: 02/18/2016 for Amazon Lambda -->
 		 <dependency>

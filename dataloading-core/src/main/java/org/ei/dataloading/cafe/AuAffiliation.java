@@ -1,5 +1,10 @@
 package org.ei.dataloading.cafe;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
+
 import org.ei.common.Constants;
 
 /**
@@ -19,13 +24,16 @@ private String affiliation_sortname="";
 private StringBuffer affiliation_history_id = new StringBuffer();
 private StringBuffer affiliation_history_display_name = new StringBuffer();
 private StringBuffer affiliation_history_city = new StringBuffer();
+private LinkedHashSet<String> affiliation_history_city_list = new LinkedHashSet<String>();
 private StringBuffer affiliation_history_country = new StringBuffer();
+private LinkedHashSet<String> affiliation_history_country_list = new LinkedHashSet<String>();
 private StringBuffer parent_affiliation_id = new StringBuffer();
 private StringBuffer parent_affiliation_prferred_name = new StringBuffer();
 private StringBuffer parent_affiliation_name_variant = new StringBuffer();
 private StringBuffer affiliation_city = new StringBuffer();
 private StringBuffer affiliation_country = new StringBuffer();
 private StringBuffer affiliation_name_id = new StringBuffer();
+private LinkedHashSet<String> affiliation_name_id_list = new LinkedHashSet<String>();
 
 // for display only so Dayton team can get Dept affiliation displayname without going to db
 private String current_dept_affiliation_id="";
@@ -136,11 +144,16 @@ public String getAffiliationSortName()
 
 public void setAffiliationNameId(String nameId)
 {
-	if(affiliation_name_id.length() >0)
+	if(!(affiliation_name_id_list.contains(nameId.toLowerCase())))
 	{
-		affiliation_name_id.append(Constants.IDDELIMITER);
+		if(affiliation_name_id.length() >0)
+		{
+			affiliation_name_id.append(Constants.IDDELIMITER);
+		}
+		affiliation_name_id_list.add(nameId.toLowerCase());
+		affiliation_name_id.append(nameId);
 	}
-	affiliation_name_id.append(nameId);
+
 }
 public String getAffiliationNameId()
 {
@@ -178,11 +191,16 @@ public String getHistoryDisplayName()
 
 public void setHistoryCity(String history_city)
 {
-	if(affiliation_history_city.length() >0)
+	if (!(affiliation_history_city_list.contains(history_city)))
 	{
-		affiliation_history_city.append(Constants.IDDELIMITER);
+		if(affiliation_history_city.length() >0)
+		{
+			affiliation_history_city.append(Constants.IDDELIMITER);
+		}
+		affiliation_history_city_list.add(history_city);
+		affiliation_history_city.append(history_city);
 	}
-	affiliation_history_city.append(history_city);
+	
 }
 public String getHistoryCity()
 {
@@ -192,11 +210,16 @@ public String getHistoryCity()
 //--------------------
 public void setHistoryCountry(String history_country)
 {
-	if(affiliation_history_country.length() >0)
+	if(!(affiliation_history_country_list.contains(history_country)))
 	{
-		affiliation_history_country.append(Constants.IDDELIMITER);
+		if(affiliation_history_country.length() >0)
+		{
+			affiliation_history_country.append(Constants.IDDELIMITER);
+		}
+		affiliation_history_country_list.add(history_country);
+		affiliation_history_country.append(history_country);
 	}
-	affiliation_history_country.append(history_country);
+	
 }
 public String getHistoryCountry()
 {
