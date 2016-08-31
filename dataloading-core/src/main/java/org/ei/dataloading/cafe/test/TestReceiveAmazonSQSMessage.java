@@ -1,4 +1,4 @@
-package org.ei.dataloading.cafe;
+package org.ei.dataloading.cafe.test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -35,8 +35,10 @@ import com.amazonaws.services.sqs.model.Message;
 
 
 
+
 import org.apache.oro.text.perl.*;
 import org.apache.oro.text.regex.*;
+import org.ei.dataloading.cafe.DownloadloadFileFromS3;
 /*
  * Date: 01/27/2016
  * Description: Receive and Parse Message from CAFE' Feed using Amazon SQS for processing:

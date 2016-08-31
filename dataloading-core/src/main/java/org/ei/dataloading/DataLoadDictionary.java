@@ -637,6 +637,18 @@ public class DataLoadDictionary
     					case 10914 :sb.append("&GreaterGreater;");break; 	//much greater than (double) (EW=Bml)
     					case 12296 :sb.append("&lang;");break; //left angle bracket
     					case 12297 :sb.append("&rang;");break;	//right angle bracket
+    					
+    					//HH 07/27/2016 for Cafe AU/AF ES profile
+    					case 34 : sb.append("&#x00022;");break;   // unicode double quotes
+    					case 44: sb.append("&#x0002C;");break;	  // unicode comma
+    					case 58: sb.append("&#x0003A;");break;	  // unicode colon
+    					case 91: sb.append("&#x0005B");break;	  // unicode left square bracket
+    					case 93: sb.append("&#x0005D");break;	  // unicode right square bracket
+    					case 123: sb.append("&#x0007B");break;	  // unicode left curly bracket
+    					case 125: sb.append("&#x0007D");break;	  // unicode right curly bracket
+    					//HH END
+    					
+    					
     					//updated on 5/26/2016
     					default:sb.append("&#"+(int)c+";");
     					//System.out.println("UNKNOW-CHARACTERS="+"(&#"+(int)c+";)");
@@ -647,5 +659,51 @@ public class DataLoadDictionary
     		return sb.toString();
     	}
 
+
+    	//HH 07/27/2016 added for cafe AU/Af ES profile
+    	
+    	public static String mapUnicodeEntity(String str)
+    	{
+    		if(str == null)
+    		{
+    			return null;
+    		}
+    		int len = str.length();
+    		StringBuffer sb = new StringBuffer();
+    		char c;
+
+    		for (int i = 0; i < len; i++)
+    		{
+    			c = str.charAt(i);
+    			if((int) c != 34 && (int) c != 44 && (int) c !=58 && (int)c != 91 && (int)c != 93 && (int)c != 123 && (int)c != 125)
+    			{
+    				sb.append(c);
+    			}
+    			else 
+    			{
+    				//System.out.println("special char "+(int)c);
+    				switch ((int) c)
+    				{
+    					
+    					//HH 07/27/2016 for Cafe AU/AF ES profile
+    					case 34: sb.append("&#x00022;");break;   // unicode double quotes
+    					case 44: sb.append("&#x0002C;");break;	  // unicode comma
+    					case 58: sb.append("&#x0003A;");break;	  // unicode colon
+    					case 91: sb.append("&#x0005B");break;	  // unicode left square bracket
+    					case 93: sb.append("&#x0005D");break;	  // unicode right square bracket
+    					case 123: sb.append("&#x0007B");break;	  // unicode left curly bracket
+    					case 125: sb.append("&#x0007D");break;	  // unicode right curly bracket
+    					//HH END
+    					
+    					
+    					//normal character
+    					default:sb.append(c);
+    					
+    					break;
+    				}
+    			}
+    		}
+    		return sb.toString();
+    	}
 
 }

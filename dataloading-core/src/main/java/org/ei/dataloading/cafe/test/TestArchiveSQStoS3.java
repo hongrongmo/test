@@ -1,4 +1,4 @@
-package org.ei.dataloading.cafe;
+package org.ei.dataloading.cafe.test;
 
 /**
  * Author: Hanan 

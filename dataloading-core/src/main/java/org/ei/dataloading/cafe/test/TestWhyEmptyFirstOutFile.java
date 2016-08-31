@@ -1,4 +1,4 @@
-package org.ei.dataloading.cafe;
+package org.ei.dataloading.cafe.test;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -11,6 +11,11 @@ import java.util.regex.Pattern;
 import javax.jms.JMSException;
 import javax.jms.MessageConsumer;
 import javax.jms.Session;
+
+import org.ei.dataloading.cafe.GetANIFileFromCafeS3Bucket;
+import org.ei.dataloading.cafe.ReceiveAmazonSQSMessage;
+import org.ei.dataloading.cafe.SQSConfiguration;
+import org.ei.dataloading.cafe.SQSExistenceCheck;
 
 import com.amazon.sqs.javamessaging.SQSConnection;
 import com.amazon.sqs.javamessaging.SQSConnectionFactory;

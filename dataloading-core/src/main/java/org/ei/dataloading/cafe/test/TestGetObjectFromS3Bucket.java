@@ -1,4 +1,4 @@
-package org.ei.dataloading.cafe;
+package org.ei.dataloading.cafe.test;
 
 import java.io.BufferedReader;
 import java.io.File;

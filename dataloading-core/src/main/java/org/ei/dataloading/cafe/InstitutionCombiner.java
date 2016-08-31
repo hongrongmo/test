@@ -8,6 +8,7 @@ import java.sql.Statement;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.LinkedHashSet;
 import java.util.Locale;
 import java.util.regex.Pattern;
 
@@ -40,15 +41,18 @@ public class InstitutionCombiner{
 	static int loadNumber = 0;
 	static String tableName = "institute_profile";
 	static String metadataTableName = "hh_af_metadata";
-	static String operation = "new";
+	static String action = "new";
 
 	// get CurrentData and Time for ESIndexTime
 	DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
 	String date;
+	
+	LinkedHashSet<String> affId_deletion_list;
 
 	static CombinedAuAfJSON writer;
 	Perl5Util perl = new Perl5Util();
 
+	static AuAfESIndex s3upload;
 
 	public static void main(String args[])
 	{
@@ -97,7 +101,7 @@ public class InstitutionCombiner{
 			}
 			if(args[8] !=null)
 			{
-				operation = args[8];
+				action = args[8];
 			}
 
 		}
@@ -110,8 +114,11 @@ public class InstitutionCombiner{
 		try
 		{
 			writer = new CombinedAuAfJSON(doc_type,loadNumber);
-			writer.init();
-
+			writer.init(1);
+			
+			s3upload = new AuAfESIndex(doc_type);
+			
+			String esDir = writer.getEsDirName();
 
 			InstitutionCombiner c = new InstitutionCombiner();
 			Connection con = c.getConnection(url,driver,username,password);
@@ -127,6 +134,8 @@ public class InstitutionCombiner{
 			{
 				c.writeCombinedByWeekNumber(con);
 			}
+			
+			
 		}
 		catch(Exception e)
 		{
@@ -145,7 +154,7 @@ public class InstitutionCombiner{
 		{
 			stmt = con.createStatement();
 			System.out.println("Running the query...");
-			String query = "select * from " +  tableName + " where affid in (select AFFILIATION_ID from " + metadataTableName + " where dbase='cpx')";
+			String query = "select * from " +  tableName + " where affid in (select INSTITUTE_ID from " + metadataTableName + " where dbase='cpx')";
 			System.out.println("query");
 
 			rs = stmt.executeQuery(query);
@@ -208,23 +217,51 @@ public class InstitutionCombiner{
 		{
 			stmt = con.createStatement();
 			System.out.println("Running the query...");
-			if(!(operation.isEmpty()) && operation.equalsIgnoreCase("new"))
+			if(!(action.isEmpty()) && action.equalsIgnoreCase("new"))
 			{
-				query = "select * from " +  tableName + " where loadnumber=" + loadNumber + " and affid in (select AFFILIATION_ID from " + metadataTableName + " where dbase='cpx')";
+				query = "select * from " +  tableName + " where loadnumber=" + loadNumber + " and affid in (select INSTITUTE_ID from " + metadataTableName + " where dbase='cpx')";
+				
+				System.out.println(query);
+
+				rs = stmt.executeQuery(query);
+
+				System.out.println("Got records... from table: " + tableName);
+				writeRecs(rs,con);
+				System.out.println("Wrote records.");
 			}
-			else if(!(operation.isEmpty()) && operation.equalsIgnoreCase("update"))
+			else if(!(action.isEmpty()) && action.equalsIgnoreCase("update"))
 			{
 				updateNumber=loadNumber;
-				query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and affid in (select AFFILIATION_ID from " + metadataTableName + " where dbase='cpx')";
+				query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and affid in (select INSTITUTE_ID from " + metadataTableName + " where dbase='cpx')";
+				
+				//for testing
+				//query = "select * from " +  tableName + " where updatenumber=" + updateNumber + " and affid in (select INSTITUTE_ID from " + metadataTableName + " where dbase='cpx') and rownum<2";
+				
+				System.out.println(query);
+
+				rs = stmt.executeQuery(query);
+
+				System.out.println("Got records... from table: " + tableName);
+				writeRecs(rs,con);
+				System.out.println("Wrote records.");
 			}
 			
-			System.out.println(query);
+			else if(!(action.isEmpty()) && action.equalsIgnoreCase("delete"))
+			{
+				// need to check with Hongrong
+				
+				updateNumber=loadNumber;
+				query = "select M_ID from " +  tableName + " where updatenumber=" + updateNumber;
+				
+				System.out.println(query);
 
-			rs = stmt.executeQuery(query);
+				rs = stmt.executeQuery(query);
 
-			System.out.println("Got records... from table: " + tableName);
-			writeRecs(rs,con);
-			System.out.println("Wrote records.");
+				System.out.println("Got records... from table: " + tableName);
+				getDeletionList(rs);
+				
+			}
+			
 		}
 
 		finally
@@ -414,6 +451,28 @@ public class InstitutionCombiner{
 		
 		System.out.println("Total records count: " +  count);
 	}
+	
+	
+	private void getDeletionList(ResultSet rs)
+	{
+		affId_deletion_list = new LinkedHashSet<String>();
+		try {
+			while (rs.next())
+			{
+				if(rs.getString("M_ID") !=null)
+				{
+					affId_deletion_list.add("affiliation/"+rs.getString("M_ID")+".json");
+				}
+			}
+		} 
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		System.out.println("Total Aff records to be deleted from S3 & ES: " + affId_deletion_list.size());
+	}
+	
+	
 
 	public String timeStampFormat(String timestamp)
 	{
