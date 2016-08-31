@@ -1444,17 +1444,19 @@ public class InspecXMLReader extends FilterReader
 		{
 			Element t = (Element)lt.get(i);
 			if(t.getChild("quan")!=null)
+			{
 				numindex = numindex.append(getMixData(t.getChild("quan").getContent(),new StringBuffer()));
-			if(t.getChild("value1")!=null) {
-				numindex = numindex.append(Constants.IDDELIMITER);
+			}
+			numindex = numindex.append(Constants.IDDELIMITER);
+			if(t.getChild("value1")!=null) {				
 				numindex = numindex.append(getMixData(t.getChild("value1").getContent(),new StringBuffer()));
 			}
-			if(t.getChild("value2")!=null) {
-				numindex = numindex.append(Constants.IDDELIMITER);
+			numindex = numindex.append(Constants.IDDELIMITER);
+			if(t.getChild("value2")!=null) {				
 				numindex = numindex.append(getMixData(t.getChild("value2").getContent(),new StringBuffer()));
 			}
-			if(t.getChild("unit")!=null) {
-				numindex = numindex.append(Constants.IDDELIMITER);
+			numindex = numindex.append(Constants.IDDELIMITER);
+			if(t.getChild("unit")!=null) {				
 				numindex = numindex.append(getMixData(t.getChild("unit").getContent(),new StringBuffer()));
 			}
 
