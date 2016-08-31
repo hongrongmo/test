@@ -13,6 +13,7 @@ import java.util.*;
 import java.net.*;
 import java.util.regex.*;
 
+import org.ei.dataloading.inspec.loadtime.*;
 import org.ei.domain.*;
 import org.ei.query.base.*;
 import org.elasticsearch.action.get.GetResponse;
@@ -153,6 +154,10 @@ public class NewDataTesting
 		else  if(action.equals("testElasticSearch"))
 		{
 			test.testElasticSearch();
+		}
+		else  if(action.equals("inspecNIParsing"))
+		{
+			test.convertInspecNI(updateNumber);
 		}
 		else
 		{
@@ -326,6 +331,101 @@ public class NewDataTesting
 			System.out.println(database+"\t\t"+databaseCount+"\t\t"+fastCount);
 		}
 		System.out.println("******************************************************************");
+	}
+	
+	private void convertInspecNI(String weekNumber)
+	{
+		Statement stmt = null;
+		ResultSet rs = null;
+		Connection con = null;
+		String sqlQuery = null;
+		String m_id = null;
+		String accessnumber = null;
+		String load_number = null;
+		String ndi = null;
+		InspecBaseTableWriter inspec = new InspecBaseTableWriter("inspecNumerical_"+weekNumber,"XML");
+
+		try
+		{
+
+			con = getConnection(this.URL,this.driver,this.username,this.password);
+			stmt = con.createStatement();
+			List loadNumberList = new ArrayList();
+			if(weekNumber.equals("0"))
+			{
+				sqlQuery="select distinct load_number from ins_master_orig";
+				rs = stmt.executeQuery(sqlQuery);
+				while (rs.next())
+				{	
+					if(rs.getString("load_number")!=null)				
+					loadNumberList.add(rs.getString("load_number"));
+				}
+			}
+			else
+			{
+				loadNumberList.add(weekNumber);
+			}
+			int k = 0;
+			for(int i=0;i<loadNumberList.size();i++)
+			{
+				sqlQuery="select m_id,anum,load_number,ndi from ins_master_orig where load_number='"+(String)loadNumberList.get(i)+"'";															
+				System.out.println("QUERY= "+sqlQuery);
+				stmt = con.createStatement();
+				rs = stmt.executeQuery(sqlQuery);
+				
+				while (rs.next())
+				{
+					m_id = rs.getString("m_id");
+					accessnumber = rs.getString("anum");
+					load_number = rs.getString("load_number");
+					ndi = rs.getString("ndi");
+					if(ndi!=null)
+					{
+						k++;
+						inspec.outPutNumericalIndex(m_id,accessnumber,load_number,ndi);
+					}
+				}
+				
+				if(stmt!=null)
+				{
+					stmt.close();
+				}
+			}
+			System.out.println("total count= "+k);
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			if (rs != null) {
+				try {
+					rs.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+
+			if (stmt != null) {
+				try {
+					stmt.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			if (con != null) {
+				try {
+					con.close();
+				}
+				catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		
 	}
 
 	private int getDatabaseCount(String database,String weekNumber)
