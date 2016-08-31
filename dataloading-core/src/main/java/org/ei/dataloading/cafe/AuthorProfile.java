@@ -228,7 +228,26 @@ public class AuthorProfile
 						String indexeddate = meta.getChildText("indexeddate",xocsNamespace);				
 						record.put("INDEXEDDATE", indexeddate);
 						//System.out.println("indexeddate= "+indexeddate);					
-					}										
+					}	
+					
+					if(meta.getChild("srctitles",xocsNamespace)!=null)
+					{
+						StringBuffer srcBuffer = new StringBuffer();
+						Element srctitles = meta.getChild("srctitles",xocsNamespace);
+						List srctitleList = srctitles.getChildren("srctitle",xocsNamespace);						
+						for (int g = 0; g< srctitleList.size();g++)
+						{
+							Element srctitle =(Element) srctitleList.get(g);
+							srcBuffer.append(srctitle.getTextTrim());	
+							if(g<srctitleList.size())
+							{
+								srcBuffer.append(Constants.IDDELIMITER);
+							}
+						}
+						record.put("SRCTITLES",srcBuffer.toString());
+						//System.out.println("SRCTITLES= "+srcBuffer.toString());
+					}
+					
 				}
 				
 				Element xocsAuthorProfile = docElement.getChild("author-profile",xocsNamespace);
@@ -959,6 +978,13 @@ public class AuthorProfile
 			if(record.get("ORCID")!=null)
 			{			
 				recordBuf.append((String)record.get("ORCID"));
+			}
+			
+			recordBuf.append(FIELDDELIM);
+						
+			if(record.get("SRCTITLES")!=null)
+			{			
+				recordBuf.append((String)record.get("SRCTITLES"));
 			}
 			
 			recordBuf.append(FIELDDELIM);
