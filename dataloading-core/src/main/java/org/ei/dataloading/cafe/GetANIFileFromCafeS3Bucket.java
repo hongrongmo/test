@@ -16,6 +16,7 @@ import java.util.Enumeration;
 import java.util.HashMap;
 
 import org.apache.commons.io.IOUtils;
+import org.ei.dataloading.awss3.AmazonS3Service;
 import org.ei.dataloading.bd.loadtime.BaseTableDriver;
 
 import com.amazonaws.AmazonClientException;

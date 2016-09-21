@@ -11,6 +11,8 @@ import java.util.concurrent.TimeUnit;
 
 import javax.print.attribute.HashAttributeSet;
 
+import org.ei.dataloading.awss3.AmazonS3Service;
+
 import antlr.collections.List;
 
 import com.amazonaws.AmazonClientException;

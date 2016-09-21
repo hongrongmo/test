@@ -12,7 +12,7 @@ import java.util.Enumeration;
 import java.util.Vector;
 
 import org.ei.dataloading.bd.loadtime.BaseTableDriver;
-import org.ei.dataloading.cafe.AmazonS3Service;
+import org.ei.dataloading.awss3.AmazonS3Service;
 
 import com.amazonaws.AmazonClientException;
 import com.amazonaws.AmazonServiceException;

@@ -1,7 +1,11 @@
 package org.ei.dataloading.cafe;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Set;
 import java.util.StringTokenizer;
 
@@ -17,6 +21,7 @@ import org.apache.http.config.MessageConstraints;
 import com.amazon.sqs.javamessaging.AmazonSQSMessagingClientWrapper;
 import com.amazon.sqs.javamessaging.SQSConnection;
 import com.amazon.sqs.javamessaging.SQSConnectionFactory;
+import com.amazonaws.AmazonServiceException;
 //import com.amazonaws.services.sqs.AmazonSQSClient;
 import com.amazonaws.auth.AWSCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;
@@ -37,8 +42,19 @@ import com.amazonaws.services.sqs.model.Message;
 
 
 
+
+//HH 09/19/2016 added for VTW JSON SQS message parsing
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+import org.json.simple.JSONObject;
+import org.json.simple.JSONArray;
+
+
+
+
 import org.apache.oro.text.perl.*;
 import org.apache.oro.text.regex.*;
+import org.ei.dataloading.upt.loadtime.vtw.DownloadVtwFile;
 /*
  * Date: 01/15/2016
  * Description: Receive and Parse Message from CAFE' Feed using Amazon SQS for processing:
@@ -68,7 +84,17 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 	//ArrayList<String> messageFieldKeys = new ArrayList<>();
 	HashMap<String,String> messageFieldKeys = new HashMap<String,String>();
 	
+	int loadNumber;
 	
+	public ReceiveAmazonSQSMessage()
+	{
+		
+	}
+	
+	public ReceiveAmazonSQSMessage(int load_number)
+	{
+		loadNumber = load_number;
+	}
 	public static void main(String[] args) {
 		
 		sqsMessage = new ReceiveAmazonSQSMessage();
@@ -420,5 +446,148 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 			String key = getMessageField("key");
 		}
 	}
-
+	
+	//HH 09/19/2016, Parse VTW JSON-based SQS Message to download Patents
+	
+	public boolean ParseJsonSQSMessage(String message)
+	{
+		String message_type = null;
+		String prefix = null;
+		String Patent_resourceID = null;
+		String patentId = null, urlExpirationDate = null;
+		
+		boolean evContributer = false;
+		
+		try
+		{
+			
+			DownloadVtwFile instance = new DownloadVtwFile();
+			
+			JSONParser parser = new JSONParser();
+			Object obj = parser.parse(message);
+			
+			JSONObject jsonObject = (JSONObject) obj;
+			String msgId = (String) jsonObject.get("@id");
+			String msgType = (String)jsonObject.get("msg:type");
+			String msgTo = (String)jsonObject.get("msg:to");
+			
+			
+			// clean out messageFieldKeys for each message to be clean for the current one (only hold current message fields).
+			
+			if(messageFieldKeys.size() >0)
+			{
+				messageFieldKeys.clear();
+			}
+			
+			messageFieldKeys.put("message_id", msgId);
+			messageFieldKeys.put("message_type",msgType);
+			messageFieldKeys.put("message_to", msgTo);
+			
+			// only process SQS Message that meant to EV ONLY
+			if(msgTo !=null && msgTo.contains("E-Village"))
+			{
+				evContributer = true;
+				
+				// based on msgtype, check whether to process Service Call or EVentNotification Message
+				
+				if(msgType !=null)
+				{
+					if(msgType.contains("EventNotification"))
+					{
+						message_type= "msg:event";
+						prefix="evt";
+					}
+					else if (msgType.equalsIgnoreCase("ServiceCall"))
+					{
+						message_type="msg:service";
+						prefix = "svc";
+					}
+					else
+					{
+						System.out.println("Unknown Message Type: " + msgType + "!");
+						System.exit(1);
+					}
+					
+					
+					// get Asset Pre-signed url for each of eventNotification/ServiceCall for later download
+					
+					//Assets
+					JSONObject assets = (JSONObject)jsonObject.get(message_type);
+					
+					//EventNotification ID
+					if(prefix !=null && prefix.equals("evt"))
+						messageFieldKeys.put("event_id", (String)assets.get("@id"));
+					
+					//ServiceCall ID
+					if(prefix !=null && prefix.equals("svc"))
+						messageFieldKeys.put("service_id", (String)assets.get("@id"));
+					
+					
+					//Resource
+					JSONArray resource = (JSONArray)assets.get(prefix+":resource");
+					@SuppressWarnings("unchecked")
+					Iterator<String> resourceIterator = (Iterator<String>)resource.iterator();
+					
+					while(resourceIterator.hasNext())
+					{
+						Patent_resourceID = resourceIterator.next();
+						System.out.println(prefix + " Resource: " + Patent_resourceID);
+						patentId = Patent_resourceID.substring(Patent_resourceID.indexOf("pat/") + 4, Patent_resourceID.lastIndexOf("/"));
+						messageFieldKeys.put("resource", patentId);
+					}
+					
+					//evt:detailes or svc:detailes
+					
+					JSONObject detailes = (JSONObject)assets.get(prefix+":details");
+					String signedAssetURL = (String)detailes.get(prefix+":signedAssetURL");
+					System.out.println("SignedAssetURL: " + signedAssetURL);
+					
+					// download the XML file using pre-signedAssetURL
+					
+					if(signedAssetURL !=null)
+					{
+						// get Patent XML filename
+						String xmlFileName = signedAssetURL.substring(signedAssetURL.lastIndexOf("/") + 1, signedAssetURL.indexOf("?"));
+						messageFieldKeys.put("xmlFileName", xmlFileName);
+						
+						urlExpirationDate = signedAssetURL.substring(signedAssetURL.indexOf("Expires=") + 8, signedAssetURL.lastIndexOf("&"));
+						messageFieldKeys.put("urlExpirationDate", urlExpirationDate);
+						System.out.println("ExpirationDate: " + urlExpirationDate);
+						
+						
+						//Download the XML file
+						instance.retrieveAsset(signedAssetURL,xmlFileName,Patent_resourceID,loadNumber);
+					}
+					
+				}
+			}
+			
+			System.out.println("msg id is: " +  msgId + "message type: " + msgType);
+		}
+		
+		catch(ParseException ex)
+		{
+			System.out.println("Json Parser exception type: " + ex.getErrorType() + ": " +  ex.getMessage());
+			ex.printStackTrace();
+		}
+		catch (AmazonServiceException ase) {
+			System.out.println("Caught an AmazonServiceException, which means your request made it " +
+					"to Amazon SQS, but was rejected with an error response for some reason.");
+			System.out.println("Error Message:    " + ase.getMessage());
+			System.out.println("HTTP Status Code: " + ase.getStatusCode());
+			System.out.println("AWS Error Code:   " + ase.getErrorCode());
+			System.out.println("Error Type:       " + ase.getErrorType());
+			
+			
+			// download status
+			messageFieldKeys.put("status", DownloadVtwFile.status);
+			
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+		return evContributer;
+	}
 }
