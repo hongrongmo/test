@@ -43,6 +43,8 @@ import com.amazonaws.services.sqs.model.Message;
 
 
 
+
+
 //HH 09/19/2016 added for VTW JSON SQS message parsing
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -52,6 +54,7 @@ import org.json.simple.JSONArray;
 
 
 
+import org.apache.log4j.Logger;
 import org.apache.oro.text.perl.*;
 import org.apache.oro.text.regex.*;
 import org.ei.dataloading.upt.loadtime.vtw.DownloadVtwFile;
@@ -85,6 +88,10 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 	HashMap<String,String> messageFieldKeys = new HashMap<String,String>();
 	
 	int loadNumber;
+	
+	
+	private final static Logger logger = Logger.getLogger(ReceiveAmazonSQSMessage.class);
+	
 	
 	public ReceiveAmazonSQSMessage()
 	{
@@ -504,7 +511,8 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 					}
 					else
 					{
-						System.out.println("Unknown Message Type: " + msgType + "!");
+						logger.error("Unknown Message Type: " + msgType + "!");
+						//System.out.println("Unknown Message Type: " + msgType + "!");
 						System.exit(1);
 					}
 					
@@ -540,7 +548,7 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 					
 					JSONObject detailes = (JSONObject)assets.get(prefix+":details");
 					String signedAssetURL = (String)detailes.get(prefix+":signedAssetURL");
-					System.out.println("SignedAssetURL: " + signedAssetURL);
+					//System.out.println("SignedAssetURL: " + signedAssetURL);   // only for debugging
 					
 					// download the XML file using pre-signedAssetURL
 					
@@ -552,7 +560,7 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 						
 						urlExpirationDate = signedAssetURL.substring(signedAssetURL.indexOf("Expires=") + 8, signedAssetURL.lastIndexOf("&"));
 						messageFieldKeys.put("urlExpirationDate", urlExpirationDate);
-						System.out.println("ExpirationDate: " + urlExpirationDate);
+						//System.out.println("ExpirationDate: " + urlExpirationDate);   // only for debugging
 						
 						
 						//Download the XML file
@@ -567,16 +575,21 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 		
 		catch(ParseException ex)
 		{
-			System.out.println("Json Parser exception type: " + ex.getErrorType() + ": " +  ex.getMessage());
+			logger.error("Json Parser exception type: " + ex.getErrorType() + ": " +  ex.getMessage());
+			//System.out.println("Json Parser exception type: " + ex.getErrorType() + ": " +  ex.getMessage());
+			
 			ex.printStackTrace();
 		}
-		catch (AmazonServiceException ase) {
-			System.out.println("Caught an AmazonServiceException, which means your request made it " +
+		catch (AmazonServiceException ase) 
+		{
+			logger.error("Caught an AmazonServiceException, which means your request made it " +
 					"to Amazon SQS, but was rejected with an error response for some reason.");
-			System.out.println("Error Message:    " + ase.getMessage());
-			System.out.println("HTTP Status Code: " + ase.getStatusCode());
-			System.out.println("AWS Error Code:   " + ase.getErrorCode());
-			System.out.println("Error Type:       " + ase.getErrorType());
+			
+			logger.error("Error Message:    " + ase.getMessage());
+			logger.error("HTTP Status Code: " + ase.getStatusCode());
+			logger.error("AWS Error Code:   " + ase.getErrorCode());
+			logger.error("Error Type:       " + ase.getErrorType());
+			logger.error("Request ID:       " + ase.getRequestId());
 			
 			
 			// download status
