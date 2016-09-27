@@ -8,12 +8,16 @@ import java.util.regex.Pattern;
 
 import com.amazonaws.AmazonClientException;
 import com.amazonaws.AmazonServiceException;
+import com.amazonaws.event.ProgressEvent;
+import com.amazonaws.event.ProgressListener;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.model.GetObjectRequest;
 import com.amazonaws.services.s3.model.ListObjectsRequest;
 import com.amazonaws.services.s3.model.ObjectListing;
+import com.amazonaws.services.s3.model.PutObjectRequest;
 import com.amazonaws.services.s3.model.S3Object;
 import com.amazonaws.services.s3.model.S3ObjectSummary;
+import com.amazonaws.services.s3.transfer.MultipleFileUpload;
 import com.amazonaws.services.s3.transfer.TransferManager;
 import com.amazonaws.services.s3.transfer.Upload;
 
@@ -28,7 +32,9 @@ public class UploadFileToS3 {
 
 	static String bucketName = null;
 	static String key = null;
-	static int loadNumber;
+	static String loadNumber;
+
+	static TransferManager tmanager;
 
 	public UploadFileToS3()
 	{
@@ -42,7 +48,7 @@ public class UploadFileToS3 {
 
 	public static void main(String[] args) throws AmazonClientException,AmazonServiceException, InterruptedException
 	{
-		if(args.length >3)
+		if(args.length >2)
 		{
 			if(args[0] !=null)
 			{
@@ -56,15 +62,9 @@ public class UploadFileToS3 {
 			}
 			if(args[2] !=null)
 			{
-				if(Pattern.matches("^\\d*$", args[2]))
-				{
-					loadNumber = Integer.parseInt(args[2]);
-				}
-				else
-				{
-					System.out.println("loadNumber has wrong format");
-					System.exit(1);
-				}
+
+				loadNumber = args[2];
+
 			}
 		}
 		else
@@ -73,32 +73,63 @@ public class UploadFileToS3 {
 			System.exit(1);
 		}
 
+		uploadDirToS3Bucket();
+
+
 	}
 
-	public static void uploadFileToS3Bucket() throws AmazonClientException,AmazonServiceException
+	public static void uploadDirToS3Bucket() throws AmazonClientException,AmazonServiceException
 	{
 		try
 		{
 			AmazonS3 s3Client = AmazonS3Service.getInstance().getAmazonS3Service();
-			TransferManager tmanager = new TransferManager(s3Client);
-			Upload upload = tmanager.upload(bucketName, key, new File(Integer.toString(loadNumber)));
-			
-			// poll transfer's status to check it's progress
-			if(upload.isDone() ==false)
+			tmanager = new TransferManager(s3Client);
+
+			String currDir = System.getProperty("user.dir");
+			File zipsDir = new File(currDir+"/zips/" + loadNumber);
+
+
+			if(!(zipsDir.exists()))
 			{
-				System.out.println("Transer: " + upload.getDescription());
-				System.out.println(" -State: " + upload.getState());
-				System.out.println(" -Progress: " + upload.getProgress().getBytesTransferred());
+				throw new FileNotFoundException();
 			}
-			
-			/*block the current thread and wait for the transfer to complete.
-			// if the transfer fails, this method will throw an AmazonClientException or AMazonServiceException 
-			 detailing the reason.
-			 */
-			upload.waitForCompletion();
+
+			//Check if Dir isNotEmpty (contains file), otherwise skip upload to S3
+			if(!(isEmptyDir(zipsDir)))
+			{
+				System.out.println("Uploading Dir: " + zipsDir.getAbsolutePath() + " to S3 Bucket");
+
+				// upload vtw zip dir to S3
+				MultipleFileUpload uploadFile = tmanager.uploadDirectory(bucketName, key, zipsDir, true);
+
+				// check transfer's status to check its progress
+				/*if(uploadFile.isDone() ==false)
+				{
+					System.out.println("Transfer: " + uploadFile.getDescription());
+					System.out.println(" - State: " + uploadFile.getState());
+					System.out.println(" - Progress: " + uploadFile.getProgress().getBytesTransferred());
+				}*/
+				uploadFile.addProgressListener(new ProgressListener()
+				{
+					@Override
+					public void progressChanged(ProgressEvent progressEvent)
+					{
+						System.out.println("Transfer: " + progressEvent.getBytesTransferred());
+					}
+				}	);
 				
-			// After the upload is complete, call shutDown to release the resources.
-			tmanager.shutdownNow();
+				// block the current thread and wait for the transfer to complete. if transfer fails; this method will throw 
+				//AmazonClientException or AmazonServiceException 
+				uploadFile.waitForCompletion();
+				
+
+			}
+			else
+			{
+				System.out.println("Dir is Empty!");
+				System.exit(1);
+			}
+
 
 		}
 		catch(AmazonServiceException ase)
@@ -120,21 +151,49 @@ public class UploadFileToS3 {
 					"communicate with S3, " +
 					"such as not being able to access the network.");
 			System.out.println("Error Message: " + ace.getMessage());
+			System.out.println("HTTP Status Code: " + ace.getCause());
 		}
-		catch (InterruptedException e) 
+		catch(InterruptedException ex)
 		{
+			ex.printStackTrace();
+		}
+		catch (Exception e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		catch(FileNotFoundException ex)
+
+		finally
 		{
-			System.out.println(ex.getMessage());
-			ex.printStackTrace();
-		}
-		catch(IOException ex)
-		{
-			ex.printStackTrace();
+			if(tmanager !=null)
+			{
+				//after download is complete, call shutdownNow to release resources
+				tmanager.shutdownNow(false);  
+			}
+
 		}
 	}
 
+
+	public static boolean isEmptyDir(File dir)
+	{
+		boolean empty = true;
+
+		String[] fileNames = dir.list();
+		try
+		{
+			if(fileNames !=null && fileNames.length >0)
+			{
+				System.out.println("Total zip files to upload to S3: " +  fileNames.length);
+				empty = false;
+			}
+		}
+		catch(SecurityException ex)
+		{
+			ex.printStackTrace();
+		}
+		
+
+		return empty;
+	}
 
 }
