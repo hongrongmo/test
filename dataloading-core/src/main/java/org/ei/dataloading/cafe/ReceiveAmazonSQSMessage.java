@@ -45,6 +45,7 @@ import com.amazonaws.services.sqs.model.Message;
 
 
 
+
 //HH 09/19/2016 added for VTW JSON SQS message parsing
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -58,6 +59,7 @@ import org.apache.log4j.Logger;
 import org.apache.oro.text.perl.*;
 import org.apache.oro.text.regex.*;
 import org.ei.dataloading.upt.loadtime.vtw.DownloadVtwFile;
+import org.ei.dataloading.upt.loadtime.vtw.VTWSearchAPI;
 /*
  * Date: 01/15/2016
  * Description: Receive and Parse Message from CAFE' Feed using Amazon SQS for processing:
@@ -460,8 +462,10 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 	{
 		String message_type = null;
 		String prefix = null;
-		String Patent_resourceID = null;
+		String Patent_resourceUrl = null;
 		String patentId = null, urlExpirationDate = null;
+		
+		String signedAssetURL = null;
 		
 		boolean evContributer = false;
 		
@@ -491,7 +495,7 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 			messageFieldKeys.put("message_to", msgTo);
 			
 			// only process SQS Message that meant to EV ONLY
-			if(msgTo !=null && msgTo.contains("E-Village"))
+			if(msgTo !=null && msgTo.contains("EV"))
 			{
 				evContributer = true;
 				
@@ -538,39 +542,46 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 					
 					while(resourceIterator.hasNext())
 					{
-						Patent_resourceID = resourceIterator.next();
-						System.out.println(prefix + " Resource: " + Patent_resourceID);
-						patentId = Patent_resourceID.substring(Patent_resourceID.indexOf("pat/") + 4, Patent_resourceID.lastIndexOf("/"));
-						messageFieldKeys.put("resource", patentId);
+						Patent_resourceUrl = resourceIterator.next();
+						System.out.println(prefix + " Resource: " + Patent_resourceUrl);
+						
+						messageFieldKeys.put("resource", Patent_resourceUrl);
+						
+						patentId = Patent_resourceUrl.substring(Patent_resourceUrl.indexOf("pat/") + 4, Patent_resourceUrl.lastIndexOf("/"));
+						messageFieldKeys.put("patentid", patentId);
 					}
 					
 					//evt:detailes or svc:detailes
 					
-					JSONObject detailes = (JSONObject)assets.get(prefix+":details");
-					String signedAssetURL = (String)detailes.get(prefix+":signedAssetURL");
-					//System.out.println("SignedAssetURL: " + signedAssetURL);   // only for debugging
+					if (assets.containsKey(prefix+":details"))
+					{
+						JSONObject detailes = (JSONObject)assets.get(prefix+":details");
+						signedAssetURL = (String)detailes.get(prefix+":signedAssetURL");
+						messageFieldKeys.put("signedAssetUrl", signedAssetURL);
+						//System.out.println("SignedAssetURL: " + signedAssetURL);   // only for debugging
+					}
 					
-					// download the XML file using pre-signedAssetURL
 					
+					// SignedAssetURL expiration date
 					if(signedAssetURL !=null)
 					{
 						// get Patent XML filename
-						String xmlFileName = signedAssetURL.substring(signedAssetURL.lastIndexOf("/") + 1, signedAssetURL.indexOf("?"));
-						messageFieldKeys.put("xmlFileName", xmlFileName);
+						/*String xmlFileName = signedAssetURL.substring(signedAssetURL.lastIndexOf("/") + 1, signedAssetURL.indexOf("?"));
+						messageFieldKeys.put("xmlFileName", xmlFileName);*/
 						
 						urlExpirationDate = signedAssetURL.substring(signedAssetURL.indexOf("Expires=") + 8, signedAssetURL.lastIndexOf("&"));
 						messageFieldKeys.put("urlExpirationDate", urlExpirationDate);
-						//System.out.println("ExpirationDate: " + urlExpirationDate);   // only for debugging
+						
 						
 						
 						//Download the XML file
-						instance.retrieveAsset(signedAssetURL,xmlFileName,Patent_resourceID,loadNumber);
+						//instance.retrieveAsset(signedAssetURL,xmlFileName,Patent_resourceID,loadNumber);
 					}
 					
 				}
 			}
 			
-			System.out.println("msg id is: " +  msgId + "message type: " + msgType);
+			//System.out.println("msg id is: " +  msgId + "message type: " + msgType);
 		}
 		
 		catch(ParseException ex)
@@ -593,7 +604,7 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 			
 			
 			// download status
-			messageFieldKeys.put("status", DownloadVtwFile.status);
+			messageFieldKeys.put("status", VTWSearchAPI.status);
 			
 		}
 		catch(Exception e)
