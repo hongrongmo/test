@@ -1,6 +1,8 @@
 package org.ei.dataloading.upt.loadtime.vtw;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -10,33 +12,33 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipOutputStream;
 
 import javax.jms.JMSException;
-import javax.jms.MessageConsumer;
-import javax.jms.Session;
+
+
+
 
 import org.apache.log4j.Logger;
 import org.ei.dataloading.cafe.CafeDownloadFileFromS3AllTypes;
 import org.ei.dataloading.cafe.ReceiveAmazonSQSMessage;
-import org.ei.dataloading.cafe.SQSConfiguration;
-import org.ei.dataloading.cafe.SQSExistenceCheck;
 
 
 
 
-
-
-
-
-import com.amazon.sqs.javamessaging.SQSConnection;
-import com.amazon.sqs.javamessaging.SQSConnectionFactory;
-import com.amazon.sqs.javamessaging.SQSSession;
 import com.amazonaws.AmazonClientException;
 import com.amazonaws.AmazonServiceException;
+import com.amazonaws.auth.AWSCredentialsProvider;
+import com.amazonaws.auth.EnvironmentVariableCredentialsProvider;
+import com.amazonaws.regions.Region;
+import com.amazonaws.regions.Regions;
 import com.amazonaws.services.sqs.AmazonSQS;
+import com.amazonaws.services.sqs.AmazonSQSClient;
 import com.amazonaws.services.sqs.model.ChangeMessageVisibilityRequest;
 import com.amazonaws.services.sqs.model.DeleteMessageRequest;
 import com.amazonaws.services.sqs.model.GetQueueUrlRequest;
@@ -44,6 +46,9 @@ import com.amazonaws.services.sqs.model.GetQueueUrlResult;
 import com.amazonaws.services.sqs.model.Message;
 import com.amazonaws.services.sqs.model.ReceiveMessageRequest;
 import com.amazonaws.services.sqs.model.ReceiveMessageResult;
+
+
+
 
 /**
  * @author TELEBH
@@ -81,14 +86,18 @@ public class ArchiveVTWPatentRefeed {
 
 	private static AmazonSQS sqs;
 	private static String myQueueUrl;
-	private static SQSConnection connection = null;
-	private static HashMap<String, String> queueArgs = new HashMap<String,String>();
-	
+
+
+
 	private ReceiveAmazonSQSMessage obj = null;   // for parsing/checking Message Metadata
 	private ReceiveMessageResult receiveMessageResult = null;
 	private DeleteMessageRequest deleteRequest = null;
 	private String messageBody;
 	private Map<String,String> msgAttributes= new HashMap<String,String>();
+
+
+	// get the list of Patent-Ids; with their signedAssetURL if any;  to download 
+	private static Map<String,String> patentIds = new LinkedHashMap<String,String>();
 
 
 	public static void main(String[] args) throws Exception {
@@ -107,7 +116,7 @@ public class ArchiveVTWPatentRefeed {
 			{
 				sqlldrFileName = args[2];
 			}
-			
+
 			if(args[3] !=null)
 			{
 				if(Pattern.matches("^\\d*$", args[3]))
@@ -139,14 +148,19 @@ public class ArchiveVTWPatentRefeed {
 		archiveVtwPatentRefeed.begin();
 		archiveVtwPatentRefeed.SQSCreationAndSetting();
 		archiveVtwPatentRefeed.end();
-		
-		//Zip downloaded files (each in it's corresponding dir)
-		CafeDownloadFileFromS3AllTypes.zipDownloads(recsPerZipFile, loadNumber);
-		
-		archiveVtwPatentRefeed.loadToDB();
-		
-		
 
+		// archive SQS messages to DB  
+		archiveVtwPatentRefeed.loadToDB();		// comment out only in testing, UnComment when in Prod
+
+		if(!(patentIds.isEmpty()))
+		{
+			VTWSearchAPI vtwSearchAPI = new VTWSearchAPI(loadNumber);
+			vtwSearchAPI.downloadPatentMetadata(patentIds);
+		}
+
+
+		//Zip downloaded files (each in it's corresponding dir)
+		archiveVtwPatentRefeed.zipDownloads();
 	}
 
 	// create text file to hold original message & partial parsed fields
@@ -156,15 +170,14 @@ public class ArchiveVTWPatentRefeed {
 		Date date = new Date();
 
 		String currDir = System.getProperty("user.dir");
-		//ESdir=new File(currDir+"/es/" + this.doc_type + "/" +  this.loadNumber);
 		String root= currDir+"/sqsarchive";
 		File sqsArchiveDir = new File (root);
 		if(!sqsArchiveDir.exists())
 		{
 			sqsArchiveDir.mkdir();
 		}
-		
-		
+
+
 		filename = sqsArchiveDir+"/"+queueName+"_feed-"+dateFormat.format(date)+".txt";
 		//filename = sqsArchiveDir+"/UAT_feed-"+dateFormat.format(date)+".txt";
 		try {
@@ -180,33 +193,29 @@ public class ArchiveVTWPatentRefeed {
 	public void SQSCreationAndSetting() throws JMSException, InterruptedException
 	{
 
-		queueArgs.put("--queue", queueName);
-		//queueArgs.put("--region","us-east-1");
-		queueArgs.put("--region","eu-west-1");
-		//queueArgs.put(--a, value)
+		/*
+		 * The ProfileCredentialsProvider will return your [default]
+		 * credential profile by reading from the credentials file located at
+		 * (~/.aws/credentials).
+		 */
+		AWSCredentialsProvider credentials = null;
+		try {
+			credentials = new EnvironmentVariableCredentialsProvider();   // for localhost
+			//credentials = new InstanceProfileCredentialsProvider();        // for dataloading EC2
+		} catch (Exception e) {
+			throw new AmazonClientException(
+					"Cannot load the credentials from the credential profiles file. " +
+							"Please make sure that your credentials file is at the correct " +
+							"location (~/.aws/credentials), and is in valid format.",
+							e);
+		}
 
 		try {
 
-			// Create the configuration for the example
-			SQSConfiguration config = SQSConfiguration.parseConfig("ArchiveVTWPatentRefeed", queueArgs);
+			sqs = new AmazonSQSClient(credentials);
+			Region euWest2 = Region.getRegion(Regions.EU_WEST_1);
+			sqs.setRegion(euWest2);
 
-
-			// Check if Queue Exist
-			SQSExistenceCheck.setupLogging();
-
-			// Create the connection factory based on the config
-			SQSConnectionFactory connectionFactory =SQSConnectionFactory.builder()
-					.withRegion(config.getRegion())
-					.withAWSCredentialsProvider(config.getCredentialsProvider())
-					.withNumberOfMessagesToPrefetch(NUM_OF_MESSAGES_TO_FETCH)
-					.build();
-
-			// Create the connection
-			connection = connectionFactory.createConnection();
-
-			queueName = config.getQueueName();
-			// Create the queue if needed
-			SQSExistenceCheck.ensureQueueExists(connection, queueName);
 
 
 			// AMazonSQS queue
@@ -214,38 +223,20 @@ public class ArchiveVTWPatentRefeed {
 			System.out.println("Getting Started with Amazon SQS");
 			System.out.println("===========================================\n");
 
-			//clone JMSwrapped amazonSQSClient to AMazonSQS queue
-			sqs = connection.getWrappedAmazonSQSClient().getAmazonSQSClient();
-			
-			//queu request
-			GetQueueUrlRequest request = new GetQueueUrlRequest().withQueueName(queueName).withQueueOwnerAWSAccountId("790640479873");
-			
+			GetQueueUrlRequest request = new GetQueueUrlRequest().withQueueName(queueName)
+					.withQueueOwnerAWSAccountId("790640479873");
+
 			GetQueueUrlResult result = sqs.getQueueUrl(request);
-			
-			// get current queue
-			//myQueueUrl = sqs.getQueueUrl(queueName).getQueueUrl();
+
+
+			System.out.println("  QueueUrl: " + result.getQueueUrl());
+			System.out.println();
+
+
 			myQueueUrl = result.getQueueUrl();
 
-			// List queues
-			System.out.println("Listing all queues in your account.\n");
-			for (String queueUrl : sqs.listQueues().getQueueUrls()) {
-				System.out.println("  QueueUrl: " + queueUrl);
-			}
-			System.out.println();
-			// END of AmazonSQS queue		
-
-
-			// Create the session  with client acknowledge mode
-			Session session = connection.createSession(false, SQSSession.UNORDERED_ACKNOWLEDGE);
-
-			// Create the consumer 
-			MessageConsumer consumer = session.createConsumer(session.createQueue(queueName));
-
-			// Open the connection
-			connection.start();
-
-			// Receive a message parse it
-			receiveMessage(consumer, true);
+			// Receive message & parse it 
+			receiveMessage();
 
 
 		}
@@ -258,7 +249,7 @@ public class ArchiveVTWPatentRefeed {
 			System.out.println("AWS Error Code:   " + ase.getErrorCode());
 			System.out.println("Error Type:       " + ase.getErrorType());
 			System.out.println("Request ID:       " + ase.getRequestId());
-			
+
 			//exit
 			//System.exit(1);
 		} catch (AmazonClientException ace) {
@@ -268,27 +259,11 @@ public class ArchiveVTWPatentRefeed {
 			System.out.println("Error Message: " + ace.getMessage());
 			//System.exit(1);
 		}
-		finally
-		{
-			if(connection !=null)
-			{
-				try
-				{
-					// Close the connection. This will close the session automatically
-					connection.close();
-					System.out.println("Connection closed.");
-				}
-				catch(Exception e)
-				{
-					e.printStackTrace();
-				}
-			}
-		}
 
 	}
 
 
-	private void receiveMessage(MessageConsumer consumer, boolean acknowledge) throws InterruptedException 
+	private void receiveMessage() throws InterruptedException 
 	{
 		ChangeMessageVisibilityRequest msgVisibilityReq;
 		String msgReciptHandle = null;
@@ -300,9 +275,9 @@ public class ArchiveVTWPatentRefeed {
 		.withVisibilityTimeout(MESSAGE_VISIBILITY_TIME_OUT_SECONDS)
 		.withWaitTimeSeconds(10).withMaxNumberOfMessages(NUM_OF_MESSAGES_TO_FETCH)
 		.withAttributeNames("SentTimestamp");
-		
-		
-	
+
+
+
 		// Receive messages
 		System.out.println("Receiving messages from "+queueName+".\n");
 
@@ -340,8 +315,8 @@ public class ArchiveVTWPatentRefeed {
 
 							// change message visibility timeout
 							msgVisibilityReq = new ChangeMessageVisibilityRequest(myQueueUrl, msgReciptHandle, MESSAGE_VISIBILITY_TIME_OUT_SECONDS);
+							System.out.println("Message VisibilityTimeOut: " + msgVisibilityReq.getVisibilityTimeout());
 
-							
 							//System.out.println("SQS Message: " +  messageBody);
 
 							//parse SQS Message Fields& determine whether it is sent to "E-Village" message
@@ -369,57 +344,74 @@ public class ArchiveVTWPatentRefeed {
 								recordBuf.append(FIELDDELIM);
 
 								//eventNotification ID
-								if(obj.getMessageField("evt_svc_id") !=null)
+								if(obj.getMessageField("event_id") !=null)
 								{
 									recordBuf.append(obj.getMessageField("event_id"));
 								}
-								recordBuf.append(FIELDDELIM);
 
-
-								//ServiceCall ID
-								if(obj.getMessageField("evt_svc_id") !=null)
+								else
 								{
-									recordBuf.append(obj.getMessageField("service_id"));
+									//ServiceCall ID
+									if(obj.getMessageField("service_id") !=null)
+									{
+										recordBuf.append(obj.getMessageField("service_id"));
+									}
 								}
+
 								recordBuf.append(FIELDDELIM);
-								
-								//Resource (Patent ID part)
+
+								//Resource (URL containing Patent ID  and Generation# [i.e. http://acc.vtw.elsevier.com/content/pat/EP1412238A1/10] )
 								if(obj.getMessageField("resource") !=null)
 								{
 									recordBuf.append(obj.getMessageField("resource"));
 								}
 								recordBuf.append(FIELDDELIM);
-								
 
 
-								//Patent XML FileName
-								if(obj.getMessageField("xmlFileName") !=null)
+
+								//Patent XML FileName (Patent ID, i.e. EP1412238A1)
+								if(obj.getMessageField("patentid") !=null)
 								{
-									recordBuf.append(obj.getMessageField("xmlFileName"));
+									recordBuf.append(obj.getMessageField("patentid"));
+									patentIds.put(obj.getMessageField("patentid"), "");
 								}
 								recordBuf.append(FIELDDELIM);
-								
+
+
+								//SignedAssetURL
+								if(obj.getMessageField("signedAssetUrl") !=null)
+								{
+									recordBuf.append(obj.getMessageField("signedAssetUrl"));
+									if(patentIds.containsKey(obj.getMessageField("patentid")))
+									{
+										patentIds.put(obj.getMessageField("patentid"), obj.getMessageField("signedAssetUrl"));
+									}
+								}
+
+								recordBuf.append(FIELDDELIM);
+
+
 								//signed Asset URL's Expiration Date
 								if(obj.getMessageField("urlExpirationDate") !=null)
 								{
 									recordBuf.append(convertMillisecondsToFormattedDate(obj.getMessageField("urlExpirationDate")));
 								}
 								recordBuf.append(FIELDDELIM);
-								
-								
+
+
 								//Status of download (succeed or failed)
 								if(obj.getMessageField("status") !=null)
 								{
 									recordBuf.append(obj.getMessageField("status"));
 								}
 								recordBuf.append(FIELDDELIM);
-								
-								
+
+
 								//Archive_Date, Date when message was read from SQS & archived
 								recordBuf.append(msgSentDateFormat.format(new Date()));
 								recordBuf.append(FIELDDELIM);
 
-								
+
 								//Body
 								recordBuf.append(messageBody);
 								recordBuf.append(FIELDDELIM);
@@ -430,7 +422,7 @@ public class ArchiveVTWPatentRefeed {
 								{	
 									recordBuf.append(msgSentDateFormat.format(new Date(Long.parseLong(msgAttributes.get("SentTimestamp")))).toString());
 								}
-								
+
 
 
 								// write the message to out file
@@ -460,7 +452,7 @@ public class ArchiveVTWPatentRefeed {
 		}
 
 	}
-	
+
 	private void deleteMessage(String messageHandle)
 	{
 		if(messageHandle !=null && messageHandle.length() >0)
@@ -470,8 +462,8 @@ public class ArchiveVTWPatentRefeed {
 			sqs.deleteMessage(deleteRequest);
 		}
 	}
-	
-	
+
+
 	public void end()
 	{
 		if(out !=null)
@@ -487,47 +479,134 @@ public class ArchiveVTWPatentRefeed {
 			}
 		}
 	}
-	
+
 	//HH 09/20/2016 Convert Milliseconds to formatted date
-		public String convertMillisecondsToFormattedDate(String milliSeconds)
-		{
-			Long epoch = Long.parseLong(milliSeconds) * 1000;
-			Calendar calendar = new java.util.GregorianCalendar(java.util.TimeZone.getTimeZone("US/Central"));
-			calendar.setTimeInMillis(epoch);
-			return msgSentDateFormat.format(calendar.getTime());
-		}
-		
-		public void loadToDB()
-		{
-			try {
-				 
-	            File f = new File(filename);
-	            if(!f.exists())
-	            {
-	                System.out.println("datafile: "+filename+" does not exists");
-	                System.exit(1);
-	            }
-	            
-	           
-	                System.out.println("sql loader file "+filename+" created;");
-	                System.out.println("about to load data file "+filename);
-	                System.out.println("press enter to continue");
-	                //System.in.read();
-	                Thread.currentThread().sleep(1000);
-	            
-	            Runtime r = Runtime.getRuntime();
+	public String convertMillisecondsToFormattedDate(String milliSeconds)
+	{
+		Long epoch = Long.parseLong(milliSeconds) * 1000;
+		Calendar calendar = new java.util.GregorianCalendar(java.util.TimeZone.getTimeZone("US/Central"));
+		calendar.setTimeInMillis(epoch);
+		return msgSentDateFormat.format(calendar.getTime());
+	}
 
-	            Process p = r.exec("./"+sqlldrFileName+" "+filename);
-	            int t = p.waitFor();
-	            System.out.println("Waited: " + t + " seconds for the sqlldr to complete");
+	public void loadToDB()
+	{
+		try {
 
-				} 
-			catch (Exception e) {
-				
-				e.printStackTrace();
+			File f = new File(filename);
+			if(!f.exists())
+			{
+				System.out.println("datafile: "+filename+" does not exists");
+				System.exit(1);
 			}
-			
+
+
+			System.out.println("sql loader file "+filename+" created;");
+			System.out.println("about to load data file "+filename);
+			System.out.println("press enter to continue");
+			//System.in.read();
+			Thread.currentThread().sleep(1000);
+
+			Runtime r = Runtime.getRuntime();
+
+			Process p = r.exec("./"+sqlldrFileName+" "+filename);
+			int t = p.waitFor();
+			System.out.println("Waited: " + t + " seconds for the sqlldr to complete");
+
+		} 
+		catch (Exception e) {
+
+			e.printStackTrace();
 		}
+
+	}
+
+
+	// 09/21/2016: Zip VTW XML files downloaded from VTW S3 bucket for later passing to converting program
+	/**
+	 * 
+	 * @param recsPerZipFile
+	 * @throws Exception
+	 * hierarchy of downloaded VTW XML files (CurrDir -> loadnumberDir -> PatentID -> xml file) (i.e. /data/loading/ipdd -> 201639 -> EP2042829B1 -> AU2010281317A1.xml)
+	 **/
+	public void zipDownloads() throws Exception
+	{
+		int zipFileID = 1;
+	    int curRecNum = 0;
 		
+		// get date&time in epoch format to be able to distinguish which file to send to converting, in case there are multiple files to convert
+		DateFormat dateFormat = new SimpleDateFormat("E, MM/dd/yyyy-hh:mm:ss a");
+		Date date = dateFormat.parse(dateFormat.format(new Date()));
+		long epoch = date.getTime();
+		
+		
+		String currDir = System.getProperty("user.dir");
+		File zipsDir = new File(currDir+"/zips");
+		if(!(zipsDir.exists()))
+		{
+			zipsDir.mkdir();
+		}
+
+		zipsDir = new File(zipsDir + "/vtw");
+		if(!(zipsDir.exists()))
+		{
+			zipsDir.mkdir();
+		}
+
+		zipsDir = new File(zipsDir+"/" +loadNumber);
+		if(!(zipsDir.exists()))
+		{
+			zipsDir.mkdir();
+		}
+
+
+		File downDir = new File(currDir + "/raw_data/"+loadNumber);
+
+		String[] xmlFiles = downDir.list();
+		File[] xmlFilesToDelete = downDir.listFiles();
+		byte[] buf = new byte[1024];
+
+
+		// create zip files if any files were downloaded, otherwise no zip file should be created
+		if(xmlFiles.length >0)
+		{
+			String zipFileName = zipsDir + "/" + epoch + "_" + zipFileID + ".zip";
+			ZipOutputStream outZip = new ZipOutputStream(new FileOutputStream(zipFileName));
+
+			for(int i=0; i<xmlFiles.length; i++)
+			{
+				// limit each single zip file to hold recsPerZipfile, otherwise split to multiple zip files
+				if(curRecNum >= recsPerZipFile)
+				{
+					curRecNum = 0;
+					outZip.close();
+
+					zipFileID++;
+					
+					date = dateFormat.parse(dateFormat.format(new Date()));
+					epoch = date.getTime();
+					
+					zipFileName = zipsDir + "/" + epoch + "_" + zipFileID + ".zip";
+					outZip = new ZipOutputStream(new FileOutputStream(zipFileName));	
+				}
+				FileInputStream in = new FileInputStream(downDir + "/" + xmlFiles[i]);
+				outZip.putNextEntry(new ZipEntry(xmlFiles[i]));
+
+				int length;
+				while((length = in.read(buf)) >0)
+				{
+					outZip.write(buf,0,length);
+				}
+				outZip.closeEntry();
+				in.close();
+				xmlFilesToDelete[i].delete();  // delete original xml file to save space
+
+				++curRecNum;
+			}
+			outZip.close();
+			downDir.delete();
+		}
+	}
+
 
 }
