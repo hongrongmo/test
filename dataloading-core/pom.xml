@@ -165,7 +165,9 @@
 		<dependency>
 			<groupId>com.amazonaws</groupId>
 			<artifactId>aws-java-sdk-sqs</artifactId>
-			<version>1.10.72</version>
+			<!-- <version>1.10.72</version> -->
+			<!-- HH: 09/26/2016 AMazon sqs -->
+    		<version>1.11.23</version>
 		</dependency>
 		<dependency>
     		<groupId>junit</groupId>
@@ -229,6 +231,14 @@
     		<version>1.0.4</version>
 		</dependency>
 		
+		<!-- HH 09/19/2016 for Parsing VTW JSON SQS Message -->
+		
+		<dependency>
+    		<groupId>com.googlecode.json-simple</groupId>
+    		<artifactId>json-simple</artifactId>
+    		<version>1.1.1</version>
+		</dependency>
+		
 		<!-- HH: 02/18/2016 for Amazon Lambda -->
 		 <dependency>
 			<groupId>com.amazonaws</groupId>
@@ -251,6 +261,15 @@
  			<artifactId>aws-lambda-java-log4j</artifactId>
   			<version>1.0.0</version>
   		 </dependency>
+  		 
+  		 <!-- HH 10/12/2016 added for VTW to skip Byte Order Marker "BOM" from Patent XML file -->
+		<dependency>
+    		<groupId>commons-io</groupId>
+    		<artifactId>commons-io</artifactId>
+    		<version>2.4</version>
+		</dependency>
+		
+		<!-- HH END -->
   		  
 		
 	</dependencies>
@@ -296,8 +315,8 @@
     </plugin>
     <!-- END -->
     
-    <!-- HH 07/28/2016 for Lambda Package creating -->
-    <!-- <plugin>
+    <!-- HH 07/28/2016 for Lambda Package creating, it emebeds all jara dependencies in eielib.jar file -->
+     <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-shade-plugin</artifactId>
         <version>2.3</version>
@@ -312,7 +331,7 @@
             </goals>
           </execution>
         </executions>
-      </plugin> -->
+      </plugin> 
       <!-- END -->
       
 		</plugins>
