@@ -15,26 +15,21 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 import javax.jms.JMSException;
 
-
-
-
 import org.apache.log4j.Logger;
-import org.ei.dataloading.cafe.CafeDownloadFileFromS3AllTypes;
 import org.ei.dataloading.cafe.ReceiveAmazonSQSMessage;
-
-
-
 
 import com.amazonaws.AmazonClientException;
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.auth.AWSCredentialsProvider;
 import com.amazonaws.auth.EnvironmentVariableCredentialsProvider;
+import com.amazonaws.auth.InstanceProfileCredentialsProvider;
 import com.amazonaws.regions.Region;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.sqs.AmazonSQS;
@@ -73,7 +68,7 @@ public class ArchiveVTWPatentRefeed {
 	private final static Logger logger = Logger.getLogger(ArchiveVTWPatentRefeed.class);
 
 	private static int numberOfRuns=0;
-	private static String queueName;
+	private static String queueName = "acc-contributor-event-queue-EV";
 	private static String sqlldrFileName = null;
 	static int loadNumber = 0;
 	static int recsPerZipFile = 20000;
@@ -200,8 +195,8 @@ public class ArchiveVTWPatentRefeed {
 		 */
 		AWSCredentialsProvider credentials = null;
 		try {
-			credentials = new EnvironmentVariableCredentialsProvider();   // for localhost
-			//credentials = new InstanceProfileCredentialsProvider();        // for dataloading EC2
+			//credentials = new EnvironmentVariableCredentialsProvider();   // for localhost
+			credentials = new InstanceProfileCredentialsProvider();        // for dataloading EC2
 		} catch (Exception e) {
 			throw new AmazonClientException(
 					"Cannot load the credentials from the credential profiles file. " +
@@ -315,65 +310,27 @@ public class ArchiveVTWPatentRefeed {
 
 							// change message visibility timeout
 							msgVisibilityReq = new ChangeMessageVisibilityRequest(myQueueUrl, msgReciptHandle, MESSAGE_VISIBILITY_TIME_OUT_SECONDS);
-							System.out.println("Message VisibilityTimeOut: " + msgVisibilityReq.getVisibilityTimeout());
+							
 
 							//System.out.println("SQS Message: " +  messageBody);
 
 							//parse SQS Message Fields& determine whether it is sent to "E-Village" message
 							if(obj.ParseJsonSQSMessage(messageBody))   
 							{
-								//Message ID 
-								if(obj.getMessageField("message_id") !=null)
-								{
-									recordBuf.append(obj.getMessageField("message_id"));
-								}
-								recordBuf.append(FIELDDELIM);
-
-								//message Type
-								if(obj.getMessageField("message_type") !=null)
-								{
-									recordBuf.append(obj.getMessageField("message_type"));
-								}
-								recordBuf.append(FIELDDELIM);
-
-								//message To
-								if(obj.getMessageField("message_to") !=null)
-								{
-									recordBuf.append(obj.getMessageField("message_to"));
-								}
-								recordBuf.append(FIELDDELIM);
-
-								//eventNotification ID
-								if(obj.getMessageField("event_id") !=null)
-								{
-									recordBuf.append(obj.getMessageField("event_id"));
-								}
-
-								else
-								{
-									//ServiceCall ID
-									if(obj.getMessageField("service_id") !=null)
-									{
-										recordBuf.append(obj.getMessageField("service_id"));
-									}
-								}
-
-								recordBuf.append(FIELDDELIM);
-
-								//Resource (URL containing Patent ID  and Generation# [i.e. http://acc.vtw.elsevier.com/content/pat/EP1412238A1/10] )
-								if(obj.getMessageField("resource") !=null)
-								{
-									recordBuf.append(obj.getMessageField("resource"));
-								}
-								recordBuf.append(FIELDDELIM);
-
-
-
+								
 								//Patent XML FileName (Patent ID, i.e. EP1412238A1)
 								if(obj.getMessageField("patentid") !=null)
 								{
 									recordBuf.append(obj.getMessageField("patentid"));
+									
+									// only download Patent of type EP/US
+									
+									if(obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("US") || 
+											obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("EP"))
 									patentIds.put(obj.getMessageField("patentid"), "");
+									
+									else
+										System.out.println("Skip downloading Patent : "+ obj.getMessageField("patentid") + " of type: " + obj.getMessageField("patentid").substring(0, 2));
 								}
 								recordBuf.append(FIELDDELIM);
 
@@ -397,6 +354,54 @@ public class ArchiveVTWPatentRefeed {
 									recordBuf.append(convertMillisecondsToFormattedDate(obj.getMessageField("urlExpirationDate")));
 								}
 								recordBuf.append(FIELDDELIM);
+								
+								
+								/*
+								//Message ID 
+								if(obj.getMessageField("message_id") !=null)
+								{
+									recordBuf.append(obj.getMessageField("message_id"));
+								}
+								recordBuf.append(FIELDDELIM);
+
+								//message Type
+								if(obj.getMessageField("message_type") !=null)
+								{
+									recordBuf.append(obj.getMessageField("message_type"));
+								}
+								recordBuf.append(FIELDDELIM);*/
+
+								//message To
+								if(obj.getMessageField("message_to") !=null)
+								{
+									recordBuf.append(obj.getMessageField("message_to"));
+								}
+								recordBuf.append(FIELDDELIM);
+
+								/*//eventNotification ID
+								if(obj.getMessageField("event_id") !=null)
+								{
+									recordBuf.append(obj.getMessageField("event_id"));
+								}
+
+								else
+								{
+									//ServiceCall ID
+									if(obj.getMessageField("service_id") !=null)
+									{
+										recordBuf.append(obj.getMessageField("service_id"));
+									}
+								}
+
+								recordBuf.append(FIELDDELIM);
+								 */
+								//Resource (URL containing Patent ID  and Generation# [i.e. http://acc.vtw.elsevier.com/content/pat/EP1412238A1/10] )
+								if(obj.getMessageField("resource") !=null)
+								{
+									recordBuf.append(obj.getMessageField("resource"));
+								}
+								recordBuf.append(FIELDDELIM);
+
 
 
 								//Status of download (succeed or failed)
@@ -540,6 +545,8 @@ public class ArchiveVTWPatentRefeed {
 		long epoch = date.getTime();
 		
 		
+		SequenceGenerator seqNum = new SequenceGenerator();
+		
 		String currDir = System.getProperty("user.dir");
 		File zipsDir = new File(currDir+"/zips");
 		if(!(zipsDir.exists()))
@@ -570,7 +577,8 @@ public class ArchiveVTWPatentRefeed {
 		// create zip files if any files were downloaded, otherwise no zip file should be created
 		if(xmlFiles.length >0)
 		{
-			String zipFileName = zipsDir + "/" + epoch + "_" + zipFileID + ".zip";
+			//String zipFileName = zipsDir + "/" + epoch + "_" + zipFileID + ".zip";
+			String zipFileName = zipsDir + "/" + seqNum.nextloadNum() + seqNum.nextNum()+ ".zip";
 			ZipOutputStream outZip = new ZipOutputStream(new FileOutputStream(zipFileName));
 
 			for(int i=0; i<xmlFiles.length; i++)
@@ -586,7 +594,8 @@ public class ArchiveVTWPatentRefeed {
 					date = dateFormat.parse(dateFormat.format(new Date()));
 					epoch = date.getTime();
 					
-					zipFileName = zipsDir + "/" + epoch + "_" + zipFileID + ".zip";
+					//zipFileName = zipsDir + "/" + epoch + "_" + zipFileID + ".zip";
+					zipFileName = zipsDir + "/" + seqNum.nextloadNum() + seqNum.nextNum() + ".zip";
 					outZip = new ZipOutputStream(new FileOutputStream(zipFileName));	
 				}
 				FileInputStream in = new FileInputStream(downDir + "/" + xmlFiles[i]);
@@ -608,5 +617,32 @@ public class ArchiveVTWPatentRefeed {
 		}
 	}
 
+	
+	// generate unique ID for the zip filename (zip file should be a sequence number that can not be duplicate)
+	/* for example in multithreading running of download VTW, each instance should create unique zip file name that does not override the other instance
+	 * Note: With current patent app, the name of zip file must be a number and must be less than 2147483647, a max int value
+	 */
+	
+	public class SequenceGenerator
+	{
+		volatile AtomicInteger sequenceLoadNum = new AtomicInteger();
+		volatile AtomicInteger sequenceID = new AtomicInteger();
+		public synchronized int nextloadNum()
+		{
+			int nextVal = sequenceLoadNum.incrementAndGet();
+			System.out.println("Next LoadNumber Value is: " + nextVal);
+			return nextVal;
+			
+		}
+		
+		public synchronized int nextNum()
+		{
+			int nextVal = sequenceID.incrementAndGet();
+			System.out.println("Next Value is: " + nextVal);
+			return nextVal;
+			
+		}
+		
+	}
 
 }
