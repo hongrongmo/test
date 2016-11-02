@@ -491,7 +491,7 @@ public class ReceiveAmazonSQSMessage implements MessageListener {
 			}
 			
 			messageFieldKeys.put("message_id", msgId);
-			messageFieldKeys.put("message_type",msgType);
+			//messageFieldKeys.put("message_type",msgType);
 			messageFieldKeys.put("message_to", msgTo);
 			
 			// only process SQS Message that meant to EV ONLY
