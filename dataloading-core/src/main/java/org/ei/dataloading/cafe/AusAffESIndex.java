@@ -17,6 +17,9 @@ import java.util.List;
 
 import javax.json.JsonObject;
 
+import org.apache.log4j.Logger;
+import org.ei.dataloading.upt.loadtime.vtw.ArchiveVTWPatentRefeed;
+
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.AmazonWebServiceResponse;
 import com.amazonaws.ClientConfiguration;
@@ -32,6 +35,7 @@ import com.amazonaws.http.AmazonHttpClient;
 import com.amazonaws.http.ExecutionContext;
 import com.amazonaws.http.HttpMethodName;
 import com.amazonaws.http.HttpResponseHandler;
+import com.amazonaws.http.IdleConnectionReaper;
 import com.amazonaws.services.waf.model.HTTPRequest;
 import com.amazonaws.util.IOUtils;
 
@@ -40,11 +44,13 @@ public class AusAffESIndex {
 	private final String SERVICE_NAME = "es";
 	private final String REGION = "us-east-1";
 	private final String HOST = "search-evcafe-prod-h7xqbezrvqkb5ult6o4sn6nsae.us-east-1.es.amazonaws.com";  // for dataloading Ec2
-	//private final String HOST = "search-evcafeauaf-v6tfjfyfj26rtoneh233lzzqtq.us-east-1.es.amazonaws.com";
+	//private final String HOST = "search-evcafeauaf-v6tfjfyfj26rtoneh233lzzqtq.us-east-1.es.amazonaws.com";  // for testing
 	//private final String HOST = "localhost:8060";    // evauaf cluster using tunnel, localhost
 	private final String ENDPOINT_ROOT = "http://" + HOST;
 	private final String PATH = "/cafe/_bulk";
 	private final String ENDPOINT = ENDPOINT_ROOT + PATH;
+	
+	private final int REQUEST_TIMEOUT = 100 * 1000;		//Sets the amount of time to wait (in milliseconds) for the request to complete before giving up and timing out
 
 	
 	private int recsPerbulk = 10;
@@ -54,9 +60,17 @@ public class AusAffESIndex {
 		
 	private StringBuffer bulkIndexContents = new StringBuffer();
 
+	private final static Logger logger = Logger.getLogger(AusAffESIndex.class);
 
 	 AmazonHttpClient client = null;
 	 
+	 
+	 
+	private static long startTime = System.currentTimeMillis();
+	private static long endTime = System.currentTimeMillis();
+	private static long midTime = System.currentTimeMillis();
+		
+		
 	 
 	public AusAffESIndex()
 	{
@@ -66,6 +80,12 @@ public class AusAffESIndex {
 	public AusAffESIndex(int bulkSize)
 	{
 		recsPerbulk = bulkSize;
+		
+		midTime = System.currentTimeMillis();
+		endTime = System.currentTimeMillis();
+		System.out.println("Time after initializing AusAffIndex class "+(endTime-startTime)/1000.0+" seconds");
+		System.out.println("total Time used "+(endTime-startTime)/1000.0+" seconds");
+
 		
 	}
 	
@@ -93,8 +113,10 @@ public class AusAffESIndex {
 			if(client !=null)
 			{
 				client.shutdown();
+				System.out.println("AmazonHttpClient Client was shutdown successfully");
 			}
 		}
+		
 		catch(Exception e)
 		{
 			System.out.println("error occurred during client shutdown");
@@ -138,6 +160,8 @@ public class AusAffESIndex {
 	       ClientConfiguration clientConfiguration = new ClientConfiguration();
 	       clientConfiguration.setConnectionTimeout(ClientConfiguration.DEFAULT_CONNECTION_TIMEOUT);
 	       clientConfiguration.setConnectionMaxIdleMillis(ClientConfiguration.DEFAULT_CONNECTION_MAX_IDLE_MILLIS);
+	       clientConfiguration.setSocketTimeout(100*1000);
+	       clientConfiguration.setRequestTimeout(REQUEST_TIMEOUT);		// sets Request timeout to to "60" seconds 
 	       client = new AmazonHttpClient(clientConfiguration);
 
 	       MyHttpResponseHandler<Void> responseHandler = new MyHttpResponseHandler<Void>();
@@ -164,8 +188,29 @@ public class AusAffESIndex {
 		// Perform Signature Version 4 signing
 		//performSigningSteps(request);    // used when having iam role for ES accesspolicy, but not in use for IP range access policy
 
+		
+		// only for debugging
+		/*midTime = endTime;
+        endTime = System.currentTimeMillis();
+		
+		System.out.println("*****************");
+		System.out.println("Time before sending ES index request "+(endTime-midTime)/1000.0+" seconds");
+        System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+		System.out.println("*****************");*/
+
 		// Send the request to the server
 		sendRequest(request);   
+		
+		
+		/*midTime = endTime;
+        endTime = System.currentTimeMillis();
+		
+		System.out.println("*****************");
+		System.out.println("Time after sending ES index request "+(endTime-midTime)/1000.0+" seconds");
+        System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+		System.out.println("*****************");*/
+
+		
 		
 		// Shutdown client
 		end();
@@ -207,7 +252,8 @@ public class AusAffESIndex {
 
 			String responseString = IOUtils.toString(responseStream);
 
-			System.out.println(responseString);
+			logger.info(responseString);
+			//System.out.println(responseString);
 			// set status for DB deletion
 			setStatusCode(Integer.toString(response.getStatusCode()));
 			
@@ -243,9 +289,14 @@ public class AusAffESIndex {
 			
 			System.out.println(response.getStatusText());
 			System.out.println(response.getStatusCode());
-			System.out.println(ase.getErrorMessage());
-			System.out.println(ase.getRawResponseContent());
+			//System.out.println(ase.getErrorMessage());
+			//System.out.println(ase.getRawResponseContent());
 			System.out.println(ase.getErrorCode());
+			
+			logger.error(ase.getErrorMessage());
+			logger.error(ase.getRawResponseContent());
+			
+			
 			return ase;
 		}
 
@@ -260,6 +311,7 @@ public class AusAffESIndex {
 	{
 		if(curRecNum > recsPerbulk)
 		{
+			System.out.println("Starting Index " + recsPerbulk);
 			// index
 			ProcessBulk();
 			bulkIndexContents = new StringBuffer();
