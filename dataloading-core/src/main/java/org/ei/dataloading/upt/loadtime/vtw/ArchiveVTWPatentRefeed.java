@@ -1,10 +1,13 @@
 package org.ei.dataloading.upt.loadtime.vtw;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -28,7 +31,6 @@ import org.ei.dataloading.cafe.ReceiveAmazonSQSMessage;
 import com.amazonaws.AmazonClientException;
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.auth.AWSCredentialsProvider;
-import com.amazonaws.auth.EnvironmentVariableCredentialsProvider;
 import com.amazonaws.auth.InstanceProfileCredentialsProvider;
 import com.amazonaws.regions.Region;
 import com.amazonaws.regions.Regions;
@@ -91,6 +93,20 @@ public class ArchiveVTWPatentRefeed {
 	private Map<String,String> msgAttributes= new HashMap<String,String>();
 
 
+	private String zipFileName = "";
+	
+	private static long startTime = System.currentTimeMillis();
+	private static long endTime = System.currentTimeMillis();
+	private static long midTime = System.currentTimeMillis();
+	
+	
+	
+	public ArchiveVTWPatentRefeed()
+	{
+
+	}
+
+
 	// get the list of Patent-Ids; with their signedAssetURL if any;  to download 
 	private static Map<String,String> patentIds = new LinkedHashMap<String,String>();
 
@@ -138,24 +154,65 @@ public class ArchiveVTWPatentRefeed {
 
 		ArchiveVTWPatentRefeed archiveVtwPatentRefeed = new ArchiveVTWPatentRefeed();
 
+		midTime = System.currentTimeMillis();
+		endTime = System.currentTimeMillis();
+		System.out.println("Time for finish reading input parameter & ES initialization "+(endTime-startTime)/1000.0+" seconds");
+		System.out.println("total Time used "+(endTime-startTime)/1000.0+" seconds");
+		
+		
 		// access VTW QUEUE 
-
 		archiveVtwPatentRefeed.begin();
 		archiveVtwPatentRefeed.SQSCreationAndSetting();
 		archiveVtwPatentRefeed.end();
 
 		// archive SQS messages to DB  
-		archiveVtwPatentRefeed.loadToDB();		// comment out only in testing, UnComment when in Prod
+		//archiveVtwPatentRefeed.loadToDB();		// comment out only in testing, UnComment when in Prod
 
 		if(!(patentIds.isEmpty()))
 		{
-			VTWSearchAPI vtwSearchAPI = new VTWSearchAPI(loadNumber);
+			DateFormat dateFormat = new SimpleDateFormat("E, MM/dd/yyyy-hh:mm:ss a");
+			Date date = dateFormat.parse(dateFormat.format(new Date()));
+			long epoch = date.getTime();		// for US/EUP
+			long wo_epoch = dateFormat.parse(dateFormat.format(new Date())).getTime();  // for WO
+			
+			
+			//VTWSearchAPI vtwSearchAPI = new VTWSearchAPI(loadNumber, archiveVtwPatentRefeed.getRecentZipFileName());
+			//VTWSearchAPI vtwSearchAPI = new VTWSearchAPI(archiveVtwPatentRefeed.getRecentZipFileName());
+			
+			midTime = endTime;
+			endTime = System.currentTimeMillis();
+			System.out.println("time before downloading files "+(endTime-midTime)/1000.0+" seconds");
+			System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+			
+			
+			VTWSearchAPI vtwSearchAPI = new VTWSearchAPI(Long.toString(epoch));
 			vtwSearchAPI.downloadPatentMetadata(patentIds);
+			
+			
+			midTime = endTime;
+			endTime = System.currentTimeMillis();
+			System.out.println("time after downloading files "+(endTime-midTime)/1000.0+" seconds");
+			System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+			
+			
+			
+			//Zip downloaded files (each in it's corresponding dir)
+			archiveVtwPatentRefeed.zipDownloads(loadNumber, Long.toString(epoch));
+			
+			
+			midTime = endTime;
+			endTime = System.currentTimeMillis();
+			System.out.println("time after zip downloaded files "+(endTime-midTime)/1000.0+" seconds");
+			System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+			
+		}
+		else
+		{
+			System.out.println("PatentIds List is Empty, nothing to download");
 		}
 
 
-		//Zip downloaded files (each in it's corresponding dir)
-		archiveVtwPatentRefeed.zipDownloads();
+		
 	}
 
 	// create text file to hold original message & partial parsed fields
@@ -183,6 +240,9 @@ public class ArchiveVTWPatentRefeed {
 
 		System.out.println("Output Filename "+filename);
 
+		// read latest zipfilename from zipFileNames file as the start point for Sequence generation
+		readZipFileNameFromFile(loadNumber);
+		
 	}
 
 	public void SQSCreationAndSetting() throws JMSException, InterruptedException
@@ -229,6 +289,14 @@ public class ArchiveVTWPatentRefeed {
 
 
 			myQueueUrl = result.getQueueUrl();
+			
+			
+			midTime = endTime;
+			endTime = System.currentTimeMillis();
+			System.out.println("time for connecting to SQS Queue "+(endTime-midTime)/1000.0+" seconds");
+			System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+			
+			
 
 			// Receive message & parse it 
 			receiveMessage();
@@ -260,6 +328,8 @@ public class ArchiveVTWPatentRefeed {
 
 	private void receiveMessage() throws InterruptedException 
 	{
+		int exitWaitingID = 0;
+
 		ChangeMessageVisibilityRequest msgVisibilityReq;
 		String msgReciptHandle = null;
 
@@ -310,25 +380,26 @@ public class ArchiveVTWPatentRefeed {
 
 							// change message visibility timeout
 							msgVisibilityReq = new ChangeMessageVisibilityRequest(myQueueUrl, msgReciptHandle, MESSAGE_VISIBILITY_TIME_OUT_SECONDS);
-							
+
 
 							//System.out.println("SQS Message: " +  messageBody);
 
 							//parse SQS Message Fields& determine whether it is sent to "E-Village" message
 							if(obj.ParseJsonSQSMessage(messageBody))   
 							{
-								
+
 								//Patent XML FileName (Patent ID, i.e. EP1412238A1)
 								if(obj.getMessageField("patentid") !=null)
 								{
 									recordBuf.append(obj.getMessageField("patentid"));
-									
+
 									// only download Patent of type EP/US
-									
+
 									if(obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("US") || 
-											obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("EP"))
-									patentIds.put(obj.getMessageField("patentid"), "");
-									
+											obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("EP") ||
+											obj.getMessageField("patentid").substring(0, 2).equalsIgnoreCase("WO"))
+										patentIds.put(obj.getMessageField("patentid"), "");
+
 									else
 										System.out.println("Skip downloading Patent : "+ obj.getMessageField("patentid") + " of type: " + obj.getMessageField("patentid").substring(0, 2));
 								}
@@ -354,22 +425,6 @@ public class ArchiveVTWPatentRefeed {
 									recordBuf.append(convertMillisecondsToFormattedDate(obj.getMessageField("urlExpirationDate")));
 								}
 								recordBuf.append(FIELDDELIM);
-								
-								
-								/*
-								//Message ID 
-								if(obj.getMessageField("message_id") !=null)
-								{
-									recordBuf.append(obj.getMessageField("message_id"));
-								}
-								recordBuf.append(FIELDDELIM);
-
-								//message Type
-								if(obj.getMessageField("message_type") !=null)
-								{
-									recordBuf.append(obj.getMessageField("message_type"));
-								}
-								recordBuf.append(FIELDDELIM);*/
 
 								//message To
 								if(obj.getMessageField("message_to") !=null)
@@ -378,23 +433,7 @@ public class ArchiveVTWPatentRefeed {
 								}
 								recordBuf.append(FIELDDELIM);
 
-								/*//eventNotification ID
-								if(obj.getMessageField("event_id") !=null)
-								{
-									recordBuf.append(obj.getMessageField("event_id"));
-								}
-
-								else
-								{
-									//ServiceCall ID
-									if(obj.getMessageField("service_id") !=null)
-									{
-										recordBuf.append(obj.getMessageField("service_id"));
-									}
-								}
-
-								recordBuf.append(FIELDDELIM);
-								 */
+								
 								//Resource (URL containing Patent ID  and Generation# [i.e. http://acc.vtw.elsevier.com/content/pat/EP1412238A1/10] )
 								if(obj.getMessageField("resource") !=null)
 								{
@@ -447,8 +486,25 @@ public class ArchiveVTWPatentRefeed {
 					System.out.println("Waiting for visibility timeout...");
 					Thread.sleep(TimeUnit.SECONDS.toMillis(TIME_OUT_SECONDS));
 
+					// exit after 2 attempts to get messages if queue is still empty
+
+					if(exitWaitingID >2)
+					{
+						System.out.println("no Messages after " + exitWaitingID + " attempts, exit loop to onctinue rest of process...");
+						break;
+					}
+					exitWaitingID ++;
+
 				}
 			}
+			
+			
+			midTime = endTime;
+			endTime = System.currentTimeMillis();
+			System.out.println("time for reading, parsing and archiving" + numberOfRuns*10 + " messages from Queue " +(endTime-midTime)/1000.0+" seconds");
+			System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+			
+			
 		}
 		catch(Exception sqsex)
 		{
@@ -534,19 +590,21 @@ public class ArchiveVTWPatentRefeed {
 	 * @throws Exception
 	 * hierarchy of downloaded VTW XML files (CurrDir -> loadnumberDir -> PatentID -> xml file) (i.e. /data/loading/ipdd -> 201639 -> EP2042829B1 -> AU2010281317A1.xml)
 	 **/
-	public void zipDownloads() throws Exception
+	public void zipDownloads(int loadnumber, String downloadDirName) throws Exception
 	{
 		int zipFileID = 1;
-	    int curRecNum = 0;
-		
+		int curRecNum = 0;
+
 		// get date&time in epoch format to be able to distinguish which file to send to converting, in case there are multiple files to convert
-		DateFormat dateFormat = new SimpleDateFormat("E, MM/dd/yyyy-hh:mm:ss a");
+		// commented out because Hongrong reported filename could not be processed if name > certain number, so used sequence number instead
+		/*DateFormat dateFormat = new SimpleDateFormat("E, MM/dd/yyyy-hh:mm:ss a");
 		Date date = dateFormat.parse(dateFormat.format(new Date()));
-		long epoch = date.getTime();
-		
-		
+		long epoch = date.getTime();*/
+
+		System.out.println("Zip downloaded files.....");
+
 		SequenceGenerator seqNum = new SequenceGenerator();
-		
+
 		String currDir = System.getProperty("user.dir");
 		File zipsDir = new File(currDir+"/zips");
 		if(!(zipsDir.exists()))
@@ -560,25 +618,27 @@ public class ArchiveVTWPatentRefeed {
 			zipsDir.mkdir();
 		}
 
-		zipsDir = new File(zipsDir+"/" +loadNumber);
+		zipsDir = new File(zipsDir+"/" +loadnumber);
 		if(!(zipsDir.exists()))
 		{
 			zipsDir.mkdir();
 		}
 
 
-		File downDir = new File(currDir + "/raw_data/"+loadNumber);
+		File downDir = new File(currDir + "/raw_data/"+downloadDirName);
 
 		String[] xmlFiles = downDir.list();
 		File[] xmlFilesToDelete = downDir.listFiles();
 		byte[] buf = new byte[1024];
 
+		System.out.println("Total FIles downloaded: " + xmlFiles.length);
 
 		// create zip files if any files were downloaded, otherwise no zip file should be created
 		if(xmlFiles.length >0)
 		{
 			//String zipFileName = zipsDir + "/" + epoch + "_" + zipFileID + ".zip";
-			String zipFileName = zipsDir + "/" + seqNum.nextloadNum() + seqNum.nextNum()+ ".zip";
+			//String zipFileName = zipsDir + "/" + seqNum.nextloadNum() + seqNum.nextNum()+ ".zip";  // worked well before reading zipfilename from file
+			String zipFileName = zipsDir + "/" + seqNum.nextNum()+ ".zip";
 			ZipOutputStream outZip = new ZipOutputStream(new FileOutputStream(zipFileName));
 
 			for(int i=0; i<xmlFiles.length; i++)
@@ -590,12 +650,13 @@ public class ArchiveVTWPatentRefeed {
 					outZip.close();
 
 					zipFileID++;
-					
-					date = dateFormat.parse(dateFormat.format(new Date()));
-					epoch = date.getTime();
-					
+
+					/*date = dateFormat.parse(dateFormat.format(new Date()));
+					epoch = date.getTime();*/
+
 					//zipFileName = zipsDir + "/" + epoch + "_" + zipFileID + ".zip";
-					zipFileName = zipsDir + "/" + seqNum.nextloadNum() + seqNum.nextNum() + ".zip";
+					//zipFileName = zipsDir + "/" + seqNum.nextloadNum() + seqNum.nextNum() + ".zip";	// worked well before reading zipfilename from file
+					zipFileName = zipsDir + "/" + seqNum.nextNum() + ".zip";
 					outZip = new ZipOutputStream(new FileOutputStream(zipFileName));	
 				}
 				FileInputStream in = new FileInputStream(downDir + "/" + xmlFiles[i]);
@@ -617,32 +678,157 @@ public class ArchiveVTWPatentRefeed {
 		}
 	}
 
-	
+
+
+
 	// generate unique ID for the zip filename (zip file should be a sequence number that can not be duplicate)
 	/* for example in multithreading running of download VTW, each instance should create unique zip file name that does not override the other instance
 	 * Note: With current patent app, the name of zip file must be a number and must be less than 2147483647, a max int value
 	 */
-	
+
 	public class SequenceGenerator
 	{
-		volatile AtomicInteger sequenceLoadNum = new AtomicInteger();
-		volatile AtomicInteger sequenceID = new AtomicInteger();
+		volatile AtomicInteger sequenceLoadNum = new AtomicInteger(getRecentZipFileName());
+		volatile AtomicInteger sequenceID = new AtomicInteger(getRecentZipFileName());
 		public synchronized int nextloadNum()
 		{
 			int nextVal = sequenceLoadNum.incrementAndGet();
 			System.out.println("Next LoadNumber Value is: " + nextVal);
 			return nextVal;
-			
+
 		}
-		
+
 		public synchronized int nextNum()
 		{
 			int nextVal = sequenceID.incrementAndGet();
 			System.out.println("Next Value is: " + nextVal);
-			return nextVal;
 			
+			// write the nextvalue to the file
+			writeZipFileNameToFile(Integer.toString(nextVal));
+			
+			return nextVal;
 		}
-		
 	}
 
+
+/*** Read/write from/to zipfileNames File ***/
+
+	// reads text file containg zipfile name and get the most recent one for coming new zipfiles to be created, and save it to the file (thread-safe/multithreading)
+	public synchronized void readZipFileNameFromFile(int loadnumber)
+	{
+		FileInputStream in = null;
+		String lastLine = "";
+
+		try {
+			String currDir = System.getProperty("user.dir");
+			File zipFile = new File(currDir+"/zipFileNames.txt");
+			if(!(zipFile.exists()))
+			{
+				zipFile.createNewFile();
+			} 
+
+			// read last line in the file
+
+			in = new FileInputStream(zipFile);
+			BufferedReader br = new BufferedReader(new InputStreamReader(in));
+
+
+			String temp = null;
+
+			if(zipFile.length() >0)
+			{
+				for(String line; (line = br.readLine()) !=null; )
+				{
+					temp = line;
+				}
+				lastLine = temp;
+				System.out.println("Last Line in the zipFileNames file: " + lastLine);
+
+			}
+			else
+			{
+				System.out.println("zipFileNames file is empty, set current weeknumber as default zip file name");
+				lastLine = loadnumber + "00";
+				System.out.println("first zipFileName to use in this new file : " + lastLine);
+			}
+			
+			// set zipfilename for later access
+			setRecentZipFileName(lastLine);
+			
+
+		}
+		catch (IOException e) 
+		{		
+			e.printStackTrace();
+		}
+		finally
+		{
+			if(in !=null)
+			{
+				try
+				{
+					in.close();
+				}
+				catch(Exception e)
+				{
+					System.out.println("Failed to close zipFileNames inputstream");
+					e.printStackTrace();
+				}
+			}
+		}
+
+	}
+	
+	
+	public synchronized void writeZipFileNameToFile(String zipfileName)
+	{
+		PrintWriter pw = null;
+		try {
+			String currDir = System.getProperty("user.dir");
+			File zipFile = new File(currDir+"/zipFileNames.txt");
+			if(!(zipFile.exists()))
+			{
+				zipFile.createNewFile();
+			} 
+			// write/append to the file 
+
+			
+			pw = new PrintWriter(new BufferedWriter(new FileWriter(zipFile, true)));   //append the new zipfilename
+			pw.println(zipfileName);
+
+		}
+		catch (IOException e) 
+		{		
+			e.printStackTrace();
+		}
+		finally
+		{
+			if(pw !=null)
+			{
+				try
+				{
+					pw.flush();
+					pw.close();
+				}
+				catch(Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+	
+
+	
+	// setters/getters
+	
+	public void setRecentZipFileName(String zipfileName)
+	{
+		zipFileName = zipfileName;
+	}
+	
+	public int getRecentZipFileName()
+	{
+		return Integer.parseInt(zipFileName);
+	}
 }
