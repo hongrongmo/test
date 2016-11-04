@@ -132,6 +132,7 @@ public class AusAffESIndex {
 		request.setContent(new ByteArrayInputStream(bulkIndexContents.toString().getBytes()));
 		request.setEndpoint(URI.create(ENDPOINT));
 		request.setHttpMethod(HttpMethodName.POST);
+		request.addHeader("Content-Type", "application/json");
 
 		return request;
 	}

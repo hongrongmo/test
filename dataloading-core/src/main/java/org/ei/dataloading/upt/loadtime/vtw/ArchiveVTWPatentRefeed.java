@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
+import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
@@ -16,6 +17,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -31,6 +33,7 @@ import org.ei.dataloading.cafe.ReceiveAmazonSQSMessage;
 import com.amazonaws.AmazonClientException;
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.auth.AWSCredentialsProvider;
+import com.amazonaws.auth.EnvironmentVariableCredentialsProvider;
 import com.amazonaws.auth.InstanceProfileCredentialsProvider;
 import com.amazonaws.regions.Region;
 import com.amazonaws.regions.Regions;
@@ -94,13 +97,13 @@ public class ArchiveVTWPatentRefeed {
 
 
 	private String zipFileName = "";
-	
+
 	private static long startTime = System.currentTimeMillis();
 	private static long endTime = System.currentTimeMillis();
 	private static long midTime = System.currentTimeMillis();
-	
-	
-	
+
+
+
 	public ArchiveVTWPatentRefeed()
 	{
 
@@ -158,8 +161,8 @@ public class ArchiveVTWPatentRefeed {
 		endTime = System.currentTimeMillis();
 		System.out.println("Time for finish reading input parameter & ES initialization "+(endTime-startTime)/1000.0+" seconds");
 		System.out.println("total Time used "+(endTime-startTime)/1000.0+" seconds");
-		
-		
+
+
 		// access VTW QUEUE 
 		archiveVtwPatentRefeed.begin();
 		archiveVtwPatentRefeed.SQSCreationAndSetting();
@@ -174,37 +177,37 @@ public class ArchiveVTWPatentRefeed {
 			Date date = dateFormat.parse(dateFormat.format(new Date()));
 			long epoch = date.getTime();		// for US/EUP
 			long wo_epoch = dateFormat.parse(dateFormat.format(new Date())).getTime();  // for WO
-			
-			
+
+
 			//VTWSearchAPI vtwSearchAPI = new VTWSearchAPI(loadNumber, archiveVtwPatentRefeed.getRecentZipFileName());
 			//VTWSearchAPI vtwSearchAPI = new VTWSearchAPI(archiveVtwPatentRefeed.getRecentZipFileName());
-			
+
 			midTime = endTime;
 			endTime = System.currentTimeMillis();
 			System.out.println("time before downloading files "+(endTime-midTime)/1000.0+" seconds");
 			System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
-			
-			
+
+
 			VTWSearchAPI vtwSearchAPI = new VTWSearchAPI(Long.toString(epoch));
 			vtwSearchAPI.downloadPatentMetadata(patentIds);
-			
-			
+
+
 			midTime = endTime;
 			endTime = System.currentTimeMillis();
 			System.out.println("time after downloading files "+(endTime-midTime)/1000.0+" seconds");
 			System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
-			
-			
-			
+
+
+
 			//Zip downloaded files (each in it's corresponding dir)
 			archiveVtwPatentRefeed.zipDownloads(loadNumber, Long.toString(epoch));
-			
-			
+
+
 			midTime = endTime;
 			endTime = System.currentTimeMillis();
 			System.out.println("time after zip downloaded files "+(endTime-midTime)/1000.0+" seconds");
 			System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
-			
+
 		}
 		else
 		{
@@ -212,7 +215,7 @@ public class ArchiveVTWPatentRefeed {
 		}
 
 
-		
+
 	}
 
 	// create text file to hold original message & partial parsed fields
@@ -240,9 +243,6 @@ public class ArchiveVTWPatentRefeed {
 
 		System.out.println("Output Filename "+filename);
 
-		// read latest zipfilename from zipFileNames file as the start point for Sequence generation
-		readZipFileNameFromFile(loadNumber);
-		
 	}
 
 	public void SQSCreationAndSetting() throws JMSException, InterruptedException
@@ -289,14 +289,14 @@ public class ArchiveVTWPatentRefeed {
 
 
 			myQueueUrl = result.getQueueUrl();
-			
-			
+
+
 			midTime = endTime;
 			endTime = System.currentTimeMillis();
 			System.out.println("time for connecting to SQS Queue "+(endTime-midTime)/1000.0+" seconds");
 			System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
-			
-			
+
+
 
 			// Receive message & parse it 
 			receiveMessage();
@@ -433,7 +433,7 @@ public class ArchiveVTWPatentRefeed {
 								}
 								recordBuf.append(FIELDDELIM);
 
-								
+
 								//Resource (URL containing Patent ID  and Generation# [i.e. http://acc.vtw.elsevier.com/content/pat/EP1412238A1/10] )
 								if(obj.getMessageField("resource") !=null)
 								{
@@ -497,14 +497,14 @@ public class ArchiveVTWPatentRefeed {
 
 				}
 			}
-			
-			
+
+
 			midTime = endTime;
 			endTime = System.currentTimeMillis();
 			System.out.println("time for reading, parsing and archiving" + numberOfRuns*10 + " messages from Queue " +(endTime-midTime)/1000.0+" seconds");
 			System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
-			
-			
+
+
 		}
 		catch(Exception sqsex)
 		{
@@ -590,19 +590,24 @@ public class ArchiveVTWPatentRefeed {
 	 * @throws Exception
 	 * hierarchy of downloaded VTW XML files (CurrDir -> loadnumberDir -> PatentID -> xml file) (i.e. /data/loading/ipdd -> 201639 -> EP2042829B1 -> AU2010281317A1.xml)
 	 **/
-	public void zipDownloads(int loadnumber, String downloadDirName) throws Exception
+	public synchronized void zipDownloads(int loadnumber, String downloadDirName) throws Exception
 	{
 		int zipFileID = 1;
 		int curRecNum = 0;
+		String prefix="";
+		File[] xmlFilesToDelete;
+
+		ArrayList<String[]> allFilesList = new ArrayList<String[]>();
 
 		// get date&time in epoch format to be able to distinguish which file to send to converting, in case there are multiple files to convert
-		// commented out because Hongrong reported filename could not be processed if name > certain number, so used sequence number instead
-		/*DateFormat dateFormat = new SimpleDateFormat("E, MM/dd/yyyy-hh:mm:ss a");
-		Date date = dateFormat.parse(dateFormat.format(new Date()));
-		long epoch = date.getTime();*/
-
+		// as per Hongrong reported filename need to be a number & of certain length as it could not be processed if name > certain number, so used sequence number instead
+		
+		
 		System.out.println("Zip downloaded files.....");
 
+		// read latest zipfilename from zipFileNames file as the start point for Sequence generation
+		readZipFileNameFromFile(loadNumber);
+				
 		SequenceGenerator seqNum = new SequenceGenerator();
 
 		String currDir = System.getProperty("user.dir");
@@ -627,55 +632,113 @@ public class ArchiveVTWPatentRefeed {
 
 		File downDir = new File(currDir + "/raw_data/"+downloadDirName);
 
-		String[] xmlFiles = downDir.list();
-		File[] xmlFilesToDelete = downDir.listFiles();
+		
+		// Filter files
+		String[] files = downDir.list(new FilenameFilter() {
+
+			@Override
+			public boolean accept(File dir, String name) {
+
+				return (name.toLowerCase().startsWith("us") || name.toLowerCase().startsWith("ep"));
+			}
+		});
+
+		System.out.println("Total US/EP downloaded: " + files.length);
+		allFilesList.add(files);
+
+		files = downDir.list(new FilenameFilter() {
+
+			@Override
+			public boolean accept(File dir, String name) {
+
+				return name.toLowerCase().startsWith("wo");
+			}
+		});
+
+		System.out.println("Total WO FIles downloaded: " + files.length);
+		allFilesList.add(files);
+
+		/*String[] xmlFiles = downDir.list();  // original when was for US/EP ONLY, replaced by filenameFiltering above for zip WO to a separate zipfile
+		File[] xmlFilesToDelete = downDir.listFiles();*/
 		byte[] buf = new byte[1024];
 
-		System.out.println("Total FIles downloaded: " + xmlFiles.length);
-
-		// create zip files if any files were downloaded, otherwise no zip file should be created
-		if(xmlFiles.length >0)
+		
+		for(String[] xmlFiles: allFilesList)
 		{
-			//String zipFileName = zipsDir + "/" + epoch + "_" + zipFileID + ".zip";
-			//String zipFileName = zipsDir + "/" + seqNum.nextloadNum() + seqNum.nextNum()+ ".zip";  // worked well before reading zipfilename from file
-			String zipFileName = zipsDir + "/" + seqNum.nextNum()+ ".zip";
-			ZipOutputStream outZip = new ZipOutputStream(new FileOutputStream(zipFileName));
 
-			for(int i=0; i<xmlFiles.length; i++)
+			// create zip files if any files were downloaded, otherwise no zip file should be created
+			if(xmlFiles.length >0)
 			{
-				// limit each single zip file to hold recsPerZipfile, otherwise split to multiple zip files
-				if(curRecNum >= recsPerZipFile)
+				if(xmlFiles[0].toLowerCase().startsWith("wo"))
 				{
-					curRecNum = 0;
-					outZip.close();
+					prefix="WO";
+					
+					xmlFilesToDelete = downDir.listFiles(new FilenameFilter() {
 
-					zipFileID++;
+						@Override
+						public boolean accept(File dir, String name) {
 
-					/*date = dateFormat.parse(dateFormat.format(new Date()));
-					epoch = date.getTime();*/
-
-					//zipFileName = zipsDir + "/" + epoch + "_" + zipFileID + ".zip";
-					//zipFileName = zipsDir + "/" + seqNum.nextloadNum() + seqNum.nextNum() + ".zip";	// worked well before reading zipfilename from file
-					zipFileName = zipsDir + "/" + seqNum.nextNum() + ".zip";
-					outZip = new ZipOutputStream(new FileOutputStream(zipFileName));	
+							return name.toLowerCase().startsWith("wo");
+						}
+					});
+					
 				}
-				FileInputStream in = new FileInputStream(downDir + "/" + xmlFiles[i]);
-				outZip.putNextEntry(new ZipEntry(xmlFiles[i]));
-
-				int length;
-				while((length = in.read(buf)) >0)
+				else
 				{
-					outZip.write(buf,0,length);
-				}
-				outZip.closeEntry();
-				in.close();
-				xmlFilesToDelete[i].delete();  // delete original xml file to save space
+					prefix="US/EP";
+					
+					xmlFilesToDelete = downDir.listFiles(new FilenameFilter() {
 
-				++curRecNum;
+						@Override
+						public boolean accept(File dir, String name) {
+
+							return (name.toLowerCase().startsWith("us") || name.toLowerCase().startsWith("ep"));
+						}
+					});
+				}
+					
+					
+					
+					
+				//String zipFileName = zipsDir + "/" + epoch + "_" + zipFileID + ".zip";
+				//String zipFileName = zipsDir + "/" + seqNum.nextloadNum() + seqNum.nextNum()+ ".zip";  // worked well before reading zipfilename from file
+				String zipFileName = zipsDir + "/" + seqNum.nextNum()+ ".zip";
+				ZipOutputStream outZip = new ZipOutputStream(new FileOutputStream(zipFileName));
+
+				for(int i=0; i<xmlFiles.length; i++)
+				{
+					// limit each single zip file to hold recsPerZipfile, otherwise split to multiple zip files
+					if(curRecNum >= recsPerZipFile)
+					{
+						curRecNum = 0;
+						outZip.close();
+
+						zipFileID++;
+
+						zipFileName = zipsDir + "/" + seqNum.nextNum() + ".zip";
+						outZip = new ZipOutputStream(new FileOutputStream(zipFileName));	
+					}
+					FileInputStream in = new FileInputStream(downDir + "/" + xmlFiles[i]);
+					outZip.putNextEntry(new ZipEntry(xmlFiles[i]));
+
+					int length;
+					while((length = in.read(buf)) >0)
+					{
+						outZip.write(buf,0,length);
+					}
+					outZip.closeEntry();
+					in.close();
+					xmlFilesToDelete[i].delete();  // delete original xml file to save space
+
+					++curRecNum;
+				}
+				outZip.close();
+				//downDir.delete();
 			}
-			outZip.close();
-			downDir.delete();
+			
 		}
+		
+		downDir.delete();
 	}
 
 
@@ -701,17 +764,17 @@ public class ArchiveVTWPatentRefeed {
 		public synchronized int nextNum()
 		{
 			int nextVal = sequenceID.incrementAndGet();
-			System.out.println("Next Value is: " + nextVal);
-			
+			System.out.println("Zip fileName is: " + nextVal);
+
 			// write the nextvalue to the file
 			writeZipFileNameToFile(Integer.toString(nextVal));
-			
+
 			return nextVal;
 		}
 	}
 
 
-/*** Read/write from/to zipfileNames File ***/
+	/*** Read/write from/to zipfileNames File ***/
 
 	// reads text file containg zipfile name and get the most recent one for coming new zipfiles to be created, and save it to the file (thread-safe/multithreading)
 	public synchronized void readZipFileNameFromFile(int loadnumber)
@@ -751,10 +814,10 @@ public class ArchiveVTWPatentRefeed {
 				lastLine = loadnumber + "00";
 				System.out.println("first zipFileName to use in this new file : " + lastLine);
 			}
-			
+
 			// set zipfilename for later access
 			setRecentZipFileName(lastLine);
-			
+
 
 		}
 		catch (IOException e) 
@@ -778,8 +841,8 @@ public class ArchiveVTWPatentRefeed {
 		}
 
 	}
-	
-	
+
+
 	public synchronized void writeZipFileNameToFile(String zipfileName)
 	{
 		PrintWriter pw = null;
@@ -792,7 +855,7 @@ public class ArchiveVTWPatentRefeed {
 			} 
 			// write/append to the file 
 
-			
+
 			pw = new PrintWriter(new BufferedWriter(new FileWriter(zipFile, true)));   //append the new zipfilename
 			pw.println(zipfileName);
 
@@ -817,16 +880,16 @@ public class ArchiveVTWPatentRefeed {
 			}
 		}
 	}
-	
 
-	
+
+
 	// setters/getters
-	
+
 	public void setRecentZipFileName(String zipfileName)
 	{
 		zipFileName = zipfileName;
 	}
-	
+
 	public int getRecentZipFileName()
 	{
 		return Integer.parseInt(zipFileName);

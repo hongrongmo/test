@@ -41,6 +41,7 @@ import java.util.Date;
 
 
 
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -114,13 +115,14 @@ public class DownloadVtwFile {
 	}	
 
 	/// Send the request to the server
-	private static void sendRequest(HttpGet request) {
+	private static String sendRequest(HttpGet request) {
 
+		String responseCode = null;
 		try {	
 			// using ResponseHandler class below
 			responseHandler =  new MyHttpResponseHandler<String>();
 
-			String response = client.execute(request,responseHandler);
+			responseCode = client.execute(request,responseHandler);
 			//System.out.println("Response is:  " +  response);
 
 
@@ -136,6 +138,8 @@ public class DownloadVtwFile {
 			e.printStackTrace();
 			e.printStackTrace();
 		}
+		
+			return responseCode;
 	}
 
 	public static void main(String[] args) {
@@ -154,20 +158,39 @@ public class DownloadVtwFile {
 		patentID = patentid;
 		URL = url;
 		downloadDir = download_dir;
-
+		String code = null;
+		
 		try
 		{
 			// create Apache HttpClient
 			client = VTWSearchAPI.getInstance();
 
 
+			// sleep for 1 millisecond to avoid overloading network, and so decrease percentage of receiving "502" error or other non "200" errors
+			Thread.currentThread().sleep(1000);
+			
+			
 			// Generate the request
 			HttpGet request = generateRequest();
 
 			// Send the request to the server
 			if(request !=null)
 			{
-				sendRequest(request);
+				for(int i=0;i<2;i++)
+				{
+					code = sendRequest(request);
+					
+					if(code !=null && Integer.parseInt(code) ==200)
+					{
+						break;
+					}
+					else
+					{
+						System.out.println("Retry downloading file.....");
+						
+					}
+				}
+				
 			}
 
 		}
@@ -189,82 +212,88 @@ public class DownloadVtwFile {
 			InputStream responseStream = null;
 			BOMInputStream  bomStream = null;
 			OutputStream out = null;
+			
+			int responseCode;
 
 
 			try
 			{
 				responseStream = response.getEntity().getContent();
+				responseCode = response.getStatusLine().getStatusCode();
 				
-				/*String str = EntityUtils.toString(response.getEntity(), "UTF-8");
-				responseStream = new ByteArrayInputStream(str.getBytes(StandardCharsets.UTF_8));
-				responseStream = new ByteArrayInputStream(EntityUtils.toByteArray(response.getEntity()));*/
-				
-				
-				out = new FileOutputStream(new File(downloadDir + "/" + patentID + ".xml"));
-				//IOUtils.copy(responseStream, out);
-				/**
-				 * This class is used to wrap a stream that includes an encoded ByteOrderMark as its first bytes. 
-				 * This class detects these bytes and, if required, can automatically skip them and return the subsequent byte as the first byte in the stream. 
-				 */
-				//BOMInputStream  bomStream = new BOMInputStream(responseStream,false);
-				bomStream = new BOMInputStream(responseStream,false,
-																ByteOrderMark.UTF_8, ByteOrderMark.UTF_16BE,
-																ByteOrderMark.UTF_16LE, ByteOrderMark.UTF_32BE, ByteOrderMark.UTF_32LE);
-				
-				ByteOrderMark bom = bomStream.getBOM();
-				String charSet = bom ==null ? "UTF-8" : bom.getCharsetName();
+				if(responseCode ==200)
+				{
+					out = new FileOutputStream(new File(downloadDir + "/" + patentID + ".xml"));
+					
+					/**
+					 * This class is used to wrap a stream that includes an encoded ByteOrderMark as its first bytes. 
+					 * This class detects these bytes and, if required, can automatically skip them and return the subsequent byte as the first byte in the stream. 
+					 */
+					//BOMInputStream  bomStream = new BOMInputStream(responseStream,false);
+					bomStream = new BOMInputStream(responseStream,false,
+																	ByteOrderMark.UTF_8, ByteOrderMark.UTF_16BE,
+																	ByteOrderMark.UTF_16LE, ByteOrderMark.UTF_32BE, ByteOrderMark.UTF_32LE);
+					
+					ByteOrderMark bom = bomStream.getBOM();
+					String charSet = bom.getCharsetName();
 
-				if(bomStream.hasBOM())
+					if(bomStream.hasBOM())
+					{
+						System.out.println("XML has a UTF-8 BOM");
+						System.out.println("BOM value is : " + charSet);
+						System.out.println("detailes about BOM: " +  bom.getBytes().toString() + "length: " + bom.getBytes().length);
+					}
+					else if (bomStream.hasBOM(ByteOrderMark.UTF_16BE)) {
+						// 
+						System.out.println("XML has a UTF-16BE BOM");
+						System.out.println("XML has a UTF-16LE BOM");
+						System.out.println("BOM value is : " + charSet);
+						System.out.println("detailes about BOM: " +  bom.getBytes().toString() + "length: " + bom.getBytes().length);
+					}
+					else if (bomStream.hasBOM(ByteOrderMark.UTF_16LE)) {
+						System.out.println("XML has a UTF-16LE BOM");
+						System.out.println("BOM value is : " + charSet);
+						System.out.println("detailes about BOM: " +  bom.getBytes().toString() + "length: " + bom.getBytes().length);
+					} 
+					else if (bomStream.hasBOM(ByteOrderMark.UTF_32BE)) {
+						System.out.println("XML has a UTF_32BE BOM");
+						System.out.println("BOM value is : " + charSet);
+						System.out.println("detailes about BOM: " +  bom.getBytes().toString() + "length: " + bom.getBytes().length);
+					} 
+					else if (bomStream.hasBOM(ByteOrderMark.UTF_32LE)) {
+						System.out.println("XML has a UTF_32LE BOM");
+						System.out.println("BOM value is : " + charSet);
+						System.out.println("detailes about BOM: " +  bom.getBytes().toString() + "length: " + bom.getBytes().length);
+					} 
+					
+					IOUtils.copy(bomStream, out);
+					
+					
+					/*  // check XML syntax
+					try
+					{
+						Document doc = null;
+						DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+						DocumentBuilder builder = factory.newDocumentBuilder();
+						InputSource is = new InputSource();
+						is.setEncoding("UTF-8");
+						is.setByteStream(responseStream);
+						doc = builder.parse(is);
+						String str = doc.getDocumentElement().getNodeName();
+						System.out.println(doc.getFirstChild());
+					}
+					
+					catch(Exception e)
+					{
+						e.printStackTrace();
+					}
+					*/
+				}
+				else
 				{
-					System.out.println("XML has a UTF-8 BOM");
-					System.out.println("BOM value is : " + charSet);
-					System.out.println("detailes about BOM: " +  bom.getBytes().toString() + "length: " + bom.getBytes().length);
-				}
-				else if (bomStream.hasBOM(ByteOrderMark.UTF_16BE)) {
-					// 
-					System.out.println("XML has a UTF-16BE BOM");
-					System.out.println("XML has a UTF-16LE BOM");
-					System.out.println("BOM value is : " + charSet);
-					System.out.println("detailes about BOM: " +  bom.getBytes().toString() + "length: " + bom.getBytes().length);
-				}
-				else if (bomStream.hasBOM(ByteOrderMark.UTF_16LE)) {
-					System.out.println("XML has a UTF-16LE BOM");
-					System.out.println("BOM value is : " + charSet);
-					System.out.println("detailes about BOM: " +  bom.getBytes().toString() + "length: " + bom.getBytes().length);
-				} 
-				else if (bomStream.hasBOM(ByteOrderMark.UTF_32BE)) {
-					System.out.println("XML has a UTF_32BE BOM");
-					System.out.println("BOM value is : " + charSet);
-					System.out.println("detailes about BOM: " +  bom.getBytes().toString() + "length: " + bom.getBytes().length);
-				} 
-				else if (bomStream.hasBOM(ByteOrderMark.UTF_32LE)) {
-					System.out.println("XML has a UTF_32LE BOM");
-					System.out.println("BOM value is : " + charSet);
-					System.out.println("detailes about BOM: " +  bom.getBytes().toString() + "length: " + bom.getBytes().length);
-				} 
-				
-				IOUtils.copy(bomStream, out);
-				
-				
-				/*  // check XML syntax
-				try
-				{
-					Document doc = null;
-					DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-					DocumentBuilder builder = factory.newDocumentBuilder();
-					InputSource is = new InputSource();
-					is.setEncoding("UTF-8");
-					is.setByteStream(responseStream);
-					doc = builder.parse(is);
-					String str = doc.getDocumentElement().getNodeName();
-					System.out.println(doc.getFirstChild());
+					System.out.println("download response code " + responseCode  + " is not 200, so skip this file");
 				}
 				
-				catch(Exception e)
-				{
-					e.printStackTrace();
-				}
-				*/
 			}
 			catch(ClientProtocolException e)
 			{

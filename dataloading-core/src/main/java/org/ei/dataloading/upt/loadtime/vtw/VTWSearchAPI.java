@@ -48,11 +48,11 @@ public class VTWSearchAPI {
 	private static final String password = "elCome29347";
 
 	private static CloseableHttpClient client;
-	private static ResponseHandler<String> responseHandler;
+	private static ResponseHandler<String[]> responseHandler;
 
 
 
-	int loadNumber;
+	String downloadDirName;
 	private static File downloadDir;
 
 	public static String status = "success";
@@ -63,9 +63,9 @@ public class VTWSearchAPI {
 
 	}
 
-	public VTWSearchAPI(int loadnumber)
+	public VTWSearchAPI(String downloadDir_Name)
 	{
-		loadNumber = loadnumber;
+		downloadDirName = downloadDir_Name;
 		init();
 	}
 
@@ -80,7 +80,7 @@ public class VTWSearchAPI {
 				downloadDir.mkdir();
 			}
 
-			downloadDir = new File(downloadDir.getAbsolutePath() + "/" + Integer.toString(loadNumber));
+			downloadDir = new File(downloadDir.getAbsolutePath() + "/" + downloadDirName);
 			if(!(downloadDir.exists()))
 			{
 				downloadDir.mkdir();
@@ -101,6 +101,7 @@ public class VTWSearchAPI {
 	public void downloadPatentMetadata(Map<String,String> patentIds)
 	{
 		int signedAssetUrl_count = 0;
+		String result[] = new String[2];
 		String downloadable_url = null;
 
 		if(patentIds.size() >0)
@@ -127,8 +128,28 @@ public class VTWSearchAPI {
 							// Send the request to the server
 							if(request !=null)
 							{
-								downloadable_url = sendRequest(request);
+								// automatic retry loop that handles any remaining 502 or other related error
+								for (int i=0; i<2;i++)
+								{
+									result = sendRequest(request);
+									downloadable_url = result[0];
+									
+									
+									if(result[1] !=null && Integer.parseInt(result[1]) ==200)
+									{
+										break;
+									}
+									else
+									{
+										System.out.println("Retry get Metadata.....");
+										
+									}															
+								}	
+								
+								// sleep for 1 millisecond to avoid overloading network, and so decrease percentage of receiving "502" error or other non "200" errors
+								Thread.currentThread().sleep(1000);		
 							}
+							
 						}
 						catch(Exception e)
 						{
@@ -185,7 +206,7 @@ public class VTWSearchAPI {
 					client = HttpClients.custom().setDefaultCredentialsProvider(credsProvider)
 							.setHostnameVerifier(SSLConnectionSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER).build();   // works well to download Patent XML, as it has redirect 
 					//responseHandler = new BasicResponseHandler();
-					responseHandler = new MyHttpResponseHandler<String>();
+					responseHandler = new MyHttpResponseHandler<String[]>();
 
 				}
 				catch(Exception ex)
@@ -217,6 +238,7 @@ public class VTWSearchAPI {
 
 
 			request = new HttpGet(uriBuilder.build());
+			
 		} catch (URISyntaxException e) {
 
 			System.out.println("Request exception handler!");
@@ -232,15 +254,15 @@ public class VTWSearchAPI {
 
 
 	/// Send the request to the server
-	private static String sendRequest(HttpGet request) {
+	private static String[] sendRequest(HttpGet request) {
 
-		String response = null;
+		String [] response = new String[2];
 		try {
 
 			// using ResponseHandler class below
 
 			response = client.execute(request,responseHandler);
-			System.out.println("Response is:  " +  response);
+			//System.out.println("Response is:  " +  response);
 
 
 		} catch (ClientProtocolException e) {
@@ -263,31 +285,40 @@ public class VTWSearchAPI {
 
 
 	// for AssetMetadata Request Handler
-	public static class MyHttpResponseHandler<T> implements ResponseHandler<String> {
+	public static class MyHttpResponseHandler<T> implements ResponseHandler<String[]> {
 
 
 		@Override
 		//public CloseableHttpResponse handleResponse(HttpResponse response)
-		public String handleResponse(HttpResponse response)
+		public String[] handleResponse(HttpResponse response)
 		{
 
 			InputStream responseStream = null;
 			String responseString = "";
 			String url = null;
 
+			String[] responseResult = new String[2];
+			
+			
 			try
 			{
 				responseStream = response.getEntity().getContent();
 				responseString =  IOUtils.toString(responseStream);
 
-				System.out.println("Metadata Search Response: " + responseString);
-				System.out.println("Respons Code: " + response.getStatusLine().getStatusCode());
-
-				//look up the required URL for the Asset/Patent XML
-				if(!(responseString.isEmpty()))
+				System.out.println("Metadata Respons Code: " + response.getStatusLine().getStatusCode());
+				
+				
+					//look up the required URL for the Asset/Patent XML only when response contains JSON result (i.e. NOT one with "NO results found)
+				if(!(responseString.isEmpty()) && (response.getStatusLine().getStatusCode() == 200 
+						&& responseString.contains("href") && responseString.startsWith("{") && responseString.endsWith("}")))
 				{
 					url = ReadJsonMetadata.parseJsonMetadata(responseString);
 				}
+				else
+					System.out.println("Metadata Search Response: " + responseString);
+				
+				responseResult[0] = url;
+				responseResult[1] = Integer.toString(response.getStatusLine().getStatusCode());
 
 
 			}
@@ -318,7 +349,7 @@ public class VTWSearchAPI {
 
 				}
 			}
-			return url;
+			return responseResult;
 
 		}
 	}
