@@ -119,6 +119,7 @@ public class DeleteKnaFromFast {
 		System.out.println("Running the query...");
 		System.out.println(query);
 		
+		
 		try
 		{
 			con = getConnection(url, driver, username, password);
