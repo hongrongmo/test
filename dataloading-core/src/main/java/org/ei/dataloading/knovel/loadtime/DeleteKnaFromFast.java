@@ -23,7 +23,7 @@ import org.ei.dataloading.CombinedXMLWriter;
 public class DeleteKnaFromFast {
 
 	
-	static String tempTable = "kna_backup_temp";
+	static String tempTable = "KNOVEL_A_TEMP";
 	static int updateNumber=0;
 	static String dbname = "kna";
 	static String url = "jdbc:oracle:thin:@localhost:1521:eid";    //for localhost
@@ -31,6 +31,8 @@ public class DeleteKnaFromFast {
 	static String username = "ap_correction1";
 	static String password = "ei3it"; 
 	
+	
+	StringBuffer midList = null;
 	
 	public DeleteKnaFromFast()
 	{
@@ -111,7 +113,8 @@ public class DeleteKnaFromFast {
 	     writer.setOperation("delete");
 	     
 	     
-		String query = "select count(m_id) count from (select m_id from " + tempTable + " minus select m_id from knovel_master where database='kna')";
+		String query = "select count(m_id) count from (select m_id from knovel_master where database='kna' minus select m_id from " + tempTable + " )";
+		
 		
 		System.out.println("Running the query...");
 		System.out.println(query);
@@ -127,10 +130,10 @@ public class DeleteKnaFromFast {
 				rs.getInt("count");
 				deletesize= rs.getInt("count");
 			}
-			System.out.println("Total kna records to delete from fast: " + deletesize);
+			System.out.println("Total kna records to delete from DB & fast: " + deletesize);
 			
 			
-			query = "select m_id from " + tempTable + " minus select m_id from knovel_master where database='kna'";
+			query = "select m_id from knovel_master where database='kna' minus select m_id from " + tempTable + " ";
 			
 			
 			// ONLY send deletion to fast if there are M_id diff (otherwise no fast extraction files created)
@@ -205,6 +208,8 @@ public class DeleteKnaFromFast {
 		File file = new File("fast");
 		FileWriter out = null;
 		
+		midList = new StringBuffer();
+		
 		try
 		{
 			if(!file.exists())
@@ -240,6 +245,7 @@ public class DeleteKnaFromFast {
 	            {
 	                if(rs.getString("M_ID") != null)
 	                {
+	                	midList.append("'" + rs.getString("M_ID") + "',");
 	                    out.write(rs.getString("M_ID")+"\n");
 	                }
 	            }
