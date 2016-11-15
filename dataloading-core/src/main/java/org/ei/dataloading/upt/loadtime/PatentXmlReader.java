@@ -424,7 +424,8 @@ public class PatentXmlReader
 			// M_ID
 			out.print(singleRecord.get("MID"));
 			out.print(DELIM);
-
+			//System.out.println("MID="+singleRecord.get("MID"));
+			
 			// PN
 			if(singleRecord.get("PR_DOCID_DOC_NUMBER")!=null)
 			{
@@ -444,6 +445,7 @@ public class PatentXmlReader
 			{
 				System.out.println("no authCode for record "+ patentNumber);
 			}
+			//System.out.println("AC="+ac);
 			out.print(DELIM);
 
 			// KC
@@ -456,6 +458,7 @@ public class PatentXmlReader
 			{
 				System.out.println("no kindCode for record "+ patentNumber);
 			}
+			//System.out.println("kind="+kind);
 			out.print(DELIM);
 
 			// KD
@@ -470,6 +473,7 @@ public class PatentXmlReader
 					out.print((String)kindMap.get(kind));
 				}
 			}
+			//System.out.println("KD="+singleRecord.get("PR_DOCID_NAME"));
 			out.print(DELIM);
 
 			// TI * PRE_TI * GER_TI * LTN_TI
@@ -524,21 +528,28 @@ public class PatentXmlReader
 					out.print(substituteChars(eng_title.toString()));
 				}
 				out.print(DELIM);
+				//System.out.println("eng_title="+eng_title);
+				
 				if(fre_title.length()>0)
 				{
 					out.print(substituteChars(fre_title.toString()));
 				}
 				out.print(DELIM);
+				//System.out.println("fre_title="+fre_title);
+				
 				if(ger_title.length()>0)
 				{
 					out.print(substituteChars(ger_title.toString()));
 				}
 				out.print(DELIM);
+				//System.out.println("ger_title="+ger_title);
+				
 				if(ltn_title.length()>0)
 				{
 					out.print(substituteChars(ltn_title.toString()));
 				}
 				out.print(DELIM);
+				//System.out.println("ltn_title="+ltn_title);
 			}
 			else
 			{
@@ -556,29 +567,35 @@ public class PatentXmlReader
 				out.print(filing_date);
 			}
 			out.print(DELIM);
+			//System.out.println("FD="+filing_date);
 
 			// FY
 
 			if(filing_date!=null && filing_date.length()>4)
 			{
 				out.print(filing_date.substring(0,4));
+				//System.out.println("FY="+filing_date.substring(0,4));
 			}
 			out.print(DELIM);
-
+			
+			
 			// PD
 
 			String publication_date = (String)singleRecord.get("PR_DOCID_DATE");
 			if(publication_date!=null)
 			{
 				out.print(publication_date);
+				//System.out.println("PD="+publication_date);
 			}
 			out.print(DELIM);
+			
 
 			// PY
 
 			if(publication_date!=null && publication_date.length()>4)
 			{
 				out.print(publication_date.substring(0,4));
+				//System.out.println("PY="+publication_date.substring(0,4));
 			}
 			out.print(DELIM);
 
@@ -588,7 +605,7 @@ public class PatentXmlReader
 				//System.out.println("DATE_OF_PUBLIC "+(String)singleRecord.get("DATE_OF_PUBLIC"));
 				out.print((String)singleRecord.get("DATE_OF_PUBLIC"));
 			}
-
+			
 			out.print(DELIM);
 
 			// DAN
@@ -596,8 +613,10 @@ public class PatentXmlReader
 			if(singleRecord.get("AP_DOCID_DOC_NUMBER")!=null)
 			{
 				out.print(singleRecord.get("AP_DOCID_DOC_NUMBER"));
+				//System.out.println("DAN="+singleRecord.get("AP_DOCID_DOC_NUMBER"));
 			}
 			out.print(DELIM);
+			
 
 			// DUN
 
@@ -612,13 +631,15 @@ public class PatentXmlReader
 				if(ainString.length()>499)
 				{
 					ainString = ainString.substring(0,ainString.lastIndexOf(Constants.AUDELIMITER,999));
-					System.out.println("AIN Field too long for record "+ac+" "+patentNumber);
+					//System.out.println("AIN Field too long for record "+ac+" "+patentNumber);
 				}
 
 				out.print(ainString);
+				//System.out.println("AIN="+ainString);
 			}
 			out.print(DELIM);
-
+			
+			
 			// AID
 
 			if(related_documents!=null && related_documents.get("DATE")!= null)
@@ -628,10 +649,11 @@ public class PatentXmlReader
 				if(aidString.length()>3999)
 				{
 					aidString = aidString.substring(0,aidString.lastIndexOf(Constants.AUDELIMITER,3999));
-					System.out.println("AID Field too long for record "+ac+" "+patentNumber);
+					//System.out.println("AID Field too long for record "+ac+" "+patentNumber);
 				}
 
 				out.print(aidString);
+				//System.out.println("AID="+aidString);
 			}
 			out.print(DELIM);
 
@@ -646,6 +668,7 @@ public class PatentXmlReader
 					System.out.println("AIC Field too long for record "+ac+" "+patentNumber);
 				}
 				out.print(aicString);
+				//System.out.println("AIC="+aicString);
 			}
 			out.print(DELIM);
 
@@ -654,11 +677,11 @@ public class PatentXmlReader
 			if(related_documents!=null && related_documents.get("KIND")!= null)
 			{
 				out.print((String)related_documents.get("KIND"));
+				//System.out.println("AIK="+(String)related_documents.get("KIND"));
 			}
 			out.print(DELIM);
 
 			// IPC
-
 			//System.out.println("IPC "+singleRecord.get("IPC"));
 			if(singleRecord.get("IPC")!=null)
 			{
@@ -670,22 +693,28 @@ public class PatentXmlReader
 			if(singleRecord.get("FIC")!=null)
 			{
 				out.print(singleRecord.get("FIC"));
+				//System.out.println("FIC="+singleRecord.get("FIC"));
 			}
 			out.print(DELIM);
+			
 
 			// ICC
 			if(singleRecord.get("ICC")!=null)
 			{
 				out.print(singleRecord.get("ICC"));
+				//System.out.println("ICC="+singleRecord.get("ICC"));
 			}
 			out.print(DELIM);
+			
 
 			// ISC
 			if(singleRecord.get("ISC")!=null)
 			{
 				out.print(singleRecord.get("ISC"));
+				//System.out.println("ISC="+singleRecord.get("ISC"));
 			}
 			out.print(DELIM);
+			
 
 			// ECL
 			StringBuffer main_ecla_text = new StringBuffer();
@@ -763,8 +792,9 @@ public class PatentXmlReader
 
 
 				}
+				//System.out.println("main_ecla "+main_ecla.toString());
 			}
-			//System.out.println("main_ecla "+main_ecla.toString());
+			
 			//System.out.println("PN "+patentNumber);
 			if(main_ecla.length()>0)
 			{
@@ -792,23 +822,29 @@ public class PatentXmlReader
 			if(singleRecord.get("MC_TEXT")!=null)
 			{
 				out.print((String)singleRecord.get("MC_TEXT"));
+				//System.out.println("UCL="+(String)singleRecord.get("MC_TEXT"));
 			}
 			out.print(DELIM);
+			
 
 			// UCC
 			if(singleRecord.get("MC_CLASS")!=null)
 			{
 				out.print((String)singleRecord.get("MC_CLASS"));
+				//System.out.println("UCC="+(String)singleRecord.get("MC_CLASS"));
 			}
 			out.print(DELIM);
+			
 
 			// USC
 			if(singleRecord.get("MC_SUBCLASS")!=null)
 			{
 				out.print((String)singleRecord.get("MC_SUBCLASS"));
+				//System.out.println("USC="+(String)singleRecord.get("MC_SUBCLASS"));
 			}
 			out.print(DELIM);
-
+			
+			
 			// FS
 			if(singleRecord.get("FIELD_OF_SEARCH")!=null)
 			{
@@ -832,7 +868,7 @@ public class PatentXmlReader
 					}
 				}
 				out.print(fosBuffer.toString());
-
+				//System.out.println("FS="+fosBuffer.toString());
 			}
 			out.print(DELIM);
 
@@ -938,6 +974,7 @@ public class PatentXmlReader
 					out.print(substituteChars(name.toString()));
 				}
 				out.print(DELIM);
+				//System.out.println("INV="+substituteChars(name.toString()));
 
 			// INV_ADDR
 				if(address.length()>0)
@@ -946,10 +983,11 @@ public class PatentXmlReader
 					if(addressString.length()>3999)
 					{
 						addressString = addressString.substring(0,addressString.lastIndexOf(Constants.AUDELIMITER,3999));
-						System.out.println("INV_ADDR Field too long for record "+ac+" "+patentNumber);
+						//System.out.println("INV_ADDR Field too long for record "+ac+" "+patentNumber);
 
 					}
 					out.print(substituteChars(addressString));
+					//System.out.println("INV_ADDR="+substituteChars(addressString));
 				}
 				out.print(DELIM);
 
@@ -957,6 +995,7 @@ public class PatentXmlReader
 				if(country.length()>0)
 				{
 					out.print(substituteChars(country.toString()));
+					//System.out.println("INV_CTRY="+substituteChars(country.toString()));
 				}
 				out.print(DELIM);
 			}
@@ -1072,6 +1111,7 @@ public class PatentXmlReader
 					out.print(substituteChars(ap_name.toString()));
 				}
 				out.print(DELIM);
+				//System.out.println("ASG="+substituteChars(ap_name.toString()));
 
 				// ASG_ADDR
 				if(ap_address.length()>0)
@@ -1079,6 +1119,7 @@ public class PatentXmlReader
 					out.print(substituteChars(ap_address.toString()));
 				}
 				out.print(DELIM);
+				//System.out.println("ASG_ADDR="+substituteChars(ap_address.toString()));
 
 				// ASG_CTRY
 				if(ap_country.length()>0)
@@ -1086,6 +1127,7 @@ public class PatentXmlReader
 					out.print(substituteChars(ap_country.toString()));
 				}
 				out.print(DELIM);
+				//System.out.println("ASG_CTRY="+substituteChars(ap_country.toString()));
 			}
 			else
 			{
@@ -1210,6 +1252,7 @@ public class PatentXmlReader
 					out.print(substituteChars(aty_name.toString()));
 				}
 				out.print(DELIM);
+				//System.out.println("ATY="+substituteChars(aty_name.toString()));
 
 
 				// ATY_ADDR
@@ -1219,6 +1262,7 @@ public class PatentXmlReader
 					out.print(substituteChars(aty_address.toString()));
 				}
 				out.print(DELIM);
+				//System.out.println("ATY_ADDR="+substituteChars(aty_address.toString()));
 
 				// ATY_CTRY
 				if(aty_country.length()>0)
@@ -1226,6 +1270,7 @@ public class PatentXmlReader
 					out.print(substituteChars(aty_country.toString()));
 				}
 				out.print(DELIM);
+				//System.out.println("ATY_CTRY="+substituteChars(aty_country.toString()));
 			}
 			else
 			{
@@ -1239,13 +1284,16 @@ public class PatentXmlReader
 			if(singleRecord.get("PE_NAME")!=null)
 			{
 				out.print(substituteChars((String)singleRecord.get("PE_NAME")));
+				//System.out.println("ATY_CTRY="+substituteChars((String)singleRecord.get("PE_NAME")));
 			}
 			out.print(DELIM);
+			
 
 			// AE
 			if(singleRecord.get("AE_NAME")!= null)
 			{
 				out.print(substituteChars((String)singleRecord.get("AE_NAME")));
+				//System.out.println("AE="+substituteChars((String)singleRecord.get("AE_NAME")));
 			}
 			out.print(DELIM);
 
@@ -1287,10 +1335,11 @@ public class PatentXmlReader
 			if(pcBuffer.length()>0)
 			{
 				String pcString = pcBuffer.toString();
+				//System.out.println("PC="+pcBuffer.toString());
 				if(pcString.length()>3999)
 				{
 					pcString = pcString.substring(0,pcString.lastIndexOf(Constants.AUDELIMITER,3999));
-					System.out.println("PI Field too long for record "+ac+" "+patentNumber);
+					//System.out.println("PI Field too long for record "+ac+" "+patentNumber);
 				}
 				out.print(pcString);
 			}
@@ -1304,6 +1353,7 @@ public class PatentXmlReader
 				out.print(docType);
 			}
 			out.print(DELIM);
+			//System.out.println("DT="+docType);
 
 			// LA
 			String lang = null;
@@ -1330,6 +1380,7 @@ public class PatentXmlReader
 				out.print(lang);
 			}
 			out.print(DELIM);
+			//System.out.println("LA="+lang);
 
 			// PCT_PNM
 			/******* no mapping *********/
@@ -1358,19 +1409,22 @@ public class PatentXmlReader
 				out.print(dsBuffer.toString());
 			}
 			out.print(DELIM);
+			//System.out.println("DS="+dsBuffer.toString());
 
 
 			// AB
 			if(singleRecord.get("ABSTRACT_DATA")!=null)
 			{
 				out.print(substituteChars((String)singleRecord.get("ABSTRACT_DATA")));
+				//System.out.println("AB="+substituteChars((String)singleRecord.get("ABSTRACT_DATA")));
 			}
 			else
 			{
 				out.print("QQ");
 			}
 			out.print(DELIM);
-
+			
+			
 			// OAB
 
 			/********* not available **************/
@@ -1403,6 +1457,7 @@ public class PatentXmlReader
 				out.print(patentReferenceCount);
 			}
 			out.print(DELIM);
+			//System.out.println("REF_CNT="+patentReferenceCount);
 
 			// CIT_CNT
 			out.print("0");
@@ -1414,7 +1469,7 @@ public class PatentXmlReader
 
 
 			// NP_CNT
-
+			//System.out.println("NP_CNT="+nonpatentReferenceCount);
 			out.print(nonpatentReferenceCount);
 			out.print(DELIM);
 
@@ -1448,6 +1503,7 @@ public class PatentXmlReader
 			}
 			//System.out.println("IPC= "+ipcBuffer.toString());
 			out.print(DELIM);
+			
 
 			// IPC8_2
 			if(ipcBuffer.length()>4000)
@@ -1466,7 +1522,7 @@ public class PatentXmlReader
 
 			// LOAD_NUMBER
 			out.print(loadNumber);					
-			
+			//System.out.println("LOAD_NUMBER= "+loadNumber);
 			out.print(DELIM);
 			
 			//*************************************************************************//
@@ -1548,6 +1604,7 @@ public class PatentXmlReader
 				{
 					out.print(cpcBuffer.substring(0,4000));
 				}
+				//System.out.println("CLASSIFICATION_CPC= "+cpcBuffer.toString());
 			}
 			
 			out.print(DELIM);
@@ -1557,6 +1614,7 @@ public class PatentXmlReader
 			if(singleRecord.get("MAIN_FAMILY")!=null)
 			{
 				out.print((String)singleRecord.get("MAIN_FAMILY"));
+				//System.out.println("MAIN_FAMILY= "+(String)singleRecord.get("MAIN_FAMILY"));
 			}
 			
 			out.print(DELIM);
@@ -1566,6 +1624,7 @@ public class PatentXmlReader
 			if(singleRecord.get("COMPLETE_FAMILY")!=null)
 			{
 				out.print((String)singleRecord.get("COMPLETE_FAMILY"));
+				//System.out.println("COMPLETE_FAMILY= "+(String)singleRecord.get("COMPLETE_FAMILY"));
 			}
 			
 			out.print(DELIM);
@@ -1575,6 +1634,7 @@ public class PatentXmlReader
 			if(singleRecord.get("SIMPLE_FAMILY")!=null)
 			{
 				out.print((String)singleRecord.get("SIMPLE_FAMILY"));
+				//System.out.println("SAMPLY_FAMILY= "+(String)singleRecord.get("SAMPLY_FAMILY"));
 			}
 			
 			out.print(DELIM);
@@ -1583,7 +1643,8 @@ public class PatentXmlReader
 			
 			if(singleRecord.get("CLAIMS")!=null)
 			{
-				out.print((String)singleRecord.get("CLAIMS"));
+				out.print(substituteChars((String)singleRecord.get("CLAIMS")));
+				//System.out.println("CLAIMS= "+substituteChars((String)singleRecord.get("CLAIMS")));
 			}
 			
 			out.print(DELIM);
@@ -1592,7 +1653,10 @@ public class PatentXmlReader
 			
 			if(singleRecord.get("DRAWINGS")!=null)
 			{
-				out.print((String)singleRecord.get("DRAWINGS"));
+				String drawing = (String)singleRecord.get("DRAWINGS");				
+				out.print(drawing);
+				
+				//System.out.println("DRAWINGS= "+(String)singleRecord.get("DRAWINGS"));
 			}
 			
 			out.print(DELIM);
@@ -1602,6 +1666,7 @@ public class PatentXmlReader
 			if(singleRecord.get("IMAGE")!=null)
 			{
 				out.print((String)singleRecord.get("IMAGE"));
+				//System.out.println("IMAGE= "+(String)singleRecord.get("IMAGE"));
 			}
 			
 			out.print(DELIM);
@@ -1610,7 +1675,8 @@ public class PatentXmlReader
 			
 			if(singleRecord.get("DESCRIPTION")!=null)
 			{
-				out.print((String)singleRecord.get("DESCRIPTION"));
+				out.print(substituteChars((String)singleRecord.get("DESCRIPTION")));
+				//System.out.println("DESCRIPTION= "+substituteChars((String)singleRecord.get("DESCRIPTION")));
 			}
 						
 			out.print(DELIM);
@@ -1620,7 +1686,9 @@ public class PatentXmlReader
 			if(singleRecord.get("MODIFIED_DATE_OF_PUBLIC")!=null)
 			{
 				out.print((String)singleRecord.get("MODIFIED_DATE_OF_PUBLIC"));
-			}	
+				//System.out.println("MODIFIED_DATE_OF_PUBLIC= "+(String)singleRecord.get("MODIFIED_DATE_OF_PUBLIC"));
+			}
+			
 			//*/ -- end of VTW project					
 			
 			out.print("\n");
@@ -2040,14 +2108,18 @@ public class PatentXmlReader
 				}
 				
 				//description
-				Element description = rec.getChild("description");
+				//Element description = rec.getChild("description");
+				//modify to capture all descriptions
+				List description = rec.getChildren("description");
 				if(description != null)
 				{				
 					setDescription(record,description); //OK
 				}
 				
 				//claims
-				Element claims = rec.getChild("claims");
+				//Element claims = rec.getChild("claims");
+				//there are more than one claims elemnt in vtw file, modified to capture all of them by hmo at 10/13/2016
+				List claims = rec.getChildren("claims");
 				if(claims != null)
 				{				
 					setClaims(record,claims); //OK
@@ -2481,6 +2553,30 @@ public class PatentXmlReader
 					String doc_number = document_id.getChildText("doc-number");
 					String kind = document_id.getChildText("kind");
 					String date = document_id.getChildText("date");
+					int length = 0;
+					if(country!=null)
+					{
+						length = length+country.length();
+					}
+					if(doc_number!=null)
+					{
+						length = length+doc_number.length();
+					}
+					if(kind!=null)
+					{
+						length = length+kind.length();
+					}
+					if(date!=null)
+					{
+						length = length+date.length();
+					}
+					
+					if((length+familyBuffer.length())>3995)
+					{
+						//over size, exit the loop
+						break;
+					}
+					
 					if(country!=null)
 					{
 						familyBuffer.append(country);
@@ -2509,6 +2605,11 @@ public class PatentXmlReader
 					String date = application_date.getChildText("date");
 					if(date!=null)
 					{
+						if((date.length()+familyBuffer.length())>3995)
+						{
+							//over size, exit the loop
+							break;
+						}
 						familyBuffer.append(date);
 					}
 				}
@@ -2728,6 +2829,165 @@ public class PatentXmlReader
 		
 	}
 
+	private void setClaims(HashMap record,List claimsgroup) throws Exception
+	{
+
+		StringBuffer claimbuffer = new StringBuffer();
+		for(int j=0;j<claimsgroup.size();j++)
+		{
+			Element claims = (Element)claimsgroup.get(j);
+			if(claims != null)
+			{
+				List claimList = claims.getChildren("claim");
+				String id = claims.getAttributeValue("id");
+				String lang = claims.getAttributeValue("lang");
+				String format = claims.getAttributeValue("format");
+				String generated = claims.getAttributeValue("generated");
+				String country = claims.getAttributeValue("country");
+				String doc_number = claims.getAttributeValue("doc-number");
+				String kind = claims.getAttributeValue("kind");
+				if(lang!=null && !lang.equals("eng"))
+				{
+					//System.out.println("currently we don't capture non english claims, claim language detect "+lang);
+				}
+				else
+				{
+					if(id!=null)
+					{
+						claimbuffer.append(id);
+					}
+					claimbuffer.append(Constants.AUDELIMITER);
+					if(lang!=null)
+					{
+						claimbuffer.append(lang);
+					}
+					claimbuffer.append(Constants.AUDELIMITER);
+					if(format!=null)
+					{
+						claimbuffer.append(format);
+					}
+					claimbuffer.append(Constants.AUDELIMITER);
+					if(claimbuffer!=null)
+					{
+						claimbuffer.append(generated);
+					}
+					claimbuffer.append(Constants.AUDELIMITER);
+					if(country!=null)
+					{
+						claimbuffer.append(country);
+					}
+					claimbuffer.append(Constants.AUDELIMITER);
+					if(doc_number!=null)
+					{
+						claimbuffer.append(doc_number);
+					}
+					claimbuffer.append(Constants.AUDELIMITER);
+					if(kind!=null)
+					{
+						claimbuffer.append(kind);
+					}
+					claimbuffer.append(Constants.AUDELIMITER);		
+				
+					for(int i=0;i<claimList.size();i++)
+					{
+						Element claim = (Element)claimList.get(i);
+						if(claim != null && claim.getChildText("claim-text")!=null)
+						{					
+							claimbuffer.append(claim.getChildText("claim-text"));					
+						}
+						claimbuffer.append(Constants.IDDELIMITER);		
+					}
+				}
+			}
+				
+			record.put("CLAIMS", claimbuffer.toString());
+		}
+		
+	}
+
+	private void setDescription(HashMap record,List descriptionsgroup) throws Exception
+	{
+		HashMap descTable = new HashMap();
+		List pList = new ArrayList();
+		StringBuffer descbuffer = new StringBuffer();
+		
+		for(int j=0;j<descriptionsgroup.size();j++)
+		{
+			Element descriptions = (Element)descriptionsgroup.get(j);
+			if(descriptions != null)
+			{
+				List descriptions_p = descriptions.getChildren("p");
+				
+				if(descriptions_p.size()==0 && descriptions.getChild("summary")!=null)
+				{
+					descriptions_p = descriptions.getChild("summary").getChildren("p");			
+				}
+				String id = descriptions.getAttributeValue("id");
+				String lang = descriptions.getAttributeValue("lang");
+				String format = descriptions.getAttributeValue("format");
+				String generated = descriptions.getAttributeValue("generated");
+				String country = descriptions.getAttributeValue("country");
+				String doc_number = descriptions.getAttributeValue("doc-number");
+				String kind = descriptions.getAttributeValue("kind");
+				if(lang!=null && !lang.equals("eng"))
+				{
+					//System.out.println("non english description found "+lang);
+				}
+				else
+				{
+					if(id!=null)
+					{
+						descbuffer.append(id);
+					}
+					descbuffer.append(Constants.AUDELIMITER);
+					if(lang!=null)
+					{
+						descbuffer.append(lang);
+					}
+					descbuffer.append(Constants.AUDELIMITER);
+					if(format!=null)
+					{
+						descbuffer.append(format);
+					}
+					descbuffer.append(Constants.AUDELIMITER);
+					if(generated!=null)
+					{
+						descbuffer.append(generated);
+					}
+					descbuffer.append(Constants.AUDELIMITER);
+					if(country!=null)
+					{
+						descbuffer.append(country);
+					}
+					descbuffer.append(Constants.AUDELIMITER);
+					if(doc_number!=null)
+					{
+						descbuffer.append(doc_number);
+					}
+					descbuffer.append(Constants.AUDELIMITER);
+					if(kind!=null)
+					{
+						descbuffer.append(kind);
+					}
+					descbuffer.append(Constants.AUDELIMITER);		
+				
+					for(int i=0;i<descriptions_p.size();i++)
+					{
+						Element description_p = (Element)descriptions_p.get(i);
+						if(description_p != null && description_p.getText()!=null)
+						{					
+							descbuffer.append(description_p.getText());					
+						}
+						descbuffer.append(Constants.IDDELIMITER);		
+					}
+				}
+			}
+				
+			record.put("DESCRIPTION", descbuffer.toString());
+			
+		}
+			
+	}
 	
 	private void setDescription(HashMap record,Element descriptions) throws Exception
 	{
@@ -3368,52 +3628,79 @@ public class PatentXmlReader
 			//System.out.println("party_app_type= "+app_type);
 			String designation = ((Element)parties.get(i)).getAttributeValue("designation");
 			String rep_type = ((Element)parties.get(i)).getAttributeValue("rep-type");
+			String data_format = ((Element)parties.get(i)).getAttributeValue("data-format");
 			//System.out.println("party_designation= "+designation);
 			partiesTable.put("SEQUENCE",sequence);
 			partiesTable.put("APP_TYPE",app_type);
 			partiesTable.put("REP_TYPE",rep_type);
 			partiesTable.put("DESIGNATION",designation);
-			Element addressbook = ((Element)parties.get(i)).getChild("addressbook");
-			String orgname = addressbook.getChildTextTrim("orgname");
-			//System.out.println("party_orgname= "+orgname);
-			String last_name = addressbook.getChildTextTrim("last-name");
-			//System.out.println("party_last_name= "+last_name);
-			String first_name = addressbook.getChildTextTrim("first-name");
-			StringBuffer full_name = null;
-			if(addressbook.getChild("name") != null)
+			//Element addressbook = ((Element)parties.get(i)).getChild("addressbook");
+			List addressbooks = ((Element)parties.get(i)).getChildren("addressbook");
+			String lang = null;
+			for(int j=0;j<addressbooks.size();j++)
 			{
-				full_name = getMixData(addressbook.getChild("name").getContent(),new StringBuffer());
+				Element addressbook = (Element)addressbooks.get(j);
+				String testLang = addressbook.getAttributeValue("lang");
+				if(testLang!=null)
+				{
+					lang = testLang;
+					if(lang.equals("eng"))
+					{
+						break;
+					}
+				}
 			}
-
-			//System.out.println("party_first_name= "+first_name);
-			partiesTable.put("ORGNAME",orgname);
-			partiesTable.put("LAST_NAME",last_name);
-			partiesTable.put("FIRST_NAME",first_name);
-			if(full_name != null)
+			for(int j=0;j<addressbooks.size();j++)
 			{
-				partiesTable.put("NAME",full_name.toString());
+				Element addressbook = (Element)addressbooks.get(j);
+				String orgname = addressbook.getChildTextTrim("orgname");
+				//System.out.println("party_orgname= "+orgname);
+				String last_name = addressbook.getChildTextTrim("last-name");
+				//System.out.println("party_last_name= "+last_name);
+				String first_name = addressbook.getChildTextTrim("first-name");
+				String testLang = addressbook.getAttributeValue("lang");
+				StringBuffer full_name = null;
+				//added pre frank required on 11/9/2016 by hmo
+				//check lang attibute take lang="eng" first and then take whatever available
+				//take the one without data-format attribute 
+				if(data_format==null && testLang!=null && lang !=null && testLang.equals(lang))  
+				{
+					if(addressbook.getChild("name") != null)
+					{
+						full_name = getMixData(addressbook.getChild("name").getContent(),new StringBuffer());
+					}
+		
+					//System.out.println("party_first_name= "+first_name);
+					partiesTable.put("ORGNAME",orgname);
+					partiesTable.put("LAST_NAME",last_name);
+					partiesTable.put("FIRST_NAME",first_name);
+					if(full_name != null)
+					{
+						partiesTable.put("NAME",full_name.toString());
+					}
+		
+					Element address = addressbook.getChild("address");
+					if(address != null)
+					{
+						String city = address.getChildTextTrim("city");
+						//System.out.println("party_city= "+city);
+						String state = address.getChildTextTrim("state");
+						//System.out.println("party_state= "+state);
+						String country = address.getChildTextTrim("country");
+						//System.out.println("party_country= "+country);
+						String postcode = address.getChildTextTrim("postcode");
+						//System.out.println("party_postcode= "+postcode);
+						String address_1 = address.getChildTextTrim("address-1");
+						//System.out.println("party_address_1= "+address_1);
+						partiesTable.put("CITY",city);
+						partiesTable.put("STATE",state);
+						partiesTable.put("POSTCODE",postcode);
+						partiesTable.put("COUNTRY",country);
+						partiesTable.put("ADDRESS1",address_1);
+					}
+					partiesList.add(partiesTable);
+				}
 			}
-
-			Element address = addressbook.getChild("address");
-			if(address != null)
-			{
-				String city = address.getChildTextTrim("city");
-				//System.out.println("party_city= "+city);
-				String state = address.getChildTextTrim("state");
-				//System.out.println("party_state= "+state);
-				String country = address.getChildTextTrim("country");
-				//System.out.println("party_country= "+country);
-				String postcode = address.getChildTextTrim("postcode");
-				//System.out.println("party_postcode= "+postcode);
-				String address_1 = address.getChildTextTrim("address-1");
-				//System.out.println("party_address_1= "+address_1);
-				partiesTable.put("CITY",city);
-				partiesTable.put("STATE",state);
-				partiesTable.put("POSTCODE",postcode);
-				partiesTable.put("COUNTRY",country);
-				partiesTable.put("ADDRESS1",address_1);
-			}
-			partiesList.add(partiesTable);
 		}
 		record.put(name,partiesList);
 	}
@@ -3734,6 +4021,19 @@ public class PatentXmlReader
 
 	private static String substituteChars(String xml)
 	{
+		//modified for stripped out tab and new line charachters. by hmo at 10/13/2016
+		if(xml.indexOf("\t")>-1)
+		{
+			//System.out.println("found tab character");
+			xml = xml.replaceAll("\t", " ");
+		}
+		
+		if(xml.indexOf("\n")>-1)
+		{
+			//System.out.println("found tab character");
+			xml = xml.replaceAll("\n", " ");
+		}
+		
 		int len = xml.length();
 		StringBuffer sb = new StringBuffer();
 		char c;
@@ -4021,7 +4321,8 @@ public class PatentXmlReader
 					case 9829 :sb.append("&hearts;");break; //black heart suit, valentine
 					case 9830 :sb.append("&diams;");break;	//Black diamond suit
 
-					default:sb.append(' ');
+					//default:sb.append(' ');
+					default:sb.append("&#"+(int)c+";");
 					break;
 				}
 			}
