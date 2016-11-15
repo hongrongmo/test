@@ -3,6 +3,8 @@ package org.ei.dataloading.cafe;
 import java.io.IOException;
 import java.util.HashMap;
 
+import org.ei.dataloading.awss3.AmazonS3Service;
+
 import com.amazonaws.AmazonClientException;
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.auth.*;

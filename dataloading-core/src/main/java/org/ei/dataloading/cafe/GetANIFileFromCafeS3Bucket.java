@@ -16,6 +16,7 @@ import java.util.Enumeration;
 import java.util.HashMap;
 
 import org.apache.commons.io.IOUtils;
+import org.ei.dataloading.awss3.AmazonS3Service;
 import org.ei.dataloading.bd.loadtime.BaseTableDriver;
 
 import com.amazonaws.AmazonClientException;
@@ -222,7 +223,7 @@ public class GetANIFileFromCafeS3Bucket {
 					"to Amazon S3, but was rejected with an error response" +
 					" for some reason.");
 			
-			System.out.println("Cafe file" +  bucketName+"/"+key + "not Exist in S3");
+			System.out.println("Cafe file " +  bucketName+"/"+key + " not Exist in S3");
 			System.out.println("Error Message:    " + ase.getMessage());
 			System.out.println("HTTP Status Code: " + ase.getStatusCode());
 			System.out.println("AWS Error Code:   " + ase.getErrorCode());

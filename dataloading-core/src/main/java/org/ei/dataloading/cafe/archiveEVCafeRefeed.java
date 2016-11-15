@@ -118,7 +118,7 @@ public class archiveEVCafeRefeed {
 	private static HashMap<String, String> queueArgs = new HashMap<String,String>();
 
 
-	public void archiveEVCafeRefeed()
+	public archiveEVCafeRefeed()
 	{
 
 	}
@@ -189,7 +189,7 @@ public class archiveEVCafeRefeed {
 					{
 						if (message == null) 
 						{
-							System.out.println("Queue is empty!");
+							System.out.println("Message is empty!");
 							break;
 						} 
 						else 
@@ -295,6 +295,7 @@ public class archiveEVCafeRefeed {
 				}
 				else
 				{
+					System.out.println("Queue is empty!");
 					System.out.println("No Messages were recived at Iteration #: " + i + " Wait for for few seconds, Skip to Next iteration");
 					// Wait for for few seconds before next run
 					System.out.println("Waiting for visibility timeout...");

@@ -2,20 +2,17 @@ package org.ei.dataloading.knovel.loadtime;
 
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.HashMap;
 
-import org.ei.dataloading.cafe.AmazonS3Service;
-import org.ei.dataloading.cafe.GetANIFileFromCafeS3Bucket;
+import org.ei.dataloading.awss3.AmazonS3Service;
 
 import com.amazonaws.AmazonClientException;
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.auth.InstanceProfileCredentialsProvider;
-import com.amazonaws.auth.PropertiesCredentials;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.s3.model.GetObjectRequest;

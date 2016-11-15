@@ -5,7 +5,7 @@ import java.io.InputStream;
 import java.util.Date;
 import java.util.List;
 
-import org.ei.dataloading.cafe.AmazonS3Service;
+import org.ei.dataloading.awss3.AmazonS3Service;
 
 import com.amazonaws.AmazonClientException;
 import com.amazonaws.AmazonServiceException;
