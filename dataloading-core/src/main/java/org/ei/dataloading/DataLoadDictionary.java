@@ -5,6 +5,9 @@
  * Window - Preferences - Java - Code Style - Code Templates
  */
 package org.ei.dataloading;
+import java.util.*;
+import java.util.regex.*;
+
 
 /**
  * @author solovyevat
@@ -14,30 +17,545 @@ package org.ei.dataloading;
  */
 public class DataLoadDictionary
 {
+	private static final Pattern ENTITY_PATTERN = Pattern.compile("(&[^\\s]+?;)");
+	private static final Pattern ENTITY_PATTERN1 = Pattern.compile("(&amp;)");
+	private static final Pattern ENTITY_PATTERN2 = Pattern.compile("&");
+	private static final Pattern ENTITY_PATTERN3 = Pattern.compile("(&#[^\\s]+?;)");
+	private static Map<String, String> entityMap = new HashMap<String, String>();
+	static{
+		
+		entityMap.put("&quot;", "&#34;");
+		entityMap.put("&amp;", "&#38;");
+		entityMap.put("&lt;", "&#60;");
+		entityMap.put("&gt;", "&#62;");
+		entityMap.put("&Ccedil;","&#128;");
+		entityMap.put("&uuml;","&#129;");
+		entityMap.put("&eacute;","&#130;");
+		entityMap.put("&acirc;","&#131;");
+		entityMap.put("&auml;","&#132;");
+		entityMap.put("&agrave;","&#133;");
+		entityMap.put("&aring;","&#134;");
+		entityMap.put("&ccedil;","&#135;");
+		entityMap.put("&ecirc;","&#136;");
+		entityMap.put("&euml;","&#137;");
+		entityMap.put("&egrave;","&#138;");
+		entityMap.put("&iuml;","&#139;");
+		entityMap.put("&icirc;","&#140;");
+		entityMap.put("&igrave;","&#141;");
+		entityMap.put("&Auml;","&#142;");
+		entityMap.put("&Aring;","&#143;");
+		entityMap.put("&Eacute;","&#144;");
+		entityMap.put("&aelig;","&#145;");
+		entityMap.put("&AElig;","&#146;");
+		entityMap.put("&ocirc;","&#147;");
+		entityMap.put("&ouml;","&#148;");
+		entityMap.put("&ograve;","&#149;");
+		entityMap.put("&ucirc;","&#150;");
+		entityMap.put("&ugrave;","&#151;");
+		entityMap.put("&yuml;","&#152;");
+		entityMap.put("&Ouml;","&#153;");
+		entityMap.put("&Uuml;","&#154;");
+		entityMap.put("&pound;","&#156;");
+		entityMap.put("&yen;","&#157;");
+    
+	    entityMap.put("&nbsp;", "&#160;");
+	    entityMap.put("&iexcl;", "&#161;");
+	    entityMap.put("&cent;", "&#162;");
+	    entityMap.put("&pound;", "&#163;");
+	    entityMap.put("&curren;", "&#164;");
+	    entityMap.put("&yen;", "&#165;");
+	    entityMap.put("&brvbar;", "&#166;");
+	    entityMap.put("&sect;", "&#167;");
+	    entityMap.put("&uml;", "&#168;");
+	    entityMap.put("&copy;", "&#169;");
+	    entityMap.put("&ordf;", "&#170;");
+	    entityMap.put("&laquo;", "&#171;");
+	    entityMap.put("&not;", "&#172;");
+	    entityMap.put("&shy;", "&#173;");
+	    entityMap.put("&reg;", "&#174;");
+	    entityMap.put("&macr;", "&#175;");
+	    entityMap.put("&deg;", "&#176;");
+	    entityMap.put("&plusmn;", "&#177;");
+	    entityMap.put("&sup2;", "&#178;");
+	    entityMap.put("&sup3;", "&#179;");
+	    entityMap.put("&acute;", "&#180;");
+	    entityMap.put("&micro;", "&#181;");
+	    entityMap.put("&para;", "&#182;");
+	    entityMap.put("&middot;", "&#183;");
+	    entityMap.put("&cedil;", "&#184;");
+	    entityMap.put("&sup1;", "&#185;");
+	    entityMap.put("&ordm;", "&#186;");
+	    entityMap.put("&raquo;", "&#187;");
+	    entityMap.put("&frac14;", "&#188;");
+	    entityMap.put("&frac12;", "&#189;");
+	    entityMap.put("&frac34;", "&#190;");
+	    entityMap.put("&iquest;", "&#191;");
+	    entityMap.put("&Agrave;", "&#192;");
+	    entityMap.put("&Aacute;", "&#193;");
+	    entityMap.put("&Acirc;", "&#194;");
+	    entityMap.put("&Atilde;", "&#195;");
+	    entityMap.put("&Auml;", "&#196;");
+	    entityMap.put("&Aring;", "&#197;");
+	    entityMap.put("&AElig;", "&#198;");
+	    entityMap.put("&Ccedil;", "&#199;");
+	    entityMap.put("&Egrave;", "&#200;");
+	    entityMap.put("&Eacute;", "&#201;");
+	    entityMap.put("&Ecirc;", "&#202;");
+	    entityMap.put("&Euml;", "&#203;");
+	    entityMap.put("&Igrave;", "&#204;");
+	    entityMap.put("&Iacute;", "&#205;");
+	    entityMap.put("&Icirc;", "&#206;");
+	    entityMap.put("&Iuml;", "&#207;");
+	    entityMap.put("&ETH;", "&#208;");
+	    entityMap.put("&Ntilde;", "&#209;");
+	    entityMap.put("&Ograve;", "&#210;");
+	    entityMap.put("&Oacute;", "&#211;");
+	    entityMap.put("&Ocirc;", "&#212;");
+	    entityMap.put("&Otilde;", "&#213;");
+	    entityMap.put("&Ouml;", "&#214;");
+	    entityMap.put("&times;", "&#215;");
+	    entityMap.put("&Oslash;", "&#216;");
+	    entityMap.put("&Ugrave;", "&#217;");
+	    entityMap.put("&Uacute;", "&#218;");
+	    entityMap.put("&Ucirc;", "&#219;");
+	    entityMap.put("&Uuml;", "&#220;");
+	    entityMap.put("&Yacute;", "&#221;");
+	    entityMap.put("&THORN;", "&#222;");
+	    entityMap.put("&szlig;", "&#223;");
+	    entityMap.put("&agrave;", "&#224;");
+	    entityMap.put("&aacute;", "&#225;");
+	    entityMap.put("&acirc;", "&#226;");
+	    entityMap.put("&atilde;", "&#227;");
+	    entityMap.put("&auml;", "&#228;");
+	    entityMap.put("&aring;", "&#229;");
+	    entityMap.put("&aelig;", "&#230;");
+	    entityMap.put("&ccedil;", "&#231;");
+	    entityMap.put("&egrave;", "&#232;");
+	    entityMap.put("&eacute;", "&#233;");
+	    entityMap.put("&ecirc;", "&#234;");
+	    entityMap.put("&euml;", "&#235;");
+	    entityMap.put("&igrave;", "&#236;");
+	    entityMap.put("&iacute;", "&#237;");
+	    entityMap.put("&icirc;", "&#238;");
+	    entityMap.put("&iuml;", "&#239;");
+	    entityMap.put("&eth;", "&#240;");
+	    entityMap.put("&ntilde;", "&#241;");
+	    entityMap.put("&ograve;", "&#242;");
+	    entityMap.put("&oacute;", "&#243;");
+	    entityMap.put("&ocirc;", "&#244;");
+	    entityMap.put("&otilde;", "&#245;");
+	    entityMap.put("&ouml;", "&#246;");
+	    entityMap.put("&divide;", "&#247;");
+	    entityMap.put("&oslash;", "&#248;");
+	    entityMap.put("&ugrave;", "&#249;");
+	    entityMap.put("&uacute;", "&#250;");
+	    entityMap.put("&ucirc;", "&#251;");
+	    entityMap.put("&uuml;", "&#252;");
+	    entityMap.put("&yacute;", "&#253;");
+	    entityMap.put("&thorn;", "&#254;");
+	    entityMap.put("&yuml;", "&#255;");
+	    
+	    entityMap.put("&Lstrok;","&#321;");
+	    entityMap.put("&lstrok;","&#322;");
+	    
+	    entityMap.put("&OElig;", "&#338;");
+	    entityMap.put("&oelig;", "&#339;");
+	    entityMap.put("&Scaron;", "&#352;");
+	    entityMap.put("&scaron;", "&#353;");
+	    entityMap.put("&Yuml;", "&#376;");	    
+	    entityMap.put("&fnof;","&#402;");	    
+	    entityMap.put("&circ;", "&#710;");
+	    entityMap.put("&tilde;", "&#732;");
+	    entityMap.put("&grave;","&#768;"); 
+	    entityMap.put("&acute;","&#769;"); 
+	    entityMap.put("&circ;","&#770;"); 
+	    entityMap.put("&tilde;","&#771;"); 
+	    entityMap.put("&macr;","&#772;"); 
+	    entityMap.put("&dot;","&#775;"); 
+	    entityMap.put("&die;","&#776;"); 
+	    entityMap.put("&ring;","&#778;"); 
+	    entityMap.put("&caron;","&#780;"); 
+	    entityMap.put("&cedil;","&#807;"); 
+	   	
+	    entityMap.put("&Alpha;", "&#913;");
+	    entityMap.put("&Beta;", "&#914;");
+	    entityMap.put("&Gamma;", "&#915;");
+	    entityMap.put("&Delta;", "&#916;");
+	    entityMap.put("&Epsilon;", "&#917;");
+	    entityMap.put("&Zeta;", "&#918;");
+	    entityMap.put("&Eta;", "&#919;");
+	    entityMap.put("&Theta;", "&#920;");
+	    entityMap.put("&Iota;", "&#921;");
+	    entityMap.put("&Kappa;", "&#922;");
+	    entityMap.put("&Lambda;", "&#923;");
+	    entityMap.put("&Mu;", "&#924;");
+	    entityMap.put("&Nu;", "&#925;");
+	    entityMap.put("&Xi;", "&#926;");
+	    entityMap.put("&Omicron;", "&#927;");
+	    entityMap.put("&Pi;", "&#928;");
+	    entityMap.put("&Rho;", "&#929;");
+	    entityMap.put("&Sigma;", "&#931;");
+	    entityMap.put("&Tau;", "&#932;");
+	    entityMap.put("&Upsi;", "&#933;");
+	    entityMap.put("&Phi;", "&#934;");
+	    entityMap.put("&Chi;", "&#935;");
+	    entityMap.put("&Psi;", "&#936;");
+	    entityMap.put("&Omega;", "&#937;");
+	    entityMap.put("&alpha;", "&#945;");
+	    entityMap.put("&beta;", "&#946;");
+	    entityMap.put("&gamma;", "&#947;");
+	    entityMap.put("&delta;", "&#948;");
+	    entityMap.put("&epsi;", "&#949;");
+	    entityMap.put("&zeta;", "&#950;");
+	    entityMap.put("&eta;", "&#951;");
+	    entityMap.put("&theta;", "&#952;");
+	    entityMap.put("&iota;", "&#953;");
+	    entityMap.put("&kappa;", "&#954;");
+	    entityMap.put("&lambda;", "&#955;");
+	    entityMap.put("&mu;", "&#956;");
+	    entityMap.put("&nu;", "&#957;");
+	    entityMap.put("&xi;", "&#958;");
+	    entityMap.put("&omicron;", "&#959;");
+	    entityMap.put("&pi;", "&#960;");
+	    entityMap.put("&rho;", "&#961;");
+	    entityMap.put("&sigmaf;", "&#962;");
+	    entityMap.put("&sigma;", "&#963;");
+	    entityMap.put("&tau;", "&#964;");
+	    entityMap.put("&upsi;", "&#965;");
+	    entityMap.put("&phi;", "&#966;");
+	    entityMap.put("&chi;", "&#967;");
+	    entityMap.put("&psi;", "&#968;");
+	    entityMap.put("&omega;", "&#969;");
+	    entityMap.put("&theta;", "&#977;");
+	    entityMap.put("&upsih;", "&#978;");
+	    entityMap.put("&straightphi;", "&#981;");
+	    entityMap.put("&piv;", "&#982;"); 
+	    entityMap.put("&Gammad;", "&#988;");//GREEK LETTER DIGAMMA (F) Ϝ
+	    entityMap.put("&gammad;", "&#989;");//GREEK SMALL LETTER DIGAMMA (f) ϝ
+
+	  	    
+	    entityMap.put("&IOcy;","&#1025;");	//CyrilliccapitalIO,likecapitalEumlaut
+	    entityMap.put("&DJcy;","&#1026;");	//CyrilliccapitalletterDJ
+	    entityMap.put("&GJcy;","&#1027;");	//CyrilliccapitalletterGJ
+	    entityMap.put("&Jukcy;","&#1028;");	//CyrilliccapitalletterJuk
+	    entityMap.put("&DScy;","&#1029;");	//CyrilliccapitalletterDS
+	    entityMap.put("&Iukcy;","&#1030;");	//CyrillicByelorussionI
+	    entityMap.put("&YIcy;","&#1031;");	//CyrilliccapitalletterYI
+	    entityMap.put("&Jsercy;","&#1032;"); //CyrilliccapitalletterJser
+	    entityMap.put("&LJcy;","&#1033;");	//CyrilliccapitalletterLJ
+	    entityMap.put("&NJcy;","&#1034;");	//CyrilliccapitalletterNJ
+	    entityMap.put("&TSHcy;","&#1035;");	//CyrilliccapitalletterTSH
+	    entityMap.put("&KJcy;","&#1036;");	//CyrilliccapitalletterKJ
+	    entityMap.put("&Ubrcy;","&#1038;");	//CyrillicUcapitalletterbreve
+	    entityMap.put("&DZcy;","&#1039;");	//CyrilliccapitalletterDZ
+	    entityMap.put("&Acy;","&#1040;");	//CyrilliccapitalletterA
+	    entityMap.put("&Bcy;","&#1041;");	//CyrilliccapitalletterBE
+	    entityMap.put("&Vcy;","&#1042;");	//CyrilliccapitalletterVE
+	    entityMap.put("&Gcy;","&#1043;");	//CyrilliccapitalletterGHE
+	    entityMap.put("&Dcy;","&#1044;");	//CyrilliccapitalletterDE
+	    entityMap.put("&IEcy;","&#1045;");	//CyrilliccapitalletterEE
+	    entityMap.put("&ZHcy;","&#1046;");	//CyrilliccapitalletterZHE
+	    entityMap.put("&Zcy;","&#1047;");	//CyrilliccapitalletterZE
+	    entityMap.put("&Icy;","&#1048;");	//CyrilliccapitalletterI
+	    entityMap.put("&Jcy;","&#1049;");	//CyrilliccapitalshortI
+	    entityMap.put("&Kcy;","&#1050;");	//CyrilliccapitalletterKA
+	    entityMap.put("&Lcy;","&#1051;");	//CyrilliccapitalletterEL
+	    entityMap.put("&Mcy;","&#1052;");	//CyrilliccapitalletterM
+	    entityMap.put("&Ncy;","&#1053;");	//CyrilliccapitalletterEN
+	    entityMap.put("&Ocy;","&#1054;");	//CyrilliccapitalletterO
+	    entityMap.put("&Pcy;","&#1055;");	//CyrilliccapitalletterPE
+	    entityMap.put("&Rcy;","&#1056;");	//CyrilliccapitalletterER
+	    entityMap.put("&Scy;","&#1057;");	//CyrilliccapitalletterES
+	    entityMap.put("&Tcy;","&#1058;");	//CyrilliccapitalletterTE
+	    entityMap.put("&Ucy;","&#1059;");	//CyrilliccapitalletterU
+	    entityMap.put("&Fcy;","&#1060;");	//CyrilliccapitalletterEF
+	    entityMap.put("&KHcy;","&#1061;");	//CyrilliccapitalletterHA
+	    entityMap.put("&TScy;","&#1062;");	//CyrilliccapitalletterTSE
+	    entityMap.put("&CHcy;","&#1063;");	//CyrilliccapitalletterCHE
+	    entityMap.put("&SHcy;","&#1064;");	//CyrilliccapitalletterSHA
+	    entityMap.put("&SHCHcy;","&#1065;"); 	//CyrilliccapitalletterSHCHA
+	    entityMap.put("&HARDcy;","&#1066;"); 	//Cyrilliccapitalhardsign
+	    entityMap.put("&Ycy;","&#1067;");	//CyrilliccapitalletterYERU
+	    entityMap.put("&SOFTcy;","&#1068;"); 	//Cyrilliccapitalsoftsign
+	    entityMap.put("&Ecy;","&#1069;");	//CyrilliccapitalletterE
+	    entityMap.put("&YUcy;","&#1070;");	//CyrilliccapitalletterYU
+	    entityMap.put("&YAcy;","&#1071;");	//CyrilliccapitalletterYA
+	    entityMap.put("&acy;","&#1072;");	//Cyrillicsmalllettera
+	    entityMap.put("&bcy;","&#1073;");	//Cyrillicsmallletterbe
+	    entityMap.put("&vcy;","&#1074;");	//Cyrillicsmallletterve
+	    entityMap.put("&gcy;","&#1075;");	//Cyrillicsmallletterghe
+	    entityMap.put("&dcy;","&#1076;");	//Cyrillicsmallletterde
+	    entityMap.put("&iecy;","&#1077;");	//Cyrillicsmallletterie
+	    entityMap.put("&zhcy;","&#1078;");	//Cyrillicsmallletterzhe
+	    entityMap.put("&zcy;","&#1079;");	//Cyrillicsmallletterze
+	    entityMap.put("&icy;","&#1080;");	//Cyrillicsmallletteri
+	    entityMap.put("&jcy;","&#1081;");	//Cyrillicsmallshorti
+	    entityMap.put("&kcy;","&#1082;");	//Cyrillicsmallletterka
+	    entityMap.put("&lcy;","&#1083;");	//Cyrillicsmallletterel
+	    entityMap.put("&mcy;","&#1084;");	//Cyrillicsmallletterem
+	    entityMap.put("&ncy;","&#1085;");	//Cyrillicsmallletteren
+	    entityMap.put("&ocy;","&#1086;");	//Cyrillicsmalllettero
+	    entityMap.put("&pcy;","&#1087;");	//Cyrillicsmallletterpe
+	    entityMap.put("&rcy;","&#1088;");	//Cyrillicsmallletterer
+	    entityMap.put("&scy;","&#1089;");	//Cyrillicsmallletteres
+	    entityMap.put("&tcy;","&#1090;");	//Cyrillicsmallletterte
+	    entityMap.put("&ucy;","&#1091;");	//Cyrillicsmallletteru
+	    entityMap.put("&fcy;","&#1092;");	//Cyrillicsmallletteref
+	    entityMap.put("&khcy;","&#1093;");	//Cyrillicsmallletterha
+	    entityMap.put("&tscy;","&#1094;");	//Cyrillicsmalllettertse
+	    entityMap.put("&chcy;","&#1095;");	//Cyrillicsmallletterche
+	    entityMap.put("&shcy;","&#1096;");	//Cyrillicsmalllettersha
+	    entityMap.put("&shchcy;","&#1097;");	//Cyrillicsmalllettershcha
+	    entityMap.put("&hardcy;","&#1098;");	//Cyrillicsmallhardsign
+	    entityMap.put("&ycy;","&#1099;");	//Cyrillicsmallletteryeru
+	    entityMap.put("&softcy;","&#1100;");	//Cyrillicsmallsoftsign
+	    entityMap.put("&ecy;","&#1101;");	//Cyrillicsmalllettere
+	    entityMap.put("&yucy;","&#11002;");	//Cyrillicsmallletteryu
+	    entityMap.put("&yacy;","&#1103;");	//Cyrillicsmallletterya
+	    entityMap.put("&iocy;","&#1105;");	//Cyrillicsmallletterio,likesmalleumlaut
+	    entityMap.put("&djcy;","&#1106;");	//Cyrillicsmallletterdj
+	    entityMap.put("&gjcy;","&#1107;");	//Cyrillicsmalllettergj
+	    entityMap.put("&jukcy;","&#1108;");	//Cyrillicsmallletterjuk
+	    entityMap.put("&dscy;","&#1109;");	//Cyrillicsmallletterds
+	    entityMap.put("&iukcy;","&#1110;");	//CyrillicsmallletterByelorussioni
+	    entityMap.put("&yicy;","&#1111;");	//Cyrillicsmallletteryi
+	    entityMap.put("&jsercy;","&#1112;");	//Cyrillicsmallletterjser
+	    entityMap.put("&ljcy;","&#1113;");	//Cyrillicsmallletterlj
+	    entityMap.put("&njcy;","&#1114;");	//Cyrillicsmallletternj
+	    entityMap.put("&tshcy;","&#1115;");	//Cyrillicsmalllettertsh
+	    entityMap.put("&kjcy;","&#1116;");	//Cyrillicsmallletterkj
+	    entityMap.put("&ubrcy;","&#1118;");	//Cyrillicsmallletterubreve
+	    entityMap.put("&dzcy;","&#1119;");	//Cyrillicsmallletterdz	    
+	    entityMap.put("&aleph;","&#1488;"); 	//hebrew aleph
+		    
+	    entityMap.put("&ensp;", "&#8194;");
+	    entityMap.put("&emsp;", "&#8195;");
+	    entityMap.put("&thinsp;", "&#8201;");
+	    entityMap.put("&zwnj;", "&#8204;");
+	    entityMap.put("&zwj;", "&#8205;");
+	    entityMap.put("&lrm;", "&#8206;");
+	    entityMap.put("&rlm;", "&#8207;");
+	    entityMap.put("&ndash;", "&#8211;");
+	    entityMap.put("&mdash;", "&#8212;");
+	    entityMap.put("&lsquo;", "&#8216;");
+	    entityMap.put("&rsquo;", "&#8217;");
+	    entityMap.put("&sbquo;", "&#8218;");
+	    entityMap.put("&ldquo;", "&#8220;");
+	    entityMap.put("&rdquo;", "&#8221;");
+	    entityMap.put("&bdquo;", "&#8222;");
+	    entityMap.put("&dagger;", "&#8224;");
+	    entityMap.put("&Dagger;", "&#8225;");
+	    entityMap.put("&permil;", "&#8240;");
+	    entityMap.put("&lsaquo;", "&#8249;");
+	    entityMap.put("&rsaquo;", "&#8250;");	    
+	    entityMap.put("&bull;", "&#8226;");
+	    entityMap.put("&hellip;", "&#8230;");
+	    entityMap.put("&permil;", "&#8240;"); //per mille sign
+	    entityMap.put("&prime;", "&#8242;");
+	    entityMap.put("&Prime;", "&#8243;");
+	    entityMap.put("&tprime;", "&#8244;"); //triple prime,
+	    entityMap.put("&Isaquo;", "&#8249;"); //single left-pointing angle quotation mark
+	    entityMap.put("&rsaquo;", "&#8250;"); //single right-pointing angle quotation mark
+	    entityMap.put("&oline;", "&#8254;");
+	    entityMap.put("&Hscr;", "&#8259;");  //script capital H
+	    entityMap.put("&frasl;", "&#8260;");	    
+	    entityMap.put("&Hdbl;", "&#8261;"); 
+	    entityMap.put("&plankv;", "&#8263;"); //planck constant over two pi
+	    entityMap.put("&euro;", "&#8364;"); 
+	    entityMap.put("&image;", "&#8465;");  //blackletter capital I
+	    entityMap.put("&Lscr;", "&#8466;");   //script capital L
+	    entityMap.put("&ell;", "&#8467;");
+	    entityMap.put("&Ndbl;", "&#8469;");   //double-struck capital N	    
+	    entityMap.put("&weierp;", "&#8472;");
+	    entityMap.put("&Pdbl;", "&#8473;");   //double-struck capital P
+	    entityMap.put("&Qdbl;", "&#8474;");   //double-struck capital Q
+	    entityMap.put("&Rscr;", "&#8475;");   //script capital R
+	    entityMap.put("&real;", "&#8476;");
+	    entityMap.put("&Rdbl;", "&#8477;");
+	    entityMap.put("&trade;", "&#8482;");
+	    
+	    entityMap.put("&Zdbl;", "&#8484;");  //double-struck capital Z
+	    entityMap.put("&mho;", "&#8487;");    //inverted ohm sign
+	    entityMap.put("&Bscr;", "&#8492;"); 
+	    entityMap.put("&Escr;", "&#8496;"); 
+	    entityMap.put("&Fscr;", "&#8497;");
+	    entityMap.put("&Mscr;", "&#8499;"); 	    
+	    entityMap.put("&alefsym;", "&#8501;");
+	   	    
+	    entityMap.put("&larr;", "&#8592;");
+	    entityMap.put("&uarr;", "&#8593;");
+	    entityMap.put("&rarr;", "&#8594;");
+	    entityMap.put("&darr;", "&#8595;");
+	    entityMap.put("&harr;", "&#8596;");	    
+	    entityMap.put("&varr;", "&#8597;");
+	    entityMap.put("&nwarr;", "&#8598;");  //north west arrow
+	    entityMap.put("&nearr;", "&#8599;"); 
+	    entityMap.put("&searr;", "&#8600;"); 
+	    entityMap.put("&swarr;", "&#8601;"); 	
+	    entityMap.put("&Larr;", "&#8606;"); 
+	    entityMap.put("&Rarr;", "&#8608;");    
+	    entityMap.put("&crarr;", "&#8629;");	    
+	    entityMap.put("&lharu;", "&#8636;"); 
+	    entityMap.put("&lhard;", "&#8637;"); 
+	    entityMap.put("&rharu;", "&#8640;");
+	    entityMap.put("&rhard;", "&#8641;");  //rightwards harpoon with barb downwards
+	    entityMap.put("&rlarr2;", "&#8644;"); //right over left arrow N.B. rlarr in ES grid
+	    entityMap.put("&lrarr2;", "&#8646;"); //left over right arrow N.B. lrarr in ES grid
+	    entityMap.put("&lrhar2;", "&#8651;"); //left over right harpoon N.B. lrhar in ES grid
+	    entityMap.put("&rlhar2;", "&#8652;");  //right over left harpoon N.B. rlhar in ES grid	    
+	    entityMap.put("&lArr;", "&#8656;");
+	    entityMap.put("&uArr;", "&#8657;");
+	    entityMap.put("&rArr;", "&#8658;");
+	    entityMap.put("&dArr;", "&#8659;");
+	    entityMap.put("&hArr;", "&#8660;");
+	    entityMap.put("&forall:", "&#8704;");
+	    entityMap.put("&part;", "&#8706;");
+	    entityMap.put("&exist;", "&#8707;");
+	    entityMap.put("&nexist;", "&#8708;");  //there does not exist
+	    entityMap.put("&empty;", "&#8709;");
+	    entityMap.put("&nabla;", "&#8711;");
+	    entityMap.put("&isin;", "&#8712;");
+	    entityMap.put("&notin;", "&#8713;");
+	    entityMap.put("&ni;", "&#8715;");
+	    entityMap.put("&notni;", "&#8716;");  //does not contain as member
+	    entityMap.put("&prod;", "&#8719;");
+	    entityMap.put("&coprod;", "&#8720;"); //n-ary coproduct
+	    entityMap.put("&sum;", "&#8721;");	    
+	    entityMap.put("&minus;", "&#8722;");	    
+	    entityMap.put("&mnplus;", "&#8723;"); //minus-or-plus sign	    
+	    entityMap.put("&lowast;", "&#8727;");
+	    entityMap.put("&radic;", "&#8730;");
+	    entityMap.put("&prop;", "&#8733;");
+	    entityMap.put("&infin;", "&#8734;");
+	    entityMap.put("&ang;", "&#8736;");	    
+	    entityMap.put("&par;", "&#8741;"); 
+	    entityMap.put("&npar;", "&#8742;");
+	    entityMap.put("&and;", "&#8743;"); 
+	    entityMap.put("&or;", "&#8744;");
+	    entityMap.put("&cap;", "&#8745;");
+	    entityMap.put("&cup;", "&#8746;");
+	    entityMap.put("&int;", "&#8747;");
+	    entityMap.put("&conint;", "&#8750;");
+	    entityMap.put("&there4;", "&#8756;"); //therefore
+	    entityMap.put("&sim;", "&#8764;"); 
+	    entityMap.put("&nsim;", "&#8769;");	    	   	  
+	    entityMap.put("&sime;","&#8771;");
+	    entityMap.put("&cong;", "&#8773;");
+	    entityMap.put("&asymp;", "&#8776;");	    
+	    entityMap.put("&nap;", "&#8777;");
+	    entityMap.put("&ape;", "&#8778;");
+	    entityMap.put("&efDot;", "&#8786;"); //approximately equal to or the image of
+	    entityMap.put("&erDot;", "&#8787;");  //image of or approximately equal to
+	    entityMap.put("&wedgeq;", "&#8793;");
+	    entityMap.put("&ne;", "&#8800;");
+	    entityMap.put("&equiv;", "&#8801;");
+	    entityMap.put("&nequiv;", "&#8802;");//not identical to
+	    entityMap.put("&le;", "&#8804;");
+	    entityMap.put("&ge;", "&#8805;");
+	    entityMap.put("&lE;", "&#8806;"); 
+	    entityMap.put("&gE;", "&#8807;");
+	    entityMap.put("&Lt;", "&#8810;");
+	    entityMap.put("&Gt;", "&#8811;"); 
+	    entityMap.put("&nlt;", "&#8814;"); 
+	    entityMap.put("&ngt;", "&#8815;"); 
+	    entityMap.put("&nle;", "&#8816;"); 
+	    entityMap.put("&nge;", "&#8817;"); 
+	    entityMap.put("&lsim;","&#8818;");
+	    entityMap.put("&gsim;","&#8819;");
+	    entityMap.put("&pr;","&#8826;");
+	    entityMap.put("&sc;","&#8827;"); 
+	    entityMap.put("&sub;", "&#8834;");
+	    entityMap.put("&sup;", "&#8835;");
+	    entityMap.put("&nsub;", "&#8836;");
+	    entityMap.put("&nsup;", "&#8837;");
+	    entityMap.put("&sube;", "&#8838;");
+	    entityMap.put("&supe;", "&#8839;");	    
+	    entityMap.put("&nsube;", "&#8840;");
+	    entityMap.put("&nsupe;", "&#8841;");
+	    entityMap.put("&oplus;", "&#8853;");
+	    entityMap.put("&ominus;", "&#8854;");
+	    entityMap.put("&otimes;", "&#8855;");
+	    entityMap.put("&odot;", "&#8857;");
+	    entityMap.put("&vdash;", "&#8866;");
+	    entityMap.put("&dashv;", "&#8867;");
+	    entityMap.put("&top;", "&#8868;");
+	    entityMap.put("&perp;", "&#8869;");
+	    entityMap.put("&or;", "&#8870;");
+	    entityMap.put("&ltrie;", "&#8884;");
+	    entityMap.put("&rtrie;", "&#8885;"); 
+	    entityMap.put("&sdot;", "&#8901;");
+	    entityMap.put("&ltimes;", "&#8905;");
+	    entityMap.put("&rtimes;", "&#8906;");
+	    entityMap.put("&Ll;", "&#8920;");
+	    entityMap.put("&Gg;", "&#8921;");
+	    entityMap.put("&vellip;", "&#8942;"); //vertical ellipsis
+	    entityMap.put("&mellip;","&#8943;");	
+	    entityMap.put("&lceil;", "&#8968;");
+	    entityMap.put("&rceil;", "&#8969;");
+	    entityMap.put("&lfloor;", "&#8970;");
+	    entityMap.put("&rfloor;", "&#8971;");
+	    entityMap.put("&lang;", "&#9001;");
+	    entityMap.put("&rang;","&#9002;");	 	
+		entityMap.put("&squf;","&#9632;");		//black square
+	    entityMap.put("&squ;","&#9633;");		//white square	 
+	    entityMap.put("&utrif;","&#9650;");  	//black up-pointing triangle
+	    entityMap.put("&utri;","&#9651;");  
+
+	    entityMap.put("&rtrif;","&#9654;"); 	//black down-pointing triangle
+	    entityMap.put("&rtri;","&#9655;");		//white right-pointing triangle	    
+	    entityMap.put("&dtrif;","&#9660;"); 	//black up-pointing triangle
+	    entityMap.put("&dtri;","&#9661;");		//white down-pointing triangle	    
+	    entityMap.put("&ltrif;","&#9664;"); 	//black left-pointing triangle
+	    entityMap.put("&ltri;","&#9665;");		//white left-pointing triangle
+	    entityMap.put("&diams;","&#9670;");		//black diamond   
+	    entityMap.put("&diam;","&#9671;"); 		//white diamond
+	    entityMap.put("&loz;", "&#9674;");		//lozenge
+	    entityMap.put("&cir;","&#9675;");		//white circle	    
+	    entityMap.put("&female;", "&#9792;");	//female sign
+	    entityMap.put("&male;","&#9794;");		//male sign	      
+	    entityMap.put("&spades;", "&#9824;");
+	    entityMap.put("&clubs;", "&#9827;");
+	    entityMap.put("&hearts;", "&#9829;");
+	    entityMap.put("&diams;", "&#9830;");	
+	    
+	    entityMap.put("&LessLess;", "&#10913;"); //much less than (double) (EW=Bkl)
+	    entityMap.put("&GreaterGreater;", "&#10914;"); 	//much greater than (double) (EW=Bml)
+	    entityMap.put("&lang;", "&#12296;"); 	//left angle bracket
+	    entityMap.put("&rang;", "&#12297;");	//right angle bracket
+
+	}
     	public static String mapEntity(String xml)
     	{
     		if(xml == null)
     		{
     			return null;
     		}
-    		int len = xml.length();
+    		
     		StringBuffer sb = new StringBuffer();
-    		char c;
+    		
+    		int[] xmlChars = toCodePointArray(xml);//use this method to take care of double digit characters
+    		int len = xmlChars.length;
+    		   		
+    		//int len = xml.length();
+    		//char c;
+    		int c;
+    		
 
     		for (int i = 0; i < len; i++)
     		{
-    			c = xml.charAt(i);
+    			//c = xml.charAt(i);
+    			c = xmlChars[i];
     			if((int) c >= 32 && (int) c <= 127)
     			{
-    				sb.append(c);
+    				sb.append((char)c);
     			}
     			else if(((int) c >= 128 || (int) c < 32))
     			{
     				//System.out.println("special char "+(int)c);
     				switch ((int) c)
     				{
-    					case 30 :sb.append(c);break;
-    					case 31 :sb.append(c);break;
+    					case 30 :sb.append((char)c);break;
+    					case 31 :sb.append((char)c);break;
     					case 96 :sb.append("&#96;");break;    					
     					case 128 :sb.append("&Ccedil;");break;
     					case 129 :sb.append("&uuml;");break;
@@ -652,6 +1170,7 @@ public class DataLoadDictionary
     					
     					
     					//updated on 5/26/2016
+    					//something is wrong, remove this line by hmo at 10/26/2016
     					default:sb.append("&#"+(int)c+";");
     					//System.out.println("UNKNOW-CHARACTERS="+"(&#"+(int)c+";)");
     					break;
@@ -659,6 +1178,19 @@ public class DataLoadDictionary
     			}
     		}
     		return sb.toString();
+    	}
+    	
+    	// added by hmo to deal with multiple bype characters at 10/27/2016, 
+    	static int[]  toCodePointArray(String str) { // 
+    	    int len = str.length();          // the length of str
+    	    int[] acp = new int[str.codePointCount(0, len)];
+    	    int j = 0;                       // an index for acp
+
+    	    for (int i = 0, cp; i < len; i += Character.charCount(cp)) {
+    	        cp = str.codePointAt(i);
+    	        acp[j++] = cp;
+    	    }
+    	    return acp;
     	}
 
 
@@ -707,5 +1239,63 @@ public class DataLoadDictionary
     		}
     		return sb.toString();
     	}
+    	
+    	
+    	public static String AlphaEntitysToNumericEntitys(String xml) 
+    	{   
+    		if(xml!=null)
+    		{
+    			   		
+	    		StringBuffer stringBuffer = new StringBuffer();
+	    		//xml = xml.replaceAll(" & ", "&#38;");
+	    		Matcher matcher = ENTITY_PATTERN.matcher(xml);
+	
+	    		while (matcher.find()) {
+	    			String replacement = entityMap.get(matcher.group(1));
+	    			//System.out.println("input="+xml);
+	    			//System.out.println("PATERN="+matcher.group(1)+" replacement="+replacement);
+	    			if(replacement!=null && replacement.length()>0)
+	    			{	    			
+	    				xml = xml.replaceAll(matcher.group(1), replacement);
+	    			}	    			
+	    		}
+	    			    		
+	    		xml = handleJustAndSign(xml);
+	    		    		
+    		} 
+    		
+    		return xml;
+    	}
+    	
+    	private static String handleJustAndSign(String input)
+    	{
+    		char[] inputCharArray = input.toCharArray();
+    		StringBuffer output = new StringBuffer();
+    		for(int i=0;i<inputCharArray.length;i++)
+    		{
+    			if(i<inputCharArray.length-1)
+    			{
+    				if(inputCharArray[i]=='&' && inputCharArray[i+1]!='#')
+    				{
+    					output.append("&#38;");
+    				}
+    				else
+    				{
+    					output.append(inputCharArray[i]);
+    				}
+    			}
+    			else if(inputCharArray[inputCharArray.length-1]=='&')
+    			{
+    				output.append("&#38;");
+    			}
+    			else
+    			{
+    				output.append(inputCharArray[i]);
+    			}
+    		}
+    		return output.toString();
+    	}
+    	
+    	
 
 }
