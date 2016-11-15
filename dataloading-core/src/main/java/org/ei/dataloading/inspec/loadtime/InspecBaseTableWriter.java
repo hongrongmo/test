@@ -58,6 +58,7 @@ public class InspecBaseTableWriter
 	{
 		++filenumber;
 		out = new PrintWriter(new FileWriter(filename+"."+filenumber));
+		//out = new PrintWriter(new FileWriter(filename));
 		open = true;
 		curRecNum = 0;
 	}
@@ -115,6 +116,7 @@ public class InspecBaseTableWriter
 				if(bf.equalsIgnoreCase("NDI"))
 				{
 				    // output Numerical Index
+					//System.out.println("LOADNUMBER= "+loadnumber);
 				    outPutNumericalIndex(mid,accessnumber,loadnumber,valueS);
                 }
 				
@@ -151,7 +153,7 @@ public class InspecBaseTableWriter
 	{
 		if(numericalIndexOut==null)
 		{
-			numericalIndexOut = new PrintWriter(new FileWriter("Numerical_"+this.filename+".out")); 
+			numericalIndexOut = new PrintWriter(new FileWriter("Numerical_"+this.filename+"."+filenumber+".out")); 
 			System.out.println("create data file");
 		}
 		String[] numericalIndexRecords = valueS.split(Constants.AUDELIMITER);
