@@ -29,6 +29,8 @@ import java.util.Map;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
+import org.ei.dataloading.awss3.AmazonS3Service;
+
 import com.amazonaws.AmazonClientException;
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.services.s3.AmazonS3;
@@ -50,11 +52,11 @@ public class CafeDownloadFileFromS3AllTypes {
 	static String tableToBeTruncated = "cafe_inventory_temp";
 	static String sqlldrFileName = "cafeInventoryFileLoader.sh";
 
-	int curRecNum = 0;
-	int zipFileID = 1;
+	static int curRecNum = 0;
+	static int zipFileID = 1;
 
 	File S3dir;    // to hold downloaded bulk of s3 keys/files
-	String currDir;   // to hold current working dir to use fro zip downloaded cafe keys
+	private static String currDir;   // to hold current working dir to use fro zip downloaded cafe keys
 
 	private GetANIFileFromCafeS3Bucket objectFromS3;
 	private AmazonS3 s3Client;
@@ -71,7 +73,7 @@ public class CafeDownloadFileFromS3AllTypes {
 	//08/01/2016 combine Keys List for action "d" for direct deletion from ES & DB without dowbload from S3 bucket
 	private List<String> keys_to_be_deleted = new ArrayList<String>();
 	private List<String> keys_MID_to_be_deleted = new ArrayList<String>();
-	
+
 
 	public static final char FIELDDELIM = '\t';
 
@@ -570,7 +572,7 @@ public class CafeDownloadFileFromS3AllTypes {
 
 				}	
 			}
-			
+
 			System.out.println("Total Keys of action 'd'" + keys_to_be_deleted);
 		} 
 
@@ -735,6 +737,9 @@ public class CafeDownloadFileFromS3AllTypes {
 		}
 	}
 
+
+	
+
 	public void updateCafeInventory()
 	{
 		// update cafe_invetory table by replacing matching keys, with their most recent epoch, or add new keys info
@@ -898,7 +903,7 @@ public class CafeDownloadFileFromS3AllTypes {
 		String columnName = "";
 		int curRec = 0; 
 		int status = 0;
-		
+
 		String type;
 
 		System.out.println("Total Keys to be deleted: " + keys_to_be_deleted.size());
@@ -907,7 +912,7 @@ public class CafeDownloadFileFromS3AllTypes {
 		{
 			profileTable = "institute_profile";
 			columnName = "AFFID";
-			
+
 			type = "affiliation";
 
 		}
@@ -915,7 +920,7 @@ public class CafeDownloadFileFromS3AllTypes {
 		{
 			profileTable = "author_profile";
 			columnName = "AUTHORID";
-			
+
 			type = "author";
 
 		}
@@ -932,33 +937,33 @@ public class CafeDownloadFileFromS3AllTypes {
 			{
 				if(curRec>999)
 				{
-						//get M_ID list from DB for ES deletion & later delete from DB
-						getMidToBeDeleted(keys.toString(), profileTable, columnName);
+					//get M_ID list from DB for ES deletion & later delete from DB
+					getMidToBeDeleted(keys.toString(), profileTable, columnName);
 
-						if(keys_MID_to_be_deleted.size() >0)
+					if(keys_MID_to_be_deleted.size() >0)
+					{
+						//delete from ES
+						//AuAfESIndex esIndexObj = new AuAfESIndex(doc_type);
+						AusAffESIndex esIndexObj = new AusAffESIndex();
+						status = esIndexObj.createBulkDelete(type, keys_MID_to_be_deleted);
+
+						//delete from DB
+						if(status!=0 && (status == 200 || status == 201 || status == 404))
 						{
-							//delete from ES
-							//AuAfESIndex esIndexObj = new AuAfESIndex(doc_type);
-							AusAffESIndex esIndexObj = new AusAffESIndex();
-							status = esIndexObj.createBulkDelete(type, keys_MID_to_be_deleted);
-
-							//delete from DB
-							if(status!=0 && (status == 200 || status == 201 || status == 404))
-							{
-								DbBulkDelete(profileTable);  // temp comment during testing, NEED TO UNCOMMENT WHEN MOVE TO PROD
-							}
-							else
-							{
-								System.out.println("Error Occurred during ES Deletion, so no DB deletion");
-							}
-							
+							DbBulkDelete(profileTable);  // temp comment during testing, NEED TO UNCOMMENT WHEN MOVE TO PROD
 						}
+						else
+						{
+							System.out.println("Error Occurred during ES Deletion, so no DB deletion");
+						}
+
+					}
 
 					curRec = 0;
 					keys = new StringBuffer();
 					keys_MID_to_be_deleted.clear();
 				}
-				
+
 				if(keys.length() >0)
 					keys.append(",");
 				keys.append("'" + keys_to_be_deleted.get(i) + "'");
@@ -974,7 +979,7 @@ public class CafeDownloadFileFromS3AllTypes {
 				//AuAfESIndex esIndexObj = new AuAfESIndex(doc_type);
 				AusAffESIndex esIndexObj = new AusAffESIndex();
 				status = esIndexObj.createBulkDelete(type, keys_MID_to_be_deleted);
-				
+
 
 				//delete from DB
 				if(status!=0 && (status == 200 || status == 201 || status == 404))
@@ -985,9 +990,9 @@ public class CafeDownloadFileFromS3AllTypes {
 				{
 					System.out.println("Error Occurred during ES Deletion, so no DB deletion");
 				}
-				
+
 			}
-			
+
 
 		}
 
@@ -1040,7 +1045,7 @@ public class CafeDownloadFileFromS3AllTypes {
 					keys_MID_to_be_deleted.add(rs.getString("M_ID"));
 				}
 			}
-			
+
 			System.out.println("Only :" +  keys_MID_to_be_deleted.size() + " out of " + keys_to_be_deleted.size() + " exist in DB");
 
 
@@ -1092,7 +1097,7 @@ public class CafeDownloadFileFromS3AllTypes {
 		Statement stmt = null;
 		ResultSet rs = null;
 		String query = "";
-		
+
 		StringBuffer keys = new StringBuffer();
 
 		try
@@ -1101,11 +1106,11 @@ public class CafeDownloadFileFromS3AllTypes {
 			{
 				if(keys.length() >0)
 					keys.append(",");
-					
+
 				keys.append("'" + key +"'");
 			}
 			query = "delete from " + tableName + " where M_ID in ("+ keys.toString() + ")";
-			
+
 			System.out.println("Running query...." + query);
 
 			con.setAutoCommit(false);
@@ -1152,7 +1157,7 @@ public class CafeDownloadFileFromS3AllTypes {
 					e.printStackTrace();
 				}
 			}
-			
+
 		}
 
 

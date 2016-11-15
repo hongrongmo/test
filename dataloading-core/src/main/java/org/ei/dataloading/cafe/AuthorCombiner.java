@@ -315,15 +315,6 @@ public class AuthorCombiner {
 			{
 				query = "select * from " +  tableName + " where loadnumber=" + loadNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx')";
 				
-				//for testing
-				
-				/*query = "select * from " +  tableName + " where loadnumber=" + loadNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx') "+
-						" and AUTHORID in ('7003368787' , '56274927700', '55341202700', '55184666600', '35314476100', '7006070058' , '55770916500',"
-						+ "'33967479000', '56912187400', '15751442200')";*/
-				
-				/*query = "select * from " +  tableName + " where loadnumber=" + loadNumber + " and authorid in (select AUTHOR_ID from " + metadataTableName + " where dbase='cpx') "+
-						" and AUTHORID = '15751442200'";
-				*/
 				
 				System.out.println(query);
 				rs = stmt.executeQuery(query);
@@ -666,11 +657,50 @@ public class AuthorCombiner {
 					String history_affiliationIds = getStringFromClob(rs.getClob("HISTORY_AFFILIATIONID"));
 					if(history_affiliationIds !=null)
 					{
+						
+						/*midTime = endTime;
+		                endTime = System.currentTimeMillis();
+						
+						System.out.println("*****************");
+						System.out.println("time before preparing HistoryIds "+(endTime-midTime)/1000.0+" seconds");
+			            System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+						System.out.println("*****************");*/
+						
+						// get AffiliationHistory unique Parent IDS
 						prepareHistoryAffiliationIds(history_affiliationIds);
+						
+						/*midTime = endTime;
+		                endTime = System.currentTimeMillis();
+						
+						System.out.println("*****************");
+						System.out.println("time after preparing HistoryIds "+(endTime-midTime)/1000.0+" seconds");
+			            System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+						System.out.println("*****************");*/
+						
+						
 						if(affiliation_historyIds_List.size() >0)
 						{
+							
+							// only for debugging
+							/*midTime = endTime;
+			                endTime = System.currentTimeMillis();
+							
+							System.out.println("*****************");
+							System.out.println("time before preparing HistoryDetails "+(endTime-midTime)/1000.0+" seconds");
+				            System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+							System.out.println("*****************");*/
+							
 							//prepareHistoryAffiliation(con);
 							prepareHistoryAffiliation();
+							
+							/*midTime = endTime;
+			                endTime = System.currentTimeMillis();
+							
+							System.out.println("*****************");
+							System.out.println("time after preparing HistoryDetails "+(endTime-midTime)/1000.0+" seconds");
+				            System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
+							System.out.println("*****************");*/
+							
 						}
 					}
 					
