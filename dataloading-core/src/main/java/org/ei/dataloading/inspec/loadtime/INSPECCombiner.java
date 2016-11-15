@@ -4,6 +4,9 @@ import java.sql.Clob;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.HashSet;
 import java.util.StringTokenizer;
 import java.util.ArrayList;
 import java.util.regex.*;
@@ -19,6 +22,7 @@ import org.ei.common.*;
 import org.ei.common.inspec.*;
 import org.ei.dataloading.EVCombinedRec;
 import org.ei.dataloading.XMLWriterCommon;
+import org.ei.dataloading.bd.loadtime.BdNumericalIndexMapping;
 
 
 public class INSPECCombiner
@@ -125,7 +129,7 @@ public class INSPECCombiner
     				rs = stmt.executeQuery(sqlQuery);
     				
     				System.out.println("Got records ...from table::"+Combiner.TABLENAME);
-    				writeRecs(rs);
+    				writeRecs(rs,con);
     				System.out.println("Wrote records.");
     				this.writer.end();
     				this.writer.flush();
@@ -182,7 +186,7 @@ public class INSPECCombiner
             {
                 rs = stmt.executeQuery("select m_id, fdate, opan, copa, ppdate, sspdate, aaff, afc, ab, anum, pubti, su, pyr, nrtype, pdoi, cdate, cedate, aoi, aus, aus2, rnum, pnum, cpat, ciorg, iorg, pas, chi, pvoliss, pvol, piss, pipn, cloc, cls, pcdn, scdn, cvs, eaff, eds, pfjt, sfjt, fls, pajt, sajt, la, matid, ndi, pspdate, pepdate, popdate, sopdate, ppub, rtype, sbn, sorg, psn, ssn, tc, pubti, ti, trs, trmc, aaffmulti1, aaffmulti2, eaffmulti1, eaffmulti2, nssn, npsn, LOAD_NUMBER, seq_num, ipc from "+Combiner.TABLENAME+" where pyr ='"+ year +"'");
             }
-            writeRecs(rs);
+            writeRecs(rs,con);
             System.out.println("Wrote records.");
             this.writer.flush();
             this.writer.end();
@@ -301,7 +305,7 @@ public class INSPECCombiner
     }
 
 
-    void writeRecs(ResultSet rs)
+    void writeRecs(ResultSet rs,Connection con)
             throws Exception
     {
         int i = 0;
@@ -312,6 +316,8 @@ public class INSPECCombiner
             ++i;
 
             String abString = getStringFromClob(rs.getClob("ab"));
+            String mid = rs.getString("M_ID");
+            String accessnumber = rs.getString("anum");
             String strYear ="";
             if(rs.getString("pyr") != null && validYear(getPubYear(rs.getString("pyr"))))
             {
@@ -613,6 +619,7 @@ public class INSPECCombiner
                 if(rs.getString("ndi") != null)
                 {
                     rec.put(EVCombinedRec.NUMERICAL_INDEXING,prepareIndexterms(rs.getString("ndi")));
+                    processNumericalIndex(rec,mid,accessnumber,rs.getString("ndi"),con);
                 }
 
                 if(rs.getString("chi") != null)
@@ -729,6 +736,165 @@ public class INSPECCombiner
             }
 
         }
+    }
+    
+    private void processNumericalIndex(EVCombinedRec rec, String mid, String accessnumber, String niString,Connection con) throws Exception
+    {
+    	Statement stmt = null;
+    	ResultSet rs = null;
+    	InsNumericalIndexMapping bdni = new InsNumericalIndexMapping();
+    	NumberFormat formatter = new DecimalFormat();
+    	HashSet<String> unitSet = new HashSet<String>();
+    	
+    	try
+    	{
+    		if(accessnumber!=null && accessnumber.length()>0)
+    		{
+	    		stmt = con.createStatement();
+	    		//System.out.println("Running the Numerical query...");
+	    		String sqlQuery = "select * from INS_MASTER_NUMERICAL where ACCESSNUMBER='"+accessnumber+"' order by unit";
+	    		//System.out.println(sqlQuery);
+	    		rs = stmt.executeQuery(sqlQuery);
+	    		//System.out.println("Got records ...from table INS_MASTER_NUMERICAL");
+	    		while (rs.next())
+	    	    {	
+	    	        String unit = null;
+    				String maximum = null;
+    				String minimum = null;
+    				StringBuffer niBuffer = new StringBuffer();
+    				StringBuffer rangesBuffer = new StringBuffer();
+    				if(rs.getString("UNIT") != null)
+					{
+						unit = rs.getString("UNIT").toLowerCase();
+						unit = unit.replaceAll(" ", "_");
+						//System.out.println("UNITS+"+unit);
+						unitSet.add(unit);
+					}
+					else
+					{
+						System.out.println("no unit found for accessnumber "+accessnumber);
+						return;
+					}
+					//System.out.println("PUI="+pui+" UNIT="+unit);
+	    	        if(rs.getString("MAXIMUM") != null && rs.getString("MINIMUM") != null)
+	    	        {
+		    	          maximum = rs.getString("MAXIMUM");
+		    	          minimum = rs.getString("MINIMUM");
+		    	          String niKey = bdni.get(unit+"_ranges");
+		    	          niBuffer.append(maximum+Constants.AUDELIMITER);	
+		    	          niBuffer.append(minimum+Constants.AUDELIMITER);
+		    	          String ranges = minimum+" "+maximum;
+		    	          if(niKey!=null)
+		    	          {
+		    	       			String oldRanges = rec.getString(niKey);
+								if(oldRanges!=null)
+								{								
+									rec.put(niKey,oldRanges+ranges+" | ");								
+								}
+								else
+								{
+									rec.put(niKey," | "+ranges+" | ");									
+								}
+		    	          }
+		    	         
+		    	          
+		    	          niKey = bdni.get(unit+"_text");
+		    	          if(niKey!=null)
+		    	          {	    	          	
+								String[] oldText = rec.getStrings(niKey);
+								if(oldText==null)
+								{
+									oldText = new String[0];
+								}
+								
+								String[] temp = prepareMulti(niBuffer.toString());
+								rec.put(niKey,uniqueConcat(oldText,temp));
+								/*
+								{
+									String[] temp = prepareMulti(niBuffer.toString());
+									rec.put(niKey,uniqueConcat(oldText,temp));
+									//System.out.println("KeyText1="+niKey+" TEXT="+Arrays.toString(uniqueConcat(oldText,temp)));
+								}
+								else
+								{
+									rec.put(niKey,prepareMulti(niBuffer.toString()));
+									//System.out.println("KeyText2="+niKey+" TEXT="+niBuffer.toString().replace(Constants.AUDELIMITER, " | "));
+								}
+								*/
+		    	          	
+		    	          }
+		    	          else
+		    	          {
+		    	        	  //System.out.println("no mapping found for "+unit+"_text");
+		    	          }
+	    	          
+	    	          }
+	    	       
+	    	    }
+	    		rec.put(EVCombinedRec.NUMERICALUNITS, unitSet.toArray(new String[unitSet.size()]));
+	    		  
+    		}
+    		
+	    	
+    
+    	}
+    	finally
+    	{
+    	
+    		if (rs != null)
+    		{
+    			try
+    			{
+    				rs.close();
+    			}
+    			catch (Exception e)
+    			{
+    				e.printStackTrace();
+    			}
+    		}
+    		
+    		if (stmt != null)
+    		{
+    			try
+    			{
+    				stmt.close();
+    			}
+    			catch (Exception e)
+    			{
+    				e.printStackTrace();
+    			}
+    		}
+    	}
+    	
+    }
+    
+    public String[] uniqueConcat(String[] a, String[] b) 
+    {
+    	   HashSet<String> tSet = new HashSet<String>();
+    	   String temp = null;
+    	   for(int i=0;i<a.length;i++)
+    	   {
+    		   temp = a[i];
+    		   if(temp != null && temp.length()>0)
+    		   {
+    			   temp = temp.replace("-", "minus").replace("+", "plus" );
+    			   tSet.add(temp);
+    		   }
+    		   //System.out.println("NUM_TEXT1= "+a[i]+" ==> "+temp);
+    	   }
+    	   
+    	   for(int i=0;i<b.length;i++)
+    	   {
+    		   temp = b[i];
+    		   if(temp != null && temp.length()>0)
+    		   {
+    			   temp = temp.replace("-", "minus").replace("+", "plus");
+    			   tSet.add(temp);
+    		   }
+    		   //System.out.println("NUM_TEXT2= "+b[i]+" ==> "+temp);
+    	   }
+    	   
+    	   return tSet.toArray(new String[tSet.size()]);
     }
 
     public String[] prepareMulti(String multiString)
@@ -1064,7 +1230,7 @@ public class INSPECCombiner
             }
             //System.out.println("Inspect sqlQuery= "+sqlQuery);
             rs = stmt.executeQuery(sqlQuery);
-            writeRecs(rs);
+            writeRecs(rs,con);
             System.out.println("Wrote records.");
             this.writer.flush();
             this.writer.end();
