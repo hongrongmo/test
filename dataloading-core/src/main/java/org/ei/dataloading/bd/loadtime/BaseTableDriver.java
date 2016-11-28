@@ -27,7 +27,8 @@ public class BaseTableDriver
     private int loadNumber;
     private String databaseName;
     private String action;
-    private static String startRootElement ="<?xml version=\"1.0\" standalone=\"no\"?><!DOCTYPE bibdataset SYSTEM \"ani512.dtd\"><bibdataset xmlns:ce=\"http://www.elsevier.com/xml/common/dtd\" xmlns:xoe=\"http://www.elsevier.com/xml/xoe/dtd\" xmlns:ait=\"http://www.elsevier.com/xml/ait/dtd\">";
+    private static String startRootElement ="<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><!DOCTYPE bibdataset SYSTEM \"ani512.dtd\"><bibdataset xmlns:ce=\"http://www.elsevier.com/xml/common/dtd\" xmlns:xoe=\"http://www.elsevier.com/xml/xoe/dtd\" xmlns:ait=\"http://www.elsevier.com/xml/ait/dtd\">";
+    //private static String startRootElement ="<?xml version=\"1.0\" encoding=\"UTF-8\"?><bibdataset xsi:schemaLocation=\"http://www.elsevier.com/xml/ani/ani http://www.elsevier.com/xml/ani/ani512.xsd\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:ait=\"http://www.elsevier.com/xml/ani/ait\" xmlns:ce=\"http://www.elsevier.com/xml/ani/common\" xmlns=\"http://www.elsevier.com/xml/ani/ani\">";
     private static String endRootElement   ="</bibdataset>";
     private static Connection con;
     private static String infile;
@@ -248,7 +249,9 @@ public class BaseTableDriver
             else if(infile.toLowerCase().endsWith(".xml"))
             {
                 System.out.println("IS XML FILE");
-                in = new BufferedReader(new FileReader(infile));
+                //in = new BufferedReader(new FileReader(infile));//new InputStreamReader(is, "UTF-8"));
+                File file = new File(infile);
+                in = new BufferedReader(new InputStreamReader(new FileInputStream(file), "UTF-8"));
                 writeRecs(in,con);
             }        
             else if (this.cafe)   //HH 02/2016 for Cafe

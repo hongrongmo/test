@@ -141,7 +141,7 @@ public class GeorefReader {
                 record.put("A02", concatRepeatable(article, "A02"));
             }
 
-            // TITLE HTML???
+            //TITLE_OF_SERIAL
             if (article.getChild("A03") != null) {
                 record.put("A03", new StringBuffer(article.getChild("A03")
                         .getTextTrim()));
@@ -184,7 +184,7 @@ public class GeorefReader {
 
             }
 
-            // PERSON ASSOCIATED WITH
+            // PERSON_ANALYTIC,ALTERNATE_AUTHOR,AUTHOR_EMAIL
             if (article.getChild("A11") != null) {
                 record.put("A11", concatSubElements(article, "A11", 1));
                 record.put("AUTH_EMAIL", getAuthorEmail(article));
@@ -235,7 +235,7 @@ public class GeorefReader {
                 }
             }
 
-            // AFFILIATION
+            // AUTHOR_AFFILIATION,AUTHOR_AFFILIATION_ADDRESS,AUTHOR_AFFILIATION_COUNTRY
             StringBuffer aff = new StringBuffer();
             if (article.getChild("A14") != null) {
                 record.put("AUTH_AFF", concatSubElements(article, "A14", 1));
@@ -305,7 +305,7 @@ public class GeorefReader {
 
             }
 
-            // PUBLISHER NAMES
+            // PUBLISHER,PUBLISHER_ADDRESS
             if (article.getChild("A25") != null) {
                 Element publisher = article.getChild("A25");
 
@@ -497,7 +497,7 @@ public class GeorefReader {
                 //loadNumber = new String(article.getChild("Z44").getTextTrim());
             }
 
-            // INDEX CODE
+            // INDEX TERMS,UNCONTROLLED_TERMS
             if (article.getChild("Z50") != null) {
                 record.put("INDEX_TERMS", getIndexTerms(article));
                 record.put("UNCONTROLLED_TERMS", getUncontrolledTerms(article));

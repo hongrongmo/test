@@ -17,15 +17,11 @@ public class BdNumericalIndexMapping
 		nimapping.put("electric_current_text",EVCombinedRec.ELECTRIC_CURRENT_TEXT);
 		nimapping.put("electric_current_ranges",EVCombinedRec.ELECTRIC_CURRENT_RANGES);
 		
-		//mass
-		//nimapping.put("mass_minimum",EVCombinedRec.MASS_MINIMUM); 
-		//nimapping.put("mass_maximum",EVCombinedRec.MASS_MAXIMUM);
+		//mass		
 		nimapping.put("mass_text",EVCombinedRec.MASS_TEXT);
 		nimapping.put("mass_ranges",EVCombinedRec.MASS_RANGES);
 		
-		//temperature
-		//nimapping.put("temperature_minimum",EVCombinedRec.TEMPERATURE_MINIMUM); 
-		//nimapping.put("temperature_maximum",EVCombinedRec.TEMPERATURE_MAXIMUM);
+		//temperature		
 		nimapping.put("temperature_text",EVCombinedRec.TEMPERATURE_TEXT);
 		nimapping.put("temperature_ranges",EVCombinedRec.TEMPERATURE_RANGES);
 		
@@ -80,13 +76,7 @@ public class BdNumericalIndexMapping
 		//capacitance
 		nimapping.put("capacitance_text",EVCombinedRec.CAPACITANCE_TEXT);	
 		nimapping.put("capacitance_ranges",EVCombinedRec.CAPACITANCE_RANGES);	
-				
-		//permittivity
-		//nimapping.put("permittivity_minimum",EVCombinedRec.PERMITTIVITY_MINIMUM); 
-		//nimapping.put("permittivity_maximum",EVCombinedRec.PERMITTIVITY_MAXIMUM);
-		//nimapping.put("permittivity_text",EVCombinedRec.PERMITTIVITY_TEXT); 
-		//nimapping.put("permittivity_ranges",EVCombinedRec.PERMITTIVITY_RANGES); 
-		
+					
 		//frequency		
 		nimapping.put("frequency_text",EVCombinedRec.FREQUENCY_TEXT);
 		nimapping.put("frequency_ranges",EVCombinedRec.FREQUENCY_RANGES);
@@ -106,10 +96,6 @@ public class BdNumericalIndexMapping
 		//magnetic flux density
 		nimapping.put("magnetic_flux_density_text",EVCombinedRec.MAGNETIC_FLUX_DENSITY_TEXT);
 		nimapping.put("magnetic_flux_density_ranges",EVCombinedRec.MAGNETIC_FLUX_DENSITY_RANGES);
-		
-		//magnetic flux
-		//nimapping.put("magnetic_flux_text",EVCombinedRec.MAGNETIC_FLUX_TEXT);
-		//nimapping.put("magnetic_flux_ranges",EVCombinedRec.MAGNETIC_FLUX_RANGES);
 		
 		//inductance
 		nimapping.put("inductance_text",EVCombinedRec.INDUCTANCE_TEXT);
@@ -131,9 +117,7 @@ public class BdNumericalIndexMapping
 		nimapping.put("luminous_flux_text",EVCombinedRec.LUMINOUS_FLUX_TEXT);
 		nimapping.put("luminous_flux_ranges",EVCombinedRec.LUMINOUS_FLUX_RANGES);
 		
-		//illuminance
-		//nimapping.put("illuminance_minimum",EVCombinedRec.ILLUMINANCE_MINIMUM); 
-		//nimapping.put("illuminance_maximum",EVCombinedRec.ILLUMINANCE_MAXIMUM);
+		//illuminance		
 		nimapping.put("illuminance_text",EVCombinedRec.ILLUMINANCE_TEXT);
 		nimapping.put("illuminance_ranges",EVCombinedRec.ILLUMINANCE_RANGES);
 		
@@ -162,8 +146,6 @@ public class BdNumericalIndexMapping
 		nimapping.put("torque_ranges",EVCombinedRec.TORQUE_RANGES);
 		
 		//area
-		//nimapping.put("area_minimum",EVCombinedRec.AREA_MINIMUM); 
-		//nimapping.put("area_maximum",EVCombinedRec.AREA_MAXIMUM);
 		nimapping.put("area_text",EVCombinedRec.AREA_TEXT);
 		nimapping.put("area_ranges",EVCombinedRec.AREA_RANGES);
 		
@@ -183,28 +165,17 @@ public class BdNumericalIndexMapping
 		nimapping.put("angular_velocity_text",EVCombinedRec.ANGULAR_VELOCITY_TEXT);  
 		nimapping.put("angular_velocity_ranges",EVCombinedRec.ANGULAR_VELOCITY_RANGES); 
 		
-		//rotational speed 				
-		
+		//rotational speed 						
 		nimapping.put("rotational_speed_text",EVCombinedRec.ROTATIONAL_SPEED_TEXT);  
 		nimapping.put("rotational_speed_ranges",EVCombinedRec.ROTATIONAL_SPEED_RANGES);
 		
 		//age		
-		//nimapping.put("age_minimum",EVCombinedRec.AGE_MINIMUM); 
-		//nimapping.put("age_maximum",EVCombinedRec.AGE_MAXIMUM);
 		nimapping.put("age_text",EVCombinedRec.AGE_TEXT); 
 		nimapping.put("age_ranges",EVCombinedRec.AGE_RANGES); 
 		
 		//molar mass		
-		//nimapping.put("molar_mass_minimum",EVCombinedRec.MOLAR_MASS_MINIMUM); 
-		//nimapping.put("molar_mass_maximum",EVCombinedRec.MOLAR_MASS_MAXIMUM);
 		nimapping.put("molar_mass_text",EVCombinedRec.MOLAR_MASS_TEXT); 
 		nimapping.put("molar_mass_ranges",EVCombinedRec.MOLAR_MASS_RANGES); 
-		
-		//molality of substance		
-		//nimapping.put("molality_of_substance_minimum",EVCombinedRec.MOLALITY_OF_SUBSTANCE_MINIMUM); 
-		//nimapping.put("molality_of_substance_maximum",EVCombinedRec.MOLALITY_OF_SUBSTANCE_MAXIMUM);
-		//nimapping.put("molality_of_substance_text",EVCombinedRec.MOLALITY_OF_SUBSTANCE_TEXT); 
-		//nimapping.put("molality_of_substance_ranges",EVCombinedRec.MOLALITY_OF_SUBSTANCE_RANGES); 
 		
 		//molality	
 		
@@ -212,74 +183,42 @@ public class BdNumericalIndexMapping
 		nimapping.put("molality_ranges",EVCombinedRec.MOLALITY_OF_SUBSTANCE_RANGES); 
 
 		//radioactivity 
-		//nimapping.put("radioactivity_minimum",EVCombinedRec.RADIOACTIVITY_MINIMUM); 
-		//nimapping.put("radioactivity_maximum",EVCombinedRec.RADIOACTIVITY_MAXIMUM);
 		nimapping.put("radioactivity_text",EVCombinedRec.RADIOACTIVITY_TEXT); 
 		nimapping.put("radioactivity_ranges",EVCombinedRec.RADIOACTIVITY_RANGES); 
 		
 		//absorbed dose
-		//nimapping.put("absorbed_dose_minimum",EVCombinedRec.ABSORBED_DOSE_MINIMUM); 
-		//nimapping.put("absorbed_dose_maximum",EVCombinedRec.ABSORBED_DOSE_MAXIMUM);
 		nimapping.put("absorbed_dose_text",EVCombinedRec.ABSORBED_DOSE_TEXT); 
 		nimapping.put("absorbed_dose_ranges",EVCombinedRec.ABSORBED_DOSE_RANGES);
-		
-		//dose equivalent		
-		//nimapping.put("dose_equivalent_minimum",EVCombinedRec.DOSE_EQUIVALENT_MINIMUM); 
-		//nimapping.put("dose_equivalent_maximum",EVCombinedRec.DOSE_EQUIVALENT_MAXIMUM);
-		//nimapping.put("dose_equivalent_text",EVCombinedRec.DOSE_EQUIVALENT_TEXT);
-		//nimapping.put("dose_equivalent_ranges",EVCombinedRec.DOSE_EQUIVALENT_RANGES);
-		
+
 		//radiation exposure		
-		//nimapping.put("radiation_exposure_minimum",EVCombinedRec.RADIATION_EXPOSURE_MINIMUM); 
-		//nimapping.put("radiation_exposure_maximum",EVCombinedRec.RADIATION_EXPOSURE_MAXIMUM);
 		nimapping.put("radiation_exposure_text",EVCombinedRec.RADIATION_EXPOSURE_TEXT);
-		nimapping.put("radiation_exposure_ranges",EVCombinedRec.RADIATION_EXPOSURE_RANGES);
-		
-		//catalytic activity
-		//nimapping.put("catalytic_activity_minimum",EVCombinedRec.CATALYTIC_ACTIVITY_MINIMUM); 
-		//nimapping.put("catalytic_activity_maximum",EVCombinedRec.CATALYTIC_ACTIVITY_MAXIMUM);
-		//nimapping.put("catalytic_activity_text",EVCombinedRec.CATALYTIC_ACTIVITY_TEXT);
-		//nimapping.put("catalytic_activity_ranges",EVCombinedRec.CATALYTIC_ACTIVITY_RANGES);
+		nimapping.put("radiation_exposure_ranges",EVCombinedRec.RADIATION_EXPOSURE_RANGES);		
 		
 		//Electron_Volt
-		//nimapping.put("electron_volt_minimum",EVCombinedRec.ELECTRON_VOLT_MINIMUM); 
-		//nimapping.put("electron_volt_maximum",EVCombinedRec.ELECTRON_VOLT_MAXIMUM);
 		nimapping.put("electron_volt_text",EVCombinedRec.ELECTRON_VOLT_TEXT);
 		nimapping.put("electron_volt_ranges",EVCombinedRec.ELECTRON_VOLT_RANGES);
 		 
 		//Luminance
-		//nimapping.put("luminance_minimum",EVCombinedRec.LUMINANCE_MINIMUM); 
-		//nimapping.put("luminance_maximum",EVCombinedRec.LUMINANCE_MAXIMUM);
 		nimapping.put("luminance_text",EVCombinedRec.LUMINANCE_TEXT);
 		nimapping.put("luminance_ranges",EVCombinedRec.LUMINANCE_RANGES);
 				
 		//Luminance_Efficacy
-		//nimapping.put("luminance_efficacy_minimum",EVCombinedRec.LUMINANCE_EFFICACY_MINIMUM); 
-		//nimapping.put("luminance_efficacy_maximum",EVCombinedRec.LUMINANCE_EFFICACY_MAXIMUM);
 		nimapping.put("luminance_efficacy_text",EVCombinedRec.LUMINANCE_EFFICACY_TEXT);
 		nimapping.put("luminance_efficacy_ranges",EVCombinedRec.LUMINANCE_EFFICACY_RANGES);
 				 
 		//luminance_efficiency
-		//nimapping.put("luminance_efficiency_minimum",EVCombinedRec.LUMINANCE_EFFICIENCY_MINIMUM); 
-		//nimapping.put("luminance_efficiency_maximum",EVCombinedRec.LUMINANCE_EFFICIENCY_MAXIMUM);
 		nimapping.put("luminance_efficiency_text",EVCombinedRec.LUMINANCE_EFFICIENCY_TEXT);
 		nimapping.put("luminance_efficiency_ranges",EVCombinedRec.LUMINANCE_EFFICIENCY_RANGES);
 		
 		//Magnetic field strength
-		//nimapping.put("magnetic_field_strength_minimum",EVCombinedRec.MAGNETIC_FIELD_STRENGTH_MINIMUM); 
-		//nimapping.put("magnetic_field_strength_maximum",EVCombinedRec.MAGNETIC_FIELD_STRENGTH_MAXIMUM);
 		nimapping.put("magnetic_field_strength_text",EVCombinedRec.MAGNETIC_FIELD_STRENGTH_TEXT);
 		nimapping.put("magnetic_field_strength_ranges",EVCombinedRec.MAGNETIC_FIELD_STRENGTH_RANGES);
 						
 		//Spectral_Efficiency
-		//nimapping.put("spectral_efficiency_minimum",EVCombinedRec.SPECTRAL_EFFICIENCY_MINIMUM); 
-		//nimapping.put("spectral_efficiency_maximum",EVCombinedRec.SPECTRAL_EFFICIENCY_MAXIMUM);
 		nimapping.put("spectral_efficiency_text",EVCombinedRec.SPECTRAL_EFFICIENCY_TEXT);
 		nimapping.put("spectral_efficiency_ranges",EVCombinedRec.SPECTRAL_EFFICIENCY_RANGES);
 						 
 		//Surface_Power_Density
-		//nimapping.put("surface_power_density_minimum",EVCombinedRec.SURFACE_POWER_DENSITY_MINIMUM); 
-		//nimapping.put("surface_power_density_maximum",EVCombinedRec.SURFACE_POWER_DENSITY_MAXIMUM);
 		nimapping.put("surface_power_density_text",EVCombinedRec.SURFACE_POWER_DENSITY_TEXT);
 		nimapping.put("surface_power_density_ranges",EVCombinedRec.SURFACE_POWER_DENSITY_RANGES);
 		

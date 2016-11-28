@@ -1,6 +1,7 @@
 package org.ei.dataloading.bd.loadtime;
 
 import java.io.*;
+
 import java.util.*;
 
 import org.jdom2.*;                  //// replace svn jdom with recent jdom2
@@ -263,6 +264,7 @@ public class BdParser
 					}
 					if(bibrecord != null)
 					{
+						//System.out.println("bibrecord");
 						Element item_info 	= bibrecord.getChild("item-info",noNamespace);
 						Element copyright   = item_info.getChild("copyright",noNamespace);
 
@@ -302,13 +304,16 @@ public class BdParser
 									(itemid_idtype.equals("CPX")||
 									itemid_idtype.equals("GEO")||
 									itemid_idtype.equals("API")||
+									itemid_idtype.equals("SNBOOK")||
 									itemid_idtype.equals("APILIT")||
 									itemid_idtype.equals("CHEM")))
 							{
 								String  itemid = itemidElement.getTextTrim();
 
 								//System.out.println("ACCESSNUMBER= "+itemid);
-								if((!database.equals("cpx") && !itemid_idtype.equals("CPX")) || ((database.equals("cpx") || database.equals("pch")) && itemid_idtype.equals("CPX")))
+								
+								//pre frank request, add book record as cpx database by hmo at 11/10/2016
+								if((!database.equals("cpx") && !itemid_idtype.equals("CPX")) || ((database.equals("cpx") || database.equals("pch")) && (itemid_idtype.equals("CPX") || itemid_idtype.equals("SNBOOK"))))
 								{
 									record.put("ACCESSNUMBER",itemid);
 									setAccessNumber(itemid);
@@ -436,12 +441,14 @@ public class BdParser
 							}
 
 							Element abstracts = head.getChild("abstracts",noNamespace);
+							
 							if(abstracts!= null && abstracts.getChild("abstract",noNamespace)!=null)
 							{
 								String abstractCopyRight=null;
 								Element abstractData = abstracts.getChild("abstract",noNamespace);
 								if(	abstractData.getChild("publishercopyright",noNamespace)!=null)
 								{
+									
 								 	abstractCopyRight= dictionary.mapEntity(abstractData.getChildTextTrim("publishercopyright",noNamespace));
 									//System.out.println("COPYRIGHT="+ abstractCopyRight);
 								}
@@ -462,21 +469,23 @@ public class BdParser
 
 								if(abstractData.getChildTextTrim("para",ceNamespace) != null)
 								{
-									String abstractString = dictionary.mapEntity(getMixData(abstractData.getChild("para",ceNamespace).getContent()));
+									
+									String abstractString = dictionary.mapEntity(getMixData(abstractData.getChild("para",ceNamespace).getContent()));									
 									//System.out.println(this.databaseName+"  ::about to replace ::"+abstractString);
 									if(this.databaseName.equalsIgnoreCase("elt"))
 									{
 										abstractString = abstractString.replaceAll("<inf>", "<sub>");
 										abstractString = abstractString.replaceAll("</inf>", "</sub>");
 
-										//System.out.println("\nreplacing inf ::"+abstractString);
+										
 									}
 
 									if(abstractCopyRight!=null)
 									{
 										abstractString = abstractString+" "+abstractCopyRight;
 									}
-
+									
+									//abstractString = abstractString.replaceAll("&#55349;&#56476;","&#119964;");//need to fix this bug later hmo@10/26/2016
 									record.put("ABSTRACTDATA", abstractString);
 								}
 
@@ -2922,7 +2931,8 @@ public class BdParser
 
 					Element confnumber = confevent.getChild("confnumber",noNamespace);
 					Element confname = confevent.getChild("confname",noNamespace);
-
+					Element confseriestitle = confevent.getChild("confseriestitle",noNamespace);
+					Element conftheme = confevent.getChild("conftheme",noNamespace);
 					//System.out.println("CONFNAME " + confname);
 
 					//if(confnumber!= null && confname != null)
@@ -3334,24 +3344,22 @@ public class BdParser
 				{
 					affBuffer.append(dictionary.mapEntity(affiliation.getAttributeValue("country")));
 				}
-				
-				///* USE for CAFE data
-				affBuffer.append(Constants.IDDELIMITER);
-				if(affiliation.getAttributeValue("afid") != null)
-				{
-					affBuffer.append(affiliation.getAttributeValue("afid"));
-				}
-				affBuffer.append(Constants.IDDELIMITER);
-				if(affiliation.getAttributeValue("dptid") != null)
-				{
-					affBuffer.append(affiliation.getAttributeValue("dptid"));
-				}
-				
-				//*/
-				
-				
-
 			}
+				
+			///* USE for CAFE data
+			affBuffer.append(Constants.IDDELIMITER);
+			if(affiliation.getAttributeValue("afid") != null)
+			{
+				affBuffer.append(affiliation.getAttributeValue("afid"));
+			}
+			affBuffer.append(Constants.IDDELIMITER);
+			if(affiliation.getAttributeValue("dptid") != null)
+			{
+				affBuffer.append(affiliation.getAttributeValue("dptid"));
+			}
+				
+			//*/
+			
 		}
 //		System.out.println("AFF:: "+affBuffer.toString());
 		return affBuffer.toString();

@@ -1,7 +1,6 @@
 package org.ei.util;
 
 import java.sql.Connection;
-
 import java.sql.DriverManager;
 import java.io.*;
 import java.sql.Clob;
@@ -13,6 +12,17 @@ import java.util.*;
 import java.net.*;
 import java.util.regex.*;
 
+import javax.xml.XMLConstants;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.DocumentBuilder.*;
+import javax.xml.parsers.*;
+import javax.xml.validation.SchemaFactory;
+import javax.xml.transform.stream.StreamSource;
+import javax.xml.transform.*;
+import javax.xml.validation.*;
+import javax.xml.transform.dom.*;
+
+
 import org.ei.dataloading.inspec.loadtime.*;
 import org.ei.domain.*;
 import org.ei.query.base.*;
@@ -21,6 +31,8 @@ import org.elasticsearch.client.Client;
 import org.elasticsearch.node.Node;
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.transport.InetSocketTransportAddress;
+import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
 import org.apache.oro.text.perl.Perl5Util;
 import org.apache.oro.text.regex.MatchResult;
 
@@ -31,6 +43,7 @@ import io.searchbox.core.Index;
 import io.searchbox.core.Search;
 import io.searchbox.core.SearchResult;
 import io.searchbox.core.SearchResult.Hit; 
+
 
 
 public class NewDataTesting
@@ -159,11 +172,46 @@ public class NewDataTesting
 		{
 			test.convertInspecNI(updateNumber);
 		}
+		else  if(action.equals("xml"))
+		{
+			test.validatedXml(updateNumber);
+		}
 		else
 		{
 			test.getData(database);
 		}
 
+	}
+	
+	private void validatedXml(String filename) throws Exception
+	{
+		// parse an XML document into a DOM tree
+		 javax.xml.parsers.DocumentBuilder parser =  javax.xml.parsers.DocumentBuilderFactory.newInstance().newDocumentBuilder();
+		 Document document = parser.parse(new File(filename));
+
+		// create a SchemaFactory capable of understanding WXS schemas
+		//SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+		 SchemaFactory factory = SchemaFactory.newInstance(XMLConstants.XML_DTD_NS_URI);
+
+		// load a WXS schema, represented by a Schema instance
+		//Source schemaFile = new StreamSource(new File("ani512.xsd"));
+		 Source schemaFile = new StreamSource(new File("ani512.dtd"));
+		Schema schema = factory.newSchema(schemaFile);
+
+		// create a Validator instance, which can be used to validate an instance document
+		Validator validator = schema.newValidator();
+
+		// validate the DOM tree
+		try {
+		   //validator.validate(new DOMSource(document));
+			validator.validate(new StreamSource(new File(filename)));
+		    System.out.println(filename+" is valid!");
+		} catch (SAXException e) {
+			System.out.println(filename+" is invalid!");
+			e.printStackTrace();
+		    // instance document is invalid!
+		}
+		
 	}
 	
 	private void testElasticSearch() throws Exception
