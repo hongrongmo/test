@@ -384,6 +384,7 @@ public void writeRecs(ResultSet rs)
 				}
 
 				// AFF
+				String dtStrings = runtimeDocview.new DocumentTypeDecorator(runtimeDocview.createColumnValueField("DOCUMENT_TYPE")).getValue();
 				String affilitation = rs.getString("AUTHOR_AFFILIATION");
 				if(affilitation != null)
 				{
@@ -407,10 +408,26 @@ public void writeRecs(ResultSet rs)
 					  affilations.add(values[0]);
 					}
 				  }
+				  
+				  //add university into author affiliation field if document_type contains( T )
+				  //pre frank's request, changed on 11/15/2016 by hmo
+				  if(dtStrings!=null && dtStrings.indexOf('T')>-1)
+				  {
+					  String university = rs.getString("UNIVERSITY");
+					  if(university!=null && university.length()>0)
+					  {
+						  affilations.add(university);
+					  }
+				  }
+				  
 				  if(!affilations.isEmpty())
 				  {
 					rec.putIfNotNull(EVCombinedRec.AUTHOR_AFFILIATION, (String[]) affilations.toArray(new String[]{}));
 				  }
+				}
+				else if(dtStrings!=null && dtStrings.indexOf('T')>-1 && rs.getString("UNIVERSITY")!=null)
+				{					  
+					rec.putIfNotNull(EVCombinedRec.AUTHOR_AFFILIATION, rs.getString("UNIVERSITY"));					  
 				}
 
 
@@ -475,7 +492,7 @@ public void writeRecs(ResultSet rs)
 				// DT
 
 
-				String dtStrings = runtimeDocview.new DocumentTypeDecorator(runtimeDocview.createColumnValueField("DOCUMENT_TYPE")).getValue();
+				
 
 				if(dtStrings != null && dtStrings.equals("In Process"))
 				{
@@ -710,6 +727,7 @@ public void writeRecs(ResultSet rs)
 				if(rs.getString("UNIVERSITY")!=null)
 				{
 					rec.putIfNotNull(EVCombinedRec.UNIVERSITY, rs.getString("UNIVERSITY"));
+					
 				}
 				
 				if(rs.getString("TYPE_OF_DEGREE")!=null)

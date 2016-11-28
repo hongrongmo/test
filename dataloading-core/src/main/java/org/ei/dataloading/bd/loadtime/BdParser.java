@@ -392,7 +392,7 @@ public class BdParser
 
 									record.put("AUTHORKEYWORD",authorKeywordBuffer.toString());
 								}
-							}
+							}//citinfo
 
 							//citation title
 							Element cittitle = head.getChild("citation-title",noNamespace);
