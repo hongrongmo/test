@@ -77,6 +77,7 @@ public class ArchiveVTWPatentRefeed {
 	private static String sqlldrFileName = null;
 	static int loadNumber = 0;
 	static int recsPerZipFile = 20000;
+	static int recsPerSingleConnection = 1000;
 
 	DateFormat dateFormat,msgSentDateFormat;
 	private String filename;
@@ -124,7 +125,7 @@ public class ArchiveVTWPatentRefeed {
 		{
 			queueName = args[1];
 		}
-		if(args.length >4)
+		if(args.length >5)
 		{
 			if(args[2] !=null)
 			{
@@ -147,6 +148,11 @@ public class ArchiveVTWPatentRefeed {
 			{
 				recsPerZipFile = Integer.parseInt(args[4]);
 				System.out.println("Number of Keys per ZipFile: " + recsPerZipFile);
+			}
+			if(args[5] !=null)
+			{
+				recsPerSingleConnection = Integer.parseInt(args[5]);
+				System.out.println("Number of keys per one HttpConnection: " + recsPerSingleConnection);
 			}
 		}
 		else
@@ -188,7 +194,7 @@ public class ArchiveVTWPatentRefeed {
 			System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
 
 
-			VTWSearchAPI vtwSearchAPI = new VTWSearchAPI(Long.toString(epoch));
+			VTWSearchAPI vtwSearchAPI = new VTWSearchAPI(Long.toString(epoch),recsPerSingleConnection);
 			vtwSearchAPI.downloadPatentMetadata(patentIds);
 
 

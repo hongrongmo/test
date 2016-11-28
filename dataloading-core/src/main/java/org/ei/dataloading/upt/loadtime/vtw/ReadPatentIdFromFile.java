@@ -28,6 +28,7 @@ public class ReadPatentIdFromFile {
 
 	// get the list of Patent-Ids; with their signedAssetURL if any;  to download 
 	private static Map<String,String> patentIds = new LinkedHashMap<String,String>();
+	private static int recsPerSingleConnection = 1000;
 
 	
 	private static long startTime = System.currentTimeMillis();
@@ -52,7 +53,7 @@ public class ReadPatentIdFromFile {
 			System.out.println("read PatentIDs from file: " +  fileName);
 		}
 
-		if(args.length >2)
+		if(args.length >3)
 		{
 			if(args[1] !=null)
 			{
@@ -70,6 +71,11 @@ public class ReadPatentIdFromFile {
 			{
 				recsPerZipFile = Integer.parseInt(args[2]);
 				System.out.println("Number of Keys per ZipFile: " + recsPerZipFile);
+			}
+			if(args[3] !=null)
+			{
+				recsPerSingleConnection = Integer.parseInt(args[3]);
+				System.out.println("Number of keys per one HttpConnection: " + recsPerSingleConnection);
 			}
 		}
 
@@ -121,7 +127,7 @@ public class ReadPatentIdFromFile {
 				System.out.println("total time used "+(endTime-startTime)/1000.0+" seconds");
 				
 				
-				VTWSearchAPI vtwSearchAPI = new VTWSearchAPI(Long.toString(epoch));
+				VTWSearchAPI vtwSearchAPI = new VTWSearchAPI(Long.toString(epoch), recsPerSingleConnection);
 				vtwSearchAPI.downloadPatentMetadata(patentIds);
 
 				midTime = endTime;
