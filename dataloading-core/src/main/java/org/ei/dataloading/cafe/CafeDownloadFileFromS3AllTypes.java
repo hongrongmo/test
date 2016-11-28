@@ -5,9 +5,11 @@ import io.searchbox.core.BulkResult;
 import io.searchbox.core.Delete;
 import io.searchbox.core.BulkResult.BulkResultItem;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.FilenameFilter;
 import java.io.IOException;
@@ -26,9 +28,13 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
+import org.ei.dataloading.CombinedWriter;
+import org.ei.dataloading.CombinedXMLWriter;
 import org.ei.dataloading.awss3.AmazonS3Service;
 
 import com.amazonaws.AmazonClientException;
@@ -51,6 +57,7 @@ public class CafeDownloadFileFromS3AllTypes {
 	static int recsPerZipFile;
 	static String tableToBeTruncated = "cafe_inventory_temp";
 	static String sqlldrFileName = "cafeInventoryFileLoader.sh";
+	static int updateNumber;
 
 	static int curRecNum = 0;
 	static int zipFileID = 1;
@@ -81,7 +88,7 @@ public class CafeDownloadFileFromS3AllTypes {
 	public static void main(String[] args)
 	{
 
-		if(args.length >5)
+		if(args.length >6)
 		{
 			if(args[0]!=null)
 			{
@@ -124,7 +131,7 @@ public class CafeDownloadFileFromS3AllTypes {
 			}
 		}
 
-		if(args.length >6)
+		if(args.length >9)
 		{
 			// # of downloaded cafe key files to include in one zip file for later process/convert
 			if(args[6] !=null)
@@ -142,6 +149,20 @@ public class CafeDownloadFileFromS3AllTypes {
 			{
 				sqlldrFileName = args[8];
 				System.out.println("using sqlloaderfile " + sqlldrFileName);
+			}
+			if(args[9] !=null)
+			{
+				Pattern pattern = Pattern.compile("^\\d*$");
+				Matcher match = pattern.matcher(args[9]);
+				if(match.find())
+				{
+					updateNumber = Integer.parseInt(args[9]);
+				}
+				else
+				{
+					System.out.println("did not find updateNumber or updateNumber has wrong format!!!");
+					System.exit(1);
+				}
 			}
 		}
 
@@ -267,7 +288,7 @@ public class CafeDownloadFileFromS3AllTypes {
 			stmt = con.createStatement();
 
 			String cafeInventory_list = "select key,epoch from CAFE_INVENTORY where key in "+
-					"(select key from sns_archive where doc_type='" + doc_type + "' and TO_CHAR(archive_date, 'MON-DD-RR')='" + archive_date + "') and doc_type='" + doc_type + "'";
+					"(select distinct key from sns_archive where doc_type='" + doc_type + "' and TO_CHAR(archive_date, 'MON-DD-RR')='" + archive_date + "') and doc_type='" + doc_type + "'";
 
 			rs = stmt.executeQuery(cafeInventory_list);
 
@@ -544,6 +565,10 @@ public class CafeDownloadFileFromS3AllTypes {
 							// write the message to out file
 							out.println(strBuf.toString().trim());
 							//}	
+						}
+						else
+						{
+							System.out.println(key + " sns.epoch < inventory.epoch, skip the key");
 						}
 					}
 					else
@@ -916,14 +941,7 @@ public class CafeDownloadFileFromS3AllTypes {
 			type = "affiliation";
 
 		}
-		else if (doc_type.equalsIgnoreCase("apr"))
-		{
-			profileTable = "author_profile";
-			columnName = "AUTHORID";
-
-			type = "author";
-
-		}
+		
 		else
 		{
 			System.out.println("Invalide Doc_type");
@@ -938,7 +956,7 @@ public class CafeDownloadFileFromS3AllTypes {
 				if(curRec>999)
 				{
 					//get M_ID list from DB for ES deletion & later delete from DB
-					getMidToBeDeleted(keys.toString(), profileTable, columnName);
+					getMidToBeDeleted(keys.toString(), profileTable, columnName, doc_type);
 
 					if(keys_MID_to_be_deleted.size() >0)
 					{
@@ -971,7 +989,7 @@ public class CafeDownloadFileFromS3AllTypes {
 			}
 
 			//get M_ID list from DB for ES deletion & later delete from DB
-			getMidToBeDeleted(keys.toString(), profileTable, columnName);
+			getMidToBeDeleted(keys.toString(), profileTable, columnName, doc_type);
 
 			if(keys_MID_to_be_deleted.size() >0)
 			{
@@ -1022,7 +1040,7 @@ public class CafeDownloadFileFromS3AllTypes {
 		return true;
 
 	}
-	public boolean getMidToBeDeleted(String keys, String tableName, String columnName)
+	public boolean getMidToBeDeleted(String keys, String tableName, String columnName, String document_type)
 	{
 		Statement stmt = null;
 		ResultSet rs = null;
@@ -1031,7 +1049,20 @@ public class CafeDownloadFileFromS3AllTypes {
 
 		try
 		{
-			query = "select M_ID from " + tableName + " where  " + columnName + " in ("+ keys + ")";
+			if(document_type !=null && (document_type.equalsIgnoreCase("apr") || document_type.equalsIgnoreCase("ipr")))
+			{
+				query = "select M_ID from " + tableName + " where  " + columnName + " in ("+ keys + ")";
+			}
+			
+			else if(document_type !=null && document_type.equalsIgnoreCase("ani"))
+			{
+				query = "select M_ID from " + tableName + " where  substr(" + columnName + ",INSTR(" + columnName + ",'-', 1, 2)+1,length(" + columnName + ")) in ("+ keys + ")";
+			}
+			else
+			{
+				System.out.println("Invalid doc type!!!");
+				System.exit(1);
+			}
 
 			System.out.println("Running query...." + query);
 
@@ -1163,7 +1194,131 @@ public class CafeDownloadFileFromS3AllTypes {
 
 	}
 
+/***
+ 	added 11/22/2016 for deleting CAFE ANI records directly from Fast & DB using "EID" 
+	instead of downloading files & process them as deletion (as we do now for BD deletion)
+*/
+	private void deleteANIData()
+	{
+		StringBuffer keys = new StringBuffer();
+		String profileTable = "BD_MASTER_ORIG";
+		String columnName = "EID";
 
+		for(String key: keys_to_be_deleted)
+		{
+			if(keys.length() >0)
+				keys.append(",");
+			keys.append("'" + key + "'");
+		}
+
+		try {
+
+			if(doc_type !=null && doc_type.equalsIgnoreCase("ani"))
+			{
+				CombinedXMLWriter writer = new CombinedXMLWriter(50000,updateNumber,database,"dev");
+				writer.setOperation("delete");
+				
+				//get M_ID list from DB for ES deletion & later delete from DB
+				getMidToBeDeleted(keys.toString(), profileTable, columnName, doc_type);
+
+
+				// create fast deletion file
+				creatDeleteFile();
+				writer.zipBatch();
+				writer.end();
+	            writer.flush();
+	            
+	            // upload deletion file to fast
+	            
+	            
+				// delete from DB using "M_ID"
+				DbBulkDelete(profileTable);
+			}
+		}
+		catch (IOException e) 
+		{
+			System.out.println("Error occurred to delete ANI data!!!");
+			System.out.println("Cause Reason: " + e.getMessage());
+			e.printStackTrace();
+		}
+
+		catch(Exception ex)
+		{
+			ex.printStackTrace();
+		}
+	}
+
+	// create fast deletion file "delete.txt"
+	
+	 private void creatDeleteFile()
+	    {
+	        String batchID = "0001";
+	        
+	        File file=new File("fast");
+	        FileWriter out= null;
+	        
+	        try
+	        {
+	            if(!file.exists())
+	            {
+	                file.mkdir();
+	            }
+
+	            String batchPath = "fast/batch_" + updateNumber+"_"+batchID;
+
+	            file=new File(batchPath);
+	            if(!file.exists())
+	            {
+	                file.mkdir();
+	            }
+	            String root = batchPath +"/EIDATA/tmp";
+	            file=new File(root);
+
+	            if(!file.exists())
+	            {
+	                file.mkdir();
+	            }
+
+	            file = new File(root+"/delete.txt");
+
+	            if(!file.exists())
+	            {
+	                file.createNewFile();
+	            }
+	            out = new FileWriter(file);
+	            
+	            for(String m_id: keys_MID_to_be_deleted)
+	            {
+	                if(m_id != null)
+	                {
+	                    out.write(m_id+"\n");
+	                }
+	            }
+	            out.flush();
+	        }
+	        catch(Exception e)
+	        {
+	            e.printStackTrace();
+	        }
+	        finally
+	        {
+	            if(out !=null)
+	            {
+	                try
+	                {
+	                    out.close();
+	                }
+	                catch (Exception e)
+	                {
+	                    e.printStackTrace();
+	                }
+	            }
+
+	        }
+
+	    }
+
+	
 	protected Connection getConnection(String connectionURL,
 			String driver,
 			String username,
