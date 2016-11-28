@@ -18,12 +18,15 @@ import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.CredentialsProvider;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.ResponseHandler;
+import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
 import org.apache.http.impl.client.BasicCredentialsProvider;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+
+import com.amazonaws.ClientConfiguration;
 
 /**
  * 
@@ -47,6 +50,9 @@ public class VTWSearchAPI {
 	private static final String username = "engineering-village";
 	private static final String password = "elCome29347";
 
+	private static final int REQUEST_CONNECTION_TIMEOUT = 100 * 1000;		//100 seconds
+	private static final int SOCKET_TIMEOUT = 100 * 1000;
+	
 	private static CloseableHttpClient client;
 	private static ResponseHandler<String[]> responseHandler;
 
@@ -54,18 +60,23 @@ public class VTWSearchAPI {
 
 	String downloadDirName;
 	private static File downloadDir;
+	int recsPerSingleConnection = 100;
 
 	public static String status = "success";
-
+	static RequestConfig requestConfig = null;
+	
+	int curRecNum = 0;
+	
 
 	public VTWSearchAPI()
 	{
 
 	}
 
-	public VTWSearchAPI(String downloadDir_Name)
+	public VTWSearchAPI(String downloadDir_Name, int recsPerConnection)
 	{
 		downloadDirName = downloadDir_Name;
+		recsPerSingleConnection = recsPerConnection;
 		init();
 	}
 
@@ -88,6 +99,10 @@ public class VTWSearchAPI {
 
 			// create Apache HttpClient
 			VTWSearchAPI.getInstance();
+			
+			requestConfig = RequestConfig.custom().setSocketTimeout(SOCKET_TIMEOUT)
+					.setConnectionRequestTimeout(REQUEST_CONNECTION_TIMEOUT).build();
+			
 
 		}
 		catch(Exception ex)
@@ -111,12 +126,29 @@ public class VTWSearchAPI {
 			{
 				if(!(key.isEmpty()))
 				{
+					if(curRecNum >= recsPerSingleConnection)
+					{
+						try
+						{
+							// close the connection
+							end();
+							// create Apache HttpClient
+							getInstance();
+							
+							curRecNum = 0;
+						}
+						catch(Exception e)
+						{
+							System.out.println("Failed to close http connection!");
+							System.out.println("Reason: " + e.getMessage());
+							e.printStackTrace();
+						}
+					}
 					if(patentIds.get(key) !=null && !(patentIds.get(key).isEmpty()))
 					{
 						signedAssetUrl_count ++;
 
 						downloadable_url = patentIds.get(key);
-						System.out.println("Total PatentIds with SignedAssetURL: " +  signedAssetUrl_count);
 					}
 					else
 					{
@@ -170,7 +202,11 @@ public class VTWSearchAPI {
 					}
 				}
 
+				curRecNum ++;
 			}
+			
+			System.out.println("Total PatentIds with SignedAssetURL: " +  signedAssetUrl_count);
+			
 		}
 		
 		try
@@ -238,6 +274,8 @@ public class VTWSearchAPI {
 
 
 			request = new HttpGet(uriBuilder.build());
+			
+			request.setConfig(requestConfig);
 			
 		} catch (URISyntaxException e) {
 
@@ -362,6 +400,7 @@ public class VTWSearchAPI {
 			if(client !=null)
 			{
 				client.close();
+				client = null;
 				System.out.println("HttpClient Connection was successfully closed!");
 			}
 		}
