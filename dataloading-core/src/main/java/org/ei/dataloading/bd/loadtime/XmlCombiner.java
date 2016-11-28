@@ -885,7 +885,7 @@ throws Exception
                     {
                     	if(rs.getString("eid") != null)
                     	{
-                    		rec.put(EVCombinedRec.EID, rs.getString());
+                    		rec.put(EVCombinedRec.EID, rs.getString("eid"));
                     	}
                     }
                     catch(Exception e)
