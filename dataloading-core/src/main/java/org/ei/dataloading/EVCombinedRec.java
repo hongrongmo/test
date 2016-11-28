@@ -537,7 +537,7 @@ public class EVCombinedRec {
 	  if(value != null)
 	  {
 	    this.put(key, value);
-    }
+	  }
 	}
 
 	public void putIfNotNull(String key, String[] value)
@@ -545,7 +545,7 @@ public class EVCombinedRec {
 	  if(value != null)
 	  {
 	    this.put(key, value);
-    }
+	  }
 	}
 
 	public void put(String key, String value)
